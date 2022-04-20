@@ -24,12 +24,12 @@ search.appverid:
 ms.assetid: a8ab5061-3346-4da0-bb7c-5260822b53ae
 description: 21Vianet tarafından sağlanan ve Çin'deki güvenli, güvenilir ve ölçeklenebilir bulut hizmetleri gereksinimlerini karşılamak üzere tasarlanmış Office 365 hakkında daha fazla bilgi edinin.
 monikerRange: o365-21vianet
-ms.openlocfilehash: 7608be301accfb99e03683240108be5eaa7529a6
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 16b40c0cb03d14915ccb89f7d34be5110b4c0849
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64782643"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64938938"
 ---
 # <a name="office-365-operated-by-21vianet"></a>21Vianet tarafından sağlanan Office 365
 
@@ -174,14 +174,14 @@ Farklı Exchange dağıtım senaryolarında özellik desteği hakkında daha faz
 |Takvim paylaşımı|Exchange 2013 SP1 ve üzeri, İnternet takvimi paylaşımını diğer şirket içi Exchange veya Exchange Online kuruluşlarla el ile yapılandırmayı destekler. Bu özelliği el ile yapılandırma hakkında daha fazla ayrıntı için bkz. [İnternet Takvimi Yayımlamayı Etkinleştirme](/exchange/enable-internet-calendar-publishing-exchange-2013-help).|
 Apple mobil cihazlardaki Exchange kişi verilerini Apple iCloud ile paylaşma.|Bu ayar/özellik varsayılan olarak etkindir. Yöneticilerin, kullanıcıların kuruluşunuz dışındaki Exchange verileri paylaşmasını önlemeye yardımcı olmak için bu özelliği kapatması gerekir.|
 |Barındırılan E-posta Şifrelemesi Exchange|Kullanılamaz.|
-|Office 365 İleti Şifrelemesi|Çok yakında.|
+|Microsoft Purview İleti Şifrelemesi|Çok yakında.|
 
 ## <a name="office"></a>Office
 
 |İşlev|Kullanılabilirlik|
 |---|---|
 |**Office uygulamasını Dosya** \> **Aç**... Düğme|Kullanılabilir. Dolaşım sırasında bunu yapabilme özelliği yakında sunulacaktır.|
-|Microsoft hesabıyla oturum açmışken OneDrive Entreprise kaydetme|Verilerinizi ülkenizde tutmak için, bir Microsoft hesabıyla Office oturum açtığınızda belgeyi kuruluş sitenize (OneDrive Entreprise) kaydedemezsiniz.|
+|Microsoft hesabıyla oturum açtığınızda OneDrive İş kaydetme|Verilerinizi ülkenizde tutmak için, bir Microsoft hesabıyla Office oturum açtığınızda belgeyi kuruluş sitenize (OneDrive İş) kaydedemezsiniz.|
 |Metin veya sayfaları çevirebilme|Bu özellik kullanılabilir, ancak varsayılan olarak kapalıdır. Yöneticiler bu özelliği açabilir, ancak verilerin ülkenizin dışından erişilebilir olmasını sağlayabileceğini belirten bir uyarı iletisi alır.|
 
 ## <a name="office-client"></a>Office istemcisi
@@ -212,17 +212,17 @@ Apple mobil cihazlardaki Exchange kişi verilerini Apple iCloud ile paylaşma.|B
 
 |İşlev|Kullanılabilirlik|
 |---|---|
-|Skype for Business destekleyecek etki alanı sağlayıcıları|Etki alanınızı SRV kayıtlarını destekleyen Çinceye özgü bir etki alanı sağlayıcısına kaydetmeniz gerekir. Etki alanlarını kaydetme hakkında daha fazla bilgi için bkz. [Etki alanı kayıt şirketinizi veya DNS barındırma sağlayıcınızı bulma](../get-help-with-domains/find-your-domain-registrar.md).|
-|Arayarak bağlanılan konferans (bilgisayara ulaşamayan kullanıcılar için toplantılara telefon erişimi ekleme özelliği)|Skype for Business ve Arayarak bağlanılan konferans ve sağlayıcılar için Skype for Business Yönetim Merkezi'nde seçenekleri görebilirsiniz, ancak bu özellikler henüz kullanılamıyor. Yakında gelecekler.|
-|masaüstü yardımı Skype for Business|Skype for Business [masaüstü için](https://support.microsoft.com/office/6ae5853c-f0fd-4710-aecf-f46def8377ad) yardım burada bulabilirsiniz. Ancak, Tıkla-Çalıştır Office kullanmadığınız sürece masaüstü yardımı üründen kullanılamaz.|
+|Skype Kurumsal destekleyecek etki alanı sağlayıcıları|Etki alanınızı SRV kayıtlarını destekleyen Çinceye özgü bir etki alanı sağlayıcısına kaydetmeniz gerekir. Etki alanlarını kaydetme hakkında daha fazla bilgi için bkz. [Etki alanı kayıt şirketinizi veya DNS barındırma sağlayıcınızı bulma](../get-help-with-domains/find-your-domain-registrar.md).|
+|Arayarak bağlanılan konferans (bilgisayara ulaşamayan kullanıcılar için toplantılara telefon erişimi ekleme özelliği)|Skype Kurumsal ve Arayarak bağlanılan konferans ve sağlayıcılar için Skype Kurumsal Yönetim Merkezi'nde seçenekleri görebilirsiniz, ancak bu özellikler henüz kullanılamıyor. Yakında gelecekler.|
+|masaüstü yardımı Skype Kurumsal|Skype Kurumsal [masaüstü için](https://support.microsoft.com/office/6ae5853c-f0fd-4710-aecf-f46def8377ad) yardım burada bulabilirsiniz. Ancak, Tıkla-Çalıştır Office kullanmadığınız sürece masaüstü yardımı üründen kullanılamaz.|
 |Lync 2010|Kullanılamaz.|
-|Google Chrome ile Samsung tabanlı bir cihaz kullanırken takviminizden bir toplantıya katılma olanağı|Çok yakında. Bu arada, Skype for Business açabilir, Toplantılar görünümüne gidebilir ve toplantıya buradan katılabilirsiniz.|
+|Google Chrome ile Samsung tabanlı bir cihaz kullanırken takviminizden bir toplantıya katılma olanağı|Çok yakında. Bu arada, Skype Kurumsal açabilir, Toplantılar görünümüne gidebilir ve toplantıya buradan katılabilirsiniz.|
 |Polycom, Ares ve Tanjay gibi Masa Telefon Cihazları|Kullanılamaz.|
 |Dağıtım iş ortakları|Kullanılamaz.|
 |Sesli mesaj, PSTN numaralarından arama yapma ve alma, arama aktarma, arama iletme gibi ses özellikleri|Kullanılamaz. Bu özellikler için dağıtım iş ortakları gerekir.|
 |Arşivleme veya bir kullanıcıyı etiketleme ve kullanıcının e-postalarını ve anlık iletilerini Exchange|Kullanılamaz.|
-|Firefox 29 için Skype for Business Web istemcisi (LWA) tarayıcı desteği|Kullanılamaz, ancak Firefox'un eski bir sürümünü kullanabilirsiniz.|
-|Birleşik Kişi Deposu (UCS)|Kullanıcıların tüm Skype for Business iletişim bilgilerini Microsoft Exchange Server 2013'te tutma özelliği devre dışı bırakılmıştır.|
+|Firefox 29 için Skype Kurumsal Web istemcisi (LWA) tarayıcı desteği|Kullanılamaz, ancak Firefox'un eski bir sürümünü kullanabilirsiniz.|
+|Birleşik Kişi Deposu (UCS)|Kullanıcıların tüm Skype Kurumsal iletişim bilgilerini Microsoft Exchange Server 2013'te tutma özelliği devre dışı bırakılmıştır.|
 |Konferans cihazları:  <br/>  Polycom CX5100 Birleşik Konferans İstasyonu  <br/>  Logitech ConferenceCam CC3000e  <br/>  Polycom CX7000  <br/>  Polycom CX3000  <br/>  Logitech BCC950 ConferenceCam  <br/>  Polycom CX5000 HD|Kullanılamaz.|
 
 ## <a name="data-subject-requests-for-gdpr"></a>GDPR için Veri Sahibi İstekleri

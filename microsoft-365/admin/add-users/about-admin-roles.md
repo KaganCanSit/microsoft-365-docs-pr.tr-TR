@@ -26,12 +26,12 @@ search.appverid:
 - MOE150
 ms.assetid: da585eea-f576-4f55-a1e0-87090b6aaa9d
 description: Hizmet yöneticisi gibi yönetici rolleri, işletme işlevlerine eşlenir ve Yönetim merkezinde belirli görevleri yerine getirmek için izinler verir.
-ms.openlocfilehash: 5bea496ca24f3aef97a780d48c74b84aaa46176b
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 8a1df118b5dfe1ad484f3a8048cce9cf748ab54b
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "62973891"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64937685"
 ---
 # <a name="about-admin-roles"></a>Yönetici rolleri hakkında
 
@@ -89,7 +89,7 @@ Muhtemelen kuruluşunuzda yalnızca aşağıdaki rolleri atamanız gerekecek. Va
 |Office Uygulamaları yöneticisi    |   Aşağıdaki işlemi yapmasına gerek duyan kullanıcılara Office Uygulamaları yöneticisi rolünü atayın: <br> -Office bulut ilkesi hizmetini kullanarak Office için bulut tabanlı ilkeler oluşturma ve yönetme <br> - Hizmet istekleri oluşturma ve yönetme <br> - Kullanıcıların kendi Office uygulamalarında gördüğü Yenilikler içeriğini yönetme   <br> - Hizmet durumunu görüntüleme  |
 |Parola yöneticisi  |   - Yönetici olmayanların ve Parola Yöneticilerinin parolalarını sıfırlaması gereken bir kullanıcıya Parola yöneticisi rolünü atayın.   |
 |Message merkezi gözetmeni |   Aşağıdaki işlemleri yapması gereken kullanıcılara İleti merkezi okuyucusu rolünü atayın: <br> - İleti merkezi bildirimlerini izleme <br> - İleti merkezi gönderileri ve güncelleştirmelerinin haftalık e-posta özetlerini alma <br> - İleti merkezi gönderilerini paylaşma <br> - Kullanıcılar ve gruplar gibi Azure AD hizmetleri için salt okunur erişime sahip olma|
-|Power Platform yöneticisi |   Aşağıdaki işlemleri yapması gereken kullanıcılara Power Platform yöneticisi rolünü atayın: <br> - Power App ve Power Automate için tüm yönetici özelliklerini yönetme ve veri kaybını önleme  <br> - Hizmet istekleri oluşturma ve yönetme <br> - Hizmet durumunu görüntüleme  |
+|Power Platform yöneticisi |   Aşağıdaki işlemleri yapması gereken kullanıcılara Power Platform yöneticisi rolünü atayın: <br> - Power Apps, Power Automate ve Microsoft Purview Veri Kaybını Önleme için tüm yönetici özelliklerini yönetme <br> - Hizmet istekleri oluşturma ve yönetme <br> - Hizmet durumunu görüntüleme  |
 |Rapor gözetmeni |   Aşağıdaki işlemleri yapması gereken kullanıcılara Rapor okuyucusu rolünü atayın: <br> - Microsoft 365 yönetim merkezindeki kullanım verilerini ve etkinlik raporlarını görüntüleme <br> - Power BI benimseme içerik paketine erişme <br> - Azure AD'de oturum açma raporlarına ve etkinliğine erişme <br> - Microsoft Graph raporlama API'si tarafından döndürülen verileri görüntüleme|
 |Hizmet Desteği yöneticisi   |   Normal yönetici rollerine ek olarak aşağıdakileri yapması gereken yöneticilere veya kullanıcılara ek bir rol olarak Hizmet Desteği yöneticisi rolünü atayın: <br> - Hizmet isteklerini açma yönetme <br> - Mesaj Merkezi yayınlarını görüntüleyin ve paylaşma <br> - Hizmet durumunu görüntüleme   |
 |SharePoint yöneticisi    |   SharePoint Çevrimiçi yönetim merkezine erişmesi ve yönetmesi gereken kullanıcılara SharePoint yönetici rolünü atayın. <br><br>SharePoint yöneticileri şunları yapabilir: <br> - Site oluşturma ve silme <br> - Site koleksiyonları ve genel SharePoint ayarlarını yönetme   |
@@ -98,7 +98,7 @@ Muhtemelen kuruluşunuzda yalnızca aşağıdaki rolleri atamanız gerekecek. Va
 
 ## <a name="delegated-administration-for-microsoft-partners"></a>Microsoft İş ortakları için temsilci yönetim
 
-Bir Microsoft iş ortağıyla çalışıyorsanız, iş ortağınız için yönetici rolleri atayabilirsiniz. İş ortağınız da sizin şirketinizdeki ya da kendi şirketindeki kullanıcılara yönetici rolleri atayabilir. Örneğin bunu, sizin için çevrimiçi kuruluşunuzu oluşturup yönetecekse iş ortağınıza yönetici rolü atamak isteyebilirsiniz.
+Bir Microsoft iş ortağıyla çalışıyorsanız, onlara yönetici rolleri atayabilirsiniz. Onlar da şirketinizdeki kullanıcılara veya şirketlerine yönetici rolleri atayabilir. Örneğin, sizin için çevrimiçi organizasyonunuzu ayarlayıp yönetiyorlarsa, bunu yapmalarını isteyebilirsiniz.
   
 Bir iş ortağı şu rolleri atayabilir: 
   
@@ -106,7 +106,7 @@ Bir iş ortağı şu rolleri atayabilir:
 
 - Bir yardım masası yöneticisine eşdeğer **Yardım Masası Temsilcisi** Ayrıcalıkları.
 
-İş ortağı bu rolleri kullanıcılara atamadan önce, iş ortağını hesabınıza temsili yönetici olarak eklemeniz gerekir. Bu işlem, yetkili bir iş ortağı tarafından başlatılır. İş ortağı size bir e-posta göndererek size yönetici temsilcisi olarak görev yapma izni vermek isteyip istemediğinizi sorar. Yönergeler için, bkz. [İş ortağı ilişkilerini yetkilendirme veya kaldırma](../misc/add-partner.md).
+İş ortağının kullanıcılara bu rolleri atamadan önce, iş ortağını hesabınıza yönetici temsilcisi olarak eklemeniz gerekir. Bu süreç yetkili bir iş ortağı tarafından başlatılır. İş ortağı, kendisine yönetici temsilcisi olarak hareket etme izni vermek isteyip istemediğinizi sormak için size bir e-posta gönderir. Yönergeler için bkz. [İş ortağı ilişkilerini yetkilendirme veya kaldırma](../misc/add-partner.md).
   
 ## <a name="related-content"></a>İlgili içerik
 

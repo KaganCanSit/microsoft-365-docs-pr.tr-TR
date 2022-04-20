@@ -1,5 +1,5 @@
 ---
-title: Vakayı kapatma veya silme
+title: Bir vakayı kapatma veya silme
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -15,79 +15,79 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Bir davanın destekçisi olan bir soruşturma veya yasal Advanced eDiscovery kapatıldığı veya silindiğinde ne olduğunu öğrenin.
+description: Microsoft Purview eKeşif (Premium) olayı tarafından desteklenen bir araştırma veya yasal olay kapatıldığında veya silindiğinde ne olacağını öğrenin.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 88e0892bec3f220d9c405f3886c37fa89ad2c647
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: c3ea769fe6c1e01a14e6a552170da8421a03cf07
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983605"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64940433"
 ---
-# <a name="close-or-delete-an-advanced-ediscovery-case"></a>Bir vakayı kapatma Advanced eDiscovery silme
+# <a name="close-or-delete-an-ediscovery-premium-case"></a>eBulma (Premium) servis talebini kapatma veya silme
 
-Bir dava veya dava tarafından desteklenen dava Advanced eDiscovery tamamlandığında, vakayı kapatıp silebilirsiniz. Ayrıca, kapalı bir vakayı yeniden açılmıştır.
+Microsoft Purview eBulma (Premium) olayı tarafından desteklenen yasal dava veya araştırma tamamlandığında, bir servis talebini kapatabilir veya silebilirsiniz. Kapatılan bir olayı da yeniden açabilirsiniz.
 
-## <a name="close-a-case"></a>Vakayı kapatma
+## <a name="close-a-case"></a>Servis talebini kapatma
 
-Bir dava davanı kapatarak şunları Advanced eDiscovery:
+eBulma (Premium) servis talebini kapattığınızda şunlar olur:
 
-- Olayda beklemede bulunan içerik konumları varsa, bu tutma kapalı olur. Tutma kapat edildikten sonra, içeriğin tut olduğu konumlara 30 günlük bir yetkisiz kullanım süresi (gecikme süresi olarak *adlandırılan) uygulanır*. Bu, içeriğin hemen silinmesini önlemeye yardımcı olur ve yöneticilere, gecikme süresi sona erdikten sonra kalıcı olarak silinecek içeriği arama veya kurtarma fırsatı verir. Daha fazla bilgi için bkz [. eBulma tutmadan içerik konumlarını kaldırma](create-ediscovery-holds.md#removing-content-locations-from-an-ediscovery-hold).
+- Servis talebi ayrı tutmada herhangi bir içerik konumu içeriyorsa, bu ayrı tutmalar kapatılır. Ayrı tutma kapatıldıktan sonra, beklemede olan içerik konumlarına 30 günlük yetkisiz kullanım süresi ( *gecikmeli saklama* olarak adlandırılır) uygulanır. Bu, içeriğin hemen silinmesini önlemeye yardımcı olur ve yöneticilere gecikme saklama süresi dolduktan sonra kalıcı olarak silinecek içeriği arama veya kurtarma fırsatı verir. Daha fazla bilgi için bkz. [eBulma ayrılığından içerik konumlarını kaldırma](create-ediscovery-holds.md#removing-content-locations-from-an-ediscovery-hold).
 
-- Vakayı kapatma, yalnızca bu vakayla ilişkilendirilmiş olan tılaları kapatır. İçerik konumda başka bir tutma varsa (Mahkeme Tutma, Temel eBulma tutma veya farklı bir dava Advanced eDiscovery tutma gibi) bu tutmalar yine de korunur.
+- Servis talebi kapatıldığında yalnızca bu servis talebiyle ilişkili ayrı tutmalar kapatılır. Diğer ayrı tutmalar bir içerik konumuna (Dava Ayrı Tutma, Microsoft Purview eBulma (Standart) ayrı tutma veya farklı bir eBulma (Premium) durumundan ayrı tutma gibi) yerleştiriliyorsa bu ayrı tutmalar yine korunur.
 
-- Olay, dosyanın eBulma sayfasında Microsoft 365 uyumluluk merkezi. Kapalı durumdaki bir vakanın ayrıntıları, tutma, aramalar ve üyeleri korunur.
+- Servis talebi, Microsoft Purview uyumluluk portalındaki eBulma sayfasında listelenmeye devam etmektedir. Kapalı bir servis talebinin ayrıntıları, saklamaları, aramaları ve üyeleri korunur.
 
-- Bir vakayı kapattıktan sonra düzenleyebilirsiniz. Örneğin, üyeleri ek veya kaldırabilirsiniz, arama oluşturabilir, arama sonuçlarını dışarı aktarabilirsiniz ve bu arama sonuçlarını çözümleme için kendi Advanced eDiscovery. Etkin ve kapalı vakalar arasındaki en önemli fark, vaka kapatılan durumlarda tıla sürenin kapalı olmasıdır.
+- Servis talebi kapandıktan sonra düzenleyebilirsiniz. Örneğin, eBulma'da (Premium) üyeleri ekleyebilir veya kaldırabilir, arama oluşturabilir, arama sonuçlarını dışarı aktarabilir ve arama sonuçlarını analiz için hazırlayabilirsiniz. Etkin ve kapalı servis talepleri arasındaki temel fark, servis talebi kapatıldığında tutmaların kapalı olmasıdır.
 
-Vakayı kapatmak için:
+Bir servis talebini kapatmak için:
 
-1. Sayfa **Advanced eDiscovery** kapatmak istediğiniz vakayı seçin.
+1. **eBulma (Premium)** sayfasında kapatmak istediğiniz servis talebini seçin.
 
-2. Büyük/**Ayarlar** Büyük/Küçük **Harf Bilgileri'nin altında Seç'e** **tıklayın**.
+2. **Ayarlar** sekmesinde, **Servis Talebi Bilgileri'nin** altında **Seç'e** tıklayın.
 
-   ![Bir olayda büyük/harf bilgisi uç Advanced eDiscovery erişin.](..\media\AeDSelectCaseInformation.png) 
+   ![eBulma (Premium) durumunda servis talebi bilgileri açılır sayfasına erişin.](..\media\AeDSelectCaseInformation.png) 
 
-3. Büyük/Harf Bilgileri çıkış **sayfasının en** altında Eylemler'i ve **ardından Büyük**/harf **kapat'ı tıklatın**.
+3. **Servis Talebi Bilgileri** açılır sayfasının en altında **Eylemler'e** ve ardından **Büyük/küçük harf kapat'a** tıklayın.
 
-   Kapatma işleminin tamamlanması 60 dakika kadar sürebilir.
+   Kapanış işleminin tamamlanması 60 dakika kadar sürebilir.
 
-## <a name="reopen-a-closed-case"></a>Kapalı durumdaki bir vakayı yeniden açma
+## <a name="reopen-a-closed-case"></a>Kapatılan servis talebini yeniden açma
 
-Bir dava Advanced eDiscovery, dava kapatılan tüm tılalar otomatik olarak yeniden değil. Olay yeniden açıldıktan sonra, 1.000.000'de 12007'de 12007'de 6000000000'i tıklatın. Bir basılı tutunmayı açmak için, bunu seçerek çıkış sayfasını görüntüleyebilirsiniz ve sonra Durum iki **durumlu düğmeyi** Açık olarak **ayarlayın**.
+Bir eBulma (Premium) servis talebini yeniden açtığınızda, servis talebi kapatıldığında geçerli olan tüm tutmalar otomatik olarak yeniden başlatılmaz. Servis talebi yeniden açıldıktan sonra **, Ayrı Tutmalar** sekmesine gitmeniz ve önceki ayrı tutmaları açmanız gerekir. Ayrı tutmayı açmak için açılır sayfayı görüntülemek için bu sayfayı seçin ve ardından **Durum** iki durumlu düğmesini **Açık** olarak ayarlayın.
 
-Kapalı durumdaki bir vakayı yeniden açmak için:
+Kapalı bir olayı yeniden açmak için:
 
-1. Sayfa **Advanced eDiscovery** yeniden açmak istediğiniz vakayı seçin.
+1. **eBulma (Premium)** sayfasında yeniden açmak istediğiniz servis talebini seçin.
 
-2. Büyük/**Ayarlar** Büyük/Küçük **Harf Bilgileri'nin altında Seç'e** **tıklayın**.
+2. **Ayarlar** sekmesinde, **Servis Talebi Bilgileri'nin** altında **Seç'e** tıklayın.
 
-3. Büyük/Harf Bilgileri açılır **sayfasının en altında** Eylemler'e tıklayın ve **ardından Büyük/** yeni harfe yeniden **aç'a tıklayın**.
+3. **Servis Talebi Bilgileri** açılır sayfasının en altında **Eylemler'e** ve ardından **Servis talebi yeniden aç'a** tıklayın.
 
    Yeniden açma işleminin tamamlanması 60 dakika kadar sürebilir.
 
-## <a name="delete-a-case"></a>Vakayı silme
+## <a name="delete-a-case"></a>Servis talebini silme
 
-Hem etkin hem de kapalı durumda Advanced eDiscovery silebilirsiniz. Bir vakayı sildikten sonra koruyucular listesi, iletişimler, aramalar, gözden geçirme kümeleri ve dışarı aktarma işi gibi olayla ilişkili tüm bileşenler silinir. Büyük/yeni durum, dosyanın **Advanced eDiscovery vakalar** listesinden Microsoft 365 uyumluluk merkezi. Silinen bir vakayı kurtaremez veya yeniden açemezsiniz.
+Hem etkin hem de kapalı eBulma (Premium) servis taleplerini silebilirsiniz. Bir servis talebini sildiğinizde, servis talebiyle ilişkili tüm bileşenler (koruyucuların listesi, iletişimler, aramalar, gözden geçirme kümeleri ve dışarı aktarma işi gibi) silinir. Servis talebi, Microsoft Purview uyumluluk portalındaki **eBulma (Premium)** sayfasındaki servis talebi listesinden kaldırılır. Silinen bir olayı kurtaramaz veya yeniden açamazsınız.
 
 > [!NOTE]
-> Veri taşma senaryolarında, gözden geçirme kümesinde öğeleri kaldırmanın tek Advanced eDiscovery silmektir. Diğer "arama ve temizleme" yöntemleri, gözden geçirme kümesinden öğeleri kaldırmaz.
+> Veri taşması senaryolarında, bir gözden geçirme kümesindeki öğeleri kaldırmanın tek yolu eBulma (Premium) servis talebini silmektir. Diğer "arama ve temizleme" yöntemleri, gözden geçirme kümesindeki öğeleri kaldırmaz.
 
-Bir vakayı silebilirsiniz (etkin veya kapalı olması), önce olayla ilişkilendirilmiş *tüm uzlaydı* silmeniz gerekir. Bu durum, Kapalı durumuyla birlikte silmeyi **de içerir**.
+Bir servis talebini silebilmeniz (etkin veya kapalı olması fark etmeksizin) önce servis talebiyle ilişkili *tüm* ayrı tutmaları silmeniz gerekir. Bu durum **Kapalı** olan ayrı tutmaları silmeyi içerir.
 
-Bir vakayla ilişkilendirilmiş 100 00-2002 tarihine kadar olan 0,
+Bir servis talebiyle ilişkili ayrı tutmaları silmek için:
 
-1. Silmek **istediğiniz** olayda Advanced eDiscovery Sekmesine gidin.
+1. Silmek istediğiniz eBulma (Premium) servis talebinin **Ayrı Tutmalar** sekmesine gidin.
 
-2. Silmek istediğiniz tik basılı tutun.
+2. Silmek istediğiniz ayrı tutmaya tıklayın.
 
-3. Uçarak çıkış sayfasında, Tiktayı **sil'e tıklayın**.
+3. Açılır sayfada **Sil bekletme'ye** tıklayın.
 
-Vakayı silmek için:
+Bir servis talebini silmek için:
 
-1. Sayfa **Advanced eDiscovery** silmek istediğiniz vakayı seçin.
+1. **eBulma (Premium)** sayfasında silmek istediğiniz servis talebini seçin.
 
-2. Büyük/**Ayarlar** Büyük/Küçük **Harf Bilgileri'nin altında Seç'e** **tıklayın**.
+2. **Ayarlar** sekmesinde, **Servis Talebi Bilgileri'nin** altında **Seç'e** tıklayın.
 
-3. Büyük/Harf Bilgileri çıkış **sayfasının en** altında Eylemler'i ve **ardından Büyük**//yeni harf sil'i **tıklatın**.
+3. **Servis Talebi Bilgileri** açılır sayfasının en altında **Eylemler'e** ve ardından **Büyük/küçük harf sil'e** tıklayın.
 

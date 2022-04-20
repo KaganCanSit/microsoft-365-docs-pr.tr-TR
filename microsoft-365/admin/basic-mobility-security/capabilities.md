@@ -19,12 +19,12 @@ ms.custom:
 search.appverid:
 - MET150
 description: Basic Mobility ve Security, mobil cihazlarınızı güvenli bir şekilde yönetmenize yardımcı olabilir.
-ms.openlocfilehash: 78cfa4582aa2e25a3b47a12d2e067082e8b41d07
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: b0e303af27d731cf3dba3af13019b3b993e52bfe
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64781237"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64937773"
 ---
 # <a name="capabilities-of-basic-mobility-and-security"></a>Temel Hareketlilik ve Güvenlik Özellikleri
 
@@ -58,7 +58,7 @@ Aşağıdaki tabloda yer alan farklı mobil cihaz türleri için desteklenen uyg
 |Ürün|iOS|Android|
 |---|---|---|
 |**Exchange** Exchange ActiveSync, Exchange ActiveSync Sürüm 14.1 veya üzerini kullanan yerleşik e-posta ve TouchDown gibi üçüncü taraf uygulamaları içerir.|Posta|E-posta|
-|**Office** ve **OneDrive Entreprise**|Outlook </br>OneDrive </br>Word </br>Excel </br>PowerPoint|**Telefonlarda ve tabletlerde**:<br/>Outlook <br/> OneDrive <br/> Word <br/> Excel <br/> PowerPoint <br/> **Yalnızca telefonlarda:** <br/> Office Mobile|
+|**Office** ve **OneDrive İş**|Outlook </br>OneDrive </br>Word </br>Excel </br>PowerPoint|**Telefonlarda ve tabletlerde**:<br/>Outlook <br/> OneDrive <br/> Word <br/> Excel <br/> PowerPoint <br/> **Yalnızca telefonlarda:** <br/> Office Mobile|
 
 > [!NOTE]
 >
@@ -71,7 +71,7 @@ Aşağıdaki diyagramda, yeni cihazı olan bir kullanıcı Temel Mobilite ve Gü
 :::image type="content" source="../../media/basic-mobility-security/bms-1-access-control.png" alt-text="Temel Mobilite ve Güvenlik erişim denetimi.":::
 
 > [!NOTE]
-> Microsoft 365 Business Standard için Basic Mobility ve Security'de oluşturulan ilkeler ve erişim kuralları, Exchange yönetim merkezinde oluşturulan Exchange ActiveSync mobil cihaz posta kutusu ilkelerini ve cihaz erişim kurallarını geçersiz kılar. Bir cihaz Microsoft 365 Business Standard için Temel Hareket ve Güvenlik'e kaydedildikten sonra, cihaza uygulanan tüm Exchange ActiveSync mobil cihaz posta kutusu ilkesi veya cihaz erişim kuralı yoksayılır. Exchange ActiveSync hakkında daha fazla bilgi edinmek için bkz. [Exchange Online'da Exchange ActiveSync](/exchange/clients-and-mobile-in-exchange-online/exchange-activesync/exchange-activesync).
+> Microsoft 365 İş Standart için Basic Mobility ve Security'de oluşturulan ilkeler ve erişim kuralları, Exchange yönetim merkezinde oluşturulan Exchange ActiveSync mobil cihaz posta kutusu ilkelerini ve cihaz erişim kurallarını geçersiz kılar. Bir cihaz Microsoft 365 İş Standart için Basic Mobility ve Security'ye kaydedildikten sonra, cihaza uygulanan tüm Exchange ActiveSync mobil cihaz posta kutusu ilkesi veya cihaz erişim kuralı yoksayılır. Exchange ActiveSync hakkında daha fazla bilgi edinmek için bkz. [Exchange Online'da Exchange ActiveSync](/exchange/clients-and-mobile-in-exchange-online/exchange-activesync/exchange-activesync).
 
 ## <a name="policy-settings-for-mobile-devices"></a>Mobil cihazlar için ilke ayarları
 
@@ -230,7 +230,7 @@ PowerShell cmdlet'lerini kullanarak bu ek ilke ayarlarını yapabilirsiniz:
 
 ## <a name="remotely-wipe-a-mobile-device"></a>Mobil cihazı uzaktan silme
 
-Bir cihaz kaybolur veya çalınırsa, Güvenlik & Uyumluluk merkezi > **Veri kaybı önlemeCihaz** >  yönetimi bölümünden silme işlemi yaparak hassas kuruluş verilerini kaldırabilir ve Microsoft 365 kuruluş kaynaklarınıza erişimi **engellemeye** yardımcı olabilirsiniz. Bir cihazdan tüm bilgileri silip fabrika ayarlarına geri yüklemek için yalnızca kuruluş verilerini kaldırmak için seçmeli silme veya tam silme işlemi yapabilirsiniz.
+Bir cihaz kaybolur veya çalınırsa, **Microsoft Purview uyumluluk portalıVeri** >  **kaybı önlemeCihaz** >  yönetimi'nden temizleme yaparak hassas kuruluş verilerini kaldırabilir ve Microsoft 365 kuruluş kaynaklarınıza erişimi **engellemeye** yardımcı olabilirsiniz. Bir cihazdan tüm bilgileri silip fabrika ayarlarına geri yüklemek için yalnızca kuruluş verilerini kaldırmak için seçmeli silme veya tam silme işlemi yapabilirsiniz.
 
 Daha fazla bilgi için bkz [. Basic Mobility and Security'de mobil cihazı temizleme](wipe-mobile-device.md).
 

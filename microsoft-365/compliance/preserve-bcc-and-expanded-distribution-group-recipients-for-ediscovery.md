@@ -12,23 +12,23 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.assetid: eb8ddf15-0080-457e-9d83-e73e193da334
 description: In-Place Tutma, Dava Tutma ve Microsoft 365 saklama ilkeleri, mevzuat uyumluluğu ve eBulma gereksinimlerini karşılamak için posta kutusu içeriğini korumanıza olanak tanır.
-ms.openlocfilehash: 1477fbb2425138dc428fe348fbe85cac1f12183b
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: a088407277f7ebced3aa69ee9ff807913f9b0c85
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64758569"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64942127"
 ---
 # <a name="preserve-bcc-and-expanded-distribution-group-recipients-for-ediscovery"></a>eBulma için Gizli ve genişletilmiş dağıtım grubu alıcılarını koruma
-
-Yasal tutmalar, eBulma tutmaları ve [Microsoft 365 bekletme ilkeleri](./retention.md) (Microsoft 365 uyumluluk merkezi oluşturulan), mevzuat uyumluluğu ve eBulma gereksinimlerini karşılamak için posta kutusu içeriğini korumanıza olanak tanır. Bir iletinin Kime ve Bilgi alanlarında doğrudan ele alınan alıcılar hakkındaki bilgiler varsayılan olarak tüm iletilere eklenir. Ancak kuruluşunuz, iletinin tüm alıcıları hakkındaki ayrıntıları arama ve yeniden oluşturma olanağı gerektirebilir. Buna şunlar dahildir:
-
-- **İletinin Gizli alanı kullanılarak adreslenen alıcılar:** Gizli alıcılar, iletide gönderenin posta kutusunda depolanır, ancak alıcılara teslim edilen iletinin üst bilgilerine eklenmez.
-
-- **Genişletilmiş dağıtım grubu alıcıları:** Kime, Bilgi veya Gizli alanlarında, iletinin ele alındığı bir dağıtım grubunun üyesi oldukları için iletiyi alan alıcılar.
-
-Exchange Online ve Exchange Server 2013 (Toplu Güncelleştirme 7 ve sonraki sürümleri) Gizli ve genişletilmiş dağıtım grubu alıcıları hakkındaki bilgileri korur. Microsoft 365 uyumluluk merkezi bir eBulma aracı kullanarak bu bilgileri arayabilirsiniz.
-
+  
+Dava tutmaları, eBulma tutmaları ve [Microsoft 365 bekletme ilkeleri](./retention.md) (Microsoft Purview uyumluluk portalında oluşturulur), mevzuat uyumluluğu ve eBulma gereksinimlerini karşılamak için posta kutusu içeriğini korumanıza olanak tanır. Bir iletinin Kime ve Bilgi alanlarında doğrudan ele alınan alıcılar hakkındaki bilgiler varsayılan olarak tüm iletilere eklenir. Ancak kuruluşunuz, iletinin tüm alıcıları hakkındaki ayrıntıları arama ve yeniden oluşturma olanağı gerektirebilir. Buna şunlar dahildir:
+  
+- **İletinin Gizli alanı kullanılarak adreslenen alıcılar:** Gizli alıcılar, iletide gönderenin posta kutusunda depolanır, ancak alıcılara teslim edilen iletinin üst bilgilerine eklenmez. 
+    
+- **Genişletilmiş dağıtım grubu alıcıları:** Kime, Bilgi veya Gizli alanlarında, iletinin ele alındığı bir dağıtım grubunun üyesi oldukları için iletiyi alan alıcılar. 
+    
+Exchange Online ve Exchange Server 2013 (Toplu Güncelleştirme 7 ve sonraki sürümleri) Gizli ve genişletilmiş dağıtım grubu alıcıları hakkındaki bilgileri korur. Uyumluluk portalında bir eBulma aracı kullanarak bu bilgileri arayabilirsiniz.
+  
 ## <a name="how-bcc-recipients-and-expanded-distribution-group-recipients-are-preserved"></a>Gizli alıcılar ve genişletilmiş dağıtım grubu alıcıları nasıl korunur?
 
 Daha önce belirtildiği gibi Gizli alıcılarla ilgili bilgiler gönderenin posta kutusunda iletiyle birlikte depolanır. Bu bilgiler dizine eklenir ve eBulma aramaları ve tutmaları için kullanılabilir.

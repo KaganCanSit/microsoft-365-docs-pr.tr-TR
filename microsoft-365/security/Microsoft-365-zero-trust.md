@@ -18,12 +18,12 @@ ms.collection:
 - m365solution-zerotrust
 - m365solution-overview
 - M365-security-compliance
-ms.openlocfilehash: 879cbe33393158ee9e24107bbe042adc2f727ac6
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 3b943569485ffaa96b33208c1c4bf0a491c23a95
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64667218"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64939487"
 ---
 # <a name="microsoft-365-zero-trust-deployment-plan"></a>Microsoft 365 Sıfır Güven dağıtım planı
 
@@ -115,18 +115,18 @@ Microsoft 365 Defender bileşenleri pilot oluşturma ve dağıtmaya yönelik yö
 
 ## <a name="step-5-protect-and-govern-sensitive-data"></a>Adım 5. Hassas verileri koruma ve yönetme
 
-Hassas bilgileri nerede olursa olsun keşfetmenize, sınıflandırmanıza ve korumanıza yardımcı olmak için Microsoft Bilgi Koruması (MIP) uygulayın.
+Microsoft Purview Information Protection uygulayarak hassas bilgileri nerede yaşarsa yaşasın veya seyahat etseler keşfetmenize, sınıflandırmanıza ve korumanıza yardımcı olun.
 
-MIP özellikleri Microsoft 365 Uyumluluğu'na dahil edilir ve verilerinizi bilmeniz, verilerinizi korumanız ve veri kaybını önlemeniz için araçlar sunar.
+Microsoft Purview Information Protection özellikleri Microsoft Purview'a dahil edilir ve verilerinizi bilmeniz, verilerinizi korumanız ve veri kaybını önlemeniz için size araçlar sağlar.
 
 :::image type="content" source="../media/zero-trust/m365-zero-trust-architecture-info-protect.png" alt-text="Bilgi koruma özellikleri, ilke uygulama yoluyla verileri koruma" lightbox="../media/zero-trust/m365-zero-trust-architecture-info-protect.png":::
 
 Bu çalışma, bu makalenin önceki bölümlerinde gösterilen dağıtım yığınının en üstünde gösteriliyor olsa da, bu çalışmaya istediğiniz zaman başlayabilirsiniz.
 
-Microsoft Bilgi Koruması, belirli iş hedeflerinizi gerçekleştirmek için kullanabileceğiniz bir çerçeve, süreç ve özellikler sağlar.
+Microsoft Purview Information Protection, belirli iş hedeflerinizi gerçekleştirmek için kullanabileceğiniz bir çerçeve, süreç ve özellikler sağlar.
 
-:::image type="content" source="../media/zero-trust/mip-solution-overview.png" alt-text="Microsoft Bilgi Koruması (MIP) çerçevesi" lightbox="../media/zero-trust/mip-solution-overview.png":::
+![Microsoft Purview Information Protection](../media/zero-trust/mip-solution-overview.png)
 
-Bilgi korumasını planlama ve dağıtma hakkında daha fazla bilgi için bkz [**_. Microsoft Bilgi Koruması çözümü dağıtma_**](../compliance/information-protection-solution.md).
+Bilgi korumasını planlama ve dağıtma hakkında daha fazla bilgi için bkz. [**_Microsoft Purview Information Protection çözümü dağıtma_**](../compliance/information-protection-solution.md). 
 
 Veri gizliliği düzenlemeleri için bilgi koruması dağıtıyorsanız, bu çözüm kılavuzu sürecin tamamı için önerilen bir çerçeve sağlar: [**_Microsoft 365 ile veri gizliliği düzenlemeleri için bilgi koruması dağıtma_**](../solutions/information-protection-deploy.md).

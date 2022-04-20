@@ -1,5 +1,5 @@
 ---
-title: Değerlendirmeyi İlgi Düzeyi düzeyine Advanced eDiscovery
+title: eBulma'da İlgi Değerlendirmeyi Anlama (Premium)
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -15,39 +15,39 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 1d33d4fb-91ed-41c0-b72e-5a26eca3a2a7
-description: Değerlendirme aşamasına ve bu aşamanın, Microsoft 365 Advanced eDiscovery'te ilgi düzeyi eğitimi sırasında sorunların zenginliğini belirlemeyle ilgili rolüne Microsoft 365 Advanced eDiscovery.
+description: Microsoft Purview eKeşif'te (Premium) İlgi eğitimi sırasındaki sorunların zenginliğini belirlemede Değerlendirme aşamasına ve rolüne genel bir bakış edinin.
 ROBOTS: NOINDEX, NOFOLLOW
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 80ec4f0c362ff403f45123bf837e82c5d2f6ed7e
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 29376b8c71947b1f09bd86de90facef6f73e0fdd
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985171"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64943963"
 ---
-# <a name="assessment-in-the-relevance-module-in-advanced-ediscovery"></a>Advanced eDiscovery'daki İlgi Düzeyi modülünde değerlendirme
+# <a name="assessment-in-the-relevance-module-in-ediscovery-premium"></a>eBulma'daki İlgi modülünde değerlendirme (Premium)
   
-Advanced eDiscovery, örneğin tanımlanan sorunlar ve vaka için alınan veriler için erken değerlendirmeyi sağlar. Advanced eDiscovery, uzmana benimsenmiş bir yaklaşım hakkında karar verme ve bu kararları belge gözden geçirme projesine uygulama konusunda olanak sağlar.
+Microsoft Purview eBulma (Premium), örneğin tanımlanan sorunlar ve bir servis talebi için içeri aktarılan veriler için erken değerlendirmeyi etkinleştirir. eBulma (Premium), uzmanın benimsenen bir yaklaşım hakkında karar vermesine ve bu kararları belge gözden geçirme projesine uygulamasına olanak tanır.
   
 ## <a name="understanding-assessment"></a>Değerlendirmeyi anlama
 
-Değerlendirme'de, uzman sorunların zenginliğini belirlemek ve eğitim sonuçlarını yansıtan istatistikler üretmek için kullanılan en az 500 dosyalık rastgele bir kümeyi gözden kullanır. Uygun dosyaların doğru istatistikler sağlamak ve eğitim sürecinde sabitleme noktasını etkili bir şekilde belirlemek için Advanced eDiscovery Uygunluk düzeyine ulaşmalarına yardımcı olacak istatistiksel bir düzeye ulaşacak şekilde değerlendirme başarılı olur. 
+Değerlendirme bölümünde uzman, sorunların zenginliğini belirlemek ve eğitim sonuçlarını yansıtan istatistikler üretmek için kullanılan en az 500 dosyadan oluşan rastgele bir kümeyi inceler. Değerlendirme, eBulma (Premium) İlgisinin doğru istatistikler sağlamasına ve eğitim sürecinde dengelenme noktasını etkili bir şekilde belirlemesine yardımcı olacak istatistiksel bir düzeye ulaşmak için yeterli ilgili dosya bulunduğunda başarılı olur. 
   
-Değerlendirme kümesinde ilgili dosyaların sayısı ne kadar fazlasa, kararlılık algoritmasının istatistikleri ve etkinliği o kadar doğru olur. Değerlendirme dosyaları içindeki ilgili dosyaların sayısı sorunun zenginliğine bağlıdır. Zenginlik, küme içinde bir konuyla ilgili dosyaların tahmini yüzde değeridir. Daha yüksek zenginlik sorunları, daha düşük zenginlik sorunlarına göre daha hızlı bir şekilde ilgili dosya sayısına ulaşacak. Aşırı düşük zenginlik sorunları (örneğin, %2 veya daha az) önemli sayıda İlgili dosyaya ulaşmak için çok büyük bir değerlendirme kümesi gerekir.
+Değerlendirme kümesindeki ilgili dosya sayısı ne kadar yüksek olursa, istatistikler ve kararlılık algoritmasının etkinliği de o kadar doğru olur. Değerlendirme dosyalarındaki ilgili dosyaların sayısı sorunun zenginliğine bağlıdır. Zenginlik, kümedeki ilgili dosyaların bir sorunla ilgili tahmini yüzdesidir. Daha yüksek zenginliğe sahip sorunlar, daha düşük zenginliğe sahip sorunlardan daha hızlı bir şekilde daha fazla sayıda ilgili dosyaya ulaşır. Son derece düşük zenginliğe sahip sorunlar (örneğin, %2 veya daha az), önemli sayıda İlgili dosyaya ulaşmak için çok büyük bir değerlendirme kümesi gerektirir.
   
-Eğitim sırasında ve Toplu hesaplamanın ardından Takip Et ve Kararla sekmelerinde sunulan istatistikler, farklı gözden geçirme kümeleri için geri çekme tahminlerini içerir. İstatistiklerde, örnek bir kümeyi temel alan tahminler (bu örnekte değerlendirme dosyaları) hata kenar boşluklarını ve bu hata marjının güven düzeyini içerir. Örneğin, tahmini %80 geri çekmede %95 güven düzeyine sahip artı veya eksi %5 hata marjı olabilir. Bu, tahmini geri çekmenin gerçekte %75-%85 olduğu ve tahminde %95 güven olduğu anlamına gelir. Değerlendirme kümesi ne kadar büyük olursa, hata kenar boşluğu daha küçük olur ve istatistikler daha doğru olur. 
+Eğitim sırasında ve Batch hesaplaması sonrasında İzle ve Karar Ver sekmelerinde sunulan istatistikler, farklı gözden geçirme kümeleri için geri çağırma tahminlerini içerir. İstatistiklerde, bir örnek kümesini (bu örnekte değerlendirme dosyaları) temel alan tahminler hatanın kenar boşluğu ve bu hata kenar boşluğunun güvenilirlik düzeyini içerir. Örneğin, %80'in tahmini geri çağırması % 95 güvenilirlik düzeyiyle artı veya eksi %5 hata marjı olabilir. Bu, tahmini geri çağırmanın aslında %75-%85 olduğu ve bu tahminin %95 güvene sahip olduğu anlamına gelir. Değerlendirme kümesi ne kadar büyük olursa hatanın kenar boşluğu küçülür ve istatistikler daha doğru olur. 
   
-Uzman 500 dosyalık bir ilk değerlendirme değerlendirmesini gözden kullandıktan sonra, İlgi Düzeyi geri çekme değerlerinin geçerli hata kenar boşluğu değerini belirler. İlgi derecesi, değerlendirme kümesi en iyi duruma getirmek için varsayılan hata kenar boşluğu da önerecek. İşte birkaç örnek:
+Uzman 500 dosyadan oluşan bir ilk değerlendirme kümesini gözden geçirmesinin ardından İlgi, geri çağırma değerlerinin geçerli hata marjını belirleyebilir. İlgi ayrıca değerlendirme kümesini iyileştirmek için ulaşılacak varsayılan hata kenar boşluğu önerecektir. İşte birkaç örnek:
   
-- Değerlendirme kümesi zaten %artı veya eksi %10 hata marjı verdiyse, İlgi Düzeyi eğitime devam etmek önerecek (ek değerlendirme incelemesi gerekmez). 
+- Değerlendirme kümesi zaten artı veya eksi %10 hata marjı verdiyse, İlgi eğitime geçmenizi önerir (ek değerlendirme incelemesi gerekmez). 
 
-- Değerlendirme kümesi %artı veya eksi %13 hata marjı verdiyse, İlgi Düzeyi daha küçük bir kenar boşluğuna ulaşmak için başka bir değerlendirme dosyaları kümesi gözden geçirmeyi önerebilirsiniz. 
+- Değerlendirme kümesi artı veya eksi %13 hata marjı verdiyse, İlgi daha küçük bir kenar boşluğuna ulaşmak için başka bir değerlendirme dosyası kümesinin gözden geçirilmesini önerebilir. 
 
-- Zenginlik son derece düşükse, İlgi Düzeyi hata marjı büyük olsa bile değerlendirmeyi durdurmayı önerse (istatistikler pratik değildir), çünkü değerlendirme kümesi kullanışlı bir hata kenar boşluğuna ulaşmak için çok büyük olduğundan.
+- Zenginlik son derece düşükse, hatanın kenar boşluğu büyük olsa bile İlgi değerlendirmesinin durdurulmasını önerebilir (istatistikler pratik olmaz), çünkü hatanın yararlı bir kenar boşluğuna ulaşmak için gereken değerlendirme kümesi çok büyük.
 
-Her sorunun kendi zenginliği, geçerli hata marjı ve bunun sonucunda da tahmini ek değerlendirme dosyası sayısı vardır. Sonraki değerlendirme kümesi en fazla dosya sayısına (tek bir kümede en çok 1.000 dosya) göre oluşturulur.
+Her sorunun kendi zenginliği, geçerli hata marjı ve sonuç olarak tahmini ek değerlendirme dosyası sayısı vardır. Sonraki değerlendirme kümesi, en fazla dosya sayısına (tek bir kümede 1.000'e kadar) göre oluşturulur.
   
-İlgi Düzeyi önerilerini kabul veya geçerli hata kenar boşluklarını ihtiyaçlarına göre ayarlayabilirsiniz. Varsayılan geçerli hata kenar boşluğu geri çekme için %75'e eşit veya daha yüksek olarak belirlenir.
+İlgi önerilerini kabul edebilir veya hatanın geçerli kenar boşluğunu ihtiyaçlarınıza göre ayarlayabilirsiniz. Hatanın varsayılan geçerli kenar boşluğu, %75'e eşit veya daha yüksek geri çağırma için belirlenir.
   
 > [!NOTE]
-> Değerlendirme aşaması, sorunun **\>** genişletilmiş görünümünde yer alan İlgi Alanı Izleme sekmesinde, sorun başına Değerlendirme onay kutusu ve sonra da "tüm sorunlar" için  temiz kullanarak atlanır. Sonuç olarak, bu sorun için hiçbir istatistik olmaz. Değerlendirme onay **kutusu** temiz yalnızca değerlendirme yapılmadan önce yapılabilir. Bir olayda birden çok sorun varsa, değerlendirme yalnızca her sorunda onay kutusu temiz temiz olursa atlanır.
+> Değerlendirme aşaması, bir sorunun genişletilmiş görünümündeki **İlgi \> İzleme** sekmesinde, sorun başına **Değerlendirme** onay kutusunu ve ardından "tüm sorunlar" için temizlenerek atlanabilir. Sonuç olarak, bu sorunla ilgili istatistikler olmayacaktır. **Değerlendirme** onay kutusunun temizlenmesi yalnızca değerlendirme gerçekleştirilmeden önce yapılabilir. Bir durumda birden çok sorun olduğunda, değerlendirme yalnızca her sorun için onay kutusu temizlenmişse atlanır.

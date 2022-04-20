@@ -1,5 +1,5 @@
 ---
-title: Core eBulma durumunda eBulma tutmaları oluşturma
+title: eBulma (Standart) durumunda eBulma tutmaları oluşturma
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -17,17 +17,17 @@ ms.custom: admindeeplinkMAC
 search.appverid:
 - MOE150
 - MET150
-description: Bir soruşturma veya yasal davayla ilgili içeriği korumak için Microsoft 365 core eBulma olayıyla ilişkili bir ayrı tutma oluşturabilirsiniz.
-ms.openlocfilehash: f732bf1c9b85804a8a3814bf578a719d854725e5
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+description: Bir soruşturma veya yasal davayla ilgili içeriği korumak için Microsoft 365 bir eBulma (Standart) olayıyla ilişkili bir ayrı tutma oluşturabilirsiniz.
+ms.openlocfilehash: 4448c9b8a55466c0cf626deff6e69acd247a5814
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64824914"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64938279"
 ---
 # <a name="create-an-ediscovery-hold"></a>eBulma ayrı tutma oluşturma
 
-Servis talebiyle ilgili olabilecek içeriği korumak üzere ayrı tutmalar oluşturmak için Core eBulma servis talebi kullanabilirsiniz. Olayda araştırdığınız kişilerin Exchange posta kutularına ve OneDrive İş hesaplarına ayrı tutabilirsiniz. Ayrıca, Microsoft Teams, Office 365 Grupları ve Yammer Grupları ile ilişkili posta kutularına ve sitelere ayrı tutabilirsiniz. İçerik konumlarını ayrı tutarak yerleştirdiğinizde, içerik konumu ayrı tutmadan kaldırılana kadar veya siz saklamayı silene kadar içerik korunur.
+Servis talebiyle ilgili olabilecek içeriği korumak üzere ayrı tutmalar oluşturmak için Microsoft Purview eBulma (Standart) servis talebi kullanabilirsiniz. Olayda araştırdığınız kişilerin Exchange posta kutularına ve OneDrive İş hesaplarına ayrı tutabilirsiniz. Ayrıca, Microsoft Teams, Office 365 Grupları ve Yammer Grupları ile ilişkili posta kutularına ve sitelere ayrı tutabilirsiniz. İçerik konumlarını ayrı tutarak yerleştirdiğinizde, içerik konumu ayrı tutmadan kaldırılana kadar veya siz saklamayı silene kadar içerik korunur.
 
 Bir eBulma ayrı tutması oluşturduktan sonra ayrı tutmanın etkili olması 24 saat kadar sürebilir.
 
@@ -39,13 +39,13 @@ Ayrı tutma oluşturduğunuzda, belirtilen içerik konumlarında korunan içeri�
   
 ## <a name="how-to-create-an-ediscovery-hold"></a>eBulma ayrı tutma oluşturma
 
-Core eBulma olayıyla ilişkili bir eBulma ayrı tutması oluşturmak için:
+eBulma (Standart) olayıyla ilişkili bir eBulma tutması oluşturmak için:
   
-1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 uyumluluk merkezi</a> gidin ve uygun eBulma izinlerine atanmış kullanıcı hesabının kimlik bilgilerini kullanarak oturum açın.
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalına</a> gidin ve uygun eBulma izinlerine atanmış kullanıcı hesabının kimlik bilgilerini kullanarak oturum açın.
 
 2. Sol gezinti bölmesinde **Tümünü göster'e** tıklayın ve ardından **eBulma > Çekirdeği'ne** tıklayın.
 
-3. **Çekirdek eBulma** sayfasında, ayrı tutmayı oluşturmak istediğiniz servis talebinin adına tıklayın.
+3. **eBulma (Standart)** sayfasında, ayrı tutmayı oluşturmak istediğiniz servis talebinin adına tıklayın.
 
 4. Servis talebi için **Giriş** sayfasında **Ayrı Tut** sekmesine tıklayın.
   
@@ -113,7 +113,7 @@ eBulma saklama istatistikleri hakkında aşağıdaki şeyleri aklınızda bulund
 
 ## <a name="search-locations-on-ediscovery-hold"></a>eBulma ayrı tutmada arama konumları
 
-Core eBulma servis talebi içindeki [içeriği aradığınızda](search-for-content-in-core-ediscovery.md) , aramayı hızlı bir şekilde yalnızca servis talebiyle ilişkilendirilmiş bir ayrı tutma konumuna yerleştirilmiş içerik konumlarında arama yapacak şekilde yapılandırabilirsiniz.
+eBulma (Standart) durumunda [içerik aradığınızda](search-for-content-in-core-ediscovery.md) , aramayı hızlı bir şekilde yalnızca servis talebiyle ilişkili ayrı tutma konumuna yerleştirilmiş içerik konumlarında arama yapacak şekilde yapılandırabilirsiniz.
 
 Beklemeye alınmış tüm içerik konumlarında arama yapmak için Beklemedeki **konumlar** seçeneğini belirleyin. Servis talebi birden çok eBulma ayrı tutması içeriyorsa, bu seçeneği belirlediğinizde tüm ayrı tutmalardaki içerik konumları aranacaktır. Buna ek olarak, bir içerik konumu sorgu tabanlı ayrı tutmaya yerleştirilmişse, aramayı çalıştırdığınızda yalnızca ayrı tutma sorgusuyla eşleşen öğeler aranacaktır. Başka bir deyişle, arama sonuçlarıyla yalnızca hem ayrı tutma ölçütleriyle hem de arama ölçütleriyle eşleşen içerik döndürülür. Örneğin, bir kullanıcı belirli bir tarihten önce gönderilmiş veya oluşturulmuş öğeleri koruyan sorgu tabanlı servis talebi saklamaya yerleştirilmişse, yalnızca bu öğeler aranır. Bu, servis talebi saklama sorgusunu ve arama sorgusunu bir **AND** işleci tarafından bağlayarak gerçekleştirilir.
 
@@ -215,7 +215,7 @@ Bir posta kutusu, SharePoint site veya OneDrive hesabı eBulma ayrılığından 
 
    Daha fazla bilgi için bkz. [Bekletme için ilke yayımlama](retention.md#releasing-a-policy-for-retention).
 
-Bir servis talebi kapatıldığında ayrı tutmalar kapatıldığından, Core eBulma servis talebini kapattığınızda beklemedeki içerik konumlarına da gecikmeli saklama uygulanır. Servis talebini kapatma hakkında daha fazla bilgi için bkz. [Core eBulma servis talebini kapatma, yeniden açma ve silme](close-reopen-delete-core-ediscovery-cases.md).
+Bir servis talebi kapatıldığında ayrı tutmalar kapatıldığından, eBulma (Standart) servis talebini kapattığınızda beklemedeki içerik konumlarına da gecikmeli saklama uygulanır. Servis talebini kapatma hakkında daha fazla bilgi için bkz. [EBulma (Standart) servis talebini kapatma, yeniden açma ve silme](close-reopen-delete-core-ediscovery-cases.md).
 
 ## <a name="ediscovery-hold-limits"></a>eBulma tutma sınırları
 
@@ -224,7 +224,7 @@ Aşağıdaki tabloda eBulma durumları ve servis talebi tutma sınırları liste
   | Sınırın açıklaması | Sınırı |
   |:-----|:-----|
   |Bir kuruluş için en fazla servis talebi sayısı.  <br/> |Sınır yok  <br/> |
-  |Bir kuruluş için en fazla eBulma saklama ilkesi sayısı. Bu sınır, Core eBulma ve Advanced eDiscovery durumlarında birleştirilmiş saklama ilkelerinin toplamını içerir.  <br/> |10,000  <br/> |
+  |Bir kuruluş için en fazla eBulma saklama ilkesi sayısı. Bu sınır, eBulma (Standart) ve eBulma (Premium) durumlarında birleştirilmiş saklama ilkelerinin toplamını içerir.  <br/> |10.0001<sup></sup>  <br/> |
   |Tek bir eBulma ayrılığındaki en fazla posta kutusu sayısı. Bu sınır, kullanıcı posta kutularının toplamını ve Microsoft 365 Grupları, Microsoft Teams ve Yammer Grupları ile ilişkili posta kutularını içerir.  <br/> |1,000  <br/> |
   |Tek bir eBulma ayrılığındaki en fazla site sayısı. Bu sınır, OneDrive İş sitelerin, SharePoint sitelerin ve Microsoft 365 Grupları, Microsoft Teams ve Yammer Grupları ile ilişkili sitelerin toplamını içerir.  <br/> |100  <br/> |
   |eBulma giriş sayfasında görüntülenen en fazla servis talebi sayısı ve servis talebi içindeki Tutmalar, Aramalar ve Dışarı Aktarma sekmelerinde görüntülenen en fazla öğe sayısı.  |1.0001<sup></sup>|

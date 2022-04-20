@@ -1,5 +1,5 @@
 ---
-title: Tahmine dayalı kodlama başvurusu
+title: Tahmine dayalı kodlama referansı
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -14,81 +14,81 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: ''
-ms.openlocfilehash: ff681793a86d9953088c2c4da65553e1d2c54d22
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 2f70039d3e55c429bf175d850db907eb7dc5b598
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985697"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64942171"
 ---
 # <a name="predictive-coding-reference-preview"></a>Tahmine dayalı kodlama başvurusu (önizleme)
 
-Bu makalede, Advanced eDiscovery'de tahmine dayalı kodlama aracının temel kavramları ve Advanced eDiscovery. Makalenin bölümleri alfabetik sırada listelenmiştir.
+Bu makalede, Microsoft Purview eKeşif'teki (Premium) tahmine dayalı kodlama aracının temel kavramları ve ölçümleri açıklanmaktadır. Makaledeki bölümler alfabetik sırada listelenmiştir.
 
-## <a name="confidence-level"></a>Güven düzeyi
+## <a name="confidence-level"></a>Güvenilirlik düzeyi
 
-Tahmine dayalı bir kodlama modeli seniz, güven düzeyi gelişmiş bir ayardır. Modelin performans ölçümlerinin (örneğin, zenginlik, duyarlılık ve geri çekme) belirtilen bir aralığın (model için tanımlanan hata kenar boşluğuna göre), tahmindeki doğru değerleri temsil eden ve tahminin gözden geçirme kümesinde yer alan öğelere atadığınız modeli puanladığı değerini tanımlar. Hatanın güven düzeyi ve kenar boşluğu değerleri de denetim kümesine kaç öğenin dahil olduğunu belirlemeye yardımcı olur. Güven düzeyi için varsayılan değer 0,95 veya %95'tir.
+Güvenilirlik düzeyi, tahmine dayalı bir kodlama modeli oluşturduğunuzda gelişmiş bir ayardır. Modelin performans ölçümlerinin (örneğin, zenginlik, duyarlık ve geri çekme), modelin inceleme kümesindeki öğelere atadığı tahmin puanlarının gerçek değerlerini temsil eden belirli bir aralıkta (model için tanımlanan hata kenar boşluğu belirlenir) olduğunu tanımlar. Güvenilirlik düzeyi ve hata kenar boşluğu değerleri, denetim kümesine kaç öğenin dahil olduğunu belirlemeye de yardımcı olur. Güvenilirlik düzeyi için varsayılan değer %0,95 veya %95'tir.
 
 ## <a name="control-set"></a>Denetim kümesi
 
-Bir denetim kümesi, tahmine dayalı bir kodlama modelinin eğitim işlemi sırasında kullanılır. Denetim kümesi, modelin öğelere atadığınız tahmin puanlarını, eğitim yuvarlaları sırasında gerçekleştirdığınız etiketle değerlendirmektir. Denetim kümesi boyutu, gözden geçirme kümesinde yer alan öğelerin sayısına, modeli oluştururken ayarlanmış hata değerlerinin güven düzeyine ve kenar boşluğu değerlerine göre oluşturulur. Denetim kümesinde yer alan öğeler hiçbir zaman değişmez ve kullanıcılara tanınmaz. Denetim kümesinde toplam öğe sayısı, eğitim turu için uç uç sayfada görüntülenir.
+Denetim kümesi, tahmine dayalı kodlama modelinin eğitim sürecinde kullanılır. Denetim kümesi, modelin öğelere atadığını tahmin puanlarını eğitim yuvarlamaları sırasında gerçekleştirdiğiniz etiketlemeyle değerlendirmektir. Denetim kümesinin boyutu, gözden geçirme kümesindeki öğelerin sayısına ve model oluşturulurken ayarlanan hata değerlerinin güvenilirlik düzeyine ve kenar boşluğuna bağlıdır. Denetim kümesindeki öğeler hiçbir zaman değişmez ve kullanıcılara tanımlanamaz. Denetim kümesindeki toplam öğe sayısı, eğitim turu için açılır sayfada görüntülenir.
 
-## <a name="control-set-confusion-matrix"></a>Denetim kümesi karışıklığı matrisi
+## <a name="control-set-confusion-matrix"></a>Denetim kümesi karışıklık matrisi
 
-Siz eğitim turlarını tamamlandıktan sonra, model denetim kümesinde eğitim turu sırasında etiketledikten 10 öğeye bir tahmin puanı atar. Model, bu 10 öğenin tahmin puanlarını, eğitim turu sırasında öğeye atadığı gerçek etiketle karşıtır. Bu karşılaştırmaya dayanarak, model modelin tahmin performansını değerlendirmek için aşağıdaki sınıflandırmaları tanımlar:
+Bir eğitim turunu tamamladıktan sonra model, denetim kümesindeki eğitim turu sırasında etiketlediğiniz 10 öğeye bir tahmin puanı atar. Model, bu 10 öğenin tahmin puanını eğitim turu sırasında öğeye atadığınız gerçek etiketle karşılaştırır. Bu karşılaştırmaya bağlı olarak model, modelin tahmin performansını değerlendirmek için aşağıdaki sınıflandırmaları tanımlar:
 
 <br>
 
 ****
 
-|Etiket|Model, öğenin uygun olduğunu öngörür|Model, öğenin uygun olmadığını öngörür|
+|Etiket|Model, öğenin ilgili olduğunu tahmin eder|Model öğenin ilgili olmadığını tahmin ediyor|
 |---|---|---|
-|**Gözden geçiren öğeyi uygun olarak etiketler**|Doğru pozitif|Hatalı pozitif sonuç|
-|**Gözden geçiren öğeyi uygun değil olarak etiketler**|Yanlış negatif|Doğru negatif|
+|**İlgili olarak gözden geçiren etiketleri öğesi**|Gerçek pozitif|Hatalı pozitif|
+|**Gözden geçiren etiketler öğesi uygun değil**|Hatalı negatif|Gerçek negatif|
 |
 
-Bu karşılaştırmalara bağlı olarak, model F-puanı, duyarlılık ve geri çekme ölçümleri için değerleri ve her birinin hata marjını türetir. Bir eğitim turu için, matriste yer alan karışıklık türlerinden her biri, uç uç sayfada görüntülenir.
+Bu karşılaştırmalara bağlı olarak, model F puanı, duyarlık ve geri çağırma ölçümleri için değerler ve her biri için hata kenar boşluğu türetir. Matristen gelen karışıklık türlerinin her birinin sayısı, eğitim turu için açılır sayfada görüntülenir.
 
-## <a name="f-score"></a>F-score
+## <a name="f-score"></a>F puanı
 
-F-score, duyarlılık ve geri çekme ölçümlerine göre puanların ağırlıklı ortalamasıdır.  Bu ölçümün puan aralığı **0** ile **1 arasındadır**. **1'e yakın bir** puan, modelin ilgili öğeleri daha doğru algılaytır olduğunu gösterir. F-score metriği model panosunda ve her eğitim turu için uç uç sayfada görüntülenir.
+F puanı, duyarlık ve geri çağırma ölçümlerinin puanlarının ağırlıklı ortalamasıdır.  Bu ölçümün puan aralığı **0** ile **1** arasındadır. **1'e** yakın bir puan modelin ilgili öğeleri daha doğru algılayacağını gösterir. F puanı ölçümü model panosunda ve her eğitim turu için açılır sayfada görüntülenir.
 
 ## <a name="margin-of-error"></a>Hata kenar boşluğu
 
-Hatanın kenar boşluğu, tahmine dayalı bir kodlama modu mazsanız gelişmiş bir ayardır. Denetim kümenizin rastgele örneklemesinden türetilen performans ölçümleri (örneğin, zenginlik, duyarlılık ve geri çekme) hata derecesini belirtir. Hatanın alt kenar boşluğu, modelin performans ölçümlerinin daha küçük bir aralıkta olduğundan emin olmak için daha büyük bir denetim kümesi gerektirir. Hata ve güven düzeyi kenar boşluğu değerleri de denetim kümesine kaç öğenin dahil olduğunu belirlemeye yardımcı olur. Hata kenar boşluğu için varsayılan değer 0,05 veya %5'tir.
+Tahmine dayalı kodlama modu oluşturduğunuzda hatanın kenar boşluğu gelişmiş bir ayardır. Denetim kümenizdeki öğelerin rastgele örneklemesinden türetilen performans ölçümlerindeki hata derecesini (örneğin, zenginlik, duyarlık ve geri çağırma) belirtir. Hatanın daha düşük bir kenar boşluğu, modelin performans ölçümlerinin daha küçük bir aralık içinde olmasını sağlamak için daha büyük bir denetim kümesi gerektirir. Hata ve güvenilirlik düzeyinin kenar boşluğu değerleri, denetim kümesine kaç öğenin dahil olduğunu belirlemeye de yardımcı olur. Hata kenar boşluğu için varsayılan değer 0,05 veya %5'tir.
 
 ## <a name="model-stability"></a>Model kararlılığı
 
-Model kararlılığı, modelin gözden geçirme kümesinde yer alan bir belgenin uygun olup olmadığını doğru bir şekilde tahmin etme becerisini gösterir. Model kararsız olduğunda, modelin kararlılığını içerecek şekilde daha fazla eğitim yuvarlaması gerçekleştiriliyor olabilir. Model kararlı olduğunda daha fazla eğitim yuvarlatma işlemi gerçekleştirile gerekmektedir. Model panosu, modelin kararlılığının geçerli durumunu gösterir. Bir model kararlı olduğunda, performans ölçümleri hatanın güven düzeyi ve kenar boşluğu ayarlarına uygun bir düzeye ulaştı.
+Model kararlılığı, modelin inceleme kümesindeki bir belgenin ilgili olup olmadığını doğru bir şekilde tahmin etme özelliğini gösterir. Model kararsız olduğunda modelin kararlılığını eklemek için daha fazla eğitim turu gerçekleştirilmesi gerekebilir. Model kararlı olduğunda, başka eğitim turu yapılması gerekmeyebilir. Model panosu, modelin kararlılığının geçerli durumunu gösterir. Model kararlı olduğunda performans ölçümleri güvenilirlik düzeyi ve hata marjı ayarlarıyla eşleşen bir düzeye ulaşmıştır.
 
-## <a name="overturn-rate"></a>Overturn rate
+## <a name="overturn-rate"></a>Ters devir oranı
 
-Overturn oranı, gözden geçirme kümesinde, tahmin puanının eğitim yuvarlaları arasında değişte olduğu yüzdedir. Bir model, overturn oranı %5'in altında olduğunda kararlı kabul edilir. Overturn rate metric is displayed on the model dashboard and on the flyout page for each training round. İlk eğitim tur için geri dönüş oranı sıfırdır çünkü, daha önce üzerinde overturn yapmak için bir tahmin puanı sıfırdır.
+Ters çevrilmiş oran, tahmin puanının eğitim yuvarlamaları arasında değiştiği gözden geçirme kümesindeki öğelerin yüzdesidir. Ters dönmüş oranı %5'in altında olduğunda model kararlı olarak kabul edilir. Ters dönüş oranı ölçümü model panosunda ve her eğitim turu için açılır sayfada görüntülenir. İlk eğitim turunun ters dönüş oranı sıfırdır çünkü ters döndürülecek önceki bir tahmin puanı yoktur.
 
-## <a name="precision"></a>Duyarlılık
+## <a name="precision"></a>Hassasiyet
 
-Duyarlılık ölçümü, modelin tahmin edilen öğeler arasında aslında uygun olan öğelerin oranını ölçür. Bu, denetim kümesinde bulunan öğelerin gözden geçiren ve model tarafından uygun olarak tahmin edilen etiket olduğu anlamına gelir. Bu ölçümün puan aralığı **0** ile **1 arasındadır**. **1'e yakın bir** puan, modelin daha az ilgili olmayan öğe tanımlaytır olduğunu gösterir. Duyarlılık ölçümü model panosunda ve her eğitim turu için uç uç sayfada görüntülenir.
+Duyarlık ölçümü, modelin tahmin edilen ilgili öğeler arasında gerçekten ilgili olan öğelerin oranını ölçer. Bu, denetimdeki öğelerin, etiketin gözden geçiren tarafından ilgili olduğu ve model tarafından uygun olarak tahmin edildiği durumlarda ayarlandığı anlamına gelir. Bu ölçümün puan aralığı **0** ile **1** arasındadır. **1'e** yakın bir puan, modelin daha az ilgili olmayan öğe tanımlayacağını gösterir. Duyarlık ölçümü model panosunda ve her eğitim turu için açılır sayfada görüntülenir.
 
 ## <a name="prediction-score"></a>Tahmin puanı
 
-Bu, bir modelin gözden geçirme kümesinde her belgeye atadığınız puandır. Puan, modelin eğitim turlarında edinilen eğitimle karşılaştırıldığında belgenin ilgi düzeyine göredir. Genelde, tahmin puanları **0 ile** **0,5** arasında olan öğeler uygun kabul edilir ve tahmin puanları **0,5** ile **1** arasında olan öğeler uygun kabul edilir. Tahmin puanı bir belge meta veri alanında yer eder. Belirtilen tahmin aralığı içinde yer alan bir gözden geçirme kümesinde öğeleri görüntülemek için tahmin filtresi kullanabilirsiniz.
+Bu, bir modelin gözden geçirme kümesindeki her belgeye atayabilecekleri puandır. Puan, modelin eğitim turlarından öğrenmesine kıyasla belgenin ilgi düzeyini temel alır. Genel olarak, tahmin puanı 0 ile **0,5** arasında olan öğeler ilgili değildir ve **tahmin puanı 0,5** ile **1** arasında olan öğeler ilgili kabul edilir. Tahmin puanı bir belge meta veri alanında yer alır. Bir tahmin filtresi kullanarak, belirtilen tahmin aralığındaki bir gözden geçirme kümesindeki öğeleri görüntüleyebilirsiniz.
 
-## <a name="recall"></a>Geri Çekme
+## <a name="recall"></a>Hatırla
 
-Geri çekme metrik, modelin tahmin edilen öğeler arasında gerçekten ilgili olduğu orneklerini ölçür. Bu, denetim kümesinde öngörülen modelin uygun olduğu öğeler için gözden geçiren kişi tarafından da etiketlenmiş olduğu anlamına gelir. Bu ölçümün puan aralığı **0** ile **1 arasındadır**. **1'e yakın bir** puan, modelin ilgili öğelerin daha büyük bir kısmını belirleyeceklerini gösterir. Geri çekme ölçümü model panosunda ve her eğitim turu için uç uç sayfada görüntülenir.
+Geri çağırma ölçümü, modelin tahmin edilen öğelerin gerçekten ilgili öğeler arasında ilgili olduğu oranını ölçer. Bu, modelin ilgili olduğu tahmin edilen denetim kümesindeki öğelerin de gözden geçiren tarafından ilgili olarak etiketlendiği anlamına gelir. Bu ölçümün puan aralığı **0** ile **1** arasındadır. **1'e** yakın bir puan, modelin ilgili öğelerin daha büyük bir bölümünü tanımlayacağını gösterir. Geri çağırma ölçümü model panosunda ve her eğitim turu için açılır sayfada görüntülenir.
 
-## <a name="review-set"></a>Gözden Geçirme kümesi
+## <a name="review-set"></a>Gözden geçirme kümesi
 
-Gözden geçirme kümesi öngörülebilir kodlama modelinin kapsamını sağlar. Gözden geçirme kümesi için yeni bir model  oluşturmada, denetim kümesi ve eğitim kümelerinin öğeleri gözden geçirme kümesinden seçilir. Model, tahmin puanlarını ata olduğunda, bu puanları gözden geçirmedeki öğeleri atar. Tahmine dayalı bir kodlama modeli oluşturmadan önce, tüm öğeleri gözden geçirme kümesine eklemeniz gerekir. Bir model oluşturduklardan sonra öğe eklersiniz, bu öğelere tahmin puanı atanmaz.
+Gözden geçirme kümesi, tahmine dayalı kodlama modelinin kapsamını sağlar. Gözden geçirme kümesi için yeni bir model oluşturduğunuzda, denetim kümesi ve eğitim kümeleri için öğeler gözden geçirme kümesinden seçilir. Model tahmin puanları atadığında, bu puanları gözden geçirmedeki öğeleri atar. Tahmine dayalı bir kodlama modeli oluşturmadan önce tüm öğeleri gözden geçirme kümesine eklemeniz gerekir. Model oluşturduktan sonra öğe eklerseniz, bu öğelere tahmin puanı atanmayacaktır.
 
 ## <a name="richness"></a>Zenginlik
 
-Zenginlik metrik, modelin uygun olarak tahmin edilen gözden geçirme kümesi öğelerinin yüzdesini ölçür. Bu ölçümün puan aralığı **0** ile **1 arasındadır**. Zenginlik metriği model panosunda görüntülenir.
+Zenginlik ölçümü, modelin ilgili olarak tahminde bulunan gözden geçirme kümesi öğelerinin yüzdesini ölçer. Bu ölçümün puan aralığı **0** ile **1** arasındadır. Zenginlik ölçümü model panosunda görüntülenir.
 
-## <a name="sampled-items"></a>Örnekli öğeler
+## <a name="sampled-items"></a>Örneklenen öğeler
 
-Örnek alınan *öğeler terimi* , bir gözden geçirme kümesinde (metin içeren) rastgele bir öğe örneğine başvurur; bu örnek, tahmine dayalı bir kodlama modeli oluşturmak için seçilen ve denetim kümesiyle ilişkilendirilmiş olur. Her eğitim turu için rastgele bir öğe örneği de seçilir. Bir modelin denetim kümesi için seçilen öğeler, hiçbir zaman aynı modele uygun eğitim kümesine dahil edilir. Bu durum da şu şekildedir: eğitim kümesi öğeleri hiçbir zaman denetim kümesine dahil değildir.
+*Örneklenen öğeler* terimi, tahmine dayalı bir kodlama modeli oluşturduğunuzda seçilen ve denetim kümesiyle ilişkili bir gözden geçirme kümesindeki (metin içeren) öğelerin rastgele örneğine başvurudur. Her eğitim turu için rastgele bir öğe örneği de seçilir. Bir modelin denetim kümesi için seçilen öğeler hiçbir zaman aynı model için bir eğitim kümesine dahil olmaz. Tersi de geçerlidir: eğitim kümesi öğeleri hiçbir zaman denetim kümesine dahil değildir.
 
 ## <a name="training-set"></a>Eğitim kümesi
 
-Model, gözden geçirme kümesinden öğeleri rastgele seçer ve bunları eğitim kümesine ekler. Eğitim turu sırasında, denetim kümesinden gelen öğelere ek olarak, her birini "ilgili" veya "ilgili değil" olarak etiketlemek için eğitim kümesinden gelen öğeler de size sunulacaktır. Bu etiketleme veya "eğitim" süreci, modelin gözden geçirmedeki hangi öğelerin ilgili veya ilgili olmadığını tahmin etmeyi öğrenmesinde yardımcı olur. Her eğitim turu gerçekleştirşiniz, model gözden geçirmeden daha fazla öğe seçer ve bunları bu eğitim turuna yönelik eğitim kümesine ekler. Denetim kümesinden gelen öğeler hiçbir zaman eğitim kümesi için seçilmez.
+Model, gözden geçirme kümesindeki öğeleri rastgele seçer ve bunları bir eğitim kümesine ekler. Eğitim turu sırasında, eğitim kümesindeki öğeler (denetim kümesindeki öğelere ek olarak) size sunulur, böylece her birini "ilgili" veya "ilgili değil" olarak etiketleyebilirsiniz. Bu etiketleme veya "eğitim" işlemi, modelin incelemedeki hangi öğelerin ilgili olup olmadığını tahmin etmeyi öğrenmesine yardımcı olur. Her eğitim turu gerçekleştirdiğinizde model gözden geçirmeden daha fazla öğe seçer ve bunları bu eğitim turu için eğitim kümesine ekler. Denetim kümesindeki öğeler hiçbir zaman eğitim kümesi için seçilmez.

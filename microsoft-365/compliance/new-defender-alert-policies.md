@@ -19,12 +19,12 @@ ms.custom:
 - admindeeplinkDEFENDER
 ROBOTS: noindex,nofollow
 description: Office 365 için Microsoft Defender için yeni uyarı ilkeleri yayınlıyoruz. Ayrıca, yeni ilkelerle değiştirilen iki mevcut uyarı ilkesi de kullanımdan kaldırılmıştır.
-ms.openlocfilehash: afdc547fc658b40c2eee7a92ef2043326e159b32
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 339d16f7cd4e481d408a13d2e738cdef9fc991bf
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64759489"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64939641"
 ---
 # <a name="new-alert-policies-in-microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender'da yeni uyarı ilkeleri
 
@@ -97,7 +97,7 @@ Yeni uyarılar tetiklenmeye başlar ve yukarıda listelenen tarihlerde kuruluşu
 
 ## <a name="what-you-need-to-do-to-prepare-for-these-changes"></a>Bu değişikliklere hazırlanmak için yapmanız gerekenler
 
-Kuruluşunuzun bu uyarıları nasıl kullandığı, hazırlanmak için yapmanız gerekenleri belirler. Uyarıları kullanıma hazır hale getirdiyseniz ve bunları bir API, uyarı e-posta bildirimi veya <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 uyumluluk merkezi</a> ya da <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalında</a> kullanıyorsanız, iş akışlarınızı değiştirmeniz gerekir.
+Kuruluşunuzun bu uyarıları nasıl kullandığı, hazırlanmak için yapmanız gerekenleri belirler. Uyarıları kullanıma hazır hale getirdiyseniz ve bunları bir API, uyarı e-posta bildirimi veya <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalında</a> veya <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalında</a> kullanıyorsanız, iş akışlarınızı değiştirmeniz gerekir.
 
 **Bu uyarıları kullanıma hazır hale getirmediyseniz aşağıdakilerden birini yapabilirsiniz:**
 

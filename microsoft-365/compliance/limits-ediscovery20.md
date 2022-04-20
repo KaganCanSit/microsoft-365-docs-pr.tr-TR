@@ -1,5 +1,5 @@
 ---
-title: Gelişmiş eKeşif sınırları
+title: eBulma (Premium) sınırları
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -15,21 +15,21 @@ search.appverid:
 - MET150
 ms.custom:
 - seo-marvel-apr2020
-description: Microsoft 365'da Advanced eDiscovery çözümü için geçerli olan durum sınırları, dizin oluşturma sınırları ve arama sınırları hakkında bilgi edinin.
-ms.openlocfilehash: 93f0a988cb5a5321c8a725a1d678079174eba923
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+description: Microsoft 365'da eBulma (Premium) çözümü için geçerli olan durum sınırları, dizin oluşturma sınırları ve arama sınırları hakkında bilgi edinin.
+ms.openlocfilehash: 599f57ab863ab6d82140fa473624916bd2f26ac1
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64861322"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64942523"
 ---
-# <a name="limits-in-advanced-ediscovery"></a>Advanced eDiscovery sınırları
+# <a name="limits-in-ediscovery-premium"></a>eBulma sınırları (Premium)
 
-Bu makalede, Microsoft 365'daki Advanced eDiscovery çözümündeki sınırlar açıklanmaktadır.
+Bu makalede, Microsoft 365'daki Microsoft Purview eKeşif (Premium) çözümündeki sınırlar açıklanmaktadır.
 
 ## <a name="case-and-review-set-limits"></a>Servis talebi ve gözden geçirme belirlenen sınırlar
 
-Aşağıdaki tabloda, Advanced eDiscovery'da servis talepleri ve gözden geçirme kümeleri için sınırlar listelemektedir.
+Aşağıdaki tabloda, eBulma (Premium) içindeki servis taleplerinin ve gözden geçirme kümelerinin sınırları listeleniyor.
 
 |Sınırın açıklaması|Sınırı|
 |---|---|
@@ -45,17 +45,17 @@ Aşağıdaki tabloda, Advanced eDiscovery'da servis talepleri ve gözden geçirm
 
 ## <a name="hold-limits"></a>Ayrı tutma sınırları
 
-Aşağıdaki tabloda, bir Advanced eDiscovery servis talebiyle ilişkili ayrı tutma sınırları listelenir.
+Aşağıdaki tabloda, eBulma (Premium) olayıyla ilişkili tutma sınırları listeleniyor.
 
-|Sınırın açıklaması|Sınırı|
-|---|---|
-|Bir kuruluş için en fazla saklama ilkesi sayısı. Bu sınır, Core eBulma ve Advanced eDiscovery durumlarında birleştirilmiş saklama ilkelerinin toplamını içerir.|10,000|
-|Tek bir servis talebi ayrı tutmadaki en fazla posta kutusu sayısı. Bu sınır, kullanıcı posta kutularının toplamını ve Microsoft 365 Grupları, Microsoft Teams ve Yammer Grupları ile ilişkili posta kutularını içerir.|1.0003<sup></sup>|
-|Tek bir servis talebi saklamadaki en fazla site sayısı. Bu sınır, OneDrive İş sitelerin, SharePoint sitelerin ve Microsoft 365 Grupları, Microsoft Teams ve Yammer Grupları ile ilişkili sitelerin toplamını içerir.|1003<sup></sup>|
+| Sınırın açıklaması | Sınırı |
+|:-----|:-----|
+|Bir kuruluş için en fazla saklama ilkesi sayısı. Bu sınır, Microsoft Purview eKeşif (Standart) ve Microsoft Purview eKeşif (Premium) servis talepleri için birleştirilmiş saklama ilkeleri toplamını içerir. <br/> |10.0003<sup></sup>  <br/> |
+|Tek bir servis talebi ayrı tutmadaki en fazla posta kutusu sayısı. Bu sınır, kullanıcı posta kutularının toplamını ve Microsoft 365 Grupları, Microsoft Teams ve Yammer Grupları ile ilişkili posta kutularını içerir. <br/> |1,000  <br/> |
+|Tek bir servis talebi saklamadaki en fazla site sayısı. Bu sınır, OneDrive İş sitelerin, SharePoint sitelerin ve Microsoft 365 Grupları, Microsoft Teams ve Yammer Grupları ile ilişkili sitelerin toplamını içerir.  <br/> |100  <br/> |
 
 ## <a name="indexing-limits"></a>Dizin oluşturma sınırları
 
-Aşağıdaki tabloda, Advanced eDiscovery'deki dizin oluşturma sınırları listelenir.
+Aşağıdaki tabloda, eBulma (Premium) içindeki dizin oluşturma sınırları listeleniyor.
 
 |Sınırın açıklaması|Sınırı|
 |---|---|
@@ -66,7 +66,7 @@ Aşağıdaki tabloda, Advanced eDiscovery'deki dizin oluşturma sınırları lis
 
 ## <a name="search-limits"></a>Arama sınırları
 
-Bu bölümde açıklanan sınırlar, bir servis talebi için veri toplamak için **Aramalar** sekmesindeki arama aracının kullanılmasıyla ilgilidir. Daha fazla bilgi için bkz. [Advanced eDiscovery bir servis talebi için veri toplama](collecting-data-for-ediscovery.md).
+Bu bölümde açıklanan sınırlar, bir servis talebi için veri toplamak için **Aramalar** sekmesindeki arama aracının kullanılmasıyla ilgilidir. Daha fazla bilgi için bkz. [eBulma'da (Premium) bir servis talebi için veri toplama](collecting-data-for-ediscovery.md).
 
 |Sınırın açıklaması|Sınırı|
 |---|---|
@@ -126,7 +126,7 @@ Bu bölümde açıklanan sınırlar, belgeleri gözden geçirme kümesinin dış
 > [!NOTE]
 > <sup>1</sup> Bu, bir durumda oluşturabileceğiniz en fazla etiket sayısıdır. Bu sınır, etiketlenebilir belge sayısıyla ilgili değildir.
 >
-> <sup>2</sup> Bu sınır, diğer eBulma araçlarındaki içerik dışarı aktarıldığında paylaşılır. Bu, İçerik aramasında ve Çekirdek eBulma'da (ve Advanced eDiscovery kümelerini gözden geçirmek için içerik eklemek) içindeki eşzamanlı dışarı aktarma işlemlerinin tümünün bu sınıra göre uygulandığı anlamına gelir.
+> <sup>2</sup> Bu sınır, diğer eBulma araçlarındaki içerik dışarı aktarıldığında paylaşılır. Bu, İçerik arama ve eBulma (Standart) içindeki eşzamanlı dışarı aktarma işlemlerinin (ve eBulma'daki (Premium)) kümeleri gözden geçirmek için içerik eklemenin bu sınıra göre uygulandığı anlamına gelir.
 >
 > <sup>3</sup> Tek bir ayrı tutma ilkesinde 1.000'den fazla posta kutusunu veya 100'den fazla siteyi beklemeye aldığınızda, sistem saklamayı gerektiği gibi otomatik olarak ölçeklendirir. Bu, sistemin veri konumlarını tek bir ayrı tutma ilkesine eklemek yerine otomatik olarak birden çok ayrı tutma ilkesine ekleyeceği anlamına gelir. Ancak, kuruluş başına 10.000 servis talebi saklama ilkesi sınırı hala geçerlidir.
 >
@@ -141,4 +141,4 @@ Bu bölümde açıklanan sınırlar, belgeleri gözden geçirme kümesinin dış
 >
 > <sup>6</sup> Tümcecik olmayan sorgular için (çift tırnak işareti kullanmayan bir anahtar sözcük değeri) özel bir ön ek dizini kullanırız. Bu, bir sözcüğün belgede olduğunu, ancak belgede nerede olduğunu söylemediğini bildirir. Tümcecik sorgusu yapmak için (çift tırnak işaretli bir anahtar sözcük değeri), tümcecikteki sözcüklerin belge içindeki konumunu karşılaştırmamız gerekir. Başka bir deyişle, tümcecik sorguları için ön ek dizinini kullanamayız. Bu durumda, ön ekin genişletilmesi olası tüm sözcüklerle sorguyu dahili olarak genişletiriz; örneğin,  **time\**_ _*"time VEYA timer OR times YA DA timex OR timeboxed OR ..." olarak genişletilebilir**. 10.000 sınırı, sorguyla eşleşen belge sayısı değil, sözcüğün genişletebileceği en fazla değişken sayısıdır. Tümcecik olmayan terimler için üst sınır yoktur.
 >
-> <sup>7</sup> Bu sınır, seçilen belgeleri bir gözden geçirme kümesinden indirmek için geçerlidir. Bir gözden geçirme kümesinden belgeleri dışarı aktarmak için geçerli değildir. Belgeleri indirme ve dışarı aktarma hakkında daha fazla bilgi için bkz[. Advanced eDiscovery'da büyük/küçük harf verilerini dışarı aktarma](exporting-data-ediscover20.md).
+> <sup>7</sup> Bu sınır, seçilen belgeleri bir gözden geçirme kümesinden indirmek için geçerlidir. Bir gözden geçirme kümesinden belgeleri dışarı aktarmak için geçerli değildir. Belgeleri indirme ve dışarı aktarma hakkında daha fazla bilgi için bkz. [EBulma'da büyük/küçük harf verilerini dışarı aktarma (Premium)](exporting-data-ediscover20.md).

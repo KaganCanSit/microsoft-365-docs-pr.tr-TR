@@ -12,18 +12,18 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Mobil iletişim verilerini içeri aktarmak ve arşivlemek için CellTrust SL2 veri bağlayıcısını ayarlamayı ve kullanmayı öğrenin.
-ms.openlocfilehash: e5e07e4138445e46cdd21edc0cfb01d871dd3b6e
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 286546950c29732e1d33738ffbe7a74f2f6dcca2
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64761164"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64940697"
 ---
 # <a name="archive-data-from-celltrust-sl2-to-microsoft-365"></a>CellTrust SL2'den Microsoft 365 verileri arşivle
 
 CellTrust SL2 mobil iletişim verilerini yakalar ve FINRA, HIPAA, FOIA ve TCPA gibi düzenlemelere yönelik elektronik keşif gereksinimlerini karşılamak için önde gelen arşivleme teknolojileriyle tümleşir. SL2 Veri Bağlayıcısı mobil iletişim öğelerini Microsoft 365 aktarır. Bu makalede, arşivleme için CellTrust SL2 Veri Bağlayıcısı'nı kullanarak SL2'yi Microsoft 365 ile tümleştirme işlemi açıklanmaktadır. Bu işlemi tamamladığınızda CellTrust SL2 hizmetine abone olduğunuz ve SL2 mimarisi hakkında bilgi sahibi olduğunuz varsayılır. CellTrust SL2 hakkında bilgi için bkz <https://www.celltrust.com>. .
 
-Veriler Microsoft 365 kullanıcı posta kutularına aktarıldıktan sonra, Dava Tutma, eBulma, Microsoft 365 bekletme ilkeleri ve iletişim uyumluluğu gibi Microsoft 365 uyumluluk özelliklerini uygulayabilirsiniz. Microsoft 365'da verileri içeri aktarmak ve arşivlemek için CellTrust SL2 Veri Bağlayıcısı'nı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
+Veriler Microsoft 365 kullanıcı posta kutularına aktarıldıktan sonra, Dava Tutma, eBulma, Microsoft 365 bekletme ilkeleri ve iletişim uyumluluğu gibi Microsoft Purview özelliklerini uygulayabilirsiniz. Microsoft 365'da verileri içeri aktarmak ve arşivlemek için CellTrust SL2 Veri Bağlayıcısı'nı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 
 ## <a name="overview-of-archiving-with-the-celltrust-sl2-data-connector"></a>CellTrust SL2 Veri Bağlayıcısı ile arşivleme genel bakış
 
@@ -45,13 +45,13 @@ CellTrust'ın SL2 platformu, birden çok kaynaktan gelen iletişim verilerini ya
 
 - SL2 etki alanınızın yönetici hesabına erişmek için kimlik bilgilerini alın.
 
-- 1. Adımda CellTrust SL2 veri bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, Microsoft 365 uyumluluk merkezi **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için, [Microsoft 365 uyumluluk merkezi İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
+- 1. Adımda CellTrust SL2 veri bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, Microsoft Purview uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için [Microsoft Purview uyumluluk portalındaki İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
-- Bu CellTrust veri bağlayıcısı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda kullanılabilir. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerinin Microsoft 365 altyapısının dışındaki üçüncü taraf sistemlerde depolanmasını, iletilmesini ve işlenmesini içerebilir ve bu nedenle Microsoft 365 uyumluluk ve veri koruma taahhütleri kapsamında değildir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
+- Bu CellTrust veri bağlayıcısı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda kullanılabilir. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerinin Microsoft 365 altyapısı dışında olan ve bu nedenle Microsoft Purview ve veri koruma taahhütleri kapsamında olmayan üçüncü taraf sistemlerde depolanmasını, iletilmesini ve işlenmesini içerebilir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
 
 ## <a name="step-1-create-a-celltrust-sl2-connector"></a>1. Adım: CellTrust SL2 bağlayıcısı oluşturma
 
-İlk adım, Microsoft 365 uyumluluk merkezi bir veri bağlayıcısı oluşturmaktır.
+İlk adım, uyumluluk portalında bir veri bağlayıcısı oluşturmaktır.
 
 1. Sol gezinti bölmesinde **Veri bağlayıcıları'na** <https://compliance.microsoft.com> gidin ve tıklayın.
 
@@ -85,11 +85,11 @@ Bir sonraki adım, CellTrust SL2 etki alanınız için bir yönetici hesabında 
 
    ![Arşiv için OU'ları etkinleştirin.](../media/EnableCellTrustOUs.png)
 
-4. Seçimlerinizi bitirdiğinizde tarayıcı penceresini kapatın ve Microsoft 365 uyumluluk merkezi sihirbaz sayfasına dönün. Birkaç saniye sonra sihirbaz otomatik olarak kullanıcıları eşlemenin bir sonraki adımına ilerler.
+4. Seçimlerinizi bitirdiğinizde tarayıcı penceresini kapatın ve uyumluluk portalında sihirbaz sayfasına dönün. Birkaç saniye sonra sihirbaz otomatik olarak kullanıcıları eşlemenin bir sonraki adımına ilerler.
 
 ## <a name="step-3-map-users-and-complete-the-connector-setup"></a>3. Adım: Kullanıcıları eşleme ve bağlayıcı kurulumunu tamamlama
 
-Son adım, kullanıcıları eşlemek ve Microsoft 365 uyumluluk merkezi bağlayıcı kurulumunu tamamlamaktır.
+Son adım, kullanıcıları eşlemek ve uyumluluk portalında bağlayıcı kurulumunu tamamlamaktır.
 
 1. Kullanıcılar için e-posta adresi hem SL2 hem de Microsoft 365 aynıysa, **Kullanıcı eşleme** sayfasında **Otomatik kullanıcı eşlemesini etkinleştir'i** seçin. Aksi takdirde, kullanıcıların SL2 adresini Microsoft 365 adresleriyle eşleyen bir CSV dosyasını karşıya yükleyerek e-posta adreslerini el ile kullanmanız gerekir.
 

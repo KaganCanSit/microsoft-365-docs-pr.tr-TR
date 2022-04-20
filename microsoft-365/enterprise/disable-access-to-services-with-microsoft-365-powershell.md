@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.assetid: 264f4f0d-e2cd-44da-a9d9-23bef250a720
 description: Bu makalede, kullanıcılar için Microsoft 365 hizmetlerine erişimi devre dışı bırakmak için PowerShell'i kullanmayı öğrenin.
-ms.openlocfilehash: eeb3c8dc0057318550a956d0d0f4f916f4515fd4
-ms.sourcegitcommit: dc415d784226c77549ba246601f34324c4f94e73
+ms.openlocfilehash: d6754cc2de6208b9dc4bce03ef6477939f8d530a
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 04/19/2022
-ms.locfileid: "64915873"
+ms.locfileid: "64939443"
 ---
 # <a name="disable-access-to-microsoft-365-services-with-powershell"></a>PowerShell ile Microsoft 365 hizmetlerine erişimi devre dışı bırakma
 
@@ -118,7 +118,7 @@ User      Success            efb87545-963c-4e0d-99df-69c6916d9eb0 EXCHANGE_S_ENT
 
 Lisans planlarının tam listesi (ürün adları olarak da bilinir), bunların dahil edilen hizmet planları ve bunlara karşılık gelen kolay adları için bkz. [Lisanslama için ürün adları ve hizmet planı tanımlayıcıları](/azure/active-directory/users-groups-roles/licensing-service-plan-reference). (Hizmet planının ilgili kolay adını aramak için ServicePlanId'yi kullanarak arama.
 
-Aşağıdaki örnek **, MICROSOFTBOOKINGS** **(Microsoft Bookings**) ve LOCKBOX_ENTERPRISE (Customer LockBox) hizmetlerinin kapalı olduğu **SPE_E5 (Microsoft 365 E5**) atar:
+Aşağıdaki örnek **, MICROSOFTBOOKINGS** **(Microsoft Bookings**) ve LOCKBOX_ENTERPRISE (Müşteri Kasası) hizmetlerinin kapalı olduğu **SPE_E5 (Microsoft 365 E5**) atar:
   
 ```powershell
 $e5Sku = Get-MgSubscribedSku -All | Where SkuPartNumber -eq 'SPE_E5'

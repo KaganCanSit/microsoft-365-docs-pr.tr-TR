@@ -1,5 +1,5 @@
 ---
-title: İş birliği yönetim çerçevesi Microsoft 365
+title: Microsoft 365 için işbirliği idare çerçevesi
 ms.reviewer: mmclean
 ms.author: mikeplum
 author: MikePlumleyMSFT
@@ -16,239 +16,239 @@ ms.custom:
 - M365solutions
 f1.keywords: NOCSH
 recommendations: false
-description: Gruplar, Gruplar, Microsoft 365 grupları ve diğer işbirliği Microsoft 365 için Teams en SharePoint yöntemleri hakkında Yammer.
-ms.openlocfilehash: 62030dcb9b89105f87a0cf50f1b950b816727015
-ms.sourcegitcommit: c2b5ce3150ae998e18a51bad23277cedad1f06c6
+description: Microsoft 365 Grupları, Teams, SharePoint ve Yammer gibi Microsoft 365 işbirliği araçları için en iyi idare yöntemlerini öğrenin.
+ms.openlocfilehash: 130342725e8c43b4aeaac116b94704db3046e059
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "63005422"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64941401"
 ---
-# <a name="what-is-collaboration-governance"></a>İşbirliği yönetimi nedir?
+# <a name="what-is-collaboration-governance"></a>İşbirliği idaresi nedir?
 
-İşbirliği yönetimi, kullanıcıların kaynaklara erişimini, iş standartlarınıza uymayı ve verilerinizin güvenliğini sağlamaya yöneliktir.
+İşbirliği idaresi, kullanıcıların kaynaklara erişimini, iş standartlarınıza uymasını ve verilerinizin güvenliğini sağlamayı yönetme yöntemidir.
 
-Kuruluşlar bugün farklı bir araç kümesi kullanıyor. Ekip sohbeti kullanan geliştiriciler ekibi, e-posta gönderen yöneticiler ve kurumsal sosyal ağ üzerinden bağlanan tüm kuruluş vardır. Her grup benzersiz olduğundan ve kendi işlevsel ihtiyaçları ve çalışma stiline sahip olduğundan, birden çok işbirliği aracı kullanımdadır. Bazıları yalnızca e-posta kullanırken, diğerleri öncelikli olarak sohbette yer alır. 
+Günümüzde kuruluşlar farklı bir araç kümesi kullanıyor. Ekip sohbetini kullanan geliştiriciler, e-posta gönderen yöneticiler ve kurumsal sosyal ağ üzerinden bağlanan tüm kuruluş vardır. Her grup benzersiz olduğundan ve kendi işlevsel gereksinimlerine ve iş stiline sahip olduğundan, birden çok işbirliği aracı kullanılıyor. Bazıları yalnızca e-posta kullanırken, diğerleri öncelikli olarak sohbette yaşar. 
 
-Kullanıcılar, IT tarafından sağlanan araçların ihtiyaçlarına uymuyorsa, büyük olasılıkla senaryoları destekleyen favori tüketici uygulamalarını indirecek. Bu işlem kullanıcıların hızlı bir şekilde başlamalarına olanak sağlar, ancak birden çok oturum açmayla, paylaşmada zorlukla ve tek bir yerde içeriği görüntülemekte zorlanarak kuruluş genelinde can sıkıcı bir kullanıcı deneyimine yol açıyor. Bu kavram "GölgeLI IT" olarak adlandırılır ve kuruluşlara önemli riskler sağlar. Kullanıcı erişimini tek tek yönetme, güvenlik ve hizmet uyumluluğu  ihtiyaçlarını karşılayabilme becerisini azaltır.
+Kullanıcılar BT tarafından sağlanan araçların ihtiyaçlarına uygun olmadığını düşünüyorsa, senaryolarını destekleyen favori tüketici uygulamalarını indirecektir. Bu işlem kullanıcıların hızlı bir şekilde başlamasına olanak tanısa da, birden çok oturum açma, paylaşım zorluğu ve içeriği görüntülemek için tek bir yer olmadan kuruluş genelinde sinir bozucu bir kullanıcı deneyimine yol açar. Bu kavram "Gölge BT" olarak adlandırılır ve kuruluşlar için önemli bir risk oluşturur. Kullanıcı erişimini tekdüzen yönetme, güvenlik ve hizmet uyumluluk gereksinimlerini sağlama olanağını azaltır.
 
-Grup gruplarında Microsoft 365, Teams gibi hizmetler Yammer güçlendirin ve işbirliği yapmak için gereken araçları sağlayarak IT'ye gölge uygulama riskini azaltır. Microsoft 365, kuruma gereksinsin tüm yönetim özelliklerini uygulamaya hazır zengin bir araç kümesine sahip olabilir. 
+Microsoft 365 grupları, Teams ve Yammer gibi hizmetler kullanıcıları güçlendirerek işbirliği yapmak için gereken araçları sağlayarak BT'yi gölgeleme riskini azaltır. Microsoft 365, kuruluşunuzun gerektirebileceği tüm idare özelliklerini uygulamak için zengin bir araç kümesine sahiptir. 
 
-![İş birliği yönetim seçeneklerini gösteren Microsoft 365.](../media/collaboration-governance-overview.png)
+![Microsoft 365'de işbirliği idaresi seçeneklerini gösteren grafik.](../media/collaboration-governance-overview.png)
 
-Bu makale dizisi gruplar, ekipler ve SharePoint ayarlarının nasıl etkileşim kurduğu, hangi yönetim özelliklerinin kullanılabilir olduğunu ve Microsoft 365'te işbirliği özellikleri için bir yönetim çerçevesi oluşturularak uygulanmak üzere anlamanıza yardımcı olacaktır.
+Bu makale dizisi grupların, ekiplerin ve SharePoint ayarlarının nasıl etkileşim kuracağını, hangi idare özelliklerinin kullanılabilir olduğunu ve Microsoft 365 işbirliği özellikleri için bir idare çerçevesi oluşturup uygulamayı anlamanıza yardımcı olur.
 
-### <a name="setting-up-secure-collaboration-with-microsoft-365"></a>Destekle güvenli işbirliğini Microsoft 365
+### <a name="setting-up-secure-collaboration-with-microsoft-365"></a>Microsoft 365 ile güvenli işbirliğini ayarlama
 
-Grupların dağıtımına yönelik birçok Microsoft 365 vardır ve Teams işbirliği için bu seçenekleri kullanın. Bu yönetim içeriğini, Microsoft Teams ve ilişkili makaleleriyle [](setup-secure-collaboration-with-teams.md) güvenli dosya paylaşımı ve işbirliği ayarlama ile birlikte kullanarak, organizasyonunıza en iyi işbirliği çözümünü oluşturmanızı öneririz.
+Kuruluşunuzda güvenli işbirliği için Microsoft 365 Grupları ve Teams dağıtmaya yönelik birçok seçenek vardır. Kuruluşunuz için en iyi işbirliği çözümünü oluşturmak için bu idare içeriğini [Microsoft Teams ve ilişkili makaleleriyle güvenli dosya paylaşımı ve işbirliği ayarlama](setup-secure-collaboration-with-teams.md) ile birlikte kullanmanızı öneririz.
 
-### <a name="data-residency-governance"></a>Veri ikameti yönetimi
+### <a name="data-residency-governance"></a>Veri yerleşimi idaresi
 
-Organizasyonunız çok uluslu bir kuruluşsa ve farklı coğrafyalar için veri ikamet gereksinimleriniz varsa, işbirliği yönetim [planınıza Microsoft 365 Multi-Geo](/microsoft-365/enterprise/microsoft-365-multi-geo) içerebilir.
+Kuruluşunuz çok ulusluysa ve farklı coğrafyalar için veri yerleşimi gereksinimleriniz varsa, işbirliği idare planınıza [multi-Geo Microsoft 365](/microsoft-365/enterprise/microsoft-365-multi-geo) ekleyin.
 
-## <a name="why-microsoft-365-groups-are-important-in-collaboration-governance"></a>Grupların Microsoft 365 birlikte çalışma yönetimi açısından neden önemlidir?
+## <a name="why-microsoft-365-groups-are-important-in-collaboration-governance"></a>İşbirliği idaresinde Microsoft 365 grupları neden önemlidir?
 
-Microsoft 365 grupları işbirliği yapmak istediğiniz bir grup kişiyi seçmenize ve bu kişilerin paylaşması için kolayca kaynak koleksiyonu ayarlamana olanak sağlar. Gruba üye eklenirken, grup tarafından sağlanan tüm varlıklar için gerekli izinler otomatik olarak sağlanır. Hem Teams hem de Yammer üyeliklerini yönetmek Microsoft 365 grupları kullanabilirsiniz.
+Microsoft 365 grupları, işbirliği yapmak istediğiniz bir grup kişiyi seçmenize ve bu kişilerin paylaşacakları bir kaynak koleksiyonunu kolayca ayarlamanıza olanak tanır. Gruba üye eklemek, grup tarafından sağlanan tüm varlıklara otomatik olarak gerekli izinleri verir. Hem Teams hem de Yammer üyeliklerini yönetmek için Microsoft 365 grupları kullanır.
 
-Microsoft 365 grupları, kullanıcıların iletişim ve işbirliği için kullanabileceği bir bağlantılı kaynaklar paketi içerir. Gruplar her zaman bir SharePoint sitesi, Planner, Power BI alanı, posta kutusu ve takvim ve Stream'i içerir. Grubu nasıl oluştur istediğinize bağlı olarak, isteğe bağlı olarak Grup, Tablo, Teams, Yammer gibi başka hizmetler Project.
+Microsoft 365 grupları, kullanıcıların iletişim ve işbirliği için kullanabileceği bağlantılı kaynaklardan oluşan bir paket içerir. Gruplar her zaman bir SharePoint sitesi, Planner, Power BI çalışma alanı, posta kutusu ve takvim ve Stream içerir. Grubu nasıl oluşturduğunuza bağlı olarak, isteğe bağlı olarak Teams, Yammer ve Project gibi diğer hizmetleri ekleyebilirsiniz.
 
-![Gruplar ve Microsoft 365 hizmetlerini gösteren diyagram.](../media/microsoft-365-groups-hub-spoke.png)
+![Microsoft 365 Grupları ve ilgili hizmetleri gösteren diyagram.](../media/microsoft-365-groups-hub-spoke.png)
 
 |Kaynak|Açıklama|
 |:------|:----------|
-|[Takvim](https://support.office.com/article/schedule-a-meeting-on-a-group-calendar-in-outlook-0cf1ad68-1034-4306-b367-d75e9818376a)|Grupla ilgili olayları zamanlama için|
-|[Gelen Kutusu](https://support.office.com/article/have-a-group-conversation-in-outlook-a0482e24-a769-4e39-a5ba-a7c56e828b22)|Grup üyeleri arasındaki e-posta konuşmaları için. Bu gelen kutusu bir e-posta adresi içerir ve aynı geleneksel dağıtım listelerinden çok daha çok grubun dışındaki, hatta kuruluş dışındaki kişilerden gelen iletileri kabul etmek için ayarlanmış olabilir.|
-|[OneNote not defteri](https://support.office.com/article/get-started-with-onenote-e768fafa-8f9b-4eac-8600-65aa10b2fe97)|Fikirleri, araştırmaları ve bilgileri toplamak için|
+|[Takvim](https://support.office.com/article/schedule-a-meeting-on-a-group-calendar-in-outlook-0cf1ad68-1034-4306-b367-d75e9818376a)|Grupla ilgili olayları zamanlamak için|
+|[Gelen kutusu](https://support.office.com/article/have-a-group-conversation-in-outlook-a0482e24-a769-4e39-a5ba-a7c56e828b22)|Grup üyeleri arasındaki e-posta konuşmaları için. Bu gelen kutusu bir e-posta adresine sahiptir ve geleneksel bir dağıtım listesi gibi grubun dışındaki ve hatta kuruluşunuzun dışındaki kişilerden gelen iletileri kabul etmek için ayarlanabilir.|
+|[OneNote not defteri](https://support.office.com/article/get-started-with-onenote-e768fafa-8f9b-4eac-8600-65aa10b2fe97)|Fikir, araştırma ve bilgi toplamak için|
 |[Planner](https://support.office.com/article/microsoft-planner-help-4a9a13c6-3adf-4a60-a6fc-15c0b15e16fc)|Grup üyeleriniz arasında proje görevlerini atamak ve yönetmek için|
-|[Power BI Çalışma Alanı](/power-bi/collaborate-share/service-new-workspaces)|Panolar ve raporlarla veri işbirliği alanı|
-|[Project Yol Haritası](https://support.microsoft.com/project)|Web tabanlı proje yönetim araçları|
-|[SharePoint sitesini ziyaret edin](https://support.office.com/article/what-is-a-sharepoint-team-site-75545757-36c3-46a7-beed-0aaa74f0401e)|Grubunuzla ilgili bilgiler, bağlantılar ve içerik için merkezi bir depo|
+|[Power BI Çalışma Alanı](/power-bi/collaborate-share/service-new-workspaces)|Panolar ve raporlar içeren bir veri işbirliği alanı|
+|[Project ve Yol Haritası](https://support.microsoft.com/project)|Web tabanlı proje yönetimi araçları|
+|[ekip sitesini SharePoint](https://support.office.com/article/what-is-a-sharepoint-team-site-75545757-36c3-46a7-beed-0aaa74f0401e)|Grubunuzla ilgili bilgiler, bağlantılar ve içerik için merkezi bir depo|
 |[Stream](https://support.microsoft.com/microsoft-stream)|Video akış hizmeti|
-|[Teams](https://support.microsoft.com/teams)|Web'de sohbet tabanlı bir Microsoft 365|
-|[Yammer grubu](https://support.office.com/article/Learn-about-Office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2)|Konuşmalar yapmak ve bilgi paylaşmak için ortak bir yer|
+|[Teams](https://support.microsoft.com/teams)|Microsoft 365'de sohbet tabanlı çalışma alanı|
+|[Yammer grubu](https://support.office.com/article/Learn-about-Office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2)|Konuşma yapmak ve bilgi paylaşmak için ortak bir yer|
 
-Microsoft 365 Grupları, kurumda grupları yönetmenize yardımcı olmak için süre sonu ilkesi, adlandırma kuralları ve engellenen sözcük ilkesi gibi çeşitli yönetim denetimleri içerir. Gruplar üyeliği ve bu kaynak paketine erişimi kontrol yönetiminden dolayı, grupların yönetilmesi grup üyeleri arasında işbirliğinin önemli bir Microsoft 365.
+Microsoft 365 Grupları, kuruluşunuzdaki grupları yönetmenize yardımcı olmak için bir süre sonu ilkesi, adlandırma kuralları ve engellenen sözcükler ilkesi gibi çeşitli idare denetimleri içerir. Gruplar üyeliği ve bu kaynak paketine erişimi denetlediğinden, grupları yönetmek Microsoft 365'da işbirliğini yönetmenin önemli bir parçasıdır.
 
-## <a name="define-collaboration-governance-best-practices-for-your-organization"></a>Organizasyonunız için işbirliğiyle ilgili en iyi yöntemleri tanımlama
+## <a name="define-collaboration-governance-best-practices-for-your-organization"></a>Kuruluşunuz için işbirliği idaresi en iyi yöntemlerini tanımlama
 
-İş birliği yapmak ve toplantı içinde konuşmalar yapmak için birden çok Microsoft 365. Kullanıcıların konuşmalara nereden başlayacağını anlamak, iletişim için bir strateji tanımlamanıza yardımcı olabilir.
+Microsoft 365 içinde işbirliği yapmak ve konuşma yapmak için birden çok yer vardır. Kullanıcıların nerede konuşma başlatabileceğini anlamak, iletişim stratejisi tanımlamanıza yardımcı olabilir.
 
-Üçüncü tarafta desteklenen üç ana iletişim Microsoft 365:
+Microsoft 365 tarafından desteklenen üç ana iletişim yöntemi vardır:
 
-- Outlook: Paylaşılan bir grup gelen kutusu ve takvimiyle e-posta aracılığıyla işbirliği
-- Microsoft Teams: Resmi olmayan, gerçek zamanlı olarak belirli alt gruplara göre düzenlenmiş çeşitli konularla ilgili konuşmalar düzen8 saatlerine uygun kalıcı bir sohbet tabanlı çalışma alanı
-- Yammer: işbirliği için kurumsal sosyal deneyim
+- Outlook: Paylaşılan grup gelen kutusu ve takvimiyle e-posta aracılığıyla işbirliği
+- Microsoft Teams: Belirli alt gruplara göre düzenlenmiş çeşitli konularda resmi olmayan, gerçek zamanlı konuşmalar yapabileceğiniz kalıcı sohbet tabanlı bir çalışma alanı
+- Yammer: İşbirliği için kurumsal sosyal deneyim
 
-![Şekil, Şekil ve Şekil Teams Yammer diyagramı Outlook.](../media/inner-loop-outer-loop.png)
+![Teams, Yammer ve Outlook ne zaman kullanılacağını gösteren diyagram.](../media/inner-loop-outer-loop.png)
 
-- Teams: sohbet tabanlı çalışma alanı (yüksek hızda işbirliği) – iç döngü
-  - Kullanıcılarınızı her gün birlikte çalışmak için birlikte çalışmak için yerleşik olarak
-  - Bilgileri tek bir deneyimde kullanıcıların parmaklarınızın ucuna getirir
-  - Sekme, bağlayıcı ve bot ekleme
+- Teams: sohbet tabanlı çalışma alanı (yüksek hızlı işbirliği) – iç döngü
+  - Kullanıcılarınızın her gün birlikte çalıştığı kişilerle işbirliği için oluşturulmuş
+  - Bilgileri tek bir deneyimde kullanıcıların parmaklarının ucuna getirir
+  - Sekmeler, bağlayıcılar ve botlar ekleme
   - Canlı sohbet, sesli/görüntülü konferans, kayıtlı toplantılar
 
-- Yammer: Kuruluş genelinde (kurumsal sosyal) bağlantı – dış döngü
-  - Uygulama toplulukları - Ortak bir ilgi veya uzmanlık alanı paylaşarak çalışan, ancak her gün birlikte çalışması zorunlu olmayan, işlevsel kişi grupları
+- Yammer: Kuruluş genelinde bağlanma (kurumsal sosyal) – dış döngü
+  - Uygulama toplulukları - Ortak bir ilgi alanını veya uzmanlığı paylaşan ancak her gün birlikte çalışmak zorunda olmayan işlev grupları
   - Liderlik bağlantısı, öğrenme toplulukları, rol tabanlı topluluklar
 
 - Posta kutusu ve takvim (e-posta tabanlı işbirliği)
-  - Bir grup insanla hedefli iletişim için kullanılır
+  - Bir grup kişiyle hedefli iletişim için kullanılır
   - Diğer grup üyeleriyle toplantılar için paylaşılan takvim
  
-Bu ağ bağlantılarında işbirliği özelliklerini nasıl kullanmak istediğinize karar Microsoft 365, bu iletişim yöntemlerini ve kullanıcılarınızı farklı senaryolarda kullanma olasılığı olan yöntemleri göz önünde bulundurabilirsiniz.
+Microsoft 365'da işbirliği özelliklerini nasıl kullanmak istediğinizi belirlerken, bu iletişim yöntemlerini ve kullanıcılarınızın farklı senaryolarda kullanma olasılığını göz önünde bulundurun.
 
 > [!NOTE]
-> Office 365 veya Yammer Teams aracılığıyla yeni bir Outlook grubu oluşturulduğunda, bu kullanıcılar arasındaki birincil iletişim ilgili istemcilerinde gerçekleşir, çünkü grup Outlook'te veya adres defterinde görünmez. Yammer grupları diğer gruplara Teams.
+> Yammer veya Teams aracılığıyla yeni bir Office 365 Grubu oluşturulduğunda, bu kullanıcılar arasındaki birincil iletişim ilgili istemcilerinde gerçekleştiğinden grup Outlook veya adres defterinde görünmez. Yammer grupları Teams bağlanamaz.
 
-## <a name="collaboration-governance-best-practices-checklist"></a>İşbirliği yönetimi en iyi yöntemleri denetim listesi
+## <a name="collaboration-governance-best-practices-checklist"></a>İşbirliği idaresi en iyi yöntemler denetim listesi
 
-Yönetim planlama sürecinize başlarken, şu en iyi yöntemleri unutmayın:
+İdare planlama sürecinizi başlatırken şu en iyi yöntemleri göz önünde bulundurun:
 
-- **Kullanıcılarınızı konuşma** - işbirliği özelliklerinden en büyük kullanıcılarınızı tanıyın ve temel iş gereksinimlerini anlamak ve durum senaryolarını kullanmak için bu özellikleri karşılar.
+- **Kullanıcılarınızla konuşun** - en büyük işbirliği özellikleri kullanıcılarınızı belirleyin ve temel iş gereksinimlerini ve kullanım örneği senaryolarını anlamak için onlarla görüşün.
 
-- **Riskleri ve avantajları dengeleme** - iş, mevzuat, yasal ve uyumluluk ihtiyaçlarını gözden geçirme ve tüm sonuçları en iyi duruma getirmek için bir çözüm planlama.
+- **Riskleri ve avantajları dengeleyin** : İş, mevzuat, yasal ve uyumluluk gereksinimlerinizi gözden geçirin ve tüm sonuçlar için iyileştirici bir çözüm planlayın.
 
-- **Farklı kuruluşlara,** farklı içerik ve senaryo türlerine uyarla - farklı gruplar veya departmanlar ve intranet içeriği ile bir kullanıcının içerik türü gibi farklı içerik türleri için farklı ihtiyaçları OneDrive düşünebilirsiniz.
+- **Farklı kuruluşlara ve farklı içerik ve senaryo türlerine uyarlayın**. Farklı gruplar veya departmanlar için farklı gereksinimleri ve intranet içeriği gibi farklı içerik türlerini ve kullanıcının OneDrive içeriğini göz önünde bulundurun.
 
-- **İş önceliklerine uyum sağlar** - iş hedefleri, yönetime ne kadar zaman ve enerji gerekir? tanımlamanıza yardımcı olur.
+- **İş önceliklerine uyum** sağlama - iş hedefleri, idareye ne kadar zaman ve enerji yatırım yapmanız gerektiğini tanımlamanıza yardımcı olur.
 
-- **Yönetim kararlarını doğrudan kendi oluşturdukları** çözümlere katıştırın: Birçok yönetim kararı, çalışma sayfalarındaki özellikleri Microsoft 365.
+- **İdare kararlarını doğrudan oluşturduğunuz çözümlere ekleyin**; Microsoft 365 özellikleri açılarak veya kapatılarak birçok idare kararı uygulanabilir.
 
 
-- **Aşamalı bir yaklaşım kullanın** - İşbirliği özelliklerini önce küçük bir kullanıcı grubuna devredin. Daha büyük bir gruba devam etmeden önce onlardan geri bildirim alın, yardım masası biletlerini izleyin ve gerekli ayarları veya işlemleri güncelleştirin.
+- **Aşamalı bir yaklaşım kullanma** - İşbirliği özelliklerini önce küçük bir kullanıcı grubuna dağıtın. Onlardan geri bildirim alın, yardım masası biletlerini izleyin ve daha büyük bir gruba geçmeden önce gerekli ayarları veya işlemleri güncelleştirin.
 
-- **Eğitimle güçlendirme** - Microsoft tarafından [sağlanan Microsoft 365](/office365/customlearning) ile kuruluşa özgü beklentilerinizin pekiştirmelerini sağlamak için öğrenme yolları gibi çözümleri uyarlama.
+- **Eğitimle pekiştirin**- Kuruluşunuza özgü beklentilerin Microsoft tarafından sağlanan eğitimlerle pekiştirildiğinden emin olmak için [Microsoft 365 öğrenme yolları](/office365/customlearning) gibi çözümleri uyarlar.
 
-- **Organizasyon içinde yönetim ilkelerini ve** yönergelerini iletecek bir stratejiniz olmalıdır- ilkeleri ve yordamları iletecek bir Microsoft 365 iletişim sitesinde SharePoint Benimseme Merkezi oluşturun.
+- **Kuruluşunuzda idare ilkelerini ve yönergelerini iletmek için bir stratejiniz vardır. İlkeleri ve yordamları iletmek için** bir SharePoint iletişim sitesinde Microsoft 365 Benimseme Merkezi oluşturun.
 
-- **Rolleri ve sorumlulukları tanımlayın** : Yönetim temel ekibinizi tanımlayın, önce sağlama ve adlandırma ile dış erişimin sağlanması ve adlandırın önemli yönetim kararlarında birlikte çalışın, sonra da kalan kararlar üzerinde çalışın.
+- **Rolleri ve sorumlulukları tanımlama** - idare çekirdek ekibinizi belirleyin ve önce sağlama, adlandırma ve dış erişimle ilgili temel idare kararlarını inceleyin ve ardından kalan kararları inceleyin.
 
-- **İş ve teknoloji değişiklikleri olarak kararlarınızı yeniden ziyaret etmek** - yeni yetenekleri ve yeni işletme beklentilerini gözden geçirmek için düzenli aralıklarla bir araya geldi.
+- **İş ve teknoloji değiştikçe kararlarınızı yeniden gözden geçirin** ; yeni özellikleri ve yeni iş beklentilerini gözden geçirmek için düzenli aralıklarla toplantı yapın.
 
-Bu yöntemlere daha yakından bakmak için, İşbirliği [yönetim planınızı oluşturma makalelerini okuyun](collaboration-governance-first.md).
+Bu uygulamalara daha yakından bakmak için [bkz. İşbirliği idare planınızı oluşturma](collaboration-governance-first.md).
 
-## <a name="end-user-impact-and-change-management"></a>Son kullanıcının etkisi ve değişiklik yönetimi
+## <a name="end-user-impact-and-change-management"></a>Son kullanıcı etkisi ve değişiklik yönetimi
 
-Gruplar ve ekipler çeşitli yollarla oluşturula bile bile, kullanıcılarınızı, kuruma en uygun yöntemi kullanmaları için eğitim olarak öneririz:
+Gruplar ve ekipler çeşitli yollarla oluşturulabileceğinden, kullanıcılarınıza kuruluşunuza en uygun yöntemi kullanacak şekilde eğitim vermenizi öneririz:
 
-- Organizasyonunız e-posta kullanarak iletişimin büyük bir çoğunu yapıyorsa, kullanıcılarınıza e-posta içinde grup Outlook.
-- Organizasyonunız iş birliği SharePoint kullanıyorsa veya şirket içi SharePoint kullanıyorsa, kullanıcılarınızı işbirliği için SharePoint siteleri oluşturmalarını talimat edin.
-- If your organization has dağıtılmış Teams, to create a team when they need a collaboration space.
+- Kuruluşunuz iletişiminin büyük bölümünü e-posta kullanarak yapıyorsa, kullanıcılarınıza Outlook'da grup oluşturmalarını sağlayın.
+- Kuruluşunuz SharePoint yoğun bir şekilde kullanıyorsa veya şirket içi SharePoint geçiş yapıyorsa, kullanıcılarınıza işbirliği için SharePoint ekip siteleri oluşturmalarını bildirin.
+- Kuruluşunuz Teams dağıttıysa, kullanıcılarınıza işbirliği alanına ihtiyaç duyduklarında ekip oluşturmalarını sağlayın.
 
-Bu, kullanıcılar grupların kendi ilgili hizmetleriyle nasıl ilişkili olduğunu yabancısa karışıklığı önlemeye yardımcı olur. Kullanıcılarınız hakkında gruplarla konuşma hakkında daha fazla bilgi için bkz. [Kullanıcılarınıza Grup Microsoft 365 Açıklama](../admin/create-groups/explain-groups-knowledge-worker.md).
+Bu, kullanıcılar grupların ilgili hizmetleriyle olan ilişkisini bilmiyorsa karışıklığı önlemeye yardımcı olur. Kullanıcılarınızla gruplar hakkında konuşma hakkında daha fazla bilgi için bkz. [Kullanıcılarınıza Microsoft 365 Grupları açıklama](../admin/create-groups/explain-groups-knowledge-worker.md).
 
-## <a name="key-collaboration-governance-capabilities-and-licensing-requirements"></a>Temel işbirliği yönetim özellikleri ve lisans gereksinimleri
+## <a name="key-collaboration-governance-capabilities-and-licensing-requirements"></a>Temel işbirliği idaresi özellikleri ve lisans gereksinimleri
 
-İş birliği için yönetim özellikleri Microsoft 365 yönetim özellikleri Microsoft 365, Teams, SharePoint ve yönetim Azure Active Directory.
+Microsoft 365 işbirliğine yönelik idare özellikleri Microsoft 365, Teams, SharePoint ve Azure Active Directory özelliklerini içerir.
 
-| Özellik veya özellik | Açıklama | Lisanslama |
+| Yetenek veya özellik | Açıklama | Lisanslama |
 |:----------------------|:------------|:----------|
-|Ekip ve site paylaşımı|Ekiplerin, grupların ve sitelerin kuruluş dışındaki kişiler ile paylaşılap paylaşılmay olacağını kontrol edin.|Microsoft 365 E5 E3|
-|Etki alanı izin verme/engelleme|Belirli etki alanlarından kişiler için, kuruluş dışındakilerle paylaşımı kısıtla.|Microsoft 365 E5 E3|
-|Kendi kendine site oluşturma|Kullanıcıların kendi posta sitelerini oluşturmasına izin SharePoint.|Microsoft 365 E5 E3|
-|Kısıtlanmış site ve dosya paylaşımı|Site, dosya ve klasör paylaşımını belirli bir güvenlik grubunun üyeleriyle kısıtlar.|Microsoft 365 E5 E3|
-|Kısıtlanmış grup oluşturma|Ekip ve grup oluşturma ile belirli bir güvenlik grubunun üyeleri arasında sınırlama.|Microsoft 365 E5 veya Azure AD Temel AZURE AD PREMIUM lisansları ile E3|
-|Grup adlandırma ilkesi|Grup ve ekip adlarda önekleri veya sonekleri zorunlu kılın.|Microsoft 365 E5 veya Azure AD Temel AZURE AD PREMIUM lisansları ile E3|
-|Grup süre sonu ilkesi|Etkin olmayan grupları ve ekipleri, belirtilen sürenin ardından süresi dolacak ve silinecek şekilde ayarlayın.|Microsoft 365 E5 lisansları olan E3 Azure AD Premium E3|
-|Grup başına konuk erişimi|Grup temelinde, kuruluş dışındaki kullanıcılarla ekip ve grup paylaşımına izin verme veya bu paylaşımı engelleme.|Microsoft 365 E5 E3|
+|Ekip ve site paylaşımı|Ekiplerin, grupların ve sitelerin kuruluşunuzun dışındaki kişilerle paylaşılıp paylaşılmadığını denetleyin.|Microsoft 365 E5 veya E3|
+|Etki alanına izin ver/engelle|Kuruluşunuzun dışındaki kişilerle paylaşımı belirli etki alanlarından kişilerle kısıtlayın.|Microsoft 365 E5 veya E3|
+|Self servis site oluşturma|Kullanıcıların kendi SharePoint sitelerini oluşturmasına izin verin veya bunları engelleyin.|Microsoft 365 E5 veya E3|
+|Kısıtlı site ve dosya paylaşımı|Site, dosya ve klasör paylaşımını belirli bir güvenlik grubunun üyeleriyle kısıtlayın.|Microsoft 365 E5 veya E3|
+|Kısıtlanmış grup oluşturma|Ekip ve grup oluşturmayı belirli bir güvenlik grubunun üyeleriyle kısıtlayın.|Azure AD Premium veya Azure AD Temel EDU lisanslarıyla Microsoft 365 E5 veya E3|
+|Grup adlandırma ilkesi|Grup ve ekip adlarında ön ekleri veya sonekleri zorunlu kılma.|Azure AD Premium veya Azure AD Temel EDU lisanslarıyla Microsoft 365 E5 veya E3|
+|Grup süre sonu ilkesi|Etkin olmayan grupları ve ekipleri süresi dolacak ve belirli bir süre sonra silinecek şekilde ayarlayın.|Azure AD Premium lisansları olan Microsoft 365 E5 veya E3|
+|Grup başına konuk erişimi|Grup başına kuruluşunuz dışındaki kişilerle ekip ve grup paylaşımına izin verin veya bunları engelleyin.|Microsoft 365 E5 veya E3|
 
-## <a name="collaboration-governance-planning-recommendations"></a>İşbirliği yönetim planlaması önerileri
+## <a name="collaboration-governance-planning-recommendations"></a>İşbirliği idaresi planlama önerileri
 
-Yönetim planınızı oluşturmak için şu temel adımları izleyin:
+İdare planınızı oluşturmak için şu temel adımları izleyin:
 
-1. İşle ilgili temel hedefleri ve süreçleri göz önünde [bulundurarak, iş](collaboration-governance-first.md) ihtiyaçlarını karşılayacak yönetim planınızı oluşturun.
-2. Hizmetlerle ilgili ayarları anlama - gruplar[, SharePoint](groups-sharepoint-governance.md) ve hizmetlerde ve diğer hizmetlerde yapılan ayarlar gibi [grup ayarları SharePoint ve Teams](groups-sharepoint-teams-governance.md) [etkileşimde bulunabilirsiniz](groups-services-interactions.md). Yönetim stratejinizi planlarken bu etkileşimleri an bildiğinizden emin olun.
-3. Kullanıcı erişimini yönetmeyi planla - kullanıcılara grup, grup ve grup erişim [izni SharePoint istediğiniz Teams](groups-teams-access-governance.md).
-4. Uyumluluk ayarlarını yönetmeyi planlama - grupların, grupların[, Microsoft 365 ve işbirliğinin Teams için kullanılabilir SharePoint gözden geçirme](groups-teams-compliance-governance.md).
-5. İletişimi yönetmeyi planlama - işbirliği senaryoları [için kullanılabilir iletişim yönetim seçeneklerini gözden geçirme](groups-teams-communication-governance.md).
-6. Kuruluş ve yaşam döngüsü idaresi için planlama - grup ve ekip oluşturma, adlandırma, süre sonu ve arşivleme için kullanmak [istediğiniz ilkeleri seçin](plan-organization-lifecycle-governance.md). Ayrıca, gruplar[, ekipler ve ekipler için yaşam döngüsü sonu seçeneklerini Yammer](end-life-cycle-groups-teams-sites-yammer.md)
+1. Önemli iş hedeflerini ve süreçlerini göz önünde bulundurun. İşletmenizin gereksinimlerini karşılamak için [idare planınızı oluşturun](collaboration-governance-first.md) .
+2. Hizmetlerdeki ayarları anlama - [gruplardaki ayarlar ve SharePoint](groups-sharepoint-governance.md) gruplar[, SharePoint, Teams ve diğer hizmetlerdeki ayarlar](groups-sharepoint-teams-governance.md) gibi birbiriyle etkileşime geçin.[](groups-services-interactions.md) İdare stratejinizi planladığınızda bu etkileşimleri anladığınızdan emin olun.
+3. Kullanıcı erişimini yönetmeyi planlayın: [Kullanıcılara gruplar, SharePoint ve Teams vermek istediğiniz erişim düzeyini](groups-teams-access-governance.md) planlayın.
+4. Uyumluluk ayarlarını yönetmeyi planlama - [Microsoft 365 grupları, Teams ve SharePoint işbirliği için kullanılabilir uyumluluk seçeneklerini](groups-teams-compliance-governance.md) gözden geçirin.
+5. İletişimleri yönetmeyi planlama - [işbirliği senaryoları için kullanılabilir iletişim idaresi seçeneklerini](groups-teams-communication-governance.md) gözden geçirin.
+6. Kuruluş ve yaşam döngüsü idaresini planlama - [Grup ve ekip oluşturma, adlandırma, süre sonu ve arşivleme için kullanmak istediğiniz ilkeleri](plan-organization-lifecycle-governance.md) seçin. Ayrıca [gruplar, ekipler ve Yammer için yaşam döngüsü sonu seçeneklerini](end-life-cycle-groups-teams-sites-yammer.md) de anlayın
 
-![Önerilen yönetim adımlarının çizimi.](../media/collaboration-governance-steps.png)
+![Önerilen idare adımlarının çizimi.](../media/collaboration-governance-steps.png)
 
 ## <a name="training-for-administrators"></a>Yöneticiler için eğitim
 
-Microsoft Learn'den gelen bu eğitim modülleri, Yönetim Merkezi'nin yönetim Microsoft 365.
+Microsoft Learn'deki bu eğitim modülleri, Microsoft 365'daki idare özelliklerini öğrenmenize yardımcı olabilir.
 
 #### <a name="information-protection"></a>Bilgi koruması
 
 |Eğitim:|Bilgi korumasını ve idareyi yönetme|
 |:---|:---|
-|![Bilgi koruma eğitim simgesi.](../media/information-protection-governance.svg)|Bugün oluşturulan veri miktarı hiç bu kadar hızlı büyüyor, çalışanlar her yerden çalışmak istiyor ve mevzuat ortamı sürekli değişiyor. Microsoft'un bilgi koruma ve yönetime yönelik çözümleri, kuruluşların verilerini koruma ve insanların verimli çalışma arasında doğru dengeyi eldelerine ulaşmalarına yardımcı olur. Bu öğrenme yolu, Eğitim Sertifikalı: Güvenlik Microsoft 365 İş ortağı ve eğitim Microsoft 365: Enterprise Uzman sertifikalarına hazırlanmanıza yardımcı olabilir.<br><br>5 sa 13 dak . Learning Yol - 7 Modüller|
+|![Bilgi koruma eğitimi simgesi.](../media/information-protection-governance.svg)|Bugün oluşturulan veri miktarı her zamankinden daha hızlı büyüyor, çalışanlar her yerde iş yapmak istiyor ve mevzuat ortamı sürekli değişiyor. Microsoft'un bilgi koruma ve idareye yönelik çözümleri, kuruluşların verilerini koruma altında tutma ve çalışanlarının üretken kalmasını sağlama arasında doğru dengeyi elde etmelerine yardımcı olur. Bu öğrenme yolu, Microsoft 365 Sertifikalı: Güvenlik Yöneticisi İş Ortağı ve Microsoft 365 Sertifikalı: Enterprise Yönetim Uzmanı sertifikalarına hazırlanmanıza yardımcı olabilir.<br><br>5 sa 13 dk - Learning Yolu - 7 Modül|
 
 > [!div class="nextstepaction"]
 > [Başlangıç >](/learn/modules/m365-compliance-information-governance/introduction/)
 
 <br><br>
 
-|Eğitim:|Kurumsal bilgileri iş yerleriyle Microsoft 365|
+|Eğitim:|Kurumsal bilgileri Microsoft 365 ile koruma|
 |:---|:---|
-|![Teams simgesi.](../media/protect-enterprise-information-microsoft-365.svg)|Kuruluş bilgilerini korumak ve güvenliğini sağlamak her zaman olduğu kadar zor olabilir. Microsoft 365 ile kurumsal bilgileri koruma yolu, hassas verilerinizi yanlışlıkla yanlış şekilde ortaya çıkarma veya yanlış kullanımlara karşı koruma, verileri keşfetme ve sınıflandırma, duyarlılık etiketleriyle koruma ve hassas bilgilerini hem izleme hem de çözümleme konularını ele almaktadır. Bu öğrenme yolu, Destek Sertifikalı: Güvenlik Microsoft 365 İş ortağı ve güvenlik Microsoft 365: Enterprise Sertifikalarını hazırlamanıza yardımcı olabilir.<br><br>1 sa - Learning Yolu - 5 Modül|
+|![Teams eğitim simgesi.](../media/protect-enterprise-information-microsoft-365.svg)|Kuruluşunuzun bilgilerini korumak ve güvenliğini sağlamak her zamankinden daha zordur. Kurumsal bilgileri Microsoft 365 ile koruma öğrenme yolu, hassas bilgilerinizi yanlışlıkla aşırı paylaşıma veya kötüye kullanmaya karşı korumayı, verileri bulmayı ve sınıflandırmayı, duyarlılık etiketleriyle korumayı ve kaybına karşı koruma sağlamak için hassas bilgilerinizi hem izleme hem de analiz etme konularını açıklar. Bu öğrenme yolu, Microsoft 365 Sertifikalı: Güvenlik Yöneticisi İş Ortağı ve Microsoft 365 Sertifikalı: Enterprise Yönetim Uzmanı sertifikaları için hazırlanmanıza yardımcı olabilir.<br><br>1 sa - Learning Yolu - 5 Modül|
 
 > [!div class="nextstepaction"]
 > [Başlangıç >](/learn/modules/m365-security-info-overview/introduction/)
 
 #### <a name="security-and-compliance"></a>Güvenlik ve uyumluluk
 
-|Eğitim:|Güvenlik ve uyumluluk Microsoft 365 hakkında temel bilgileri gösterme|
+|Eğitim:|Microsoft 365 güvenlik ve uyumluluk özellikleri hakkında temel bilgileri gösterme|
 |:---|:---|
-|![Güvenlik ve uyumluluk eğitimi simgesi.](../media/microsoft-365-security-and-compliance-capabilities.svg)|Kuruluşların kuruluşlarını Microsoft 365 gereksinimlerini karşılamalarına yardımcı olmak için kullanılabilen güvenlik ve uyumluluk çözümleri alanları ve bu alanlardaki özellikler hakkında bilgi edinebilirsiniz. Temel bulut bilgi işlem kavramlarına yabancı değilsanız, Bulut Kavramları - Bulut bilgi işlem [ilkeleri'ne sahip öneririz](/learn/modules/principles-cloud-computing/index).<br><br>3 sa 11 dak . Learning Yol - 8 Modüller|
+|![Güvenlik ve uyumluluk eğitimi simgesi.](../media/microsoft-365-security-and-compliance-capabilities.svg)|Microsoft 365 güvenlik ve uyumluluk çözümleri alanları ve kuruluşların kuruluşlarının güvenliğini sağlamaya ve mevzuat gereksinimlerini karşılamaya yardımcı olacak özellikler hakkında bilgi edinin. Temel bulut bilişim kavramlarını bilmiyorsanız [Bulut Kavramları - Bulut bilişim ilkeleri'ne](/learn/modules/principles-cloud-computing/index) bakmanızı öneririz.<br><br>3 sa 11 dk - Learning Yolu - 8 Modül|
 
 > [!div class="nextstepaction"]
 > [Başlangıç >](/learn/modules/what-is-m365/1-introduction/)
 
-## <a name="illustrations"></a>Çizimler
+## <a name="illustrations"></a>Çizim
 
-Bu çizimler, grupların ve ekiplerin kuruluş içinde diğer hizmetlerle nasıl etkileşim kurduğuna ve Microsoft 365 içinde bu hizmetleri yönetmenize yardımcı olmak için hangi yönetim ve uyumluluk özelliklerinin kullanılabilir olduğunu anlamanıza yardımcı olur.
+Bu çizimler, grupların ve ekiplerin Microsoft 365'daki diğer hizmetlerle nasıl etkileşim kuracağını ve kuruluşunuzdaki bu hizmetleri yönetmenize yardımcı olacak idare ve uyumluluk özelliklerinin neler olduğunu anlamanıza yardımcı olur.
 
-### <a name="groups-in-microsoft-365-for-it-architects"></a>IT Architects için Microsoft 365 Grupları
-Bu mimarların proje içinde gruplar hakkında neleri Microsoft 365
-
-|**Öğe**|**Açıklama**|
-|:-----|:-----|
-|[![Gruplar bilgi grafiği için başparmak resmi.](../downloads/msft-m365-groups-architecture-thumb.png)](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-groups.pdf) <br/> [PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-groups.pdf) \| [Visio](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/downloads/msft-m365-groups.vsdx) <br> Güncelleştirme Haziran 2019|Bu çizimler farklı grup türlerini, bunların nasıl oluşturulacaklarını ve yönetil grafiklerini ve birkaç yönetim önerilerini ayrıntılarıyla açıklar.|
-
-### <a name="microsoft-teams-and-related-productivity-services-in-microsoft-365-for-it-architects"></a>Microsoft Teams mimarlar için Microsoft 365'te veri ve ilgili üretkenlik hizmetleri
-Verilerde üretkenlik hizmetlerinin mantıksal mimarisi, Microsoft 365 yol Microsoft Teams.
+### <a name="groups-in-microsoft-365-for-it-architects"></a>BT Mimarları için Microsoft 365 grupları
+BT mimarlarının Microsoft 365'deki gruplar hakkında bilmesi gerekenler
 
 |**Öğe**|**Açıklama**|
 |:-----|:-----|
-|[![Mantıksal mimari posteri Teams küçük resim.](../downloads/msft-teams-logical-architecture-thumb.png)](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-teams-logical-architecture.pdf) <br/> [PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-teams-logical-architecture.pdf) \| [Visio](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/downloads/msft-m365-teams-logical-architecture.vsdx)  <br>Güncelleştirme: Nisan 2019   |Microsoft, veri yönetimi, güvenlik ve uyumluluk özellikleriyle ilgili işbirliği deneyimleri sunmak için birlikte çalışan bir üretkenlik hizmetleri paketi sunar. <br/> <br/>Bu çizim serisi, kurumsal mimarlar için üretkenlik hizmetlerinin mantıksal mimarisine, önde gelen ve kurumsal şirketlere Microsoft Teams.|
+|[![Gruplar için başparmak görüntüsü bilgi grafiği.](../downloads/msft-m365-groups-architecture-thumb.png)](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-groups.pdf) <br/> [PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-groups.pdf) \| [Visio](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/downloads/msft-m365-groups.vsdx) <br> Haziran 2019'da güncelleştirildi|Bu çizimler, farklı grup türlerini, bunların nasıl oluşturulup yönetildiğini ve birkaç idare önerisini ayrıntılarıyla açıklar.|
 
-### <a name="microsoft-365-information-protection-and-compliance-capabilities"></a>Microsoft 365 koruma ve uyumluluk özelliklerini koruma
+### <a name="microsoft-teams-and-related-productivity-services-in-microsoft-365-for-it-architects"></a>BT mimarları için Microsoft 365'da Microsoft Teams ve ilgili üretkenlik hizmetleri
+Microsoft 365'daki üretkenlik hizmetlerinin mantıksal mimarisi, Microsoft Teams ile önderlik eder.
 
-Microsoft 365 çok çeşitli bilgi koruma ve uyumluluk özellikleri içerir. Microsoft'un üretkenlik araçlarıyla birlikte, bu özellikler kuruluşların gerçek zamanlı olarak işbirliğine yardımcı olurken yasal düzenlemelere uyumluluk çerçeveleri de bağlı olacak şekilde tasarlanmıştır. 
+|**Öğe**|**Açıklama**|
+|:-----|:-----|
+|[![Teams mantıksal mimari posteri için başparmak görüntüsü.](../downloads/msft-teams-logical-architecture-thumb.png)](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-teams-logical-architecture.pdf) <br/> [PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-teams-logical-architecture.pdf) \| [Visio](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/downloads/msft-m365-teams-logical-architecture.vsdx)  <br>Nisan 2019 güncelleştirildi   |Microsoft, veri idaresi, güvenlik ve uyumluluk özellikleriyle işbirliği deneyimleri sağlamak için birlikte çalışan bir üretkenlik hizmetleri paketi sağlar. <br/> <br/>Bu çizim serisi, Microsoft Teams ile önde gelen kurumsal mimarlar için üretkenlik hizmetlerinin mantıksal mimarisine yönelik bir görünüm sağlar.|
 
-Bu çizim kümesi, bu becerilerin genel mevzuat gereksinimlerine uygun olarak nasıl uygulana ayarlan bir şekilde uygulana olacağını göstermek için en düzenlemeye tabi endüstrilerden birini (finans hizmetleri) kullanır. Bu çizimleri kendi kullanımınız için uyarlamak sizin için özgürce olur. 
+### <a name="microsoft-365-information-protection-and-compliance-capabilities"></a>Microsoft 365 bilgi koruma ve uyumluluk özellikleri
+
+Microsoft 365, geniş bir bilgi koruma ve uyumluluk özellikleri kümesi içerir. Bu özellikler, Microsoft'un üretkenlik araçlarıyla birlikte kuruluşların sıkı mevzuat uyumluluğu çerçevelerine bağlı kalarak gerçek zamanlı olarak işbirliği yapmasına yardımcı olmak için tasarlanmıştır. 
+
+Bu çizim kümesi, bu özelliklerin yaygın mevzuat gereksinimlerini karşılamak için nasıl uygulanabileceğini göstermek için en düzenlemeye tabi sektörlerden biri olan finansal hizmetleri kullanır. Bu çizimleri kendi kullanımınız için uyarlamaktan çekinmeyin. 
 
 
 | Öğe | Açıklama |
 |:-----|:-----|
-|[![Model posteri: Microsoft 365 koruma ve uyumluluk özelliklerini içerir.](../media/solutions-architecture-center/m365-compliance-illustrations-thumb.png)](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf) <br/> İngilizce: [PDF olarak indirin](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf)\| [Dosya olarak Visio](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.vsdx)   <br/> Japonca: [PDF olarak](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.pdf) [Visio indirme](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.vsdx)\|   <br/> Kasım 2020 güncelleştirildi|Şunları içerir: <ul><li>  Microsoft bilgi koruması ve veri kaybını önleme</li><li>Bekletme ilkeleri ve bekletme etiketleri </li><li>Bilgi engelleri</li><li>İletişim uyumluluğu</li><li>Insider riski</li><li>Üçüncü taraf veri alımı</li>|
+|[![Model posteri: Microsoft Purview bilgi koruma ve uyumluluk özellikleri.](../media/solutions-architecture-center/m365-compliance-illustrations-thumb.png)](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf) <br/> İngilizce: [pdf](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf)\| olarak [indirme Visio olarak indirme](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.vsdx)   <br/> Japonca: [pdf](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.pdf)\| olarak [indirme Visio olarak indirme](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.vsdx)   <br/> Kasım 2020'de güncelleştirildi|Içerir: <ul><li>  Microsoft Purview Information Protection ve Microsoft Purview veri kaybı önleme</li><li>Bekletme ilkeleri ve bekletme etiketleri </li><li>Bilgi engelleri</li><li>İletişim uyumluluğu</li><li>Insider riski</li><li>Üçüncü taraf veri alımı</li>|
 
 ## <a name="conference-sessions"></a>Konferans oturumları
 
-Grupların yönetimi ve grupların yönetimi hakkında daha fazla bilgi Microsoft 365 bu konferans Teams.
+Microsoft 365 Grupları ve Teams idaresi hakkında daha fazla bilgi edinmek için bu konferans oturumlarını izleyin.
 
-**Temeller**
+**Temelleri**
 
-Kurumsal ölçekte yönetim ve yönetim dahil olmak üzere Microsoft 365, kullanımı ve benimsemeyi ve self servis hizmeti en iyi yöntemleri içeren temelleri ve yeni yenilikleri öğrenin.
+Büyük ölçekte yönetim ve idare, kullanımı ve benimsemeyi yönlendirmeye yönelik en iyi uygulamalar ve self servis dahil olmak üzere Microsoft 365 Grupları temelleri ve yeni yenilikleri öğrenin.
 
-- [Microsoft 365 Grupları](https://www.youtube.com/watch?v=dAamBF1gb7M)
+- [Microsoft 365 Grupları'i kucaklayın](https://www.youtube.com/watch?v=dAamBF1gb7M)
 
 **İdare**
 
-Grup süre sonu yaşam döngüsü, adlandırma ilkeleri, sınıflandırma etiketleri, dış konuklarla işbirliği yapmayı ve grup oluşturma izinlerini yönetmeyi öğrenin.
+Gruplarınızın süre sonu yaşam döngüsünü, adlandırma ilkelerini, sınıflandırma etiketlerini, dış konuklarla işbirliğini ayarlamayı ve grup oluşturma izinlerini yönetmeyi öğrenin.
 
-- [Yeni gruplarla işbirliğini dönüştürme ve IT'ye Office 365 gölgele mücadele](https://www.youtube.com/watch?v=Bhf_bKx3lAg)
+- [İşbirliğini dönüştürme ve Office 365 gruplarla gölge BT ile mücadele](https://www.youtube.com/watch?v=Bhf_bKx3lAg)
 
 **Müşteri örneği**
 
-Bir genel işbirliği platformu sağlamak için Groups, Microsoft 365, SharePoint, Teams ve Yammer'in birlikte nasıl çalışııla ilgili bir sahne arkası örneğine bakın.
+Microsoft 365 Grupları, SharePoint, Teams ve Yammer küresel bir işbirliği platformu sağlamak için birlikte nasıl çalıştığına ilişkin sahne arkası örneğine bakın.
 
-- [Groups, SharePoint, Teams ve Office 365 ile işbirliğinizi güzel Yammer](https://www.youtube.com/watch?v=Rx9eVwqXeQk)
+- [Office 365 Grupları, SharePoint, Teams ve Yammer ile işbirliğinizi bulma](https://www.youtube.com/watch?v=Rx9eVwqXeQk)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Microsoft 365 belgeleri](../security/index.yml)
+[Microsoft 365 güvenlik belgeleri](../security/index.yml)
 
-[Microsoft 365 uyumluluğu belgeleri](../compliance/index.yml)
+[Microsoft Purview belgeleri](../compliance/index.yml)

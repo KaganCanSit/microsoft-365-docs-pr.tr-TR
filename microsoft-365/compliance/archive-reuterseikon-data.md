@@ -1,5 +1,5 @@
 ---
-title: Reuters E ayrıca verilerini aynı dosyada arşivlemek için bağlayıcı Microsoft 365
+title: Reuters Eikon verilerini Microsoft 365 arşivleme bağlayıcısı ayarlama
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -11,80 +11,80 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Yöneticiler Reuters E ayrıca, Veritas verilerini Kendi Veritas'ında içeri aktaracak ve arşivacak bir bağlayıcı Microsoft 365. Bu bağlayıcı, iş yerinde üçüncü taraf veri kaynaklarından verileri Microsoft 365. Bu verileri arşivledikten sonra, üçüncü taraf verilerini yönetmek için yasal saklama, içerik araması ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
-ms.openlocfilehash: 7469e776f8c419d510d00c63294b9ff85acc4f1d
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Yöneticiler, Reuters Eikon verilerini Microsoft 365'da Veritas'tan içeri aktarmak ve arşivlemek için bir bağlayıcı ayarlayabilir. Bu bağlayıcı, Microsoft 365'da üçüncü taraf veri kaynaklarından verileri arşivleyabilmenizi sağlar. Bu verileri arşivledikten sonra, üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
+ms.openlocfilehash: c296e77023b893f63e5dbd8488c08374e855840d
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63316247"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64940609"
 ---
-# <a name="set-up-a-connector-to-archive-reuters-eikon-data"></a>Reuters E ekin verilerini arşivlemek için bağlayıcı ayarlama
+# <a name="set-up-a-connector-to-archive-reuters-eikon-data"></a>Reuters Eikon verilerini arşivleme için bağlayıcı ayarlama
 
-Microsoft 365 uyumluluk merkezi'da Bir Veritas bağlayıcısı kullanarak Reuters E kutunuzdan kendi Microsoft 365 posta kutularına veri aktarın ve bu Microsoft 365 kullanın. Veritas, üçüncü taraf veri kaynağından (düzenli olarak) öğe yakalamak ve bu öğeleri üçüncü taraf veri kaynağına aktaracak şekilde yapılandırılmış bir [Reuters E ayrıca](https://globanet.com/eikon/) Microsoft 365. Bağlayıcı, bir kullanıcının Reuters E diski gibi içerikleri bir e-posta iletisi biçimine dönüştürür ve sonra bu öğeleri Microsoft 365'da kullanıcının posta kutusuna aktarabilir.
+Verileri Reuters Eikon platformundan Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında bir Veritas bağlayıcısı kullanın. Veritas, üçüncü taraf veri kaynağından öğeleri yakalamak (düzenli olarak) ve bu öğeleri Microsoft 365 içeri aktarmak için yapılandırılmış bir [Reuters Eikon](https://globanet.com/eikon/) bağlayıcısı sağlar. Bağlayıcı, bir kullanıcının Reuters Eikon hesabından kişiler arası iletiler, grup sohbetleri, ekler ve sorumluluk reddi gibi içerikleri e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'da kullanıcının posta kutusuna aktarır.
 
-Reuters Eclen verileri kullanıcı posta kutularında depolandığı için Mahkeme Microsoft 365, eBulma, bekletme ilkeleri ve bekletme etiketleri ve iletişim uyumluluğu gibi uyumluluk özelliklerini uygulayabilirsiniz. Aynı kuruluşta verileri içeri ve arşivlemek için Reuters E ilgili bağlayıcısı Microsoft 365, kurum kurum ve mevzuat ilkeleriyle uyumlu kalmalarına yardımcı olabilir.
+Reuters Eikon verileri kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, eBulma, bekletme ilkeleri ve bekletme etiketleri ve iletişim uyumluluğu gibi Microsoft Purview özelliklerini uygulayabilirsiniz. Microsoft 365'da verileri içeri aktarmak ve arşivlemek için Reuters Eikon bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 
-## <a name="overview-of-archiving-reuters-eikon-data"></a>Reuters E gereksinimleri verilerini arşivlemeye genel bakış
+## <a name="overview-of-archiving-reuters-eikon-data"></a>Reuters Eikon verilerini arşivleme hakkında genel bakış
 
-Aşağıdaki genel bakış makalesinde, Reuters E ayrıcanı verilerini şirket içinde arşivlemek için bağlayıcı kullanma Microsoft 365.
+Aşağıdaki genel bakış, reuters Eikon verilerini Microsoft 365 arşivleme amacıyla bağlayıcı kullanma işlemini açıklar.
 
-![Reuters Evrizi verileri için arşivleme iş akışı.](../media/ReutersEikonConnectorWorkflow.png)
+![Reuters Eikon verileri için arşivleme iş akışı.](../media/ReutersEikonConnectorWorkflow.png)
 
-1. Organizasyonunız Reuters E bu siteyi ayarlamak ve yapılandırmak için Reuters E bu siteyle çalışır.
+1. Kuruluşunuz bir Reuters Eikon sitesi ayarlamak ve yapılandırmak için Reuters Eikon ile birlikte çalışır.
 
-2. Reuters E öğeleri 24 saatte bir Veritas Merge1 sitesine kopyalanır. Bağlayıcı aynı zamanda Reuters E ayrıca e-posta iletisi biçimine de dönüştürür.
+2. Her 24 saatte bir Reuters Eikon öğeleri Veritas Merge1 sitesine kopyalanır. Bağlayıcı ayrıca Reuters Eikon öğelerini e-posta iletisi biçimine dönüştürür.
 
-3. Microsoft 365 uyumluluk merkezi'ta oluşturdukları Reuters E ilgili bağlayıcısı her gün Veritas Merge1 sitesine bağlanır ve içeriği Microsoft bulutunda güvenli bir Azure Depolama konuma aktarabilir.
+3. Uyumluluk portalında oluşturduğunuz Reuters Eikon bağlayıcısı her gün Veritas Merge1 sitesine bağlanır ve içeriği Microsoft bulutunda güvenli bir Azure Depolama konumuna aktarır.
 
-4. Bağlayıcı, otomatik kullanıcı eşlemesinde E-posta özelliğinin değerini 3. Adımda açıklandığı gibi kullanarak  öğeleri belirli kullanıcıların posta [kutularına içeri aktarıyor](#step-3-map-users-and-complete-the-connector-setup). Kullanıcı posta kutularında **Reuters E ayrıcat** adlı Gelen Kutusu klasöründe bir alt klasör oluşturulur ve öğeler bu klasöre aktarılır. Bağlayıcı, E-posta özelliğinin değerini kullanarak hangi posta kutusuna öğe *aktarılamayacaklarını* belirler. Her Reuters E bu özelliği içerir; bu özellik, öğenin tüm katılımcılarının e-posta adresiyle doldurulur.
+4. Bağlayıcı, [3. Adımda](#step-3-map-users-and-complete-the-connector-setup) açıklandığı gibi otomatik kullanıcı eşlemesinin *Email* özelliğinin değerini kullanarak öğeleri belirli kullanıcıların posta kutularına aktarır. Kullanıcı posta kutularında **Reuters Eikon** adlı Gelen Kutusu klasöründe bir alt klasör oluşturulur ve öğeler bu klasöre aktarılır. Bağlayıcı, *E-posta* özelliğinin değerini kullanarak öğelerin hangi posta kutusuna aktarılacağını belirler. Her Reuters Eikon öğesi, öğenin her katılımcısının e-posta adresiyle doldurulan bu özelliği içerir.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-- Microsoft bağlayıcıları için VeriTas Merge1 hesabı oluşturun. Hesap oluşturmak için [Veritas Müşteri Desteği'ne başvurun](https://globanet.com/ms-connectors-contact). 1. Adım'da bağlayıcıyı  oluşturmak için bu hesapta oturum açın.
+- Microsoft bağlayıcıları için bir Veritas Merge1 hesabı oluşturun. Hesap oluşturmak için [Veritas Müşteri Desteği'ne](https://globanet.com/ms-connectors-contact) başvurun. 1. Adımda bağlayıcıyı oluştururken bu hesapta oturum açarsınız.
 
-- 1. Adımda Reuters E ayrıca bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yönetici rolü atanabilir. Bu rol, sayfanın en son veri **bağlayıcıları sayfasına bağlayıcı** eklemek Microsoft 365 uyumluluk merkezi. Bu rol varsayılan olarak birden çok rol gruplarına eklenir. Bu rol gruplarının listesi için, Güvenlik ve Uyumluluk Merkezi'nde İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki roller" [& bakın](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). Alternatif olarak, bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolü ata sonrasında uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için aşağıdaki İzinler bölümündeki "Özel bir rol grubu oluşturma" [bölümüne Microsoft 365 uyumluluk merkezi](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- 1. Adımda Reuters Eikon bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için [Microsoft Purview uyumluluk portalındaki İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
-- Bu Veritas veri bağlayıcısı, ABD Kamu bulutu GCC ortamlarda Microsoft 365 önizlemededir. Üçüncü taraf uygulamaları ve hizmetleri, kuruluş müşteri verilerini Microsoft 365 altyapısının dışında olan üçüncü taraf sistemlerde depolamayı, iletip işlemeyi ve bu nedenle de Microsoft 365 uyumluluk ve veri koruma taahhütleri kapsamında değildir. Microsoft, bu ürünün üçüncü taraf uygulamalara bağlanmak için kullanılabileceğiyle ilgili hiçbir beyanda yoktur ve bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu da ima eder.
+- Bu Veritas veri bağlayıcısı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda genel önizleme aşamasındadır. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerinin Microsoft 365 altyapısı dışında olan ve bu nedenle Microsoft Purview ve veri koruma taahhütleri kapsamında olmayan üçüncü taraf sistemlerde depolanmasını, iletilmesini ve işlenmesini içerebilir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
 
-## <a name="step-1-set-up-the-reuters-eikon-connector"></a>1. Adım: Reuters E ilgili bağlayıcıyı ayarlama
+## <a name="step-1-set-up-the-reuters-eikon-connector"></a>1. Adım: Reuters Eikon bağlayıcısını ayarlama
 
-İlk adım, en son **sayfasındaki Veri Bağlayıcıları** sayfasına erişmek Microsoft 365 uyumluluk merkezi Reuters E herhangi bir veri için bağlayıcı oluşturmaktır.
+İlk adım, uyumluluk portalındaki **Veri Bağlayıcıları** sayfasına erişmek ve Reuters Eikon verileri için bir bağlayıcı oluşturmaktır.
 
-1. Veri **bağlayıcılarıYeni'ye** > [https://compliance.microsoft.com](https://compliance.microsoft.com/) gidin **ve bu öğeye tıklayın**.
+1. [https://compliance.microsoft.com](https://compliance.microsoft.com/) Adresine gidin ve **Veri bağlayıcılarıReuters** >  **Eikon'a** tıklayın.
 
-2. **Reuters E herhangi bir ürün açıklaması** sayfasında Bağlayıcı **ekle'ye tıklayın**.
+2. **Reuters Eikon** ürün açıklaması sayfasında **Bağlayıcı ekle'ye** tıklayın.
 
-3. Hizmet Koşulları **sayfasında Kabul Et'e** **tıklayın**.
+3. **Hizmet koşulları** sayfasında **Kabul Et'e** tıklayın.
 
-4. Bağlayıcıyı tanımlayan benzersiz bir ad girin ve Ardından Sonraki'ye **tıklayın**.
+4. Bağlayıcıyı tanımlayan benzersiz bir ad girin ve **İleri'ye** tıklayın.
 
-5. Bağlayıcıyı yapılandırmak için Merge1 hesabınızla oturum açın.
+5. Bağlayıcıyı yapılandırmak için Merge1 hesabınızda oturum açın.
 
-## <a name="step-2-configure-the-reuters-eikon-connector-on-the-veritas-merge1-site"></a>2. Adım: Veritas Merge1 sitesinde Reuters E ayrıca bağlayıcıyı yapılandırma
+## <a name="step-2-configure-the-reuters-eikon-connector-on-the-veritas-merge1-site"></a>2. Adım: Veritas Merge1 sitesinde Reuters Eikon bağlayıcısını yapılandırma
 
-İkinci adım, Merge1 sitesinde Reuters E bu bağlayıcıyı yapılandırmaktır. Veritas Merge1 sitesinde Reuters E belirli bir bağlayıcıyı yapılandırma hakkında bilgi için bkz. [Merge1 Third-Party Connectors Kullanıcı Kılavuzu](https://docs.ms.merge1.globanetportal.com/Merge1%20Third-Party%20Connectors%20Reuters%20Eikon%20User%20Guide%20.pdf).
+İkinci adım, Merge1 sitesinde Reuters Eikon bağlayıcısını yapılandırmaktır. Veritas Merge1 sitesinde Reuters Eikon bağlayıcısını yapılandırma hakkında bilgi için bkz. [Birleştirme1 Üçüncü Taraf Bağlayıcıları Kullanıcı Kılavuzu](https://docs.ms.merge1.globanetportal.com/Merge1%20Third-Party%20Connectors%20Reuters%20Eikon%20User%20Guide%20.pdf).
 
-Son Olarak Kaydet **& e tıklarken**, sihirbazın  Bağlayıcı sihirbazında Kullanıcı eşleme Microsoft 365 uyumluluk merkezi görüntülenir.
+**Kaydet & Son'a** tıkladıktan sonra, uyumluluk portalındaki bağlayıcı sihirbazındaki **Kullanıcı eşleme** sayfası görüntülenir.
 
 ## <a name="step-3-map-users-and-complete-the-connector-setup"></a>3. Adım: Kullanıcıları eşleme ve bağlayıcı kurulumunu tamamlama
 
-Kullanıcıları eşlemek ve aşağıdaki adımları takip etmek için Microsoft 365 uyumluluk merkezi izleyin:
+Kullanıcıları eşlemek ve uyumluluk portalında bağlayıcı kurulumunu tamamlamak için şu adımları izleyin:
 
-1. Dış kullanıcıları **kullanıcı eşleme Microsoft 365,** otomatik kullanıcı eşlemesini etkinleştirin. Reuters E bu öğeleri, kurumdaki kullanıcılar *için e-posta* adreslerini içeren E-posta adlı bir özellik içerir. Bağlayıcı bu adresi bir kullanıcıyla Microsoft 365, öğeler o kullanıcının posta kutusuna aktarılır.
+1. **Dış kullanıcıları Microsoft 365 kullanıcılarla eşle** sayfasında otomatik kullanıcı eşlemesini etkinleştirin. Reuters Eikon öğeleri, kuruluşunuzdaki kullanıcıların *e-posta adreslerini içeren E-posta* adlı bir özellik içerir. Bağlayıcı bu adresi bir Microsoft 365 kullanıcıyla ilişkilendirebiliyorsa, öğeler söz konusu kullanıcının posta kutusuna aktarılır.
 
-2. **Sonraki'ye** tıklayın, ayarlarınızı gözden geçirin ve yeni bağlayıcıya yönelik içeri aktarma işleminin ilerlemesini görmek için Veri bağlayıcıları sayfasına gidin.
+2. **İleri'ye** tıklayın, ayarlarınızı gözden geçirin ve yeni bağlayıcının içeri aktarma işleminin ilerleme durumunu görmek için **Veri bağlayıcıları** sayfasına gidin.
 
-## <a name="step-4-monitor-the-reuters-eikon-connector"></a>4. Adım: Reuters E ilgili bağlayıcıyı izleme
+## <a name="step-4-monitor-the-reuters-eikon-connector"></a>4. Adım: Reuters Eikon bağlayıcısını izleme
 
-Reuters E herhangi bir bağlayıcıyı oluşturduktan sonra bağlayıcının durumunu hemen Microsoft 365 uyumluluk merkezi.
+Reuters Eikon bağlayıcısını oluşturduktan sonra bağlayıcının durumunu uyumluluk portalında görüntüleyebilirsiniz.
 
-1. Sol gezinti [https://compliance.microsoft.com](https://compliance.microsoft.com) çubuğunda **Veri bağlayıcıları'na** gidin ve bu bağlayıcılara tıklayın.
+1. Sol gezinti bölmesinde **Veri bağlayıcıları'na** [https://compliance.microsoft.com](https://compliance.microsoft.com) gidin ve tıklayın.
 
-2. Bağlayıcılar **sekmesine** tıklayın ve sonra açılır sayfayı **görüntülemek için Reuters E ilgili** bağlayıcıyı seçin. Bu sayfa, bağlayıcının özelliklerini ve bilgilerini içerir.
+2. **Bağlayıcılar** sekmesine tıklayın ve açılır sayfayı görüntülemek için **Reuters Eikon** bağlayıcısını seçin. Bu sayfa, bağlayıcı hakkındaki özellikleri ve bilgileri içerir.
 
-3. **Bağlayıcının kaynak durumunun altında**, **Bağlayıcının durum günlüğünü** açmak (veya kaydetmek) için Günlüğü indir bağlantısına tıklayın. Bu günlük, Microsoft buluta aktarılan veriler hakkında bilgi içerir.
+3. Bağlayıcının durum günlüğünü açmak (veya kaydetmek) için **Kaynakla bağlayıcı durumu** altında **Günlüğü indir** bağlantısına tıklayın. Bu günlük, Microsoft buluta aktarılan veriler hakkında bilgi içerir.
 
 ## <a name="known-issues"></a>Bilinen sorunlar
 
-- Şu anda ekleri veya 10 MB'den büyük öğeleri içeri aktarmayı desteklemez. Daha büyük öğeler için destek daha sonraki bir tarihte kullanılabilir.
+- Şu anda 10 MB'tan büyük eklerin veya öğelerin içeri aktarılmasını desteklemiyoruz. Daha büyük öğeler için destek daha sonraki bir tarihte sağlanacaktır.

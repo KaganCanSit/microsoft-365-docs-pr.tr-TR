@@ -1,5 +1,5 @@
 ---
-title: Denetim günlüğünde arama yapmak için PowerShell betiği kullanma
+title: Denetim günlüğünü aramak için PowerShell betiği kullanma
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -18,53 +18,53 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
-description: Denetim günlüğünde arama yapmak için Search-UnifiedAuditLog cmdlet'ini Exchange Online bir PowerShell betiği kullanın. Bu betik, her çalıştırışta büyük bir denetim kayıtları kümesi geri dönecek şekilde en iyi duruma getirildi. Betik, bu kayıtları bir CSV dosyasına dışarı aktarır ve bu dosyayı Power Query kullanarak görüntü veya Excel.
-ms.openlocfilehash: 60f78f5a5eebeaa90f01b4b251d917f178c06ae9
-ms.sourcegitcommit: b1066b2a798568afdea9c09401d52fa38fe93546
+description: Denetim günlüğünde arama yapmak için Exchange Online'da Search-UnifiedAuditLog cmdlet'ini çalıştıran bir PowerShell betiği kullanın. Bu betik, her çalıştırdığınızda büyük bir denetim kayıtları kümesi döndürecek şekilde iyileştirilmiştir. Betik, bu kayıtları Excel'da Power Query kullanarak görüntüleyebileceğiniz veya dönüştürebileceğiniz bir CSV dosyasına aktarır.
+ms.openlocfilehash: fc7f2e8626fd5b510dca08504d91dd0faadd78b6
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/13/2021
-ms.locfileid: "63012876"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64943853"
 ---
-# <a name="use-a-powershell-script-to-search-the-audit-log"></a>Denetim günlüğünde arama yapmak için PowerShell betiği kullanma
+# <a name="use-a-powershell-script-to-search-the-audit-log"></a>Denetim günlüğünü aramak için PowerShell betiği kullanma
 
-Günümüzdeki IT yöneticileri için güvenlik, uyumluluk ve denetim en öncelikli hale geldi. Microsoft 365, kuruluşların güvenlik, uyumluluk ve denetimi yönetmelerine yardımcı olacak çeşitli yerleşik özelliklere sahip olabilir. Özel olarak, birleşik denetim günlüğü güvenlik olaylarını ve uyumluluk sorunlarını araştırmanıza yardımcı olabilir. Aşağıdaki yöntemleri kullanarak denetim günlüklerini geri alın:
+Güvenlik, uyumluluk ve denetim, günümüzün dünyasında BT yöneticileri için en önemli öncelik haline gelmiştir. Microsoft 365, kuruluşların güvenlik, uyumluluk ve denetimi yönetmesine yardımcı olan çeşitli yerleşik özelliklere sahiptir. Özellikle, birleşik denetim günlüğü güvenlik olaylarını ve uyumluluk sorunlarını araştırmanıza yardımcı olabilir. Aşağıdaki yöntemleri kullanarak denetim günlüklerini alabilirsiniz:
 
-- [Office 365 Yönetimi Etkinlik API'si](/office/office-365-management-api/office-365-management-activity-api-reference)
+- [Office 365 Yönetim Etkinliği API'si](/office/office-365-management-api/office-365-management-activity-api-reference)
 
-- Denetim [günlüğü arama aracı](search-the-audit-log-in-security-and-compliance.md) Microsoft 365 uyumluluk merkezi
+- Microsoft Purview uyumluluk portalındaki [denetim günlüğü arama aracı](search-the-audit-log-in-security-and-compliance.md)
 
-- Exchange Online [PowerShell'de Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog) cmdlet'i
+- Exchange Online PowerShell'de [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog) cmdlet'i
 
-Denetim günlüklerini düzenli aralıklarla geri almak zorundaysanız, büyük kuruluşlara sürekli milyonlarca denetim kaydı almak için ölçeklenebilirlik ve performans sağlayabilse de, Office 365 Yönetim Etkinliği API'sini kullanan bir çözüm göz önünde bulundurabilirsiniz. Zaman aralığındaki denetim günlüğü arama Microsoft 365 uyumluluk merkezi, daha kısa bir süre içinde oluşan belirli işlemlerin denetim kayıtlarını hızla bulmak için iyi bir yol sağlar. Özellikle büyük kuruluşlar için denetim günlüğü arama aracında daha uzun süre aralıklarının kullanımı, kolayca yönetilemeyecek veya dışarı aktarılameyecek kadar çok kayıt verebilir.
+Denetim günlüklerini düzenli olarak almanız gerekiyorsa, büyük kuruluşlara sürekli olarak milyonlarca denetim kaydını almaları için ölçeklenebilirlik ve performans sağlayabilen Office 365 Yönetim Etkinliği API'sini kullanan bir çözüm düşünmelisiniz. Uyumluluk portalında denetim günlüğü arama aracını kullanmak, daha kısa zaman aralığında gerçekleşen belirli işlemlerin denetim kayıtlarını hızla bulmanın iyi bir yoludur. Denetim günlüğü arama aracında, özellikle de büyük kuruluşlar için daha uzun zaman aralıkları kullanmak, kolayca yönetmek veya dışarı aktarmak için çok fazla kayıt döndürebilir.
 
-Belirli bir araştırma veya olay için denetim verilerini el ile almanızı istediğiniz durumlar olduğunda, özellikle de büyük kuruluşlarda daha uzun tarih aralıkları için en iyi seçenek **Search-UnifiedAuditLog** cmdlet'ini kullanmak olabilir. Bu makalede, cmdlet'i kullanan bir PowerShell betiği vardır ve bu betik 50.000 denetim kaydına (cmdlet'i her çalıştırsanız) alabilir ve sonra da bunları Excel'te Power Query kullanarak biçimlendirebilir ve gözden geçirmenize yardımcı olabilir. Bu makaledeki betiği kullanmak, hizmette büyük denetim günlüğü aramalarına zaman çıkma riskini de en aza indirmektedir.
+Özellikle büyük kuruluşlardaki daha uzun tarih aralıkları için belirli bir araştırma veya olay için denetim verilerini el ile almanız gereken durumlar olduğunda, **Search-UnifiedAuditLog** cmdlet'ini kullanmak en iyi seçenek olabilir. Bu makale, 50.000 denetim kaydını alabilen (cmdlet'i her çalıştırdığınızda) cmdlet'ini kullanan ve bunları gözden geçirmenize yardımcı olmak için Excel'deki Power Query kullanarak biçimlendirebileceğiniz bir CSV dosyasına aktaran bir PowerShell betiği içerir. Bu makaledeki betiğin kullanılması, büyük denetim günlüğü aramalarının hizmette zaman aşımına neden olma olasılığını da en aza indirir.
 
 ## <a name="before-you-run-the-script"></a>Betiği çalıştırmadan önce
 
-- Denetim kayıtlarının geri dönmesi için betiğin başarılı bir şekilde kullan kullanışta olması için, denetim günlüğünün etkinleştirilmesi gerekir. Denetim günlüğü, kurumsal kuruluşlar tarafından denetlenen Microsoft 365 Office 365 açıktır. Kuruluşunız için denetim günlüğü aramalarının açık olduğunu doğrulamak için, Exchange Online PowerShell'de çalıştırabilirsiniz:
+- Denetim kayıtlarını döndürmek için betiğin başarıyla kullanılabilmesi için kuruluşunuz için denetim günlüğünün etkinleştirilmesi gerekir. Denetim günlüğü, Microsoft 365 ve Office 365 kurumsal kuruluşlar için varsayılan olarak açıktır. Kuruluşunuzda denetim günlüğü aramasının açık olduğunu doğrulamak için Exchange Online PowerShell'de aşağıdaki komutu çalıştırabilirsiniz:
 
   ```powershell
   Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled
   ```
 
-  `True` **UnifiedAuditLogIngestionEnabled** özelliğinin değeri, denetim günlüğü aramasında izinlerin açık olduğunu gösterir.
+  **UnifiedAuditLogIngestionEnabled** özelliğinin değeri`True`, denetim günlüğü aramasının açık olduğunu gösterir.
 
-- Betiği başarılı bir şekilde View-Only için Exchange Online Günlükleri veya Denetim Günlükleri rolüne atanmış olmak gerekir. Varsayılan olarak, bu roller yönetim merkezinin İzinler sayfasında yer alan Uyumluluk Yönetimi <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">ve Kuruluş Exchange atanır</a>. Daha fazla bilgi için, Uyumluluk merkezinde denetim günlüğünde arama yapın bölümündeki "Denetim [günlüğünde arama yapmak için gereksinimler" bölümüne bakın](search-the-audit-log-in-security-and-compliance.md#before-you-search-the-audit-log).
+- Betiği başarıyla çalıştırmak için Exchange Online'da View-Only Denetim Günlükleri veya Denetim Günlükleri rolüne atanmış olmanız gerekir. Varsayılan olarak, bu roller <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange yönetim merkezindeki</a> İzinler sayfasındaki Uyumluluk Yönetimi ve Kuruluş Yönetimi rol gruplarına atanır. Daha fazla bilgi için Uyumluluk merkezinde denetim günlüğünde arama yapma bölümündeki " [Denetim günlüğünde](search-the-audit-log-in-security-and-compliance.md#before-you-search-the-audit-log) arama yapma gereksinimleri" bölümüne bakın.
 
-- Betiğin tamamlanması uzun sürebilir. Ne kadar süreyle çalıştırıldığında, tarih aralığı ve betiği denetim kayıtlarını almak için yapılandırılan aralığın boyutuna bağlıdır. Daha büyük tarih aralıkları ve daha küçük aralıklar uzun çalışma süresine neden olur. Tarih aralığı ve aralıklar hakkında daha fazla bilgi için 2. Adımdaki tabloya bakın.
+- Betiğin tamamlanması uzun sürebilir. Çalıştırmanın ne kadar süreceği, denetim kayıtlarını almak için betiği yapılandırdığınız tarih aralığına ve aralığın boyutuna bağlıdır. Daha büyük tarih aralıkları ve daha küçük aralıklar uzun çalışma süresine neden olur. Tarih aralığı ve aralıklar hakkında daha fazla bilgi için 2. Adım'daki tabloya bakın.
 
-- Bu makalede sağlanan örnek betik, hiçbir Microsoft standart destek programı veya hizmeti kapsamında desteklenmiyor. Örnek betik, hiçbir garanti olmaksızın OLDUĞU GIBI verilmektedir. Microsoft, ticarete uygunluk veya belirli bir amaca uygunluk ile ilgili zımni garantiler dahil ancak bununla sınırlı olmaksızın her türlü zımni garantiyi bundan sonra feragat ediyor. Örnek betiğin ve belgelerin kullanımından veya performansından doğan tüm riskler size aittir. Hiçbir durumda Microsoft, yazarları veya betiğin oluşturulması, üretimi veya dağıtımında yer alan diğer herhangi bir kişi, örnek betiğin veya belgelerin kullanımından ya da kullanılamazlığından kaynaklanan hiçbir zarardan (ticari kar kaybı, iş kesintisi, iş bilgileri kaybı veya diğer maddi kayıplar dahil ancak ancak bu zararlar dahil ancak ancak hiçbir zarardan sorumlu olmayacaktır),  Microsoft bu tür zarar olasılığı hakkında bilgilansa bile.
+- Bu makalede sağlanan örnek betik, herhangi bir Microsoft standart destek programı veya hizmeti altında desteklenmez. Örnek betik, herhangi bir garanti olmadan OLDUĞU GIBI sağlanır. Microsoft, satılabilirlik veya belirli bir amaca uygunlukla ilgili zımni garantiler dahil ancak bunlarla sınırlı olmaksızın tüm zımni garantileri de reddeder. Örnek betiğin ve belgelerin kullanımından veya performansından kaynaklanan tüm risk sizinle kalır. Hiçbir durumda Microsoft, yazarları veya betiğin oluşturulması, üretimi veya teslimi ile ilgili herhangi bir kişi, örnek betiğin veya belgelerin kullanımından veya kullanılamama durumundan kaynaklanan herhangi bir zarardan (bunlarla sınırlı olmaksızın, iş kârı kaybı, iş kesintisi, iş bilgisi kaybı veya diğer maddi kayıplar dahil) sorumlu tutulamaz,  Microsoft'a bu tür hasarlar olabileceği bildirilmiş olsa bile.
 
-## <a name="step-1-connect-to-exchange-online-powershell"></a>1. Adım: Bağlan PowerShell Exchange Online e geri
+## <a name="step-1-connect-to-exchange-online-powershell"></a>1. Adım: PowerShell'i Exchange Online için Bağlan
 
-İlk adım, Exchange Online PowerShell'e bağlanmaktir. Modern kimlik doğrulamayı kullanarak veya Çok Faktörlü Kimlik Doğrulaması (MFA) ile bağlanın. Adım adım yönergeler için bkz. [PowerShell'Bağlan Exchange Online kullanma](/powershell/exchange/connect-to-exchange-online-powershell).
+İlk adım, Exchange Online PowerShell'e bağlanmaktır. Modern kimlik doğrulaması kullanarak veya çok faktörlü kimlik doğrulaması (MFA) ile bağlanabilirsiniz. Adım adım yönergeler için bkz. [PowerShell'i Exchange Online için Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
 
 ## <a name="step-2-modify-and-run-the-script-to-retrieve-audit-records"></a>2. Adım: Denetim kayıtlarını almak için betiği değiştirme ve çalıştırma
 
-Exchange Online PowerShell'e bağlandıktan sonra, sonraki adım denetim verilerini almak için betiği oluşturmak, değiştirmek ve çalıştırmaktır. Denetim günlüğü arama betiğinde ilk yedi satır, aramanızı yapılandırmak için değiştirerek değiştirerek, aşağıdaki değişkenleri içerir. Bu değişkenlerin açıklaması için 2. adımdaki tabloya bakın.
+Exchange Online PowerShell'e bağlandıktan sonra, sonraki adım denetim verilerini almak için betiği oluşturmak, değiştirmek ve çalıştırmaktır. Denetim günlüğü arama betiğindeki ilk yedi satır, aramanızı yapılandırmak için değiştirebileceğiniz aşağıdaki değişkenleri içerir. Bu değişkenlerin açıklaması için 2. adımdaki tabloya bakın.
 
-1. Dosya adı son eklerini kullanarak Windows PowerShell betiğine aşağıdaki metni .ps1. Örneğin, SearchAuditLog.ps1.
+1. .ps1 dosya adı son ekini kullanarak aşağıdaki metni Windows PowerShell betiğine kaydedin. Örneğin, SearchAuditLog.ps1.
 
    ```powershell
    #Modify the values for the following variables to configure the audit log search.
@@ -141,7 +141,7 @@ Exchange Online PowerShell'e bağlandıktan sonra, sonraki adım denetim veriler
    Write-Host "Script complete! Finished retrieving audit records for the date range between $($start) and $($end). Total count: $totalCount" -foregroundColor Green
    ```
 
-2. Arama ölçütlerini yapılandırmak için aşağıdaki tabloda listelenen değişkenleri değiştirebilirsiniz. Betik, bu değişkenler için örnek değerler içerir, ancak özel gereksinimlerinizi karşılamak için bunları değiştirebilirsiniz (aksi belirtilmedikçe).
+2. Arama ölçütlerini yapılandırmak için aşağıdaki tabloda listelenen değişkenleri değiştirin. Betik bu değişkenler için örnek değerler içerir, ancak bunları (aksi belirtilmedikçe) özel gereksinimlerinizi karşılayacak şekilde değiştirmeniz gerekir.
 
    <br>
 
@@ -149,17 +149,17 @@ Exchange Online PowerShell'e bağlandıktan sonra, sonraki adım denetim veriler
 
    |Değişken|Örnek değer|Açıklama|
    |---|---|---|
-   |`$logFile`|"d:\temp\AuditSearchLog.txt"|Betik tarafından gerçekleştirilen denetim günlüğü aramanın ilerleme durumu hakkında bilgi içeren günlük dosyasının adını ve konumunu belirtir. Betik, günlük dosyasına UTC zaman damgası yazar.|
+   |`$logFile`|"d:\temp\AuditSearchLog.txt"|Betik tarafından gerçekleştirilen denetim günlüğü aramasının ilerleme durumu hakkında bilgi içeren günlük dosyasının adını ve konumunu belirtir. Betik, günlük dosyasına UTC zaman damgaları yazar.|
    |`$outputFile`|"d:\temp\AuditRecords.csv"|Betik tarafından döndürülen denetim kayıtlarını içeren CSV dosyasının adını ve konumunu belirtir.|
-   |`[DateTime]$start` ve `[DateTime]$end`|[DateTime]::UtcNow.AddDays(-1) <br/>[DateTime]::UtcNow|Denetim günlüğü araması için tarih aralığını belirtir. Betik, belirtilen tarih aralığında  meydana gelen denetim etkinliklerinin kayıtlarını döner. Örneğin, Ocak 2021'de gerçekleştirilen etkinlikleri geri almak için başlangıç tarihi ve bitiş tarihi kullanabilirsiniz (değerleri çift tırnak içine almanız gerekir) betik dosyasındaki örnek değer, `"2021-01-01"` `"2021-01-31"` önceki 24 saat içinde gerçekleştirilen etkinliklerin kayıtlarını döndürür. Değere bir zaman damgası belirtilmezse, varsayılan zaman damgası belirtilen tarihte saat 12:00'dır.|
-   |`$record`|"AzureActiveDirectory"|Aramanın denetim etkinliklerinin (işlem de denir) *kayıt* türünü belirtir. Bu özellik, etkinliğin tetiklendiğinde tetiklenen hizmeti veya özelliği gösterir. Bu değişken için kullanabileceğiniz kayıt türlerinin listesi için bkz. [Denetim günlüğü kayıt türü](/office/office-365-management-api/office-365-management-activity-api-schema#auditlogrecordtype). Kayıt türü adını veya ENUM değerini kullanabilirsiniz. <br/><br/>**İpucu:** Tüm kayıt türlerinin denetim kayıtlarını geri almak için, değeri kullanın `$null` (çift tırnak işaretleri olmadan).|
-   |`$resultSize`|5000|**Search-UnifiedAuditLog** cmdlet'i betik tarafından her çağrılsında döndürülen sonuç *sayısını (sonuç kümesi denir) belirtir*. 5.000 değeri, cmdlet tarafından desteklenen en büyük değerdir. Bu değeri olduğu gibi bırakın.|
-   |`$intervalMinutes`|60|Döndürülen 5000 kayıt sınırını aşmanıza yardımcı olması için, bu değişken belirttiğiniz veri aralığını alır ve daha küçük zaman aralıkları halinde dilimler. Artık, tarih aralığının tamamı değil her aralık, komutun 5000 kayıt çıkış sınırına tabi olur. Tarih aralığı içindeki 60 dakikalık aralık başına 5000 kayıt varsayılan değeri çoğu kuruluş için yeterli olacaktır. Ancak betik, zaman aralığını (örneğin, `maximum results limitation reached`30 dakika veya 15 dakikaya kadar) azaltarak betiği yeniden çalıştırma hatasını döndürür.|
+   |`[DateTime]$start` Ve `[DateTime]$end`|[DateTime]::UtcNow.AddDays(-1) <br/>[DateTime]::UtcNow|Denetim günlüğü araması için tarih aralığını belirtir. Betik, belirtilen tarih aralığında gerçekleşen denetim etkinliklerinin kayıtlarını döndürür. Örneğin, Ocak 2021'de gerçekleştirilen etkinlikleri döndürmek için başlangıç tarihi ve bitiş tarihi `"2021-01-01"` `"2021-01-31"` kullanabilirsiniz (değerleri çift tırnak işaretiyle çevrelediğinizden emin olun) Betikteki örnek değer, önceki 24 saat içinde gerçekleştirilen etkinliklerin kayıtlarını döndürür. Değere bir zaman damgası eklemezseniz, varsayılan zaman damgası belirtilen tarihte 12:00 (gece yarısı) olur.|
+   |`$record`|"AzureActiveDirectory"|Aranacak denetim etkinliklerinin ( *işlemler* olarak da adlandırılır) kayıt türünü belirtir. Bu özellik, bir etkinliğin tetiklediği hizmeti veya özelliği gösterir. Bu değişken için kullanabileceğiniz kayıt türlerinin listesi için bkz. [Denetim günlüğü kayıt türü](/office/office-365-management-api/office-365-management-activity-api-schema#auditlogrecordtype). Kayıt türü adını veya ENUM değerini kullanabilirsiniz. <br/><br/>**Ipucu:** Tüm kayıt türlerinin denetim kayıtlarını döndürmek için değerini `$null` kullanın (çift tırnak işaretleri olmadan).|
+   |`$resultSize`|5000|**Search-UnifiedAuditLog** cmdlet'i betik tarafından her çağrıldığında döndürülen sonuç sayısını belirtir (*sonuç kümesi* olarak adlandırılır). 5.000 değeri, cmdlet tarafından desteklenen en büyük değerdir. Bu değeri olduğu gibi bırakın.|
+   |`$intervalMinutes`|60|Döndürülen 5000 kayıt sınırını aşmaya yardımcı olmak için, bu değişken belirttiğiniz veri aralığını alır ve daha küçük zaman aralıklarına dilimler. Artık tarih aralığının tamamı değil her aralık, komutun 5000 kayıt çıkış sınırına tabidir. Tarih aralığındaki 60 dakikalık aralık başına varsayılan 5000 kayıt değeri çoğu kuruluş için yeterli olmalıdır. Ancak, betik şunu belirten bir hata döndürürse, `maximum results limitation reached`zaman aralığını azaltın (örneğin, 30 dakika, hatta 15 dakika) ve betiği yeniden çalıştırın.|
    ||||
 
-   Önceki tabloda listelenen değişkenlerin çoğu **Search-UnifiedAuditLog cmdlet'inin** parametrelerine karşılık geldi. Bu parametreler hakkında daha fazla bilgi için bkz. [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog).
+   Önceki tabloda listelenen değişkenlerin çoğu **Search-UnifiedAuditLog** cmdlet'inin parametrelerine karşılık gelir. Bu parametreler hakkında daha fazla bilgi için bkz [. Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog).
 
-3. Yerel bilgisayarınızda, Windows PowerShell'i açın ve değiştirilen betiği kaydeden klasöre gidin.
+3. Yerel bilgisayarınızda Windows PowerShell açın ve değiştirilen betiği kaydettiğiniz klasöre gidin.
 
 4. Betiği Exchange Online PowerShell'de çalıştırın; örneğin:
 
@@ -167,11 +167,11 @@ Exchange Online PowerShell'e bağlandıktan sonra, sonraki adım denetim veriler
    .\SearchAuditLog.ps1
    ```
 
-Betik, çalışırken ilerleme durumu iletilerini görüntüler. Betiğin çalıştırması bittiğinde, denetim kayıtlarını içeren günlük dosyasını ve CSV dosyasını oluşturur ve bunları değişkenler ve değişkenler tarafından tanımlanan klasörlere `$logFile` `$outputFile` kaydeder.
+Betik, çalışırken ilerleme iletilerini görüntüler. Betiğin çalışması tamamlandıktan sonra, denetim kayıtlarını içeren günlük dosyasını ve CSV dosyasını oluşturur ve ve değişkenleri tarafından tanımlanan klasörlere `$logFile` `$outputFile` kaydeder.
 
 > [!IMPORTANT]
-> Betikte cmdlet'i her çalıştırışta döndürülen denetim kayıtlarının üst sınırı 50.000'dir. Bu betiği çalıştırarak 50.000 sonuç döndürürse, büyük olasılıkla tarih aralığı içinde 40.000'den fazla sonuç döndüren etkinliklere yönelik denetim kayıtları dahil değildir. Bu durumda, tarih aralığını daha küçük sürelere bölmenizi ve ardından her tarih aralığı için betiği yeniden çalıştırmanız önerilir. Örneğin, 90 günlük bir tarih aralığı 50.000 sonuç döndürürse, betiği iki kez, tarih aralığındaki ilk 45 gün için bir kez yeniden çalıştırarak sonraki 45 gün boyunca tekrar çalıştırarak devam  olabilir.
+> Betikte cmdlet'i her çalıştırdığınızda döndürülen denetim kaydı sayısı üst sınırı 50.000'dir. Bu betiği çalıştırırsanız ve 50.000 sonuç döndürürse, tarih aralığında gerçekleşen etkinliklerin denetim kayıtlarının dahil edilmemiş olması olasıdır. Böyle bir durumda, tarih aralığını daha küçük sürelere bölmenizi ve ardından her tarih aralığı için betiği yeniden çalıştırmanızı öneririz. Örneğin, 90 günlük bir tarih aralığı 50.000 sonuç döndürürse betiği, tarih aralığındaki ilk 45 gün için bir kez ve ardından sonraki 45 gün boyunca olmak üzere iki kez yeniden çalıştırabilirsiniz.
 
 ## <a name="step-3-format-and-view-the-audit-records"></a>3. Adım: Denetim kayıtlarını biçimlendirme ve görüntüleme
 
-Betiği çalıştırarak denetim kayıtlarını BIR CSV dosyasına aktardıktan sonra, denetim kayıtlarının gözden geçirmesini ve çözümlemesini kolaylaştırmak için CSV'nin biçimini biçimlendirmek iyi olabilir. Bunu yapmak için bir yol, denetim verileri sütunundaki JSON nesnesinde yer alan her özelliği kendi sütununa bölmek için Excel'daki Power Query JSON dönüştürme özelliğidir. Adım adım yönergeler için, Denetim günlüğü kayıtlarını dışarı aktarma, yapılandırma ve görüntüleme'nin "2. Adım: Power Query Düzenleyicisi'ni kullanarak dışarı aktarılan denetim günlüğünü [biçimlendirme" makalesinde yer alan](export-view-audit-log-records.md#step-2-format-the-exported-audit-log-using-the-power-query-editor) ".
+Betiği çalıştırdıktan ve denetim kayıtlarını bir CSV dosyasına aktardıktan sonra, denetim kayıtlarını gözden geçirmeyi ve çözümlemeyi kolaylaştırmak için CSV'yi biçimlendirmek isteyebilirsiniz. Bunu gerçekleştirmenin bir yolu, **AuditData** sütunundaki JSON nesnesindeki her özelliği kendi sütununa bölmek için Excel Power Query JSON dönüştürme özelliğidir. Adım adım yönergeler için, denetim günlüğü kayıtlarını dışarı aktarma[, yapılandırma ve görüntüleme](export-view-audit-log-records.md#step-2-format-the-exported-audit-log-using-the-power-query-editor) başlığı altındaki "2. Adım: Power Query Düzenleyicisi kullanarak dışarı aktarılan denetim günlüğünü biçimlendirme" bölümüne bakın.

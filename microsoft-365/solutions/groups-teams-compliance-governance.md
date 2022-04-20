@@ -1,5 +1,5 @@
 ---
-title: Grupları ve grupları Microsoft 365 uyumluluk Teams ve işbirliği SharePoint seçenekleri
+title: Microsoft 365 grupları, Teams ve SharePoint işbirliği için uyumluluk seçenekleri
 ms.reviewer: ''
 ms.author: mikeplum
 author: MikePlumleyMSFT
@@ -15,77 +15,77 @@ ms.custom:
 - M365solutions
 f1.keywords: NOCSH
 recommendations: false
-description: Grupların uyumluluk seçeneklerini, Microsoft 365 ve işbirliği Teams hakkında SharePoint öğrenin.
-ms.openlocfilehash: ab840ea5652a13087ecc8d505391bac152ca1052
-ms.sourcegitcommit: c2b5ce3150ae998e18a51bad23277cedad1f06c6
+description: Microsoft 365 grupları, Teams ve SharePoint işbirliği için uyumluluk seçenekleri hakkında bilgi edinin.
+ms.openlocfilehash: afbbc6e507d613e028f65dbc157ec2222414af8c
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "63005018"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64939136"
 ---
-# <a name="compliance-options-for-microsoft-365-groups-teams-and-sharepoint-collaboration"></a>Grupları ve grupları Microsoft 365 uyumluluk Teams ve işbirliği SharePoint seçenekleri
+# <a name="compliance-options-for-microsoft-365-groups-teams-and-sharepoint-collaboration"></a>Microsoft 365 grupları, Teams ve SharePoint işbirliği için uyumluluk seçenekleri
 
-Microsoft 365 işbirliği yapan kullanıcılarınız uyumluluğu korumak için eksiksiz bir araç paketi sunar. Bu seçenekleri gözden geçirebilirsiniz ve bunların iş ihtiyaçlarına nasıl eş olduğunu, verilerinizin duyarlılığını ve kullanıcılarının işbirliği yapmaları gereken kişilerin kapsamını göz önünde bulundurabilirsiniz.
+Microsoft 365, kullanıcılarınız işbirliği yaptıklarında uyumluluğu korumak için eksiksiz bir araç paketi sunar. Bu seçenekleri gözden geçirin ve bunların iş gereksinimlerinizle nasıl eşlendiğini, verilerinizin duyarlılığını ve kullanıcılarınızın işbirliği yapması gereken kişilerin kapsamını göz önünde bulundurun.
 
-Aşağıdaki tabloda, E-tablo'da bulunan uyumluluk denetimleri için hızlı Microsoft 365. Aşağıdaki bölümlerde başka bilgiler sağlanmaktadır.
+Aşağıdaki tabloda, Microsoft 365'de kullanılabilen uyumluluk denetimleri için hızlı bir başvuru sağlanır. Aşağıdaki bölümlerde daha fazla bilgi verilmiştir.
 
 |Kategori|Açıklama|Başvuru|
 |:-------|:----------|:--------|
-|Bilgi bekletme|||
-||Grup posta ve posta SharePoint tutma|[E-öğrenme ve saklama SharePoint ilkeleri hakkında OneDrive](../compliance/retention-policies-sharepoint.md)|
-||Sohbeti ve iletileri koruma|[E-Microsoft Teams için bekletme ilkeleri hakkında bilgi Microsoft Teams](../compliance/retention-policies-teams.md)|
+|Bilgi saklama|||
+||Grupların postalarını ve SharePoint içeriğini saklama|[SharePoint ve OneDrive için bekletme ilkeleri hakkında bilgi edinin](../compliance/retention-policies-sharepoint.md)|
+||Sohbeti ve iletileri saklama|[Microsoft Teams için bekletme ilkeleri hakkında bilgi edinin](../compliance/retention-policies-teams.md)|
 |Bilgi sınıflandırması|||
-||Grupları ve ekipleri sınıflandırma|[Aynı sitelerde, gruplarda ve Microsoft Teams sitelerde Microsoft 365 için duyarlılık SharePoint kullanma](../compliance/sensitivity-labels-teams-groups-sites.md)|
-||Hassas içeriği otomatik olarak sınıflandırma|[Otomatik olarak içeriğe duyarlılık etiketi uygulama](../compliance/apply-sensitivity-label-automatically.md)|
-||Hassas içeriği şifrele|[Şifreleme uygulamak için duyarlılık etiketlerini kullanarak içeriğe erişimi kısıtlama](../compliance/encryption-sensitivity-labels.md)|
+||Grupları ve ekipleri sınıflandırma|[Microsoft Teams, Microsoft 365 grupları ve SharePoint sitelerindeki içeriği korumak için duyarlılık etiketlerini kullanma](../compliance/sensitivity-labels-teams-groups-sites.md)|
+||Hassas içeriği otomatik olarak sınıflandırma|[İçeriğe otomatik olarak bir hassasiyet etiketi uygulama](../compliance/apply-sensitivity-label-automatically.md)|
+||Hassas içeriği şifreleme|[Şifreleme uygulamak için hassasiyet etiketleri kullanarak içeriğe erişimi kısıtlama](../compliance/encryption-sensitivity-labels.md)|
 |Bilgi koruması|||
-||Hassas bilgilerin kaybını önleme|[Veri kaybını önleme hakkında bilgi](../compliance/dlp-learn-about-dlp.md)|
-||Sohbette hassas bilgileri koruyun.|[Veri kaybı önleme ve Microsoft Teams](../compliance/dlp-microsoft-teams.md)|
-||Kuruluşun hassas bilgilerini tanımlama|[Özel hassas bilgi türleri](../compliance/sensitive-information-type-learn-about.md)|
+||Hassas bilgilerin kaybını önleme|[Microsoft Purview Veri Kaybı Önleme hakkında bilgi edinin](../compliance/dlp-learn-about-dlp.md)|
+||Sohbetteki hassas bilgileri koruyun.|[Microsoft Purview Veri kaybı önleme ve Microsoft Teams](../compliance/dlp-microsoft-teams.md)|
+||Kuruluşunuzun hassas bilgilerini tanımlama|[Özel hassas bilgi türleri](../compliance/sensitive-information-type-learn-about.md)|
 |Kullanıcı segmentasyonu|||
 ||Kullanıcı kesimleri arasındaki iletişimi kısıtlama|[Bilgi engelleri](../compliance/information-barriers.md)|
-|Veri ikameti|||
+|Veri yerleşimi|||
 ||Verileri belirli coğrafi konumlarda depolama|[Microsoft 365 Multi-Geo](/microsoft-365/enterprise/microsoft-365-multi-geo)|
 
-## <a name="information-retention"></a>Bilgi bekletme
+## <a name="information-retention"></a>Bilgi saklama
 
-Bekletme ilkeleri, dosyalar, iletiler ve posta gibi gruplar ve ekiplerde işbirliği için kullanılan öğeleri tutmak veya silmek için kullanılabilir. İlkeler, korumak ve silmek, yalnızca korumak veya yalnızca silmek için ayarlanmış olabilir. Bekletme ilkesi kapsamındaki bilgiler, grubun veya ekibin süresinin dolması veya başka bir şekilde silinmesi durumunda korunur.
+Bekletme ilkeleri; dosyalar, iletiler ve postalar dahil olmak üzere gruplarda ve ekiplerde işbirliği için kullanılan öğeleri korumak veya silmek için kullanılabilir. İlkeler tutulacak ve silinecek, yalnızca korunacak veya yalnızca silinecek şekilde ayarlanabilir. Bekletme ilkesi kapsamındaki bilgiler, grubun veya ekibin süresinin dolması veya başka bir şekilde silinmesi durumunda korunur.
 
-Gruplar için bekletme ilkesi Microsoft 365, grup posta kutusunu ve siteyle dosyaları ilişkili SharePoint içerir.
+Microsoft 365 Grupları için bekletme ilkesi yapılandırmak, grup posta kutusunu ve ilişkili SharePoint sitesini ve dosyalarını kapsar.
 
-- [E-öğrenme ve saklama SharePoint ilkeleri hakkında OneDrive](../compliance/retention-policies-sharepoint.md)
+- [SharePoint ve OneDrive için bekletme ilkeleri hakkında bilgi edinin](../compliance/retention-policies-sharepoint.md)
 
-Sohbet ve kanal iletilerini Teams için bekletme ilkeleri. Sohbet ve kanal iletileri tüm posta Exchange depolanmış durumdayken, bu iletiler bekletme Exchange etkilenmez. Bekletme ilkelerinizi, sohbetlerinizi ve kanal iletilerinizi Teams için Teams ayarlamelisiniz. 
+Teams için bekletme ilkeleri sohbet ve kanal iletilerini korur. Sohbet ve kanal iletileri Exchange posta kutularında depolanırken, Exchange saklama ilkelerinden etkilenmez. Bekletme ilkelerinizi Teams sohbetlere ve Teams kanal iletilerine uygulanacak şekilde ayarlamanız gerekir. 
 
-Kullanıcı hesabı silinmiş olsa bile kullanıcı sohbetleri süresiz olarak korunur. Bu verileri süresiz olarak tutmak istemiyorsanız, kullanıcı sohbetlerini belirtilen süre sonunda silmek veya silme işlemini kullanıcı silme işleminize dahil etmek için bekletme ilkesi kullanabilirsiniz.
+Kullanıcı hesabı silinse bile kullanıcı sohbetleri süresiz olarak korunur. Bu verileri süresiz olarak saklamak istemiyorsanız, belirli bir süre sonra kullanıcı sohbetlerini silmek için bir bekletme ilkesi kullanmayı veya bu silme işlemini kullanıcı silme işleminize eklemeyi göz önünde bulundurun.
 
-- [E-Microsoft Teams için bekletme ilkeleri hakkında bilgi Microsoft Teams](../compliance/retention-policies-teams.md)
+- [Microsoft Teams için bekletme ilkeleri hakkında bilgi edinin](../compliance/retention-policies-teams.md)
 
-- [Microsoft Teams'de bekletme Microsoft Teams](/microsoftteams/retention-policies)
+- [Microsoft Teams bekletme ilkeleri](/microsoftteams/retention-policies)
 
-Sohbet ve kanal iletilerine uygulanacak tek bir bekletme Teams ilke Teams olabilir. 
+Tek bir bekletme ilkesi, Teams sohbet ve Teams kanal iletilerine uygulanacak şekilde ayarlanabilir. 
 
 Ek kaynaklar:
 
-- [Bekletme ilkeleri hakkında bilgi](../compliance/retention.md)
+- [Bekletme ilkeleri hakkında bilgi edinin](../compliance/retention.md)
 
-- [Exchange'te bekletme](/exchange/security-and-compliance/messaging-records-management/retention-tags-and-policies) etiketleri ve bekletme Exchange
+- [Exchange'de bekletme etiketleri ve bekletme ilkeleri](/exchange/security-and-compliance/messaging-records-management/retention-tags-and-policies)
 
 ## <a name="information-classification"></a>Bilgi sınıflandırması
 
-Konuk erişimini, grup ve ekip gizliliğini ve gruplar ve ekipler için yönetilmiyor cihazlarla erişimi yönetmek için duyarlılık etiketlerini kullanabilirsiniz. Etiket uygulanarak, bu ayarlar etiket ayarları tarafından belirtilen şekilde otomatik olarak yapılandırılır.
+Konuk erişimini, grup ve ekip gizliliğini yönetmek ve gruplar ve ekipler için yönetilmeyen cihazlara erişimi yönetmek için duyarlılık etiketlerini kullanabilirsiniz. Etiket uygulandığında, bu ayarlar etiket ayarları tarafından belirtilen şekilde otomatik olarak yapılandırılır.
 
-- [Aynı sitelerde, gruplarda ve Microsoft Teams sitelerde Microsoft 365 için duyarlılık SharePoint kullanma](../compliance/sensitivity-labels-teams-groups-sites.md)
+- [Microsoft Teams, Microsoft 365 grupları ve SharePoint sitelerindeki içeriği korumak için duyarlılık etiketlerini kullanma](../compliance/sensitivity-labels-teams-groups-sites.md)
 
-Hassas bilgi Microsoft 365 veya eğitilebilir sınıflayıcılarla desen eşleştirmesi algıla dahil olmak üzere, belirttiğiniz ölçütlere dayalı olarak dosyalara ve e-postalara otomatik olarak duyarlılık etiketleri uygulayacak şekilde e-postayı yapılandırabilirsiniz.
+Hassas bilgi türlerini algılama veya eğitilebilir sınıflandırıcılarla desen eşleştirme dahil olmak üzere, belirttiğiniz ölçütlere göre dosyalara ve e-postalara duyarlılık etiketlerini otomatik olarak uygulamak için Microsoft 365 yapılandırabilirsiniz.
 
-- [Otomatik olarak içeriğe duyarlılık etiketi uygulama](../compliance/apply-sensitivity-label-automatically.md)
+- [İçeriğe otomatik olarak bir hassasiyet etiketi uygulama](../compliance/apply-sensitivity-label-automatically.md)
 
-Dosyaları şifrelemek için duyarlılık etiketlerini kullanabilir, yalnızca izinlerine sahip olan kullanıcıların dosyanın şifresini çözmesini ve bunları okumasına izin veebilirsiniz.
+Duyarlılık etiketlerini kullanarak dosyaları şifreleyebilir, böylece yalnızca şifresini çözme ve okuma izni olan kişilere izin vekleyebilirsiniz.
 
-- [Şifreleme uygulamak için duyarlılık etiketlerini kullanarak içeriğe erişimi kısıtlama](../compliance/encryption-sensitivity-labels.md)
+- [Şifreleme uygulamak için hassasiyet etiketleri kullanarak içeriğe erişimi kısıtlama](../compliance/encryption-sensitivity-labels.md)
 
-- [Ekibi güvenlik yalıtlığı ile yapılandırma](./secure-teams-security-isolation.md)
+- [Güvenlik yalıtımıyla bir ekibi yapılandırın](./secure-teams-security-isolation.md)
 
 Ek kaynaklar:
 
@@ -94,42 +94,42 @@ Ek kaynaklar:
 
 ## <a name="information-protection"></a>Bilgi koruması
 
-DLP ilkeleri hassas bilgilerin dosya, dosya ve dosya paylaşımı SharePoint Exchange yanlışlıkla Teams. Bir dizi kuralı temel alarak eylemleri belirten (erişimi engelleme gibi) ilkeler oluşturabilirsiniz.
+DLP ilkeleri hassas bilgilerin SharePoint, Exchange ve Teams arasında yanlışlıkla paylaşılmasını önleyebilir. Bir dizi kurala göre yapılması gereken eylemleri (erişimi engelleme gibi) belirten ilkeler oluşturabilirsiniz.
 
-- [Veri kaybını önleme hakkında bilgi](../compliance/dlp-learn-about-dlp.md)
+- [Veri kaybı önleme hakkında daha fazla bilgi edinme](../compliance/dlp-learn-about-dlp.md)
 
-Teams DLP, hassas bilgiler içeren iletileri silerek Teams sohbet ve kanal iletilarında hassas bilgilerin korunmasına yardımcı olabilir.
+Teams'da DLP, hassas bilgiler içeren iletileri silerek sohbet ve kanal iletileri Teams hassas bilgilerin korunmasına yardımcı olabilir.
 
 - [Veri kaybı önleme ve Microsoft Teams](../compliance/dlp-microsoft-teams.md)
 
-Proje kodu adları gibi, organizasyona özgü hassas bilgileriniz varsa, kendi hassas bilgi türlerinizi oluşturabilir ve bunları DLP ilkelerine uygulayarak grupların, ekiplerin ve grupların içeriğinin korunmasını SharePoint.
+Proje kodu adları gibi kuruluşunuza özgü hassas bilgileriniz varsa, kendi hassas bilgi türlerinizi oluşturabilir ve gruplar, ekipler ve SharePoint içeriği korumak için bunları DLP ilkelerine uygulayabilirsiniz.
 
 - [Özel hassas bilgi türleri](../compliance/sensitive-information-type-learn-about.md)
 
 ## <a name="user-segmentation"></a>Kullanıcı segmentasyonu
 
-Bilgi engelleriyle, verilerinizi ve kullanıcılarınızı bölümlere bölebilirsiniz ve gruplar arasındaki istenmeyen iletişimi ve işbirliğini kısıtlar ve kuruluş ilgi alanlarının çakışmalarını önlersiniz. Bilgi engelleri, kuruluş içinde yer alan kişi grupları arasında dosya işbirliğine, sohbete, aramaya veya toplantı davetlerine izin vermek veya bu işbirliğini engellemek için ilkeler oluşturmanıza olanak sağlar.
+Bilgi engelleriyle, gruplar arasındaki istenmeyen iletişimi ve işbirliğini kısıtlamak ve kuruluşunuzdaki çıkar çakışmalarını önlemek için verilerinizi ve kullanıcılarınızı segmentlere ayırabilirsiniz. Bilgi engelleri, kuruluşunuzdaki kişi grupları arasında dosya işbirliğine, sohbete, aramaya veya toplantı davetlerine izin veren veya engelleyen ilkeler oluşturmanıza olanak tanır.
 
 - [Bilgi engelleri](../compliance/information-barriers.md)
 
-- [Web'de bilgi Microsoft Teams](/microsoftteams/information-barriers-in-teams)
+- [Microsoft Teams'da bilgi engelleri](/microsoftteams/information-barriers-in-teams)
 
-- [Engeli ortadan kaldırarak bilgi SharePoint](/sharepoint/information-barriers)
+- [SharePoint ile bilgi engellerini kullanma](/sharepoint/information-barriers)
 
-## <a name="data-residency"></a>Veri ikameti
+## <a name="data-residency"></a>Veri yerleşimi
 
-Multi Microsoft 365 Multi-Geo'ya sahip olarak, veri yerleşim gereksinimlerini karşılamayı seçtiğiniz coğrafi konumlarda verilerin sağlanarak depolanarak bu konumlara veri indirebilirsiniz. Multi-Geo ortamında, Microsoft 365 kiracınız merkezi bir konumdan (Microsoft 365 aboneliğinizin sağladığı konum) ve verileri depoy istediğiniz bir veya birden çok uydu konumdan oluşur.
+Microsoft 365 Multi-Geo ile bekleyen verileri, veri yerleşimi gereksinimlerini karşılamak için seçtiğiniz coğrafi konumlarda sağlayabilir ve depolayabilirsiniz. Multi-Geo ortamında, Microsoft 365 kiracınız merkezi bir konumdan (Microsoft 365 aboneliğinizin ilk sağlandığı yerde) ve verileri depolayabileceğiniz bir veya daha fazla uydu konumundan oluşur.
 
 - [Microsoft 365 Multi-Geo](/microsoft-365/enterprise/microsoft-365-multi-geo)
 
-- [Multi-Geo Microsoft 365 planlama](/microsoft-365/enterprise/plan-for-multi-geo)
+- [multi-geo Microsoft 365 için planlama](/microsoft-365/enterprise/plan-for-multi-geo)
 
 ## <a name="related-topics"></a>İlgili konular
 
-[İşbirliği yönetim planlaması önerileri](collaboration-governance-overview.md#collaboration-governance-planning-recommendations)
+[İşbirliği idaresi planlama önerileri](collaboration-governance-overview.md#collaboration-governance-planning-recommendations)
 
-[İşbirliği yönetim planınızı oluşturma](collaboration-governance-first.md)
+[İşbirliği idare planınızı oluşturma](collaboration-governance-first.md)
 
-[Güvenlik ve uyumluluk Exchange Online](/exchange/security-and-compliance/security-and-compliance)
+[Exchange Online için güvenlik ve uyumluluk](/exchange/security-and-compliance/security-and-compliance)
 
 [Bilgileri koruma](../compliance/information-protection.md)

@@ -21,12 +21,12 @@ ms.assetid: ba235f4f-e640-4360-81ea-04507a3a70be
 search.appverid:
 - MET150
 description: Bu makalede, Lisanssız kullanıcılara Microsoft 365 lisansı atamak için PowerShell'i kullanmayı öğrenin.
-ms.openlocfilehash: 72ad30cb3c8a36a78b3f95699c775b96d959b542
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 3c92b3baaa0b8d67a5d5a626951b296be2516436
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64823046"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64941709"
 ---
 # <a name="assign-microsoft-365-licenses-to-user-accounts-with-powershell"></a>PowerShell ile kullanıcı hesaplarına Microsoft 365 lisansları atama
 
@@ -119,7 +119,7 @@ $addLicenses = @(
 Set-MgUserLicense -UserId "belinda@litwareinc.com" -AddLicenses $addLicenses -RemoveLicenses @()
 ```
 
-Bu örnek **, MICROSOFTBOOKINGS** **(Microsoft Bookings**) ve LOCKBOX_ENTERPRISE (Customer LockBox) hizmetlerinin kapalı olduğu **SPE_E5 (Microsoft 365 E5**) atar:
+Bu örnek **, MICROSOFTBOOKINGS** **(Microsoft Bookings**) ve LOCKBOX_ENTERPRISE (Müşteri Kasası) hizmetlerinin kapalı olduğu **SPE_E5 (Microsoft 365 E5**) atar:
   
 ```powershell
 $e5Sku = Get-MgSubscribedSku -All | Where SkuPartNumber -eq 'SPE_E5'

@@ -1,5 +1,5 @@
 ---
-title: Gelişmiş Denetim Microsoft 365
+title: Microsoft 365'de denetim (Premium)
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -17,49 +17,49 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Gelişmiş Denetim Microsoft 365 araştırmalarda araştırma ve uyumluluk ile ilgili olarak organizasyona yardımcı olmak için yeni denetim özellikleri sağlar.
-ms.openlocfilehash: 4a378071a59d2462cff1af5b87f9ab99d1e1337f
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+description: Microsoft Purview Audit (Premium), kuruluşunuzun adli ve uyumluluk araştırmalarına yardımcı olmak için yeni denetim özellikleri sağlar.
+ms.openlocfilehash: 5e224d4d7073f96f4dc17d48f6caf19840905d06
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63032491"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64941071"
 ---
-# <a name="advanced-audit-in-microsoft-365"></a>Gelişmiş Denetim Microsoft 365
+# <a name="microsoft-purview-audit-premium"></a>Microsoft Purview Denetimi (Premium)
 
-Denetim [işlevselliği,](search-the-audit-log-in-security-and-compliance.md) Microsoft 365 birçok farklı hizmet genelinde, birçok farklı hizmette denetlenen birçok etkinlik türüyle ilgili görünürlük Microsoft 365. Gelişmiş Denetim, araştırma yapmak için gereken denetim günlüğü bekletmesini artırarak, önemli olaylara erişim sağlayarak (Microsoft 365 uyumluluk merkezi ve Office 365 Yönetim Etkinliği API'sinde Denetim günlüğü araması kullanarak) güvenliğin kapsamını belirlemeye ve güvenlik kapsamını belirlemeye yardımcı olarak Office 365 Yönetimi Etkinliği API'si.
-
-> [!NOTE]
-> Gelişmiş Denetim, Office 365 E5/A5/G5 veya Microsoft 365 Kurumsal E5/A5/G5 aboneliği olan kuruluşlarda kullanılabilir. Bir Microsoft 365 E5/A5/G5 Uyumluluğu veya E5/A5/G5 eBulma ve Denetim eklenti lisansı, uzun vadeli denetim günlükleri tutma ve soruşturmalar için Gelişmiş Denetim olaylarının yeniden üretimi gibi Gelişmiş Denetim özellikleri için kullanıcılara atanabilir. Lisanslama hakkında daha fazla bilgi için bkz:<br/>- [Gelişmiş Denetim lisans gereksinimleri](auditing-solutions-overview.md#licensing-requirements)<br/>- [Microsoft 365 uyumluluğu için lisans & kılavuzu.](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#advanced-audit)
-
-Bu makalede, Gelişmiş Denetim özelliklerine genel bir bakış ve Gelişmiş Denetim için kullanıcıların nasıl ayarlanmıştır.
-
-## <a name="long-term-retention-of-audit-logs"></a>Denetim günlüklerinin uzun süreli tutma
-
-Gelişmiş Denetim, tüm Exchange, SharePoint ve Azure Active Directory yıllık denetim kayıtlarını korur. Bu, bir yıl süreyle **workload** özelliği için **Exchange**, **SharePoint** veya **AzureActiveDirectory** değerini içeren tüm denetim kaydını tutan bir varsayılan denetim günlüğü bekletme ilkesiyle işler. Denetim kayıtlarının daha uzun süre tutularak devam edecek yasal incelemeler veya uyumluluk soruşturmaları için yardımcı olabilir. Daha fazla bilgi için Denetim günlüğü bekletme ilkelerini yönetme bölümündeki "Varsayılan denetim günlüğü bekletme [ilkesi" bölümüne bakın](audit-log-retention-policies.md#default-audit-log-retention-policy).
-
-Gelişmiş Denetim'in bir yıllık bekletme özelliklerine ek olarak, denetim günlüklerini 10 yıl süreyle tutma özelliğini de yayınladık. Denetim günlüklerinin 10 yıllık tutulması, uzun süre devam eden soruşturmaları desteklemeye ve mevzuat, yasal ve iç yükümlülüklere yanıt vermeye yardımcı olur.
+Microsoft Purview'daki [Denetim işlevi](search-the-audit-log-in-security-and-compliance.md), kuruluşlara Microsoft 365'deki birçok farklı hizmette birçok denetim etkinliği türüne görünürlük sağlar. Microsoft Purview Denetimi (Premium), kuruluşların bir araştırma yürütmek için gereken denetim günlüğü saklama süresini artırarak, önemli olaylara erişim sağlayarak (Microsoft Purview uyumluluk portalında ve Office 365 Yönetim Etkinliği API'sinde Denetim günlüğü aramasını kullanarak) güvenlik ihlallerinin kapsamını belirlemeye ve daha hızlı erişim sağlayarak, kuruluşların adli ve uyumluluk araştırmaları gerçekleştirmesine yardımcı olur Office 365 Yönetim Etkinliği API'si.
 
 > [!NOTE]
-> 10 yıllık denetim günlüklerinin tutulması için kullanıcı başına ek eklenti lisansı gerekir. Bu lisans bir kullanıcıya atandıktan ve kullanıcı için uygun 10 yıllık denetim günlüğü bekletme ilkesi ayarlandıktan sonra, bu ilkenin kapsadığı denetim günlükleri 10 yıllık süre boyunca korunur. Bu ilke geriye dönük değildir ve 10 yıllık denetim günlüğü bekletme ilkesi oluşturulmadan önce oluşturulan denetim günlüklerini koruyamıyor. Daha fazla bilgi için, bu [makaledeki Gelişmiş Denetim ile ilgili SSS](#faqs-for-advanced-audit) bölümüne bakın.
+> Denetim (Premium), Office 365 E5/A5/G5 veya Microsoft 365 Kurumsal E5/A5/G5 aboneliği olan kuruluşlar için kullanılabilir. Microsoft 365 E5/A5/G5 Uyumluluğu veya E5/A5/G5 eBulma ve Denetim eklentisi lisansı, denetim günlüklerinin uzun süreli saklaması ve araştırma için Denetim (Premium) olaylarının oluşturulması gibi Denetim (Premium) özellikleri için kullanıcılara atanmalıdır. Lisanslama hakkında daha fazla bilgi için bkz:<br/>- [Denetim (Premium) lisans gereksinimleri](auditing-solutions-overview.md#licensing-requirements)<br/>- [Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#advanced-audit).
 
-### <a name="audit-log-retention-policies"></a>Denetim günlüğü bekletme ilkeleri
+Bu makalede Denetim (Premium) özelliklerine genel bir bakış sağlanır ve kullanıcıların Denetim (Premium) için nasıl ayarlanacağı gösterilir.
 
-Varsayılan denetim günlüğü bekletme ilkesi kapsamında olmayan diğer hizmetlerde oluşturulan tüm denetim kayıtları (önceki bölümde açıklanmıştır) 90 gün boyunca korunur. Ancak, diğer denetim kayıtlarını 10 yıl süreyle daha uzun süre tutmak için, özelleştirilmiş denetim günlüğü bekletme ilkeleri oluşturabilirsiniz. Aşağıdaki ölçütlerden birini veya birden fazlasını temel alarak denetim kayıtlarını tutmak için bir ilke oluşturabilirsiniz:
+## <a name="long-term-retention-of-audit-logs"></a>Denetim günlüklerinin uzun süreli saklaması
 
-- Denetlenen Microsoft 365 gerçekleştiren en iyi hizmet.
+Denetim (Premium), tüm Exchange, SharePoint ve Azure Active Directory denetim kayıtlarını bir yıl boyunca saklar. Bu, **workload** özelliği (etkinliğin gerçekleştiği hizmeti gösterir) için **Exchange**, **SharePoint** veya **AzureActiveDirectory** değerini içeren tüm denetim kayıtlarını bir yıl boyunca tutan varsayılan denetim günlüğü saklama ilkesi tarafından gerçekleştirilir. Denetim kayıtlarının daha uzun süre saklanması, devam eden adli veya uyumluluk araştırmalarına yardımcı olabilir. Daha fazla bilgi için Denetim [günlüğü saklama ilkelerini yönetme bölümündeki "Varsayılan denetim günlüğü saklama ilkesi](audit-log-retention-policies.md#default-audit-log-retention-policy)" bölümüne bakın.
 
-- Denetlenen belirli etkinlikler.
+Denetim 'in (Premium) bir yıllık saklama özelliklerine ek olarak, denetim günlüklerini 10 yıl boyunca saklama özelliğini de yayımladık. Denetim günlüklerinin 10 yıllık saklama süresi, uzun süre devam eden araştırmaları desteklemeye ve mevzuat, yasal ve iç yükümlülüklere yanıt vermeye yardımcı olur.
+
+> [!NOTE]
+> Denetim günlüklerinin 10 yıl boyunca korunması için kullanıcı başına ek bir eklenti lisansı gerekir. Bu lisans bir kullanıcıya atandıktan ve bu kullanıcı için uygun bir 10 yıllık denetim günlüğü saklama ilkesi ayarlandıktan sonra, bu ilkenin kapsadığı denetim günlükleri 10 yıllık süre boyunca korunmaya başlar. Bu ilke geriye dönük değildir ve 10 yıllık denetim günlüğü saklama ilkesi oluşturulmadan önce oluşturulan denetim günlüklerini tutamaz. Daha fazla bilgi için bu makaledeki [Denetim (Premium) hakkında SSS](#faqs-for-audit-premium) bölümüne bakın.
+
+### <a name="audit-log-retention-policies"></a>Denetim günlüğü saklama ilkeleri
+
+Diğer hizmetlerde oluşturulan ve varsayılan denetim günlüğü saklama ilkesi kapsamında olmayan tüm denetim kayıtları (önceki bölümde açıklanmıştır) 90 gün boyunca saklanır. Ancak, diğer denetim kayıtlarını 10 yıla kadar daha uzun süreler boyunca tutmak için özelleştirilmiş denetim günlüğü saklama ilkeleri oluşturabilirsiniz. Denetim kayıtlarını aşağıdaki ölçütlerden birine veya daha fazlasına göre tutmak için bir ilke oluşturabilirsiniz:
+
+- Denetlenen etkinliklerin gerçekleştiği Microsoft 365 hizmeti.
+
+- Belirli denetlenen etkinlikler.
 
 - Denetlenen bir etkinlik gerçekleştiren kullanıcı.
 
-Ayrıca, belirli ilkelerin diğer ilkelere göre öncelik alacak şekilde, ilkeyle ve öncelik düzeyiyle eşleşmesi için denetim kayıtlarının ne kadar süreyle korunacaklarını da belirtmelisiniz. Ayrıca, özel denetim günlüğü bekletme ilkesi, varsayılan denetim bekletme ilkesinden önceliğe sahip olacaktır. Bu durumda, kuruluş birçok kullanıcının veya tüm kullanıcıların Exchange, SharePoint veya Azure Active Directory denetim kayıtlarını bir dakikadan daha kısa bir süreyle (veya 10 yıl boyunca) tutmanız gerekir. Daha fazla bilgi için bkz [. Denetim günlüğü bekletme ilkelerini yönetme](audit-log-retention-policies.md).
+Ayrıca, belirli ilkelerin diğer ilkelere göre öncelik alması için ilkeyle ve öncelik düzeyiyle eşleşen denetim kayıtlarının ne kadar süre tutulacağını da belirtebilirsiniz. Ayrıca, kuruluşunuzdaki kullanıcıların bir kısmı veya tamamı için Exchange denetim kayıtlarını bir yıldan (Azure Active Directory veya 10 yıldan) kısa süre boyunca saklamanız gerektiğinde SharePoint, özel denetim günlüğü saklama ilkelerinin varsayılan denetim saklama ilkesinden öncelikli olduğunu da unutmayın. Daha fazla bilgi için bkz. [Denetim günlüğü saklama ilkelerini yönetme](audit-log-retention-policies.md).
 
-## <a name="advanced-audit-events"></a>Gelişmiş Denetim olayları
+## <a name="audit-premium-events"></a>Denetim (Premium) olayları
 
-Gelişmiş Denetim, posta öğelerine erişilme, posta öğelerine ne zaman yanıt ve iletil olduğu, Exchange Online ve SharePoint Exchange Online Online'da kullanıcının ne zaman ve ne zaman arandığı gibi önemli olaylara erişim sağlayarak kuruluşların denetim ve uyumluluk soruşturmaları yürütmesine yardımcı olur. Bu olaylar olası ihlalleri araştırmanıza ve güvenlik ihlallerinin kapsamını belirlemenize yardımcı olabilir. Exchange ve SharePoint'te bu olaylara ek olarak, önemli olaylar kabul edilen ve kullanıcılara uygun Gelişmiş Denetim lisansının atanmalarını gerektiren başka Microsoft 365 hizmetlerinden [de olay vardır](auditing-solutions-overview.md#licensing-requirements). Kullanıcılar bu olayları gerçekleştirecekken denetim günlükleri oluşturulacak şekilde kullanıcılara Bir Gelişmiş Denetim lisansı atanabilir.
+Denetim (Premium), kuruluşların posta öğelerine ne zaman erişildiği, posta öğelerine ne zaman yanıtlandığı ve iletildiği ve kullanıcının Exchange Online ve SharePoint Online'da ne zaman ve ne zaman arama yaptığı gibi önemli olaylara erişim sağlayarak adli ve uyumluluk araştırmaları gerçekleştirmesine yardımcı olur. Bu olaylar olası ihlalleri araştırmanıza ve güvenliğin kapsamını belirlemenize yardımcı olabilir. Exchange ve SharePoint bu olaylara ek olarak, diğer Microsoft 365 hizmetlerinde önemli olaylar olarak kabul edilen ve kullanıcılara [uygun Denetim (Premium) lisansının](auditing-solutions-overview.md#licensing-requirements) atanmalarını gerektiren olaylar vardır. Kullanıcılar bu olayları gerçekleştirdiğinde denetim günlüklerinin oluşturulabilmesi için kullanıcılara bir Denetim (Premium) lisansı atanmalıdır.
 
-Gelişmiş Denetim aşağıdaki olayları sağlar:
+Denetim (Premium) aşağıdaki olayları sağlar:
 
 - [MailItemsAccessed](#mailitemsaccessed)
 
@@ -69,74 +69,74 @@ Gelişmiş Denetim aşağıdaki olayları sağlar:
 
 - [SearchQueryInitiatedSharePoint](#searchqueryinitiatedsharepoint)
 
-- [Microsoft 365'daki diğer Gelişmiş Denetim Microsoft 365](#other-advanced-audit-events-in-microsoft-365)
+- [Microsoft 365'deki diğer Denetim (Premium) olayları](#other-audit-premium-events-in-microsoft-365)
 
 ### <a name="mailitemsaccessed"></a>MailItemsAccessed
 
-MailItemsAccessed olayı, posta kutusu denetim eylemidir ve posta verilerine posta protokolleri ve posta istemcilerinin eriştiğinde tetiklenir. Bu olay, kullanıcıya veri ihlallerini belirleme ve ihlal edilmiş olan iletilerin kapsamını belirlemede yardımcı olabilir. Bir saldırgan e-posta iletilerine erişim kazandı ise, iletilerin aslında okundu olarak açıkça sinyal hiç okunmasa bile MailItemsAccessed eylemi tetiklenir (başka bir deyişle, bağlama veya eşitleme gibi erişim türü denetim kaydına kaydedilir).
+MailItemsAccessed olayı bir posta kutusu denetim eylemidir ve posta verilerine posta protokolleri ve posta istemcileri tarafından erişildiğinde tetikler. Bu olay, araştırmacıların veri ihlallerini tanımlamalarına ve tehlikeye girmiş olabilecek iletilerin kapsamını belirlemelerine yardımcı olabilir. Bir saldırgan e-posta iletilerine erişim kazandıysa, iletilerin gerçekten okunduğunu belirten açık bir sinyal olmasa bile MailItemsAccessed eylemi tetiklenir (başka bir deyişle, bağlama veya eşitleme gibi erişim türü denetim kaydına kaydedilir).
 
-MailItemsAccessed olayı, Exchange Online'te posta kutusu denetim günlüğünde MessageBind'in yerini alır ve şu iyileştirmeleri sağlar:
+MailItemsAccessed olayı, Exchange Online posta kutusu denetim günlüğündeki MessageBind'in yerini alır ve şu iyileştirmeleri sağlar:
 
 - MessageBind yalnızca AuditAdmin kullanıcı oturum açma türü için yapılandırılabilirdi; temsilci veya sahip eylemleri için geçerli değildir. MailItemsAccessed tüm oturum açma türleri için geçerlidir.
 
-- MessageBind yalnızca bir posta istemcisi tarafından ele ele alır. Eşitleme etkinlikleri için geçerli değildi. MailItemsAccessed olayları hem bağlama hem de eşitleme erişim türleri tarafından tetiklenir.
+- MessageBind yalnızca posta istemcisi tarafından kapsanan erişim. Eşitleme etkinlikleri için geçerli değildi. MailItemsAccessed olayları hem bağlama hem de eşitleme erişim türleri tarafından tetiklenir.
 
-- MessageBind eylemleri, aynı e-posta iletisine erişilirken birden çok denetim kaydı oluşturulmasını tetikler ve bunun sonucunda "gürültü" denetlenebilir. Buna karşılık, MailItemsAccessed olayları daha az denetim kaydında bir araya toplanır.
+- MessageBind eylemleri, aynı e-posta iletisine erişildiğinde birden çok denetim kaydının oluşturulmasını tetikler ve bu da "kirlilik" denetiminin yapılmasına neden olur. Buna karşılık, MailItemsAccessed olayları daha az denetim kaydı halinde toplanır.
 
-MailItemsAccessed etkinliklerinin denetim kayıtları hakkında bilgi için bkz. Güvenliği ihlal edilmiş hesapları araştırmak [için Gelişmiş Denetimi kullanma](mailitemsaccessed-forensics-investigations.md).
+MailItemsAccessed etkinliklerinin denetim kayıtları hakkında bilgi için bkz. [Güvenliği aşılmış hesapları araştırmak için Denetimi (Premium) kullanma](mailitemsaccessed-forensics-investigations.md).
 
-MailItemsAccessed denetim kayıtlarını aramak için, denetim günlüğü arama aracında yer  alan **Exchange** posta kutusu etkinlikleri açılan listesinde Erişilen posta kutusu öğeleri etkinliği için Microsoft 365 uyumluluk merkezi.[](search-the-audit-log-in-security-and-compliance.md)
+MailItemsAccessed denetim kayıtlarını aramak için, uyumluluk portalındaki [denetim günlüğü arama aracındaki](search-the-audit-log-in-security-and-compliance.md) **Exchange posta kutusu etkinlikleri** açılan listesinde **Erişilen** posta kutusu öğeleri etkinliğini arayabilirsiniz.
 
-![Denetim günlüğü arama aracında MailItemsAccessed eylemleri arama.](../media/AdvAudit_MailItemsAccessed.png)
+![Denetim günlüğü arama aracında MailItemsAccessed eylemlerini arama.](../media/AdvAudit_MailItemsAccessed.png)
 
-Ayrıca, Exchange Online PowerShell'de [Search-UnifiedAuditLog -Operations MailItemsAccessed](/powershell/module/exchange/search-unifiedauditlog) veya [Search-MailboxAuditLog -Operations MailItemsAccessed](/powershell/module/exchange/search-mailboxauditlog) komutlarını da çalıştırabilirsiniz.
+Exchange Online PowerShell'de [Search-UnifiedAuditLog -Operations MailItemsAccessed](/powershell/module/exchange/search-unifiedauditlog) veya [Search-MailboxAuditLog -Operations MailItemsAccessed komutlarını](/powershell/module/exchange/search-mailboxauditlog) da çalıştırabilirsiniz.
 
 ### <a name="send"></a>Gönderin
 
-Send olayı aynı zamanda posta kutusu denetim eylemidir ve kullanıcı aşağıdaki eylemlerden birini gerçekleştir olduğunda tetiklenir:
+Gönder olayı aynı zamanda bir posta kutusu denetim eylemidir ve kullanıcı aşağıdaki eylemlerden birini gerçekleştirdiğinde tetiklanır:
 
 - E-posta iletisi gönderir
 
-- E-posta iletisi yanıtlar
+- E-posta iletisine yanıtlar
 
-- E-posta iletisi iletir
+- E-posta iletisini iletir
 
-İlkeler güvenliği ihlal edilmiş bir hesaptan gönderilen e-postaları tanımlamak için Gönderme etkinliği kullanabilir. Gönder olayı denetim kaydı, ileti hakkında, örneğin iletinin gönderildiği zaman, InternetMessage Kimliği, konu satırı ve iletinin ekleri olup içermesi gibi bilgileri içerir. Bu denetim bilgileri, güvenliği tehlikeye atılmış bir hesaptan gönderilen veya bir saldırgan tarafından gönderilen e-posta iletileriyle ilgili bilgileri belirlemeye yardımcı olabilir. Buna ek olarak, güvenlik nedenleri Microsoft 365 iletinin gönderildiği alıcıları ve gönderilen iletinin gerçek içeriğini tanımlamak üzere iletiyi aramak için (konu satırı veya ileti kimliği kullanarak) bir Microsoft 365 eBulma aracı kullanabilir.
+Araştırmacılar, güvenliği aşılmış bir hesaptan gönderilen e-postaları tanımlamak için Gönder olayını kullanabilir. Gönderme olayının denetim kaydı, iletinin ne zaman gönderildiği, InternetMessage Kimliği, konu satırı ve iletinin ekler içerip içermediği gibi ileti hakkında bilgi içerir. Bu denetim bilgileri, araştırmacıların güvenliği aşılmış bir hesaptan gönderilen veya saldırgan tarafından gönderilen e-posta iletileri hakkındaki bilgileri tanımlamalarına yardımcı olabilir. Ayrıca araştırmacılar, iletinin gönderildiği alıcıları ve gönderilen iletinin gerçek içeriğini belirlemek üzere iletiyi aramak için (konu satırını veya ileti kimliğini kullanarak) Microsoft 365 eBulma aracını kullanabilir.
 
-Denetim kayıtlarını gönder için, denetim günlüğü arama aracında yer alan  **Exchange** posta kutusu etkinlikleri açılan listesinde Gönderilmiş ileti etkinliği için arama Microsoft 365 uyumluluk merkezi.[](search-the-audit-log-in-security-and-compliance.md)
+Denetim kayıtlarını gönder'i aramak için, uyumluluk portalındaki [denetim günlüğü arama aracındaki](search-the-audit-log-in-security-and-compliance.md) **Exchange posta kutusu etkinlikleri** açılan listesinde **Gönderilmiş ileti** etkinliğini arayabilirsiniz.
 
-![Denetim günlüğü arama aracında Gönderilen ileti eylemlerini arama.](../media/AdvAudit_SentMessage.png)
+![Denetim günlüğü arama aracında Gönderilmiş ileti eylemleri aranıyor.](../media/AdvAudit_SentMessage.png)
 
-Ayrıca, Exchange Online PowerShell'de [Search-UnifiedAuditLog -Operations Send](/powershell/module/exchange/search-unifiedauditlog) veya [Search-MailboxAuditLog -Operations Send](/powershell/module/exchange/search-mailboxauditlog) komutlarını çalıştırabilirsiniz.
+PowerShell'de [Search-UnifiedAuditLog -Operations Send](/powershell/module/exchange/search-unifiedauditlog) veya [Search-MailboxAuditLog -Operations Send](/powershell/module/exchange/search-mailboxauditlog) komutlarını da Exchange Online çalıştırabilirsiniz.
 
 ### <a name="searchqueryinitiatedexchange"></a>SearchQueryInitiatedExchange
 
-Bir kişi posta kutusunda öğe aramak için Outlook kullandığında SearchQueryInitiatedExchange olayı tetiklenir. Aşağıdaki ortamlarda aramalar gerçekleştirilen olaylar Outlook tetiklenir:
+SearchQueryInitiatedExchange olayı, bir kişi posta kutusunda öğeleri aramak için Outlook kullandığında tetikleniyor. Aşağıdaki Outlook ortamlarında arama yapıldığında olaylar tetiklenir:
 
 - Outlook (masaüstü istemcisi)
 
 - Web üzerinde Outlook (OWA)
 
-- iOS Outlook için yeni bir ifade
+- iOS için Outlook
 
-- Android için Outlook'i
+- Android için Outlook
 
-- Posta uygulaması Windows 10
+- Windows 10 için posta uygulaması
 
-Esnaflar, bir hesabı tehlikeye atmış olan ya da posta kutusunda hassas bilgilere erişmeye çalışan bir saldırgan olup olmadığını belirlemek için SearchQueryInitiatedExchange olayini kullanabilir. SearchQueryInitiatedExchange olayı denetim kaydı, arama sorgusunun gerçek metni gibi bilgileri içerir. Denetim kaydı, aramanın Outlook ortamını da gösterir. Bir saldırgan tarafından gerçekleştirilen arama sorgularına bakarak, bir saldırgan, aranan e-posta verilerinin amacını daha iyi anlayacaktır.
+Araştırmacılar SearchQueryInitiatedExchange olayını kullanarak bir hesabı ele geçiren bir saldırganın posta kutusunda hassas bilgileri arayıp aramadığını veya erişmeye çalışıp çalışmadığını belirleyebilir. SearchQueryInitiatedExchange olayının denetim kaydı, arama sorgusunun gerçek metni gibi bilgileri içerir. Denetim kaydı, aramanın gerçekleştirildiği Outlook ortamını da gösterir. Bir araştırmacı, saldırganın gerçekleştirdiği arama sorgularını inceleyerek, aranan e-posta verilerinin amacını daha iyi anlayabilir.
 
-SearchQueryInitiatedExchange denetim kayıtlarını aramak için, uyumluluk merkezinde denetim günlüğü arama aracında Arama etkinlikleri açılan listesinde gerçekleştirilen  e-posta arama etkinliği için arama yapılabilir.[](search-the-audit-log-in-security-and-compliance.md) 
+SearchQueryInitiatedExchange denetim kayıtlarını aramak için, uyumluluk merkezindeki [denetim günlüğü arama aracındaki](search-the-audit-log-in-security-and-compliance.md) **Arama etkinlikleri** açılan listesinde **Gerçekleştirilen e-posta** arama etkinliğini arayabilirsiniz.
 
-![Denetim günlüğü arama aracında Gerçekleştirilen e-posta arama eylemleri aranma.](../media/AdvAudit_SearchExchange.png)
+![Denetim günlüğü arama aracında gerçekleştirilen e-posta arama eylemleri aranıyor.](../media/AdvAudit_SearchExchange.png)
 
-PowerShell'de [Search-UnifiedAuditLog -Operations SearchQueryInitiatedExchange](/powershell/module/exchange/search-unifiedauditlog) Exchange Online çalıştırabilirsiniz.
+Exchange Online PowerShell'de [Search-UnifiedAuditLog -Operations SearchQueryInitiatedExchange'i](/powershell/module/exchange/search-unifiedauditlog) de çalıştırabilirsiniz.
 
 > [!NOTE]
-> Denetim günlüğünde bu olayı aray için SearchQueryInitiatedExchange'in günlüğe kaydedileceğini etkinleştirmeniz gerekir. Yönergeler için bkz. [Gelişmiş Denetimi Ayarlama](set-up-advanced-audit.md#step-2-enable-advanced-audit-events).
+> Bu olayı denetim günlüğünde arayabilmeniz için SearchQueryInitiatedExchange'in günlüğe kaydedilmesini etkinleştirmeniz gerekir. Yönergeler için bkz. [Denetimi Ayarlama (Premium)](set-up-advanced-audit.md#step-2-enable-audit-premium-events).
 
 ### <a name="searchqueryinitiatedsharepoint"></a>SearchQueryInitiatedSharePoint
 
-Posta kutusu öğelerini aramaya benzer şekilde, bir kişi posta kutusunda öğeleri ararken de SearchQueryInitiatedSharePoint SharePoint. Aşağıdaki site türlerinin kök veya varsayılan sayfasında arama yapılırken olaylar SharePoint:
+Posta kutusu öğelerini aramaya benzer şekilde, bir kişi SharePoint öğeleri ararken SearchQueryInitiatedSharePoint olayı tetiklenir. Aşağıdaki SharePoint site türlerinin kök veya varsayılan sayfasında aramalar yapıldığında olaylar tetiklenir:
 
 - Giriş siteleri
 
@@ -144,22 +144,22 @@ Posta kutusu öğelerini aramaya benzer şekilde, bir kişi posta kutusunda öğ
 
 - Merkez siteleri
 
-- Sitelerle ilişkili Microsoft Teams
+- Microsoft Teams ile ilişkilendirilmiş siteler
 
-İlkeler, bir saldırganın bu dosyada hassas bilgileri bulmaya (ve muhtemelen erişilebiliyor) hassas bilgileri bulmaya çalışsın (ve erişilsin mi) olduğunu belirlemek için SearchQueryInitiatedSharePoint SharePoint. SearchQueryInitiatedSharePoint olay denetim kaydı da arama sorgusunun asıl metnini içerir. Denetim kaydı, arama yapılan SharePoint sitenin türünü de gösterir. Bir saldırgan tarafından gerçekleştirilen arama sorgularına bakarak, bir saldırgan aramanın amacını ve kapsamını daha iyi anlayacaktır.
+Araştırmacılar SearchQueryInitiatedSharePoint olayını kullanarak bir saldırganın SharePoint hassas bilgileri bulmaya çalışıp çalışmadığını (ve büyük olasılıkla erişip erişmediğini) belirleyebilir. SearchQueryInitiatedSharePoint olayının denetim kaydı, arama sorgusunun gerçek metnini de içerir. Denetim kaydı, arama yapılan SharePoint sitenin türünü de gösterir. Bir araştırmacı, saldırganın gerçekleştirmiş olabileceği arama sorgularını inceleyerek, aranmakta olan dosya verilerinin amacını ve kapsamını daha iyi anlayabilir.
 
-SearchQueryInitiatedSharePoint denetim kayıtlarını aramak için, uyumluluk merkezinde denetim günlüğü arama aracında Arama etkinlikleri açılan listesinde **SharePoint** Arama etkinlikleri için  yapılan arama etkinliğini arayabilirsiniz.[](search-the-audit-log-in-security-and-compliance.md)
+SearchQueryInitiatedSharePoint denetim kayıtlarını aramak için, uyumluluk merkezindeki [denetim günlüğü arama aracındaki](search-the-audit-log-in-security-and-compliance.md) **Arama etkinlikleri** açılan listesinde **Gerçekleştirilen SharePoint** arama etkinliğini arayabilirsiniz.
 
-![Denetim günlüğü arama SharePoint arama eylemlerini kullanarak Gerçekleştirilen araması.](../media/AdvAudit_SearchSharePoint.png)
+![Denetim günlüğü arama aracında Gerçekleştirilen SharePoint arama eylemlerini arama.](../media/AdvAudit_SearchSharePoint.png)
 
-[Search-UnifiedAuditLog -Operations SearchQueryInitiatedSharePoint'i](/powershell/module/exchange/search-unifiedauditlog) Exchange Online PowerShell'de çalıştırabilirsiniz.
+Exchange Online PowerShell'de [Search-UnifiedAuditLog -Operations SearchQueryInitiatedSharePoint'i](/powershell/module/exchange/search-unifiedauditlog) de çalıştırabilirsiniz.
 
 > [!NOTE]
-> Denetim günlüğünde bu olayı aray için SearchQueryInitiatedSharePoint'in günlüğe kaydedileceğini etkinleştirmeniz gerekir. Yönergeler için bkz. [Gelişmiş Denetimi Ayarlama](set-up-advanced-audit.md#step-2-enable-advanced-audit-events).
+> Bu olayı denetim günlüğünde arayabilmeniz için SearchQueryInitiatedSharePoint'in günlüğe kaydedilmesini etkinleştirmeniz gerekir. Yönergeler için bkz. [Denetimi Ayarlama (Premium)](set-up-advanced-audit.md#step-2-enable-audit-premium-events).
 
-### <a name="other-advanced-audit-events-in-microsoft-365"></a>Microsoft 365'daki diğer Gelişmiş Denetim Microsoft 365
+### <a name="other-audit-premium-events-in-microsoft-365"></a>Microsoft 365'deki diğer Denetim (Premium) olayları
 
-Exchange Online ve SharePoint Online'daki olaylara ek olarak, diğer Microsoft 365 hizmetlerde kullanıcılara uygun Gelişmiş Denetim lisansı atandığı zaman günlüğe kaydedilen olaylar da vardır. Aşağıdaki tablo Microsoft 365 Denetim olayları sağlar. Bu olayları tanımlayan ve açıklayan makaleye gitmek için ilgili bağlantıyı seçin.
+Exchange Online ve SharePoint Online'daki olaylara ek olarak, diğer Microsoft 365 hizmetlerinde kullanıcılara uygun Denetim (Premium) lisansı atandığında günlüğe kaydedilen olaylar vardır. Aşağıdaki Microsoft 365 hizmetleri Denetim (Premium) olayları sağlar. Bu olayları tanımlayan ve açıklayan bir makaleye gitmek için ilgili bağlantıyı seçin.
 
 - [Microsoft Forms](search-the-audit-log-in-security-and-compliance.md#microsoft-forms-activities)
 
@@ -169,30 +169,30 @@ Exchange Online ve SharePoint Online'daki olaylara ek olarak, diğer Microsoft 3
 
 - [Yammer](search-the-audit-log-in-security-and-compliance.md#yammer-activities)
 
-## <a name="high-bandwidth-access-to-the-office-365-management-activity-api"></a>Office 365 Yönetim Etkinliği API'sinde yüksek bant genişliği erişimi
+## <a name="high-bandwidth-access-to-the-office-365-management-activity-api"></a>Office 365 Yönetim Etkinliği API'sine yüksek bant genişliği erişimi
 
-Denetim günlüklerine Office 365 Yönetim Etkinliği API'si aracılığıyla erişen kuruluşlar, yayıncı düzeyinde azaltma sınırlarıyla sınırlandırılmıştır. Bu, yayıncının birden çok müşteri adına veri çekmesi için bu sınırın tüm müşteriler tarafından paylaşılması anlamına gelir.
+Office 365 Yönetim Etkinliği API'si aracılığıyla denetim günlüklerine erişen kuruluşlar, yayımcı düzeyinde azaltma sınırlarıyla kısıtlandı. Bu, birden çok müşteri adına veri çeken bir yayımcı için sınırın tüm müşteriler tarafından paylaşıldığı anlamına gelir.
 
-Gelişmiş Denetim'in yayımladığı sürümle, yayıncı düzeyindeki bir sınırdan kiracı düzeyi sınırına taşıyoruz. Sonuç olarak, her kuruluş denetim verilerine erişmek için kendi tam ayrılmış bant genişliği kotasını elde edecek. Bant genişliği statik, önceden tanımlı bir sınır değildir, ancak kuruluşta yer alan kullanıcı sayısı gibi etmenlerin bir birleşimiyle modele alındı ve E5/A5/G5 kuruluşları, E5/A5/G5 olmayan kuruluşlardan daha fazla bant genişliğine sahip olacak.
+Denetim (Premium) sürümüyle, yayımcı düzeyi sınırından kiracı düzeyi sınırına geçiyoruz. Sonuç olarak her kuruluş, denetim verilerine erişmek için kendi tam olarak ayrılmış bant genişliği kotasına sahip olur. Bant genişliği statik, önceden tanımlanmış bir sınır değildir, ancak kuruluştaki koltuk sayısı ve E5/A5/G5 kuruluşlarının E5/A5/G5 olmayan kuruluşlara göre daha fazla bant genişliği elde edeceği gibi faktörlerin bir bileşimine göre modellenir.
 
-Başlangıçta tüm kuruluşlara dakikada 2.000 istek taban çizgisi ayrılır. Bu sınır, kuruluşun lisans sayısına ve lisans aboneliklerine bağlı olarak dinamik olarak artar. E5/A5/G5 kuruluşları, E5/A5/G5 kuruluşu olmayan kuruluşlara yaklaşık iki kat daha fazla bant genişliği sağlar. Ayrıca, hizmetin durumunu korumak için üst bant genişliği üst sınırı da olur.
+Başlangıçta tüm kuruluşlara dakikada 2.000 istek temeli ayrılır. Bu sınır, kuruluşun koltuk sayısı ve lisanslama aboneliğine bağlı olarak dinamik olarak artar. E5/A5/G5 kuruluşları, E5/A5/G5 olmayan kuruluşların yaklaşık iki katı bant genişliğine sahip olur. Hizmetin durumunu korumak için maksimum bant genişliği sınırı da olacaktır.
 
-Daha fazla bilgi için Yönetim Etkinliği API başvurusu'nın "API azaltma" [Office 365 bölümüne bakın](/office/office-365-management-api/office-365-management-activity-api-reference#api-throttling).
+Daha fazla bilgi için Office 365 [Yönetim Etkinliği API başvurusunun "API](/office/office-365-management-api/office-365-management-activity-api-reference#api-throttling) azaltma" bölümüne bakın.
 
-## <a name="faqs-for-advanced-audit"></a>Gelişmiş Denetim ile ilgili SSS
+## <a name="faqs-for-audit-premium"></a>Denetim hakkında SSS (Premium)
 
-**Gelişmiş Denetimden yararlanmak için her kullanıcının bir E5/A5/G5 lisansına ihtiyacı var mı?**
+**Denetim (Premium) özelliğinden yararlanmak için her kullanıcının E5/A5/G5 lisansına ihtiyacı var mı?**
 
-Kullanıcı düzeyi Gelişmiş Denetim özelliklerinden yararlanabilmek için, bir kullanıcıya E5/A5/G5 lisansı atanabilir. Özelliğin kullanıcıya açık olması için uygun lisansı denetlemeye yardımcı olacak bazı özellikler vardır. Örneğin, uygun lisansa 90 gündür atanmamış bir kullanıcının denetim kayıtlarını korumaya çalışıyorsanız, sistem bir hata iletisi döndürür.
+Kullanıcı düzeyinde Denetim (Premium) özelliklerinden yararlanmak için kullanıcıya E5/A5/G5 lisansı atanması gerekir. Özelliği kullanıcıya göstermek için uygun lisansı denetleyecek bazı özellikler vardır. Örneğin, uygun lisansa 90 günden uzun süre atanmamış bir kullanıcının denetim kayıtlarını korumaya çalışıyorsanız sistem bir hata iletisi döndürür.
 
-**Kuruluşumda E5/A5/G5 aboneliği var, Gelişmiş Denetim olaylarının denetim kayıtlarına erişmek için herhangi bir şey ihtiyacım var mı?**
+**Kuruluşumun E5/A5/G5 aboneliği var, Denetim (Premium) olaylarının denetim kayıtlarına erişmek için herhangi bir şey yapmam gerekiyor mu?**
 
-Uygun müşterilere ve uygun E5/A5/G5 lisansı atanan kullanıcılar için, SearchQueryInitiatedExchange ve SearchQueryInitiatedSharePoint olaylarını etkinleştirme dışında (daha önce bu makalede açıklandığı gibi) Gelişmiş Denetim olaylarına erişmek için herhangi bir işlem gerekmez. Gelişmiş Denetim olayları, yalnızca E5/A5/G5 lisansı olan kullanıcılar için bu lisanslar atandıktan sonra oluşturulur.
+Uygun E5/A5/G5 lisansını atamış uygun müşteriler ve kullanıcılar için, SearchQueryInitiatedExchange ve SearchQueryInitiatedSharePoint olaylarını (bu makalede daha önce açıklandığı gibi) etkinleştirme dışında Denetim (Premium) olaylarına erişmek için herhangi bir eylem gerekmez. Denetim (Premium) olayları E5/A5/G5 lisansına sahip kullanıcılar için yalnızca bu lisanslar atandıktan sonra oluşturulur.
 
-**Gelişmiş Denetim'de yer alan yeni etkinlikler, Office 365 Api'sinde kullanılabilir mi?**
+**Denetim (Premium) içindeki yeni olaylar Office 365 Yönetim Etkinliği API'sinde kullanılabilir mi?**
 
-Evet. Uygun lisansa sahip kullanıcılar için denetim kayıtları oluşturulan sürece, bu kayıtlara Proje Yönetimi Etkinlik API'si Office 365 erişebilirsiniz.
+Evet. Uygun lisansa sahip kullanıcılar için denetim kayıtları oluşturulduğu sürece, bu kayıtlara Office 365 Yönetim Etkinliği API'sini kullanarak erişebilirsiniz.
 
-**Özellik genel kullanılabilirlik için serbest bırakılana kadar ama gerekli eklenti lisansı kullanılabilir olmadan önce bir 10 yıllık denetim günlüğü bekletme ilkesi oluşturabilirim, kuruluşum denetim günlüğü verilerine ne olur?**
+**Özellik genel kullanıma sunulduğunda ancak gerekli eklenti lisansı kullanıma sunulmadan önce 10 yıllık bir denetim günlüğü saklama ilkesi oluşturursam kuruluşumun denetim günlüğü verilerine ne olur?**
 
-Özelliğin son 2020'de genel kullanılabilirlik durumuna çıkarktan sonra oluşturduğunuz 10 yıllık denetim günlüğü bekletme ilkesi kapsamındaki tüm denetim günlüğü verileri 10 yıl boyunca korunur. Bu, gerekli eklenti lisansının Mart 2021'de satışa çıkarılamadan önce oluşturulmuş 10 yıllık denetim günlüğü bekletme ilkelerini içerir. Bununla birlikte, 10 Yıllık Denetim Günlüğü Bekletme Eklenti Lisansı artık kullanılabilir olduğundan, denetim verileri 10 yıllık denetim bekletme ilkesi kapsamında olan tüm kullanıcılar için bu eklenti lisanslarını satın almalı ve ata atalınız.
+Özellik 2020'nin son çeyreğinde genel kullanıma sunulduktan sonra oluşturduğunuz 10 yıllık denetim günlüğü saklama ilkesi kapsamındaki tüm denetim günlüğü verileri 10 yıl boyunca saklanır. Buna, mart 2021'de satın almak üzere gerekli eklenti lisansı yayınlanmadan önce oluşturulmuş 10 yıllık denetim günlüğü saklama ilkeleri dahildir. Ancak, 10 Yıllık Denetim Günlüğü Saklama Ekleme lisansı artık kullanılabilir olduğundan, denetim verileri 10 yıllık denetim saklama ilkesi kapsamında olan tüm kullanıcılar için bu eklenti lisanslarını satın almanız ve atamanız gerekir.

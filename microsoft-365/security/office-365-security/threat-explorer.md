@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 56d666f1deff43f872ad265c625302980669ecd9
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: 8a5029ad6de3de33eacdf814729ed2eafcd2cf89
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64862114"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64941687"
 ---
 # <a name="threat-explorer-and-real-time-detections"></a>Tehdit Gezgini ve Gerçek zamanlı algılamalar
 
@@ -288,7 +288,7 @@ Veri zenginleştirmenin bir parçası olarak, iletiye uygulanan tüm farklı Exc
 > [!IMPORTANT]
 > ETR arama ve ad kullanılabilirliği, size atanan belirli role bağlıdır. ETR adlarını görüntülemek ve arama yapmak için aşağıdaki rollerden/izinlerden birine sahip olmanız gerekir. Size bu rollerden herhangi biri atanmamışsa, aktarım kurallarının adlarını göremez veya ETR adlarını kullanarak iletileri arayamazsınız. Ancak E-posta Ayrıntıları'nda ETR etiketini ve GUID bilgilerini görebilirsiniz. E-posta Kılavuzları, E-posta açılırları, Filtreler ve Dışarı Aktarma'daki diğer kayıt görüntüleme deneyimleri etkilenmez.
 >
-> - Yalnızca EXO - Veri Kaybı Önleme: Tümü
+> - Yalnızca EXO - veri kaybı önleme: Tümü
 > - Yalnızca EXO - O365SupportViewConfig: Tümü
 > - Microsoft Azure Active Directory veya EXO - Güvenlik Yöneticisi: Tümü
 > - AAD veya EXO - Güvenlik Okuyucusu: Tümü

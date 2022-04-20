@@ -25,7 +25,7 @@
           href: empower-people-to-work-remotely-security-compliance.md
         - name: Adım 4. Uç nokta yönetimini dağıtın
           href: empower-people-to-work-remotely-manage-endpoints.md
-        - name: Adım 5. Üretkenlik uygulamalarını ve hizmetlerini dağıtın
+        - name: Adım 5. Verimlilik uygulamalarını ve hizmetlerini dağıtın
           href: empower-people-to-work-remotely-teams-productivity-apps.md
         - name: 6. Adım. Çalışanlarınızı eğitin
           href: empower-people-to-work-remotely-train-monitor-usage.md
@@ -43,9 +43,9 @@
           href: manage-devices-with-intune-require-compliance.md
         - name: Adım 5. Cihaz profillerini dağıtın
           href: manage-devices-with-intune-configuration-profiles.md
-        - name: 6. Adım. Cihaz riskini ve güvenlik temel hatlarına uyumluluğu izleyin
+        - name: Adım 6. Cihaz riskini ve güvenlik temel hatlarına uyumluluğu izleyin
           href: manage-devices-with-intune-monitor-risk.md
-        - name: 7. Adım. Bilgi koruma yetenekleriyle veri kaybı önleme (DLP) uygulayın
+        - name: Adım 7. Bilgi koruma özellikleriyle veri kaybı önlemeyi (DLP) uygulayın
           href: manage-devices-with-intune-dlp-mip.md
     - name: Microsoft 365 ile güvenli işbirliği kurun
       items:
@@ -111,7 +111,7 @@
           href: ransomware-protection-microsoft-365.md
         - name: Adım 1. Güvenlik temel hatlarını yapılandırın
           href: ransomware-protection-microsoft-365-security-baselines.md
-        - name: Adım 2. Saldırı algılama ve yanıt dağıtın
+        - name: Adım 2. Saldırı algılama ve yanıtı dağıtın
           href: ransomware-protection-microsoft-365-attack-detection-response.md
         - name: Adım 3. Kimlikleri koruyun
           href: ransomware-protection-microsoft-365-identities.md
@@ -159,7 +159,7 @@
               items:
                 - name: Genel bakış
                   href: ../admin/add-users/remove-former-employee.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-                - name: Adım 1. Bir çalışanın oturum açmasını ve Microsoft 365 hizmetlerine erişimini engelleyin
+                - name: Adım 1. Bir çalışanın oturum açmasını önleyin ve Microsoft 365 hizmetlerine erişimi engelleyin
                   href: ../admin/add-users/remove-former-employee-step-1.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
                 - name: Adım 2. Eski bir çalışanın posta kutusunun içeriğini kaydedin
                   href: ../admin/add-users/remove-former-employee-step-2.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
@@ -306,13 +306,13 @@
           href: /onedrive/plan-onedrive-enterprise
     - name: Uyumluluk
       items:
-        - name: Microsoft 365'te içerden risk çözümleri
+        - name: Microsoft Purview'da içeriden risk çözümleri
           href: ../compliance/insider-risk-solution-overview.md
         - name: Denetim çözümleri
           href: ../compliance/auditing-solutions-overview.md
         - name: Microsoft 365'te eKeşif çözümleri
           href: ../compliance/ediscovery.md
-        - name: Microsoft 365 Gelişmiş eKeşif
+        - name: Microsoft Purview eKeşif (Premium)
           href: ../compliance/overview-ediscovery-20.md
         - name: Mevzuat uyumluluğu eylem planları
           items:

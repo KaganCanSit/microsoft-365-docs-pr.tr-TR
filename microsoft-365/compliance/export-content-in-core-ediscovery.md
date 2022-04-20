@@ -1,5 +1,5 @@
 ---
-title: Core eBulma durumundan içerik dışarı aktarma ve indirme
+title: eBulma (Standart) servis talebine ait içeriği dışarı aktarma ve indirme
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -17,56 +17,56 @@ search.appverid:
 - MOE150
 - MET150
 ms.custom: admindeeplinkCOMPLIANCE
-description: Bu makalede, Core eKovery durumundan içerik dışarı ve Microsoft 365.
-ms.openlocfilehash: 1d998a4b1eb540a1d96afc3acd3518d0c604a7e9
-ms.sourcegitcommit: ab5368888876d8796da7640553fc8426d040f470
+description: Microsoft 365'da eBulma (Standart) durumundan içerik dışarı aktarmayı ve indirmeyi açıklar.
+ms.openlocfilehash: a0ea33d599ed609c24cf63f1df4c68b882364b1b
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "62990604"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64937971"
 ---
-# <a name="export-content-from-a-core-ediscovery-case"></a>Core eKovery durumundan içerik dışarı aktarma
+# <a name="export-content-from-a-ediscovery-standard-case"></a>eBulma (Standart) durumundan içeriği dışarı aktarma
 
-Core eKovery durumuyla ilişkilendirilmiş bir arama başarıyla çalıştırıldıktan sonra, arama sonuçlarını dışarı aktarın. Arama sonuçlarını dışarı aktarsanız da, posta kutusu öğeleri PST dosyalarına veya tek tek iletiler olarak indirilir. Site ve sitelerden içerik SharePoint OneDrive İş, yerel Office belge ve diğer belgelerin kopyaları dışarı aktarıldı. Dışarı Results.csv öğe hakkında bilgi içeren bir bildirim dosyası ve her arama sonucu hakkında bilgi içeren bir bildirim dosyası (XML biçiminde) de dışarı aktarıldı.
+Microsoft Purview eKeşif (Standart) olayıyla ilişkilendirilmiş bir arama başarıyla çalıştırıldıktan sonra, arama sonuçlarını dışarı aktarabilirsiniz. Arama sonuçlarını dışarı aktardığınızda, posta kutusu öğeleri PST dosyalarına veya tek tek iletiler olarak indirilir. SharePoint ve OneDrive İş sitelerdeki içeriği dışarı aktardığınızda, yerel Office belgelerin ve diğer belgelerin kopyaları dışarı aktarılır. Dışarı aktarılan her öğe hakkında bilgi içeren bir Results.csv dosyası ve her arama sonucu hakkında bilgi içeren bir bildirim dosyası (XML biçiminde) de dışarı aktarılır.
   
 ## <a name="export-search-results"></a>Arama sonuçlarını dışarı aktarma
 
-1. Oturum açma <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 uyumluluk merkezi</a> ve uygun eBulma izinleri atanmış olan kullanıcı hesabının kimlik bilgilerini kullanarak oturum açın.
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalına</a> gidin ve uygun eBulma izinlerine atanmış kullanıcı hesabının kimlik bilgilerini kullanarak oturum açın.
 
-2. Gezinti bölmesinin sol bölmesinde, **Microsoft 365 uyumluluk merkezi'i** seçin ve sonra **da eKbulma Puanı'ı** >  <a href="https://go.microsoft.com/fwlink/p/?linkid=2174007" target="_blank">**seçin**</a>.
+2. Uyumluluk portalının sol gezinti bölmesinde **Tümünü göster'i** ve ardından **eBulma Çekirdeği'ni** >  seçin.<a href="https://go.microsoft.com/fwlink/p/?linkid=2174007" target="_blank"></a>
 
-3. **Core eDiscovery sayfasında**, ayrı tutma için oluşturmak istediğiniz vakanın adını tıklatın.
+3. **eBulma (Standart)** sayfasında, ayrı tutmayı oluşturmak istediğiniz servis talebinin adına tıklayın.
 
-4. Vakanın  Giriş sayfasında Aramalar **sekmesine** tıklayın.
+4. Servis talebi için **Giriş** sayfasında **Aramalar** sekmesine tıklayın.
 
-5. Açılır **sayfanın en** altındaki Eylemler menüsünde Sonuçları dışarı aktar'a **tıklayın**.
+5. Açılır sayfanın alt kısmındaki **Eylemler** menüsünde **Sonuçları dışarı aktar'a** tıklayın.
 
    ![Eylemler menüsünde sonuçları dışarı aktar seçeneği.](../media/ActionMenuExportResults.png)
 
-   Core eKovery durumuyla ilişkilendirilmiş bir aramanın sonuçlarını dışarı aktarma iş akışı, İçerik arama sayfasındaki arama sonuçlarını dışarı **aktarmayla aynıdır** . Adım adım yönergeler için bkz. İçerik [arama sonuçlarını dışarı aktarma](export-search-results.md).
+   eBulma (Standart) olayıyla ilişkili bir aramanın sonuçlarını dışarı aktarmak için kullanılan iş akışı, **İçerik arama** sayfasındaki arama sonuçlarını dışarı aktarmakla aynıdır. Adım adım yönergeler için bkz. [İçerik arama sonuçlarını dışarı aktarma](export-search-results.md).
 
    > [!NOTE]
-   > Arama sonuçlarını dışarı aktarsanız bile, aynı iletinin birden çok örneği arama yapılan posta kutularında bulunsa bile e-posta iletisi yalnızca bir kopyasının dışarı aktarılması için de-yinelemeyi etkinleştirme seçeneğiniz vardır. Yinelemeyi de-yineleme ve yinelenen öğelerin nasıl tanım olduğu hakkında daha fazla bilgi için bkz. [eBulma arama sonuçlarında yinelemeyi geri bulma](de-duplication-in-ediscovery-search-results.md).
+   > Arama sonuçlarını dışarı aktardığınızda, arama yapılan posta kutularında aynı iletinin birden çok örneği bulunsa bile e-posta iletisinin yalnızca bir kopyasının dışarı aktarılabilmesi için yinelenenleri kaldırmayı etkinleştirme seçeneğiniz vardır. Yinelenenleri kaldırma ve yinelenen öğeleri tanımlama hakkında daha fazla bilgi için bkz. [eBulma arama sonuçlarında](de-duplication-in-ediscovery-search-results.md) yinelenenleri kaldırma.
 
-   Dışarı aktarmayı başladıktan sonra arama sonuçları indirmeye hazır olur ve bu da Microsoft tarafından sağlanan bir Azure bulut Depolama bir konuma aktarıldıları anlamına gelir.
+   Dışarı aktarma işlemine başladıktan sonra, arama sonuçları indirilmeye hazırlanır ve bu da Microsoft bulutunda Microsoft tarafından sağlanan bir Azure Depolama konumuna aktarıldığı anlamına gelir.
   
-6. Dışarı **aktarma işlerinin** listesini görüntülemek için Durum'ta Dışarı Aktarmalar sekmesine tıklayın.
+6. Dışarı aktarma işlerinin listesini görüntülemek için büyük/küçük harfe göre Dışarı **Aktarmalar** sekmesine tıklayın.
   
-   ![Core eDiscovery durumundaki Dışarı Aktar sekmesinde işleri dışarı aktarın.](../media/CoreeDiscoveryExport.png)
+   ![eBulma (Standart) durumundaki Dışarı Aktar sekmesindeki dışarı aktarma işleri.](../media/CoreeDiscoveryExport.png)
 
-   Oluşturduğunuz dışarı aktarma **işinin gösterirken** dışarı aktarma işleri listesini güncelleştirmek için Yenile'ye tıklamanız gerekir. Dışarı aktarma işleri, arama adının sonuna eklenen **adla _Export** aramayla aynıdır.
+   Dışarı aktarma işlerinin listesini oluşturduğunuz dışarı aktarma işini gösterecek şekilde güncelleştirmek için **Yenile'ye** tıklamanız gerekebilir. Dışarı aktarma işlerinin adı, arama adına **eklenmiş _Export** karşılık gelen aramayla aynı ada sahiptir.
 
-7. Dışarı aktarma sayfasında durum bilgilerini görüntülemek için oluşturduğunuz dışarı aktarma işini tıklatın. Bu bilgiler, Azure Veri Merkezi'ne aktarılan öğelerin Depolama içerir.
+7. Açılır sayfada durum bilgilerini görüntülemek için oluşturduğunuz dışarı aktarma işine tıklayın. Bu bilgiler, Azure Depolama konumuna aktarılan öğelerin yüzdesini içerir.
 
-8. Tüm öğeler aktarıldıktan sonra, arama **sonuçlarını yerel** bilgisayarınıza indirmek için Sonuçları indir'e tıklayın. Arama sonuçlarını indirme hakkında daha fazla bilgi için İçerik arama sonuçlarını dışarı aktarma'daki 2[. Adım'a bakın](export-search-results.md#step-2-download-the-search-results).
+8. Tüm öğeler aktarıldıktan sonra sonuçları **indir'e** tıklayarak arama sonuçlarını yerel bilgisayarınıza indirin. Arama sonuçlarını indirme hakkında daha fazla bilgi için bkz. [İçerik arama sonuçlarını dışarı aktarma](export-search-results.md#step-2-download-the-search-results) bölümündeki 2. Adım
 
 > [!NOTE]
-> Dışarı aktarılan arama sonuçlarının, siz dışarı aktarma işini oluşturduktan sonra 14 gün içinde indirilmiş olması gerekir.
+> Dışarı aktarılan arama sonuçları, dışarı aktarma işini oluşturduktan sonraki 14 gün içinde indirilmelidir.
 
-### <a name="more-information-about-exporting-searches-from-a-case"></a>Vakadan aramaları dışarı aktarma hakkında daha fazla bilgi
+### <a name="more-information-about-exporting-searches-from-a-case"></a>Bir servis talebi aramalarını dışarı aktarma hakkında daha fazla bilgi
 
-- Arama sonuçlarını dışarı aktararak dahil edilen dosyaları dışarı aktarma hakkında daha fazla bilgi için bkz [. İçerik arama raporunu dışarı aktarma](export-a-content-search-report.md#whats-included-in-the-report).
+- Arama sonuçlarını dışarı aktarırken dahil edilen dışarı aktarma dosyaları hakkında daha fazla bilgi için bkz. [İçerik arama raporunu dışarı aktarma](export-a-content-search-report.md#whats-included-in-the-report).
 
-- Dışarı aktarmayı yeniden başlattıktan sonra, dışarı aktarma işinin yapılan arama sorgularında yapılan değişiklikler alınan arama sonuçlarını etkilemez. Dışarı aktarmayı yeniden başlattıktan sonra, dışarı aktarma işi oluşturulduğunda çalıştırılan aynı birleşik arama sorgusu işi yeniden çalıştırılacaktır.
+- Dışarı aktarmayı yeniden başlatırsanız, dışarı aktarma işini oluşturan arama sorgularına yapılan değişiklikler alınan arama sonuçlarını etkilemez. Dışarı aktarmayı yeniden başlattığınızda, dışarı aktarma işi oluşturulduğunda çalıştırılan birleşik arama sorgusu işi yeniden çalıştırılır.
 
-- Ayrıca, dışarı aktarmayı yeniden başlattıktan sonra Azure Arama konumuna kopyalanan arama Depolama sonuçların üzerine yazılacaktır. Önceki kopyalanan sonuçlar indiril kullanılamaz.
+- Ayrıca dışarı aktarmayı yeniden başlatırsanız, Azure Depolama konumuna kopyalanan arama sonuçları önceki sonuçların üzerine yazar. Kopyalanan önceki sonuçlar indirilmeyecek.

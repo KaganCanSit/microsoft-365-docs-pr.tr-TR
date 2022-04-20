@@ -1,5 +1,5 @@
 ---
-title: Vakaya üye ekleme veya vakadan üye kaldırma
+title: Bir vakaya üye ekleme veya kaldırma
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -15,37 +15,37 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Bir davayı yönetmek için vakaya erişen üyeleri ekleme veya Advanced eDiscovery öğrenin.
+description: eBulma (Premium) servis talebini yönetirken servis talebine erişebilen üyeleri eklemeyi veya kaldırmayı öğrenin.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 8e239622add6965a280e9c2b01bc00d9f2b9b0d5
-ms.sourcegitcommit: 317fab13e84b2867087a6ba0a593313ecf43bbed
+ms.openlocfilehash: 9586fd0f606c3f95cda19ca9d6ae036bc23763dc
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "62988809"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64943205"
 ---
-# <a name="add-or-remove-members-from-a-case"></a>Vakaya üye ekleme veya vakadan üye kaldırma
+# <a name="add-or-remove-members-from-a-case"></a>Bir vakaya üye ekleme veya kaldırma
 
-Vakaya erişecek üyeleri ekleyebilir veya kaldırarak yönetsiniz. Ancak, üyenin bir Advanced eDiscovery büyük/küçük harfe erişmeden (ve bu durumda görevleri gerçekleştirmeden) önce, kullanıcıyı sitenin İzinler sayfasındaki eBulma Yöneticisi rol grubuna  Microsoft 365 uyumluluk merkezi. Daha fazla bilgi için bkz [. eBulma izinleri atama](./assign-ediscovery-permissions.md).
+Olaya kimlerin erişebileceğini yönetmek için üye ekleyebilir veya kaldırabilirsiniz. Ancak, bir üyenin bir eBulma (Premium) olayına erişebilmesi (ve bu durumda görevleri gerçekleştirmesi) için kullanıcıyı Microsoft Purview uyumluluk portalının **İzinler** sayfasındaki eBulma Yöneticisi rol grubuna eklemeniz gerekir. Daha fazla bilgi için bkz. [eBulma izinleri atama](./assign-ediscovery-permissions.md).
 
-1. Sayfa **Advanced eDiscovery** üye eklemek istediğiniz vakaya gidin.
+1. **eBulma (Premium)** sayfasında, üye eklemek istediğiniz servis talebine gidin.
 
-2. İzinler **Ayarlar** tıklayın ve sonra da **Access izinler** **kutucuğunun altında &** tıklayın.
+2. **Ayarlar** sekmesine tıklayın ve ardından **Access & izinleri** kutucuğunda **Seç'e** tıklayın.
 
-3. Üyeleri **yönet'in** altında **, vakaya** üye eklemek için Ekle'ye tıklayın. Rol gruplarını yönet'in altında Ekle'ye tıklayarak da vakaya  **rol** **grubu eklemeyi seçebilirsiniz**.
+3. **Üyeleri yönet'in** altında, olaya üye eklemek için **Ekle'ye** tıklayın. Ayrıca, Rol gruplarını yönet altında  **Ekle'ye** tıklayarak olaya **bir rol grubu** eklemeyi de seçebilirsiniz.
 
-4. Vakanın üyeleri olarak eklenilen kişiler veya rol grupları listesinde, eklemek istediğiniz kişi veya rol gruplarının adlarının yanındaki onay kutusunu seçin.
+4. Servis talebi üyesi olarak eklenebilen kişi veya rol grupları listesinde, eklemek istediğiniz kişilerin veya rol gruplarının adlarının yanındaki onay kutusunu seçin.
 
    > [!NOTE]
-   > Bir vakaya rol grubu eklerken, yalnızca üyesi olduğunuz rol gruplarını  eklemeniz gerekir.
+   > Bir servis talebine rol grubu eklerken, yalnızca üyesi olduğunuz rol gruplarını ekleyebilirsiniz.
 
-5. Vakanın üyesi olarak eklemek istediğiniz kişiler veya rol gruplarını seçtikten sonra Ekle'ye **tıklayın**.
+5. Servis talebine üye olarak eklenecek kişileri veya rol gruplarını seçtikten sonra **Ekle'ye** tıklayın.
 
-6. Bu **vakayı yönet uç** sayfasında **Kaydet'e** tıklar ve vaka üyelerinin yeni listesini kaydedebilirsiniz.
+6. **Yeni servis talebi** üyeleri listesini kaydetmek için Bu olayı yönet açılır sayfasında **Kaydet'e** tıklayın.
 
 > [!IMPORTANT]
-> Bir rol, davanın üyesi olarak ekleyseniz veya bu gruptan çıkarılırsa, rol grubu otomatik olarak davanın üyesi olarak kaldırılır (veya rol grubunun üyesi olduğu herhangi bir durum). Bunun nedeni, kurumlarınızı bir davanın üyelerine yanlışlıkla ek izinler sağlamaktan korumaktır. Benzer şekilde, bir rol grubu silinirse, üyesi olduğu tüm durumlarda gruptan kaldırılır. Daha fazla bilgi için bkz [. eBulma izinleri atama](assign-ediscovery-permissions.md#adding-role-groups-as-members-of-ediscovery-cases).
+> Bir rolün, servis talebine üye olarak eklediğiniz bir rol grubuna eklenmesi veya kaldırılması durumunda rol grubu, servis talebinin bir üyesi olarak (veya rol grubunun üyesi olduğu herhangi bir durumda) otomatik olarak kaldırılır. Bunun nedeni, kuruluşunuzun bir olayın üyelerine yanlışlıkla ek izinler sağlamasını korumaktır. Benzer şekilde, bir rol grubu silinirse, üyesi olduğu tüm durumlardan kaldırılır. Daha fazla bilgi için bkz. [eBulma izinleri atama](assign-ediscovery-permissions.md#adding-role-groups-as-members-of-ediscovery-cases).
 
-## <a name="removing-members-from-a-case"></a>Vakadan üyeleri kaldırma
+## <a name="removing-members-from-a-case"></a>Bir servis talebine üye kaldırma
 
-Yalnızca [eBulma Yöneticisi vakadan](assign-ediscovery-permissions.md) üyeleri kaldırabilir. eBulma Yöneticisi rol grubuna atanmış veya ilk başta bir vakayı oluşturan durumda bile, eBulma Yöneticisi olmadıkça kendinizi veya diğer üyeleri bir vakadan kaldırasınız. Kendinizi veya diğer üyeleri bir vakadan kaldırmak için, kuruluşta eBulma Yöneticisi'ne başvurun.
+Bir servis talebinin üyelerini yalnızca [eBulma Yöneticisi](assign-ediscovery-permissions.md) kaldırabilir. eBulma Yöneticisi rol grubuna atanmış olsanız veya başlangıçta olayı oluşturmuş olsanız bile, eBulma Yöneticisi olmadığınız sürece kendinizi veya diğer üyeleri bir servis talebinden kaldıramazsınız. Kendinizi veya diğer üyeleri bir servis talebinden kaldırmak için kuruluşunuzdaki bir eBulma Yöneticisine başvurun.

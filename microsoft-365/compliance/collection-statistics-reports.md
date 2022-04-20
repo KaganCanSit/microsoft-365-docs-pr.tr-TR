@@ -6,7 +6,7 @@ ms.author: markjjo
 author: markjjo
 ms.reviewer: nickrob
 manager: laurawi
-ms.date: ''
+ms.date: 04/08/2022
 audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
@@ -15,129 +15,129 @@ ms.collection: M365-security-compliance
 search.appverid:
 - MOE150
 - MET150
-description: Taslak koleksiyonları ve koleksiyonlar için, Advanced eDiscovery'de gözden geçirme kümesi için kaydedilmiş olan istatistiklere ve raporlara erişmeyi ve raporları kullanmayı Advanced eDiscovery.
-ms.openlocfilehash: 4b5cf37639d497d615a0772e084507018cb829cf
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Microsoft Purview eKeşif'te (Premium) bir gözden geçirme kümesine kaydedilmiş taslak koleksiyonlar ve koleksiyonlar için istatistiklere ve raporlara erişmeyi ve bunları kullanmayı öğrenin.
+ms.openlocfilehash: 12152e0b81df6c61732fda068c593a91578861ee
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63325159"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64940323"
 ---
-# <a name="collection-statistics-and-reports-in-advanced-ediscovery"></a>Koleksiyon istatistikleri ve rapor Advanced eDiscovery
+# <a name="collection-statistics-and-reports-in-microsoft-purview-ediscovery-premium"></a>Microsoft Purview eKeşif'te (Premium) toplama istatistikleri ve raporları
 
-Taslak koleksiyonu oluşturduklardan sonra, alınan öğelerle ilgili istatistikleri (arama ölçütleriyle ve arama sorgusu tarafından döndürülen öğe sayısıyla en çok eşleşmeyi içeren içerik konumları gibi) görüntüebilirsiniz. Sonuçların bir alt kümesini de öniz görebilirsiniz.
+Taslak koleksiyonu oluşturduktan sonra, arama ölçütleriyle eşleşen en çok öğeyi içeren içerik konumları ve arama sorgusu tarafından döndürülen öğe sayısı gibi alınan öğelerle ilgili istatistikleri görüntüleyebilirsiniz. Sonuçların bir alt kümesini de önizleyebilirsiniz.
 
-Daha fazla incelemek istediğiniz belge kümesi tanımlendiğinde, arama sonuçlarını toplamak ve işlemesi için bir gözden geçirme kümesine  eklersiniz.
+Daha fazla incelemek istediğiniz belge kümesini tanımladığınızda, arama sonuçlarını toplamak ve işlemek üzere bir gözden geçirme kümesine ekleyebilirsiniz.
 
 ## <a name="statistics-and-reports-for-draft-collections"></a>Taslak koleksiyonlar için istatistikler ve raporlar
 
-Bu bölümde, taslak koleksiyonları için kullanılabilen istatistikler açık bulunmaktadır. Bu istatistikler, bir taslak **koleksiyonunun** açılır sayfasındaki Arama istatistikleri sekmesinde yer almaktadır.
+Bu bölümde taslak koleksiyonlar için kullanılabilen istatistikler açıklanmaktadır. Bu istatistikler, taslak koleksiyonun açılır sayfasındaki **Arama istatistikleri** sekmesinde bulunur.
 
-### <a name="collection-estimates"></a>Koleksiyon tahminleri
+### <a name="collection-estimates"></a>Toplama tahminleri
 
-Bu bölümde, koleksiyon tarafından döndürülen tahmini öğelerin grafik bir özeti görüntülenir. Bu, koleksiyonun arama ölçütlerine uyan öğelerin sayısını gösterir. Bu bilgiler, koleksiyon tarafından döndürülen tahmini öğe sayısı hakkında size bir fikir verir.
+Bu bölümde, koleksiyon tarafından döndürülen tahmini öğelerin grafik özeti görüntülenir. Bu, koleksiyonun arama ölçütlerine uyan öğe sayısını gösterir. Bu bilgiler, koleksiyon tarafından döndürülen tahmini öğe sayısı hakkında size bir fikir verir.
 
 ![Taslak koleksiyon için koleksiyon tahminleri.](../media/AeDCollectionEstimates.png)
 
-- **Konumlara göre tahmini öğeler**: Koleksiyon tarafından döndürülen tahmini öğelerin toplam sayısı. Posta kutularında ve sitelerde bulunan belirli sayıda öğe de görüntülenir.
+- **Konumlara göre tahmini öğeler**: Koleksiyon tarafından döndürülen tahmini öğelerin toplam sayısı. Posta kutularında bulunan ve sitelerde bulunan belirli öğe sayısı da görüntülenir.
 
-- **İsabet sayısı ile tahmini** konumlar: Koleksiyon tarafından döndürülen öğelerin bulunduğu içerik konumlarının toplam sayısı. Belirli sayıda posta kutusu ve site konumu da görüntülenir.
+- **İsabetli tahmini konumlar**: Koleksiyon tarafından döndürülen öğeleri içeren içerik konumlarının toplam sayısı. Belirli sayıda posta kutusu ve site konumu da görüntülenir.
 
-- **Konuma göre veri hacmi (MB)**: Koleksiyon tarafından döndürülen tahmini tüm öğelerin toplam boyutu. Ayrıca, posta kutusu öğelerinin ve site öğelerinin belirli boyutu da görüntülenir.
+- **Konuma göre veri hacmi (MB cinsinden):** Koleksiyon tarafından döndürülen tüm tahmini öğelerin toplam boyutu. Posta kutusu öğelerinin ve site öğelerinin belirli boyutu da görüntülenir.
 
 ### <a name="condition-report"></a>Koşul raporu
 
-Bu bölümde, koleksiyon arama sorgusuyla ilgili istatistikler ve arama sorgusunun farklı bölümleriyle eşan tahmini öğelerin sayısı görüntülenir. Arama sorgusunun her bileşenine uygun öğe sayısını çözümlemek için bu istatistikleri kullanabilirsiniz. Bu, koleksiyonun arama ölçütlerini daraltmanıza ve gerekirse koleksiyonun kapsamını daraltmanıza yardımcı olabilir.
+Bu bölümde, koleksiyon arama sorgusu ve arama sorgusunun farklı bölümleriyle eşleşen tahmini öğe sayısıyla ilgili istatistikler görüntülenir. Arama sorgusunun her bileşeniyle eşleşen öğe sayısını analiz etmek için bu istatistikleri kullanabilirsiniz. Bu, koleksiyonun arama ölçütlerini iyileştirmenize ve gerekirse koleksiyonun kapsamını daraltmanıza yardımcı olabilir.
 
-- **Konum türü**: Sorgu istatistiklerinin uygulan bulunduğu içerik konumu türü. Posta kutusunun **Exchange** kutusu konumunu, posta kutusunun değeri ise **SharePoint** bir site konumunu gösterir.
+- **Konum türü**: Sorgu istatistiklerinin uygulanabilecek içerik konumu türü. **Exchange** değeri posta kutusu konumunu, **SharePoint** değeri ise site konumunu gösterir.
 
-- **Bölüm**: Arama sorgusunun istatistik bölümü uygulanabilir. **Birincil** , tüm arama sorgusunu gösterir. **Anahtar** sözcük, satırdaki istatistiklerin belirli bir anahtar sözcük için olduğunu gösterir. Koleksiyondaki arama sorgusu için anahtar sözcük listesi kullanırsanız, sorgunun her bileşeniyle ilgili istatistikler bu tabloya eklenir.
+- **Bölüm**: arama sorgusunun istatistikler için geçerli olan bölümü. **Birincil** , arama sorgusunun tamamını gösterir. **Anahtar sözcük** , satırdaki istatistiklerin belirli bir anahtar sözcük için olduğunu gösterir. Koleksiyondaki arama sorgusu için bir anahtar sözcük listesi kullanırsanız, sorgunun her bileşenine ilişkin istatistikler bu tabloya eklenir.
 
-- **Koşul**: İlgili satırda görüntülenen istatistiklerin döndürülen taslak koleksiyonu için çalıştır gösterilen arama sorgusunun gerçek bileşeni (anahtar sözcük veya koşul).
+- **Koşul**: Karşılık gelen satırda görüntülenen istatistikleri döndüren taslak koleksiyon için çalıştırılan arama sorgusunun gerçek bileşeni (anahtar sözcük veya koşul).
 
-- **Hits içeren konumlar**: Koşul sütununda listelenen birincil veya anahtar sözcük sorgusuyla eşananlı öğeler içeren içerik konumlarının (Konum türü sütunu tarafından belirtilen **)** sayısı.
+- **İsabetli konumlar**: **Koşul** sütununda listelenen birincil veya anahtar sözcük sorgusuyla eşleşen öğeleri içeren içerik konumlarının sayısı (**Konum türü** sütunu tarafından belirtilir).
 
-- **Öğeler**: Koşul sütununda listelenen sorguyla aynı olan öğelerin sayısı (belirtilen içerik **konumdan)** Daha önce de belirtildiği gibi, bir öğede arama yapılan birden çok anahtar sözcük örneği varsa, bu sütunda yalnızca bir kez sayılır.
+- **Öğeler**: **Koşul** sütununda listelenen sorguyla eşleşen öğe sayısı (belirtilen içerik konumundan). Daha önce açıklandığı gibi, bir öğe aranmakta olan bir anahtar sözcüğün birden çok örneğini içeriyorsa, bu sütunda yalnızca bir kez sayılır.
 
-- **Boyut (MB)**: Bulunan (belirtilen içerik konumda) bulunan ve Koşul sütunundaki arama sorgusuyla eşanan tüm öğelerin **toplam** boyutu.
+- **Boyut (MB)**: **Koşul** sütunundaki arama sorgusuyla eşleşen bulunan tüm öğelerin (belirtilen içerik konumunda) toplam boyutu.
 
-### <a name="top-locations"></a>En üst konumlar
+### <a name="top-locations"></a>En iyi konumlar
 
-Bu bölümde, koleksiyonun en çok döndürülen öğeleriyle birlikte belirli içerik konumlarının istatistikleri görüntülenir.
+Bu bölümde, koleksiyon tarafından döndürülen en çok öğeye sahip belirli içerik konumlarıyla ilgili istatistikler görüntülenir.
 
 - Konum adının adı (posta kutularının e-posta adresi ve sitelerin URL'si).
 
 - Konum türü (posta kutusu veya site).
 
-- Koleksiyonun döndürülen içerik konumdaki tahmini öğe sayısı.
+- Koleksiyon tarafından döndürülen içerik konumundaki tahmini öğe sayısı.
 
-- Her içerik konumuyla ilgili tahmini öğelerin toplam boyutu.
+- Her içerik konumundaki tahmini öğelerin toplam boyutu.
 
-## <a name="statistics-and-reports-for-committed-collections"></a>Kabul edilen koleksiyonlar için istatistikler ve raporlar
+## <a name="statistics-and-reports-for-committed-collections"></a>Taahhüt edilen koleksiyonlar için istatistikler ve raporlar
 
-Bu bölümde, koleksiyonu gözden geçirme kümesine kaydettikten sonra kullanılabilir istatistikler (gözden geçirme kümesine eklenen gerçek öğe sayısı da içinde olmak üzere) açıklenmiştir. Bu istatistikler (yükleme kümesi bilgilerine ek olarak), vakaya eklenen içerikle ilgili geçmiş bilgileri sağlar.
+Bu bölümde, gözden geçirme kümesine eklenen öğelerin gerçek sayısı da dahil olmak üzere bir koleksiyonu bir gözden geçirme kümesine işledikten sonra kullanılabilen istatistikler açıklanmaktadır. Bu istatistikler (yük kümesi bilgilerine ek olarak), servis talebine eklenen içerikle ilgili geçmiş bilgileri sağlar.
 
-Koleksiyonu bir gözden geçirme kümesine işlerken, kabul edilen bağlantının açılır sayfasında aşağıdaki sekmeler görüntülenir. Bu sekmelerin her biri, koleksiyon hakkında farklı türde bilgiler içerir.
+Bir koleksiyonu bir gözden geçirme kümesine işledikten sonra, kaydedilen bağlantının açılır sayfasında aşağıdaki sekmeler görüntülenir. Bu sekmelerin her biri koleksiyon hakkında farklı türde bilgiler içerir.
 
 ![Kaydedilmiş koleksiyonun açılır sayfasındaki sekmeler.](../media/CommittedCollectionFlyoutPage.png)
 
 ### <a name="collection-contents"></a>Koleksiyon içeriği
 
-Özet sekmesinin **bu** bölümü, koleksiyondaki veri kaynaklarından toplanan ve gözden geçirme kümesine eklenen öğelerle ilgili istatistikleri ve diğer bilgileri içerir.
+**Özet** sekmesinin bu bölümü, koleksiyondaki veri kaynaklarından toplanan ve gözden geçirme kümesine eklenen öğelerle ilgili istatistikleri ve diğer bilgileri içerir.
 
-- **Toplam ayıklanan öğeler**. Gözden geçirme kümesine eklenen toplam öğe sayısı. Bu sayı, gözden geçirme kümesine eklenen üst öğelerin ve alt öğelerin toplamını gösterir.
+- **Ayıklanan öğelerin toplamı**. Gözden geçirme kümesine eklenen toplam öğe sayısı. Bu sayı, gözden geçirme kümesine eklenen üst öğelerin ve alt öğelerin toplamını gösterir.
 
   > [!TIP]
-  > İmleci, toplam üst veya alt öğe sayısını görüntülemek için üst veya alt öğe çubuklarının üzerine gelin.
+  > Toplam üst veya alt öğe sayısını görüntülemek için imleci üst veya alt öğe çubuklarının üzerine getirin.
 
-- **Üst öğeler**. Gözden geçirme kümesine eklenen öğeleri toplamak için kullanılan koleksiyon tarafından döndürülen öğe sayısı. Bu sayı, Koleksiyon parametreleri bölümünde gösterilen tahmini öğe sayısına karşılık gelir (ve **buna eşittir** ). Gözden geçirme kümesine eklenen öğeleri toplamak için kullanılan koleksiyonu bilgilerini toplayan üst öğelerin sayısı.
+- **Üst öğeler**. Gözden geçirme kümesine eklenen öğeleri toplamak için kullanılan koleksiyon tarafından döndürülen öğe sayısı. Bu sayı **, Koleksiyon parametreleri** bölümünde görüntülenen tahmini öğe sayısına karşılık gelir (ve eşittir). Gözden geçirme kümesine eklenen öğeleri toplamak için kullanılan bilgileri topladığı üst öğe sayısı.
  
-   Bir üst öğe birden çok alt öğe içerebilir. Örneğin, e-posta iletisi ekli bir dosya içeriyorsa veya bulut eki varsa, üst öğedir. Bu durumda, bulut ekin ekli dosyası veya hedef dosyası alt öğe olarak kabul edilir. Koleksiyonu işlerken, üst öğeler ve buna karşılık gelen tüm alt öğeler (ekli dosyalar ve bulut ekleri gibi) gözden geçirmeye tek tek öğeler veya dosyalar olarak ayarlanır.
+   Üst öğe birden çok alt öğe içerebilir. Örneğin, e-posta iletisi ekli bir dosya içeriyorsa veya bir bulut eki varsa üst öğedir. Bu durumda, ekli dosya veya bulut ekinin hedef dosyası bir alt öğe olarak kabul edilir. Bir koleksiyonu işlediğiniz zaman, üst öğeler ve buna karşılık gelen tüm alt öğeler (ekli dosyalar ve bulut ekleri gibi) gözden geçirme kümesine tek tek öğeler veya dosyalar olarak eklenir.
 
-- **Alt öğeler.** Gözden geçirme kümesine eklenen alt öğe sayısı. Gözden geçirmeye yalnızca dosya ekleri ve bulut ekleri olan alt öğeler tek tek dosyalar olarak eklenir. E-posta imzaları ve resimler gibi diğer alt öğe türleri üst öğeden ayıklanır ve alt öğeden herhangi bir metni ayıklamak için Optik Karakter Tanıma (OCR) tarafından işlenir. Bu tür alt öğelerden ayıklanan metin daha sonra, gözden geçirme kümesinde görüntüley eklensin ve üst öğeye eklenir. Alt öğeleri ayrı bir dosya olarak kümedeki gözden geçirme kümesine eklememenizi, Advanced eDiscovery gözden geçirme kümesinde yer alma olasılığı bulunan öğelerin sayısını sınır ekleyerek gözden geçirme işlemini kolaylaştırmanıza yardımcı olur.
+- **Alt öğeler**. Gözden geçirme kümesine eklenen alt öğe sayısı. Gözden geçirme kümesine yalnızca dosya ekleri ve bulut ekleri olan alt öğeler tek tek dosyalar olarak eklenir. E-posta imzaları ve resimler gibi diğer alt öğe türleri bir üst öğeden ayıklanır ve ardından Optik Karakter Tanıma (OCR) tarafından alt öğeden herhangi bir metni ayıklamak için işlenir. Bu tür alt öğelerden ayıklanan metin, gözden geçirme kümesinde görüntüleyebilmeniz için üst öğeye eklenir. eBulma (Premium), gözden geçirme kümesine alt öğeleri ayrı bir dosya olarak eklemeyerek, gözden geçirme kümesindeki potansiyel olarak önemsiz öğe sayısını sınırlayarak gözden geçirme sürecini kolaylaştırmaya yardımcı olur.
 
-- **Benzersiz öğeler**. Gözden geçirme kümesine eklenen benzersiz öğe sayısı. Benzersiz öğeler gözden geçirme kümesine benzersizdir. Gözden geçirme kümesinde daha önce hiç öğe yoktu, çünkü ilk koleksiyon yeni bir gözden geçirme kümesine ekli olduğunda tüm öğeler benzersizdir.
+- **Benzersiz öğeler**. Gözden geçirme kümesine eklenen benzersiz öğelerin sayısı. Benzersiz öğeler gözden geçirme kümesine özeldir. İlk koleksiyon yeni bir gözden geçirme kümesine eklendiğinde tüm öğeler benzersizdir çünkü gözden geçirme kümesinde önceki öğeler yoktu.
 
-- **Tanımlanan yinelenen öğeler**. Aynı öğe gözden geçirme kümesinde zaten var olduğundan, koleksiyondaki gözden geçirme kümesine eklenmedi. Yinelenen öğelerle ilgili istatistikler, bir taslak koleksiyonundan gelen tahmini öğe sayısıyla gözden geçirme kümesine eklenen gerçek öğe sayısı arasındaki farkları açıklamaya yardımcı olabilir.
+- **Yinelenen öğeler belirlendi**. Aynı öğe gözden geçirme kümesinde zaten var olduğundan, koleksiyondaki gözden geçirme kümesine eklenmemiş öğe sayısı. Yinelenen öğelerle ilgili istatistikler, taslak koleksiyondaki tahmini öğe sayısı ile gözden geçirme kümesine eklenen öğelerin gerçek sayısı arasındaki farkları açıklamaya yardımcı olabilir.
 
-### <a name="indexing"></a>Dizin oluşturma
+### <a name="indexing"></a>Dizin
 
-Kabul **edilen bir** gözden geçirme kümesi **özet** sekmesinde Dizin Oluşturma bölümü, gözden geçirme kümesine eklenen öğeler hakkında dizin oluşturma bilgilerini içerir.
+Kaydedilmiş bir gözden geçirme kümesinin **Özet** sekmesindeki **Dizin oluşturma** bölümü, gözden geçirme kümesine eklenen öğeler hakkında dizin bilgileri içerir.
 
-**Yeni dizine alındı öğeleri**. Gözden geçirme kümesine eklenmeden önce yeni dizine alınan öğelerin sayısı. Yeni dizine alınan öğelere örnek olarak üst öğeden alınan ve gözden geçirme kümesine eklenmeden önce dizine alınan alt öğeler örnek olarak verilmiştir. Ayrıca, özel veri kaynaklarında yer olmayan öğeler ve durumdaki Veri kaynakları sekmesinde listelenen özel ve özel olmayan içerik konumları, gözden geçirme eklenmeden önce dizine eklenir. Örneğin, yeni dizine alınan öğeler ek konumlardan toplanan öğeleri içerebilir.
+**Yeni dizine alınan öğeler**. Gözden geçirme kümesine eklenmeden önce yeni dizine alınan öğelerin sayısı. Yeni dizine alınan öğeye örnek olarak üst öğeden ayıklanan ve gözden geçirme kümesine eklenmeden önce dizine alınan alt öğeler verilebilir. Ayrıca, olaydaki **Veri kaynakları** sekmesinde listelenen gözaltı veri kaynaklarında ve gözetimsiz içerik konumlarında yer almayan öğeler, gözden geçirme sürecine eklenmeden önce dizine eklenir. Örneğin, yeni dizine alınan öğeler ek konumlardan toplanan öğeleri içerebilir.
 
-**Dizine alındı öğeleri güncelleştirildi**. Başarıyla dizine alınarak gözden geçirme kümesine eklenen kısmen dizine eklenen öğelerin sayısı. Bu istatistikler, koleksiyonu gözden geçirme kümesine kabul edilirken başarıyla dizine alınan özel ve özel olmayan içerik konumlarından kısmen dizine alınan öğeleri gösterir.
+**Dizine alınan öğeler güncelleştirildi**. Başarıyla dizine alınan ve gözden geçirme kümesine eklenen kısmen dizinlenmiş öğelerin sayısı. Bu istatistik, koleksiyon gözden geçirme kümesine işlendiğinde başarıyla dizine alınan, koruyucu ve gözetimsiz içerik **konumlarından** kısmen dizine alınan öğeleri gösterir.
 
-**Dizin oluşturma hataları**. Gözden geçirme kümesine eklenmeden önce dizine eklenemediklerine kısmen dizine eklenen öğelerin sayısı. Bu öğelerin hata düzeltmesi gerekli olabilir.
+**Dizin oluşturma hataları**. Kısmen dizine alınan ve gözden geçirme kümesine eklenmeden önce dizine alınamayan öğelerin sayısı. Bu öğeler hata düzeltmesi gerektirebilir.
 
 ### <a name="collection-parameters"></a>Koleksiyon parametreleri
 
-Bu bölümde, gözden geçirme kümesine eklenen öğeleri toplamak için kullanılan koleksiyon bilgileri görüntülenir. Bu sekmede, Arama istatistikleri sekmesindeki bilgilere **benzer bilgiler** görüntülenir. Bu bölümde, koleksiyon tarafından kullanılan arama sorgusunun hızlı bir tutturma vuruşu, arama yapılan içerik konumları ve tahmini koleksiyon sonuçları yer almaktadır. Daha önce de belirtildiği gibi, bu bölümdeki tahmini öğelerin sayısı Koleksiyon içeriği bölümünde gösterilen üst öğe **sayısına eşit** olabilir.
+Bu bölümde, gözden geçirme kümesine eklenen öğeleri toplamak için kullanılan koleksiyon bilgileri görüntülenir. Bu sekme, **Arama istatistikleri** sekmesindeki bilgilere benzer bilgiler görüntüler. Bu bölüm, koleksiyon tarafından kullanılan arama sorgusunun, aranan içerik konumlarının ve tahmini koleksiyon sonuçlarının hızlı bir anlık görüntüsünü sağlar. Daha önce açıklandığı gibi, bu bölümdeki tahmini öğe sayısı **Koleksiyon içeriği** bölümünde gösterilen üst öğe sayısına eşit olacaktır.
 
 ### <a name="search-statistics-tab"></a>Arama istatistikleri sekmesi
 
-Arama istatistikleri sekmesinde **görüntülenen istatistikler** , bir taslak koleksiyonunun son çalıştırıı olan istatistiklerle aynıdır. Koleksiyon tahminleri, koşul raporu ve en üst konumlar buna dahildir. Bu bilgiler, geçmiş başvuru için taslak koleksiyonundan korunur ve gözden geçirme kümesi için kabul edilen gerçek koleksiyonla karşılaştırılamaz.
+**Arama istatistikleri** sekmesinde görüntülenen istatistikler, taslak koleksiyonun son çalıştırıldığı zamana ait istatistiklerle aynıdır. Buna koleksiyon tahminleri, koşul raporu ve en üst konumlar dahildir. Bu bilgiler, geçmiş başvurusu için taslak koleksiyondan korunur ve gözden geçirme kümesine kaydedilmiş olan gerçek koleksiyonla karşılaştırılabilir.
 
-## <a name="differences-between-draft-collection-estimates-and-the-actual-committed-collection"></a>Taslak koleksiyon tahminleri ile gerçek kabul edilen koleksiyon arasındaki farklar
+## <a name="differences-between-draft-collection-estimates-and-the-actual-committed-collection"></a>Taslak koleksiyon tahminleri ile gerçek taahhüt edilen koleksiyon arasındaki farklar
 
-Bir taslak koleksiyonunu çalıştırarak, koleksiyon ölçütlerine uyan öğe sayısını (ve bunların toplam boyutunu) tahmin etmek, Özet sekmesinde ve Arama istatistikleri sekmesinin Koleksiyon  tahminleri **bölümünde** görüntülenir. Taslak koleksiyonunu gözden geçirme kümesine kaydettikten sonra, gözden geçirme kümesine eklenen gerçek öğe sayısı (ve bunların toplam boyutu) genellikle tahminlerden farklıdır. Çoğu durumda, gözden geçirme kümesine, taslak koleksiyonundan tahmin edilenden daha fazla öğe eklenir. Aşağıdaki listede, bu farkların en yaygın nedenleri ve bunları tanımlama ipuçları açık almaktadır:
+Bir taslak koleksiyonu çalıştırdığınızda, koleksiyon ölçütlerini karşılayan öğe sayısı (ve toplam boyutu) tahmini **Özet** sekmesinde ve **Arama istatistikleri** sekmesinin **Koleksiyon tahminleri** bölümünde görüntülenir. Taslak koleksiyonu bir gözden geçirme kümesine işledikten sonra, gözden geçirme kümesinin eklediği gerçek öğe sayısı (ve toplam boyutları) genellikle tahminlerden farklıdır. Çoğu durumda, gözden geçirme kümesine taslak koleksiyondan tahmin edilenden daha fazla öğe eklenir. Aşağıdaki listede, bu farklılıkların en yaygın nedenleri ve bunları tanımlama ipuçları açıklanmaktadır:
 
-- **Alt öğeler.** Üst öğelerinden ayıklanan ve tek tek dosyalar olarak eklenen alt öğeler (dosya ekleri ve bulut ekleri gibi). Alt öğe sayısı, gözden geçirme kümesine gerçekten eklenen öğe sayısını artırabilir. Genel olarak, kabul edilen koleksiyonun Özet sekmesindeki Koleksiyon  içeriği bölümünde tanımlanan üst öğe  sayısı, taslak koleksiyonundan gelen tahmini öğelerin sayısına eşit olması gerekir.
+- **Alt öğeler**. Üst öğelerinden ayıklanan ve tek tek dosyalar olarak eklenen alt öğeler (dosya ekleri ve bulut ekleri gibi). Alt öğe sayısı, gerçekten gözden geçirme kümesine eklenen öğelerin sayısını artırabilir. Genel olarak, taahhüt edilen koleksiyonun **Özet** sekmesindeki **Koleksiyon içeriği** bölümünde tanımlanan üst öğe sayısı, taslak koleksiyondaki tahmini öğe sayısına eşit olmalıdır.
 
-- **Yinelenen öğeler**. Taslak koleksiyonundan, önceki bir koleksiyonda yer alan ve gözden geçirme kümesine önceden eklenmiş olan öğeler eklenmez. Daha önce de belirtildiği gibi, koleksiyondaki yinelenen öğelerin sayısı Özet **sekmesinin Koleksiyon** içeriği **bölümünde** görüntülenir.
+- **Yinelenen öğeler**. Önceki bir koleksiyonda gözden geçirme kümesine eklenmiş olan taslak koleksiyondaki öğeler eklenmez. Daha önce açıklandığı gibi, koleksiyondaki yinelenen öğelerin sayısı **Özet** sekmesinin **Koleksiyon içeriği** bölümünde görüntülenir.
 
-- **Koleksiyon yapılandırma seçenekleri**. Taslak koleksiyonunu gözden geçirme kümesine işlerken, konuşma dizilerini, bulut eklerini ve belge sürümlerini dahil etme seçeneğiniz vardır. Gözden geçirme kümesine eklenen bu öğelerden herhangi biri taslak koleksiyonunun tahminlerine dahil değildir. Bunlar yalnızca koleksiyonu işlerken tanımlanır ve toplanır. Bu seçeneklerin seçimi büyük olasılıkla gözden geçirme kümesine eklenen öğe sayısını artıracaktır. 
+- **Koleksiyon yapılandırma seçenekleri**. Taslak koleksiyonu bir gözden geçirme kümesine işlerken konuşma yazışmalarını, bulut eklerini ve belge sürümlerini dahil etme seçeneğiniz vardır. Gözden geçirme kümesine eklenen bu öğelerden hiçbiri taslak koleksiyonun tahminlerine dahil değildir. Bunlar yalnızca koleksiyonu işlediğiniz zaman tanımlanır ve toplanır. Bu seçeneklerin seçilmesi büyük olasılıkla gözden geçirme kümesine eklenen öğe sayısını artırır. 
 
-    Örneğin, belge sürümlerinin SharePoint sürümleri taslak koleksiyonunun tahminlerine dahil değildir. Ancak bir taslak koleksiyonu işlerken tüm belge sürümlerini ekleme seçeneğini eklerseniz, gözden geçirme kümesine eklenen öğelerin gerçek sayısı (ve toplam boyutu) artar.
+    Örneğin, taslak koleksiyon için tahmine SharePoint belgelerin birden çok sürümü dahil değildir. Ancak bir taslak koleksiyonu işlerken tüm belge sürümlerini dahil etme seçeneğini belirlerseniz, gözden geçirme kümesine eklenen öğelerin gerçek sayısı (ve toplam boyutu) artar.
 
-    Bu seçenekler hakkında daha fazla bilgi için bkz [. Taslak koleksiyonunu gözden geçirme kümesine kaydetme](commit-draft-collection.md#commit-a-draft-collection-to-a-review-set-in-advanced-ediscovery). 
+    Bu seçenekler hakkında daha fazla bilgi için bkz [. Taslak koleksiyonu gözden geçirme kümesine işleme](commit-draft-collection.md#commit-a-draft-collection-to-a-review-set-in-ediscovery-premium).
 
-Burada, bir taslak koleksiyonundan elde edilen tahmini sonuçların, gerçek kabul edilen sonuçlardan farklı olması için de başka nedenler ve açık bir şekilde açık bir şekilde açıklandı.
+Taslak koleksiyondaki tahmini sonuçların gerçek taahhüt edilen sonuçlardan farklı olmasının diğer nedenleri aşağıdadır.
 
-- **Taslak koleksiyonlarda sonuçların tahmin edilen yolu**. Taslak koleksiyon tarafından döndürülen arama sonuçlarının tahmini, koleksiyon sorgu ölçütlerine uyan öğelerin tahminini (ve gerçek sayısını değil) ifade etmektir. E-posta öğelerinin tahminini derlemek için, bu veritabanından arama ölçütlerine uyan ileti kimliklerinin Exchange istenmektedir. Ancak koleksiyonu bir gözden geçirme kümesine işlerken, koleksiyon yeniden çalıştırılamaz ve gerçek iletiler Exchange alınır. Dolayısıyla, bu farklar, tahmini öğe sayısının ve gerçek öğe sayısının nasıl belirleneceği nedeniyle ortaya çıkan sonuçlar olabilir.
+- **Taslak koleksiyonlarda sonuçların tahmini yöntemi**. Taslak koleksiyon tarafından döndürülen arama sonuçlarının tahmini, koleksiyon sorgu ölçütlerini karşılayan öğelerin tahminidir (gerçek sayı değil). E-posta öğelerinin tahminini derlemek için, Exchange veritabanından arama ölçütlerini karşılayan ileti kimliklerinin listesi istenir. Ancak koleksiyonu bir gözden geçirme kümesine işlediğiniz zaman, koleksiyon yeniden çalıştırılır ve gerçek iletiler Exchange veritabanından alınır. Bu nedenle, tahmini öğe sayısı ve gerçek öğe sayısının nasıl belirlendiği nedeniyle farklılıklar ortaya çıkabilir.
 
-- **Taslak koleksiyonları tahmin ve yürütme zamanı arasında gerçekleşecek değişiklikler**. Taslak koleksiyonunu bir gözden geçirme kümesine işlerken, arama yeniden çalıştırarak arama dizininde arama ölçütlerine uyan en son öğeleri toplar. Taslak koleksiyonunun en son çalıştırılan zaman ile taslak koleksiyonunun gözden geçirme kümesi için kabul edilen zaman arasında arama ölçütlerine uyan başka öğeler de oluşturulmuş, gönderilmiş veya silinmiş olabilir. Taslak koleksiyon sonuçları onaylandıklarında arama dizininde yer alan öğelerin koleksiyonları işlemeden önce bir veri kaynağından temizn dolayı artık orada olmadığı tahmin ediliyor olabilir. Bu sorunu azaltmak için bir yol, koleksiyon için bir tarih aralığı belirtmektir. Bir diğer yol da, içerik konumlarını yerinde tutmak ve bu şekilde öğelerin korunmasını ve temiz olamamaktır.
+- **Taslak koleksiyonları tahmin etme ve işleme zamanları arasında gerçekleşen değişiklikler**. Bir gözden geçirme kümesine taslak koleksiyon işlediğinizde, arama dizininde arama ölçütlerine uyan en son öğeleri toplamak için arama yeniden çalıştırılır. Taslak koleksiyonun son çalıştırıldığı zaman ile taslak koleksiyonun bir gözden geçirme kümesine kabul edildiği zaman arasında arama ölçütlerini karşılayan ek öğeler oluşturulmuş, gönderilmiş veya silinmiş olabilir. Ayrıca, taslak koleksiyon sonuçları tahmin edildiğinde arama dizininde yer alan öğelerin, koleksiyonu işlemeden önce bir veri kaynağından temizlendikleri için artık orada olmaması da mümkündür. Bu sorunu azaltmanın bir yolu, koleksiyon için bir tarih aralığı belirtmektir. Bir diğer yol da öğelerin korunması ve temizlenememeleri için içerik konumlarına ayrı tutmaktır.
 
-- **Bağımsız olmayan öğeler**. Taslak koleksiyon tüm Exchange posta kutularında veya tüm SharePoint sitelerinde arama içeriyorsa, gözden geçirme kümesine yalnızca içerik konumlarından gelen ve koleksiyon ölçütlerine uyan öğeler içeren ya da eklenmemiş öğeler eklenir. Başka bir deyişle, bir posta kutusunda veya sitede hiç sonuç bulunamazsa, bu posta kutusu veya sitedeki ya da sitedeki tekinde eklenmemiş öğeler gözden geçirme kümesine eklenmez. Bununla birlikte, tüm içerik konumlarından (koleksiyon sorgusuyla eşleşmeen öğeler içermeseler bile) içeremeyen öğeler, tahmini koleksiyon sonuçlarına dahil edilir.
+- **Dizine alınmamış öğeler**. Taslak koleksiyon tüm Exchange posta kutularını veya tüm SharePoint sitelerini aramayı içeriyorsa, yalnızca koleksiyon ölçütlerine uyan öğeleri içeren içerik konumlarından dizine alınmamış öğeler gözden geçirme kümesine eklenir. Başka bir deyişle, bir posta kutusunda veya sitede sonuç bulunamazsa, bu posta kutusu veya sitedeki dizine alınmamış öğeler gözden geçirme kümesine eklenmez. Ancak, tüm içerik konumlarındaki dizine alınmamış öğeler (koleksiyon sorgusuyla eşleşen öğeler içermeyen öğeler bile) tahmini koleksiyon sonuçlarına dahil edilir.
 
-    Alternatif olarak, taslak koleksiyonunda belirli içerik konumları (bu, taslak koleksiyonu sihirbazının Ek konumlar sayfasında belirtilen belirli posta kutuları veya  siteler) varsa, aramada belirtilen içerik konumlarından tekinde alınmamış öğeler (koleksiyon ölçütleri tarafından dışlanmamış) dışarı aktarılacaktır. Bu durumda, tahmini olarak, dizili olmayan öğelerin sayısı ve gözden geçirme kümesine eklenen ya da eklenmemiş öğelerin sayısı aynı olur.
+    Alternatif olarak, taslak koleksiyonda belirli içerik konumları varsa (yani taslak koleksiyon sihirbazındaki **Ek konumlar** sayfasında belirtilen belirli posta kutuları veya siteler), aramada belirtilen içerik konumlarından dizine alınmamış öğeler (koleksiyon ölçütleri tarafından hariç tutulmaz) dışarı aktarılır. Bu durumda, tahmini dizinlenmemiş öğe sayısı ve gözden geçirme kümesine eklenen dizinlenmemiş öğe sayısı aynı olmalıdır.

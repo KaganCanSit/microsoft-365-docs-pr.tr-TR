@@ -17,12 +17,12 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
 ms.custom: intro-get-started
-ms.openlocfilehash: 68315c6cf7947c2d42e58e34b4496e0ef790c8b0
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: d332cbf32f5423fb16abb158f9a30a18c2391a22
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64665502"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64939355"
 ---
 # <a name="get-started-with-microsoft-defender-for-endpoint-plan-1"></a>Uç Nokta için Microsoft Defender Plan 1 ile Kullanmaya başlayın
 
@@ -81,7 +81,7 @@ Ekranın sol tarafındaki gezinti çubuğu olaylar, uyarılar, İşlem merkezi, 
 | **Sağlık** >  **İleti merkezi** | Microsoft 365 yönetim merkezi İleti merkezine gider. İleti merkezi planlı değişiklikler hakkında bilgi sağlar. Her ileti, gelenleri, kullanıcıları nasıl etkileyebileceğini ve değişikliklerin nasıl yönetileceğini açıklar. |  
 | **İzinler & rolleri** | Microsoft 365 Defender portalını kullanmak için izinler vermenizi sağlar. İzinler Azure Active Directory 'deki (Azure AD) roller aracılığıyla verilir. Bir rol seçtiğinizde açılır pencere bölmesi görüntülenir. Açılır öğe, rol grubuna üye ekleyebileceğiniz veya kaldırabileceğiniz Bir Azure AD bağlantısı içerir. <br/><br/> Daha fazla bilgi edinmek için bkz. [Rol tabanlı erişim denetimini kullanarak portal erişimini yönetme](rbac.md).  |
 | **Ayarlar** | Microsoft 365 Defender portalınız (**Güvenlik merkezi** olarak listelenir) ve Uç Nokta için Defender (Uç Nokta olarak listelenir) için genel **ayarlara** gider. <br/><br/> Daha fazla bilgi için bkz. [Ayarlar](../defender/microsoft-365-defender.md#the-microsoft-365-defender-portal). |
-| **Diğer kaynaklar** | Azure Active Directory ve Microsoft 365 uyumluluk merkezi gibi daha fazla portalın ve merkezin listesini görüntüler. <br/><br/> Daha fazla bilgi için bkz. [Microsoft güvenlik portalları ve yönetim merkezleri](../defender/portals.md). |
+| **Diğer kaynaklar** | Azure Active Directory ve Microsoft Purview uyumluluk portalı gibi daha fazla portalın ve merkezin listesini görüntüler. <br/><br/> Daha fazla bilgi için bkz. [Microsoft güvenlik portalları ve yönetim merkezleri](../defender/portals.md). |
 
 > [!TIP]
 > Daha fazla bilgi edinmek için [bkz. Microsoft 365 Defender portalına genel bakış](../defender/microsoft-365-security-center-mde.md).

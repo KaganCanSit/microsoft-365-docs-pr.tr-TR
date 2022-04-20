@@ -1,5 +1,5 @@
 ---
-title: Veri gizliliği düzenlemeye tabi bilgileri koruma
+title: Veri gizliliği düzenlemesine tabi bilgileri koruma
 ms.author: bcarter
 author: brendacarter
 f1.keywords:
@@ -16,213 +16,213 @@ ms.collection:
 - m365solution-infoprotection
 - m365solution-scenario
 ms.custom: ''
-description: Güvenlik Microsoft 365 uyumluluk özelliklerini dağıtın ve kişisel bilgilerinizi koruyun.
-ms.openlocfilehash: 2739da0b5e9c4896b65751c63d9b2e5f3b026a2e
-ms.sourcegitcommit: 0ee2dabe402d44fecb6856af98a2ef7720d25189
+description: Microsoft 365 güvenlik ve uyumluluk özelliklerini dağıtın ve kişisel bilgilerinizi koruyun.
+ms.openlocfilehash: 0876cc1ff51b133e22d13b4c7fbc9a575db32d26
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "63012820"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64943293"
 ---
-# <a name="protect-information-subject-to-data-privacy-regulation"></a>Veri gizliliği düzenlemeye tabi bilgileri koruma
+# <a name="protect-information-subject-to-data-privacy-regulation"></a>Veri gizliliği düzenlemesine tabi bilgileri koruma
 
-Aboneliğinize, veri gizliliği uyumluluğu  ihtiyaçlarını ve düzenlemelerini karşılamak için bir dizi bilgi koruma denetimi kullanılabilir. Bunlar Genel Veri Koruma Yönetmeliği (GDPR), HIPAA-HITECH (ABD sağlık hizmetleri gizlilik yasası), California Tüketici Koruma Yasası (CCPA) ve Brezilya Veri Koruma Yasası (LGPD)dır.
+Veri gizliliği uyumluluk gereksinimlerini ve düzenlemelerini karşılamaya yardımcı olmak için aboneliğinizde bir dizi bilgi koruma denetimi kullanılabilir. Bunlar Arasında Genel Veri Koruma Yönetmeliği (GDPR), HIPAA-HITECH (Birleşik Devletler sağlık hizmetleri gizlilik yasası), California Tüketici Koruma Yasası (CCPA) ve Brezilya Veri Koruma Yasası (LGPD) bulunur.
 
-Bu denetimler aşağıdaki çözüm alanları içindedir:
+Bu denetimler aşağıdaki çözüm alanlarındadır:
 
 - Duyarlılık etiketleri
-- Veri kaybı önleme (DLP)
-- Office şifreleme (OME)
-- Teams ve sitelere erişim denetimleri
+- Microsoft Purview Veri kaybı önleme (DLP)
+- Microsoft Purview İleti Şifrelemesi
+- Teams ve site erişim denetimleri
 
-![Kişisel bilgileri korumak için veri gizlilik düzenlemesi konularını temel alan hizmetler.](../media/information-protection-deploy-protect-information/information-protection-deploy-protect-information-grid.png)
+![Veri gizliliği düzenlemesine tabi kişisel bilgileri korumaya yönelik temel hizmetler.](../media/information-protection-deploy-protect-information/information-protection-deploy-protect-information-grid.png)
 
 > [!NOTE]
-> Bu çözüm, veri gizliliği düzenlemelerine tabi bilgileri korumaya ilişkin güvenlik ve uyumluluk özelliklerini açıklar. Güvenlik özelliklerinin tam listesi için Microsoft 365 belgelerine Microsoft 365 [bakın](../security/index.yml). Uyumluluk belgelerinin uyumluluk özelliklerinin tam listesi Microsoft 365 için uyumluluk [Microsoft 365 bakın](../compliance/index.yml).
+> Bu çözüm, veri gizliliği düzenlemelerine tabi bilgileri korumak için güvenlik ve uyumluluk özelliklerini açıklar. Microsoft 365 güvenlik özelliklerinin tam listesi için [Microsoft 365 güvenlik belgelerine bakın](../security/index.yml). Microsoft 365 uyumluluk özelliklerinin tam listesi için [bkz. Microsoft Purview belgeleri](../compliance/index.yml).
 
 ## <a name="data-privacy-regulations-that-impact-information-protection-controls"></a>Bilgi koruma denetimlerini etkileyen veri gizliliği düzenlemeleri
 
-Aşağıda, bilgi koruma denetimleriyle ilişkili olacak veri gizliliği düzenlemelerinin örnek bir listesi ve gösterilmiştir:
+Bilgi koruma denetimleriyle ilgili olabilecek veri gizliliği düzenlemelerinin örnek listesi aşağıda verilmiştir:
 
-- GDPR Makale 5(1)(f))
+- GDPR Madde 5(1)(f))
 - GDPR Makalesi (32)(1)(a)
 - LGPD Makale 46
 - HIPAA-HITECH (45 CFR 164.312(e)(1))
 - HIPAA-HITECH (45 C.F.R. 164.312(e)(2)(ii))
 
-Yukarıdakilerin [her biri hakkında daha fazla bilgi için veri gizliliği](information-protection-deploy-assess.md) risklerini değerlendirme ve hassas öğeleri belirleme makalesine bakın.
+Yukarıdakilerin her biri hakkında daha fazla bilgi için [veri gizliliği risklerini değerlendirme ve hassas öğeleri tanımlama makalesine](information-protection-deploy-assess.md) bakın.
 
-Bilgi koruması için veri gizliliğiyle ilgili düzenlemeler önerilir:
+Bilgi koruması için veri gizliliği düzenlemeleri önerilir:
 
-- Kayıp veya yetkisiz erişim, kullanım ve/veya iletimlere karşı koruma.
-- Koruyucu mekanizmalar için risk tabanlı uygulama.
-- Uygun olduğunda şifrelemenin kullanımı.
+- Kayıplara veya yetkisiz erişime, kullanıma ve/veya iletimlere karşı koruma.
+- Koruyucu mekanizmaların risk tabanlı uygulaması.
+- Uygun yerlerde şifreleme kullanımı.
 
-Ayrıca, organizasyonunız diğer uyumluluk Microsoft 365 veya ticari nedenlerle bu içeriği korumak da istiyor olabilir. Veri gizliliği için bilgi koruma düzeninizi oluşturma, genel bilgi koruma planlaması, uygulama ve yönetiminin bir parçası olarak yapılabilir.
+Kuruluşunuz, Microsoft 365 içeriği diğer uyumluluk gereksinimleri gibi başka amaçlarla veya iş nedenleriyle de korumak isteyebilir. Veri gizliliği için bilgi koruma şemanızı oluşturma işlemi genel bilgi koruma planlaması, uygulaması ve yönetimi kapsamında yapılmalıdır.
 
-Web'de bilgi koruma düzenini Microsoft 365 yardımcı olmak için, aşağıdaki bölümde ilgili becerilerin kısa bir listesi ve bu özelliklere yönelik iyileştirme Microsoft 365. Bu liste, veri gizliliği düzenlemeleri için geçerli olan özellikler ve geliştirme eylemleri içerir. Ancak, daha eski olandan daha eski olandan daha yeni bir özellik varsa, bu liste eski teknolojileri içermemektedir. Örneğin, daha fazla bilgi ve SharePoint IRM için Bilgi Hakları Yönetimi OneDrive, ancak duyarlılık etiketleri listeye dahil değildir.
+Microsoft 365'da bir bilgi koruma şemasını kullanmaya başlamanıza yardımcı olmak için, aşağıdaki bölümde Microsoft 365 ilgili özelliklerin ve iyileştirme eylemlerinin kısa bir listesi yer alır. Liste, veri gizliliği düzenlemeleri için geçerli olan özellikleri ve iyileştirme eylemlerini içerir. Ancak, eskisinin yerini büyük ölçüde alan daha yeni bir özellik varsa, listede eski teknolojiler yoktur. Örneğin, SharePoint ve OneDrive için Bilgi Hakları Yönetimi (IRM) listeye dahil değildir, ancak duyarlılık etiketleri dahil edilir.
 
-## <a name="managing-information-protection-in-microsoft-365"></a>Web'de bilgi korumasını Microsoft 365
+## <a name="managing-information-protection-in-microsoft-365"></a>Microsoft 365'de bilgi korumasını yönetme
 
-Microsoft [bilgi koruma çözümleri](../compliance/information-protection.md) yazılım, güvenlik özellikleri ve Microsoft Microsoft 365 Microsoft Azure bir dizi tümleşik Windows. Bu Microsoft 365, bilgi koruma çözümleri şunlardır:
+Microsoft [bilgi koruma çözümleri](../compliance/information-protection.md) Microsoft 365, Microsoft Azure ve Microsoft Windows genelinde bir dizi tümleşik özellik içerir. Microsoft 365 bilgi koruma çözümleri şunları içerir:
 
-- [Hassas bilgi türleri](../compliance/sensitive-information-type-entity-definitions.md) (veri gizliliği [risklerini değerlendirme ve hassas öğeleri tanımlama makalesinde açıklanmıştır)](information-protection-deploy-assess.md)
+- [Hassas bilgi türleri](../compliance/sensitive-information-type-entity-definitions.md) ([veri gizliliği risklerini değerlendirme ve hassas öğeleri tanımlama makalesinde](information-protection-deploy-assess.md) açıklanmıştır)
 - [Duyarlılık etiketleri](../compliance/sensitivity-labels.md)
   - Hizmet/kapsayıcı düzeyi
   - İstemci tarafı/içerik düzeyi
-  - Veri kaynağında ve veri kaynağında SharePoint otomatik OneDrive
+  - SharePoint ve OneDrive bekleyen veriler için otomatikleştirilmiş
 - Veri Kaybı Önleme (DLP)
-- [Microsoft 365 uç noktası veri kaybını önleme](../compliance/endpoint-dlp-learn-about.md)
-- [Office 365 İleti Şifrelemesi özellikleri (OME) ve OME Gelişmiş](../compliance/ome.md) İleti [Şifrelemesi'ne sahip olun](../compliance/ome-advanced-message-encryption.md)
+- [Uç nokta veri kaybı önleme](../compliance/endpoint-dlp-learn-about.md)
+- [Office 365 İleti Şifrelemesi yeni özellikleri (OME)](../compliance/ome.md) ve OME [Gelişmiş İleti Şifrelemesi](../compliance/ome-advanced-message-encryption.md)
 
-Buna ek olarak, site ve kitaplık düzeyinde koruma, herhangi bir koruma düzenine dahil etmek için önemli mekanizmalardır.
+Ayrıca, site ve kitaplık düzeyinde koruma, herhangi bir koruma şemasına dahil edilmesi gereken önemli mekanizmalardır.
 
-Dış veri koruma özellikleri hakkında daha fazla bilgi Microsoft 365 bkz:
+Microsoft 365 dışındaki diğer bilgi koruma özellikleri hakkında bilgi için bkz:
 
 - [Bulut Uygulamaları için Microsoft Defender](/cloud-app-security/)
 - [Azure Information Protection](/azure/information-protection/what-is-information-protection)
 - [Microsoft Endpoint Manager](https://www.microsoft.com/microsoft-365/microsoft-endpoint-manager)
-- [Windows Koruma](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
+- [Windows Information Protection](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
 
 ## <a name="sensitivity-labels"></a>Duyarlılık etiketleri
 
-Microsoft Bilgi Koruması çerçevesine gelen duyarlılık etiketleri, kullanıcıların üretkenliğini ve işbirliği yapma yeteneğini engellemeden kuruluş verilerinizi sınıflandırmanıza ve korumanıza olanak sağlar.
+Microsoft Purview Information Protection duyarlılık etiketleri, kullanıcıların üretkenliğini ve işbirliği yapma becerilerini engellemeden kuruluşunuzun verilerini sınıflandırmanıza ve korumanıza olanak sağlar.
 
 > [!div class="mx-imgBorder"]
-> ![Metindeki duyarlılık Microsoft 365.](../media/information-protection-deploy-protect-information/information-protection-deploy-protect-information-labels.png)
+> ![Microsoft 365 duyarlılık etiketleri.](../media/information-protection-deploy-protect-information/information-protection-deploy-protect-information-labels.png)
 
-### <a name="prerequisites-for-sensitivity-labels"></a>Duyarlılık etiketlerinin önkoşulları
+### <a name="prerequisites-for-sensitivity-labels"></a>Duyarlılık etiketleri için önkoşullar
 
-Aşağıda vurgulanan duyarlılık etiket tabanlı özelliklerden herhangi birini uygulamadan önce bu etkinlikleri gerçekleştirin:
+Aşağıda vurgulanan duyarlılık etiketi tabanlı özelliklerden herhangi birini uygulamadan önce bu etkinlikleri tamamlayın:
 
-1. Aşağıdaki bilgileri anlıyoruz:
-   - **İş gereksinimleri.** Kuruluşta duyarlılık etiketleri uygulamak için iş nedenlerini oluşturma. Örneğin, bilgi koruması için veri gizliliği gereksinimleriniz olabilir.
-   - **Duyarlılık etiketi özellikleri.** Duyarlılık etiketleme karmaşık olabilir, bu nedenle başlamadan önce duyarlılık etiketleri [belgelerini okuduğundan](../compliance/sensitivity-labels.md) emin olun.
-   - **Anımsayacak önemli şeyler** Duyarlılık etiketleri Microsoft Uyumluluk yönetim merkezinden yönetilir, ancak hedef ve uygulama seçenekleri önemli ölçüde değişiklik gösterir.
-      - Siteler, gruplar ve kapsayıcı düzeyinde Teams duyarlılık etiketleri vardır (ayarlar kapsayıcının içindeki içeriğe geçerli değildir). Bunlar, bir site, grup veya Ekip sağlandıklarında bunları uygulayan kullanıcılara ve gruplara yayımlanır.
-      - Etkin içerik için duyarlılık etiketleri var. Bunlar ayrıca el ile uygulanan veya şu olduğunda otomatik olarak uygulanan kullanıcılara veya gruplara da yayımlanır:
-        - Dosya kullanıcının masaüstünde veya SharePoint sitesinde açılır/SharePoint.
-        - Bir e-posta taslak olarak taslağı hazırlar ve gönderilir.
-      - Belirli bir süre içinde kalan dosyalara otomatik uygulama için duyarlılık SharePoint OneDrive e-postaların yanı sıra Exchange. Bunlar tüm sitelere veya belirli sitelere hedeflenir ve bu ortamlardaki dosyalara otomatik olarak uygulanır.
+1. Aşağıdakileri anlayın:
+   - **İş gereksinimleri.** Kuruluşunuzda duyarlılık etiketleri uygulamak için iş nedenlerini belirleyin. Örneğin, bilgi koruması için veri gizliliği gereksinimleriniz.
+   - **Duyarlılık etiketi özellikleri.** Duyarlılık etiketleme karmaşık hale gelebilir, bu nedenle başlamadan önce [duyarlılık etiketleri belgelerini](../compliance/sensitivity-labels.md) okuduğunuzdan emin olun.
+   - **Hatırlamanız gereken önemli şeyler** Duyarlılık etiketleri Microsoft Purview uyumluluk portalında yönetilir, ancak hedefleme ve uygulama seçenekleri önemli ölçüde farklılık gösterir.
+      - Siteler, gruplar ve Teams için kapsayıcı düzeyinde duyarlılık etiketleri vardır (ayarlar kapsayıcının içindeki içeriğe uygulanmaz). Bunlar bir site, grup veya Ekip sağlandığında bunları uygulayan kullanıcılara ve gruplara yayımlanır.
+      - Etkin içerik için duyarlılık etiketleri vardır. Bunlar ayrıca, bunları el ile uygulayan veya aşağıdaki durumlarda otomatik olarak uygulanan kullanıcılara veya gruplara da yayımlanır:
+        - Dosya, kullanıcının masaüstüne veya SharePoint sitesine açılır/düzenlenir/kaydedilir.
+        - Bir e-posta taslağı oluşturulur ve gönderilir.
+      - SharePoint ve OneDrive bekleyen dosyalara otomatik uygulama için duyarlılık etiketleri ve Exchange aracılığıyla aktarımda olan e-postalar vardır. Bunlar tüm siteleri veya belirli siteleri hedefler ve bu ortamlarda bekleyen dosyalara otomatik olarak uygulanır.
 
-2. Geçerli duyarlılık etiketlemeyi eski yöntemlerle veya alternatif yöntemlerle rasyonelleştirin
+2. Geçmiş veya alternatif yöntemlerle geçerli duyarlılık etiketlemesini rasyonalize etme
 
    - Azure Information Protection
 
-      Geçerli duyarlılık etiketleme şemasının mevcut Azure Information Protection etiketleme uygulamasıyla bir araya [geçirilmesi](../compliance/sensitivity-labels.md#sensitivity-labels-and-azure-information-protection) gerekiyor olabilir.
+      Geçerli duyarlılık etiketleme düzeninin mevcut [azure Information Protection](../compliance/sensitivity-labels.md#sensitivity-labels-and-azure-information-protection) etiketleme uygulamalarıyla mutabık kılınmış olması gerekebilir.
    - OME
 
-      E-posta koruması için modern duyarlılık etiketlemeyi ve OME gibi mevcut e-posta şifreleme yöntemlerini kullanmayı planlıyorsanız bu yöntemler birlikte kullanılabilir, ancak bu yöntemlerden hangisinin uygulanmalıdır senaryolarını anlanız gerekir. Modern Office 365 İleti Şifrelemesi etiket türü korumasını OME tabanlı koruma ile karşılaştıran bir tablo içeren yeni özelliklere [(OME)](#office-365-message-encryption-ome-new-capabilities) bakın.
+      E-posta koruması için modern duyarlılık etiketlemesi kullanmayı planlıyorsanız ve OME gibi mevcut e-posta şifreleme yöntemleri mevcutsa, bunlar birlikte bulunabilir, ancak bunların uygulanması gereken senaryoları anlamanız gerekir. Modern duyarlılık etiket türü korumasını OME tabanlı korumayla karşılaştıran bir tablo içeren [Office 365 İleti Şifrelemesi yeni özelliklerine (](#office-365-message-encryption-ome-new-capabilities)OME) bakın.
 
-3. Daha geniş bir bilgi koruma düzeniyle tümleştirmeyi plan edin. OME ile birlikte kullanılabilirlik özelliğinde, duyarlılık etiketleri Microsoft 365 kaybı önleme (DLP) ve Bulut Uygulamaları için Microsoft Defender gibi özelliklerle birlikte kullanılabilir. Veri [Microsoft Bilgi Koruması koruma Microsoft 365](../compliance/information-protection.md) ulaşmak için aşağıdaki diğer bilgilere bakın.
+3. Daha geniş bir bilgi koruma düzeniyle tümleştirmeyi planlayın. OME ile birlikte bulunmanın yanı sıra duyarlılık etiketleri, Microsoft Purview Veri Kaybı Önleme (DLP) ve Microsoft Defender for Cloud Apps gibi yan yana özellikler de kullanılabilir. Veri gizliliğiyle ilgili bilgi koruma hedeflerinize ulaşmak için bkz. [Verilerinizi Microsoft Purview ile](../compliance/information-protection.md) koruma.
 
-4. Duyarlılık etiketi sınıflandırma ve denetim düzeni geliştirin. Bkz [. Veri Sınıflandırma ve Duyarlılık Etiketi Taksonomisi](https://aka.ms/dataclassificationwhitepaper).
+4. Duyarlılık etiketi sınıflandırması ve denetim şeması geliştirme. Bkz. [Veri Sınıflandırma ve Duyarlılık Etiketi Taksonomisi](https://aka.ms/dataclassificationwhitepaper).
 
 ### <a name="general-guidance"></a>Genel rehber
 
-1. **Şema tanımı.** Etiket ve koruma uygulamak üzere teknik özellikleri kullanmadan önce, bir sınıflandırma şeması tanımlamak için tüm kuruluşlarıyla birlikte çalışabilirsiniz. Zaten kişisel verileri eklemenizi kolaylaştıran bir sınıflandırma şemanız olabilir.
-2. **Başlarken.** uygulanacak etiketlerin sayısına ve adlarına karar vererek başlayabilirsiniz. Bu etkinliği, hangi teknolojiyi ve etiketlerin nasıl uygulanacakları konusunda kaygılanmadan kullanın. Bu şemayı, şirket içinde ve diğer bulut hizmetlerde bulunan veriler de dahil olmak üzere, genel olarak tüm kuruluş genelinde uygulayabilirsiniz.
-3. **Ek öneriler** İlkeleri, etiketleri ve koşulları tasarlar ve sunarken, aşağıdaki önerileri dikkate a göz önünde bulundurabilirsiniz:
+1. **Şema tanımı.** Etiketleri ve korumayı uygulamak için teknik özellikleri kullanmadan önce, bir sınıflandırma şeması tanımlamak için kuruluşunuz genelinde çalışın. Kişisel verilerin eklenmesini kolaylaştıran bir sınıflandırma şemanız zaten olabilir.
+2. **Başlarken.** Uygulanacak etiketlerin sayısına ve adlarına karar vererek başlayın. Hangi teknolojinin kullanılacağı ve etiketlerin nasıl uygulanacağı konusunda endişelenmeden bu etkinliği gerçekleştirin. Bu şemayı şirket içinde ve diğer bulut hizmetlerinde bulunan veriler de dahil olmak üzere kuruluşunuz genelinde evrensel olarak uygulayın.
+3. **Ek öneriler** İlkeleri, etiketleri ve koşulları tasarlarken ve uygularken şu önerileri göz önünde bulundurun:
 
-   - **Varolan sınıflandırma şemasını (varsa) kullanın.** Birçok kuruluş zaten bazı formlarda veri sınıflandırması kullanıyor. Varolan etiket şemasını dikkatle değerlendirin ve mümkünse, bunu olduğu gibi kullanın. Son kullanıcılarınız tarafından tanınabilir tanıdık etiketlerin kullanımı benimsemeyi zorlar.
-   - **Küçük başlat'a.** Oluşturabilirsiniz etiket sayısında hemen hiçbir sınırlama yoktur. Ancak, çok fazla sayıda etiket ve alt etiket benimsemeyi yavaşlatabilirsiniz.
-   - **Senaryoları ve kullanım durumlarını kullanın.** Organizasyonuz içinde yaygın kullanım durumlarını tanımlama ve konu a kapsamındaki veri gizliliği düzenlemelerinden türetilen kullanım senaryolarını belirleme. Sınıflandırılmış etiket ve sınıflandırma yapılandırmasının uygulamada çalışsa da çalışmadığnı doğrulayın.
-   - **Her yeni etiket isteğini sorun.** Her senaryo veya kullanım durumu için gerçekten yeni bir etiket gerekiyor mu yoksa sahip olduğunuz etiketi kullanabilir misiniz? Etiketlerin sayısını en düşük düzeyde tutmak benimsemeyi geliştirin.
-   - **Önemli departmanlar için alt etiketler kullanın.** Bazı departmanların belirli etiketler gerektiren belirli ihtiyaçları olur. Bu etiketleri var olan bir etiket için alt etiket olarak tanımlayın ve genel olarak değil de kullanıcı gruplarına atanan kapsamı olan ilkeleri kullanmayı göz önünde bulundurabilirsiniz.
-   - **Kapsamları göz önünde bulundurarak ilkeleri göz önünde bulundurarak.** Kullanıcıların alt kümeleri tarafından hedeflenen ilkeler etiket aşırı yükü önlemektedir. Kapsamı olan bir ilke, yalnızca ilgili bölüm için çalışan çalışanlara rol veya departmana özgü etiketler ya da alt etiketler atamayı sağlar.
-   - **Anlamlı etiket adları kullanın.** Jargon, standartlar veya kısaltmaları etiket adı olarak kullanmamaya çalış. Benimsemeyi geliştirmek için son kullanıcıyla aynı adı kullanmaya çalış. PII, PCI, HIPAA, LBI, MBI ve HBI gibi etiketler kullanmak yerine, İş Dışı, Genel, Genel, Gizli ve Çok Gizli gibi adları dikkate alın.
+   - **Mevcut sınıflandırma şemasını (varsa) kullanın.** Birçok kuruluş zaten veri sınıflandırmayı bir biçimde kullanıyor. Mevcut etiket şemasını dikkatle değerlendirin ve mümkünse olduğu gibi kullanın. Son kullanıcılarınız tarafından tanınabilen tanıdık etiketlerin kullanılması benimsemeyi yönlendirecektir.
+   - **Küçük bir başlangıç.** Oluşturabileceğiniz etiket sayısıyla ilgili neredeyse hiçbir sınır yoktur. Ancak çok sayıda etiket ve alt etiket benimsemeyi yavaşlatabilir.
+   - **Senaryoları ve kullanım örneklerini kullanın.** Kuruluşunuzdaki yaygın kullanım örneklerini belirleyin ve tabi olduğunuz veri gizliliği düzenlemelerinden türetilen senaryoları kullanın. Öngörülen etiket ve sınıflandırma yapılandırmasının pratikte çalışıp çalışmayacağını doğrulayın.
+   - **Yeni bir etiket için her isteği sorgula.** Her senaryo veya kullanım örneğinin gerçekten yeni bir etikete ihtiyacı var mı yoksa zaten sahip olduğunuz etiketi kullanabilir misiniz? Etiket sayısını en düşük düzeyde tutmak benimsemeyi geliştirir.
+   - **Anahtar departmanlar için alt etiketleri kullanın.** Bazı departmanların belirli etiketler gerektiren belirli gereksinimleri olacaktır. Bu etiketleri mevcut bir etikete alt etiketler olarak tanımlayın ve genel olarak değil, kullanıcı gruplarına atanan kapsamlı ilkeleri kullanmayı göz önünde bulundurun.
+   - **Kapsamlı ilkeleri göz önünde bulundurun.** Kullanıcıların alt kümelerini hedefleyen ilkeler etiket aşırı yüklemesini engeller. Kapsamlı bir ilke, yalnızca ilgili departman için çalışan çalışanlara rol veya departmana özgü etiketler veya alt etiketler atamayı sağlar.
+   - **Anlamlı etiket adları kullanın.** Etiket adları olarak jargon, standartlar veya kısaltmalar kullanmamaya çalışın. Benimsemeyi geliştirmek için son kullanıcıyla rezonansı olan adları kullanmayı deneyin. PII, PCI, HIPAA, LBI, MBI ve HBI gibi etiketleri kullanmak yerine İş Dışı, Genel, Genel, Gizli ve Çok Gizli gibi adları göz önünde bulundurun.
 
 ### <a name="create-and-deploy-sensitivity-labels-for-sites-groups-and-teams"></a>Siteler, gruplar ve ekipler için duyarlılık etiketleri oluşturma ve dağıtma
 
-İçerik [İçerikleri'sinde](../compliance/sensitivity-labels-teams-groups-sites.md) duyarlılık <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 uyumluluk merkezi</a>, şimdi bunları şu kapsayıcılara uygulayabilirsiniz:
+<a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalında</a> [duyarlılık etiketleri](../compliance/sensitivity-labels-teams-groups-sites.md) oluşturduğunuzda, artık bunları şu kapsayıcılara uygulayabilirsiniz:
 
-- Microsoft Teams siteleri
-- Microsoft 365 grupları (eski adı Office 365 grupları)
-- SharePoint siteleri
+- siteleri Microsoft Teams
+- Microsoft 365 grupları (eski adıyla Office 365 grupları)
+- siteleri SharePoint
 
-Bu kapsayıcıların içeriğinin korunmasına yardımcı olmak için aşağıdaki etiket ayarlarını kullanın:
+Bu kapsayıcılardaki içeriğin korunmasına yardımcı olması için aşağıdaki etiket ayarlarını kullanın:
 
-- Grup bağlantılı web sitelerinin Microsoft 365 (genel veya özel) Teams
+- Microsoft 365 grup bağlantılı Teams sitelerinin gizliliği (genel veya özel)
 - Dış kullanıcı erişimi
-- Unmanaged cihazlarından erişim
+- Yönetilmeyen cihazlardan erişim
 
-Veri gizliliği için, hassas kişisel verilerin depolanmasında kullanılacak kapsayıcılarda dış paylaşımı önlemek için verileri içeren dosyaları özel olarak ve yönetilen cihazlar gerektirmeyi seçin.
+Veri gizliliği için, hassas kişisel verilerle içerik depolamak için kullanılacak kapsayıcıların dış paylaşımını önlemek için, verileri içeren dosyaları özel olarak işaretleyin ve yönetilen cihazlar gerektirir.
 
 ### <a name="create-and-deploy-sensitivity-labels-for-content"></a>İçerik için duyarlılık etiketleri oluşturma ve dağıtma
 
-Dosyalara uygulanan duyarlılık etiketleri, bu etiketlerin içeriğini şifrelemenizi, içeriği filigranla filigran oluşturmanizi ve Office uygulamaları içeriği için Outlook ve Web üzerinde Office.
+Dosyalara uygulanan duyarlılık etiketleri, içeriklerini şifrelemenize, içeriği filigranlayıp Office uygulama içeriği için Outlook ve Web üzerinde Office gibi diğer denetimleri tanımlamanıza olanak tanır.
 
-Kuruluş verilerinizi duyarlılık etiketleriyle korumaya başlamaya hazır olduğunda:
+Kuruluşunuzun verilerini duyarlılık etiketleriyle korumaya başlamaya hazır olduğunuzda:
 
-1. **Etiketleri oluşturun.** Duyarlılık etiketlerinizi oluşturmak ve farklı içerik duyarlılık düzeyleri için kuruluş sınıflandırma taksonomisi'ne göre adlar oluşturun. Sınıflandırma taksonomisi geliştirme hakkında daha fazla bilgi için Veri [Sınıflandırması ve Duyarlılık Etiketi Taksonomisi teknik belgesine bakın](https://aka.ms/dataclassificationwhitepaper).
-2. **Her etiketin neler yapalını tanımlayın.** Her etiketle ilişkili olarak istediğiniz koruma ayarlarını yapılandırabilirsiniz. Örneğin, daha düşük duyarlılık içeriğinin (örneğin "Genel" etiketi) yalnızca bir üst bilgi veya alt bilgi uygulanması gerekirken, daha yüksek duyarlılık içeriğinin (örneğin, "Gizli" etiketi) bir filigranı olması ve şifrelemenin etkinleştirilmesi gerekir.
-3. **Etiketleri yayımlama.** Duyarlılık etiketleriniz yapılandırıldıktan sonra, bunları bir etiket ilkesi kullanarak yayımlayın. Etiketlere sahip olması gereken kullanıcı ve gruplara ve hangi ilke ayarlarının gerektiğine karar verin. Tek bir etiket yeniden kullanılabilir. Bir kez tanımlar ve ardından bunu farklı kullanıcılara atanmış çeşitli etiket ilkelerine  dahilebilirsiniz.
+1. **Etiketleri oluşturun.** Farklı duyarlılık düzeyleri için duyarlılık etiketlerinizi kuruluşunuzun sınıflandırma taksonomisine göre oluşturun ve adlandırın. Sınıflandırma taksonomisi geliştirme hakkında daha fazla bilgi için [bkz. Veri Sınıflandırması ve Duyarlılık Etiketi Taksonomisi teknik incelemesi](https://aka.ms/dataclassificationwhitepaper).
+2. **Her etiketin neler yapabileceğini tanımlayın.** Her etiketle ilişkilendirılmasını istediğiniz koruma ayarlarını yapılandırın. Örneğin, daha düşük duyarlılık içeriğinin (örneğin, "Genel" etiketi) yalnızca bir üst bilgi veya alt bilginin uygulanmasını, daha yüksek duyarlılık içeriğinin (örneğin , "Gizli" etiket) bir filigranı olması ve şifrelemenin etkinleştirilmesini isteyebilirsiniz.
+3. **Etiketleri yayımlayın.** Duyarlılık etiketleriniz yapılandırıldıktan sonra bir etiket ilkesi kullanarak yayımlayın. Etiketlerin hangi kullanıcı ve gruplara sahip olması gerektiğine ve hangi ilke ayarlarının kullanılacağına karar verin. Tek bir etiket yeniden kullanılabilir. Bir kez tanımlarsınız ve ardından farklı kullanıcılara atanan çeşitli etiket ilkelerine ekleyebilirsiniz.
 
-Duyarlılık etiketlerini Microsoft 365 uyumluluk merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">sonra, kullanıcılar</a> içerik [oluşturulurken veya düzenlensin diye sınıflandırmak](../compliance/sensitivity-labels-office-apps.md) ve korumak için Office uygulamaları içinde görünmeye başlar.
+Duyarlılık etiketlerini <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalından</a> yayımladığınızda, kullanıcılar içeriği oluşturulduklarında veya düzenlendiklerinde sınıflandırmak ve korumak için [Office uygulamalarda](../compliance/sensitivity-labels-office-apps.md) görünmeye başlarlar.
 
-![Microsoft 365'da duyarlılık Microsoft 365.](../media/information-protection-deploy-protect-information/information-protection-deploy-protect-information-label-flow.png)
+![Microsoft 365'da duyarlılık etiketi dağıtım akışı.](../media/information-protection-deploy-protect-information/information-protection-deploy-protect-information-label-flow.png)
 
-Veri gizliliği için, hassas kişisel bilgileri içeren e-postaya veya içeriğe şifreleme ve diğer kuralların bulunduğu bir duyarlılık etiketini el ile uygulayabilirsiniz.
+Veri gizliliği için, e-postaya veya hassas kişisel bilgiler içeren içeriğe şifreleme ve diğer kuralları içeren bir duyarlılık etiketini el ile uygularsınız.
 
 > [!NOTE]
-> E-postaya şifreleme uygulanmış duyarlılık etiketleri, OME ile bazı örtüşen işlevlere sahip olur. Bkz [. OME ve duyarlılık etiketleriyle güvenli e-posta senaryoları karşılaştırması](#secure-email-scenarios-comparison-with-ome-and-sensitivity-labels).
+> E-postaya şifreleme etkinleştirilmiş duyarlılık etiketlerinin OME ile çakışan bazı işlevleri vardır. Bkz [. OME ve duyarlılık etiketleriyle güvenli e-posta senaryoları karşılaştırması](#secure-email-scenarios-comparison-with-ome-and-sensitivity-labels).
 
-### <a name="client-side-auto-labeling-when-users-edit-documents-or-compose-emails"></a>Kullanıcılar belgeleri düzenlerken veya e-posta düzenlerken istemci tarafı otomatik etiketleme
+### <a name="client-side-auto-labeling-when-users-edit-documents-or-compose-emails"></a>Kullanıcılar belgeleri düzenlerken veya e-posta oluştururken istemci tarafı otomatik etiketleme
 
-Duyarlılık etiketi oluşturmanız, [belirttiğiniz koşullarla](../compliance/apply-sensitivity-label-automatically.md) eşleşmesi için e-posta dahil olmak üzere bu etiketi otomatik olarak içeriğe atabilirsiniz.
+Duyarlılık etiketi oluşturduğunuzda, belirttiğiniz koşullarla eşleştiğinde bu etiketi e-posta da dahil olmak üzere içeriğe [otomatik olarak atayabilirsiniz](../compliance/apply-sensitivity-label-automatically.md) .
 
-İçeriklere otomatik olarak duyarlılık etiketleri uygulayabilme özelliği önemlidir, çünkü:
+İçeriklere duyarlılık etiketlerini otomatik olarak uygulayabilme özelliği önemlidir çünkü:
 
-- Sınıflandırmalardan her biri için kullanıcılarınızı ne zaman kullanılamayacaklarını eğitmek zorunda değilsiniz.
-- Tüm içeriği doğru şekilde sınıflandırmak için kullanıcılara güvenmeniz gerek değildir.
-- Kullanıcıların artık ilkelerinizi malıdır; onlar da çalışmalarına odaklanabilirsiniz.
+- Sınıflandırmalarınızın her birini kullanmak için kullanıcılarınızı eğitmek zorunda değilsiniz.
+- Tüm içeriği doğru sınıflandırmak için kullanıcılara güvenmeniz gerekmez.
+- Kullanıcıların artık ilkeleriniz hakkında bilgi sahibi olması gerekmez; bunun yerine çalışmalarına odaklanabilir.
 
-Otomatik etiket, hem kullanıcılara etiket önerilerini hem de otomatik olarak etiket uygulamayı destekler. Ancak her iki durumda da, içeriği doğru etiketlemeye yardımcı olmak için kullanıcı etiketi kabul etmeye veya reddetmeye karar verir.
+Otomatik etiketleme, kullanıcılara etiket önermenin yanı sıra otomatik olarak etiket uygulamayı destekler. Ancak her iki durumda da kullanıcı, içeriğin doğru etiketlenmesine yardımcı olmak için etiketi kabul etmeye veya reddetmeye karar verir.
 
-Belge kaydedmeden önce bile etiketin uygulanama süresi nedeniyle, istemci tarafı etiketlemesi belgelerde çok az gecikmeye neden olur. Bununla birlikte, tüm istemci uygulamaları otomatik etiketlemeyi desteklemez. Bu özellik, Azure Information Protection birleşik etiketleme istemcisi ve azure uygulamalarının [bazı Office destekler](../compliance/sensitivity-labels-office-apps.md#support-for-sensitivity-label-capabilities-in-apps).
+Belge kaydedilmeden önce bile etiket uygulanabileceğinden, bu istemci tarafı etiketlemesi belgeler için çok az gecikmeye neden olur. Ancak tüm istemci uygulamaları otomatik etiketlemeyi desteklemez. Bu özellik, Azure Information Protection birleşik etiketleme istemcisi ve [Office uygulamalarının bazı sürümleri](../compliance/sensitivity-labels-office-apps.md#support-for-sensitivity-label-capabilities-in-apps) tarafından desteklenir.
 
-Yapılandırma yönergeleri için bkz[. Belirli uygulamalar için otomatik Office yapılandırma](../compliance/sensitivity-labels-office-apps.md#support-for-sensitivity-label-capabilities-in-apps).
+Yapılandırma yönergeleri için bkz. [Office uygulamaları için otomatik etiketlemeyi yapılandırma](../compliance/sensitivity-labels-office-apps.md#support-for-sensitivity-label-capabilities-in-apps).
 
-Veri gizliliği için, hassas kişisel bilgiler içeren içeriklere otomatik olarak duyarlılık etiketleri uygulayabilirsiniz.
+Veri gizliliği için hassas kişisel bilgiler içeren içerik için duyarlılık etiketlerini otomatik olarak uygularsınız.
 
-### <a name="service-side-auto-labeling-when-content-is-already-saved"></a>İçerik zaten kayded olduğunda hizmet tarafındaki otomatik etiketleme
+### <a name="service-side-auto-labeling-when-content-is-already-saved"></a>İçerik zaten kaydedildiğinde hizmet tarafı otomatik etiketleme
 
-Bu yöntem, duyarlılık etiketleriyle otomatik sınıflandırma olarak adlandırılır. Ayrıca, geri kalan veriler için otomatik etiketleme (SharePoint ve OneDrive'daki belgeler için) ve geçişteki veriler (Exchange tarafından gönderilen veya alınan e-posta için) olarak da ifade edilenleri duyabilirsiniz. Örneğin Exchange, posta kutularında kalan e-postaları içermez.
+Bu yöntem, duyarlılık etiketleriyle otomatik sınıflandırma olarak adlandırılır. Bekleyen veriler (SharePoint ve OneDrive belgeler için) ve aktarımdaki veriler (Exchange tarafından gönderilen veya alınan e-postalar için) için otomatik etiketleme olarak da anıldığını duyabilirsiniz. Exchange için bekleyen posta kutularına e-postalar dahil değildir.
 
-Bu etiket, kullanıcı uygulaması yerine hizmetin kendisi tarafından uygulandığından, kullanıcıların hangi uygulamalara sahip olduğu ve hangi sürüme sahip olduğu konusunda kaygılanmanız yoktur. Sonuç olarak bu özellik, kurum genelinde hemen kullanılabilir ve ölçekte etiketlemeye uygundur. Otomatik etiket ilkeleri etiketlemeyi desteklemez, çünkü kullanıcı etiket işlemiyle etkileşimde bulunmakla etkileşimde bulunmakla ilgili bilgi desteklemez. Bunun yerine, yönetici, etiketi gerçekten uygulamadan önce içeriğin doğru etikete sahip olduğundan emin olmak için benzetim modunda ilkeleri çalıştırır.
+Bu etiketleme kullanıcı uygulaması yerine hizmetin kendisi tarafından uygulandığından, kullanıcıların hangi uygulamalara ve hangi sürüme sahip olduğu konusunda endişelenmeniz gerekmez. Sonuç olarak, bu özellik kuruluşunuz genelinde hemen kullanılabilir ve büyük ölçekte etiketleme için uygundur. Kullanıcı etiketleme işlemiyle etkileşim kurmadığından otomatik etiketleme ilkeleri önerilen etiketlemeyi desteklemez. Bunun yerine yönetici, etiketi uygulamadan önce içeriğin doğru etiketlenmesine yardımcı olmak için ilkeleri simülasyon modunda çalıştırır.
 
-Yapılandırma yönergeleri için bkz. Otomatik etiketleme ilkeleri için SharePoint[, OneDrive yapılandırma Exchange](../compliance/apply-sensitivity-label-automatically.md#how-to-configure-auto-labeling-policies-for-sharepoint-onedrive-and-exchange).
+Yapılandırma yönergeleri için bkz. [SharePoint, OneDrive ve Exchange için otomatik etiketleme ilkelerini yapılandırma](../compliance/apply-sensitivity-label-automatically.md#how-to-configure-auto-labeling-policies-for-sharepoint-onedrive-and-exchange).
 
-Önemli olan sitelerde veri gizliliği için hassas kişisel bilgileri içeren içeriğin otomatik olarak şifrelen için anında duyarlılık etiketleri bulunmaktadır.
+İlgi duyulan sitelerdeki veri gizliliği için hassas kişisel bilgiler içeren içeriğin otomatik olarak şifrelenmesi için duyarlılık etiketleri gönderebilirsiniz.
 
-## <a name="data-loss-prevention"></a>Veri kaybını önleme
+## <a name="data-loss-prevention"></a>Veri kaybı önleme
 
-Microsoft 365'te, hem şirket içinde hem de dışında kişisel bilgi içeren verilerin paylaşımı gibi riskli, yanlışlıkla veya uygunsuz paylaşımı tespit etmek, uyarmak ve engellemek için veri kaybı önleme [(DLP) önlemeyi (DLP)](../compliance/dlp-learn-about-dlp.md) kullanabilirsiniz.
+Hem şirket içinde hem de dışarıdan kişisel bilgiler içeren verilerin paylaşılması gibi riskli, yanlışlıkla veya uygunsuz paylaşımları algılamak, uyarmak ve engellemek için Microsoft 365 [veri kaybı önlemeyi (DLP)](../compliance/dlp-learn-about-dlp.md) kullanabilirsiniz.
 
-DLP şunları şunları sağlar:
+DLP şunları yapmanızı sağlar:
 
-- Riskli paylaşım etkinliklerini tanımlama ve izleme.
-- Kullanıcıları doğru kararlar vermek için bağlam içinde yol gösterici rehberlikle eğitin.
-- İçeriğin üretkenliğini artırmadan veri kullanımı ilkelerini zorunlu kılın.
-- Verileri paylaşılan zaman algılamak ve korumak için sınıflandırma ve etiketlemeyle tümleştirin.
+- Riskli paylaşım etkinliklerini belirleme ve izleme.
+- Doğru kararları almaları için bağlam içi rehberlikle kullanıcıları eğitin.
+- Üretkenliği engellemeden içerik üzerinde veri kullanım ilkelerini zorunlu kılma.
+- Verileri paylaşıldığında algılamak ve korumak için sınıflandırma ve etiketleme ile tümleştirin.
 
 ### <a name="supported-workloads-for-dlp"></a>DLP için desteklenen iş yükleri
 
-<a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 uyumluluk merkezi'daki</a> bir DLP ilkesiyle, Microsoft 365, Exchange Online, SharePoint, OneDrive ve OneDrive gibi birçok konumda yer alan hassas öğeleri tanımlayabilir, izleyebilir ve otomatik olarak koruyabilirsiniz. Microsoft Teams.
+<a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalındaki</a> bir DLP ilkesiyle Exchange Online, SharePoint, OneDrive ve Microsoft Teams gibi Microsoft 365 birçok konumdaki hassas öğeleri tanımlayabilir, izleyebilir ve otomatik olarak koruyabilirsiniz.
 
-Örneğin, herhangi bir posta sitesinde depolanan kredi kartı numarası içeren herhangi bir OneDrive tanımlayabilir veya yalnızca belirli OneDrive sitelerini izleyebilirsiniz.
+Örneğin, herhangi bir OneDrive sitesinde depolanan kredi kartı numarası içeren herhangi bir belgeyi tanımlayabilir veya yalnızca belirli kişilerin OneDrive sitelerini izleyebilirsiniz.
 
-Ayrıca, hassas öğeleri tanımlama ve DLP ilkeleri uygulama olanağı içeren Excel, PowerPoint ve Word'un yerel olarak yüklenmiş sürümlerinde de hassas öğeleri izleyebilir ve koruyabilirsiniz. DLP, bu kullanıcılar bu uygulamalardan içerik paylaştığında sürekli Office sağlar.
+Ayrıca Excel, PowerPoint ve Word'ün yerel olarak yüklenmiş sürümlerinde hassas öğeleri izleyebilir ve koruyabilirsiniz. Bu, hassas öğeleri tanımlama ve DLP ilkeleri uygulama özelliğini içerir. DLP, kişiler bu Office uygulamalarından içerik paylaştığında sürekli izleme sağlar.
 
 > [!div class="mx-imgBorder"]
 > ![DLP için desteklenen iş yükleri.](../media/information-protection-deploy-protect-information/information-protection-deploy-protect-information-supported-workloads.png)
 
-Bu şekil, kişisel verileri koruyan bir DLP örneği gösterir.
+Bu şekilde, kişisel verileri koruyan bir DLP örneği gösterilmektedir.
 
 > [!div class="mx-imgBorder"]
 > ![DLP kullanarak kişisel verileri koruma örneği.](../media/information-protection-deploy-protect-information/information-protection-deploy-protect-information-dlp-example-use.png)
 
-DLP, sistem durumu kaydı içeren bir belgeyi veya e-postayı tanımlamak için kullanılır ve sonra bu belgeye erişimi otomatik olarak engeller veya e-postanın gönderilmelerini engeller. Ardından DLP, alıcıyı bir ilke ipucuyla bilgili olarak son kullanıcıya ve yöneticiye bir uyarı gönderir.
+DLP, sistem durumu kaydı içeren bir belgeyi veya e-postayı tanımlamak için kullanılır ve ardından bu belgeye erişimi otomatik olarak engeller veya e-postanın gönderilmesini engeller. DLP daha sonra alıcıya bir ilke ipucu bildirir ve son kullanıcıya ve yöneticiye bir uyarı gönderir.
 
 ### <a name="planning-for-dlp"></a>DLP planlama
 
@@ -230,111 +230,111 @@ DLP ilkelerinizi planlama:
 
 - İş gereksinimleriniz.
 
-- Kuruluşun, veri gizliliği risklerini değerlendirme ve hassas öğeleri tanımlama [makalesinde açıklandığı gibi risk tabanlı bir değerlendirme](information-protection-deploy-assess.md).
+- [Veri gizliliği risklerini değerlendirme ve hassas öğeleri tanımlama makalesinde](information-protection-deploy-assess.md) açıklandığı gibi kuruluşun risk tabanlı değerlendirmesi.
 
-- Yerinde başka bilgi koruma ve yönetim mekanizmaları veya veri gizliliğini planlama.
+- Veri gizliliğinin yerinde veya planlanmasında diğer bilgi koruma ve idare mekanizmaları.
 
-- Veri gizliliği risklerini değerlendirme ve hassas öğeleri tanımlama makalesinde açıklandığı gibi, değerlendirme çalışmalarınızı temel alarak kişisel veriler için tanımmış olduğunuz [hassas bilgi türleri](information-protection-deploy-assess.md). DLP ilkesi koşulları, hem hassas bilgi türlerine hem de bekletme etiketlerine dayandırabilirsiniz.
+- Değerlendirmenize bağlı olarak kişisel veriler için tanımladığınız hassas bilgi türleri [, veri gizliliği risklerini değerlendirme ve hassas öğeleri tanımlama makalesinde](information-protection-deploy-assess.md) açıklandığı gibi çalışır. DLP ilkesi koşulları hem hassas bilgi türlerini hem de bekletme etiketlerini temel alabilir.
 
-- DLP koşullarını belirtmeniz gereken bekletme etiketleri. Daha fazla [bilgi için, kuruluş makalesinde veri gizlilik düzenlemesine tabi olan](information-protection-deploy-govern.md) geçerli bilgilere bakın.
+- Bekletme etiketleri, DLP koşullarını belirtmeniz gerekir. Daha fazla [bilgi için kuruluşunuzun veri gizliliği düzenlemesine tabi idare bilgileri](information-protection-deploy-govern.md) makalesine bakın.
 
-- Kuruluşta birinin hassas bilgi türlerinde, bekletme etiketlerinde, yasal düzenlemelerde ve uyumluluk ilkelerinde yer alan değişikliklere yönelik ilkeleri işletmesi ve ayarlaması gereken sürekli DLP ilkesi yönetimi.
+- Kuruluştaki birinin hassas bilgi türlerindeki, bekletme etiketlerindeki, yönetmeliklerdeki ve uyumluluk ilkelerindeki değişiklikler için ilkeleri çalıştırmasını ve ayarlamasını gerektiren sürekli DLP ilke yönetimi.
 
-Duyarlılık etiketleri DLP ilkesi koşullarında kullanılamaz, ancak erişimi engellemeye yönelik bazı koruma senaryoları yalnızca hassas bilgi türlerine göre otomatik olarak uygulanan duyarlılık etiketleriyle gerçekleştirilebilir. Güçlü bir duyarlılık etiketi kullanılıyorsa, koruma korumasını korumak için DLP'nin kullanıp kullanılmaması gerektiğini düşünün, çünkü:
+Duyarlılık etiketleri DLP ilke koşullarında kullanılamasa da, erişimi önlemeye yönelik belirli koruma senaryolarına yalnızca hassas bilgi türlerine göre otomatik olarak uygulanabilen duyarlılık etiketleriyle ulaşılabilir. Sağlam duyarlılık etiketlemesi varsa, korumayı artırmak için DLP'nin kullanılıp kullanılmayacağını göz önünde bulundurun çünkü:
 
-  - DLP, dosyaların paylaşımını önlenebilir. Duyarlılık etiketleri yalnızca erişimi önlenebilir.
+  - DLP, dosyaların paylaşılmasını engelleyebilir. Duyarlılık etiketleri yalnızca erişimi engelleyebilir.
 
-  - DLP'nin kurallar, koşullar ve eylemler açısından daha ayrıntılı denetim düzeyleri vardır.
+  - DLP kurallar, koşullar ve eylemler açısından daha ayrıntılı denetim düzeylerine sahiptir.
 
-  - DLP ilkeleri sohbet Teams mesajlarına uygulanabilir. Duyarlılık etiketleri yalnızca belgelere ve e-postalara uygulanabilir.
+  - DLP ilkeleri Teams sohbet ve kanal iletilerine uygulanabilir. Duyarlılık etiketleri yalnızca belgelere ve e-postalara uygulanabilir.
 
 
 ### <a name="dlp-policies"></a>DLP ilkeleri
 
-DLP ilkeleri Microsoft Uyumluluk yönetim merkezinde yapılandırılır ve koruma düzeyini, ilkenin hassas bilgi türünü ve hedef iş yüklerini belirtir. Bunun temel bileşenleri korumayı ve veri türlerini belirlemektir.
+DLP ilkeleri Microsoft Purview uyumluluk portalında yapılandırılır ve koruma düzeyini, ilkenin aradığı hassas bilgi türünü ve hedef iş yüklerini belirtir. Temel bileşenleri korumayı ve veri türlerini tanımlamaktır.
 
 > [!div class="mx-imgBorder"]
-> ![DLP ilkesi yapılandırması Microsoft 365.](../media/information-protection-deploy-protect-information/information-protection-deploy-protect-information-dlp-config.png)
+> ![Microsoft 365'de DLP ilkesi yapılandırması.](../media/information-protection-deploy-protect-information/information-protection-deploy-protect-information-dlp-config.png)
 
-GDPR farkındalığı için örnek bir DLP ilkesi aşağıdaki gibidir.
+GDPR farkındalığı için örnek bir DLP ilkesi aşağıda verilmiştir.
 
 ![GDPR farkındalığı için örnek DLP ilkesi.](../media/information-protection-deploy-protect-information/information-protection-deploy-protect-information-dlp-example-policy.png)
 
-DLP [ilkeleri oluşturma](../compliance/create-test-tune-dlp-policy.md) ve uygulama hakkında daha fazla bilgi için bu makaleye bakın.
+DLP ilkeleri oluşturma ve uygulama hakkında daha fazla bilgi için [bu makaleye](../compliance/create-test-tune-dlp-policy.md) bakın.
 
 ### <a name="protection-levels-for-data-privacy"></a>Veri gizliliği için koruma düzeyleri
 
-Aşağıdaki tabloda, DLP kullanarak korumayı artırmaya yönelik üç yapılandırma listelemaktadır.
+Aşağıdaki tabloda DLP kullanarak korumayı artırmaya yönelik üç yapılandırma listelemektedir.
 
 ![DLP ile veri gizliliği koruma düzeyleri.](../media/information-protection-deploy-protect-information/information-protection-deploy-protect-information-dlp-protection-levels.png)
 
-İlk yapılandırma olan Farkındalık, veri gizliliği düzenlemelerine yönelik uyumluluk yapılandırmasını karşılamak için başlangıç noktası ve minimum koruma düzeyi olarak kullanılabilir.
+İlk yapılandırma olan Farkındalık, veri gizliliği düzenlemelerine yönelik uyumluluk gereksinimlerini karşılamak için başlangıç noktası ve minimum koruma düzeyi olarak kullanılabilir.
 
 > [!NOTE]
-> Koruma düzeyleri artarak, kullanıcıların bilgileri paylaşma ve bilgilere erişme yetenekleri bazı durumlarda azalır ve bu durum kullanıcıların üretkenliğini veya günlük görevleri tamamlama yeteneğini etkileyebilir.
+> Koruma düzeyleri arttıkça, kullanıcıların bilgileri paylaşma ve bilgilere erişme yeteneği bazı durumlarda azalır ve üretkenliğini veya günlük görevleri tamamlama becerisini etkileyebilir.
 
-Koruma düzeylerini artıran çalışanlarınızı daha güvenli bir ortamda üretken olmaya devam etmek için zaman kendinizi yeni güvenlik ilkeleri ve yordamlar konusunda eğitip eğitin.
+Çalışanlarınızın koruma düzeylerini artırırken daha güvenli bir ortamda üretken olmaya devam etmelerine yardımcı olmak için, zaman ayırarak onları yeni güvenlik ilkeleri ve yordamları konusunda eğitin.
 
 ### <a name="example-of-using-sensitivity-labels-with-dlp"></a>DLP ile duyarlılık etiketleri kullanma örneği
 
-Duyarlılık etiketleri, son derece düzenlemeye tabi bir ortamda veri gizliliği sağlamak için DLP ile birlikte kullanılabilir. Tümleşik dağıtımın temel adımları:
+Duyarlılık etiketleri, yüksek düzeyde düzenlenmiş bir ortamda veri gizliliği sağlamak için DLP ile birlikte çalışabilir. Tümleşik dağıtımın temel adımları şunlardır:
 
-1. Veri gizliliği için mevzuat ve başka türlü iş gereksinimleri belge belge belgelemektedir.
-2. Hedef veri kaynakları, türler ve sahiplik, veri gizliliği kaygıları ile nitelene olarak niteler.
-3. Veri gizliliği etkin noktaları için gereksinimleri karşılamaya ve yönetmeye genel bir strateji oluşturulmaktadır.
-4. Veri gizlilik denetim stratejisini ele alan aşamalı bir eylem planı hazırlar.
+1. Veri gizliliği için mevzuat ve diğer iş gereksinimleri belgelenmiştir.
+2. Hedef veri kaynakları, türleri ve sahipliği, veri gizliliği endişelerine göre karakterize edilir.
+3. Gereksinimleri ele almak ve veri gizliliği etkin noktalarını korumak ve yönetmek için genel bir strateji oluşturulur.
+4. Veri gizliliği denetim stratejisini ele almak için aşamalı bir eylem planı uygulanır.
 
-Bu öğeler belirlendiktan sonra hassas bilgi türlerini, duyarlılık etiketleme taksonomisini ve DLP ilkelerini birlikte kullanabilirsiniz. Bu şekilde bir örnek ve sayı 365'tir.
+Bu öğeler belirlendikten sonra hassas bilgi türlerini, duyarlılık etiketleme taksonominizi ve DLP ilkelerini birlikte kullanabilirsiniz. Bu şekilde bir örnek gösterilmektedir.
 
 > [!div class="mx-imgBorder"]
 > ![DLP ile çalışan duyarlılık etiketleri örneği.](../media/information-protection-deploy-protect-information/information-protection-deploy-protect-information-sensitivity-lables-dlp.png)
 
-[Bu resmin daha büyük bir sürümüne bakın](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/media/information-protection-deploy-protect-information/information-protection-deploy-protect-information-sensitivity-lables-dlp.png)
+[Bu görüntünün daha büyük bir sürümünü görün](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/media/information-protection-deploy-protect-information/information-protection-deploy-protect-information-sensitivity-lables-dlp.png)
 
-Aşağıda, şekilde gösterildiği gibi DLP ve duyarlılık etiketlerini birlikte kullanan bazı veri koruma senaryoları ve bunlar yer almaktadır.
+Aşağıda, şekilde gösterildiği gibi DLP ve duyarlılık etiketlerini birlikte kullanan bazı veri koruma senaryoları yer alır.
 
-| Senaryo | İşlem |
+| Senaryo | Işlem |
 |:-------|:-----|
-| A | <ol><li>İçerik için duyarlılık etiketleri yönetici tarafından, içeriğe ve e-postaya el ile veya otomatik olarak uygulama için gruplar halinde yayımlanır. </li><li>Kullanıcı A, şifreleme veya uygulanan diğer ayarlarla içerikle etkileşim kurduğunda etiketleri el ile veya otomatik olarak uygular. </li><li>Kullanıcı A, konuk kullanıcı olan Kullanıcı B'ye korumalı bir e-posta veya dosya gönderir. </li></ol> |
-| B | Yönetici tarafından A Kullanıcısı'na yayımlanan DLP ilkesi A Kullanıcısı'nın e-postayı ve/veya dosyayı Kullanıcı B'ye göndermelerini engeller. |
-| C |  "Sahip konukları davet etmeyecek" ayarının yer alan duyarlılık etiketi, ekip üyelerine veya site için bir ekip veya Teams veren A SharePoint yayımlanır. Sitenin başka bir kullanıcısı seçmeli olarak dosya paylaşımını Kullanıcı B ile denemesi, ancak DLP'nin dosyayı engellemesi. |
-| D | Site içeriğine otomatik olarak uygulamanın duyarlılık etiketi bir veya birden çok sitede yayımlanır ve bu da bir koruma katmanı daha sağlar ve sonuçta korumalı bir site elde eder. |
+| A | <ol><li>İçeriğin duyarlılık etiketleri, yönetici tarafından el ile veya otomatik uygulamadan içeriğe ve e-postaya yönelik kullanıcılara ve gruplara yayımlanır. </li><li>A kullanıcısı, içerikle etkileşim kurarken etiketleri el ile veya otomatik olarak uygular; şifreleme veya diğer ayarlar uygulanır. </li><li>A kullanıcısı, konuk kullanıcı olan B Kullanıcısına korumalı bir e-posta veya dosya gönderir. </li></ol> |
+| B | Yönetici tarafından A Kullanıcısına yayımlanan DLP ilkesi, A Kullanıcısının E-postayı ve/veya dosyayı B Kullanıcısına göndermesini engeller. |
+| C |  "Sahip konukları davet edemiyor" ayarına sahip duyarlılık etiketi, Teams ekibi veya SharePoint sitesi sağlayan A Kullanıcısı'na yayımlanır. Sitenin başka bir kullanıcısı, B kullanıcısı ile bir dosyayı seçerek paylaşmayı dener, ancak DLP bunu engeller. |
+| D | Otomatik uygulamadan siteye içerik için duyarlılık etiketi bir veya daha fazla sitede yayımlanarak başka bir koruma katmanı sağlanır ve bu da korumalı bir siteyle sonuçlanır. |
 |||
 
 ## <a name="office-365-message-encryption-ome-new-capabilities"></a>Office 365 İleti Şifrelemesi (OME) yeni özellikleri
 
-Kişiler hasta durumu bilgileri veya müşteri ve çalışan bilgileri gibi hassas öğeleri almak için çoğunlukla e-posta kullanır. E-posta iletisi şifrelemesi, yalnızca hedeflenen alıcıların ileti içeriğini görüntüleyemelerini sağlamaya yardımcı olur.
+İnsanlar genellikle hasta sağlığı bilgileri veya müşteri ve çalışan bilgileri gibi hassas öğeleri değiştirmek için e-posta kullanır. E-posta iletisi şifrelemesi, yalnızca hedeflenen alıcıların ileti içeriğini görüntüleyebilmesine yardımcı olur.
 
-[OME ile](../compliance/ome.md), kurum içindeki ve dışındaki kişiler arasında şifrelenmiş iletiler gönderebilir ve alabilirsiniz. OME; Outlook.com, Yahoo!, Gmail ve diğer e-posta hizmetleriyle çalışır. OME, yalnızca hedeflenen alıcıların ileti içeriğini görüntüleyemelerini sağlamaya yardımcı olur.
+[OME](../compliance/ome.md) ile kuruluşunuzun içindeki ve dışındaki kişiler arasında şifreli iletiler gönderebilir ve alabilirsiniz. OME, Outlook.com, Yahoo!, Gmail ve diğer e-posta hizmetleriyle çalışır. OME, yalnızca hedeflenen alıcıların ileti içeriğini görüntüleyebilmesine yardımcı olur.
 
-Veri gizliliği için, hassas öğeler içeren iç iletileri korumak için OME kullanırsınız. Office 365 İleti Şifrelemesi, Azure Information Protection'ın bir parçası olan Microsoft Azure Hak Yönetimi'ne (Azure RMS) bağlı bir çevrimiçi hizmettir. Bu, e-postanızı güvenlik altına almak için şifreleme, kimlik ve yetkilendirme ilkelerini içerir. Hak yönetimi şablonlarını, İletileri Iletme seçeneğini ve yalnızca şifrele seçeneğini kullanarak iletileri şifreebilirsiniz.
+Veri gizliliği için, hassas öğeler içeren iç iletileri korumak için OME kullanırsınız. Office 365 İleti Şifrelemesi, Azure Information Protection'nin bir parçası olan Microsoft Azure Rights Management (Azure RMS) üzerinde oluşturulmuş bir çevrimiçi hizmettir. Bu, e-postanızın güvenliğini sağlamaya yardımcı olmak için şifreleme, kimlik ve yetkilendirme ilkelerini içerir. İletileri, hak yönetimi şablonlarını, İletme seçeneğini ve yalnızca şifrele seçeneğini kullanarak şifreleyebilirsiniz.
 
-Ayrıca, bu korumayı uygulamak için posta akışı kuralları da tanımlayabilirsiniz. Örneğin, belirli bir alıcıya adreslenen tüm iletilerin şifrelenirken şifrelenirken gerekli olduğu veya konu satırda belirli anahtar sözcükler içeren bir kural oluşturabilir ve ayrıca alıcıların iletinin içeriğini kopyalayıp yazdıramayacaklarını belirtebilirsiniz.
+Bu korumayı uygulamak için posta akışı kuralları da tanımlayabilirsiniz. Örneğin, belirli bir alıcıya gönderilen tüm iletilerin şifrelenmesini gerektiren veya konu satırında belirli anahtar sözcükler içeren bir kural oluşturabilir ve ayrıca alıcıların iletinin içeriğini kopyalayamaz veya yazdıramazsınız.
 
-Buna ek olarak, OME [Gelişmiş](../compliance/ome-advanced-message-encryption.md) İleti Şifrelemesi dış alıcılar ve şifreli e-postalara erişimleri üzerinde daha esnek denetimler gerektiren uyumluluk yükümlülüklerini karşılamanıza da yardımcı olur. Microsoft 365'da OME Gelişmiş İleti Şifrelemesi ile, kuruluş dışında paylaşılan hassas e-postaları hassas bilgi türlerini algılayan otomatik ilkelerle denetim altına alabilirsiniz.
+Ayrıca, OME [Gelişmiş İleti Şifrelemesi](../compliance/ome-advanced-message-encryption.md) , dış alıcılar ve şifrelenmiş e-postalara erişimleri üzerinde daha esnek denetimler gerektiren uyumluluk yükümlülüklerini karşılamanıza yardımcı olur. Microsoft 365'da OME Gelişmiş İleti Şifrelemesi ile, hassas bilgi türlerini algılayan otomatik ilkelerle kuruluş dışında paylaşılan hassas e-postaları denetleyebilirsiniz.
 
-Veri gizliliği için, e-postayı bir dış tarafla paylaşmanız gerekirse son kullanma tarihi belirtebilirsiniz ve iletileri iptal edersiniz. Dış alıcılara gönderilen iletiler için yalnızca bir son kullanma tarihi iptal edilebilir ve bu tarihin son kullanma tarihini ayarlayın.
+Veri gizliliği için, e-postayı bir dış tarafla paylaşmanız gerekiyorsa, son kullanma tarihi belirtebilir ve iletileri iptal edebilirsiniz. Yalnızca dış alıcılara gönderilen iletiler için iptal edebilir ve son kullanma tarihi ayarlayabilirsiniz.
 
 ### <a name="secure-email-scenarios-comparison-with-ome-and-sensitivity-labels"></a>OME ve duyarlılık etiketleriyle güvenli e-posta senaryoları karşılaştırması
 
-Şifreleme içeren e-postaya uygulanan OME ve duyarlılık etiketlerinin bazı çakışmaları vardır, bu nedenle bu tabloda gösterildiği gibi hangi senaryoların uygulanabilecek olduğunu anlamanız önemlidir.
+Şifreleme ile e-postaya uygulanan OME ve duyarlılık etiketlerinin bazı çakışmaları vardır, bu nedenle bu tabloda gösterildiği gibi hangi senaryolara uygulanabileceğini anlamak önemlidir.
 
 | Senaryo | Duyarlılık Etiketleri | OME |
 |:-------|:-----|:-------|
-| İç + iş ortakları <br> İç kullanıcılarla güvenilir iş ortakları arasında güvenli bir şekilde iletişim kurma ve işbirliği yapma | Öner – tamamen özelleştirilmiş sınıflandırma ve koruma içeren etiketler | Evet – Yalnızca şifreleme veya Sınıflandırmaya sahip korumayı iletme |
-| Dış taraflar <br> Tüm dış/tüketici kullanıcılarıyla güvenli bir şekilde iletişim kurma ve işbirliği yapma | Evet – etikette önceden tanım alıcıları | Öner – alıcılara göre tam zamanlı koruma |
-| Sona erme/iptali olan şirket içi + iş ortakları <br> Süre sonu ve iptal ile iç kullanıcılarla ve güvenilir iş ortaklarıyla posta ve içerik erişimini denetleme | Öner - Erişim süresiyle tamamen özelleştirilmiş koruma, kullanıcı dosyaları el ile izleyebilir ve iptal eder | Hayır – iç posta için iptal veya son kullanma tarihi yoktur |
-| Süre sonu/iptali olan dış taraflar <br> Süre sonu ve iptali olan dış/tüketici kullanıcılarının posta ve içerik erişimini denetleme | Evet, kullanıcı dosyaları el ile izleyebilir | Öner (E5) – yönetici Güvenlik ve Uyumluluk Merkezi'& postayı iptal ettirebilirsiniz |
-| Otomatik etiketleme <br> Kuruluş, belirli hassas içerikle ve/veya belirli alıcılarla posta/ekleri otomatik olarak korumak istiyor | Öner (E5) - İstemcileri otomatik olarak etiketleme Exchange Outlook, posta akış kurallarını ve DLP İlkesini geliştirmektedir | Evet - Yalnızca şifrele veya İleri iletme korumalı posta akış kuralları ve DLP ilkesi |
+| dahili + iş ortakları <br> İç kullanıcılar ve güvenilir iş ortakları arasında güvenli iletişim kurma ve işbirliği yapma | Öneri – tamamen özelleştirilmiş sınıflandırma ve koruma özelliklerine sahip etiketler | Evet – Sınıflandırma olmadan yalnızca şifreleme veya İletme koruması |
+| Dış taraflar <br> Tüm dış/tüketici kullanıcılarla güvenli iletişim kurma ve işbirliği yapma | Evet – etiketteki alıcıları önceden tanımla | Öneri – alıcıları temel alan tam zamanında koruma |
+| Süre sonu/iptali olan dahili + iş ortakları <br> Süre sonu ve iptal ile iç kullanıcılar ve güvenilir iş ortaklarıyla posta ve içerik erişimini denetleme | Öneri - erişim süresiyle tamamen özelleştirilmiş koruma, kullanıcı dosyaları el ile izleyebilir ve iptal edebilir | Hayır – iç posta için iptal veya süre sonu yok |
+| Süre sonu/iptali olan dış taraflar <br> Son kullanma tarihi ve iptali olan dış/tüketici kullanıcılarla posta ve içerik erişimini denetleme | Evet – kullanıcı dosyaları el ile izleyebilir | Öneri (E5) – yönetici Güvenlik & Uyumluluk Merkezi'nden gelen postaları iptal edebilir |
+| Otomatik etiketleme <br> Kuruluş, belirli hassas içeriğe ve/veya belirli alıcılara sahip postaları/ekleri otomatik olarak korumak istiyor | Öneri (E5) - Exchange ve Outlook istemcilerinde otomatik etiketleme, posta akışı kurallarını ve DLP ilkesini genişletiyor | Evet - posta akışı kuralları ve DLP ilkesi ile Yalnızca şifrele veya İletme koruması |
 ||||
 
-Bu iki yöntem arasında son kullanıcı ve yönetici deneyimlerinden de farklar olur.
+Bu iki yöntem arasında son kullanıcı ve yönetici deneyimlerinde de farklılıklar olacaktır.
 
-## <a name="teams-with-protection-for-highly-sensitive-data"></a>Teams hassas veriler için korumayla çalışma
+## <a name="teams-with-protection-for-highly-sensitive-data"></a>Son derece hassas veriler için koruma ile Teams
 
-Kişisel verileri gizlilik düzenlemelerine uygun olarak depolamayı planlamış Teams için bkz. Aşağıdakiler için ayrıntılı rehberlik [](secure-teams-security-isolation.md)ve yapılandırma adımları sağlayan güvenlik yalıtımlı bir ekip yapılandırma:
+kişisel verileri Teams'da veri gizliliği düzenlemelerine tabi olarak depolamayı planlayan kuruluşlar için bkz. Ayrıntılı yönergeler ve yapılandırma adımları sağlayan [bir ekibi güvenlik yalıtımıyla](secure-teams-security-isolation.md) yapılandırma:
 
 - Kimlik ve cihaz erişimi
 - Özel ekip oluşturma
-- Temel ekip sitesi izinlerinin kilitlenmesi
+- Temel alınan ekip sitesi izinlerinin kilitlenmesi
 - Şifrelemeli grup tabanlı duyarlılık etiketi

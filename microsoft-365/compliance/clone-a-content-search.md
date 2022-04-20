@@ -1,5 +1,5 @@
 ---
-title: İçerik Arama'ya kopyalama
+title: İçerik Araması Kopyalama
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -17,51 +17,51 @@ search.appverid:
 ms.assetid: 7b40eeaa-544c-4534-b89b-9f79998e374c
 ms.custom:
 - seo-marvel-apr2020
-description: Bu makaledeki PowerShell betiğini kullanarak, Uyumluluk Merkezi'nde veya Farklı Bir Uyumluluk Merkezi'nde var olan İçerik Office 365 Microsoft 365.
-ms.openlocfilehash: 763bd6ac49841e5b55bbbc187631ef74426d9d0a
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Office 365 veya Microsoft 365 uyumluluk merkezinde var olan bir İçerik Aramasını hızla kopyalamak için bu makaledeki PowerShell betiğini kullanın.
+ms.openlocfilehash: 782620d3693f4659c135d2a52aa7062a490a7cd0
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983237"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64940499"
 ---
-# <a name="clone-a-content-search"></a>İçerik Arama'ya kopyalama
+# <a name="clone-a-content-search"></a>İçerik Araması Kopyalama
 
-Birçok posta kutusu veya posta kutusu Office 365 Microsoft 365 sitelerde arama SharePoint ve sitelerde OneDrive İş İçerik Arama'nın oluşturulması zaman alabilirsiniz. Bir URL'yi yanlış yazmışsanız, arama için sitelerin belirt açık olması hatalara da neden olabilir. Bu sorunlardan kaçınmak için, bu makaledeki Windows PowerShell betiği kullanarak var olan İçerik Arama'larını hızla kopyaabilirsiniz. Bir aramanızı kopyalarken, özgün aramayla aynı özellikleri (içerik konumları ve arama sorgusu gibi) içeren yeni bir arama (farklı bir adla) oluşturulur. Daha sonra anahtar sözcük sorgusunu veya tarih aralığını değiştirerek yeni aramanızı düzenleyebilir ve çalıştırabilirsiniz.
+Office 365 veya Microsoft 365 uyumluluk merkezinde birçok posta kutusunda veya SharePoint ve OneDrive İş sitelerde arama yapılan bir İçerik Araması oluşturmak biraz zaman alabilir. Url'yi yanlış yazdığınızda, aranacak sitelerin belirtilmesi hatalara da açık olabilir. Bu sorunlardan kaçınmak için bu makaledeki Windows PowerShell betiğini kullanarak mevcut İçerik Aramasını hızla kopyalayabilirsiniz. Bir aramayı kopyaladığınızda, özgün aramayla aynı özellikleri (içerik konumları ve arama sorgusu gibi) içeren yeni bir arama (farklı bir ada sahip) oluşturulur. Ardından anahtar sözcük sorgusunu veya tarih aralığını değiştirerek yeni aramayı düzenleyebilir ve çalıştırabilirsiniz.
   
-İçerik Aramalarını neden klonlayasınız?
+İçerik Aramalarını neden kopyalamalı?
   
-- Farklı anahtar sözcük arama sorgularının sonuçlarını karşılaştırmak için, aynı içerik konumlarında çalıştırın.
+- Farklı anahtar sözcük arama sorgularının sonuçlarını karşılaştırmak için aynı içerik konumlarında çalıştırılır.
     
-- Yeni arama  oluşturmak zorunda kalmanızı, çok fazla sayıda içerik konumu girmenizi kaydetmek için.
+- Yeni bir arama oluştururken çok sayıda içerik konumunu yeniden girdiğinizden sizi kurtarmak için.
     
-- Arama sonuçlarının boyutunu azaltmak için. Örneğin, dışarı aktarılamanız için çok fazla sonuç döndüren bir aramanız varsa, arama sonuçlarının sayısını azaltmak için aramanızı klonlar ve sonra tarih aralığını temel alan bir arama koşulu  eklersiniz.
+- Arama sonuçlarının boyutunu küçültmek için. Örneğin, dışarı aktarılmayacak kadar çok sonuç döndüren bir aramanız varsa, aramayı kopyalayabilir ve ardından arama sonuçlarının sayısını azaltmak için tarih aralığına göre bir arama koşulu ekleyebilirsiniz.
   
-## <a name="script-information"></a>Komut dosyası bilgileri
+## <a name="script-information"></a>Betik bilgileri
 
-- Bu konu başlığı altında açıklanan betiği çalıştırmak için, Microsoft 365 uyumluluk merkezi Yöneticisi rol grubunun bir üyesi olmak gerekir.
+- Bu konuda açıklanan betiği çalıştırmak için Microsoft Purview uyumluluk portalında eBulma Yöneticisi rol grubunun üyesi olmanız gerekir.
     
-- Betik en az hata işlemeyi içerir. Betiğin birincil amacı hızla içerik aramalarını klonlamaktır.
+- Betik en az hata işleme içerir. Betiğin birincil amacı, bir içerik aramasını hızla kopyalamaktır.
     
-- Betik yeni bir İçerik Arama oluşturur, ancak başlatmaz.
+- Betik yeni bir İçerik Araması oluşturur ancak başlatmaz.
     
-- Bu betik, tıkanıklıkta olduğunuz İçerik Arama'nın bir eKbulma durumuyla ilişkilendirilip ilişkilendirililil ilişkilendiril noktadaki olmadığını dikkate alır. Arama bir vakayla ilişkilendirilmişse, yeni arama da aynı vakayla ilişkilendirilecek. Var olan arama bir vakayla ilişkili değilse, yeni arama uyumluluk merkezinde **İçerik arama** sayfasında listelenir. 
+- Bu betik, kopyaladığınız İçerik Aramasının bir eBulma olayıyla ilişkilendirilip ilişkilendirilmediğini dikkate alır. Arama bir servis talebiyle ilişkilendirilmişse, yeni arama aynı servis talebiyle de ilişkilendirilir. Mevcut arama bir servis talebiyle ilişkilendirilmiyorsa, yeni arama uyumluluk merkezindeki **İçerik arama** sayfasında listelenir. 
     
-- Bu konu başlığı altında verilen örnek betik, herhangi bir Microsoft standart destek programı veya hizmeti kapsamında desteklenmiyor. Örnek betik, hiçbir garanti olmaksızın OLDUĞU GIBI verilmektedir. Microsoft, ticarete uygunluk veya belirli bir amaca uygunluk ile ilgili zımni garantiler dahil ancak bununla sınırlı olmaksızın her türlü zımni garantiyi bundan sonra feragat ediyor. Örnek betiğin ve belgelerin kullanımından veya performansından doğan tüm riskler size aittir. Hiçbir durumda Microsoft, yazarları veya betiklerin oluşturulması, üretimi veya dağıtımında yer alan diğer herhangi bir kişi, örnek betiklerin veya belgelerin kullanımından ya da kullanılamazlığından kaynaklanan hiçbir zarardan (ticari kar kaybı, iş kesintisi, iş bilgisi kaybı veya diğer maddi kayıplar dahil ancak ancak bu zararlar dahil ancak ancak hiçbir zarardan sorumlu olmayacaktır),  Microsoft bu tür zarar olasılığı hakkında bilgilansa bile.
+- Bu konuda sağlanan örnek betik, herhangi bir Microsoft standart destek programı veya hizmeti altında desteklenmez. Örnek betik, herhangi bir garanti olmadan OLDUĞU GIBI sağlanır. Microsoft, satılabilirlik veya belirli bir amaca uygunlukla ilgili zımni garantiler dahil ancak bunlarla sınırlı olmaksızın tüm zımni garantileri de reddeder. Örnek betiğin ve belgelerin kullanımından veya performansından kaynaklanan tüm risk sizinle kalır. Hiçbir durumda Microsoft, yazarları veya betiklerin oluşturulması, üretimi veya teslimi ile ilgili herhangi bir kişi, örnek betiklerin veya belgelerin kullanımından veya kullanılamama durumundan kaynaklanan herhangi bir zarardan (bunlarla sınırlı olmaksızın, iş kârı kaybı, iş kesintisi, iş bilgisi kaybı veya diğer maddi kayıplar dahil) sorumlu tutulamaz,  Microsoft'a bu tür hasarlar olabileceği bildirilmiş olsa bile.
   
-## <a name="step-1-run-the-script-to-clone-a-search"></a>1. Adım: Betiği çalıştırarak bir aramanın kopyasını kopyalama
+## <a name="step-1-run-the-script-to-clone-a-search"></a>1. Adım: Aramayı kopyalamak için betiği çalıştırma
 
-Bu adımda betik, var olan bir İçerik Arama'ya tıkanarak yeni bir İçerik Arama oluşturacak. Bu betiği çalıştırarak aşağıdaki bilgileri girmeniz istenir:
+Bu adımdaki betik, var olan bir betiği kopyalayarak yeni bir İçerik Araması oluşturur. Bu betiği çalıştırdığınızda aşağıdaki bilgiler istenir:
   
-- **Kullanıcı kimlik bilgileriniz** - Betik, Güvenlik ve Uyumluluk Merkezi PowerShell'e bağlanmak & kimlik bilgilerinizi kullanır. Daha önce de belirtildiği gibi, betiği çalıştırmak için Security & compCompliance Center'nda eBulma Yöneticisi rol grubunun üyesi olmak gerekir. 
+- **Kullanıcı kimlik bilgileriniz** - Betik, Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanmak için kimlik bilgilerinizi kullanır. Daha önce belirtildiği gibi, betiği çalıştırmak için Güvenlik & compCompliance Center'da eBulma Yöneticisi rol grubunun üyesi olmanız gerekir. 
     
-- **Var olan aramanın adı** - Bu, klonlamak istediğiniz İçerik Arama'dır. 
+- **Var olan aramanın adı** - Bu, kopyalamak istediğiniz İçerik Araması'dır. 
     
-- Oluşturulacak **yeni** aramanın adı - Bu değeri boş bırakırsanız betik, tıkanık olarak oluşturduğunuz aramanın adını temel alan yeni arama için bir ad oluşturulur. 
+- **Oluşturulacak yeni aramanın adı** - Bu değeri boş bırakırsanız, betik yeni arama için kopyaladığınız aramanın adını temel alan bir ad oluşturur. 
     
-Bir aramanızı klonlamak için:
+Aramayı kopyalamak için:
   
-1. Aşağıdaki metni, Windows PowerShell dosya adı son eklerini kullanarak bir .ps1 betik dosyasına kaydedin; örneğin, `CloneSearch.ps1`.
+1. Aşağıdaki metni .ps1 dosya adı soneki kullanarak bir Windows PowerShell betik dosyasına kaydedin; örneğin, `CloneSearch.ps1`.
     
   ```powershell
   # This PowerShell script clones an existing content search in the Security &amp; Compliance Center.
@@ -121,7 +121,7 @@ Bir aramanızı klonlamak için:
   }
   ```
 
-2. Windows PowerShell'i açın ve betiği kaydeden klasöre gidin.
+2. Windows PowerShell açın ve betiği kaydettiğiniz klasöre gidin.
     
 3. Betiği çalıştırın; örneğin:
     
@@ -129,22 +129,22 @@ Bir aramanızı klonlamak için:
     .\CloneSearch.ps1
     ```
 
-4. Kimlik bilgileriniz istendiğinde e-posta adresinizi ve parolanızı girin, ardından Tamam'a **tıklayın**.
+4. Kimlik bilgileriniz istendiğinde, e-posta adresinizi ve parolanızı girin ve **tamam'a** tıklayın.
     
-5. Betik tarafından istendiğinde aşağıdaki bilgileri girin. Her bilgi parçasını yazın ve Enter tuşuna **basın**.
+5. Betik tarafından istendiğinde aşağıdaki bilgileri girin. Her bilgi parçasını yazın ve **Enter tuşuna** basın.
     
-    - Var olan aramanın adı.
+    - Mevcut aramanın adı.
     
     - Yeni aramanın adı.
     
-    Betik yeni İçerik Arama'yı oluşturur, ancak başlatmaz. Bu size, sonraki adımda aramanızı düzenleme ve çalıştırma fırsatı verir. **Get-ComplianceSearch** cmdlet'ini çalıştırarak veya yeni aramanın bir davayla ilişkilendirilmiş olup olmadığını bağlı  olarak uyumluluk merkezinde İçerik arama veya **eBulma** sayfasına gidip yeni aramanın özelliklerini görüntüleyebilirsiniz. 
+    Betik yeni İçerik Aramasını oluşturur ancak başlatmaz. Bu size sonraki adımda aramayı düzenleme ve çalıştırma fırsatı verir. Yeni aramanın bir servis talebiyle ilişkilendirilip ilişkilendirilmediğine bağlı olarak **, Get-ComplianceSearch** cmdlet'ini çalıştırarak veya uyumluluk merkezindeki **İçerik araması** veya **eBulma** sayfasına giderek yeni aramanın özelliklerini görüntüleyebilirsiniz. 
   
-## <a name="step-2-edit-and-run-the-cloned-search-in-the-compliance-center"></a>2. Adım: Uyumluluk merkezinde kopyalanan arama düzenleme ve çalıştırma
+## <a name="step-2-edit-and-run-the-cloned-search-in-the-compliance-center"></a>2. Adım: Kopyalanan aramayı uyumluluk merkezinde düzenleme ve çalıştırma
 
-Var olan İçerik Arama'larını klonlamak için betiği çalıştırdikten sonra, bir sonraki adım uyumluluk merkezine gidip yeni aramanızı düzenlemek ve çalıştırmaktır. Daha önce de belirtildiği gibi, anahtar sözcük arama sorgusunu değiştirerek ve arama koşullarını ekleyerek veya kaldırarak bir arama düzenleyebilirsiniz. Daha fazla bilgi için bkz.:
+Mevcut İçerik Aramasını kopyalamak için betiği çalıştırdıktan sonra, sonraki adım yeni aramayı düzenlemek ve çalıştırmak için uyumluluk merkezine gitmektir. Daha önce belirtildiği gibi, anahtar sözcük arama sorgusunu değiştirerek ve arama koşullarını ekleyerek veya kaldırarak bir aramayı düzenleyebilirsiniz. Daha fazla bilgi için bkz.:
   
-- [arama sonuçlarında Office 365](content-search.md)
+- [Office 365 İçerik Arama](content-search.md)
     
-- [İçerik Arama için Anahtar Sözcük sorguları ve arama koşulları](keyword-queries-and-search-conditions.md)
+- [İçerik Arama için anahtar sözcük sorguları ve arama koşulları](keyword-queries-and-search-conditions.md)
     
-- [eBulma servis örnekleri](./get-started-core-ediscovery.md)
+- [eBulma durumları](./get-started-core-ediscovery.md)

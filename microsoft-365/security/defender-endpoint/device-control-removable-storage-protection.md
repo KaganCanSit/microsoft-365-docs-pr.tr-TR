@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 3d679cfa4f09b06e2c7923ee1fe6e47247d90f76
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 5210530bb9102436e66667a0482aa09d941e26f9
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64665084"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64939421"
 ---
 # <a name="microsoft-defender-for-endpoint-device-control-removable-storage-protection"></a>Uç Nokta için Microsoft Defender Cihaz Denetimi Çıkarılabilir Depolama Koruması
 
@@ -82,7 +82,7 @@ Uç Nokta için Microsoft Defender'de cihaz denetimi çıkarılabilir depolama k
 
 **Özellikler** - Kullanıcının bir öğeyi veya bilgiyi çıkarılabilir medyaya veya USB cihazına kopyalamasını denetleyin, uyarın veya engelleyin.
 
-**Açıklama** - Windows hakkında daha fazla bilgi için bkz [. uç nokta veri kaybını önleme Microsoft 365 hakkında bilgi edinin](../../compliance/endpoint-dlp-learn-about.md).
+**Açıklama** - Windows hakkında daha fazla bilgi için bkz [. Uç nokta veri kaybını önleme hakkında bilgi edinin](../../compliance/endpoint-dlp-learn-about.md).
 
 **Desteklenen Platform** - Windows 10, Windows 11
 

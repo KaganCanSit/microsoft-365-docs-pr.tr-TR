@@ -26,12 +26,12 @@ ms.custom:
 - intro-overview
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: c97338121d38650116540564441f3b37051bf05f
-ms.sourcegitcommit: dd7e5b67ff4ae4e7f74490e437c1795933c74cc7
+ms.openlocfilehash: 99549ba8077d966c4d5649e144fa0259f9178629
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64731195"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64944359"
 ---
 # <a name="microsoft-365-defender"></a>Microsoft 365 Defender
 
@@ -176,7 +176,7 @@ Ortak denetimler ve içerik aynı yerde görünür veya tek bir veri akışında
 
 :::image type="content" source="../../media/converged-roles-5.png" alt-text="İzinler & rolleri sayfasında görüntülenen Uç noktalar rolleri & grupları" lightbox="../../media/converged-roles-5.png":::
 
-Microsoft 365 Defender erişimi, Azure AD genel rolleri ile veya özel roller kullanılarak yapılandırılır. Uç Nokta için Defender için bkz. [Microsoft 365 Defender portalına kullanıcı erişimi atama](/microsoft-365/security/defender-endpoint/assign-portal-access). Office 365 için Defender için bkz. [Microsoft 365 uyumluluk merkezi ve Microsoft 365 Defender İzinler](../office-365-security/permissions-microsoft-365-compliance-security.md).
+Microsoft 365 Defender erişimi, Azure AD genel rolleri ile veya özel roller kullanılarak yapılandırılır. Uç Nokta için Defender için bkz. [Microsoft 365 Defender portalına kullanıcı erişimi atama](/microsoft-365/security/defender-endpoint/assign-portal-access). Office 365 için Defender için bkz. [Microsoft Purview uyumluluk portalındaki izinler ve Microsoft 365 Defender](../office-365-security/permissions-microsoft-365-compliance-security.md).
 
 - [Microsoft 365 Defender erişimi yönetme](m365d-permissions.md) hakkında daha fazla bilgi edinin
 - [Microsoft 365 Defender'de özel roller oluşturma](custom-roles.md) hakkında daha fazla bilgi edinin

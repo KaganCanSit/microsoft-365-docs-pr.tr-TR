@@ -1,5 +1,5 @@
 ---
-title: Tahmini ve gerçek eBulma arama sonuçları arasındaki farklar
+title: Tahmini ve gerçek eBulma arama sonuçları
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -19,21 +19,21 @@ search.appverid:
 - MET150
 ms.assetid: 8f20ca4f-a908-46ec-99e6-9890d269ecf2
 description: Office 365'deki eBulma araçlarıyla yapılan aramalarda tahmini ve gerçek arama sonuçlarının neden farklılık gösterebileceğini anlayın.
-ms.openlocfilehash: 5ec234ed698e621a629aecf7adf34fb675b29034
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: b1e4ba4938e418d8364dfb06b24b6f7a58d6a463
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64783853"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64938169"
 ---
 # <a name="differences-between-estimated-and-actual-ediscovery-search-results"></a>Tahmini ve gerçek eBulma arama sonuçları arasındaki farklar
 
 Bu makale, aşağıdaki Microsoft 365 eBulma araçlarından birini kullanarak çalıştırabileceğiniz aramalar için geçerlidir: 
 
 - İçerik arama
-- Temel eKeşif
+- eBulma (Standart)
 
-Bir eBulma araması çalıştırdığınızda, kullanmakta olduğunuz araç arama ölçütleriyle eşleşen öğe sayısına (ve toplam boyutuna) ilişkin bir tahmin döndürür. Örneğin, Microsoft 365 uyumluluk merkezi bir arama çalıştırdığınızda, seçilen aramanın açılır sayfasında tahmini arama sonuçları görüntülenir.
+Bir eBulma araması çalıştırdığınızda, kullanmakta olduğunuz araç arama ölçütleriyle eşleşen öğe sayısına (ve toplam boyutuna) ilişkin bir tahmin döndürür. Örneğin, Microsoft Purview uyumluluk portalında bir arama çalıştırdığınızda, seçilen aramanın açılır sayfasında tahmini arama sonuçları görüntülenir.
   
 ![Arama açılır sayfasında görüntülenen sonuçların tahmini.](../media/EstimatedSearchResults1.png)
   
@@ -79,7 +79,7 @@ Bu farklılıkların bazı nedenleri şunlardır:
 
     Dizine alınmamış öğelerin kuruluştaki her konumdan dışarı aktarılmamasının nedeni, dışarı aktarma hataları olasılığını artırıp arama sonuçlarını dışarı aktarmak ve indirmek için gereken süreyi artırabileceğidir.
 
-- **SharePoint ve OneDrive arama tahminlerine dahil olmayan dizine alınmamış öğeler**. SharePoint sitelerden ve OneDrive Entreprise hesaplarından dizine alınmamış öğeler tahmini arama sonuçlarına dahil edilmez. Bunun nedeni, SharePoint dizininin dizine eklenmemiş öğeler için veri içermemesidir. Arama tahminlerine yalnızca posta kutularından dizine alınmamış öğeler eklenir. Ancak, arama sonuçlarını dışarı aktarırken dizine alınmamış öğeler eklerseniz, SharePoint ve OneDrive dizine alınmamış öğeler dahil edilir ve bu da aslında dışarı aktarılan öğelerin sayısını artırır. Bu, tahmini sonuçlar (SharePoint ve OneDrive sitelerindeki dizinlenmemiş öğeleri içermez) ile indirilen gerçek öğeler arasında farklara neden olur. Dizine alınmamış öğeleri yalnızca arama ölçütleriyle eşleşen öğeleri içeren içerik konumlarından dışarı aktarma kuralı bu durumda da geçerlidir.
+- **SharePoint ve OneDrive arama tahminlerine dahil olmayan dizine alınmamış öğeler**. SharePoint sitelerden ve OneDrive İş hesaplarından dizine alınmamış öğeler tahmini arama sonuçlarına dahil edilmez. Bunun nedeni, SharePoint dizininin dizine eklenmemiş öğeler için veri içermemesidir. Arama tahminlerine yalnızca posta kutularından dizine alınmamış öğeler eklenir. Ancak, arama sonuçlarını dışarı aktarırken dizine alınmamış öğeler eklerseniz, SharePoint ve OneDrive dizine alınmamış öğeler dahil edilir ve bu da aslında dışarı aktarılan öğelerin sayısını artırır. Bu, tahmini sonuçlar (SharePoint ve OneDrive sitelerindeki dizinlenmemiş öğeleri içermez) ile indirilen gerçek öğeler arasında farklara neden olur. Dizine alınmamış öğeleri yalnızca arama ölçütleriyle eşleşen öğeleri içeren içerik konumlarından dışarı aktarma kuralı bu durumda da geçerlidir.
 
 - **SharePoint ve OneDrive belge sürümleri**. SharePoint siteleri ve OneDrive hesapları ararken, tahmini arama sonuçları sayısına belgenin birden çok sürümü dahil değildir. Ancak arama sonuçlarını dışarı aktarırken tüm belge sürümlerini dahil etme seçeneğiniz vardır. Arama sonuçlarını dışarı aktarırken belge sürümlerini eklerseniz, dışarı aktarılan öğelerin gerçek sayısı (ve toplam boyutu) artırılır.
 

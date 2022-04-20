@@ -15,101 +15,101 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Davanız Advanced eDiscovery koruyucular etkinliğine kolayca erişmek ve bu etkinlikte arama yapmak için Özel Koruyucu Yönetim aracını kullanın.
+description: EBulma (Premium) Koruyucu Yönetimi aracını kullanarak olayınızın içindeki koruyuculara kolayca erişin ve etkinlikte arama gerçekleştirin.
 ms.custom:
 - seo-marvel-mar2020
 - admindeeplinkEXCHANGE
-ms.openlocfilehash: d0ea6e94bd48c055cac23d8a96477e036369dd5c
-ms.sourcegitcommit: b1066b2a798568afdea9c09401d52fa38fe93546
+ms.openlocfilehash: 35b622e00caeeca78c85849f03b3a21f8a28b443
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/13/2021
-ms.locfileid: "63018807"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64943523"
 ---
 # <a name="view-custodian-audit-activity"></a>Yediemin denetim etkinliğini görüntüleme
 
-Kullanıcının belirli bir belgeyi görüntüp görüntülemediğni veya posta kutusundan bir öğeyi temiz olup bulamadığnı bulmanız mı gerekiyor? Advanced eDiscovery artık denetim günlüğü arama Microsoft 365 uyumluluk merkezi aracıyla tümleştirilmiştir. Bu eklenmiş deneyimi kullanarak, Advanced eDiscovery Custo bir Management aracını kullanarak, davanız içindeki koruyucular için etkinliklere kolayca erişerek ve bu etkinliklerde aramaarak araştırmanızı kolaylaştırabilirsiniz.
+Kullanıcının belirli bir belgeyi görüntüleyip görüntülemediğini veya bir öğeyi posta kutusundan temizleyip temizlemediğini bulmanız mı gerekiyor? Microsoft Purview eKeşif (Premium) artık Microsoft Purview uyumluluk portalındaki mevcut denetim günlüğü arama aracıyla tümleştirilmiştir. Bu ekli deneyimi kullanarak, eBulma (Premium) Koruyucu Yönetimi aracını kullanarak, olayınızdaki koruyucular için etkinliğe kolayca erişerek ve etkinlikte arama yaparak araştırmanızı kolaylaştırabilirsiniz.
 
-## <a name="get-permissions"></a>İzinleri al
+## <a name="get-permissions"></a>İzinleri alma
 
-Denetim günlüğünde arama View-Only için Exchange Online Günlükleri veya Denetim Günlükleri rolüne atanmış Exchange Online gerekir. Varsayılan olarak, bu roller yönetim merkezinin İzinler sayfasında yer alan Uyumluluk Yönetimi <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">ve Kuruluş Exchange atanır</a>. Kullanıcıya Advanced eDiscovery denetim günlüğünde minimum düzeyde ayrıcalıkla arama yapma olanağı vermek için, Exchange Online'te özel bir rol grubu oluşturabilir, View-Only Denetim Günlükleri veya Denetim Günlükleri rolünü ekleyebilir ve sonra da kullanıcıyı yeni rol grubunun bir üyesi olarak ebilirsiniz. Daha fazla bilgi için bkz. Exchange Online'da rol gruplarını yönetme.
+Denetim günlüğünde arama yapmak için Exchange Online'da View-Only Denetim Günlükleri veya Denetim Günlükleri rolüne atanmış olmanız gerekir. Varsayılan olarak, bu roller <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange yönetim merkezindeki</a> İzinler sayfasındaki Uyumluluk Yönetimi ve Kuruluş Yönetimi rol gruplarına atanır. Kullanıcıya eBulma (Premium) denetim günlüğünde en düşük ayrıcalık düzeyiyle arama yapabilmesi için, Exchange Online'da özel bir rol grubu oluşturabilir, View-Only Denetim Günlükleri veya Denetim Günlükleri rolünü ekleyebilir ve kullanıcıyı yeni rol grubunun üyesi olarak ekleyebilirsiniz. Daha fazla bilgi için bkz. Exchange Online rol gruplarını yönetme.
 
 > [!IMPORTANT]
-> Kullanıcıya denetim View-Only İzinler sayfasındaki Denetim Günlükleri veya Denetim Günlükleri rolü atarsanız, Microsoft 365 uyumluluk merkezi günlüğünde arama yapmak mümkün olmayacaktır. İzinleri aynı dosyanın Exchange Online. Çünkü, denetim günlüğünde arama yapmak için kullanılan temel cmdlet, bir Exchange Online cmdlet'tir.
+> Bir kullanıcıya uyumluluk portalındaki İzinler sayfasında Denetim Günlükleri veya Denetim Günlükleri rolünü View-Only atarsanız, denetim günlüğünde arama yapamaz. İzinleri Exchange Online atamanız gerekir. Bunun nedeni, denetim günlüğünde arama yapmak için kullanılan temel cmdlet'in Exchange Online bir cmdlet olmasıdır.
 
-## <a name="step-1-search-the-audit-log-for-activities-performed-by-a-custodian"></a>1. Adım: Denetim günlüğünde, özel denetim tarafından gerçekleştirilen etkinlikler için arama yapın
+## <a name="step-1-search-the-audit-log-for-activities-performed-by-a-custodian"></a>1. Adım: Bir koruyucu tarafından gerçekleştirilen etkinlikler için denetim günlüğünde arama yapma
 
-1. **eBulma E-> Advanced eDiscovery** gidin ve vakayı açın.
+1. **eBulma > eBulma (Premium)** bölümüne gidin ve servis talebini açın.
   
-2. Kaynaklar **sekmesine** tıklayın.
+2. **Kaynaklar** sekmesine tıklayın.
   
-3. Özel **görünümler sayfasında**, listeden bir özel bilgi seçin ve sonra da uçarak giriş sayfasındaKimlik etkinliğini görüntüle'ye tıklayın.
+3. **Koruyucular** sayfasında, listeden bir koruyucu seçin ve açılır sayfada **Koruyucu etkinliğini görüntüle'ye** tıklayın.
 
-    Custo bu etkinlikleri arama sayfası görüntülenir. Önceki adımda seçtiğiniz **Custo custo bir** açılan kutusunda görüntülendiğinden emin olun. Açılan kutuda farklı koruyucular seçebilirsiniz, ancak bir defada yalnızca tek bir koruyucu için etkinlik arayabilirsiniz.
+    Koruyucu etkinlikleri arama sayfası görüntülenir. Önceki adımda seçtiğiniz koruyucunun **, Koruyucu** açılan kutusunda görüntülendiğini unutmayın. Açılan kutudan farklı koruyucular seçebilirsiniz, ancak aynı anda yalnızca bir koruyucunun etkinliklerini arayabilirsiniz.
 
-    ![Custo bir etkinlikler arama sayfası.](../media/AeDCustodianActivities1.png)
+    ![Koruyucu etkinlikler arama sayfası.](../media/AeDCustodianActivities1.png)
    
-4. Aşağıdaki arama ölçütlerini yapılandırma:
+4. Aşağıdaki arama ölçütlerini yapılandırın:
       
-   1. **Etkinlikler** - Arayabilirsiniz etkinlikleri görüntülemek için açılan listeye tıklayın. Siz arama çalıştırdikten sonra, yalnızca seçili etkinliklere yönelik denetim kayıtları görüntülenir. Tüm **etkinlikler için sonuçları göster'i seçerek** , diğer arama ölçütlerine uyan koruyucu tarafından gerçekleştirilen tüm etkinliklere yönelik sonuçlar görüntülenir.
+   1. **Etkinlikler** - Arayabileceğiniz etkinlikleri görüntülemek için açılan listeye tıklayın. Aramayı çalıştırdıktan sonra yalnızca seçili etkinliklere ilişkin denetim kayıtları görüntülenir. **Tüm etkinlikler için sonuçları göster** seçildiğinde, koruyucu tarafından gerçekleştirilen ve diğer arama ölçütlerine uyan tüm etkinliklerin sonuçları görüntülenir.
 
-      ![Etkinlikler Listesi.](../media/CustodianActivityAudit.PNG)
+      ![Etkinliklerin Listesi.](../media/CustodianActivityAudit.PNG)
       
-   1. **Başlangıç tarihi ve Bitiş tarihi** - Bir tarih ve saat aralığı seçerek, o dönem içinde 4. Son yedi gün varsayılan olarak seçilidir. Tarih ve saat, Eşgüdümli Evrensel Saat (UTC) biçiminde görüntülenir. Belirterek en uzun tarih aralığı bir yıldır.
+   1. **Başlangıç tarihi ve Bitiş tarihi** - Bu dönemde gerçekleşen olayları görüntülemek için bir tarih ve saat aralığı seçin. Son yedi gün varsayılan olarak seçilir. Tarih ve saat Eşgüdümlü Evrensel Saat (UTC) biçiminde gösterilir. Belirtebileceğiniz maksimum tarih aralığı bir yıldır.
       
-   1. **Custodians** - Bu kutuya tıklayın ve ardından arama sonuçlarını görüntülemek için belirli bir custo custood seçeneğini seçin. Bu kutuda seçtiğiniz kullanıcılar tarafından gerçekleştirilen seçili etkinliğin denetim kayıtları, sonuç listesinde görüntülenir.
+   1. **Koruyucular** - Bu kutuya tıklayın ve arama sonuçlarını görüntülemek üzere belirli bir koruyucu seçin. Bu kutuda seçtiğiniz kullanıcılar tarafından gerçekleştirilen seçili etkinliğin denetim kayıtları sonuç listesinde görüntülenir.
       
-5. Tıkla ![Arama Düğmesi.](../media/SearchButton.PNG)  seçin. Arama sonuçları yüklenir ve birkaç dakika sonra Custo custo custs search sayfasındaki Sonuçlar altında görüntülenir. 
+5. Tıklatın ![Arama Düğmesi.](../media/SearchButton.PNG)  arama ölçütlerinizi kullanarak aramayı çalıştırmak için. Arama sonuçları yüklenir ve birkaç dakika sonra Koruyucu Etkinlikleri arama sayfasındaki Sonuçlar altında görüntülenir. 
 
 ## <a name="step-2-view-the-audit-log-search-results"></a>2. Adım: Denetim günlüğü arama sonuçlarını görüntüleme
 
-Denetim günlüğü aramanın sonuçları Custo audit günlüğü sayfasındaki Sonuçlar altında görüntülenir. 150 olaylık artışlarla en çok 5.000 (en yeni) olay görüntülenir. Daha fazla olay görüntülemek için, Sonuçlar bölmesindeki kaydırma çubuğunu kullanabilir veya Shift + End tuşlarına basarak sonraki 150 olayları görüntüleyebilirsiniz.
+Denetim günlüğü aramasının sonuçları, Koruyucu Denetim günlüğü sayfasındaki Sonuçlar altında görüntülenir. En fazla 5.000 (en yeni) olay, 150 olaylık artışlarla görüntülenir. Daha fazla olay görüntülemek için Sonuçlar bölmesindeki kaydırma çubuğunu kullanabilir veya Shift + End tuşlarına basarak sonraki 150 olayı görüntüleyebilirsiniz.
 
 Sonuçlar, arama tarafından döndürülen her olay hakkında aşağıdaki bilgileri içerir.
-- **Tarih**: Olayın olduğu tarih ve saat (UTC biçiminde).
+- **Tarih**: Olayın gerçekleştiği tarih ve saat (UTC biçiminde).
 
-- **IP adresi**: Etkinlik günlüğe kaydedilirken kullanılan cihazın IP adresi. IP adresi, IPv4 veya IPv6 adres biçiminde görüntülenir.
+- **IP adresi**: Etkinlik günlüğe kaydedilirken kullanılan cihazın IP adresi. IP adresi IPv4 veya IPv6 adres biçiminde görüntülenir.
 
 - **Kullanıcı**: Olayı tetikleyen eylemi gerçekleştiren kullanıcı (veya hizmet hesabı).
 
-- **Etkinlik**: Kullanıcı tarafından gerçekleştirilen etkinlik. Bu değer, Etkinlikler açılan listesinde seçtiğiniz etkinliklere karşılık gelen bir değerdir. Yönetici denetim günlüğünden Exchange için, bu sütundaki değer bir Exchange cmdlet'tir.
+- **Etkinlik**: Kullanıcı tarafından gerçekleştirilen etkinlik. Bu değer, Etkinlikler açılan listesinde seçtiğiniz etkinliklere karşılık gelir. Exchange yönetici denetim günlüğündeki bir olay için bu sütundaki değer bir Exchange cmdlet'idir.
 
-- **Öğe**: İlgili etkinliğin sonucunda oluşturulan veya değiştirilen nesne. Örneğin, görüntülenen veya değiştirilen dosya ya da güncelleştirilen kullanıcı hesabı. Tüm etkinliklerin bu sütunda değeri yoktur.
+- **Öğe**: İlgili etkinliğin sonucu olarak oluşturulan veya değiştirilen nesne. Örneğin, görüntülenen veya değiştirilen dosya veya güncelleştirilen kullanıcı hesabı. Tüm etkinliklerin bu sütunda değeri yoktur.
 
-- **Ayrıntı**: Etkinlik hakkında ek ayrıntılar. Bir kez daha, tüm etkinliklerin değeri olmaz.
+- **Ayrıntı**: Etkinlik hakkında ek ayrıntılar. Yine, tüm etkinliklerin bir değeri olmaz.
 
 ## <a name="step-3-filter-the-search-results"></a>3. Adım: Arama sonuçlarını filtreleme
 
-Sıralamaya ek olarak, denetim günlüğü aramalarının sonuçlarına da filtre siniz. Bu, belirli bir kullanıcı veya etkinlik için sonuçları hızla filtrelemenize yardımcı olabilir. 
+Sıralamaya ek olarak, denetim günlüğü aramasının sonuçlarını da filtreleyebilirsiniz. Bu, belirli bir kullanıcı veya etkinlik için sonuçları hızla filtrelemenize yardımcı olabilir. 
 
 Sonuçları filtrelemek için:
 
  1. Denetim günlüğü araması oluşturun ve çalıştırın.
   
-2. Sonuçlar görüntülendiğinde, Sonuçları **filtrele'ye tıklayın**.
+2. Sonuçlar görüntülendiğinde **Sonuçları filtrele'ye** tıklayın.
  
-3. Her sütun başlığının altında anahtar sözcük kutuları görüntülenir.
+3. Anahtar sözcük kutuları her sütun üst bilgisinin altında görüntülenir.
   
-4. Sütun başlığının altındaki kutulardan birini tıklatın ve filtreyi kullandığınız sütuna bağlı olarak bir sözcük veya tümcecik yazın. Sonuçlar, filtrenize uygun olayları görüntülemek için dinamik olarak yeniden görüntülenir.
+4. Sütun üst bilgisinin altındaki kutulardan birine tıklayın ve filtrelediğiniz sütuna bağlı olarak bir sözcük veya tümcecik yazın. Sonuçlar, filtrenizle eşleşen olayları görüntülemek için dinamik olarak yeniden okunur.
   
-5. Filtreyi temizlemek için, filtre **kutusunda X'e** tıklayın veya yalnızca Filtreyi **gizle'ye tıklayın**.
+5. Filtreyi temizlemek için, filtre kutusunda **X** işaretine tıklayın veya **filtreyi gizle'ye** tıklayın.
 
-## <a name="export-the-search-results-to-a-file"></a>Arama sonuçlarını dosyaya aktarma
+## <a name="export-the-search-results-to-a-file"></a>Arama sonuçlarını bir dosyaya aktarma
 
-Denetim günlüğü aramalarının sonuçlarını yerel bilgisayarınızdan bir virgülle ayrılmış değer (CSV) dosyasına aktarabilirsiniz. Bu dosyayı başka bir dosyada Microsoft Excel arama, sıralama, filtreleme ve tek sütunu (çok değerli hücreler içeren bir sütunu) birden çok sütuna bölme gibi özellikleri kullanabilirsiniz.
+Denetim günlüğü aramasının sonuçlarını yerel bilgisayarınızdaki virgülle ayrılmış değer (CSV) dosyasına aktarabilirsiniz. Bu dosyayı Microsoft Excel açabilir ve tek bir sütunu (çok değerli hücreler içeren) birden çok sütuna bölme, sıralama, filtreleme ve bölme gibi özellikleri kullanabilirsiniz.
 
-1. Denetim günlüğü arama çalıştırın ve ardından istediğiniz sonuçları elde inceye kadar arama ölçütlerini düzeltin.
+1. Bir denetim günlüğü araması çalıştırın ve istediğiniz sonuçları elde edene kadar arama ölçütlerini düzeltin.
   
 2. Sonuçları dışarı aktar'a tıklayın ve aşağıdaki seçeneklerden birini belirleyin:
 
-    - **Yüklenen sonuçları kaydet:** Yalnızca Custo audit günlük araması sayfasındaki **Sonuçlar'ın** altında görüntülenen girdileri dışarı **aktarmayı bu seçeneği** belirtin. İndirilen CSV dosyası, sayfada görüntülenen sütunların (ve verilerin) aynılarını (Tarih, Kullanıcı, Etkinlik, Öğe ve Ayrıntılar) içerir. CSV dosyasına, denetim günlüğü **girdilerinden** daha fazla bilgi içeren bir sütun daha (Diğer başlıklı) ek bir sütun ek olarak ve bu sütun da ek olarak gösterilir. Denetim günlüğü araması sayfasına yüklenen (ve görüntülenebilir) sonuçların aynılarını dışarı aktarıyor olun, çünkü en çok 5.000 girdi dışarı aktarılabilir.
+    - **Yüklenen sonuçları kaydedin:** Yalnızca **Koruyucu Denetim günlüğü arama** sayfasındaki **Sonuçlar** altında görüntülenen girdileri dışarı aktarmak için bu seçeneği belirleyin. İndirilen CSV dosyası sayfada görüntülenen sütunların (ve verilerin) aynısını içerir (Tarih, Kullanıcı, Etkinlik, Öğe ve Ayrıntılar). CSV dosyasında denetim günlüğü girdisinden daha fazla bilgi içeren ek bir sütun ( **Daha fazla** başlıklı) bulunur. Denetim günlüğü arama sayfasında yüklenen (ve görüntülenebilir) sonuçları dışarı aktardığınız için en fazla 5.000 girdi dışarı aktarılır.
         
-    - **Tüm sonuçları indirin:** Denetim günlüğünden arama ölçütlerine uyan tüm girdileri dışarı aktaracak şekilde bu seçeneği belirtin. Büyük bir arama sonuçları kümesi için, Bu seçeneği kullanarak Denetim günlüğünden gelen tüm girdilerin yanı sıra **Custo audit** günlüğü araması sayfasında görüntülenebilir 5.000 sonucu da indirebilirsiniz. Bu seçenek, ham verileri denetim günlüğünden CSV dosyasına indirir ve Denetim Verileri adlı sütunda denetim günlüğü girdisinde yer alan ek bilgileri içerir. Bu dışarı aktarma seçeneğini belirtirseniz dosyanın indirilsi daha uzun sürebilir çünkü dosya, diğer seçeneği belirtirseniz indirilen dosyadan çok daha büyük olabilir.
+    - **Tüm sonuçları indirin:** Denetim günlüğünden arama ölçütlerine uyan tüm girişleri dışarı aktarmak için bu seçeneği belirleyin. Büyük bir arama sonuçları kümesi için, Denetim günlüğü arama sayfasında görüntülenebilen 5.000 sonuca ek olarak denetim **günlüğündeki** tüm girişleri indirmek için bu seçeneği belirleyin. Bu seçenek, ham verileri denetim günlüğünden CSV dosyasına indirir ve AuditData adlı bir sütundaki denetim günlüğü girdisinden ek bilgiler içerir. Bu dışarı aktarma seçeneğini belirlerseniz dosyanın indirilmesi daha uzun sürebilir çünkü diğer seçeneği belirlerseniz dosya indirilen dosyadan çok daha büyük olabilir.
     
       > [!IMPORTANT]
-      > Tek bir denetim günlüğü aramalarından CSV dosyasına en çok 50.000 girdi indirebilirsiniz. CSV dosyasına 50.000 girdi indirilirse, büyük olasılıkla arama ölçütlerine uyan 50.000'den çok olay olduğunu varsayabilirsiniz. Bu sınırdan fazlasını dışarı aktarmayı deneyin ve denetim günlüğü girdilerinin sayısını azaltmak için bir tarih aralığı kullanmayı deneyin. 50.000'den fazla girdiyi dışarı aktaracak şekilde, daha küçük tarih aralıklarında birden çok arama çalıştırmaya gerek kullanabilirsiniz.
+      > Tek bir denetim günlüğü aramasından CSV dosyasına en fazla 50.000 girdi indirebilirsiniz. CSV dosyasına 50.000 girdi indirilirse, büyük olasılıkla arama ölçütlerine uyan 50.000'den fazla olay olduğunu varsayabilirsiniz. Bu sınırdan daha fazlasını dışarı aktarmak için, denetim günlüğü girdilerinin sayısını azaltmak için bir tarih aralığı kullanmayı deneyin. 50.000'den fazla girişi dışarı aktarmak için daha küçük tarih aralıklarıyla birden çok arama çalıştırmanız gerekebilir.
         
 
-3. Dışarı aktarma seçeneğini kullandıktan sonra, pencerenin en altında CSV dosyasını açmanızı, İndirilenler klasörüne kaydetmenizi veya belirli bir klasöre kaydetmenizi içeren bir ileti görüntülenir.
+3. Dışarı aktarma seçeneğini seçtikten sonra pencerenin alt kısmında CSV dosyasını açmanızı, İndirilenler klasörüne kaydetmenizi veya belirli bir klasöre kaydetmenizi isteyen bir ileti görüntülenir
 
-Denetim günlüğü arama sonuçlarını görüntüleme, filtreleme veya dışarı aktarma hakkında daha fazla bilgi için bkz. [Denetim günlüğünde arama.](search-the-audit-log-in-security-and-compliance.md)
+Denetim günlüğü arama sonuçlarını görüntüleme, filtreleme veya dışarı aktarma hakkında daha fazla bilgi için bkz. [Denetim günlüğünde arama](search-the-audit-log-in-security-and-compliance.md) yapma.

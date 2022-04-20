@@ -1,11 +1,11 @@
 ---
-title: Advanced eDiscovery kümeleri için pano
+title: Gözden geçirme kümeleri için eBulma (Premium) panosu
 f1.keywords:
 - NOCSH
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: ''
+ms.date: 04/05/2022
 audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
@@ -15,70 +15,70 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: gözden geçirme Advanced eDiscovery geliştirmenize yardımcı olacak eğilimleri veya önemli istatistikleri tanımlamak üzere corpus'larınızı hızla çözümlemek için gözden geçirme kümelerinde yer alan en iyi panoyu kullanın.
-ms.openlocfilehash: b7bc487e95c2dbae1a65aaad94face6bee19d39b
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Gözden geçirme stratejinizi geliştirmenize yardımcı olacak eğilimleri veya önemli istatistikleri belirlemek üzere corpus'unuzu hızla analiz etmek üzere gözden geçirme kümeleri için Microsoft Purview eBulma (Premium) panosunu kullanın.
+ms.openlocfilehash: 8814bbf645686529aec43f710519c1bd4891c1b3
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62984697"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64943117"
 ---
-# <a name="advanced-ediscovery-dashboard-for-review-sets"></a>Advanced eDiscovery kümeleri için pano
+# <a name="ediscovery-premium-dashboard-for-review-sets"></a>Gözden geçirme kümeleri için eBulma (Premium) panosu
 
-Bazı durumlarda Advanced eDiscovery, gözden geçirmeniz gereken büyük miktarda belge ve e-posta iletiniz olabilir. Gözden geçirme işlemini başlatmadan önce, inceleme stratejinizi geliştirmenize yardımcı olacak eğilimleri veya önemli istatistikleri belirlemek için corpus'larınızı hızla çözümlemek istiyor olabilir. Bunu yapmak için, corpus'larınızı Advanced eDiscovery analiz etmek üzere gözden geçirme kümelerini görüntülemek üzere En Son Panosu'Advanced eDiscovery kullanabilirsiniz.
+Microsoft Purview eKeşif 'te (Premium) bazı durumlarda, gözden geçirilmesi gereken çok sayıda belgeniz ve e-posta iletileriniz olabilir. Gözden geçirme işlemine başlamadan önce, gözden geçirme stratejinizi geliştirmenize yardımcı olacak eğilimleri veya önemli istatistikleri belirlemek için corpus'unuzu hızla analiz etmek isteyebilirsiniz. Bunu yapmak için, corpus'unuzu hızla analiz etmek üzere gözden geçirme kümeleri için eBulma (Premium) panosunu kullanabilirsiniz.
 
-## <a name="step-1-create-a-widget-on-the-review-set-dashboard"></a>1. Adım: Gözden geçirme kümesi panosunda widget oluşturma
+## <a name="step-1-create-a-widget-on-the-review-set-dashboard"></a>1. Adım: Gözden geçirme kümesi panosunda pencere öğesi oluşturma
 
-1. Aşağıdaki Microsoft 365 uyumluluk merkezi, **eBulma** > Advanced eDiscovery'ne gidip kurumuzla ilgili vakaların listesini görüntüleniyor.
+1. Microsoft Purview uyumluluk portalında, kuruluşunuzdaki servis taleplerinin listesini görüntülemek için **eBulma > eBulma (Premium)** bölümüne gidin.
   
-2. Mevcut bir vakayı seçin.
+2. Mevcut bir servis talebini seçin.
   
-3. Gözden Geçirme **Kümesi sekmesine** tıklayın ve gözden geçirme kümesi seçin.
+3. **Gözden Geçir Kümesi** sekmesine tıklayın ve bir gözden geçirme kümesi seçin.
   
-4. Tek tek **sonuçlar açılan** listesinde Profil görünümü **ara'ya tıklayın**. 
+4. **Tek tek sonuçlar** açılan listesinde **Profil görünümünde ara'ya** tıklayın. 
 
    ![DashbordPivot.](../media/dashboardpivot.png)
 
-   Profil **arama görünümü** sayfası görüntülenir; bu sayfayı ilk kez görüntülendiğinde üç varsayılan widget görüntülenir.
+   **Arama profili görünümü** sayfası görüntülenir; bu sayfayı ilk kez görüntülüyorsanız, üç varsayılan pencere öğesi görüntülenir.
 
    ![Pano.](../media/dashboardonly.png)
   
-5. Yeni **widget'a** tıklayın ve aşağıdaki öğelerden birini seçin:
+5. **Yeni pencere öğesine** tıklayın ve aşağıdaki öğelerden birini seçin:
 
    ![Yeni pencere öğesi açılan listesi.](../media/NewWidgetDropdownBox.png)
 
-   - **Kitaplıktan seçim:** Varsayılan widget kitaplığını görüntüler. Bir widget'a tıklar ve **ardından Ekle'ye** tıklar ve bunu Ara profil görünümü sayfasındaki **widget'lara eklersiniz** .
+   - **Kitaplıktan seçim yapın:** Varsayılan pencere öğesi kitaplığını görüntüler. Bir pencere öğesine tıklayın ve ardından **Ekle'ye** tıklayarak **Arama profili görünümü** sayfasındaki pencere öğelerine ekleyin.
   
-   - **Özel pencere öğesi oluşturma:** Özel pencere öğesi ayarlamak için kullanabileceğiniz bir çıkış sayfası görüntüler. 
+   - **Özel pencere öğesi oluşturma:** Özel pencere öğesi ayarlamak için kullanabileceğiniz bir açılır sayfa görüntüler. 
 
-6. Özel pencere öğesi oluşturmak için, Widget ekle **uç öğesi sayfasında** şunları yapın:
+6. Özel bir pencere öğesi oluşturmak için Pencere **öğesi ekle** açılır sayfasında aşağıdakileri yapın:
 
-   ![Pencere Öğesi Oluştur'a tıklayın.](../media/addwidget.png)
+   ![Pencere Öğesi Oluştur'u seçin.](../media/addwidget.png)
 
-    a. Widget başlık çubuğunda görüntülenen widget için bir ad yazın. Widget'ı adlandırmak gerekir, ancak widget verilerini tanımlamak yararlı olur.
+    a. Pencere öğesi başlık çubuğunda görüntülenen pencere öğesi için bir ad yazın. Bir pencere öğesini adlandırmak gereklidir, ancak pencere öğesi verilerini tanımlamak yararlı olur.
 
-    b. Widget verileri için **kullanılacak Özet seç** açılan listesinden bir özellik seçin. Bu listede yer alan öğeler, gözden geçirme kümesinde yer alan öğeler için aranabilir özelliklerdir. Bu özelliklerin açıklaması için bkz. Veri [kaynağında meta veri Advanced eDiscovery](document-metadata-fields-in-Advanced-eDiscovery.md). Widget'ın özet seçenekleri bu konunun **Aranabilir alan adı** sütununda listelenir.
+    b. **Özet seç** açılan listesinde pencere öğesi verileri için kullanılacak bir özellik seçin. Bu listedeki öğeler, gözden geçirme kümesindeki öğelerin aranabilir özellikleridir. Bu özelliklerin açıklaması için bkz[. eBulma'da (Premium) belge meta veri alanları](document-metadata-fields-in-Advanced-eDiscovery.md). Pencere öğesinin özet seçenekleri, bu konunun **Aranabilir alan adı** sütununda listelenir.
 
-    c. Seçili özet özelliğinden verileri görüntülemek için bir grafik türü seçin.
+    c. Seçili özet özelliğindeki verileri görüntülemek için bir grafik türü seçin.
 
-  6. Özel **widget'ı** oluşturmak ve bu pencere öğesini Arama profili görünümü **sayfasında görüntülemek için Ekle'ye** tıklayın.
+  6. Özel pencere öğesini oluşturmak ve **Arama profili görünümü** sayfasında görüntülemek için **Ekle'ye** tıklayın.
 
 ## <a name="step-2-create-a-review-set-search-query"></a>2. Adım: Gözden geçirme kümesi arama sorgusu oluşturma
 
-1. Widget **başlık** çubuğunda ... öğesini ve sonra koşul **uygula'yı tıklatın**.
+1. Pencere öğesi başlık çubuğunda **...** öğesine tıklayın ve ardından **Koşulu uygula'ya** tıklayın.
 
    ![Pano.](../media/searchprofilehome.png)
 
-2. Çıkış sayfasında, filtre oluşturmak için widget tuşu veya widget grafiğindeki bir öğeye tıklayın.
+2. Açılır sayfada, pencere öğesi anahtarı veya pencere öğesi grafiğindeki bir öğeye tıklayarak filtre oluşturun.
 
-   ![Filtre Oluştur.](../media/applyconditionfilter.png)
+   ![CreateFilter.](../media/applyconditionfilter.png)
 
-3. 1-2 adımlarını birden çok widget için diğer widget'lar için yinelayın. 
+3. Diğer pencere öğeleri birden çok pencere öğesi için 1-2 arası adımları yineleyin. 
 
-4. Bitir bittiğinde, koşullarınızı gözden **geçirme kümesi için** yeni bir arama sorgusu olarak kaydetmek için Sorgu olarak kaydet'e tıklayın.
+4. İşiniz bittiğinde, koşullarınızı gözden geçirme kümesi için yeni bir arama sorgusu olarak kaydetmek için Sorgu **olarak kaydet'e** tıklayın.
 
    ![Sorgu.](../media/savequery.png)
 
-5. Arama sonuçları **görünümüne dönmek** için Profil arama görünümünü kapatın.
+5. Arama sonuçları **görünümüne dönmek için Arama profili** görünümünü kapatın.
 
-   Herhangi bir görsel filtre oluşturduysanız, görüntülenen arama sonuçlarına sonuç sorgusu uygulanır ve 4. adımda kaydedilen arama sorgusu Kaydedilmiş **sorgular altında görüntülenir**. Gözden geçirme kümesi sorguları hakkında daha fazla bilgi için bkz [. Gözden geçirme kümesinde verileri sorgulama](review-set-search.md).
+   Herhangi bir görsel filtre oluşturduysanız, sonuçta elde edilen sorgu görüntülenen arama sonuçlarına uygulanır ve 4. adımda kaydettiğiniz arama sorgusu **Kaydedilen sorgular** altında görüntülenir. Gözden geçirme kümesi sorguları hakkında daha fazla bilgi için bkz. [Gözden geçirme kümesindeki verileri sorgulama](review-set-search.md).

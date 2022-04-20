@@ -12,18 +12,18 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Bu verileri Microsoft 365 içeri aktarmak ve arşivleme amacıyla 17a-4 Refinitiv Eikon Messenger DataParser bağlayıcısı ayarlamayı ve kullanmayı öğrenin.
-ms.openlocfilehash: c508ee245b23a66e54c71b3351421b7d1ff8490e
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 090d658e5b18f639848a4ce3c2635865207a8833
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64761339"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64940719"
 ---
 # <a name="set-up-a-connector-to-archive-refinitiv-eikon-messenger-data"></a>Refinitiv Eikon Messenger verilerini arşivleme için bağlayıcı ayarlama
 
 [Refinitiv Eikon Messenger'daki](https://www.17a-4.com/refinitiv-messenger-dataparser/) verileri Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarmak ve arşivlemek için 17a-4 LLC'deki Refinitiv Eikon Messenger DataParser'ı kullanın. DataParser, üçüncü taraf veri kaynağından öğeleri yakalamak ve bu öğeleri Microsoft 365'a aktarmak için yapılandırılmış bir Refinitiv Eikon Messenger bağlayıcısı içerir. Refinitiv Eikon Messenger DataParser bağlayıcısı Refinitiv Eikon Messenger verilerini e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'daki kullanıcı posta kutularına aktarır.
 
-Refinitiv Eikon Messenger verileri kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, eBulma, bekletme ilkeleri ve bekletme etiketleri ve iletişim uyumluluğu gibi Microsoft 365 uyumluluk özelliklerini uygulayabilirsiniz. Microsoft 365'de verileri içeri aktarmak ve arşivlemek için Refinitiv Eikon Messenger bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
+Refinitiv Eikon Messenger verileri kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, eBulma, bekletme ilkeleri ve bekletme etiketleri ve iletişim uyumluluğu gibi Microsoft Purview özelliklerini uygulayabilirsiniz. Microsoft 365'de verileri içeri aktarmak ve arşivlemek için Refinitiv Eikon Messenger bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 
 ## <a name="overview-of-archiving-refinitiv-eikon-messenger-data"></a>Refinitiv Eikon Messenger verilerini arşivleme hakkında genel bakış
 
@@ -35,7 +35,7 @@ Aşağıdaki genel bakış, Refinitiv Eikon Messenger verilerini Microsoft 365'd
 
 2. Refinitiv Eikon Messenger öğeleri düzenli olarak DataParser tarafından toplanır. DataParser ayrıca iletinin içeriğini e-posta iletisi biçimine dönüştürür.
 
-3. Microsoft 365 uyumluluk merkezi oluşturduğunuz Refinitiv Eikon Messenger DataParser bağlayıcısı DataParser'a bağlanır ve iletileri Microsoft bulutunda güvenli bir Azure Depolama konumuna aktarır.
+3. Microsoft Purview uyumluluk portalında oluşturduğunuz Refinitiv Eikon Messenger DataParser bağlayıcısı DataParser'a bağlanır ve iletileri Microsoft bulutunda güvenli bir Azure Depolama konumuna aktarır.
 
 4. Kullanıcı posta kutularında **Refinitiv Eikon Messenger DataParser** adlı Gelen Kutusu klasöründe bir alt klasör oluşturulur ve Refinitiv Eikon Messenger öğeleri bu klasöre aktarılır. Bağlayıcı, *E-posta* özelliğinin değerini kullanarak öğelerin hangi posta kutusuna aktarılacağını belirler. Her Refinitiv Eikon Messenger öğesi, her katılımcının e-posta adresiyle doldurulan bu özelliği içerir.
 
@@ -43,13 +43,13 @@ Aşağıdaki genel bakış, Refinitiv Eikon Messenger verilerini Microsoft 365'd
 
 - Microsoft bağlayıcıları için bir DataParser hesabı oluşturun. Hesap oluşturmak için [17a-4 LLC](https://www.17a-4.com/contact/) ile iletişime geçin. 1. Adımda bağlayıcıyı oluştururken bu hesapta oturum açmanız gerekir.
 
-- 1. Adımda Refinitiv Eikon Messenger DataParser bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, Microsoft 365 uyumluluk merkezi **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için, [Microsoft 365 uyumluluk merkezi İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
+- 1. Adımda Refinitiv Eikon Messenger DataParser bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için [Microsoft Purview uyumluluk portalındaki İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
-- Bu 17a-4 veri bağlayıcısı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda kullanılabilir. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerinin Microsoft 365 altyapısının dışındaki üçüncü taraf sistemlerde depolanmasını, iletilmesini ve işlenmesini içerebilir ve bu nedenle Microsoft 365 uyumluluk ve veri koruma taahhütleri kapsamında değildir. Microsoft, üçüncü taraf uygulamalarına bağlanmak için bu ürünün kullanılmasının söz konusu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
+- Bu 17a-4 veri bağlayıcısı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda kullanılabilir. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerinin Microsoft 365 altyapısı dışında olan ve bu nedenle Microsoft Purview ve veri koruma taahhütleri kapsamında olmayan üçüncü taraf sistemlerde depolanmasını, iletilmesini ve işlenmesini içerebilir. Microsoft, üçüncü taraf uygulamalarına bağlanmak için bu ürünün kullanılmasının söz konusu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
 
 ## <a name="step-1-set-up-a-refinitiv-eikon-messenger-dataparser-connector"></a>1. Adım: Refinitiv Eikon Messenger DataParser bağlayıcısı ayarlama
 
-İlk adım, Microsoft 365 uyumluluk merkezi Veri bağlayıcıları sayfasına erişmek ve Refinitiv Eikon Messenger verileri için bir 17a-4 bağlayıcısı oluşturmaktır.
+İlk adım, uyumluluk portalındaki Veri bağlayıcıları sayfasına erişmek ve Refinitiv Eikon Messenger verileri için bir 17a-4 bağlayıcısı oluşturmaktır.
 
 1. Veri **bağlayıcılarıRefinitiv Eikon Messenger DataParser'a** > <https://compliance.microsoft.com> gidin ve tıklayın.
 
@@ -71,7 +71,7 @@ Refinitiv Eikon Messenger DataParser bağlayıcısı, verileri Microsoft 365 iç
 
 ## <a name="step-4-monitor-the-refinitiv-eikon-messenger-dataparser-connector"></a>4. Adım: Refinitiv Eikon Messenger DataParser bağlayıcısını izleme
 
-Refinitiv Eikon Messenger DataParser bağlayıcısı oluşturduktan sonra bağlayıcının durumunu Microsoft 365 uyumluluk merkezi görüntüleyebilirsiniz.
+Refinitiv Eikon Messenger DataParser bağlayıcısı oluşturduktan sonra bağlayıcının durumunu uyumluluk portalında görüntüleyebilirsiniz.
 
 1. Sol gezinti bölmesinde **Veri bağlayıcıları'na** <https://compliance.microsoft.com> gidin ve tıklayın.
 

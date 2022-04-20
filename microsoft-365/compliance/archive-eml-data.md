@@ -1,5 +1,5 @@
 ---
-title: EML verilerini aynı dosyada arşivlemek için bağlayıcıyı Microsoft 365
+title: Microsoft 365'da EML verilerini arşivleye bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -11,80 +11,80 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Yöneticiler EML verilerini Veritas'tan veri kaynağına aktaracak ve arşivleyacak bir bağlayıcı Microsoft 365. Bu bağlayıcı, iş yerinde üçüncü taraf veri kaynaklarından verileri Microsoft 365. Bu verileri arşivledikten sonra, üçüncü taraf verilerini yönetmek için yasal saklama, içerik araması ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
-ms.openlocfilehash: aafa253cc4a507946acd56cfbd52af79d8250ee6
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Yöneticiler, EML verilerini Veritas'tan Microsoft 365 içeri aktarmak ve arşivlemesi için bir bağlayıcı ayarlayabilir. Bu bağlayıcı, Microsoft 365'da üçüncü taraf veri kaynaklarından verileri arşivleyabilmenizi sağlar. Bu verileri arşivledikten sonra, üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
+ms.openlocfilehash: c4c4043baf8f58405923bf5ac1bc69c6293a4f52
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63325355"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64938719"
 ---
-# <a name="set-up-a-connector-to-archive-eml-data"></a>EML verilerini arşivlemek için bağlayıcıyı ayarlama
+# <a name="set-up-a-connector-to-archive-eml-data"></a>EML verilerini arşivleye bağlayıcı ayarlama
 
-EML verilerini kendi Microsoft 365 uyumluluk merkezi posta kutularına içeri aktararak arşivlemek için veri kaynağında bir Veritas Microsoft 365 kullanın. EML, bir dosyaya kaydedilen e-posta iletisi için dosya uzantısıdır. Bağlayıcı, öğenin içeriğini kaynak biçimden e-posta iletisi biçimine dönüştürür ve sonra öğeyi kullanıcı posta kutusuna içeri dönüştürür.
+EML verilerini Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında bir Veritas bağlayıcısı kullanın. EML, bir dosyaya kaydedilen e-posta iletisinin dosya uzantısıdır. Bağlayıcı, bir öğenin içeriğini kaynak biçimden e-posta iletisi biçimine dönüştürür ve sonra öğeyi bir kullanıcı posta kutusuna aktarır.
 
-EML iletileri kullanıcı posta kutularında depolanıyorsa, Microsoft 365 saklama, eBulma, bekletme ilkeleri ve bekletme etiketleri gibi uyumluluk özelliklerini uygulayabilirsiniz. E-postada verileri içeri aktararak ve arşiv Microsoft 365 EML bağlayıcısı kullanmak, kurum kuruluş ve mevzuat ilkeleriyle uyumlu kalmalarına yardımcı olabilir.
+EML iletileri kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, eBulma ve bekletme ilkeleri ile bekletme etiketleri gibi Microsoft Purview özelliklerini uygulayabilirsiniz. Microsoft 365'da verileri içeri aktarmak ve arşivlerken EML bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 
-## <a name="overview-of-archiving-eml-data"></a>EML verilerini arşivlemeye genel bakış
+## <a name="overview-of-archiving-eml-data"></a>EML verilerini arşivleme genel bakış
 
-Aşağıdaki genel bakış makalesinde, EML verilerini aynı tabloda arşivlemek için bağlayıcı kullanma Microsoft 365.
+Aşağıdaki genel bakış, MICROSOFT 365'da EML verilerini arşivlerken bağlayıcı kullanma işlemini açıklar.
 
 ![EML verileri için iş akışı arşivleme.](../media/EMLConnectorWorkflow.png)
 
-1. Organizasyonunız EML sitesini ayarlamak ve yapılandırmak için EML kaynağıyla çalışır.
+1. Kuruluşunuz BIR EML sitesi ayarlamak ve yapılandırmak için EML kaynağıyla çalışır.
 
-2. HER 24 saatte bir, EML kaynağından gelen içerik öğeleri Veri Görev Birleştirme1 sitesine kopyalanır. Bu işlem sırasında, EML dosyasının içeriği e-posta iletisi biçimine dönüştürülür.
+2. 24 saatte bir EML kaynağındaki içerik öğeleri Veritas Merge1 sitesine kopyalanır. Bu işlem sırasında, bir EML dosyasının içeriği e-posta iletisi biçimine dönüştürülür.
 
-3. Microsoft 365 uyumluluk merkezi'ta oluşturdukları EML bağlayıcısı, her gün VeriTas Merge1 sitesine bağlanır ve iletileri Microsoft bulutunda güvenli bir Azure Depolama konuma aktarıyor.
+3. Uyumluluk portalında oluşturduğunuz EML bağlayıcısı her gün Veritas Merge1 sitesine bağlanır ve iletileri Microsoft bulutunda güvenli bir Azure Depolama konumuna aktarır.
 
-4. Bağlayıcı, dönüştürülmüş ileti öğelerini, 3. Adımda açıklanan otomatik kullanıcı eşleme işleminin *E-posta* özelliği değerini kullanarak belirli kullanıcıların posta kutularına [içeri aktarıyor](#step-3-map-users-and-complete-the-connector-setup). Bu işlem sırasında, kullanıcı posta kutularında EML adlı Gelen Kutusu klasöründe yer alan **eml** adlı bir alt klasör oluşturulur ve EML öğeleri bu klasöre aktarılır. Bağlayıcı, E-posta özelliğinin değerini kullanarak hangi posta kutusuna öğe *aktarılamayacaklarını* belirler. Her iletide, içerik öğesinin tüm katılımcılarının e-posta adresiyle doldurulan bu özellik yer alır.
+4. Bağlayıcı, [3. Adımda](#step-3-map-users-and-complete-the-connector-setup) açıklanan otomatik kullanıcı eşleme işleminin *Email* özelliğinin değerini kullanarak dönüştürülen ileti öğelerini belirli kullanıcıların posta kutularına aktarır. Bu işlem sırasında, Gelen Kutusu klasöründeki kullanıcı posta kutularında oluşturulan **EMLis** adlı bir alt klasör ve EML öğeleri bu klasöre aktarılır. Bağlayıcı, *E-posta* özelliğinin değerini kullanarak öğelerin hangi posta kutusuna aktarılacağını belirler. Her ileti, içerik öğesinin her katılımcısının e-posta adresiyle doldurulan bu özelliği içerir.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-- Microsoft bağlayıcıları için VeriTas Merge1 hesabı oluşturun. Hesap oluşturmak için [Veritas Müşteri Desteği'ne başvurun](https://globanet.com/ms-connectors-contact). 1. Adım'da bağlayıcıyı  oluşturmak için bu hesapta oturum açın.
+- Microsoft bağlayıcıları için bir Veritas Merge1 hesabı oluşturun. Hesap oluşturmak için [Veritas Müşteri Desteği'ne](https://globanet.com/ms-connectors-contact) başvurun. 1. Adımda bağlayıcıyı oluştururken bu hesapta oturum açarsınız.
 
-- 1. Adımda EML bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yöneticisi rolü atanabilir. Bu rol, sayfanın en son veri **bağlayıcıları sayfasına bağlayıcı** eklemek Microsoft 365 uyumluluk merkezi. Bu rol varsayılan olarak birden çok rol gruplarına eklenir. Bu rol gruplarının listesi için, Güvenlik ve Uyumluluk Merkezi'nde İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki roller" [& bakın](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). Alternatif olarak, bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolü ata sonrasında uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için aşağıdaki İzinler bölümündeki "Özel bir rol grubu oluşturma" [bölümüne Microsoft 365 uyumluluk merkezi](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- 1. Adımda EML bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için [Microsoft Purview uyumluluk portalındaki İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
-- Bu Veritas veri bağlayıcısı, ABD Kamu bulutu GCC ortamlarda Microsoft 365 önizlemededir. Üçüncü taraf uygulamaları ve hizmetleri, kuruluş müşteri verilerini Microsoft 365 altyapısının dışında olan üçüncü taraf sistemlerde depolamayı, iletip işlemeyi ve bu nedenle de Microsoft 365 uyumluluk ve veri koruma taahhütleri kapsamında değildir. Microsoft, bu ürünün üçüncü taraf uygulamalara bağlanmak için kullanılabileceğiyle ilgili hiçbir beyanda yoktur ve bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu da ima eder.
+- Bu Veritas veri bağlayıcısı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda genel önizleme aşamasındadır. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerinin Microsoft 365 altyapısı dışında olan ve bu nedenle Microsoft Purview ve veri koruma taahhütleri kapsamında olmayan üçüncü taraf sistemlerde depolanmasını, iletilmesini ve işlenmesini içerebilir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
 
 ## <a name="step-1-set-up-an-eml-connector"></a>1. Adım: EML Bağlayıcısı ayarlama
 
-İlk adım, ana sayfada Veri **Bağlayıcıları** sayfasına erişmek ve EML verileri Microsoft 365 uyumluluk merkezi bağlayıcı oluşturmaktır.
+İlk adım, uyumluluk portalındaki **Veri Bağlayıcıları** sayfasına erişmek ve EML verileri için bir bağlayıcı oluşturmaktır.
 
-1. Veri bağlayıcılarıEML'ye [https://compliance.microsoft.com](https://compliance.microsoft.com/) **gidin ve bu bağlayıcılara** >  **tıklayın**.
+1. **Veri** **bağlayıcılarıEML'ye**[https://compliance.microsoft.com](https://compliance.microsoft.com/) >  gidin ve tıklayın.
 
-2. **EML ürün açıklaması** sayfasında Bağlayıcı **ekle'ye tıklayın**.
+2. **EML** ürün açıklaması sayfasında **Bağlayıcı ekle'ye** tıklayın.
 
-3. Hizmet Koşulları **sayfasında Kabul Et'e** **tıklayın**.
+3. **Hizmet koşulları** sayfasında **Kabul Et'e** tıklayın.
 
-4. Bağlayıcıyı tanımlayan benzersiz bir ad girin ve Ardından Sonraki'ye **tıklayın**.
+4. Bağlayıcıyı tanımlayan benzersiz bir ad girin ve **İleri'ye** tıklayın.
 
-5. Bağlayıcıyı yapılandırmak için Merge1 hesabınızla oturum açın.
+5. Bağlayıcıyı yapılandırmak için Merge1 hesabınızda oturum açın.
 
-## <a name="step-2-configure-the-eml-connector-on-the-veritas-merge1-site"></a>2. Adım: VeriTas Merge1 sitesinde EML bağlayıcısı yapılandırma
+## <a name="step-2-configure-the-eml-connector-on-the-veritas-merge1-site"></a>2. Adım: Veritas Merge1 sitesinde EML bağlayıcısını yapılandırma
 
-İkinci adım, VeriTas Merge1 sitesinde EML bağlayıcısı yapılandırmaktır. EML bağlayıcısını yapılandırma hakkında bilgi için bkz. [Birleştirme1 Üçüncü Taraf Bağlayıcıları Kullanıcı Kılavuzu](https://docs.ms.merge1.globanetportal.com/Merge1%20Third-Party%20Connectors%20EML%20User%20Guide%20.pdf).
+İkinci adım, Veritas Merge1 sitesinde EML bağlayıcısını yapılandırmaktır. EML bağlayıcısını yapılandırma hakkında bilgi için bkz. [Birleştirme1 Üçüncü Taraf Bağlayıcıları Kullanıcı Kılavuzu](https://docs.ms.merge1.globanetportal.com/Merge1%20Third-Party%20Connectors%20EML%20User%20Guide%20.pdf).
 
-Son Olarak Kaydet **& e tıklarken**, sihirbazın  Bağlayıcı sihirbazında Kullanıcı eşleme Microsoft 365 uyumluluk merkezi görüntülenir.
+**Kaydet & Son'a** tıkladıktan sonra, uyumluluk portalındaki bağlayıcı sihirbazındaki **Kullanıcı eşleme** sayfası görüntülenir.
 
 ## <a name="step-3-map-users-and-complete-the-connector-setup"></a>3. Adım: Kullanıcıları eşleme ve bağlayıcı kurulumunu tamamlama
 
-Kullanıcıları eşlemek ve aşağıdaki adımları takip etmek için Microsoft 365 uyumluluk merkezi izleyin:
+Kullanıcıları eşlemek ve uyumluluk portalında bağlayıcı kurulumunu tamamlamak için şu adımları izleyin:
 
-1. Dış kullanıcıları **kullanıcı eşleme Microsoft 365,** otomatik kullanıcı eşlemesini etkinleştirin. EML kaynak öğeleri, kurumdaki *kullanıcıların e-posta* adreslerini içeren E-posta adlı bir özellik içerir. Bağlayıcı bu adresi bir kullanıcıyla Microsoft 365, EML öğeleri bu kullanıcının posta kutusuna aktarılır.
+1. **Dış kullanıcıları Microsoft 365 kullanıcılarla eşle** sayfasında otomatik kullanıcı eşlemesini etkinleştirin. EML kaynak öğeleri, kuruluşunuzdaki kullanıcıların *e-posta adreslerini içeren E-posta* adlı bir özellik içerir. Bağlayıcı bu adresi bir Microsoft 365 kullanıcıyla ilişkilendirebiliyorsa, EML öğeleri söz konusu kullanıcının posta kutusuna aktarılır.
 
-2. **Sonraki'ye** tıklayın, ayarlarınızı gözden geçirin ve yeni bağlayıcıya yönelik içeri aktarma işleminin ilerlemesini görmek için Veri bağlayıcıları sayfasına gidin.
+2. **İleri'ye** tıklayın, ayarlarınızı gözden geçirin ve yeni bağlayıcının içeri aktarma işleminin ilerleme durumunu görmek için **Veri bağlayıcıları** sayfasına gidin.
 
-## <a name="step-4-monitor-the-eml-connector"></a>4. Adım: EML bağlayıcıyı izleme
+## <a name="step-4-monitor-the-eml-connector"></a>4. Adım: EML bağlayıcısını izleme
 
-EML bağlayıcıyı oluşturdukta, bağlayıcının durumunu bağlayıcının son Microsoft 365 uyumluluk merkezi.
+EML bağlayıcısını oluşturduktan sonra bağlayıcı durumunu uyumluluk portalında görüntüleyebilirsiniz.
 
-1. Sol gezinti [https://compliance.microsoft.com](https://compliance.microsoft.com) çubuğunda **Veri bağlayıcıları'na** gidin ve bu bağlayıcılara tıklayın.
+1. Sol gezinti bölmesinde **Veri bağlayıcıları'na** [https://compliance.microsoft.com](https://compliance.microsoft.com) gidin ve tıklayın.
 
-2. Bağlayıcılar **sekmesine** tıklayın ve **sonra açılır sayfayı görüntülemek için EML** bağlayıcıyı seçin. Bu sayfa, bağlayıcının özelliklerini ve bilgilerini içerir.
+2. **Bağlayıcılar** sekmesine tıklayın ve açılır sayfayı görüntülemek için **EML** bağlayıcısını seçin. Bu sayfa, bağlayıcı hakkındaki özellikleri ve bilgileri içerir.
 
-3. **Bağlayıcının kaynak durumunun altında**, **Bağlayıcının durum günlüğünü** açmak (veya kaydetmek) için Günlüğü indir bağlantısına tıklayın. Bu günlük, Microsoft buluta aktarılan veriler hakkında bilgi içerir.
+3. Bağlayıcının durum günlüğünü açmak (veya kaydetmek) için **Kaynakla bağlayıcı durumu** altında **Günlüğü indir** bağlantısına tıklayın. Bu günlük, Microsoft buluta aktarılan veriler hakkında bilgi içerir.
 
 ## <a name="known-issues"></a>Bilinen sorunlar
 
-- Şu anda ekleri veya 10 MB'den büyük öğeleri içeri aktarmayı desteklemez. Daha büyük öğeler için destek daha sonraki bir tarihte kullanılabilir.
+- Şu anda 10 MB'tan büyük eklerin veya öğelerin içeri aktarılmasını desteklemiyoruz. Daha büyük öğeler için destek daha sonraki bir tarihte sağlanacaktır.

@@ -14,16 +14,16 @@ ms.custom: nextgen
 ms.reviewer: mkaminska, pahuijbr
 manager: dansimp
 ms.technology: mde
-ms.date: 04/14/2022
+ms.date: 04/19/2022
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: 6d0e9b00e7044145f7ca03d492a5bd32e726c38d
-ms.sourcegitcommit: 1d972f15a45204e89e268c5ff257021aced5e775
+ms.openlocfilehash: 08f9f3e127246b361cd76000967ae22991335338
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2022
-ms.locfileid: "64911478"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64943479"
 ---
 # <a name="microsoft-defender-antivirus-compatibility-with-other-security-products"></a>Microsoft Defender Virüsten Koruma diğer güvenlik ürünleriyle uyumluluk
 
@@ -176,7 +176,7 @@ Bu bölümdeki tabloda, Microsoft Defender Virüsten Koruma etkin modda mı, pas
 (<a id="fn8">8</a>) Microsoft Defender Virüsten Koruma pasif moddayken, web içeriği filtreleme yalnızca Microsoft Edge tarayıcı ile çalışır. 
 
 > [!NOTE]
-> [Microsoft 365 Uç nokta veri kaybı önleme](/microsoft-365/compliance/endpoint-dlp-learn-about) koruması, Microsoft Defender Virüsten Koruma etkin veya pasif modda olduğunda normal çalışmaya devam eder.
+> [Uç nokta veri kaybı önleme](/microsoft-365/compliance/endpoint-dlp-learn-about) koruması, Microsoft Defender Virüsten Koruma etkin veya pasif modda olduğunda normal çalışmaya devam eder.
 
 ## <a name="important-notes"></a>Önemli notlar
 
@@ -194,7 +194,6 @@ Aşağıdaki tabloda açıklandığı gibi, Microsoft Defender Virüsten Koruma 
  | Görev Yöneticisi |  1. Windows bir cihazda Görev Yöneticisi uygulamasını açın.<br/>2. **Ayrıntılar** sekmesini seçin.<br/>3. Listede **MsMpEng.exe** arayın. | 
  | Windows PowerShell <br/> (Microsoft Defender Virüsten Koruma çalıştığını onaylamak için) |  1. Windows bir cihazda Windows PowerShell açın. <br/>2. Aşağıdaki PowerShell cmdlet'ini çalıştırın: `Get-Process`.<br/>3. Sonuçları gözden geçirin. **Microsoft Defender Virüsten Koruma** etkinseMsMpEng.exegörmeniz gerekir. | 
  | Windows PowerShell <br/>(Virüsten korumanın yerinde olduğunu onaylamak için) |  [Get-MpComputerStatus PowerShell cmdlet'ini](/powershell/module/defender/get-mpcomputerstatus) kullanabilirsiniz.<br/>1. Windows bir cihazda Windows PowerShell açın.<br/>2. Aşağıdaki PowerShell cmdlet'ini çalıştırın:<br/> \|Get-MpComputerStatus AMRunningMode öğesini seçin <br/>3. Sonuçları gözden geçirin. Uç noktada Microsoft Defender Virüsten Koruma etkinse **Normal**, **Pasif** veya **EDR Blok Modu'nu** görmeniz gerekir.  | 
- | Komut |  1. Windows bir cihazda Komut İstemi'ni açın.<br/>2. yazın `sc query windefend`ve Enter tuşuna basın.<br/>3. Microsoft Defender Virüsten Koruma pasif modda çalıştığını onaylamak için sonuçları gözden geçirin.  | 
 
 ## <a name="more-details-about-microsoft-defender-antivirus-states"></a>Microsoft Defender Virüsten Koruma durumları hakkında daha fazla ayrıntı
 
@@ -221,4 +220,4 @@ Bu bölümdeki tabloda, Microsoft Defender Virüsten Koruma ile görebileceğini
 - [Windows istemcilerinde Microsoft Defender Virüsten Koruma](microsoft-defender-antivirus-in-windows-10.md)
 - [Windows Server'da Microsoft Defender Virüsten Koruma](microsoft-defender-antivirus-on-windows-server.md)
 - [Engelleme modunda EDR ](edr-in-block-mode.md)
-- [uç nokta veri kaybı önleme Microsoft 365 hakkında bilgi edinin](/microsoft-365/compliance/endpoint-dlp-learn-about)
+- [Uç nokta veri kaybı önleme hakkında daha fazla bilgi edinme](/microsoft-365/compliance/endpoint-dlp-learn-about)

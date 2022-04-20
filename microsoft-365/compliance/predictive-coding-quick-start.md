@@ -1,5 +1,5 @@
 ---
-title: Verilerde tahmine dayalı Advanced eDiscovery - Hızlı başlangıç
+title: eBulmada tahmine dayalı kodlama (Premium) - Hızlı başlangıç
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -13,104 +13,104 @@ ms.localizationpriority: medium
 search.appverid:
 - MET150
 ms.collection: M365-security-compliance
-description: Advanced eDiscovery'da tahmine dayalı kodlama modülünü kullanmaya Advanced eDiscovery. Bu makale, araştırmanıza en uygun gözden geçirme kümesinde içeriği tanımlamak için tahmine dayalı kodlama kullanma işleminin  uç sürecinde size yol sağlar.
-ms.openlocfilehash: 2266f44e7b95c118314d76fe019a97b2db24f07c
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+description: eBulma (Premium) içinde tahmine dayalı kodlama modülünü kullanmaya başlamayı öğrenin. Bu makale, araştırmanıza en uygun bir inceleme kümesindeki içeriği tanımlamak için tahmine dayalı kodlamayı kullanma işleminde size yol gösterir.
+ms.openlocfilehash: 449ef5446ee5a4da87081774037c9b5e2a8d440d
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63449478"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64942325"
 ---
-# <a name="quick-start-predictive-coding-in-advanced-ediscovery-preview"></a>Hızlı başlangıç: Advanced eDiscovery (önizleme)
+# <a name="quick-start-predictive-coding-in-ediscovery-premium-preview"></a>Hızlı başlangıç: eBulmada tahmine dayalı kodlama (Premium) (önizleme)
 
-Bu makalede, Advanced eDiscovery'de tahmine dayalı kodlama kullanmak için hızlı bir başlangıç Advanced eDiscovery. Tahmine dayalı kodlama modülü, araştırmanıza uygun değil büyük hacimli olay içeriğini kullanmanıza yardımcı olmak için akıllı ve makine öğrenme özelliklerini kullanır. Bu, gözden geçirme için en uygun öğeleri önceliklendirmenize yardımcı olacak kendi tahmine dayalı kodlama modellerinizi oluşturarak ve eğiterek  başarılamaz.
+Bu makalede, Microsoft Purview eKeşif'te (Premium) tahmine dayalı kodlamayı kullanmak için hızlı bir başlangıç sunun. Tahmine dayalı kodlama modülü, araştırmanızla ilgili olmayan büyük hacimli olay içeriğini iptal etmenize yardımcı olmak için akıllı, makine öğrenmesi özelliklerini kullanır. Bu, gözden geçirme için en ilgili öğeleri önceliklendirmenize yardımcı olan kendi tahmine dayalı kodlama modellerinizi oluşturup eğiterek gerçekleştirilir.
 
-İşte tahmine dayalı kodlama işlemiyle ilgili hızlı bir genel bakış:
+Tahmine dayalı kodlama işlemine hızlı bir genel bakış aşağıda verilmiştir:
 
 ![Tahmin kodlaması için hızlı başlangıç işlemi.](..\media\PredictiveCodingQuickStartProcess.png)
 
-Çalışmaya başlamak için, ilgili veya ilgili değil en az 50 öğe olarak etiketlenmiş bir model oluşturabilirsiniz. Daha sonra sistem, tahmin puanlarını gözden geçirme kümesinde her öğeye uygulamak için bu eğitimi kullanır. Bu, öğeleri önce en uygun (veya ilgili olmayan) öğeleri gözden geçirmenizi sağlayan tahmin puanına göre filtrelemenizi sağlar. Daha yüksek ücret oranına ve geri çekme oranlarına sahip modelleri eğitmek için, sonraki eğitim turlarında öğeleri model model modellerine kadar etiketlemeye devam edersiniz. Model yazdırıldıktan sonra, gözden geçirilirken öğelere önceliklerini belirlemek için son tahmin filtresini uygulayabilirsiniz.
+Başlamak için, ilgili veya ilgili olmayan 50 öğeyi etiketleyerek bir model oluşturursunuz. Sistem daha sonra bu eğitimi kullanarak inceleme kümesindeki her öğeye tahmin puanlarını uygular. Bu, öğeleri tahmin puanına göre filtrelemenize olanak tanır ve bu sayede önce en ilgili (veya ilgili olmayan) öğeleri gözden geçirebilirsiniz. Modelleri daha yüksek doğruluk ve geri çağırma oranlarıyla eğitmek istiyorsanız, model sabit olana kadar sonraki eğitim turlarında öğeleri etiketlemeye devam edebilirsiniz. Model kararlı hale getirildikten sonra, gözden geçirecek öğelerin önceliklerini ayarlamak için son tahmin filtresini uygulayabilirsiniz.
 
-Tahmine dayalı kodlamaya ayrıntılı bir genel bakış için bkz[. Veri kodlarında tahmine dayalı Advanced eDiscovery](predictive-coding-overview.md).
+Tahmine dayalı kodlamaya ayrıntılı bir genel bakış için bkz. [eBulmada tahmine dayalı kodlama hakkında bilgi edinme (Premium)](predictive-coding-overview.md).
 
 ## <a name="step-1-create-a-new-predictive-coding-model"></a>1. Adım: Yeni bir tahmine dayalı kodlama modeli oluşturma
 
 İlk adım, gözden geçirme kümesinde yeni bir tahmine dayalı kodlama modeli oluşturmaktır
 
-1. Görünüm Microsoft 365 uyumluluk merkezi bir büyük/Advanced eDiscovery sonra Gözden Geçir **kümeleri sekmesini** seçin.
+1. Microsoft Purview uyumluluk portalında bir eBulma (Premium) servis talebi açın ve ardından **Kümeleri gözden geçir** sekmesini seçin.
 
-2. Gözden geçirme kümesi açın ve ardından **AnalyticsManive** >  **coding (önizleme) öğesini tıklatın**.
+2. Bir gözden geçirme kümesi açın ve **ardından Analytics** >  **Tahmine dayalı kodlamayı yönet (önizleme)'** ye tıklayın.
 
-   ![Gözden Geçirme kümesinde Çözümle açılan menüsüne tıklar ve Tahmine Dayalı kodlama sayfasına gider.](..\media\ManagePredictiveCoding.png)
+   ![Tahmine dayalı kodlama sayfasına gitmek için gözden geçirme kümesindeki Çözümle açılan menüsüne tıklayın.](..\media\ManagePredictiveCoding.png)
 
-3. Tahmine **dayalı kodlama modelleri (önizleme) sayfasında** Yeni **model'e tıklayın**.
+3. **Tahmine dayalı kodlama modelleri (önizleme)** sayfasında **Yeni model'e** tıklayın.
 
-4. Uçarak çıkış sayfasında, model için bir ad ve isteğe bağlı bir açıklama yazın.
+4. Açılır sayfada model için bir ad ve isteğe bağlı bir açıklama yazın.
 
-5. Modeli **oluşturmak için** Kaydet'e tıklayın.
+5. Modeli oluşturmak için **Kaydet'e** tıklayın.
 
-   Sistemin modelinizi hazırlaması birkaç dakika sürer. Hazır olduktan sonra, ilk eğitim turlarını gerçekleştirin.
+   Sistemin modelinizi hazırlaması birkaç dakika sürer. Hazır olduktan sonra ilk eğitim turunu gerçekleştirebilirsiniz.
 
-Daha ayrıntılı yönergeler için bkz [. Tahmine dayalı kodlama modeli oluşturma](predictive-coding-create-model.md).
+Daha ayrıntılı yönergeler için bkz. [Tahmine dayalı kodlama modeli oluşturma](predictive-coding-create-model.md).
 
-## <a name="step-2-perform-the-first-training-round"></a>2. Adım: İlk eğitim turını gerçekleştirme
+## <a name="step-2-perform-the-first-training-round"></a>2. Adım: İlk eğitim turunu gerçekleştirme
 
-Modeli oluşturdukta, sıradaki adım öğeleri ilgili veya ilgili değil olarak etiketleerek ilk eğitim turlarını tamamlamaktır.
+Modeli oluşturduktan sonra, sonraki adım öğeleri ilgili veya uygun olmayan olarak etiketleyerek ilk eğitim turunu tamamlamaktır.
 
-1. Gözden geçirme kümesi açın ve ardından **AnalyticsManive** >  **coding (önizleme) öğesini tıklatın**.
+1. Gözden geçirme kümesini açın ve ardından **Analytics** >  **Tahmine dayalı kodlamayı yönet (önizleme)** seçeneğine tıklayın.
 
-2. Tahmine **dayalı kodlama modelleri (önizleme) sayfasında** , eğitmek istediğiniz modeli seçin.
+2. **Tahmine dayalı kodlama modelleri (önizleme)** sayfasında eğitmek istediğiniz modeli seçin.
 
-3. Genel Bakış **sekmesindeki** **1. Tur'ın altında** Sonraki eğitim **turu başlat'a tıklayın**.
+3. **Genel Bakış** sekmesinde, 1. **Tur'un** altında **Sonraki eğitim turunu başlat'a** tıklayın.
 
-   Eğitim **sekmesi** görüntülenir ve etiketlemek için size 50 öğe içerir.
+   **Eğitim** sekmesi görüntülenir ve etiketlemeniz için 50 öğe içerir.
 
-4. Her belgeyi gözden geçirin **ve ardından** etiketlemek **için okuma** bölmesinin en altındaki Uygun veya İlgili değil düğmesini seçin.
+4. Her belgeyi gözden geçirin ve ardından okuma bölmesinin alt kısmındaki **İlgili** veya **İlgili değil** düğmesini seçerek etiketleyin.
 
-   ![Her belgeyi uygun veya uygun değil olarak etiketle.](..\media\TrainModel1.png)
+   ![Her belgeyi ilgili olarak etiketle veya ilgili değil olarak etiketle.](..\media\TrainModel1.png)
 
-5. 50 öğenin hepsini etiketledikten sonra, Son'a **tıklayın**.
+5. 50 öğenin tümünü etiketledikten sonra **Son'a** tıklayın.
 
-    Sistemin etiketlemeden "öğrenmesi" ve modeli güncelleştirmesi birkaç dakika sürer. Bu işlem tamamlandığında, Tahmine Dayalı kodlama modelleri  (önizleme) sayfasında model **için Hazır durumu** görüntülenir.
+    Sistemin etiketlemenizden "öğrenmesi" ve modeli güncelleştirmesi birkaç dakika sürer. Bu işlem tamamlandığında, **Tahmine dayalı kodlama modelleri (önizleme)** sayfasında model için **Hazır** durumu görüntülenir.
 
-Daha ayrıntılı yönergeler için bkz [. Tahmine dayalı bir kodlama modeli eğitin](predictive-coding-train-model.md).
+Daha ayrıntılı yönergeler için bkz. [Tahmine dayalı kodlama modelini eğitin](predictive-coding-train-model.md).
 
-## <a name="step-3-apply-the-prediction-score-filter-to-items-in-review-set"></a>3. Adım: Gözden geçirme kümesinde öğelere tahmin puanı filtresini uygulama
+## <a name="step-3-apply-the-prediction-score-filter-to-items-in-review-set"></a>3. Adım: Tahmin puanı filtresini gözden geçirme kümesindeki öğelere uygulama
 
-Bir eğitim turda finansal kiralama işlemi gerçekleştirdikten sonra, tahmin puanı filtresini gözden geçirme kümesinde öğelere uygulayabilirsiniz. Bu, modelin uygun veya ilgili değil olarak öngördüğü öğeleri gözden geçirmenizi sağlar.   
+Bir eğitim turu kiraladıktan sonra, tahmin puanı filtresini gözden geçirme kümesindeki öğelere uygulayabilirsiniz. Bu, modelin ilgili olarak tahminde bulunduğu veya ilgili olmadığı öğeleri gözden geçirmenize olanak tanır.   
 
-1. Gözden geçirme kümesi açın.
+1. Gözden geçirme kümesini açın.
 
-   ![Filtreler uç sayfası görüntülemek için Filtreler'e tıklayın.](..\media\PredictionScoreFilter0.png)
+   ![Filtreler açılır sayfasını görüntülemek için Filtreler'e tıklayın.](..\media\PredictionScoreFilter0.png)
 
-   Önceden yüklenmiş olan varsayılan filtreler gözden geçirme kümesi sayfasının en üstünde görüntülenir. Bu kümeyi Herhangi biri olarak **bırakın**.
+   Önceden yüklenmiş varsayılan filtreler, gözden geçirme kümesi sayfasının en üstünde görüntülenir. Bunları **Herhangi biri** olarak bırakabilirsiniz.
 
-2. Filtreler **uç** sayfası görüntülemek **için Filtreler'e** tıklayın.
+2. **Filtreler** açılır sayfasını görüntülemek için **Filtreler'e** tıklayın.
 
-3. Bir filtre **& görüntülemek için Çözümleme** ve tahmine dayalı kodlama bölümünü genişletin.
+3. Bir filtre kümesini görüntülemek için **Analiz & tahmine dayalı kodlama** bölümünü genişletin.
 
-      ![Çözümleme verileri ve tahmine dayalı & tahmin puanı filtresi.](..\media\PredictionScoreFilter1.png)
+      ![Analiz & tahmine dayalı kodlama bölümündeki tahmin puanı filtresi.](..\media\PredictionScoreFilter1.png)
 
-   Tahmin puanı filtreleri için adlandırma kuralı Tahmin **puanıdır (model adı).**. Örneğin, Model **A** adlı bir modelin tahmin puanı filtre adı, Tahmin puanı **(Model A) olur**.
+   Tahmin puanı filtreleri için adlandırma kuralı **Tahmin puanı (model adı)** şeklindedir. Örneğin, **Model A** adlı modelin tahmin puanı filtre adı **Tahmin puanı (Model A) şeklindedir**.
 
-4. Kullanmak istediğiniz tahmin puanı filtresini seçin ve ardından Bitti'ye **tıklayın**.
+4. Kullanmak istediğiniz tahmin puanı filtresini seçin ve **bitti'ye** tıklayın.
 
-5. Gözden geçirme kümesi sayfasında, tahmin puanı filtresi açılan kutusuna tıklayın ve tahmin puanı aralığı için en küçük ve en büyük değerleri yazın. Örneğin, aşağıdaki ekran görüntüsünde **0,5** ile **1,0 arasındaki bir tahmin puanı aralığı görüntü).**
+5. Gözden geçirme kümesi sayfasında, tahmin puanı filtresinin açılan menüsüne tıklayın ve tahmin puanı aralığı için en düşük ve en yüksek değerleri yazın. Örneğin, aşağıdaki ekran görüntüsünde **0,5** ile **1,0** arasında bir tahmin puanı aralığı gösterilmektedir.
 
-   ![Tahmin puanı filtresi için en küçük ve en büyük değerler.](..\media\PredictionScoreFilter2.png)
+   ![Tahmin puanı filtresi için en düşük ve en yüksek değerler.](..\media\PredictionScoreFilter2.png)
 
 6. Filtreyi gözden geçirme kümesine otomatik olarak uygulamak için filtrenin dışına tıklayın.
 
-  Gözden geçirme kümesi sayfasında, belirttiğiniz aralık içinde tahmin puanına sahip belgelerin listesi görüntülenir.
+  Belirttiğiniz aralık içinde tahmin puanına sahip belgelerin listesi gözden geçirme kümesi sayfasında görüntülenir.
 
-Daha ayrıntılı yönergeler için bkz [. Gözden geçirme kümesine tahmin filtresi uygulama](predictive-coding-apply-prediction-filter.md).
+Daha ayrıntılı yönergeler için bkz. [Gözden geçirme kümesine tahmin filtresi uygulama](predictive-coding-apply-prediction-filter.md).
 
 ## <a name="step-4-perform-more-training-rounds"></a>4. Adım: Daha fazla eğitim turu gerçekleştirme
 
-Büyük olasılıkla, modülü gözden geçirme kümesinde ilgili ve ilgili olmayan öğeleri daha iyi tahmin edecek şekilde eğitmek için daha fazla eğitim turu gerçekleştirmeniz gerekir. Genel olarak, modeli gereksinimlerinizi karşılayacak kadar eğitecek kadar eğitersiniz.
+Büyük olasılıkla, gözden geçirme kümesindeki ilgili ve ilgili olmayan öğeleri daha iyi tahmin etmek için modülü eğitmek için daha fazla eğitim turu gerçekleştirmeniz gerekir. Genel olarak, modeli gereksinimlerinizi karşılayacak kadar kararlı hale gelene kadar yeterince eğiteceksiniz.
 
-Daha fazla bilgi için bkz [. Ek eğitim yuvarlaları gerçekleştirme](predictive-coding-train-model.md#perform-additional-training-rounds)
+Daha fazla bilgi için bkz. [Ek eğitim yuvarlamaları gerçekleştirme](predictive-coding-train-model.md#perform-additional-training-rounds)
 
-## <a name="step-5-apply-the-final-prediction-score-filter-to-prioritize-review"></a>5. Adım: Gözden geçirme önceliklerini belirlemek için son tahmin puanı filtresini uygulama
+## <a name="step-5-apply-the-final-prediction-score-filter-to-prioritize-review"></a>5. Adım: Gözden geçirmeyi önceliklendirmek için son tahmin puanı filtresini uygulama
 
-Tüm eğitim turlarını ve modeli tamamladikten sonra ilgili ve ilgili olmayan öğelerin gözden geçirme önceliklerini belirlemek için, 3. Adımdaki yönergeleri yinele ve gözden geçirme kümesine son tahmin puanı uygulayın.
+Tüm eğitim turlarını tamamladıktan ve modeli kararlı hale getirdikten sonra ilgili ve ilgili olmayan öğelerin gözden geçirilmesine öncelik vermek için son tahmin puanını gözden geçirme kümesine uygulamak için 3. Adımdaki yönergeleri yineleyin.

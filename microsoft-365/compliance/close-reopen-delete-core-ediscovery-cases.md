@@ -1,5 +1,5 @@
 ---
-title: Çekirdek eK bulma olaylarını kapatma, yeniden açma ve silme
+title: eBulma (Standart) servis taleplerini kapatma, yeniden açma ve silme
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -16,98 +16,98 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Bu makalede, Çekirdek eKbulma servis durumlarının nasıl yönetil olduğu açıklanmıştır. Buna büyük/küçük harf kapatma, kapalı bir vakayı yeniden açma ve vakayı silme dahildir.
-ms.openlocfilehash: a210a06da2effb0b17d526a09499a65fa59bfeb4
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Bu makalede, eBulma (Standart) servis taleplerinin nasıl yönetileceğini açıklanmaktadır. Bu, bir servis talebini kapatmayı, kapalı bir servis talebini yeniden açmayı ve bir servis talebini silmeyi içerir.
+ms.openlocfilehash: 3ceb23f3ec215f3e9a7e5db036e71e5fe2842191
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983604"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64940367"
 ---
-# <a name="close-reopen-and-delete-a-core-ediscovery-case"></a>Core eBulma vakalarını kapatma, yeniden açma ve silme
+# <a name="close-reopen-and-delete-a-ediscovery-standard-case"></a>eBulma (Standart) servis talebini kapatma, yeniden açma ve silme
 
-Bu makalede, bu durumlarda Core eKovery olaylarını kapatma, yeniden açma ve silme Microsoft 365.
+Bu makalede, Microsoft 365'de Microsoft Purview eKeşif (Standart) servis taleplerinin nasıl kapatıldığı, yeniden açıldığı ve silineceği açıklanır.
 
-## <a name="close-a-case"></a>Vakayı kapatma
+## <a name="close-a-case"></a>Servis talebini kapatma
 
-Core eKovery davalarının destekteki dava veya soruşturma tamamlandıktan sonra, vakayı kapatmış oluruz. Bir vakayı kapatarak neler olduğunu burada açıklarız:
+Bir eBulma (Standart) olayı tarafından desteklenen yasal dava veya araştırma tamamlandığında, olayı kapatabilirsiniz. Bir olayı kapattığınızda şunlar olur:
   
-- Olayda eBulma  ayrıcatıları varsa, bunlar kapat olur. Tutma kapat edildikten sonra, içeriğin tut olduğu konumlara 30 günlük bir yetkisiz kullanım süresi (gecikme süresi olarak *adlandırılan) uygulanır*. Bu, içeriğin hemen silinmesini önlemeye yardımcı olur ve yöneticilere, gecikme süresi sona erdikten sonra kalıcı olarak silinmeden önce içeriği arama ve geri yükleme fırsatı sağlar. Daha fazla bilgi için bkz [. eBulma tutmadan içerik konumlarını kaldırma](create-ediscovery-holds.md#removing-content-locations-from-an-ediscovery-hold).
+- Servis talebi herhangi bir eBulma ayrı tutması içeriyorsa, bunlar kapatılır. Ayrı tutma kapatıldıktan sonra, beklemede olan içerik konumlarına 30 günlük yetkisiz kullanım süresi ( *gecikmeli saklama* olarak adlandırılır) uygulanır. Bu, içeriğin hemen silinmesini önlemeye yardımcı olur ve gecikme saklama süresi dolduktan sonra kalıcı olarak silinmeden önce yöneticilere içerik arama ve geri yükleme fırsatı sağlar. Daha fazla bilgi için bkz. [eBulma ayrılığından içerik konumlarını kaldırma](create-ediscovery-holds.md#removing-content-locations-from-an-ediscovery-hold).
 
-- Vakayı kapatma, yalnızca bu vakayla ilişkilendirilmiş olan tılaları kapatır. İçerik yerine başka bekletmeler yerleştirilirse (Mahkeme Tutma, bekletme ilkesi veya farklı bir Çekirdek eKbulma durumundan bekletme gibi) bu bekletmeler yine korunur.
+- Servis talebi kapatıldığında yalnızca bu servis talebiyle ilişkili ayrı tutmalar kapatılır. Diğer ayrı tutmalar bir içerik konumuna (Dava Ayrı Tutma, saklama ilkesi veya farklı bir eBulma (Standart) durumundan ayrı tutma gibi) yerleştirilirse, bu ayrı tutmalar yine korunur.
 
-- Olay, çalışma sayfasındaki Core eKbulma sayfasında Microsoft 365 uyumluluk merkezi. Kapalı durumdaki bir vakanın ayrıntıları, tutma, aramalar ve üyeleri korunur.
+- Servis talebi, Microsoft Purview uyumluluk portalındaki eBulma (Standart) sayfasında listelenmeye devam etmektedir. Kapalı bir servis talebinin ayrıntıları, saklamaları, aramaları ve üyeleri korunur.
 
-- Bir vakayı kapattıktan sonra düzenleyebilirsiniz. Örneğin üyeleri ekp veya kaldırabilir, arama oluşturabilir ve arama sonuçlarını dışarı aktarabilirsiniz. Etkin ve kapalı vakalar arasındaki en önemli fark, bir vaka kapatılanda eKbulma'da ayrı kalmanın kapalı olmasıdır.
+- Servis talebi kapandıktan sonra düzenleyebilirsiniz. Örneğin, üye ekleyebilir veya kaldırabilir, arama oluşturabilir ve arama sonuçlarını dışarı aktarabilirsiniz. Etkin ve kapalı servis talepleri arasındaki temel fark, servis talebi kapatıldığında eBulma tutmalarının kapalı olmasıdır.
 
-Vakayı kapatmak için:
+Bir servis talebini kapatmak için:
   
-1. Çalışma Microsoft 365 uyumluluk merkezi, **eBulma** >  **Puanı'ne** tıklayın ve kurumuzda Çekirdek eKbulma servis durumlarının listesini görüntülemek için.
+1. Uyumluluk portalında, kuruluşunuzdaki **eBulma** >  (Standart) servis taleplerinin listesini görüntülemek için eBulma **Çekirdeği'ne** tıklayın.
 
-2. Kapatmak istediğiniz vakanın adına tıklayın.
+2. Kapatmak istediğiniz servis talebinin adına tıklayın.
 
-   ![Vaka giriş sayfasında vakayı kapat.](../media/eDiscoveryCaseHomePage.png)
+   ![Servis talebi giriş sayfasında büyük/küçük harf kapatma.](../media/eDiscoveryCaseHomePage.png)
 
-3. Giriş sayfasında, Durum'ın **altında Vakayı** **kapat'a tıklayın**.
+3. Giriş sayfasındaki **Durum'un** altında Büyük **/küçük harf kapat'a** tıklayın.
 
-    Olayla ilişkilendirilmiş olan 10'un kapatılamayacaklarını söyleyen bir uyarı görüntülenir.
+    Servis talebiyle ilişkili ayrı tutmaların kapatılacağını belirten bir uyarı görüntülenir.
 
-4. **Vakayı** kapatmak için Evet'e tıklayın.
+4. Servis talebini kapatmak için **Evet'e** tıklayın.
 
-    Olay giriş sayfasındaki durum, Etkin'den **Kapanış'a** **değiştirilir**.
+    Servis talebi giriş sayfasındaki durum **Etkin'den** **Kapanış'a** değiştirilir.
 
-5. Core **eDiscovery sayfasında** , kapatılan **vakanın** durumunu güncelleştirmek için Yenile'yi tıklatın. Kapatma işleminin tamamlanması 60 dakika kadar sürebilir.
+5. **eBulma (Standart)** sayfasında, kapatılan servis talebinin durumunu güncelleştirmek için **Yenile'ye** tıklayın. Kapanış işleminin tamamlanması 60 dakika kadar sürebilir.
 
-    İşlem tamamlandığında, Çekirdek eKbulma sayfasında **vakanın** **durumu Kapalı olarak** değiştirilir.
+    İşlem tamamlandığında, **eBulma (Standart)** sayfasında servis talebinin durumu **Kapalı** olarak değiştirilir.
 
-## <a name="reopen-a-closed-case"></a>Kapalı durumdaki bir vakayı yeniden açma
+## <a name="reopen-a-closed-case"></a>Kapatılan servis talebini yeniden açma
 
-Bir vakayı yeniden açtığnda, servis nedeniyle kapatılan eBulma çıtaları otomatik olarak yeniden geçerli olmayacaktır. Olay yeniden açıldıktan sonra, 10.000'de 10. Bir basılı tutunmayı açmak için, bunu seçerek çıkış sayfasını görüntüleyebilirsiniz ve sonra Durum iki **durumlu düğmeyi** Açık olarak **ayarlayın**.
+Bir servis talebini yeniden açtığınızda, servis talebi kapatıldığında geçerli olan tüm eBulma tutmaları otomatik olarak yeniden başlatılmaz. Servis talebi yeniden açıldıktan sonra **, Ayrı Tutmalar** sayfasına gitmeniz ve önceki ayrı tutmaları açmanız gerekir. Ayrı tutmayı açmak için açılır sayfayı görüntülemek için bu sayfayı seçin ve ardından **Durum** iki durumlu düğmesini **Açık** olarak ayarlayın.
   
-1. Çalışma Microsoft 365 uyumluluk merkezi, **eBulma** >  **Puanı'ne** tıklayın ve kurumuzda Çekirdek eKbulma servis durumlarının listesini görüntülemek için.
+1. Uyumluluk portalında, kuruluşunuzdaki **eBulma** >  (Standart) servis taleplerinin listesini görüntülemek için eBulma **Çekirdeği'ne** tıklayın.
 
-2. Yeniden açmak istediğiniz vakanın adına tıklayın.
+2. Yeniden açmak istediğiniz servis talebinin adına tıklayın.
 
-   ![Kapalı durumdaki bir vakayı yeniden açma.](../media/eDiscoveryCaseHomePageReopen.png)
+   ![Kapatılan bir olayı yeniden açın.](../media/eDiscoveryCaseHomePageReopen.png)
 
-3. Giriş sayfasında, Durum'ın altında **Büyük/küçük** harfe yeniden **aç'a tıklayın**.
+3. Giriş sayfasındaki **Durum'un** altında Servis **talebini yeniden aç'a** tıklayın.
 
-    Kapatılan olayla ilişkilendirilmiş uzlaydın otomatik olarak açık olmadığını söyleyen bir uyarı görüntülenir.
+    Kapatıldığında servis talebiyle ilişkili ayrı tutmaların otomatik olarak açılmayacağını belirten bir uyarı görüntülenir.
 
-4. **Vakayı yeniden** açmak için Evet'e tıklayın.
+4. Servis talebini yeniden açmak için **Evet'e** tıklayın.
 
-    Büyük/yeni olay giriş sayfası çıkış sayfasındaki durum, Kapalı'dan **Etkin'e** **değiştirilir**.
+    Servis talebi giriş sayfası açılır sayfasının durumu **Kapalı** olandan **Etkin** olarak değiştirilir.
 
-5. Core **eDiscovery sayfasında** , yeniden **açılan** vakanın durumunu güncelleştirmek için Yenile'yi tıklatın. Yeniden açma işleminin tamamlanması 60 dakika kadar sürebilir. 
+5. Yeniden açılan servis talebinin durumunu güncelleştirmek için **eBulma (Standart)** sayfasında **Yenile'ye** tıklayın. Yeniden açma işleminin tamamlanması 60 dakika kadar sürebilir. 
 
-    İşlem tamamlandığında, Çekirdek eBulma sayfasında vakanın **durumu Etkin olarak** değiştirilir.
+    İşlem tamamlandığında, servis talebinin durumu **eBulma (Standart)** sayfasında **Etkin** olarak değiştirilir.
 
-6. (İsteğe bağlı) Yeniden açılan vakayla ilişkilendirilmiş 10.000 01.000'i açmak için, Sındır sekmesine  gidin, bir tutma seçin ve sonra da Tutma sayfası üzerinde Durum'un altındaki onay kutusunu seçin.
+6. (İsteğe bağlı) Yeniden açılan servis talebiyle ilişkili ayrı tutmaları açmak için **Ayrı Tutmalar** sekmesine gidin, ayrı tutmayı seçin ve ardından bekleme açılır sayfasındaki **Durum'un** altındaki onay kutusunu seçin.
   
-## <a name="delete-a-case"></a>Vakayı silme
+## <a name="delete-a-case"></a>Servis talebini silme
 
-Etkin ve kapalı durumdaki Çekirdek eKbulma servis durumlarını da silebilirsiniz. Bir vakayı sildikten sonra, olayda yapılan tüm aramalar ve dışarı aktarmalar silinir ve olay, durum listesinden Çekirdek **eBulma** sayfasındaki servis Microsoft 365 uyumluluk merkezi. Silinen bir vakayı yeniden açemezsiniz.
+Etkin ve kapalı eBulma (Standart) servis taleplerini de silebilirsiniz. Bir servis talebini sildiğinizde, servis talebindeki tüm aramalar ve dışarı aktarmalar silinir ve servis talebi uyumluluk portalındaki **eBulma (Standart)** sayfasındaki servis talebi listesinden kaldırılır. Silinen bir olayı yeniden açamazsınız.
 
-Bir vakayı silebilirsiniz (etkin veya kapalı olsa da), önce olayla ilişkilendirilmiş *tüm* eBulma 10'larını silebilirsiniz. Bu durum, Kapalı durumuyla birlikte silmeyi **de içerir**. 
+Bir servis talebini silebilmeniz (etkin veya kapalı olması fark etmeksizin) önce servis talebiyle ilişkili *tüm* eBulma tutmalarını silmeniz gerekir. Bu durum **Kapalı** olan ayrı tutmaları silmeyi içerir. 
 
-eBulma ayrımlarını silmek için:
+eBulma ayrı tutmasını silmek için:
 
-1. Silmek istediğiniz **durumda** 10 A0 sekmesine gidin.
+1. Silmek istediğiniz durumda **Ayrı Tutmalar** sekmesine gidin.
 
-2. Silmek istediğiniz  basılı tutun.
+2. Silmek istediğiniz ayrı tutmayı seçin.
 
-3. Uçarak çıkış sayfasında Sil'e **tıklayın**.
+3. Açılır sayfada **Sil'e** tıklayın.
 
-      ![eBulma ayrımlarını silme.](../media/DeleteeDiscoveryHold.png)
+      ![eBulma ayrı tutmasını silin.](../media/DeleteeDiscoveryHold.png)
 
-Vakayı silmek için:
+Bir servis talebini silmek için:
 
-1. Çalışma Microsoft 365 uyumluluk merkezi, **eBulma** >  **Puanı'ne** tıklayın ve kurumuzda Çekirdek eKbulma servis durumlarının listesini görüntülemek için.
+1. Uyumluluk portalında, kuruluşunuzdaki **eBulma** >  (Standart) servis taleplerinin listesini görüntülemek için eBulma **Çekirdeği'ne** tıklayın.
 
-2. Silmek istediğiniz vakanın adına tıklayın.
+2. Silmek istediğiniz servis talebinin adına tıklayın.
 
-3. Vaka giriş sayfasında, Durum altında **, Büyük/** küçük harf **sil'e tıklayın**.
+3. Servis talebi giriş sayfasındaki **Durum'un** altında Büyük **/küçük harf sil'e** tıklayın.
 
-      ![Vakayı silme.](../media/eDiscoveryCaseHomePageDelete.png)
+      ![Bir servis talebini silin.](../media/eDiscoveryCaseHomePageDelete.png)
 
-Silmeye çalıştığınız olayda eBulma  ayrıcalıkları varsa, bir hata iletisi alırsınız. Vakayla ilişkilendirilmiş tüm dırmaları silmeniz ve ardından vakayı silmeyi yeniden denemeniz gerekir.
+Silmeye çalıştığınız durum eBulma ayrı tutmaları içeriyorsa bir hata iletisi alırsınız. Servis talebiyle ilişkili tüm ayrı tutmaları silmeniz ve ardından servis talebini silmeyi yeniden denemeniz gerekir.

@@ -20,12 +20,12 @@ ms.collection:
 - m365solution-scenario
 ms.custom: ''
 keywords: ''
-ms.openlocfilehash: af165f3565e3601ac4e8118535af3913c2cb2af8
-ms.sourcegitcommit: 6fefc15dd78139316597083b702286097d45d4dd
+ms.openlocfilehash: 68ce5f263f24d4ab3271425815834870c71f2a4a
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64737451"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64938982"
 ---
 # <a name="step-6-monitor-device-risk-and-compliance-to-security-baselines"></a>6. Adım. Cihaz riskini ve güvenlik temel hatlarına uyumluluğu izleyin
 
@@ -39,7 +39,7 @@ Uç Nokta için Microsoft Defender dağıtımı, ekleme uç noktalarını içeri
 Bu çizimde:
 - Uç Nokta için Microsoft Defender, cihazlar için tehdit korumasının karmaşıklık düzeyini büyük ölçüde artırır. 
 - Microsoft Intune, Uygulama Koruma İlkeleri ayarlamanıza ve cihazları yönetmenize (yapılandırma değişiklikleri dahil) olanak tanırken, Uç Nokta için Defender cihazlarınızı sürekli olarak tehditlere karşı izler ve saldırıları düzeltmek için otomatik eylem gerçekleştirebilir. 
-- Cihaz riskini ve güvenlik temellerine uyumluluğu izlemek için Microsoft Intune Uç Nokta için Defender'a bağlayabilirsiniz.
+- Uç Nokta için Defender'a cihaz eklemek için Intune kullanabilirsiniz. Bunu yaptığınızda, bu cihazların Microsoft Purview Endpoint veri kaybı önleme (Endpoint DLP) ile çalışmasını da etkinleştirebilirsiniz.
 
 Bu makale şu adımları içerir:
 - Cihaz riskini izleme
@@ -51,9 +51,9 @@ Uç Nokta için Defender henüz ayarlanmamışsa, [değerlendirme ve pilot ortam
 
 Uç Nokta için Microsoft Defender dağıtıldığında tehdit riski sinyallerinden yararlanabilirsiniz. Bu, risk puanına göre cihazlara erişimi engellemenize olanak tanır. Microsoft, orta veya daha düşük risk puanına sahip cihazlara erişime izin vermenizi önerir.
 
-Android ve iOS/iPadOS için tehdit sinyalleri Uygulama Koruma İlkeleriniz (APP) içinde kullanılabilir. Bunu yapılandırma hakkında bilgi için bkz. [Cihaz risk düzeyini ayarlamak için uygulama koruma ilkesi oluşturma ve atama](https://docs.microsoft.com/mem/intune/protect/advanced-threat-protection-configure#create-and-assign-compliance-policy-to-set-device-risk-level).
+Android ve iOS/iPadOS için tehdit sinyalleri Uygulama Koruma İlkeleriniz (APP) içinde kullanılabilir. Bunu yapılandırma hakkında bilgi için bkz. [Cihaz risk düzeyini ayarlamak için uygulama koruma ilkesi oluşturma ve atama](/mem/intune/protect/advanced-threat-protection-configure#create-and-assign-compliance-policy-to-set-device-risk-level).
 
-Tüm platformlar için mevcut cihaz uyumluluk ilkelerinde risk düzeyini ayarlayabilirsiniz. Bkz. [Koşullu erişim ilkesi oluşturma](https://docs.microsoft.com/mem/intune/protect/advanced-threat-protection-configure#create-a-conditional-access-policy). 
+Tüm platformlar için mevcut cihaz uyumluluk ilkelerinde risk düzeyini ayarlayabilirsiniz. Bkz. [Koşullu erişim ilkesi oluşturma](/mem/intune/protect/advanced-threat-protection-configure#create-a-conditional-access-policy).
 
 ## <a name="deploy-security-baselines-and-monitor-compliance-to-these-settings"></a>Güvenlik temellerini dağıtma ve bu ayarlara uyumluluğu izleme
 

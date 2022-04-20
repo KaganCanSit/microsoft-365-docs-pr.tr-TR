@@ -17,60 +17,60 @@ search.appverid:
 ms.assetid: ''
 ms.custom:
 - seo-marvel-apr2020
-description: Büyük/harf gözden geçirme kümesine arama sonuçlarının veya bu arama sonuçlarının Advanced eDiscovery örnekleri ek olduğunu öğrenin.
-ms.openlocfilehash: bce0301e7045eeb0dd5c42f8a119d56649120a11
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: eBulma (Premium) servis talebi gözden geçirme kümesine arama sonuçlarını veya bu arama sonuçlarının örneklerini eklemeyi öğrenin.
+ms.openlocfilehash: 1649b766c0e7f39122505d3a73574e478373f5b2
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62973852"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64941137"
 ---
 # <a name="add-search-results-to-a-review-set"></a>Gözden geçirme kümesine arama sonuçları ekleme
 
-Bir aramanın sonuçlarından memnunsanız ve bu arama sonuçlarını gözden geçirmeye ve çözümlemeye hazırsanız, bunları durumdaki bir gözden geçirme kümesine  eklersiniz. Orijinal verilerin gözden geçirme kümesine kopyalanması, tema algılama, yakın yineleme algılama ve e-posta dizisini tanımlama gibi gelişmiş analiz araçları sağlayarak gözden geçirme ve çözümleme işlemlerini kolaylaştırır. Ayrıca, gözden geçirme kümesine Microsoft 365 olmayan veri kaynaklarından veriler de ekleyebilir, böylelikle bu verileri gözden geçirebilirsiniz ve böylece bu verileri Microsoft 365.
+Bir aramanın sonuçlarından memnun olduğunuzda ve bu arama sonuçlarını gözden geçirmeye ve analiz etmeye hazır olduğunuzda, bunları servis talebindeki bir gözden geçirme kümesine ekleyebilirsiniz. Özgün verilerin gözden geçirme kümesine kopyalanması ayrıca tema algılama, neredeyse yinelenen algılama ve e-posta iş parçacığı tanımlama gibi gelişmiş analiz araçları sağlayarak inceleme ve analiz sürecini kolaylaştırır. Ayrıca, Microsoft 365 olmayan veri kaynaklarından bir gözden geçirme kümesine veri ekleyebilirsiniz, böylece bu verileri Microsoft 365 topladığınız verilere ek olarak gözden geçirebilirsiniz.
 
-Bir aramanın sonuçlarını gözden geçirme kümesine eklerken (bir olayda gözden geçirme kümeleri Gözden Geçir kümeleri sekmesinde listelenir),  aşağıdaki şeyler gerçekleşir:
+Bir aramanın sonuçlarını gözden geçirme kümesine eklediğinizde (bir servis talebindeki inceleme kümeleri **Gözden geçirme kümeleri** sekmesinde listelenir), aşağıdaki işlemler gerçekleşir:
 
-- Arama yeniden çalıştırın. Bu, gözden geçirme kümesine kopyalanan gerçek arama sonuçlarının, arama en son çalıştırılamazken döndürülen tahmini sonuçlardan farklı olduğu anlamına gelir.
+- Arama yeniden çalıştırılır. Bu, gözden geçirme kümesine kopyalanan gerçek arama sonuçlarının, arama son çalıştırıldığında döndürülen tahmini sonuçlardan farklı olabileceği anlamına gelir.
 
-- Arama sonuçlarıdaki tüm öğeler canlı hizmetlerdeki özgün veri kaynağından kopyalanır ve Microsoft bulutunda güvenli bir Azure Depolama konuma kopyalanır.
+- Arama sonuçlarındaki tüm öğeler canlı hizmetlerdeki özgün veri kaynağından kopyalanır ve Microsoft bulutunda güvenli bir Azure Depolama konumuna kopyalanır.
 
-- Gözden geçirme kümesinde yer alan tüm verilerin olay verilerini gözden geçirme sırasında tamamen aranabilir durumda olacak şekilde, tüm öğeler (içerik ve meta veriler dahil) yeniden dizilir. Olay incelemesi sırasında gözden geçirme kümesinde verilerde arama sırasında, veri sonuçlarını kapsamlı ve hızlı aramalarda yeniden dizine alma.
+- Tüm öğeler (içerik ve meta veriler dahil) yeniden dizinlenir, böylece olay verilerinin gözden geçirilmesi sırasında gözden geçirme kümesindeki tüm veriler tamamen aranabilir. Verilerin yeniden dizine alınması, olay araştırması sırasında gözden geçirme kümesindeki verileri aradığınızda kapsamlı ve hızlı aramalara neden olur.
 
-- [Microsoft](encryption.md) şifreleme teknolojisiyle şifrelenmiş bir dosyadır ve e-posta iletisi ve ekli dosya gözden geçirme kümesine ekli olduğunda, arama sonuçlarında döndürülen e-posta iletisine eklenir. Gözden geçirme kümesinde şifresi çözülmüş dosyayı gözden geçirebilirsiniz ve sorgularsiniz. Gözden geçirme kümesine şifre çözülmüş e-posta ekleri eklemek için RMS Şifre Çözme rolüne atanmışsınız. Daha fazla bilgi için bkz[. eK bulma Microsoft 365 Şifre Çözme.](ediscovery-decryption.md)
+- [Microsoft şifreleme teknolojisiyle](encryption.md) şifrelenmiş ve arama sonuçlarında döndürülen bir e-posta iletisine eklenmiş bir dosyanın şifresi, e-posta iletisi ve ekli dosya gözden geçirme kümesine eklendiğinde çözülür. Şifresi çözülen dosyayı gözden geçirip gözden geçirme kümesinde sorgulayabilirsiniz. Gözden geçirme kümesine şifresi çözülmüş e-posta ekleri eklemek için RMS Şifre Çözme rolüne atanmış olmanız gerekir. Daha fazla bilgi için bkz[. Microsoft 365 eBulma araçlarında şifre çözme](ediscovery-decryption.md).
 
-Gözden geçirme kümesine veri eklemek için, Aramalar sekmesinde bir aramaya tıklayın  ve sonra açılır sayfada gözden geçirmek **için Sonuç** ekle'ye tıklayın.
+Gözden geçirme kümesine veri eklemek için **, Aramalar** sekmesinde bir aramaya tıklayın ve ardından açılır sayfada **gözden geçirmek için Sonuç ekle'ye** tıklayın.
 
-Var olan bir gözden geçirme kümesine ekleyebilir veya yeni bir gözden geçirme kümesi oluşturabilirsiniz.  Yeni bir gözden geçirme kümesine ekleniyorsa, adı belirtin ve ardından  Ekle'ye tıklarsanız, görünen sayfayı görüntüler.
+Mevcut bir gözden geçirme kümesine ekleyebilir veya yeni bir gözden geçirme kümesi oluşturabilirsiniz.  Yeni bir gözden geçirme kümesine ekliyorsanız, açılır sayfayı görüntülemek için adı belirtin ve **Ekle'ye** tıklayın.
 
-![Gözden geçirme kümesi seçin ve koleksiyon seçeneklerini yapılandırabilirsiniz.](../media/AeD_AddToReviewSet.png)
+![Bir gözden geçirme kümesi seçin ve koleksiyon seçeneklerini yapılandırın.](../media/AeD_AddToReviewSet.png)
 
-Gözden geçirme kümesine veri ekleme, uzun süredir çalışan bir işlemdir. Bu işlem, öğeleri Microsoft 365'daki özgün veri kaynaklarından (örneğin, posta kutularından ve sitelerden) toplamayı, azure Depolama konuma (bu kopyalama işlemi aynı zamanda *ingestion* olarak da denir) kopyalamayı ve sonra öğelerin yeniden sunucularını yeniden depolamayı içerir. küme sütununu gözden **geçirmek için eklendi** sütunundaki durumu izlemek için, İşlerin sekmesinde veya Aramalar **sekmesinde ilerleme durumunu izleyebilirsiniz**. Gözden geçirme kümesi işleme tamamlandıktan sonra, olayda Gözden  Geçir kümeleri sekmesine tıklayın ve sonra da gözden geçirme kümesinde verileri filtreleme, gözden geçirme, etiketleme ve dışarı aktarma işlemini başlatmak için gözden geçirme kümesine tıklayın.
+Gözden geçirme kümesine veri eklemek uzun süren bir işlemdir. Bu işlem, özgün veri kaynaklarından öğeleri Microsoft 365 (örneğin, posta kutularından ve sitelerden) toplamayı, Bunları Azure Depolama konumuna kopyalamayı (bu kopyalama işlemine *alma* olarak da adlandırılır) ve sonra öğeleri yeniden dizine eklemeyi içerir. **İlerleme durumunu İşler** sekmesinde veya **Aramalar** sekmesinde, **Kümeyi gözden geçirmek için eklenen veriler** sütunundaki durumu izleyerek izleyebilirsiniz. Gözden geçirme kümesi işleme tamamlandıktan sonra, inceleme kümesindeki verileri filtreleme, gözden geçirme, etiketleme ve dışarı aktarma işlemini başlatmak için olaydaki **Gözden geçirme kümeleri** sekmesine tıklayın ve ardından gözden geçirme kümesine tıklayın.
 
-## <a name="define-options-to-scope-your-collection-for-review"></a>Koleksiyonun kapsamını gözden geçirme için tanımlama
+## <a name="define-options-to-scope-your-collection-for-review"></a>Koleksiyonunuzun kapsamını gözden geçirmek için tanımlama seçenekleri
 
-Var olan veya yeni bir gözden geçirme kümesine aramanın içeriğini eklerken, gözden geçirme için içeriği toplamak için aşağıdaki seçenekleri kullanabilirsiniz:
+Bir aramanın içeriğini var olan veya yeni bir gözden geçirme kümesine eklediğinizde, inceleme için içeriğin nasıl toplanacağına ilişkin aşağıdaki seçeneklere sahipsiniz:
 
-- **SharePoint sürümlerini dahil edin (beta)**: Koleksiyonun sürüm sınırları ve arama parametrelerine göre bir SharePoint belgesinin tüm sürümlerinin koleksiyonunu etkinleştirmek için bu seçeneği kullanın. Bu seçeneğin seçimi, gözden geçirme kümesine eklenen öğelerin boyutunu önemli ölçüde artırır.
+- **SharePoint sürümlerini dahil et (beta)**: Koleksiyonun sürüm sınırları ve arama parametrelerine göre bir SharePoint belgesinin tüm sürümlerinin toplanmasını etkinleştirmek için bu seçeneği kullanın. Bu seçeneğin belirtilmesi, gözden geçirme kümesine eklenen öğelerin boyutunu önemli ölçüde artırır.
 
-- **Konuşma alma seçenekleri**: Gözden geçirme kümesine eklenen öğeler, ileri ve geri konuşma bağlamında içeriği gözden geçirmeye yardımcı olmak için zincir konuşmalar için etkinleştirilir. Daha fazla bilgi için bkz[. Advanced eDiscovery](conversation-review-sets.md).
+- **Konuşma alma seçenekleri: Gözden** geçirme kümesine eklenen öğeler, içeriği ileri geri konuşma bağlamında gözden geçirmeye yardımcı olmak üzere yazışma konuşmaları için etkinleştirilir. Daha fazla bilgi için bkz. [eBulma'da (Premium) konuşmaları gözden geçirme](conversation-review-sets.md).
 
-- **Modern ekler için alma seçeneğini etkinleştirin**: Daha fazla gözden geçirmek üzere modern ekleri veya bağlı dosyaları koleksiyona eklemek için bu seçeneği kullanın. Modern eklerle ilgili aranabilir özellikler hakkında daha fazla bilgi için bkz. Modern [eklerin belge meta Advanced eDiscovery](document-metadata-fields-in-Advanced-eDiscovery.md).
+- **Modern ekler için almayı etkinleştir**: Daha fazla inceleme için modern ekleri veya bağlı dosyaları koleksiyona eklemek için bu seçeneği kullanın. Modern eklerle ilgili aranabilir özellikler hakkında daha fazla bilgi için bkz. [eBulma'da (Premium) belge meta veri alanları](document-metadata-fields-in-Advanced-eDiscovery.md).
 
 ## <a name="add-a-sample-to-a-review-set"></a>Gözden geçirme kümesine örnek ekleme
 
-Tüm arama sonuçlarını gözden geçirme kümesine eklemeden önce daha kapsamlı bir şekilde doğrulamak için, her şeyi eklemek yerine arama sonuçlarından bir örnek olarak gözden geçirme kümesine  eklersiniz.
+Tümünü bir gözden geçirme kümesine eklemeden önce bir aramanın sonuçlarını daha kapsamlı bir şekilde doğrulamak istiyorsanız, her şeyi eklemek yerine bir gözden geçirme kümesine arama sonuçlarının bir örneğini ekleyebilirsiniz.
 
-Gözden geçirme kümesine örnek eklemek için, Aramalar sekmesinde bir aramaya **tıklayın** ve açılır sayfada **Örnek'e** tıklayın. Örnekleme **parametreleri sayfasında** aşağıdaki seçeneklerden birini belirleyin:
+Gözden geçirme kümesine örnek eklemek için **, Aramalar** sekmesinde bir aramaya tıklayın ve açılır sayfada **Örnek'e** tıklayın. **Örnekleme parametreleri** sayfasında aşağıdaki seçeneklerden birini belirleyin:
 
-- **Güven düzeyi %** **ve Güven aralığı %** - Gözden geçirme kümesine eklenen öğeler, ayar istediğiniz istatistiksel parametrelerle belirlenir. Sonuçları örneklemek için normalde bir güven düzeyi ve aralık kullanıyorsanız, bunları açılan kutularda belirtin. Aksi takdirde, varsayılan ayarları kullanın.
+- **Güvenilirlik düzeyi %** ve **Güvenilirlik aralığı %** - Gözden geçirme kümesine eklenen öğeler, ayarladığınız istatistiksel parametreler tarafından belirlenir. Sonuçları örnekleme sırasında genellikle bir güvenilirlik düzeyi ve aralık kullanıyorsanız, bunları açılan kutularda belirtin. Aksi takdirde varsayılan ayarları kullanın.
 
-- **Rastgele örnek %** - Gözden geçirme kümesine eklenen öğelerde, arama tarafından döndürülen toplam öğe sayısının belirtilen yüzdesinin rastgele seçimi temel alınarak belirlenmektedir.
+- **Rastgele örnek %** - Gözden geçirme kümesine eklenen öğeler, arama tarafından döndürülen toplam öğe sayısının belirtilen yüzdesinin rastgele seçilmesini temel alır.
 
-Önceki seçeneklerden birini seçtikten ve yapılandırdikten sonra, örneği eklemek için bir gözden geçirme kümesi seçin ve gönder'e **tıklayın**. Yine, İşlerin ilerleme durumunu, İş sekmesinde  veya Aramalar sekmesindeki Kümeyi gözden geçirmek için eklenmiş veri **sütunundaki durumu izleyebilirsiniz**.
+Önceki seçeneklerden birini seçip yapılandırdıktan sonra, örneği eklemek için bir gözden geçirme kümesi seçin ve **gönder'e** tıklayın. Yeniden, **İşler** sekmesinde veya **Aramalar** sekmesinde, **Kümeyi gözden geçirmek için eklenen veriler** sütunundaki durumu izleyerek ilerleme durumunu izleyebilirsiniz.
 
 ## <a name="optical-character-recognition"></a>Optik karakter tanıma
 
-Bir gözden geçirme kümesine arama sonuçları eklerken, Advanced eDiscovery'daki optik karakter tanıma (OCR) işlevselliği resimlerden metinleri otomatik olarak ayıklar ve resim metnini gözden geçirme kümesine eklenen verilerle birlikte ekler. Ayıklanan metni gözden geçirme kümesinde, seçili resim dosyasının Metin görüntüleyicisinde görüntüleyebilirsiniz. Bu, resimlerde metin üzerinde daha fazla gözden geçirme ve çözümleme yürütmenizi sağlar. OCR kayıp dosyalar, e-posta ekleri ve ekli resimler için destekler. OCR tarafından desteklenen resim dosyası biçimlerinin listesi için bkz. OCR'de [desteklenen dosya Advanced eDiscovery](supported-filetypes-ediscovery20.md#image).
+Bir gözden geçirme kümesine arama sonuçları eklediğinizde, eBulma'daki (Premium) optik karakter tanıma (OCR) işlevi görüntülerdeki metinleri otomatik olarak ayıklar ve bir gözden geçirme kümesine eklenen verileri içeren görüntü metnini içerir. Ayıklanan metni, gözden geçirme kümesindeki seçili görüntü dosyasının Metin görüntüleyicisinde görüntüleyebilirsiniz. Bu sayede görüntülerdeki metinler üzerinde daha fazla inceleme ve analiz gerçekleştirebilirsiniz. OCR gevşek dosyalar, e-posta ekleri ve ekli görüntüler için desteklenir. OCR için desteklenen görüntü dosyası biçimlerinin listesi için bkz. [eBulma'da desteklenen dosya türleri (Premium)](supported-filetypes-ediscovery20.md#image).
 
-Bu dosyalarda kendi 2013 olaylarında OCR işlevini etkinleştirmeniz Advanced eDiscovery. Daha fazla bilgi için bkz [. Arama ve çözümleme ayarlarını yapılandırma](configure-search-and-analytics-settings-in-advanced-ediscovery.md#optical-character-recognition-ocr).
+eBulma'da (Premium) oluşturduğunuz her servis talebi için OCR işlevselliğini etkinleştirmeniz gerekir. Daha fazla bilgi için bkz. [Arama ve analiz ayarlarını yapılandırma](configure-search-and-analytics-settings-in-advanced-ediscovery.md#optical-character-recognition-ocr).

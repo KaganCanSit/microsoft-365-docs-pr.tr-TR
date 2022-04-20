@@ -1,5 +1,5 @@
 ---
-title: WeChat verilerini aynı dosyada arşivlemek için bir bağlayıcı Microsoft 365
+title: Microsoft 365'de WeChat verilerini arşivleye bir bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -11,72 +11,72 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Web sayfalarında bir bağlayıcı ayarlayın ve Microsoft 365 uyumluluk merkezi WeChat verilerini içeri aktarın ve Microsoft 365.
-ms.openlocfilehash: f2adb42dfd8145658e8861c752cfb9c11e306f52
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Microsoft 365'de WeChat verilerini içeri aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında bir bağlayıcı ayarlayın ve kullanın.
+ms.openlocfilehash: e504c9fd3440e0ccc232e91838ef52577b1552be
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63328225"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64942831"
 ---
-# <a name="set-up-a-connector-to-archive-wechat-data"></a>WeChat verilerini arşivlemek için bağlayıcı ayarlama
+# <a name="set-up-a-connector-to-archive-wechat-data"></a>WeChat verilerini arşivleye bağlayıcı ayarlama
 
-WeChat ve WeCom aramalarını, sohbetlerini, eklerini, dosyalarını ve geri çağırma iletilerini içeri aktarın ve Microsoft 365 uyumluluk merkezi teleMessage bağlayıcıyı kullanın. Bağlayıcıyı ayardikten ve yapılandırdikten sonra, bu bağlayıcı kuruluşun TeleMessage hesabına bağlanır ve TeleMessage WeChat Arşivleyicisi'i kullanarak çalışanların mobil iletişimini Microsoft 365.
+WeChat ve WeCom çağrılarını, sohbetleri, ekleri, dosyaları ve geri çağrıları içeri aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalındaki TeleMessage bağlayıcısını kullanın. Bağlayıcıyı ayarlayıp yapılandırdıktan sonra, kuruluşunuzun TeleMessage hesabına bağlanır ve TeleMessage WeChat Arşivleyicisi'ni kullanarak çalışanların mobil iletişimini Microsoft 365'deki posta kutularına aktarır.
 
-WeChat Arşivleyicisi bağlayıcı verileri kullanıcı posta kutularında depolendikten sonra, WeChat iletişim verilerine Mahkeme Microsoft 365, eKbulma, In-Place Arşivleme, Denetim, İletişim uyumluluğu ve Microsoft 365 bekletme ilkeleri gibi uyumluluk özelliklerini uygulayabilirsiniz. Örneğin, İçerik Arama'yu kullanarak WeChat iletişiminde arama veya WeChat Arşivleyici bağlayıcı verilerini içeren posta kutusunu bir özel olayda özel bir Advanced eDiscovery ilişkilendirilebilirsiniz. Verileri şirket içinde içeri ve arşivleye almak için WeChat Arşivleyici bağlayıcısı Microsoft 365 düzenleme düzenlemelerine ve mevzuat ilkelerine uyumlu kalmalarına yardımcı olabilir.
+WeChat Arşivleyici bağlayıcısı verileri kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, eBulma, In-Place Arşivleme, Denetim, İletişim uyumluluğu ve Microsoft 365 bekletme ilkeleri gibi Microsoft Purview özelliklerini WeChat iletişim verilerine uygulayabilirsiniz. Örneğin, İçerik Arama'yı kullanarak WeChat iletişiminde arama yapabilir veya WeChat Archiver bağlayıcı verilerini içeren posta kutusunu eBulma (Premium) durumundaki bir koruyucuyla ilişkilendirebilirsiniz. Microsoft 365'da verileri içeri aktarmak ve arşivlemek için WeChat Arşivleyici bağlayıcısı kullanmak, kuruluşunuzun kurumsal idare düzenlemeleri ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 
-## <a name="overview-of-archiving-wechat-communication-data"></a>WeChat iletişim verilerini arşivlemeye genel bakış
+## <a name="overview-of-archiving-wechat-communication-data"></a>WeChat iletişim verilerini arşivleme hakkında genel bakış
 
-Aşağıdaki genel bakış makalesinde, WeChat iletişim verilerini aynı tabloda arşivlemek için bağlayıcı kullanma Microsoft 365.
+Aşağıdaki genel bakış, Microsoft 365'da WeChat iletişim verilerini arşivleyen bir bağlayıcı kullanma işlemini açıklar.
 
 ![WeChat Arşivleyici verileri için arşivleme iş akışı.](../media/WeChatConnectorWorkflow.png)
 
-1. Your organization works with TeleMessage to set a WeChat Archiver connector.
+1. Kuruluşunuz, WeChat Archiver bağlayıcısı ayarlamak için TeleMessage ile birlikte çalışır.
 
-2. Gerçek zamanlı olarak, kuruluşa ait WeChat verileri TeleMessage sitesine kopyalanır.
+2. Kuruluşunuzun WeChat verileri gerçek zamanlı olarak TeleMessage sitesine kopyalanır.
 
-3. Microsoft 365 uyumluluk merkezi'ta 24 saat içinde 24 saat içinde oluşturulan WeChat Arşivleyicisi bağlayıcısı, TeleMessage sitesine bağlanır ve önceki 24 saat içinde gönderilen e-posta iletilerini Microsoft Bulut'un güvenli bir Azure Depolama alanına aktarıyor.
+3. Uyumluluk portalında oluşturduğunuz WeChat Arşivleyici bağlayıcısı her gün TeleMessage sitesine bağlanır ve önceki 24 saat içindeki e-posta iletilerini Microsoft Bulutu'ndaki güvenli bir Azure Depolama alanına aktarır.
 
-4. Bağlayıcı, mobil iletişim öğelerini belirli bir kullanıcının posta kutusuna aktarıyor. Belirli bir kullanıcının posta kutusunda WeChat Arşivleyicisi adlı yeni bir klasör oluşturulur ve öğeler bu klasöre aktarılır. Bağlayıcı, Kullanıcının E-posta adresi *özelliğinin değerini kullanarak eşleme* yapar. Her e-posta iletisi, e-posta iletisi her katılımcının e-posta adresiyle doldurulan bu özelliği içerir. Kullanıcının E-posta adresi özelliğinin değerini kullanarak otomatik kullanıcı  eşlemeye ek olarak, CSV eşleme dosyası yükerek özel eşleme de tanımlayabilirsiniz. Bu eşleme dosyası, Kullanıcının mobil Numarasını ve her kullanıcı için Microsoft 365 posta kutusu adresini içermeli. Otomatik kullanıcı eşlemesini etkinleştirir ve özel eşleme sağlarsanız, bağlayıcının önce özel eşleme dosyasına bakacak her e-posta öğesi için özel eşlemesi olur. Kullanıcının mobil numarasına karşılık gelen Microsoft 365 geçerli bir kullanıcı bulamazsa, bağlayıcı, e-posta öğesinin Kullanıcı 'nın e-posta adresi özelliğini kullanır. Bağlayıcı, özel eşleme dosyasında veya Microsoft 365 e-posta öğesinin e-posta adresi özelliğinde geçerli bir kullanıcı bulamazsa, öğe aktarılmaz.
+4. Bağlayıcı, mobil iletişim öğelerini belirli bir kullanıcının posta kutusuna aktarır. Belirli bir kullanıcının posta kutusunda WeChat Archiver adlı yeni bir klasör oluşturulur ve öğeler bu klasöre aktarılır. Bağlayıcı, *Kullanıcının E-posta adresi* özelliğinin değerini kullanarak eşleme yapar. Her e-posta iletisi, e-posta iletisinin her katılımcısının e-posta adresiyle doldurulmuş olan bu özelliği içerir. *Kullanıcının E-posta adresi* özelliğinin değerini kullanarak otomatik kullanıcı eşlemesine ek olarak, csv eşleme dosyasını karşıya yükleyerek özel eşleme de tanımlayabilirsiniz. Bu eşleme dosyası Kullanıcının cep telefonu numarasını ve her kullanıcı için ilgili Microsoft 365 posta kutusu adresini içermelidir. Otomatik kullanıcı eşlemesini etkinleştirir ve özel bir eşleme sağlarsanız, bağlayıcı her e-posta öğesi için önce özel eşleme dosyasına bakar. Kullanıcının cep telefonu numarasına karşılık gelen geçerli bir Microsoft 365 kullanıcı bulamazsa bağlayıcı, e-posta öğesinin Kullanıcının e-posta adresi özelliğini kullanır. Bağlayıcı, özel eşleme dosyasında veya kullanıcının *e-posta öğesinin e-posta adresi* özelliğinde geçerli bir Microsoft 365 kullanıcı bulamazsa, öğe içeri aktarılamaz.
 
 ## <a name="before-you-set-up-a-connector"></a>Bağlayıcıyı ayarlamadan önce
 
-- WeChat arşiv bağlayıcısı ayarlamak için TeleMessage ile çalışma. Daha fazla bilgi için bkz[. Daha fazla bilgi için TeleMessage WeChat Arşivleyicisi'Microsoft 365](https://www.telemessage.com/microsoft-365-activation-for-wechat-archiver/).
+- WeChat arşiv bağlayıcısı ayarlamak için TeleMessage ile çalışın. Daha fazla bilgi için bkz[. Microsoft 365 için TeleMessage WeChat Archiver'ı etkinleştirme](https://www.telemessage.com/microsoft-365-activation-for-wechat-archiver/).
 
-- E-posta için bir TeleMessage Microsoft 365 ayarlayın ve geçerli bir şirket yönetim hesabı açın. Daha fazla bilgi için bkz[. Mobil Arşivleme'Microsoft 365 Sıralama](https://www.telemessage.com/mobile-archiver/order-mobile-archiver-for-microsoft-365/).
+- Microsoft 365 için bir TeleMessage bağlayıcısı ayarlayın ve geçerli bir şirket yönetim hesabı alın. Daha fazla bilgi için bkz[. Sipariş Microsoft 365 Mobil Arşivleme](https://www.telemessage.com/mobile-archiver/order-mobile-archiver-for-microsoft-365/).
 
-- TeleMessage hesabında WeChat arşivlemesi gerektiren tüm kullanıcıları, kullanıcının hesaplarında kullanılan e-posta adresiyle Microsoft 365.
+- WeChat arşivlemeyi gerektiren tüm kullanıcıları TeleMessage hesabına kullanıcının Microsoft 365 hesabı için kullanılan e-posta adresiyle kaydedin.
 
-- Tencent WeCom uygulamasını kurumuz kullanan kullanıcıların cep telefonlarına yüklemeniz ve etkinleştirmeniz gerekir. WeCom uygulaması, kullanıcıların diğer WeChat ve WeCom kullanıcıleriyle iletişim kurmasına ve sohbet kurmasına olanak sağlar.
+- Tencent WeCom uygulamasını kuruluşunuzdaki kullanıcıların cep telefonlarına yüklemeniz ve etkinleştirmeniz gerekir. WeCom uygulaması, kullanıcıların diğer WeChat ve WeCom kullanıcılarıyla iletişim kurmasını ve sohbetini sağlar.
 
-- Dosya sayfasında bir WeChat Arşivleyici bağlayıcısı Microsoft 365 uyumluluk merkezi Veri Bağlayıcısı Yönetici rolüne atanmış olması gerekir. Bu rol, sayfanın en son veri **bağlayıcıları sayfasına bağlayıcı** eklemek Microsoft 365 uyumluluk merkezi. Bu rol varsayılan olarak birden çok rol gruplarına eklenir. Bu rol gruplarının listesi için, Güvenlik ve Uyumluluk Merkezi'nde İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki roller" [& bakın](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). Alternatif olarak, bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolü ata sonrasında uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için aşağıdaki İzinler bölümündeki "Özel bir rol grubu oluşturma" [bölümüne Microsoft 365 uyumluluk merkezi](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Uyumluluk portalında WeChat Arşivleyici bağlayıcısı oluşturan kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için [Microsoft Purview uyumluluk portalındaki İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
-- Bu TeleMessage veri bağlayıcısı ABD GCC tarafından Microsoft 365 ortamlarda kullanılabilir. Üçüncü taraf uygulamaları ve hizmetleri, kuruluş müşteri verilerini Microsoft 365 altyapısının dışında olan üçüncü taraf sistemlerde depolamayı, iletip işlemeyi ve bu nedenle de Microsoft 365 uyumluluk ve veri koruma taahhütleri kapsamında değildir. Microsoft, bu ürünün üçüncü taraf uygulamalara bağlanmak için kullanılabileceğiyle ilgili hiçbir beyanda yoktur ve bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu da ima eder.
+- Bu TeleMessage veri bağlayıcısı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda kullanılabilir. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerinin Microsoft 365 altyapısı dışında olan ve bu nedenle Microsoft Purview ve veri koruma taahhütleri kapsamında olmayan üçüncü taraf sistemlerde depolanmasını, iletilmesini ve işlenmesini içerebilir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
 
-## <a name="create-a-wechat-archiver-connector"></a>WeChat Arşivleyicisi bağlayıcısı oluşturma
+## <a name="create-a-wechat-archiver-connector"></a>WeChat Arşivleyici bağlayıcısı oluşturma
 
-Bu bölümdeki adımları takip edin ve arşiv kısmında bir WeChat Arşivleyicisi Microsoft 365 uyumluluk merkezi. Bağlayıcı, teleMessage sitesine bağlanmak ve WeChat iletişim verilerini E-Posta'da ilgili kullanıcı posta kutularına aktarımı için Microsoft 365.
+Uyumluluk portalında bir WeChat Arşivleyici bağlayıcısı oluşturmak için bu bölümdeki adımları izleyin. Bağlayıcı, TeleMessage sitesine bağlanmak ve WeChat iletişim verilerini Microsoft 365 ilgili kullanıcı posta kutularına aktarmak için sağladığınız bilgileri kullanır.
 
-1. Veri bağlayıcılarıWeChat <https://compliance.microsoft.com> **Arşivleyicisi'ne** >  **gidin ve bu öğeye tıklayın**.
+1. **Veri bağlayıcılarıWeChat** >  **Arşivleyicisi'ne**<https://compliance.microsoft.com> gidin ve tıklayın.
 
-2. **WeChat Arşivleyicisi ürün** açıklaması sayfasında Bağlayıcı **ekle'ye tıklayın**
+2. **WeChat Arşivleyicisi** ürün açıklaması sayfasında **Bağlayıcı ekle'ye** tıklayın
 
-3. Hizmet Koşulları **sayfasında Kabul Et'e** **tıklayın**.
+3. **Hizmet koşulları** sayfasında **Kabul Et'e** tıklayın.
 
-4. **TeleMessage'da Oturum Aç** sayfasında, 3. Adım'ın altında aşağıdaki kutulara gerekli bilgileri girin ve ardından Sonraki'ye **tıklayın**.
+4. **TeleMessage'da Oturum Aç** sayfasındaki 3. Adım'ın altında, aşağıdaki kutulara gerekli bilgileri girin ve **İleri'ye** tıklayın.
 
-    - **Kullanıcı** Adı: TeleMessage kullanıcı adınız.
+    - **Kullanıcı adı**: TeleMessage kullanıcı adınız.
 
     - **Parola**: TeleMessage parolanız.
 
-5. Bağlayıcı oluşturulduktan sonra, sonraki sayfaya gitmek için açılır pencereyi kapatabilirsiniz.
+5. Bağlayıcı oluşturulduktan sonra açılır pencereyi kapatarak sonraki sayfaya gidebilirsiniz.
 
-6. Kullanıcı eşleme **sayfasında** , otomatik kullanıcı eşlemesini etkinleştirin. Csv dosyasına özel bir kullanıcı eşlemesi de yükleyebilirsiniz.
+6. Kullanıcı eşleme sayfasında otomatik kullanıcı **eşlemesini** etkinleştirin. Özel kullanıcı eşleme CSV dosyasını da karşıya yükleyebilirsiniz.
 
-7. **Sonraki'ye** tıklayın, ayarlarınızı gözden geçirip bağlayıcıyı oluşturmak **için** Son'a tıklayın.
+7. **İleri'ye** tıklayın, ayarlarınızı gözden geçirin ve ardından **Son'a** tıklayarak bağlayıcıyı oluşturun.
 
-8. Yeni bağlayıcı **için** içeri aktarma **işleminin ilerlemesini** görmek için Veri bağlayıcıları sayfasındaki Bağlayıcılar sekmesine gidin.
+8. Yeni **bağlayıcının** içeri aktarma işleminin ilerleme durumunu görmek için **Veri bağlayıcıları sayfasındaki Bağlayıcılar** sekmesine gidin.
 
 ## <a name="known-issues"></a>Bilinen sorunlar
 
-- Şu anda ekleri veya 10 MB'den büyük öğeleri içeri aktarmayı desteklemez. Daha büyük öğeler için destek daha sonraki bir tarihte kullanılabilir.
+- Şu anda 10 MB'tan büyük eklerin veya öğelerin içeri aktarılmasını desteklemiyoruz. Daha büyük öğeler için destek daha sonraki bir tarihte sağlanacaktır.

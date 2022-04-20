@@ -1,5 +1,5 @@
 ---
-title: 'Geçiş: Office 365 için Microsoft Defender Aşama 3: Ekleme'
+title: "Office 365 için Microsoft Defender Aşama 3'e geçiş: Ekleme"
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -16,217 +16,217 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
 ms.custom: migrationguides
-description: Üçüncü taraf koruma hizmetlerinden veya cihazından üçüncü taraf koruma hizmetine veya cihazdan üçüncü taraf korumasına Office 365 için Microsoft Defender tamamlayın.
+description: Üçüncü taraf koruma hizmetinden veya cihazından Office 365 için Microsoft Defender korumasına geçiş adımlarını tamamlayın.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 9160a6fc79ba94e4cb86fb0f96f46e565c0f613c
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: a2b70cdd53797a4985cc76f777401fa33f3e1163
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64467521"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64939223"
 ---
-# <a name="migrate-to-microsoft-defender-for-office-365---phase-3-onboard"></a>Geçiş: Office 365 için Microsoft Defender - Aşama 3: Ekleme
+# <a name="migrate-to-microsoft-defender-for-office-365---phase-3-onboard"></a>Office 365 için Microsoft Defender Geçiş - 3. Aşama: Ekleme
 
-**Geçerli olduğu yer:**
+**Uygulandığı öğe**
 - [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 
 <br>
 
-|[![Aşama 1: Hazırlık.](../../media/phase-diagrams/prepare.png#lightbox)](migrate-to-defender-for-office-365-prepare.md) <br> [Aşama 1: Hazırlama](migrate-to-defender-for-office-365-prepare.md)|[![Aşama 2: Ayarlama.](../../media/phase-diagrams/setup.png#lightbox)](migrate-to-defender-for-office-365-setup.md) <br> [Aşama 2: Ayarlama](migrate-to-defender-for-office-365-setup.md)|![Aşama 3: Ekleme.](../../media/phase-diagrams/onboard.png) <br> Aşama 3: Ekleme|
+|[![1. Aşama: Hazırlanın.](../../media/phase-diagrams/prepare.png#lightbox)](migrate-to-defender-for-office-365-prepare.md) <br> [Aşama 1: Hazırlık](migrate-to-defender-for-office-365-prepare.md)|[![2. Aşama: Ayarlama.](../../media/phase-diagrams/setup.png#lightbox)](migrate-to-defender-for-office-365-setup.md) <br> [Aşama 2: Kurulum](migrate-to-defender-for-office-365-setup.md)|![3. Aşama: Ekleme.](../../media/phase-diagrams/onboard.png) <br> Aşama 3: Katılım|
 |---|---|---|
 |||*Buradasınız!*|
 
-Aşama **3: Geçiş işleminin** bir sonraki **[aşamaya geçişini Office 365 için Microsoft Defender](migrate-to-defender-for-office-365.md#the-migration-process)**! Bu geçiş aşaması aşağıdaki adımları içerir:
+**3. Aşama:** **[geçişinizi Office 365 için Microsoft Defender eklemeye](migrate-to-defender-for-office-365.md#the-migration-process)** hoş geldiniz! Bu geçiş aşaması aşağıdaki adımları içerir:
 
-1. [Güvenlik önlemlerini eklemeye Teams](#step-1-begin-onboarding-security-teams)
-2. [(İsteğe bağlı) Pilot kullanıcıların var olan koruma hizmetiniz tarafından filtre uygulamanın dışında tutulacak](#step-2-optional-exempt-pilot-users-from-filtering-by-your-existing-protection-service)
-3. [Akıllı ifadeyi ayarlama](#step-3-tune-spoof-intelligence)
-4. [Kimliğe bürünme koruması ve posta kutusu zekası ayarlama](#step-4-tune-impersonation-protection-and-mailbox-intelligence)
-5. [Ölçmek ve ayarlamak için kullanıcı gönderimlerinden veri kullanma](#step-5-use-data-from-user-submissions-to-measure-and-adjust)
-6. [(İsteğe bağlı) Pilot uygulamanıza daha fazla kullanıcı ekleyin ve daha fazla kullanıcı ekleyin](#step-6-optional-add-more-users-to-your-pilot-and-iterate)
-7. [SCL=Microsoft 365-1 posta akış kuralını tüm kullanıcılara genişletme ve kapatma](#step-7-extend-microsoft-365-protection-to-all-users-and-turn-off-the-scl-1-mail-flow-rule)
+1. [Güvenlik Teams eklemeye başlama](#step-1-begin-onboarding-security-teams)
+2. [(İsteğe bağlı) Pilot kullanıcıların mevcut koruma hizmetinize göre filtrelemesini muaf tutma](#step-2-optional-exempt-pilot-users-from-filtering-by-your-existing-protection-service)
+3. [Sahte zekayı ayarlama](#step-3-tune-spoof-intelligence)
+4. [Kimliğe bürünme koruması ve posta kutusu zekasını ayarlama](#step-4-tune-impersonation-protection-and-mailbox-intelligence)
+5. [Ölçmek ve ayarlamak için kullanıcı gönderimlerindeki verileri kullanma](#step-5-use-data-from-user-submissions-to-measure-and-adjust)
+6. [(İsteğe bağlı) Pilotunuza daha fazla kullanıcı ekleme ve yineleme](#step-6-optional-add-more-users-to-your-pilot-and-iterate)
+7. [Microsoft 365 korumasını tüm kullanıcılara genişletme ve SCL=-1 posta akışı kuralını kapatma](#step-7-extend-microsoft-365-protection-to-all-users-and-turn-off-the-scl-1-mail-flow-rule)
 8. [MX kayıtlarınızı değiştirme](#step-8-switch-your-mx-records)
 
-## <a name="step-1-begin-onboarding-security-teams"></a>1. Adım: Eklemeye başlama Güvenlik Teams
+## <a name="step-1-begin-onboarding-security-teams"></a>1. Adım: Güvenlik Teams eklemeye başlayın
 
-Kuruluşta bir güvenlik müdahale ekibi varsa, şimdi bu ekipleri bilet sistemleri Office 365 için Microsoft Defender yanıt süreçlerinize tümleştirmeye başlamanın tam zamanı. Bu kendi başına bir konu başlığıdır, ancak bazen gözden kaçırabilirsiniz. Güvenlik yanıtı ekibinin erkenden dahil olmasını sağlamak, MX kayıtlarınızı değiştirişte, kuruluşlarının tehditlerle başa çıkmaya hazır olmasını sağlar. Olay müdahalesi, aşağıdaki görevleri yerine idare etmek için iyi bir şekilde sahip olmak gerekir:
+Kuruluşunuzun bir güvenlik yanıt ekibi varsa, şimdi Office 365 için Microsoft Defender bilet sistemleri de dahil olmak üzere yanıt süreçlerinizle tümleştirmeye başlamanın tam zamanıdır. Bu tamamen kendi başına bir konudur, ancak bazen göz ardı edilir. Güvenlik yanıtı ekibini erken devreye almak, MX kayıtlarınızı değiştirdiğinizde kuruluşunuzun tehditlerle başa çıkmak için hazır olmasını sağlar. Olay yanıtının aşağıdaki görevleri yerine getirmek için iyi bir donanıma sahip olması gerekir:
 
-- Yeni araçları öğrenin ve bunları mevcut akışlara tümleştirin. Örneğin:
-  - Karantinaya alınmış iletilerin yönetici yönetimi önemlidir. Yönergeler için bkz [. Karantinaya alınmış iletileri ve dosyaları yönetici olarak yönetme](manage-quarantined-messages-and-files.md).
-  - İleti izleme, iletiler siz girdiler veya ayrıldıklarına ne olduğunu Microsoft 365. Daha fazla bilgi için [bkz. Yönetim merkezinde modern Exchange ileti izleme Exchange Online](/exchange/monitoring/trace-an-email-message/message-trace-modern-eac).
-- Kuruluşa izin ver gereken riskleri belirleme.
-- Kurumsal işlemler için [uyarıları](../../compliance/alert-policies.md) ayarlama ve özelleştirme.
-- Olay kuyruğun yönetin ve olası riskleri düzeltmek.
+- Yeni araçları öğrenin ve mevcut akışlarla tümleştirin. Örneğin:
+  - Karantinaya alınan iletilerin yönetici yönetimi önemlidir. Yönergeler için bkz. [Karantinaya alınan iletileri ve dosyaları yönetici olarak yönetme](manage-quarantined-messages-and-files.md).
+  - İleti izleme, Microsoft 365 girerken veya Microsoft 365 ayrılırken iletilere ne olduğunu görmenizi sağlar. Daha fazla bilgi için bkz. [Exchange Online'deki modern Exchange yönetim merkezinde ileti izleme](/exchange/monitoring/trace-an-email-message/message-trace-modern-eac).
+- Kuruluşa verilmiş olabilecek riskleri belirleyin.
+- Kurumsal işlemler için [uyarıları](../../compliance/alert-policies.md) ayarlayın ve özelleştirin.
+- Olay sırasını yönetin ve olası riskleri düzeltin.
 
-If your organization has purchased Office 365 için Microsoft Defender at Plan 2, they should familiarizing themselves and using features such as Threat Explorer, Advanced Hunting, and Incidents. İlgili eğitimler için bkz.<https://aka.ms/mdoninja>
+Kuruluşunuz Plan 2 Office 365 için Microsoft Defender satın aldıysa Tehdit Gezgini, Gelişmiş Tehdit Avcılığı ve Olaylar gibi özellikleri tanımaya ve kullanmaya başlamalıdır. İlgili eğitimler için bkz <https://aka.ms/mdoninja>. .
 
-Güvenlik yanıtı ekipleriniz filtrelenmemiş iletileri toplar ve çözümlerse, bu filtrelenmemiş iletileri almak için SecOps posta kutusunu yapılandırabilirsiniz. Yönergeler için bkz. [Gelişmiş teslim ilkesinde SecOps posta kutularını yapılandırma](configure-advanced-delivery.md#use-the-microsoft-365-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy).
+Güvenlik yanıtı ekibiniz filtrelenmemiş iletileri toplar ve çözümlerse, bu filtrelenmemiş iletileri almak için bir SecOps posta kutusu yapılandırabilirsiniz. Yönergeler için bkz. [Gelişmiş teslim ilkesinde SecOps posta kutularını yapılandırma](configure-advanced-delivery.md#use-the-microsoft-365-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy).
 
 ### <a name="siemsoar"></a>SIEM/SOAR
 
-SIEM/SOAR ile tümleştirme hakkında daha fazla bilgi için, aşağıdaki makalelere bakın:
+SIEM/SOAR ile tümleştirme hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 
 - [Microsoft 365 Defender API'lerine genel bakış](/microsoft-365/security/defender/api-overview)
 - [Akış API'si](/microsoft-365/security/defender/streaming-api)
 - [Gelişmiş Avcılık API'si](/microsoft-365/security/defender/api-advanced-hunting)
 - [Olay API'leri](/microsoft-365/security/defender/api-incident)
 
-Eğer kuruluşta güvenlik müdahale ekibi yoksa veya mevcut süreç akışlarıyla bu zamanı kullanarak özel bir ekipteki temel av ve yanıt özelliklerini Office 365 için Defender. Daha fazla bilgi için bkz [. Tehdit soruşturması ve yanıtı](office-365-ti.md).
+Kuruluşunuzun bir güvenlik yanıt ekibi veya mevcut işlem akışları yoksa, Office 365 için Defender'daki temel tehdit avcılığı ve yanıt özellikleri hakkında bilgi edinmek için bu zamanı kullanabilirsiniz. Daha fazla bilgi için bkz [. Tehdit araştırması ve yanıtı](office-365-ti.md).
 
 ### <a name="rbac-roles"></a>RBAC rolleri
 
-Aşağıdaki Office 365 için Defender, rol tabanlı erişim denetimine (RBAC) dayalıdır ve Microsoft 365 Defender [portalında açıklanmıştır](permissions-microsoft-365-security-center.md). Bunlar, gözlerde tutmanız gereken önemli noktalardır:
+Office 365 için Defender'deki izinler rol tabanlı erişim denetimini (RBAC) temel alır ve [Microsoft 365 Defender portalındaki](permissions-microsoft-365-security-center.md) İzinler bölümünde açıklanmıştır. Göz önünde bulundurulması gereken önemli noktalar şunlardır:
 
-- Azure AD rolleri, iş **yüklerinin tüm** iş yüklerine Microsoft 365. Örneğin, iş yerinde Güvenlik Yöneticisi'ne bir kullanıcı Azure portal, her yerde Güvenlik Yöneticisi izinleri olur.
-- & portalında e-posta ve işbirliği rolleri Microsoft 365 Defender Portalına, Microsoft 365 Defender Portalı'Microsoft 365 uyumluluk merkezi ve daha eski olan Güvenlik ve Uyumluluk Merkezi'ne & verin. Örneğin, Microsoft 365 Defender portalında Güvenlik Yöneticisi'ne kullanıcı eklerseniz, bu kullanıcının yalnızca Microsoft 365 Defender Portalı' Microsoft 365 uyumluluk merkezi ve Güvenlik &  erişimi olur.
-- Microsoft 365 Defender portalında birçok özellik Exchange Online PowerShell cmdlet'lerini temel almıştır ve bu nedenle Exchange Online'de ilgili rollerde (teknik olarak, rol grupları) rol grubu üyeliği gerekir (özellikle, ilgili özel olarak ilgili rollere erişim için Exchange Online  PowerShell cmdlet'leri).
-- Microsoft 365 Defender portalında & Azure AD rollerinin eşdeğeri olan ve güvenlik işlemleri için önemli olan E-posta özellikleri işbirliği rolleri vardır (örneğin, Önizleme rolü ve Arama ve Temizleme rolü).
+- Azure AD rolleri, **Microsoft 365'deki tüm** iş yüklerine izin verir. Örneğin, Azure portal Güvenlik Yöneticisi'ne bir kullanıcı eklerseniz, her yerde Güvenlik Yöneticisi izinleri olur.
+- Microsoft 365 Defender portalındaki e-posta & işbirliği rolleri, Microsoft 365 Defender Portalına, Microsoft Purview uyumluluk portalına ve eski Güvenlik & Uyumluluk Merkezi'ne izin verir. Örneğin, Microsoft 365 Defender portalında Güvenlik Yöneticisi'ne bir kullanıcı eklerseniz, bu kullanıcının **yalnızca** Microsoft 365 Defender Portalı, Microsoft Purview uyumluluk portalı ve Güvenlik & Uyumluluk Merkezi'nde Güvenlik Yöneticisi erişimi olur.
+- Microsoft 365 Defender portalındaki birçok özellik Exchange Online PowerShell cmdlet'lerini temel alır ve bu nedenle Exchange Online karşılık gelen rollerde (teknik olarak rol grupları) rol grubu üyeliği gerektirir (özellikle ilgili Exchange Online  PowerShell cmdlet'leri).
+- Microsoft 365 Defender portalında Azure AD rolleriyle eşdeğer olmayan e-posta & işbirliği rolleri vardır ve güvenlik işlemleri için önemlidir (örneğin Önizleme rolü ve Arama ve Temizleme rolü).
 
-Normalde, yalnızca güvenlik personelinin alt kümesinin kullanıcı posta kutularından iletileri doğrudan indirmesi için ek haklara ihtiyacı olur. Bunun için, Güvenlik Okuyucusu'nın varsayılan olarak sahip olmadığını ek bir izin gerekir.
+Genellikle yalnızca bir güvenlik personeli alt kümesi, iletileri doğrudan kullanıcı posta kutularından indirmek için ek haklara ihtiyaç duyar. Bu, Güvenlik Okuyucusu'nın varsayılan olarak sahip olmadığı ek bir izin gerektirir.
 
-## <a name="step-2-optional-exempt-pilot-users-from-filtering-by-your-existing-protection-service"></a>2. Adım: (İsteğe bağlı) Muaf pilot kullanıcıların var olan koruma hizmetiniz tarafından filtre uygulamasını geri alın
+## <a name="step-2-optional-exempt-pilot-users-from-filtering-by-your-existing-protection-service"></a>2. Adım: (İsteğe bağlı) Pilot kullanıcıların mevcut koruma hizmetinize göre filtrelemesini muaf tutma
 
-Bu adım gerekli değildir, ancak pilot kullanıcılarınızı var olan koruma hizmetiniz tarafından filtrelemeyi at edecek şekilde yapılandırmayı düşünebilirsiniz. Bu eylem, Office 365 için Defender kullanıcıların **tüm** filtreleme ve koruma görevlerini işlemesini sağlar. Pilot kullanıcılarınızı var olan koruma hizmetiniz için muaf Office 365 için Defender, yalnızca diğer hizmetten gelen (zaten filtrelenmiş olan iletileri filtreleme) kaçıracak şekilde çalışır.
-
-> [!NOTE]
-> Geçerli koruma hizmetiniz bağlantı kaydırma özelliği sağladığı ancak Bağlantı işlevselliğiyle ilgili pilot Kasa gerekir. Bağlantıların çift kaydırma özelliği desteklanmaz.
-
-## <a name="step-3-tune-spoof-intelligence"></a>3. Adım: Akıllı ifadeyi ayarlama
-
-İzin verilen [veya](learn-about-spoof-intelligence.md) engellenen ifadeyi (yanıltı) görmek ve ifadeyi geçersiz kılmak için sistem kararlarını geçersiz kılmaya gerek olup olmadığını belirlemek için Bilgi Bloğu içgörüsine bakın. İş açısından kritik e-posta kaynaklarından bazıları DNS'de (SPF, DKIM ve DMARC) yanlış yapılandırılmış e-posta kimlik doğrulama kayıtlarına sahip olabilir ve etki alanı sorunlarını maskelerken mevcut koruma hizmetiniz içinde geçersiz kılmalar kullanıyor olabilirsiniz.
-
-Kimliksız kimlik doğrulaması, DNS'de düzgün e-posta kimlik doğrulaması kayıtları olmadan etki alanlarından e-postaları kurtarabilirsiniz, ancak özellik bazen hatalı kimlik doğrulamasından iyi kimlik doğrulamayı ayırt etmek için yardıma ihtiyaç alır. Aşağıdaki ileti kaynağı türlerine odaklanın:
-
-- Bağlayıcılar için Gelişmiş Filtreleme'de tanımlanan IP adresi [aralıklarının dışında olan ileti kaynakları](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors).
-- En fazla ileti sayısına sahip ileti kaynakları.
-- Organizasyon üzerinde en yüksek etkiyi alan ileti kaynakları.
-
-Kimlik hesabı zekası, kullanıcı gönderimlerini yapılandırdıktan sonra sonunda kendisini ayar gerektirecek, bu nedenle herhangi bir neden yoktur.
-
-## <a name="step-4-tune-impersonation-protection-and-mailbox-intelligence"></a>4. Adım: Kimliğe bürünme koruması ve posta kutusu zekası ayarlama
-
-Hiçbir eylem modu uygulama altında kimliğe bürünme korumasının sonuçlarını gözlemlemek için yeterli  zaman elde ettikten sonra, kimlik avı önleme ilkelerinde her kimliğe bürünme koruma eylemlerini tek tek açabilirsiniz:
-
-- Kullanıcı kimliğe bürünme koruması: **hem Standart hem de Katı** için iletiyi karantinaya alın.
-- Etki alanı kimliğe bürünme koruması: **İletiyi hem** Standart hem de Katı için karantinaya alın.
-- Posta kutusu zekası **koruması: standart için iletiyi alıcıların Gereksiz E-posta klasörlerine** taşıma; **Katı için iletiyi** karantinaya alın.
-
-İletilere herhangi bir işlem yapmadan kimliğe bürünme koruma sonuçlarını ne kadar uzun süre izlersiniz? Ne kadar çok veriye ihtiyaç olacağını belirlemek için izinler veya engellemeler gerekir. Gözlem ve ayarlamaya olanak tanıyacak kadar önemli olan her korumayı açma arasında gecikmeler kullanmayı göz önünde bulundurarak.
+Bu adım gerekli olmasa da, pilot kullanıcılarınızı mevcut koruma hizmetinize göre filtrelemeyi atlayacak şekilde yapılandırmayı düşünmelisiniz. Bu eylem, Office 365 için Defender pilot kullanıcılar için **tüm** filtreleme ve koruma görevlerini işlemesini sağlar. Pilot kullanıcılarınızı mevcut koruma hizmetinizden muaf tutmazsanız, Office 365 için Defender yalnızca diğer hizmetten gelen yanıtsızlıklarda (filtrelenmiş iletileri filtreleme) etkili bir şekilde çalışır.
 
 > [!NOTE]
-> Bu korumaları sık sık ve sürekli izlemek ve ayarlamak önemlidir. Hatalı pozitif sonuçlardan şüpheleniyorsanız nedenini araştırarak geçersiz kılmaları yalnızca gerekli olduğu şekilde ve yalnızca gerekli algılama özelliği için kullanın.
+> Geçerli koruma hizmetiniz bağlantı sarmalama sağlıyorsa ancak Bağlantılar işlevselliğini Kasa pilot işlemi yapmak istiyorsanız bu adım açıkça gereklidir. Bağlantıların çift kaydırması desteklenmez.
+
+## <a name="step-3-tune-spoof-intelligence"></a>3. Adım: Sahte zekayı ayarlama
+
+Kimlik sahtekarlığına izin verilen veya engellenen özellikleri görmek ve kimlik sahtekarlığına yönelik sistem kararını geçersiz kılmanız gerekip gerekmediğini belirlemek için Kimlik Sahtekarlığına ilişkin bilgi sahtekarlığına ilişkin [içgörüleri](learn-about-spoof-intelligence.md) gözden geçirin. İş açısından kritik e-postanızın bazı kaynakları DNS'de (SPF, DKIM ve DMARC) e-posta kimlik doğrulama kayıtlarını yanlış yapılandırmış olabilir ve etki alanı sorunlarını maskelemek için mevcut koruma hizmetinizde geçersiz kılmalar kullanıyor olabilirsiniz.
+
+Kimlik sahtekarı zekası, DNS'de düzgün e-posta kimlik doğrulaması kayıtları olmadan etki alanlarından e-postayı kurtarabilir, ancak özellik bazen iyi sahtekarlık ile hatalı kimlik sahtekarlıklarını ayırt etme konusunda yardıma ihtiyaç duyar. Aşağıdaki ileti kaynağı türlerine odaklanın:
+
+- [Bağlayıcılar için Gelişmiş Filtreleme'de](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors) tanımlanan IP adresi aralıklarının dışında olan ileti kaynakları.
+- İleti sayısı en yüksek olan ileti kaynakları.
+- Kuruluşunuz üzerinde en yüksek etkiye sahip ileti kaynakları.
+
+Kimlik sahtekarlığı zekası, kullanıcı gönderimlerini yapılandırdıktan sonra sonunda kendini ayarlar, bu nedenle mükemmellik gerekmez.
+
+## <a name="step-4-tune-impersonation-protection-and-mailbox-intelligence"></a>4. Adım: Kimliğe bürünme korumasını ve posta kutusu zekasını ayarlama
+
+Herhangi **bir eylem modu uygulama** bölümünde kimliğe bürünme korumasının sonuçlarını gözlemlemek için yeterli süreniz olduktan sonra kimlik avı önleme ilkelerindeki her kimliğe bürünme koruması eylemini tek tek açabilirsiniz:
+
+- Kullanıcı kimliğe bürünme koruması: İletiyi hem Standart hem de Katı için **karantinaya alın** .
+- Etki alanı kimliğe bürünme koruması: İletiyi hem Standart hem de Katı için **karantinaya alın** .
+- Posta kutusu yönetim bilgileri koruması: **İletiyi Standart için alıcıların Gereksiz E-posta klasörlerine taşıyın** ; **İletiyi Strict için karantinaya alın** .
+
+İletiler üzerinde işlem yapmadan kimliğe bürünme koruması sonuçlarını ne kadar uzun süre izlerseniz, gerekli olabilecek izinler veya bloklar için o kadar fazla veri tanımlamanız gerekir. Gözlem ve ayarlamaya izin verecek kadar önemli olan her korumayı açmak arasında bir gecikme kullanmayı göz önünde bulundurun.
+
+> [!NOTE]
+> Bu korumaların sık ve sürekli izlenmesi ve ayarlanması önemlidir. Hatalı pozitif olduğundan şüpheleniyorsanız, nedenini araştırın ve geçersiz kılmaları yalnızca gerektiği gibi ve yalnızca bunu gerektiren algılama özelliği için kullanın.
 
 ### <a name="tune-mailbox-intelligence"></a>Posta kutusu zekası ayarlama
 
-Posta kutusu zekası, kimliğe bürünme girişimleri olarak belirlenen iletilerde herhangi bir işlem yapmak üzere yapılandırılmış olsa [da, pilot](impersonation-insight.md) kullanıcıların e-posta gönderme ve alma desenlerini öğrenmeye devam ediyor ve bunu öğreniyor. Bir dış kullanıcı pilot kullanıcılarından biri ile bağlantıda olursa, bu dış kullanıcıdan gelen iletiler posta kutusu zekası tarafından kimliğe bürünme girişimleri olarak tanımsızlamaz (dolayısıyla hatalı pozitif sonuçlar azaltıldı).
+Posta kutusu zekası [kimliğe bürünme girişimleri olduğu belirlenen iletilerde](impersonation-insight.md) hiçbir işlem gerçekleştirecek şekilde yapılandırılmış olsa da, pilot kullanıcıların e-posta gönderme ve alma düzenlerini öğrenmiştir. Dış kullanıcı pilot kullanıcılarınızdan biriyle iletişim halindeyse, bu dış kullanıcıdan gelen iletiler posta kutusu zekası tarafından kimliğe bürünme girişimleri olarak tanımlanmaz (böylece hatalı pozitif sonuçları azaltır).
 
-Hazırsanız, posta kutusu zekası diğer bir kimliğe bürünme girişimleri olarak algılanan iletiler üzerinde hareket etmeye izin vermek için aşağıdaki adımları izleyin:
+Hazır olduğunuzda, posta kutusu zekasının kimliğe bürünme girişimi olarak algılanan iletiler üzerinde işlem gerçekleştirmesine izin vermek için aşağıdaki adımları uygulayın:
 
-- Standart koruma ayarlarına sahip kimlik avı önleme ilkesinde, Posta kutusu zekası kimliğine  bürünülen bir kullanıcı algılarsa iletiyi alıcıların Gereksiz E-posta klasörlerine taşımak için değerini **değiştirin**.
+- Standart koruma ayarlarıyla kimlik avı önleme ilkesinde, **Posta kutusu zekası kimliğine bürünülen bir kullanıcı algılarsa** iletisini **alıcıların Gereksiz E-posta klasörlerine taşı** olarak değerini değiştirin.
 
-- Katı koruma ayarlarının olduğu Kimlik avı önleme ilkesinde, Posta kutusu zekası, kimliğine bürünülen bir kullanıcı algılar ve bu kullanıcının değerini İletiyi karantinaya **alın olarak değiştirin**.
+- Katı koruma ayarlarıyla kimlik avı önleme ilkesinde, **Posta kutusu zekası tarafından algılanan ve kimliğine bürünülen kullanıcıyı algılarsa** değerini **Karantinaya** al olarak değiştirin.
 
-İlkeleri değiştirmek için bkz[. Kimlik avından korunma ilkelerini Office 365 için Defender](configure-mdo-anti-phishing-policies.md).
+İlkeleri değiştirmek için bkz. [Office 365 için Defender'de kimlik avı önleme ilkelerini yapılandırma](configure-mdo-anti-phishing-policies.md).
 
-Sonuçları gözlemledikten ve tüm ayarlamaları yaptıktan sonra, kullanıcı kimliğe bürünülerek algılanan iletileri karantinaya almak için bir sonraki bölüme ilerleyin.
+Sonuçları gözlemleyip herhangi bir ayarlama yaptıktan sonra, kullanıcı kimliğine bürünme tarafından algılanan iletileri karantinaya almak için sonraki bölüme geçin.
 
 ### <a name="tune-user-impersonation-protection"></a>Kullanıcı kimliğe bürünme korumasını ayarlama
 
-Standart ve Katı ayarları temel alan kimlik avı önleme ilkelerinizin her ikisinde de, Eğer iletisi kimliğine  bürünülen bir kullanıcı olarak algılanırsa değerini iletiyi **Karantina'ya alın olarak değiştirin**.
+Standart ve Katı ayarları temel alan kimlik avı önleme ilkelerinizin her ikisinde de, **kimliğine bürünülen bir kullanıcı olarak algılanan iletinin** değerini **değiştirerek iletiyi karantinaya alın**.
 
-Kullanıcı [kimliğe bürünme girişimleriyle](impersonation-insight.md) nelerin engellenmiş olduğunu görmek için kimliğe bürünme içgörüne bakın.
+Kullanıcı kimliğe bürünme girişimi olarak neyin engellendiğini görmek için kimliğe bürünme [içgörüsüsüne](impersonation-insight.md) bakın.
 
-İlkeleri değiştirmek için bkz[. Kimlik avından korunma ilkelerini Office 365 için Defender](configure-mdo-anti-phishing-policies.md).
+İlkeleri değiştirmek için bkz. [Office 365 için Defender'de kimlik avı önleme ilkelerini yapılandırma](configure-mdo-anti-phishing-policies.md).
 
-Sonuçları gözlemledikten ve tüm ayarlamaları yapıldıktan sonra, etki alanı kimliğine bürünülerek algılanan iletileri karantinaya almak için sonraki bölüme ilerleyin.
+Sonuçları gözlemleyip herhangi bir ayarlama yaptıktan sonra, etki alanı kimliğe bürünme tarafından algılanan iletileri karantinaya almak için sonraki bölüme geçin.
 
 ### <a name="tune-domain-impersonation-protection"></a>Etki alanı kimliğe bürünme korumasını ayarlama
 
-Standart ve Katı ayarları temel alan kimlik avı önleme ilkelerinizin her ikisinde de, Eğer iletisi kimliğine  bürünülen bir etki alanı olarak algılanırsa değerini iletiyi karantinaya **alın olarak değiştirin**.
+Standart ve Katı ayarları temel alan kimlik avı önleme ilkelerinizin her ikisinde de, **kimliğine bürünülen bir etki alanı olarak algılanan iletinin** değerini **değiştirerek iletiyi karantinaya alın**.
 
-Etki alanı [kimliğe bürünme](impersonation-insight.md) girişimleriyle nelerin engellenmiş olduğunu görmek için kimliğe bürünme içgörüne bakın.
+Etki alanı kimliğe bürünme girişimi olarak engellenenleri görmek için kimliğe bürünme [içgörüsüsüne](impersonation-insight.md) bakın.
 
-İlkeleri değiştirmek için bkz[. Kimlik avından korunma ilkelerini Office 365 için Defender](configure-mdo-anti-phishing-policies.md).
+İlkeleri değiştirmek için bkz. [Office 365 için Defender'de kimlik avı önleme ilkelerini yapılandırma](configure-mdo-anti-phishing-policies.md).
 
-Sonuçları gözlemlemek ve gerekli ayarlamaları yapmak.
+Sonuçları gözlemleyin ve gerekli ayarlamaları yapın.
 
-## <a name="step-5-use-data-from-user-submissions-to-measure-and-adjust"></a>5. Adım: Ölçmek ve ayarlamak için kullanıcı gönderimlerinden verileri kullanma
+## <a name="step-5-use-data-from-user-submissions-to-measure-and-adjust"></a>5. Adım: Ölçmek ve ayarlamak için kullanıcı gönderimlerindeki verileri kullanma
 
-Pilot kullanıcılarınız hatalı pozitif ve yanlış negatif sonuçlar bildirseler, iletiler portalında [Gönderiler sayfasında Microsoft 365 Defender görüntülenir](admin-submission.md). Yanlış tanımlanamayan iletileri çözümleme için Microsoft'a bildirebilirsiniz ve pilot uygulama ayarlarınıza ilişkin ayarları ve özel durumları gereken şekilde ayarlamak için bilgileri kullanabilirsiniz.
+Pilot kullanıcılarınız hatalı pozitif sonuçları ve hatalı negatifleri rapor ettikçe, iletiler [Microsoft 365 Defender portalındaki Gönderimler sayfasında](admin-submission.md) görünür. Yanlış tanımlanan iletileri analiz için Microsoft'a bildirebilir ve bilgileri kullanarak pilot ilkelerinizdeki ayarları ve özel durumları gerektiği gibi ayarlayabilirsiniz.
 
-Aşağıdaki özellikleri kullanarak, koruma ayarlarını izleyebilir ve bu ayarları Office 365 için Defender:
+Office 365 için Defender koruma ayarlarını izlemek ve yinelemek için aşağıdaki özellikleri kullanın:
 
 - [Karantina](manage-quarantined-messages-and-files.md)
 - [Tehdit Gezgini](email-security-in-microsoft-defender.md)
 - [E-posta güvenlik raporları](view-email-security-reports.md)
-- [Office 365 için Defender raporları](view-reports-for-mdo.md)
+- [raporları Office 365 için Defender](view-reports-for-mdo.md)
 - [Posta akışı içgörüleri](/exchange/monitoring/mail-flow-insights/mail-flow-insights)
 - [Posta akışı raporları](/exchange/monitoring/mail-flow-reports/mail-flow-reports)
 
-Organizasyonunız kullanıcı raporları için üçüncü taraf bir hizmet kullanıyorsa, bu verileri geri bildirim döngüyle tümleştirebilirsiniz.
+Kuruluşunuz kullanıcı raporları için üçüncü taraf bir hizmet kullanıyorsa bu verileri geri bildirim döngünüzle tümleştirebilirsiniz.
 
-## <a name="step-6-optional-add-more-users-to-your-pilot-and-iterate"></a>6. Adım: (İsteğe bağlı) Pilot uygulamanıza daha fazla kullanıcı ekleme ve adımı uygulama
+## <a name="step-6-optional-add-more-users-to-your-pilot-and-iterate"></a>6. Adım: (İsteğe bağlı) Pilotunuza daha fazla kullanıcı ekleme ve yineleme
 
-Sorunları bulup düzeltirken pilot gruplara daha fazla kullanıcı  eklersiniz (ve bu yeni pilot kullanıcıların uygun şekilde var olan koruma hizmetiniz tarafından taramasını muaftabilirsiniz). Şu anda ne kadar çok test yapar, daha sonra o kadar az kullanıcı sorunuyla uğraşabilirsiniz. Bu "Şelale" yaklaşımı kuruluşun daha büyük bölümlerine göre ayara izin verir ve güvenlik ekiplerinize yeni araçlar ve işlemlere ayar yapmak için zaman verir.
+Sorunları bulup düzeltirken pilot gruplara daha fazla kullanıcı ekleyebilirsiniz (ve buna karşılık olarak bu yeni pilot kullanıcıları mevcut koruma hizmetiniz tarafından taramadan muaf tutabilirsiniz). Şimdi ne kadar çok test yaparsanız, daha sonra ilgilenmeniz gereken kullanıcı sorunları o kadar az olur. Bu "şelale" yaklaşımı kuruluşun daha büyük bölümlerine göre ayarlamaya olanak tanır ve güvenlik ekiplerinize yeni araçlara ve süreçlere uyum sağlaması için zaman verir.
 
-- Microsoft 365, kurumsal ilkelere yüksek güven kimlik avı iletilerine izin veri olduğunda uyarı verir. Bu iletileri tanımlamak için aşağıdaki seçenekleri kullanabilirsiniz:
-  - Tehdit koruması durumu [raporunda geçersiz kılmalar](view-email-security-reports.md#threat-protection-status-report).
+- Microsoft 365, kuruluş ilkeleri tarafından yüksek güvenilirlikli kimlik avı iletilerine izin verildiğinde uyarılar oluşturur. Bu iletileri tanımlamak için aşağıdaki seçeneklere sahipsiniz:
+  - [Tehdit koruması durum raporundaki](view-email-security-reports.md#threat-protection-status-report) geçersiz kılmalar.
   - İletileri tanımlamak için Tehdit Gezgini'nde filtreleyin.
-  - İletileri tanımlamak için Gelişmiş Arama'da filtre uygulama.
+  - İletileri tanımlamak için Gelişmiş Tehdit Avcılığı'nda filtreleyin.
 
-  Yönetici gönderimleri aracılığıyla tüm hatalı pozitif sonuçlar için mümkün olan en erken zamanda Microsoft'a rapor edin, bu hatalı pozitif sonuçlar için güvenli geçersiz kılmaları yapılandırmak için Kiracı İzin Ver [/](tenant-allow-block-list.md) Engelleme Listesi özelliğini kullanın.
+  Yönetici gönderimleri aracılığıyla microsoft'a mümkün olan en erken şekilde hatalı pozitif sonuçları bildirin, bu hatalı pozitif sonuçların güvenli geçersiz kılmalarını yapılandırmak için [Kiracı İzin Ver/Engelle Listesi](tenant-allow-block-list.md) özelliğini kullanın.
 
-- Gereksiz geçersiz kılmaları incelemek de iyi bir fikirdir. Başka bir deyişle, iletiler üzerinde Microsoft 365 kararlara bakın. Microsoft365 doğru karar düzeltmeyi işlese, geçersiz kılma ihtiyacı büyük ölçüde azalır veya ortadan kalkmış olur.
+- Gereksiz geçersiz kılmaları incelemek de iyi bir fikirdir. Başka bir deyişle, Microsoft 365 iletilerde sağladığı kararlara bakın. Microsoft365 doğru kararı verdiyse geçersiz kılma gereksinimi büyük ölçüde azalır veya ortadan kalkar.
 
-## <a name="step-7-extend-microsoft-365-protection-to-all-users-and-turn-off-the-scl-1-mail-flow-rule"></a>7. Adım: Microsoft 365 korumasını genişletme ve SCL=-1 posta akış kuralını kapatma
+## <a name="step-7-extend-microsoft-365-protection-to-all-users-and-turn-off-the-scl-1-mail-flow-rule"></a>7. Adım: Microsoft 365 korumasını tüm kullanıcılara genişletme ve SCL=-1 posta akışı kuralını kapatma
 
-MX kayıtlarınızı başka bir kayıtla işaret etmeye hazır olduğunda, bu bölümdeki Microsoft 365.
+MX kayıtlarınızı Microsoft 365 işaret etmek üzere değiştirmeye hazır olduğunuzda bu bölümdeki adımları uygulayın.
 
-1. Pilot ilkeleri tüm kuruluşa genişletin. Temelde, bunu yapmanın farklı yolları vardır:
-   - Önceden [belirlenmiş güvenlik ilkelerini](preset-security-policies.md) kullanın ve kullanıcılarınızı Standart koruma profiliyle Katı koruma profili (herkesin kapsa olduğundan emin olun) arasında bölün. Önceden belirlenmiş güvenlik ilkeleri, oluşturduğunuz özel ilkeler veya varsayılan ilkeler önce uygulanır. Tek tek pilot ilkelerinizi silmeden kapatabilirsiniz.
+1. Pilot ilkeleri kuruluşun tamamına genişletme. Temel olarak, bunu yapmanın farklı yolları vardır:
+   - [Önceden ayarlanmış güvenlik](preset-security-policies.md) ilkelerini kullanın ve kullanıcılarınızı Standart koruma profili ile Katı koruma profili arasında bölün (herkesin kapsandığından emin olun). Önceden ayarlanmış güvenlik ilkeleri, oluşturduğunuz özel ilkelerden veya varsayılan ilkelerden önce uygulanır. Tek tek pilot ilkelerinizi silmeden kapatabilirsiniz.
 
-     Önceden belirlenmiş güvenlik ilkelerinin dezavantajı, güvenlik ilkelerini oluşturduktan sonra birçok önemli ayarı değiştirememenizi sağlar.
+     Önceden ayarlanmış güvenlik ilkelerinin dezavantajı, önemli ayarları oluşturduktan sonra çoğu ayarı değiştirememenizdir.
 
-   - Pilot uygulama sırasında oluşturduğunuz ve ayar oluşturduğunuz ilkelerin kapsamını tüm kullanıcıları (örneğin, tüm etki alanlarındaki tüm alıcılar) içerecek şekilde değiştirebilirsiniz. Unutmayın; aynı türde birden çok ilke (örneğin, kimlik avı önleme ilkeleri) aynı kullanıcıya uygulanırsa (tek tek, grup üyeliği veya e-posta etki alanına göre), yalnızca en yüksek önceliğe sahip ilke ayarları (en düşük öncelik numarası) uygulanır ve bu tür ilkeler için işlem durakları uygulanır.
+   - Pilot sırasında oluşturduğunuz ve ayarladığınız ilkelerin kapsamını tüm kullanıcıları (örneğin, tüm etki alanlarındaki tüm alıcıları) içerecek şekilde değiştirin. Aynı türdeki birden çok ilkenin (örneğin, kimlik avı önleme ilkeleri) aynı kullanıcıya (tek tek, grup üyeliğine veya e-posta etki alanına göre) uygulanıp uygulanmadığını, yalnızca en yüksek önceliğe (en düşük öncelik numarasına) sahip ilke ayarlarının uygulandığını ve bu ilke türü için işlemenin durdurulduğunu unutmayın.
 
-2. SCL=-1 posta akış kuralını kapatın (silmeden kapatabilirsiniz).
+2. SCL=-1 posta akışı kuralını kapatın (silmeden kapatabilirsiniz).
 
-3. Önceki değişikliklerin etkin olduğunu ve artık tüm kullanıcılar için Office 365 için Defender etkinleştirildiğinden emin olun. Bu noktada, Office 365 için Defender'un tüm koruma özelliklerinin tüm alıcıların posta üzerinde eyleme girmesine izin verilir, ancak bu posta zaten var olan koruma hizmetiniz tarafından taranmış olur.
+3. Önceki değişikliklerin geçerli olduğunu ve Office 365 için Defender artık tüm kullanıcılar için düzgün bir şekilde etkinleştirildiğini doğrulayın. Bu noktada, Office 365 için Defender tüm koruma özelliklerinin artık tüm alıcılar için posta üzerinde işlem yapmalarına izin verilir, ancak bu posta zaten mevcut koruma hizmetiniz tarafından taranmıştır.
 
-Daha büyük ölçekli veri kaydı ve ayarlamaları için bu aşamada duraklatabilirsiniz.
+Daha büyük ölçekli veri kaydı ve ayarlama için bu aşamada duraklatabilirsiniz.
 
 ## <a name="step-8-switch-your-mx-records"></a>8. Adım: MX kayıtlarınızı değiştirme
 
 > [!NOTE]
 >
-> - Etki alanınız için MX kaydını değiştirişte, değişikliklerin İnternet'te yayılması 48 saat kadar sürebilir.
+> - Etki alanınız için MX kaydını değiştirdiğinizde değişikliklerin İnternet'e yayılması 48 saate kadar sürebilir.
 >
-> - Daha hızlı yanıt ve gerekirse geri alma sağlamak için DNS kayıtlarınızı TTL değerini düşürmenizi öneririz. Geçiş tamamlandıktan ve doğrulandıktan sonra özgün TTL değerine geri dönseniz bile.
+> - Daha hızlı yanıt ve olası geri alma (gerekirse) için DNS kayıtlarınızın TTL değerini düşürmenizi öneririz. Geçiş tamamlandıktan ve doğrulandıktan sonra özgün TTL değerine geri dönebilirsiniz.
 >
-> - Daha az sık kullanılan etki alanlarını değiştirmekle başlamayı düşünebilirsiniz. Daha büyük etki alanlarına gitmeden önce duraklatabilir ve izleyebilirsiniz. Öte yandan, bunu yapsanız bile tüm kullanıcıların ve etki alanlarının ilkeler kapsamında olduğundan emin olun, çünkü ikincil SMTP etki alanları ilke uygulamasından önceki birincil etki alanlarıyla çözümlenir.
+> - Daha az sıklıkta kullanılan etki alanlarını değiştirmekle başlamayı düşünmelisiniz. Daha büyük etki alanlarına geçmeden önce duraklatabilir ve izleyebilirsiniz. Ancak, bunu yapsanız bile, ikincil SMTP etki alanları ilke uygulamasından önceki birincil etki alanlarına çözümlendiğinden, tüm kullanıcıların ve etki alanlarının ilkeler kapsamında olduğundan emin olmanız gerekir.
 >   
-> - Tek bir etki alanı için birden çok MX kaydı teknik olarak çalışır ve bu teknik çalışma, bu makaledeki tüm yönlendirmeleri takip etmiş olmak kaydıyla bölünmüş yönlendirmeye sahip çalışmanıza olanak sağlar. Özel olarak, ilkelerin tüm kullanıcılara uygulandığından emin olun; SCL=-1 posta akış kuralı yalnızca var olan koruma hizmetiniz üzerinden geçen postaya [uygulanır.3. Adım: SCL=-1](migrate-to-defender-for-office-365-setup.md#step-3-maintain-or-create-the-scl-1-mail-flow-rule) posta akış kuralını koruma veya oluşturma. Bununla birlikte, bu yapılandırma sorun gidermeyi çok daha zorlaştıracak bir davranışa neden olur ve dolayısıyla bunu özellikle de uzun süreler için önerilmez.
+> - Tek bir etki alanı için birden çok MX kaydı teknik olarak çalışır ve bu makaledeki tüm yönergeleri izlemiş olmanız koşuluyla bölünmüş yönlendirmeye sahip olmanıza olanak sağlar. Özellikle, ilkelerin tüm kullanıcılara uygulandığından, SCL=-1 posta akışı kuralının yalnızca [Kurulum Adım 3: SCL=-1 posta akışı kuralını koruma veya oluşturma](migrate-to-defender-for-office-365-setup.md#step-3-maintain-or-create-the-scl-1-mail-flow-rule) bölümünde açıklandığı gibi var olan koruma hizmetinizden geçen postalara uygulandığından emin olmanız gerekir. Ancak, bu yapılandırma sorun gidermeyi çok daha zor hale getiren bir davranış ortaya çıkarır ve bu nedenle, özellikle uzun süreler için genellikle bunu önermeyiz.
 >
-> - MX kayıtlarınızı değiştirmeden önce, gelen bağlayıcısı üzerinde koruma hizmetlerinden Gelen Bağlayıcısı'nın etkin olmadığını doğru Microsoft 365. Normalde, bağlayıcıda aşağıdaki ayarlardan biri veya daha fazlası yapılandırılmış olur:
+> - MX kayıtlarınızı değiştirmeden önce, koruma hizmetinden Microsoft 365 gelen bağlayıcıda aşağıdaki ayarların etkinleştirilmediğini doğrulayın. Bağlayıcıda genellikle aşağıdaki ayarlardan biri veya daha fazlası yapılandırılır:
 >
->   - **ve iş ortağının Office 365** ile kimlik doğrulaması yapmak için kullandığı sertifikada konu adının bu etki alanı adıyla (*RestrictDomainsToCertificate) eşleşmesi gerekir*
->   - **Bu IP adresi aralığı içinden gönderilmezse e-posta** iletilerini reddetme (*RestrictDomainsToIPAddresses*)
+>   - **ve iş ortağının Office 365 ile kimlik doğrulaması yapmak için kullandığı sertifikadaki konu adının bu etki alanı adıyla** (*RestrictDomainsToCertificate) eşleşmesini* gerektirir
+>   - **Bu IP adresi aralığından gönderilmeyen e-posta iletilerini reddet** (*RestrictDomainsToIPAddresses*)
 >
->   Bağlayıcı türü **İş Ortağı ise** ve bu ayarlardan biri açıksa, MX kayıtlarınızı değiştirdikten sonra etki alanlarınıza tüm posta teslimi başarısız olur. Devam etmek için önce bu ayarları devre dışı bırakmanız gerekir. Bağlayıcı, karma için kullanılan bir şirket içi bağlayıcı ise, şirket içi bağlayıcıyı değiştirmenize gerek yok. Ancak yine de, bir İş ortağı bağlayıcısı olup varlıklarını **kontrol** edin.
+>   Bağlayıcı türü **İş Ortağı** ise ve bu ayarlardan biri açıksa, MX kayıtlarınızı değiştirdikten sonra etki alanlarınıza tüm posta teslimi başarısız olur. Devam etmeden önce bu ayarları devre dışı bırakmanız gerekir. Bağlayıcı karma için kullanılan bir şirket içi bağlayıcıysa, şirket içi bağlayıcıyı değiştirmeniz gerekmez. Ancak yine de **bir İş Ortağı** bağlayıcısının olup olmadığını de kontrol edebilirsiniz.
 >   
-> - Geçerli posta ağ geçidiniz de alıcı doğrulaması sağlıyorsa, etki alanının Adres Mektup birleştirmede Yetkili olarak [yapılandırıldığından](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) emin Microsoft 365. Bu, gereksiz geri dönen iletileri önlenebilir.
+> - Geçerli posta ağ geçidiniz de alıcı doğrulaması sağlıyorsa, etki alanının Microsoft 365 [Yetkili](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) olarak yapılandırılıp yapılandırılmadığını denetlemek isteyebilirsiniz. Bu, gereksiz geri dönen iletileri önleyebilir.
 
-Hazır olduğunda, etki alanlarınız için MX kaydını değiştirme. Tüm etki alanlarınızı aynı anda geçirebilirsiniz. Ya da, daha az sık kullanılan etki alanlarını önce ve sonra kalanları daha sonra geçirebilirsiniz.
+Hazır olduğunuzda, etki alanlarınız için MX kaydını değiştirin. Tüm etki alanlarınızı aynı anda geçirebilirsiniz. İsterseniz, önce daha az sık kullanılan etki alanlarını ve ardından geri kalanları daha sonra geçirebilirsiniz.
 
-Herhangi bir noktada burada duraklatabilir ve değerlendire durabilirsiniz. Ama unutmayın: SCL=-1 posta akış kuralını kapattıktan sonra, kullanıcıların hatalı pozitif sonuçlarını denetlemeyle ilgili iki farklı deneyimi olabilir. Ne kadar kısa sürede tek ve tutarlı bir deneyim sımsık olursanız, kullanıcılarınızı ve yardım masası ekiplerini, eksik iletilerde sorun gidermeleri ne kadar mutlu edecekse o kadar mutlu olur.
+Herhangi bir noktada burada duraklama ve değerlendirme yapmaktan çekinmeyin. Ancak unutmayın: SCL=-1 posta akışı kuralını kapattığınızda, kullanıcıların hatalı pozitif sonuçları denetlemek için iki farklı deneyimi olabilir. Tek ve tutarlı bir deneyimi ne kadar çabuk sağlayabilirseniz, eksik bir iletiyle ilgili sorunları gidermek zorunda olan kullanıcılarınız ve yardım masası ekipleriniz o kadar mutlu olur.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Tebrikler! Geçiş işleminizi [tamamladınız ve Office 365 için Microsoft Defender](migrate-to-defender-for-office-365.md#the-migration-process)! Bu geçiş kılavuzunda adımları takip etmiş olacağınız için, postanın doğrudan Posta'ya teslim Microsoft 365 çok daha sorunsuz olması gerekir.
+Tebrikler! [Office 365 için Microsoft Defender geçişinizi](migrate-to-defender-for-office-365.md#the-migration-process) tamamladınız! Bu geçiş kılavuzundaki adımları izlediğiniz için, postanın doğrudan Microsoft 365 teslim edildiği ilk birkaç gün çok daha sorunsuz olmalıdır.
 
-Şimdi, çalışma saatlerinin normal çalışmasına ve bakımına Office 365 için Defender. Pilot çalışma sırasında ancak daha büyük ölçekli olarak deneyimle ilgili sorunları izleyin ve izleyin. Kimlik [sahtesi içgörü ve](learn-about-spoof-intelligence.md) kimliğe bürünme içgörüleri çok yararlı olacaktır, ancak aşağıdaki etkinlikleri normal bir oluşum olarak değerlendirin:[](impersonation-insight.md)
+Şimdi Office 365 için Defender normal çalışmasına ve bakımına başlarsınız. Pilot sırasında karşılaştığınıza benzer ancak daha büyük ölçekte sorunları izleyin ve izleyin. Sahte [zeka içgörüleri](learn-about-spoof-intelligence.md) ve [kimliğe bürünme içgörüleri](impersonation-insight.md) en yararlı olacaktır, ancak aşağıdaki etkinlikleri normal bir durum haline getirebilirsiniz:
 
-- Kullanıcı gönderimlerini ve özellikle de kullanıcı [tarafından bildirilen kimlik avı iletilerini gözden geçirme](automated-investigation-response-office.md)
-- Tehdit koruması durumu raporunda [geçersiz kılmaları gözden geçirebilirsiniz](view-email-security-reports.md#threat-protection-status-report).
-- Fırsatları [ve riskli](/microsoft-365/security/defender/advanced-hunting-example) iletileri ayarlamak için Gelişmiş Arama sorgularını kullanın.
+- Kullanıcı gönderimlerini, özellikle [de kullanıcı tarafından bildirilen kimlik avı iletilerini](automated-investigation-response-office.md) gözden geçirin
+- [Tehdit koruması durum raporundaki](view-email-security-reports.md#threat-protection-status-report) geçersiz kılmaları gözden geçirin.
+- Fırsatları ve riskli iletileri ayarlamak için [Gelişmiş Tehdit Avcılığı](/microsoft-365/security/defender/advanced-hunting-example) sorgularını kullanın.

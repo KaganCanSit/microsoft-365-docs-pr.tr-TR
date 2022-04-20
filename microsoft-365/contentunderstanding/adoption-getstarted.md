@@ -1,6 +1,6 @@
 ---
-title: Kullanmaya başlayın SharePoint Syntex'un benimsenmesi için
-description: İş süreçlerinizi kolaylaştırmanıza yardımcı SharePoint Syntex iş akışlarını nasıl kullanabileceğinizi ve uygulayacağız hakkında bilgi edinin.
+title: Microsoft SharePoint Syntex'un benimsenmesini Kullanmaya başlayın
+description: İş süreçlerinizi kolaylaştırmanıza yardımcı olmak için kuruluşunuzda SharePoint Syntex kullanmayı ve uygulamayı öğrenin.
 ms.author: chucked
 author: chuckedmonson
 manager: pamgreen
@@ -14,138 +14,138 @@ ms.collection:
 ms.custom: Adopt
 search.appverid: ''
 ms.localizationpriority: medium
-ms.openlocfilehash: 40af6061029785705d262f3b8c5134531e76885f
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 9b11c5077551aad666d565b0f3c077b3e43dc78e
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64467653"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64937839"
 ---
-# <a name="get-started-driving-adoption-of-microsoft-sharepoint-syntex"></a>Kullanmaya başlayın SharePoint Syntex'un benimsenmesi için
+# <a name="get-started-driving-adoption-of-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'un benimsenmesini Kullanmaya başlayın
 
-SharePoint Syntex'da bulunan akıllı içerik hizmetlerinin üç parçası olduğunu düşünebilirsiniz:
+SharePoint Syntex'da bulunan akıllı içerik hizmetlerini üç bölüme sahip olarak düşünün:
 
-- **İçeriğin anlaşılması:** Bilgi bulma ve yeniden kullanma için meta verileri otomatik olarak uygulamak üzere içerikten bilgileri sınıflandırmak ve ayıklamak için kod olmayan AI modelleri oluşturun. İçeriği anlama hakkında daha [fazla bilgi öğrenin](document-understanding-overview.md).
-- **İçerik işleme:** İçerik yakalama, içeriği geçirme ve kategorilere ayırma işlemlerini otomatik hale getirmek ve içerik odaklı işlemleri otomatik olarak kullanmak için Power Automate. İçerik işleme hakkında [daha fazla bilgi edinmek için](form-processing-overview.md):
-- **İçerik uyumluluğu:** Güvenlik ve yönetimi geliştirmek için, içerik üzerinde denetimler ve denetimler Microsoft Bilgi Koruması.
+- **İçerik anlama:** Bilgi bulma ve yeniden kullanma için meta verileri otomatik olarak uygulamak üzere içerikten bilgileri sınıflandırmak ve ayıklamak için kodsuz yapay zeka modelleri oluşturun. [İçerik anlama](document-understanding-overview.md) hakkında daha fazla bilgi edinin.
+- **İçerik işleme:** İçeriği yakalama, alma ve kategorilere ayırma işlemlerini otomatikleştirin ve Power Automate kullanarak içerik odaklı işlemleri kolaylaştırın. [İçerik işleme](form-processing-overview.md) hakkında daha fazla bilgi edinin.
+- **İçerik uyumluluğu:** Microsoft Purview Information Protection tümleştirmesiyle güvenliği ve idareyi geliştirmek için içeriği denetleme ve yönetme.
 
-Yeni AI hizmetleri ve yetenekleri sayesinde, SharePoint Syntex kullanarak içeriği anlama ve sınıflandırma uygulamalarını doğrudan içerik yönetim akışına SharePoint Syntex. İçeriğinizi anlamanın iki farklı yolu vardır. Kullanabileceğiniz model türü dosya biçimine ve kullanım durumuna göredir.
+Yeni yapay zeka hizmetleri ve özellikleriyle, SharePoint Syntex kullanarak içerik anlama ve sınıflandırma uygulamalarını doğrudan içerik yönetimi akışına oluşturabilirsiniz. İçeriğinizi anlamanın iki farklı yolu vardır. Kullandığınız model türü dosya biçimini ve kullanım örneğini temel alır.
 
-| Form işleme | Belgeyi anlama |
+| Form işleme | Belge anlama |
 |:-------|:-------|
-| Belge kitaplığından oluşturuldu. | İçerik merkezinde oluşturulmuş, içeriğin bir SharePoint Syntex. |
-| AI oluşturucusuzla oluşturulan model. | Yerel arabirimde oluşturulan model. |
+| Belge kitaplığından oluşturulur. | SharePoint Syntex parçası olan içerik merkezinde oluşturulur. |
+| Yapay zeka oluşturucusunda oluşturulan model. | Yerel arabirimde oluşturulan model. |
 | Yarı yapılandırılmış dosya biçimleri için kullanılır. | Yapılandırılmamış dosya biçimleri için kullanılır. |
-| Settable classifier. | İsteğe bağlı ayıklayıcılarla eğitilebilir sınıflandırıcı. |
-| Tek bir kitaplıkla sınırlandırılmıştır. | Birden çok kitaplı kitaplara uygulanabilir. |
-| PDF, JPG, PNG biçiminde eğitin, toplam 50 MB/500 pp. | Negatif örnekler de dahil olmak üzere 5-10 PDF, Office veya e-posta dosyasıyla eğitin. |
+| Ayarlanabilir sınıflandırıcı. | İsteğe bağlı ayıklayıcılarla eğitilebilir sınıflandırıcı. |
+| Tek bir kitaplıkla sınırlıdır. | Birden çok kitaplık için uygulanabilir. |
+| PDF, JPG, PNG biçiminde eğitin, toplam 50 MB/500 pp. | Negatif örnekler de dahil olmak üzere 5-10 PDF, Office veya e-posta dosyaları üzerinde eğitin. |
 
-Yeteneklerin daha eksiksiz bir karşılaştırması için bkz. Belgeyi anlama ve [form işleme modelleri arasındaki fark.](difference-between-document-understanding-and-form-processing-model.md)
+Özelliklerin daha eksiksiz bir karşılaştırması için bkz. [Belge anlama ve form işleme modelleri arasındaki fark](difference-between-document-understanding-and-form-processing-model.md).
 
-## <a name="identify-pilot-business-scenarios-to-optimize"></a>İyileştirilen pilot iş senaryolarını belirleme
+## <a name="identify-pilot-business-scenarios-to-optimize"></a>İyileştirme için pilot iş senaryolarını belirleme
 
-E-posta SharePoint Syntex için öncelikle yararlı olacak senaryoları anlamanız gerekir. "Neden", hangi modelin gerekli olacağını ve modelin nereye uygulanacaklarına göre kuruluş şemasını nasıl yapılandıracaklarını belirlemeye yardımcı olur. Belgeyi anlamanın organizasyonunıza yardımcı olduğu birkaç senaryo şöyledir:
+Kuruluşunuzda SharePoint Syntex kullanmaya hazırlanmak için öncelikle yararlı olacağı senaryoları anlamanız gerekir. "Neden", hangi modelin gerekli olacağını ve kuruluşunuzun modelin uygulanacağı yere göre nasıl yapılandırılacağını belirlemeye yardımcı olur. Belge anlamanın kuruluşunuza yardımcı olabileceği birkaç senaryo aşağıdadır:
 
-- **İçerik işleme:** Sözleşmeleri, iş ifadelerini ve diğer form benzer belgeleri işlenin. Formları eğitin, alanları anlamak ve eşlemek için modeli eğitin ve ardından verileri otomatik olarak toplamak için formlarınızı çalıştırın. Daha fazla bilgi için bkz [. Form işlemeye genel bakış](form-processing-overview.md).
-- **Fatura çözümlemesi:** Faturalardan ilgili ayrıntıları alın ve ilkeye uygun olduğundan veya uygun şekilde işleme alındıklarından emin olun.
+- **İçerik işleme:** Sözleşmeleri, iş deyimlerini ve form benzeri diğer belgeleri işleyin. Formları alın, alanları anlamak ve eşlemek için modeli eğitin ve ardından verileri otomatik olarak toplamak için formlarınızı çalıştırın. Daha fazla bilgi için bkz. [Form işlemeye genel bakış](form-processing-overview.md).
+- **Fatura analizi:** Faturalarınızdan ilgili ayrıntıları çekin ve ilkeye uygun olduklarından veya uygun şekilde işlendiklerinden emin olun.
 
-Organizasyona yardımcı olacak SharePoint Syntex bir düşünebilirsiniz:
+SharePoint Syntex kuruluşunuza nasıl yardımcı olabileceğini düşünün:
 
-- İş işlemlerini otomatikleştirme
+- İş süreçlerini otomatikleştirme
 - Arama doğruluğunu geliştirme
 - Uyumluluk riskini yönetme
 
-Hangi işletme senaryolarını göz önünde bulundurabilirsiniz diye düşünürken, kendinize aşağıdaki soruları sorun:
+Dikkate almanız gereken iş senaryolarını düşünürken kendinize aşağıdaki soruları sorun:
 
-- Bu gerçek bir sorunu çözdü mü?
-- Yaygın olarak kullanılacak mı yoksa çok etkisi olacak mı?
+- Gerçek bir sorunu çözer mi?
+- Yaygın olarak kullanılacak mı yoksa geniş bir etkisi olacak mı?
 - Elde edilebilir mi?
 - Başarıyı ölçebilir misiniz?
 
-Senaryolara, etki ve uygulama kolaylığına göre öncelikleri belirleme. İlk odak alanınızı, kolayca uygulanabiliyor olacak daha yüksek etki senaryoları yapma. Uygulanması zor olan daha düşük etki senaryolarına önceliklerini belirleme.
+Etki ve uygulama kolaylığına göre senaryoların önceliklerini belirleyin. İlk odak alanınızı kolayca uygulanabilecek daha yüksek etki senaryoları haline getirin. Uygulanması zor olan düşük etki senaryolarının önceliklerini kaldırın.
 
-Örnek [senaryoları ve örnekleri kullanarak, organizasyonda](adoption-scenarios.md) nasıl kullanabileceğiniz hakkında fikir SharePoint Syntex kullanın.
+Kuruluşunuzda SharePoint Syntex nasıl kullanabileceğiniz hakkında fikir almak için [örnek senaryoları ve kullanım örneklerini](adoption-scenarios.md) kullanın.
 
-## <a name="identify-roles--responsibilities"></a>Rolleri ve & belirleme
+## <a name="identify-roles--responsibilities"></a>Rolleri & sorumlulukları belirleme
 
-Organizasyonda modelleri kimlerin kuracaklarını ve yöneteceklerini belirleme. Aşağıdaki roller söz konusu olabilir.
+Kuruluşunuzda modelleri kimin oluşturacağını ve yöneteceğini belirleyin. Aşağıdaki roller söz konusu olabilir.
 
 | SharePoint/Bilgi yöneticisi | Power Platform yöneticisi | Bilgi yöneticisi | Model sahibi |
 |:-------|:-------|:-------|:-------|
-| AAD rolü| AAD rolü | AAD rolü | Şampiyon |
-| Form işlemeyi yapılandırma | Form işleme için Veri Ters ortamını yapılandırma | Kullanım durumlarını toplama | İş kullanımı durumlarını toplama |
-| İçerik merkezlerini ve izinleri yönetme| AIB kredisi satın alma ve tahsisi | En iyi uygulamaları kurma ve model analizini gözden geçirme | Model oluşturma ve uygulama |
+| AAD rolü| AAD rolü | AAD rolü | Şampiyonlar |
+| Form işlemeyi yapılandırma | Form işleme için Dataverse ortamını yapılandırma | Kullanım örneklerini toplama | İş kullanım örneklerini toplama |
+| İçerik merkezlerini ve izinleri yönetme| AIB kredilerini satın alma ve ayırma | En iyi uygulamaları oluşturma ve model analizini gözden geçirme | Model oluşturma ve uygulama |
 
-Bilgi yöneticisi, İş Süreci Sahibi ve İçerik modeli sahibi kuruluşta örnek modeller ve şampiyon benimsemesi oluşturabilir.
-Dahil olacak diğer kullanıcılar: Uyumluluk yöneticisi, Taksonomi yöneticileri.
+Bilgi yöneticisi, İş Süreci Sahibi ve İçerik modeli sahibi, kuruluşta örnek modeller ve şampiyon benimsemesi oluşturur.
+İlgili olabilecek diğer kişiler: Uyumluluk yöneticisi, Taksonomi yöneticileri.
 
-Modelleri nerede oluşturmalı ve uygulamalı? Geliştirnen mevcut süreçler veya depolar var mı?
+Modelleri nerede oluşturup uygulayacak? İyileştirilebilen mevcut süreçler veya depolar var mı?
 
-- Form işleme: Hangi sitelerin Form işleme eylemine almayacaklarını seçin.
-- Belgeyi anlama: Farklı iş alanları için birden çok içerik merkezi oluşturabilirsiniz.
+- Form işleme: Hangi sitelerin Form işleme eylemini alacağını belirleyin.
+- Belge anlama: Farklı iş alanları için birden çok içerik merkezi oluşturabilirsiniz.
 
 ## <a name="strategic-positioning"></a>Stratejik konumlandırma
 
-Proje katılımcıları ile birlikte çalışarak proje katılımcılarının proje katılımcılarını kullanma stratejisini SharePoint Syntex. Bu konumlandırmaya yardımcı olmak için araştırma yapın ve aşağıdaki kaynakları sağlar:
+Proje katılımcılarıyla birlikte çalışarak SharePoint Syntex kullanma stratejisine uygun olduklarından emin olun. Bu konumlandırmaya yardımcı olmak için aşağıdaki kaynakları araştırın ve sağlayın:
 
 - İş sonuçları:
   - Olası mali sonuçlar
   - Olası çeviklik sonuçları
-  - İş sonuç şablonu
+  - İş sonucu şablonu
 - Paydaşlar/Exec sponsoru satın alma/hizalama
-  - İş desteleri
+  - İş olayı desteleri
   - Finansal modeller
   - Şirket hazırlığı - kültür
 
-## <a name="identify-stakeholders"></a>Paydaşları tanımlama
+## <a name="identify-stakeholders"></a>Paydaşları belirleme
 
-Projenize paydaşları tanıyın.
+Projeniz için paydaşları belirleyin.
 
-|Rol |Sorumluluklar |Bölüm |
+|Rol |Sorumluluk |Bölüm |
 |:-------|:-------|:--------|
-| Yönetici sponsorları   | Şirketle üst düzey görüş ve değerleri iletişim kurma   |  Yönetim liderlik   |
-| Project müşteri adayları | Tüm başlatma yürütme ve yürütme sürecini denetleme | Project yönetimi |
-| Bilgi yöneticileri| İçerik merkezlerini oluşturma ve yönetme | IT veya başka bir bölüm|
-| İçerik yöneticileri ve model sahipleri| Kullanım durumlarını toplama ve modelleri oluşturma ve uygulama | Herhangi bir bölüm|
-| Şampiyon | Itirazları ele alıma ve yönetmeye yardımcı olur | Herhangi bir bölüm (personel) |
-| Kiracı yöneticisi | Kiracı düzeyinde ayarları yapılandırma | IT bölümü|
-| Power Platform yöneticisi| Veri Ters ortamını yapılandırma | IT bölümü|
+| Yönetici sponsorları   | Üst düzey vizyon ve değerleri şirkete iletme   |  Yönetici liderliği   |
+| müşteri adaylarını Project | Başlatma yürütme ve dağıtım işleminin tamamını denetleme | Project yönetimi |
+| Bilgi yöneticileri| İçerik merkezleri oluşturma ve yönetme | BT veya diğer departman|
+| İçerik yöneticileri ve model sahipleri| Kullanım örneklerini toplama ve model oluşturma ve uygulama | Herhangi bir departman|
+| Şampiyonlar | İtiraz işlemeyi yaygınlaştırmaya ve yönetmeye yardımcı olun | Herhangi bir departman (personel) |
+| Kiracı yöneticisi | Kiracı düzeyi ayarlarını yapılandırma | BT departmanı|
+| Power Platform yöneticisi| Dataverse ortamını yapılandırma | BT departmanı|
 
 > [!NOTE]
-> Her bir rolün tüm bu rollerin rulon boyunca karşıldır getirilmesini önerse de, çözümün tanımını almaya başlamanız için bunların hepsini gerekli olmadığını bulabilirsiniz.
+> Dağıtımınız boyunca bu rollerin her birinin yerine getirilmesini önersek de, tanımladığınız çözümü kullanmaya başlamak için tümünün gerekli olmadığını fark edebilirsiniz.
 
 ## <a name="readiness-checklist"></a>Hazırlık denetim listesi
 
-Bu uygulamanın uygulanmasına SharePoint Syntex için şunları gerekir:
+SharePoint Syntex uygulamaya hazırlanmak için şunları yapmanız gerekir:
 
-![İçerik Anlama hazırlığı.](../media/content-understanding/cu-adoption-readinesschecklist.png)
+![content understanding için hazır olma.](../media/content-understanding/cu-adoption-readinesschecklist.png)
 
 1. Bitiş durumunu planlama
-    - Belge anlama modelleri son değildir, anlamanın anlamıdır.
-    - Ayıklanan meta verilerin değerini şu şekilde kullanın:
+    - Belge anlama modelleri son değil, araçlardır.
+    - Ayıklanan meta verilerin değerinden şu şekilde yararlanmayı planlayın:
       - Arama
-      - Filtreleme ve biçimlendirmeyi görüntüleme
+      - Biçimlendirmeyi filtreleme ve görüntüleme
       - Uyumluluk
       - Otomasyon
-2. Tanımlama
-    - Var olan bilgi mimarisini ve içerik yönetimi özellik kullanımını anlıyoruz.
-    - Mevcut içerik türleri modellere uygun aday var mı?
-    - Meta verilerle hangi mevcut süreçler geliştirnsin?
+2. Tanımlamak
+    - Mevcut bilgi mimarisini ve içerik yönetimi özellik kullanımını anlama.
+    - Mevcut içerik türleri modeller için iyi adaylar mıdır?
+    - Meta verilerle hangi mevcut işlemler geliştirilebilir?
 3. Design
-    - Bilgi mimarisi yaklaşımınızı, yönetilen meta verileri ve içerik türlerini tasarlar.
-    - Tanımlama, oluşturma ve yönetim için süreci tasarlar.
+    - Bilgi mimarisine, yönetilen meta verilere ve içerik türlerine yaklaşımınızı tasarlar.
+    - Tanım, oluşturma, yönetim sürecini tasarlar.
 
-## <a name="engage-your-organization"></a>Organizasyonla etkileşim kurma
+## <a name="engage-your-organization"></a>Kuruluşunuzla etkileşime geçme
 
-1. Tutucuları tanımlama, senaryoları onaylama ve proje planı geliştirme.
-1. Ayarları yapılandır ve lisansları uygula.
-1. Farkındalık ve eğitime başla – Şampiyonları işe alın.
-1. Evreler olarak sahneyi takip et.  
-1. Geri bildirim toplama ve iterat.
-1. Kullanım arttıkça tüm AI Builder kredileri için gereken plan büyür.
+1. Bahis sahiplerini belirleyin, senaryoları onaylayın ve proje planı geliştirin.
+1. Ayarları yapılandırın ve lisansları uygulayın.
+1. Farkındalık ve eğitime başlayın – Şampiyonları işe alın.
+1. Aşamalı olarak dağıt.  
+1. Geri bildirim toplayın ve yineleme yapın.
+1. Kullanım gerektiğinde AI Builder kredileri için plan arttıkça.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Durumlar için senaryolar ve kullanım SharePoint Syntex](adoption-scenarios.md)
+[SharePoint Syntex için senaryolar ve kullanım örnekleri](adoption-scenarios.md)
 
-[Yeni bir çözüm kullanarak Microsoft 365 yönetin](solution-manage-contracts-in-microsoft-365.md)
+[Microsoft 365 çözümü kullanarak sözleşmeleri yönetme](solution-manage-contracts-in-microsoft-365.md)

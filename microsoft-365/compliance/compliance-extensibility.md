@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 uyumluluğu genişletilebilirliği
+title: Microsoft Purview genişletilebilirliği
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -19,88 +19,88 @@ search.appverid:
 ms.assetid: ''
 ms.custom:
 - seo-marvel-apr2020
-description: Üçüncü taraf veri bağlayıcıları ve Microsoft Microsoft 365 API'leri kullanarak uyumluluk çözümlerini genişletmeyi Graph öğrenin.
-ms.openlocfilehash: 0632de40141b86e6dfdebf3f5c3a97ca50219357
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Üçüncü taraf veri bağlayıcılarını ve Microsoft Graph API'lerini kullanarak Microsoft Purview çözümlerini genişletme hakkında bilgi edinin.
+ms.openlocfilehash: e61cd2dfa8121a0925cc89fd5373569d9697936a
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63330545"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64942765"
 ---
-# <a name="microsoft-365-compliance-and-microsoft-priva-extensibility"></a>Microsoft 365 Uyumluluğu ve Microsoft Priva genişletilebilirliği
+# <a name="microsoft-purview-and-microsoft-priva-extensibility"></a>Microsoft Purview ve Microsoft Priva genişletilebilirliği
 
-Microsoft 365 çözümlerini kontrol etmek, kuruluşların uyumluluk risklerini akıllı bir şekilde değerlendirmesine, hassas verileri yönetmelerine ve korumalarına ve mevzuat gereksinimlerine etkin bir şekilde yanıt vermelerine yardımcı olur. Microsoft 365 uyumluluk, zengin genişletilebilirlik senaryolarıdır ve kuruluşların uyumluluk çözümlerini uyarlamalarına, genişletmelerine, tümleştirlerine, hızlandırmalarına ve desteklemelerine olanak sağlar.
+Microsoft Purview çözümleri kuruluşların uyumluluk risklerini akıllı bir şekilde değerlendirmesine, hassas verileri yönetmesine ve korumasına ve mevzuat gereksinimlerine etkili bir şekilde yanıt vermesine yardımcı olur. Microsoft Purview, genişletilebilirlik senaryoları açısından zengindir ve kuruluşların uyumluluk çözümlerini uyarlamasına, genişletmesine, tümleştirmesine, hızlandırmasına ve desteklemesine olanak tanır.
 
-Uyumluluk genişletilebilirliği için iki önemli yapı bloğu vardır:
+Uyumluluk genişletilebilirliği için iki temel yapı taşları vardır:
 
-- **Veri bağlayıcıları**. Microsoft'a bağlı olmayan verileri içeri aktarmayı ve arşivlemeyi kullanarak, Microsoft 365 taraf verilerine koruma ve yönetim özelliklerini uygulayabilirsiniz.
+- **Veri bağlayıcıları**. Üçüncü taraf verilere Microsoft 365 koruma ve idare özellikleri uygulayabilmek için Microsoft dışı verileri içeri aktarmak ve arşivlemek için kullanın.
 
-- **API'ler**. Uyumluluk özelliklerine programlı Microsoft 365 olanak sağlar.
+- **API'ler**. Microsoft Purview özelliklerine program aracılığıyla erişim sağlar.
 
 ## <a name="data-connectors"></a>Veri bağlayıcıları
 
-Microsoft, web sitesinde yapılandırılan üçüncü taraf veri bağlayıcıları Microsoft 365 uyumluluk merkezi. Microsoft tarafından sağlanan veri bağlayıcılarının listesi için bkz. [Üçüncü taraf veri bağlayıcıları](archiving-third-party-data.md#third-party-data-connectors) tablosu. Üçüncü taraf veri bağlayıcıları tablosunda ayrıca, Microsoft 365'ta verileri içeri aktardıktan ve arşivledikten sonra üçüncü taraf verilerine uygulayabilecek uyumluluk çözümleri ve her bağlayıcının adım adım yönergelerinin bağlantıları da özetlenir.
+Microsoft, Microsoft Purview uyumluluk portalında yapılandırılabilir üçüncü taraf veri bağlayıcıları sağlar. Microsoft tarafından sağlanan veri bağlayıcılarının listesi için [Üçüncü taraf veri bağlayıcıları tablosuna](archiving-third-party-data.md#third-party-data-connectors) bakın. Üçüncü taraf veri bağlayıcıları tablosu, verileri Microsoft 365 içeri aktarıp arşivledikten sonra üçüncü taraf verilerine uygulayabileceğiniz uyumluluk çözümlerini ve her bağlayıcı için adım adım yönergelerin bağlantılarını da özetler.
 
-Veri bağlayıcılarını arşivleme hakkında Microsoft 365 için bkz[. Üçüncü taraf verilerini arşivleme](archiving-third-party-data.md). Üçüncü taraf bir veri türü Microsoft 365 uyumluluk merkezi bağlayıcıları tarafından desteklenmiyorsa, size özel bir bağlayıcı sağlayacak bir iş ortağıyla çalışabilirsiniz. Bu yöntemle çalışabilirsiniz iş ortaklarının listesi ve adım adım süreç için bkz. Üçüncü taraf verilerini arşivlemek için [iş ortağıyla çalışma](work-with-partner-to-archive-third-party-data.md).
+Microsoft 365 veri bağlayıcıları hakkında daha fazla bilgi edinmek için bkz. [Üçüncü taraf verileri arşivleme](archiving-third-party-data.md). Uyumluluk portalında bulunan veri bağlayıcıları üçüncü taraf veri türü desteklenmiyorsa, size özel bağlayıcı sağlayabilen bir iş ortağıyla çalışabilirsiniz. Birlikte çalışabileceğiniz iş ortaklarının listesi ve bu yöntemin adım adım işlemi için bkz. [Üçüncü taraf verilerini arşivlemek için bir iş ortağıyla çalışma](work-with-partner-to-archive-third-party-data.md).
 
 ### <a name="prerequisites-for-data-connectors"></a>Veri bağlayıcıları için önkoşullar
 
-Dosyada kullanılabilen çoğu veri bağlayıcısı Microsoft 365 uyumluluk merkezi üçüncü taraf verilerini içeri aktarmayı ve arşivlemek için, üçüncü taraf veri kaynağında yapılandırma görevlerini hazırlamanız ve gerçekleştirmeniz gerekir. Bu önkoşullar, her bir üçüncü taraf veri bağlayıcısı için ayrıntılı olarak belgelanmıştır.
+Üçüncü taraf verileri içeri aktarmak ve arşivlemek için uyumluluk portalında kullanılabilen veri bağlayıcılarının çoğu, yapılandırma görevlerini üçüncü taraf veri kaynağında hazırlamanızı ve gerçekleştirmenizi gerektirir. Bu önkoşullar, her üçüncü taraf veri bağlayıcısı için ayrıntılı olarak belgelenmiştir.
 
-Microsoft'un iş ortaklarından biri tarafından sağlanan Microsoft 365 uyumluluk merkezi bağlayıcıları için bağlayıcı dağıtmadan önce, kuruluşla iş ilişkisine gerek vardır.
+Microsoft'un iş ortaklarından biri tarafından sağlanan uyumluluk portalındaki veri bağlayıcıları için, bağlayıcı dağıtabilmeniz için önce kuruluşunuzun iş ortağıyla bir iş ilişkisine sahip olması gerekir.
 
-Üçüncü taraf veri bağlayıcıları için yol gösterici bilgiler ve gereksinimler için, güvenlik ve uyumluluk - Hizmet Açıklamaları ve Microsoft 365 kılavuzunda yer alan "& bağlayıcıları" [bölümüne | Microsoft Docs](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
+Üçüncü taraf veri bağlayıcıları için yönergeler ve gereksinimler için [güvenlik & uyumluluğu için Microsoft 365 kılavuzun "Veri bağlayıcıları" bölümüne bakın - Hizmet Açıklamaları | Microsoft Docs](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
 
-## <a name="apis"></a>API'ler
+## <a name="apis"></a>Apı 'leri
 
-Microsoft 365 ve Microsoft Priva API'leri Microsoft Bilgi Koruması SDK, Microsoft Graph API ve Office 365 Yönetim Etkinliği API'sinde kullanılabilir. Bazı uyumluluk API'leri, Microsoft 365 müşterilerinin, bağımsız yazılım satıcılarının, sistem entegratıcılarının ve yönetilen güvenlik hizmet sağlayıcılarının yüksek değerli güvenlik ve uyumluluk çözümleri oluşturmalarına olanak sağlayan yeni bir güvenlik ve uyumluluk API'leri kümesi içinde yer almaktadır.
+Microsoft Purview ve Microsoft Priva API'leri Microsoft Bilgi Koruması SDK, Microsoft Graph API ve Office 365 Yönetim Etkinliği API'sinde kullanılabilir. Bazı uyumluluk API'leri, Microsoft 365 müşterileri, bağımsız yazılım satıcıları, sistem tümleştiricileri ve yönetilen güvenlik hizmeti sağlayıcıları için geliştiricilerin yüksek değerli güvenlik ve uyumluluk çözümleri oluşturmasını sağlayan yeni bir güvenlik ve uyumluluk API'leri kümesinin parçasıdır.
 
-Api'lere erişim hakkında daha fazla Graph için Bkz. [Microsoft API'lerine Graph](/graph/overview).
+Graph API'lere erişme hakkında daha fazla bilgi edinmek için bkz. [Microsoft Graph genel bakış](/graph/overview).
 
-### <a name="microsoft-graph-apis-for-subject-rights-requests"></a>Microsoft Graph istekleri için API'ler
+### <a name="microsoft-graph-apis-for-subject-rights-requests"></a>Konu hakları istekleri için Microsoft Graph API'leri
 
-Dünya çerçevesinde bazı gizlilik düzenlemelerine uygun olarak, kişiler şirketlerin topladığı kişisel verileri incelemeye veya yönetmeye yönelik isteklerde  edilebilir. Bu istekler, Microsoft Priva Konu Hakları *İstekleri* çözümü kapsamındaki konu hakları istekleri olarak adlandırılır. Konu hakları istekleri, veri konusu *istekleri (* DSR) veya veri konusu erişim *istekleri (* DSAR) olarak da adlandırılır. Microsoft Graph hakları istekleriyle ilgili API'ler, geliştiricilerin konuyla ilgili Microsoft 365 isteklerini daha geniş gizlilik ekosistemi ile tümleştirebiliyor. Bu API tabanlı genişletilebilirlik, kuruluşların hem Microsoft'u hem de Microsoft olmayan ortamları kapsayan tüm veri mülkları genelinde konu hak isteklerine tek bir biçimde yanıt vermelerine olanak tanır. Bu özellik aynı zamanda ölçeğin otomasyonunu kullanmada ve kuruluşların el ile yapılan süreçlere bel bağlı kalmadan sektör düzenlemelerini daha verimli bir şekilde karşılamalarına da yardımcı olur.
+Dünyanın dört bir yanındaki belirli gizlilik düzenlemelerine uygun olarak, bireyler şirketlerin kendileriyle ilgili olarak topladığı kişisel verileri gözden geçirmek veya yönetmek için istekte bulunabilir. Bu istekler, Microsoft Priva Konu Hakları *İstekleri çözümünde konu hakları istekleri* olarak adlandırılır. Konu hakları istekleri, *veri sahibi istekleri* (DSR) veya *veri sahibi erişim istekleri* (DSAR) olarak da adlandırılır. Konu hakları isteklerine yönelik Microsoft Graph API'leri, geliştiricilerin Microsoft 365 ilgili konu hakları isteklerini daha geniş bir gizlilik ekosistemiyle tümleştirmesine olanak tanır. Bu API tabanlı genişletilebilirlik, kuruluşların hem Microsoft hem de Microsoft dışı ortamları kapsayan veri varlıklarının tamamında konu hakları isteklerine birleşik bir şekilde yanıt vermelerini sağlar. Bu özellik, büyük ölçekte otomasyona da yardımcı olur ve kuruluşların el ile gerçekleştirilen süreçlere bağlı kalmadan sektör düzenlemelerini daha verimli bir şekilde karşılamalarına yardımcı olur.
 
-Daha fazla bilgi edinmek için [Bkz. Microsoft Graph talebiyle ilgili API'leri arama](/graph/api/resources/subjectrightsrequest-subjectrightsrequestapioverview).
+Daha fazla bilgi edinmek için bkz. [Konu hakları isteği için Microsoft Graph API'leri](/graph/api/resources/subjectrightsrequest-subjectrightsrequestapioverview).
 
 ### <a name="microsoft-information-protection-mip-sdk"></a>Microsoft Bilgi Koruması (MIP) SDK
 
-MIP SDK, güvenlik ve uyumluluk merkezlerinden gelen Microsoft 365 ve koruma hizmetlerini üçüncü taraf uygulamalarına ve hizmetlerine sunar. Geliştiriciler, etiketler ve dosyalara koruma uygulamak için yerel destek oluşturmak üzere SDK'yı kullanabilir. Geliştiriciler, belirli etiketler algılandığında hangi eylemlerin gerçekleştirileceklerini ve MIP şifreli bilgiler üzerinde nedenlerini belirler.
+MIP SDK, Microsoft 365 güvenlik ve uyumluluk merkezlerinden üçüncü taraf uygulama ve hizmetlere etiketleme ve koruma hizmetlerini kullanıma sunar. Geliştiriciler, dosyalara etiket ve koruma uygulamak için yerel destek oluşturmak için SDK'yı kullanabilir. Geliştiriciler, belirli etiketler algılandığında hangi eylemlerin gerçekleştirileceğini ve MIP ile şifrelenmiş bilgilerin nedenini belirleyebilir.
 
 Üst düzey MIP SDK kullanım örnekleri şunlardır:
 
-- Dışarı aktarma dosyalarına sınıflandırma etiketleri ekan bir iş hattı uygulaması.
+- Dışarı aktarma işlemindeki dosyalara sınıflandırma etiketleri uygulayan bir iş kolu uygulaması.
 
-- MIP etiketlemesi için yerel destek sağlayan bir CAD/CAM tasarım uygulaması.
+- Duyarlılık etiketleri için yerel destek sağlayan bir CAD/CAM tasarım uygulaması.
 
-- Azure Information Protection ile verileri şifrelten bir bulut erişimi güvenlik aracısı veya veri kaybı önleme çözümü.
+- Azure Information Protection ile verileri şifreleyebilen bir bulut erişim güvenlik aracısı veya veri kaybı önleme çözümü.
 
-MIP SDK, önkoşullar, ek senaryolar ve örnekler hakkında daha fazla bilgi edinmek için bkz. [MIP SDK'ye Genel Bakış](/information-protection/develop/overview).
+MIP SDK'sı, önkoşullar, ek senaryolar ve örnekler hakkında daha fazla bilgi edinmek için bkz. [MIP SDK'sına Genel Bakış](/information-protection/develop/overview).
 
-### <a name="microsoft-graph-api-for-teams-dlp"></a>Graph DLP için Microsoft Teams API'si
+### <a name="microsoft-graph-api-for-teams-dlp"></a>Teams DLP için Microsoft Graph API
 
-[Veri kaybı önleme (DLP)](dlp-microsoft-teams.md) özellikleri, özellikle kuruluşların uzak Microsoft Teams fazla işi olduğu için bu kuruluşlarda yaygın olarak kullanılır. Kısa bir [süre önce, Microsoft Çevrimiçi](https://devblogs.microsoft.com/microsoft365dev/change-notifications-for-microsoft-teams-messages-now-generally-available/) Graph Bildirim API'sinde genel olarak kullanılabilir olduğunu Teams. Bu API, geliştiricilerin gerçek zamanlı olarak iletileri Microsoft Teams dlp senaryoları uygulayan ve ardından hem müşteriler hem de iş ortakları için DLP senaryoları uygulayan uygulamalar oluşturmasını sağlar. Buna ek olarak, Microsoft Graph Yama API'si bu tür iletilere DLP eylemleri Teams sağlar.
+[Veri kaybı önleme (DLP)](dlp-microsoft-teams.md) özellikleri, özellikle kuruluşlar uzaktan çalışmaya geçiş yapmışken Microsoft Teams yaygın olarak kullanılır. Kısa süre önce Teams'daki iletiler için Microsoft Graph Değişiklik Bildirimi API'sinin [genel kullanıma sunulduğu duyuruldu](https://devblogs.microsoft.com/microsoft365dev/change-notifications-for-microsoft-teams-messages-now-generally-available/). Bu API, geliştiricilerin Microsoft Teams iletileri neredeyse gerçek zamanlı olarak dinleyebilen uygulamalar oluşturmasına ve ardından hem müşteriler hem de iş ortakları için DLP senaryoları uygulamasına olanak tanır. Ayrıca Microsoft Graph Patch API'si, Teams iletilere DLP eylemleri uygulamanıza olanak tanır.
 
-Bu iki API, Teams DLP için Microsoft Graph API'sini oluşturur. Örnek uygulamayı kullanarak çalışmaya [başlamaya çalışabilirsiniz](https://github.com/microsoftgraph/aspnetcore-webhooks-sample). Mesajlaşma web belgelerinde Microsoft Teams daha fazla bilgi için belgelere [bakın](/graph/api/subscription-post-subscriptions).
+Bu iki API, Teams DLP için Microsoft Graph API oluşturur. [Örnek uygulamayı](https://github.com/microsoftgraph/aspnetcore-webhooks-sample) deneyerek çalışmaya başlayabilirsiniz. Microsoft Teams mesajlaşma web kancaları hakkında daha fazla bilgi için [belgelere bakın](/graph/api/subscription-post-subscriptions).
 
-DLP'ye yönelik lisans Teams için bkz[. Güvenlik Microsoft 365 uyumluluğu için lisans & bakın](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
+Teams DLP için lisans gereksinimleri için bkz. [güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
 
-### <a name="microsoft-graph-api-for-ediscovery-preview"></a>eK Graph için Microsoft Graph API'si (önizleme)
+### <a name="microsoft-graph-api-for-ediscovery-preview"></a>eBulma için Microsoft Graph API (önizleme)
 
-[Advanced eDiscovery](overview-ediscovery-20.md) ile, kuruluşlar yaşadığı yeri veri keşfeder ve akıllı makine öğrenme ve çözümleme özellikleriyle daha uç uç eKbulma iş akışlarını yönetebilir ve verileri ilgili kümeye düşürebilirsiniz; tüm bunlar Microsoft 365 ve uyumluluk sınırının içinde kalır.
+[eBulma (Premium)](overview-ediscovery-20.md) ile kuruluşlar, verileri bulunduğu yerde bulabilir ve verileri ilgili kümeye düşürmeye yönelik akıllı makine öğrenmesi ve analiz özellikleriyle uçtan uca eBulma iş akışlarını yönetebilir ve tüm bunlar Microsoft 365 güvenlik ve uyumluluk sınırı içinde kalır.
 
-Graph API'leri Advanced eDiscovery durumlar oluşturmak ve yönetmek, kümeleri gözden geçirmek ve küme sorgularını ölçeklenebilir ve yinelenebilir bir şekilde gözden geçirmek için kullanılabilir. Bu, müşterilerin ve iş ortaklarının durum oluşturma, özel durumlar oluşturma ve koruyucularla yasal düretileri yönetme gibi ortak ve yinelenen işlemleri otomatikleştirmek için uygulamalar ve iş akışları oluşturmalarına olanak sağlar.
+eBulma (Premium) için Graph API'leri, örnekleri oluşturmak ve yönetmek, kümeleri gözden geçirmek ve küme sorgularını ölçeklenebilir ve yinelenebilir bir şekilde gözden geçirmek için kullanılabilir. Bu, müşterilerin ve iş ortaklarının vaka oluşturma, koruyucuları ve yasal tutmaları yönetme gibi yaygın ve tekrarlanan süreçleri otomatikleştirmek için uygulamalar ve iş akışları oluşturmasına olanak tanır.
 
-eKbulma için Graph API'lerinin ilk kümesi genel önizlemede kullanılabilir. Takvim yılı sonuna kadar daha fazla özellik eklemeyi planlıyoruz. Bu API'ler ve diğer güncelleştirmeler hakkında daha fazla bilgi Advanced eDiscovery bu [bloga bakın](https://aka.ms/Ignite2020AeDAA).
+eBulma için ilk Graph API'leri genel önizlemede kullanılabilir. Takvim yılının sonuna kadar daha fazla özellik eklemeyi planlıyoruz. Bu API'ler ve eBulma (Premium) güncelleştirmeleri hakkında daha fazla bilgi edinmek için bu [bloga](https://aka.ms/Ignite2020AeDAA) bakın.
 
-Advanced eDiscovery ve API lisans gereksinimleri için, güvenlik ve uyumluluk için lisanslama kılavuzunda yer alan "eKbul [Microsoft 365" & bakın](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#ediscovery).
+eBulma (Premium) ve API için lisans gereksinimleri için [güvenlik & uyumluluğu için lisanslama kılavuzunun Microsoft 365 "eBulma](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#ediscovery)" bölümüne bakın.
 
-### <a name="microsoft-graph-api-for-teams-export"></a>Microsoft Graph API'si Teams Dışarı Aktarma
+### <a name="microsoft-graph-api-for-teams-export"></a>Teams Dışarı Aktarma için Microsoft Graph API
 
-Enterprise Için Bilgi Arşivleme (EIA), Microsoft Teams gereksinimleri çözmelerine olanak sağlarken müşterilerimiz için önemli bir senaryodur. Microsoft Teams'ta içeriği arşivlemeye yerleşik yeteneklerimizin yanı sıra, müşteriler ve iş ortakları artık özel uygulama ve tümleştirme senaryolarını çözmek için Teams Dışarı Aktarma API'lerini de kullanabilir. Dışarı Teams API'leri, her bir ileti ve ileti eklerinin toplu olarak dışarı aktarmalarını (uygulama başına/kiracı başına saniye başına 200 Teams) destekler. Silinen iletilere, silindikten sonra 30 gün içerisinde API tarafından da erişilebilir. Bu API'leri dışarı Teams hakkında daha fazla bilgi ve bunları uygulamalarınız içinde nasıl kullanabileceğiniz hakkında daha fazla bilgi için bkz. Dışarı Aktarma [API'leri Microsoft Teams dışarı aktarma](/microsoftteams/export-teams-content).
+Microsoft Teams için Enterprise Bilgi Arşivleme (ÇED), mevzuat gereksinimlerini çözmelerine olanak sağladığı için müşterilerimiz için önemli bir senaryodur. müşteriler ve iş ortakları, Microsoft Teams içeriği arşivleme için yerleşik özelliklerimize ek olarak özel uygulama ve tümleştirme senaryolarını çözmek için Teams Dışarı Aktarma API'lerini de kullanabilir. Teams Dışarı Aktarma API'leri, Teams iletilerin ve ileti eklerinin toplu dışarı aktarmasını (saniyede/uygulama/kiracı başına en fazla 200 istek) destekler. Silinen iletilere, silindikten sonra 30 güne kadar API tarafından da erişilebilir. Bu Teams Dışarı Aktarma API'leri ve bunları uygulamalarınızda kullanma hakkında daha fazla bilgi için bkz. Microsoft Teams Dışarı [Aktarma API'leriyle içeriği dışarı aktarma](/microsoftteams/export-teams-content).
 
-Dışarı Aktarma API'lerinin kullanımına yönelik lisans Teams için, güvenlik Microsoft 365 uyumluluğu için lisanslama & [bakın](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
+Teams Dışarı Aktarma API'lerinin kullanımına yönelik lisans gereksinimleri için bkz. [güvenlik & uyumluluğu için lisanslama kılavuzu Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
 
 ### <a name="microsoft-graph-connector-apis-preview"></a>Microsoft Graph Bağlayıcı API'leri (önizleme)
 
-Microsoft [Graph bağlayıcıları](/microsoftsearch/connectors-overview) ile, kuruluşlar üçüncü taraf verileri dizine adi olarak işaretlerini Microsoft Arama olabilir. Bu özellik, hem üretkenlik uygulamalarında hem de daha geniş bir Microsoft Microsoft 365 arama özelliği olan içerik kaynağı türlerini genişletiyor. Üçüncü taraf verileri şirket içinde veya genel ya da özel bulutlarda barındırabilirsiniz. Bu Advanced eDiscovery, bağlı uygulamalar için yerleşik uyumluluk değerinin geliştirici Microsoft 365 etkinleştir istiyoruz. Bu, kullanıcıları sorunsuz uyumluluk deneyimleriyle güçlendirmek için Microsoft 365 mobil Microsoft 365 tümleştirmesine olanak sağlar. Microsoft Graph Bağlayıcı API'lerini uygulamalar görünümünüze dahil etmeyi öğrenmek için bkz. Microsoft Web Sitesinde bağlantı oluşturma[, güncelleştirme ve Graph](/graph/connecting-external-content-connectors-api-overview).
+[Microsoft Graph bağlayıcıları](/microsoftsearch/connectors-overview) sayesinde kuruluşlar üçüncü taraf verileri Microsoft Arama sonuçlarda görünecek şekilde dizine alabilir. Bu özellik, Microsoft 365 üretkenlik uygulamalarınızda ve daha geniş Microsoft ekosisteminde aranabilen içerik kaynağı türlerini genişletir. Üçüncü taraf verileri şirket içinde veya genel veya özel bulutlarda barındırılabilir. eBulma (Premium) ile başlayarak bağlı Microsoft 365 uygulamaların yerleşik uyumluluk değerinin geliştirici önizlemesini etkinleştiriyoruz. Bu, kullanıcıları sorunsuz uyumluluk deneyimleri ile güçlendirmek için Microsoft 365 ekosistemiyle tümleştirilmiş uygulamalar için uyumluluk sağlar. Microsoft Graph Bağlayıcı API'lerini uygulamalar görünümünüzde birleştirme hakkında daha fazla bilgi edinmek için bkz. [Microsoft Graph bağlantıları oluşturma, güncelleştirme ve silme](/graph/connecting-external-content-connectors-api-overview).
