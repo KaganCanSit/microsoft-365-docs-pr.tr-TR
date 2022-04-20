@@ -1,24 +1,24 @@
-- name: Microsoft 365 uyumluluğu
+- name: Microsoft Purview
   href: index.yml
-- name: Microsoft 365 uyumluluğundaki yenilikler
+- name: Microsoft Purview'daki yenilikler
   href: whats-new.md
 - name: Uyumluluk ücretsiz denemeleri
   items:
-    - name: Microsoft 365 uyumluluğu ücretsiz denemesi hakkında
+    - name: Microsoft Purview için ücretsiz deneme hakkında
       href: compliance-easy-trials.md
-    - name: Microsoft Uyum Yöneticisi premium değerlendirmeleri için ücretsiz deneme hakkında
+    - name: Microsoft Purview Uyumluluk Yöneticisi premium değerlendirmeleri için ücretsiz deneme hakkında
       href: compliance-easy-trials-compliance-manager-assessments.md
 - name: Kullanmaya başlayın
   items:
-    - name: Uyumluluğu kullanmaya başlamak için hızlı görevler
+    - name: Microsoft Purview'u kullanmaya başlamak için hızlı görevler
       href: compliance-quick-tasks.md
-    - name: Microsoft 365 çözüm kataloğu
+    - name: Microsoft Purview çözüm kataloğu
       href: microsoft-365-solution-catalog.md
-    - name: Microsoft 365 uyumluluk merkezi
+    - name: Microsoft Purview uyumluluk portalı
       href: microsoft-365-compliance-center.md
-    - name: Microsoft 365 uyumluluk merkezindeki izinler
+    - name: Microsoft Purview uyumluluk portalındaki izinler
       href: microsoft-365-compliance-center-permissions.md
-    - name: Kullanıcıları Microsoft 365 uyumluluk merkezine yönlendirme
+    - name: Kullanıcıları Microsoft Purview uyumluluk portalına yönlendirme
       href: microsoft-365-compliance-center-redirection.md
     - name: Ücretsiz Azure Active Directory aboneliğinizi kullanma
       href: use-your-free-azure-ad-subscription-in-office-365.md
@@ -44,15 +44,15 @@
           href: device-onboarding-vdi.md
     - name: macOS cihazlarının katılımı (önizleme)
       items:
-        - name: macOS cihazlarının Microsoft 365'e katılımına genel bakış (önizleme)
+        - name: macOS cihazlarının Microsoft 365'e katılımına genel bakış
           href: device-onboarding-macos-overview.md
-        - name: macOS cihazlarının Microsoft Intune kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması (önizleme)
+        - name: macOS cihazlarının Microsoft Intune kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması
           href: device-onboarding-offboarding-macos-intune.md
-        - name: macOS cihazlarının Uç Nokta için Microsoft Defender müşterileri için Intune kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması (önizleme)
+        - name: macOS cihazlarının Uç Nokta için Microsoft Defender müşterileri için Intune kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması
           href: device-onboarding-offboarding-macos-intune-mde.md
-        - name: macOS cihazlarının JAMF Pro kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması (önizleme)
+        - name: macOS cihazlarının JAMF Pro kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması
           href: device-onboarding-offboarding-macos-jamfpro.md
-        - name: macOS cihazlarının Uç Nokta için Microsoft Defender müşterileri için JAMF Pro kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması (önizleme)
+        - name: macOS cihazlarının Uç Nokta için Microsoft Defender müşterileri için JAMF Pro kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması
           href: device-onboarding-offboarding-macos-jamfpro-mde.md
 - name: Üçüncü taraf verileri için bağlayıcıları yönetme
   items:
@@ -216,7 +216,7 @@
       href: use-content-search-to-search-third-party-data-that-was-imported.md
 - name: İçeriden riskleri yönetme
   items:
-    - name: Microsoft 365 içeriden risk çözümleri
+    - name: Microsoft Purview içeriden risk çözümleri
       href: insider-risk-solution-overview.md
     - name: İletişim uyumluluğu
       items:
@@ -304,9 +304,9 @@
   items:
     - name: 'Verileri bilme, verileri koruma ve veri kaybını önleme'
       href: information-protection.md
-    - name: Bir MIP çözümü dağıtma
+    - name: Bir bilgi koruma çözümü dağıtma
       href: information-protection-solution.md
-    - name: Microsoft Bilgi Koruması için varsayılan etiketler ve ilkeler
+    - name: Verilerinizi korumak için varsayılan etiketler ve politikalar
       href: mip-easy-trials.md
     - name: Hassas bilgi türleri
       items:
@@ -396,7 +396,7 @@
       items:
         - name: Duyarlılık etiketleri hakkında bilgi edinin
           href: sensitivity-labels.md
-        - name: Office uygulamaları için MIP yerleşik etiketlemeyi seçme nedenleri
+        - name: Office uygulamaları için neden yerleşik etiketlemeyi seçmelisiniz?
           href: sensitivity-labels-aip.md
         - name: Hassasiyet etiketlerini kullanmaya başlama
           href: get-started-with-sensitivity-labels.md
@@ -428,7 +428,7 @@
           href: office-365-service-encryption.md
         - name: Müşteri Anahtarı
           items:
-            - name: Microsoft 365'deki Müşteri Anahtarı
+            - name: Microsoft Purview Müşteri Anahtarı ile hizmet şifreleme
               href: customer-key-overview.md
             - name: Microsoft 365 için Müşteri Anahtarı Kurulumu
               href: customer-key-set-up.md
@@ -441,27 +441,27 @@
         - name: E-posta şifreleme
           href: email-encryption.md
           items:
-            - name: Office 365 İleti Şifrelemesi (OME)
+            - name: 'İleti şifrelemesi '
               href: ome.md
-            - name: Yeni Office 365 İleti Şifrelemesi özelliklerini ayarlama
+            - name: Microsoft Purview İleti Şifreleme'yi ayarlama
               href: set-up-new-message-encryption-capabilities.md
-            - name: Office 365'deki e-posta iletilerini şifrelemek için posta akışı kurallarını tanımlama
+            - name: E-posta iletilerini şifrelemek için posta akışı kurallarını tanımlama
               href: define-mail-flow-rules-to-encrypt-email.md
             - name: Kuruluşunuzun markasını şifrelenmiş iletilerinize ekleme
               href: add-your-organization-brand-to-encrypted-messages.md
-            - name: Office 365 İleti Şifrelemesini kullanarak kuruluşunuz için hassas bilgi türü ilkesi oluşturma
+            - name: Microsoft Purview İleti Şifreleme kullanarak kuruluşunuz için hassas bilgi türü ilkesi oluşturma
               href: ome-sensitive-info-types.md
-            - name: Office 365 İleti Şifrelemesini yönetme
+            - name: İleti şifrelemeyi yönetme
               href: manage-office-365-message-encryption.md
-            - name: Office 365 Gelişmiş İleti Şifrelemesi
+            - name: Gelişmiş ileti şifreleme
               href: ome-advanced-message-encryption.md
-            - name: Office 365 Gelişmiş İleti Şifrelemesi ile şifrelenen e-posta için bir son geçerlilik tarihi belirleme
+            - name: Microsoft Purview Gelişmiş İleti Şifreleme tarafından şifrelenen e-posta için bir son geçerlilik tarihi belirleme
               href: ome-advanced-expiration.md
-            - name: Office 365 Gelişmiş İleti Şifrelemesi ile şifrelenen e-postayı iptal etme
+            - name: Microsoft Purview Gelişmiş İleti Şifreleme tarafından şifrelenen e-postayı iptal etme
               href: revoke-ome-encrypted-mail.md
-            - name: OME sürümlerini karşılaştırma
+            - name: İleti şifreleme sürümlerini karşılaştırma
               href: ome-version-comparison.md
-            - name: Office 365 İleti Şifrelemesi SSS
+            - name: İleti şifreleme SSS
               href: ome-faq.yml
             - name: 'Exchange Online, e-posta sırlarınızı nasıl güvence altına alır?'
               href: exchange-online-secures-email-secrets.md
@@ -501,9 +501,9 @@
               href: endpoint-dlp-learn-about.md
             - name: Microsoft Teams'teki varsayılan veri kaybı önleme ilkesi hakkında daha fazla bilgi edinme (önizleme)
               href: dlp-teams-default-policy.md
-            - name: Microsoft 365 veri kaybı önleme şirket içi tarayıcı hakkında daha fazla bilgi edinme
+            - name: Şirket içi tarayıcıda veri kaybını önleme hakkında bilgi edinme
               href: dlp-on-premises-scanner-learn.md
-            - name: Microsoft Uyumluluk Uzantısı hakkında daha fazla bilgi edinme
+            - name: Microsoft Purview Uzantısı hakkında bilgi edinme
               href: dlp-chrome-learn-about.md
             - name: Veri kaybı önleme Uyarılar panosu hakkında daha fazla bilgi edinme
               href: dlp-alerts-dashboard-learn.md
@@ -525,13 +525,13 @@
               href: create-a-dlp-policy-from-a-template.md
             - name: 'Bir DLP ilkesi oluşturma, test etme ve ayarlama'
               href: create-test-tune-dlp-policy.md
-            - name: Microsoft 365 veri kaybı önleme şirket içi tarayıcıyı kullanmaya başlama
+            - name: Şirket içi tarayıcıda veri kaybını önlemeyi kullanmaya başlama
               href: dlp-on-premises-scanner-get-started.md
             - name: Uç noktada veri kaybı önlemeyi kullanmaya başlama
               href: endpoint-dlp-getting-started.md
             - name: Information Protection için cihaz proxy ve internet bağlantısı ayarlarını yapılandırma
               href: device-onboarding-configure-proxy.md
-            - name: Microsoft Uyumluluk Uzantısını kullanmaya başlama
+            - name: Microsoft Purview Uzantısını kullanmaya başlama
               href: dlp-chrome-get-started.md
             - name: Veri kaybı önleme uyarı panosunu kullanmaya başlama
               href: dlp-alerts-dashboard-get-started.md
@@ -543,7 +543,7 @@
               href: dlp-microsoft-teams.md
             - name: Uç noktada veri kaybı önlemeyi kullanma
               href: endpoint-dlp-using.md
-            - name: Microsoft 365 veri kaybı önleme şirket içi tarayıcı kullanma
+            - name: Şirket içi tarayıcıda veri kaybını önlemeyi kullanma
               href: dlp-on-premises-scanner-use.md
             - name: DLP ilkelerinde bildirimleri ve ilke ipuçlarını kullanma
               href: use-notifications-and-policy-tips.md
@@ -569,10 +569,10 @@
               href: dlp-migrate-exo-policy-to-unified-dlp.md
             - name: Veri Kaybı Önleme ilkesi ipuçları referansı
               href: dlp-policy-tips-reference.md
-- name: Bilgi yönetişimi ve kayıtları yönetme
+- name: Veri yaşam döngüsünü ve kayıtlarını yönetme
   items:
     - name: Bilgilerinizi yönetme
-      href: manage-information-governance.md
+      href: manage-data-governance.md
     - name: Verileri saklamayı ve silmeyi anlama
       items:
         - name: Saklama ilkeleri ve saklama etiketleri hakkında daha fazla bilgi edinme
@@ -593,16 +593,16 @@
           href: retention-settings.md
         - name: Saklama ve silme sınırları
           href: retention-limits.md
-    - name: Bilgi Yönetişimi
+    - name: Veri yaşam döngüsü yönetimi
       items:
-        - name: Bilgi yönetişimi hakkında daha fazla bilgi edinme
-          href: information-governance.md
-        - name: Bilgi yönetişimini kullanmaya başlama
-          href: get-started-with-information-governance.md
+        - name: Veri yaşam döngüsü yönetimi hakkında bilgi edinme
+          href: data-lifecycle-management.md
+        - name: Veri yaşam döngüsü yönetimini kullanmaya başlama
+          href: get-started-with-data-lifecycle-management.md
         - name: Saklama ilkeleri oluşturma
           href: create-retention-policies.md
         - name: İstisnalar için saklama etiketleri kullanma
-          href: create-retention-labels-information-governance.md
+          href: create-retention-labels-data-lifecycle-management.md
         - name: Arşiv posta kutusu verileri
           items:
             - name: Arşiv posta kutuları hakkında daha fazla bilgi edinme
@@ -673,7 +673,7 @@
           href: disposition.md
 - name: eKeşif’i yönetme
   items:
-    - name: Microsoft 365 eKeşif çözümleri
+    - name: Microsoft Purview eKeşif çözümleri
       href: ediscovery.md
     - name: İçerik arama
       items:
@@ -742,9 +742,9 @@
               href: create-report-on-and-delete-multiple-content-searches.md
             - name: Bir aramayı kopyalama
               href: clone-a-content-search.md
-    - name: Temel eKeşif
+    - name: eKeşif (Standart)
       items:
-        - name: Temel eKeşif kullanmaya başlama
+        - name: eKeşif’i (Standart) kullanmaya başlayın
           href: get-started-core-ediscovery.md
         - name: eKeşif bekletmeleri oluşturma
           href: create-ediscovery-holds.md
@@ -754,7 +754,7 @@
           href: export-content-in-core-ediscovery.md
         - name: 'Bir vakayı kapatma, yeniden açma ve silme'
           href: close-reopen-delete-core-ediscovery-cases.md
-        - name: Temel eKeşif referansı
+        - name: eKeşif (Standart) başvurusu
           items:
             - name: eKeşif arama sınırları
               href: limits-for-content-search.md
@@ -800,19 +800,19 @@
               href: configure-edge-to-export-search-results.md
             - name: Denetim günlüğünde eKeşif etkinliklerini ara
               href: search-for-ediscovery-activities-in-the-audit-log.md
-    - name: Gelişmiş eKeşif
+    - name: eKeşif (Premium)
       items:
         - name: Genel bakış
           href: overview-ediscovery-20.md
-        - name: Gelişmiş eKeşif kurulumu yapma
+        - name: eKeşif'i (Premium) ayarlama
           href: get-started-with-advanced-ediscovery.md
-        - name: Gelişmiş eKeşif vakaları oluşturma
+        - name: eKeşif (Premium) servis talepleri oluşturma
           items:
             - name: Bir vaka oluşturma ve yönetme
               href: create-and-manage-advanced-ediscoveryv2-case.md
             - name: Yeni vaka biçimini kullanma
               href: advanced-ediscovery-new-case-format.md
-        - name: Teams içeriği için gelişmiş eKeşif iş akışı
+        - name: Teams içeriği için eKeşif (Premium) iş akışı
           href: teams-workflow-in-advanced-ediscovery.md
         - name: Yedieminleri ve yediemin olmayan veri kaynaklarını yönetme
           href: managing-custodians.md
@@ -933,9 +933,9 @@
               href: add-or-remove-members-from-a-case-in-advanced-ediscovery.md
             - name: Arama ve analiz ayarlarını yapılandırma
               href: configure-search-and-analytics-settings-in-advanced-ediscovery.md
-        - name: Gelişmiş eKeşif referansı
+        - name: eKeşif (Premium) başvurusu
           items:
-            - name: Gelişmiş eKeşif sınırları
+            - name: eKeşif (Premium) sınırları
               href: limits-ediscovery20.md
             - name: Desteklenen dosya türleri
               href: supported-filetypes-ediscovery20.md
@@ -985,11 +985,11 @@
       href: preserve-bcc-and-expanded-distribution-group-recipients-for-ediscovery.md
 - name: Denetim ve uyarı ilkelerini yönetme
   items:
-    - name: Microsoft 365 denetim çözümleri
+    - name: Microsoft Purview denetim çözümleri
       href: auditing-solutions-overview.md
-    - name: Temel Denetim
+    - name: Denetim (Standart)
       items:
-        - name: Temel Denetim kurulumu
+        - name: Denetim’i (Standart) Ayarlama
           href: set-up-basic-audit.md
         - name: Denetim günlüğünde arama yapma
           href: search-the-audit-log-in-security-and-compliance.md
@@ -1013,15 +1013,15 @@
               href: /office/office-365-management-api/office-365-management-activity-api-schema
             - name: Office 365 Yönetim Etkinliği API’si SSS ve sorun giderme
               href: /office/office-365-management-api/troubleshooting-the-office-365-management-activity-api
-    - name: Gelişmiş Denetim
+    - name: Denetim (Premium)
       items:
-        - name: Gelişmiş Denetime genel bakış
+        - name: Denetim’e (Premium) Genel Bakış
           href: advanced-audit.md
-        - name: Gelişmiş Denetim kurulumu
+        - name: Denetim’i (Premium) Ayarlama
           href: set-up-advanced-audit.md
         - name: Denetim günlüğü saklama ilkelerini yönetme
           href: audit-log-retention-policies.md
-        - name: Risk altındaki hesapları araştırmak için Gelişmiş Denetim kullanma
+        - name: Risk altındaki hesapları araştırmak için Denetim’i (Premium) kullanın
           href: mailitemsaccessed-forensics-investigations.md
     - name: Posta kutusu denetimi
       href: enable-mailbox-auditing.md

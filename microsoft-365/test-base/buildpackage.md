@@ -14,57 +14,66 @@ ms.collection: TestBase-M365
 ms.custom: ''
 ms.reviewer: Tinacyt
 f1.keywords: NOCSH
-ms.openlocfilehash: 277c185b633263a12687eec5a8eb9a1a34e1dbed
-ms.sourcegitcommit: 23a90ed17cddf3b0db8d4084c8424f0fabd7b1de
+ms.openlocfilehash: db09d1b182965c0a21945b025601c21d5100212b
+ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2022
-ms.locfileid: "63015453"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64952918"
 ---
 # <a name="build-a-package"></a>Paket oluşturma
-Paket, test .zip betiklerinizi içeren, önkoşul olan ikili dosya ve test betikleri içeren bir dosyadır. Bu Hızlı Başlangıç, ilk paketinizi oluşturmanız için size yol sunar ve bu pakette, uygulamanın Hazır gelen kutusu testini gerçekleştirebilirsiniz. 
-  
-*    *Hazır **(OOB)** testi, uygulama yüklemesi, başlatması, kapatması ve kaldırması yapar. Yüklemeden sonra, tek bir kaldırma çalıştırılamadan önce başlatma-kapatma yordamı 30 kez tekrarlanır. OOB testi, tüm standart derlemeleri karşılaştıracak şekilde paketiniz üzerinde standart Windows sağlar.*  
-    
-İsteğe bağlı olarak, başvuru yapmak [ve başlangıç yapmak](https://aka.ms/testbase-sample-package) için örnek paketimizi indirebilirsiniz. 
 
-## <a name="create-a-folder-structure"></a>Klasör yapısı oluşturma 
+Paket, Test Temeli'ni kullanmak için önkoşul olan uygulama ikili ve test betiklerinizi içeren bir .zip dosyasıdır. Bu Hızlı Başlangıç, uygulamanızda ilk paketinizi oluşturmanız için size yol gösterir. Bu paketle uygulamanızda ilk çalıştırma testi gerçekleştirebilirsiniz.
 
-Yerel bilgisayarınızda, aşağıdaki gibi bir klasör yapısı oluşturun:<br> 
+- *Kullanıma **Açık (OOB)** testi, uygulamanızın yükleme, başlatma, kapatma ve kaldırma işlemlerini gerçekleştirir. Yüklemeden sonra başlatma-kapatma yordamı, tek bir kaldırma çalıştırılmadan önce 30 kez yinelenir. OOB testi, Windows derlemeleri karşılaştırmak için paketinizde standart telemetri sağlar.*
+
+İsteğe bağlı olarak, başvurmak ve başlamak için [örnek paketimizi](https://aka.ms/testbase-sample-package) indirebilirsiniz.
+
+## <a name="create-a-folder-structure"></a>Klasör yapısı oluşturma
+
+Yerel bilgisayarınızda aşağıdaki gibi bir klasör yapısı oluşturun:
+
 ![Paket oluşturmak için kullanılan klasör yapısı](Media/buildpackage1.png)
 
-Şu klasörler kullanılır:
-* **Uygulama\ikili**: Uygulama ve bağımlılık ikililerini kaydedin.<br> 
-* **Uygulama\betikler**: betikleri kaydedarak uygulamayı yükleyin, açın, kapatın ve kaldırın.<br> 
-* **Uygulama\günlükler**: Betikler bu klasöre günlükleri çıkış olarak yazmalı, test tamam ondan sonra günlükleri indirebilir ve çözümleyebilirsiniz.<br> 
+Bu klasörler kullanılır:
+
+- **Uygulama\bin**: Uygulamayı ve bağımlılık ikili dosyalarını kaydedin.
+- **Uygulama\betikler**: Uygulamanızı yüklemek, başlatmak, kapatmak ve kaldırmak için betikleri kaydedin.
+- **Uygulama\günlükler**: Betikler günlükleri bu klasöre çıkarmalıdır, ardından test tamamlandıktan sonra günlükleri indirip analiz edebilirsiniz.
 
 ## <a name="copy-binary-files"></a>İkili dosyaları kopyalama
-Uygulama yükleme dosyalarınızı **App\bin klasörüne kopyalayın**. Uygulamanıza bağımlılıklar varsa, önce bunların yüklenmiş olması gerekir. Ayrıca, bağımlılık yükleme dosyalarını **App\bin klasörüne kopyalayın**.<br> 
-![Klasördeki uygulama dosyalarının konumu](Media/buildpackage2.png)
+
+Uygulama yükleme dosyalarınızı **App\bin'e** kopyalayın. Uygulamanızın bağımlılıkları varsa, önce bunların yüklenmesi gerekir. Ayrıca, bağımlılık yükleme dosyalarını **App\bin'e** kopyalayın.
+
+![Klasördeki uygulama dosyaları konumu](Media/buildpackage2.png)
 
 ## <a name="add-powershell-scripts"></a>PowerShell betikleri ekleme
-OOB sınaması yapmak için, PowerShell betiklerini eklemeniz ve uygulamanızı yüklemeniz, başlatmanız, kapatmanız ve kaldırmanız gerekir.
-> [!NOTE]  
-> *OOB testinde betikleri yükleme, başlatma ve kapatma betikleri gerekirken, betiği kaldırma isteğe bağlıdır*.
-    
-Betik aşağıdaki gibi klasöre eklenmiştir:  
+
+OOB testi gerçekleştirmek için uygulamanızı yüklemek, başlatmak, kapatmak ve kaldırmak için PowerShell betikleri eklemeniz gerekir.
+
+> [!NOTE]
+> *OOB testinde, yükleme, başlatma ve kapatma betikleri gerekirken kaldırma betiği isteğe bağlıdır*.
+
+Betik klasöre aşağıdaki gibi eklenmelidir:
+
 ![PowerShell betik dosyalarının klasördeki konumu](Media/buildpackage3.png)
 
-Betikler çoğunlukla aşağıdaki davranışları içerir:<br> 
--   **Uygulamayı yüklemek/başlatmak/kapatmak/kaldırmak için komutları çalıştırın**. Örneğin, uygulamanız bir MSI dosyası ise, [yüklemek için msiexec](/windows-server/administration/windows-commands/msiexec) çalıştırın. <br> 
--   **Yükleme/başlatma/kapatma/kaldırma işlemi sonucundan emin olmak**, beklenen sonuç sıfır çıkış kodu iade etmektir. Test Base, sıfırdan başka bir çıkış kodu döndüren bir betiği hata olarak işaretler.<br> 
--   **Yeterli günlük kaydedin**, gelecekte kullanmak için uygun günlükleri kaydedin.<br> 
+Betik genellikle aşağıdaki davranışları içerir:
 
-Lütfen aşağıdaki örneklere bakın. Bunları dosyalarınıza kopyalayıp buna uygun değişiklikler yapabilirsiniz. <br>
+- **Uygulamayı yüklemek/başlatmak/kapatmak/kaldırmak için komutlarını çalıştırın**. Örneğin, uygulamanız bir MSI dosyasıysa, yüklemek için [msiexec](/windows-server/administration/windows-commands/msiexec) komutunu çalıştırın.
+- **Yükleme/başlatma/kapatma/kaldırma işleminin sonucunu denetleyin**, sonuç bekleniyorsa sıfır çıkış kodu döndürun. Test Temeli, sıfır olmayan bir çıkış kodu döndürdüğünde betik çalıştırmasını hata olarak işaretler.
+- **Yeterli günlükleri kaydedin**, gelecekte kullanmak üzere uygun günlükleri kaydedin.
 
-**Betik yükleme örneği (App\scripts\install\job.ps1)**
+Lütfen aşağıdaki örneklere bakın. Bunları dosyalarınıza kopyalayıp buna göre değişiklik yapabilirsiniz.
+
+**Yükleme betiği örneği (App\scripts\install\job.ps1)**:
+
 ```powershell
         push-location $PSScriptRoot
         $exit_code = 0
         $script_name = $myinvocation.mycommand.name
         $log_dir = "$PSScriptRoot\..\..\logs"
         $log_file = "$log_dir\$script_name.log"
-
 
         if(-not (test-path -path $log_dir )) {
             new-item -itemtype directory -path $log_dir
@@ -102,7 +111,8 @@ Lütfen aşağıdaki örneklere bakın. Bunları dosyalarınıza kopyalayıp bun
         exit $exit_code
 ```
 
-**Komut dosyası başlatma örneği (App\scripts\launch\job.ps1)**
+**Başlatma betiği örneği (App\scripts\launch\job.ps1)**:
+
 ```powershell
         push-location $PSScriptRoot
         $exit_code = 0
@@ -128,59 +138,82 @@ Lütfen aşağıdaki örneklere bakın. Bunları dosyalarınıza kopyalayıp bun
         Start-Process -FilePath $exePath
 
          if (Get-Process -Name $PROCESS_NAME) {
-                log("Launch successfully $PROCESS_NAME...") 
+                log("Launch successfully $PROCESS_NAME...")
                 $exit_code = 0
          }
          else {
-            log("Not launched $PROCESS_NAME...") 
+            log("Not launched $PROCESS_NAME...")
             $exit_code = 1
          }
 
         log("Launch script finished as $exit_code")
         pop-location
-        exit $exit_code 
+        exit $exit_code
 ```
 
 ## <a name="compress-to-zip-file"></a>Zip dosyasına sıkıştırma
-Betikler ve ikili dosyalar hazır olduktan sonra, klasörü bir zip dosyası olarak sıkıştırmaya devam edersiniz. Uygulama klasörüne sağ tıklayın, ZIP dosyasına **sıkıştır'ı seçin**.<br>
+
+Betikler ve ikili dosyalar hazırlandıktan sonra klasörü zip dosyasına sıkıştırmaya devam edin. Uygulama klasörüne sağ tıklayın, **ZIP dosyasına sıkıştır'ı** seçin.
+
 ![Zip dosyasına sıkıştırma](Media/buildpackage4.png)
 
-
 ## <a name="verify-your-package-locally-optional"></a>Paketinizi yerel olarak doğrulama (isteğe bağlı)
-Zip paketini hazırdikten sonra Test Temel hesabınıza yükleyebilirsiniz. <br>
-Bununla birlikte, betiklerin karşıya yüklemeden önce düzgün çalışması için testi yerel olarak çalıştırmak en iyisidir. Yerel bir test sorunları hızla tanımlayabilir ve karşıya yükleme işleminizi hızlandırabilirsiniz. Yerel olarak doğrulamak için aşağıdaki adımları izleyin:<br>
-1.  Sanal makine hazırlama (Sanal Makine)<br>
-    Şu anda her test için temiz bir ortam gerektiğinden, bu yerel test Windows sanal bir makine öneririz. Azure'da Windows VM oluşturmak kolaydır (Hızlı Başlangıç [: Windows](/azure/virtual-machines/windows/quick-create-portal) sanal makine), test için uygun bir Windows sürümü (resim) (örneğin, *Windows 10 Pro, sürüm 21H2*) seçin.<br>
 
-2.  Paketinizi sanal makineye kopyalama<br>
-    Paket dosyanızı SANAL MAKINE'ye kopyalamanın birçok yolu vardır. Azure VM kullanıyorsanız şunları seçebilirsiniz:
-     -  Dosyayı doğrudan Uzak Masaüstü bağlantınıza kopyalayın. <br>
-     -  Azure dosya paylaşımını kullanma ([Hızlı Başlangıç: Azure dosyası oluşturma ve yönetme](/azure/storage/files/storage-files-quick-create-use-windows))
-    
-    Bu test için belirli bir klasör oluşturabilir ve paket dosyasını bu klasörün altında kopyaabilirsiniz. Örneğin, *C:\TestBase*.<br>
-3.  Paketi test etmek<br>
-    Test Windows PowerShell açın, paketi içeren dizine (örneğin, CD C:\TestBase) geçiş yapın ve testlerinizi paket üzerinde çalıştırmaya başlatın:<br>
-    a.  Paket dosyasını ayıkla.
-     -  *Expand-Archive -LiteralPath C:\TestBase\App.zip -DestinationPath C:\TestBase*<br>
-    
-    b.  Yükleme betiği çalıştırın.  
-     -  *C:\TestBase\App\scripts\install\job.ps1*<br>
-    
-    c.  Gerekirse VM'yi yeniden başlatın.<br>
-    
-    d.  Başlatma betiği çalıştırma.
-     -  *C:\TestBase\App\scripts\install\job.ps1*<br>
-    
-    e.  Betiği kapat'a çalıştır.
-     -  *C:\TestBase\App\scripts\close\job.ps1*<br>
-    
-    f.  Kaldırma betiği çalıştırın (varsa).
-     -  *C:\TestBase\App\scripts\uninstall\job.ps1*<br>
-    
-    Her adımdan sonra, betiğinizin içinde sorun olup olduğunu kontrol edin. Tüm betikler beklendiği gibi çalıştırıldısa, paketiniz Test Temel hesabınıza yüklenmeye hazır olur.
+Zip paketini derledikten sonra Test Temeli hesabınıza yükleyebilirsiniz.
 
+Ancak, karşıya yüklemeden önce betiklerin düzgün çalıştığından emin olmak için testi yerel olarak çalıştırmak en iyi yöntemdir. Yerel bir test sorunları hızla belirleyebilir ve karşıya yükleme işleminizi hızlandırabilir. Yerel olarak doğrulamak için aşağıdaki adımları izleyin:
+
+1. VM hazırlama (Sanal Makine)
+
+   Her test için şu anda temiz bir Windows ortamı gerektiğinden, bu yerel test için bir sanal makine kullanmanızı öneririz. Azure'da Windows VM oluşturmak kolaydır ([Hızlı başlangıç: Windows sanal makine](/azure/virtual-machines/windows/quick-create-portal)), örneğin Windows 10 Pro, sürüm *21H2* gibi testiniz için uygun bir Windows sürümü (görüntü) seçebilirsiniz.<br>
+
+2. Paketinizi VM'ye kopyalama
+
+   Paket dosyanızı VM'ye kopyalamanın birçok yolu vardır. Azure VM kullanıyorsanız şunları seçebilirsiniz:
+
+     - Dosyayı doğrudan Uzak Masaüstü bağlantınıza kopyalayın.
+     - Azure dosya paylaşımını kullanma ([Hızlı Başlangıç: Azure dosyasını oluşturma ve yönetme](/azure/storage/files/storage-files-quick-create-use-windows))
+
+   Bu test için belirli bir klasör oluşturabilir ve paket dosyasını bu klasörün altına kopyalayabilirsiniz. Örneğin, *C:\TestBase*.
+
+3. Paketi test edin
+
+   Windows PowerShell açın, paketi içeren dizine (örneğin, `cd C:\TestBase`) geçin ve testlerinizi paket üzerinde çalıştırmaya başlayın:
+
+   1. Paket dosyasını ayıklayın.
+
+      ```powershell
+      Expand-Archive -LiteralPath C:\TestBase\App.zip -DestinationPath C:\TestBase
+      ```
+
+   2. Yükleme betiğini çalıştırın.
+
+      ```powershell
+      C:\TestBase\App\scripts\install\job.ps1
+      ```
+
+   3. Gerekirse VM'yi yeniden başlatın.
+
+   4. Başlatma betiğini çalıştırın.
+
+      ```powershell
+      C:\TestBase\App\scripts\install\job.ps1
+      ```
+
+   5. Kapatma betiğini çalıştırın.
+
+      ```powershell
+      C:\TestBase\App\scripts\close\job.ps1
+      ```
+
+   6. Kaldırma betiğini çalıştırın (varsa).
+
+      ```powershell
+      C:\TestBase\App\scripts\uninstall\job.ps1
+      ```
+
+Her adımdan sonra betiğinizde herhangi bir sorun olup olmadığını kontrol edebilirsiniz. Tüm betikler beklendiği gibi çalıştırılırsa paketiniz Test Temeli hesabınıza yüklenmeye hazırdır.
 
 ## <a name="next-steps"></a>Sonraki adımlar
-[Upload olarak](uploadApplication.md)
- 
- 
+
+[Paket Upload](uploadApplication.md)

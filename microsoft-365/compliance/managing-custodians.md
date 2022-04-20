@@ -18,14 +18,16 @@ ms.assetid: ''
 ms.custom:
 - seo-marvel-apr2020
 description: Yasal bir davaya ilişkin verileri yönetmek için eBulma'da (Premium) koruyucu yönetim aracını kullanmayı öğrenin.
-ms.openlocfilehash: 75655b48cf0061879edf5ea559712daa29ce4893
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 0c529b339c79789072cf160916db8c21acff7d86
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64948451"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64992204"
 ---
 # <a name="work-with-custodians-and-non-custodial-data-sources-in-ediscovery-premium"></a>eKeşif'te (Premium) koruyucular ve gözetimsiz veri kaynaklarıyla çalışma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bir kuruluş yasal bir araştırmaya yanıt verdiği zaman, ilgili olabilecek içeriği tanımlama, koruma ve toplama iş akışı, kuruluştaki ilgili verilerin koruyucuları olan kişileri temel alır. eBulma'da, bu *kişilere veri koruyucusu* (veya yalnızca *koruyucu*) denir ve "bir belge veya elektronik dosyanın yönetim denetimine sahip kişiler" olarak tanımlanır. Örneğin, bir e-posta iletisinin koruyucusunun ilgili iletiyi içeren posta kutusunun sahibi olması gerekir.
 

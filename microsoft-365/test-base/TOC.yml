@@ -1,42 +1,50 @@
-- name: Test Temel belgeleri
+- name: Test Base belgeleri
   href: index.yml
 - name: Genel bakış
   items:
-    - name: Test Tabanı nedir?
+    - name: Test Base nedir?
       href: overview.md
-- name: Hızlı Başlangıç
+- name: Hızlı Başlangıçlar
   items:
-    - name: Test Temel Hesabı Oluştur
+    - name: Test Base Hesabı Oluşturun
       href: createAccount.md
-    - name: Paket Oluşturma
+    - name: Uygulamanızı Test Base üzerinde test edin
+      items:
+        - name: Genel bakış
+          href: testoverview.md
+        - name: İkili Dosyalar paketini Test Base üzerinde test edin
+          href: testapplication.md
+        - name: Intune uygulamanızı Test Base üzerinde test edin
+          href: testintuneapplication.md
+        - name: Test Base paketinizi (Zip) yükleyin
+          href: uploadApplication.md
+    - name: Paket Oluşturun
       href: buildpackage.md
-    - name: Paketi Karşıya Yükleme
-      href: uploadApplication.md
-    - name: Upload Ikili & Bağımlılıkları
+    - name: İkili Dosyaları ve Bağımlılıkları yükleyin
       href: binaries.md
-    - name: Test Görevlerini Ayarlama
+    - name: Test Görevlerini Ayarlayın
       href: testtask.md
-    - name: Sınama Seçeneklerini Ayarlama
+    - name: Test Seçeneklerini Ayarlayın
       href: testoptions.md
-    - name: Gözden Geçir
+    - name: Gözden geçirin
       href: review.md
     - name: Paket kılavuzu
       href: contentguideline.md
     - name: Uygulama/Test kuralları
       href: rules.md
-- name: Nasıl bilgili kılavuzlar
+- name: Nasıl Yapılır Kılavuzları
   items:
-    - name: Sunucu uygulama testi
+    - name: Sunucu uygulaması testi
       href: server.md
     - name: İşlevsel test
       href: functional.md
-    - name: Özellik güncelleştirmesi doğrulaması
+    - name: Özellik güncelleştirme doğrulaması
       href: feature.md
     - name: Bellek Regresyon Çözümlemesi
       href: memory.md
     - name: CPU Regresyon Çözümlemesi
       href: cpu.md
-    - name: SDK & API
+    - name: SDK ve API
       href: sdkapi.md
 - name: Başvuru
   items:

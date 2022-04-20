@@ -17,14 +17,16 @@ search.appverid:
 ms.assetid: ''
 description: Microsoft Teams ve Yammer gruplarında sohbet konuşmalarını yeniden yapılandırmak, gözden geçirmek ve dışarı aktarmak için Microsoft Purview eBulma (Premium) (konuşma yazışması olarak adlandırılır) konuşma yeniden oluşturma özelliği hakkında bilgi edinin.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 9bfd87de95449ab30b8a33c9f7f96db458e809d1
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: c3cd05ab340775a7a923b9e4a0f66c3abaf559cb
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64950279"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64993282"
 ---
 # <a name="conversation-threading-in-ediscovery-premium"></a>eBulma'da konuşma yazışması oluşturma (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Anlık ileti, soru sormanın, fikir paylaşmanın veya büyük kitleler arasında hızlı bir şekilde iletişim kurmanın kullanışlı bir yoludur. Microsoft Teams ve Yammer grupları gibi anlık ileti platformları kurumsal işbirliğinin temeli haline geldikçe kuruluşların eBulma iş akışlarının bu yeni iletişim ve işbirliği biçimlerini nasıl ele alacağını değerlendirmesi gerekir.
 

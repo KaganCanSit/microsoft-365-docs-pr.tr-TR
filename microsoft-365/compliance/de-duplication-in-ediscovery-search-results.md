@@ -1,5 +1,5 @@
 ---
-title: eBulma arama sonuçlarında de-duplication
+title: eBulma arama sonuçlarında yinelenenleri kaldırma
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -19,71 +19,73 @@ search.appverid:
 ms.assetid: 5af334b6-a15d-4f73-97f8-1423457d9f6b
 ms.custom:
 - seo-marvel-apr2020
-description: E-posta iletisine yalnızca bir kopyasının dışarı aktarılmış şekilde yinelenen eBulma arama sonuçlarının nasıl ortadan kaldırılacaklarını öğrenin.
-ms.openlocfilehash: d09a0e09166928627be01d623963146cfd416bd2
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+description: E-posta iletisinin yalnızca bir kopyasının dışarı aktarılabilmesi için yinelenen eBulma arama sonuçlarını nasıl ortadan kaldıracağınızı öğrenin.
+ms.openlocfilehash: 1632f0179479d7a2e283f0ebcf3fdab06751cdc7
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63032486"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64992248"
 ---
-# <a name="de-duplication-in-ediscovery-search-results"></a>eBulma arama sonuçlarında de-duplication
+# <a name="de-duplication-in-ediscovery-search-results"></a>eBulma arama sonuçlarında yinelenenleri kaldırma
 
-Bu makalede, eBulma arama sonuçlarının yeniden çoğaltılması nasıl çalışır ve yineleme de-yineleme algoritmasının sınırlamaları açıklanmıştır.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Bu makalede, eBulma arama sonuçlarının yinelenenleri kaldırma işleminin nasıl çalıştığı ve yinelenenleri kaldırma algoritmasının sınırlamaları açıklanmaktadır.
   
-eBulma aramalarının sonuçlarını dışarı aktarmaya ilişkin eBulma araçları kullanırken, dışarı aktarılmış sonuçları yineleme seçeneğiniz vardır. Bu ne anlama geliyor? Yinelemeyi de etkinleştirdiyseniz (yinelemeyi de-yineleme varsayılan olarak etkin değildir), aynı iletinin birden çok örneği arama yapılan posta kutularında bulunsa bile, e-posta iletisi yalnızca bir kopya dışarı aktarıldı. Yinelemeyi geri almak, arama sonuçları dışarı aktarıldıktan sonra gözden geçirmenız ve çözümlemek zorunda olduğunuz öğe sayısını azaltarak zaman kazanmak için size yardımcı olur. Ancak yinelemenin nasıl çalıştığını anlamak ve dışarı aktarma işlemi sırasında benzersiz bir öğenin yinelenen öğe olarak işaretlenirken algoritmada bazı sınırlamalar olduğunu unutmayın.
+eBulma aramasının sonuçlarını dışarı aktarmak için eBulma araçlarını kullanırken, dışarı aktarılan sonuçların yinelenenlerini kaldırma seçeneğiniz vardır. Bu ne anlama geliyor? Yinelenenleri kaldırmayı etkinleştirdiğinizde (varsayılan olarak, yinelenenleri kaldırma etkinleştirilmez), aranan posta kutularında aynı iletinin birden çok örneği bulunsa bile e-posta iletisinin yalnızca bir kopyası dışarı aktarılır. Yinelenenleri kaldırma, arama sonuçları dışarı aktarıldıktan sonra gözden geçirmeniz ve çözümlemeniz gereken öğe sayısını azaltarak zaman kazanmanıza yardımcı olur. Ancak yinelenenleri kaldırma işleminin nasıl çalıştığını anlamak ve dışarı aktarma işlemi sırasında benzersiz bir öğenin yineleme olarak işaretlenmesine neden olabilecek algoritma sınırlamaları olduğunu bilmeniz önemlidir.
   
 ## <a name="how-duplicate-messages-are-identified"></a>Yinelenen iletiler nasıl tanımlanır?
 
-eBulma araçları, bir iletinin yinelenen bir ileti olup olmadığını belirlemek için aşağıdaki e-posta özelliklerinin bir bileşimini kullanır:
+eBulma araçları, bir iletinin yinelenen olup olmadığını belirlemek için aşağıdaki e-posta özelliklerinin bir bileşimini kullanır:
   
-- **InternetMessageId** - Bu özellik, belirli bir iletinin belirli bir sürümüne başvuran genel benzersiz bir tanımlayıcı olan e-posta iletisi internet iletisi tanımlayıcısını belirtir. Bu kimlik, iletiyi gönderen gönderenin e-posta istemci programı veya ana bilgisayar e-posta sistemi tarafından oluşturulur. Bir kişi birden çok alıcıya ileti gönderirse, İnternet ileti kimliği iletinin her örneğinde aynı olur. Özgün iletide daha sonra yapılan düzeltmeler farklı bir ileti tanımlayıcısı alır. 
+- **InternetMessageId** - Bu özellik, belirli bir iletinin belirli bir sürümüne başvuran genel olarak benzersiz bir tanımlayıcı olan e-posta iletisinin İnternet ileti tanımlayıcısını belirtir. Bu kimlik, gönderenin e-posta istemci programı veya iletiyi gönderen ana bilgisayar e-posta sistemi tarafından oluşturulur. Bir kişi birden fazla alıcıya ileti gönderirse, İnternet ileti kimliği iletinin her örneği için aynı olur. Özgün iletide yapılan sonraki düzeltmeler farklı bir ileti tanımlayıcısı alır. 
 
-- **ConversationTopic** - Bu özellik, bir iletinin konuşma dizisinde konuyu belirtir. **ConversationTopic özelliğinin** değeri, konuşmanın bir bütün olarak konusunu açıklayan dizedir. Konuşma bir ilk iletiden ve ilk ileti yanıtta gönderilen tüm iletilerden oluşur. KonuşmaTopic özelliği için aynı konuşma içindeki **iletilerin değeri** aynıdır. Bu özelliğin değeri normalde konuşmayı kabul eden ilk iletiden Konu satırıdır. 
+- **ConversationTopic** - Bu özellik, iletinin konuşma yazışmasının konusunu belirtir. **ConversationTopic** özelliğinin değeri, konuşmanın genel konusunu açıklayan dizedir. Konuşma, ilk iletiden ve ilk iletiye yanıt olarak gönderilen tüm iletilerden oluşur. Aynı konuşmadaki iletiler **ConversationTopic** özelliği için aynı değere sahiptir. Bu özelliğin değeri genellikle konuşmayı oluşturan ilk iletideki Konu satırıdır. 
 
-- **BodyTagInfo** - Bu, bir depolama Exchange özelliktir. Bu özelliğin değeri, iletinin gövdesinde çeşitli öznitelikler denetlenerek hesaplanır. Bu özellik, iletilerin gövdesi arasındaki farkları tanımlamak için kullanılır. 
+- **BodyTagInfo** - Bu bir iç Exchange deposu özelliğidir. Bu özelliğin değeri, iletinin gövdesindeki çeşitli öznitelikler denetlenerek hesaplanır. Bu özellik, iletilerin gövdesindeki farkları tanımlamak için kullanılır. 
 
-eBulma dışarı aktarma işlemi sırasında, bu üç özellik arama ölçütleriyle eşleşen her ileti için karşılaştırıldı. Bu özellikler iki (veya daha fazla) iletide aynı olursa, bu iletilerin yineli olduğu belirlenir ve de-duplication etkinleştirildiğinde iletinin yalnızca bir kopyasının dışarı aktarılmasıyla ilgili sonuç elde edilen sonuçtır. Dışarı aktarıldı iletisi, "kaynak öğe" olarak bilinir. Yinelenen iletiler hakkında bilgiler, dışarı **Results.csv** ve **Manifest.xml** raporlarında yer almaktadır. Yeni **Results.csv** , Öğeye Çoğalt sütununda bir değer bulunarak **yinelenen ileti tanımlanır** . Bu sütundaki değer, dışarı aktarıldı iletinin **Öğe** Kimliği sütunundaki değerle eşler. 
+eBulma dışarı aktarma işlemi sırasında, arama ölçütleriyle eşleşen her ileti için bu üç özellik karşılaştırılır. bu özellikler iki (veya daha fazla) ileti için aynıysa, bu iletilerin yinelenenleri olduğu belirlenir ve sonuçta yinelenenleri kaldırma etkinleştirildiğinde iletinin yalnızca bir kopyası dışarı aktarılır. Dışarı aktarılan ileti "kaynak öğe" olarak bilinir. Yinelenen iletiler hakkındaki bilgiler **,** dışarı aktarılan arama sonuçlarına dahil edilen **Results.csvveManifest.xml** raporlarına eklenir. **Results.csv** dosyasında, **Öğeye Çoğalt** sütununda bir değer bulunarak yinelenen bir ileti tanımlanır. Bu sütundaki değer, dışarı aktarılan iletinin **Öğe Kimliği** sütunundaki değerle eşleşir. 
   
-Aşağıdaki grafikte yinelenen iletilerin, arama **sonuçlarıyla dışarıResults.csv** veManifest.xmlraporlarda **** nasıl görüntüleniyor olduğu gösterilir. Bu raporlar, daha önce açıklanan ve yinelemeyi de-yineleme algoritmasında kullanılan e-posta özelliklerini içermez. Bunun yerine raporlar, **raporlarda**, depolama tarafından öğelere atanan Öğe Exchange vardır. 
+Aşağıdaki grafiklerde, arama sonuçlarıyla birlikte dışarı aktarılan **Results.csv** ve **Manifest.xml** raporlarında yinelenen iletilerin nasıl görüntülendiği gösterilir. Bu raporlar, daha önce açıklanan ve yinelenenleri kaldırma algoritmasında kullanılan e-posta özelliklerini içermez. Bunun yerine, raporlar Exchange deposu tarafından öğelere atanan **Öğe Kimliği** özelliğini içerir. 
   
- ### <a name="resultscsv-report-viewed-in-excel"></a>Results.csv raporu (Excel)
+ ### <a name="resultscsv-report-viewed-in-excel"></a>Results.csv raporu (Excel görüntülenir)
   
-![Rapordaki yinelenen öğeler hakkında bilgileri Results.csv görüntüleme.](../media/e3d64004-3b91-4cba-b6f3-934b46cbdcdb.png)
+![Results.csv raporundaki yinelenen öğeler hakkındaki bilgileri görüntüleme.](../media/e3d64004-3b91-4cba-b6f3-934b46cbdcdb.png)
   
- ### <a name="manifestxml-report-viewed-in-excel"></a>Manifest.xml raporu (Excel)
+ ### <a name="manifestxml-report-viewed-in-excel"></a>Manifest.xml raporu (Excel görüntülenir)
   
-![Rapordaki yinelenen öğeler hakkında bilgileri Manifest.xml görüntüleme.](../media/69aa4786-9883-46ff-bcae-b35e0daf4a6d.png)
+![Manifest.xml raporundaki yinelenen öğeler hakkındaki bilgileri görüntüleme.](../media/69aa4786-9883-46ff-bcae-b35e0daf4a6d.png)
   
-Ayrıca, yinelenen iletilerin diğer özellikleri de dışarı aktarma raporlarına dahil edilir. Bu, yinelenen iletinin bulunduğu posta kutusunu, iletinin bir dağıtım grubuna gönderip gönderilmedi ve iletinin Başka bir kullanıcıya bilgi mi yoksa Gizli mi olduğunu da içerir.
+Ayrıca, yinelenen iletilerdeki diğer özellikler dışarı aktarma raporlarına eklenir. Bu, yinelenen iletinin bulunduğu posta kutusunu, iletinin bir dağıtım grubuna gönderilip gönderilmediğini ve iletinin Bilgi veya Gizli olup olmadığını başka bir kullanıcıya içerir.
   
-## <a name="limitations-of-the-de-duplication-algorithm"></a>Yineleme de-yineleme algoritmasının sınırlamaları
+## <a name="limitations-of-the-de-duplication-algorithm"></a>Yinelenenleri kaldırma algoritmasının sınırlamaları
 
-Yineleme de-yineleme algoritmasının, benzersiz öğelerin yinelenen öğeler olarak işaretlenirken işaretlenirken neden olabileceği bilinen bazı sınırlamalar vardır. İsteğe bağlı yineleme özelliğinin kullanılamayup kullanılamayup kullanılamaya karar ver için, bu sınırlamaları anlamanız önemlidir.
+Yinelenenleri kaldırma algoritmasının, benzersiz öğelerin yinelenen öğeler olarak işaretlenmesine neden olabilecek bazı bilinen sınırlamaları vardır. İsteğe bağlı yinelenenleri kaldırma özelliğini kullanıp kullanmamaya karar verebilmeniz için bu sınırlamaları anlamanız önemlidir.
   
-Yinelemeyi geri gönderme özelliğinin bir iletiyi yinelenen ileti olarak yanlışlıkla belirlemesi ve dışarı aktarmama (ancak yine de dışarı aktarma raporlarında yinelenen ileti olarak tanımlamaya devam) neden olduğu bir durum vardır. Bunlar kullanıcının düzende yer alan ancak göndermesi olmayan iletilerdir. Örneğin, bir kullanıcının bu örnekte bir iletiyi Outlook, iletinin içeriğini kopyalayıp yeni bir iletiye yapıştırıyor olabilir. Sonra kullanıcı bir eki kaldırarak veya ekleyerek ya da konu satırı veya gövdesinin kendisini değiştirerek kopyalardan birini değiştirir. Bu iki ileti eBulma aramasında yapılan sorguyla eş kopyalandı ise, arama sonuçları dışarı aktarıldında de-duplication etkinleştirildiğinde iletilerden yalnızca biri dışarı aktarıldı. Dolayısıyla, özgün ileti veya kopyalanan ileti değiştirilmiş olsa bile, düzeltilmiş iletilerden hiçbiri gönderilmemiştir ve dolayısıyla **InternetMessageId**, **ConversationTopic** ve **BodyTagInfo** özelliklerinin değerleri güncelleştirilmedi. Ancak daha önce de belirtildiği gibi, her iki ileti de dışarı aktarma raporlarında listelenir 
+Yinelenenleri kaldırma özelliğinin bir iletiyi yanlışlıkla yineleme olarak tanımlayıp dışarı aktarmaması (ancak yine de dışarı aktarma raporlarında yineleme olarak nitelemesi) bir durum vardır. Bunlar, kullanıcının düzenlediği ancak göndermediği iletilerdir. Örneğin, bir kullanıcının Outlook'da bir iletiyi seçtiğini, iletinin içeriğini kopyalayıp yeni bir iletiye yapıştırır olduğunu varsayalım. Ardından kullanıcı, bir eki kaldırarak veya ekleyerek ya da konu satırını veya gövdeyi değiştirerek kopyalardan birini değiştirir. Bu iki ileti bir eBulma aramasının sorgusuyla eşleşiyorsa, arama sonuçları dışarı aktarıldığında yinelenenleri kaldırma etkinleştirildiğinde iletilerden yalnızca biri dışarı aktarılır. Bu nedenle, özgün ileti veya kopyalanan ileti değiştirilmiş olsa da, düzeltilen iletilerden hiçbiri gönderilmemiştir ve bu nedenle **InternetMessageId**, **ConversationTopic** ve **BodyTagInfo** özelliklerinin değerleri güncelleştirilmez. Ancak daha önce açıklandığı gibi, her iki ileti de dışarı aktarma raporlarında listelenir 
   
-Posta kutusunun Mahkeme Tutma veya Tutma durumunda olması durumunda olduğu gibi, Kopya Yaz sayfa koruma özelliği etkinleştirildiğinde de benzersiz iletiler yinelenen iletiler In-Place. Üzerine Yazma Kopyala özelliği, özgün öğeye düzeltme kaydedilemeden önce özgün iletiyi kopyalar (ve kullanıcının Kurtarılabilir Öğeler klasörünün Sürümler klasörüne kaydeder). Bu durumda, düzeltilmiş kopya ve özgün ileti (Kurtarılabilir Öğeler klasöründe) yinelenen iletiler olarak kabul edilebilir ve dolayısıyla bunlardan yalnızca biri dışarı aktarılabilir.
+Bir posta kutusunun Dava Tutma veya In-Place Ayrı Tutma'da olması durumunda olduğu gibi, YazmaDa Kopyala sayfa koruma özelliği etkinleştirildiğinde de benzersiz iletiler yinelenen olarak işaretlenebilir. YazmaDa Kopyala özelliği, özgün öğeye yapılan düzeltme kaydedilmeden önce özgün iletiyi kopyalar (ve kullanıcının Kurtarılabilir Öğeler klasörünün Sürümler klasörüne kaydeder). Bu durumda, düzeltilen kopya ve özgün ileti (Kurtarılabilir Öğeler klasöründe) yinelenen iletiler olarak kabul edilebilir ve bu nedenle bunlardan yalnızca biri dışarı aktarılabilir.
   
 > [!IMPORTANT]
-> Yineleme algoritmasının sınırlamaları arama sonuçlarınızı kalitesini etkiliyorsa, öğeleri dışarı aktarmada yinelemeyi etkinleştirmeniz gerekir. Bu bölümde açıklanan durumlar arama sonuçlarınızı çok sık etkileyen bir durum değil ve yineleme olasılığı en çok olan öğe sayısını azaltmak istiyorsanız, yinelemeyi de etkinleştirmeyi göz önünde bulundurabilirsiniz. 
+> Yinelenenleri kaldırma algoritmasının sınırlamaları arama sonuçlarınızın kalitesini etkileyebilirse, öğeleri dışarı aktarırken yinelenenleri kaldırmayı etkinleştirmemelisiniz. Bu bölümde açıklanan durumların arama sonuçlarınızda bir faktör olma olasılığı düşükse ve yinelenen öğe olma olasılığı en yüksek olan öğe sayısını azaltmak istiyorsanız, yinelenenleri kaldırmayı etkinleştirmeyi düşünmelisiniz. 
   
 ## <a name="more-information"></a>Daha fazla bilgi
 
-- Bu makaledeki bilgiler, aşağıdaki eBulma araçlarından birini kullanarak arama sonuçlarını dışarı aktaracak şekilde geçerlidir:
+- Bu makaledeki bilgiler, aşağıdaki eBulma araçlarından birini kullanarak arama sonuçlarını dışarı aktarırken geçerlidir:
 
-  - Office 365'daki uyumluluk merkezinde içerik Office 365
+  - Office 365'daki uyumluluk merkezinde içerik arama
 
-  - In-Place'te eBulma Exchange Online
+  - Exchange Online'da eBulma'In-Place
 
   - SharePoint Online'da eBulma Merkezi
 
 - Arama sonuçlarını dışarı aktarma hakkında daha fazla bilgi için bkz:
 
-  - [İçerik Arama Dışarı Aktarma](export-search-results.md)
+  - [İçerik Arama'yı Dışarı Aktar](export-search-results.md)
 
   - [İçerik Arama raporunu dışarı aktarma](export-a-content-search-report.md)
 
-  - [eK In-Place arama sonuçlarını bir PST dosyasına aktarma](/exchange/security-and-compliance/in-place-ediscovery/export-search-results)
+  - [eBulma arama sonuçlarını pst dosyasına In-Place dışarı aktarma](/exchange/security-and-compliance/in-place-ediscovery/export-search-results)
 
   - [eBulma Merkezi'nde içeriği dışarı aktarma ve rapor oluşturma](/SharePoint/governance/export-content-and-create-reports-in-the-ediscovery-center)

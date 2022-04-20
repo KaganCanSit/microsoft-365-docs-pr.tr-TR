@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Yöneticiler, Bell Network'ten SMS ve MMS verilerini içeri aktarmak ve arşivlemek için bir TeleMessage bağlayıcısı ayarlayabilir. Bu, kuruluşunuzun üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilmeniz için üçüncü taraf veri kaynaklarından verileri Microsoft 365 arşivleyebilmenizi sağlar.
-ms.openlocfilehash: ad1426d6e0aa52a23719d024e4cad649baad3db4
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: dc23e3788958270712bab493cd0364a80a0377f9
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64937267"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64992798"
 ---
 # <a name="set-up-a-connector-to-archive-bell-network-data"></a>Bell Network verilerini arşivleye bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Kısa Mesajlaşma Hizmeti (SMS) ve Multimedya Mesajlaşma Hizmeti (MMS) iletilerini Bell Network'ten içeri aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında bir TeleMessage bağlayıcısı kullanın. Bağlayıcıyı ayarlayıp yapılandırdıktan sonra, her gün bir kez kuruluşunuzun Bell Ağına bağlanır ve SMS ve MMS iletilerini Microsoft 365'deki posta kutularına aktarır.
 

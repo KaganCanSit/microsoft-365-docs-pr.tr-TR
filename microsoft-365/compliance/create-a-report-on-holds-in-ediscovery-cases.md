@@ -20,14 +20,16 @@ ms.assetid: cca08d26-6fbf-4b2c-b102-b226e4cd7381
 ms.custom:
 - seo-marvel-apr2020
 description: eBulma servis talepleri ile ilişkili tüm ayrı tutmalar hakkında bilgi içeren bir rapor oluşturmayı öğrenin.
-ms.openlocfilehash: b0460b725359e2953c0a27b517a362327ae504f5
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 98cdad3d125fbeab9afd9d7d99b572e5f0bf7386
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64946473"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64993216"
 ---
 # <a name="use-a-script-to-create-a-report-on-holds-in-ediscovery-cases"></a>eBulma durumlarında ayrı tutmalar hakkında rapor oluşturmak için betik kullanma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bu makaledeki betik, eBulma yöneticilerinin ve eBulma yöneticilerinin Microsoft Purview uyumluluk portalında Core ve eBulma (Premium) durumlarıyla ilişkili tüm ayrı tutmalar hakkında bilgi içeren bir rapor oluşturmasına olanak tanır. Rapor, ayrı tutmanın ilişkilendirildiği servis talebinin adı, ayrı tutmaya yerleştirilen içerik konumları ve ayrı tutmanın sorgu tabanlı olup olmadığı gibi bilgileri içerir. Ayrı tutması olmayan durumlar varsa betik, ayrı tutma olmayan servis taleplerinin listesini içeren ek bir rapor oluşturur.
 

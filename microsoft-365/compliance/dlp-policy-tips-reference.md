@@ -1,5 +1,5 @@
 ---
-title: Veri Kaybı Önleme ilke ipuçları başvurusu
+title: Veri Kaybı Önleme ilkesi ipuçları referansı
 f1.keywords: CSH
 ms.author: chrfox
 author: chrfox
@@ -17,111 +17,113 @@ ms.collection:
 - M365-security-compliance
 - SPO_Content
 recommendations: false
-description: Veri kaybını önleme (DLP) ilkesine bir ilke ipucunun, kullanıcıya DLP ilkesiyle çakışan içerikle çalıştığını haber verme hakkında bilgi öğrenin.
+description: Veri kaybı önleme (DLP) ilkesine bir ilke ipucu eklemeyi öğrenin ve kullanıcıya DLP ilkesiyle çakişen içerikle çalıştığını bildirin.
 ms.custom: seo-marvel-apr2021
-ms.openlocfilehash: 52bb2fba47c5588dc6a44eb5f8e1d7b745e69e70
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: f9702916831839ac384cd262854fd0a88f90a8ea
+ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63319385"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64953671"
 ---
-# <a name="data-loss-prevention-policy-tips-reference"></a>Veri Kaybı Önleme ilke ipuçları başvurusu
+# <a name="data-loss-prevention-policy-tips-reference"></a>Veri Kaybı Önleme ilkesi ipuçları referansı
 
-Web Access'Outlook DLP ilkesi ipuçları, aşağıdakiler dışında, bir DLP ilkesinde iş yükünün Exchange tüm koşullar, özel durumlar ve eylemler için de geçerlidir:
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-**Koşullar:**
+Outlook Web Access'teki DLP ilkesi ipuçları, aşağıdakiler dışında bir DLP ilkesindeki Exchange iş yükünde geçerli olan tüm koşullar, özel durumlar ve eylemler için desteklenir:
+
+**Koşul -ları:**
 
 - Alıcı,
-- Üst bilgi sözcük veya tümcecik içeriyor
-- Üst bilgi eşleşme düzenleri
+- Üst bilgi sözcükler veya tümcecikler içeriyor
+- Üst bilgi desenleri eşleştirir
 - İleti türü:
 - İçerik karakter kümesi sözcükler içeriyor
-- Gönderen ilke ipucu geçersiz k oldu mu
+- Gönderen ilke ipucunu geçersiz kıldı mı?
 - İleti boyutu eşittir veya büyüktür
-- Sender AD özniteliği sözcük veya tümcecik içeriyor
-- Sender AD özniteliği desenlere eşler
+- Sender AD özniteliği sözcükler veya tümcecikler içeriyor
+- Gönderen AD özniteliği desenleri eşleştirir
 - Gönderen IP aralıkları
-- Recipient AD özniteliği sözcük veya tümcecik içeriyor
-- Recipient AD özniteliği desenlere eşler
-- Belge adı sözcük veya tümcecik içeriyor
-- Belge adı desenlere eşler
-- Belge içeriği sözcükler veya tümcecikler içerir
-- Belge içeriği desenlere eşler
+- Alıcı AD özniteliği sözcükler veya tümcecikler içeriyor
+- Alıcı AD özniteliği desenleri eşleştirir
+- Belge adı sözcükler veya tümcecikler içeriyor
+- Belge adı desenler ile eşleşir
+- Belge içeriği sözcükler veya tümcecikler içeriyor
+- Belge içeriği desenler ile eşleşir
 
-**Eylemler:**
+**Eylem:**
 
 - Onay için iletiyi gönderenin yöneticisine iletme
 - Onay için iletiyi belirli onaylayanlara iletme
-- İletiyi belirli kullanıcılara yönlendirme
-- Alıcıyı To Box'a ekleme
-- Bilgi Kutusuna alıcı ekleme
-- Gizli Kutusuna alıcı ekleme
+- İletiyi belirli kullanıcılara yeniden yönlendirme
+- Alıcıları To Box'a ekleme
+- Bilgi Kutusu'na alıcı ekleme
+- Gizli Kutu'ya alıcı ekleme
 - Gönderenin yöneticisini alıcı olarak ekleme
-- HTML yasal uyarı ekleme
-- E-posta konusunu hazırlayın
-- O365 İleti Şifrelemesi'ne ve hak korumasını kaldırma
+- HTML bildirimi ekleme
+- Önceden ekli e-posta konusu
+- O365 İleti Şifrelemesi ve hak korumasını kaldırma
 
-## <a name="outlook-2013-and-later-supports-showing-policy-tips-for-only-some-conditions-and-exceptions"></a>Outlook 2013 ve sonrakileri, yalnızca bazı koşullar ve özel durumlar için ilke ipuçlarının göstermeyi destekler
+## <a name="outlook-2013-and-later-supports-showing-policy-tips-for-only-some-conditions-and-exceptions"></a>Outlook 2013 ve üzeri, yalnızca bazı koşullar ve özel durumlar için ilke ipuçlarının gösterilmesini destekler
 
-Şu anda Outlook 2013 ve sonraki sürümü, aşağıda belirtilen koşullar ve buna karşılık gelen özel durumlar dışında herhangi bir koşul veya özel durum içeren ilkeler için ilke ipuçlarının göstermeyi destekler:
+Şu anda, Outlook 2013 ve sonraki sürümleri, aşağıda belirtilen koşullar ve ilgili özel durumlar dışında herhangi bir koşul veya özel durum içermeyen ilkeler için ilke ipuçlarının gösterilmesini destekler:
 
-- İçeriği içerir (yalnızca Hassas bilgi türlerinde çalışır. Duyarlılık etiketleri desteklenmiyor)
+- İçerik içerir (yalnızca Hassas bilgi türleri için çalışır. Duyarlılık etiketleri desteklenmez)
 - İçerik paylaşılıyor
 
-Tüm koşulların, Outlook istemci uygulamasında yazan e-postalar için uygun olduğunu ve burada içerik üzerinde koruyucu eylemler gerçekleştireceklerini unutmayın. Bununla birlikte, kullanıcılara ilke ipuçlarının göstermek, yukarıda adı geçenlerden farklı olarak kullanılan hiçbir durumda desteklanmaz.
+Tüm koşulların, içerikle eşleşecekleri ve içerik üzerinde koruyucu eylemler uygulayacakları Outlook istemci uygulamasında yazılan e-postalar için çalıştığını unutmayın. Ancak, kullanıcılara ilke ipuçlarının gösterilmesi, yukarıda bahsedilenler dışında kullanılan koşullar için desteklenmez.
 
-## <a name="outlook-2013-and-later-and-office-apps-on-desktop-support-showing-policy-tips-for-only-some-sensitive-information-types"></a>Outlook 2013 ve sonraki bir Office masaüstü uygulamaları desteğinde, yalnızca bazı hassas bilgi türlerine ilişkin ilke ipuçlarının gösteriliyor olması
+## <a name="outlook-2013-and-later-and-office-apps-on-desktop-support-showing-policy-tips-for-only-some-sensitive-information-types"></a>Outlook 2013 ve üzeri ile Masaüstündeki Office uygulamaları yalnızca bazı hassas bilgi türlerine yönelik ilke ipuçlarını gösteren destek
 
-Masaüstü için Outlook (2013 ve sonrası) ve Masaüstü'de Office uygulamaları (Word, Excel, PowerPoint) içinde DLP ilkesi ipuçlarının göster algılandığında algılandığında saptanan hazır hazır bilgi türleri listesi aşağıda ve veleridir:
+Masaüstünde Outlook (2013 ve üzeri) ve Masaüstü'ndeki Office uygulamalarında (Word, Excel, PowerPoint) DLP ilkesi ipuçlarını göstermek için algılanacak kullanıma hazır hassas bilgi türlerinin listesi şunlardır:
 
 - ABA Yönlendirme Numarası
-- Arjantin Ulusal Kimliği (DNI) Numarası
-- Australia Bank Hesap Numarası
+- Arjantin Ulusal Kimlik (DNI) Numarası
+- Avustralya Banka Hesap Numarası
 - Avustralya Tıbbi Hesap Numarası
 - Avustralya Pasaport Numarası
-- Avustralya Vergi Dosyası Numarası
-- Azure DocumentDB Kimlik Doğrulaması Anahtarı  
+- Avustralya Vergi Dosya Numarası
+- Azure DocumentDB Kimlik Doğrulama Anahtarı  
 - Azure IAAS Veritabanı Bağlantı Dizesi ve Azure SQL Bağlantı Dizesi  
 - Azure IoT Bağlantı Dizesi  
-- Azure Yayımlama Ayarları Parolası  
-- Azure Önbellek Bağlantı Dizesini Yeniden Dağıt  
+- Azure Yayımlama Ayarı Parolası  
+- Azure Redis Cache Bağlantı Dizesi  
 - Azure SAS  
-- Azure Service Bus Bağlantı Dizesi  
+- bağlantı dizesini Azure Service Bus  
 - Azure Depolama Hesap Anahtarı  
-- Azure Depolama Hesap Anahtarı (Generic)  
+- Azure Depolama Hesap Anahtarı (Genel)  
 - Belçika Ulusal Numarası
 - Brezilya CPF Numarası
-- Brezilya Yasal Varlık Numarası (CNPJ)
+- Brezilya Tüzel Kişilik Numarası (CNPJ)
 - Brezilya Ulusal Kimlik Kartı (RG)
 - Kanada Banka Hesap Numarası
-- Kanada Sürücü Lisans Numarası
+- Kanada Ehliyet Numarası
 - Kanada Sistem Sağlığı Hizmeti Numarası
 - Kanada Pasaport Numarası
 - Kanada Kişisel Sağlık Kimlik Numarası (PHIN)
 - Kanada Sosyal Sigorta Numarası
 - Şili Kimlik Kartı Numarası
-- Çin Yerleşik Kimlik Kartı (ÇK) Numarası
+- Çin Yerleşik Kimlik Kartı (PRC) Numarası
 - Kredi Kartı Numarası
 - Hırvatistan Kimlik Kartı Numarası  
 - Hırvatistan Kişisel Kimlik (OIB) Numarası  
 - Çek Kişisel Kimlik Numarası  
 - Danimarka Kişisel Kimlik Numarası
-- Enforcement Agency (DEA) Numarası
+- Uyuşturucu Uygulama Dairesi (DEA) Numarası
 - AB Banka Kartı Numarası
-- EU Sürücü Lisans Numarası  
+- AB Ehliyet Numarası  
 - AB Ulusal Kimlik Numarası  
 - AB Pasaport Numarası  
 - AB Sosyal Güvenlik Numarası (SSN) veya Eşdeğer Kimlik  
-- AB Vergi Tanımlama Numarası (TIN)  
+- AB Vergi Kimlik Numarası (TIN)  
 - Finlandiya Ulusal Kimliği
 - Finlandiya Pasaport Numarası
-- Fransa Sürücü Lisans Numarası
+- Fransa Ehliyet Numarası
 - Fransa Ulusal Kimlik Kartı (CNI)
 - Fransa Pasaport Numarası
-- France Social Security Number (INSEE)
-- Almanca Sürücü Lisans Numarası
-- Almanca Pasaport Numarası
+- Fransa Sosyal Güvenlik Numarası (INSEE)
+- Alman Sürücü Belgesi Numarası
+- Alman Pasaport Numarası
 - Almanya Kimlik Kartı Numarası
 - Yunanistan Ulusal Kimlik Kartı  
 - Hong Kong Kimlik Kartı (HKID) Numarası
@@ -132,152 +134,152 @@ Masaüstü için Outlook (2013 ve sonrası) ve Masaüstü'de Office uygulamalar�
 - Uluslararası Hastalık Sınıflandırması (ICD-10-CM)  
 - Uluslararası Hastalık Sınıflandırması (ICD-9-CM)  
 - IP Adresi
-- Ireland Personal Public Service (PPS) Numarası 
+- İrlanda Kişisel Kamu Hizmeti (PPS) Numarası 
 - İsrail Banka Hesap Numarası
 - İsrail Ulusal Kimliği
-- İtalya Sürücüsü Lisans Numarası
+- İtalya Ehliyet Numarası
 - Japonya Banka Hesap Numarası
-- Japonya Sürücüsü Lisans Numarası
+- Japonya Sürücü Belgesi Numarası
 - Japonya Pasaport Numarası
-- Japonya'daki Yerleşik Kayıt Numarası
-- Japonya Sosyal Sigorta Numarası (SN)
-- Japonca İkamet Kartı Numarası
+- Japonya Yerleşik Kayıt Numarası
+- Japonya Sosyal Sigorta Numarası (SIN)
+- Japon İkamet Kartı Numarası
 - Malezya Kimlik Kartı Numarası
-- Hollanda Genel Hizmet Numarası (BSN)  
-- Yeni Zelanda Sağlık Numarası
+- Hollanda VatandaşLık Hizmeti (BSN) Numarası  
+- Yeni Zelanda Sağlık Bakanlığı Numarası
 - Norveç Kimlik Numarası  
 - Filipinler Birleşik Çok Amaçlı Kimlik Numarası
 - Polonya Kimlik Kartı
 - Polonya Ulusal Kimliği (PESEL)
-- Polonya Pasaport
-- Portekiz Portekiz Kart Numarası
+- Polonya Pasaportu
+- Portekiz Vatandaş Kart Numarası
 - Suudi Arabistan Ulusal Kimliği
 - Singapur Ulusal Kayıt Kimlik Kartı (NRIC) Numarası
 - Güney Afrika Kimlik Numarası  
 - Güney Kore Yerleşik Kayıt Numarası
 - İspanya Sosyal Güvenlik Numarası (SSN)
-- SQL Server Bağlantı Dizesi  
+- bağlantı dizesini SQL Server  
 - İsveç Ulusal Kimliği
 - İsveç Pasaport Numarası
 - SWIFT Kodu
 - Tayvan Ulusal Kimliği
 - Tayvan Pasaport Numarası
 - Tayvan Yerleşik Sertifikası (ARC/TARC)
-- Tay Dili Nüfus Kimlik Kodu
-- Türkçe Ulusal Kimlik Numarası
-- B.K. Sürücü Lisans Numarası
-- B.K. SeçmeLi Rulo Numarası
-- B.K. Ulusal Sistem Sağlığı Hizmeti Numarası
-- B.K. Ulusal Sigorta Numarası (NINO)
-- ABD / U.K. Pasaport Numarası
+- Tay Nüfus Tanımlama Kodu
+- Türkiye Ulusal Kimlik numarası
+- INGİLTERE. Ehliyet Numarası
+- INGİLTERE. Seçim Rulosu Numarası
+- INGİLTERE. Ulusal Sistem Sağlığı Hizmeti Numarası
+- INGİLTERE. Ulusal Sigorta Numarası (NINO)
+- Birleşik Krallık / Birleşik Krallık Pasaport Numarası
 - ABD Banka Hesap Numarası
-- ABD Sürücü Lisans Numarası
+- ABD Ehliyet Numarası
 - ABD Bireysel Vergi Mükellefi Kimlik Numarası (ITIN)
 - ABD Sosyal Güvenlik Numarası (SSN)
 
-Özel hassas bilgi türlerinin, yukarıdaki hazır ve hassas bilgi türlerinin yanı sıra DLP ilkesi ipuçları için de destek olduğunu unutmayın.
+Özel hassas bilgi türlerinin, yukarıdaki kullanıma hazır hassas bilgi türlerine ek olarak DLP ilkesi ipuçları için de desteklendiğini lütfen unutmayın.
 
-## <a name="data-loss-prevention-on-endpoint-devices-supports-policy-tips-for-only-some-sensitive-information-types"></a>Uç nokta cihazlerinde Veri Kaybı Önleme yalnızca bazı hassas bilgi türleri için ilke ipuçlarını destekler
+## <a name="data-loss-prevention-on-endpoint-devices-supports-policy-tips-for-only-some-sensitive-information-types"></a>Uç nokta cihazlarında Veri Kaybı Önleme yalnızca bazı hassas bilgi türleri için ilke ipuçlarını destekler
 
-Uç nokta cihazlarında tespit edilen, ilk kutusunda olmayan hassas bilgi türleri listesi aşağıdaki gibidir:
+Uç nokta cihazlarında bulunan belgelerde algılanacak kullanıma açık hassas bilgi türlerinin listesi şunlardır:
 
 - ABA Yönlendirme Numarası 
-- Arjantin Ulusal Kimliği (DNI) Numarası 
-- Australia Bank Hesap Numarası 
+- Arjantin Ulusal Kimlik (DNI) Numarası 
+- Avustralya Banka Hesap Numarası 
 - Avustralya Tıbbi Hesap Numarası 
 - Avustralya Pasaport Numarası 
-- Avustralya Vergi Dosyası Numarası 
+- Avustralya Vergi Dosya Numarası 
 - Avustralya İş Numarası 
-- AvustralyaLı Şirket Numarası 
-- Avusturya Sürücü Lisans Numarası 
+- Avustralya Şirket Numarası 
+- Avusturya Ehliyet Numarası 
 - Avusturya Kimlik Kartı 
 - Avusturya Pasaport Numarası 
 - Avusturya Sosyal Güvenlik Numarası 
 - Avusturya Vergi Kimlik Numarası 
 - Avusturya Katma Değer Vergisi (KDV) Numarası 
-- Azure DocumentDB Kimlik Doğrulaması Anahtarı 
+- Azure DocumentDB Kimlik Doğrulama Anahtarı 
 - Azure IAAS Veritabanı Bağlantı Dizesi ve Azure SQL Bağlantı Dizesi 
 - Azure IoT Bağlantı Dizesi 
-- Azure Yayımlama Ayarları Parolası 
-- Azure Önbellek Bağlantı Dizesini Yeniden Dağıt 
+- Azure Yayımlama Ayarı Parolası 
+- Azure Redis Cache Bağlantı Dizesi 
 - Azure SAS 
-- Azure Service Bus Bağlantı Dizesi 
+- bağlantı dizesini Azure Service Bus 
 - Azure Depolama Hesap Anahtarı 
-- Azure Depolama Hesap Anahtarı (Generic) 
-- Belçika Sürücü Lisans Numarası 
+- Azure Depolama Hesap Anahtarı (Genel) 
+- Belçika Ehliyet Numarası 
 - Belçika Ulusal Numarası 
 - Belçika Pasaport Numarası 
-- Belçika Değeri Eklenen Vergi Numarası 
+- Belçika Katma Değer Vergisi Numarası 
 - Brezilya CPF Numarası 
-- Brezilya Yasal Varlık Numarası (CNPJ) 
+- Brezilya Tüzel Kişilik Numarası (CNPJ) 
 - Brezilya Ulusal Kimlik Kartı (RG) 
-- Bulgaristan Sürücü Lisans Numarası 
+- Bulgaristan Ehliyet Numarası 
 - Bulgaristan Pasaport Numarası 
-- Bulgaristan Muntaz 
+- Bulgaristan Tekdüzen Sivil Numarası 
 - Kanada Banka Hesap Numarası 
-- Kanada Sürücü Lisans Numarası 
+- Kanada Ehliyet Numarası 
 - Kanada Sistem Sağlığı Hizmeti Numarası 
 - Kanada Pasaport Numarası 
 - Kanada Kişisel Sağlık Kimlik Numarası (PHIN) 
 - Kanada Sosyal Sigorta Numarası 
 - Şili Kimlik Kartı Numarası 
-- Çin Yerleşik Kimlik Kartı (ÇK) Numarası 
+- Çin Yerleşik Kimlik Kartı (PRC) Numarası 
 - Kredi Kartı Numarası 
-- Hırvatistan Sürücüsü Lisans Numarası 
+- Hırvatistan Ehliyet Numarası 
 - Hırvatistan Kimlik Kartı Numarası 
 - Hırvatistan Ulusal Kimlik Kartı Numarası 
 - Hırvatistan Pasaport Numarası 
 - Hırvatistan Kişisel Kimlik (OIB) Numarası 
 - CSCAN-AZURE0060 Azure Depolama Hesabı Paylaşılan Erişim İmzası 
 - CSCAN-GENERAL0140 Genel Simetrik Anahtar 
-- Kıbrıs Sürücüsü Lisans Numarası 
+- Kıbrıs Ehliyet Numarası 
 - Kıbrıs Kimlik Kartı 
 - Kıbrıs Pasaport Numarası 
 - Kıbrıs Vergi Kimlik Numarası 
-- Çek Sürücüsü Lisans Numarası 
+- Çek Ehliyet Numarası 
 - Çek Kişisel Kimlik Numarası 
 - Çek Cumhuriyeti Pasaport Numarası 
-- Danimarka Sürücüsü Lisans Numarası 
+- Danimarka Ehliyet Numarası 
 - Danimarka Pasaport Numarası 
 - Danimarka Kişisel Kimlik Numarası 
-- Enforcement Agency (DEA) Numarası 
+- Uyuşturucu Uygulama Dairesi (DEA) Numarası 
 - Estonya Sürücü Lisans Numarası 
 - Estonya Pasaport Numarası 
 - Estonya Kişisel Kimlik Kodu 
 - AB Banka Kartı Numarası 
-- EU Sürücü Lisans Numarası 
+- AB Ehliyet Numarası 
 - AB Ulusal Kimlik Numarası 
 - AB Pasaport Numarası 
 - AB Sosyal Güvenlik Numarası (SSN) veya Eşdeğer Kimlik 
-- AB Vergi Tanımlama Numarası (TIN) 
-- Finlandiya Sürücüsü Lisans Numarası 
-- Finlandiya Avrupa Sağlık Sigorta Numarası 
+- AB Vergi Kimlik Numarası (TIN) 
+- Finlandiya Ehliyet Numarası 
+- Finlandiya Avrupa Sağlık Sigortası Numarası 
 - Finlandiya Ulusal Kimliği 
 - Finlandiya Pasaport Numarası 
-- Fransa Sürücü Lisans Numarası 
-- Fransa Sağlık Sigorta Numarası 
+- Fransa Ehliyet Numarası 
+- Fransa Sağlık Sigortası Numarası 
 - Fransa Ulusal Kimlik Kartı (CNI) 
 - Fransa Pasaport Numarası 
-- France Social Security Number (INSEE) 
-- Fransa Vergi Tanımlama Numarası (numéro SPI.) 
-- Fransa Değeri Eklenen Vergi Numarası 
-- Almanca Sürücü Lisans Numarası 
-- Almanca Pasaport Numarası 
+- Fransa Sosyal Güvenlik Numarası (INSEE) 
+- Fransa Vergi Kimlik Numarası (numéro SPI.) 
+- Fransa Katma Değer Vergi Numarası 
+- Alman Sürücü Belgesi Numarası 
+- Alman Pasaport Numarası 
 - Almanya Kimlik Kartı Numarası 
 - Almanya Vergi Kimlik Numarası 
-- Almanya'nın Katma Değer Vergi Numarası 
-- Yunanistan Sürücü Lisans Numarası 
+- Almanya Katma Değer Vergi Numarası 
+- Yunanistan Ehliyet Numarası 
 - Yunanistan Ulusal Kimlik Kartı 
 - Yunanistan Pasaport Numarası 
 - Yunanistan Sosyal Güvenlik Numarası (AMKA) 
 - Yunan Vergi Kimlik Numarası 
 - Hong Kong Kimlik Kartı (HKID) Numarası 
-- Macarca Sosyal Güvenlik Numarası (TAJ) 
-- Macarca Katma Değer Vergi Numarası 
-- Macaristan Sürücü Lisans Numarası 
+- Macar Sosyal Güvenlik Numarası (TAJ) 
+- MacarCa Katma Değer Vergi Numarası 
+- Macaristan Ehliyet Numarası 
 - Macaristan Pasaport Numarası 
 - Macaristan Kişisel Kimlik Numarası 
-- Macaristan Vergi Tanımlama Numarası 
+- Macaristan Vergi Kimlik Numarası 
 - Hindistan Kalıcı Hesap Numarası (PAN) 
 - Hindistan Benzersiz Tanımlama (Aadhaar) Numarası 
 - Endonezya Kimlik Kartı (KTP) Numarası 
@@ -285,123 +287,123 @@ Uç nokta cihazlarında tespit edilen, ilk kutusunda olmayan hassas bilgi türle
 - Uluslararası Hastalık Sınıflandırması (ICD-10-CM) 
 - Uluslararası Hastalık Sınıflandırması (ICD-9-CM) 
 - IP Adresi 
-- İrlanda Sürücü Lisans Numarası 
+- İrlanda Ehliyet Numarası 
 - İrlanda Pasaport Numarası 
-- Ireland Personal Public Service (PPS) Numarası 
+- İrlanda Kişisel Kamu Hizmeti (PPS) Numarası 
 - İsrail Banka Hesap Numarası 
 - İsrail Ulusal Kimliği 
-- İtalya Sürücüsü Lisans Numarası 
+- İtalya Ehliyet Numarası 
 - İtalya Mali Kodu 
 - İtalya Pasaport Numarası 
-- İtalya Değeri Eklenen Vergi Numarası 
+- İtalya Katma Değer Vergi Numarası 
 - Japonya Banka Hesap Numarası 
-- Japonya Sürücüsü Lisans Numarası 
+- Japonya Sürücü Belgesi Numarası 
 - Japonya Pasaport Numarası 
-- Japonya'daki Yerleşik Kayıt Numarası 
-- Japonya Sosyal Sigorta Numarası (SN) 
-- Şirket için Japonca Numaram 
-- Japonca Kişisel Numaram 
-- Japonca İkamet Kartı Numarası 
-- Letonya Sürücüsü Lisans Numarası 
+- Japonya Yerleşik Kayıt Numarası 
+- Japonya Sosyal Sigorta Numarası (SIN) 
+- Japonca My Number Corporate 
+- Japonca Numaram Kişisel 
+- Japon İkamet Kartı Numarası 
+- Letonya Ehliyet Numarası 
 - Letonya Pasaport Numarası 
 - Letonya Kişisel Kodu 
-- Litvanya Sürücü Lisans Numarası 
+- Litvanya Sürücü Belgesi Numarası 
 - Litvanya Pasaport Numarası 
 - Litvanya Kişisel Kodu 
-- Luxemburg Sürücü Lisans Numarası 
-- Luxemburg Ulusal Kimlik Numarası (Doğal kişiler) 
-- Luxemburg Ulusal Kimlik Numarası (Doğal olmayan kişiler) 
-- Luxemburg Passport Numarası 
+- Luxemburg Ehliyet Numarası 
+- Luxemburg Ulusal Kimlik Numarası (Gerçek kişiler) 
+- Luxemburg Ulusal Kimlik Numarası (Gerçek olmayan kişiler) 
+- Luxemburg Pasaport Numarası 
 - Malezya Kimlik Kartı Numarası 
-- Malta Sürücü Lisans Numarası 
+- Malta Sürücü Belgesi Numarası 
 - Malta Kimlik Kartı Numarası 
 - Malta Pasaport Numarası 
-- Malta Vergi No Numarası 
-- Hollanda Genel Hizmet Numarası (BSN) 
-- Hollanda Sürücü Lisans Numarası 
+- Malta Vergi Kimlik Numarası 
+- Hollanda VatandaşLık Hizmeti (BSN) Numarası 
+- Hollanda Ehliyet Numarası 
 - Hollanda Pasaport Numarası 
 - Hollanda Vergi Kimlik Numarası 
-- Hollanda Katma Değer Vergi Numarası 
+- Hollanda Katma Değer Vergisi Numarası 
 - Yeni Zelanda banka hesap numarası 
 - Yeni Zelanda Sürücü Lisans Numarası 
-- Yeni Zelanda Iç Geliri numarası 
-- Yeni Zelanda Sağlık Numarası 
+- Yeni Zelanda İç Gelir numarası 
+- Yeni Zelanda Sağlık Bakanlığı Numarası 
 - Yeni Zelanda Sosyal Yardım Numarası 
 - Norveç Kimlik Numarası 
 - Filipinler Birleşik Çok Amaçlı Kimlik Numarası 
-- Polonya Sürücü Lisans Numarası 
+- Polonya Sürücü Belgesi Numarası 
 - Polonya Kimlik Kartı 
 - Polonya Ulusal Kimliği (PESEL) 
-- Polonya Pasaport 
+- Polonya Pasaportu 
 - Polonya Vergi Kimlik Numarası 
 - Lehçe REGON Numarası 
-- Portekiz Portekiz Kart Numarası 
-- Portekiz Sürücü Lisans Numarası 
+- Portekiz Vatandaş Kart Numarası 
+- Portekiz Sürücü Ehliyeti Numarası 
 - Portekiz Pasaport Numarası 
-- Portekiz Vergi Tanımlama Numarası 
-- Romanya Sürücü Lisans Numarası 
+- Portekiz Vergi Kimlik Numarası 
+- Romanya Ehliyet Numarası 
 - Romanya Pasaport Numarası 
 - Romanya Kişisel Sayısal Kodu (CNP) 
-- Rusça Pasaport Numarası (Yurtiçi) 
-- Rusça Pasaport Numarası (Uluslararası) 
+- Rus Pasaport Numarası (Yurt İçi) 
+- Rus Pasaport Numarası (Uluslararası) 
 - Suudi Arabistan Ulusal Kimliği 
 - Singapur Ulusal Kayıt Kimlik Kartı (NRIC) Numarası 
-- Slovakya Sürücüsü Lisans Numarası 
+- Slovakya Sürücü Ehliyeti Numarası 
 - Slovakya Pasaport Numarası 
 - Slovakya Kişisel Numarası 
-- Slovenya Sürücüsü Lisans Numarası 
+- Slovenya Ehliyet Numarası 
 - Slovenya Pasaport Numarası 
 - Slovenya Vergi Kimlik Numarası 
-- Slovenya benzersiz ana numarayı 
+- Slovenya Benzersiz Ana Vatandaş Numarası 
 - Güney Afrika Kimlik Numarası 
 - Güney Kore Yerleşik Kayıt Numarası 
 - İspanya DNI 
-- İspanya Sürücüsü Lisans Numarası 
+- İspanya Ehliyet Numarası 
 - İspanya Pasaport Numarası 
 - İspanya Sosyal Güvenlik Numarası (SSN) 
 - İspanya Vergi Kimlik Numarası 
-- SQL Server Bağlantı Dizesi 
-- İsveç Sürücü Lisans Numarası 
+- bağlantı dizesini SQL Server 
+- İsveç Ehliyet Numarası 
 - İsveç Ulusal Kimliği 
 - İsveç Pasaport Numarası 
 - İsveç Vergi Kimlik Numarası 
 - SWIFT Kodu 
-- Swiss Social Security Number AHV 
+- İsviçre Sosyal Güvenlik Numarası AHV 
 - Tayvan Ulusal Kimliği 
 - Tayvan Pasaport Numarası 
 - Tayvan Yerleşik Sertifikası (ARC/TARC) 
-- Tay Dili Nüfus Kimlik Kodu 
-- Türkçe Ulusal Kimlik Numarası 
-- B.K. Sürücü Lisans Numarası 
-- B.K. SeçmeLi Rulo Numarası 
-- B.K. Ulusal Sistem Sağlığı Hizmeti Numarası 
-- B.K. Ulusal Sigorta Numarası (NINO) 
-- B.K. Benzersiz Vergi Mükellefi Başvuru Numarası 
-- ABD / U.K. Pasaport Numarası 
+- Tay Nüfus Tanımlama Kodu 
+- Türkiye Ulusal Kimlik numarası 
+- INGİLTERE. Ehliyet Numarası 
+- INGİLTERE. Seçim Rulosu Numarası 
+- INGİLTERE. Ulusal Sistem Sağlığı Hizmeti Numarası 
+- INGİLTERE. Ulusal Sigorta Numarası (NINO) 
+- INGİLTERE. Benzersiz Vergi Mükellefi Başvuru Numarası 
+- Birleşik Krallık / Birleşik Krallık Pasaport Numarası 
 - ABD Banka Hesap Numarası 
-- ABD Sürücü Lisans Numarası 
+- ABD Ehliyet Numarası 
 - ABD Bireysel Vergi Mükellefi Kimlik Numarası (ITIN) 
 - ABD Sosyal Güvenlik Numarası (SSN) 
-- Ukrayna Pasaport Numarası (Yurtiçi) 
+- Ukrayna Pasaport Numarası (Yurt İçi) 
 - Ukrayna Pasaport Numarası (Uluslararası) 
  
-Lütfen unutmayın; yukarıdaki ilk ve son derece hassas bilgi türlerine ek olarak özel hassas bilgi türleri de algılanır
+Yukarıdaki kullanıma açık hassas bilgi türlerine ek olarak özel hassas bilgi türlerinin de algılandığını lütfen unutmayın
 
 ## <a name="support-matrix-for-dlp-policy-tips-across-microsoft-apps"></a>Microsoft uygulamaları genelinde DLP ilkesi ipuçları için Destek Matrisi
 
-|**Uygulama ve platform**|**DLP ilkesi ipucu desteği**|**Desteklenen hassas bilgi türleri**|**Desteklenen eylemler ve yüklenmler**|**Açıklamalar**|
+|**Uygulama ve platform**|**DLP ilkesi ipucu desteği**|**Desteklenen hassas bilgi türleri**|**Koşul ve eylemler desteklenir**|**Açıklamalar**|
 |:--|:--|:--|:--|:--|
-|**Outlook Web'de**|:::image type="icon" source="../media/rightmrk.png" border="false":::|hepsi|alt küme||
-|**Outlook Win32 (ver. 2105 derleme 14026.20000 ve yarı yıllık kanal ver. 2102 derleme 13801.20862)**|:::image type="icon" source="../media/rightmrk.png" border="false":::|alt küme|alt küme|Hassas bilgi türleri ve DLP koşulları desteği için ayrıntılar için bkz. [Outlook 2013](#outlook-2013-and-later-supports-showing-policy-tips-for-only-some-conditions-and-exceptions) ve sonraki bilgisayarlar, yalnızca bazı koşullar ve özel durumlar ile [Outlook 2013](#outlook-2013-and-later-and-office-apps-on-desktop-support-showing-policy-tips-for-only-some-sensitive-information-types) ve sonraki sonrası için ilke ipuçlarını göstermeyi destekler ve Masaüstü'de Outlook uygulamaları ile Office desteği, hassas bilgi türleri ve DLP koşulları desteğiyle ilgili ayrıntılar için, Outlook  Win32.|
-|**Outlook Mobile (iOS, Android)/Outlook Mac**|:::image type="icon" source="../media/crsmrk.png" border="false":::|yok|yok|Mobil cihazlarda DLP ilkesi ipuçları Outlook desteklenmiyor|
-|**SharePoint Online/OneDrive İş Web istemcisi**|:::image type="icon" source="../media/rightmrk.png" border="false":::|hepsi|DLP'de tüm SPO/ODB yüklemleri ve eylemleri||
-|**SharePoint Win32/ OneDrive İş Win32 istemcisi**|:::image type="icon" source="../media/crsmrk.png" border="false":::|yok|yok|Masaüstü istemci uygulamalarının herhangi bir SharePoint veya OneDrive DLP ilkesi ipuçları desteklenmiyor|
-|**Word, Excel, PowerPoint Web Client**|:::image type="icon" source="../media/rightmrk.png" border="false":::|hepsi|DLP'de tüm SPO/ODB yüklemleri ve eylemleri|DLP ilkesi ipucu, belge SPO veya ODB web uygulamasında barındırıldısa ve DLP ilkesi zaten damgalı ise destekler.|
-|**Word, Excel, PowerPoint Mobile Client**|:::image type="icon" source="../media/crsmrk.png" border="false":::|yok|yok|DLP ilkesi ipuçları, bu ipuçları için mobil Office.|
-|**Teams Web/ Teams Desktop/ Teams Mobile/ Teams Mac**|:::image type="icon" source="../media/rightmrk.png" border="false":::|hepsi|DLP Teams tüm tüm yüklemler|İlke ipuçları, bir ileti "Bu ileti bayrakla işaretlenmiş. Ne yapabilirim?" Kullanıcı bağlantıya tıklandığında, algılanan hassas bilgi türlerini gözden geçirerek geçersiz kılamaz veya yöneticinin izin verilirse sorun bildirebilirsiniz. Dosyalar için ilke ipucu gösterilmez. Alıcı belgeye erişmeyi çalıştığında, izin verilmiyorsa erişim reddedilmiş olabilir.|
-|**Win32 Uç Nokta Cihazları**|:::image type="icon" source="../media/rightmrk.png" border="false":::|alt küme|DLP ilkesinde tüm Uç Nokta DLP yüklemleri ve eylemleri|Bkz [. Uç Noktada Veri Kaybı Önleme yalnızca bazı hassas bilgi türleri için ilke ipuçlarını destekler](#data-loss-prevention-on-endpoint-devices-supports-policy-tips-for-only-some-sensitive-information-types)|
-|**macOS cihazlar (önizleme)**|yalnızca varsayılan ipuçları|hepsi|alt küme|Veri kaybı önleme ilkeleri macOS cihazlarda zorunlu kılınabilir. Özel ilke ipuçları desteklenmiyor.|
-|**Üçüncü taraf bulut uygulamaları**|:::image type="icon" source="../media/crsmrk.png" border="false":::|yok|yok|Üçüncü taraf bulut uygulamaları, Veri Kaybı Önleme ilke ipuçlarını desteklemez|
-|**On-prem**|:::image type="icon" source="../media/crsmrk.png" border="false":::|yok|yok||
-|**Word, Excel, PowerPoint Win32 İstemcisi**|:::image type="icon" source="../media/crsmrk.png" border="false":::|alt küme|alt küme|Lütfen masaüstü [Outlook 2013](#outlook-2013-and-later-and-office-apps-on-desktop-support-showing-policy-tips-for-only-some-sensitive-information-types) ve sonraki Office uygulamalarına ve desteklenen hassas bilgi türlerinin listesi için yalnızca bazı hassas bilgi türlerine ilişkin ilke ipuçlarını gösteren Masaüstü desteği uygulamalarına bakın</br></br>WXP istemci uygulamaları için ilke ipuçları, tam olarak aşağıdaki veya DLP ilkesinde koşulların veya eylemlerin bir alt kümesi bulunan tüm DLP ilkeleri için SharePoint Online veya OneDrive İş Sitelerinde depolanan belgelerde çalışır:</br> <ul><li>İçerik hassas bilgi türleri içeriyor</li><li>Erişim Kapsamı (İçerik şirket içinde/dışında paylaşılır)</li><li>Kullanıcıya Bildirim (ilke ipuçları/kullanıcı bildirimleri)</li><li>Herkesi engelle</li><li>Olay raporları</li></ul></br> Başka herhangi bir koşul veya eylem varsa, bu ilkeye yönelik DLP ilkesi ipucu Word, Masaüstü veya Masaüstü Excel PowerPoint.</br>Diğer [ayrıntılar için bkz. Excel, PowerPoint ve Word'de](use-notifications-and-policy-tips.md#policy-tips-in-excel-powerpoint-and-word) ilke ipuçları|
+|**Web'de Outlook**|:::image type="icon" source="../media/rightmrk.png" border="false":::|Tüm|Alt küme -sini||
+|**Outlook Win32 (2105 derleme 14026.20000 ve altı aylık kanal ver. 2102 derleme 13801.20862)**|:::image type="icon" source="../media/rightmrk.png" border="false":::|Alt küme -sini|Alt küme -sini|Bkz[. Outlook 2013 ve sonraki sürümler, yalnızca bazı koşullar ve özel durumlar için ilke ipuçlarının gösterilmesini](#outlook-2013-and-later-supports-showing-policy-tips-for-only-some-conditions-and-exceptions) destekler ve [Outlook 2013 ve sonraki sürümleri ve Masaüstünde Office uygulamaları, hassas bilgi türleri için destekle ilgili ayrıntılar için yalnızca bazı hassas bilgi türlerine yönelik ilke ipuçlarını](#outlook-2013-and-later-and-office-apps-on-desktop-support-showing-policy-tips-for-only-some-sensitive-information-types) ve Outlook DLP ilkesi ipuçlarını göstermek için desteklenen DLP koşulları ve eylemleri için ilke ipuçlarını gösterir  Win32.|
+|**Outlook Mobile (iOS, Android)/mac Outlook**|:::image type="icon" source="../media/crsmrk.png" border="false":::|Hiçbiri|Hiçbiri|DLP ilkesi ipuçları Outlook mobil cihazlarda desteklenmez|
+|**SharePoint Online/OneDrive İş Web istemcisi**|:::image type="icon" source="../media/rightmrk.png" border="false":::|Tüm|DLP'deki tüm SPO/ODB önkoşulları ve eylemleri||
+|**win32/ OneDrive İş Win32 istemci SharePoint**|:::image type="icon" source="../media/crsmrk.png" border="false":::|Hiçbiri|Hiçbiri|DLP ilkesi ipuçları SharePoint veya OneDrive masaüstü istemci uygulamalarında desteklenmez|
+|**Word, Excel PowerPoint Web İstemcisi**|:::image type="icon" source="../media/rightmrk.png" border="false":::|Tüm|DLP'deki tüm SPO/ODB önkoşulları ve eylemleri|Belge SPO veya ODB web uygulamasında barındırılıyorsa ve DLP ilkesi zaten damgalanmışsa DLP ilkesi ipucu desteklenir.|
+|**Word, Excel, PowerPoint Mobile İstemcisi**|:::image type="icon" source="../media/crsmrk.png" border="false":::|Hiçbiri|Hiçbiri|DLP ilkesi ipuçları, Office için mobil uygulamalarda desteklenmez.|
+|**Teams Web/ Teams Desktop/ Teams Mobile/ Teams Mac**|:::image type="icon" source="../media/rightmrk.png" border="false":::|Tüm|DLP ilkesindeki tüm Teams önkoşulları|İlke ipuçları, bir ileti "Bu ileti bayrakla işaretlendi. Ne yapabilirim?" Bağlantıya tıklandığında, kullanıcı algılanan hassas bilgi türlerini gözden geçirebilir ve yönetici tarafından izin veriliyorsa bir sorunu geçersiz kılabilir veya bildirebilir. Dosyalar için hiçbir ilke ipucu gösterilmediğini unutmayın. Alıcı belgeye erişmeye çalıştığında, izin verilmiyorsa erişim reddedilir.|
+|**Win32 Uç Nokta Cihazları**|:::image type="icon" source="../media/rightmrk.png" border="false":::|Alt küme -sini|DLP ilkesindeki tüm Uç Nokta DLP önkoşulları ve eylemleri|Bkz. [Uç Noktada Veri Kaybı Önleme yalnızca bazı hassas bilgi türleri için ilke ipuçlarını destekler](#data-loss-prevention-on-endpoint-devices-supports-policy-tips-for-only-some-sensitive-information-types)|
+|**macOS cihazları**|yalnızca varsayılan ipuçları|Tüm|Alt küme -sini|Veri kaybı önleme ilkeleri macOS cihazlarda uygulanabilir. Özel ilke ipuçları desteklenmez.|
+|**Üçüncü taraf bulut uygulamaları**|:::image type="icon" source="../media/crsmrk.png" border="false":::|Hiçbiri|Hiçbiri|Veri Kaybı Önleme ilkesi ipuçları üçüncü taraf bulut uygulamalarında desteklenmez|
+|**Şirket içi**|:::image type="icon" source="../media/crsmrk.png" border="false":::|Hiçbiri|Hiçbiri||
+|**Word, Excel PowerPoint Win32 İstemcisi**|:::image type="icon" source="../media/crsmrk.png" border="false":::|Alt küme -sini|Alt küme -sini|Desteklenen [hassas bilgi türleri listesi için yalnızca bazı hassas bilgi türlerine yönelik ilke ipuçlarını gösteren masaüstü desteğinde Outlook 2013 ve sonraki sürümlerine ve Office uygulamalarına](#outlook-2013-and-later-and-office-apps-on-desktop-support-showing-policy-tips-for-only-some-sensitive-information-types) bakın</br></br>WXP istemci uygulamalarına yönelik ilke ipuçları, DLP ilkesindeki koşulların veya eylemlerin tam olarak aşağıda veya bir alt kümesine sahip olan tüm DLP ilkeleri için SharePoint Online veya OneDrive İş Sitelerinde depolanan belgeler için çalışır:</br> <ul><li>İçerik hassas bilgi türleri içeriyor</li><li>Erişim Kapsamı (İçerik dahili/harici olarak paylaşılır)</li><li>Kullanıcıya Bildir (ilke ipuçları/kullanıcı bildirimleri)</li><li>Herkesi engelle</li><li>Olay raporları</li></ul></br> Başka bir koşul veya eylem varsa, söz konusu ilkenin DLP ilke ipucu Word, Excel veya PowerPoint masaüstü uygulamalarında görünmez.</br>Diğer ayrıntılar için bkz. [Excel, PowerPoint ve Word'de ilke ipuçları](use-notifications-and-policy-tips.md#policy-tips-in-excel-powerpoint-and-word)|
 ||||||

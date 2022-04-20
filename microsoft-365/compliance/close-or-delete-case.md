@@ -17,14 +17,16 @@ search.appverid:
 ms.assetid: ''
 description: Microsoft Purview eKeşif (Premium) olayı tarafından desteklenen bir araştırma veya yasal olay kapatıldığında veya silindiğinde ne olacağını öğrenin.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: c3ea769fe6c1e01a14e6a552170da8421a03cf07
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 45bf34450b430d7d33316fe0e6c6a21d12be2937
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64940433"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64993260"
 ---
 # <a name="close-or-delete-an-ediscovery-premium-case"></a>eBulma (Premium) servis talebini kapatma veya silme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview eBulma (Premium) olayı tarafından desteklenen yasal dava veya araştırma tamamlandığında, bir servis talebini kapatabilir veya silebilirsiniz. Kapatılan bir olayı da yeniden açabilirsiniz.
 

@@ -1,6 +1,6 @@
 ---
-title: Test Tabanı SSS
-description: Sık sorulan soruları gözden geçirme
+title: Test Temeli SSS
+description: Sık sorulan soruları gözden geçirin
 search.appverid: MET150
 author: Tinacyt
 ms.author: tinachen
@@ -14,129 +14,128 @@ ms.collection: TestBase-M365
 ms.custom: ''
 ms.reviewer: mapatel
 f1.keywords: NOCSH
-ms.openlocfilehash: e21774ada245a3b9d5c131998b7c60b4a4778210
-ms.sourcegitcommit: a9266e4e7470e8c1e8afd31fef8d266f7849d781
+ms.openlocfilehash: c7fd01b95d461332baaf4eac90aee4715da3e55e
+ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63406015"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64953040"
 ---
-# <a name="test-base-faq"></a>Test Tabanı SSS
+# <a name="test-base-faq"></a>Test Temeli SSS
 
-**S: Paketlerimizi Test Bankası ekibine nasıl göndereceğiz?**
+**S: Paketlerimizi Test Temeli ekibine nasıl gönderebiliriz?**
 
-**A:** Paketlerinizi kendi kendine hizmet eden portalımızı kullanarak doğrudan Test Temel ortamına gönderin.
+**A:** Kendi kendine hizmet portalımızı kullanarak paketlerinizi doğrudan Test Temeli ortamına gönderin.
 
-Uygulama paketinizi göndermek için [Azure Portal'a](https://www.aka.ms/testbaseportal "Test Tabanı Giriş Sayfası") gidin ve kendi kendine hizmet eden Test Temel portalı panosu üzerinden uygulama ikili dosyalarını, bağımlılıklarını ve test betiklerini içeren sıkıştırılmış bir klasörü karşıya yükleyin. 
+Uygulama paketinizi göndermek için [Azure Portal'a](https://www.aka.ms/testbaseportal "Test Temeli Giriş Sayfası") gidin ve kendi kendine hizmet sunan Test Temeli portalı panosu aracılığıyla uygulamanızın ikili dosyalarını, bağımlılıklarını ve test betiklerini içeren sıkıştırılmış bir klasörü karşıya yükleyin.
 
-Daha fazla bilgi için ekleme kullanıcı kılavuzuna bakın veya yardım ve daha fazla <testbasepreview@microsoft.com> bilgi için ekibimizle iletişime geçin.
+Daha fazla bilgi için ekleme kullanıcı kılavuzuna bakın veya yardım ve daha fazla bilgi için adresinden <testbasepreview@microsoft.com> ekibimize başvurun.
 
-**S: Yeni olmayan (OOB) testleri nedir?**
+**S: Kullanıma açılan (OOB) testler nelerdir?**
 
-**A:** Standart hale getirildikten sonra uygulama paketleri yüklenir, başlatılacak ve otuz (30) kez kapatılan ve sonra kaldırılan varsayılan test çalıştırmaları standart hale getirılmıştır. 
+**A:** Hazır (OOB) testler standartlaştırılmıştır, uygulama paketlerinin yüklendiği, otuz (30) kez başlatıldığı ve kapatıldığı varsayılan test çalıştırmalarıdır ve ardından kaldırılır.
 
-Test Temel için oluşturulan paketlerde aşağıdaki test betikleri vardır: yükleme, başlatma, kapatma ve isteğe bağlı olarak kaldırma betiği. 
+Test Temeli için oluşturulan paketlerde şu test betikleri bulunur: yükleme, başlatma, kapatma ve isteğe bağlı olarak kaldırma betiği.
 
-Standart dışı (OOB) testleri, uygulamanız üzerinden standart telemetri sağlar ve bu derlemeleri Windows sağlar.
+İlk çalıştırma (OOB) testleri, Windows derlemeleri karşılaştırmak için uygulamanızda standart telemetri sağlar.
 
-**S: Hazır gelen testler dışında test gönderebilirsiniz (yükleme, başlatma, kapatma, kaldırma test betikleri)?**
+**S: İlk çalıştırma testlerinin dışında test gönderebilir miyiz (yükleme, başlatma, kapatma, test betiklerini kaldırma)?**
 
-**A:** Evet, müşteriler self servis portal panosu üzerinden **işlevsel testler** için uygulama paketleri de yükleyebilir.
-**İşlevsel testler** , müşterilerin uygulamalarında özel işlevler çalıştırmaları için betiklerini yürütmelerine olanak sağlayan testlerdir.
-
+**A:** Evet, müşteriler self servis portal panosu aracılığıyla **işlevsel testler** için uygulama paketlerini de karşıya yükleyebilir.
+**İşlevsel testler** , müşterilerin kendi uygulamaları üzerinde özel işlevler çalıştırmak için betiklerini yürütmesine olanak tanıyan testlerdir.
 
 ## <a name="testing"></a>Test
 
 **S: İşlevsel testleri destekliyor musunuz?**
 
-**A:** Evet, Test Tabanı işlevsel testleri destekler. İşlevsel testler, müşterilerimizin, betiklerini kendi uygulamalarında özel işlevler çalıştıracak şekilde yürütmelerine olanak sağlayan testlerdir. 
+**A:** Evet, Test Temeli işlevsel testleri destekler. İşlevsel testler, müşterilerimizin kendi uygulamaları üzerinde özel işlevler çalıştırmak için betiklerini yürütmesini sağlayan testlerdir.
 
-Uygulama paketinizi işlevsel test amacıyla göndermek için, kendi kendine portal panomuz aracılığıyla uygulama ikili dosyalarını, bağımlılıklarını ve test betiklerini içeren sıkıştırılmış klasörü karşıya yükleyin. 
+İşlevsel test için uygulama paketinizi göndermek için, self servis portal panomuz aracılığıyla uygulamanızın ikili dosyalarını, bağımlılıklarını ve test betiklerini içeren sıkıştırılmış klasörü karşıya yükleyin.
 
-Daha fazla bilgi için ekleme kullanıcı kılavuzuna bakın veya yardım ve daha fazla <testbasepreview@microsoft.com> bilgi için ekibimizle iletişime geçin.
+Daha fazla bilgi için ekleme kullanıcı kılavuzuna bakın veya yardım ve daha fazla bilgi için adresinden <testbasepreview@microsoft.com> ekibimize başvurun.
 
-**S: Test Tabanı test verilerimizi nasıl işler?**
+**S: Test Temeli test verilerimizi nasıl işler?**
 
-**A:** Test Base, Test verilerinizi Azure ortamında güvenli bir şekilde toplar ve yönetir. 
+**A:** Test Tabanı, Azure ortamında test verilerinizi güvenli bir şekilde toplar ve yönetir.
 
-**S: Test Bankası otomatik testlerimizi destekleye devam mı etmek istedi?**
+**S: Test Temeli otomatikleştirilmiş testlerimizi destekleyebilir mi?**
 
-**A:** Evet, Test Bankası otomatik testleri destekler, ancak hizmet özellikleri nedeniyle şu anda el ile yapılan testleri desteklemez.
+**A:** Evet, Test Temeli otomatikleştirilmiş testleri destekler, ancak hizmet özellikleri nedeniyle şu anda el ile testleri desteklemiyoruz.
 
-**S: Otomatik testlerin hangi dil ve çerçevelerini destekliyorsunuz?**
+**S: Otomatikleştirilmiş testlerin hangi dillerini ve çerçevelerini destekliyorsunuz?**
 
-**A:** Tüm dil ve çerçeveleri destekliyoruz. Tüm betikleri PowerShell aracılığıyla çağırıriz. 
+**A:** Tüm dilleri ve çerçeveleri destekliyoruz. Tüm betikleri PowerShell aracılığıyla çağırırız.
 
-Ayrıca gerekli çerçevenin bağımlı ikililerini de sağlay (karşıya yükleme) gerekir.
+Ayrıca gerekli çerçevenin bağımlı ikili dosyalarını sağlamanız (karşıya yüklemeniz) gerekir.
 
-**S: Test Tabanı test sonuçlarını ne zaman sağlar?**
+**S: Test Tabanı test sonuçlarını ne kadar sürede sağlar?**
 
-**A:** Yayın öncesi sürüm derlemeleri üzerinde çalıştırmız her test için, sonuçları Azure Portal pano üzerinde 48 saat içinde [size sunaruz](https://www.aka.ms/testbaseportal "Test Tabanı Giriş Sayfası") .
+**A:** Yayın öncesi derlemelerde çalıştırdığımız her test için [Azure Portal](https://www.aka.ms/testbaseportal "Test Temeli Giriş Sayfası") panonuzda 48 saat içinde sonuç sağlayacağız.
 
-**S: Yüklemeden sonra yeniden başlat biliyor musunuz?**
+**S: Yüklemeden sonra yeniden başlatılabilir misiniz?**
 
-**A:** Evet, bizim süreç yüklemeden sonra yeniden başlatmayı destekliyor. Ekleme portalında Görevlerinizi ayarlarken "İsteğe bağlı ayarlar" açılır **listesinden bu** seçeneği seçmeye emin olun.
+**A:** Evet, işlemimiz yüklemeden sonra yeniden başlatmayı destekler. Ekleme portalında **Görevlerinizi** ayarlarken "İsteğe bağlı ayarlar" bırakma listesinden bu seçeneği belirlediğinizden emin olun.
 
-Hazır (OOB) testleri için Yükleme betiği için yeniden başlatma gerekip gerek olmadığını _belirtebilirsiniz._
+İlk çalıştırma (OOB) testleri için _Yükleme betiği_ için yeniden başlatma gerekip gerekmediğini belirtebilirsiniz.
 
-![Resmi yeniden başlatma.](Media/reboot.png)
+![Resmi yeniden başlatın.](Media/reboot.png)
 
-İşlevsel testler içinyken, eklenen her betik için yeniden başlatma gerekip gerek olmadığını belirtsiniz.
+İşlevsel testler için, eklenen her betik için yeniden başlatma gerekip gerekmediğini belirtebilirsiniz.
 
 ![İşlevsel testleri seçme.](Media/functionalreboot.png)
 
-**S: Windows sürümleri destekliyorsunuz?**
+**S: Hangi Windows sürümlerini destekliyorsunuz?**
 
-**A:** Şu anda Windows 10, Windows Server 2016, Windows Server 2016 Core version, Windows Server 2019 ve Windows Server 2019 Çekirdek sürümünü destekliyoruz.
+**A:** Şu anda Windows 10 istemcileri, Windows Server 2016, Windows Server 2016 Core sürümü, Windows Server 2019 ve Windows Server 2019 Core sürümünü destekliyoruz.
 
-**S: Güvenlik Güncelleştirmesi testleri ile Özellik Güncelleştirmesi testleri arasında ne fark vardır?**
+**S: Güvenlik Güncelleştirmesi testleri ile Özellik Güncelleştirmesi testleri arasındaki fark nedir?**
 
-**A:** Güvenlik güncelleştirmesi testlerinde, kullanıcılarımızın her zaman **<ins></ins>** güvenli ve korumalı tutmaya odaklanan aylık yayın öncesi sürüm güvenlik güncelleştirmeleri Windows test edildi. Özellik güncelleştirmesi testlerinde, özelliklere ve özelliklere **<ins></ins>** yeni özellikler ekan iki yıllık sürüm öncesi özellik güncelleştirmelerini Windows.
+**A:** Güvenlik güncelleştirme testleri için, kullanıcılarımızın her zaman güvenli ve korumalı kalmasına odaklanan **<ins>Windows'da aylık yayın öncesi güvenlik güncelleştirmelerini</ins>** test ederiz. Özellik güncelleştirme testleri için, Windows yeni özellikler ve özellikler sunan **<ins>iki yıllık yayın öncesi özellik güncelleştirmelerini</ins>** test ediyoruz.
 
-## <a name="debugging-options"></a>Hata Ayıklama seçenekleri
+## <a name="debugging-options"></a>Hata ayıklama seçenekleri
 
-**S: Hata durumunda Sanal Makineler'e (SANAL MAKINELER) erişim elde ediyor muz? Test Bankası neyi paylaşır?**
+**S: Hata durumunda Sanal Makineler (VM) erişimimiz var mı? Test Temeli neleri paylaşır?**
 
-**A:** Hizmetin uyumlu olması ve yayın öncesi güncelleştirmelerin güvenli olması için, yalnızca Microsoft'un sanal filmlere erişimi olur. Bununla birlikte, müşteriler kilitlenme ve kilitlenme işaretleri, güvenilirlik ölçümleri, bellek ve CPU kullanımı vb. dahil olmak üzere test sonuçlarını ve diğer test ölçümlerini portal panolarında  görebilirsiniz. Ayrıca, indirmek ve daha fazla çözümleme yapmak için panoda test çalıştırma günlüklerini de oluşturabilir ve sağlaruz. 
+**A:** Hizmetin uyumlu olması ve yayın öncesi güncelleştirmelerin güvenli olması için vm'lere yalnızca Microsoft'un erişimi vardır. Ancak müşteriler, kilitlenme ve kilitlenme sinyalleri, güvenilirlik ölçümleri, bellek ve CPU kullanımı gibi test sonuçlarını ve diğer test ölçümlerini portal panolarında görüntüleyebilir. Ayrıca indirme ve daha fazla analiz için panoda test çalıştırmalarının günlüklerini oluşturur ve sağlarız.
 
-Ayrıca gerektiğinde kilitlenme hata ayıklaması için bellek dökümü de s sağlamamız gerekir.
+Gerektiğinde kilitlenme hata ayıklaması için bellek dökümleri de sağlayabiliriz.
 
-**S: Test sırasında sorunlar bulunursa, bu sorunları çözmek için sonraki adımlar neler?**
+**S: Test sırasında sorunlar bulunursa, bu sorunları çözmek için sonraki adımlar nelerdir?**
 
-**A:** Test Bankası ekibi hatanın temel nedenini belirlemek için bir ilk önce değerlendirme işlemi gerçekleştirecek ve bulgularımıza bağlı olarak hata ayıklama için Microsoft içindeki müşteriye veya iç ekiplere yönlendiracağız. 
+**A:** Test Tabanı ekibi, hatanın kök nedenini belirlemek için bir ilk önceliklendirme işlemi gerçekleştirecek ve bulgularımıza bağlı olarak hata ayıklama için Microsoft'taki müşteriye veya iç ekiplere yönlendireceğiz.
 
-Tüm sorunları çözmek için her zaman birlikte düzeltme yapmak için müşterilerimizle birlikte çalışıyoruz. 
+Sorunları çözmek için müşterilerimizle her zaman ortak bir düzeltmede yakın çalışıyoruz.
 
-**S: Microsoft, sorun çözülene kadar güvenlik düzeltme ekini yayımlar mı? Hangi alternatif çözünürlükler kullanılabilir?**
+**S: Microsoft, sorun çözülene kadar güvenlik düzeltme ekinin yayınını barındırıyor mu? Hangi alternatif çözünürlükler kullanılabilir?**
 
-**A:** Test Temel'in amacı, ortak son müşterilerimizin hiçbir sorunla karşı karşıya olmasını garanti etmektir. Yazılım Satıcıları ile birlikte sürümden önce herhangi bir sorunu çözmek için çok çalışıyoruz, ancak düzeltmenin uygun çalışmama durumu için shimler ve bloklar gibi başka çözümlarımız var.
+**A:** Test Temeli'nin amacı, ortak son müşterilerimizin herhangi bir sorunla karşılaşmamasını sağlamaktır. Sürümden önceki sorunları çözmek için Yazılım Satıcıları ile çok çalışacağız, ancak düzeltmenin uygun olmaması durumunda dolgular ve bloklar gibi başka çözümlerimiz var.
 
-## <a name="miscellaneous"></a>Diğer
+## <a name="miscellaneous"></a>Çeşitli
 
-**S: Hizmet, önceden var olan bir sunucuyla nasıl çalışır?**
+**S: Hizmet şirket içi bir sunucuyla nasıl çalışır?**
 
-**A:** Şu anda, prem sunucuları için destek sağlanmaz. Öte yandan, sunucu HTTP uç noktasını açığa çıkarıyorsa, İnternet üzerinden bağlanabilirsiniz.
+**A:** Şu anda şirket içi sunucular için destek sağlanmıyor. Ancak, sunucu HTTP uç noktasını açığa çıkartıyorsa, İnternet üzerinden bu uç noktaya bağlanabiliriz.
 
-**S: Who ana bilgisayarlarını nasıl barındırıyor?**
+**S: VM'leri Who barındırıyor?**
 
-**A:** Microsoft, bu hizmet için VM'yi sağlar ve bunun yükünü müşteriden sağlar.
+**A:** Microsoft, bu hizmet için VM'yi sağlar ve bunun yükünü müşteriden alır.
 
 **S: Bu hizmet web, mobil veya masaüstü uygulamalarını destekliyor mu?**
 
-**A:** Şu anda odak noktası masaüstü uygulamalarıdır, bununla birlikte, gelecekte web uygulamaları eklemeyi planlıyoruz, ancak şu anda mobil uygulamaları desteklememektedir.
+**A:** Şu anda masaüstü uygulamalarına odaklanıyoruz ancak gelecekte web uygulamaları ekleme planlarımız var ancak şu anda mobil uygulamaları desteklemiyoruz.
 
-**S: Test Tabanı ile ARACıNıN arasındaki fark nedir?**
+**S: Test Tabanı ile SUVP arasındaki fark nedir?**
 
-**A:** Test Tabanı ile THEP arasındaki en büyük fark, iş ortaklarımızın uygulamaları, testlerden kendi çıkarları yerine, doğrulama için Test Temel Azure ortamına eklemeleridir. 
+**A:** Test Temeli ile SUVP arasındaki en büyük fark, iş ortaklarımızın testlerin kendileri yerine yayın öncesi güncelleştirmelere karşı doğrulanması için uygulamalarını Test Temeli Azure ortamına eklemeleridir.
 
-Sürüm öncesi güvenlik güncelleştirmeleri testlerine ek olarak, platformumuz üzerinde yayın öncesi özellik güncelleştirmeleri testlerini de destekliyoruz. Yol haritamızda başka türde güncelleştirmeler ve işletim sistemi testlerimiz var.
+Yayın öncesi güvenlik güncelleştirmeleri testine ek olarak platformumuzda yayın öncesi özellik güncelleştirmeleri testlerini destekliyoruz. Yol haritamızda başka birçok güncelleştirme türü ve işletim sistemi testi var.
 
-**S: Hizmetle ilişkilendirilmiş bir ücret var mı?**
+**S: Hizmetle ilişkili bir maliyet var mı?**
 
-**A:** 1 Mart 2022'den itibaren geçerli olmak üzere, doğrulama ihtiyaçlarınızı karşılamak için aboneliğiniz kapsamında 6 ay içinde süresi dolan 100 ücretsiz saat (800 ABD Doları değerinde) sağlanacaktır. Ücretsiz saatler tüketildikten (veya kullanılmadan önce sona erdikten) sonra, kullanımınız karşısında otomatik olarak saat başına 8 $'lık tarife yapılır.   
+**A:** 1 Mart 2022'den itibaren, doğrulama gereksinimleriniz için aboneliğiniz kapsamında 6 ay içinde süresi dolan 100 ücretsiz saat (800 ABD doları olarak değer verilir) sağlanır. Ücretsiz saatler tüketildikten (veya kullanılmadan önce süresi dolduktan) sonra kullanımınıza göre saat başına 8 ABD doları ölçülür.
 
-**S: Test Tabanı hakkında nasıl geri bildirim s olabilirim?**
+**S: Test Temeli hakkında nasıl geri bildirim sağlayabilirim?**
 
-**A:** Test Tabanı hakkında geri bildiriminizi paylaşmak için **portalın sol** alt köşesindeki Geri Bildirim simgesini seçin. Microsoft'un geri bildiriminizi daha iyi an an önce an göndermenize yardımcı olmak için gönderinize bir ekran görüntüsü ekleme. 
+**A:** Test Tabanı hakkındaki geri bildiriminizi paylaşmak için portalın sol alt kısmındaki **Geri Bildirim** simgesini seçin. Microsoft'un geri bildiriminizi daha iyi anlamasına yardımcı olmak için gönderiminize bir ekran görüntüsü ekleyin.
 
-Ayrıca ürün önerilerini gönderebilirsiniz ve 'da diğer fikirleri destek oya atabilirsiniz <testbasepreview@microsoft.com>.
+Ayrıca adresinden ürün önerileri gönderebilir ve diğer fikirleri <testbasepreview@microsoft.com>oylayabilirsiniz.

@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Microsoft Purview uyumluluk portalında Oracle'daki Cisco Jabber'dan Microsoft 365 verileri içeri aktarmak ve arşivleme amacıyla bağlayıcıyı ayarlamayı ve kullanmayı öğrenin.
-ms.openlocfilehash: 7668defd3ef7157da185de7e51ef97e3127e67a4
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 33714412db56066b25a1bda03fb4a92c6c64f917
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64946692"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64992666"
 ---
 # <a name="set-up-a-connector-to-archive-cisco-jabber-on-oracle-data"></a>Oracle verilerinde Cisco Jabber'ı arşivleme bağlayıcısı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Verileri Oracle platformundaki Cisco Jabber'dan Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında bir Veritas bağlayıcısı kullanın. Veritas, üçüncü taraf veri kaynağından öğeleri yakalamak (düzenli olarak) ve bu öğeleri Microsoft 365'e aktarmak için yapılandırılmış oracle bağlayıcısı üzerinde [Cisco Jabber](https://www.veritas.com/insights/merge1/jabber) sağlar. Bağlayıcı, Oracle üzerinde Cisco Jabber'dan dosya ve dosya işlemleri, açıklamalar ve paylaşılan içerik gibi içerikleri e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'da kullanıcının posta kutusuna aktarır.
 

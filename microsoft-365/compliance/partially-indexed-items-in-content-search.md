@@ -21,14 +21,16 @@ search.appverid:
 - MET150
 ms.assetid: d1691de4-ca0d-446f-a0d0-373a4fc8487b
 description: Microsoft Purview uyumluluk portalında çalıştırdığınız bir eBulma aramasında ekleyebileceğiniz Exchange ve SharePoint dizine alınmamış öğeler hakkında bilgi edinin.
-ms.openlocfilehash: 3e4f9521151755f97f3ad4b824c763f3ab5d807f
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: b88e7d0f6651ecaa31849343db066295af1f5e84
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64932055"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64993106"
 ---
 # <a name="partially-indexed-items-in-ediscovery"></a>eBulma'da kısmen dizine alınan öğeler
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview uyumluluk portalından çalıştırdığınız Bir Microsoft Purview eKeşif araması, bir arama çalıştırdığınızda tahmini arama sonuçlarında otomatik olarak kısmen dizine alınmış öğeler içerir. Kısmen dizine alınan öğeler, SharePoint ve OneDrive İş sitelerindeki posta kutusu öğeleri ve belgeleri Exchange ve herhangi bir nedenle arama için tamamen dizine eklenmedi. Exchange'da, kısmen dizine alınan bir öğe genellikle bir e-posta iletisine eklenmiş bir dosya (dizine alınamaz dosya türünde) içerir. eBulma araması çalıştırdığınızda öğelerin arama için dizine alınamamalarının ve kısmen dizine alınan öğeler olarak döndürüllerinin diğer nedenlerinden bazıları şunlardır:
   

@@ -18,14 +18,16 @@ ms.assetid: 4e8ff113-6361-41e2-915a-6338a7e2a1ed
 ms.custom:
 - seo-marvel-apr2020
 description: Kuruluşunuzdaki Exchange, SharePoint ve OneDrive İş kısmen dizine alınmış öğeleri (dizine alınmamış öğeler olarak da adlandırılır) yönetmeyi öğrenin.
-ms.openlocfilehash: 8dd5235027a4563ad868d8ebe28c8dab50fb6376
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 0cab31f56576cac9cbe7b51ea2cdceb49aff6db9
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64944777"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64993128"
 ---
 # <a name="investigating-partially-indexed-items-in-ediscovery"></a>eBulma'da kısmen dizine alınan öğeleri araştırma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview uyumluluk portalından çalıştırdığınız bir eBulma araması, bir arama çalıştırdığınızda tahmini arama sonuçlarında otomatik olarak kısmen dizine alınmış öğeler içerir. Kısmen dizine alınan öğeler, SharePoint ve OneDrive İş sitelerindeki posta kutusu öğeleri ve belgeleri Exchange ve herhangi bir nedenle arama için tamamen dizine eklenmedi. Çoğu e-posta iletisi ve site belgesi, [e-posta iletileri için Dizin oluşturma sınırları](limits-for-content-search.md#indexing-limits-for-email-messages) içinde olduğundan başarıyla dizinlenir. Ancak, bazı öğeler bu dizin oluşturma sınırlarını aşabilir ve kısmen dizine alınabilir. eBulma araması çalıştırdığınızda öğelerin arama için dizine alınamamalarının ve kısmen dizine alınan öğeler olarak döndürüllerinin diğer nedenleri şunlardır:
   

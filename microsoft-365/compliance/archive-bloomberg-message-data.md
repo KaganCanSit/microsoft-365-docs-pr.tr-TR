@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Yöneticiler, Microsoft 365'daki Bloomberg Message e-posta aracından verileri içeri aktarmak ve arşivlemek için bir veri bağlayıcısı ayarlayabilir. Bu, kuruluşunuzun üçüncü taraf verilerini yönetmek için yasal tutma, İçerik Arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilmeniz için üçüncü taraf veri kaynaklarından verileri Microsoft 365 arşivleyebilmenizi sağlar.
-ms.openlocfilehash: 497e0e5e3f99c5776d872ef522107cb29ba0fd33
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 781378ba30ccb7db44191764e050277fa4a239aa
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64938763"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64992839"
 ---
 # <a name="set-up-a-connector-to-archive-bloomberg-message-data"></a>Bloomberg İleti verilerini arşivleye bir bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 [Bloomberg Message](https://www.bloomberg.com/professional/product/collaboration/) işbirliği aracından finansal hizmetler e-posta verilerini içeri aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında bir veri bağlayıcısı kullanın. Bağlayıcıyı ayarlayıp yapılandırdıktan sonra, her gün bir kez kuruluşunuzun Bloomberg güvenli FTP (SFTP) sitesine bağlanır ve e-posta öğelerini Microsoft 365 posta kutularına aktarır.
 

@@ -20,14 +20,16 @@ search.appverid:
 ms.assetid: e893b19a-660c-41f2-9074-d3631c95a014
 ms.custom: seo-marvel-apr2020
 description: Yöneticilerin denetim günlüğünde arama yapma özelliğini etkinleştirmek veya devre dışı bırakmak için Microsoft Purview uyumluluk portalında Denetim günlüğü arama özelliğini açma veya kapatma.
-ms.openlocfilehash: 587c7f98cd04eef618508e096f290d1d299ec096
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: e74effad1803b9a55167d1cd3bb5725bd042616a
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64944535"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64991830"
 ---
 # <a name="turn-auditing-on-or-off"></a>Denetimi açma veya kapatma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft 365 ve Office 365 kurumsal kuruluşlar için denetim günlüğü varsayılan olarak açılır. Ancak yeni bir Microsoft 365 veya Office 365 kuruluş ayarlarken kuruluşunuzun denetim durumunu doğrulamanız gerekir. Yönergeler için bu [makalenin Kuruluşunuzun denetim durumunu doğrulama](#verify-the-auditing-status-for-your-organization) bölümüne bakın. 
 

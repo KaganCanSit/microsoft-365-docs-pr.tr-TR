@@ -15,21 +15,23 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkEXCHANGE
 ROBOTS: NOINDEX, NOFOLLOW
 description: ''
-ms.openlocfilehash: 5de25b0b1385e709a818b1ff797910ec4ee4ddfc
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 28f110c6b236721debdb5585263dd835f2a5a658
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64949641"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64993150"
 ---
 # <a name="migrate-legacy-ediscovery-searches-and-holds-to-the-compliance-portal"></a>Eski eBulma aramalarını ve tutmalarını uyumluluk portalına geçirme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview uyumluluk portalı, eKeşif kullanımı için gelişmiş bir deneyim sağlar: daha yüksek güvenilirlik, daha iyi performans ve içeriğinizi maddeye göre düzenleme örnekleri dahil olmak üzere eBulma iş akışlarına uyarlanmış birçok özellik, içeriği gözden geçirmek için inceleme kümeleri ve analizler de dahil olmak üzere, verileri gözden geçirmek üzere neredeyse yinelenen gruplandırma, e-posta iş parçacığı oluşturma, tema analizi ve tahmine dayalı kodlama gibi birçok özellik.
 
 Müşterilerin yeni ve geliştirilmiş işlevlerden yararlanmasına yardımcı olmak için, bu makalede In-Place eBulma aramalarını ve tutmalarını <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange yönetim merkezinden</a> uyumluluk portalına geçirme konusunda temel yönergeler sağlanır.
 
 > [!NOTE]
-> Birçok farklı senaryo olduğundan bu makale, uyumluluk portalında aramaları ve tutmaları temel bir eBulma olayına geçirme konusunda genel rehberlik sağlar. eBulma servis taleplerinin kullanılması her zaman gerekli değildir, ancak kuruluşunuzdaki eBulma servis taleplerine kimlerin erişimi olduğunu denetlemek için izinler atamanıza izin vererek ek bir güvenlik katmanı ekler.
+> Birçok farklı senaryo olduğundan bu makale, uyumluluk portalında arama ve ayrı tutma işlemlerini eBulma (Standart) durumuna geçirme konusunda genel rehberlik sağlar. eBulma servis taleplerinin kullanılması her zaman gerekli değildir, ancak kuruluşunuzdaki eBulma servis taleplerine kimlerin erişimi olduğunu denetlemek için izinler atamanıza izin vererek ek bir güvenlik katmanı ekler.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 

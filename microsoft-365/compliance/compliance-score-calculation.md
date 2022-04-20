@@ -13,110 +13,112 @@ ms.collection: M365-security-compliance
 search.appverid:
 - MOE150
 - MET150
-description: Microsoft Uyumluluk Yöneticisi'nin, risklere yönelik işlemlere dayalı olarak kişiselleştirilmiş bir puanı nasıl hesapta olduğunu an edin ve uyumluluk kalitenizi geliştirin.
+description: Microsoft Purview Uyumluluk Yöneticisi'nin riskleri ele almak ve uyumluluk duruşunuzu geliştirmek için gerçekleştirilen eylemlere göre kişiselleştirilmiş bir puanı nasıl hesapladığını anlayın.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 9c6667ad9be6164639e65e23fb136de1bc196f60
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 07a168bd32e73502380260db748fd145648c69ae
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63320039"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64971186"
 ---
 # <a name="compliance-score-calculation"></a>Uyumluluk puanı hesaplaması
 
-**Bu makalede:** Uyumluluk Yöneticisi'nin, organizasyonunız için uyumluluk puanı hesaplamayı öğrenin. Bu makalede puanınızı nasıl **yorumlayabilirsiniz**, Veri **Koruma** Temeli değerlendirmesini neler içerir, **sürekli** izleme ve farklı eylem türlerinin nasıl yönetiliyor **ve puanlandı**.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+**Bu makalede:** Uyumluluk Yöneticisi'nin kuruluşunuz için uyumluluk puanı hesaplamasını öğrenin. Bu makalede **puanınızı yorumlama**, **Veri Koruma Temeli değerlendirmesinin** neler içerdiği, **sürekli izleme** ve **farklı eylem türlerinin nasıl yönetilip puanlanmış olduğu açıklanmaktadır**.
 
 > [!IMPORTANT]
-> Öneriler Yöneticisi'nin size yardımcı olması, uyumluluk garantisi olarak yorumlanmaz. Mevzuat ortamınız başına müşteri denetimlerinin ne kadar etkili olduğunu değerlendirmeniz ve doğrulamanız size göredir. Bu hizmetler Çevrimiçi Hizmet Koşullarındaki hüküm ve [şartlara bağlıdır](https://go.microsoft.com/fwlink/?linkid=2108910). Güvenlik ve [Microsoft 365 için lisanslama kılavuzuna da bakın](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
+> Uyumluluk Yöneticisi'nden gelen Öneriler, uyumluluk garantisi olarak yorumlanmamalıdır. Yasal ortamınıza göre müşteri denetimlerinin etkinliğini değerlendirmek ve doğrulamak size aittir. Bu hizmetler [, Ürün Koşulları'ndaki](https://go.microsoft.com/fwlink/?linkid=2108910) hüküm ve koşullara tabidir. Ayrıca bkz[. Microsoft 365 güvenlik ve uyumluluk için lisanslama kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-compliance-manager).
 
 ## <a name="how-to-read-your-compliance-score"></a>Uyumluluk puanınızı okuma
 
-Uyumluluk Yöneticisi panosu, genel uyumluluk puanınızı görüntüler. Bu puan, denetimler içinde önerilen geliştirme eylemlerini tamamlamada ilerlemenizi ölçür. Puanınız geçerli uyumluluk sonrası sonrasınızı anlamanıza yardımcı olabilir. Ayrıca, riski azaltma potansiyellerine göre eylemlerin önceliklerini belirlemede size yardımcı olabilir.
+Uyumluluk Yöneticisi panosu genel uyumluluk puanınızı görüntüler. Bu puan, denetimler içindeki önerilen iyileştirme eylemlerini tamamlama ilerlemenizi ölçer. Puanınız geçerli uyumluluk duruşunuzu anlamanıza yardımcı olabilir. Ayrıca riski azaltma potansiyeline göre eylemleri önceliklendirmenize de yardımcı olabilir.
 
-Üç düzeyde bir puan değeri atanır:
+Puan değeri üç düzeyde atanır:
 
-1. **Geliştirme eylem puanı**: Her eylemin, söz konusu olası risklere bağlı olarak puanınız üzerinde farklı bir etkisi vardır
+1. **İyileştirme eylem puanı**: Her eylemin olası risklere bağlı olarak puanınız üzerinde farklı bir etkisi vardır
 
-2. **Denetim puanı**: Bu puan, denetim içinde geliştirme eylemleri tamamlayarak kazanılan puan toplamıdır. Denetim aşağıdaki koşulların her ikisini de karşı olduğunda, bu toplam, tamamen sizin genel uyumluluk puanınıza uygulanır:
-    - **Uygulama Durumu** , Uygulanan **veya Alternatif** **Uygulama'ya eşittir** ve
-    - **Test Sonucu Geçirilen** **Değere eşittir**.
+2. **Denetim puanı**: Bu puan, denetim içindeki iyileştirme eylemleri tamamlanarak kazanılan puanların toplamıdır. Bu toplam, denetim aşağıdaki koşulların ikisini de karşıladığında genel uyumluluk puanınıza tamamen uygulanır:
+    - **Uygulama Durumu** , **Uygulanan** veya **Alternatif Uygulama'ya** eşittir ve
+    - **Test Sonucu****, Başarılı'ya** eşittir.
 
-3. **Değerlendirme puanı**: Bu puan, denetim puanlarının toplamıdır. Eylem puanları kullanılarak hesaplanır. Bir denetimde ne sıklıkta başvuruldu olursa olsun, her Microsoft eylemi ve organizasyonu tarafından yönetilen her geliştirme eylemi bir kez sayılır.
+3. **Değerlendirme puanı**: Bu puan, denetim puanlarınızın toplamıdır. Eylem puanları kullanılarak hesaplanır. Kuruluşunuz tarafından yönetilen her Microsoft eylemi ve her geliştirme eylemi, denetimde ne sıklıkta başvurulduğundan bağımsız olarak bir kez sayılır.
 
-Genel uyumluluk puanı, eylem puanları kullanılarak hesaplanır; burada her Microsoft eylemi bir kez sayılır, yönet her teknik eylem bir kez sayılır ve yönetilmeyen her teknik eylem grup başına bir kez sayılır. Bu mantık, eylemlerin kuruluş içinde nasıl uygulandığını ve test edildiklerinin en doğru muhasebeini sağlamak için tasarlanmıştır. Bunun, genel uyumluluk puanınıza, değerlendirme puanlarının ortalamalarından farklı bir neden olduğunu fark edin. Eylemlerin nasıl [puanlandıkları hakkında daha fazla makale okuyun](#action-types-and-points).
+Genel uyumluluk puanı, her Microsoft eyleminin bir kez sayıldığı, yönettiğiniz her teknik eylemin bir kez ve yönettiğiniz teknik olmayan her eylemin grup başına bir kez sayıldığı eylem puanları kullanılarak hesaplanır. Bu mantık, eylemlerin kuruluşunuzda nasıl uygulandığı ve test edildiğinde en doğru muhasebeyi sağlamak için tasarlanmıştır. Bunun genel uyumluluk puanınızın değerlendirme puanlarınızın ortalamasından farklı olduğuna neden olabileceğini fark edebilirsiniz. [Eylemlerin nasıl puanlanmış olduğu](#action-types-and-points) hakkında daha fazla bilgiyi aşağıda bulabilirsiniz.
 
-## <a name="initial-score-based-on-microsoft-365-data-protection-baseline"></a>Veri koruma temeli Microsoft 365 temel alınan ilk puan
+## <a name="initial-score-based-on-microsoft-365-data-protection-baseline"></a>Microsoft 365 veri koruma temeli temelinde ilk puan
   
-Uyumluluk Yöneticisi size, temel veri koruma Microsoft 365 bir başlangıç puanı verir. Bu taban çizgisi, veri koruma ve genel veri idaresi için temel düzenlemeleri ve standartları içeren bir dizi denetimdir. Bu taban çizgisi öncelikle NIST CSF (Ulusal Standartlar ve Teknoloji Enstitüsü Cybersecurity Framework) ve ISO (Standartlaştırma için Uluslararası Kuruluş) ile FedRAMP (Federal Risk ve Yetkilendirme Yönetim Programı) ve GDPR (Avrupa Birliği Genel Veri Koruma Yönetmeliği) kaynaklarından gelen öğeleri çizmektedir.
+Uyumluluk Yöneticisi, Microsoft 365 veri koruma temeli temelinde size bir başlangıç puanı verir. Bu temel, veri koruma ve genel veri idaresi için temel düzenlemeleri ve standartları içeren bir dizi denetimdir. Bu temel öncelikle NIST CSF (National Institute of Standards and Technology Cybersecurity Framework) ve ISO (International Organization for Standardization) ile FedRAMP (Federal Risk ve Authorization Management Program) ve GDPR (Avrupa Birliği Genel Veri Koruma Yönetmeliği) öğelerini kullanır.
 
-İlk puanınız, tüm kuruluşlara sağlanan varsayılan Veri Koruma Temeli değerlendirmesine göre hesaplanır. İlk ziyaretin ardından, Uyumluluk Yöneticisi zaten proje çözümlerinden sinyaller Microsoft 365 bir hizmettir. Kuruluşlarının önemli veri koruma standartları ve yasal düzenlemelere göre nasıl performans gösterirken bir bakışta bakarak gerçekleştirmesi önerilen geliştirme işlemlerine bakabilirsiniz.
+İlk puanınız, tüm kuruluşlara sağlanan varsayılan Veri Koruma Temeli değerlendirmesine göre hesaplanır. İlk ziyaretinizde, Uyumluluk Yöneticisi zaten Microsoft 365 çözümlerinizden sinyal topluyor. Kuruluşunuzun temel veri koruma standartlarına ve düzenlemelerine göre nasıl performans sergilediğini bir bakışta göreceksiniz ve gerçekleştirilecek önerilen iyileştirme eylemlerine göz atacaksınız.
 
-Her kuruluşun belirli ihtiyaçları olduğundan, Uyumluluk Yöneticisi riski mümkün olduğunca kapsamlı olarak en aza indirmeye ve en aza indirmeye yardımcı olmak için değerlendirmeleri ayarlamak ve yönetmek için size güvenmektedir.
+Her kuruluşun belirli gereksinimleri olduğundan, Uyumluluk Yöneticisi riski olabildiğince kapsamlı bir şekilde en aza indirmeye ve azaltmaya yardımcı olmak için değerlendirmeleri ayarlamanıza ve yönetmenize bağlıdır.
 
-## <a name="how-compliance-manager-continuously-assesses-controls"></a>Uyumluluk Yöneticisi denetimleri sürekli nasıl değerlendirir
+## <a name="how-compliance-manager-continuously-assesses-controls"></a>Uyumluluk Yöneticisi denetimleri sürekli olarak nasıl değerlendirir?
 
-Uyumluluk Yöneticisi, bazı yapılandırmaların geliştirme eylemi uygulama gereksinimlerini ne zaman Microsoft 365 yardımcı olacak, bu ayarları otomatik olarak sizin ortamınıza tanımlar. Uyumluluk Yöneticisi, bilgi yönetimi, bilgi koruma, iletişim uyumluluğu ve insider risk yönetimi dahil olmak üzere, dağıt dağıtılmış diğer uyumluluk çözümlerinden sinyaller algılar ve ayrıca tamamlayıcı geliştirme eylemlerinin Microsoft Güvenli Puanı izlemesinden faydalanr.
+Uyumluluk Yöneticisi, Microsoft 365 ortamınızdaki bazı yapılandırmaların iyileştirme eylemi uygulama gereksinimlerini ne zaman karşıladığını belirlemeye yardımcı olan ayarları otomatik olarak tanımlar. Uyumluluk Yöneticisi, veri yaşam döngüsü yönetimi, bilgi koruması, iletişim uyumluluğu ve iç risk yönetimi dahil olmak üzere dağıtmış olabileceğiniz diğer uyumluluk çözümlerinden gelen sinyalleri algılar ve ayrıca tamamlayıcı iyileştirme eylemlerinin Microsoft Güvenli Puan izlemesinden yararlanır.
 
-Eylem durumunuz, değişikliğin olduğu 24 saat içinde panoda güncelleştirilir. Bir denetim uygulama önerisinde bulunduktan sonra, normalde sonraki gün denetim durumunun güncelleştirilmiş olduğunu da edersiniz.
+Eylem durumunuz, değişiklik yapıldıktan sonraki 24 saat içinde panonuzda güncelleştirilir. Bir denetimi uygulamak için bir öneriyi izledikten sonra, genellikle denetim durumunun ertesi gün güncelleştirildiğini görürsünüz.
 
-Örneğin, Azure AD portalında Multi-Factor Authentication'i (MFA) etkinleştirirseniz, Uyumluluk Yöneticisi ayarı algılar ve denetim erişimi çözümü ayrıntılarına yansıttır. Buna karşılık, MFA'yı açmadısanız Uyumluluk Yöneticisi bu işlemi sizin için önerilen bir işlem olarak bayrakla bayrakla işaretleri.
+Örneğin, Azure AD portalında çok faktörlü kimlik doğrulamasını (MFA) açarsanız, Uyumluluk Yöneticisi ayarı algılar ve denetim erişim çözümü ayrıntılarına yansıtır. Buna karşılık, MFA'yı açmadıysanız, Uyumluluk Yöneticisi bunu gerçekleştirmeniz için önerilen bir eylem olarak işaretler.
 
-Güvenli Puan ve [bu puanın nasıl çalıştığını öğrenin](../security/defender/microsoft-secure-score.md).
+[Güvenli Puan ve nasıl çalıştığı](../security/defender/microsoft-secure-score.md) hakkında daha fazla bilgi edinin.
   
 ## <a name="action-types-and-points"></a>Eylem türleri ve noktaları
 
-Uyumluluk Yöneticisi iki tür eylem izler:
+Uyumluluk Yöneticisi iki tür eylemi izler:
 
-1. **Geliştirme eylemleriniz**: kuruluşun yönett olduğu eylemler.
-2. **Microsoft eylemleri**: Microsoft'un yönett olduğu eylemler.
+1. **Geliştirme eylemleriniz**: kuruluşunuzun yönettiği eylemler.
+2. **Microsoft eylemleri**: Microsoft'un yönettiği eylemler.
 
-Her iki eylem türü de, tamamlandığında genel puanınıza doğru bir puan içerir.
+Her iki eylem türü de tamamlandığında toplam puanınıza doğru sayan puanlara sahiptir.
 
 ### <a name="technical-and-non-technical-actions"></a>Teknik ve teknik olmayan eylemler
 
-Eylemler, teknik mi yoksa teknik olmayan eylemler mi yoksa doğada teknik mi yoksa teknik olmayan eylemlere göre grup sağlar. Her eylemin puanlama etkisi türe göre farklılık gösterir.
+Eylemler, doğası gereği teknik veya teknik olmayan eylemlere göre gruplandırılır. Her eylemin puanlama etkisi türe göre farklılık gösterir.
 
-- **Teknik eylemler** , çözüm teknolojisiyle etkileşim kurarak uygulanır (örneğin, bir yapılandırmayı değiştirme). Teknik eylemlerin noktaları, ne kadar gruba ait olursa olsun, her eylem için bir kez vetir.
+- **Teknik eylemler** , bir çözümün teknolojisiyle etkileşim kurarak (örneğin, yapılandırmayı değiştirerek) uygulanır. Teknik eylemlere yönelik puanlar, kaç gruba ait olduğuna bakılmaksızın eylem başına bir kez verilir.
 
-- **Teknik olmayan eylemler** organizasyonunız tarafından yönetilir ve çözüm teknolojisiyle çalışma dışında yöntemlerle uygulanır. Teknik olmayan iki tür eylem vardır: **belgeler ve** **işlem**. Bu eylemlerin puanları, grup düzeyinde uyumluluk puanınıza uygulanır. Başka bir ifadeyle, bir eylem birden çok grupta yer alırsa, eylemi bir grup içinde her uygulayan eylemin nokta değerini alırsınız.
+- **Teknik olmayan eylemler** kuruluşunuz tarafından yönetilir ve çözüm teknolojisiyle çalışma dışında yöntemlerle uygulanır. İki tür teknik olmayan eylem vardır: **belgeler** ve **operasyonel**. Bu eylemlerin puanları, grup düzeyinde uyumluluk puanınıza uygulanır. Bu, birden çok grupta bir eylem varsa, bir grup içinde her uyguladığınızda eylemin nokta değerini alacağınız anlamına gelir.
 
 **Teknik ve teknik olmayan eylemlerin nasıl puanlandıklarının örneği:**
 
-Diyelim ki, 5 grupta yer alan 3 puanlık bir teknik eyleme sahipsiniz ve aynı 5 grupta 3 puan değerinde teknik olmayan bir eyleme sahipsiniz.
+5 grupta bulunan 3 puanlık bir teknik eyleminiz olduğunu ve aynı 5 grupta bulunan 3 puanlık teknik olmayan bir eyleminiz olduğunu varsayalım.
 
-Teknik eylemi başarıyla tamamlarsanız, toplam puan sayısı 3'tir. Bunun nedeni, eylemi kiracınız için tek bir kez uygulamanız gerektir. Teknik eylemin uygulama ve test durumu, bu eylemin ait olduğu her grupta tüm örneklerde aynı şekilde gösterir.
+Teknik eylemi başarıyla uygularsanız, aldığınız toplam puan sayısı 3 olur. Bunun nedeni, eylemi kiracınız için yalnızca bir kez uygulamanız gerektiğidir. Teknik eylemin uygulama ve test durumu, bu eylemin tüm örneklerinde ve ait olduğu her grupta aynı şeyi gösterir.
 
-Her 5 grubun her birsinde teknik olmayan bir eylemi başarıyla tamamladıysanız, toplam puan sayısı 15'tir. Bunun nedeni, eylemi her grupta uygulamalı gerektir. Teknik olmayan eylemin uygulama ve test durumu grupları arasında farklılık gösterir, çünkü eylem grupların her biri içinde ayrı ayrı uygulanır.
+5 grubun her birinde teknik olmayan eylemi başarıyla uygularsanız, aldığınız toplam puan sayısı 15'tir. Bunun nedeni eylemi her grupta uygulamanız gerektiğidir. Teknik olmayan eylemin uygulama ve test durumu gruplar arasında farklılık gösterir, çünkü eylem grupların her birinde ayrı ayrı uygulanır.
 
-Bu puanlama mantığı, eylemlerin organizasyonda nasıl uygulandığını ve test edildiklerinin en doğru muhasebeini sağlamak için tasarlanmıştır.
+Bu puanlama mantığı, eylemlerin kuruluşunuzda nasıl uygulanıp test edildiğinden en doğru şekilde hesaplanması için tasarlanmıştır.
 
-### <a name="how-score-values-are-determined"></a>Puan değerleri nasıl belirlenir
+### <a name="how-score-values-are-determined"></a>Puan değerleri nasıl belirlenir?
 
-Eylemlere, zorunlu veya imtiyazlı olup olmadığı ve bunların engelli, tedbirli veya düzeltici olup olmadığı bağlı olarak bir puan değeri atanır.
+Eylemlere zorunlu veya isteğe bağlı olup olmadıklarına ve önleyici, dedektif veya düzeltici olup olmadıklarına bağlı olarak bir puan değeri atanır.
 
-### <a name="mandatory-and-discretionary-actions"></a>Zorunlu ve irde bağlı eylemler
+### <a name="mandatory-and-discretionary-actions"></a>Zorunlu ve isteğe bağlı eylemler
 
-- **Zorunlu eylemler** bilerek veya yanlışlıkla atlanır. Zorunlu eylem örneği, parola uzunluğu, karmaşıklığı ve süre sonu gereksinimlerini ayaran merkezi olarak yönetilen bir parola ilkesidir. Kullanıcıların sisteme erişmek için bu gereksinimleri izlemesi gerekir.
+- **Zorunlu eylemler** bilerek veya yanlışlıkla atlanamaz. Zorunlu eyleme örnek olarak parola uzunluğu, karmaşıklık ve süre sonu gereksinimlerini ayarlayan merkezi olarak yönetilen bir parola ilkesi gösteriliyor. Kullanıcıların sisteme erişmek için bu gereksinimlere uyması gerekir.
   
-- **İsteğe bağlı eylemler** , kullanıcıların bir ilkeyi anması ve ilkeye bağlı kalmasını sağlar. Örneğin, kullanıcıların bilgisayarlarından ayrıldıklarında bilgisayarlarını kilitlemelerini gerektiren bir ilke, kullanıcıya dayandırılacağı için i İsteğe bağlı bir eylemdir.
+- **İsteğe bağlı eylemler** , bir ilkeyi anlamak ve ilkeye bağlı kalmak için kullanıcılara bağlıdır. Örneğin, kullanıcılardan ayrıldıklarında bilgisayarlarını kilitlemelerini gerektiren bir ilke, kullanıcıya bağlı olduğundan isteğe bağlı bir eylemdir.
   
-### <a name="preventative-detective-and-corrective-actions"></a>Preventative, bire bir, bire bir düzeltme eylemleri
+### <a name="preventative-detective-and-corrective-actions"></a>Önleyici, dedektif ve düzeltici eylemler
   
-- **Belirli risklere yönelik** engelleme eylemleri. Örneğin, şifreleme kullanarak yerinde bilgileri korumak saldırılara ve ihlallere karşı önlem almaktır. Görevlerin ayrımı, faiz çakışmasını ve dolandırıcılığa karşı korumayı yönetmek için önlem önlemdir.
+- **Önleyici eylemler** belirli riskleri ele alır. Örneğin, bekleyen bilgileri şifreleme kullanarak korumak saldırılara ve ihlallere karşı önleyici bir eylemdir. Görev ayrımı, çıkar çatışmasını yönetmek ve sahtekarlığa karşı korunmak için önleyici bir eylemdir.
   
-- **Eylem eylemleri** , riski temsil eden ya da izinsizleri veya ihlalleri tespit etmek için gerektirilenleri belirlemek için sistemleri etkin bir şekilde takip eder. Örnek olarak sistem erişimi denetimi ve ayrıcalıklı yönetim eylemleri örnek olarak verilmiştir. Mevzuat uyumluluğu denetimleri, süreç sorunlarını bulmak için kullanılmaktadır.
+- **Dedektif eylemleri** , riski temsil eden ya da izinsiz girişleri veya ihlalleri algılamak için kullanılabilecek düzensiz koşulları veya davranışları belirlemek için sistemleri etkin bir şekilde izler. Örnek olarak sistem erişimi denetimi ve ayrıcalıklı yönetim eylemleri verilebilir. Mevzuat uyumluluğu denetimleri, süreç sorunlarını bulmak için kullanılan bir tür dedektif eylemidir.
   
-- **Düzeltme eylemleri,** güvenlik olaylarının olumsuz etkilerini minimum düzeyde tutmaya, anında efekti azaltmak ve mümkünse hasarları tersine çevirmek için düzeltme eylemi yapmaya çalışabilirsiniz. Gizlilik olayı yanıtı, bir ihlal sonrasında zararları sınırlandıran ve sistemleri faaliyet durumuna geri yüklemek için yapılan bir düzeltici eylemdir.
+- **Düzeltici eylemler** , bir güvenlik olayının olumsuz etkilerini en aza düşürmeye, anında etkiyi azaltmak için düzeltici eylem gerçekleştirmeye ve mümkünse zararı tersine çevirmeye çalışır. Gizlilik olayı yanıtı, hasarları sınırlamak ve sistemleri bir ihlal sonrasında işletimsel duruma geri yüklemek için yapılan düzeltici bir eylemdir.
   
-Her eylemin Uyumluluk Yöneticisi'nde temsil ettiği risklere göre atanmış bir değeri vardır:
+Her eylemin Uyumluluk Yöneticisi'nde temsil edilen risk temelinde atanmış bir değeri vardır:
 
 |**Tür**|**Atanan puan**|
 |:-----|:-----|
-| Zorunlu engelleme | 27 |
-| Preventative discretionary | 9 |
-| Erkek için zorunlu | 3 |
-| İsteğe bağlı olarak | 1 |
-| Düzeltme zorunlu | 3 |
-| Düzeltici imtiyazlı | 1 |
+| Önleyici zorunlu | 27 |
+| Önleyici isteğe bağlı | 9 |
+| Dedektif zorunlu | 3 |
+| Dedektif isteğe bağlı | 1 |
+| Düzeltici zorunlu | 3 |
+| Düzeltici isteğe bağlı | 1 |
   
 ![Uyumluluk Yöneticisi eylem noktası değerleri.](../media/compliance-score-action-scoring.png "Uyumluluk Yöneticisi eylem noktası değerleri")

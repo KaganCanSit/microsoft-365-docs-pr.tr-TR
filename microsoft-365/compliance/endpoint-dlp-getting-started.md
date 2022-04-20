@@ -1,5 +1,5 @@
 ---
-title: Uç nokta veri Microsoft 365 önleme ile çalışmaya başlama
+title: Uç noktada veri kaybı önlemeyi kullanmaya başlama
 f1.keywords:
 - CSH
 ms.author: chrfox
@@ -19,71 +19,73 @@ ms.collection:
 search.appverid:
 - MET150
 ms.custom: admindeeplinkCOMPLIANCE
-description: Dosya etkinliklerini izlemek Microsoft 365 uç noktalara bu dosyalar için koruyucu eylemler uygulamak için Uç nokta veri kaybını önlemeyi ayarlayın.
-ms.openlocfilehash: e29db57c42081349064fd690c5c9fcebee0f8045
-ms.sourcegitcommit: 8eca41cd21280ffcb1f50cafce7a934e5544f302
+description: Dosya etkinliklerini izlemek ve bu dosyalar için uç noktalara koruyucu eylemler uygulamak için Uç nokta veri kaybı önlemeyi ayarlayın.
+ms.openlocfilehash: 097ad2ab08d31482413285d3b3d82e6b43255281
+ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "62999579"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64952764"
 ---
-# <a name="get-started-with-endpoint-data-loss-prevention"></a>Uç nokta veri kaybını önlemeye başlama
+# <a name="get-started-with-endpoint-data-loss-prevention"></a>Uç noktada veri kaybı önlemeyi kullanmaya başlama
 
-Microsoft Uç Nokta veri kaybı önleme (Uç Nokta DLP), çeşitli hizmetler genelinde hassas öğeleri keşfetmek ve korumak için kullanabileceğiniz Microsoft 365 veri kaybı önleme (DLP) özelliklerinin bir Microsoft 365 vardır. Microsoft'un tüm DLP teklifleri hakkında daha fazla bilgi için bkz. [Veri kaybını önleme hakkında bilgi.](dlp-learn-about-dlp.md) Uç nokta DLP hakkında daha fazla bilgi edinmek için bkz [. Uç nokta veri kaybını önleme hakkında bilgi](endpoint-dlp-learn-about.md)
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Microsoft Endpoint D Windows 10 LP, Catalina [10.15](device-onboarding-overview.md) ve daha yüksek sürümü çalıştıran Windows 11 ve ekli [macOS cihazlarını *(önizleme)*](device-onboarding-macos-overview.md) izlemenizi sağlar. Bir cihaz alındıktan sonra, DLP hassas öğelerin ne zaman kullanılmış ve paylaşılıyor olduğunu algılar. Bu size, bunların düzgün kullanıldıklarını ve korunacaklarını garanti etmek ve onları tehlikeye atacak riskli davranışı önlemeye yardımcı olmak için gereken görünürlük ve denetimi sağlar.
+Uç nokta veri kaybı önleme (Endpoint DLP), Microsoft 365 hizmetlerindeki hassas öğeleri bulmak ve korumak için kullanabileceğiniz Microsoft Purview Veri Kaybı Önleme (DLP) özellik paketinin bir parçasıdır. Microsoft'un tüm DLP teklifleri hakkında daha fazla bilgi için bkz. [Veri kaybını önleme hakkında bilgi edinin](dlp-learn-about-dlp.md). Uç Nokta DLP hakkında daha fazla bilgi edinmek için bkz [. Uç nokta veri kaybını önleme hakkında bilgi edinin](endpoint-dlp-learn-about.md)
+
+Microsoft Endpoint DLP, Catalina 10.15 ve üzerini çalıştıran eklenen [Windows 10 ve Windows 11](device-onboarding-overview.md) ve [eklenen macOS cihazlarını](device-onboarding-macos-overview.md) izlemenizi sağlar. Bir cihaz eklendikten sonra, DLP hassas öğelerin ne zaman kullanıldığını ve paylaşılacağını algılar. Bu, bunların düzgün kullanıldığından ve korunduğundan emin olmak ve onları tehlikeye atabilecek riskli davranışları önlemeye yardımcı olmak için ihtiyacınız olan görünürlüğü ve denetimi sağlar.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-### <a name="skusubscriptions-licensing"></a>SKU/abonelik lisansı
+### <a name="skusubscriptions-licensing"></a>SKU/abonelik lisanslama
 
-Uç Nokta DLP'yi başlamadan önce, Microsoft 365 [ve varsa](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=1) eklentileri doğrulamanız gerekir. Uç Nokta DLP işlevselliğine erişmek ve bunları kullanmak için, bu aboneliklerden veya eklentilerden biri olmalıdır.
+Uç Nokta DLP'sini kullanmaya başlamadan önce [Microsoft 365 aboneliğinizi](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=1) ve tüm eklentileri onaylamanız gerekir. Uç Nokta DLP işlevselliğine erişmek ve bunları kullanmak için bu aboneliklerden veya eklentilerden birine sahip olmanız gerekir.
 
 - Microsoft 365 E5
 - Microsoft 365 A5 (EDU)
 - Microsoft 365 E5 uyumluluğu
 - Microsoft 365 A5 uyumluluğu
-- Microsoft 365 E5 koruma ve yönetim bilgilerini koruma
-- Microsoft 365 A5 koruma ve yönetim bilgilerini koruma
+- Microsoft 365 E5 bilgi koruma ve idare
+- Microsoft 365 A5 bilgi koruma ve idare
 
-lisans ayrıntılarının tamamını görmek için Microsoft 365 [koruma için lisanslama kılavuzuna bakın.](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection-data-loss-prevention-for-exchange-online-sharepoint-online-and-onedrive-for-business)
+Tam lisanslama ayrıntıları için bkz. [bilgi koruması için Microsoft 365 lisanslama kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection-data-loss-prevention-for-exchange-online-sharepoint-online-and-onedrive-for-business)
 
-### <a name="configure-proxy-on-the-windows-10-or-windows-11-device"></a>Windows 10 11 Windows proxy'yi yapılandırma
+### <a name="configure-proxy-on-the-windows-10-or-windows-11-device"></a>Windows 10 veya Windows 11 cihazında ara sunucuyu yapılandırma
 
-Windows 10 veya Windows 11 cihazıyla birlikte çalışıyorsanız cihazın bulut DLP hizmetiyle iletişim kurasını kontrol edin. Daha fazla bilgi için Bkz. [Bilgi Koruması için cihaz ara sunucusunu ve İnternet bağlantısı ayarlarını yapılandırma](device-onboarding-configure-proxy.md#configure-device-proxy-and-internet-connection-settings-for-information-protection).
+Windows 10 veya Windows 11 cihazları ekliıyorsanız cihazın bulut DLP hizmetiyle iletişim kuradığından emin olun. Daha fazla bilgi için bkz[. Information Protection için cihaz ara sunucusu ve internet bağlantısı ayarlarını yapılandırma](device-onboarding-configure-proxy.md#configure-device-proxy-and-internet-connection-settings-for-information-protection).
 
-## <a name="windows-10-and-windows-11-onboarding-procedures"></a>Windows 10 ve Windows 11 Ekleme yordamları
+## <a name="windows-10-and-windows-11-onboarding-procedures"></a>ekleme yordamlarını Windows 10 ve Windows 11
 
-Cihaz eklemeye genel bir Windows için bkz:
+Windows cihazları eklemeye genel bir giriş için bkz:
 
-- [11 Windows 10 cihaz Windows cihaz ekleme ve cihaz ekleme Microsoft 365 genel bakış](device-onboarding-overview.md#onboard-windows-10-and-windows-11-devices-into-microsoft-365-overview)
+- [Windows 10 ve Windows 11 cihazlarını Microsoft Purview'a eklemeye genel bakış](device-onboarding-overview.md#onboard-windows-10-and-windows-11-devices-into-microsoft-365-overview)
 
-Cihazları ekleme konusunda Windows için bkz:
+Windows cihazları eklemeye yönelik belirli yönergeler için bkz:
 
 Konu | Açıklama
 :---|:---
-[Grup Windows 10 kullanarak 11 veya 11 cihazı ekleme](device-onboarding-gp.md) | Yapılandırma paketini cihazlara dağıtmak için Grup İlkesi'ne kullanın.
-[Windows 10 kullanarak 11 veya 11 cihaz Microsoft Endpoint Configuration Manager](device-onboarding-sccm.md) | Yapılandırma paketini cihazlara dağıtmak için Microsoft Endpoint Configuration Manager (geçerli dalı) sürüm 1606 veya Microsoft Endpoint Configuration Manager (geçerli dalı) sürüm 1602 veya daha önceki bir sürümünü kullanabilirsiniz.
-[Mobil Windows 10 yönetim araçlarını kullanarak cihaz kullanın veya 11 cihazı kullanın](device-onboarding-mdm.md) | Mobil Cihaz Yönetimi araçlarını veya Microsoft Intune paketin dağıtımı için Mobil Cihaz Yönetimi araçlarını kullanın.
-[Yerel Windows 10 kullanarak 11 veya 11 cihaza ekleme](device-onboarding-script.md) | Uç noktalara yapılandırma paketini dağıtmak için yerel betiği kullanmayı öğrenin.
-[Kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarını ekleme](device-onboarding-vdi.md) | VDI cihazlarını yapılandırmak için yapılandırma paketini kullanmayı öğrenin.
+[grup ilkesi kullanarak Windows 10 veya 11 cihazı ekleme](device-onboarding-gp.md) | Yapılandırma paketini cihazlara dağıtmak için grup ilkesi kullanın.
+[Microsoft Endpoint Configuration Manager kullanarak Windows 10 veya 11 cihaz ekleme](device-onboarding-sccm.md) | Yapılandırma paketini cihazlara dağıtmak için Microsoft Endpoint Configuration Manager (geçerli dal) sürüm 1606 veya Microsoft Endpoint Configuration Manager (geçerli dal) sürüm 1602 veya önceki bir sürümü kullanabilirsiniz.
+[Mobil Cihaz Yönetimi araçlarını kullanarak Windows 10 veya 11 cihazı ekleme](device-onboarding-mdm.md) | Yapılandırma paketini cihaza dağıtmak için Mobil Cihaz Yönetimi araçlarını veya Microsoft Intune kullanın.
+[Yerel betik kullanarak Windows 10 veya 11 cihaz ekleme](device-onboarding-script.md) | Yapılandırma paketini uç noktalara dağıtmak için yerel betiği kullanmayı öğrenin.
+[Kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarının katılımı](device-onboarding-vdi.md) | VDI cihazlarını yapılandırmak için yapılandırma paketini kullanmayı öğrenin.
 
 ## <a name="macos-onboarding-procedures"></a>macOS ekleme yordamları
 
-MacOS cihazlarını eklemeye genel giriş için bkz:
+macOS cihazlarını eklemeye genel bir giriş için bkz:
  
-- [MacOS cihazlarını mobil cihazlara Microsoft 365 genel bakış (önizleme)](device-onboarding-macos-overview.md#onboard-macos-devices-into-microsoft-365-overview-preview)
+- [macOS cihazlarını Microsoft Purview'a ekleme](device-onboarding-macos-overview.md)
 
-macOS cihazlarını ekleme konusunda yol gösterici kılavuz için bkz:
+macOS cihazlarını ekleme konusunda belirli yönergeler için bkz:
 
 Konu | Açıklama
 :---|:---
-|[Intune (önizleme) kullanarak MacOS cihazlarını Microsoft 365 Uyumluluk çözümlerine ekleme ve çıkarma](device-onboarding-offboarding-macos-intune.md#onboard-and-offboard-macos-devices-into-microsoft-365-compliance-solutions-using-intune-preview)|Intune aracılığıyla yönetilen macOS cihazlar için
-|[Uç nokta müşterileri için Microsoft Defender'ı kullanarak MacOS cihazlarını Uyumluluk çözümlerine ekleme ve çıkararak kullanma (önizleme)](device-onboarding-offboarding-macos-intune-mde.md#onboard-and-offboard-macos-devices-into-compliance-solutions-using-intune-for-microsoft-defender-for-endpoint-customers-preview) |Intune üzerinden yönetilen ve Uç Nokta (MDE) için Microsoft Defender'ın dağıtıldı olduğu macOS cihazlar için
-|[JAMF uyumluluk çözümleri kullanarak macOS cihazlarını Microsoft 365 kullanma ve çıkararak uyumluluk çözümlerine (Pro)](device-onboarding-offboarding-macos-jamfpro.md#onboard-and-offboard-macos-devices-into-microsoft-365-compliance-solutions-using-jamf-pro-preview) | JAMF tarafından yönetilen macOS cihazlar Pro
-|[Uç nokta müşterileri için Microsoft Defender 'da JAMF Pro kullanarak MacOS cihazlarını ekleme ve çıkararak Uyumluluk çözümlerine ekleme (önizleme)](device-onboarding-offboarding-macos-jamfpro-mde.md#onboard-and-offboard-macos-devices-into-compliance-solutions-using-jamf-pro-for-microsoft-defender-for-endpoint-customers-preview)|JAMF hizmeti aracılığıyla yönetilen ve Uç Nokta için Microsoft Defender (MDE) Pro bu cihazlara dağıtılan macOS cihazlar için
+|[Intune kullanarak macOS cihazlarını Microsoft Purview çözümlerine ekleme ve çıkarma](device-onboarding-offboarding-macos-intune.md)|Intune aracılığıyla yönetilen macOS cihazları için
+|[Uç Nokta için Microsoft Defender müşterileri için Intune kullanarak macOS cihazlarını Uyumluluk çözümlerine ekleme ve çıkarma](device-onboarding-offboarding-macos-intune-mde.md) |Intune aracılığıyla yönetilen ve bunlara Uç Nokta için Microsoft Defender (MDE) dağıtılmış macOS cihazları için
+|[JAMF Pro) kullanarak macOS cihazlarını Microsoft Purview çözümlerine ekleme ve çıkarma](device-onboarding-offboarding-macos-jamfpro.md) | JAMF Pro aracılığıyla yönetilen macOS cihazları için
+|[Uç Nokta için Microsoft Defender müşterileri için JAMF Pro kullanarak macOS cihazlarını Uyumluluk çözümlerine ekleme ve çıkarma)](device-onboarding-offboarding-macos-jamfpro-mde.md)|JAMF Pro aracılığıyla yönetilen ve bunlara Uç Nokta için Microsoft Defender (MDE) dağıtılmış macOS cihazları için
 
-Bir cihaz alındıktan sonra, cihaz listesinde görünür olmalı ve denetim etkinliğini Etkinlik gezginine bildirmeye başla olmalıdır.
+Bir cihaz eklendikten sonra cihaz listesinde görünür olmalı ve denetim etkinliğini Etkinlik gezginine raporlamaya başlamalıdır.
 
 <!--### Permissions
 
@@ -156,7 +158,7 @@ See, [Onboard macOS devices into Microsoft 365 overview (preview)](device-onboar
 
 <!--## Onboarding Windows 10 and Windows 11 devices into device management
 
-You must enable device monitoring and onboard your endpoints before you can monitor and protect sensitive items on a device. Both of these actions are done in the Microsoft 365 Compliance portal.
+You must enable device monitoring and onboard your endpoints before you can monitor and protect sensitive items on a device. Both of these actions are done in the Microsoft Purview compliance portal.
 
 When you want to onboard devices that haven't been onboarded yet, you'll download the appropriate script and deploy it to those devices. Follow the [Onboarding devices procedure](endpoint-dlp-getting-started.md#onboarding-devices).
 
@@ -166,7 +168,7 @@ If you already have devices onboarded into [Microsoft Defender for Endpoint](/wi
 
 In this deployment scenario, you'll onboard devices that have not been onboarded yet, and you just want to monitor and protect sensitive items from unintentional sharing on Windows 10 or Windows 11 devices.
 
-1. Open the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 compliance center</a>.
+1. Open the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview compliance portal</a>.
 
 2. Choose **Settings** > **Device onboarding**.
 
@@ -199,7 +201,7 @@ Once done and endpoint is onboarded, it should be visible in the devices list an
 
 In this scenario, Microsoft Defender for Endpoint is already deployed and there are endpoints reporting in. All these endpoints will appear in the managed devices list. You can continue to onboard new devices into Endpoint DLP to expand coverage by using the [Onboarding devices procedure](endpoint-dlp-getting-started.md#onboarding-devices).
 
-1. Open the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 compliance center</a>.
+1. Open the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview compliance portal</a>.
 
 2. Open the Compliance Center settings page and choose **Enable device monitoring**.
 
@@ -227,13 +229,13 @@ Once done and endpoint is onboarded, it should be visible under the **Devices** 
 
 ### Viewing Endpoint DLP alerts in DLP Alerts Management dashboard
 
-1. Open the Data loss prevention page in the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 compliance center</a> and choose Alerts.
+1. Open the Data loss prevention page in the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview compliance portal</a> and choose Alerts.
 
 2. Refer to the procedures in [How to configure and view alerts for your DLP policies](dlp-configure-view-alerts-policies.md) to view alerts for your Endpoint DLP policies.
 
 ### Viewing Endpoint DLP data in activity explorer
 
-1. Open the [Data classification page](https://compliance.microsoft.com/dataclassification?viewid=overview) for your domain in the Microsoft 365 Compliance center and choose Activity explorer.
+1. Open the [Data classification page](https://compliance.microsoft.com/dataclassification?viewid=overview) for your domain in the Microsoft Purview compliance portal and choose Activity explorer.
 
 2. Refer to the procedures in [Get started with Activity explorer](data-classification-activity-explorer.md) to access and filter all the data for your Endpoint devices.
 

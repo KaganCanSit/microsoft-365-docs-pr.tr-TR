@@ -15,14 +15,16 @@ search.appverid:
 - MET150
 description: eBulma 'da (Premium) metin, açıklama ekleme, dönüştürülen veya yerel görünüm gibi içeriği nasıl görüntüleyebileceğinizi seçin.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 775804bd8e69e11bdacd1fee141234b07462dbef
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 8248eaa1fd8bce5c34bb8c936b9fecc0dd29deba
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64945813"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64992842"
 ---
 # <a name="view-documents-in-a-review-set-in-ediscovery-premium"></a>Belgeleri eBulma'da (Premium) bir gözden geçirme kümesinde görüntüleme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 eBulma (Premium) içeriği farklı amaçlarla çeşitli görüntüleyiciler aracılığıyla görüntüler. Çeşitli görüntüleyiciler, bir gözden geçirme kümesindeki herhangi bir belgeye tıklayarak kullanılabilir. Şu anda sağlanan görüntüleyiciler şunlardır:
 

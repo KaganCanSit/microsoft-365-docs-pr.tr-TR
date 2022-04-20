@@ -17,14 +17,16 @@ search.appverid:
 - MET150
 ms.assetid: 3526fd06-b45f-445b-aed4-5ebd37b3762a
 description: Kuruluşunuzdaki tüm posta kutularında e-posta iletisi aramak ve silmek için Microsoft Purview uyumluluk portalındaki arama ve temizleme özelliğini kullanın.
-ms.openlocfilehash: 23eeff8078dbd7ab65b0bddb9684aa81d65aab94
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 67a1c6758a5030897afbde07a0803cad348eca0c
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64936257"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64993676"
 ---
 # <a name="search-for-and-delete-email-messages"></a>E-posta iletilerini arama ve silme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 **Bu makale yöneticilere yöneliktir. Posta kutunuzda silmek istediğiniz öğeleri bulmaya mı çalışıyorsunuz? Bkz. [Hızlı Arama ile ileti veya öğe bulma](https://support.office.com/article/69748862-5976-47b9-98e8-ed179f1b9e4d)**.
 

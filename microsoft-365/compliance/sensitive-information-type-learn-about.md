@@ -16,16 +16,18 @@ ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
 description: Bu makale hassas bilgi türlerine ve hassas öğeleri tanımlamak için sosyal güvenlik, kredi kartı veya banka hesabı numaraları gibi hassas bilgileri nasıl algıladıklarına genel bakış sağlar
-ms.openlocfilehash: aef78c5ab3348b7a0b00a649f94fa5e50a99a397
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 0e154e0ee578b9a182cb7cd5b43cafba466f9bcd
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64760327"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64971361"
 ---
 # <a name="learn-about-sensitive-information-types"></a>Hassas bilgi türleri hakkında daha fazla bilgi edinme
 
-Kuruluşunuzun denetimi altındaki hassas öğeleri tanımlamak ve sınıflandırmak[, Information Protection uzmanlık alanında](./information-protection.md) ilk adımdır.  Microsoft 365, sınıflandırılabilmeleri için öğeleri tanımlamanın üç yolunu sağlar:
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Kuruluşunuzun denetimi altındaki hassas öğeleri tanımlamak ve sınıflandırmak[, Information Protection uzmanlık alanında](./information-protection.md) ilk adımdır.  Microsoft Purview, sınıflandırılabilmeleri için öğeleri tanımlamanın üç yolunu sağlar:
 
 - kullanıcılar tarafından el ile
 - hassas bilgi türleri gibi otomatik desen tanıma
@@ -37,7 +39,7 @@ Microsoft çok sayıda önceden yapılandırılmış SID sağlar veya kendiniz o
 
 ## <a name="sensitive-information-types-are-used-in"></a>Hassas bilgi türleri
 
-- [Veri kaybı önleme ilkeleri](dlp-learn-about-dlp.md)
+- [Microsoft Purview Veri Kaybı Önleme ilkeleri](dlp-learn-about-dlp.md)
 - [Duyarlılık etiketleri](sensitivity-labels.md)
 - [Bekletme etiketleri](retention.md)
 - [İçeriden risk yönetimi](insider-risk-management.md)
@@ -53,7 +55,7 @@ Bu SID'ler Microsoft tarafından varsayılan olarak uyumluluk konsolunda göster
 
 ### <a name="named-entity-sensitive-information-types"></a>Adlandırılmış varlık duyarlı bilgi türleri
 
-Adlandırılmış varlık SID'leri de varsayılan olarak uyumluluk konsolunda gösterilir. Kişi adlarını, fiziksel adresleri ve tıbbi hüküm ve koşulları algılar. Bunlar düzenlenemez veya kopyalanamaz. Daha fazla bilgi için bkz. [Adlandırılmış varlıklar (önizleme) hakkında bilgi edinin](named-entities-learn.md#learn-about-named-entities-preview) . Adlandırılmış varlık SID'leri iki türde gelir:
+Adlandırılmış varlık SID'leri de varsayılan olarak uyumluluk konsolunda gösterilir. Kişi adlarını, fiziksel adresleri ve tıbbi hüküm ve koşulları algılar. Bunlar düzenlenemez veya kopyalanamaz. Daha fazla bilgi için bkz. [Adlandırılmış varlıklar hakkında bilgi edinin ](named-entities-learn.md#learn-about-named-entities) . Adlandırılmış varlık SID'leri iki türde gelir:
 
 **paketlenmemiş**
 
@@ -172,9 +174,8 @@ Uyumluluk Merkezi'nde özel hassas bilgi türleri oluşturmak için çeşitli se
 - **PowerShell kullanma - PowerShell** kullanarak özel hassas bilgi türleri ayarlayabilirsiniz. Bu yöntem kullanıcı arabirimini kullanmaktan daha karmaşık olsa da, daha fazla yapılandırma seçeneğiniz vardır. Bkz. [Güvenlik & Uyumluluk Merkezi PowerShell'de özel hassas bilgi türü oluşturma](create-a-custom-sensitive-information-type-in-scc-powershell.md).
 
 > [!NOTE]
-> geliştirilmiş güvenilirlik düzeyleri, Microsoft 365 hizmetleri, Microsoft 365 hizmetleri için Microsoft Bilgi Koruması, İletişim Uyumluluğu, Bilgi İdaresi ve Kayıt Yönetimi için Veri Kaybı Önleme'de anında kullanılabilir.
-> Microsoft 365 Information Protection artık aşağıdakiler için çift bayt karakter kümesi dillerini destekliyor:
->
+> Geliştirilmiş güvenilirlik düzeyleri Microsoft Purview veri kaybı önleme hizmetleri, bilgi koruma, İletişim Uyumluluğu, veri yaşam döngüsü yönetimi ve kayıt yönetimi içinde anında kullanılabilir.
+> Information Protection artık aşağıdakiler için çift bayt karakter kümesi dillerini destekliyor:
 > - Çince (basitleştirilmiş)
 > - Çince (geleneksel)
 > - Korean

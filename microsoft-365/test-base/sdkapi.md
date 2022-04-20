@@ -1,6 +1,6 @@
 ---
-title: Test Temel API & SDK
-description: Test Temel API & SDK
+title: Temel API & SDK'sını test edin
+description: Temel API & SDK'sını test edin
 search.appverid: MET150
 author: mansipatel-usl
 ms.author: mapatel
@@ -14,104 +14,102 @@ ms.collection: TestBase-M365
 ms.custom: ''
 ms.reviewer: mapatel
 f1.keywords: NOCSH
-ms.openlocfilehash: f7e5edeeac79b417bcb41f8607c46fc8894ea4fc
-ms.sourcegitcommit: 1ef176c79a0e6dbb51834fe30807409d4e94847c
+ms.openlocfilehash: 14bfa8711d5cff46b8cce02950c087844384b9f9
+ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2021
-ms.locfileid: "63005487"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64953792"
 ---
-# <a name="manage-your-resource-with-sdk--apis"></a>SDK ve API'lerle & yönetme
-Otomasyon, otomasyon ve çevik DevOps önemli bir yönüdür. Test Bankası'nın kaynak Microsoft 365 yönetmek, test sonuçlarını programatik olarak almak ve bunları CI araçlarımız ile tümleştirecek misiniz? Test Temel API'leri/SDK tüm bunları ve daha fazlasını başarmanıza yardımcı olabilir! 
+# <a name="manage-your-resource-with-sdk--apis"></a>SDK & API'leri ile kaynağınızı yönetme
 
-Bu API'ler/SDK, BT uzmanlarının ve uygulama geliştiricilerinin şunları şunları uygulamasını sağlar: 
-- Test Tabanı hesaplarını oluşturun, güncelleştirin ve çıkararak yönetin. 
-- Paket oluşturma, güncelleştirme, silme ve indirme de içinde olmak üzere uygulama paketlerini yönetin. 
-- Test özetini, ayrıntılı test sonuçlarını ve çözümleme sonuçlarını elde etmek. Çözümleme sonucu; CPU regresyon çözümlemesi, CPU kullanımı çözümlemesi, bellek regresyon çözümlemesi ve bellek kullanımı çözümlemesini içerir. 
-- Test sonuçlarını indirin ve video yürütme video kaydını test edin.  
+Otomasyon, DevOps ve çevik geliştirmenin önemli bir yönüdür. Microsoft 365 kaynakları için Test Tabanı'nı yönetmek, test sonuçlarını program aracılığıyla almak ve ci araçlarımızla tümleştirmek mi istiyorsunuz? Test Temel API'leri/SDK'ları tüm bunları ve daha fazlasını başarmanıza yardımcı olabilir!
 
-Bir hizmet için Test Temel'de bu yeni beceriye nasıl erişebilirsiniz, aşağıda adım adım ana Microsoft 365 bulabilirsiniz.
+Bu API'ler/SDK, BT uzmanlarının ve uygulama geliştiricilerinin şunları yapmasını sağlar:
 
-## <a name="a-step-by-step-example-of-test-base-account-creation-by-using-python-sdk"></a>Python SDK kullanarak Test Temel hesabı oluşturma işlemi için adım adım bir örnek
+- Oluşturma, güncelleştirme ve çıkarma dahil olmak üzere Test Temeli hesaplarını yönetin.
+- Paket oluşturma, güncelleştirme, silme ve indirme dahil olmak üzere uygulama paketlerini yönetin.
+- Test özetini, ayrıntılı test sonuçlarını ve analiz sonuçlarını alın. Analiz sonucu CPU regresyon analizini, CPU kullanım analizini, bellek regresyon analizini ve bellek kullanım analizini içerir.
+- Test sonuçlarını ve test yürütme video kaydını indirin.
 
-1. Önkoşullar: 
+Microsoft 365 hizmeti için Test Temeli'nde bu yeni özelliğe nasıl erişeceklerini öğrenmek için aşağıdaki adım adım ana hattı gözden geçirin.
 
-- Aşağıdaki gerekli bileşenleri yükleyin: 
+## <a name="a-step-by-step-example-of-test-base-account-creation-by-using-python-sdk"></a>Python SDK'sını kullanarak Test Temeli hesabı oluşturmaya adım adım bir örnek
 
-    [Aboneliğiniz yoksa etkin](https://azure.microsoft.com/free/?utm_source=campaign&utm_campaign=python-dev-center&mktingSource=environment-setup) bir aboneliğe sahip Azure hesabı<br>
-    [Python 2.7+ veya 3.6+](https://www.python.org/downloads)<br>
-    [Azure Command-Line Arabirimi (CLI)](/cli/azure/install-azure-cli) <br>
+1. Önkoşullar:
 
-- Konsoldan pip yükleme kullanarak kitaplık paketlerini yükleme 
+   - Aşağıdaki gerekli bileşenleri yükleyin:
 
-```
-pip install azure-identity 
-pip install azure-mgmt-testbase
-```
+     - Aboneliğiniz yoksa [etkin aboneliği olan Azure hesabı](https://azure.microsoft.com/free/?utm_source=campaign&utm_campaign=python-dev-center&mktingSource=environment-setup)
+     - [Python 2.7+ veya 3.6+](https://www.python.org/downloads)
+     - [Azure Command-Line Arabirimi (CLI)](/cli/azure/install-azure-cli)
 
-- Geliştirme ortamında kimlik doğrulama 
+   - Konsoldan pip yüklemesini kullanarak kitaplık paketlerini yükleme
 
-Kod yerel olarak hata ayıklama ve yürütme sırasında geliştiricilerin Azure hizmetlerinde yapılan aramaları kimlik doğrularken kendi hesaplarını kullanmaları normaldir. Azure kimlik paketi, yerel geliştirmeyi basitleştirmek için Azure CLI aracılığıyla kimlik doğrulamayı destekler. Azure CLI'da oturum açma için, çalıştırın ```az login ```. Varsayılan web tarayıcısı olan bir sistemde, Azure CLI kullanıcının kimliğini doğrulamak için tarayıcıyı başlatacak. 
+     ```console
+     pip install azure-identity
+     pip install azure-mgmt-testbase
+     ```
 
-[Azure hizmetleriyle Python uygulamalarının kimliğini doğrulamayı öğrenin| Microsoft Docs ve](/azure/developer/python/azure-sdk-authenticate) [https://pypi.org/project/azure-identity/](https://pypi.org/project/azure-identity/) desteklenen diğer kimlik doğrulama yöntemleri için. 
+   - Geliştirme ortamında kimlik doğrulaması
 
- - İstediğiniz adla, aşağıdaki adımlarda kullanılacak bir Kaynak Grubu oluşturun. 
+     Yerel olarak kod hatalarını ayıklarken ve yürütürken, geliştiricilerin Azure hizmetlerine yönelik çağrıların kimliğini doğrulamak için kendi hesaplarını kullanması normaldir. azure-identity paketi, yerel geliştirmeyi basitleştirmek için Azure CLI aracılığıyla kimlik doğrulamayı destekler. Azure CLI'da oturum açmak için komutunu çalıştırın `az login`. Varsayılan web tarayıcısına sahip bir sistemde Azure CLI, kullanıcının kimliğini doğrulamak için tarayıcıyı başlatır.
 
-2. Aşağıdaki kod parçacığının altında, aşağıdakiler de dahil olmak üzere bir Test Temel Hesabı oluşturmak için akışı bulabilirsiniz. 
+     [Azure hizmetleriyle Python uygulamalarının kimliğini doğrulama'ya bakın| Microsoft Docs](/azure/developer/python/azure-sdk-authenticate) ve <https://pypi.org/project/azure-identity/> diğer desteklenen kimlik doğrulama yöntemleri için.
 
-- Azure ile etkileşim için Azure CLI aracılığıyla kimlik bilgisi isteği 
-- Daha sonraki işlemler için kimlik bilgileri ve abonelik kimliğiyle Test Temel SDK istemcisini başlatma 
-- Test begin_create test_base_accounts için test_base_accounts modelinden invoke e-postası 
+   - Aşağıdaki adımlarda kullanılacak istediğiniz ada sahip bir Kaynak Grubu oluşturun.
 
-Kodu Python geliştirme ortamınıza kopyalayın ve "subscription-id" yerine Azure abonelik kimliğinizi ve "resource-group-name" ifadesini yukarıda oluşturduğunuz Kaynak Grubunuzla değiştirin. 
+2. Aşağıdaki kod parçacığı, dahil olmak üzere bir Test Temel Hesabı oluşturmak için akışı kapsar
 
- 
-```python
+   - Azure ILE etkileşim için Azure CLI aracılığıyla kimlik bilgisi isteme
+   - Test Temel SDK istemcisini daha sonraki işlemler için kimlik bilgileri ve abonelik kimliğiyle başlatın
+   - Test Temel Hesabı oluşturmak için test_base_accounts modelden begin_create çağırma
 
-from azure.identity import AzureCliCredential
-from azure.mgmt.testbase import TestBase
-from azure.mgmt.testbase.models import TestBaseAccountResource
-from azure.mgmt.testbase.models import TestBaseAccountSKU
+   Kodu Python geliştirme ortamınıza kopyalayın ve "subscription-id" yerine Azure abonelik kimliğinizi ve "resource-group-name" yerine yukarıda oluşturduğunuz Kaynak Grubunuz yazın.
 
-# requesting token from Azure CLI for request
-# For other authentication approaches, please see: https://pypi.org/project/azure-identity/
-credential = AzureCliCredential()
-subscription_id = "<subscription-id>"
-resource_group = "<resource-group-name>"
-testBaseAccount_name = "contoso-testbaseAccount"
-testBaseAccount_location = "global"
-sku_name = "S0"
-sku_tier = "Standard"
-sku_locations = {"global"}
+   ```python
+   from azure.identity import AzureCliCredential
+   from azure.mgmt.testbase import TestBase
+   from azure.mgmt.testbase.models import TestBaseAccountResource
+   from azure.mgmt.testbase.models import TestBaseAccountSKU
 
-# Create client
-testBase_client = TestBase(credential, subscription_id)
+   # requesting token from Azure CLI for request
+   # For other authentication approaches, please see: https://pypi.org/project/azure-identity/
+   credential = AzureCliCredential()
+   subscription_id = "<subscription-id>"
+   resource_group = "<resource-group-name>"
+   testBaseAccount_name = "contoso-testbaseAccount"
+   testBaseAccount_location = "global"
+   sku_name = "S0"
+   sku_tier = "Standard"
+   sku_locations = {"global"}
+  
+   # Create client
+   testBase_client = TestBase(credential, subscription_id)
+  
+   # Create sku for test base account
+   sku = TestBaseAccountSKU(name=sku_name, tier=sku_tier, locations=sku_locations)
+  
+   # Create test base account
+   parameters = TestBaseAccountResource(location=testBaseAccount_location, sku=sku)
+   testBaseAccount = testBase_client.test_base_accounts.begin_create(resource_group, testBaseAccount_name, parameters).result()
+   print("Create test base account:\n{}".format(testBaseAccount))
+   ```
 
-# Create sku for test base account
-sku = TestBaseAccountSKU(name=sku_name, tier=sku_tier, locations=sku_locations)
+## <a name="learn-more"></a>Daha fazla bilgi
 
-# Create test base account
-parameters = TestBaseAccountResource(location=testBaseAccount_location, sku=sku)
-testBaseAccount = testBase_client.test_base_accounts.begin_create(resource_group, testBaseAccount_name, parameters).result()
-print("Create test base account:\n{}".format(testBaseAccount))
+SDK & API hakkında daha fazla bilgi edinmek için aşağıdaki bağlantılara bakın.
 
-```
+**Azure Aboneliği**:
 
+- [Etkin aboneliği olan Azure hesabı](https://azure.microsoft.com/free/?utm_source=campaign&utm_campaign=python-dev-center&mktingSource=environment-setup)
 
-## <a name="learn-more"></a>Daha fazla bilgi 
+**Python SDK'sı**:
 
-SDK özellikleri ve API'si hakkında daha fazla bilgi edinmek & bakın. 
+- [Test Temeli Python SDK'sı Belgeleri](/python/api/overview/azure/mgmt-testbase-readme)
+- [Test Temeli Python SDK Örneği](https://aka.ms/testbase-sample-py)
+- [Python SDK'sının Azure Genel Kullanım Düzeni](/azure/developer/python/azure-sdk-overview#provision-and-manage-azure-resources-with-management-libraries)
 
-**Azure Aboneliği** 
+**REST API**:
 
-- [Etkin bir aboneliğe sahip Azure hesabı](https://azure.microsoft.com/free/?utm_source=campaign&utm_campaign=python-dev-center&mktingSource=environment-setup)
-
-**Python SDK** 
-
-- [Temel Python SDK Belgelerini test edin](/python/api/overview/azure/mgmt-testbase-readme)
-- [Temel Python SDK Örneği](https://aka.ms/testbase-sample-py)
-- [Python SDK'nin Azure Genel Kullanım Deseni](/azure/developer/python/azure-sdk-overview#provision-and-manage-azure-resources-with-management-libraries)
-
-**REST API**  
-
-- [REST API Belgeleri](https://aka.ms/testbase-api)  
+- [REST API Belgeleri](https://aka.ms/testbase-api)

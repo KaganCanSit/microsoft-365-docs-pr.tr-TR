@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 çözüm kataloğu
+title: Microsoft Purview çözüm kataloğu
 f1.keywords:
 - NOCSH
 ms.author: robmazz
@@ -9,92 +9,88 @@ audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 ms.localizationpriority: medium
-description: Neleri Microsoft 365, nasıl edinebilirsiniz ve sonraki adımlarınız gibi en iyi çözüm kataloğunu öğrenin.
+description: İçeriği, nasıl edinebileceğiniz ve sonraki adımlarınız da dahil olmak üzere Microsoft Purview çözüm kataloğu hakkında bilgi edinin.
 ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: d2a21c81ac0753daef94dbcbd169d9bfe6b62bae
-ms.sourcegitcommit: 1ef176c79a0e6dbb51834fe30807409d4e94847c
+ms.openlocfilehash: 5dbb56b214251638b2d5eb17510fdd87b42138be
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2021
-ms.locfileid: "63006319"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64971208"
 ---
-# <a name="microsoft-365-solution-catalog"></a>Microsoft 365 çözüm kataloğu
+# <a name="microsoft-purview-solution-catalog"></a>Microsoft Purview çözüm kataloğu
 
-Uyumluluk görevleriyle hızlı bir şekilde çalışmaya başlamanın bir yolunu mu Microsoft 365? Uyumluluk ve [risk yönetimi Microsoft 365 bulmak](https://compliance.microsoft.com/solutioncatalog), öğrenmek ve hızlı bir şekilde işe başlamak için en iyi çözüm kataloğunu keşfedin.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Uyumluluk çözümleri Microsoft 365  uç uyumluluk senaryolarını yönetmenize yardımcı olmak için kullanabileceğiniz bir tümleşik özellik koleksiyonudur. Bir çözümün özellikleri ve araçları, ilkelerin, uyarıların, raporların ve daha fazlasının bir bileşimini içerebilir.
+Microsoft 365'de uyumluluk görevlerini hızlıca kullanmaya başlamanın bir yolunu mu arıyorsunuz? Uyumluluk ve risk yönetimi çözümlerini keşfetmek, öğrenmek ve hızlı bir şekilde kullanmaya başlamak için [Microsoft Purview çözüm kataloğuna](https://compliance.microsoft.com/solutioncatalog) göz atın.
 
-Yeni çözüm kataloğunu nasıl edin edinebilirsiniz? [Microsoft 365 uyumluluk merkezi, sık](#how-do-i-get-this) sorulan soruları ve sonraki adımlarınızı yakından tanımak için bu [makaleyi okuyun](#next-steps). [](#frequently-asked-questions)
+Microsoft 365 uyumluluk çözümleri, uçtan uca uyumluluk senaryolarını yönetmenize yardımcı olmak için kullanabileceğiniz tümleşik özelliklerden oluşan koleksiyonlardır. Çözümün özellikleri ve araçları ilkelerin, uyarıların, raporların ve daha fazlasının birleşimini içerebilir.
+
+Microsoft Purview uyumluluk portalındaki yeni çözüm kataloğu, nasıl edinilenler ve [sonraki adımlarınız](#next-steps) hakkında bilgi [edinmek için](#how-do-i-get-this) bu makaleyi okuyun.
 
 ## <a name="catalog-organization"></a>Katalog kuruluşu
 
-Çözüm kataloğu, kendi aboneliğinize dahil olan her uyumluluk çözümü için bilgi kartları içeren Microsoft 365 düzenlenmiştir. Her bölümde, uyumluluk alanına göre gruplara yönelik kartlar yer almaktadır.
+Çözüm kataloğu, Microsoft 365 aboneliğinizde bulunan her uyumluluk çözümü için bilgi kartları içeren bölümler halinde düzenlenmiştir. Her bölüm, uyumluluk alanına göre gruplandırılmış çözümler için kartlar içerir.
 
-![Microsoft 365 kataloğu giriş sayfasında bulabilirsiniz.](../media/m365-solution-catalog-home.png)
+![Microsoft Purview çözüm kataloğu giriş sayfası.](../media/m365-solution-catalog-home.png)
 
-Çözüm kartı **için** görüntüle'yi seçerek uyumluluk çözümü ve nasıl başla ilgili ayrıntılı bilgi edinebilirsiniz. Bu bilgiler genel bakış, yapılandırma öncesi gereksinimler, öğrenme kaynakları, kartı gezinti bölmesine sabitlemenizi sağlayan denetimler ve çözümü bağlantı, e-posta veya ileti olarak paylaşma Microsoft Teams içerir.
+Çözüm kartı için **Görüntüle'yi** seçtiğinizde, uyumluluk çözümü ve nasıl başlayacağınız hakkında ayrıntılı bilgiler görürsünüz. Bu bilgiler genel bakış, yapılandırma öncesi gereksinimler, öğrenme kaynakları, kartı gezinti bölmesine sabitlemenizi sağlayan denetimler ve çözümü bağlantı, e-posta veya Microsoft Teams iletisi olarak paylaşma seçeneğini içerir.
 
-![Microsoft 365 uyumluluk çözümünü deneyin.](../media/m365-solution-catalog-communication-compliance.png)
+![İletişim uyumluluğu çözümü.](../media/m365-solution-catalog-communication-compliance.png)
 
-## <a name="information-protection--governance-section"></a>Bilgi koruma & yönetimi bölümü
+## <a name="information-protection--governance-section"></a>Bilgi koruma & idare bölümü
 
-Bilgi **koruma & bölümü**, size bir bakışta Microsoft 365 koruma çözümlerini kullanarak verileri nasıl kullanabileceğinizi gösterir.
+**Bilgi koruma & idare** bölümü, kuruluşunuzdaki verileri korumak ve yönetmek için Microsoft Purview çözümlerini nasıl kullanabileceğinizi bir bakışta gösterir.
 
-![Microsoft 365 kataloğu bilgi koruma ve yönetim bölümünü tıklatın.](../media/m365-solution-catalog-information-protection-governance.png)
+![Microsoft Purview çözüm kataloğu bilgi koruma ve idare bölümü.](../media/m365-solution-catalog-information-protection-governance.png)
 
-Buradan, aşağıdaki çözümlere yönelik kartları göreceğiz:
+Buradan, aşağıdaki çözümlerin kartlarını göreceksiniz:
 
-- [Veri kaybını önleme](dlp-learn-about-dlp.md): Hassas içeriği kurum genelinde, bulutta ve cihazlarda kullanılırken ve paylaşılırken algılar ve yanlışlıkla veri kaybını önlemeye yardımcı olur.
-- [Bilgi idaresi](manage-information-governance.md): İş açısından kritik verileri içeri aktarma, depolama ve sınıflandırmaya yönelik çözümleri kullanarak içerik yaşam döngüsünizi yönetir, böylece ihtiyacınız olan verileri saklayabilirsiniz ve ihtiyaç olmayanları silebilirsiniz.
-- [Bilgi koruması](information-protection.md): Kuruluş genelinde yaşam döngüsü boyunca hassas ve iş açısından kritik içerikleri keşfeder, sınıflendirir ve korur.
-- [Kayıt yönetimi](records-management.md): Kuruluşta düzenlemeler, yasal ve iş açısından kritik kayıtlar için bekletme zamanlamayı otomatikleştirmek ve kolaylaştırmak için akıllı sınıflandırmayı kullanır.
+- [Microsoft Purview Veri Kaybı Önleme](dlp-learn-about-dlp.md): Kuruluşunuzda, bulutta ve cihazlarda kullanılan ve paylaşılan hassas içeriği algılar ve yanlışlıkla veri kaybını önlemeye yardımcı olur.
+- [Veri Yaşam Döngüsü Yönetimi](manage-data-governance.md): İhtiyaç duyduklarınızı koruyabilmeniz ve silmediğiniz verileri silebilmeniz için iş açısından kritik verileri içeri aktarma, depolama ve sınıflandırma çözümlerini kullanarak içerik yaşam döngüsünüzü yönetir.
+- [Bilgi koruması](information-protection.md): Kuruluşunuz genelindeki yaşam döngüsü boyunca hassas ve iş açısından kritik içerikleri bulur, sınıflandırır ve korur.
+- [Kayıt yönetimi](records-management.md): Kuruluşunuzdaki mevzuat, yasal ve iş açısından kritik kayıtların bekletme zamanlamasını otomatikleştirmek ve basitleştirmek için akıllı sınıflandırma kullanır.
 
 ## <a name="insider-risk-management-section"></a>Insider risk yönetimi bölümü
 
-Giriş **sayfasındaki Insider risk** yönetimi bölümü, kuruma zarar vermeden önce şirket içi riskleri nasıl tanımlayabilecek, çözüme alabilecek ve bu riskler üzerinde nasıl işlem alıkatabileceklerini ilk bakışta gösterir.
+Giriş sayfasındaki **Insider risk yönetimi** bölümü, kuruluşunuzun zarara neden olmadan önce iç riskleri nasıl belirleyebileceğini, analiz edip eyleme geçebileceğini bir bakışta gösterir.
 
-![Microsoft 365 kataloğu Insider risk yönetimi bölümüne bakın.](../media/m365-solution-catalog-insider-risk-management.png)
+![Microsoft Purview çözüm kataloğu insider risk yönetimi bölümü.](../media/m365-solution-catalog-insider-risk-management.png)
 
-Buradan, aşağıdaki çözümlere yönelik kartları göreceğiz:
+Buradan, aşağıdaki çözümlerin kartlarını göreceksiniz:
 
-- [İletişim uyumluluğu](communication-compliance.md): Uygunsuz iletileri otomatik olarak yakalamanız, olası ilke ihlallerini araştırmanız ve zararları en aza indirmeye yardımcı olarak iletişim risklerini en aza indirger.
-- [Insider risk yönetimi](insider-risk-management.md): Insider risklerini ve tehditlerini hızlı bir şekilde tanımlamanıza, araştırmanıza ve bu risklere karşı harekete çalışmanıza yardımcı olmak için, kuruluş genelinde riskli etkinliği algıla.
+- [İletişim uyumluluğu](communication-compliance.md): Uygunsuz iletileri otomatik olarak yakalamanıza, olası ilke ihlallerini araştırmanıza ve zararı en aza indirmeye yönelik adımlar atmanıza yardımcı olarak iletişim risklerini en aza indirir.
+- [Insider risk yönetimi: Insider risklerini](insider-risk-management.md) ve tehditlerini hızla tanımlamanıza, araştırmanıza ve eyleme geçmenize yardımcı olmak için kuruluşunuz genelindeki riskli etkinlikleri algılayın.
 
 ## <a name="discovery--response-section"></a>Bulma & yanıt bölümü
 
-Giriş **sayfasında &** Bulma ve yanıt bölümü, kuruma ilgili verilerle ilgili uyumluluk sorunlarını nasıl hızlı bir şekilde buluğunu, inceley nasıl yanıt verluğunu bir bakışta gösterir.
+Giriş sayfasındaki **Bulma & yanıt** bölümü, kuruluşunuzun ilgili verilerle ilgili uyumluluk sorunlarını nasıl hızla bulabileceğini, araştırabileceğini ve yanıtlayabileceğinizi bir bakışta gösterir.
 
-![Microsoft 365 kataloğu bulma ve yanıt bölümü.](../media/m365-solution-catalog-discovery-response.png)
+![Microsoft Purview çözüm kataloğu bulma ve yanıt bölümü.](../media/m365-solution-catalog-discovery-response.png)
 
-Buradan, aşağıdaki çözümlere yönelik kartları göreceğiz:
+Buradan, aşağıdaki çözümlerin kartlarını göreceksiniz:
 
-- [Denetim](search-the-audit-log-in-security-and-compliance.md): Denetim günlüğünde arama yapın ve tüm konumlar ile hizmetler genelinde etkinliklerin kapsamlı bir listesini araştırabilirsiniz.
-- [Veri konusu istekleri](/compliance/regulatory/gdpr-manage-gdpr-data-subject-requests-with-the-dsr-case-tool): GDPR için veri konusu isteklerini yanıtlamanıza yardımcı olmak için kullanıcının kişisel verilerini bulur ve dışarı verir.
-- [eKbulma](manage-legal-investigations.md)
-    - [Çekirdek eBulma](./get-started-core-ediscovery.md): Yasal bulma isteklerine ve eBulma durumlarına yanıt olarak verileri tanımlamak, korumak ve dışarı aktarın.
-    - [Advanced eDiscovery](overview-ediscovery-20.md): Keşif istekleriyle ilgili verileri daha fazla çözümlemenıza yardımcı olmak için akıllı analizler ve makine öğrenimi sağlayarak eBulma özellikleri hakkında bilgi sağlar.
+- [Denetim](search-the-audit-log-in-security-and-compliance.md): Kuruluşunuzdaki kullanıcı ve yönetici etkinliklerini kaydeder, böylece denetim günlüğünde arama yapabilir ve tüm konumlarda ve hizmetlerde etkinliklerin kapsamlı bir listesini araştırabilirsiniz.
+- [Veri sahibi istekleri](/compliance/regulatory/gdpr-manage-gdpr-data-subject-requests-with-the-dsr-case-tool): GDPR için veri sahibi isteklerini yanıtlamanıza yardımcı olmak için kullanıcının kişisel verilerini bulur ve dışarı aktarır.
+- [Ediscovery](manage-legal-investigations.md)
+    - [eBulma (Standart):](./get-started-core-ediscovery.md)Yasal bulma isteklerine ve eBulma olaylarına yanıt olarak verileri tanımlamak, korumak ve dışarı aktarmak için içerik konumlarında aramalar.
+    - [eBulma (Premium)](overview-ediscovery-20.md): Bulma istekleriyle ilgili verileri daha fazla analiz etmenize yardımcı olmak için akıllı analiz ve makine öğrenmesi sağlayarak eBulma özelliklerini temel alır.
 
-## <a name="how-do-i-get-this"></a>Bunu nasıl elde  yapabilirim?
+## <a name="how-do-i-get-this"></a>Bunu Nasıl yaparım??
 
-Genel çözüm Microsoft 365 ziyaret etmek için [https://compliance.microsoft.com](https://compliance.microsoft.com) Genel yönetici, uyumluluk yöneticisi veya uyumluluk veri yöneticisi olarak oturum açın. Katalog **giriş** sayfasını açmak için ekranın sol tarafındaki gezinti bölmesinde Katalog'a tıklayın.
-
-## <a name="frequently-asked-questions"></a>Sık sorulan sorular
-
-**Microsoft 365 çözüm kataloğunu neden göremiyorum?**
-
-Öncelikle, uygun lisanslara ve izinlere sahip olduğundan emin olun. Ardından genel yönetici, [https://compliance.microsoft.com](https://compliance.microsoft.com) uyumluluk yöneticisi veya uyumluluk veri yöneticisi olarak oturum açın. 
+Microsoft Purview çözüm kataloğunu ziyaret etmek için genel yönetici, uyumluluk yöneticisi veya uyumluluk veri yöneticisi olarak oturum açın [https://compliance.microsoft.com](https://compliance.microsoft.com) . Katalog giriş sayfasını açmak için ekranın sol tarafındaki gezinti bölmesinde **Katalog'a** tıklayın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- **Kuruluş uyumluluk durumunu önemli** standartlara ve düzenlemelere göre anlamanıza yardımcı olan Microsoft Uyumluluk Yöneticisi'ni ziyaret edin. Bu hizmet, genel uyumluluk hareketlerinizi güçlendirmek için gerçekleştirdiğiniz önerilen eylemleri sağlar ve bu eylemleri verimli bir şekilde yerine getirirken size iş akışı özellikleri sağlar. Daha fazla bilgi edinmek için bkz. [Uyumluluk Yöneticisi](compliance-manager.md).
+- Kuruluşunuzun temel standartlara ve düzenlemelere uyumluluk durumunu anlamanıza yardımcı olan **Microsoft Purview Uyumluluk Yöneticisi'ni ziyaret edin**. Genel uyumluluk duruşunuzu güçlendirmek için yapabileceğiniz önerilen eylemleri sağlar ve bu eylemleri verimli bir şekilde gerçekleştirmenize yardımcı olacak iş akışı özellikleri sağlar. Daha fazla bilgi için bkz [. Uyumluluk Yöneticisi](compliance-manager.md).
 
-- **İç riskleri en aza indirmeye yardımcı olmak için Insider risk** yönetimi ilkelerini yapılandırarak, kuruluşta riskli etkinlikleri algılamanıza, araştırmanıza ve bu etkinliklere yönelik işlemler gerçekleştirin. Bkz [. Insider risk yönetimi](insider-risk-management.md).
+- İç riskleri en aza indirmeye yardımcı olmak ve kuruluşunuzdaki riskli etkinlikleri algılamanıza, araştırmanıza ve eyleme geçmenize olanak tanımak için **insider risk yönetimi ilkelerini yapılandırın**. Bkz. [Insider risk yönetimi hakkında bilgi edinin](insider-risk-management.md).
 
-- **Şirket davranış kuralları ihlallerini hızlı** bir şekilde belirleyecek ve bu ihlalleri düzeltmek için İletişim uyumluluğu ilkeleri hakkında bilgi edinebilirsiniz. Bkz [. İletişim uyumluluğu](communication-compliance.md).
+- Kurumsal davranış kuralları **ilke ihlallerini hızla belirlemek ve düzeltmek için İletişim uyumluluk ilkeleri hakkında bilgi edinin ve oluşturun**. Bkz. [İletişim uyumluluğu](communication-compliance.md).
 
-- **Microsoft Bilgi Koruması** içinde yer alan veya Microsoft 365 içinde yer alan hassas bilgileri bu şekilde bulmanıza, sınıflandırmanıza ve korumanıza nasıl yardımcı olduğunu öğrenin.
-    - **Bulut Uygulamaları için Microsoft Defender'ı tanıyın ve ayarlayın**. Bkz [. Hızlı Başlangıç: Bulut Uygulamaları için Microsoft Defender ile çalışmaya başlama](/cloud-app-security/getting-started-with-cloud-app-security).
-    - **Sınıflandırıcılarla çalışmaya başlama**. İçeriği sınıflandıracak ve sonra korunacak şekilde etiketlendirmek, bilgi koruma disiplini için başlangıç noktasıdır. Bkz[. Eğitilebilir sınıflandırıcılar (önizleme) hakkında bilgi.](classifier-learn-about.md)
+- **Microsoft Purview Information Protection**, Microsoft Purview çözümlerinin nerede olursa olsun hassas bilgileri keşfetmenize, sınıflandırmanıza ve korumanıza nasıl yardımcı olduğunu öğrenin.
+    - **Microsoft Defender for Cloud Apps tanıyıp ayarlayın**. Bkz[. Hızlı Başlangıç: Microsoft Defender for Cloud Apps ile Kullanmaya başlayın](/cloud-app-security/getting-started-with-cloud-app-security).
+    - **Sınıflandırıcılarla Kullanmaya başlayın**. İçeriği sınıflandırmak ve daha sonra düzgün şekilde korunabilmesi ve işlenebilmesi için etiketlemek, bilgi koruma uzmanlık alanı için başlangıç noktasıdır. Bkz. [Eğitilebilir sınıflandırıcılar (önizleme) hakkında bilgi edinin](classifier-learn-about.md).
 
-- **Sık Microsoft 365 kataloğunu ziyaret edin** ve uyumluluk ihtiyaçlarını karşılarken size yardımcı olacak yeni çözümleri gözden geçirmeyi sağlayın. Solda oturum açın [https://compliance.microsoft.com](https://compliance.microsoft.com) ve ardından sol gezinti **bölmesinde** Katalog'a tıklayın.
+- **Microsoft Purview çözüm kataloğunuzu sık sık ziyaret edin** ve uyumluluk gereksinimlerinize yardımcı olacak yeni çözümleri gözden geçirmeyi unutmayın. adresinde oturum [https://compliance.microsoft.com](https://compliance.microsoft.com) açın ve sol gezinti bölmesinde **Katalog'a** tıklayın.

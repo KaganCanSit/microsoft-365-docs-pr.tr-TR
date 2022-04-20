@@ -15,14 +15,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Bir eBulma (Premium) olayına gözetimsiz veri kaynakları ekleyebilir ve veri kaynağına ayrı tutabilirsiniz. Gözaltı olmayan veri kaynakları yeniden dizinlenir, bu nedenle kısmen dizinlenmiş olarak işaretlenmiş tüm içerikler tamamen ve hızlı bir şekilde aranabilir hale getirmek için yeniden işlenir.
-ms.openlocfilehash: cc093b60de055fe8b762f6c141921cd274233af2
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 2f5825f514dfc8f99fc7a6006d1fd30028515c7b
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64945923"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64991896"
 ---
 # <a name="add-non-custodial-data-sources-to-an-ediscovery-premium-case"></a>eBulma (Premium) olayına gözetimsiz veri kaynakları ekleme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview eBulma (Premium) vakalarında, bir Microsoft 365 veri kaynağını bu durumda bir koruyucuyla ilişkilendirme gereksinimlerinizi her zaman karşılamaz. Ancak yine de arama yapmak, bir gözden geçirme kümesine eklemek ve analiz edip gözden geçirmek için bu verileri bir servis talebiyle ilişkilendirmeniz gerekebilir. eBulma (Premium) özelliği *, gözetim dışı veri kaynakları* olarak adlandırılır ve bunu bir koruyucuyla ilişkilendirmek zorunda kalmadan bir servis talebine veri eklemenize olanak tanır. Ayrıca aynı eBulma (Premium) işlevselliğini, koruyucuyla ilişkili veriler için kullanılabilen gözetimsiz verilere de uygular. Gözaltı olmayan verilere uygulayabileceğiniz en yararlı şeylerden ikisi, bunları bekletmek ve [Gelişmiş dizin oluşturma](indexing-custodian-data.md) kullanarak işlemektir.
 

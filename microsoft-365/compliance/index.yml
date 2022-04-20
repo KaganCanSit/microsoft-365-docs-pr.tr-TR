@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: Microsoft 365 uyumluluk belgeleri
-summary: Kuruluşunuzun yasal veya düzenleyici standartlara uyması gerekiyorsa, Microsoft 365'te uyumluluk hakkında bilgi edinmek için buradan başlayın.
+title: Microsoft Purview belgeleri
+summary: Kuruluşunuzun yasal veya düzenleyici standartlara uyması gerekiyorsa, Microsoft Purview'da uyumluluk hakkında bilgi edinmek için buradan başlayın.
 metadata:
-  title: Microsoft 365 uyumluluk belgeleri
-  description: Bu sayfa, Microsoft 365 uyumluluk özellikleriyle ilgili bazı önemli konular için bağlantılar içerir. Microsoft 365'te uyumluluk hakkında bilgi edinmek için buradan başlayın.
+  title: Microsoft Purview belgeleri
+  description: Bu sayfa, Microsoft Purview özellikleriyle ilgili bazı önemli konular için bağlantılar içerir. Microsoft 365'te uyumluluk hakkında bilgi edinmek için buradan başlayın.
   services: office-365-security-compliance
   ms.service: O365-seccomp
   ms.subservice: subservice
@@ -14,12 +14,12 @@ metadata:
   ms.author: robmazz
   ms.date: 09/20/2019
   ms.localizationpriority: high
-  ms.openlocfilehash: 2e29c9e97a266fdf2ea4b6c712c400143971f447
-  ms.sourcegitcommit: d7cdbdda9b829c49caa3105eb47d3f26b88a5daf
+  ms.openlocfilehash: 3b86087d8f8fea8e9b3b143f7e38997d07fca3ec
+  ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
   ms.translationtype: HT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 01/03/2022
-  ms.locfileid: "62970611"
+  ms.lasthandoff: 04/19/2022
+  ms.locfileid: "64953359"
 landingContent:
 - title: Bilgi korumasını ve idaresini yönetme
   linkLists:
@@ -32,20 +32,20 @@ landingContent:
     - text: Veri kaybını önleme
       url: information-protection.md#prevent-data-loss
     - text: Verilerinizi yönetme
-      url: manage-information-governance.md
+      url: manage-data-governance.md
     - text: 'Öğrenme yolu: Bilgi korumasını ve idaresini yönetme'
       url: /learn/paths/m365-compliance-information
 - title: İçeriden riskleri yönetme
   linkLists:
   - linkListType: overview
     links:
-    - text: İçeriden risk yönetimi
+    - text: Microsoft Purview İçeriden Risk Yönetimi
       url: insider-risk-management.md
-    - text: İletişim uyumluluğu
+    - text: Microsoft Purview İletişim Uyumluluğu
       url: communication-compliance.md
-    - text: Bilgi bariyerleri
+    - text: Microsoft Purview Bilgi Engelleri
       url: information-barriers.md
-    - text: Ayrıcalıklı erişim yönetimi
+    - text: Microsoft Purview Privileged Access Management
       url: privileged-access-management-overview.md
     - text: Müşteri Kasası
       url: customer-lockbox-requests.md
@@ -53,14 +53,14 @@ landingContent:
   linkLists:
   - linkListType: overview
     links:
-    - text: Gelişmiş eKeşif
+    - text: Microsoft Purview eKeşif (Premium)
       url: overview-ediscovery-20.md
-    - text: Çekirdek eKeşif
+    - text: Microsoft Purview eKeşif (Standart)
       url: ./get-started-core-ediscovery.md
     - text: İçerik arama
       url: search-for-content.md
-    - text: Denetim
-      url: search-the-audit-log-in-security-and-compliance.md
+    - text: Microsoft Purview Denetim çözümleri
+      url: auditing-solutions-overview.md
 - title: Mevzuat uyumluluğuyla başlayın
   linkLists:
   - linkListType: get-started
@@ -79,7 +79,7 @@ landingContent:
     links:
     - text: Sıfır Güven ile verilerin güvenliğini sağlama
       url: /security/zero-trust/data
-    - text: MIP çözümü dağıtma
+    - text: Microsoft Purview Bilgi Koruması dağıtma
       url: information-protection-solution.md
     - text: Veri gizliliği düzenlemeleri için bilgi korumasını dağıtın
       url: ../solutions/information-protection-deploy.md

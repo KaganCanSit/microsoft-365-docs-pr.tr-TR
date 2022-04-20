@@ -18,12 +18,12 @@ ms.custom: ''
 description: Yöneticiler, kullanıcılar tarafından bildirilen istenmeyen posta ve kimlik avı e-postalarını toplamak için posta kutusunu yapılandırmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 4b86341434c05f18e1dd264b6fdabef8e36f2d29
-ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
+ms.openlocfilehash: a2e57c5dbfb8738eb9e554a3207679bfd48c6f60
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64705373"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64970935"
 ---
 # <a name="user-reported-message-settings"></a>Kullanıcı tarafından bildirilen ileti ayarları
 
@@ -55,7 +55,7 @@ Kullanıcı tarafından bildirilen iletilerin özel posta kutunuza gitmesi için
 
 - İstenmeyen posta için ZAP ve kimlik avı için ZAP'ın kapalı olduğu özel posta kutusunu içeren [bir istenmeyen posta önleme ilkesi oluşturun](configure-your-spam-filter-policies.md#use-the-microsoft-365-defender-portal-to-create-anti-spam-policies) (**Sıfır saatlik otomatik temizleme** bölümü \> **Sıfır saatlik otomatik temizlemeyi etkinleştirildi (ZAP)** seçilmez).
 
-Office 365 için Microsoft Defender varsa, gelişmiş filtrelememizin iletileri bildiren kullanıcıları etkilememesi için aşağıdaki ayarları da yapılandırmanız gerekir:
+Office 365 için Microsoft Defender'larınız varsa, gelişmiş filtrelememizin iletileri bildiren kullanıcıları etkilememesi için aşağıdaki ayarları da yapılandırmanız gerekir:
 
 - Kasa Bağlantıları taramasının kapalı olduğu özel posta kutusunu içeren [bir Kasa Bağlantıları ilkesi oluşturun](set-up-safe-links-policies.md) (**İletilerde bilinmeyen kötü amaçlı olabilecek URL'ler için eylemi seçin** **kapalı**\>).
 
@@ -124,13 +124,16 @@ Posta kutunuzu tüm geçerli önkoşulları karşıladığını doğruladıktan 
 
    - **Rapor iletisini karantinaya al düğmesi**: Son kullanıcıların karantinadan gelen iletileri bildirmesine izin vermek istiyorsanız bu özelliği etkinleştirin.
 
-   İşiniz bittiğinde **Onayla'ya** tıklayın. Bu değerleri temizlemek için **Geri Yükle'ye** tıklayın
+3. İşiniz bittiğinde **Onayla'ya** tıklayın. Bu değerleri temizlemek için **Geri Yükle'ye** tıklayın.
 
 ## <a name="third-party-reporting-tools"></a>Üçüncü taraf raporlama araçları
 
 Bildirilen iletileri özel posta kutusuna göndermek için üçüncü taraf ileti raporlama araçlarını yapılandırabilirsiniz. Bunu yapmak için **Microsoft Outlook Rapor İletisi düğmesini** **Kapalı** olarak ve **Kuruluşum'un posta kutusunu** istediğiniz Office 365 posta kutusuna ayarlarsınız.
 
-Tek gereksinim, özgün iletinin olarak eklenmesidir. EML veya . Özel posta kutusuna gönderilen iletideki MSG eki (sıkıştırılmaz) (özgün iletiyi özel posta kutusuna iletmeyin).
+Tek gereksinim, özgün iletinin olarak eklenmesidir. EML veya . Özel posta kutusuna gönderilen iletideki MSG eki (sıkıştırılmaz) (özgün iletiyi özel posta kutusuna iletmeyin). 
+
+ > [!NOTE]
+ > E-postada birden çok e-posta eki varsa gönderim atılır. Yalnızca bir e-posta eki olan e-postaları destekliyoruz.
 
 İleti biçimlendirme gereksinimleri sonraki bölümde açıklanmıştır. Biçimlendirme isteğe bağlıdır, ancak belirtilen biçime uymuyorsa raporlar her zaman kimlik avı olarak gönderilir.
 
@@ -151,6 +154,5 @@ Tek gereksinim, özgün iletinin olarak eklenmesidir. EML veya . Özel posta kut
 
 - Bu iletilerin ikisi de Konu temelinde Gereksiz Değil olarak bildiriliyor.
 - Gerisi yoksayılır.
-
 
 Bu biçimi izlemeyen iletiler Gönderimler portalında düzgün görüntülenmez.

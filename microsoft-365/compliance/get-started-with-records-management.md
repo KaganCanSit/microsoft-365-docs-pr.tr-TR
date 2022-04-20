@@ -18,14 +18,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Yasal, iş veya mevzuat yükümlülükleri için yüksek değerli içeriği yöneten ancak nereden başlayacağınıza emin olmayan Microsoft 365 için kayıt yönetimi çözümüne mi ihtiyacınız var? Başlamak için bazı pratik kılavuzları okuyun.
-ms.openlocfilehash: 02c16f9d1a9d42f59cf8bc27bdee38bcc2d10d73
-ms.sourcegitcommit: 1d972f15a45204e89e268c5ff257021aced5e775
+ms.openlocfilehash: e73cb1a118235082978ee93efcdb77f5e5135f8c
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2022
-ms.locfileid: "64911400"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64971483"
 ---
 # <a name="get-started-with-records-management"></a>Kayıt yönetimini kullanmaya başlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 >*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
@@ -44,21 +46,19 @@ Microsoft 365'de kayıt yönetimi çözümünü kullanarak kuruluşunuzun yasal,
     - [Bekletme etiketlerini yayımlama ve uygulamalarda uygulama](create-apply-retention-labels.md)
     - [İçeriğe otomatik olarak bekletme etiketi uygulama](apply-retention-labels-automatically.md)
 
-Bu adımlardan bağımsız olarak, sosyal medya platformlarından, anlık ileti platformlarından ve belge işbirliği platformlarından verileri içeren **üçüncü taraf verilerini içeri aktarmak ve arşiv etmek için bağlayıcıları kullanın** . Bu veriler çevrimiçi posta kutularına aktarıldığında yalnızca Microsoft 365 Uyumluluğundan kayıt yönetimini değil, aynı zamanda iletişim uyumluluğu, içeriden risk yönetimi ve eBulma gibi diğer uyumluluk çözümlerini de destekler. Daha fazla bilgi için bkz. [Üçüncü taraf verileri için bağlayıcılar hakkında bilgi edinin](archiving-third-party-data.md).
-
 ## <a name="subscription-and-licensing-requirements"></a>Abonelik ve lisans gereksinimleri
 
 Bir dizi farklı abonelik kayıt yönetimini destekler ve kullanıcıların lisans gereksinimleri kullandığınız özelliklere bağlıdır.
 
-Kullanıcılarınızın Microsoft 365 uyumluluk özelliklerinden yararlanması için lisanslama seçeneklerini görmek [için güvenlik & uyumluluğu için Microsoft 365 lisanslama kılavuzuna](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance) bakın. Kayıt yönetimi için, özellik düzeyinde lisanslama gereksinimleri için [Kayıt Yönetimi](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#records-management) bölümüne ve ilgili PDF indirme bölümüne bakın.
+Kullanıcılarınızın Microsoft Purview özelliklerinden yararlanması için lisanslama seçeneklerini görmek [için güvenlik & uyumluluğu için Microsoft 365 lisanslama kılavuzuna](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance) bakın. Kayıt yönetimi için, özellik düzeyinde lisanslama gereksinimleri için [Microsoft Purview Kayıt Yönetimi](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-records-management) bölümüne ve ilgili PDF indirme bölümüne bakın.
 
 ## <a name="permissions"></a>İzinler
 
-Kayıt yönetiminden sorumlu uyumluluk ekibinizin üyelerinin <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 uyumluluk merkezi</a> izinlerine sahip olması gerekir. Varsayılan olarak, kiracı yöneticisinin (genel yönetici) bu konuma erişimi vardır ve uyumluluk görevlilerine ve diğer kişilere kiracı yöneticisinin tüm izinlerini vermeden erişim verebilir. Bu sınırlı yönetime izin vermek için, kullanıcıları **Kayıt Yönetimi** yönetici rol grubuna eklemenizi öneririz. Bu grup, [edat gözden geçirme ve doğrulama](disposition.md) da dahil olmak üzere kayıt yönetimiyle ilgili tüm özellikler için izinler verir.
+Kayıt yönetiminden sorumlu uyumluluk ekibinizin üyelerinin <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalında</a> izinlere sahip olması gerekir. Varsayılan olarak, kiracı yöneticisinin (genel yönetici) bu konuma erişimi vardır ve uyumluluk görevlilerine ve diğer kişilere kiracı yöneticisinin tüm izinlerini vermeden erişim verebilir. Bu sınırlı yönetime izin vermek için, kullanıcıları **Kayıt Yönetimi** yönetici rol grubuna eklemenizi öneririz. Bu grup, [edat gözden geçirme ve doğrulama](disposition.md) da dahil olmak üzere kayıt yönetimiyle ilgili tüm özellikler için izinler verir.
 
 Salt okunur bir rol için yeni bir rol grubu oluşturabilir ve bu gruba **Yalnızca Görüntüleme Kayıt Yönetimi** rolünü ekleyebilirsiniz.
 
-Varsayılan rollere kullanıcı ekleme veya kendi rol gruplarınızı oluşturma yönergeleri için bkz. [Microsoft 365 uyumluluk merkezi izinler](microsoft-365-compliance-center-permissions.md).
+Varsayılan rollere kullanıcı ekleme veya kendi rol gruplarınızı oluşturma yönergeleri için bkz. [Microsoft Purview uyumluluk portalında İzinler](microsoft-365-compliance-center-permissions.md).
 
 Bu izinler yalnızca kayıtları bildiren ve değerlendirmeyi yöneten bekletme etiketleri oluşturmak, yapılandırmak ve uygulamak için gereklidir. Bu etiketleri yapılandıran kişinin içeriğe erişmesi gerekmez.
 
@@ -67,7 +67,7 @@ Bu izinler yalnızca kayıtları bildiren ve değerlendirmeyi yöneten bekletme 
 İş gereksinimlerinizi kayıt yönetimi tarafından desteklenen senaryolarla eşlemenize yardımcı olması için aşağıdaki tabloyu kullanın.
 
 > [!TIP]
-> Belirli bir endüstri düzenlemesine uymanız mı gerekiyor? [Düzenlemeye özgü yönergeler için bilgi idaresi ve kayıt yönetimi için Mevzuat gereksinimlerini](retention-regulatory-requirements.md) denetleyin.
+> Belirli bir endüstri düzenlemesine uymanız mı gerekiyor? [Düzenlemeye özgü yönergeler için veri yaşam döngüsü yönetimi ve kayıt yönetimi için Mevzuat gereksinimlerini](retention-regulatory-requirements.md) denetleyin.
 
 |Yapmak istiyorum...|Belge|
 |----------------|---------------|

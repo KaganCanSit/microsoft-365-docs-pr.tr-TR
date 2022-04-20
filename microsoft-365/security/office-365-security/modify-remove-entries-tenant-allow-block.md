@@ -1,5 +1,5 @@
 ---
-title: Kiracı İzin Ver/Engelle Listesinde girdileri değiştirme ve kaldırma
+title: Kiracı İzin Verilenler/Engellenenler Listesinde girdileri değiştirme ve kaldırma
 f1.keywords:
 - NOCSH
 ms.author: dansimp
@@ -13,83 +13,82 @@ search.appverid:
 - MET150
 ms.collection:
 - M365-security-compliance
-description: Yöneticiler, Güvenlik portalında Kiracı İzin Ver/Engelle Listesi'ne girişlerin nasıl değiştir ve kaldırı hakkında bilgi edinebilirsiniz.
+description: Yöneticiler, Güvenlik portalındaki Kiracı İzin Ver/Engelle Listesi'ndeki girdileri değiştirmeyi ve kaldırmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: f1ab3f815cc64af6d1383df228ef7961c3afdcec
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 7da986c42421c797f2d01b1e61d50c06933e373f
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63330195"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64970950"
 ---
-# <a name="modify-and-remove-entries-in-the-tenant-allowblock-list"></a>Kiracı İzin Ver/Engelle Listesinde girdileri değiştirme ve kaldırma
+# <a name="modify-and-remove-entries-in-the-tenant-allowblock-list"></a>Kiracı İzin Verilenler/Engellenenler Listesinde girdileri değiştirme ve kaldırma
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
-**Geçerli olduğu yer:**
+**Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Kiracı İzin Ver/Microsoft 365 Defender Listesinde girdileri değiştirmek ve kaldırmak için Microsoft 365 Defender veya PowerShell kullanabilirsiniz.
+Kiracı İzin Ver/Engelle Listesi'ndeki girdileri değiştirmek ve kaldırmak için Microsoft 365 Defender portalını veya PowerShell'i kullanabilirsiniz.
 
 ## <a name="use-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalını kullanma
 
-### <a name="modify-entries-in-the-tenant-allowblock-list"></a>Kiracı İzin Ver/Engelle Listesinde girdileri değiştirme
+### <a name="modify-entries-in-the-tenant-allowblock-list"></a>Kiracı İzin Ver/Engelle Listesindeki girdileri değiştirme
 
-1. Microsoft 365 Defender portalında, İlkeler ve kurallar **& Kuralları** \> **Tehdit** \> **İlkeleri** bölümü Kiracı İzin \> Verme **/Engelleme Listeleri'ne gidin**.
+1. Microsoft 365 Defender portalında **İlkeler & kuralları** \> **Tehdit İlkeleri** \> **Kuralları** bölümüne **Kiracı İzin Ver/Listeleri Engelle** bölümüne \> gidin.
 
 2. Değiştirmek istediğiniz girdi türünü içeren sekmeyi seçin:
    - **Gönderenler**
-   - **Spoofing**
-   - **URL'ler**
-   - **Dosyalar**
+   - **Sızdırma**
+   - **Url 'leri**
+   - **Dosyaları**
 
-
-3. Değiştirmek istediğiniz girdiyi seçin ve Düzenle simgesine ![tıklayın.](../../media/m365-cc-sc-edit-icon.png) **Düzenle'yi seçin**. Görüntülenen açılır sekmede değiştiryebilirsiniz değerler, önceki adımda seçtiğiniz sekmeye bağlıdır:
+3. Değiştirmek istediğiniz girdiyi seçin ve düzenle simgesine tıklayın ![.](../../media/m365-cc-sc-edit-icon.png) **Düzenle'yi seçin**. Görüntülenen açılır öğede değiştirebileceğiniz değerler, önceki adımda seçtiğiniz sekmeye bağlıdır:
    - **Gönderenler**
-     - **Hiçbir zaman ve** /veya son kullanma tarihi sona ermez.
+     - **Hiçbir zaman süresi dolmaz** ve/veya son kullanma tarihi.
      - **İsteğe bağlı not**
-   - **Spoofing**
-     - **Eylem**: Değeri İzin Ver veya Engelle **olarak** **değiştirebilirsiniz**.
-   - **URL'ler**
-     - **Hiçbir zaman ve** /veya son kullanma tarihi sona ermez.
+   - **Sızdırma**
+     - **Eylem**: Değeri **İzin Ver** veya **Engelle** olarak değiştirebilirsiniz.
+   - **Url 'leri**
+     - **Hiçbir zaman süresi dolmaz** ve/veya son kullanma tarihi.
      - **İsteğe bağlı not**
-   - **Dosyalar**
-     - **Hiçbir zaman ve** /veya son kullanma tarihi sona ermez.
+   - **Dosyaları**
+     - **Hiçbir zaman süresi dolmaz** ve/veya son kullanma tarihi.
      - **İsteğe bağlı not**
 
 4. Bitirdiğinizde, **Kaydet**'i tıklatın.
 
 > [!NOTE]
-> Oluşturma tarihini takip yalnızca en fazla 30 gün boyunca izin ve ardından 30 gün uzatarak devam  olabilir. Bloklar 90 gün kadar uzatılabilir, ancak izinlerin aksine, süresi hiçbir zaman dolmaacak şekilde de ayarlanır.
+> İzin verilen süreyi yalnızca oluşturma tarihinden sonra en fazla 30 gün uzatabilirsiniz. Bloklar 90 güne kadar uzatılabilir, ancak izin vermedikleri gibi Süresi hiç dolmaz olarak da ayarlanabilir.
 
-### <a name="remove-entries-from-the-tenant-allowblock-list"></a>Kiracı İzin Ver/Engelleme Listesinden girdileri kaldırma
+### <a name="remove-entries-from-the-tenant-allowblock-list"></a>Kiracı İzin Ver/Engelle Listesinden girdileri kaldırma
 
-1. Microsoft 365 Defender portalında, İlkeler ve kurallar **& Kuralları** \> **Tehdit** \> **İlkeleri** bölümü Kiracı İzin \> Verme **/Engelleme Listeleri'ne gidin**.
+1. Microsoft 365 Defender portalında **İlkeler & kuralları** \> **Tehdit İlkeleri** \> **Kuralları** bölümüne **Kiracı İzin Ver/Listeleri Engelle** bölümüne \> gidin.
 
 2. Kaldırmak istediğiniz girdi türünü içeren sekmeyi seçin:
    - **Gönderenler**
-   - **Spoofing**
-   - **URL'ler**
-   - **Dosyalar**
- 
-3. Kaldırmak istediğiniz girdiyi seçin ve Sil simgesine ![tıklayın.](../../media/m365-cc-sc-delete-icon.png) **Sil'i seçin**.
+   - **Sızdırma**
+   - **Url 'leri**
+   - **Dosyaları**
 
-4. Görüntülenen uyarı iletişim kutusunda Sil'e **tıklayın**.
+3. Kaldırmak istediğiniz girdiyi seçin ve sil simgesine tıklayın ![.](../../media/m365-cc-sc-delete-icon.png) **Sil'i seçin**.
+
+4. Görüntülenen uyarı iletişim kutusunda **Sil'e** tıklayın.
 
 ## <a name="use-powershell"></a>PowerShell kullanma
 
-### <a name="modify-allow-or-block-sender-file-and-url-entries-in-the-tenant-allowblock-list"></a>Kiracı İzin Ver/Engelle Listesinde gönderene, dosyaya ve URL girdilerine izin verme veya engellemeyi değiştirme
+### <a name="modify-allow-or-block-sender-file-and-url-entries-in-the-tenant-allowblock-list"></a>Kiracı İzin Ver/Engelle Listesinde gönderen, dosya ve URL girişlerine izin verme veya engelleme
 
-Kiracı İzin Ver/Engelleme Listesi'ne gönderen, dosya ve URL girdilerine izin verme veya bu girdileri engellemek için aşağıdaki söz dizimlerini kullanın:
+Kiracı İzin Ver/Engelle Listesindeki gönderen, dosya ve URL girişlerine izin vermek veya bunları engellemek için aşağıdaki söz dizimini kullanın:
 
 ```powershell
 Set-TenantAllowBlockListItems -ListType <Sender | FileHash | Url> -Ids <"Id1","Id2",..."IdN"> [<-ExpirationDate Date | -NoExpiration>] [-Notes <String>]
 ```
 
-Bu örnekte, belirtilen URL girişinin son kullanma tarihi değişir.
+Bu örnek, belirtilen blok URL'si girişinin sona erme tarihini değiştirir.
 
 ```powershell
 Set-TenantAllowBlockListItems -ListType Url -Ids "RgAAAAAI8gSyI_NmQqzeh-HXJBywBwCqfQNJY8hBTbdlKFkv6BcUAAAl_QCZAACqfQNJY8hBTbdlKFkv6BcUAAAl_oSRAAAA" -ExpirationDate "5/30/2020"
@@ -97,31 +96,31 @@ Set-TenantAllowBlockListItems -ListType Url -Ids "RgAAAAAI8gSyI_NmQqzeh-HXJBywBw
 
 Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [Set-TenantAllowBlockListItems](/powershell/module/exchange/set-tenantallowblocklistitems).
 
-### <a name="remove-allow-or-block-sender-url-or-file-entries-from-the-tenant-allowblock-list"></a>Kiracı İzin Ver/Engelle Listesinden gönderene, URL'ye veya dosya girdilerine izin verme veya engellemeyi kaldırma
+### <a name="remove-allow-or-block-sender-url-or-file-entries-from-the-tenant-allowblock-list"></a>Kiracı İzin Ver/Engelle Listesinden gönderen, URL veya dosya girdilerine izin verme veya bunları engelleme
 
-Kiracı İzin Ver/Engelleme Listesi'ne gönderen, dosya ve URL girdilerine izin verme veya bunları engellemek için aşağıdaki söz dizimlerini kullanın:
+Kiracı İzin Ver/Engelle Listesinden gönderen, dosya ve URL girdilerine izin vermek veya bunları engellemek için aşağıdaki söz dizimini kullanın:
 
 ```powershell
 Remove-TenantAllowBlockListItems -ListType <Sender | FileHash | Url> -Ids <"Id1","Id2",..."IdN">
 ```
 
-Bu örnek, belirtilen URL engelleme girdisini Kiracı İzin Verme/Engelleme Listesinden kaldırır.
+Bu örnek, belirtilen blok URL'si girişini Kiracı İzin Ver/Engelle Listesinden kaldırır.
 
 ```powershell
 Remove-TenantAllowBlockListItems -ListType Url -Ids "RgAAAAAI8gSyI_NmQqzeh-HXJBywBwCqfQNJY8hBTbdlKFkv6BcUAAAl_QCZAACqfQNJY8hBTbdlKFkv6BcUAAAl_oSPAAAA0"
 ```
 
-Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [Remove-TenantAllowBlockListItems](/powershell/module/exchange/remove-tenantallowblocklistitems).
+Ayrıntılı söz dizimi ve parametre bilgileri için bkz [. Remove-TenantAllowBlockListItems](/powershell/module/exchange/remove-tenantallowblocklistitems).
 
-### <a name="modify-allow-or-block-spoofed-sender-entries-from-the-tenant-allowblock-list"></a>Kiracı İzin Ver/Engellenenler Listesinden kimliği doğru engellenen gönderen girişlerini değiştirme
+### <a name="modify-allow-or-block-spoofed-sender-entries-from-the-tenant-allowblock-list"></a>Kiracı İzin Ver/Engelle Listesinden sahte gönderen girişlerine izin verme veya engelleme
 
-Kiracı İzin Ver/Engelleme Listesi'ne hatalı gönderen girdilerini değiştirmek veya engellemek için aşağıdaki söz dizimlerini kullanın:
+Kiracı İzin Ver/Engelle Listesi'nde sahte gönderen girişlerine izin vermek veya bunları engellemek için aşağıdaki söz dizimini kullanın:
 
 ```powershell
 Set-TenantAllowBlockListSpoofItems -Ids <"Id1","Id2",..."IdN"> -Action <Allow | Block>
 ```
 
-Bu örnekte, kimliği doğruya doğru gönderen girdisi engellemeye izin vermiyor.
+Bu örnek sahte gönderen girdisini izin ver'den engellemeye değiştirir.
 
 ```powershell
 Set-TenantAllowBlockListItems -Ids "RgAAAAAI8gSyI_NmQqzeh-HXJBywBwCqfQNJY8hBTbdlKFkv6BcUAAAl_QCZAACqfQNJY8hBTbdlKFkv6BcUAAAl_oSRAAAA" -Action Block
@@ -129,12 +128,12 @@ Set-TenantAllowBlockListItems -Ids "RgAAAAAI8gSyI_NmQqzeh-HXJBywBwCqfQNJY8hBTbdl
 
 Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [Set-TenantAllowBlockListSpoofItems](/powershell/module/exchange/set-tenantallowblocklistspoofitems).
 
-### <a name="remove-allow-or-block-spoofed-sender-entries-from-the-tenant-allowblock-list"></a>Kiracı İzin Ver/Engelle listesinden kimliği doğru engellenen gönderen girişlerini kaldırma
- 
-Kiracı İzin Ver/Engelle Listesinden kimliği doğru gönderen girişlerini kaldırmak veya engellemek için aşağıdaki söz dizimlerini kullanın:
+### <a name="remove-allow-or-block-spoofed-sender-entries-from-the-tenant-allowblock-list"></a>Kimlik sahtekarlığına izin veren veya engellenen gönderen girdilerini Kiracı İzin Ver/Engelle Listesinden kaldırma
+
+Kiracı İzin Ver/Engelle Listesinden kimlik sahtekarlığına izin verme veya engelleme girdilerini kaldırmak için aşağıdaki söz dizimini kullanın:
 
 ```powershell
 Remove-TenantAllowBlockListSpoofItems -Ids <"Id1","Id2",..."IdN">
 ```
 
-Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [Remove-TenantAllowBlockListSpoofItems](/powershell/module/exchange/remove-tenantallowblocklistspoofitems).
+Ayrıntılı söz dizimi ve parametre bilgileri için bkz [. Remove-TenantAllowBlockListSpoofItems](/powershell/module/exchange/remove-tenantallowblocklistspoofitems).

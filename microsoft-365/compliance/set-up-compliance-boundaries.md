@@ -19,14 +19,16 @@ search.appverid:
 ms.assetid: 1b45c82f-26c8-44fb-9f3b-b45436fe2271
 description: eBulma yöneticisinin Microsoft 365'de arayabileceği kullanıcı içerik konumlarını denetleyebilen mantıksal sınırlar oluşturmak için uyumluluk sınırlarını kullanmayı öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 6eab4528cb399f880d40c8edcea16814ad9b7ade
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: adfdc0284983c6efb91f076be1a203734deb038e
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64941885"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64993984"
 ---
 # <a name="set-up-compliance-boundaries-for-ediscovery-investigations"></a>eBulma araştırmaları için uyumluluk sınırlarını ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bu makaledeki yönergeler, araştırma yönetmek için Microsoft Purview eKeşif (Standart) veya Microsoft Purview eKeşif (Premium) kullanılırken uygulanabilir.
 

@@ -17,14 +17,16 @@ search.appverid:
 ms.assetid: ''
 ms.custom: seo-marvel-mar2020
 description: Bir durumda ayarlanan tüm incelemeler için geçerli olan Microsoft Purview eBulma (Premium) ayarlarını yapılandırın. Bu, analiz ve Optik karakter tanıma ayarlarını içerir.
-ms.openlocfilehash: f6cae054f111aa3aa4f8c7d4ab3c3323ce0498ff
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: c5b542f224e35a6505dca9cbfacb5f1095fa2dbe
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64949685"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64992314"
 ---
 # <a name="configure-search-and-analytics-settings-in-ediscovery-premium"></a>eBulma'da arama ve analiz ayarlarını yapılandırma (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Aşağıdaki işlevleri denetlemek için her Microsoft Purview eKeşif (Premium) olayı için ayarları yapılandırabilirsiniz.
 

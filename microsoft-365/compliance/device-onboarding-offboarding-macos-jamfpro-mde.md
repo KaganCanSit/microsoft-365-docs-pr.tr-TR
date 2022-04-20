@@ -1,5 +1,5 @@
 ---
-title: macOS cihazlarının Uç Nokta için Microsoft Defender müşterileri için JAMF Pro kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması (önizleme)
+title: Uç Nokta için Microsoft Defender müşterileri için JAMF Pro kullanarak macOS cihazlarını Uyumluluk çözümlerine ekleme ve çıkarma
 f1.keywords: NOCSH
 ms.author: chrfox
 author: chrfox
@@ -13,109 +13,111 @@ ms.collection:
 - M365-security-compliance
 search.appverid:
 - MET150
-description: Uç nokta müşterileri için Microsoft Defender 'ı (önizleme) kullanarak mac Microsoft 365 OS cihazlarını JAMF Pro Uyumluluk çözümlerine ekleme ve çıkararak kullanma hakkında bilgi edinin
-ms.openlocfilehash: f260d901f8f02c2c02007b2cc0d49ab9ee57dafd
-ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
+description: Uç Nokta için Microsoft Defender müşterileri için JAMF Pro kullanarak macOS cihazlarını Microsoft Purview çözümlerine ekleme ve çıkarma hakkında bilgi edinin
+ms.openlocfilehash: ba2ff7723e54451ace46823fafb5323dcb35069e
+ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63716331"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64953393"
 ---
-# <a name="onboard-and-offboard-macos-devices-into-compliance-solutions-using-jamf-pro-for-microsoft-defender-for-endpoint-customers-preview"></a>macOS cihazlarının Uç Nokta için Microsoft Defender müşterileri için JAMF Pro kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması (önizleme)
+# <a name="onboard-and-offboard-macos-devices-into-compliance-solutions-using-jamf-pro-for-microsoft-defender-for-endpoint-customers"></a>Uç Nokta için Microsoft Defender müşterileri için JAMF Pro kullanarak macOS cihazlarını Uyumluluk çözümlerine ekleme ve çıkarma
 
-MacOS cihazlarını uyumluluk çözümlerine Pro IÇIN JAMF Microsoft 365 kullanabilirsiniz.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+MACOS cihazlarını Microsoft Purview çözümlerine eklemek için JAMF Pro kullanabilirsiniz.
 
 > [!IMPORTANT]
-> MacOS ***cihazlarınıza Uç Nokta*** için Microsoft Defender (MDE) dağıttıysanız bu yordamı kullanın
+> macOS cihazlarınıza Uç Nokta için Microsoft Defender (MDE) ***dağıttıysanız*** bu yordamı kullanın
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 
-- MacOS cihazlarına MDE dağıtan müşteriler.
-- [Microsoft 365 Uç nokta veri kaybı önleme (DLP)](./endpoint-dlp-learn-about.md)
-- [İçeriden risk yönetimi](insider-risk-management.md#learn-about-insider-risk-management-in-microsoft-365)
+- MDE'yi macOS cihazlarına dağıtan müşteriler.
+- [Uç nokta veri kaybı önleme (DLP)](./endpoint-dlp-learn-about.md)
+- [İçeriden risk yönetimi](insider-risk-management.md)
 
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-- [macOS cihazlarınızı JAMF pro](https://www.jamf.com/resources/product-documentation/jamf-pro-installation-guide-for-mac/) aracılığıyla yönettikten ve JAMF hizmeti veya Intune aracılığıyla bir kimlikle (Azure AD'ye katılmış UPN) ilişkilendirilmiş Bağlan emin olun.
-- v95+ Edge tarayıcısını macOS cihazlarınıza yükleme
+- [macOS cihazlarınızın JAMF pro aracılığıyla yönetildiğinden ve JAMF](https://www.jamf.com/resources/product-documentation/jamf-pro-installation-guide-for-mac/) Bağlan veya Intune aracılığıyla bir kimlikle (Azure AD'ye katılmış UPN) ilişkilendirildiğinden emin olun.
+- macOS cihazlarınıza v95+ Edge tarayıcısını yükleme
 
-## <a name="onboard-devices-into-microsoft-365-compliance-solutions-using-jamf-pro"></a>JAMF uyumluluk Microsoft 365 kullanarak cihazları Uyumluluk çözümlerine Pro
+## <a name="onboard-devices-into-microsoft-purview-solutions-using-jamf-pro"></a>JAMF Pro kullanarak cihazları Microsoft Purview çözümlerine ekleme
 
-Bir macOS cihazı Uyumluluk çözümlerine ekleme, çok aşamalı bir işlemdir.
+MacOS cihazını Uyumluluk çözümlerine ekleme çok aşamalı bir işlemdir.
 
 ### <a name="download-the-configuration-files"></a>Yapılandırma dosyalarını indirme
 
-1. Bu yordam için bu dosyalara ihtiyacınız vardır.
+1. Bu yordam için bu dosyalara ihtiyacınız olacaktır.
 
-|için gereken dosya |kaynak |
+|için gereken dosya |Kaynak |
 |---------|---------|
-|erişilebilirlik |[accessibility.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/accessibility.mobileconfig)|
-tam disk erişimi     |[full ssd.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/fulldisk.mobileconfig)|
+|Erişilebilir -lik |[accessibility.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/accessibility.mobileconfig)|
+tam disk erişimi     |[fulldisk.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/fulldisk.mobileconfig)|
 |MDE tercihi |[schema.json](https://github.com/microsoft/mdatp-xplat/blob/master/macos/schema/schema.json)
 
 > [!TIP]
-> *.mobileconfig dosyalarını tek tek* veya içeren tek [bir birleşik dosyada](https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/combined/mdatp-nokext.mobileconfig) indirebilirsiniz:
+> *.mobileconfig* dosyalarını tek tek veya aşağıdakileri içeren [tek bir birleştirilmiş dosyada](https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/combined/mdatp-nokext.mobileconfig) indirebilirsiniz:
 > - accessibility.mobileconfig
-> - full ssd.mobileconfig
+> - fulldisk.mobileconfig
 >
->Bu tek tek dosyalardan herhangi biri güncelleştirilmişse, birleştirilmiş dosyayı ya da tek tek güncelleştirilmiş dosyayı yeniden indirmeniz gerekir.
+>Bu dosyalardan herhangi biri güncelleştirildiyse, birleştirilmiş dosyayı veya tek tek güncelleştirilmiş dosyayı tek tek indirmeniz gerekir.
 
 ### <a name="update-the-existing-mde-preference-domain-profile-using-the-jamf-pro-console"></a>JAMF PRO konsolunu kullanarak mevcut MDE Tercihi etki alanı profilini güncelleştirme
 
-1. İndirdiğiniz schema.xml **schema.json dosyasıyla** en son profili güncelleştirin.
+1. schema.xml profilini indirdiğiniz **schema.json** dosyasıyla güncelleştirin.
 
 1. **MDE Tercih Etki Alanı Özellikleri'nin** altında bu ayarları seçin
-    - Özellikler 
+    - Özellik 
         - Sistem Uzantılarını Kullanma: `enabled` - Catalina'da ağ uzantıları için gereklidir
-        - Veri kaybını önlemeyi kullanma: `enabled`
+        - Veri Kaybı Önleme'yi kullanma: `enabled`
 
-1. Kapsam **sekmesini** seçin.
+1. **Kapsam** sekmesini seçin.
 
-1. Bu yapılandırma profilinin dağıtımı için grupları seçin.
+1. Bu yapılandırma profilinin dağıtılacağı grupları seçin.
 
 1. **Kaydet**'i seçin. 
 
 ### <a name="update-the-configuration-profile-for-grant-full-disk-access"></a>Tam disk erişimi ver için yapılandırma profilini güncelleştirme
 
-1. mevcut tam disk erişimi profilini **full pie.mobileconfig dosyasıyla güncelleştirin** .
+1. Var olan tam disk erişim profilini **fulldisk.mobileconfig** dosyasıyla güncelleştirin.
 
-1. Upload **. mobileconfig dosyasını** JAMF'e kaydedin. [JAMF dosyası kullanarak Özel Yapılandırma Profillerini Dağıtma Pro](https://docs.jamf.com/technical-articles/Deploying_Custom_Configuration_Profiles_Using_Jamf_Pro.html).
+1. **fulldisk.mobileconfig** dosyasını JAMF'ye Upload. [JAMF Pro kullanarak Özel Yapılandırma Profilleri Dağıtma](https://docs.jamf.com/technical-articles/Deploying_Custom_Configuration_Profiles_Using_Jamf_Pro.html) bölümüne bakın.
 
-### <a name="grant-accessibility-access-to-dlp"></a>DLP'ye erişilebilirlik erişimi ver
+### <a name="grant-accessibility-access-to-dlp"></a>DLP'ye erişilebilirlik erişimi verme
 
 1. Daha önce indirdiğiniz accessibility.mobileconfig dosyasını kullanın.
 
-1. Upload Yapılandırma Profillerini Jamf kullanarak Dağıtma konusunda [açıklandığı gibi JAMF'e Pro](https://www.jamf.com/jamf-nation/articles/648/deploying-custom-configuration-profiles-using-jamf-pro).
+1. [Jamf Pro kullanarak Özel Yapılandırma Profilleri Dağıtma bölümünde açıklandığı gibi JAMF'ye Upload](https://www.jamf.com/jamf-nation/articles/648/deploying-custom-configuration-profiles-using-jamf-pro).
 
-### <a name="check-the-macos-device"></a>macOS cihazına bakın 
+### <a name="check-the-macos-device"></a>macOS cihazını denetleme 
 
-1. macOS cihazı yeniden başlatın.
+1. macOS cihazını yeniden başlatın.
 
-1. Sistem **TercihleriProfiles'i** >  **açın**.
+1. Sistem **TercihleriProfiller'i** >  açın.
 
-1. Şunları görüyor gerekir:
-    - Erişilebilirlik
+1. Şunu görmeniz gerekir:
+    - Accessiblity
     - Tam Disk Erişimi
-    - Kernel Extension Profile
+    - Çekirdek Uzantısı Profili
     - MAU
     - MDATP Ekleme
     - MDE Tercihleri
     - Yönetim profili
     - Ağ filtresi
-    - Bildirimler
+    - Bildirim
     - Sistem uzantısı profili
 
-## <a name="offboard-macos-devices-using-jamf-pro"></a>JAMF bağlantı cihazları kullanan offboard macOS Pro
+## <a name="offboard-macos-devices-using-jamf-pro"></a>JAMF Pro kullanarak macOS cihazlarını çıkarma
 
 > [!IMPORTANT]
-> Offboard, cihazın algılayıcı verilerini portala göndermeyi durdurmaya neden olur, ancak sahip olduğu uyarılara başvuru da dahil olmak üzere cihazdan alınan veriler 6 ay süreyle korunur.
+> Kullanıma alma, cihazın portala algılayıcı verileri göndermeyi durdurmasına neden olur, ancak sahip olduğu uyarılara başvuru da dahil olmak üzere cihazdaki veriler 6 aya kadar saklanır.
 
-MacOS cihazından çıkarılacak adımları izleyin
+MacOS cihazını çıkarmak için şu adımları izleyin
 
- 1. **MDE Tercihi Etki Alanı Özellikleri altında**, bu ayarların değerlerini kaldırın
-    - Özellikler 
+ 1. **MDE Tercihi Etki Alanı Özellikleri** altında bu ayarların değerlerini kaldırın
+    - Özellik 
         - Sistem Uzantılarını Kullanma
-        - Veri Kaybını Önlemeyi Kullanma
+        - Veri Kaybı Önleme'yi kullanma
 
 1. **Kaydet**'i seçin.

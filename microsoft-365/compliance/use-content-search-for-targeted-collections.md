@@ -19,14 +19,16 @@ search.appverid:
 ms.assetid: e3cbc79c-5e97-43d3-8371-9fbc398cd92e
 ms.custom: seo-marvel-apr2020
 description: Belirli bir posta kutusu veya site klasöründeki öğeleri arayan hedefli bir koleksiyon gerçekleştirmek için Microsoft Purview uyumluluk portalındaki İçerik arama özelliğini kullanın.
-ms.openlocfilehash: b01197ebc942b13f1b3806d2ad3b5a564b609098
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 9638a0870f1d97d2bcea73215509d269576c4ecd
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64947065"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64991786"
 ---
 # <a name="use-content-search-for-targeted-collections"></a>Hedeflenen koleksiyonlar için İçerik aramasını kullanma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview uyumluluk portalındaki İçerik arama aracı, kullanıcı arabiriminde Exchange posta kutularındaki veya SharePoint ve OneDrive İş sitelerdeki belirli klasörleri aramak için doğrudan bir yol sağlamaz. Ancak, gerçek arama sorgusu söz dizimindeki siteler için e-posta veya yol (DocumentLink) özelliği için klasör kimliği özelliğini belirterek belirli klasörlerde ( *hedeflenen koleksiyon* olarak adlandırılır) arama yapmak mümkündür. Hedeflenen bir koleksiyonu gerçekleştirmek için İçerik Arama'yı kullanmak, büyük/küçük harfe veya ayrıcalıklı öğelere yanıt veren öğelerin belirli bir posta kutusunda veya site klasöründe bulunduğundan emin olduğunuzda kullanışlıdır. Posta kutusu klasörlerinin klasör kimliğini veya bir SharePoint ve OneDrive İş sitesindeki klasörlerin yolunu (DocumentLink) almak için bu makaledeki betiği kullanabilirsiniz. Ardından, klasörde bulunan öğeleri döndürmek için bir arama sorgusundaki klasör kimliğini veya yolunu kullanabilirsiniz.
 

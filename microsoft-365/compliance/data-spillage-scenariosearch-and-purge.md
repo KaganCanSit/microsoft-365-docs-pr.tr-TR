@@ -14,14 +14,16 @@ search.appverid:
 - MET150
 ms.assetid: d945f7dd-f62f-4ca7-b3e7-469824cfd493
 description: Kuruluşunuzdaki bir veri sızıntısı olayını yönetmek ve yanıtlamak için eBulma ve arama araçlarını kullanın.
-ms.openlocfilehash: e9e81ae81c344bfc8773174c8650a1808faddd5e
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 875c63f264e750603c4ad8a0b5bf1df2b6e45217
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64948077"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64993238"
 ---
 # <a name="ediscovery-solution-series-data-spillage-scenario---search-and-purge"></a>eBulma çözüm serisi: Veri taşması senaryosu - Arama ve temizleme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
  **Veri taşması nedir ve neden önem vermelisiniz?** Veri taşması, gizli bir belgenin güvenilmeyen bir ortama yayımlanmasıdır. Bir veri taşması olayı algılandığında, dökülmenin boyutunu ve konumlarını hızla değerlendirmek, çevresindeki kullanıcı etkinliklerini incelemek ve ardından taşan verileri sistemden kalıcı olarak temizlemek önemlidir.
   

@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Microsoft Purview uyumluluk portalında Skype Kurumsal'dan Microsoft 365 verileri içeri aktarmak ve arşivleme amacıyla bağlayıcıyı ayarlamayı ve kullanmayı öğrenin.
-ms.openlocfilehash: 406c8db8a28303657b6c475bf826ee501c9e7620
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 510eea94519b6f2278b9319da8c37b683639680c
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64937201"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64992424"
 ---
 # <a name="set-up-a-connector-to-archive-skype-for-business-data"></a>Skype Kurumsal verilerini arşivleye bir bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Skype Kurumsal platformundaki verileri Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında bir Veritas bağlayıcısı kullanın. Veritas, üçüncü taraf veri kaynağından öğeleri yakalamak (düzenli olarak) ve bu öğeleri [Microsoft 365](https://www.veritas.com/en/au/insights/merge1/skype-for-business) aktarmak için yapılandırılmış bir Skype Kurumsal bağlayıcısı sağlar. Bağlayıcı, kullanıcılar arasındaki iletiler, kalıcı sohbetler ve konferans iletileri gibi içerikleri Skype Kurumsal e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'da kullanıcının posta kutusuna aktarır.
 

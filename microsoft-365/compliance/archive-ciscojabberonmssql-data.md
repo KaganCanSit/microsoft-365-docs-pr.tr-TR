@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Yöneticiler, ms SQL verilerinde Cisco Jabber'ı Microsoft 365'da Veritas'tan içeri aktarmak ve arşivlemek için bir bağlayıcı ayarlayabilir. Bu bağlayıcı, Microsoft 365'da üçüncü taraf veri kaynaklarından verileri arşivleyabilmenizi sağlar. Bu verileri arşivledikten sonra, üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
-ms.openlocfilehash: 691b27b59b6ade98523f0324e22e0e0cb533fabd
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 0ef885db2ac3ede779092d3145ed49860fbd9dd1
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64946758"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64992710"
 ---
 # <a name="set-up-a-connector-to-archive-cisco-jabber-on-ms-sql-data"></a>MS SQL verilerinde Cisco Jabber'ı arşivleme için bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Cisco Jabber platformundaki verileri Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında bir Veritas bağlayıcısı kullanın. Veritas, Jabber'ın MS SQL Veritabanı 1:1 sohbet iletileri ve grup sohbetleri gibi öğeleri yakalamak ve ardından bu öğeleri Microsoft 365'a aktarmak için yapılandırılmış bir [Cisco Jabber](https://globanet.com/jabber/) bağlayıcısı sağlar. Bağlayıcı, Cisco Jabber'ın MS SQL Veritabanı verileri alır, işler ve kullanıcının Cisco Jabber hesabındaki içeriği e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365 kullanıcının posta kutusuna aktarır.
 

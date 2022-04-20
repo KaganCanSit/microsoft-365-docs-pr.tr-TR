@@ -1,5 +1,5 @@
 ---
-title: uç nokta veri kaybı önleme Microsoft 365 hakkında bilgi edinin
+title: Uç nokta veri kaybı önleme hakkında daha fazla bilgi edinme
 f1.keywords:
 - CSH
 ms.author: chrfox
@@ -18,31 +18,33 @@ ms.collection:
 - m365initiative-compliance
 search.appverid:
 - MET150
-description: 'uç nokta veri kaybını önleme Microsoft 365 dosya etkinliklerinin ve bu dosyalar için koruyucu eylemlerin izlenmesini uç noktalara genişletir. Dosyalar Uyumluluk çözümlerinde görünür hale getiriliyor '
-ms.openlocfilehash: f32e84434258ff4b4c5ea6af24f69c607952b56a
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+description: 'Uç nokta veri kaybını önleme, dosya etkinliklerinin ve bu dosyalar için koruyucu eylemlerin izlenmesini uç noktalara genişletir. Dosyalar Uyumluluk çözümlerinde görünür hale getiriliyor '
+ms.openlocfilehash: e84d2de72e05991a7d8374a2e5214df90fb939d9
+ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64714559"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64953315"
 ---
-# <a name="learn-about-microsoft-365-endpoint-data-loss-prevention"></a>uç nokta veri kaybı önleme Microsoft 365 hakkında bilgi edinin
+# <a name="learn-about-endpoint-data-loss-prevention"></a>Uç nokta veri kaybı önleme hakkında daha fazla bilgi edinme
 
-Hassas olduğunu belirlediğiniz öğelerde gerçekleştirilen eylemleri izlemek ve bu öğelerin yanlışlıkla paylaşılmasını önlemeye yardımcı olmak için Microsoft 365 veri kaybı önlemeyi (DLP) kullanabilirsiniz. DLP hakkında daha fazla bilgi için bkz. [Veri kaybını önleme hakkında bilgi edinin](dlp-learn-about-dlp.md).
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-**Uç nokta veri kaybı önleme** (Endpoint DLP), DLP'nin etkinlik izleme ve koruma özelliklerini fiziksel olarak Windows 10, Windows 11 ve macOS (Catalina 10.15 ve üzeri) cihazlarda depolanan hassas öğelere genişletir. Cihazlar Microsoft 365 uyumluluk çözümlerine eklendikten sonra, kullanıcıların hassas öğelerle yaptıklarıyla ilgili bilgiler [etkinlik gezgininde](data-classification-activity-explorer.md) görünür hale getirilir ve [DLP ilkeleri](create-test-tune-dlp-policy.md) aracılığıyla bu öğeler üzerinde koruyucu eylemler uygulayabilirsiniz.
+Hassas olduğunu belirlediğiniz öğelerde gerçekleştirilen eylemleri izlemek ve bu öğelerin yanlışlıkla paylaşılmasını önlemeye yardımcı olmak için Microsoft Purview Veri Kaybı Önleme'yi (DLP) kullanabilirsiniz. DLP hakkında daha fazla bilgi için bkz. [Veri kaybını önleme hakkında bilgi edinin](dlp-learn-about-dlp.md).
+
+**Uç nokta veri kaybı önleme** (Endpoint DLP), DLP'nin etkinlik izleme ve koruma özelliklerini fiziksel olarak Windows 10, Windows 11 ve macOS (Catalina 10.15 ve üzeri) cihazlarda depolanan hassas öğelere genişletir. Cihazlar Microsoft Purview çözümlerine eklendikten sonra, kullanıcıların hassas öğelerle yaptıklarıyla ilgili bilgiler [etkinlik gezgininde](data-classification-activity-explorer.md) görünür hale getirilir ve [DLP ilkeleri](create-test-tune-dlp-policy.md) aracılığıyla bu öğeler üzerinde koruyucu eylemler uygulayabilirsiniz.
 
 > [!TIP]
 > Çıkarılabilir depolama birimi için cihaz denetimi arıyorsanız bkz. [Uç Nokta için Microsoft Defender Cihaz Denetimi Çıkarılabilir Depolama Access Control](../security/defender-endpoint/device-control-removable-storage-access-control.md#microsoft-defender-for-endpoint-device-control-removable-storage-access-control).
 
 > [!NOTE]
-> Microsoft 365 Uyumluluğunda, hassas öğelerin DLP ilkesi değerlendirmesi merkezi olarak gerçekleşir, bu nedenle ilkelerin ve ilke güncelleştirmelerinin tek tek cihazlara dağıtılması için zaman gecikmesi yoktur. Uyumluluk merkezinde bir ilke güncelleştirildiğinde, bu güncelleştirmelerin hizmet genelinde eşitlenmesi genellikle yaklaşık bir saat sürer. İlke güncelleştirmeleri eşitlendikten sonra, hedeflenen cihazlardaki öğeler bir sonraki erişildiğinde veya değiştirildiğinde otomatik olarak yeniden değerlendirilir.
+> Microsoft Purview'da, hassas öğelerin DLP ilkesi değerlendirmesi merkezi olarak gerçekleşir, bu nedenle ilkelerin ve ilke güncelleştirmelerinin tek tek cihazlara dağıtılması için zaman gecikmesi yoktur. Uyumluluk merkezinde bir ilke güncelleştirildiğinde, bu güncelleştirmelerin hizmet genelinde eşitlenmesi genellikle yaklaşık bir saat sürer. İlke güncelleştirmeleri eşitlendikten sonra, hedeflenen cihazlardaki öğeler bir sonraki erişildiğinde veya değiştirildiğinde otomatik olarak yeniden değerlendirilir.
 
 ## <a name="endpoint-activities-you-can-monitor-and-take-action-on"></a>İzleyebileceğiniz ve üzerinde eylem gerçekleştirebileceğiniz uç nokta etkinlikleri
 
-Microsoft Endpoint DLP, kullanıcıların fiziksel olarak Windows 10, Windows 11 veya macOS cihazlarında depolanan hassas öğeler üzerinde gerçekleştirecekleri aşağıdaki etkinlik türlerini denetlemenize ve yönetmenize olanak tanır.
+Uç nokta DLP, kullanıcıların fiziksel olarak Windows 10, Windows 11 veya macOS cihazlarında depolanan hassas öğeleri ele alan aşağıdaki etkinlik türlerini denetlemenize ve yönetmenize olanak tanır.
 
-|Etkinlik |Açıklama  |Windows 10 1809 ve üzeri/ Windows 11| macOS Catalina 10.15 (önizleme) | Denetlenebilir/kısıtlanabilir|
+|Etkinlik |Açıklama  |Windows 10 1809 ve üzeri/ Windows 11| macOS Catalina 10.15| Denetlenebilir/kısıtlanabilir|
 |---------|---------|---------|---------|---------|
 |bulut hizmetine yükleme veya izin verilmeyen tarayıcılarla erişim    | Bir kullanıcının kısıtlanmış bir hizmet etki alanına öğe yüklemeyi veya bir öğeye tarayıcı üzerinden erişmeyi denediğinde algılar.  DLP'de izin verilmeyen bir tarayıcı olarak listelenen bir tarayıcı kullanıyorlarsa, karşıya yükleme etkinliği engellenir ve kullanıcı Microsoft Edge kullanmak üzere yeniden yönlendirilir. Microsoft Edge, DLP ilke yapılandırmasına göre karşıya yükleme veya erişime izin verir veya erişimi engeller         |Desteklenen | Desteklenen|denetlenebilir ve kısıtlanabilir|
 |başka bir uygulamaya kopyalama    |Kullanıcı korumalı bir öğeden bilgi kopyalamaya çalıştığında bunu algılar ve ardından başka bir uygulama, işlem veya öğeye yapıştırır. Aynı uygulama, işlem veya öğe içindeki bilgilerin kopyalanması ve yapıştırılması bu etkinlik tarafından algılanmaz.|Desteklenen|Desteklenen         | denetlenebilir ve kısıtlanabilir|
@@ -125,7 +127,7 @@ Uç Nokta DLP'sini incelemeden önce bilmeniz gereken birkaç ek kavram vardır.
 
 ### <a name="enabling-device-management"></a>Cihaz yönetimini etkinleştirme
 
-Cihaz yönetimi, cihazlardan telemetri toplanmasını sağlayan ve Uç Nokta DLP ve [Insider Risk yönetimi](insider-risk-management.md) gibi Microsoft 365 uyumluluk çözümlerine getiren işlevselliktir. DLP ilkelerinde konum olarak kullanmak istediğiniz tüm cihazları eklemeniz gerekir.
+Cihaz yönetimi, cihazlardan telemetri toplanmasını sağlayan ve Uç Nokta DLP ve [insider risk yönetimi](insider-risk-management.md) gibi Microsoft Purview çözümlerine getiren işlevselliktir. DLP ilkelerinde konum olarak kullanmak istediğiniz tüm cihazları eklemeniz gerekir.
 
 > [!div class="mx-imgBorder"]
 > ![cihaz yönetimini etkinleştirin.](../media/endpoint-dlp-learn-about-1-enable-device-management.png)
@@ -201,10 +203,10 @@ Uç nokta DLP, denetlenen etkinlik hakkında kapsamlı bilgiler toplar.
 
 Uç Nokta DLP hakkında bilgi edindiğinize göre, sonraki adımlarınız şunlardır:
 
-1. [Microsoft 365 genel bakışa Windows 10 veya Windows 11 cihazları ekleme](device-onboarding-overview.md)
-1. [macOS cihazlarının Microsoft 365'e katılımına genel bakış (önizleme)](device-onboarding-macos-overview.md)
+1. [Windows 10 veya Windows 11 cihazlarını Microsoft Purview'a eklemeye genel bakış](device-onboarding-overview.md)
+1. [MacOS cihazlarını Microsoft Purview'a eklemeye genel bakış](device-onboarding-macos-overview.md)
 1. [Uç noktada veri kaybı önleme ayarlarını yapılandırma](dlp-configure-endpoint-settings.md)
-1. [Microsoft Endpoint veri kaybı önlemeyi kullanma](endpoint-dlp-using.md)
+1. [Uç noktada veri kaybı önlemeyi kullanma](endpoint-dlp-using.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -214,4 +216,4 @@ Uç Nokta DLP hakkında bilgi edindiğinize göre, sonraki adımlarınız şunla
 - [Bir DLP ilkesi oluşturma, test etme ve ayarlama](create-test-tune-dlp-policy.md)
 - [Etkinlik gezgini ile Kullanmaya başlayın](data-classification-activity-explorer.md)
 - [Uç Nokta için Microsoft Defender](/windows/security/threat-protection/)
-- [Insider Risk yönetimi](insider-risk-management.md)
+- [İçeriden risk yönetimi](insider-risk-management.md)

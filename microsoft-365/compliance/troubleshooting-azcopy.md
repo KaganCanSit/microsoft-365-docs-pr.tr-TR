@@ -19,14 +19,16 @@ description: eBulma'da (Premium) hata düzeltme için Office 365 olmayan veriler
 ms.custom:
 - seo-marvel-mar2020
 - seo-marvel-apr2020
-ms.openlocfilehash: ed9910df4da310034320ea030c8b5da1c5918e52
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: ff8f69e6efeab3e0f0e9d8ee2f739caaa40d7c85
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64943501"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64991808"
 ---
 # <a name="troubleshoot-azcopy-in-ediscovery-premium"></a>eBulma'da AzCopy sorunlarını giderme (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview eKeşif'te (Premium) hata düzeltme için Microsoft 365 olmayan verileri veya belgeleri yüklerken, kullanıcı arabirimi karşıya yüklemek istediğiniz dosyaların depolandığı konumu ve dosyaların yüklendiği Azure depolama konumunu içeren parametreleri içeren bir Azure AzCopy komutu sağlar. Belgelerinizi karşıya yüklemek için bu komutu kopyalayıp yerel bilgisayarınızda bir Komut İstemi'nde çalıştırırsınız.  Aşağıdaki ekran görüntüsünde AzCopy komutunun bir örneği gösterilmektedir:
 

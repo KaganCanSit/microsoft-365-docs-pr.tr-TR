@@ -16,14 +16,16 @@ search.appverid:
 - MOE150
 - MET150
 description: İçerik arama, eBulma (Standart) ve eBulma (Premium) içinde eBulma arama sorgularını yapılandırmak için KQL düzenleyicisini kullanabilirsiniz.
-ms.openlocfilehash: f1339b064c736d19bb428f812429cf0620cb3f53
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: cbd7adb02c926477fd81568ed950ebd16110c79b
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64949971"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64993808"
 ---
 # <a name="use-the-kql-editor-to-build-search-queries"></a>Arama sorguları oluşturmak için KQL düzenleyicisini kullanma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft 365 eBulma araçları aramasında yeni KQL sorgu deneyimi, İçerik arama, Microsoft Purview eBulma (Standart) ve eBulma (Premium) içinde arama sorguları oluştururken geri bildirim ve rehberlik sağlar. Düzenleyiciye sorgu yazdığınızda, desteklenen aranabilir özellikler ve koşullar için otomatik tamamlama sağlar ve standart özellikler ve koşullar için desteklenen değerlerin listelerini sağlar. Örneğin, sorgunuzda e-posta özelliğini belirtirseniz `kind` düzenleyici, seçebileceğiniz desteklenen değerlerin listesini sunar. KQL düzenleyicisi, aramayı çalıştırmadan önce düzeltebileceğiniz olası sorgu hatalarını gerçek zamanlı olarak da görüntüler. En iyisi, standart koşul oluşturucusunda anahtar sözcükler ve koşullar kartlarını kullanarak sorguları el ile oluşturmak zorunda kalmadan karmaşık sorguları doğrudan düzenleyiciye yapıştırabilirsiniz.
   

@@ -17,14 +17,16 @@ search.appverid:
 ms.assetid: ''
 description: Microsoft Purview eKeşif (Premium) durumunda daha verimli bir inceleme için içeriği düzenlemek üzere bir gözden geçirme kümesinde sorgu oluşturmayı ve çalıştırmayı öğrenin.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: ead066428d5c2404da5bf863ad428784b3c3a30c
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: aad8cd7461c795f8ecba03edab76e81e8384430d
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64936301"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64991940"
 ---
 # <a name="query-and-filter-content-in-a-review-set"></a>Bir inceleme setindeki içeriği sorgulama ve filtreleme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Çoğu durumda, bir inceleme kümesindeki içeriği daha ayrıntılı incelemek ve daha verimli bir gözden geçirmeyi kolaylaştırmak için düzenlemek yararlı olacaktır. Gözden geçirme kümesinde filtreleri ve sorguları kullanmak, gözden geçirme ölçütlerinizi karşılayan belgelerin bir alt kümesine odaklanmanıza yardımcı olur.
 

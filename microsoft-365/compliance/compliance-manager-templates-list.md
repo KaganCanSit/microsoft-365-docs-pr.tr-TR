@@ -1,5 +1,5 @@
 ---
-title: Microsoft Uyumluluk Yöneticisi şablon listesi
+title: Microsoft Purview Uyumluluk Yöneticisi şablon listesi
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -16,24 +16,26 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Microsoft Uyumluluk Yöneticisi ulusal, bölgesel ve sektör düzenlemelerine, standartlarına ve yasalarına uygun değerlendirmeler oluşturmak için şablonlar sağlar.
-ms.openlocfilehash: 484363636906bbf599a18b3cf6d3484d53177e75
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+description: Microsoft Purview Uyumluluk Yöneticisi ulusal, bölgesel ve sektör düzenlemelerine, standartlarına ve yasalarına uygun değerlendirmeler oluşturmak için şablonlar sağlar.
+ms.openlocfilehash: cc07d7aa6fc385fc1066f35c8d20bbe7e2152b93
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64761011"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64971505"
 ---
 # <a name="compliance-manager-templates-list"></a>Uyumluluk Yöneticisi şablonları listesi
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 **Bu makalede:** Compliance Manager'da değerlendirme oluşturmak için kullanılabilecek **şablonların** kapsamlı listesini görüntüleyin.
 
 > [!IMPORTANT]
-> Kuruluşunuzun kullanabileceği değerlendirme şablonları lisans sözleşmenize bağlıdır. [Ayrıntıları gözden geçirin](compliance-manager-templates.md#template-availability-and-licensing).
+> Kuruluşunuzun kullanabileceği değerlendirme şablonları lisans sözleşmenize bağlıdır. [Ayrıntıları gözden geçirin](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-compliance-manager).
 
 ## <a name="overview"></a>Genel bakış
 
-[Microsoft Uyumluluk Yöneticisi](compliance-manager.md) , değerlendirme oluşturmak için kapsamlı bir şablon kümesi sağlar. Bu şablonlar, kuruluşunuzun verilerin toplanması ve kullanımını yöneten ulusal, bölgesel ve sektöre özgü gereksinimlere uymasına yardımcı olabilir.
+[Microsoft Purview Uyumluluk Yöneticisi](compliance-manager.md) , değerlendirme oluşturmak için kapsamlı bir şablon kümesi sağlar. Bu şablonlar, kuruluşunuzun verilerin toplanması ve kullanımını yöneten ulusal, bölgesel ve sektöre özgü gereksinimlere uymasına yardımcı olabilir.
 
 Yeni yasalar ve düzenlemeler yürürlüğe girdikçe Şablonlar Uyumluluk Yöneticisi'ne eklenir. Uyumluluk Yöneticisi, temel alınan yasalar veya düzenlemeler değiştiğinde şablonlarını da güncelleştirir. [Güncelleştirmeleri gözden geçirme ve kabul](compliance-manager-assessments.md#accept-updates-to-assessments) etme hakkında daha fazla bilgi edinin.
 

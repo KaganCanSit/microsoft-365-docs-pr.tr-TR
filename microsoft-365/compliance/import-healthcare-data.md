@@ -14,14 +14,16 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: Yöneticiler, elektronik sağlık kayıtlarını (EHR) sağlık sisteminden Microsoft 365 aktarmak için bir veri bağlayıcısı ayarlayabilir. Bu, çalışanlarınız tarafından hasta verilerine yetkisiz erişim etkinliğini algılamanıza yardımcı olmak için iç risk yönetimi ilkelerinde EHR verilerini kullanmanıza olanak tanır.
-ms.openlocfilehash: dfb02e5f6fb8625d31554c6dbc11179b1dddb6c2
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: b1745d8f91253132748fe08d724386d2e6633a4c
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64949729"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64993172"
 ---
 # <a name="set-up-a-connector-to-import-healthcare-ehr-audit-data-preview"></a>Sağlık EHR denetim verilerini içeri aktarmak için bağlayıcı ayarlama (önizleme)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Kuruluşunuzun Elektronik Sağlık Kayıtları (EHR) sisteminde kullanıcı etkinliği için denetim verilerini içeri aktarmak için Microsoft Purview uyumluluk portalında bir veri bağlayıcısı ayarlayabilirsiniz. Sağlık EHR sisteminizdeki denetim verileri, hastanın sağlık kayıtlarına erişmeyle ilgili olaylara ilişkin verileri içerir. Healthcare EHR denetim verileri, kuruluşunuzun hasta bilgilerine yetkisiz erişimden korunmasına yardımcı olmak için Microsoft 365 [insider risk yönetimi çözümü](insider-risk-management.md) tarafından kullanılabilir.
 

@@ -17,14 +17,16 @@ search.appverid:
 ms.assetid: 1b092f7c-ea55-44f5-b419-63f3458fd7e0
 ROBOTS: NOINDEX, NOFOLLOW
 description: Genel işleme kalitesini test etmek, karşılaştırmak ve doğrulamak için eBulma'da (Premium) Batch hesaplamasının ardından Test sekmesini kullanmayı öğrenin.
-ms.openlocfilehash: 7e4541aa2309b6209537931160bf351d22ee8eb7
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: e568552501a07c74e7500a1041e69f4994668cd2
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64935510"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64991874"
 ---
 # <a name="test-relevance-analysis-in-ediscovery-premium"></a>eBulma'da İlgi Analizini Test Et (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
   
 Microsoft Purview eKeşif(Premium) içindeki Test sekmesi, genel işleme kalitesini test etme, karşılaştırma ve doğrulamanızı sağlar. Bu testler Batch hesaplaması sonrasında gerçekleştirilir. Bir uzman, koleksiyondaki dosyaları etiketleyerek etiketlenen her dosyanın davayla ilgili olup olmadığı konusunda son kararı verir.
   

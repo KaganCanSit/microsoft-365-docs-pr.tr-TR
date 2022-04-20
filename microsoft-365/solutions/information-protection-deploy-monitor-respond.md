@@ -17,12 +17,12 @@ ms.collection:
 - m365solution-scenario
 ms.custom: ''
 description: Kişisel veri olaylarını izlemek ve yanıtlamak için denetim ve uyarı ilkelerini ve veri sahibi isteklerini kullanın.
-ms.openlocfilehash: 5f4dd6a59ae361cbef042bfc3587203b34620746
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 730eb42fdf6aed66f5beac69621981848ffa6510
+ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 04/19/2022
-ms.locfileid: "64945351"
+ms.locfileid: "64953337"
 ---
 # <a name="monitor-and-respond-to-data-privacy-incidents-in-your-organization"></a>Kuruluşunuzdaki veri gizliliği olaylarını izleme ve yanıtlama
 
@@ -67,7 +67,7 @@ Denetim, gelişmiş denetim ve uyarı ilkelerini ayarlamak için şu makalelere 
 
 - [Birleşik denetim](../compliance/search-the-audit-log-in-security-and-compliance.md)
 - [Posta kutusu denetimi](../compliance/enable-mailbox-auditing.md)
-- [Gelişmiş denetim](../compliance/advanced-audit.md)
+- [Denetim (Premium)](../compliance/advanced-audit.md)
 - [Uyarı ilkeleri](../compliance/alert-policies.md)
 
 ## <a name="data-subject-requests-for-the-gdpr-and-ccpa"></a>GDPR ve CCPA için veri sahibi istekleri

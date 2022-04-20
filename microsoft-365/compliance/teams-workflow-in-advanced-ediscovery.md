@@ -14,14 +14,16 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: eBulma'da (Premium) Microsoft Teams içeriği korumayı, toplamayı, gözden geçirmeyi ve dışarı aktarmayı öğrenin.
-ms.openlocfilehash: 21f6149d8a1c1114ab0d2d293af710690f74c6e5
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 4dc516037e1ccad41c7ed93f280d698ca6bd164c
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64948407"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64991918"
 ---
 # <a name="ediscovery-premium-workflow-for-content-in-microsoft-teams"></a>Microsoft Teams içeriği için eBulma (Premium) iş akışı
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bu makalede, Microsoft Teams içeriğini korumak, toplamak, gözden geçirmek ve dışarı aktarmak için Microsoft Purview eKeşif 'i (Premium) kullanmaya yönelik kapsamlı yordamlar, yönergeler ve en iyi yöntemler kümesi sağlanır. Bu makalenin amacı, eBulma iş akışınızı Teams içerik için iyileştirmenize yardımcı olmaktır.
 
@@ -301,7 +303,7 @@ Bir inceleme kümesinde Teams içeriği görüntülemeye yönelik bazı ipuçlar
 
 ## <a name="deleting-teams-chat-messages"></a>Teams sohbet iletilerini silme
 
-Gizli veya kötü amaçlı bilgiler içeren içerik Teams sohbet iletileri aracılığıyla yayınlandığında veri taşması olaylarına yanıt vermek için Advanced eDiscovery ve Microsoft Graph Gezgini'ni kullanabilirsiniz. Kuruluşunuzdaki yöneticiler Microsoft Teams sohbet iletilerini arayabilir ve silebilir. Bu, Teams sohbet iletilerindeki hassas bilgileri veya uygunsuz içeriği kaldırmanıza yardımcı olabilir. Daha fazla bilgi için bkz[. Teams sohbet iletilerini arama ve temizleme](search-and-delete-Teams-chat-messages.md).
+Gizli veya kötü amaçlı bilgiler içeren içerik Teams sohbet iletileri aracılığıyla yayınlandığında veri taşması olaylarına yanıt vermek için eBulma (Premium) ve Microsoft Graph Gezgini'ni kullanabilirsiniz. Kuruluşunuzdaki yöneticiler Microsoft Teams sohbet iletilerini arayabilir ve silebilir. Bu, Teams sohbet iletilerindeki hassas bilgileri veya uygunsuz içeriği kaldırmanıza yardımcı olabilir. Daha fazla bilgi için bkz[. Teams sohbet iletilerini arama ve temizleme](search-and-delete-Teams-chat-messages.md).
 
 ## <a name="reference-guide"></a>Başvuru kılavuzu
 

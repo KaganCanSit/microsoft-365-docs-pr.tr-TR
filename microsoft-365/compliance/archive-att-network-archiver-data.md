@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Yöneticiler, AT&T Mobil Ağı'ndan SMS ve MMS verilerini içeri aktarmak ve arşiv etmek için bir TeleMessage bağlayıcısı ayarlayabilir. Bu, kuruluşunuzun üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilmeniz için Microsoft Purview'daki üçüncü taraf veri kaynaklarından verileri arşivlemenizi sağlar.
-ms.openlocfilehash: 8c038769ef7330788badfaa8a0a40a00c0730a13
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 87b933117fae134572ccf4a152a83ec4165b1caf
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64950731"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64992776"
 ---
 # <a name="set-up-a-connector-to-archive-att-smsmms-data"></a>AT&T SMS/MMS verilerini arşivleye bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 AT&T Mobile Network'ten SMS ve MMS verilerini içeri aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında bir TeleMessage bağlayıcısı kullanın. Bağlayıcıyı ayarlayıp yapılandırdıktan sonra, her gün bir kez kuruluşunuzun AT&T Ağına bağlanır ve SMS ve MMS verilerini Microsoft Purview'daki posta kutularına aktarır.
 

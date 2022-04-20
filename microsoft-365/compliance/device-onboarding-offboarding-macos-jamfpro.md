@@ -1,5 +1,5 @@
 ---
-title: JAMF Pro (önizleme) kullanarak macOS cihazlarını Microsoft 365 Uyumluluk çözümlerine ekleme ve çıkarma
+title: JAMF Pro kullanarak macOS cihazlarını Microsoft Purview çözümlerine ekleme ve çıkarma
 f1.keywords: NOCSH
 ms.author: chrfox
 author: chrfox
@@ -13,32 +13,34 @@ ms.collection:
 - M365-security-compliance
 search.appverid:
 - MET150
-description: JAMF Pro (önizleme) kullanarak macOS cihazlarını Microsoft 365 Uyumluluk çözümlerine ekleme ve çıkarma hakkında bilgi edinin
-ms.openlocfilehash: 44e57e482c08b486563200010671b5c79329f7b2
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+description: JAMF Pro kullanarak macOS cihazlarını Microsoft Purview çözümlerine ekleme ve çıkarma hakkında bilgi edinin
+ms.openlocfilehash: bf15868b865afa80146df2b16199caf360a55ce2
+ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64783831"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64953437"
 ---
-# <a name="onboard-and-offboard-macos-devices-into-microsoft-365-compliance-solutions-using-jamf-pro-preview"></a>JAMF Pro (önizleme) kullanarak macOS cihazlarını Microsoft 365 Uyumluluk çözümlerine ekleme ve çıkarma
+# <a name="onboard-and-offboard-macos-devices-into-microsoft-purview-solutions-using-jamf-pro"></a>JAMF Pro kullanarak macOS cihazlarını Microsoft Purview çözümlerine ekleme ve çıkarma
 
-MacOS cihazlarını Uç nokta veri kaybını önleme gibi Microsoft 365 uyumluluk çözümlerine eklemek için JAMF Pro kullanabilirsiniz.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+MacOS cihazlarını Uç nokta veri kaybını önleme gibi Microsoft Purview çözümlerine eklemek için JAMF Pro kullanabilirsiniz.
 
 > [!IMPORTANT]
-> macOS ***cihazlarınıza dağıtılmış*** Pertahanan Microsoft untuk Titik Akhir (MDE) yoksa bu yordamı kullanın
+> macOS ***cihazlarınıza dağıtılmış*** Uç Nokta için Microsoft Defender (MDE) yoksa bu yordamı kullanın
 
 **Şunlar için geçerlidir:**
 
-- [Microsoft 365 Uç nokta veri kaybı önleme (DLP)](./endpoint-dlp-learn-about.md)
-- [İçeriden risk yönetimi](insider-risk-management.md#learn-about-insider-risk-management-in-microsoft-365)
+- [Uç nokta veri kaybı önleme (DLP)](./endpoint-dlp-learn-about.md)
+- [İçeriden risk yönetimi](insider-risk-management.md)
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
 - [macOS cihazlarınızın JAMF pro aracılığıyla yönetildiğinden ve JAMF](https://www.jamf.com/resources/product-documentation/jamf-pro-installation-guide-for-mac/) Bağlan veya Intune aracılığıyla bir kimlikle (Azure AD'ye katılmış UPN) ilişkilendirildiğinden emin olun.
 - macOS cihazlarınıza v95+ Edge tarayıcısını yükleme
 
-## <a name="onboard-devices-into-microsoft-365-compliance-solutions-using-jamf-pro"></a>JAMF Pro kullanarak cihazları Microsoft 365 Uyumluluk çözümlerine ekleme
+## <a name="onboard-devices-into-microsoft-purview-solutions-using-jamf-pro"></a>JAMF Pro kullanarak cihazları Microsoft Purview çözümlerine ekleme
 
 1. Bu yordam için bu dosyalara ihtiyacınız olacaktır.
 
@@ -102,7 +104,7 @@ MacOS cihazını Uyumluluk çözümlerine ekleme işlemi çok aşamalı bir işl
 ### <a name="configure-preference-domain-using-the-jamf-pro-console"></a>JAMF PRO konsolunu kullanarak Tercih etki alanını yapılandırma
 
 > [!IMPORTANT]
-> Tercih Etki Alanı değeri olarak ***com.microsoft.wdav** _ kullanmalısınız. Pertahanan Microsoft untuk Titik Akhir yönetilen ayarlarını yüklemek için bu adı ve _ *_com.microsoft.wdav.ext_** kullanır.
+> Tercih Etki Alanı değeri olarak ***com.microsoft.wdav** _ kullanmalısınız. Uç Nokta için Microsoft Defender yönetilen ayarlarını yüklemek için bu adı ve _ *_com.microsoft.wdav.ext_** kullanır.
 
 1. JAMF Pro'de yeni bir yapılandırma profili oluşturun. [JAMF Pro yöneticileri kılavuzuna](https://www.jamf.com/resources/product-documentation/jamf-pro-administrators-guide/) bakın. Şu değerleri kullanın:
     - Ad: `MDATP MDAV configuration settings`
@@ -122,7 +124,7 @@ MacOS cihazını Uyumluluk çözümlerine ekleme işlemi çok aşamalı bir işl
     - Özellik
         - Sistem Uzantılarını Kullanma: `enabled` - Catalina'da ağ uzantıları için gereklidir
         - Veri Kaybı Önleme'yi kullanma: `enabled`
-    - Pasif mod > virüsten koruma altyapısı: `true|false`. Yalnızca DLP dağıtıyorsanız kullanın `true`. DLP ve Pertahanan Microsoft untuk Titik Akhir (MDE) dağıtırken değer kullanın `false` veya atayın.
+    - Pasif mod > virüsten koruma altyapısı: `true|false`. Yalnızca DLP dağıtıyorsanız kullanın `true`. DLP ve Uç Nokta için Microsoft Defender (MDE) dağıtırken bir değer kullanın `false` veya atayın.
 
 1. **Kapsam** sekmesini seçin.
 

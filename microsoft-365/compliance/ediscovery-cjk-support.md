@@ -16,14 +16,16 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 description: Microsoft 365'deki Microsoft Purview eKeşif (Premium) uygulamasının çift baytlık karakter kümesi kullanan Çince, Japonca ve Korece (CJK) dilleri nasıl desteklediğini öğrenin.
-ms.openlocfilehash: 70081341499f348f1bb8e226b4d3b5e9c0bab031
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: e6221d37a3ebb07414f87f349b020365c80990e3
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64934807"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64992226"
 ---
 # <a name="cjk-language-support-for-ediscovery-premium"></a>eKeşif için CJK dil desteği (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview eKeşif (Premium), bir inceleme kümesindeki aşağıdaki gelişmiş senaryolar için çift baytlık karakter kümesi dillerini destekler (bunlar topluca *CJK* dilleri olarak bilinen Basitleştirilmiş Çince, Geleneksel Çince, Japonca ve Korece'yi içerir):
 

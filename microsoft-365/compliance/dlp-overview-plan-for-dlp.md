@@ -1,5 +1,5 @@
 ---
-title: Veri kaybını önlemeyi planlama
+title: Veri kaybı önleme planı
 f1.keywords:
 - NOCSH
 ms.author: chrfox
@@ -14,74 +14,76 @@ ms.collection:
 - M365-security-compliance
 search.appverid:
 - MET150
-description: Veri kaybını önleme planlama sürecine genel bakış
-ms.openlocfilehash: c695a6a2a4bd21a147e5e81bc73fb65ab1378960
-ms.sourcegitcommit: 1ef176c79a0e6dbb51834fe30807409d4e94847c
+description: Veri kaybı önlemeye yönelik planlama sürecine genel bakış
+ms.openlocfilehash: 68e2b3145521433dd8e0f602b8edb571c45ed9df
+ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2021
-ms.locfileid: "63005462"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64953459"
 ---
-# <a name="plan-for-data-loss-prevention-dlp"></a>Veri kaybı önleme (DLP) planı
+# <a name="plan-for-data-loss-prevention-dlp"></a>Veri kaybı önlemeyi planlama (DLP)
 
-Her kuruluşun iş ihtiyaçları, hedefleri, kaynakları ve durumu benzersiz olduğundan her kuruluş veri kaybı önleme (DLP) önlemeyi (DLP) farklı şekilde planlar ve uygulayamaz. Bununla birlikte, tüm başarılı DLP uygulamaları için ortak olan öğeler vardır. Bu makalede, kuruluşların DLP planlamalarında kullandığı en iyi yöntemler yer almaktadır.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Her kuruluşun iş gereksinimleri, hedefleri, kaynakları ve durumu kendilerine özel olduğundan, her kuruluş veri kaybı önlemeyi (DLP) farklı şekilde planlar ve uygular. Ancak, tüm başarılı DLP uygulamaları için ortak olan öğeler vardır. Bu makalede, kuruluşların DLP planlamalarında kullandığı en iyi yöntemler yer alır.
 
 ## <a name="multiple-starting-points"></a>Birden çok başlangıç noktası
 
-Birçok kuruluş, çeşitli devlet veya endüstri düzenlemelerine uyumlu olmak için DLP'yi uygulamaya karar verdi. Örneğin, Avrupa Birliği Genel Veri Koruma Yönetmeliği (GDPR) veya Sağlık Sigortası Taşınabilirlik ve Sorumluluk Yasası (HIPAA) veya California Tüketici Gizliliği Yasası (CCPA). Ayrıca, fikri mülkiyetlerini korumak için veri kaybını önlemeyi de hayata geçirmektedirler. Ama DLP yolculuğunun başlangıç noktası ve üst düzey hedefi farklılık gösterir. 
+Birçok kuruluş, çeşitli kamu veya sektör düzenlemelerine uymak için DLP uygulamayı tercih eder. Örneğin, Avrupa Birliği Genel Veri Koruma Yönetmeliği (GDPR) veya Sağlık Sigortası Taşınabilirlik ve Sorumluluk Yasası (HIPAA) veya California Tüketici Gizliliği Yasası (CCPA). Ayrıca fikri mülkiyetlerini korumak için veri kaybı önleme uygular. Ancak DLP yolculuğunda başlangıç yeri ve nihai hedef farklılık gösterir. 
 
 Kuruluşlar DLP yolculuğuna başlayabilir:
 
-- gibi platform odaklarından, Sohbet ve Kanal iletileri Teams cihazlarda bilgileri korumak Windows 10.
-- korumayı önceliklendirmek istediğiniz hassas bilgileri (sağlık hizmetleri kayıtları gibi) bilmek ve doğrudan koruma için ilkeler tanımlamaya gitmek
-- hassas bilgilerini bilmeden ne olduğunu, nerede olduğunu ve kimlerle birlikte ne yaptığını bilmeden keşif ve kategoriyle çalışmaya başlar ve daha yöntemleri bir yaklaşım benimserler
-- hassas bilgilerini ne olduğunu, nerede olduğunu veya bu bilgilerle ne yaptığını bilmeden, doğrudan ilkeler tanımlamaya ve bu sonuçları başlangıç noktası olarak kullanmaya ve sonra buradan ilkelerini geliştirmeye doğru hareket eder
-- Bilgi Koruma yığınının tamamını uygulamaları Microsoft 365 ve bu nedenle daha uzun vadeli, yöntemsel bir yaklaşım benimserler
+- Teams Sohbet ve Kanal iletilerindeki veya Windows 10 cihazlardaki bilgileri korumak isteme gibi bir platform odağından
+- sağlık kayıtları gibi korumaya öncelik vermek istedikleri hassas bilgileri bilme ve doğrudan korumak için ilke tanımlamaya gitme
+- hassas bilgilerinin ne olduğunu, nerede olduğunu ve kimlerin ne yaptığını bilmeden keşif ve kategorilere ayırma ile başlayıp daha yöntemli bir yaklaşım benimsediler
+- hassas bilgilerinin ne olduğunu, nerede olduğunu ya da kimlerin ne yaptığını bilmeden, ancak doğrudan ilkeleri tanımlamaya ve bu sonuçları başlangıç noktası olarak kullanmaya ve ardından ilkelerini oradan iyileştirmeye devam ederler
+- Tam Microsoft Purview Information Protection yığınını uygulamaları gerektiğini bilerek ve bu nedenle daha uzun vadeli, yöntemsel bir yaklaşım benimsemeyi amaçladılar
 
-Bunlar, müşterilerin DLP'ye nasıl yaklaştığına ve nereden başlayacağının önemi yoktur; Microsoft 365 DLP, baştan tamamıyla gerçekleştirilen veri kaybı önleme stratejisinde çeşitli bilgi koruma seyahatlerine uyum sağlayacak kadar esnektir. 
+Bunlar, müşterilerin DLP'ye nasıl yaklaşabileceğine dair bazı örneklerdir ve nereden başladığınız önemli değildir, DLP başlangıçtan tam olarak gerçekleştirilen veri kaybı önleme stratejisine kadar çeşitli bilgi koruma yolculuklarını barındıracak kadar esnektir. 
 
 ## <a name="overview-of-planning-process"></a>Planlama sürecine genel bakış
 
-Veri [kaybı önleme hakkında bilgi edinmek](dlp-learn-about-dlp.md#learn-about-data-loss-prevention) , [DLP planlama sürecinin üç farklı yönüne ortaya konur](dlp-learn-about-dlp.md#plan-for-dlp). Burada, tüm DLP planlarında ortak olan öğeler hakkında daha fazla ayrıntıya giracağız.
+[Microsoft Purview Veri Kaybı Önleme hakkında bilgi edinin](dlp-learn-about-dlp.md#learn-about-data-loss-prevention) bölümünde [DLP planlama sürecinin](dlp-learn-about-dlp.md#plan-for-dlp) üç farklı yönü tanıtılır. Burada tüm DLP planlarında ortak olan öğeler hakkında daha ayrıntılı bilgi vereceğiz.
 
-### <a name="identify-stakeholders"></a>Paydaşları tanımlama
+### <a name="identify-stakeholders"></a>Paydaşları belirleme
 
-Uygulama uygulandığında DLP ilkeleri, kuruluşun büyük bölümlerine uygulanabilir. IT, negatif sonuçlar olmadan kendi başına geniş bir plan geliştirebilir. Şunları kimlerin etkiley proje katılımcılarını tanımlamalı:
+DLP ilkeleri uygulandığında kuruluşunuzun büyük bölümlerine uygulanabilir. BT, olumsuz sonuçlar olmadan kendi başına geniş kapsamlı bir plan geliştiremez. Aşağıdakileri yapabilecek paydaşları tanımlamanız gerekir:
 
-- düzenlemelerini, yasaları ve endüstri standartlarıyla ilgili olarak
+- kuruluşunuzun tabi olduğu düzenlemeleri, yasaları ve endüstri standartlarını açıklama
 - korunacak hassas öğe kategorileri
-- kullanılan iş süreçleri
+- kullanıldıkları iş süreçleri
 - sınırlı olması gereken riskli davranış
-- öncelikle hangi verilerin korunması gerektiğini, ilgili öğelerin duyarlılığına ve risklere göre önceliklerini belirleme
-- DLP ilkesi, olay inceleme ve düzeltme işlemiyle eşleşme ana hatlarıyla açık 
+- söz konusu öğelerin ve riskin duyarlılığına bağlı olarak öncelikle hangi verilerin korunması gerektiğini önceliklendirme
+- DLP ilkesi eşleştirme olay incelemesi ve düzeltme işleminin ana hattı 
  
-Genelde bu ihtiyaçların %85'i mevzuat ve uyumluluk koruması, %15'i fikri mülkiyet koruması olmaktır. planlama sürecinize dahil olacak roller hakkında bazı öneriler şunlardır:
+Genel olarak bu ihtiyaçlar %85 mevzuat ve uyumluluk koruması ve %15 fikri mülkiyet koruması olma eğilimindedir. Planlama sürecinize dahil etmek için rollerle ilgili bazı öneriler şunlardır:
 
-- Mevzuat ve uyumluluk yetkililerini
-- Baş risk görevlisi
+- Mevzuat ve uyumluluk görevlileri
+- Risk sorumlusu
 - Hukuk görevlileri
 - Güvenlik ve uyumluluk görevlileri
-- Veri öğelerinin işletme sahipleri
-- Kurumsal kullanıcılar
+- Veri öğeleri için işletme sahipleri
+- İş kullanıcıları
 - IT
 
-### <a name="describe-the-categories-of-sensitive-information-to-protect"></a>Korunması için hassas bilgi kategorilerini açıkla
+### <a name="describe-the-categories-of-sensitive-information-to-protect"></a>Korunacak hassas bilgi kategorilerini açıklama
 
-Bundan sonra paydaşlar, korunması gereken hassas bilgi kategorilerini ve bunların kullanılmaları gereken iş sürecini açıklar. Örneğin, Microsoft 365 DLP şu kategorileri tanımlar:
+Paydaşlar daha sonra korunacak hassas bilgi kategorilerini ve kullanıldıkları iş sürecini açıklar. Örneğin, DLP şu kategorileri tanımlar:
 
 - Finansal 
-- Sağlık ve sağlık bilgileri
+- Tıbbi bilgiler ve sağlık bilgileri
 - Gizlilik
 - Özel
 
-Paydaşlar hassas bilgileri "Bir veri işlemcisiyiz, bu nedenle veri konusu bilgilerine ve finansal bilgilere gizlilik korumaları uygulamamız gerekir" olarak tanımlayabilir.
+Paydaşlar hassas bilgileri "Veri işleyicisiyiz, bu nedenle veri sahibi bilgileri ve finansal bilgiler üzerinde gizlilik korumaları uygulamamız gerekiyor" olarak tanımlayabilir.
 
  
   <!-- The business process is important as it informs the ‘data at rest’, ‘data in transit’, ‘data in use’ aspect of DLP planning and who should be sharing the items and who should not.-->
 
-### <a name="set-goals-and-strategy"></a>Hedef ve strateji ayarlama
+### <a name="set-goals-and-strategy"></a>Hedefleri ve stratejiyi belirleme
 
-Paydaşlarınızı belirlediktan ve hangi hassas bilgilerin korunması gerektiğini ve bunun nerede kullan gerektiğini biliyorken, paydaşlar koruma hedeflerini belirlediklerinden ve bir uygulama planı geliştirebilirler. 
+Paydaşlarınızı tanımladıktan ve hangi hassas bilgilerin korunması gerektiğini ve nerede kullanıldığını bildiğinizde, paydaşlar koruma hedeflerini belirleyebilir ve BT bir uygulama planı geliştirebilir. 
 
 
  <!--
@@ -98,110 +100,110 @@ start small and always in test mode. Note that DLP policies can feed into inside
 
 ### <a name="set-implementation-plan"></a>Uygulama planını ayarlama
 
-Uygulama planınız şunları içerebilir:
+Uygulama planınız şunları içermelidir:
 
-- Başlangıç durumunuzla istenen bitiş durumunu eşleme ve birden diğerini eşleştirme
-- hassas öğeleri bulma konusunda nasıl adrese sahip olayabilirsiniz
-- ilke planlama ve uygulanacakları düzen
-- önkoşulları nasıl karşılayabilirsiniz?
-- zorlamaya başlamadan önce ilkelerin nasıl test edileceklerini planlama
-- son kullanıcılarınızı nasıl eğiteceksiniz
-- ilkelerinizi nasıl test edin ve ayar edin
-- düzenleme, yasal, endüstri standardı veya fikri mülkiyet koruma ve iş ihtiyaçlarına dayalı olarak veri kaybı önleme stratejinizi nasıl gözden geçirer ve güncelleştirebilirsiniz
+- Başlangıç durumunuzu ve istediğiniz bitiş durumunu ve birinden diğerine alma adımlarını eşleme
+- hassas öğelerin bulunmasıyla nasıl ilgileneceksiniz?
+- ilke planlaması ve bunların uygulanacağı sıra
+- önkoşulları nasıl ele alasınız?
+- zorlamaya geçmeden önce ilkelerin ilk olarak nasıl test edileceğini planlama
+- son kullanıcılarınızı nasıl eğiteceğiniz
+- ilkelerinizi nasıl test edeceğinizi ve ayarlayabileceğinizi
+- değişen mevzuat, yasal, endüstri standardı veya fikri mülkiyet koruması ve iş gereksinimlerine göre veri kaybı önleme stratejinizi nasıl gözden geçireceğiniz ve güncelleştirdiğiniz
 
-#### <a name="map-out-path-from-start-to-desired-end-state"></a>Baştan istenen bitiş durumuna eşleme yolu
+#### <a name="map-out-path-from-start-to-desired-end-state"></a>Başlangıçtan istenen bitiş durumuna giden yolu eşleme
 
-Katılımcılarla iletişim kurmak ve proje kapsamının ayarını yapmak için, kuruluşlarının başlangıç durumunun istenen son durumuna nasıl ulaşacaklarını belgeleyebilirsiniz. DLP'nin dağıtımında yaygın olarak kullanılan adımlardan bir dizisini burada veserlerde edinebilirsiniz. Daha fazla ayrıntıya sahip olmak istiyor, ancak bunu kullanarak DLP benimseme yollarınızı çerçevelendirebilirsiniz.
+Kuruluşunuzun başlangıç durumundan istenen bitiş durumuna nasıl geçeceğini belgeleme, proje katılımcılarınızla iletişim kurmak ve proje kapsamını ayarlamak için gereklidir. DLP'yi dağıtmak için yaygın olarak kullanılan bir dizi adım aşağıdadır. Bundan daha fazla ayrıntı isteyeceksiniz, ancak bunu kullanarak DLP benimseme yolunuzu çerçeveleyebilirsiniz.
 
-![DLP'nin dağıtımında yaygın sırayı gösteren grafik.](../media/dlp-deployment-planning.png)
+![DLP dağıtımı için ortak sırayı gösteren grafik.](../media/dlp-deployment-planning.png)
 
 #### <a name="sensitive-item-discovery"></a>Hassas öğe bulma
 
-Tek tek hassas öğelerin ne olduğunu ve nerede olduklarını bulmanın çeşitli yolları vardır. Daha önce duyarlılık etiketleri dağıtmış veya yalnızca öğeleri bulan ve denetleen tüm konumlara geniş bir DLP ilkesi dağıtmaya karar vermiş olabilirsiniz. Daha fazla bilgi edinmek için bkz [. Verilerinizi bilebilirsiniz](information-protection.md#know-your-data).
+Tek tek hassas öğelerin ne olduğunu ve nerede bulunduklarını keşfetmenin birden çok yolu vardır. Duyarlılık etiketleriniz zaten dağıtılmış olabilir veya yalnızca öğeleri bulup denetleyebilen tüm konumlara geniş bir DLP ilkesi dağıtmaya karar vermiş olabilirsiniz. Daha fazla bilgi edinmek için bkz. [Verilerinizi öğrenme](information-protection.md#know-your-data).
 
-#### <a name="policy-planning"></a>İlke planlama
+#### <a name="policy-planning"></a>İlke planlaması
 
-DLP benimsemeye başlayana kadar, bu soruları kullanarak ilke tasarımınıza ve uygulama çabalarınıza odaklanın.
+DLP benimsemenize başlarken, ilke tasarımınıza ve uygulama çalışmalarınıza odaklanmak için bu soruları kullanabilirsiniz.
 
-##### <a name="what-laws-regulations-and-industry-standards-must-your-organization-comply-with"></a>Düzenlemenizin hangi yasalara, düzenlemelere ve endüstri standartlarıyla uyumlu olması gerekir?
+##### <a name="what-laws-regulations-and-industry-standards-must-your-organization-comply-with"></a>Kuruluşunuzun hangi yasalara, düzenlemelere ve endüstri standartlarına uyması gerekir?
 
-Birçok kuruluş yasal düzenlemelere uyum amacı ile DLP'ye geldi olduğundan, bu soruyu yanıtlamaK DLP uygulamanızı planlamak için doğal bir başlangıç noktasıdır. Ancak, IT uygulaması olarak büyük olasılıkla yanıt verecek konumda olmazsiniz. Bunu hukuk ekibinin ve işletme yöneticilerinin yanıtlaması gerekir. 
+Birçok kuruluş mevzuat uyumluluğu hedefiyle DLP'ye geldiğinden, bu soruyu yanıtlamak DLP uygulamanızı planlamak için doğal bir başlangıç noktasıdır. Ancak BT uygulayıcısı olarak büyük olasılıkla yanıt verecek konumda değilsinizdir. Yasal ekibiniz ve iş yöneticileriniz tarafından yanıtlanması gerekir. 
  
-**Örnek** Organizasyonunız İngiltere'ye tabidir. yasal düzenlemelere tabidir.
+**Örnek** Kuruluşunuz birleşik krallık'a tabidir. finansal düzenlemeler.
 
 
-##### <a name="what-sensitive-items-does-your-organization-have-that-must-be-protected-from-leakage"></a>Bu kuruluşta, sızıntıya karşı korunması gereken hangi hassas öğeler var?
+##### <a name="what-sensitive-items-does-your-organization-have-that-must-be-protected-from-leakage"></a>Kuruluşunuzda sızıntıya karşı korunması gereken hangi hassas öğeler var?
 
-Düzenleme uyumluluğu ihtiyaçları açısından kurum bu öğenin nereyi ifade ediyor olduğunu bir kez bilir, hangi hassas öğelerin sızıntıya karşı korunması gerektiğini ve bunları korumak için ilke uygulamanın önceliklerini nasıl belirlemek istediğiniz konusunda bir fikir edinebilirsiniz. Bu, en uygun DLP ilkesi şablonlarını seçmenize yardımcı olur. Microsoft 365, Finansal, Tıbbi ve sağlık, Gizlilik için önceden yapılandırılmış DLP şablonlarıyla birlikte gelir ve Özel şablonunu kullanarak kendi şablonlarınızı oluşturabilirsiniz. Gerçek DLP ilkelerinizi tasarlar ve oluşturdukken, bu sorunun yanıtlarını bilmek doğru hassas bilgi türünü seçmenize de [yardımcı olur](sensitive-information-type-learn-about.md#learn-about-sensitive-information-types).
+Kuruluşunuz mevzuat uyumluluğu gereksinimleri açısından nerede durduğunu öğrendikten sonra, hangi hassas öğelerin sızıntıya karşı korunması gerektiği ve bunları korumak için ilke uygulamasının önceliğini nasıl ayarlamak istediğiniz konusunda fikir sahibi olursunuz. Bu, en uygun DLP ilkesi şablonlarını seçmenize yardımcı olur. Microsoft Purview Finansal, Tıbbi ve sağlık, Gizlilik için önceden yapılandırılmış DLP şablonlarıyla birlikte gelir ve Özel şablonunu kullanarak kendi DLP şablonlarınızı oluşturabilirsiniz. Gerçek DLP ilkelerinizi tasarlayıp oluştururken, bu sorunun yanıtını bilmek doğru [hassas bilgi türünü](sensitive-information-type-learn-about.md#learn-about-sensitive-information-types) seçmenize de yardımcı olur.
 
-**Örnek** Hızlı bir şekilde çalışmaya başlamak için`U.K. Financial Data`, ' ve hassas bilgi türlerini içeren `Credit Card Number``EU Debit Card Number`ilke şablonunu `SWIFT Code` seçersiniz. 
+**Örnek** Hızlı bir şekilde başlamak için, , `EU Debit Card Number`ve `SWIFT Code` hassas bilgi türlerini içeren `Credit Card Number`ilke şablonunu seçersiniz`U.K. Financial Data`. 
 
-##### <a name="where-are-the-sensitive-items-and-what-business-processes-are-they-involved-in"></a>Hassas öğeler nerede ve hangi iş süreçlerine dahil?
+##### <a name="where-are-the-sensitive-items-and-what-business-processes-are-they-involved-in"></a>Hassas öğeler nerede ve hangi iş süreçlerine dahil oluyor?
 
-Kuruluş hassas bilgileri içeren öğeler, iş yapma kursunda her gün kullanılır. Bu hassas bilgi örneklerinin nerede ortaya çıkar olduğunu ve bunların hangi iş süreçleri için kullanıla olduğunu bilmek gerekir. Bu, DLP ilkelerinizi uygulamak için doğru konumları seçmenize yardımcı olur. Microsoft 365 DLP ilkeleri konumlara uygulanır:
+Kuruluşunuzun hassas bilgilerini içeren öğeler, iş yaparken her gün kullanılır. Bu hassas bilgilerin örneklerinin nerede gerçekleşebileceğini ve hangi iş süreçlerinde kullanıldıklarını bilmeniz gerekir. Bu, DLP ilkelerinizin uygulanacağı doğru konumları seçmenize yardımcı olur. DLP ilkeleri konumlara uygulanır:
 
-- Exchange-posta gönderme
-- SharePoint siteleri
-- OneDrive hesapları
-- Teams ve kanal iletilerini gönderme
-- Windows 10 Cihazları
+- e-postayı Exchange
+- siteleri SharePoint
+- hesapları OneDrive
+- Sohbet ve kanal iletilerini Teams
+- cihazları Windows 10
 - Bulut Uygulamaları için Microsoft Defender
 - Şirket içi depolar
 
-**Örnek** Kuruluş iç denetçileri bir dizi kredi kartı numarası izliyor. Bu sitenin güvenli bir çalışma SharePoint tutmaları gerekir. Çalışanlardan birkaçı kopya kopyalar ve bunları kendi OneDrive İş kendi cihazlarında eşitlenen iş Windows 10 kaydedin. Bunlardan biri, 14'ü listenin bir listesini e-postaya yapıştırarak gözden geçirme için dış denetçilere göndermeye çalışır. İlkeyi güvenli SharePoint sitesine, tüm iç denetçiler OneDrive İş hesaplarına, Windows 10 cihazlarına ve Exchange uygulamak Exchange gerekir.
+**Örnek** Kuruluşunuzun iç denetçileri bir dizi kredi kartı numarasını izliyor. Elektronik tablolarını güvenli bir SharePoint sitesinde tutarlar. Çalışanlardan bazıları kopyaları alır ve Windows 10 cihazlarıyla eşitlenen iş OneDrive İş sitesine kaydeder. Bunlardan biri, 14 tanesinin listesini bir e-postaya yapıştırır ve gözden geçirilmesi için dış denetçilere göndermeye çalışır. İlkeyi güvenli SharePoint sitesine, tüm iç denetçilerin hesaplarına, Windows 10 cihazlarına ve Exchange e-postasına OneDrive İş istiyorsunuz.
 
-##### <a name="what-is-your-organizations-tolerance-for-leakage"></a>Kuruluşlarınız sızıntının dayanıklılığı nedir?
+##### <a name="what-is-your-organizations-tolerance-for-leakage"></a>Kuruluşların sızıntıya karşı dayanıklılığı nedir?
 
-Nelerin kabul edilebilir bir hassas ürün sızıntı düzeyi olduğu ve nelerin olmadığının farklı görünümleri kuruluşta farklı gruplarda olabilir. İşletmenin sıfır sızıntısını önlemek çok yüksek bir maliyetle ortaya gelebilir.
+Kuruluşunuzdaki farklı grupların, kabul edilebilir düzeyde hassas öğe sızıntısı olup nelerin olmadığı konusunda farklı görünümleri olabilir. Sıfır sızıntı mükemmellik elde etmek, işletme için çok yüksek bir maliyete neden olabilir.
 
-**Örnek** Hem kuruluş kuruluşlarının güvenlik grubu hem de hukuk ekibi, kredi kartı numaralarının kuruluş dışındaki herkesle paylaşılamamalıdır ve sıfır sağıyla birlikte bulunabilir. Ancak, kredi kartı numarası etkinliğinin normal gözden geçirmesi kapsamında, iç denetçilerin bazı kredi kartı numaralarını üçüncü taraf denetçilerle paylaşması gerekir. DLP ilkeniz kuruluş dışında kredi kartı numaralarının tüm paylaşımını yasaklasa, iç denetçilerin izlemesini tamamlamasına yardımcı olacak kesintileri azaltmak için önemli bir iş sürecinde kesintiler yaşanacak ve ek maliyet eklenecektir. Bu ek maliyet, yönetim liderleri açısından kabul edilemez. Bu sorunu çözmek için, kabul edilebilir bir sızıntı düzeyine karar vermek için dahili bir görüşme yapılması gerekir. Bu karar verildiklerinde, ilke belirli kişilerin bilgileri paylaşması için özel durumlar sağlar veya yalnızca denetim modunda uygulanabilir.
+**Örnek** Kuruluşunuzun güvenlik grubu, hukuk ekibiyle birlikte hem kredi kartı numaralarının kuruluş dışındaki kişilerle paylaşılmaması gerektiğini düşünüyor hem de sıfır sızıntı konusunda ısrar ediyor. Ancak, kredi kartı numarası etkinliğinin düzenli olarak gözden geçirilmesi kapsamında, iç denetçilerin bazı kredi kartı numaralarını üçüncü taraf denetçilerle paylaşması gerekir. DLP ilkeniz kredi kartı numaralarının kuruluş dışında tüm paylaşımını yasaklarsa, iç denetçilerin izlemelerini tamamlaması için önemli bir iş süreci kesintisi ve kesintiyi azaltmak için maliyet eklenir. Bu ek maliyet, yönetici liderliği için kabul edilemez. Bu sorunu çözmek için, kabul edilebilir bir sızıntı düzeyine karar vermek için bir iç konuşma olması gerekir. Bu karar verildikten sonra, ilke belirli kişilerin bilgileri paylaşması için özel durumlar sağlayabilir veya yalnızca denetim modunda uygulanabilir.
 
 #### <a name="planning-for-prerequisites"></a>Önkoşulları planlama
 
-Bazı DLP konumlarını izlemeden önce karşı izlenmesi gereken önkoşullar vardır. Şu **bölümlerin Başlamadan önce bölümlerine** bakın:
+Bazı DLP konumlarını izleyebilebilmeniz için karşılanması gereken önkoşullar vardır. Başlamadan **önce** bölümlerine bakın:
 
-- [Şirket içi tarayıcıda (önizleme) veri kaybı önleme özelliğiyle çalışmaya başlama](dlp-on-premises-scanner-get-started.md#before-you-begin)
-- [Uç nokta veri kaybını önlemeye başlama](endpoint-dlp-getting-started.md#before-you-begin)
-- [Microsoft uyumluluk uzantısıyla (önizleme) çalışmaya başlama](dlp-chrome-get-started.md#before-you-begin)
+- [Şirket içi tarayıcı (önizleme) veri kaybı önleme ile Kullanmaya başlayın](dlp-on-premises-scanner-get-started.md#before-you-begin)
+- [Uç noktada veri kaybı önlemeyi kullanmaya başlama](endpoint-dlp-getting-started.md#before-you-begin)
+- [Microsoft uyumluluk uzantısıyla Kullanmaya başlayın](dlp-chrome-get-started.md#before-you-begin)
 - [Microsoft dışı bulut uygulamaları için veri kaybı önleme ilkelerini kullanma (önizleme)](dlp-use-policies-non-microsoft-cloud-apps.md#before-you-begin)
 
 #### <a name="policy-deployment"></a>İlke dağıtımı
 
-DLP ilkelerinizi  oluşturmadan önce, bunların etkisini değerlendirmek ve bunların etkisini test etmek için bunları aşamalı olarak kademeli olarak değerlendirmeniz gerekir. Örneğin, binlerce belgeye erişimi istemeden engellemek veya mevcut bir iş sürecini bozmak için yeni bir DLP ilkesi istemiyorsunuz.
+DLP ilkelerinizi oluştururken, etkilerini değerlendirmek ve tam olarak zorlamadan önce etkinliklerini test etmek için bunları aşamalı olarak kullanıma almayı düşünmelisiniz. Örneğin, yeni bir DLP ilkesinin binlerce belgeye erişimi istemeden engellemesini veya mevcut bir iş sürecini bozmasını istemezsiniz.
   
-Olası etkisi büyük olan DLP ilkeleri oluşturuyorsanız, bu diziyi takip öneririz:
+Büyük bir olası etkiyle DLP ilkeleri oluşturuyorsanız şu diziyi takip kullanmanızı öneririz:
   
-1. **İlke Raporu olmadan test İpuçları** ve ardından etkisini değerlendirmek için DLP raporlarını ve herhangi bir olay raporlarını kullanın. DLP raporlarını kullanarak ilke eşleşmelerinin sayısını, konumunu, türünü ve önem derecesine bakabilirsiniz. Sonuçlara bağlı olarak, ilkelerin ince ayarını yapmak için gereken ayarlamaları da yapmak gerekir. Test modunda DLP ilkeleri, kuruluşta çalışan kişilerin üretkenliğini etkilemez. Ayrıca, bu aşamayı, DLP olay incelemesi ve sorun düzeltmesi için iş akışınızı test etmek için kullanın.
+1. **İlke İpuçları olmadan test modunda başlayın** ve ardından etkiyi değerlendirmek için DLP raporlarını ve olay raporlarını kullanın. İlke eşleşmelerinin sayısını, konumunu, türünü ve önem derecesini görüntülemek için DLP raporlarını kullanabilirsiniz. Sonuçlara bağlı olarak, ilkeleri gerektiği gibi ayarlayabilirsiniz. Test modunda DLP ilkeleri, kuruluşunuzda çalışan kişilerin üretkenliğini etkilemez. Ayrıca, DLP olay incelemesi ve sorun düzeltmesi için iş akışınızı test etmek için bu aşamayı kullanın.
     
-2. **Kullanıcılara uyumluluk ilkelerinizi** öğretecek ve uygulanacak ilkeler için hazırlayacak şekilde İpuçları ilkeler ve bildirimler ve İlkeler ile Test moduna geçersiniz. İlke ipucunda ilke hakkında daha fazla ayrıntı sağlayan bir kuruluş ilkesi sayfasının bağlantısına sahip olmak yararlı olur. Bu aşamada, ilkeleri daha da geliştirmek için kullanıcılardan hatalı pozitif sonuçları bildirmelerini de sorabilirsiniz. İlke uygulamasının sonuçlarının, proje katılımcılarının sahip olduğu sonuçlarla eşekli olduğunu doğru bir kez daha ifade ederseniz bu aşamaya geçebilirsiniz. 
+2. Kullanıcılara uyumluluk ilkelerinizi **öğretmeye ve uygulanacak ilkelere hazırlamaya başlamak için bildirimler ve İlke İpuçları ile Test moduna geçin**. İlke ipucunda ilke hakkında daha fazla ayrıntı sağlayan bir kuruluş ilkesi sayfasının bağlantısının olması yararlı olur. Bu aşamada, ilkeleri daha da geliştirebilmek için kullanıcılardan hatalı pozitif sonuçları bildirmelerini de isteyebilirsiniz. İlke uygulamasının sonuçlarının proje katılımcılarının aklındakiyle eşleştiğinden emin olduktan sonra bu aşamaya geçin. 
     
-3. **Kurallarda eylemlerin uygulanması** ve içeriğin korunması için ilkeler üzerinde tam zorlamaya başlayabilirsiniz. Sonuçların sizin için uygun olduğundan emin olmak için DLP raporlarını ve tüm olay raporlarını veya bildirimlerini izlemeye devam edin. 
+3. Kurallardaki eylemlerin uygulanması ve içeriğin korunması için **ilkeler üzerinde tam zorlama başlatın**. Sonuçların amacınız olduğundan emin olmak için DLP raporlarını ve olay raporlarını veya bildirimlerini izlemeye devam edin. 
 
     ![Test modunu kullanma ve ilkeyi açma seçenekleri.](../media/49fafaac-c6cb-41de-99c4-c43c3e380c3a.png)
 
-    DLP ilkesini, herhangi bir zamanda kapatabilirsiniz ve bu da ilkenin tüm kurallarını etkiler. Bununla birlikte, kural düzenleyicisinde durumunu kapatarak her kural tek tek de kapatabilirsiniz.
+    bir DLP ilkesini istediğiniz zaman kapatabilirsiniz ve bu ilkedeki tüm kuralları etkiler. Ancak, her kural, durumunu kural düzenleyicisinde değiştirerek tek tek kapatılabilir.
 
-    ![bir ilkede kuralı kapatma seçenekleri.](../media/f7b258ff-1b8b-4127-b580-83c6492f2bef.png)
+    ![İlkedeki bir kuralı kapatma seçenekleri.](../media/f7b258ff-1b8b-4127-b580-83c6492f2bef.png)
 
-    Ayrıca, bir ilkede birden çok kuralın önceliğini de değiştirebilirsiniz. Bunu yapmak için, düzenleme için bir ilke açın. Kuralın bir satırda üç noktayı (**...**) seçin ve sonra aşağı taşı veya En son **getir gibi** **bir seçenek belirtin**.
+    İlkedeki birden çok kuralın önceliğini de değiştirebilirsiniz. Bunu yapmak için düzenlemek üzere bir ilke açın. Bir kuralın satırında üç noktayı (**...**) ve ardından **Aşağı taşı** veya **En sona getir** gibi bir seçenek belirleyin.
 
-    ![Kural önceliğini ayarlama.](../media/dlp-set-rule-priority.png)
+    ![Kural önceliğini ayarlayın.](../media/dlp-set-rule-priority.png)
 
 #### <a name="end-user-training"></a>Son kullanıcı eğitimi
 
-DLP ilkesi tetiklendiğinde, ilkelerinizi E-posta bildirimleri gönderecek ve [DLP](use-notifications-and-policy-tips.md#send-email-notifications-and-show-policy-tips-for-dlp-policies) ilkeleriyle ilgili ilke ipuçlarını yöneticilere ve son kullanıcılara gösterecek şekilde yapılandırabilirsiniz. İlkeleriniz test modundayken ve engelleme eylemini uygulamaya uygulanmadan önce, ilke ipuçları hassas öğeler üzerinde riskli davranışlar farkındalığını artırmak ve kullanıcıları gelecekte bu davranışlardan kaçınmak için eğitmek için yararlı yollardır.  
+Bir DLP ilkesi tetiklendiğinde, ilkelerinizi [E-posta bildirimleri gönderecek ve DLP ilkeleri için ilke ipuçlarını](use-notifications-and-policy-tips.md#send-email-notifications-and-show-policy-tips-for-dlp-policies) yöneticilere ve son kullanıcılara gösterecek şekilde yapılandırabilirsiniz. İlkeleriniz hala test modundayken ve engelleyici bir eylemi zorunlu kılmaya ayarlanmadan önce ilke ipuçları, hassas öğelerdeki riskli davranışların farkındalığını artırmanın ve kullanıcıları gelecekte bu davranışlardan kaçınmaları için eğitmenin yararlı yollarıdır.  
 
-#### <a name="review-dlp-requirements-and-update-strategy"></a>DLP gereksinimlerini ve güncelleştirme stratejisini gözden geçirme
+#### <a name="review-dlp-requirements-and-update-strategy"></a>DLP gereksinimlerini ve güncelleştirme stratejisini gözden geçirin
 
-Kuruluşta tabi olan düzenlemeler, yasalar ve endüstri standartları zaman içinde değişir ve DLP'ye ilişkin iş hedefleriniz de değişir. Tüm bu alanlar için düzenli olarak incelemeler bulundurarak, kuruluşta uyumluluğun devam ettiği ve DLP uygulamanın iş ihtiyaçlarınızı karşılamaya devam ettiğine emin olun.
+Kuruluşunuzun tabi olduğu düzenlemeler, yasalar ve endüstri standartları zaman içinde değişir ve DLP için iş hedefleriniz de değişir. Kuruluşunuzun uyumlu kalması ve DLP uygulamanızın iş gereksinimlerinizi karşılamaya devam etmesi için tüm bu alanların düzenli incelemelerini eklediğinizden emin olun.
 
-## <a name="approaches-to-deployment"></a>Dağıtıma yaklaşımlar
+## <a name="approaches-to-deployment"></a>Dağıtım yaklaşımları
 
-|Müşteri iş ihtiyaçları açıklaması  | yaklaşım  |
+|Müşteri iş gereksinimleri açıklaması  | Yaklaşım  |
 |---------|---------|
-|**Contoso Bank** , son derece düzenlemeye tabi bir sektöre sahiptir ve birçok farklı konumda birçok farklı türde hassas öğeye sahiptir. </br> - hangi hassas bilgi türlerinin en yüksek öncelik olduğunu bilir. </br> - ilkeler geldiklerinde iş aksaklıklarını en aza indirmesi gerekir. </br> - IT kaynakları vardır ve planlamaya, tasarım dağıtımına yardımcı olmak için uzman kiralayabilirsiniz </br> - Microsoft ile bir premier destek sözleşmesi var| - Hangi düzenlemelere uymaları gerektiğini ve nasıl uyumlu olacaklarını anlamak için zaman zaman kabul edin. </br> -Bilgi Koruma yığınının birlikte daha iyi değerini anlamak Microsoft 365 zaman al </br> - Öncelikleri olan öğeler için duyarlılık etiketleme düzeni geliştirin ve </br> - İş süreci sahiplerini içerir </br>- Tasarım/kod ilkeleri, test modunda dağıtım, kullanıcıları eğitin </br>- yinele|
-|**TailSpin Toys** ne olduğunu veya nerede olduğunu bilmiyor ve kaynak derinliği çok az. Bunlar yoğun Teams, OneDrive İş ve Exchange şekilde kullanır.     |- Önceliklerli konumlarda basit ilkelerle çalışmaya başlama. </br>- Nelerin tanım yaptığını izleme </br>- Duyarlılık etiketlerini buna uygun olarak uygulama </br>- İlkeleri geliştirme, kullanıcıları eğitma       |
-|**Fabrikam** küçük bir başlangıçtır ve fikri mülkiyetini korumak istiyor ve hızla hareket gerekiyor. Bazı kaynakları ayırmaya hazırlar, ancak dışarıdan uzmanları işe alamazlar. </br>- Hassas öğelerin hepsi aynı Microsoft 365 OneDrive İş/SharePoint </br>- Kullanıcıların ve kullanıcıların OneDrive İş yavaş SharePoint, çalışanlar/gölgeLI IT, öğeleri paylaşmak/depolamak için DropBox ve Google sürücüsü kullanır </br>- Veri koruma disiplini üzerinden çalışanların çalışma değeri hızı </br>- 18 çalışanın hepsini yeni bir cihazla çarpıp Windows 10 satın aldı     |- E-postada varsayılan DLP ilkesi Teams </br>- Bu ürünler için varsayılan olarak kısıtlanmış SharePoint kullanın </br>- Dış paylaşımı engelleyen ilkeleri dağıtma </br>- Önceliklendirmek istediğiniz konumlara ilkeleri dağıtın </br>- İlkeleri Windows 10 dağıtma </br>- Bulut depolama alanı olmayan OneDrive İş engelleme      |
+|**Contoso Bank** yüksek düzeyde düzenlenmiş bir sektördedir ve birçok farklı konumda birçok farklı hassas öğe türüne sahiptir. </br> - Hangi hassas bilgi türlerinin en öncelikli olduğunu bilir. </br> - ilkeler dağıtılırken iş kesintilerini en aza indirmelidir. </br> - BT kaynaklarına sahiptir ve planlamaya, tasarım dağıtımına yardımcı olması için uzmanları işe alabilir </br> - Microsoft ile premier bir destek sözleşmesi var| - Hangi düzenlemelere uymaları gerektiğini ve nasıl uyum sağlayacaklarını anlamak için zaman ayırın. </br> -Microsoft Purview Information Protection yığınının birlikte daha iyi değerini anlamak için zaman ayırın </br> - Önceliklendirilmiş öğeler için duyarlılık etiketleme şeması geliştirin ve uygulayın </br> - İş süreci sahiplerini dahil edin </br>- Tasarım/kod ilkeleri, test modunda dağıtma, kullanıcıları eğitma </br>- tekrarla|
+|**TailSpin Toys** neleri olduğunu veya nerede olduğunu bilmez ve çok az kaynak derinliğine sahiptir. Teams, OneDrive İş ve Exchange kapsamlı olarak kullanırlar.     |- Öncelikli konumlarda basit ilkelerle başlayın. </br>- Tanımlananları izleme </br>- Duyarlılık etiketlerini uygun şekilde uygulama </br>- İlkeleri iyileştirme, kullanıcıları eğitma       |
+|**Fabrikam** küçük bir startup ve fikri mülkiyetini korumak istiyor ve hızla hareket etmelidir. Bazı kaynakları ayırmaya istekliler, ancak dışarıdan uzmanlar kiralamayı göze alamıyorlar. </br>- Hassas öğelerin tümü Microsoft 365 OneDrive İş/SharePoint </br>- OneDrive İş ve SharePoint benimsenmesi yavaştır, çalışanlar/gölge BT öğeleri paylaşmak/depolamak için DropBox ve Google sürücüsü kullanır </br>- Çalışanlar veri koruma uzmanlık alanına göre iş hızına değer verir </br>- Müşteri 18 çalışanın tümünü yeni Windows 10 cihazları birleştirip satın aldı     |- Teams'da varsayılan DLP ilkesinden yararlanın </br>- SharePoint öğeleri için varsayılan olarak kısıtlanmış ayarını kullanın </br>- Dış paylaşımı engelleyen ilkeler dağıtma </br>- İlkeleri öncelikli konumlara dağıtma </br>- Windows 10 cihazlara ilke dağıtma </br>- OneDrive İş olmayan bulut depolama alanına yüklemeleri engelleme      |
 
 <!--
 
@@ -223,4 +225,4 @@ Kuruluşta tabi olan düzenlemeler, yasalar ve endüstri standartları zaman iç
 -->
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Veri kaybını önleme hakkında bilgi](dlp-learn-about-dlp.md#learn-about-data-loss-prevention)
+- [Veri kaybı önleme hakkında daha fazla bilgi edinme](dlp-learn-about-dlp.md#learn-about-data-loss-prevention)

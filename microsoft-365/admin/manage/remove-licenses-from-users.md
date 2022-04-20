@@ -21,60 +21,60 @@ ms.custom:
 - manage_licenses
 - AdminTemplateSet
 search.appverid: MET150
-description: Ürün lisanslarının atamasını iptal etmek için kullandığınız yöntem, lisans atamalarını belirli kullanıcılardan mı yoksa belirli bir üründen mi iptal ettiğine bağlıdır.
+description: Ürün lisanslarının atamasını kaldırmak için kullandığınız yöntem, lisansları belirli kullanıcılardan mı yoksa belirli bir üründen mi kaldırdığınıza bağlıdır.
 ms.date: 09/16/2021
-ms.openlocfilehash: 7308888c54a30cdd11618cb07a233f8bd55f27c2
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 8d0fd6f89802111bdb2afbc2586392251d393e4e
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63321215"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64971098"
 ---
 # <a name="unassign-licenses-from-users"></a>Kullanıcıların lisans atamalarını kaldırma
 
-Etkin kullanıcılar sayfasında veya Lisanslar sayfasında **kullanıcılardan lisans** **atamalarını iptal** edebilirsiniz. Kullandığınız yöntem, belirli kullanıcıların ürün lisanslarının atamasını mı almak istediğinize yoksa belirli bir üründen kullanıcı lisanslarının atamasını mı almak istediğinize bağlıdır.
+Kullanıcılardan lisans atamalarını **Etkin kullanıcılar** sayfasından veya **Lisanslar** sayfasından kaldırabilirsiniz. Kullandığınız yöntem, belirli kullanıcıların ürün lisanslarını kaldırmak mı yoksa belirli bir üründen kullanıcı lisanslarının atamasını kaldırmak mı istediğinize bağlıdır.
 
 > [!NOTE]
 > 
-> - Yönetici olarak, kurumda bir kullanıcı tarafından satın alınan self servis satın alma aboneliği için lisans atayayam veya atamalarını iptal edilemez. Self [servis satın alma aboneliğini üzerine alıp](../../commerce/subscriptions/manage-self-service-purchases-admins.md#take-over-a-self-service-purchase-subscription) lisansları atayın veya atamalarını iptal edin.
+> - Yönetici olarak, kuruluşunuzdaki bir kullanıcı tarafından satın alınan self servis satın alma aboneliği için lisans atayamaz veya lisansı kaldıramazsınız. [Self servis satın alma aboneliğini devralabilir](../../commerce/subscriptions/manage-self-service-purchases-admins.md#take-over-a-self-service-purchase-subscription) ve lisansları atayabilir veya atamasını kaldırabilirsiniz.
 > 
-> - Bazı abonelikler için, aboneliğinizi satın alıp yeniledikten sonra yalnızca sınırlı bir süre içinde iptal edebilirsiniz. İptal etme penceresi sona ererse, süresi sonunda aboneliği iptal etmek için yinelenen faturalamayı kapatın.
+> - Bazı abonelikler için yalnızca aboneliğinizi satın aldıktan veya yeniledikten sonra sınırlı bir süre içinde iptal edebilirsiniz. İptal penceresi geçtiyse, süresi sonunda aboneliği iptal etmek için yinelenen ödemeyi kapatın.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-- Lisans atamalarını geri almak için Genel, Lisans, Kullanıcı yöneticisi siz olmak gerekir. Daha fazla bilgi için bkz[. Microsoft 365 rolleri hakkında](../add-users/about-admin-roles.md).
+- Lisansların atamasını kaldırabilmek için Genel, Lisans, Kullanıcı yöneticisi olmanız gerekir. Daha fazla bilgi için bkz. [Microsoft 365 yönetici rolleri hakkında](../add-users/about-admin-roles.md).
 - [Office 365 PowerShell ile kullanıcı hesaplarından lisansları kaldırabilirsiniz](../../enterprise/remove-licenses-from-user-accounts-with-microsoft-365-powershell.md).
-- Ayrıca, [lisans atanmış kullanıcı](../add-users/delete-a-user.md) hesaplarını silebilir ve bu hesapların lisansını diğer kullanıcılara açık haleebilirsiniz. Bir kullanıcı hesabını silebilirsiniz ve bu kişinin lisansı hemen başka birine atanabilirsiniz.
+- Ayrıca, lisans atanmış [kullanıcı hesaplarını silip](../add-users/delete-a-user.md) lisanslarını diğer kullanıcıların kullanımına sunabilirsiniz. Bir kullanıcı hesabını sildiğinizde, lisansı hemen başka birine atanmaya hazırdır.
 
-## <a name="use-the-licenses-page-to-unassign-licenses"></a>Lisans atamalarını iptal etmek için Lisanslar sayfasını kullanma
+## <a name="use-the-licenses-page-to-unassign-licenses"></a>Lisans atamalarını silmek için Lisanslar sayfasını kullanma
 
-Lisans atamalarını **iptal** etmek için Lisanslar sayfasını kullanırken, belirli bir ürünün lisanslarının atamasını en çok 20 kullanıcı için iptal etmiş oluruz.
+**Lisans atamalarını silmek için Lisanslar** sayfasını kullandığınızda, belirli bir ürünün lisanslarını en fazla 20 kullanıcının atamasını kaldırmış olursunuz.
 
 ::: moniker range="o365-worldwide"
 
-1. Yönetim merkezinde Fatura Lisansları **sayfasına** \> gidin.<a href="https://go.microsoft.com/fwlink/p/?linkid=842264" target="_blank"></a>
+1. Yönetim merkezinde **Faturalama** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=842264" target="_blank">Lisansları</a> sayfasına gidin.
 
 ::: moniker-end
 
 ::: moniker range="o365-21vianet"
 
-1. Yönetim merkezinde Fatura Lisansları **sayfasına** \> gidin.<a href="https://go.microsoft.com/fwlink/p/?linkid=850625" target="_blank"></a>
+1. Yönetim merkezinde **Faturalama** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=850625" target="_blank">Lisansları</a> sayfasına gidin.
 
 ::: moniker-end
 
-2. Lisans atamalarını iptal etmek istediğiniz ürünü seçin.
+2. Lisans atamasını silmek istediğiniz ürünü seçin.
 
-3. Lisans atamalarını iptal etmek istediğiniz kullanıcıları seçin.
+3. Lisans atamalarını silmek istediğiniz kullanıcıları seçin.
 
-4. Lisans **atamasını iptal et'i seçin**.
+4. **Lisansların atamasını kaldır'ı** seçin.
 
-5. Lisans **atamasını iptal et kutusunda** Atamayı **Seç'i seçin**.
+5. **Lisansların Atamasını Kaldır** kutusunda Atamayı **Kaldır'ı** seçin.
 
-## <a name="use-the-active-users-page-to-unassign-licenses"></a>Lisans atamalarını iptal etmek için Etkin kullanıcılar sayfasını kullanma
+## <a name="use-the-active-users-page-to-unassign-licenses"></a>Lisans atamalarını silmek için Etkin kullanıcılar sayfasını kullanma
 
-Lisans atamalarını **iptal etmek** için Etkin kullanıcılar sayfasını kullanırken, kullanıcılardan ürün lisanslarının atamalarını iptal etmiş oluruz.
+Lisansları kaldırmak için **Etkin kullanıcılar** sayfasını kullandığınızda, kullanıcılardan ürün lisanslarının atamasını kaldırırsınız.
 
-### <a name="unassign-licenses-from-one-user"></a>Bir kullanıcının lisans atamasını iptal et
+### <a name="unassign-licenses-from-one-user"></a>Bir kullanıcıdan lisans atamasını kaldırma
 
 ::: moniker range="o365-worldwide"
 
@@ -88,13 +88,13 @@ Lisans atamalarını **iptal etmek** için Etkin kullanıcılar sayfasını kull
 
 ::: moniker-end
 
-2. Lisans atamasını iptal etmek istediğiniz kullanıcının satırına seçin.
+2. Lisansının atamasını silmek istediğiniz kullanıcının satırını seçin.
 
 3. Sağ bölmede, **Lisanslar ve Uygulamalar**'ı seçin.
 
-4. Lisanslar **bölümünü** genişletin, atamasını silmek istediğiniz lisansların kutularını temizleyin ve ardından Değişiklikleri **kaydet'i seçin**.
+4. **Lisanslar** bölümünü genişletin, atamasını kaldırmasını istediğiniz lisansların kutularını temizleyin ve **ardından Değişiklikleri kaydet'i** seçin.
 
-### <a name="unassign-licenses-from-multiple-users"></a>Birden çok kullanıcının lisans atamasını iptal et
+### <a name="unassign-licenses-from-multiple-users"></a>Birden çok kullanıcının lisans atamasını kaldırma
 
 ::: moniker range="o365-worldwide"
 
@@ -108,29 +108,29 @@ Lisans atamalarını **iptal etmek** için Etkin kullanıcılar sayfasını kull
 
 ::: moniker-end
 
-2. Lisans atamalarını iptal etmek istediğiniz kullanıcıların adlarının yanındaki daireleri seçin.
+2. Lisans atamasını kaldırmasını istediğiniz kullanıcıların adlarının yanındaki daireleri seçin.
 
-3. Üst kısmında Ürün lisanslarını **yönet'i seçin**.
+3. Üst kısımda **Ürün lisanslarını yönet'i** seçin.
 
-4. Ürün **lisanslarını yönet bölmesinde** Tüm Kaydetme **değişikliklerinin atamasını** **aç'ı** >  seçin.
+4. **Ürün lisanslarını yönet** bölmesinde **Tümünün atamasını kaldırKaydet değişikliklerini kaldır'ı** seçin. > 
 
-5. Bölmenin en altında Bitti'yi **seçin**.  
+5. Bölmenin alt kısmında **Bitti'yi** seçin.  
 
-## <a name="what-happens-to-a-users-data-when-you-remove-their-license"></a>Lisansını kaldıran bir kullanıcının verilerine ne olur?
+## <a name="what-happens-to-a-users-data-when-you-remove-their-license"></a>Lisansını kaldırdığınızda kullanıcının verilerine ne olur?
 
-- Kullanıcıdan lisans kaldırıldığı zaman, Exchange hesabıyla ilişkilendirilmiş tüm çevrimiçi veriler 30 gün süreyle tutulacak. 30 günlük yetkisiz kullanım süresi sonrasında veriler silinir ve kurtarılamaz.
-- Kullanıcı dosyalardan OneDrive İş Active Directory eşitlemesi aracılığıyla silinmedikçe Microsoft 365 yönetim merkezi dosyalar silinmez. Daha fazla bilgi için bkz[. bekletme OneDrive silme.](/onedrive/retention-and-deletion)
-- Lisans kaldırıldığı zaman, kullanıcının posta kutusunda İçerik Arama veya İçerik Bulma gibi bir eBulma aracı kullanılarak arama Advanced eDiscovery. Daha fazla bilgi için, aynı adreste yer alan İçerik Arama'da "Bağlantısı kesik veya lisansları olmayan posta [kutularında arama" Microsoft 365](../../compliance/content-search.md).
-- Enterprise E3 gibi bir Office 365 Kurumsal Enterprise aboneliğiniz varsa, Exchange Online etkin olmayan posta kutuları kullanarak silinmiş kullanıcı hesabının posta kutusu [verilerini korumanızı sağlar](../../compliance/inactive-mailboxes-in-office-365.md). Daha fazla bilgi için bkz[. Posta kutusunda etkin olmayan posta kutularını oluşturma Exchange Online](../../compliance/create-and-manage-inactive-mailboxes.md).
-- Bir kullanıcının lisansı kaldırıldıktan sonra Microsoft 365 verilerine erişimini engellemeyi ve sonrasında verilere erişmeyi öğrenmek için bkz[. Eski çalışanı kaldırma](../add-users/remove-former-employee.md).
-- Kullanıcının lisansını kaldırırsanız ve bu kullanıcının hala Office uygulaması yüklüyse, bu kullanıcının Office uygulamalarını kullanma sırasında Lisanssız Ürün [ve](https://support.microsoft.com/office/0d23d3c0-c19c-4b2f-9845-5344fedc4380) etkinleştirme hataları Office.
+- Kullanıcıdan lisans kaldırıldığında, bu hesapla ilişkili çevrimiçi veriler Exchange 30 gün boyunca tutulur. 30 günlük yetkisiz kullanım süresinden sonra veriler silinir ve kurtarılamaz.
+- OneDrive İş kaydedilen dosyalar, kullanıcı Microsoft 365 yönetim merkezi silinmediği veya Active Directory eşitlemesi aracılığıyla kaldırılmadığı sürece silinmez. Daha fazla bilgi için bkz. [OneDrive saklama ve silme](/onedrive/retention-and-deletion).
+- Lisans kaldırıldığında, kullanıcının posta kutusu artık İçerik Arama veya eBulma (Premium) gibi bir eBulma aracı kullanılarak aranamaz. Daha fazla bilgi için, [Microsoft 365'de İçerik Arama'da](../../compliance/content-search.md) "Bağlantısı kesilmiş veya lisanslı olmayan posta kutularını arama" bölümüne bakın.
+- Office 365 Kurumsal E3 gibi bir Enterprise aboneliğiniz varsa, Exchange Online etkin olmayan posta kutularını kullanarak silinen bir kullanıcı hesabının [posta kutusu](../../compliance/inactive-mailboxes-in-office-365.md) verilerini korumanıza olanak tanır. Daha fazla bilgi için bkz. [Exchange Online'da etkin olmayan posta kutuları oluşturma ve yönetme](../../compliance/create-and-manage-inactive-mailboxes.md).
+- Lisansı kaldırıldıktan sonra kullanıcının Microsoft 365 verilerine erişimini engellemeyi ve daha sonra verilere erişmeyi öğrenmek için bkz. [Eski çalışanı kaldırma](../add-users/remove-former-employee.md).
+- Kullanıcının lisansını kaldırırsanız ve hala Office uygulamaları yüklüyse, Office uygulamaları [kullandıklarında Office Lisanssız Ürün ve etkinleştirme hataları](https://support.microsoft.com/office/0d23d3c0-c19c-4b2f-9845-5344fedc4380) görür.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Kullanılmayan lisansları diğer kullanıcılara yeniden atamayacaksanız[, gerekenden](../../managed-desktop/get-started/assign-licenses.md) daha fazla lisans için ödeme yapmak zorunda olmadığınız için lisansları aboneliğinden kaldırmayı göz önünde bulundurabilirsiniz.[](../../commerce/licenses/buy-licenses.md)
+[Kullanılmayan lisansları diğer kullanıcılara yeniden atamayacaksanız](../../managed-desktop/get-started/assign-licenses.md), ihtiyacınız olandan daha fazla lisans için ödeme yapmanıza gerek kalmaması için [lisansları aboneliğinizden kaldırmayı](../../commerce/licenses/buy-licenses.md) göz önünde bulundurun.
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Aboneliğinizin lisanslarını kaldırma](../../commerce/licenses/buy-licenses.md) (makale)\
+[Aboneliğinizden lisansları kaldırma](../../commerce/licenses/buy-licenses.md) (makale)\
 [Kullanıcılara lisans atama](assign-licenses-to-users.md) (makale)\
-[Microsoft 365 İş'te abonelikleri ve lisansları anlama](../../commerce/licenses/subscriptions-and-licenses.md) (makale)
+[İş için Microsoft 365'teki abonelikleri ve lisansları anlama](../../commerce/licenses/subscriptions-and-licenses.md) (makale)

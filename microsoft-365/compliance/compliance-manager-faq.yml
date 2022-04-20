@@ -1,6 +1,6 @@
 ### YamlMime:FAQ
 metadata:
-  title: Microsoft Uyumluluk Yöneticisi SSS
+  title: Microsoft Purview Uyumluluk Yöneticisi SSS
   f1.keywords:
   - NOCSH
   ms.author: chvukosw
@@ -14,26 +14,27 @@ metadata:
   search.appverid:
   - MOE150
   - MET150
-  description: Kuruluşların risk değerlendirmelerini basitleştirmesine ve otomatikleştirmesine yardımcı olan Microsoft Uyumluluk Yöneticisi hakkında sık sorulan soruların yanıtlarını bulun.
-  ms.openlocfilehash: 38f9fe82cea7d0c5ea1f429065f8f2759cc9da27
-  ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
+  description: Kuruluşların risk değerlendirmelerini basitleştirmesine ve otomatikleştirmesine yardımcı olan Microsoft Purview Uyumluluk Yöneticisi hakkında sık sorulan soruların yanıtlarını bulun.
+  ms.openlocfilehash: 49eea6fc5f9a3b68a2cd063e3ebb89940b5050b7
+  ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 04/09/2022
-  ms.locfileid: "64746145"
+  ms.lasthandoff: 04/20/2022
+  ms.locfileid: "64970713"
 title: Uyumluluk Yöneticisi hakkında sık sorulan sorular
-summary: ''
+summary: >
+  [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 sections:
 - name: Yok sayıldı
   questions:
   - question: >
       Uyumluluk Yöneticisi'nin kullanılması için lisanslama gereksinimleri var mı?
     answer: >
-      Evet. Office 365 ve Microsoft 365 lisansları olan kuruluşlar ve US Government Community (GCC) Moderate, GCC High ve Savunma Bakanlığı (DoD) müşterileri Uyumluluk Yöneticisi'ne erişebilir. Ancak, kuruluşunuz tarafından sağlanan değerlendirmeler ve değerlendirme şablonlarını yönetme şekliniz lisans sözleşmenize bağlıdır. Ayrıntılar [için Microsoft 365 lisanslama kılavuzunu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance.md#compliance-manager) ziyaret edin.
+      Evet. Office 365 ve Microsoft 365 lisansları olan kuruluşlar ve US Government Community (GCC) Moderate, GCC High ve Savunma Bakanlığı (DoD) müşterileri Uyumluluk Yöneticisi'ne erişebilir. Ancak, kuruluşunuz tarafından sağlanan değerlendirmeler ve değerlendirme şablonlarını yönetme şekliniz lisans sözleşmenize bağlıdır. Ayrıntılar [için Microsoft 365 lisanslama kılavuzunu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-compliance-manager) ziyaret edin.
   - question: >
       Yüksek puanım varsa, bu tamamen uyumlu olduğum anlamına mı gelir?
     answer: >
       Hayır. Uyumluluk puanınız, veri koruma ve mevzuat standartlarıyla ilgili riskleri azaltmaya yardımcı olan önerilen eylemleri tamamlamadaki ilerlemenizi ölçer. Belirli bir standart veya düzenlemeyle ilgili olarak kurumsal uyumluluğun mutlak bir ölçüsünü ifade etmez. Uyumluluk Yöneticisi ve uyumluluk puanınız hiçbir şekilde garanti olarak yorumlanmamalıdır.
   - question: >
       Microsoft dışı ürünler için Uyumluluk Yöneticisi'ni kullanabilir miyim?
-    answer: Evet. Değerlendirme oluşturmak için [Microsoft ve evrensel şablonlar](compliance-manager-templates.md#template-versions-microsoft-and-universal) hakkında ayrıntılı bilgi edinin. Ayrıca, dijital varlıklarınızdaki tüm denetimleri yönetmenize yardımcı olmak için Uyumluluk Yöneticisi'ne [özel değerlendirmeler](compliance-manager-templates-create.md) ekleyebilirsiniz.
+    answer: Evet. Değerlendirme oluşturmak için [Microsoft ve evrensel şablonlar](compliance-manager-templates.md#template-versions-microsoft-and-universal) hakkında ayrıntılı bilgi edinin. Ayrıca, dijital varlıklarınızdaki tüm denetimleri yönetmenize yardımcı olmak için Uyumluluk Yöneticisi'ne özel değerlendirmeler ekleyebilirsiniz.

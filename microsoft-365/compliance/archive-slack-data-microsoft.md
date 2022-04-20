@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Microsoft tarafından sağlanan Slack eKeşif veri bağlayıcısını ayarlamayı ve kullanarak anlık ileti verilerini içeri aktarmayı ve arşivlemeyi öğrenin.
-ms.openlocfilehash: 902a42e78dc92424c2143ffce548a9c8791609ea
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 418cbbd67444992f366ad5366258e0ea8eccc503
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64950687"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64992345"
 ---
 # <a name="set-up-a-connector-to-archive-slack-ediscovery-data-preview"></a>Slack eKeşif verilerini arşivleme (önizleme) için bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft tarafından sağlanan Slack eKeşif veri bağlayıcısı, kuruluşunuzun Slack çalışma alanlarından Microsoft 365 anlık ileti verilerini (iletiler, ekler, bağlantılar ve düzeltmeler gibi) içeri aktarmanıza ve arşivlenize yardımcı olur. Veri bağlayıcısı Slack API'sinden verileri çeker, e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'deki kullanıcı posta kutularına aktarır. Slack verileri içeri aktarıldıktan sonra, Slack içeriğine Dava tutma, Microsoft Purview eKeşif (Premium), İletişim uyumluluğu ve bekletme ayarları gibi uyumluluk çözümleri uygulayabilirsiniz. Microsoft 365'de verileri içeri aktarmak ve arşivlemek için Slack eKeşif veri bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 

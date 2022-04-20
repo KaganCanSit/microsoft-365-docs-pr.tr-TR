@@ -11,14 +11,16 @@ ms.topic: article
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 description: Exchange posta kutularında e-postayı, SharePoint sitelerdeki ve OneDrive konumlarındaki belgeleri ve Skype Kurumsal'deki anlık ileti konuşmalarını hızla bulmak için Microsoft Purview uyumluluk portalındaki İçerik arama eBulma aracını kullanın.
-ms.openlocfilehash: b339d2f4ebe738407c42eda86f18a5167af03921
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 4efe2f4b4735005c10fd59e618bb6ecc8be51ec0
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64941951"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64993671"
 ---
 # <a name="search-for-content-using-the-content-search-tool"></a>İçerik arama aracını kullanarak içerik arama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Exchange posta kutularında e-postayı, SharePoint sitelerdeki ve OneDrive konumlardaki belgeleri ve Skype Kurumsal anlık ileti konuşmalarını hızla bulmak için Microsoft Purview uyumluluk portalındaki İçerik arama aracını kullanın. Microsoft Teams ve Microsoft 365 Grupları gibi işbirliği araçlarında e-posta, belge ve anlık ileti konuşmalarını aramak için içerik arama aracını kullanabilirsiniz.
   

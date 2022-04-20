@@ -1,5 +1,5 @@
 ---
-title: Kiracı İzin Ver/Engelle Listesinde izinlerinizi yönetme
+title: Kiracı İzin Ver/Engelle Listesinde izinlerinizi yönetin
 f1.keywords:
 - NOCSH
 ms.author: dansimp
@@ -13,116 +13,117 @@ search.appverid:
 - MET150manage-tenant-allows.md
 ms.collection:
 - M365-security-compliance
-description: Yöneticiler, güvenlik portalında yer alan Kiracı İzin Ver/Engelleme Listesi'ni nasıl yapılandırlayabileceklerini öğrenebilir.
+description: Yöneticiler, güvenlik portalındaki Kiracı İzin Ver/Engelle Listesi'nde izin vermeleri yapılandırmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 755a23d7cddbeb2943809681fc90556a2adac25b
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: ad2a55d19f60bf310b62ac13dfbe2563709673d2
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64475553"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64970957"
 ---
-# <a name="add-allows-in-the-tenant-allowblock-list"></a>Kiracı İzin Ver/Engelleme Listesi'ne izin verme
+# <a name="add-allows-in-the-tenant-allowblock-list"></a>Kiracı İzin Verilenler/Engellenenler Listesine izinler ekleme
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
-**Geçerli olduğu yer:**
+**Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
 - [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Yöneticiler doğrudan Kiracı İzin Ver/Engelleme Listesi'ne izin ekleyemz. Bunun yerine, yönetici gönderim işlemini kullanarak engellenmiş iletiyi gönderirsiniz; böylece ilgili URL, dosya ve/veya gönderenler Kiracı İzin Verme/Engelleme Listesi'ne eklenecektir. Dosya, URL veya gönderenin engeli henüz oluşturulmamışsa izinler oluşturulmaz. İletinin hatalı bir şekilde engellenmiş yanlış pozitif sonuç olarak belirlen olduğu çoğu durumda, sisteme doğal bir şekilde izin vermek için gereken süre boyunca izinler tutulur.
+Yöneticiler izin veremiyor izinlerini doğrudan Kiracı İzin Ver/Engelle Listesine ekleyemiyor. Bunun yerine, engellenen iletiyi göndermek için yönetici gönderme işlemini kullanırsınız; böylece ilgili URL, dosya ve/veya gönderenler Kiracı İzin Ver/Engelle Listesine eklenir. Dosya, URL veya gönderen bloğu gerçekleşmediyse, izin verme oluşturulmaz. İletinin yanlış engellenmiş hatalı bir pozitif olduğu belirlendiği çoğu durumda, sisteme doğal olarak izin vermek için gereken süre boyunca izinler tutulur.
 
 > [!IMPORTANT]
-> Microsoft sizin, gönderenin, URL'nin veya dosyanın izinlerini yönetmesi gerekli veya kötü olduğu kabul edilen izinler kaldırılır. Bunun en iyi yöntem ortamınızı korumak ve izinlerin yanlış yapılandırılmasını önlemektir. Bu gibi durumlarda, bir iletinin neden hala kötü kabul edilir olduğunu belirlemeye yardımcı olması için bir destek davaları gerekli olabilir.
+> Microsoft tarafından yönetildiğinden, size, gönderene, URL'ye veya dosyaya izin verdiğinden, gerekli değildir veya hatalı olarak kabul edilir kaldırılacaktır. Bu, ortamınızı korumak ve izinlerin yanlış yapılandırılmasını önlemektir. Katılmıyor olabileceğiniz durumlarda, iletinin neden hala kötü olarak kabul edildiğini saptamaya yardımcı olmak için bir destek talebi gerekebilir.
 
-## <a name="add-sender-allows-using-the-submissions-portal"></a>Gönderen ekleme, Gönderiler portalını kullanmaya izin verir 
+## <a name="add-sender-allows-using-the-submissions-portal"></a>Gönderen ekleme, Gönderimler portalının kullanılmasına izin verir
 
-Web'de, Gönderiler sayfasında **gönderenlere (veya etki** alanlarına) Microsoft 365 Defender. 
+Microsoft 365 Defender **Gönderiler sayfasında gönderenlere** (veya etki alanlarına) izin verin.
 
-1. Microsoft 365 Defender portalında, Eylemler ve <https://security.microsoft.com>**Gönderiler &** \> **gidin**. Gönderiler sayfasına doğrudan **gitmek için de** bunu kullanın <https://security.microsoft.com/reportsubmission>.
+1. konumundaki Microsoft 365 Defender portalında <https://security.microsoft.com>**Eylemler &** **Gönderimler'e**\> gidin. Veya doğrudan **Gönderimler** sayfasına gitmek için kullanın <https://security.microsoft.com/reportsubmission>.
 
-2. Gönderiler **sayfasında** , E-posta sekmesinin seçili **olduğunu** doğrulayın ve ardından çözümleme simgesi için Microsoft'a ![Gönder'e tıklayın.](../../media/m365-cc-sc-create-icon.png) **Çözümleme için Microsoft'a gönderin**.
+2. **Gönderimler** sayfasında **, E-postalar** sekmesinin seçili olduğunu doğrulayın ve analiz için Microsoft'a gönder simgesine tıklayın![.](../../media/m365-cc-sc-create-icon.png) **Analiz için Microsoft'a gönderin**.
 
-3. Ağ ileti **kimliğini ekleyerek veya e-posta** dosyasını karşıya yükerek ileti göndermek üzere gözden geçirmek üzere Microsoft'a Gönder uç güncelleştirmesini kullanın. 
+3. Ağ iletisi kimliğini ekleyerek veya e-posta dosyasını karşıya yükleyerek ileti göndermek **için Gözden geçirmek üzere Microsoft'a gönder** açılır penceresini kullanın.
 
-4. **Microsoft'a gönderme için bir neden seçin bölümünde** Engellenmiş olmalı (hatalı pozitif)**'i seçin**. 
+4. **Microsoft'a göndermek için bir neden seçin** bölümünde **Engellenmemiş olmalıdır (hatalı pozitif)** seçeneğini belirleyin.
 
-5. Bu gibi **iletilere izin ver seçeneğini** açabilirsiniz. 
+5. Bu seçenek **gibi iletilere izin ver'i** açın.
 
-6. Sonra **kaldır açılan** listesinde, izin ver seçeneğinin ne kadar süreyle çalışmasını istediğiniz belirtin.
+6. **Sonra kaldır** açılan listesinden, izin verme seçeneğinin ne kadar süreyle çalışmasını istediğinizi belirtin.
 
-7. Bitirdikten sonra **Gönder düğmesine tıklayın** .
+7. İşiniz bittiğinde **Gönder** düğmesine tıklayın.
 
-> ![Çözümleme için kötü amaçlı yazılımı Microsoft'a gönderin.](../../media/admin-submission-allow-messages.png)
-## <a name="add-url-allows-using-the-submissions-portal"></a>URL Ekle, Gönderiler portalının kullanımına izin verir
+> ![Analiz örneği için Microsoft'a kötü amaçlı yazılım gönderin.](../../media/admin-submission-allow-messages.png)
 
-web sayfasındaki Gönderiler **sayfasında URL'lere** izin Microsoft 365 Defender.
+## <a name="add-url-allows-using-the-submissions-portal"></a>URL ekleme, Gönderimler portalının kullanılmasına izin verir
 
-1. Microsoft 365 Defender portalında, Eylemler ve <https://security.microsoft.com>**Gönderiler &** \> **gidin**. Gönderiler sayfasına doğrudan **gitmek için de** bunu kullanın <https://security.microsoft.com/reportsubmission>.
+Microsoft 365 Defender'daki **Gönderimler sayfasında URL'lere** izin verin.
 
-2. Gönderiler **sayfasında** URL'ler sekmesini **seçin ve ardından** çözümleme simgesi için Microsoft'a ![Gönder'e tıklayın.](../../media/m365-cc-sc-create-icon.png) **Çözümleme için Microsoft'a gönderin**.
+1. konumundaki Microsoft 365 Defender portalında <https://security.microsoft.com>**Eylemler &** **Gönderimler'e**\> gidin. Veya doğrudan **Gönderimler** sayfasına gitmek için kullanın <https://security.microsoft.com/reportsubmission>.
 
-3. **URL'yi ekleyerek ileti göndermek için** Gözden geçirmek üzere Microsoft'a Gönder uç güncelleştirmesini kullanın.
+2. **Gönderimler** sayfasında **URL'ler** sekmesini seçin ve analiz için Microsoft'a gönder simgesine tıklayın![.](../../media/m365-cc-sc-create-icon.png) **Analiz için Microsoft'a gönderin**.
 
-4. **Microsoft'a gönderme için bir neden seçin bölümünde** Engellenmiş olmalı (hatalı pozitif)**'i seçin**.
+3. URL'yi ekleyerek ileti göndermek **için Gözden geçirmek üzere Microsoft'a gönder** açılır penceresini kullanın.
 
-5. Bu gibi **URL'lere izin ver seçeneğini** açma.
+4. **Microsoft'a göndermek için bir neden seçin** bölümünde **Engellenmemiş olmalıdır (hatalı pozitif)** seçeneğini belirleyin.
 
-6. Sonra **kaldır açılan** listesinde, izin ver seçeneğinin ne kadar süreyle çalışacaklarını belirtin.
+5. **Bu tür URL'lere izin ver** seçeneğini açın.
 
-7. Bitirdikten sonra **Gönder düğmesine tıklayın** .
+6. **Sonra kaldır** açılan listesinden, izin verme seçeneğinin ne kadar süreyle çalışmasını istediğinizi belirtin.
 
-> [!div class="mx-imgBorder"]
-> ![Çözümleme için URL'yi gönderin.](../../media/submit-url-for-analysis.png)
-## <a name="add-file-allows-using-the-submissions-portal"></a>Dosya Ekle, Gönderiler portalının kullanımına olanak sağlar
-
-sayfanın Gönderiler **sayfasındaKimlik** sayfasında Dosyalara İzin Microsoft 365 Defender.
-
-Microsoft 365 Defender portalında, Eylemler ve <https://security.microsoft.com>**Gönderiler &** \> **gidin**. Gönderiler sayfasına doğrudan **gitmek için de** bunu kullanın <https://security.microsoft.com/reportsubmission>.
-
-2. Gönderiler **sayfasında** E-posta **ekleri sekmesini seçin** ve ardından çözümleme için Microsoft'a ![Gönder simgesine tıklayın.](../../media/m365-cc-sc-create-icon.png) **Çözümleme için Microsoft'a gönderin**.
-
-3. Dosya veya **dosyaları ekleyerek ileti göndermek üzere** gözden geçirmek üzere Microsoft'a Gönder uç güncelleştirmesini kullanın.
-
-4. **Microsoft'a gönderme için bir neden seçin bölümünde** Engellenmiş olmalı (hatalı pozitif)**'i seçin**.
-
-5. Bu gibi dosyalara **izin ver seçeneğini** açma.
-
-6. Sonra **kaldır açılan** listesinde, izin ver seçeneğinin ne kadar süreyle çalışacaklarını belirtin.
-
-7. Bitirdikten sonra **Gönder düğmesine tıklayın** .
+7. İşiniz bittiğinde **Gönder** düğmesine tıklayın.
 
 > [!div class="mx-imgBorder"]
-> ![Çözümleme için e-posta gönderin.](../../media/submit-email-for-analysis.png)
+> ![Analiz için URL'yi gönderin.](../../media/submit-url-for-analysis.png)
 
+## <a name="add-file-allows-using-the-submissions-portal"></a>Dosya Ekle, Gönderimler portalının kullanılmasına izin verir
 
-## <a name="create-spoofed-sender-allow-entries-using-microsoft-365-defender"></a>E-posta kullanarak girişlere izin vermek için kimliği doğru Microsoft 365 Defender
+Microsoft 365 Defender **Gönderiler** sayfasında Dosyalara İzin Ver.
+
+1. konumundaki Microsoft 365 Defender portalında <https://security.microsoft.com>**Eylemler &** **Gönderimler'e**\> gidin. Veya doğrudan **Gönderimler** sayfasına gitmek için kullanın <https://security.microsoft.com/reportsubmission>.
+
+2. **Gönderiler** sayfasında **E-posta ekleri** sekmesini seçin ve analiz için Microsoft'a gönder simgesine tıklayın![.](../../media/m365-cc-sc-create-icon.png) **Analiz için Microsoft'a gönderin**.
+
+3. Dosyayı veya dosyaları ekleyerek ileti göndermek **için Gözden geçirmek üzere Microsoft'a gönder** açılır penceresini kullanın.
+
+4. **Microsoft'a göndermek için bir neden seçin** bölümünde **Engellenmemiş olmalıdır (hatalı pozitif)** seçeneğini belirleyin.
+
+5. **Bu gibi dosyalara izin ver** seçeneğini açın.
+
+6. **Sonra kaldır** açılan listesinden, izin verme seçeneğinin ne kadar süreyle çalışmasını istediğinizi belirtin.
+
+7. İşiniz bittiğinde **Gönder** düğmesine tıklayın.
+
+> [!div class="mx-imgBorder"]
+> ![Analiz için e-posta gönderin.](../../media/submit-email-for-analysis.png)
+
+## <a name="create-spoofed-sender-allow-entries-using-microsoft-365-defender"></a>Microsoft 365 Defender kullanarak sahte gönderen izin girdileri oluşturma
 
 > [!NOTE]
-> 
-> - Yalnızca _kimlik_ doğrulanmamış kullanıcının ve etki alanı çifti  içinde tanımlandığı üzere gönderme altyapısının birleşimine özel olarak kimlik doğrulama izni verilir veya bu altyapı engellenir.
-> - Bir etki alanı çifti için bir izin verme veya engelleme girdisi yapılandırıldığında, bu etki alanı çiftinin iletileri artık kimlik bilgileri bilgisinde görünmez.
-> - Kimliği doğru gönderenlerin girdilerinin süresi hiçbir zaman dolmaz.
-> - Poof, hem izin verme hem de engellemeyi destekler. URL yalnızca izin ver'i destekler.
+>
+> - Yalnızca kimlik sahtekarlığına neden olan kullanıcı _ile_ etki alanı çiftinde tanımlanan gönderme _altyapısının birleşimine_ özellikle izin verilir veya kimlik sahtekarlığına engellenir.
+> - Bir etki alanı çifti için izin ver veya engelle girdisi yapılandırdığınızda, bu etki alanı çiftinden gelen iletiler artık kimlik sahtekarı zeka içgörülerinde görünmez.
+> - Sahte gönderenlerin girdilerinin süresi hiçbir zaman dolmaz.
+> - Kimlik sahtekarı hem izin verme hem de engellemeyi destekler. URL yalnızca izin ver'i destekler.
 
-1. aşağıdaki Microsoft 365 Defender portalında, <https://security.microsoft.com>E-posta **& işbirliği İlkeleri'ne** \> **& kuralları** \> **Kurallar bölümündeki Tehdit** \> ilkeleri **Kiracı İzin Ver/Engelleme** **Listeleri'ne** gidin. Ya da doğrudan Kiracı İzin Ver **/Listeleri Engelleme sayfasına gitmek** için kullanın <https://security.microsoft.com/tenantAllowBlockList>.
+1. konumundaki Microsoft 365 Defender portalında<https://security.microsoft.com>, **Kurallar** bölümündeki **E-posta & işbirliği** \> **İlkeleri & kurallar** \> **Tehdit ilkeleri** \> **Kiracı İzin Ver/Engelle Listeleri'ne** gidin. İsterseniz, doğrudan **Kiracı İzin Ver/Listeleri Engelle** sayfasına gitmek için kullanın <https://security.microsoft.com/tenantAllowBlockList>.
 
-2. Kiracı İzin **Ver/Engelleme Listesi sayfasında** , Bilgi Verme **sekmesini seçin ve** Ekle simgesine ![tıklayın.](../../media/m365-cc-sc-create-icon.png) **ekle'yi seçin**.
+2. **Kiracı İzin Ver/Engelle Listesi** sayfasında Kimlik **Sahtekarlık** sekmesini seçin ve ekle simgesine tıklayın![.](../../media/m365-cc-sc-create-icon.png) **Ekle'yi seçin**.
 
-3. Görüntülenen **Yeni etki alanı çiftleri** ekle açılır sayfasında, aşağıdaki ayarları yapılandırabilirsiniz:
-   - **Joker karakterlerle yeni etki alanı çiftleri ekleme**: Satır başına bir etki alanı çifti (en çok 20) girin. Hatalı gönderen girişlerinin söz dizimi hakkında ayrıntılı bilgi için bkz. [Kiracı İzin Ver/Engelleme Listesini Yönetme](tenant-allow-block-list.md).
-   - **Poof türü**: Aşağıdaki değerlerden birini seçin:
-     - **İç**: Kimliği doğru olmayan gönderen, organizasyona ait bir etki alanında (kabul edilen etki [alanı) yer alır](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
-     - **Dış**: Gönderenin kimliği doğru değil dış etki alanında.
-   - **Eylem**: İzin **Ver'i veya** **Engelle'yi seçin**.
+3. Görüntülenen **Yeni etki alanı çiftleri ekle** açılır penceresinde aşağıdaki ayarları yapılandırın:
+   - **Joker karakterlerle yeni etki alanı çiftleri ekleyin**: Satır başına en fazla 20 etki alanı çifti girin. Kimlik sahtekarlığına neden olan gönderen girdilerinin söz dizimi hakkında ayrıntılı bilgi için bkz. [Kiracı İzin Verme/Engelleme Listesini Yönetme](tenant-allow-block-list.md).
+   - **Kimlik sahtekarı türü**: Aşağıdaki değerlerden birini seçin:
+     - **İç**: Sahte gönderen, kuruluşunuza ait bir etki alanındadır ( [kabul edilen bir etki alanı](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains)).
+     - **Dış**: Sahte gönderen bir dış etki alanında.
+   - **Eylem**: **İzin Ver** veya **Engelle'yi** seçin.
 
-4. Bitirdikten sonra Ekle'ye **tıklayın**.
+4. İşiniz bittiğinde **Ekle'ye** tıklayın.
 
-## <a name="add-spoofed-sender-allow-entries-using-powershell"></a>PowerShell kullanarak kimliği doğru gönderene izin verme girişleri ekleme
+## <a name="add-spoofed-sender-allow-entries-using-powershell"></a>PowerShell kullanarak sahte gönderen izin girdileri ekleme
 
-Exchange Online PowerShell'de Kiracı İzin Ver/Engelleme [Listesi'ne hatalı gönderen](/exchange/connect-to-exchange-online-powershell) girdileri eklemek için aşağıdaki söz dizimlerini kullanın:
+[Exchange Online PowerShell'de](/exchange/connect-to-exchange-online-powershell) Kiracı İzin Ver/Engelle Listesi'ne sahte gönderen girdileri eklemek için aşağıdaki söz dizimini kullanın:
 
 ```powershell
 New-TenantAllowBlockListSpoofItems -SpoofedUser <Domain | EmailAddress | *> -SendingInfrastructure <Domain | IPAddress/24> -SpoofType <External | Internal> -Action <Allow | Block>
@@ -133,4 +134,4 @@ Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [New-TenantAllowBlock
 ## <a name="related-articles"></a>İlgili makaleler
 
 - [Yönetici gönderimleri](admin-submission.md)
-- [Hatalı pozitif ve yanlış negatifleri bildirme](report-false-positives-and-false-negatives.md)
+- [Hatalı pozitifleri ve hatalı negatifleri raporlama](report-false-positives-and-false-negatives.md)

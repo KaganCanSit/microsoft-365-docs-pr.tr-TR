@@ -17,14 +17,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Bu makalede, eBulma (Standart) servis taleplerinin nasıl yönetileceğini açıklanmaktadır. Bu, bir servis talebini kapatmayı, kapalı bir servis talebini yeniden açmayı ve bir servis talebini silmeyi içerir.
-ms.openlocfilehash: 3ceb23f3ec215f3e9a7e5db036e71e5fe2842191
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: ee18a169ace43f03a0407b87c8ae70705af2f43c
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64940367"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64992380"
 ---
 # <a name="close-reopen-and-delete-a-ediscovery-standard-case"></a>eBulma (Standart) servis talebini kapatma, yeniden açma ve silme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bu makalede, Microsoft 365'de Microsoft Purview eKeşif (Standart) servis taleplerinin nasıl kapatıldığı, yeniden açıldığı ve silineceği açıklanır.
 

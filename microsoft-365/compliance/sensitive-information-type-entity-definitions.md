@@ -19,14 +19,16 @@ hideEdit: true
 feedback_system: None
 recommendations: false
 description: DLP ilkelerinizde kullanmaya hazır birçok hassas bilgi türü vardır. Bu makalede bu hassas bilgi türlerinin tümü listelenmiştir ve bir DLP ilkesinin her türü algıladığında ne arayacağını gösterir.
-ms.openlocfilehash: 69c47a717b63f8d9ac4e30f3b97fd228399bf21c
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 6074082812853469e0513d67ec68519eb2a89563
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64760415"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64970669"
 ---
 # <a name="sensitive-information-type-entity-definitions"></a>Hassas bilgi türü varlık tanımları
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bu makalede tüm hassas bilgi türü varlık tanımları listelenir. Her tanım, bir DLP ilkesinin her türü algılamak için ne arayacağını gösterir. Hassas bilgi türleri hakkında daha fazla bilgi edinmek için bkz [. Hassas bilgi türleri](sensitive-information-type-learn-about.md)
 
@@ -510,7 +512,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -575,7 +577,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -898,7 +900,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="australia-physical-addresses"></a>Avustralya fiziksel adresleri
 
-Sarılmamış adlandırılmış varlık, Avustralya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Sarılmamış adlandırılmış varlık, Avustralya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 Orta
@@ -1126,7 +1128,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -1258,7 +1260,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="austria-physical-addresses"></a>Avusturya fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık, Avusturya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık, Avusturya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -1413,7 +1415,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -2325,7 +2327,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="belgium-physical-addresses"></a>Belçika fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık, Belçika'dan gelen fiziksel adreslerle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık, Belçika'dan gelen fiziksel adreslerle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -2337,7 +2339,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -2619,7 +2621,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamı�
 
 ## <a name="brazil-physical-addresses"></a>Brezilya fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık, Brezilya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık, Brezilya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -2868,7 +2870,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="bulgaria-physical-addresses"></a>Bulgaristan fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık, Bulgaristan'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık, Bulgaristan'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -2879,7 +2881,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -3468,7 +3470,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="canada-physical-addresses"></a>Kanada fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık, Kanada'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık, Kanada'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -3728,7 +3730,7 @@ Evet, Luhn çeki
 DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
 
 - İşlev Func_credit_card desenle eşleşen içeriği bulur.
-- Aşağıdakilerden biri doğrudur:
+- Aşağıdaki koşullardan biri doğrudur:
   - Keyword_cc_verification anahtar sözcüğü bulunur.
   - Keyword_cc_name anahtar sözcüğü bulunur.
   - İşlev Func_expiration_date doğru tarih biçiminde bir tarih bulur.
@@ -4394,7 +4396,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="croatia-physical-addresses"></a>Hırvatistan fiziksel adresleri
 
-Bu adı kaldırılmış varlık, Hırvatistan'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu adı kaldırılmış varlık, Hırvatistan'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -4569,7 +4571,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -4700,7 +4702,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="cyprus-physical-addresses"></a>Kıbrıs fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık, Kıbrıs'tan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık, Kıbrıs'tan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -4712,7 +4714,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -5139,7 +5141,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="czech-republic-physical-addresses"></a>Çek Cumhuriyeti fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık, Çek Cumhuriyeti'nden gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık, Çek Cumhuriyeti'nden gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -5506,7 +5508,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="denmark-physical-addresses"></a>Danimarka fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık, Danimarka'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık, Danimarka'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -5828,7 +5830,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -5914,7 +5916,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="estonia-physical-addresses"></a>Estonya fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık, Estonya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık, Estonya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -6370,7 +6372,7 @@ Bu varlıklar AB pasaport numarasındadır ve hassas bilgi türleridir. Bu varl�
 
 ## <a name="eu-social-security-number-or-equivalent-identification"></a>AB sosyal güvenlik numarası veya eşdeğer kimlik
 
-Bunlar, AB Sosyal Güvenlik Numarası veya eşdeğer kimlik bilgilerindeki varlıklardır ve hassas bilgi türleridir.
+Bu varlıklar AB Sosyal Güvenlik Numarası'nda veya eşdeğer kimliktedir ve hassas bilgi türleridir.
 
 - [Avusturya](#austria-social-security-number)
 - [Belçika](#belgium-national-number)
@@ -6599,7 +6601,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -6836,7 +6838,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="finland-physical-addresses"></a>Finlandiya fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık, Finlandiya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık, Finlandiya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -7010,7 +7012,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -7199,7 +7201,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="france-physical-addresses"></a>Fransa fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık, Fransa'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık, Fransa'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -7367,7 +7369,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -7634,7 +7636,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ### <a name="format"></a>Biçim
 
-1 Kasım 2010'dan bu yana: Dokuz - on bir harf ve rakam
+1 Kasım 2010'dan bu yana: Dokuz - 11 harf ve rakam
 
 1 Nisan 1987 ile 31 Ekim 2010 arasında: 10 basamak
 
@@ -7798,7 +7800,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="germany-physical-addresses"></a>Almanya fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık, Almanya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık, Almanya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -7885,7 +7887,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -8246,7 +8248,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="greece-physical-addresses"></a>Yunanistan fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık, Yunanistan'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık, Yunanistan'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -8258,7 +8260,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -8319,7 +8321,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -8717,7 +8719,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -8780,7 +8782,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="hungary-physical-addresses"></a>Macaristan fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık, Macaristan'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık, Macaristan'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -8852,7 +8854,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -8934,7 +8936,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -8996,7 +8998,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="iceland-physical-addresses"></a>İzlanda fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık, İzlanda'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık, İzlanda'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -10145,7 +10147,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="ireland-physical-addresses"></a>İrlanda fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık, İrlanda'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık, İrlanda'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -10435,7 +10437,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -10606,7 +10608,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="italy-physical-addresses"></a>İtalya fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık, İtalya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık, İtalya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -10618,7 +10620,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -10858,7 +10860,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -10922,7 +10924,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -11585,7 +11587,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="latvia-physical-addresses"></a>Letonya fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık, Letonya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık, Letonya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -11593,7 +11595,7 @@ Orta
 
 ## <a name="liechtenstein-physical-addresses"></a>Liechtenstein fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık Liechtenstein fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık Liechtenstein fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -11776,7 +11778,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -11864,7 +11866,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="lithuania-physical-addresses"></a>Litvanya fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık, Litvanya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık, Litvanya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -12115,7 +12117,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -12370,7 +12372,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="luxemburg-physical-addresses"></a>Luxemburg fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık Luxemburg'daki fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık Luxemburg'daki fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -12618,7 +12620,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -12756,7 +12758,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="malta-physical-addresses"></a>Malta fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık, Malta'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık, Malta'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -13292,7 +13294,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="netherlands-physical-addresses"></a>Hollanda fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık, Hollanda'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık, Hollanda'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -13304,7 +13306,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -13390,7 +13392,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -13455,7 +13457,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -13520,7 +13522,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -13638,7 +13640,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -13748,7 +13750,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="new-zealand-physical-addresses"></a>Yeni Zelanda fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık, Yeni Zelanda'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık, Yeni Zelanda'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -13760,7 +13762,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -13874,7 +13876,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="norway-physical-addresses"></a>Norveç fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık, Norveç'ten gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık, Norveç'ten gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -14287,7 +14289,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="poland-physical-addresses"></a>Polonya fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık, Polonya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık, Polonya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -14299,7 +14301,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -14368,7 +14370,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -14759,7 +14761,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="portugal-physical-addresses"></a>Portekiz fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık, Portekiz'den gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık, Portekiz'den gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -15084,7 +15086,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -15182,7 +15184,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="romania-physical-addresses"></a>Romanya fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık, Romanya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık, Romanya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -15194,7 +15196,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -15258,7 +15260,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -15665,7 +15667,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -15760,7 +15762,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="slovakia-physical-addresses"></a>Slovakya fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık, Slovakya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık, Slovakya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -16017,7 +16019,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="slovenia-physical-addresses"></a>Slovenya fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık, Slovenya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık, Slovenya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -16029,7 +16031,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -16103,7 +16105,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -16287,7 +16289,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -16648,7 +16650,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="spain-physical-addresses"></a>İspanya fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık, İspanya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık, İspanya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -16717,7 +16719,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -17245,7 +17247,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="sweden-physical-addresses"></a>İsveç fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık, İsveç'ten gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık, İsveç'ten gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -17257,7 +17259,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -17413,7 +17415,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="switzerland-physical-addresses"></a>İsviçre fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık, İsviçre'den gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık, İsviçre'den gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -17425,7 +17427,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -17761,7 +17763,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="turkey-physical-addresses"></a>Türkiye fiziksel adresleri
 
-Bu unbundled adlı varlık, Türkiye'den gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlı varlık, Türkiye'den gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -18137,7 +18139,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="uk-physical-addresses"></a>INGİLTERE. fiziksel adresler
 
-Bu unbundled adlandırılmış varlık, Birleşik Krallık'tan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık, Birleşik Krallık'tan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -18149,7 +18151,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -18506,7 +18508,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ## <a name="us-physical-addresses"></a>ABD fiziksel adresleri
 
-Bu unbundled adlandırılmış varlık, ABD'den gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
+Bu unbundled adlandırılmış varlık, ABD'den gelen fiziksel adresle ilgili desenleri algılar. Ayrıca varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
 ### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
@@ -18665,7 +18667,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -18715,7 +18717,7 @@ Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi idaresi
+- veri yaşam döngüsü yönetimi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 

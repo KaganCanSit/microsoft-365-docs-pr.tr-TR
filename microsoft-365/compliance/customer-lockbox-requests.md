@@ -1,5 +1,5 @@
 ---
-title: Müşteri Kasası İstekleri
+title: Müşteri Kasası istekleri
 f1.keywords:
 - NOCSH
 ms.author: krowley
@@ -18,20 +18,22 @@ search.appverid:
 - MOE150
 ms.custom: admindeeplinkMAC
 description: Microsoft destek mühendisinin bir sorunla karşılaştığınızda verilerinize nasıl erişebileceğini denetlemenize olanak sağlayan Müşteri Kasası istekleri hakkında bilgi edinin.
-ms.openlocfilehash: 8f875f485830d59af733c6c76a5a3d297bedb2cc
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: cf9a2a6d682ca87e97986389f640a536775ca014
+ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64759953"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64953836"
 ---
-# <a name="customer-lockbox-in-office-365"></a>Office 365'de Müşteri Kasası
+# <a name="microsoft-purview-customer-lockbox"></a>Microsoft Purview Müşteri Kasası
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bu makalede Müşteri Kasası için dağıtım ve yapılandırma yönergeleri sağlanır. Müşteri Kasası Exchange Online, SharePoint Online, OneDrive İş ve Teams verilerine erişme isteklerini destekler. Diğer hizmetler için destek önermek için [Geri Bildirim Portalı'nda](https://feedbackportal.microsoft.com) bir istek gönderin.
 
-Kullanıcılarınızın Microsoft 365 uyumluluk tekliflerinden yararlanması için lisanslama seçeneklerini görmek [için güvenlik & uyumluluğu için Microsoft 365 lisanslama kılavuzuna](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance) bakın.
+Kullanıcılarınızın Microsoft Purview tekliflerinden yararlanması için lisanslama seçeneklerini görmek [için güvenlik & uyumluluğu için Microsoft 365 lisanslama kılavuzuna](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance) bakın.
 
-Müşteri Kasası, Microsoft'un açık onayınız olmadan hizmet işlemleri yapmak için içeriğinize erişememesini sağlar. Müşteri Kasası sizi Microsoft'un yalnızca yetkili isteklerin içeriğinize erişim izni vermek için kullandığı onay iş akışı sürecine getirir. Microsoft'un iş akışı süreci hakkında daha fazla bilgi edinmek için bkz. [Microsoft 365'de ayrıcalıklı erişim yönetimi](privileged-access-management-solution-overview.md).
+Müşteri Kasası, Microsoft'un açık onayınız olmadan hizmet işlemleri yapmak için içeriğinize erişememesini sağlar. Müşteri Kasası sizi Microsoft'un yalnızca yetkili isteklerin içeriğinize erişim izni vermek için kullandığı onay iş akışı sürecine getirir. Microsoft'un iş akışı süreci hakkında daha fazla bilgi edinmek için bkz [. Ayrıcalıklı erişim yönetimi](privileged-access-management-solution-overview.md).
 
 Microsoft mühendisleri bazen hizmette ortaya çıkan sorunları gidermeye ve düzeltmeye yardımcı olur. Mühendisler genellikle Microsoft'un hizmetleri için kullandığı kapsamlı telemetri ve hata ayıklama araçlarını kullanarak sorunları çözer. Ancak bazı durumlarda, kök nedeni belirlemek ve sorunu çözmek için bir Microsoft mühendisinin içeriğinize erişmesi gerekir. Müşteri Kasası, mühendisin onay iş akışının son adımı olarak sizden erişim istemesini gerektirir. Bu, kuruluşunuz için isteği onaylama veya reddetme ve içeriğinize doğrudan erişim denetimi sağlama seçeneği sunar.
 
@@ -102,15 +104,15 @@ müşteri kasası denetimlerini Microsoft 365 yönetim merkezi açabilirsiniz. M
     ![Müşteri Kasası isteklerini reddedin.](../media/CustomerLockbox8.png)
 
 > [!NOTE]
-> Microsoft destek mühendislerinin verilerinize erişimi denetlediği Microsoft 365 müşteri kasası isteklerini onaylamak, reddetmek veya iptal etmek için Set-AccessToCustomerDataRequest cmdlet'ini kullanın. Daha fazla bilgi için bkz [. Set-AccessToCustomerDataRequest](/powershell/module/exchange/set-accesstocustomerdatarequest).
+> Microsoft destek mühendislerinin verilerinize erişimi denetlediği Microsoft Purview Müşteri Kasası isteklerini onaylamak, reddetmek veya iptal etmek için Set-AccessToCustomerDataRequest cmdlet'ini kullanın. Daha fazla bilgi için bkz [. Set-AccessToCustomerDataRequest](/powershell/module/exchange/set-accesstocustomerdatarequest).
 
 ## <a name="auditing-customer-lockbox-requests"></a>Müşteri Kasası isteklerini denetleme
 
-Müşteri Kasası isteklerine karşılık gelen denetim kayıtları Microsoft 365 denetim günlüğüne kaydedilir. Microsoft 365 uyumluluk merkezi [denetim günlüğü arama aracını kullanarak bu günlüklere](search-the-audit-log-in-security-and-compliance.md) erişebilirsiniz. Müşteri Kasası isteğini kabul etme veya reddetme ile ilgili eylemler ve Microsoft mühendisleri tarafından gerçekleştirilen eylemler (erişim istekleri onaylandığında) denetim günlüğüne de kaydedilir. Bu denetim kayıtlarını arayabilir ve gözden geçirebilirsiniz.
+Müşteri Kasası isteklerine karşılık gelen denetim kayıtları Microsoft 365 denetim günlüğüne kaydedilir. Microsoft Purview uyumluluk portalındaki [denetim günlüğü arama aracını](search-the-audit-log-in-security-and-compliance.md) kullanarak bu günlüklere erişebilirsiniz. Müşteri Kasası isteğini kabul etme veya reddetme ile ilgili eylemler ve Microsoft mühendisleri tarafından gerçekleştirilen eylemler (erişim istekleri onaylandığında) denetim günlüğüne de kaydedilir. Bu denetim kayıtlarını arayabilir ve gözden geçirebilirsiniz.
 
 ### <a name="search-the-audit-log-for-activity-related-to-customer-lockbox-requests"></a>Müşteri Kasası istekleriyle ilgili etkinlik için denetim günlüğünde arama yapma
 
-Müşteri Kasası isteklerini izlemek için denetim günlüğünü kullanabilmeniz için denetim günlüğünü ayarlamak için izlemeniz gereken, denetim günlüğünde arama izinleri atama gibi bazı adımlar vardır. Daha fazla bilgi için bkz. [Microsoft 365'de Temel Denetimi Ayarlama](set-up-basic-audit.md). Kurulumu tamamladıktan sonra, Müşteri Kasası ile ilgili denetim kayıtlarını döndürmek üzere bir denetim günlüğü arama sorgusu oluşturmak için şu adımları kullanın:
+Müşteri Kasası isteklerini izlemek için denetim günlüğünü kullanabilmeniz için denetim günlüğünü ayarlamak için izlemeniz gereken, denetim günlüğünde arama izinleri atama gibi bazı adımlar vardır. Daha fazla bilgi için bkz. [Microsoft Purview Denetimini Ayarlama (Standart)](set-up-basic-audit.md). Kurulumu tamamladıktan sonra, Müşteri Kasası ile ilgili denetim kayıtlarını döndürmek üzere bir denetim günlüğü arama sorgusu oluşturmak için şu adımları kullanın:
 
 1. <https://compliance.microsoft.com> adresine gidin.
   
@@ -159,7 +161,7 @@ Dosyayı indirdikten sonra, Excel'da açabilir ve ardından **İşletimler** sü
 
 ### <a name="use-powershell-to-search-and-export-audit-records"></a>Denetim kayıtlarını aramak ve dışarı aktarmak için PowerShell kullanma
 
-Microsoft 365 uyumluluk merkezi denetim arama aracını kullanmanın bir alternatifi, Exchange Online PowerShell'de [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog) cmdlet'ini çalıştırmaktır. PowerShell kullanmanın avantajlarından biri, Microsoft mühendisleri tarafından müşteri kasası isteğiyle ilgili **olarak gerçekleştirilen Set-AccessToCustomerDataRequest** etkinliklerini veya etkinliklerini özel olarak aramanızdır.
+Microsoft Purview uyumluluk portalında denetim arama aracını kullanmanın bir alternatifi, Exchange Online PowerShell'de [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog) cmdlet'ini çalıştırmaktır. PowerShell kullanmanın avantajlarından biri, Microsoft mühendisleri tarafından müşteri kasası isteğiyle ilgili **olarak gerçekleştirilen Set-AccessToCustomerDataRequest** etkinliklerini veya etkinliklerini özel olarak aramanızdır.
 
 [Exchange Online PowerShell'e bağlandıktan](/powershell/exchange/connect-to-exchange-online-powershell) sonra aşağıdaki komutlardan birini çalıştırın. Yer tutucuları belirli bir tarih aralığıyla değiştirin.
 

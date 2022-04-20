@@ -20,14 +20,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Bu makalede, kuruluşunuzdaki kullanıcılar ve yöneticiler tarafından gerçekleştirilen denetim etkinliklerini aramaya başlayabilmeniz için Denetimin (Standart) nasıl ayarlanacağı açıklanır.
-ms.openlocfilehash: 93245abfc4f57b22d6db715103f93428487a648d
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 15e72d1b2899799f432cdc717352cf53a0a370e4
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64936059"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64993742"
 ---
 # <a name="set-up-microsoft-purview-audit-standard"></a>Microsoft Purview Denetimini Ayarlama (Standart)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft 365'deki Microsoft Purview Denetimi (Standart), kullanıcılar ve yöneticiler tarafından farklı Microsoft 365 hizmetlerinde gerçekleştirilen etkinliklerin denetim kayıtlarını aramanızı sağlar. Denetim (Standart) çoğu Microsoft 365 ve Office 365 kuruluş için varsayılan olarak etkinleştirildiğinden, siz ve kuruluşunuzdaki diğer kişilerin denetim günlüğünde arama yapabilmesi için yapmanız gereken yalnızca birkaç şey vardır.
 

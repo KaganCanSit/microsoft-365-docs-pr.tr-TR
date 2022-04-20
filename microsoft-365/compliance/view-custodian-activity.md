@@ -19,14 +19,16 @@ description: EBulma (Premium) Koruyucu Yönetimi aracını kullanarak olayınız
 ms.custom:
 - seo-marvel-mar2020
 - admindeeplinkEXCHANGE
-ms.openlocfilehash: 35b622e00caeeca78c85849f03b3a21f8a28b443
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: e2de6209e08d6e8dd6f853724f26d026aec1c33f
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64943523"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64993720"
 ---
 # <a name="view-custodian-audit-activity"></a>Yediemin denetim etkinliğini görüntüleme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Kullanıcının belirli bir belgeyi görüntüleyip görüntülemediğini veya bir öğeyi posta kutusundan temizleyip temizlemediğini bulmanız mı gerekiyor? Microsoft Purview eKeşif (Premium) artık Microsoft Purview uyumluluk portalındaki mevcut denetim günlüğü arama aracıyla tümleştirilmiştir. Bu ekli deneyimi kullanarak, eBulma (Premium) Koruyucu Yönetimi aracını kullanarak, olayınızdaki koruyucular için etkinliğe kolayca erişerek ve etkinlikte arama yaparak araştırmanızı kolaylaştırabilirsiniz.
 

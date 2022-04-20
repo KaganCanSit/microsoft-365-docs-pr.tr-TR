@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Yöneticiler, EML verilerini Veritas'tan Microsoft 365 içeri aktarmak ve arşivlemesi için bir bağlayıcı ayarlayabilir. Bu bağlayıcı, Microsoft 365'da üçüncü taraf veri kaynaklarından verileri arşivleyabilmenizi sağlar. Bu verileri arşivledikten sonra, üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
-ms.openlocfilehash: c4c4043baf8f58405923bf5ac1bc69c6293a4f52
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 9ba4cc4772e93b85e856bb68850ba682352e9f5f
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64938719"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64993545"
 ---
 # <a name="set-up-a-connector-to-archive-eml-data"></a>EML verilerini arşivleye bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 EML verilerini Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında bir Veritas bağlayıcısı kullanın. EML, bir dosyaya kaydedilen e-posta iletisinin dosya uzantısıdır. Bağlayıcı, bir öğenin içeriğini kaynak biçimden e-posta iletisi biçimine dönüştürür ve sonra öğeyi bir kullanıcı posta kutusuna aktarır.
 

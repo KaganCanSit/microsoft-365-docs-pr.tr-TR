@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 denetim çözümleri
+title: Microsoft Purview denetim çözümleri
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -19,18 +19,18 @@ search.appverid:
 - MET150
 description: Microsoft 365 kuruluşunuzdaki kullanıcıların ve yöneticilerin etkinliklerini denetlemeyi öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 2ab97dc632aeaf13109380fb9a5586594c63ebaa
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: c7c6461868ee212e6b332181b9dea1560ce49558
+ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 04/19/2022
-ms.locfileid: "64949067"
+ms.locfileid: "64953749"
 ---
-# <a name="auditing-solutions-in-microsoft-365"></a>Microsoft 365'de çözümleri denetleme
+# <a name="auditing-solutions-in-microsoft-purview"></a>Microsoft Purview'da denetim çözümleri
 
-Microsoft 365 denetim çözümleri, kuruluşların güvenlik olaylarına, adli araştırmalara, iç araştırmalara ve uyumluluk yükümlülüklerine etkili bir şekilde yanıt vermelerine yardımcı olmak için tümleşik bir çözüm sağlar. Onlarca Microsoft 365 hizmeti ve çözümünde gerçekleştirilen binlerce kullanıcı ve yönetici işlemi, kuruluşunuzun birleşik denetim günlüğünde yakalanır, kaydedilir ve saklanır. Bu olaylar için denetim kayıtları güvenlik işlemleri, BT yöneticileri, insider risk ekipleri ve kuruluşunuzdaki uyumluluk ve hukuk araştırmacıları tarafından aranabilir. Bu özellik, Microsoft 365 kuruluşunuz genelinde gerçekleştirilen etkinliklere görünürlük sağlar.
+Microsoft Purview denetim çözümleri, kuruluşların güvenlik olaylarına, adli araştırmalara, iç araştırmalara ve uyumluluk yükümlülüklerine etkili bir şekilde yanıt vermelerine yardımcı olmak için tümleşik bir çözüm sağlar. Onlarca Microsoft 365 hizmeti ve çözümünde gerçekleştirilen binlerce kullanıcı ve yönetici işlemi, kuruluşunuzun birleşik denetim günlüğünde yakalanır, kaydedilir ve saklanır. Bu olaylar için denetim kayıtları güvenlik işlemleri, BT yöneticileri, insider risk ekipleri ve kuruluşunuzdaki uyumluluk ve hukuk araştırmacıları tarafından aranabilir. Bu özellik, Microsoft 365 kuruluşunuz genelinde gerçekleştirilen etkinliklere görünürlük sağlar.
 
-## <a name="microsoft-365-auditing-solutions"></a>Microsoft 365 denetim çözümleri
+## <a name="microsoft-purview-auditing-solutions"></a>Microsoft Purview denetim çözümleri
 
 Microsoft Purview iki denetim çözümü sağlar: Denetim (Standart) ve Denetim (Premium).
 
@@ -94,7 +94,7 @@ Aşağıdaki tabloda, Denetim (Standart) ve Denetim (Premium) içindeki temel ö
 
 ## <a name="licensing-requirements"></a>Lisans gereksinimleri
 
-Aşağıdaki bölümlerde Denetim (Standart) ve Denetim (Premium) için lisanslama gereksinimleri belirlenir. Denetim (Standart) işlevselliği Gelişmiş Denetim'e dahil edilir.
+Aşağıdaki bölümlerde Denetim (Standart) ve Denetim (Premium) için lisanslama gereksinimleri belirlenir. Denetim (Standart) işlevi Denetim (Premium) ile birlikte sağlanır.
 
 ### <a name="audit-standard"></a>Denetim (Standart)
 
@@ -126,9 +126,9 @@ Aşağıdaki bölümlerde Denetim (Standart) ve Denetim (Premium) için lisansla
 - E5 aboneliğini Office 365 Kurumsal
 - A5 aboneliğini Office 365 Eğitim
 
-## <a name="set-up-microsoft-365-auditing-solutions"></a>Microsoft 365 denetim çözümlerini ayarlama
+## <a name="set-up-microsoft-purview-auditing-solutions"></a>Microsoft Purview denetim çözümlerini ayarlama
 
-Microsoft 365'daki denetim çözümlerini kullanmaya başlamak için aşağıdaki kurulum kılavuzuna bakın.
+Microsoft Purview'da denetim çözümlerini kullanmaya başlamak için aşağıdaki kurulum kılavuzuna bakın.
 
 ### <a name="set-up-audit-standard"></a>Denetimi Ayarlama (Standart)
 

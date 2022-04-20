@@ -1,5 +1,5 @@
 ---
-title: Uyumlulukla ilgili Microsoft 365.
+title: Microsoft Purview'daki yenilikler
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -16,259 +16,286 @@ search.appverid:
 ms.assetid: e3c6df61-8513-499d-ad8e-8a91770bff63
 ms.collection:
 - M365-security-compliance
-description: Uyumluluk merkezine yeni çözümler eklemek, geri bildirimleriniz temel alınarak mevcut özellikleri güncelleştirmek veya yeni ve güncelleştirilmiş belgeler çıkarmak olabilir; Microsoft 365 sürekli değişen uyumluluk ortamını takip içinde kalmanıza yardımcı olur. Bu ay neler olduğunu takipte bulun.
+description: Uyumluluk merkezine yeni çözümler eklemek, mevcut özellikleri geri bildiriminize göre güncelleştirmek veya yeni ve güncelleştirilmiş belgeler kullanıma sunarken Microsoft 365 sürekli değişen uyumluluk ortamını takip etme konusunda size yardımcı olur. Bu ay neler yaptığımıza bakın.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 15a97fc419bc6e4264f3c3cd0bbe389b79e5c2f0
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 5c1e48f1cd9d4a73e703e4d5d93d6d1354d57366
+ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63326979"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64953727"
 ---
-# <a name="whats-new-in-microsoft-365-compliance"></a>Uyumlulukla ilgili Microsoft 365.
+# <a name="whats-new-in-microsoft-purview"></a>Microsoft Purview'daki yenilikler
 
-[Microsoft 365 uyumluluk merkezi'a](microsoft-365-compliance-center.md) yeni çözümler eklemek, Microsoft 365 uyumluluk merkezi geri bildirimleriniz temel alınarak mevcut özellikleri güncelleştirmek veya yeni ve güncelleştirilmiş belgeler çıkarmak olabilir; Microsoft 365, sürekli değişen uyumluluk ortamını takip içinde kalmanıza yardımcı olur. Uyumluluk uyumluluğu ile ilgili bugün hangi Microsoft 365 bakın.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+[Microsoft Purview uyumluluk portalına](microsoft-365-compliance-center.md) yeni çözümler eklemek, mevcut özellikleri geri bildiriminize göre güncelleştirmek veya yeni ve güncelleştirilmiş belgeleri kullanıma sunan Microsoft 365, sürekli değişen uyumluluk ortamını takip etme konusunda size yardımcı olur. Bugün Microsoft Purview'daki yeniliklere göz atmak için aşağıya göz atın.
 
 > [!NOTE]
-> Bazı uyumluluk özellikleri müşterilerimize farklı hızlarda sunulmaktadır. Henüz bir özelliği görmüyorsanız kendinizi hedefli sürüme [eklemeyi deneyin](/office365/admin/manage/release-options-in-office-365).
+> Bazı uyumluluk özellikleri müşterilerimiz için farklı hızlarda kullanıma sunulur. Henüz bir özellik görmüyorsanız, [kendinizi hedeflenen sürüme](/office365/admin/manage/release-options-in-office-365) eklemeyi deneyin.
 
 > [!TIP]
-> Diğer yönetim merkezlerinde neler olduğunu merak ediyor musunuz? Şu makalelere göz at:
+> Diğer yönetim merkezlerinde neler olduğuyla ilgileniyor musunuz? Şu makalelere göz atın:
 >
-> - [2010'daki Microsoft 365 yönetim merkezi](/office365/admin/whats-new-in-preview)
-> - [Yönetim merkezinde SharePoint.](/sharepoint/what-s-new-in-admin-center)
-> - [Microsoft 365 Defender'daki Microsoft 365 Defender](../security/defender/whats-new.md)
+> - [Microsoft 365 yönetim merkezi'deki yenilikler](/office365/admin/whats-new-in-preview)
+> - [SharePoint yönetim merkezindeki yenilikler](/sharepoint/what-s-new-in-admin-center)
+> - [Microsoft 365 Defender'daki yenilikler](../security/defender/whats-new.md)
 >
-> Ayrıca, [Microsoft 365,](https://www.microsoft.com/microsoft-365/roadmap) piyasaya Microsoft 365, geliştirme aşamasında olan, iptal edilen veya daha önce yayımlanan özellikler hakkında bilgi edinmek için Yol Haritası'Microsoft 365 ziyaret edin.
+> Ayrıca başlatılan, kullanıma sunulan, geliştirilen, iptal edilen veya daha önce yayımlanan Microsoft 365 özellikler hakkında bilgi edinmek için [Microsoft 365 Yol Haritası'nı](https://www.microsoft.com/microsoft-365/roadmap) ziyaret edin.
+
+## <a name="april-2022"></a>Nisan 2022
+
+### <a name="changes-to-product-names"></a>Ürün adlarına yapılan değişiklikler
+
+Günümüzün merkezi olmayan, veri açısından zengin çalışma alanının zorluklarını karşılamak için, tüm veri varlığınızı anlamanıza, yönetmenize ve korumanıza yardımcı olan kapsamlı bir çözüm kümesi olan [Microsoft Purview'u](https://aka.ms/microsoftpurview) kullanıma sunuyoruz. Bu yeni marka ailesi, eski Microsoft Purview Veri Haritası'nın özelliklerini ve müşterilerin zaten güvendiği Microsoft 365 uyumluluk portföyünü bir araya getirerek kuruluşunuz için birleşik veri idaresi ve risk yönetimi sağlar.
+
+| **Eski Ad** | **Yeni Ad** | **Açıklama** |
+|:----------------|:-------------|:----------------|
+| gelişmiş denetim Microsoft 365 | Microsoft Purview Denetimi (Premium) | Denetim çözümleri, kuruluşların güvenlik olaylarına, adli araştırmalara, iç araştırmalara ve uyumluluk yükümlülüklerine etkili bir şekilde yanıt vermelerine yardımcı olmak için tümleşik bir çözüm sağlar. Daha fazla bilgi için bkz. [Microsoft Purview Gelişmiş Denetimi (Premium)](advanced-audit.md). |
+| Microsoft 365 İletişim Uyumluluğu | Microsoft Purview İletişim Uyumluluğu | İletişim Uyumluluğu, şirket iletişim kanalları ve ilke ihlallerini hızla algılamanıza, yakalamanıza ve düzeltme eylemleri gerçekleştirmenize yardımcı olarak riskleri en aza indirmenize yardımcı olur. Daha fazla bilgi edinmek için bkz. [Microsoft Purview İletişim Uyumluluğu](communication-compliance-solution-overview.md). |
+| Microsoft Uyumluluk Yöneticisi | Microsoft Purview Uyumluluk Yöneticisi | Uyumluluk Yöneticisi, veri koruma risklerinizin envanterini almaktan denetimleri uygulama, düzenlemeler ve sertifikalarla güncel kalma ve denetçilere raporlama gibi karmaşıklıkları yönetmeye kadar uyumluluk yolculuğunuz boyunca size yardımcı olabilir. Daha fazla bilgi için bkz. [Microsoft Purview Uyumluluk Yöneticisi](compliance-manager.md). |
+| müşteri anahtarını Microsoft 365 | Microsoft Purview Müşteri Anahtarı | Müşteri Anahtarı, yetkisiz sistemler veya personel tarafından verilerin görüntülenmesine karşı ek koruma sağlar ve Microsoft veri merkezlerinde BitLocker disk şifrelemesini tamamlar. Daha fazla bilgi için bkz. [Microsoft Purview Müşteri Anahtarı](customer-key-overview.md). |
+| Office 365 Müşteri Kasası | Microsoft Purview Müşteri Kasası | Müşteri Kasası, Microsoft'un açık onayınız olmadan hizmet işlemleri yapmak için içeriğinize erişememesini sağlar. Müşteri Kasası sizi Microsoft'un yalnızca yetkili isteklerin içeriğinize erişim izni vermek için kullandığı onay iş akışı sürecine getirir. Daha fazla bilgi için bkz. [Microsoft Purview Müşteri Kasası](customer-lockbox-requests.md). |
+| Veri Kaybı Önleme | Microsoft Purview Veri Kaybı Önleme | DLP, kullanıcıların verileri sahip olmaması gereken kişilerle uygunsuz bir şekilde paylaşmasını engelleyerek hassas verilerin korunmasına ve riskin azaltılmasına yardımcı olur. Daha fazla bilgi için bkz. [Microsoft Purview Veri Kaybı Önleme](dlp-learn-about-dlp.md). |
+| Microsoft 365 için Çift Anahtar şifrelemesi | Microsoft Purview Çift Anahtar Şifrelemesi | Çift Anahtar Şifrelemesi (DKE), korumalı içeriğe erişmek için iki anahtarı birlikte kullanır. Microsoft bir anahtarı Microsoft Azure depolar ve siz diğer anahtarı tutarsınız. Daha fazla bilgi edinmek için bkz. [Microsoft Purview Çift Anahtar Şifrelemesi](double-key-encryption.md) |
+| Microsoft 365 Bilgi Engelleri | Microsoft Purview Bilgi Engelleri | Bilgi Engelleri, iç bilgileri korumak için kuruluşunuz içindeki belirli kişiler arasındaki iletişimi ve işbirliğini kısıtlayan bir çözümdür. Daha fazla bilgi için bkz. [Microsoft Purview Bilgi Engelleri](information-barriers-solution-overview.md). |
+| Microsoft Bilgi Koruması | Microsoft Purview Information Protection | Bilgi koruması, hassas bilgileri nerede yaşarsa yaşasın veya nereye giderse gitsin keşfetmenize, sınıflandırmanıza ve korumanıza yardımcı olur. Daha fazla bilgi için bkz. [Microsoft Purview Information Protection](information-protection.md). |
+| Microsoft Bilgi İdaresi | Microsoft Purview Veri Yaşam Döngüsü Yönetimi | Veri yaşam döngüsü yönetimi, saklamanız ve silmeniz gereken içeriği saklamanız için araçlar ve özellikler sağlar. Daha fazla bilgi için bkz. [Microsoft Purview Veri Yaşam Döngüsü Yönetimi](data-lifecycle-management.md). |
+| insider Risk Management'ı Microsoft 365 | Microsoft Purview Insider Risk Management | Insider risk yönetimi, riskli kullanıcı etkinliklerini hızla tanımlamanıza, önceliklendirmenize ve harekete geçirmenize yardımcı olmak için hizmetin ve üçüncü taraf göstergelerin tamamını kullanır. Daha fazla bilgi için bkz. [Microsoft Purview Insider Risk Management](insider-risk-management.md). |
+| Office 365 İleti Şifrelemesi | Microsoft Purview İleti Şifrelemesi | İleti Şifreleme ile kuruluşunuz, kuruluşunuzun içindeki ve dışındaki kişiler arasında şifreli e-posta iletileri gönderebilir ve alabilir. Daha fazla bilgi için bkz. [Microsoft Purview İleti Şifrelemesi](ome.md). |
+| Microsoft 365'da Ayrıcalıklı Erişim Yönetimi | Microsoft Purview Privileged Access Management | Privileged Access Management, kuruluşunuzun ihlallere karşı korunmasına yardımcı olur ve hassas verilere veya kritik yapılandırma ayarlarına erişimi sınırlayarak uyumluluk en iyi yöntemlerini karşılamaya yardımcı olur. Daha fazla bilgi için bkz. [Microsoft Purview Privileged Access Management](privileged-access-management-solution-overview.md). |
+| Microsoft veri bağlayıcıları | Microsoft Purview veri bağlayıcıları | Microsoft 365, yöneticilerin Microsoft dışı üçüncü taraf verileri sosyal medya platformlarından, anlık ileti platformlarından ve belge işbirliği platformlarından Microsoft 365 kuruluşunuzdaki posta kutularına aktarmak ve arşivlemek için veri bağlayıcılarını kullanmasına olanak tanır. Daha fazla bilgi için bkz. [Microsoft Purview veri bağlayıcıları](compliance-extensibility.md). |
+| Microsoft 365 Gelişmiş eKeşif | Microsoft Purview eKeşif Premium | Elektronik bulma veya eBulma, yasal davalarda kanıt olarak kullanılabilecek elektronik bilgileri tanımlama ve teslim etme işlemidir. Daha fazla bilgi için bkz. [Microsoft Purview eKeşif Premium](overview-ediscovery-20.md). |
+| Microsoft 365 uyumluluk merkezi | Microsoft Purview uyumluluk portalı | Microsoft 365 E5 Uyumluluk paketindeki çözümlere ve çözüm kataloğuna erişmek için yönetici portalı. Daha fazla bilgi için bkz. [Microsoft Purview uyumluluk portalı](microsoft-365-compliance-center.md). |
 
 ## <a name="february-2022"></a>Şubat 2022
 
-### <a name="ediscovery"></a>eKbulma
+### <a name="ediscovery"></a>Ediscovery
 
-- [Advanced eDiscovery'ta](advanced-ediscovery-communications-library.md) özel iş iletişim şablonlarını yönetme - eBulma yöneticileri artık kuruluşta herhangi bir durumda kullanılmaktadır ve özel Advanced eDiscovery şablonları oluşturabilir.
-- [Advanced eDiscovery'te](advanced-ediscovery-issuing-officers.md) sorumluları yönetme - eBulma yöneticileri, kuruluşta herhangi bir dava halinde özel kişi iletişimlerine atanabilir, Advanced eDiscovery sorumluların listesini ekleyebilir.
+- [Advanced eDiscovery'da koruyucu iletişim şablonlarını yönetme](advanced-ediscovery-communications-library.md) - eKeşif yöneticileri artık kuruluştaki herhangi bir Advanced eDiscovery durumda kullanılabilecek koruyucu iletişim şablonları oluşturabilir.
+- [Advanced eDiscovery'da veren memurları yönetme](advanced-ediscovery-issuing-officers.md) - eBulma yöneticileri, kuruluştaki herhangi bir Advanced eDiscovery durumda koruyucu iletişimlere atanabilecek veren memurların listesini ekleyebilir.
 
-### <a name="information-governance-and-records-management"></a>Bilgi yönetimi ve kayıt yönetimi
+### <a name="data-lifecycle-management-and-records-management"></a>Veri yaşam döngüsü yönetimi ve kayıt yönetimi
 
-- [Bekletme ilkeleri ve](retention.md#adaptive-or-static-policy-scopes-for-retention) bekletme etiketi ilkeleri için uyarlanabilir kapsamlar artık genel olarak kullanılabilir (GA). Uyarlanabilir bir [](retention-settings.md#to-configure-an-adaptive-scope) kapsam yapılandırma yönergeleri, artık SharePoint site kapsamları hakkında daha fazla bilgi içerir: Özel site özelliklerini kullanmak için blog gönderisi başvurusu ve gelişmiş sorgu oluşturucusıyla belirli site türlerini eklemek veya dışarıda tutmak için SiteTemplate site özelliğini kullanma.
-- [Bilgi Yönetimi](retention.md#policy-lookup) çözümünde ilke araması artık genel olarak kullanılabilir (GA.
-- Kullanıcıların [Get-PnPTenant ve Set-PnPTenant'tan](/powershell/module/sharepoint-pnp/get-pnptenant) AllowFilesWithKeepLabelToDeletedSPO ve AllowFilesWithKeepLabelToBeDeletedODB kullanarak SharePoint ve OneDrive'daki etiketli öğeleri silmesine olanak sağlayan kayıt yönetimi ayarının PowerShell []( /powershell/module/sharepoint-pnp/set-pnptenant)alternatifi.
+- Bekletme ilkeleri ve bekletme etiketi ilkeleri için [uyarlamalı kapsamlar](retention.md#adaptive-or-static-policy-scopes-for-retention) artık genel kullanıma sunuldu (GA). [Uyarlamalı kapsamı yapılandırma](retention-settings.md#to-configure-an-adaptive-scope) yönergeleri artık SharePoint site kapsamları için daha fazla bilgi içerir: Özel site özelliklerini kullanmaya yönelik blog gönderisi başvurusu ve gelişmiş sorgu oluşturucusuyla belirli site türlerini dahil etmek veya hariç tutmak için SiteTemplate site özelliğini kullanma.
+- Veri yaşam döngüsü yönetimi çözümünde [ilke araması](retention.md#policy-lookup) genel kullanıma sunuldu (GA).
+- Kullanıcıların [Get-PnPTenant ve Set-PnPTenant'tan](/powershell/module/sharepoint-pnp/get-pnptenant) AllowFilesWithKeepLabelToBeDeletedSPO ve AllowFilesWithKeepLabelToBeDeletedODB kullanarak SharePoint ve OneDrive etiketli öğeleri silmesine olanak tanıyan kayıt yönetimi ayarına powershell alternatifi.[]( /powershell/module/sharepoint-pnp/set-pnptenant)
 
 ### <a name="sensitivity-labels"></a>Duyarlılık etiketleri
 
-- Yeni kılavuz Office bilgisayarlar için Azure Information Protection (AIP) birleşik etiketleme istemcisini kullanıyorsanız, Office uygulamaları için [AIP eklentisinde MIP](sensitivity-labels-aip.md) yerleşik etiketlemeyi neden Windows gerekir. Bu sayfada, bu uygulamaların yeni özel önizlemesi hakkında Office vardır.
-- Otomatik etiketleme [ilkeleri için yeni ayarlar](apply-sensitivity-label-automatically.md#how-to-configure-auto-labeling-policies-for-sharepoint-onedrive-and-exchange):
-  - E-posta için her zaman eşlenmiş bir duyarlılık etiketi uygulama ve kuruluş dışından alınan e-postaya şifreleme uygulama için ek ayarlar.
-  - Belirli örnekler (kullanıcılar, gruplar, siteler) için dışlamalar, yeni Dışarıda Bırakıldı seçeneği dahil edilenler için varsayılan olarak belirtilmiş olduğunda **desteklemektedir**. 
-- Şimdi önizlemede: En düşük sürümlere sahipken mobil cihazlar ([](sensitivity-labels-coauthoring.md)iOS ve Android) birlikte yazma desteği sağlar ve bu önizlemeyi kabul edin.
-- Varsayılan paylaşım bağlantı türünü ayarlama desteği belge ve çalışma sayfalarındaki tek tek SharePoint OneDrive. Daha fazla bilgi için, aynı adres ve sitelerde site ve belgeler için varsayılan paylaşım bağlantı türünü yapılandırmak üzere duyarlılık SharePoint [OneDrive]( sensitivity-labels-default-sharing-link.md).
-- Teams yönetim merkezi artık kapsayıcı etiketlerini (Gruplar grubu siteleri kapsamındaki duyarlılık etiketleri) & destekliyor.
+- Yeni kılavuz Windows bilgisayarlar için Azure Information Protection (AIP) birleşik etiketleme istemcisini kullanıyorsanız [neden Office uygulamaları için AIP eklentisi yerine yerleşik etiketlemeyi seçin](sensitivity-labels-aip.md)? Bu sayfa, Office uygulamaları için yeni özel önizleme hakkında bilgi içerir.
+- [Otomatik etiketleme ilkeleri](apply-sensitivity-label-automatically.md#how-to-configure-auto-labeling-policies-for-sharepoint-onedrive-and-exchange) için yeni ayarlar:
+  - E-postanın her zaman eşleşen bir duyarlılık etiketi uygulamayı ve kuruluş dışından alınan e-postaya şifreleme uygulamayı desteklemeye yönelik ek ayarlar.
+  - Belirli örnekler (kullanıcılar, gruplar, siteler) için dışlamalar, **Dahil** Edilenler için varsayılan **Tümü** seçimi belirtildiğinde yeni **Dışlanan** seçeneği kullanılarak desteklenir.
+- Önizleme aşamasında: Mobil cihazlar (iOS ve Android), en düşük sürümlere sahip olduğunuzda ve bu önizlemeyi kabul ettiğinizde [birlikte yazmayı](sensitivity-labels-coauthoring.md) destekler.
+- Varsayılan paylaşım bağlantı türünü ayarlama desteği, SharePoint ve OneDrive tek tek belgelere genişletilir. Daha fazla bilgi için, [SharePoint ve OneDrive'da siteler ve belgeler için varsayılan paylaşım bağlantı türünü yapılandırmak için duyarlılık etiketlerini kullanma]( sensitivity-labels-default-sharing-link.md) makalesine bakın.
+- Teams yönetim merkezi artık kapsayıcı etiketlerini (Gruplar & siteleri kapsamına sahip duyarlılık etiketleri) destekliyor.
 
 ## <a name="january-2022"></a>Ocak 2022
 
-### <a name="microsoft-information-governance"></a>Microsoft Bilgi Yönetimi
+### <a name="microsoft-purview-data-lifecycle-management"></a>Microsoft Purview Veri Yaşam Döngüsü Yönetimi
 
-- [Microsoft 365'ta](manage-information-governance.md) yapılandırılan çözümlerle ilgili bilgileri daha kolay bulmanıza yardımcı olmak için, önemli ölçüde düzeltilmiş ve yeniden yapılandırılmıştır: Microsoft 365 uyumluluk merkezi Veri Bağlayıcıları, Bilgi Yönetimi ve Kayıt Yönetimi. Bu düzeltmenin bir parçası olarak, belgeler bilgi yönetimi ve kayıt yönetimi arasındaki saklama senaryolarına daha net bir fark sağlar.
-- [Yeniden yapılandırmayı desteklemek için](information-governance.md) yeni, bilgi idaresi hakkında bilgi edinebilirsiniz.
-- [Bilgi yönetimiyle çalışmaya başlama](get-started-with-information-governance.md) - yeni, "Bekletmeye başlarken" yerine geçmektedir. Bu makale, bekletme de içinde olmak üzere tüm bilgi yönetimi özelliklerine ilişkin başlarken adımlarını içerir.
-- [Bekletme ilkeleriniz için özel durumlar için bekletme](create-retention-labels-information-governance.md) etiketleri oluşturun; kayıt yönetimi yerine bilgi yönetimi için bekletme etiketlerinin kullanımına yönelik yeni, tanımlanan senaryo.
-- [Yeni olan ve yeniden yapılandırılmayı](archive-mailboxes.md) destekleyecek arşiv posta kutuları hakkında bilgi edinmek için daha önce Arşiv posta kutularını etkinleştirme'de yer alan kavramsal bilgileri içerir.
+- Microsoft Purview uyumluluk portalında yapılandırdığınız çözümlerle ilgili bilgileri daha kolay bulmanıza yardımcı olmak için eski adıyla Microsoft Information Governance olan belgeler önemli ölçüde gözden geçirilmiş ve yeniden yapılandırılmıştır: Veri Bağlayıcıları, Veri Yaşam Döngüsü Yönetimi ve Kayıt Yönetimi. Bu düzeltmenin bir parçası olarak, belgelerde veri yaşam döngüsü yönetimi ile kayıt yönetimi arasındaki saklama senaryoları için daha net bir ayrım sağlanır.
+- Yeniden yapılandırmayı desteklemek için [yeni veri yaşam döngüsü yönetimi hakkında bilgi edinin](data-lifecycle-management.md).
+- [Veri yaşam döngüsü yönetimiyle Kullanmaya başlayın](get-started-with-data-lifecycle-management.md) - "Kullanmaya başlayın saklama ile" değiştirmek için bu makale saklamayı içeren tüm veri yaşam döngüsü yönetimi özelliklerine yönelik başlangıç adımlarını içerir.
+- [Bekletme ilkelerinizin özel durumları için bekletme etiketleri oluşturun](create-retention-labels-data-lifecycle-management.md) . Kayıt yönetimi yerine veri yaşam döngüsü yönetimi için bekletme etiketlerini kullanmaya yönelik yeni, tanımlanmış bir senaryo.
+- [Arşiv posta kutuları hakkında bilgi edinin](archive-mailboxes.md) - yeni, yeniden yapılandırmayı desteklemek için daha önce "Arşiv posta kutularını etkinleştirme" makalesinde yer alan kavramsal bilgileri içerir.
 
 ### <a name="microsoft-priva"></a>Microsoft Priva
 
-- [Gizlilik yönetimi artık Microsoft Priva](/privacy/priva/priva-overview) oldu; ürün ve çözümlerini yeniden satın almak için güncelleştirilir: Priva Gizlilik Risk Yönetimi ve Priva Konu Hakları İstekleri.
+- [Gizlilik yönetimi artık Microsoft Priva'dır](/privacy/priva/priva-overview) - ürünü ve çözümlerini, Priva Gizlilik Risk Yönetimi ve Priva Konu Hakları İsteklerini yeniden üretecek şekilde güncelleştirildi.
 
 ### <a name="sensitivity-labels"></a>Duyarlılık etiketleri
 
-- Yeni [MIP rol grupları ve rolleri için destek, şu anda](get-started-with-sensitivity-labels.md#permissions-required-to-create-and-manage-sensitivity-labels) önizlemede.
-- Otomatik [etiketleme ilkeleri](apply-sensitivity-label-automatically.md#monitoring-your-auto-labeling-policy) için yeni izleme özellikleri.
-- Şimdi de yayınlanacak: Geçerli Kanal'daki (Önizleme) mevcut belgeler için varsayılan etiket ve doğru metinler için Web üzerinde Office.
-- 2202+ sürümüyle Temmuz Semi-Annual Enterprise Kanalı için duyurululdu: Yeni sürüm için birlikte yazma ve Outlook.
+- Artık önizleme aşamasında olan yeni [rol grupları ve rolleri](get-started-with-sensitivity-labels.md#permissions-required-to-create-and-manage-sensitivity-labels) için destek.
+- Otomatik etiketleme ilkeleri için yeni [izleme özellikleri](apply-sensitivity-label-automatically.md#monitoring-your-auto-labeling-policy) .
+- Şimdi kullanıma sunuldu: Geçerli Kanaldaki (Önizleme) mevcut belgeler için varsayılan etiket ve Web üzerinde Office için gerekçe metni.
+- Temmuz Semi-Annual Enterprise Kanalı için sürüm 2202+ ile duyuruldu: Outlook için birlikte yazma ve denetim.
 
 ## <a name="december-2021"></a>Aralık 2021
 
 ### <a name="compliance-and-service-assurance"></a>Uyumluluk ve hizmet güvencesi
 
-- [Azure, Dynamics 365 ve Windows GDPR](/compliance/regulatory/gdpr-breach-notification) kapsamında ihlal bildirimi - müşterilerin güvenlik ve gizlilik bildirimlerini almak için Bulut için Defender gibi bir ödeme hizmeti kullanmaları gerek olmadığını açık bir şekilde açıklamak üzere güncelleştirilir
+- [GDPR kapsamında Azure, Dynamics 365 ve Windows ihlal bildirimi](/compliance/regulatory/gdpr-breach-notification) - müşterilerin güvenlik ve gizlilik bildirimleri almak için Bulut için Defender gibi bir ödeme hizmeti kullanmasına gerek olmadığını netleştirmek için güncelleştirildi
 
-### <a name="ediscovery"></a>eKbulma
+### <a name="ediscovery"></a>Ediscovery
 
-- [Advanced eDiscovery iş akışını güncelleştirme - Microsoft Teams'de](teams-workflow-in-advanced-ediscovery.md#reference-guide) içerik yönetimine yardımcı olacak yeni indirilebilir hızlı başvuru kılavuzuyla Teams iş Advanced eDiscovery
+- [Microsoft Teams içeriği için Advanced eDiscovery iş akışı - Advanced eDiscovery'da](teams-workflow-in-advanced-ediscovery.md#reference-guide) Teams içeriği yönetmek için yeni bir indirilebilir hızlı başvuru kılavuzuyla güncelleştirildi
 
-### <a name="information-governance"></a>Bilgi yönetimi
+### <a name="data-lifecycle-management"></a>Veri yaşam döngüsü yönetimi
 
-- [Uyumluluk merkezinde arşiv posta kutularını etkinleştirme](enable-archive-mailboxes.md#run-diagnostics-on-archive-mailboxes) - arşiv posta kutuları için yeni tanılama aracı hakkında bölüm eklendi
-- [Ağ karşıya yükleme kullanarak kuruluş PST dosyalarını diğer kuruluşlara](use-network-upload-to-import-pst-files.md#step-2-upload-your-pst-files-to-microsoft-365) aktarın - PST içeri Microsoft 365 artık AzCopy v10'i destekliyor
-- [Etkin olmayan posta kutusunu geri yükleme](restore-an-inactive-mailbox.md) - öncelikle etkin olmayan posta kutusunun LegacyExchangeDN'ini hedef posta kutusuna ekleyerek etkin olmayan posta kutusunu geri yüklemek için düzeltilmiş yordam
+- [Uyumluluk merkezinde arşiv posta kutularını etkinleştirme - arşiv posta kutuları](enable-archive-mailboxes.md#run-diagnostics-on-archive-mailboxes) için yeni tanılama aracı hakkında bölüm eklendi
+- [Kuruluşunuzun PST dosyalarını Microsoft 365 içeri aktarmak için ağ karşıya yükleme özelliğini kullanın](use-network-upload-to-import-pst-files.md#step-2-upload-your-pst-files-to-microsoft-365) - PST içeri aktarma artık AzCopy v10'ı destekliyor
+- [Etkin olmayan posta kutusunu geri yükleme](restore-an-inactive-mailbox.md) - önce etkin olmayan posta kutusunun LegacyExchangeDN'sini hedef posta kutusuna ekleyerek etkin olmayan posta kutusunu geri yüklemek için düzeltilmiş yordam
 
 ### <a name="information-protection"></a>Bilgi koruması
 
-- [MIP çözümünü dağıtma](information-protection-solution.md) - MIP'yi (MIP) dağıtmak için ön simgeli bir yol haritası arayan Microsoft Bilgi Koruması adım adım kılavuz
+- [Microsoft Purview ile bilgi koruma çözümü dağıtma - Microsoft Purview'u](information-protection-solution.md) dağıtmak için açıklayıcı bir yol haritası arayan müşteriler için yeni adım adım yönergeler Information Protection
 
 ### <a name="retention-and-records-management"></a>Bekletme ve kayıt yönetimi
 
-- Bekletme [ilkelerinin etkililiği ne kadar sürer? ile ilgili yeni kılavuz](create-retention-policies.md#how-long-it-takes-for-retention-policies-to-take-effect)
-- Yeni kiracı ayarları ayarlandı: Kayıt olarak işaretlenmiş ve kilitli olan SharePoint etiketli öğelerin düzenlenmesini ve kullanıcıların kayıt olarak işaretlenmiş öğelerin kilidini açmasını önlemeye yönelik kayıt yönetimi ayarı
+- [Bekletme ilkelerinin geçerli olması ne kadar sürer](create-retention-policies.md#how-long-it-takes-for-retention-policies-to-take-effect)? için yeni kılavuz
+- Yeni kiracı ayarları dağıtılıyor: Kayıt olarak işaretlenen ve kilitlenen etiketli SharePoint öğelerinin özelliklerini düzenlemeyi engelleyen kayıt yönetimi ayarı ve kullanıcıların kayıt olarak işaretlenmiş öğelerin kilidini açmasını engelleyen diğer ayarlar
 
 ### <a name="sensitivity-labels"></a>Duyarlılık etiketleri
 
-- Zorunlu etiketleme ve varsayılan etiket Power BI artık genel kullanıma açıktır (GA)
+- Zorunlu etiketleme ve Power BI için varsayılan etiket genel kullanıma sunuldu (GA)
 
 ## <a name="november-2021"></a>Kasım 2021
 
 ### <a name="compliance-manager"></a>Uyumluluk Yöneticisi
 
-Yeni içerik güncelleştirmeleri [Microsoft Uyumluluk Yöneticisi'nin tüm yeniliklerine bakabilirsiniz](compliance-manager-whats-new.md).
+Yeni içerik güncelleştirmeleri [Microsoft Purview Uyumluluk Yöneticisi'ndeki yenilikler](compliance-manager-whats-new.md) bölümünde görüntülenebilir.
 
 ### <a name="device-onboarding"></a>Cihaz Ekleme
 
-Cihaz ekleme için aşağıdaki makaleler eklenmiştir:
+Cihaz ekleme için aşağıdaki makaleler eklendi:
 
-- [MacOS cihazlarını mobil cihazlara Microsoft 365 genel bakış (önizleme)](device-onboarding-macos-overview.md)
-- [Intune (önizleme) kullanarak MacOS cihazlarını Microsoft 365 Uyumluluk çözümlerine ekleme ve çıkarma](device-onboarding-offboarding-macos-intune.md)
-- [Uç nokta müşterileri için Microsoft Defender'ı kullanarak MacOS cihazlarını Uyumluluk çözümlerine ekleme ve çıkararak kullanma (önizleme)](device-onboarding-offboarding-macos-intune-mde.md)
-- [JAMF uyumluluk çözümleri kullanarak macOS cihazlarını Microsoft 365 kullanma ve çıkararak uyumluluk çözümlerine (Pro)](device-onboarding-offboarding-macos-jamfpro.md)
-- [Uç nokta müşterileri için Microsoft Defender 'da JAMF Pro kullanarak MacOS cihazlarını ekleme ve çıkararak Uyumluluk çözümlerine ekleme (önizleme)](device-onboarding-offboarding-macos-jamfpro-mde.md)
+- [macOS cihazlarının Microsoft 365'e katılımına genel bakış (önizleme)](device-onboarding-macos-overview.md)
+- [Intune (önizleme) kullanarak macOS cihazlarını Microsoft Purview çözümlerine ekleme ve çıkarma](device-onboarding-offboarding-macos-intune.md)
+- [macOS cihazlarının Uç Nokta için Microsoft Defender müşterileri için Intune kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması (önizleme)](device-onboarding-offboarding-macos-intune-mde.md)
+- [JAMF Pro (önizleme) kullanarak macOS cihazlarını Microsoft Purview çözümlerine ekleme ve çıkarma](device-onboarding-offboarding-macos-jamfpro.md)
+- [macOS cihazlarının Uç Nokta için Microsoft Defender müşterileri için JAMF Pro kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması (önizleme)](device-onboarding-offboarding-macos-jamfpro-mde.md)
 
-### <a name="ediscovery"></a>eKbulma
+### <a name="ediscovery"></a>Ediscovery
 
-- [Yeni büyük/küçük harf biçimini Advanced eDiscovery](advanced-ediscovery-new-case-format.md) kullanılabilirlik durumuna çıkar ve "büyük harf biçimi" olarak yeniden adlandırılmıştır
+- [Yeni servis talebi biçimini Advanced eDiscovery](advanced-ediscovery-new-case-format.md) yeni servis talebi biçimi genel kullanıma sunuldu ve "büyük harf biçiminden" yeniden adlandırıldı
 
 ### <a name="retention-and-records-management"></a>Bekletme ve kayıt yönetimi
-- Rolling out: Whether labeled items in SharePoint and OneDrive kullanıcılar tarafından silinebilir. Daha önce, içeriği korumak üzere yapılandırılan ve öğeleri kayıt olarak işaretlemeen bekletme etiketleri, kullanıcıların bu eyleme izin verilmiyorken SharePoint'te etiketli içeriği silmeden OneDrive. Daha fazla bilgi için bkz[. SharePoint ve OneDrive](retention-policies-sharepoint.md#how-retention-works-for-sharepoint-and-onedrive).
+- Kullanıma sunulma: SharePoint ve OneDrive etiketli öğelerin kullanıcılar tarafından silinip silinemeyeceğini denetleyebilen yeni kayıt yönetimi ayarları. Daha önce, içeriği korumak için yapılandırılmış ve öğeleri kayıt olarak işaretlememiş olan bekletme etiketleri, kullanıcıların OneDrive'da bu eyleme izin verildiğinde SharePoint etiketli içeriği silmesini engelliyordu. Daha fazla bilgi için bkz. [SharePoint ve OneDrive için bekletme nasıl çalışır](retention-policies-sharepoint.md#how-retention-works-for-sharepoint-and-onedrive)?
 
 ### <a name="sensitive-information-types"></a>Hassas Bilgi Türleri
 
 Aşağıdaki yeni makaleler eklendi:
 
-- [Hassas bilgi türlerine dayalı tam veri eşleşmesi hakkında bilgi](sit-learn-about-exact-data-match-based-sits.md)
-- [Hassas bilgi türlerine dayalı tam veri eşleşmesi ile çalışmaya başlama](sit-get-started-exact-data-match-based-sits-overview.md)
-- [Hassas bilgi türüne göre tam veri eşleşmesi için kaynak verileri dışarı aktarma](sit-get-started-exact-data-match-export-data.md)
-- [Hassas bilgi türlerine göre tam veri eşleşmesi için şema oluşturma](sit-get-started-exact-data-match-create-schema.md)
-- [Hassas bilgi türleriyle tam olarak eşleşmesi için hassas bilgi kaynağı tablosuna karma sağlama ve yükleme](sit-get-started-exact-data-match-hash-upload.md)
-- [Hassas bilgi türü/kural paketiyle tam olarak eşleşmesi için veri oluşturma](sit-get-started-exact-data-match-create-rule-package.md)
-- [Hassas bilgi türüyle tam olarak eşan bir veri sınaması](sit-get-started-exact-data-match-test.md)
+- [Tam veri eşleşmesine dayalı hassas bilgi türleri hakkında daha fazla bilgi edinme](sit-learn-about-exact-data-match-based-sits.md)
+- [Tam veri eşleşmesine dayalı hassas bilgi türlerini kullanmaya başlama](sit-get-started-exact-data-match-based-sits-overview.md)
+- [Tam veri eşleşmesine dayalı hassas bilgi türleri için kaynak verilerini dışa aktarma](sit-get-started-exact-data-match-export-data.md)
+- [Tam veri eşleşmesine dayalı hassas bilgi türleri için tam veri eşleşmesi şeması oluşturma](sit-get-started-exact-data-match-create-schema.md)
+- [Tam veri eşleşmeli hassas bilgi türleri için hassas bilgi kaynak tablosu karması oluşturma ve karşıya yükleme](sit-get-started-exact-data-match-hash-upload.md)
+- [Tam veri eşleşmesi hassas bilgi türü/kural paketi oluşturma](sit-get-started-exact-data-match-create-rule-package.md)
+- [Tam veri eşleşmesi hassas bilgi türünü test etme](sit-get-started-exact-data-match-test.md)
 - [Tam veri eşleşme şemanızı yönetme](sit-use-exact-data-manage-schema.md)
-- [Hassas bilgi kaynağı tablo dosyanızı yenileme](sit-use-exact-data-refresh-data.md)
+- [Hassas bilgi kaynak tablosu dosyanızı yenileme](sit-use-exact-data-refresh-data.md)
 
 ### <a name="sensitivity-labels"></a>Duyarlılık etiketleri
-- [Azure Purview etiketlerinin kapsam adı artık](/azure/purview/create-sensitivity-label) "Şemalı veri varlıkları" olarak gösterilmektedir.
+- [Microsoft Purview Veri Haritası etiketlerinin](/azure/purview/create-sensitivity-label) kapsam adı artık "Şemalaştırılmış veri varlıkları" olarak belirlenmiştir.
 
 ## <a name="october-2021"></a>Ekim 2021
 
-### <a name="app-governance"></a>Uygulama yönetimi
+### <a name="app-governance"></a>Uygulama idaresi
 
-- [Bulut Uygulamaları için Defender'ın uygulama yönetimi eklentileri genel kullanılabilirlik için yayınlandı](/cloud-app-security/app-governance-manage-app-governance). Uygulama yönetimi belgeleri, Bulut Uygulamaları için Defender belgelerine katılmaya taşındı.
+- [Bulut için Defender Uygulamaları için uygulama idaresi eklentisi genel kullanıma sunuldu](/cloud-app-security/app-governance-manage-app-governance). Uygulama idaresi belgeleri, Bulut için Defender Uygulamaları belgelerine katılmak üzere taşındı.
 
 ### <a name="compliance--service-assurance"></a>Uyumluluk & hizmet güvencesi
 
-- [Hizmet güvencesi](/compliance) - Sertifikalar ve uygulanabilirlik ifadeleri için üç aylık olarak içerik güncelleştirmelerini gözden geçirme) Veri merkezi varlık yönetimi
+- [Hizmet güvencesi](/compliance) - Sertifikalar ve uygulanabilirlik bildirimleri için içerik güncelleştirmelerini üç ayda bir gözden geçirme) Veri merkezi varlık yönetimi
   - Veri merkezi mimarisi ve altyapısı
   - Veri merkezi iş sürekliliği ve olağanüstü durum kurtarma
-  - Veri merkezi koruma korumaları
+  - Veri merkezi ortam korumaları
   - Veri merkezi fiziksel erişim güvenliği
-  - Microsoft 365 SDL uyumluluk programı
-  - Microsoft 365 mühendisi erişim denetimi
-  - MS Cloud için risk değerlendirmesi kılavuzu
+  - SDL uyumluluk programını Microsoft 365
+  - Microsoft 365 hizmet mühendisi erişim denetimi
+  - MS Cloud için risk değerlendirme kılavuzu
 
-### <a name="data-loss-prevention"></a>Veri Kaybını Önleme
+### <a name="data-loss-prevention"></a>Veri Kaybı Önleme
 
-- [MacOS desteği ve gelişmiş sınıflandırma için](endpoint-dlp-learn-about.md) Veri Kaybı Önleme'nin güncelleştirilmiş olduğunu öğrenin; tüm desteklenen dosya türlerinde etkinliği denetlenmek üzere özel bir DLP ilkesi oluşturmak üzere güncelleştirilmiştir.
-- [Gelişmiş sınıflandırma için Microsoft 365 MacOS desteği](endpoint-dlp-getting-started.md) ve gelişmiş sınıflandırma için uç nokta veri kaybı önleme güncelleştirildi.
-- [MacOS desteği ve gelişmiş sınıflandırma için](endpoint-dlp-using.md) Uç nokta veri kaybı önleme özellikleri güncelleştirildi.
-- [Veri Kaybı Önleme ilke ipuçları başvurusu](dlp-policy-tips-reference.md) macOS desteği ve gelişmiş sınıflandırma için güncelleştirildi.
-- [macOS cihazlarını MacOS desteği Microsoft 365 sınıflandırma için güncelleştirilmiş](device-onboarding-macos-overview.md) yeni (önizleme) bölüme alın.
-- Ekleme cihazları için aşağıdaki yeni sayfalar eklendi:
-  - [Intune (önizleme) kullanarak MacOS cihazlarını Microsoft 365 Uyumluluk çözümlerine ekleme ve çıkarma](device-onboarding-offboarding-macos-intune.md)
-  - [Uç nokta müşterileri için Microsoft Defender'ı kullanarak MacOS cihazlarını Uyumluluk çözümlerine ekleme ve çıkararak kullanma (önizleme)](device-onboarding-offboarding-macos-intune-mde.md)
-  - [JAMF uyumluluk çözümleri kullanarak macOS cihazlarını Microsoft 365 kullanma ve çıkararak uyumluluk çözümlerine (Pro)](device-onboarding-offboarding-macos-jamfpro.md)
-  - [Uç nokta müşterileri için Microsoft Defender 'da JAMF Pro kullanarak MacOS cihazlarını ekleme ve çıkararak Uyumluluk çözümlerine ekleme (önizleme)](device-onboarding-offboarding-macos-jamfpro-mde.md)
+- [Microsoft Purview Veri Kaybı Önleme'nin](endpoint-dlp-learn-about.md) macOS desteği ve gelişmiş sınıflandırma için güncelleştirildiğini öğrenin; desteklenen tüm dosya türleri için etkinliği denetlemek üzere özel bir DLP ilkesi oluşturmak için güncelleştirildi.
+- [Microsoft 365 Endpoint veri kaybı önleme ile Kullanmaya başlayın](endpoint-dlp-getting-started.md) macOS desteği ve gelişmiş sınıflandırma için güncelleştirildi.
+- [Uç nokta veri kaybı önlemenin kullanılması](endpoint-dlp-using.md) macOS desteği ve gelişmiş sınıflandırma için güncelleştirildi.
+- [Veri Kaybı Önleme ilkesi ipuçları başvurusu](dlp-policy-tips-reference.md) macOS desteği ve gelişmiş sınıflandırma için güncelleştirildi.
+- [macOS cihazlarını Microsoft 365(önizleme) içine ekleme](device-onboarding-macos-overview.md), macOS desteği ve gelişmiş sınıflandırma için güncelleştirildi.
+- Cihaz ekleme için aşağıdaki yeni sayfalar eklendi:
+  - [Intune (önizleme) kullanarak macOS cihazlarını Microsoft Purview çözümlerine ekleme ve çıkarma](device-onboarding-offboarding-macos-intune.md)
+  - [macOS cihazlarının Uç Nokta için Microsoft Defender müşterileri için Intune kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması (önizleme)](device-onboarding-offboarding-macos-intune-mde.md)
+  - [JAMF Pro (önizleme) kullanarak macOS cihazlarını Microsoft Purview çözümlerine ekleme ve çıkarma](device-onboarding-offboarding-macos-jamfpro.md)
+  - [macOS cihazlarının Uç Nokta için Microsoft Defender müşterileri için JAMF Pro kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması (önizleme)](device-onboarding-offboarding-macos-jamfpro-mde.md)
 
-### <a name="ediscovery"></a>eKbulma
+### <a name="ediscovery"></a>Ediscovery
 
-- [bulut](advanced-ediscovery-cloud-attachments.md) eklerini Advanced eDiscovery'te toplayın Bulut eklerinin en son sürümünü toplamanın yanı sıra bir e-posta iletisinde veya Teams sohbet konuşmalarında paylaşılan sürümü de toplayabilirsiniz; bulut eklerine otomatik olarak bekletme etiketi uygulama özelliğiyle paylaşılan sürümün toplanması mümkün olur.
-- SharePoint sitesinde [Advanced eDiscovery depolanan](advanced-ediscovery-historical-versions.md) tüm belgelerin sürümlerini arama için dizine alan yeni işlevlerle geçmiş sürümleri ayarlayın. Bu, bir koleksiyon sorgusuyla eşleşmeye sahip içerik içeren belge sürümlerinin arama sonuçlarında döndürül olduğu anlamına gelir.
+- [Bulut eklerini Advanced eDiscovery](advanced-ediscovery-cloud-attachments.md) toplamanın yanı sıra bir bulut ekinin en son sürümünü toplamanın yanı sıra, bir e-posta iletisinde veya sohbet konuşmasında Teams paylaşılan sürümü toplayabilirsiniz; paylaşılan sürümü toplamak, bulut eklerine otomatik olarak bekletme etiketi uygulama özelliğiyle mümkün hale getirilebilir.
+- Arama için bir SharePoint sitesinde depolanan belgelerin tüm sürümlerini dizinleyen Advanced eDiscovery yeni işlevsellikte [geçmiş sürümleri ayarlayın](advanced-ediscovery-historical-versions.md); bu, bir koleksiyon sorgusuyla eşleşen içerik içeren belge sürümlerinin arama sonuçlarında döndürüldiği anlamına gelir.
 
 ### <a name="encryption"></a>Şifreleme
 
-- [Bire bir arama aramalarında 4'e uç şifreleme Microsoft Teams kullanın (Genel önizleme)](/microsoftteams/teams-end-to-end-encryption) Genel önizleme için yeni içerik.
+- [Bire bir Microsoft Teams çağrıları için uçtan uca şifrelemeyi kullanın (Genel önizleme) Genel önizleme](/microsoftteams/teams-end-to-end-encryption) için yeni içerik.
 
-### <a name="information-governance"></a>Bilgi yönetimi
+### <a name="data-lifecycle-management"></a>Veri yaşam döngüsü yönetimi
 
-- [DestanSı EHR](import-epic-data.md) denetim verileri yeni bağlayıcısı içeri aktaracak bir bağlayıcı ayarlamak, Insider risk yönetimi için yeni genel hasta verisi yanlış kullanım senaryosunu desteklemek için, Bilgileri Elektronik Sağlık kayıtları sisteminden içeri aktarmanız için bir bağlayıcı ayarlayın.
-- [Sağlık EHR](import-healthcare-data.md) denetim verilerini içeri aktarmayı sağlayan bir bağlayıcı ayarlayın yeni bağlayıcı, insider risk yönetimi için yeni genel hasta verilerini yanlış kullanım senaryosunu desteklemek için bir elektronik sağlık kayıt sisteminden verileri içeri aktarmanıza olanak sağlar.
+- [Epic EHR denetim verilerini içeri aktarmak için bir bağlayıcı ayarlayın](import-epic-data.md) yeni bağlayıcı, şirket içi risk yönetimi için yeni genel hasta verilerini kötüye kullanma senaryolarını desteklemek üzere Epic elektronik sağlık kayıtları sisteminden verileri içeri aktarmanıza olanak tanır.
+- [Sağlık ehr denetim verilerini içeri aktarmak için bir bağlayıcı ayarlayın](import-healthcare-data.md) yeni bağlayıcı, şirket içi risk yönetimi için yeni genel hasta verilerini kötüye kullanma senaryolarını desteklemek üzere elektronik sağlık kayıt sisteminden verileri içeri aktarmanıza olanak tanır.
 
 ### <a name="retention-and-records-management"></a>Bekletme ve kayıt yönetimi
-- [Uyarlanabilir ilke kapsamları](retention.md#adaptive-or-static-policy-scopes-for-retention) bekletme ilkeleri ve bekletme etiketi ilkeleri için önizlemede yayınlanır.
-- Artık otomatik olarak [duyarlılık etiketine dayalı bir bekletme etiketi uygulayabilirsiniz](apply-retention-labels-automatically.md#identify-files-and-emails-that-have-a-sensitivity-label).
-- Dosya Planı'nın yeni bir içeri [aktarma işlemi var](file-plan-manager.md#import-retention-labels-into-your-file-plan).
-- [Bekletme ilkeleri ve bekletme etiketi ilkeleri](retention-settings.md) için genel ayarlar: Uyarlanabilir kapsamları ve hem bekletme ilkeleri hem de bekletme etiketi ilkeleriyle ilgili diğer ayarları yapılandırma hakkında ayrıntılı bilgi için yeni makale.
+- [Uyarlamalı ilke kapsamları](retention.md#adaptive-or-static-policy-scopes-for-retention) , bekletme ilkeleri ve bekletme etiketi ilkeleri için önizlemede yayınlanır.
+- Artık [duyarlılık etiketine göre otomatik olarak bir bekletme etiketi uygulayabilirsiniz](apply-retention-labels-automatically.md#identify-files-and-emails-that-have-a-sensitivity-label).
+- Dosya Planı'nın yeni bir [içeri aktarma işlemi](file-plan-manager.md#import-retention-labels-into-your-file-plan) var.
+- [Bekletme ilkeleri ve bekletme etiketi ilkeleri için genel ayarlar: Hem bekletme ilkeleri hem de bekletme etiketi ilkelerinde](retention-settings.md) uyarlamalı kapsamları ve diğer ayarları yapılandırma hakkında ayrıntılı bilgi için yeni makale.
 
 ### <a name="sensitive-information-types"></a>Hassas Bilgi Türleri
 
-- [Adlandırılmış varlıklar için yeni içerikler hakkında bilgi edinmek (](named-entities-learn.md) önizleme)
-- [Adlandırılmış varlıkları kullanırken, veri kaybı önleme ilkeleri (önizleme)](named-entities-use.md) yeni içeriğinde adlandırılmış varlıkları kullanın.
+- [Adlandırılmış varlıklar için adlandırılmış varlıklar (önizleme) yeni içeriği hakkında bilgi edinin](named-entities-learn.md) .
+- [Adlandırılmış varlıkları kullanırken veri kaybı önleme ilkelerinizde adlandırılmış varlıkları kullanın (önizleme)](named-entities-use.md) yeni içerik.
 
 ### <a name="sensitivity-labels"></a>Duyarlılık etiketleri
 
-- [Varsayılan etiketler ve varsayılan](mip-easy-trials.md) ilkeler uygun müşterilere sunulmaktadır.
+- [Varsayılan etiketler ve varsayılan ilkeler](mip-easy-trials.md) uygun müşterilere dağıtılır.
 
 ## <a name="september-2021"></a>Eylül 2021
 
-### <a name="app-governance"></a>Uygulama yönetimi
+### <a name="app-governance"></a>Uygulama idaresi
 
-- [Akıcı uygulama yönetiminin başlama bilgileri, değiştirilmiş](app-governance-get-started.md) bir iş akışına sahiptir ve genel önizleme için yeni bağlantılar ekler
-- [Yeni algılama uyarıları tanımı eklendi](app-governance-anomaly-detection-alerts.md#app-made-high-volume-of-importance-mail-read-and-created-inbox-rule) (güncelleştirildi; koleksiyon uyarıları için yeni tanım eklendi)
+- [Kolaylaştırılmış uygulama idaresi kullanmaya başlama bilgileri](app-governance-get-started.md) , iş akışını değiştirdi ve genel önizleme kaydına yeni bağlantılar ekledi
+- [Yeni algılama uyarıları tanımı](app-governance-anomaly-detection-alerts.md#app-made-high-volume-of-importance-mail-read-and-created-inbox-rule) eklendi (güncelleştirildi; koleksiyon uyarıları için yeni tanım eklendi)
 
 ### <a name="auditing"></a>Denetim
 
-- [Bir kuruluşta denetim durumunda yapılan](turn-audit-log-search-on-or-off.md) değişikliklerin kendileri tarafından denetlenma hakkında yeni bir bölüm eklenmiştir ve denetimi açma veya kapatma; bu, denetimin açık veya kapalı olduğu durumda denetim kayıtlarının günlüğe kaydedileceğini anlamına gelir; bu denetim kayıtlarını Exchange denetim günlüğünde arama
+- Bir kuruluştaki denetim durumundaki değişikliklerin kendilerinin nasıl denetleniyor olduğuna ilişkin yeni bölüm eklenmiş denetimi [açma veya kapatma](turn-audit-log-search-on-or-off.md); bu, denetim açık veya kapalı olduğunda denetim kayıtlarının günlüğe kaydedildiğini gösterir; Exchange yönetici denetim günlüğünde bu denetim kayıtlarını arayabilirsiniz
 
 ### <a name="communication-compliance"></a>İletişim uyumluluğu
 
-- [SIEM çözümleriyle iletişim uyumluluğu tümleştirmesi için SIEM](communication-compliance-siem.md) çözümleriyle iletişim uyumluluğu kılavuzu)
+- [SIEM çözümleriyle iletişim uyumluluğu](communication-compliance-siem.md) tümleştirmesi için SIEM çözümleriyle iletişim uyumluluğu kılavuzu)
 
 ### <a name="compliance-offerings"></a>Uyumluluk teklifleri
 
-- [Multi-Tier Cloud Security (MTCS)](/compliance/regulatory/offering-mtcs-singapore) Dynamics 365 kapsamı için Singapur güncelleştirmeleri için standart
-- [Ödeme Kartı Sektörü (PCI)](/compliance/regulatory/offering-pci-dss) SharePoint Online kapsamı için Veri Güvenliği Standart (DSS) güncelleştirmeleri
-- [ABD Bölüm 508](/compliance/regulatory/offering-section-508-vpats) yeni istemci yazılım kılavuzu
+- [Çok Katmanlı Bulut Güvenliği (MTCS)](/compliance/regulatory/offering-mtcs-singapore) Dynamics 365 kapsamı için Singapur için standart güncelleştirmeler
+- [Ödeme Kartı Sektörü (PCI)](/compliance/regulatory/offering-pci-dss) SharePoint Çevrimiçi kapsamı için Veri Güvenliği Standardı (DSS) güncelleştirmeleri
+- [ABD Bölüm 508](/compliance/regulatory/offering-section-508-vpats) yeni istemci yazılımı kılavuzu
 - [Web İçeriği Erişilebilirlik Yönergeleri](/compliance/regulatory/offering-wcag-2-1) yeni istemci yazılımı kılavuzu
 
 ### <a name="compliance--service-assurance"></a>Uyumluluk & hizmet güvencesi
 
-- [Hizmet güvencesi](/compliance/) , uygunluk sertifikaları ve deyimleri için içerik güncelleştirmelerini üç aylık olarak gözden geçirme
-  - Veri yataklı cihaz cihazı cihazıyla ilgili bilgi
+- [Hizmet güvencesi](/compliance/) , uygulanabilirlik sertifikaları ve deyimleri için içerik güncelleştirmelerini üç ayda bir gözden geçirme
+  - Veri taşıyan cihaz yok etme
   - DDOS saldırıları
 
 ### <a name="data-connectors"></a>Veri bağlayıcıları
 
-- [](archiving-third-party-data.md#data-connectors-in-the-us-government-cloud) CellTrust ve 17a-4 LLC'den Microsoft 365 veri bağlayıcılarında üçüncü taraf verileri arşivleme, artık ABD Kamu GCC kuruluşlarında kullanılabilir
-- [YouTube verilerini arşivlemek için bir bağlayıcı ayarlamak,](archive-youtube-data.md) genel önizlemede bu özellik için yeni kılavuz sağlar.
+- CellTrust ve 17a-4 LLC'den [üçüncü taraf verileri Microsoft 365](archiving-third-party-data.md#data-connectors-in-the-us-government-cloud) veri bağlayıcılarında arşivleme artık ABD Kamu bulutundaki GCC kuruluşlarda kullanılabilir
+- [YouTube verilerini arşivleme amacıyla bir bağlayıcı ayarlamak](archive-youtube-data.md) , genel önizlemede bu özellik için yeni yönergeler sağlar.
 
-### <a name="ediscovery"></a>eKbulma
+### <a name="ediscovery"></a>Ediscovery
 
-- İçerik arama, Çekirdek eK bulma ve Advanced eDiscovery'ta arama sorguları oluşturmanın yeni bir yolunun arama sorgularını genel önizlemesini oluşturmak için [KQL](ediscovery-kql-editor.md) düzenleyicisini kullanın; KQL düzenleyicisi desteklenen aranabilir özellikler ve koşullar için otomatik tamamlama sağlar ve standart özellikler ve koşullar için desteklenen değer listelerini görüntüler; KQL düzenleyicisi ayrıca arama sorgularında olası hataların düzeltmeleri için hata algılama ve öneriler de sağlar
+- İçerik arama, Temel eBulma ve Advanced eDiscovery arama sorguları oluşturmanın yeni bir yolunun arama sorguları genel önizlemesini [oluşturmak için KQL düzenleyicisini kullanın](ediscovery-kql-editor.md); KQL düzenleyicisi desteklenen aranabilir özellikler ve koşullar için otomatik uyumluluk sağlar ve standart özellikler ve koşullar için desteklenen değerlerin listesini görüntüler; KQL  düzenleyici ayrıca hata algılama ve arama sorgularındaki olası hataların düzeltmeleri için öneriler sağlar
 
 ### <a name="information-barriers"></a>Bilgi engelleri
 
-- [Bilgi engelleri modları için yeni](information-barriers-policies.md#step-6-information-barriers-modes) önizleme özelliği ile bilgi engellerini çalışmaya başlama
-- [Bilgi engelleri modları Microsoft Teams](/microsoftteams/information-barriers-in-teams) önizleme özelliği ile bilgi engelleri
-- [Bilgi engelleri modları OneDrive](/onedrive/information-barriers) önizleme özelliği ile bilgi engelleri
-- [Bilgi engelleri modları SharePoint Online](/sharepoint/information-barriers) yeni önizleme özelliği ile bilgi engelleri
+- [Bilgi engelleri ile Kullanmaya başlayın bilgi engelleri](information-barriers-policies.md#step-6-information-barriers-modes) modları için yeni önizleme özelliği
+- [Bilgi engelleri modları için yeni Microsoft Teams](/microsoftteams/information-barriers-in-teams) önizleme özelliği ile bilgi engelleri
+- [Bilgi engelleri](/onedrive/information-barriers) modları için yeni OneDrive önizleme özelliği ile bilgi engelleri
+- [Bilgi engelleri modları için SharePoint Çevrimiçi](/sharepoint/information-barriers) yeni önizleme özelliği ile bilgi engelleri
 
-### <a name="insider-risk-management"></a>Insider risk yönetimi
+### <a name="insider-risk-management"></a>İçeriden risk yönetimi
 
-- [Önerilen eylemleri almaya başlamaya için Insider risk](insider-risk-management-configure.md#recommended-actions-preview) yönetimi yeni önizleme özelliği ile çalışmaya başlama
-- [Insider risk etkinliklerini araştırma](insider-risk-management-activities.md#get-help-managing-your-insider-risk-alert-queue) yeni "Insider risk uyarı kuyruğunızı yönetme konusunda yardım al" kılavuzu bölümü
-- [Insider risk yönetimi ayarlarını yeni Yönetici](insider-risk-management-settings.md#admin-notifications) bildirimleri ayarları önizleme özelliği ile çalışmaya başlama
+- Önerilen eylemleri kullanmaya başlamak için [insider risk yönetimi yeni önizleme özelliğiyle Kullanmaya başlayın](insider-risk-management-configure.md#recommended-actions-preview)
+- [Insider risk etkinliklerini araştırma yeni 'Insider](insider-risk-management-activities.md#get-help-managing-your-insider-risk-alert-queue) risk uyarı kuyruğunuzu yönetme konusunda yardım alın' kılavuzu bölümü
+- [insider risk yönetimi ayarları yeni Yönetici bildirimleri ayarları önizleme özelliğiyle Kullanmaya başlayın](insider-risk-management-settings.md#admin-notifications)
 
 ### <a name="retention-and-records-management"></a>Bekletme ve kayıt yönetimi
-- [Çok aşamalı disposition review is](disposition.md) now available generally (GA), with new [auditing events](search-the-audit-log-in-security-and-compliance.md#disposition-review-activities). Çok aşamalı disposition gözden geçirmesi, bekletme etiketi için art arda en çok beş disposition gözden geçirme aşaması belirtmenize olanak sağlar ve gözden geçirenler diğer kullanıcıları disposition gözden geçirme aşamasına ekleyebilir. E-posta bildirimlerini ve anımsatıcıları da özelleştirebilirsiniz.
-- Bekletme ilkeleri için [Teams kanallar artık](create-retention-policies.md#retention-policy-for-teams-locations) genel olarak kullanılabilir (GA).
+- Yeni [denetim olaylarıyla](search-the-audit-log-in-security-and-compliance.md#disposition-review-activities) [birlikte çok aşamalı değerlendirme gözden geçirmesi](disposition.md) genel kullanıma sunuldu (GA). Çok aşamalı değerlendirme gözden geçirmesi, bekletme etiketi için ardışık beş ayrı değerlendirme aşaması belirtmenize olanak tanır ve gözden geçirenler başka kullanıcıları değerlendirme aşamalarına ekleyebilir. E-posta bildirimlerini ve anımsatıcılarını da özelleştirebilirsiniz.
+- [Teams bekletme ilkeleri](create-retention-policies.md#retention-policy-for-teams-locations) için özel kanallar artık genel kullanıma sunuldu (GA).
 
 ### <a name="sensitivity-labels"></a>Duyarlılık etiketleri
-- [Birlikte yazma](sensitivity-labels-coauthoring.md) ve Otomatik Kaydetme artık genel olarak Windows (Güncel Kanal veya Aylık Enterprise Kanalından) ve macOS'ta (en düşük 16.51 sürümü) Windows 2107'nin en düşük sürümü) için kullanıma sunulmaktadır.
-- Yerleşik etiketlerin Office için uygulamanın kullanımı: Varsayılan etiket ayarı artık hem var olan belgeleri hem de yeni belgeleri destekler. Bu davranış değişikliği, Azure Information Protection birleşik etiketleme istemcisinde eşlik sağlar. Uygulama başına ve en düşük sürümler için uygulama başına uygulama sürümü hakkında daha fazla [](sensitivity-labels-office-apps.md#sensitivity-label-capabilities-in-word-excel-and-powerpoint) bilgi için Word, Excel özellikleri tablosuna PowerPoint.
-- Kapsayıcı etiketleri artık [PowerShell gelişmiş ayarlarını kullanarak varsayılan paylaşım bağlantısı ayarlarını destekliyor](sensitivity-labels-teams-groups-sites.md#configure-settings-for-the-default-sharing-link-type-for-a-site-by-using-powershell-advanced-settings).
-- Yerleşik [etiketleme için](sensitivity-labels-office-apps.md#support-for-sensitivity-label-capabilities-in-apps) minimum desteklenen sürümleri listeleen özellikler tablolarında artık Geçerli Kanal, Aylık Kanal ve Enterprise Kanalı için sürümler Semi-Annual Enterprise vardır.
+- [Birlikte yazma ve Otomatik Kaydetme](sensitivity-labels-coauthoring.md) artık Windows (Geçerli Kanaldan veya Aylık Enterprise Kanalından en düşük 2107 sürümü) ve macOS (en az 16,51 sürümü) için genel kullanıma sunuldu (GA).
+- Yerleşik etiketler kullanan Office uygulamalar için kullanıma sunulma: Varsayılan etiket ayarı artık mevcut belgelerin yanı sıra yeni belgeleri de destekler. Davranıştaki bu değişiklik, Azure Information Protection birleşik etiketleme istemcisiyle eşlik sağlar. Uygulama başına dağıtım ve en düşük sürümler hakkında daha fazla bilgi için Word, Excel ve PowerPoint [için yetenekler tablosuna](sensitivity-labels-office-apps.md#sensitivity-label-capabilities-in-word-excel-and-powerpoint) bakın.
+- Kapsayıcı etiketleri artık [PowerShell gelişmiş ayarlarını kullanarak varsayılan paylaşım bağlantısı ayarlarını](sensitivity-labels-teams-groups-sites.md#configure-settings-for-the-default-sharing-link-type-for-a-site-by-using-powershell-advanced-settings) destekliyor.
+- Yerleşik etiketleme için desteklenen en düşük sürümleri listeleyen [özellik tablolarında](sensitivity-labels-office-apps.md#support-for-sensitivity-label-capabilities-in-apps) artık Geçerli Kanal, Aylık Enterprise Kanalı ve Semi-Annual Enterprise Kanalı sürümleri vardır.

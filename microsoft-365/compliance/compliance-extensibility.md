@@ -20,14 +20,16 @@ ms.assetid: ''
 ms.custom:
 - seo-marvel-apr2020
 description: Üçüncü taraf veri bağlayıcılarını ve Microsoft Graph API'lerini kullanarak Microsoft Purview çözümlerini genişletme hakkında bilgi edinin.
-ms.openlocfilehash: e61cd2dfa8121a0925cc89fd5373569d9697936a
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 9d2c3235a29e2d25e24656a4ff94216cde925b6c
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64942765"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64992270"
 ---
 # <a name="microsoft-purview-and-microsoft-priva-extensibility"></a>Microsoft Purview ve Microsoft Priva genişletilebilirliği
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview çözümleri kuruluşların uyumluluk risklerini akıllı bir şekilde değerlendirmesine, hassas verileri yönetmesine ve korumasına ve mevzuat gereksinimlerine etkili bir şekilde yanıt vermesine yardımcı olur. Microsoft Purview, genişletilebilirlik senaryoları açısından zengindir ve kuruluşların uyumluluk çözümlerini uyarlamasına, genişletmesine, tümleştirmesine, hızlandırmasına ve desteklemesine olanak tanır.
 

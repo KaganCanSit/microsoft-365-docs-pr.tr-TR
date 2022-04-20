@@ -16,16 +16,18 @@ search.appverid:
 - MOE150
 - MET150
 description: EBulma (Premium) içinde yeni büyük/küçük harf biçimini kullanarak kümeleri gözden geçirmek ve artan diğer sınırlardan ve yeni işlevlerden yararlanmak için daha fazla öğe ekleyebilirsiniz.
-ms.openlocfilehash: 36650a369d2bac2742eb7f0d5ea76b3a530a1a03
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 6c3e9f86cac5424ae9d9610a9c715c2f86563f64
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64947439"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64993567"
 ---
 # <a name="use-the-new-case-format-in-ediscovery-premium"></a>eBulma'da yeni servis talebi biçimini kullanma (Premium)
 
-Daha fazla kuruluş eBulma (Premium) çözümünü kritik eBulma işlemleri için Microsoft 365 kullanıyor. Bu, mevzuat isteklerine, araştırmalara ve davalara yanıt vermeyi içerir. eBulma (Premium) kullanımı arttıkça, ortak bir müşteri gereksinimi tek bir eBulma (Premium) durumunda yönetilebilen toplam içerik miktarını genişletmektir. Hem toplam veri hacmi hem de toplam öğe sayısı için büyük/küçük harf boyutundaki önemli artışları karşılamak için artık eBulma (Premium) servis talebi oluştururken yeni servis talebi biçimini seçebilirsiniz.  
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Daha fazla kuruluş, kritik eBulma süreçleri için Microsoft Purview'da eBulma (Premium) çözümünü kullanıyor. Bu, mevzuat isteklerine, araştırmalara ve davalara yanıt vermeyi içerir. eBulma (Premium) kullanımı arttıkça, ortak bir müşteri gereksinimi tek bir eBulma (Premium) durumunda yönetilebilen toplam içerik miktarını genişletmektir. Hem toplam veri hacmi hem de toplam öğe sayısı için büyük/küçük harf boyutundaki önemli artışları karşılamak için artık eBulma (Premium) servis talebi oluştururken yeni servis talebi biçimini seçebilirsiniz.  
 
 ## <a name="create-a-case"></a>Servis talebi oluşturma
 

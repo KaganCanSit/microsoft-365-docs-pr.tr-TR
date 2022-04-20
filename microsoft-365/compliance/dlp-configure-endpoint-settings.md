@@ -1,5 +1,5 @@
 ---
-title: Uç nokta veri kaybı önleme ayarlarını yapılandırma
+title: Uç nokta DLP ayarlarını yapılandırma
 f1.keywords:
 - CSH
 ms.author: chrfox
@@ -18,102 +18,104 @@ ms.collection:
 search.appverid:
 - MET150
 description: Uç nokta veri kaybı önleme (DLP) merkezi ayarlarını yapılandırmayı öğrenin.
-ms.openlocfilehash: ebe995512769275999e7ec4837e16542ffce7100
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: f76f6ec18464229fa50ad54a06fc7969abb3dd23
+ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63705692"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64952830"
 ---
-# <a name="configure-endpoint-data-loss-prevention-settings"></a>Uç nokta veri kaybı önleme ayarlarını yapılandırma
+# <a name="configure-endpoint-data-loss-prevention-settings"></a>Uç noktada veri kaybı önleme ayarlarını yapılandırma
 
-Uç nokta veri kaybını önleme (DLP) davranışının birçok yönü, merkezi olarak yapılandırılmış ayarlarla denetlenmektedir. Ayarlar için tüm DLP ilkelerine uygulanır.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Uç nokta veri kaybı önleme (DLP) davranışının birçok yönü merkezi olarak yapılandırılmış ayarlar tarafından denetlenmektedir. Ayarlar cihazlar için tüm DLP ilkelerine uygulanır.
 
 ![Uç nokta DLP ayarları](../media/endpoint-dlp-1-using-dlp-settings.png)
 
-Aşağıdaki ayarları denetlemeyi biliyorsanız, bu ayarları yapılandırabilirsiniz:
+Şunları denetlemek istiyorsanız bu ayarları yapılandırmanız gerekir:
 
 - Bulut çıkış kısıtlamaları
-- Uygulama başına kullanıcı etkinlikleri üzerinde çeşitli kısıtlayıcı eylemler.
-- Windows macOS cihazları için dosya yolu dışlamaları.
+- Uygulama başına kullanıcı etkinlikleri üzerinde çeşitli kısıtlayıcı eylem türleri.
+- Windows ve macOS cihazları için dosya yolu dışlamaları.
 - Tarayıcı ve etki alanı kısıtlamaları.
-- İlke ipuçlarında, ilkeleri geçersiz kılmaya yönelik işletme gerekçeleri nasıl görünür.
-- Pdf ve CSV dosyalarında Office otomatik olarak denetlenebilir.
+- İlkeleri geçersiz kılmaya yönelik iş gerekçeleri ilke ipuçlarında nasıl görünür?
+- Office, PDF ve CSV dosyalarındaki etkinlikler otomatik olarak denetleniyorsa.
 
 ## <a name="dlp-settings"></a>DLP ayarları
 
-Başlamadan önce DLP ayarlarınızı ayarlamıştınız. 
+Başlamadan önce DLP ayarlarınızı ayarlamanız gerekir. 
 
 ### <a name="endpoint-dlp-windows-1011-and-macos-settings"></a>Uç nokta DLP Windows 10/11 ve macOS ayarları
 
-|Ayar |Windows 10 1809 ve sonrası, Windows 11  |macOS Catalina 10.15 veya sonrası (önizleme)  |Notlar  |
+|Ayar |Windows 10, 1809 ve üzeri, Windows 11  |macOS Catalina 10.15 veya üzeri |Notlar  |
 |---------|---------|---------|---------|
-|Dosya yolu dışlamaları     |Destekleniyor         |Destekleniyor         |macOS varsayılan olarak açık olan önerilen bir dışlama listesi içerir          |
-|Kısıtlanmış uygulamalar     |Destekleniyor         |Destekleniyor         |         |
-|Kısıtlanmış uygulama grupları |Destekleniyor |Desteklenmiyor
-|Izin verilmeyen Bluetooth uygulamaları    |Destekleniyor         |Desteklenmiyor         |         |
+|Dosya yolu dışlamaları     |Destekleniyor         |Destekleniyor         |macOS varsayılan olarak açık olan dışlamaların önerilen bir listesini içerir          |
+|Kısıtlı uygulamalar     |Destekleniyor         |Destekleniyor         |         |
+|Kısıtlı uygulama grupları |Destekleniyor |Desteklenmiyor
+|İzin verilmeyen Bluetooth uygulamaları    |Destekleniyor         |Desteklenmiyor         |         |
 |Hassas öğelere yönelik tarayıcı ve etki alanı kısıtlamaları      |Destekleniyor         |Destekleniyor         |         |
-|Uç Nokta DLP için ek ayarlar     |Destekleniyor         |Destekleniyor         |MacOS cihazlarda yalnızca varsayılan iş gerekçeleri desteklenmemektedir         |
+|Uç Nokta DLP için ek ayarlar     |Destekleniyor         |Destekleniyor         |MacOS cihazları için yalnızca varsayılan iş gerekçeleri desteklenir         |
 |Cihazlar için her zaman dosya etkinliğini denetleme     |Destekleniyor         |Destekleniyor         |         |
-|Izin verilmeyen uygulamalardan dosyayı otomatik karantinaya alın | Destekleniyor | Desteklenmiyor| |
+|İzin verilmeyen uygulamalardan dosyayı otomatik olarak karantinaya al | Destekleniyor | Desteklenmiyor| |
 |Gelişmiş sınıflandırma | Destekleniyor | Desteklenmiyor| |
-|İlke ipuçlarında işletme gerekçelendirmesi | Destekleniyor | Destekleniyor| |
+|İlke ipuçlarında iş gerekçesi | Destekleniyor | Destekleniyor| |
 
 ### <a name="advanced-classification-scanning-and-protection"></a>Gelişmiş sınıflandırma tarama ve koruma
 
-Gelişmiş sınıflandırma tarama ve koruma, daha gelişmiş Microsoft 365 bulut tabanlı veri sınıflandırma hizmetinin öğeleri taramasını, sınıflandırmasını ve sonuçları yerel makineye geri geri dönmesini sağlar. Bu da, DLP ilkeleriniz içinde tam veri [](create-custom-sensitive-information-types-with-exact-data-match-based-classification.md) eşleşme sınıflandırması, adlandırılmış varlıklar [(önizleme)](named-entities-learn.md#learn-about-named-entities-preview) ve eğitilebilir [](classifier-learn-about.md#learn-about-trainable-classifiers) sınıflayıcılar gibi sınıflandırma tekniklerinden yararlan İlkeleri anlamına gelir.
+Gelişmiş sınıflandırma tarama ve koruma, daha gelişmiş Microsoft Purview bulut tabanlı veri sınıflandırma hizmetinin öğeleri taramasına, sınıflandırmasına ve sonuçları yerel makineye döndürmesine olanak tanır. Bu, [DLP ilkelerinizde tam veri eşleştirme](create-custom-sensitive-information-types-with-exact-data-match-based-classification.md) sınıflandırması, [adlandırılmış varlıklar](named-entities-learn.md) ve [eğitilebilir sınıflandırıcılar gibi sınıflandırma tekniklerinden](classifier-learn-about.md) yararlanabileceğiniz anlamına gelir.
 
-Gelişmiş sınıflandırma özelliği açık olduğunda, içerik tarama ve sınıflandırma için yerel cihazdan bulut hizmetlerine gönderilir. Bant genişliği kullanımı önemli bir konu ise, kullanıla 24 saatlik bir dönemde ne kadar kullanıla olacağını sınırlayın. Sınır Uç Nokta DLP ayarlarında yapılandırılır ve cihaz başına uygulanır. Bir bant genişliği kullanım sınırı ayarsanız ve bu sınır aşılırsa, DLP kullanıcı içeriğini buluta göndermeyi durdurur. Bu noktada veri sınıflandırması cihazda yerel olarak devam eder, ancak tam veri eşleşmesi kullanılarak sınıflandırma özelliği, adlandırılmış varlıklar (önizleme) ve eğitilebilir sınıflayıcılar kullanılamaz. Toplam bant genişliği kullanımı yaklaşık 24 saat sınırının altına düştüğünde, bulut hizmetleriyle iletişim sürdürür.
+Gelişmiş sınıflandırma etkinleştirildiğinde, içerik yerel cihazdan tarama ve sınıflandırma için bulut hizmetlerine gönderilir. Bant genişliği kullanımıyla ilgili bir sorun varsa, 24 saatlik bir süre içinde ne kadarın kullanılabileceğini belirleyebilirsiniz. Sınır Uç Nokta DLP ayarlarında yapılandırılır ve cihaz başına uygulanır. Bant genişliği kullanım sınırını ayarlarsanız ve bu sınır aşılırsa, DLP kullanıcı içeriğini buluta göndermeyi durdurur. Bu noktada veri sınıflandırması cihazda yerel olarak devam eder ancak tam veri eşleşmesi, adlandırılmış varlıklar ve eğitilebilir sınıflandırıcılar kullanılarak sınıflandırma kullanılamaz. Toplu bant genişliği kullanımı sıralı 24 saat sınırının altına düştüğünde bulut hizmetleriyle iletişim devam eder.
 
-Bant genişliği kullanımı önemli değilse, sınırsız bant genişliği kullanımına **izin vermek için** Sınır yok'ı seçin.
+Bant genişliği kullanımı önemli değilse sınırsız bant genişliği kullanımına izin vermek için **Sınır yok'a** tıklayın.
 
-Bu Windows sürümleri gelişmiş sınıflandırma tarama ve korumayı destekler:
+Bu Windows sürümleri gelişmiş sınıflandırma taramasını ve korumasını destekler:
 
-- Windows 10 20H1/20H2/21H1 (KB 5006738)
-- Windows 10 19H1/19H2 (KB 5007189)
+- Windows 10 sürümleri 20H1/20H2/21H1 (KB 5006738)
+- Windows 10 sürümleri 19H1/19H2 (KB 5007189)
 - Windows 10 RS5 (KB 5006744)
 
 > [!NOTE]
-> Gelişmiş sınıflandırma desteği, sınıf (Word Office, Excel, PowerPoint) ve PDF dosya türlerinde kullanılabilir.
+> Office (Word, Excel, PowerPoint) ve PDF dosya türleri için gelişmiş sınıflandırma desteği sağlanır.
 
 > [!NOTE]
 > DLP ilkesi değerlendirmesi, kullanıcı içeriği gönderilmese bile her zaman bulutta gerçekleşir.
 
 ### <a name="file-path-exclusions"></a>Dosya yolu dışlamaları
 
-Uyumluluk [merkezini açmaVeri](https://compliance.microsoft.com) >  **kaybı önlemeEndpoint** >  **DLP ayarlarıDosya** >  **yolu dışlamaları**.
+[Microsoft Purview uyumluluk portalını](https://compliance.microsoft.com) >  **açınVeri kaybı önlemeEndpoint** >  **DLP ayarlarıDosya** >  **yolu dışlamaları**.
 
-Cihazlarınız çok gürültülü olduğundan veya ilgilendiğiniz dosyaları içermelerinden dolayı bazı yolları DLP izleme, DLP uyarısı ve DLP ilkesi zorlamalarının dışında tutmak istiyorabilirsiniz. Bu konumlarda bulunan dosyalar denetlenmek zorunda değildir ve bu konumlarda oluşturulan veya değiştirilen hiçbir dosya DLP ilke zorlaması'ne tabi olmayacaktır. DLP ayarlarında yol dışlamalarını yapılandırabilirsiniz.
+Cihazlarınızda DLP izleme, DLP uyarısı ve DLP ilkesi zorlamasından belirli yolları dışlamak isteyebilirsiniz çünkü bunlar çok gürültülü veya ilgilendiğiniz dosyaları içermez. Bu konumlardaki dosyalar denetlenmeyecek ve bu konumlarda oluşturulan veya değiştirilen dosyalar DLP ilkesi uygulamasına tabi olmayacaktır. DLP ayarlarında yol dışlamalarını yapılandırabilirsiniz.
 
-#### <a name="windows-10-devices"></a>Windows 10 cihazları
+#### <a name="windows-10-devices"></a>cihazları Windows 10
 
-Bu mantığı kullanarak, diğer cihazlarınız için dışlama yollarınızı Windows 10 kullanabilirsiniz:
+Windows 10 cihazlar için dışlama yollarınızı oluşturmak için bu mantığı kullanabilirsiniz:
 
-- ile sona eren geçerli dosya yolu `\`, yalnızca doğrudan klasör altındaki dosyalar anlamına gelir. <br/>Örneğin: `C:\Temp\`
+- ile `\`biten geçerli dosya yolu, yalnızca doğrudan klasörün altındaki dosyalar anlamına gelir. <br/>Örneğin: `C:\Temp\`
 
-- ile sona eren geçerli dosya `\*`yolu, doğrudan klasörün altındaki dosyaların yanı sıra yalnızca alt klasörler altındaki dosyalar anlamına gelir. <br/>Örneğin: `C:\Temp\*`
+- ile `\*`biten geçerli dosya yolu, doğrudan klasörün altındaki dosyaların yanı sıra yalnızca alt klasörlerin altındaki dosyalar anlamına gelir. <br/>Örneğin: `C:\Temp\*`
 
-- veya olmadan sona eren geçerli dosya `\` yolu `\*`, tüm dosyaların doğrudan klasör ve tüm alt klasörler altında olduğu anlamına gelir. <br/>Örneğin: `C:\Temp`
+- veya `\*`olmadan `\` biten geçerli dosya yolu, tüm dosyaların doğrudan klasörün altında ve tüm alt klasörlerin altında olduğu anlamına gelir. <br/>Örneğin: `C:\Temp`
 
-- Her iki tarafı arasında joker karakterli `\` bir yol. <br/>Örneğin: `C:\Users\*\Desktop\`
+- Her iki tarafından arasında `\` joker karakter bulunan bir yol. <br/>Örneğin: `C:\Users\*\Desktop\`
 
-- Her iki tarafından arasında joker `\` karakterli bir yol ve `(number)` tam sayıda alt klasör vermek için. <br/>Örneğin: `C:\Users\*(1)\Downloads\`
+- Her iki tarafından ve ile arasında `\` joker karakter bulunan ve `(number)` tam alt klasör sayısını veren bir yol. <br/>Örneğin: `C:\Users\*(1)\Downloads\`
 
-- SYSTEM ortam değişkenlerinin olduğu bir yol. <br/>Örneğin: `%SystemDrive%\Test\*`
+- SYSTEM ortam değişkenlerini içeren bir yol. <br/>Örneğin: `%SystemDrive%\Test\*`
 
-- Yukarıdakilerin hepsi bir karışımı. <br/>Örneğin: `%SystemDrive%\Users\*\Documents\*(2)\Sub\`
+- Yukarıdakilerin bir karışımı. <br/>Örneğin: `%SystemDrive%\Users\*\Documents\*(2)\Sub\`
 
-#### <a name="macos-devices-preview"></a>macOS cihazlar (önizleme)
+#### <a name="macos-devices"></a>macOS cihazları
 
-Diğer Windows 10 macOS cihazlar için kendi özel durumlarınızı  ekleyebilirsiniz.
+Windows 10 cihazlara benzer şekilde, macOS cihazları için kendi dışlamalarınızı ekleyebilirsiniz.
 
-- Dosya yolu tanımları büyük/harfe duyarlı değildir, `User` dolayısıyla ile aynıdır `user`.
+- Dosya yolu tanımları büyük/küçük harfe duyarlı değildir, bu nedenle `User` ile `user`aynıdır.
 
-- Joker değerler de desteklenen bir değerdir. Dolayısıyla, yol tanımı yolun `*` ortasında veya sonunda bir yol içerebilir. Örneğin: `/Users/*/Library/Application Support/Microsoft/Teams/*`
+- Joker değerler desteklenir. Bu nedenle yol tanımı, yolun ortasında veya sonunda bir `*` içerebilir. Örneğin: `/Users/*/Library/Application Support/Microsoft/Teams/*`
 
 #####  <a name="recommended-file-path-exclusions-preview"></a>Önerilen dosya yolu dışlamaları (önizleme)
 
-Performans nedenleriyle, Uç Nokta DLP'de macOS cihazları için önerilen dosya yolu dışlamalarının listesi vardır. Bu dışlamalar varsayılan olarak açıktır. Mac için önerilen dosya yolu dışlamalarını dahiled iki **durumlu düğmesini değiştirerek bu seçenekleri devre dışı** abilirsiniz. Bu liste şunları içerir:
+Performans nedenleriyle Endpoint DLP, macOS cihazları için önerilen dosya yolu dışlamalarının listesini içerir. Bu dışlamalar varsayılan olarak açıktır. **Mac için önerilen dosya yolu dışlamalarını ekle iki durumlu** düğmesini açarak bunları devre dışı bırakabilirsiniz. Liste şunları içerir:
 
 - /Applications/*
 - /System/*
@@ -123,178 +125,178 @@ Performans nedenleriyle, Uç Nokta DLP'de macOS cihazları için önerilen dosya
 - /opt/*
 - /Users/*/Library/Application Support/Microsoft/Teams/*
 
-### <a name="restricted-apps-and-app-groups"></a>Kısıtlanmış uygulamalar ve uygulama grupları
+### <a name="restricted-apps-and-app-groups"></a>Kısıtlı uygulamalar ve uygulama grupları
 
-#### <a name="restricted-apps"></a>Kısıtlanmış uygulamalar
+#### <a name="restricted-apps"></a>Kısıtlı uygulamalar
 
-**Sınırlı uygulamalar** (önceki adı **Izin verilmeyen uygulamalar**) sizin oluşturmiş olduğunuz uygulamaların listesidir. Kullanıcının listede bir uygulamayı kullanarak cihazda DLP korumalı bir dosyaya erişmek için hangi DLP eylemlerini **** gerçekleştireceklerini yapılandırabilirsiniz. MacOS ve macOS Windows 10 (önizleme) için kullanılabilir.
+**Kısıtlanmış uygulamalar** (eski **adıyla İzin verilmeyen uygulamalar**), oluşturduğunuz uygulamaların listesidir. Kullanıcı bir cihazda DLP korumalı bir dosyaya **_erişmek_** için listedeki bir uygulamayı kullandığında DLP'nin gerçekleştireceği eylemleri yapılandırabilirsiniz. Windows 10 ve macOS cihazlarda kullanılabilir.
 
-Sınırlanmış uygulamalarla **Access** bir ilkede seçildiğinde ve kullanıcı korunan bir dosyaya erişmek için kısıtlanmış uygulamalar listesinde yer alan bir uygulamayı kullandığında, `audited`etkinlik , `blocked``blocked with override` veya bunu nasıl yapılandırdınıza bağlı olarak etkinliğiniz olur. Başka bir ifadeyle, aynı uygulama bir Kısıtlanmış uygulama grubunun üyesi **değilse, Kısıtlanmış** uygulama grubunda etkinlikler için yapılandırılan eylemler, Kısıtlanmış uygulamalar listesi için erişim etkinliği için yapılandırılan **eylemleri geçersiz** kılar. Tüm etkinlikler denetlenmektedir ve etkinlik gezgininde gözden geçirilebilir.
-
-> [!IMPORTANT]
-> Yürütülebilir dosyanın yolunu değil, yalnızca yürütülebilir adı (yürütülebilir dosya gibi) browser.exe.
+Bir ilkede **Kısıtlı uygulamalar tarafından erişim** seçildiğinde ve kullanıcı korumalı bir dosyaya erişmek için kısıtlanmış uygulamalar listesinde yer alan bir uygulamayı kullandığında, etkinlik , `blocked`veya `blocked with override` nasıl yapılandırdığınıza bağlı olarak olur`audited`. Bu, aynı uygulama **Kısıtlı bir uygulama grubunun** üyesi olmadığı sürece, **Kısıtlı uygulama grubundaki** etkinlikler için yapılandırılan eylemler **Kısıtlı uygulamalar** listesi için erişim etkinliği için yapılandırılan eylemleri geçersiz kılar. Tüm etkinlikler denetlenip etkinlik gezgininde gözden geçirilebilir.
 
 > [!IMPORTANT]
-> Kısıtlanmış uygulamalar listesinde yer `block`alan uygulamalar için tanımlanan eylem (`audit`, `block with override`veya ) yalnızca kullanıcı korunan bir öğeye ***erişmeye*** geldiğinde geçerlidir. 
+> Yürütülebilir dosyanın yolunu değil, yalnızca yürütülebilir adı (browser.exe gibi) eklemeyin.
 
-#### <a name="file-activities-for-apps-in-restricted-app-groups-preview"></a>Kısıtlı uygulama gruplarında uygulamalar için dosya etkinlikleri (önizleme)
+> [!IMPORTANT]
+> Kısıtlı uygulamalar listesinde yer alan uygulamalar için tanımlanan eylem (`audit`, `block with override`veya `block`) yalnızca kullanıcı korumalı bir öğeye ***erişmeye*** çalıştığında geçerlidir. 
 
-Kısıtlanmış uygulama grupları, DLP ayarlarından ve ardından bir ilkede kurala ekley koleksiyonlarıdır. İlkeye kısıtlanmış bir uygulama grubu eklerken, bu tabloda tanımlanan eylemleri gerçekleştirebilirsiniz.
+#### <a name="file-activities-for-apps-in-restricted-app-groups-preview"></a>Kısıtlı uygulama gruplarındaki uygulamalar için dosya etkinlikleri (önizleme)
 
-|Kısıtlanmış Uygulama grup seçeneği  |Bu işlem size neyi sağlar?  |
+Kısıtlı uygulama grupları, DLP ayarlarında oluşturduğunuz ve ardından ilkedeki bir kurala eklediğiniz uygulama koleksiyonlarıdır. İlkeye kısıtlı bir uygulama grubu eklediğinizde, bu tabloda tanımlanan eylemleri gerçekleştirebilirsiniz.
+
+|Kısıtlı Uygulama grubu seçeneği  |Yapmanıza olanak sağlayan şey  |
 |---------|---------|
-|Dosya etkinliğini kısıtlama     |DLP'ye kullanıcıların uygulama grubunda uygulamaları kullanarak DLP korumalı öğelere erişmelerine izin vermelerini ve panoya **kopyalama,** **USB** çıkarılabilir sürücüye kopyala, Ağ sürücüsüne kopyala ve Uygulamada yazdır'ı denemeleri için herhangi bir işlem uygulamamalarını söyler.          |
-|Tüm etkinliklere kısıtlama uygulama     |DLP'ye `Audit only`, `Block with override`veya bir `Block` kullanıcı bu uygulama grubunda yer alan bir uygulama kullanarak DLP korumalı bir öğeye erişmeyi denemesi ile ilgili bilgi sağlar         |
-|Belirli bir etkinlik için kısıtlama uygulama     |Bu ayar kullanıcının uygulama grubunda yer alan bir uygulamayı kullanarak DLP korumalı bir öğeye erişmesine olanak sağlar ve kullanıcı Panoya kopyala, `Block``Block with override`**USB** çıkarılabilir sürücüye **kopyala, Ağ** sürücüsüne kopyala ve Yazdır eylemlerini gerçekleştir girişiminde bulunan DLP için varsayılan eylemi (`Audit only`, veya ) seçmenizi **sağlar.**          |
+|Dosya etkinliğini kısıtlama     |DLP'ye, kullanıcıların uygulama grubundaki uygulamaları kullanarak DLP korumalı öğelere erişmesine izin vermelerini ve kullanıcı **Panoya kopyalama**, **USB çıkarılabilir sürücüye kopyalama**, **Ağ sürücüsüne kopyalama** ve uygulamadan **yazdırma** girişimlerinde hiçbir işlem yapmamalarını bildirir.          |
+|Tüm etkinliklere kısıtlama uygulama     |DLP'ye `Audit only`, `Block with override`veya `Block` kullanıcı bu uygulama grubunda yer alan bir uygulamayı kullanarak DLP korumalı bir öğeye erişmeye çalıştığında bildirir         |
+|Belirli bir etkinliğe kısıtlama uygulama     |Bu ayar, bir kullanıcının uygulama grubunda yer alan bir uygulama kullanarak DLP korumalı bir öğeye erişmesine olanak tanır ve kullanıcı **Panoya Kopyalama**, **USB çıkarılabilir sürücüye kopyalama**, `Block`**Ağ sürücüsüne kopyala** ve **Yazdır'ı** denediğinde DLP'nin gerçekleştirmesi için varsayılan bir eylem (`Audit only`, , veya `Block with override`) seçmenize olanak tanır.          |
 
 > [!IMPORTANT]
-> Ayarlar bir uygulama grubunda yer alan kullanıcı, aynı kuralda yer alan kısıtlanmış uygulamalar listesinde ayarlanmış tüm kısıtlamaları geçersiz kılar. Dolayısıyla, bir uygulama kısıtlanmış uygulamalar listesinde yer alıyorsa ve bir kısıtlı uygulamalar grubuna üye ise, kısıtlanmış uygulamalar grubunun ayarları uygulanır.
+> Kısıtlı bir uygulama grubunda Ayarlar, aynı kuralda olduklarında kısıtlı uygulamalar listesinde ayarlanan kısıtlamaları geçersiz kılar. Bu nedenle, bir uygulama kısıtlı uygulamalar listesindeyse ve kısıtlı bir uygulama grubunun üyesiyse, kısıtlanmış uygulamalar grubunun ayarları uygulanır.
 
-#### <a name="how-dlp-applies-restrictions-to-activities"></a>DLP'nin etkinliklere kısıtlamalar nasıl uygulanır?
+#### <a name="how-dlp-applies-restrictions-to-activities"></a>DLP etkinliklere kısıtlamaları nasıl uygular?
 
-Kısıtlı uygulama **gruplarında (önizleme)** uygulamalar için Dosya **etkinlikleri, tüm** uygulamalar için dosya etkinlikleri ve Kısıtlanmış uygulama etkinlikleri listesi arasındaki etkileşimler aynı kural kapsamındadır.
+**Kısıtlı uygulama gruplarındaki (önizleme) uygulamalar için Dosya etkinlikleri**, **Tüm uygulamalar için Dosya etkinlikleri** ve **Kısıtlanmış uygulama etkinlikleri listesi arasındaki etkileşimler** aynı kural kapsamındadır.
 
-##### <a name="restricted-app-groups-overrides"></a>Kısıtlanmış uygulama grupları geçersiz kılar
+##### <a name="restricted-app-groups-overrides"></a>Kısıtlanmış uygulama grupları geçersiz kılmaları
 
-Kısıtlı uygulama **gruplarında uygulamalar** için dosya etkinlikleri (önizleme) içinde tanımlanan yapılandırmalar, aynı kuralda yer alan  Kısıtlanmış uygulama etkinlikleri listesinde ve Dosya  etkinlikleri'nin yapılandırmalarını geçersiz kılar.
+**Kısıtlı uygulama gruplarındaki uygulamalar için Dosya etkinlikleri (önizleme) içinde** tanımlanan yapılandırmalar **, Kısıtlı uygulama etkinlikleri** listesindeki yapılandırmaları ve aynı kuraldaki **tüm uygulamalar için Dosya etkinlikleri'ni** geçersiz kılar.
 
-##### <a name="restricted-app-activities-and-file-activities-for-all-apps"></a>Tüm uygulamalar için kısıtlanmış uygulama etkinlikleri ve Dosya etkinlikleri
+##### <a name="restricted-app-activities-and-file-activities-for-all-apps"></a>Tüm uygulamalar için kısıtlı uygulama etkinlikleri ve Dosya etkinlikleri
 
-Kısıtlı uygulama etkinlikleri **için**   `Audit only``Block with override` tanımlanan eylem ya da aynı kuralda ise, Tüm uygulamalar için Kısıtlanmış uygulama etkinlikleri ve Dosya etkinliklerinin yapılandırmaları uygun şekilde çalışır. Bunun nedeni, Kısıtlanmış uygulama **etkinlikleri için** tanımlanan eylemlerin yalnızca kullanıcı listede olan bir uygulamayı kullanarak bir dosyaya eriş başvurmasıdır. Kullanıcının erişimi olduktan sonra, Tüm uygulamalar için Dosya **etkinliklerinde etkinlikler için tanımlanan eylemler** uygulanır. 
+**Kısıtlı uygulama etkinlikleri** için tanımlanan eylem veya `Audit only``Block with override` aynı kuraldaysa **, tüm uygulamalar** için **Kısıtlı uygulama etkinlikleri ve Dosya etkinlikleri yapılandırmaları** aynı şekilde çalışır. Bunun nedeni **Kısıtlı uygulama etkinlikleri** için tanımlanan eylemlerin yalnızca bir kullanıcı listede yer alan bir uygulamayı kullanarak bir dosyaya eriştiğinde geçerli olmasıdır. Kullanıcı erişime sahip olduktan sonra **, tüm uygulamalar için Dosya etkinliklerindeki etkinlikler için** tanımlanan eylemler uygulanır. 
 
 İşte bir örnek:
 
-Kısıtlı Notepad.exe ve Tüm uygulamalar için Dosya etkinlikleri'ne bir e-posta eklenirse, belirli etkinliklere kısıtlama uygulamak üzere  yapılandırılır ve her ikisi de aşağıdaki gibi yapılandırılır: 
+**Kısıtlı uygulamalar'a** Notepad.exe eklenirse ve **Tüm uygulamalar için Dosya etkinlikleri** **Belirli etkinliklere kısıtlama uygula** olarak yapılandırılırsa ve her ikisi de şu şekilde yapılandırılır:
 
-|İlkede ayar  |Uygulama adı  |Kullanıcı etkinliği  |DLP eylemi  |
+|İlkedeki ayar  |Uygulama adı  |Kullanıcı etkinliği  |Yürütülecek DLP eylemi  |
 |---------|---------|---------|---------|
-|Kısıtlanmış uygulama etkinlikleri     |Not Defteri        |DLP korumalı bir öğeye erişme         |Yalnızca denetleme         |
-|Tüm uygulamalar için dosya etkinlikleri   |Tüm uygulamalar        | Panoya kopyala        |Yalnızca denetleme         |
-|Tüm uygulamalar için dosya etkinlikleri     |Tüm uygulamalar         |USB ile kaldırılabilir bir cihaza kopyalama | Engelle       |
-|Tüm uygulamalar için dosya etkinlikleri     |Tüm uygulamalar         |Ağ paylaşımına kopyalama         |Yalnızca denetleme         |
-|Tüm uygulamalar için dosya etkinlikleri   |Tüm uygulamalar         |Yazdır         |Engelle         |
-|Tüm uygulamalar için dosya etkinlikleri     |Tüm uygulamalar         |Aynı uygulamada izin verilmeyen dosyaları kullanarak kopyalama Bluetooth taşıma         |Engellendi         |
-|Tüm uygulamalar için dosya etkinlikleri     |Tüm uygulamalar         |Uzak masaüstü hizmetleri         |Geçersiz kılmayla engelleme         |
+|Kısıtlı uygulama etkinlikleri     |Not Defteri        |DLP korumalı bir öğeye erişme         |Yalnızca denetim         |
+|Tüm uygulamalar için dosya etkinlikleri   |Tüm uygulamalar        | Panoya kopyala        |Yalnızca denetim         |
+|Tüm uygulamalar için dosya etkinlikleri     |Tüm uygulamalar         |USB kaldırılabilir bir cihaza kopyalama | Engelle       |
+|Tüm uygulamalar için dosya etkinlikleri     |Tüm uygulamalar         |Ağ paylaşımına kopyalama         |Yalnızca denetim         |
+|Tüm uygulamalar için dosya etkinlikleri   |Tüm uygulamalar         |Yazdırma         |Engelle         |
+|Tüm uygulamalar için dosya etkinlikleri     |Tüm uygulamalar         |İzin verilmeyen Bluetooth uygulamasını kullanarak kopyalama veya taşıma         |Engellenen         |
+|Tüm uygulamalar için dosya etkinlikleri     |Tüm uygulamalar         |Uzak masaüstü hizmetleri         |Geçersiz kılma ile engelle         |
 
-Kullanıcı A, kimlik bilgilerini kullanarak DLP korumalı bir Not Defteri. DLP, etkinliğin erişimine ve denetimine izin verir. Kullanıcı A Not Defteri da korumalı öğeden panoya kopyalamayı deniyor, bu da çalışır ve DLP etkinliği denetimler. Kullanıcı A, korumalı öğeyi iş yerlerinden yazdırmayı Not Defteri ve etkinlik engellenir.
+A kullanıcısı Not Defteri kullanarak DLP korumalı bir dosya açar. DLP, erişime izin verir ve etkinliği denetler. A kullanıcısı Not Defteri korumalı öğeden panoya kopyalamaya çalışır ve DLP etkinliği denetler. Ardından A kullanıcısı korumalı öğeyi Not Defteri yazdırmayı dener ve etkinlik engellenir.
 
 > [!NOTE]
-> Kısıtlanmış uygulama  `block`etkinlikleri için gerçekleştirecek DLP eylemi olarak ayarlanmamışsa, tüm erişim engellenir ve kullanıcı dosya üzerinde hiçbir etkinlik gerçekleştiramaz.
+> **Kısıtlı uygulama etkinliklerinde** gerçekleştirilecek DLP eylemi olarak `block`ayarlandığında, tüm erişim engellenir ve kullanıcı dosya üzerinde herhangi bir etkinlik gerçekleştiremez.
    
 ##### <a name="file-activities-for-all-apps-only"></a>Yalnızca tüm uygulamalar için dosya etkinlikleri
 
-Bir uygulama, kısıtlı uygulama gruplarında **(önizleme)** uygulamalar için Dosya etkinlikleri içinde yer alıyorsa veya Kısıtlanmış uygulama etkinlikleri listesinde  yer alıyorsa ya da 'Geçersiz kılma ile engelle' `Audit only`eylemiyle Kısıtlanmış uygulama etkinlikleri listesinde yer alıyorsa, Tüm uygulamalar için Dosya etkinliklerinde tanımlanan tüm kısıtlamalar aynı kuralda  uygulanır.  
+Bir uygulama **kısıtlı uygulama gruplarındaki uygulamalar için Dosya etkinliklerinde değilse (önizleme)** veya **Kısıtlı uygulama etkinlikleri** listesinde değilse veya bir eylemiyle `Audit only`**Kısıtlanmış uygulama etkinlikleri** listesindeyse veya 'Geçersiz kılmayla engelle' durumundaysa, **tüm uygulamalar için Dosya etkinliklerinde** tanımlanan tüm kısıtlamalar aynı kuralda uygulanır.  
 
-#### <a name="macos-devices-preview"></a>macOS cihazlar (önizleme)
+#### <a name="macos-devices"></a>macOS cihazları
 
-Diğer Windows gibi macOS uygulamalarının Hassas uygulama etkinlikleri listesinde tanımlayarak hassas verilere erişmesini **de önabileceksiniz**. 
+Windows cihazlarda olduğu gibi, artık macOS uygulamalarının hassas verilere erişmesini **Kısıtlanmış uygulama etkinlikleri** listesinde tanımlayarak engelleyebilirsiniz. 
 
 > [!NOTE]
-> Platformlar arası uygulamaların, çalıştır yaptıkları işletim sistemi ile ilgili benzersiz yolları ile girilleri gerektiğini unutmayın.
+> Platformlar arası uygulamaların, üzerinde çalıştıkları işletim sistemine göre benzersiz yolları ile girilmesi gerektiğini unutmayın.
 
 Mac uygulamalarının tam yolunu bulmak için:
 
-1. macOS cihazında Etkinlik **İzleyicisi'ne açın**. Kısıtlamak istediğiniz işlemi bulun ve çift tıklayın
+1. macOS cihazında **Etkinlik İzleyicisi'ni** açın. Kısıtlamak istediğiniz işlemi bulma ve çift tıklama
 
-2. Dosyaları **ve Bağlantı Noktalarını Aç sekmesini** seçin.
+2. **Dosyaları ve Bağlantı Noktalarını Aç** sekmesini seçin.
   
-3. macOS uygulamaları için, uygulamanın adı dahil olmak üzere tam yol adına ihtiyacınız vardır.
+3. macOS uygulamaları için, uygulamanın adı da dahil olmak üzere tam yol adına ihtiyacınız vardır.
 
-#### <a name="protect-sensitive-data-from-cloud-synchronization-apps"></a>Hassas verileri bulut eşitleme uygulamalarına karşı koruma
+#### <a name="protect-sensitive-data-from-cloud-synchronization-apps"></a>Hassas verileri bulut eşitleme uygulamalarından koruma
 
-Hassas öğelerin buluta bulut eşitleme uygulamaları (onedrive.exegibi) tarafından eşitlenesini önlemek *için, bulut* eşitleme uygulamasını Izin Verilmeyen **uygulamalar listesine** ekleyin. Izin verilmeyen bir bulut eşitleme uygulaması, engelleme bir DLP ilkesiyle korunan bir öğeye erişmeye çalıştığında, DLP yinelenen bildirimler oluşturabilirsiniz. Izin verilmemiş uygulamalar altında Otomatik karantinaya alma **seçeneğini etkinleştirerek** bu yinelenen **bildirimleri önebilirsiniz**.  
+onedrive.exe *gibi hassas* öğelerin bulut eşitleme uygulamaları tarafından bulutla eşitlenmesini önlemek için bulut eşitleme uygulamasını **İzin verilmeyen uygulamalar** listesine ekleyin. İzin verilmeyen bir bulut eşitleme uygulaması, engelleyici bir DLP ilkesi tarafından korunan bir öğeye erişmeye çalıştığında, DLP yinelenen bildirimler oluşturabilir. **İzin verilmeyen uygulamalar** altında **Otomatik karantinaya alma** seçeneğini etkinleştirerek bu yinelenen bildirimleri önleyebilirsiniz.  
 
 ##### <a name="auto-quarantine-preview"></a>Otomatik karantina (önizleme)
 
 > [!NOTE]
-> Otomatik karantina yalnızca bu Windows 10 de destekler
+> Otomatik karantina yalnızca Windows 10 desteklenir
 
-Etkinleştirildiğinde, izin verilmeyen bir uygulama DLP korumalı hassas bir öğeye erişmeyi denildiğinde Otomatik karantinaya çalışır. Otomatik karantinaya alın, hassas öğeyi yönetici tarafından yapılandırılmış bir klasöre taşır ve özgün **.txt** bir yer tutucu dosya olarak bırakın. Kullanıcılara öğenin nereye taşındığını ve diğer ilgili bilgileri söylemek için yer tutucu dosyanın metnini yapılandırabilirsiniz.  
+Etkinleştirildiğinde, izin verilmeyen bir uygulama DLP korumalı hassas bir öğeye erişmeye çalıştığında otomatik karantina devreye giriyor. Otomatik karantina, hassas öğeyi yönetici tarafından yapılandırılmış bir klasöre taşır ve özgün klasörün yerine bir yer tutucu **.txt** dosyası bırakabilir. Yer tutucu dosyasındaki metni, kullanıcılara öğenin nereye taşındığını ve diğer ilgili bilgileri söyleyecek şekilde yapılandırabilirsiniz.  
 
-Kullanıcı ve yöneticiler için sonsuz bir DLP bildirimleri zincirini önlemek için otomatik karantina kullanabilirsiniz. Bkz. Senaryo [4: Bulut](endpoint-dlp-using.md#scenario-4-avoid-looping-dlp-notifications-from-cloud-synchronization-apps-with-auto-quarantine-preview) eşitleme uygulamalarına gelen DLP bildirimlerini otomatik karantina (önizleme) ile döngüye almaktan kaçının.
+Kullanıcı ve yöneticiler için sonsuz DLP bildirimleri zincirini önlemek için otomatik karantinayı kullanabilirsiniz. Bkz [. Senaryo 4: Otomatik karantina (önizleme) ile bulut eşitleme uygulamalarından DLP bildirimlerini döngüye almaktan kaçının](endpoint-dlp-using.md#scenario-4-avoid-looping-dlp-notifications-from-cloud-synchronization-apps-with-auto-quarantine-preview).
 
-### <a name="unallowed-bluetooth-apps"></a>Izin verilmeyen Bluetooth uygulamaları
+### <a name="unallowed-bluetooth-apps"></a>İzin verilmeyen Bluetooth uygulamaları
 
-Kişilerin, ilkeleriniz tarafından korunan dosyaları belirli uygulama uygulamaları aracılığıyla aktarmasını Bluetooth engel olun.
+Kişilerin ilkeleriniz tarafından korunan dosyaları belirli Bluetooth uygulamaları aracılığıyla aktarmasını engelleyin.
 
 ### <a name="browser-and-domain-restrictions-to-sensitive-data"></a>Hassas verilere yönelik tarayıcı ve etki alanı kısıtlamaları
 
-İlkelerinize göre hassas dosyaların kısıtlanmamış bulut hizmeti etki alanlarıyla paylaşılmalarını kısıtla.
+İlkelerinizle eşleşen hassas dosyaların sınırsız bulut hizmeti etki alanlarıyla paylaşılmasını kısıtlayın.
 
-#### <a name="unallowed-browsers"></a>Izin verilmeyen tarayıcılar
+#### <a name="unallowed-browsers"></a>İzin verilmeyen tarayıcılar
 
-Daha Windows dosyaları için, yürütülebilir adları ile tanımlanan ve bulut hizmetleri kısıtlaması engellemeye veya engellemeye ayarlanmış olan, zorunlu bir DLP ilkesi koşullarına uygun dosyalara erişimi engellenir. Bu tarayıcıların bir dosyaya erişimi engellenmiş olduğunda, son kullanıcılar kendi tarayıcıları aracılığıyla dosyayı açmalarını isteyen bir bildirim Microsoft Edge.
+Windows cihazlar için, bulut hizmetlerine yükleme kısıtlamasının geçersiz kılmayı engellemek veya engellemek için ayarlandığı zorunlu bir DLP ilkesinin koşullarıyla eşleşen dosyalara erişmesi engellenecek, yürütülebilir adlarıyla tanımlanan tarayıcılar eklersiniz. Bu tarayıcıların bir dosyaya erişimi engellendiğinde, son kullanıcılar dosyayı Microsoft Edge aracılığıyla açmalarını isteyen bir bildirim görür.
 
-macOS cihazlarda, tam dosya yolunu eklemeniz gerekir. Mac uygulamalarının tam yolunu bulmak için:
+macOS cihazları için tam dosya yolunu eklemeniz gerekir. Mac uygulamalarının tam yolunu bulmak için:
 
-1. macOS cihazında Etkinlik **İzleyicisi'ne açın**. Kısıtlamak istediğiniz işlemi bulun ve çift tıklayın
+1. macOS cihazında **Etkinlik İzleyicisi'ni** açın. Kısıtlamak istediğiniz işlemi bulma ve çift tıklama
 
-2. Dosyaları **ve Bağlantı Noktalarını Aç sekmesini** seçin.
+2. **Dosyaları ve Bağlantı Noktalarını Aç** sekmesini seçin.
   
-3. macOS uygulamaları için, uygulamanın adı dahil olmak üzere tam yol adına ihtiyacınız vardır.
+3. macOS uygulamaları için, uygulamanın adı da dahil olmak üzere tam yol adına ihtiyacınız vardır.
 
 #### <a name="service-domains"></a>Hizmet etki alanları
 
 > [!NOTE]
-> Hizmet **etki alanları** ayarı yalnızca Microsoft Uyumluluk Uzantısı yüklü olan Microsoft Edge Veya Google Chrome kullanılarak karşıya [yüklenen dosyalara](dlp-chrome-learn-about.md#learn-about-the-microsoft-compliance-extension) uygulanır.
+> **Hizmet etki alanları** ayarı yalnızca [Microsoft Edge veya Microsoft Purview Uzantısı](dlp-chrome-learn-about.md#learn-about-the-microsoft-purview-extension) yüklü Google Chrome kullanılarak karşıya yüklenen dosyalar için geçerlidir.
 
-İlkeleriniz tarafından korunan hassas dosyaların, ilkeleriniz tarafından bilgisayarınızdan belirli hizmet etki alanlarına yük isteyip Microsoft Edge.
+İlkeleriniz tarafından korunan hassas dosyaların Microsoft Edge belirli hizmet etki alanlarına yüklenip yüklenemeyeceğini denetleyebilirsiniz.
 
-Liste modu Engelle olarak **ayarlanırsa**, kullanıcı bu etki alanlarına hassas öğeleri yükleyemz. Bir öğe bir DLP ilkesiyle eş olduğundan karşıya yükleme eylemi engellenmiş olduğunda, DLP bir uyarı üretir veya hassas öğenin karşıya yüklemesi engellenir.
+Liste modu **Engelle** olarak ayarlanırsa, kullanıcı hassas öğeleri bu etki alanlarına yükleyemez. Bir öğe bir DLP ilkesiyle eşleştiği için karşıya yükleme eylemi engellendiğinde, DLP bir uyarı oluşturur veya hassas öğenin karşıya yüklenmesini engeller.
 
-Liste modu İzin Ver olarak ayarlanırsa **, kullanıcılar** yalnızca bu etki alanlarına hassas öğeleri yükleyebilir ve **** diğer tüm etki alanlarına erişime izin verilmez.
+Liste modu **İzin Ver** olarak ayarlanırsa, kullanıcılar **_hassas öğeleri yalnızca_** bu etki alanlarına yükleyebilir ve diğer tüm etki alanlarına erişime izin verilmez.
 
 > [!IMPORTANT]
-> Hizmet kısıtlama modu "İzin Ver" olarak ayarlanmışsa, kısıtlamalar zorunlu kılınmadan önce en az bir hizmet etki alanı yapılandırılmış olmalıdır.
+> Hizmet kısıtlama modu "İzin Ver" olarak ayarlandığında, kısıtlamalar uygulanmadan önce en az bir hizmet etki alanı yapılandırmış olmanız gerekir.
 
-Hizmet etki alanının FQDN biçimini bitiş tarihi olmadan kullanın `.` 
+Hizmet etki alanının FQDN biçimini bitiş olmadan kullanın `.` 
 
 Örneğin:
 
  `www.contoso.com` 
 
-Joker karakterler desteklenmiyor.
+Joker karakterler desteklenmez.
 
-### <a name="additional-settings-for-endpoint-dlp"></a>Uç nokta DLP için ek ayarlar
+### <a name="additional-settings-for-endpoint-dlp"></a>Uç nokta DLP'leri için ek ayarlar
 
-#### <a name="business-justification-in-policy-tips"></a>İlke ipuçlarında işletme gerekçelendirmesi
+#### <a name="business-justification-in-policy-tips"></a>İlke ipuçlarında iş gerekçesi
 
-Kullanıcıların DLP ilkesi ipucu bildirimlerini kullanarak iş gerekçelendirme seçeneğiyle nasıl etkileşim kurarak etkileşimde bulunarak etkileşimde bulunarak etkileşime geçmelerini sabilirsiniz. Bu seçenek, kullanıcılar bir DLP ilkesinde Geçersiz kılmaya karşı engelleme ayarıyla **korunan bir etkinlik** gerçekleştire olduğunda görüntülenir. Bu genel bir ayardır. Aşağıdaki seçeneklerden birini seçebilirsiniz:
+DLP ilkesi ipucu bildirimlerinde kullanıcıların iş gerekçesi seçeneğiyle nasıl etkileşim kuracağını denetleyebilirsiniz. Bu seçenek, kullanıcılar bir DLP ilkesindeki **Geçersiz kılma ile engelle** ayarı tarafından korunan bir etkinlik gerçekleştirdiğinde görüntülenir. Bu genel bir ayardır. Aşağıdaki seçeneklerden birini seçebilirsiniz:
 
-- **Varsayılan seçenekleri ve özel metin kutusunu göster**: Varsayılan olarak, kullanıcılar yerleşik bir gerekçelendirmeyi seçerek veya kendi metinlerini girebilirsiniz.
-- **Yalnızca varsayılan seçenekleri göster**: Kullanıcılar yalnızca yerleşik bir gerekçelendirmeyi seçebilirsiniz.
-- **Yalnızca özel metin kutusunu göster**: Kullanıcılar yalnızca kendi gerekçelerini girebilirsiniz. Son kullanıcı ilkesi ipucu bildiriminde yalnızca metin kutusu görüntülenir. 
+- **Varsayılan seçenekleri ve özel metin kutusunu göster**: Varsayılan olarak, kullanıcılar yerleşik bir gerekçe seçebilir veya kendi metinlerini girebilir.
+- **Yalnızca varsayılan seçenekleri göster**: Kullanıcılar yalnızca yerleşik bir gerekçe seçebilir.
+- **Yalnızca özel metin kutusunu göster**: Kullanıcılar yalnızca kendi gerekçelerini girebilir. Son kullanıcı ilkesi ipucu bildiriminde yalnızca metin kutusu görünür. 
 
-##### <a name="customizing-the-options-in-the-drop-down-menu"></a>Açılan menüyü kullanarak seçenekleri özelleştirme
+##### <a name="customizing-the-options-in-the-drop-down-menu"></a>Açılan menüde seçenekleri özelleştirme
 
-Kullanıcıların İlke bildirimi ipucuyla etkileşimli çalışmalarında görünecek, En çok beş özelleştirilmiş seçenek oluşturmak için, **Seçenekleri özelleştir açılan menüsünü seçebilirsiniz**. 
+Kullanıcılar ilke bildirim ipucuyla etkileşime geçtiğinde seçenekleri **özelleştir açılan menüsünü** seçerek en fazla beş özelleştirilmiş seçenek oluşturabilirsiniz. 
 
 
-|Seçenek |Varsayılan metin  |
+|Seçeneği |Varsayılan metin  |
 |---------|---------|
-|1. seçenek    | **Bu, kurulmuş bir iş iş akışının bir parçasıdır**  veya özelleştirilmiş metin girebilirsiniz        |
-|2. seçenek  |**Yöneticim bu eylemi onayladı** veya özelleştirilmiş metin girebilirsiniz         |
-|3. seçenek   |**Acil erişim gerekiyor; Yöneticimi ayrıca bilgilendireceğiz veya** siz özelleştirilmiş bir metin girebilirsiniz          |
-|Hatalı pozitif sonuç seçeneğini göster     |**Bu dosyalarda yer alan bilgiler hassas değildir** veya özelleştirilmiş metin girebilirsiniz          |
-|5. seçenek    |**Diğer** veya özelleştirilmiş metin girebilirsiniz         |
+|seçenek 1    | **Bu, yerleşik bir iş iş akışının parçasıdır**  veya özelleştirilmiş metin girebilirsiniz        |
+|seçenek 2  |**Yöneticim bu eylemi onayladı** veya özelleştirilmiş metin girebilirsiniz         |
+|seçenek 3   |**Acil erişim gerekli; Yöneticimi ayrıca bilgilendireceğim** veya özelleştirilmiş metin girebilirsiniz          |
+|Hatalı pozitif seçeneği göster     |**Bu dosyalardaki bilgiler hassas değil** veya özelleştirilmiş metin girebilirsiniz          |
+|seçenek 5    |**Diğer** veya özelleştirilmiş metin girebilirsiniz         |
 
 ### <a name="always-audit-file-activity-for-devices"></a>Cihazlar için her zaman dosya etkinliğini denetleme
 
-Varsayılan olarak, cihazlar ekli olduğunda, Office, PDF ve CSV dosyalarıyla ilgili etkinlikler otomatik olarak denetlenr ve etkinlik gezgininde gözden geçirilebilir. Bu etkinliğin yalnızca, ekli cihazlar etkin bir ilkeye ekli olduğunda denetlenleni istemiyorsanız bu özelliği kapatın.
+Varsayılan olarak, cihazlar eklendiğinde Office, PDF ve CSV dosyalarına yönelik etkinlik otomatik olarak denetlenip etkinlik gezgininde gözden geçirilebilir. Bu etkinliğin yalnızca eklenen cihazlar etkin bir ilkeye dahil edildiğinde denetlenmesini istiyorsanız bu özelliği kapatın.
 
-Etkin bir ilkeye dahil olup olmadığına bakılmaksızın, dosya etkinliği her zaman ekli cihazlar için denetlenır.
+Dosya etkinliği, etkin bir ilkeye dahil olup olmadıklarına bakılmaksızın eklenen cihazlar için her zaman denetlenecektir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Uç nokta veri kaybını önleme hakkında bilgi](endpoint-dlp-learn-about.md)
-- [Uç nokta veri kaybını önlemeye başlama](endpoint-dlp-getting-started.md)
-- [Veri kaybını önleme hakkında bilgi](dlp-learn-about-dlp.md)
-- [DLP ilkesi oluşturma, sınama ve ayarlama](create-test-tune-dlp-policy.md)
-- [Etkinlik gezgini ile çalışmaya başlama](data-classification-activity-explorer.md)
+- [Uç nokta veri kaybı önleme hakkında daha fazla bilgi edinme](endpoint-dlp-learn-about.md)
+- [Uç noktada veri kaybı önlemeyi kullanmaya başlama](endpoint-dlp-getting-started.md)
+- [Veri kaybı önleme hakkında daha fazla bilgi edinme](dlp-learn-about-dlp.md)
+- [Bir DLP ilkesi oluşturma, test etme ve ayarlama](create-test-tune-dlp-policy.md)
+- [Etkinlik gezgini ile Kullanmaya başlayın](data-classification-activity-explorer.md)
 - [Uç Nokta için Microsoft Defender](/windows/security/threat-protection/)
-- [11 Windows 10 cihaz Windows cihaz ekleme ve cihaz ekleme Microsoft 365 genel bakış](/microsoft-365/compliance/device-onboarding-overview)
-- [Microsoft 365 aboneliği](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=1)
-- [Azure Active Directory (AAD) bir araya](/azure/active-directory/devices/concept-azure-ad-join)
-- [Temel Microsoft Edge yeni Chromium](https://support.microsoft.com/help/4501095/download-the-new-microsoft-edge-based-on-chromium)
-- [Varsayılan DLP ilkesiyle çalışmaya başlama](get-started-with-the-default-dlp-policy.md)
-- [Şablondan DLP ilkesi oluşturma](create-a-dlp-policy-from-a-template.md)
+- [Windows 10 ve Windows 11 cihazlarını Microsoft Purview'a eklemeye genel bakış](/microsoft-365/compliance/device-onboarding-overview)
+- [aboneliği Microsoft 365](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=1)
+- [Azure Active Directory (AAD) katıldı](/azure/active-directory/devices/concept-azure-ad-join)
+- [Chromium dayalı yeni Microsoft Edge indirme](https://support.microsoft.com/help/4501095/download-the-new-microsoft-edge-based-on-chromium)
+- [Varsayılan DLP ilkesini kullanmaya başlama](get-started-with-the-default-dlp-policy.md)
+- [Bir şablondan DLP ilkesi oluşturma](create-a-dlp-policy-from-a-template.md)

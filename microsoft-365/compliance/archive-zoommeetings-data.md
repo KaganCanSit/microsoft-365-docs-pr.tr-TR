@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Yöneticiler Veritas Zoom Toplantıları'ndan verileri Microsoft 365 içeri aktaracak ve arşivecek bir bağlayıcı ayarlayabilir. Bu, kuruluşunuzun üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilmeniz için üçüncü taraf veri kaynaklarından verileri Microsoft 365 arşivleyebilmenizi sağlar.
-ms.openlocfilehash: f8239b1c624712b1eafe0bdce7250143c80610a5
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: e31f6a4af31f150143ba5e44e57c198756547f93
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64934917"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64993304"
 ---
 # <a name="set-up-a-connector-to-archive-zoom-meetings-data"></a>Yakınlaştırma Toplantıları verilerini arşivleye bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına Verileri Yakınlaştırma Toplantılarından içeri aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında bir Veritas bağlayıcısı kullanın. Veritas, üçüncü taraf veri kaynağındaki öğeleri yakalamak (düzenli olarak) ve bu öğeleri Microsoft 365 aktarmak için yapılandırılmış bir [Yakınlaştırma Toplantıları](https://globanet.com/zoom/) bağlayıcısı sağlar. Bağlayıcı, toplantıların içeriğini (sohbetler, kaydedilen dosyalar ve meta veriler dahil) Yakınlaştırma Toplantıları hesabından e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'deki kullanıcı posta kutularına aktarır.
 

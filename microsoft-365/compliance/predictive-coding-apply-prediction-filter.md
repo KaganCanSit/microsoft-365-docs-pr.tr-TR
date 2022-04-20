@@ -14,14 +14,16 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: Tahmine dayalı kodlama modelinin ilgili veya ilgili olmadığı tahmin edilen öğeleri görüntülemek için tahmin puanı filtresi kullanın.
-ms.openlocfilehash: 261c77031eb0831db11878c2ce0c573eb3b9db6e
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: ab97c91196456b69f7f420ccd317747f638b4ee5
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64942303"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64993084"
 ---
 # <a name="apply-a-prediction-score-filter-to-a-review-set-preview"></a>Gözden geçirme kümesine tahmin puanı filtresi uygulama (önizleme)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview eKeşif'te (Premium) tahmine dayalı bir kodlama modeli oluşturduktan ve kararlı olduğu noktaya eğittikte, modelin belirlediği gözden geçirme kümesi öğelerini görüntülemek için tahmin puanı filtresini uygulayabilirsiniz (veya uygun değildir). Bir model oluşturduğunuzda, buna karşılık gelen tahmin puanı filtresi de oluşturulur. Bu filtreyi, belirtilen aralık içinde tahmin puanı atanmış öğeleri görüntülemek için kullanabilirsiniz. Genel olarak, **modelin** tahminde bulunduğu öğelere 0 ile **0,5** arasındaki tahmin puanları atanmamaktadır. **0,5** ile **1,0** arasında tahmin puanları atanan öğeler, modelin tahminde bulunduğu öğelerdir.
 
