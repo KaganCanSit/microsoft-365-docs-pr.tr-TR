@@ -1,5 +1,5 @@
 ---
-title: E-Advanced eDiscovery
+title: eBulma'da konuşmaları gözden geçirme (Premium)
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -15,103 +15,103 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Farklı gruplarda ve farklı gruplarda sohbet Advanced eDiscovery yeniden yapılandırma, gözden geçirme ve dışarı aktarma için Advanced eDiscovery sohbet sohbeti özelliği hakkında Microsoft Teams Yammer öğrenin.
+description: Microsoft Teams ve Yammer gruplarında sohbet konuşmalarını yeniden yapılandırmak, gözden geçirmek ve dışarı aktarmak için Microsoft Purview eBulma (Premium) (konuşma yazışması olarak adlandırılır) konuşma yeniden oluşturma özelliği hakkında bilgi edinin.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 7bd13bdb01298d0cf1f37671f044a3405a2de0b6
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 9bfd87de95449ab30b8a33c9f7f96db458e809d1
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63034259"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64950279"
 ---
-# <a name="conversation-threading-in-advanced-ediscovery"></a>Konuşma dizileri Advanced eDiscovery
+# <a name="conversation-threading-in-ediscovery-premium"></a>eBulma'da konuşma yazışması oluşturma (Premium)
 
-Anlık ileti, soru sormanın, fikir paylaşmanın veya büyük bir hedef kitleyle hızlı bir şekilde iletişim kurmanın kolay bir yolu. Microsoft Teams ve Yammer grupları gibi anlık ileti platformları kurumsal işbirliğinin temel bir özelliği haline geldi olarak, kuruluşların eBulma iş akışının bu yeni iletişim ve işbirliği biçimlerine nasıl adreslerini değerlendirmeleri gerekir.
+Anlık ileti, soru sormanın, fikir paylaşmanın veya büyük kitleler arasında hızlı bir şekilde iletişim kurmanın kullanışlı bir yoludur. Microsoft Teams ve Yammer grupları gibi anlık ileti platformları kurumsal işbirliğinin temeli haline geldikçe kuruluşların eBulma iş akışlarının bu yeni iletişim ve işbirliği biçimlerini nasıl ele alacağını değerlendirmesi gerekir.
 
-Web'de konuşma Advanced eDiscovery özelliği, bağlamsal içeriği tanımlamanıza ve farklı konuşma görünümleri üretmenize yardımcı olmak için tasarlanmıştır. Bu özellik, konuşma dizileri gibi platformlarda oluşturulan tam anlık ileti konuşmalarını (zincir konuşmalar olarak da *adlandırılan) verimli* ve hızlı bir şekilde Microsoft Teams.
+Microsoft Purview eKeşif'teki (Premium) konuşma yeniden yapılandırma özelliği, bağlamsal içeriği belirlemenize ve farklı konuşma görünümleri oluşturmanıza yardımcı olmak için tasarlanmıştır. Bu özellik, Microsoft Teams gibi platformlarda oluşturulan anlık ileti konuşmalarını (*yazışma konuşmaları* olarak da adlandırılır) verimli ve hızlı bir şekilde gözden geçirmenizi sağlar.
 
-Konuşma konuşmalarını yeniden can geçirmek, gözden geçirmek ve dışarı aktarmak için yerleşik özellikleri kullanabilirsiniz. Aşağıdaki Advanced eDiscovery görüşme için sohbet sohbeti sohbeti her zaman kullanın:
+Konuşma yeniden yapılandırma ile, iş parçacıklı konuşmaları yeniden yapılandırmak, gözden geçirmek ve dışarı aktarmak için yerleşik özellikleri kullanabilirsiniz. eBulma (Premium) konuşma yeniden derlemesini kullanarak:
 
-- Konuşma içindeki tüm iletilerde ileti düzeyinde benzersiz meta verileri koruma.
+- Konuşmadaki tüm iletilerde benzersiz ileti düzeyinde meta verileri koruma.
 
-- Arama sonuçlarınız çevresinde bağlamsal iletiler toplayın.
+- Arama sonuçlarınızın çevresinde bağlamsal iletiler toplayın.
 
-- Dizili konuşmaları gözden geçirme, açıklamalı açıklama ve açıklama ek açıklama.
+- Yazışma yazışmalarını gözden geçirin, açıklama ekleyin ve yeniden düzenleme yapın.
 
-- Tek tek iletileri veya ileti dizili konuşmaları dışarı aktarma
+- Tek tek iletileri veya yazışma konuşmalarını dışarı aktarma
 
 ## <a name="terminology"></a>Terminoloji
 
-Konuşma konuşma konuşmalarını kullanmaya başlamanıza yardımcı olacak birkaç tanım:
+Konuşma yeniden yapılandırmayı kullanmaya başlamanıza yardımcı olacak birkaç tanım aşağıdadır.
 
-- **İletiler:** Konuşmanın en küçük birimini temsil etme. İletilerin boyutu, yapısı ve meta verileri farklılık gösterebilir.
+- **Ileti:** Konuşmanın en küçük birimini temsil edin. İletilerin boyutu, yapısı ve meta verileri farklılık gösterebilir.
 
-- **Görüşme:** Bir veya birden çok ileti grubunu temsil eder. Farklı uygulamalarda konuşmalar farklı şekillerde temsil edildi olabilir. Bazı uygulamalarda, var olan bir iletiyi yanıtlamaya neden olan açık bir eylem vardır. Bu kullanıcı eyleminin sonucunda konuşmalar açıkça oluşturulur. Örneğin, bu videoda kanal konuşmalarının ekran Microsoft Teams.
+- **Konuşma:** Bir veya daha fazla iletinin gruplandırma işlemini temsil eder. Farklı uygulamalarda konuşmalar farklı şekillerde gösterilebilir. Bazı uygulamalarda, var olan bir iletiyi yanıtlamaktan kaynaklanan açık bir eylem vardır. Konuşmalar, bu kullanıcı eyleminin bir sonucu olarak açıkça oluşturulur. Örneğin, Microsoft Teams'daki kanal konuşmasının ekran görüntüsü aşağıda verilmiştir.
 
-   ![Microsoft Teams Konuşmayı Seçin.](../media/threadedchat.png)
+   ![kanal konuşma Microsoft Teams.](../media/threadedchat.png)
 
-   Diğer uygulamalarda (Teams'ta grup sohbeti iletileri gibi), resmi bir yanıt zinciri değildir ve bunun yerine iletiler tek bir zincir içinde "iletilerin düz bir nehri" olarak görünür. Bu tür uygulamalarda, konuşmalar belirli bir süre içinde oluşan bir grup iletiden çıkar. İletilerin "yumuşak gruplama" olması (yanıt zincirinin aksine) belirli bir ilgi konusuyla ilgili "ileri ve geri" konuşmalarını temsil etme.
+   Diğer uygulamalarda (Teams grup sohbeti iletileri gibi), resmi bir yanıt zinciri yoktur ve bunun yerine iletiler tek bir yazışma içinde "iletilerin düz nehri" olarak görünür. Bu tür uygulamalarda, konuşmalar belirli bir süre içinde gerçekleşen bir ileti grubundan çıkarılır. İletilerin bu "geçici gruplandırılması" (yanıt zincirinin aksine) belirli bir ilgi konusuyla ilgili "ileri geri" konuşmayı temsil eder.
 
-## <a name="step-1-create-a-draft-collection"></a>1. Adım: Taslak koleksiyonu oluşturma
+## <a name="step-1-create-a-draft-collection"></a>1. Adım: Taslak koleksiyon oluşturma
 
-İlgili koruyucuları ve içerik konumlarını belirledikten sonra, olası ilgili içeriği bulmak için bir arama oluşturabilirsiniz. Koleksiyonlar **sekmesinin** Koleksiyonlar Advanced eDiscovery, Yeni koleksiyon'a tıklar ve sihirbazı **takip eden bir** koleksiyon oluşturabilirsiniz. Koleksiyon oluşturma, arama sorgusu oluşturma ve arama sonuçlarını önizleme hakkında bilgi için bkz. [Taslak koleksiyonu oluşturma](create-draft-collection.md).
+İlgili koruyucuları ve içerik konumlarını belirledikten sonra, uygun olabilecek içeriği bulmak için bir arama oluşturabilirsiniz. eBulma (Premium) örneğindeki **Koleksiyonlar** sekmesinde, Yeni koleksiyon'a tıklayıp sihirbazı izleyerek bir **koleksiyon** oluşturabilirsiniz. Koleksiyon oluşturma, arama sorgusu oluşturma ve arama sonuçlarını önizleme hakkında bilgi için bkz. [Taslak koleksiyonu oluşturma](create-draft-collection.md).
 
-## <a name="step-2-commit-a-draft-collection-to-a-review-set"></a>2. Adım: Taslak koleksiyonunu gözden geçirme kümesine kaydetme
+## <a name="step-2-commit-a-draft-collection-to-a-review-set"></a>2. Adım: Taslak koleksiyonu gözden geçirme kümesine işleme
 
-Koleksiyonda arama sorgusunu gözden geçirdikten ve son olarak tamamladikten sonra, arama sonuçlarını gözden geçirme kümesine  eklersiniz. Arama sonuçlarınızı gözden geçirme kümesine eklerken, gözden geçirme ve çözümleme işlemini kolaylaştırmak için özgün veriler bir Azure Depolama alanına kopyalanır. Gözden geçirme kümesine arama sonuçları ekleme hakkında daha fazla bilgi için bkz [. Taslak koleksiyonunu gözden geçirme kümesine kaydetme](commit-draft-collection.md).
+Bir koleksiyondaki arama sorgusunu gözden geçirip son haline getirdikten sonra, arama sonuçlarını bir gözden geçirme kümesine ekleyebilirsiniz. Arama sonuçlarınızı bir gözden geçirme kümesine eklediğinizde, inceleme ve analiz sürecini kolaylaştırmak için özgün veriler bir Azure Depolama alanına kopyalanır. Gözden geçirme kümesine arama sonuçları ekleme hakkında daha fazla bilgi için bkz. Gözden [geçirme kümesine taslak koleksiyonu işleme](commit-draft-collection.md).
 
-Konuşmalardan gözden geçirme kümesine öğe eklerken, koleksiyondaki arama ölçütlerine uyan öğeler içeren konuşmalardan bağlamsal iletileri toplamak için zincirsel konuşmalar seçeneğini kullanabilirsiniz. Dizi konuşmaları seçeneğini kullandıktan sonra, aşağıdaki şeyler olabilir:
+Konuşmalardan bir gözden geçirme kümesine öğe eklediğinizde, koleksiyonun arama ölçütlerine uyan öğeleri içeren konuşmalardan bağlamsal iletileri toplamak için yazışmalı konuşmalar seçeneğini kullanabilirsiniz. Yazışma konuşmaları seçeneğini seçtikten sonra aşağıdaki işlemler yapılabilir:
 
   ![Konuşma Alma.](../media/messagesandconversations.png)
 
-1. Anahtar sözcük ve tarih aralığı sorgusu kullanarak, arama İleti *3'te bir arama verdi*. Bu ileti, CRC1 tarafından gösterilen daha büyük bir *konuşmanın parçası oldu*.
+1. Anahtar sözcük ve tarih aralığı sorgusu kullanıldığında, arama *İleti 3'te* bir isabet döndürdü. Bu ileti, *CRC1* tarafından gösterilen daha büyük bir konuşmanın parçasıydı.
 
-2. Verileri bir gözden geçirme kümesine ekler ve konuşma alma seçeneklerini etkinleştirirken, *Advanced eDiscovery CRC1'de* geri dönüp diğer öğeleri toplar.
+2. Verileri bir gözden geçirme kümesine eklediğinizde ve konuşma alma seçeneklerini etkinleştirdiğinizde, eBulma (Premium) geri döner ve *CRC1'deki* diğer öğeleri toplar.
 
-3. Öğeler gözden geçirme kümesine eklendikten sonra, *CRC1'den* tek tek tüm iletileri gözden geçirebilirsiniz.
+3. Öğeler gözden geçirme kümesine eklendikten sonra *CRC1'den* gelen tüm iletileri tek tek gözden geçirebilirsiniz.
 
-Zincirli görüşmeler seçeneğini etkinleştirmek için bkz. [Taslak koleksiyonunu gözden geçirme kümesine kaydetme](commit-draft-collection.md#commit-a-draft-collection-to-a-review-set).
+Yazışmalı konuşmalar seçeneğini etkinleştirmek için bkz [. Taslak koleksiyonu gözden geçirme kümesine işleme](commit-draft-collection.md#commit-a-draft-collection-to-a-review-set).
 
-## <a name="step-3-review-and-export-threaded-conversations"></a>3. Adım: Dizi konuşmalarını gözden geçirme ve dışarı aktarma
+## <a name="step-3-review-and-export-threaded-conversations"></a>3. Adım: Yazışma yazışmalarını gözden geçirme ve dışarı aktarma
 
-İçerik işlendikten ve gözden geçirme kümesine eklendikten sonra, gözden geçirme kümesinde verileri gözden geçirmeye başlayabilirsiniz. Tek tek iletiler bir araya konur ve konuşmalar olarak gösterir. Bu, bağlamsal konuşmaları gözden geçirmenizi ve dışarı aktarmanız için olanak sağlar.
+İçerik işlenip gözden geçirme kümesine eklendikten sonra, gözden geçirme kümesindeki verileri gözden geçirmeye başlayabilirsiniz. Tek tek iletiler birlikte oluşturulur ve konuşma olarak sunulur. Bu, bağlamsal konuşmaları gözden geçirmenize ve dışarı aktarmanıza olanak tanır.
 
   ![Konuşma gözden geçirme kümesi.](../media/ConversationRSOptions.PNG)
 
-Aşağıdaki bölümlerde, konuşmaları gözden geçirme ve dışarı aktarma açıklanmaktadır.
+Aşağıdaki bölümlerde konuşmaları gözden geçirme ve dışarı aktarma işlemleri açıklanmaktadır.
 
 ### <a name="reviewing-conversations"></a>Konuşmaları gözden geçirme
 
 Gözden geçirme kümesinde, gözden geçirme işlemini kolaylaştırmak için aşağıdaki seçenekleri kullanabilirsiniz.
 
-- **Konuşmaya göre grupla:** Aynı konuşma içindeki iletileri, kullanıcıların gözden geçirme sürecini basitleştirmelerine ve kolaylaştırmalarına yardımcı olmak için grup halinde gruptur.
+- **Konuşmaya göre gruplandır:** Kullanıcıların gözden geçirme sürecini basitleştirmesine ve hızlandırmasına yardımcı olmak için iletileri aynı konuşma içinde birlikte gruplandırın.
 
-- **Özet görünümü:** Dizili konuşmayı görüntüler. Bu görünümde, konuşmanın tamamını görebilir ve her iletinin meta verilerine erişebilirsiniz.
+- **Özet görünümü:** Yazışma yazışmasını görüntüler. Bu görünümde konuşmanın tamamını görebilir ve her iletinin meta verilerine erişebilirsiniz.
 
-   - Tek tek iletilerin meta verilerini görüntüleme
+   - Tek tek iletiler için meta verileri görüntüleme
 
    - Tek tek iletileri indirme
 
-- **Metin görünümü:** Tüm konuşma için ayıklanan metni sağlar.
+- **Metin görünümü:** Konuşmanın tamamı için ayıklanan metni sağlar.
 
-- **Ek Açıklama görünümü:** Konuşmanın zincirleme görünümünü işaretlemenizi sağlar. Konuşmada yer alan tüm iletiler aynı açıklamalı belgeyi paylaşır.
+- **Görünüme açıklama ekleme:** Konuşmanın yazışma görünümünü işaretlemenize olanak tanır. Konuşmadaki tüm iletiler aynı açıklama eklenmiş belgeyi paylaşır.
 
-- **Etiketleme:** Bir gözden geçirme kümesinde konuşmaları görüntülerken, Kodlama panelinde Etiketleme **paneline tıklayarak etiketleri görüntüleyebilirsiniz** ve uygulayabilirsiniz.
+- **Etiketleme:** Bir gözden geçirme kümesindeki konuşmaları görüntülerken, Kodlama **panelinde Etiketleme paneli'ne** tıklayarak etiketleri görüntüleyebilir ve uygulayabilirsiniz.
 
-- **Konuşma dönüştürmeyi yeniden çalıştırma:** İletiler konuşma gözden geçirme kümesine eklenmiştir ve bu konuşma özetini oluşturmak ve ek açıklama görünümlerini oluşturmak için otomatik olarak bir dönüştürme işi çalışır. Konuşma Görevi Başarısız Olursa, gözden geçirme kümesinde Eylem Pdf'leri oluşturma'ya **>** bu işi yeniden çalıştırabilirsiniz.
+- **Konuşma dönüştürmeyi yeniden çalıştırma:** İletiler konuşma gözden geçirme kümesine eklendiğinde, yazışma özetini oluşturmak ve görünümlere açıklama eklemek için otomatik olarak bir dönüştürme işi çalıştırılır. Konuşma Yeniden Yapılandırma işi başarısız olursa, gözden geçirme kümesinde **Eylem > Konuşma PDF'leri oluştur'a** tıklayarak bu işi yeniden çalıştırabilirsiniz.
 
 ### <a name="exporting-conversations"></a>Konuşmaları dışarı aktarma
 
-Gözden geçirme kümesinden konuşmaları dışarı aktararak seçebilirsiniz seçenekler için bkz. [Gözden geçirme kümesinden belgeleri dışarı aktarma](export-documents-from-review-set.md#export-options).
+Gözden geçirme kümesinden konuşmaları dışarı aktarırken seçebileceğiniz seçenekler için bkz. [Belgeleri gözden geçirme kümesinden dışarı aktarma](export-documents-from-review-set.md#export-options).
 
-Özel olarak, sohbet konuşmaların tamamını tek bir PDF dosyasında dışarı aktarabilirsiniz veya bir konuşmada yer alan her sohbet mesajını tek bir dosya olarak dışarı aktarabilirsiniz.
+Özel olarak, sohbet konuşmalarının tamamını tek bir PDF dosyasında dışarı aktarabilir veya konuşmadaki her sohbet iletisini tek bir dosya olarak dışarı aktarabilirsiniz.
 
 ## <a name="more-information"></a>Daha fazla bilgi
 
-Aynı dosyada büyük/yeni olay verilerini gözden geçirme hakkında Advanced eDiscovery aşağıdaki makalelere bakın:
+eBulma'da (Premium) büyük/küçük harf verilerini gözden geçirme hakkında daha fazla bilgi edinmek için aşağıdaki makalelere bakın:
 
-- [Gözden geçirme kümesinde içeriği sorgulama ve filtreleme](review-set-search.md)
-- [Gözden geçirme kümesinde belgeleri etiketleme](tagging-documents.md)
-- [Vaka verilerini görüntüleme](view-documents-in-review-set.md)
-- [Vaka verilerini çözümleme](analyzing-data-in-review-set.md)
-- [Vaka verilerini dışarı aktarma](exporting-data-ediscover20.md)
+- [Bir inceleme setindeki içeriği sorgulama ve filtreleme](review-set-search.md)
+- [Bir inceleme setindeki belgeleri etiketleme](tagging-documents.md)
+- [Büyük/küçük harf verilerini görüntüleme](view-documents-in-review-set.md)
+- [Servis talebi verilerini analiz etme](analyzing-data-in-review-set.md)
+- [Servis talebi verilerini dışarı aktarma](exporting-data-ediscover20.md)

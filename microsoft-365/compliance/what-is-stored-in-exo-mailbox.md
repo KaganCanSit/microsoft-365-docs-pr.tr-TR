@@ -1,5 +1,5 @@
 ---
-title: Posta kutularında Exchange Online içerik
+title: Exchange Online posta kutularında depolanan içerik
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -15,19 +15,19 @@ search.appverid:
 - MED150
 - MET150
 ms.assetid: ''
-description: Buluttaki bulut tabanlı uygulamalar tarafından üretilen Microsoft 365, bir kullanıcının kendi posta kutusuyla depolanır Exchange Online ilişkilendirilz. Bu içerikte, Microsoft eBulma araçları kullanılarak arama kullanılabilir.
-ms.openlocfilehash: f7db327d21928df925bfd6451226ab96782d715b
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Microsoft 365'da bulut tabanlı uygulamalar tarafından üretilen içerik, kullanıcının Exchange Online posta kutusuyla depolanır veya ilişkilendirilir. Bu içerik Microsoft eBulma araçları kullanılarak aranabilir.
+ms.openlocfilehash: b37295783883d689acc34dbff88e5a94186eb4a6
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62986484"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64947857"
 ---
-# <a name="content-stored-in-exchange-online-mailboxes-for-ediscovery"></a>eBulma için Exchange Online kutularında depolanan içerik
+# <a name="content-stored-in-exchange-online-mailboxes-for-ediscovery"></a>eBulma için Exchange Online posta kutularında depolanan içerik
 
-E-posta Exchange Online posta kutusu öncelikle iletiler, takvim öğeleri, görevler ve notlar gibi e-postayla ilgili öğeleri depolamak için kullanılır. Ancak daha fazla bulut tabanlı uygulama da verilerini kullanıcının posta kutusunda depolayana kadar değişir. Verileri bir posta kutusunda depolamanın bir avantajı, bu bulut tabanlı uygulamalardan verileri bulmak, görüntülemek ve dışarı aktarmak için içerik arama, Core eKbulma ve Advanced eDiscovery'daki arama araçlarını kullan biliyor olmaktır. Bu uygulamalardan bazılarına gelen veriler, posta kutusunun kişiler arası olmayan (IPM olmayan) alt ağaçlarında bulunan gizli klasörlerde depolanır. Diğer bulut tabanlı uygulamalardan veriler posta kutusunda depolanmaz,  ancak posta kutusuyla ilişkilendirilmiştir ve aramalarda döndürülür (bu veriler arama sorgusuyla eşlerise). Bulut tabanlı verilerin bir kullanıcı posta kutusunda depolanmış veya kullanıcı posta kutusuyla ilişkilendirilmiş olup olmadığı bakılmaksızın, kullanıcı posta kutusunu açtığında veriler normalde e-posta istemcisinde görünmez.
+Exchange Online'deki posta kutusu öncelikli olarak iletiler, takvim öğeleri, görevler ve notlar gibi e-postayla ilgili öğeleri depolamak için kullanılır. Ancak daha fazla bulut tabanlı uygulama verilerini kullanıcının posta kutusunda depoladıkça bu durum değişir. Verileri posta kutusunda depolamanın avantajlarından biri, bu bulut tabanlı uygulamalardan verileri bulmak, görüntülemek ve dışarı aktarmak için içerik arama, Microsoft Purview eKeşif (Standart) ve Microsoft Purview eKeşif (Premium) içindeki arama araçlarını kullanabilmenizdir. Bu uygulamalardan bazılarına ait veriler, posta kutusunda kişiler arası olmayan bir ileti (IPM olmayan) alt ağaçta bulunan gizli klasörlerde depolanır. Diğer bulut tabanlı uygulamalardan gelen veriler posta _kutusunda depolanmayabilir_ , ancak posta _kutusuyla ilişkilendirilir_ ve aramalarda döndürülür (bu veriler arama sorgusuyla eşleşiyorsa). Bulut tabanlı verilerin bir kullanıcı posta kutusunda depolanıp depolanmadığına veya kullanıcı posta kutusuyla ilişkilendirilip ilişkilendirilmediğine bakılmaksızın, kullanıcı posta kutusunu açtığında veriler genellikle e-posta istemcisinde görünmez.
 
-Aşağıdaki tabloda, verileri bulut tabanlı bir posta kutusuyla depoleyen veya ilişkilendiren uygulamalar listeledir. Tabloda ayrıca, her uygulamanın ürettiği içerik türü de açık almaktadır.
+Aşağıdaki tabloda verileri depolayan veya bulut tabanlı bir posta kutusuyla ilişkilendiren uygulamalar listelenir. Tabloda, her uygulamanın ürettiği içerik türü de açıklanır.
 
 <br>
 
@@ -35,18 +35,18 @@ Aşağıdaki tabloda, verileri bulut tabanlı bir posta kutusuyla depoleyen veya
 
 |Microsoft 365 uygulaması|Açıklama|
 |---|---|
-|Formlar<sup>*</sup>|Formlar ve forma verilen yanıtlar, e-posta iletilerine ekli olan ve formu oluşturan kullanıcının posta kutusunda gizli bir klasörde depolanan dosyalarda depolanır. Nisan 2020'den önce oluşturulan formlar PDF dosyası olarak depolanır. 2020'den sonra oluşturulan formlar JSON dosyası olarak depolanır. Forma verilen yanıtlar bir CSV dosyasında depolanır. Bir PST dosyasındaki Forms'dan içerik aktarıyorsanız, bu veriler **ApplicationDataRoot** klasöründe, aşağıdaki genel benzersiz tanımlanan (GUID) adlı bir alt klasörde yer almaktadır: **c9a559d2-7aab-4f13-a6ed-e7e9c52aec87**.|
-|Microsoft 365 Grupları|E-posta iletileri, takvim öğeleri, kişiler (Kişiler), notlar ve görevler bir Grupla ilişkilendirilmiş posta Microsoft 365 depolanır.|
+|Forms<sup>*</sup>|Formlar ve bir forma verilen yanıtlar, e-posta iletilerine eklenmiş dosyalarda depolanır ve formu oluşturan kullanıcının posta kutusundaki gizli bir klasörde depolanır. Nisan 2020'de oluşturulan formlar PDF dosyası olarak depolanır. 2020'nin ardından oluşturulan formlar JSON dosyası olarak depolanır. Bir forma verilen yanıtlar CSV dosyasında depolanır. Bir PST dosyasındaki Formlardan içeriği dışarı aktardığınızda, bu veriler **applicationdataroot** klasöründe aşağıdaki genel olarak benzersiz olarak tanımlanan (GUID) adlı bir alt klasörde bulunur: **c9a559d2-7aab-4f13-a6ed-e7e9c52aec87**.|
+|Microsoft 365 Grupları|E-posta iletileri, takvim öğeleri, kişiler (Kişiler), notlar ve görevler Microsoft 365 grubuyla ilişkili posta kutusunda depolanır.|
 |Outlook/Exchange Online|E-posta iletileri, takvim öğeleri, kişiler (Kişiler), notlar ve görevler kullanıcının posta kutusunda depolanır.|
-|Kişiler|Kişiler uygulamasındaki kişiler (bu kişiler Outlook'da erişilebilenler ile aynı kişiler) kullanıcının posta kutusunda depolanır.|
-|Ders Programı|Sınıf Zamanlama'da oluşturulan planlar, yeni bir plan oluşturulduğunda Microsoft 365 Ilgili Grup Grubunun posta kutusunda depolanır. Grup posta kutusunun diğer adı, planın adıdır.|
-|Skype Kurumsal|Yeni Skype Kurumsal konuşmalar, kullanıcının posta kutusunun Konuşma Geçmişi klasöründe depolanır. Bir toplantı katılımcısı olan bir Skype posta kutusu Mahkeme Tutma'ya yerleştirilirse veya bir bekletme ilkesine atanmışsa, toplantıya ekli dosyalar katılımcılar posta kutusunda korunur.|
-|Sway<sup>*</sup>|Sway, e-posta iletisine eklenmiş bir HTML dosyası olarak depolanır ve sway'i oluşturan kullanıcının posta kutusunda gizli bir klasörde depolanır. Sway'den bir PST dosyasına içerik aktarıyorsanız, bu veriler **ApplicationDataRoot** klasöründe, şu GUID ile adlandırılmış bir alt klasörde yer alır: **905fcf26-4eb7-48a0-9ff0-8dcc7194b5ba**.|
-|Görevler|Görevler uygulamasındaki görevler (bu görevler posta kutusunda erişilebilen görevlerle Outlook) kullanıcının posta kutusunda depolanır.|
-|Teams|Bir posta kutusunun parçası olan Teams konuşmalar, posta kutunuzla Teams ilişkilendirilz. Teams'ta Sohbet listesinin parçası olan konuşmalar (*1 x N* sohbetler olarak da adlandırılan) sohbete katılan kullanıcıların posta kutusuyla ilişkilendirilz. Ayrıca, bir kanalda yapılan toplantılar ve Teams özet bilgileri, toplantıyı veya aramayı arayarak bağlanılan kullanıcıların posta kutularıyla ilişkilendirilz. Bu nedenle, Teams kutusunda kanal konuşmalarında içerik için Teams kutusunda ve kullanıcı posta kutularında 1 x N sohbetlerde içerik için aramanız gerekir.|
-|To-Do|To-Do uygulamasındaki görevler (yapılacaklar listesinde kayıtlı olan yapılacaklar görevleri) kullanıcının posta kutusunda depolanır.|
-|Yammer|bir Yammer topluluğu içindeki konuşmalar ve yorumlar, hem Microsoft 365 Grubu posta kutusuyla hem de yazarın ve adlandırılmış alıcıların (@ bahsedilen veya Bilgi'ye sahip kullanıcılar) kullanıcı posta kutusuyla ilişkilendirilmiştir. Bir Yammer dışındaki özel iletiler, özel iletiye katılan kullanıcıların posta kutusunda depolanır.|
+|Insanlar|Kişiler uygulamasındaki kişiler (Outlook'da erişilebilen kişilerle aynı kişiler) kullanıcının posta kutusunda depolanır.|
+|Sınıf Zamanlaması|Sınıf Zamanlaması'nda oluşturulan planlar, yeni bir plan oluşturulduğunda sağlanan ilgili Microsoft 365 Grubunun posta kutusunda depolanır. Grup posta kutusunun diğer adı planın adıdır.|
+|Skype Kurumsal|Skype Kurumsal konuşmaları kullanıcının posta kutusunda Konuşma Geçmişi klasöründe depolanır. Skype toplantı katılımcısının posta kutusu Dava Tutma'ya yerleştirilirse veya bekletme ilkesine atanırsa, toplantıya eklenen dosyalar katılımcıların posta kutusunda tutulur.|
+|Sway<sup>*</sup>|Sway tuvalleri, e-posta iletisine eklenmiş bir HTML dosyası olarak depolanır ve sway'i oluşturan kullanıcının posta kutusunda gizli bir klasörde depolanır. PST dosyasındaki Sway içeriği dışarı aktardığınızda, bu veriler **ApplicationDataRoot** klasöründe şu GUID ile adlandırılan bir alt klasörde bulunur: **905fcf26-4eb7-48a0-9ff0-8dcc7194b5ba**.|
+|Görevler|Görevler uygulamasındaki görevler (Outlook erişilebilir görevlerle aynıdır) kullanıcının posta kutusunda depolanır.|
+|Teams|Teams kanalının parçası olan konuşmalar Teams posta kutusuyla ilişkilendirilir. Teams'daki Sohbet listesinin bir parçası olan *konuşmalar (1 x N sohbet olarak* da adlandırılır) sohbete katılan kullanıcıların posta kutusuyla ilişkilendirilir. Ayrıca, bir Teams kanalındaki toplantılar ve aramalar için özet bilgiler, toplantıya veya aramaya arayarak bağlanan kullanıcıların posta kutularıyla ilişkilendirilir. Bu nedenle, Teams içerik ararken, Teams posta kutusunda kanal konuşmalarındaki içeriği arar ve kullanıcı posta kutularında 1 x N sohbette içerik ararsınız.|
+|To-Do|To-Do uygulamasındaki görevler (yapılacaklar listelerine kaydedilen *yapılacaklar* olarak adlandırılır) kullanıcının posta kutusunda depolanır.|
+|Yammer|Yammer topluluğundaki konuşmalar ve açıklamalar, Microsoft 365 Grubu posta kutusunun yanı sıra yazarın ve adlandırılmış alıcıların (@ bahsedilen veya Bilgi'ed kullanıcılar) kullanıcı posta kutusuyla ilişkilendirilir. Yammer topluluğunun dışına gönderilen özel iletiler, özel iletiye katılan kullanıcıların posta kutusunda depolanır.|
 |
 
 > [!NOTE]
-> <sup>*</sup>Şu anda, bir posta kutusuna yerinde tutma yerleştirilirse (Core eDiscovery veya Advanced eDiscovery durumlarda 10 ayrı tutma kullanılarak), bu uygulamanın içeriği yerinde tutma tarafından korunmaz.
+> <sup>*</sup>Şu anda, bir posta kutusuna bir ayrı tutma yerleştirilirse (eBulma (Standart) veya eBulma (Premium) durumlarında ayrı tutmalar kullanılarak), bu uygulamadaki içerik ayrı tutma tarafından korunmaz.

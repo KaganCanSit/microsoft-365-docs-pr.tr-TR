@@ -15,21 +15,21 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
 description: Yöneticiler, çalışan verilerini kuruluşlarının insan kaynakları (İk) sisteminden Microsoft 365 aktarmak için bir veri bağlayıcısı ayarlayabilir. Bu, kuruluşunuz için iç tehdit oluşturabilecek belirli kullanıcıların etkinliklerini algılamanıza yardımcı olmak için şirket içi risk yönetimi ilkelerinde İk verilerini kullanmanıza olanak tanır.
-ms.openlocfilehash: af7af189e97f4e56f8a8a96d2ff2ebfb5788a0c3
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: e1539661c987de8642639df777602fbcf05bdcc4
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64762045"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64944821"
 ---
 # <a name="set-up-a-connector-to-import-hr-data"></a>İk verilerini içeri aktarmak için bağlayıcı ayarlama
 
-kullanıcının istifası veya kullanıcının iş düzeyindeki bir değişiklik gibi olaylarla ilgili insan kaynakları (İk) verilerini içeri aktarmak için Microsoft 365 uyumluluk merkezi bir veri bağlayıcısı ayarlayabilirsiniz. daha sonra İk verileri, kuruluşunuzdaki kullanıcılar tarafından olası kötü amaçlı etkinlikleri veya veri hırsızlığını tanımlamanıza yardımcı olabilecek risk göstergeleri oluşturmak için [insider risk yönetimi çözümü](insider-risk-management.md) tarafından kullanılabilir.
+Kullanıcının istifası veya kullanıcının iş düzeyindeki bir değişiklik gibi olaylarla ilgili insan kaynakları (İk) verilerini içeri aktarmak için Microsoft Purview uyumluluk portalında bir veri bağlayıcısı ayarlayabilirsiniz. daha sonra İk verileri, kuruluşunuzdaki kullanıcılar tarafından olası kötü amaçlı etkinlikleri veya veri hırsızlığını tanımlamanıza yardımcı olabilecek risk göstergeleri oluşturmak için [insider risk yönetimi çözümü](insider-risk-management.md) tarafından kullanılabilir.
 
-Insider risk yönetimi ilkelerinin risk göstergeleri oluşturmak için kullanabileceği İk verileri için bağlayıcı ayarlamak, İk verilerini içeren bir CSV dosyası oluşturmak, kimlik doğrulaması için kullanılan Azure Active Directory bir uygulama oluşturmak, Microsoft 365 uyumluluk merkezi bir İk veri bağlayıcısı oluşturmaktır ve ardından CSV dosyalarındaki İk verilerini Microsoft buluta alan bir betiği (zamanlanmış olarak) çalıştırarak insider risk yönetimi çözümünün kullanımına sunulmasını sağlayın.
+Insider risk yönetimi ilkelerinin risk göstergeleri oluşturmak için kullanabileceği İk verileri için bağlayıcı ayarlamak, İk verilerini içeren bir CSV dosyası oluşturmak, kimlik doğrulaması için kullanılan Azure Active Directory'de bir uygulama oluşturmak, uyumluluk portalında İk veri bağlayıcısı oluşturmak ve ardından İK verilerini CSV dosyalarına alan bir betiğin (zamanlanmış olarak) Microsoft bulutunda kullanılabilir olması için çalıştırılmasından oluşur  öğesini insider risk yönetimi çözümüne ekleyin.
 
 > [!IMPORTANT]
-> İk bağlayıcısının yeni bir sürümü artık genel önizleme için kullanılabilir. Yeni bir İk bağlayıcısı oluşturmak veya iç risk yönetimine yönelik sağlık ilkesi [senaryosuna yönelik yeni çalışan profili senaryosuna](#csv-file-for-employee-profile-data-preview) yönelik verileri içeri aktarmak için, Microsoft 365 uyumluluk merkezi **Veri bağlayıcıları** sayfasına gidin, **Bağlayıcılar** sekmesini seçin ve ardından kurulumu başlatmak için **İk > bağlayıcı ekle (önizleme)** seçeneğine tıklayın. Mevcut İk bağlayıcıları herhangi bir kesinti olmadan çalışmaya devam edecektir.
+> İk bağlayıcısının yeni bir sürümü artık genel önizleme için kullanılabilir. Yeni bir İk bağlayıcısı oluşturmak veya iç risk yönetimine yönelik sağlık ilkesi [senaryosuna yönelik yeni çalışan profili senaryosuna](#csv-file-for-employee-profile-data-preview) yönelik verileri içeri aktarmak için uyumluluk portalındaki **Veri bağlayıcıları** sayfasına gidin, **Bağlayıcılar** sekmesini seçin ve ardından kurulumu başlatmak için **İk > bağlayıcı ekle (önizleme)** seçeneğine tıklayın. Mevcut İk bağlayıcıları herhangi bir kesinti olmadan çalışmaya devam edecektir.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
@@ -37,11 +37,11 @@ Insider risk yönetimi ilkelerinin risk göstergeleri oluşturmak için kullanab
 
 - Kuruluşunuzun İk sisteminden (ve düzenli olarak) verilerin nasıl alınacağını veya dışarı aktarıldığını belirleyin ve 1. Adımda oluşturduğunuz CSV dosyalarına ekleyin. 4. Adımda çalıştırdığınız betik, CSV dosyalarındaki İk verilerini Microsoft buluta yükler.
 
-- 3. Adımda İk bağlayıcısını oluşturan kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, Microsoft 365 uyumluluk merkezi **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için, [Microsoft 365 uyumluluk merkezi İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
+- 3. Adımda İk bağlayıcısını oluşturan kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için [Microsoft Purview uyumluluk portalındaki İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
 - 4. Adımda çalıştırdığınız örnek betik, İk verilerinizi Microsoft buluta yükleyerek insider risk yönetimi çözümü tarafından kullanılabilmesini sağlar. Bu örnek betik, herhangi bir Microsoft standart destek programı veya hizmeti altında desteklenmez. Örnek betik, herhangi bir garanti olmadan OLDUĞU GIBI sağlanır. Microsoft, satılabilirlik veya belirli bir amaca uygunlukla ilgili zımni garantiler dahil ancak bunlarla sınırlı olmaksızın tüm zımni garantileri de reddeder. Örnek betiğin ve belgelerin kullanımından veya performansından kaynaklanan tüm risk sizinle kalır. Hiçbir durumda Microsoft, yazarları veya betiklerin oluşturulması, üretimi veya teslimi ile ilgili herhangi bir kişi, örnek betiklerin veya belgelerin kullanımından veya kullanılamama durumundan kaynaklanan herhangi bir zarardan (bunlarla sınırlı olmaksızın, iş kârı kaybı, iş kesintisi, iş bilgisi kaybı veya diğer maddi kayıplar dahil) sorumlu tutulamaz,  Microsoft'a bu tür hasarlar olabileceği bildirilmiş olsa bile.
 
-- Bu bağlayıcı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda kullanılabilir. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerinin Microsoft 365 altyapısının dışındaki üçüncü taraf sistemlerde depolanmasını, iletilmesini ve işlenmesini içerebilir ve bu nedenle Microsoft 365 uyumluluk ve veri koruma taahhütleri kapsamında değildir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir. GCC bir ortamda İk bağlayıcısı ayarlamaya yönelik adım adım yönergeler için bkz. [US Government'da İk verilerini içeri aktarmak için bağlayıcı ayarlama](import-hr-data-US-government.md).
+- Bu bağlayıcı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda kullanılabilir. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerinin Microsoft 365 altyapısı dışında olan ve bu nedenle Microsoft Purview ve veri koruma taahhütleri kapsamında olmayan üçüncü taraf sistemlerde depolanmasını, iletilmesini ve işlenmesini içerebilir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir. GCC bir ortamda İk bağlayıcısı ayarlamaya yönelik adım adım yönergeler için bkz. [US Government'da İk verilerini içeri aktarmak için bağlayıcı ayarlama](import-hr-data-US-government.md).
 
 ## <a name="step-1-prepare-a-csv-file-with-your-hr-data"></a>1. Adım: İk verilerinizle csv dosyası hazırlama
 
@@ -167,7 +167,7 @@ Aşağıdaki tabloda, performans gözden geçirme verileri için CSV dosyasında
 ### <a name="csv-file-for-employee-profile-data-preview"></a>Çalışan profili verileri için CSV dosyası (önizleme)
 
 > [!NOTE]
-> Çalışan profili verileri için İk bağlayıcısı oluşturma özelliği genel önizleme aşamasındadır. Çalışan profili verilerini destekleyen bir İk bağlayıcısı oluşturmak için Microsoft 365 uyumluluk merkezi **Veri bağlayıcıları** sayfasına gidin, **Bağlayıcılar** sekmesini seçin ve ardından **Bağlayıcı** >  **ekleHR (önizleme)'** ye tıklayın. [3. Adım: İk bağlayıcısı oluşturma başlığı altında bağlayıcı oluşturma adımlarını](#step-3-create-the-hr-connector) izleyin.
+> Çalışan profili verileri için İk bağlayıcısı oluşturma özelliği genel önizleme aşamasındadır. Çalışan profili verilerini destekleyen bir İk bağlayıcısı oluşturmak için uyumluluk portalındaki **Veri bağlayıcıları** sayfasına gidin, **Bağlayıcılar** sekmesini seçin ve ardından **Bağlayıcı** >  **ekleHR (önizleme)'** ye tıklayın. [3. Adım: İk bağlayıcısı oluşturma başlığı altında bağlayıcı oluşturma adımlarını](#step-3-create-the-hr-connector) izleyin.
 
 Burada çalışan profili verilerine yönelik bir CSV dosyası örneği verilmiştir.
 
@@ -256,11 +256,11 @@ Azure AD'de uygulama oluşturmaya yönelik adım adım yönergeler için bkz. [U
 
 ## <a name="step-3-create-the-hr-connector"></a>3. Adım: İk bağlayıcısını oluşturma
 
-Sonraki adım, Microsoft 365 uyumluluk merkezi bir İk bağlayıcısı oluşturmaktır. Betiği 4. Adımda çalıştırdıktan sonra, oluşturduğunuz İk bağlayıcısı CSV dosyasındaki İk verilerini Microsoft 365 kuruluşunuza alır. Bağlayıcı oluşturmadan önce İk senaryolarının ve her biri için ilgili CSV sütun adlarının bir listesine sahip olduğunuzdan emin olun. Bağlayıcıyı yapılandırırken her senaryo için gereken verileri CSV dosyanızdaki gerçek sütun adlarına eşlemeniz gerekir. Alternatif olarak, bağlayıcıyı yapılandırırken örnek bir CSV dosyasını karşıya yükleyebilirsiniz ve sihirbaz sütunların adını gerekli veri türleriyle eşlemenize yardımcı olur.
+Sonraki adım, uyumluluk portalında bir İk bağlayıcısı oluşturmaktır. Betiği 4. Adımda çalıştırdıktan sonra, oluşturduğunuz İk bağlayıcısı CSV dosyasındaki İk verilerini Microsoft 365 kuruluşunuza alır. Bağlayıcı oluşturmadan önce İk senaryolarının ve her biri için ilgili CSV sütun adlarının bir listesine sahip olduğunuzdan emin olun. Bağlayıcıyı yapılandırırken her senaryo için gereken verileri CSV dosyanızdaki gerçek sütun adlarına eşlemeniz gerekir. Alternatif olarak, bağlayıcıyı yapılandırırken örnek bir CSV dosyasını karşıya yükleyebilirsiniz ve sihirbaz sütunların adını gerekli veri türleriyle eşlemenize yardımcı olur.
 
 Bu adımı tamamladıktan sonra bağlayıcıyı oluştururken oluşturulan iş kimliğini kopyaladığınızdan emin olun. Betiği çalıştırdığınızda iş kimliğini kullanacaksınız.
 
-1. Microsoft 365 uyumluluk merkezi gidin ve <a href="https://go.microsoft.com/fwlink/p/?linkid=2173865" target="_blank">**Veri bağlayıcıları'nı**</a> seçin.
+1. Uyumluluk portalına gidin ve <a href="https://go.microsoft.com/fwlink/p/?linkid=2173865" target="_blank">**Veri bağlayıcıları'nı**</a> seçin.
 
 2. **Veri bağlayıcıları** sayfasında **İk (önizleme)'ye** tıklayın.
 
@@ -358,9 +358,9 @@ Henüz yapmadıysanız **, Azure Uygulaması Kimliği** ve **Bağlayıcı iş ki
 
 ## <a name="step-5-monitor-the-hr-connector"></a>5. Adım: İk bağlayıcısını izleme
 
-İk bağlayıcısını oluşturduktan ve İk verilerinizi karşıya yüklemek için betiği çalıştırdıktan sonra bağlayıcıyı görüntüleyebilir ve Microsoft 365 uyumluluk merkezi durumunu karşıya yükleyebilirsiniz. Betiği düzenli olarak otomatik olarak çalışacak şekilde zamanlarsanız, betiğin son çalıştırıldığından sonra geçerli durumu da görüntüleyebilirsiniz.
+İk bağlayıcısını oluşturduktan ve İk verilerinizi karşıya yüklemek için betiği çalıştırdıktan sonra bağlayıcıyı görüntüleyebilir ve uyumluluk portalında karşıya yükleme durumunu karşıya yükleyebilirsiniz. Betiği düzenli olarak otomatik olarak çalışacak şekilde zamanlarsanız, betiğin son çalıştırıldığından sonra geçerli durumu da görüntüleyebilirsiniz.
 
-1. Microsoft 365 uyumluluk merkezi gidin ve <a href="https://go.microsoft.com/fwlink/p/?linkid=2173865" target="_blank">**Veri bağlayıcıları'nı**</a> seçin.
+1. Uyumluluk portalına gidin ve <a href="https://go.microsoft.com/fwlink/p/?linkid=2173865" target="_blank">**Veri bağlayıcıları'nı**</a> seçin.
 
 2. **Bağlayıcılar** sekmesine tıklayın ve açılır sayfayı görüntülemek için İk bağlayıcısını seçin. Bu sayfa, bağlayıcı hakkındaki özellikleri ve bilgileri içerir.
 

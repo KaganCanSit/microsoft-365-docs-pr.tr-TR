@@ -1,5 +1,5 @@
 ---
-title: Eski eBulma aramalarını ve 1 Microsoft 365 uyumluluk merkezi 0.
+title: Eski eBulma aramalarını ve tutmalarını Microsoft Purview uyumluluk portalına geçirme
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -15,31 +15,31 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkEXCHANGE
 ROBOTS: NOINDEX, NOFOLLOW
 description: ''
-ms.openlocfilehash: fe3f65e2545b71f8cfbaea76dfd34fd2720a790f
-ms.sourcegitcommit: b1066b2a798568afdea9c09401d52fa38fe93546
+ms.openlocfilehash: 5de25b0b1385e709a818b1ff797910ec4ee4ddfc
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/13/2021
-ms.locfileid: "63018799"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64949641"
 ---
-# <a name="migrate-legacy-ediscovery-searches-and-holds-to-the-microsoft-365-compliance-center"></a>Eski eBulma aramalarını ve 1 Microsoft 365 uyumluluk merkezi 0.
+# <a name="migrate-legacy-ediscovery-searches-and-holds-to-the-compliance-portal"></a>Eski eBulma aramalarını ve tutmalarını uyumluluk portalına geçirme
 
-Microsoft 365 uyumluluk merkezi, eBulma kullanımına yönelik gelişmiş bir deneyim sunar. Örneğin, daha yüksek güvenilirlik, daha iyi performans ve içeriğinizi önemli bir şekilde düzenlemeniz için uyarlanmış özellikler( eBulma iş akışlarına uyarlanan birçok özellik, yakın yinelemeli gruplama, e-posta dizileri, tema çözümlemesi ve tahmine dayalı kodlama gibi verilerin gözden geçirilmesinde yardımcı olmak üzere içeriği ve çözümlemeyi gözden geçirmeye yardımcı olacak kümeleri gözden geçirebilirsiniz.
+Microsoft Purview uyumluluk portalı, eKeşif kullanımı için gelişmiş bir deneyim sağlar: daha yüksek güvenilirlik, daha iyi performans ve içeriğinizi maddeye göre düzenleme örnekleri dahil olmak üzere eBulma iş akışlarına uyarlanmış birçok özellik, içeriği gözden geçirmek için inceleme kümeleri ve analizler de dahil olmak üzere, verileri gözden geçirmek üzere neredeyse yinelenen gruplandırma, e-posta iş parçacığı oluşturma, tema analizi ve tahmine dayalı kodlama gibi birçok özellik.
 
-Müşterilerin yeni ve geliştirilmiş işlevsellikten yararlanmalarına yardımcı olmak için, bu makalede In-Place eBulma aramalarını ve 1024'e Exchange yönetim merkezinden diğer yönetim merkezine geçirme konusunda <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank"></a> temel Microsoft 365 uyumluluk merkezi.
+Müşterilerin yeni ve geliştirilmiş işlevlerden yararlanmasına yardımcı olmak için, bu makalede In-Place eBulma aramalarını ve tutmalarını <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange yönetim merkezinden</a> uyumluluk portalına geçirme konusunda temel yönergeler sağlanır.
 
 > [!NOTE]
-> Birçok farklı senaryo olduğundan, bu makale genel olarak, çalışma sayfalarındaki temel bir eKbulma durumuna arama ve 30 Microsoft 365 uyumluluk merkezi. eBulma servis durumlarını kullanmak her zaman gerekli değildir, ancak bu servis taleplerine kimlerin kuruluş içinde eBulma örneklerine erişimi olduğunu denetlemeniz için izinler atamanıza izin vererek fazladan bir güvenlik katmanı eklerler.
+> Birçok farklı senaryo olduğundan bu makale, uyumluluk portalında aramaları ve tutmaları temel bir eBulma olayına geçirme konusunda genel rehberlik sağlar. eBulma servis taleplerinin kullanılması her zaman gerekli değildir, ancak kuruluşunuzdaki eBulma servis taleplerine kimlerin erişimi olduğunu denetlemek için izinler atamanıza izin vererek ek bir güvenlik katmanı ekler.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-- Bu makalede açıklanan PowerShell komutlarını çalıştırmak için, Microsoft 365 uyumluluk merkezi Yöneticisi'nde eBulma Yöneticisi rol grubunun üyesi olmak gerekir. Ayrıca, genel yönetim merkezinde Keşif Yönetimi rol grubunun üyesi <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange gerekir</a>.
+- Bu makalede açıklanan PowerShell komutlarını çalıştırmak için uyumluluk portalında eBulma Yöneticisi rol grubunun üyesi olmanız gerekir. Ayrıca<a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">, Exchange yönetim merkezinde</a> Bulma Yönetimi rol grubunun da üyesi olmanız gerekir.
 
-- Bu makalede, eBulma tutma oluşturma konusunda yol gösterici bilgi sağlar. Tutma ilkesi, zaman uyumsuz bir işlem aracılığıyla posta kutularına uygulanır. eBulma ayrımı oluştururken hem CaseHoldPolicy hem de CaseHoldRule oluşturmanız gerekir; aksi takdirde, tutma oluşturulmaz ve içerik konumları ayrı tutma durumuna yerleştirilmemiş olur.
+- Bu makalede, eBulma ayrı tutma oluşturma hakkında yönergeler sağlanır. Saklama ilkesi, zaman uyumsuz bir işlem aracılığıyla posta kutularına uygulanır. eBulma ayrı tutması oluştururken hem CaseHoldPolicy hem de CaseHoldRule oluşturmanız gerekir, aksi takdirde ayrı tutma oluşturulmaz ve içerik konumları ayrı tutmaya alınmaz.
 
-## <a name="step-1-connect-to-exchange-online-powershell-and-security--compliance-center-powershell"></a>1. Adım: Bağlan PowerShell Exchange Online Güvenlik ve Güvenlik & Merkezi PowerShell'i nasıl edinecek?
+## <a name="step-1-connect-to-exchange-online-powershell-and-security--compliance-center-powershell"></a>1. Adım: PowerShell ve Güvenlik & Uyumluluk Merkezi PowerShell'i Exchange Online Bağlan
 
-İlk adım, PowerShell ve Güvenlik Exchange Online Merkezi PowerShell'& bağlanmaktır. Aşağıdaki betiği kopyalayıp bir PowerShell penceresine yapıştırarak çalıştırabilirsiniz. Bağlanmak istediğiniz kuruluşun kimlik bilgileri istenir. 
+İlk adım Exchange Online PowerShell ve Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanmaktır. Aşağıdaki betiği kopyalayabilir, powershell penceresine yapıştırabilir ve çalıştırabilirsiniz. Bağlanmak istediğiniz kuruluş için kimlik bilgileri istenir. 
 
 ```powershell
 $UserCredential = Get-Credential
@@ -49,23 +49,23 @@ $exoSession = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri
 Import-PSSession $exoSession -AllowClobber -DisableNameChecking
 ```
 
-Bu PowerShell oturumunda aşağıdaki adımlarda komutları çalıştırmamız gerekir.
+Bu PowerShell oturumunda aşağıdaki adımlarda yer alan komutları çalıştırmanız gerekir.
 
-## <a name="step-2-get-a-list-of-in-place-ediscovery-searches-by-using-get-mailboxsearch"></a>2. Adım: In-Place kullanarak eBulma aramalarının listesini Get-MailboxSearch
+## <a name="step-2-get-a-list-of-in-place-ediscovery-searches-by-using-get-mailboxsearch"></a>2. Adım: Get-MailboxSearch kullanarak In-Place eBulma aramalarının listesini alma
 
-Kimliği doğrulandıktan sonra, **Get-MailboxSearch** cmdlet'ini çalıştırarak eBulma aramalarının In-Place listesini elde edersiniz. Aşağıdaki komutu kopyalayıp PowerShell'e yapıştırın ve çalıştırın. Arama listesi, adlarıyla ve Uzla ve 122 12/2013 In-Place listelenir.
+Kimlik doğrulaması yaptıktan sonra **Get-MailboxSearch** cmdlet'ini çalıştırarak In-Place eBulma aramalarının listesini alabilirsiniz. Aşağıdaki komutu kopyalayıp PowerShell'e yapıştırın ve ardından çalıştırın. Aramaların listesi, adları ve In-Place Tutma durumlarıyla birlikte listelenir.
 
 ```powershell
 Get-MailboxSearch
 ```
 
-Cmdlet çıkışı aşağıdakine benzer olur:
+Cmdlet çıkışı aşağıdakine benzer olacaktır:
 
-![PowerShell örnek Get-MailboxSearch.](../media/MigrateLegacyeDiscovery1.png)
+![PowerShell örneği Get-MailboxSearch.](../media/MigrateLegacyeDiscovery1.png)
 
-## <a name="step-3-get-information-about-the-in-place-ediscovery-searches-and-in-place-holds-you-want-to-migrate"></a>3. Adım: eBulma arama In-Place ve geçirmek istediğiniz In-Place 1 10 Aya'ya ilişkin bilgi
+## <a name="step-3-get-information-about-the-in-place-ediscovery-searches-and-in-place-holds-you-want-to-migrate"></a>3. Adım: Geçirmek istediğiniz In-Place eBulma aramaları ve In-Place Tutmaları hakkında bilgi edinin
 
-Yine **Get-MailboxSearch cmdlet'ini** kullanasınız, ama bu kez aramanın özelliklerini elde edin. Bu özellikleri daha sonra kullanmak üzere bir değişkende depoabilirsiniz. Aşağıdaki örnekte, **Get-MailboxSearch** cmdlet'in sonuçları değişkende depolar ve aramanın özellikleri görüntülenir.
+Yine **Get-MailboxSearch** cmdlet'ini kullanacaksınız, ancak bu kez aramanın özelliklerini almak için. Bu özellikleri daha sonra kullanmak üzere bir değişkende depolayabilirsiniz. Aşağıdaki örnek **Get-MailboxSearch** cmdlet'inin sonuçlarını bir değişkende depolar ve ardından aramanın özelliklerini görüntüler.
 
 ```powershell
 $search = Get-MailboxSearch -Identity "Search 1"
@@ -75,27 +75,27 @@ $search = Get-MailboxSearch -Identity "Search 1"
 $search | FL
 ```
 
-Bu iki komutun çıkışı aşağıdakine benzer olur:
+Bu iki komutun çıkışı aşağıdakine benzer olacaktır:
 
-![Tek bir arama için Get-MailboxSearch kullanılarak Get-MailboxSearch çıktısı örneği.](../media/MigrateLegacyeDiscovery2.png)
+![Tek bir arama için Get-MailboxSearch kullanmanın PowerShell çıktısı örneği.](../media/MigrateLegacyeDiscovery2.png)
 
 > [!NOTE]
-> Bu örnekteki In-Place Tutma süresi belirsizdir (*ItemHoldPeriod: Unlimited*). eBulma ve yasal soruşturma senaryolarında tipik bir durumdur. Bekletme süresi süresi süresi belirsizden farklı bir değere sahipse, bunun nedeni büyük olasılıkla saklamanın bir bekletme senaryosunda içeriği tutmak için kullanılıyor olmasıdır. Bekletme senaryoları için Güvenlik & Uyumluluk Merkezi PowerShell'de eBulma cmdlet'lerini kullanmak yerine, içeriği korumak için [New-RetentionCompliancePolicy](/powershell/module/exchange/new-retentioncompliancepolicy) ve [New-RetentionComplianceRule'yi](/powershell/module/exchange/new-retentioncompliancerule) kullanmalarını öneririz. Bu cmdlet'leri kullanmanın sonucu **New-CaseHoldPolicy** ve **New-CaseHoldRule** kullanmaya benzer, ancak bekletme süresi sona erdikten sonra içeriği silme gibi bir bekletme süresi ve bekletme eylemi belirtebilirsiniz. Ayrıca, bekletme cmdlet'lerini kullanmak, bekletme bekletmeyi bir eBulma durumuyla ilişkilendirmeyi gerektirmez.
+> Bu örnekteki In-Place Tutma süresi belirsizdir (*ItemHoldPeriod: Sınırsız*). Bu, eBulma ve yasal araştırma senaryoları için tipiktir. Saklama süresi belirsiz değerden farklıysa, bunun nedeni büyük olasılıkla bekletme senaryosundaki içeriği korumak için kullanılmakta olmasıdır. Bekletme senaryoları için Güvenlik & Uyumluluk Merkezi PowerShell'deki eBulma cmdlet'lerini kullanmak yerine, içeriği korumak için [New-RetentionCompliancePolicy](/powershell/module/exchange/new-retentioncompliancepolicy) ve [New-RetentionComplianceRule](/powershell/module/exchange/new-retentioncompliancerule) kullanmanızı öneririz. Bu cmdlet'leri kullanmanın sonucu **New-CaseHoldPolicy** ve **New-CaseHoldRule** kullanımına benzer, ancak saklama süresi sona erdikten sonra içeriği silme gibi bir saklama süresi ve bekletme eylemi belirtebilirsiniz. Ayrıca, bekletme cmdlet'lerini kullanmak için bekletme saklamayı bir eBulma olayıyla ilişkilendirmeniz gerekmez.
 
-## <a name="step-4-create-a-case-in-the-microsoft-365-compliance-center"></a>4. Adım: Uyumluluk Merkezinde Microsoft 365 oluşturma
+## <a name="step-4-create-a-case-in-the-microsoft-purview-compliance-portal"></a>4. Adım: Microsoft Purview uyumluluk portalında servis talebi oluşturma
 
-eBulma ayrımı oluşturmak için, tutma ile ilişkilendirmek için bir eBulma vakası oluşturmanız gerektir. Aşağıdaki örnek, istediğiniz adı kullanarak bir eBulma durumu oluşturur. Daha sonra kullanmak üzere bir değişkende yeni vakanın özelliklerini depolarız. Bu özellikleri, durumu oluşturduk sonra `$case | FL` komutu çalıştırarak görüntüebilirsiniz.
+eBulma ayrı tutması oluşturmak için ayrı tutma ile ilişkilendirilecek bir eBulma servis talebi oluşturmanız gerekir. Aşağıdaki örnek, seçtiğiniz bir adı kullanarak bir eBulma olayı oluşturur. Yeni servis talebinin özelliklerini daha sonra kullanmak üzere bir değişkende depolayacağız. Olayı oluşturduktan sonra komutunu çalıştırarak `$case | FL` bu özellikleri görüntüleyebilirsiniz.
 
 ```powershell
 $case = New-ComplianceCase -Name "[Case name of your choice]"
 ```
 ![New-ComplianceCase komutunu çalıştırma örneği.](../media/MigrateLegacyeDiscovery3.png)
 
-## <a name="step-5-create-the-ediscovery-hold"></a>5. Adım: eBulma ayrımını oluşturma
+## <a name="step-5-create-the-ediscovery-hold"></a>5. Adım: eBulma ayrı tutmasını oluşturma
 
-Vaka oluşturulduktan sonra, tutma oluşturarak önceki adımda oluşturduğunuz vakayla ilişkilendirmek için bu belgeyi oluşturabilirsiniz. Hem dava tutma ilkesi hem de dava tutma kuralı oluşturmanız gerektiğini unutmamanız önemlidir. Eğer dava tutma ilkesi oluşturulduktan sonra tutma kuralı oluşturulmazsa, eBulma ayrımı oluşturulmaz ve hiçbir içerik tutmaz.
+Servis talebi oluşturulduktan sonra ayrı tutmayı oluşturabilir ve önceki adımda oluşturduğunuz servis talebiyle ilişkilendirebilirsiniz. Hem servis talebi tutma ilkesi hem de servis talebi saklama kuralı oluşturmanız gerektiğini unutmayın. Servis talebi saklama ilkesi oluşturulduktan sonra servis talebi saklama kuralı oluşturulmazsa, eBulma ayrı tutması oluşturulmaz ve hiçbir içerik beklemeye alınmaz.
 
-Geçirmek istediğiniz eBulma ayrımlarını yeniden oluşturmak için aşağıdaki komutları çalıştırın. Bu örneklerde, geçiş yapmak In-Place Adım 3'te bulunan 3. Adıma kadar olan özellikler kullanılır. İlk komut yeni bir büyük/küçük harf tutma ilkesi oluşturur ve özellikleri değişkene kaydeder. İkinci komut, ilgili büyük/harf tutma kuralını oluşturur.
+Geçirmek istediğiniz eBulma ayrı tutmasını yeniden oluşturmak için aşağıdaki komutları çalıştırın. Bu örneklerde, 3. Adımdaki In-Place Ayrı Tutma özelliğinin geçirmek istediğiniz özellikleri kullanılır. İlk komut yeni bir büyük/küçük harf saklama ilkesi oluşturur ve özellikleri bir değişkene kaydeder. İkinci komut, karşılık gelen büyük/küçük harf tutma kuralını oluşturur.
 
 ```powershell
 $policy = New-CaseHoldPolicy -Name $search.Name -Case $case.Identity -ExchangeLocation $search.SourceMailboxes
@@ -107,53 +107,53 @@ New-CaseHoldRule -Name $search.Name -Policy $policy.Identity
 
 ![NewCaseHoldPolicy ve NewCaseHoldRule cmdlet'lerini kullanma örneği.](../media/MigrateLegacyeDiscovery4.png)
 
-## <a name="step-6-verify-the-ediscovery-hold"></a>6. Adım: eBulma ayrımını doğrulama
+## <a name="step-6-verify-the-ediscovery-hold"></a>6. Adım: eBulma ayrı tutmasını doğrulama
 
-Tutma oluşturmada sorun olup olmadığını kontrol etmek için, tutma dağılımı durumunun başarılı olup olmadığını denetlemek iyi olur. Dağıtım, bir önceki adımda ExchangeLocation parametresinde belirtilen tüm içerik *konumlarını tutmanın* uygulandığı anlamına gelir. Bunu yapmak için **, Get-CaseHoldPolicy cmdlet'ini** çalıştırarak. Önceki adımda oluşturduğunuz *$policy* değişkene kaydedilen özellikler değişkende otomatik olarak güncelleştirilmez, çünkü bu dağılımın başarılı olduğunu doğrulamak için cmdlet'i yeniden çalıştırmanız gerekir. Olay tutma ilkelerinin başarıyla dağıtılması 5 dakika ile 24 saat arasında sürebilir.
+Ayrı tutma oluşturmada sorun olmadığından emin olmak için ayrı tutma dağıtım durumunun başarılı olup olmadığını denetlemek iyi olur. Dağıtım, ayrı tutmanın önceki adımda *ExchangeLocation* parametresinde belirtilen tüm içerik konumlarına uygulandığı anlamına gelir. Bunu yapmak için **Get-CaseHoldPolicy** cmdlet'ini çalıştırabilirsiniz. Önceki adımda oluşturduğunuz *$policy* değişkenine kaydedilen özellikler değişkende otomatik olarak güncelleştirilemediğinden, dağıtımın başarılı olduğunu doğrulamak için cmdlet'i yeniden çalıştırmanız gerekir. Servis talebi saklama ilkelerinin başarıyla dağıtılması 5 dakika ile 24 saat arasında sürebilir.
 
-eBulma ayrımlarının başarıyla dağıtıldığından emin olmak için aşağıdaki komutu çalıştırın.
+eBulma ayrı tutma işleminin başarıyla dağıtıldığını doğrulamak için aşağıdaki komutu çalıştırın.
 
 ```powershell
 Get-CaseHoldPolicy -Identity $policy.Identity | Select name, DistributionStatus
 ```
 
-*DistributionStatus özelliği için Success değeri*, tutmanın içerik konumlarına başarıyla yerleştiril olduğunu gösterir. Dağıtım henüz tamamlanmadı ise, Beklemede **değeri** görüntülenir.
+*DistributionStatus* özelliğinin **Success** değeri, ayrı tutmanın içerik konumlarına başarıyla yerleştirildiğini gösterir. Dağıtım henüz tamamlanmadıysa **Bekleyen** değeri görüntülenir.
 
-![PowerShell Get-CaseHoldPolicy örnek.](../media/MigrateLegacyeDiscovery5.png)
+![PowerShell Get-CaseHoldPolicy örneği.](../media/MigrateLegacyeDiscovery5.png)
 
-## <a name="step-7-create-the-search"></a>7. Adım: Arama oluşturma
+## <a name="step-7-create-the-search"></a>7. Adım: Aramayı oluşturma
 
-Son adım, 3. Adımda tanım istediğiniz aramanın yeniden oluşturularak olayla ilişkilendirmektir. Arama oluşturdukktan sonra, Başlangıç Uyumluluğu Arama **cmdlet'ini** kullanarak çalıştırabilirsiniz veya daha sonra çalıştırabilirsiniz.
+Son adım, 3. Adımda tanımladığınız aramayı yeniden oluşturmak ve servis talebiyle ilişkilendirmektir. Aramayı oluşturduktan sonra **Start-ComplianceSearch** cmdlet'ini kullanarak çalıştırabilir veya daha sonra çalıştırabilirsiniz.
 
 ```powershell
 New-ComplianceSearch -Name $search.Name -ExchangeLocation $search.SourceMailboxes -ContentMatchQuery $search.SearchQuery -Case $case.name
 ```
 
-![PowerShell New-ComplianceSearch örnek.](../media/MigrateLegacyeDiscovery6.png)
+![PowerShell New-ComplianceSearch örneği.](../media/MigrateLegacyeDiscovery6.png)
 
-## <a name="step-8-verify-the-case-hold-and-search-in-the-microsoft-365-compliance-center"></a>8. Adım: Vakayı doğrulayın, basılı tutun ve Microsoft 365 uyumluluk merkezi
+## <a name="step-8-verify-the-case-hold-and-search-in-the-compliance-portal"></a>8. Adım: Uyumluluk portalında olayı doğrulama, saklama ve arama
 
-Her şeyin doğru ayarlanmış olduğundan emin olmak için, [https://compliance.microsoft.com](https://compliance.microsoft.com)'ta Microsoft 365 uyumluluk merkezi **gidin ve Çekirdek için eBulma'> tıklayın**.
+Her şeyin doğru ayarlandığından emin olmak için adresinden uyumluluk portalına [https://compliance.microsoft.com](https://compliance.microsoft.com)gidin ve **eBulma > Core'a** tıklayın.
 
-![Microsoft 365 Merkezi eKbulma'ya bakın.](../media/MigrateLegacyeDiscovery7.png)
+![Microsoft Purview uyumluluk portalı eKeşif.](../media/MigrateLegacyeDiscovery7.png)
 
-3. Adımda oluşturduğunuz durum, **Çekirdek eKbulma sayfasında** listelenir. Vakayı açın ve 4. Adımda oluşturduğunuz ve Hold sekmesinde listelenmiş olduğunu **fark** edin. Uç uç sayfada, tutmanın uygulandığı posta kutusu sayısı ve dağıtım durumu gibi ayrıntıları görmek için, tutma seçeneğini kullanabilirsiniz.
+3. Adımda oluşturduğunuz servis talebi **, eBulma (Standart)** sayfasında listelenir. Servis talebini açın ve 4. Adımda oluşturduğunuz ayrı tutmanın **Ayrı Tut** sekmesinde listelendiğine dikkat edin. Ayrı tutmanın uygulandığı posta kutularının sayısı ve dağıtım durumu da dahil olmak üzere açılır sayfada ayrıntıları görmek için ayrı tutmayı seçebilirsiniz.
 
-![eKbulma 1. Microsoft 365 uyumluluk merkezi.](../media/MigrateLegacyeDiscovery8.png)
+![eBulma, uyumluluk portalında tutar.](../media/MigrateLegacyeDiscovery8.png)
 
-7. Adımda oluşturduğunuz arama, vakanın **Aramalar** sekmesinde listelenir.
+7. Adımda oluşturduğunuz arama, servis talebinin **Aramalar** sekmesinde listelenir.
 
-![eBulma olay araması Microsoft 365 uyumluluk merkezi.](../media/MigrateLegacyeDiscovery9.png)
+![Uyumluluk portalında eBulma servis talebi araması.](../media/MigrateLegacyeDiscovery9.png)
 
-Bir eBulma In-Place geçirir, ancak bunu bir eBulma durumuyla ilişkilendirmezse, arama sonuçları çalışma sayfasında İçerik arama Microsoft 365 uyumluluk merkezi.
+bir In-Place eBulma aramasını geçirirseniz ancak bir eBulma olayıyla ilişkilendirmezseniz, uyumluluk portalındaki İçerik arama sayfasında listelenir.
 
 ## <a name="more-information"></a>Daha fazla bilgi
 
-- Bir yönetim merkezinde eK In-Place bulma & hakkında daha fazla <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">bilgi Exchange bkz</a>.
+- Exchange <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">yönetim merkezinde</a> In-Place eBulma & Tutmaları hakkında daha fazla bilgi için bkz:
   
-  - [Yerinde eKbulma](/exchange/security-and-compliance/in-place-ediscovery/in-place-ediscovery)
+  - [Yerinde eBulma](/exchange/security-and-compliance/in-place-ediscovery/in-place-ediscovery)
 
-  - [Yerinde Tutma ve Mahkeme Tutma](/exchange/security-and-compliance/in-place-and-litigation-holds)
+  - [Yerinde Saklama ve Dava Tutma](/exchange/security-and-compliance/in-place-and-litigation-holds)
 
 - Makalede kullanılan PowerShell cmdlet'leri hakkında daha fazla bilgi için bkz:
 
@@ -171,4 +171,4 @@ Bir eBulma In-Place geçirir, ancak bunu bir eBulma durumuyla ilişkilendirmezse
 
   - [Start-ComplianceSearch](/powershell/module/exchange/start-compliancesearch)
 
-- Bu bilgiler hakkında daha fazla Microsoft 365 uyumluluk merkezi için bkz. [İlkelere genel Microsoft 365 uyumluluk merkezi](microsoft-365-compliance-center.md).
+- Uyumluluk portalı hakkında daha fazla bilgi için bkz. [Microsoft Purview uyumluluk portalına genel bakış](microsoft-365-compliance-center.md).

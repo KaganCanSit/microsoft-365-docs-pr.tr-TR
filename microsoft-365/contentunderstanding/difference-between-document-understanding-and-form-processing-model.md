@@ -13,12 +13,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Belge anlama modeli ile form işleme modeli arasındaki temel farklar hakkında bilgi edinin.
-ms.openlocfilehash: f6fe6e821e41b47bcce6ef157d971245fdd072b8
-ms.sourcegitcommit: 23e186b46b27a6a4863f507a52a11105afae9726
+ms.openlocfilehash: 571516a7112e3f145d9e3ca392ad3488a33b4887
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64882296"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64947835"
 ---
 # <a name="differences-between-document-understanding-and-form-processing-models"></a>Belge anlama ve form işleme modelleri arasındaki farklar 
 
@@ -79,8 +79,8 @@ Form işlemenin ne zaman kullanılacağını ve belge anlamanın ne zaman kullan
 | Sınıflandırma türü| Ayarlanabilir sınıflandırıcı, sisteme hangi verilerin ayıklanacağı konusunda ipuçları vermek için kullanılır.| Hangi verilerin ayıklanması için belge konumu atamak için makine öğretimi kullanan isteğe bağlı ayıklayıcılarla eğitilebilir sınıflandırıcı.|
 | Konum | Tek bir belge kitaplığı için eğitildi.| Birden çok kitaplık için uygulanabilir.|
 | Desteklenen dosya türleri| PDF, JPG, PNG biçiminde, toplam 50 MB ve 500 sayfada eğitin.| Negatif örnekler de dahil olmak üzere 5-10 PDF, Office veya e-posta dosyaları üzerinde eğitin.<br>Office dosyalar 64k karakterde kesilir. OCR ile taranan dosyalar 20 sayfayla sınırlıdır.|
-| Yönetilen meta verilerle tümleştirme | Hayır | Evet, yapılandırılmış yönetilen meta veri alanına başvuran varlık ayıklayıcısı eğiterek.|
-| Microsoft Bilgi Koruması etkinleştirildiğinde uyumluluk özelliği tümleştirmesi | Yayımlanan Bekletme etiketlerini ayarlayın.<br>Duyarlılık etiketlerini ayarlama geliyor. | Yayımlanan Bekletme etiketlerini ayarlayın.<br>Yayımlanan Duyarlılık etiketlerini ayarlayın. |
+| Yönetilen Meta Verilerle Tümleştirme | Hayır | Evet, yapılandırılmış yönetilen meta veri alanına başvuran varlık ayıklayıcısı eğiterek.|
+| Microsoft Purview Information Protection ile uyumluluk özelliği tümleştirmesi | Yayımlanan bekletme etiketlerini ayarlayın.<br>Duyarlılık etiketlerini ayarlama geliyor. | Yayımlanan bekletme etiketlerini ayarlayın.<br>Yayımlanan duyarlılık etiketlerini ayarlayın. |
 | Desteklenen bölgeler| Form işleme, Power Platform'a dayanır. Power Platform ve AI Builder için genel kullanılabilirlik hakkında bilgi için bkz. [Power Platform kullanılabilirliği](https://dynamics.microsoft.com/geographic-availability/). | Tüm bölgelerde kullanılabilir.|
 | İşlem maliyeti | AI Builder kredilerini kullanır.<br>Krediler 1M toplu olarak satın alınabilir.<br>300+SharePoint Syntex lisansları satın alındığında 1M kredi dahil edilir.<br>1M kredi, 2.000 dosya sayfası işlenmesine izin verir.<br>| Yok |
 | Kapasite | Varsayılan Power Platform ortamını kullanır (Dataverse veritabanının desteklendiği özel ortamlar). | Kapasite kısıtlamaları yoktur.|

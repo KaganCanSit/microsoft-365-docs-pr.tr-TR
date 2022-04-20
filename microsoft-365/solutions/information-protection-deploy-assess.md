@@ -17,12 +17,12 @@ ms.collection:
 - m365solution-scenario
 ms.custom: ''
 description: Veri gizliliği düzenlemelerini, ilgili senaryoları, hazır olma durumunuzu ve Microsoft 365 ortamınızdaki hassas bilgi türlerini belirleyin.
-ms.openlocfilehash: ea151577f31ad8ea9454addf171c1079f334d377
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 967c64dee2d99f41b3c2a1b6a193730dcd75811a
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64822704"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64947527"
 ---
 # <a name="assess-data-privacy-risks-and-identify-sensitive-items-with-microsoft-365"></a>veri gizliliği risklerini değerlendirme ve Microsoft 365 ile hassas öğeleri tanımlama
 
@@ -192,11 +192,11 @@ Bu adım, belirli yasal denetimlere tabi olan belirli hassas bilgi türlerinin t
 
 Ortamınızda kişisel içerik içeren içerik bulmak, daha önce Uyumluluk Arama, eBulma, Advanced eDiscovery, DLP ve denetimin bir birleşimini içeren, zor bir görev olabilir.
 
-Microsoft Uyumluluk yönetim merkezindeki yeni **Veri Sınıflandırma** çözümü ile bu, kişisel verilerle ilgili olanlar da dahil olmak üzere yerleşik veya özel hassas bilgi türleriyle çalışan [İçerik Gezgini](../compliance/data-classification-content-explorer.md) özelliğiyle çok daha kolay hale gelmiştir.
+Microsoft Purview uyumluluk portalındaki yeni **Veri Sınıflandırma** çözümü ile bu, kişisel verilerle ilgili olanlar da dahil olmak üzere yerleşik veya özel hassas bilgi türleriyle çalışan [İçerik Gezgini](../compliance/data-classification-content-explorer.md) özelliğiyle çok daha kolay hale gelmiştir.
 
 ### <a name="sensitive-information-types"></a>Hassas bilgi türleri
 
-Microsoft Uyumluluk yönetim merkezi, çoğu kişisel verileri tanımlama ve bulma ile ilgili 100'den fazla hassas bilgi türüyle önceden yüklenmiş olarak gelir. Bu yerleşik hassas bilgi türleri, normal ifade (regex) veya işlev tarafından tanımlanan desenlere göre kredi kartı numaralarını, banka hesap numaralarını, pasaport numaralarını ve daha fazlasını tanımlamaya ve korumaya yardımcı olabilir. Daha fazla bilgi edinmek için bkz [. Hassas bilgi türleri ne arar](../compliance/sensitive-information-type-entity-definitions.md)?
+Microsoft Purview uyumluluk portalı, çoğu kişisel verileri tanımlama ve bulma ile ilgili 100'den fazla hassas bilgi türüyle önceden yüklenmiş olarak gelir. Bu yerleşik hassas bilgi türleri, normal ifade (regex) veya işlev tarafından tanımlanan desenlere göre kredi kartı numaralarını, banka hesap numaralarını, pasaport numaralarını ve daha fazlasını tanımlamaya ve korumaya yardımcı olabilir. Daha fazla bilgi edinmek için bkz [. Hassas bilgi türleri ne arar](../compliance/sensitive-information-type-entity-definitions.md)?
 
 Çalışan kimlikleri için özel biçim veya yerleşik hassas bilgi türü kapsamında olmayan diğer kişisel bilgiler gibi kuruluşa özgü veya bölgesel türde hassas öğeleri tanımlamanız ve korumanız gerekiyorsa, şu yöntemlerle özel bir hassas bilgi türü oluşturabilirsiniz:
 
@@ -216,7 +216,7 @@ Daha fazla bilgi için şu makalelere bakın:
 
 ### <a name="content-explorer"></a>İçerik Gezgini
 
-Ortamınızda hassas öğelerin oluşumunu belirlemek için Microsoft 365 Uyumluluk yönetim merkezindeki yeni [İçerik Gezgini'nin](../compliance/data-classification-content-explorer.md) önemli bir aracıdır. Hassas bilgi türlerinin ortaya çıkması ve sonuçların görüntülenmesi için Microsoft 365 aboneliğinizin tamamının ilk ve devam eden taraması için otomatikleştirilmiş bir araçtır.
+Ortamınızda hassas öğelerin oluşumunu belirlemek için microsoft Purview yönetim merkezindeki yeni [İçerik Gezgini'nin](../compliance/data-classification-content-explorer.md) önemli bir aracıdır. Hassas bilgi türlerinin ortaya çıkması ve sonuçların görüntülenmesi için Microsoft 365 aboneliğinizin tamamının ilk ve devam eden taraması için otomatikleştirilmiş bir araçtır.
 
 Yeni İçerik Gezgini aracı, yerleşik hassas bilgi türlerini veya özel bilgileri kullanarak ortamınızdaki hassas öğelerin konumlarını hızla tanımlamanızı sağlar. Bu, hassas öğelerin varlığını ve konumunu düzenli olarak araştırmak için bir süreç oluşturmayı ve sorumluluk atamayı içerebilir.
 

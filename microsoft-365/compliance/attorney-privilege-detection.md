@@ -1,5 +1,5 @@
 ---
-title: Advanced eDiscovery'de avukatlık ayrıcalık algılaması Advanced eDiscovery
+title: eBulma'da avukat-istemci ayrıcalık algılamayı ayarlama (Premium)
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -15,118 +15,118 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Bir davanın içeriğini gözden geçirerek makinede öğrenme tabanlı ayrıcalıklı içeriğin algılanması makinede kullanmak için avukatlık ayrıcalık algılama Advanced eDiscovery kullanın.
-ms.openlocfilehash: 5e8a9e1ef0cf8cd8375cd6ce9a0b4d210840e838
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+description: Microsoft Purview eKeşif (Premium) durumundaki içeriği gözden geçirirken makine öğrenmesi tabanlı ayrıcalıklı içerik algılamasını kullanmak için avukat-istemci ayrıcalık algılama modelini kullanın.
+ms.openlocfilehash: ce5cabad4a5487f6e18c1054f5c4d143bac4325e
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63021732"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64947175"
 ---
-# <a name="set-up-attorney-client-privilege-detection-in-advanced-ediscovery"></a>Advanced eDiscovery'de avukatlık ayrıcalık algılaması Advanced eDiscovery
+# <a name="set-up-attorney-client-privilege-detection-in-ediscovery-premium"></a>eBulma'da avukat-istemci ayrıcalık algılamayı ayarlama (Premium)
 
-Herhangi bir eBulma işleminin gözden geçirme aşamasının önemli ve maliyetli bir yönü, ayrıcalıklı içeriğin belgelerini gözden geçirmektir. Advanced eDiscovery bu süreci daha verimli hale getirir. Bu özellik, *avukat-istemci ayrıcalık algılama olarak adlandırılan bir özelliktir*.
+Herhangi bir eBulma işleminin gözden geçirme aşamasının önemli ve maliyetli bir yönü, ayrıcalıklı içerik için belgeleri gözden geçirmektir. Microsoft Purview eKeşif (Premium), bu süreci daha verimli hale getirmek için makine öğrenmesi tabanlı ayrıcalıklı içerik algılaması sağlar. Bu özellik *, avukat-istemci ayrıcalık algılama* olarak adlandırılır.
 
 ## <a name="how-does-it-work"></a>Nasıl çalışır?
 
-Avukat-istemci ayrıcalık algılama etkinleştirildiğinde, inceleme kümesinde verileri çözümledikten sonra, gözden geçirme kümesinde yer alan tüm belgeler, avukatlık [](analyzing-data-in-review-set.md) ayrıcalık algılama modeli tarafından işlenir. Model iki şeyi gösterir:
+Avukat-istemci ayrıcalık algılama etkinleştirildiğinde, gözden geçirme kümesindeki [verileri analiz](analyzing-data-in-review-set.md) ettiğinizde, bir gözden geçirme kümesindeki tüm belgeler avukat-istemci ayrıcalık algılama modeli tarafından işlenir. Model iki şeyi arar:
 
-- Ayrıcalıklı içerik – Model, belgenin doğada yasal içerik ekleme olasılığını belirlemek için makine öğrenimi kullanır.
+- Ayrıcalıklı içerik – Model, belgenin doğası gereği yasal içerik içerme olasılığını belirlemek için makine öğrenmesini kullanır.
 
-- Katılımcılar – Avukatlık ayrıcalık algılaması ayarlamanın bir parçası olarak, organizasyonunız için bir avukat listesi göndermeniz gerekir. Daha sonra model, bir belgede en az bir avukat katılımcısı olup olmadığını belirlemek için belgenin katılımcılarını avukat listesiyle karşılaştırıldığında.
+- Katılımcılar – Avukat-müşteri ayrıcalık algılamasını ayarlamanın bir parçası olarak, kuruluşunuz için bir avukat listesi göndermeniz gerekir. Model daha sonra belgenin katılımcılarını avukat listesiyle karşılaştırarak belgenin en az bir avukat katılımcısı olup olmadığını belirler.
 
 Model, her belge için aşağıdaki üç özelliği üretir:
 
-- **AttorneyClientPrivilegeScore:** Belgenin doğayla ilgili yasal olma olasılığı; puanın değerleri **0** ile **1 arasındadır**.
+- **AttorneyClientPrivilegeScore:** Belgenin doğası gereği yasal olma olasılığı; puanının değerleri **0** ile **1** arasındadır.
 
-- **HasAttorney:** Belge katılımcılarından biri **avukat** listesinde yer alıyorsa bu özellik doğru olarak ayarlanır; aksi takdirde değer **yanlış olur**. Ayrıca, organizasyonunız bir **avukat** listesi yüklemezse değer yanlış olarak ayarlanır.
+- **HasAttorney:** Bu özellik, belge katılımcılarından biri avukat listesinde listeleniyorsa **true** olarak ayarlanır; aksi takdirde değer **false'tur**. Kuruluşunuz bir avukat listesi **yüklemediyse değer** false olarak da ayarlanır.
 
-- **IsPrivilege:** Bu özellik, **AvukatClientPrivilegeScore** değeri eşiğin üzerinde ise veya belgede bir avukat katılımcısı  varsa true olarak ayarlanır; aksi takdirde değer **false olarak ayarlanır**.
+- **IsPrivilege:** **Bu özellik, AttorneyClientPrivilegeScore** değeri eşiğin üzerindeyse *veya* belgenin bir avukat katılımcısı varsa **true** olarak ayarlanır; aksi takdirde değer **false** olarak ayarlanır.
 
-Bu özellikler (ve bunlara karşılık gelen değerler), aşağıdaki ekran görüntüsünde gösterildiği gibi, gözden geçirme kümesinde belgelerin dosya meta verilerine eklenir:
+Bu özellikler (ve bunlara karşılık gelen değerler), aşağıdaki ekran görüntüsünde gösterildiği gibi, bir gözden geçirme kümesindeki belgelerin dosya meta verilerine eklenir:
 
 ![Dosya meta verilerinde gösterilen avukat-istemci ayrıcalık özellikleri.](../media/AeDAttorneyClientPrivilegeMetadata.png)
 
-Bu üç özellik de gözden geçirme kümesi içinde aranabilir. Daha fazla bilgi için bkz [. Gözden geçirme kümesinde verileri sorgulama](review-set-search.md).
+Bu üç özellik bir gözden geçirme kümesi içinde de aranabilir. Daha fazla bilgi için bkz. [Gözden geçirme kümesindeki verileri sorgulama](review-set-search.md).
 
 ## <a name="set-up-the-attorney-client-privilege-detection-model"></a>Avukat-istemci ayrıcalık algılama modelini ayarlama
 
-Avukat-istemci ayrıcalık algılama modelini etkinleştirmek için, kuruluş bu modeli açmalı ve sonra bir avukat listesi yüklesin.
+Avukat-istemci ayrıcalık algılama modelini etkinleştirmek için kuruluşunuzun bunu açıp bir avukat listesi yüklemesi gerekir.
 
-### <a name="step-1-turn-on-attorney-client-privilege-detection"></a>1. Adım: Avukat-müşteri ayrıcalık algılamayı açma
+### <a name="step-1-turn-on-attorney-client-privilege-detection"></a>1. Adım: Avukat-istemci ayrıcalık algılamayı açma
 
-Kurumda eBulma Yöneticisi olan bir kişi (eBulma Yöneticisi rol grubunda eBulma Yöneticisi alt grubunun bir üyesi) modelin sizin veya Advanced eDiscovery tarafından kullanılabilir olması gerekir.
+Kuruluşunuzda eBulma Yöneticisi olan bir kişi (eBulma Yöneticisi rol grubundaki eBulma Yöneticisi alt grubunun üyesi) modeli eBulma (Premium) vakalarınızda kullanılabilir hale getirmelidir.
 
-1. Sayfa Microsoft 365 uyumluluk merkezi, [Ayarlar'a Advanced eDiscovery](https://go.microsoft.com/fwlink/p/?linkid=2173764) ve Ayarları **Değiştir'Advanced eDiscovery tıklayın**.
+1. Microsoft Purview uyumluluk portalında [eBulma (Premium)](https://go.microsoft.com/fwlink/p/?linkid=2173764) seçeneğine gidin ve **eBulma (Premium) ayarları'na** tıklayın.
 
-   ![Advanced eDiscovery seçin](..\media\HistoricalVersions1.png)
+   ![eBulma (Premium) ayarlarını seçin](..\media\HistoricalVersions1.png)
 
-2. Ekran **Ayarlar** Analiz **sekmesini seçin ve** ardından Avukatlık ayrıcalık **algılaması** iki durumlu düğmesini açık olarak ayarlayın.
+2. **Ayarlar** sayfasında **Analiz** sekmesini seçin ve ardından **Avukat-istemci ayrıcalık algılama** iki durumlu düğmesini açık konuma getirin.
 
-   ![Avukatlık ayrıcalık algılamayı açmak için iki durumlu düğmeyi tıklatın](..\media\TurnOnAttorneyClientPrivilegeDetection.png)
+   ![Avukat-istemci ayrıcalık algılamasını açmak için iki durumlu düğmeyi tıklatın](..\media\TurnOnAttorneyClientPrivilegeDetection.png)
 
-3. Değişikliği **kaydetmek için** Kaydet'e tıklayın.
+3. Değişikliği kaydetmek için **Kaydet'e** tıklayın.
 
-### <a name="step-2-upload-a-list-of-attorneys-optional"></a>2. Adım: Upload listesi (isteğe bağlı)
+### <a name="step-2-upload-a-list-of-attorneys-optional"></a>2. Adım: Avukat listesini Upload (isteğe bağlı)
 
-Avukat-istemci ayrıcalık algılama modelinden tam olarak yararlanmak ve daha önce açıklanan Avukata Sahip veya  Ayrıcalıklı Olabilecek algılama  sonuçlarını kullanmak için, kurum için çalışan personel ve personeli için bir e-posta adresi listesi yüklemenizi öneririz.
+Avukat-istemci ayrıcalık algılama modelinden tam olarak yararlanmak ve daha önce açıklanan **Has Attorney** veya **Potansiyel Ayrıcalıklı** algılama sonuçlarını kullanmak için, kuruluşunuzda çalışan avukatlar ve hukuk personeli için e-posta adreslerinin bir listesini karşıya yüklemenizi öneririz.
 
-Avukat-istemci ayrıcalık algılama modeli tarafından kullanmak üzere bir avukat listesini karşıya yüklemek için:
+Avukat-istemci ayrıcalık algılama modeli tarafından kullanılmak üzere bir avukat listesi yüklemek için:
 
-1. Başlık .csv bir dosya oluşturun ve her uygun kişinin e-posta adresini ayrı bir satıra ekleyin. Bu dosyayı yerel bilgisayarınıza kaydedin.
+1. Bir .csv dosyası oluşturun (üst bilgi satırı olmadan) ve her uygun kişinin e-posta adresini ayrı bir satıra ekleyin. Bu dosyayı yerel bilgisayarınıza kaydedin.
 
-2. Ana Advanced eDiscovery **Ayarlar** **Analiz sekmesini seçin**.
+2. eBulma (Premium) **Ayarlar** sayfasında **Analiz** sekmesini seçin.
 
-   **Avukat-istemci ayrıcalık** sayfası görüntülenir ve **Vekaletname ayrıcalık algılama** iki durumlu düğmeyi açık.
+   **Avukat-istemci ayrıcalık** sayfası görüntülenir ve **Avukat-müşteri ayrıcalık algılama** iki durumlu düğmesi açılır.
 
-   ![Avukat-istemci ayrıcalık uçarak giriş sayfası](..\media\AeDUploadAttorneyList1.png)
+   ![Avukat-istemci ayrıcalık açılır sayfası](..\media\AeDUploadAttorneyList1.png)
 
-3. Dosya **seç'i** seçin ve 1. .csv oluşturduğunuz dosyanın adını bulun ve seçin.
+3. **Dosya seç'i** seçin ve ardından 1. adımda oluşturduğunuz .csv dosyasını bulun ve seçin.
 
-4. Avukat **listesini karşıya** yüklemek için Kaydet'i seçin.
+4. Avukat listesini karşıya yüklemek için **Kaydet'i** seçin.
 
 ## <a name="use-the-attorney-client-privilege-detection-model"></a>Avukat-istemci ayrıcalık algılama modelini kullanma
 
-Bu bölümdeki adımları takip edin ve gözden geçirme kümesinde belgeler için avukatlık ayrıcalık algılamayı kullanın.
+Gözden geçirme kümesindeki belgeler için avukat-istemci ayrıcalık algılamasını kullanmak için bu bölümdeki adımları izleyin.
 
 ### <a name="step-1-create-a-smart-tag-group-with-attorney-client-privilege-detection-model"></a>1. Adım: Avukat-istemci ayrıcalık algılama modeliyle akıllı etiket grubu oluşturma
 
-İnceleme süreciniz içinde avukatlık ayrıcalık algılama sonuçlarını görmenin başlıca yollarından biri akıllı etiket grubu kullanmaktır. Akıllı etiket grubu, avukat-istemci ayrıcalık algılama sonuçlarını gösterir ve akıllı etiket grubunda etiketlerin yanında sonuçları satır içinde gösterir. Bu, belgeyi gözden geçirme sırasında kolayca ayrıcalıklı olabilecek belgeleri tanımlamanıza olanak sağlar. Bunlara ek olarak, akıllı etiket grubunda etiketleri kullanarak belgeleri ayrıcalıklı veya ayrıcalıklı değil olarak etiketebilirsiniz. Akıllı etiketler hakkında daha fazla bilgi için bkz. Akıllı [etiketler için Advanced eDiscovery](smart-tags.md).
+Gözden geçirme sürecinizde avukat-istemci ayrıcalık algılamasının sonuçlarını görmenin birincil yollarından biri akıllı etiket grubu kullanmaktır. Akıllı etiket grubu, avukat-istemci ayrıcalık algılamasının sonuçlarını gösterir ve sonuçları bir akıllı etiket grubundaki etiketlerin yanında satır içinde gösterir. Bu, belge gözden geçirme sırasında ayrıcalıklı olabilecek belgeleri hızla belirlemenize olanak tanır. Ayrıca, belgeleri ayrıcalıklı veya ayrıcalıklı olmayan olarak etiketlemek için akıllı etiket grubundaki etiketleri de kullanabilirsiniz. Akıllı etiketler hakkında daha fazla bilgi için bkz. [eBulma'da akıllı etiketleri ayarlama (Premium)](smart-tags.md).
 
-1. 1. Adım'da çözümley istediğiniz belgeleri içeren gözden geçirme kümesinde, Gözden geçirme  kümesi yönet'i ve sonra da Etiketleri **yönet'i seçin**.
+1. 1. Adımda çözümlediğiniz belgeleri içeren gözden geçirme kümesinde **Gözden geçirme kümesini yönet'i** ve ardından **Etiketleri yönet'i** seçin.
 
-2. **Etiketler'in** altında Grup ekle'nin yanındaki aşağı **çekin ve** ardından Akıllı etiket **grubu ekle'yi seçin**.
+2. **Etiketler'in** altında, **Grup ekle'nin** yanındaki açılan listeden **Akıllı etiket grubu ekle'yi** seçin.
 
    !["Akıllı etiket grubu ekle"yi seçin.](../media/AeDCreateSmartTag.png)
 
-3. Akıllı **etiketiniz için model seçin sayfasında** , Avukatlık **ayrıcalıklarının** yanındaki **Seç'i seçin**.
+3. **Akıllı etiketiniz için model seçin** sayfasında **Avukat-istemci ayrıcalığının** yanındaki **Seç'i** seçin.
 
-   Avukat-istemci **ayrıcalığı adlı bir etiket** grubu görüntülenir. Pozitif ve Negatif adlı iki **alt** etiket **içerir** ve bu etiket modelin ürettiği olası sonuçlara karşılık gelir.
+   **Avukat-istemci ayrıcalığı** adlı bir etiket grubu görüntülenir. Model tarafından üretilen olası sonuçlara karşılık gelen **Pozitif** ve **Negatif** adlı iki alt etiket içerir.
 
    ![Avukat-istemci ayrıcalık akıllı etiket grubu.](../media/AeDAttorneyClientSmartTagGroup.png)
 
-3. Etiket grubunu ve etiketleri gözden geçirmenize uygun şekilde yeniden adlandırabilirsiniz. Örneğin, Pozitif'i Ayrıcalıklı olarak **ve Negatif'i** **de Ayrıcalıklı** **Değil** **olarak yeniden adlandırsınız**.
+3. Etiket grubunu ve etiketleri gözden geçirmenize uygun şekilde yeniden adlandırın. Örneğin, **Pozitif'i** Ayrıcalıklı olarak, **Negatif'i** **ayrıcalıklı** **değil** olarak yeniden adlandırabilirsiniz.
 
-### <a name="step-2-analyze-a-review-set"></a>2. Adım: Gözden geçirme kümesi çözümleme
+### <a name="step-2-analyze-a-review-set"></a>2. Adım: Gözden geçirme kümesini analiz etme
 
-İnceleme kümesinde belgeleri analiz etmenizde, avukat-istemci ayrıcalık algılama modeli de çalışır ve ilgili özellikler (Nasıl çalışır [?](#how-does-it-work)) gözden geçirme kümesinde her belgeye eklenir. Gözden geçirme kümesinde verileri çözümleme hakkında daha fazla bilgi için bkz. Gözden [geçirme kümesinde verileri çözümleme Advanced eDiscovery](analyzing-data-in-review-set.md).
+Belgeleri bir gözden geçirme kümesinde analiz ettiğinizde, avukat-istemci ayrıcalık algılama modeli de çalışır ve ilgili özellikler ( [nasıl çalışır?](#how-does-it-work)) gözden geçirme kümesindeki her belgeye eklenir. Gözden geçirme kümesindeki verileri analiz etme hakkında daha fazla bilgi için bkz. [eBulma(Premium) içinde bir gözden geçirme kümesindeki verileri çözümleme](analyzing-data-in-review-set.md).
 
 ### <a name="step-3-use-the-smart-tag-group-for-review-of-privileged-content"></a>3. Adım: Ayrıcalıklı içeriği gözden geçirmek için akıllı etiket grubunu kullanma
 
-Akıllı etiketleri gözden geçirme ayarını ve ayarlamayı çözümledikten sonra, bir sonraki adım belgeleri gözden geçirmektir. Model, belgenin muhtemelen ayrıcalıklı olduğunu belirlediyse, Etiketleme panelindeki ilgili akıllı etiket,  avukat-istemci ayrıcalık algılaması tarafından üretilen aşağıdaki sonuçları gösterir:
+Gözden geçirme kümesini analiz ettikten ve akıllı etiketleri ayarladıktan sonra, sonraki adım belgeleri gözden geçirmektir. Model belgenin potansiyel olarak ayrıcalıklı olduğunu belirlemişse Etiketleme **panelindeki** ilgili akıllı etiket, avukat-istemci ayrıcalık algılaması tarafından üretilen aşağıdaki sonuçları gösterir:
 
-- Belgenin doğanda yasal olan içeriği varsa, ilgili akıllı etiketin yanında Yasal  içerik etiketi görüntülenir (bu durumda varsayılan **Pozitif etikettir**).
+- Belgenin doğası gereği yasal olabilecek içeriği varsa, ilgili akıllı etiketin yanında **Yasal içerik** etiketi görüntülenir (bu durumda varsayılan **Pozitif** etikettir).
 
-- Belgede, kuruluşun avukat listesinde bulunan bir katılımcı varsa, ilgili akıllı etiketin yanında Avukat **etiketi görüntülenir (** bu durumda da varsayılan Pozitif etikettir).
+- Belge, kuruluşunuzun avukat listesinde bulunan bir katılımcıya sahipse, ilgili akıllı etiketin yanında **Avukat** etiketi görüntülenir (bu durumda varsayılan **Pozitif** etiket de budur).
 
-- Belgede doğada yasal olan ve avukat listesinde bir katılımcısı  bulunan içerik varsa, hem Yasal içerik hem de **Avukat etiketleri** görüntülenir. 
+- Belgenin doğası gereği yasal olabilecek içeriği varsa *ve* avukat listesinde bulunan bir katılımcı varsa, hem **Yasal içerik**  hem de **Avukat** etiketleri görüntülenir. 
 
-Model bir belgenin doğayla ilgili yasal içerik içerme olmadığını veya avukatlık listesinden bir katılımcı içerme olmadığını belirlerse, etiketleme panelinde hiçbir etiket görüntülenmez.
+Model, belgenin doğası gereği yasal içerik içermediğini veya avukat listesinden bir katılımcı içermediğini belirlerse, etiketleme panelinde iki etiket de görüntülenmez.
 
-Örneğin, aşağıdaki ekran görüntüleri iki belgeyi gösterir. İlk belge, doğada yasal olan ve avukat listesinde bulunan bir katılımcısı bulunan içeriği içeriyor. İkinci durumda da etiketlerin hiçbiri görüntülenmez.
+Örneğin, aşağıdaki ekran görüntülerinde iki belge gösterilir. İlki, doğası gereği yasal olan ve avukat listesinde bulunan bir katılımcısı olan içeriği içerir. İkincisi hiçbirini içermez ve bu nedenle herhangi bir etiket görüntülemez.
 
-![Avukat ve Yasal içerik etiketleri olan belge.](../media/AeDTaggingPanelLegalContentAttorney.png)
+![Avukat ve Yasal içerik etiketleri içeren belge.](../media/AeDTaggingPanelLegalContentAttorney.png)
 
-![Etiketsiz belge.](../media/AeDTaggingPanelNegative.png)
+![Etiket içermeyen belge.](../media/AeDTaggingPanelNegative.png)
 
-Bir belgeyi gözden geçirdikten sonra, ayrıcalıklı içerik içerdiğini görmek için belgeyi uygun etiketle etiketebilirsiniz.
+Ayrıcalıklı içerik içeren bir belgeyi gözden geçirdikten sonra, belgeyi uygun etiketle etiketleyebilirsiniz.

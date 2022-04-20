@@ -17,16 +17,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Bu makalede, Microsoft 365'daki temel eBulma durumundaki sınırlar açıklanmaktadır.
-ms.openlocfilehash: 2d920fbe5973d07b7da656d6247038ab785bbe5c
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 67f15bb39ed75f40a8ef42747c0d4e2dfcb1297d
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64822660"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64949619"
 ---
-# <a name="limits-in-core-ediscovery"></a>Çekirdek eBulma sınırları
+# <a name="limits-in-ediscovery-standard"></a>eBulma sınırları (Standart)
 
-Aşağıdaki tabloda, temel eBulma durumlarının sınırları ve temel eBulma olayıyla ilişkili tutmalar listeleniyor. Core eBulma hakkında daha fazla bilgi için bkz. [Core eKeşif'e Genel Bakış](./get-started-core-ediscovery.md).
+Aşağıdaki tabloda, temel eBulma durumlarının sınırları ve temel eBulma olayıyla ilişkili tutmalar listeleniyor. Microsoft Purview eKeşif (Standart) hakkında daha fazla bilgi için bkz. [eKeşif'e Genel Bakış (Standart)](./get-started-core-ediscovery.md).
     
   | Sınırın açıklaması | Sınırı |
   |:-----|:-----|
@@ -44,4 +44,4 @@ Aşağıdaki tabloda, temel eBulma durumlarının sınırları ve temel eBulma o
    > - [Get-ComplianceSearch](/powershell/module/exchange/get-compliancesearch)
    > - [Get-ComplianceSearchAction](/powershell/module/exchange/get-compliancesearchaction)
 
-Core eBulma olayıyla ilişkili aramalar ve dışarı aktarmalarla ilgili sınırlar hakkında daha fazla bilgi için bkz. [İçerik arama ve Çekirdek eBulma sınırları](limits-for-content-search.md).
+eBulma (Standart) olayıyla ilişkili aramalar ve dışarı aktarmalarla ilgili sınırlar hakkında daha fazla bilgi için bkz. [İçerik arama ve eBulma (Standart) sınırları](limits-for-content-search.md).

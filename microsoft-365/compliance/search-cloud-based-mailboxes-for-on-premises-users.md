@@ -1,5 +1,5 @@
 ---
-title: Şirket Teams için sohbet verilerini arama
+title: Şirket içi kullanıcılar için Teams sohbet verilerini arama
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -16,65 +16,65 @@ search.appverid:
 - MST160
 - MET150
 ms.assetid: 3f7dde1a-a8ea-4366-86da-8ee6777f357c
-description: Yöneticiler, Microsoft 365'te eBulma araçlarını kullanarak, Teams bir karma dağıtımda şirket içi kullanıcıların sohbet verilerini Exchange dışarı aktarabilirsiniz.
+description: Yöneticiler, Exchange karma dağıtımdaki şirket içi kullanıcılar için Teams sohbet verilerini aramak ve dışarı aktarmak için Microsoft 365'deki eBulma araçlarını kullanabilir.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: fdd142783313418c8c65c04f9b5e344ff325ec2c
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 7b77a5178237e7ae25f710c8cc9574449f67a4f2
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63021607"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64945879"
 ---
-# <a name="search-for-teams-chat-data-for-on-premises-users"></a>Şirket Teams için sohbet verilerini arama
+# <a name="search-for-teams-chat-data-for-on-premises-users"></a>Şirket içi kullanıcılar için Teams sohbet verilerini arama
 
-Kuruluşta Exchange karma dağıtımı varsa (veya organizasyonunız şirket içi Exchange kuruluşunu Office 365 ile eşitler) ve Microsoft Teams'i etkinleştirdiyse, şirket içi kullanıcılar anlık ileti için Teams sohbet uygulamasını kullanabilir. Bulut tabanlı bir kullanıcı için Teams sohbet verileri (*1x1 veya 1xN* sohbet olarak da adlandırılan) birincil bulut tabanlı posta kutusuna kaydedilir. Şirket içi bir kullanıcı Teams sohbet uygulamasını kullandığında, bu kullanıcının sohbet iletileri şirket içinde bulunan birincil posta kutusunda depolanmayacaktır. Bu sınırlamayı temel almak için, Microsoft bulut tabanlı bir depolama alanı oluşturulmuş yeni bir özellik yayınladı. Bu nedenle, şirket içi kullanıcılar için eBulma araçlarını kullanarak Teams verilerini arayabilir ve dışarı aktarabilirsiniz.
+Kuruluşunuzun Exchange karma dağıtımı varsa (veya kuruluşunuz şirket içi Exchange kuruluşunu Office 365 ile eşitlediyse) ve Microsoft Teams etkinleştirdiyse, şirket içi kullanıcılar anlık ileti için Teams sohbet uygulamasını kullanabilir. Bulut tabanlı bir kullanıcı için, Teams sohbet verileri (*1x1 veya 1xN sohbetleri* olarak da adlandırılır) birincil bulut tabanlı posta kutusuna kaydedilir. Şirket içi kullanıcı Teams sohbet uygulamasını kullandığında, sohbet iletileri şirket içinde bulunan birincil posta kutusunda depolanamaz. Bu sınırlamayı geçici olarak çözmek için Microsoft, şirket içi kullanıcılar için Teams sohbet verilerini aramak ve dışarı aktarmak için eBulma araçlarını kullanmanız için bulut tabanlı bir depolama alanının oluşturulduğu yeni bir özellik yayımladı.
   
-Şirket içi kullanıcılar için bulut tabanlı depolamayı etkinleştirmeyle ilgili gereksinimler ve sınırlamalar:
+Şirket içi kullanıcılar için bulut tabanlı depolamayı etkinleştirmeye yönelik gereksinimler ve sınırlamalar şunlardır:
   
-- Şirket içi dizin hizmetinizin (örneğin, Active Directory) kullanıcı hesaplarının, Azure Active Directory'te dizin hizmeti olan Microsoft 365. Bu, Posta Kutusu'nda bir posta kullanıcı hesabının Microsoft 365, birincil posta kutusu şirket içi kuruluşta yer alan bir kullanıcıyla ilişkilendiril olduğu anlamına gelir.
+- Şirket içi dizin hizmetinizdeki kullanıcı hesapları (Active Directory gibi) Microsoft 365'daki dizin hizmeti olan Azure Active Directory ile eşitlenmelidir. Bu, posta kullanıcı hesabının Microsoft 365 oluşturulduğu ve birincil posta kutusu şirket içi kuruluşta bulunan bir kullanıcıyla ilişkili olduğu anlamına gelir.
 
-- Birincil posta kutusu şirket içi kuruluşta yer alan kullanıcıya Microsoft Teams lisansı ve Plan 1 lisansının en Exchange Online atanmamış olması gerekir.
+- Birincil posta kutusu şirket içi kuruluşta bulunan kullanıcıya Microsoft Teams lisansı ve en az bir Exchange Online Plan 1 lisansı atanmalıdır.
 
-- Kuruluşun karma dağıtımı yoksa, Exchange dağıtım şemanızı eşitlemek için şirket içi Exchange eşitlemeniz Azure Active Directory. Bunu yapsanız bile, şirket içi posta kutusu Exchange Online veya kuruluş içinde posta kutusu olan kullanıcılar için Exchange Online bulut tabanlı yinelenen posta kutuları oluşturma Exchange olabilir.
+- Kuruluşunuzun Exchange karma dağıtımı yoksa, şirket içi Exchange şemanızı Azure Active Directory ile eşitlemeniz gerekir. Bunu yapmazsanız, şirket içi Exchange kuruluşunuzda posta kutusu olan kullanıcılar için Exchange Online içinde yinelenen bulut tabanlı posta kutuları oluşturma riskiyle karşılayabilirsiniz.
 
-- Yalnızca Teams kullanıcıyla ilişkilendirilmiş sohbet verileri bulut tabanlı depolama alanında depolanır. Şirket içi kullanıcılar bu depolama alanına herhangi bir şekilde erişe sahiptir.
+- Yalnızca şirket içi kullanıcıyla ilişkili Teams sohbet verileri bulut tabanlı depolama alanında depolanır. Şirket içi kullanıcı bu depolama alanına hiçbir şekilde erişemez.
 
 > [!NOTE]
-> Teams görüşmeleri her zaman Ekiple ilişkilendirilmiş bulut tabanlı posta kutusunda depolanır ve bu da kanal konuşmalarını arayabilirsiniz anlamına gelir. Kanal konuşmalarında arama Teams daha fazla bilgi için bkz. [Gruplarda Microsoft Teams ve Microsoft 365.](content-search-reference.md#searching-microsoft-teams-and-microsoft-365-groups)
+> Teams kanal konuşmaları her zaman Ekiple ilişkili bulut tabanlı posta kutusunda depolanır ve bu da kanal konuşmalarını arayabileceğiniz anlamına gelir. Teams kanal konuşmalarını arama hakkında daha fazla bilgi için bkz[. arama Microsoft Teams ve Microsoft 365 Grupları](content-search-reference.md#searching-microsoft-teams-and-microsoft-365-groups).
   
 ## <a name="how-it-works"></a>Nasıl çalışır?
 
-Microsoft Teams etkinleştirilmiş bir kullanıcının şirket içi posta kutusu varsa ve kullanıcının hesabı/kimliği bulutla eşitlenense, Microsoft şirket içi kullanıcının 1xN ve sohbet verilerini ilişkilendirmek için bulut tabanlı Teams oluşturur. Teams kullanıcıların sohbet verileri, arama için dizine alındı. Bu özellik, şirket içi kullanıcıların sohbet verilerini aramak Teams, önizlemek ve dışarı Advanced eDiscovery için İçerik aramalarını (ve Core eK bulma ve Advanced eDiscovery aramaları) kullanmanızı sağlar. Ayrıca, Güvenlik ve **Uyumluluk\*** Merkezi PowerShell'de ComplianceSearch cmd & let'lerini kullanarak Teams kullanıcıların sohbet verilerini arayabilirsiniz.
+Microsoft Teams etkin bir kullanıcının şirket içi posta kutusu varsa ve kullanıcı hesabı/kimliği bulutla eşitlenmişse, Microsoft şirket içi kullanıcının 1xN Teams sohbet verilerini ilişkilendirmek için bulut tabanlı depolama alanı oluşturur. Şirket içi kullanıcılar için sohbet verileri Teams arama için dizine eklenir. Bu, şirket içi kullanıcılar için Teams sohbet verilerini aramak, önizlemek ve dışarı aktarmak için İçerik aramasını (ve Microsoft Purview eKeşif (Standart) ve Microsoft Purview eKeşif (Premium) servis talepleri ile ilişkili aramaları) kullanmanıza olanak tanır. Şirket içi kullanıcılar için Teams sohbet verilerini aramak için Güvenlik & Uyumluluk Merkezi PowerShell'deki ComplianceSearch cmdlet'lerini de kullanabilirsiniz **\***.
   
-Aşağıdaki grafikte, şirket içi kullanıcıların Teams verileri için arama, önizleme ve dışarı aktarmada nasıl kullanılabilir olduğuyla ilgili iş akışı görüntülenir.
+Aşağıdaki grafikte, şirket içi kullanıcılar için Teams sohbet verilerinin arama, önizleme ve dışarı aktarma için nasıl kullanılabilir olduğu iş akışı gösterilmektedir.
   
-![şirket içi kullanıcıların bulut tabanlı depolama alanı Microsoft Teams.](../media/EHAMShard1.png)
+![Microsoft Teams'deki şirket içi kullanıcılar için bulut tabanlı depolama.](../media/EHAMShard1.png)
   
-Bu özelliğin yanı sıra, bulut tabanlı SharePoint sitesinde ve her Microsoft Team ile ilişkilendirilmiş Exchange posta kutusunda Teams içeriğini aramak, önizlemek ve dışarı aktarmak için eBulma araçlarını ve bulut tabanlı kullanıcılar için Exchange Online posta kutusunda 1xN Teams sohbet verilerini de kullanabilirsiniz.
+Bu özelliğe ek olarak, bulut tabanlı SharePoint sitesinde Teams içeriği aramak, önizlemek ve dışarı aktarmak için eBulma araçlarını ve bulut tabanlı kullanıcılar için Exchange Online posta kutusunda her Microsoft Team ve 1xN Teams sohbet verileriyle ilişkilendirilmiş Exchange posta kutusunu da kullanabilirsiniz.
 
-## <a name="searching-for-teams-chat-content-for-on-premises-users"></a>Şirket Teams kullanıcılarının sohbet içeriğini arama
+## <a name="searching-for-teams-chat-content-for-on-premises-users"></a>Şirket içi kullanıcılar için Teams sohbet içeriği arama
 
-Şirket içi kullanıcıların sohbet verilerini aramak Microsoft 365 uyumluluk merkezi için Teams arama özelliğinde İçerik arama'nın nasıl kullanılır? Ayrıca, Core eKover'daki arama aracını kullanarak şirket içi kullanıcılar için sohbet verilerini de arayabilirsiniz.
+Şirket içi kullanıcılar için Teams sohbet verilerini aramak için Microsoft Purview uyumluluk portalında İçerik arama özelliğini şu şekilde kullanabilirsiniz. Şirket içi kullanıcıların sohbet verilerini aramak için eBulma (Standart) içindeki arama aracını da kullanabilirsiniz.
   
-1. İçerik Microsoft 365 uyumluluk merkezi **arama'ya gidin**.
+1. Uyumluluk portalında **İçerik arama'ya** gidin.
 
-2. Aramalar **sekmesinde Yeni** **arama'ya tıklayın** ve yeni aramaya bir ad girin.
+2. **Aramalar** sekmesinde **Yeni arama'ya** tıklayın ve yeni aramayı adlandırın.
 
-3. Konumlar **sayfasında**, posta kutuları için iki **durumlu** düğmeyi Exchange ayarlayın.
+3. **Konumlar** sayfasında, Exchange posta kutuları için iki durumlu düğmeyi **Açık** olarak ayarlayın.
 
-4. Belirli kullanıcılar (Teams şirket içi kullanıcılar dahil) için Arama yapmak için Kullanıcı **,** grup veya ekip seç'i seçin ve aramaya dahil etmek üzere belirli kullanıcıları seçin. Belirli kullanıcıları listele listeniz yoksa, aramada şirket içi kullanıcılar da dahil olmak üzere tüm kullanıcılar yer a olur.
+4. Belirli kullanıcılar için (şirket içi kullanıcılar dahil) Teams içerik aramak için **Kullanıcı, grup veya ekip seç'i** seçin ve aramaya eklenecek belirli kullanıcıları seçin. Belirli kullanıcıları listelemezseniz, arama şirket içi kullanıcılar da dahil olmak üzere tüm kullanıcıları içerir.
 
-5. Şirket içi **kullanıcılar için uygulama içeriği ekle onay kutusunun seçili** olduğundan emin olun. Bu, şirket içi kullanıcılar için bulut tabanlı depolamada arama yapılmasını sağlar.
+5. **Şirket içi kullanıcılar için uygulama içeriği ekle** onay kutusunun seçili olduğundan emin olun. Bu, şirket içi kullanıcılar için bulut tabanlı depolamanın aranmasını sağlar.
 
-    ![Konumlar sihirbazı Office uygulaması "Şirket içi kullanıcılar için posta kutusu içeriği ekle" onay kutusunu seçin.](../media/EHAMShardCheckBox.png)
+    ![Konumlar sihirbazı sayfasında "Şirket içi kullanıcılar için Office uygulaması içerik ekle" onay kutusunu seçin.](../media/EHAMShardCheckBox.png)
 
-6. Arama **koşullarınızı tanımlayın sayfasında** bir anahtar sözcük sorgusu oluşturun ve gerekirse arama sorgusuna koşullar ekleyin. Yalnızca Ekip sohbetleri verilerini aramak için Anahtar sözcükler kutusuna aşağıdaki **sorguyu** ekleyebilirsiniz:
+6. **Arama koşullarınızı tanımlayın** sayfasında bir anahtar sözcük sorgusu oluşturun ve gerekirse arama sorgusuna koşullar ekleyin. Yalnızca Ekip sohbetleri verilerini aramak için **Anahtar Sözcükler** kutusuna aşağıdaki sorguyu ekleyebilirsiniz:
 
     ```text
     kind:im AND kind:microsoftteams
     ```
 
-6. Gönderin ve arama çalıştırın. Şirket içi kullanıcıların tüm arama sonuçları, diğer tüm arama sonuçları gibi önizlemede 2222 olarak görüntülenir. Ayrıca arama sonuçlarını (tüm sohbet verileri dahil) Teams bir PST dosyasına aktarabilirsiniz. Daha fazla bilgi için bkz.:
+6. Aramayı gönderin ve çalıştırın. Şirket içi kullanıcılar için tüm arama sonuçları diğer arama sonuçları gibi önizlenebilir. Arama sonuçlarını (Teams sohbet verileri dahil) pst dosyasına da aktarabilirsiniz. Daha fazla bilgi için bkz.:
 
     - [Arama oluşturma](content-search.md)
 
@@ -82,29 +82,29 @@ Bu özelliğin yanı sıra, bulut tabanlı SharePoint sitesinde ve her Microsoft
 
     - [Arama sonuçlarını dışarı aktarma](export-search-results.md)
 
-## <a name="using-powershell-to-search-for-teams-chat-data-for-on-premises-users"></a>PowerShell kullanarak şirket Teams sohbet verilerini arama
+## <a name="using-powershell-to-search-for-teams-chat-data-for-on-premises-users"></a>Şirket içi kullanıcılar için Teams sohbet verilerini aramak için PowerShell kullanma
 
-Güvenlik ve **Uyumluluk Merkezi** PowerShell'de Yeni Uyumluluk Arama cmdlet'& lerini kullanarak şirket içi kullanıcıları Teams sohbet verilerini arayabilirsiniz. Daha önce de belirtildiği gibi, PowerShell kullanarak şirket içi kullanıcıların sohbet Teams için destek isteği göndermeniz gerekmektedir.
+Şirket içi kullanıcılar için Teams sohbet verilerini aramak için Güvenlik & Uyumluluk Merkezi PowerShell'deki **New-ComplianceSearch** cmdlet'lerini kullanabilirsiniz. Daha önce açıklandığı gibi, şirket içi kullanıcılar için Teams sohbet verilerini aramak için PowerShell'i kullanmak üzere bir destek isteği göndermeniz gerekmez.
   
-1. [Bağlan ve Uyumluluk & PowerShell'e.](/powershell/exchange/connect-to-scc-powershell)
+1. [Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
 
-2. Aşağıdaki PowerShell komutunu çalıştırarak, şirket içi kullanıcılar için Teams verilerinde arama yapılan içerik araması oluşturun.
+2. Şirket içi kullanıcılar için Teams sohbet verilerini arayan bir içerik araması oluşturmak için aşağıdaki PowerShell komutunu çalıştırın.
 
     ```powershell
     New-ComplianceSearch <name of new search> -ContentMatchQuery <search query> -ExchangeLocation <on-premises user> -IncludeUserAppContent $true -AllowNotFoundExchangeLocationsEnabled $true  
     ```
 
-    *IncludeUserAppContent* parametresi, *ExchangeLocation* parametresiyle belirtilen kullanıcı veya kullanıcıların bulut tabanlı depolama alanını belirtmek için kullanılır. *AllowNotFoundExchangeLocationsEnabled*, bulut tabanlı depolamada şirket içi kullanıcıları aramanızı sağlar. Bu parametrenin `$true` değerini kullanırken, arama çalışmadan önce posta kutusunun varlığını doğrulamaya çalışmaz. Bu, şirket içi kullanıcıları bulut tabanlı depolamada aramak için gereklidir, çünkü bu bulut tabanlı depolama normal bir bulut tabanlı posta kutusu olarak çözümleyici değildir.
+    *IncludeUserAppContent* parametresi, *ExchangeLocation* parametresi tarafından belirtilen kullanıcı veya kullanıcılar için bulut tabanlı depolamayı belirtmek için kullanılır. *AllowNotFoundExchangeLocationsEnabled*, şirket içi kullanıcılar için bulut tabanlı depolamada arama yapmanızı sağlar. Bu parametrenin `$true` değerini kullandığınızda, arama çalışmadan önce posta kutusunun varlığını doğrulamaya çalışmaz. Bu bulut tabanlı depolama normal bir bulut tabanlı posta kutusu olarak çözümlenemediğinden, şirket içi kullanıcılar için bulut tabanlı depolamada arama yapmak için bu gereklidir.
 
-    Aşağıdaki örnekte, Contoso Teams şirket içi kullanıcısı Olan Sara Davis için bulut tabanlı depolamada "redstone" anahtar sözcüğü içeren sarı metin sohbetleri için arama yapabilirsiniz.
+    Aşağıdaki örnek, Contoso kuruluşunda şirket içi kullanıcı olan Sara Davis için bulut tabanlı depolamada "redstone" anahtar sözcüğünü içeren Teams sohbetleri arar.
   
     ```powershell
     New-ComplianceSearch "Redstone_Search" -ContentMatchQuery "redstone AND (kind:im AND kind:microsoftteams)" -ExchangeLocation sarad@contoso.com -IncludeUserAppContent $true -AllowNotFoundExchangeLocationsEnabled $true  
     ```
 
-   Arama oluşturdukktan sonra, aramanızı çalıştırmak için **Start-ComplianceSearch** cmdlet'ini kullanmaya devam edin.
+   Arama oluşturduktan sonra, aramayı çalıştırmak için **Start-ComplianceSearch** cmdlet'ini kullandığınızdan emin olun.
   
-Bu cmdlet'leri kullanma hakkında daha fazla bilgi için bkz:
+Bu cmdlet'leri kullanarak daha fazla bilgi için bkz:
   
 - [New-ComplianceSearch](/powershell/module/exchange/new-compliancesearch)
 
@@ -112,30 +112,30 @@ Bu cmdlet'leri kullanma hakkında daha fazla bilgi için bkz:
 
 ## <a name="known-issues"></a>Bilinen sorunlar
 
-- Şu anda, şirket içi kullanıcıların sohbet verisinde arama Teams önizleme ve dışarı aktarma özelliği bulunmaktadır. Ayrıca Core veya Advanced eDiscovery durumuyla ilişkilendirilmiş bir şirket içi kullanıcının Teams sohbet verilerini yerinde saklamaya ve şirket içi kullanıcılar için Teams sohbetleri veya kanal iletileri için bekletme ilkesi uygulayabilirsiniz. Ancak şu anda, şirket içi kullanıcılara diğer içerik konumlarını (örneğin, Exchange posta kutularını ve SharePoint sitelerini) bekletme ilkesi uygulayaabilirsiniz.
+- Şu anda şirket içi kullanıcılar için Teams sohbet verilerini arayabilir, önizleyebilir ve dışarı aktarabilirsiniz. Ayrıca, şirket içi bir kullanıcının Teams sohbet verilerini Bir Çekirdek veya eBulma (Premium) olayıyla ilişkili ayrı tutmaya alabilir ve şirket içi kullanıcılar için Teams sohbetler veya kanal iletileri için bekletme ilkesi uygulayabilirsiniz. Ancak şu anda şirket içi kullanıcılar için diğer içerik konumları (Exchange posta kutuları ve SharePoint siteleri gibi) için bekletme ilkesi uygulayamazsınız.
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
 
-**Şirket içi kullanıcıların sohbet iletilerini aramak için bir destek isteği göndermem gerekir mi?**
+**Şirket içi kullanıcıların sohbet iletilerini aramak için bir destek isteği göndermem gerekiyor mu?**
 
-Hayır. Bu özellik tüm kuruluşlar için varsayılan olarak etkindir. Bir noktada Microsoft Desteği'ne başvurarak bağlantı kurmanız gerekirdi, ancak artık böyle değildir.
+Hayır. Bu özellik tüm kuruluşlar için varsayılan olarak etkindir. Bir noktada, Microsoft Desteği ile iletişim kurmanız gerekirdi, ancak artık böyle bir durum söz konusu değildir.
   
- **eBulma araçları, bu Teams tüm kuruluşlarda varsayılan olarak etkinleştirilmeden önce şirket içi kullanıcıların eski sohbet verilerini bulabilir mi?**
+ **eBulma araçları, bu özelliğin tüm kuruluşlar için varsayılan olarak etkinleştirildiği zamandan önce şirket içi kullanıcılar için eski Teams sohbet verilerini bulabilir mi?**
   
-Microsoft, şirket Teams sohbet verilerini 31 Ocak 2018'de depolamaya başladı. Dolayısıyla, şirket içi Teams kullanıcılarının kimliği, bu tarihten itibaren şirket içi Active Directory ile Microsoft 365'te Azure Active Directory arasında eşitlanmışsa, Teams sohbet verileri bulutta depolanır ve eBulma araçları kullanılarak aranabilir.
+Microsoft, şirket içi kullanıcılar için Teams sohbet verilerini 31 Ocak 2018'de depolamaya başlamıştır. Bu nedenle, şirket içi Teams kullanıcının kimliği bu tarihten bu yana Microsoft 365 şirket içi Active Directory ve Azure Active Directory arasında eşitlendiyse, Teams sohbet verileri bulutta depolanır ve eBulma araçları kullanılarak aranabilir .
 
- **Şirket içi kullanıcıların, kullanıcılarının sohbet verilerini bulutta Teams için lisansa ihtiyacı var mı?**
+ **Şirket içi kullanıcıların Teams sohbet verilerini bulutta depolamak için lisansa ihtiyacı var mı?**
   
-Evet. Şirket içi Teams bulut tabanlı bir depolamada şirket içi bir kullanıcının sohbet verilerini depolamak için, kullanıcıya Microsoft Teams lisansı ve Office 365'de Exchange Online Planı lisansı (veya Microsoft 365) atanabilir.
+Evet. Şirket içi bir kullanıcının Teams sohbet verilerini bulut tabanlı depolama alanında depolamak için kullanıcıya Microsoft Teams lisansı ve Office 365 (veya Microsoft 365) Exchange Online Planı lisansı atanmalıdır.
 
-**Şirket içi kullanıcıların bulut tabanlı depolaması nerede?**
+**Şirket içi kullanıcılar için bulut tabanlı depolama nerede bulunur?**
   
-Teams sohbet verileri, şirket içi kullanıcı için Tercih Edilen Veri Konumu'nda (PDL) depolanır. PDL hem coğrafi ortamlarda Single-Geo Multi-Geo ortamlarında bulunmaktadır. Daha fazla bilgi için bkz[. Microsoft 365 Multi-Geo](../enterprise/microsoft-365-multi-geo.md).
+Teams sohbet verileri, şirket içi bir kullanıcının Tercih Edilen Veri Konumu'nda (PDL) depolanır. PDL hem Single-Geo hem de Multi-Geo ortamlarında kabul edilir. Daha fazla bilgi için bkz[. Multi-Geo Microsoft 365](../enterprise/microsoft-365-multi-geo.md).
 
-**Kullanıcının şirket içi posta kutusu buluta Teams bu kullanıcının sohbet verilerini kaybetme riski var mı?**
+**Kullanıcının şirket içi posta kutusu buluta geçirilirse Teams sohbet verilerini kaybetme riski var mı?**
   
-Hayır. Şirket içi kullanıcının birincil posta kutusunu buluta geçirerek, bu kullanıcının Teams sohbet verileri yeni bulut tabanlı birincil posta kutusuna geçirilir.
+Hayır. Şirket içi kullanıcının birincil posta kutusunu buluta geçirdiğinizde, bu kullanıcının Teams sohbet verileri yeni bulut tabanlı birincil posta kutusuna geçirilecektir.
   
  **Şirket içi kullanıcılara eBulma saklama veya bekletme ilkeleri uygulayabilir miyim?**
   
-Evet. Şirket içi kullanıcıların sohbetlerini ve kanal iletilerini Teams için eKbulma bekletmeleri veya bekletme ilkeleri uygulayabilirsiniz. Ancak şirket içi kullanıcıların Teams korumak veya korumak için, şirket içi kullanıcıya Exchange Online Plan 2 lisansı atanabilir.
+Evet. Şirket içi kullanıcıların Teams sohbetleri ve kanal iletileri için eBulma tutmaları veya bekletme ilkeleri uygulayabilirsiniz. Ancak şirket içi kullanıcıların Teams içeriğini korumak veya korumak için şirket içi kullanıcıya Exchange Online Plan 2 lisansı atanmalıdır.

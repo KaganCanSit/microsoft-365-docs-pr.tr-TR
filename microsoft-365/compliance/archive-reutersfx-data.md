@@ -1,5 +1,5 @@
 ---
-title: Reuters FX verilerini aynı dosyada arşivlemek için bir bağlayıcı Microsoft 365
+title: Microsoft 365'de Reuters FX verilerini arşivleye bir bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -11,82 +11,82 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Yöneticiler Reuters FX verilerini Veritas'tan içeri aktarma ve arşivlemek için bir bağlayıcı ayar Microsoft 365. Bu bağlayıcı, iş yerinde üçüncü taraf veri kaynaklarından verileri Microsoft 365. Bu verileri arşivledikten sonra, üçüncü taraf verilerini yönetmek için yasal saklama, içerik araması ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
-ms.openlocfilehash: afc8ef93179259597c1113791c318f3b115c3561
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Yöneticiler, Reuters FX verilerini Veritas'tan Microsoft 365'a içeri aktarmak ve arşiv etmek için bir bağlayıcı ayarlayabilir. Bu bağlayıcı, Microsoft 365'da üçüncü taraf veri kaynaklarından verileri arşivleyabilmenizi sağlar. Bu verileri arşivledikten sonra, üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
+ms.openlocfilehash: 1c72c47da5c18b0688dafd73f4d1bb78d8bee48b
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63312383"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64950665"
 ---
-# <a name="set-up-a-connector-to-archive-reuters-fx-data"></a>Reuters FX verilerini arşivlemek için bağlayıcı ayarlama
+# <a name="set-up-a-connector-to-archive-reuters-fx-data"></a>Reuters FX verilerini arşivleye bağlayıcı ayarlama
 
-Reuters FX platformundan kendi Microsoft 365 uyumluluk merkezi posta kutularına veri içeri aktarma ve arşivlemek için veri kaynağında bir Veritas bağlayıcısı Microsoft 365 kullanın. Veritas size üçüncü taraf veri kaynağından (düzenli olarak) öğe yakalamak ve bu öğeleri iş yerlerinden içeri aktaracak şekilde yapılandırılmış bir [Reuters FX](https://globanet.com/reuters-fx/) bağlayıcısı Microsoft 365. Bağlayıcı, Reuters FX hesabından gelen para birimlerini ve FX hızlarını e-posta iletisi biçimine dönüştürür ve bu öğeleri Kendi Posta Kutunuzda kullanıcının posta kutusuna Microsoft 365.
+Verileri Reuters FX platformundan Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında bir Veritas bağlayıcısı kullanın. Veritas, üçüncü taraf veri kaynağındaki öğeleri yakalamak (düzenli olarak) ve ardından bu öğeleri Microsoft 365'a aktarmak için yapılandırılmış bir [Reuters FX](https://globanet.com/reuters-fx/) bağlayıcısı sağlar. Bağlayıcı, Reuters FX hesabından para birimlerini ve FX oranlarını e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'da kullanıcının posta kutusuna aktarır.
 
-Reuters FX verileri kullanıcı posta kutularında depolandığı için Mahkeme Microsoft 365, eBulma, bekletme ilkeleri ve bekletme etiketleri ve iletişim uyumluluğu gibi uyumluluk özelliklerini uygulayabilirsiniz. Aynı kuruluşta verileri içeri aktararak ve arşivlenen bir Reuters FX Microsoft 365, kurumuz tarafından devlet ve mevzuat ilkeleriyle uyumlu kalmalarına yardımcı olabilir.
+Reuters FX verileri kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, eBulma, bekletme ilkeleri ve bekletme etiketleri ve iletişim uyumluluğu gibi Microsoft Purview özelliklerini uygulayabilirsiniz. Microsoft 365'da verileri içeri aktarmak ve arşivlemek için Reuters FX bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 
-## <a name="overview-of-archiving-reuters-fx-data"></a>Reuters FX verilerini arşivlemeye genel bakış
+## <a name="overview-of-archiving-reuters-fx-data"></a>Reuters FX verilerini arşivlemeyle ilgili genel bakış
 
-Aşağıdaki genel bakış makalesinde, Reuters FX verilerini şirket içinde arşivlemek için bağlayıcı kullanma Microsoft 365.
+Aşağıdaki genel bakış, Microsoft 365'da Reuters FX verilerini arşivlerken bağlayıcı kullanma işlemini açıklar.
 
-![Reuters FX verileri için iş akışı arşivleme.](../media/ReutersFXConnectorWorkflow.png)
+![Reuters FX verileri için arşivleme iş akışı.](../media/ReutersFXConnectorWorkflow.png)
 
-1. Organizasyonunız Reuters FX sitesi ayarlamak ve yapılandırmak için Reuters FX ile çalışır.
+1. Kuruluşunuz, Reuters FX sitesini ayarlamak ve yapılandırmak için Reuters FX ile birlikte çalışır.
 
-2. Reuters FX öğeleri 24 saatte bir Veritas Merge1 sitesine kopyalanır. Bağlayıcı öğeleri de e-posta iletisi biçimine dönüştürür.
+2. Her 24 saatte bir Reuters FX öğeleri Veritas Merge1 sitesine kopyalanır. Bağlayıcı ayrıca öğeleri e-posta iletisi biçimine dönüştürür.
 
-3. Microsoft 365 uyumluluk merkezi'ta oluşturmakta olduğunuz Reuters FX bağlayıcısı, her gün Veritas Merge1 sitesine bağlanır ve içeriği Microsoft bulutunda güvenli bir Azure Depolama konuma aktarabilir.
+3. Uyumluluk portalında oluşturduğunuz Reuters FX bağlayıcısı her gün Veritas Merge1 sitesine bağlanır ve içeriği Microsoft bulutunda güvenli bir Azure Depolama konumuna aktarır.
 
-4. Bağlayıcı, otomatik kullanıcı eşlemesinde E-posta özelliğinin değerini 3. Adımda açıklandığı gibi kullanarak  öğeleri belirli kullanıcıların posta [kutularına alır](#step-3-map-users-and-complete-the-connector-setup). Kullanıcı posta kutularında **Reuters FX** adlı Gelen Kutusu klasöründe bir alt klasör oluşturulur ve öğeler bu klasöre aktarılır. Bağlayıcı, E-posta özelliğinin değerini kullanarak hangi posta kutusuna öğe *aktarılamayacaklarını* belirler. Her Reuters FX öğesi, öğenin tüm katılımcılarının e-posta adresiyle doldurulan bu özelliği içerir.
+4. Bağlayıcı, [3. Adımda](#step-3-map-users-and-complete-the-connector-setup) açıklandığı gibi otomatik kullanıcı eşlemesinin *Email* özelliğinin değerini kullanarak öğeleri belirli kullanıcıların posta kutularına aktarır. Kullanıcı posta kutularında **Reuters FX** adlı Gelen Kutusu klasöründe bir alt klasör oluşturulur ve öğeler bu klasöre aktarılır. Bağlayıcı, *E-posta* özelliğinin değerini kullanarak öğelerin hangi posta kutusuna aktarılacağını belirler. Her Reuters FX öğesi, öğenin her katılımcısının e-posta adresiyle doldurulan bu özelliği içerir.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-- Microsoft bağlayıcıları için VeriTas Merge1 hesabı oluşturun. Hesap oluşturmak için [Veritas Müşteri Desteği'ne başvurun](https://globanet.com/contact-us). Bağlayıcıyı 1. Adımda  oluşturdukta bu hesapta oturum açın.
+- Microsoft bağlayıcıları için bir Veritas Merge1 hesabı oluşturun. Hesap oluşturmak için [Veritas Müşteri Desteği'ne](https://globanet.com/contact-us) başvurun. 1. Adımda bağlayıcıyı oluştururken bu hesapta oturum açmanız gerekir.
 
-- 1. Adımda Reuters FX bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yöneticisi rolü atanabilir. Bu rol, sayfanın en son veri **bağlayıcıları sayfasına bağlayıcı** eklemek Microsoft 365 uyumluluk merkezi. Bu rol varsayılan olarak birden çok rol gruplarına eklenir. Bu rol gruplarının listesi için, Güvenlik ve Uyumluluk Merkezi'nde İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki roller" [& bakın](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). Alternatif olarak, bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolü ata sonrasında uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için aşağıdaki İzinler bölümündeki "Özel bir rol grubu oluşturma" [bölümüne Microsoft 365 uyumluluk merkezi](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- 1. Adımda Reuters FX bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için [Microsoft Purview uyumluluk portalındaki İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
-- Bu Veritas veri bağlayıcısı, ABD Kamu bulutu GCC ortamlarda Microsoft 365 önizlemededir. Üçüncü taraf uygulamaları ve hizmetleri, kuruluş müşteri verilerini Microsoft 365 altyapısının dışında olan üçüncü taraf sistemlerde depolamayı, iletip işlemeyi ve bu nedenle de Microsoft 365 uyumluluk ve veri koruma taahhütleri kapsamında değildir. Microsoft, bu ürünün üçüncü taraf uygulamalara bağlanmak için kullanılabileceğiyle ilgili hiçbir beyanda yoktur ve bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu da ima eder.
+- Bu Veritas veri bağlayıcısı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda genel önizleme aşamasındadır. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerinin Microsoft 365 altyapısı dışında olan ve bu nedenle Microsoft Purview ve veri koruma taahhütleri kapsamında olmayan üçüncü taraf sistemlerde depolanmasını, iletilmesini ve işlenmesini içerebilir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
 
-## <a name="step-1-set-up-the-reuters-fx-connector"></a>1. Adım: Reuters FX bağlayıcıyı ayarlama
+## <a name="step-1-set-up-the-reuters-fx-connector"></a>1. Adım: Reuters FX bağlayıcısını ayarlama
 
-İlk adım, son veri **sayfasındaki Veri Bağlayıcıları** sayfasına erişmek Microsoft 365 Reuters FX verileri için bir bağlayıcı oluşturmaktır.
+İlk adım, Microsoft 365 **Veri Bağlayıcıları** sayfasına erişmek ve Reuters FX verileri için bir bağlayıcı oluşturmaktır.
 
-1. Veri bağlayıcılarıRe [https://compliance.microsoft.com](https://compliance.microsoft.com/) **fx'e gidin** >  **ve bu öğeye tıklayın**.
+1. [https://compliance.microsoft.com](https://compliance.microsoft.com/) Adresine gidin ve **Veri bağlayıcılarıReuters** >  **FX'e** tıklayın.
 
-2. **Reuters FX ürün açıklaması** sayfasında Bağlayıcı **ekle'ye tıklayın**.
+2. **Reuters FX** ürün açıklaması sayfasında **Bağlayıcı ekle'ye** tıklayın.
 
-3. Hizmet Koşulları **sayfasında Kabul Et'e** **tıklayın**.
+3. **Hizmet koşulları** sayfasında **Kabul Et'e** tıklayın.
 
-4. Bağlayıcıyı tanımlayan benzersiz bir ad girin ve Ardından Sonraki'ye **tıklayın**.
+4. Bağlayıcıyı tanımlayan benzersiz bir ad girin ve **İleri'ye** tıklayın.
 
-5. Bağlayıcıyı yapılandırmak için Merge1 hesabınızla oturum açın.
+5. Bağlayıcıyı yapılandırmak için Merge1 hesabınızda oturum açın.
 
-## <a name="step-2-configure-the-reuters-fx-connector-on-the-veritas-merge1-site"></a>2. Adım: Veritas Merge1 sitesinde Reuters FX bağlayıcıyı yapılandırma
+## <a name="step-2-configure-the-reuters-fx-connector-on-the-veritas-merge1-site"></a>2. Adım: Veritas Merge1 sitesinde Reuters FX bağlayıcısını yapılandırma
 
-İkinci adım, Veritas Merge1 sitesinde Reuters FX bağlayıcısı'nın yapılandırılmasıdır. Reuters FX bağlayıcısını yapılandırma hakkında bilgi için bkz. [Merge1 Third-Party Connectors Kullanıcı Kılavuzu](https://docs.ms.merge1.globanetportal.com/Merge1%20Third-Party%20Connectors%20Reuters%20FX%20User%20Guide%20.pdf).
+İkinci adım, Veritas Merge1 sitesinde Reuters FX bağlayıcısını yapılandırmaktır. Reuters FX bağlayıcısını yapılandırma hakkında bilgi için bkz. [Birleştirme1 Üçüncü Taraf Bağlayıcıları Kullanıcı Kılavuzu](https://docs.ms.merge1.globanetportal.com/Merge1%20Third-Party%20Connectors%20Reuters%20FX%20User%20Guide%20.pdf).
 
-Son Olarak Kaydet **& e tıklarken**, sihirbazın  Bağlayıcı sihirbazında Kullanıcı eşleme Microsoft 365 uyumluluk merkezi görüntülenir.
+**Kaydet & Son'a** tıkladıktan sonra, uyumluluk portalındaki bağlayıcı sihirbazındaki **Kullanıcı eşleme** sayfası görüntülenir.
 
 ## <a name="step-3-map-users-and-complete-the-connector-setup"></a>3. Adım: Kullanıcıları eşleme ve bağlayıcı kurulumunu tamamlama
 
-Kullanıcıları eşlemek ve bağlayıcı kurulumunu aşağıdaki Microsoft 365 uyumluluk merkezi izleyin:
+Kullanıcıları eşlemek ve uyumluluk portalında bağlayıcı kurulumunu tamamlamak için aşağıdaki adımları izleyin:
 
-1. **Reuters FX kullanıcılarını haritada Microsoft 365,** otomatik kullanıcı eşlemesini etkinleştirin.
+1. **Kullanıcıları Microsoft 365 için Reuters FX kullanıcılarını** eşle sayfasında otomatik kullanıcı eşlemesini etkinleştirin.
 
-   Reuters FX öğeleri, kurumdaki kullanıcılar için *e-posta* adreslerini içeren E-posta adlı bir özellik içerir. Bağlayıcı bu adresi bir kullanıcıyla Microsoft 365, öğeler o kullanıcının posta kutusuna aktarılır.
+   Reuters FX öğeleri, kuruluşunuzdaki kullanıcıların *e-posta adreslerini içeren E-posta* adlı bir özellik içerir. Bağlayıcı bu adresi bir Microsoft 365 kullanıcıyla ilişkilendirebiliyorsa, öğeler söz konusu kullanıcının posta kutusuna aktarılır.
 
-2. **Sonraki'ne** tıklayın, ayarlarınızı gözden geçirin ve yeni **bağlayıcıya** yönelik içeri aktarma işleminin ilerlemesini görmek için Veri bağlayıcıları sayfasına gidin.
+2. **İleri'ye** tıklayın, ayarlarınızı gözden geçirin ve yeni bağlayıcının içeri aktarma işleminin ilerleme durumunu görmek için **Veri bağlayıcıları** sayfasına gidin.
 
-## <a name="step-4-monitor-the-reuters-fx-connector"></a>4. Adım: Reuters FX bağlayıcılarını izleme
+## <a name="step-4-monitor-the-reuters-fx-connector"></a>4. Adım: Reuters FX bağlayıcısını izleme
 
-Reuters FX bağlayıcınızı oluşturdukta, bağlayıcının durumunu hemen hemen Microsoft 365 uyumluluk merkezi.
+Reuters FX bağlayıcısını oluşturduktan sonra bağlayıcının durumunu uyumluluk portalında görüntüleyebilirsiniz.
 
-1. Sol gezinti <https://compliance.microsoft.com/> çubuğunda **Veri bağlayıcıları'na** gidin ve bu bağlayıcılara tıklayın.
+1. Sol gezinti bölmesinde **Veri bağlayıcıları'na** <https://compliance.microsoft.com/> gidin ve tıklayın.
 
-2. Bağlayıcılar **sekmesine** tıklayın ve **sonra Reuters FX** bağlayıcıyı seçerek bağlayıcıyla ilgili özellikleri ve bilgileri içeren açılır sayfayı görüntüleyin.
+2. **Bağlayıcılar** sekmesine tıklayın ve bağlayıcı hakkındaki özellikleri ve bilgileri içeren açılır sayfayı görüntülemek için **Reuters FX** bağlayıcısını seçin.
 
-3. **Bağlayıcının kaynak durumunun altında**, **Bağlayıcının durum günlüğünü** açmak (veya kaydetmek) için Günlüğü indir bağlantısına tıklayın. Bu günlük, Microsoft buluta aktarılan verileri içerir.
+3. Bağlayıcının durum günlüğünü açmak (veya kaydetmek) için **Kaynakla bağlayıcı durumu** altında **Günlüğü indir** bağlantısına tıklayın. Bu günlük, Microsoft buluta aktarılan verileri içerir.
 
 ## <a name="known-issues"></a>Bilinen sorunlar
 
-- Şu anda ekleri veya 10 MB'den büyük öğeleri içeri aktarmayı desteklemez. Daha büyük öğeler için destek daha sonraki bir tarihte kullanılabilir.
+- Şu anda 10 MB'tan büyük eklerin veya öğelerin içeri aktarılmasını desteklemiyoruz. Daha büyük öğeler için destek daha sonraki bir tarihte sağlanacaktır.

@@ -1,5 +1,5 @@
 ---
-title: İşbirliği senaryoları için iletişim yönetimi
+title: İşbirliği senaryoları için iletişim idaresi
 ms.reviewer: ''
 ms.author: mikeplum
 author: MikePlumleyMSFT
@@ -15,64 +15,64 @@ ms.custom:
 - M365solutions
 f1.keywords: NOCSH
 recommendations: false
-description: 'İletişim yönetimi işbirliği senaryoları hakkında bilgi edinmek için:'
-ms.openlocfilehash: ace313ce20445aafc06b184a72cc45c2ce0118ef
-ms.sourcegitcommit: c2b5ce3150ae998e18a51bad23277cedad1f06c6
+description: İletişim idaresi işbirliği senaryoları hakkında bilgi edinin.
+ms.openlocfilehash: 83dd8384acee2e4fc0de6ac2514533bf7d53c879
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "63005430"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64947483"
 ---
-# <a name="communications-governance-for-collaboration-scenarios"></a>İşbirliği senaryoları için iletişim yönetimi
+# <a name="communications-governance-for-collaboration-scenarios"></a>İşbirliği senaryoları için iletişim idaresi
 
-Microsoft 365, mesajlaşma ve toplantı ayarları da dahil olmak üzere, organizasyonda iletişimi yönetmeye yardımcı olacak bir dizi denetim sunar. Bu seçenekleri gözden geçirebilirsiniz ve bunların iş ihtiyaçlarına nasıl eş olduğunu, verilerinizin duyarlılığını ve kullanıcılarının işbirliği yapmaları gereken kişilerin kapsamını göz önünde bulundurabilirsiniz.
+Microsoft 365, kuruluşunuzdaki iletişimi yönetmenize yardımcı olacak mesajlaşma ve toplantı ayarları da dahil olmak üzere çeşitli denetimler sunar. Bu seçenekleri gözden geçirin ve bunların iş gereksinimlerinizle nasıl eşlendiğini, verilerinizin duyarlılığını ve kullanıcılarınızın işbirliği yapması gereken kişilerin kapsamını göz önünde bulundurun.
 
-Aşağıdaki tabloda, E-posta hizmetlarında kullanılabilen iletişim denetimleri için hızlı Microsoft 365. Aşağıdaki bölümlerde başka bilgiler sağlanmaktadır.
+Aşağıdaki tabloda, Microsoft 365'de kullanılabilen iletişim denetimleri için hızlı bir başvuru sağlanır. Aşağıdaki bölümlerde daha fazla bilgi verilmiştir.
 
 |Kategori|Açıklama|Başvuru|
 |:-------|:----------|:--------|
 |Mesajlaşma|||
-||E-posta ileti iletirken kullanıcıların neler Teams.|[E-posta ileti ilkelerini Teams](/microsoftteams/messaging-policies-in-teams)|
-||Kanalda kimlerin gönderi başlatarak yanıt denetim altına a kontrol edin.|[Kanal yönetimi ayarlama ve yönetme Microsoft Teams](/microsoftteams/manage-channel-moderation-in-teams)|
+||kullanıcıların Teams mesajlaşma sırasında yapabileceklerini yönetin.|[Teams'de mesajlaşma ilkelerini yönetme](/microsoftteams/messaging-policies-in-teams)|
+||Kanaldaki gönderileri kimlerin başlatabileceğini ve yanıtlayabileceğinizi kontrol edin.|[Microsoft Teams'de kanal moderasyonu ayarlama ve yönetme](/microsoftteams/manage-channel-moderation-in-teams)|
 |Toplantılar|||
-||Toplantı katılımcılarının neler yaplarını yönetin.|[Toplantıda toplantı ilkelerini Teams](/microsoftteams/meeting-policies-in-teams)|
-||Anonim kullanıcıların toplantılara katılmasına izin verme veya engelleme.|[Anonim kullanıcıların toplantılara katılmasına izin verme](/microsoftteams/meeting-settings-in-teams#allow-anonymous-users-to-join-meetings)|
+||Toplantı katılımcılarının yapabileceklerini yönetin.|[Teams'da toplantı ilkelerini yönetme](/microsoftteams/meeting-policies-in-teams)|
+||Anonim kullanıcıların toplantılara katılmasına izin verin veya bunları engelleyin.|[Anonim kullanıcıların toplantılara katılmasına izin ver](/microsoftteams/meeting-settings-in-teams#allow-anonymous-users-to-join-meetings)|
 |İletişim uyumluluğu|||
-||Dikkatsiz ve ihmalsiz iletişimi ortaya çıkarın ve yanıt verin|[uyumluluk Microsoft 365](../compliance/communication-compliance.md)|
+||Dikkatsiz ve ihmalkar iletişime yüzey ve yanıt verme|[İletişim uyumluluğu](../compliance/communication-compliance.md)|
 
 ## <a name="messaging"></a>Mesajlaşma
 
-İletileri düzenleme veya silme gibi hangi sohbet ve kanal mesajlaşma özelliklerinin Microsoft Teams ilgili kullanıcıların kullanımına açık olduğunu kontrol edebilirsiniz. Farklı kullanıcılar ve gruplar için farklı ilkeler oluşturabilirsiniz.
+İletileri düzenleme veya silme gibi sohbet ve kanal mesajlaşma özelliklerinin mesajlaşma ilkelerini kullanarak Microsoft Teams kullanıcıların kullanımına sunulabileceğini denetleyebilirsiniz. Farklı kullanıcılar ve gruplar için farklı ilkeler oluşturabilirsiniz.
 
-[E-posta ileti ilkelerini Teams](/microsoftteams/messaging-policies-in-teams)
+[Teams'de mesajlaşma ilkelerini yönetme](/microsoftteams/messaging-policies-in-teams)
 
-Kanal denetimi yapılandırarak kanal denetimi yapılandırarak bir kanalda kimlerin yeni gönderi başlat denetim Teams gönderileri yanıtlayabilirsiniz.
+Kanal moderasyonu yapılandırarak yeni gönderileri kimin başlatabileceğini ve Teams kanaldaki gönderileri yanıtlayabileceğinizi denetleyebilirsiniz.
 
-[Kanal yönetimi ayarlama ve yönetme Microsoft Teams](/microsoftteams/manage-channel-moderation-in-teams)
+[Microsoft Teams'de kanal moderasyonu ayarlama ve yönetme](/microsoftteams/manage-channel-moderation-in-teams)
 
 ## <a name="meetings"></a>Toplantılar
 
-Zamanlama, içerik paylaşımı, katılımcılar ve ses Teams ilkeleri de içinde olmak üzere, toplantı katılımcılarına açık olan özellikleri belirleyebilirsiniz.
+Zamanlama, içerik paylaşımı, katılımcılar ve ses ve video ilkeleri gibi Teams toplantı katılımcılarının kullanabileceği özellikleri denetleyebilirsiniz.
 
-[Toplantıda toplantı ilkelerini Teams](/microsoftteams/meeting-policies-in-teams)
+[Teams'da toplantı ilkelerini yönetme](/microsoftteams/meeting-policies-in-teams)
 
-Toplantıya bağlantısı olan herkesin katılmasını Teams toplantılarda anonim katılmayı kontrol edin.
+Toplantıya bağlantısı olan herkesin katılmasını sağlayan Teams toplantılar için anonim katılımı denetleyebilirsiniz.
 
-[Anonim kullanıcıların toplantılara katılmasına izin verme](/microsoftteams/meeting-settings-in-teams#allow-anonymous-users-to-join-meetings)
+[Anonim kullanıcıların toplantılara katılmasına izin ver](/microsoftteams/meeting-settings-in-teams#allow-anonymous-users-to-join-meetings)
 
 
 ## <a name="communication-compliance"></a>İletişim uyumluluğu
 
-Web'de Microsoft 365 uyumluluğu rahatsız edici dil, hassas bilgiler ve iç ve mevzuat standartlarına ilişkin bilgileri konu alan iletişimleri incelemeye olanak sağlar. Sohbet iletişimleri, posta kutuları Yammer iletiler izlenir, uyarılar oluşturmak için kullanılabilir. Yönetim araçlarıyla, ilke eşleşmeleri olan iletileri hızla tanımlayabilir ve bu iletiler üzerinde eyleme geçebilirsiniz.
+İletişim uyumluluğu, saldırgan dil, hassas bilgiler ve iç ve mevzuat standartlarıyla ilgili bilgiler için iletişimleri incelemenize olanak tanır. Sohbet iletişimleri, posta kutuları ve Yammer iletilerin tümü izlenebilir ve uyarılar oluşturulabilir. Yönetim araçlarıyla, ilke eşleşmeleri olan iletileri hızla tanımlayabilir ve üzerinde işlem yapabilirsiniz.
 
-[uyumluluk Microsoft 365](../compliance/communication-compliance.md)
+[İletişim uyumluluğu hakkında daha fazla bilgi edinme](../compliance/communication-compliance.md)
 
 ## <a name="related-topics"></a>İlgili konular
 
-[İşbirliği yönetim planlaması önerileri](collaboration-governance-overview.md#collaboration-governance-planning-recommendations)
+[İşbirliği idaresi planlama önerileri](collaboration-governance-overview.md#collaboration-governance-planning-recommendations)
 
-[İşbirliği yönetim planınızı oluşturma](collaboration-governance-first.md)
+[İşbirliği idare planınızı oluşturma](collaboration-governance-first.md)
 
-[Microsoft Teams ayarları yönetme](/microsoftteams/enable-features-office-365)
+[Kuruluşunuz için Microsoft Teams ayarlarını yönetme](/microsoftteams/enable-features-office-365)
 
-[Veri Yammer yönetme](/yammer/manage-security-and-compliance/manage-data-compliance)
+[Yammer veri uyumluluğunu yönetme](/yammer/manage-security-and-compliance/manage-data-compliance)

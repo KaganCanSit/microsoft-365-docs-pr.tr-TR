@@ -1,5 +1,5 @@
 ---
-title: Facebook İş sayfaları verilerini arşivlemek için bağlayıcıyı dağıtma
+title: Facebook business sayfaları verilerini arşivleye bağlayıcı dağıtma
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -15,85 +15,85 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
 ROBOTS: NOINDEX, NOFOLLOW
-description: Yöneticiler, Facebook İş sayfalarını içeri aktaracak ve arşivleyacak yerel bir bağlayıcı Microsoft 365. Bu veriler Microsoft 365'a aktarıldıktan sonra, yasal saklama, içerik araması ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanarak, kurumnizin Facebook verilerini yönetebilirsiniz.
-ms.openlocfilehash: 0bbe7f65ef6226386911817b40bbaaa418cdabec
-ms.sourcegitcommit: dc26169e485c3a31e1af9a5f495be9db75c49760
+description: Yöneticiler, Facebook İş sayfalarını Microsoft 365 içeri aktarmak ve arşiv uygulamak için yerel bir bağlayıcı ayarlayabilir. Bu veriler Microsoft 365 aktarıldıktan sonra, kuruluşunuzun Facebook verilerinin idaresini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
+ms.openlocfilehash: 126b4af3887632df5c8f83eac8e20fe5d88c8608
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "62990570"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64949189"
 ---
-# <a name="deploy-a-connector-to-archive-facebook-business-pages-data"></a>Facebook İş sayfaları verilerini arşivlemek için bağlayıcıyı dağıtma
+# <a name="deploy-a-connector-to-archive-facebook-business-pages-data"></a>Facebook business sayfaları verilerini arşivleye bağlayıcı dağıtma
 
-Bu makale, Facebook Business sayfalarından Facebook Business sayfalarına veri içeri aktarma işlemi Office 365 Içeri Aktarma hizmetini kullanan bir bağlayıcıyı dağıtmak için adım adım Microsoft 365. Bu işleme üst düzey bir genel bakış ve Facebook bağlayıcısı dağıtımı için gereken önkoşulların listesi için bkz. Facebook verilerini arşivlemek için [bağlayıcı ayarlama](archive-facebook-data-with-sample-connector.md).
+Bu makale, Facebook business sayfalarından Microsoft 365 verileri içeri aktarmak için Office 365 İçeri Aktarma hizmetini kullanan bir bağlayıcıyı dağıtmaya ilişkin adım adım işlemi içerir. Bu işleme üst düzey bir genel bakış ve Bir Facebook bağlayıcısını dağıtmak için gereken önkoşulların listesi için bkz. [Facebook verilerini arşiv etmek için bağlayıcı ayarlama](archive-facebook-data-with-sample-connector.md).
 
 ## <a name="step-1-create-an-app-in-azure-active-directory"></a>1. Adım: Azure Active Directory'de uygulama oluşturma
 
-1. Genel yönetici <https://portal.azure.com> hesabının kimlik bilgilerini kullanarak oturum açın ve gidin.
+1. <https://portal.azure.com> Genel yönetici hesabının kimlik bilgilerini kullanarak adresine gidin ve oturum açın.
 
-    ![Mobil uygulamada AAD.](../media/FBCimage1.png)
+    ![AAD'de uygulama oluşturun.](../media/FBCimage1.png)
 
-2. Sol gezinti bölmesinde Ekle'ye **Azure Active Directory**.
+2. Sol gezinti bölmesinde **Azure Active Directory'e** tıklayın.
 
-    ![Ekle'Azure Active Directory.](../media/FBCimage2.png)
+    ![Azure Active Directory'e tıklayın.](../media/FBCimage2.png)
 
-3. Sol gezinti bölmesinde Uygulama kayıtları **(Önizleme) öğesini ve ardından** Yeni kayıt'ı **tıklatın**.
+3. Sol gezinti bölmesinde **Uygulama kayıtları (Önizleme)** seçeneğine ve ardından **Yeni kayıt'a** tıklayın.
 
-    ![**Uygulama kayıtları (Önizleme)** öğesini ve ardından **Yeni kayıt**'a tıklayın.](../media/FBCimage3.png)
+    ![**Uygulama kayıtları (Önizleme)** seçeneğine ve ardından **Yeni kayıt**'a tıklayın.](../media/FBCimage3.png)
 
-4. Uygulamayı kaydettirin. Yeniden yönlendirme URI'si altında, uygulama türü açılan <https://portal.azure.com> listesinde Web'i seçin ve URI'nin kutusuna yazın.
+4. Uygulamayı kaydedin. Yeniden Yönlendirme URI'sinin altında, uygulama türü açılan listesinde Web'i seçin ve ardından URI kutusuna yazın <https://portal.azure.com> .
 
-   ![Uygulamayı kaydettirin.](../media/FBCimage4.png)
+   ![Uygulamayı kaydedin.](../media/FBCimage4.png)
 
-5. Uygulama **(istemci) Kimliği ve** **Dizin (kiracı) kimliğini** kopyalayın ve bunları bir metin dosyasına veya başka bir güvenli konuma kaydedin. Bu kimlikleri sonraki adımlarda kullanırız.
+5. **Uygulama (istemci) kimliğini** ve **Dizin (kiracı) kimliğini** kopyalayın ve bunları bir metin dosyasına veya başka bir güvenli konuma kaydedin. Bu kimlikleri sonraki adımlarda kullanacaksınız.
 
-   ![Uygulama Kimliği'ne ve Dizin Kimliği'ne kopyalayıp kaydedin.](../media/FBCimage5.png)
+   ![Uygulama Kimliği ve Dizin Kimliği'ni kopyalayıp kaydedin.](../media/FBCimage5.png)
 
-6. Yeni uygulama **için & sırrı sertifikalar'a gidin.**
+6. **Yeni uygulama için Sertifikalar & gizli dizileri'ne gidin.**
 
-   ![Yeni uygulama için & sırrı sertifikalar'a gidin.](../media/FBCimage6.png)
+   ![Yeni uygulama için Sertifikalar & gizli diziler'e gidin.](../media/FBCimage6.png)
 
-7. Yeni istemci **sırrı'ne tıklayın**
+7. **Yeni istemci gizli dizisi'ne** tıklayın
 
-   ![Yeni istemci sırrı'ya tıklayın.](../media/FBCimage7.png)
+   ![Yeni istemci gizli dizisi'ne tıklayın.](../media/FBCimage7.png)
 
-8. Yeni bir gizli oluşturun. Açıklama kutusuna parolayı yazın ve bir son kullanma süresi seçin.
+8. Yeni bir gizli dizi oluşturun. Açıklama kutusuna gizli diziyi yazın ve bir süre sonu seçin.
 
-    ![Parolayı yazın ve bir son kullanma süresi seçin.](../media/FBCimage8.png)
+    ![Gizli diziyi yazın ve bir süre sonu seçin.](../media/FBCimage8.png)
 
-9. Gizlinin değerini kopyalayın ve bir metin dosyasına veya başka bir depolama konuma kaydedin. Bu, AAD adımlarda kullanabileceğiniz en gizli uygulama sırrıdır.
+9. Gizli dizinin değerini kopyalayın ve bir metin dosyasına veya başka bir depolama konumuna kaydedin. Bu, sonraki adımlarda kullandığınız AAD uygulama gizli dizisidir.
 
-   ![Gizli değeri kopyalayın ve kaydedin.](../media/FBCimage9.png)
+   ![Gizli anahtarın değerini kopyalayın ve kaydedin.](../media/FBCimage9.png)
 
-## <a name="step-2-deploy-the-connector-web-service-from-github-to-your-azure-account"></a>2. Adım: Bağlayıcı web hizmetini Azure GitHub doğru dağıtma
+## <a name="step-2-deploy-the-connector-web-service-from-github-to-your-azure-account"></a>2. Adım: Bağlayıcı web hizmetini GitHub Azure hesabınıza dağıtma
 
-1. Bu [siteyi ziyaret GitHub Azure'a](https://github.com/microsoft/m365-sample-connector-csharp-aspnet) **Dağıt'a tıklayın**.
+1. [Bu GitHub sitesine](https://github.com/microsoft/m365-sample-connector-csharp-aspnet) gidin ve **Azure'a Dağıt'a** tıklayın.
 
     ![Azure'a Dağıt'a tıklayın.](../media/FBCGithubApp.png)
 
-2. **Azure'a Dağıt'a** tıklarsanız, özel şablon sayfasının olduğu bir Azure portalına yönlendirildiniz. Temel bilgiler ve **Ayrıntılar'ı** **Ayarlar** Satın Alma'ya **tıklayın**.
+2. **Azure'a Dağıt'a** tıkladıktan sonra özel şablon sayfası içeren bir Azure portal yönlendirilirsiniz. **Temel bilgiler** ve **Ayarlar** ayrıntılarını doldurun ve **Satın Al'a** tıklayın.
 
    - **Abonelik:** Facebook İş sayfaları bağlayıcısı web hizmetini dağıtmak istediğiniz Azure aboneliğinizi seçin.
 
-   - **Kaynak grubu:** Yeni bir kaynak grubu seçin veya oluşturun. Kaynak grubu, bir Azure çözümü için ilgili kaynakları bulunduran bir kapsayıcıdır.
+   - **Kaynak grubu:** Yeni bir kaynak grubu seçin veya oluşturun. Kaynak grubu, Bir Azure çözümü için ilgili kaynakları barındıran bir kapsayıcıdır.
 
    - **Konum:** Bir konum seçin.
 
-   - **Web Uygulaması Adı:** Bağlayıcı web uygulaması için benzersiz bir ad girin. Ad, 3 ile 18 karakter arasında olmalıdır. Bu ad, Azure uygulama hizmeti URL'sini oluşturmak için kullanılır; örneğin, **fbconnector** web uygulaması adını sağlarsanız, Azure uygulama hizmeti URL'si **fbconnector.azurewebsites.net.**
+   - **Web Uygulaması Adı:** Bağlayıcı web uygulaması için benzersiz bir ad sağlayın. Adın uzunluğu 3 ile 18 karakter arasında olmalıdır. Bu ad, Azure app service URL'sini oluşturmak için kullanılır; örneğin, **fbconnector** web uygulaması adını sağlarsanız Azure uygulama hizmeti URL'si **fbconnector.azurewebsites.net**.
 
-   - **tenantId:** 1. Adımda Microsoft 365 Facebook bağlayıcısı uygulamasını oluşturdukta kopyalanmış olan Azure Active Directory kiracı kimliği.
+   - **tenantId:** 1. Adımda Azure Active Directory'da Facebook bağlayıcı uygulamasını oluşturduktan sonra kopyaladığınız Microsoft 365 kuruluşunuzun kiracı kimliği.
 
-   - **APISecretKey:** Gizli olarak istediğiniz değeri yazın. Bu, 5. Adımda bağlayıcı web uygulamasına erişmek için kullanılır.
+   - **APISecretKey:** Herhangi bir değeri gizli dizi olarak yazabilirsiniz. Bu, 5. Adımda bağlayıcı web uygulamasına erişmek için kullanılır.
 
      ![Kaynak oluştur'a tıklayın ve depolama hesabı yazın.](../media/FBCimage12.png)
 
-3. Dağıtım başarılı olduktan sonra, sayfa aşağıdaki ekran görüntüsüne benzer:
+3. Dağıtım başarılı olduktan sonra sayfa aşağıdaki ekran görüntüsüne benzer:
 
-   ![Hesap'Depolama ardından Hesap Ekle'Depolama tıklayın.](../media/FBCimage13.png)
+   ![Depolama'a tıklayın ve ardından Depolama hesabına tıklayın.](../media/FBCimage13.png)
 
 ## <a name="step-3-register-the-facebook-app"></a>3. Adım: Facebook uygulamasını kaydetme
 
-1. 'a <https://developers.facebook.com>gidin, kuruluşun Facebook İş sayfalarının hesabı için kimlik bilgilerini kullanarak oturum açın ve ardından Yeni Uygulama **Ekle'ye tıklayın**.
+1. adresine <https://developers.facebook.com>gidin, kuruluşunuzun Facebook business sayfalarının hesabının kimlik bilgilerini kullanarak oturum açın ve **ardından Yeni Uygulama Ekle'ye** tıklayın.
 
    ![Facebook işletme sayfası için yeni bir uygulama ekleyin.](../media/FBCimage25.png)
 
@@ -101,132 +101,132 @@ Bu makale, Facebook Business sayfalarından Facebook Business sayfalarına veri 
 
    ![Yeni bir uygulama kimliği oluşturun.](../media/FBCimage26.png)
 
-3. Sol gezinti bölmesinde Ürün **Ekle'ye tıklayın ve ardından** Facebook Oturum Açma **kutucuğunun** **Ayarla'ya** tıklayın.
+3. Sol gezinti bölmesinde **Ürün Ekle'ye** ve ardından **Facebook Oturum Açma** kutucuğunda **Ayarla'ya** tıklayın.
 
    ![Ürün Ekle'ye tıklayın.](../media/FBCimage27.png)
 
-4. Facebook Oturum Açma'yı Tümleştir sayfasında **Web'e tıklayın**.
+4. Facebook Oturum Açma Bilgilerini Tümleştir sayfasında **Web'e** tıklayın.
 
-   ![Facebook Oturum Açma'yı Tümleştir sayfasında Web'e tıklayın.](../media/FBCimage28.png)
+   ![Facebook Oturum Açma Bilgilerini Tümleştir sayfasında Web'e tıklayın.](../media/FBCimage28.png)
 
-5. Azure uygulama hizmeti URL'sini ekleyin; `https://fbconnector.azurewebsites.net`örneğin.
+5. Azure app service URL'sini ekleyin; örneğin `https://fbconnector.azurewebsites.net`, .
 
-   ![Azure uygulama hizmeti URL'sini ekleyin.](../media/FBCimage29.png)
+   ![Azure app service URL'sini ekleyin.](../media/FBCimage29.png)
 
-6. Facebook Oturum Açma kurulumunun Hızlı Başlangıç bölümünü tamamlama.
+6. Facebook Oturum Açma kurulumunun Hızlı Başlangıç bölümünü tamamlayın.
 
-   ![Hızlı Başlangıç bölümünü tamamlama.](../media/FBCimage30.png)
+   ![Hızlı Başlangıç bölümünü tamamlayın.](../media/FBCimage30.png)
 
-7. Sol gezinti bölmesinde **Facebook** Oturumu Aç altında, Ayarlar'e tıklayın ve Geçerli **OAuth Redirect URI'leri kutusuna OAuth Redirect URI'sini** ekleyin. Connectorserviceuri değeri, kurum için Azure uygulama hizmeti URL'si olduğu **/Views/FacebookOAuth biçimini kullanın; örneğin, .\<connectorserviceuri>**`https://fbconnector.azurewebsites.net`
+7. **Facebook Oturum Açma'nın** altındaki sol gezinti bölmesinde **Ayarlar'e** tıklayın ve **Geçerli OAuth Yeniden Yönlendirme URI'leri kutusuna OAuth yeniden yönlendirme** URI'sini ekleyin. **/Views/FacebookOAuth biçimini\<connectorserviceuri>** kullanın; burada connectorserviceuri değeri kuruluşunuzun Azure uygulama hizmeti URL'sidir; örneğin, `https://fbconnector.azurewebsites.net`.
 
-   ![OAuth redirect URI'sini Geçerli OAuth Redirect URI'leri kutusuna ekleyin.](../media/FBCimage31.png)
+   ![OAuth yeniden yönlendirme URI'sini Geçerli OAuth Yeniden Yönlendirme URI'leri kutusuna ekleyin.](../media/FBCimage31.png)
 
-8. Sol gezinti bölmesinde Ürün **Ekle'ye ve ardından** **Web'ler'e tıklayın.** Sayfa **açılır** menüsünde Sayfa'ya **tıklayın**.
+8. Sol gezinti bölmesinde **Ürün Ekle'ye** ve ardından **Web Kancaları'na tıklayın.** **Sayfa** açılır menüsünde **Sayfa'ya** tıklayın.
 
-   ![Ürün Ekle'ye ve ardından **Web'ler'e tıklayın.](../media/FBCimage32.png)
+   ![Ürün Ekle'ye ve ardından **Web Kancaları'ne tıklayın.](../media/FBCimage32.png)
 
-9. Web Sertifikalarını Geri Çağır URL'si ekleyin ve bir doğrulama belirteci ekleyin. Geri arama URL'sinin biçimi, biçimini kullanın; `<connectorserviceuri>/api/FbPageWebhook`burada connectorserviceuri değeri, kurum için Azure uygulama hizmeti URL'si'dir; örneğin `https://fbconnector.azurewebsites.net`.
+9. Web Kancaları Geri Arama URL'si ekleyin ve doğrulama belirteci ekleyin. Geri çağırma URL'sinin biçimi biçimini kullanır `<connectorserviceuri>/api/FbPageWebhook`; burada connectorserviceuri değeri kuruluşunuzun Azure uygulama hizmeti URL'sidir; örneğin `https://fbconnector.azurewebsites.net`.
 
-   Doğrulama belirteci, güçlü bir parolaya benzer. Belirteci bir metin dosyasına veya başka bir depolama konuma kopyalayın.
+   Doğrulama belirteci güçlü bir parolaya benzer olmalıdır. Doğrulama belirtecini bir metin dosyasına veya başka bir depolama konumuna kopyalayın.
 
-   ![Doğrulama belirteci ekleyin.](../media/FBCimage33.png)
+   ![Doğrulama belirtecini ekleyin.](../media/FBCimage33.png)
 
-10. Akış için uç noktayı test etmek ve abone olmak.
+10. Akış için uç noktayı test edin ve abone olun.
 
-    ![Uç noktayı test etmek ve uç noktaya abone olmak.](../media/FBCimage34.png)
+    ![Uç noktayı test edin ve abone olun.](../media/FBCimage34.png)
 
-11. Gizlilik URL'si, uygulama simgesi ve iş kullanımı ekleyin. Ayrıca, uygulama kimliğini ve uygulama sırrını bir metin dosyasına veya başka bir depolama alanına kopyalayın.
+11. Gizlilik URL'si, uygulama simgesi ve iş kullanımı ekleyin. Ayrıca, uygulama kimliğini ve uygulama gizli dizisini bir metin dosyasına veya başka bir depolama konumuna kopyalayın.
 
     ![Gizlilik URL'si, uygulama simgesi ve iş kullanımı ekleyin.](../media/FBCimage35.png)
 
-12. Uygulamayı genel yapma.
+12. Uygulamayı herkese açık hale getirin.
 
-    ![Uygulamayı genel yapma.](../media/FBCimage36.png)
+    ![Uygulamayı herkese açık hale getirin.](../media/FBCimage36.png)
 
-13. Yönetici veya testci rolüne kullanıcı ekleyin.
+13. Yönetici veya test eden rolüne kullanıcı ekleyin.
 
-    ![Yönetici veya testci rolüne kullanıcı ekleyin.](../media/FBCimage37.png)
+    ![Yönetici veya test eden rolüne kullanıcı ekleyin.](../media/FBCimage37.png)
 
-14. Sayfa Genel **İçerik Erişimi iznini** ekleyin.
+14. **Sayfa Genel İçerik Erişimi** iznini ekleyin.
 
-    ![dd Sayfa Genel İçerik Erişimi izni.](../media/FBCimage38.png)
+    ![Sayfa Genel İçerik Erişimi iznini dd.](../media/FBCimage38.png)
 
-15. Sayfaları Yönetme izni ekleyin.
+15. Sayfaları Yönet izni ekleyin.
 
-    ![Sayfaları Yönetme izni ekleyin.](../media/FBCimage39.png)
+    ![Sayfaları Yönet izni ekleyin.](../media/FBCimage39.png)
 
-16. Uygulamayı Facebook tarafından gözden geçirmeyi sağlar.
+16. Uygulamayı Facebook tarafından gözden geçirmesini sağlayın.
 
-    ![Uygulamayı Facebook tarafından gözden geçirmeyi sağlar.](../media/FBCimage40.png)
+    ![Uygulamayı Facebook tarafından gözden geçirmesini sağlayın.](../media/FBCimage40.png)
 
 ## <a name="step-4-configure-the-connector-web-app"></a>4. Adım: Bağlayıcı web uygulamasını yapılandırma
 
-1. `https://<AzureAppResourceName>.azurewebsites.net` Git (burada AzureAppResourceName, 4. Adımda adlandır adlandırdınız Azure uygulama kaynağı adının adıdır). Örneğin, bu ad **fbconnector ise**, bağlantısına gidin `https://fbconnector.azurewebsites.net`. Uygulamanın giriş sayfası aşağıdaki ekran görüntüsüne benzer:
+1. `https://<AzureAppResourceName>.azurewebsites.net` adresine gidin (burada AzureAppResourceName, 4. Adımda adlandırdığınız Azure uygulama kaynağınızın adıdır). Örneğin, ad **fbconnector** ise adresine gidin `https://fbconnector.azurewebsites.net`. Uygulamanın giriş sayfası aşağıdaki ekran görüntüsüne benzer:
 
-   ![Bağlayıcı web uygulaması'nız'a gidin.](../media/FBCimage41.png)
+   ![Bağlayıcı web uygulamanıza gidin.](../media/FBCimage41.png)
 
-2. Oturum **açma sayfasını** görüntülemek için Yapılandır'a tıklayın.
+2. Oturum açma sayfasını görüntülemek için **Yapılandır'a** tıklayın.
 
    ![Oturum açma sayfasını görüntülemek için Yapılandır'a tıklayın.](../media/FBCimage42.png)
 
-3. Kiracı Kimliği kutusunda, kiracı kimliğinizi (2. Adımda edinilen) yazın veya yapıştırın. Parola kutusunda, APISecretKey'i (2. Adımda elde edilen) yazın veya yapıştırın ve sonra yapılandırma ayrıntıları sayfasını görüntülemek için **Ayarlar** YapılandırmaYı Ayarla'ya tıklayın.
+3. Kiracı Kimliği kutusuna kiracı kimliğinizi (2. Adımda edindiğiniz) yazın veya yapıştırın. Parola kutusuna APISecretKey (2. Adımda edindiğiniz) yazın veya yapıştırın ve yapılandırma ayrıntıları sayfasını görüntülemek için **Yapılandırma Ayarlar Ayarla'ya** tıklayın.
 
-    ![Kiracı kimliğiniz ve parolanızı kullanarak oturum açma ve yapılandırma ayrıntıları sayfasına gidin.](../media/FBCimage43.png)
+    ![Kiracı kimliğinizi ve parolanızı kullanarak oturum açın ve yapılandırma ayrıntıları sayfasına gidin.](../media/FBCimage43.png)
 
 4. Aşağıdaki yapılandırma ayarlarını girin
 
-   - **Facebook uygulama kimliği:** 3. Adımda edinilen Facebook uygulamasının uygulama kimliği.
+   - **Facebook uygulama kimliği:** 3. Adımda aldığınız Facebook uygulamasının uygulama kimliği.
 
-   - **Facebook uygulaması sırrı:** 3. Adımda edinilen Facebook uygulamasının uygulama sırrı.
+   - **Facebook uygulama gizli dizisi:** 3. Adımda edindiğiniz Facebook uygulaması için uygulama gizli dizisi.
 
-   - **Facebook web sertifikalarını doğrulama belirteci:** 3. Adımda oluşturduğunuz doğrulama belirteci.
+   - **Facebook web kancaları doğrulama belirteci:** 3. Adımda oluşturduğunuz doğrulama belirteci.
 
-   - **AAD kimliği:** 1. Adımda Azure Active Directory uygulamanın uygulama kimliği.
+   - **AAD uygulama kimliği:** 1. Adımda oluşturduğunuz Azure Active Directory uygulamasının uygulama kimliği.
 
-   - **AAD gizlidir:** 1. Adımda oluşturduğunuz APISecretKey sırrının değeri.
+   - **AAD uygulama gizli dizisi:** 1. Adımda oluşturduğunuz APISecretKey gizli dizisinin değeri.
 
-5. Bağlayıcı **ayarlarını kaydetmek** için Kaydet'e tıklayın.
+5. Bağlayıcı ayarlarını kaydetmek için **Kaydet'e** tıklayın.
 
-## <a name="step-5-set-up-a-facebook-connector-in-the-microsoft-365-compliance-center"></a>5. Adım: Bağlantıda Facebook bağlayıcısı Microsoft 365 uyumluluk merkezi
+## <a name="step-5-set-up-a-facebook-connector-in-the-compliance-portal"></a>5. Adım: Uyumluluk portalında Facebook bağlayıcısı ayarlama
 
-1. Bağlantı'ya Microsoft 365 uyumluluk merkezi ve sonra Veri **bağlayıcıları** <a href="https://go.microsoft.com/fwlink/p/?linkid=2173865" target="_blank"> /a<seçin.
+1. Microsoft Purview uyumluluk portalına gidin ve /a<**Veri bağlayıcıları'nı** seçin<a href="https://go.microsoft.com/fwlink/p/?linkid=2173865" target="_blank">.
 
-2. Facebook İş **sayfalarının altındaki** Veri **bağlayıcıları sayfasında Görünüm'e** **tıklayın**.
+2. **Facebook İş sayfalarının** altındaki **Veri bağlayıcıları** sayfasında **Görüntüle'ye** tıklayın.
 
-3. Facebook iş **sayfaları sayfasında Bağlayıcı** **ekle'ye tıklayın**.
+3. **Facebook iş sayfaları** sayfasında **Bağlayıcı ekle'ye** tıklayın.
 
-4. Hizmet Koşulları **sayfasında Kabul Et'e** **tıklayın**.
+4. **Hizmet koşulları** sayfasında **Kabul Et'e** tıklayın.
 
-5. Bağlayıcı **uygulamanız için kimlik bilgileri ekleyin sayfasında** , aşağıdaki bilgileri girin ve Bağlantıyı doğrula'ya **tıklayın**.
+5. **Bağlayıcı uygulamanız için kimlik bilgileri ekle** sayfasında aşağıdaki bilgileri girin ve Bağlantıyı **doğrula'ya** tıklayın.
 
    ![Bağlayıcı uygulaması kimlik bilgilerini girin.](../media/TCimage38.png)
 
-   - Ad **kutusuna** bağlayıcı için Facebook haber sayfası gibi bir **ad yazın**.
+   - **Ad** kutusuna bağlayıcı için **Facebook haber sayfası** gibi bir ad yazın.
 
-   - Bağlantı **URL'si** kutusuna Azure uygulama hizmeti URL'sini yazın veya yapıştırın; `https://fbconnector.azurewebsites.net`örneğin.
+   - **Bağlantı URL'si** kutusuna Azure app service URL'sini yazın veya yapıştırın; örneğin`https://fbconnector.azurewebsites.net`, .
 
-   - Parola **kutusunda** , 2. Adımda ekley istediğiniz APISecretKey değerini yazın veya yapıştırın.
+   - **Parola** kutusuna, 2. Adımda eklediğiniz APISecretKey değerini yazın veya yapıştırın.
 
-   - **Azure Uygulama Kimliği kutusunda**, 1. Adımda oluşturduğunuz Uygulama Kimliği AAD Uygulama Kimliği olarak da adlandırılan Uygulama (istemci) kimliğini yazın veya yapıştırın.
+   - **Azure Uygulaması Kimliği** kutusuna, 1. Adımda oluşturduğunuz uygulama kimliği AAD olarak da adlandırılan Uygulama (istemci) kimliğinin değerini yazın veya yapıştırın.
 
-6. Bağlantı başarıyla doğrulandıktan sonra, Sonraki'ne **tıklayın**.
+6. Bağlantı başarıyla doğrulandıktan sonra **İleri'ye** tıklayın.
 
-7. **Yetkilendir Microsoft 365 veri** içeri aktar sayfasında APISecretKey öğesini yeniden yazın veya yapıştırın ve ardından Oturum aç **web uygulaması'nı tıklatın**.
+7. **Verileri içeri aktarmak için Microsoft 365 yetki ver** sayfasında APISecretKey'i yeniden yazın veya yapıştırın ve ardından **Oturum aç web uygulaması'na** tıklayın.
 
-8. **Facebook bağlayıcısı uygulamasını yapılandır sayfasında** **Facebook** ile oturum aç'a tıklayın ve kuruluşun Facebook İş sayfalarının hesap bilgilerini kullanarak oturum açın. Oturum açtığınız Facebook hesabına, kurumnizin Facebook İş sayfaları için yönetici rolü atan olduğundan emin olun.
+8. **Facebook bağlayıcısı uygulamasını yapılandır** sayfasında **Facebook ile oturum aç'a** tıklayın ve kuruluşunuzun Facebook İş sayfalarının hesabının kimlik bilgilerini kullanarak oturum açın. Oturum açtığınız Facebook hesabına kuruluşunuzun Facebook İş sayfaları için yönetici rolü atandığından emin olun.
 
-   ![Facebook ile oturum açma.](../media/FBCimage50.png)
+   ![Facebook ile oturum açın.](../media/FBCimage50.png)
 
-9. Oturum açtığınız Facebook hesabı tarafından yönetilen iş sayfalarının listesi görüntülenir. Arşivlemek istediğiniz sayfayı seçin ve ardından Sonraki'ye **tıklayın**.
+9. Oturum açtığınız Facebook hesabı tarafından yönetilen iş sayfalarının listesi görüntülenir. Arşive eklenecek sayfayı seçin ve **İleri'ye** tıklayın.
 
-   ![Arşivlemek istediğiniz kuruluş iş sayfasını seçin.](../media/FBCimage52.png)
+   ![Arşivlemesini istediğiniz kuruluş iş sayfasını seçin.](../media/FBCimage52.png)
 
-10. Bağlayıcı **hizmet** uygulamasının kurulumundan çıkmak için Devam'a tıklayın.
+10. Bağlayıcı hizmeti uygulamasının kurulumundan çıkmak için **Devam'a** tıklayın.
 
-11. Filtreleri **ayarla sayfasında** , başlangıçta belirli bir yaş olan öğeleri içeri aktarmaya filtre uygulayabilirsiniz. Bir yaş seçin ve Ardından Sonraki'ye **tıklayın**.
+11. **Filtreleri ayarla** sayfasında, başlangıçta belirli bir yaştaki öğeleri içeri aktarmak için bir filtre uygulayabilirsiniz. Bir yaş seçin ve **İleri'ye** tıklayın.
 
-12. Depolama **konumunu seçin sayfasında**, Facebook öğelerinin aktar Microsoft 365 posta kutusunun e-posta adresini yazın ve ardından Sonraki'ye **tıklayın**.
+12. **Depolama konumu seçin** sayfasında, Facebook öğelerinin içeri aktarılacağı Microsoft 365 posta kutusunun e-posta adresini yazın ve **İleri'ye** tıklayın.
 
-13. Bağlayıcı **ayarlarını gözden** geçirmek için Sonraki'ne tıklayın ve sonra **da bağlayıcı kurulumunu** tamamlamak için Son'a tıklayın.
+13. Bağlayıcı ayarlarını gözden geçirmek için **İleri'ye** tıklayın ve ardından bağlayıcı kurulumunu tamamlamak için **Son'a** tıklayın.
 
-14. Uyumluluk merkezinde Veri bağlayıcıları **sayfasına gidin** ve içeri aktarma işleminin ilerlemesini **görmek için** Bağlayıcılar sekmesine tıklayın.
+14. Uyumluluk merkezinde **Veri bağlayıcıları** sayfasına gidin ve içeri aktarma işleminin ilerleme durumunu görmek için **Bağlayıcılar** sekmesine tıklayın.

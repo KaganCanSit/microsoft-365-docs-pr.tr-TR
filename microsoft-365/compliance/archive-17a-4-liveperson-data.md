@@ -12,18 +12,18 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: LivePerson Konuşma Bulutu verilerini Microsoft 365'da içeri aktarmak ve arşiv etmek için 17a-4 LivePerson Konuşma Bulutu VeriSiparser bağlayıcısı ayarlamayı ve kullanmayı öğrenin.
-ms.openlocfilehash: ee9ac5a576707a9b04e7eb5e469601a9d32a5ccc
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: a2d439f581be5f08ff5695dd25962d010537aaaf
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64759069"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64945053"
 ---
 # <a name="set-up-a-connector-to-archive-liveperson-conversational-cloud-data"></a>LivePerson Konuşma Bulutu verilerini arşivleye bağlayıcı ayarlama
 
 [LivePerson Konuşma Bulutu'ndaki](https://www.17a-4.com/liveperson-dataparser/) verileri Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarmak ve arşivlemek için 17a-4 LLC'den LivePerson Konuşma Bulutu VeriSiParser'ı kullanın. DataParser, üçüncü taraf veri kaynağındaki öğeleri yakalamak ve bu öğeleri Microsoft 365'a aktarmak için yapılandırılmış bir LivePerson Konuşma Bulutu bağlayıcısı içerir. LivePerson Konuşma Bulutu DataParser bağlayıcısı, verileri e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'deki kullanıcı posta kutularına aktarır.
 
-Veriler kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, eBulma, bekletme ilkeleri ve bekletme etiketleri ve iletişim uyumluluğu gibi Microsoft 365 uyumluluk özelliklerini uygulayabilirsiniz. Microsoft 365'da verileri içeri aktarmak ve arşivlemek için LivePerson Konuşma Bulutu bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
+Veriler kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, eBulma, bekletme ilkeleri ve bekletme etiketleri ve iletişim uyumluluğu gibi Microsoft Purview özelliklerini uygulayabilirsiniz. Microsoft 365'da verileri içeri aktarmak ve arşivlemek için LivePerson Konuşma Bulutu bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 
 ## <a name="overview-of-archiving-liveperson-conversational-cloud-data"></a>LivePerson Konuşma Bulutu verilerini arşivlemeyle ilgili genel bakış
 
@@ -35,7 +35,7 @@ Aşağıdaki genel bakış, LivePerson Konuşma Bulutu verilerini Microsoft 365'
 
 2. LivePerson Konuşma Bulutu öğeleri düzenli olarak DataParser tarafından toplanır. DataParser ayrıca iletinin içeriğini e-posta iletisi biçimine dönüştürür.
 
-3. Microsoft 365 uyumluluk merkezi oluşturduğunuz LivePerson Konuşma Bulutu DataParser bağlayıcısı DataParser'a bağlanır ve iletileri Microsoft bulutunda güvenli bir Azure Depolama konumuna aktarır.
+3. Microsoft Purview uyumluluk portalında oluşturduğunuz LivePerson Konuşma Bulutu DataParser bağlayıcısı DataParser'a bağlanır ve iletileri Microsoft bulutunda güvenli bir Azure Depolama konumuna aktarır.
 
 4. Kullanıcı posta kutularında **LivePerson Conversational Cloud DataParser** adlı Gelen Kutusu klasöründe bir alt klasör oluşturulur ve öğeler bu klasöre aktarılır. Bağlayıcı, *E-posta* özelliğinin değerini kullanarak öğelerin hangi posta kutusuna aktarılacağını belirler. Her öğe, her katılımcının e-posta adresiyle doldurulan bu özelliği içerir.
 
@@ -43,13 +43,13 @@ Aşağıdaki genel bakış, LivePerson Konuşma Bulutu verilerini Microsoft 365'
 
 - Microsoft bağlayıcıları için bir DataParser hesabı oluşturun. Bunu yapmak için [17a-4 LLC](https://www.17a-4.com/contact/) ile iletişime geçin. 1. Adımda bağlayıcıyı oluştururken bu hesapta oturum açmanız gerekir.
 
-- 1. Adımda LivePerson Konuşma Bulutu DataParser bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, Microsoft 365 uyumluluk merkezi **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için, [Microsoft 365 uyumluluk merkezi İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
+- 1. Adımda LivePerson Konuşma Bulutu DataParser bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için [Microsoft Purview uyumluluk portalındaki İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
-- Bu 17a-4 veri bağlayıcısı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda kullanılabilir. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerinin Microsoft 365 altyapısının dışındaki üçüncü taraf sistemlerde depolanmasını, iletilmesini ve işlenmesini içerebilir ve bu nedenle Microsoft 365 uyumluluk ve veri koruma taahhütleri kapsamında değildir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
+- Bu 17a-4 veri bağlayıcısı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda kullanılabilir. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerinin Microsoft 365 altyapısı dışında olan ve bu nedenle Microsoft Purview ve veri koruma taahhütleri kapsamında olmayan üçüncü taraf sistemlerde depolanmasını, iletilmesini ve işlenmesini içerebilir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
 
 ## <a name="step-1-set-up-a-liveperson-conversational-cloud-dataparser-connector"></a>1. Adım: LivePerson Konuşma Bulutu VerileriParser bağlayıcısı ayarlama
 
-İlk adım, Microsoft 365 uyumluluk merkezi Veri bağlayıcıları sayfasına erişmek ve LivePerson Konuşma Bulutu verileri için 17a-4 bağlayıcısı oluşturmaktır.
+İlk adım, uyumluluk portalındaki Veri bağlayıcıları sayfasına erişmek ve LivePerson Konuşma Bulutu verileri için bir 17a-4 bağlayıcısı oluşturmaktır.
 
 1. **Veri bağlayıcılarıLivePerson** >  **Konuşma Bulutu VerileriParser'a**<https://compliance.microsoft.com> gidin ve tıklayın.
 
@@ -71,7 +71,7 @@ LivePerson Conversational Cloud DataParser bağlayıcısı, verileri Microsoft 3
 
 ## <a name="step-4-monitor-the-liveperson-conversational-cloud-dataparser-connector"></a>4. Adım: LivePerson Konuşma Bulutu VerileriParser bağlayıcısını izleme
 
-LivePerson Conversational Cloud DataParser bağlayıcısı oluşturduktan sonra bağlayıcının durumunu Microsoft 365 uyumluluk merkezi görüntüleyebilirsiniz.
+LivePerson Conversational Cloud DataParser bağlayıcısı oluşturduktan sonra bağlayıcının durumunu uyumluluk portalında görüntüleyebilirsiniz.
 
 1. Sol gezinti bölmesinde **Veri bağlayıcıları'na** <https://compliance.microsoft.com> gidin ve tıklayın.
 

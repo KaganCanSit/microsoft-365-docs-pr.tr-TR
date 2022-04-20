@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 konumlarını seçin
+title: Veri konumlarını Microsoft 365
 ms.author: deanw
 author: dmwmsft
 manager: laurawi
@@ -16,29 +16,29 @@ ms.custom:
 - Ent_TLGs
 - admindeeplinkMAC
 ms.assetid: 706d5449-45e5-4b0c-a012-ab60501899ad
-description: Dünya genelinde depolanan Microsoft 365 verilerinizin nerede depolandığına karar belirleme
-ms.openlocfilehash: 17675917a737717c352125d23a32b432e681a77f
-ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
+description: Microsoft 365 müşteri verilerinizin dünya çapında nerede depolandığını belirleme
+ms.openlocfilehash: 76e1c0c4ed9a4a8b9c0971d58f26fd07d3d28ce9
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "64634569"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64947021"
 ---
-# <a name="where-your-microsoft-365-customer-data-is-stored"></a>Verilerinizin Microsoft 365 müşteri verilerinizin depolandığı yer
+# <a name="where-your-microsoft-365-customer-data-is-stored"></a>Microsoft 365 müşteri verilerinizin depolandığı yer
 
-Aşağıdaki tablolarda, Microsoft'un tüm genel bulut konumlarında müşteri Microsoft 365 hizmetleri için kalan müşteri verilerinin nerede depolandığı gösterilmiştir. Her hizmet için müşteri verilerini nerede depola ilgili olduğunu bulmak için fatura adresi ülkenizin konumunu genişletin.
+Aşağıdaki tablolarda, Microsoft'un tüm küresel bulut konumlarındaki Microsoft 365 hizmetleri için bekleyen müşteri verilerinin nerede depolandığı gösterilmektedir. Her hizmet için müşteri verilerinin nerede depolandığını öğrenmek için fatura adresi ülkenizin konumunu genişletin.
 
-İşletmeniz Avrupa Birliği'nde yer alıyorsa, daha [fazla bilgi için bkz. Avrupa Birliği için](EU-data-storage-locations.md) veri konumları. 
+İşletmeniz Avrupa Birliği'nde bulunuyorsa daha fazla bilgi için bkz. [Avrupa Birliği için veri konumları](EU-data-storage-locations.md) . 
 
-Müşteriler, kiracı ayarları altında kiracıya özgü veri Microsoft 365 yönetim merkezi bilgileri **Ayarlar** >  **Gorg** <a href="https://go.microsoft.com/fwlink/p/?linkid=2067339" target="_blank">**ayarlarıSorization**</a> >  profil **sekmesiData** >  konumu. Yeni [bir Geo'ya](request-your-data-move.md) taşımak için istekte bulunduysanız, geçiş sırasında bazı veriler Microsoft 365 yönetim merkezi önce geçici olarak Coğrafi alanınıza depolanmış olsa bile, veri konumu bilgileri yalnızca yeni Coğrafi bilginizi gösterebilir. 
+Müşteriler, Microsoft 365 yönetim merkezi kiracınıza özgü veri konumu bilgilerini **Ayarlar** >  **Org** <a href="https://go.microsoft.com/fwlink/p/?linkid=2067339" target="_blank">**ayarlarıGelişme**</a> >  profili **sekmesiVeri** >  konumu bölümünde görüntülemelidir. [Yeni bir Coğrafi Bölgeye geçme isteğinde bulunduysanız](request-your-data-move.md), geçiş sırasında bazı veriler geçici olarak önceki Coğrafi Bölgenizde depolansa bile Microsoft 365 yönetim merkezi veri konumu bilgileri yalnızca yeni Coğrafi Bölgenizi gösterebilir. 
 
-Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğiyle ilişkilendirilmiş olan işlem ülkelerine göre Coğrafi ayarı kullanılır.
+Yeni Microsoft 365 kiracıları, bu kiracının ilk aboneliğiyle ilişkili işlemin ülkesine göre varsayılan olarak Coğrafi olarak ayarlanır.
 
-Microsoft Ürünleri ve Hizmetleri Veri Koruma [Sözleşmesi'nde (DPA)](https://www.microsoft.com/licensing/docs/view/Microsoft-Products-and-Services-Data-Protection-Addendum-DPA) kalan müşteri verilerini depolama konumuyla ilgili sözleşmeye bağlı taahhütler hakkında bilgi bulabilirsiniz.
+Bekleyen müşteri verilerinin depolama konumuna ilişkin sözleşmeye bağlı taahhütler hakkında bilgi edinmek için [Microsoft Ürün ve Hizmetleri Veri Koruma Eki'nde (DPA)](https://www.microsoft.com/licensing/docs/view/Microsoft-Products-and-Services-Data-Protection-Addendum-DPA) bilgi bulabilirsiniz.
 
-Veri Azure Active Directory için lütfen Veri [Haritası'AAD'ı ziyaret edin](https://go.microsoft.com/fwlink/p/?linkid=2092972).
+Azure Active Directory veri konumları için AAD [Veri Eşlemesi](https://go.microsoft.com/fwlink/p/?linkid=2092972) sayfasını ziyaret edin.
 
-Müşterinin fatura adresi Avrupa dışında ve Müşteri'nin bir Office 365 Eğitim aboneliği varsa, OST'nin "Core Online Services için Rest'te Müşteri Verileri Konumu" bölümüne bakarak Microsoft, Avrupa veya Kuzey Amerika'te Müşterinin Office 365 kiracısına müşteri verisi sağlanmasını, Müşteri Verilerini aktarabilir ve orada orada depolabilir.  Müşterinin fatura adresi Avrupa'da ise ve Müşterinin bir Office 365 Eğitim aboneliği varsa, OST'nin "Core Online Services için Rest'te Müşteri Verileri Konumu" bölümüne bakarak Microsoft, Müşteri'nin Office 365 kiracısı sağlanmasını, Müşteri Verilerini Avrupa Birliği içinde herhangi bir yere aktarabilir ve orada depolar.
+Müşterinin fatura adresi Avrupa dışındaysa ve Müşterinin Office 365 Eğitim bir aboneliği varsa, OST'nin "Çekirdek Çevrimiçi Hizmetler için Bekleyen Müşteri Verilerinin Konumu" bölümüne bakılmaksızın, Microsoft Müşterinin Office 365 kiracısını avrupa veya Kuzey Amerika içinde herhangi bir yerde sunabilir, Müşteri Verilerini'ne aktarabilir ve bekleyen müşteri verilerini depolar.  Müşterinin faturalama adresi Avrupa'daysa ve Müşterinin Office 365 Eğitim bir aboneliği varsa, OST'nin "Çekirdek Çevrimiçi Hizmetler için Bekleyen Müşteri Verilerinin Konumu" bölümüne bakılmaksızın, Microsoft Müşterinin Office 365 kiracısını avrupa birliği içinde herhangi bir yerde sunabilir, Müşteri Verilerini bu kiracıya aktarabilir ve bekleyen müşteri verilerini depolar.
 
 
 
@@ -47,106 +47,106 @@ Müşterinin fatura adresi Avrupa dışında ve Müşteri'nin bir Office 365 Eğ
 
 ### <a name="how-does-microsoft-define-data"></a>Microsoft verileri nasıl tanımlar?
 
-Microsoft Güven [Merkezi'nde farklı veri türleriyle](https://go.microsoft.com/fwlink/p/?linkid=864390) ilgili tanımlarımızı gözden geçirebilirsiniz. Gizlilik Ve [Güvenlik &'te](https://www.microsoft.com/licensing/terms/product/PrivacyandSecurityTerms/all), Microsoft müşteri verileri/verilerinizle ilgili sözleşmelere dayalı taahhütler yapar. Temel müşteri verilerini, Gizlilik ve Güvenlik Koşulları'nın koşullarına göre yalnızca bölgeniz içinde depolamayı taahhüt eden [& olarak ifade ederiz](https://www.microsoft.com/licensing/terms/product/PrivacyandSecurityTerms/all).
+Microsoft Güven Merkezi'nden [farklı veri türleri için tanımlarımızı](https://go.microsoft.com/fwlink/p/?linkid=864390) gözden geçirin. [Gizlilik & Güvenlik Koşulları'nda](https://www.microsoft.com/licensing/terms/product/PrivacyandSecurityTerms/all) Microsoft, müşteri verileriyle/verilerinizle ilgili sözleşmeye dayalı taahhütlerde bulunur. Temel müşteri verilerini [, Gizlilik & Güvenlik Koşullarına](https://www.microsoft.com/licensing/terms/product/PrivacyandSecurityTerms/all) göre yalnızca bölgenizde bekleyen olarak depolanacak şekilde taahhüt edilen müşteri verileri olarak adlandırıyoruz.
 
 ### <a name="where-are-the-exact-addresses-of-the-data-centers"></a>Veri merkezlerinin tam adresleri nerede?
 
-Microsoft, veri merkezlerinin tam adreslerini açıklamaz. Veri merkezi tesislerimizin güvenliğini sağlamak için bu ilkeyi yaptık.  Bununla birlikte, şehir konumlarını listeldiriz. Daha fazla [bilgi edinmek için lütfen Veri Merkezi](o365-data-locations.md#data-center-locations) Konumları'ne bakın.
+Microsoft, veri merkezlerinin tam adreslerini açıklamaz. Veri merkezi tesislerimizin güvenliğini sağlamaya yardımcı olmak için bu ilkeyi oluşturduk.  Ancak, şehir konumlarını listeleyeceğiz. Daha fazla bilgi edinmek için lütfen [Veri Merkezi Konumları'na](o365-data-locations.md#data-center-locations) bakın.
 
-### <a name="does-the-location-of-your-customer-data-have-a-direct-impact-on-your-end-users-experience"></a>Müşteri verilerinizin konumu son kullanıcı deneyiminizi doğrudan etkiler mi?
+### <a name="does-the-location-of-your-customer-data-have-a-direct-impact-on-your-end-users-experience"></a>Müşteri verilerinizin konumunun son kullanıcılarınızın deneyimi üzerinde doğrudan bir etkisi var mı?
 
-Verilerinizin Microsoft 365, kullanıcının veri merkezi konumlara olan uzaklığıyla orantılı değildir. Microsoft'un küresel bulut ağı, genel bulut altyapısı ve Microsoft 365 hizmetleri mimarisiyle ilgili yatırımlarını sürdüren Microsoft, kullanıcılara müşteri verilerini depolandığı yerden bağımsız olarak tek ve tutarlı bir deneyim sunmakta yardımcı olur. Kullanıcılarınız performans sorunları yaşıyorsa, bu sorunları ayrıntılı olarak gidermeniz gerekir. Microsoft, bu Destek Microsoft 365 sitesinde müşterilerin son kullanıcı performansını planlamaları ve en iyi duruma [getirmeleri Office kılavuzu yayınladı](./network-planning-and-performance.md).
+Microsoft 365 performansı, kullanıcının veri merkezi konumlarına olan uzaklığıyla orantılı değildir. Microsoft'un küresel bulut ağına, küresel bulut altyapısına ve Microsoft 365 hizmetleri mimarisine yaptığı yatırımlar, kullanıcılara müşteri verilerinin bekleyen konumda depolandığı konumdan bağımsız olarak tekil ve tutarlı bir deneyim sağlamaya yardımcı olur. Kullanıcılarınız performans sorunlarıyla karşılaşıyorsa, bunları ayrıntılı olarak gidermeniz gerekir. Microsoft, Office [Desteği web sitesinde](./network-planning-and-performance.md) son kullanıcı performansını planlamak ve iyileştirmek için Microsoft 365 müşterilerine yönelik yönergeler yayımladı.
 
-### <a name="how-does-microsoft-help-me-comply-with-my-national-regional-and-industry-specific-regulations"></a>Microsoft ulusal, bölgesel ve sektöre özgü yasal düzenlemelere uymama nasıl yardımcı olur?
+### <a name="how-does-microsoft-help-me-comply-with-my-national-regional-and-industry-specific-regulations"></a>Microsoft ulusal, bölgesel ve sektöre özgü düzenlemelerime uymama nasıl yardımcı olur?
 
-Kişilerin verilerini toplama ve kullanmayla ilgili ulusal, bölgesel ve sektöre özgü gereksinimlere uymanıza yardımcı olmak için, Microsoft 365 tüm global bulut üretkenlik sağlayıcılarının en kapsamlı uyumluluk tekliflerini sunar. Lütfen Microsoft [Güven Merkezi'nin](/compliance/regulatory/offering-home) Uyumluluk Microsoft 365 [uyumluluk tekliflerimizi](https://go.microsoft.com/fwlink/p/?linkid=862317) ve diğer ayrıntıları gözden geçin. Ayrıca, bazı Microsoft 365 planları verilerinizi yönetmenize, yasal ve mevzuat gereksinimlerine uymanıza ve verilerinizle ilgili eylemleri izlemenize yardımcı olacak daha fazla uyumluluk çözümü sunar.
+Kişilerin verilerinin toplanması ve kullanılmasını yöneten ulusal, bölgesel ve sektöre özgü gereksinimlere uymanıza yardımcı olmak için Microsoft 365 tüm küresel bulut üretkenlik sağlayıcılarının en kapsamlı uyumluluk tekliflerini sunar. Microsoft Güven Merkezi'ndeki [Microsoft Purview](https://go.microsoft.com/fwlink/p/?linkid=862317) bölümünde [uyumluluk tekliflerimizi](/compliance/regulatory/offering-home) ve diğer ayrıntıları gözden geçirin. Ayrıca, bazı Microsoft 365 planları verilerinizi yönetmenize, yasal ve yasal gereksinimlere uymanıza ve verileriniz üzerinde gerçekleştirilen eylemleri izlemenize yardımcı olacak daha fazla uyumluluk çözümü sunar.
 
-### <a name="who-can-access-your-data-and-according-to-what-rules"></a>Who hangi kurallara göre erişebilirsiniz?
+### <a name="who-can-access-your-data-and-according-to-what-rules"></a>verilerinize ve hangi kurallara göre Who erişebilirsiniz?
 
- Microsoft, müşteri verilerinizi uygunsuz erişime veya yetkisiz kişilerin kullanımına karşı korumaya yardımcı olmak için güçlü önlemler almaktadır. Bu, Microsoft personeli ve alt yükleniciler tarafından erişimi kısıtlamayı ve müşteri verileri için kamu isteklerini cevaplama gereksinimlerini dikkatle tanımlamayı içerir. Bununla birlikte, müşteri verilerinize herhangi bir zamanda ve herhangi bir nedenle erişebilirsiniz. Daha fazla ayrıntıya Microsoft Güven [Merkezi'nden bakın](https://go.microsoft.com/fwlink/p/?linkid=864392).
+ Microsoft, müşteri verilerinizin yetkisiz kişiler tarafından uygunsuz erişime veya kullanıma karşı korunmasına yardımcı olmak için güçlü önlemler uygular. Bu, Microsoft personeli ve alt yüklenicilerinin erişimini kısıtlamayı ve kamu tarafından müşteri verilerine yönelik istekleri yanıtlamaya yönelik gereksinimleri dikkatle tanımlamayı içerir. Ancak, istediğiniz zaman ve herhangi bir nedenle kendi müşteri verilerinize erişebilirsiniz. [Diğer ayrıntılar Microsoft Güven Merkezi'nden](https://go.microsoft.com/fwlink/p/?linkid=864392) edinilebilir.
 
-### <a name="does-microsoft-access-your-data"></a>Microsoft verilerinize eriş yapıyor mu?
+### <a name="does-microsoft-access-your-data"></a>Microsoft verilerinize erişıyor mu?
 
-Microsoft, çoğu Microsoft 365 işlemlerini otomatik olarak yaparken müşteri verilerine erişimini bilerek sınırlandırr. Bu, iş ölçeğinde Microsoft 365 yönetimimizi ve müşteri verilerine yönelik iç tehditlere karşı riskleri karşımızamıza yardımcı olur. Varsayılan olarak, Microsoft mühendislerinin kendisinde ayakta yönetim ayrıcalıkları yoktur ve bu mühendislerin iş yerlerinden müşteri verilerine Microsoft 365. Bir Microsoft mühendisinin müşteri verilerine sınırlı ve oturum açmış erişimi sınırlı olabilir, ancak bu yalnızca normal hizmet işlemleri için gerekli olduğunda ve yalnızca Microsoft'un üst düzey yönetiminden bir üye tarafından onaylanırsa (ve müşteri tarafından Müşteri Kasa özelliği için lisanslı olan müşteriler için).
+Microsoft, Microsoft 365 işlemlerinin çoğunu otomatikleştirirken kendi müşteri verilerine erişimini kasıtlı olarak sınırlar. Bu, Microsoft 365 büyük ölçekte yönetmemize ve müşteri verilerine yönelik iç tehdit risklerini ele almamıza yardımcı olur. Varsayılan olarak, Microsoft mühendislerinin yönetim ayrıcalıkları yoktur ve Microsoft 365'daki müşteri verilerine erişimi yoktur. Bir Microsoft mühendisinin müşteri verilerine sınırlı bir süre için sınırlı ve günlüğe kaydedilmiş erişimi olabilir, ancak yalnızca normal hizmet işlemleri için gerekli olduğunda ve yalnızca Microsoft'taki üst düzey bir yönetim üyesi tarafından onaylandığında (ve müşteri tarafından Müşteri Kasası özelliği için lisanslanan müşteriler için).
 
-### <a name="how-does-microsoft-secure-your-data"></a>Microsoft verilerinizi nasıl güvenli hale geliyor?
+### <a name="how-does-microsoft-secure-your-data"></a>Microsoft verilerinizin güvenliğini nasıl sağlar?
 
-Microsoft' un, bilginizi güvende tutmaya yardımcı olmak için Microsoft 365 yerleşik ilkeleri, denetimleri ve sistemleri vardır. Daha fazla [Microsoft 365 için](https://go.microsoft.com/fwlink/p/?linkid=864393) Microsoft Güven Merkezi'nin Güvenlik Bölümü'ne bakın.
+Microsoft, bilgilerinizin güvende kalmasına yardımcı olmak için Microsoft 365 yerleşik olarak sağlam ilkelere, denetimlere ve sistemlere sahiptir. Daha fazla bilgi edinmek için Microsoft Güven Merkezi'nin [Microsoft 365 güvenlik bölümünü](https://go.microsoft.com/fwlink/p/?linkid=864393) gözden geçirin.
 
-### <a name="does-microsoft-365-encrypt-your-data"></a>Verilerinizi Microsoft 365 şifreler mi?
+### <a name="does-microsoft-365-encrypt-your-data"></a>verilerinizi Microsoft 365 şifreler mi?
 
-Microsoft 365 hizmet tarafı teknolojileri kullanır ve bu teknolojiler, müşteri verilerini ista ve iletilirken şifreler. Beklemede müşteri verileri için Microsoft 365 düzeyinde ve dosya düzeyinde şifreleme kullanır. Aktarımdaki müşteri verileri için, Microsoft 365 merkezleri ile istemciler ve sunucular arasındaki iletişimlerde Aktarım Katmanı Güvenliği (TLS) ve İnternet Protokolü Güvenliği (I İleti) gibi çok şifreleme teknolojisi kullanır. Microsoft 365 yönetilen şifreleme özellikleri de içerir.
+Microsoft 365 bekleyen ve aktarılan müşteri verilerini şifreleyen hizmet tarafı teknolojileri kullanır. bekleyen müşteri verileri için Microsoft 365 birim düzeyinde ve dosya düzeyinde şifreleme kullanır. Aktarımdaki müşteri verileri için Microsoft 365, veri merkezleri ile istemciler ve sunucular arasındaki iletişim için Aktarım Katmanı Güvenliği (TLS) ve İnternet Protokolü Güvenliği (IPsec) gibi birden çok şifreleme teknolojisi kullanır. Microsoft 365 müşteri tarafından yönetilen şifreleme özelliklerini de içerir.
 
-### <a name="where-can-i-find-data-residency-information-for-microsoft-azure"></a>Bu veriler için veri ikamet bilgilerini nerede Microsoft Azure?
+### <a name="where-can-i-find-data-residency-information-for-microsoft-azure"></a>Microsoft Azure için veri yerleşimi bilgilerini nerede bulabilirim?
 
-Lütfen bölgeye [göre ürünler sayfasını](https://go.microsoft.com/fwlink/p/?linkid=2093451) gözden geçirerek bu ürünlere ilişkin veri Microsoft Azure.
+Microsoft Azure veri yerleşimi bilgilerini bulmak için lütfen [Bölgeye göre kullanılabilir ürünler](https://go.microsoft.com/fwlink/p/?linkid=2093451) sayfasını gözden geçirin.
 
-### <a name="what-are-multi-geo-capabilities-in-microsoft-365"></a>Birden Çok Coğrafi Özelliği Microsoft 365?
+### <a name="what-are-multi-geo-capabilities-in-microsoft-365"></a>Microsoft 365'daki Multi-Geo Özellikleri nelerdir?
 
-[Multi-Geo](https://go.microsoft.com/fwlink/p/?linkid=872033), müşterilerin mevcut konumlarında kalan temel müşteri verilerini buluttaki mevcut konumlarımıza tahsis Microsoft 365 sağlar.   
+[Multi-Geo](https://go.microsoft.com/fwlink/p/?linkid=872033), müşterilere bekleyen temel müşteri verilerini Microsoft 365 buluttaki kullanılabilir konumlarımıza ayırma olanağı sağlar.   
 
-### <a name="what-services-support-multi-geo"></a>Hangi hizmetler Multi-Geo'ya destek sağlar?
+### <a name="what-services-support-multi-geo"></a>Multi-Geo hangi hizmetleri destekler?
 
-[Multi-Geo](https://go.microsoft.com/fwlink/p/?linkid=872033), Exchange Online, OneDrive İş, SharePoint Online ve Teams.
+[Multi-Geo](https://go.microsoft.com/fwlink/p/?linkid=872033) Exchange Online, OneDrive İş, SharePoint Online ve Teams için kullanılabilir.
 
-### <a name="why-do-i-see-my-microsoft-365-service-requests-for-my-data-at-rest-connecting-to-servers-in-countries-outside-of-my-region"></a>Verilerim için neden Microsoft 365 ülkelerdeki sunuculara bağlanıyor olarak verilerim için istekler görüyorum?
+### <a name="why-do-i-see-my-microsoft-365-service-requests-for-my-data-at-rest-connecting-to-servers-in-countries-outside-of-my-region"></a>Bekleyen verilerim için Microsoft 365 hizmet isteklerimi neden bölgemin dışındaki ülkelerdeki sunuculara bağlanırken görüyorum?
 
-Bazı durumlarda, müşteri isteği verilerinizin depolandığı konumdan farklı bir bölgedeki sunucular tarafından işleniyor olabilir. Ağ yönlendirme kararlarının istek işleme için farklı bir sunucu seçmesi buna neden olabilir, ancak böyle durumlarda verileriniz yeni bir konumda yeni bir konuma taşınmaz.
+Bazen müşteri isteği, verilerinizin bekleyen konumda depolandığı konumdan farklı bir bölgedeki sunucular tarafından işlenebilir. Ağ yönlendirme kararlarının istek işleme için farklı bir sunucu seçmesi ancak bu durumlarda verileriniz bekleyen konumda yeni bir konuma taşınmaması durumunda bu durum oluşabilir.
 
-### <a name="what-are-the-exceptions-for-intune-data-locations"></a>Veri konumlarını nasıl Intune?
+### <a name="what-are-the-exceptions-for-intune-data-locations"></a>Intune veri konumları için özel durumlar nelerdir?
 
-Microsoft, belirtilen Intune dışında kalan tüm müşteri verilerini depolamaz. şu dışında:
+Microsoft, Intune müşteri verilerini belirtilen Coğrafi Bölge dışında depolamaz. şu durumlar dışında:
 
-- Microsoft'un müşteri desteği sağlaması, hizmet sorunlarını gidermesi veya yasal gereksinimlere uyması gerekir.
-- Müşteri, aşağıdakilerin kullanımı da dahil olmak üzere müşteri verisi bu tür depolamayı etkinleştirmek üzere bir hesap yapılandırr:
+- Microsoft'un müşteri desteği sağlaması, hizmetle ilgili sorunları gidermesi veya yasal gereksinimlere uyması gerekir.
+- Müşteri, aşağıdakilerin kullanımı da dahil olmak üzere müşteri verilerinin böyle bir şekilde depolanmasını etkinleştirmek için bir hesap yapılandırıyor:
 
-  - Genel bir önbelleğe alma hizmeti sağlayan ve müşteri verilerini dünyanın her yerindeki uç konumlarda depo sağlayan Content Delivery Network (CDN) gibi, genel olarak işletmek üzere tasarlanmış özellikler.
+  - Genel önbelleğe alma hizmeti sağlayan ve müşteri verilerini dünyanın dört bir yanındaki uç konumlarda depolayan Content Delivery Network (CDN) gibi genel olarak çalışacak şekilde tasarlanmış özellikler.
 
-  - Azure Active Directory (Azure AD) ile kullanılabilir ve dizin verilerini genel olarak depolar. Bu durum, Birleşik Devletler'daki (Azure AD verileri yalnızca Birleşik Devletler'te) veya Avrupa'da (Azure AD verileri Avrupa veya Avrupa'da depolandığı yer) Azure AD dağıtımları için Birleşik Devletler.
+  - dizin verilerini genel olarak depolayan Azure Active Directory (Azure AD). Bu, Birleşik Devletler (Azure AD verilerinin yalnızca Birleşik Devletler depolandığı) veya Avrupa'daki (Azure AD verilerinin Avrupa'da veya Birleşik Devletler depolandığı) Azure AD dağıtımları için geçerli değildir.
    
-  - Önizleme, beta veya diğer yayın öncesi sürüm hizmetleriyle müşteri verilerini genel olarak Birleşik Devletler genel olarak depolanabilirsiniz.
+  - Müşteri verilerini genellikle Birleşik Devletler depolayan ancak genel olarak depolayan önizleme, beta veya diğer yayın öncesi hizmetler.
 
-Ne olursa olsun, Microsoft müşterilerin veya son kullanıcılarının müşteri verilerine erişim verilerinde yer alan Coğrafi verileri denetlemez veya sınırlamaz. Benzer şekilde, diğer hizmetlerde yer alan müşteri verileri daha sonra Intune ile tümleştirilene kadar, kaynak müşteri verileri diğer hizmetin kendi Coğrafi taahhütlerine (varsa) tabi olmaya devam eder; yalnızca müşteri verilerini Intune ile tümleştirilmiş olan müşteri verileri, Intune için belirtilen Geo belgesinde depolanır.  
+Ne olursa olsun, Microsoft müşterilerin veya son kullanıcılarının müşteri verilerine erişebileceği Coğrafi verileri denetlemez veya sınırlamaz. Benzer şekilde, diğer hizmetlerdeki müşteri verileri daha sonra Intune tümleştirildiğinde, kaynak müşteri verileri diğer hizmetin kendi Coğrafi taahhütlerine (varsa) bağlı olarak depolanmaya devam eder; yalnızca Intune tümleştirilmiş müşteri verilerinin kopyası Intune için belirtilen Coğrafi Bölgede depolanır.  
 
-### <a name="what-are-the-considerations-for-microsoft-viva-data-locations"></a>Veri konumlarını nasıl Microsoft Viva?
+### <a name="what-are-the-considerations-for-microsoft-viva-data-locations"></a>Microsoft Viva veri konumları için dikkat edilmesi gerekenler nelerdir?
 
 - Viva Bağlantılar
 
   - Pano, Kaynaklar ve masaüstü uygulamasının verileri SharePoint Online'da depolanır. 
   
-  - Akış, SharePoint Online (Haberler), Stream (SharePoint Online'da saklanan) ve Yammer 'da saklanan) içerikten Yammer.  
+  - Akış, SharePoint Online (Haberler), Stream (SharePoint Online'da bekleyenler) ve Yammer (Yammer'da bekleyenler bölümünde depolanır) içerik içerir.  
   
 - Viva Analizler
 
-  - Kişisel uygulamanın veri yerleşimi, kullanıcının posta kutusunun konumunu temel alarak kullanılır.
+  - Kişisel uygulamasının veri yerleşimi, kullanıcının posta kutusu konumunu temel alır.
   
-  - Yönetici/Yönetici ve Gelişmiş veri bölgesi, tek tek kullanıcılar tarafından değil kiracının birincil bölgesi tarafından belirlenir.
+  - Yönetici/Öncü ve Gelişmiş için veri bölgesi, tek tek kullanıcılara değil kiracının birincil bölgesine göre belirlenir.
 
 ## <a name="data-center-locations"></a>Veri Merkezi Konumları
 
-Aşağıdaki tabloda çeşitli hizmetler için veri konumu tanımlanmıştır. Hizmet konumlarını belirlerken lütfen bu tablolara bakın.
+Aşağıdaki tabloda çeşitli hizmetler için veri konumu tanımlenmektedir. Hizmet konumlarını belirlerken lütfen bu tablolara bakın.
 
 ### <a name="data-center-geographies"></a>Veri Merkezi Coğrafyaları
 
-Aşağıdaki genel coğrafyalar, geriye kalan verileri depolar. Müşteri verilerini depolandığı konumlar değişebilir. 
+Aşağıdaki küresel coğrafyalar bekleyen verileri depolayabilir. Müşteri verilerinin depolanabileceği konumlar değişebilir. 
 
-| Genel Coğrafyalar | Müşteri verilerini depolandığı konumlar |
+| Küresel Coğrafyalar | Müşteri verilerinin depolanabileceği konumlar |
 | --- | --- |
-| Global Coğrafya 1 – EMEA (Avrupa, Orta Doğu ve Afrika) | Avusturya, Finlandiya, Fransa, İrlanda, Hollanda, İsveç |
-| Genel Coğrafya 2 – Asya Pasifik | Hong Kong, Japonya, Malezya, Singapur, Güney Kore |
-| Global Geography 3 - Amerika | Brezilya, Şili, Birleşik Devletler |
+| Küresel Coğrafya 1 – EMEA (Avrupa, Orta Doğu ve Afrika) | Avusturya, Finlandiya, Fransa, İrlanda, Hollanda, İsveç |
+| Küresel Coğrafya 2 – Asya Pasifik | Hong Kong, Japonya, Malezya, Singapur, Güney Kore |
+| Küresel Coğrafya 3 - Amerika | Brezilya, Şili, Birleşik Devletler |
 
-## <a name="countryregion-specific-data-center-city-locations"></a>Ülke/Bölgeye özgü Veri Merkezi şehir konumları
+## <a name="countryregion-specific-data-center-city-locations"></a>Ülkeye/Bölgeye özgü Veri Merkezi şehir konumları
 
-Ülkeye/bölgeye özgü veri merkezleri için, aşağıdakiler müşteri verilerinin depolandığı şehirleri tanımlar.
+Ülkeye/bölgeye özgü veri merkezleri için aşağıdakiler, müşteri verilerinin beklemede depolandığı şehirleri tanımlar.
 
 | Ülke | Şehir |
 | --- | --- |
-| Avustralya | Sydney, Melbourne |
+| Avustralya | Sidney, Melbourne |
 | Brezilya | Rio, Campinas |
 | Kanada | Quebec City, Toronto |
-| Avrupa Birliği | Avusturya (Finlandiya), Finlandiya (Helsinki), Fransa (Paris, İrlanda), İrlanda (Dublin), Hollanda (Amsterdam), İsveç (Gävle, Sandviken, Staffanstorp) |
-| Fransa | Paris, Londra |
+| Avrupa Birliği | Avusturya (Viyana), Finlandiya (Helsinki), Fransa (Paris, Marsilya), İrlanda (Dublin), Hollanda (Amsterdam), İsveç (Gävle, Sandviken, Staffanstorp) |
+| Fransa | Paris, Marsilya |
 | Almanya | Frankfurt, Berlin |
 | Hindistan | Chennai, Mumbai, Pune |
 | Japonya | Osaka, Tokyo |
@@ -154,38 +154,38 @@ Aşağıdaki genel coğrafyalar, geriye kalan verileri depolar. Müşteri verile
 | Norveç | Oslo, Stavanger |
 | South Africa | Cape Town, Johannesburg |
 | İsveç | Gävle, Sandviken, Staffanstorp |
-| İsviçre | İsviçre,  Bire bir |
+| İsviçre | Geneva, Zürih |
 | Birleşik Arap Emirlikleri | Dubai, Abu Dabi |
 | Birleşik Krallık | Durham, Londra, Cardiff |
-| Amerika Birleşik Devletleri |  Boydton, Cheyenne, Chicago, Des Moines, Santay, San Santa Santa, San Adana |
+| Amerika Birleşik Devletleri |  Boydton, Cheyenne, Chicago, Des Moines, Quincy, San Antonio, Santa Clara, San Jose |
 
-Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğiyle ilişkili fatura adresinin ülkesi temel alınarak Coğrafi ayarı kullanılır. Mevcut hizmetlerde müşteri verilerinizin nerede depolandığı onaylamak Office 365 için lütfen Ayarlar |'daki Müşteri Merkezi'Office 365 Admin kiracıya özgü veri Ayarlar | Kuruluş ayarları | Kuruluş profili | Veri konumu kartı. Alternatif olarak, bugün Microsoft 365 Hizmeti kullanmaya başlarsanız müşteri verilerinizin nerede depo olacağını bulmak için aşağıdaki listeden işletmenizin temel Microsoft 365 genişletin.
+Yeni Microsoft 365 kiracıları, bu kiracının ilk aboneliğiyle ilişkili fatura adresinin bulunduğu ülkeye göre varsayılan olarak Coğrafi olarak ayarlanır. Mevcut Office 365 hizmetlerinde müşteri verilerinin nerede depolandığını onaylamak için lütfen Ayarlar |'daki Office 365 Admin Merkezinizde kiracıya özgü veri konumu bilgilerini görüntüleyin Kuruluş ayarları | Kuruluş profili | Veri konumu kartı. Alternatif olarak, bugün bir Microsoft 365 Hizmeti kullanmaya başlamanız durumunda müşteri verilerinin nerede depolandığını öğrenmek için aşağıdaki listeden işletmenizin bulunduğu ülkeyi genişletin.
 
 ## <a name="afghanistan"></a>Afganistan
 <details><summary>Genişletmek için tıklayın</summary><p>
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -194,26 +194,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -222,26 +222,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -250,26 +250,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -278,26 +278,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -306,26 +306,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -334,26 +334,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -374,14 +374,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -402,14 +402,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -430,14 +430,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -446,26 +446,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Global Geography 3 – Amerika |
-| OneDrive İş | Global Geography 3 – Amerika |
-| SharePoint Online | Global Geography 3 – Amerika |
+| Exchange Online | Küresel Coğrafya 3 – Amerika |
+| OneDrive İş | Küresel Coğrafya 3 – Amerika |
+| SharePoint Online | Küresel Coğrafya 3 – Amerika |
 | Microsoft Teams | Amerika Birleşik Devletleri |
-| Office Online &amp; Mobil | Global Geography 3 – Amerika |
-| EOP | Global Geography 3 – Amerika |
+| Office Online &amp; Mobil | Küresel Coğrafya 3 – Amerika |
+| EOP | Küresel Coğrafya 3 – Amerika |
 | Intune | Amerika Birleşik Devletleri |
 | Planner | Amerika Birleşik Devletleri |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Global Geography 3 – Amerika |
+| OneNote Hizmetleri | Küresel Coğrafya 3 – Amerika |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Global Geography 3 – Amerika |
-| Viva Konular | Global Geography 3 – Amerika |
-| Viva Öğrenme | Global Geography 3 – Amerika |
-| Viva Analizler - Kişisel | Global Geography 3 – Amerika |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 3 – Amerika |
+| Viva Konular | Küresel Coğrafya 3 – Amerika |
+| Viva Öğrenme | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Kişisel | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -474,26 +474,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -514,14 +514,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -542,14 +542,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Avustralya |
 | Stream | Avustralya |
-| Whiteboard | Avustralya |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Avustralya |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Avustralya |
 | Viva Konular | Avustralya |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Kişisel | Avustralya |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -570,14 +570,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Avrupa Birliği  |
 | OneNote Hizmetleri | Avrupa Birliği |
 | Stream | Avrupa Birliği |
-| Whiteboard | Avrupa Birliği |
-| Formlar | Avrupa Birliği |
+| Tahta | Avrupa Birliği |
+| Forms | Avrupa Birliği |
 | Viva Bağlantılar | Avrupa Birliği |
 | Viva Konular | Avrupa Birliği |
 | Viva Öğrenme | Avrupa Birliği |
 | Viva Analizler - Kişisel | Avrupa Birliği |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Avrupa Birliği |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -586,26 +586,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -626,14 +626,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -642,26 +642,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -670,26 +670,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -710,14 +710,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -727,26 +727,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -767,14 +767,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Avrupa Birliği  |
 | OneNote Hizmetleri | Avrupa Birliği |
 | Stream | Avrupa Birliği |
-| Whiteboard | Avrupa Birliği |
-| Formlar | Avrupa Birliği |
+| Tahta | Avrupa Birliği |
+| Forms | Avrupa Birliği |
 | Viva Bağlantılar | Avrupa Birliği |
 | Viva Konular | Avrupa Birliği |
 | Viva Öğrenme | Avrupa Birliği |
 | Viva Analizler - Kişisel | Avrupa Birliği |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Avrupa Birliği |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -795,14 +795,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -811,26 +811,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -851,14 +851,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -867,26 +867,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -895,26 +895,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Global Geography 3 – Amerika |
-| OneDrive İş | Global Geography 3 – Amerika |
-| SharePoint Online | Global Geography 3 – Amerika |
+| Exchange Online | Küresel Coğrafya 3 – Amerika |
+| OneDrive İş | Küresel Coğrafya 3 – Amerika |
+| SharePoint Online | Küresel Coğrafya 3 – Amerika |
 | Microsoft Teams | Amerika Birleşik Devletleri |
-| Office Online &amp; Mobil | Global Geography 3 – Amerika |
-| EOP | Global Geography 3 – Amerika |
+| Office Online &amp; Mobil | Küresel Coğrafya 3 – Amerika |
+| EOP | Küresel Coğrafya 3 – Amerika |
 | Intune | Amerika Birleşik Devletleri |
 | Planner | Amerika Birleşik Devletleri |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Global Geography 3 – Amerika |
+| OneNote Hizmetleri | Küresel Coğrafya 3 – Amerika |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Global Geography 3 – Amerika |
-| Viva Konular | Global Geography 3 – Amerika |
-| Viva Öğrenme | Global Geography 3 – Amerika |
-| Viva Analizler - Kişisel | Global Geography 3 – Amerika |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 3 – Amerika |
+| Viva Konular | Küresel Coğrafya 3 – Amerika |
+| Viva Öğrenme | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Kişisel | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -923,26 +923,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Global Geography 3 – Amerika |
-| OneDrive İş | Global Geography 3 – Amerika |
-| SharePoint Online | Global Geography 3 – Amerika |
+| Exchange Online | Küresel Coğrafya 3 – Amerika |
+| OneDrive İş | Küresel Coğrafya 3 – Amerika |
+| SharePoint Online | Küresel Coğrafya 3 – Amerika |
 | Microsoft Teams | Amerika Birleşik Devletleri |
-| Office Online &amp; Mobil | Global Geography 3 – Amerika |
-| EOP | Global Geography 3 – Amerika |
+| Office Online &amp; Mobil | Küresel Coğrafya 3 – Amerika |
+| EOP | Küresel Coğrafya 3 – Amerika |
 | Intune | Amerika Birleşik Devletleri |
 | Planner | Amerika Birleşik Devletleri |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Global Geography 3 – Amerika |
+| OneNote Hizmetleri | Küresel Coğrafya 3 – Amerika |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Global Geography 3 – Amerika |
-| Viva Konular | Global Geography 3 – Amerika |
-| Viva Öğrenme | Global Geography 3 – Amerika |
-| Viva Analizler - Kişisel | Global Geography 3 – Amerika |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 3 – Amerika |
+| Viva Konular | Küresel Coğrafya 3 – Amerika |
+| Viva Öğrenme | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Kişisel | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -951,26 +951,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -979,26 +979,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1019,14 +1019,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1047,42 +1047,42 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Brezilya |
 | Stream | Brezilya |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Brezilya |
 | Viva Konular | Brezilya |
-| Viva Öğrenme | Global Geography 3 – Amerika |
+| Viva Öğrenme | Küresel Coğrafya 3 – Amerika |
 | Viva Analizler - Kişisel | Brezilya |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
-## <a name="british-indian-ocean-territory"></a>İngiliz Hint Okyanusu Toprakları
+## <a name="british-indian-ocean-territory"></a>İngiliz Hint Okyanusu Bölgesi
 <details><summary>Genişletmek için tıklayın</summary><p>
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1103,14 +1103,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1119,26 +1119,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1159,14 +1159,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Avrupa Birliği  |
 | OneNote Hizmetleri | Avrupa Birliği |
 | Stream | Avrupa Birliği |
-| Whiteboard | Avrupa Birliği |
-| Formlar | Avrupa Birliği |
+| Tahta | Avrupa Birliği |
+| Forms | Avrupa Birliği |
 | Viva Bağlantılar | Avrupa Birliği |
 | Viva Konular | Avrupa Birliği |
 | Viva Öğrenme | Avrupa Birliği |
 | Viva Analizler - Kişisel | Avrupa Birliği |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Avrupa Birliği |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1175,26 +1175,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1203,26 +1203,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1231,26 +1231,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1259,26 +1259,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1299,14 +1299,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Kanada |
 | Stream | Kanada |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Kanada |
 | Viva Konular | Kanada |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Kanada |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1315,26 +1315,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1355,14 +1355,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1371,26 +1371,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1399,26 +1399,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1427,26 +1427,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Global Geography 3 – Amerika |
-| OneDrive İş | Global Geography 3 – Amerika |
-| SharePoint Online | Global Geography 3 – Amerika |
+| Exchange Online | Küresel Coğrafya 3 – Amerika |
+| OneDrive İş | Küresel Coğrafya 3 – Amerika |
+| SharePoint Online | Küresel Coğrafya 3 – Amerika |
 | Microsoft Teams | Amerika Birleşik Devletleri |
-| Office Online &amp; Mobil | Global Geography 3 – Amerika |
-| EOP | Global Geography 3 – Amerika |
+| Office Online &amp; Mobil | Küresel Coğrafya 3 – Amerika |
+| EOP | Küresel Coğrafya 3 – Amerika |
 | Intune | Amerika Birleşik Devletleri |
 | Planner | Amerika Birleşik Devletleri |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Global Geography 3 – Amerika |
+| OneNote Hizmetleri | Küresel Coğrafya 3 – Amerika |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Global Geography 3 – Amerika |
-| Viva Konular | Global Geography 3 – Amerika |
-| Viva Öğrenme | Global Geography 3 – Amerika |
-| Viva Analizler - Kişisel | Global Geography 3 – Amerika |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 3 – Amerika |
+| Viva Konular | Küresel Coğrafya 3 – Amerika |
+| Viva Öğrenme | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Kişisel | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1455,26 +1455,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1483,26 +1483,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1511,26 +1511,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1551,14 +1551,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1567,26 +1567,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1596,26 +1596,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1625,26 +1625,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1654,26 +1654,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1694,14 +1694,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1710,26 +1710,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1750,14 +1750,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Avrupa Birliği  |
 | OneNote Hizmetleri | Avrupa Birliği |
 | Stream | Avrupa Birliği |
-| Whiteboard | Avrupa Birliği |
-| Formlar | Avrupa Birliği |
+| Tahta | Avrupa Birliği |
+| Forms | Avrupa Birliği |
 | Viva Bağlantılar | Avrupa Birliği |
 | Viva Konular | Avrupa Birliği |
 | Viva Öğrenme | Avrupa Birliği |
 | Viva Analizler - Kişisel | Avrupa Birliği |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Avrupa Birliği |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1766,26 +1766,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Global Geography 3 – Amerika |
-| OneDrive İş | Global Geography 3 – Amerika |
-| SharePoint Online | Global Geography 3 – Amerika |
+| Exchange Online | Küresel Coğrafya 3 – Amerika |
+| OneDrive İş | Küresel Coğrafya 3 – Amerika |
+| SharePoint Online | Küresel Coğrafya 3 – Amerika |
 | Microsoft Teams | Amerika Birleşik Devletleri |
-| Office Online &amp; Mobil | Global Geography 3 – Amerika |
-| EOP | Global Geography 3 – Amerika |
+| Office Online &amp; Mobil | Küresel Coğrafya 3 – Amerika |
+| EOP | Küresel Coğrafya 3 – Amerika |
 | Intune | Amerika Birleşik Devletleri |
 | Planner | Amerika Birleşik Devletleri |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Global Geography 3 – Amerika |
+| OneNote Hizmetleri | Küresel Coğrafya 3 – Amerika |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Global Geography 3 – Amerika |
-| Viva Konular | Global Geography 3 – Amerika |
-| Viva Öğrenme | Global Geography 3 – Amerika |
-| Viva Analizler - Kişisel | Global Geography 3 – Amerika |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 3 – Amerika |
+| Viva Konular | Küresel Coğrafya 3 – Amerika |
+| Viva Öğrenme | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Kişisel | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1806,14 +1806,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Avrupa Birliği  |
 | OneNote Hizmetleri | Avrupa Birliği |
 | Stream | Avrupa Birliği |
-| Whiteboard | Avrupa Birliği |
-| Formlar | Avrupa Birliği |
+| Tahta | Avrupa Birliği |
+| Forms | Avrupa Birliği |
 | Viva Bağlantılar | Avrupa Birliği |
 | Viva Konular | Avrupa Birliği |
 | Viva Öğrenme | Avrupa Birliği |
 | Viva Analizler - Kişisel | Avrupa Birliği |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Avrupa Birliği |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1834,14 +1834,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Avrupa Birliği  |
 | OneNote Hizmetleri | Avrupa Birliği |
 | Stream | Avrupa Birliği |
-| Whiteboard | Avrupa Birliği |
-| Formlar | Avrupa Birliği |
+| Tahta | Avrupa Birliği |
+| Forms | Avrupa Birliği |
 | Viva Bağlantılar | Avrupa Birliği |
 | Viva Konular | Avrupa Birliği |
 | Viva Öğrenme | Avrupa Birliği |
 | Viva Analizler - Kişisel | Avrupa Birliği |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Avrupa Birliği |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1862,14 +1862,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Avrupa Birliği  |
 | OneNote Hizmetleri | Avrupa Birliği |
 | Stream | Avrupa Birliği |
-| Whiteboard | Avrupa Birliği |
-| Formlar | Avrupa Birliği |
+| Tahta | Avrupa Birliği |
+| Forms | Avrupa Birliği |
 | Viva Bağlantılar | Avrupa Birliği |
 | Viva Konular | Avrupa Birliği |
 | Viva Öğrenme | Avrupa Birliği |
 | Viva Analizler - Kişisel | Avrupa Birliği |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Avrupa Birliği |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1878,26 +1878,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1918,14 +1918,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1946,14 +1946,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1962,26 +1962,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Global Geography 3 – Amerika |
-| OneDrive İş | Global Geography 3 – Amerika |
-| SharePoint Online | Global Geography 3 – Amerika |
+| Exchange Online | Küresel Coğrafya 3 – Amerika |
+| OneDrive İş | Küresel Coğrafya 3 – Amerika |
+| SharePoint Online | Küresel Coğrafya 3 – Amerika |
 | Microsoft Teams | Amerika Birleşik Devletleri |
-| Office Online &amp; Mobil | Global Geography 3 – Amerika |
-| EOP | Global Geography 3 – Amerika |
+| Office Online &amp; Mobil | Küresel Coğrafya 3 – Amerika |
+| EOP | Küresel Coğrafya 3 – Amerika |
 | Intune | Amerika Birleşik Devletleri |
 | Planner | Amerika Birleşik Devletleri |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Global Geography 3 – Amerika |
+| OneNote Hizmetleri | Küresel Coğrafya 3 – Amerika |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Global Geography 3 – Amerika |
-| Viva Konular | Global Geography 3 – Amerika |
-| Viva Öğrenme | Global Geography 3 – Amerika |
-| Viva Analizler - Kişisel | Global Geography 3 – Amerika |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 3 – Amerika |
+| Viva Konular | Küresel Coğrafya 3 – Amerika |
+| Viva Öğrenme | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Kişisel | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -1990,26 +1990,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -2030,14 +2030,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -2046,26 +2046,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -2074,26 +2074,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -2114,14 +2114,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Avrupa Birliği  |
 | OneNote Hizmetleri | Avrupa Birliği |
 | Stream | Avrupa Birliği |
-| Whiteboard | Avrupa Birliği |
-| Formlar | Avrupa Birliği |
+| Tahta | Avrupa Birliği |
+| Forms | Avrupa Birliği |
 | Viva Bağlantılar | Avrupa Birliği |
 | Viva Konular | Avrupa Birliği |
 | Viva Öğrenme | Avrupa Birliği |
 | Viva Analizler - Kişisel | Avrupa Birliği |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Avrupa Birliği |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -2130,26 +2130,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -2158,26 +2158,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Global Geography 3 – Amerika |
-| OneDrive İş | Global Geography 3 – Amerika |
-| SharePoint Online | Global Geography 3 – Amerika |
+| Exchange Online | Küresel Coğrafya 3 – Amerika |
+| OneDrive İş | Küresel Coğrafya 3 – Amerika |
+| SharePoint Online | Küresel Coğrafya 3 – Amerika |
 | Microsoft Teams | Amerika Birleşik Devletleri |
-| Office Online &amp; Mobil | Global Geography 3 – Amerika |
-| EOP | Global Geography 3 – Amerika |
+| Office Online &amp; Mobil | Küresel Coğrafya 3 – Amerika |
+| EOP | Küresel Coğrafya 3 – Amerika |
 | Intune | Amerika Birleşik Devletleri |
 | Planner | Amerika Birleşik Devletleri |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Global Geography 3 – Amerika |
+| OneNote Hizmetleri | Küresel Coğrafya 3 – Amerika |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Global Geography 3 – Amerika |
-| Viva Konular | Global Geography 3 – Amerika |
-| Viva Öğrenme | Global Geography 3 – Amerika |
-| Viva Analizler - Kişisel | Global Geography 3 – Amerika |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 3 – Amerika |
+| Viva Konular | Küresel Coğrafya 3 – Amerika |
+| Viva Öğrenme | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Kişisel | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -2186,54 +2186,54 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
-## <a name="federated-states-of-micronesia"></a>Federasyon Mikronezya Durumları
+## <a name="federated-states-of-micronesia"></a>Mikronezya Federasyon Durumları
 <details><summary>Genişletmek için tıklayın</summary><p>
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -2254,14 +2254,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Avustralya |
 | Stream | Avustralya |
-| Whiteboard | Avustralya |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Avustralya |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Avustralya |
 | Viva Konular | Avustralya |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Kişisel | Avustralya |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -2282,14 +2282,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Avrupa Birliği  |
 | OneNote Hizmetleri | Avrupa Birliği |
 | Stream | Avrupa Birliği |
-| Whiteboard | Avrupa Birliği |
-| Formlar | Avrupa Birliği |
+| Tahta | Avrupa Birliği |
+| Forms | Avrupa Birliği |
 | Viva Bağlantılar | Avrupa Birliği |
 | Viva Konular | Avrupa Birliği |
 | Viva Öğrenme | Avrupa Birliği |
 | Viva Analizler - Kişisel | Avrupa Birliği |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Avrupa Birliği |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -2310,14 +2310,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Avrupa Birliği |
 | OneNote Hizmetleri | Fransa |
 | Stream | Avrupa Birliği |
-| Whiteboard | Avrupa Birliği |
-| Formlar | Avrupa Birliği |
+| Tahta | Avrupa Birliği |
+| Forms | Avrupa Birliği |
 | Viva Bağlantılar | Fransa |
 | Viva Konular | Fransa |
 | Viva Öğrenme | Avrupa Birliği |
 | Viva Analizler - Kişisel | Fransa |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Avrupa Birliği |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -2326,26 +2326,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Global Geography 3 – Amerika |
-| OneDrive İş | Global Geography 3 – Amerika |
-| SharePoint Online | Global Geography 3 – Amerika |
+| Exchange Online | Küresel Coğrafya 3 – Amerika |
+| OneDrive İş | Küresel Coğrafya 3 – Amerika |
+| SharePoint Online | Küresel Coğrafya 3 – Amerika |
 | Microsoft Teams | Amerika Birleşik Devletleri |
-| Office Online &amp; Mobil | Global Geography 3 – Amerika |
-| EOP | Global Geography 3 – Amerika |
+| Office Online &amp; Mobil | Küresel Coğrafya 3 – Amerika |
+| EOP | Küresel Coğrafya 3 – Amerika |
 | Intune | Amerika Birleşik Devletleri |
 | Planner | Amerika Birleşik Devletleri |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Global Geography 3 – Amerika |
+| OneNote Hizmetleri | Küresel Coğrafya 3 – Amerika |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Global Geography 3 – Amerika |
-| Viva Konular | Global Geography 3 – Amerika |
-| Viva Öğrenme | Global Geography 3 – Amerika |
-| Viva Analizler - Kişisel | Global Geography 3 – Amerika |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 3 – Amerika |
+| Viva Konular | Küresel Coğrafya 3 – Amerika |
+| Viva Öğrenme | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Kişisel | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -2354,30 +2354,30 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
-## <a name="french-southern-territories"></a>Fransız Güney Toprakları
+## <a name="french-southern-territories"></a>Fransız Güney Bölgeleri
 <details><summary>Genişletmek için tıklayın</summary><p>
 
 | Hizmet | Konum |
@@ -2394,14 +2394,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -2410,26 +2410,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -2438,26 +2438,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -2466,26 +2466,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -2506,14 +2506,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Avrupa Birliği |
 | OneNote Hizmetleri | Almanya |
 | Stream | Avrupa Birliği |
-| Whiteboard | Avrupa Birliği |
-| Formlar | Avrupa Birliği |
+| Tahta | Avrupa Birliği |
+| Forms | Avrupa Birliği |
 | Viva Bağlantılar | Almanya |
 | Viva Konular | Almanya |
 | Viva Öğrenme | Avrupa Birliği |
 | Viva Analizler - Kişisel | Almanya |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Avrupa Birliği |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -2522,26 +2522,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -2550,26 +2550,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -2590,14 +2590,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Avrupa Birliği  |
 | OneNote Hizmetleri | Avrupa Birliği |
 | Stream | Avrupa Birliği |
-| Whiteboard | Avrupa Birliği |
-| Formlar | Avrupa Birliği |
+| Tahta | Avrupa Birliği |
+| Forms | Avrupa Birliği |
 | Viva Bağlantılar | Avrupa Birliği |
 | Viva Konular | Avrupa Birliği |
 | Viva Öğrenme | Avrupa Birliği |
 | Viva Analizler - Kişisel | Avrupa Birliği |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Avrupa Birliği |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -2619,14 +2619,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -2647,14 +2647,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -2675,14 +2675,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -2691,26 +2691,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -2731,14 +2731,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -2747,26 +2747,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -2775,26 +2775,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -2803,26 +2803,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -2831,26 +2831,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Global Geography 3 – Amerika |
-| OneDrive İş | Global Geography 3 – Amerika |
-| SharePoint Online | Global Geography 3 – Amerika |
+| Exchange Online | Küresel Coğrafya 3 – Amerika |
+| OneDrive İş | Küresel Coğrafya 3 – Amerika |
+| SharePoint Online | Küresel Coğrafya 3 – Amerika |
 | Microsoft Teams | Amerika Birleşik Devletleri |
-| Office Online &amp; Mobil | Global Geography 3 – Amerika |
-| EOP | Global Geography 3 – Amerika |
+| Office Online &amp; Mobil | Küresel Coğrafya 3 – Amerika |
+| EOP | Küresel Coğrafya 3 – Amerika |
 | Intune | Amerika Birleşik Devletleri |
 | Planner | Amerika Birleşik Devletleri |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Global Geography 3 – Amerika |
+| OneNote Hizmetleri | Küresel Coğrafya 3 – Amerika |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Global Geography 3 – Amerika |
-| Viva Konular | Global Geography 3 – Amerika |
-| Viva Öğrenme | Global Geography 3 – Amerika |
-| Viva Analizler - Kişisel | Global Geography 3 – Amerika |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 3 – Amerika |
+| Viva Konular | Küresel Coğrafya 3 – Amerika |
+| Viva Öğrenme | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Kişisel | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -2871,18 +2871,18 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
-## <a name="heard-and-mcdonald-islands"></a>Heard and McDonald Islands
+## <a name="heard-and-mcdonald-islands"></a>Heard ve McDonald Adaları
 <details><summary>Genişletmek için tıklayın</summary><p>
 
 | Hizmet | Konum |
@@ -2899,70 +2899,70 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
-## <a name="herzegovina"></a>Bosna-Hersek
+## <a name="herzegovina"></a>Hersek
 <details><summary>Genişletmek için tıklayın</summary><p>
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
-## <a name="holy-see-vatican-city-state"></a>Papalik (Vatikan Şehir Devleti)
+## <a name="holy-see-vatican-city-state"></a>Kutsal Manzara (Vatikan Şehir Devleti)
 <details><summary>Genişletmek için tıklayın</summary><p>
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -2983,14 +2983,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -2999,26 +2999,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3039,14 +3039,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Avrupa Birliği  |
 | OneNote Hizmetleri | Avrupa Birliği |
 | Stream | Avrupa Birliği |
-| Whiteboard | Avrupa Birliği |
-| Formlar | Avrupa Birliği |
+| Tahta | Avrupa Birliği |
+| Forms | Avrupa Birliği |
 | Viva Bağlantılar | Avrupa Birliği |
 | Viva Konular | Avrupa Birliği |
 | Viva Öğrenme | Avrupa Birliği |
 | Viva Analizler - Kişisel | Avrupa Birliği |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Avrupa Birliği |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3055,26 +3055,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3090,20 +3090,20 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Microsoft Teams | Hindistan |
 | Office Online &amp; Mobil | Hindistan |
 | EOP | Hindistan |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Hindistan |
 | Stream | Hindistan |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Hindistan |
 | Viva Konular | Hindistan |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Kişisel | Hindistan |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3112,26 +3112,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3140,26 +3140,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3180,14 +3180,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Avrupa Birliği  |
 | OneNote Hizmetleri | Avrupa Birliği |
 | Stream | Avrupa Birliği |
-| Whiteboard | Avrupa Birliği |
-| Formlar | Avrupa Birliği |
+| Tahta | Avrupa Birliği |
+| Forms | Avrupa Birliği |
 | Viva Bağlantılar | Avrupa Birliği |
 | Viva Konular | Avrupa Birliği |
 | Viva Öğrenme | Avrupa Birliği |
 | Viva Analizler - Kişisel | Avrupa Birliği |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Avrupa Birliği |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3196,26 +3196,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3224,26 +3224,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3264,14 +3264,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Avrupa Birliği  |
 | OneNote Hizmetleri | Avrupa Birliği |
 | Stream | Avrupa Birliği |
-| Whiteboard | Avrupa Birliği |
-| Formlar | Avrupa Birliği |
+| Tahta | Avrupa Birliği |
+| Forms | Avrupa Birliği |
 | Viva Bağlantılar | Avrupa Birliği |
 | Viva Konular | Avrupa Birliği |
 | Viva Öğrenme | Avrupa Birliği |
 | Viva Analizler - Kişisel | Avrupa Birliği |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Avrupa Birliği |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3292,14 +3292,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3314,20 +3314,20 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Microsoft Teams | Japonya |
 | Office Online &amp; Mobil | Japonya |
 | EOP | Japonya |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
 | Planner | Japonya |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Japonya |
 | Stream | Japonya |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Japonya |
 | Viva Konular | Japonya |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Kişisel | Japonya |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3336,26 +3336,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3364,26 +3364,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3392,26 +3392,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3420,26 +3420,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3448,26 +3448,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3482,20 +3482,20 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Microsoft Teams | Güney Kore |
 | Office Online &amp; Mobil | Güney Kore |
 | EOP | Güney Kore |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Güney Kore |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Güney Kore |
 | Viva Konular | Güney Kore |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Kişisel | Güney Kore |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3504,26 +3504,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3532,26 +3532,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3560,26 +3560,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3588,26 +3588,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3628,14 +3628,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Avrupa Birliği  |
 | OneNote Hizmetleri | Avrupa Birliği |
 | Stream | Avrupa Birliği |
-| Whiteboard | Avrupa Birliği |
-| Formlar | Avrupa Birliği |
+| Tahta | Avrupa Birliği |
+| Forms | Avrupa Birliği |
 | Viva Bağlantılar | Avrupa Birliği |
 | Viva Konular | Avrupa Birliği |
 | Viva Öğrenme | Avrupa Birliği |
 | Viva Analizler - Kişisel | Avrupa Birliği |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Avrupa Birliği |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3644,26 +3644,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3673,26 +3673,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3702,26 +3702,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3730,26 +3730,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3771,14 +3771,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Avrupa Birliği |
 | OneNote Hizmetleri | İsviçre |
 | Stream | Avrupa Birliği |
-| Whiteboard | Avrupa Birliği |
-| Formlar | Avrupa Birliği |
+| Tahta | Avrupa Birliği |
+| Forms | Avrupa Birliği |
 | Viva Bağlantılar | İsviçre |
 | Viva Konular | İsviçre |
 | Viva Öğrenme | Avrupa Birliği |
 | Viva Analizler - Kişisel | İsviçre |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Avrupa Birliği |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3799,14 +3799,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Avrupa Birliği  |
 | OneNote Hizmetleri | Avrupa Birliği |
 | Stream | Avrupa Birliği |
-| Whiteboard | Avrupa Birliği |
-| Formlar | Avrupa Birliği |
+| Tahta | Avrupa Birliği |
+| Forms | Avrupa Birliği |
 | Viva Bağlantılar | Avrupa Birliği |
 | Viva Konular | Avrupa Birliği |
 | Viva Öğrenme | Avrupa Birliği |
 | Viva Analizler - Kişisel | Avrupa Birliği |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Avrupa Birliği |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3827,14 +3827,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Avrupa Birliği  |
 | OneNote Hizmetleri | Avrupa Birliği |
 | Stream | Avrupa Birliği |
-| Whiteboard | Avrupa Birliği |
-| Formlar | Avrupa Birliği |
+| Tahta | Avrupa Birliği |
+| Forms | Avrupa Birliği |
 | Viva Bağlantılar | Avrupa Birliği |
 | Viva Konular | Avrupa Birliği |
 | Viva Öğrenme | Avrupa Birliği |
 | Viva Analizler - Kişisel | Avrupa Birliği |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Avrupa Birliği |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3843,26 +3843,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3871,26 +3871,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3899,26 +3899,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3927,26 +3927,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3955,26 +3955,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -3995,14 +3995,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Avrupa Birliği  |
 | OneNote Hizmetleri | Avrupa Birliği |
 | Stream | Avrupa Birliği |
-| Whiteboard | Avrupa Birliği |
-| Formlar | Avrupa Birliği |
+| Tahta | Avrupa Birliği |
+| Forms | Avrupa Birliği |
 | Viva Bağlantılar | Avrupa Birliği |
 | Viva Konular | Avrupa Birliği |
 | Viva Öğrenme | Avrupa Birliği |
 | Viva Analizler - Kişisel | Avrupa Birliği |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Avrupa Birliği |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4011,26 +4011,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4051,14 +4051,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4067,26 +4067,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4095,26 +4095,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4123,26 +4123,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4163,14 +4163,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4179,26 +4179,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4207,26 +4207,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4235,26 +4235,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4263,26 +4263,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4303,14 +4303,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4319,26 +4319,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4347,26 +4347,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4375,26 +4375,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4403,26 +4403,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4431,26 +4431,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4460,26 +4460,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4501,14 +4501,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Avrupa Birliği  |
 | OneNote Hizmetleri | Avrupa Birliği |
 | Stream | Avrupa Birliği |
-| Whiteboard | Avrupa Birliği |
-| Formlar | Avrupa Birliği |
+| Tahta | Avrupa Birliği |
+| Forms | Avrupa Birliği |
 | Viva Bağlantılar | Avrupa Birliği |
 | Viva Konular | Avrupa Birliği |
 | Viva Öğrenme | Avrupa Birliği |
 | Viva Analizler - Kişisel | Avrupa Birliği |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Avrupa Birliği |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4529,14 +4529,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4546,26 +4546,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4586,14 +4586,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Avustralya |
 | Stream | Avustralya |
-| Whiteboard | Avustralya |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Avustralya |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Avustralya |
 | Viva Konular | Avustralya |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Kişisel | Avustralya |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4614,14 +4614,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4630,26 +4630,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4658,26 +4658,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4686,26 +4686,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4714,26 +4714,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4742,26 +4742,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4776,20 +4776,20 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Microsoft Teams | Norveç |
 | Office Online &amp; Mobil | Norveç |
 | EOP | Norveç |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
+| Yammer | Küresel Coğrafya 1 – EMEA |
 | OneNote Hizmetleri | Norveç |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Genel Coğrafya 1 – EMEA |
-| Formlar | Genel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Küresel Coğrafya 1 – EMEA |
+| Forms | Küresel Coğrafya 1 – EMEA |
 | Viva Bağlantılar | Norveç |
 | Viva Konular | Norveç |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
 | Viva Analizler - Kişisel | Norveç |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 
 </p></details>
@@ -4799,26 +4799,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4827,26 +4827,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4855,26 +4855,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4883,26 +4883,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4923,14 +4923,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4939,26 +4939,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4967,26 +4967,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Global Geography 3 – Amerika |
-| OneDrive İş | Global Geography 3 – Amerika |
-| SharePoint Online | Global Geography 3 – Amerika |
+| Exchange Online | Küresel Coğrafya 3 – Amerika |
+| OneDrive İş | Küresel Coğrafya 3 – Amerika |
+| SharePoint Online | Küresel Coğrafya 3 – Amerika |
 | Microsoft Teams | Amerika Birleşik Devletleri |
-| Office Online &amp; Mobil | Global Geography 3 – Amerika |
-| EOP | Global Geography 3 – Amerika |
+| Office Online &amp; Mobil | Küresel Coğrafya 3 – Amerika |
+| EOP | Küresel Coğrafya 3 – Amerika |
 | Intune | Amerika Birleşik Devletleri |
 | Planner | Amerika Birleşik Devletleri |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Global Geography 3 – Amerika |
+| OneNote Hizmetleri | Küresel Coğrafya 3 – Amerika |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Global Geography 3 – Amerika |
-| Viva Konular | Global Geography 3 – Amerika |
-| Viva Öğrenme | Global Geography 3 – Amerika |
-| Viva Analizler - Kişisel | Global Geography 3 – Amerika |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 3 – Amerika |
+| Viva Konular | Küresel Coğrafya 3 – Amerika |
+| Viva Öğrenme | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Kişisel | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -4995,26 +4995,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Global Geography 3 – Amerika |
-| OneDrive İş | Global Geography 3 – Amerika |
-| SharePoint Online | Global Geography 3 – Amerika |
+| Exchange Online | Küresel Coğrafya 3 – Amerika |
+| OneDrive İş | Küresel Coğrafya 3 – Amerika |
+| SharePoint Online | Küresel Coğrafya 3 – Amerika |
 | Microsoft Teams | Amerika Birleşik Devletleri |
-| Office Online &amp; Mobil | Global Geography 3 – Amerika |
-| EOP | Global Geography 3 – Amerika |
+| Office Online &amp; Mobil | Küresel Coğrafya 3 – Amerika |
+| EOP | Küresel Coğrafya 3 – Amerika |
 | Intune | Amerika Birleşik Devletleri |
 | Planner | Amerika Birleşik Devletleri |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Global Geography 3 – Amerika |
+| OneNote Hizmetleri | Küresel Coğrafya 3 – Amerika |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Global Geography 3 – Amerika |
-| Viva Konular | Global Geography 3 – Amerika |
-| Viva Öğrenme | Global Geography 3 – Amerika |
-| Viva Analizler - Kişisel | Global Geography 3 – Amerika |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 3 – Amerika |
+| Viva Konular | Küresel Coğrafya 3 – Amerika |
+| Viva Öğrenme | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Kişisel | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5023,26 +5023,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5051,26 +5051,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5091,14 +5091,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Avrupa Birliği  |
 | OneNote Hizmetleri | Avrupa Birliği |
 | Stream | Avrupa Birliği |
-| Whiteboard | Avrupa Birliği |
-| Formlar | Avrupa Birliği |
+| Tahta | Avrupa Birliği |
+| Forms | Avrupa Birliği |
 | Viva Bağlantılar | Avrupa Birliği |
 | Viva Konular | Avrupa Birliği |
 | Viva Öğrenme | Avrupa Birliği |
 | Viva Analizler - Kişisel | Avrupa Birliği |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Avrupa Birliği |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5119,14 +5119,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Avrupa Birliği  |
 | OneNote Hizmetleri | Avrupa Birliği |
 | Stream | Avrupa Birliği |
-| Whiteboard | Avrupa Birliği |
-| Formlar | Avrupa Birliği |
+| Tahta | Avrupa Birliği |
+| Forms | Avrupa Birliği |
 | Viva Bağlantılar | Avrupa Birliği |
 | Viva Konular | Avrupa Birliği |
 | Viva Öğrenme | Avrupa Birliği |
 | Viva Analizler - Kişisel | Avrupa Birliği |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Avrupa Birliği |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5147,14 +5147,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5163,26 +5163,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5191,26 +5191,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5219,26 +5219,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5259,14 +5259,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Avrupa Birliği  |
 | OneNote Hizmetleri | Avrupa Birliği |
 | Stream | Avrupa Birliği |
-| Whiteboard | Avrupa Birliği |
-| Formlar | Avrupa Birliği |
+| Tahta | Avrupa Birliği |
+| Forms | Avrupa Birliği |
 | Viva Bağlantılar | Avrupa Birliği |
 | Viva Konular | Avrupa Birliği |
 | Viva Öğrenme | Avrupa Birliği |
 | Viva Analizler - Kişisel | Avrupa Birliği |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Avrupa Birliği |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5276,26 +5276,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5305,26 +5305,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5334,26 +5334,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5374,14 +5374,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5402,14 +5402,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5421,7 +5421,7 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Exchange Online | Amerika Birleşik Devletleri |
 | OneDrive İş | Amerika Birleşik Devletleri |
 | SharePoint Online | Amerika Birleşik Devletleri |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
 | Office Online &amp; Mobil | Amerika Birleşik Devletleri |
 | EOP | Amerika Birleşik Devletleri |
 | Intune | Amerika Birleşik Devletleri |
@@ -5430,14 +5430,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5449,7 +5449,7 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Exchange Online | Amerika Birleşik Devletleri |
 | OneDrive İş | Amerika Birleşik Devletleri |
 | SharePoint Online | Amerika Birleşik Devletleri |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
 | Office Online &amp; Mobil | Amerika Birleşik Devletleri |
 | EOP | Amerika Birleşik Devletleri |
 | Intune | Amerika Birleşik Devletleri |
@@ -5458,14 +5458,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5486,14 +5486,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5514,14 +5514,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5530,26 +5530,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5558,26 +5558,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5586,26 +5586,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5614,26 +5614,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5642,26 +5642,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5670,26 +5670,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5698,26 +5698,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5726,26 +5726,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5754,26 +5754,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5785,7 +5785,7 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Exchange Online | Amerika Birleşik Devletleri |
 | OneDrive İş | Amerika Birleşik Devletleri |
 | SharePoint Online | Amerika Birleşik Devletleri |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
 | Office Online &amp; Mobil | Amerika Birleşik Devletleri |
 | EOP | Amerika Birleşik Devletleri |
 | Intune | Amerika Birleşik Devletleri |
@@ -5794,14 +5794,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5822,14 +5822,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Avrupa Birliği  |
 | OneNote Hizmetleri | Avrupa Birliği |
 | Stream | Avrupa Birliği |
-| Whiteboard | Avrupa Birliği |
-| Formlar | Avrupa Birliği |
+| Tahta | Avrupa Birliği |
+| Forms | Avrupa Birliği |
 | Viva Bağlantılar | Avrupa Birliği |
 | Viva Konular | Avrupa Birliği |
 | Viva Öğrenme | Avrupa Birliği |
 | Viva Analizler - Kişisel | Avrupa Birliği |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Avrupa Birliği |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5850,14 +5850,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Avrupa Birliği  |
 | OneNote Hizmetleri | Avrupa Birliği |
 | Stream | Avrupa Birliği |
-| Whiteboard | Avrupa Birliği |
-| Formlar | Avrupa Birliği |
+| Tahta | Avrupa Birliği |
+| Forms | Avrupa Birliği |
 | Viva Bağlantılar | Avrupa Birliği |
 | Viva Konular | Avrupa Birliği |
 | Viva Öğrenme | Avrupa Birliği |
 | Viva Analizler - Kişisel | Avrupa Birliği |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Avrupa Birliği |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5866,26 +5866,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5895,26 +5895,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5929,20 +5929,20 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Microsoft Teams | South Africa |
 | Office Online &amp; Mobil | South Africa |
 | EOP | South Africa |
-| Intune | Genel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
 | Planner | Amerika Birleşik Devletleri |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
+| Yammer | Küresel Coğrafya 1 – EMEA |
 | OneNote Hizmetleri | South Africa |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | South Africa |
 | Viva Konular | South Africa |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
 | Viva Analizler - Kişisel | South Africa |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
  </p></details>
 
@@ -5963,14 +5963,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -5991,14 +5991,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Avrupa Birliği  |
 | OneNote Hizmetleri | Avrupa Birliği |
 | Stream | Avrupa Birliği |
-| Whiteboard | Avrupa Birliği |
-| Formlar | Avrupa Birliği |
+| Tahta | Avrupa Birliği |
+| Forms | Avrupa Birliği |
 | Viva Bağlantılar | Avrupa Birliği |
 | Viva Konular | Avrupa Birliği |
 | Viva Öğrenme | Avrupa Birliği |
 | Viva Analizler - Kişisel | Avrupa Birliği |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Avrupa Birliği |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6007,26 +6007,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6047,14 +6047,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6063,26 +6063,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6091,26 +6091,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6131,14 +6131,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Avrupa Birliği |
 | OneNote Hizmetleri | İsveç |
 | Stream | Avrupa Birliği |
-| Whiteboard | Avrupa Birliği |
-| Formlar | Avrupa Birliği |
+| Tahta | Avrupa Birliği |
+| Forms | Avrupa Birliği |
 | Viva Bağlantılar | İsveç |
 | Viva Konular | İsveç |
 | Viva Öğrenme | Avrupa Birliği |
 | Viva Analizler - Kişisel | İsveç |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Avrupa Birliği |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6159,14 +6159,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Avrupa Birliği |
 | OneNote Hizmetleri | İsviçre |
 | Stream | Avrupa Birliği |
-| Whiteboard | Avrupa Birliği |
-| Formlar | Avrupa Birliği |
+| Tahta | Avrupa Birliği |
+| Forms | Avrupa Birliği |
 | Viva Bağlantılar | İsviçre |
 | Viva Konular | İsviçre |
 | Viva Öğrenme | Avrupa Birliği |
 | Viva Analizler - Kişisel | İsviçre |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Avrupa Birliği |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6175,26 +6175,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6203,26 +6203,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6231,26 +6231,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6259,26 +6259,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6287,26 +6287,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6315,26 +6315,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6343,26 +6343,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6371,26 +6371,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6411,14 +6411,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6427,26 +6427,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6455,26 +6455,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6483,26 +6483,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6523,14 +6523,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6539,26 +6539,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6579,14 +6579,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6595,26 +6595,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6623,26 +6623,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6657,20 +6657,20 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Microsoft Teams | Birleşik Arap Emirlikleri |
 | Office Online &amp; Mobil | Birleşik Arap Emirlikleri |
 | EOP | Birleşik Arap Emirlikleri |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
+| Yammer | Küresel Coğrafya 1 – EMEA |
 | OneNote Hizmetleri | Birleşik Arap Emirlikleri |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
 | Viva Bağlantılar | Birleşik Arap Emirlikleri |
 | Viva Konular | Birleşik Arap Emirlikleri |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
 | Viva Analizler - Kişisel | Birleşik Arap Emirlikleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
  </p></details>
 
@@ -6691,14 +6691,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Avrupa Birliği |
 | OneNote Hizmetleri | Birleşik Krallık |
 | Stream | Birleşik Krallık |
-| Whiteboard | Avrupa Birliği |
-| Formlar | Avrupa Birliği |
+| Tahta | Avrupa Birliği |
+| Forms | Avrupa Birliği |
 | Viva Bağlantılar | Birleşik Krallık |
 | Viva Konular | Birleşik Krallık |
 | Viva Öğrenme | Avrupa Birliği |
 | Viva Analizler - Kişisel | Birleşik Krallık |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Avrupa Birliği |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6719,14 +6719,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6735,54 +6735,54 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Global Geography 3 – Amerika |
-| OneDrive İş | Global Geography 3 – Amerika |
-| SharePoint Online | Global Geography 3 – Amerika |
+| Exchange Online | Küresel Coğrafya 3 – Amerika |
+| OneDrive İş | Küresel Coğrafya 3 – Amerika |
+| SharePoint Online | Küresel Coğrafya 3 – Amerika |
 | Microsoft Teams | Amerika Birleşik Devletleri |
-| Office Online &amp; Mobil | Global Geography 3 – Amerika |
-| EOP | Global Geography 3 – Amerika |
+| Office Online &amp; Mobil | Küresel Coğrafya 3 – Amerika |
+| EOP | Küresel Coğrafya 3 – Amerika |
 | Intune | Amerika Birleşik Devletleri |
 | Planner | Amerika Birleşik Devletleri |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Global Geography 3 – Amerika |
+| OneNote Hizmetleri | Küresel Coğrafya 3 – Amerika |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Global Geography 3 – Amerika |
-| Viva Konular | Global Geography 3 – Amerika |
-| Viva Öğrenme | Global Geography 3 – Amerika |
-| Viva Analizler - Kişisel | Global Geography 3 – Amerika |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 3 – Amerika |
+| Viva Konular | Küresel Coğrafya 3 – Amerika |
+| Viva Öğrenme | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Kişisel | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 3 – Amerika |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
-## <a name="us-minor-outlying-islands"></a>US Küçük Outlying Adaları
+## <a name="us-minor-outlying-islands"></a>ABD Küçük Dış Adaları
 <details><summary>Genişletmek için tıklayın</summary><p>
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6791,26 +6791,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6819,26 +6819,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6858,14 +6858,14 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Yammer | Amerika Birleşik Devletleri |
 | OneNote Hizmetleri | Amerika Birleşik Devletleri |
 | Stream | Amerika Birleşik Devletleri |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
 | Viva Bağlantılar | Amerika Birleşik Devletleri |
 | Viva Konular | Amerika Birleşik Devletleri |
 | Viva Öğrenme | Amerika Birleşik Devletleri |
 | Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6875,26 +6875,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6903,26 +6903,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 2 – Asya Pasifik |
-| OneDrive İş | Genel Coğrafya 2 – Asya Pasifik |
-| SharePoint Online | Genel Coğrafya 2 – Asya Pasifik |
-| Microsoft Teams | Genel Coğrafya 2 – Asya Pasifik |
-| Office Online &amp; Mobil | Genel Coğrafya 2 – Asya Pasifik |
-| EOP | Genel Coğrafya 2 – Asya Pasifik |
-| Intune | Genel Coğrafya 2 – Asya Pasifik |
-| Planner | Genel Coğrafya 2 – Asya Pasifik |
+| Exchange Online | Küresel Coğrafya 2 – Asya Pasifik |
+| OneDrive İş | Küresel Coğrafya 2 – Asya Pasifik |
+| SharePoint Online | Küresel Coğrafya 2 – Asya Pasifik |
+| Microsoft Teams | Küresel Coğrafya 2 – Asya Pasifik |
+| Office Online &amp; Mobil | Küresel Coğrafya 2 – Asya Pasifik |
+| EOP | Küresel Coğrafya 2 – Asya Pasifik |
+| Intune | Küresel Coğrafya 2 – Asya Pasifik |
+| Planner | Küresel Coğrafya 2 – Asya Pasifik |
 | Sway | Amerika Birleşik Devletleri |
 | Yammer | Amerika Birleşik Devletleri |
-| OneNote Hizmetleri | Genel Coğrafya 2 – Asya Pasifik |
-| Stream | Genel Coğrafya 2 – Asya Pasifik |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Amerika Birleşik Devletleri |
-| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| OneNote Hizmetleri | Küresel Coğrafya 2 – Asya Pasifik |
+| Stream | Küresel Coğrafya 2 – Asya Pasifik |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6931,26 +6931,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6959,26 +6959,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -6987,26 +6987,26 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
@@ -7015,25 +7015,25 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 
 | Hizmet | Konum |
 | --- | --- |
-| Exchange Online | Genel Coğrafya 1 – EMEA |
-| OneDrive İş | Genel Coğrafya 1 – EMEA |
-| SharePoint Online | Genel Coğrafya 1 – EMEA |
-| Microsoft Teams | Genel Coğrafya 1 – EMEA |
-| Office Online &amp; Mobil | Genel Coğrafya 1 – EMEA |
-| EOP | Genel Coğrafya 1 – EMEA |
-| Intune | Genel Coğrafya 1 – EMEA |
-| Planner | Genel Coğrafya 1 – EMEA |
+| Exchange Online | Küresel Coğrafya 1 – EMEA |
+| OneDrive İş | Küresel Coğrafya 1 – EMEA |
+| SharePoint Online | Küresel Coğrafya 1 – EMEA |
+| Microsoft Teams | Küresel Coğrafya 1 – EMEA |
+| Office Online &amp; Mobil | Küresel Coğrafya 1 – EMEA |
+| EOP | Küresel Coğrafya 1 – EMEA |
+| Intune | Küresel Coğrafya 1 – EMEA |
+| Planner | Küresel Coğrafya 1 – EMEA |
 | Sway | Amerika Birleşik Devletleri |
-| Yammer | Genel Coğrafya 1 – EMEA |
-| OneNote Hizmetleri | Genel Coğrafya 1 – EMEA |
-| Stream | Genel Coğrafya 1 – EMEA |
-| Whiteboard | Amerika Birleşik Devletleri |
-| Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
-| Viva Konular | Genel Coğrafya 1 – EMEA |
-| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
+| Yammer | Küresel Coğrafya 1 – EMEA |
+| OneNote Hizmetleri | Küresel Coğrafya 1 – EMEA |
+| Stream | Küresel Coğrafya 1 – EMEA |
+| Tahta | Amerika Birleşik Devletleri |
+| Forms | Küresel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Küresel Coğrafya 1 – EMEA |
+| Viva Konular | Küresel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca Yönetici/Lider AAD kuruluş verileri | Küresel Coğrafya 1 – EMEA |
+| Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>

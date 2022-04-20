@@ -1,5 +1,5 @@
 ---
-title: Sık karşılaşılan senaryoları gidermek için denetim günlüğünde arama yapın
+title: Yaygın senaryolarda sorun gidermek için denetim günlüğünde arama yapma
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -18,57 +18,57 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
-description: E-posta hesaplarıyla ilgili Microsoft 365 sorunları gidermeye yardımcı olmak için denetim günlüğü arama aracını nasıl kullanabileceğinizi öğrenin.
-ms.openlocfilehash: 496729c7955448519d6cb1447e08b5a4b15aa655
-ms.sourcegitcommit: bae72428d229827cba4c807d9cd362417afbcccb
+description: E-posta hesaplarıyla ilgili yaygın destek sorunlarını gidermeye yardımcı olmak için Microsoft 365 denetim günlüğü arama aracını kullanmayı öğrenin.
+ms.openlocfilehash: add354058a9e6e3d114c97a2932ff0302a27e272
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "63014272"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64946561"
 ---
-# <a name="search-the-audit-log-to-investigate-common-support-issues"></a>Sık karşılaşılan destek sorunlarını araştırmak için denetim günlüğünde arama yapın
+# <a name="search-the-audit-log-to-investigate-common-support-issues"></a>Yaygın destek sorunlarını araştırmak için denetim günlüğünde arama yapma
 
-Bu makalede, sık karşılaşılan destek sorunlarını araştırmanıza yardımcı olmak için denetim günlüğü arama aracının nasıl kullanıldığı açıklanmıştır. Bu, denetim günlüğünü kullanarak şunları yapmak için içerir:
+Bu makalede, yaygın destek sorunlarını araştırmanıza yardımcı olması için denetim günlüğü arama aracının nasıl kullanılacağı açıklanmaktadır. Bu, denetim günlüğünü kullanarak şunları içerir:
 
-- Güvenliği ihlal edilmiş bir hesaba erişmek için kullanılan bilgisayarın IP adresini bulma
-- Posta kutusu için e-posta iletmeyi kimin ayarlay hazır olduğunu belirleme
-- Kullanıcının posta kutusudaki e-posta öğelerini s olup olmadığını belirleme
-- Kullanıcının gelen kutusu kuralı oluşturduğuna karar verin
-- Kuruluş dışından bir kullanıcı tarafından başarılı bir oturum açmanın neden olduğunu araştırma
+- Güvenliği aşılmış bir hesaba erişmek için kullanılan bilgisayarın IP adresini bulma
+- Posta kutusu için e-posta iletmeyi kimin ayarladığını belirleme
+- Kullanıcının posta kutusunda e-posta öğelerini silip silmediğini belirleme
+- Kullanıcının gelen kutusu kuralı oluşturup oluşturmadığını belirleme
+- Kuruluşunuzun dışındaki bir kullanıcı tarafından neden başarılı bir oturum açma işlemi olduğunu araştırma
 - E5 lisansı olmayan kullanıcılar tarafından gerçekleştirilen posta kutusu etkinliklerini arama
 - Temsilci kullanıcılar tarafından gerçekleştirilen posta kutusu etkinliklerini arama
 
 ## <a name="using-the-audit-log-search-tool"></a>Denetim günlüğü arama aracını kullanma
 
-Bu makalede açıklanan sorun giderme senaryolarının her biri, aşağıdaki makaledeki denetim günlüğü arama aracını Microsoft 365 uyumluluk merkezi. Bu bölümde, denetim günlüğünde arama yapmak için gereken izinler liste olmakta ve denetim günlüğü aramalarına erişme ve bu aramaları çalıştırma adımları açık almaktadır. Her senaryo bölümünde, denetim günlüğü arama sorgusunu yapılandırma ve denetim kayıtlarında arama ölçütleriyle eşleşmeye uygun ayrıntılı bilgilerde nelerin aranacakları açıklandı.
+Bu makalede açıklanan sorun giderme senaryolarının her biri, Microsoft Purview uyumluluk portalındaki denetim günlüğü arama aracını kullanmayı temel alır. Bu bölümde, denetim günlüğünde arama yapmak için gereken izinler listelenir ve denetim günlüğü aramalarına erişme ve bunları çalıştırma adımları açıklanmaktadır. Her senaryo bölümünde bir denetim günlüğü arama sorgusunun nasıl yapılandırıldığını ve denetim kayıtlarındaki arama ölçütlerine uyan ayrıntılı bilgilerde nelerin arandığını açıklar.
 
 ### <a name="permissions-required-to-use-the-audit-log-search-tool"></a>Denetim günlüğü arama aracını kullanmak için gereken izinler
 
-Denetim günlüğünde arama View-Only için Exchange Online Günlükleri veya Denetim Günlükleri rolüne atanmanız gerekir. Varsayılan olarak, bu roller yönetim merkezinin İzinler sayfasında yer alan Uyumluluk Yönetimi <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">ve Kuruluş Exchange atanır</a>. Office 365 ve Microsoft 365 genel yöneticiler otomatik olarak Kuruluş Yönetimi rol grubuna üye olarak Exchange Online. Daha fazla bilgi için bkz[. Gruptaki rol gruplarını Exchange Online](/Exchange/permissions-exo/role-groups).
+Denetim günlüğünde arama yapmak için Exchange Online'da View-Only Denetim Günlükleri veya Denetim Günlükleri rolüne atanmış olmanız gerekir. Varsayılan olarak, bu roller <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange yönetim merkezindeki</a> **İzinler** sayfasındaki Uyumluluk Yönetimi ve Kuruluş Yönetimi rol gruplarına atanır. Office 365 ve Microsoft 365'deki genel yöneticiler otomatik olarak Exchange Online'da Kuruluş Yönetimi rol grubunun üyeleri olarak eklenir. Daha fazla bilgi için bkz. [Exchange Online rol gruplarını yönetme](/Exchange/permissions-exo/role-groups).
 
 ### <a name="running-audit-log-searches"></a>Denetim günlüğü aramalarını çalıştırma
 
-Bu bölümde, denetim günlüğü aramaları oluşturma ve çalıştırmayla ilgili temel bilgiler açık bir şekilde açık almaktadır. Bu makaledeki her sorun giderme senaryosu için başlangıç noktası olarak bu yönergeleri kullanın. Daha ayrıntılı adım adım yönergeler için bkz. [Denetim günlüğünde arama.](search-the-audit-log-in-security-and-compliance.md#step-1-run-an-audit-log-search)
+Bu bölümde, denetim günlüğü aramalarını oluşturma ve çalıştırmayla ilgili temel bilgiler açıklanmaktadır. Bu makaledeki her sorun giderme senaryosu için başlangıç noktası olarak bu yönergeleri kullanın. Daha ayrıntılı adım adım yönergeler için bkz [. Denetim günlüğünde arama](search-the-audit-log-in-security-and-compliance.md#step-1-run-an-audit-log-search) yapma.
 
-1. İş veya <https://compliance.microsoft.com/auditlogsearch> okul hesabınızla oturum açın ve gidin.
+1. <https://compliance.microsoft.com/auditlogsearch> adresine gidin ve iş veya okul hesabınızı kullanarak oturum açın.
   
-    **Denetim sayfası** görüntülenir.
+    **Denetim** sayfası görüntülenir.
   
-    ![Ölçütleri yapılandırabilirsiniz ve sonra da Arama'ya seçerek aramanızı çalıştırın.](../media/AuditLogSearchPage1.png)
+    ![Ölçütleri yapılandırın ve aramayı çalıştırmak için Ara'yı seçin.](../media/AuditLogSearchPage1.png)
   
-2. Aşağıdaki arama ölçütlerini yapılandırabilirsiniz. Bu makaledeki her sorun giderme senaryosu, bu alanları yapılandırmak için özel kılavuzlar önermektedir.
+2. Aşağıdaki arama ölçütlerini yapılandırabilirsiniz. Bu makaledeki her sorun giderme senaryosu, bu alanları yapılandırmak için belirli yönergeler önerir.
   
-   a. **Başlangıç tarihi** **ve Bitiş tarihi:** Bir tarih ve saat aralığı seçerek, o dönem içinde 4. Son yedi gün varsayılan olarak seçilidir. Tarih ve saat, Eşgüdümli Evrensel Saat (UTC) biçiminde görüntülenir. Belirtmezseniz, en uzun tarih aralığı 90 gündür.
+   a. **Başlangıç tarihi** ve **Bitiş tarihi:** Bu dönemde gerçekleşen olayları görüntülemek için bir tarih ve saat aralığı seçin. Son yedi gün varsayılan olarak seçilir. Tarih ve saat Eşgüdümlü Evrensel Saat (UTC) biçiminde gösterilir. Belirtebileceğiniz maksimum tarih aralığı 90 gündür.
 
-   b. **Etkinlikler:** Arayabilirsiniz etkinlikleri görüntülemek için açılan listeyi seçin. Siz arama çalıştırdikten sonra, yalnızca seçili etkinliklere yönelik denetim kayıtları görüntülenir. Tüm etkinlikler **için sonuçları göster'i seçerek** , diğer arama ölçütlerine uyan tüm etkinliklere yönelik sonuçlar görüntülenir. Sorun giderme senaryolarının bazılarında da bu alanı boş bırakmanız gerekir.
+   b. **Faaliyetleri:** Arama yapabileceğiniz etkinlikleri görüntülemek için açılan listeyi seçin. Aramayı çalıştırdıktan sonra yalnızca seçili etkinliklere ilişkin denetim kayıtları görüntülenir. **Tüm etkinlikler için sonuçları göster** seçildiğinde, diğer arama ölçütlerine uyan tüm etkinliklerin sonuçları görüntülenir. Ayrıca bazı sorun giderme senaryolarında bu alanı boş bırakmanız gerekir.
   
-    c. **Kullanıcılar:** Bu kutuya tıklayın ve arama sonuçlarını görüntülemek için bir veya birden çok kullanıcı seçin. Bu kutuda seçtiğiniz kullanıcılar tarafından gerçekleştirilen seçili etkinliğin denetim kayıtları, sonuç listesinde görüntülenir. Tüm kullanıcılara (ve hizmet hesaplarına) ait girdilerin kuruma geri dönmesi için bu kutuyu boş bırakın.
+    c. **Kullanıcı:** Bu kutuya tıklayın ve arama sonuçlarını görüntülemek üzere bir veya daha fazla kullanıcı seçin. Bu kutuda seçtiğiniz kullanıcılar tarafından gerçekleştirilen seçili etkinliğin denetim kayıtları sonuç listesinde görüntülenir. Kuruluşunuzdaki tüm kullanıcıların (ve hizmet hesaplarının) girdilerini döndürmek için bu kutuyu boş bırakın.
   
-    d. **Dosya, klasör veya site:** Belirtilen anahtar sözcüğü içeren klasör dosyasıyla ilgili etkinliği aramak için, dosya veya klasör adının bir veya hepsini yazın. Dosya veya klasörün URL'sini de belirtebilirsiniz. URL kullanıyorsanız, tam URL yolunu yazın veya URL'nin yalnızca bir bölümünü yazarak özel karakter ya da boşluk içermein. Kuruma ait tüm dosya ve klasörlere ait girdilerin geri dönmesi için bu kutuyu boş bırakın. Bu alan, bu makaledeki tüm sorun giderme senaryolarında boş bırakılır.
+    d. **Dosya, klasör veya site:** Belirtilen anahtar sözcüğü içeren klasör dosyasıyla ilgili etkinliği aramak için bir dosya veya klasör adının bir kısmını veya tümünü yazın. Ayrıca bir dosya veya klasörün URL'sini de belirtebilirsiniz. URL kullanıyorsanız, tam URL yolunu yazdığınızdan veya URL'nin yalnızca bir bölümünü yazdığınızdan emin olun, özel karakter veya boşluk eklemeyin. Kuruluşunuzdaki tüm dosya ve klasörlerin girdilerini döndürmek için bu kutuyu boş bırakın. Bu alan, bu makaledeki tüm sorun giderme senaryolarında boş bırakılır.
   
-3. Arama **ölçütlerinizi** kullanarak arama çalıştırmak için Ara'ya seçin.
+3. Arama ölçütlerinizi kullanarak aramayı çalıştırmak için **Ara'yı** seçin.
   
-    Arama sonuçları yüklenir ve birkaç dakika sonra denetim günlüğü arama aracının bir sayfasında görüntülenir. Bu makaledeki bölümlerden her biri, belirli bir sorun giderme senaryosu bağlamında bakmanız gerekenler konusunda yol gösterici bilgi sağlar.
+    Arama sonuçları yüklenir ve birkaç dakika sonra denetim günlüğü arama aracındaki bir sayfada görüntülenir. Bu makaledeki bölümlerin her biri, belirli sorun giderme senaryosu bağlamında aranacak şeyler hakkında rehberlik sağlar.
 
     Denetim günlüğü arama sonuçlarını görüntüleme ve dışarı aktarma hakkında daha fazla bilgi için bkz:
 
@@ -76,208 +76,208 @@ Bu bölümde, denetim günlüğü aramaları oluşturma ve çalıştırmayla ilg
   
     - [Arama sonuçlarını dışarı aktarma](search-the-audit-log-in-security-and-compliance.md#step-3-export-the-search-results-to-a-file)
 
-## <a name="find-the-ip-address-of-the-computer-used-to-access-a-compromised-account"></a>Güvenliği ihlal edilmiş bir hesaba erişmek için kullanılan bilgisayarın IP adresini bulma
+## <a name="find-the-ip-address-of-the-computer-used-to-access-a-compromised-account"></a>Güvenliği aşılmış bir hesaba erişmek için kullanılan bilgisayarın IP adresini bulma
 
-Denetim kayıtlarının çoğuna, herhangi bir kullanıcı tarafından gerçekleştirilen bir etkinlikle ilgili IP adresi dahildir. Kullanılan istemciyle ilgili bilgiler denetim kaydına da dahil edilir.
+Herhangi bir kullanıcı tarafından gerçekleştirilen bir etkinliğe karşılık gelen IP adresi çoğu denetim kaydına dahil edilir. Kullanılan istemci hakkındaki bilgiler de denetim kaydına eklenir.
 
-Bu senaryo için denetim günlüğü arama sorgusunu şu şekilde yapılandırabilirsiniz:
+Bu senaryo için bir denetim günlüğü arama sorgusu şu şekilde yapılandırılır:
 
-**Etkinlikler:** Davanızla ilgili ise aramak istediğiniz belirli bir etkinliği seçin. Güvenliği ihlal edilmiş hesaplarda sorun giderme için, Kullanıcı posta kutusu etkinlikleri altında **Posta kutusu** **etkinliğinde oturum Exchange seçin**. Bu, posta kutusunda oturum a oturum aken kullanmakta olan IP adresini gösteren denetim kayıtlarını döndürür. Aksi takdirde, tüm etkinliklere yönelik denetim kayıtlarının iade etmek için bu alanı boş bırakın. 
+**Faaliyetleri:** Servis talebinizle ilgiliyse, aranacak belirli bir etkinliği seçin. Güvenliği aşılmış hesapların sorunlarını gidermek için, Exchange **posta kutusu etkinlikleri altında Kullanıcı posta kutusunda oturum açtı** etkinliğini **seçmeyi** göz önünde bulundurun. Bu, posta kutusunda oturum açarken kullanılan IP adresini gösteren denetim kayıtlarını döndürür. Aksi takdirde, tüm etkinliklerin denetim kayıtlarını döndürmek için bu alanı boş bırakın. 
 
 > [!TIP]
-> Bu alan boş bırakılırsa, bir kullanıcı hesabında oturum Azure Active Directory bir kullanıcı etkinliği olan **UserLoggedIn** etkinlikleri döner. **UserLoggedIn denetim kayıtlarını görüntülemek için arama sonuçlarında filtrelemeyi** kullanın.
+> Bu alanı boş bırakmak, kullanıcının bir kullanıcı hesabında oturum açtığını belirten bir Azure Active Directory etkinliği olan **UserLoggedIn** etkinliklerini döndürür. **UserLoggedIn** denetim kayıtlarını görüntülemek için arama sonuçlarında filtrelemeyi kullanın.
 
-**Başlangıç tarihi** **ve Bitiş tarihi:** Araştırmanız için geçerli olan bir tarih aralığı seçin.
+**Başlangıç tarihi** ve **Bitiş tarihi:** Araştırmanıza uygun bir tarih aralığı seçin.
 
-**Kullanıcılar:** Güvenliği ihlal edilmiş bir hesabı araştırıyorsanız, hesabı güvenliği ihlal edilmiş olan kullanıcıyı seçin. Bu işlem, o kullanıcı hesabı tarafından gerçekleştirilen etkinliklerin denetim kayıtlarını döndürür.
-
-**Dosya, klasör veya site:** Bu alanı boş bırakın.
-
-Siz aramayı çalıştırdıktan sonra, arama sonuçlarının **IP adresi sütununda her etkinliğin IP** adresi görüntülenir. Uçarak giriş sayfasında daha ayrıntılı bilgi görüntülemek için arama sonuçlarında kaydı seçin.
-
-## <a name="determine-who-set-up-email-forwarding-for-a-mailbox"></a>Posta kutusu için e-posta iletmeyi kimin ayarlay hazır olduğunu belirleme
-
-Posta kutusu için e-posta iletme yapılandırıldığında, posta kutusuna gönderilen e-posta iletileri başka bir posta kutusuna ilet olur. İletiler, kuruluş içindeki veya dışındaki kullanıcılara iletebilirsiniz. Bir posta kutusunda e-posta iletme ayar olduğunda, Exchange Online için temel alınan ileti **Set-Mailbox cmdlet'tir**.
-
-Bu senaryo için denetim günlüğü arama sorgusunu şu şekilde yapılandırabilirsiniz:
-
-**Etkinlikler:** Aramanın tüm etkinlikler için denetim kayıtlarını döndürt etmek için bu alanı boş bırakın. Bu, Set-Mailbox cmdlet'iyle **ilgili tüm denetim kayıtlarının geri** dönmesi için gereklidir.
-
-**Başlangıç tarihi** **ve Bitiş tarihi:** Araştırmanız için geçerli olan bir tarih aralığı seçin.
-
-**Kullanıcılar:** Belirli bir kullanıcı için e-posta iletme sorunu araştırıyorsanız, bu alanı boş bırakın. Bu, e-posta iletmenin herhangi bir kullanıcı için ayarlanmış olup olduğunu tanımlamanıza yardımcı olur.
+**Kullanıcı:** Güvenliği aşılmış bir hesabı araştırıyorsanız hesabı tehlikeye girmiş olan kullanıcıyı seçin. Bu, söz konusu kullanıcı hesabı tarafından gerçekleştirilen etkinliklerin denetim kayıtlarını döndürür.
 
 **Dosya, klasör veya site:** Bu alanı boş bırakın.
 
-Aramanızı çalıştırdikten sonra, arama **sonuçları sayfasında Sonuçları** filtrele'yi seçin. Etkinlik sütun başlığı altındaki **kutuya** , **Set-Mailbox** yazın; böylelikle yalnızca **Set-Mailbox** cmdlet'iyle ilgili denetim kayıtları görüntülenir.
+Aramayı çalıştırdıktan sonra, her etkinliğin IP adresi arama sonuçlarındaki **IP adresi** sütununda görüntülenir. Açılır sayfada daha ayrıntılı bilgileri görüntülemek için arama sonuçlarında kaydı seçin.
 
-![Denetim günlüğü arama sonuçlarına filtre uygulama.](../media/emailforwarding1.png)
+## <a name="determine-who-set-up-email-forwarding-for-a-mailbox"></a>Posta kutusu için e-posta iletmeyi kimin ayarladığını belirleme
 
-Bu noktada, etkinliğin e-posta iletmeyle ilgili olup olmadığını belirlemek için her denetim kaydının ayrıntılarına bakabilirsiniz. Denetim kaydını seçerek **Ayrıntılar çıkış sayfasını** görüntüleyebilirsiniz ve sonra da Daha fazla **bilgi'yi seçin**. Aşağıdaki ekran görüntüsü ve açıklamalar, posta kutusunda e-posta iletmenin ayarlanmış olduğunu gösteren bilgileri vurgular.
+Posta kutusu için e-posta iletme yapılandırıldığında, posta kutusuna gönderilen e-posta iletileri başka bir posta kutusuna iletilir. İletiler kuruluşunuzun içindeki veya dışındaki kullanıcılara iletilebilir. Posta kutusunda e-posta iletme ayarlandığında, kullanılan temel Exchange Online cmdlet'i **Set-Mailbox'dır**.
+
+Bu senaryo için bir denetim günlüğü arama sorgusu şu şekilde yapılandırılır:
+
+**Faaliyetleri:** Aramanın tüm etkinlikler için denetim kayıtlarını döndürmesi için bu alanı boş bırakın. Bu, **Set-Mailbox** cmdlet'iyle ilgili tüm denetim kayıtlarını döndürmek için gereklidir.
+
+**Başlangıç tarihi** ve **Bitiş tarihi:** Araştırmanıza uygun bir tarih aralığı seçin.
+
+**Kullanıcı:** Belirli bir kullanıcı için e-posta iletme sorununu araştırmadığınız sürece bu alanı boş bırakın. Bu, herhangi bir kullanıcı için e-posta iletmenin ayarlandığını belirlemenize yardımcı olur.
+
+**Dosya, klasör veya site:** Bu alanı boş bırakın.
+
+Aramayı çalıştırdıktan sonra arama sonuçları sayfasında **Sonuçları filtrele'yi** seçin. **Etkinlik** sütun başlığı altındaki kutuya **, Yalnızca Set-Mailbox** cmdlet'iyle ilgili denetim kayıtlarının görüntülenmesi için **Posta Kutusu Ayarla** yazın.
+
+![Denetim günlüğü aramasının sonuçlarını filtreleme.](../media/emailforwarding1.png)
+
+Bu noktada, etkinliğin e-posta iletmeyle ilgili olup olmadığını belirlemek için her denetim kaydının ayrıntılarına bakmanız gerekir. **Ayrıntılar** açılır sayfasını görüntülemek için denetim kaydını seçin ve ardından **Daha fazla bilgi'yi** seçin. Aşağıdaki ekran görüntüsü ve açıklamalar, posta kutusunda e-posta iletmenin ayarlandığını gösteren bilgileri vurgular.
 
 ![Denetim kaydından ayrıntılı bilgiler.](../media/emailforwarding2.png)
 
-a. **ObjectId alanında**, e-posta iletmenin ayar olduğu posta kutusunun diğer adı görüntülenir. Bu posta kutusu, arama sonuçları **sayfasının** Öğe sütununda da görüntülenir.
+a. **ObjectId** alanında, e-posta iletmenin ayarlandığı posta kutusunun diğer adı görüntülenir. Bu posta kutusu, arama sonuçları sayfasındaki **Öğe** sütununda da görüntülenir.
 
-b. Parametreler **alanında** *ForwardingSmtpAddress* değeri, posta kutusunda e-posta iletmenin ayar olduğunu gösterir. Bu örnekte, posta diğer kuruluşun dışında bulunan mike@contoso.com e-posta adresine alpinehouse.onmicrosoft.com iletildi.
+b. **Parametreler** alanında *ForwardingSmtpAddress* değeri, posta kutusunda e-posta iletmenin ayarlandığını gösterir. Bu örnekte posta, alpinehouse.onmicrosoft.com kuruluş dışındaki mike@contoso.com e-posta adresine iletilir.
 
-c. *DeliverToMailboxAndForward* parametresinin *True* değeri, iletinin bir kopyasının sarad@alpinehouse.onmicrosoft.com'a teslim edilir ve *ForwardingSmtpAddress* parametresi tarafından belirtilen e-posta adresine iletilebilir; bu örnekte bu değer mike@contoso.com. *DeliverToMailboxAndForward* parametresinin değeri *False* olarak ayarlanırsa, e-posta yalnızca *ForwardingSmtpAddress* parametresi tarafından belirtilen adrese iletilebilir. NesneKimlik alanında belirtilen posta kutusuna **teslim edilir** .
+c. *DeliverToMailboxAndForward* parametresinin *True* değeri, iletinin bir kopyasının sarad@alpinehouse.onmicrosoft.com teslim ettiğini *ve* bu örnekte mike@contoso.com olan *ForwardingSmtpAddress* parametresi tarafından belirtilen e-posta adresine iletildiğini gösterir. *DeliverToMailboxAndForward* parametresinin değeri *False* olarak ayarlanırsa, e-posta yalnızca *ForwardingSmtpAddress* parametresi tarafından belirtilen adrese iletilir. **ObjectId** alanında belirtilen posta kutusuna teslim edilmemiştir.
 
-d. **UserId alanı**, ObjectId alanında belirtilen posta kutusunda e-posta iletmeyi ayar eden **kullanıcıyı** gösterir. Bu kullanıcı, arama sonuçları **sayfasının** Kullanıcı sütununda da görüntülenir. Bu durumda, posta kutusunun sahibi posta kutusunda e-posta iletmeyi ayarlamış gibi görünüyor.
+d. **UserId** alanı, **ObjectId** alanında belirtilen posta kutusunda e-posta iletmeyi ayarlayan kullanıcıyı gösterir. Bu kullanıcı, arama sonuçları sayfasındaki **Kullanıcı** sütununda da görüntülenir. Bu durumda, posta kutusunun sahibi, posta kutusuna e-posta iletmeyi ayarlamış gibi görünüyor.
 
-Posta kutusunda e-posta iletmenin ayar olmaması gerektiğini belirlersanız, Exchange Online PowerShell'de aşağıdaki komutu çalıştırarak bunu kaldırabilirsiniz:
+Posta kutusunda e-posta iletmenin ayarlanmaması gerektiğini belirlerseniz, PowerShell'Exchange Online aşağıdaki komutu çalıştırarak e-postayı kaldırabilirsiniz:
 
 ```powershell
 Set-Mailbox <mailbox alias> -ForwardingSmtpAddress $null 
 ```
 
-E-posta iletmeyle ilgili parametreler hakkında daha fazla bilgi için, [Set-Mailbox makalesine](/powershell/module/exchange/set-mailbox) bakın.
+E-posta iletmeyle ilgili parametreler hakkında daha fazla bilgi için [, Set-Mailbox](/powershell/module/exchange/set-mailbox) makalesine bakın.
 
-## <a name="determine-if-a-user-deleted-email-items"></a>Kullanıcının e-posta öğelerini s olup olmadığını belirleme
+## <a name="determine-if-a-user-deleted-email-items"></a>Kullanıcının e-posta öğelerini silip silmediğini belirleme
 
-Ocak 2019'dan başlayarak, Microsoft tüm microsoft kuruluşları ve Office 365 kutusu denetim günlüğünü varsayılan olarak etkinleştirdi. Bu, posta kutusu sahipleri tarafından gerçekleştirilen bazı eylemlerin otomatik olarak günlüğe kaydedileceğini ve posta kutusu denetim günlüğünde arama gerçekleştirerek ilgili posta kutusu denetim kayıtlarının kullanılabilir olduğu anlamına gelir. Posta kutusu denetimi varsayılan olarak açıkken, önce bunu organizasyonu tüm kullanıcı posta kutuları için el ile etkinleştirmeniz gerekmektedir. 
+Ocak 2019'dan itibaren Microsoft, tüm Office 365 ve Microsoft kuruluşları için posta kutusu denetim günlüğünü varsayılan olarak açar. Bu, posta kutusu sahipleri tarafından gerçekleştirilen belirli eylemlerin otomatik olarak günlüğe kaydedildiği ve posta kutusu denetim günlüğünde bunları aradığınızda ilgili posta kutusu denetim kayıtlarının kullanılabildiği anlamına gelir. Posta kutusu denetimi varsayılan olarak açılmadan önce, bunu kuruluşunuzdaki her kullanıcı posta kutusu için el ile etkinleştirmeniz gerekiyordu. 
 
-Varsayılan olarak günlüğe kaydedilen posta kutusu eylemleri, posta kutusu sahipleri tarafından gerçekleştirilen SoftDelete ve HardDelete posta kutusu eylemlerini içerir. Bu da, denetim günlüğünde silinmiş e-posta öğeleriyle ilgili olayları aramak için aşağıdaki adımları kullanabileceğiniz anlamına gelir. Posta kutusu denetimi hakkında varsayılan olarak daha fazla bilgi için bkz. [Posta kutusu denetimini yönetme](enable-mailbox-auditing.md).
+Varsayılan olarak günlüğe kaydedilen posta kutusu eylemleri, posta kutusu sahipleri tarafından gerçekleştirilen SoftDelete ve HardDelete posta kutusu eylemlerini içerir. Bu, denetim günlüğünde silinen e-posta öğeleriyle ilgili olayları aramak için aşağıdaki adımları kullanabileceğiniz anlamına gelir. Varsayılan olarak üzerinde posta kutusu denetimi hakkında daha fazla bilgi için bkz. [Posta kutusu denetimini yönetme](enable-mailbox-auditing.md).
 
-Bu senaryo için denetim günlüğü arama sorgusunu şu şekilde yapılandırabilirsiniz:
+Bu senaryo için bir denetim günlüğü arama sorgusu şu şekilde yapılandırılır:
 
-**Etkinlikler:** Posta **Exchange etkinliklerine erişin** altında, aşağıdaki etkinliklerden birini veya her ikisini de seçin:
+**Faaliyetleri:** **posta kutusu etkinlikleri Exchange** altında aşağıdaki etkinliklerden birini veya ikisini birden seçin:
 
-- **Silinmiş Öğeler klasöründen silinen iletiler:** Bu etkinlik, **SoftDelete posta kutusu** denetim eylemine karşılık gelen bir eylemdir. Bu etkinlik, kullanıcı öğeyi seçerek ve **Shift+Delete** tuşlarına basarak kalıcı olarak silebilir. Öğe kalıcı olarak silindikten sonra, kullanıcı silinmiş öğe bekletme süresi dolana kadar öğeyi kurtarabilirsiniz.
+- **Silinmiş Öğeler klasöründen silinen iletiler:** Bu etkinlik **, SoftDelete** posta kutusu denetim eylemine karşılık gelir. Bu etkinlik, kullanıcı öğeyi seçip **Shift+Delete** tuşlarına basarak kalıcı olarak sildiğinde de günlüğe kaydedilir. Bir öğe kalıcı olarak silindikten sonra, silinen öğe saklama süresi dolana kadar kullanıcı öğeyi kurtarabilir.
 
-- **İletiler posta kutusundan temizildi:** Bu etkinlik, **HardDelete posta kutusu denetim** eylemine karşılık gelen bir eylemdir. Kullanıcı Kurtarılabilir Öğeler klasöründen bir öğeyi temizleye olduğunda bu günlüğe kaydedilir. Yöneticiler, güvenlik ve uyumluluk merkezinde bulunan İçerik Arama aracını kullanarak, silinen öğe bekletme süresi dolana kadar veya kullanıcının posta kutusu saklamaya devam ediyorsa daha uzun süre depolayana kadar, temizli öğeleri arayabilir ve kurtarabilirsiniz.
+- **İletiler posta kutusundan temizlenir:** Bu etkinlik **, HardDelete** posta kutusu denetim eylemine karşılık gelir. Bu, kullanıcı Kurtarılabilir Öğeler klasöründeki bir öğeyi temizlediğinde günlüğe kaydedilir. Yöneticiler, silinmiş öğe saklama süresi dolana kadar veya kullanıcının posta kutusu beklemedeyse daha uzun süre boyunca temizlenmiş öğeleri aramak ve kurtarmak için güvenlik ve uyumluluk merkezindeki İçerik Arama aracını kullanabilir.
 
-**Başlangıç tarihi** **ve Bitiş tarihi:** Araştırmanız için geçerli olan bir tarih aralığı seçin.
+**Başlangıç tarihi** ve **Bitiş tarihi:** Araştırmanıza uygun bir tarih aralığı seçin.
 
-**Kullanıcılar:** Bu alandan bir kullanıcı seçiyorsanız, denetim günlüğü arama aracı belirttiğiniz kullanıcı tarafından silinen (SoftDeleted veya HardDeleted) e-posta öğelerinin denetim kayıtlarını döndürür. Bazen e-postayı senen kullanıcı posta kutusunun sahibi o zaman değildir.
+**Kullanıcı:** Bu alanda bir kullanıcı seçerseniz, denetim günlüğü arama aracı belirttiğiniz kullanıcı tarafından silinmiş (SoftDeleted veya HardDeleted) e-posta öğeleri için denetim kayıtlarını döndürür. Bazen e-postayı silecek kullanıcı posta kutusu sahibi olmayabilir.
 
 **Dosya, klasör veya site:** Bu alanı boş bırakın.
 
-Arama çalıştırtıktan sonra, otomatik silinmiş veya sabit silinmiş öğeler için denetim kayıtlarını görüntülemek için arama sonuçlarına filtre ebilirsiniz. Denetim kaydını seçerek **Ayrıntılar çıkış sayfasını** görüntüleyebilirsiniz ve sonra da Daha fazla **bilgi'yi seçin**. Silinen öğe hakkında ek bilgiler, örneğin konu satırı ve silindiğinde öğenin konumu **AffectedItems alanında** görüntülenir. Aşağıdaki ekran görüntüleri, yumuşak **silinmiş bir** öğeden ve sabit silinmiş bir öğeden etkilenen Öğe alanına bir örnek gösterir.
+Aramayı çalıştırdıktan sonra, geçici olarak silinen öğelerin veya sabit silinen öğelerin denetim kayıtlarını görüntülemek için arama sonuçlarını filtreleyebilirsiniz. **Ayrıntılar** açılır sayfasını görüntülemek için denetim kaydını seçin ve ardından **Daha fazla bilgi'yi** seçin. Silinen öğe hakkında konu satırı ve öğenin silindiği konum gibi ek bilgiler **AffectedItems** alanında görüntülenir. Aşağıdaki ekran görüntüleri, geçici olarak silinen bir öğeden **AffectedItems** alanının bir örneğini ve sabit silinmiş bir öğeyi gösterir.
 
-**Yumuşak silinmiş öğe için affecteditems alanı örneği**
+**Geçici olarak silinen öğe için AffectedItems alanı örneği**
 
-![Yumuşak silinmiş öğe için denetim kaydı.](../media/softdeleteditem.png)
+![Geçici olarak silinen öğe için denetim kaydı.](../media/softdeleteditem.png)
 
-**Sabit silinmiş öğe için affecteditems alanı örneği**
+**Sabit silinmiş öğe için AffectedItems alanı örneği**
 
-![Sabit silinmiş e-posta öğesi için denetim kaydı.](../media/harddeleteditem.png)
+![Sabit silinmiş e-posta öğesi için kayıt denetimi.](../media/harddeleteditem.png)
 
-### <a name="recover-deleted-email-items"></a>Silinmiş e-posta öğelerini kurtarma
+### <a name="recover-deleted-email-items"></a>Silinen e-posta öğelerini kurtarma
 
-Silinmiş öğelerin bekletme süresi dolmamışsa, kullanıcılar yumuşak silinmiş öğeleri kurtarabilirsiniz. Son Exchange Online, varsayılan silinmiş öğelerin bekletme süresi 14 gündür, ancak yöneticiler bu ayarı en çok 30 gün olacak şekilde artırabilir. Kullanıcıları, Silinmiş öğeleri [kurtarma yönergeleri için Web üzerinde Outlook](https://support.office.com/article/Recover-deleted-items-or-email-in-Outlook-Web-App-C3D8FC15-EEEF-4F1C-81DF-E27964B7EDD4) kurtar makalesinde Silinmiş öğeleri veya e-postaları kurtar'a işaret edin.
+Silinen öğelerin saklama süresi dolmadıysa kullanıcılar geçici olarak silinen öğeleri kurtarabilir. Exchange Online'de, varsayılan silinmiş öğelerin saklama süresi 14 gündür, ancak yöneticiler bu ayarı en fazla 30 güne artırabilir. Silinen öğeleri kurtarma yönergeleri için [Web üzerinde Outlook'de kullanıcıları Silinmiş öğeleri veya e-postaları](https://support.office.com/article/Recover-deleted-items-or-email-in-Outlook-Web-App-C3D8FC15-EEEF-4F1C-81DF-E27964B7EDD4) kurtarma makalesine işaret edin.
 
-Daha önce de belirtildiği gibi, yöneticiler silinmiş öğe bekletme süresinin dolmamış olması veya posta kutusunun saklama durumunda olması durumunda kalıcı olarak silinmiş öğeleri kurtarabilecektir. Bu durumda, tutma süresi dolana kadar öğeler tutulur. İçerik aramasında çalıştırsanız, Kurtarılabilir Öğeler klasöründeki yumuşak silinmiş ve sabit silinmiş öğeler, arama sorgusuyla eşleşirse arama sonuçlarında döndürülür. İçerik aramalarını çalıştırma hakkında daha fazla bilgi için bkz. İçerik [Arama ve Office 365](content-search.md).
+Daha önce açıklandığı gibi, silinmiş öğe saklama süresinin dolmamış olması veya posta kutusunun beklemede olması durumunda, bekleme süresi dolana kadar öğeler tutulursa, yöneticiler sabit silinmiş öğeleri kurtarabilir. İçerik araması çalıştırdığınızda, Kurtarılabilir Öğeler klasöründeki geçici olarak silinen ve sabit silinen öğeler, arama sorgusuyla eşleşiyorsa arama sonuçlarında döndürülür. İçerik aramalarını çalıştırma hakkında daha fazla bilgi için bkz. [Office 365'da İçerik Arama](content-search.md).
 
 > [!TIP]
-> Silinmiş e-posta öğelerini aramak için, denetim kaydının **AffectedItems** alanında görüntülenen konu satırın bir bölümünü veya bir bölümünü arama.
+> Silinen e-posta öğelerini aramak için denetim kaydındaki **AffectedItems** alanında görüntülenen konu satırının tamamını veya bir bölümünü arayın.
 
-## <a name="determine-if-a-user-created-an-inbox-rule"></a>Kullanıcının gelen kutusu kuralı oluşturduğuna karar verin
+## <a name="determine-if-a-user-created-an-inbox-rule"></a>Kullanıcının gelen kutusu kuralı oluşturup oluşturmadığını belirleme
 
-Kullanıcılar kendi posta kutuları için bir gelen Exchange Online, buna karşılık gelen bir denetim kaydı denetim günlüğüne kaydedilir. Gelen kutusu kuralları hakkında daha fazla bilgi için bkz:
+Kullanıcılar Exchange Online posta kutuları için bir gelen kutusu kuralı oluşturduğunuzda, ilgili denetim kaydı denetim günlüğüne kaydedilir. Gelen kutusu kuralları hakkında daha fazla bilgi için bkz:
 
-- [E-postada gelen kutusu kurallarını Web üzerinde Outlook](https://support.office.com/article/use-inbox-rules-in-outlook-on-the-web-8400435c-f14e-4272-9004-1548bb1848f2)
-- [E-posta iletilerini Outlook kullanarak e-posta iletilerini yönetme](https://support.office.com/article/Manage-email-messages-by-using-rules-C24F5DEA-9465-4DF4-AD17-A50704D66C59)
+- [Web üzerinde Outlook gelen kutusu kurallarını kullanma](https://support.office.com/article/use-inbox-rules-in-outlook-on-the-web-8400435c-f14e-4272-9004-1548bb1848f2)
+- [kuralları kullanarak Outlook e-posta iletilerini yönetme](https://support.office.com/article/Manage-email-messages-by-using-rules-C24F5DEA-9465-4DF4-AD17-A50704D66C59)
 
-Bu senaryo için denetim günlüğü arama sorgusunu şu şekilde yapılandırabilirsiniz:
+Bu senaryo için bir denetim günlüğü arama sorgusu şu şekilde yapılandırılır:
 
-**Etkinlikler:** Posta **Exchange etkinliklerine erişin** altında, aşağıdaki etkinliklerden birini veya her ikisini de seçin:
+**Faaliyetleri:** **posta kutusu etkinlikleri Exchange** altında aşağıdaki etkinliklerden birini veya ikisini birden seçin:
 
-- **Yeni Gelen KutusuSağdan gelen kutusu kuralı Outlook Web App**. Outlook Web App veya PowerShell kullanarak gelen kutusu kuralları Exchange Online bu etkinlik denetim kayıtlarını döndürür.
+- **New-Gelen KutusuRule Outlook Web App yeni gelen kutusu kuralı oluşturun**. Bu etkinlik, Outlook web uygulaması kullanılarak veya PowerShell Exchange Online gelen kutusu kuralları oluşturulduğunda denetim kayıtlarını döndürür.
 
-- **İstemci tarafından güncelleştirilmiş gelen Outlook kuralları**. Masaüstü istemcisinde gelen kutusu kuralları oluşturulduğunda, değiştirildiğinde veya kaldırildiğinde, bu Outlook döndürür.
+- **Outlook istemcisinden gelen kutusu kuralları güncelleştirildi**. Bu etkinlik, Outlook masaüstü istemcisi kullanılarak gelen kutusu kuralları oluşturulduğunda, değiştirildiğinde veya kaldırıldığında denetim kayıtlarını döndürür.
 
-**Başlangıç tarihi** **ve Bitiş tarihi:** Araştırmanız için geçerli olan bir tarih aralığı seçin.
+**Başlangıç tarihi** ve **Bitiş tarihi:** Araştırmanıza uygun bir tarih aralığı seçin.
 
-**Kullanıcılar:** Belirli bir kullanıcıyla ilgili araştırma yoksa bu alanı boş bırakın. Bu, herhangi bir kullanıcı tarafından ayarlanmış yeni gelen kutusu kurallarını tanımlamanıza yardımcı olur.
+**Kullanıcı:** Belirli bir kullanıcıyı araştırmadığınız sürece bu alanı boş bırakın. Bu, herhangi bir kullanıcı tarafından ayarlanan yeni gelen kutusu kurallarını belirlemenize yardımcı olur.
 
 **Dosya, klasör veya site:** Bu alanı boş bırakın.
 
-Siz aramayı çalıştırdikten sonra, arama sonuçlarında bu etkinliğin tüm denetim kayıtları görüntülenir. Ayrıntılar çıkış sayfasını görüntülemek için bir **denetim kaydı** seçin ve sonra da Daha fazla **bilgi'yi seçin**. Gelen kutusu kuralı ayarları hakkında bilgiler Parametreler **alanında** görüntülenir. Aşağıdaki ekran görüntüsü ve açıklamalar, gelen kutusu kurallarıyla ilgili bilgileri vurgular.
+Aramayı çalıştırdıktan sonra, bu etkinliğin tüm denetim kayıtları arama sonuçlarında görüntülenir. **Ayrıntılar** açılır sayfasını görüntülemek için bir denetim kaydı seçin ve ardından **Daha fazla bilgi'yi** seçin. Gelen kutusu kuralı ayarları hakkındaki bilgiler **Parametreler** alanında görüntülenir. Aşağıdaki ekran görüntüsü ve açıklamalar, gelen kutusu kuralları hakkındaki bilgileri vurgular.
 
-![Yeni gelen kutusu kuralı için denetim kaydı.](../media/NewInboxRuleRecord.png)
+![Yeni gelen kutusu kuralı için kayıt denetimi.](../media/NewInboxRuleRecord.png)
 
-a. **ObjectId alanında**, gelen kutusu kuralının tam adı görüntülenir. Bu ad, kullanıcının posta kutusunun diğer adını (örneğin, SaraD) ve gelen kutusu kuralının adını içerir (örneğin, "İletileri yöneticiden taşı").
+a. **ObjectId** alanında, gelen kutusu kuralının tam adı görüntülenir. Bu ad, kullanıcının posta kutusunun diğer adını (örneğin, SaraD) ve gelen kutusu kuralının adını içerir (örneğin, "İletileri yöneticiden taşıma").
 
-b. Parametreler **alanında** , gelen kutusu kuralının koşulu görüntülenir. Bu örnekte, koşul From parametresi tarafından *belirtilir* . From parametresi için tanımlanan *değer, gelen* kutusu kuralının posta kutusu tarafından gönderilen e-posta üzerinde eylem admin@alpinehouse.onmicrosoft.com. Gelen kutusu kurallarının koşullarını tanımlamakta kullanılan parametrelerin tam listesi için, [New-InboxRule makalesine](/powershell/module/exchange/new-inboxrule) bakın.
+b. **Parametreler** alanında, gelen kutusu kuralının koşulu görüntülenir. Bu örnekte koşul *From* parametresi tarafından belirtilir. *From* parametresi için tanımlanan değer, gelen kutusu kuralının admin@alpinehouse.onmicrosoft.com tarafından gönderilen e-posta üzerinde hareket ettiğini gösterir. Gelen kutusu kurallarının koşullarını tanımlamak için kullanılabilecek parametrelerin tam listesi için [New-InboxRule](/powershell/module/exchange/new-inboxrule) makalesine bakın.
 
-c. *MoveToFolder* parametresi gelen kutusu kuralı için eylemi belirtir. Bu örnekte, kullanıcı tarafından admin@alpinehouse.onmicrosoft.com *AdminSearch adlı klasöre taşınır*. Ayrıca, [gelen kutusu kuralının eylemlerini](/powershell/module/exchange/new-inboxrule) tanımlamak için kullanılan parametrelerin tam listesi için New-InboxRule makalesine de bakın.
+c. *MoveToFolder* parametresi gelen kutusu kuralının eylemini belirtir. Bu örnekte, admin@alpinehouse.onmicrosoft.com alınan iletiler *AdminSearch* adlı klasöre taşınır. Ayrıca, gelen kutusu kuralının eylemini tanımlamak için kullanılabilecek parametrelerin tam listesi için [New-InboxRule](/powershell/module/exchange/new-inboxrule) makalesine bakın.
 
-d. **UserId alanı**, ObjectId alanında belirtilen gelen kutusu kuralını oluşturan **kullanıcıyı** gösterir. Bu kullanıcı, arama sonuçları **sayfasının** Kullanıcı sütununda da görüntülenir.
+d. **UserId** alanı, **ObjectId** alanında belirtilen gelen kutusu kuralını oluşturan kullanıcıyı gösterir. Bu kullanıcı, arama sonuçları sayfasındaki **Kullanıcı** sütununda da görüntülenir.
 
-## <a name="investigate-why-there-was-a-successful-login-by-a-user-outside-your-organization"></a>Kuruluş dışından bir kullanıcı tarafından başarılı bir oturum açmanın neden olduğunu araştırma
+## <a name="investigate-why-there-was-a-successful-login-by-a-user-outside-your-organization"></a>Kuruluşunuzun dışındaki bir kullanıcı tarafından neden başarılı bir oturum açma işlemi olduğunu araştırma
 
-Denetim günlüğünde denetim kayıtlarını gözden geçirerek, dış kullanıcının Azure Active Directory başarılı bir şekilde oturum açtığını belirten kayıtları görebilirsiniz. Örneğin, contoso.onmicrosoft.com'daki bir yönetici, farklı bir kuruluştan (örneğin, kullanıcı) bir kullanıcının fabrikam.onmicrosoft.com başarılı bir şekilde oturum açtığını gösteren bir contoso.onmicrosoft.com. Benzer şekilde, microsoft hesabı (MSA) olan ve Outlook.com veya Live.com hesabı olan kullanıcıların, Live.com başarıyla oturum açtığını belirten denetim kayıtlarını bulabilirsiniz. Böyle durumlarda, denetlenen etkinlik Kullanıcı Oturum **Aç'tır**. 
+Denetim günlüğündeki denetim kayıtlarını gözden geçirirken, dış kullanıcının Azure Active Directory tarafından kimliğinin doğrulandığını ve kuruluşunuzda başarıyla oturum açtığını belirten kayıtlar görebilirsiniz. Örneğin, contoso.onmicrosoft.com'daki bir yönetici, farklı bir kuruluştan (örneğin, fabrikam.onmicrosoft.com) bir kullanıcının contoso.onmicrosoft.com başarıyla oturum açtığını gösteren bir denetim kaydı görebilir. Benzer şekilde, kuruluşunuzda başarıyla oturum açmış Outlook.com veya Live.com gibi Microsoft Hesabı (MSA) olan kullanıcıları gösteren denetim kayıtları görebilirsiniz. Bu gibi durumlarda, denetlenen etkinlik **Kullanıcı oturum açmış** olur. 
 
-Bu davranış tasarımdan kaynaklanır. Azure Active Directory (Azure AD) dizin hizmeti, dış kullanıcı SharePoint sitesine veya OneDrive konumlarına erişmeye çalıştığında doğrudan kimlik doğrulama olarak adlandırılan bir şeye izin verir. Dış kullanıcı bunu yapmaya çalıştığında, kimlik bilgilerini girmeleri istenir. Azure AD kullanıcının kimliğini doğrulamak için kimlik bilgilerini kullanır; başka bir ifadeyle, yalnızca Azure AD kullanıcının kim olduğunu doğrular. Denetim kaydında başarılı oturum açmanın göstergesi, Azure AD'nin kullanıcı için kimlik doğrulamayı belirlemesi sonucu elde edilir. Başarılı oturum açma, kullanıcının herhangi bir kaynaklara erişeni veya kuruluş içinde başka eylemler gerçekleştir diğer eylemleri gerçekleştir olduğu anlamına değildir. Bu yalnızca kullanıcının Azure AD tarafından kimliği doğrulanmış olduğunu gösterir. Doğrudan kullanıcıdan SharePoint veya OneDrive kaynaklarına erişmesi için, kurumuz kullanıcıya paylaşım daveti veya anonim paylaşım bağlantısı göndererek kaynağı dış kullanıcıyla açıkça paylaşması gerekir. 
+Bu davranış tasarımdan kaynaklanır. Dizin hizmeti Azure Active Directory (Azure AD), dış kullanıcı kuruluşunuzdaki bir SharePoint sitesine veya OneDrive konumuna erişmeye çalıştığında *geçişli kimlik doğrulaması* olarak adlandırılan bir şeye izin verir. Dış kullanıcı bunu yapmaya çalıştığında kimlik bilgilerini girmesi istenir. Azure AD, kimlik bilgilerini kullanıcının kimliğini doğrulamak için kullanır; yani yalnızca Azure AD kullanıcının söylediği kişi olduğunu doğrular. Denetim kaydında başarılı oturum açma işleminin göstergesi, Azure AD'nin kullanıcının kimliğini doğrulamasının sonucudur. Başarılı oturum açma, kullanıcının kuruluşunuzdaki herhangi bir kaynağa erişebileceği veya başka eylemler gerçekleştirebileceği anlamına gelmez. Yalnızca kullanıcının Kimliğinin Azure AD tarafından doğrulandığını gösterir. Geçişli kullanıcının SharePoint veya OneDrive kaynaklarına erişebilmesi için, kuruluşunuzdaki bir kullanıcının bir kaynağı paylaşım daveti veya anonim paylaşım bağlantısı göndererek dış kullanıcıyla açıkça paylaşması gerekir. 
 
 > [!NOTE]
-> Azure AD, yalnızca SharePoint Online ve OneDrive İş gibi birinci taraf uygulamalar için geçişli kimlik OneDrive İş. Diğer üçüncü taraf uygulamalarda buna izin verilmez.
+> Azure AD, yalnızca SharePoint Online ve OneDrive İş gibi *birinci taraf uygulamalar* için doğrudan kimlik doğrulamasına izin verir. Diğer üçüncü taraf uygulamalar için buna izin verilmez.
 
-Burada, geçişli kimlik doğrulamasının sonucu olarak Günlüğe Kaydedilen Kullanıcı için bir denetim kaydında  ilgili özelliklere örnek ve açıklamalar ve bir örnek ve açıklamalar ve şekilde yer almaktadır. Denetim kaydını seçerek **Ayrıntılar çıkış sayfasını** görüntüleyebilirsiniz ve sonra da Daha fazla **bilgi'yi seçin**.
+Burada, doğrudan kimlik doğrulamasının bir sonucu olan Oturum **Açan Kullanıcının denetim kaydındaki** ilgili özelliklerin bir örneği ve açıklamaları verilmiştir. **Ayrıntılar** açılır sayfasını görüntülemek için denetim kaydını seçin ve ardından **Daha fazla bilgi'yi** seçin.
 
-![Başarılı geçiş doğrulaması için denetim kaydı örneği.](../media/PassThroughAuth1.png)
+![Başarılı geçiş kimlik doğrulaması için denetim kaydı örneği.](../media/PassThroughAuth1.png)
 
-   a. Bu alan, kuruluşta bir kaynağa erişmeye çalışan kullanıcının, kuruluşun Azure AD'sinde buluna olmadığını gösterir.
+   a. Bu alan, kuruluşunuzdaki bir kaynağa erişmeye çalışan kullanıcının kuruluşunuzun Azure AD'sinde bulunmadığını gösterir.
 
-   b. Bu alanda, kurumda bir kaynağa erişmeyi denen dış kullanıcının UPN'si görüntülenir. Bu kullanıcı kimliği, denetim kaydında **User** **ve UserId** özelliklerinde de tanımlanır.
+   b. Bu alan, kuruluşunuzdaki bir kaynağa erişmeye çalışan dış kullanıcının UPN'sini görüntüler. Bu kullanıcı kimliği, denetim kaydındaki **User** ve **UserId** özelliklerinde de tanımlanır.
 
-   c. **ApplicationId özelliği**, oturum açma isteğini tetikleyen uygulamayı tanımlar. Bu denetim kaydında ApplicationId özelliğinde görüntülenen 00000003-0000-0ff1-ce00-0000000000 değerinin değeri SharePoint Online olduğunu gösterir. OneDrive İş Aynı ApplicationId'ye de sahip.
+   c. **ApplicationId** özelliği, oturum açma isteğini tetikleyen uygulamayı tanımlar. Bu denetim kaydındaki ApplicationId özelliğinde görüntülenen 00000003-0000-0ff1-ce00-00000000000000 değerinin SharePoint Online olduğunu gösterir. OneDrive İş aynı ApplicationId'ye de sahiptir.
 
-   d. Bu, geçişli kimlik doğrulamanın başarılı olduğunu gösterir. Başka bir deyişle, kullanıcının kimliği Azure AD tarafından başarıyla doğrulandı. 
+   d. Bu, geçiş kimlik doğrulamasının başarılı olduğunu gösterir. Başka bir deyişle, kullanıcının kimliği Azure AD tarafından başarıyla doğrulandı. 
 
-   e. **15** **RecordType** değeri, denetlenen etkinliğin (UserLoggedIn) Azure AD'de bir Güvenli Belirteç Hizmeti (STS) oturum açma olayı olduğunu gösterir.
+   e. **15'in RecordType** değeri, denetlenen etkinliğin (UserLoggedIn) Azure AD'de bir Güvenli Belirteç Hizmeti (STS) oturum açma olayı olduğunu gösterir.
 
-UserLoggedIn denetim kaydında görüntülenen diğer özellikler hakkında daha fazla bilgi için, bir Kullanıcı Yönetimi Etkinliği API'si şemasında Azure AD ile [Office 365 bilgilerine bakın](/office/office-365-management-api/office-365-management-activity-api-schema#azure-active-directory-base-schema).
+UserLoggedIn denetim kaydında görüntülenen diğer özellikler hakkında daha fazla bilgi için Office 365 [Yönetim Etkinliği API'sinin şemasındaki](/office/office-365-management-api/office-365-management-activity-api-schema#azure-active-directory-base-schema) Azure AD ile ilgili şema bilgilerine bakın.
 
-Aşağıda, geçiş kimlik doğrulaması nedeniyle başarılı bir Kullanıcı denetim etkinliğinde  oturum açan başarılı bir kullanıcı deneyimine neden olacak iki örnek senaryo verilmiştir: 
+Doğrudan kimlik doğrulaması nedeniyle **başarılı bir Kullanıcının denetim etkinliğinde oturum açmasıyla** sonuçlanan iki örnek senaryo aşağıda verilmiştir: 
 
-  - Microsoft Hesabı (örneğin SaraD@outlook.com) olan bir kullanıcı fourthcoffee.onmicrosoft.com'te bir OneDrive İş hesabındaki bir belgeye erişmeyi denedi ve fourthcoffee.onmicrosoft.com'te SaraD@outlook.com için buna karşılık gelen bir konuk kullanıcı hesabı yok.
+  - Microsoft Hesabı (SaraD@outlook.com gibi) olan bir kullanıcı, fourthcoffee.onmicrosoft.com'daki bir OneDrive İş hesabındaki bir belgeye erişmeye çalıştı ve fourthcoffee.onmicrosoft.com'da SaraD@outlook.com için karşılık gelen bir konuk kullanıcı hesabı yok.
 
-  - Kuruluşta İş veya Okul hesabı olan bir kullanıcı (örneğin, pilarp@fabrikam.onmicrosoft.com) contoso.onmicrosoft.com'te bir SharePoint sitesine erişmeye çalışıyor ve pilarp@fabrikam.com'te pilarp@fabrikam.com için buna karşılık gelen bir konuk kullanıcı hesabı contoso.onmicrosoft.com.
+  - Bir kuruluşta İş veya Okul hesabı olan bir kullanıcı (pilarp@fabrikam.onmicrosoft.com gibi) contoso.onmicrosoft.com'da SharePoint bir siteye erişmeye çalıştı ve contoso.onmicrosoft.com'da pilarp@fabrikam.com için karşılık gelen bir konuk kullanıcı hesabı yok.
 
-### <a name="tips-for-investigating-successful-logins-resulting-from-pass-through-authentication"></a>İpuçları kimlik doğrulamasından elde edilen başarılı oturum açmaları araştırmanın sonuçları
+### <a name="tips-for-investigating-successful-logins-resulting-from-pass-through-authentication"></a>Doğrudan kimlik doğrulamasından kaynaklanan başarılı oturum açma bilgilerini araştırmak için İpuçları
 
-- Denetim günlüğünde, Kullanıcı denetim kaydında oturum açan dış **kullanıcı tarafından gerçekleştirilen etkinlikleri** arama. Kullanıcılar kutusuna dış kullanıcının **UPN'nizi yazın** ve senaryoyla ilgili bir tarih aralığı kullanın. Örneğin, aşağıdaki arama ölçütlerini kullanarak bir arama oluşturabilirsiniz:
+- Denetim günlüğünde, **Kullanıcı denetim kaydında oturum açmış** olan dış kullanıcı tarafından gerçekleştirilen etkinlikler için arama yapın. **Kullanıcılar** kutusuna dış kullanıcı için UPN yazın ve senaryonuzla ilgiliyse bir tarih aralığı kullanın. Örneğin, aşağıdaki arama ölçütlerini kullanarak bir arama oluşturabilirsiniz:
 
-   ![Dış kullanıcı tarafından gerçekleştirilen tüm etkinlikleri arama.](../media/PassThroughAuth2.png)
+   ![Dış kullanıcı tarafından gerçekleştirilen tüm etkinlikleri arayın.](../media/PassThroughAuth2.png)
 
-    Kullanıcıyla oturum açma  etkinliklerine ek olarak, kuruluşta yer alan bir kullanıcının kaynakları dış kullanıcıyla paylaştığını ve dış kullanıcının kendileriyle paylaşılan bir belgeye erişip erişemediklerini, değiştirip indiremediklerini belirten diğer denetim kayıtları döndürülebilir.
+    **Kullanıcının oturum açtığı** etkinliklere ek olarak, kuruluşunuzdaki bir kullanıcının kaynakları dış kullanıcıyla paylaştığını ve dış kullanıcının kendisiyle paylaşılan bir belgeye erişip erişmediğini, değiştirdiğini veya indirdiğini belirten diğer denetim kayıtları döndürülebilir.
 
-- Bir SharePoint oturum açan kullanıcı tarafından tanımlanan dış kullanıcıyla paylaşılıyor olduğunu gösteren paylaşım etkinliklerini **aratır.** Daha fazla bilgi için [bkz. Denetim günlüğünde paylaşım denetimini kullanma](use-sharing-auditing.md).
+- Kullanıcının denetim kaydında oturum açtığı dış kullanıcıyla bir dosyanın paylaşıldığını belirten SharePoint paylaşım **etkinliklerini** arayın. Daha fazla bilgi için bkz. [Denetim günlüğünde paylaşım denetimini kullanma](use-sharing-auditing.md).
 
-- Dış kullanıcıyla ilgili diğer etkinlikleri aramak için Excel'i kullanmak üzere Excel kayıtları içeren denetim günlüğü arama sonuçlarını dışarı aktarın. Daha fazla bilgi için bkz  [. Denetim günlüğü kayıtlarını dışarı aktarma, yapılandırma ve görüntüleme](export-view-audit-log-records.md).
+- Dış kullanıcıyla ilgili diğer etkinlikleri aramak için Excel kullanabilmeniz için araştırmanızla ilgili kayıtları içeren denetim günlüğü arama sonuçlarını dışarı aktarın. Daha fazla bilgi için bkz.  [Denetim günlüğü kayıtlarını dışarı aktarma, yapılandırma ve görüntüleme](export-view-audit-log-records.md).
 
 ## <a name="search-for-mailbox-activities-performed-by-users-with-non-e5-licenses"></a>E5 lisansı olmayan kullanıcılar tarafından gerçekleştirilen posta kutusu etkinliklerini arama
 
-Sizin için [](enable-mailbox-auditing.md) posta kutusu denetimi varsayılan olarak açık olduğunda bile, bazı kullanıcılar için posta kutusu denetim olaylarının uyumluluk merkezi, **Search-UnifiedAuditLog** cmdlet'i veya Office 365 Yönetim Etkinliği API'si kullanılarak denetim günlüğü aramalarında bulunamadiğini farkabilirsiniz. Bunun nedeni, birleşik denetim günlüğünde arama yapmak için önceki yöntemlerden biri olduğunda, yalnızca E5 lisansı olan kullanıcılar için posta kutusu denetim olaylarının döndürülecek olmasıdır.
+Kuruluşunuzda [posta kutusu denetimi varsayılan olarak](enable-mailbox-auditing.md) açık olsa bile uyumluluk merkezini, **Search-UnifiedAuditLog** cmdlet'ini veya Office 365 Yönetim Etkinliği API'sini kullanarak bazı kullanıcılar için posta kutusu denetim olaylarının denetim günlüğü aramalarında bulunmadığını fark edebilirsiniz. Bunun nedeni, posta kutusu denetim olaylarının yalnızca birleştirilmiş denetim günlüğünde arama yapmak için önceki yöntemlerden biri olduğunda E5 lisansı olan kullanıcılar için döndürülecek olmasıdır.
 
-E5 olmayan kullanıcıların posta kutusu denetim günlüğü kayıtlarını almak için, aşağıdaki geçici çözümlerden birini gerçekleştirebilirsiniz:
+E5 olmayan kullanıcıların posta kutusu denetim günlüğü kayıtlarını almak için aşağıdaki geçici çözümlerden birini gerçekleştirebilirsiniz:
 
-- Tek tek posta kutularında posta kutusu denetimini el ile etkinleştirme (`Set-Mailbox -Identity <MailboxIdentity> -AuditEnabled $true`PowerShell'de Exchange Online çalıştırın). Bunu gerçekleştirdikten sonra, uyumluluk merkezini, **Search-UnifiedAuditLog** cmdlet'ini veya Office 365 Management Activity API'sini kullanarak arama yapar.
+- Tek tek posta kutularında posta kutusu denetimini el ile etkinleştirin (Exchange Online PowerShell'de komutunu çalıştırın`Set-Mailbox -Identity <MailboxIdentity> -AuditEnabled $true`). Bunu yaptıktan sonra uyumluluk merkezini, **Search-UnifiedAuditLog** cmdlet'ini veya Office 365 Yönetim Etkinliği API'sini kullanarak posta kutusu denetim etkinliklerini arayın.
   
   > [!NOTE]
-  > Posta kutusunda posta kutusu denetimi zaten etkinleştirilmiş gibi görünüyorsa, ancak aramanız hiçbir sonuç sonuç getirmiyorsa, _AuditEnabled_ `$false` parametresinin değerini 'a ve sonra yeniden seçin `$true`.
+  > Posta kutusu denetimi posta kutusunda zaten etkin görünüyorsa ancak aramalarınız sonuç döndürmezse _AuditEnabled_ parametresinin `$false` değerini olarak değiştirin ve sonra öğesine geri dönün `$true`.
   
 - Exchange Online PowerShell'de aşağıdaki cmdlet'leri kullanın:
 
-  - [Belirli kullanıcılar için posta kutusu denetim günlüğünde arama yapmak için Search-MailboxAuditLog](/powershell/module/exchange/search-mailboxauditlog) .
+  - Belirli kullanıcılar için posta kutusu denetim günlüğünde arama yapmak için [Search-MailboxAuditLog](/powershell/module/exchange/search-mailboxauditlog).
 
-  - [New-MailboxAuditLogSearch, belirli](/powershell/module/exchange/new-mailboxauditlogsearch) kullanıcılar için posta kutusu denetim günlüğünde arama yapmak ve sonuçların belirtilen alıcılara e-postayla gönderilmelerini sağlar.
+  - Belirli kullanıcılar için posta kutusu denetim günlüğünde arama yapmak ve sonuçların belirtilen alıcılara e-posta yoluyla gönderilmesini sağlamak için [New-MailboxAuditLogSearch](/powershell/module/exchange/new-mailboxauditlogsearch).
 
 ## <a name="search-for-mailbox-activities-performed-in-a-specific-mailbox-including-shared-mailboxes"></a>Belirli bir posta kutusunda gerçekleştirilen posta kutusu etkinliklerini arama (paylaşılan posta kutuları dahil)
 
-Denetim günlüğü arama aracında Denetim günlüğü arama aracında Kullanıcılar açılan listesini veya Exchange Online PowerShell'de **Search-UnifiedAuditLog -UserIds** komutunu kullanırken, belirli bir kullanıcı tarafından gerçekleştirilen etkinlikleri arayabilirsiniz. Posta kutusu denetim etkinlikleri için, bu tür bir arama, belirtilen kullanıcı tarafından gerçekleştirilen etkinlikleri aratır. Aynı posta kutusunda gerçekleştirilen tüm etkinliklerin arama sonuçlarında döndürülecek olması garanti değildir. Örneğin, denetim günlüğü araması temsilci kullanıcı tarafından gerçekleştirilen etkinlikler için denetim kayıtlarını geri dönmez, çünkü belirli bir kullanıcı tarafından gerçekleştirilen posta kutusu etkinlikleri için arama yapmak, başka bir kullanıcının posta kutusuna erişme izinleri atanmış olan temsilci kullanıcı tarafından gerçekleştirilen etkinlikleri geri dönmez. (Temsilci kullanıcı, başka bir kullanıcının posta kutusuna SendAs, SendOnBehalf veya FullAccess posta kutusu izni atanan kişidir.)
+Uyumluluk merkezindeki denetim günlüğü arama aracındaki **Kullanıcılar** açılan listesini veya Exchange Online PowerShell'deki **Search-UnifiedAuditLog -UserIds** komutunu kullandığınızda, belirli bir kullanıcı tarafından gerçekleştirilen etkinlikleri arayabilirsiniz. Posta kutusu denetim etkinlikleri için bu tür bir arama, belirtilen kullanıcı tarafından gerçekleştirilen etkinlikleri arar. Aynı posta kutusunda gerçekleştirilen tüm etkinliklerin arama sonuçlarında döndürüldüğünü garanti etmez. Örneğin, belirli bir kullanıcı tarafından gerçekleştirilen posta kutusu etkinlikleri arandığında başka bir kullanıcının posta kutusuna erişim izinleri atanmış bir temsilci kullanıcı tarafından gerçekleştirilen etkinlikler döndürülmeyeceği için, denetim günlüğü araması temsilci kullanıcı tarafından gerçekleştirilen etkinlikler için denetim kayıtlarını döndürmez. (Temsilci kullanıcı, başka bir kullanıcının posta kutusuna SendAs, SendOnBehalf veya FullAccess posta kutusu izni atanmış olan kişidir.)
 
-Ayrıca, denetim günlüğü  arama aracında veya **Search-UnifiedAuditLog -UserIds** içinde Kullanıcı açılan listesinin kullanımı, paylaşılan posta kutusunda gerçekleştirilen etkinliklere yönelik sonuçları sonuç olarak geri dönmez.
+Ayrıca, denetim günlüğü arama aracında veya **Search-UnifiedAuditLog -UserId'lerde** **Kullanıcı** açılan listesinin kullanılması, paylaşılan posta kutusunda gerçekleştirilen etkinlikler için sonuç döndürmez.
 
-Belirli bir posta kutusunda gerçekleştirilen etkinlikleri aramak veya paylaşılan bir posta kutusunda gerçekleştirilen etkinlikleri aramak için **, Search-UnifiedAuditLog** cmdlet'ini çalıştırmada aşağıdaki söz dizimini kullanın:
+Belirli bir posta kutusunda gerçekleştirilen etkinlikleri aramak veya paylaşılan posta kutusunda gerçekleştirilen etkinlikleri aramak için **Search-UnifiedAuditLog** cmdlet'ini çalıştırırken aşağıdaki söz dizimini kullanın:
 
 ```powershell
 Search-UnifiedAuditLog  -StartDate <date> -EndDate <date> -FreeText (Get-Mailbox <mailbox identity).ExchangeGuid
 ```
 
-Örneğin, aşağıdaki komut, Ağustos 2020 ile Ekim 2020 arasında Contoso Uyumluluk Ekibi paylaşılan posta kutusunda gerçekleştirilen etkinliklerin denetim kayıtlarını döndürür:
+Örneğin, aşağıdaki komut Ağustos 2020 ile Ekim 2020 arasında Contoso Uyumluluk Ekibi paylaşılan posta kutusunda gerçekleştirilen etkinliklerin denetim kayıtlarını döndürür:
 
 ```powershell
 Search-UnifiedAuditLog  -StartDate 08/01/2020 -EndDate 10/31/2020 -FreeText (Get-Mailbox complianceteam@contoso.onmicrosoft.com).ExchangeGuid
@@ -297,4 +297,4 @@ Aşağıdaki örnek, temsilci kullanıcılar tarafından belirtilen posta kutusu
 Search-MailboxAuditLog -Identity <mailbox identity> -StartDate <date> -EndDate <date> -LogonTypes Delegate -ShowDetails
 ```
 
-Ayrıca, denetim günlüğünde belirli bir posta kutusu için arama yapmak ve sonuçların belirli alıcılara e-postayla gönderilmelerini için **New-MailboxAuditLogSearch** cmdlet'ini de kullanabilirsiniz.
+**Ayrıca New-MailboxAuditLogSearch** cmdlet'ini kullanarak denetim günlüğünde belirli bir posta kutusunu arayabilir ve sonuçların belirtilen alıcılara e-posta yoluyla gönderilmesini sağlayabilirsiniz.

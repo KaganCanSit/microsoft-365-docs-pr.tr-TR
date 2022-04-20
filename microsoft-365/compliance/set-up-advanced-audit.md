@@ -1,5 +1,5 @@
 ---
-title: Gelişmiş Denetim'i Microsoft 365
+title: Microsoft 365'de Denetimi (Premium) ayarlama
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -19,58 +19,58 @@ ms.custom: admindeeplinkMAC
 search.appverid:
 - MOE150
 - MET150
-description: Bu makalede, kullanıcı hesaplarının güvenliği ihlal edilmişken veya güvenlikle ilgili diğer olayları araştırmanız için araştırma araştırma gerçekleştirmek üzere Gelişmiş Denetim'in nasıl ayarıldığı açıklanmıştır.
-ms.openlocfilehash: dafe53161e04f28f2f5e4ff8dcfa71bab6c1a1f1
-ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
+description: Bu makalede, kullanıcı hesapları tehlikeye atıldığında veya güvenlikle ilgili diğer olayları araştırmak için adli incelemeler yapabilmeniz için Denetimin (Premium) nasıl ayarlanacağı açıklanır.
+ms.openlocfilehash: 9e758ce6a830569b007ee024e17abdddbce01f13
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63754571"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64945857"
 ---
-# <a name="set-up-advanced-audit-in-microsoft-365"></a>Gelişmiş Denetim'i Microsoft 365
+# <a name="set-up-microsoft-purview-audit-premium"></a>Microsoft Purview Denetimini Ayarlama (Premium)
 
-Kuruluşta Gelişmiş Denetimi destekleyen bir abonelik ve son kullanıcı lisansı varsa, Gelişmiş Denetim'de ek özellikleri ayarlamak ve kullanmak için aşağıdaki adımları uygulayın.
+Kuruluşunuzun Denetimi (Premium) destekleyen bir aboneliği ve son kullanıcı lisansı varsa, Denetim (Premium) bölümündeki ek özellikleri ayarlamak ve kullanmak için aşağıdaki adımları gerçekleştirin.
 
-![Gelişmiş Denetimi ayarlamak için iş akışı.](../media/AdvancedAuditWorkflow.png)
+![Denetimi ayarlamak için iş akışı (Premium).](../media/AdvancedAuditWorkflow.png)
 
-## <a name="step-1-set-up-advanced-audit-for-users"></a>1. Adım: Kullanıcılar için Gelişmiş Denetimi ayarlama
+## <a name="step-1-set-up-audit-premium-for-users"></a>1. Adım: Kullanıcılar için Denetim (Premium) ayarlama
 
-MailItemsAccessed ve Send gibi önemli olayları günlüğe yazma yeteneği gibi gelişmiş Denetim özellikleri, kullanıcılara uygun bir E5 lisansı atamayı gerektirir. Buna ek olarak, bu kullanıcılar için Gelişmiş Denetim uygulaması/hizmet planı da etkinleştirilmelidir. Gelişmiş Denetim uygulamasının kullanıcılara atanıyor olduğunu doğrulamak için, her kullanıcı için aşağıdaki adımları uygulayın:
+MailItemsAccessed ve Send gibi önemli olayları günlüğe kaydetme özelliği gibi denetim (Premium) özellikleri için kullanıcılara uygun bir E5 lisansı atanması gerekir. Ayrıca, bu kullanıcılar için Gelişmiş Denetim uygulaması/hizmet planı etkinleştirilmelidir. Gelişmiş Denetim uygulamasının kullanıcılara atandığını doğrulamak için her kullanıcı için aşağıdaki adımları uygulayın:
 
-1. Etkin Microsoft 365 yönetim merkezi **Kullanıcılar'a** >  <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">**gidin ve**</a> bir kullanıcı seçin.
+1. Microsoft 365 yönetim merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">**KullanıcılarEtkin**</a> >  kullanıcılar'a gidin ve bir kullanıcı seçin.
 
-2. Kullanıcı özellikleri uç sayfasında Lisanslar ve **uygulamalar'a tıklayın**.
+2. Kullanıcı özellikleri açılır sayfasında **Lisanslar ve uygulamalar'a** tıklayın.
 
-3. Lisanslar **bölümünde** , kullanıcıya E5 lisansı atanarak veya uygun bir eklenti lisansı atanarak atan olduğunu doğrulayın. Gelişmiş Denetimi destekleyen lisansların listesi için bkz. [Gelişmiş Denetim lisans gereksinimleri](auditing-solutions-overview.md#advanced-audit-1).
+3. **Lisanslar** bölümünde, kullanıcıya bir E5 lisansı atandığını veya uygun bir eklenti lisansı atandığını doğrulayın. Denetim (Premium) destekleyen lisansların listesi için bkz. [Denetim (Premium) lisans gereksinimleri](auditing-solutions-overview.md#audit-premium-1).
 
-4. Uygulamalar **bölümünü** genişletin ve Gelişmiş Denetim onay **Microsoft 365 kutusunun seçili** olduğunu doğrulayın.
+4. **Uygulamalar** bölümünü genişletin ve **gelişmiş denetim Microsoft 365** onay kutusunun seçili olduğunu doğrulayın.
 
-5. Onay kutusu seçili değilse, onay kutusunu seçin ve ardından Değişiklikleri **kaydet'e tıklayın.**
+5. Onay kutusu seçili değilse, onay kutusunu seçin ve ardından **Değişiklikleri kaydet'e tıklayın.**
 
-   MailItemsAccessed ve Send için denetim kayıtlarının günlüğü 24 saat içinde başlar. Diğer iki Gelişmiş Denetim olayını günlüğe kaydetmeye başlamak için 3. Adımı gerçekleştirmeniz gerek: SearchQueryInitiatedExchange ve SearchQueryInitiatedSharePoint.
+   MailItemsAccessed ve Send denetim kayıtlarının günlüğe kaydedilmesi 24 saat içinde başlar. Diğer iki Audit (Premium) olayını günlüğe kaydetmeye başlamak için 3. Adımı gerçekleştirmeniz gerekir: SearchQueryInitiatedExchange ve SearchQueryInitiatedSharePoint.
 
-Ayrıca, kullanıcı posta kutularından veya paylaşılan posta kutularından oturum açan posta kutusu eylemlerini özelleştirmiş durumdaysanız, Microsoft tarafından yayımlanan tüm yeni Gelişmiş Denetim olayları bu posta kutularından otomatik olarak denetlenz. Her oturum açma türü için denetlenen posta kutusu eylemlerini değiştirme hakkında bilgi için Posta kutusu denetimini yönetme'nin "Varsayılan olarak günlüğe kaydedilen posta kutusu eylemlerini değiştirme veya geri yükleme" [bölümüne bakın](enable-mailbox-auditing.md#change-or-restore-mailbox-actions-logged-by-default).
+Ayrıca, kullanıcı posta kutularında veya paylaşılan posta kutularında oturum açan posta kutusu eylemlerini özelleştirdiyseniz, Microsoft tarafından yayımlanan yeni Denetim (Premium) olayları bu posta kutularında otomatik olarak denetlenmeyecek. Her oturum açma türü için denetlenen posta kutusu eylemlerini değiştirme hakkında bilgi için, Posta kutusu [denetimini yönetme](enable-mailbox-auditing.md#change-or-restore-mailbox-actions-logged-by-default) bölümündeki "Varsayılan olarak günlüğe kaydedilen posta kutusu eylemlerini değiştirme veya geri yükleme" bölümüne bakın.
 
-## <a name="step-2-enable-advanced-audit-events"></a>2. Adım: Gelişmiş Denetim olaylarını etkinleştirme
+## <a name="step-2-enable-audit-premium-events"></a>2. Adım: Denetim (Premium) olaylarını etkinleştirme
 
-Kullanıcılar Exchange Online SharePoint Online'da arama gerçekleştirebilirken, iki Gelişmiş Denetim olaylar (SearchQueryInitiatedExchange ve SearchQueryInitiatedSharePoint) günlüğe SharePoint gerekir. Bu iki olay kullanıcılar için denetlenebilir olarak etkinleştirmek için, powershell'de aşağıdaki komutu (her kullanıcı [için) Exchange Online çalıştırın](/powershell/exchange/connect-to-exchange-online-powershell):
+Kullanıcılar Exchange Online ve SharePoint Online'da arama yaparken iki Audit (Premium) olayının (SearchQueryInitiatedExchange ve SearchQueryInitiatedSharePoint) günlüğe kaydedilmesini etkinleştirmeniz gerekir. Bu iki olayın kullanıcılar için denetlenebilmesini sağlamak için [PowerShell'Exchange Online](/powershell/exchange/connect-to-exchange-online-powershell) aşağıdaki komutu (her kullanıcı için) çalıştırın:
 
 ```powershell
 Set-Mailbox <user> -AuditOwner @{Add="SearchQueryInitiated"}
 ```
 
-Çok coğrafi bir ortamda, kullanıcının posta kutusunun bulunduğu ormanın **önceki Set-Mailbox** komutunu çalıştırmanız gerekir. Kullanıcının posta kutusu konumunu tanımlamak için aşağıdaki komutu çalıştırın: 
+Çok coğrafi bir ortamda, kullanıcının posta kutusunun bulunduğu ormanda önceki **Set-Mailbox** komutunu çalıştırmanız gerekir. Kullanıcının posta kutusu konumunu belirlemek için aşağıdaki komutu çalıştırın: 
 
 ```powershell
 Get-Mailbox <user identity> | FL MailboxLocations
 ```
 
-Arama sorguları denetimini etkinleştirme komutu daha önce kullanıcının posta kutusundan farklı bir orman içinde çalıştırıldısa, çalıştırarak kullanıcının posta kutusundan SearchQueryInitiated `Set-Mailbox -AuditOwner @{Remove="SearchQueryInitiated"}` değerini kaldırmanız ve sonra da bu değeri kullanıcının posta kutusunun bulunduğu orman içinde kullanıcının posta kutusuna eklemeniz gerekir.
+Arama sorgularının denetimini etkinleştirme komutu daha önce kullanıcının posta kutusunun bulunduğundan farklı bir ormanda çalıştırıldıysa, komutunu çalıştırarak `Set-Mailbox -AuditOwner @{Remove="SearchQueryInitiated"}` kullanıcının posta kutusundan SearchQueryInitiated değerini kaldırmanız ve ardından kullanıcının posta kutusunun bulunduğu ormandaki kullanıcının posta kutusuna eklemeniz gerekir.
 
-## <a name="step-3-set-up-audit-retention-policies"></a>3. Adım: Denetim bekletme ilkelerini ayarlama
+## <a name="step-3-set-up-audit-retention-policies"></a>3. Adım: Denetim saklama ilkelerini ayarlama
 
-Exchange, SharePoint ve Azure AD denetim kayıtlarını bir yıl süreyle alıkoyan varsayılan ilkeye ek olarak, kuruluşun güvenlik işlemleri, IT ve uyumluluk ekiplerinin gereksinimlerini karşılamak için ek denetim günlüğü bekletme ilkeleri oluşturabilirsiniz. Daha fazla bilgi için bkz [. Denetim günlüğü bekletme ilkelerini yönetme](audit-log-retention-policies.md).
+Exchange, SharePoint ve Azure AD denetim kayıtlarını bir yıl boyunca saklayan varsayılan ilkeye ek olarak, kuruluşunuzun güvenlik operasyonları, BT ve uyumluluk ekiplerinin gereksinimlerini karşılamak için ek denetim günlüğü saklama ilkeleri oluşturabilirsiniz. Daha fazla bilgi için bkz. [Denetim günlüğü saklama ilkelerini yönetme](audit-log-retention-policies.md).
 
-## <a name="step-4-search-for-advanced-audit-events"></a>4. Adım: Gelişmiş Denetim olaylarını arama
+## <a name="step-4-search-for-audit-premium-events"></a>4. Adım: Denetim (Premium) olaylarını arama
 
-Artık organizasyon için Gelişmiş Denetim'i ayara sahip olduğunuz için araştırma araştırmalarında çok önemli Gelişmiş Denetim olayları ve diğer etkinlikleri arayabilirsiniz. 1. Adım ve 2. Adımı tamamladıktan sonra, güvenliği tehlikeye atılmış hesaplarda ve diğer türlerde güvenlik ve uyumluluk soruşturmaları ile ilgili araştırmalarda Gelişmiş Denetim olayları ve diğer etkinlikler için denetim günlüğünde arama gerçekleştirebilirsiniz. MailItemsAccessed Advanced Audit olayı kullanarak güvenliği ihlal edilmiş kullanıcı hesapları hakkında araştırma yapmak hakkında daha fazla bilgi için, Güvenliği ihlal edilmiş hesapları araştırmak için Gelişmiş [Denetim'i kullanma'ya bakın](mailitemsaccessed-forensics-investigations.md).
+Kuruluşunuz için Denetim (Premium) ayarladığınıza göre, adli araştırma yaparken kritik Denetim (Premium) olayları ve diğer etkinlikleri arayabilirsiniz. 1. Adım ve 2. Adım'ı tamamladıktan sonra, güvenliği aşılmış hesapların ve diğer güvenlik veya uyumluluk araştırmalarının adli araştırmaları sırasında denetim günlüğünde Denetim (Premium) olayları ve diğer etkinlikler için arama yapabilirsiniz. MailItemsAccessed Audit (Premium) olayını kullanarak güvenliği aşılmış kullanıcı hesaplarıyla ilgili adli inceleme yürütme hakkında daha fazla bilgi için bkz. [Güvenliği aşılmış hesapları araştırmak için Denetimi (Premium) Kullanma](mailitemsaccessed-forensics-investigations.md).

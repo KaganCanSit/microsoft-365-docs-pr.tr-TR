@@ -1,5 +1,5 @@
 ---
-title: Güvenliği ihlal edilmiş hesapları araştırmak için Gelişmiş Denetim'i kullanma
+title: Güvenliği aşılmış hesapları araştırmak için Denetim (Premium) kullanma
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -15,56 +15,56 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Güvenliği ihlal edilmiş kullanıcı hesapları üzerinde araştırma yapmak için MailItemsAccessed posta kutusu denetim eylemlerini kullanın.
-ms.openlocfilehash: 8bfba164bf3bfb0f4fa4bea687d0fe040cff4836
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+description: Güvenliği aşılmış kullanıcı hesaplarının adli araştırmalarını gerçekleştirmek için MailItemsAccessed posta kutusu denetim eylemini kullanın.
+ms.openlocfilehash: 658a4b079bd7909f8436867efd86d3ac04d61aa2
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63019474"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64946209"
 ---
-# <a name="use-advanced-audit-to-investigate-compromised-accounts"></a>Güvenliği ihlal edilmiş hesapları araştırmak için Gelişmiş Denetim'i kullanma
+# <a name="use-microsoft-purview-audit-premium-to-investigate-compromised-accounts"></a>Güvenliği aşılmış hesapları araştırmak için Microsoft Purview Denetimi'ni (Premium) kullanma
 
-Güvenliği tehlikeye atılmış bir kullanıcı hesabı (hesap ele alma olarak da *adlandırılan), bir* saldırgan bir kullanıcı hesabına erişim kazanır ve kullanıcı olarak çalışırsa saldırıya bir tür saldırıdır. Bu tür saldırılar bazen saldırgan hedeflenenden daha fazla hasara neden olur. Güvenliği tehlikeye atılmış e-posta hesaplarını incelerken, saldırganın gerçek iletişim durumu izleniyorsa, güvenliğin ihlal edilmiş olduğunu varsayın. E-posta iletilerinde verilerin türüne bağlı olarak, hassas bilgilerin açığa çıkar olmadığını kanıtlamak için hassas bilgilerin tehlikeye atılmış olduğunu veya mevzuatla ilgili hukuki düzenlemelere tabi olduğunu varsayabilirsiniz. Örneğin, HIPAA'ya göre düzenlemeye tabi kuruluşlar hasta durumu bilgisinin (PHI) ortaya çıkar olduğuna dair kanıt varsa önemli ince bilgilerle karşı karşıya olur. Bu gibi durumlarda, saldırganların PHI ile ilgilenmesi pek mümkün değildir, ancak kuruluşlar aksini kanıtlamak zorunda olmadıkça yine de veri ihlallerini bildirmeleri gerekir.
+Güvenliği aşılmış kullanıcı hesabı ( *hesap devralma* olarak da adlandırılır), bir saldırganın bir kullanıcı hesabına erişim kazanması ve kullanıcı olarak çalışması bir saldırı türüdür. Bu tür saldırılar bazen saldırganın hedefleyenden daha fazla hasara neden olur. Güvenliği aşılmış e-posta hesaplarını araştırırken, saldırganın gerçek iletişim durumunu izleyerek belirtilebilenden daha fazla posta verisinin gizliliğinin ihlal edildiği varsayılmalıdır. E-posta iletilerindeki verilerin türüne bağlı olarak, hassas bilgilerin açığa çıkmadığını kanıtlayamadığınız sürece hassas bilgilerin gizliliğinin ihlal edildiği veya yasal düzenleme cezalarıyla karşı karşıya kalındığını varsaymanız gerekir. Örneğin HIPAA tarafından düzenlenen kuruluşlar, hasta sağlığı bilgilerinin (PHI) açığa çıkarıldığına dair kanıt varsa önemli para cezalarıyla karşı karşıya kalır. Bu gibi durumlarda saldırganların PHI ile ilgilenme olasılığı düşüktür ancak aksini kanıtlayamadığı sürece kuruluşların yine de veri ihlallerini bildirmesi gerekir.
 
-Güvenliğin tehlikeye e-posta hesaplarını araştırmanıza yardımcı olmak için, artık *MailItemsAccessed* posta kutusu denetim eylemiyle posta protokolleri ve istemciler yoluyla posta verileri erişimlerini denetlemektedir. Bu yeni denetimli eylem, e-posta veri ihlallerini daha iyi anlamanıza ve güvenliğin tehlikeye atılmış olduğu belirli posta öğeleri için güvenlik ihlallerinin kapsamını belirlemeye yardımcı olacaktır. Bu yeni denetim eylemlerini kullanmanın amacı, belirli bir posta veri parçasının ihlal olmadığını onaylamaya yardımcı olmak için ihlallere karşıtlıktır. Bir saldırgan belirli bir posta parçasına erişim kazandısa, Exchange Online öğenin okundu olduğuna dair bir gösterge yoktur ancak bu olayı denetimler.
+Güvenliği aşılmış e-posta hesaplarını araştırmanıza yardımcı olmak için posta protokolleri ve *mailItemsAccessed* posta kutusu denetimi eylemiyle istemciler tarafından posta verilerinin erişimlerini denetleyeceğiz. Bu yeni denetlenen eylem, araştırmacıların e-posta veri ihlallerini daha iyi anlamasına yardımcı olur ve gizliliği tehlikeye girmiş olabilecek belirli posta öğelerine yönelik güvenlik ihlallerinin kapsamını belirlemenize yardımcı olur. Bu yeni denetim eylemini kullanmanın amacı, belirli bir posta verisi parçasının gizliliğinin tehlikeye atılmadığını onaylamaya yardımcı olmak için adli incelemenin güvenilirliğidir. Bir saldırgan belirli bir posta parçasına erişim elde ettiyse, Exchange Online posta öğesinin okunduğuna dair bir gösterge olmasa bile olayı denetler.
 
-## <a name="the-mailitemsaccessed-mailbox-auditing-action"></a>MailItemsAccessed posta kutusu denetim eylemi
+## <a name="the-mailitemsaccessed-mailbox-auditing-action"></a>MailItemsAccessed posta kutusu denetimi eylemi
 
-Yeni MailItemsAccessed eylemi, yeni Gelişmiş Denetim [işlevinin bir](advanced-audit.md) parçasıdır. [Bu, Exchange posta](/office365/securitycompliance/enable-mailbox-auditing#mailbox-auditing-actions) kutusu denetiminin bir bölümüdür ve Office 365 veya Microsoft 365 E5 lisansı atanan kullanıcılar için ya da Microsoft 365 E5 Uyumluluk eklenti aboneliği olan kuruluşlar için varsayılan olarak etkinleştirilir.
+Yeni MailItemsAccessed eylemi, yeni [Denetim (Premium)](advanced-audit.md) işlevinin bir parçasıdır. [Exchange posta kutusu denetiminin](/office365/securitycompliance/enable-mailbox-auditing#mailbox-auditing-actions) bir parçasıdır ve Office 365 veya Microsoft 365 E5 lisansı atanmış kullanıcılar ya da Microsoft 365 E5 Uyumluluk eklenti aboneliği olan kuruluşlar için varsayılan olarak etkinleştirilir.
 
-MailItemsAccessed posta kutusu denetim eylemi tüm posta protokollerini kapsar: POP, IMAP, MAPI, EWS, Exchange ActiveSync REST. Ayrıca postaya erişim her iki türü de kapsar: *eşitleme* ve *bağlama*.
+MailItemsAccessed posta kutusu denetimi eylemi tüm posta protokollerini kapsar: POP, IMAP, MAPI, EWS, Exchange ActiveSync ve REST. Ayrıca, postaya erişmenin her iki türünü de kapsar: *eşitleme* ve *bağlama*.
 
 ### <a name="auditing-sync-access"></a>Eşitleme erişimini denetleme
 
-Eşitleme işlemleri yalnızca posta kutusuna Mac veya Mac için Outlook istemcisinin masaüstü sürümü tarafından Windows kaydedilir. Eşitleme işlemi sırasında, bu istemciler genellikle buluttan büyük bir posta öğeleri kümesi yerel bilgisayara indirir. Eşitleme işlemleri için denetim hacmi çok büyük. Eşitlenen her posta öğesi için bir denetim kaydı oluşturmak yerine, eşitlenen öğelerin bulunduğu posta klasörü için bir denetim olayı oluşturur ve eşitlenen klasördeki tüm posta öğelerinin tehlikeye atılmış olduğunu varsayalım. Erişim türü denetim kaydının OperationProperties alanına kaydedilir.
+Eşitleme işlemleri yalnızca posta kutusuna Windows veya Mac için Outlook istemcisinin masaüstü sürümü tarafından erişildiğinde kaydedilir. Eşitleme işlemi sırasında bu istemciler genellikle buluttan yerel bir bilgisayara büyük bir posta öğeleri kümesi indirir. Eşitleme işlemleri için denetim hacmi çok büyük. Bu nedenle, eşitlenen her posta öğesi için bir denetim kaydı oluşturmak yerine, eşitlenmiş öğeleri içeren posta klasörü için bir denetim olayı oluşturur ve eşitlenen klasördeki *tüm* posta öğelerinin güvenliğinin aşıldığını varsayarız. Erişim türü, denetim kaydının OperationProperties alanına kaydedilir.
 
-Bir denetim kaydında eşitleme erişim türünü görüntüleme örneği için, Araştırma araştırmalarına ilişkin [MailItemsAccessed](#use-mailitemsaccessed-audit-records-for-forensic-investigations) denetim kayıtlarını kullanma bölümündeki 2. adıma bakın.
+Eşitleme erişim türünü bir denetim kaydında görüntüleme örneği [için, MailItemsAccessed audit records for forensic investigations](#use-mailitemsaccessed-audit-records-for-forensic-investigations) bölümündeki 2. adıma bakın.
 
 ### <a name="auditing-bind-access"></a>Bağlama erişimini denetleme
 
-Bağlama işlemi, e-posta iletisine tek tek erişimdir. Bağlama erişimi için, tek tek iletilerin InternetMessageId'i denetim kaydına kaydedilir. MailItemsAccessed denetim eylemi kayıtları işlemleri bağlar ve sonra tek bir denetim kaydında bir araya gönderir. 2 dakikalık bir aralıkta oluşan tüm bağlama işlemleri, AuditData özelliği içindeki Klasörler alanında tek bir denetim kaydında toplanır. Erişilen her ileti InternetMessageId tarafından tanımlanır. Kayıtta toplanan bağlama işlemlerinin sayısı DenetimVerileri özelliğinin OperationCount alanında görüntülenir.
+Bağlama işlemi, e-posta iletisine tek tek erişimdir. Bağlama erişimi için, tek tek iletilerin InternetMessageId değeri denetim kaydına kaydedilir. MailItemsAccessed denetim eylemi, bağlama işlemlerini kaydeder ve ardından tek bir denetim kaydında toplanır. 2 dakikalık bir aralık içinde gerçekleşen tüm bağlama işlemleri, AuditData özelliğindeki Klasörler alanındaki tek bir denetim kaydında toplanır. Erişilen her ileti kendi InternetMessageId değeriyle tanımlanır. Kayıtta toplanan bağlama işlemlerinin sayısı, AuditData özelliğinin OperationCount alanında görüntülenir.
 
-Bir denetim kaydında bağlama erişim türünü görüntüleme örneği için, Araştırma araştırmalarında araştırmalara ilişkin [MailItemsAccessed](#use-mailitemsaccessed-audit-records-for-forensic-investigations) denetim kayıtlarını kullanma bölümündeki 4. adıma bakın.
+Bağlama erişim türünü bir denetim kaydında görüntüleme örneği [için, MailItemsAccessed audit records for forensic investigations](#use-mailitemsaccessed-audit-records-for-forensic-investigations) bölümündeki 4. adıma bakın.
 
-### <a name="throttling-of-mailitemsaccessed-audit-records"></a>MailItemsAccessed denetim kayıtlarını azaltma
+### <a name="throttling-of-mailitemsaccessed-audit-records"></a>MailItemsAccessed denetim kayıtlarının azaltması
 
-1.000'den fazla MailItemsAccessed denetim kaydı 24 saatten kısa sürede oluşturulursa, Exchange Online MailItemsAccessed etkinliği için denetim kayıtları oluşturmayacaktır. Posta kutusu kısıtlanmazsa, posta kutusu kısıtlandıktan sonra MailItemsAccessed etkinliği 24 saat süreyle günlüğe kaydedilmez. Posta kutusu kısıtlandı ise, bu süre boyunca posta kutusunun güvenliği ihlal edilmiş olabilir. MailItemsAccessed etkinliğinin kaydı, 24 saatlik bir süre sonra sürdürülecek.
+24 saatten kısa bir süre içinde 1.000'den fazla MailItemsAccessed denetim kaydı oluşturulursa, Exchange Online MailItemsAccessed etkinliği için denetim kayıtlarının oluşturulmasını durdurur. Posta kutusu kısıtlandığında MailItemsAccessed etkinliği, posta kutusu kısıtlandıktan sonra 24 saat boyunca günlüğe kaydedilmez. Posta kutusu kısıtlandıysa, bu süre boyunca posta kutusunun güvenliği aşılmış olabilir. MailItemsAccessed etkinliğinin kaydı 24 saatlik bir süre sonra sürdürülür.
 
-İşte azaltma hakkında gözlerde tutmamız gereken birkaç şey:
+Azaltma hakkında göz önünde bulundurmanız gereken birkaç şey şunlardır:
 
-- E-posta Exchange Online posta kutularının %1'inden daha az azaltma
-- Posta kutusu azaltma olduğunda, MailItemsAccessed etkinliğinin yalnızca denetim kayıtları denetlenz. Diğer posta kutusu denetim eylemleri etkilenmez.
-- Posta kutuları yalnızca Bağlama işlemleri için kısıtlandı. Eşitleme işlemlerinin denetim kayıtları kısıtlanmaz.
-- Bir posta kutusu kısıtlandı ise, büyük olasılıkla denetim günlüklerine kaydedilemeyen MailItemsAccessed etkinliği olduğunu varsayabilirsiniz.
+- Exchange Online içindeki tüm posta kutularının %1'inden azı kısıtlandı
+- Posta kutusu azaltıldığında, yalnızca MailItemsAccessed etkinliği için denetim kayıtları denetlenmiyor. Diğer posta kutusu denetim eylemleri etkilenmez.
+- Posta kutuları yalnızca Bağlama işlemleri için kısıtlanmıştır. Eşitleme işlemleri için denetim kayıtları kısıtlanmaz.
+- Bir posta kutusu kısıtlanırsa, büyük olasılıkla denetim günlüklerine kaydedilmemiş MailItemsAccessed etkinliği olduğunu varsayabilirsiniz.
 
-Bir denetim kaydında IsThrottled özelliğini görüntüleme örneği için, Araştırma araştırmalarında [MailItemsAccessed](#use-mailitemsaccessed-audit-records-for-forensic-investigations) denetim kayıtlarını kullanma bölümündeki 1. adıma bakın.
+Bir denetim kaydında IsThrottled özelliğini görüntüleme örneği [için, Adli araştırmalar için MailItemsAccessed denetim kayıtlarını kullanma](#use-mailitemsaccessed-audit-records-for-forensic-investigations) bölümündeki 1. adıma bakın.
 
-## <a name="use-mailitemsaccessed-audit-records-for-forensic-investigations"></a>Araştırma araştırmalarında MailItemsAccessed denetim kayıtlarını kullanma
+## <a name="use-mailitemsaccessed-audit-records-for-forensic-investigations"></a>Adli araştırmalar için MailItemsAccessed denetim kayıtlarını kullanma
 
-Posta kutusu denetimi, e-posta iletilerine erişim için denetim kayıtları üretir ve böylelikle e-posta iletilerinin güvenliği ihlal edilmiş bile olabilir. Bu nedenle, bazı verilere erişilen durumlarda, tüm posta erişimi etkinliğini kaydederek bu verilere erişilemedik varsayıldı.
+Posta kutusu denetimi, e-posta iletilerinin gizliliğinin ihlal edilmediğinden emin olabilmeniz için e-posta iletilerine erişim için denetim kayıtları oluşturur. Bu nedenle, bazı verilere erişildiğinden emin olmadığımız durumlarda, tüm posta erişim etkinliklerini kaydederek olduğunu varsayarız.
 
-Ihlaller için MailItemsAccessed denetim kayıtları genellikle bir veri ihlali çözülmüş ve saldırgan çıkarıldığı zaman gerçekleştirilir. Araştırmanıza başlamak için ele geçirildikleri posta kutularını belirlemeli ve saldırganların organizasyonu posta kutularına erişimleri olduğunda zaman dilimini belirlemelisiniz. Ardından, [Exchange Online PowerShell'de](/powershell/exchange/connect-to-exchange-online-powershell) **Search-UnifiedAuditLog** veya **Search-MailboxAuditLog** cmdlet'lerini kullanarak veri ihlaline karşılık gelen denetim kayıtlarını arayabilirsiniz.
+MailItemsAccessed denetim kayıtlarının adli amaçlarla kullanılması genellikle bir veri ihlali çözüldükten ve saldırgan çıkarıldıktan sonra gerçekleştirilir. Araştırmanıza başlamak için ele geçirilen posta kutuları kümesini belirlemeniz ve saldırganın kuruluşunuzdaki posta kutularına ne zaman eriştiğine ilişkin zaman dilimini belirlemeniz gerekir. Ardından, veri ihlaline karşılık gelen denetim kayıtlarında arama yapmak için [Exchange Online PowerShell'deki](/powershell/exchange/connect-to-exchange-online-powershell) **Search-UnifiedAuditLog** veya **Search-MailboxAuditLog** cmdlet'lerini kullanabilirsiniz.
 
 MailItemsAccessed denetim kayıtlarını aramak için aşağıdaki komutlardan birini çalıştırabilirsiniz:
 
@@ -81,13 +81,13 @@ Search-MailboxAuditLog -Identity <user> -StartDate 01/06/2020 -EndDate 01/20/202
 ```
 
 > [!TIP]
-> Bu iki cmdlet arasındaki, bir veya birden çok kullanıcı tarafından gerçekleştirilen etkinliklere yönelik denetim kayıtlarını aramak için **Search-UnifiedAuditLog** cmdlet'ini kullanabileceğiniz en önemli fark. Bunun nedeni, *UserIds'nin* çok değerli bir parametredir. **Search-MailboxAuditLog** cmdlet'i, posta kutusu denetim günlüğünde tek bir kullanıcı arar.
+> Bu iki cmdlet arasındaki birincil farklardan biri, bir veya daha fazla kullanıcı tarafından gerçekleştirilen etkinliğin denetim kayıtlarını aramak için **Search-UnifiedAuditLog** cmdlet'ini kullanabilmenizdir. Bunun nedeni *UserIds'in* çok değerli bir parametre olmasıdır. **Search-MailboxAuditLog** cmdlet'i, posta kutusu denetim günlüğünde tek bir kullanıcı arar.
 
-Güvenliği ihlal edilmiş kullanıcı saldırılarını araştırmak için MailItemsAccessed denetim kayıtlarını kullanma adımları şu şekildedir. Her adım, **Search-UnifiedAuditLog** veya **Search-MailboxAuditLog** cmdlet'leri için komut söz dizimi gösterir.
+Güvenliği aşılmış bir kullanıcı saldırısını araştırmak için MailItemsAccessed denetim kayıtlarını kullanma adımları aşağıdadır. Her adım **Search-UnifiedAuditLog** veya **Search-MailboxAuditLog** cmdlet'leri için komut söz dizimini gösterir.
 
-1. Posta kutusunun kısıtsız olup olmadığını kontrol edin. Bu durumda, bu bazı posta kutusu denetim kayıtlarının günlüğe kaydedilene anlamına geliyor. Denetim kayıtlarında "IsThrottled" olması durumunda, kayıt oluşturulurken 24 saatlik bir süre için bu kaydın denetlen olmadığını ve tüm posta verilerine erişimin ihlal edilmiş olduğunu varsayın.
+1. Posta kutusunun kısıtlanıp kısıtlanmamış olduğunu denetleyin. Bu durumda, bu bazı posta kutusu denetim kayıtlarının günlüğe kaydedilmeyeceği anlamına gelir. Herhangi bir denetim kaydının "IsThrottled" değeri "True" olduğunda, bu kaydın oluşturulmasından sonra 24 saatlik bir süre boyunca posta kutusuna erişimin denetlenmediğini ve tüm posta verilerinin gizliliğinin ihlal edildiğini varsaymalısınız.
 
-   Posta kutusunun kısıtlandı olduğu MailItemsAccessed kayıtlarını aramak için aşağıdaki komutu çalıştırın:
+   Posta kutusunun kısıtlandığı MailItemsAccessed kayıtlarını aramak için aşağıdaki komutu çalıştırın:
 
    **Birleşik denetim günlüğü**:
 
@@ -101,9 +101,9 @@ Güvenliği ihlal edilmiş kullanıcı saldırılarını araştırmak için Mail
    Search-MailboxAuditLog -StartDate 01/06/2020 -EndDate 01/20/2020 -Identity <user> -Operations MailItemsAccessed -ResultSize 10000 -ShowDetails | Where {$_.OperationProperties -like "*IsThrottled:True*"} | FL
    ```
 
-2. Eşitleme etkinliklerini denetleme. Bir saldırgan bir e-posta istemcisi kullanarak iletileri bir posta kutusuna indirdiyse, sunucunun İnternet bağlantısını keserek ve sunucuyla etkileşim kurmadan iletilere yerel olarak erişim sağlar. Bu durumda, posta kutusu denetimi bu etkinlikleri denetlemez.
+2. Eşitleme etkinliklerini denetleyin. Bir saldırgan, posta kutusuna ileti yüklemek için e-posta istemcisi kullanıyorsa, bilgisayarın İnternet bağlantısını kesebilir ve sunucuyla etkileşim kurmadan iletilere yerel olarak erişebilir. Bu durumda, posta kutusu denetimi bu etkinlikleri denetleyemez.
 
-   Eşitleme işlemiyle posta öğelerine erişilen MailItemsAccessed kayıtlarını aramak için aşağıdaki komutu çalıştırın:
+   Posta öğelerine bir eşitleme işlemi tarafından erişilen MailItemsAccessed kayıtlarını aramak için aşağıdaki komutu çalıştırın:
 
    **Birleşik denetim günlüğü**:
 
@@ -117,9 +117,9 @@ Güvenliği ihlal edilmiş kullanıcı saldırılarını araştırmak için Mail
    Search-MailboxAuditLog -StartDate 01/06/2020 -EndDate 01/20/2020 -Identity <user> -Operations MailItemsAccessed -ResultSize 10000 -ShowDetails | Where {$_.OperationProperties -like "*MailAccessType:Sync*"} | FL
    ```
 
-3. Eşitleme etkinliklerinden herhangi birinin, saldırgan tarafından posta kutusuna erişen etkinlikle aynı bağlamda olup olmadığını belirlemek için kontrol edin. Bağlam, posta kutusuna ve posta protokolüne erişmek için kullanılan istemci bilgisayarın IP adresiyle tanımlanır ve farklı kullanılır. Daha fazla bilgi için Farklı [denetim kayıtlarının erişim bağlamlarını tanımlama bölümüne](#identifying-the-access-contexts-of-different-audit-records) bakın.
+3. Eşitleme etkinliklerinden herhangi birinde saldırganın posta kutusuna eriştiğiyle aynı bağlamda gerçekleştiğini belirlemek için eşitleme etkinliklerini denetleyin. Bağlam, posta kutusuna ve posta protokolüne erişmek için kullanılan istemci bilgisayarın IP adresiyle tanımlanır ve ayırt edilir. Daha fazla bilgi için [Farklı denetim kayıtlarının erişim bağlamlarını tanımlama](#identifying-the-access-contexts-of-different-audit-records) bölümüne bakın.
 
-   Araştırma yapmak için aşağıda listelenen özellikleri kullanın. Bu özellikler AuditData veya OperationProperties özelliğinde yer almaktadır. Eşitlemelerden herhangi biri etkinlik etkinliğiyle aynı bağlamda gerçekleşirse, saldırganin tüm posta öğelerini istemcilerine eşitle olduğunu ve bu da büyük olasılıkla posta kutusunun tamamının ele geçirildi anlamına geldiğini varsayalım.
+   Araştırmak için aşağıda listelenen özellikleri kullanın. Bu özellikler AuditData veya OperationProperties özelliğinde bulunur. Eşitlemelerden herhangi biri saldırgan etkinliğiyle aynı bağlamda gerçekleşirse, saldırganın tüm posta öğelerini istemcileriyle eşitlediğini varsayalım; bu da büyük olasılıkla posta kutusunun tamamının gizliliğinin ihlal edildiği anlamına gelir.
 
    <br>
 
@@ -127,15 +127,15 @@ Güvenliği ihlal edilmiş kullanıcı saldırılarını araştırmak için Mail
 
    |Özellik|Açıklama|
    |---|---|
-   |ClientInfoString|İstemci (sürüm içerir) protokolünü açıklar|
-   |ClientIPAddress|İstemci makinenin IP adresi.|
-   |SessionId|Oturum Kimliği aynı hesapta günlük kullanıcı etkinlikleriyle günlük eylemlerini ayırt etmek için yardımcı olur (güvenliği tehlikeye atılmış hesaplar için yararlıdır)|
-   |UserId|İletiyi okuyan kullanıcının UPN'si.|
+   |ClientInfoString|Protokolü, istemciyi (sürümü içerir) açıklar|
+   |ClientIPAddress|İstemci makinesinin IP adresi.|
+   |Sessionıd|Oturum Kimliği, saldırgan eylemlerini aynı hesapta günlük kullanıcı etkinlikleriyle ayırt etmeye yardımcı olur (güvenliği aşılmış hesaplar için kullanışlıdır)|
+   |Userıd|İletiyi okuyan kullanıcının UPN'i.|
    |
 
-4. Bağlama etkinliklerini denetleme. 2. ve 3. adımları gerçekleştirdikten sonra, saldırgan tarafından gönderilen e-posta iletilerine diğer tüm erişimin MailAccessType özelliği "Bind" olan MailAccessType özelliğine sahip MailItemsAccessed denetim kayıtlarında yakalanmasına güvenebilirsiniz.
+4. Bağlama etkinliklerini denetleyin. 2. ve 3. adım adımlarını gerçekleştirdikten sonra, saldırganın e-posta iletilerine diğer tüm erişiminin, "Bind" değerine sahip bir MailAccessType özelliğine sahip MailItemsAccessed denetim kayıtlarında yakalanacağından emin olabilirsiniz.
 
-   Posta öğelerine Bir Bağlama işlemiyle erişilen MailItemsAccessed kayıtlarını aramak için aşağıdaki komutu çalıştırın.
+   Posta öğelerine bağlama işlemi tarafından erişilen MailItemsAccessed kayıtlarını aramak için aşağıdaki komutu çalıştırın.
 
    **Birleşik denetim günlüğü**:
 
@@ -149,16 +149,16 @@ Güvenliği ihlal edilmiş kullanıcı saldırılarını araştırmak için Mail
    Search-MailboxAuditLog -StartDate 01/06/2020 -EndDate 01/20/2020 -Identity <user> -Operations MailItemsAccessed -ResultSize 10000 -ShowDetails | Where {$_.OperationProperties -like "*MailAccessType:Bind*"} | FL
    ```
 
-   Erişilen e-posta iletileri, İnternet ileti kimlikleriyle tanımlanır. Ayrıca, herhangi bir denetim kayıtlarının diğer saldırgan etkinlikleriyle aynı bağlama sahip olup denetlemeyi de sabilirsiniz. Daha fazla bilgi için Farklı [denetim kayıtlarının erişim bağlamlarını tanımlama bölümüne](#identifying-the-access-contexts-of-different-audit-records) bakın.
+   Erişilen e-posta iletileri, internet ileti kimlikleriyle tanımlanır. Ayrıca herhangi bir denetim kaydının diğer saldırgan etkinlikleriyle aynı bağlama sahip olup olmadığını denetleyebilirsiniz. Daha fazla bilgi için [Farklı denetim kayıtlarının erişim bağlamlarını tanımlama](#identifying-the-access-contexts-of-different-audit-records) bölümüne bakın.
 
-   Bağlama işlemleri için denetim verilerini iki farklı şekilde kullanabilirsiniz:
+   Bağlama işlemleri için denetim verilerini iki farklı yolla kullanabilirsiniz:
 
-   - Saldırgan tarafından erişilen tüm e-posta iletilerine, bunları bulmak için InternetMessageId kullanarak erişilen ve sonra bu iletilerden herhangi biri hassas bilgi içerdiğini kontrol ederek erişin veya iletileri toplayın.
-   - InternetMessageId'i kullanarak, hassas olabilecek bir dizi e-posta iletiyle ilgili denetim kayıtlarını arayabilirsiniz. Yalnızca birkaç iletiyle ilgili endişeleniyorsanız, bu yararlı olur.
+   - Saldırgana internetmessageid kullanarak erişilen tüm e-posta iletilerine erişin veya bunları bulun ve ardından bu iletilerden herhangi birinin hassas bilgiler içerip içermediğini denetleyin.
+   - Hassas olabilecek bir dizi e-posta iletisiyle ilgili denetim kayıtlarını aramak için InternetMessageId'yi kullanın. Yalnızca birkaç iletiyle ilgileniyorsanız bu yararlı olur.
 
 ## <a name="filtering-of-duplicate-audit-records"></a>Yinelenen denetim kayıtlarını filtreleme
 
-Birbirinin bir saat içinde oluşan aynı bağlama işlemleri için yinelenen denetim kayıtları, denetim gürültülerini ortadan kaldırmak için filtrelenmiş olarak filtre uygulanmıştır. Eşitleme işlemleri de bir saatlik aralıklarla filtreleniyor. Bu yineleme işleminin istisnası, aynı InternetMessageId için aşağıdaki tabloda açıklanan özelliklerden herhangi biri farklı olduğunda oluşur. Bu özelliklerden biri yinelenen bir işlemde farklı olursa, yeni bir denetim kaydı oluşturulur. Bu işlem, sonraki bölümde daha ayrıntılı olarak açıklanmıştır.
+Bir saat içinde gerçekleşen aynı bağlama işlemleri için yinelenen denetim kayıtları, denetim gürültüsünü gidermek için filtrelenir. Eşitleme işlemleri de bir saatlik aralıklarla filtrelenir. Bu yinelenenleri kaldırma işleminin istisnası, aynı InternetMessageId için aşağıdaki tabloda açıklanan özelliklerden herhangi biri farklıysa oluşur. Bu özelliklerden biri yinelenen bir işlemde farklıysa yeni bir denetim kaydı oluşturulur. Bu işlem sonraki bölümde daha ayrıntılı olarak açıklanmıştır.
 
 <br>
 
@@ -167,18 +167,18 @@ Birbirinin bir saat içinde oluşan aynı bağlama işlemleri için yinelenen de
 |Özellik|Açıklama|
 |---|---|
 |ClientIPAddress|İstemci bilgisayarın IP adresi.|
-|ClientInfoString|Posta kutusuna erişmek için kullanılan istemci protokolüdür.|
+|ClientInfoString|İstemci protokolü, posta kutusuna erişmek için kullanılan istemci.|
 |ParentFolder|Erişilen posta öğesinin tam klasör yolu.|
-|Logon_type|Eylemi yapan kullanıcının oturum açma türü. Oturum açma türleri (ve karşılık gelen Enum değeri) Sahip (0), Yönetici (1) veya Temsilci (2) olur.|
-|MailAccessType|Erişimin ister bağla ister eşitleme işlemi olsun.|
-|MailboxUPN|İletinin okunan posta kutusunun UPN'si.|
-|Kullanıcı|Kullanıcının iletiyi okuduğu UPN.|
-|SessionId|Oturum Kimliği aynı posta kutusunda her iki günlük kullanıcı eylemlerini ve günlük kullanıcı etkinliklerini ayırt etmek için (hesabın tehlikeye at olması durumunda) oturumlar hakkında daha fazla bilgi için bkz. [Exchange Online'ta](https://techcommunity.microsoft.com/t5/exchange-team-blog/contextualizing-attacker-activity-within-sessions-in-exchange/ba-p/608801) oturumlar içinde saldırgan etkinliğini bağlamsal olarak bağlama bağlama.|
+|Logon_type|Eylemi gerçekleştiren kullanıcının oturum açma türü. Oturum açma türleri (ve karşılık gelen Enum değerleri) Sahip (0), Yönetici (1) veya Temsilci (2) olur.|
+|MailAccessType|Erişimin bir bağlama veya eşitleme işlemi olup olmadığı.|
+|Posta KutusuUPN|Okunan iletinin bulunduğu posta kutusunun UPN'i.|
+|Kullanıcı|İletiyi okuyan kullanıcının UPN'i.|
+|Sessionıd|Oturum Kimliği, aynı posta kutusunda saldırgan eylemlerini ve günlük kullanıcı etkinliklerini ayırt etmeye yardımcı olur (hesap güvenliğinin aşılmasına neden olur) Oturumlar hakkında daha fazla bilgi için bkz. [Exchange Online oturumlar içinde saldırgan etkinliğini bağlamsallaştırma](https://techcommunity.microsoft.com/t5/exchange-team-blog/contextualizing-attacker-activity-within-sessions-in-exchange/ba-p/608801).|
 |
 
 ## <a name="identifying-the-access-contexts-of-different-audit-records"></a>Farklı denetim kayıtlarının erişim bağlamlarını tanımlama
 
-Bir saldırgan, posta kutusu sahibi posta kutusuna erişirken aynı anda bir posta kutusuna da erişebiliyor olabilir. Saldırganla posta kutusu sahibi tarafından erişimi ayırt etmek için, erişimin bağlamını tanımlayan denetim kaydı özellikleri vardır. Daha önce de açıklanmıştır; toplama aralığında etkinlik gerçekleşirken bile bu özelliklerin değerleri farklı olduğunda, ayrı denetim kayıtları oluşturulur. Aşağıdaki örnekte üç farklı denetim kaydı var. Her biri Oturum Kimliği ve ClientIPAddress özellikleriyle birbirinden ayırt edildi. Erişilen iletiler de tanımlanır.
+Bir saldırganın posta kutusuna, posta kutusu sahibinin eriştiği aynı anda erişmesi yaygın bir durumdur. Saldırgan ile posta kutusu sahibi arasındaki erişimi ayırt etmek için, erişimin bağlamını tanımlayan denetim kaydı özellikleri vardır. Daha önce açıklandığı gibi, bu özelliklerin değerleri farklı olduğunda, etkinlik toplama aralığında gerçekleştiğinde bile ayrı denetim kayıtları oluşturulur. Aşağıdaki örnekte üç farklı denetim kaydı vardır. Her biri Oturum Kimliği ve ClientIPAddress özelliklerine göre ayırt edilir. Erişilen iletiler de tanımlanır.
 
 <br>
 
@@ -187,16 +187,16 @@ Bir saldırgan, posta kutusu sahibi posta kutusuna erişirken aynı anda bir pos
 |Denetim kaydı 1|Denetim kaydı 2|Denetim kaydı 3|
 |---|---|---|
 |ClientIPAddress1<br/>**SessionId2**|ClientIPAddress2<br/>**SessionId2**|ClientIPAddress1<br/>**SessionId3**|
-|**InternetMessageIdA**<br/>**InternetMessageIdd**<br/>**InternetMessageIdE**<br/>**InternetMessageIdF**<br/>|**InternetMessageIdA**<br/>**InternetMessageIdC**|**InternetMessageIdB**|
+|**InternetMessageIdA**<br/>**InternetMessageIdD**<br/>**InternetMessageIdE**<br/>**InternetMessageIdF**<br/>|**InternetMessageIdA**<br/>**InternetMessageIdC**|**InternetMessageIdB**|
 |
 
-Önceki bölümde yer alan tabloda listelenen özelliklerden herhangi biri farklı [](#filtering-of-duplicate-audit-records) olursa, yeni bağlamı izlemek için ayrı bir denetim kaydı oluşturulur. Erişimler, etkinliğin tılı bir bağlama bağlı olarak ayrı denetim kayıtlarında sıralanmış olur.
+[Önceki bölümde](#filtering-of-duplicate-audit-records) tabloda listelenen özelliklerden herhangi biri farklıysa, yeni bağlamı izlemek için ayrı bir denetim kaydı oluşturulur. Erişimler, etkinliğin gerçekleştiği bağlama bağlı olarak ayrı denetim kayıtlarına sıralanır.
 
-Örneğin, aşağıdaki ekran görüntüsünde gösterilen denetim kayıtlarında, EWSEditor ve OWA'dan aynı anda postaya erişmemize rağmen, erişim etkinliği, erişimin gerçekleştirilme bağlamına bağlı olarak farklı denetim kayıtları arasında harmanlandı. Bu durumda, bağlam ClientInfoString özelliği için farklı değerlere göre tanımlanır.
+Örneğin, aşağıdaki ekran görüntüsünde gösterilen denetim kayıtlarında, aynı anda EWSEditor ve OWA'dan gelen postalara erişiyor olsak da, erişim etkinliği, erişimin gerçekleştiği bağlama bağlı olarak farklı denetim kayıtlarında harmanlanır. Bu durumda, bağlam ClientInfoString özelliği için farklı değerler tarafından tanımlanır.
 
 ![Bağlama göre farklı denetim kayıtları.](../media/MailItemsAccessed4.png)
 
-Önceki ekran görüntüsünde gösterilen komutun söz dizimi şöyledir:
+Önceki ekran görüntüsünde gösterilen komutun söz dizimi aşağıdadır:
 
 ```powershell
 Search-MailboxAuditLog -Identity admin -ShowDetails -Operations MailItemsAccessed -ResultSize 2000 | Select LastAccessed,Operation,AuditOperationsCountInAggregatedRecord,ClientInfoString

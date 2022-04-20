@@ -1,5 +1,5 @@
 ---
-title: Özel durum durumuna özel olmayan veri Advanced eDiscovery ekleme
+title: eBulma (Premium) olayına gözetimsiz veri kaynakları ekleme
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -14,61 +14,61 @@ ms.collection: M365-security-compliance
 search.appverid:
 - MOE150
 - MET150
-description: Bir olayda özel olmayan veri kaynakları ekleyebilir Advanced eDiscovery veri kaynağını yerinde tutabilirsiniz. Özel durumlu olmayan veri kaynakları yeniden dizinlenir, böylece kısmen dizine alındı olarak işaretlenen tüm içerikler, tümüyle ve hızla aranabilir olacak şekilde yeniden işlenir.
-ms.openlocfilehash: a4702ebdfbd41b2541c51380a1d44dd133d506c9
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Bir eBulma (Premium) olayına gözetimsiz veri kaynakları ekleyebilir ve veri kaynağına ayrı tutabilirsiniz. Gözaltı olmayan veri kaynakları yeniden dizinlenir, bu nedenle kısmen dizinlenmiş olarak işaretlenmiş tüm içerikler tamamen ve hızlı bir şekilde aranabilir hale getirmek için yeniden işlenir.
+ms.openlocfilehash: cc093b60de055fe8b762f6c141921cd274233af2
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62987306"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64945923"
 ---
-# <a name="add-non-custodial-data-sources-to-an-advanced-ediscovery-case"></a>Özel durum durumuna özel olmayan veri Advanced eDiscovery ekleme
+# <a name="add-non-custodial-data-sources-to-an-ediscovery-premium-case"></a>eBulma (Premium) olayına gözetimsiz veri kaynakları ekleme
 
-Bazı Advanced eDiscovery, bu durum her zaman, bir Microsoft 365 veri kaynağını bir özel dosyayla ilişkilendirmek için size uygun değildir. Ancak yine de bu verileri bir vakayla ilişkilendirmek, böylelikle arama yapmak, gözden geçirme kümesine eklemek, çözümlemek ve gözden geçirmek için bu verileri ilişkilendirmek zorundayabilirsiniz. Özel özellik Advanced eDiscovery özel veri kaynakları olarak adlandırılan bu  özellik, özel veri kaynakları olarak adlandırılan bu özelliği bir özel durumla ilişkilendirmek zorunda kalmadan vakaya veri eklemenize olanak sağlar. Ayrıca, custo Advanced eDiscovery ilişkilendirilen veriler için kullanılabilen, özel veya özel olmayan verilere aynı özellik işlevini de uygular. Özel olmayan verilere uygulayabilecek en yararlı şeylerden ikisi, gelişmiş dizin oluşturma kullanılarak onu tutma ve [işlemeye yerleştirmektir](indexing-custodian-data.md).
+Microsoft Purview eBulma (Premium) vakalarında, bir Microsoft 365 veri kaynağını bu durumda bir koruyucuyla ilişkilendirme gereksinimlerinizi her zaman karşılamaz. Ancak yine de arama yapmak, bir gözden geçirme kümesine eklemek ve analiz edip gözden geçirmek için bu verileri bir servis talebiyle ilişkilendirmeniz gerekebilir. eBulma (Premium) özelliği *, gözetim dışı veri kaynakları* olarak adlandırılır ve bunu bir koruyucuyla ilişkilendirmek zorunda kalmadan bir servis talebine veri eklemenize olanak tanır. Ayrıca aynı eBulma (Premium) işlevselliğini, koruyucuyla ilişkili veriler için kullanılabilen gözetimsiz verilere de uygular. Gözaltı olmayan verilere uygulayabileceğiniz en yararlı şeylerden ikisi, bunları bekletmek ve [Gelişmiş dizin oluşturma](indexing-custodian-data.md) kullanarak işlemektir.
 
-## <a name="add-a-non-custodial-data-source"></a>Özel olmayan bir veri kaynağı ekleme
+## <a name="add-a-non-custodial-data-source"></a>Gözetim altında olmayan bir veri kaynağı ekleme
 
-Bir olayda özel olmayan veri kaynaklarını eklemek ve yönetmek için bu Advanced eDiscovery izleyin.
+Bir eBulma (Premium) olayına gözetimsiz veri kaynakları eklemek ve yönetmek için bu adımları izleyin.
 
-1. Sayfa **Advanced eDiscovery** sayfasında, verileri eklemek istediğiniz vakaya tıklayın.
+1. **eBulma (Premium)** giriş sayfasında, verileri eklemek istediğiniz servis talebine tıklayın.
 
-2. Veri kaynakları **sekmesine tıklayın** ve ardından Veri kaynağı **ekle Veri** >  **konumları ekle'ye tıklayın**.
+2. **Veri kaynakları** sekmesine ve ardından **Veri kaynağı** >  ekle **Veri konumları ekle'ye** tıklayın.
 
-3. Yeni **özel olmayan veri konumları** uç sayfasında, vakaya eklemek istediğiniz veri kaynaklarını seçin. Birden çok posta kutusu ve site eklemek için, posta kutusu veya **posta SharePoint** **Exchange** sonra da Düzenle'ye **tıklarsiniz**.
+3. **Yeni gözetim dışı veri konumları** açılır sayfasında, servis talebine eklemek istediğiniz veri kaynaklarını seçin. **SharePoint veya Exchange** bölümlerini genişletip **Düzenle'ye** tıklayarak birden çok posta kutusu ve site  ekleyebilirsiniz.
 
-   ![Özel SharePoint ekleyin Exchange posta kutularını özel olmayan veri kaynakları olarak ekleyin.](../media/NonCustodialDataSources1.png)
+   ![SharePoint siteleri ve Exchange posta kutularını gözaltı olmayan veri kaynakları olarak ekleyin.](../media/NonCustodialDataSources1.png)
 
-   - **SharePoint**- Site eklemek **için Düzenle'ye** tıklayın. Listeden bir site seçin veya arama çubuğuna sitenin URL'sini yazarak siteyi arayabilirsiniz. Koruyucu olmayan veri kaynakları olarak eklemek istediğiniz siteleri seçin ve Ekle'ye **tıklayın**.
+   - **SharePoint** - Site eklemek için **Düzenle'ye** tıklayın. Listeden bir site seçin veya arama çubuğuna sitenin URL'sini yazarak siteyi arayabilirsiniz. Koruyucu olmayan veri kaynakları olarak eklemek istediğiniz siteleri seçin ve **Ekle'ye** tıklayın.
 
-   - **Exchange**- Posta kutuları **eklemek için** Düzenle'ye tıklayın. Posta kutuları veya dağıtım gruplarının arama kutusuna bir ad veya diğer ad (en az üç karakter) yazın. Koruyucu olmayan veri kaynakları olarak eklemek istediğiniz posta kutularını seçin ve Ekle'ye **tıklayın**.
+   - **Exchange** - Posta kutuları eklemek için **Düzenle'ye** tıklayın. Posta kutuları veya dağıtım grupları için arama kutusuna bir ad veya diğer ad (en az üç karakter) yazın. Koruyucu olmayan veri kaynakları olarak eklemek istediğiniz posta kutularını seçin ve **Ekle'ye** tıklayın.
 
    > [!NOTE]
-   > Ekip veya **SharePoint Exchange** site ve posta kutularını özel  olmayan veri kaynakları olarak eklemek için Yammer ve Posta Kutuları bölümlerini kullanabilirsiniz. Bir Ekip veya Ekip grubuyla ilişkilendirilmiş posta kutusunu ve siteyi ayrı Yammer gerekir.<br/><br/> Ayrıca, veri kaynağı olarak kök `https://contoso-my.sharepoint.com/personal/` `https://contoso-my.sharepoint.com/`site URL'sini (SharePoint) ekleme de desteklenmemektedir. Belirli siteleri eklemeniz gerekir.
+   > **SharePoint** ve Exchange bölümlerini kullanarak, bir Ekip veya **Yammer** grubuyla ilişkili siteleri ve posta kutularını gözetim dışı veri kaynakları olarak ekleyebilirsiniz. Ekip veya Yammer grubuyla ilişkili posta kutusunu ve siteyi ayrı olarak eklemeniz gerekir.<br/><br/> Ayrıca, SharePoint veri kaynağı olarak bir kök site URL'si (veya `https://contoso-my.sharepoint.com/`gibi`https://contoso-my.sharepoint.com/personal/`) eklenmesi desteklenmez. Belirli siteleri eklemeniz gerekir.
 
-4. Özel olmayan veri kaynaklarını ekledikten sonra, bu konumları yerinde tutma veya tutmama seçeneğiniz vardır. Veri kaynağını yerinde yerinde **tutmak** için, veri kaynağının yanındaki Yerinde Tut onay kutusunu seçin veya seçimini kaldırın.
+4. Gözetimsiz veri kaynaklarını ekledikten sonra, bu konumları beklemeye alma veya saklama seçeneğiniz vardır. Veri kaynağını beklemeye almak için veri kaynağının yanındaki **Ayrı Tut** onay kutusunu seçin veya seçimini kaldırın.
 
-5. Veri **kaynaklarını** vakaya eklemek için **, Özel** olmayan yeni veri konumları uç sayfasının altındaki Ekle'ye tıklayın.
+5. Veri kaynaklarını servis talebine eklemek için **Yeni gözetim dışı veri konumları** açılır sayfasının altındaki **Ekle'ye** tıklayın.
 
-   Kendi ekledikleri, özel olmayan her veri kaynağı, Veri kaynakları **sayfasında** listelenir. Özel olmayan veri kaynakları, Kaynak türü **sütunundaki Veri konumu** **değeri tarafından** tanımlanır.
+   Eklediğiniz her gözetim dışı veri kaynağı **, Veri kaynakları** sayfasında listelenir. Gözaltı olmayan veri kaynakları **, Kaynak türü** sütunundaki **Veri konumu** değeriyle tanımlanır.
 
-   ![Veri kaynakları sekmesinde özel olmayan veri kaynakları.](../media/NonCustodialDataSources2.png)
+   ![Veri kaynakları sekmesindeki gözetimsiz veri kaynakları.](../media/NonCustodialDataSources2.png)
 
-Vakaya özel olmayan veri kaynaklarını eklemenizden sonra, olayın İşleri sekmesinde *Reindexing non custodial* data adlı bir iş oluşturulur ve görüntülenir. İş oluşturulduktan sonra, başlatılan gelişmiş dizin oluşturma işlemi ve veri kaynakları yeniden dizine oluşturulur.
+Servis talebine gözetimsiz veri kaynakları ekledikten sonra, *gözetimsiz verileri yeniden dizine alma* adlı bir iş oluşturulur ve servis talebinin **İşler** sekmesinde görüntülenir. İş oluşturulduktan sonra, gelişmiş dizin oluşturma işlemi başlatılır ve veri kaynakları yeniden dizine alınır.
 
-## <a name="manage-the-hold-for-non-custodial-data-sources"></a>Özel olmayan veri kaynaklarının  tutulmalarını yönetme
+## <a name="manage-the-hold-for-non-custodial-data-sources"></a>Gözetim altında olmayan veri kaynakları için ayrı tutma işlemini yönetme
 
-Özel olmayan bir veri kaynağını yerinde tutma sonrasında, olayın özel veya özel olmayan veri kaynaklarını içeren bir tutma ilkesi otomatik olarak oluşturulur. Özel olmayan başka veri kaynaklarını yerinde tutarken, bunlar bu tutma ilkesine eklenir.
+Gözetim dışı bir veri kaynağına ayrı tutma işlemi yaptıktan sonra, servis talebi için gözetim dışı veri kaynaklarını içeren bir saklama ilkesi otomatik olarak oluşturulur. Diğer gözetim dışı veri kaynaklarını ayrı tutmaya aldığınızda, bunlar bu saklama ilkesine eklenir.
 
-1. Büyük/Advanced eDiscovery açın ve Bekle **sekmesini** seçin.
+1. eBulma (Premium) servis talebini açın ve **Ayrı Tut** sekmesini seçin.
 
-2. **NCDSHold-'\<GUID\>** a tıklayın; burada GUID değeri büyük/harfe özeldir.
+2. GUID değerinin büyük/küçük harfe özel olduğu **NCDSHold-\<GUID\>** öğesine tıklayın.
 
-   Uçarak giriş sayfası, özel olmayan veri kaynakları hakkında bilgileri ve istatistikleri görüntüler.
+   Açılır sayfa, gözetim altında tutulamayan veri kaynaklarıyla ilgili bilgileri ve istatistikleri görüntüler.
 
-   ![Özel olmayan veri kaynaklarının uçarak çıkış sayfası istatistikleri görüntüler.](../media/NonCustodialDataSourcesHoldFlyout.png)
+   ![Gözaltı olmayan veri kaynaklarının açılır sayfasında istatistikler görüntülenir.](../media/NonCustodialDataSourcesHoldFlyout.png)
 
-3. Aşağıdaki **yönetim görevlerini** gerçekleştirmek üzere, tek ve özel olmayan veri kaynaklarını görüntülemek için Tutmayı düzenle'ye tıklayın:
+3. Saklama dışı veri kaynaklarını görüntülemek ve aşağıdaki yönetim görevlerini gerçekleştirmek için Ayrı tutmayı **düzenle'ye** tıklayın:
 
-   - Konumlar **sayfasında** , özel olmayan veri kaynağını tutmadan kaldırarak serbest leyebilirsiniz. Veri kaynağının serbest bırakılması, özel veri kaynağını bu durumdan kaldırmaz. Yalnızca veri kaynağına yerleştirilen tutmayı kaldırır.
+   - **Konumlar** sayfasında, saklama dışı bir veri kaynağını ayrı tutmadan kaldırarak serbest bırakabilirsiniz. Bir veri kaynağının serbest bırakılması, gözetim altında olmayan veri kaynağını olaydan kaldırmaz. Yalnızca veri kaynağına yerleştirilen ayrı tutmayı kaldırır.
 
-   - Sorgu **sayfasında** , bu durumdaki özel olmayan tüm veri kaynaklarına uygulanan sorgu tabanlı bir tutma oluşturmak için tutmayı düzenleyebilirsiniz.
+   - **Sorgu** sayfasında, saklamayı düzenleyerek bu durumdaki tüm gözetimsiz veri kaynaklarına uygulanan sorgu tabanlı bir ayrı tutma oluşturabilirsiniz.

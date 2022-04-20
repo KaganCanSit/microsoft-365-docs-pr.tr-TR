@@ -1,6 +1,6 @@
 ---
-title: Sıfır Güven ve cihaz erişimi yapılandırmalarını yapılandırma - Microsoft 365 için yapılandırma
-description: Microsoft'un güvenli e-postayı, belgeleri ve uygulama ilkelerini ve yapılandırmalarını dağıtmak için temel kavramları ve önerilerini Sıfır Güven.
+title: Sıfır Güven kimlik ve cihaz erişim yapılandırmaları - kuruluş için Microsoft 365
+description: Sıfır Güven için güvenli e-posta, belgeler ve uygulama ilkeleri ve yapılandırmaları dağıtmaya yönelik Microsoft önerilerini ve temel kavramlarını açıklar.
 ms.author: dansimp
 author: dansimp
 manager: dansimp
@@ -20,103 +20,103 @@ ms.collection:
 - m365solution-overview
 - m365solution-zero-trust
 ms.technology: mdo
-ms.openlocfilehash: 058eaded0e46a4dfe86bd2cdc5624ea0963f34ea
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 066fc33bb5047c354fa6a4b3d954387fdfeae2e9
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64474651"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64947791"
 ---
-# <a name="zero-trust-identity-and-device-access-configurations"></a>Sıfır Güven ve cihaz erişimi yapılandırmalarını yapılandırma
+# <a name="zero-trust-identity-and-device-access-configurations"></a>kimlik ve cihaz erişim yapılandırmalarını Sıfır Güven
 
-Bir kuruluşun teknoloji kaynaklarını ve hizmetlerini yalıtmak ve erişimi kısıtlamak için ağ güvenlik duvarlarına ve sanal özel ağlara (VPN' ler) güvenen güvenlik mimarileri, artık geleneksel şirket ağı sınırlarının ötesinde uygulamalara ve kaynaklara erişmeyi gerektiren iş gücü için artık yeterli olmaz.
+Bir kuruluşun teknoloji kaynaklarına ve hizmetlerine erişimi yalıtmak ve kısıtlamak için ağ güvenlik duvarlarına ve sanal özel ağlara (VPN) dayanan güvenlik mimarileri, geleneksel kurumsal ağ sınırlarının ötesindeki uygulamalara ve kaynaklara düzenli olarak erişim gerektiren bir iş gücü için artık yeterli değildir.
 
-Bu yeni bilgi işlem dünyasına hitap etmek için, Microsoft şu yol gösteren Sıfır Güven ilkelere dayalı olan güvenlik modelini kesinlikle önermektedir:
+Microsoft, bu yeni bilgi işlem dünyasını ele almak için aşağıdaki yol gösterici ilkeleri temel alan Sıfır Güven güvenlik modelini kesinlikle önerir:
 
-- Açık bir şekilde doğrulama
+- Açıkça doğrula
 
-  Her zaman kullanılabilir tüm veri noktalarına göre kimlik doğrulama ve yetkilendirme. Bu noktada kimlik Sıfır Güven cihaz erişim ilkeleri oturum açma ve devam eden doğrulama açısından çok önemlidir.
+  Kullanılabilir tüm veri noktalarına göre her zaman kimlik doğrulaması ve yetkilendirme. Burada, oturum açma ve sürekli doğrulama için Sıfır Güven kimlik ve cihaz erişim ilkeleri çok önemlidir.
 
-- En az ayrıcalık erişimini kullanma
+- En az ayrıcalık erişimi kullan
 
-  Kullanıcı erişimini Just-In-Time ve Just-Enough-Access (JIT/JEA), risk tabanlı uyarlanabilir ilkeler ve veri koruması ile sınırlandırın.
+  Tam Zamanında ve Yeterli Erişim (JIT/JEA), risk tabanlı uyarlamalı ilkeler ve veri koruması ile kullanıcı erişimini sınırlayın.
 
-- İhlal olduğu varsay
+- İhlal varsay
 
-  Yarıçap yarıçapını ve segment erişimini en aza indirgeyin. Ender şifrelemeyi doğrulayın ve görünürlük elde etmek, tehdit algılamayı geliştirmek ve savunmayı geliştirmek için çözümlemeleri kullanın.
+  Patlama yarıçapı ve segment erişimini en aza indirin. Uçtan uca şifrelemeyi doğrulayın ve görünürlük elde etmek, tehdit algılamayı yönlendirmek ve savunmaları geliştirmek için analizi kullanın.
 
-Bu yapının genel mimarisi Sıfır Güven.
+Sıfır Güven genel mimarisi aşağıdadır.
 
 :::image type="content" source="../../media/microsoft-365-policies-configurations/zero-trust-architecture.png" alt-text="Microsoft Sıfır Güven mimarisi" lightbox="../../media/microsoft-365-policies-configurations/zero-trust-architecture.png":::
 
-Sıfır Güven ve cihaz erişimi ilkeleri, Aşağıdakiler için **açık bir temel** ilkeyi doğrulamayı sağlar:
+Sıfır Güven kimlik ve cihaz erişim ilkeleri aşağıdakiler için Açıkça yönlendiren **doğrulama** ilkesini ele alın:
 
-- Kimlikler
+- Kimlik
 
-  Kimlik bir kaynağa erişmeye geldiğinde, güçlü kimlik doğrulamasıyla kimliği doğrulayın ve istenen erişimin uyumlu ve normal olduğundan emin olur.
+  Bir kimlik bir kaynağa erişmeye çalıştığında, güçlü kimlik doğrulamasıyla bu kimliği doğrulayın ve istenen erişimin uyumlu ve tipik olduğundan emin olun.
 
-- Cihazlar (uç noktalar olarak da adlandırılan)
+- Cihazlar (uç noktalar olarak da adlandırılır)
 
-  Güvenli erişim için cihaz sistem durumu ve uyumluluk gereksinimlerini takip edin ve zorunlu kılın.
+  Güvenli erişim için cihaz durumu ve uyumluluk gereksinimlerini izleyin ve uygulayın.
 
 - Uygulamalar
 
-  Gölge IT'sini keşfetmek, uygun uygulama için izinleri sağlamak, gerçek zamanlı çözümlemeye dayalı olarak kapı erişimi sağlamak, olağandışı davranışı izlemek, kullanıcı eylemlerini kontrol etmek ve güvenli yapılandırma seçeneklerini doğrulamak için denetimler ve teknolojiler uygulayabilirsiniz.
+  Gölge BT'yi keşfetmek, uygun uygulama içi izinleri sağlamak, gerçek zamanlı analize göre geçit erişimi sağlamak, anormal davranışları izlemek, kullanıcı eylemlerini denetlemek ve güvenli yapılandırma seçeneklerini doğrulamak için denetimler ve teknolojiler uygulayın.
 
-Bu makale dizisinde, kimlik ve cihaz erişimi önkoşulları yapılandırmaları ve Azure Active Directory erişimi için Azure Active Directory (Azure AD) Koşullu Erişim, Microsoft Intune ve diğer ilkeler Sıfır Güven açık Microsoft 365  Kurumsal bulut uygulamaları ve hizmetleri, diğer SaaS hizmetleri ve Azure AD ile yayımlanan şirket içi uygulamalar için Uygulama Ara Sunucusu.
+Bu makale serisinde kimlik ve cihaz erişimi önkoşul yapılandırmaları ve Azure Active Directory (Azure AD) Koşullu Erişim, Microsoft Intune ve Microsoft 365 Sıfır Güven erişimine yönelik diğer ilkeler açıklanmaktadır  Azure AD Uygulama Ara Sunucusu ile yayımlanan kurumsal bulut uygulamaları ve hizmetleri, diğer SaaS hizmetleri ve şirket içi uygulamalar için.
 
-Sıfır Güven ve cihaz erişimi ayarları ile ilkelerinin üç katmanda kullanılması önerilir: başlangıç noktası, kuruluş ve üst düzeyde düzenlemeye tabi veya sınıflandırılmış verileri olan ortamlar için özelleştirilmiş güvenlik. Bu katmanlar ve bunlara karşılık gelen yapılandırmalar verileriniz, kimlikleriniz Sıfır Güven cihazlarınız arasında tutarlı bir koruma düzeyleri sağlar.
+Sıfır Güven kimlik ve cihaz erişim ayarları ve ilkeleri üç katmanda önerilir: başlangıç noktası, kurumsal ve yüksek oranda düzenlenmiş veya sınıflandırılmış verilere sahip ortamlar için özel güvenlik. Bu katmanlar ve bunlara karşılık gelen yapılandırmalar verileriniz, kimlikleriniz ve cihazlarınız arasında tutarlı Sıfır Güven koruma düzeyleri sağlar.
 
-Bu özellikler ve onların önerileri:
+Bu özellikler ve bunların önerileri:
 
-- Microsoft 365 E3 ve Microsoft 365 E5.
-- Azure AD'de [kimlik puanının yanı sıra Microsoft Güvenli](../defender/microsoft-secure-score.md) [Puanı'nın](/azure/active-directory/fundamentals/identity-secure-score) yanı sıra uyumlu hale gelir ve bu puanları organizasyonunız için artıracaktır.
-- Kimlik altyapının güvenliğini sağlamak [için bu beş adımı uygulamanıza yardımcı olur](/azure/security/azure-ad-secure-steps).
+- Microsoft 365 E3 ve Microsoft 365 E5 desteklenir.
+- Azure AD'de [Hem Microsoft Güvenli Puanı](../defender/microsoft-secure-score.md) hem de [kimlik puanıyla](/azure/active-directory/fundamentals/identity-secure-score) uyumlu olduğundan kuruluşunuz için bu puanları artırır.
+- [Kimlik altyapınızın güvenliğini sağlamak için bu beş adımı uygulamanıza](/azure/security/azure-ad-secure-steps) yardımcı olur.
 
-Kuruluşta benzersiz ortam gereksinimleri veya karmaşıklıklar varsa, başlangıç noktası olarak bu önerileri kullanın. Bununla birlikte, çoğu kuruluş bu önerileri, öngörülen şekilde uygulayamaz.
+Kuruluşunuzun benzersiz ortam gereksinimleri veya karmaşıklıkları varsa, başlangıç noktası olarak bu önerileri kullanın. Ancak çoğu kuruluş bu önerileri öngörüldüğü gibi uygulayabilir.
 
-Kurumsal kimlik ve cihaz erişimi yapılandırmalarına hızlı bir genel bakış için bu Microsoft 365 izleyin.
+Kuruluş için Microsoft 365 kimlik ve cihaz erişim yapılandırmalarına hızlı bir genel bakış için bu videoyu izleyin.
 
 <br>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWxEDQ]
 
 > [!NOTE]
-> Microsoft ayrıca, Enterprise Mobility + Security abonelikleri için Enterprise Mobility + Security (EMS) Office 365 satar. EMS E3 ve EMS E5 özellikleri, e-posta ve Microsoft 365 E3 özelliklerle Microsoft 365 E5. Ayrıntılar [için EMS](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-plans-and-pricing) planlarına bakın.
+> Microsoft ayrıca Office 365 abonelikleri için Enterprise Mobility + Security (EMS) lisansları da satar. EMS E3 ve EMS E5 özellikleri, Microsoft 365 E3 ve Microsoft 365 E5 özellikleriyle eşdeğerdir. Ayrıntılar için bkz. [EMS planları](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-plans-and-pricing) .
 
-## <a name="intended-audience"></a>Hedef kitle
+## <a name="intended-audience"></a>Hedeflenen hedef kitle
 
-Bu öneriler; Azure AD (kimlik), Microsoft Intune (cihaz yönetimi) ve Microsoft Bilgi Koruması (veri koruması) dahil olmak üzere Microsoft 365 bulut üretkenliği ve güvenlik hizmetlerini bilen kurumsal mimarlara ve BT uzmanlarına yöneliktir.
+Bu öneriler, Azure AD (kimlik), Microsoft Intune (cihaz yönetimi) ve Microsoft Purview Information Protection (veri koruması) dahil Microsoft 365 bulut üretkenliği ve güvenlik hizmetleri hakkında bilgi sahibi olan kurumsal mimarlara ve BT uzmanlarına yöneliktir.
 
 ### <a name="customer-environment"></a>Müşteri ortamı
 
-Önerilen ilkeler, hem tamamen Microsoft bulutu içinde çalışan kurumsal kuruluşlara hem de Azure AD kiracısı ile eşitlenen bir şirket içi Active Directory Etki Alanı Hizmetleri (AD DS) ormanı olan karma kimlik altyapısına sahip müşteriler için geçerlidir.
+Önerilen ilkeler, hem tamamen Microsoft bulutu içinde çalışan kurumsal kuruluşlar hem de bir Azure AD kiracısıyla eşitlenmiş bir şirket içi Active Directory Domain Services (AD DS) ormanı olan karma kimlik altyapısına sahip müşteriler için geçerlidir.
 
-Sağlanan önerilerin çoğu, E5 Güvenlik eklenti, EMS E5 veya Microsoft 365 E5 Microsoft 365 E3 lisansları ile sağlanan hizmetlere Azure AD Premium P2 güvenmektedir.
+Sağlanan önerilerin çoğu yalnızca Microsoft 365 E5, Microsoft 365 E3 E5 Güvenlik eklentisi, EMS E5 veya Azure AD Premium P2 lisanslarıyla kullanılabilen hizmetlere dayanır.
 
-Bu lisanslara sahip olan kuruluşlar için Microsoft en azından tüm proje planlarına dahil olan güvenlik varsayılanları [](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults)uygulama Microsoft 365 öneririz.
+Microsoft, bu lisanslara sahip olmayan kuruluşlar için en azından tüm Microsoft 365 [planlarına dahil olan güvenlik varsayılanlarını](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults) uygulamanızı önerir.
 
 ### <a name="caveats"></a>Uyarılar
 
-Bu önerilen yapılandırmalardan ayrı olarak ilkeleri uygulamanızı gerektirecek belirli öneriler de dahil olmak üzere, organizasyonuz yasal düzenlemelere veya diğer uyumluluk gereksinimlerine tabi olabilir. Bu yapılandırmalar, geçmişte hiç kullanılabilir olmadığınız kullanım denetimleri önerin. Güvenlik ve verimlilik arasındaki dengeyi temsil edeceklerine inandığımız için bu denetimleri öneririz.
+Kuruluşunuz, bu önerilen yapılandırmalardan farklı ilkeler uygulamanızı gerektirebilecek belirli öneriler de dahil olmak üzere yasal düzenlemelere veya diğer uyumluluk gereksinimlerine tabi olabilir. Bu yapılandırmalar, geçmişte kullanılamayan kullanım denetimlerini önerir. Güvenlik ve üretkenlik arasındaki dengeyi temsil ettiğine inandığımız için bu denetimleri öneririz.
 
-Çok çeşitli kurumsal koruma gereksinimlerini karşılamak için elimizden gelenin en iyisini yaptık, ancak tüm olası gereksinimleri ya da kuruma özgü yönlerini hesaba hazır bir şekilde ala bire bir hesaplayam.
+Çok çeşitli kuruluş koruma gereksinimlerini hesaba eklemek için elimizden geleni yaptık, ancak olası tüm gereksinimleri veya kuruluşunuzun tüm benzersiz yönlerini hesaba aktaramadık.
 
-## <a name="three-tiers-of-protection"></a>Korumanın üç katmanı
+## <a name="three-tiers-of-protection"></a>Üç koruma katmanı
 
-Çoğu kuruluşun güvenlik ve veri korumasıyla ilgili belirli gereksinimleri vardır. Bu gereksinimler, sektör segmentinde ve kuruluşlar içindeki iş işlevlerine göre değişiklik gösterir. Örneğin, hukuk departmanınız ve yöneticileriniz e-posta yazışmaları çevresinde başka iş birimleri için gerekli değildir ve bu denetimler için ek güvenlik ve bilgi koruma denetimleri gerekebilir.
+Çoğu kuruluşun güvenlik ve veri korumasıyla ilgili belirli gereksinimleri vardır. Bu gereksinimler sektör segmentlerine ve kuruluşlardaki iş işlevlerine göre farklılık gösterir. Örneğin, hukuk departmanınız ve yöneticileriniz e-posta yazışmaları etrafında diğer iş birimleri için gerekli olmayan ek güvenlik ve bilgi koruma denetimleri gerektirebilir.
 
-Her endüstrinin ayrıca özel yasal düzenlemelere sahip olduğunu da ifade edin. Tüm olası güvenlik seçeneklerinin listesini ya da endüstri segmenti veya iş işlevine göre öneri sağlamak yerine, ihtiyaçlarınızı ayrıntılı olarak temel alan üç farklı güvenlik ve koruma düzeyi için öneriler sağlanmıştır.
+Her endüstrinin kendi özel düzenlemeleri de vardır. Tüm olası güvenlik seçeneklerinin listesini ya da sektör segmenti veya iş işlevi başına öneri sağlamak yerine, gereksinimlerinizin ayrıntı düzeyine göre uygulanabilecek üç farklı güvenlik ve koruma düzeyi için öneriler sağlanmıştır.
 
-- **Başlangıç noktası**: Tüm müşterilerin, verilerinize erişen kimliklerin ve cihazların yanı sıra verileri korumak için en düşük standardı kurmalarını ve kullanmalarını öneririz. Tüm kuruluşlar için başlangıç noktası olarak güçlü varsayılan koruma sağlamak için bu önerileri takip edin.
-- **Enterprise**: Bazı müşterilerin daha yüksek düzeylerde korunması gereken bir veri alt kümesi vardır veya tüm verilerin daha yüksek düzeyde korunmasını gerekli olabilir. Çalışma ortamınıza, tüm veya belirli veri kümelerini daha Microsoft 365 uygulayabilirsiniz. Hassas verilere erişen kimlikleri ve cihazları, karşılaştırılabilir güvenlik düzeyleriyle korumanız önerilir.
-- **Özel güvenlik**: Gerektiğinde, çok az miktarda veriye sahip olan, üst düzeyde sınıflandırılmış, ticari sırlardan biri olan veya düzenlemeye tabi olan birkaç müşteri vardır. Microsoft, bu müşterilerin bu gereksinimleri karşılamalarına yardımcı olacak, kimlikler ve cihazlara ek koruma da dahil olmak üzere özellikler sunar.
+- **Başlangıç noktası**: Tüm müşterilerin hem verileri hem de verilerinize erişen kimlikleri ve cihazları korumak için en düşük standardı oluşturmasını ve kullanmasını öneririz. Tüm kuruluşlar için başlangıç noktası olarak güçlü bir varsayılan koruma sağlamak için bu önerileri izleyebilirsiniz.
+- **Enterprise**: Bazı müşteriler, daha yüksek düzeylerde korunması gereken bir veri alt kümesine sahiptir veya tüm verilerin daha yüksek düzeyde korunmasını gerektirebilir. Microsoft 365 ortamınızdaki tüm veya belirli veri kümelerine daha fazla koruma uygulayabilirsiniz. Benzer güvenlik düzeyleriyle hassas verilere erişen kimlikleri ve cihazları korumanızı öneririz.
+- **Özel güvenlik**: Gerektiğinde, birkaç müşteri yüksek oranda sınıflandırılmış, ticari gizli diziler oluşturan veya düzenlenen az miktarda veriye sahiptir. Microsoft, bu müşterilerin kimlikler ve cihazlar için ek koruma da dahil olmak üzere bu gereksinimleri karşılamasına yardımcı olacak özellikler sağlar.
 
 :::image type="content" source="../../media/microsoft-365-policies-configurations/M365-idquality-threetiers.png" alt-text="Güvenlik konisi" lightbox="../../media/microsoft-365-policies-configurations/M365-idquality-threetiers.png":::
 
-Bu kılavuzda, bu koruma Sıfır Güven her biri için kimlikler ve cihazlar için kimlik koruması uygulama konusunda yol gösterir. Bu kılavuzu, organizasyonunız için en az olarak kullanın ve ilkeleri, kuruma özel gereksinimlerine uygun olarak ayarlayın.
+Bu kılavuz, bu koruma düzeylerinin her biri için kimlikler ve cihazlar için Sıfır Güven korumayı nasıl uygulayabileceğinizi gösterir. Bu kılavuzu kuruluşunuz için en düşük düzeyde kullanın ve ilkeleri kuruluşunuzun özel gereksinimlerini karşılayacak şekilde ayarlayın.
 
-Kimlikleriniz, cihazlarınız ve verileriniz arasında tutarlı bir koruma düzeyleri kullanmak önemlidir. Örneğin,&mdash; öncelik hesabına sahip kullanıcılar için koruma (yöneticiler,&mdash; liderler, yöneticiler ve diğerleri gibi) kimlikleri, cihazları ve erişimleri için aynı koruma düzeyini içermeli. 
+Kimlikleriniz, cihazlarınız ve verileriniz arasında tutarlı koruma düzeyleri kullanmanız önemlidir. Örneğin, yöneticiler, liderler, yöneticiler ve diğerleri&mdash; gibi öncelikli hesapları&mdash; olan kullanıcılar için koruma, kimlikleri, cihazları ve erişdikleri veriler için aynı koruma düzeyini içermelidir. 
 <!--
 
 The **Zero Trust identity and device protection for Microsoft 365** architecture model shows you which capabilities are comparable.
@@ -125,116 +125,116 @@ The **Zero Trust identity and device protection for Microsoft 365** architecture
 
 --> 
 
-Ayrıca, Bu makalede [depolanan bilgileri korumak için veri gizliliği düzenlemelerine](../../solutions/information-protection-deploy.md) ilişkin çözüm için Bilgi korumasını dağıtma Microsoft 365.
+Ayrıca, Microsoft 365 depolanan [bilgileri korumak için veri gizliliği düzenlemeleri için bilgi koruma](../../solutions/information-protection-deploy.md) dağıtma çözümüne bakın.
 
-## <a name="security-and-productivity-trade-offs"></a>Güvenlik ve üretkenlik ticari artışları
+## <a name="security-and-productivity-trade-offs"></a>Güvenlik ve üretkenlik dengeleri
 
-Herhangi bir güvenlik stratejisinin uygulanması, güvenlik ve verimlilik arasında ticarete açıklık gerektirir. Her kararın güvenlik, işlev ve kullanım kolaylığı bakiyesini nasıl etkileyeceğini değerlendirmek yararlı olur.
+Herhangi bir güvenlik stratejisinin uygulanması, güvenlik ve üretkenlik arasında dengeyi sağlamayı gerektirir. Her kararın güvenlik, işlevsellik ve kullanım kolaylığı dengesini nasıl etkilediğini değerlendirmek yararlı olur.
 
-:::image type="content" source="../../media/microsoft-365-policies-configurations/security-triad.png" alt-text="Güvenlik üç durumlu dengeleme güvenlik, işlev ve kullanım kolaylığı" lightbox="../../media/microsoft-365-policies-configurations/security-triad.png":::
+:::image type="content" source="../../media/microsoft-365-policies-configurations/security-triad.png" alt-text="Güvenlik triad dengeleme güvenliği, işlevselliği ve kullanım kolaylığı" lightbox="../../media/microsoft-365-policies-configurations/security-triad.png":::
 
-Sağlanan öneriler aşağıdaki ilkelere dayalıdır:
+Sağlanan öneriler aşağıdaki ilkelere dayanır:
 
-- Kullanıcılarınızı tanıyor ve güvenlik ve işlevsel gereksinimlerine göre esnek olun.
-- Tam zamanında bir güvenlik ilkesi uygulayabilir ve anlamlı olduğundan emin olursunuz.
+- Kullanıcılarınızı tanıyıp güvenlik ve işlevsel gereksinimlerine karşı esnek olun.
+- Tam zamanında bir güvenlik ilkesi uygulayın ve bunun anlamlı olduğundan emin olun.
 
-## <a name="services-and-concepts-for-zero-trust-identity-and-device-access-protection"></a>Kimlik ve cihaz erişim Sıfır Güven için hizmetler ve kavramlar
+## <a name="services-and-concepts-for-zero-trust-identity-and-device-access-protection"></a>Sıfır Güven kimliği ve cihaz erişim korumasına yönelik hizmetler ve kavramlar
 
-Microsoft 365 kurumsal çözümler, büyük kuruluşlar için herkesin yaratıcı olması ve güvenli bir şekilde birlikte çalışması için güç katıyor.
+kurumsal Microsoft 365, büyük kuruluşlar için herkesin yaratıcı olmasını ve güvenli bir şekilde birlikte çalışmasını sağlamak için tasarlanmıştır.
 
-Bu bölümde kimlik ve cihaz Microsoft 365 için önemli olan kurumsal hizmetlere ve Sıfır Güven genel bakış bilgileri ve açık bir bakış yer almaktadır.
+Bu bölüm, Sıfır Güven kimlik ve cihaz erişimi için önemli olan Microsoft 365 hizmetlerine ve özelliklerine genel bir bakış sağlar.
 
 ### <a name="azure-ad"></a>Azure AD
 
-Azure AD, tam bir kimlik yönetimi özellikleri paketi sağlar. Erişimin güvenliğini sağlamak için bu özellikleri kullanmalarını öneririz.
+Azure AD, tam bir kimlik yönetimi özellikleri paketi sağlar. Erişimin güvenliğini sağlamak için bu özellikleri kullanmanızı öneririz.
 
-|Özellik veya özellik|Açıklama|Lisanslama|
+|Yetenek veya özellik|Açıklama|Lisanslama|
 |---|---|---|
-|[Çok faktörlü kimlik doğrulaması (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks)|MFA, kullanıcıların iki tür doğrulama (kullanıcı parolası, ayrıca Microsoft Authenticator uygulamasından gelen bildirim veya telefon görüşmesi gibi) sağlamasını gerektirir. MFA, çalınmış kimlik bilgilerinin ortamınıza erişmek için kullanılma riskini büyük ölçüde azaltır. Microsoft 365, MFA tabanlı oturum açmalarda Azure AD Multi-Factor Authentication hizmetini kullanır.|Microsoft 365 E3 E5|
-|[Koşullu Erişim](/azure/active-directory/conditional-access/overview)|Azure AD, kullanıcının oturum açma koşullarını değerlendirir ve izin verilen erişimi belirlemek için Koşullu Erişim ilkelerini kullanır. Örneğin, bu kılavuzda size hassas verilere erişim için cihaz uyumluluğu gerektirmeye yönelik bir Koşullu Erişim ilkesi oluşturma hakkında bilgi sağlarız. Bu, bilgisayar korsanı ve çalınmış kimlik bilgileriyle hassas verilerinize erişme riskini önemli ölçüde azaltır. Ayrıca cihazlar hassas verileri de korur, çünkü cihazlar sistem durumu ve güvenlik için belirli gereksinimleri karşılamalıdır.|Microsoft 365 E3 E5|
-|[Azure AD grupları](/azure/active-directory/fundamentals/active-directory-manage-groups)|Koşullu Erişim ilkeleri, mobil Intune ve hatta kuruluşta dosya ve site izinleri olan cihaz yönetimi, atamayı kullanıcı hesaplarına veya Azure AD gruplarına kullanır. Uygulamakta olduğu koruma düzeylerine karşılık gelen Azure AD grupları oluşturmanızı öneririz. Örneğin, üst düzey personeliniz korsanlar için büyük olasılıkla daha yüksek değerli hedeflere sahip. Bu nedenle, bu çalışanların kullanıcı hesaplarını bir Azure AD grubuna eklemek ve bu grubu, erişim için daha yüksek bir koruma düzeyi uygulayan Koşullu Erişim ilkelerine ve diğer ilkelere atamak anlamlıdır.|Microsoft 365 E3 E5|
-|[Cihaz kaydı](/azure/active-directory/devices/overview)|Cihaz için bir kimlik oluşturmak için cihazı Azure AD'ye kaydettirebilirsiniz. Bu kimlik, kullanıcı oturum ayaları kullandığında cihazın kimliğini doğrulamak ve etki alanına katılmış veya uyumlu bilgisayarlar gerektiren Koşullu Erişim ilkeleri uygulamak için kullanılır. Bu kılavuzda, etki alanına katılmış cihazları otomatik olarak kaydetmek için cihaz Windows kullanıruz. Cihaz kaydı, cihaz kaydına sahip cihazları yönetmek için önkoşul Intune.|Microsoft 365 E3 E5|
-|[Azure AD Kimlik Koruması](/azure/active-directory/identity-protection/overview)|Kuruluş kimliklerini etkileyen olası güvenlik açıklarını algılamanıza olanak sağlar ve otomatik düzeltme ilkesi düşük, orta ve yüksek oturum açma riski ile kullanıcı risklerini yapılandırabilir. Bu kılavuz, çok faktörlü kimlik doğrulamasına Koşullu Erişim ilkeleri uygulamak için bu risk değerlendirmesini temel almaktadır. Bu kılavuzda ayrıca, kullanıcıların hesapları için yüksek riskli etkinlik algılandığında parolalarını değiştirmelerini gerektiren bir Koşullu Erişim ilkesi de yerlanır.|Microsoft 365 E5, Microsoft 365 E3 E5 Güvenlik eklenti, EMS E5 veya diğer kullanıcı Azure AD Premium P2 seçin|
-|[Kendi kendine parola sıfırlama (SSPR)](/azure/active-directory/authentication/concept-sspr-howitworks)|Yöneticinin denetiminde olduğu birden çok kimlik doğrulama yönteminin doğrulamasını sağlayarak, kullanıcılarınızı parolalarını güvenli bir şekilde ve yardım masası müdahalesi olmadan sıfırlamasına izin verme.|Microsoft 365 E3 E5|
-|[Azure AD parola koruması](/azure/active-directory/authentication/concept-password-ban-bad)|Bilinen zayıf parolaları, değişkenlerini ve zayıf olan organizasyona özgü ek zayıf terimlerini algıla ve engelle. Varsayılan genel yasaklanmış parola listeleri, Bir Azure AD kiracısı'nın tüm kullanıcılarına otomatik olarak uygulanır. Özel bir yasaklanan parola listesinde ek girişler tanımlayabilirsiniz. Kullanıcılar parolalarını değiştirse veya sıfırlasa, güçlü parolaların kullanımını zorunlu yapmak için bu yasaklanmış parola listeleri denetlenir.|Microsoft 365 E3 E5|
+|[Çok faktörlü kimlik doğrulaması (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks)|MFA, kullanıcıların kullanıcı parolası ve Microsoft Authenticator uygulamasından gelen bildirim veya telefon görüşmesi gibi iki doğrulama biçimi sağlamasını gerektirir. MFA, çalınan kimlik bilgilerinin ortamınıza erişmek için kullanılabilmesi riskini büyük ölçüde azaltır. Microsoft 365, MFA tabanlı oturum açma işlemleri için Azure AD Multi-Factor Authentication hizmetini kullanır.|Microsoft 365 E3 veya E5|
+|[Koşullu Erişim](/azure/active-directory/conditional-access/overview)|Azure AD, kullanıcı oturum açma koşullarını değerlendirir ve izin verilen erişimi belirlemek için Koşullu Erişim ilkelerini kullanır. Örneğin, bu kılavuzda hassas verilere erişim için cihaz uyumluluğu gerektiren bir Koşullu Erişim ilkesinin nasıl oluşturulacağını gösteririz. Bu, kendi cihazına ve çalınan kimlik bilgilerine sahip bir korsanın hassas verilerinize erişme riskini büyük ölçüde azaltır. Ayrıca cihazlardaki hassas verileri de korur çünkü cihazların sistem durumu ve güvenliği için belirli gereksinimleri karşılaması gerekir.|Microsoft 365 E3 veya E5|
+|[Azure AD grupları](/azure/active-directory/fundamentals/active-directory-manage-groups)|Koşullu Erişim ilkeleri, Intune ile cihaz yönetimi ve hatta kuruluşunuzdaki dosya ve sitelere yönelik izinler, kullanıcı hesaplarına veya Azure AD gruplarına atamayı kullanır. Uyguladığınız koruma düzeylerine karşılık gelen Azure AD grupları oluşturmanızı öneririz. Örneğin, yönetici personeliniz korsanlar için büyük olasılıkla daha yüksek değer hedefleridir. Bu nedenle, bu çalışanların kullanıcı hesaplarını bir Azure AD grubuna eklemek ve bu grubu Koşullu Erişim ilkelerine ve erişim için daha yüksek bir koruma düzeyini zorlayan diğer ilkelere atamak mantıklıdır.|Microsoft 365 E3 veya E5|
+|[Cihaz kaydı](/azure/active-directory/devices/overview)|Cihaz için bir kimlik oluşturmak için bir cihazı Azure AD'ye kaydedersiniz. Bu kimlik, kullanıcı oturum açtığında cihazın kimliğini doğrulamak ve etki alanına katılmış veya uyumlu bilgisayarlar gerektiren Koşullu Erişim ilkelerini uygulamak için kullanılır. Bu kılavuz için, etki alanına katılmış Windows bilgisayarları otomatik olarak kaydetmek için cihaz kaydını kullanırız. Cihaz kaydı, Intune cihazları yönetmek için bir önkoşuldur.|Microsoft 365 E3 veya E5|
+|[Azure AD Kimlik Koruması](/azure/active-directory/identity-protection/overview)|Kuruluşunuzun kimliklerini etkileyen olası güvenlik açıklarını algılamanıza ve otomatik düzeltme ilkesini düşük, orta ve yüksek oturum açma riski ile kullanıcı riski olarak yapılandırmanıza olanak tanır. Bu kılavuz, çok faktörlü kimlik doğrulaması için Koşullu Erişim ilkelerini uygulamak için bu risk değerlendirmesine dayanır. Bu kılavuz, hesaplarında yüksek riskli etkinlik algılandığında kullanıcıların parolalarını değiştirmelerini gerektiren bir Koşullu Erişim ilkesi de içerir.|Microsoft 365 E5, E5 Güvenlik eklentisi, EMS E5 veya Azure AD Premium P2 lisanslarıyla Microsoft 365 E3|
+|[Kendi kendine parola sıfırlama (SSPR)](/azure/active-directory/authentication/concept-sspr-howitworks)|Yöneticinin denetleyebileceği birden çok kimlik doğrulama yönteminin doğrulanmasını sağlayarak kullanıcılarınızın parolalarını güvenli bir şekilde ve yardım masası müdahalesi olmadan sıfırlamasına izin verin.|Microsoft 365 E3 veya E5|
+|[Azure AD parola koruması](/azure/active-directory/authentication/concept-password-ban-bad)|Bilinen zayıf parolaları ve bunların değişkenlerini ve kuruluşunuza özgü ek zayıf terimleri algılayın ve engelleyin. Varsayılan genel yasaklanmış parola listeleri, Bir Azure AD kiracısında tüm kullanıcılara otomatik olarak uygulanır. Özel yasaklanmış parola listesinde ek girdiler tanımlayabilirsiniz. Kullanıcılar parolalarını değiştirdiğinde veya sıfırladığında, bu yasaklanmış parola listeleri güçlü parolaların kullanımını zorunlu kılmak için denetlenir.|Microsoft 365 E3 veya E5|
 
-Kimlik ve cihaz erişiminin bileşenleri Sıfır Güven Azure AD nesneleri ve Azure AD Intune, ayarlar ve alt hizmetler de buna göredir.
+Intune ve Azure AD nesneleri, ayarları ve alt hizmetleri de dahil olmak üzere Sıfır Güven kimliğin ve cihaz erişiminin bileşenleri aşağıdadır.
 
-:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-device-access-components.png" alt-text="Kimlik ve cihaz Sıfır Güven Bileşenleri" lightbox="../../media/microsoft-365-policies-configurations/identity-device-access-components.png":::
+:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-device-access-components.png" alt-text="Sıfır Güven kimliği ve cihaz erişiminin bileşenleri" lightbox="../../media/microsoft-365-policies-configurations/identity-device-access-components.png":::
 
 ### <a name="microsoft-intune"></a>Microsoft Intune
 
-[Intune](/intune/introduction-intune), Microsoft'un bulut tabanlı mobil cihaz yönetim hizmetidir. Bu kılavuz, sistemlere sahip bilgisayarların Windows yönetimi ve cihaz Intune ilkesi yapılandırmalarını önermektedir. Intune uyumlu olup olmadığını belirler ve Koşullu Erişim ilkeleri uygularken kullanmak üzere bu verileri Azure AD'ye gönderir.
+[Intune](/intune/introduction-intune), Microsoft'un bulut tabanlı mobil cihaz yönetimi hizmetidir. Bu kılavuz, Intune Windows bilgisayarların cihaz yönetimini ve cihaz uyumluluk ilkesi yapılandırmalarını önerir. Intune cihazların uyumlu olup olmadığını belirler ve bu verileri Koşullu Erişim ilkeleri uygularken kullanmak üzere Azure AD'ye gönderir.
 
-#### <a name="intune-app-protection"></a>Intune koruması
+#### <a name="intune-app-protection"></a>Uygulama korumasını Intune
 
-[Intune koruma ilkeleri](/intune/app-protection-policy), mobil uygulamalarda, cihazları yönetime kaydetmeden veya kaydetmeden kuruluş verilerinizi korumak için kullanılabilir. Intune korumanıza, çalışanlarınızı üretken olabilir ve veri kaybını önlemeye yardımcı olur. Uygulama düzeyi ilkeler uygulayarak, şirket kaynaklarına erişimi kısıtlar ve verileri, it departmanınız tarafından kontrol altında tutabilirsiniz.
+[Intune uygulama koruma](/intune/app-protection-policy) ilkeleri, cihazları yönetime kaydederek veya kaydetmeden mobil uygulamalarda kuruluşunuzun verilerini korumak için kullanılabilir. Intune bilgilerin korunmasına, çalışanlarınızın üretken olmaya devam etmelerine ve veri kaybını önlemeye yardımcı olur. Uygulama düzeyinde ilkeler uygulayarak şirket kaynaklarına erişimi kısıtlayabilir ve verileri BT departmanınızın denetiminde tutabilirsiniz.
 
-Bu kılavuzda, onaylı uygulamaların kullanımını zorunlu kılınan önerilen ilkelerin nasıl oluşturularak bu uygulamaların iş verilerinizle nasıl kullanılabileceklerini belirlemesi açıklanmıştır.
+Bu kılavuzda, onaylı uygulamaların kullanımını zorunlu kılmak ve bu uygulamaların iş verilerinizle nasıl kullanılabileceğini belirlemek için önerilen ilkelerin nasıl oluşturulacağı gösterilmektedir.
 
 ### <a name="microsoft-365"></a>Microsoft 365
 
-Bu kılavuzda, Microsoft Teams, Exchange, SharePoint ve diğer bulut hizmetleri dahil olmak üzere Microsoft 365 bulut hizmetlerinin erişimini korumak için bir dizi ilkeyi OneDrive. Bu ilkeleri uygulamaya ek olarak, şu kaynakları kullanarak kiracınız için koruma düzeyini yükseltmenizi de öneririz:
+Bu kılavuzda Microsoft Teams, Exchange, SharePoint ve OneDrive dahil olmak üzere Microsoft 365 bulut hizmetlerine erişimi korumak için bir dizi ilkenin nasıl uygulandığı gösterilmektedir. Bu ilkeleri uygulamaya ek olarak, aşağıdaki kaynakları kullanarak kiracınız için koruma düzeyini yükseltmenizi öneririz:
 
-- [Daha yüksek güvenlik için kiracınızı yapılandırma](tenant-wide-setup-for-increased-security.md)
+- [Daha fazla güvenlik için kiracınızı yapılandırma](tenant-wide-setup-for-increased-security.md)
 
-  Öneriler, başlangıç noktası güvenliği için geçerli olan güvenlik.
+  Kiracınız için başlangıç noktası güvenliği için geçerli olan Öneriler.
 
-- [Güvenlik yol haritası: İlk 30 gün, son 90 gün ve daha sonra için en önemli öncelikler](security-roadmap.md)
+- [Güvenlik yol haritası: İlk 30 gün, 90 gün ve sonrası için en önemli öncelikler](security-roadmap.md)
 
-  Öneriler, veri yönetimi, yönetici erişimi ve tehdit koruması gibi bilgileri içerir.
+  Günlüğe kaydetme, veri idaresi, yönetici erişimi ve tehdit koruması gibi Öneriler.
 
-### <a name="windows-11-or-windows-10-with-microsoft-365-apps-for-enterprise"></a>Windows 11 ile Windows 10 veya Windows 10 Kurumlar için Microsoft 365 Uygulamaları
+### <a name="windows-11-or-windows-10-with-microsoft-365-apps-for-enterprise"></a>Kurumlar için Microsoft 365 Uygulamaları ile Windows 11 veya Windows 10
 
-Windows 11 veya Windows 10, Kurumlar için Microsoft 365 Uygulamaları bilgisayarlar için önerilen istemci ortamıdır. Azure hem Windows 11 Windows 10 Azure AD için mümkün olan en rahat deneyimi sağlamak üzere tasar olduğundan, kullanıcı adı veya kaynak bilgileriyle çalışmanizi öneririz. Windows 11 veya Windows 10, güvenlik özellikleri aracılığıyla yönetilebilir gelişmiş güvenlik özellikleri de Intune. Kurumlar için Microsoft 365 Uygulamaları, Office uygulamalarının en son sürümlerini içerir. Bunlar daha güvenli olan ve Koşullu Erişim için bir gereksinim olan modern kimlik doğrulamayı kullanır. Bu uygulamalar ayrıca gelişmiş uyumluluk ve güvenlik araçlarını da içerir.
+Kurumlar için Microsoft 365 Uygulamaları ile Windows 11 veya Windows 10 bilgisayarlar için önerilen istemci ortamıdır. Azure hem şirket içi hem de Azure AD için mümkün olan en sorunsuz deneyimi sağlamak üzere tasarlandığından Windows 11 veya Windows 10 öneririz. Windows 11 veya Windows 10, Intune aracılığıyla yönetilebilen gelişmiş güvenlik özellikleri de içerir. Kurumlar için Microsoft 365 Uygulamaları, Office uygulamalarının en son sürümlerini içerir. Bunlar, daha güvenli ve Koşullu Erişim gereksinimi olan modern kimlik doğrulamasını kullanır. Bu uygulamalar ayrıca gelişmiş uyumluluk ve güvenlik araçları içerir.
 
-## <a name="applying-these-capabilities-across-the-three-tiers-of-protection"></a>Bu özellikleri korumanın üç katmanı boyunca uygulama
+## <a name="applying-these-capabilities-across-the-three-tiers-of-protection"></a>Bu özellikleri korumanın üç katmanına uygulama
 
-Aşağıdaki tabloda, korumanın üç katmanında bu özellikleri kullanma önerilerimiz özetlenmiştir.
+Aşağıdaki tabloda, bu özelliklerin üç koruma katmanında kullanılmasına yönelik önerilerimiz özetlemektedir.
 
 |Koruma mekanizması|Başlangıç noktası|Enterprise|Özel güvenlik|
 |---|---|---|---|
-|**MFA'nın zorunlu kılınma**|Orta veya üzeri oturum açma riskine karşı|Oturum açma risk altında veya üzerinde|Tüm yeni oturumlarda|
-|**Parola değişikliğini zorunlu kılın**|Yüksek riskli kullanıcılar için|Yüksek riskli kullanıcılar için|Yüksek riskli kullanıcılar için|
-|**Uygulama Intune korumasını zorunlu uygulama**|Evet|Evet|Evet|
-|**Kuruluş Intune cihaz için zorunlu kayıt işlemini zorunlu kılın**|Uyumlu veya etki alanına katılmış bir bilgisayar gerektirir, ancak kendi cihazlarınızı (BYOD) telefon ve tabletlerinizi getirmenize izin verme|Uyumlu veya etki alanına katılmış bir cihaz gerektirme|Uyumlu veya etki alanına katılmış bir cihaz gerektirme|
+|**MFA'yı zorunlu kılma**|Orta veya üst düzey oturum açma riskinde|Düşük veya daha yüksek oturum açma riskinde|Tüm yeni oturumlarda|
+|**Parola değişikliğini zorunlu kılma**|Yüksek riskli kullanıcılar için|Yüksek riskli kullanıcılar için|Yüksek riskli kullanıcılar için|
+|**Intune uygulama korumasını zorunlu kılma**|Evet|Evet|Evet|
+|**Kuruluşa ait cihaz için Intune kaydını zorunlu kılma**|Uyumlu veya etki alanına katılmış bir bilgisayar iste, ancak kendi cihazlarını getir (KCG) telefon ve tabletlere izin ver|Uyumlu veya etki alanına katılmış bir cihaz gerektirme|Uyumlu veya etki alanına katılmış bir cihaz gerektirme|
 
 ## <a name="device-ownership"></a>Cihaz sahipliği
 
-Yukarıdaki tablo, birçok kuruluşun iş gücü genelinde mobil üretkenlik sağlamak için kişisel veya BYOD'ların yanı sıra, kuruluşa ait cihazlar karma olarak destekleme eğilimini yansıtıyor. Intune koruma ilkeleri, e-postanın hem kuruluşa ait cihazlarda hem de BYOD'larda Outlook mobil uygulamasından ve diğer Office mobil uygulamalardan dışarı çıkmalarına karşı korunmasını sağlar.
+Yukarıdaki tablo, birçok kuruluşun kuruluşa ait cihazların yanı sıra iş gücü genelinde mobil üretkenliği sağlamak için kişisel veya BYOD'ların bir karışımını destekleme eğilimini yansıtır. Intune uygulama koruma ilkeleri, e-postanın hem kuruluşa ait cihazlarda hem de KDD'lerde Outlook mobil uygulamasından ve diğer Office mobil uygulamalarından dışarı sızmaya karşı korunmasını sağlar.
 
-Ek koruma ve denetim uygulamak için Intune cihaz tarafından veya etki alanına katılmış cihazlar tarafından yönetilmalarını öneririz. Veri duyarlılığına bağlı olarak, kuruluş belirli kullanıcı popülasyonları veya belirli uygulamalar için BYODs'a izin vermenizi tercih ediyor olabilir.
+Ek korumalar ve denetim uygulamak için kuruluşa ait cihazların Intune veya etki alanına katılmış olarak yönetilmesini öneririz. Veri duyarlılığına bağlı olarak, kuruluşunuz belirli kullanıcı popülasyonları veya belirli uygulamalar için BYOD'lere izin vermemeyi seçebilir.
 
 ## <a name="deployment-and-your-apps"></a>Dağıtım ve uygulamalarınız
 
-Azure AD tümleşik uygulamalarınız için kimlik Sıfır Güven cihaz erişim yapılandırmasını yapılandırmadan ve bu yapılandırmayı yapılandırmadan önce:
+Azure AD ile tümleşik uygulamalarınız için Sıfır Güven kimlik ve cihaz erişim yapılandırmasını yapılandırmadan ve dağıtmadan önce şunları yapmalısınız:
 
-- Organizasyonda hangi uygulamaları korumak istediğinize karar verin.
-- Uygun koruma düzeylerini sağlayan ilke kümelerini belirlemek için bu uygulama listesini çözümle.
+- Kuruluşunuzda hangi uygulamaları kullanmak istediğinize karar verin.
+- Uygun koruma düzeylerini sağlayan ilke kümelerini belirlemek için bu uygulama listesini analiz edin.
 
-  Her uygulama için ayrı ilke kümeleri oluşturmamelisiniz çünkü bunların yönetimi zahmetli olabilir. Microsoft, aynı kullanıcılar için aynı koruma gereksinimlerine sahip olan uygulamalarınızı gruplamanızı öneririz.
+  Her biri uygulama için ayrı ilke kümeleri oluşturmamalısınız çünkü bunların yönetimi zahmetli hale gelebilir. Microsoft, aynı kullanıcılar için aynı koruma gereksinimlerine sahip uygulamalarınızı gruplandırmanızı önerir.
 
-  Örneğin, başlangıç noktası koruması için tüm kullanıcılarınızı Microsoft 365 uygulamalarını ve insan kaynakları veya finans departmanları tarafından kullanılanlar gibi tüm hassas uygulamalar için ikinci bir ilke kümesi içeren bir ilke kümeniz olabilir ve bunları bu gruplara uygulayabilirsiniz.
+  Örneğin, başlangıç noktası koruması için tüm kullanıcılarınız için tüm Microsoft 365 uygulamalarını ve insan kaynakları veya finans departmanları tarafından kullanılanlar gibi tüm hassas uygulamalar için ikinci bir ilke kümesini içeren bir ilke kümeniz olabilir ve bunları bu gruplara uygulayabilirsiniz.
 
-Güvenliğini sağlamak istediğiniz uygulamalar için ilke kümesi belirlediktan sonra, bu ilkeleri adım adım kullanıcılarınıza aşamalı olarak ve yol boyunca sorunları çözüm olarak verin.
+Güvenli hale getirmek istediğiniz uygulamalar için ilke kümesini belirledikten sonra, ilkeleri kullanıcılarınıza artımlı olarak dağıtın ve bu aradaki sorunları giderin.
 
-Örneğin, yalnızca iş veya öğretmen uygulamalarınız için Microsoft 365 için kullanılacak ilkeleri, Exchange değişikliklerle birlikte Exchange. Bu ilkeleri kullanıcılarınıza salım ve tüm sorunları birlikte çalışalım. Ardından, Teams değişikliklerle birlikte yeni bir e-posta ekleyin ve bunu kullanıcılarınıza sn. Ardından, SharePoint değişikliklerle birlikte ekle'yi seçin. Bu başlangıç noktası ilkelerini tüm uygulamalarınızı içerecek şekilde güvenli bir şekilde yapılandırıncaya kadar, uygulamalarınızı diğer Microsoft 365 devam edin.
+Örneğin, tüm Microsoft 365 uygulamalarınız için kullanılacak ilkeleri yalnızca Exchange ek değişikliklerle Exchange için yapılandırın. Bu ilkeleri kullanıcılarınıza dağıtıp tüm sorunları çözebilirsiniz. Ardından, ek değişiklikleriyle Teams ekleyin ve bunu kullanıcılarınıza dağıtin. Ardından, ek değişiklikleriyle SharePoint ekleyin. Bu başlangıç noktası ilkelerini tüm Microsoft 365 uygulamaları içerecek şekilde güvenle yapılandırana kadar kalan uygulamalarınızı eklemeye devam edin.
 
-Benzer şekilde, hassas uygulamalarınız için ilkeler kümesi oluşturun, bir defada tek bir uygulama ekleyin ve hepsi hassas uygulama ilkesi kümesine ekleyene kadar tüm sorunları çözümlenin.
+Benzer şekilde, hassas uygulamalarınız için ilke kümesini oluşturun ve tek seferde bir uygulama ekleyin ve hepsi hassas uygulama ilke kümesine dahil edilene kadar tüm sorunları gözden geçirin.
 
-Microsoft, tüm uygulamalara uygulanacak ilke kümeleri oluşturmamanızı öneririz, çünkü bu yapılandırmalar bazı önerilmez yapılandırmalara neden olabilir. Örneğin, tüm uygulamaları engelleyen ilkeler yöneticilerinizi Azure portal ve dışlamalar Microsoft Graph gibi önemli uç noktalar için yapılandıramaz.
+Microsoft, bazı istenmeyen yapılandırmalara neden olabileceği için tüm uygulamalar için geçerli olan ilke kümeleri oluşturmamanızı önerir. Örneğin, tüm uygulamaları engelleyen ilkeler yöneticilerinizi Azure portal ve dışlamalar Microsoft Graph gibi önemli uç noktalar için yapılandırılamaz.
 
-## <a name="steps-to-configure-zero-trust-identity-and-device-access"></a>Kimlik ve cihaz Sıfır Güven yapılandırma adımları
+## <a name="steps-to-configure-zero-trust-identity-and-device-access"></a>Sıfır Güven kimliği ve cihaz erişimini yapılandırma adımları
 
-:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-device-access-steps.png" alt-text="Kimlik ve cihaz Sıfır Güven yapılandırma adımları" lightbox="../../media/microsoft-365-policies-configurations/identity-device-access-steps.png":::
+:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-device-access-steps.png" alt-text="Sıfır Güven kimliği ve cihaz erişimini yapılandırma adımları" lightbox="../../media/microsoft-365-policies-configurations/identity-device-access-steps.png":::
 
-1. Önkoşul kimlik özelliklerini ve ayarlarını yapılandırma.
-2. Ortak kimliği yapılandırarak Koşullu Erişim ilkelerine erişin.
-3. Konuk ve dış kullanıcılar için Koşullu Erişim ilkelerini yapılandırma.
-4. Bulut uygulamaları için Koşullu Microsoft 365 ilkelerini&mdash; Microsoft Teams,&mdash; Exchange ve SharePoint Microsoft Defender for Cloud Apps gibi yapılandırabilirsiniz.
+1. Önkoşul kimlik özelliklerini ve ayarlarını yapılandırın.
+2. Ortak kimliği yapılandırın ve Koşullu Erişim ilkelerine erişin.
+3. Konuk ve dış kullanıcılar için Koşullu Erişim ilkelerini yapılandırın.
+4. Microsoft Teams, Exchange ve SharePoint ve Microsoft Defender for Cloud Apps ilkeleri olarak Microsoft 365&mdash; bulut uygulamaları&mdash; için Koşullu Erişim ilkelerini yapılandırın.
 
-Kimlik ve cihaz erişimini Sıfır Güven sonra göz önünde bulunduracak ek özelliklerin aşamalı denetim listesi için [Azure AD](/azure/active-directory/fundamentals/active-directory-deployment-checklist-p2) özellik dağıtım kılavuzuna ve erişimi korumak, izlemek ve izlemek için [Azure AD](/azure/active-directory/governance/) Kimlik Yönetimi'ne bakın.
+kimlik ve cihaz erişimini Sıfır Güven yapılandırdıktan sonra, dikkate alınacak ek özelliklerin aşamalı denetim listesi için [Azure AD özellik dağıtım kılavuzuna](/azure/active-directory/fundamentals/active-directory-deployment-checklist-p2) ve erişimi korumak, izlemek ve denetlemek için [Azure AD Kimlik İdaresi'ne](/azure/active-directory/governance/) bakın.
 
 ## <a name="next-step"></a>Sonraki adım
 
-[Kimlik ve cihaz erişimi Sıfır Güven için önkoşul çalışması](identity-access-prerequisites.md)
+[Sıfır Güven kimlik ve cihaz erişim ilkelerini uygulamak için önkoşul çalışması](identity-access-prerequisites.md)

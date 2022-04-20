@@ -1,5 +1,5 @@
 ---
-title: Verimbroker verilerini aynı dosyada arşivlemek için bağlayıcı Microsoft 365
+title: Microsoft 365'da Yieldbroker verilerini arşivleye bir bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -11,80 +11,80 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Yöneticiler, Veritas verilerinden Veribroker verilerini içeri aktarma ve arşivlemek için bir bağlayıcı Microsoft 365. Bu bağlayıcı, iş yerinde üçüncü taraf veri kaynaklarından verileri Microsoft 365. Bu verileri arşivledikten sonra, üçüncü taraf verilerini yönetmek için yasal saklama, içerik araması ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
-ms.openlocfilehash: 4a3c56659b4229774af6804d1dc3a6f30aa85039
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Yöneticiler Veritas'tan Microsoft 365'a Yieldbroker verilerini içeri aktaracak ve arşivecek bir bağlayıcı ayarlayabilir. Bu bağlayıcı, Microsoft 365'da üçüncü taraf veri kaynaklarından verileri arşivleyabilmenizi sağlar. Bu verileri arşivledikten sonra, üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
+ms.openlocfilehash: bf3d5517790be6e673c54069198b74cb64bf95d3
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63311823"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64950599"
 ---
-# <a name="set-up-a-connector-to-archive-yieldbroker-data"></a>Ödemebroker verilerini arşivlemek için bağlayıcı ayarlama
+# <a name="set-up-a-connector-to-archive-yieldbroker-data"></a>Yieldbroker verilerini arşivleye bağlayıcı ayarlama
 
-Ödemebroker'dan kendi Microsoft 365 uyumluluk merkezi posta kutularına veri içeri aktarmak ve arşivlemek için veri kaynağında bir Veritas Microsoft 365 kullanın. Veritas size üçüncü taraf veri kaynağından öğeleri yakalamak ve bu öğeleri üçüncü taraf veri kaynağına aktaracak şekilde yapılandırılmış bir [Yieldbroker](https://globanet.com/yieldbroker/) bağlayıcısı Microsoft 365. Bağlayıcı, Yieldbroker'dan içeriği e-posta ileti biçimine dönüştürür ve sonra bu öğeleri Daha Sonra'da kullanıcının posta kutusuna Microsoft 365.
+Verileri Yieldbroker'dan Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında bir Veritas bağlayıcısı kullanın. Veritas, üçüncü taraf veri kaynağından öğeleri yakalamak ve bu öğeleri Microsoft 365 aktarmak için yapılandırılmış bir [Yieldbroker](https://globanet.com/yieldbroker/) bağlayıcısı sağlar. Bağlayıcı, içeriği Yieldbroker'dan e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'de kullanıcının posta kutusuna aktarır.
 
-Yieldbroker kullanıcı posta kutularında depo edildikten sonra, Microsoft 365 Saklama, eBulma, bekletme ilkeleri ve bekletme etiketleri gibi uyumluluk özelliklerini uygulayabilirsiniz. Aynı kuruluşta verileri içeri aktararak ve arşivlenen bir Yieldbroker bağlayıcısı kullanmak Microsoft 365 kuruluş ve mevzuat ilkeleriyle uyumlu çalışmanıza yardımcı olabilir.
+Yieldbroker kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, eBulma, bekletme ilkeleri ve bekletme etiketleri gibi Microsoft Purview özelliklerini uygulayabilirsiniz. Microsoft 365'de verileri içeri aktarmak ve arşivlemek için Bir Yieldbroker bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 
-## <a name="overview-of-archiving-yieldbroker-data"></a>Ödemebroker verilerini arşivlemeye genel bakış
+## <a name="overview-of-archiving-yieldbroker-data"></a>Yieldbroker verilerini arşivlemeyle ilgili genel bakış
 
-Aşağıdaki genel bakış makalesinde, Verimbroker verilerini bir bağlayıcı kullanarak arşivleme işlemi Microsoft 365.
+Aşağıdaki genel bakışta, Microsoft 365'de Yieldbroker verilerini arşivleyen bir bağlayıcı kullanma işlemi açıklanmaktadır.
 
-![Ödemebroker verileri için arşivleme iş akışı.](../media/YieldbrokerConnectorWorkflow.png)
+![Yieldbroker verileri için arşivleme iş akışı.](../media/YieldbrokerConnectorWorkflow.png)
 
-1. Organizasyonunız, Bir ÖdemeBroker sitesi ayarlamak ve yapılandırmak için ÖdemeBroker ile çalışır.
+1. Kuruluşunuz, Bir Yieldbroker sitesi ayarlamak ve yapılandırmak için Yieldbroker ile birlikte çalışır.
 
-2. Ödemebroker öğeleri her 24 saatte bir Veritas Birleştirme1 sitesine kopyalanır. Bağlayıcı, içeriği e-posta iletisi biçimine de dönüştürür.
+2. Her 24 saatte bir Yieldbroker öğeleri Veritas Merge1 sitesine kopyalanır. Bağlayıcı ayrıca içeriği e-posta iletisi biçimine dönüştürür.
 
-3. Microsoft 365 uyumluluk merkezi'te oluşturmış olunan Yieldbroker bağlayıcısı, her gün Veritas Merge1 sitesine bağlanır ve iletileri Microsoft bulutunda güvenli bir Azure Depolama konuma aktarıyor.
+3. Uyumluluk portalında oluşturduğunuz Yieldbroker bağlayıcısı her gün Veritas Merge1 sitesine bağlanır ve iletileri Microsoft bulutunda güvenli bir Azure Depolama konumuna aktarır.
 
-4. Bağlayıcı, 3. Adımda açıklandığı gibi, otomatik kullanıcı eşlemesinde *E-posta* özelliğinin değerini kullanarak dönüştürülmüş ÖdemeBroker öğelerini belirli kullanıcıların posta [kutularına içeri aktarmaktadır](#step-3-map-users-and-complete-the-connector-setup). Kullanıcı posta kutularında **Yieldbroker** adlı Gelen Kutusu klasöründe bir alt klasör oluşturulur ve öğeler bu klasöre aktarılır. Bağlayıcı, E-posta özelliğinin değerini kullanarak hangi posta kutusuna öğe *aktarılamayacaklarını* belirler. Her Yieldbroker, öğenin tüm katılımcılarının e-posta adresiyle doldurulan bu özelliği içerir.
+4. Bağlayıcı, [3. Adımda](#step-3-map-users-and-complete-the-connector-setup) açıklandığı gibi otomatik kullanıcı eşlemesinin *Email* özelliğinin değerini kullanarak dönüştürülen Yieldbroker öğelerini belirli kullanıcıların posta kutularına aktarır. Kullanıcı posta kutularında **Yieldbroker** adlı Gelen Kutusu klasöründe bir alt klasör oluşturulur ve öğeler bu klasöre aktarılır. Bağlayıcı, *E-posta* özelliğinin değerini kullanarak öğelerin hangi posta kutusuna aktarılacağını belirler. Her Yieldbroker, öğenin her katılımcısının e-posta adresiyle doldurulan bu özelliği içerir.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-- Microsoft bağlayıcıları için VeriTas Merge1 hesabı oluşturun. Hesap oluşturmak için [Veritas Müşteri Desteği'ne başvurun](https://www.veritas.com/content/support/). Bağlayıcıyı 1. Adımda  oluşturdukta bu hesapta oturum açın.
+- Microsoft bağlayıcıları için bir Veritas Merge1 hesabı oluşturun. Hesap oluşturmak için [Veritas Müşteri Desteği'ne](https://www.veritas.com/content/support/) başvurun. 1. Adımda bağlayıcıyı oluştururken bu hesapta oturum açmanız gerekir.
 
-- 1. Adımda Yieldbroker bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yöneticisi rolü atanabilir. Bu rol, sayfanın en son veri **bağlayıcıları sayfasına bağlayıcı** eklemek Microsoft 365 uyumluluk merkezi. Bu rol varsayılan olarak birden çok rol gruplarına eklenir. Bu rol gruplarının listesi için, Güvenlik ve Uyumluluk Merkezi'nde İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki roller" [& bakın](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). Alternatif olarak, bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolü ata sonrasında uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için aşağıdaki İzinler bölümündeki "Özel bir rol grubu oluşturma" [bölümüne Microsoft 365 uyumluluk merkezi](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- 1. Adımda Yieldbroker bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için [Microsoft Purview uyumluluk portalındaki İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
-- Bu Veritas veri bağlayıcısı, ABD Kamu bulutu GCC ortamlarda Microsoft 365 önizlemededir. Üçüncü taraf uygulamaları ve hizmetleri, kuruluş müşteri verilerini Microsoft 365 altyapısının dışında olan üçüncü taraf sistemlerde depolamayı, iletip işlemeyi ve bu nedenle de Microsoft 365 uyumluluk ve veri koruma taahhütleri kapsamında değildir. Microsoft, bu ürünün üçüncü taraf uygulamalara bağlanmak için kullanılabileceğiyle ilgili hiçbir beyanda yoktur ve bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu da ima eder.
+- Bu Veritas veri bağlayıcısı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda genel önizleme aşamasındadır. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerinin Microsoft 365 altyapısı dışında olan ve bu nedenle Microsoft Purview ve veri koruma taahhütleri kapsamında olmayan üçüncü taraf sistemlerde depolanmasını, iletilmesini ve işlenmesini içerebilir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
 
-## <a name="step-1-set-up-the-yieldbroker-connector"></a>1. Adım: Yieldbroker bağlayıcıyı ayarlama
+## <a name="step-1-set-up-the-yieldbroker-connector"></a>1. Adım: Yieldbroker bağlayıcısını ayarlama
 
-İlk adım, ana sayfada Veri **Bağlayıcıları** sayfasına erişmek ve Ödeme Microsoft 365 uyumluluk merkezi bağlayıcısı oluşturmaktır.
+İlk adım, uyumluluk portalındaki **Veri Bağlayıcıları** sayfasına erişmek ve Yieldbroker için bir bağlayıcı oluşturmaktır.
 
-1. Veri bağlayıcıları [https://compliance.microsoft.com](https://compliance.microsoft.com/) **ÖdemeBroker'e gidin ve** &gt; **bu öğeye tıklayın**.
+1. **Veri bağlayıcıları** &gt; **Ödemeci'ye**[https://compliance.microsoft.com](https://compliance.microsoft.com/) gidin ve tıklayın.
 
-2. **Ödemebroker ürün açıklaması** sayfasında Yeni bağlayıcı **ekle'ye tıklayın**.
+2. **Yieldbroker** ürün açıklaması sayfasında **Yeni bağlayıcı ekle'ye** tıklayın.
 
-3. Hizmet Koşulları **sayfasında Kabul Et'e** **tıklayın**.
+3. **Hizmet koşulları** sayfasında **Kabul Et'e** tıklayın.
 
-4. Bağlayıcıyı tanımlayan benzersiz bir ad girin ve Ardından Sonraki'ye **tıklayın**.
+4. Bağlayıcıyı tanımlayan benzersiz bir ad girin ve **İleri'ye** tıklayın.
 
-5. Bağlayıcıyı yapılandırmak için Merge1 hesabınızla oturum açın.
+5. Bağlayıcıyı yapılandırmak için Merge1 hesabınızda oturum açın.
 
-## <a name="step-2-configure-the-yieldbroker-connector-on-the-veritas-merge1-site"></a>2. Adım: Veritas Merge1 sitesinde Yieldbroker bağlayıcısı yapılandırma
+## <a name="step-2-configure-the-yieldbroker-connector-on-the-veritas-merge1-site"></a>2. Adım: Veritas Merge1 sitesinde Yieldbroker bağlayıcısını yapılandırma
 
-İkinci adım, Merge1 sitesinde Yieldbroker bağlayıcısı yapılandırmaktır. ÖdemeBror'ünü yapılandırma hakkında bilgi için bkz. [Merge1 Third-Party Connectors User Guide](https://docs.ms.merge1.globanetportal.com/Merge1%20Third-Party%20Connectors%20Yieldbroker%20User%20Guide%20.pdf).
+İkinci adım, Merge1 sitesinde Yieldbroker bağlayıcısını yapılandırmaktır. Yieldbroker'ı yapılandırma hakkında bilgi için bkz. [Birleştirme1 Üçüncü Taraf Bağlayıcıları Kullanıcı Kılavuzu](https://docs.ms.merge1.globanetportal.com/Merge1%20Third-Party%20Connectors%20Yieldbroker%20User%20Guide%20.pdf).
 
-Son Olarak Kaydet **& e tıklarken**, sihirbazın  Bağlayıcı sihirbazında Kullanıcı eşleme Microsoft 365 uyumluluk merkezi görüntülenir.
+**Kaydet & Son'a** tıkladıktan sonra, uyumluluk portalındaki bağlayıcı sihirbazındaki **Kullanıcı eşleme** sayfası görüntülenir.
 
 ## <a name="step-3-map-users-and-complete-the-connector-setup"></a>3. Adım: Kullanıcıları eşleme ve bağlayıcı kurulumunu tamamlama
 
 Kullanıcıları eşlemek ve bağlayıcı kurulumunu tamamlamak için şu adımları izleyin:
 
-1. Map **Yieldbroker users to Microsoft 365 sayfasında**, otomatik kullanıcı eşlemesini etkinleştirin. Ödemebroker öğeleri, organizasyondaki *kullanıcıların* e-posta adreslerini içeren E-posta adlı bir özellik içerir. Bağlayıcı bu adresi bir kullanıcıyla Microsoft 365, öğeler o kullanıcının posta kutusuna aktarılır.
+1. **Kullanıcıları Microsoft 365 için Harita Verimli kullanıcıları** sayfasında otomatik kullanıcı eşlemesini etkinleştirin. Yieldbroker öğeleri, kuruluşunuzdaki kullanıcıların *e-posta adreslerini içeren E-posta* adlı bir özellik içerir. Bağlayıcı bu adresi bir Microsoft 365 kullanıcıyla ilişkilendirebiliyorsa, öğeler söz konusu kullanıcının posta kutusuna aktarılır.
 
-2. **Sonraki'ne** tıklayın, ayarlarınızı gözden geçirin ve yeni **bağlayıcıya** yönelik içeri aktarma işleminin ilerlemesini görmek için Veri bağlayıcıları sayfasına gidin.
+2. **İleri'ye** tıklayın, ayarlarınızı gözden geçirin ve yeni bağlayıcının içeri aktarma işleminin ilerleme durumunu görmek için **Veri bağlayıcıları** sayfasına gidin.
 
-## <a name="step-4-monitor-the-yieldbroker-connector"></a>4. Adım: ÖdemeBroker bağlayıcılarını izleme
+## <a name="step-4-monitor-the-yieldbroker-connector"></a>4. Adım: Yieldbroker bağlayıcısını izleme
 
-Ödemebroker bağlayıcısı oluşturdukta, bağlayıcının durumunu bağlayıcının son Microsoft 365 uyumluluk merkezi.
+Yieldbroker bağlayıcısını oluşturduktan sonra bağlayıcının durumunu uyumluluk portalında görüntüleyebilirsiniz.
 
-1. Sol gezinti [https://compliance.microsoft.com](https://compliance.microsoft.com/) çubuğunda **Veri bağlayıcıları'na** gidin ve bu bağlayıcılara tıklayın.
+1. Sol gezinti bölmesinde **Veri bağlayıcıları'na** [https://compliance.microsoft.com](https://compliance.microsoft.com/) gidin ve tıklayın.
 
-2. Bağlayıcılar **sekmesine** tıklayın ve ardından Bağlayıcı hakkında özellikleri ve bilgileri içeren açılır sayfayı görüntülemek için **Yieldbroker** bağlayıcısı öğesini seçin.
+2. **Bağlayıcılar** sekmesine tıklayın ve ardından Bağlayıcı hakkındaki özellikleri ve bilgileri içeren açılır sayfayı görüntülemek için **Yieldbroker** bağlayıcısını seçin.
 
-3. **Bağlayıcının kaynak durumunun altında**, **Bağlayıcının durum günlüğünü** açmak (veya kaydetmek) için Günlüğü indir bağlantısına tıklayın. Bu günlük, Microsoft buluta aktarılan verileri içerir.
+3. Bağlayıcının durum günlüğünü açmak (veya kaydetmek) için **Kaynakla bağlayıcı durumu** altında **Günlüğü indir** bağlantısına tıklayın. Bu günlük, Microsoft buluta aktarılan verileri içerir.
 
 ## <a name="known-issues"></a>Bilinen sorunlar
 
-- Şu anda ekleri veya 10 MB'den büyük öğeleri içeri aktarmayı desteklemez. Daha büyük öğeler için destek daha sonraki bir tarihte kullanılabilir.
+- Şu anda 10 MB'tan büyük eklerin veya öğelerin içeri aktarılmasını desteklemiyoruz. Daha büyük öğeler için destek daha sonraki bir tarihte sağlanacaktır.

@@ -1,5 +1,5 @@
 ---
-title: eBulma holds raporu oluşturmak için betik kullanma
+title: eBulma tutma raporu oluşturmak için betik kullanma
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -19,37 +19,37 @@ search.appverid:
 ms.assetid: cca08d26-6fbf-4b2c-b102-b226e4cd7381
 ms.custom:
 - seo-marvel-apr2020
-description: eBulma servis örnekleriyle ilişkilendirilmiş tüm esnalar hakkında bilgi içeren bir rapor oluşturma hakkında bilgi edinebilirsiniz.
-ms.openlocfilehash: 568d4fa351879d271004d0f0749881f3de4b4a49
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: eBulma servis talepleri ile ilişkili tüm ayrı tutmalar hakkında bilgi içeren bir rapor oluşturmayı öğrenin.
+ms.openlocfilehash: b0460b725359e2953c0a27b517a362327ae504f5
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63319483"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64946473"
 ---
-# <a name="use-a-script-to-create-a-report-on-holds-in-ediscovery-cases"></a>eBulma durumlarında 10 ayrı tutan rapor oluşturmak için betik kullanma
+# <a name="use-a-script-to-create-a-report-on-holds-in-ediscovery-cases"></a>eBulma durumlarında ayrı tutmalar hakkında rapor oluşturmak için betik kullanma
 
-Bu makaledeki betik, eBulma yöneticilerinin ve eBulma yöneticilerinin, kuruluş içinde Core ve Advanced eDiscovery servis servisleriyle ilişkilendirilmiş tüm beklemeler hakkında bilgi içeren bir rapor oluşturmalarını Microsoft 365 uyumluluk merkezi. Raporda, bir tutma durumunda yer alan dosyanın adı, beklemede tutulan içerik konumları ve tutmanın sorgu tabanlı olup olmadığı gibi bilgiler yer almaktadır. Hiçbir mızrı olmayan durumlar varsa, betik, var olan durumlar listesi olan ek bir rapor sağlar.
+Bu makaledeki betik, eBulma yöneticilerinin ve eBulma yöneticilerinin Microsoft Purview uyumluluk portalında Core ve eBulma (Premium) durumlarıyla ilişkili tüm ayrı tutmalar hakkında bilgi içeren bir rapor oluşturmasına olanak tanır. Rapor, ayrı tutmanın ilişkilendirildiği servis talebinin adı, ayrı tutmaya yerleştirilen içerik konumları ve ayrı tutmanın sorgu tabanlı olup olmadığı gibi bilgileri içerir. Ayrı tutması olmayan durumlar varsa betik, ayrı tutma olmayan servis taleplerinin listesini içeren ek bir rapor oluşturur.
 
-Rapora [dahil edilen](#more-information) bilgilerin ayrıntılı açıklaması için Daha fazla bilgi bölümüne bakın.
+Rapora dahil edilen bilgilerin ayrıntılı açıklaması için [Daha fazla bilgi](#more-information) bölümüne bakın.
 
 ## <a name="admin-requirements-and-script-information"></a>Yönetici gereksinimleri ve betik bilgileri
 
-- Organizasyonlu tüm eBulma davaları hakkında rapor oluşturmak için, kuruluşta eBulma Yöneticisi olmak gerekir. eBulma Yöneticisiysiniz, rapor yalnızca eriş erişiminiz olan vakalar hakkında bilgi içerir. eBulma izinleri hakkında daha fazla bilgi için bkz. [eBulma izinleri atama](assign-ediscovery-permissions.md).
+- Kuruluşunuzdaki tüm eBulma durumlarına ilişkin bir rapor oluşturmak için, kuruluşunuzda eBulma Yöneticisi olmanız gerekir. eBulma Yöneticisiyseniz, rapor yalnızca erişebileceğiniz servis talepleri hakkında bilgi içerir. eBulma izinleri hakkında daha fazla bilgi için bkz. [eBulma izinleri atama](assign-ediscovery-permissions.md).
 
-- Bu makaledeki betikte çok az hata işleme vardır. Temel amacı, kurumuz tarafından eBulma davaları ile ilişkili tığlar hakkında hızlıca rapor oluşturmaktır.
+- Bu makaledeki betikte en az hata işleme vardır. Birincil amaç, kuruluşunuzdaki eBulma servis talepleri ile ilişkili tutmalar hakkında hızla rapor oluşturmaktır.
 
-- Bu konu başlığı altında verilen örnek betikler, hiçbir Microsoft standart destek programı veya hizmeti kapsamında desteklenemmektedir. Örnek betikler hiçbir garanti olmaksızın OLDUĞU GIBI verilmektedir. Microsoft, ticarete uygunluk veya belirli bir amaca uygunluk ile ilgili zımni garantiler dahil ancak bununla sınırlı olmaksızın her türlü zımni garantiyi bundan sonra feragat ediyor. Örnek betiklerin ve belgelerin kullanımından veya performansından doğan tüm riskler size aittir. Hiçbir durumda Microsoft, yazarları veya betiklerin oluşturulması, üretimi veya dağıtımında yer alan diğer herhangi bir kişi, örnek betiklerin veya belgelerin kullanımından ya da kullanılamazlığından kaynaklanan hiçbir zarardan (ticari kar kaybı, iş kesintisi, iş bilgisi kaybı veya diğer maddi kayıplar dahil ancak ancak bu zararlar dahil ancak ancak hiçbir zarardan sorumlu olmayacaktır),  Microsoft bu tür zarar olasılığı hakkında bilgilansa bile.
+- Bu konuda sağlanan örnek betikler, herhangi bir Microsoft standart destek programı veya hizmeti altında desteklenmez. Örnek betikler, herhangi bir garanti olmadan OLDUĞU GIBI sağlanır. Microsoft, satılabilirlik veya belirli bir amaca uygunlukla ilgili zımni garantiler dahil ancak bunlarla sınırlı olmaksızın tüm zımni garantileri de reddeder. Örnek betiklerin ve belgelerin kullanımından veya performansından kaynaklanan tüm risk sizinle kalır. Hiçbir durumda Microsoft, yazarları veya betiklerin oluşturulması, üretimi veya teslimi ile ilgili herhangi bir kişi, örnek betiklerin veya belgelerin kullanımından veya kullanılamama durumundan kaynaklanan herhangi bir zarardan (bunlarla sınırlı olmaksızın, iş kârı kaybı, iş kesintisi, iş bilgisi kaybı veya diğer maddi kayıplar dahil) sorumlu tutulamaz,  Microsoft'a bu tür hasarlar olabileceği bildirilmiş olsa bile.
 
-## <a name="step-1-connect-to-security--compliance-center-powershell"></a>1. Adım: Bağlan ve Uyumluluk & PowerShell'e geçin
+## <a name="step-1-connect-to-security--compliance-center-powershell"></a>1. Adım: Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan
 
-İlk adım, güvenlik ve uyumluluk & PowerShell'e bağlanmaktır. Adım adım yönergeler için bkz. Güvenlik [Bağlan Uyumluluk Merkezi PowerShell& e geçin](/powershell/exchange/connect-to-scc-powershell).
+İlk adım, kuruluşunuz için Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanmaktır. Adım adım yönergeler için bkz[. Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
 
-## <a name="step-2-run-the-script-to-report-on-holds-associated-with-ediscovery-cases"></a>2. Adım: eBulma durumleriyle ilişkilendirilmiş 12. adım: Betiği çalıştırarak eBulma durumlarını bildirme
+## <a name="step-2-run-the-script-to-report-on-holds-associated-with-ediscovery-cases"></a>2. Adım: eBulma servis talepleri ile ilişkili ayrı tutmaları raporlamak için betiği çalıştırın
 
-Güvenlik ve Uyumluluk Merkezi PowerShell& e bağlandıktan sonra, bir sonraki adım, kurumdaki eBulma örnekleri hakkında bilgi toplayan betiği oluşturmak ve çalıştırmaktır.
+Güvenlik & Uyumluluk Merkezi PowerShell'e bağlandıktan sonra, bir sonraki adım kuruluşunuzdaki eBulma olayları hakkında bilgi toplayan betiği oluşturmak ve çalıştırmaktır.
 
-1. Aşağıdaki metni, Windows PowerShell dosya adı son eklerini kullanarak bir .ps1 betik dosyasına kaydedin; örneğin, CaseHoldsReport.ps1.
+1. Aşağıdaki metni .ps1 dosya adı soneki kullanarak bir Windows PowerShell betik dosyasına kaydedin; örneğin, CaseHoldsReport.ps1.
 
    ```powershell
    #script begin
@@ -105,7 +105,7 @@ Güvenlik ve Uyumluluk Merkezi PowerShell& e bağlandıktan sonra, bir sonraki a
    }
    #get information on the cases and pass values to the case report function
    " "
-   write-host "Gathering a list of Core eDiscovery cases and holds..."
+   write-host "Gathering a list of eDiscovery (Standard) cases and holds..."
    " "
    $edc =Get-ComplianceCase -ErrorAction SilentlyContinue
    foreach($cc in $edc)
@@ -136,7 +136,7 @@ Güvenlik ve Uyumluluk Merkezi PowerShell& e bağlandıktan sonra, bir sonraki a
    }
    #get information on the cases and pass values to the case report function
    " "
-   write-host "Gathering a list of Advanced eDiscovery cases and holds..."
+   write-host "Gathering a list of eDiscovery (Premium) cases and holds..."
    " "
    $edc =Get-ComplianceCase -CaseType Advanced -ErrorAction SilentlyContinue
    foreach($cc in $edc)
@@ -172,7 +172,7 @@ Güvenlik ve Uyumluluk Merkezi PowerShell& e bağlandıktan sonra, bir sonraki a
    #script end
    ```
 
-2. 1. Windows PowerShell açılan Yeni Oturumda, betiği kaydeden klasöre gidin.
+2. 1. Adımda açılan Windows PowerShell oturumunda, betiği kaydettiğiniz klasöre gidin.
 
 3. Betiği çalıştırın; örneğin:
 
@@ -180,43 +180,43 @@ Güvenlik ve Uyumluluk Merkezi PowerShell& e bağlandıktan sonra, bir sonraki a
    .\CaseHoldsReport.ps1
    ```
 
-   Betik, raporu kaydetmek için bir hedef klasör girmenizi sağlar.
+   Betik, raporun kaydedileceği hedef klasörü ister.
 
-4. Raporu kaydetmek istediğiniz klasörün tam yol adını yazın ve Enter tuşuna **basın**.
+4. Raporu kaydetmek için klasörün tam yol adını yazın ve **Enter tuşuna** basın.
 
    > [!TIP]
-   > Raporu betiğin bulunduğu klasöre kaydetmek için, hedef klasör istendiğinde bir nokta (".") yazın. Raporu betiğin bulunduğu klasördeki bir alt klasöre kaydetmek için, alt klasörün adını yazmanız gerekir.
+   > Raporu betiğin bulunduğu klasöre kaydetmek için hedef klasör istendiğinde nokta (".") yazın. Raporu betiğin bulunduğu klasördeki bir alt klasöre kaydetmek için alt klasörün adını yazması gerekir.
 
-   Betik, tüm eBulma davaları hakkında kuruluş bilgilerini toplamaya başlar. Betik çalışırken rapor dosyasına erişin. Betik tamamlandıktan sonra, son oturumda onay Windows PowerShell görüntülenir. Bu ileti görüntülendikten sonra, 4. Adımda belirttiğiniz klasördeki rapora erişebilirsiniz. Raporun dosya adıdır `CaseHoldsReport<DateTimeStamp>.csv`.
+   Betik, kuruluşunuzdaki tüm eBulma olayları hakkında bilgi toplamaya başlar. Betik çalışırken rapor dosyasına erişemezsiniz. Betik tamamlandıktan sonra, Windows PowerShell oturumunda bir onay iletisi görüntülenir. Bu ileti görüntülendikten sonra, rapora 4. Adımda belirttiğiniz klasörden erişebilirsiniz. Raporun dosya adı şeklindedir `CaseHoldsReport<DateTimeStamp>.csv`.
 
-   Buna ek olarak, betik 10 100 2013'e kadar olan vakaların listesinin yer olduğu bir rapor da oluşturur. Bu raporun dosya adıdır `CaseswithNoHolds<DateTimeStamp>.csv`.
+   Ayrıca betik, ayrı tutması olmayan servis taleplerinin listesini içeren bir rapor da oluşturur. Bu raporun dosya adı şeklindedir `CaseswithNoHolds<DateTimeStamp>.csv`.
 
-   Bu betiği çalıştırma örneği CaseHoldsReport.ps1.
+   aşağıda CaseHoldsReport.ps1 betiğini çalıştırma örneği verilmiştır.
 
-   ![Betiği çalıştırdikten sonra CaseHoldsReport.ps1.](../media/7d312ed5-505e-4ec5-8f06-3571e3524a1a.png)
+   ![CaseHoldsReport.ps1 betiğini çalıştırdıktan sonra çıkış.](../media/7d312ed5-505e-4ec5-8f06-3571e3524a1a.png)
 
 ## <a name="more-information"></a>Daha fazla bilgi
 
-Olay, bu makaledeki betiği çalıştırarak oluşturulan ve her tutma hakkında aşağıdaki bilgileri içerir. Daha önce de belirtildiği gibi, bir eBulma Yöneticisi olarak, kurumda tüm esnat bilgilerini iade etmek için bir eBulma Yöneticisi olmak gerekir. Servis servis servis adayları hakkında daha fazla bilgi için bkz. [eBulma servis örnekleri](./get-started-core-ediscovery.md).
+Servis talebi, bu makaledeki betiği çalıştırdığınızda oluşturulan raporu tutar ve her ayrı tutma hakkında aşağıdaki bilgileri içerir. Daha önce açıklandığı gibi, kuruluşunuzdaki tüm tutmalar için bilgi döndürmek için eBulma Yöneticisi olmanız gerekir. Servis talebi tutmaları hakkında daha fazla bilgi için bkz. [eBulma durumları](./get-started-core-ediscovery.md).
 
-- Tutma adı ve ile ilişkilendirilmiş eBulma dava adı.
+- Ayrı tutmanın adı ve ayrı tutmanın ilişkili olduğu eBulma servis talebinin adı.
 
-- Tutmanın bir Çekirdek veya Çekirdek durumundan Advanced eDiscovery olabilir.
+- Ayrı tutmanın bir Core veya eBulma (Premium) olayıyla ilişkilendirilip ilişkilendirilmediği.
 
-- eBulma olaylarının etkin veya kapalı olup olmadığı.
+- eBulma servis talebinin etkin veya kapalı olup olmadığı.
 
-- Tutmanın etkin veya devre dışı bırakılabilir olup olmadığı.
+- Ayrı tutmanın etkinleştirilip etkinleştirilmediği veya devre dışı bırakılıp bırakılmadığı.
 
-- Tutma ile ilişkilendirilmiş eBulma davalarının üyeleri. Vaka üyeleri, atandığı eBulma izinlerine bağlı olarak vakayı  görüntülemek veya yönetmek için bu izinleri ister.
+- Ayrı tutmanın ilişkili olduğu eBulma servis talebinin üyeleri. Servis talebi üyeleri, atanmış oldukları eBulma izinlerine bağlı olarak bir servis talebini görüntüleyebilir veya yönetebilir.
 
-- Vakanın oluşturulmuş olduğu saat ve tarih.
+- Servis talebinin oluşturulduğu saat ve tarih.
 
-- Bir dava kapatılırsa kapatılan kişi, kapatılan kişi ile kapatılan saat ve tarihtir.
+- Bir servis talebi kapatılırsa, kapatılan kişi ve kapatıldığı saat ve tarih.
 
-- Posta Exchange ve SharePoint konumlarını tutmadan önce kullanabilirsiniz.
+- Exchange posta kutuları ve SharePoint site konumları beklemededir.
 
-- Tutma, sorgu tabanlı bir söz dizimidir.
+- Ayrı tutma sorgu tabanlıysa, sorgu söz dizimi.
 
-- Tutmanın saat ve tarihi, oluşturulduğunda bu tarihi oluşturan kişidir.
+- Ayrı tutmanın oluşturulduğu saat ve tarih ve bunu oluşturan kişi.
 
-- Tutmanın en son değiştir değiştirme saati ve tarihi ve bunu değiştiren kişi.
+- Ayrı tutmanın son değiştirildiği saat ve tarih ve değiştiren kişi.

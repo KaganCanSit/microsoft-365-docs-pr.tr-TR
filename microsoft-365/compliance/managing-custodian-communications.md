@@ -1,5 +1,5 @@
 ---
-title: E-postada iletişim Advanced eDiscovery
+title: eBulma'da iletişimlerle çalışma (Premium)
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -15,46 +15,46 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Advanced eDiscovery, yasal soruşturmalarda koruyucuları bilgilendirmeyle ilgili yasal tutma bildirimi iş akışını yönetmeyi kolaylaştırır.
-ms.openlocfilehash: abe501624e4bc5d0b62ce49f38aa028cd112a7f8
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+description: eKeşif (Premium), yasal araştırmalarda koruyuculara bildirimde bulunarak yasal tutma bildirimi iş akışını yönetmeyi kolaylaştırır.
+ms.openlocfilehash: 9ee915cc9955b343d76ae1314c27a86421d37332
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63019519"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64944667"
 ---
-# <a name="work-with-communications-in-advanced-ediscovery"></a>E-postada iletişim Advanced eDiscovery
+# <a name="work-with-communications-in-ediscovery-premium"></a>eBulma'da iletişimlerle çalışma (Premium)
 
-Advanced eDiscovery bölümü, yasal tutma bildirimlerini izleme ve dağıtmayla ilgili işlemlerini basitleştirmelerine olanak sağlar. Özel iletişim aracı, hukuk departmanlarının ilk bildirimlerden anımsatıcılara ve yükseltmelere kadar tüm yasal tutma sürecini tek bir konumda yönetmesini ve otomatikleştirmesini sağlar.
+Microsoft Purview eKeşif (Premium), yasal departmanların yasal tutma bildirimlerini izleme ve dağıtma süreçlerini basitleştirmesine olanak tanır. Koruyucu iletişim aracı, yasal departmanların ilk bildirimlerden anımsatıcılara ve yükseltmelere kadar tüm yasal saklama sürecini tek bir konumda yönetmesine ve otomatikleştirmesine olanak tanır.
 
-## <a name="what-is-a-legal-hold-notification"></a>Yasal tutma bildirimi nedir?
+## <a name="what-is-a-legal-hold-notification"></a>Yasal saklama bildirimi nedir?
 
-Yasal tutma (mahkeme tutma olarak da *bilinir) bildirimi*, kuruluşun hukuk bölümünden çalışanlara, bir çalışanlara, bir personelin veya yasal bir soruşturmayla ilgili olan veri koruyucularına gönderilen bir bildirimdir. Bu bildirimler, koruyuculardan elektronik olarak depolanan bilgileri ve etkin veya yasal bir konuyla ilgili herhangi bir içeriği korumalarını ister. Yasal ekipler, her koruyucun verilen yönergelere uymayı kabul etmiş, okuduğu, anladığını ve kabul etmiş olduğunu anlamalıdır.
+Yasal tutma ( *dava tutma* olarak da bilinir) bildirimi, bir kuruluşun hukuk departmanından çalışanlara, bağlı personele veya yasal soruşturmayla ilgili olabilecek verilerin koruyucularına gönderilen bir bildirimdir. Bu bildirimler, koruyuculara elektronik olarak depolanan bilgileri ve etkin veya yaklaşan bir yasal konuyla ilgili olabilecek tüm içerikleri korumalarını emredmektedir. Hukuk ekipleri, her koruyucunun verilen yönergelere uyduğunu, okuduğunu, anladığını ve uymayı kabul ettiğini bilmelidir.
 
-## <a name="the-legal-hold-notification-process"></a>Yasal tutma bildirim işlemi
+## <a name="the-legal-hold-notification-process"></a>Yasal saklama bildirim süreci
 
-Bir kuruluşun, hakkında dava veya mevzuatla ilgili bir soruşturma hakkında bilgi edinen ilgili bilgileri koruma bir görevi vardır. Bir soruşturmanın saklama gerekliliklerine uymak için, kuruluş ilgili bilgileri saklama görevlerinde olası koruyucuları hemen bilgilendirmesi gerekir.
+Bir kuruluş, yaklaşan bir dava veya mevzuat araştırması hakkında bilgi edindiğinde ilgili bilgileri koruma görevine sahiptir. Bir soruşturmanın koruma gereksinimlerine uymak için kuruluş, ilgili bilgileri korumak için potansiyel koruyucuları derhal bilgilendirmelidir.
 
-Yasal Advanced eDiscovery, yasal tutma bildirimi iş akışlarını oluşturabilir ve özelleştirilebilir. Özel iletişim aracı, yasal ekiplerin aşağıdaki bildirim ve iş akışlarını yapılandırmalarını sağlar:
+eKeşif (Premium) ile hukuk ekipleri yasal tutma bildirimi iş akışını oluşturabilir ve özelleştirebilir. Koruyucu iletişim aracı, yasal ekiplerin aşağıdaki bildirimleri ve iş akışlarını yapılandırmasına olanak tanır:
 
-1. **Yayın uyarısı:** Yasal tutma bildirimi, hukuk departmanından konuyla ilgili bilgiye sahip olan koruyuculara yönelik bir bildirim ile (veya başlatılmış olarak) velilere yöneliktir. Bu bildirim, koruyuculara keşif için gerekli olan tüm bilgileri korumalarını sağlar.
+1. **Verme bildirimi:** Yasal tutma bildirimi, hukuk departmanından konuyla ilgili bilgilere sahip olabilecek koruyuculara yapılan bir bildirimle verilir (veya başlatılır). Bu bildirim, koruyuculara bulma için gerekli olabilecek tüm bilgileri korumalarını emredmektedir.
 
-2. **Yeniden Yayınla bildirimi:** Bir durum sırasında, daha önce istenenden daha fazla içerik (veya daha az içerik) korunması için koruyucular gerekebilir. Bu senaryoda, mevcut tutma bildirimini güncelleştirin ve koruyuculara yeniden yayın.
+2. **Yeniden Verme bildirimi:** Bir olay sırasında, koruyucuların daha önce istenenden daha fazla içerik (veya daha az içerik) koruması gerekebilir. Bu senaryo için mevcut ayrı tutma bildirimini güncelleştirebilir ve koruyuculara yeniden sağlayabilirsiniz.
 
-3. **Sürüm bildirimi:** Bir sorun çözülür ve custo bir koruma gereksinimine tabi olmazsa, custo bir durumla karşıtlık çözülebilir. Ayrıca, koruyucuya artık içeriği korumanın gerekli olmadığını bildirebilirsiniz ve normal çalışma etkinliklerini ve verilerini sürdürme yönergelerini sebilirsiniz.
+3. **Sürüm bildirimi:** Bir mesele çözüldükten ve koruyucu artık bir koruma gereksinimine tabi olmadığında, koruyucu davadan serbest bırakılabilir. Buna ek olarak, koruyucuya içeriği korumak için artık gerekli olmadığını bildirebilir ve normal çalışma etkinliklerini ve verilerini nasıl sürdüreceklerine ilişkin yönergeler sağlayabilirsiniz.
 
-4. **Anımsatıcılar ve yükseltmeler:** Bazı durumlarda, yalnızca bildirim vermek yasal keşif gereksinimlerini karşılamak için yeterli değildir. Her bildirimle, yasal ekipler yanıt vermeyen koruyucularla otomatik olarak takip etmek için bir anımsatıcı ve yükseltme iş akışları kümesi zamanebilmektedir.
+4. **Anımsatıcılar ve yükseltmeler:** Bazı durumlarda, yasal bulma gereksinimlerini karşılamak için yalnızca bir bildirim vermek yeterli değildir. Her bildirimle, yasal ekipler yanıt vermeyen koruyucularla otomatik olarak takip etmek için bir anımsatıcı ve yükseltme iş akışları kümesi zamanlayabilir.
 
-   - **Anımsatıcılar:** Yasal tutma bildirimi verildikten veya bir dizi koruyucuya yeniden verildikten sonra, bir kuruluş, yanıt vermemeye çalışan koruyucuları uyaracak anımsatıcılar ayarebilmektedir.
+   - **Hatırlatmalar:** Yasal bir saklama bildirimi verildikten veya bir dizi koruyucuya yeniden verildikten sonra, kuruluş yanıt vermeyen koruyucuları uyarmak için anımsatıcılar ayarlayabilir.
 
-   - **Yükseltmeler:** Bazı durumlarda, bir özel kişi, bir dizi anımsatıcıdan sonra bile yanıt vermiyorsa, hukuk ekibi yanıt vermemeye çalışan koruyucuları ve bunların yöneticisini bilgilendirecek şekilde bir yükseltme iş akışı hazırlar.
+   - **Escalations:** Bazı durumlarda, bir koruyucu belirli bir süre boyunca bir dizi anımsatıcıdan sonra bile yanıt vermiyorsa, hukuk ekibi yanıt vermeyen koruyucuları ve yöneticilerini bilgilendirmek için bir yükseltme iş akışı ayarlayabilir.
 
-Koruyucu iletişim işlemini yönetme hakkında daha fazla bilgi için aşağıdakilere bakın: 
+Koruyucu iletişim sürecini yönetme hakkında daha fazla bilgi için aşağıdakilere bakın: 
 
 - [Yasal tutma bildirimi oluşturma](create-hold-notification.md)
 
 - [İletişim düzenleyicisini kullanma](using-communications-editor.md)
 
-- [Tutma bildirimlerini yönetme](manage-hold-notification.md)
+- [Bekletme bildirimlerini yönetme](manage-hold-notification.md)
 
-- [Bir tutma bildirimini onaylar](acknowledge-hold-notification.md)
+- [Bekletme bildirimini onaylama](acknowledge-hold-notification.md)

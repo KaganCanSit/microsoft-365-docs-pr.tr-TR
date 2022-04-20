@@ -1,5 +1,5 @@
 ---
-title: Web'de arama sorguları Advanced eDiscovery
+title: eBulma'da arama sorguları oluşturma (Premium)
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -15,32 +15,32 @@ search.appverid:
 - MOE150
 - MET150
 ms.custom: seo-marvel-mar2020
-description: Belirli bir alanı kullanarak verileri ararken arama kapsamını daraltmak için anahtar sözcükleri ve Advanced eDiscovery koşulları Microsoft 365.
-ms.openlocfilehash: 8ad708b9733dd7d96f1025f116a31a92d757afd2
-ms.sourcegitcommit: 57211e8082a3429017ad33fe0e6bd9af203bb7ab
+description: Microsoft 365'de eBulma (Premium) kullanarak veri ararken arama kapsamını daraltmak için anahtar sözcükleri ve koşulları kullanın.
+ms.openlocfilehash: 7a3c3747e38667eca40032511209af964ffb165a
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "63027539"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64950345"
 ---
-# <a name="build-search-queries-for-collections-in-advanced-ediscovery"></a>Web'de koleksiyonlar için arama sorguları Advanced eDiscovery
+# <a name="build-search-queries-for-collections-in-ediscovery-premium"></a>eBulma'da koleksiyonlar için arama sorguları oluşturma (Premium)
 
-Advanced eDiscovery durumunda bir koleksiyon oluştururken arama sorgusunu yapılandırarak, aramanın kapsamını yasal incelemenize en uygun öğeleri geri çekmek üzere daraltmak üzere belirli içerik ve koşulları bulmak için anahtar sözcükler kullanabilirsiniz.[](collections-overview.md)
+eBulma (Premium) durumunda [koleksiyon](collections-overview.md) oluştururken arama sorgusunu yapılandırırken, yasal araştırmanızla en ilgili öğeleri döndürmek için arama kapsamını daraltmak üzere belirli içeriği ve koşulları bulmak için anahtar sözcükleri kullanabilirsiniz.
 
 ![Arama sonuçlarını daraltmak için anahtar sözcükleri ve koşulları kullanın.](../media/SearchQueryBox.png)
 
 ## <a name="keyword-searches"></a>Anahtar sözcük aramaları
 
-Arama sorgusunun Anahtar Sözcükler **kutusuna bir** anahtar sözcük sorgusu yazın. Gönderilen ve alınan tarihler gibi anahtar sözcükleri, e-posta iletisi özelliklerini ya da dosya adları veya belgenin en son değiştir olduğu tarih gibi belge özelliklerini belirtebilirsiniz. VE, YADA, NOT ve NEAR gibi Boole işleci kullanan daha **karmaşık** **sorgular** **kullanabilirsiniz**. Ayrıca, SharePoint ve OneDrive'daki belgelerde (e-posta iletileri içinde değil) hassas bilgileri (sosyal güvenlik numaraları gibi) arayabilir veya dış olarak paylaşılan belgeleri arayabilirsiniz. Anahtar Sözcükler kutusunu **boş** bırakırsanız, belirtilen içerik konumlarında bulunan tüm içerik arama sonuçlarında yer verir.
+Arama sorgusundaki Anahtar Sözcükler kutusuna bir **anahtar sözcük** sorgusu yazın. Anahtar sözcükleri, gönderilen ve alınan tarihler gibi e-posta iletisi özelliklerini ya da dosya adları veya belgenin son değiştirilme tarihi gibi belge özelliklerini belirtebilirsiniz. **AND**, **OR**, **NOT** ve **NEAR** gibi boole işleci kullanan daha karmaşık sorgular kullanabilirsiniz. Ayrıca, SharePoint ve OneDrive (e-posta iletilerinde değil) belgelerde hassas bilgileri (sosyal güvenlik numaraları gibi) arayabilir veya harici olarak paylaşılmış belgeleri arayabilirsiniz. **Anahtar Sözcükler** kutusunu boş bırakırsanız, belirtilen içerik konumlarında bulunan tüm içerik arama sonuçlarında olur.
 
 ## <a name="keyword-list"></a>Anahtar sözcük listesi
 
-Alternatif olarak, Anahtar sözcük listesini **göster onay kutusunu** seçin ve her satıra bir anahtar sözcük veya anahtar sözcük tümceciği yazın. Her satırdaki anahtar sözcükler, oluşturulan arama sorgusunda **OR** işlecine benzeyen bir mantıksal işleçle (arama sorgusu söz dizimsinde *c:s* ile temsil edilen) bağlantılıdır. Bu, herhangi bir satırda anahtar sözcük içeren öğelerin arama sonuçlarında yer alan öğeler olduğu anlamına gelir. Arama sorgularında anahtar sözcük listesine en çok 180 Advanced eDiscovery ekleyebilirsiniz.
+Alternatif olarak, **Anahtar sözcük listesini göster** onay kutusunu seçebilir ve her satıra bir anahtar sözcük veya anahtar sözcük tümceciği yazabilirsiniz. Her satırdaki anahtar sözcükler, oluşturulan arama sorgusundaki **OR** işlecine benzer bir mantıksal işleç (arama sorgusu söz diziminde *c:s* olarak gösterilir) ile bağlanır. Bu, herhangi bir satırda anahtar sözcük içeren öğelerin arama sonuçlarında olduğu anlamına gelir. eBulma (Premium) arama sorgularında anahtar sözcük listesine en fazla 180 satır ekleyebilirsiniz.
 
-![Sorguda yer alan her anahtar sözcükle ilgili istatistikler almak için anahtar sözcük listesini kullanın.](../media/KeywordListSearch.png)
+![Sorgudaki her anahtar sözcükle ilgili istatistikleri almak için anahtar sözcük listesini kullanın.](../media/KeywordListSearch.png)
 
-Anahtar sözcük listesini neden kullanasınız? Anahtar sözcük listesinde her anahtar sözcükle kaç öğenin eş olduğunu göstermek için istatistikler eldeebilirsiniz. Bu, en etkili (ve en az) anahtar sözcükleri hızla tanımlamanıza yardımcı olabilir. Anahtar sözcükler listesinde bir satırda bir anahtar sözcük tümceciği de (parantez içinde) kullanabilirsiniz. Arama istatistikleri hakkında daha fazla bilgi için bkz [. Koleksiyon istatistikleri ve raporları](collection-statistics-reports.md)
+Anahtar sözcük listesini neden kullanmalısınız? Anahtar sözcük listesindeki her anahtar sözcükle eşleşen öğe sayısını gösteren istatistikler alabilirsiniz. Bu, en etkili (ve en az) anahtar sözcükleri hızla belirlemenize yardımcı olabilir. Anahtar sözcükler listesindeki bir satırda bir anahtar sözcük tümceciği (parantez içinde) de kullanabilirsiniz. Arama istatistikleri hakkında daha fazla bilgi için bkz [. Koleksiyon istatistikleri ve raporları](collection-statistics-reports.md)
 
-## <a name="conditions"></a>Koşullar
+## <a name="conditions"></a>Koşul -ları
 
-Bir aramanın kapsamını daraltmak ve daha daraltılmış bir sonuç kümesi geri dönmek için arama koşulları  eklersiniz. Her koşul, oluşturulan ve siz arama başlatmak üzere çalıştırılan arama sorgusuna bir yan tümce ekler. Koşul, anahtar sözcük kutusunda belirtilen anahtar sözcük sorgusuna, AND işlecine benzeyen bir mantıksal işleçle (arama sorgusu söz dizimsinde *c:c* ile temsil edilen) **mantıksal olarak** bağlanır. Bu, öğelerin arama sonuçlarına dahil etmek için hem anahtar sözcük sorgusunu hem de bir veya daha fazla durumu karşılaması gereken anlamına gelir. Koşullar, sonuçlarınızı daraltmanıza böyle yardımcı olur. Arama sorgusunda kullanabileceğiniz koşulların listesi ve açıklaması için, Anahtar sözcük sorguları ve arama koşulları'nın "Arama koşulları" [bölümüne bakın](keyword-queries-and-search-conditions.md#search-conditions).
+Arama kapsamını daraltmak ve daha iyileştirilmiş bir sonuç kümesi döndürmek için arama koşulları ekleyebilirsiniz. Her koşul, aramayı başlattığınızda oluşturulan ve çalıştırılan arama sorgusuna bir yan tümce ekler. Koşul, **and** işlecine benzer bir mantıksal işleç (arama sorgusu söz diziminde *c:c* olarak gösterilir) tarafından anahtar sözcük kutusunda belirtilen anahtar sözcük sorgusuna mantıksal olarak bağlanır. Bu, öğelerin hem anahtar sözcük sorgusunu hem de arama sonuçlarına dahil edilecek bir veya daha fazla koşulu karşılaması gerektiğini gösterir. Koşulların sonuçlarınızı daraltmanıza bu şekilde yardımcı olur. Arama sorgusunda kullanabileceğiniz koşulların listesi ve açıklaması için [Anahtar sözcük sorguları ve arama koşulları](keyword-queries-and-search-conditions.md#search-conditions) bölümündeki "Arama koşulları" bölümüne bakın.

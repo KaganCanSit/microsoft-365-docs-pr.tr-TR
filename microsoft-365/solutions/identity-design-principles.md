@@ -1,6 +1,6 @@
 ---
-title: Microsoft 365 kaynak planlama - Güvenlik mimarisi
-description: Microsoft'ta Teknik Sorumlu Mimar Alex Shteynberg'Enterprise Microsoft'un en önemli tasarım stratejileri hakkında bilgi öğrenin.
+title: kurumsal kaynak planlama Microsoft 365 - Güvenlik mimarisi
+description: Microsoft'un Teknik Sorumlu Mimarı Alex Shteynberg'den Microsoft Enterprise mimarisi için en iyi tasarım stratejileri hakkında bilgi edinin.
 ms.author: bcarter
 author: brendacarter
 manager: bcarter
@@ -14,312 +14,312 @@ ms.collection:
 - M365solutions
 ms.custom: seo-marvel-jun2020
 f1.keywords: NOCSH
-ms.openlocfilehash: 8e24242639362bddca7540cd8dfb390b0edb5e8c
-ms.sourcegitcommit: 0ee2dabe402d44fecb6856af98a2ef7720d25189
+ms.openlocfilehash: b5b2f8efe36ceba10dd1dadd3034b899ad05fd38
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "62996126"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64945461"
 ---
-# <a name="to-identity-and-beyondone-architects-viewpoint"></a>Kimlik ve ötesine, Bir mimarın görünüm noktası
+# <a name="to-identity-and-beyondone-architects-viewpoint"></a>Kimlik ve ötesine—Mimarlardan birinin bakış açısı
 
-Microsoft'un Sorumlu Teknik Mimarı [Alex Shteynberg](https://www.linkedin.com/in/alex-shteynberg/) bu makalede, Microsoft'u ve diğer Microsoft bulut hizmetlerini benimseyen kurumsal kuruluşlar için Microsoft 365 stratejilerini ele almaktadır.
+Bu makalede, Microsoft'un Baş Teknik Mimarı [Alex Shteynberg](https://www.linkedin.com/in/alex-shteynberg/), Microsoft 365 ve diğer Microsoft bulut hizmetlerini benimseyen kurumsal kuruluşlara yönelik en iyi tasarım stratejilerini ele almaktadır.
 
 ## <a name="about-the-author"></a>Yazar hakkında
 
-![Alex Shteynberg'in fotoğrafı.](../media/solutions-architecture-center/identity-and-beyond-alex-shteynberg.jpg)
+![Alex Shteynberg fotoğrafı.](../media/solutions-architecture-center/identity-and-beyond-alex-shteynberg.jpg)
 
-New York Microsoft Technology Center'da Teknik Mimar [olarak çalışıyorum](https://www.microsoft.com/mtc?rtc=1). Çoğunlukla büyük müşterilerle ve karmaşık gereksinimlerle çalışıyoruz. Görünüm noktam ve yorumlarım bu etkileşimleri temel aldı ve her durum için geçerli değildir. Ancak, benim deneyimimde, en karmaşık güçlükleri olan müşterilere yardımcı olabiliriz, tüm müşterilere yardımcı olabiliriz.
+New York [Microsoft Teknoloji Merkezi'nde](https://www.microsoft.com/mtc?rtc=1) Baş Teknik Mimarım. Çoğunlukla büyük müşteriler ve karmaşık gereksinimlerle çalışıyorum. Bakış açım ve görüşlerim bu etkileşimleri temel alır ve her durum için geçerli olmayabilir. Ancak deneyimlerime göre, müşterilere en karmaşık zorluklar konusunda yardımcı olabilirsek, tüm müşterilere yardımcı olabiliriz.
 
-Normalde her yıl 100'den fazla müşteriyle çalışıyoruz. Her kuruluşun benzersiz özellikleri vardır, ancak eğilimleri ve yaygınlıkları görmek ilginçtir. Örneğin, bir eğilim birçok müşteri için sektörler arası ilgidir. Sonuçta, bir banka dalı bir kafe ve bir topluluk merkezi olabilir.
+Normalde her yıl 100'de fazla müşteriyle çalışıyorum. Her kuruluşun benzersiz özellikleri olsa da eğilimleri ve ortak noktaları görmek ilginçtir. Örneğin, bir eğilim birçok müşteri için sektörler arası ilgidir. Sonuçta, banka şubesi bir kafe ve topluluk merkezi de olabilir.
 
-Rolümde, müşterilerin benzersiz iş hedefleri kümesine çözüm bulmak için en iyi teknik çözüme ulaşlarına yardımcı olmak istiyorum. Resmi olarak Kimlik, Güvenlik, Gizlilik ve Uyumluluk'a odaklan istiyorum. Bu dokunmatik ekranların tüm işlere dokunması beni çok güzeldir. Bana çoğu projeyle ilgili olarak bir fırsat sunuyor. Bu, beni çok meşgul ediyor ve bu rolün keyfini çıkar ediyor.
+Rolümde, müşterilerin benzersiz iş hedeflerini ele almak için en iyi teknik çözüme ulaşmalarına yardımcı olmaya odaklanıyorum. Resmi olarak Kimlik, Güvenlik, Gizlilik ve Uyumluluk konularına odaklanıyorum. Bu dokunuşların yaptığımız her şeye dokunmasını seviyorum. Çoğu projeyle ilgilenmem için bana bir fırsat veriyor. Bu beni çok meşgul ediyor ve bu rolden keyif alıyorum.
 
-New York City'de (en iyi!) yaşıyorum ve kültürü, yiyecek ve insanlarının (trafik değil) farklı yerlerinin keyfini çıkarıyor. Dünyanın büyük bir tarafından yaşamımı takip etmek için seyahat etmek istiyorum. Şu anda vahşi yaşam hakkında bilgi edinmek için Afrika'ya bir seyahatte bulunuyorum.
+New York City'de yaşıyorum (en iyisi!) ve kültürünün, yemeğinin ve insanlarının (trafik değil) çeşitliliğinden gerçekten keyif alıyorum. Ömrüm boyunca dünyanın çoğunu görmeyi umduğum zaman seyahat etmeye bayılırım. Şu anda vahşi yaşam hakkında bilgi edinmek için Afrika'ya bir gezi araştırıyorum.
 
 ## <a name="guiding-principles"></a>Yol gösteren ilkeler
 
-- **Basit çoğunlukla daha iyidir**: Teknolojiyle hemen hemen her şeyi yapasiniz, ancak bunu yapmak gerektiği anlamına da değildir. Özellikle güvenlik alanı içinde, birçok müşteri aşırıya yönelik çözümler sunar. [Google'ın](https://www.youtube.com/watch?v=SOQgABDSYZE) Şerit konferansında bu videoyu takip ediyor ve bu noktaya vurgu yapmak istiyorum.
-- **Kişiler, süreç, teknoloji**: [Önce teknolojinin değil](https://en.wikipedia.org/wiki/Human-centered_design) , insanların süreci geliştirmesi için tasarım. "Mükemmel" bir çözüm yoktur. Çeşitli risk faktörlerini dengelememiz gerekiyor ve kararlar her işletme için farklı olacak. Çok fazla müşteri, daha sonra kullanıcılarının kaçınılması için bir yaklaşım tasarlar.
-- **Önce 'neden' ve sonra da 'nasıl'** üzerine odaklanın: Milyon soru sormak için 7 yaşında, can sıkıcı bir çocuk ola. Soracak doğru soruları bilmiyorsanız doğru yanıta ulaşaa biliyoruz. Birçok müşteri, iş sorununu tanımlamak yerine nasıl çalışması gerekir? üzerine varsayımlar sunar. Her zaman, alınan birden çok yol vardır.
-- **Geçmiş en iyi yöntemleri uzun süre takip edin**: En iyi uygulamaların ışık hızında değişmektedir. Azure AD'ye üç aydan daha uzun bir süre önce baktıysanız, büyük olasılıkla güncelsinizdir. Buradaki her şey yayından sonra  değişiklik olabilir. Bugün için "En iyi" seçenek şu andan itibaren altı ay ile aynı olmayacak.
+- **Basit genellikle daha iyidir**: Teknolojiyle (neredeyse) her şeyi yapabilirsiniz, ancak yapmanız gerektiği anlamına gelmez. Özellikle güvenlik alanında, birçok müşteri daha fazla yük devretme çözümü sunar. Google'ın Stripe konferansındaki [bu videodan](https://www.youtube.com/watch?v=SOQgABDSYZE) bu noktanın altını çiziyorum.
+- **İnsanlar, süreç, teknoloji**: İnsanların süreci geliştirmesi [için tasarım](https://en.wikipedia.org/wiki/Human-centered_design) yapın, önce teknoloji değil. "Mükemmel" çözümler yoktur. Çeşitli risk faktörlerini dengelememiz gerekiyor ve kararlar her işletme için farklı olacaktır. Çok fazla müşteri, kullanıcılarının daha sonra kaçındıkları bir yaklaşım tasarlar.
+- **Önce 'neden' ve sonra 'nasıl' üzerine odaklanın**: Milyonlarca sorusu olan sinir bozucu 7-yr yaşlı çocuk olun. Sorulacak doğru soruları bilmiyorsak doğru yanıta ulaşamayız. Birçok müşteri, iş sorununu tanımlamak yerine işlerin nasıl çalışması gerektiği konusunda varsayımlarda bulunur. Her zaman alınabilecek birden çok yol vardır.
+- **Geçmiş en iyi yöntemlerin uzun kuyruğu**: En iyi yöntemlerin ışık hızında değiştiğini fark edin. Üç aydan uzun bir süre önce Azure AD'ye baktıysanız, büyük olasılıkla eskimişsinizdir. Buradaki her şey yayından sonra değişebilir. "En iyi" seçenek bugünden itibaren altı ay sonra aynı olmayabilir.
 
 ## <a name="baseline-concepts"></a>Temel kavramlar
 
-Bu bölümü atlamayın. Uzun zamandır bulut hizmetlerini kullanan müşteriler için bile bu konulara bir adım geri dönmem gerektiğini biliyorum.
-Ne yazık ki dil hassas bir araç değil. Aynı sözcüğü, farklı kavramları veya aynı kavramı farklı sözcüklerle ifade etmek için sıklıkla kullanıyoruz. Bazı taban çizgisi terminolojisi ve "hiyerarşi modeli" kurmak için bu diyagramı çoğunlukla aşağıdan kullanırız.
+Bu bölümü atlamayın. Bulut hizmetlerini yıllardır kullanan müşteriler için bile bu konulara geri adım atmam gerektiğini sık sık fark ediyorum.
+Ne yazık ki, dil kesin bir araç değildir. Genellikle aynı sözcüğü farklı kavramlar veya aynı kavram anlamına gelen farklı sözcükler için kullanırız. Temel terminoloji ve "hiyerarşi modeli" oluşturmak için genellikle aşağıdaki diyagramı kullanıyorum.
 <br><br>
 
-![Kiracı, abonelik, hizmet ve veriler çizimi.](../media/solutions-architecture-center/Identity-and-beyond-tenant-level.png)
+![Kiracı, abonelik, hizmet ve verilerin çizimi.](../media/solutions-architecture-center/Identity-and-beyond-tenant-level.png)
 
 <br>
 
-Yüzüyorken, okyanusta değil de havuza başlamanın daha iyi olduğunu öğrenirsiniz. Bu diyagramda teknik olarak doğru olmaya çalışmam. Bazı temel kavramları tartışmak bir modeldir.
+Yüzmeyi öğrendiğinizde okyanusun ortasında değil havuzdan başlamak daha iyidir. Bu diyagramda teknik olarak doğru olmaya çalışmıyorum. Bazı temel kavramların tartışıldığı bir modeldir.
 
 Diyagramda:
 
-- Kiracı = bir Azure AD örneği. Bir hiyerarşinin "en üstünde" veya diyagramda Düzey 1'dedir. Bunun, diğer her şeyin bulunduğu "[sınır](/azure/active-directory/users-groups-roles/licensing-directory-independence)" olduğunu düşünebiliyoruz ([Azure AD B2B dışında](/azure/active-directory/b2b/what-is-b2b) ). Tüm Microsoft kurumsal bulut hizmetleri bu kiracılardan birinin parçası. Tüketici hizmetleri birbirinden ayrıdır. Belgelerde kiracı, Azure Office 365, WVD kiracısı gibi farklı "Kiracı" görünür. Bu çeşitlemelerin çoğunlukla müşteriler için karışıklığa neden olduğunu fark ediyoruz.
-- Diyagramda Düzey 2 olan Hizmetler/abonelikler, bir ve yalnızca bir kiracıya aittir. SaaS hizmetlerinin çoğu 1:1'tir ve geçiş yapmadan hareket ettir kullanılamaz. Azure farklıdır, faturalandırmayı [ve/veya](/azure/cost-management-billing/manage/billing-subscription-transfer) aboneliği başka [bir kiracıya](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory) taşıabilirsiniz. Azure aboneliklerini taşıması gereken birçok müşteri vardır. Bunun çeşitli etkileri vardır. Aboneliğin dışında olan nesneler taşınmaz (örneğin, rol tabanlı erişim denetimi veya Azure RBAC ve gruplar, uygulamalar, ilkeler gibi Azure AD nesneleri). Ayrıca, bazı hizmetler de (Azure Anahtar Kasası, Veri Kasaları, vb.). İyi bir iş ihtiyacınız olmadan hizmetleri geçirmeyin. Geçiş için yararlı olacak bazı betikler bu [dosyalarda GitHub](https://github.com/lwajswaj/azure-tenant-migration).
-- Verilen hizmette genellikle bir tür "alt düzey" sınırı veya Düzey 3 (L3) vardır. Bu, güvenliğin, ilkelerin, yönetimin ve diğer ayrımların nasıl iş yarar olduğunu anlamak için kullanışlıdır. Ne yazık ki, tekdüz bir ad yok. L3 için bazı örnekler: Azure Aboneliği = [kaynak](/azure/azure-resource-manager/management/manage-resources-portal); Dynamics 365 CE = [örnek](/dynamics365/admin/new-instance-management); Power BI = [çalışma alanı](/power-bi/service-create-the-new-workspaces); Power Apps = [ortam](/power-platform/admin/environments-overview), bu şekilde devam eder.
-- Düzey 4, gerçek verilerin yaşadığı yerdir. Bu 'veri uçağını' karmaşık bir konu. Bazı hizmetler RBAC için Azure AD'yi kullanırken, bazıları kullanmaz. Temsilci seçme konularıyla ilgili konulara gidip bu konuyu biraz tartışacağız.
+- Kiracı = Azure AD örneği. Hiyerarşinin "en üstünde" veya diyagramda Düzey 1'dir. Bunu diğer her şeyin gerçekleştiği "[sınır](/azure/active-directory/users-groups-roles/licensing-directory-independence)" olarak değerlendirebiliriz ([Azure AD B2B](/azure/active-directory/b2b/what-is-b2b) bir yana). Tüm Microsoft kurumsal bulut hizmetleri bu kiracılardan birinin parçasıdır. Tüketici hizmetleri ayrıdır. "Kiracı", belgelerde Office 365 kiracı, Azure kiracısı, WVD kiracısı vb. olarak görünür. Bu çeşitlemelerin müşteriler için karışıklığa neden olduğunu sık sık buluyorum.
+- Diyagramdaki Düzey 2 olan hizmetler/abonelikler tek bir kiracıya aittir. SaaS hizmetlerinin çoğu 1:1'dir ve geçiş olmadan taşınamaz. Azure farklıdır; faturalamayı ve/veya [aboneliği](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory) başka bir kiracıya [taşıyabilirsiniz](/azure/cost-management-billing/manage/billing-subscription-transfer). Azure aboneliklerini taşıması gereken birçok müşteri vardır. Bunun çeşitli etkileri vardır. Aboneliğin dışında bulunan nesneler taşınmaz (örneğin, rol tabanlı erişim denetimi veya Azure RBAC ve gruplar, uygulamalar, ilkeler gibi Azure AD nesneleri). Ayrıca bazı hizmetler (Azure Key Vault, Data Bricks vb.). İyi bir iş gereksinimi olmadan hizmetleri geçirmeyin. Geçiş için yararlı olabilecek bazı betikler [GitHub'de paylaşılır](https://github.com/lwajswaj/azure-tenant-migration).
+- Belirli bir hizmetin genellikle bir tür "alt düzey" sınırı veya Düzey 3 (L3) vardır. Bu, güvenlik, ilkeler, idare vb. ayrımını anlamak için yararlıdır. Ne yazık ki bildiğim tek tip bir isim yok. L3 için bazı örnek adlar şunlardır: Azure Aboneliği = [kaynak](/azure/azure-resource-manager/management/manage-resources-portal); Dynamics 365 CE = [örnek](/dynamics365/admin/new-instance-management); Power BI = [çalışma alanı](/power-bi/service-create-the-new-workspaces); Power Apps = [ortam](/power-platform/admin/environments-overview); ve benzeri.
+- Düzey 4, gerçek verilerin bulunduğu yerdir. Bu 'veri düzlemi' karmaşık bir konudur. Bazı hizmetler RBAC için Azure AD kullanıyor, diğerleri kullanmıyor. Temsilci seçme konularına gelince bunu biraz tartışacağım.
 
-Çok sayıda müşteri (ve Microsoft çalışanı) bulamıyorum, bazı ek kavramlar kafayı karıştırılır veya aşağıdakiler hakkında sorularım olabilir:
+Birçok müşteriyi (ve Microsoft çalışanlarını) bulduğum bazı ek kavramlar kafanızı karıştırıyor veya bunlarla ilgili sorularım var:
 
-- Herkesin hiçbir [maliyeti](/azure/active-directory/fundamentals/active-directory-access-create-new-tenant) yoktur ve çok [sayıda kiracı oluşturabilir](https://azure.microsoft.com/pricing/details/active-directory/). Bunun içinde bir hizmet sağlanmasına gerek yok. Onlarcası var. Her Kiracı adı Microsoft'un dünya çapında bulut hizmetinin benzersizdir (başka bir deyişle, iki kiracı aynı adıya sahip olabilir). Bunların hepsi tarih biçiminde TenantName.onmicrosoft.com. Kiracıları otomatik olarak (sahip olmayan kiracılar[) oluşturma işlemleri de vardır](/azure/active-directory/users-groups-roles/directory-self-service-signup). Örneğin, kullanıcı başka hiçbir kiracıda yer olmayan e-posta etki alanı olan bir kurumsal hizmete kayıt olduğunda, bu durum ortaya çıkabilir.
-- Yönetilen bir kiracıda, birçok [DNS etki](/azure/active-directory/fundamentals/add-custom-domain) alanı buna kaydediliyor olabilir. Bu, özgün kiracı adını değiştirmez. Şu anda bir kiracıyı yeniden adlandırmanın (geçiş dışında) kolay bir yolu yoktur. Kiracı adı teknik olarak bu günlerde kritik öneme sahip olsa da, bazıları bunun sınırlayıcı olduğunu bulabilir.
-- Henüz herhangi bir hizmeti dağıtmayı planlamamış bilesanız, organizasyon için bir kiracı adı rezerve edelesiniz. Aksi takdirde, biri onu sizin geri almak için basit bir işlem yoktur (DNS adlarından aynı sorun). Bunu müşterilerden çok sık duyuyorum. Kiracı adınız ne olmalı? konusu da tartışılan bir konudur.
-- DNS ad alanlarınız varsa, bunların hepsini kiracınıza eklemeniz gerekir. Aksi takdirde, bu [adla yönetilemeyen](/azure/active-directory/users-groups-roles/directory-self-service-signup) bir kiracı oluşturabilir ve bu da yönetimin kesintiye [neden olduğunu sağlar](/azure/active-directory/users-groups-roles/domains-admin-takeover).
-- DNS ad alanı (örneğin contoso.com) bir ve yalnızca bir Kiracı'ya ait olabilir. Bunun çeşitli senaryolarda (örneğin, bir birleşme veya alım sırasında e-posta etki alanı paylaşımı vb.) bir anlamı vardır. DNS alt listesini (örneğin, div.contoso.com) başka bir kiracıya kaydetmenin bir yolu var, ancak bu kayıttan kaçınılmalıdır. En üst düzey etki alanı adı kaydederek, tüm alt etki alanları aynı kiracıya ait olduğu varsayılır. Çok kiracılı senaryolarda (aşağıya bakın) Normalde başka bir üst düzey etki alanı adı (etki alanı adı veya etki alanı contoso.ch) ch-contoso.com.
-- Who "sahibi" mi olmalı? Kiracılarının şu anda kimin sahibi olduğunu çoğu zaman bilmiyorum. Bu, büyük bir kırmızı bayrak. Microsoft desteğini en kısa sürede arayın. Hizmet sahibinin (genellikle kiracıyı yönetmek için Exchange yönetici olarak belirlensi), sorun olduğunda olduğu gibi. Kiracı, gelecekte istediğiniz tüm hizmetleri içerir. Kiracı sahibinin, kuruluşta tüm bulut hizmetlerinin etkinleştirilene karar verecek bir grup olması gerekir. Bir diğer sorun, kiracı sahibi grubundan tüm hizmetleri yönetmesi istenecek. Bu, büyük kuruluşlar için ölçeklendirmez.
-- Alt/süper kiracı diye bir kavram yoktur. Bazı durumlarda, bu mit yine kendini gösteriyor. Bu, [Azure AD B2C kiracıları](/azure/active-directory-b2c/) için de geçerlidir. Çok fazla "B2C ortamım XYZ Kiracımda" veya "Azure kiracımı Office 365 kiracıma nasıl taşımam gerekir?"
-- Çoğu müşteri bu belgeyi kullanırkenn bu belge çoğunlukla ticari dünya bulutuna odaklanır. Hakim bulutlar hakkında bilgili olmak [bazen yararlı olabilir](/azure/active-directory/develop/authentication-national-cloud). Hakim bulutların, bu tartışmanın kapsamı dışında olan konuları tartışmanın başka bir anlamı vardır.
+- Herkes [hiçbir ücret ödemeden](https://azure.microsoft.com/pricing/details/active-directory/) birçok kiracı [oluşturabilir](/azure/active-directory/fundamentals/active-directory-access-create-new-tenant). İçinde sağlanan bir hizmete ihtiyacınız yoktur. Bende onlarca var. Her Kiracı adı, Microsoft'un dünya çapındaki bulut hizmetinde benzersizdir (başka bir deyişle, iki kiracı aynı ada sahip olamaz). Hepsi TenantName.onmicrosoft.com biçimindedir. Kiracıları otomatik olarak ([yönetilmeyen kiracılar](/azure/active-directory/users-groups-roles/directory-self-service-signup)) oluşturan işlemler de vardır. Örneğin, kullanıcı başka bir kiracıda bulunmayan bir e-posta etki alanıyla kurumsal hizmete kaydolduğunda bu durum oluşabilir.
+- Yönetilen bir kiracıda, birçok [DNS etki alanı](/azure/active-directory/fundamentals/add-custom-domain) bu kiracıya kaydedilebilir. Bu, özgün kiracı adını değiştirmez. Şu anda bir kiracıyı yeniden adlandırmanın kolay bir yolu yoktur (geçiş dışında). Kiracı adı teknik olarak bu günlerde kritik olmasa da, bazıları bunun sınırlayıcı olduğunu düşünebilir.
+- Henüz herhangi bir hizmet dağıtmayı planlamasanız bile kuruluşunuz için bir kiracı adı ayırmanız gerekir. Aksi takdirde, birisi bunu sizden alabilir ve geri almak için basit bir işlem yoktur (DNS adları ile aynı sorun). Müşterilerden bu şekilde çok sık duyuyorum. Kiracı adınızın ne olması gerektiği de bir tartışma konusudur.
+- DNS ad alanlarınız varsa, bunların tümünü kiracılarınıza eklemeniz gerekir. Aksi takdirde, bu adla [yönetilmeyen bir kiracı](/azure/active-directory/users-groups-roles/directory-self-service-signup) oluşturulabilir ve bu da [yönetilmelerini sağlamak](/azure/active-directory/users-groups-roles/domains-admin-takeover) için kesintiye neden olur.
+- DNS ad alanı (contoso.com gibi) tek bir kiracıya ait olabilir. Bunun çeşitli senaryolar üzerinde etkileri vardır (örneğin, birleştirme veya alma sırasında e-posta etki alanını paylaşma vb.). Dns alt öğesini (div.contoso.com gibi) farklı bir kiracıya kaydetmenin bir yolu vardır, ancak bundan kaçınılmalıdır. Üst düzey etki alanı adı kaydedildiğinde, tüm alt etki alanları aynı kiracıya ait olduğu varsayılır. Çok kiracılı senaryolarda (aşağıya bakın) normalde başka bir üst düzey etki alanı adı (contoso.ch veya ch-contoso.com gibi) kullanmanızı öneririm.
+- Kiracı Who "sahip olmalıdır"? Kiracılarının sahibini bilmeyen müşterileri sık sık görüyorum. Bu büyük bir kırmızı bayrak. Microsoft desteğini en kısa sürede arayın. Aynı sorun, bir hizmet sahibinin (genellikle Exchange yöneticisi) kiracıyı yönetmek üzere atandığında olduğu gibi. Kiracı, gelecekte isteyebileceğiniz tüm hizmetleri içerir. Kiracı sahibi, bir kuruluştaki tüm bulut hizmetlerinin etkinleştirilmesi için karar verebilen bir grup olmalıdır. Bir diğer sorun da kiracı sahibi grubunun tüm hizmetleri yönetmesi istendiğinde oluşur. Bu, büyük kuruluşlar için ölçeklendirilmiyor.
+- Alt/süper kiracı kavramı yoktur. Nedense, bu efsane kendini tekrar ediyor. Bu, [Azure AD B2C](/azure/active-directory-b2c/) kiracıları için de geçerlidir. "B2C ortamım XYZ Kiracımda" veya "Azure kiracımı Office 365 kiracıma taşımak Nasıl yaparım??"
+- Çoğu müşterinin kullandığı bu olduğundan bu belge çoğunlukla dünya çapındaki ticari buluta odaklanır. Bazen [bağımsız bulutlar](/azure/active-directory/develop/authentication-national-cloud) hakkında bilgi edinmek yararlı olabilir. Bağımsız bulutların, bu tartışmanın kapsamı dışında olan ek etkileri vardır.
 
 ## <a name="baseline-identity-topics"></a>Temel kimlik konuları
 
-Microsoft'un kimlik platformu (Azure AD) hakkında Azure Active Directory belge vardır. Yeni başlayanlar için genellikle bunaltıcı bir durum olur. Bunu öğrendikten sonra bile sürekli yeniliği ve değişikliği takip etmek zor olabilir. Müşteri etkileşimlerimde çoğunlukla iş hedefleri arasında "çevirmen" olarak görev aldım ve bu konulara ilişkin "İyi, İyi, En İyi" yaklaşımları (ve insan "falez notları"). Nadiren mükemmel bir yanıt vardır ve "doğru" kararı çeşitli risk etmenlerinin dengesidir. Aşağıda, müşterilerle tartışma eğiliminde ihtiyacım olan bazı yaygın sorular ve karışıklığa neden olan sorular verilmiştir.
+Microsoft'un kimlik platformu (Azure Active Directory (Azure AD) hakkında çok fazla belge vardır. Yeni başlayanlar için genellikle bunaltıcı geliyor. Bu konuda bilgi edindikten sonra bile sürekli yeniliğe ve değişikliğe ayak uydurmak zor olabilir. Müşteri etkileşimlerimde genellikle iş hedefleri ve bunları ele almak için "İyi, Daha İyi, En İyi" yaklaşımlar (ve bu konular için insan "uçurum notları" gibi) arasında "çevirmen" olarak görev yapıyorum. Nadiren mükemmel bir yanıt vardır ve "doğru" karar çeşitli risk faktörlerinin bir dengesidir. Müşterilerle tartışma eğiliminde olduğum yaygın soru ve karışıklık alanlarından bazıları aşağıdadır.
 
 ### <a name="provisioning"></a>Sağlama
 
-Azure AD, kimlik dünyanız için yönetim eksikliklerini çözemmektedir! [Kimlik yönetimi](/azure/active-directory/governance/identity-governance-overview) , bulut kararlarının birbirinden bağımsız kritik bir öğesi olacaktır. Yönetim gereksinimleri zaman içinde değişir ve bu nedenle bir araç değil bir programdır.
+Azure AD, kimlik dünyanızdaki idare eksikliğini çözmez! [Kimlik idaresi](/azure/active-directory/governance/identity-governance-overview) , bulut kararlarından bağımsız olarak kritik bir öğe olmalıdır. İdare gereksinimleri zaman içinde değişir, bu nedenle bir araç değil bir programdır.
 
-[Azure AD Bağlan](/azure/active-directory/hybrid/whatis-azure-ad-connect) başka bir [Microsoft Identity Manager](/microsoft-identity-manager/microsoft-identity-manager-2016) (MIM) ile başka bir şey (üçüncü taraf veya özel) karşılaştırması? Gelecekte çok sorundan tasarruf edin ve Azure AD ile Bağlan. Bu araçta, müşteri yapılandırmalarını ve sürekli yapılan yenilikleri ele alan her türlü akıllı özellik vardır.
+[Azure AD Bağlan](/azure/active-directory/hybrid/whatis-azure-ad-connect) ve [Microsoft Identity Manager](/microsoft-identity-manager/microsoft-identity-manager-2016) (MIM) ile başka bir şey (üçüncü taraf veya özel) karşılaştırması mı? Hem şimdi hem de gelecekte kendinizi çok fazla baş ağrısından kurtarın ve Azure AD Bağlan ile devam edin. Bu araçta, kendine özgü müşteri yapılandırmalarını ve sürekli yenilikleri ele almak için her türlü akıllı vardır.
 
-Daha karmaşık bir mimariye doğru yol alanın bazı uç örnekleri:
+Daha karmaşık bir mimariye yönlendirebilecek bazı uç durumlar:
 
-- Bunlar arasında ağ bağlantısı olmayan birden çok AD ormanım var. Bulut Hazırlama adlı yeni [bir seçenek vardır](/azure/active-directory/cloud-provisioning/what-is-cloud-provisioning).
-- Active Directory'm yok ve yüklemek de istemiyorum. Azure AD Bağlan LDAP'den [eşitlemek üzere yapılandırabilirsiniz](/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-tools-comparison) (iş ortağı gerekebilir).
-- Aynı nesneleri birden çok kiracıya sağlamam gerekiyor. Bu teknik olarak desteklenen bir durum değildir, ancak "aynı" tanımına bağlıdır.
+- Bunlar arasında ağ bağlantısı olmayan birden çok AD ormanım var. [Bulut Sağlama](/azure/active-directory/cloud-provisioning/what-is-cloud-provisioning) adlı yeni bir seçenek vardır.
+- Active Directory'm yok ve yüklemek de istemiyorum. Azure AD Bağlan [LDAP'den eşitlenecek](/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-tools-comparison) şekilde yapılandırılabilir (iş ortağı gerekebilir).
+- Aynı nesneleri birden çok kiracıya sağlamam gerekiyor. Bu teknik olarak desteklenmez ancak "aynı" tanımına bağlıdır.
 
-Varsayılan eşitleme kurallarını (nesneleri filtreleme, [öznitelikleri değiştirme](/azure/active-directory/hybrid/how-to-connect-sync-configure-filtering), [diğer](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized) oturum açma kimliği gibi [)](/azure/active-directory/hybrid/plan-connect-userprincipalname) özelleştirmeli miyim? Kaçının! Kimlik platformu ancak onu kullanan hizmetler kadar değerlidir. Her türlü sonda yapılandırmayı yapsanız da, uygulamaları üzerindeki etkisine bakmak için bu soruyu yanıtlayın. Posta özelliği etkin nesneleri filtrelersanız çevrimiçi hizmetler için GAL eksik olur; Uygulama belirli özniteliklere dayanıyorsa, bunlara filtre uygulamanın öngörülemez bir etkisi olur; gibi diğer tüm ifadeleri de okur. Bu bir kimlik ekibi kararı değildir.
+Varsayılan eşitleme kurallarını ([nesneleri filtreleme](/azure/active-directory/hybrid/how-to-connect-sync-configure-filtering), [öznitelikleri değiştirme](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized), [alternatif oturum açma kimliği](/azure/active-directory/hybrid/plan-connect-userprincipalname) vb.) özelleştirmeli miyim? Bundan kaçının! Kimlik platformu yalnızca onu kullanan hizmetler kadar değerlidir. Her türlü çatlak yapılandırmayı yapabileceksiniz ancak bu soruyu yanıtlamak için uygulamalar üzerindeki etkisine bakmanız gerekir. Posta özellikli nesneleri filtrelerseniz, çevrimiçi hizmetler için GAL eksik olur; uygulama belirli özniteliklere dayanırsa, bunları filtrelemenin öngörülemeyen bir etkisi olur ve bu şekilde devam eder. Bu bir kimlik ekibi kararı değil.
 
-XYZ SaaS, Just-in-Time (JIT) hazırlamayı destekler; neden eşitlememi gerekli kıyorsunuz? Yukarıya bakınız. Birçok uygulamanın işlevler için "profil" bilgilerine ihtiyacı vardır. Posta özelliği etkin tüm nesneler kullanılamıyorsa GAL'niz kullanılamaz. Aynı durum, Azure AD [ile tümleştirilmiş](/azure/active-directory/app-provisioning/user-provisioning) uygulamalarda kullanıcı hazırlama için de geçerlidir.
+XYZ SaaS Tam Zamanında (JIT) sağlamayı destekliyor, neden eşitlememi istiyorsunuz? Yukarıya bakınız. Birçok uygulamanın işlevsellik için "profil" bilgilerine ihtiyacı vardır. Posta özellikli tüm nesneler kullanılamıyorsa GAL'niz olamaz. Aynı durum, Azure AD ile tümleştirilmiş uygulamalarda [kullanıcı sağlama](/azure/active-directory/app-provisioning/user-provisioning) için de geçerlidir.
 
 ### <a name="authentication"></a>Kimlik Doğrulama
 
-[Parola karması eşitlemesi](/azure/active-directory/hybrid/how-to-connect-password-hash-synchronization) (PHS) ile [federasyon karşılaştırması](/azure/active-directory/hybrid/how-to-connect-pta-how-it-works) ve geçişli kimlik [doğrulaması](/azure/active-directory/hybrid/how-to-connect-fed-compatibility) (PTA)
+[Parola karması eşitleme](/azure/active-directory/hybrid/how-to-connect-password-hash-synchronization) (PHS) ile [geçişli kimlik doğrulaması](/azure/active-directory/hybrid/how-to-connect-pta-how-it-works) (PTA) ve [federasyon](/azure/active-directory/hybrid/how-to-connect-fed-compatibility) karşılaştırması.
 
-Genellikle federasyon konusunda tutkulu [bir tartışma](/azure/active-directory/hybrid/choose-ad-authn) var. Basit çoğunlukla daha iyidir ve dolayısıyla bunu yapmak için iyi bir nedenniz yoksa PHS kullanın. Ayrıca, aynı kiracıda yer alan farklı DNS etki alanları için farklı kimlik doğrulama yöntemleri yapılandırabilirsiniz.
+Genellikle federasyonla ilgili tutkulu bir [tartışma](/azure/active-directory/hybrid/choose-ad-authn) olur. Daha basit genellikle daha iyidir ve bu nedenle iyi bir nedeniniz yoksa PHS kullanın. Aynı kiracıdaki farklı DNS etki alanları için farklı kimlik doğrulama yöntemleri yapılandırmak da mümkündür.
 
-Bazı müşteriler federasyon + PHS'yi temel olarak şu türler için etkinleştirir:
+Bazı müşteriler genellikle şunlar için federasyon + PHS'yi etkinleştirir:
 
-- Federasyon hizmeti [kullanılamıyorsa](/azure/active-directory/hybrid/plan-migrate-adfs-password-hash-sync) geri dönme (olağanüstü durum kurtarma için) seçeneği.
-- Ek özellikler (örneğin: [Azure AD DS](/azure/active-directory-domain-services/tutorial-configure-password-hash-sync)) ve güvenlik hizmetleri (sızdırılmış [kimlik bilgileri](/azure/active-directory/reports-monitoring/concept-risk-events#leaked-credentials))
-- Federasyon kimlik doğrulamasını anlamayan Azure hizmetleri için destek (örneğin, [Azure Dosyaları](/azure/storage/files/storage-files-active-directory-overview)).
+- Federasyon hizmeti kullanılamıyorsa (olağanüstü durum kurtarma için) öğesine [geri dönme](/azure/active-directory/hybrid/plan-migrate-adfs-password-hash-sync) seçeneği.
+- Ek özellikler (örn. [Azure AD DS](/azure/active-directory-domain-services/tutorial-configure-password-hash-sync)) ve güvenlik hizmetleri (ör. [sızdırılan kimlik bilgileri](/azure/active-directory/reports-monitoring/concept-risk-events#leaked-credentials))
+- Azure'da federasyon kimlik doğrulamasını anlamayan hizmetler için destek (örneğin, [Azure Dosyalar](/azure/storage/files/storage-files-active-directory-overview)).
 
-Bazı yanlışlıkları netleştirmek için müşterilere genellikle istemci kimlik doğrulaması akışında yol sunarum. Sonuç aşağıdaki resim gibi görünüyor, bu da etkileşimli oraya varma işlemi kadar iyi değil.
+Bazı yanlış algıları netleştirmek için müşterilere genellikle istemci kimlik doğrulama akışında yol gösteririm. Sonuç, aşağıdaki resme benzer ve bu, etkileşimli oraya varma işlemi kadar iyi değildir.
 
-![Örnek beyaz tahta görüşmesi.](../media/solutions-architecture-center/identity-beyond-whiteboard-example.png)
+![Örnek beyaz tahta konuşması.](../media/solutions-architecture-center/identity-beyond-whiteboard-example.png)
 
-Bu tür beyaz tahta çizimleri, kimlik doğrulama isteği akışı içinde güvenlik ilkelerinin nereye uygulandığını belirtir. Bu örnekte, Active Directory Federasyon Hizmeti (AD FS) aracılığıyla zorunlu kılınan ilkeler ilk hizmet isteğine uygulanır, ancak izleyen hizmet isteklerine uygulanmaz. Bu, güvenlik denetimlerini mümkün olduğunca fazla buluta taşımanın en az bir nedenidir.
+Bu beyaz tahta çizimi, güvenlik ilkelerinin bir kimlik doğrulama isteğinin akışı içinde nereye uygulandığını gösterir. Bu örnekte, Active Directory Federasyon Hizmeti (AD FS) aracılığıyla uygulanan ilkeler ilk hizmet isteğine uygulanır, ancak sonraki hizmet isteklerine uygulanmaz. Bu, güvenlik denetimlerini mümkün olduğunca buluta taşımanın en az bir nedenidir.
 
-Anımsayladığım kadar uzun [süredir çoklu oturum açma](/azure/active-directory/manage-apps/what-is-single-sign-on) (SSO) hayali için hayalimiz devam ediyor. Bazı müşteriler, "doğru" federasyon (STS) sağlayıcısını seçerek bunu başaracaklarını inanıyorlar. Azure AD, [SSO özelliklerini etkinleştirmeye önemli](/azure/active-directory/manage-apps/plan-sso-deployment) ölçüde yardımcı olabilir ama STS'nin hiçbir şey harika olmadığını sağlar. Kritik uygulamalarda hala kullanılan çok fazla "eski" kimlik doğrulama yöntemi vardır. Azure AD'nin iş [ortağı çözümleriyle genişlet](/azure/active-directory/saas-apps/tutorial-list) süresinin genişlet çözümü, bu senaryoların birçoğuna yönelik olabilir. SSO bir strateji ve bir yolculuktur. Uygulama standartlarına uygun hareket etmeden buraya [varaasiniz](/azure/active-directory/develop/v2-app-types). Bu konu ile ilgili olarak, parolasız kimlik [doğrulamaya](/azure/active-directory/authentication/concept-authentication-passwordless) yönelik bir seyahat vardır ve bu da sihirli bir yanıtı yok.
+Hatırlayabildiğim kadar uzun süredir [çoklu oturum açma](/azure/active-directory/manage-apps/what-is-single-sign-on) (SSO) hayalinin peşindeyiz. Bazı müşteriler "doğru" federasyon (STS) sağlayıcısını seçerek bunu başarabileceklerine inanıyor. Azure AD [, SSO özelliklerini etkinleştirmeye](/azure/active-directory/manage-apps/plan-sso-deployment) önemli ölçüde yardımcı olabilir, ancak hiçbir STS sihirli değildir. Kritik uygulamalar için hala kullanılan çok fazla "eski" kimlik doğrulama yöntemi vardır. Azure AD'nin [iş ortağı çözümleriyle](/azure/active-directory/saas-apps/tutorial-list) genişletilmesi bu senaryoların çoğunu ele alabilir. SSO bir strateji ve bir yolculuk. [Uygulamalar için standartlara](/azure/active-directory/develop/v2-app-types) geçmeden oraya ulaşamazsınız. Bu konu ile ilgili olarak, sihirli bir yanıtı olmayan [parolasız](/azure/active-directory/authentication/concept-authentication-passwordless) kimlik doğrulamasına yönelik bir yolculuk vardır.
 
-[Multi factor authentication](/azure/active-directory/authentication/concept-mfa-howitworks) (MFA) bugün çok önemlidir ([daha fazlası](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/your-pa-word-doesn-t-matter/ba-p/731984) için burada). Kullanıcı davranışı [analizine ekleyin;](/azure/active-directory/authentication/tutorial-risk-based-sspr-mfa) en yaygın siber saldırıları engelleyen bir çözümünüz olur. Tüketici hizmetleri bile MFA gerektirmeye neden oluyor. Yine de modern kimlik doğrulama yaklaşımlarını taşımak istemeyen birçok [müşteriyle tanışmaya](../enterprise/hybrid-modern-auth-overview.md) devam ediyoruz. En büyük bağımsız değişken, bunun kullanıcıları ve eski uygulamaları etkilemesidir. Bazen iyi bir harekete geç de olabilir ve duyurulanın değişiklikler Exchange Online [olabilir](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-auth-and-exchange-online-february-2020-update/ba-p/1191282). Müşterilere bu [geçişte](/azure/active-directory/fundamentals/concept-fundamentals-block-legacy-authentication) yardımcı olmak için çok sayıda Azure AD raporu sunulmaktadır.
+[Çok faktörlü kimlik doğrulaması](/azure/active-directory/authentication/concept-mfa-howitworks) (MFA) bugün çok önemlidir (daha fazlası için [burada](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/your-pa-word-doesn-t-matter/ba-p/731984) ). Buna [kullanıcı davranışı analizi](/azure/active-directory/authentication/tutorial-risk-based-sspr-mfa) eklerseniz en yaygın siber saldırıları önleyen bir çözümünüz vardır. Tüketici hizmetleri bile MFA gerektirmek üzere hareket ediyor. Yine de [modern kimlik doğrulama](../enterprise/hybrid-modern-auth-overview.md) yaklaşımlarına geçmek istemeyen birçok müşteriyle görüşüyorum. Duyduğum en büyük bağımsız değişken, kullanıcıları ve eski uygulamaları etkileyecektir. Bazen iyi bir tekme, müşterilerin [duyurulan değişiklikler](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-auth-and-exchange-online-february-2020-update/ba-p/1191282) Exchange Online ilerlemelerine yardımcı olabilir. Müşterilerin bu geçişe yardımcı olması için çok sayıda Azure AD [raporu](/azure/active-directory/fundamentals/concept-fundamentals-block-legacy-authentication) kullanıma sunuldu.
 
 ### <a name="authorization"></a>Yetkilendirme
 
-[Wikipedia başına](https://en.wikipedia.org/wiki/Authorization), "yetki vermek" bir erişim ilkesi tanımlamaktır. Buna, birçok kişi nesne (dosya, hizmet vb.) için erişim denetimlerini tanımlayabilme özelliği olarak bakar. Siber tehditlere karşı geçerli dünyada, bu kavram hızla çeşitli tehdit vektörlerine tepki ve bunlara yanıt olarak erişim denetimlerini ayarlay bir dinamik ilkeye geliştiriyor. Örneğin, banka hesabıma olağandışı bir konumdan erişerim, ek onay adımları alırsınız. Bu yaklaşım için, sadece ilkenin kendisini değil tehdit algılama ve sinyal korelasyon metodolojilerinin ekosistemini de göz önünde bulunduracağız.
+[Wikipedia](https://en.wikipedia.org/wiki/Authorization) başına , "yetkilendirmek" bir erişim ilkesi tanımlamaktır. Birçok kişi buna bir nesneye (dosya, hizmet vb.) erişim denetimleri tanımlama özelliği olarak bakar. Mevcut siber tehdit dünyasında bu kavram, çeşitli tehdit vektörlerine tepki verebilen ve bunlara yanıt olarak erişim denetimlerini hızlı bir şekilde ayarlayabilen dinamik bir politikaya hızla gelişmektedir. Örneğin, banka hesabıma olağan dışı bir konumdan erişirsem ek onay adımları alıyorum. Buna yaklaşmak için yalnızca ilkenin kendisini değil, tehdit algılama ve sinyal bağıntı yöntemleri ekosistemini de göz önünde bulundurmamız gerekir.
 
-Azure AD'nin ilke altyapısı Koşullu Erişim ilkeleri [kullanılarak uygulanır](/azure/active-directory/conditional-access/overview). Bu sistem, dinamik kararlar almak için çeşitli diğer tehdit algılama sistemlerinden gelen bilgilere bağlıdır. Basit bir görünüm aşağıdaki çizime benzer:
+Azure AD'nin ilke altyapısı [Koşullu Erişim ilkeleri](/azure/active-directory/conditional-access/overview) kullanılarak uygulanır. Bu sistem, dinamik kararlar almak için diğer çeşitli tehdit algılama sistemlerinden alınan bilgilere bağlıdır. Basit bir görünüm aşağıdaki çizime benzer olacaktır:
 
 ![Azure AD'de ilke altyapısı.](../media/solutions-architecture-center/identity-and-beyond-illustration-3.png)
 
-Tüm bu sinyalleri bir araya getiren bu tür dinamik ilkeler, şöyle dinamik ilkelere olanak sağlar:
+Tüm bu sinyallerin birleştirilmesi aşağıdaki gibi dinamik ilkelere olanak tanır:
 
-- Aygıtınızda bir tehdit algılanırsa, verilere erişiminiz yalnızca indirme özelliği olmadan web'e azaltıldı.
-- Olağandışı bir yüksek hacimde veri indirirken indiren her şey şifrelenir ve kısıtlanır.
-- Bir hizmete unmanageed bir cihazdan erişinse çok hassas veriler engellenir, ancak başka bir konuma kopyalama olanağı olmadan kısıtlanmamış verilere erişme izni verilir.
+- Cihazınızda bir tehdit algılanırsa, verilere erişiminiz indirme özelliği olmadan yalnızca web'e indirilir.
+- Alışılmadık derecede yüksek miktarda veri indiriyorsanız, indirdiğiniz her şey şifrelenir ve kısıtlanır.
+- Yönetilmeyen bir cihazdan bir hizmete erişirsen, yüksek oranda hassas verilere erişimin engellenir, ancak başka bir konuma kopyalama özelliği olmadan kısıtlanmamış verilere erişmesine izin verilir.
 
-Bu genişletilmiş yetkilendirme tanımını kabul ediyorsanız, ek çözümler uygulamalı gerekir. Hangi çözümlerin uygulanmasını istediğiniz, ilkenin ne kadar dinamik olması istediğinize ve hangi tehditleri önceliklendirmek istediğinize bağlıdır. Bu tür sistemlere bazı örnekler:
+Bu genişletilmiş yetkilendirme tanımına katılıyorsanız ek çözümler uygulamanız gerekir. Hangi çözümleri uygulayacağınız, ilkenin ne kadar dinamik olmasını istediğinize ve öncelik vermek istediğiniz tehditlere bağlıdır. Bu tür sistemlere bazı örnekler şunlardır:
 
-- [Azure AD Identity Protection](/azure/active-directory/identity-protection/)
+- [Azure AD Kimlik Koruması](/azure/active-directory/identity-protection/)
 - [Kimlik için Microsoft Defender](/azure-advanced-threat-protection/)
 - [Uç Nokta için Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)
 - [Office 365 için Microsoft Defender](../security/office-365-security/defender-for-office-365.md)
-- [Bulut Uygulamaları için Microsoft Defender](/cloud-app-security/) (Bulut Uygulamaları için Defender)
+- [Microsoft Defender for Cloud Apps](/cloud-app-security/) (Bulut için Defender Uygulamaları)
 - [Microsoft 365 Defender](../security/defender/microsoft-365-defender.md)
 - [Microsoft Intune](/mem/intune/)
-- [Microsoft Bilgi Koruması](../compliance/information-protection.md) (MIP)
+- [Microsoft Purview Information Protection](../compliance/information-protection.md)
 - [Microsoft Sentinel](/azure/sentinel/)
 
-Kuşkusuz, Azure AD'nin yanı sıra, çeşitli hizmet ve uygulamaların da kendi özel yetkilendirme modelleri vardır. Bunların bazıları daha sonra temsilci bölümünde ele alınmıştır.
+Tabii ki, Azure AD'ye ek olarak, çeşitli hizmet ve uygulamaların kendi belirli yetkilendirme modelleri vardır. Bunlardan bazıları daha sonra temsilci seçme bölümünde ele alınmıştır.
 
 ### <a name="audit"></a>Denetim
 
-Azure AD'nin [ayrıntılı denetim ve raporlama](/azure/active-directory/reports-monitoring/) özellikleri vardır. Ancak, güvenlik kararları almak için gereken tek bilgi kaynağı çoğunlukla bu değildir. Bu konu hakkında daha fazla tartışmaya temsilci bölümünde bakın.
+Azure AD ayrıntılı [denetim ve raporlama](/azure/active-directory/reports-monitoring/) özelliklerine sahiptir. Ancak, güvenlik kararları almak için gereken tek bilgi kaynağı genellikle bu değildir. Temsilci seçme bölümünde bu konu hakkında daha fazla tartışmaya bakın.
 
-## <a name="theres-no-exchange"></a>Herhangi bir Exchange
+## <a name="theres-no-exchange"></a>Exchange
 
-Paniğe kapma! Bu, Exchange veya kullanımdan SharePoint anlamına değildir. Hala temel bir hizmettir. Bir süredir teknoloji sağlayıcıları, birden çok hizmet bileşenlerini kapsayacak şekilde kullanıcı deneyimlerinden (UX) geçiş yaptı. Modern Microsoft 365 örneğin, e-posta ekleri SharePoint[](https://support.office.com/article/Attach-files-or-insert-pictures-in-Outlook-email-messages-BDFAFEF5-792A-42B1-9A7B-84512D7DE7FC) Online'da veya başka bir OneDrive İş.
+Panik yapmayın! Bu, Exchange kullanım dışı bırakıldığı (veya SharePoint vb.) anlamına gelmez. Hala temel bir hizmettir. Demek istediğim, bir süredir teknoloji sağlayıcılarının kullanıcı deneyimlerini (UX) birden çok hizmetin bileşenlerini kapsayacak şekilde geçirmesi. Microsoft 365'da, e-posta [eklerinin](https://support.office.com/article/Attach-files-or-insert-pictures-in-Outlook-email-messages-BDFAFEF5-792A-42B1-9A7B-84512D7DE7FC) SharePoint Online'da veya OneDrive İş depolandığı "modern ekler" basit bir örnektir.
 
 ![E-postaya dosya ekleme.](../media/solutions-architecture-center/modern-attachments.png)
 
-Outlook istemcisine bakarak, bu deneyimin bir parçası olarak "bağlı" olan birçok hizmeti görebilir, yalnızca Exchange. Bu gruplar Azure AD, Microsoft Arama, Uygulamalar, Profil, uyumluluk ve diğer Office 365 içerir.
+Outlook istemcisine baktığınızda, yalnızca Exchange değil, bu deneyimin bir parçası olarak "bağlı" olan birçok hizmeti görebilirsiniz. Buna Azure AD, Microsoft Arama, Uygulamalar, Profil, uyumluluk ve Office 365 grupları dahildir.
 
-![Outlook ile çağrı arabirimi.](../media/solutions-architecture-center/identity-and-beyond-conceptual-screenshot.png)
+![Açıklama balonlarıyla Outlook arabirimi.](../media/solutions-architecture-center/identity-and-beyond-conceptual-screenshot.png)
 
-Yaklaşan [Microsoft Akıcı Çerçeve](https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-ignite-blog-microsoft-fluid-framework-preview/ba-p/978268) önizlemesi hakkında bilgi okuyun. Şu anda önizlemede, konuşmaları doğrudan doğrudan Teams ve yanıt Outlook. Aslında, Teams [istemcisi](https://products.office.com/microsoft-teams/download-app) bu stratejinin en göze çarpan örneklerindendir.
+Yaklaşan özelliklerin önizlemesi için [Microsoft Akıcı Çerçeve](https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-ignite-blog-microsoft-fluid-framework-preview/ba-p/978268) hakkında bilgi edinin. Önizlemede artık Teams konuşmaları doğrudan Outlook okuyup yanıtlayabilirim. Aslında[, Teams istemcisi](https://products.office.com/microsoft-teams/download-app) bu stratejinin en önemli örneklerinden biridir.
 
-Genel olarak, Microsoft bulutlarında yer alan diğer hizmetlerle Office 365 net bir çizgi çizmek zorlaşır. Tek bir bileşen kullansalar bile, tüm bizlerde yapılan tüm yeniliklerden yararlanamalarını sağlamak için bu bilgileri müşteriler için büyük bir avantaj olarak görmek istiyorum. Oldukça harika ve birçok müşteri için çok fazla şey var.
+Genel olarak, Office 365 ile Microsoft bulutlarındaki diğer hizmetler arasında net bir çizgi çizmek zorlaşıyor. Tek bir bileşen kullansalar bile yaptığımız her şeyde toplam yenilikten yararlanabilecekleri için bunu müşterilere büyük bir avantaj olarak alıyorum. Oldukça havalı ve birçok müşteri için çok fazla etki var.
 
-Bugün, birçok müşteri IT gruplarının "ürünler" çevresinde yapılandırılmış olduğunu gördüm. Belirli her ürün için bir uzmana ihtiyacınız olduğu için şirket içi dünya için mantıklıdır. Ancak, bu hizmetler buluta taşındığında bir Active Directory veya veri Exchange hata ayıklamak zorunda değilim. Otomasyon (bulutun ne tür olduğu), bazı yinelenen el ile işleri kaldırır (bkz. tamam. Bununla birlikte, hizmetler arası etkileşimi, etkiyi, iş gereksinimlerini ve daha fazlasını anlamak için bunlar daha karmaşık gereksinimlerle değiştirilir. Öğrenmek için hazırsanız [,](/learn/) bulut dönüşümü tarafından etkinleştirilen harika fırsatlar vardır. Teknolojiye atlamadan önce, müşterilerle genellikle, IT becerileri ve ekip yapılarında yapılan değişikliği yönetme hakkında konuşuyoruz.
+Bugün birçok müşteri BT grubunun "ürünler" etrafında yapılandırıldığını düşünüyorum. Her ürün için bir uzmana ihtiyacınız olduğundan, şirket içi bir dünya için mantıklıdır. Ancak, bu hizmetler buluta taşındığından, bir Active Directory veya Exchange veritabanında bir daha hata ayıklamak zorunda olmadığım için çok mutluyum. Otomasyon (bulut türü) yinelenen bazı el ile işleri kaldırır (fabrikalara ne olduğuna bakın). Ancak bunlar hizmetler arası etkileşimi, etkiyi, iş gereksinimlerini vb. anlamak için daha karmaşık gereksinimlerle değiştirilir. [Öğrenmeye](/learn/) istekliyseniz, bulut dönüşümü tarafından etkinleştirilen harika fırsatlar vardır. Teknolojiye atlamadan önce, BT becerilerinde ve ekip yapılarındaki değişikliği yönetme hakkında müşterilerle sık sık konuşuyorum.
 
-Tüm diğer SharePoint ve geliştiriciler için lütfen "SharePoint'de çevrimiçi olarak XYZ'i nasıl yapabilirim?" SharePoint durdurun. İş [Power Automate](/power-automate/) (veya Flow) kullanın, çok daha güçlü bir platformdur. 500 K öğe listeniz için daha iyi bir UX oluşturmak üzere [Azure Bot Framework](/azure/bot-service/) kullanın. CSOM [yerine Microsoft Graph'i](https://developer.microsoft.com/graph/) kullanmaya başlama. [Microsoft Teams](/MicrosoftTeams/Teams-overview) dünya SharePoint başkalarını da içerir. Liste başka örnekler de var. Orada muazzam ve olağanüstü bir evren var. Kapıyı açın [ve keşfetmeye başlayabilirler]().
+Tüm SharePoint fanatiklere ve geliştiricilere "XYZ'yi çevrimiçi SharePoint nasıl yapabilirim?" sorusunu sormayı bırakın. İş akışı için [Power Automate](/power-automate/) (veya Flow) kullanın, çok daha güçlü bir platformdur. 500 K öğe listenize daha iyi bir UX oluşturmak için [Azure Bot Framework'i](/azure/bot-service/) kullanın. CSOM yerine [Microsoft Graph](https://developer.microsoft.com/graph/) kullanmaya başlayın. [Microsoft Teams](/MicrosoftTeams/Teams-overview) SharePoint ama daha fazlasını da içerir. Listeleyebileceğiniz başka birçok örnek daha var. Dışarıda muazzam ve harika bir evren var. Kapıyı açın ve [keşfetmeye başlayın]().
 
-Diğer yaygın etki uyumluluk alanındadır. Bu hizmet arası yaklaşım birçok uyumluluk ilkelerinin tamamen kafanızı karıştırıyor gibi görünüyor. "Bir eBulma sistemiyle tüm e-posta iletişimlerini günlüğü tutmam gerekiyor" ifadesinin yer alan kuruluşlara sürekli olarak bak görüyorum. E-posta artık yalnızca e-posta değil diğer hizmetlere açık bir pencere olduğunda, bu durum gerçekten ne anlama geliyor? Office 365 bir uyumluluk yaklaşımı [benimser](../compliance/index.yml), ancak kişiler ve süreçleri değiştirmek çoğunlukla teknolojiden çok daha zordur.
+Diğer yaygın etki uyumluluk alanındadır. Bu hizmetler arası yaklaşım birçok uyumluluk ilkesini tamamen karıştırıyor gibi görünüyor. "Tüm e-posta iletişimlerini bir eBulma sistemine günlüğe kaydetmeliyim" diyen kuruluşlar görüyorum. E-posta artık yalnızca e-posta değil diğer hizmetlere açılan bir pencere olduğunda bu gerçekten ne anlama gelir? Office 365 [uyumluluk](../compliance/index.yml) için kapsamlı bir yaklaşıma sahiptir, ancak insanların ve süreçlerin değiştirilmesi genellikle teknolojiden çok daha zordur.
 
-Başka birçok kişi vardır ve sürecin bir anlamı vardır. Bana göre bu kritik ve tartışılan bir alandır. Belki başka bir makalede daha fazla bilgi bulabilirsiniz.
+Başka birçok kişi ve sürecin etkileri vardır. Bence bu kritik ve tartışılmamış bir alan. Belki de başka bir makalede daha fazlası.
 
 ## <a name="tenant-structure-options"></a>Kiracı yapısı seçenekleri
 
-### <a name="single-tenant-vs-multi-tenant"></a>Tek kiracı ve birden çok kiracı
+### <a name="single-tenant-vs-multi-tenant"></a>Tek kiracı ve çok kiracılı
 
-Genel olarak, çoğu müşteride tek bir üretim kiracısı olması gerekir. Birden çok kiracının zor olduğu (zor bir arama [Bing) veya](https://www.bing.com/search?q=office%20365%20multiple%20tenants) bu teknik [yazıyı okumanın birçok nedeni vardır](https://aka.ms/multi-tenant-user). Aynı zamanda, birlikte İşletmem olan birçok kurumsal müşteri, öğrenme, test ve denemeler için başka bir (küçük) kiracıya sahip. Azure Lighthouse ile kiracılar arasında Azure erişimi [daha kolay olur](https://azure.microsoft.com/services/azure-lighthouse/). Office 365 SaaS hizmetlerinin ve diğer birçok hizmetin kiracılar arası senaryolar için sınırları vardır. [Azure AD B2B senaryolarında göz önünde bulundurabilirsiniz](/azure/active-directory/b2b/what-is-b2b).
+Genel olarak, çoğu müşterinin yalnızca bir üretim kiracısı olmalıdır. Birden çok kiracının zor olmasının birçok nedeni vardır ([Bing arama](https://www.bing.com/search?q=office%20365%20multiple%20tenants) verin) veya bu [teknik incelemeyi](https://aka.ms/multi-tenant-user) okuyun. Aynı zamanda, birlikte çalıştığım birçok kurumsal müşterinin BT öğrenmesi, testi ve denemesi için başka bir (küçük) kiracısı var. Azure Lighthouse ile kiracılar arası Azure erişimi daha kolay hale [getiriliyor](https://azure.microsoft.com/services/azure-lighthouse/). Office 365 ve diğer birçok SaaS hizmeti, kiracılar arası senaryolar için sınırlara sahiptir. [Azure AD B2B](/azure/active-directory/b2b/what-is-b2b) senaryolarında dikkate alınması gereken çok şey vardır.
 
-Birçok müşteri bir birleşme ve alımdan (M&A) sonra birden çok üretim kiracısına sahip olur ve birleştirme yapmak ister. Bugün basit değil ve Microsoft Consulting Services (MCS) ya da bir iş ortağı ve üçüncü taraf yazılımı gerektirir. Gelecekte çok kiracılı müşterilerle ilgili çeşitli senaryoları ele alan sürekli mühendislik çalışmaları devam ediyor.
+Birçok müşteri bir birleşme ve alımdan (M&A) sonra birden çok üretim kiracısına sahip olur ve birleştirmek ister. Bugün bu basit değildir ve Microsoft Danışmanlık Hizmetleri (MCS) veya bir iş ortağı artı üçüncü taraf yazılım gerektirir. Gelecekte çok kiracılı müşterilerle çeşitli senaryoları ele almak için devam eden mühendislik çalışmaları vardır.
 
-Bazı müşteriler birden fazla kiracıyla devam etmek ister. Bu çok dikkatli bir karar ve neredeyse her zaman iş nedeni odaklı olmalıdır! Bazı örnekler şunlardır:
+Bazı müşteriler birden fazla kiracıyla gitmeyi tercih edebilir. Bu çok dikkatli bir karar olmalı ve neredeyse her zaman iş nedeni odaklı olmalıdır! Bazı örnekler şunlardır:
 
-- Farklı varlıklar arasında kolay işbirliğinin gerekli olmadığını ve güçlü bir yönetim ve başka bir yalıtım ihtiyacının bulunduğu, holding türünde bir şirket yapısı.
-- Bir alımdan sonra, iki varlığı ayrı tutmak için bir iş kararı alınması gerekir.
-- Müşterinin üretim ortamını değiştirmeyen bir ortamın benzetimi.
+- Farklı varlıklar arasında kolay işbirliği gerektiren ve güçlü yönetim ve diğer yalıtım gereksinimlerinin bulunduğu bir holding türü şirket yapısı.
+- Bir alımdan sonra, iki varlığı ayrı tutmak için bir iş kararı velanır.
+- Müşterinin üretim ortamını değiştirmeyen bir müşterinin ortamının benzetimi.
 - Müşteriler için yazılım geliştirme.
 
-Bu çok kiracılı senaryolarda, müşteriler çoğunlukla kiracılar genelinde bazı yapılandırmaları aynı tutmak veya yapılandırma değişiklikleriyle borçları rapor etmek ister. Bu çoğunlukla el ile yapılan değişikliklerden kod olarak yapılandırmaya ilerlemek anlamına gelir. Microsoft Premiere desteği, şu genel IP: temel alarak bu tür gereksinimler için bir atölye sunar. <https://Microsoft365dsc.com>
+Bu çok kiracılı senaryolarda müşteriler genellikle bazı yapılandırmaları kiracılar arasında aynı tutmak veya yapılandırma değişiklikleri ve kaymalarını bildirmek ister. Bu genellikle el ile yapılan değişikliklerden kod olarak yapılandırmaya geçiş anlamına gelir. Microsoft Premiere desteği, şu genel IP'yi temel alan bu tür gereksinimler için bir atölye sunar: <https://Microsoft365dsc.com>.
 
 ### <a name="multi-geo"></a>Multi-Geo
 
-[Multi-Geo'ya](../enterprise/microsoft-365-multi-geo.md) veya Multi-Geo'ya değil, bu kadarı yeterli olabilir. Birden Office 365 Multi-Geo ile, veri yerleşim gereksinimlerini karşılamayı seçtiğiniz coğrafi konumlarda verilerin orada sağlanmasını ve [depolansını sabilirsiniz](../enterprise/o365-data-locations.md). Bu özellik hakkında birçok yanlış anlama vardır. Şunları unutmayın:
+[Multi-Geo'ya](../enterprise/microsoft-365-multi-geo.md) veya Multi-Geo'ya değil, asıl soru bu. Office 365 Multi-Geo ile bekleyen verileri, veri [yerleşimi](../enterprise/o365-data-locations.md) gereksinimlerini karşılamak için seçtiğiniz coğrafi konumlarda sağlayabilir ve depolayabilirsiniz. Bu özellik hakkında birçok yanlış algı vardır. Aşağıdakileri unutmayın:
 
-- Performans avantajlarını sağlamak için değildir. Ağ tasarımı doğru değilken performansı [kötüleştirmeye](https://aka.ms/office365networking) neden olabilir. Cihazları Microsoft ağına "kapat" edin (verileriniz için gerekli olmayabilir).
-- GDPR uyumluluğu için çözüm [değildir](https://www.microsoft.com/trust-center/privacy/gdpr-overview). GDPR, veri bağımsızlığı veya depolama konumlarına odaklanmaz. Bunun için başka uyumluluk çerçeveleri de vardır.
-- Yönetim temsilcilerini (aşağıya bakın) veya bilgi [engellerini çözmez](../compliance/information-barriers.md).
-- Çok kiracılı ile aynı değildir ve ek kullanıcı [sağlama iş akışları](https://github.com/MicrosoftDocs/azure-docs-pr/blob/master/articles/active-directory/hybrid/how-to-connect-sync-feature-preferreddatalocation.md) gerektirir.
-- Kiracınız [(Azure](../enterprise/moving-data-to-new-datacenter-geos.md) AD) başka bir coğrafyaya taşınmaz.
+- Performans avantajları sağlamaz. [Ağ tasarımı](https://aka.ms/office365networking) doğru değilse performansı daha kötü hale getirebilir. Cihazları verilerinize değil Microsoft ağına "yakın" alın.
+- [GDPR uyumluluğu](https://www.microsoft.com/trust-center/privacy/gdpr-overview) için bir çözüm değildir. GDPR, veri hakimiyetine veya depolama konumlarına odaklanmaz. Bunun için başka uyumluluk çerçeveleri de vardır.
+- Yönetim temsilcisi seçme (aşağıya bakın) veya [bilgi engellerini](../compliance/information-barriers.md) çözmez.
+- Çok kiracılı ile aynı değildir ve ek [kullanıcı sağlama](https://github.com/MicrosoftDocs/azure-docs-pr/blob/master/articles/active-directory/hybrid/how-to-connect-sync-feature-preferreddatalocation.md) iş akışları gerektirir.
+- Kiracınızı (Azure AD'niz) başka bir coğrafyaya [taşımaz](../enterprise/moving-data-to-new-datacenter-geos.md) .
 
-## <a name="delegation-of-administration"></a>Yönetim temsilcisi seçme
+## <a name="delegation-of-administration"></a>Yönetim temsilcisi
 
-Büyük kuruluşların çoğunda, görevlerin ve rol tabanlı erişim denetimlerinin ayrımı (RBAC) gerekli bir gerçekliktir. Daha önce özür dileriz. Bu, bazı müşterilerin yapmak istemesi kadar basit değildir. Müşteri, yasal, uyumluluk ve diğer gereksinimler farklı ve bazen dünyanın her yerine çakışıyor. Basitlik ve esneklik çoğunlukla birbirinin karşı taraflarındadır. Yanlış bir şey yapma, bu işte daha iyi bir iş yapabiliriz. Zaman içinde önemli geliştirmeler oldu (ve olacak). 379230 belgeleri okumadan iş gereksinimlerinize uygun modelin çalışması için yerel [Microsoft](https://www.microsoft.com/mtc) Teknoloji Merkezi'nizi ziyaret edin! Burada, bunun neden bu şekilde değil de, ne üzerinde düşünmem gerektiğine odaklanın. Aşağıda plan yapmak için beş farklı alan ve karşılaştığım yaygın sorulardan bazıları yer almaktadır.
+Çoğu büyük kuruluşta görev ayrımı ve rol tabanlı erişim denetimi (RBAC) gerekli bir gerçekliktir. Önceden özür dileyeceğim. Bu, bazı müşterilerin istediği kadar basit değildir. Müşteri, yasal, uyumluluk ve diğer gereksinimler farklıdır ve bazen dünya çapında çakışıyor. Basitlik ve esneklik genellikle birbirinin karşı tarafındadır. Beni yanlış anlamadım, bu işte daha iyi bir iş yapabiliriz. Zaman içinde önemli geliştirmeler yapıldı (ve olacak). 379230 belgelerini okumadan iş gereksinimlerinize uygun modeli bulmak için yerel [Microsoft Teknoloji Merkezinizi](https://www.microsoft.com/mtc) ziyaret edin! Burada, neden böyle olduğunu değil, düşünmeniz gereken şeylere odaklanacağım. Aşağıda plan yapmak için beş farklı alan ve karşılaştığım bazı yaygın sorular yer almaktadır.
 
-### <a name="azure-ad-and-microsoft-365-admin-centers"></a>Azure AD ve Microsoft 365 merkezleri
+### <a name="azure-ad-and-microsoft-365-admin-centers"></a>Azure AD ve Microsoft 365 yönetim merkezleri
 
-Uzun ve büyüyen yerleşik roller [listesi vardır](/azure/active-directory/roles/permissions-reference). Her rol, belirli eylemlerin gerçekleştirile izin vermek için birlikte gruplandı olan rol izinleri listesinden oluşur. Bu izinleri her rolün içindeki "Açıklama" sekmesinde görebilirsiniz. Alternatif olarak, Merkezi'nde bunların daha insan okunabilir sürümünü Microsoft 365 Yönetici. Yerleşik rollerin tanımları değiştirilemez. Genel olarak, bunları üç kategori olarak gruplayın:
+[Yerleşik rollerin](/azure/active-directory/roles/permissions-reference) uzun ve büyüyen bir listesi vardır. Her rol, belirli eylemlerin gerçekleştirilebilmesine izin vermek için birlikte gruplandırılmış rol izinlerinin bir listesinden oluşur. Bu izinleri her rolün içindeki "Açıklama" sekmesinde görebilirsiniz. Alternatif olarak, bunların daha insan tarafından okunabilir bir sürümünü Microsoft 365 Yönetici Merkezi'nde görebilirsiniz. Yerleşik rollerin tanımları değiştirilemez. Genellikle bunları üç kategoride gruplandırıyorum:
 
-- **Genel yönetici**: Bu "tüm güçlü" rol, aynı [diğer sistemlerde](../enterprise/protect-your-global-administrator-accounts.md) olduğu gibi yüksek düzeyde korumalıdır. Tipik öneriler şunlardır: kalıcı atama yok ve Azure AD Privileged Identity Management (PIM), güçlü kimlik doğrulaması gibi bilgileri kullanma. İlginçtir ki, bu rol varsayılan olarak her şeye erişim vermez. Genellikle, daha sonra tartışılan uyumluluk erişimi ve Azure erişimi konusunda karışıklığa neden olur. Bununla birlikte, bu rol her zaman kiracının diğer hizmetlere erişim atamaktadır.
-- **Belirli hizmet yöneticileri**: Bazı hizmetler (Exchange, SharePoint, Power BI gibi) Azure AD'den üst düzey yönetim rollerini tüketir. Bu tüm hizmetlerde tutarlı değildir ve daha sonra ele alınacak, hizmete özgü daha çok rol vardır.
-- **İşlevsel**: Belirli işlemlere (konuk davetlisi, vb.) odaklanan uzun (ve büyüyen) bir roller listesi vardır. Düzenli aralıklarla, müşteri ihtiyaçlarına bağlı olarak bunların daha fazlası eklenir.
+- **Genel yönetici**: Bu "tüm güçlü" rol, diğer sistemlerde olduğu gibi [yüksek oranda korunmalıdır](../enterprise/protect-your-global-administrator-accounts.md). Tipik öneriler şunlardır: kalıcı atama yok ve Azure AD Privileged Identity Management (PIM) kullanma; güçlü kimlik doğrulaması ve benzeri. İlginçtir ki, bu rol varsayılan olarak her şeye erişmenize izin vermez. Genellikle, uyumluluk erişimi ve Azure erişimi hakkında daha sonra tartışılan karışıklıklar görüyorum. Ancak, bu rol her zaman kiracıdaki diğer hizmetlere erişim atayabilir.
+- **Belirli hizmet yöneticileri**: Bazı hizmetler (Exchange, SharePoint, Power BI vb.) Azure AD'den üst düzey yönetim rollerini kullanır. Bu tüm hizmetler arasında tutarlı değildir ve daha sonra ele alınan hizmete özgü daha fazla rol vardır.
+- **İşlevsel**: Belirli işlemlere (konuk davet eden vb.) odaklanan rollerin uzun (ve büyüyen) bir listesi vardır. Düzenli aralıklarla, bunların daha fazlası müşteri ihtiyaçlarına göre eklenir.
 
-Her şeyi temsil etmek mümkün değildir (boşluk kısalsa da), bu da Genel yönetici rolünün bazen kullanılmalıdır anlamına gelir. Kişiler bu rolün üyeliği yerine kod ve otomasyon yapılandırması dikkate alınmalıdır.
+Her şeye temsilci seçmek mümkün değildir (boşluk azalsa da), bu da Genel yönetici rolünün bazen kullanılması gerektiği anlamına gelir. Bu rolün kişi üyeliği yerine kod olarak yapılandırma ve otomasyon dikkate alınmalıdır.
 
-**Not**: Microsoft 365 yönetim merkezi kullanıcı dostu bir arabirime sahiptir, ancak Azure AD yönetici deneyimine göre özellikler alt kümesine sahiptir. Her iki portal da aynı Azure AD rollerini kullanır, dolayısıyla değişiklikler aynı yerde ortaya çıkana kadar devam eder. İpucu: Azure dağınıklığı olmaksızın kimlik yönetimi odaklı bir yönetici arabirimi kullanmak için kullanıcı arabirimini kullanın <https://aad.portal.azure.com>.
+**Not**: Microsoft 365 yönetim merkezi daha kullanıcı dostu bir arabirime sahiptir ancak Azure AD yönetici deneyimine kıyasla özelliklerin bir alt kümesine sahiptir. Her iki portal da aynı Azure AD rollerini kullandığından, değişiklikler aynı yerde gerçekleşir. İpucu: Tüm Azure dağınıklığı olmadan kimlik yönetimi odaklı bir yönetici kullanıcı arabirimi istiyorsanız kullanın <https://aad.portal.azure.com>.
 
-Adın içinde ne var? Rolün adıyla varsayımlar yapma. Dil çok hassas bir araç değildir. Amaç, hangi rollerin gerektiğine bakmadan önce temsilci seçileri olması gereken işlemleri tanımlamaktır. "Güvenlik Okuyucu" rolüne birisini eklemek, her şeyin güvenlik ayarlarını görmelerine neden olmaz.
+Adında ne var? Rolün adından varsayımlarda bulunmayın. Dil çok hassas bir araç değildir. Amaç, hangi rollerin gerekli olduğuna bakmadan önce temsilci olarak atanması gereken işlemleri tanımlamak olmalıdır. Birini "Güvenlik Okuyucusu" rolüne eklemek, her şeyde güvenlik ayarlarını görmesine neden olmaz.
 
-Özel roller [oluşturabilme özelliği yaygın](/azure/active-directory/users-groups-roles/roles-custom-overview) bir soru olabilir. Bu, bugün Azure AD'de sınırlıdır (aşağıya bakın) ancak zamanla yetenekleriniz artacak. Bunların Azure AD'nin işlevleri için geçerli olduğunu düşünüyorum ve hiyerarşi modelini "aşağı" ya da "aşağı" yaymayabilirsiniz (yukarıda ele alınmıştır). "Özel" ile her başa çıksam, "basit olan daha iyidir" anaparama geri dönme eğiliminde olurum.
+[Özel roller](/azure/active-directory/users-groups-roles/roles-custom-overview) oluşturma özelliği yaygın bir sorudur. Bu, Azure AD'de bugün sınırlıdır (aşağıya bakın) ancak zamanla özellikler artacaktır. Bunları Azure AD'deki işlevler için geçerli olarak düşünüyorum ve hiyerarşi modelini "aşağı" yayamayabilirim (yukarıda ele alınmalıdır). "Özel" ile ne zaman ilgilensem, "basit daha iyidir" müdürüme geri dönme eğilimindeyim.
 
-Bir dizinin alt kümesinde rollerin kapsamını belirleyebilirsiniz. Örneğin, "Yalnızca AB'de kullanıcılar için yardım masası Yöneticisi"ne benzer. [Yönetim Birimleri](/azure/active-directory/users-groups-roles/directory-administrative-units) (AU) bunu ele almayı amaçlar. Yukarıda olduğu gibi, bunların Azure AD'nin işlevleri için geçerli olduğunu düşünüyorum ve "aşağı" yayılmayabilirsiniz. Elbette bazı rollerin kapsamları anlamlı değildir (genel yöneticiler, hizmet yöneticileri vb.).
+Sık sorulan bir diğer soru da rollerin bir dizinin alt kümesine göre kapsam oluşturabilmesidir. Bir örnek, "Yalnızca AB'deki kullanıcılar için Yardım Masası Yöneticisi" gibi bir örnektir. [Yönetim Birimleri](/azure/active-directory/users-groups-roles/directory-administrative-units) (AU) bunu ele almak için tasarlanmıştır. Yukarıda olduğu gibi, bunları Azure AD'deki işlevler için geçerli olarak düşünüyorum ve "aşağı" yayılmayabilir. Elbette, belirli rollerin kapsamını (genel yöneticiler, hizmet yöneticileri vb.) kapsaması mantıklı değildir.
 
-Bugün, tüm bu roller doğrudan üyelik (veya [Azure AD PIM](/azure/active-directory/privileged-identity-management/) kullanıyorsanız dinamik atama) gerektirir. Bu da, müşterilerin bunları doğrudan Azure AD'de yönetmesi ve güvenlik grubu üyeliğine dayalı olamazları anlamına gelir. Bunları yönetmek için yükseltilmiş haklarla çalışması gereken betikler oluşturmanın bir fanı değilim. Genel olarak ServiceNow gibi süreç sistemleriyle API tümleştirmesini veya Saviynt gibi iş ortağı yönetim araçlarını kullanmalarını öneriyorum. Bu iş için zamanla ilgili mühendislik çalışmaları devam ediyor.
+Bugün, tüm bu roller doğrudan üyelik (veya [Azure AD PIM](/azure/active-directory/privileged-identity-management/) kullanıyorsanız dinamik atama) gerektirir. Bu, müşterilerin bunları doğrudan Azure AD'de yönetmesi gerektiği ve bunların bir güvenlik grubu üyeliğine dayanamayacağı anlamına gelir. Yükseltilmiş haklarla çalışması gerekeceğinden bunları yönetmek için betikler oluşturmayı pek sevmem. Genellikle ServiceNow gibi işlem sistemleriyle veya Saviynt gibi iş ortağı idare araçlarını kullanarak API tümleştirmesi öneriyorum. Zaman içinde bu sorunu çözmek için mühendislik çalışmaları devam edecek.
 
-[Azure AD PIM'den birkaç](/azure/active-directory/privileged-identity-management/) kez bahsedildi. Şirket içi denetimler Microsoft Identity Manager (MIM) [Privileged Access Management](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) (PAM) çözümü ile ilgili bir çözüm vardır. Ayrıca Ayrıcalıklı Erişim İş Istasyonu ( [PAWs](/windows-server/identity/securing-privileged-access/privileged-access-workstations) ) ve [Azure AD Kimlik Yönetimi'ne de bakabilirsiniz](/azure/active-directory/governance/identity-governance-overview). Aynı zamanda, tam zamanında, yeterli sayıda dinamik rol yükseltmesine olanak sağlayan çeşitli üçüncü taraf araçları da vardır. Bu genellikle, ortamın güvenliğini sağlamak için yapılan daha büyük tartışmaların bir parçası olur.
+[Azure AD PIM'den](/azure/active-directory/privileged-identity-management/) birkaç kez bahsettim. Şirket içi denetimler için ilgili Microsoft Identity Manager (MIM) [Privileged Access Management](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) (PAM) çözümü vardır. [Ayrıca Privileged Access workstations](/windows-server/identity/securing-privileged-access/privileged-access-workstations) (PAW) ve [Azure AD Identity Governance'a](/azure/active-directory/governance/identity-governance-overview) da bakmak isteyebilirsiniz. Tam zamanında, yeterli ve dinamik rol yükseltmeyi etkinleştirebilen çeşitli üçüncü taraf araçları da vardır. Bu genellikle ortamın güvenliğini sağlamaya yönelik daha büyük bir tartışmanın parçasıdır.
 
-Bazen senaryolar, bir role dış kullanıcı eklemeyi çağrır (yukarıdaki çok kiracılı bölüme bakın). Bu da tamam. [Azure AD B2B](/azure/active-directory/b2b/) , belki de başka bir makalede, müşterilere yol tavsiye etmek için büyük ve eğlenceli bir konudur.
+Bazen senaryolar bir role dış kullanıcı eklemeyi çağırır (yukarıdaki çok kiracılı bölüme bakın). Bu gayet iyi çalışıyor. [Azure AD B2B](/azure/active-directory/b2b/) , belki de başka bir makalede müşterilere yol gösteren başka bir büyük ve eğlenceli konudur.
 
 ### <a name="security-and-compliance-center-scc"></a>Güvenlik ve Uyumluluk Merkezi (SCC)
 
-[Güvenlik ve Uyumluluk Office 365'& Office 365 İzinler](../security/office-365-security/permissions-in-the-security-and-compliance-center.md), Azure AD rollerinden ayrı ve ayrı olan bir "rol grupları" koleksiyonudur. Bu rol gruplardan bazıları Azure AD rollerinden (örneğin, Güvenlik Okuyucu) aynı adıya sahip olduğu için kafa karıştırıcı olabilir, ancak farklı üyelikleri de olabilir. Azure AD rollerinin kullanımını tercih ederim. Her rol grubu bir veya birden çok "rolden" (aynı sözcüğü yeniden kullanmanın ne anlama gelir? ifadesine bakın) ve üyeleriniz azure AD'den (e-posta özelliği etkin nesneler) oluşur. Ayrıca, rolle aynı adı alan ve bu rolü içere bir rol de içere bir rol grubu oluşturabilirsiniz (bu karışıklıktan kaçının).
+[Office 365 Güvenlik & Uyumluluk Merkezi'ndeki izinler](../security/office-365-security/permissions-in-the-security-and-compliance-center.md), Azure AD rollerinden ayrı ve ayrı olan bir "rol grupları" koleksiyonu. Bu rol gruplarından bazıları Azure AD rolleriyle (örneğin, Güvenlik Okuyucusu) aynı ada sahip olduğundan, ancak farklı üyelikleri olabileceğinden bu durum kafa karıştırıcı olabilir. Azure AD rollerini kullanmayı tercih ediyorum. Her rol grubu bir veya daha fazla "rolden" oluşur (aynı sözcüğü yeniden kullanma hakkında ne demek istediğimi görün?) ve e-posta özellikli nesneler olan Azure AD üyelerine sahiptir. Ayrıca, rolle aynı ada sahip bir rol grubu oluşturabilirsiniz; bu rol bu rolü içerebilir veya içermeyebilir (bu karışıklığı önleyin).
 
-Bir bakıma, bunlar en iyi rol Exchange bir gelişmedir. Bununla birlikte, Exchange Online kendi [rol grubu yönetim arabirimi](/exchange/permissions-exo) vardır. Exchange Online'daki bazı rol grupları kilitlenir ve Azure AD'den veya Güvenlik & Uyumluluk Merkezi'nden yönetilir, ancak diğerleri de aynı veya benzer adlara sahip olabilir ve Exchange Online (karışıklığa neden olarak) yönetilebilir. Kullanıcı yönetimiyle ilgili kapsamlara Exchange Online yoksa, kullanıcı arabirimini Exchange öneririz.
+Bir anlamda, bunlar Exchange rol grupları modelinin bir evrimidir. Ancak Exchange Online kendi [rol grubu yönetim](/exchange/permissions-exo) arabirimine sahiptir. Exchange Online'daki bazı rol grupları kilitlenir ve Azure AD veya Güvenlik & Uyumluluk Merkezi'nden yönetilir, ancak diğerleri aynı veya benzer adlara sahip olabilir ve Exchange Online (karışıklığa ek olarak) içinde yönetilir. Exchange yönetimi için kapsamlara ihtiyacınız olmadığı sürece Exchange Online kullanıcı arabirimini kullanmaktan kaçınmanızı öneririz.
 
-Özel roller oluşturayaasiniz. Roller Microsoft tarafından oluşturulan hizmetlere göre tanımlanır ve yeni hizmetler geldikçe büyür. Bu, kavram olarak Azure [AD'de uygulamalar tarafından tanımlanan rollere](/azure/active-directory/develop/howto-add-app-roles-in-azure-ad-apps) benzer. Yeni hizmetler etkinleştirildiğinde, bu hizmetlere erişim vermek veya temsilci temsilciliği vermek için çoğunlukla yeni rol gruplarının oluşturulmuş olması gerekir (örneğin, [Insider risk yönetimi](../compliance/insider-risk-management-configure.md)).
+Özel roller oluşturamazsınız. Roller, Microsoft tarafından oluşturulan hizmetler tarafından tanımlanır ve yeni hizmetler kullanıma sunulduğunda büyür. Bu, kavram olarak Azure AD'deki [uygulamalar tarafından tanımlanan rollere](/azure/active-directory/develop/howto-add-app-roles-in-azure-ad-apps) benzer. Yeni hizmetler etkinleştirildiğinde, bunlara erişim izni vermek veya bunlara temsilci atamak için genellikle yeni rol gruplarının oluşturulması gerekir (örneğin, [insider risk yönetimi](../compliance/insider-risk-management-configure.md)).
 
-Bu rol grupları doğrudan üyelik de gerektirir ve Azure AD gruplarını içeramaz. Ne yazık ki, bugün bu rol grupları Azure AD PIM tarafından desteklenmiyor. Azure AD rolleri gibi, BEN de API'ler veya Saviynt gibi bir iş ortağı yönetim ürünü aracılığıyla bunların yönetimini öner ediyorum.
+Bu rol grupları doğrudan üyelik gerektirir ve Azure AD gruplarını içeremez. Ne yazık ki bugün bu rol grupları Azure AD PIM tarafından desteklenmiyor. Azure AD rolleri gibi, bunların API'ler veya Saviynt gibi bir iş ortağı idare ürünü veya diğerleri aracılığıyla yönetilmesini önerme eğilimindeyim.
 
-Güvenlik & Uyumluluk Merkezi rolleri Microsoft 365 etki alanınız vardır ve bu rol gruplarının kapsamını ortamın bir alt kümesini (Azure AD'de yönetim birimleriyle vb.) kapsamında bulunduramazsınız. Birçok müşteri, nasıl alt izin alıkattır olduklarını sorar. Örneğin, "yalnızca AB kullanıcıları için bir DLP ilkesi oluşturun." Bugün, Güvenlik ve Uyumluluk Merkezi'nde belirli bir işlevin & varsa, kiracıda bu işlevin kapsaladığı her şeye haklara sahipsinizdir. Bununla birlikte, birçok ilkenin ortamın bir alt kümesini hedef alan özellikleri vardır (örneğin, "bu [etiketlerin yalnızca](../compliance/create-sensitivity-labels.md#publish-sensitivity-labels-by-creating-a-label-policy) bu kullanıcılar tarafından kullanılabilir durumda olmalıdır") Düzgün yönetim ve iletişim, çakışmaları önlemenin önemli bir bileşenidir. Bazı müşteriler, Güvenlik ve Uyumluluk Merkezi'nde alt teslime karşı "kod olarak yapılandırma" & tercih eder. Bazı hizmetler alt teslimi destekler (aşağıya bakın).
+Güvenlik & Uyumluluk Merkezi rolleri Microsoft 365 kapsar ve bu rol gruplarının kapsamını ortamın bir alt kümesi olarak belirleyemezsiniz (Azure AD'deki yönetim birimleriyle yapabileceğiniz gibi). Birçok müşteri nasıl altdelem yapabileceklerini soruyor. Örneğin, "yalnızca AB kullanıcıları için bir DLP ilkesi oluşturun." Bugün, Güvenlik & Uyumluluk Merkezi'nde belirli bir işlev üzerinde haklarınız varsa, kiracıda bu işlevin kapsadığı her şey üzerinde haklarınız vardır. Ancak, birçok ilke ortamın bir alt kümesini hedeflemeye yönelik özelliklere sahiptir (örneğin, "bu [etiketleri](../compliance/create-sensitivity-labels.md#publish-sensitivity-labels-by-creating-a-label-policy) yalnızca bu kullanıcılar için kullanılabilir hale getirme"). Doğru idare ve iletişim, çakışmaları önlemek için önemli bir bileşendir. Bazı müşteriler, Güvenlik & Uyumluluk Merkezi'nde alt teslimi ele almak için "kod olarak yapılandırma" yaklaşımını uygulamayı tercih eder. Bazı belirli hizmetler alt birleştirmeyi destekler (aşağıya bakın).
 
-Şu anda Güvenlik & Uyumluluk Merkezi (protection.office.com) aracılığıyla yönetilen denetimlerin iki ayrı yönetim portalına geçirilirken olduğunu security.microsoft.com compliance.microsoft.com. Değişiklik, tek sabittir!
+Şu anda Güvenlik & Uyumluluk Merkezi (protection.office.com) aracılığıyla yönetilen denetimlerin iki ayrı yönetici portalına geçirilme sürecinde olduğunu belirtmek gerekir: security.microsoft.com ve compliance.microsoft.com. Değişim tek sabittir!
 
 ### <a name="service-specific"></a>Hizmete Özgü
 
-Daha önce de belirtildiği gibi, birçok müşteri daha ayrıntılı bir temsilci modeli elde etmek için arıyor. Yaygın bir örnek: "Yalnızca Bölüm X kullanıcıları ve konumları için XYZ hizmetini yönetin" (veya başka bir boyut). Bunu yapabilme özelliği her hizmete bağlıdır ve hizmetler ve özellikler arasında tutarlı değildir. Buna ek olarak, her hizmetin ayrı ve benzersiz bir RBAC modeli olabilir. Bunların hepsini tartışmak yerine (sonsuza kadar sürer), her hizmet için ilgili bağlantılar ekliyorum. Bu tam bir liste değildir, ancak hemen çalışmaya başlamanız gerekir.
+Daha önce belirtildiği gibi, birçok müşteri daha ayrıntılı bir temsil modeli elde etmek için aramaktadır. Yaygın bir örnek: "XYZ hizmetini yalnızca Bölüm X kullanıcıları ve konumları için yönetme" (veya başka bir boyut). Bunu yapabilme özelliği her hizmete bağlıdır ve hizmetler ve yetenekler arasında tutarlı değildir. Ayrıca, her hizmetin ayrı ve benzersiz bir RBAC modeli olabilir. Bunların tümünü tartışmak yerine (sonsuza kadar sürecek) her hizmet için ilgili bağlantılar ekliyorum. Bu tam bir liste değildir, ancak başlamanıza neden olur.
 
 - **Exchange Online** - (/exchange/permissions-exo/permissions-exo)
 - **SharePoint Online** - (/sharepoint/manage-site-collection-administrators)
 - **Microsoft Teams** - (/microsoftteams/itadmin-readiness)
 - **eBulma** - (.. /compliance/index.yml)
-  - **İzin Filtreleme** - (.. /compliance/index.yml)
+  - **İzin Filtreleme -** (.. /compliance/index.yml)
   - **Uyumluluk Sınırları** - (.. /compliance/set-up-compliance-boundaries.md)
   - **Advanced eDiscovery** - (.. /compliance/overview-ediscovery-20.md)
 - **Yammer** - (/yammer/manage-yammer-users/manage-yammer-admins)
 - **Multi-geo** - (.. /enterprise/add-a-sharepoint-geo-admin.md)
 - **Dynamics 365** – (/dynamics365/)
 
-  Not: Bu bağlantı, belge kökünün bağlantısıdır. Yönetici/temsilci modelinde çeşitlemeler içeren birçok hizmet türü vardır.
+  Not: Bu bağlantı belgelerin kökünedir. Yönetici/temsilci modelinde varyasyonları olan birden çok hizmet türü vardır.
 
 - **Power Platform** - (/power-platform/admin/admin-documentation)
   - **Power Apps** - (/power-platform/admin/wp-security)
 
-    Not: Yönetici/temsilci modellerinde çeşitleme içeren birden çok tür vardır.
+    Not: Yönetici/temsilci modellerinde varyasyonları olan birden çok tür vardır.
 
   - **Power Automate** - (/power-automate/environments-overview-admin)
   - **Power BI** - (/power-bi/service-admin-governance)
 
-    Not: Veri platformu güvenliği ve temsilcisi (Power BI bileşenidir) karmaşık bir alandır.
+    Not: veri platformu güvenliği ve temsilcisi (Power BI bir bileşendir) karmaşık bir alandır.
 
 - **MEM/Intune** - (/mem/intune/fundamentals/role-based-access-control)
 - **Uç Nokta için Microsoft Defender** - (/windows/security/threat-protection/microsoft-defender-atp/user-roles)
 - **Microsoft 365 Defender** - (.. /security/defender/m365d-permissions.md)
-- **Bulut Uygulamaları için Microsoft Defender** - (/cloud-app-security/manage-admins)
+- **Microsoft Defender for Cloud Apps** - (/cloud-app-security/manage-admins)
 - **Stream** - (/stream/assign-administrator-user-role)
 - **Bilgi engelleri** - (.. /compliance/information-barriers.md)
 
 ### <a name="activity-logs"></a>Etkinlik Günlükleri
 
-Office 365 bir denetim [günlüğü var](../compliance/search-the-audit-log-in-security-and-compliance.md). Bu çok ayrıntılı [bir günlüktir](/office/office-365-management-api/office-365-management-activity-api-schema), ancak adını fazla okumayın. Güvenlik ve uyumluluk 2013 için istediğiniz veya gereken her şeyi içerene kadar içerebilir. Ayrıca, bazı müşteriler Gelişmiş Denetim ile [gerçekten ilgileniyor](../compliance/advanced-audit.md).
+Office 365 [birleşik bir denetim günlüğüne](../compliance/search-the-audit-log-in-security-and-compliance.md) sahiptir. Bu çok [ayrıntılı bir günlük](/office/office-365-management-api/office-365-management-activity-api-schema), ancak adı çok fazla okumayın. Güvenlik ve uyumluluk gereksinimleriniz için istediğiniz veya ihtiyacınız olan her şeyi içermeyebilir. Ayrıca, bazı müşteriler [Gelişmiş Denetim](../compliance/advanced-audit.md) ile gerçekten ilgileniyor.
 
-Diğer API'Microsoft 365 erişilen günlüklere örnek olarak şunlar yer içerir:
+Diğer API'ler aracılığıyla erişilen Microsoft 365 günlüklerine örnek olarak şunlar verilebilir:
 
-- [Azure AD](/azure/azure-monitor/platform/diagnostic-settings) (diğer adlarla ilgili Office 365)
-- [Exchange İzleme](/powershell/module/exchange/get-messagetrace)
-- Yukarıda adı geçen Tehdit/UEBA Sistemleri (örneğin, Azure AD Kimlik Koruması, Bulut Uygulamaları için Microsoft Defender, Uç Nokta için Microsoft Defender, gibi)
-- [Microsoft bilgi koruması](../compliance/data-classification-activity-explorer.md)
+- [Azure AD](/azure/azure-monitor/platform/diagnostic-settings) (Office 365 ile ilgili olmayan etkinlikler)
+- [Exchange İleti İzleme](/powershell/module/exchange/get-messagetrace)
+- Yukarıda açıklanan Tehdit/UEBA Sistemleri (örneğin, Azure AD Kimlik Koruması, Microsoft Defender for Cloud Apps, Uç Nokta için Microsoft Defender vb.)
+- [Microsoft Purview Information Protection](../compliance/data-classification-activity-explorer.md)
 - [Uç Nokta için Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/api-power-bi)
 - [Microsoft Graph](https://graph.microsoft.com)
 
-Öncelikle, bir güvenlik ve uyumluluk programı için gereken tüm günlük kaynaklarını tanımlamak önemlidir. Ayrıca, farklı günlüklerin farklı satır üzerinde bekletme sınırları olduğunu unutmayın.
+Öncelikle bir güvenlik ve uyumluluk programı için gereken tüm günlük kaynaklarını belirlemek önemlidir. Ayrıca, farklı günlüklerin farklı satır içi saklama sınırlarına sahip olduğunu unutmayın.
 
-Yönetici temsilcisi açısından bakıldığında, Microsoft 365 günlüklerinin çoğunda yerleşik bir RBAC modeli yoktur. Bir günlüğü görme izniniz varsa, günlüğün içinde yer alan her şeyi görme iznine sahipsinizdir. Müşteri gereksiniminin yaygın bir örneği: "Yalnızca AB kullanıcıları için etkinliği sorgulay bilmek istiyorum" (veya başka bir boyut). Bu gereksinimi karşılamak için günlükleri başka bir hizmete aktarmamız gerekir. Microsoft bulutunda, bu aracı [Microsoft Sentinel](/azure/sentinel/overview) veya [Log Analytics'e aktarmanızı öneririz](/azure/azure-monitor/learn/quick-create-workspace).
+Yönetici temsilcisi açısından bakıldığında, Microsoft 365 etkinlik günlüklerinin çoğunda yerleşik bir RBAC modeli yoktur. Bir günlüğü görme izniniz varsa, içindeki her şeyi görebilirsiniz. Müşteri gereksiniminin yaygın bir örneği şunlardır: "Etkinliği yalnızca AB kullanıcıları için sorgulamak istiyorum" (veya başka bir boyut). Bu gereksinimi sağlamak için günlükleri başka bir hizmete aktarmamız gerekir. Microsoft bulutunda bunu [Microsoft Sentinel'e](/azure/sentinel/overview) veya [Log Analytics'e](/azure/azure-monitor/learn/quick-create-workspace) aktarmanızı öneririz.
 
 Üst düzey diyagram:
 
 ![güvenlik ve uyumluluk programı için günlük kaynaklarının diyagramı.](../media/solutions-architecture-center/identity-beyond-illustration-4.png)
 
-Yukarıdaki diyagram, Etkinlik Merkezi'ne ve/veya Azure Günlük Çözümlemesi'ne ve/veya Azure Depolama günlükleri göndermeye yönelik yerleşik özellikleri temsil eder. Tüm sistemler bu ilk önce dahil değildir. Ancak bu günlükleri aynı depoya göndermek için başka yaklaşımlar da vardır. Örneğin, Microsoft [Sentinel ile Teams koruma makalenize bakın](https://techcommunity.microsoft.com/t5/azure-sentinel/protecting-your-teams-with-azure-sentinel/ba-p/1265761).
+Yukarıdaki diyagram, Günlükleri Olay Hub'ına ve/veya Azure Depolama ve/veya Azure Log Analytics'e göndermeye yönelik yerleşik özellikleri temsil eder. Henüz tüm sistemlerde bu kullanıma uygun sistem yok. Ancak bu günlükleri aynı depoya göndermeye yönelik başka yaklaşımlar da vardır. Örneğin, bkz. [Microsoft Sentinel ile Teams koruma](https://techcommunity.microsoft.com/t5/azure-sentinel/protecting-your-teams-with-azure-sentinel/ba-p/1265761).
 
-Tüm günlükleri tek bir depolama konumda birleştirerek çapraz korelasyonlar, özel bekletme süreleri, RBAC modelini desteklemek için gereken verilerle birleştirme gibi ek avantaj da vardır. Veriler bu depolama sistemine olduktan sonra, uygun bir RBAC Power BI görsel öğe (veya başka bir görsel öğe türü) ile bir pano oluşturabilirsiniz.
+Tüm günlüklerin tek bir depolama konumunda birleştirilmesi, çapraz bağıntılar, özel saklama süreleri, RBAC modelini desteklemek için gereken verilerle artırma gibi ek avantaj içerir. Veriler bu depolama sistemine eklendikten sonra uygun RBAC modeline sahip bir Power BI panosu (veya başka bir görselleştirme türü) oluşturabilirsiniz.
 
-Günlükler yalnızca tek bir yere yönlendirilenler değildir. Ayrıca bu günlükleri, Office 365'de Bulut Uygulamaları [için Microsoft Defender ile veya](/cloud-app-security/connect-office-365-to-microsoft-cloud-app-security) özel bir RBAC modeliyle tümleştirin [Power BI](../admin/usage-analytics/usage-analytics.md). Farklı depoların farklı avantajları ve izleyicileri vardır.
+Günlüklerin yalnızca bir yere yönlendirilmesi gerekmez. [ayrıca Office 365 Günlüklerini Power BI'da Microsoft Defender for Cloud Apps](/cloud-app-security/connect-office-365-to-microsoft-cloud-app-security) veya özel bir RBAC modeliyle tümleştirmek de yararlı [olabilir.](../admin/usage-analytics/usage-analytics.md) Farklı depoların farklı avantajları ve hedef kitleleri vardır.
 
-Güvenlik, tehdit, güvenlik açıkları gibi çok zengin bir yerleşik çözümleme sistemi olduğunu ve Microsoft 365 Defender adlı bir hizmette olduğunu [da Microsoft 365 Defender](../security/defender/microsoft-365-defender.md).
+[Microsoft 365 Defender](../security/defender/microsoft-365-defender.md) adlı bir hizmette güvenlik, tehditler, güvenlik açıkları vb. için çok zengin bir yerleşik analiz sistemi olduğunu belirtmek gerekir.
 
-Birçok büyük müşteri bu günlük verilerini bir üçüncü taraf sisteme (örneğin, SIEM) aktarmayı istiyor. Bunun için farklı yaklaşımlar vardır, ancak genel olarak Azure Etkinlik [Merkezi](/azure/azure-monitor/platform/stream-monitoring-data-event-hubs) [ve](/graph/security-integration) Graph iyi başlangıç noktalarıdır.
+Birçok büyük müşteri bu günlük verilerini üçüncü taraf bir sisteme (örneğin, SIEM) aktarmak ister. Bunun için farklı yaklaşımlar vardır, ancak genel olarak [Azure Olay Hub'ı](/azure/azure-monitor/platform/stream-monitoring-data-event-hubs) ve [Graph](/graph/security-integration) iyi başlangıç noktalarıdır.
 
 ### <a name="azure"></a>Azure
 
-Azure AD, Azure ve SaaS arasında yüksek ayrıcalık rollerini ayırmanın bir yolu olup olmadığını sıkça sorulan bir soru vardır (örneğin: Office 365 için Genel Yönetici ancak Azure değil).  Aslında değil.  Yönetimde tam bir ayırma gerekirse çok kiracılı mimari gerekir, ancak bu önemli bir [karmaşıklık sağlar](https://aka.ms/multi-tenant-user) (yukarı bakın). Tüm bu hizmetler aynı güvenlik/kimlik sınırının bir parçası (yukarıdaki hiyerarşi modeline bakın).
+Genellikle Azure AD, Azure ve SaaS arasında yüksek ayrıcalıklı rolleri ayırmanın bir yolu olup olmadığı sorulur (ör. Azure'da Office 365 genel yönetici değil).  Pek değil.  Tam yönetim ayrımı gerekiyorsa çok kiracılı mimari gereklidir, ancak bu önemli [bir karmaşıklık](https://aka.ms/multi-tenant-user) ekler (yukarıya bakın). Tüm bu hizmetler aynı güvenlik/kimlik sınırının bir parçasıdır (yukarıdaki hiyerarşi modeline bakın).
 
-Aynı kiracıda yer alan çeşitli hizmetler arasındaki ilişkilerin anlamak önemlidir. Azure, Office 365 ve Power Platform'a (ve çoğunlukla şirket içi ve üçüncü taraf bulut hizmetlerine) yayılan iş çözümleri geliştiriyor olan birçok müşteriyle çalışıyorum. Yaygın bir örnek:
+Aynı kiracıdaki çeşitli hizmetler arasındaki ilişkileri anlamak önemlidir. Azure, Office 365 ve Power Platform'a (ve genellikle şirket içi ve üçüncü taraf bulut hizmetlerine) yayılan iş çözümleri oluşturan birçok müşteriyle çalışıyorum. Yaygın örneklerden biri:
 
-1. Bir dizi belge/resim/vb. üzerinde işbirliği yapmak istiyorum (Office 365)
+1. Bir dizi belge/görüntü/vb üzerinde işbirliği yapmak istiyorum (Office 365)
 2. Her birini bir onay işlemi aracılığıyla gönderme (Power Platform)
-3. Tüm bileşenler onaylandıktan sonra bunları birleşik bir teslim edilebilir(ler) (Azure) [Microsoft Graph API'sinde](/azure/active-directory/develop/microsoft-graph-intro) bir araya Graph bunlar için en iyi dostunuz olur.  Olanaksız değil, ancak birden çok kiracıya yayılan bir çözüm tasarlamak çok daha [karmaşıktır](/azure/active-directory/develop/single-and-multi-tenant-apps).
+3. Tüm bileşenler onaylandıktan sonra bunları birleşik bir teslim edilebilir (Azure) olarak bir araya getirerek [Microsoft Graph API](/azure/active-directory/develop/microsoft-graph-intro) bunlar için en iyi dostunuzdur.  İmkânsız değildir, ancak [birden çok kiracıyı](/azure/active-directory/develop/single-and-multi-tenant-apps) kapsayan bir çözüm tasarlamak çok daha karmaşıktır.
 
-Azure Role-Based Erişim Denetimi (RBAC) Azure için daha ince erişim yönetimi sağlar. RBAC kullanarak, kullanıcılara işlerini yapmak için gereken en az izin vererek kaynaklara erişimi yönetebilirsiniz. Bu belgenin ayrıntıları bu belgenin kapsamı dışındadır, ancak RBAC hakkında daha fazla bilgi için bkz. Azure'da rol tabanlı erişim denetimi [(RBAC) nedir?](/azure/role-based-access-control/overview) RBAC önemlidir, ancak Azure için yönetimle ilgili dikkate alınacak konuların yalnızca bir kısmıdır. [Bulut Benimseme Çerçevesi,](/azure/cloud-adoption-framework/govern/) daha fazla bilgi edinmek için harika bir başlangıç noktasıdır. Arkadaşımın [Andres Gerçekteninet'in, müşterilere](https://www.linkedin.com/in/andres-ravinet/) adım adım yol adım yol vermelerini istiyorum, ancak çeşitli bileşenlere göre yaklaşıma karar verme. Çeşitli öğeler için üst düzey görünüm (gerçek müşteri modeline kadar iyi değildir) şöyledir:
+Azure Role-Based Access Control (RBAC), Azure için ayrıntılı erişim yönetimi sağlar. RBAC kullanarak, kullanıcılara işlerini gerçekleştirmek için gereken en az izni vererek kaynaklara erişimi yönetebilirsiniz. Ayrıntılar bu belgenin kapsamı dışındadır, ancak RBAC hakkında daha fazla bilgi için bkz. [Azure'da rol tabanlı erişim denetimi (RBAC) nedir?](/azure/role-based-access-control/overview) RBAC, Azure için idare konusunda dikkat edilmesi gerekenlerin yalnızca bir parçasıdır. [Bulut Benimseme Çerçevesi](/azure/cloud-adoption-framework/govern/) daha fazla bilgi edinmek için harika bir başlangıç noktasıdır. Arkadaşım [Andres Ravinet'in](https://www.linkedin.com/in/andres-ravinet/) müşterilere adım adım adım eşlik etme şeklini seviyorum ancak yaklaşıma karar vermek için çeşitli bileşenler var. Çeşitli öğeler için üst düzey görünüm (gerçek müşteri modeline ulaşmak kadar iyi değil) şöyledir:
 
-![Temsili yönetim için Azure bileşenlerinin üst düzey görünümü.](../media/solutions-architecture-center/identity-beyond-illustration-5.png)
+![Temsilcili yönetim için Azure bileşenlerinin üst düzey görünümü.](../media/solutions-architecture-center/identity-beyond-illustration-5.png)
 
-Yukarıdaki resimde de gördüğünüz gibi, diğer birçok hizmet tasarımın bir parçası olarak düşünülmelidir (örneğin: [Azure](/azure/governance/policy/overview) İlkeleri, [Azure](/azure/governance/blueprints/overview) Şemaları, [Yönetim](/azure/governance/management-groups/) Grupları, vb.).
+Yukarıdaki resimde görebileceğiniz gibi, diğer birçok hizmet tasarımın bir parçası olarak düşünülmelidir (örneğin: [Azure İlkeleri](/azure/governance/policy/overview), [Azure Blueprints](/azure/governance/blueprints/overview), [Yönetim Grupları](/azure/governance/management-groups/) vb.).
 
 ## <a name="conclusion"></a>Sonuç
 
-Kısa bir özet olarak başladı ve beklendiğinden daha uzun sona erdi.  Şimdi, organizasyonunız için temsilci modeli oluşturmayı derinden incelemeye hazır olduğunu umarız.  Bu konuşma müşterilerle çok yaygındır. Herkese uygun tek bir model yoktur. Müşteriler arasında gördüğünüz ortak düzenleri belgeden önce, Microsoft mühendislik tarafından planlanan birkaç geliştirme için bekleme. Bu arada, en yakın Microsoft Teknoloji Merkezi'ne bir ziyaret düzenlemek için [Microsoft hesabı ekibiyle birlikte çalışabilirsiniz](https://www.microsoft.com/mtc).  Sizi orada görebilirler!
+Kısa bir özet olarak başladım, beklediğimden daha uzun bir süre sona erdi.  Umarım artık kuruluşunuz için temsilci modeli oluşturma konusunda ayrıntılı bir bakışa başlamaya hazırsınızdır.  Bu konuşma müşterilerle çok yaygındır. Herkes için çalışan bir model yoktur. Müşteriler genelinde gördüğümüz yaygın desenleri belgelemeden önce Microsoft mühendisliğinden birkaç planlı geliştirme bekleniyor. Bu arada, microsoft hesabı ekibinizle birlikte çalışarak en yakın [Microsoft Teknoloji Merkezi'ne](https://www.microsoft.com/mtc) bir ziyaret ayarlayabilirsiniz.  Orada görüşürüz!

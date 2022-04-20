@@ -1,5 +1,5 @@
 ---
-title: Çok coğrafi ortamı yönetme
+title: Multi-Geo ortamı yönetme
 ms.reviewer: adwood
 ms.author: mikeplum
 author: MikePlumleyMSFT
@@ -16,87 +16,87 @@ ms.collection:
 - Strat_SP_gtc
 - SPO_Content
 ms.localizationpriority: medium
-description: Yöneticiler, çok coğrafi bir ortamda SharePoint ve OneDrive yönetmeyi öğrenebilir.
-ms.openlocfilehash: 126b5de915fba7168b3895bbb05ccef6dcad749b
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Yöneticiler, çok coğrafi bir ortamda SharePoint ve OneDrive hizmetlerini yönetme hakkında bilgi edinebilir.
+ms.openlocfilehash: 155eea030cfa700a009805fb66aeb74eaae617d3
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63312061"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64949089"
 ---
-# <a name="administering-a-multi-geo-environment"></a>Çok coğrafi ortamı yönetme
+# <a name="administering-a-multi-geo-environment"></a>Multi-Geo ortamı yönetme
 
-Burada, hizmetlerin çok coğrafi Microsoft 365 nasıl çalışmaktadır?
+burada, Microsoft 365 hizmetlerinin çok coğrafi bir ortamda nasıl çalıştığına göz atabilirsiniz.
 
 ## <a name="administrator-experience"></a>Yönetici deneyimi
 
-Bu SharePoint yönetim merkezinin sol gezinti bölmesinde coğrafi konumlar sekmesi vardır ve coğrafi konumlarınızı görüntüleyebilirsiniz ve yönetebilirsiniz.<a href="https://go.microsoft.com/fwlink/?linkid=2185076" target="_blank"></a> Kiracınız için coğrafi konum eklemek veya silmek üzere bu sayfayı kullanın.
+SharePoint yönetim merkezinde, sol gezinti bölmesinde <a href="https://go.microsoft.com/fwlink/?linkid=2185076" target="_blank">**coğrafi konumlarınızı**</a> görüntüleyip yönetebileceğiniz bir coğrafi konum haritası içeren bir Coğrafi konumlar sekmesi bulunur. Kiracınızın coğrafi konumlarını eklemek veya silmek için bu sayfayı kullanın.
 
 ## <a name="audit-log-search"></a>Denetim günlüğü araması
 
-Tüm uydu [konumlar](https://support.office.com/article/0d4d0f35-390b-4518-800e-0c7ec95e946c) için birleşik bir Denetim günlüğü, denetim günlüğü Microsoft 365 sayfasından kullanılabilir. Coğrafi konumlar genelinde tüm denetim günlüğü girdilerini bulabilirsiniz, örneğin NAM & EUR kullanıcılarının etkinlikleri tek bir kuruluş görünümünde gösterilir ve sonra belirli kullanıcıların etkinliklerini görmek için mevcut filtreleri uygulayabilirsiniz.
+Tüm uydu konumlarınız için birleşik [denetim günlüğü](https://support.office.com/article/0d4d0f35-390b-4518-800e-0c7ec95e946c), Microsoft 365 denetim günlüğü arama sayfasından kullanılabilir. Coğrafi konumlardaki tüm denetim günlüğü girişlerini görebilirsiniz, örneğin NAM & EUR kullanıcılarının etkinlikleri tek kuruluş görünümünde gösterilir ve ardından belirli kullanıcının etkinliklerini görmek için mevcut filtreleri uygulayabilirsiniz.
 
 > [!NOTE]
-> Exchange denetim olayları yalnızca varsayılan konum için kullanılabilir.
+> Exchange yönetici denetim olayları yalnızca varsayılan konum için kullanılabilir.
 
 ## <a name="bcs-secure-store-apps"></a>BCS, Güvenli Depolama, Uygulamalar
 
-BCS, Güvenli Depolama ve Uygulamaların her uydu konumu için ayrı örnekleri vardır; dolayısıyla SharePoint Online yöneticisi bu hizmetleri her uydu konumdan ayrı olarak yönetmeli ve yapılandırmalıdır.
+BCS, Güvenli Depolama ve Uygulamaların her uydu konumunda ayrı örnekleri vardır, bu nedenle çevrimiçi SharePoint yöneticisi bu hizmetleri her uydu konumundan ayrı olarak yönetmeli ve yapılandırmalıdır.
 
 ## <a name="compliance-admin-center"></a>Uyumluluk yönetim merkezi
 
-Çok coğrafi kiracı için tek bir merkezi uyumluluk merkezi bulunmaktadır: [Uyumluluk Microsoft 365 merkezi.](https://compliance.microsoft.com/)
+Çok coğrafi kiracı için tek bir merkezi uyumluluk merkezi vardır: [Microsoft Purview yönetim merkezi](https://compliance.microsoft.com/).
 
-## <a name="ediscovery"></a>eKbulma
+## <a name="ediscovery"></a>Ediscovery
 
-Varsayılan olarak, çok coğrafi bir kiracının eBulma Yöneticisi veya Yöneticisi, eBulma'ı yalnızca bu kiracının merkezi konumda yürütebilirsiniz. Office 365 genel yöneticisinin, diğer kullanıcıların eBulma gerçekleştirmesine izin vermek ve eBulma'nın uydu konumu olarak gerçekleştirecek bölgeyi belirtmek üzere geçerli Uyumluluk Güvenlik Filtrelerinde bir "Bölge" parametresi ataması gerekir, aksi takdirde uydu konumu için eKbulma yapılmaz. Bir Bölgenin Uyumluluk Güvenlik Filtresini yapılandırmak için bkz. [Multi-Geo eKbulma Office 365'ı yapılandırma](multi-geo-ediscovery-configuration.md).
+Varsayılan olarak, çok coğrafi kiracılı bir kiracının eBulma Yöneticisi veya Yöneticisi eBulma'yı yalnızca o kiracının merkezi konumunda gerçekleştirebilecektir. Office 365 genel yöneticisi, başkalarının eBulma gerçekleştirmesine izin vermek için eBulma Yöneticisi izinleri atamalı ve eBulma'yı uydu konumu olarak yürütmek için bölgeyi belirtmek üzere ilgili Uyumluluk Güvenlik Filtrelerinde bir "Bölge" parametresi atamalıdır, aksi takdirde uydu konumu için eBulma gerçekleştirilmeyecektir. Bir Bölge için Uyumluluk Güvenlik Filtresi'ni yapılandırmak için bkz. [Multi-Geo eBulma Office 365 yapılandırma](multi-geo-ediscovery-configuration.md).
 
-## <a name="exchange-mailboxes"></a>Exchange kutularını geri alın
+## <a name="exchange-mailboxes"></a>posta kutularını Exchange
 
-Kullanıcıların Exchange posta kutuları PDL'leri değiştirilirse otomatik olarak taşınır. Yeni posta kutusu oluşturulduğunda, kullanıcının PDL'sinde değer ayarlanmamışsa kullanıcının PDL'sinde veya merkezi konumda hazır olur.
+PdL'leri değiştirilirse kullanıcıların Exchange posta kutuları otomatik olarak taşınır. Yeni bir posta kutusu oluşturulduğunda, kullanıcının PDL'sine veya kullanıcının PDL'sine değer ayarlanmamışsa merkezi konuma sağlanır.
 
-## <a name="information-protection-ip-data-loss-prevention-dlp-policy"></a>Bilgi Koruma (IP) Veri Kaybı Önleme (DLP) ilkesi
+## <a name="information-protection-ip-data-loss-prevention-dlp-policy"></a>Information Protection (IP) Veri Kaybı Önleme (DLP) ilkesi
 
-Güvenlik ve Uyumluluk Merkezi'nde OneDrive İş, SharePoint ve Exchange için IP DLP ilkelerinizi ayarladığı gibi, ilkelerin tamamını kiracıya veya geçerli kullanıcılara da filtreleyebilirsiniz. Örneğin: Uydu konumdaki bir kullanıcı için bir ilke seçmek isterseniz, ilkeyi belirli bir uydu OneDrive uygulamak için seçin ve kullanıcının URL'sini OneDrive girin. DLP [ilkeleri oluşturma konusunda yol gösterici genel bilgiler](https://support.office.com/article/1966b2a7-d1e2-4d92-ab61-42efbb137f5e) için bkz. Veri kaybı önleme ilkelerine genel bakış.
+OneDrive İş, SharePoint ve Exchange için IP DLP ilkelerinizi Güvenlik ve Uyumluluk merkezinde, kiracının tamamına veya ilgili kullanıcılara gereken kapsam belirleme ilkelerini ayarlayabilirsiniz. Örneğin: Uydu konumundaki bir kullanıcı için bir ilke seçmek istiyorsanız, ilkeyi belirli bir OneDrive uygulamak için öğesini seçin ve kullanıcının OneDrive url'sini girin. DLP ilkeleri oluşturma konusunda genel yönergeler için bkz. [Veri kaybı önleme ilkelerine genel bakış](https://support.office.com/article/1966b2a7-d1e2-4d92-ab61-42efbb137f5e) .
 
-DLP ilkeleri, her coğrafi konuma uygulanlıklarına göre otomatik olarak eşitlenir.
+DLP ilkeleri her coğrafi konuma uygulanabilirliklerine göre otomatik olarak eşitlenir.
 
-Coğrafi konumdaki tüm kullanıcılara Bilgi Koruma ve Veri Kaybı önleme ilkeleri uygulamak kullanıcı arabiriminde kullanılabilen bir seçenek değildir; bunun yerine, ilke için geçerli hesapları seçmeniz veya ilkeyi tüm hesaplara genel olarak uygulamanız gerekir.
+Coğrafi konumdaki tüm kullanıcılara Information Protection ve Microsoft Purview Veri Kaybı Önleme ilkeleri uygulamak kullanıcı arabiriminde kullanılabilir bir seçenek değildir; bunun yerine ilke için geçerli hesapları seçmeniz veya ilkeyi tüm hesaplara genel olarak uygulamanız gerekir.
 
 ## <a name="microsoft-power-apps"></a>Microsoft Power Apps
 
-Power Apps uydu konumu için oluşturulduğunda, kiracının merkezi konumda yer alan uç noktasını kullanır. Microsoft Power Apps, Multi-Geo hizmeti değildir. 
+Uydu konumu için oluşturulan Power Apps, kiracının merkezi konumunda bulunan bitiş noktasını kullanır. Microsoft Power Apps bir Multi-Geo hizmeti değildir. 
 
 ## <a name="power-automate"></a>Power Automate
 
-Uydu konumu için oluşturulan akışlar, kiracının varsayılan coğrafi konumda yer alan uç noktasını kullanır.  Power Automate, Multi-Geo hizmeti değildir. 
+Uydu konumu için oluşturulan akışlar, kiracı için varsayılan coğrafi konumda bulunan bitiş noktasını kullanır.  Power Automate bir Multi-Geo hizmeti değildir. 
 
-## <a name="sharepoint-storage-quota"></a>SharePoint kotasını atama
+## <a name="sharepoint-storage-quota"></a>depolama kotası SharePoint
 
-Varsayılan olarak, çok coğrafi ortamın tüm coğrafi konumları kullanılabilir kiracı depolama kotasını paylaşır.  Ayrıca, belirli bir coğrafi konum için belirli bir kotayı ayarak depolama kotasını yönetebilirsiniz. Daha fazla bilgi için bkz [SharePoint coğrafi ortamlarda depolama kotalarını atama](sharepoint-multi-geo-storage-quota.md).
+Varsayılan olarak, çok coğrafi ortamın tüm coğrafi konumları kullanılabilir kiracı depolama kotasını paylaşır.  Ayrıca, belirli bir coğrafi konum için belirli bir kota ayırarak depolama kotasını yönetebilirsiniz. Daha fazla bilgi için bkz. [Çok coğrafi ortamlarda depolama kotalarını SharePoint](sharepoint-multi-geo-storage-quota.md).
 
 ## <a name="sharing"></a>Paylaşım
 
-Yöneticiler konumlarının her biri için paylaşım ilkeleri ayarp yönetebilir. Her OneDrive coğrafi SharePoint ilgili sitelerle ilgili paylaşım ayarlarına uygun olur. (Örneğin, merkezi konumunuz için [dış](https://support.office.com/article/C8A462EB-0723-4B0B-8D0A-70FEAFE4BE85) paylaşıma izin veebilirsiniz, ancak uydu konumunuz için (veya tersine) izin ve vermez.) Paylaşım ayarlarının coğrafi konumlar arasında paylaşım sınırlamalarını yapılandırmaya izin verme olmadığını unutmayın.
+Yöneticiler konumlarının her biri için paylaşım ilkeleri ayarlayabilir ve yönetebilir. Her coğrafi konumdaki OneDrive ve SharePoint siteleri yalnızca ilgili coğrafi olarak özel paylaşım ayarlarına uygun olacaktır. (Örneğin, merkezi konumunuz için [dış paylaşıma](https://support.office.com/article/C8A462EB-0723-4B0B-8D0A-70FEAFE4BE85) izin verebilirim, ancak uydu konumunuz veya tam tersi için izin vermezsiniz.) Paylaşım ayarlarının coğrafi konumlar arasında paylaşım sınırlamalarının yapılandırılmasına izin vermediğini unutmayın.
 
 ## <a name="stream"></a>Stream
 
-Bire bir sohbette Stream'e yüklenen videolar, OneDrive ilgili sohbette depolanır. Toplantı kayıtları, toplantıyı OneDrive her katılımcının her bir kaydında depolanır.
+1:1 sohbetinde Stream'e yüklenen videolar, karşıya yüklenen kişinin OneDrive depolanır. Toplantı kayıtları, toplantıyı kaydeden her katılımcının OneDrive depolanır.
 
 ## <a name="taxonomy"></a>Taksonomi
 
-Coğrafi konumlarda [kurumsal olarak yönetilen](/sharepoint/managed-metadata) meta veriler için birleşik bir taksonomiyi destekleriz ve bu taksonomi şirketin merkezi konumda barındırıldı. Genel taksonominizi merkezi konumdan yönetmenizi ve uydu konumunun Taksonomisi'ne yalnızca konuma özgü terimleri eklemenizi öneririz. Küresel taksonomi koşulları uydu konumlarını eşitler.
+Coğrafi konumlar genelinde kurumsal olarak yönetilen meta veriler için birleştirilmiş [taksonomiyi](/sharepoint/managed-metadata) destekliyoruz ve ana veriler şirketiniz için merkezi konumda barındırılıyor. Genel taksonominizi merkezi konumdan yönetmenizi ve uydu konumunun Taksonomisine yalnızca konuma özgü terimler eklemenizi öneririz. Genel taksonomi terimleri uydu konumları ile eşitlenir.
 
-Ek [ayrıntılar ve geliştirici kılavuzu için bkz.](/sharepoint/dev/solution-guidance/multigeo-managedmetadata) Çok coğrafi bir kiracıda meta verileri yönetme.
+Ek ayrıntılar ve geliştirici yönergeleri için bkz. [Çok coğrafi kiracılı bir kiracıda meta verileri yönetme](/sharepoint/dev/solution-guidance/multigeo-managedmetadata) .
 
 ## <a name="user-profile-application"></a>Kullanıcı Profili Uygulaması
 
-Her coğrafi [konumda bir kullanıcı](/sharepoint/manage-user-profiles) profili uygulaması vardır. Her kullanıcının profil bilgileri kendi coğrafi konumlarında barındırıldı ve ilgili coğrafi konum için yönetici tarafından kullanılabilir.
+Her coğrafi konumda bir [kullanıcı profili uygulaması](/sharepoint/manage-user-profiles) vardır. Her kullanıcının profil bilgileri kendi coğrafi konumunda barındırılır ve bu coğrafi konumun yöneticisi tarafından kullanılabilir.
 
-Özel profil özellikleriniz varsa, coğrafyalarda aynı profil şemasını kullanmanızı ve özel profil özelliklerinizi tüm coğrafi konumlarda veya gereken yerlerde göstermenizi öneririz. Kullanıcı profili verilerini programatik olarak nasıl doldurmakla ilgili kılavuz için lütfen Toplu Kullanıcı Profili Güncelleştirme [API'sini kullanın](/sharepoint/dev/solution-guidance/bulk-user-profile-update-api-for-sharepoint-online).
+Özel profil özellikleriniz varsa, coğrafyalar arasında aynı profil şemasını kullanmanızı ve özel profil özelliklerinizi tüm coğrafi konumlarda veya gerektiğinde doldurmanızı öneririz. Kullanıcı profili verilerini program aracılığıyla doldurma hakkında rehberlik için lütfen [Toplu Kullanıcı Profili Güncelleştirme API'sine](/sharepoint/dev/solution-guidance/bulk-user-profile-update-api-for-sharepoint-online) bakın.
 
-Ek [ayrıntılar ve geliştirici kılavuzu için bkz. Çok coğrafi](/sharepoint/dev/solution-guidance/multigeo-userprofileexperience) bir kiracıda kullanıcı profilleriyle çalışma.
+Ek ayrıntılar ve geliştirici yönergeleri için bkz. [Çok coğrafi kiracılı bir kiracıda kullanıcı profilleriyle çalışma](/sharepoint/dev/solution-guidance/multigeo-userprofileexperience) .
 
 ## <a name="yammer"></a>Yammer
 
-Yammer, Multi-Geo iş yükü değildir. Yammer depolanan Yammer iş parçacığı kiracının merkezi yerine yerleştirilir. Yammer, dosya depolama alanı değişikliği sunar ve bu değişiklik dosyaları Yammer depolama alanı SharePoint. Yammer depolanan tüm SharePoint, SharePoint siteyle ilişkilendirilmiş olan Yammer yerleştirilir. SharePoint siteleri, Siteler ve Gruplar'da özetlenen PDL [SharePoint temel almaktadır](multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-microsoft-365.md#sharepoint-sites-and-groups).
+Yammer bir Multi-Geo iş yükü değildir. Yammer'da depolanan Yammer iş parçacıkları kiracının merkezi konumuna yerleştirilir. Yammer, Yammer dosyaları SharePoint içinde depolayacak bir dosya depolama değişikliği dağıtıyor. SharePoint'da depolanan Yammer dosyalar, Yammer grubuyla ilişkili SharePoint siteye yerleştirilir. SharePoint grup siteleri, [SharePoint Siteler ve Gruplar'da](multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-microsoft-365.md#sharepoint-sites-and-groups) açıklandığı gibi PDL mantığını temel alır.

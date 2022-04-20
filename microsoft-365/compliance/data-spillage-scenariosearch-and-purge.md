@@ -14,12 +14,12 @@ search.appverid:
 - MET150
 ms.assetid: d945f7dd-f62f-4ca7-b3e7-469824cfd493
 description: Kuruluşunuzdaki bir veri sızıntısı olayını yönetmek ve yanıtlamak için eBulma ve arama araçlarını kullanın.
-ms.openlocfilehash: 106a67bff07f76d3ac40798d8bb4e28a254b923d
-ms.sourcegitcommit: a7e1d155939e862337271fbe38bf26f62bd49bdd
+ms.openlocfilehash: e9e81ae81c344bfc8773174c8650a1808faddd5e
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/14/2022
-ms.locfileid: "64847343"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64948077"
 ---
 # <a name="ediscovery-solution-series-data-spillage-scenario---search-and-purge"></a>eBulma çözüm serisi: Veri taşması senaryosu - Arama ve temizleme
 
@@ -64,7 +64,7 @@ Veri taşması olayının nasıl yönetileceğini aşağıda bulabilirsiniz:
 
 ## <a name="optional-step-1-manage-who-can-access-the-case-and-set-compliance-boundaries"></a>(İsteğe bağlı) 1. Adım: Servis talebine kimlerin erişebileceğini yönetme ve uyumluluk sınırlarını ayarlama
 
-Kuruluş uygulamanıza bağlı olarak, veri taşması olayını araştırmak ve uyumluluk sınırlarını ayarlamak için kullanılan eBulma olayına kimlerin erişebileceğini denetlemeniz gerekir. Bunu yapmanın en kolay yolu, araştırmacıları Microsoft 365 uyumluluk merkezi mevcut bir rol grubunun üyesi olarak eklemek ve ardından rol grubunu eBulma olayının bir üyesi olarak eklemektir. Yerleşik eBulma rol grupları ve eBulma olayına üye ekleme hakkında bilgi için bkz. [eBulma izinleri atama](assign-ediscovery-permissions.md).
+Kuruluş uygulamanıza bağlı olarak, veri taşması olayını araştırmak ve uyumluluk sınırlarını ayarlamak için kullanılan eBulma olayına kimlerin erişebileceğini denetlemeniz gerekir. Bunu yapmanın en kolay yolu, araştırmacıları Microsoft Purview uyumluluk portalında mevcut bir rol grubunun üyesi olarak eklemek ve ardından rol grubunu eBulma olayının bir üyesi olarak eklemektir. Yerleşik eBulma rol grupları ve eBulma olayına üye ekleme hakkında bilgi için bkz. [eBulma izinleri atama](assign-ediscovery-permissions.md).
   
 Ayrıca, kuruluş gereksinimlerinize uygun yeni bir rol grubu da oluşturabilirsiniz. Örneğin, kuruluştaki bir grup veri taşması araştırmacısının tüm veri taşması olaylarına erişmesini ve bu olaylarda işbirliği yapmalarını isteyebilirsiniz. Bunu yapmak için bir "Veri Taşması Araştırmacısı" rol grubu oluşturabilir, uygun rolleri (Dışarı Aktarma, RMS Şifre Çözme, Gözden Geçirme, Önizleme, Uyumluluk Araması ve Olay Yönetimi) atayabilir, veri taşması araştırmacılarını rol grubuna ekleyebilir ve ardından rol grubunu veri taşması eBulma olayının bir üyesi olarak eKleyebilirsiniz. Bunun nasıl yapılacağını açıklayan ayrıntılı yönergeler için bkz. [Office 365'da eBulma araştırmaları için uyumluluk sınırlarını ayarlama](set-up-compliance-boundaries.md). 
   
@@ -72,13 +72,13 @@ Ayrıca, kuruluş gereksinimlerinize uygun yeni bir rol grubu da oluşturabilirs
 
 eBulma olayı, veri taşması araştırmanızı yönetmek için etkili bir yol sağlar. 1. Adımda oluşturduğunuz rol grubuna üye ekleyebilir, rol grubunu yeni bir eBulma olayının üyesi olarak ekleyebilir, taşan verileri bulmak için yinelemeli aramalar yapabilir, paylaşacak bir raporu dışarı aktarabilir, servis talebinin durumunu izleyebilir ve gerekirse servis talebinin ayrıntılarına geri bakabilirsiniz. Veri taşması olayları için kullanılan eBulma olayları için bir adlandırma kuralı oluşturmayı göz önünde bulundurun ve gerekirse gelecekte bulup başvurabilmeniz için olay adı ve açıklamasında olabildiğince fazla bilgi sağlayın.
   
-Yeni bir servis talebi oluşturmak için güvenlik ve uyumluluk merkezinde eBulma özelliğini kullanabilirsiniz. [Core eKeşif ile Kullanmaya başlayın'da](get-started-core-ediscovery.md#step-3-create-a-core-ediscovery-case) "Yeni servis talebi oluşturma" konusuna bakın.
+Yeni bir servis talebi oluşturmak için güvenlik ve uyumluluk merkezinde eBulma özelliğini kullanabilirsiniz. [eBulma (Standart) ile Kullanmaya başlayın'da](get-started-core-ediscovery.md#step-3-create-a-ediscovery-standard-case) "Yeni servis talebi oluşturma" konusuna bakın.
   
 ## <a name="step-3-search-for-the-spilled-data"></a>3. Adım: Taşan verileri arama
 
 Artık bir servis talebi ve yönetilen erişim oluşturduğunuza göre, taşan verileri bulmak ve taşan verileri içeren posta kutularını tanımlamak üzere yinelemeli olarak arama yapmak için servis talebini kullanabilirsiniz. [7. Adımda](#step-7-permanently-delete-the-spilled-data) aynı iletileri silmek için e-posta iletilerini bulmak için kullandığınız arama sorgusunu kullanacaksınız.
   
-eBulma servis talebiyle ilişkilendirilmiş bir içerik araması oluşturmak için bkz. [Core eKeşif örneğinde içerik arama](search-for-content-in-core-ediscovery.md).
+eBulma servis talebiyle ilişkilendirilmiş bir içerik araması oluşturmak için bkz. [eBulma (Standart) durumunda içerik arama](search-for-content-in-core-ediscovery.md).
   
 > [!IMPORTANT]
 > Arama sorgusunda kullandığınız anahtar sözcükler, aradığınız gerçek taşan verileri içerebilir. Örneğin, sosyal güvenlik numarası içeren belgeleri arıyorsanız ve bunu arama anahtar sözcüğü olarak kullanıyorsanız, daha fazla taşmasını önlemek için sorguyu daha sonra silmeniz gerekir. Bkz. 8. Adımda [arama sorgusunu silme](#deleting-the-search-query) .
@@ -91,7 +91,7 @@ Gözden geçirebileceğiniz posta kutusu başına 1.000'den fazla posta kutunuz 
 
 Dökülen veriler içeren bir e-posta iletisi bulduğunuzda, iletinin alıcılarını denetledikten sonra iletinin dışarıdan paylaşılıp paylaşılmadığını belirleyin. İletiyi daha fazla izlemek için, ileti izleme günlüklerini kullanabilmeniz için gönderen bilgilerini ve tarih aralıklarını toplayabilirsiniz. Bu işlem [5. Adım'da](#step-5-use-message-trace-log-to-check-how-spilled-data-was-shared) açıklanmıştır.
 
-Arama sonuçlarını doğruladıktan sonra, bulgularınızı ikincil bir inceleme için başkalarıyla paylaşmak isteyebilirsiniz. 1. Adımda servis talebine atadığınız kişiler hem eBulma hem de Advanced eDiscovery servis talebi içeriğini gözden geçirebilir ve olay bulgularını onaylayabilir. Gerçek içeriği dışarı aktarmadan da rapor oluşturabilirsiniz. Bu raporu, [8. Adım'da](#step-8-verify-provide-a-proof-of-deletion-and-audit) açıklanan silme kanıtı olarak da kullanabilirsiniz.
+Arama sonuçlarını doğruladıktan sonra, bulgularınızı ikincil bir inceleme için başkalarıyla paylaşmak isteyebilirsiniz. 1. Adımda servis talebine atadığınız kişiler hem eBulma hem de Microsoft Purview eKeşif (Premium) içindeki servis talebi içeriğini gözden geçirebilir ve olay bulgularını onaylayabilir. Gerçek içeriği dışarı aktarmadan da rapor oluşturabilirsiniz. Bu raporu, [8. Adım'da](#step-8-verify-provide-a-proof-of-deletion-and-audit) açıklanan silme kanıtı olarak da kullanabilirsiniz.
   
  **İstatistiksel rapor oluşturmak için:**
   
@@ -183,7 +183,7 @@ Taşan verileri silerken aşağıdaki sınırları göz önünde bulundurun:
 - Posta kutusu başına bir kerede en fazla 10 öğe kaldırılabilir. İletileri arama ve kaldırma özelliği bir olay yanıtı aracı olması amaçlandığından, bu sınır iletilerin posta kutularından hızla kaldırılmasına yardımcı olur. Bu özellik, kullanıcı posta kutularını temizlemeye yönelik değildir.
 
 > [!IMPORTANT]
-> Advanced eDiscovery durumda bir gözden geçirme kümesindeki e-posta öğeleri bu makaledeki yordamlar kullanılarak silinemez. Bunun nedeni, bir gözden geçirme kümesindeki öğelerin canlı hizmetteki bir Azure Depolama konumunda kopyalanıp depolanan kopyaları olmasıdır. Bu, 3. Adımda oluşturduğunuz bir içerik araması tarafından döndürülmeyecekleri anlamına gelir. Gözden geçirme kümesindeki öğeleri silmek için, gözden geçirme kümesini içeren Advanced eDiscovery servis talebini silmeniz gerekir. Daha fazla bilgi için bkz. [Advanced eDiscovery servis talebini kapatma veya silme](close-or-delete-case.md).
+> eBulma (Premium) durumundaki bir gözden geçirme kümesindeki e-posta öğeleri bu makaledeki yordamlar kullanılarak silinemez. Bunun nedeni, bir gözden geçirme kümesindeki öğelerin canlı hizmetteki bir Azure Depolama konumunda kopyalanıp depolanan kopyaları olmasıdır. Bu, 3. Adımda oluşturduğunuz bir içerik araması tarafından döndürülmeyecekleri anlamına gelir. Gözden geçirme kümesindeki öğeleri silmek için, gözden geçirme kümesini içeren eBulma (Premium) servis talebini silmeniz gerekir. Daha fazla bilgi için bkz. [eBulma (Premium) servis talebini kapatma veya silme](close-or-delete-case.md).
   
 ## <a name="step-8-verify-provide-a-proof-of-deletion-and-audit"></a>8. Adım: Doğrulama, silme kanıtı sağlama ve denetim
 

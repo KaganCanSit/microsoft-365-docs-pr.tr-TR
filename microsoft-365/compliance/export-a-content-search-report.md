@@ -20,149 +20,149 @@ search.appverid:
 - MBS150
 - MET150
 ms.assetid: 5c8c1db6-d8ac-4dbb-8a7a-f65d452169b9
-description: İçerik aramalarının gerçek sonuçlarını ilk çalışma yerine dışarı Microsoft 365 uyumluluk merkezi, arama sonuçları raporunu dışarı aktarabilirsiniz. Rapor, arama sonuçlarının özetini ve dışarı aktarıla her öğe hakkında ayrıntılı bilgiler içeren bir belge içerir.
+description: Microsoft Purview uyumluluk portalında bir İçerik aramasının gerçek sonuçlarını dışarı aktarmak yerine, arama sonuçları raporunu dışarı aktarabilirsiniz. Rapor, arama sonuçlarının özetini ve dışarı aktarılacak her öğe hakkında ayrıntılı bilgi içeren bir belge içerir.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: d06cc712e8c81304bbd11a9c93f35e48d279a36e
-ms.sourcegitcommit: bf3965b46487f6f8cf900dd9a3af8b213a405989
+ms.openlocfilehash: 6ac46944ab454271358168c95a7df94d606e0ec5
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "62989974"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64944843"
 ---
 # <a name="export-a-content-search-report"></a>İçerik arama raporunu dışarı aktarma
 
-Microsoft 365 uyumluluk merkezi'daki İçerik aramasında (veya Çekirdek eBulma durumuyla ilişkilendirilmiş bir aramadan) tüm arama sonuçları kümesi dışarı aktar yerine, asıl arama sonuçlarını dışarı aktararak oluşturulan aynı raporları dışarı aktarabilirsiniz.
+Arama sonuçlarının tamamını Microsoft Purview uyumluluk portalındaki bir İçerik aramasından (veya Microsoft Purview eKeşif (Standart) durumuyla ilişkili bir aramadan) dışarı aktarmak yerine, gerçek arama sonuçlarını dışarı aktardığınızda oluşturulan raporları dışarı aktarabilirsiniz.
   
-Raporu dışarı aktarsanız da, rapor dosyaları yerel bilgisayarınızda İçerik Arama ile aynı adı içeren bir klasöre indirilir, ancak bu klasör *_ReportsOnly.* Örneğin, İçerik Arama adı  *ContosoCase0815 ise, rapor ContosoCase0815* adlı bir *klasöre ContosoCase0815_ReportsOnly*. Rapora dahil edilen belgelerin listesi için bkz [. Rapora nelerin dahil olduğu](#whats-included-in-the-report).
+Bir raporu dışarı aktardığınızda, rapor dosyaları yerel bilgisayarınızdaki İçerik Arama ile aynı ada sahip ancak *_ReportsOnly* eklenmiş bir klasöre indirilir. Örneğin, İçerik Araması  *ContosoCase0815* olarak adlandırılırsa rapor *ContosoCase0815_ReportsOnly* adlı bir klasöre indirilir. Rapora dahil edilen belgelerin listesi için bkz. [Rapora eklenenler](#whats-included-in-the-report).
 
 ## <a name="before-you-export-a-search-report"></a>Arama raporunu dışarı aktarmadan önce
 
-- Bir arama raporunu dışarı aktarabilirsiniz ve bu raporda Uyumluluk Arama yönetimi rolüne Microsoft 365 uyumluluk merkezi. Bu rol varsayılan olarak yerleşik eBulma Yöneticisi ve Kuruluş Yönetimi rol gruplarına atanır. Daha fazla bilgi için bkz [. eBulma izinleri atama](assign-ediscovery-permissions.md).
+- Bir arama raporunu dışarı aktarmak için uyumluluk portalında Uyumluluk Araması yönetim rolüne atanmış olmanız gerekir. Bu rol varsayılan olarak yerleşik eBulma Yöneticisi ve Kuruluş Yönetimi rol gruplarına atanır. Daha fazla bilgi için bkz. [eBulma izinleri atama](assign-ediscovery-permissions.md).
 
-- Raporu dışarı aktarsanız bile veriler, yerel bilgisayarınıza Depolama önce Microsoft bulutunda geçici olarak Bir Azure bulut Depolama depolanır. Kuruluş kuruluşlarının Azure'daki **\*.blob.core.windows.net** uç noktasına bağlana olduğundan emin olun (joker karakter dışarı aktarmanız için benzersiz bir tanımlayıcıyı temsil eder). Arama sonuçları verileri, oluşturulduktan Depolama hafta sonra Azure Veri Kaynağı'nden silinir.
+- Bir raporu dışarı aktardığınızda, veriler yerel bilgisayarınıza indirilmeden önce geçici olarak Microsoft bulutundaki bir Azure Depolama konumunda depolanır. Kuruluşunuzun Azure'da .blob.core.windows.net (joker karakter dışarı **\*** aktarmanız için benzersiz bir tanımlayıcıyı temsil eder) uç noktasına bağlanaabildiğinden emin olun. Arama sonuçları verileri oluşturulduktan iki hafta sonra Azure Depolama konumundan silinir.
 
-- Arama raporunu dışarı aktarmada kullanmakta olduğunuz bilgisayar aşağıdaki sistem gereksinimlerini karşılamalıdır:
+- Arama raporunu dışarı aktarmak için kullandığınız bilgisayarın aşağıdaki sistem gereksinimlerini karşılaması gerekir:
   
-  - En son Windows (32 bit veya 64 bit)
+  - en son Windows sürümü (32 bit veya 64 bit)
   
-  - Microsoft .NET Framework 4.7 veya daha yüksek bir sürümü
+  - Microsoft .NET Framework 4.7 veya üzeri
   
-- eBulma Dışarı Aktarma Aracı Microsoft Edge <sup>1'i</sup> çalıştırabilirsiniz. Arama sonuçlarını dışarı aktarmada Internet Explorer 11 kullanmak artık <sup>desteklenmiyor2</sup>.
+- eBulma Dışarı Aktarma Aracı'nı çalıştırmak için Microsoft Edge <sup>1</sup> kullanmanız gerekir. Arama sonuçlarını dışarı aktarmak için Internet Explorer 11'in kullanılması artık <sup>desteklenmiyor2</sup>.
   
   > [!NOTE]
-  > <sup>1</sup> Yeni E-postada yapılan son Microsoft Edge ClickOnce artık varsayılan olarak etkinleştirilmez. Edge'de ClickOnce etkinleştirme yönergeleri için bkz. [eBulma Dışarı Aktarma](configure-edge-to-export-search-results.md) Aracı'nı Microsoft Edge. Ayrıca Microsoft, üçüncü taraf uygulamaları için üçüncü taraf uzantıları veya eklentileri ClickOnce değildir. Üçüncü taraf uzantıları veya eklentileri olan desteklenmeyen bir tarayıcı kullanarak arama sonuçlarını dışarı aktarma desteklenmez.
+  > <sup>1</sup> Microsoft Edge yapılan son değişikliklerin bir sonucu olarak, ClickOnce desteği artık varsayılan olarak etkin değildir. Edge'de ClickOnce desteğini etkinleştirme yönergeleri için bkz. [Microsoft Edge'de eBulma Dışarı Aktarma Aracı'nı kullanma](configure-edge-to-export-search-results.md). Ayrıca Microsoft, ClickOnce uygulamaları için üçüncü taraf uzantılar veya eklentiler üretmez. Üçüncü taraf uzantıları veya eklentileri olan desteklenmeyen bir tarayıcı kullanarak arama sonuçlarını dışarı aktarma desteklenmez.
   > 
-  > <sup>2</sup> Ağustos 2021'den itibaren Microsoft 365 uygulamaları ve hizmetleri artık Internet Explorer 11'i (IE11) desteklememektedir ve kullanıcılar daha iyi bir deneyime sahip olabilir veya bu uygulamalara ve hizmetlere bağlanamaz. Desteğin sorunsuz sona erer olması için, bu uygulama ve hizmetler önümüzdeki haftalarda ve aylarda aşamalı olarak yapılacaktır. Her uygulama ve hizmet bağımsız zamanlamalar üzerinde aşamalı olarak aşamalı olarak mektedir. Daha fazla bilgi için bu [blog gönderisi'ne bakın](https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666).
+  > <sup>2</sup> Ağustos 2021'den itibaren Microsoft 365 uygulamalar ve hizmetler artık Internet Explorer 11'i (IE11) desteklemeyecektir ve kullanıcılar düşük bir deneyime sahip olabilir veya bu uygulama ve hizmetlere bağlanamayabilir. Bu uygulamalar ve hizmetler, desteğin sorunsuz bir şekilde sona ermesini sağlamak için önümüzdeki haftalar ve aylar içinde aşamalı olarak kullanıma sunulacaktır. Her uygulama ve hizmet, bağımsız zamanlamalarla aşamalı olarak kullanıma alınıyor. Daha fazla bilgi için bu [blog gönderisini inceleyin](https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666).
 
-- Arama tarafından döndürülen sonuçların tahmini toplam boyutu 2 TB'ın üzerinde olursa, raporları dışarı aktarma işlemi başarısız olur. Raporları başarıyla dışarı aktarmayı denemek için, kapsamı daraltmayı ve aramanın tahmini boyutunun 2 TB'ın altında olması için yeniden çalıştırmayı deneyin.
+- Arama tarafından döndürülen sonuçların tahmini toplam boyutu 2 TB'ı aşarsa, raporları dışarı aktarma işlemi başarısız olur. Raporları başarılı bir şekilde dışarı aktarmak için kapsamı daraltmayı ve sonuçların tahmini boyutunun 2 TB'tan küçük olması için aramayı yeniden çalıştırmayı deneyin.
 
-- Bir aramanın sonuçları 7 günlükten eskiye kadar ise ve dışarı aktarma raporu işi gönderdiğinizde, arama sonuçlarını güncelleştirmek için aramaya yeniden çalışmanızı istenen bir hata iletisi görüntülenir. Böyle bir durumda, dışarı aktarma işlemini iptal edin, aramanızı yeniden çalıştırın ve sonra dışarı aktarma işlemini yeniden başlatın.
+- Bir aramanın sonuçları 7 günden eskiyse ve dışarı aktarma raporu işi gönderirseniz, arama sonuçlarını güncelleştirmek için aramayı yeniden çalıştırmanızı isteyen bir hata iletisi görüntülenir. Böyle bir durumda dışarı aktarmayı iptal edin, aramayı yeniden çalıştırın ve dışarı aktarmayı yeniden başlatın.
 
-- Arama raporlarını dışarı aktarma, aynı anda çalışan en fazla dışarı aktarma sayısına ve tek bir kullanıcının çalıştırılacağı en fazla dışarı aktarma sayısına göre sayılır. Dışarı aktarma sınırları hakkında daha fazla bilgi için bkz. [İçeriği Dışarı Aktarma arama sonuçları](export-search-results.md#export-limits).
+- Arama raporlarını dışarı aktarmak, aynı anda çalışan en fazla dışarı aktarma sayısına ve tek bir kullanıcının çalıştırabileceği maksimum dışarı aktarma sayısına göre sayılır. Dışarı aktarma sınırları hakkında daha fazla bilgi için bkz. [İçeriği Dışarı Aktarma arama sonuçları](export-search-results.md#export-limits).
   
-## <a name="step-1-generate-the-report-for-export"></a>1. Adım: Dışarı aktarma için raporu oluşturma
+## <a name="step-1-generate-the-report-for-export"></a>1. Adım: Dışarı aktarma için rapor oluşturma
 
-İlk adım, raporu bilgisayarınıza dışarı aktarma işlemi için hazırlamaktır. Raporu dışarı aktarabilirsiniz, rapor belgeleri Microsoft bulutunda bir Azure Depolama alanına karşıya yükler.
+İlk adım, raporu bilgisayarınıza aktarmaya indirmek üzere hazırlamaktır. Raporu dışarı aktardığınızda, rapor belgeleri Microsoft bulutunda bir Azure Depolama alanına yüklenir.
   
-1. İçerik Microsoft 365 uyumluluk merkezi, raporu dışarı aktarmayı istediğiniz İçerik arama'ya seçin.
+1. Uyumluluk portalında, raporu dışarı aktarmak istediğiniz İçerik aramasını seçin.
   
-2. Arama **açılır sayfasının** en altındaki Eylemler menüsünde Raporu dışarı aktar'a **tıklayın**.
+2. Arama açılır penceresinin en altındaki **Eylemler** menüsünde **Raporu dışarı aktar'a** tıklayın.
 
-   ![Eylemler menüsünde Raporu dışarı aktar seçeneği.](../media/ActionMenuExportReport.png)
+   ![Eylemler menüsünde raporu dışarı aktar seçeneği.](../media/ActionMenuExportReport.png)
 
-   Rapor **dışarı aktarma** sayfası görüntülenir. Aramayla ilgili bilgileri dışarı aktar için kullanılabilen dışarı aktarma raporu seçenekleri, arama sonuçlarının posta kutularında mı yoksa sitelerde mi yoksa her ikisinde birden mi bulunduğuna bağlıdır.
+   **Raporu dışarı aktar** açılır sayfası görüntülenir. Arama hakkındaki bilgileri dışarı aktarmak için kullanılabilen dışarı aktarma raporu seçenekleri, arama sonuçlarının posta kutularında mı yoksa sitelerde mi yoksa her ikisinin birleşiminde mi bulunduğuna bağlıdır.
   
-3. Çıkış **seçenekleri'nin** altında aşağıdaki seçeneklerden birini belirleyin:
+3. **Çıkış seçenekleri'nin** altında aşağıdaki seçeneklerden birini belirleyin:
   
-   ![Çıkış seçeneklerini dışarı aktarma.](../media/ExportOutputOptions.png)
+   ![Çıkış seçeneklerini dışarı aktarın.](../media/ExportOutputOptions.png)
 
-    - **Tanınmayan biçime sahip olanlar** hariç olmak üzere tüm öğeler şifrelenir veya başka nedenlerle dizine alındı. Bu seçenek yalnızca dizine alınan öğelerle ilgili bilgileri dışarı aktarıyor.
+    - **Tanınmayan biçime sahip olanlar hariç olmak üzere tüm öğeler şifrelenir veya başka nedenlerle dizine eklenmemiştir**. Bu seçenek yalnızca dizine alınan öğeler hakkındaki bilgileri dışarı aktarır.
   
-    - **Tanınmayan biçime sahip olanlar** da dahil olmak üzere tüm öğeler şifrelenir veya başka nedenlerle dizine alındı. Bu seçenek dizine alınan ve dizine eksiz öğelerle ilgili bilgileri dışarı aktarıyor.
+    - **Tanınmayan biçime sahip öğeler de dahil olmak üzere tüm öğeler şifrelenir veya başka nedenlerle dizine eklenmemiştir**. Bu seçenek, dizine alınmış ve dizine alınmamış öğeler hakkındaki bilgileri dışarı aktarır.
   
-    - **Yalnızca tanınmayan biçime sahip öğeler şifrelenir veya başka nedenlerle dizine alındı.** Bu seçenek yalnızca, ilk kez ekli olmayan öğelerle ilgili bilgileri dışarı aktarıyor.
+    - **Yalnızca tanınmayan biçime sahip olan, şifrelenen veya başka nedenlerle dizine eklenemeyen öğeler**. Bu seçenek yalnızca dizine alınmamış öğeler hakkındaki bilgileri dışarı aktarır.
 
-4. İçerikte **yinelemeyi etkinleştir seçeneğini Exchange yapılandırabilirsiniz**.
+4. **Exchange içerik için yinelenenleri kaldırmayı etkinleştir** seçeneğini yapılandırın.
   
-   - Bu seçeneği kullanırsanız, yinelenen iletilerin sayısı (yinelemeyi de-yinelemeden önce ve yinelemeden sonra) dışarı aktarma özeti raporuna dahil edilir. Ayrıca bu dosyada iletinin yalnızca bir kopyası manifest.xml. Ancak dışarı aktarma sonuçları raporu, yinelenen iletinin her kopyası için bir satır içerir; böylelikle, yinelenen iletinin bir kopyasını içeren posta kutularını tanımlayabilirsiniz. Dışarı aktarıldı raporlar hakkında daha fazla bilgi için bkz [. Rapora dahil edilenler](#whats-included-in-the-report).
+   - Bu seçeneği seçerseniz, yinelenen iletilerin sayısı (yinelenenleri kaldırmadan önce ve yinelenenleri kaldırmadan sonra) dışarı aktarma özeti raporuna eklenir. Ayrıca, bir iletinin yalnızca bir kopyası manifest.xml dosyasına eklenir. Ancak dışarı aktarma sonuçları raporu, yinelenen iletinin bir kopyasını içeren posta kutularını tanımlayabilmeniz için yinelenen iletinin her kopyası için bir satır içerir. Dışarı aktarılan raporlar hakkında daha fazla bilgi için bkz. [Rapora eklenenler](#whats-included-in-the-report).
 
-   - Bu seçeneği seç dönmezseniz, dışarı aktarma raporları, yinelemeler dahil olmak üzere arama tarafından döndürülen tüm iletiler hakkında bilgi içerir.
+   - Bu seçeneği belirlemezseniz, dışarı aktarma raporları, yinelenenler de dahil olmak üzere arama tarafından döndürülen tüm iletiler hakkında bilgi içerir.
 
-     Yinelemeyi de-yineleme ve yinelenen öğelerin nasıl tanım olduğu hakkında daha fazla bilgi için bkz. [eBulma arama sonuçlarında yinelemeyi geri bulma](de-duplication-in-ediscovery-search-results.md).
+     Yinelenenleri kaldırma ve yinelenen öğeleri tanımlama hakkında daha fazla bilgi için bkz. [eBulma arama sonuçlarında](de-duplication-in-ediscovery-search-results.md) yinelenenleri kaldırma.
 
-5. Rapor **oluştur'a tıklayın**.
+5. **Rapor oluştur'a** tıklayın.
 
-   Arama raporları indirmeye hazırlanır ve bu da rapor belgelerinin Microsoft bulutunda bir Azure Depolama bir konuma yük anlamına gelir. Bu birkaç dakika sürebilir.
+   Arama raporları indirilmeye hazırlanır. Bu da rapor belgelerinin Microsoft bulutundaki bir Azure Depolama konumuna yüklendiği anlamına gelir. Bu işlem birkaç dakika sürebilir.
 
-Dışarı aktarıldı arama raporlarını indirme yönergeleri için sonraki bölüme bakın.
+Dışarı aktarılan arama raporlarını indirme yönergeleri için sonraki bölüme bakın.
   
 ## <a name="step-2-download-the-report"></a>2. Adım: Raporu indirme
 
-Sonraki adım, raporu Azure Veri Alanı'Depolama yerel bilgisayarınıza indirmektir.
+Sonraki adım, raporu Azure Depolama alanından yerel bilgisayarınıza indirmektir.
 
 > [!NOTE]
-> Dışarı aktarıldı arama raporunun, raporu 1. Adımda oluşturması sonrasında 14 gün içinde indirilmiş olması gerekir.
+> Dışarı aktarılan arama raporu, raporu 1. Adımda oluşturduktan sonraki 14 gün içinde indirilmelidir.
 
-1. İçerik **arama sayfasında**, Microsoft 365 uyumluluk merkezi **sekmesine** tıklayın
+1. Uyumluluk portalındaki **İçerik arama** sayfasında **Dışarı Aktarmalar** sekmesini seçin
   
-   Oluşturduğunuz dışarı aktarma **işinin gösterirken** dışarı aktarma işleri listesini güncelleştirmek için Yenile'ye tıklamanız gerekir. Rapor dışarı aktarma işleri, arama adının sonuna eklenen **adla _ReportsOnly** aramayla aynı olur.
+   Dışarı aktarma işlerinin listesini oluşturduğunuz dışarı aktarma işini gösterecek şekilde güncelleştirmek için **Yenile'ye** tıklamanız gerekebilir. Dışarı aktarma rapor işleri, arama adının sonuna **_ReportsOnly** ilgili aramayla aynı ada sahiptir.
   
 2. 1. Adımda oluşturduğunuz dışarı aktarma işini seçin.
 
-3. Dışarı aktar **tuşu altındaki Rapor** dışarı aktarma sayfasında **Panoya** **kopyala'ya tıklayın**. Arama sonuçlarını indirmek için 6. adımda bu anahtarı kullanırsiniz.
+3. **Dışarı aktarma anahtarı altındaki Raporu dışarı** **aktar** açılır sayfasında **Panoya kopyala'ya** tıklayın. Arama sonuçlarını indirmek için 6. adımda bu anahtarı kullanırsınız.
   
    > [!IMPORTANT]
-   > Herkes eBulma Dışarı Aktarma aracını yük indirip başlatalır ve sonra arama raporunu indirmek için bu anahtarı kullana olduğundan, aynı parolaları veya güvenlikle ilgili diğer bilgileri korur gibi bu anahtarı korumak için önlemler almaya devam edin.
+   > Herkes eBulma Dışarı Aktarma aracını yükleyip başlatabileceğinden ve arama raporunu indirmek için bu anahtarı kullanabileceğinden, parolaları veya güvenlikle ilgili diğer bilgileri koruyacağınız gibi bu anahtarı korumak için önlem almayı unutmayın.
 
-4. Uç uç sayfasının en üstünde Sonuçları **indir'e tıklayın**.
+4. Açılır sayfanın üst kısmında **Sonuçları indir'e** tıklayın.
 
-5. eBulma Dışarı Aktarma Aracı'nı yüklemeniz **istenirse Yükle'ye** **tıklayın**.
+5. **eBulma Dışarı Aktarma Aracı'nı** yüklemeniz istenirse **Yükle'ye** tıklayın.
 
-6. **eBulma Dışarı Aktarma Aracı'da** şunları yapın:
+6. **eBulma Dışarı Aktarma Aracı'nda** aşağıdakileri yapın:
 
    ![eBulma Dışarı Aktarma Aracı.](../media/eDiscoveryExportTool.png)
 
-   1. 3. adımda kopyalanmış olan dışarı aktarma anahtarını uygun kutuya yapıştırın.
+   1. 3. adımda kopyaladığınız dışarı aktarma anahtarını uygun kutuya yapıştırın.
   
-   2. Arama **raporu** dosyalarını indirmek istediğiniz konumu belirtmek için Gözat'a tıklayın.
+   2. Arama raporu dosyalarını indirmek istediğiniz konumu belirtmek için **Gözat'a** tıklayın.
 
-7. Arama **sonuçlarını** bilgisayarınıza indirmek için Başlat'a tıklayın.
+7. Arama sonuçlarını bilgisayarınıza indirmek için **Başlat'a** tıklayın.
   
-    **eBulma Dışarı Aktarma Aracı**, indirilecek kalan öğelerin sayısının (ve boyutunun) tahmini de içinde olmak üzere, dışarı aktarma işlemiyle ilgili durum bilgilerini görüntüler. Dışarı aktarma işlemi tamamlandığında, dosyalar indirildikten sonra bu dosyalara erişebilirsiniz.
+    **eBulma Dışarı Aktarma Aracı**, indirilecek kalan öğelerin sayısının (ve boyutunun) tahmini de dahil olmak üzere dışarı aktarma işlemiyle ilgili durum bilgilerini görüntüler. Dışarı aktarma işlemi tamamlandığında dosyalara indirildikleri konumdan erişebilirsiniz.
   
-## <a name="whats-included-in-the-report"></a>Rapora neler dahildir?
+## <a name="whats-included-in-the-report"></a>Rapora eklenenler
 
-İçerik arama sonuçlarıyla ilgili bir rapor oluşturmak ve dışarı aktararak, aşağıdaki belgeler indirilir:
+İçerik aramasının sonuçlarıyla ilgili bir rapor oluşturup dışarı aktardığınızda, aşağıdaki belgeler indirilir:
   
-- **Dışarı aktarma özeti:** Dışarı Excel özetini içeren en iyi belge. Bunlar arasında arama yapılan içerik kaynağı sayısı, her içerik konumunun arama sonucu sayısı, tahmini öğe sayısı, dışarı aktaracak olacak gerçek öğe sayısı ve dışarı aktaracak tahmini ve gerçek öğe boyutu gibi bilgiler yer sağlar.
+- **Dışarı aktarma özeti:** Dışarı aktarmanın özetini içeren bir Excel belgesi. Bu, aranan içerik kaynaklarının sayısı, her içerik konumundan alınan arama sonuçlarının sayısı, tahmini öğe sayısı, dışarı aktarılacak öğelerin gerçek sayısı ve dışarı aktarılacak öğelerin tahmini ve gerçek boyutu gibi bilgileri içerir.
 
-   Raporu dışarı aktarıyorsanız, bağımsız olmayan öğelerin sayısı toplam tahmini arama sonuçları sayısına ve dışarı aktarma özet raporunda listelenen indirilen arama sonuçlarının toplam sayısına (arama sonuçlarını dışarı aktarmanız gerekirse) dahil edilir. Başka bir deyişle, indirilecek toplam öğe sayısı tahmini sonuçların toplam sayısına ve toplaminde eşit olmayan öğe sayısına eşittir.
+   Raporu dışarı aktarırken dizine alınmamış öğeler eklerseniz, dizine alınmamış öğelerin sayısı tahmini arama sonuçlarının toplam sayısına ve dışarı aktarma özeti raporunda listelenen indirilen arama sonuçlarının toplam sayısına (arama sonuçlarını dışarı aktarmanız gerekiyorsa) dahil edilir. Başka bir deyişle, indirilecek öğelerin toplam sayısı, tahmini sonuçların toplam sayısına ve dizine alınmamış öğelerin toplam sayısına eşittir.
   
-- **Bildirim:** Arama sonuçlarına dahil edilen her öğe hakkında bilgi içeren bir bildirim dosyası (XML biçiminde). Yinelemeyi de etkinleştirdiyseyseniz, yinelenen iletiler bildirim dosyasına dahil değildir.
+- **Bildirim:** Arama sonuçlarına dahil edilen her öğe hakkında bilgi içeren bir bildirim dosyası (XML biçiminde). Yinelenenleri kaldırma seçeneğini etkinleştirdiyseniz, yinelenen iletiler bildirim dosyasına eklenmez.
 
-- **Sonuçlar:** Arama Excel alınan her bir dizine alınan öğe hakkında bilgi içeren bir satır içeren en iyi belge. E-posta için, sonuç günlüğü her ileti hakkında aşağıdaki bilgileri içerir: 
+- **Sonuç -ları:** Arama sonuçlarıyla birlikte dışarı aktarılacak dizine alınan her öğe hakkında bilgi içeren bir satır içeren bir Excel belgesi. E-posta için, sonuç günlüğü her ileti hakkında aşağıdakiler dahil olmak üzere bilgiler içerir: 
 
-  - İletinin kaynak posta kutusunda bulunduğu konum (iletinin birincil posta kutusunda mı yoksa arşiv posta kutusunda mı bulunduğu da dahil).
+  - İletinin kaynak posta kutusunda konumu (iletinin birincil posta kutusunda mı yoksa arşiv posta kutusunda mı olduğu dahil).
 
-  - İletinin gönderildiği veya alın aldığı tarih.
+  - İletinin gönderildiği veya alındığı tarih.
 
-  - İletinin Konu satırı.
+  - İletideki Konu satırı.
 
   - İletinin göndereni ve alıcıları.
 
-  SharePoint ve OneDrive İş sitelerinden gelen belgeler için, sonuç günlüğü her belgeyle ilgili bilgileri içerir; örneğin:
+  SharePoint ve OneDrive İş sitelerindeki belgeler için, sonuç günlüğü her belge hakkında aşağıdakiler dahil olmak üzere bilgiler içerir:
 
   - Belgenin URL'si.
 
   - Belgenin bulunduğu site koleksiyonunun URL'si.
 
-  - Belgenin son değiştirilma tarihi.
+  - Belgenin son değiştirildiği tarih.
 
-  - Belgenin adı (sonuç günlüğünde Konu sütununda yer alır).
+  - Belgenin adı (sonuç günlüğündeki Konu sütununda bulunur).
 
   > [!NOTE]
-  > Sonuçlar raporu'daki **satır sayısı** , toplam arama sonucu sayısı eksi İşaretsiz Öğeler raporunda listelenen öğelerin toplam **sayısına eşit** olması gerekir.
+  > **Sonuçlar** raporundaki satır sayısı, arama sonuçlarının toplam sayısı eksi **Unindexed Items** raporunda listelenen toplam öğe sayısına eşit olmalıdır.
   
-- **Trace.log:** Dışarı aktarma işlemi hakkında ayrıntılı günlük bilgileri içeren ve dışarı aktarma sırasında sorunları ortaya çıkarmanıza yardımcı olan izleme günlüğü. Arama raporlarını dışarı aktarmayla ilgili bir sorun hakkında Microsoft Desteği ile bir bilet açarsanız, bu izleme günlüğünü sağlamanız isten olabilir.
+- **Trace.log:** Dışarı aktarma işlemiyle ilgili ayrıntılı günlük bilgilerini içeren ve dışarı aktarma sırasındaki sorunların ortaya çıkarılmasına yardımcı olabilecek bir izleme günlüğü. Arama raporlarını dışarı aktarmayla ilgili bir sorun hakkında Microsoft Desteği içeren bir bilet açarsanız, bu izleme günlüğünü sağlamanız istenebilir.
 
-- **Tekinde olmayan öğeler:** Arama Excel ekli olduğu, satırlanmamış öğelerle ilgili bilgileri içeren en son belge. Arama sonuçları raporunu 2013'te indirebilirsiniz; bu rapor yine de indirilir, ancak boş kalır.
+- **Dizine alınmamış öğeler:** Arama sonuçlarına dahil edilen dizinlenmemiş öğeler hakkında bilgi içeren bir Excel belgesi. Arama sonuçları raporunu oluştururken dizine alınmamış öğeler eklemezseniz, bu rapor yine indirilir, ancak boş kalır.

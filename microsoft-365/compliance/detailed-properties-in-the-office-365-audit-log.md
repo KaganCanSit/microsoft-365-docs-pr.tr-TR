@@ -1,5 +1,5 @@
 ---
-title: Denetim günlüğünde ayrıntılı özellikler
+title: Denetim günlüğündeki ayrıntılı özellikler
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -17,81 +17,81 @@ search.appverid:
 - BCS160
 - MET150
 ms.assetid: ce004100-9e7f-443e-942b-9b04098fcfc3
-description: Bu makalede, bir denetim günlüğü kaydına ilişkin sonuçları dışarı aktararak ek Office 365 açıklamaları yer almaktadır.
+description: Bu makalede, bir Office 365 denetim günlüğü kaydının sonuçlarını dışarı aktarırken eklenen ek özelliklerin açıklamaları sağlanır.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 1293cdda6ae99fc64b331b7e10cf827c62504456
-ms.sourcegitcommit: dbce0b6e74ae2efec42fe2b3b82c8e8cabe0ddbe
+ms.openlocfilehash: 7e65b5e27f8c6821b12c7f0b7f03e4ecb472c0a9
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "63016304"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64948957"
 ---
-# <a name="detailed-properties-in-the-audit-log"></a>Denetim günlüğünde ayrıntılı özellikler
+# <a name="detailed-properties-in-the-audit-log"></a>Denetim günlüğündeki ayrıntılı özellikler
 
-Denetim günlüğü aramalarının sonuçlarını dışarı aktaran Microsoft 365 uyumluluk merkezi, arama ölçütlerinize uyan tüm sonuçları indirme seçeneğiniz vardır. Bunu yapmak için Denetim günlüğü **araması sayfasında** \> Sonuçları **dışarı aktar** Tüm sonuçları **indir'i** seçin. Daha fazla bilgi için bkz[. Denetim günlüğünde arama.](search-the-audit-log-in-security-and-compliance.md)
+Microsoft Purview uyumluluk portalından bir denetim günlüğü aramasının sonuçlarını dışarı aktardığınızda, arama ölçütlerinize uyan tüm sonuçları indirme seçeneğiniz vardır. Bunu yapmak için Sonuçları \> **dışarı aktar** **Denetim günlüğü arama** sayfasında **Tüm sonuçları indir'i** seçin. Daha fazla bilgi için bkz [. Denetim günlüğünde arama](search-the-audit-log-in-security-and-compliance.md) yapma.
   
- Denetim günlüğü aramasında elde etmek istediğiniz tüm sonuçları dışarı aktarsanız bile, birleşik denetim günlüğünden gelen ham veriler yerel bilgisayarınıza indirilen virgülle ayrılmış değer (CSV) dosyasına kopyalanır. Bu dosya, Denetim Verileri adlı sütunda yer alan her denetim kaydından ek **bilgiler içerir**. Bu sütun denetim günlüğü kaydından birden çok özellik için çok değerli bir özellik içerir. Özelliğin **her biri: Bu** çok değerli özellikte yer alan değer çiftleri virgülle ayrılmıştır. 
+ Bir denetim günlüğü araması için tüm sonuçları dışarı aktardığınızda, birleşik denetim günlüğündeki ham veriler yerel bilgisayarınıza indirilen virgülle ayrılmış değer (CSV) dosyasına kopyalanır. Bu dosya **, AuditData** adlı bir sütundaki her denetim kaydından ek bilgiler içerir. Bu sütun, denetim günlüğü kaydından birden çok özellik için çok değerli bir özellik içerir. **Özelliğin** her biri: bu çok değerli özellikteki değer çiftleri virgülle ayrılır. 
   
-Aşağıdaki tabloda, birden çok özellikli **AuditData** sütununda bulunan özellikler (olayın oluştuğu hizmete bağlı olarak) açık bulunmaktadır. Bu **Office 365 içeren grup hizmeti**, özelliği içeren hizmeti ve etkinlik türünü (kullanıcı veya yönetici) gösterir. Bu özellikler veya özellikler hakkında bu konuda listelenmiyor olmasıyla ilgili daha ayrıntılı bilgi için bkz. [Yönetim Etkinliği API Şeması](/office/office-365-management-api/office-365-management-activity-api-schema).
+Aşağıdaki tabloda, çok özellikli **AuditData** sütununa dahil edilen özellikler (bir olayın gerçekleştiği hizmete bağlı olarak) açıklanmaktadır. **Bu özellik sütununa sahip Office 365 hizmeti**, özelliği içeren hizmet ve etkinlik türünü (kullanıcı veya yönetici) gösterir. Bu özellikler veya bu konuda listelenmeyecek özellikler hakkında daha ayrıntılı bilgi için bkz. [Yönetim Etkinliği API Şeması](/office/office-365-management-api/office-365-management-activity-api-schema).
   
 > [!TIP]
-> Denetim Verileri sütununu birden çok sütuna bölmek için Excel'te Power Query'de JSON dönüştürme özelliğini kullanabilirsiniz; böylece her özelliğin kendi sütunu olur. Bu özellik, bu özelliklerden birini veya birden fazlasını sıralama ve filtrelemenizi sağlar. Bunun nasıl olduğunu öğrenmek için bkz. [Denetim günlüğü kayıtlarını dışarı aktarma, yapılandırma ve görüntüleme](export-view-audit-log-records.md). 
+> **AuditData** sütununu birden çok sütuna bölerek her özelliğin kendi sütununa sahip olması için Excel'daki Power Query JSON dönüştürme özelliğini kullanabilirsiniz. Bu, bu özelliklerden birini veya daha fazlasını sıralamanıza ve filtrelemenize olanak tanır. Bunun nasıl yapılacağını öğrenmek için bkz. [Denetim günlüğü kayıtlarını dışarı aktarma, yapılandırma ve görüntüleme](export-view-audit-log-records.md). 
   
-|**Özellik**|**Açıklama**|**Microsoft 365 özelliği olan bir hizmet**|
+|**Özellik**|**Açıklama**|**Bu özelliğe sahip Microsoft 365 hizmeti**|
 |:-----|:-----|:-----|
-|Actor|Eylemi gerçekleştirilen kullanıcı veya hizmet hesabı.|Azure Active Directory|
-|AddOnName|Bir ekipte eklenen, kaldırılan veya güncelleştirilen eklentinin adı. E-posta veya Microsoft Teams bot, bağlayıcı veya sekme gibi eklenti tuşuna basın.|Microsoft Teams|
-|AddOnType|Ekipte eklenen, kaldırılan veya güncelleştirilen eklentinin türü. Aşağıdaki değerler eklenti türünü gösterir.  <br/> **1** - Robotu gösterir.<br/> **2** - Bağlayıcıyı gösterir.<br/> **3** - Bir sekmeyi gösterir.|Microsoft Teams|
-|AzureActiveDirectoryEventType|Olay türü Azure Active Directory. Olay türü aşağıdaki değerlerle belirtilmiştir.  <br/> **0** - Hesap oturum açma olayı gösterir.<br/> **1** - Azure uygulaması güvenlik olaylarını gösterir.|Azure Active Directory|
-|ChannelGuid|Bir kanala Microsoft Teams. Kanalın bulunduğu ekip, **TeamName** ve **TeamGuid özellikleri tarafından** tanımlanır.|Microsoft Teams|
-|ChannelName|Bir kanalın Microsoft Teams. Kanalın bulunduğu ekip, **TeamName** ve **TeamGuid özellikleri tarafından** tanımlanır.|Microsoft Teams|
-|İstemci|Oturum açma olayında kullanılan istemci cihazı, cihaz işletim sistemi ve cihaz tarayıcısı (örneğin, Nokia Lumia 920; Windows Phone 8; IE Mobile 11).|Azure Active Directory|
-|ClientInfoString|İşlem gerçekleştirmek için kullanılan e-posta istemcisi hakkında bilgi (örneğin, tarayıcı sürümü, Outlook sürümü ve mobil cihaz bilgileri)|Exchange kutusu etkinliği)|
-|ClientIP|Etkinlik günlüğe kaydedilirken kullanılan cihazın IP adresi. IP adresi, IPv4 veya IPv6 adres biçiminde görüntülenir.<br/><br/> Bazı hizmetlerde, bu özellikte görüntülenen değer etkinliği yapan kişi tarafından kullanılan cihazın IP adresi değil, kullanıcı adına hizmeti çağıran güvenilen bir uygulamanın IP adresi (örneğin, Web üzerinde Office uygulamaları) olabilir. <br/><br/>Ayrıca, ilgili etkinlikler için yönetici etkinliği (veya sistem hesabı tarafından gerçekleştirilen etkinlik) Azure Active Directory IP adresi günlüğe kaydedilmez ve ClientIP özelliğinin değeri yer almaktadır`null`. |Azure Active Directory, Exchange, SharePoint|
-|CreationTime|Kullanıcının etkinliği gerçekleştirilen Eşgüdümli Evrensel Saat (UTC) tarihi ve saati.|Tümü|
-|DestinationFileExtension|Kopyalanan veya taşınan dosyanın dosya uzantısı. Bu özellik yalnızca FileCopied ve FileMoved kullanıcı etkinlikleri için görüntülenir.|SharePoint|
-|DestinationFileName|Kopyalanan veya taşınan dosyanın adı. Bu özellik yalnızca FileCopied ve FileMoved eylemleri için görüntülenir.|SharePoint|
-|DestinationRelativeUrl|Dosyanın kopya bulunduğu veya taşındığı hedef klasörün URL'si. **SiteURL**, **DestinationRelativeURL** ve **DestinationFileName** özelliği için değerlerin bileşimi, kopyalanan dosyanın tam yol adı olan **ObjectID** özelliğiyle aynı değerdir. Bu özellik yalnızca FileCopied ve FileMoved kullanıcı etkinlikleri için görüntülenir.|SharePoint|
-|EventSource|Bir olayın başka bir dosyada olduğunu SharePoint. Olası değerler En **SharePoint** **ObjectModel'dir**.|SharePoint|
-|ExternalAccess|Yönetici Exchange için, cmdlet'in kuruluşta bir kullanıcı tarafından mı, Microsoft veri merkezi personeli veya veri merkezi hizmet hesabı tarafından mı, yoksa yönetici temsilcisi tarafından mı çalıştırıldı olduğunu belirtir. **False değeri**, cmdlet'in kurumdan biri tarafından çalıştırıldı olduğunu gösterir. True **değeri,** cmdlet'in veri merkezi personeli, veri merkezi hizmet hesabı veya yönetici temsilcisi tarafından çalıştır olmadığını gösterir.  <br/> Daha Exchange posta kutusu etkinliği için, posta kutusuna kuruluş dışındaki bir kullanıcı tarafından erişip erişil olmadığını belirtir.|Exchange|
-|ExtendedProperties|Bir etkinlik için genişletilmiş Azure Active Directory.|Azure Active Directory|
-|Kimlik|Rapor girdisi kimliği. Kimlik, rapor girdisini benzersiz olarak tanımlar.|Tümü|
-|InternalLogonType|İç kullanım için ayrılmıştır.|Exchange kutusu etkinliği)|
-|ItemType|Erişilen veya değiştirilen nesnenin türü. Olası değerler **şunlardır: File**, **Folder**, **Web**, **Site**, **Tenant** ve **DocumentLibrary**.|SharePoint|
-|LoginStatus|Olası oturum açma hatalarını tanımlar.|Azure Active Directory|
-|LogonType|Posta kutusu erişiminin türü. Aşağıdaki değerler, posta kutusuna erişen kullanıcının türünü gösterir.  <br/><br/> **0** - Posta kutusu sahibini gösterir.<br/> **1** - Yöneticiyi gösterir.<br/> **2** - Temsilciyi gösterir. <br/>**3** - Microsoft veri merkezinde aktarım hizmetini gösterir.<br/> **4** - Microsoft veri merkezinde bir hizmet hesabını gösterir. <br/>**6** - Yönetici temsilcisini gösterir.|Exchange kutusu etkinliği)|
-|MailboxGuid|Erişilen Exchange kutusunun GUID'si.|Exchange kutusu etkinliği)|
-|MailboxOwnerUPN|Erişilen posta kutusunun sahibi olan kişinin e-posta adresi.|Exchange kutusu etkinliği)|
-|Üyeler|Ekipte eklenen veya kaldırılan kullanıcıları listeler. Aşağıdaki değerler kullanıcıya atanan Rol türünü gösterir.  <br/><br/> **1** - Sahip rolünü gösterir.<br/> **2** - Üye rolünü gösterir.<br/> **3** - Konuk rolünü gösterir. <br/><br/>Members özelliği, hem kuruluşun adını hem de üyenin e-posta adresini içerir.|Microsoft Teams|
-|ModifiedProperties (Name, NewValue, OldValue)|Özellik, site veya site koleksiyonu yönetici grubu üyesi olarak bir kullanıcı ekleme gibi yönetici olaylarının bir özelliğidir. Özellik, değiştirilen özelliğin adını (örneğin, Site Yöneticisi grubu), değiştirilen özelliğin yeni değerini (site yöneticisi olarak eklenen kullanıcı gibi) ve değiştirilen nesnenin önceki değerini içerir.|Tüm (yönetici etkinliği)|
-|ObjectId|Yönetici Exchange günlüğü kaydı için, cmdlet tarafından değiştirilen nesnenin adı.  <br/> Daha SharePoint için, kullanıcı tarafından erişilen dosya veya klasörün tam URL yol adı.  <br/> Azure AD etkinliği için, değiştirilen kullanıcı hesabının adı.|Tümü|
-|Operation|Kullanıcı veya yönetici etkinliğinin adı. Bu özelliğin değeri Etkinlikler açılan listesinde seçilmiş olan **değere** karşılık geldi. Tüm **etkinlikler için sonuçları göster seçildiyse** , rapora tüm hizmetlere yönelik tüm kullanıcı ve yönetici etkinliklerine yönelik girişler yer almaktadır. Denetim günlüğüne kaydedilen işlemlerin/etkinliklerin açıklaması için, Denetim günlüğünde arama kaydında Denetlenen etkinlikler  [sekmesine Office 365](search-the-audit-log-in-security-and-compliance.md).  <br/> Yönetici Exchange için bu özellik, çalıştırıldı olan cmdlet'in adını tanımlar.|Tümü|
-|OrganizationId|Kuruluş için GUID.|Tümü|
-|Yol|Erişilen iletinin bulunduğu posta kutusu klasörünün adı. Bu özellik, bir iletinin oluşturulmuş veya kopyalanan/taşındığı klasörü de tanımlar.|Exchange kutusu etkinliği)|
-|Parametreler|Yönetici Exchange için, Operation özelliğinde tanımlanan cmdlet'te kullanılan tüm parametrelerin adı ve değeri.|Exchange (yönetici etkinliği)|
-|RecordType|Kayıt tarafından gösterilen işlem türü. Bu özellik, işlemi tetikleyen hizmeti veya özelliği gösterir. Kayıt türlerinin listesi ve buna karşılık gelen ENUM değeri (denetim kaydındaki **RecordType** özelliğinde görüntülenen değer) için bkz. [Denetim günlüğü kayıt türü](/office/office-365-management-api/office-365-management-activity-api-schema#auditlogrecordtype).| 
-|ResultStatus|Eylemin (Operation özelliğinde belirtilen eylem) **başarılı olup** olmadığını gösterir.  <br/> Yönetici Exchange için değer True (**başarılı**) veya **False (başarısız**) olur.|Tümü  <br/>|
-|SecurityComplianceCenterEventType|Etkinliğin, en son etkinlik Microsoft 365 uyumluluk merkezi gösterir. Bu özellik için tüm uyumluluk merkezi etkinliklerinin **değeri 0** olur.|Güvenlik & Uyumluluk Merkezi|
-|SharingType|Kaynağın paylaşılıyor olduğu kullanıcıya atanmış olan paylaşım izinlerinin türü. Bu kullanıcı **UserSharedWith özelliğinde** tanımlanır.|SharePoint|
-|Site|Kullanıcı tarafından erişilen dosya veya klasörün bulunduğu sitenin GUID'si.|SharePoint|
-|SiteUrl|Kullanıcı tarafından erişilen dosya veya klasörün bulunduğu sitenin URL'si.|SharePoint|
-|SourceFileExtension|Kullanıcı tarafından erişilen dosyanın dosya uzantısı. Erişilen nesne bir klasörse bu özellik boş bırakılır.|SharePoint|
-|SourceFileName|Kullanıcı tarafından erişilen dosya veya klasörün adı.|SharePoint|
-|SourceRelativeUrl|Kullanıcı tarafından erişilen dosyayı içeren klasörün URL'si. **SiteURL**, **SourceRelativeURL** ve **SourceFileName** özelliği için değerlerin bileşimi, kullanıcı tarafından erişilen dosyanın tam yol adı olan **ObjectID** özelliğinin değeriyle aynıdır.|SharePoint|
-|Konu|Erişilen iletinin konu satırı.|Exchange kutusu etkinliği)|
-|TabType| Ekipte eklenen, kaldırılan veya güncelleştirilen sekmenin türü. Bu özelliğin olası değerleri:  <br/><br/> **Excel sabitle** - Excel sekmesi.  <br/> **Uzantı** - Tüm birinci taraf ve üçüncü taraf uygulamaları; örneğin, Sınıf Programı, VSTS ve Formlar gibi.  <br/> **Notlar** - OneNote sekmesi.  <br/> **Pdfpin** - PDF sekmesi.  <br/> **Powerbi** - Power BI sekmesi.  <br/> **Powerpointpin** - PowerPoint sekmesi.  <br/> **Sharepointfiles** - SharePoint sekmesi.  <br/> **Web sayfası** - Sabitlenmiş web sitesi sekmesi.  <br/> **Wiki sekmesi** - Wiki sekmesi.  <br/> **Wordpin** - Word sekmesi.|Microsoft Teams|
-|Hedef|Üzerinde eylemin ( **Operation** özelliğinde tanımlanan eylem) gerçekleştir olduğu kullanıcı. Örneğin, konuk kullanıcı bir Ekip'e SharePoint Microsoft Ekibi'ne eklenirse, bu kullanıcı bu özellikte listelenir.|Azure Active Directory|
-|TeamGuid|Aynı ekipte yer alan bir Microsoft Teams.|Microsoft Teams|
-|TeamName|Aynı dosyada yer alan bir ekibin Microsoft Teams.|Microsoft Teams|
-|UserAgent|Kullanıcının tarayıcısı hakkında bilgiler. Bu bilgiler tarayıcı tarafından sağlanır.|SharePoint|
-|UserDomain|Eylemi gerçekleştiren kullanıcının (Actor) kiracı kuruluşu hakkında kimlik bilgileri.|Azure Active Directory|
-|UserId|Kaydın günlüğe kaydedilmiş olmasıyla sonuç veren eylemi ( **Operation** özelliğinde belirtilen eylem) gerçekleştiren kullanıcı. Sistem hesapları (SHAREPOINT\system veya NT AUTHORITY\SYSTEM gibi) tarafından gerçekleştirilen etkinliğin denetim kayıtları da denetim günlüğüne dahil edilir. UserId özelliği için başka bir ortak değer app@sharepoint. Bu, etkinliği gerçekleştiren "kullanıcının" kullanıcı, yönetici veya hizmet adına kuruluş genelinde eylemler (SharePoint sitesinde veya SharePoint OneDrive hesabında arama yapmak gibi) gerçekleştirmek için SharePoint'de gerekli izinlere sahip bir uygulama olduğunu gösterir. <br/><br/>Daha fazla bilgi için bkz.:<br/> [Denetim kayıtlarında\@ appsharepoint kullanıcısı](search-the-audit-log-in-security-and-compliance.md#the-appsharepoint-user-in-audit-records)<br/> veya <br/>[Posta kutusu denetim Exchange için sistem hesapları](search-the-audit-log-in-security-and-compliance.md#system-accounts-in-exchange-mailbox-audit-records). |Tümü|
-|UserKey|UserID özelliğinde tanımlanan kullanıcının alternatif kimliği. Örneğin, bu özellik aynı bölgede yer alan kullanıcılar tarafından gerçekleştirilen olaylar için Passport benzersiz kimliğiyle (PUID) SharePoint. Bu özellik, başka hizmetlerde oluşan olaylar ve sistem hesapları tarafından gerçekleştirilen olaylar için **UserID** özelliğiyle aynı değeri de belirtebilirsiniz.|Tümü|
-|UserSharedWith|Bir kaynağın paylaşıldı olduğu kullanıcı. **Operation** özelliğinin değeri SharingSet ise, bu özellik **dahil edilir**. Bu kullanıcı, rapordaki **Paylaşılan sütununda** da listelenir.|SharePoint|
-|UserType|İşlemleri gerçekleştirilen kullanıcının türü. Kullanıcı türü aşağıdaki değerlerle belirtilmiştir. <br/> <br/> **0** - Normal bir kullanıcı. <br/>**2** - Bir iş Microsoft 365 yöneticisi.<sup> 1</sup> <br/>**3** - Microsoft veri merkezi yöneticisi veya veri merkezi sistem hesabı. <br/>**4** - Sistem hesabı. <br/>**5** - Uygulama. <br/>**6** - Hizmet sorumlusu.<br/>**7** - Özel ilke.<br/>**8** - Sistem ilkesi.|Tümü|
-|Sürüm|Günlüğe kaydedilen etkinliğin ( **Operation** özelliği tarafından tanımlanan etkinlik) sürüm numarasını gösterir.|Tümü|
-|workload|Etkinliğin Microsoft 365 hizmetidir.|Tümü|
+|Aktör|Eylemi gerçekleştiren kullanıcı veya hizmet hesabı.|Azure Active Directory|
+|AddOnName|Ekipte eklenen, kaldırılan veya güncelleştirilen bir eklentinin adı. Microsoft Teams eklenti türü bir bot, bağlayıcı veya sekmedir.|Microsoft Teams|
+|AddOnType|Ekipte eklenen, kaldırılan veya güncelleştirilen bir eklentinin türü. Aşağıdaki değerler eklentinin türünü gösterir.  <br/> **1** - Botu gösterir.<br/> **2** - Bağlayıcıyı gösterir.<br/> **3** - Sekmeyi gösterir.|Microsoft Teams|
+|AzureActiveDirectoryEventType|Azure Active Directory olayının türü. Aşağıdaki değerler olayın türünü gösterir.  <br/> **0** - Hesap oturum açma olayını gösterir.<br/> **1** - Azure uygulama güvenliği olayını gösterir.|Azure Active Directory|
+|ChannelGuid|Microsoft Teams kanalının kimliği. Kanalın bulunduğu ekip **TeamName** ve **TeamGuid** özellikleriyle tanımlanır.|Microsoft Teams|
+|Channelname|Microsoft Teams kanalının adı. Kanalın bulunduğu ekip **TeamName** ve **TeamGuid** özellikleriyle tanımlanır.|Microsoft Teams|
+|İstemci|İstemci cihazı, cihaz işletim sistemi ve oturum açma olayı için kullanılan cihaz tarayıcısı (örneğin, Nokia Lumia 920; Windows Phone 8; IE Mobile 11).|Azure Active Directory|
+|ClientInfoString|tarayıcı sürümü, Outlook sürümü ve mobil cihaz bilgileri gibi işlemi gerçekleştirmek için kullanılan e-posta istemcisi hakkında bilgiler|Exchange (posta kutusu etkinliği)|
+|ClientIP|Etkinlik günlüğe kaydedilirken kullanılan cihazın IP adresi. IP adresi IPv4 veya IPv6 adres biçiminde görüntülenir.<br/><br/> Bazı hizmetler için, bu özellikte görüntülenen değer, etkinliği gerçekleştiren kişinin kullandığı cihazın IP adresi değil, kullanıcı adına hizmete çağrı yapan güvenilir bir uygulamanın IP adresi (örneğin, Web üzerinde Office uygulamalar) olabilir. <br/><br/>Ayrıca, Azure Active Directory ile ilgili olaylar için yönetici etkinliği (veya sistem hesabı tarafından gerçekleştirilen etkinlik) için IP adresi günlüğe kaydedilmez ve ClientIP özelliğinin değeri olur`null`. |Azure Active Directory, Exchange SharePoint|
+|CreationTime|Kullanıcının etkinliği gerçekleştirdiği Eşgüdümlü Evrensel Saat (UTC) içindeki tarih ve saat.|Tümü|
+|DestinationFileExtension|Kopyalanan veya taşınan bir dosyanın dosya uzantısı. Bu özellik yalnızca FileCopied ve FileMoved kullanıcı etkinlikleri için görüntülenir.|SharePoint|
+|Destinationfilename|Dosyanın adı kopyalanır veya taşınır. Bu özellik yalnızca FileCopied ve FileMoved eylemleri için görüntülenir.|SharePoint|
+|DestinationRelativeUrl|Bir dosyanın kopyalandığı veya taşındığı hedef klasörün URL'si. **SiteURL**, **DestinationRelativeURL** ve **DestinationFileName** özelliğinin değerlerinin birleşimi, kopyalanan dosyanın tam yol adı olan **ObjectID** özelliğinin değeriyle aynıdır. Bu özellik yalnızca FileCopied ve FileMoved kullanıcı etkinlikleri için görüntülenir.|SharePoint|
+|Olaykaynağı|SharePoint'de bir olayın gerçekleştiğini tanımlar. Olası değerler **SharePoint** ve **ObjectModel'dır**.|SharePoint|
+|ExternalAccess|Exchange yönetici etkinliği için, cmdlet'in kuruluşunuzdaki bir kullanıcı tarafından mı, Microsoft veri merkezi personeli tarafından mı yoksa veri merkezi hizmet hesabı mı yoksa yönetici temsilcisi tarafından mı çalıştırıldığını belirtir. **False** değeri, cmdlet'in kuruluşunuzdaki biri tarafından çalıştırıldığını gösterir. **True** değeri, cmdlet'in veri merkezi personeli, veri merkezi hizmet hesabı veya yönetici temsilcisi tarafından çalıştırıldığını gösterir.  <br/> Exchange posta kutusu etkinliği için, posta kutusuna kuruluşunuzun dışındaki bir kullanıcı tarafından erişilip erişildiğini belirtir.|Exchange|
+|ExtendedProperties|bir Azure Active Directory olayının genişletilmiş özellikleri.|Azure Active Directory|
+|Kimlik|Rapor girdisinin kimliği. Kimlik, rapor girdisini benzersiz olarak tanımlar.|Tümü|
+|InternalLogonType|dahili kullanım için ayrılmıştır.|Exchange (posta kutusu etkinliği)|
+|Itemtype|Erişilen veya değiştirilen nesnenin türü. Olası değerler **Dosya**, **Klasör**, **Web**, **Site**, **Kiracı** ve **DocumentLibrary'yi** içerir.|SharePoint|
+|Loginstatus|Oluşmuş olabilecek oturum açma hatalarını tanımlar.|Azure Active Directory|
+|LogonType|Posta kutusu erişiminin türü. Aşağıdaki değerler, posta kutusuna erişen kullanıcının türünü gösterir.  <br/><br/> **0** - Posta kutusu sahibini gösterir.<br/> **1** - Bir yöneticiyi gösterir.<br/> **2** - Bir temsilciyi gösterir. <br/>**3** - Microsoft veri merkezinde taşıma hizmetini gösterir.<br/> **4** - Microsoft veri merkezinde bir hizmet hesabını gösterir. <br/>**6** - Yönetici temsilcisini gösterir.|Exchange (posta kutusu etkinliği)|
+|MailboxGuid|Erişilen posta kutusunun Exchange GUID'i.|Exchange (posta kutusu etkinliği)|
+|MailboxOwnerUPN|Erişilen posta kutusunun sahibi olan kişinin e-posta adresi.|Exchange (posta kutusu etkinliği)|
+|Üyeler|Takıma eklenen veya takımdan kaldırılan kullanıcıları listeler. Aşağıdaki değerler kullanıcıya atanan Rol türünü gösterir.  <br/><br/> **1** - Sahip rolünü gösterir.<br/> **2** - Üye rolünü gösterir.<br/> **3** - Konuk rolünü gösterir. <br/><br/>Members özelliği, kuruluşunuzun adını ve üyenin e-posta adresini de içerir.|Microsoft Teams|
+|ModifiedProperties (Name, NewValue, OldValue)|Bu özellik, bir kullanıcıyı bir sitenin veya site koleksiyonu yönetici grubunun üyesi olarak ekleme gibi yönetici olayları için dahil edilir. özelliği değiştirilen özelliğin adını (örneğin, Site Yöneticisi grubu) değiştirilen özelliğin yeni değerini (site yöneticisi olarak eklenen kullanıcı ve değiştirilen nesnenin önceki değeri gibi) içerir.|Tümü (yönetici etkinliği)|
+|Objectıd|Exchange yönetici denetim günlüğü için, cmdlet tarafından değiştirilen nesnenin adı.  <br/> SharePoint etkinliği için, kullanıcı tarafından erişilen dosyanın veya klasörün tam URL yolu adı.  <br/> Azure AD etkinliği için, değiştirilen kullanıcı hesabının adı.|Tümü|
+|Işlem|Kullanıcı veya yönetici etkinliğinin adı. Bu özelliğin değeri **, Etkinlikler** açılan listesinde seçilen değere karşılık gelir. **Tüm etkinlikler için sonuçları göster** seçiliyse, rapor tüm hizmetlere yönelik tüm kullanıcı ve yönetici etkinliklerine yönelik girdiler ekler. Denetim günlüğüne kaydedilen işlemlerin/etkinliklerin açıklaması için, [Office 365 Denetim günlüğünde arama'nın](search-the-audit-log-in-security-and-compliance.md) **Denetlenen etkinlikler** sekmesine bakın.  <br/> Exchange yönetici etkinliği için bu özellik, çalıştırılan cmdlet'in adını tanımlar.|Tümü|
+|OrganizationId|Kuruluşunuzun GUID değeri.|Tümü|
+|Yol|Erişilen iletinin bulunduğu posta kutusu klasörünün adı. Bu özellik, içinde iletinin oluşturulduğu veya kopyalandığı/taşındığı klasörü de tanımlar.|Exchange (posta kutusu etkinliği)|
+|Parametre|Exchange yönetici etkinliği için, Operation özelliğinde tanımlanan cmdlet ile kullanılan tüm parametrelerin adı ve değeri.|Exchange (yönetici etkinliği)|
+|Kayıt Türü|Kayıt tarafından belirtilen işlem türü. Bu özellik, işlemin tetiklediği hizmeti veya özelliği gösterir. Kayıt türlerinin listesi ve buna karşılık gelen ENUM değeri (bir denetim kaydındaki **RecordType** özelliğinde görüntülenen değerdir) için bkz. [Denetim günlüğü kayıt türü](/office/office-365-management-api/office-365-management-activity-api-schema#auditlogrecordtype).| 
+|ResultStatus|Eylemin ( **Operation** özelliğinde belirtilen) başarılı olup olmadığını gösterir.  <br/> Exchange yönetici etkinliği için değer **Doğru** (başarılı) veya **Yanlış** (başarısız) olur.|Tümü  <br/>|
+|SecurityComplianceCenterEventType|Etkinliğin bir uyumluluk portalı olayı olduğunu gösterir. Tüm uyumluluk merkezi etkinlikleri bu özellik için **0** değerine sahip olacaktır.|Güvenlik & Uyumluluk Merkezi|
+|SharingType|Kaynağın paylaşıldığı kullanıcıya atanan paylaşım izinlerinin türü. Bu kullanıcı **UserSharedWith** özelliğinde tanımlanır.|SharePoint|
+|Site|Kullanıcı tarafından erişilen dosya veya klasörün bulunduğu sitenin GUID'i.|SharePoint|
+|Siteurl|Kullanıcı tarafından erişilen dosya veya klasörün bulunduğu sitenin URL'si.|SharePoint|
+|SourceFileExtension|Kullanıcı tarafından erişilen dosyanın dosya uzantısı. Erişilen nesne bir klasörse bu özellik boş olur.|SharePoint|
+|Sourcefilename|Kullanıcı tarafından erişilen dosya veya klasörün adı.|SharePoint|
+|SourceRelativeUrl|Kullanıcı tarafından erişilen dosyayı içeren klasörün URL'si. **SiteURL**, **SourceRelativeURL** ve **SourceFileName** özelliğinin değerlerinin birleşimi, kullanıcı tarafından erişilen dosyanın tam yol adı olan **ObjectID** özelliğinin değeriyle aynıdır.|SharePoint|
+|Konu|Erişilen iletinin konu satırı.|Exchange (posta kutusu etkinliği)|
+|TabType| Ekipte eklenen, kaldırılan veya güncelleştirilen sekme türü. Bu özelliğin olası değerleri şunlardır:  <br/><br/> **Excel raptiye** - Excel sekmesi.  <br/> **Uzantı** - Tüm birinci taraf ve üçüncü taraf uygulamaları; Sınıf Zamanlaması, VSTS ve Formlar gibi.  <br/> **Notlar** - OneNote sekmesi.  <br/> **Pdfpin** - PDF sekmesi.  <br/> **Powerbi** - Power BI sekmesi.  <br/> **Powerpointpin** - PowerPoint sekmesi.  <br/> **Sharepointfiles** - SharePoint sekmesi.  <br/> **Web sayfası** - Sabitlenmiş bir web sitesi sekmesi.  <br/> **Wiki-sekmesi** - Wiki sekmesi.  <br/> **Wordpin** - Word sekmesi.|Microsoft Teams|
+|Hedef|Eylemin ( **Operation** özelliğinde tanımlanan) gerçekleştirildiği kullanıcı. Örneğin, SharePoint veya Microsoft Team'e bir konuk kullanıcı eklenirse, bu kullanıcı bu özellikte listelenir.|Azure Active Directory|
+|TeamGuid|Microsoft Teams ekibin kimliği.|Microsoft Teams|
+|TeamName|Microsoft Teams'deki bir ekibin adı.|Microsoft Teams|
+|Useragent|Kullanıcının tarayıcısı hakkında bilgi. Bu bilgiler tarayıcı tarafından sağlanır.|SharePoint|
+|UserDomain|Eylemi gerçekleştiren kullanıcının (aktör) kiracı kuruluşu hakkında kimlik bilgileri.|Azure Active Directory|
+|Userıd|Kaydın günlüğe kaydedilmesiyle sonuçlanan eylemi gerçekleştiren kullanıcı ( **Operation** özelliğinde belirtilir). Sistem hesapları (SHAREPOINT\system veya NT AUTHORITY\SYSTEM gibi) tarafından gerçekleştirilen etkinliğin denetim kayıtları da denetim günlüğüne eklenir. UserId özelliği için bir diğer yaygın değer de app@sharepoint. Bu, etkinliği gerçekleştiren "kullanıcının" bir kullanıcı, yönetici veya hizmet adına kuruluş genelinde eylemler (SharePoint site veya OneDrive hesabı arama gibi) gerçekleştirmek için SharePoint gerekli izinlere sahip bir uygulama olduğunu gösterir. <br/><br/>Daha fazla bilgi için bkz.:<br/> [Denetim kayıtlarındaki appsharepoint\@ kullanıcısı](search-the-audit-log-in-security-and-compliance.md#the-appsharepoint-user-in-audit-records)<br/> veya <br/>[Exchange posta kutusu denetim kayıtlarındaki sistem hesapları](search-the-audit-log-in-security-and-compliance.md#system-accounts-in-exchange-mailbox-audit-records). |Tümü|
+|UserKey|**UserID** özelliğinde tanımlanan kullanıcı için alternatif bir kimlik. Örneğin, bu özellik SharePoint kullanıcılar tarafından gerçekleştirilen olaylar için pasaport benzersiz kimliği (PUID) ile doldurulur. Bu özellik, sistem hesapları tarafından gerçekleştirilen diğer hizmetlerde ve olaylarda gerçekleşen olaylar için **UserID** özelliğiyle aynı değeri de belirtebilir.|Tümü|
+|UserSharedWith|Kaynağın paylaşıldığı kullanıcı. **Operation** özelliğinin değeri **SharingSet** ise bu özellik eklenir. Bu kullanıcı, rapordaki **Paylaşılan** sütununda da listelenir.|SharePoint|
+|Usertype|İşlemi gerçekleştiren kullanıcının türü. Aşağıdaki değerler kullanıcı türünü gösterir. <br/> <br/> **0** - Normal bir kullanıcı. <br/>**2** - Microsoft 365 kuruluşunuzda bir yönetici.<sup> 1</sup> <br/>**3** - Microsoft veri merkezi yöneticisi veya veri merkezi sistem hesabı. <br/>**4** - Bir sistem hesabı. <br/>**5** - Bir uygulama. <br/>**6** - Hizmet sorumlusu.<br/>**7** - Özel bir ilke.<br/>**8** - Sistem ilkesi.|Tümü|
+|Sürüm|Günlüğe kaydedilen etkinliğin sürüm numarasını ( **Operation** özelliğiyle tanımlanır) gösterir.|Tümü|
+|Iş yük -ünü|Etkinliğin gerçekleştiği Microsoft 365 hizmeti.|Tümü|
 ||||
 
 > [!NOTE]
-><sup>1</sup> Azure Active Directory ilgili olaylar için, yöneticinin değeri denetim kaydında kullanılmaz. Yöneticiler tarafından gerçekleştirilen etkinliklerin denetim kayıtları, normal bir kullanıcının (örneğin, **UserType: 0**) etkinliği gerçekleştirileni gösterir. **UserID özelliği**, etkinliği gerçekleştiren kişiyi (normal kullanıcı veya yönetici) gösterir.
+><sup>1</sup> Azure Active Directory ile ilgili olaylar için bir yöneticinin değeri denetim kaydında kullanılmaz. Yöneticiler tarafından gerçekleştirilen etkinliklerin denetim kayıtları, etkinliği normal bir kullanıcının (örneğin, **UserType: 0**) gerçekleştirdiğini gösterir. **UserID** özelliği, etkinliği gerçekleştiren kişiyi (normal kullanıcı veya yönetici) tanımlar.

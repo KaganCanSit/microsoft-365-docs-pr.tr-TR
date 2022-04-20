@@ -1,5 +1,5 @@
 ---
-title: Gözden geçirme kümesinden belgeleri indirme
+title: Bir inceleme setinden belgeleri indirme
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -15,19 +15,19 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Sunular veya dış incelemeler için Advanced eDiscovery gözden geçirme kümesinden içerik seçmeyi ve indirmeyi öğrenin.
+description: Sunular veya dış incelemeler için eBulma (Premium) içindeki bir gözden geçirme kümesinden içerik seçmeyi ve indirmeyi öğrenin.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 8fca2073b798271dac379f515ae29a7f8be868fb
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: 112b9d976d1e2bd2e9a956718184654f046357d1
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63019508"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64949993"
 ---
-# <a name="download-selected-documents-from-a-review-set"></a>Gözden geçirme kümesinden seçili belgeleri indirme
+# <a name="download-selected-documents-from-a-review-set"></a>Seçili belgeleri gözden geçirme kümesinden indirme
 
-İndir, içeriği yerel biçimdeki bir gözden geçirme kümesinden indirmek için basit bir yol sunar. Advanced eDiscovery'daki indirme aracı, tarayıcının veri aktarma özelliklerini kullanır. İndirme hazır olduğunda bir tarayıcı istemi görüntülenir. Bu yöntem kullanılarak indirilen dosyalar kapsayıcı bir dosyaya sıkıştırılır ve öğe düzeyinde dosyalar içerir. Başka bir ifadeyle, eki indirmeyi seçmenizin yanında ekin de içinde olduğu bir e-posta iletisi alırsınız. Benzer şekilde, Bir Word Excel eklenmiş bir elektronik tabloyu dışarı aktarsanız, Word belgesi ve ekli Excel elektronik tablosu indirmeye dahil edilir. Öğeleri indirdiğiniz zaman, Son Değiştirme Verileri özelliği korunur ve dosya özelliği olarak değiştirilebilir.
+İndirme özelliği, yerel biçimde bir gözden geçirme kümesinden içerik indirmenin basit bir yolunu sunar. eBulma 'daki (Premium) indirme aracı tarayıcının veri aktarımı özelliklerini kullanır. İndirme hazır olduğunda bir tarayıcı istemi görüntülenir. Bu yöntem kullanılarak indirilen dosyalar bir kapsayıcı dosyasına sıkıştırılmıştır ve öğe düzeyinde dosyalar içerir. Bu, eki indirmeyi seçerseniz eki içeren e-posta iletisini alacağınız anlamına gelir. Benzer şekilde, bir Word belgesine eklenmiş Excel bir elektronik tabloyu dışarı aktarırsanız, Word belgesi ve eklenmiş Excel elektronik tablosu indirmeye eklenir. Öğeleri indirdiğinizde, Son Değiştirilen Veriler özelliği korunur ve dosya özelliği olarak görüntülenebilir.
 
-bir çalışma durumundaki gözden geçirme kümesinden içerik indirmek Advanced eDiscovery indirmek için, indirmek istediğiniz dosyaları seçerek başlangıç olarak Eylem öğelerini **indir'i** >  seçin.
+eBulma (Premium) durumundaki bir gözden geçirme kümesinden içerik indirmek için, indirmek istediğiniz dosyaları seçerek başlayın ve ardından **Eylem** **öğeleriİndir'i** >  seçin.
 
-![Gözden Geçirme kümesinde Advanced eDiscovery indirin.](../media/eDiscoDownload.png)
+![eBulma (Premium) gözden geçirme kümesinde indirme eylemi.](../media/eDiscoDownload.png)

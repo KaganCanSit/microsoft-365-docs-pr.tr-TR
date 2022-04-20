@@ -1,5 +1,5 @@
 ---
-title: İçerik Arama & OneDrive İş kullanıcıların listesini bulmak için posta kutusu arama
+title: Posta kutusu & OneDrive İş sitesindeki kullanıcıların listesi için İçerik Arama'yı kullanma
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -17,65 +17,65 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 5f4f8206-2d6a-4cb2-bbc6-7a0698703cc0
-description: Posta kutularında ve sitelerde bir grup kullanıcı için arama yapmak OneDrive İş İçerik Arama ve betik kullanın.
+description: Bu makaledeki İçerik Arama'yı ve betiği kullanarak posta kutularında ve OneDrive İş sitelerinde bir kullanıcı grubu arayın.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 2fdf749511cc859c0aec2ea947c3a53cb800cf8c
-ms.sourcegitcommit: 2b9d40e888ff2f2b3385e2a90b50d719bba1e653
+ms.openlocfilehash: 14c518c4450b01e387f84b4211da8d0eb346fe7a
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "62996999"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64949277"
 ---
-# <a name="use-content-search-to-search-the-mailbox-and-onedrive-for-business-site-for-a-list-of-users"></a>Posta kutusunda arama yapmak ve OneDrive İş kullanıcı listesi aramak için İçerik Arama'ya tıklayın
+# <a name="use-content-search-to-search-the-mailbox-and-onedrive-for-business-site-for-a-list-of-users"></a>Kullanıcı listesi için posta kutusu ve OneDrive İş sitesinde arama yapmak için İçerik Arama'yı kullanma
 
-Güvenlik & Uyumluluk Merkezi PowerShell, zaman alıcı eKbulma ile ilgili görevleri otomatikleştirmenize izin veren bir dizi cmdlet sağlar. Şu anda, çok fazla sayıda özel Microsoft 365 uyumluluk merkezi konumlarında arama yapmak için İçerik araması oluşturmak zaman ve hazırlık alır. Arama oluşturmadan önce, her sitenin URL'sini OneDrive İş sonra her posta kutusunu ve posta kutusunu OneDrive İş aramanıza eklemeniz gerekir. Gelecek sürümlerde, bu daha kolay olacaktır Microsoft 365 uyumluluk merkezi. O zamana kadar, bu işlemi otomatikleştirmek için bu makaledeki betiği kullanabilirsiniz. Bu betik size, kuruluş sitem etki alanının (örneğin, URL'de `https://contoso-my.sharepoint.com`**contoso**), kullanıcı e-posta adreslerinin listesini, yeni İçerik Arama adını ve kullanmak üzere arama sorgusunu girmenizi sağlar. Betik, OneDrive İş her kullanıcı için ayrı bir URL alır ve ardından, sağlamakta olduğu arama sorgusunu kullanarak posta kutusunda ve OneDrive İş sitesinde aramaların yer alan İçerik Arama'sini oluşturur ve başlatır.
+Güvenlik & Uyumluluk Merkezi PowerShell, zaman alan eBulma ile ilgili görevleri otomatikleştirmenize olanak sağlayan bir dizi cmdlet sağlar. Şu anda, çok sayıda koruyucu içerik konumunu aramak için Microsoft Purview uyumluluk portalında İçerik araması oluşturmak zaman ve hazırlık gerektirir. Arama oluşturmadan önce, her OneDrive İş sitenin URL'sini toplamanız ve ardından her posta kutusunu ve OneDrive İş siteyi aramaya eklemeniz gerekir. Gelecek sürümlerde, uyumluluk portalında bunu yapmak daha kolay olacaktır. O zamana kadar, bu işlemi otomatikleştirmek için bu makaledeki betiği kullanabilirsiniz. Bu betik, kuruluşunuzun Sitem etki alanının adını (örneğin, URL'deki `https://contoso-my.sharepoint.com`**contoso** ), kullanıcı e-posta adreslerinin listesini, yeni İçerik Aramasının adını ve kullanılacak arama sorgusunu ister. Betik, listedeki her kullanıcı için OneDrive İş URL'sini alır ve ardından, sağladığınız arama sorgusunu kullanarak posta kutusunda arama yapıp listedeki her kullanıcı için siteyi OneDrive İş bir İçerik Araması oluşturur ve başlatır.
   
 ## <a name="permissions-and-script-information"></a>İzinler ve betik bilgileri
 
-- 3. Adımda betiği çalıştırmak için Microsoft 365 uyumluluk merkezi Online'da eBulma Yöneticisi rol grubunun bir üyesi ve SharePoint Online genel yöneticisi olun.
+- 3. Adımda betiği çalıştırmak için uyumluluk portalında eBulma Yöneticisi rol grubunun üyesi ve SharePoint Online genel yöneticisi olmanız gerekir.
 
-- 2. Adımda oluştursunu kullanıcıların listesini ve 3. Adım'daki betiği de aynı klasöre kaydetmeye dikkat edin. Bu, betiği çalıştırmayı kolaylaştırır.
+- 2. Adımda oluşturduğunuz kullanıcıların listesini ve 3. Adım'daki betiği aynı klasöre kaydettiğinizden emin olun. Bu, betiği çalıştırmayı kolaylaştırır.
 
-- Betik en az hata işlemeyi içerir. Bunun birincil amacı, posta kutusunda hızlı ve kolay bir şekilde arama yapmak OneDrive İş kullanıcının kendi sitesinde arama yapmaktır.
+- Betik en az hata işleme içerir. Birincil amacı, her kullanıcının posta kutusunu ve OneDrive İş sitesini hızlı ve kolay bir şekilde aramaktır.
 
-- Bu konu başlığı altında verilen örnek betikler, hiçbir Microsoft standart destek programı veya hizmeti kapsamında desteklenemmektedir. Örnek betikler hiçbir garanti olmaksızın OLDUĞU GIBI verilmektedir. Microsoft, ticarete uygunluk veya belirli bir amaca uygunluk ile ilgili zımni garantiler dahil ancak bununla sınırlı olmaksızın her türlü zımni garantiyi bundan sonra feragat ediyor. Örnek betiklerin ve belgelerin kullanımından veya performansından doğan tüm riskler size aittir. Hiçbir durumda Microsoft, yazarları veya betiklerin oluşturulması, üretimi veya dağıtımında yer alan diğer herhangi bir kişi, örnek betiklerin veya belgelerin kullanımından ya da kullanılamazlığından kaynaklanan hiçbir zarardan (ticari kar kaybı, iş kesintisi, iş bilgisi kaybı veya diğer maddi kayıplar dahil ancak ancak bu zararlar dahil ancak ancak hiçbir zarardan sorumlu olmayacaktır),  Microsoft bu tür zarar olasılığı hakkında bilgilansa bile.
+- Bu konuda sağlanan örnek betikler, herhangi bir Microsoft standart destek programı veya hizmeti altında desteklenmez. Örnek betikler, herhangi bir garanti olmadan OLDUĞU GIBI sağlanır. Microsoft, satılabilirlik veya belirli bir amaca uygunlukla ilgili zımni garantiler dahil ancak bunlarla sınırlı olmaksızın tüm zımni garantileri de reddeder. Örnek betiklerin ve belgelerin kullanımından veya performansından kaynaklanan tüm risk sizinle kalır. Hiçbir durumda Microsoft, yazarları veya betiklerin oluşturulması, üretimi veya teslimi ile ilgili herhangi bir kişi, örnek betiklerin veya belgelerin kullanımından veya kullanılamama durumundan kaynaklanan herhangi bir zarardan (bunlarla sınırlı olmaksızın, iş kârı kaybı, iş kesintisi, iş bilgisi kaybı veya diğer maddi kayıplar dahil) sorumlu tutulamaz,  Microsoft'a bu tür hasarlar olabileceği bildirilmiş olsa bile.
 
-## <a name="step-1-install-the-sharepoint-online-management-shell"></a>1. Adım: SharePoint Online Yönetim Kabuğu'nu yükleme
+## <a name="step-1-install-the-sharepoint-online-management-shell"></a>1. Adım: SharePoint Online Management Shell'i yükleme
 
-İlk adım, SharePoint Shell'i yüklemektir. Bu yordamda kabuk kullanmak zorunda değilsiniz, ancak 3. Adımda çalıştıracakları betik için gerekli önkulları içerdiği için onu yüklemeniz gerekir. Bu önkoşullar betiğin SharePoint Online ile iletişim kurmasına olanak OneDrive İş sağlar.
+İlk adım, SharePoint Online Management Shell'i yüklemektir. Bu yordamda kabuğu kullanmanız gerekmez, ancak 3. Adımda çalıştırdığınız betiğin gerektirdiği önkoşulları içerdiğinden bunu yüklemeniz gerekir. Bu önkoşullar, betiğin OneDrive İş sitelerinin URL'lerini almak için SharePoint Online ile iletişim kurmasına olanak sağlar.
   
-SharePoint Online Yönetim Kabuğu ortamını ayarlama [Windows PowerShell gidin](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) ve SharePoint Online Management Shell'i yüklemek için 1. Adım'SharePoint adımlarını gerçekleştirin.
+[SharePoint Çevrimiçi Yönetim Kabuğu Windows PowerShell ortamını ayarlama'ya](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) gidin ve SharePoint Online Management Shell'i yüklemek için 1. ve 2. Adım'ı gerçekleştirin.
   
-## <a name="step-2-generate-a-list-of-users"></a>2. Adım: Kullanıcı listesi oluşturma
+## <a name="step-2-generate-a-list-of-users"></a>2. Adım: Kullanıcıların listesini oluşturma
 
-3. Adım'daki betik, posta kutularında arama yapmak ve kullanıcı OneDrive hesapları aramak için İçerik Arama'ya eklenir. Metin dosyasına yalnızca e-posta adreslerini yazarak veya Windows PowerShell'te bir komut çalıştırarak e-posta adreslerinin listesini alın ve bunları bir dosyaya kaydedin (betiği 3. Adımda kaydeden aynı klasörde bulunur).
+3. Adım'daki betik, posta kutularında arama yapmak ve hesapları kullanıcı listesi için OneDrive için bir İçerik Araması oluşturur. E-posta adreslerini bir metin dosyasına yazabilir veya Windows PowerShell'da bir komut çalıştırarak e-posta adreslerinin listesini alabilir ve bir dosyaya kaydedebilirsiniz (betiği 3. Adımda kaydedebileceğiniz klasörde bulunur).
   
-İşte Exchange Online tüm kullanıcılar için e-posta adreslerinin listesini almak ve bunu adlı bir metin dosyasına kaydetmek için çalıştırabilirsiniz[.](/powershell/exchange/connect-to-exchange-online-powershell) `Users.txt` 
+Burada, kuruluşunuzdaki tüm kullanıcıların e-posta adreslerinin listesini almak ve adlı `Users.txt`bir metin dosyasına kaydetmek üzere çalıştırabileceğiniz bir [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) komutu verilmiştir. 
   
 ```powershell
 Get-Mailbox -ResultSize unlimited -Filter { RecipientTypeDetails -eq 'UserMailbox'} | Select-Object PrimarySmtpAddress > Users.txt
 ```
 
-Bu komutu çalıştırdikten sonra, dosyayı açmayı ve özellik adını içeren üstbilgiyi kaldırmayı unutmayın. `PrimarySmtpAddress` Metin dosyası yalnızca e-posta adreslerinin listesini içermeli ve başka hiçbir şey içermeli. E-posta adresleri listesinden önce veya sonra boş satırlar olmadığını kontrol edin.
+Bu komutu çalıştırdıktan sonra dosyayı açtığınızdan ve özellik adını içeren üst bilgiyi kaldırdığınızdan emin olun. `PrimarySmtpAddress` Metin dosyası yalnızca e-posta adreslerinin listesini içermeli ve başka bir şey içermemelidir. E-posta adresleri listesinden önce veya sonra boş satır olmadığından emin olun.
   
-## <a name="step-3-run-the-script-to-create-and-start-the-search"></a>3. Adım: Betiği çalıştırarak arama oluşturma ve başlatma
+## <a name="step-3-run-the-script-to-create-and-start-the-search"></a>3. Adım: Aramayı oluşturmak ve başlatmak için betiği çalıştırın
 
-Bu adımda betiği çalıştırınca, sizden aşağıdaki bilgileri istenir. Betiği çalıştırmadan önce bu bilgilerin hazır olduğundan emin olun.
+Bu adımda betiği çalıştırdığınızda sizden aşağıdaki bilgileri isteyecektir. Betiği çalıştırmadan önce bu bilgilerin hazır olduğundan emin olun.
   
-- **Kullanıcı kimlik bilgileriniz** - Betik, SharePoint Online'a erişmek, OneDrive İş URL'leri almak ve Güvenlik ve Uyumluluk Merkezi PowerShell'& bağlanmak için kimlik bilgilerinizi kullanır. 
+- **Kullanıcı kimlik bilgileriniz** - Betik, OneDrive İş URL'lerini almak ve Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanmak için SharePoint Online'a erişmek için kimlik bilgilerinizi kullanır. 
     
-- **Sitem etki alanı adı** - Sitem etki alanı, tüm sitelere sahip olan OneDrive İş alanıdır. Örneğin, Sitem etki alanının **https://contoso-my.sharepoint.com** URL'si , ise,  `contoso` betik sizden Sitem etki alanı adınızı isteminde geldiğinde siz de girmeniz gerekir. 
+- **Sitem etki alanınızın adı** - Sitem etki alanı, kuruluşunuzdaki tüm OneDrive İş sitelerini içeren etki alanıdır. Örneğin, Sitem etki alanınızın URL'si ise **https://contoso-my.sharepoint.com**, betik sitem etki alanınızın adını istediğinizde girersiniz  `contoso` . 
     
-- **2. Adımdan gelen metin** dosyasının yol adı - 2. Adımda oluşturduğunuz metin dosyasının yol adı. Metin dosyası ve betik aynı klasörde yer alıyorsa, metin dosyasının adını girin. Aksi takdirde, metin dosyasının tam yol adını girin. 
+- **2. Adımdaki metin dosyasının yol adı - 2** . Adımda oluşturduğunuz metin dosyasının yol adı. Metin dosyası ve betik aynı klasörde yer alıyorsa, metin dosyasının adını girin. Aksi takdirde, metin dosyasının tam yol adını girin. 
     
-- **İçerik Arama adı** - Betik tarafından oluşturulacak İçerik Arama'nın adı. 
+- **İçerik Aramasının Adı** - Betik tarafından oluşturulacak İçerik Aramasının adı. 
     
-- **Arama sorgusu** - İçerik Arama ile kullanılacak arama sorgusu oluşturulur ve çalıştırılan sorgudur. Arama sorguları hakkında daha fazla bilgi için bkz [. eBulma için anahtar sözcük sorguları ve arama koşulları](keyword-queries-and-search-conditions.md).
+- **Arama sorgusu** - İçerik Arama ile kullanılacak arama sorgusu oluşturulur ve çalıştırılır. Arama sorguları hakkında daha fazla bilgi için bkz [. eBulma için anahtar sözcük sorguları ve arama koşulları](keyword-queries-and-search-conditions.md).
 
 
 **Betiği çalıştırmak için:**
     
-1. Aşağıdaki metni, Windows PowerShell dosya adı son eklerini kullanarak bir .ps1 betik dosyasına kaydedin; örneğin, `SearchEXOOD4B.ps1`. Dosyayı, 2. Adım'da kullanıcı listesini kaydett istediğiniz klasöre kaydedin.
+1. Aşağıdaki metni .ps1 dosya adı soneki kullanarak bir Windows PowerShell betik dosyasına kaydedin; örneğin, `SearchEXOOD4B.ps1`. Dosyayı, 2. Adımda kullanıcı listesini kaydettiğiniz klasöre kaydedin.
     
   ```powershell
   # This PowerShell script will prompt you for the following information:
@@ -163,24 +163,24 @@ Bu adımda betiği çalıştırınca, sizden aşağıdaki bilgileri istenir. Bet
   
   ```
 
-2. Dosyayı Windows PowerShell betiğinizi kaydeden klasöre ve 2. Adım'dan kullanıcıların listesine gidin.
+2. Windows PowerShell açın ve betiği kaydettiğiniz klasöre ve 2. Adım'dan kullanıcı listesine gidin.
     
-3. Betiği başlatma; örneğin:
+3. Betiği başlatın; örneğin:
     
     ```powershell
     .\SearchEXOOD4B.ps1
     ```
 
-4. Kimlik bilgileriniz istendiğinde e-posta adresinizi ve parolanızı girin, ardından Tamam'a **tıklayın**. 
+4. Kimlik bilgileriniz istendiğinde, e-posta adresinizi ve parolanızı girin ve **tamam'a** tıklayın. 
     
-5. Betik tarafından istendiğinde aşağıdaki bilgileri girin. Her bilgi parçasını yazın ve Enter tuşuna **basın**.
+5. Betik tarafından istendiğinde aşağıdaki bilgileri girin. Her bilgi parçasını yazın ve **Enter tuşuna** basın.
     
-    - Sitem etki alanının adı. 
+    - Sitem etki alanınızın adı. 
     
     - Kullanıcı listesini içeren metin dosyasının yol adı.
     
     - İçerik Arama için bir ad.
     
-    - Arama sorgusu (içerik konumlarında yer alan tüm öğeleri geri dönmek için bu boş bırakın).
+    - Arama sorgusu (içerik konumlarındaki tüm öğeleri döndürmek için bu boş bırakın).
     
-    Betik, her sitenin URL'lerini OneDrive İş sonra da arama oluşturur ve başlatır. Arama istatistiklerini ve sonuçlarını görüntülemek için Güvenlik & Uyumluluk Merkezi PowerShell'de **Get-ComplianceSearch** cmdlet'ini çalıştırabilirsiniz veya Microsoft 365 uyumluluk merkezi'de İçerik arama sayfasına gidip aramayla ilgili bilgileri görüntüleyebilirsiniz.
+    Betik her OneDrive İş sitenin URL'lerini alır ve ardından aramayı oluşturur ve başlatır. Arama istatistiklerini ve sonuçlarını görüntülemek için Güvenlik & Uyumluluk Merkezi PowerShell'de **Get-ComplianceSearch** cmdlet'ini çalıştırabilir veya arama hakkındaki bilgileri görüntülemek için uyumluluk portalındaki **İçerik arama** sayfasına gidebilirsiniz.

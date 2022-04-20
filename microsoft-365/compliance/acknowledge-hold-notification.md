@@ -1,11 +1,11 @@
 ---
-title: Bir tutma bildirimini onaylar
+title: Bekletme bildirimini onaylama
 f1.keywords:
 - NOCSH
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: ''
+ms.date: 04/05/2022
 audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
@@ -17,41 +17,41 @@ search.appverid:
 ms.assetid: ''
 ms.custom:
 - seo-marvel-apr2020
-description: Yasal tutma bildirimlerini e Advanced eDiscovery aracılığıyla göndererek takip etmek ve yükümlülük durumunu izlemek için nasıl kullanabileceğinizi öğrenin.
-ms.openlocfilehash: 57cda6e88968fc90845965a8554f55d80bd3ded0
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: E-posta yoluyla yasal saklama bildirimleri göndermek ve takip etmek ve ayrıca yükümlülük durumunu izlemek için eKeşif (Premium) kullanmayı öğrenin.
+ms.openlocfilehash: 4be0781a273f842c043276a19688f36b96cfdb28
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62973851"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64947417"
 ---
-# <a name="acknowledge-a-hold-notification"></a>Bir tutma bildirimini onaylar
+# <a name="acknowledge-a-hold-notification"></a>Bekletme bildirimini onaylama
 
-Bir mevzuat talebine veya soruşturmaya yanıt vermekle birlikte, elektronik olarak depolanan bilgileri (ESI) ve etkin veya yakın bir yasal konuyla ilgili herhangi bir malzemeyi koruma yükümlülükleri hakkında koruyucuları bilgilendirmeniz gerekebilir. Yasal ekipler bir kez gönderildiklerinden sonra, her koruyucuların verilen yönergeleri aldıklarını, okuduğularını, anladığını ve kabul ettiklerini biliyor olması gerekir.
+Bir mevzuat talebine veya soruşturmasına yanıt verirken, koruyucuları elektronik olarak depolanan bilgileri (ESI) ve etkin veya yakın bir yasal konuyla ilgili olabilecek her türlü malzemeyi koruma yükümlülüğü hakkında bilgilendirmeniz gerekebilir. Gönderildikten sonra, hukuk ekipleri her koruyucunun verilen yönergeleri aldığını, okuduğunu, anladığını ve izlemeyi kabul ettiğini bilmelidir.
 
-Koruyucularınızı takip etme süre, maliyet ve çabayı azaltmaya yardımcı olmak için, Advanced eDiscovery e-posta aracılığıyla yasal tutma bildirimleri göndermenize ve bu bildirimleri takip etmenize olanak sağlar. E-posta uyarılarına ek olarak, her koruyucunun bireyselleştirilmiş bir Uyumluluk Portalı'ne erişimi olur ve koruyucuların, yükümlülükleri durumundaki değişiklikler hakkında bilgi sahibi tutulmasına olanak sağlar.
+eKeşif (Premium), yasal saklama bildirimlerini e-posta yoluyla gönderip takip etmenizi sağlar. E-posta bildirimlerine ek olarak, her koruyucu bireyselleştirilmiş bir Uyumluluk Portalı'na erişebilir ve bu sayede koruyucuların yükümlülük durumlarındaki değişikliklerden haberdar edilmesine olanak sağlar.
 
 ## <a name="email-notifications"></a>E-posta bildirimleri
 
-Yasal Tutma Bildirimi belirlendikten sonra, her koruyucu tanımlı yasal tutma bildiriminizi ve ek yönergelerinizi içeren benzersiz ve kişiselleştirilmiş bir e-posta alır. 
+Yasal Tutma Bildirimi verildikten sonra, her koruyucu tanımlı yasal saklama bildiriminizi ve ek yönergeleri içeren benzersiz ve kişiselleştirilmiş bir e-posta alır. 
 
 > [!TIP]
-> Yerleşik İletişim Düzenleyicisi'ni kullanarak koruyucuların bildirimlerini kabul veya doğrudan e-postalarından Uyumluluk Portalına erişmelerine izin verme izni verme hakkında bilgi alın.[](using-communications-editor.md)
+> Koruyucularınızın bildirimlerini kabul etmelerine veya uyumluluk portallarına doğrudan e-postalarından erişmelerine izin vermek için yerleşik  [İletişim Düzenleyicisi'ni](using-communications-editor.md) nasıl kullanabileceğinizi öğrenin.
 
-Yasal tutma bildiriminizin yapılandırmasına bağlı olarak, koruyucular aşağıdaki bildirimleri alebilmektedir: 
+Yasal saklama bildiriminizin yapılandırmasına bağlı olarak, koruyucularınız aşağıdaki bildirimleri alabilir: 
 
-- **Yayın uyarısı:** Custo cust Bu bildirim, verme yönergelerinizi ve iletinizin sonuna eklenen tutma bildirimini içerir.
+- **Verme bildirimi:** Koruyucunuza gönderilen ilk bildirim. Bu bildirim, verme yönergelerinizi ve iletinizin sonuna eklenen ayrı tutma bildirimini içerir.
 
-- **Anımsatıcı bildirimi:** Etkinleştirilirse, belirlenen sıklık ve zaman aralığına bağlı olarak koruyucularnıza bir anımsatıcı bildirimi gönderilir. Anımsatıcılar, koruyucu bildirimlerini kabul edene kadar veya anımsatıcı sayısı tüketilene kadar gönderilmeye devam eder.
+- **Anımsatıcı bildirimi:** Etkinleştirilirse, belirtilen sıklık ve aralık temelinde koruyucularınıza bir anımsatıcı bildirimi gönderilir. Anımsatıcılar, koruyucu bildirimlerini kabul edene kadar veya anımsatıcı sayısı tükenene kadar gönderilmeye devam eder.
 
-- **İlerlesyon bildirimi:** Etkinleştirilirse, anımsatıcı bildirimler tüketildikten sonra koruyucunıza ve bunların yöneticisine bir yükseltme bildirimi gönderilir. Sistem, belirtilen yükseltme sayısı tamamlanana kadar veya koruyucu, tutma bildirimini kabul edene kadar otomatik olarak yükseltme bildirimleri gönderir.
+- **Yükseltme bildirimi:** Etkinleştirilirse, anımsatıcı bildirimleri tükendikten sonra koruyucunuza ve yöneticisine bir yükseltme bildirimi gönderilir. Sistem, belirtilen sayıda yükseltme işlemi tamamlanana kadar veya koruyucu bekleme bildirimini onaylayana kadar yükseltme bildirimlerini otomatik olarak gönderir.
 
-- **Yeniden verme bildirimi:** Araştırma sırasında, tutma bildiriminin içeriği güncelleştirilmişse, güncelleştirilmiş bildirim otomatik olarak custo bir belgeye gönderilir.
+- **Yeniden verme bildirimi:** Araştırma sırasında, saklama bildiriminin içeriği güncelleştirilirse, güncelleştirilen bildirim otomatik olarak koruyucuya gönderilir.
 
-- **Sürüm bildirimi:** Bir custo custd is release notice gönderilecektir. 
+- **Sürüm bildirimi:** Bir koruyucu davadan serbest bırakıldığında, bu kişilere yayın bildirimi gönderilir. 
 
 ## <a name="compliance-portal"></a>Uyumluluk Portalı
 
-E-posta bildirimlerine ek olarak, her koruyucunun benzersiz bir Uyumluluk Portalı'nın erişimi olur. Portal aracılığıyla, her koruyucu, etkin tutma bildirimlerini  görüntüleme, erişim ve kabul eder.
+E-posta bildirimlerine ek olarak, her koruyucu benzersiz bir Uyumluluk Portalına erişebilir. Portal aracılığıyla her koruyucu etkin saklama bildirimlerini görüntüleyebilir, erişebilir ve onaylayabilir.
 
-![Custo cust](../media/CustodianPortal.jpg)
+![Bir koruyucu için Uyumluluk Portalı.](../media/CustodianPortal.jpg)

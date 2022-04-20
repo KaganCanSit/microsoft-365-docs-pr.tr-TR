@@ -1,7 +1,7 @@
 ---
-title: Microsoft 365 Defender'de olayları öncelik Microsoft 365 Defender
-description: başka bir e-postada olay sırasındaki olayları filtrelemeyi Microsoft 365 Defender
-keywords: olay, kuyruk, genel bakış, cihazlar, kimlikler, kullanıcılar, posta kutusu, e-posta, olaylar, çözümleme, yanıt, değerlendirme
+title: Microsoft 365 Defender'de olayların önceliklerini belirleme
+description: Microsoft 365 Defender'da olay kuyruğundan olayları filtrelemeyi öğrenin
+keywords: olay, kuyruk, genel bakış, cihazlar, kimlikler, kullanıcılar, posta kutusu, e-posta, olaylar, analiz, yanıt, önceliklendirme
 search.product: eADQiWindows 10XVcnh
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -23,107 +23,107 @@ search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: 2d5477122a29c672a947a2022f49da3abeb7003b
-ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
+ms.openlocfilehash: 285da473c8e8035a28ee6e64c4950e2b8fe373f5
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64568554"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64944425"
 ---
-# <a name="prioritize-incidents-in-microsoft-365-defender"></a>Microsoft 365 Defender'de olayları öncelik Microsoft 365 Defender
+# <a name="prioritize-incidents-in-microsoft-365-defender"></a>Microsoft 365 Defender'de olayların önceliklerini belirleme
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 - Microsoft 365 Defender
 
-Microsoft 365 Defender çözümlemeleri uygular ve farklı ürünlerden ilgili uyarıları ve otomatik soruşturmaları bir olay haline toplar. Microsoft 365 Defender ayrıca, Microsoft 365 Defender ürün paketinin tamamına sahip olduğu  end-end-end görünürlük nedeniyle kötü amaçlı olarak tanımlanlan etkinliklerde benzersiz uyarılar tetikler. Bu görünüm, güvenlik analistlerine daha kapsamlı bir saldırı hikayesi sunar ve bu hikaye, güvenlik analistlerine kuruluş genelindeki karmaşık tehditleri daha iyi an ve yardımcı olur.
+Microsoft 365 Defender bağıntı analizi uygular ve farklı ürünlerden gelen ilgili uyarıları ve otomatik araştırmaları bir olaya toplar. Microsoft 365 Defender, Microsoft 365 Defender ürün paketinin tamamında uçtan uca görünürlük göz önünde bulundurulduğunda yalnızca kötü amaçlı olarak tanımlanabilen etkinliklerle ilgili benzersiz uyarılar tetikler. Bu görünüm, güvenlik analistlerinize kuruluşunuz genelindeki karmaşık tehditleri daha iyi anlamalarına ve bunlarla başa çıkmalarına yardımcı olan daha geniş bir saldırı hikayesi sunar.
 
-Olay **sırası,** cihazlar, kullanıcılar ve posta kutuları arasında oluşturulmuş bir olay koleksiyonunu gösterir. Olay önceliklendirmesi olarak bilinen bir işlem olan bilinçli bir siber güvenlik yanıtı kararına önceliklerini belirlemek ve oluşturmak için olaylarda sıralamanıza yardımcı olur.
+**Olay kuyruğu**, cihazlar, kullanıcılar ve posta kutuları arasında oluşturulan bir olay koleksiyonunu gösterir. Olay önceliklerini belirleme ve olay önceliklendirme olarak bilinen bir bilgili siber güvenlik yanıtı kararı oluşturma amacıyla olayları sıralamanıza yardımcı olur.
 
-Microsoft 365 Defender portalının hızlı **başlatılmasında Olaylar & veya >'den** olay <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">sırasına Microsoft 365 Defender</a>. İşte bir örnek.
+**olaylar & uyarıları > Microsoft 365 Defender** <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">portalının</a> hızlı başlatılması sırasında olaylar bölümünden olay kuyruğuna ulaşabilirsiniz. İşte bir örnek.
 
-:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents.png" alt-text="Portalda iş sırasındaki olayın Microsoft 365 Defender." lightbox="../../media/incidents-queue/incidents-ss-incidents.png":::
+:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents.png" alt-text="Microsoft 365 Defender portalındaki olay kuyruğunun gösterildiği Olay bölümü." lightbox="../../media/incidents-queue/incidents-ss-incidents.png":::
 
-En **son olaylar ve uyarılar** bölümünde, alınan uyarı sayısının ve son 24 saat içinde oluşturulan olay sayısının grafiği gösterilir.
+**En son olaylar ve uyarılar** bölümü, alınan uyarı sayısının ve son 24 saat içinde oluşturulan olayların grafiğini gösterir.
 
-Varsayılan olarak, yeni portalda Microsoft 365 Defender sırası son altı ayda görülen olayları görüntüler. En son olay listenin en üstünde yer alıyor, böylece ilk olarak siz de onu görüyorsunuz.
+Varsayılan olarak, Microsoft 365 Defender portalındaki olay kuyruğu son altı ayda görülen olayları görüntüler. En son olay listenin en üstündedir, böylece ilk olarak görebilirsiniz.
 
-Olay sırasında özelleştirilebilir sütunlar vardır (Sütunları **seç'i** seçerek), olayın farklı özelliklerini veya etkileyen varlıkları görünür haletebilirsiniz. Bu, çözümleme için olayları önceliklendirme konusunda bilinçli bir karar alamanıza yardımcı olur.
+Olay kuyruğunda, olayın farklı özelliklerine veya etkilenen varlıklara görünürlük sağlayan özelleştirilebilir sütunlar ( **Sütunları seç'i seçin**) vardır. Bu, analiz için olayların önceliklendirilmesiyle ilgili bilinçli bir karar vermenize yardımcı olur.
 
-Bir bakışta daha fazla görünürlük için otomatik olay adlandırma, etkilenen uç noktaların sayısı, etkilenen kullanıcılar, algılama kaynakları veya kategoriler gibi uyarı özniteliklerine dayalı olarak olay adları üretir. Bu, olayın kapsamını hızla anlamana olanak sağlar.
+Bir bakışta ek görünürlük için otomatik olay adlandırma, etkilenen uç nokta sayısı, etkilenen kullanıcılar, algılama kaynakları veya kategoriler gibi uyarı özniteliklerine göre olay adları oluşturur. Bu, olayın kapsamını hızlı bir şekilde anlamanıza olanak tanır.
 
 Örneğin: *Birden çok kaynak tarafından bildirilen birden çok uç noktada çok aşamalı olay.*
 
 > [!NOTE]
-> Otomatik olay adlandırmanın adı değişmeden önce mevcut olan olayları değiştirmez.
+> Otomatik olay adlandırmanın dağıtımından önce var olan olayların adı değiştirilmez.
 
-Olay sırası, uygulandığında ortamınız içinde var olan tüm olayları kapsamlı olarak süpürmenizi veya belirli bir senaryoya veya tehdite odaklanmaya karar vermenizi sağlayan birden çok filtreleme seçeneği de sağlar. Olay sırasında filtre uygulamak, hangi olayın acil dikkat gerektirdiğini belirlemeye yardımcı olabilir. 
+Olay kuyruğu, uygulandığında ortamınızdaki tüm mevcut olayların kapsamlı bir taramasını gerçekleştirmenize veya belirli bir senaryoya veya tehdide odaklanmaya karar vermenize olanak tanıyan birden çok filtreleme seçeneği de sunar. Olay kuyruğuna filtre uygulamak, hangi olayın hemen ilgilenilmesi gerektiğini belirlemeye yardımcı olabilir. 
 
-Olay **listesinin** üzerindeki Filtreler listesinde o anda uygulanmış olan filtreler görüntülenir.
+Olay listesinin üstündeki **Filtreler** listesi, geçerli olarak uygulanan filtreleri gösterir.
 
 ## <a name="available-filters"></a>Kullanılabilir filtreler
 
-Varsayılan olay sırasında Filtre'yi seçerek **filtrelenmiş bir** olay kümesi belirttiğiniz Filtre bölmesini görebilirsiniz. İşte bir örnek.
+Filtrelenmiş bir olay kümesi belirttiğiniz filtre bölmesini görmek  için varsayılan olay kuyruğundan **Filtre'yi** seçebilirsiniz. İşte bir örnek.
 
-:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents-filters.png" alt-text="Uygulama portalında olay sırası için Filtreler Microsoft 365 Defender." lightbox="../../media/incidents-queue/incidents-ss-incidents-filters.png":::
+:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents-filters.png" alt-text="Microsoft 365 Defender portalında olay kuyruğunun Filtreler bölmesi." lightbox="../../media/incidents-queue/incidents-ss-incidents-filters.png":::
 
-Ayrıca, olaylar **listesinin** üstündeki Filtreler listesinde filtrelerden herhangi **birini** seçerek De Filtre bölmesini görebilirsiniz.
+Filtre **bölmesini,** olay listesinin üzerindeki **Filtreler** listesinden herhangi birini seçerek de görebilirsiniz.
 
-Bu tabloda, kullanılabilen filtre adları listelenmiş olur.
+Bu tabloda, kullanılabilen filtre adları listelenir.
 
 | Filtre adı | Açıklama |
 |:-------|:-----|
-| Durum | Yeni **,** Sürüyor **veya Çözümlendi'yi** **seçin**. |
-| Önem Derecesi | Bir olayın önem derecesi, varlığınız üzerindeki etkisini gösterir. Önem derecesi ne kadar yüksek ise, etkisi o kadar büyük olur ve genellikle en acil dikkat gerektirir. Yüksek **,** **Orta,** Düşük **veya** **Bilgilendirme'yi seçin**. |
-| Olay ataması | Atanan kullanıcı veya kullanıcıları seçin. |
-| Birden çok hizmet kaynağı  | Filtrenin birden çok hizmet kaynağı için geçerli olup olmadığını belirtin. |
-| Hizmet kaynakları  | Uyarı içeren olayları belirtme: Uygulama Yönetimi, Microsoft 365 Defender, Office 365 için Microsoft Defender, Uç Nokta için Microsoft Defender, Kimlik için Microsoft Defender, Microsoft Defender for Cloud Apps. |
+| Durum | **Yeni**, Sürüyor veya **Çözümlendi'yi** seçin.  |
+| Önem | Bir olayın önem derecesi, varlıklarınız üzerindeki etkisini gösterir. Önem derecesi ne kadar yüksek olursa, etki o kadar büyük olur ve genellikle en acil dikkati gerektirir. **Yüksek**, **Orta**, **Düşük** veya **Bilgilendirici'yi** seçin. |
+| Olay ataması | Atanan kullanıcıyı veya kullanıcıları seçin. |
+| Birden çok hizmet kaynağı  | Filtrenin birden fazla hizmet kaynağı için olup olmadığını belirtin. |
+| Hizmet kaynakları  | Şu uyarıları içeren olayları belirtin: Uygulama İdaresi, Microsoft 365 Defender, Office 365 için Microsoft Defender, Uç Nokta için Microsoft Defender, Kimlik için Microsoft Defender, Microsoft Defender for Cloud Apps. |
 | Etiketler | Listeden bir veya birden çok etiket adı seçin. |
-| Birden çok kategori  | Filtrenin birden çok kategori için olup olmadığını belirtin. |
-| Kategoriler | Görülen belirli taktiklere, tekniklere veya saldırı bileşenlerine odaklanmak için kategorileri seçin. |
-| Varlıklar | Bir varlığın adını (kullanıcı, cihaz, posta kutusu veya uygulama adı gibi) belirtin. |
-| Veri duyarlılığı | Bazı saldırılar hassas veya değerli verileri imha etmek için hedefe odaklanır. Belirli duyarlılık etiketleri için bir filtre uygulayarak, hassas bilgilerin tehlikeye atılmış olup olmadığını hızla belirleyerek bu olaylara öncelik ve öncelikleri belirleyebilirsiniz. <br><br> Bu filtrenin kullanılabilir durumda Microsoft Bilgi Koruması açıksa kullanılabilir. |
-| Cihaz grupları | Bir cihaz [grubu adı](/windows/security/threat-protection/microsoft-defender-atp/machine-groups) belirtin. |
-| işletim sistemi platformu | Cihaz işletim sistemlerini belirtin. |
-| Sınıflandırma | İlgili uyarıların sınıflandırma kümelerini belirtin. |
-| Otomatik soruşturma durumu | Otomatik araştırmanın durumunu belirtin.  |
+| Birden çok kategori  | Filtrenin birden fazla kategori için olup olmadığını belirtin. |
+| Kategori | Görülen belirli taktiklere, tekniklere veya saldırı bileşenlerine odaklanmak için kategorileri seçin. |
+| Varlık | Kullanıcı, cihaz, posta kutusu veya uygulama adı gibi bir varlığın adını belirtin. |
+| Veri duyarlılığı | Bazı saldırılar, hassas veya değerli verileri sızdırmak için hedeflemeye odaklanır. Belirli duyarlılık etiketleri için bir filtre uygulayarak hassas bilgilerin ele geçirilip geçirilmemiş olabileceğini hızla belirleyebilir ve bu olayları ele geçirmeyi önceliklendikleyebilirsiniz. <br><br> Bu filtre yalnızca [Microsoft Purview Information Protection duyarlılık etiketlerini](../../compliance/sensitivity-labels.md) uyguladığınızda bilgileri görüntüler. |
+| Cihaz grupları | [Bir cihaz grubu](/windows/security/threat-protection/microsoft-defender-atp/machine-groups) adı belirtin. |
+| İşletim sistemi platformu | Cihaz işletim sistemlerini belirtin. |
+| Sınıflandırma | İlgili uyarıların sınıflandırma kümesini belirtin. |
+| Otomatik araştırma durumu | Otomatik araştırmanın durumunu belirtin.  |
 | İlişkili tehdit | Adlandırılmış bir tehdit belirtin.  |
-| Yerkarak | Adlandırılmış bir tehdit daha belirtin.  |
+| Aktör | Adlandırılmış bir tehdit aktörü belirtin.  |
 |||
 
-Varsayılan filtre, Yeni ve Sürüyor durumuna sahip ve **Düşük, Orta** veya Yüksek önem  düzeyine  sahip tüm uyarıları **ve olayları** **göstermektir**.
+Varsayılan filtre, **Durumu Yeni** ve **Devam Ediyor** olan ve **Düşük**, **Orta** veya **Yüksek** önem derecesine sahip tüm uyarıları ve olayları göstermektir.
 
-Filtreler listesinde filtrenin adının **X'ini** seçerek filtreyi hızla **kaldırabilirsiniz** . 
+**Filtreler** listesindeki bir filtrenin adında **X** işaretini seçerek filtreyi hızla kaldırabilirsiniz. 
 
 ## <a name="save-custom-filters-as-urls"></a>Özel filtreleri URL olarak kaydetme
 
-Olay sırasında yararlı bir filtre yapılandırdıktan sonra, tarayıcı sekmesinin URL'sine yer işareti ekleyebilirsiniz veya bunu bir Web sayfasına, Word belgesine veya istediğiniz yere bağlantı olarak kaydedebilirsiniz. Bu, olay kuyruğuna tek tıklamayla erişim sağlar; örneğin:
+Olaylar kuyruğunda yararlı bir filtre yapılandırdıktan sonra, tarayıcı sekmesinin URL'sine yer işareti ekleyebilir veya başka bir şekilde web sayfasına, Word belgesine veya tercih ettiğiniz bir yere bağlantı olarak kaydedebilirsiniz. Bu, olay kuyruğunun önemli görünümlerine tek tıklamayla erişmenizi sağlayacaktır, örneğin:
 
 - Yeni olaylar
-- Yüksek öneme sahip olaylar
+- Yüksek önem dereceli olaylar
 - Atanmamış olaylar
-- Yüksek önem düzeyi olan, atanmamış olaylar
+- Yüksek önem derecesi, atanmamış olaylar
 - Bana atanan olaylar
-- Bana ve bana atanan Uç Nokta için Microsoft Defender
+- Bana ve Uç Nokta için Microsoft Defender için atanan olaylar
 - Belirli bir etiket veya etikete sahip olaylar
 - Belirli bir tehdit kategorisine sahip olaylar
-- Belirli bir ilişkili tehdit ile ilgili olaylar
-- Belirli bir actor'a sahip olaylar
+- Belirli bir ilişkili tehdide sahip olaylar
+- Belirli bir aktörle ilgili olaylar
 
-Kullanışlı filtre görünümlerini LISTENIZI URL olarak derledik ve depoladıktan sonra, bunu kullanarak kuyrukta meydana gelen olayları hızla işleyen, önceliklerini belirlemek ve sonraki [](manage-incidents.md) atama ve çözümlemelerde bunları yönetmek için kullanabilirsiniz.
+Yararlı filtre görünümleri listenizi DERleyip URL olarak depoladıktan sonra, kuyruğunuzdaki olayları hızlı bir şekilde işlemek ve önceliklerini ayarlamak ve bunları sonraki atama ve analiz için [yönetmek](manage-incidents.md) için kullanabilirsiniz.
 
 ## <a name="search-for-incidents"></a>Olayları arama
 
-Olay **listesinin üstündeki** Ad veya kimlik ara kutusundan olay kimliğini veya olay adını yazın. Arama sonuçları listesinden bir olay seçin Microsoft 365 Defender portalı, incelemenizi başlatabilirsiniz olayla ilgili özellikleriyle yeni bir sekme [açar](investigate-incidents.md).
+Olay listesinin üstündeki **Ad veya kimlik ara** kutusundan olay kimliğini veya olay adını yazabilirsiniz. Arama sonuçları listesinden bir olay seçtiğinizde, Microsoft 365 Defender portalı olayın özelliklerini içeren ve [araştırmanızı](investigate-incidents.md) başlatabileceğiniz yeni bir sekme açar.
 
-## <a name="search-for-impacted-assets"></a>Etkiyi alan varlıkları arama
+## <a name="search-for-impacted-assets"></a>Etkilenen varlıkları arama
 
-Bir varlığı kullanıcı, cihaz&mdash;, posta kutusu veya uygulama adı olarak anebilir&mdash; ve tüm ilgili olayları bulabilirsiniz. 
+Bir varlığı&mdash; kullanıcı, cihaz, posta kutusu veya uygulama adı&mdash; olarak adlandırabilir ve tüm ilgili olayları bulabilirsiniz. 
 
-## <a name="specify-a-time-range"></a>Zaman aralığını belirtme
+## <a name="specify-a-time-range"></a>Zaman aralığı belirtme
 
-Varsayılan olay listesi, son altı ayda olayı olanlar için kullanılır. Takvim simgesinin yanındaki açılan kutudan yeni bir zaman aralığı belirlemek için şunları seçin:
+Varsayılan olay listesi, son altı ay içinde gerçekleşen olaylara yöneliktir. Takvim simgesinin yanındaki açılan kutudan şunları seçerek yeni bir zaman aralığı belirtebilirsiniz:
 
  - 1 gün
  - 3 gün
@@ -131,14 +131,14 @@ Varsayılan olay listesi, son altı ayda olayı olanlar için kullanılır. Takv
  - 30 gün
  - 30 gün
  - 6 ay
- - Tarih ve saatlerin her ikisini de belirterek özel bir aralık
+ - Hem tarihleri hem de saatleri belirtebileceğiniz özel bir aralık
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-En yüksek önceliğin hangi olayı gerektirdiğini belirledikten sonra, o olayı seçin ve:
+Hangi olayın en yüksek önceliğe sahip olduğunu belirledikten sonra seçin ve:
 
-- [Etiketler](manage-incidents.md) , atama, hatalı pozitif olaylar için anında çözüm ve açıklamalar için olayın özelliklerini yönetin.
-- Araştırmanıza [başlar.](investigate-incidents.md)
+- Etiketler, atama, hatalı pozitif olaylar ve açıklamalar için anında çözüm için olayın özelliklerini [yönetin](manage-incidents.md).
+- [Araştırmalarınızı](investigate-incidents.md) başlatın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Olaylara genel bakış](incidents-overview.md)

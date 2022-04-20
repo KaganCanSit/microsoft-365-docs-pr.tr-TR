@@ -1,5 +1,5 @@
 ---
-title: Advanced eDiscovery'da iş akışını Teams
+title: eBulma'da iş akışını Teams (Premium)
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -13,19 +13,19 @@ ms.localizationpriority: medium
 search.appverid:
 - MET150
 ms.collection: M365-security-compliance
-description: Advanced eDiscovery'da Microsoft Teams içeriği korumayı, toplamayı, gözden geçirmeyi ve dışarı aktarmayı öğrenin.
-ms.openlocfilehash: 90c3ece3f6e8218771da9dbbb88fe5c32d9d7d94
-ms.sourcegitcommit: a7e1d155939e862337271fbe38bf26f62bd49bdd
+description: eBulma'da (Premium) Microsoft Teams içeriği korumayı, toplamayı, gözden geçirmeyi ve dışarı aktarmayı öğrenin.
+ms.openlocfilehash: 21f6149d8a1c1114ab0d2d293af710690f74c6e5
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/14/2022
-ms.locfileid: "64847025"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64948407"
 ---
-# <a name="advanced-ediscovery-workflow-for-content-in-microsoft-teams"></a>Microsoft Teams içeriği için iş akışı Advanced eDiscovery
+# <a name="ediscovery-premium-workflow-for-content-in-microsoft-teams"></a>Microsoft Teams içeriği için eBulma (Premium) iş akışı
 
-Bu makalede, Microsoft Teams içeriğini korumak, toplamak, gözden geçirmek ve dışarı aktarmak için Advanced eDiscovery kullanmaya yönelik kapsamlı yordamlar, yönergeler ve en iyi yöntemler sunulmaktadır. Bu makalenin amacı, eBulma iş akışınızı Teams içerik için iyileştirmenize yardımcı olmaktır.
+Bu makalede, Microsoft Teams içeriğini korumak, toplamak, gözden geçirmek ve dışarı aktarmak için Microsoft Purview eKeşif 'i (Premium) kullanmaya yönelik kapsamlı yordamlar, yönergeler ve en iyi yöntemler kümesi sağlanır. Bu makalenin amacı, eBulma iş akışınızı Teams içerik için iyileştirmenize yardımcı olmaktır.
 
-Advanced eDiscovery kullanarak toplayıp işleyebileceğiniz beş Teams içerik kategorisi vardır:
+eBulma (Premium) kullanarak toplayabileceğiniz ve işleyebileceğiniz beş Teams içerik kategorisi vardır:
 
 - **Teams 1:1 sohbetleri**. İki kişi arasındaki Teams konuşmada paylaşılan sohbet iletileri, gönderiler ve ekler.  Teams 1:1 sohbetleri *konuşma olarak da* adlandırılır.
 
@@ -39,7 +39,7 @@ Advanced eDiscovery kullanarak toplayıp işleyebileceğiniz beş Teams içerik 
 
 ## <a name="where-teams-content-is-stored"></a>Teams içeriğinin depolandığı yer
 
-Advanced eDiscovery'da Teams içeriğini yönetmenin önkoşullarından biri, Advanced eDiscovery toplayabileceğiniz, işleyebileceğiniz ve gözden geçirebileceğiniz Teams içeriğinin türünü ve bu içeriğin Microsoft 365 nerede depolandığını anlamaktır. Aşağıdaki tabloda Teams içerik türü ve bunların depolandığı yer listeleniyor.
+eBulma'da (Premium) Teams içeriği yönetmenin önkoşullarından biri, eBulma'da (Premium) toplayabileceğiniz, işleyebileceğiniz ve gözden geçirebileceğiniz Teams içeriğinin türünü ve bu içeriğin Microsoft 365 nerede depolandığını anlamaktır. Aşağıdaki tabloda Teams içerik türü ve bunların depolandığı yer listeleniyor.
 
 |&nbsp;|Sohbet iletilerinin ve gönderilerinin konumu|Dosyaların ve eklerin konumu|
 |---|---|---|
@@ -54,7 +54,7 @@ Advanced eDiscovery'da Teams içeriğini yönetmenin önkoşullarından biri, Ad
 
 ## <a name="create-a-case-for-teams-content"></a>Teams içerik için servis talebi oluşturma
 
-Advanced eDiscovery'da Teams içeriği yönetmenin ilk adımı, Teams içeriği yönetmek için iyileştirilmiş yeni servis talebi biçimini kullanarak bir servis talebi oluşturmaktır. Teams içerik için yeni büyük/küçük harf biçimini kullanmanın avantajları şunlardır:
+eBulma'da (Premium) Teams içeriği yönetmenin ilk adımı, Teams içeriği yönetmek için iyileştirilmiş yeni servis talebi biçimini kullanarak bir servis talebi oluşturmaktır. Teams içerik için yeni büyük/küçük harf biçimini kullanmanın avantajları şunlardır:
 
 - Aynı konuşmada yanıt veren öğeler içeren ek iletilerin otomatik olarak toplandığı ve gözden geçirme kümelerine eklendiği konuşma yazışması desteği.
 
@@ -62,15 +62,15 @@ Advanced eDiscovery'da Teams içeriği yönetmenin ilk adımı, Teams içeriği 
 
 - Gözden geçirme kümelerine 1 TB'a kadar olan koleksiyonlar eklenebilir ve bu da büyük miktarlarda Teams içeriği toplamanıza olanak sağlar.
 
-Artan büyük/küçük harf sınırları hakkında daha fazla bilgi için bkz. [Advanced eDiscovery'de yeni servis talebi biçimini kullanma](advanced-ediscovery-new-case-format.md).
+Artan büyük/küçük harf sınırları hakkında daha fazla bilgi için bkz. [eBulma'da yeni servis talebi biçimini kullanma (Premium)](advanced-ediscovery-new-case-format.md).
 
 Servis talebi oluşturmak için:
 
 1. <https://compliance.microsoft.com> adresine gidin ve oturum açın.
 
-2. Microsoft 365 uyumluluk merkezi sol gezinti bölmesinde **eBulma > Gelişmiş'e** tıklayın.
+2. Microsoft Purview uyumluluk portalının sol gezinti bölmesinde **gelişmiş > eBulma'ya** tıklayın.
 
-3. **Advanced eDiscovery** sayfasında **Servis Talepleri** sekmesine ve ardından **Servis talebi oluştur'a** tıklayın.
+3. **eBulma (Premium)** sayfasında **Servis Talepleri** sekmesine ve ardından **Servis talebi oluştur'a** tıklayın.
 
    **Yeni eBulma servis talebi** açılır sayfası görüntülenir. **Olay biçimi** bölümü, yeni büyük/küçük harf biçimini kullanarak servis talebi oluşturma seçeneği sağlar.
 
@@ -84,7 +84,7 @@ Sonraki adım, araştırmanızdaki veri koruyucuları olan kullanıcıları beli
 
 Bir olaya koruyucu eklemek ve koruyucu veri kaynaklarını korumak için:
 
-1. Önceki bölümde oluşturduğunuz Advanced eDiscovery servis talebine gidin ve **veri kaynakları'na** tıklayın.
+1. Önceki bölümde oluşturduğunuz eBulma (Premium) olayına gidin ve **Veri kaynakları'na** tıklayın.
 
 2. **Veri kaynakları** sayfasında **Veri kaynağı** >  **ekleYeni koruyucu ekle'ye** tıklayın.
 
@@ -113,11 +113,11 @@ Bir olaya koruyucu eklemek ve koruyucu veri kaynaklarını korumak için:
 
 7. **Saklama ayarları** sayfasında, koruyucu ayarlarını gözden geçirmek için **İleri'ye** tıklayın. Servis talebine koruyucuları eklemek için **Gönder'e** tıklayın.
 
-Advanced eDiscovery bir durumda veri kaynaklarını ekleme ve koruma hakkında daha fazla bilgi için bkz:
+eBulma (Premium) durumunda veri kaynaklarını ekleme ve koruma hakkında daha fazla bilgi için bkz:
 
-- [Advanced eDiscovery servis talebine koruyucu ekleme](add-custodians-to-case.md)
+- [eBulma (Premium) olayına koruyucu ekleme](add-custodians-to-case.md)
 
-- [Advanced eDiscovery servis talebine gözetimsiz veri kaynakları ekleme](non-custodial-data-sources.md)
+- [eBulma (Premium) olayına gözetimsiz veri kaynakları ekleme](non-custodial-data-sources.md)
 
 ## <a name="collect-teams-content-and-add-to-review-set"></a>Teams içerik toplama ve gözden geçirme kümesine ekleme
 
@@ -133,7 +133,7 @@ Ayrıca, bir taslak koleksiyonu çalıştırmama ve koleksiyonu oluşturup çal�
 
 Teams içerik koleksiyonu oluşturmak için:
 
-1. Önceki bölümde koruyucuları eklediğiniz Advanced eDiscovery servis talebine gidin ve **Koleksiyonlar'a** tıklayın.
+1. Önceki bölümde koruyucuları eklediğiniz eBulma (Premium) olayına gidin ve **Koleksiyonlar'a** tıklayın.
 
 2. **Koleksiyonlar** sayfasında Yeni **koleksiyonStandard koleksiyonu'nu** >  seçin.
 
@@ -177,15 +177,15 @@ Teams içerik koleksiyonu oluşturmak için:
 
 ## <a name="review-teams-content-in-a-review-set"></a>Gözden geçirme kümesindeki Teams içeriği gözden geçirme
 
-bir gözden geçirme kümesine Teams içerik koleksiyonları ekledikten sonra, sonraki adım içeriği araştırmanızla ilgisi için gözden geçirmek ve gerekirse iptal etmektir. Teams içeriği gözden geçirmenin önemli önkoşullarından biri, Advanced eDiscovery bir gözden geçirme kümesine eklerken sohbet konuşmalarını ve eklerini Teams nasıl işlediğini anlamaktır. Teams içeriğinin işlenmesi aşağıdaki üç şeye neden olur:
+bir gözden geçirme kümesine Teams içerik koleksiyonları ekledikten sonra, sonraki adım içeriği araştırmanızla ilgisi için gözden geçirmek ve gerekirse iptal etmektir. Teams içeriği gözden geçirmenin önemli önkoşullarından biri, eBulma'nın (Premium) bir gözden geçirme kümesine eklerken sohbet konuşmalarını ve eklerini Teams nasıl işlediğini anlamaktır. Teams içeriğinin işlenmesi aşağıdaki üç şeye neden olur:
 
 - **[Gruplandırma](#grouping)**. konuşmaların Teams iletilerin, gönderilerin ve yanıtların birlikte gruplandırılıp gözden geçirme kümesinde sunulması. Ayrıca sohbet konuşmalarındaki eklerin ayıklanması ve konuşma içinde gruplanması da buna dahildir.
 
-- **[Transkript konuşma yazışması](#transcript-conversation-threading)**. Advanced eDiscovery, toplama ölçütleriyle eşleşen öğelerle ilgili bağlam sağlamak için bir konuşmadan hangi ek içeriğin toplandığını belirler.
+- **[Transkript konuşma yazışması](#transcript-conversation-threading)**. eBulma (Premium), toplama ölçütleriyle eşleşen öğelerle ilgili bağlam sağlamak için bir konuşmadan hangi ek içeriğin toplandığını nasıl belirler?
 
-- **[Yinelenenleri kaldırma](#deduplication-of-teams-content)**. Advanced eDiscovery yinelenen Teams içeriğini işleme.
+- **[Yinelenenleri kaldırma](#deduplication-of-teams-content)**. eBulma (Premium) yinelenen Teams içeriğini nasıl işler?
 
-- **[Meta veriler](#metadata-for-teams-content)**. Advanced eDiscovery Teams içeriğe toplanıp bir inceleme kümesine eklendikten sonra eklediği meta veri özellikleri.
+- **[Meta veriler](#metadata-for-teams-content)**. eBulma'nın (Premium) toplanıp bir gözden geçirme kümesine eklendikten sonra Teams içeriğe eklediği meta veri özellikleri.
 
 Gruplandırma, konuşma yazışması oluşturma, yinelenenleri kaldırma ve Teams meta verilerini anlamak, Teams içeriğinin gözden geçirilmesini ve analizini iyileştirmenize yardımcı olur. Bu bölümde, [bir inceleme kümesindeki Teams içeriği görüntülemeye yönelik ipuçları da bulunur](#tips-for-viewing-teams-content-in-a-review-set).
 
@@ -227,9 +227,9 @@ Aşağıdaki ekran görüntüleri, Teams istemcisindeki konuşmanın bir örneğ
 
 ### <a name="transcript-conversation-threading"></a>Transkript konuşma yazışması oluşturma
 
-Advanced eDiscovery'da yeni olay biçimindeki konuşma yazışması işlevi, araştırmanızla ilgili olabilecek öğelerle ilgili bağlamsal içeriği belirlemenize yardımcı olur. Bu özellik, koleksiyon sırasında arama sorgusuyla eşleşen öğelerden önce gelen ve izleyen sohbet iletilerini içeren ayrı konuşma görünümleri oluşturur. Bu özellik, Microsoft Teams'da sohbet konuşmalarını (*yazışmalı konuşmalar* olarak adlandırılır) verimli ve hızlı bir şekilde gözden geçirmenizi sağlar. Daha önce açıklandığı gibi, Advanced eDiscovery bir gözden geçirme kümesine Teams içerik eklediğinde sohbet konuşmaları HTML transkript dosyalarında yeniden oluşturulur.
+eBulma'daki (Premium) yeni olay biçimindeki konuşma yazışma işlevselliği, araştırmanızla ilgili olabilecek öğelerle ilgili bağlamsal içeriği belirlemenize yardımcı olur. Bu özellik, koleksiyon sırasında arama sorgusuyla eşleşen öğelerden önce gelen ve izleyen sohbet iletilerini içeren ayrı konuşma görünümleri oluşturur. Bu özellik, Microsoft Teams'da sohbet konuşmalarını (*yazışmalı konuşmalar* olarak adlandırılır) verimli ve hızlı bir şekilde gözden geçirmenizi sağlar. Daha önce açıklandığı gibi, eBulma (Premium) bir gözden geçirme kümesine Teams içerik eklediğinde sohbet konuşmaları HTML transkript dosyalarında yeniden oluşturulur.
 
-Advanced eDiscovery tarafından, öğelerle ilgili bağlam sağlayan ek iletiler ve yanıtlar transkript dosyalarını eklemek için kullanılan mantık, Teams içerik toplarken kullandığınız koleksiyon sorgusuyla (*yanıt veren öğeler* olarak adlandırılır) eşleşmektedir. Farklı iş parçacığı oluşturma davranışları, yanıt veren öğeleri toplamak için kullanılan sohbet türlerini ve arama sorgusunu temel alır. İki yaygın koleksiyon senaryosu vardır:
+eBulma (Premium) tarafından öğelerle ilgili bağlam sağlayan ek iletiler ve yanıt döküm dosyalarını eklemek için kullanılan mantık, Teams içerik toplarken kullandığınız koleksiyon sorgusuyla (*duyarlı öğeler* olarak adlandırılır) eşleşmektedir. Farklı iş parçacığı oluşturma davranışları, yanıt veren öğeleri toplamak için kullanılan sohbet türlerini ve arama sorgusunu temel alır. İki yaygın koleksiyon senaryosu vardır:
 
 - Anahtar sözcükler ve property:value çiftleri gibi arama parametrelerini kullanan sorgular
 
@@ -244,7 +244,7 @@ Advanced eDiscovery tarafından, öğelerle ilgili bağlam sağlayan ek iletiler
 
 Aşağıdaki listede, bir gözden geçirme kümesinde Teams içerik toplanırken yinelenenleri kaldırma (ve yinelenenleri kaldırma) davranışı açıklanmaktadır.
 
-- Gözden geçirme kümesine eklenen her transkript dosyası, veri konumlarında depolanan içeriğe bire bir eşleme olmalıdır. Bu, Advanced eDiscovery gözden geçirme kümesine önceden eklenmiş Teams içeriği toplamadığı anlamına gelir. Bir sohbet iletisi zaten bir gözden geçirme kümesinde toplanmışsa, Advanced eDiscovery sonraki koleksiyonlarda aynı veri konumundan aynı iletiyi gözden geçirme kümesine eklemez.
+- Gözden geçirme kümesine eklenen her transkript dosyası, veri konumlarında depolanan içeriğe bire bir eşleme olmalıdır. Başka bir deyişle, eBulma (Premium) gözden geçirme kümesine zaten eklenmiş Teams içeriği toplamaz. Bir sohbet iletisi zaten bir gözden geçirme kümesinde toplanıyorsa, eBulma (Premium) sonraki koleksiyonlarda aynı veri konumundan aynı iletiyi gözden geçirme kümesine eklemez.
 
 - 1:1 ve grup sohbetleri için, iletilerin kopyaları her konuşma katılımcısının posta kutusunda depolanır. Farklı katılımcıların posta kutularında bulunan aynı konuşmanın kopyaları farklı meta verilerle toplanır. Sonuç olarak, konuşmanın her örneği benzersiz olarak değerlendirilir ve ayrı transkript dosyalarında gözden geçirme kümesine getirilir. Bu nedenle, 1:1 veya grup sohbetinin tüm katılımcıları bir durumda koruyucu olarak eklenirse ve bir koleksiyonun kapsamına dahil edilirse, her transkriptin kopyaları (aynı koruma için) gözden geçirme kümesine eklenir ve aynı **ConversationId** ile birlikte gruplandırılır. Bu kopyaların her biri ilgili bir koruyucu ile ilişkilendirilir. **İpucu**: Gözden geçirme kümesi listesindeki **Koruyucu** sütunu, ilgili transkript dosyasının koruyucusunu tanımlar.
 
@@ -260,7 +260,7 @@ Aşağıdaki listede, bir gözden geçirme kümesinde Teams içerik toplanırken
 
 ### <a name="metadata-for-teams-content"></a>Teams içeriği için meta veriler
 
-Binlerce veya milyonlarca öğe içeren büyük inceleme kümelerinde, incelemenizin kapsamını Teams içerikle daraltmak zor olabilir. gözden geçirmenize Teams içeriğe odaklanmanıza yardımcı olmak için, Teams içeriğe özgü meta veri özellikleri vardır. Gözden geçirme listesindeki sütunları düzenlemek ve Teams içeriğinin gözden geçirilmesini iyileştirmek için [filtreleri ve sorguları yapılandırmak](review-set-search.md) için bu özellikleri kullanabilirsiniz. Bu meta veri özellikleri, dışarı aktarma sonrasında veya üçüncü taraf eBulma araçlarında içeriği düzenlemenize ve görüntülemenize yardımcı olmak için Teams içeriği Advanced eDiscovery dışarı aktardığınızda da eklenir.
+Binlerce veya milyonlarca öğe içeren büyük inceleme kümelerinde, incelemenizin kapsamını Teams içerikle daraltmak zor olabilir. gözden geçirmenize Teams içeriğe odaklanmanıza yardımcı olmak için, Teams içeriğe özgü meta veri özellikleri vardır. Gözden geçirme listesindeki sütunları düzenlemek ve Teams içeriğinin gözden geçirilmesini iyileştirmek için [filtreleri ve sorguları yapılandırmak](review-set-search.md) için bu özellikleri kullanabilirsiniz. Bu meta veri özellikleri, dışarı aktarma sonrasında veya üçüncü taraf eBulma araçlarında içeriği düzenlemenize ve görüntülemenize yardımcı olmak için eBulma'dan (Premium) Teams içeriği dışarı aktardığınızda da eklenir.
 
 Aşağıdaki tabloda, Teams içerik için meta veri özellikleri açıklanmaktadır.
 
@@ -277,7 +277,7 @@ Aşağıdaki tabloda, Teams içerik için meta veri özellikleri açıklanmaktad
 |Alıcı|Transkript konuşmasının içinde ileti alan tüm kullanıcıların listesi.|
 |TeamsChannelName|Transkripti Teams kanal adı.|
 
-Diğer Advanced eDiscovery meta veri özelliklerinin açıklamaları için bkz[. Advanced eDiscovery'da belge meta veri alanları](document-metadata-fields-in-Advanced-eDiscovery.md).
+Diğer eBulma (Premium) meta veri özelliklerinin açıklamaları için bkz. [eBulma'da (Premium) meta veri alanlarını belgeleme](document-metadata-fields-in-Advanced-eDiscovery.md).
 
 ## <a name="export-teams-content"></a>Teams içeriğini dışarı aktarma
 
@@ -305,8 +305,8 @@ Gizli veya kötü amaçlı bilgiler içeren içerik Teams sohbet iletileri arac�
 
 ## <a name="reference-guide"></a>Başvuru kılavuzu
 
-Microsoft Teams için Advanced eDiscovery kullanmaya yönelik hızlı başvuru kılavuzu aşağıda verilmiştir. Bu kılavuzda, Microsoft Teams içeriğini korumak, toplamak, gözden geçirmek ve dışarı aktarmak için Advanced eDiscovery kullanımına yönelik anahtar noktaları özetlemektedir.
+Microsoft Teams için eBulma (Premium) kullanımına yönelik hızlı başvuru kılavuzu aşağıda verilmiştir. Bu kılavuz, Microsoft Teams içeriğini korumak, toplamak, gözden geçirmek ve dışarı aktarmak için eKeşif (Premium) kullanma anahtar noktalarını özetler.
 
-![Microsoft Teams için Advanced eDiscovery kullanma başvuru kılavuzunun küçük resmi.](../media/AeDTeamsReferenceGuide-thumbnail.png)
+![Microsoft Teams için eBulma (Premium) kullanma başvuru kılavuzunun küçük resmi.](../media/AeDTeamsReferenceGuide-thumbnail.png)
 
 [PDF dosyası olarak indirme](https://download.microsoft.com/download/9/e/4/9e4eec6f-c476-452f-b414-4bd4b5c39dca/AeDTeamsReferenceGuide.pdf)

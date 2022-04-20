@@ -1,5 +1,5 @@
 ---
-title: Belgeleri belge görünümünde bir gözden geçirme kümesinde Advanced eDiscovery
+title: Belgeleri eBulma'da (Premium) bir gözden geçirme kümesinde görüntüleme
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -13,67 +13,67 @@ ms.collection: M365-security-compliance
 search.appverid:
 - MOE150
 - MET150
-description: Metin, açıklama ekleme, dönüştürülen Advanced eDiscovery yerel görünüm gibi içerikler için içeriği nasıl görüntüleynizi seçin.
+description: eBulma 'da (Premium) metin, açıklama ekleme, dönüştürülen veya yerel görünüm gibi içeriği nasıl görüntüleyebileceğinizi seçin.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 4086d79b611596b8a32a15f994174a0f8f58b0bc
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 775804bd8e69e11bdacd1fee141234b07462dbef
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63028453"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64945813"
 ---
-# <a name="view-documents-in-a-review-set-in-advanced-ediscovery"></a>Belgeleri belge görünümünde bir gözden geçirme kümesinde Advanced eDiscovery
+# <a name="view-documents-in-a-review-set-in-ediscovery-premium"></a>Belgeleri eBulma'da (Premium) bir gözden geçirme kümesinde görüntüleme
 
-Advanced eDiscovery farklı amaçlarla birkaç görüntüleyici aracılığıyla içerik görüntüler. Çeşitli görüntüleyiciler, gözden geçirme kümesi içindeki herhangi bir belgeye tıklayarak kullanılabilir. Şu anda sağlanan görüntüleyiciler:
+eBulma (Premium) içeriği farklı amaçlarla çeşitli görüntüleyiciler aracılığıyla görüntüler. Çeşitli görüntüleyiciler, bir gözden geçirme kümesindeki herhangi bir belgeye tıklayarak kullanılabilir. Şu anda sağlanan görüntüleyiciler şunlardır:
 
 - Dosya meta verileri
 - Yerel görünüm
 - Metin görünümü
-- Ek Açıklama görünümü
+- Görünüme açıklama ekleme
 
 ## <a name="file-metadata"></a>Dosya meta verileri
 
-Bu panel, belgeyle ilişkilendirilmiş çeşitli meta verileri görüntülemek için açık/kapalı olarak ekleyebilirsiniz. Arama sonuçları kılavuzu belirli meta verileri görüntülemek için özelleştirilese de, verileri gözden geçirirken yatay olarak kaydırmanın zor olduğu örnekler vardır. Dosya meta verisi paneli, kullanıcının görüntüleyici içindeki bir görünümde geçişine olanak sağlar.
+Bu panel, belgeyle ilişkili çeşitli meta verileri görüntülemek için açılıp kapatılabilir. Arama sonuçları kılavuzu belirli meta verileri görüntüleyecek şekilde özelleştirilse de, verileri gözden geçirirken yatay kaydırmanın zor olabileceği örnekler vardır. Dosya meta verileri paneli, kullanıcının görüntüleyicideki bir görünümde geçiş yapmasına olanak tanır.
 
 ![Dosya meta verileri paneli
 ](../media/Reviewimage2.png)
 
 ## <a name="native-view"></a>Yerel görünüm
 
-Yerel görüntüleyici, belgenin en zengin görünümünü görüntüler. Yüzlerce dosya türü destekler ve mümkün olan en doğru yerel deneyimin  görüntülenmesi anlamına geliyor. Daha Microsoft Office için, görüntüleyici Office uygulamalarının web sürümünü kullanarak belge yorumları, formüller, gizli satırlar/sütunlar Excel notlar gibi PowerPoint görüntüler.
+Yerel görüntüleyici, belgenin en zengin görünümünü görüntüler. Yüzlerce dosya türünü destekler ve mümkün olan en doğru yerel deneyimi görüntülemeye yöneliktir. görüntüleyici, Microsoft Office dosyalarda belge açıklamaları, Excel formüller, gizli satırlar/sütunlar ve PowerPoint notlar gibi içerikleri görüntülemek için Office uygulamalarının web sürümünü kullanır.
 
 ![Yerel görünüm
 ](../media/Reviewimage3.png)
 
 ## <a name="text-view"></a>Metin görünümü
 
-Metin görüntüleyicisi, dosyanın ayıklanan metninin bir görünümünü sağlar. Ekli resimleri ve biçimlendirmeyi yoksayar, ancak içeriği hızlı bir şekilde anlamaya çalışıyorsanız çok etkilidir. Metin görünümü şu özellikleri de içerir:
+Metin görüntüleyicisi, bir dosyanın ayıklanan metninin görünümünü sağlar. Ekli görüntüleri ve biçimlendirmeleri yoksayar, ancak içeriği hızla anlamaya çalışıyorsanız çok etkilidir. Metin görünümü şu özellikleri de içerir:
 
-- Satır sayaçları belgenin belirli bölümlerine başvurulma kolaylaşır
-- Hem belge içindeki terimleri hem de kaydırma çubuğunu vurgulayan arama isabeti vurgulama
-- Diff görünümü, Yakın Yinelenen belgeleri görüntülerken metin farklılıklarını vurgulayan bir karşılaştırma görünümü sağlar
+- Satır sayacı, belgenin belirli bölümlerine başvurmayı kolaylaştırır
+- Hem belgedeki terimleri hem de kaydırma çubuğunu vurgulayacak arama isabet vurgulama
+- Fark görünümü, Yinelenene Yakın belgeleri görüntülerken metinsel farklılıkları vurgulayan bir karşılaştırma görünümü sağlar
 
 ![Metin görünümü.](../media/Reviewimage4.png)
 
-![Diff görünümü.](../media/Reviewimage5.png)
+![Fark görünümü.](../media/Reviewimage5.png)
 
-## <a name="annotate-view"></a>Ek Açıklama görünümü
+## <a name="annotate-view"></a>Görünüme açıklama ekleme
 
-Açıklama görünümü, kullanıcıların bir belgeye şunlar gibi işaretlemeler uygulamasına olanak sağlayan özellikler sağlar:
+Not Ekle görünümü, kullanıcıların bir belgeye işaretleme uygulamasına olanak sağlayan özellikler sağlar:
 
-- Alan redactions – kullanıcılar hassas içeriği gizlemek için belge üzerinde bir kutu çizebilirsiniz
-- Kalem – kullanıcılar belgenin belirli bölümlerine dikkat çekmek için serbestçe belge üzerinde çizim yapmak için
-- Ek açıklamaları seçme - kullanıcılar belgedeki ek açıklamaları silebilir
-- Ek açıklama saydamlığını değiştir – ek açıklamaların ek açıklamanın arkasında içeriği görüntülemek için yarı saydam hale gelir
-- Önceki sayfa – önceki sayfaya git
-- Sonraki sayfa – sonraki sayfaya git
-- Sayfaya git – kullanıcı buraya gitmek için belirli bir sayfa numarası girebilirsiniz
-- Yakınlaştırma – açıklamalı görünüm için yakınlaştırma düzeyini ayarlama
+- Alan düzeltmeleri – Kullanıcılar, hassas içeriği gizlemek için belgeye bir kutu çizebilir
+- Kalem – Kullanıcılar belgenin belirli bölümlerine dikkat çekmek için belge üzerinde serbest çizim yapabilir
+- Ek açıklamaları seçme - kullanıcılar silmek için belgedeki ek açıklamaları seçebilir
+- Ek açıklama saydamlığını değiştirme – ek açıklamanın arkasındaki içeriği görüntülemek için ek açıklamaları yarı saydam hale getirir
+- Önceki sayfa – önceki sayfaya gider
+- Sonraki sayfa – sonraki sayfaya gider
+- Sayfaya git – kullanıcı gitmek için belirli bir sayfa numarası girebilir
+- Yakınlaştırma – açıklama ekleme görünümü için yakınlaştırma düzeyini ayarlama
 - Döndür – kullanıcı belgeyi saat yönünde döndürebilir
-- Arama – kullanıcı bir belge içinde arama yapmak ve belge içindeki çeşitli isabetlere gitmek için
+- Arama – kullanıcı bir belge içinde arama yapabilir ve belgenin içindeki çeşitli isabetlere gidebilir
 
-  ![Ek açıklama görünümü.](../media/Reviewimage1.png)
+  ![Görünüme açıklama ekleme.](../media/Reviewimage1.png)
 
 ## <a name="dashboard-view"></a>Pano Görünümü
 
-Pano görünümü, arama sonuçları kılavuzunda verileri görselleştirmenize ve özetlemenize olanak sağlar. Bu görünümde, gözden geçirme kümenizi sezgisel ve kolay bir şekilde analiz etmek ve raporlamak için özel widget'lar oluşturabilirsiniz. Widget'larınızı oluşturduktan sonra, öğe sayılarını almak veya arama oluşturmak için bu öğelerle etkileşim kurabilirsiniz.
+Pano görünümü, arama sonuçları kılavuzunuzdaki verileri görselleştirmenize ve özetlemenize olanak tanır. Bu görünümde, inceleme kümenizde analiz ve raporlamayı sezgisel ve kolay hale getirmek için özel pencere öğeleri oluşturabilirsiniz. Pencere öğelerinizi oluşturduktan sonra, öğe sayılarını almak veya arama oluşturmak için bunlarla etkileşim kurabilirsiniz.

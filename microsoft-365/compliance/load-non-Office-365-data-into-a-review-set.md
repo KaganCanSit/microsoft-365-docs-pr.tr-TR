@@ -1,5 +1,5 @@
 ---
-title: Gözden Microsoft 365 olmayan verileri gözden geçirme kümesine yükleme
+title: gözden geçirme kümesine Microsoft 365 olmayan verileri yükleme
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -14,87 +14,87 @@ ms.collection: M365-security-compliance
 search.appverid:
 - MOE150
 - MET150
-description: Örnek olayda, Microsoft 365 olmayan verilerin çözümleme için ayarlanmış bir gözden geçirme kümesine nasıl Advanced eDiscovery öğrenin.
+description: eBulma (Premium) durumunda analiz için Microsoft 365 olmayan verileri bir gözden geçirme kümesine aktarmayı öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 39f91846e42bb2403c2b1faf7fd98ff3e7759182
-ms.sourcegitcommit: 39838c1a77d4e23df56af74059fb95970223f718
+ms.openlocfilehash: b9d27e2d1e306c189aa28a2c331a60c5b4d0c5dc
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "63010775"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64944755"
 ---
-# <a name="load-non-microsoft-365-data-into-a-review-set"></a>Gözden Microsoft 365 olmayan verileri gözden geçirme kümesine yükleme
+# <a name="load-non-microsoft-365-data-into-a-review-set"></a>gözden geçirme kümesine Microsoft 365 olmayan verileri yükleme
 
-Analiz etmeniz gereken tüm belgeler Advanced eDiscovery başka bir Microsoft 365. Advanced eDiscovery'Microsoft 365 olmayan veri içeri aktarma özelliğiyle, Microsoft 365 bir gözden geçirme kümesine yükleyebilirsiniz. Bu makalede, çözümleme yapmak üzere belgeniz olmayan Microsoft 365 başka bir Advanced eDiscovery getirebilirsiniz.
+Microsoft Purview eKeşif'te (Premium) analiz etmeniz gereken tüm belgeler Microsoft 365'da yer almamaktadır. eBulma'da (Premium) Microsoft 365 olmayan veri içeri aktarma özelliğiyle, Microsoft 365'da yer almayan belgeleri bir gözden geçirme kümesine yükleyebilirsiniz. Bu makalede, Microsoft 365 olmayan belgelerinizi analiz için eBulma'ya (Premium) nasıl getireceğiniz gösterilmektedir.
 
-## <a name="requirements-to-upload-non-office-365-content"></a>Office 365 olmayan içeriği karşıya Office 365 gereksinimler
+## <a name="requirements-to-upload-non-office-365-content"></a>Office 365 olmayan içeriği karşıya yükleme gereksinimleri
 
-Bu makalede açıklanan Microsoft 365 olmayan karşıya yükleme özelliğini kullanmak için aşağıdakilere sahip olmak gerekir:
+Bu makalede açıklanan Microsoft 365 olmayan karşıya yükleme özelliğini kullanmak için aşağıdakilere sahip olmanız gerekir:
 
-- Bu olmayan içeriği ilişkilendirmek istediğiniz tüm koruyucular Microsoft 365 lisans atanabilir. Daha fazla bilgi için bkz[. Yeni iş Advanced eDiscovery](get-started-with-advanced-ediscovery.md#step-1-verify-and-assign-appropriate-licenses).
+- Microsoft 365 olmayan içeriği ilişkilendirmek istediğiniz tüm koruyuculara uygun lisans atanmalıdır. Daha fazla bilgi için bkz. [eBulma (Premium) ile Kullanmaya başlayın](get-started-with-advanced-ediscovery.md#step-1-verify-and-assign-appropriate-licenses).
 
-- Varolan bir Advanced eDiscovery durumu.
+- Mevcut bir eBulma (Premium) olayı.
 
-- Bu olmayan verileri karşıya yükleymeden ve ilişkilendirmeden önce özel Microsoft 365 eklilerin ekli olması gerekir.
+- Microsoft 365 olmayan verileri karşıya yükleyip ilişkilendirebilmeniz için önce servis talebine koruyucuların eklenmesi gerekir.
 
-- Veri Microsoft 365, veri kaynağı tarafından desteklenen bir dosya Advanced eDiscovery. Daha fazla bilgi için bkz[. Dosya dosyalarında desteklenen Advanced eDiscovery](supported-filetypes-ediscovery20.md).
+- Microsoft 365 olmayan veriler eBulma (Premium) tarafından desteklenen bir dosya türü olmalıdır. Daha fazla bilgi için bkz. [eBulma'da desteklenen dosya türleri (Premium)](supported-filetypes-ediscovery20.md).
 
-- Gözden geçirme kümesine yüklenen tüm dosyalar, her klasörün belirli bir custo cust ile ilişkilendirilen klasörlerde yer almaları gerekir. Bu klasörlerin adları aşağıdaki adlandırma biçimini kullan olmalıdır: *alias@domainname*. Kullanıcı alias@domainname diğer adı ve etki Microsoft 365 olması gerekir. Kök klasördeki tüm alias@domainname toplayabilirsiniz. Kök klasör yalnızca en son alias@domainname içerebilir. Kök klasördeki eksik dosyalar desteklenmez.
+- Bir gözden geçirme kümesine yüklenen tüm dosyalar, her klasörün belirli bir koruyucuyla ilişkilendirildiği klasörlerde bulunmalıdır. Bu klasörlerin adları şu adlandırma biçimini kullanmalıdır: *alias@domainname*. alias@domainname kullanıcının Microsoft 365 diğer adı ve etki alanı olmalıdır. Kök klasördeki tüm alias@domainname klasörlerini toplayabilirsiniz. Kök klasör yalnızca alias@domainname klasörlerini içerebilir. Kök klasördeki gevşek dosyalar desteklenmez.
 
-   Karşıya yüklemek istediğiniz ve Microsoft 365 olmayan verilerin klasör yapısı aşağıdaki örnektekine benzer olur:
+   Karşıya yüklemek istediğiniz Microsoft 365 olmayan verilerin klasör yapısı aşağıdaki örneğe benzer olacaktır:
 
-   - c:\nO365\abraham.mcmahon@contoso.com
-   - c:\nO365\jewell.gordon@contoso.com
-   - c:\nO365\staci.gonzalez@contoso.com
+   - c:\nonO365\abraham.mcmahon@contoso.com
+   - c:\nonO365\jewell.gordon@contoso.com
+   - c:\nonO365\staci.gonzalez@contoso.com
 
-   Diğer abraham.mcmahon@contoso.com, jewell.gordon@contoso.com ve staci.gonzalez@contoso.com durumdaki koruyucuların SMTP adresleridir.
+   Burada abraham.mcmahon@contoso.com, jewell.gordon@contoso.com ve staci.gonzalez@contoso.com, olaydaki koruyucuların SMTP adresleridir.
 
-   ![Veri karşıya Microsoft 365 olmayan klasör yapısı.](../media/3f2dde84-294e-48ea-b44b-7437bd25284c.png)
+   ![Microsoft 365 olmayan veri karşıya yükleme klasörü yapısı.](../media/3f2dde84-294e-48ea-b44b-7437bd25284c.png)
 
-- eBulma Yöneticisi rol grubuna atanan (ve eBulma Yöneticisi olarak eklenen hesap).
+- eBulma Yöneticisi rol grubuna atanan (ve eBulma Yöneticisi olarak eklenen) bir hesap.
 
-- Dosya olmayan içerik klasörü yapısına erişimi olan bir bilgisayara yüklenmiş AzCopy v8.1 Microsoft 365 aracı. AzCopy'i yüklemek için bkz. [AzCopy v8.1 ile verileri aktarma Windows](/previous-versions/azure/storage/storage-use-azcopy). AzCopy'nin varsayılan konuma yük olduğundan emin olun; bu **%ProgramFiles(x86)%\Microsoft SDKs\Azure\AzCopy konumundadır**. AzCopy v8.1 kullanmalıdır. AzCopy'nin diğer sürümleri, çalışma Microsoft 365 yüklenirken Advanced eDiscovery.
+- Microsoft 365 olmayan içerik klasörü yapısına erişimi olan bir bilgisayarda yüklü Olan AzCopy v8.1 aracı. AzCopy'yi yüklemek için bkz[. Windows'de AzCopy v8.1 ile veri aktarma](/previous-versions/azure/storage/storage-use-azcopy). AzCopy'yi **%ProgramFiles(x86)%\Microsoft SDKs\Azure\AzCopy** olan varsayılan konuma yüklediğinizden emin olun. AzCopy v8.1 kullanmanız gerekir. eBulma'da (Premium) Microsoft 365 olmayan veriler yüklenirken AzCopy'nin diğer sürümleri çalışmayabilir.
 
 
-## <a name="upload-non-microsoft-365-content-into-advanced-ediscovery"></a>Upload olmayan Microsoft 365 diğer içeriğe Advanced eDiscovery
+## <a name="upload-non-microsoft-365-content-into-ediscovery-premium"></a>eBulma'ya Microsoft 365 olmayan içeriği Upload (Premium)
 
-1. eBulma Yöneticisi veya eBulma Yöneticisi olarak, Advanced eDiscovery'i açın ve Microsoft 365 olmayan verilerin karşıya yük devretme durumuna gidin.  
+1. eBulma Yöneticisi veya eBulma Yöneticisi olarak eBulma (Premium) öğesini açın ve Microsoft 365 olmayan verilerin karşıya yüklendiği duruma gidin.  
 
-2. Gözden **Geçir kümeleri'ne** tıklayın ve sonra gözden geçirilmeyen verileri karşıya yüklemek Microsoft 365 seçin.  Gözden geçirme kümemiz yoksa, bir gözden geçirme kümesi oluşturabilirsiniz. 
+2. **Kümeleri gözden geçir'e** tıklayın ve ardından Microsoft 365 olmayan verileri karşıya yüklemek için gözden geçirme kümesini seçin.  Gözden geçirme kümeniz yoksa bir tane oluşturabilirsiniz. 
  
-3. Gözden geçirme kümesine tıklayarak veya seçerek ve Gözden geçirme kümesi **aç'a tıklayarak açın**.
+3. Üzerine tıklayarak veya seçip **Gözden geçirme kümesini aç'a tıklayarak gözden geçirme kümesini** açın.
 
-4. Gözden geçirme kümesinde **Gözden geçirme kümesi** yönet'e (Eylemler seçeneğinin hemen yanındaki  aşağı ok) tıklayın ve sonra Da Gözden Geçirme **Office 365 seçeneğine** tıklayın.
+4. Gözden geçirme kümesinde **Gözden geçirme kümesini yönet'e** (**Eylemler** seçeneğinin hemen yanındaki aşağı ok) ve ardından **veri Office 365 olmayan** seçeneğine tıklayın.
 
-5. Veri **Upload sihirbazını** başlatmak için Dosya Ekle'ye tıklayın.
+5. Veri içeri aktarma sihirbazını başlatmak için **Upload dosyalarına** tıklayın.
 
-   ![Upload seçin.](../media/574f4059-4146-4058-9df3-ec97cf28d7c7.png)
+   ![dosyaları Upload.](../media/574f4059-4146-4058-9df3-ec97cf28d7c7.png)
 
-   Sihirbazın ilk adımı, Microsoft tarafından sağlanan güvenli bir Azure depolama Depolama ve dosyaları karşıya yüklemek için bu konumu hazırlar.  Hazırlık tamamlandığında, Sonraki **: Dosyalar Upload etkin** hale gelir.
+   Sihirbazın ilk adımı, dosyaları karşıya yüklemek için Microsoft tarafından sağlanan güvenli bir Azure Depolama konumu hazırlar.  Hazırlık tamamlandığında **Sonraki: Upload dosyalar** düğmesi etkin hale gelir.
 
-   ![İçeri Aktarma Microsoft 365: Hazırla.](../media/0670a347-a578-454a-9b3d-e70ef47aec57.png)
+   ![Microsoft 365 Olmayan İçeri Aktarma: Hazırlama.](../media/0670a347-a578-454a-9b3d-e70ef47aec57.png)
  
-5. Sonraki **: Dosyaları Upload tıklatın**.
+5. **İleri: dosyaları Upload'e** tıklayın.
 
-6. Yeni **Upload** sayfasında şunları yapın:
+6. **Upload dosyaları** sayfasında aşağıdakileri yapın:
 
-   ![Non-Microsoft 365 Import: Upload dosyaları seçin.](../media/3ea53b5d-7f9b-4dfc-ba63-90a38c14d41a.png)
+   ![Microsoft 365 Olmayan İçeri Aktarma: dosyaları Upload.](../media/3ea53b5d-7f9b-4dfc-ba63-90a38c14d41a.png)
 
-   a. Dosyaların **konumu yolu kutusuna**, karşıya yüklemek istediğiniz veri olmayan kök klasörün Microsoft 365 doğrula veya yazın. Örneğin, Başlamadan önce bölümünde gösterilen örnek dosyaların konumu için **,O365 üzerinde %USERPROFILE\Downloads\nyazın**. Doğru konumun sağlanması, yolun altındaki kutuda görüntülenen AzCopy komutunun düzgün bir şekilde güncelleştirilsini sağlar.
+   a. **Dosyaların konumuna giden yol** kutusunda, karşıya yüklemek istediğiniz Microsoft 365 olmayan verileri depoladığınız kök klasörün konumunu doğrulayın veya yazın. Örneğin, **Başlamadan önce bölümünde** gösterilen örnek dosyaların konumu için **% USERPROFILE\Downloads\nonO365** yazarsınız. Doğru konumun sağlanması, yolun altındaki kutuda görüntülenen AzCopy komutunun düzgün bir şekilde güncelleştirilmesini sağlar.
 
-   b. Kutuda **gösterilen komutu** kopyalamak için Panoya kopyala'ya tıklayın.
+   b. Kutuda görüntülenen komutu kopyalamak için **Panoya kopyala'ya** tıklayın.
 
-7. Kopyalanan Windows istemini çalıştırın, önceki adımda kopyalanmış olan komutu yapıştırın ve **ardından AzCopy** komutunu başlatmak için Enter tuşuna basın.  Siz komutu başlattıktan sonra, Microsoft 365 olmayan dosyalar 4. adımda hazır Depolama Azure Depolaması'na karşıya yükler.
+7. bir Windows komut istemi başlatın, önceki adımda kopyaladığınız komutu yapıştırın ve ardından AzCopy komutunu başlatmak için **Enter tuşuna** basın.  Komutu başlattıktan sonra, Microsoft 365 olmayan dosyalar 4. adımda hazırlanan Azure Depolama konumuna yüklenir.
 
-   ![Non-Microsoft 365 Import: AzCopy.](../media/504e2dbe-f36f-4f36-9b08-04aea85d8250.png)
+   ![Microsoft 365 Olmayan İçeri Aktarma: AzCopy.](../media/504e2dbe-f36f-4f36-9b08-04aea85d8250.png)
 
    > [!NOTE]
-   > Daha önce de belirtildiği gibi, Dosya Dosyaları sayfasında sağlanan komutu başarılı bir şekilde kullanmak için AzCopy v8.1 **Upload** gerekir. Sağlanan AzCopy komutu başarısız olursa, lütfen [Aşağıdakiler'de AzCopy sorunlarını giderme Advanced eDiscovery](troubleshooting-azcopy.md).
+   > Daha önce belirtildiği gibi, **Upload dosyaları** sayfasında sağlanan komutu başarıyla kullanmak için AzCopy v8.1 kullanmanız gerekir. Sağlanan AzCopy komutu başarısız olursa, lütfen [eBulma'da (Premium) AzCopy sorunlarını giderme](troubleshooting-azcopy.md) bölümüne bakın.
 
-8. Sihirbaza geri Microsoft 365 uyumluluk merkezi ve Sonraki **: Sihirbazda dosyaları** işleme'ye tıklayın.  Bu, Azure kaynak konuma yüklenen, Microsoft 365 olmayan dosyaların işlemesini, metin ayıklamayı ve Depolama başlatılır.  
+8. Microsoft Purview uyumluluk portalına Geri dön ve **İleri: Sihirbazdaki dosyaları işleme'ye** tıklayın.  Bu işlem, Azure Depolama konumuna yüklenen Microsoft 365 olmayan dosyaların işlenmesini, metin ayıklamasını ve dizine alınmasına başlar.  
 
-9. İş dosyaları sayfasında veya İş sekmesinde, Gözden geçirme kümesine veri ekleme adlı bir iş  görüntüerek **Microsoft 365 ilerlemesini izleyebilirsiniz**.  İş bittiğinde, yeni dosyalar gözden geçirme kümesinde kullanılabilir.
+9. **Dosyaları işleme** sayfasında veya **İşler** sekmesinde **, gözden geçirme kümesine Microsoft 365 olmayan veriler ekleme** adlı bir işi görüntüleyerek dosyaların işlenmesinin ilerleme durumunu izleyin.  İş tamamlandıktan sonra, yeni dosyalar gözden geçirme kümesinde kullanılabilir.
 
-   ![Non-Microsoft 365 Import: Process files.](../media/218b1545-416a-4a9f-9b25-3b70e8508f67.png)
+   ![Microsoft 365 Olmayan İçeri Aktarma: dosyaları işleme.](../media/218b1545-416a-4a9f-9b25-3b70e8508f67.png)
 
-10. İşleme tamam olduktan sonra sihirbazı kapatabilirsiniz.
+10. İşlem tamamlandıktan sonra sihirbazı kapatabilirsiniz.

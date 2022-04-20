@@ -1,5 +1,5 @@
 ---
-title: T SMS/MMS Ağ verilerini&için bağlayıcıyı ayarlama
+title: AT&T SMS/MMS Ağ verilerini arşivecek bir bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -11,76 +11,76 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Yöneticiler, AT&T Mobile Network'te SMS ve MMS verilerini içeri aktaracak ve arşivley edebilecek bir TeleMessage&kurabilirsiniz. Bu, üçüncü taraf veri kaynaklarından verileri Microsoft 365'te arşivlemenize olanak sağlar ve böylece yasal saklama, içerik araması ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanarak kuruluş üçüncü taraf verilerini yönetebilirsiniz.
-ms.openlocfilehash: 2b1e03c4d434b08c3dce21ed42c24e4573513c24
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Yöneticiler, AT&T Mobil Ağı'ndan SMS ve MMS verilerini içeri aktarmak ve arşiv etmek için bir TeleMessage bağlayıcısı ayarlayabilir. Bu, kuruluşunuzun üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilmeniz için Microsoft Purview'daki üçüncü taraf veri kaynaklarından verileri arşivlemenizi sağlar.
+ms.openlocfilehash: 8c038769ef7330788badfaa8a0a40a00c0730a13
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63322219"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64950731"
 ---
-# <a name="set-up-a-connector-to-archive-att-smsmms-data"></a>T SMS/MMS verilerini&için bağlayıcıyı ayarlama
+# <a name="set-up-a-connector-to-archive-att-smsmms-data"></a>AT&T SMS/MMS verilerini arşivleye bağlayıcı ayarlama
 
-AT&T Mobile Network'Microsoft 365 uyumluluk merkezi SMS ve MMS verilerini içeri aktararak arşivlemek için, iletişim&kullanın. Bir bağlayıcıyı ayardikten ve yapılandırdikten sonra, bağlayıcı her gün kuruluşta AT&T Ağı'ne bağlanır ve SMS ve MMS verilerini aynı anda posta kutularına Microsoft 365.
+AT&T Mobile Network'ten SMS ve MMS verilerini içeri aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında bir TeleMessage bağlayıcısı kullanın. Bağlayıcıyı ayarlayıp yapılandırdıktan sonra, her gün bir kez kuruluşunuzun AT&T Ağına bağlanır ve SMS ve MMS verilerini Microsoft Purview'daki posta kutularına aktarır.
 
-SMS ve MMS iletileri kullanıcı posta kutularında depolanıyorsa, AT Microsoft 365 T Ağ verilerine Mahkeme Tutma, İçerik Arama Microsoft 365 bekletme ilkeleri gibi uyumluluk&uygulayabilirsiniz. Örneğin, İçerik Arama'&KULLANARAK AT&T Ağ verileri için arama veya AT&T Ağ bağlayıcısı verilerini içeren posta kutusunu bir özel durum durumunda bir özel dosya Advanced eDiscovery ilişkilendirilebilirsiniz. AT&T Network bağlayıcısı kullanarak verileri başka bir kuruluşta içeri aktarın ve Microsoft 365, kurum kurum ve mevzuat ilkeleriyle uyumlu kalmalarına yardımcı olabilir.
+SMS ve MMS iletileri kullanıcı posta kutularında depolandıktan sonra,&T Ağ verilerine Dava Tutma, İçerik Arama ve Microsoft 365 bekletme ilkeleri gibi Microsoft 365 Purview özelliklerini uygulayabilirsiniz. Örneğin, İçerik Arama'yı kullanarak AT&T Ağ verilerinde arama yapabilir veya AT&T Ağ bağlayıcısı verilerini içeren posta kutusunu eBulma (Premium) durumundaki bir koruyucuyla ilişkilendirebilirsiniz. Microsoft 365'da verileri içeri aktarmak ve arşivlerken AT&T Ağ bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 
-## <a name="overview-of-archiving-att-network-data"></a>AT ve T Ağ&arşivlemeye genel bakış
+## <a name="overview-of-archiving-att-network-data"></a>AT&T Ağ verilerini arşivleme genel bakış
 
-Aşağıdaki genel bakış makalesinde, bağlayıcı kullanarak AT ve T Ağ&arşivleme işlemi Microsoft 365.
+Aşağıdaki genel bakış, Microsoft 365'da AT&T Ağ verilerini arşiv etmek için bağlayıcı kullanma işlemini açıklar.
 
-![ATT Network arşivleme iş akışı.](../media/ATTNetworkConnectorWorkflow.png)
+![ATT Ağ arşivleme iş akışı.](../media/ATTNetworkConnectorWorkflow.png)
 
-1. Your organization works with TeleMessage to set an AT&T Network connector. Bilgi için bkz. [AT&T Ağ Arşivleyicisi](https://www.telemessage.com/office365-activation-for-atnt-network-archiver/).
+1. Kuruluşunuz TeleMessage ile birlikte çalışarak BIR AT&T Ağı bağlayıcısı ayarlar. Bilgi için bkz [. AT&T Ağ Arşivleyicisi](https://www.telemessage.com/office365-activation-for-atnt-network-archiver/).
 
-2. Gerçek zamanlı olarak, kuruluşun AT veya T Ağı'&SMS ve MMS iletileri TeleMessage sitesine kopyalanır.
+2. Gerçek zamanlı olarak, kuruluşunuzun AT&T Ağından gelen SMS ve MMS iletileri TeleMessage sitesine kopyalanır.
 
-3. Microsoft 365 uyumluluk merkezi'te oluştursanız AT&T Network bağlayıcısı her gün TeleMessage sitesine bağlanır ve önceki 24 saat içinde alınan SMS ve MMS mesajlarını Microsoft bulutunda güvenli bir Azure Depolama konuma iletir. Bağlayıcı SMS ve MMS iletilerinin içeriğini de e-posta iletisi biçimine dönüştürür.
+3. Uyumluluk portalında oluşturduğunuz AT&T Ağ bağlayıcısı her gün TeleMessage sitesine bağlanır ve önceki 24 saat içindeki SMS ve MMS iletilerini Microsoft bulutunda güvenli bir Azure Depolama konumuna aktarır. Bağlayıcı ayrıca SMS ve MMS iletilerinin içeriğini e-posta iletisi biçimine dönüştürür.
 
-4. Bağlayıcı, mobil iletişim öğelerini belirli kullanıcıların posta kutusuna içeri aktarıyor. Kullanıcının posta kutusunda **AT&T SMS/MMS Ağ** Arşivleyicisi adlı yeni bir klasör oluşturulur ve öğeler bu klasöre aktarılır. Bağlayıcı bu eşlemeyi Kullanıcının E-posta *adresi özelliğinin değerini kullanarak* yapar. Her SMS ve MMS iletisi, iletinin tüm katılımcılarının e-posta adresiyle doldurulan bu özelliği içerir.
+4. Bağlayıcı, mobil iletişim öğelerini belirli kullanıcıların posta kutusuna aktarır. Kullanıcının posta kutusunda **AT&T SMS/MMS Ağ Arşivleyicisi** adlı yeni bir klasör oluşturulur ve öğeler bu klasöre aktarılır. Bağlayıcı bu eşlemeyi *Kullanıcının E-posta adresi* özelliğinin değerini kullanarak yapar. Her SMS ve MMS iletisi, iletinin her katılımcısının e-posta adresiyle doldurulan bu özelliği içerir.
  
-   Kullanıcının E-posta adresi özelliğinin değerini kullanarak otomatik kullanıcı  eşlemeye ek olarak, CSV eşleme dosyası yükerek özel eşleme de tanımlayabilirsiniz. Bu eşleme dosyası, cep telefonu numarasını ve bunun Microsoft 365-posta adresini içerir. Hem otomatik kullanıcı eşlemesini hem de özel eşlemeyi etkinleştirirsanız, bağlayıcı önce özel eşleme dosyasına bakarak her e-posta öğesine bakır. Kullanıcı bir cep telefonu numarasına Microsoft 365 geçerli bir kullanıcı bulamazsa, bağlayıcı içeri aktarmaya çalıştığı öğenin e-posta adresi özelliğinde yer alan değerleri kullanır. Bağlayıcı, kullanıcıya özel Microsoft 365 veya e-posta öğesinin e-posta adresi özelliğinde geçerli bir kullanıcı bulamazsa, öğe aktarılmaz.
+   *Kullanıcının E-posta adresi* özelliğinin değerini kullanarak otomatik kullanıcı eşlemesine ek olarak, csv eşleme dosyasını karşıya yükleyerek özel eşleme de tanımlayabilirsiniz. Bu eşleme dosyası, kuruluşunuzdaki kullanıcılar için cep telefonu numarasını ve ilgili Microsoft 365 e-posta adresini içerir. Hem otomatik kullanıcı eşlemesini hem de özel eşlemeyi etkinleştirirseniz, bağlayıcı her e-posta öğesi için önce özel eşleme dosyasına bakar. Bir cep telefonu numarasına karşılık gelen geçerli bir Microsoft 365 kullanıcısı bulamazsa, bağlayıcı içeri aktarmaya çalıştığı öğenin e-posta adresi özelliğindeki değerleri kullanır. Bağlayıcı, özel eşleme dosyasında veya e-posta öğesinin e-posta adresi özelliğinde geçerli bir Microsoft 365 kullanıcısı bulamazsa, öğe içeri aktarılamaz.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-AT&T Network verilerini arşivlemek için gereken bazı uygulama adımları Microsoft 365'nin dışındadır ve uyumluluk merkezinde bağlayıcıyı oluşturamadan önce tamamlanması gerekir.
+AT&T Ağ verilerini arşivlerken gereken uygulama adımlarından bazıları Microsoft 365 dışındadır ve bağlayıcıyı uyumluluk merkezinde oluşturabilmeniz için önce tamamlanması gerekir.
 
-- [TeleMessage'dan mobil arşivleyici hizmetini sipariş](https://www.telemessage.com/mobile-archiver/order-mobile-archiver-for-o365/) etmek ve organizasyonunız için geçerli bir yönetim hesabı almak. Uyumluluk merkezinde bağlayıcıyı  oluşturmak için bu hesapta oturum açın.
+- [TeleMessage'dan mobil arşivleyici hizmetini](https://www.telemessage.com/mobile-archiver/order-mobile-archiver-for-o365/) sipariş edin ve kuruluşunuz için geçerli bir yönetim hesabı alın. Uyumluluk merkezinde bağlayıcıyı oluştururken bu hesapta oturum açmanız gerekir.
 
-- TEMessage ekleme&doldurmak ve AT&T'den ileti arşivleme hizmetini sipariş etmek için AT&T hesabı ve fatura kişi ayrıntılarınızı alın.
+- TELEMessage ekleme formlarını doldurabilmek ve at&T'den ileti arşivleme hizmetini sipariş edebilmek için AT&T hesabınızın ve faturalama iletişim bilgilerinizi alın.
 
-- TELEMessage hesabında AT veya T SMS&MMS Ağ arşivlemesi gerektiren tüm kullanıcıları kaydettirin. Kullanıcıları kaydettirerek, kendi hesaplarında kullanılan e-posta adresinin aynısını Microsoft 365.
+- AT&T SMS/MMS Ağ arşivlemeyi gerektiren tüm kullanıcıları TeleMessage hesabına kaydedin. Kullanıcıları kaydederken, Microsoft 365 hesapları için kullanılan e-posta adresini kullandığınızdan emin olun.
 
-- Çalışanlarınızı AT&T mobil ağına şirket kullanımına bağlı ve kurumsal olarak sorumlu cep telefonları olmalıdır. İletileri Tek Microsoft 365, çalışana ait "Kendi Cihazlarınızı Getirin (BYOD) cihazlarında kullanılamaz.
+- Çalışanlarınızın AT&T mobil ağında şirkete ait ve şirkete ait cep telefonlarına sahip olması gerekir. Microsoft 365'da iletileri arşivleme, çalışana ait veya "Kendi Cihazlarını Getir (KCG) cihazları için kullanılamaz.
 
-- T Ağ bağlayıcısı için AT&kullanıcıya Veri Bağlayıcısı Yönetici rolü atan olmalıdır. Bu rol, sayfanın en son veri **bağlayıcıları sayfasına bağlayıcı** eklemek Microsoft 365 uyumluluk merkezi. Bu rol varsayılan olarak birden çok rol gruplarına eklenir. Bu rol gruplarının listesi için, Güvenlik ve Uyumluluk Merkezi'nde İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki roller" [& bakın](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). Alternatif olarak, bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolü ata sonrasında uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için aşağıdaki İzinler bölümündeki "Özel bir rol grubu oluşturma" [bölümüne Microsoft 365 uyumluluk merkezi](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- AT&T Ağ bağlayıcısı oluşturan kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için [Microsoft Purview uyumluluk portalındaki İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
-- Bu TeleMessage veri bağlayıcısı ABD GCC tarafından Microsoft 365 ortamlarda kullanılabilir. Üçüncü taraf uygulamaları ve hizmetleri, kuruluş müşteri verilerini Microsoft 365 altyapısının dışında olan üçüncü taraf sistemlerde depolamayı, iletip işlemeyi ve bu nedenle de Microsoft 365 uyumluluk ve veri koruma taahhütleri kapsamında değildir. Microsoft, bu ürünün üçüncü taraf uygulamalara bağlanmak için kullanılabileceğiyle ilgili hiçbir beyanda yoktur ve bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu da ima eder.
+- Bu TeleMessage veri bağlayıcısı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda kullanılabilir. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerinin Microsoft 365 altyapısı dışında olan ve bu nedenle Microsoft Purview ve veri koruma taahhütleri kapsamında olmayan üçüncü taraf sistemlerde depolanmasını, iletilmesini ve işlenmesini içerebilir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
 
-## <a name="create-a-att-network-connector"></a>AT&T Network bağlayıcısı oluşturma
+## <a name="create-a-att-network-connector"></a>AT&T Ağ bağlayıcısı oluşturma
 
-Önceki bölümde açıklanan önkoşulları tamamlandıktan sonra, üst bölümde bir AT&T Network bağlayıcısı Microsoft 365 uyumluluk merkezi. Bağlayıcı, teleMessage sitesine bağlanmak ve SMS ve MMS mesajlarını İleti'de ilgili kullanıcı posta kutusu kutularına aktarımı için Microsoft 365.
+Önceki bölümde açıklanan önkoşulları tamamladıktan sonra, uyumluluk portalında bir AT&T Ağ bağlayıcısı oluşturabilirsiniz. Bağlayıcı, TeleMessage sitesine bağlanmak ve SMS ve MMS iletilerini Microsoft 365 ilgili kullanıcı posta kutusu kutularına aktarmak için sağladığınız bilgileri kullanır.
 
-1. Veri bağlayıcılarıAT [https://compliance.microsoft.com](https://compliance.microsoft.com/) ve **T Ağı'&** \  **tıklayın**.
+1. **Veri bağlayıcılarıAT** \  **&T Ağı'na**[https://compliance.microsoft.com](https://compliance.microsoft.com/) gidin ve tıklayın.
 
-2. AT&**T Ağ ürün açıklaması sayfasında** Bağlayıcı ekle'ye **tıklayın**
+2. **AT&T Ağ ürün** açıklaması sayfasında **Bağlayıcı ekle'ye** tıklayın
 
-3. Hizmet Koşulları **sayfasında Kabul Et'e** **tıklayın**.
+3. **Hizmet koşulları** sayfasında **Kabul Et'e** tıklayın.
 
-4. **TeleMessage'da Oturum Aç** sayfasında, 3. Adım'ın altında aşağıdaki kutulara gerekli bilgileri girin ve ardından Sonraki'ye **tıklayın**.
+4. **TeleMessage'da Oturum Aç** sayfasındaki 3. Adım'ın altında, aşağıdaki kutulara gerekli bilgileri girin ve **İleri'ye** tıklayın.
 
-   - **Kullanıcı adı:** TeleMessage kullanıcı adınız.
+   - **Username:** TeleMessage kullanıcı adınız.
 
    - **Parola:** TeleMessage parolanız.
 
-5. Bağlayıcı oluşturulduktan sonra, açılır pencereyi kapatıp bir sonraki sayfaya gidebilirsiniz.
+5. Bağlayıcı oluşturulduktan sonra açılır pencereyi kapatabilir ve sonraki sayfaya gidebilirsiniz.
 
-6. Kullanıcı eşleme **sayfasında** , otomatik kullanıcı eşlemesini etkinleştirin. Özel eşlemeyi etkinleştirmek için, kullanıcı eşleme bilgilerini içeren bir CSV dosyası yükleyin ve İleri'ye **tıklayın**.
+6. Kullanıcı eşleme sayfasında otomatik kullanıcı **eşlemesini** etkinleştirin. Özel eşlemeyi etkinleştirmek için, kullanıcı eşleme bilgilerini içeren bir CSV dosyasını karşıya yükleyin ve **İleri'ye** tıklayın.
 
-7. Ayarlarınızı gözden geçirip bağlayıcıyı oluşturmak **için Son'a** tıklayın.
+7. Ayarlarınızı gözden geçirin ve ardından **Son'a** tıklayarak bağlayıcıyı oluşturun.
 
-8. Yeni **bağlayıcının** içeri aktarma **işleminin** ilerlemesini görmek için uyumluluk merkezinde Veri bağlayıcıları sayfasının Bağlayıcılar sekmesine gidin.
+8. Yeni **bağlayıcının** içeri aktarma işleminin ilerleme durumunu görmek için uyumluluk merkezindeki **Veri bağlayıcıları sayfasındaki Bağlayıcılar** sekmesine gidin.
 
 ## <a name="known-issues"></a>Bilinen sorunlar
 
-- Şu anda ekleri veya 10 MB'den büyük öğeleri içeri aktarmayı desteklemez. Daha büyük öğeler için destek daha sonraki bir tarihte kullanılabilir.
+- Şu anda 10 MB'tan büyük eklerin veya öğelerin içeri aktarılmasını desteklemiyoruz. Daha büyük öğeler için destek daha sonraki bir tarihte sağlanacaktır.

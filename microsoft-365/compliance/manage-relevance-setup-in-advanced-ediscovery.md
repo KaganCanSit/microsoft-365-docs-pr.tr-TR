@@ -1,5 +1,5 @@
 ---
-title: Advanced eDiscovery'te İlgi Derecesi kurulumunu Advanced eDiscovery
+title: eBulma'da İlgi ayarlarını yönetme (Premium)
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -15,59 +15,59 @@ search.appverid:
 - MET150
 ms.assetid: fd6be6d3-2e8d-449d-9851-03ab7546e6aa
 ROBOTS: NOINDEX, NOFOLLOW
-description: Dosyaları ilgi derecelerine göre puanla almak ve analitik sonuçlar oluşturmak Advanced eDiscovery'de İlgi Düzeyi eğitimi ayarlama önerilerini okuyun.
-ms.openlocfilehash: bed912c0631511e9d3d4839e5d6925de79554163
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: EBulma'da (Premium) ilgili dosyaları puanlama ve analiz sonuçları oluşturma ile ilgili ilgi eğitimi ayarlama önerilerini okuyun.
+ms.openlocfilehash: 66afbb3b8e7d8c2a4e266aa7fb63dc8434f9c8a6
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988088"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64946033"
 ---
-# <a name="manage-relevance-setup-in-advanced-ediscovery-classic"></a>İlgi Düzeyi kurulumunu Advanced eDiscovery (klasik)
+# <a name="manage-relevance-setup-in-ediscovery-premium-classic"></a>eBulma (Premium) (klasik) içinde İlgi ayarlarını yönetme
 
 > [!NOTE]
-> Advanced eDiscovery için, Office 365 E3 Uyumluluk eklentili bir kullanıcı veya E5 aboneliği gerekir. Bu plana sahip değil ve deneme sürümü Advanced eDiscovery, [Office 365 Kurumsal E5 deneme sürümüne Office 365 Kurumsal](https://go.microsoft.com/fwlink/p/?LinkID=698279). 
+> Microsoft Purview eKeşif (Premium), kuruluşunuz için Gelişmiş Uyumluluk eklentisi veya E5 aboneliğine sahip bir Office 365 E3 gerektirir. Bu plana sahip değilseniz ve eKeşif 'i (Premium) denemek istiyorsanız[, E5 Office 365 Kurumsal deneme sürümüne kaydolabilirsiniz](https://go.microsoft.com/fwlink/p/?LinkID=698279). 
   
- Advanced eDiscovery Uygunluk teknolojisi, dosyaları uygunluk durumlarına göre puanlama için uzman rehberli yazılımlar kullanır. Advanced eDiscovery Uygunluk Durumu, Erken Vaka Değerlendirmesi (ECA), içerik derlemesi ve dosya örneği gözden geçirme için kullanılabilir. 
+ eKeşif (Premium) İlgi teknolojisi, dosyaları ilgilerine göre puanlama için uzman destekli yazılım kullanıyor. eBulma (Premium) İlgisi, Erken Vaka Değerlendirmesi (ECA), itlaf ve dosya örneği incelemesi için kullanılabilir. 
   
- Advanced eDiscovery, Uygunluk eğitimi için bileşenleri ve davayla ilgili dosyaların etiketlerini içerir. Advanced eDiscovery, her dosya için İlgi Dereceleri sağlamak üzere İlgili ve İlgili Değil dosyalarının eğitimli örneklerinden bilgi verir ve dosya gözden geçirme işlemi sırasında ve sonrasında kullanılmaktadır. 
+ eBulma (Premium), bir servis talebiyle ilgili dosyaların ilgi eğitimi ve etiketlenmesi için bileşenler içerir. eBulma (Premium), her dosya için İlgi puanları sağlamak üzere eğitilen İlgili ve İlgili Olmayan dosya örneklerinden bilgi edinerek, dosya gözden geçirme işlemi sırasında ve sonrasında kullanılabilecek analitik sonuçlar oluşturur. 
   
-## <a name="guidelines-for-setting-up-relevance-training"></a>İlgi Düzeyi eğitimi ayarlama yönergeleri
+## <a name="guidelines-for-setting-up-relevance-training"></a>İlgi eğitimini ayarlama yönergeleri
 
- eBulma Öncesi'ninde **, Vakalar** penceresinde bir vaka seçin ve Vakaya **git'e tıklayın**. İlgi **Derecesi** **ayarı'nı**\> tıklatın. İlgi Düzeyini ayarlamak için bu önerilen yönergeleri izleyin. 
+ Önceden eBulma'da Servis **Talepleri** penceresinde bir servis talebi seçin ve Büyük **/küçük harfe git'e** tıklayın. **İlgi** \> **İlgisi kurulumu'nu** tıklatın. İlgiyi ayarlamak için bu önerilen yönergeleri izleyin. 
   
-- **Etiketleme**: Tutarlılık eğitim sürecinin etkililiği, uzmanın dosya örneklerini hassas ve tutarlılıkla etiketleme yeteneğine bağlıdır.
+- **Etiketleme**: Yinelemeli İlgi eğitim sürecinin etkinliği, uzmanın dosya örneklerini hassas ve tutarlılıkla etiketleyebilmesine bağlıdır.
 
-- **Olay sorunları**:
+- **Servis talebi sorunları**:
   
-  - Her sorunda, İlgi Düzeyi eğitim süreci boyunca aynı uzmanı kullanın. Aynı sorunun birden çok uzman tarafından aynı anda etiketlemeye izin verilmez.
+  - Her sorun için, İlgi eğitim sürecinin tamamında aynı uzmanı kullanın. Aynı sorunun birden çok uzman tarafından aynı anda etiketlenmesine izin verilmez.
   
-  - Her dosya grubunun yalnızca belirli bir konuyla ilgili olup olmadığını belirler.
+  - Her dosya grubunun yalnızca belirli bir sorunla ilgili olup olmadığını belirleyin.
 
-  - Sorun çok genel olarak tanımlanmışsa, Advanced eDiscovery çok fazla dosya getirebilirsiniz. Sorun çok dar bir şekilde tanımlanmışsa, İlgi Düzeyi eğitim süreci daha fazla zaman alabilirsiniz. 
+  - Bir sorun çok genel tanımlanmışsa, eBulma (Premium) ilgili olmayan çok fazla dosya verebilir. Bir sorun çok dar bir şekilde tanımlanırsa İlgi eğitim süreci daha uzun sürebilir. 
 
-  - Her uygun eğitim döngüsü sırasında, Advanced eDiscovery tek bir etkin soruna odaklanır ve buna uygun olarak örnek sonuçlar görüntülenir.
+  - Her İlgi eğitim döngüsü sırasında, eBulma (Premium) tek bir etkin soruna odaklanır ve buna göre ara örnek sonuçlar görüntülenir.
 
-  - Çok soruna neden olan bir senaryoda Örnekleme modu, işlemeye dahil edilecek sorunların seçimini sağlar. "Kapalı" olarak tanımlanan sorunlar Örnekleme modu değiştirilene kadar işlanmaz. Bir sorun yalnızca bir uzman için "boşta" veya "açık" olabilir.
+  - Birden çok sorunlu bir senaryoda, Örnekleme modu işlemeye dahil edilecek sorunların seçimini sağlar. "Kapalı" olarak tanımlanan sorunlar, Örnekleme modu değiştirilene kadar işlenmez. Sorun yalnızca bir uzman için "boşta" veya "açık" olabilir.
 
-  - Advanced eDiscovery ayrıcalık dosyaları oluşturmak için bu dosyalar kullanılabilir. Ayrıcalık için ayrı bir sorun ayarlayın. Mümkünse, önce ilgi derecesi için eğitin ve sonra yalnızca içerikli kümede ayrıcalık için eğitin (kültürlü kümeyi ayrı bir vaka olarak yeniden yükleyin). 
+  - Aday ayrıcalık dosyaları oluşturmak için eBulma (Premium) kullanılabilir. Ayrıcalık için ayrı bir sorun ayarlayın. Mümkünse, önce ilgi için eğitin ve iptal edin ve ardından yalnızca itlaf kümesinde ayrıcalık için eğitin (ayrı bir durum olarak kümeyi yeniden yükleyin). 
 
-  - Toplu işlem hesaplaması, yalnızca açık örnekler olmadığınız zaman yapılabilir (Toplu Hesaplama tıklatilirken, açık örneklere sahip kullanıcıların bir listesi görüntülenir). Diğer kullanıcıların örneklerini "kapatmak" için (bu işlem yalnızca bu kullanıcılar bu örnekleri etiketlemezse yapılır), bir Yönetici "Uygunlık derecesini değiştir" yardımcı programını "Tüm kullanıcılar örneği" seçeneğiyle kullanabilir.
+  - Toplu işlem hesaplaması yalnızca açık örnek olmadığında gerçekleştirilebilir (Batch Hesaplama'ya tıklandığında açık örnekleri olan kullanıcıların listesi görüntülenir). Diğer kullanıcıların örneklerini "kapatmak" için (bu yalnızca bu kullanıcılar bu örnekleri etiketlemediği durumlarda gerçekleştirilmelidir), Yönetici "İlgiyi değiştir" yardımcı programını "Tüm kullanıcılar örneği" seçeneğiyle kullanabilir.
 
-- **Meta** veriler: Advanced eDiscovery üzerinde odaklanan verilerdir. Meta verileri ilgi düzeyi ölçütleri kapsamında dikkate değerlendirmez.
+- **Meta veriler**: eBulma (Premium) içeriğe odaklanır. Meta verileri ilgi ölçütlerinin bir parçası olarak değerlendirmez.
 
-- **Zenginlik**: Bir sorunun Zenginliği Değerlendirme'den sonra %3'den azsa, uygunluğu eğitimi olarak bilinen Uygun ve uygun değil dosyalarına göz önünde bulundurabilirsiniz.
+- **Zenginlik**: Bir sorunun Zenginliği Değerlendirmeden sonra %3'ten azsa İlgi eğitimini bilinen İlgili ve İlgili Olmayan dosyalarla dağıtmayı göz önünde bulundurun.
 
-- **Dosya boyutu**: Büyük dosyalar (ayıklanan metnin 5.242.880 karakteri üzerinde) İlgi Düzeyi'ne göre göz ardı edilir. Dosyalar İlgi Düzeyi eğitim sürecine katılmaz ve Toplu Hesaplama'nın ardından bir İlgi Düzeyi puanı almaz. 5 MB'den büyük dosyalar Değerlendirme kümesine dahil olabilir.
+- **Dosya boyutu**: Büyük dosyalar (ayıklanan metnin 5.242.880 karakterden fazla) İlgi bölümünde yoksayılır. Dosyalar İlgi eğitim sürecine katılmaz ve Batch Hesaplaması'nın ardından bir İlgi puanı almaz. 5 MB'ın üzerindeki dosyalar Değerlendirme kümesine dahil edilebilir.
 
-## <a name="setting-up-case-issues"></a>Büyük/harf sorunlarını ayarlama
+## <a name="setting-up-case-issues"></a>Büyük/küçük harf sorunlarını ayarlama
 
-Bu bölümde açıklanan parametreler uygun Advanced eDiscovery **uygun olacak şekilde** \> **kullanılabilir**.
+Bu bölümde açıklanan parametreler eBulma (Premium) **İlgi** \> **İlgisi kurulumunda** kullanılabilir.
   
-- Sorunlar, dosyaları eğitecek bir kullanıcıya atanabilir.
+- Sorunlar, dosyaları eğitecek bir kullanıcıya atanmalıdır.
 
-- Bundan sonra, alınan dosyaların işlenen yüke eklenmiş olması gerekir.
+- daha sonra içeri aktarılan dosyaların işlenmekte olan yüke eklenmesi gerekir.
 
-- Sorunları dikkatle tanımlayın ve sırayın, çünkü bu ilgi düzeyi eğitim sonuçlarını etkileyesin.
+- İlgi eğitim sonuçlarını etkileyeecei için sorunları dikkatlice tanımlayın ve düzenleyin.
 
-Parametreler ayar olduktan sonra, gözden geçiren / uzman Uygunlik sekmesinde dosyaları **eğitime başlayabilir** .
+Parametreler ayarlandıktan sonra, gözden geçiren /uzman **İlgi sekmesinde dosyaları** eğitmeye başlayabilir.

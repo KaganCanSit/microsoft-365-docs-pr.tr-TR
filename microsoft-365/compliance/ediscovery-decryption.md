@@ -16,35 +16,35 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 description: Microsoft 365 eBulma araçlarının e-posta iletilerine eklenmiş ve SharePoint Online ve OneDrive İş'da depolanan şifrelenmiş belgeleri nasıl işlediğini öğrenin.
-ms.openlocfilehash: ae4e1fe274015da27514ef5149cd05c09928890b
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: 91eef14c1cb4dc91657a1d9a26ab00b1eb6f6d92
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64861962"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64948781"
 ---
 # <a name="decryption-in-microsoft-365-ediscovery-tools"></a>Microsoft 365 eBulma araçlarında şifre çözme
 
 Şifreleme, dosya koruma ve bilgi koruma stratejinizin önemli bir parçasıdır. Her türden kuruluş, kuruluş içindeki hassas içeriği korumak ve yalnızca doğru kişilerin bu içeriğe erişmesini sağlamak için şifreleme teknolojisini kullanır.
 
-Şifrelenmiş içerikte yaygın eBulma görevlerini yürütmek için, eBulma yöneticilerinin içerik aramalarından, Temel eBulma servis taleplerinden ve Advanced eDiscovery olaylarından dışarı aktarıldığında e-posta iletisi içeriğinin şifresini çözmesi gerekiyordu. Microsoft şifreleme teknolojileriyle şifrelenen içerik dışarı aktarıldıktan sonra gözden geçirilemedi.
+Şifrelenmiş içerikte yaygın eBulma görevlerini yürütmek için, eBulma yöneticilerinin içerik aramalarından, Microsoft Purview eBulma (Standart) servis taleplerinden ve Microsoft Purview eBulma (Premium) olaylarından dışarı aktarıldığında e-posta iletisi içeriğinin şifresini çözmesi gerekiyordu. Microsoft şifreleme teknolojileriyle şifrelenen içerik dışarı aktarıldıktan sonra gözden geçirilemedi.
 
-eBulma iş akışında şifrelenmiş içeriği yönetmeyi kolaylaştırmak için, eBulma araçları Microsoft 365 artık e-posta iletilerine eklenmiş ve Exchange Online gönderilen şifrelenmiş dosyaların şifre çözmesini birleştirir.<sup> 1</sup> Ayrıca, SharePoint Online ve OneDrive İş'de depolanan şifrelenmiş belgelerin şifresi Advanced eDiscovery'de çözülür.
+eBulma iş akışında şifrelenmiş içeriği yönetmeyi kolaylaştırmak için, eBulma araçları Microsoft 365 artık e-posta iletilerine eklenmiş ve Exchange Online gönderilen şifrelenmiş dosyaların şifre çözmesini birleştirir.<sup> 1</sup> Ayrıca, SharePoint Online ve OneDrive İş'de depolanan şifrelenmiş belgelerin şifresi eBulma'da (Premium) çözülür.
 
-Bu yeni özellik öncesinde, yalnızca hak yönetimi (ekli dosyalar değil) tarafından korunan bir e-posta iletisinin içeriğinin şifresi çözülüyordu. eBulma iş akışı sırasında SharePoint ve OneDrive şifrelenmiş belgelerin şifresi çözülemedi. Artık Microsoft şifreleme teknolojisiyle şifrelenen dosyalar bir SharePoint veya OneDrive hesabında bulunur ve arama sonuçları önizleme için hazırlandığında, Advanced eDiscovery'da bir gözden geçirme kümesine eklendiğinde ve dışarı aktarıldığında aranabilir ve şifresi çözülür. Ayrıca, e-posta iletisine eklenmiş SharePoint ve OneDrive şifrelenmiş belgeler aranabilir. Bu şifre çözme özelliği, eBulma yöneticilerinin arama sonuçlarının önizlemesini görüntülerken şifrelenmiş e-posta eklerinin ve site belgelerinin içeriğini görüntülemesine ve bunları Advanced eDiscovery'da bir gözden geçirme kümesine eklendikten sonra gözden geçirmesine olanak tanır.
+Bu yeni özellik öncesinde, yalnızca hak yönetimi (ekli dosyalar değil) tarafından korunan bir e-posta iletisinin içeriğinin şifresi çözülüyordu. eBulma iş akışı sırasında SharePoint ve OneDrive şifrelenmiş belgelerin şifresi çözülemedi. Artık Microsoft şifreleme teknolojisiyle şifrelenen dosyalar bir SharePoint veya OneDrive hesabında bulunur; arama sonuçları önizleme için hazırlandığında, eBulma'da (Premium) bir gözden geçirme kümesine eklendiğinde ve dışarı aktarıldığında aranabilir ve şifresi çözülür. Ayrıca, e-posta iletisine eklenmiş SharePoint ve OneDrive şifrelenmiş belgeler aranabilir. Bu şifre çözme özelliği, eBulma yöneticilerinin arama sonuçlarının önizlemesini görüntülerken şifrelenmiş e-posta eklerinin ve site belgelerinin içeriğini görüntülemesine ve eBulma'da (Premium) bir gözden geçirme kümesine eklendikten sonra bunları gözden geçirmesine olanak tanır.
 
 ## <a name="supported-encryption-technologies"></a>Desteklenen şifreleme teknolojileri
 
-Microsoft eKeşif araçları, Microsoft şifreleme teknolojileriyle şifrelenmiş öğeleri destekler. Bu teknolojiler Azure Rights Management ve Microsoft Bilgi Koruması (özellikle duyarlılık etiketleri) teknolojileridir. Microsoft şifreleme teknolojileri hakkında daha fazla bilgi için bkz [. Şifreleme](encryption.md). Üçüncü taraf şifreleme teknolojileri tarafından şifrelenen içerik desteklenmez. Örneğin, Microsoft dışı teknolojilerle şifrelenmiş içeriklerin önizlemesini görüntüleme veya dışarı aktarma desteklenmez.
+Microsoft eKeşif araçları, Microsoft şifreleme teknolojileriyle şifrelenmiş öğeleri destekler. Bu teknolojiler Azure Rights Management ve Microsoft Purview Information Protection (özellikle duyarlılık etiketleri) teknolojileridir. Microsoft şifreleme teknolojileri hakkında daha fazla bilgi için bkz [. Şifreleme](encryption.md). Üçüncü taraf şifreleme teknolojileri tarafından şifrelenen içerik desteklenmez. Örneğin, Microsoft dışı teknolojilerle şifrelenmiş içeriklerin önizlemesini görüntüleme veya dışarı aktarma desteklenmez.
 
 > [!NOTE]
-> [Office 365 İleti Şifrelemesi (OME) özel markalama şablonuyla](add-your-organization-brand-to-encrypted-messages.md) gönderilen e-posta iletilerinin şifresi, Microsoft eBulma araçları tarafından desteklenmez. OME özel markalama şablonu kullanılırken, e-posta iletileri alıcının posta kutusu yerine OME portalına teslim edilir. Bu nedenle, ome ile şifrelenmiş iletileri aramak için eBulma araçlarını kullanamazsınız çünkü bu iletiler alıcının posta kutusu tarafından hiçbir zaman alınmaz.
+> [Microsoft Purview İleti Şifrelemesi özel markalama şablonuyla](add-your-organization-brand-to-encrypted-messages.md) gönderilen e-posta iletilerinin şifre çözmesi Microsoft eKeşif araçları tarafından desteklenmez. OME özel markalama şablonu kullanılırken, e-posta iletileri alıcının posta kutusu yerine OME portalına teslim edilir. Bu nedenle, şifrelenmiş iletileri aramak için eBulma araçlarını kullanamazsınız çünkü bu iletiler alıcının posta kutusu tarafından hiçbir zaman alınmaz.
 
 ## <a name="ediscovery-activities-that-support-encrypted-items"></a>Şifrelenmiş öğeleri destekleyen eBulma etkinlikleri
 
 Aşağıdaki tabloda, SharePoint ve OneDrive e-posta iletilerine ve şifrelenmiş belgelere eklenmiş şifrelenmiş dosyalar üzerinde Microsoft 365 eBulma araçlarında gerçekleştirilebilecek desteklenen görevler tanımlanır. Bu desteklenen görevler, arama ölçütlerine uyan şifrelenmiş dosyalar üzerinde gerçekleştirilebilir. değeri `N/A` , işlevselliğin ilgili eBulma aracında kullanılamadiğini gösterir.
 
-|eBulma görevi  |İçerik arama  |Temel eKeşif  |Gelişmiş eKeşif  |
+|eBulma görevi  |İçerik arama  |eBulma (Standart)  |eBulma (Premium)  |
 |:---------|:---------|:---------|:---------|
 |Sitelerde ve e-posta eklerinde şifrelenmiş dosyalarda içerik <sup>arama1</sup>     |Hayır      |Hayır      |Evet      |
 |E-postaya eklenmiş şifrelenmiş dosyaların önizlemesini görüntüleme     |Evet      |Evet     |Evet       |
@@ -67,7 +67,7 @@ eBulma, şifrelemeyi uygulayan bir duyarlılık etiketi aşağıdaki ayarlardan 
 
 Bu ayarlar hakkında daha fazla bilgi için Şifreleme [uygulamak için duyarlılık etiketlerini kullanarak içeriğe erişimi kısıtlama](encryption-sensitivity-labels.md#configure-encryption-settings) bölümündeki "Şifreleme ayarlarını yapılandırma" bölümüne bakın.
 
-Önceki ayarlarla şifrelenen belgeler yine de eBulma araması tarafından döndürülebilir. Bir belge özelliği (başlık, yazar veya değiştirme tarihi gibi) arama ölçütleri ile eşleştiğinde bu durum oluşabilir. Bu belgeler arama sonuçlarına dahil edilebilse de, bunlar önizlenemez veya gözden geçirılamaz. Bu belgeler Advanced eDiscovery dışarı aktarıldığında da şifrelenmiş olarak kalır.
+Önceki ayarlarla şifrelenen belgeler yine de eBulma araması tarafından döndürülebilir. Bir belge özelliği (başlık, yazar veya değiştirme tarihi gibi) arama ölçütleri ile eşleştiğinde bu durum oluşabilir. Bu belgeler arama sonuçlarına dahil edilebilse de, bunlar önizlenemez veya gözden geçirılamaz. Bu belgeler eBulma(Premium) içinde dışarı aktarıldığında da şifrelenmiş olarak kalır.
 
 > [!IMPORTANT]
 > Şifre çözme, yerel olarak şifrelenen ve ardından SharePoint veya OneDrive yüklenen dosyalar için desteklenmez. Örneğin, Azure Information Protection (AIP) istemcisi tarafından şifrelenen ve ardından Microsoft 365 yüklenen yerel dosyalar desteklenmez. Yalnızca SharePoint veya OneDrive hizmetinde şifrelenen dosyalar şifre çözme için desteklenir.
@@ -86,11 +86,11 @@ Bu senaryoların her ikisinde de, e-posta özelliği (gönderme tarihi, göndere
 
 ## <a name="requirements-for-decryption-in-ediscovery"></a>eBulma'da şifre çözme gereksinimleri
 
-Microsoft şifreleme teknolojileriyle şifrelenmiş dosyaları önizlemek, gözden geçirmek ve dışarı aktarmak için RMS Şifre Çözme rolüne atanmış olmanız gerekir. Ayrıca, Advanced eDiscovery'da bir gözden geçirme kümesine eklenen şifrelenmiş dosyaları gözden geçirmek ve sorgulamak için de bu role atanmış olmanız gerekir.
+Microsoft şifreleme teknolojileriyle şifrelenmiş dosyaları önizlemek, gözden geçirmek ve dışarı aktarmak için RMS Şifre Çözme rolüne atanmış olmanız gerekir. Ayrıca, eBulma'da (Premium) bir gözden geçirme kümesine eklenen şifrelenmiş dosyaları gözden geçirmek ve sorgulamak için de bu role atanmış olmanız gerekir.
 
-Bu rol varsayılan olarak Microsoft 365 uyumluluk merkezi **İzinler** sayfasındaki eBulma Yöneticisi rol grubuna atanır. RMS Şifre Çözme rolü hakkında daha fazla bilgi için bkz. [eBulma izinleri atama](assign-ediscovery-permissions.md#rms-decrypt).
+Bu rol varsayılan olarak Microsoft Purview uyumluluk portalındaki **İzinler** sayfasındaki eBulma Yöneticisi rol grubuna atanır. RMS Şifre Çözme rolü hakkında daha fazla bilgi için bkz. [eBulma izinleri atama](assign-ediscovery-permissions.md#rms-decrypt).
 
-### <a name="decrypting-rms-protected-email-messages-and-encrypted-file-attachments-using-content-search-or-core-ediscovery"></a>İçerik araması veya Core eKeşif kullanarak RMS korumalı e-posta iletilerinin ve şifrelenmiş dosya eklerinin şifresini çözme
+### <a name="decrypting-rms-protected-email-messages-and-encrypted-file-attachments-using-content-search-or-ediscovery-standard"></a>İçerik araması veya eBulma (Standart) kullanarak RMS korumalı e-posta iletilerinin ve şifrelenmiş dosya eklerinin şifresini çözme
 
 İçerik aramasının sonuçlarına dahil edilen tüm hak korumalı (RMS korumalı) e-posta iletilerini dışarı aktardığınızda şifresi çözülür. Ayrıca, [Microsoft şifreleme teknolojisiyle](encryption.md) şifrelenen ve arama sonuçlarında yer alan bir e-posta iletisine eklenmiş tüm dosyaların şifresi dışarı aktarıldığında çözülür. Bu şifre çözme özelliği, eBulma Yöneticisi rol grubunun üyeleri için varsayılan olarak etkindir. Bunun nedeni, RMS Şifre Çözme yönetim rolünün varsayılan olarak bu rol grubuna atanmış olmasıdır. Şifrelenmiş e-posta iletilerini ve eklerini dışarı aktarırken aşağıdakileri göz önünde bulundurun:
   

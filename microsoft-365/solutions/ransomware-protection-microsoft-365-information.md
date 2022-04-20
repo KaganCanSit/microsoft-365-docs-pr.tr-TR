@@ -1,5 +1,5 @@
 ---
-title: Adım 5. Bilgileri koruma
+title: Adım 5. Bilgileri koruyun
 author: dansimp
 f1.keywords:
 - NOCSH
@@ -15,98 +15,98 @@ ms.collection:
 - ransomware
 - m365solution-ransomware
 ms.custom: seo-marvel-jun2020
-keywords: fidye yazılımı, insan tarafından işletilen fidye yazılımı, insan tarafından işletilen fidye yazılımı, HumOR, extortion saldırısı, fidye yazılımı saldırı, şifreleme, cryptovirology, sıfır güven
-description: Denetimli klasör erişimini, MIP, DLP ve Bulut Uygulamaları için Microsoft Defender'ı kullanarak verilerinizi Microsoft 365 koruyun.
-ms.openlocfilehash: 0011a3c9fc0d24815818b67906b8f404a191563e
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+keywords: fidye yazılımı, insan tarafından çalıştırılan fidye yazılımı, insan tarafından çalıştırılan fidye yazılımı, HumOR, gasp saldırısı, fidye yazılımı saldırısı, şifreleme, kriptoviroloji, sıfır güven
+description: Microsoft 365 hassas verilerinizi korumak için denetimli klasör erişimi, Microsoft Purview Information Protection, DLP ve Microsoft Defender for Cloud Apps kullanın.
+ms.openlocfilehash: e32c214688adb60fa39fc3c392512f46ec94aecf
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63325103"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64945141"
 ---
-# <a name="step-5-protect-information"></a>Adım 5. Bilgileri koruma
+# <a name="step-5-protect-information"></a>Adım 5. Bilgileri koruyun
 
-Fidye yazılımı fidye yazılımları dosyada, veritabanında ve diğer sunucu türlerinde bulunan şirket içi verilerinize de bakacaklarından, bu verileri korumanın en iyi yollarından biri bu verileri Microsoft 365 kiracınıza geçirmektir. Oraya varan sürümleme, geri dönüşüm kutusu ve Dosya Geri Yükleme gibi yerleşik azaltma ve kurtarma [özellikleriyle korunabilirsiniz](ransomware-protection-microsoft-365.md#ransomware-mitigation-and-recovery-capabilities-provided-with-microsoft-365).
+Fidye yazılımı saldırganları dosya, veritabanı ve diğer sunucu türlerinde bulunan şirket içi verilerinize de göz atacağından, bu verileri korumanın en iyi yollarından biri, verileri Microsoft 365 kiracınıza geçirmektir. Oraya vardıktan sonra [sürüm oluşturma, geri dönüşüm kutusu ve Dosyalar Geri Yükleme](ransomware-protection-microsoft-365.md#ransomware-mitigation-and-recovery-capabilities-provided-with-microsoft-365) gibi yerleşik azaltma ve kurtarma özellikleriyle korunabilir.
 
-Kiracınıza hassas bilgilerin ek korunmasını sağlamak Microsoft 365:
+Microsoft 365 kiracınızdaki hassas bilgilerin ek korumasını sağlamak için:
 
-- Hassas bilginizi bulun.
-- Katı izinler uygulama ve geniş erişimi ortadan kaldırma (örneğin, çok fazla kullanıcının yazma, düzenleme ve silme özelliklerini değiştirmesini engelleme).
+- Hassas bilgilerinizi bulun.
+- Katı izinler uygulayın ve geniş erişimi ortadan kaldırarak (örneğin, çok fazla kullanıcının yazma, düzenleme ve silme özelliklerine sahip olmasını engelleyin).
 - Hassas bilgilerinizi koruyun.
 
 >[!Note]
->Bir kiracıda bilgi koruması için ayrıntılı dağıtım Microsoft 365 bkz[. Veri gizliliği düzenlemelerine yönelik bilgi korumayı dağıtma](information-protection-deploy.md). Veri gizliliği düzenlemelerine yönelik olsa da, kılavuzun bir çoğu fidye yazılımı koruması için de geçerlidir.
+>Microsoft 365 kiracıdaki bilgi korumasına yönelik ayrıntılı dağıtım kılavuzu için bkz[. Veri gizliliği düzenlemeleri için bilgi korumasını dağıtma](information-protection-deploy.md). Veri gizliliği düzenlemelerine yönelik olsa da kılavuzun çoğu fidye yazılımı koruması için de geçerlidir.
 >
 
-## <a name="locate-your-sensitive-information"></a>Hassas bilginizi bulma
+## <a name="locate-your-sensitive-information"></a>Hassas bilgilerinizi bulma
 
-İlk görev [kiracınıza, aşağıdaki türlerde yer](/microsoft-365/compliance/information-protection#know-your-data) alan hassas bilgilerin türlerini ve konumlarını belirlemektir:
+İlk görev, kiracınızdaki hassas bilgilerin [türlerini ve konumlarını belirlemektir ve](/microsoft-365/compliance/information-protection#know-your-data) bu bilgiler aşağıdaki türleri içerebilir:
 
 - Hassas
 - Mülkiyet veya fikri mülkiyet
-- Düzenlemeye tabi, kişisel olarak tanımlayıcı bilgilerin (PII) korunmasını belirten bu tür bölgesel düzenlemeler
-- IT kurtarma planları
+- Düzenlenmiş, kişisel olarak tanımlayıcı bilgilerin (PII) korunmasını belirten bu tür bölgesel düzenlemeler
+- BT kurtarma planları
 
-Her tür hassas bilgi için, şunları yapın:
+Her hassas bilgi türü için aşağıdakileri belirleyin:
 
-- Bilgilerin kuruma kullanımı
-- Bu değerin para değerinin tahmin için tutularak yapılan göreli bir ölçüsü (yüksek, orta, düşük gibi)
-- Geçerli konumu, örneğin OneDrive SharePoint klasörü veya Microsoft Teams ekibi gibi işbirliği Microsoft Teams.
-- Aşağıdakilerden oluşan geçerli izinler:
+- Bilgilerin kuruluşunuza kullanımı
+- Fidye için tutulduysa parasal değerinin göreli ölçüsü (yüksek, orta, düşük gibi)
+- OneDrive veya SharePoint klasörü ya da Microsoft Teams ekibi gibi işbirliği yeri gibi geçerli konumu
+- Şunlardan oluşan geçerli izinler:
 
    - Erişimi olan kullanıcı hesapları
 
    - Erişimi olan her hesaba izin verilen eylemler 
 
-## <a name="implement-strict-permissions-for-locations-with-sensitive-information"></a>Hassas bilgilerle konumlar için kesin izinler uygulama
+## <a name="implement-strict-permissions-for-locations-with-sensitive-information"></a>Hassas bilgiler içeren konumlar için katı izinler uygulama
 
-Microsoft 365 kiracınız içinde katı izinler uygulamak, Microsoft 365'te genellikle OneDrive klasörleri, siteleri ve klasörleri ve ekipleri olan konumlar ve iletişim yerleri için en SharePoint ayrıcalık ilkesini kullanır. 
+Microsoft 365 kiracınızda katı izinler uygulamak, Microsoft 365 genellikle klasörler, SharePoint siteler ve klasörler ve ekipler OneDrive konumlar ve iletişim yerleri için en az ayrıcalık ilkesini kullanır. 
 
-Büyük erişime sahip dosya depolama konumları veya ekipler oluşturmak daha kolay (örneğin, kuruluşta herkesin varsayılan ayarı) daha kolay bulunsa da, hassas bilgiler için izin verilen kullanıcı hesapları ve izin verilen eylemler, işbirliği ve iş gereksinimlerini karşılamak için gereken en düşük kümeyle sınırlı tutulsun.
+Hassas bilgiler için geniş erişimli (örneğin, kuruluşunuzdaki herkesin varsayılanı) dosya depolama konumları veya ekipler oluşturmak daha kolay olsa da, izin verilen kullanıcı hesapları ve izin verilen eylemler işbirliği ve iş gereksinimlerini karşılamak için gereken minimum kümeyle sınırlandırılmalıdır.
 
-Bir fidye yazılımı kiracınızı ele geçirildiklerinde, kullanıcı hesaplarının kimlik bilgilerini yönetici rol hesapları veya hassas bilgilere erişimi olan kullanıcı hesapları gibi kiracı genelinde daha geniş izin kapsamlarıyla ödün vermeden ayrıcalıklarını yükseltmeye çalışırlar. 
+Bir fidye yazılımı saldırganı kiracınıza sızdıktan sonra, kiracınızda yönetici rolü hesapları veya hassas bilgilere erişimi olan kullanıcı hesapları gibi daha geniş kapsamlı izinlere sahip kullanıcı hesaplarının kimlik bilgilerini tehlikeye atarak ayrıcalıklarını yükseltmeye çalışır. 
 
 Bu tipik saldırgan davranışına bağlı olarak, saldırgan için iki zorluk düzeyi vardır:
 
-- **Düşük:** Bir saldırgan düşük izinli bir hesap kullanabilir ve kiracınız genelinde geniş erişim nedeniyle hassas bilgilerinizi keşfeder.
-- **Daha yüksek:** Bir saldırgan düşük izinli bir hesap kullanamaz ve katı izinler nedeniyle hassas bilginizi keşfeder. Hassas bilgilerle bir konuma erişimi olan bir hesabın kimlik bilgilerini belirleyerek ve bundan sonra ödün vererek izinlerini yükseltmeleri gerekir, ancak bu işlem yalnızca sınırlı bir eylem kümesi gerçekleştirebilirsiniz.
+- **Düşük:** Saldırgan, kiracınız genelinde geniş erişim nedeniyle düşük izinli bir hesap kullanabilir ve hassas bilgilerinizi bulabilir.
+- **Yüksek:** Saldırgan, katı izinler nedeniyle düşük izinli bir hesap kullanamaz ve hassas bilgilerinizi bulamıyor. Hassas bilgilere sahip bir konuma erişimi olan bir hesabın kimlik bilgilerini belirleyip tehlikeye atarak izinlerini yükseltmeleri gerekir, ancak bu durumda yalnızca sınırlı bir eylem kümesi gerçekleştirebilir.
 
-Hassas bilgiler için, zorluk düzeyini mümkün olduğu kadar yüksek bir düzeye taşıyor olması gerekir.
+Hassas bilgiler için, zorluk düzeyini olabildiğince yüksek yapmalısınız.
 
-Kiracınız için şu adımlarla kesin izinler sebilirsiniz:
+Aşağıdaki adımlarla kiracınızda katı izinler sağlayabilirsiniz:
 
-1. Hassas bilgileri bulma [çabalarından,](#locate-your-sensitive-information) hassas bilgilerin konumları için izinleri gözden geçirebilirsiniz. 
-2. Hassas bilgiler için sıkı izinler uygulayarak işbirliği ve iş gereksinimlerini karşılar ve bundan etkilenen kullanıcıları bilgilendirin.
-3. Hassas bilgiler için gelecekteki konumların kesin izinlerle oluşturulup korunması için kullanıcılarınız için değişiklik yönetimi gerçekleştirin.
-4. Kapsamlı izinlerin verilmey olduğundan emin olmak için hassas bilgiler için konumları denetleyin ve takip edin.
+1. [Hassas bilgilerinizi bulma çabasından, hassas bilgilerin](#locate-your-sensitive-information) konumları için izinleri gözden geçirin. 
+2. İşbirliği ve iş gereksinimlerini karşılarken hassas bilgiler için katı izinler uygulayın ve etkilenen kullanıcıları bilgilendirin.
+3. Hassas bilgiler için gelecekteki konumların katı izinlerle oluşturulması ve korunması için kullanıcılarınız için değişiklik yönetimi gerçekleştirin.
+4. Geniş izinlerin verilmediğinden emin olmak için hassas bilgiler için konumları denetleyin ve izleyin.
 
-Ayrıntılı [kılavuz için bkz. Güvenli dosya paylaşımını Microsoft Teams](setup-secure-collaboration-with-teams.md) işbirliğini ayarlama. Hassas bilgiler için kesin izinlere sahip bir iletişim ve işbirliği merkezi örneği, güvenlik [yalıtlığı olan bir ekiptir](/microsoft-365/solutions/secure-teams-security-isolation).
+Ayrıntılı yönergeler için bkz. [Microsoft Teams ile güvenli dosya paylaşımını ve işbirliğini ayarlama](setup-secure-collaboration-with-teams.md). Hassas bilgiler için katı izinlere sahip bir iletişim ve işbirliği mekanına örnek olarak [güvenlik yalıtımına sahip bir ekip gösteriliyor](/microsoft-365/solutions/secure-teams-security-isolation).
 
-## <a name="protect-your-sensitive-information"></a>Hassas bilgilerinizi koruyun
+## <a name="protect-your-sensitive-information"></a>Hassas bilgilerinizi koruma
 
-Fidye yazılımı yazılımı yazılımına erişim elde etmeleri durumunda hassas bilgilerinizi korumak için:
+Fidye yazılımı saldırganına erişim elde etme ihtimaline karşı hassas bilgilerinizi korumak için:
 
-- Yetkisiz [uygulamaların denetimli](/windows/security/threat-protection/microsoft-defender-atp/controlled-folders) klasörlerdeki verileri değiştirmesini zorlaştıracak şekilde denetimli klasör erişimini kullanın.
+- Yetkisiz uygulamaların [denetimli klasörlerdeki](/windows/security/threat-protection/microsoft-defender-atp/controlled-folders) verileri değiştirmesini zorlaştırmak için denetimli klasör erişimini kullanın.
 
-- Metin [Microsoft Bilgi Koruması](/microsoft-365/compliance/information-protection) duyarlılık etiketlerini kullanın ve bunları hassas bilgilere uygulayabilirsiniz. Duyarlılık etiketleri, tanımlı kullanıcı hesapları ve izin verilen eylemlerle ek şifreleme ve izinler için ya zamanlandı. Kiracıdan genişletilebilir duyarlılık etiketi türüne sahip bir dosya yalnızca etikette tanımlanmış bir kullanıcı hesabı için kullanılabilir.
+- [Microsoft Purview Information Protection](/microsoft-365/compliance/information-protection) ve duyarlılık etiketlerini kullanın ve bunları hassas bilgilere uygulayın. Duyarlılık etiketleri, tanımlı kullanıcı hesapları ve izin verilen eylemlerle ek şifreleme ve izinler için yapılandırılabilir. Kiracınızdan sızan bu tür duyarlılık etiketiyle etiketlenmiş bir dosya yalnızca etikette tanımlanan bir kullanıcı hesabı için kullanılabilir.
 
-- Duyarlılık etiketleri Microsoft 365 dahili ve harici olarak kişisel veya gizli bilgiler içeren riskli, istemeden veya uygunsuz veri paylaşımını tespit etmek, uyarmak ve engellemek için Microsoft 365 Veri Kaybı Önleme [(DLP)](/microsoft-365/compliance/dlp-learn-about-dlp) önlemeyi kullanın.
+- Microsoft Purview [Veri Kaybı Önleme'yi (DLP)](/microsoft-365/compliance/dlp-learn-about-dlp) kullanarak hem şirket içinde hem de dışında duyarlılık etiketlerine dayalı olarak kişisel veya gizli bilgiler içeren verilerin riskli, yanlışlıkla veya uygunsuz bir şekilde paylaşılmalarını algılayın, uyarın ve engelleyin.
 
-- Dosyalar [gibi hassas bilgilerin indirilmelerini](/cloud-app-security/what-is-cloud-app-security) engellemek için Bulut Uygulamaları için Microsoft Defender'ı kullanın. Ayrıca, yüksek dosya karşıya [yükleme veya dosya silme](/cloud-app-security/anomaly-detection-policy#ransomware-activity) etkinliklerini algılamak için Bulut Uygulamaları için Defender anormal algılama ilkelerini kullanabilirsiniz.
+- Dosyalar gibi hassas bilgilerin indirilmelerini engellemek için [Microsoft Defender for Cloud Apps](/cloud-app-security/what-is-cloud-app-security) kullanın. Yüksek oranda dosya karşıya yükleme veya dosya silme etkinliğini algılamak için [Bulut için Defender Uygulamaları anomali algılama ilkelerini](/cloud-app-security/anomaly-detection-policy#ransomware-activity) de kullanabilirsiniz.
 
-## <a name="impact-on-users-and-change-management"></a>Kullanıcılar üzerindeki etkisi ve değişiklik yönetimi
+## <a name="impact-on-users-and-change-management"></a>Kullanıcılar ve değişiklik yönetimi üzerindeki etkisi
 
-Geniş izinlerde yapılan yönetim değişiklikleri, kullanıcıların erişiminin reddedilmiş olması veya bazı eylemlerin yürütülmelerine yol açabilirsiniz.
+Geniş izinlerde yapılan yönetim değişiklikleri kullanıcıların erişiminin reddedilmesine veya bazı eylemlerin yürütülememesine neden olabilir.
 
-Buna ek olarak, kullanıcılarınızı aşağıdakiler için Microsoft 365 bilgileri şu şekilde eğitin:
+Ayrıca, Microsoft 365 kiracınızdaki hassas bilgilerin korunması için kullanıcılarınızı şu şekilde eğitin:
 
-- Katı izinlere (erişim için en az kullanıcı hesabı kümesi ve her hesap için izin verilen en düşük eylem kümesi) sahip iletişim ve işbirliği yerleri oluşturun. 
-- Hassas bilgilere düzgün duyarlılık etiketleri uygulayabilirsiniz.
+- Katı izinlere sahip iletişim ve işbirliği alanları oluşturun (erişim için en az kullanıcı hesabı kümesi ve her hesap için izin verilen minimum eylemler). 
+- Hassas bilgilere uygun duyarlılık etiketlerini uygulayın.
 - Denetimli klasör erişimini kullanın.
 
 ## <a name="resulting-configuration"></a>Sonuçta elde edilen yapılandırma
 
-İşte, 1-5. adımlar için kiracınız için fidye yazılımı koruması.
+1-5 arası adımlar için kiracınız için fidye yazılımı koruması aşağıdadır.
 
 ![5. Adımdan sonra Microsoft 365 kiracınız için fidye yazılımı koruması](../media/ransomware-protection-microsoft-365/ransomware-protection-microsoft-365-architecture-step5.png)
 
@@ -114,58 +114,58 @@ Buna ek olarak, kullanıcılarınızı aşağıdakiler için Microsoft 365 bilgi
 
 Microsoft'tan önemli bilgiler:
 
-- [Giderek büyüyen fidye yazılımı tehdidi](https://blogs.microsoft.com/on-the-issues/2021/07/20/the-growing-threat-of-ransomware/) olan Microsoft 20 Temmuz 2021'de Sorunlar blog gönderisi
-- [İnsan tarafından işletilen fidye yazılımı](/security/compass/human-operated-ransomware)
-- [Fidye yazılımlarına ve ekstörlere karşı hızlı bir şekilde koruma](/security/compass/protect-against-ransomware)
-- [2021 Microsoft Dijital Savunma Raporu](https://www.microsoft.com/security/business/microsoft-digital-defense-report) (sayfa 10-19'a bakın)
-- [Fidye yazılımı: Microsoft 365 Defender portalında periveive](https://security.microsoft.com/threatanalytics3/05658b6c-dc62-496d-ad3c-c6a795a33c27/overview) ve sürekli tehdit Microsoft 365 Defender raporu
-- Microsoft'un Algılama ve Yanıt Ekibi (ATL) fidye yazılımı [yaklaşımı, en iyi yöntemler ve](/security/compass/incident-response-playbook-dart-ransomware-approach) örnek [olay inceleme](/security/compass/dart-ransomware-case-study)
+- [Artan fidye yazılımı tehdidi](https://blogs.microsoft.com/on-the-issues/2021/07/20/the-growing-threat-of-ransomware/), Microsoft On the Issues blog gönderisi 20 Temmuz 2021'de
+- [İnsan tarafından çalıştırılan fidye yazılımı](/security/compass/human-operated-ransomware)
+- [Fidye yazılımı ve gaspa karşı hızla koruma](/security/compass/protect-against-ransomware)
+- [2021 Microsoft Dijital Savunma Raporu](https://www.microsoft.com/security/business/microsoft-digital-defense-report) (bkz. sayfa 10-19)
+- [Fidye yazılımı: Microsoft 365 Defender portalında sürekli ve sürekli tehdit tehdit](https://security.microsoft.com/threatanalytics3/05658b6c-dc62-496d-ad3c-c6a795a33c27/overview) analizi raporu
+- Microsoft'un Algılama ve Yanıt Ekibi (DART) fidye yazılımı [yaklaşımı ve en iyi yöntemler](/security/compass/incident-response-playbook-dart-ransomware-approach) ve [örnek olay incelemesi](/security/compass/dart-ransomware-case-study)
 
 Microsoft 365:
 
-- [Azure ve Microsoft 365 ile Fidye Yazılımı Performansını En Üst Düzeye Microsoft 365](https://azure.microsoft.com/resources/maximize-ransomware-resiliency-with-azure-and-microsoft-365/)
-- [Fidye yazılımı saldırılarından kurtar](/microsoft-365/security/office-365-security/recover-from-ransomware)
-- [Kötü amaçlı yazılım ve fidye yazılımına karşı koruma](/compliance/assurance/assurance-malware-and-ransomware-protection)
-- [Bilgisayarınızın Windows 10 fidye yazılımlarından koruma](https://support.microsoft.com//windows/protect-your-pc-from-ransomware-08ed68a7-939f-726c-7e84-a72ba92c01c3)
+- [Azure ve Microsoft 365 ile Fidye Yazılımı Dayanıklılığını En Üst Düzeye Çıkarma](https://azure.microsoft.com/resources/maximize-ransomware-resiliency-with-azure-and-microsoft-365/)
+- [Fidye yazılımı saldırısından kurtarma](/microsoft-365/security/office-365-security/recover-from-ransomware)
+- [Kötü amaçlı yazılım ve fidye yazılımı koruması](/compliance/assurance/assurance-malware-and-ransomware-protection)
+- [Windows 10 bilgisayarınızı fidye yazılımlarından koruma](https://support.microsoft.com//windows/protect-your-pc-from-ransomware-08ed68a7-939f-726c-7e84-a72ba92c01c3)
 - [SharePoint Online'da fidye yazılımlarını işleme](/sharepoint/troubleshoot/security/handling-ransomware-in-sharepoint-online)
-- [Yazılım portalında fidye yazılımı](https://security.microsoft.com/threatanalytics3?page_size=30&filters=tags%3DRansomware&ordering=-lastUpdatedOn&fields=displayName,alertsCount,impactedEntities,reportType,createdOn,lastUpdatedOn,tags,flag) için tehdit Microsoft 365 Defender raporları
+- Microsoft 365 Defender portalında [fidye yazılımı için tehdit analizi raporları](https://security.microsoft.com/threatanalytics3?page_size=30&filters=tags%3DRansomware&ordering=-lastUpdatedOn&fields=displayName,alertsCount,impactedEntities,reportType,createdOn,lastUpdatedOn,tags,flag)
 
 Microsoft 365 Defender:
 
-- [Gelişmiş avla fidye yazılımı bulun](/microsoft-365/security/defender/advanced-hunting-find-ransomware)
+- [Gelişmiş avcılık ile fidye yazılımı bulma](/microsoft-365/security/defender/advanced-hunting-find-ransomware)
 
 Microsoft Azure:
 
-- [Fidye Yazılımı Saldırısını Azure Savunma](https://azure.microsoft.com/resources/azure-defenses-for-ransomware-attack/)
-- [Azure ve Microsoft 365 ile Fidye Yazılımı Performansını En Üst Düzeye Microsoft 365](https://azure.microsoft.com/resources/maximize-ransomware-resiliency-with-azure-and-microsoft-365/)
-- [Fidye yazılımlarına karşı korunmak için planı yedekleme ve geri yükleme](/security/compass/backup-plan-to-protect-against-ransomware)
-- [Microsoft Azure Yedekleme ile fidye yazılımlarından korunmaya](https://www.youtube.com/watch?v=VhLOr2_1MCg) yardımcı olun (26 dakikalık video)
-- [Sistemsel kimlik güvenliğinden ödün verme](/azure/security/fundamentals/recover-from-identity-compromise)
-- [Microsoft Sentinel'de gelişmiş çok amaçlı saldırı algılama](/azure/sentinel/fusion#ransomware)
-- [Microsoft Sentinel'de Fidye Yazılımı için Fidye Yazılımı Algılama](https://techcommunity.microsoft.com/t5/azure-sentinel/what-s-new-fusion-detection-for-ransomware/ba-p/2621373)
+- [Fidye Yazılımı Saldırısı için Azure Defenses](https://azure.microsoft.com/resources/azure-defenses-for-ransomware-attack/)
+- [Azure ve Microsoft 365 ile Fidye Yazılımı Dayanıklılığını En Üst Düzeye Çıkarma](https://azure.microsoft.com/resources/maximize-ransomware-resiliency-with-azure-and-microsoft-365/)
+- [Fidye yazılımlarına karşı koruma sağlamak için yedekleme ve geri yükleme planı](/security/compass/backup-plan-to-protect-against-ransomware)
+- [Microsoft Azure Backup ile fidye yazılımlarından korunmaya yardımcı olun](https://www.youtube.com/watch?v=VhLOr2_1MCg) (26 dakikalık video)
+- [Sistemik kimlik güvenliğinin aşılmasından kurtarma](/azure/security/fundamentals/recover-from-identity-compromise)
+- [Microsoft Sentinel'de gelişmiş çok aşamalı saldırı algılama](/azure/sentinel/fusion#ransomware)
+- [Microsoft Sentinel'de Fidye Yazılımı için Fusion Algılama](https://techcommunity.microsoft.com/t5/azure-sentinel/what-s-new-fusion-detection-for-ransomware/ba-p/2621373)
 
-Bulut Uygulamaları için Microsoft Defender:
+Microsoft Defender for Cloud Apps:
 
--  [Bulut Uygulamaları için Defender'da anormal algılama ilkeleri oluşturma](/cloud-app-security/anomaly-detection-policy)
+-  [Bulut için Defender Uygulamalarında anomali algılama ilkeleri oluşturma](/cloud-app-security/anomaly-detection-policy)
 
 Microsoft Güvenlik ekibi blog gönderileri:
 
-- [Fidye yazılımlarını önlemeye ve fidye yazılımlarından korunmaya yönelik 3 adım (Eylül 2021)](https://www.microsoft.com/security/blog/2021/09/07/3-steps-to-prevent-and-recover-from-ransomware/)
-- [İnsan tarafından işletilen fidye yazılımlarla mücadeleye yardımcı bir kılavuz: Bölüm 1 (Eylül 2021)](https://www.microsoft.com/security/blog/2021/09/20/a-guide-to-combatting-human-operated-ransomware-part-1/)
+- [Fidye yazılımlarını önleme ve kurtarma için 3 adım (Eylül 2021)](https://www.microsoft.com/security/blog/2021/09/07/3-steps-to-prevent-and-recover-from-ransomware/)
+- [İnsan tarafından çalıştırılan fidye yazılımıyla mücadele kılavuzu: Bölüm 1 (Eylül 2021)](https://www.microsoft.com/security/blog/2021/09/20/a-guide-to-combatting-human-operated-ransomware-part-1/)
 
-  Microsoft'un Algılama ve Yanıt Ekibi'nin (YERMİ) fidye yazılımı olayı soruşturmalarını nasıl yönetecekleri ile ilgili önemli adımlar.
+  Microsoft'un Algılama ve Yanıt Ekibi'nin (DART) fidye yazılımı olay araştırmalarını nasıl yürüttüğüne ilişkin temel adımlar.
 
-- [İnsan tarafından işletilen fidye yazılımıyla mücadeleye kılavuz: Bölüm 2 (Eylül 2021)](https://www.microsoft.com/security/blog/2021/09/27/a-guide-to-combatting-human-operated-ransomware-part-2/)
+- [İnsan tarafından çalıştırılan fidye yazılımıyla mücadele kılavuzu: Bölüm 2 (Eylül 2021)](https://www.microsoft.com/security/blog/2021/09/27/a-guide-to-combatting-human-operated-ransomware-part-2/)
 
   Öneriler ve en iyi yöntemler.
 
-- [Siber güvenlik risklerini anlayan giderek daha iyi hale geliyor: Bölüm 4: mevcut tehditlerle gezinme (Mayıs 2021)](https://www.microsoft.com/security/blog/2021/05/26/becoming-resilient-by-understanding-cybersecurity-risks-part-4-navigating-current-threats/)
+- [Siber güvenlik risklerini anlayarak dayanıklı hale gelme: Bölüm 4— Mevcut tehditlerde gezinme (Mayıs 2021)](https://www.microsoft.com/security/blog/2021/05/26/becoming-resilient-by-understanding-cybersecurity-risks-part-4-navigating-current-threats/)
 
-  Fidye yazılımı **bölümüne** bakın.
+  **Fidye yazılımı** bölümüne bakın.
 
 - [İnsan tarafından işletilen fidye yazılımı saldırıları: Önlenebilir bir olağanüstü durum (Mart 2020)](https://www.microsoft.com/security/blog/2020/03/05/human-operated-ransomware-attacks-a-preventable-disaster/)
 
-  Gerçek saldırılar için saldırı zinciri çözümlemeleri içerir.
+  Gerçek saldırıların saldırı zinciri analizlerini içerir.
 
-- [Fidye yazılımına yanıt— ödeme yapmak veya ödeme yapmak değil mi? (Aralık 2019)](https://www.microsoft.com/security/blog/2019/12/16/ransomware-response-to-pay-or-not-to-pay/)
-- [Norsk 365 Fidye yazılımı saldırılarına saydamlık saldırısıyla yanıt verdi (Aralık 2019)](https://www.microsoft.com/security/blog/2019/12/17/norsk-hydro-ransomware-attack-transparency/)
+- [Fidye yazılımı yanıtı— ödeme yapmak için mi yoksa ödememek için mi? (Aralık 2019)](https://www.microsoft.com/security/blog/2019/12/16/ransomware-response-to-pay-or-not-to-pay/)
+- [Norsk Hydro fidye yazılımı saldırısına şeffaflıkla yanıt veriyor (Aralık 2019)](https://www.microsoft.com/security/blog/2019/12/17/norsk-hydro-ransomware-attack-transparency/)

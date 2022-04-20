@@ -1,5 +1,5 @@
 ---
-title: Kuruluşta veri gizliliği olaylarını izleme ve yanıtlama
+title: Kuruluşunuzdaki veri gizliliği olaylarını izleme ve yanıtlama
 ms.author: bcarter
 author: brendacarter
 f1.keywords:
@@ -16,27 +16,27 @@ ms.collection:
 - m365solution-infoprotection
 - m365solution-scenario
 ms.custom: ''
-description: Kişisel veri olaylarını izlemek ve yanıtlamak için denetim ve uyarı ilkelerini ve veri konusu isteklerini kullanın.
-ms.openlocfilehash: 74efff60bb8e0ad6f170b57c86e384d3b689eee1
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Kişisel veri olaylarını izlemek ve yanıtlamak için denetim ve uyarı ilkelerini ve veri sahibi isteklerini kullanın.
+ms.openlocfilehash: 5f4dd6a59ae361cbef042bfc3587203b34620746
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988581"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64945351"
 ---
-# <a name="monitor-and-respond-to-data-privacy-incidents-in-your-organization"></a>Kuruluşta veri gizliliği olaylarını izleme ve yanıtlama
+# <a name="monitor-and-respond-to-data-privacy-incidents-in-your-organization"></a>Kuruluşunuzdaki veri gizliliği olaylarını izleme ve yanıtlama
 
-Microsoft 365 ilgili özellikleri faaliyete ettiyken, organizasyonda veri gizliliği olaylarını izlemenize, araştırmanıza ve yanıtlamanıza yardımcı olacak yeni özelliklerden de kullanılabilir. Mevzuat gövdelerine uyumluluğu göstermek için bunların her biri için süreçler, yordamlar ve diğer belgelerin olması da önemli olabilir.
+Microsoft 365 özellikleri, kuruluşunuzdaki veri gizliliği olaylarını izlemenize, araştırmanıza ve yanıtlamanıza yardımcı olmak için kullanılabilir. Bunların her biri için süreçlere, yordamlara ve diğer belgelere sahip olmak, düzenleyici kurumlara uyumluluğu göstermek için de önemli olabilir.
 
 Şunlar dahildir: 
 
 - Denetim ve uyarı ilkeleri
-- Veri konusu istekleri (içerik arama ve eBulma dahil)
-- Ek yatırım araçları ve raporlama
+- Veri sahibi istekleri (içerik arama ve eBulma dahil)
+- Ek araştırma araçları ve raporlama
 
 ## <a name="data-privacy-regulations-impacting-the-use-of-monitoring-and-response-tools"></a>İzleme ve yanıt araçlarının kullanımını etkileyen veri gizliliği düzenlemeleri
 
-Aşağıda, bilgi idaresi denetimleriyle ilgili olacak veri gizliliği düzenlemelerinin örnek bir listesi ve ve vemektedir:
+Bilgi idaresi denetimleriyle ilgili olabilecek veri gizliliği düzenlemelerinin örnek bir listesi aşağıda verilmiştir:
 
 - LGPD Makale 46
 - LGPD Makale 48
@@ -47,37 +47,37 @@ Aşağıda, bilgi idaresi denetimleriyle ilgili olacak veri gizliliği düzenlem
 - HIPAA-HITECH (45 C.F.R. 164.312(b))
 - CCPA (1798.105(c))
 
-Daha fazla bilgi için bkz [. Veri gizliliği risklerini değerlendirme ve hassas bilgileri belirleme](information-protection-deploy-assess.md).
+Daha fazla bilgi için bkz [. Veri gizliliği risklerini değerlendirme ve hassas bilgileri tanımlama](information-protection-deploy-assess.md).
 
-Veri gizliliği yönetmelikleri genel olarak aşağıdakilerin izlenmesi ve yanıtını içerir:
+Veri gizliliği düzenlemeleri genellikle izleme ve yanıt için aşağıdakileri çağırır:
 
-- Kişisel verilerin depolaması, paylaşımı ve işlanmasıyla ilgili etkinlikleri denetleme, uyarı ve raporlama
-- Bir veri konusu isteğini (DSR) yanıtlayabilme ve bazı durumlarda bu isteklere uyması için yatırım ve diğer idari önlemleri gerçekleştirebilme.
+- Kişisel verilerin depolanması, paylaşılması ve işlenmesiyle ilgili etkinlikler için denetim, uyarı ve raporlama
+- Veri sahibi isteğine (DSR) yanıt verebilme ve bazı durumlarda bu tür isteklere uymak için araştırma ve diğer yönetim önlemlerini gerçekleştirme.
 
-Ayrıca, organizasyonunız diğer uyumluluk ihtiyaçları veya iş nedenleriyle başka amaçlara yönelik izleme ve yanıt etkinlikleri gerçekleştirmek de ister. Veri gizliliği için izleme ve yanıt düzeni oluşturma, genel izleme ve yanıt planlama, uygulama ve yönetiminin bir parçası olarak yapılabilir.
+Kuruluşunuz ayrıca diğer uyumluluk gereksinimleri veya iş nedeniyle başka amaçlarla izleme ve yanıt etkinlikleri gerçekleştirmek isteyebilir. Veri gizliliği için izleme ve yanıt şemanızı oluşturma işlemi genel izleme ve yanıt planlaması, uygulaması ve yönetimi kapsamında yapılmalıdır.
 
-Veri gizliliği düzenlemelerine uygun olarak Microsoft 365 ve yanıt düzenini düzenlemeye başlamanıza yardımcı olmak için, bu makalede Microsoft 365 gibi soruları yanıtlamak için yararlı özellikler listelemektedir: 
+Veri gizliliği düzenlemelerine yönelik Microsoft 365'de izleme ve yanıt şemasını kullanmaya başlamanıza yardımcı olmak için, bu makalede Microsoft 365 aşağıdaki gibi soruları yanıtlamaya yönelik yararlı özellikler listelenmektedir: 
 
-- Farklı veri türleri ve kaynakları için hangi tür günlük izleme, yatırım ve raporlama teknikleri vardır?
-- Veri konusu isteklerini (DSR) işlemek için gerekli mekanizmalar ve anonimleştirme, yeniden işleme ve silme gibi tüm düzeltme eylemleri.
+- Farklı veri türleri ve kaynakları için günlük izleme, araştırma ve raporlama teknikleri ne tür kullanılabilir?
+- Veri sahibi isteklerini (DSR) ve anonimleştirme, yeniden düzenleme ve silme gibi tüm düzeltme eylemlerini işlemek için hangi mekanizmaların gerekli olacağı.
 
 ## <a name="auditing-and-alert-policies-in-the-security-and-compliance-center"></a>Güvenlik ve Uyumluluk Merkezi'nde Denetim ve Uyarı İlkeleri
 
-Denetim, gelişmiş denetim ve uyarı ilkelerini ayarlamaya yönelik şu makalelere bakın:
+Denetim, gelişmiş denetim ve uyarı ilkelerini ayarlamak için şu makalelere bakın:
 
 - [Birleşik denetim](../compliance/search-the-audit-log-in-security-and-compliance.md)
 - [Posta kutusu denetimi](../compliance/enable-mailbox-auditing.md)
 - [Gelişmiş denetim](../compliance/advanced-audit.md)
 - [Uyarı ilkeleri](../compliance/alert-policies.md)
 
-## <a name="data-subject-requests-for-the-gdpr-and-ccpa"></a>GDPR ve CCPA için veri konusu istekleri
+## <a name="data-subject-requests-for-the-gdpr-and-ccpa"></a>GDPR ve CCPA için veri sahibi istekleri
 
-[GdpR ve CCPA için Veri](/compliance/regulatory/gdpr-dsr-Office365) Konusu İstekleri'ne bakarak Microsoft 365.
+Microsoft 365'da DSR'ye yanıt verme hakkında bilgi için bkz[. GDPR ve CCPA için Veri Sahibi İstekleri](/compliance/regulatory/gdpr-dsr-Office365).
 
 ## <a name="manage-deleted-users-in-microsoft-stream"></a>Microsoft Stream'de silinen kullanıcıları yönetme
 
-Microsoft Stream için, kullanıcı Azure Active Directory'den (Azure AD) silindiğinde, bu noktadan önce paylaşılan bir Stream videosuyla ilişkilendirilmişse e-posta adresi videoyla ilişkilendirilmiş olarak kalır. Kaldırmak [için bkz. Silinen kullanıcıları Microsoft Stream'den](/stream/managing-deleted-users) yönetme.
+Microsoft Stream için, bir kullanıcı Azure Active Directory'dan (Azure AD) silindiğinde, adı bu noktadan önce gönderilen bir Stream videosuyla ilişkilendirildiyse, e-posta adresi videoyla ilişkili kalır. Kaldırmak için bkz. [Silinmiş kullanıcıları Microsoft Stream'den yönetme](/stream/managing-deleted-users).
 
-## <a name="insider-risk-management-as-an-investigative-tool"></a>Insider risk yönetimi bir yatırım aracı olarak
+## <a name="insider-risk-management-as-an-investigative-tool"></a>Araştırma aracı olarak Insider risk yönetimi
 
-[Microsoft 365'da Insider risk](../compliance/insider-risk-management.md) yönetimi, Microsoft Uyumluluk yönetim merkezinin bir özelliğidir ve organizasyonu risk altında olan etkinlikleri algılamanıza, araştırmanıza ve bu etkinliklere yönelik işlemde önlem alamanıza olanak sağlayarak dahili riski en aza indirmenize yardımcı olur.
+[Insider risk yönetimi](../compliance/insider-risk-management.md) , kuruluşunuzdaki riskli etkinlikleri algılamanıza, araştırmanıza ve işlem yapmanıza olanak tanıyarak iç riski en aza indirmenize yardımcı olmak için Microsoft Purview uyumluluk portalının bir özelliğidir.

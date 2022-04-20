@@ -1,5 +1,5 @@
 ---
-title: Advanced eDiscovery'de İletişim kitaplığında custo custo bir communications Advanced eDiscovery
+title: eBulma'daki İletişim kitaplığında koruyucu iletişim şablonlarını yönetme (Premium)
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -15,59 +15,59 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Özel iletişim şablonlarını (tutma bildirimi şablonu gibi) Advanced eDiscovery, bu şekilde kuruluşta herhangi bir durumda kullanılabilirler.
-ms.openlocfilehash: 1b5be4a4a923050b43943e81ac64265e16749899
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Kuruluşunuzda her durumda kullanılabilmesi için eKeşif'e (Premium) koruyucu iletişim şablonları (bekletme bildirimi şablonu gibi) ekleyebilirsiniz.
+ms.openlocfilehash: be8311a9687eb4edb9cc44e15264808a2a05a69a
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63704862"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64945163"
 ---
-# <a name="manage-custodian-communications-templates-in-advanced-ediscovery"></a>Özel iletişim şablonlarını Advanced eDiscovery
+# <a name="manage-custodian-communications-templates-in-ediscovery-premium"></a>eBulma'da koruyucu iletişim şablonlarını yönetme (Premium)
 
-Siz veya diğer kullanıcılar bir tutma bildirimi veya diğer özel iletişim türleri ekleyebilirsiniz; bir davanın devam durumunda İletişim sekmesindeki iletişim düzenleyicisini kullanarak iletişim belgesini sıfırdan Advanced eDiscovery gerekir. Artık, kurum içinde herhangi bir durumda iletişim oluşturmak için  kullanılan iletişim şablonları oluşturmanıza olanak sağlayan yeni bir özellik yayınlandı. İletişim şablonları oluşturulduktan sonra, bu şablonlar bir durumda kullanılabilir. Bu, bir bildirim oluşturmak için koruyucu iletişimleri oluşturan iyi durumdaki veya diğer kullanıcıların sıfırdan başlamak zorunda olmadığını anlamına gelir. Bunun yerine, bir özel kullanıcıya gönderilen bildirimi oluşturmak için bir şablon da kullanabilirler.
+Siz veya diğer kullanıcılar ayrı tutma bildirimi veya diğer tür koruyucu iletişimler oluşturduğunuzda, eBulma (Premium) durumunda **İletişimler** sekmesindeki iletişim düzenleyicisini kullanarak iletişim belgesini sıfırdan oluşturmanız gerekiyordu. Şimdi, kuruluşunuzda her durumda iletişim oluşturmak için kullanılabilecek iletişim şablonları oluşturmanıza olanak tanıyan yeni bir özellik yayımladık. İletişim şablonları oluşturulduktan sonra, bir durumda kullanılabilir. Bu, avukatların veya koruyucu iletişim oluşturan diğer kullanıcıların bildirim oluşturmak için sıfırdan başlaması gerekmeyecek anlamına gelir. Bunun yerine, bir koruyucuya gönderilen bildirimi oluşturmak için bir şablon seçebilirler.
 
-Bu makalede, belirli bir durum için yeni koruyucu bildirimi oluştururken kuruluş genelinde iletişim şablonları oluşturma ve bunları seçme Advanced eDiscovery açıklanmıştır.
+Bu makalede, belirli bir eBulma (Premium) olayı için yeni bir koruyucu bildirimi oluştururken kuruluş genelinde iletişim şablonları oluşturma ve bunları seçme işlemleri açıklanmaktadır.
 
 ## <a name="before-you-create-templates-in-the-communications-library"></a>İletişim kitaplığında şablon oluşturmadan önce
 
-- Advanced eDiscovery'de İletişim kitaplığında şablon eklemek veya kaldırmak için, kuruluşta eBulma Yöneticisi Advanced eDiscovery. Daha fazla bilgi için bkz[. Aşağıdaki kişilerde eBulma izinleri Microsoft 365 uyumluluk merkezi](assign-ediscovery-permissions.md)  
+- eBulma'da (Premium) İletişim kitaplığına şablon eklemek veya kaldırmak için kuruluşunuzda eBulma Yöneticisi olmanız gerekir. Daha fazla bilgi için bkz. [Microsoft Purview uyumluluk portalında eBulma izinleri atama](assign-ediscovery-permissions.md)  
 
-- Kuruluş, İletişim kitaplığında en çok 50 şablona sahip olabilir.
+- Kuruluşunuzun İletişim kitaplığında en fazla 50 şablonu olabilir.
 
 ## <a name="create-a-communications-template"></a>İletişim şablonu oluşturma
 
-1. Sayfa Microsoft 365 uyumluluk merkezi, [Ayarlar'a Advanced eDiscovery](https://go.microsoft.com/fwlink/p/?linkid=2173764) ve Ayarları **Değiştir'Advanced eDiscovery tıklayın**.
+1. Uyumluluk portalında [eBulma (Premium)](https://go.microsoft.com/fwlink/p/?linkid=2173764) bölümüne gidin ve **eBulma (Premium) ayarlarına** tıklayın.
 
-   ![Advanced eDiscovery seçin](..\media\HistoricalVersions1.png)
+   ![eBulma (Premium) ayarlarını seçin](..\media\HistoricalVersions1.png)
 
-2. İletişim **Ayarlar**, İletişim kitaplığı **sekmesini** seçin.
+2. **Ayarlar** sayfasında **İletişim kitaplığı** sekmesini seçin.
 
-3. İletişim kitaplığı **sayfasında Oluştur'a** **tıklayın**.
+3. **İletişim kitaplığı** sayfasında **Oluştur'a** tıklayın.
 
-4. Özel iletişim oluşturmak için yordamı izleyin. Adım adım yönergeler için bkz. [Yasal tutma bildirimi oluşturma](create-hold-notification.md).
+4. Koruyucu iletişim oluşturmak için yordamı izleyin. Adım adım yönergeler için bkz. [Yasal tutma bildirimi oluşturma](create-hold-notification.md).
 
    > [!NOTE]
-   > İletişim şablonu oluşturma adımları, olay içinde bildirim oluşturmak için iş akışıyla aynıdır. Tek fark, bir şablon  oluştururken bir çalışan belirtmezseniz ve koruyucular atamazsınız. Bir çalışan için özel kişi belirtme ve özel kişi atama, bir dava için özel kişi bildirimi oluşturmak üzere bir iletişim şablonu kullanarak yapılır.
+   > İletişim şablonu oluşturma adımları, bir servis talebi içinde bildirim oluşturmak için kullanılan iş akışıyla aynıdır. Tek fark, şablon oluşturduğunuzda veren bir memur belirtmediğiniz ve koruyucu atamadığınızdır. Bir servis talebi için koruyucu bildirimi oluşturmak üzere iletişim şablonu kullandığınızda, veren bir memur belirtme ve koruyucu atama işlemi yapılır.
 
-5. Siz bir şablon oluşturdukta, bu şablon İletişim kitaplığı **sayfasında** görüntülenir.
+5. Bir şablon oluşturduktan sonra, **bu şablon İletişim kitaplığı** sayfasında görüntülenir.
 
    ![İletişim kitaplığında görüntülenen şablonlar](..\media\AeDCommunicationsLibrary1.png)
 
-Siz veya diğer eBulma Yöneticileri bir iletişim şablonunu düzenleyebilirsiniz. Şablonda yaptığınız değişiklikler, daha önce bu şablon kullanılarak oluşturulmuş olan bildirimleri etkilemez veya değiştirmez. Bu değişiklikler yalnızca güncelleştirilmiş şablon kullanılarak oluşturulan yeni bildirimlere uygulanır.
+Siz veya diğer eBulma Yöneticileri bir iletişim şablonunu düzenleyebilirsiniz. Şablonda yaptığınız değişiklikler, daha önce bu şablon kullanılarak oluşturulmuş bildirimleri etkilemez veya değiştirmez. Bu değişiklikler yalnızca güncelleştirilmiş şablon kullanılarak oluşturulan yeni bildirimler için geçerlidir.
 
-## <a name="use-a-communications-template-to-create-a-custodian-notification"></a>Özel bildirim oluşturmak için iletişim şablonu kullanma
+## <a name="use-a-communications-template-to-create-a-custodian-notification"></a>Koruyucu bildirim oluşturmak için iletişim şablonu kullanma
 
-İletişim kitaplığında bir veya birden çok iletişim şablonu oluşturulduktan sonra, bu şablonlar bir durumda bir özel bildirim oluşturmak için seçilebilir.
+İletişim kitaplığında bir veya daha fazla iletişim şablonu oluşturulduktan sonra, bu şablonlar bir durumda koruyucu bildirimi oluşturmak için seçilebilir.
 
 Şablon seçmek için:
 
-1. Gelişmiş Microsoft 365 uyumluluk merkezi, **eBulma > Gelişmiş'e** gidip kurum durumdaki vakaların listesini görüntüleniyor.
+1. Kuruluşunuzdaki servis taleplerinin listesini görüntülemek için uyumluluk portalında **eBulma > Gelişmiş'e** gidin.
 
-2. Bir vaka seçin, İletişim **sekmesine tıklayın** ve sonra da Yeni **iletişim'e tıklayın**.
+2. Bir servis talebi seçin, **İletişimler** sekmesine ve ardından **Yeni iletişim'e** tıklayın.
 
-3. İletişimi **adla** sayfasında, Özel bildirim  oluşturmak üzere kullanmak üzere bir iletişim şablonu seçmek için İletişim şablonunu seçin açılan listesini kullanın.
+3. **İletişimi adlandır** sayfasında İletişim **şablonunu seçin** açılan listesini kullanarak, koruyucu bildirimini oluşturmak için kullanılacak iletişim şablonunu seçin.
 
-   Açılan listede, kurumnizin İletişim kitaplığında yer alan şablonların listesi görüntülenir.
+   Kuruluşunuzun İletişim kitaplığındaki şablonların listesi açılan listede görüntülenir.
 
-   ![Açılan listede görüntülenen İletişim kitaplığından Şablonlar.](..\media\AeDCommunicationsTemplates1.png)
+   ![İletişim kitaplığındaki şablonlar açılan listede görüntülenir.](..\media\AeDCommunicationsTemplates1.png)

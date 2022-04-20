@@ -1,11 +1,11 @@
 ---
-title: Başka durumlarda Advanced eDiscovery ve yönetme Microsoft 365
+title: Microsoft 365'de eBulma (Premium) servis taleplerini oluşturma ve yönetme
 f1.keywords:
 - NOCSH
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: ''
+ms.date: 04/08/2022
 audience: Admin
 ms.topic: how-to
 ms.service: O365-seccomp
@@ -19,101 +19,101 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MOE150
 - MET150
-description: Bu makalede, yeni olay oluşturma ve Advanced eDiscovery açıklanmıştır. İlk adım, olay oluşturmak ve dosya özelliklerini ve Advanced eDiscovery kullanmaya başlamaktır.
-ms.openlocfilehash: f647421dcaba3d50f1cb8b7a6b1e58a792f23403
-ms.sourcegitcommit: 0ee2dabe402d44fecb6856af98a2ef7720d25189
+description: Bu makalede, Microsoft Purview eKeşif (Premium) servis taleplerinin nasıl oluşturulacağı ve yönetildiği açıklanır. İlk adım bir servis talebi oluşturmak ve eBulma (Premium) özelliklerini ve işlevselliğini kullanmaya başlamaktır.
+ms.openlocfilehash: fb14c5ce7f1ffca6216e8d592c5cc1c7ff2802ce
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "62999075"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64946429"
 ---
-# <a name="create-and-manage-an-advanced-ediscovery-case"></a>Olay oluşturma ve Advanced eDiscovery yönetme
+# <a name="create-and-manage-an-ediscovery-premium-case"></a>eBulma (Premium) olayı oluşturma ve yönetme
 
-E-Advanced eDiscovery ayardikten ve davaları yönetecek olan kuruluş [eBulma](get-started-with-advanced-ediscovery.md#step-2-assign-ediscovery-permissions) yöneticilerine izinler atadikten sonra, bir sonraki adım vakayı oluşturmak ve yönetmektir.
+Microsoft Purview eBulma 'yı (Premium) ayarladıktan ve kuruluşunuzdaki [eBulma yöneticilerine servis taleplerini yönetecek izinler atadıktan](get-started-with-advanced-ediscovery.md#step-2-assign-ediscovery-permissions) sonra, sonraki adım bir servis talebi oluşturmak ve yönetmektir.
 
-Bu makalede ayrıca, bir dava veya diğer soruşturma türlerinde yer alan Advanced eDiscovery iş akışını yönetmek için vakaları kullanmaya yönelik üst düzey bir genel bakış da ve almaktadır.
+Bu makalede ayrıca, yasal bir olay veya diğer araştırma türleri için eKeşif (Premium) iş akışını yönetmek üzere kullanım örneklerine üst düzey bir genel bakış sağlanır.
 
-## <a name="create-a-case"></a>Vaka oluşturma
+## <a name="create-a-case"></a>Servis talebi oluşturma
 
-Vaka oluşturmak ve üye eklemek için aşağıdaki adımları tamamlayın. Vakayı oluşturan kullanıcı otomatik olarak üye olarak eklenir. Olay üyeleri olayla ilgili bilgilere Microsoft 365 uyumluluk merkezi ve Advanced eDiscovery gerçekleştirebilir.
+Servis talebi oluşturmak ve üye eklemek için aşağıdaki adımları tamamlayın. Servis talebini oluşturan kullanıcı otomatik olarak üye olarak eklenir. Servis talebi üyeleri Olaya Microsoft Purview uyumluluk portalından erişebilir ve eBulma (Premium) görevlerini gerçekleştirebilir.
 
-1. eK <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 uyumluluk merkezi</a> izinleri atanmış olan kullanıcı hesabının kimlik bilgilerini kullanarak oturum açın. Kuruluş Yönetimi rol grubunun üyeleri de herhangi bir olay Advanced eDiscovery oluşturabilir.
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Uyumluluk portalına</a> gidin ve eBulma izinleri atanmış kullanıcı hesabının kimlik bilgilerini kullanarak oturum açın. Kuruluş Yönetimi rol grubunun üyeleri de eBulma (Premium) servis talepleri oluşturabilir.
 
-2. Gezinti bölmesinin sol Microsoft 365 uyumluluk merkezi'ne **tıklayın,** **ardından eBulmaAdvanced'i** >  seçin ve ardından Durumlar <a href="https://go.microsoft.com/fwlink/p/?linkid=2173764" target="_blank">**sekmesini** seçin</a>.
+2. Uyumluluk portalının sol gezinti bölmesinde **Tümünü göster'e** tıklayın ve **sonra eBulmaGeldi'yi** >  seçin ve ardından <a href="https://go.microsoft.com/fwlink/p/?linkid=2173764" target="_blank">**Servis Talepleri** sekmesini</a> seçin.
 
-3. Vaka **oluştur'a seçin**.
+3. **Servis talebi oluştur'u** seçin.
 
-4. Yeni **eBulma büyük/küçük** harf çıkış sayfasında, büyük/küçük harfe bir ad (gerekli) ekleyin ve sonra isteğe bağlı bir büyük/küçük harf numarası ve açıklama yazın. Olay adı, kurum içinde benzersiz olmalıdır.
+4. **Yeni eBulma servis talebi** açılır sayfasında, servis talebine bir ad verin (gerekli) ve ardından isteğe bağlı bir servis talebi numarası ve açıklama yazın. Servis talebi adı kuruluşunuzda benzersiz olmalıdır.
 
-5. **Vakayı oluşturmak** için Kaydet'e tıklayın.
+5. Servis talebini oluşturmak için **Kaydet'e** tıklayın.
 
-   Yeni vaka oluşturulur **ve Ayarlar büyük**/harf sekmesinde görüntülenir.
+   Yeni servis talebi oluşturulur ve yeni servis talebindeki **Ayarlar** sekmesi görüntülenir.
 
-6. Yeni Sekme **& Access izinler** **kutucu Ayarlar** Seç'e **tıklayın**.
+6. Ayarlar **sekmesindeki** **Access & izinleri** kutucuğunda **Seç'e** tıklayın.
 
-7. Bu **vakayı yönet uç** sayfasında, Üyeleri **yönet'in altında**, vakaya üye **eklemek** için Ekle'ye tıklayın.
+7. **Bu olayı yönet** açılır sayfasındaki **Üyeleri yönet'in** altında **, olaya** üye eklemek için Ekle'ye tıklayın.
 
-8. Kişi listesinde, vakaya eklemek istediğiniz kişilerin adlarının yanındaki onay kutusunu seçin. Daha önce de belirtildiği gibi, vakaya ekley istediğiniz kişilerin uygun eBulma izinlerine atanmış olduğundan emin olun.
+8. Kişi listesinde, servis talebine eklemek istediğiniz kişilerin adlarının yanındaki onay kutusunu seçin. Daha önce açıklandığı gibi, servis talebine eklediğiniz kişilere uygun eBulma izinlerinin atandığından emin olun.
 
-9. Vakanın üyesi olarak eklemek istediğiniz kişiyi seçtikten sonra Ekle'ye **tıklayın**.
+9. Olaya üye olarak eklenecek kişileri seçtikten sonra **Ekle'ye** tıklayın.
 
-10. Bu **vakayı yönet uç** sayfasında **Kaydet'e** tıklar ve vaka üyelerinin yeni listesini kaydedebilirsiniz.
+10. **Yeni servis talebi** üyeleri listesini kaydetmek için Bu olayı yönet açılır sayfasında **Kaydet'e** tıklayın.
 
-11. Vaka **giriş sayfasına** gitmek için Giriş sekmesine tıklayın.
+11. Servis talebi giriş sayfasına gitmek için **Giriş** sekmesine tıklayın.
 
 ## <a name="manage-the-workflow"></a>İş akışını yönetme
 
-E-postanızı kullanmaya Advanced eDiscovery için, yaygın eBulma uygulamalarıyla uyumlu [temel bir iş akışı ve burada açık bir iş akışı vardır](advanced-ediscovery-edrm.md). Bu adımların her biri, keşfedebilirsiniz bazı genişletilmiş Advanced eDiscovery de vurgulaacağız.
+eBulma (Premium) kullanmaya başlamanız için [yaygın eBulma uygulamalarıyla](advanced-ediscovery-edrm.md) uyumlu temel bir iş akışı aşağıdadır. Bu adımların her birinde, keşfedebileceğiniz bazı genişletilmiş eBulma (Premium) işlevlerini de vurgulayacağız.
 
-![Advanced eDiscovery iş akışı.](../media/AeDWorkflow.png)
+![eBulma (Premium) iş akışı.](../media/AeDWorkflow.png)
 
-1. **[Vakaya koruyucular](add-custodians-to-case.md) [ve özel olmayan veri](non-custodial-data-sources.md) kaynakları ekleyin**. Vaka oluşturdukktan sonra ilk adım koruyucu eklemektir. *Koruyucu, olayla* ilgili olması gereken bir belgenin veya elektronik dosyanın yönetimsel denetimine sahip olan kişidir. Buna ek olarak, belirli bir kullanıcıyla ilişkili olmayan ancak olayla ilgili olan veri kaynakları  eklersiniz.
+1. **[Olaya koruyucular](add-custodians-to-case.md) ve [gözetimsiz veri kaynakları](non-custodial-data-sources.md) ekleyin**. Olay oluşturduktan sonraki ilk adım, koruyucu eklemektir. *Koruyucu*, olayla ilgili olabilecek bir belgenin veya elektronik dosyanın yönetim denetimine sahip bir kişidir. Ayrıca, belirli bir kullanıcıyla ilişkilendirilmeyen ancak servis talebiyle ilgili olabilecek veri kaynakları ekleyebilirsiniz.
 
-   Bir vakaya koruyucular eklerken aşağıdakiler olur:
+   Bir olaya koruyucu eklerken gerçekleşen (veya yapabileceğiniz) bazı şeyler şunlardır:
 
-   - Custo custo custo her Exchange posta kutusunda, OneDrive hesabında ve custo bir üyesi olduğu tüm Microsoft Teams veya Yammer gruplarında veriler bu durumda "özel veri" olarak "işaretlenir".
+   - Koruyucunun Exchange posta kutusunda, OneDrive hesabındaki ve koruyucunun üyesi olduğu Microsoft Teams veya Yammer gruplarındaki veriler, olayda koruma verileri olarak "işaretlenebilir".
   
-   - Custo bir veri yeniden dizine alır (Gelişmiş dizin oluşturma adı verilen *bir işlem tarafından*). Bu, bir sonraki adımda aramanızı en iyi duruma getirmeye yardımcı olur.
+   - Koruyucu verileri yeniden dizine alınır ( *Gelişmiş dizin oluşturma* adlı bir işlem tarafından). Bu, sonraki adımda aramayı iyileştirmeye yardımcı olur.
   
-   - Custo cust Bu, araştırma sırasında olayla ilgili olabilir verileri korur.
+   - Koruyucu verileri ayrı tutabilirsiniz. Bu, araştırma sırasında olayla ilgili olabilecek verileri korur.
   
-   - Diğer veri kaynaklarını bir özel dosyayla (örneğin, bir SharePoint sitesi veya Microsoft 365 Grubunu bir custo OneDrive custo veya account'daki veriler gibi yeniden yerleştirilsin, yerleştirilsin ve aransın) ile ilişkilendirmeniz gerekir.
+   - Diğer veri kaynaklarını bir koruyucuyla ilişkilendirebilirsiniz (örneğin, bir SharePoint sitesini veya Microsoft 365 Grubunu bir koruyucuyla ilişkilendirebilirsiniz), böylece bu veriler aynı koruyucunun posta kutusu veya OneDrive hesabındaki veriler gibi yeniden dizine eklenebilir, beklemeye alınıp aranabilir.
 
-   - Özel çalışanlara yasal [tutma](managing-custodian-communications.md) bildirimi Advanced eDiscovery iletişim iş akışını kullanabilirsiniz.
+   - eBulma(Premium) içindeki [iletişim iş akışını](managing-custodian-communications.md) kullanarak koruyuculara yasal saklama bildirimi gönderebilirsiniz.
 
-2. **[Veri kaynaklarından ilgili içeriği toplayın](create-draft-collection.md)**. Bir vakaya koruyucular ve özel olmayan veri kaynakları ekledikten sonra, bu veri kaynaklarında olayla ilgili olabilir içerik aramak için yerleşik koleksiyonlar aracını kullanın. Arama sonuçlarını, büyük olasılıkla [olayla ilgili olan](building-search-queries.md) verilerle birlikte geri dönen arama sorguları oluşturmak için anahtar sözcükler, özellikler ve koşullar kullanırsınız. Şunları da yapabilirsiniz:
+2. **[Veri kaynaklarından ilgili içeriği toplayın](create-draft-collection.md)**. Bir servis talebine koruyucular ve gözetimsiz veri kaynakları ekledikten sonra, bu veri kaynaklarında olayla ilgili olabilecek içerikleri aramak için yerleşik koleksiyonlar aracını kullanın. Büyük olasılıkla servis talebiyle ilgili olan verilerle arama sonuçları döndüren [arama sorguları oluşturmak](building-search-queries.md) için anahtar sözcükleri, özellikleri ve koşulları kullanırsınız. Şunları da yapabilirsiniz:
 
-   - Sonuçları [daraltmak için](collection-statistics-reports.md) koleksiyonu daraltmanıza yardımcı olacak koleksiyon istatistiklerini görüntüleme.
+   - Sonuçları daraltmak için bir koleksiyonu daraltmanıza yardımcı olabilecek koleksiyon [istatistiklerini](collection-statistics-reports.md) görüntüleyin.
 
-   - Uygun verilerin bulunıp buluna olmadığını hızlı bir şekilde doğrulamak için koleksiyonun bir örneğini önizle.
+   - İlgili verilerin bulunup bulunmadığını hızla doğrulamak için koleksiyonun bir örneğini önizleme.
 
-   - Sorguyu düzeltin ve koleksiyonu yeniden çalıştırabilirsiniz.
+   - Sorguyu düzeltin ve koleksiyonu yeniden çalıştırın.
 
-3. **[Koleksiyonu gözden geçirme kümesine kaydetme](commit-draft-collection.md)**. Bir aramanın istenen verileri döndür yönelik olduğunu yapılandırdıktan ve doğruladıktan sonra, bir sonraki adım arama sonuçlarını gözden geçirme kümesine eklemektir. Gözden geçirme kümesine veri eklerken, öğeler özgün konumlarından güvenli bir Azure Depolama Alanı'Depolama kopyalanır. Gözden geçirme kümesinde öğeleri gözden geçirme ve çözümlemeye yönelik kapsamlı ve hızlı aramalar için veriler yeniden dizine alındı. Buna ek olarak, [gözden geçirme kümesine Office 365 olmayan veriler de ebilirsiniz](load-non-office-365-data-into-a-review-set.md).
+3. **[Koleksiyonu bir gözden geçirme kümesine işleme](commit-draft-collection.md)**. Bir aramanın istenen verileri döndürdüğünü yapılandırıp doğruladıktan sonra, sonraki adım arama sonuçlarını bir gözden geçirme kümesine eklemektir. Bir gözden geçirme kümesine veri eklediğinizde, öğeler özgün konumlarından güvenli bir Azure Depolama konumuna kopyalanır. Veriler, gözden geçirme kümesindeki öğeleri gözden geçirirken ve çözümlerken kapsamlı ve hızlı aramalar için iyileştirmek üzere yeniden dizine eklenir. Ayrıca, [gözden geçirme kümesine Office 365 olmayan veriler de ekleyebilirsiniz](load-non-office-365-data-into-a-review-set.md).
 
-   Ayrıca, konuşma gözden geçirme kümesi olarak adlandırılan, veri ek adında, özel bir gözden geçirme *kümesi de içerir*. Bu tür incelemeler, konuşmaların yeniden yapılandırılmasını, gözden geçirmesini ve dışarı aktarması için konuşma becerileri Microsoft Teams. Daha fazla bilgi için bkz[. Advanced eDiscovery](conversation-review-sets.md).
+   Ayrıca, veri ekleyebileceğiniz ve konuşma gözden geçirme kümesi olarak adlandırılan özel bir *gözden geçirme kümesi de vardır*. Bu tür inceleme kümeleri, Microsoft Teams'dakiler gibi yazışma yazışmalarını yeniden derlemek, gözden geçirmek ve dışarı aktarmak için konuşma yeniden yapılandırma özellikleri sağlar. Daha fazla bilgi için bkz. [eBulma'da (Premium) konuşmaları gözden geçirme](conversation-review-sets.md).
 
-4. **Gözden geçirme kümesinde verileri gözden geçirme ve çözümleme**. Artık veriler bir gözden geçirme kümesinde olduğu için, veri kümesini araştıran durumla en ilgili olayla ilgili olarak azaltmayı amaç edinerek olay verilerini görüntülemek ve çözümlemek için çok çeşitli araç ve yetenekleri kullanabilirsiniz. Burada, bu işlem sırasında kullanabileceğiniz bazı araç ve becerilerin listesi ve ve listeyi kullanabilirsiniz.
+4. **Bir gözden geçirme kümesindeki verileri gözden geçirin ve analiz edin**. Veriler bir gözden geçirme kümesinde olduğuna göre, veri kümesini araştırdığınız servis talebiyle en alakalı duruma düşürmek amacıyla büyük/küçük harf verilerini görüntülemek ve analiz etmek için çok çeşitli araçlar ve özellikler kullanabilirsiniz. Bu işlem sırasında kullanabileceğiniz bazı araç ve özelliklerin listesi aşağıdadır.
 
-   - [Belgeleri görüntüleme](view-documents-in-review-set.md). Bu, her belgenin meta verilerini gözden geçirme kümesinde görüntülemeyi ve belgeyi yerel sürümünde veya metin sürümünde görüntülemeyi içerir.
+   - [Belgeleri görüntüleme](view-documents-in-review-set.md). Bu, her belgenin meta verilerini bir gözden geçirme kümesinde görüntülemeyi ve belgeyi yerel sürümünde veya metin sürümünde görüntülemeyi içerir.
 
-   - [Sorgu ve filtre oluşturma](review-set-search.md). Çeşitli arama ölçütlerini kullanarak arama sorguları oluşturabilirsiniz (tüm dosya meta verileri özelliklerinde [](document-metadata-fields-in-advanced-ediscovery.md) arama yapma özelliği de içinde olmak üzere, olay verilerini olayla en ilgili olanla daha fazla daraltır ve daraltabilirsiniz). Bu sonuçları daha da geliştirmek için, arama sorgusunun sonuçlarına hızla başka koşullar uygulamak için de gözden geçirme kümesi filtrelerini kullanabilirsiniz. 
+   - [Sorgular ve filtreler oluşturun](review-set-search.md). Çeşitli arama ölçütlerini kullanarak arama sorguları oluşturursunuz (servis talebi verilerini büyük/küçük harfe en uygun değere daha fazla daraltmak ve silmek için tüm [dosya meta veri özelliklerini](document-metadata-fields-in-advanced-ediscovery.md) arama özelliği dahil). Ayrıca, bu sonuçları daha da daraltmak için bir arama sorgusunun sonuçlarına hızlı bir şekilde başka koşullar uygulamak için gözden geçirme kümesi filtrelerini de kullanabilirsiniz. 
 
-   - [Etiketleri oluşturun ve kullanın](tagging-documents.md). Hangi etiketlerin yanıt vereni (veya yanıtsız olduğunu) tanımlamak için bir gözden geçirme kümesinde belgelere etiketler uygulayabilir ve ardından etiketlenmiş belgeleri eklemek veya dışarıda tutmak için arama sorguları oluştururken bu etiketleri kullanabilirsiniz. Ayrıca, hangi belgelerin dışarı aktarılamayacaklarını belirlemek için etiketleme de abilirsiniz.
+   - [Etiket oluşturma ve kullanma](tagging-documents.md). Bir gözden geçirme kümesindeki belgelere etiket uygulayarak hangilerinin yanıt veren (veya büyük/küçük harfe yanıt vermeyen) olduğunu belirleyebilir ve ardından etiketli belgeleri dahil etmek veya hariç tutmak için arama sorguları oluştururken bu etiketleri kullanabilirsiniz. Ayrıca hangi belgeleri dışarı aktarabileceğinizi belirlemek için etiketleme yapabilirsiniz.
 
-   - [Belgelere ek açıklama veya belgeyi yeniden açıklama.](view-documents-in-review-set.md#annotate-view) Bir gözden geçirmede belgelere ek açıklama eklemek ve belgelerde içeriği iş ürünü olarak yeniden işlem yapmak için ek açıklama aracını kullanabilirsiniz. Belgenin tam olarak olmayan yerel sürümünü dışarı aktarma riskini azaltmak için, inceleme sırasında açıklamalı veya tam olarak ek açıklamalı bir belgenin PDF sürümünü oluşturtük.
+   - [Belgelere not ekleme ve belgeleri yeniden düzenleme](view-documents-in-review-set.md#annotate-view). Bir incelemede ek açıklama aracını kullanarak belgelere açıklama ekleyebilir ve belgelerdeki içeriği iş ürünü olarak yeniden düzenleyebilirsiniz. Belgenin kaydedilmemiş yerel sürümünü dışarı aktarma riskini azaltmak için inceleme sırasında açıklamalı veya yeniden düzenlenen bir belgenin PDF sürümünü oluşturuyoruz.
 
-   - [Vaka verilerini çözümle](analyzing-data-in-review-set.md). Bu Advanced eDiscovery çözümleme işlevselliği güçlü bir işlevdir. Gözden geçirme kümesinde veriler üzerinde çözümlemeler çalıştırdikten sonra, incelemeniz gereken belge hacmini azaltmaya yardımcı olacak, yakın yineleme algılama, e-posta dizileri ve temalar gibi çözümlemeler gerçekleştiriz. Ayrıca, çalışan analizlerin sonucu özetleyen bir Analiz raporları da oluşturuz. Daha önce de açıklanması gibi, çözümlemelerde [avukatlık ayrıcalık algılama modeli de çalıştırıldı](attorney-privilege-detection.md#use-the-attorney-client-privilege-detection-model).
+   - [Büyük/küçük harf verilerini analiz etme](analyzing-data-in-review-set.md). eBulma (Premium) içindeki analiz işlevselliği güçlüdür. Gözden geçirme kümesindeki veriler üzerinde analiz çalıştırdıktan sonra, gözden geçirmeniz gereken belge hacmini azaltmaya yardımcı olabilecek neredeyse yinelenen algılama, e-posta yazışması ve temalar gibi analizler yaparız. Ayrıca, analiz çalıştırmanın sonucunu özetleyen bir Analiz raporları da oluştururuz. Daha önce açıklandığı gibi, analiz çalıştırmak [ayrıca avukat-istemci ayrıcalık algılama modelini](attorney-privilege-detection.md#use-the-attorney-client-privilege-detection-model) çalıştırır.
 
-5. **Vaka verilerini dışarı aktarma ve indirme**. Veri toplama, gözden geçirme ve çözümlemenin son adımı, verileri dış inceleme için Advanced eDiscovery gözden geçirmek veya araştırma ekibinin dışından kişiler tarafından gözden geçirmektir. Verileri dışarı aktarma, iki adımlı bir işlemdir. İlk adım, gözden geçirme [](export-documents-from-review-set.md) kümesi dışında olan verileri dışarı aktararak farklı bir Azure Depolama Depolama (Microsoft tarafından sağlanan veya sizin yönetilen bir konum) kopyalamaktır. Ardından, Azure Depolama Gezgini [yerel bir](download-export-jobs.md) bilgisayara indirmek için bu uygulamayı kullanırsınız. Dışarı aktarıldı veri dosyalarına ek olarak, dışarı aktarma paketinin içinde de dışarı aktarma raporu, özet rapor ve hata raporu yer alır.
+5. **Servis talebi verilerini dışarı aktarma ve indirme**. Olay verilerini topladıktan, gözden geçirdikten ve analiz ettikten sonra son adım, eBulma (Premium) dışında dış gözden geçirme veya araştırma ekibi dışındaki kişiler tarafından gözden geçirme amacıyla dışarı aktarmaktır. Verileri dışarı aktarmak iki adımlı bir işlemdir. İlk adım, verileri gözden geçirme kümesinden [dışarı aktarmak](export-documents-from-review-set.md) ve farklı bir Azure Depolama konumuna kopyalamaktır (Microsoft tarafından sağlanan veya kuruluşunuz tarafından yönetilen bir konum). Ardından verileri yerel bir bilgisayara [indirmek](download-export-jobs.md) için Azure Depolama Gezgini kullanırsınız. Dışarı aktarılan veri dosyalarına ek olarak, dışarı aktarma paketinin içeriği bir dışarı aktarma raporu, bir özet raporu ve bir hata raporu da içerir.
 
-## <a name="advanced-ediscovery-architecture"></a>Advanced eDiscovery mimarisi
+## <a name="ediscovery-premium-architecture"></a>eBulma (Premium) mimarisi
 
-Burada, Advanced eDiscovery uç-uç iş akışını tek coğrafi ortamda ve çok coğrafi bir ortamda gösteren bir mimari diyagramı ve Elektronik Bulma Başvuru Modeli ile uyumlu uç uç veri akışını gösteren bir mimari diyagramı ve [bulunmaktadır.](overview-ediscovery-20.md#advanced-ediscovery-alignment-with-the-electronic-discovery-reference-model)
+Burada eBulma (Premium) uçtan uca iş akışını tek coğrafi bir ortamda ve çok coğrafi bir ortamda ve [Elektronik Bulma Başvuru Modeli](overview-ediscovery-20.md#ediscovery-premium-alignment-with-the-electronic-discovery-reference-model) ile uyumlu uçtan uca veri akışını gösteren bir mimari diyagramı yer alır.
 
-[![Model posteri: Advanced eDiscovery Mimari'ye Microsoft 365.](../media/solutions-architecture-center/ediscovery-poster-thumb.png)](../media/solutions-architecture-center/m365-advanced-ediscovery-architecture.png)
+[![Model posteri: Microsoft 365'de eBulma (Premium) Mimarisi.](../media/solutions-architecture-center/ediscovery-poster-thumb.png)](../media/solutions-architecture-center/m365-advanced-ediscovery-architecture.png)
 
-[Resim olarak görüntüleme](../media/solutions-architecture-center/m365-advanced-ediscovery-architecture.png)
+[Resim olarak görüntüle](../media/solutions-architecture-center/m365-advanced-ediscovery-architecture.png)
 
 [PDF dosyası olarak indirme](https://download.microsoft.com/download/d/1/c/d1ce536d-9bcf-4d31-b75b-fcf0dc560665/m365-advanced-ediscovery-architecture.pdf)
 

@@ -18,116 +18,116 @@ search.appverid:
 - MET150
 ms.assetid: 72bbad69-035b-4d33-b8f4-549a2743e97d
 ROBOTS: NOINDEX, NOFOLLOW
-description: Etkinlik uyarılarını etkinlik uyarılarını Microsoft 365 uyumluluk merkezi ve yönetin; böylece Microsoft 365 kullanıcılar belirli etkinlikleri gerçekleştirecekken size e-posta bildirimleri gönderecek
-ms.openlocfilehash: 593c51a9d85ebb6f687a5e8573df32d4de515e6b
-ms.sourcegitcommit: dc26169e485c3a31e1af9a5f495be9db75c49760
+description: Kullanıcılar belirli etkinlikleri gerçekleştirdiğinde Microsoft 365 size e-posta bildirimleri göndermesi için Microsoft Purview uyumluluk portalında etkinlik uyarıları ekleme ve yönetme
+ms.openlocfilehash: 7826a09bff1dd17febc3f621b50ed32129e21a37
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "62990010"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64946495"
 ---
 # <a name="create-activity-alerts"></a>Etkinlik uyarıları oluşturma
 
-Kullanıcılar etkinlik etkinliklerini belirli bir etkinlik gerçekleştirecek olduğunda size e-posta bildirimi gönderecek bir etkinlik Office 365. Etkinlik uyarıları, denetim günlüğünde olayları aramaya benzer, ancak bunun dışında, etkinlikler için uyarı oluşturduğunuz bir etkinliğe e-posta iletisi gönderebilirsiniz.
+Kullanıcılar Office 365'da belirli etkinlikler gerçekleştirdiğinde size e-posta bildirimi gönderecek bir etkinlik uyarısı oluşturabilirsiniz. Etkinlik uyarıları, denetim günlüğündeki olayları aramaya benzer, ancak uyarı oluşturduğunuz bir etkinlik için bir olay gerçekleştiğinde size e-posta iletisi gönderilir.
 
- **Denetim günlüğünde arama yapmak yerine neden etkinlik uyarıları kullanılır?** Gerçekten bilmek istediğiniz belirli kullanıcılar tarafından gerçekleştirilen belirli türde etkinlik veya etkinlikler olabilir. Bu etkinlikler için denetim günlüğünde arama yapmak zorunda kalmadan, kullanıcılar bu etkinlikleri gerçekleştirecekken size bir e Microsoft 365-posta iletisi göndermesi için etkinlik uyarılarını kullanabilirsiniz. Örneğin, bir kullanıcı SharePoint'ta dosyaları s olduğunda size bildirmek için bir etkinlik uyarısı oluşturabilir veya kullanıcı posta kutusundan iletileri kalıcı olarak s olduğunda size bildirim göndermek için bir uyarı oluşturabilirsiniz. Size gönderilen e-posta bildirimi, hangi etkinliğin gerçekleştirilmesiyle ilgili bilgileri ve bunu gerçekleştiren kullanıcıyı içerir.
+ **Denetim günlüğünde arama yerine neden etkinlik uyarıları kullanmalısınız?** Gerçekten bilmek istediğiniz belirli kullanıcılar tarafından gerçekleştirilen belirli etkinlik veya etkinlik türleri olabilir. Bu etkinlikler için denetim günlüğünde arama yapmayı unutmamak yerine, etkinlik uyarılarını kullanarak kullanıcılar bu etkinlikleri gerçekleştirirken Microsoft 365 size e-posta iletisi göndermesini sağlayabilirsiniz. Örneğin, bir kullanıcı SharePoint'da dosyaları sildiğinde sizi bilgilendirmek için bir etkinlik uyarısı oluşturabilir veya bir kullanıcı posta kutusundan iletileri kalıcı olarak sildiğinde sizi bilgilendirecek bir uyarı oluşturabilirsiniz. Size gönderilen e-posta bildirimi, hangi etkinliğin gerçekleştirildiği ve bunu gerçekleştiren kullanıcı hakkındaki bilgileri içerir.
 
 > [!NOTE]
-> Etkinlik uyarıları kullanım dışı ediliyor. Yeni etkinlik uyarıları oluşturmak yerine güvenlik ve uyumluluk merkezinde uyarı ilkelerini kullanmaya başlamayı öneririz. Uyarı ilkeleri, herhangi bir kullanıcı belirtilen etkinliği gerçekleştirirken uyarıyı tetikleyen ve güvenlik ve uyumluluk merkezi'nin Uyarıları görüntüle sayfasında uyarılar görüntüleyen bir uyarı ilkesi oluşturabilme gibi ek işlevler  sağlar. Daha fazla bilgi için bkz [. Uyarı ilkeleri](alert-policies.md).
+> Etkinlik uyarıları kullanım dışı bırakılıyor. Yeni etkinlik uyarıları oluşturmak yerine güvenlik ve uyumluluk merkezinde uyarı ilkelerini kullanmaya başlamanızı öneririz. Uyarı ilkeleri, herhangi bir kullanıcı belirli bir etkinliği gerçekleştirdiğinde uyarıyı tetikleyen bir uyarı ilkesi oluşturma ve güvenlik ve uyumluluk merkezindeki **Uyarıları görüntüle sayfasında uyarıları** görüntüleme gibi ek işlevler sağlar. Daha fazla bilgi için bkz [. Uyarı ilkeleri](alert-policies.md).
 
 ## <a name="confirm-roles-and-configure-audit-logging"></a>Rolleri onaylama ve denetim günlüğünü yapılandırma
 
-- Etkinlik uyarılarını yönetmek için kuruluşta kuruluş Microsoft 365 uyumluluk merkezi rolüne atanmış olmak gerekir. Varsayılan olarak, bu rol Uyumluluk Yöneticisi ve Kuruluş Yönetimi rol gruplarına atanır. Rol gruplarına üye ekleme hakkında daha fazla bilgi için bkz. [Kullanıcılara erişim izni Microsoft 365 uyumluluk merkezi](../security/office-365-security/grant-access-to-the-security-and-compliance-center.md).
+- Etkinlik uyarılarını yönetmek için Microsoft Purview uyumluluk portalında Kuruluş Yapılandırması rolüne atanmış olmanız gerekir. Varsayılan olarak, bu rol Uyumluluk Yöneticisi ve Kuruluş Yönetimi rol gruplarına atanır. Rol gruplarına üye ekleme hakkında daha fazla bilgi için bkz. [Kullanıcılara Microsoft Purview uyumluluk portalına erişim verme](../security/office-365-security/grant-access-to-the-security-and-compliance-center.md).
 
-- Etkinlik uyarılarını kullanmaya başlay önce sizin (veya başka bir yöneticinin) kuruluş denetim günlüğünü açması gerekir. Bunu yapmak için, Etkinlik **uyarıları sayfasında Kullanıcı ve yönetici etkinliğini** kaydetmeyi **başlat'a tıklamanız** gerekir. (Bu bağlantıyı görmüyorsanız, denetimin kuruluşu için zaten açık olduğudur.) Ayrıca denetimi, Denetim günlüğü araması **sayfasındaki Denetim günlüğü Microsoft 365 uyumluluk merkezi** **açabilirsiniz** (Denetim'e gidin). Bunu organizasyonunız için tek bir kez yapmak zorundasiniz.
+- Etkinlik uyarılarını kullanmaya başlayabilmeniz için önce sizin (veya başka bir yöneticinin) kuruluşunuz için denetim günlüğünü açmanız gerekir. Bunu yapmak için **Etkinlik uyarıları** sayfasında **Kullanıcı ve yönetici etkinliğini kaydetmeyi başlat'a** tıklamak gerekir. (Bu bağlantıyı görmüyorsanız, kuruluşunuz için denetim zaten açık durumdadır.) Uyumluluk portalındaki **Denetim günlüğü arama** sayfasında denetimi de açabilirsiniz ( **Denetim'e** gidin). Bunu kuruluşunuz için yalnızca bir kez yapmanız gerekir.
 
-- Denetim günlüğünde arayarak gerçekleştirebilir ve aynı etkinlikler için uyarılar oluşturabilirsiniz. Uyarıları [oluşturabilirsiniz](#more-information) sık kullanılan senaryoların (ve izlenir belirli etkinliklerin) listesi için Daha fazla bilgi bölümüne bakın.
+- Denetim günlüğünde arayabileceğiniz etkinlikler için uyarılar oluşturabilirsiniz. Uyarı oluşturabileceğiniz yaygın senaryoların (ve izlenecek etkinliğin) listesi için [Daha fazla bilgi](#more-information) bölümüne bakın.
 
-- Yalnızca kuruluşun adres **defterine** <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">listelenmiş</a> kullanıcılar tarafından gerçekleştirilen etkinlikler için uyarı oluşturmak üzere Microsoft 365 uyumluluk merkezi'daki Etkinlik uyarıları sayfasını kullanabilirsiniz. Bu sayfayı, adres defteri içinde listelenmiyor olan dış kullanıcılar tarafından gerçekleştirilen etkinliklere yönelik uyarılar oluşturmak için kullana sıralanmaz.
+- <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Uyumluluk portalındaki</a> **Etkinlik uyarıları** sayfasını kullanarak yalnızca kuruluşunuzun adres defterinde listelenen kullanıcılar tarafından gerçekleştirilen etkinliklere yönelik uyarılar oluşturabilirsiniz. Bu sayfayı, adres defterinde listelenmeyen dış kullanıcılar tarafından gerçekleştirilen etkinliklere yönelik uyarılar oluşturmak için kullanamazsınız.
 
 ## <a name="create-an-activity-alert"></a>Etkinlik uyarısı oluşturma
 
-1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Devam'a Microsoft 365 uyumluluk merkezi</a>.
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Uyumluluk portalına</a> gidin.
 
-2. İş veya okul hesabınızla oturum açın.
+2. İş veya okul hesabınızı kullanarak oturum açın.
 
-3. Etkinlik uyarıları **sayfasında Simge** ekle'ye ![tıklayın.](../media/8ee52980-254b-440b-99a2-18d068de62d3.gif) **Yeni'ye.**
+3. **Etkinlik uyarıları** sayfasında Ekle simgesine tıklayın![.](../media/8ee52980-254b-440b-99a2-18d068de62d3.gif) **Yeni, yeni**.
 
-   Etkinlik uyarısı oluşturmak için görüntülenen uçarak giriş sayfası görüntülenir.
+   Etkinlik uyarısı oluşturmak için açılan sayfa görüntülenir.
 
 
-    ![Etkinlik uyarısı oluşturma.](../media/53888bd5-9fa2-4398-8ccc-1a9dc72517ac.png)
+    ![Etkinlik uyarısı oluşturun.](../media/53888bd5-9fa2-4398-8ccc-1a9dc72517ac.png)
 
-4. Etkinlik uyarısı oluşturmak için aşağıdaki alanları doldurun:
+4. Etkinlik uyarısı oluşturmak için aşağıdaki alanları tamamlayın:
 
-    1. **Ad** - Uyarı için bir ad yazın. Uyarı adları, kurum içinde benzersiz olmalıdır.
+    1. **Ad** - Uyarı için bir ad yazın. Uyarı adları kuruluşunuzda benzersiz olmalıdır.
 
-    1. **Açıklama** (İsteğe bağlı) - etkinlikler ve takip edilen kullanıcılar ve e-posta bildirimlerinin gönderildiği kullanıcılar gibi uyarıyı açık olun. Açıklamalar, uyarının amacını diğer yöneticilere açıklamak için hızlı ve kolay bir yol sağlar.
+    1. **Açıklama** (İsteğe bağlı) - İzlenen etkinlikler ve kullanıcılar ve e-posta bildirimlerinin gönderildiği kullanıcılar gibi uyarıyı açıklayın. Açıklamalar, uyarının amacını diğer yöneticilere açıklamak için hızlı ve kolay bir yol sağlar.
 
-    1. **Uyarı türü** - Özel seçeneğinin **seçili** olduğundan emin olun.
+    1. **Uyarı türü** - **Özel** seçeneğinin belirlendiğinden emin olun.
 
-    1. **Şu durumda bu uyarıyı** gönder - **Şu iki alanı yapılandırıldığında bu** uyarıyı gönder'e tıklayın:
+    1. **Bu uyarıyı şu durumlarda gönder** - **Bu uyarıyı gönder'e** tıklayın ve sonra şu iki alanı yapılandırın:
 
-       - **Etkinlikler** - Uyarı oluşturabilirsiniz etkinlikleri görüntülemek için açılan listeye tıklayın. Bu, denetim günlüğünde arama yapınca görüntülenen etkinlikler listesiyle aynıdır. Belirli bir veya birden çok etkinliği seçerek veya etkinlik grubu adına tıklar ve gruptaki tüm etkinlikleri seçin. Bu etkinliklerin açıklaması için, Denetim günlüğünde arama yapın bölümündeki "Denetlenen etkinlikler" [bölümüne bakın](search-the-audit-log-in-security-and-compliance.md#audited-activities). Kullanıcı uyarıya ekley istediğiniz etkinlikleri gerçekleştir olduğunda, bir e-posta bildirimi gönderilir.
+       - **Etkinlikler** - Uyarı oluşturabileceğiniz etkinlikleri görüntülemek için açılan listeye tıklayın. Bu, denetim günlüğünde arama yaptığınızda görüntülenen etkinlikler listesiyle aynıdır. Belirli bir veya daha fazla etkinliği seçebilir veya gruptaki tüm etkinlikleri seçmek için etkinlik grubu adına tıklayabilirsiniz. Bu etkinliklerin açıklaması için Denetim [günlüğünde arama](search-the-audit-log-in-security-and-compliance.md#audited-activities) yapma bölümündeki "Denetlenen etkinlikler" bölümüne bakın. Kullanıcı uyarıya eklediğiniz etkinliklerden herhangi birini gerçekleştirdiğinde, bir e-posta bildirimi gönderilir.
 
-       - **Kullanıcılar** - Bu kutuya tıklayın ve bir veya birden çok kullanıcı seçin. Bu kutuda yer alan kullanıcılar, Etkinlikler kutusuna ekleytilen **etkinlikleri gerçekleştirecekse** , bir uyarı gönderilir. Kuruluşlardan  herhangi bir kullanıcı uyarı tarafından belirtilen etkinlikleri gerçekleştirsinse uyarı göndermek için Kullanıcılar kutusunu boş bırakın.
+       - **Kullanıcılar** - Bu kutuya tıklayın ve bir veya daha fazla kullanıcı seçin. Bu kutudaki kullanıcılar **Etkinlikler** kutusuna eklediğiniz etkinlikleri gerçekleştirirse bir uyarı gönderilir. Kuruluşunuzdaki herhangi bir kullanıcı uyarı tarafından belirtilen etkinlikleri gerçekleştirdiğinde uyarı göndermek için **Kullanıcılar** kutusunu boş bırakın.
 
-    1. Bu uyarıyı **gönder - Bu** uyarıyı gönder'e **tıklayın ve ardından** Alıcılar  kutusuna tıklayın ve kullanıcı (Kullanıcılar kutusunda belirtilen) bir etkinlik gerçekleştir olduğunda (Etkinlikler kutusunda belirtilen) e-posta bildirimi alacak  kullanıcıları eklemek için bir ad yazın. Varsayılan olarak alıcılar listesine eklendiysiniz. Bu listeden adınız kaldırabilirsiniz.
+    1. **Bu uyarıyı gönder** - **Bu uyarıyı gönder'e** tıklayın ve **alıcılar kutusuna** tıklayın ve bir kullanıcı ( **Kullanıcılar** kutusunda belirtilen) bir etkinlik gerçekleştirdiğinde e-posta bildirimi alacak kullanıcıları eklemek için bir ad yazın ( **Etkinlikler** kutusunda belirtilir). Varsayılan olarak alıcı listesine eklendiğini unutmayın. Adınızı bu listeden kaldırabilirsiniz.
 
-5. **Uyarıyı oluşturmak** için Kaydet'e tıklayın.
+5. Uyarıyı oluşturmak için **Kaydet'e** tıklayın.
 
-    Yeni uyarı, Etkinlik uyarıları **sayfasındaki listede** görüntülenir.
+    Yeni uyarı **, Etkinlik uyarıları** sayfasındaki listede görüntülenir.
 
     ![Etkinlik uyarıları sayfasında bir uyarı listesi görüntülenir.](../media/02b774f2-1719-41de-bbc9-5e5b7576f335.png)
 
-    Uyarının durumu, On olarak **ayarlanır**. Uyarı gönder geldiğinde e-posta bildirimi alacak alıcıların da listelenmiş olduğunu unutmayın.
+    Uyarının durumu **Açık** olarak ayarlanır. Uyarı gönderildiğinde e-posta bildirimi alacak alıcıların da listelendiğini unutmayın.
 
-## <a name="turn-off-an-activity-alert"></a>Etkinlik uyarılarını kapatma
+## <a name="turn-off-an-activity-alert"></a>Etkinlik uyarısını kapatma
 
-Etkinlik uyarılarını, e-posta bildirimi gönderilmey için kapatabilirsiniz. Etkinlik uyarısını kapattıktan sonra, bu uyarı yine de kurum için etkinlik uyarıları listesinde görüntülenir ve bu uyarının özelliklerini yine görüntüebilirsiniz.
+E-posta bildiriminin gönderilmemesi için etkinlik uyarısını kapatabilirsiniz. Etkinlik uyarısını kapattıktan sonra, kuruluşunuz için etkinlik uyarıları listesinde görüntülenmeye devam eder ve özelliklerini görüntülemeye devam edebilirsiniz.
 
-1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Devam'a Microsoft 365 uyumluluk merkezi</a>.
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Uyumluluk portalına</a> gidin.
 
-2. İş veya okul hesabınızla oturum açın.
+2. İş veya okul hesabınızı kullanarak oturum açın.
 
-3. Organizasyonunız için etkinlik uyarıları listesinde, kapatmak istediğiniz uyarıya tıklayın.
+3. Kuruluşunuzun etkinlik uyarıları listesinde, kapatmak istediğiniz uyarıya tıklayın.
 
-4. Uyarıyı **düzenle sayfasında** , durumu Kapalı **olarak değiştirmek için** Açık iki durumlu düğmesini tıklatın ve **ardından Kaydet'i** **tıklatın**.
+4. **Uyarıyı düzenle** sayfasında, Durumu **Kapalı** olarak değiştirmek için **Açık** iki durumlu düğmesine tıklayın ve ardından **Kaydet'e** tıklayın.
 
-    Etkinlik uyarıları sayfalarındaki **uyarının durumu** Kapalı olarak **ayarlanır**.
+    **Etkinlik uyarıları** sayfalarında uyarının durumu **Kapalı** olarak ayarlanır.
 
-Etkinlik uyarılarını yeniden açmak için bu adımları yinele ve durumu Açık olarak değiştirmek  için Kapalı düğmesini **tıklatın**.
+Etkinlik uyarısını yeniden açmak için bu adımları yineleyin ve **Kapalı** iki durumlu düğmesine tıklayarak durumu **Açık** olarak değiştirin.
 
 ## <a name="more-information"></a>Daha fazla bilgi
 
-- Aşağıda, bu uyarının gönderilmesi alanında (ve Etkinlik uyarıları sayfasındaki Alıcılar altında listelenmiş) belirtilen kullanıcılara gönderilen e-posta bildiriminin Microsoft 365 uyumluluk merkezi.
+- Aşağıda, uyumluluk portalındaki Bu uyarıyı gönderilen alanında (ve **Etkinlik uyarıları** sayfasında **Alıcılar** altında listelenmiştir) belirtilen kullanıcılara gönderilen e-posta bildiriminin bir örneği verilmiştir.
 
     ![Etkinlik uyarısı için gönderilen e-posta bildirimi örneği.](../media/a5f91611-fae6-4fe9-82f5-58521a2e2541.png)
 
-- Burada, etkinlik uyarıları oluşturabilirsiniz bazı yaygın belge ve e-posta etkinlikleri ve yer almaktadır. Tablolarda etkinliği, uyarı oluşturulacak etkinliğin adı ve Etkinlikler açılan listesinde etkinliğin altında listelenmiş **etkinlik grubunun adı** gösterilir. Etkinlik uyarıları oluşturabilirsiniz etkinliklerin tam listesini görmek için Denetim günlüğünde arama yapın bölümündeki "Denetlenen etkinlikler" [bölümüne bakın](search-the-audit-log-in-security-and-compliance.md#audited-activities).
+- Etkinlik uyarıları oluşturabileceğiniz bazı yaygın belge ve e-posta etkinlikleri aşağıdadır. Tablolar etkinliği, uyarı oluşturulacak etkinliğin adını ve **Etkinlikler** açılan listesinde etkinliğin altında listelendiği etkinlik grubunun adını açıklar. Etkinlik uyarıları oluşturabileceğiniz etkinliklerin tam listesini görmek için Denetim [günlüğünde arama'nın](search-the-audit-log-in-security-and-compliance.md#audited-activities) "Denetlenen etkinlikler" bölümüne bakın.
 
     > [!TIP]
-    > Herhangi bir kullanıcı tarafından gerçekleştirilen tek bir etkinlik için etkinlik uyarısı oluşturmak iyi olabilir. Ya da bir veya birden çok kullanıcı tarafından gerçekleştirilen birden çok etkinliği takipen bir etkinlik uyarısı oluşturmak da istiyor da olabilir.
+    > Herhangi bir kullanıcı tarafından gerçekleştirilen tek bir etkinlik için etkinlik uyarısı oluşturmak isteyebilirsiniz. Veya bir veya daha fazla kullanıcı tarafından gerçekleştirilen birden çok etkinliği izleyen bir etkinlik uyarısı oluşturmak isteyebilirsiniz.
 
-    Aşağıdaki tabloda, çalışma sayfalarındaki veya tablodaki belgeyle ilgili SharePoint sık OneDrive İş.
+    Aşağıdaki tabloda, SharePoint veya OneDrive İş belgeyle ilgili bazı yaygın etkinlikler listelenir.
 
-    | Bir kullanıcı bunu yaptığı zaman... | Bu etkinlik için uyarı oluşturma | Etkinlik grubu |
+    | Bir kullanıcı bunu yaparsa... | Bu etkinlik için uyarı oluştur | Etkinlik grubu |
     |:-----|:-----|:-----|
-    |Sitede bir belgeyi görüntüler.  |Dosyaya erişildi  |Dosya ve klasör etkinlikleri  |
-    |Belgeyi düzenler veya değiştirir.  |Dosya değiştirildi  |Dosya ve klasör etkinlikleri  |
-    |Bir belgeyi kuruluş dışındaki bir kullanıcıyla paylaştığında.  |Dosya, klasör veya site paylaşma  <br/> Ve  <br/> Paylaşım daveti oluşturuldu  <br/> Daha fazla bilgi için [bkz. Denetim günlüğünde paylaşım denetimini kullanma](use-sharing-auditing.md).  |Paylaşım ve erişim isteği etkinlikleri  |
-    |Belgeyi karşıya yükler veya indirir.  |Dosya karşıya yüklendi  <br/> Ve/veya  <br/> İndirilen dosya  |Dosya ve klasör etkinlikleri  |
-    |Siteye erişim izinlerini değiştirir.  |Site izinleri değiştirildi  |Site yönetimi etkinlikleri  |
+    |Sitedeki bir belgeyi görüntüler.  |Erişilen dosya  |Dosya ve klasör etkinlikleri  |
+    |Belgeyi düzenler veya değiştirir.  |Değiştirilen dosya  |Dosya ve klasör etkinlikleri  |
+    |Belgeyi kuruluşunuzun dışındaki bir kullanıcıyla paylaşır.  |Dosya, klasör veya site paylaşma  <br/> Ve  <br/> Paylaşım daveti oluşturuldu  <br/> Daha fazla bilgi için bkz. [Denetim günlüğünde paylaşım denetimini kullanma](use-sharing-auditing.md).  |Paylaşım ve erişim isteği etkinlikleri  |
+    |Belgeyi karşıya yükler veya indirir.  |Karşıya yüklenen dosya  <br/> Veya  <br/> İndirilen dosya  |Dosya ve klasör etkinlikleri  |
+    |Sitenin erişim izinlerini değiştirir.  |Değiştirilen site izinleri  |Site yönetimi etkinlikleri  |
 
-    Aşağıdaki tabloda, e-postayla ilgili olarak sık kullanılan bazı etkinlikler Exchange Online.
+    Aşağıdaki tabloda, Exchange Online'da e-postayla ilgili bazı yaygın etkinlikler listelenir.
 
-    | Bir kullanıcı bunu yaptığı zaman... | Bu etkinlik için uyarı oluşturma | Etkinlik grubu |
+    | Bir kullanıcı bunu yaparsa... | Bu etkinlik için uyarı oluştur | Etkinlik grubu |
     |:-----|:-----|:-----|
-    |E-posta iletisi, posta kutusundan kalıcı olarak silinir (temiz gönderilir).  |İletiler posta kutusundan temizildi  | Exchange kutusu etkinliklerini geri alın  |
-    |Paylaşılan posta kutusundan e-posta iletisi gönderir.  |İleti Farklı Gönder izinleri kullanılarak gönderildi  <br/> Ve  <br/> İleti Adına Gönder izinleri kullanılarak gönderildi  | Exchange kutusu etkinliklerini geri alın  |
+    |Bir e-posta iletisini posta kutusundan kalıcı olarak siler (temizler).  |İletileri posta kutusundan temizleme  | Posta kutusu etkinliklerini Exchange  |
+    |Paylaşılan posta kutusundan e-posta iletisi gönderir.  |Farklı Gönder izinleri kullanılarak gönderilen ileti  <br/> Ve  <br/> Adına Gönder izinleri kullanılarak gönderilen ileti  | Posta kutusu etkinliklerini Exchange  |
 
-- Etkinlik uyarıları oluşturmak ve düzenlemek için Güvenlik ve Uyumluluk Merkezi PowerShell'de **New-ActivityAlert** ve **Set-ActivityAlert** cmd & let'lerini de kullanabilirsiniz. Etkinlik uyarıları oluşturmak veya düzenlemek için bu cmdlet'leri kullanıyorsanız, aşağıdaki şeyleri unutmayın:
+- Etkinlik uyarıları oluşturmak ve düzenlemek için Güvenlik & Uyumluluk Merkezi PowerShell'de **New-ActivityAlert** ve **Set-ActivityAlert** cmdlet'lerini de kullanabilirsiniz. Etkinlik uyarıları oluşturmak veya düzenlemek için bu cmdlet'leri kullanıyorsanız aşağıdaki şeyleri göz önünde bulundurun:
 
-  - Etkinlikler açılan listesinde yer almayan bir uyarıya etkinlik eklemek için cmdlet kullanırsanız, uyarının özellik  sayfasında "Bu uyarının seçicide listelenmiyor özel işlemleri var" iletisi görüntülenir.
+  - **Uyarıya Etkinlikler** açılan listesinde listelenmeyen bir etkinlik eklemek için bir cmdlet kullanırsanız, uyarının özellik sayfasında "Bu uyarının seçicide listelenmeyen özel işlemleri var" şeklinde bir ileti görüntülenir.
 
-  - Etkinlik uyarısı oluşturmak veya düzenlemek için cmdlet'leri kullanmak için iyi bir neden, kuruluş dışından birine e-posta bildirimleri göndermektir. Bu dış kullanıcı uyarının alıcı listesinde listelenir. Ancak uyarıdan bu dış kullanıcıyı kaldırırsanız, Düzenleme uyarısı sayfası kullanılarak bu kullanıcı uyarıya yeniden **eklenemez** . **Set-ActivityAlert** cmdlet'ini kullanarak dış kullanıcıyı yeniden eklemeniz veya aynı (veya farklı) dış kullanıcıyı yeni uyarıya eklemek için **New-ActivityAlert** cmdlet'ini kullansanız da gerekir.
+  - Etkinlik uyarısı oluşturmak veya düzenlemek için cmdlet'leri kullanmanın iyi bir nedeni, kuruluşunuzun dışındaki birine e-posta bildirimleri göndermektir. Bu dış kullanıcı, uyarının alıcı listesinde listelenir. Ancak bu dış kullanıcıyı uyarıdan kaldırırsanız, uyarıyı düzenle sayfası kullanılarak bu kullanıcı **uyarıya** yeniden eklenemez. **Dış kullanıcıyı Set-ActivityAlert** cmdlet'ini kullanarak yeniden eklemeniz veya yeni bir uyarıya aynı (veya farklı) dış kullanıcıyı eklemek için **New-ActivityAlert** cmdlet'ini kullanmanız gerekir.

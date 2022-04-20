@@ -1,5 +1,5 @@
 ---
-title: Gruplarda kimlerin oluştur Microsoft 365 yönetme
+title: Kimlerin Microsoft 365 Grupları oluşturabileceğini yönetme
 f1.keywords: NOCSH
 ms.author: mikeplum
 ms.reviewer: arvaradh
@@ -17,23 +17,23 @@ search.appverid:
 - MET150
 ms.assetid: 4c46c8cb-17d0-44b5-9776-005fced8e618
 recommendations: false
-description: Grup oluşturmak için hangi kullanıcıların oluşturula Microsoft 365 öğrenin.
-ms.openlocfilehash: 4280b6859358580547302ccf9497e8cd1e7ed752
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+description: Hangi kullanıcıların Microsoft 365 Grupları oluşturabileceğini denetlemeyi öğrenin.
+ms.openlocfilehash: 992f5c62654f23f90f910f62dc3bb78199b949b0
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63032505"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64946934"
 ---
-# <a name="manage-who-can-create-microsoft-365-groups"></a>Gruplarda kimlerin oluştur Microsoft 365 yönetme
+# <a name="manage-who-can-create-microsoft-365-groups"></a>Kimlerin Microsoft 365 Grupları oluşturabileceğini yönetme
 
-Varsayılan olarak, tüm kullanıcılar grup Microsoft 365 oluşturabilir. Önerilen yaklaşım bu seçenektir, çünkü kullanıcıların IT'den yardım almadan işbirliğine başlamasına olanak sağlar.
+Varsayılan olarak, tüm kullanıcılar Microsoft 365 grupları oluşturabilir. Kullanıcıların BT'den yardım almadan işbirliği yapmaya başlamasını sağladığından bu önerilen yaklaşımdır.
 
-İşletmeniz, kimlerin grup oluştur azını kısıtla sınırlamanızı gerektiriyorsa, Microsoft 365 grupları oluşturmanızı belirli bir grup veya Microsoft 365 grubu üyeleriyle kısıtlayan bir sınırlama kullanabilirsiniz.
+İşletmeniz grup oluşturabilecek kullanıcıları kısıtlamanızı gerektiriyorsa, Microsoft 365 Grupları oluşturmayı belirli bir Microsoft 365 grubunun veya güvenlik grubunun üyeleriyle kısıtlayabilirsiniz.
 
-İş standartlarına uymayan ekipler veya gruplar oluşturma konusunda endişeleriniz varsa, kullanıcıların bir eğitim kursu tamamlamalarını ve sonra da bunları izin verilen kullanıcı grubuna eklemelerini gerektirmeyi düşünebilirsiniz.
+Kullanıcıların iş standartlarınıza uygun olmayan ekipler veya gruplar oluşturmasından endişe duyuyorsanız, kullanıcıların bir eğitim kursunu tamamlayıp izin verilen kullanıcılar grubuna eklemesini zorunlu kılabilirsiniz.
 
-Kimlerin grup oluştur etkileyeceğini sınırlarken, erişim için gruplara güvenen tüm hizmetleri etkiler. Bu, aşağıdakiler de dahil:
+Kimlerin grup oluşturabileceğini sınırladığınızda, bu, erişim için grupları kullanan tüm hizmetleri etkiler, örneğin:
 
 - Outlook
 - SharePoint
@@ -42,75 +42,75 @@ Kimlerin grup oluştur etkileyeceğini sınırlarken, erişim için gruplara gü
 - Microsoft Stream
 - Planner
 - Power BI (klasik)
-- Project sayfası / Yol Haritası
+- Web için Project / Yol Haritası
 
-Bu makaledeki adımlar, belirli rollerin üyelerinin Gruplar oluşturmasını engellemez. Office 365 yöneticiler Çevrimiçi Gruplar, Microsoft 365 yönetim merkezi, Planner, Exchange ve SharePoint aracılığıyla Gruplar oluşturabilir. Diğer roller aşağıda listelenen sınırlı bir şekilde Gruplar oluşturabilir.
+Bu makaledeki adımlar, belirli rollerin üyelerinin Grup oluşturmasını engellemez. Microsoft 365 genel yöneticiler Microsoft 365 yönetim merkezi, Planner, Exchange ve SharePoint aracılığıyla grup oluşturabilir ancak Teams gibi diğer konumları oluşturamaz. Diğer roller, aşağıda listelenen sınırlı yollarla Microsoft 365 Grupları oluşturabilir.
 
-- Exchange Yönetici: Exchange merkezi, Azure AD
-- İş Ortağı Katman 1 Desteği: Microsoft 365 yönetim merkezi, Exchange merkezi, Azure AD
-- İş Ortağı Katman 2 Desteği: Microsoft 365 yönetim merkezi, Exchange merkezi, Azure AD
+- Exchange Yöneticisi: Exchange yönetim merkezi, Azure AD
+- İş Ortağı Katmanı 1 Desteği: Microsoft 365 yönetim merkezi, Exchange yönetim merkezi, Azure AD
+- İş Ortağı Katmanı 2 Desteği: Microsoft 365 yönetim merkezi, Exchange yönetim merkezi, Azure AD
 - Dizin Yazarları: Azure AD
-- SharePoint Yönetici: SharePoint merkezi, Azure AD
-- Teams Yöneticisi: Teams merkezi, Azure AD
+- SharePoint Yöneticisi: SharePoint yönetim merkezi, Azure AD
+- Teams Hizmet Yöneticisi: Teams yönetim merkezi, Azure AD
 - Kullanıcı Yöneticisi: Microsoft 365 yönetim merkezi, Azure AD
 
-Bu rollerden birinin üyesiyseniz, kısıtlanmış kullanıcılar için Microsoft 365 Grupları oluşturabilir ve sonra da kullanıcıya grubun sahibi olarak atabilirsiniz.
+Bu rollerden birinin üyesiyseniz, kısıtlı kullanıcılar için Microsoft 365 Grupları oluşturabilir ve kullanıcıyı grubun sahibi olarak atayabilirsiniz.
 
 ## <a name="licensing-requirements"></a>Lisans gereksinimleri
 
-Kimlerin grup oluşturduğunı yönetmek için, aşağıdaki kişilerin Azure AD Premium lisans ataması gerekir:
+Grupları kimin oluşturduğunu yönetmek için aşağıdaki kişilerin kendilerine atanmış Azure AD Premium lisansları veya Azure AD Temel EDU lisansları olmalıdır:
 
 - Bu grup oluşturma ayarlarını yapılandıran yönetici
-- Grup oluşturmasına izin verilen grubun üyeleri
+- Grup oluşturmasına izin verilen grup üyeleri
 
 > [!NOTE]
-> Azure [lisansları atama hakkında daha fazla Azure Active Directory için](/azure/active-directory/fundamentals/license-users-groups) bkz. Kullanıcı portalında lisans atama veya kaldırma.
+> Azure lisanslarını atama hakkında daha fazla bilgi için [bkz. Azure Active Directory portalında lisans atama veya kaldırma](/azure/active-directory/fundamentals/license-users-groups).
 
-Aşağıdaki kişilerin bu lisansların Azure AD Premium ihtiyacı vardır:
+Aşağıdaki kişilerin kendilerine atanmış Azure AD Premium veya Azure AD Temel EDU lisanslarına ihtiyacı yoktur:
 
-- Grup veya grup Microsoft 365 olan ve başka gruplar oluşturma becerisine sahip kişiler.
+- Microsoft 365 grupların üyesi olan ve başka gruplar oluşturma yeteneği olmayan kişiler.
 
-## <a name="step-1-create-a-group-for-users-who-need-to-create-microsoft-365-groups"></a>1. Adım: Grup oluşturması gereken kullanıcılar için Microsoft 365 oluşturma
+## <a name="step-1-create-a-group-for-users-who-need-to-create-microsoft-365-groups"></a>1. Adım: Microsoft 365 grupları oluşturması gereken kullanıcılar için grup oluşturma
 
-Kimlerin Grup oluşturabileceklerini kontrol etmek için, yalnızca bir grup kullanılabilir. Ancak, diğer grupları bu grubun üyeleri olarak iç içe yerleştirmeyi de slarının.
+Kuruluşunuzdaki yalnızca bir grup, kimlerin Microsoft 365 Grupları oluşturabileceğini denetlemek için kullanılabilir. Ancak, diğer grupları bu grubun üyesi olarak iç içe yerleştirebilirsiniz.
 
-Yukarıda listelenen rollerde yer alan yöneticilerin bu gruba üye olması gerek değildir: grup oluşturma becerisini korurlar.
+Yukarıda listelenen rollerdeki yöneticilerin bu grubun üyesi olması gerekmez: grup oluşturma becerilerini korurlar.
 
-1. Yönetim merkezinde Gruplar sayfasına [gidin](https://admin.microsoft.com/adminportal/home#/groups).
+1. Yönetim merkezinde [Gruplar sayfasına](https://admin.microsoft.com/adminportal/home#/groups) gidin.
 
-2. Grup **Ekle'ye tıklayın**.
+2. **Grup Ekle'ye** tıklayın.
 
-3. Istediğiniz grup türünü seçin. Grubun adını unutmayın! Daha sonra gerekecektir.
+3. İstediğiniz grup türünü seçin. Grubun adını unutmayın! Daha sonra gerekecektir.
 
-4. Grubu ayarlamayı bitirip, kendi kuruluş içinde grup oluşturabilecek diğer grupları ve diğer grupları eklemeyi bitirin.
+4. Grubu ayarlamayı bitirin, grup oluşturmak istediğiniz kişileri veya diğer grupları üye olarak ekleyin (sahip olarak değil).
 
-Ayrıntılı yönergeler için bkz[. Grupta güvenlik grubu oluşturma, düzenleme veya Microsoft 365 yönetim merkezi](../admin/email/create-edit-or-delete-a-security-group.md).
+Ayrıntılı yönergeler için bkz. [Microsoft 365 yönetim merkezi güvenlik grubu oluşturma, düzenleme veya silme](../admin/email/create-edit-or-delete-a-security-group.md).
 
 ## <a name="step-2-run-powershell-commands"></a>2. Adım: PowerShell komutlarını çalıştırma
 
-Grup düzeyi konuk erişimi ayarını [değiştirmek için Azure Active Directory PowerShell Graph (AzureAD) (AzureAD) (](/powershell/azure/active-directory/install-adv2)**modül adı AzureADPreview**) önizleme sürümünü kullansanız gerekir:
+Grup düzeyinde konuk erişimi ayarını değiştirmek [için Azure Active Directory PowerShell'in Graph (AzureAD) (](/powershell/azure/active-directory/install-adv2)modül adı **AzureADPreview**) önizleme sürümünü kullanmanız gerekir:
 
-- Daha önce Azure AD PowerShell modülünün herhangi bir sürümünü yüklemedıysanız, [Bkz. Azure AD](/powershell/azure/active-directory/install-adv2?preserve-view=true&view=azureadps-2.0-preview) Modülü'ne yükleme ve genel önizleme sürümünü yükleme yönergelerini izleyin.
+- Azure AD PowerShell modülünün herhangi bir sürümünü daha önce yüklemediyseniz bkz [. Azure AD Modülünü Yükleme](/powershell/azure/active-directory/install-adv2?preserve-view=true&view=azureadps-2.0-preview) ve genel önizleme sürümünü yükleme yönergelerini izleyin.
 
-- Azure AD PowerShell modülünün (AzureAD) 2.0 genel kullanılabilirlik sürümü yüklüyse, `Uninstall-Module AzureAD` PowerShell oturumda çalıştırarak bu modülü kaldırmanız ve sonra önizleme sürümünü çalıştırarak yüklemeniz gerekir `Install-Module AzureADPreview`.
+- Azure AD PowerShell modülünün (AzureAD) 2.0 genel kullanılabilirlik sürümü yüklüyse, PowerShell oturumunuzda çalıştırarak `Uninstall-Module AzureAD` kaldırmanız ve ardından çalıştırarak `Install-Module AzureADPreview`önizleme sürümünü yüklemeniz gerekir.
 
-- Önizleme sürümünü zaten yüklemişsanız, bu modülün `Install-Module AzureADPreview` en son sürümü olduğundan emin olmak için çalıştırın.
+- Önizleme sürümünü zaten yüklediyseniz, bu modülün en son sürümü olduğundan emin olmak için komutunu çalıştırın `Install-Module AzureADPreview` .
 
-Aşağıdaki betiği ISE veya NOT DEFTERI gibi bir metin [düzenleyicisine Windows PowerShell.](/powershell/scripting/components/ise/introducing-the-windows-powershell-ise)
+Aşağıdaki betiği Not Defteri veya [Windows PowerShell ISE](/powershell/scripting/components/ise/introducing-the-windows-powershell-ise) gibi bir metin düzenleyicisine kopyalayın.
 
-Oluşturduğunuz *\<GroupName\>* grubun adıyla değiştirin. Örneğin:
+değerini, oluşturduğunuz grubun adıyla değiştirin *\<GroupName\>* . Örneğin:
 
 `$GroupName = "Group Creators"`
 
-Dosyayı farklı bir GroupCreators.ps1.
+Dosyayı GroupCreators.ps1 olarak kaydedin.
 
-PowerShell penceresinde, dosyayı kayıtlı konuma gidin ("CD" yazın \<FileLocation\>).
+PowerShell penceresinde, dosyayı kaydettiğiniz konuma gidin ("CD \<FileLocation\>") yazın.
 
-Betiği çalıştırmak için şunları yazın:
+Şu komutu yazarak betiği çalıştırın:
 
 `.\GroupCreators.ps1`
 
-ve [istendiğinde yönetici hesabınızla](../enterprise/connect-to-microsoft-365-powershell.md#step-2-connect-to-azure-ad-for-your-microsoft-365-subscription) oturum açın.
+ve istendiğinde [yönetici hesabınızla oturum açın](../enterprise/connect-to-microsoft-365-powershell.md#step-2-connect-to-azure-ad-for-your-microsoft-365-subscription) .
 
 ```PowerShell
 $GroupName = "<GroupName>"
@@ -141,41 +141,41 @@ Set-AzureADDirectorySetting -Id $settingsObjectID -DirectorySetting $settingsCop
 (Get-AzureADDirectorySetting -Id $settingsObjectID).Values
 ```
 
-Betiğin son satırı güncelleştirilmiş ayarları görüntüler:
+Betiğin son satırında güncelleştirilmiş ayarlar görüntülenir:
 
-![PowerShell betik çıkışını ekran görüntüsü.](../media/952cd982-5139-4080-9add-24bafca0830c.png)
+![PowerShell betik çıkışının ekran görüntüsü.](../media/952cd982-5139-4080-9add-24bafca0830c.png)
 
-Gelecekte hangi grubun kullanıı değiştirecekse, betiği yeni grubun adıyla yeniden çalıştıracaksanız.
+Gelecekte hangi grubun kullanılacağını değiştirmek istiyorsanız, betiği yeni grubun adıyla yeniden çalıştırabilirsiniz.
 
-Grup oluşturma kısıtlamalarını kapatmak ve yeniden tüm kullanıcıların grup oluşturmasına izin vermek için, $GroupName", "True" olarak ayarlayın $AllowGroupCreation doğru olarak ayarlayın ve betiği yeniden çalıştırabilirsiniz.
+Grup oluşturma kısıtlamasını kapatmak ve tüm kullanıcıların grup oluşturmasına yeniden izin vermek istiyorsanız, $GroupName "" olarak ayarlayın ve $AllowGroupCreation "True" olarak ayarlayın ve betiği yeniden çalıştırın.
 
 ## <a name="step-3-verify-that-it-works"></a>3. Adım: Çalıştığını doğrulama
 
-Değişikliklerin etkili hale etkileri otuz dakika veya daha uzun sürebilir. Yeni ayarları doğrulamak için şunları yapabilirsiniz:
+Değişikliklerin geçerlilik kazanması otuz dakika veya daha fazla sürebilir. Aşağıdakileri yaparak yeni ayarları doğrulayabilirsiniz:
 
-1. Grup oluşturma Microsoft 365 sahip olması gereken birinin kullanıcı hesabıyla oturum açın. Başka bir ifadeyle, oluşturduğunuz grubun üyesi veya yöneticisi değildir.
+1. Grup oluşturma becerisine sahip olmaması gereken birinin kullanıcı hesabıyla Microsoft 365 oturum açın. Diğer bir ifadeyle, oluşturduğunuz grubun veya yöneticinin üyesi değildir.
 
-2. **Planner kutucuğunu** seçin.
+2. **Planner** kutucuğunu seçin.
 
-3. Planner'da, **sol gezinti bölmesinde** Yeni Plan'ı seçerek bir plan oluşturun.
+3. Planner'da, sol gezinti **bölmesinden Yeni Plan'ı** seçerek bir plan oluşturun.
 
-4. Plan ve grup oluşturmanın devre dışı bırakılmıştır iletisi alırsınız.
+4. Plan ve grup oluşturmanın devre dışı bırakıldığını belirten bir ileti almalısınız.
 
-Aynı yordamı grubun bir üyesiyle birlikte yeniden deneyin.
+Grubun bir üyesiyle aynı yordamı yeniden deneyin.
 
 > [!NOTE]
-> Grubun üyeleri grup oluşturamazsa, OWA posta kutusu ilkesi aracılığıyla engellenmiş [olup olmadığını kontrol edin](/powershell/module/exchange/set-owamailboxpolicy).
+> Grubun üyeleri grup oluşturamıyorsa, [OWA posta kutusu ilkeleri](/powershell/module/exchange/set-owamailboxpolicy) aracılığıyla engellenmediklerinden emin olun.
 
 ## <a name="related-topics"></a>İlgili konular
 
-[İşbirliği yönetim planlaması önerileri](collaboration-governance-overview.md#collaboration-governance-planning-recommendations)
+[İşbirliği idaresi planlama önerileri](collaboration-governance-overview.md#collaboration-governance-planning-recommendations)
 
-[İşbirliği yönetim planınızı oluşturma](collaboration-governance-first.md)
+[İşbirliği idare planınızı oluşturma](collaboration-governance-first.md)
 
 [Office 365 PowerShell ile çalışmaya başlama](../enterprise/getting-started-with-microsoft-365-powershell.md)
 
-[Grup içinde self servis grup Azure Active Directory](/azure/active-directory/users-groups-roles/groups-self-service-management)
+[Azure Active Directory'de self servis grup yönetimini ayarlama](/azure/active-directory/users-groups-roles/groups-self-service-management)
 
 [Set-ExecutionPolicy](/powershell/module/microsoft.powershell.security/set-executionpolicy)
 
-[Azure Active Directory ayarlarını yapılandırmak için cmdlet'leri yapılandırma](/azure/active-directory/users-groups-roles/groups-settings-cmdlets)
+[Grup ayarlarını yapılandırmak için cmdlet'leri Azure Active Directory](/azure/active-directory/users-groups-roles/groups-settings-cmdlets)
