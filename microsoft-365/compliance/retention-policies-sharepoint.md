@@ -1,5 +1,5 @@
 ---
-title: E-SharePoint ve OneDrive
+title: SharePoint ve OneDrive için bekletme hakkında bilgi edinin
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -16,163 +16,163 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Bekletmenin, e-SharePoint için nasıl çalıştığını OneDrive.
-ms.openlocfilehash: a553945fdb0b0034d8f3182164749b06badfe503
-ms.sourcegitcommit: babc2dad1c0e08a9237dbe4956ffd21c0214db83
+description: Bekletmenin SharePoint ve OneDrive için nasıl çalıştığını öğrenin.
+ms.openlocfilehash: ed9cc45218dde112baec8fbca997abc6e82b4d72
+ms.sourcegitcommit: 1d972f15a45204e89e268c5ff257021aced5e775
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "63014336"
+ms.lasthandoff: 04/18/2022
+ms.locfileid: "64911500"
 ---
-# <a name="learn-about-retention-for-sharepoint-and-onedrive"></a>E-SharePoint ve OneDrive
+# <a name="learn-about-retention-for-sharepoint-and-onedrive"></a>SharePoint ve OneDrive için bekletme hakkında bilgi edinin
 
->*[Microsoft 365 uyumluluğu için lisans & kılavuzu.](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)*
+>*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-Bu makaledeki bilgiler [Bekletme hakkında bilgi](retention.md) edin'e ek bilgiler içerir, çünkü bekletme ve saklama SharePoint OneDrive.
+Bu makaledeki bilgiler, SharePoint ve OneDrive özgü bilgiler içerdiğinden [Elde tutma hakkında bilgi edinin](retention.md) ekini ekler.
 
 Diğer iş yükleri için bkz:
 
-- [Müşteri için bekletme hakkında bilgi Microsoft Teams](retention-policies-teams.md)
-- [Müşteri için bekletme hakkında bilgi Yammer](retention-policies-yammer.md)
-- [Müşteri için bekletme hakkında bilgi Exchange](retention-policies-exchange.md)
+- [Microsoft Teams için bekletme hakkında bilgi edinin](retention-policies-teams.md)
+- [Yammer için bekletme hakkında bilgi edinin](retention-policies-yammer.md)
+- [Exchange için bekletme hakkında bilgi edinin](retention-policies-exchange.md)
 
-## <a name="whats-included-for-retention-and-deletion"></a>Bekletme ve silme işlemi için neler dahildir?
+## <a name="whats-included-for-retention-and-deletion"></a>Saklama ve silmeye dahil olanlar
 
-Site içinde veya SharePoint OneDrive tüm dosyalar, bir bekletme ilkesi veya bekletme etiketi uygulanarak saklanabilir. 
+SharePoint veya OneDrive sitelerinde depolanan tüm dosyalar bir bekletme ilkesi veya bekletme etiketi uygulanarak saklanabilir. 
 
 Aşağıdaki dosyalar silinebilir:
 
-- Bekletme ilkesi kullanırken: Belge kitaplıklarında yer alan ve otomatik olarak oluşturulan tüm dosyaları içeren SharePoint Varlıkları gibi belge **kitaplıklarında yer alan tüm dosyalar**.
+- Bekletme ilkesi kullandığınızda: Site Varlıkları gibi otomatik olarak oluşturulan SharePoint belge kitaplıklarını içeren belge **kitaplıklarındaki** tüm dosyalar.
     
-- Bekletme etiketlerini kullanırsanız: Tüm belge kitaplıklarında yer alan tüm dosyalar ve kök düzeyindeki tüm dosyalar bir klasörde yer olmayanlardır.
+- Bekletme etiketlerini kullandığınızda: Tüm belge kitaplıklarındaki tüm dosyalar ve bir klasörde olmayan kök düzeydeki tüm dosyalar.
     
 > [!TIP]
-> Bekletme etiketi için [otomatik uygulama ilkesi olan bir](apply-retention-labels-automatically.md#auto-apply-labels-to-content-with-keywords-or-searchable-properties) sorgu kullanırken, aşağıdaki girdiyi kullanarak belirli belge kitaplıklarını dışarıda tutabilirsiniz: `NOT(DocumentLink:"<URL to document library>")`
+> [Bekletme etiketi için otomatik uygulama ilkesi olan bir sorgu](apply-retention-labels-automatically.md#auto-apply-labels-to-content-with-keywords-or-searchable-properties) kullandığınızda, aşağıdaki girdiyi kullanarak belirli belge kitaplıklarını dışlayabilirsiniz:`NOT(DocumentLink:"<URL to document library>")`
 
-Liste öğeleri bekletme ilkeleri tarafından desteklanmaz, ancak sistem listelerinde yer alan öğeler dışında, bekletme etiketleri tarafından de destekler. Bunlar, Sistem Yöneticisi SharePoint tarafından kullanılan gizli listelerdir ve bunlar ana sayfa kataloğunu, çözüm kataloğunu ve veri kaynaklarını içerir. Desteklenen liste öğelerine bekletme etiketleri uygulandığında, bunlar her zaman bekletme ayarlarına göre korunur, ancak aramadan gizlendiğinde silinmezler.
+Liste öğeleri bekletme ilkeleri tarafından desteklenmez, ancak sistem listelerindeki öğeler dışında bekletme etiketleri tarafından desteklenir. Bunlar, SharePoint tarafından sistemi yönetmek için kullanılan ve ana sayfa kataloğunu, çözüm kataloğunu ve veri kaynaklarını içeren gizli listelerdir. Bekletme etiketleri desteklenen liste öğelerine uygulandığında, bunlar her zaman bekletme ayarlarına göre korunur, ancak aramadan gizlenirse silinmez.
 
-Belge eki olan desteklenen bir liste öğesine bekletme etiketi uygulayabilirsiniz:
-- Standart bir bekletme etiketi için (öğeyi kayıt olarak bildirmz):
-    - Belge eki, etiketin bekletme ayarlarını otomatik olarak devralmaz, ancak bağımsız olarak etiketılabilir.
+Belge eki olan desteklenen bir liste öğesine bekletme etiketi uyguladığınızda:
+- Standart saklama etiketi için (öğeyi kayıt olarak bildirmez):
+    - Belge eki, etiketin bekletme ayarlarını otomatik olarak devralmaz, ancak bağımsız olarak etiketlenebilir.
 - Öğeyi kayıt olarak bildiren bir bekletme etiketi için: 
-    - Belge zaten etiketli değilse, belge eki bekletme ayarlarını etiketten otomatik olarak devralıyor.
+    - Belge henüz etiketlenmemişse belge eki, bekletme ayarlarını etiketten otomatik olarak devralır.
 
-Hem bekletme ilkelerinden hem de bekletme etiketlerinden gelen bekletme ayarları kitaplık, liste ve klasör içeren yapıları düzenlemek için geçerli değildir.
+Hem bekletme ilkelerine hem de bekletme etiketlerine ait bekletme ayarları kitaplıklar, listeler ve klasörler içeren yapıları düzenlemek için geçerli değildir.
 
-Bekletme ilkeleri ve etiket ilkelerinin otomatik olarak uygulanması için: SharePoint ayarlarının uygulansı için sitelerde dizine alınan siteler olmalıdır. Öte yandan, belge SharePoint öğeleri arama sonuçlarında görünmeyecek şekilde yapılandırılırsa, bu yapılandırma dosyaları bekletme ayarlarının dışında tutmaz.
+Bekletme ilkeleri ve etiket ilkelerini otomatik uygulama için: bekletme ayarlarının uygulanması için SharePoint sitelerin dizine alınması gerekir. Ancak, SharePoint belge kitaplıklarındaki öğeler arama sonuçlarında görünmeyecek şekilde yapılandırılmışsa, bu yapılandırma dosyaları bekletme ayarlarından dışlamaz.
 
 
-## <a name="how-retention-works-for-sharepoint-and-onedrive"></a>Bekletme, alan ve SharePoint için OneDrive
+## <a name="how-retention-works-for-sharepoint-and-onedrive"></a>Bekletme SharePoint ve OneDrive için nasıl çalışır?
 
-Korunması gereken içeriği depolamak için, site SharePoint OneDrive yerinde saklama kitaplığı yoksa bir Saklama Kitaplığı oluşturun. Yasal Saklama kitaplığı etkileşimli olarak kullanılmaya tasarlanmamıştır, ancak uyumluluk nedenlerinden dolayı gerektiğinde dosyaları otomatik olarak depolar. Aşağıdaki şekilde çalışır:
+Korunması gereken içeriği depolamak için, SharePoint ve OneDrive site için mevcut olmayan bir Koruma Bekletme kitaplığı oluşturun. Koruma Bekletme kitaplığı etkileşimli olarak kullanılmak üzere tasarlanmamıştır, ancak bunun yerine, uyumluluk nedenleriyle gerektiğinde dosyaları otomatik olarak depolar. Aşağıdaki şekilde çalışır:
 
-Kullanıcı bekletmeye tabi olan bir öğeyi değiştirse veya silebilirse, bekletme ayarları uygulandığından bu yana içeriğin değişip değişmediğini denetleme yapılır. Bu, bekletme ayarları uygulandığından bu yana yapılan ilk değişiklikse, içerik Saklama kitaplığına kopyalanır ve bu da kullanıcının özgün içeriği değiştirmesini veya silmesini sağlar.
+Kullanıcı bekletmeye tabi olan bir öğeyi değiştirdiğinde veya sildiğinde, bekletme ayarları uygulandıktan sonra içeriğin değiştirilip değiştirilmediğine ilişkin bir denetim yapılır. Bekletme ayarları uygulandıktan sonra yapılan ilk değişiklik buysa, içerik, kullanıcının özgün içeriği değiştirmesine veya silmesine olanak tanıyan Koruma Saklama kitaplığına kopyalanır.
 
-Bir zamanlayıcı işi düzenli olarak Saklama kitaplığında çalışır. Bu iş, Saklama Saklama kitaplığında 30'dan fazla gündür kullanılan içerikle, bu içerik için bekletme ayarları tarafından kullanılan tüm sorgularla içeriği karşılaştırıldığında. Yapılandırılmış bekletme süresinden daha eski olan içerik, Saklama Saklama kitaplığından ve hala orada ise özgün konumdan silinir. Bu zamanlayıcı işi her yedi günde bir çalışır; bu da en az 30 günde bir, içeriğin Saklama Kitaplığı'dan silinmesinin 37 gün kadar zaman al geril bütün olduğu anlamına gelir.
+Bir zamanlayıcı işi, Koruma Bekletme kitaplığında düzenli aralıklarla çalışır. Koruma Bekletme kitaplığında 30 günden uzun süredir bulunan içerik için, bu iş içeriği söz konusu içeriğin bekletme ayarları tarafından kullanılan tüm sorgularla karşılaştırır. Yapılandırılan saklama süresinden daha eski olan içerik daha sonra Koruma Saklama kitaplığından ve hala oradaysa özgün konumdan silinir. Bu zamanlayıcı işi yedi günde bir çalıştırılır ve bu da minimum 30 günle birlikte içeriğin Koruma Tutma kitaplığından silinmesinin 37 güne kadar sürebileceği anlamına gelir.
 
-Saklama kitaplığına dosya kopyalamaya karşı bu davranış, bekletme ayarları uygulandığında var olan içeriğe uygulanır. Buna ek olarak, bekletme ilkeleri için, ilkeye eklendikten sonra sitede oluşturulan veya siteye eklenen tüm yeni içerik, Saklama Saklama kitaplığında korunur. Ancak, yeni içerik Saklama kitaplığı ilk kez düzenlenemez ve ancak silindiğinde kopyalanmaz. Dosyanın tüm sürümlerini korumak için, [özgün](#how-retention-works-with-document-versions) sitede sürümlamanın açık olması gerekir.
+Dosyaları Koruma Bekletme kitaplığına kopyalamak için bu davranış, bekletme ayarları uygulandığında var olan içeriğe uygulanır. Ayrıca, bekletme ilkeleri için, ilkeye eklendikten sonra oluşturulan veya siteye eklenen tüm yeni içerikler Koruma Bekletme kitaplığında saklanır. Ancak yeni içerik, ilk kez düzenlendiğinde, yalnızca silindiğinde Koruma Saklama kitaplığına kopyalanmamıştır. Dosyanın tüm sürümlerini korumak için, özgün site için [sürüm oluşturma](#how-retention-works-with-document-versions) açık olmalıdır.
   
-Kullanıcılar bekletmeye tabi olan bir kitaplığı, listeyi, klasörü veya siteyi silmeyi denerse bir hata iletisi alırlar. Önce bekletmeye tabi olan klasördeki dosyaları taşımaları veya silmeleri durumuyla klasörü silebilirler.
+Kullanıcılar saklamaya tabi olan bir kitaplığı, listeyi, klasörü veya siteyi silmeye çalışırlarsa bir hata iletisi görür. İlk olarak klasördeki saklamaya tabi olan dosyaları taşırlarsa veya silerlerse klasörü silebilirler.
 
-Aşağıdaki durumlardan herhangi biri etiketli öğeyi silebilirlerse, kullanıcılar bir hata iletisi de görebilir. Öğe Saklama kitaplığına kopyalanmaz, ancak özgün konumda kalır:
+Kullanıcılar aşağıdaki koşullardan herhangi birinde etiketli bir öğeyi silmeye çalışırlarsa da bir hata iletisi görür. Öğe Koruma Saklama kitaplığına kopyalanır ancak özgün konumda kalır:
 
-- Kullanıcıların etiketli öğeleri silmelerini sağlayan kayıt yönetimi ayarı kapalıdır.
+- Kullanıcıların etiketlenmiş öğeleri silmesine olanak tanıyan kayıt yönetimi ayarı kapalıdır.
     
-    Bu ayarı kontrol etmek veya değiştirmek için, Kayıt yönetimi  ayarları sayfasındaki Kayıt yönetimi Microsoft 365 uyumluluk merkezi > >  >  >  Sağlık **etiketleriŞordu etiketleriSiçenekler**. Ayrı ayrı E-SharePoint ayarları OneDrive.
+    Bu ayarı denetlemek veya değiştirmek için Kayıt **yönetimiKayıt yönetimi** ayarlarıKayıtlar yönetim **ayarlarıDeletion** >  **labelsDeletion** >  of items(**Kayıt yönetimi** > ) Microsoft 365 uyumluluk merkezi > Kayıtlar yönetimi **çözümüne** gidin. SharePoint ve OneDrive için ayrı ayarlar vardır.
     
-    Alternatif olarak, **Kayıt** yönetimi çözümüne erişiminiz yoksa [, Get-PnPTenant ve Set-PnPTenant'tan](/powershell/module/sharepoint-pnp/get-pnptenant) *AllowFilesWithKeepLabelToDeletedSPO* ve [](/powershell/module/sharepoint-pnp/set-pnptenant)*AllowFilesWithKeepLabelToDeletedODB* kullanabilirsiniz.
+    Alternatif olarak, **Kayıt yönetimi** çözümüne erişiminiz yoksa [Get-PnPTenant ve Set-PnPTenant'tan](/powershell/module/sharepoint-pnp/get-pnptenant) *AllowFilesWithKeepLabelToBeDeletedSPO* ve *AllowFilesWithKeepLabelToBeDeletedODB* kullanabilirsiniz [](/powershell/module/sharepoint-pnp/set-pnptenant).
 
 - Bekletme etiketi öğeleri kayıt olarak işaretler ve [kilitlenir](record-versioning.md).
     
-    Yalnızca kaydın kilidi açık olduğunda, son sürümün bir kopyası Saklama Kitaplığı'nın depolaması gerekir.
+    Yalnızca kaydın kilidi açıkken, son sürümün bir kopyası Koruma Bekletme kitaplığında depolanır.
 
-- Bekletme etiketi öğeleri bir yasal düzenleme [kaydı olarak](records-management.md#compare-restrictions-for-what-actions-are-allowed-or-blocked) işaretler ve bu da öğenin her zaman düzenlemesini veya silinmesini sağlar.
+- Bekletme etiketi, öğeleri düzenleme [kaydı](records-management.md#compare-restrictions-for-what-actions-are-allowed-or-blocked) olarak işaretler ve bu da öğenin düzenlenmesini veya silinmesini her zaman engeller.
 
-Bekletme ayarları bir OneDrive hesabı veya SharePoint sitesinde bulunan içeriğe atandıktan sonra, içeriğin gereken yolları, bekletme ayarlarının alıkoyma ve silme, yalnızca koruma veya yalnızca silme gibi ayarlara bağlı olarak ilerler.
+Saklama ayarları bir OneDrive hesabındaki veya SharePoint sitedeki içeriğe atandıktan sonra, içeriğin izlediği yollar bekletme ayarlarının tutulup silineceği, yalnızca korunacak veya yalnızca silinecek olmasına bağlıdır.
 
-Bekletme ayarları korunarak silinecek olduğunda:
+Bekletme ayarlarının saklanması ve silinmesi gerektiğinde:
 
-![SharePoint ve OneDrive'de içerik yaşam döngüsünün diyagramı.](../media/Retention_Diagram_of_retention_flow_in_sites.png)
+![SharePoint ve OneDrive içerik yaşam döngüsü diyagramı.](../media/Retention_Diagram_of_retention_flow_in_sites.png)
   
-1. **İçerik bekletme süresi boyunca değiştirilir** veya silinirse, Saklama Saklama kitaplığında bekletme ayarları atandığı zaman özgün içeriğin var olduğu gibi bir kopyası oluşturulur. Burada, süreölçer işi, bekletme süresinin sona ermiş olduğu öğeleri tanımlar. Bu öğeler ikinci aşama Geri Dönüşüm Kutusu'na taşınır ve 93 günün sonunda kalıcı olarak silinirler. İkinci aşama Geri Dönüşüm Kutusu son kullanıcılar tarafından görülmeyebilir (yalnızca ilk aşama Geri Dönüşüm Kutusu'dur), ancak site koleksiyonu yöneticileri buradan içeriği  görebilir ve geri yükleyebilir.
+1. Saklama süresi boyunca **içerik değiştirilir veya silinirse**, saklama ayarları atandığında var olan özgün içeriğin bir kopyası Koruma Bekletme kitaplığında oluşturulur. Burada zamanlayıcı işi, bekletme süresi dolan öğeleri tanımlar. Bu öğeler, 93 günün sonunda kalıcı olarak silindikleri ikinci aşama Geri Dönüşüm Kutusu'na taşınır. İkinci aşama Geri Dönüşüm Kutusu son kullanıcılara görünmez (yalnızca birinci aşama Geri Dönüşüm Kutusu'dur), ancak site koleksiyonu yöneticileri içeriği buradan görüntüleyebilir ve geri yükleyebilir.
 
     > [!NOTE]
-    > Yanlışlıkla veri kaybını önlemeye yardımcı olmak için, artık Saklama Kitaplığı'nın içeriğini kalıcı olarak silmez. Bunun yerine, yalnızca Geri Dönüşüm Kutusu'nun içeriğini kalıcı olarak sildiriz, dolayısıyla Saklama Saklama kitaplığının tüm içeriği artık ikinci aşama Geri Dönüşüm Kutusu'na gidiyor.
+    > Yanlışlıkla veri kaybını önlemeye yardımcı olmak için artık Koruma Bekletme kitaplığından içeriği kalıcı olarak silmeziz. Bunun yerine, içeriği yalnızca Geri Dönüşüm Kutusu'ndan kalıcı olarak sileriz, bu nedenle Koruma Bekletme kitaplığındaki tüm içerik artık ikinci aşama Geri Dönüşüm Kutusu'ndan geçer.
     
-2. **bekletme süresi boyunca içerik** değiştirilmez veya silinmezse, zamanlayıcı işi bu içeriği bekletme döneminin sonundaki ilk aşama Geri Dönüşüm Kutusu'na taşır. Kullanıcı buradan içeriği silebilir veya bu Geri Dönüşüm Kutusu'nu boşaltmışsa (temizleme olarak da bilinir), belge ikinci aşama Geri Dönüşüm Kutusu'na taşınır. 93 günlük bekletme süresi hem ilk hem de ikinci aşama geri dönüşüm alanlarına yayılan bir süredir. 93 günün sonunda, belge ilk aşama veya ikinci aşama Geri Dönüşüm Kutusu'nda bulunduğu yerden kalıcı olarak silinir. Geri Dönüşüm Kutusu dizine alındı ve dolayısıyla arama için kullanılamaz. Sonuç olarak, eBulma araması üzerinde tutulacak herhangi bir Geri Dönüşüm Kutusu içeriğini bulamaz.
+2. Saklama süresi boyunca **içerik değiştirilmez veya silinmezse**, zamanlayıcı işi bu içeriği saklama süresinin sonunda birinci aşama Geri Dönüşüm Kutusu'na taşır. Kullanıcı içeriği oradan silerse veya bu Geri Dönüşüm Kutusu'nu boşaltırsa (temizleme olarak da bilinir), belge ikinci aşama Geri Dönüşüm Kutusu'na taşınır. 93 günlük saklama süresi hem birinci hem de ikinci aşama geri dönüşüm kutularına yayılmıştır. 93 günün sonunda, belge ilk aşamada veya ikinci aşama Geri Dönüşüm Kutusu'nda bulunduğu yerden kalıcı olarak silinir. Geri Dönüşüm Kutusu dizine alınmamış ve bu nedenle arama için kullanılamıyor. Sonuç olarak, bir eBulma araması, ayrı tutulacak geri dönüşüm kutusu içeriğini bulamaz.
 
 > [!NOTE]
-> İlk bekletme ilkesi [nedeniyle, aynı](retention.md#the-principles-of-retention-or-what-takes-precedence) öğenin başka bir bekletme ilkesi veya bekletme etiketi nedeniyle korunması gerekirse ya da yasal veya yatırımlı nedenlerle eBulma bekletme kapsamında ise kalıcı silme işlemi her zaman askıya alınır.
+> [İlk saklama ilkesi](retention.md#the-principles-of-retention-or-what-takes-precedence) nedeniyle, aynı öğenin başka bir bekletme ilkesi veya saklama etiketi nedeniyle korunması gerekiyorsa veya yasal veya araştırma amaçlı olarak eBulma tutmaları altındaysa kalıcı silme işlemi her zaman askıya alınır.
 
-Bekletme ayarları yalnızca koruma veya yalnızca silme olduğunda, içerik yolları koruma ve silme çeşitlemeleridir:
+Bekletme ayarları yalnızca saklama veya yalnızca silme olduğunda, içerik yolları saklama ve silme çeşitlemeleridir:
 
-### <a name="content-paths-for-retain-only-retention-settings"></a>Yalnızca bekletme ayarları için içerik yolları
+### <a name="content-paths-for-retain-only-retention-settings"></a>Yalnızca saklama saklama ayarları için içerik yolları
 
-1.  İçerik bekletme süresi boyunca değiştirilir veya silinirse: Özgün belgenin bir kopyası, Saklama Saklama kitaplığında oluşturulur ve bekletme süresi sonuna kadar korunur. Saklama Saklama kitaplığının kopyası İkinci Aşama Geri Dönüşüm Kutusu'na taşındığında ve 93 gün sonra kalıcı olarak silinir.
+1. saklama süresi boyunca **içerik değiştirilir veya silinirse**: Koruma Saklama kitaplığında özgün belgenin bir kopyası oluşturulur ve Saklama Saklama kitaplığındaki kopya ikinci aşama Geri Dönüşüm Kutusu'na taşındığında saklama süresinin sonuna kadar saklanır ve 93 gün sonra kalıcı olarak silinir.
 
-2. **İçerik bekletme süresi boyunca değiştirilmez veya silinmezse** : Bekletme süresi öncesinde ve sonrasında hiçbir şey olmaz; Belge özgün konumda kalır.
+2. Saklama süresi boyunca **içerik değiştirilmez veya silinmezse**: Saklama süresinden önce ve sonra hiçbir şey olmaz; belge özgün konumunda kalır.
 
 ### <a name="content-paths-for-delete-only-retention-settings"></a>Yalnızca silme bekletme ayarları için içerik yolları
 
-1. **Yapılandırılmış dönem boyunca içerik** silinirse: Belge ilk aşama Geri Dönüşüm Kutusu'na taşınır. Kullanıcı belgeyi buradan silerse veya Bu Geri Dönüşüm Kutusu'nu boşaltmışsa, belge ikinci aşama Geri Dönüşüm Kutusu'na taşınır. 93 günlük bekletme süresi hem ilk aşamayı hem de ikinci aşama geri dönüşüm kutusunu içerir. 93 günün sonunda, belge ilk aşama veya ikinci aşama Geri Dönüşüm Kutusu'nda bulunduğu yerden kalıcı olarak silinir. Yapılandırılmış dönem boyunca içerik değiştirilirse, yapılandırılan süreçten sonra da aynı silme yolu izler.
+1. İçerik yapılandırılan süre boyunca **silinirse**: Belge birinci aşama Geri Dönüşüm Kutusu'na taşınır. Kullanıcı belgeyi oradan silerse veya bu Geri Dönüşüm Kutusu'nu boşaltırsa, belge ikinci aşama Geri Dönüşüm Kutusu'na taşınır. 93 günlük saklama süresi hem birinci hem de ikinci aşama geri dönüşüm kutularına yayılmıştır. 93 günün sonunda, belge ilk aşamada veya ikinci aşama Geri Dönüşüm Kutusu'nda bulunduğu yerden kalıcı olarak silinir. İçerik yapılandırılan dönemde değiştirilirse, yapılandırılan dönemden sonra aynı silme yolunu izler.
 
-2. **İçerik, yapılandırılan** süre boyunca silinmezse: Bekletme ilkesinde yapılandırılmış sürenin sonunda, belge ilk aşama Geri Dönüşüm Kutusu'na taşınır. Kullanıcı belgeyi buradan silerse veya Bu Geri Dönüşüm Kutusu'nu boşaltmışsa (temizleme olarak da bilinir), belge ikinci aşama Geri Dönüşüm Kutusu'na taşınır. 93 günlük bekletme süresi hem ilk aşamayı hem de ikinci aşama geri dönüşüm kutusunu içerir. 93 günün sonunda, belge ilk aşama veya ikinci aşama Geri Dönüşüm Kutusu'nda bulunduğu yerden kalıcı olarak silinir. Geri Dönüşüm Kutusu dizine alındı ve dolayısıyla arama için kullanılamaz. Sonuç olarak, eBulma araması üzerinde tutulacak herhangi bir Geri Dönüşüm Kutusu içeriğini bulamaz.
+2. İçerik yapılandırılan süre boyunca **silinmezse**: Saklama ilkesinde yapılandırılan dönemin sonunda, belge birinci aşama Geri Dönüşüm Kutusu'na taşınır. Kullanıcı belgeyi oradan silerse veya bu Geri Dönüşüm Kutusu'nu boşaltırsa (temizleme olarak da bilinir), belge ikinci aşama Geri Dönüşüm Kutusu'na taşınır. 93 günlük saklama süresi hem birinci hem de ikinci aşama geri dönüşüm kutularına yayılmıştır. 93 günün sonunda, belge ilk aşamada veya ikinci aşama Geri Dönüşüm Kutusu'nda bulunduğu yerden kalıcı olarak silinir. Geri Dönüşüm Kutusu dizine alınmamış ve bu nedenle arama için kullanılamıyor. Sonuç olarak, bir eBulma araması, ayrı tutulacak geri dönüşüm kutusu içeriğini bulamaz.
 
 ## <a name="how-retention-works-with-cloud-attachments"></a>Bekletme bulut ekleriyle nasıl çalışır?
 
-Bulut ekleri, kullanıcıların paylaştığı dosyalara eklenmiş bağlantılardır ve kullanıcılarınız bu dosyaları e-postalarda ve Outlook iletilerde paylaştığında Teams silinebilir. Bulut [ekleri için otomatik](apply-retention-labels-automatically.md#auto-apply-labels-to-cloud-attachments) olarak bir bekletme etiketi uygulandığında bekletme etiketi, Saklama Kitaplığı'nın depolandığı paylaşılan dosyanın bir kopyasına uygulanır.
+Bulut ekleri, kullanıcıların paylaştığı dosyalara eklenmiş bağlantılardır ve kullanıcılarınız bunları Outlook e-postalarda ve Teams iletilerde paylaştığında bunlar saklanabilir ve silinebilir. [Bulut eklerine otomatik olarak bir bekletme etiketi uyguladığınızda](apply-retention-labels-automatically.md#auto-apply-labels-to-cloud-attachments), bekletme etiketi paylaşılan dosyanın bir kopyasına uygulanır ve bu kopya Koruma Saklama kitaplığında depolanır.
 
-Bu senaryo için, bekletme dönemini başlatması için öğenin ne zaman etiketli olduğunu temel alarak etiket ayarını yapılandırmanizi öneririz. Bekletme dönemini öğenin ne zaman oluşturulduğunda veya en son değiştirildiğinden bağlı olarak yapılandırırsanız, bu tarih paylaşım zamanında özgün dosyadan alınır. Bekletme başlangıcını son değiştirildiğinde yapılacak şekilde yapılandırdısanız, Bu ayar, Saklama Kitaplığı'nın bu kopyası için hiçbir etkisi olmaz.
+Bu senaryoda, öğenin etiketlendiği zaman temelinde bekletme süresini başlatmak için etiket ayarını yapılandırmanızı öneririz. Saklama süresini, öğenin ne zaman oluşturulduğuna veya son değiştirildiğine göre yapılandırırsanız, bu tarih paylaşım sırasında özgün dosyadan alınır. Saklama başlangıcını en son değiştirildiğinde olacak şekilde yapılandırdıysanız, bu ayarın Koruma Saklama kitaplığındaki bu kopya için hiçbir etkisi olmaz.
 
-Bununla birlikte, özgün dosya değiştirilir ve yeniden paylaşılırsa, dosyanın yeni bir sürümü olarak yeni bir kopyası Koruma Saklama kitaplığına kaydedilir ve etiketlenmiş olur.
+Ancak, özgün dosya değiştirilip yeniden paylaşılırsa, dosyanın yeni bir sürümü olarak yeni bir kopyası kaydedilir ve Koruma Bekletme kitaplığına etiketlenmiştir.
 
-Özgün dosya yeniden paylaşılır ancak değiştirilmezse, Saklama Kitaplığı'nın kopyanın etiketli tarihi güncelleştirilir. Bu eylem bekletme döneminin başlangıcını sıfırlar ve bekletme döneminin başlangıcını, öğenin etiketli olduğu zaman temel olacak şekilde yapılandırmanız önerilir.
+Özgün dosya yeniden paylaşılır ancak değiştirilmezse, Koruma Saklama kitaplığındaki kopyanın etiketli tarihi güncelleştirilir. Bu eylem bekletme döneminin başlangıcını sıfırlar ve bu nedenle, saklama süresinin başlangıcını öğenin etiketlendiği zaman temelinde yapılandırmanızı öneririz.
 
-Bekletme etiketi özgün dosyaya uygulanmay olduğundan, etiketli dosya hiçbir zaman kullanıcı tarafından değiştirilmez veya silinmez. Etiketli dosya, süreölçer işi bekletme süresinin sona ermiş olduğunu belirleyene kadar Saklama Saklama kitaplığında kalır. Bekletme ayarları öğeleri secek şekilde yapılandırılmışsa, dosya daha sonra ikinci aşama Geri Dönüşüm Kutusu'na taşınır ve 93 günün sonunda kalıcı olarak silinir:
+Bekletme etiketi özgün dosyaya uygulanmadığından etiketlenen dosya hiçbir zaman değiştirilmez veya kullanıcı tarafından silinmez. Etiketli dosya, zamanlayıcı işi saklama süresinin dolduğunu belirleyene kadar Koruma Bekletme kitaplığında kalır. Bekletme ayarları öğeleri silmek üzere yapılandırılmışsa, dosya daha sonra ikinci aşama Geri Dönüşüm Kutusu'na taşınır ve burada 93 günün sonunda kalıcı olarak silinir:
 
-![SharePoint ve OneDrive'te depolanan bulut ekleri için bekletme OneDrive](../media/retention-diagram-of-retention-flow-cloud-attachments.png)
+![SharePoint ve OneDrive depolanan bulut eklerinde bekletme nasıl çalışır?](../media/retention-diagram-of-retention-flow-cloud-attachments.png)
 
-Saklama kitaplığında depolanan kopya normalde bulut ekin paylaşılıyor olmasıyla bir saat içinde oluşturulur.
+Koruma Bekletme kitaplığında depolanan kopya genellikle paylaşılmakta olan bulut ekinden bir saat içinde oluşturulur.
 
-## <a name="how-retention-works-with-onenote-content"></a>Bekletme, yeni içerikle OneNote çalışır
+## <a name="how-retention-works-with-onenote-content"></a>Bekletme OneNote içerikle nasıl çalışır?
 
-OneNote içeriğinin bulunduğu bir konuma ya da OneNote klasörüne bekletme etiketi içeren bir bekletme ilkesi uygulasanız, farklı OneNote sayfaları ve bölümleri bekletme ayarlarını devralan tek tek dosyalardır. Bu, belirttiğiniz bekletme ayarlarına göre sayfa içindeki her bölümün ayrı ayrı tutulacak ve silinecek olması anlamına gelir.
+OneNote klasörüne OneNote içerik veya bekletme etiketi içeren bir konuma bekletme ilkesi uyguladığınızda, arka planda farklı OneNote sayfaları ve bölümleri bekletme ayarlarını devralan ayrı dosyalardır. Bu, bir sayfadaki her bölümün, belirttiğiniz bekletme ayarlarına göre ayrı ayrı tutulacağı ve silineceği anlamına gelir.
 
-Yalnızca sayfalar ve bölümler belirttiğiniz bekletme ayarlarından etkiler. Örneğin, tek tek her not defteri **için** Değiştirme tarihi görse bile, bu tarih ayrı bir bekletme Microsoft 365 kullanılır.
+Yalnızca sayfalar ve bölümler belirttiğiniz bekletme ayarlarından etkilenir. Örneğin, her not defteri için bir **Değiştirme** tarihi görmenize rağmen, bu tarih Microsoft 365 saklama tarafından kullanılmaz.
 
 ## <a name="how-retention-works-with-document-versions"></a>Bekletme belge sürümleriyle nasıl çalışır?
 
-Sürüm oluşturma, çalışma kitaplarının ve kitaplarının tüm belge listelerinin ve kitaplıkların SharePoint bir OneDrive. Varsayılan olarak, sürüming bu sınırı artırsa da en az 500 ana sürüm içerir. Daha fazla bilgi için bkz [. Liste veya kitaplık için sürüm oluşturma](https://support.office.com/article/1555d642-23ee-446a-990a-bcab618c7a37) etkinleştirme ve yapılandırma ve [Listelerde ve kitaplıklarda sürüm oluşturma nasıl çalışır](https://support.microsoft.com/office/how-versioning-works-in-lists-and-libraries-0f6cd105-974f-44a4-aadb-43ac5bdfd247)?
+Sürüm oluşturma, SharePoint ve OneDrive tüm belge listelerinin ve kitaplıklarının bir özelliğidir. Varsayılan olarak, sürüm oluşturma en az 500 ana sürümü korur, ancak bu sınırı artırabilirsiniz. Daha fazla bilgi için bkz [. Liste veya kitaplık için sürüm oluşturmayı etkinleştirme ve yapılandırma](https://support.office.com/article/1555d642-23ee-446a-990a-bcab618c7a37) ve [Listelerde ve kitaplıklarda sürüm oluşturma nasıl çalışır](https://support.microsoft.com/office/how-versioning-works-in-lists-and-libraries-0f6cd105-974f-44a4-aadb-43ac5bdfd247)?
   
-Sürümleri olan bir belge bu içeriği korumak için bekletme ayarlarına tabi olduğunda, Saklama Saklama kitaplığına kopyalanan sürümler ayrı bir öğe olarak yer olur. Bekletme ayarları, bekletme döneminin sonunda silinecek şekilde yapılandırılmışsa:
+Sürümleri olan bir belge bu içeriği korumak için bekletme ayarlarına tabi olduğunda, Koruma Bekletme kitaplığına kopyalanan sürümler ayrı bir öğe olarak bulunur. Bekletme ayarları saklama süresinin sonunda silinecek şekilde yapılandırıldıysa:
 
-- Bekletme süresi içeriğin oluşturulma tarihini temel alarak oluşturulmuşsa, her sürümün son kullanma tarihi özgün belgeyle aynı olur. Özgün belgenin ve sürümlerinin hepsi aynı anda sona erer.
+- Bekletme süresi içeriğin oluşturulduğu zamana bağlıysa, her sürüm özgün belgeyle aynı sona erme tarihine sahiptir. Özgün belgenin ve sürümlerinin tümü aynı anda sona erer.
 
-- Bekletme süresi içeriğin son değiştirilma saatlerine bağlı olarak yapılacaksa, her sürümün, özgün belgenin o sürümü oluşturmak için değiştirilma tarihine bağlı olarak kendi sona erme tarihi vardır. Özgün belge ve sürümleri birbirinden bağımsız olarak sona erer.
+- Saklama süresi içeriğin en son ne zaman değiştirildiğine bağlıysa, özgün belgenin bu sürümü oluşturmak için ne zaman değiştirildiğine bağlı olarak her sürümün kendi sona erme tarihi vardır. Özgün belgenin ve sürümlerinin süresi birbirinden bağımsız olarak dolar.
 
-Bekletme eylemi belgeyi silmekse, Saklama Kitaplığı'nda yer alan tüm sürümler geçerli sürüme göre aynı anda silinir.
+Bekletme eylemi belgeyi silmek olduğunda, Koruma Bekletme kitaplığında bulunmayan tüm sürümler geçerli sürüme göre aynı anda silinir.
 
-Bekletme ilkesine (veya eBulma bekletmeye) tabi olan öğelerde, belgenin bekletme süresine ulaşana (veya eBulma saklama sürümü yayımlanana) kadar belge kitaplığının sürüm oluşturma sınırları yoksayılır. Bu senaryoda, eski sürümler otomatik olarak temizlanmaz ve kullanıcıların sürümleri silmeden önlenir.
+Bekletme ilkesine (veya eBulma ayrı tutmasına) tabi olan öğeler için, belge kitaplığının sürüm oluşturma sınırları, belgenin saklama süresine ulaşılana (veya eBulma ayrı tutması serbest bırakılana) kadar yoksayılır. Bu senaryoda, eski sürümler otomatik olarak temizlenmez ve kullanıcıların sürümleri silmesi engellenir.
 
-İçerik bir bekletme ilkesine (veya eBulma saklamaya) tabi değilse, bekletme etiketleri böyle olmaz. Bunun yerine, eski sürümlerin yeni sürümlere uyum sağlayacak şekilde otomatik olarak silinmesine, ancak kullanıcıların sürümleri silmeden yine de önüne geçmek için sürüm oluşturma sınırlamaları geçerli olur.
+İçerik bir bekletme ilkesine (veya eBulma bekletmesine) tabi olmadığında bekletme etiketleri için bu durum geçerli değildir. Bunun yerine, eski sürümlerin yeni sürümleri barındıracak şekilde otomatik olarak silinmesi, ancak kullanıcıların sürümleri silmesinin engellenmesi için sürüm oluşturma sınırları uygulanır.
 
-## <a name="when-a-user-leaves-the-organization"></a>Bir kullanıcı kuruluşdan ayrıldığında
+## <a name="when-a-user-leaves-the-organization"></a>Kullanıcı kuruluştan ayrıldığında
 
 **SharePoint**:
 
-Bir kullanıcı kuruluştan ayrıldığında, o kullanıcı tarafından oluşturulan tüm içerik etkilenmez çünkü SharePoint posta kutusu veya posta kutusunun aksine işbirliğine dayalı bir ortam OneDrive kabul edilir.
+Bir kullanıcı kuruluşunuzdan ayrıldığında, kullanıcının posta kutusu veya OneDrive hesabından farklı olarak SharePoint işbirliğine dayalı bir ortam olarak kabul edildiğinden bu kullanıcı tarafından oluşturulan içerik etkilenmez.
 
 **OneDrive**:
 
-Bir kullanıcı kuruluştan ayrılırsa, bekletme ilkesine tabi veya bekletme etiketi olan tüm dosyalar, ilkede veya etikette belirtilen bekletme süresi boyunca bekletme ayarlarına tabi kalır. Bu süre boyunca, tüm paylaşım erişimi çalışmaya devam eder ve içerik İçerik Arama ve eBulma tarafından aranabilir hale geldi. 
+Kullanıcı kuruluşunuzdan ayrılırsa, bekletme ilkesine tabi olan veya bekletme etiketi olan tüm dosyalar, ilkede veya etikette belirtilen saklama süresi boyunca bekletme ayarlarına tabi kalır. Bu süre boyunca tüm paylaşım erişimi çalışmaya devam eder ve içerik İçerik Arama ve eBulma tarafından bulunabilir olmaya devam eder. 
 
-Bekletme süresi dolduğunda ve bekletme ayarları bir silme eylemi dahil olduğunda, içerik Site Koleksiyonu Geri Dönüşüm Kutusu'na taşınır ve yönetici dışında herkes tarafından erişilemez.
+Saklama süresi dolduğunda ve bekletme ayarları bir silme eylemi içerdiğinde, içerik Site Koleksiyonu Geri Dönüşüm Kutusu'na taşınır ve yönetici dışında hiç kimse tarafından erişilemez.
 
 ## <a name="configuration-guidance"></a>Yapılandırma kılavuzu
 
-Bekletmeyi yeni bir web günlüğünde yapılandırmaya Microsoft 365 [bkz. Bilgi yönetimiyle çalışmaya başlama](get-started-with-information-governance.md).
+Microsoft 365'da bekletmeyi yapılandırma konusunda yeniyseniz bkz. [bilgi idaresiyle Kullanmaya başlayın](get-started-with-information-governance.md).
 
-E-posta için bir bekletme ilkesi veya bekletme etiketi yapılandırmaya Exchange, aşağıdaki yönergelere bakın:
+Exchange için bir bekletme ilkesi veya bekletme etiketi yapılandırmaya hazırsanız aşağıdaki yönergelere bakın:
 - [Bekletme ilkeleri oluşturma ve yapılandırma](create-retention-policies.md)
-- [Bekletme etiketleri oluşturma ve bunları uygulamalarda uygulama](create-apply-retention-labels.md)
-- [İçeriği otomatik olarak bekletme etiketi uygulama](apply-retention-labels-automatically.md)
+- [Bekletme etiketlerini yayımlama ve uygulamalarda uygulama](create-apply-retention-labels.md)
+- [İçeriğe otomatik olarak bekletme etiketi uygulama](apply-retention-labels-automatically.md)

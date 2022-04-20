@@ -1,5 +1,5 @@
 ---
-title: Gözden geçirme kümelerini Advanced eDiscovery
+title: eBulma'da gözden geçirme kümelerini yönetme (Premium)
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -15,48 +15,48 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Bir olayda verileri çözümlemek, sorgulamak, görüntülemek, etiketlemek ve dışarı aktararak gözden geçirme kümelerini Advanced eDiscovery öğrenin.
+description: Bir eBulma (Premium) örneğindeki verileri analiz etmek, sorgulamak, görüntülemek, etiketlemek ve dışarı aktarmak için gözden geçirme kümelerini yönetmeyi öğrenin.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: a3aa836782dd464be2e62ca729efd85484c8aebf
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 60e43d4d4983dd5171ed38f26096fba979c0f98c
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63315617"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64935598"
 ---
-# <a name="manage-review-sets-in-advanced-ediscovery"></a>Gözden geçirme kümelerini Advanced eDiscovery
+# <a name="manage-review-sets-in-ediscovery-premium"></a>eBulma'da gözden geçirme kümelerini yönetme (Premium)
 
-Gözden geçirme kümeleri, bir olayda verileri çözümleme, sorgulama, görüntüleme, etiketleme ve dışarı aktarmanın bulunduğu statik bir belge kümesidir. Bu görevleri gerçekleştirme hakkında daha fazla bilgi için bkz:
+Gözden geçirme kümeleri, bir durumda verileri çözümleyebileceğiniz, sorgulayabileceğiniz, görüntüleyebileceğiniz, etiketleyebileceğiniz ve dışarı aktarabileceğiniz statik bir belge kümesidir. Bu görevleri gerçekleştirme hakkında daha fazla bilgi için bkz:
 
-- [Gözden geçirme kümesinde verileri çözümleme](analyzing-data-in-review-set.md)
+- [Gözden geçirme kümesindeki verileri analiz etme](analyzing-data-in-review-set.md)
 
-- [Gözden geçirme kümesinde verileri sorgulama](review-set-search.md)
+- [Gözden geçirme kümesindeki verileri sorgulama](review-set-search.md)
 
-- [Gözden geçirme kümesinde belgeleri görüntüleme](view-documents-in-review-set.md)
+- [Bir inceleme setindeki belgeleri görüntüleme](view-documents-in-review-set.md)
 
-- [Gözden geçirme kümesinde belgeleri etiketleme](tagging-documents.md)
+- [Bir inceleme setindeki belgeleri etiketleme](tagging-documents.md)
 
-- [Vaka verilerini dışarı aktarma](exporting-data-ediscover20.md)
+- [Servis talebi verilerini dışarı aktarma](exporting-data-ediscover20.md)
 
 ## <a name="create-a-review-set"></a>Gözden geçirme kümesi oluşturma
 
-Gözden geçirme kümeleri, Gözden geçirme kümesi **ekle'ye** tıklanır ve **Gözden Geçir kümeleri sekmesinde oluşturulabilir**.
+Gözden geçirme kümeleri **, Gözden geçirme kümeleri** sekmesinde **+ Gözden geçirme kümesi ekle'ye** tıklayarak oluşturulabilir.
 
 ![Gözden geçirme kümesi ekleyin.](../media/f45c51d9-585d-47d1-b7fb-0288715e0b6a.png)
 
-Gözden geçirme **kümesi ekle uç** sayfasında, gözden geçirme kümesi için bir ad yazın ve Kaydet'e **tıklayın**. Yeni gözden geçirme kümesi, Gözden Geçir kümeleri **sekmesindeki listede** görüntülenir.
+**Gözden geçirme kümesi ekle** açılır sayfasında, gözden geçirme kümesi için bir ad yazın ve **Kaydet'e** tıklayın. Yeni gözden geçirme kümesi **, Gözden geçirme kümeleri** sekmesindeki listede görüntülenir.
 
-![Gözden Geçir kümesi sekmesinde yeni gözden geçirme kümesi listelenir.](../media/AeDnewreviewset.png)
+![Gözden geçirme kümesi sekmesinde listelenen yeni gözden geçirme kümesi.](../media/AeDnewreviewset.png)
 
-Ayrı bir olayda gözden geçirme kümesine veri eklemenin üç Advanced eDiscovery vardır.
+eBulma (Premium) durumunda bir gözden geçirme kümesine veri eklemenin üç farklı yolu vardır.
 
-![Gözden geçirme kümelerini eklemenin üç yolu vardır.](../media/1f1f4efd-c03b-4255-bc3d-df358e56549c.png)
+![Gözden geçirme kümelerine eklemenin üç yolu.](../media/1f1f4efd-c03b-4255-bc3d-df358e56549c.png)
 
 1. [Gözden geçirme kümesine arama sonuçları ekleme](add-data-to-review-set.md)
 
-2. [Gözden Microsoft 365 olmayan verileri gözden geçirme kümesine yükleme](load-non-Office-365-data-into-a-review-set.md)
+2. [gözden geçirme kümesine Microsoft 365 olmayan verileri yükleme](load-non-Office-365-data-into-a-review-set.md)
 
-3. [Başka bir gözden geçirme kümesinden gözden geçirme kümesine veri ekleme](add-data-to-review-set-from-another-review-set.md)
+3. [Başka bir gözden geçirme kümesinden bir gözden geçirme kümesine veri ekleme](add-data-to-review-set-from-another-review-set.md)
 
 > [!NOTE]
-> Gözden geçirme kümesinden öğe silemezsiniz ve gözden geçirme kümelerini bir vakadan silemezsiniz. Gözden geçirme kümesi silmek (ve kümenin verilerini silmek) için, gözden geçirme Advanced eDiscovery büyük/küçük harflerini silmeniz gerekir. Daha fazla bilgi için bkz[. Vakayı kapatma Advanced eDiscovery silme](close-or-delete-case.md).
+> Gözden geçirme kümesindeki öğeleri silemezsiniz ve bir servis talebindeki gözden geçirme kümelerini silemezsiniz. Gözden geçirme kümesini silmek (ve içindeki verileri silmek) için, gözden geçirme kümesinin bulunduğu eBulma (Premium) servis talebini silmeniz gerekir. Daha fazla bilgi için bkz. [eBulma (Premium) servis talebini kapatma veya silme](close-or-delete-case.md).

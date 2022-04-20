@@ -1,12 +1,12 @@
 ---
-title: E-posta ile bulut Advanced eDiscovery
+title: eBulma'da bulut eklerini toplama (Premium)
 f1.keywords:
 - NOCSH
 ms.author: markjjo
 author: markjjo
 ms.reviewer: nickrob
 manager: laurawi
-ms.date: ''
+ms.date: 04/05/2022
 audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
@@ -15,49 +15,49 @@ ms.collection: M365-security-compliance
 search.appverid:
 - MOE150
 - MET150
-description: Bir soruşturma veya Advanced eDiscovery gözden geçirmek üzere bulut eklerini toplamak üzere E-posta'da koleksiyonları kullanın.
-ms.openlocfilehash: bdf30fea0e168d4b36175296f524ade13539970b
-ms.sourcegitcommit: 7f0c5b55e2966c0c1ce6a153a4e6a7ec035bd818
+description: Microsoft Purview eKeşif (Premium) içindeki koleksiyonları kullanarak bir araştırma veya olayda gözden geçirilmek üzere bulut eklerini toplayın.
+ms.openlocfilehash: 0a0d3dab3942dbdfcfa896d8e2f59fd2e2dca813
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2021
-ms.locfileid: "63007659"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64935730"
 ---
-# <a name="collect-cloud-attachments-in-advanced-ediscovery-preview"></a>E-postalarda bulut Advanced eDiscovery (önizleme) toplama
+# <a name="collect-cloud-attachments-in-microsoft-purview-ediscovery-premium-preview"></a>Microsoft Purview eBulma'da (Premium) bulut eklerini toplama (önizleme)
 
-Bulut ekleri, genellikle site içinde veya başka bir SharePoint depolanan belgelere OneDrive. Dolayısıyla, e-posta iletisine veya sohbet görüşmesine bir Teams kopyasını eklemek yerine, dosyanın bağlantısını paylaşma seçeneğiniz vardır. Bulut ekleri, belgeleri paylaşmak ve organizasyonlu diğer kişiler ile işbirliği yapmak için etkili bir yol sağlar. Ancak eBulma iş akışı sırasında bulut ekleri, paylaşılan belgeye gerçek içeriği değil yalnızca bulut eki bağlantısı bir eBulma aramasinde döndürüleceği için zorluk gösterir. Bu soruna çözüm olarak, Advanced eDiscovery ekleri toplamak için iki çözüm sağlar:  
+Bulut ekleri, genellikle SharePoint sitede ve OneDrive depolanan belgelerin bağlantılarıdır. Bu nedenle, e-posta iletisine veya Teams sohbet konuşmasına belgenin gerçek bir kopyasını eklemek yerine dosyanın bağlantısını paylaşma seçeneğiniz vardır. Bulut ekleri, belgeleri paylaşmanın ve kuruluşunuzdaki diğer kişilerle işbirliği yapmanın etkili bir yoludur. Ancak eBulma iş akışı sırasında bulut ekleri güçlükler sunar çünkü eBulma aramasında paylaşılan belgedeki gerçek içerik değil yalnızca bulut eki bağlantısı döndürülür. Bu zorluğu gidermek için eBulma (Premium), bulut eklerini toplamaya yönelik iki çözüm sağlar:  
 
-- Bulut eke bağlı bir belgenin canlı sürümünü toplama.
+- Bir bulut ekinde bağlantılı bir belgenin canlı sürümünü toplama.
 
-- Belgenin bir bulut eksinde paylaşılırken sürümünü toplama.
+- Belgenin bir bulut ekinde paylaşıldığı sırada sürümünü toplama.
 
 ## <a name="collecting-cloud-attachments"></a>Bulut eklerini toplama
 
-Bir taslak koleksiyonu  oluşturmanıza ve arama sonuçlarında bulut ekleri içeren öğelere sahipseniz, taslak koleksiyonunu gözden geçirme kümesine işlerken bulut ekin hedefini toplama seçeneğiniz vardır. Bu seçeneği tercih ettiyseniz, Advanced eDiscovery bulut eke bağlı olan belgeleri gözden geçirme kümesine ekler. Bu, hedef belgeleri gözden geçirmenize ve belgenin olay veya incelemenize uygun olup olmadığını belirlemenizi sağlar.
+Taslak koleksiyon oluşturduğunuzda ve arama sonuçları bulut ekleri içeren öğeler içerdiğinde, taslak koleksiyonu bir gözden geçirme kümesine işlerken bulut ekinin hedefini toplama seçeneğine sahip olmanız gerekir. Bu seçeneği belirlediğinizde, eBulma (Premium) bulut ekinde bağlı olan belgeleri gözden geçirme kümesine ekler. Bu, hedef belgeleri gözden geçirmenize ve belgenin olay veya araştırmanızla ilgili olup olmadığını belirlemenize olanak tanır.
 
-Aşağıdaki ekran görüntüsünde, koleksiyonu gözden geçirme kümesine işlerken bulut eklerinin hedeflerini ekleme seçeneği gösterir.
+Aşağıdaki ekran görüntüsünde, bir koleksiyonu gözden geçirme kümesine işlerken bulut eklerinin hedeflerini ekleme seçeneği gösterilmektedir.
 
-![Koleksiyonu gözden geçirme kümesine işlerken bulut ekleri ekleme seçeneği](../media/CollectCloudAttachments1.png)
+![Bir koleksiyonu gözden geçirme kümesine işlerken bulut eklerini ekleme seçeneği](../media/CollectCloudAttachments1.png)
 
 > [!NOTE]
->- Advanced eDiscovery'da yeni [](advanced-ediscovery-new-case-format.md) büyük/harf biçimini kullanıyorsanız, gözden geçirme kümesine bulut ekleri ekleme seçeneği varsayılan olarak seçilidir ve seçilmez.<br/>
+>- eBulma'da (Premium) [yeni durum biçimini](advanced-ediscovery-new-case-format.md) kullanırsanız, gözden geçirme kümesine bulut ekleri ekleme seçeneği varsayılan olarak seçilidir ve seçilemez.<br/>
 >- Ayrıca, bulut eklerinin tüm sürümlerini (paylaşılan sürüme ek olarak) gözden geçirme kümesine ekleme seçeneğiniz de vardır.  
-Koleksiyonu gözden geçirme kümesine kaydetme yönergeleri için bkz. [Taslak koleksiyonunu gözden geçirme kümesine kaydetme](commit-draft-collection.md).
+Bir koleksiyonu gözden geçirme kümesine işleme yönergeleri için bkz. [Taslak koleksiyonu gözden geçirme kümesine işleme](commit-draft-collection.md).
 
-## <a name="collecting-the-version-shared-in-a-cloud-attachment"></a>Bulut eksinde paylaşılan sürümü toplama
+## <a name="collecting-the-version-shared-in-a-cloud-attachment"></a>Bulut ekinde paylaşılan sürümü toplama
 
-Bulut Advanced eDiscovery toplamaya yönelik en iyi iş akışı, yalnızca bulut eklerinin en güncel sürümünü gözden geçirme kümesine eklemeyi içerir. Bu, bir gözden geçirme kümesinde toplanan ve eklenen sürümün, özgün olarak bulut eksinde paylaşılan sürümden farklı olduğu anlamına gelir. Dolayısıyla, bulut ekinde yer alan ve paylaşıldığı sırada bulut ekinde yer alan içerik kaldırılmış ve gözden geçirme kümesine eklenmiş olan geçerli sürümde yer almayabilirsiniz.
+Bulut eklerini toplamaya yönelik eBulma (Premium) iş akışı yalnızca bir inceleme kümesine bulut ekinin en güncel sürümünü eklemeyi içerir. Bu, toplanan ve bir gözden geçirme kümesine eklenen sürümün başlangıçta bulut ekinde paylaşılan sürümden farklı olabileceği anlamına gelir. Bu nedenle, paylaşıldığı sırada bulut ekinde bulunan içerik kaldırılmış olabilir ve gözden geçirme kümesine eklenen geçerli sürümde mevcut olmayabilir.
 
-Kuruluşlar artık belgenin sürümünü bulut eki Microsoft 365 bir zamanda korumak için bekletme etiketlerini saklama seçeneğine sahiptir. Bunu yapmak için, organizasyonunız bir bekletme etiketi oluşturabilir, etiketi bulut eklere uygula seçeneğini belirleyin ve sonra etiketi otomatik olarak SharePoint ve OneDrive. Bu yapılandırmayı oluşturduktan sonra, dosya paylaşılırken belgenin bir kopyası oluşturulur. Ayrıca, belge değiştirilirse ve yeniden bulut eki olarak paylaşılırsa, değiştirilen sürüm de korunur. Dosya değiştirilir ve yeniden paylaşılırsa, dosyanın yeni bir sürümü olarak yeni bir kopyası korunur.
+Kuruluşlar artık bir belgenin bulut eki olarak paylaşıldığı sırada sürümünü korumak için Microsoft 365 bekletme etiketlerini kullanma seçeneğine sahiptir. Bunu yapmak için kuruluşunuz bir bekletme etiketi oluşturabilir, etiketi bulut eklerine uygula seçeneğini belirleyebilir ve ardından etiketi SharePoint ve OneDrive depolanan belgelere otomatik olarak uygulayabilir. Bu yapılandırmayı ayarladıktan sonra, dosyanın paylaşıldığında belgenin bir kopyası oluşturulur. Ayrıca, belge yeniden değiştirilip bulut eki olarak paylaşılırsa, değiştirilen sürüm de korunur. Dosya yeniden değiştirilir ve paylaşılırsa, dosyanın yeni sürüm olarak yeni bir kopyası korunur.
 
-Bulut eklerinin paylaşılan sürümlerinin korunması, kurum gerek geçerli canlı sürüm yerine belgenin paylaşılan belirli sürümüyle ilgili olabilecek içeriğin korunmasına ve toplanmasına yardımcı olur. Bu bekletme çözümünü gerçekleştirdikten sonra, hem bulut eklerinin geçerli canlı sürümü hem de bulut ekte paylaşılan sürüm toplanır ve gözden geçirme kümesine eklenir.
+Bulut eklerinin paylaşılan sürümlerinin korunması, kuruluşunuzun geçerli canlı sürüm yerine paylaşılan belgenin belirli bir sürümüyle ilgili olabilecek içeriğin korunmasını ve toplanmasını kapsamasına yardımcı olabilir. Bu bekletme çözümünü uyguladıktan sonra hem bulut ekinin geçerli canlı sürümü hem de bulut ekinde paylaşılan sürüm toplanır ve bir gözden geçirme kümesine eklenir.
 
-Bir bekletme etiketini ayarlama ve bunu bulut eklerine otomatik olarak uygulama yönergeleri için bkz. Bulut eklerine [otomatik olarak etiket uygulama](apply-retention-labels-automatically.md#auto-apply-labels-to-cloud-attachments).
+Bekletme etiketi ayarlama ve bunu bulut eklerine otomatik olarak uygulama yönergeleri için bkz. [Etiketleri bulut eklerine otomatik olarak uygulama](apply-retention-labels-automatically.md#auto-apply-labels-to-cloud-attachments).
 
-Aşağıdaki ekran görüntüsünde, gözden geçirme kümesine *eklenmiş olan XYZ Research.docx* adlı bir bulut eki belgesi yer aldı. Belge bir sohbet görüşmesinde bulut eki Teams paylaşıldı. Gözden geçirme kümesi, özgün olarak bulut eksinde paylaşılan sürümü de içerir. Bulut eklerinin bu sürümünün adının sistem tarafından oluşturulmuş olduğunu ve yazarın e-posta olarak **SharePoint.**
+Aşağıdaki ekran görüntüsünde, inceleme kümesine eklenen *XYZ Research.docx* adlı bir bulut eki belgesi gösterilmektedir. Belge, Teams sohbet konuşmasında bulut eki olarak paylaşıldı. Gözden geçirme kümesi, başlangıçta bulut ekinde paylaşılan sürümü de içerir. Bulut ekinin bu sürümünün adının sistem tarafından oluşturulduğuna ve yazarın **SharePoint** olarak tanımlandığından emin olabilirsiniz.
 
-![Gözden geçirme kümesinde paylaşılan bir bulut eki sürümü](../media/CollectCloudAttachments2.png)
+![Paylaşılan bulut ekinin bir gözden geçirme kümesinde görüntülenen sürümü](../media/CollectCloudAttachments2.png)
 
-Buna ek olarak, geçerli canlı sürüm ve paylaşılan sürüm, üst nesnenin **FamilyId** değeriyle (e-posta iletisi veya sohbet görüşmesi gibi) aynı **FamilyId** özelliği Teams vardır. Bu sayede bulut eklerini, içinde paylaşıldıları öğeyle gruplandırabilirsiniz.
+Ayrıca, geçerli canlı sürüm ve paylaşılan sürüm, üst nesnenin **FamilyId** değeriyle (e-posta iletisi veya Teams sohbet konuşması gibi) aynı **FamilyId** özellik değerine sahiptir. Bu, bulut eklerini paylaşıldıkları öğeyle gruplandırmanıza olanak tanır.
 
-Bekletme etiketini uygulayan ve bu etiketi SharePoint belgelerine otomatik olarak uygulaytıktan sonra, taslak koleksiyonunu gözden geçirme kümesine işlerken bulut eklerini toplama seçeneğini yine seçersiniz. Bulut ekleri toplanıyorsa, hem geçerli canlı sürüm hem de başlangıçta paylaşılan sürüm gözden geçirme kümesine eklenir.
+Bekletme etiketini uyguladıktan ve etiketi SharePoint belgelere otomatik olarak uyguladıktan sonra, bir taslak koleksiyonu gözden geçirme kümesine işlerken bulut eklerini toplama seçeneğini belirlemeye devam edebilirsiniz. Bulut ekleri toplandığında hem geçerli canlı sürüm hem de başlangıçta paylaşılan sürüm gözden geçirme kümesine eklenir.

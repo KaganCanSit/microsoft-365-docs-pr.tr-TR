@@ -1,5 +1,5 @@
 ---
-title: TelUS Network verilerini aynı dosyada arşivlemek için bağlayıcıyı Microsoft 365
+title: Microsoft 365'de TELUS Ağ verilerini arşivleye bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -11,76 +11,76 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Yöneticiler, iş yerinde TELUS Ağı'nda SMS verilerini içeri aktarıp arşivlemek için telemessage bağlayıcısı Microsoft 365. Bu, üçüncü taraf veri kaynaklarından verileri Microsoft 365'te arşivlemenize olanak sağlar ve böylece yasal saklama, içerik araması ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanarak kuruluş üçüncü taraf verilerini yönetebilirsiniz.
-ms.openlocfilehash: 7aca24c39f9eba5dba532f1224ad68d5ff1d4568
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Yöneticiler, MICROSOFT 365'da TELUS Ağı'ndan SMS verilerini içeri aktarmak ve arşivlemek için bir TeleMessage bağlayıcısı ayarlayabilir. Bu, kuruluşunuzun üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilmeniz için üçüncü taraf veri kaynaklarından verileri Microsoft 365 arşivleyebilmenizi sağlar.
+ms.openlocfilehash: 4fec855f4b2d9b066e670655a8b708877b1741ca
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63327399"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64937179"
 ---
-# <a name="set-up-a-connector-to-archive-telus-network-data"></a>TELUS Ağ verilerini arşivlemek için bağlayıcıyı ayarlama
+# <a name="set-up-a-connector-to-archive-telus-network-data"></a>TELUS Ağ verilerini arşivleye bağlayıcı ayarlama
 
-Kısa İleti Hizmeti (SMS) verilerini Microsoft 365 uyumluluk merkezi TELUS Ağı'nda içeri aktarıp arşivlemek için, ileti kaynağında TeleMessage bağlayıcıyı kullanın. Bir bağlayıcıyı ayardikten ve yapılandırdikten sonra, bağlayıcı her gün kuruluşun TELUS Ağı'ne bağlanır ve SMS verilerini E-posta'daki posta kutularına Microsoft 365.
+Kısa Mesajlaşma Hizmeti (SMS) verilerini kuruluşunuzun TELUS Ağından içeri aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalındaki TeleMessage bağlayıcısını kullanın. Bağlayıcıyı ayarlayıp yapılandırdıktan sonra, her gün bir kez kuruluşunuzun TELUS Ağına bağlanır ve SMS verilerini Microsoft 365'daki posta kutularına aktarır.
 
-SMS mesajları kullanıcı posta kutularında depolanıyorsa, TELUS verilerine mahkeme Microsoft 365, İçerik Arama ve bekletme Microsoft 365 uyumluluk özellikleri uygulayabilirsiniz. Örneğin, İçerik Araması'nı kullanarak TELUS SMS iletilerinde arama veya TELUS verilerini içeren posta kutusunu bir özel durum durumunda bir koruyucuyla Advanced eDiscovery alabilirsiniz. Verileri kendi web sitelerine içeri aktarıp arşivlemek için TELUS Network bağlayıcısı kullanmak Microsoft 365 düzenleme ve devlet ilkeleriyle uyumlu kalmalarına yardımcı olabilir.
+SMS iletileri kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, İçerik Arama ve Microsoft 365 bekletme ilkeleri gibi Microsoft Purview özelliklerini TELUS verilerine uygulayabilirsiniz. Örneğin, İçerik Arama'yı kullanarak TELUS SMS iletilerinde arama yapabilir veya TELUS verilerini içeren posta kutusunu eBulma (Premium) durumundaki bir koruyucuyla ilişkilendirebilirsiniz. Microsoft 365'de verileri içeri aktarmak ve arşivlerken TELUS Ağ bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 
-## <a name="overview-of-archiving-telus-network-data"></a>TELUS Ağ verilerini arşivlemeye genel bakış
+## <a name="overview-of-archiving-telus-network-data"></a>TELUS Ağ verilerini arşivleme genel bakış
 
-Aşağıdaki genel bakış makalesinde, telUS Ağ verilerini tek bir tabloda arşivlemek için bağlayıcı Microsoft 365.
+Aşağıdaki genel bakış, Microsoft 365'da TELUS Ağ verilerini arşivleye bağlayıcı kullanma işlemini açıklar.
 
-![TELUS Network arşivleme iş akışı.](../media/TelusNetworkConnectorWorkflow.png)
+![TELUS Ağ arşivleme iş akışı.](../media/TelusNetworkConnectorWorkflow.png)
 
-1. Your organization works with TeleMessage and TELUS to set a TELUS Network connector. Daha fazla bilgi için bkz. [TELUS Ağ Arşivleyicisi](https://www.telemessage.com/office365-activation-for-telus-network-archiver/).
+1. Kuruluşunuz TeleMessage ve TELUS ile birlikte çalışarak bir TELUS Ağ bağlayıcısı ayarlar. Daha fazla bilgi için bkz. [TELUS Ağ Arşivleyicisi](https://www.telemessage.com/office365-activation-for-telus-network-archiver/).
 
-2. Gerçek zamanlı olarak, kuruluşun TELUS Ağı'nın SMS mesajları TeleMessage sitesine kopyalanır.
+2. Gerçek zamanlı olarak, kuruluşunuzun TELUS Ağından gelen SMS iletileri TeleMessage sitesine kopyalanır.
 
-3. Microsoft 365 uyumluluk merkezi'ta oluşturduktan sonra TELUS Network bağlayıcısı her gün TeleMessage sitesine bağlanır ve önceki 24 saatte gelen SMS mesajlarını Microsoft bulutunda güvenli bir Azure Depolama konuma aktarıyor. Bağlayıcı SMS mesajlarının içeriğini de e-posta iletisi biçimine dönüştürür.
+3. Uyumluluk portalında oluşturduğunuz TELUS Ağ bağlayıcısı her gün TeleMessage sitesine bağlanır ve önceki 24 saat içindeki SMS iletilerini Microsoft bulutunda güvenli bir Azure Depolama konumuna aktarır. Bağlayıcı ayrıca SMS iletilerinin içeriğini e-posta iletisi biçimine dönüştürür.
 
-4. Bağlayıcı, mobil iletişim öğelerini belirli bir kullanıcının posta kutusuna aktarıyor. Belirli bir kullanıcının posta **kutusunda TELUS SMS Ağ** Arşivleyicisi adlı yeni bir klasör oluşturulur ve öğeler bu klasöre aktarılır. Bağlayıcı, Kullanıcının E-posta adresi *özelliğinin değerini kullanarak eşleme* yapar. Her SMS'in bu özelliği vardır ve bu özellik SMS mesajı her katılımcının e-posta adresiyle doldurulur.
+4. Bağlayıcı, mobil iletişim öğelerini belirli bir kullanıcının posta kutusuna aktarır. Belirli bir kullanıcının posta kutusunda **TELUS SMS Ağ Arşivleyicisi** adlı yeni bir klasör oluşturulur ve öğeler bu klasöre aktarılır. Bağlayıcı, *Kullanıcının E-posta adresi* özelliğinin değerini kullanarak eşleme yapar. Her SMS iletisi, SMS iletisinin her katılımcısının e-posta adresiyle doldurulan bu özelliği içerir.
 
-   Kullanıcının E-posta adresi özelliğinin değerini kullanarak otomatik kullanıcı  eşlemeye ek olarak, CSV eşleme dosyası yükerek özel eşleme de kullanabilirsiniz. Bu eşleme dosyası, cep telefonu numarasını ve bunun Microsoft 365-posta adresini içerir. Hem otomatik kullanıcı eşlemesini hem de özel eşlemeyi etkinleştirirsanız, bağlayıcı önce özel eşleme dosyasına bakarak bakarak her TELUS öğesinde yer alır. Kullanıcının cep telefonu numarasına karşılık gelen Microsoft 365 bir kullanıcı bulamazsa, bağlayıcı içeri aktarmaya çalıştığı öğenin e-posta adresi özelliğinde yer alan değerleri kullanır. Bağlayıcı, kullanıcıya özel Microsoft 365 veya TELUS öğesinin e-posta adresi özelliğinde geçerli bir kullanıcı bulamazsa, öğe aktarılmaz.
+   *Kullanıcının E-posta adresi* özelliğinin değerini kullanan otomatik kullanıcı eşlemesine ek olarak, csv eşleme dosyasını karşıya yükleyerek de özel eşleme uygulayabilirsiniz. Bu eşleme dosyası, kuruluşunuzdaki kullanıcılar için cep telefonu numarasını ve ilgili Microsoft 365 e-posta adresini içerir. Hem otomatik kullanıcı eşlemesini hem de özel eşlemeyi etkinleştirirseniz, her TELUS öğesi için bağlayıcı önce özel eşleme dosyasına bakar. Kullanıcının cep telefonu numarasına karşılık gelen geçerli bir Microsoft 365 kullanıcısı bulamazsa, bağlayıcı içeri aktarmaya çalıştığı öğenin e-posta adresi özelliğindeki değerleri kullanır. Bağlayıcı, özel eşleme dosyasında veya TELUS öğesinin e-posta adresi özelliğinde geçerli bir Microsoft 365 kullanıcısı bulamazsa, öğe içeri aktarılamaz.
 
 ## <a name="before-you-set-up-a-connector"></a>Bağlayıcıyı ayarlamadan önce
 
-TELUS Network verilerini arşivlemek için gereken bazı uygulama adımları, Microsoft 365 dışındadır ve uyumluluk merkezinde bağlayıcı oluşturamadan önce tamamlanması gerekir.
+TELUS Ağ verilerini arşivlerken gereken uygulama adımlarından bazıları Microsoft 365 dışındadır ve uyumluluk merkezinde bağlayıcı oluşturabilmeniz için önce tamamlanması gerekir.
 
-- [TeleMessage'dan TELUS Network Archiver hizmetini sipariş](https://www.telemessage.com/mobile-archiver/order-mobile-archiver-for-o365) etmek ve organizasyonunız için geçerli bir yönetim hesabı almak. Uyumluluk merkezinde bağlayıcıyı  oluşturmak için bu hesapta oturum açın.
+- [TeleMessage'dan TELUS Ağ Arşivleyicisi hizmetini](https://www.telemessage.com/mobile-archiver/order-mobile-archiver-for-o365) sipariş edin ve kuruluşunuz için geçerli bir yönetim hesabı alın. Uyumluluk merkezinde bağlayıcıyı oluştururken bu hesapta oturum açmanız gerekir.
 
-- TeleMessage ekleme formlarınızı doldurarak ileti arşivleme hizmetini TELUS'tan sipariş etmek için TELUS Network hesabı ve fatura kişi ayrıntılarınızı alın.
+- TeleMessage ekleme formlarını doldurabilmeniz ve ileti arşivleme hizmetini TELUS'tan sipariş edebilmeniz için TELUS Ağ hesabınızın ve faturalama iletişim bilgilerinizi alın.
 
-- TelUS SMS Ağı arşivlemesi gerektiren tüm kullanıcıları TeleMessage hesabında kaydettirin. Kullanıcıları kaydettirerek, kendi hesaplarında kullanılan e-posta adresinin aynısını Microsoft 365.
+- TELUS SMS Ağı arşivlemeyi gerektiren tüm kullanıcıları TeleMessage hesabına kaydedin. Kullanıcıları kaydederken, Microsoft 365 hesapları için kullanılan e-posta adresini kullandığınızdan emin olun.
 
-- ÇalışanlarınızıTELUS mobil ağına kurumsal ve kurumsal olarak sorumlu cep telefonları olmalıdır. İletileri tek Microsoft 365 sahipli veya Kendi Cihazlarınızı Getir (BYOD) cihazlarında kullanılamaz.
+- Çalışanlarınızın,TELUS mobil ağında şirkete ait ve şirkete ait cep telefonlarına sahip olması gerekir. Microsoft 365'de iletileri arşivleme, çalışana ait veya Kendi Cihazlarını Getir (KCG) cihazlarda kullanılamaz.
 
-- TELUS Ağ bağlayıcısı oluşturan kullanıcıya Veri Bağlayıcısı Yönetici rolü atan olmalıdır. Bu rol, sayfanın en son veri **bağlayıcıları sayfasına bağlayıcı** eklemek Microsoft 365 uyumluluk merkezi. Bu rol varsayılan olarak birden çok rol gruplarına eklenir. Bu rol gruplarının listesi için, Güvenlik ve Uyumluluk Merkezi'nde İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki roller" [& bakın](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). Alternatif olarak, bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolü ata sonrasında uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için aşağıdaki İzinler bölümündeki "Özel bir rol grubu oluşturma" [bölümüne Microsoft 365 uyumluluk merkezi](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- TELUS Ağ bağlayıcısı oluşturan kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için [Microsoft Purview uyumluluk portalındaki İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
-- Bu TeleMessage veri bağlayıcısı ABD GCC tarafından Microsoft 365 ortamlarda kullanılabilir. Üçüncü taraf uygulamaları ve hizmetleri, kuruluş müşteri verilerini Microsoft 365 altyapısının dışında olan üçüncü taraf sistemlerde depolamayı, iletip işlemeyi ve bu nedenle de Microsoft 365 uyumluluk ve veri koruma taahhütleri kapsamında değildir. Microsoft, bu ürünün üçüncü taraf uygulamalara bağlanmak için kullanılabileceğiyle ilgili hiçbir beyanda yoktur ve bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu da ima eder.
+- Bu TeleMessage veri bağlayıcısı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda kullanılabilir. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerinin Microsoft 365 altyapısı dışında olan ve bu nedenle Microsoft Purview ve veri koruma taahhütleri kapsamında olmayan üçüncü taraf sistemlerde depolanmasını, iletilmesini ve işlenmesini içerebilir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
 
 ## <a name="create-a-telus-network-connector"></a>TELUS Ağ bağlayıcısı oluşturma
 
-Önceki bölümde açıklanan önkoşulları tamamlandıktan sonra, aşağıdaki bölümde TELUS Network bağlayıcısı Microsoft 365 uyumluluk merkezi. Bağlayıcı, temlik, TeleMessage sitesine bağlanmak ve SMS mesajlarını İleti'de ilgili kullanıcı posta kutusu kutularına Microsoft 365.
+Önceki bölümde açıklanan önkoşulları tamamladıktan sonra, uyumluluk portalında TELUS Ağ bağlayıcısı oluşturabilirsiniz. Bağlayıcı, TeleMessage sitesine bağlanmak ve SMS iletilerini Microsoft 365 ilgili kullanıcı posta kutusu kutularına aktarmak için sağladığınız bilgileri kullanır.
 
-1. Veri bağlayıcılarıTELUS [https://compliance.microsoft.com](https://compliance.microsoft.com/) **Network'e gidin ve** >  **bu bağlantıya tıklayın**.
+1. **Veri bağlayıcılarıTELUS** >  **Ağı'na**[https://compliance.microsoft.com](https://compliance.microsoft.com/) gidin ve tıklayın.
 
-2. **TELUS Ağı ürün açıklaması** sayfasında Bağlayıcı **ekle'ye tıklayın**
+2. **TELUS Ağ** ürün açıklaması sayfasında **Bağlayıcı ekle'ye** tıklayın
 
-3. Hizmet Koşulları **sayfasında Kabul Et'e** **tıklayın**.
+3. **Hizmet koşulları** sayfasında **Kabul Et'e** tıklayın.
 
-4. **TeleMessage'da Oturum Aç** sayfasında, 3. Adım'ın altında aşağıdaki kutulara gerekli bilgileri girin ve ardından Sonraki'ye **tıklayın**.
+4. **TeleMessage'da Oturum Aç** sayfasındaki 3. Adım'ın altında, aşağıdaki kutulara gerekli bilgileri girin ve **İleri'ye** tıklayın.
 
-   - **Kullanıcı adı:** TeleMessage kullanıcı adınız.
+   - **Username:** TeleMessage kullanıcı adınız.
 
    - **Parola:** TeleMessage parolanız.
 
-5. Bağlayıcı oluşturulduktan sonra, açılır pencereyi kapatıp bir sonraki sayfaya gidebilirsiniz.
+5. Bağlayıcı oluşturulduktan sonra açılır pencereyi kapatabilir ve sonraki sayfaya gidebilirsiniz.
 
-6. Kullanıcı eşleme **sayfasında, otomatik** kullanıcı eşlemesini etkinleştirin ve Ardından'ya **tıklayın**. Özel eşlemeye ihtiyacınız olursa, CSV dosyasını karşıya yükleyin ve İleri'ye **tıklayın**.
+6. Kullanıcı eşleme sayfasında, otomatik kullanıcı **eşlemesini** etkinleştirin ve **İleri'ye** tıklayın. Özel eşlemeye ihtiyacınız olması durumunda bir CSV dosyasını karşıya yükleyin ve **İleri'ye** tıklayın.
 
-7. Ayarlarınızı gözden geçirip bağlayıcıyı oluşturmak **için Son'a** tıklayın.
+7. Ayarlarınızı gözden geçirin ve ardından **Son'a** tıklayarak bağlayıcıyı oluşturun.
 
-8. Yeni bağlayıcı için içeri aktarma **işleminin ilerlemesini** görmek için Veri bağlayıcıları sayfasındaki Bağlayıcılar sekmesine gidin.
+8. Yeni bağlayıcının içeri aktarma işleminin ilerleme durumunu görmek için **Veri bağlayıcıları sayfasındaki Bağlayıcılar** sekmesine gidin.
 
 ## <a name="known-issues"></a>Bilinen sorunlar
 
-- Şu anda ekleri veya 10 MB'den büyük öğeleri içeri aktarmayı desteklemez. Daha büyük öğeler için destek daha sonraki bir tarihte kullanılabilir.
+- Şu anda 10 MB'tan büyük eklerin veya öğelerin içeri aktarılmasını desteklemiyoruz. Daha büyük öğeler için destek daha sonraki bir tarihte sağlanacaktır.

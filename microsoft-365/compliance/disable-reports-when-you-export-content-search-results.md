@@ -1,5 +1,5 @@
 ---
-title: İçerik Arama sonuçlarını dışarı aktararak raporları devre dışı bırakma
+title: İçerik Arama sonuçlarını dışarı aktarırken raporları devre dışı bırakma
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -16,29 +16,29 @@ search.appverid:
 ms.assetid: c9b0ff0c-282b-4a44-b43f-cfc5b96557f9
 ms.custom:
 - seo-marvel-apr2020
-description: İçerik Windows sonuçlarını dışarı aktararak raporları devre dışı bırakmak için yerel bilgisayarınızda Microsoft 365 uyumluluk merkezi.
-ms.openlocfilehash: bafdab1586b28239ddba7cf251704111731f2239
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Microsoft Purview uyumluluk portalından bir İçerik Aramasının sonuçlarını dışarı aktardığınızda raporları devre dışı bırakmak için yerel bilgisayarınızda Windows Kayıt Defteri'ni düzenleyin.
+ms.openlocfilehash: d1b305f1d6ce0aba835d21695e59a4166ec96b7a
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62973570"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64936829"
 ---
-# <a name="disable-reports-when-you-export-content-search-results"></a>İçerik Arama sonuçlarını dışarı aktararak raporları devre dışı bırakma
+# <a name="disable-reports-when-you-export-content-search-results"></a>İçerik Arama sonuçlarını dışarı aktarırken raporları devre dışı bırakma
 
-eBulma Dışarı Aktarma aracını kullanarak İçerik Arama'nın sonuçlarını Microsoft 365 uyumluluk merkezi, araç dışarı aktarıldı içeriği hakkında ek bilgi içeren iki raporu otomatik olarak oluşturur ve dışarı aktar eder. Bu raporlar, Results.csv dosyası ve Manifest.xml dosyasıdır (bu raporların ayrıntılı açıklamaları için bu konunun Dışarı [](#frequently-asked-questions-about-disabling-export-reports) aktarma raporlarını devre dışı bırakma hakkında sık sorulan sorular bölümüne bakın). Bu dosyalar çok büyük olmalarından, indirme sürelerini hızlandırarak ve bu dosyaların dışarı aktarmasını engelerek diskte yer tasarrufu sabilirsiniz. Arama sonuçlarını dışarı aktarmada Windows Defteri'ni değiştirerek bunu kullanabilirsiniz. Raporları daha sonra eklemek için kayıt defteri ayarını düzenleyebilirsiniz. 
+Microsoft Purview uyumluluk portalında bir İçerik Aramasının sonuçlarını dışarı aktarmak için eBulma Dışarı Aktarma aracını kullandığınızda, araç dışarı aktarılan içerik hakkında ek bilgi içeren iki raporu otomatik olarak oluşturur ve dışarı aktarır. Bu raporlar Results.csv dosyası ve Manifest.xml dosyasıdır (bu raporların ayrıntılı açıklamaları için bu konudaki [Dışarı aktarma raporlarını devre dışı bırakma hakkında sık sorulan sorular](#frequently-asked-questions-about-disabling-export-reports) bölümüne bakın). Bu dosyalar çok büyük olabileceğinden, indirme süresini hızlandırabilir ve bu dosyaların dışarı aktarılmasını engelleyerek disk alanından tasarruf edebilirsiniz. Bunu yapmak için, arama sonuçlarını dışarı aktarmak için kullandığınız bilgisayardaki Windows Kayıt Defteri'ni değiştirebilirsiniz. Raporları daha sonra eklemek isterseniz kayıt defteri ayarını düzenleyebilirsiniz. 
   
 ## <a name="create-registry-settings-to-disable-the-export-reports"></a>Dışarı aktarma raporlarını devre dışı bırakmak için kayıt defteri ayarları oluşturma
 
-İçerik arama sonuçlarını dışarı aktarmada kullanabileceğiniz bilgisayarda aşağıdaki yordamı gerçekleştirin.
+Sonuçları bir içerik aramasını dışarı aktarmak için kullanacağınız bilgisayarda aşağıdaki yordamı uygulayın.
   
 1. Açıksa eBulma Dışarı Aktarma aracını kapatın.
     
-2. Devre dışı bırakmak istediğiniz dışarı aktarma raporuna bağlı olarak, aşağıdaki adımlardan birini veya her ikisini de gerçekleştirin.
+2. Hangi dışarı aktarma raporunu devre dışı bırakmak istediğinize bağlı olarak aşağıdaki adımlardan birini veya her ikisini gerçekleştirin.
     
     - **Results.csv**
     
-      Bir .reg dosya adı Windows kullanarak aşağıdaki metni bir kayıt defteri dosyasına kaydedin; örneğin, DisableResultsCsv.reg.
+      Aşağıdaki metni bir .reg dosya adı soneki kullanarak bir Windows kayıt defteri dosyasına kaydedin; örneğin, DisableResultsCsv.reg.
     
       ```text
       Windows Registry Editor Version 5.00
@@ -47,7 +47,7 @@ eBulma Dışarı Aktarma aracını kullanarak İçerik Arama'nın sonuçlarını
 
     - **Manifest.xml**
     
-      Bir .reg dosya adı son Windows kullanarak aşağıdaki metni bir kayıt defteri dosyasına kaydedin; örneğin, DisableManifestXml.reg.
+      Aşağıdaki metni bir .reg dosya adı soneki kullanarak Windows kayıt defteri dosyasına kaydedin; örneğin, DisableManifestXml.reg.
     
       ```text
       Windows Registry Editor Version 5.00
@@ -56,23 +56,23 @@ eBulma Dışarı Aktarma aracını kullanarak İçerik Arama'nın sonuçlarını
 
 3. Windows Gezgini'nde, önceki adımlarda oluşturduğunuz .reg dosyasına tıklayın veya çift tıklayın.
     
-4. Kullanıcı Erişimi Denetimi penceresinde, Kayıt Defteri **Düzenleyicisi'nin değişikliği** yapmalarına izin vermeleri için Evet'e tıklayın. 
+4. Kullanıcı Access Control penceresinde, Kayıt Defteri Düzenleyicisi'nin değişikliği yapmasına izin vermek için **Evet'e** tıklayın. 
     
-5. Devam etmek istendiğinde Evet'e **tıklayın**.
+5. Devam etmek isteyip istemediğiniz sorulduğunda **Evet'e** tıklayın.
     
-    Kayıt Defteri Düzenleyicisi, ayarın kayıt defterine başarıyla eklenmiştir iletisi görüntüler.
+    Kayıt Defteri Düzenleyicisi, ayarın kayıt defterine başarıyla eklendiğini belirten bir ileti görüntüler.
   
 ## <a name="edit-registry-settings-to-re-enable-the-export-reports"></a>Dışarı aktarma raporlarını yeniden etkinleştirmek için kayıt defteri ayarlarını düzenleme
 
-Results.csv Manifest.xml.reg dosyalarını önceki yordamda oluşturarak raporları devre dışı bıraktıysanız, bu dosyaları düzenleyemez ve arama sonuçlarıyla birlikte dışarı aktarılacak şekilde raporu yeniden etkinleştirebilirsiniz. Bir kez daha, sonuçları içerik aramalarını dışarı aktarmada kullanabileceğiniz bilgisayarda aşağıdaki yordamı gerçekleştirin.
+Önceki yordamda .reg dosyalarını oluşturarak Results.csv ve Manifest.xml raporları devre dışı bırakmışsanız, raporun arama sonuçlarıyla birlikte dışarı aktarılabilmesi için bu dosyaları yeniden etkinleştirebilirsiniz. Yine, sonuçları bir içerik aramasını dışarı aktarmak için kullanacağınız bilgisayarda aşağıdaki yordamı gerçekleştirin.
   
 1. Açıksa eBulma Dışarı Aktarma aracını kapatın.
     
-2. Önceki yordamda oluşturduğunuz .reg düzenleme dosyalarından birini veya her ikisini de düzenleyin.
+2. Önceki yordamda oluşturduğunuz .reg düzenleme dosyalarının birini veya ikisini birden düzenleyin.
     
     - **Results.csv**
     
-        Not Defteri'da DisableResultsCsv.reg dosyasını açın, `False` `True`değeri ' olarak değiştirin ve dosyayı kaydedin. Örneğin, dosyayı düzenledikten sonra aşağıdaki gibi olur:
+        DisableResultsCsv.reg dosyasını Not Defteri açın, değerini `False` olarak `True`değiştirin ve dosyayı kaydedin. Örneğin, dosyayı düzenledikten sonra şöyle görünür:
     
         ```text
         Windows Registry Editor Version 5.00
@@ -81,63 +81,63 @@ Results.csv Manifest.xml.reg dosyalarını önceki yordamda oluşturarak raporla
 
     - **Manifest.xml**
     
-        Bu dosyada DisableManifestXml.reg Not Defteri açın, `False` `True`değeri ' olarak değiştirin ve dosyayı kaydedin. Örneğin, dosyayı düzenledikten sonra aşağıdaki gibi olur:
+        disableManifestXml.reg dosyasını Not Defteri açın, değerini `False` olarak `True`değiştirin ve dosyayı kaydedin. Örneğin, dosyayı düzenledikten sonra şöyle görünür:
     
       ```text
       Windows Registry Editor Version 5.00
       reg add HKLM\SOFTWARE\Microsoft\Exchange\Client\eDiscovery\ExportTool /v ResultEdrmEnabled /t REG_SZ /d True
       ```
 
-3. Windows Gezgini'nde, önceki adımda düzenleyttikleri .reg dosyasına tıklayın veya çift tıklayın.
+3. Windows Gezgini'nde, önceki adımda düzenlediğiniz bir .reg dosyasına tıklayın veya çift tıklayın.
     
-4. Kullanıcı Erişimi Denetimi penceresinde, Kayıt Defteri **Düzenleyicisi'nin değişikliği** yapmalarına izin vermeleri için Evet'e tıklayın. 
+4. Kullanıcı Access Control penceresinde, Kayıt Defteri Düzenleyicisi'nin değişikliği yapmasına izin vermek için **Evet'e** tıklayın. 
     
-5. Devam etmek istendiğinde Evet'e **tıklayın**.
+5. Devam etmek isteyip istemediğiniz sorulduğunda **Evet'e** tıklayın.
     
-    Kayıt Defteri Düzenleyicisi, ayarın kayıt defterine başarıyla eklenmiştir iletisi görüntüler.
+    Kayıt Defteri Düzenleyicisi, ayarın kayıt defterine başarıyla eklendiğini belirten bir ileti görüntüler.
   
 ## <a name="frequently-asked-questions-about-disabling-export-reports"></a>Dışarı aktarma raporlarını devre dışı bırakma hakkında sık sorulan sorular
 
- **En son Results.csv Manifest.xml nedir?**
+ **Results.csv ve Manifest.xml raporları nelerdir?**
   
-Dosya Results.csv Manifest.xml dosyaları, dışarı aktarıldı olan içerik hakkında ek bilgiler içerir.
+Results.csv ve Manifest.xml dosyaları, dışarı aktarılan içerik hakkında ek bilgiler içerir.
   
-- **Results.csv** Bir Excel arama sonucu olarak indirilen her öğe hakkında bilgi içeren en iyi belge. E-posta için, sonuç günlüğü her ileti hakkında aşağıdaki bilgileri içerir: 
+- **Results.csv** Arama sonucu olarak indirilen her öğe hakkında bilgi içeren bir Excel belgesi. E-posta için, sonuç günlüğü her ileti hakkında aşağıdakiler dahil olmak üzere bilgiler içerir: 
     
-  - İletinin kaynak posta kutusunda bulunduğu konum (iletinin birincil posta kutusunda mı yoksa arşiv posta kutusunda mı bulunduğu da dahil).
+  - İletinin kaynak posta kutusunda konumu (iletinin birincil posta kutusunda mı yoksa arşiv posta kutusunda mı olduğu dahil).
     
-  - İletinin gönderildiği veya alın aldığı tarih.
+  - İletinin gönderildiği veya alındığı tarih.
     
-  - İletinin Konu satırı.
+  - İletideki Konu satırı.
     
   - İletinin göndereni ve alıcıları.
     
-  - Arama sonuçlarını dışarı aktarmada yinelemeyi de etkinleştirdiyseniz iletinin yinelenen ileti olup olmadığı. Yinelenen iletilerin Üst ÖğeKimlik **sütununda, iletiyi** yinelenen olarak tanımlayan bir değer olur. Üst **ÖğeKimlik** sütunundaki değer, dışarı aktarıldı iletinin **Item DocumentId** sütunundaki değerle aynıdır. 
+  - Arama sonuçlarını dışarı aktarırken yinelenenleri kaldırmayı etkinleştirdiyseniz iletinin yinelenen ileti olup olmadığı. Yinelenen iletiler **, Parent ItemId** sütununda iletiyi yinelenen olarak tanımlayan bir değere sahip olur. **Parent ItemId** sütunundaki değer, dışarı aktarılan iletinin **Item DocumentId** sütunundaki değerle aynıdır. 
     
-    SharePoint OneDrive İş sitelerden alınan belgeler için, sonuç günlüğü her belge hakkında aşağıdaki bilgileri içerir:
+    SharePoint ve OneDrive İş sitelerindeki belgeler için sonuç günlüğü, aşağıdakiler dahil olmak üzere her belge hakkında bilgi içerir:
     
   - Belgenin URL'si.
     
   - Belgenin bulunduğu site koleksiyonunun URL'si.
     
-  - Belgenin son değiştirilma tarihi.
+  - Belgenin son değiştirildiği tarih.
     
-  - Belgenin adı (sonuç günlüğünde Konu sütununda yer alır).
+  - Belgenin adı (sonuç günlüğündeki Konu sütununda bulunur).
     
-- **Manifest.xml** Arama sonuçlarına dahil edilen her öğe hakkında bilgi içeren bir bildirim dosyası (XML biçiminde). Bu rapordeki bilgiler, elektronik bulma raporuyla Results.csv, ancak Elektronik Bulma Başvuru Modeli (EDRM) tarafından belirtilen biçimdedir. EDRM hakkında daha fazla bilgi için, gidin [https://www.edrm.net](https://www.edrm.net).
+- **Manifest.xml** Arama sonuçlarına dahil edilen her öğe hakkında bilgi içeren bir bildirim dosyası (XML biçiminde). Bu rapordaki bilgiler Results.csv raporuyla aynıdır, ancak Elektronik Bulma Başvuru Modeli (EDRM) tarafından belirtilen biçimdedir. EDRM hakkında daha fazla bilgi için adresine [https://www.edrm.net](https://www.edrm.net)gidin.
     
- **Bu raporları dışarı aktarmayı ne zaman devre dışı bırakmam gerekir?**
+ **Bu raporları dışarı aktarmayı ne zaman devre dışı bırakmalıyım?**
   
-Bu sizin özel ihtiyaçlarınıza bağlıdır. Birçok kuruluş arama sonuçları hakkında ek bilgi gerektirmez ve bu raporlara ihtiyaç gerektirmez.
+Bu, özel ihtiyaçlarınıza bağlıdır. Çoğu kuruluş arama sonuçları hakkında ek bilgi gerektirmez ve bu raporlara ihtiyaç duymaz.
   
- **Bunu hangi bilgisayarda yapmak istiyorum?**
+ **Bunu hangi bilgisayarda yapmam gerekiyor?**
   
- eBulma Dışarı Aktarma aracını çalıştırdınız herhangi bir yerel bilgisayarda kayıt defteri ayarını değiştirebilirsiniz. 
+ eKeşif Dışarı Aktarma aracını çalıştırdığınız herhangi bir yerel bilgisayarda kayıt defteri ayarını değiştirmeniz gerekir. 
   
- **Bu ayarı değiştirdikten sonra bilgisayarı yeniden başlatmam gerekir mi?**
+ **Bu ayarı değiştirdikten sonra bilgisayarı yeniden başlatmam gerekiyor mu?**
   
-Hayır, bilgisayarı yeniden başlatmanız zorunda değil. Ancak eBulma Dışarı Aktarma aracı çalışıyorsa, kayıt defteri ayarını değiştirdikten sonra aracı kapatıp yeniden başlatmanız gerekir.
+Hayır, bilgisayarı yeniden başlatmanız gerekmez. Ancak eBulma Dışarı Aktarma aracı çalışıyorsa, kayıt defteri ayarını değiştirdikten sonra aracı kapatıp yeniden başlatmanız gerekir.
   
- **Var olan bir kayıt defteri anahtarı düzen mi yoksa yeni bir anahtar mı oluşturulur?**
+ **Var olan bir kayıt defteri anahtarı düzenlenip düzenlenmiyor mu yoksa yeni bir anahtar mı oluşturuluyor?**
   
-Bu konudaki yordamda oluşturduğunuz .reg dosyasını ilk kez çalıştıracak yeni bir kayıt defteri anahtarı oluşturulur. Daha sonra, .reg düzenleme dosyasını her değiştirseniz ve yeniden çalıştırsanız bu ayar düzenlenmiş olur.
+Bu konudaki yordamda oluşturduğunuz .reg dosyasını ilk kez çalıştırdığınızda yeni bir kayıt defteri anahtarı oluşturulur. Ardından ,reg düzenleme dosyasını her değiştirdiğinizde ve yeniden çalıştırdığınızda ayar düzenlenir.

@@ -16,12 +16,12 @@ ms.custom: ''
 description: Yöneticiler, Exchange Online Protection (EOP) ve Office 365 için Microsoft Defender koruma özellikleri arasında Standart ve Katı ilke ayarlarının nasıl uygulanacağını öğrenebilir
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 2a74fce0242f0206218d6f7f2f13e61d9f0a3b6f
-ms.sourcegitcommit: a7e1d155939e862337271fbe38bf26f62bd49bdd
+ms.openlocfilehash: 01fd969461b47b0208dcfd20ff608e829b6a3336
+ms.sourcegitcommit: dc415d784226c77549ba246601f34324c4f94e73
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/14/2022
-ms.locfileid: "64847125"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64915983"
 ---
 # <a name="preset-security-policies-in-eop-and-microsoft-defender-for-office-365"></a>EOP ve Office 365 için Microsoft Defender'da önceden ayarlanmış güvenlik ilkeleri
 
@@ -80,6 +80,9 @@ Profil, koruma düzeyini belirler. Aşağıdaki profiller kullanılabilir:
   - **Standart Önceden Ayarlanmış Güvenlik İlkesi** ve **Katı Önceden Ayarlanmış Güvenlik İlkesi** adlı [istenmeyen posta önleme ilkeleri](configure-your-spam-filter-policies.md).
   - **Standart Önceden Ayarlanmış Güvenlik İlkesi** ve **Katı Ön Ayarlı Güvenlik İlkesi** adlı [kötü amaçlı yazılımdan koruma ilkeleri](configure-anti-malware-policies.md).
   - **Standart Önceden Ayarlanmış Güvenlik İlkesi** ve **Katı Ön Ayarlı Güvenlik İlkesi** (kimlik sahtekarlığı ayarları) adlı [EOP Kimlik Avı önleme ilkeleri](set-up-anti-phishing-policies.md#spoof-settings).
+
+  > [!NOTE]
+  > Giden istenmeyen posta ilkeleri önceden ayarlanmış güvenlik ilkelerinin bir parçası değildir. Varsayılan giden istenmeyen posta ilkesi, önceden ayarlanmış güvenlik ilkelerinin üyelerini otomatik olarak korur. Alternatif olarak, önceden ayarlanmış güvenlik ilkelerinin üyeleri için korumayı özelleştirmek için özel giden istenmeyen posta ilkeleri oluşturabilirsiniz. Daha fazla bilgi için bkz. [EOP'de giden istenmeyen posta filtrelemeyi yapılandırma](configure-the-outbound-spam-policy.md).
 
 - **Office 365 için Microsoft Defender ilkeleri**: Bu, Microsoft 365 E5 veya Office 365 için Defender eklenti abonelikleri olan kuruluşları içerir:
   - Office 365 için Microsoft Defender'da **Standart Ön AyarLı Güvenlik İlkesi** ve **Katı Ön Ayarlı Güvenlik İlkesi** adlı kimlik avı önleme ilkeleri şunlardır:

@@ -1,5 +1,5 @@
 ---
-title: Birden çok İçerik Araması oluşturma, bu aramaları bildirme ve silme
+title: İçerik Aramalarını oluşturma, raporlama ve silme
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -17,36 +17,36 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 1d463dda-a3b5-4675-95d4-83db19c9c4a3
-description: Güvenlik ve Uyumluluk Merkezi PowerShell kullanarak arama oluşturma ve rapor çalıştırma gibi İçerik Arama & otomatikleştirmeyi öğrenin.
+description: Güvenlik & Uyumluluk Merkezi PowerShell kullanarak arama oluşturma ve raporları çalıştırma gibi İçerik Arama görevlerini otomatikleştirmeyi öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 602997114c46a68be13182a504d0b123e98d2be2
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 06ea7655348851cbd457b527a3ee36f72d78e562
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985568"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64936873"
 ---
-# <a name="create-report-on-and-delete-multiple-content-searches"></a>Birden çok İçerik Araması oluşturma, bu aramaları bildirme ve silme
+# <a name="create-report-on-and-delete-multiple-content-searches"></a>Birden çok İçerik Araması oluşturma, raporlama ve silme
 
- Bulma aramalarını hızla oluşturmak ve raporlamak, çoğunlukla temel alınan veriler ve aramaların zenginliği ve kalitesi hakkında bilgi edinmeye çalışırken eBulma ve soruşturmalarda önemli bir adımdır. Bunu yapmaya yardımcı olmak için, Güvenlik & Uyumluluk Merkezi PowerShell zaman alan İçerik Arama görevlerini otomatikleştirmek için bir dizi cmdlet sunar. Bu betikler, bir dizi arama oluşturmak ve ardından söz konusu verilerin miktarını belirlemenize yardımcı olacak tahmini arama sonuçlarının raporlarını çalıştırmak için hızlı ve kolay bir yol sağlar. Betikleri, her birinin ürettiği sonuçları karşılaştırmak üzere farklı arama sürümleri oluşturmak için de kullanabilirsiniz. Bu betikler, verilerinizi hızlı ve verimli bir şekilde tanımlamanıza ve kullanmanıza yardımcı olabilir.
+ Bulma aramalarını hızla oluşturmak ve raporlamak, temel alınan veriler ve aramalarınızın zenginliği ve kalitesi hakkında bilgi edinmeye çalışırken eBulma ve araştırmalarda genellikle önemli bir adımdır. Bunu yapmanıza yardımcı olmak için Güvenlik & Uyumluluk Merkezi PowerShell, zaman alan İçerik Arama görevlerini otomatikleştirmek için bir dizi cmdlet sunar. Bu betikler, bir dizi arama oluşturmak için hızlı ve kolay bir yol sağlar ve ardından söz konusu veri miktarını belirlemenize yardımcı olabilecek tahmini arama sonuçlarının raporlarını çalıştırır. Betikleri, her birinin ürettiği sonuçları karşılaştırmak üzere aramaların farklı sürümlerini oluşturmak için de kullanabilirsiniz. Bu betikler, verilerinizi hızlı ve verimli bir şekilde tanımlamanıza ve iptal etmenize yardımcı olabilir.
 
-## <a name="before-you-create-a-content-search"></a>İçerik Arama oluşturmadan önce
+## <a name="before-you-create-a-content-search"></a>İçerik Araması oluşturmadan önce
 
-- Bu konuda açıklanan betikleri çalıştırmak için, Microsoft 365 uyumluluk merkezi Yöneticisi'nin eBulma Yöneticisi rol grubunun üyesi olun.
+- Bu konuda açıklanan betikleri çalıştırmak için Microsoft Purview uyumluluk portalında eBulma Yöneticisi rol grubunun üyesi olmanız gerekir.
 
-- 1. Adımda CSV dosyasına ek olarak, OneDrive İş sitelerinin URL'lerinin listesini toplamak için bkz. OneDrive [konumlarının listesini oluşturma](/onedrive/list-onedrive-urls).
+- 1. Adımda CSV dosyasına ekleyebileceğiniz, kuruluşunuzdaki OneDrive İş sitelerinin URL'lerinin listesini toplamak için bkz. [Kuruluşunuzdaki tüm OneDrive konumlarının listesini oluşturma](/onedrive/list-onedrive-urls).
 
-- Bu konu başlığında, bu konu başlığında oluşturan tüm dosyaları aynı klasöre kaydetmeye emin olun. Bu, betikleri çalıştırmayı kolaylaştırır.
+- Bu konuda oluşturduğunuz tüm dosyaları aynı klasöre kaydettiğinizden emin olun. Bu, betikleri çalıştırmayı kolaylaştırır.
 
-- Betikler en az hata işlemeyi içerir. Bunun birincil amacı, birden çok İçerik Aramalarını hızla oluşturmak, bu aramaları rapor etmek ve silmektir.
+- Betikler en az hata işleme içerir. Birincil amacı, birden çok İçerik Aramasını hızla oluşturmak, raporlamak ve silmektir.
 
-- Bu konu başlığı altında verilen örnek betikler, hiçbir Microsoft standart destek programı veya hizmeti kapsamında desteklenemmektedir. Örnek betikler hiçbir garanti olmaksızın OLDUĞU GIBI verilmektedir. Microsoft, ticarete uygunluk veya belirli bir amaca uygunluk ile ilgili zımni garantiler dahil ancak bununla sınırlı olmaksızın her türlü zımni garantiyi bundan sonra feragat ediyor. Örnek betiklerin ve belgelerin kullanımından veya performansından doğan tüm riskler size aittir. Hiçbir durumda Microsoft, yazarları veya betiklerin oluşturulması, üretimi veya dağıtımında yer alan diğer herhangi bir kişi, örnek betiklerin veya belgelerin kullanımından ya da kullanılamazlığından kaynaklanan hiçbir zarardan (ticari kar kaybı, iş kesintisi, iş bilgisi kaybı veya diğer maddi kayıplar dahil ancak ancak bu zararlar dahil ancak ancak hiçbir zarardan sorumlu olmayacaktır),  Microsoft bu tür zarar olasılığı hakkında bilgilansa bile.
+- Bu konuda sağlanan örnek betikler, herhangi bir Microsoft standart destek programı veya hizmeti altında desteklenmez. Örnek betikler, herhangi bir garanti olmadan OLDUĞU GIBI sağlanır. Microsoft, satılabilirlik veya belirli bir amaca uygunlukla ilgili zımni garantiler dahil ancak bunlarla sınırlı olmaksızın tüm zımni garantileri de reddeder. Örnek betiklerin ve belgelerin kullanımından veya performansından kaynaklanan tüm risk sizinle kalır. Hiçbir durumda Microsoft, yazarları veya betiklerin oluşturulması, üretimi veya teslimi ile ilgili herhangi bir kişi, örnek betiklerin veya belgelerin kullanımından veya kullanılamama durumundan kaynaklanan herhangi bir zarardan (bunlarla sınırlı olmaksızın, iş kârı kaybı, iş kesintisi, iş bilgisi kaybı veya diğer maddi kayıplar dahil) sorumlu tutulamaz,  Microsoft'a bu tür hasarlar olabileceği bildirilmiş olsa bile.
 
-## <a name="step-1-create-a-csv-file-that-contains-information-about-the-searches-you-want-to-run"></a>1. Adım: Çalıştırmak istediğiniz aramalara ilişkin bilgileri içeren bir CSV dosyası oluşturun
+## <a name="step-1-create-a-csv-file-that-contains-information-about-the-searches-you-want-to-run"></a>1. Adım: Çalıştırmak istediğiniz aramalar hakkında bilgi içeren bir CSV dosyası oluşturma
 
-Bu adımda oluştursanız da virgülle ayrılmış değer (CSV) dosyası, arama yapmak isteyen her kullanıcı için bir satır içerir. Kullanıcının posta kutusu (etkinse Exchange Online arşiv posta kutusunu da içerir) ve kullanıcının posta kutusu arama OneDrive İş. Ya da yalnızca posta kutusunda veya posta kutusunda OneDrive İş de arayabilirsiniz. Ayrıca, SharePoint Online SharePoint arayabilirsiniz. 3. Adımda çalıştırdınız betik, CSV dosyasındaki her satır için ayrı bir arama oluşturacak.
+Bu adımda oluşturduğunuz virgülle ayrılmış değer (CSV) dosyası, aramak isteyen her kullanıcı için bir satır içerir. Kullanıcının Exchange Online posta kutusunda (etkinse arşiv posta kutusunu içerir) ve OneDrive İş sitesinde arama yapabilirsiniz. Ya da yalnızca posta kutusunda veya OneDrive İş sitesinde arama yapabilirsiniz. SharePoint Online kuruluşunuzdaki herhangi bir sitede de arama yapabilirsiniz. 3. Adımda çalıştırdığınız betik, CSV dosyasındaki her satır için ayrı bir arama oluşturur.
 
-1. Aşağıdaki metni kopyalayıp Not Defteri'ni kullanarak .txt bir dosyaya yapıştırın. Bu dosyayı yerel bilgisayarınızdan bir klasöre kaydedin. Diğer betikleri de bu klasöre kaydetebilirsiniz.
+1. Not Defteri'ni kullanarak aşağıdaki metni kopyalayıp .txt dosyasına yapıştırın. Bu dosyayı yerel bilgisayarınızdaki bir klasöre kaydedin. Diğer betikleri de bu klasöre kaydedeceksiniz.
 
    ```text
    ExchangeLocation,SharePointLocation,ContentMatchQuery,StartDate,EndDate
@@ -58,38 +58,38 @@ Bu adımda oluştursanız da virgülle ayrılmış değer (CSV) dosyası, arama 
    ,https://contoso-my.sharepoint.com/personal/janets_contoso_onmicrosoft_com,,1/1/2015,
    ```
 
-   Dosyanın ilk satırı veya üst bilgi satırı, yeni İçerik Aramaları oluşturmak için **Yeni** Uyumluluk Arama cmdlet'i tarafından (3. adımdaki betikte) kullanılacak parametreleri listeler. Her parametre adı virgülle ayrılmıştır. Üst bilgi satırda boşluk olmadığını unutmayın. Üst bilgi satırın altındaki her satır, her aramanın parametre değerlerini temsil eder. CSV dosyasındaki yer tutucu verilerini gerçek verilerinizle değiştir mutlaka.
+   Dosyanın ilk satırı veya üst bilgi satırı, yeni İçerik Aramaları oluşturmak için **New-ComplianceSearch** cmdlet'i (3. Adımdaki betikte) tarafından kullanılacak parametreleri listeler. Her parametre adı virgülle ayrılır. Üst bilgi satırında boşluk olmadığından emin olun. Üst bilgi satırının altındaki her satır, her arama için parametre değerlerini temsil eder. CSV dosyasındaki yer tutucu verileri gerçek verilerinizle değiştirerek değiştirmeyi unutmayın.
 
-2. .txt dosyanızı Excel ve her aramayla ilgili bilgilerle birlikte dosyayı düzenlemek için aşağıdaki tabloda yer alan bilgileri kullanın.
+2. .txt dosyasını Excel açın ve sonra dosyayı her aramayla ilgili bilgilerle düzenlemek için aşağıdaki tabloda yer alan bilgileri kullanın.
 
    ****
 
    |Parametre|Açıklama|
    |---|---|
    |`ExchangeLocation`|Kullanıcının posta kutusunun SMTP adresi.|
-   |`SharePointLocation`|Kullanıcının web sitesinin URL'si OneDrive İş sitenin URL'si veya kuruluşta herhangi bir sitenin URL'si. Site sitelerinin URL'OneDrive İş şu biçimi kullanın: ` https://<your organization>-my.sharepoint.com/personal/<user alias>_<your organization>_onmicrosoft_com `. Örneğin,  `https://contoso-my.sharepoint.com/personal/sarad_contoso_onmicrosoft_com`.|
-   |`ContentMatchQuery`|Arama için arama sorgusu. Arama sorgusu oluşturma hakkında daha fazla bilgi için bkz. [Anahtar sözcük sorguları ve İçerik Arama için arama koşulları](keyword-queries-and-search-conditions.md).|
-   |`StartDate`|E-posta için, iletinin alıcı tarafından veya gönderen tarafından gönderildiği tarihtir. Site veya site SharePoint OneDrive İş belgeler için, belgenin son değiştirilme tarihi veya sonrası.|
-   |`EndDate`|E-posta için, kullanıcı tarafından gönderilen iletinin gönderilme tarihi veya öncesi. Site site SharePoint veya OneDrive İş belgeler için, belgenin son değiştirilme tarihi veya önceki tarihi.|
+   |`SharePointLocation`|Kullanıcının OneDrive İş sitesinin URL'si veya kuruluşunuzdaki herhangi bir sitenin URL'si. OneDrive İş sitelerin URL'si için şu biçimi kullanın: ` https://<your organization>-my.sharepoint.com/personal/<user alias>_<your organization>_onmicrosoft_com `. Örneğin,  `https://contoso-my.sharepoint.com/personal/sarad_contoso_onmicrosoft_com`.|
+   |`ContentMatchQuery`|Aramanın arama sorgusu. Arama sorgusu oluşturma hakkında daha fazla bilgi için bkz [. İçerik Arama için anahtar sözcük sorguları ve arama koşulları](keyword-queries-and-search-conditions.md).|
+   |`StartDate`|E-posta için, iletinin alıcı tarafından alındığı veya gönderen tarafından gönderildiği tarih. SharePoint veya OneDrive İş sitelerdeki belgeler için, belgenin son değiştirilme tarihi veya sonrasındaki tarih.|
+   |`EndDate`|E-posta için, iletinin kullanıcı tarafından gönderilen bir tarafından gönderildiği veya gönderilmeden önceki tarih. SharePoint veya OneDrive İş sitelerdeki belgeler için, belgenin son değiştirilme tarihi veya öncesinde tarih.|
    |
 
-3. Dosya Excel CSV dosyası olarak yerel bilgisayarınızdan bir klasöre kaydedin. 3. Adımda oluşturmuştuk betik, aramaları oluşturmak için bu CSV dosyasındaki bilgileri kullanır.
+3. Excel dosyasını CSV dosyası olarak yerel bilgisayarınızdaki bir klasöre kaydedin. 3. Adımda oluşturduğunuz betik, aramaları oluşturmak için bu CSV dosyasındaki bilgileri kullanır.
 
-## <a name="step-2-connect-to-security--compliance-center-powershell"></a>2. Adım: Bağlan ve Uyumluluk & PowerShell'e geçin
+## <a name="step-2-connect-to-security--compliance-center-powershell"></a>2. Adım: Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan
 
-Sonraki adım, sizin için Güvenlik ve Uyumluluk & PowerShell'e bağlanmaktır. Adım adım yönergeler için bkz. Güvenlik [Bağlan Uyumluluk Merkezi PowerShell& e geçin](/powershell/exchange/connect-to-scc-powershell).
+Sonraki adım, kuruluşunuz için Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanmaktır. Adım adım yönergeler için bkz[. Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
 
-## <a name="step-3-run-the-script-to-create-and-start-the-searches"></a>3. Adım: Betiği çalıştırarak aramaları oluşturun ve çalıştırın
+## <a name="step-3-run-the-script-to-create-and-start-the-searches"></a>3. Adım: Aramaları oluşturmak ve başlatmak için betiği çalıştırın
 
-Bu adımdaki betik, 1. Adımda oluşturduğunuz CSV dosyasındaki her satır için ayrı bir İçerik Arama oluşturacak. Bu betiği çalıştırarak iki değer girmeniz istenir:
+Bu adımdaki betik, 1. Adımda oluşturduğunuz CSV dosyasındaki her satır için ayrı bir İçerik Araması oluşturur. Bu betiği çalıştırdığınızda sizden iki değer istenir:
 
-- **Arama Grubu Kimliği** - Bu ad, CSV dosyasından oluşturulan aramaları düzenlemenin kolay bir yolunu sağlar. Oluşturulan her arama, Arama Grubu Kimliği ile adlandırılmıştır ve arama adına bir numara eklenir. Örneğin, Arama Grubu Kimliği olarak **ContosoCase** girersiniz, aramalar grup adı **ContosoCase_1****, ContosoCase_2** ContosoCase_3 gibi adlar alır.  Yazım adının büyük/harfe duyarlı olduğunu unutmayın. 4. ve 5. Adım'da Grup Arama kimliğini kullanırken, grubu oluşturulduğunda kullanmak için grupla aynı vakayı kullan gerekir.
+- **Arama Grubu Kimliği** - Bu ad, CSV dosyasından oluşturulan aramaları düzenlemek için kolay bir yol sağlar. Oluşturulan her arama, Arama Grubu Kimliği ile adlandırılır ve arama adının sonuna bir sayı eklenir. Örneğin, Arama Grubu Kimliği için **ContosoCase** girerseniz, aramalar **ContosoCase_1, ContosoCase_2**, **ContosoCase_3** vb. olarak adlandırılır.  Yazdığınız adın büyük/küçük harfe duyarlı olduğunu unutmayın. 4. Adım ve 5. Adım'da Arama Grubu Kimliğini kullandığınızda, bunu oluştururken kullandığınız servis talebinin aynısını kullanmanız gerekir.
 
-- **CSV dosyası** - 1. Adımda oluşturduğunuz CSV dosyasının adı. Tam dosya adını kullanmayı, dosya uzantısını ve dosya .csv emin olun; örneğin,  `ContosoCase.csv`.
+- **CSV dosyası** - 1. Adımda oluşturduğunuz CSV dosyasının adı. Tam dosya adını kullanmayı eklediğinizden emin olun, .csv dosya uzantısını ekleyin; örneğin,  `ContosoCase.csv`.
 
 Betiği çalıştırmak için:
 
-1. Aşağıdaki metni, Windows PowerShell dosya adı son eklerini kullanarak bir .ps1 betik dosyasına kaydedin; örneğin, `CreateSearches.ps1`. Dosyayı, diğer dosyaları kendi kaydett ili aynı klasöre kaydedin.
+1. Aşağıdaki metni .ps1 dosya adı soneki kullanarak bir Windows PowerShell betik dosyasına kaydedin; örneğin, `CreateSearches.ps1`. Dosyayı, diğer dosyaları kaydettiğiniz klasöre kaydedin.
 
    ```Powershell
    # Get the Search Group ID and the location of the CSV input file
@@ -166,27 +166,27 @@ Betiği çalıştırmak için:
    }
    ```
 
-2. Bunu Windows PowerShell, önceki adımda betiği kaydeden klasöre gidin ve sonra betiği çalıştırın; örneğin:
+2. Windows PowerShell önceki adımda betiği kaydettiğiniz klasöre gidin ve ardından betiği çalıştırın; örneğin:
 
    ```Powershell
    .\CreateSearches.ps1
    ```
 
-3. Grup **Kimliğini Ara istemine** bir arama grubu adı yazın ve Enter tuşuna **basın**; örneğin,  `ContosoCase`. Bu adın büyük/harfe duyarlı olduğunu unutmayın, bu nedenle sonraki adımlarda da aynı şekilde yazmamız gerekir.
+3. **Arama Grubu Kimliği** isteminde bir arama grubu adı yazın ve **Enter tuşuna** basın; örneğin, `ContosoCase`. Bu adın büyük/küçük harfe duyarlı olduğunu unutmayın, bu nedenle sonraki adımlarda aynı şekilde yazmanız gerekir.
 
-4. Kaynak **CSV dosya istemine** , en son dosya uzantısını içeren CSV .csv yazın; örneğin,  `ContosoCase.csv`.
+4. **Kaynak CSV dosyası** isteminde, .csv dosya uzantısı da dahil olmak üzere CSV dosyasının adını yazın; örneğin, `ContosoCase.csv`.
 
-5. **Betiği çalıştırmaya** devam etmek için Enter tuşuna basın.
+5. Betiği çalıştırmaya devam etmek için **Enter tuşuna** basın.
 
-   Betikte, aramaları oluşturma ve çalıştırma ilerleme durumu görüntülenir. Betik tamamlandığında komut istemine döner.
+   Betik, arama oluşturma ve çalıştırma işleminin ilerleme durumunu görüntüler. Betik tamamlandığında istemine döner.
 
-   ![Betiği çalıştırmadan çeşitli uyumluluk aramaları oluşturmak için örnek çıktı.](../media/37d59b0d-5f89-4dbc-9e2d-0e88e2ed7b4c.png)
+   ![Birden çok uyumluluk araması oluşturmak için betiği çalıştırmanın örnek çıktısı.](../media/37d59b0d-5f89-4dbc-9e2d-0e88e2ed7b4c.png)
 
-## <a name="step-4-run-the-script-to-report-the-search-estimates"></a>4. Adım: Arama tahminlerini rapor etmek için betiği çalıştırın
+## <a name="step-4-run-the-script-to-report-the-search-estimates"></a>4. Adım: Arama tahminlerini raporlamak için betiği çalıştırın
 
-Aramaları oluşturduktan sonraki adım, 3. Adımda oluşturulan her aramanın arama isabet sayısını gösteren basit bir rapor görüntüleyen bir betik çalıştırmaktır. Ayrıca rapor, her arama için sonuç boyutunu ve tüm aramaların toplam isabet sayısını ve toplam boyutunu da içerir. Raporlama betiğinizi çalıştırsanız, raporu CSV dosyasına kaydetmek için Grup Ara kimliği ve CSV dosya adı istenir.
+Aramaları oluşturduktan sonra, sonraki adım, 3. Adımda oluşturulan her arama için arama isabet sayısıyla ilgili basit bir rapor görüntüleyen bir betik çalıştırmaktır. Rapor ayrıca her arama için sonuçların boyutunu ve toplam isabet sayısını ve tüm aramaların toplam boyutunu içerir. Raporlama betiğini çalıştırdığınızda, raporu bir CSV dosyasına kaydetmek istiyorsanız Arama Grubu Kimliği ve CSV dosya adı istenir.
 
-1. Aşağıdaki metni, Windows PowerShell dosya adı son eklerini kullanarak bir .ps1 betik dosyasına kaydedin; örneğin, `SearchReport.ps1`. Dosyayı, diğer dosyaları kendi kaydett ili aynı klasöre kaydedin.
+1. Aşağıdaki metni .ps1 dosya adı soneki kullanarak bir Windows PowerShell betik dosyasına kaydedin; örneğin, `SearchReport.ps1`. Dosyayı, diğer dosyaları kaydettiğiniz klasöre kaydedin.
 
    ```Powershell
    $searchGroup = Read-Host 'Search Group ID'
@@ -241,30 +241,30 @@ Aramaları oluşturduktan sonraki adım, 3. Adımda oluşturulan her aramanın a
    }
    ```
 
-2. Bunu Windows PowerShell, önceki adımda betiği kaydeden klasöre gidin ve sonra betiği çalıştırın; örneğin:
+2. Windows PowerShell önceki adımda betiği kaydettiğiniz klasöre gidin ve ardından betiği çalıştırın; örneğin:
 
    ```Powershell
    .\SearchReport.ps1
    ```
 
-3. Grup **Kimliğini Ara istemine** bir arama grubu adı yazın ve Enter tuşuna **basın**;  `ContosoCase`örneğin. Bu adın büyük/harfe duyarlı olduğunu unutmayın, bu nedenle 3. Adımda betiği son çalıştırmada olduğu gibi yazmanız gerekir.
+3. **Arama Grubu Kimliği** isteminde bir arama grubu adı yazın ve **Enter tuşuna** basın; örneğin`ContosoCase`, . Bu adın büyük/küçük harfe duyarlı olduğunu unutmayın, bu nedenle 3. Adımda betiği çalıştırdığınız gibi yazmanız gerekir.
 
-4. Raporu CSV dosyasına kaydetmek için Dosya yolu (yalnızca raporu görüntülemek için boş bırakın **)** istemine, raporu CSV dosyasına kaydetmek için tam dosya adı yolunun (.csv dosya uzantısıyla birlikte) dosya adını yazın. CSV dosyasının adı, dosya uzantısı .csv. Örneğin, geçerli dizine  `ContosoCaseReport.csv` kaydetmek için yazarak veya başka bir klasöre  `C:\Users\admin\OneDrive for Business\ContosoCase\ContosoCaseReport.csv` kaydetmek için yazabilirsiniz. Ayrıca, raporu görüntülemek için istemi boş bırakabilirsiniz ancak bir dosyaya kaydedeebilirsiniz.
+4. **Raporu csv dosyasına kaydetmek için dosya yolu (raporu görüntülemek için boş bırakın)** isteminde, raporu csv dosyasına kaydetmek istiyorsanız tam dosya adı yolunun (.csv dosya uzantısı dahil) bir dosya adı yazın. .csv dosya uzantısı da dahil olmak üzere CSV dosyasının adı. Örneğin, geçerli dizine kaydetmek için yazabilir  `ContosoCaseReport.csv` veya farklı bir klasöre kaydetmek için yazabilirsiniz  `C:\Users\admin\OneDrive for Business\ContosoCase\ContosoCaseReport.csv` . Ayrıca, raporu görüntülemek için istemi boş bırakabilirsiniz ancak bir dosyaya kaydedemezsiniz.
 
-5. **Enter tuşuna basın**.
+5. **Enter tuşuna** basın.
 
-   Betikte, aramaları oluşturma ve çalıştırma ilerleme durumu görüntülenir. Betik tamamlandığında rapor görüntülenir.
+   Betik, arama oluşturma ve çalıştırma işleminin ilerleme durumunu görüntüler. Betik tamamlandığında rapor görüntülenir.
 
    ![Arama grubunun tahminlerini görüntülemek için arama raporunu çalıştırın.](../media/3b5f2595-71d5-4a14-9214-fad156c981f8.png)
 
 > [!NOTE]
-> Bir arama grubunda birden fazla aramada aynı posta kutusu veya site bir içerik konumu olarak belirtilirse, rapordaki toplam sonuç tahmini (hem öğe sayısı hem de toplam boyut için) aynı öğelerin sonuçlarını içerebilir. Çünkü aynı e-posta iletisi veya belge, arama grubunda farklı aramalar için sorguyla eş kullandıktan sonra birden çok kez sayılır.
+> Aynı posta kutusu veya site, arama grubundaki birden fazla aramada içerik konumu olarak belirtilirse, rapordaki toplam sonuç tahmini (hem öğe sayısı hem de toplam boyut için) aynı öğelerin sonuçlarını içerebilir. Bunun nedeni, arama grubundaki farklı aramalar için sorguyla eşleşiyorsa aynı e-posta iletisinin veya belgenin birden çok kez sayılmasıdır.
 
-## <a name="step-5-run-the-script-to-delete-the-searches"></a>5. Adım: Aramaları silmek için betiği çalıştırma
+## <a name="step-5-run-the-script-to-delete-the-searches"></a>5. Adım: Aramaları silmek için betiği çalıştırın
 
-Çok fazla arama oluşturuyor olabileceğiniz için, bu son betik yalnızca 3. Adımda oluşturduğunuz aramaları hızla silmeyi kolaylaştırır. Diğer betiklerde olduğu gibi, bu da sizden Grup Kimliğini Aramanızı da sağlar. Bu betiği çalıştırarak, arama adı altında Grup Ara kimliğiyle yapılan tüm aramalar silinir.
+Çok fazla arama oluşturduğunuz için bu son betik, 3. Adımda oluşturduğunuz aramaları hızlı bir şekilde silmenizi kolaylaştırır. Diğer betiklerde olduğu gibi, bu komut da arama grubu kimliğini girmenizi ister. Bu betiği çalıştırdığınızda, arama adında Arama Grubu Kimliği olan tüm aramalar silinir.
 
-1. Aşağıdaki metni, Windows PowerShell dosya adı son eklerini kullanarak bir .ps1 betik dosyasına kaydedin; örneğin, `DeleteSearches.ps1`. Dosyayı, diğer dosyaları kendi kaydett ili aynı klasöre kaydedin.
+1. Aşağıdaki metni .ps1 dosya adı soneki kullanarak bir Windows PowerShell betik dosyasına kaydedin; örneğin, `DeleteSearches.ps1`. Dosyayı, diğer dosyaları kaydettiğiniz klasöre kaydedin.
 
    ```Powershell
    # Delete all searches in a search group
@@ -280,14 +280,14 @@ Aramaları oluşturduktan sonraki adım, 3. Adımda oluşturulan her aramanın a
    }
    ```
 
-2. Bunu Windows PowerShell, önceki adımda betiği kaydeden klasöre gidin ve sonra betiği çalıştırın; örneğin:
+2. Windows PowerShell önceki adımda betiği kaydettiğiniz klasöre gidin ve ardından betiği çalıştırın; örneğin:
 
    ```Powershell
    .\DeleteSearches.ps1
    ```
 
-3. Grup **Kimliğini Ara istemine** , silmek istediğiniz aramalar için bir arama grubu adı yazın ve Enter tuşuna **basın**; örneğin,  `ContosoCase`. Bu adın büyük/harfe duyarlı olduğunu unutmayın, bu nedenle 3. Adımda betiği son çalıştırmada olduğu gibi yazmanız gerekir.
+3. **Arama Grubu Kimliği** isteminde, silmek istediğiniz aramalar için bir arama grubu adı yazın ve enter **tuşuna** basın; örneğin, `ContosoCase`. Bu adın büyük/küçük harfe duyarlı olduğunu unutmayın, bu nedenle 3. Adımda betiği çalıştırdığınız gibi yazmanız gerekir.
 
-   Betikte silinen her aramanın adı görüntülenir.
+   Betik, silinen her aramanın adını görüntüler.
 
-   ![Arama grubunda aramaları silmek için betiği çalıştırın.](../media/9d97b9d6-a539-4d9b-a4e4-e99989144ec7.png)
+   ![Arama grubundaki aramaları silmek için betiği çalıştırın.](../media/9d97b9d6-a539-4d9b-a4e4-e99989144ec7.png)

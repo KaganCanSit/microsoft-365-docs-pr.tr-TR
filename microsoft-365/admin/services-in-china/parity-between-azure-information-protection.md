@@ -20,12 +20,12 @@ search.appverid:
 - GEA150
 description: 21Vianet tarafından sağlanan Office 365 için Azure Information Protection (AIP) ve Çin'deki müşteriler için yapılandırma hakkında daha fazla bilgi edinin.
 monikerRange: o365-21vianet
-ms.openlocfilehash: 3b4906844c76293a1163d17d77b009528ef32f12
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 0f495139a807d4a0eeb3181626717c6d5061fc38
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64782907"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64935225"
 ---
 # <a name="azure-information-protection-support-for-office-365-operated-by-21vianet"></a>21Vianet tarafından sağlanan Office 365 için Azure Information Protection desteği
 
@@ -62,7 +62,7 @@ Aşağıdaki liste, 21Vianet tarafından sağlanan Office 365 için AIP ile Ocak
 AIP'yi Çin'deki müşteriler için yapılandırmak için:
 1. [Kiracı için Rights Management'i etkinleştirin](#step-1-enable-rights-management-for-the-tenant).
 
-1. [Microsoft Bilgi Koruması Eşitleme Hizmeti hizmet sorumlusunu ekleyin](#step-2-add-the-microsoft-information-protection-sync-service-service-principal).
+1. [Microsoft Purview Information Protection Eşitleme Hizmeti hizmet sorumlusunu ekleyin](#step-2-add-the-microsoft-purview-information-protection-sync-service-service-principal).
 
 1. [DNS şifrelemeyi yapılandırma](#step-3-configure-dns-encryption).
 
@@ -86,9 +86,9 @@ AIP'yi Çin'deki müşteriler için yapılandırmak için:
 
 2. İşlevsel durum ise `Disabled`komutunu çalıştırın `Enable-AipService`.
 
-### <a name="step-2-add-the-microsoft-information-protection-sync-service-service-principal"></a>2. Adım: Microsoft Bilgi Koruması Eşitleme Hizmeti hizmet sorumlusunu ekleme
+### <a name="step-2-add-the-microsoft-purview-information-protection-sync-service-service-principal"></a>2. Adım: Microsoft Purview Information Protection Eşitleme Hizmeti hizmet sorumlusunu ekleme
 
-**Microsoft Bilgi Koruması Eşitleme Hizmeti** hizmet sorumlusu varsayılan olarak Azure Çin kiracılarında kullanılamaz ve Azure Information Protection için gereklidir. Azure Az PowerShell modülü aracılığıyla bu hizmet sorumlusunu el ile oluşturun.
+**Microsoft Purview Information Protection Eşitleme Hizmeti** hizmet sorumlusu varsayılan olarak Azure Çin kiracılarında kullanılamaz ve Azure Information Protection için gereklidir. Azure Az PowerShell modülü aracılığıyla bu hizmet sorumlusunu el ile oluşturun.
 
 1. Azure Az modülü yüklü değilse bu modülü yükleyin veya Azure Az modülünün önceden yüklenmiş olarak geldiği [Azure Cloud Shell](/azure/cloud-shell/overview) gibi bir kaynak kullanın. Daha fazla bilgi için bkz. [Azure Az PowerShell modülünü yükleme](/powershell/azure/install-az-ps).
 
@@ -98,7 +98,7 @@ AIP'yi Çin'deki müşteriler için yapılandırmak için:
     Connect-azaccount -environmentname azurechinacloud
     ```
 
-1. [New-AzADServicePrincipal](/powershell/module/az.resources/new-azadserviceprincipal) cmdlet'ini ve `870c4f2e-85b6-4d43-bdda-6ed9a579b725` **Microsoft Bilgi Koruması Eşitleme** Hizmeti için uygulama kimliğini kullanarak Microsoft Bilgi Koruması Eşitleme Hizmeti sorumlusunu el ile oluşturun:
+1. [New-AzADServicePrincipal](/powershell/module/az.resources/new-azadserviceprincipal) cmdlet'ini ve `870c4f2e-85b6-4d43-bdda-6ed9a579b725` **Microsoft Purview Information Protection Eşitleme Hizmeti** için uygulama kimliğini kullanarak Microsoft Purview Information Protection Eşitleme Hizmeti hizmet sorumlusunu el ile oluşturun:
 
     ```powershell 
     New-AzADServicePrincipal -ApplicationId 870c4f2e-85b6-4d43-bdda-6ed9a579b725

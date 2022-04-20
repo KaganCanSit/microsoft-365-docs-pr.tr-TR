@@ -1,5 +1,5 @@
 ---
-title: Contoso Corporation Microsoft 365 kurumsal güvenlik bilgileri özeti
+title: Contoso Corporation için kurumsal güvenlik Microsoft 365 özeti
 author: kelleyvice-msft
 f1.keywords:
 - NOCSH
@@ -14,123 +14,123 @@ ms.collection:
 - M365-security-compliance
 - Strat_O365_Enterprise
 ms.custom: ''
-description: Contoso'ya kurumsal güvenlik özelliklerini Microsoft 365 nasıl kullanır?
-ms.openlocfilehash: 15fd559b6dade63d56647c8f5f3437a57d27a56b
-ms.sourcegitcommit: 1ef176c79a0e6dbb51834fe30807409d4e94847c
+description: Contoso'nun kuruluş için Microsoft 365 güvenlik özelliklerini kullanma şekli.
+ms.openlocfilehash: a03fcd9570ca29bcbf535e3248b19836a9598b40
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2021
-ms.locfileid: "63005465"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64936037"
 ---
-# <a name="summary-of-microsoft-365-for-enterprise-security-for-the-contoso-corporation"></a>Contoso Corporation Microsoft 365 kurumsal güvenlik bilgileri özeti
+# <a name="summary-of-microsoft-365-for-enterprise-security-for-the-contoso-corporation"></a>Contoso Corporation için kurumsal güvenlik Microsoft 365 özeti
 
-Kuruluşta posta dağıtımı Microsoft 365 için Contoso IT güvenlik bölümü, kapsamlı bir güvenlik incelemesi yürütdü. Bulut için aşağıdaki güvenlik gereksinimlerini belirlediler:
+Contoso BT güvenlik departmanı, kuruluşa Microsoft 365 dağıtma onayı almak için kapsamlı bir güvenlik incelemesi gerçekleştirdi. Bulut için aşağıdaki güvenlik gereksinimlerini tanımladılar:
 
 - Çalışanların bulut kaynaklarına erişimi için en güçlü kimlik doğrulama yöntemlerini kullanın.
-- Bilgisayarların ve mobil cihazların uygulamalara güvenli bir şekilde bağlana olduğundan ve bu uygulamalara erişe olduğundan emin olun.
-- Bilgisayarları ve e-postaları kötü amaçlı yazılımdan koruyun.
-- Bulut tabanlı dijital varlıklara izinler, kimlerin nelere, nelere eriş yalnızca ayrıcalıkla erişe bir şekilde erişe olduklarını tanımlar ve en az ayrıcalıkla erişim için tasarlanmıştır
+- Bilgisayarların ve mobil cihazların güvenli yollarla uygulamalara bağlandığından ve uygulamalara erişdiğinden emin olun.
+- Bilgisayarları ve e-postayı kötü amaçlı yazılımlardan koruyun.
+- Bulut tabanlı dijital varlıklar üzerindeki izinler, kimlerin nelere ve neler yapabileceklerine kimlerin erişebileceğini tanımlar ve en az ayrıcalıklı erişim için tasarlanmıştır
 - Hassas ve yüksek düzeyde düzenlenmiş dijital varlıklar etiketlenir, şifrelenir ve güvenli konumlarda depolanır.
-- Yüksek düzeyde düzenlemeye tabi dijital varlıklar ek şifreleme ve izinlerle korunur.
-- IT güvenlik personeli, merkezi panolardan geçerli güvenlik durumunu izleyebilir ve hızlı yanıt ve azaltma için güvenlik olayları hakkında bilgi edinebilirsiniz.
+- Yüksek oranda düzenlenmiş dijital varlıklar ek şifreleme ve izinlerle korunur.
+- BT güvenlik personeli, geçerli güvenlik duruşunu merkezi panolardan izleyebilir ve hızlı yanıt ve risk azaltma amacıyla güvenlik olayları hakkında bildirim alabilir.
 
-## <a name="the-contoso-path-to-microsoft-365-security-readiness"></a>Hazır güvenlik hazırlığı Microsoft 365 Contoso yolu
+## <a name="the-contoso-path-to-microsoft-365-security-readiness"></a>Güvenlik hazırlığını Microsoft 365 contoso yolu
 
-Contoso, kurumsal dağıtım için güvenliklerini hazırlamak için şu Microsoft 365 takip etti:
+Contoso, güvenliklerini kuruluş için Microsoft 365 dağıtımına hazırlamak için şu adımları izledi:
 
 1. Bulut için yönetici hesaplarını sınırlama
 
-   Contoso, mevcut Active Directory Etki Alanı Hizmetleri (AD DS) yönetici hesapları üzerinde kapsamlı bir inceleme yaptı ve özel bulut yöneticisi hesapları ile grupları serisini kuramadı.
+   Contoso, mevcut Active Directory Domain Services (AD DS) yönetici hesaplarını kapsamlı bir şekilde gözden geçirdi ve bir dizi ayrılmış bulut yöneticisi hesabı ve grubu ayarladı.
 
-2. Verileri üç güvenlik düzeyine göre sınıflandır
+2. Verileri üç güvenlik düzeyine sınıflandırma
 
-   Contoso dikkatli bir inceleme yaptı ve en değerli verileri korumak için Microsoft 365 özelliklerini belirlemek için kullanılan üç düzeyi belirledi.
+   Contoso dikkatli bir inceleme yaptı ve en değerli verileri korumak amacıyla kurumsal özelliklerin Microsoft 365 belirlemek için kullanılan üç düzeyi belirledi.
 
-3. Veri düzeyleri için erişim, bekletme ve bilgi koruma ilkelerini belirleme
+3. Veri düzeyleri için erişim, saklama ve bilgi koruma ilkelerini belirleme
 
-   Contoso, veri düzeylerine bağlı olarak buluta taşınan gelecekteki IT iş yüklerini hak kazanmak için ayrıntılı gereksinimler belirledi.
+   Contoso, veri düzeylerini temel alarak buluta taşınacak gelecekteki BT iş yüklerini niteleyen ayrıntılı gereksinimleri belirledi.
 
-Kurumsal dağıtım gereksinimlerine yönelik en iyi Microsoft 365 ve güvenlik uygulamalarını takip etmek için, Contoso güvenlik yöneticileri ve onun IT bölümü birçok güvenlik özelliği ve özelliği, aşağıdaki bölümlerde açıklandığı gibi dağıtmıştır.
+Contoso güvenlik yöneticileri ve BT departmanı, kurumsal dağıtım gereksinimlerine yönelik en iyi güvenlik uygulamalarını ve Microsoft 365 izlemek için, aşağıdaki bölümlerde açıklandığı gibi birçok güvenlik özelliği ve özelliğini dağıttı.
 
 ## <a name="identity-and-access-management"></a>Kimlik ve erişim yönetimi 
 
-- MFA ve PIM ile adanmış genel yönetici hesapları
+- MFA ve PIM ile ayrılmış genel yönetici hesapları
 
-  Contoso, genel yönetici rolünü günlük kullanıcı hesaplarına atamak yerine güçlü parolalara sahip üç özel genel yönetici hesabı oluşturdu. Hesaplar, Azure AD Multi-Factor Authentication (MFA) ve Azure AD (Azure AD) Azure Active Directory (PIM) Privileged Identity Management tarafından korunur. *PIM yalnızca özel Microsoft 365 E5.*
+  Contoso, günlük kullanıcı hesaplarına genel yönetici rolü atamak yerine güçlü parolalara sahip üç ayrılmış genel yönetici hesabı oluşturmuştur. Hesaplar Azure AD Multi-Factor Authentication (MFA) ve Azure Active Directory (Azure AD) Privileged Identity Management (PIM) tarafından korunur. *PIM yalnızca Microsoft 365 E5 ile kullanılabilir.*
 
-  **Azure AD DC yöneticisi veya Genel yönetici** hesabıyla **oturum** açma yalnızca belirli yönetim görevleri için yapılır. Parolalar yalnızca belirlenen personel olarak bilinir ve yalnızca Azure AD PIM'de yapılandırılan bir süre içinde kullanılabilir.
+  **Azure AD DC yöneticisiyle** veya **Genel yönetici** hesabıyla oturum açmak yalnızca belirli yönetim görevleri için yapılır. Parolalar yalnızca belirlenen personel tarafından bilinir ve yalnızca Azure AD PIM'de yapılandırılan bir süre içinde kullanılabilir.
 
-  Contoso güvenlik yöneticileri, BU çalışanın işinin işlevine uygun hesaplara daha az yönetici rolü atadı.
+  Contoso güvenlik yöneticileri, BT çalışanının iş işlevine uygun hesaplara daha az yönetici rolü atadı.
 
-  Daha fazla bilgi için bkz[. Microsoft 365 rolleri hakkında](/office365/admin/add-users/about-admin-roles).
+  Daha fazla bilgi için bkz. [Microsoft 365 yönetici rolleri hakkında](/office365/admin/add-users/about-admin-roles).
 
 - Tüm kullanıcı hesapları için MFA
 
-  MFA, oturum açma işlemi için ek bir koruma katmanı ekler. Kullanıcıların parolalarını doğru girdikten sonra akıllı telefonlarında bir telefon aramasını, kısa mesajı veya uygulama bildirimini kabullerini gerektirir. MFA ile, Bir hesap parolası ihlal edilmiş olsa bile Azure AD kullanıcı hesapları yetkisiz oturum açmalara karşı korunur.
+  MFA, oturum açma işlemine ek bir koruma katmanı ekler. Kullanıcıların parolalarını doğru bir şekilde girdikten sonra akıllı telefonlarında telefon aramasını, kısa mesajı veya uygulama bildirimini kabul etmelerini gerektirir. MFA ile Azure AD kullanıcı hesapları, bir hesap parolası tehlikeye girse bile yetkisiz oturum açma işlemlerine karşı korunur.
 
-   - Yeni aboneliğin güvenliğinin tehlikeye Microsoft 365 için Contoso'ya tüm **Azure AD DC** yöneticisi veya Genel yönetici hesaplarından MFA gerekir.
-   - Kimlik avı saldırılarına karşı korunmak için, bir saldırgan kuruluşta güvenilir bir kişinin kimlik bilgilerini tehlikeye atarak kötü amaçlı e-postalar gönderirken, Contoso yöneticiler ve yöneticiler de dahil olmak üzere tüm kullanıcı hesapları için MFA'ya olanak sağladı.
+   - contoso, Microsoft 365 aboneliğinin güvenliğinin aşılmasına karşı koruma sağlamak için tüm **Azure AD DC yöneticisinde** veya **Genel yönetici** hesaplarında MFA gerektirir.
+   - Bir saldırganın kuruluştaki güvenilir bir kişinin kimlik bilgilerini tehlikeye atıp kötü amaçlı e-posta gönderdiği kimlik avı saldırılarına karşı koruma sağlamak için Contoso, yöneticiler ve yöneticiler de dahil olmak üzere tüm kullanıcı hesaplarında MFA'yı etkinleştirdi.
 
 - Koşullu Erişim ilkeleriyle daha güvenli cihaz ve uygulama erişimi
 
-  Contoso kimlik[, cihazlar, belgeler](../security/office-365-security/microsoft-365-policies-configurations.md) ve diğer belgeler için Koşullu Exchange Online ilkeleri SharePoint. Kimlik Koşullu Erişim ilkeleri, yüksek riskli kullanıcılar için parola değişiklikleri gerektirmeyi ve istemcilerin modern kimlik doğrulamasını desteklemeyen uygulamaları kullanmalarını engellemeyi içerir. Cihaz ilkeleri onaylanan uygulamaların tanımını ve uyumlu bilgisayarları ve mobil cihazları gerektiren uygulamaları içerir. Exchange Online Erişimi ilkeleri arasında ActiveSync istemcilerini engelleme ve ileti şifreleme Office 365 vardır. SharePoint koşullu Erişim ilkeleri hassas ve yüksek düzeyde düzenlemeye tabi siteler için ek koruma içerir.
+  Contoso kimlik, cihazlar, Exchange Online ve SharePoint için [Koşullu Erişim ilkeleri](../security/office-365-security/microsoft-365-policies-configurations.md) kullanıyor. Kimlik Koşullu Erişim ilkeleri, yüksek riskli kullanıcılar için parola değişiklikleri gerektirmeyi ve istemcilerin modern kimlik doğrulamasını desteklemeyen uygulamaları kullanmasını engellemeyi içerir. Cihaz ilkeleri, onaylı uygulamaların tanımını ve uyumlu bilgisayarlar ile mobil cihazlar gerektirmeyi içerir. Exchange Online Koşullu Erişim ilkeleri ActiveSync istemcilerini engellemeyi ve Office 365 ileti şifrelemesini ayarlamayı içerir. SharePoint Koşullu Erişim ilkeleri, hassas ve yüksek düzeyde düzenlenmiş siteler için ek koruma içerir.
 
-- Windows Hello Kurumsal
+- İş İçin Windows Hello
 
-  Contoso, [Windows Hello çalıştıran](/windows/security/identity-protection/hello-for-business/hello-identity-verification) bilgisayarlarda ve mobil cihazlarda güçlü iki faktörlü kimlik doğrulaması yoluyla parola ihtiyacının ortadan kaldırılması için İş için Windows 10 Enterprise.
+  Contoso[, Windows 10 Enterprise](/windows/security/identity-protection/hello-for-business/hello-identity-verification) çalıştıran bilgisayarlarda ve mobil cihazlarda güçlü iki faktörlü kimlik doğrulaması aracılığıyla parola gereksinimini ortadan kaldırmak için İş İçin Windows Hello dağıttı.
 
 - Windows Defender Credential Guard
 
-  İşletim sisteminde çalışan hedefli saldırıları ve kötü amaçlı yazılımı yönetim ayrıcalıklarıyla engellemek için Contoso, AD DS [grup ilkesi aracılığıyla Windows Defender Credential Guard'ın](/windows/security/identity-protection/credential-guard/credential-guard) etkinleştirildi.
+  Contoso, işletim sisteminde çalışan hedefli saldırıları ve kötü amaçlı yazılımları yönetim ayrıcalıklarıyla engellemek için AD DS grup ilkesi aracılığıyla [Credential Guard Windows Defender](/windows/security/identity-protection/credential-guard/credential-guard) etkinleştirdi.
 
 ## <a name="threat-protection"></a>Tehdit koruması
 
-- Kötü amaçlı yazılımdan ve yazılımdan Windows Defender Virüsten Koruma
+- Windows Defender Virüsten Koruma ile kötü amaçlı yazılımlara karşı koruma
 
-  Contoso, kötü [amaçlı Windows Defender Virüsten Koruma](/windows/security/threat-protection/windows-defender-antivirus/windows-defender-antivirus-in-windows-10) koruma ve kötü amaçlı yazılımdan koruma ile çalışan bilgisayarlar ve cihazlar için kötü amaçlı yazılımdan koruma Windows 10 Enterprise.
+  Contoso, [Windows 10 Enterprise](/windows/security/threat-protection/windows-defender-antivirus/windows-defender-antivirus-in-windows-10) çalıştıran bilgisayarlar ve cihazlar için kötü amaçlı yazılımdan koruma ve kötü amaçlı yazılımdan koruma yönetimi için Windows Defender Virüsten Koruma kullanıyor.
 
-- Microsoft Defender ile e-posta akışının ve posta kutusu denetim günlüğünün güvenliğini Office 365 
+- Office 365 için Microsoft Defender ile e-posta akışının ve posta kutusu denetim günlüğünün güvenliğini sağlama 
 
-  Contoso, bilinmeyen kötü amaçlı Exchange Online Protection ve virüslere [ve e-postalarla](/office365/securitycompliance/office-365-atp) iletilen kötü amaçlı URL'lere karşı korumak amacıyla Office 365 için Office 365 Defender kullanıyor.
+  Contoso, e-postalar aracılığıyla iletilen bilinmeyen kötü amaçlı yazılımlara, virüslere ve kötü amaçlı URL'lere karşı koruma sağlamak için [Exchange Online Protection ve Office 365 için Defender](/office365/securitycompliance/office-365-atp) kullanıyor.
 
-  Contoso ayrıca, kullanıcı posta kutularında kimlerin oturum açtığını belirlemek, ileti göndermek ve posta kutusu sahibi, temsili kullanıcı veya yönetici tarafından gerçekleştirilen diğer etkinlikleri yapmak için posta kutusu denetim günlüğünü de etkinleştirdi.
+  Contoso ayrıca kullanıcı posta kutularında kimlerin oturum açtığını, ileti gönderdiğini ve posta kutusu sahibi, temsilci kullanıcı veya yönetici tarafından gerçekleştirilen diğer etkinlikleri belirlemek için posta kutusu denetim günlüğünü etkinleştirdi.
 
-- Tehdit soruşturması ve yanıt Office 365 saldırı izleme ve önleme
+- Office 365 tehdit araştırması ve yanıtı ile saldırı izleme ve önleme
 
-  Contoso, [Office 365 belirlemeyi ve](/office365/securitycompliance/office-365-ti) adresleri belirlemeyi ve gelecekteki saldırılardan korunmayı kolaylaştırarak tehdit soruşturması ve yanıtını kullanır.
+  Contoso, saldırıları tanımlamayı ve ele almalarını kolaylaştırarak ve gelecekteki saldırıları önleyerek kullanıcıları korumak için [Office 365 tehdit araştırması ve yanıtı](/office365/securitycompliance/office-365-ti) kullanır.
 
 - Gelişmiş Tehdit Analizi ile gelişmiş saldırılara karşı koruma
 
-  Contoso, kendisini [gelişmiş hedefli saldırılardan korumak](/advanced-threat-analytics/what-is-ata) için Gelişmiş Tehdit Analizi (ATA) kullanıyor.  ATA normal ve olağandışı varlık (kullanıcı, cihazlar ve kaynaklar) davranışını otomatik olarak analiz eder, öğrenir ve tanımlar.
+  Contoso, kendisini gelişmiş hedefli [saldırılardan korumak için Advanced Threat Analytics 'i (ATA)](/advanced-threat-analytics/what-is-ata) kullanıyor.  ATA normal ve anormal varlık (kullanıcı, cihazlar ve kaynaklar) davranışını otomatik olarak analiz eder, öğrenir ve tanımlar.
 
 ## <a name="information-protection"></a>Bilgi koruması
 
-- Azure Information Protection etiketleriyle hassas ve yüksek düzeyde düzenlemeye tabi dijital varlıkları koruyun
+- Azure Information Protection etiketleriyle hassas ve yüksek oranda düzenlenmiş dijital varlıkları koruma
 
-  Contoso tarafından belirlenen üç veri koruma düzeyi ve kullanıcıların [dijital Microsoft 365 ilgili duyarlılık](../compliance/sensitivity-labels.md) etiketlerinin dağıtıldı. Contoso ticari sırrı ve diğer fikri mülkiyeti için, yüksek düzeyde düzenlemeye tabi veriler için duyarlılık alt etiketlerini kullanır. Bu işlem içeriği şifreler ve belirli kullanıcı hesaplarıyla gruplara erişimi kısıtlar.
+  Contoso, kullanıcıların dijital varlıklara uyguladığı üç veri koruma düzeyi belirledi ve [Microsoft 365 duyarlılık etiketleri](../compliance/sensitivity-labels.md) dağıttı. Contoso, ticari gizli dizileri ve diğer fikri mülkiyetleri için yüksek düzeyde düzenlenmiş veriler için duyarlılık alt etiketlerini kullanır. Bu işlem içeriği şifreler ve belirli kullanıcı hesaplarına ve gruplarına erişimi kısıtlar.
 
-- Veri Kaybını Önleme ile intranet veri sızıntılarını önleme
+- Veri Kaybı Önleme ile intranet veri sızıntılarını önleme
 
-  Kullanıcıların yanlışlıkla veya [bilerek hassas verileri](../compliance/dlp-learn-about-dlp.md) paylaşmasını önlemek Exchange Online, SharePoint ve OneDrive İş için Contoso tarafından yapılandırılmış Veri Kaybı Önleme ilkeleri.
+  Contoso, kullanıcıların yanlışlıkla veya kasıtlı olarak hassas verileri paylaşmasını önlemek amacıyla Exchange Online, SharePoint ve OneDrive İş için [Microsoft Purview Veri Kaybı Önleme](../compliance/dlp-learn-about-dlp.md) ilkelerini yapılandırdı.
 
-- Bilgi Koruması ile cihaz veri Windows sızıntılarını önleme
+- Cihaz veri sızıntılarını önleme Windows Information Protection
 
-  Contoso, İnternet tabanlı uygulamalar ve hizmetler ile kurumsal uygulamalar ve çalışanların çalışmaya getirdiği kurumsal cihazlarda ve kişisel cihazlardaki veriler aracılığıyla veri sızıntısını önlemek için Windows Bilgi Koruması [(WIP)](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip) kullanıyor.
+  Contoso, İnternet tabanlı uygulamalar ve hizmetler ve kurumsal uygulamalar aracılığıyla veri sızıntısına karşı koruma sağlamak için [Windows Information Protection (WIP)](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip) kullanıyor ve çalışanların işe getirdiği kurumsal cihazlar ve kişisel cihazlardaki veriler.
 
-- Bulut Uygulamaları için Microsoft Defender ile bulut izleme
+- Microsoft Defender for Cloud Apps ile bulut izleme
 
-  Contoso, bulut [ortamlarını eşlemek](/cloud-app-security/what-is-cloud-app-security) , kullanımını izlemek ve güvenlik olaylarını ve olayları algılamak için Bulut Uygulamaları için Microsoft Defender'ı kullanıyor. *Bulut Uygulamaları için Microsoft Defender yalnızca Microsoft 365 E5.*
+  Contoso, bulut ortamını eşlemek, kullanımını izlemek ve güvenlik olaylarını ve olaylarını algılamak için [Microsoft Defender for Cloud Apps](/cloud-app-security/what-is-cloud-app-security) kullanıyor. *Microsoft Defender for Cloud Apps yalnızca Microsoft 365 E5 ile kullanılabilir.*
 
 - Cihaz yönetimi ve Microsoft Intune
 
-  Contoso, [Microsoft Intune](/intune/introduction-intune) cihazlara ve bu cihazlarda çalışan uygulamalara erişimi kaydetmek, yönetmek ve yapılandırmak için bu uygulamaları kullanır. Cihaz Tabanlı Koşullu Erişim ilkeleri ayrıca onaylanmış uygulamaları, uyumlu bilgisayarları ve mobil cihazları da gerektirir.
+  Contoso, mobil cihazlara ve üzerinde çalışan uygulamalara erişimi kaydetmek, yönetmek ve yapılandırmak için [Microsoft Intune](/intune/introduction-intune) kullanır. Cihaz tabanlı Koşullu Erişim ilkeleri ayrıca onaylı uygulamalar, uyumlu bilgisayarlar ve mobil cihazlar gerektirir.
 
 ## <a name="security-management"></a>Güvenlik yönetimi
 
-- Bulut için Microsoft Defender ile IT için merkezi güvenlik panosu
+- Bulut için Microsoft Defender ile BT için merkezi güvenlik panosu
 
-  Contoso, bulut için [Microsoft Defender'ı](https://azure.microsoft.com/services/security-center/) kullanarak birleşik bir güvenlik ve tehdit koruması görünümü sunar, iş yükleri genelinde güvenlik ilkelerini yönetir ve siber saldırılara yanıt verir.
+  Contoso[, güvenlik](https://azure.microsoft.com/services/security-center/) ve tehdit korumasının birleşik bir görünümünü sunmak, iş yükleri genelinde güvenlik ilkelerini yönetmek ve siber saldırılara yanıt vermek için Bulut için Microsoft Defender kullanır.
 
 - Windows Defender Güvenlik Merkezi'ne sahip kullanıcılar için merkezi güvenlik panosu
 
-  Contoso, Windows Güvenliği [bir](/windows/security/threat-protection/windows-defender-security-center/windows-defender-security-center) bakışta güvenlik nedenlerini görmek ve önlem almak için Windows 10 Enterprise çalışan bilgisayarlarına ve cihazlarına uygulama dağıttı.
+  Contoso[, kullanıcıların güvenlik](/windows/security/threat-protection/windows-defender-security-center/windows-defender-security-center) duruşlarını bir bakışta görebilmeleri ve eyleme geçebilmeleri için Windows Güvenliği uygulamasını Windows 10 Enterprise çalıştıran bilgisayarlarına ve cihazlarına dağıttı.

@@ -1,5 +1,5 @@
 ---
-title: Gözden geçirme kümesinde belgeleri etiketleme
+title: Bir inceleme setindeki belgeleri etiketleme
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -15,124 +15,124 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Gözden geçirme kümesinde belgeleri etiketlemek, gereksiz içeriği kaldırmaya ve bir e-posta durumunda uygun Advanced eDiscovery olur.
+description: Gözden geçirme kümesindeki belgeleri etiketlemek, gereksiz içeriklerin kaldırılmasına ve eBulma (Premium) durumunda ilgili içeriğin tanımlanmasına yardımcı olur.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 43b0bf42bcd94f0bc3ade169ee5b41ee33dcbc5a
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: c1d30cdefe0ae93fe7c87a1c5ecc9712d80bc3fb
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985009"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64931615"
 ---
-# <a name="tag-documents-in-a-review-set-in-advanced-ediscovery"></a>Belgeleri belge kümesinde bir gözden geçirme kümesinde Advanced eDiscovery
+# <a name="tag-documents-in-a-review-set-in-ediscovery-premium"></a>eBulma'da (Premium) bir gözden geçirme kümesinde belgeleri etiketleme
 
-Gözden geçirme kümesinde içerik düzenlemek, eBulma sürecindeki çeşitli iş akışlarını tamamlamak önemlidir. Bu şunları içerir:
+Bir gözden geçirme kümesindeki içeriği düzenlemek, eBulma işleminde çeşitli iş akışlarını tamamlamak için önemlidir. Buna şunlar dahildir:
 
-- Gereksiz içeriği bir hale alma
+- Gereksiz içeriği itlaf etmek
 
 - İlgili içeriği tanımlama
 
-- Uzman veya avukat tarafından gözden geçirmesi gereken içeriği tanımlama
+- Bir uzman veya avukat tarafından gözden geçirilmesi gereken içeriği belirleme
 
-Uzmanlar, avukatlar veya diğer kullanıcılar bir inceleme kümesinde içeriği gözden geçir yaptıklarında, içerikle ilgili görüşlerini etiketler kullanılarak yakalanabilirsiniz. Örneğin, amacı gereksiz içeriği bir yere vermekse, kullanıcı belgeleri "yanıt vermiyor" gibi bir etiketle etiketlsin. İçerik gözden geçirildikten ve etiketlendikten sonra, "yanıt vermiyor" olarak etiketlenen içerikleri dışarıda tutmak için bir gözden geçirme kümesi araması oluşturulabilir. Bu işlem, eBulma iş akışının sonraki adımlarından yanıtlanmayan içeriği ortadan kaldırıyor. Bir gözden geçirme kümesinde etiketleme paneli, her durum için özelleştirilebilir ve böylece etiketler dava için hedeflenen gözden geçirme iş akışını destekler.
+Uzmanlar, avukatlar veya diğer kullanıcılar bir inceleme kümesindeki içeriği gözden geçirdiğinde, içerikle ilgili görüşleri etiketler kullanılarak yakalanabilir. Örneğin, amaç gereksiz içeriği geçersiz kılmasıysa, kullanıcı belgeleri "yanıt vermeyen" gibi bir etiketle etiketleyebilir. İçerik gözden geçirilip etiketlendikten sonra, "yanıt vermeyen" olarak etiketlenen tüm içerikleri dışlamak için bir gözden geçirme kümesi araması oluşturulabilir. Bu işlem, eBulma iş akışındaki sonraki adımlarda yanıt vermeyen içeriği ortadan kaldırır. Bir inceleme kümesindeki etiketleme paneli, etiketlerin servis talebi için hedeflenen gözden geçirme iş akışını desteklemesi için her servis talebi için özelleştirilebilir.
 
 > [!NOTE]
-> Etiketlerin kapsamı önemli bir Advanced eDiscovery durum olur. Bu, bir davanın gözden geçirenlerin gözden geçirme kümesi belgelerini etiketlemek için kullanabileceği tek bir etiket kümesine sahip olduğu anlamına gelir. Aynı durumda, farklı gözden geçirme kümelarında kullanmak üzere farklı bir etiket kümesi ayaramazsiniz.
+> Etiketlerin kapsamı bir eBulma (Premium) olayıdır. Bu, bir servis talebinin gözden geçirenlerin gözden geçirme kümesi belgelerini etiketlemek için kullanabileceği tek bir etiket kümesine sahip olabileceği anlamına gelir. Aynı durumda farklı gözden geçirme kümelerinde kullanmak üzere farklı bir etiket kümesi ayarlayamazsınız.
 
 ## <a name="tag-types"></a>Etiket türleri
 
-Advanced eDiscovery iki tür etiket sağlar:
+eBulma (Premium) iki tür etiket sağlar:
 
-- **Tek seçim etiketleri**: Gözden geçirenlerin grup içindeki tek bir etiketi seçmelerini kısıtlar. Bu tür etiketler, gözden geçirenlerin "yanıt veren" ve "yanıt vermiyor" gibi çakışan etiketleri seçmeylerini sağlamak için yararlı olabilir. Tek seçim etiketleri radyo düğmeleri olarak görünür.
+- **Tek seçimli etiketler**: Gözden geçirenleri bir grup içinde tek bir etiket seçmeye kısıtlar. Bu tür etiketler, gözden geçirenlerin "duyarlı" ve "yanıt vermeyen" gibi çakışan etiketleri seçmediğinden emin olmak için yararlı olabilir. Tek seçenekli etiketler radyo düğmeleri olarak görünür.
 
-- **Çoklu seçim etiketleri**: Incelemelerin grup içinde birden çok etiket seçmesine izin ver. Bu tür etiketler onay kutuları olarak görünür.
+- **Çoktan seçmeli etiketler**: Gözden geçirmelerin bir grup içinde birden çok etiket seçmesine izin verin. Bu etiket türleri onay kutuları olarak görünür.
 
 ## <a name="tag-structure"></a>Etiket yapısı
 
-Etiket türlerine ek olarak, etiket belgelerini daha kolay etiketlemek için etiket panelinde etiketlerin nasıl düzenleniyor olması da kullanılabilir. Etiketler bölümlere göre gruplanmıştır. Gözden Geçirme kümesi araması, etikete göre ve etiket bölümüne göre arama yapma olanağını destekler. Bu, bölümdeki herhangi bir etiketle etiketlenmiş belgeleri almak için bir gözden geçirme kümesi araması oluşturabilirsiniz.
+Etiket türlerine ek olarak, etiketlerin etiket panelinde düzenlenme şekli, etiketleme belgelerini daha sezgisel hale getirmek için kullanılabilir. Etiketler bölümlere göre gruplandırılır. Gözden geçirme kümesi araması, etikete ve etiket bölümüne göre arama özelliğini destekler. Bu, bir bölümdeki herhangi bir etiketle etiketlenmiş belgeleri almak için bir gözden geçirme kümesi araması oluşturabileceğiniz anlamına gelir.
 
-![Etiket panelinde etiket bölümleri.](../media/TagTypes.png)
+![Etiket panelinde bölümleri etiketleyin.](../media/TagTypes.png)
 
-Etiketleri bir bölümün içine yerleştirmeyi daha da düzenleyebilirsiniz. Örneğin, amacı ayrıcalıklı içeriği tanımlamak ve etiketlemek ise, gözden geçirenin bir belgeyi "Ayrıcalıklı" olarak etiketley kimliğini açıkça ifade etmek ve uygun iç içe etikete bakarak ayrıcalık türünü seçmeyi belirlemek için iç içe yerleştirme kullanılabilir.
+Etiketleri bir bölüm içinde iç içe yerleştirerek daha fazla düzenleyebilirsiniz. Örneğin, amaç ayrıcalıklı içeriği tanımlamak ve etiketlemekse, iç içe yerleştirme, gözden geçirenin bir belgeyi "Privileged" olarak etiketleyip uygun iç içe etiketi denetleyerek ayrıcalık türünü seçebileceğini açıkça ifade etmek için kullanılabilir.
 
-![Etiket bölümü içinde iç içe etiketler.](../media/NestingTags.png)
+![Bir etiket bölümü içinde iç içe yerleştirilmiş etiketler.](../media/NestingTags.png)
 
-## <a name="creating-and-applying-tags"></a>Etiketleri oluşturma ve uygulama
+## <a name="creating-and-applying-tags"></a>Etiket oluşturma ve uygulama
 
-Gözden geçirme kümeleri içinde öğeleri etiketleme, iki adımlı bir işlemdir. İlk adım, ayarlanmış öğeleri gözden geçirmek için uygulanan etiketleri oluşturmaktır. Etiketleri oluşturdukktan sonra, siz ve diğer gözden geçirenler bunları gözden geçirme kümesinde öğelere uygulayabilirsiniz. Daha önce de Advanced eDiscovery da Advanced eDiscovery gözden geçirenlerin gözden geçirme kümesi öğelerini etiketlemek için kullanabileceği tek bir etiket kümesi olabilir.
+Gözden geçirme kümelerindeki öğeleri etiketlemek iki adımlı bir işlemdir. İlk adım, daha sonra küme öğelerini gözden geçirmek için uygulanan etiketleri oluşturmaktır. Etiketleri oluşturduktan sonra, siz ve diğer gözden geçirenler bunları bir gözden geçirme kümesindeki öğelere uygulayabilirsiniz. Daha önce açıklandığı gibi, bir eBulma (Premium) olayı gözden geçirenlerin gözden geçirme kümesi öğelerini etiketlemek için kullanabileceği tek bir etiket kümesine sahip olabilir.
 
 ### <a name="create-tags"></a>Etiket oluşturma
 
-Gözden geçirme kümesinde öğelere etiket uygulamadan önce, etiket yapısı oluşturmanız gerekir.
+Bir gözden geçirme kümesindeki öğelere etiket uygulamadan önce bir etiket yapısı oluşturmanız gerekir.
 
-1. Gözden geçirme kümesi açın, komut çubuğuna gidin ve Etiket **dosyaları'na gidin**.
+1. Bir gözden geçirme kümesi açın, komut çubuğuna gidin ve **Dosyaları etiketle'yi** seçin.
 
-2. Etiket dosyaları **uç sayfasında** Etiket oluştur **/düzenle'ye tıklayın**.
+2. **Etiket dosyaları** açılır sayfasında **Etiket oluştur/düzenle'ye** tıklayın.
 
-   ![Çıkış sayfasında Etiket oluştur/düzenle'ye tıklayın.](../media/CreateAeDTags1.png)
+   ![Açılır sayfada Etiket oluştur/düzenle'ye tıklayın.](../media/CreateAeDTags1.png)
 
-3. Etiketler sayfasında **Bölüm** **ekle'yi seçin**.
+3. **Etiketler** sayfasında **Bölüm ekle'yi** seçin.
 
-4. Etiket grubu başlığını ve isteğe bağlı bir açıklama yazın, sonra Da **Kaydetme'ye tıklayın**.
+4. Bir etiket grubu başlığı ve isteğe bağlı bir açıklama yazıp **Kaydet'e** tıklayın.
 
-5. Etiket grubu başlığının yanındaki üç nokta açılır menüsünü seçin ve Ekle onay kutusuna **veya Seçenek ekle** **düğmesine tıklayın**.
+5. Etiket grubu başlığının yanındaki üç nokta açılan menüsünü seçin ve **Ekle onay kutusuna** veya **Seçenek ekle düğmesine** tıklayın.
 
 6. Onay kutusu veya seçenek düğmesi için bir ad ve açıklama yazın.
 
-7. Yeni etiket bölümleri, etiket seçenekleri ve onay kutuları oluşturmak için bu işlemi yineler. Örneğin, aşağıdaki ekran görüntüsünde Yanıt veren ve Yanıt vermiyor onay kutulerinden oluşan Gözden Geçir  **adlı bir etiket** grubu yer almaktadır.
+7. Yeni etiket bölümleri, etiket seçenekleri ve onay kutuları oluşturmak için bu işlemi yineleyin. Örneğin, aşağıdaki ekran görüntüsünde **Duyarlı ve Yanıt vermeyen** onay kutularından oluşan **Gözden Geçir** adlı bir  etiket grubu gösterilmektedir.
 
-   ![Etiket yapısını yapılandırma.](../media/ManageTagOptions3.png)
+   ![Etiket yapısını yapılandırın.](../media/ManageTagOptions3.png)
 
-### <a name="apply-tags"></a>Etiket uygulama
+### <a name="apply-tags"></a>Etiketleri uygulama
 
-Etiket yapısı yerindeken, gözden geçirenler etiketleme ayarlarını yapılandırarak gözden geçirme kümesinde öğelere etiketler uygulayabilir.
+Etiket yapısı uygulandığında, gözden geçirenler etiketleme ayarlarını yapılandırarak bir gözden geçirme kümesindeki öğelere etiket uygulayabilir.
 
-1. Gözden geçirme kümesi komut çubuğunda **Etiket dosyaları öğesini** seçerek Etiket dosyaları uç  sayfası (etiketleme paneli olarak *da denir) görüntülenir*.
+1. Gözden geçirme kümesi komut çubuğunda **Etiket dosyaları** açılır sayfasını (*etiketleme paneli* olarak da adlandırılır) görüntülemek için **Etiket dosyaları'nı** seçin.
 
-   ![Etiketleme panelini açmak için komut çubuğundaKimlik dosyaları'na tıklayın.](../media/TagFilesFlyoutPage.png)
+   ![Etiketleme panelini açmak için komut çubuğunda Dosyaları etiketle'ye tıklayın.](../media/TagFilesFlyoutPage.png)
 
-2. Etiket **dosyaları uç** sayfasında, aşağıdaki seçenekleri ayarp gözden geçirme kümesinde görüntülenen öğelerin nasıl etiket olaylarını etiketley onu yapılandırabilirsiniz. Şu anda gözden geçirme kümesine uygulanan filtreler veya filtre sorguları hangi öğelerin görüntüleniyor olduğunu ve dolayısıyla etiketleri uygulayabilecek öğeleri belirler. Daha fazla bilgi için bkz [. Gözden geçirme kümesinde içeriği sorgulama ve filtreleme](review-set-search.md).
+2. **Dosyaları etiketle** açılır sayfasında, gözden geçirme kümesinde görüntülenen öğelerin nasıl etiketleneceğini yapılandırmak için aşağıdaki seçenekleri ayarlayabilirsiniz. Şu anda gözden geçirme kümesine uygulanan filtreler veya filtre sorguları hangi öğelerin görüntüleneceğini ve dolayısıyla etiketleri uygulayabileceğiniz öğeleri belirler. Daha fazla bilgi için bkz. [Gözden geçirme kümesindeki içeriği sorgulama ve filtreleme](review-set-search.md).
 
-   - **Seçim'i seçin**. Etiketlerin uygulanacak öğe kapsamını belirlemek için aşağıdaki seçeneklerden birini seçin.
+   - **Seçimi seçin**. Etiketlerin uygulanacağı öğelerin kapsamını belirlemek için aşağıdaki seçeneklerden birini belirleyin.
 
-      - **Seçili öğeleri etiketleme**: Bu seçenek, seçtiğiniz öğelere etiketleri uygular. Etiketleme panelini başlatmadan önce veya başlattıktan sonra öğeleri seçin. Bu seçenek etiketilecek seçili öğelerin sayısını görüntüler (gerçek zamanlı olarak).
+      - **Seçili öğeleri etiketle**: Bu seçenek, etiketleri seçtiğiniz öğelere uygular. Etiketleme panelini başlatmadan önce veya sonra öğeleri seçebilirsiniz. Bu seçenek, etiketlenecek seçili öğelerin sayısını (gerçek zamanlı olarak) görüntüler.
 
-      - **Tüm öğeleri etiketle**: Bu seçenek, gözden geçirme kümesinde görüntülenen tüm öğelere etiketleri uygular. Bu seçenek etiketlenen öğelerin toplam sayısını görüntüler.
+      - **Listedeki tüm öğeleri etiketle**: Bu seçenek, etiketleri gözden geçirme kümesinde görüntülenen tüm öğelere uygular. Bu seçenek, etiketlenecek öğelerin toplam sayısını görüntüler.
 
-   - **Seçimi genişletme**: Gözden geçirme kümesinde etiketlenmiş öğelerle ilgili ek öğeleri etiketlemek için aşağıdaki seçenekleri kullanın.
+   - **Seçimi genişlet**: Gözden geçirme kümesindeki etiketli öğelerle ilgili ek öğeleri etiketlemek için aşağıdaki seçenekleri kullanın.
 
-      - **İlişkili aile öğelerini** ekle: Bu seçenek, etiketlenmiş öğelerin ilişkili aile öğelerine aynı etiketi uygular.  *Aile öğeleri* , aynı FamilyId meta veri özellik **değerini paylaşan** öğelerdir. Örneğin, bir e-posta iletisine eklenmiş olan belge, e-posta iletisiyle aynı **FamilyId'i** paylaşıyor. Dolayısıyla, bu örnekte bu seçenek seçiliyse, belge gözden geçirme kümesi öğeleri listesine eklense bile e-posta iletisi ve belge etiketlenir.
+      - **İlişkili aile öğelerini dahil et**: Bu seçenek, etiketlenmiş öğelerin ilişkili aile öğelerine aynı etiketi uygular.  *Aile öğeleri* , aynı **FamilyId** meta veri özelliği değerini paylaşan öğelerdir. Örneğin, e-posta iletisine eklenmiş bir belge, e-posta iletisiyle aynı **FamilyId** değerini paylaşır. Bu nedenle, bu örnek için bu seçenek belirlenmişse, belge gözden geçirme kümesi öğeleri listesine eklenmese bile e-posta iletisi ve belge etiketlenir.
 
-      - **İlişkili konuşma öğelerini** dahil et: Bu seçenek, aynı konuşmada veya konuşmada etiketlenen Teams veya Yammer konuşmadaki tüm öğelere aynı etiketi uygular. *Konuşma öğeleri* , aynı ConversationId meta veri özellik **değerini paylaşan** öğelerdir. Konuşmanın tüm iletileri, gönderileri ve bunların döküm dosyası aynı **ConversationId'i paylaşır**. Bu seçenek işaretliyse, bu konuşma öğelerinin bazıları gözden geçirme kümesi öğeleri listesine eklense bile, aynı konuşmadaki (ve döküm dosyasındaki) tüm öğeler etiketlenir. Konuşma öğeleri hakkında daha fazla bilgi için, İş Akışı'nda içerik [için Advanced eDiscovery "Gruplama" Microsoft Teams](teams-workflow-in-advanced-ediscovery.md#grouping).
+      - **İlişkili konuşma öğelerini ekle**: Bu seçenek, etiketlenen öğelerle aynı Teams veya Yammer konuşmadaki tüm öğelere aynı etiketi uygular. *Konuşma öğeleri* , aynı **ConversationId** meta veri özelliği değerini paylaşan öğelerdir. Konuşmanın tüm iletileri, gönderileri ve ilgili transkript dosyası aynı **ConversationId değerini** paylaşır. Bu seçenek belirlenirse, aynı konuşmadaki (ve transkript dosyasındaki) tüm öğeler etiketlenir, ancak bu konuşma öğelerinin bazıları gözden geçirme kümesi öğeleri listesine eklenmeyebilir. Konuşma öğeleri hakkında daha fazla bilgi için, Microsoft Teams içeriği [için eBulma (Premium) iş akışının](teams-workflow-in-advanced-ediscovery.md#grouping) "Gruplandırma" bölümüne bakın.
 
-      - **Yok**: Bu seçenek aile öğelerine veya konuşma öğelerine etiket uygulamaz. Yalnızca seçilen öğelere veya gözden geçirme kümesi listesinde yer alan tüm öğelere etiketler uygulanır.
+      - **Hiçbiri**: Bu seçenek, aile öğelerine veya konuşma öğelerine etiket uygulamaz. Etiketleri yalnızca seçili öğelere veya gözden geçirme kümesi listesindeki tüm öğelere uygular.
 
    > [!NOTE]
-   > İlişkili aile veya görüşme öğeleri dahil olmak üzere, Seçili öğeleri etiketle veya Liste  seçeneklerinde Tüm öğeleri etiketle **seçeneklerinde gösterilen öğelerin sayısı değişmez**. Başka bir deyişle, etiketlenen öğe sayısı görüntülenmez.
+   > İlişkili aile veya konuşma öğeleri dahil olmak, **Seçili öğeleri etiketleme** veya Liste seçeneklerindeki **tüm öğeleri etiketleme** bölümünde gösterilen öğelerin sayısını değiştirmez. Başka bir deyişle, etiketlenecek ilişkili öğelerin sayısı görüntülenmez.
 
-   - **Etiket atama**: Bu bölümde, belgelere uygulayabilecek etiketleri (etiket gruplarına göre düzenlenmiş) görüntüler. Her etiket grubuna tek bir seçim etiketi (radyo düğmesiyle tanımlanır) uygulayabilirsiniz. Bununla birlikte, birden çok seçimli etiket (onay kutusuyla tanımlanır) uygulayabilirsiniz.
+   - **Etiket atama**: Bu bölümde, belgelere uygulayabileceğiniz etiketler (etiket gruplarına göre düzenlenmiş) görüntülenir. Etiket grubu başına yalnızca bir tek seçenekli etiket (radyo düğmesiyle tanımlanır) uygulayabilirsiniz. Bununla birlikte, birden çok çok seçenekli etiket uygulayabilirsiniz (onay kutusuyla tanımlanır).
 
-3. Etiketleri **ayarlarınıza** göre uygulamak için Etiket uygula'ya tıklayın.
+3. Etiketleri ayarlarınıza göre uygulamak için Etiketleri **uygula'ya** tıklayın.
 
-   Etiketleme **panelindeki** her etiket grubu için Etiket uygulama durumu iletisi görüntülendiğinde bir etiketleme işinin başlatılmaktadır. Etiket atama bölümündeki her etiket **grubunun** etiketleri, iş tamamlanana kadar gri gösterilir.
+   **Etiketleme işinin** başlatıldığını belirtmek üzere etiketleme panelindeki her etiket grubu için Etiket uygulama durum iletisi görüntülenir. İş tamamlanana kadar **Etiket ata** bölümündeki her etiket grubunun etiketleri gri olur.
 
 > [!TIP]
-> Etiketleme panelinde ayarları yapılandırma sürecindeyseniz, ancak en baştan başlamak istiyorsanız, geçerli ayarı temizlemek için Etiket atamasını sıfırla'ya tıklayın. Bu denetim, zaten etiketlenmiş öğelere yönelik değildir ve daha önce etiketlenmiş öğelerdeki etiketleri değiştirmez veya kaldırmaz.  
+> Etiketleme panelinde ayarları yapılandırma aşamasındaysanız ancak baştan başlamak istiyorsanız Geçerli ayarı temizlemek için **Etiket atamasını sıfırla'ya** tıklayın. Bu denetim zaten etiketlenmiş öğeler için geçerli değildir ve daha önce etiketlenmiş öğelerdeki etiketleri değiştirmez veya kaldırmaz.  
 
-#### <a name="monitor-tagging-jobs"></a>İşleri etiketlemeyi izleme
+#### <a name="monitor-tagging-jobs"></a>Etiketleme işlerini izleme
 
-Çok fazla sayıda öğe etiketlerseniz (veya Tüm öğeleri liste olarak etiketle **) seçeneğini** belirlerseniz, **Belge etiketleme** işi oluşturulur. Bu işin durumunu, olayda **İş sekmesinde** görüntülersiniz. Bu, tamamlanması çok uzun zaman al götüren büyük etiketleme işlerini takip etmenizi sağlar. Bazı durumlarda bir etiketleme işi tamamlanmıştır, ancak etiketleme **panelinde** etiketlerin uygulanması durumu iletisi yine görüntülenir. Etiketleme işlerinin durumunu güncelleştirmek için gözden geçirme **kümesi komut** çubuğunda Yenile'ye tıklayın.
+Çok sayıda öğeyi etiketlediğinizde (veya **Listedeki tüm öğeleri etiketle) seçeneğini belirlediğinizde**, **belge etiketleme** işi oluşturulur. Bu işin durumunu servis talebindeki **İşler** sekmesinde görüntülersiniz. Bu, tamamlanması uzun sürebilecek büyük etiketleme işlerini izlemenize yardımcı olur. Bazı durumlarda bir etiketleme işi tamamlanmış olabilir, ancak etiketleme panelinde **Etiket uygulama** durum iletisi görüntülenmeye devam edilir. Etiketleme işlerinin durumunu güncelleştirmek için gözden geçirme kümesi komut çubuğunda **Yenile'ye** tıklayın.
 
 ## <a name="removing-tags"></a>Etiketleri kaldırma
 
-Gözden geçirme kümesinde öğelerden etiketleri kaldırabilirsiniz. Bununla birlikte, gözden geçirme kümesi öğesine uygulanmış olan tek seçimli etiketi kaldıramazsiniz. Tek seçimli etiketi yalnızca aynı etiket grubunda tek seçimli başka bir etiketle değiştirebilirsiniz.
+Bir gözden geçirme kümesindeki öğelerden etiketleri kaldırabilirsiniz. Ancak, bir gözden geçirme kümesi öğesine uygulanmış olan tek seçenekli etiketi kaldıramazsınız. Tek seçenekli bir etiketi yalnızca aynı etiket grubu içindeki başka bir tek seçenekli etiketle değiştirebilirsiniz.
 
 Etiketi kaldırmak için:
 
 1. Etiketi kaldırmak istediğiniz öğeleri seçin.
 
-2. Etiketleme **panelini** görüntülemek için Etiket dosyaları'nı tıklatın.
+2. Etiketleme panelini görüntülemek için **Dosyaları etiketle'ye** tıklayın.
 
-3. Etiket **atama altında**, etiketin seçimini kaldırın ve Etiket **uygula'ya tıklayın**.
+3. **Etiket ata'nın** altında etiketin seçimini kaldırın ve ardından **Etiketleri uygula'ya** tıklayın.
 
-Seçili öğelere uygulanan etiketi değiştirmek için önceki yordamı da kullanabilirsiniz. Geçerli etiketin seçimini kaldırdikten sonra farklı bir etiket de kaldırabilirsiniz.
+Seçili öğelere uygulanan etiketi değiştirmek için önceki yordamı da kullanabilirsiniz. Geçerli etiketin seçimini kaldırdıktan sonra farklı bir etiket seçebilirsiniz.

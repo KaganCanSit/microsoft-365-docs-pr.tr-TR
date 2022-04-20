@@ -1,6 +1,6 @@
 ---
-title: Upload paketinizi geri istiyorum
-description: Uygulama, ikili dosyalar ve bağımlılıkları Test Temel'e yükleme
+title: Paketinizi karşıya yükleyin
+description: Uygulamanızı, ikili dosyalarını ve bağımlılıklarını Test Temeli'ne yükleme
 search.appverid: MET150
 author: mansipatel-usl
 ms.author: rshastri
@@ -14,39 +14,39 @@ ms.collection: TestBase-M365
 ms.custom: ''
 ms.reviewer: mapatel
 f1.keywords: NOCSH
-ms.openlocfilehash: 99b25757b3f7b0b3d4fcd43f97bab2ac303de6fa
-ms.sourcegitcommit: b1a2b09edbcfcc62ff3f1ecf5bd8adb1afa344c8
+ms.openlocfilehash: 9ee299c0972ed4e286e5a660f5082dd5632167e4
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2021
-ms.locfileid: "63019140"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64934279"
 ---
-# <a name="step-2-uploading-a-package"></a>2. Adım: Paket Yükleme
+# <a name="upload-your-test-base-package-zip"></a>Test Temeli paketinizi (Zip) Upload 
 
-Test Temel portalı sayfasında, aşağıda gösterildiği **gibi Upload gezinti** çubuğundaki yeni paket seçeneğine gidin:
+Test Temeli portalı sayfasında, aşağıda gösterildiği gibi sol gezinti **çubuğundaki yeni paket Upload** seçeneğine gidin:
 
-:::image type="content" alt-text="Upload bir paket." source="Media/Upload-New-Package.png" lightbox="Media/Upload-New-Package.png":::
+:::image type="content" alt-text="Yeni bir paket Upload." source="Media/Upload-New-Package.png" lightbox="Media/Upload-New-Package.png":::
 
-Oraya vardikten sonra, aşağıdaki adımları takip edin ve yeni bir paket yükleyin.
+Oraya vardıktan sonra, yeni bir paketi karşıya yüklemek için aşağıdaki adımları izleyin.
 
 ## <a name="enter-details-for-your-package"></a>Paketinizin ayrıntılarını girin
 
-Test ayrıntıları sekmesinde, paketinizin adını, sürümünü ve diğer ayrıntılarını istediğiniz gibi yazın.
+Test ayrıntıları sekmesinde, paketinizin adını, sürümünü ve diğer ayrıntıları istediğiniz şekilde yazın.
 
-**Kutudan Çıkma ve** **İşlevsel sınama** bu pano üzerinden yapılabilir.
+**Kullanıma Uygun** ve **İşlevsel testler** bu pano aracılığıyla yapılabilir.
 
-Aşağıdaki adımlar, paket ayrıntılarınızı doldurmayla ilgili bir kılavuz sağlar:
+Aşağıdaki adımlar, paket ayrıntılarınızı doldurma hakkında bir kılavuz sağlar:
 
-1. Alana paketinizin verilmesi için gereken adı `Package name` girin.
+1. Paketinize `Package name` verilecek adı alanına girin.
 
     > [!NOTE]
-    > Girilen paket adı ve sürüm bileşimi, kurum içinde benzersiz olmalıdır. Bu, aşağıda gösterildiği gibi onay işareti tarafından doğrulanır.
+    > Girilen paket adı ve sürüm bileşimi kuruluşunuzda benzersiz olmalıdır. Bu, aşağıda gösterildiği gibi onay işaretiyle doğrulanır.
 
-    - Bir paketin adını yeniden kullanmak seçerseniz sürüm numarası benzersiz olmalıdır (başka bir ifadeyle, söz konusu adı taşıyan pakette hiç kullanılmamalıdır).
+    - Bir paketin adını yeniden kullanmak isterseniz, sürüm numarası benzersiz olmalıdır (yani, hiçbir zaman bu adı taşıyan bir paketle kullanılmamıştır).
 
-    - Paket adı + sürüm birleşimi benzersizlik denetimine geçemediyse, "Bu paket sürümüyle paketle zaten var" iletisini içeren bir *hata iletisi alırsınız*.
+    - Paket adı + sürüm birleşimi benzersizlik denetimini geçmezse *, "Bu paket sürümüyle paket zaten var"* hata iletisini görürsünüz.
 
-    :::image type="content" alt-text="Paket yönergelerini karşıya yükleme görüntüsü." source="Media/Instructions.png":::
+    :::image type="content" alt-text="Paket yönergelerini karşıya yükleme resmi." source="Media/Instructions.png":::
 
 2. "Paket sürümü" alanına bir sürüm girin.
 
@@ -54,65 +54,65 @@ Aşağıdaki adımlar, paket ayrıntılarınızı doldurmayla ilgili bir kılavu
 
 3. Bu pakette çalıştırmak istediğiniz test türünü seçin.
 
-    Hazır **(OOB)** testi, paketinizi *yükleme,* *başlatma*, *kapatma* *ve* kaldırma işlemi gerçekleştirir. Yüklemeden sonra, tek bir kaldırma çalıştırılamadan önce başlatma-kapatma yordamı 30 kez tekrarlanır.
+    Kullanıma **Açık (OOB)** testi paketinizi *yükleme*, *başlatma*, *kapatma* ve *kaldırma* işlemlerini gerçekleştirir. Yüklemeden sonra başlatma-kapatma yordamı, tek bir kaldırma çalıştırılmadan önce 30 kez yinelenir.
 
-    Bu OOB testi, tüm standart derlemeleri karşılaştıracak şekilde paketiniz üzerinde standart Windows sağlar.
+    Bu OOB testi, Windows derlemeleri karşılaştırmak için paketinizde standart telemetri sağlar.
 
-    **İşlevsel test**, karşıya yüklenen test betiklerinizi paketinize yürütür. Betikler karşıya yükleme sırasına göre çalıştırılıyor ve belirli bir betikte başarısız olmak izleyen betiklerin yürütülmesini durduracak.
+    **İşlevsel test**, paketinizde karşıya yüklenen test betiklerinizi yürütür. Betikler karşıya yükleme sırasında çalıştırılır ve belirli bir betikteki bir hata, izleyen betiklerin yürütülmesini durdurur.
 
     > [!NOTE]
-    > **Tüm** betikler en çok 80 dakika süreyle çalıştırın.
+    > **Tüm** betikler en fazla 80 dakika boyunca çalışır.
 
-4. Işletim sistemi güncelleştirme türünü seçin.
+4. İşletim sistemi güncelleştirme türünü seçin.
 
-    - 'Güvenlik güncelleştirmeleri', paketinizin yayın öncesi aylık güvenlik güncelleştirmeleri için artımlı churn'lara Windows olanak sağlar.
-    - 'Özellik güncelleştirmeleri', paketinizin Windows Insider Programı'nın yayın öncesi iki yıllık özellik güncelleştirmeleri derlemelerine karşı Windows sağlar.
+    - 'Güvenlik güncelleştirmeleri', paketinizin Windows yayın öncesi aylık güvenlik güncelleştirmelerinin artımlı değişim sıklığına göre test edilmesine olanak tanır.
+    - 'Özellik güncelleştirmeleri', paketinizin Windows Insider Programı'ndan Windows yayın öncesi iki yıllık özellik güncelleştirmeleri derlemelerine karşı test edilmesine olanak tanır.
     <!---
     Change to the correct picture
     -->
-    :::image type="content" alt-text="işletim sistemi güncelleştirme türü." source="Media/OSUpdateType.png":::
+    :::image type="content" alt-text="İşletim sistemi güncelleştirme türü." source="Media/OSUpdateType.png":::
 
-5. Güvenlik güncelleştirmesi testlerinin işletim sistemi sürümünü seçin.
+5. Güvenlik güncelleştirme testleri için işletim sistemi sürümlerini seçin.
 
-    Çoklu seçim açılan listesinden, paketinizin yük Windows işletim sistemi sürümünü seçin.
+    Çoklu seçim açılan listesinde paketinizin yükleneceği Windows işletim sistemi sürümlerini seçin.
 
-    - Paketinizi yalnızca İstemci işletim Windows karşı test etmek için, menüden Windows istemci işletim sistemi sürümlerini seçin.
-    - Paketinizi yalnızca Windows Server işletim sistemleriyle test etmek için, menü listesinden Windows Server OS sürümlerini seçin.
-    - Paketinizi sunucu İstemcisi Windows Windows Server işletim sistemlerine karşı test etmek için, menü listesinden tüm geçerli işletim sistemlerini seçin.
+    - Paketinizi yalnızca Windows İstemci işletim sistemlerinde test etmek için menü listesinden uygun Windows İstemci işletim sistemi sürümlerini seçin.
+    - Paketinizi yalnızca Windows Server işletim sistemlerinde test etmek için menü listesinden uygun Windows Sunucu işletim sistemi sürümlerini seçin.
+    - Paketinizi Windows İstemci ve Windows Sunucusu işletim sistemlerine karşı test etmek için menü listesinden tüm geçerli işletim sistemlerini seçin.
 
     > [!NOTE]
-    > Paketinizi hem Sunucu hem de İstemci OS'ları ile test etmek için, paketin uyumlu olduğundan ve her iki işletim sistemi üzerinde de çalıştırılaya kadar
+    > Paketinizi hem Sunucu hem de İstemci işletim sistemiyle test etmek isterseniz lütfen paketin uyumlu olduğundan ve her iki işletim sisteminde de çalıştırılabilir olduğundan emin olun
 
-    :::image type="content" alt-text="Bir işletim sistemi sürümü seçme." source="Media/OSVersion.png":::
+    :::image type="content" alt-text="İşletim sistemi sürümünü seçme." source="Media/OSVersion.png":::
     <!---
     Change to the correct picture
     -->
 
 6. Özellik güncelleştirme testleri için seçenekleri belirleyin:
 
-    - "Insider Kanalını Seç" seçeneği üzerinde paketlerinizin `Windows Insider Program Channel` test edilecek derleme olarak bunu seçin.
+    - "Insider Kanalını Seçin" seçeneğinde `Windows Insider Program Channel` paketlerinizin test edilmesi gereken derleme olarak öğesini seçin.
 
-      Şu anda Insider Beta Kanalında yayınlanan derlemeleri kullanıyoruz.
+      Şu anda Insider Beta Kanalında sunulan derlemeleri kullanıyoruz.
 
-    - "Insight için işletim sistemi temeli seçin" seçeneğinde, test Windows karşılaştırırken taban çizgisi olarak kullanılacak işletim sistemi sürümünü seçin.
+    - "İçgörüler için işletim sistemi temelini seçin" seçeneğinde, test sonuçlarınızı karşılaştırmak için temel olarak kullanılacak Windows işletim sistemi sürümünü seçin.
 
     > [!NOTE]
-    > Şu anda Sunucu işletim sistemi için özellik güncelleştirme testlerini DESTEKLEMİYİZ
+    > Şu anda Sunucu işletim sistemi için özellik güncelleştirme testlerini DESTEKLEMEYİZ
     <!---
     Note to actual note format for markdown
     -->
     <!---
     Change to the correct picture
     -->
-    :::image type="content" alt-text="Özellik güncelleştirmesi testi." source="Media/FeatureUpdate.png":::
+    :::image type="content" alt-text="Özellik güncelleştirme testi." source="Media/FeatureUpdate.png":::
 
-7. Tamamlanmış bir Test ayrıntıları sayfası şöyle görünür:
+7. Tamamlanmış bir Test ayrıntıları sayfası şöyle görünmelidir:
 
     :::image type="content" alt-text="Test ayrıntılarını görüntüleme." source="Media/TestDetails.png":::
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Sonraki makalemiz, Ikili dosyaları hizmetimize yükleme makalemizi kapsar.
+Sonraki makalemizde İkili Dosyalarınızı hizmetimize yükleme konusu yer alır.
 
 > [!div class="nextstepaction"]
 > [Sonraki adım](binaries.md)

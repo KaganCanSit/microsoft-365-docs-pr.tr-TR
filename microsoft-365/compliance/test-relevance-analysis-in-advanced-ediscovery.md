@@ -1,5 +1,5 @@
 ---
-title: Advanced eDiscovery'te ilgi düzeyi çözümlemesi Advanced eDiscovery
+title: eBulma'da İlgi Analizini Test Et (Premium)
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -16,63 +16,63 @@ search.appverid:
 - MET150
 ms.assetid: 1b092f7c-ea55-44f5-b419-63f3458fd7e0
 ROBOTS: NOINDEX, NOFOLLOW
-description: Bir bütün olarak işleme kalitesini test etmek, karşılaştırmak ve doğrulamak için Advanced eDiscovery sonra Test sekmesini kullanmayı öğrenin.
-ms.openlocfilehash: 0ea34ce101f6891670a0b646380c965a4391ea32
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Genel işleme kalitesini test etmek, karşılaştırmak ve doğrulamak için eBulma'da (Premium) Batch hesaplamasının ardından Test sekmesini kullanmayı öğrenin.
+ms.openlocfilehash: 7e4541aa2309b6209537931160bf351d22ee8eb7
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62973734"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64935510"
 ---
-# <a name="test-relevance-analysis-in-advanced-ediscovery"></a>Advanced eDiscovery'te ilgi düzeyi çözümlemesi Advanced eDiscovery
+# <a name="test-relevance-analysis-in-ediscovery-premium"></a>eBulma'da İlgi Analizini Test Et (Premium)
   
-Advanced eDiscovery'daki Test sekmesi, işlemenin genel kalitesini test, karşılaştırma ve doğrulamanızı sağlar. Bu sınamalar Toplu işlem hesaplaması sonrasında yapılır. Bir uzman koleksiyonda yer alan dosyaları etiketleerek, her etiketli dosyanın bu dosyayla ilgili olup olmadığı konusunda son karar vermelerini sağlar.
+Microsoft Purview eKeşif(Premium) içindeki Test sekmesi, genel işleme kalitesini test etme, karşılaştırma ve doğrulamanızı sağlar. Bu testler Batch hesaplaması sonrasında gerçekleştirilir. Bir uzman, koleksiyondaki dosyaları etiketleyerek etiketlenen her dosyanın davayla ilgili olup olmadığı konusunda son kararı verir.
   
-Tek ve çok soruna sahip senaryolarda, testler genellikle her soruna göre gerçekleştirilir. Sonuçlar her sınamadan sonra sınanarak sınanarak, belirtilen örnek test dosyalarıyla yeniden çalışabilirsiniz.
+Tek ve birden çok sorunlu senaryolarda testler genellikle sorun başına gerçekleştirilir. Sonuçlar her test sonrasında görüntülenebilir ve test sonuçları belirtilen örnek test dosyalarıyla yeniden görüntülenebilir.
   
 ## <a name="testing-the-rest"></a>Gerisini test etme
 
-"Rest'i test edin" testi, örneğin son alınan sonuçları temel alarak yalnızca belirli bir İlgi düzeyi kesme puanının üzerindeki dosyaları gözden geçirmek Advanced eDiscovery kullanılır. Uzman bu küme içindeki ilgili dosyaların sayısını değerlendirmek için, seçilen kesme puanı altında bir dosya örneğini gözden kullanır.
+"Geri Kalanları Test Et" testi, örneğin son eBulma (Premium) sonuçlarına göre yalnızca belirli bir İlgi kesme puanının üzerindeki dosyaları gözden geçirmek için önemli kararları doğrulamak için kullanılır. Uzman, belirli bir kesme puanı altındaki bir dosya örneğini inceler ve bu kümedeki ilgili dosyaların sayısını değerlendirir.
   
-Bu test, Gözden Geçirme kümesiyle Rest popülasyonu test etmek arasında istatistikler ve karşılaştırma sağlar. Gözden geçirme kümesi, Eğitim sırasında uygunluk düzeyine göre hesaplanan sonuçlardır. Sonuçlar, aşağıdakiler gibi ayarlara ve giriş parametrelerine dayalı hesaplamaları içerir:
+Bu test, istatistikler ve Gözden Geçirme kümesi ile Rest popülasyonunu test et arasında bir karşılaştırma sağlar. Gözden geçirme kümesinin sonuçları Eğitim sırasında İlgi'ye göre hesaplanır. Sonuçlar, ayarlara ve giriş parametrelerine dayalı hesaplamaları içerir, örneğin:
   
-- Bir örnekteki dosya sayısının ve ilgili dosyaların örnek istatistiklerini test etmek.
+- Bir örnekteki dosya sayısının örnek istatistiklerini test edin ve ilgili dosyaları belirleyin.
 
-- Gözden Geçir kümesi ve Kalan'ın Nüfus parametrelerinin sekmeli karşılaştırması; örneğin dosya sayısı, ilgili dosyaların tahmini sayısı, tahmini zenginlik ve başka bir uygun dosyayı bulmanın ortalama maliyeti. Maliyet parametresi ayarları yönetici tarafından ayarlanır.
+- Gözden Geçirme kümesinin Ve Geri Kalanı'nın Population parametrelerinin tablosal karşılaştırması; örneğin, dosya sayısı, ilgili dosyaların tahmini sayısı, tahmini zenginlik ve başka bir ilgili dosyayı bulmanın ortalama maliyeti. Maliyet parametresi ayarları yönetici tarafından ayarlanabilir.
 
-"Rest'i test etmek" testini çalıştırmak için:
+"Rest'i Test Et" testini çalıştırmak için:
 
-1. İlgi **Düzeyi Sınaması \> sekmesini** açma.
+1. **İlgi \> Testi** sekmesini açın.
 
-2. Sına **sekmesinde** Yeni **test'e tıklayın**. Aşağıdaki **örnekte** gösterildiği gibi, Sınama oluştur iletişim kutusu görüntülenir.
+2. **Test** sekmesinde **Yeni test'e** tıklayın. Aşağıdaki örnekte gösterildiği gibi **Test oluştur** iletişim kutusu görüntülenir.
 
-    ![İlgi Düzeyi Testi Rest sonuçları.](../media/46e6898a-f929-4fd0-88d9-6f91d04b6ce2.png)
+    ![İlgi Rest sonuçlarını test edin.](../media/46e6898a-f929-4fd0-88d9-6f91d04b6ce2.png)
   
-3. Test **adı ve** **Açıklama'ya**, adı ve açıklamayı yazın.
+3. **Test adı** ve **Açıklama** alanına adı ve açıklamayı yazın.
 
-4. Test **türü listesinde** Kalanları **Sına'ya tıklayın**
+4. **Test türü** listesinde **Kalanları test et'i** seçin
 
-5. Sorun **/ Kategori listesinde** sorun adını seçin.
+5. **Sorun / Kategori** listesinde sorun adını seçin.
 
-6. Yükle **listesinde** , yükü seçin. 
+6. **Yükle** listesinde yükü seçin. 
 
-7. % **Okuma'da**, varsayılan değeri kabul etmek veya kesme ilgi düzeyi puanı için bir değer seçin. 
+7. **Okuma %** alanında varsayılan değeri kabul edin veya kesme İlgi puanı için bir değer seçin. 
 
-8. Boyutu **ayarla'da** veya varsayılan değeri kabul et'i seçin. Geri yükleme simgeleri varsayılan değerleri geri yükleyecek.
+8. **Boyutu ayarla'da** veya varsayılan değeri kabul edin. Geri yükleme simgeleri varsayılan değerleri geri yükler.
 
-9. **Etiketlemeye başla'ya tıklayın**. Bir test örneği oluşturulur.
+9. **Etiketlemeyi başlat'a** tıklayın. Bir test örneği oluşturulur.
 
-10. Uygunluk Etiketi sekmesinde dosyaların her bir değerini gözden **geçirin ve \> etiketlenin** ve bittiğinde, Hesapla'ya **tıklayın**.
+10. **İlgi \> Etiketi** sekmesindeki dosyaların her birini gözden geçirin ve etiketleyin ve işiniz bittiğinde **Hesapla'ya** tıklayın.
 
-11. Test sekmesinde Sonuçları **görüntüle'ye tıklar** ve sınama sonuçlarını görebilirsiniz. Aşağıdaki ekran görüntüsünde bir örnek gösterilmektedir.
+11. Test sekmesinde Sonuçları **görüntüle'ye** tıklayarak test sonuçlarını görebilirsiniz. Aşağıdaki ekran görüntüsünde bir örnek gösterilmiştir.
 
-    ![Kalan sonuçları test etmek için.](../media/b95744a9-047d-4c29-992d-04fa7e58e58a.png)
+    ![Kalan sonuçları test edin.](../media/b95744a9-047d-4c29-992d-04fa7e58e58a.png)
   
-Önceki ekran görüntüsünde, tablonun Örnek parametreler bölümünde, örnekteki dosya sayısıyla ilgili uzman tarafından etiketlenen ayrıntılar ve bu örnekte bulunan ilgili dosyaların sayısı yer alır.
+Önceki ekran görüntüsünde, tablonun **Örnek parametreler** bölümünde, uzman tarafından etiketlenen örnekteki dosya sayısı ve bu örnekte bulunan ilgili dosyaların sayısı hakkında ayrıntılar yer alır.
   
-**Tablonun Nüfus** parametreleri bölümü, seçilen kesme şeklinde puanın altında bir puanla gözden geçirme kümesi dosya popülasyonu ve seçili kesme şeklinde puanın üzerinde olan dosyaların "Geri Kalan" popülasyonu da içinde olmak üzere test sonuçlarını içerir. Her popülasyon için aşağıdaki sonuçlar görüntülenir:
+Tablonun **Population parametreleri** bölümü, seçilen kesmenin altında bir puana sahip dosyaların küme popülasyonunu gözden geçirme ve seçili kesmenin üzerinde bir puana sahip dosyaların "Kalan" popülasyonu dahil olmak üzere test sonuçlarını içerir. Her popülasyon için aşağıdaki sonuçlar görüntülenir:
   
-- %okundu - Belirtilen kesmeyi içeren dosyaları içerir
+- Okuma yüzdesine sahip dosyaları içerir - Belirtilen kesme
 
 - Toplam dosya sayısı
 
@@ -84,30 +84,30 @@ Bu test, Gözden Geçirme kümesiyle Rest popülasyonu test etmek arasında ista
 
 ## <a name="testing-the-slice"></a>Dilimi test etme
 
-"Dilimi Test Etme" testi,"Rest'i test etme" sınamasına benzer, ancak dosyanın Uygunlik Okuma % ile belirtilen bir segmentinde sınama yapar.
+"Test the Slice" testi, "Test the Rest" testine benzer, ancak İlgi Okuması % tarafından belirtilen dosya kümesinin bir kesimine test gerçekleştirir.
 
-"Dilimi Sına" testini çalıştırmak için:
+"Dilimi Test Et" testini çalıştırmak için:
   
-1. İlgi **Düzeyi Sınaması \> sekmesini** açma.
+1. **İlgi \> Testi** sekmesini açın.
 
-2. Sına **sekmesinde** Yeni **test'e tıklayın**. Sınama **oluştur iletişim** kutusu görüntülenir.
+2. **Test** sekmesinde **Yeni test'e** tıklayın. **Test oluştur** iletişim kutusu görüntülenir.
 
-3. Test **adı ve** **Açıklama'ya** bilgileri yazın.
+3. **Test adı** ve **Açıklama** alanına bilgileri yazın.
 
-4. Test **türü listesinde Dilimi** **Sına'ya tıklayın**.
+4. **Test türü** listesinde **Dilimi Test Et'i** seçin.
 
-5. Sorun **listesinden** sorunun adını seçin.
+5. **Sorun** listesinde sorun adını seçin.
 
-6. Yükle **listesinde** , yükü seçin.
+6. **Yükle** listesinde yükü seçin.
 
-7. % **Okuma arasında seçeneğinde**, varsayılan düşük ve yüksek aralık değerlerini kabul etme veya uygun uygunluk puanları için değerleri seçin.
+7. **Arasında okuma %** alanında varsayılan düşük ve yüksek aralık değerlerini kabul edin veya kesme İlgi puanları için değerleri seçin.
 
-8. Boyutu **ayarla'da** bir değer seçin veya varsayılan değeri kabul eder.
+8. **Boyut ayarla** bölümünde bir değer seçin veya varsayılan değeri kabul edin.
 
-    Geri yükleme simgeleri varsayılan değeri geri yükleyecek.
+    Geri yükleme simgeleri varsayılan değeri geri yükler.
 
-9. **Etiketlemeye başla'ya tıklayın**. Bir test örneği oluşturulur.
+9. **Etiketlemeyi başlat'a** tıklayın. Bir test örneği oluşturulur.
 
-10. Uygunluk Etiketi sekmesinde dosyaların her bir değerini gözden **geçirin ve \> etiketlenin** ve bittiğinde, Hesapla'ya **tıklayın**.
+10. **İlgi \> Etiketi** sekmesindeki dosyaların her birini gözden geçirin ve etiketleyin ve işiniz bittiğinde **Hesapla'ya** tıklayın.
 
-11. Test sekmesinde Sonuçları **görüntüle'ye tıklar** ve sınama sonuçlarını görebilirsiniz.
+11. Test sekmesinde Sonuçları **görüntüle'ye** tıklayarak test sonuçlarını görebilirsiniz.

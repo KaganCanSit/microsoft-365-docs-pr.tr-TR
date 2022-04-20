@@ -19,12 +19,12 @@ ms.collection:
 - m365solution-overview
 ms.custom: ''
 keywords: ''
-ms.openlocfilehash: a9872e707bbbb6546d6801ac88ebd28f23fb9806
-ms.sourcegitcommit: a06bb81fbd727a790a8fe6a3746b8a3cf62a6b24
+ms.openlocfilehash: 23a0bb391acdf584d278c9de4aee0fdedf4d8071
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/05/2022
-ms.locfileid: "64651333"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64934235"
 ---
 # <a name="manage-devices-with-intune-overview"></a>Intune Genel Bakış ile cihazları yönetme
 
@@ -49,7 +49,7 @@ Bu makale serisi, kaynaklarınıza erişen cihazları yönetmek için önerilen 
 
 ## <a name="implementing-the-layers-of-protection-on-and-for-devices"></a>Cihazlar için ve üzerinde koruma katmanlarını uygulama
 
-Cihazlarda ve cihazlardaki verileri ve uygulamaları korumak çok katmanlı bir işlemdir. Yönetilmeyen cihazlarda kazanabileceğiniz bazı korumalar vardır. Cihazları Intune kaydettikten sonra daha gelişmiş denetimler uygulayabilirsiniz. Tehdit koruması uç noktalarınıza dağıtıldığında daha da fazla içgörü elde eder ve bazı saldırıları otomatik olarak düzeltme olanağı elde edebilirsiniz. Son olarak, kuruluşunuz hassas verileri tanımlama, sınıflandırma ve etiketler uygulama ve veri kaybı önleme ilkelerini yapılandırma işini yerine getirdiyse, uç noktalarınızdaki veriler için daha ayrıntılı koruma elde edebilirsiniz.
+Cihazlarda ve cihazlardaki verileri ve uygulamaları korumak çok katmanlı bir işlemdir. Yönetilmeyen cihazlarda kazanabileceğiniz bazı korumalar vardır. Cihazları yönetime kaydettikten sonra daha gelişmiş denetimler uygulayabilirsiniz. Tehdit koruması uç noktalarınıza dağıtıldığında daha da fazla içgörü elde eder ve bazı saldırıları otomatik olarak düzeltme olanağı elde edebilirsiniz. Son olarak, kuruluşunuz hassas verileri tanımlama, sınıflandırma ve etiketler uygulama ve Microsoft Purview veri kaybı önleme ilkelerini yapılandırma çalışmalarını uyguladıysa, uç noktalarınızdaki veriler için daha ayrıntılı koruma elde edebilirsiniz.
 
 Aşağıdaki diyagramda, bu ortama tanıttığınız Microsoft 365 ve diğer SaaS uygulamaları için Sıfır Güven bir güvenlik duruşu elde etmek için yapı taşları gösterilmektedir. Cihazlarla ilgili öğeler 1 ile 7 arasında numaralandırılır. Bunlar, cihaz yöneticilerinin gerçekleştirmek için diğer yöneticilerle koordine edeceği koruma katmanlarıdır.
 
@@ -89,7 +89,7 @@ Bu çizimde:
 Bu yönergeleri izlerseniz, cihazları Intune kullanarak yönetime kaydedersiniz ve aşağıdaki Microsoft 365 özellikleri için cihazları eklersiniz:
 
 - Uç Nokta için Microsoft Defender
-- Microsoft 365 Uyumluluğu (uç nokta veri kaybı önleme (DLP) için) 
+- Microsoft Purview (uç nokta veri kaybı önleme (DLP) için) 
 
 Aşağıdaki çizimde bunun Intune kullanılarak nasıl çalıştığı ayrıntılı olarak gösterilmiştir.
 
@@ -98,8 +98,19 @@ Aşağıdaki çizimde bunun Intune kullanılarak nasıl çalıştığı ayrınt�
 Çizimde:
 
 1. Intune ile cihazları yönetime kaydetme.
-2. cihazları Uç Nokta için Microsoft Defender eklemek için Intune kullanın.
-3. Uç Nokta için Defender'a eklenen cihazlar, uç nokta DLP'si de dahil olmak üzere Microsoft 365 uyumluluk özellikleri için de eklenir.
+2. Uç Nokta için Defender'a cihaz eklemek için Intune kullanın.
+3. Uç Nokta için Defender'a eklenen cihazlar, Uç Nokta DLP de dahil olmak üzere Microsoft Purview özellikleri için de eklenir.
+ 
+Cihazları yalnızca Intune yönettiğini unutmayın. Ekleme, bir cihazın belirli bir hizmetle bilgi paylaşma özelliğini ifade eder. Aşağıdaki tabloda, cihazları yönetime kaydetme ve belirli bir hizmet için cihazları ekleme arasındaki farklar özetlenmektedir.
+
+
+|         |Kayıt     |Onboard  |
+|---------|---------|---------|
+|Açıklama     |  Kayıt, cihazları yönetmek için geçerlidir. Cihazlar Intune veya Configuration Manager ile yönetim için kaydedilir.        | Ekleme, bir cihazı Microsoft 365'daki belirli bir özellik kümesiyle çalışacak şekilde yapılandırıyor. Şu anda ekleme, Uç Nokta için Microsoft Defender ve Microsoft uyumluluk özellikleri için geçerlidir. <br><br>Windows cihazlarda ekleme, Windows Defender'da Defender'ın çevrimiçi hizmete bağlanmasına ve cihaza uygulanan ilkeleri kabul etmesine olanak tanıyan bir ayar eklemeyi içerir.        |
+|Kapsam     | Bu cihaz yönetimi araçları, cihazı güvenlik gibi belirli hedeflere uyacak şekilde yapılandırmak da dahil olmak üzere tüm cihazı yönetir.        |Ekleme yalnızca geçerli hizmetleri etkiler.     |
+|Önerilen yöntem     | Azure Active Directory birleştirme, cihazları otomatik olarak Intune kaydeder.        | Intune, uç nokta için cihazları Windows Defender ve dolayısıyla Microsoft Purview özelliklerine eklemek için tercih edilen yöntemdir.<br><br>Diğer yöntemler kullanılarak Microsoft Purview özelliklerine eklenen cihazların Uç Nokta için Defender'a otomatik olarak kaydedilmediğini unutmayın.        |
+|Diğer yöntemler     |   Diğer kayıt yöntemleri, cihazın platformuna ve KCG olup olmadığına veya kuruluşunuz tarafından yönetilip yönetilmediğine bağlıdır.      | Cihaz eklemeye yönelik diğer yöntemler şunlardır:<br><li>Yapılandırma Yöneticisi<li>Diğer mobil cihaz yönetim aracı (cihaz bir tarafından yönetiliyorsa)<li>Yerel betik<li>Kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarını eklemeye yönelik VDI yapılandırma paketi<li>Grup İlkesi|
+| | |     |
 
 Cihazları yalnızca Intune yönettiğini unutmayın. Ekleme, bir cihazın belirli bir hizmet özelliğiyle bilgi paylaşma özelliğini ifade eder. Aşağıdaki tabloda, belirli bir özellik için cihazları yönetime kaydetme ve cihazları ekleme arasındaki farklar özetlenmektedir.
 
@@ -107,7 +118,7 @@ Cihazları yalnızca Intune yönettiğini unutmayın. Ekleme, bir cihazın belir
 |---|---|---|
 |Açıklama|Kayıt, cihazları yönetmek için geçerlidir. Cihazlar Intune veya Configuration Manager ile yönetim için kaydedilir.|Ekleme, bir cihazı Microsoft 365'daki belirli bir özellik kümesiyle çalışacak şekilde yapılandırıyor. Şu anda ekleme, Uç Nokta için Microsoft Defender ve Microsoft uyumluluk özellikleri için geçerlidir. <br/><br/> Windows cihazlarda ekleme, Windows Defender'da Defender'ın çevrimiçi hizmete bağlanmasına ve cihaza uygulanan ilkeleri kabul etmesine olanak tanıyan bir ayar eklemeyi içerir.|
 |Kapsam|Bu cihaz yönetimi araçları, cihazı güvenlik gibi belirli hedeflere uyacak şekilde yapılandırmak da dahil olmak üzere tüm cihazı yönetir.|Ekleme yalnızca geçerli olan özellikleri etkiler.|
-|Önerilen yöntem|Azure Active Directory birleştirme, cihazları otomatik olarak Intune kaydeder.|Intune, uç nokta için cihazları Windows Defender ve dolayısıyla uyumluluk özelliklerini Microsoft 365 için tercih edilen yöntemdir. <br/><br/> Diğer yöntemler kullanılarak Microsoft 365 uyumluluk özelliklerine eklenen cihazların Uç Nokta için Defender'a otomatik olarak kaydedilmediğini unutmayın.|
+|Önerilen yöntem|Azure Active Directory birleştirme, cihazları otomatik olarak Intune kaydeder.|Intune, uç nokta için cihazları Windows Defender ve dolayısıyla Microsoft Purview özelliklerine eklemek için tercih edilen yöntemdir. <br/><br/> Diğer yöntemler kullanılarak Microsoft Purview özelliklerine eklenen cihazların Uç Nokta için Defender'a otomatik olarak kaydedilmediğini unutmayın.|
 |Diğer yöntemler|Diğer kayıt yöntemleri, cihazın platformuna ve KCG olup olmadığına veya kuruluşunuz tarafından yönetilip yönetilmediğine bağlıdır.|Cihaz eklemeye yönelik diğer yöntemler şunlardır: <ul><li>Yapılandırma Yöneticisi</li><li>Diğer mobil cihaz yönetim aracı (cihaz bir tarafından yönetiliyorsa)</li><li>Yerel betik</li><li>Kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarını eklemeye yönelik VDI yapılandırma paketi</li><li>Grup İlkesi</li></ul>|
 
 ## <a name="learning-for-administrators"></a>Yöneticiler için Learning

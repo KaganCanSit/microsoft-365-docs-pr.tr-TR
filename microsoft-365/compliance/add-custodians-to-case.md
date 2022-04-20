@@ -1,5 +1,5 @@
 ---
-title: Advanced eDiscovery servis talebine koruyucu ekleme
+title: eBulma (Premium) olayına koruyucu ekleme
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -15,20 +15,20 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: İş akışlarınızı koordine etmek ve bir durumda ilgili veri kaynaklarını tanımlamak için Advanced eDiscovery'daki yerleşik koruyucu yönetim aracını kullanmayı öğrenin.
+description: İş akışlarınızı koordine etmek ve bir durumda ilgili veri kaynaklarını tanımlamak için Microsoft Purview eKeşif'teki (Premium) yerleşik koruyucu yönetim aracını kullanmayı öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: bbd5bb1955fc0c8ee5917a6827b35a6688928571
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 7da45eca9e57ef64c9272c89e24c21a20dc5af80
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64759379"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64935818"
 ---
-# <a name="add-custodians-to-an-advanced-ediscovery-case"></a>Advanced eDiscovery servis talebine koruyucu ekleme
+# <a name="add-custodians-to-an-ediscovery-premium-case"></a>eBulma (Premium) olayına koruyucu ekleme
 
-Advanced eDiscovery'deki yerleşik koruyucu yönetim aracını kullanarak, koruyucuları yönetme ve bir olayla ilişkili ilgili, gözetim veri kaynaklarını belirleme konusunda iş akışlarınızı koordine edin. Bir koruyucu eklediğinizde, sistem Exchange posta kutusunu ve OneDrive İş hesabını otomatik olarak tanımlayabilir ve ayrı tutabilir. Araştırmanızın bulma işlemi sırasında, bir koruyucunun eriştiği veya katkıda bulunduğu diğer veri kaynaklarını (posta kutuları, siteler veya Teams gibi) de tanımlayabilirsiniz. Bu durumda, söz konusu veri kaynaklarını ilişkilendirmek için koruyucu yönetim aracını kullanabilirsiniz. Bir olaya koruyucular ekledikten ve diğer veri kaynaklarını bunlarla ilişkilendirdikten sonra, verileri hızla koruyabilir ve gözaltı verilerini arayabilirsiniz.
+Microsoft Purview eKeşif'teki (Premium) yerleşik koruyucu yönetim aracını kullanarak, iş akışlarınızı koruyucuları yönetme ve bir olayla ilişkili ilgili, gözaltı veri kaynaklarını belirleme konusunda koordine edin. Bir koruyucu eklediğinizde, sistem Exchange posta kutusunu ve OneDrive İş hesabını otomatik olarak tanımlayabilir ve ayrı tutabilir. Araştırmanızın bulma işlemi sırasında, bir koruyucunun eriştiği veya katkıda bulunduğu diğer veri kaynaklarını (posta kutuları, siteler veya Teams gibi) de tanımlayabilirsiniz. Bu durumda, söz konusu veri kaynaklarını ilişkilendirmek için koruyucu yönetim aracını kullanabilirsiniz. Bir olaya koruyucular ekledikten ve diğer veri kaynaklarını bunlarla ilişkilendirdikten sonra, verileri hızla koruyabilir ve gözaltı verilerini arayabilirsiniz.
 
-dört adımda Advanced eDiscovery durumlarda koruyucu ekleyebilir ve yönetebilirsiniz:
+eBulma (Premium) olaylarında dört adımda koruyucu ekleyebilir ve yönetebilirsiniz:
 
 1. Koruyucuları belirleyin.
 
@@ -46,7 +46,7 @@ Bir servis talebine koruyucu eklemek için eBulma Yöneticisi rol grubunun üyes
 
 1. [https://compliance.microsoft.com](https://compliance.microsoft.com) adresine gidin ve uygun eBulma izinlerine atanmış bir kullanıcı hesabıyla oturum açın.
 
-2. Microsoft 365 uyumluluk merkezi sol gezinti bölmesinde **eBulma** >  **Advanced eDiscovery** öğesini seçin ve [**Servis Talepleri**](https://go.microsoft.com/fwlink/p/?linkid=2173764) sekmesini seçin.
+2. Microsoft Purview uyumluluk portalının sol gezinti bölmesinde **eKeşifBulmaBulma** >  **(Premium)** seçeneğini belirleyin ve [**Servis Talepleri**](https://go.microsoft.com/fwlink/p/?linkid=2173764) sekmesini seçin.
 
 3. Koruyucu eklemek istediğiniz servis talebini seçin.
 
@@ -83,7 +83,7 @@ Diğer posta kutularını, siteleri, Teams veya Yammer gruplarını belirli bir 
    > [!NOTE]
    > Kuruluşunuzdaki herhangi bir posta kutusunu veya siteyi bir koruyucuyla ilişkilendirmek için **Exchange** ve **SharePoint** konum seçicilerini kullanabilirsiniz. , Bu, bir koruyucunun üyesi olmadığı bir Microsoft Ekibi veya Yammer grubu için posta kutusuyla siteyi ilişkilendirmeyi içerir. Bunu yapmak için, her ekip veya Yammer grubuyla ilişkili hem posta kutusunu hem de siteyi eklemeniz gerekir.
 
-2. Tablodaki her koruyucuyu genişleterek her bir koruyucuya atanan posta kutularının, sitelerin, Teams ve Yammer gruplarının toplam sayısını görüntüleyebilirsiniz. Her koruyucu için atanan veri konumlarını son haline getirdiğinizde, bu ilişkilendirmeler Advanced eDiscovery iş akışındaki toplama, işleme ve gözden geçirme aşamalarında korunur ve kullanılır.
+2. Tablodaki her koruyucuyu genişleterek her bir koruyucuya atanan posta kutularının, sitelerin, Teams ve Yammer gruplarının toplam sayısını görüntüleyebilirsiniz. Her koruyucu için atanan veri konumlarını son haline getirdiğinizde, bu ilişkilendirmeler eBulma (Premium) iş akışındaki toplama, işleme ve gözden geçirme aşamalarında korunur ve kullanılır.
 
 3. Koruyucuları ekledikten ve veri konumlarını yapılandırdıktan sonra, **Ayrı Tutma ayarları** sayfasına gitmek için **İleri'ye** tıklayın.  
 

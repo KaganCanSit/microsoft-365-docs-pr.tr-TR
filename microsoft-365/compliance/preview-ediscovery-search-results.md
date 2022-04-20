@@ -1,5 +1,5 @@
 ---
-title: eBulma arama sonuçlarını önizleme
+title: eBulma aramasının sonuçlarını önizleme
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -19,55 +19,55 @@ search.appverid:
 - MET150
 ms.custom:
 - seo-marvel-apr2020
-description: İçerik arama veya Temel eKbulma araması tarafından döndürülen sonuçların bir örneğinin önizlemesini Microsoft 365 uyumluluk merkezi.
-ms.openlocfilehash: af0811d0c442d6f064fd336d4261d1f7b2337dc8
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Microsoft Purview uyumluluk portalında İçerik araması veya eBulma (Standart) araması tarafından döndürülen sonuçların bir örneğini önizleme.
+ms.openlocfilehash: 83779ad333d6944b65b92b2032d46b3eaa016479
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985164"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64934719"
 ---
-# <a name="preview-ediscovery-search-results"></a>eBulma arama sonuçlarını önizleme
+# <a name="preview-ediscovery-search-results"></a>eKeşif arama sonuçlarını önizleme
 
-İçerik aramalarını veya Core eK bulma durumuyla ilişkilendirilmiş bir aramayı çalıştırdikten sonra, arama tarafından döndürülen sonuçların bir örneğine önizlemede bakabilirsiniz. Arama sorgusu tarafından döndürülen öğelerin önizlemesi, aramanın umarız sonuçları döndür olup olmadığını veya arama sorgusunu değiştirerek yeniden çalıştırmanızı gerektir olup olmadığını belirlemenize yardımcı olabilir.
+Bir İçerik araması veya Microsoft Purview eKeşif (Standart) olayıyla ilişkilendirilmiş bir arama çalıştırdıktan sonra, arama tarafından döndürülen sonuçların bir örneğini önizleyebilirsiniz. Arama sorgusu tarafından döndürülen öğelerin önizlemesini görüntülemek, aramanın umduğun sonuçları döndüreceğini veya arama sorgusunu değiştirip aramayı yeniden çalıştırmanız gerekip gerekmediğini belirlemenize yardımcı olabilir.
 
-Arama tarafından döndürülen sonuç örneğini önizlemek için:
+Arama tarafından döndürülen sonuçların örneğini önizlemek için:
 
-1. İçerik Microsoft 365 uyumluluk merkezi arama sayfasına veya Core eKovery durumuna gidin.
+1. Microsoft Purview uyumluluk portalında İçerik arama sayfasına veya eBulma (Standart) servis talebine gidin.
 
-2. Uçarak çıkış sayfasını görüntülemek için ara'ya tıklayın.
+2. Açılır sayfayı görüntülemek için arama'yı seçin.
 
-3. Uç uç sayfasının en altında, Örneği gözden **geçir'e tıklayın**.
+3. Açılır sayfanın alt kısmında **Örneği gözden geçir'e** tıklayın.
 
-   ![Sonuçları önizlemek için, uç sayfada Örneği gözden geçir'e tıklayın.](../media/PreviewSearchResults1.png)
+   ![Sonuçları önizlemek için açılır sayfada Örneği gözden geçir'e tıklayın.](../media/PreviewSearchResults1.png)
 
-   Arama sonuçlarından bir örnek içeren bir sayfa görüntülenir.
+   Arama sonuçlarının bir örneğini içeren bir sayfa görüntülenir.
 
 4. Okuma bölmesinde içeriğini görüntülemek için bir öğe seçin.
 
    ![Okuma bölmesinde öğeleri önizleme.](../media/PreviewSearchResults2.png)
 
-   Önceki ekran görüntüsünde, öğeleri önizlemede görüntülerken arama sorgusundan gelen anahtar sözcüklerin vurgulanmış olduğunu görebilirsiniz.
+   Önceki ekran görüntüsünde, öğeleri önİzlerken arama sorgusundaki anahtar sözcüklerin vurgulandığına dikkat edin.
 
 ## <a name="how-the-search-result-samples-are-selected"></a>Arama sonucu örnekleri nasıl seçilir?
 
-Önizleme için rastgele en çok 1.000 öğe kullanılabilir. Rastgele seçilecek öğelere ek olarak, önizleme için kullanılabilen öğeler de aşağıdaki ölçütlere uygun olması gerekir:
+Rastgele seçilen en fazla 1.000 öğe önizleme için kullanılabilir. Rastgele seçilmeye ek olarak, önizleme için kullanılabilen öğeler de aşağıdaki ölçütleri karşılamalıdır:
 
-- Tek bir içerik konumdan (posta kutusu veya site) en çok 100 öğe öniz kullanılabilir. Bu, önizleme için 1.000'den az öğenin kullanılabilir olabileceği anlamına gelir. Örneğin, dört posta kutusunda arama yaptıysanız ve arama 1.500 tahmini öğe döndürürse, her posta kutusundan yalnızca 100 öğe önizlemede görüntü oladur, önizleme için yalnızca 400 öğe kullanılabilir.
+- Tek bir içerik konumundan (posta kutusu veya site) en fazla 100 öğe önizlenebilir. Bu, önizleme için 1.000'den az öğenin kullanılabilir olabileceği anlamına gelir. Örneğin, dört posta kutusunda arama yaparsanız ve arama 1.500 tahmini öğe döndürürse, her posta kutusundan yalnızca 100 öğe önizlenebileceği için önizleme için yalnızca 400 öğe kullanılabilir.
 
-- Posta kutusu öğeleri için önizleme yalnızca e-posta iletileri kullanılabilir. Görevler, takvim öğeleri ve kişiler gibi öğeler önizlemede görüntüz.
+- Posta kutusu öğeleri için yalnızca e-posta iletileri önizleme için kullanılabilir. Görevler, takvim öğeleri ve kişiler gibi öğeler önizlenemez.
 
-- Site öğeleri için, önizleme için yalnızca belgeler kullanılabilir. Klasörler, listeler veya liste ekleri gibi öğeler önizlemede görüntüz.
+- Site öğeleri için yalnızca belgeler önizleme için kullanılabilir. Klasörler, listeler veya liste ekleri gibi öğeler önizlenemez.
 
-## <a name="file-types-supported-when-previewing-search-results"></a>Arama sonuçlarının önizlemesi görüntülenirken desteklenen dosya türleri
+## <a name="file-types-supported-when-previewing-search-results"></a>Arama sonuçlarının önizlemesi sırasında desteklenen dosya türleri
 
-Desteklenen dosya türlerini önizleme bölmesinde görüntüleyebilirsiniz. Bir dosya türü desteklenmiyorsa, (Özgün öğeyi indir'e tıklayarak) dosyanın bir kopyasını yerel **bilgisayarınıza indirmeniz gerekir**. .aspx Web sayfalarında, sayfaya erişim izinlerine sahip olamayabilirsiniz, ancak sayfanın URL'si dahil edilir. Eksiz öğeler önizleme için kullanılamaz.
+Desteklenen dosya türlerini önizleme bölmesinden önizleyebilirsiniz. Bir dosya türü desteklenmiyorsa, dosyanın bir kopyasını yerel bilgisayarınıza indirmeniz gerekir ( **Özgün öğeyi indir'e** tıklayarak). .aspx Web sayfaları için sayfanın URL'si eklenir, ancak sayfaya erişim izniniz olmayabilir. Dizine alınmamış öğeler önizleme için kullanılamaz.
 
-Aşağıdaki dosya türleri de kullanılabilir ve arama sonuçları bölmesinde önizlemede ekleyebilirsiniz.
+Aşağıdaki dosya türleri desteklenir ve arama sonuçları bölmesinde önizlenebilir.
   
 - .txt, .html, .mhtml
 
-- .eml
+- Eml
 
 - .doc, .docx, .docm
 
@@ -75,7 +75,7 @@ Aşağıdaki dosya türleri de kullanılabilir ve arama sonuçları bölmesinde 
 
 - .pdf
 
-Ayrıca, aşağıdaki dosya kapsayıcı türleri de destek vardır. Dosyaların listesini önizleme bölmesindeki kapsayıcıda görüntüleyebilirsiniz.
+Ayrıca, aşağıdaki dosya kapsayıcı türleri desteklenir. Kapsayıcıdaki dosyaların listesini önizleme bölmesinde görüntüleyebilirsiniz.
   
 - .zip
 

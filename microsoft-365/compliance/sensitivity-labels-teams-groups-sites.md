@@ -1,5 +1,5 @@
 ---
-title: Site oluşturma, Microsoft Teams grupları Microsoft 365 duyarlılık SharePoint kullanma
+title: duyarlılık etiketlerini Microsoft Teams, Microsoft 365 grupları ve SharePoint siteleri ile kullanma
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -17,61 +17,62 @@ ms.custom: admindeeplinkSPO
 search.appverid:
 - MOE150
 - MET150
-description: Farklı sitelerde ve farklı gruplarda yer alan SharePoint Microsoft Teams korumak için duyarlılık Microsoft 365 kullanın.
-ms.openlocfilehash: 759f7a6403eb41a6a853ed1f9b844ebd1ef679cc
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+description: SharePoint, Microsoft Teams sitelerdeki ve Microsoft 365 gruplarındaki içeriği korumak için duyarlılık etiketlerini kullanın.
+ms.openlocfilehash: 0c8462333a3b3fd0c062c72fce0f673977c54b9b
+ms.sourcegitcommit: dc415d784226c77549ba246601f34324c4f94e73
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64500023"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64916259"
 ---
-# <a name="use-sensitivity-labels-to-protect-content-in-microsoft-teams-microsoft-365-groups-and-sharepoint-sites"></a>Aynı sitelerde, gruplarda ve Microsoft Teams sitelerde Microsoft 365 için duyarlılık SharePoint kullanma
+# <a name="use-sensitivity-labels-to-protect-content-in-microsoft-teams-microsoft-365-groups-and-sharepoint-sites"></a>Microsoft Teams, Microsoft 365 grupları ve SharePoint sitelerindeki içeriği korumak için duyarlılık etiketlerini kullanma
 
->*[Microsoft 365 uyumluluğu için lisans & kılavuzu.](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)*
+>*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-Belgeleri ve e-postaları sınıflandırmak ve korumak için duyarlılık etiketleri kullanmanın yanı sıra, içeriği şu kapsayıcılarda korumak için de duyarlılık etiketlerini kullanabilirsiniz: Microsoft Teams siteleri, Microsoft 365 grupları (eski adı [Office 365 grupları](https://techcommunity.microsoft.com/t5/microsoft-365-blog/office-365-groups-will-become-microsoft-365-groups/ba-p/1303601)) ve diğer SharePoint.[](sensitivity-labels.md) Bu kapsayıcı düzeyinde sınıflandırma ve koruma için aşağıdaki etiket ayarlarını kullanın:
+Belgeleri ve e-postaları sınıflandırmak ve korumak için [duyarlılık etiketlerini](sensitivity-labels.md) kullanmanın yanı sıra, şu kapsayıcılardaki içeriği korumak için duyarlılık etiketlerini de kullanabilirsiniz: Microsoft Teams siteler, Microsoft 365 grupları ([eski adıyla Office 365 grupları](https://techcommunity.microsoft.com/t5/microsoft-365-blog/office-365-groups-will-become-microsoft-365-groups/ba-p/1303601)) ve siteleri SharePoint. Bu kapsayıcı düzeyinde sınıflandırma ve koruma için aşağıdaki etiket ayarlarını kullanın:
 
-- Ekip sitelerinin ve özel grupların gizliliği (genel Microsoft 365)
+- Ekip sitelerinin ve Microsoft 365 gruplarının gizliliği (genel veya özel)
 - Dış kullanıcı erişimi
-- Sitelerden dış SharePoint paylaşma
-- Unmanaged cihazlarından erişim
+- SharePoint sitelerden dış paylaşım
+- Yönetilmeyen cihazlardan erişim
 - Kimlik doğrulama bağlamları (önizlemede)
 - SharePoint sitesi için varsayılan paylaşım bağlantısı (yalnızca PowerShell yapılandırması)
+- Önizlemede: Site paylaşım ayarları (Yalnızca PowerShell yapılandırması)
 
 > [!IMPORTANT]
-> Kuralın belirlenemeyen cihaz ayarları ve kimlik doğrulama bağlamları, Koşullu Erişim'Azure Active Directory birlikte çalışır. Bu ayarlar için bir duyarlılık etiketi kullanmak istemeniz gerekirse, bu bağımlı özelliği yapılandırabilirsiniz. Aşağıdaki yönergelere ek bilgiler dahil edilir.
+> Yönetilmeyen cihazların ve kimlik doğrulama bağlamlarının ayarları Azure Active Directory Koşullu Erişim ile birlikte çalışır. Bu ayarlar için duyarlılık etiketi kullanmak istiyorsanız bu bağımlı özelliği yapılandırmanız gerekir. Aşağıdaki yönergelere ek bilgiler eklenmiştir.
 
-Bu duyarlılık etiketini desteklenen bir kapsayıcıya uygularken, etiket sınıflandırma ve yapılandırılmış koruma ayarlarını site veya gruba otomatik olarak uygular.
+Bu duyarlılık etiketini desteklenen bir kapsayıcıya uyguladığınızda, etiket otomatik olarak site veya gruba sınıflandırma ve yapılandırılmış koruma ayarlarını uygular.
 
-Öte yandan bu kapsayıcıların içeriği, görsel işaretler ve şifreleme gibi dosyaların ve e-postaların sınıflandırma veya ayarlarının etiketlerini devralmaz. Kullanıcıların belgelerini SharePoint sitelerinde veya ekip sitelerinde etiketleysin diye, SharePoint ve Office dosyaları için duyarlılık etiketlerini [etkinleştirmiş OneDrive](sensitivity-labels-sharepoint-onedrive-files.md).
-
-> [!NOTE]
-> Kapsayıcılar için duyarlılık etiketleri İçerik Teslim Ağlarında (CDN Office 365 desteklenmiyor.
-
-## <a name="using-sensitivity-labels-for-microsoft-teams-microsoft-365-groups-and-sharepoint-sites"></a>Daha fazla site için Microsoft Teams, Microsoft 365 ve sitelerde duyarlılık SharePoint kullanma
-
-Kapsayıcılar için duyarlılık etiketlerini etkinleştirmeden ve yeni ayarlar için duyarlılık etiketlerini yapılandırmadan önce, kullanıcılar uygulamalarına duyarlılık etiketlerini görebilir ve uygulayabilirler. Örneğin, Word'den:
-
-![Word masaüstü uygulamasında görüntülenen bir duyarlılık etiketi.](../media/sensitivity-label-word.png)
-
-Kapsayıcılar için duyarlılık etiketlerini etkinleştirdikten ve yapılandırdikten sonra, kullanıcılar bunlara ek olarak Microsoft ekip sitelerine, site gruplarına ve sitelere duyarlılık Microsoft 365 ve SharePoint uygulayabilirler. Örneğin, ekip sitesinden yeni bir ekip sitesi SharePoint:
-
-![Ekip sitesinden ekip sitesi oluştururken bir duyarlılık SharePoint.](../media/sensitivity-labels-new-team-site.png)
+Ancak bu kapsayıcılardaki içerik, görsel işaretler ve şifreleme gibi dosya ve e-postalar için sınıflandırma veya ayarların etiketlerini devralmaz. Kullanıcıların belgelerini SharePoint sitelerde veya ekip sitelerinde etiketleyebilmesi için, SharePoint [ve OneDrive Office dosyalar için duyarlılık etiketlerini etkinleştirdiğinizden](sensitivity-labels-sharepoint-onedrive-files.md) emin olun.
 
 > [!NOTE]
-> Kapsayıcılar için duyarlılık etiketleri şu anda [Teams önizlemede olan](/MicrosoftTeams/shared-channels) paylaşılan kanalları destekler. Ekibin paylaşılan kanalları varsa, ekip üst ekibinden otomatik olarak duyarlılık etiketi ayarlarını devralır ve bu etiket kaldırılamaz veya farklı bir etiketle değiştirilemez.
+> Kapsayıcılar için duyarlılık etiketleri Office 365 content delivery networks (CDN) ile desteklenmez.
+
+## <a name="using-sensitivity-labels-for-microsoft-teams-microsoft-365-groups-and-sharepoint-sites"></a>Microsoft Teams, Microsoft 365 grupları ve SharePoint siteleri için duyarlılık etiketlerini kullanma
+
+Kapsayıcılar için duyarlılık etiketlerini etkinleştirmeden ve yeni ayarlar için duyarlılık etiketlerini yapılandırmadan önce, kullanıcılar kendi uygulamalarında duyarlılık etiketlerini görebilir ve uygulayabilir. Örneğin, Word'den:
+
+![Word masaüstü uygulamasında görüntülenen duyarlılık etiketi.](../media/sensitivity-label-word.png)
+
+Kapsayıcılar için duyarlılık etiketlerini etkinleştirip yapılandırdıktan sonra, kullanıcılar ayrıca Microsoft ekip sitelerine, Microsoft 365 gruplarına ve SharePoint sitelerine duyarlılık etiketlerini görebilir ve uygulayabilir. Örneğin, SharePoint yeni bir ekip sitesi oluşturduğunuzda:
+
+![SharePoint ekip sitesi oluştururken duyarlılık etiketi.](../media/sensitivity-labels-new-team-site.png)
+
+> [!NOTE]
+> Kapsayıcılar için duyarlılık etiketleri, şu anda önizleme aşamasında olan [paylaşılan kanalları Teams](/MicrosoftTeams/shared-channels) destekler. Bir ekibin paylaşılan kanalları varsa, duyarlılık etiketi ayarlarını üst ekibinden otomatik olarak devralır ve bu etiket kaldırılamaz veya başka bir etiketle değiştirilemez.
 
 ## <a name="how-to-enable-sensitivity-labels-for-containers-and-synchronize-labels"></a>Kapsayıcılar için duyarlılık etiketlerini etkinleştirme ve etiketleri eşitleme
 
-Kapsayıcılar için duyarlılık etiketlerini henüz etkinleştirmediyseniz, tek seferlik bir yordam olarak aşağıdaki adım kümelerini uygulayın:
+Kapsayıcılar için duyarlılık etiketlerini henüz etkinleştirmediyseniz, aşağıdaki adım kümesini tek seferlik bir yordam olarak uygulayın:
 
-1. Bu özellik Azure AD [işlevini](/azure/active-directory/users-groups-roles/groups-assign-sensitivity-labels) kullandığından, duyarlılık etiketi desteğini etkinleştirmek için Azure AD belgelerinde verilen yönergeleri izleyin: Duyarlılık etiketleri Microsoft 365 gruplarına Azure Active Directory.
+1. Bu özellik Azure AD işlevselliğini kullandığından, duyarlılık etiketi desteğini etkinleştirmek için Azure AD belgelerindeki yönergeleri izleyin: duyarlılık [etiketlerini Azure Active Directory Microsoft 365 gruplarına atama](/azure/active-directory/users-groups-roles/groups-assign-sensitivity-labels).
 
-2. Artık duyarlılık etiketlerinizi Azure AD'ye eşitlemeniz gerekiyor. İlk olarak, [Güvenlik ve Uyumluluk & PowerShell'e bağlanın](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
+2. Şimdi duyarlılık etiketlerinizi Azure AD ile eşitlemeniz gerekir. İlk olarak [Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanın](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
 
-   Örneğin, yönetici olarak çalıştırdınız bir PowerShell oturumunda genel yönetici hesabıyla oturum açın.
+   Örneğin, yönetici olarak çalıştırdığınız bir PowerShell oturumunda genel yönetici hesabıyla oturum açın.
 
-3. Ardından, duyarlılık etiketlerinizin farklı gruplarda kullanılabilir olduğundan emin olmak için Microsoft 365 çalıştırın:
+3. Ardından duyarlılık etiketlerinizin Microsoft 365 gruplarla kullanılabildiğinden emin olmak için aşağıdaki komutu çalıştırın:
 
     ```powershell
     Execute-AzureAdLabelSync
@@ -79,228 +80,253 @@ Kapsayıcılar için duyarlılık etiketlerini henüz etkinleştirmediyseniz, te
 
 ## <a name="how-to-configure-groups-and-site-settings"></a>Grupları ve site ayarlarını yapılandırma
 
-Duyarlılık etiketleri önceki bölümde açıklandığı gibi kapsayıcılar için etkinleştirildikten sonra, duyarlılık etiketleme yapılandırmasında gruplar ve siteler için koruma ayarlarını yapılandırabilirsiniz. Duyarlılık etiketleri kapsayıcılar için etkinleştirilinceye kadar, ayarlar görünür ancak yapılandıramaz.
+Önceki bölümde açıklandığı gibi kapsayıcılar için duyarlılık etiketleri etkinleştirildikten sonra, duyarlılık etiketleme yapılandırmasında gruplar ve siteler için koruma ayarlarını yapılandırabilirsiniz. Kapsayıcılar için duyarlılık etiketleri etkinleştirilene kadar ayarlar görünür ancak bunları yapılandıramazsınız.
 
-1. Duyarlılık etiketi oluşturmak veya [düzenlemek için genel](create-sensitivity-labels.md#create-and-configure-sensitivity-labels) yönergeleri izleyin ve etiketin kapsamı için Gruplar **& grupları'nın** seçili olduğundan emin olun: 
+1. [Duyarlılık etiketi oluşturmak veya düzenlemek](create-sensitivity-labels.md#create-and-configure-sensitivity-labels) için genel yönergeleri izleyin ve etiketin kapsamı için **Gruplar & sitelerini** seçtiğinizden emin olun: 
     
-    ![Dosyalar ve e-postalar için duyarlılık etiketi kapsamı seçenekleri.](../media/groupsandsites-scope-options-sensitivity-label.png)
+    ![Dosyalar ve e-postalar için duyarlılık etiketi kapsam seçenekleri.](../media/groupsandsites-scope-options-sensitivity-label.png)
     
-    Etiket için yalnızca bu kapsam seçildiğinde, etiket duyarlılık etiketlerini destekleyen Office ve dosyalarla e-postalara uygulanmayacak şekilde Office uygulamalarda görüntülenmez. Bu etiket ayrımını eklemek hem kullanıcılar hem de yöneticiler için yararlı olabilir, ancak etiket dağıtımının karmaşıklığını da ekleyebilir.
+    Etiket için yalnızca bu kapsam seçildiğinde, etiket duyarlılık etiketlerini destekleyen Office uygulamalarda görüntülenmez ve dosyalara ve e-postalara uygulanamaz. Etiketlerin bu ayrımının olması hem kullanıcılar hem de yöneticiler için yararlı olabilir, ancak etiket dağıtımınızın karmaşıklığını da ekleyebilir.
     
-    Örneğin, etiketli bir belge etiketli bir [](sensitivity-labels.md#label-priority-order-matters) siteye SharePoint olduğunu algılayama nedeniyle etiket sıralamanızı dikkatle gözden geçirmeniz gerekiyor. Bu senaryoda, belgenin sitenin etiketinden daha yüksek öncelikli bir duyarlılık etiketi olduğunda denetim olayı ve e-posta otomatik olarak oluşturulur. Daha fazla bilgi için bu [sayfanın Denetim duyarlılığı etiket etkinlikleri](#auditing-sensitivity-label-activities) bölümüne bakın. 
+    Örneğin, [etiketlenmiş bir belgenin etiketli](sensitivity-labels.md#label-priority-order-matters) bir siteye ne zaman yüklendiğini algıladığından SharePoint etiket sıralamanızı dikkatle gözden geçirmeniz gerekir. Bu senaryoda, belge sitenin etiketinden daha yüksek öncelikli duyarlılık etiketine sahip olduğunda bir denetim olayı ve e-posta otomatik olarak oluşturulur. Daha fazla bilgi için bu sayfadaki [Duyarlılık etiketi etkinliklerini denetleme](#auditing-sensitivity-label-activities) bölümüne bakın. 
 
-2. Ardından, Gruplar **ve siteler için koruma ayarlarını tanımla** sayfasında, kullanılabilir seçeneklerden birini veya her ikisini de seçin:
+2. Ardından, **Gruplar ve siteler için koruma ayarlarını tanımla** sayfasında, kullanılabilir seçeneklerden birini veya her ikisini birden seçin:
     
-    - **Gizlilik ve Dış kullanıcılar erişim ayarlarını** yapılandırmak için **gizlilik ve** **dış kullanıcı erişimi** ayarları. 
-    - **Dış paylaşım ve Koşullu Erişim** ayarları, belirli sitelerde etiketli sitelerde dış **paylaşımı SharePoint** ve Site ayarlarıyla etiketlenmiş şekilde korumak için **Azure AD Koşullu SharePoint** kullanın.
+    - **Gizlilik ve Dış kullanıcılar erişim ayarlarını** yapılandırmak için **gizlilik** ve **dış kullanıcı erişim** ayarları. 
+    - **Etiketli SharePoint sitelerden dış paylaşımı denetle ve Etiketli SharePoint siteleri** **korumak için Azure AD Koşullu Erişimi kullan** ayarını yapılandırmak için **dış paylaşım ve Koşullu Erişim ayarları**.
 
-3. Gizlilik ve **dış kullanıcı erişimi ayarlarını seçtiysanız**, şimdi aşağıdaki ayarları yapılandırabilirsiniz:
+3. **Gizlilik ve dış kullanıcı erişim ayarlarını** seçtiyseniz, şimdi aşağıdaki ayarları yapılandırın:
     
-    - **Gizlilik**: Kuruluşta herkesin **bu** etiketin uygulandığı ekip sitesine veya gruba erişmesi için varsayılan olarak Genel'i kullanın.
+    - **Gizlilik**: Kuruluşunuzdaki herkesin bu etiketin uygulandığı ekip sitesine veya gruba erişmesini istiyorsanız Varsayılan **Genel'i** koruyun.
         
-        **Erişime** yalnızca organizasyonda onaylanmış üyelerle kısıtlanıyorsa Özel'i seçin.
+        Erişimin yalnızca kuruluşunuzdaki onaylanan üyelerle sınırlandırılmasını istiyorsanız **Özel'i** seçin.
         
-        **Kapsayıcıda** içeriği duyarlılık etiketini kullanarak korumak ancak yine de kullanıcıların gizlilik ayarını kendilerini yapılandırmalarına izin ver seçeneğine sahip olmak için Yok'a seçin.
+        Duyarlılık etiketini kullanarak kapsayıcıdaki içeriği korumak ancak yine de kullanıcıların gizlilik ayarını kendilerinin yapılandırmasına izin vermek istediğinizde **Hiçbiri'ni** seçin.
         
-        Ortak veya **Özel** **ayarının ayarları** ve bu etiketi kapsayıcıya uygulayan gizlilik ayarını kilitler. Seçtiğiniz ayar, ekip veya grup için yapılandırılan önceki gizlilik ayarının yerini değiştirir ve gizlilik değerini kilitler; böylelikle önce duyarlılık etiketini kapsayıcıdan kaldırarak bunu değiştirebilirsiniz. Duyarlılık etiketini kaldırdikten sonra, etiketten gelen gizlilik ayarı kalır ve kullanıcılar artık bu ayarı yeniden değiştirebilir.
+        **Genel** veya **Özel** ayarının ayarları ve bu etiketi kapsayıcıya uyguladığınızda gizlilik ayarını kilitleyin. Seçtiğiniz ayar, ekip veya grup için yapılandırılabilir önceki gizlilik ayarlarının yerini alır ve gizlilik değerini kilitleyerek yalnızca önce kapsayıcıdan duyarlılık etiketi kaldırılarak değiştirilebilir. Duyarlılık etiketini kaldırdıktan sonra, etiketten gizlilik ayarı kalır ve kullanıcılar artık etiketi yeniden değiştirebilir.
     
-    - **Dış kullanıcı erişimi**: Grup sahibinin gruba konuk [ekp eklemey denetleme.](/office365/admin/create-groups/manage-guest-access-in-groups)
+    - **Dış kullanıcı erişimi**: Grup sahibinin [gruba konuk ekleyip ekleyemeyeceğini](/office365/admin/create-groups/manage-guest-access-in-groups) denetler.
 
-4. Dış paylaşım ve **Koşullu Erişim ayarlarını seçtiysanız**, şimdi aşağıdaki ayarları yapılandırabilirsiniz:
+4. **Dış paylaşım ve Koşullu Erişim ayarlarını** seçtiyseniz, şimdi aşağıdaki ayarları yapılandırın:
     
-    - **Belirli sitelerden dış SharePoint denetimi**: Herkes, yeni ve var olan konuklar, var olan konuklar veya yalnızca kuruluşta yer alan kişiler için dış paylaşımı seçmek için bu seçeneği belirleyin. Bu yapılandırma ve ayarlar hakkında daha fazla bilgi için, aşağıdaki SharePoint [bkz. Site için dış paylaşımı açma veya kapatma](/sharepoint/change-external-sharing-site).
+    - **Etiketli SharePoint sitelerden dış paylaşımı denetleme**: Bu seçeneği belirleyerek herkes, yeni ve mevcut konuklar, mevcut konuklar veya yalnızca kuruluşunuzdaki kişiler için dış paylaşımı seçin. Bu yapılandırma ve ayarlar hakkında daha fazla bilgi için site [için dış paylaşımı açma veya kapatma](/sharepoint/change-external-sharing-site) SharePoint belgelerine bakın.
     
-    - **Etki alanlarıyla etiketlenmiş siteleri korumak için Azure AD koşullu SharePoint kullanın**: Bu seçeneği yalnızca, kuruluş yapılandırılmışsa ve Koşullu Erişim Azure Active Directory [kullanıyorsa belirleyin](/azure/active-directory/conditional-access/overview). Daha sonra aşağıdaki ayarlardan birini seçin:
+    - **Etiketli SharePoint sitelerini korumak için Azure AD Koşullu Erişim'i kullanın**: Bu seçeneği yalnızca kuruluşunuz yapılandırdıysa ve [Azure Active Directory Koşullu Erişim](/azure/active-directory/conditional-access/overview) kullanıyorsa seçin. Ardından aşağıdaki ayarlardan birini seçin:
     
-        - **Kullanıcıların,** SharePoint olmayan cihazlardan SharePoint sitelerine erişip erişeyemeyenleri belirleme: Bu seçenek, SharePoint ve OneDrive içeriğine erişimi engellemek veya sınırlamak için Azure AD Koşullu Erişimi kullanan SharePoint özelliğini kullanır. Daha fazla bilgi için [bkz. Aşağıdaki belgelere bakarak, kontrol SharePoint](/sharepoint/control-access-from-unmanaged-devices). Bu etiket ayarı için belirttiğiniz seçenek, site için PowerShell komutunu çalıştırmayla eşdeğerdir. Bu komutun yönergelerinde, Erişimi engelleme veya sınırlandırma bölümündeki 3-5 SharePoint sitesi veya [OneDrive](/sharepoint/control-access-from-unmanaged-devices#block-or-limit-access-to-a-specific-sharepoint-site-or-onedrive) bölümüne SharePoint.
+        - **Kullanıcıların yönetilmeyen cihazlardan SharePoint sitelere erişip erişemeyeceğini belirleyin**: Bu seçenek, yönetilmeyen cihazlardan SharePoint ve OneDrive içeriğine erişimi engellemek veya sınırlamak için Azure AD Koşullu Erişimi kullanan SharePoint özelliğini kullanır. Daha fazla bilgi için, SharePoint [belgelerinden Yönetilmeyen cihazlardan erişimi](/sharepoint/control-access-from-unmanaged-devices) denetleme bölümüne bakın. Bu etiket ayarı için belirttiğiniz seçenek, SharePoint yönergelerinin Belirli bir SharePoint [sitesine veya OneDrive bölümüne erişimi engelleme veya sınırlama](/sharepoint/control-access-from-unmanaged-devices#block-or-limit-access-to-a-specific-sharepoint-site-or-onedrive) bölümündeki 3-5 arası adımlarda açıklandığı gibi bir site için PowerShell komutunu çalıştırmaya eşdeğerdir.
             
-            Ek yapılandırma bilgileri için, [bu bölümün sonundaki Unmanaged devices seçeneğine](#more-information-about-the-dependencies-for-the-unmanaged-devices-option) bağımlılıklar hakkında daha fazla bilgi bölümüne bakın.
+            Ek yapılandırma bilgileri [için bu bölümün sonundaki yönetilmeyen cihazlara yönelik bağımlılıklar seçeneği hakkında daha fazla bilgi](#more-information-about-the-dependencies-for-the-unmanaged-devices-option) bölümüne bakın.
             
-        - **Var olan kimlik doğrulama bağlamını** seçme: Şu anda önizlemede olan bu seçenek, kullanıcılar bu etiketin uygulandığı sitelere erişene SharePoint daha sıkı erişim koşulları zorunlu kılınmanıza olanak sağlar. Bu koşullar, kuruluşun Koşullu Erişim dağıtımı için oluşturulmuş ve yayımlanmış var olan bir kimlik doğrulama bağlamını seçmeniz sırasında uygulanır. Kullanıcılar yapılandırılmış koşulları karşılamazsa veya kimlik doğrulama bağlamlarını desteklemezse, erişimleri reddedilir.
+        - **Mevcut bir kimlik doğrulama bağlamı seçin**: Şu anda önizleme aşamasında olan bu seçenek, kullanıcılar bu etiketin uygulandığı SharePoint sitelere eriştiğinde daha sıkı erişim koşulları uygulamanıza olanak tanır. Bu koşullar, kuruluşunuzun Koşullu Erişim dağıtımı için oluşturulmuş ve yayımlanmış mevcut bir kimlik doğrulama bağlamını seçtiğinizde uygulanır. Kullanıcılar yapılandırılmış koşulları karşılamıyorsa veya kimlik doğrulama bağlamlarını desteklemeyen uygulamalar kullanıyorlarsa erişimleri reddedilir.
             
-            Ek yapılandırma bilgileri için, [bu bölümün sonundaki Kimlik doğrulama bağlam seçeneğine bağımlılıklar](#more-information-about-the-dependencies-for-the-authentication-context-option) hakkında daha fazla bilgi bölümüne bakın.
+            Ek yapılandırma bilgileri [için bu bölümün sonundaki kimlik doğrulama bağlamı seçeneğine yönelik bağımlılıklar hakkında daha fazla bilgi](#more-information-about-the-dependencies-for-the-authentication-context-option) bölümüne bakın.
             
-            Bu etiket yapılandırmasına örnekler:
+            Bu etiket yapılandırması için örnekler:
             
-             - Çok faktörlü kimlik doğrulaması [(MFA) gerektirecek şekilde yapılandırılmış bir kimlik doğrulama bağlamı seçersiniz](/azure/active-directory/conditional-access/untrusted-networks). Bu etiket daha sonra çok gizli SharePoint içeren bir site sitesine uygulanır. Sonuç olarak, güvenilmeyen bir ağdan gelen kullanıcılar bu siteden bir belgeye erişmeye çalışırken, belgeye erişmek için önce tamamlamaları gereken MFA istemini görebilirler.
+             - [Çok faktörlü kimlik doğrulaması (MFA)](/azure/active-directory/conditional-access/untrusted-networks) gerektirecek şekilde yapılandırılmış bir kimlik doğrulama bağlamı seçersiniz. Bu etiket daha sonra çok gizli öğeler içeren bir SharePoint sitesine uygulanır. Sonuç olarak, güvenilmeyen bir ağdan gelen kullanıcılar bu sitedeki bir belgeye erişmeye çalıştığında, belgeye erişebilmeleri için önce tamamlamaları gereken MFA istemini görürler.
              
-             - Kullanım koşulları [(ToU) ilkeleri için yapılandırılmış bir kimlik doğrulama bağlamı seçersiniz](/azure/active-directory/conditional-access/terms-of-use). Bu etiket daha sonra, SharePoint veya uyumluluk nedenleriyle kullanım kabulünü gerektiren öğelerin yer almalı olduğu web sitelerine uygulanır. Sonuç olarak, kullanıcılar bu siteden bir belgeye erişmeye çalışırken, özgün belgeye erişmek için önce kabul etmeleri gereken bir kullanım belgesi koşulları görüyorlar.
+             - [Kullanım koşulları (ToU) ilkeleri](/azure/active-directory/conditional-access/terms-of-use) için yapılandırılmış bir kimlik doğrulama bağlamı seçersiniz. Bu etiket daha sonra, yasal veya uyumluluk nedenleriyle kullanım koşulları kabulü gerektiren öğeleri içeren bir SharePoint sitesine uygulanır. Sonuç olarak, kullanıcılar bu sitedeki bir belgeye erişmeye çalıştığında, özgün belgeye erişebilmeleri için kabul etmesi gereken bir kullanım koşulları belgesi görürler.
 
 > [!IMPORTANT]
-> Etiketi bir ekip, grup veya siteye uygulayan yalnızca bu site ve grup ayarları geçerli olur. Etiketin [kapsamı dosyalar ve](sensitivity-labels.md#label-scopes) e-postalar içerirse, şifreleme ve içerik işaretleme gibi diğer etiket ayarları ekip, grup veya site içindeki içeriğe uygulanmaz.
+> Etiketi bir ekip, grup veya siteye uyguladığınızda yalnızca bu site ve grup ayarları etkinleşir. [Etiketin kapsamı](sensitivity-labels.md#label-scopes) dosya ve e-posta içeriyorsa, şifreleme ve içerik işaretleme gibi diğer etiket ayarları ekip, grup veya site içindeki içeriğe uygulanmaz.
 
-Duyarlılık etiketiniz daha önce yayımlanmış değilse, şimdi bunu bir [duyarlılık etiketi ilkesine ekleyerek yayımlayın](create-sensitivity-labels.md#publish-sensitivity-labels-by-creating-a-label-policy). Bu etiketi içeren bir duyarlılık etiketi ilkesi atanan kullanıcılar site ve gruplar için bu ilkeyi seçecek.
+Duyarlılık etiketiniz henüz yayımlanmadıysa, şimdi duyarlılık [etiketi ilkesine ekleyerek](create-sensitivity-labels.md#publish-sensitivity-labels-by-creating-a-label-policy) yayımlayın. Bu etiketi içeren bir duyarlılık etiketi ilkesi atanan kullanıcılar, bu ilkeyi siteler ve gruplar için seçebilir.
 
-##### <a name="more-information-about-the-dependencies-for-the-unmanaged-devices-option"></a>Unmanaged devices option için bağımlılıklar hakkında daha fazla bilgi
+##### <a name="more-information-about-the-dependencies-for-the-unmanaged-devices-option"></a>Yönetilmeyen cihazlar seçeneği için bağımlılıklar hakkında daha fazla bilgi
 
-Zorunlu kısıtlamaları kullanma altında belirtilen şekilde SharePoint koşullu erişim ilkesi yapılandırmazsanız[, burada](/sharepoint/app-enforced-restrictions) belirttiğiniz seçeneğin hiçbir etkisi olmaz. Buna ek olarak, kiracı düzeyinde yapılandırılmış bir ayara göre daha az kısıtlayıcı olursa, hiçbir etkisi olmaz. Kurum genelindeki bir ayarı, aynı veya daha kısıtlayıcı olan bir cihaz için yapılandırdınız
+SharePoint için bağımlı koşullu erişim ilkesini [Uygulama tarafından zorlanan kısıtlamaları kullanma](/sharepoint/app-enforced-restrictions) bölümünde belirtildiği gibi yapılandırmazsanız, burada belirttiğiniz seçeneğin hiçbir etkisi olmaz. Buna ek olarak, kiracı düzeyinde yapılandırılmış bir ayardan daha az kısıtlayıcıysa hiçbir etkisi olmaz. Yönetilmeyen cihazlar için kuruluş genelinde bir ayar yapılandırdıysanız, aynı veya daha kısıtlayıcı bir etiket ayarı seçin
 
-Örneğin, kiracınız Sınırlı **, yalnızca web** erişimine izin ver için yapılandırılmışsa, tam erişime izin veren etiket ayarının hiçbir etkisi olmaz çünkü daha az kısıtlayıcıdır. Bu kiracı düzeyi ayarı için, erişimi engelecek etiket ayarını (daha kısıtlayıcı) veya sınırlı erişim için etiket ayarını (kiracı ayarıyla aynı) seçin.
+Örneğin, kiracınız **Sınırlı, yalnızca web erişimine izin ver** için yapılandırılmışsa, tam erişime izin veren etiket ayarının etkisi olmaz çünkü daha az kısıtlayıcıdır. Bu kiracı düzeyi ayarı için erişimi engellemek için etiket ayarını (daha kısıtlayıcı) veya sınırlı erişim için etiket ayarını (kiracı ayarıyla aynı) seçin.
 
-Kimlik ayarlarını etiket SharePoint ayrı yapılandırasınız, çünkü bağımlılıkların var olduğu duyarlılık etiketi yapılandırmasını denetlemez. Bu bağımlılıklar, etiket oluşturulduktan ve yayımlandıktan sonra, etiket uygulandıktan sonra bile yalıtıldı. Bununla birlikte, etiket zaten uygulandıktan sonra kullanıcı bir sonraki kimlik doğrulaması yapılana kadar etiket ayarı etkili olmaz.
+SharePoint ayarlarını etiket yapılandırmasından ayrı olarak yapılandırabildiğiniz için, duyarlılık etiketi yapılandırmasında bağımlılıkların mevcut olup olmadığı denetlenemez. Bu bağımlılıklar, etiket oluşturulduktan ve yayımlandıktan ve hatta etiket uygulandıktan sonra bile yapılandırılabilir. Ancak etiket zaten uygulanmışsa, etiket ayarı kullanıcı bir sonraki kimlik doğrulamasından sonra geçerli olmaz.
 
-##### <a name="more-information-about-the-dependencies-for-the-authentication-context-option"></a>Kimlik doğrulama bağlam seçeneğine bağımlılıklar hakkında daha fazla bilgi
+##### <a name="more-information-about-the-dependencies-for-the-authentication-context-option"></a>Kimlik doğrulama bağlamı seçeneği için bağımlılıklar hakkında daha fazla bilgi
 
-Seçim için açılan listede görüntülenmek üzere, kimlik doğrulama bağlamlarının Erişim Koşulu yapılandırmanız kapsamında oluşturularak, yapılandırıldığında ve Azure Active Directory gerekir. Daha fazla bilgi ve yönergeler için Azure AD [Koşullu Erişim belgelerinden](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps#configure-authentication-contexts) Kimlik doğrulama bağlamlarını yapılandırma bölümüne bakın.
+Seçim açılan listesinde görüntülenmesi için kimlik doğrulama bağlamlarının Azure Active Directory Koşul Erişimi yapılandırmanızın bir parçası olarak oluşturulması, yapılandırılması ve yayımlanması gerekir. Daha fazla bilgi ve yönergeler için Azure AD Koşullu Erişim belgelerindeki [Kimlik doğrulama bağlamlarını yapılandırma](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps#configure-authentication-contexts) bölümüne bakın.
 
-Tüm uygulamalar kimlik doğrulama bağlamlarını desteklemez. Desteklenmeyen uygulamaya sahip bir kullanıcı, kimlik doğrulama bağlamı için yapılandırılmış siteye bağlanırsa, erişim reddedildi iletisiyle veya kimlik doğrulaması istenir ancak reddedilir. Şu anda kimlik doğrulama bağlamlarını destekleyen uygulamalar:
+Tüm uygulamalar kimlik doğrulama bağlamlarını desteklemez. Desteklenmeyen bir uygulamaya sahip bir kullanıcı bir kimlik doğrulama bağlamı için yapılandırılmış siteye bağlanırsa, erişim reddedildi iletisini görür veya kimlik doğrulamasından geçmek isteyip istemediğiniz sorulur. Şu anda kimlik doğrulama bağlamlarını destekleyen uygulamalar:
 
-- Web için Office Web için Outlook içeren web sitesi
+- Web için Outlook içeren Web için Office
 
-- Microsoft Teams macOS Windows için web sayfaları (web Teams hariç)
+- Windows ve macOS için Microsoft Teams (Teams web uygulamasını hariç tutar)
 
 - Microsoft Planner
 
-- Microsoft 365 Uygulamaları, word, Excel ve PowerPoint sürümleri için sürüm:
+- Word, Excel ve PowerPoint için Microsoft 365 Uygulamaları; en düşük sürümler:
     - Windows: 2103
     - macOS: 16.45.1202
     - iOS: 2.48.303
     - Android: 16.0.13924.10000
 
-- Microsoft 365 Uygulamaları için Outlook; en düşük sürümler:
+- Outlook için Microsoft 365 Uygulamaları; en düşük sürümler:
     - Windows: 2103
     - macOS: 16.45.1202
     - iOS: 4.2109.0
     - Android: 4.2025.1
 
-- OneDrive eşitleme uygulama, minimum sürümler:
+- OneDrive eşitleme uygulaması, en düşük sürümler:
     - Windows: 21.002
     - macOS: 21.002
-    - iOS: 12.30'da geliyor
+    - iOS: 12.30'da kullanıma sunulacak
     - Android: Henüz desteklenmiyor
 
-Bu önizlemenin bilinen sınırlamaları:
+Bu önizleme için bilinen sınırlamalar:
 
-- Yalnızca OneDrive eşitleme için desteklenen uygulama, OneDrive siteler için değil.
+- OneDrive eşitleme uygulaması için, diğer siteler için değil, yalnızca OneDrive için desteklenir.
 
-- Aşağıdaki özellikler ve uygulamalar kimlik doğrulama bağlamları ile uyumsuz olabilir, bu nedenle kullanıcı kimlik doğrulama bağlamı kullanarak siteye başarıyla erişdikten sonra bunların çalışmaya devam edeceğini denetlemeniz teşvik edilir:
+- Aşağıdaki özellikler ve uygulamalar kimlik doğrulama bağlamlarıyla uyumsuz olabilir, bu nedenle bir kullanıcı bir kimlik doğrulama bağlamını kullanarak bir siteye başarıyla eriştiğinde bunların çalışmaya devam edip etmediğini denetlemenizi öneririz:
     
-    - Power Apps veya Power Automate
-    - Üçüncü taraf uygulamalar
+    - Power Apps veya Power Automate kullanan iş akışları
+    - Üçüncü taraf uygulamaları
 
-### <a name="configure-settings-for-the-default-sharing-link-type-for-a-site-by-using-powershell-advanced-settings"></a>PowerShell gelişmiş ayarlarını kullanarak sitenin varsayılan paylaşım bağlantı türü ayarlarını yapılandırma
+### <a name="configure-settings-for-the-default-sharing-link-type-for-a-site-by-using-powershell-advanced-settings"></a>PowerShell gelişmiş ayarlarını kullanarak site için varsayılan paylaşım bağlantı türü ayarlarını yapılandırma
 
-Uyumluluk merkezinden yapılandırabilirsiniz sitelerin ve grupların etiket ayarlarına ek olarak, site için varsayılan paylaşım bağlantı türünü de yapılandırabilirsiniz. Belgeler için duyarlılık etiketleri de varsayılan paylaşım bağlantı türü için yalndırabilirsiniz. Aşırı paylaşımı önlemeye yardımcı olan bu ayarlar, kullanıcılar kendi uygulamalarında Paylaş düğmesini seçtiklerinde otomatik Office seçilir. 
+Uyumluluk merkezinden yapılandırabileceğiniz sitelerin ve grupların etiket ayarlarına ek olarak, site için varsayılan paylaşım bağlantı türünü de yapılandırabilirsiniz. Belgeler için duyarlılık etiketleri, varsayılan paylaşım bağlantı türü için de yapılandırılabilir. Kullanıcılar Office uygulamalarında **Paylaş** düğmesini seçtiğinde, aşırı paylaşımı önlemeye yardımcı olan bu ayarlar otomatik olarak seçilir. 
 
-Daha fazla bilgi ve yönergeler için bkz. Site ve site sitelerinin ve belgelerin varsayılan paylaşım bağlantı türünü yapılandırmak için duyarlılık [SharePoint OneDrive](sensitivity-labels-default-sharing-link.md).
+Daha fazla bilgi ve yönergeler için bkz. [SharePoint ve OneDrive'da siteler ve belgeler için varsayılan paylaşım bağlantı türünü yapılandırmak için duyarlılık etiketlerini kullanma](sensitivity-labels-default-sharing-link.md).
+
+### <a name="configure-site-sharing-permissions-by-using-powershell-advanced-settings"></a>PowerShell gelişmiş ayarlarını kullanarak site paylaşım izinlerini yapılandırma
+
+> [!NOTE]
+> Bu etiket ayarı şu anda önizleme aşamasındadır.
+
+Duyarlılık etiketinin bir SharePoint sitesine uygulanması için yapılandırabileceğiniz bir diğer PowerShell gelişmiş ayarı da **MembersCanShare** ayarıdır. Bu ayar, SharePoint yönetim merkezinden ayarlayabileceğiniz eşdeğer yapılandırmadır > **Site izinleriSite** >  **PaylaşımıYeni** >  **üyelerin paylaşım** **izinlerini** paylaşma  >  şeklini değiştirme. 
+
+Üç seçenek, **MembersCanShare** PowerShell gelişmiş ayarı için eşdeğer değerlerle listelenir:
+
+|SharePoint yönetim merkezinden seçenek |MembersCanShare için eşdeğer PowerShell değeri |
+|----------------------------------------|------------------------------------------------|
+|**Site sahipleri ve üyeleri dosyaları, klasörleri ve siteyi paylaşabilir. Düzenleme izinlerine sahip kişiler dosya ve klasörleri paylaşabilir.**| MemberShareAll|
+|**Site sahipleri ve üyeleri ile Düzenleme izinlerine sahip kişiler dosya ve klasörleri paylaşabilir, ancak siteyi yalnızca site sahipleri paylaşabilir.**|MemberShareFileAndFolder|
+|**Yalnızca site sahipleri dosyaları, klasörleri ve siteyi paylaşabilir.**|MemberShareNone|
+
+Bu yapılandırma seçenekleri hakkında daha fazla bilgi için SharePoint topluluğu belgelerinden [üyelerin paylaşım şeklini değiştirme](/microsoft-365/community/sharepoint-security-a-team-effort#change-how-members-can-share) bölümüne bakın.
+
+Duyarlılık etiketi GUID'sinin **8faca7b8-8d20-48a3-8ea2-0f96310a848e** olduğu örnek:
+
+````powershell
+Set-Label -Identity 8faca7b8-8d20-48a3-8ea2-0f96310a848e -AdvancedSettings @{MembersCanShare="MemberShareNone"}
+````
+
+PowerShell gelişmiş ayarlarını belirtme konusunda daha fazla yardım için bkz. [Gelişmiş ayarları belirtmek için PowerShell ipuçları](sensitivity-labels-default-sharing-link.md#powershell-tips-for-specifying-the-advanced-settings).
 
 ## <a name="sensitivity-label-management"></a>Duyarlılık etiketi yönetimi
 
-Siteler ve gruplar için yapılandırılmış duyarlılık etiketleri oluşturmak, değiştirmek veya silmek için aşağıdaki kılavuzu kullanın.
+Siteler ve gruplar için yapılandırılan duyarlılık etiketlerini oluştururken, değiştirirken veya silerken aşağıdaki kılavuzu kullanın.
 
 ### <a name="creating-and-publishing-labels-that-are-configured-for-sites-and-groups"></a>Siteler ve gruplar için yapılandırılmış etiketler oluşturma ve yayımlama
 
-Site ve grup ayarları için yapılandırılan etiket kullanıcılarınız için bir etiket yayımlamak üzere aşağıdaki kılavuzu kullanın:
+Bu etiket site ve grup ayarları için yapılandırıldığında kullanıcılarınız için bir etiket yayımlamak için aşağıdaki kılavuzu kullanın:
 
-1. Duyarlılık etiketini oluşturduktan ve yapılandırdikten sonra, yalnızca birkaç test kullanıcısına uygulanan bir etiket ilkesine bu etiketi ekleyin.
+1. Duyarlılık etiketini oluşturup yapılandırdıktan sonra, bu etiketi yalnızca birkaç test kullanıcısı için geçerli olan bir etiket ilkesine ekleyin.
 
 2. Değişikliğin çoğaltılması için bekleyin:
     
    - Yeni etiket: En az bir saat bekleyin.
    - Mevcut etiket: En az 24 saat bekleyin.
     
-    Etiketlerin zamanlaması hakkında daha fazla bilgi için bkz. [Yeni etiketlerin ne zaman yürürlüğe girecekleri ve değişiklikler ne zaman etkili olacak](create-sensitivity-labels.md#when-to-expect-new-labels-and-changes-to-take-effect)?
+    Etiketlerin zamanlaması hakkında daha fazla bilgi için bkz. [Yeni etiketlerin ve değişikliklerin etkin hale gelmesini bekleme](create-sensitivity-labels.md#when-to-expect-new-labels-and-changes-to-take-effect) zamanı.
 
-3. Bu bekleme süresinde, 1. adımda oluşturduğunuz etiketle bir ekip, Microsoft 365 grubu veya SharePoint sitesi oluşturmak için test kullanıcı hesaplarından birini kullanın.
+3. Bu bekleme süresinden sonra test kullanıcı hesaplarından birini kullanarak 1. adımda oluşturduğunuz etiketle bir ekip, Microsoft 365 grubu veya SharePoint site oluşturun.
 
-4. Bu oluşturma işlemi sırasında hata yoksa, etiketi kiracılı tüm kullanıcılara yayımlamanın güvenli olduğunu bilirsiniz.
+4. Bu oluşturma işlemi sırasında hata yoksa, etiketi kiracınızdaki tüm kullanıcılara yayımlamanın güvenli olduğunu biliyorsunuz.
 
-### <a name="modifying-published-labels-that-are-configured-for-sites-and-groups"></a>Siteler ve gruplar için yapılandırılmış olarak yayımlanan etiketleri değiştirme
+### <a name="modifying-published-labels-that-are-configured-for-sites-and-groups"></a>Siteler ve gruplar için yapılandırılmış yayımlanmış etiketleri değiştirme
 
-En iyi yöntem olarak, etiket ekiplere, gruplara veya sitelere uygulandıktan sonra bir duyarlılık etiketi için site ve grup ayarlarını değiştirmezsiniz. Bunu yapmak için, değişikliklerin etiket uygulanmış olan tüm kapsayıcılara çoğaltılması için en az 24 saat beklemeyi unutmayın.
+En iyi uygulama olarak, etiket ekiplere, gruplara veya sitelere uygulandıktan sonra duyarlılık etiketi için site ve grup ayarlarını değiştirmeyin. Bunu yaparsanız, değişikliklerin etiketi uygulanmış olan tüm kapsayıcılara çoğaltılması için en az 24 saat beklemeyi unutmayın.
 
-Buna ek olarak, değişiklikleriniz Dış **kullanıcılara erişim ayarını da içerecekse** :
+Ayrıca, değişiklikleriniz **Dış kullanıcılar erişim** ayarını da içeriyorsa:
 
-- Yeni ayar yeni kullanıcılar için geçerlidir, ancak var olan kullanıcılar için geçerli değildir. Örneğin, bu ayar daha önce seçilmişse ve bunun sonucunda konuk kullanıcılar siteye erişmişse, etiket yapılandırmasında bu ayar temizlendikten sonra bu konuk kullanıcılar siteye yine de erişebilirsiniz.
+- Yeni ayar yeni kullanıcılar için geçerlidir ancak mevcut kullanıcılar için geçerli değildir. Örneğin, bu ayar daha önce seçilmişse ve sonuç olarak, konuk kullanıcılar siteye eriştiyse, etiket yapılandırmasında bu ayar temizlendikten sonra bu konuk kullanıcılar siteye erişmeye devam edebilir.
 
-- Grup özellikleri gizliMembership ve roleEnabled ile ilgili gizlilik ayarları güncelleştirilmez.
+- hiddenMembership ve roleEnabled grup özelliklerinin gizlilik ayarları güncelleştirilmez.
 
 ### <a name="deleting-published-labels-that-are-configured-for-sites-and-groups"></a>Siteler ve gruplar için yapılandırılmış yayımlanmış etiketleri silme
 
-Site ve grup ayarlarının etkin olduğu bir duyarlılık etiketini siler ve bu etiket bir veya birden çok etiket ilkelerine dahil edilirse, bu eylem yeni ekipler, gruplar ve siteler için oluşturma hataları oluşturulmasına yol açabilir. Bu durumdan kaçınmak için aşağıdaki kılavuzu kullanın:
+Site ve grup ayarlarının etkinleştirildiği bir duyarlılık etiketini silerseniz ve bu etiket bir veya daha fazla etiket ilkesine dahil edilirse, bu eylem yeni ekipler, gruplar ve siteler için oluşturma hatalarına neden olabilir. Bu durumu önlemek için aşağıdaki kılavuzu kullanın:
 
-1. Duyarlılık etiketini, etiketin olduğu tüm etiket ilkelerinden kaldırın.
+1. Duyarlılık etiketini, etiketi içeren tüm etiket ilkelerinden kaldırın.
 
 2. En az bir saat bekleyin.
 
 3. Bu bekleme süresinden sonra bir ekip, grup veya site oluşturmayı deneyin ve etiketin artık görünür olmadığını onaylayın.
 
-4. Duyarlılık etiketi görünür durumda değilse artık etiketi güvenle silebilirsiniz.
+4. Duyarlılık etiketi görünmüyorsa, artık etiketi güvenle silebilirsiniz.
 
-## <a name="how-to-apply-sensitivity-labels-to-containers"></a>Duyarlılık etiketleri kapsayıcılara nasıl uygulanır
+## <a name="how-to-apply-sensitivity-labels-to-containers"></a>Kapsayıcılara duyarlılık etiketleri uygulama
 
-Artık duyarlılık etiketini veya etiketlerini aşağıdaki kapsayıcılara uygulayabilirsiniz:
+Artık duyarlılık etiketini veya etiketlerini aşağıdaki kapsayıcılara uygulamaya hazırsınız:
 
-- [Microsoft 365 Ad'de Grup Grubu](#apply-sensitivity-labels-to-microsoft-365-groups)
-- [Microsoft Teams sitesini ziyaret edin](#apply-a-sensitivity-label-to-a-new-team)
-- [Microsoft 365'da grup Web üzerinde Outlook](#apply-a-sensitivity-label-to-a-new-group-in-outlook-on-the-web)
-- [SharePoint sitesi](#apply-a-sensitivity-label-to-a-new-site)
+- [Azure AD'de Microsoft 365 grubu](#apply-sensitivity-labels-to-microsoft-365-groups)
+- [ekip sitesini Microsoft Teams](#apply-a-sensitivity-label-to-a-new-team)
+- [Web üzerinde Outlook'da Microsoft 365 grubu](#apply-a-sensitivity-label-to-a-new-group-in-outlook-on-the-web)
+- [siteyi SharePoint](#apply-a-sensitivity-label-to-a-new-site)
 
-Birden çok siteye duyarlılık etiketi [uygulamaniz gerekirse PowerShell'i kullanabilirsiniz](#use-powershell-to-apply-a-sensitivity-label-to-multiple-sites).
+[Birden çok siteye duyarlılık etiketi uygulamanız](#use-powershell-to-apply-a-sensitivity-label-to-multiple-sites) gerekiyorsa PowerShell'i kullanabilirsiniz.
 
-### <a name="apply-sensitivity-labels-to-microsoft-365-groups"></a>Gruplara duyarlılık Microsoft 365 uygulama
+### <a name="apply-sensitivity-labels-to-microsoft-365-groups"></a>duyarlılık etiketlerini Microsoft 365 gruplarına uygulama
 
-Artık duyarlılık etiketini veya etiketlerini gruplara veya gruplara Microsoft 365 hazır mısınız? Yönergeler için Azure AD belgelerine geri dönme:
+Artık duyarlılık etiketini veya etiketlerini Microsoft 365 gruplarına uygulamaya hazırsınız. Yönergeler için Azure AD belgelerine dönün:
 
-- [Yeni grup için bir etiket Azure portal](/azure/active-directory/users-groups-roles/groups-assign-sensitivity-labels#assign-a-label-to-a-new-group-in-azure-portal)
+- [Azure portal'da yeni bir gruba etiket atama](/azure/active-directory/users-groups-roles/groups-assign-sensitivity-labels#assign-a-label-to-a-new-group-in-azure-portal)
 
-- [Aynı grupta var olan bir gruba etiket Azure portal](/azure/active-directory/users-groups-roles/groups-assign-sensitivity-labels#assign-a-label-to-an-existing-group-in-azure-portal)
+- [Azure portal'de var olan bir gruba etiket atama](/azure/active-directory/users-groups-roles/groups-assign-sensitivity-labels#assign-a-label-to-an-existing-group-in-azure-portal)
 
-- [Çalışma grubunda var olan bir gruptan Azure portal](/azure/active-directory/users-groups-roles/groups-assign-sensitivity-labels#remove-a-label-from-an-existing-group-in-azure-portal).
+- [Azure portal'da var olan bir gruptan etiket kaldırma](/azure/active-directory/users-groups-roles/groups-assign-sensitivity-labels#remove-a-label-from-an-existing-group-in-azure-portal).
 
-### <a name="apply-a-sensitivity-label-to-a-new-team"></a>Yeni bir ekipe duyarlılık etiketi uygulama
+### <a name="apply-a-sensitivity-label-to-a-new-team"></a>Yeni bir takıma duyarlılık etiketi uygulama
 
-Kullanıcılar, ekiplerde yeni ekipler oluşturduklarında duyarlılık Microsoft Teams. Duyarlılık açılan listesinden etiket **seçenler** , gizlilik ayarı etiket yapılandırmasını yansıtacak şekilde değişebilir. Dış kullanıcıların etiket için seçtiğiniz erişim ayarına bağlı olarak, kullanıcılar kuruluş dışından kişi ek bilgilere ek bilgilere sahip olabilir veya ekynek eknez.
+Kullanıcılar, Microsoft Teams'da yeni ekipler oluştururken duyarlılık etiketlerini seçebilir. **Duyarlılık** açılan listesinden etiketi seçtiklerinde, gizlilik ayarı etiket yapılandırmasını yansıtacak şekilde değişebilir. Etiket için seçtiğiniz dış kullanıcılar erişim ayarına bağlı olarak, kullanıcılar kuruluş dışındaki kişileri ekise ekleyebilir veya ekleyemez.
 
-[E-Teams için duyarlılık etiketleri hakkında daha fazla Teams](/microsoftteams/sensitivity-labels)
+[Teams için duyarlılık etiketleri hakkında daha fazla bilgi edinin](/microsoftteams/sensitivity-labels)
 
-![Yeni ekip oluştururken gizlilik ayarı.](../media/privacy-setting-new-team.png)
+![Yeni bir ekip oluştururken gizlilik ayarı.](../media/privacy-setting-new-team.png)
 
 Ekibi oluşturduktan sonra duyarlılık etiketi tüm kanalların sağ üst köşesinde görünür.
 
 ![Duyarlılık etiketi ekipte görünür.](../media/privacy-setting-teams.png)
 
-Hizmet aynı duyarlılık etiketini ekip grubuna ve ekip sitesine Microsoft 365 şekilde SharePoint uygular.
+Hizmet, aynı duyarlılık etiketini otomatik olarak Microsoft 365 grubuna ve bağlı SharePoint ekip sitesine uygular.
 
-### <a name="apply-a-sensitivity-label-to-a-new-group-in-outlook-on-the-web"></a>Yeni bir gruba duyarlılık etiketi Web üzerinde Outlook
+### <a name="apply-a-sensitivity-label-to-a-new-group-in-outlook-on-the-web"></a>Web üzerinde Outlook'da yeni bir gruba duyarlılık etiketi uygulama
 
-İçerik Web üzerinde Outlook yeni bir grup sanız, yayımlanan etiketler için **Duyarlılık seçeneğini belirtin** veya değiştirebilirsiniz:
+Web üzerinde Outlook'da, yeni bir grup oluşturduğunuzda yayımlanan etiketler için **Duyarlılık** seçeneğini belirleyebilir veya değiştirebilirsiniz:
 
-![Grup oluşturma ve Duyarlılık'ın altında bir seçenek seçme.](../media/sensitivity-label-new-group.png)
+![Grup oluşturma ve Duyarlılık altında bir seçenek belirleme.](../media/sensitivity-label-new-group.png)
 
-### <a name="apply-a-sensitivity-label-to-a-new-site"></a>Yeni bir siteye duyarlılık etiketi uygulama
+### <a name="apply-a-sensitivity-label-to-a-new-site"></a>Yeni siteye duyarlılık etiketi uygulama
 
-Yöneticiler ve son kullanıcılar modern ekip siteleri ve iletişim siteleri oluşturduklarında duyarlılık etiketlerini seçerek [Gelişmiş](/sharepoint/create-site-collection) **ayarlar'ı genişleter**:
+Yöneticiler ve son kullanıcılar [modern ekip siteleri ve iletişim siteleri oluştururken](/sharepoint/create-site-collection) duyarlılık etiketlerini seçebilir ve **Gelişmiş ayarlar'ı** genişletebilir:
 
-![Site oluşturma ve Duyarlılık'ın altında bir seçenek seçme.](../media/sensitivity-label-new-communication-site.png)
+![Bir site oluşturma ve Duyarlılık altında bir seçenek belirleme.](../media/sensitivity-label-new-communication-site.png)
 
-Açılan kutuda seçimin etiket adları görüntülenir ve yardım simgesi, kullanıcıların uygulanacak doğru etiketi belirlemesine yardımcı olan araç ipucuyla birlikte tüm etiket adlarını görüntüler.
+Açılan kutuda seçimin etiket adları görüntülenir ve yardım simgesi tüm etiket adlarını araç ipucuyla birlikte görüntüler ve bu da kullanıcıların uygulanacak doğru etiketi belirlemesine yardımcı olabilir.
 
-Etiket uygulandığında ve kullanıcılar siteye göz atarak etiketin adını ve uygulanan ilkeleri görebilir. Örneğin, bu site Gizli olarak **etiketlenmiş** ve gizlilik ayarı Özel olarak **ayarlanmıştır**:
+Etiket uygulandığında ve kullanıcılar siteye göz attığında, etiketin adını ve uygulanan ilkeleri görürler. Örneğin, bu site **Gizli** olarak etiketlenmiş ve gizlilik ayarı **Özel** olarak ayarlanmıştır:
 
 ![Duyarlılık etiketi uygulanmış bir site.](../media/sensitivity-label-site.png)
 
 ### <a name="use-powershell-to-apply-a-sensitivity-label-to-multiple-sites"></a>Birden çok siteye duyarlılık etiketi uygulamak için PowerShell kullanma
 
-Birçok siteye duyarlılık etiketi uygulamak için [Set-SPOSite](/powershell/module/sharepoint-online/set-sposite) ve [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant) cmdlet'ini geçerli [SharePoint Online](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) Yönetim Kabuğu'nun *sensitivityLabel* parametresiyle kullanabilirsiniz. Siteler herhangi bir SharePoint site koleksiyonu veya OneDrive olabilir.
+Birçok siteye duyarlılık etiketi uygulamak için geçerli [SharePoint Çevrimiçi Yönetim Kabuğu'ndan](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) *DuyarlılıkLabel* parametresiyle [Set-SPOSite](/powershell/module/sharepoint-online/set-sposite) ve [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant) cmdlet'ini kullanabilirsiniz. Siteler herhangi bir SharePoint site koleksiyonu veya OneDrive site olabilir.
 
-SharePoint Online Yönetim Kabuğu'nın 16.0.19418.12000 veya sonraki bir sürümünün yüklü olduğundan emin olun.
+SharePoint Online Management Shell'in 16.0.19418.12000 veya sonraki bir sürümüne sahip olduğunuzdan emin olun.
 
-1. Yönetici Olarak Çalıştır seçeneğini kullanarak bir PowerShell **oturumu** açın.
+1. **Yönetici Olarak Çalıştır** seçeneğiyle bir PowerShell oturumu açın.
 
-2. Etiketinizin GUID'sini [bilmiyorsanız: güvenlik Bağlan Uyumluluk & PowerShell'e](/powershell/exchange/connect-to-scc-powershell) yönlendirin ve duyarlılık etiketleriyle GUID'lerinin listesini elde edin.
+2. Etiket GUID'nizi bilmiyorsanız: [Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell) ve duyarlılık etiketlerinin ve guid'lerinin listesini alın.
 
    ```powershell
    Get-Label |ft Name, Guid
    ```
 
-3. Şimdi [SharePoint Online PowerShell'e](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) bağlanın ve etiket GUID'nizi değişken olarak depolar. Örneğin:
+3. Şimdi [SharePoint Online PowerShell'e bağlanın](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) ve etiket GUID'nizi değişken olarak depolayın. Örneğin:
 
    ```powershell
    $Id = [GUID]("e48058ea-98e8-4940-8db0-ba1310fd955e")
    ```
 
-4. URL'lerinde tanımlayıcı dizenin ortak olduğu birden çok siteyi tanımlayan yeni bir değişken oluşturun. Örneğin:
+4. URL'lerinde ortak bir tanımlayıcı dizesi olan birden çok siteyi tanımlayan yeni bir değişken oluşturun. Örneğin:
 
    ```powershell
    $sites = Get-SPOSite -IncludePersonalSite $true -Limit all -Filter "Url -like 'documents"
@@ -312,34 +338,34 @@ SharePoint Online Yönetim Kabuğu'nın 16.0.19418.12000 veya sonraki bir sürü
    $sites | ForEach-Object {Set-SPOTenant $_.url -SensitivityLabel $Id}
    ```
 
-Bu komut dizisi kiracınız genelinde birden çok siteyi aynı duyarlılık etiketiyle etiketlemenize olanak sağlar ve bu nedenle site başına yapılandırmaya uygun Set-SPOTenant cmdlet'ini değil Set-SPOSite cmdlet'ini kullanırsınız. Bununla birlikte, Set-SPOSite sitelerin her biri için aşağıdaki komutu yinelayarak belirli sitelere farklı bir etiket uygulamaniz gerekirken Set-SPOSite cmdlet'ini kullanın: `Set-SPOSite -Identity <URL> -SensitivityLabel "<labelguid>"`
+Bu komut serisi, kiracınızdaki birden çok siteyi aynı duyarlılık etiketiyle etiketlemenize olanak tanır. Bu nedenle, site başına yapılandırmaya yönelik Set-SPOSite cmdlet'i yerine Set-SPOTenant cmdlet'ini kullanırsınız. Ancak, bu sitelerin her biri için aşağıdaki komutu yineleyerek belirli sitelere farklı bir etiket uygulamanız gerektiğinde Set-SPOSite cmdlet'ini kullanın: `Set-SPOSite -Identity <URL> -SensitivityLabel "<labelguid>"`
 
-## <a name="view-and-manage-sensitivity-labels-in-the-sharepoint-admin-center"></a>Duyarlılık etiketlerini yönetim merkezinde görüntüleme SharePoint yönetme
+## <a name="view-and-manage-sensitivity-labels-in-the-sharepoint-admin-center"></a>SharePoint yönetim merkezinde duyarlılık etiketlerini görüntüleme ve yönetme
 
-Uygulanan duyarlılık etiketlerini görüntülemek, sıralamak ve aramak için yeni yönetim <a href="https://go.microsoft.com/fwlink/?linkid=2185220" target="_blank">**merkezinde**</a> etkin siteleri SharePoint kullanın. Önce Duyarlılık sütununu **eklemeniz** gerekiyor olabilir:
+Uygulanan duyarlılık etiketlerini görüntülemek, sıralamak ve aramak için yeni SharePoint yönetim merkezinde <a href="https://go.microsoft.com/fwlink/?linkid=2185220" target="_blank">**Etkin siteleri**</a> kullanın. Önce **Duyarlılık** sütununu eklemeniz gerekebilir:
 
-![Etkin siteler sayfasında duyarlılık sütunu.](../media/manage-site-sensitivity-labels.png)
+![Etkin siteler sayfasındaki Duyarlılık sütunu.](../media/manage-site-sensitivity-labels.png)
 
-Etkin siteler sayfasından siteleri yönetme hakkında daha fazla bilgi ve sütun ekleme hakkında daha fazla bilgi için bkz. Yeni Yönetim [Merkezi'nde SharePoint yönetme](/sharepoint/manage-sites-in-new-admin-center).
+Sütun ekleme de dahil olmak üzere, Etkin siteler sayfasından siteleri yönetme hakkında daha fazla bilgi için bkz. [Yeni SharePoint yönetim merkezinde siteleri yönetme](/sharepoint/manage-sites-in-new-admin-center).
 
-Ayrıca, bu sayfadan bir etiket değiştirebilir ve uygulayabilirsiniz:
+Ayrıca bu sayfadan bir etiketi değiştirebilir ve uygulayabilirsiniz:
 
 1. Ayrıntılar bölmesini açmak için site adını seçin.
 
-2. **İlkeler** sekmesini ve ardından Duyarlılık **ayarı** için **Düzenle'yi** seçin.
+2. **İlkeler** sekmesini ve ardından **Duyarlılık** ayarı için **Düzenle'yi** seçin.
 
-3. Duyarlılık **ayarını düzenle bölmesinde** siteye uygulamak istediğiniz duyarlılık etiketini seçin. Duyarlılık etiketlerinin belirli kullanıcılara atandığı kullanıcı uygulamalarının aksine yönetim merkezi kiracınız için tüm duyarlılık etiketlerini görüntüler. Bir etiket seçtikten sonra Kaydet'i **seçin**.
+3. **Duyarlılığı düzenle ayarı** bölmesinden, siteye uygulamak istediğiniz duyarlılık etiketini seçin. Belirli kullanıcılara duyarlılık etiketlerinin atanabildiği kullanıcı uygulamalarından farklı olarak, yönetim merkezi kiracınız için tüm duyarlılık etiketlerini görüntüler. Bir etiket seçtikten sonra **Kaydet'i** seçin.
 
 ## <a name="support-for-sensitivity-labels"></a>Duyarlılık etiketleri desteği
 
-Duyarlılık etiketlerini destekleyen yönetim merkezleri kullanırken, Azure Active Directory portalı dışında kiracınız için tüm duyarlılık etiketlerini duyarsınız. Karşılaştırmada, yayımlama ilkelerine göre duyarlılık etiketlerini filtreleyene kullanıcı uygulamaları ve hizmetler bu etiketlerin bir alt kümesini görmenizi neden olabilir. Ayrıca Azure Active Directory portalı yayımlama ilkelerine göre etiketlere de filtre uygulamaz.
+Duyarlılık etiketlerini destekleyen yönetim merkezlerini kullandığınızda, Azure Active Directory portalı dışında kiracınız için tüm duyarlılık etiketlerini görürsünüz. Buna karşılık, duyarlılık etiketlerini yayımlama ilkelerine göre filtreleyen kullanıcı uygulamaları ve hizmetleri, bu etiketlerin bir alt kümesini görmenizi sağlayabilir. Azure Active Directory portalı, etiketleri yayımlama ilkelerine göre de filtreler.
 
-Aşağıdaki uygulamalar ve hizmetler, siteler ve grup ayarları için yapılandırılmış duyarlılık etiketlerini destekler:
+Aşağıdaki uygulamalar ve hizmetler, siteler ve grup ayarları için yapılandırılan duyarlılık etiketlerini destekler:
 
 - Yönetim merkezleri:
 
-  - SharePoint merkezi
-  - Teams merkezi
+  - SharePoint yönetim merkezi
+  - Teams yönetim merkezi
   - Microsoft 365 yönetici merkezi
   - Microsoft 365 uyumluluk merkezi
   - Azure Active Directory portalı
@@ -348,16 +374,16 @@ Aşağıdaki uygulamalar ve hizmetler, siteler ve grup ayarları için yapıland
 
   - SharePoint
   - Teams
-  - Web üzerinde Outlook, macOS, Windows Android için ve
-  - Formlar
+  - Web üzerinde Outlook ve Windows, macOS, iOS ve Android için
+  - Forms
   - Stream
   - Planner 
 
-Aşağıdaki uygulama ve hizmetler şu anda siteler ve grup ayarları için yapılandırılmış duyarlılık etiketlerini desteklememektedir:
+Aşağıdaki uygulamalar ve hizmetler şu anda siteler ve grup ayarları için yapılandırılmış duyarlılık etiketlerini desteklemez:
 
 - Yönetim merkezleri:
 
-  - Exchange merkezi
+  - Exchange yönetim merkezi
 
 - Kullanıcı uygulamaları ve hizmetleri:
 
@@ -368,103 +394,103 @@ Aşağıdaki uygulama ve hizmetler şu anda siteler ve grup ayarları için yap�
 
 ## <a name="classic-azure-ad-group-classification"></a>Klasik Azure AD grup sınıflandırması
 
-Kapsayıcılar için duyarlılık etiketlerini etkinleştirdikten sonra Azure AD'nin grup sınıflandırmaları artık Microsoft 365 tarafından destekleniyor ve duyarlılık etiketlerini destekleyen sitelerde görüntülenmez. Bununla birlikte, eski sınıflandırmalarınızı duyarlılık etiketlerine dönüştürabilirsiniz.
+Kapsayıcılar için duyarlılık etiketlerini etkinleştirdikten sonra Azure AD'nin grup sınıflandırmaları artık Microsoft 365 tarafından desteklenmez ve duyarlılık etiketlerini destekleyen sitelerde görüntülenmez. Ancak eski sınıflandırmalarınızı duyarlılık etiketlerine dönüştürebilirsiniz.
 
-Eski grup sınıflandırmayı eski grup sınıflandırması olarak nasıl kullandıklarına bir örnek SharePoint[" site SharePoint sınıflandırmayı değerlendirmeye bakın](/sharepoint/dev/solution-guidance/modern-experience-site-classification).
+SharePoint için eski grup sınıflandırmasını nasıl kullanmış olabileceğiniz bir örnek olarak bkz. ["modern" siteler sınıflandırmasını SharePoint](/sharepoint/dev/solution-guidance/modern-experience-site-classification).
 
-Bu sınıflandırmalar, Azure AD PowerShell veya PnP Core kitaplığı kullanılarak ve ayar için değerler tanımlayarak yapılandırılmıştır `ClassificationList` . Kiracınız sınıflandırma değerleri tanımlanmışsa, [AzureADPreview PowerShell modülünde aşağıdaki komutu çalıştırabilirsiniz](https://www.powershellgallery.com/packages/AzureADPreview):
+Bu sınıflandırmalar Azure AD PowerShell veya PnP Core kitaplığı kullanılarak yapılandırıldı ve ayar için `ClassificationList` değerler tanımlandı. Kiracınızda tanımlanmış sınıflandırma değerleri varsa, [AzureADPreview PowerShell modülünden](https://www.powershellgallery.com/packages/AzureADPreview) aşağıdaki komutu çalıştırdığınızda bunlar gösterilir:
 
 ```powershell
 ($setting["ClassificationList"])
 ```
 
-Eski sınıflandırmalarınızı duyarlılık etiketlerine dönüştürmek için, birini yapın:
+Eski sınıflandırmalarınızı duyarlılık etiketlerine dönüştürmek için aşağıdakilerden birini yapın:
 
-- Varolan etiketleri kullanma: Zaten yayımlanmış olan mevcut duyarlılık etiketlerini düzenleyerek siteler ve gruplar için istediğiniz etiket ayarlarını belirtin.
+- Mevcut etiketleri kullan: Zaten yayımlanmış olan duyarlılık etiketlerini düzenleyerek siteler ve gruplar için istediğiniz etiket ayarlarını belirtin.
 
-- Yeni etiket oluşturma: Var olan sınıflandırmalarla aynı adlara sahip yeni duyarlılık etiketleri oluşturarak ve yayımarak, siteler ve gruplar için istediğiniz etiket ayarlarını belirtin.
+- Yeni etiketler oluşturma: Mevcut sınıflandırmalarınızla aynı adlara sahip yeni duyarlılık etiketleri oluşturup yayımlayarak siteler ve gruplar için istediğiniz etiket ayarlarını belirtin.
 
-Ardından:
+Sonra:
 
-1. Mevcut kullanıcı gruplarına ve sitelere ad eşlemesi Microsoft 365 duyarlılık SharePoint için PowerShell kullanın. Yönergeler için sonraki bölüme bakın.
+1. PowerShell kullanarak duyarlılık etiketlerini mevcut Microsoft 365 gruplarına ve SharePoint sitelerine ad eşlemesini kullanarak uygulayın. Yönergeler için sonraki bölüme bakın.
 
-2. Mevcut grup ve sitelerden eski sınıflandırmaları kaldırın.
+2. Mevcut gruplardan ve sitelerden eski sınıflandırmaları kaldırın.
 
-Kullanıcıların henüz duyarlılık etiketlerini desteklememiş uygulama ve hizmetlerde yeni gruplar oluşturmasını engelleyesiniz, ancak kullanıcıların eski sınıflandırmalarla oluşturduğu yeni grupları bakmak için yinelenen bir PowerShell betiği çalıştırabilirsiniz ve bunları duyarlılık etiketlerini kullanmak üzere dönüştürebilirsiniz.
+Kullanıcıların uygulama ve hizmetlerde henüz duyarlılık etiketlerini desteklemeyen yeni gruplar oluşturmasını engelleyemezsiniz ancak kullanıcıların eski sınıflandırmalarla oluşturduğu yeni grupları aramak için yinelenen bir PowerShell betiği çalıştırabilir ve bunları duyarlılık etiketlerini kullanacak şekilde dönüştürebilirsiniz.
 
-Siteler ve gruplar için duyarlılık etiketlerinin ve Azure AD sınıflandırmalarının birlikte çıtalarını yönetmenize yardımcı olması için bkz. Azure Active Directory grupları için sınıflandırma ve [duyarlılık Microsoft 365 bkz](migrate-aad-classification-sensitivity-labels.md).
+Siteler ve gruplar için duyarlılık etiketlerinin ve Azure AD sınıflandırmalarının bir arada bulunmalarını yönetmenize yardımcı olmak için bkz. [Microsoft 365 grupları için sınıflandırma ve duyarlılık etiketleri Azure Active Directory](migrate-aad-classification-sensitivity-labels.md).
 
-### <a name="use-powershell-to-convert-classifications-for-microsoft-365-groups-to-sensitivity-labels"></a>Farklı kullanıcı gruplarının sınıflandırmalarını duyarlılık etiketlerine Microsoft 365 için PowerShell kullanma
+### <a name="use-powershell-to-convert-classifications-for-microsoft-365-groups-to-sensitivity-labels"></a>Microsoft 365 gruplarının sınıflandırmalarını duyarlılık etiketlerine dönüştürmek için PowerShell kullanma
 
-1. İlk olarak, [Güvenlik ve Uyumluluk & PowerShell'e bağlanın](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
+1. İlk olarak [Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanın](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
 
-   Örneğin, yönetici olarak çalıştırdınız bir PowerShell oturumunda genel yönetici hesabıyla oturum açın:
+   Örneğin, yönetici olarak çalıştırdığınız bir PowerShell oturumunda genel yönetici hesabıyla oturum açın:
 
-2. Get-Label cmdlet'ini kullanarak duyarlılık etiketlerinin ve [GUID'lerinin](/powershell/module/exchange/get-label) listesini elde edin:
+2. [Get-Label](/powershell/module/exchange/get-label) cmdlet'ini kullanarak duyarlılık etiketlerinin ve GUID'lerin listesini alın:
 
    ```powershell
    Get-Label |ft Name, Guid
    ```
 
-3. Kullanıcı gruplarınıza uygulamak istediğiniz duyarlılık etiketlerinin GUID'lerini Microsoft 365 kullanın.
+3. Microsoft 365 gruplarınıza uygulamak istediğiniz duyarlılık etiketlerinin GUID'lerini not edin.
 
-4. Şimdi [Exchange Online PowerShell'e](/powershell/exchange/connect-to-exchange-online-powershell) ayrı bir Windows PowerShell bağlanın.
+4. Şimdi [ayrı bir Windows PowerShell penceresinde Exchange Online PowerShell'e bağlanın](/powershell/exchange/connect-to-exchange-online-powershell).
 
-5. Şu anda "Genel" sınıflandırması olan grupların listesini almak için örnek olarak aşağıdaki komutu kullanın:
+5. Şu anda "Genel" sınıflandırmasına sahip grupların listesini almak için örnek olarak aşağıdaki komutu kullanın:
 
    ```PowerShell
    $Groups= Get-UnifiedGroup | Where {$_.classification -eq "General"}
    ```
 
-6. Her grup için yeni duyarlılık etiketi GUID'lerini ekleyin. Örneğin:
+6. Her grup için yeni duyarlılık etiketi GUID'sini ekleyin. Örneğin:
 
     ```PowerShell
     foreach ($g in $groups)
     {Set-UnifiedGroup -Identity $g.Identity -SensitivityLabelId "457fa763-7c59-461c-b402-ad1ac6b703cc"}
     ```
 
-7. Kalan grup sınıflandırmaları için 5. ve 6. adımları yinelayın.
+7. Kalan grup sınıflandırmalarınız için 5. ve 6. adımları yineleyin.
 
 ## <a name="auditing-sensitivity-label-activities"></a>Duyarlılık etiketi etkinliklerini denetleme
 
 > [!IMPORTANT]
-> Kapsayıcıları koruyan etiketler için yalnızca Gruplar & siteleri kapsamını seçerek etiket ayrımını kullanıyorsanız: Bu bölümde açıklanan Algılanan belge duyarlılığı  eşleşmesi denetim olayı ve e-posta nedeniyle, Dosyalar **&** e-postaları kapsamında olan etiketlerden [](sensitivity-labels.md#label-priority-order-matters) önce etiketlere sıralamayı göz önünde bulundurabilirsiniz **.** 
+> Kapsayıcıları koruyan etiketler için yalnızca **Gruplar & siteleri** kapsamını seçerek etiket ayrımı kullanıyorsanız: Bu bölümde açıklanan **Algılanan belge duyarlılığı uyuşmazlığı** denetim olayı ve e-posta nedeniyle, **etiketlerden önce Dosyalar & e-postaları** kapsamına sahip etiketlerden önce [sıralamayı](sensitivity-labels.md#label-priority-order-matters) göz önünde bulundurun. 
 
-Birisi bir belgeyi duyarlılık etiketiyle korunan bir siteye yüklese ve belgesinde siteye uygulanan duyarlılık etiketinden daha yüksek öncelikli [](sensitivity-labels.md#label-priority-order-matters) bir duyarlılık etiketi varsa, bu eylem engellenmiş değildir. Örneğin, genel etiketini bir sitenin SharePoint  ve birisi bu siteye Gizli etiketli bir belge **yükledi**. Daha yüksek önceliğe sahip bir duyarlılık etiketi daha düşük öncelik sırasına sahip içerikten daha fazla duyarlılık olan içeriği tanım olduğundan, bu durum bir güvenlik sorunu olabilir.
+Birisi duyarlılık etiketiyle korunan bir siteye belge yüklerse ve belgenin öncelik duyarlılık etiketi siteye uygulanan duyarlılık etiketinden [daha yüksekse](sensitivity-labels.md#label-priority-order-matters) , bu eylem engellenmez. Örneğin, **genel** etiketini bir SharePoint sitesine uyguladınız ve birisi bu siteye **Gizli** etiketli bir belge yükler. Daha yüksek önceliğe sahip bir duyarlılık etiketi, daha düşük öncelik sırasına sahip içerikten daha duyarlı içeriği tanımladığından, bu durum bir güvenlik sorunu olabilir.
 
-Eylem engellenmiş olsa da, denetlenr ve varsayılan olarak, belgeyi karşıya yük eden kişiye ve site yöneticisine otomatik olarak bir e-posta oluşturulur. Sonuç olarak, hem kullanıcı hem de yöneticiler etiket önceliğini bu şekilde yanlış hizaya sahip olan belgeleri tanımlayabilir ve gerekirse harekete geçebilirsiniz. Örneğin, karşıya yüklenen belgeyi siteden silin veya taşıyın.
+Eylem engellenmese de denetlenip varsayılan olarak belgeyi karşıya yükleyen kişiye ve site yöneticisine otomatik olarak bir e-posta oluşturur. Sonuç olarak, hem kullanıcı hem de yöneticiler etiket önceliğini yanlış hizalayan belgeleri tanımlayabilir ve gerekirse eylem gerçekleştirebilir. Örneğin, karşıya yüklenen belgeyi siteden silin veya taşıyın.
 
-Belgenin siteye uygulanan duyarlılık etiketinden daha düşük öncelikli bir duyarlılık etiketi olması güvenlik sorununa neden olmaz. Örneğin, Genel etiketli bir **belge** Gizli etiketli bir siteye **karşıya karşıya yük olur**. Bu senaryoda, denetim olayı ve e-posta oluşturulmaz.
+Belgenin, siteye uygulanan duyarlılık etiketinden daha düşük öncelikli duyarlılık etiketine sahip olması güvenlikle ilgili bir sorun oluşturmaz. Örneğin, **Genel** etiketli bir belge **Gizli** etiketli bir siteye yüklenir. Bu senaryoda, bir denetim olayı ve e-posta oluşturulmaz.
 
 > [!NOTE]
-> Aynı kullanıcıların bir etiketi daha düşük bir sınıflandırmaya düşürmek için gerekçe sağlamasını gerektiren ilke seçeneğinde olduğu gibi, aynı üst etiketin alt etiketlerinin de aynı önceliğe sahip olduğu kabul edilir.
+> Kullanıcıların etiketi daha düşük bir sınıflandırmaya değiştirmek için gerekçe sağlamasını gerektiren ilke seçeneğinde olduğu gibi, aynı üst etikete ait alt etiketlerin de aynı önceliğe sahip olduğu kabul edilir.
 
-Bu olayın denetim günlüğünde arama yapmak için, Dosya ve  sayfa etkinlikleri kategorisindeki Algılanan belge **duyarlılığı uygunluğu yok mu? hatalarına** bakın.
+Bu olayın denetim günlüğünde arama yapmak için **Dosya ve sayfa etkinlikleri** kategorisinde **Algılanan belge duyarlılığı uyuşmazlığı'nı** arayın.
 
-Otomatik olarak oluşturulan e-postada konu  Uyumlu olmayan duyarlılık etiketi algılandı ve e-posta iletisi, karşıya yüklenen belge ve sitenin bağlantısıyla etiket uyumsuzluğuna açıklama ekler. Ayrıca, kullanıcıların duyarlılık etiketini nasıl değiştir bağlantıya sahip olduğunu açıklayan bir belge bağlantısı da içerir. Bu otomatik e-postalar özelleştir kullanılamaz, ancak [Set-SPOTenant'ın aşağıdaki PowerShell komutunu kullanarak bu e-postaların gönderilmelerini önebilirsiniz](/powershell/module/sharepoint-online/set-spotenant):
+Otomatik olarak oluşturulan e-postada konu **Uyumsuz duyarlılık etiketi algılandı** ve e-posta iletisinde, karşıya yüklenen belge ve sitenin bağlantısıyla etiketleme uyuşmazlığı açıklanmaktadır. Ayrıca, kullanıcıların duyarlılık etiketini nasıl değiştirebileceğini açıklayan bir belge bağlantısı içerir. Bu otomatik e-postalar özelleştirilemez, ancak [Set-SPOTenant'tan](/powershell/module/sharepoint-online/set-spotenant) aşağıdaki PowerShell komutunu kullandığınızda bunların gönderilmesini engelleyebilirsiniz:
 
 ```PowerShell
 Set-SPOTenant -BlockSendLabelMismatchEmail $True
 ```
 
-Birisi bir site veya gruptan duyarlılık etiketi eklesin veya kaldırıyorsa, bu etkinlikler de denetlenmektedir, ancak otomatik olarak bir e-posta oluşturmadan yapılır.
+Birisi bir siteye veya gruba duyarlılık etiketi eklediğinde veya kaldırdığında, bu etkinlikler de denetlenir ancak otomatik olarak e-posta oluşturmaz.
 
-Tüm bu denetim olayları Duyarlılık etiketi [etkinlikleri kategorisinde](search-the-audit-log-in-security-and-compliance.md#sensitivity-label-activities) bulunabilir. Denetim günlüğünde arama yapmak için yönergeler için bkz. [Güvenlik ve Uyumluluk Merkezi'nde denetim & arama](search-the-audit-log-in-security-and-compliance.md).
+Tüm bu denetim olayları [Duyarlılık etiketi etkinlikleri](search-the-audit-log-in-security-and-compliance.md#sensitivity-label-activities) kategorisinde bulunabilir. Denetim günlüğünde arama yapma yönergeleri için bkz [. Güvenlik & Uyumluluk Merkezi'nde denetim günlüğünde arama](search-the-audit-log-in-security-and-compliance.md) yapma.
 
 ## <a name="how-to-disable-sensitivity-labels-for-containers"></a>Kapsayıcılar için duyarlılık etiketlerini devre dışı bırakma
 
-[PowerShell'de](/azure/active-directory/users-groups-roles/groups-assign-sensitivity-labels#enable-sensitivity-label-support-in-powershell) duyarlılık Microsoft Teams, Microsoft 365 grupları ve SharePoint siteleri için duyarlılık etiketlerini kapatabilirsiniz. Bununla birlikte, özelliği devre dışı bırakmak için 5. adımda bunu belirtin `$setting["EnableMIPLabels"] = "False"`.
+[PowerShell'de duyarlılık etiketi desteğini etkinleştirme](/azure/active-directory/users-groups-roles/groups-assign-sensitivity-labels#enable-sensitivity-label-support-in-powershell) başlığı altında yer alan yönergeleri kullanarak Microsoft Teams, Microsoft 365 grupları ve SharePoint siteleri için duyarlılık etiketlerini kapatabilirsiniz. Ancak, özelliği devre dışı bırakmak için 5. adımda öğesini belirtin `$setting["EnableMIPLabels"] = "False"`.
 
-Duyarlılık etiketleri  oluşturma veya düzenleme yaparken grup ve sitelerin tüm ayarlarını kullanılamaz duruma döndürmeye ek olarak, bu eylem kapsayıcıların yapılandırmasında hangi özelliği kullanabileceğinizi de geri getirir. Site siteleri, Microsoft Teams, Microsoft 365 için duyarlılık etiketlerinin etkinleştirilmesi, **sınıflandırma (**[Azure AD](#classic-azure-ad-group-classification) grup sınıflandırması için SharePoint) özelliğini Duyarlılık olarak **değiştirmektedir**. Kapsayıcılar için duyarlılık etiketlerini devre dışı bırakarak duyarlılık özelliğini yoksayın ve Sınıflandırma özelliğini yeniden kullanın.
+Duyarlılık etiketleri oluşturduğunuzda veya düzenlediğinizde tüm ayarları gruplar ve siteler için kullanılamaz hale getirmenin yanı sıra, bu eylem kapsayıcıların yapılandırması için hangi özelliği kullandığını geri alır. Microsoft Teams, Microsoft 365 grupları ve SharePoint siteleri için duyarlılık etiketlerini etkinleştirmek, kullanılan özelliği **Sınıflandırmadan** ([Azure AD grup sınıflandırması](#classic-azure-ad-group-classification) için kullanılır) **Duyarlılık'a** değiştirir. Kapsayıcılar için duyarlılık etiketlerini devre dışı bırakırsanız kapsayıcılar Duyarlılık özelliğini yoksayar ve Sınıflandırma özelliğini yeniden kullanır.
 
-Bu, daha önce kapsayıcılara uygulanmış olan site ve gruplardan gelen hiçbir etiket ayarlarının zorunlu kılınmayacak ve kapsayıcıların artık etiketleri görüntüleymeyecek olması anlamına gelir.
+Bu, daha önce kapsayıcılara uygulanan sitelerden ve gruplardan gelen etiket ayarlarının zorunlu tutulmayacağı ve kapsayıcıların artık etiketleri görüntülemeyacağı anlamına gelir.
 
-Bu kapsayıcılara Azure AD sınıflandırma değerleri uygulanmışsa, kapsayıcılar sınıflandırmaları yeniden kullanmaya döner. Özelliği etkinleştirdikten sonra oluşturulan yeni sitelerin veya grupların etiket veya sınıflandırması görüntülenmez. Bu kapsayıcılar ve her yeni kapsayıcı için artık sınıflandırma değerleri uygulayabilirsiniz. Daha fazla bilgi için bkz[. "modern" siteler](/sharepoint/dev/solution-guidance/modern-experience-site-classification) sınıflandırması SharePoint sınıflandırma ve Office [grupları için sınıflandırmalar oluşturma](../enterprise/manage-microsoft-365-groups-with-powershell.md).
+Bu kapsayıcılara Azure AD sınıflandırma değerleri uygulanmışsa, kapsayıcılar sınıflandırmaları yeniden kullanmaya geri döner. Özelliği etkinleştirdikten sonra oluşturulan yeni sitelerin veya grupların etiket görüntülemeyeceğini veya sınıflandırmaya sahip olmadığını unutmayın. Bu kapsayıcılar ve yeni kapsayıcılar için artık sınıflandırma değerleri uygulayabilirsiniz. Daha fazla bilgi için bkz. ["Modern" site sınıflandırmasını SharePoint](/sharepoint/dev/solution-guidance/modern-experience-site-classification) ve [Kuruluşunuzdaki Office grupları için sınıflandırmalar oluşturma](../enterprise/manage-microsoft-365-groups-with-powershell.md).
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-Microsoft Teams, O365 Grupları ve SharePoint Online siteleriyle Webinar kaydına bakın ve Duyarlılık [etiketlerini kullanma SharePoint yanıtlandı](https://techcommunity.microsoft.com/t5/security-privacy-and-compliance/using-sensitivity-labels-with-microsoft-teams-o365-groups-and/ba-p/1221885#M1380).
+Microsoft Teams[, O365 Grupları ve SharePoint Çevrimiçi sitelerle Duyarlılık etiketlerini kullanma ile](https://techcommunity.microsoft.com/t5/security-privacy-and-compliance/using-sensitivity-labels-with-microsoft-teams-o365-groups-and/ba-p/1221885#M1380) ilgili web semineri kaydına ve yanıtlanmış sorulara bakın.
 
-Bu web tarayıcısı, özellik hala önizlemede olduğunda kaydedilmiştir, dolayısıyla kullanıcı arabiriminde bazı farklılıklar fark etmişsinizdir. Bununla birlikte, bu sayfada belgelenmiş yeni özelliklere sahip bilgiler yine doğrudur.
+Bu web semineri, özellik önizleme aşamasındayken kaydedilmiştir, bu nedenle kullanıcı arabiriminde bazı tutarsızlıklar fark edebilirsiniz. Ancak bu özelliğin bilgileri, bu sayfada belgelenen tüm yeni özelliklerle doğru olmaya devam eder.
 
-Bağlı siteleri ve kanal sitelerini Teams hakkında daha fazla bilgi için bkz. Bağlı [siteleri Teams kanal sitelerini yönetme](/SharePoint/teams-connected-sites).
+Bağlı Teams siteleri ve kanal sitelerini yönetme hakkında daha fazla bilgi için bkz. [Bağlı siteleri ve kanal sitelerini Teams yönetme](/SharePoint/teams-connected-sites).

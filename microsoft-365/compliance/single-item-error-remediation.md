@@ -1,5 +1,5 @@
 ---
-title: Tek öğe hatası düzeltmesi
+title: Tek öğede hata düzeltme
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -15,69 +15,69 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Toplu hata düzeltme işlemini takip etmek zorunda kalmadan, Advanced eDiscovery gözden geçirme kümesinde yer alan bir belgeyi işleme hatasını düzeltebilirsiniz.
-ms.openlocfilehash: c816ef1e3fd28299bb316e51aa434a8f08d544a0
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Toplu hata düzeltme işlemini izlemek zorunda kalmadan eBulma (Premium) içindeki bir gözden geçirme kümesindeki bir belgedeki işleme hatasını düzeltebilirsiniz.
+ms.openlocfilehash: fa4a595a967935241e67b9a88ed158c789075102
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988093"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64935664"
 ---
-# <a name="single-item-error-remediation-in-advanced-ediscovery"></a>Düzeltmede tek öğe Advanced eDiscovery
+# <a name="single-item-error-remediation-in-ediscovery-premium"></a>eBulma'da tek öğe hatası düzeltmesi (Premium)
 
-Hata düzeltmesi, Advanced eDiscovery kullanıcıların içeriği düzgün işlemesini önleyen veri Advanced eDiscovery düzeltme olanağı sağlar. Örneğin, parola korumalı dosyalar kilitli ya da şifrelenmiş olduğundan işlenemez. Daha önce, bu iş akışını kullanarak yalnızca toplu hataları [düzeltebilirsiniz](error-remediation-when-processing-data-in-advanced-ediscovery.md). Ancak bazen, araştırılıyor olan durumla ilgili olarak bu dosyalardan herhangi biri hassas olduğunda emin değilseniz birden çok dosyada oluşan hataları düzeltmek mantıklı değildir. Ayrıca, yanıt süresiyle ilgili önceden karar ver verebilirsiniz ve buna yardımcı olmak için dosya meta verilerini (dosya konumu veya erişimi olanlar gibi) gözden geçirme fırsatına sahip olmadan önce hataları düzeltmek de mantıklı olmaz. Tek öğe hata *düzeltmesi* adı verilen yeni bir özellik, eBulma yöneticilerine işleme hatası olan dosyaların meta verilerini görüntüleme olanağı verir ve gerekirse doğrudan gözden geçirme kümesinde hatayı düzeltebilirsiniz. Bu makalede, bir gözden geçirme kümesinde işleme hataları ile dosyaların nasıl tanım, yoksayma ve düzeltme işlemleri olduğu açıklanmıştır.
+Hata düzeltme, Microsoft Purview eBulma (Premium) kullanıcılarına eBulma'nın (Premium) içeriği düzgün işlemesini engelleyen veri sorunlarını düzeltme olanağı verir. Örneğin, parola korumalı dosyalar kilitli veya şifrelenmiş olduğundan işlenemez. Daha önce bu [iş akışını](error-remediation-when-processing-data-in-advanced-ediscovery.md) kullanarak hataları yalnızca toplu olarak düzeltebiliyorsunuz. Ancak bazen, bu dosyalardan herhangi birinin araştırdığınız olaya yanıt vermediğinden emin olmadığınız durumlarda birden çok dosyadaki hataları düzeltmek mantıklı değildir. Yanıt verme konusunda önceden karar vermenize yardımcı olmak için dosya meta verilerini (dosya konumu veya erişimi olan kişiler gibi) gözden geçirme fırsatınız olmadan önce hataları düzeltmeniz de mantıklı olmayabilir. *Tek öğe hatasını düzeltme* adlı yeni bir özellik, eBulma yöneticilerine işleme hatası olan dosyaların meta verilerini görüntüleme ve gerekirse hatayı doğrudan gözden geçirme kümesinde düzeltme olanağı sağlar. Makalede, bir gözden geçirme kümesindeki işleme hatalarıyla dosyaları tanımlama, yoksayma ve düzeltme işlemleri açıklanır.
 
-## <a name="identify-documents-with-errors"></a>Hatalı belgeleri tanımlama
+## <a name="identify-documents-with-errors"></a>Hataları olan belgeleri tanımlama
 
-Gözden geçirme kümesinde işleme hataları olan belgeler artık (başlıkla) tanımlanır. Hatayı düzeltmek veya yoksayabilirsiniz. Aşağıdaki ekran görüntüsü, parola korumalı bir gözden geçirme kümesinde bir Word belgesinin işleme hatasını gösterir. Ayrıca, işleme hatalarının olduğu belgelerin dosya meta verilerini görüntü ola bildirimini de edin.
+Gözden geçirme kümesinde işleme hataları olan belgeler artık tanımlanır (başlıkla). Hatayı düzeltebilir veya yoksayabilirsiniz. Aşağıdaki ekran görüntüsünde, parola korumalı bir gözden geçirme kümesindeki bir Word belgesinin işleme hatası başlığı gösterilmektedir. Ayrıca, işleme hataları olan belgelerin dosya meta verilerini görüntüleyebileceğinize de dikkat edin.
 
-![İşleme hatası olan belge için görüntülenen başlık.](../media/SIERimage1.png)
+![İşleme hatası olan belge için başlık görüntüleniyor.](../media/SIERimage1.png)
 
-Gözden geçirme kümesinde belgeleri sorgularken, İşleme **durumu** koşulsunu kullanarak da [işleme hataları olan belgeleri arayabilirsiniz](review-set-search.md).
+Ayrıca, [bir gözden geçirme kümesindeki belgeleri sorgularken](review-set-search.md) **İşleme durumu** koşulunu kullanarak işleme hataları olan belgeleri de arayabilirsiniz.
 
-![Hata belgelerini aramak için İşleme durumu koşullarını kullanın.](../media/SIERimage2.png)
+![Hata belgelerini aramak için İşlem durumu koşulunu kullanın.](../media/SIERimage2.png)
 
-### <a name="ignore-errors"></a>Hataları yoksayma
+### <a name="ignore-errors"></a>Hataları yoksay
 
-İşleme hatası başlığında Yoksay'a **tıklayarak işleme** hatasını yoksayabilirsiniz. Bir hatayı yoksaymasanız, belge toplu hata [düzeltme iş akışından kaldırılır](error-remediation-when-processing-data-in-advanced-ediscovery.md). Hata yoksayıldıktan sonra, belge başlığı renk değiştirir ve işleme hatasının yoksayıldı olduğunu gösterir. Geri Al'a tıklayarak, istediğiniz zaman hatayı yoksayma kararını geri **alabilirsiniz**.
+İşleme hatası başlığında Yoksay'a tıklayarak bir işleme hatasını **yoksayabilirsiniz** . Bir hatayı yoksaydığınızda, belge [toplu hata düzeltme iş akışından](error-remediation-when-processing-data-in-advanced-ediscovery.md) kaldırılır. Bir hata yoksayıldıktan sonra, belge başlığı rengi değişir ve işleme hatasının yoksayıldığını gösterir. İstediğiniz zaman Geri Al'a tıklayarak hatayı yoksayma kararını **geri alabilirsiniz**.
 
 ![İşleme hatasını yoksaymak için Yoksay'a tıklayın.](../media/SIERimage3.png)
 
-Gözden geçirme kümesinde belgeleri sorgularken Yoksayılan işleme hataları koşulsunu kullanarak, işleme hatası  olan tüm belgeleri de arayabilirsiniz.
+Ayrıca, gözden geçirme kümesindeki belgeler sorgulanırken *Yoksayılan işleme hataları koşulu kullanılarak yoksayılan işleme hatası* olan tüm belgeleri de arayabilirsiniz.
 
-![Yoksayılan hata belgelerini aramak için Yoksayılan işleme hataları durumunu kullanın.](../media/SIERimage4.png)
+![Yoksayılan hata belgelerini aramak için Yoksayılan işleme hataları koşulunu kullanın.](../media/SIERimage4.png)
 
-## <a name="remediate-a-document-with-errors"></a>Hatalı bir belgeyi düzeltme
+## <a name="remediate-a-document-with-errors"></a>Belgeyi hatalarla düzeltme
 
-Bazen belgelerde bir işlem hatasını düzeltmek (parolayı kaldırarak, şifreli bir dosyanın şifresini çözerek veya bozuk bir belgeyi kurtararak) ve sonra düzeltilen belgeyi gözden geçirme kümesine eklemeniz gerekebilir. Bu, hata belgesini gözden geçirme kümesinde diğer belgelerle birlikte gözden geçirmenizi ve dışarı aktarmayı sağlar. 
+Bazen belgelerdeki bir işleme hatasını düzeltmeniz (parolayı kaldırarak, şifrelenmiş bir dosyanın şifresini çözerek veya bozuk bir belgeyi kurtararak) ve ardından düzeltilen belgeyi gözden geçirme kümesine eklemeniz gerekebilir. Bu, hata belgesini gözden geçirmenize ve gözden geçirme kümesindeki diğer belgelerle birlikte dışarı aktarmanıza olanak tanır. 
 
 Tek bir belgeyi düzeltmek için şu adımları izleyin:
 
-1. **Dosyanın** >  **bir kopyasını yerel** bilgisayara indirmek için Özgün dosyayı indir'e tıklayın.
+1. Dosyanın bir kopyasını yerel bir bilgisayara indirmek için **Özgün** >  indirİndir'e tıklayın.
 
-   ![Belgeyi işleme hatasıyla birlikte indirin.](../media/SIERimage5.png)
+   ![İşleme hatası içeren belgeyi indirin.](../media/SIERimage5.png)
 
-2. Dosyada çevrimdışı hatayı düzeltmek. Şifre çözme yazılımı gerektiren şifrelenmiş dosyalar için parola korumasını kaldırmak için, parolayı girin ve dosyayı kaydedin veya parola kırıcı kullanın. Dosyayı düzeltmek için bir sonraki adıma geçin.
+2. Dosyadaki hatayı çevrimdışı olarak düzeltin. Şifre çözme yazılımı gerektiren şifrelenmiş dosyalar için parola korumasını kaldırmak için parolayı sağlayın ve dosyayı kaydedin veya parola cracker kullanın. Dosyayı düzeltdikten sonra sonraki adıma geçin.
 
-3. Gözden geçirme kümesinde, düzelttikleri işlem hatasını olan dosyayı seçin ve sonra **Düzeltme'ye tıklayın**.
+3. Gözden geçirme kümesinde, düzeltmiş olduğunuz işleme hatasını içeren dosyayı seçin ve ardından **Düzeltme'ye** tıklayın.
 
-   ![Belgenin iş hatasını olan başlıkta Düzeltme'yi tıklatın.](../media/SIERimage6.png)
+   ![Belgenin başlığında Düzeltme'ye ve işleme hatasına tıklayın.](../media/SIERimage6.png)
 
 
-4. **Gözat'a** tıklayın, yerel bilgisayarınızda düzeltilen dosyanın bulunduğu konuma gidin ve dosyayı seçin.
+4. **Gözat'a** tıklayın, düzeltilmiş dosyanın yerel bilgisayarınızdaki konumuna gidin ve dosyayı seçin.
 
-   ![Gözat'a tıklayın ve yerel bilgisayarınızdan düzeltmiş dosyayı seçin.](../media/SIERimage7.png)
+   ![Gözat'a tıklayın ve yerel bilgisayarınızda düzeltilmiş dosyayı seçin.](../media/SIERimage7.png)
 
-    Düzeltilen dosya seçidikten sonra, gözden geçirme kümesine otomatik olarak yüklenir. Dosyanın işleme durumunu izleyebilirsiniz.
+    Düzeltilen dosya seçtikten sonra, otomatik olarak gözden geçirme kümesine yüklenir. Dosyanın işleme durumunu izleyebilirsiniz.
 
     ![Düzeltme işleminin durumu görüntülenir.](../media/SIERimage8.png)
 
-   İşlem tamamlandıktan sonra düzeltili belgeyi görüntüebilirsiniz.
+   İşlem tamamlandıktan sonra, düzeltilmiş belgeyi görüntüleyebilirsiniz.
 
-    ![Düzeltlenmiş dosyayı gözden geçirme kümesinde yerel biçimde görüntüebilirsiniz.](../media/SIERimage9.png)
+    ![Düzeltilmiş dosyayı gözden geçirme kümesinde yerel biçimde görüntüleyebilirsiniz.](../media/SIERimage9.png)
 
-Bir belge düzeltilene kadar neler olduğu hakkında daha fazla bilgi için bkz [. Dosyalar düzeltilince ne olur](error-remediation-when-processing-data-in-advanced-ediscovery.md#what-happens-when-files-are-remediated)?
+Belge düzeltildiğinde ne olacağı hakkında daha fazla bilgi için bkz. [Dosyalar düzeltildiğinde ne olur](error-remediation-when-processing-data-in-advanced-ediscovery.md#what-happens-when-files-are-remediated)?
 
-## <a name="search-for-remediated-documents"></a>Düzeltilenmiş belgeleri arama
+## <a name="search-for-remediated-documents"></a>Düzeltilmiş belgeleri arama
 
-Anahtar sözcükler koşulu kullanarak düzeltmiş ve şu özelliği:değer çifti: **IsFromErrorRemediation:true** değerini belirterek gözden geçirme kümesinde tüm belgeleri arayabilirsiniz. Bu özellik, gözden geçirme kümesinden belge dışarı aktarsanız da dışarı aktarma yükleme dosyasında kullanılabilir.
+**Anahtar Sözcükler** koşulu kullanılarak ve şu özellik:değer çifti belirtilerek düzeltilen bir gözden geçirme kümesindeki tüm belgeleri arayabilirsiniz: **IsFromErrorRemediation:true**. Bu özellik, belgeleri bir gözden geçirme kümesinden dışarı aktardığınızda dışarı aktarma yükleme dosyasında da kullanılabilir.

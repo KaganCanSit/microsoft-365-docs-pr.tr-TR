@@ -1,11 +1,11 @@
 ---
-title: Microsoft 365'daki Advanced eDiscovery çözümüne genel Microsoft 365
+title: Microsoft Purview'da eBulma (Premium) çözümüne genel bakış
 f1.keywords:
 - NOCSH
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: ''
+ms.date: 04/08/2022
 audience: Admin
 ms.topic: overview
 ms.service: O365-seccomp
@@ -18,133 +18,133 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Microsoft 365'da Advanced eDiscovery çözümü hakkında bilgi Microsoft 365. Bu makalede, iç ve dış Advanced eDiscovery yardımcı Microsoft 365 bir araç olan Microsoft 365'daki durumlara genel bir bakış yer almaktadır. Ayrıca, yasal incelemelerinizi yönetmek için Advanced eDiscovery iş nedenlerini de çerçeveler.
+description: Microsoft Purview'da eBulma (Premium) çözümü hakkında bilgi edinin. Bu makalede, iç ve dış araştırmalarını yönetmenize yardımcı olacak bir araç olan Microsoft Purview'daki eBulma (Premium) konusuna genel bir bakış sağlanmaktadır. Ayrıca, yasal araştırmalarınızı yönetmek için eKeşif (Premium) kullanmanın iş nedenlerini de çerçeveler.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 769f88b6bd2f3348061a759655c8169e9a8310f5
-ms.sourcegitcommit: 43adb0d91af234c34e22d450a9c1d26aa745c2ca
+ms.openlocfilehash: 7283adbf179f2d3dd04f45e2be808043e86ff88f
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "62988823"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64932077"
 ---
-# <a name="overview-of-microsoft-365-advanced-ediscovery"></a>Genel bakış Microsoft 365 Advanced eDiscovery
+# <a name="overview-of-microsoft-purview-ediscovery-premium"></a>Microsoft Purview eKeşif'e (Premium) genel bakış
 
-Bu Advanced eDiscovery Microsoft Microsoft 365 analiz özelliklerine ilişkin yeni bir çözüm sunar. Advanced eDiscovery, kurum içi ve dış araştırmalarında yanıt veren içerikleri korumak, toplamak, çözümlemek, gözden geçirmek ve dışarı aktarmak için  uç uç iş akışı sağlar. Ayrıca, hukuk ekiplerinin bir olaya dahil olan koruyucularla iletişim kurmak için yasal tutma bildirimi iş akışının tamamını yönetmesini sağlar.
+Microsoft Purview eKeşif (Premium) çözümü, mevcut Microsoft eKeşif ve analiz özelliklerini temel alır. eBulma (Premium), kuruluşunuzun iç ve dış araştırmalarına yanıt veren içeriği korumak, toplamak, çözümlemek, gözden geçirmek ve dışarı aktarmak için uçtan uca bir iş akışı sağlar. Ayrıca, yasal ekiplerin bir olaya dahil olan koruyucularla iletişim kurmak için yasal tutma bildirimi iş akışının tamamını yönetmesine olanak tanır.
 
-## <a name="advanced-ediscovery-capabilities"></a>Advanced eDiscovery özellikleri
+## <a name="ediscovery-premium-capabilities"></a>eBulma (Premium) özellikleri
 
-Advanced eDiscovery, kuruluşun yaşadığı yeri keşfederek yasal konulara veya dahili soruşturmalara yanıt vermesinde yardımcı olabilir. eBulma iş akışlarını, ilgisini çekmekte olan ve veri kaynaklarını tanımlayan, verileri korumak için sorunsuz bir şekilde tutma uygulayan ve sonra yasal tutma iletişim sürecini yöneterek sorunsuz bir şekilde yönetebilirsiniz. Kaynaktan veri toplayarak, ihtiyacınız olan her şeyi Microsoft 365 bir platformda arayabilirsiniz. Derin dizin oluşturma, e-posta zincirleme ve yakın yinelenen algılama gibi akıllı makine öğrenme özellikleri, ayrıca ilgili bir veri kümesi için büyük hacimli verileri azaltmanıza yardımcı olur.
+eBulma (Premium), kuruluşunuzun bulunduğu yerdeki verileri keşfederek yasal konulara veya iç araştırmalara yanıt vermesine yardımcı olabilir. İlgi çekici kişileri ve veri kaynaklarını tanımlayarak eBulma iş akışlarını sorunsuz bir şekilde yönetebilir, verileri korumak için bekletmeleri sorunsuz bir şekilde uygulayabilir ve ardından yasal tutma iletişim sürecini yönetebilirsiniz. Kaynaktan veri toplayarak, ihtiyacınız olanları hızla bulmak için canlı Microsoft 365 platformunda arama yapabilirsiniz. Derin dizin oluşturma, e-posta iş parçacığı oluşturma ve neredeyse yinelenen algılama gibi akıllı makine öğrenmesi özellikleri, büyük hacimlerdeki verileri ilgili bir veri kümesine azaltmanıza da yardımcı olur.
 
-Aşağıdaki bölümlerde bu özellik özellikleri Advanced eDiscovery nasıl yardımcı olduğu açıklanmaktadır.
+Aşağıdaki bölümlerde bu eBulma (Premium) özelliklerinin kuruluşunuza nasıl yardımcı olabileceği açıklanmaktadır.
 
-![Advanced eDiscovery özelliklerine sahip olur.](../media/advanced-ediscovery-capabilities.png)
+![eBulma (Premium) özellikleri.](../media/advanced-ediscovery-capabilities.png)
 
 ### <a name="discover-and-collect-data-in-place"></a>Verileri yerinde bulma ve toplama
 
-Geleneksel olarak, birden çok üçüncü taraf eKbulma çözümüne ihtiyaç olan kuruluşlarda, işlemesi için büyük hacimli verilerin Microsoft 365 ve yinelenen verileri barındırmak zorunda olması gerekir. Bu zorunlu, birden çok çözümü yönetmeyle ilgili verileri, riski, maliyeti ve karmaşıklığı bulmanın zamanını artırır.
+Geleneksel olarak, birden çok üçüncü taraf eBulma çözümünü kullanan kuruluşlar, yinelenen verileri işlemek ve barındırmak için büyük hacimli verilerin Microsoft 365 dışına kopyalanmasını gerektirir. Bu gereklilik, ilgili verileri bulma süresini ve birden çok çözümü yönetmenin riskini, maliyetini ve karmaşıklığını artırır.
 
-Advanced eDiscovery veri Microsoft 365, kaynakta veri bulmanızı ve verilerinizi güvenlik ve uyumluluk Microsoft 365 içinde kalmanızı sağlar.  canlı sistemden yerinde veri toplayarak, Advanced eDiscovery kaynağına dönme tüm bu aksamalarını ve eksik içeriği bulmak zorunda kalmanın gereksiz çalışmalarını azaltır; bu da genellikle geleneksel eKbulma çözümlerinden ötelemelerin günlüğünde olur.
+Microsoft 365'daki eBulma (Premium), kaynaktaki verileri keşfetmenize ve Microsoft 365 güvenlik ve uyumluluk sınırınızda kalmanıza olanak tanır.  eBulma (Premium) canlı sistemden yerinde veri toplayarak kaynağa geri dönmenin sürtüşmesini azaltır ve genellikle geleneksel eBulma çözümlerinde günlüğe kaydederken gerçekleşen eksik içeriği bulmak zorunda kalmanın gereksiz çalışmasını azaltır.
 
-Teams, Yammer, SharePoint Online, OneDrive İş ve Exchange Online'daki veriler için yerel arama ve toplama özellikleri, veri bulma Exchange Online ı daha da iyi sağlar. Örneğin, Advanced eDiscovery:
+Teams, Yammer, SharePoint Online, OneDrive İş ve Exchange Online'daki veriler için yerel arama ve toplama özellikleri, veri bulmayı daha da geliştirir. Örneğin, eBulma (Premium):
 
-- Konuşmaları Teams(konuşmalardan tek tek iletiler yerine) yeniden yapılandırarak.
+- Teams konuşmaları yeniden derler (konuşmalardan tek tek iletileri döndürmek yerine).
 
-- E-posta iletisinde bağlantıları veya modern ekleri kullanarak ve sohbetleri paylaşarak kullanıcılarla paylaşılan bulut Teams toplar.
+- E-posta iletisinde ve Teams sohbetlerde bağlantılar veya modern ekler kullanarak kullanıcılarla paylaşılan bulut tabanlı içeriği toplar.
 
-- Dosya türü olmayan yüzlerce dosya için Microsoft 365 desteği vardır.
+- Yüzlerce Microsoft 365 olmayan dosya türü için yerleşik desteğe sahiptir.
 
-- Veri bağlayıcıları tarafından üçüncü taraf kaynaklardan (Bloomberg, Facebook, Slack ve Zoom Meetings gibi) aktarılan ve arşivlenen verileri Microsoft 365 [toplar](archiving-third-party-data.md).
+- [Veri bağlayıcıları](archiving-third-party-data.md) tarafından Microsoft 365 içeri aktarılan ve arşivlenen üçüncü taraf kaynaklardan (Bloomberg, Facebook, Slack ve Zoom Toplantıları gibi) veri toplar.
 
-### <a name="manage-ediscovery-workflow-in-one-platform"></a>eBulma iş akışını tek bir platformda yönetme
+### <a name="manage-ediscovery-workflow-in-one-platform"></a>EBulma iş akışını tek bir platformda yönetme
 
-Advanced eDiscovery, ihtiyacınız olan eBulma çözümleri sayısını azaltmanıza yardımcı olabilir. Basitleştirilmiş,  uç uç iş akışı sağlar ve bunların hepsi kendi iş akışı Microsoft 365. Advanced eDiscovery, benzersiz ve paylaşılan veri kaynaklarını ilgi alan kişiye (koruyucu olarak bilinir) otomatik olarak eşleerek ve çözümleme ve gözden geçirme için toplamadan önce olası ilgili veriler üzerinde raporlama ve çözümleme sağlayarak, ilgili olası bilgi kaynaklarını belirleme ve toplama arasındaki aksamalığı azaltmaya yardımcı olur.
+eBulma (Premium), güvenmeniz gereken eBulma çözümlerinin sayısını azaltmanıza yardımcı olabilir. Tümü Microsoft 365 gerçekleşen kolaylaştırılmış, uçtan uca bir iş akışı sağlar. eBulma (Premium), benzersiz ve paylaşılan veri kaynaklarını ilgili kişiye (*koruyucu* olarak bilinir) otomatik olarak eşleyerek ve analiz ve gözden geçirme amacıyla toplamadan önce ilgili olabilecek veriler üzerinde raporlama ve analiz sağlayarak ilgili bilgilerin olası kaynaklarını tanımlama ve toplama uyuşmalarını azaltmaya yardımcı olur.
 
-Ayrıca, Microsoft Graph API'leri eBulma iş akışını otomatikleştirmenize ve özel çözümler için Advanced eDiscovery genişletmenize yardımcı olabilir.
+Ayrıca, Microsoft Graph API'leri eBulma iş akışını otomatikleştirmenize ve özel çözümler için eKeşif'i (Premium) genişletmenize yardımcı olabilir.
 
-### <a name="cull-data-intelligently"></a>Akıllı Cull verileri
+### <a name="cull-data-intelligently"></a>Cull verileri akıllı bir şekilde
 
-Advanced eDiscovery'daki akıllı makine öğrenme özellikleri, gözden geçir edilecek veri miktarını azaltmanıza yardımcı olur. Bu akıllı özellikler, büyük hacimli verileri ilgili bir küme için azaltmanıza ve bu veri kümelerini cull olarak azaltmanıza yardımcı olur. Örneğin, yerleşik gözden geçirme kümesi sorgusu yakın yinelemeleri tanımarak yalnızca benzersiz içeriği filtrelemeye yardımcı olur. Bu özellik gözden geçir edilecek veri miktarını önemli ölçüde düşürebilirsiniz.
+eBulma 'daki (Premium) akıllı makine öğrenmesi özellikleri, gözden geçirilecek veri miktarını azaltmanıza yardımcı olur. Bu akıllı özellikler, büyük hacimli verileri ilgili bir kümeye azaltmanıza ve kaldırmanıza yardımcı olur. Örneğin, yerleşik bir gözden geçirme kümesi sorgusu, yakın yinelemeleri tanımlayarak yalnızca benzersiz içeriği filtrelemeye yardımcı olur. Bu özellik, gözden geçirilmesi gereken veri miktarını önemli ölçüde azaltabilir.
 
-Ek makine öğrenme özellikleri, İlgi Düzeyi modülleri gibi akıllı etiketler ve teknoloji yardımlı gözden geçirme araçlarını kullanarak ilgili verileri daha da geliştirerek ve tanımlayabilir.
+Ek makine öğrenmesi özellikleri, ilgi modülleri gibi akıllı etiketleri ve teknoloji destekli inceleme araçlarını kullanarak ilgili verileri daha da iyileştirebilir ve tanımlayabilir.
 
-## <a name="advanced-ediscovery-alignment-with-the-electronic-discovery-reference-model"></a>Advanced eDiscovery Bulma Başvuru Modeli ile hizalama
+## <a name="ediscovery-premium-alignment-with-the-electronic-discovery-reference-model"></a>Elektronik Bulma Başvuru Modeli ile eBulma (Premium) hizalaması
 
-Microsoft 365'daki Advanced eDiscovery yerleşik iş akışı, Elektronik Bulma Başvuru Modeli (EDRM) tarafından ana hatlarıyla açıklanan eBulma işlemiyle uyumlu olur.
+Microsoft 365'deki eBulma'nın (Premium) yerleşik iş akışı, Elektronik Bulma Başvuru Modeli (EDRM) tarafından özetlenen eBulma işlemiyle uyumlu hale getirir.
 
 ![Elektronik Bulma Başvuru Modeli (EDRM).](../media/EDRMv2.png)
 
-(EDRM modelini temel alan edrm.net)
+(edrm.net'da EDRM modelini temel alan görüntü)
 
-Üst düzeyde, aşağıdaki gibi Advanced eDiscovery EDRM iş akışını destekler:
+Üst düzeyde, eBulma (Premium) EDRM iş akışını şu şekilde destekler:
 
-- **Kimlik.** Araştırmada ilgi alan olası kişilerini tanımdikten sonra, onları bir davanıza koruyucu (veri koruyucu olarak da adlandırılan veri koruyucular) eklersiniz. Bu kişiler araştırmayla ilgili bilgileri ele Advanced eDiscovery. Kullanıcılar koruyucu olarak eklendikten sonra, koruyucu belgeleri kolayca koruma altına almak, toplamak ve gözden geçirmek kolaydır.
+- **Kimlik.** Bir soruşturmayla ilgilendiğiniz olası kişileri belirledikten sonra, onları bir eBulma (Premium) olayına koruyucu (araştırmayla ilgili bilgilere sahip olabilecekleri için *veri koruyucuları* olarak da adlandırılır) ekleyebilirsiniz. Kullanıcılar koruyucu olarak eklendikten sonra, koruyucu belgelerini korumak, toplamak ve gözden geçirmek kolaydır.
 
-- **Saklama.** Bir soruşturmayla ilgili verileri korumak ve korumak için Advanced eDiscovery, bir davada koruyucularla ilişkilendirilmiş veri kaynaklarını yasal olarak tutmana olanak sağlar. Ayrıca, özel olmayan verileri yerinde tutabilirsiniz. Advanced eDiscovery yerleşik iletişim iş akışına da sahip olduğu için koruyuculara yasal tutma bildirimleri gönderebilir ve bu bildirimlerin bildirimlerini izleyebilirsiniz.
+- **Koruma.** EBulma (Premium), bir soruşturmayla ilgili verileri korumak ve korumak için, bir olayda koruyucularla ilişkili veri kaynaklarına yasal bir saklama yerleştirmenize olanak tanır. Ayrıca, gözetimsiz verileri beklemeye alabilirsiniz. eKeşif (Premium) ayrıca yerleşik bir iletişim iş akışına sahiptir, böylece koruyuculara yasal saklama bildirimleri gönderebilir ve onaylarını izleyebilirsiniz.
 
-- **Koleksiyon.** Araştırmayla ilgili veri kaynaklarını tanım (ve korur) sonra, Advanced eDiscovery'de yerleşik arama aracını kullanarak durumla ilgili olabilir ve özel veri kaynaklarından (ve varsa, koruyucu olmayan veri kaynaklarından) canlı veri arayabilir ve toplayabilirsiniz.
+- **Koleksiyon.** Araştırmayla ilgili veri kaynaklarını tanımladıktan (ve koruduktan) sonra, eBulma'da (Premium) yerleşik arama aracını kullanabilir ve olayla ilgili olabilecek gözetim veri kaynaklarından (ve varsa, gözetim dışı veri kaynaklarından) canlı veri arayabilir ve toplayabilirsiniz.
 
-- **İşleme.** Olayla ilgili tüm verileri topdikten sonra, sonraki adım incelemeyi ve çözümlemeyi yapmaktır. Advanced eDiscovery'de, toplama aşamasında tanımlanmış olan yerinde veriler Azure Depolama'a kopyalanır ve bu da olay verileri için statik bir görünüm sağlar. 
+- **Işleme.** Servis talebiyle ilgili tüm verileri topladıktan sonra, sonraki adım daha fazla inceleme ve analiz için bu verileri işlemektir. eBulma'da (Premium), toplama aşamasında tanımladığınız yerinde veriler, servis talebi verilerinin statik bir görünümünü sağlayan bir Azure Depolama konumuna (*inceleme kümesi* olarak adlandırılır) kopyalanır. 
 
-- **Gözden Geçir'i.** Veriler gözden geçirme kümesine eklendikten sonra, verileri durumla en ilgili durumla ilgili olacak şekilde azaltmak için belirli belgeleri  bakabilirsiniz ve ek sorgular çalıştırabilirsiniz. Ayrıca, belirli belgelere ek açıklama yer ve etiket de oluşturabilir.
+- **Inceleme.** Veriler bir gözden geçirme kümesine eklendikten sonra, belirli belgeleri görüntüleyebilir ve verileri servis talebiyle en alakalı duruma düşürmek için ek sorgular çalıştırabilirsiniz. Ayrıca, belirli belgelere açıklama ekleyebilir ve bunları etiketleyebilir.
 
-- **Çözümleme.** Advanced eDiscovery, incelemeyle ilgili olmadığını tespit ettiyebilirsiniz ve gözden geçirme kümesinden verileri bu kümeden biraz daha fazla kullanmanıza yardımcı olan tümleşik analiz aracı sağlar. İlgili verilerin hacmini azaltmaya ek olarak, eBulma'da ilerlemek, gözden geçirme işlemini daha kolay ve verimli hale getirirken içeriği düzenlemenizi sağlayan yasal gözden geçirme maliyetlerini azaltmanıza da yardımcı olur.
+- **Analysis.** eBulma (Premium), inceleme kümesinden araştırmayla ilgili olmadığını belirlediğiniz verileri daha fazla kaldırmanıza yardımcı olan tümleşik analiz aracı sağlar. advance eDiscovery, ilgili verilerin hacmini azaltmanın yanı sıra, inceleme sürecini daha kolay ve verimli hale getirmek için içeriği düzenlemenize izin vererek yasal gözden geçirme maliyetlerinden tasarruf etmenizi de sağlar.
 
-- **Üretim** ve **Sunu.** Hazır olduğunda, yasal inceleme için bir inceleme kümesinden belgeleri dışarı aktarabilirsiniz. Belgeleri yerel biçiminde veya EDRM tarafından belirtilen biçimde dışarı aktararak, üçüncü taraf gözden geçirme uygulamalarına aktarabilirsiniz.
+- **Üretim** ve **Sunum.** Hazır olduğunuzda, belgeleri yasal inceleme için bir gözden geçirme kümesinden dışarı aktarabilirsiniz. Belgeleri yerel biçimlerinde veya EDRM tarafından belirtilen biçimde dışarı aktararak üçüncü taraf gözden geçirme uygulamalarına aktarabilirsiniz.
 
-## <a name="subscriptions-and-licensing"></a>Abonelikler ve lisanslar
+## <a name="subscriptions-and-licensing"></a>Abonelikler ve lisanslama
 
-Lisanslama Advanced eDiscovery kuruluş aboneliği ve kullanıcı başına lisans gerektirir.
+eBulma (Premium) için lisanslama için uygun kuruluş aboneliği ve kullanıcı başına lisanslama gerekir.
 
-- **Kuruluş aboneliği:** E-Advanced eDiscovery erişim Microsoft 365 uyumluluk merkezi, kuruluşta aşağıdakilerden biri olması gerekir:
+- **Kuruluş aboneliği:** Microsoft Purview uyumluluk portalında eBulma'ya (Premium) erişmek için kuruluşunuzun aşağıdakilerden birine sahip olması gerekir:
 
   - Microsoft 365 E5 veya Office 365 E5 aboneliği
   
   - E5 Uyumluluk eklentisini içeren Microsoft 365 E3 aboneliği
 
-  - Microsoft 365 E3 eK bulma ve Denetim eklentili bir abonelik
+  - E5 eKeşif ve Denetim eklentisi ile aboneliği Microsoft 365 E3
 
-  - Microsoft 365 Eğitim A5 veya Office 365 Eğitim A5 aboneliği
+  - A5 veya Office 365 Eğitim A5 aboneliğini Microsoft 365 Eğitim
 
-   Mevcut bir Microsoft 365 E5 planınız yoksa ve Advanced eDiscovery'i denemek için Microsoft 365 aboneliğinize ekleyebilir veya deneme sürümüne Microsoft 365 E5.[](/office365/admin/try-or-buy-microsoft-365) [](https://www.microsoft.com/microsoft-365/enterprise)
+   Mevcut bir Microsoft 365 E5 planınız yoksa ve eKeşif'i (Premium) denemek istiyorsanız, mevcut aboneliğinize [Microsoft 365 ekleyebilir](/office365/admin/try-or-buy-microsoft-365) veya Microsoft 365 E5 [deneme sürümüne kaydolabilirsiniz](https://www.microsoft.com/microsoft-365/enterprise).
 
-- **Kullanıcı başına lisanslama:** Advance eKovery durumunda bir kullanıcı koruyucu olarak eklemek için, kuruluş aboneliğinize bağlı olarak bu kullanıcıya aşağıdaki lisanslardan biri atanabilir:
+- **Kullanıcı başına lisanslama:** Bir kullanıcıyı Advance eDiscovery olayına koruyucu olarak eklemek için, kuruluş aboneliğinize bağlı olarak bu kullanıcıya aşağıdaki lisanslardan birinin atanması gerekir:
 
-  - Microsoft 365: Kullanıcılara aşağıdakilerden biri atanabilir:
+  - Microsoft 365: Kullanıcılara aşağıdakilerden biri atanmalıdır:
   
-    - Microsoft 365 E5, E5 Uyumluluk eklenti lisansı veya E5 eKbulma ve Denetim eklentilerini ekleme
+    - Microsoft 365 E5 lisansı, E5 Uyumluluk eklentisi lisansı veya E5 eKeşif ve Denetim eklentisi
 
-    - Microsoft 365 Frontline kullanıcılarına F5 Uyumluluk veya F5 Güvenlik ve Uyumluluk & atanmaları gerekir
+    - Microsoft 365 Ön Hat kullanıcılarına bir F5 Uyumluluğu veya F5 Güvenlik & Uyumluluğu eklentisi atanmalıdır
 
-    - Microsoft 365 Eğitim kullanıcılara A5 lisansı atanmaları gerekir
+    - Microsoft 365 Eğitim kullanıcılara A5 lisansı atanmalıdır
 
-  - Office 365: Kullanıcılara Office 365 E5 lisansı Office 365 Eğitim gerekir.
+  - Office 365: Kullanıcılara Office 365 E5 veya Office 365 Eğitim A5 lisansı atanmalıdır.
 
-Lisans hakkında daha fazla bilgi için, Karşılaştırma tablosunda "eBulma ve denetim" [Microsoft 365 bakın](https://go.microsoft.com/fwlink/?linkid=2139145).
+Lisanslama hakkında bilgi için Microsoft 365 [Karşılaştırma tablosundaki](https://go.microsoft.com/fwlink/?linkid=2139145) "eBulma ve denetim" bölümüne bakın.
 
 Lisans atama hakkında bilgi için bkz. [Kullanıcılara lisans atama](/microsoft-365/admin/manage/assign-licenses-to-users).
 
 > [!NOTE]
-> Kullanıcıların bir dava üzerine koruyucu olarak eklenleri için yalnızca E5 veya A5 lisansına (veya uygun eklenti lisansına) Advanced eDiscovery gerekir. E-Bulma yöneticileri, eBulma yöneticileri, güvenlik görevlileri, yardımcı avukatlar veya yardımcılar gibi, Advanced eDiscovery'i kullanarak davaları yöneten ve E5, A5 veya eklenti lisansına gerek olmayan vaka verilerini gözden geçirebilirsiniz.
+> Kullanıcıların eBulma (Premium) olayına koruyucu olarak eklenmesi için yalnızca E5 veya A5 lisansına (veya uygun eklenti lisansına) ihtiyacı vardır. Vakaları yönetmek ve olay verilerini gözden geçirmek için eKeşif (Premium) kullanan BT yöneticileri, eBulma yöneticileri, avukatlar, yardımcı yöneticiler veya araştırmacıların E5, A5 veya eklenti lisansına ihtiyacı yoktur.
 
-## <a name="get-started-with-advanced-ediscovery"></a>Advanced eDiscovery'i Advanced eDiscovery
+## <a name="get-started-with-ediscovery-premium"></a>eBulma (Premium) ile Kullanmaya başlayın
 
-Hızlı ve kolay iki adımdan oluşur ve bu adımları Advanced eDiscovery.
+eKeşif 'i (Premium) kullanmaya başlamak için iki hızlı ve kolay adım vardır.
 
-![İş akışı iş akışı Advanced eDiscovery.](../media/get-started-AeD.png)
+![eBulma (Premium) ile çalışmaya başlayan iş akışı.](../media/get-started-AeD.png)
 
 |Adımlar  |Açıklama  |
 |:---------|:---------|
-|[Ayarlama Advanced eDiscovery](get-started-with-advanced-ediscovery.md)| Abonelik ve lisans gereksinimlerini doğruladikten sonra, izinler atayın ve kullanıcı lisanslarını kullanmaya başlamanız için kuruluş genelinde Advanced eDiscovery.|
-|[Vakaları oluşturma ve yönetme](create-and-manage-advanced-ediscoveryv2-case.md) | Kuruluşta tüm yasal Advanced eDiscovery diğer soruşturma türleri için iş akışını yönetmek için vakalar oluşturun.|
+|[eBulma'yı ayarlama (Premium)](get-started-with-advanced-ediscovery.md)| Abonelik ve lisanslama gereksinimlerini doğruladıktan sonra, izinleri atayabilir ve eBulma (Premium) kullanmaya başlamak için kuruluş genelinde ayarları yapılandırabilirsiniz.|
+|[Servis taleplerini oluşturma ve yönetme](create-and-manage-advanced-ediscoveryv2-case.md) | Kuruluşunuzdaki tüm yasal ve diğer araştırma türleri için eBulma (Premium) iş akışını yönetmek için servis talepleri oluşturun.|
 |||
 
-## <a name="advanced-ediscovery-architecture"></a>Advanced eDiscovery mimarisi
+## <a name="ediscovery-premium-architecture"></a>eBulma (Premium) mimarisi
 
-Uç Advanced eDiscovery iş akışını tek coğrafi ortamda ve çok coğrafi bir ortamda gösteren bir Advanced eDiscovery mimarisi diyagramı ve [EDRM](#advanced-ediscovery-alignment-with-the-electronic-discovery-reference-model) ile hizalanmış uç veri akışını burada bulunmaktadır.
+Burada, tek coğrafi bir ortamda ve çok coğrafi ortamda uçtan uca iş akışını ve [EDRM](#ediscovery-premium-alignment-with-the-electronic-discovery-reference-model) ile uyumlu uçtan uca veri akışını gösteren bir eBulma (Premium) mimari diyagramı yer alır.
 
-[![Model posteri: Advanced eDiscovery Mimari'ye Microsoft 365.](../media/solutions-architecture-center/ediscovery-poster-thumb.png)](../media/solutions-architecture-center/m365-advanced-ediscovery-architecture.png)
+[![Model posteri: Microsoft 365'de eBulma (Premium) Mimarisi.](../media/solutions-architecture-center/ediscovery-poster-thumb.png)](../media/solutions-architecture-center/m365-advanced-ediscovery-architecture.png)
 
-[Resim olarak görüntüleme](../media/solutions-architecture-center/m365-advanced-ediscovery-architecture.png)
+[Resim olarak görüntüle](../media/solutions-architecture-center/m365-advanced-ediscovery-architecture.png)
 
 [PDF dosyası olarak indirme](https://download.microsoft.com/download/d/1/c/d1ce536d-9bcf-4d31-b75b-fcf0dc560665/m365-advanced-ediscovery-architecture.pdf)
 
@@ -152,4 +152,4 @@ Uç Advanced eDiscovery iş akışını tek coğrafi ortamda ve çok coğrafi bi
 
 ## <a name="training"></a>Eğitim
 
-EBulma araçlarını kullanarak kuruluş temelleri hakkında bilgi edinen IT yöneticilerini, eBulma yöneticilerini ve uyumluluk soruşturma ekiplerini Advanced eDiscovery, Microsoft 365 kullanmaya başlamalarına yardımcı olabilir. Microsoft 365, bu kullanıcıların eBulma'ya başlamalarına yardımcı olmak için aşağıdaki kaynağı sağlar: Kullanıcıların eBulma ve denetim [özelliklerini Microsoft 365](/learn/modules/describe-ediscovery-capabilities-of-microsoft-365).
+eKeşif (Premium) ile ilgili temel bilgiler konusunda BT yöneticilerinizi, eBulma yöneticilerinizi ve uyumluluk araştırma ekiplerinizi eğiterek kuruluşunuzun Microsoft 365 eBulma araçlarını kullanarak daha hızlı bir şekilde çalışmaya başlamasına yardımcı olabilirsiniz. Microsoft 365, kuruluşunuzdaki bu kullanıcıların eBulma'ya başlamalarına yardımcı olmak için aşağıdaki kaynağı sağlar: [Microsoft 365 eBulma ve denetim özelliklerini açıklama](/learn/modules/describe-ediscovery-capabilities-of-microsoft-365).

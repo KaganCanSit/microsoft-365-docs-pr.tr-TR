@@ -1,5 +1,5 @@
 ---
-title: Destek için CJK/Double Byte Advanced eDiscovery
+title: eBulma için CJK/Double Byte desteği (Premium)
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -15,70 +15,70 @@ search.appverid:
 - MET150
 ms.custom:
 - seo-marvel-apr2020
-description: İngilizce'Advanced eDiscovery karakter Microsoft 365 çift byte karakter kümesi kullanan Çince, Japonca ve Korece (CJK) dillerini nasıl desteklediğini öğrenin.
-ms.openlocfilehash: 4c1871eb49754ba93d762989e3cff9c53950d2c6
-ms.sourcegitcommit: 57211e8082a3429017ad33fe0e6bd9af203bb7ab
+description: Microsoft 365'deki Microsoft Purview eKeşif (Premium) uygulamasının çift baytlık karakter kümesi kullanan Çince, Japonca ve Korece (CJK) dilleri nasıl desteklediğini öğrenin.
+ms.openlocfilehash: 70081341499f348f1bb8e226b4d3b5e9c0bab031
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "63027533"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64934807"
 ---
-# <a name="cjk-language-support-for-advanced-ediscovery"></a>Destek için CJK dil Advanced eDiscovery
+# <a name="cjk-language-support-for-ediscovery-premium"></a>eKeşif için CJK dil desteği (Premium)
 
-Advanced eDiscovery gözden geçirme kümesinde aşağıdaki gelişmiş senaryolarda çift byte karakter kümesi dillerini destekler (bunlar toplu olarak *CJK* dilleri olarak bilinen Basitleştirilmiş Çince, Geleneksel Çince, Japonca ve Korecedir):
+Microsoft Purview eKeşif (Premium), bir inceleme kümesindeki aşağıdaki gelişmiş senaryolar için çift baytlık karakter kümesi dillerini destekler (bunlar topluca *CJK* dilleri olarak bilinen Basitleştirilmiş Çince, Geleneksel Çince, Japonca ve Korece'yi içerir):
 
-- Gözden [geçirme kümesinde verileri sorgularken](review-set-search.md).
+- [Bir gözden geçirme kümesindeki verileri sorguladığınızda](review-set-search.md).
 
-- Belgeleri bir [gözden geçirme kümesinde etiketlerken](tagging-documents.md).
+- [Belgeleri bir gözden geçirme kümesinde etiketlediğinizde](tagging-documents.md).
 
-- Yinelenen [algılamayı, e-posta dizisini ve tema](analyzing-data-in-review-set.md) çözümlemelerini kullanarak bir gözden geçirme kümesinde büyük/küçük harf verilerini çözümlerken.
+- Bir [gözden geçirme kümesindeki büyük/küçük harf verilerini](analyzing-data-in-review-set.md) neredeyse yinelenen algılama, e-posta yazışması ve tema analizi kullanarak analiz ettiğinizde.
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
 
-**CJK karakterleri içeren öğeleri toplamak için nasıl arama oluşturabilirim?**
+**CJK karakterleri içeren öğeleri toplamak için bir arama oluşturmak Nasıl yaparım??**
 
-Bir metinde içerik ararken anahtar sözcük [aramaları](building-search-queries.md#keyword-searches), anahtar sözcük [sorguları](keyword-queries-and-search-conditions.md) ve arama koşulları için CJK Advanced eDiscovery. Core eKovery ve İçerik Arama'da içerik ararken CJK karakterlerinin aranma özelliği de desteklene.
+eBulma'da (Premium) içerik ararken [anahtar sözcük aramaları](building-search-queries.md#keyword-searches), [anahtar sözcük sorguları ve arama koşulları](keyword-queries-and-search-conditions.md) için CJK karakterlerini kullanabilirsiniz. Microsoft Purview eKeşif (Standart) ve İçerik Arama'da içerik ararken CJK karakterlerini arama da desteklenir.
 
-Boole işleçleri **AND, OR**[,](keyword-queries-and-search-conditions.md#search-conditions) **NOT** ve NEAR dahil olmak üzere tüm arama işleçleri ve arama koşulları için CJK desteği **sağlıyoruz**.[](keyword-queries-and-search-conditions.md#search-operators)
+Boole [işleçleri](keyword-queries-and-search-conditions.md#search-operators) **VE**, **OR**, **NOT** ve **NEAR** dahil olmak üzere tüm arama işleçleri ve [arama koşulları](keyword-queries-and-search-conditions.md#search-conditions) için CJK desteği sağlıyoruz.
 
-İçerik konumlarında veya öğelerinde CJK karakterlerinin bulunduğuna eminsiniz ancak aramalar herhangi bir sonuç döndürenip, sorgu dili-ülke/bölge simgesine tıklayın. ![İçerik arama'daki sorgu dili-ülke/bölge simgesi.](../media/8d4b60c8-e1f1-40f9-88ae-ee2a7eca0886.png) ve arama için ilgili dilin ülke kültür kodu değerini seçin. Varsayılan dil/bölge nötr olur.
+İçerik konumlarının veya öğelerin CJK karakterleri içerdiğinden eminseniz ancak aramalar sonuç döndürmüyorsa sorgu dili-ülke/bölge simgesine tıklayın ![İçerik aramasında dil-ülke/bölge simgesini sorgula.](../media/8d4b60c8-e1f1-40f9-88ae-ee2a7eca0886.png) ve arama için ilgili dil-ülke kültür kodu değerini seçin. Varsayılan dil/bölge nötrdür.
 
-**Aynı anda birden çok dil için arama kullanabilir miyim?**
+**Aynı anda birden çok dil arayabilir miyim?**
 
-Bu, arama senaryonıza bağlıdır.
+Arama senaryonuza bağlıdır.
 
-- [Advanced eDiscovery'ta bir gözden](review-set-search.md) geçirme kümesinde verileri sorgularken, birden çok dili arayabilirsiniz.
+- eBulma'da (Premium) [bir gözden geçirme kümesindeki verileri sorguladığınızda](review-set-search.md), birden çok dil arayabilirsiniz.
 
-- Veri [toplamak için bir arama oluşturmaktayken](create-draft-collection.md) hedefle hedefleriniz olan her dil için ayrı koleksiyonlar oluşturun. Örneğin, hem Çince hem de Korece içeren bir belgeyi arıyorsanız, ilk koleksiyonunuz için Çince'yi ve ikinci koleksiyonunuz için de Korece'yi seçin.
+- [Veri toplamak için bir arama oluşturduğunuzda](create-draft-collection.md), hedeflediğiniz her dil için ayrı koleksiyonlar oluşturun. Örneğin, hem Çince hem de Korece içeren bir belge arıyorsanız, ilk koleksiyonunuz için Çince'yi ve ikinci koleksiyonunuz için Korece'yi seçin.
 
-**Gözden geçirme kümesinde sorgular için dil seçmek için sorgu dili-ülke/bölge simgesini göremiyorum. Gözden geçirme kümesi aramalarında sorgu dilini nasıl belirtebilirsiniz?**
+**Gözden geçirme kümesindeki sorgular için dil seçmek için sorgu dili-ülke/bölge simgesini görmüyorum. Gözden geçirme kümesi aramasında sorgu dilini nasıl belirtebilirim?**
 
-Gözden geçirme kümesi sorgularında, belge dilini belirtmenize gerek yok. Advanced eDiscovery gözden geçirme kümesine içerik eklerken belge dillerini otomatik olarak algılar. Bu, sorgu sonuçlarınızı gözden geçirme kümesi içinde en iyi duruma getirmenize yardımcı olur.
+Gözden geçirme kümesi sorguları için bir belge dili belirtmeniz gerekmez. eBulma (Premium), bir gözden geçirme kümesine içerik eklediğinizde belge dillerini otomatik olarak algılar. Bu, sorgu sonuçlarınızı bir gözden geçirme kümesinde iyileştirmenize yardımcı olur.
 
-**Dosya meta verilerinde algılanan dilleri [görebilir miyim](view-documents-in-review-set.md#file-metadata)?**
+**[Dosya meta verilerinde](view-documents-in-review-set.md#file-metadata) algılanan dilleri görebilir miyim?**
 
-Hayır, dosya meta verilerinde algılanan dilleri göremiyorum.
+Hayır, dosya meta verilerinde algılanan dilleri göremezsiniz.
 
-**Gözden geçirme kümesinde belge dillere göre filtre uygulamam gerekir mi**?
+**Gözden geçirme kümesindeki belge dillerine göre filtreleyebilir miyim**?
 
-Hayır, gözden geçirme kümesinde belge dillerini filtreleyamaz, sıraamaz veya bu dillere göre aramaamazsınız.
+Hayır, bir gözden geçirme kümesindeki belge dillerine göre filtreleyemez, sıralayamaz veya arama yapamazsınız.
 
-**Gözden geçirme kümesi senaryoları için bu CJK sürümü var olan aramalarımı ve gözden geçirme kümelerimi etkileyecek mi?**
+**Gözden geçirme kümesi senaryoları için bu CJK sürümü var olan aramalarımı ve gözden geçirme kümelerimden herhangi birini etkiler mi?**
 
-Hayır, var olan arama ve gözden geçirme kümelerinizi hiçbiri değişmez. Var olan verileri yeniden biçimlendirmeniz gerekmektedir ve İngilizce metin arama sonuçları aynı olur.
+Hayır, mevcut aramalarınızın ve gözden geçirme kümelerinizin hiçbiri değişmez. Mevcut verileri yeniden dizine almanız gerekmez ve İngilizce metin arama sonuçları aynı olacaktır.
 
-**Görüntü dilimi Çince, Japonca veya Korece olarak nasıl değiştirebilirim?**
+**Görüntüleme dilimi Çince, Japonca veya Korece olarak değiştirmek Nasıl yaparım??**
 
-Görüntü dilini ve saat dilimini değiştirme hakkında bilgi için bkz. Saat ve saat dilimi ayarları [nasıl Office 365](/office365/troubleshoot/access-management/set-language-and-region).
+Görüntüleme dilini ve saat dilimini değiştirme hakkında bilgi için bkz. [Office 365 için dil ve bölge ayarlarını ayarlama](/office365/troubleshoot/access-management/set-language-and-region).
 
 ## <a name="known-issues"></a>Bilinen sorunlar
 
-- OCR resim dosyalarından CJK karakterlerini desteklemez
+- OCR, görüntü dosyalarındaki CJK karakterlerini desteklemez
 
-- Ek Açıklama görünümündeki e-posta dosyaları (*.eml ve *.[](view-documents-in-review-set.md#annotate-view)msg gibi) CJK dillerinde destek desteklemez.
+- [Not Ekleme görünümündeki](view-documents-in-review-set.md#annotate-view) e-posta dosyaları (*.eml ve *.msg gibi) CJK dillerinde desteklenmez.
 
-- Metin görünümünde arama [araması vurgulama](view-documents-in-review-set.md#text-view) , CJK dilleri için desteklenmiyor.
+- [Metin görünümünde](view-documents-in-review-set.md#text-view) arama isabeti vurgulama CJK dillerinde desteklenmez.
 
-- Verileri [çözümlemek için](using-relevance.md) kullanılan ilgi düzeyi modülü CJK dillerini desteklemez.
+- Verileri çözümlemek için kullanılan [İlgi modülü](using-relevance.md) CJK dillerini desteklemez.
 
-- [Sorgu tabanlı sındırlar](managing-holds.md#manage-non-custodial-holds) CJK dillerde destek desteklemez.
+- CJK dillerinde [sorgu tabanlı ayrı tutmalar](managing-holds.md#manage-non-custodial-holds) desteklenmez.

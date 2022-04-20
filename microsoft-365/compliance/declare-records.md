@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Bekletme etiketlerini kullanarak kayıtları bildirin.
-ms.openlocfilehash: 228ce06cbc646f60703443a00492693019dfa0b8
-ms.sourcegitcommit: 5eff41a350a01e18d9cdd572c9d8ff99d6c9563a
+ms.openlocfilehash: 23dd6c61d9da787eecd2e1fa825fe338d961d1d1
+ms.sourcegitcommit: 1d972f15a45204e89e268c5ff257021aced5e775
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64836153"
+ms.lasthandoff: 04/18/2022
+ms.locfileid: "64911465"
 ---
 # <a name="declare-records-by-using-retention-labels"></a>Saklama etiketleri kullanarak kayıtları beyan etme
 
@@ -69,7 +69,7 @@ Bu bekletme etiketini kullanarak artık gerektiğinde belge ve Exchange e-posta 
 
 Tam yönergeler için:
 
-- [Bekletme etiketleri oluşturma ve bunları uygulamalarda uygulama](create-apply-retention-labels.md)
+- [Bekletme etiketlerini yayımlama ve uygulamalarda uygulama](create-apply-retention-labels.md)
 
 - [İçeriğe otomatik olarak bekletme etiketi uygulama](apply-retention-labels-automatically.md) (mevzuat kayıtları için desteklenmez)
 

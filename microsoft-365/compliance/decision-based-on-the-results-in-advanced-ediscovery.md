@@ -1,5 +1,5 @@
 ---
-title: Karar, sonuçların temel Advanced eDiscovery
+title: eBulma (Premium) içindeki sonuçlara dayalı karar
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -14,40 +14,40 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: aed65bcd-0a4f-43e9-b5e5-b98cc376bdf8
-description: Advanced eDiscovery'daki Karar Advanced eDiscovery gözden geçirme dosya kümelerinin doğru boyutunu belirlemenize yardımcı olacak verileri nasıl sağladığını öğrenin.
+description: eBulma'daki (Premium) Karar Ver sekmesinin, servis talebi dosyalarının gözden geçirme kümesinin doğru boyutunu belirlemenize yardımcı olabilecek verileri nasıl sağladığını öğrenin.
 ROBOTS: NOINDEX, NOFOLLOW
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 32682690c6febac247d67e3b78f56d1f71b9a2fb
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 6c8759db2445b8d98c47cc1103deda058d2f3508
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988616"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64932430"
 ---
-# <a name="decisions-based-on-relevance-results-in-advanced-ediscovery"></a>İlgi düzeyi sonuçlarına dayalı kararlar Advanced eDiscovery
+# <a name="decisions-based-on-relevance-results-in-ediscovery-premium"></a>eBulma (Premium) ile ilgili sonuçlara dayalı kararlar
   
-Advanced eDiscovery'daki İlgi Düzeyi modülünde, Karar sekmesi, gözden geçirme dosyalarının boyutunu belirlemek için karar destek istatistiklerini görüntülemek ve kullanmak için ek bilgiler sağlar.
+eBulma'daki İlgi modülünde (Premium), Karar sekmesi, servis talebi dosyalarının gözden geçirme kümesinin boyutunu belirlemek için karar destek istatistiklerini görüntülemeye ve kullanmaya yönelik ek bilgiler sağlar.
   
-## <a name="using-the-decide-tab"></a>Karar ver sekmesini kullanma
+## <a name="using-the-decide-tab"></a>Karar sekmesini kullanma
 
-![İlgi DüzeyiNe Karar Verme.](../media/f32fed89-f3b5-404a-90c7-ea25d2eb58a9.png)
+![İlgi Kararı.](../media/f32fed89-f3b5-404a-90c7-ea25d2eb58a9.png)
   
 Bu sekme aşağıdaki bileşenleri içerir:
   
-- **Sorun**: Buradan, ilgi alanlarından sorunu listeden seçebilirsiniz.
+- **Sorun**: Buradan listeden ilgilendiğiniz sorunu seçebilirsiniz.
 
-- **Gözden geçirme-geri çekme** oranı: İlgi dereceleri Advanced eDiscovery gözden geçirme karşılaştırmaları. Grafikte Kesme noktası, gözden geçirilecek dosyaların ilgi derecesi puanına eşlenen yüzdesini temsil eder. Bu, İlgi Düzeyi Testi aşamasında ve kültür için Dışarı Aktarma eşiği olarak kullanılır. Gözden geçirilecek dosya sayısı için varsayılan kesme noktası, Geri Çekme ile Duyarlık arasındaki bakiyenin en uygun olduğu noktadadır. Gerçek kesme noktası, hedefler ve maliyete (gözden geçirme) ve riske (%geri çekme) bağlı olarak kullanıcı tarafından belirlenecektir. Kaydırıcıyı kullanarak kesme kesme noktasını ayarlayabilir, uygun dosyaların yüzdesini ayarlarken ve bir kararı doğrulamadan önce grafik ve parametreler üzerindeki etkisi görebilirsiniz.
+- **Gözden geçirme-geri çağırma oranı**: İlgi puanlarına göre eBulma (Premium) incelemesi karşılaştırmaları. Grafikteki Kesme noktası, bir İlgi puanıyla eşlenmiş, gözden geçirilecek dosyaların yüzdesini temsil eder. Bu, İlgi Testi aşamasında ve hesaplama için dışarı aktarma eşiği olarak kullanılır. Gözden geçirilecek dosya sayısı için varsayılan kesme noktası, Geri Çekme ile Duyarlık arasındaki dengenin en uygun olduğu noktadadır. Gerçek kesme noktası, hedeflere ve maliyet dengesine (%gözden geçirme) ve risk (%geri çekme) bağlı olarak kullanıcı tarafından belirlenmelidir. Kaydırıcıyı kullanarak kesme noktasını ayarlayabilir ve alınacak ilgili dosyaların yüzdesini ayarlarken ve bir kararı doğrulamadan önce graf ve parametreler üzerindeki etkisini görebilirsiniz.
 
-- **Parametreler**: Gözden Geçirme, Geri Çekme, Sonraki ilgili ve Toplam maliyet parametreleri, tüm vakanın koleksiyonuna ilişkin gözden geçirme kümesiyle ilgili kümülatif hesaplanan istatistiklerdir. Bu parametrelerin tanımları aşağıdaki gibidir:
+- **Parametreler**: Gözden Geçirme, Geri Çağırma, Sonraki ilgili ve Toplam maliyet parametreleri, tüm servis talebi için koleksiyonla ilgili olarak gözden geçirme kümesiyle ilgili toplu hesaplanan istatistiklerdir. Bu parametrelerin tanımları aşağıdaki gibidir:
 
-  - **Gözden** Geçir: Bu kesme kesmeye dayalı olarak gözden geçirilecek dosyaların yüzdesi.
+  - **Gözden Geçir**: Bu kesmeye göre gözden geçirilecek dosyaların yüzdesi.
 
-  - **Geri** Çekme: Gözden geçirme kümesinde ilgili dosyaların yüzdesi.
+  - **Geri çağırma**: Gözden geçirme kümesindeki ilgili dosyaların yüzdesi.
 
-  - **Sonraki uygun**: Gözden geçirme kümesinde yer alan ve ilgili başka bir dosyayı inceleme maliyeti.
+  - **Sonraki ilgili**: Şu anda gözden geçirme kümesinde olmayan başka bir ilgili dosyayı gözden geçirme ve tanımlama maliyeti.
 
-  - **Toplam maliyet**: Dava dosyalarının bu yüzdesini gözden geçirme maliyeti. Maliyet parametresi ayarları Büyük/Harf Yöneticisi tarafından ayarlanır.
+  - **Toplam maliyet**: Servis talebi dosyalarının bu yüzdesini gözden geçirme maliyeti. Maliyet parametresi ayarları Servis Talebi yöneticisi tarafından ayarlanabilir.
 
-  - **İlgi düzeyi puanına** göre dağılım: Solda koyu gri görünen dosyalar, kesmeoff puanının altında yer almaktadır. Araç ipucu, İlgi Derecesini ve toplam dosyalara göre ayarlanmış gözden geçirme dosyasındaki dosyaların ilgili yüzdesini görüntüler.
+  - **İlgi puanına göre dağılım**: Soldaki koyu gri ekrandaki dosyalar kesme puanının altındadır. Araç ipucu, toplam dosyayla ilişkili olarak, inceleme dosyasındaki ilgi puanını ve ilgili dosya yüzdesini görüntüler.
 
-Genişletilmiş Ayrıntılar **bölmesi** daha fazla ayrıntı görüntüler. Koleksiyon rakamlarında yer alan dosyalar boş veya ampul dosyaları içermez. Aile dosyaları rakamları, Ilgi Düzeyi'ne yüklenmemiş ancak yine de ailenin bir parçası olarak say edilen dosyaları temsil ediyor.
+Genişletilmiş **Ayrıntılar** bölmesinde daha fazla ayrıntı görüntülenir. Koleksiyon şekillerindeki dosyalar boş veya karmaşık dosyalar içermez. Aile dosyaları şekilleri, İlgi'ye yüklenmemiş ancak yine de ailenin bir parçası olarak sayılan dosyaları temsil ediyor.

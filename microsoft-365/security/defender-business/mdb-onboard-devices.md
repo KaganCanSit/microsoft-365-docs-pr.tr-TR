@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 04/14/2022
+ms.date: 04/18/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -17,12 +17,12 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: ba816430521db2848273a4f7c6ca7d1a61703690
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: 77eb8c0aa4d0ebd78788e9701e4933788af2e46c
+ms.sourcegitcommit: dc415d784226c77549ba246601f34324c4f94e73
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64862284"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64915917"
 ---
 # <a name="onboard-devices-to-microsoft-defender-for-business"></a>Cihazları İş için Microsoft Defender ekleme
 
@@ -41,7 +41,6 @@ ms.locfileid: "64862284"
 1. İşletim sisteminizin sekmesini seçin: 
 
    - İstemcileri Windows
-   - Windows Sunucusu (önizleme)
    - macOS bilgisayarlar
    - mobil cihazlar
 
@@ -56,6 +55,7 @@ ms.locfileid: "64862284"
 Windows istemci cihazlarını İş için Defender'a eklemek için aşağıdaki seçeneklerden birini belirleyin:
 
 - [Yerel betik](#local-script-for-windows-clients) (cihazları Microsoft 365 Defender portalında el ile ekleme için)
+- [Grup İlkesi](#group-policy-for-windows-clients)
 - [Microsoft Endpoint Manager](#endpoint-manager-for-windows-clients) ([Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil)
 
 
@@ -81,6 +81,10 @@ Windows istemci cihazlarını eklemek için yerel betik kullanabilirsiniz. Bir c
 7. Betik dosyasının konumunu yazın. Örneğin, dosyayı Desktop klasörüne kopyaladıysanız `%userprofile%\Desktop\WindowsDefenderATPLocalOnboardingScript.cmd`yazın ve Enter tuşuna basın (veya **Tamam'ı** seçin).
 
 8. Betik çalıştırıldıktan sonra [Algılama testi çalıştırma](#running-a-detection-test-on-a-windows-client) bölümüne geçin.
+
+### <a name="group-policy-for-windows-clients"></a>Windows istemcileri için grup ilkesi
+
+Windows istemcilerini eklemek için grup ilkesi kullanmayı tercih ediyorsanız grup ilkesi [kullanarak cihazları ekleme Windows](../defender-endpoint/configure-endpoints-gp.md) yönergelerini izleyin. Bu makalede, Uç Nokta için Microsoft Defender ekleme adımları açıklanmaktadır; ancak İş için Defender'a ekleme adımları benzerdir.
 
 ### <a name="endpoint-manager-for-windows-clients"></a>Windows istemcileri için Endpoint Manager
 
@@ -133,67 +137,6 @@ Otomatik kaydı ayarladığınızda, kullanıcılar iş hesabını cihaza ekler.
 Windows cihazları İş için Defender'a ekledikten sonra, her şeyin düzgün çalıştığından emin olmak için Windows bir cihazda algılama testi çalıştırabilirsiniz.
 
 1. Windows cihazında bir klasör oluşturun: `C:\test-MDATP-test`.
-
-2. Yönetici olarak Komut İstemi'ni açın.
-
-3. Komut İstemi penceresinde aşağıdaki PowerShell komutunu çalıştırın:
-
-   ```powershell
-   powershell.exe -NoExit -ExecutionPolicy Bypass -WindowStyle Hidden $ErrorActionPreference = 'silentlycontinue';(New-Object System.Net.WebClient).DownloadFile('http://127.0.0.1/1.exe', 'C:\\test-MDATP-test\\invoice.exe');Start-Process 'C:\\test-MDATP-test\\invoice.exe'
-   ```
-
-Komut çalıştırıldıktan sonra Komut İstemi penceresi otomatik olarak kapatılır. Başarılı olursa algılama testi tamamlandı olarak işaretlenir ve yeni eklenen cihaz için Microsoft 365 Defender portalında ([https://security.microsoft.com](https://security.microsoft.com)) yaklaşık 10 dakika içinde yeni bir uyarı görünür.
-
-## <a name="view-a-list-of-onboarded-devices"></a>Eklenen cihazların listesini görüntüleme
-
-İş için Defender'a eklenen cihazların listesini görüntülemek için, Microsoft 365 Defender portalında ([https://security.microsoft.com](https://security.microsoft.com)), gezinti bölmesindeki **Uç Noktalar'ın** altında **Cihaz giriş'i** seçin.
-
-## <a name="next-steps"></a>Sonraki adımlar
-
-- Eklenecek başka cihazlarınız varsa, cihazlardaki işletim sistemine karşılık gelen sekmeyi [seçin (Windows istemciler, Windows Server, macOS veya mobil cihazlar](#what-to-do)) ve bu sekmedeki yönergeleri izleyin.
-- Cihazları eklemeyi bitirdiyseniz [5. Adım: İş için Microsoft Defender'de güvenlik ayarlarınızı ve ilkelerinizi yapılandırma](mdb-configure-security-settings.md) bölümüne geçin
-- Bkz. [İş için Microsoft Defender kullanarak Kullanmaya başlayın](mdb-get-started.md).
-
-## <a name="windows-server"></a>[**Windows Server:**](#tab/WindowsServerEndpoints)
-
-## <a name="windows-server-preview"></a>Windows Sunucusu (önizleme)
-
-Yerel betik kullanarak bir Windows Sunucusu cihazı ekleyebilirsiniz. 
-
-> [!IMPORTANT]
-> Windows Sunucusu uç noktalarını ekleme özelliği şu anda önizleme aşamasındadır.
-
-1. Microsoft 365 Defender portalına ()[https://security.microsoft.com](https://security.microsoft.com) gidin ve oturum açın.
-
-2. Gezinti bölmesinde **Ayarlar** >  **Endpoints'i** seçin ve ardından **Cihaz yönetimi'nin** altında **Ekleme'yi** seçin.
-
-3. **Windows Server 1803, 2019 ve 2022** gibi bir işletim sistemi seçin ve ardından **Dağıtım yöntemi** bölümünde **Yerel betik'i** seçin. 
-
-   **R2 ve 2016 Windows Server 2012** seçerseniz, indirilip çalıştırılacak iki paketiniz olur: yükleme paketi ve ekleme paketi. Yükleme paketi, İş için Microsoft Defender aracısını yükleyen bir MSI dosyası içerir. Ekleme paketi, Windows Sunucu uç noktanızı İş için Defender'a ekleme betiğini içerir. 
-
-4. **Ekleme paketini indir'i** seçin. Ekleme paketini çıkarılabilir bir sürücüye kaydetmenizi öneririz.
-
-   **R2 ve 2016 Windows Server 2012** seçtiyseniz **Yükleme paketini indir'i** de seçip çıkarılabilir bir sürücüye kaydedin
-
-5. Windows Sunucusu uç noktanızda, yükleme/ekleme paketlerinin içeriğini Desktop klasörü gibi bir konuma ayıklayın. adlı `WindowsDefenderATPLocalOnboardingScript.cmd`bir dosyanız olmalıdır. 
-
-   R2 veya Windows Server 2016 Windows Server 2012 ekliıyorsanız, önce yükleme paketini ayıklayın.
-
-6. Yönetici olarak Komut İstemi'ni açın.
-
-7. Windows Server 2012R2 veya Windows Server 2016 ekliyseniz, şu komutu çalıştırın: `Msiexec /i md4ws.msi /quiet`. 
-
-   Windows Server 1803, 2019 veya 2022'yi ekliiyorsanız, bu adımı atlayın ve 8. adıma geçin.
-
-8. Betik dosyasının konumunu yazın. Örneğin, dosyayı Desktop klasörüne kopyaladıysanız `%userprofile%\Desktop\WindowsDefenderATPLocalOnboardingScript.cmd`yazın ve Enter tuşuna basın (veya **Tamam'ı** seçin).
-
-9. [Windows Sunucusunda algılama testi çalıştırma](#running-a-detection-test-on-windows-server) işlemine geçin
-
-### <a name="running-a-detection-test-on-windows-server"></a>Windows Sunucusunda algılama testi çalıştırma
-
-Windows Server uç noktanızı İş için Defender'a ekledikten sonra, her şeyin düzgün çalıştığından emin olmak için bir algılama testi çalıştırabilirsiniz.
-
-1. Windows Server cihazında bir klasör oluşturun: `C:\test-MDATP-test`.
 
 2. Yönetici olarak Komut İstemi'ni açın.
 

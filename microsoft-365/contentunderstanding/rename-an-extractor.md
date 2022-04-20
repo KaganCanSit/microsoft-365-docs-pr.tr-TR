@@ -1,5 +1,5 @@
 ---
-title: Microsoft SharePoint Syntex'da bir ayıklaıcıyı yeniden SharePoint Syntex
+title: Microsoft SharePoint Syntex'de ayıklayıcıyı yeniden adlandırma
 ms.author: chucked
 author: chuckedmonson
 manager: pamgreen
@@ -12,47 +12,47 @@ ms.collection:
 - enabler-strategic
 - m365initiative-syntex
 ms.localizationpriority: medium
-description: Microsoft SharePoint Syntex'da ayıklaıcıyı nasıl ve neden yeniden adlandır SharePoint Syntex.
-ms.openlocfilehash: 850359f71e7ca08b16265f93741ab2498e87d032
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+description: Microsoft SharePoint Syntex'da ayıklayıcıyı nasıl ve neden yeniden adlandıracağınızı öğrenin.
+ms.openlocfilehash: feba0d8850a534e7f5e5d985bf3424f931e0ceb0
+ms.sourcegitcommit: dc415d784226c77549ba246601f34324c4f94e73
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63450290"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64916171"
 ---
-# <a name="rename-an-extractor-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'da bir ayıklaıcıyı yeniden SharePoint Syntex
+# <a name="rename-an-extractor-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'de ayıklayıcıyı yeniden adlandırma
 
-Bir noktada, ayıklanan veri alanına farklı bir adla başvurmak istediğiniz bir ayıklaıcıyı yeniden adlandırmak zorundayabilirsiniz. Örneğin, organizasyonunız sözleşme belgelerinde değişiklik yapmaya karar verir ve belgelerinde "müşteriler" olarak "müşteriler" sözlerine başvurur. Modelinize bir "Müşteri" alanı ayıklarsanız, bunu "İstemci" olarak yeniden adlandırmayı seçebilirsiniz.
+Ayıklanan bir veri alanına farklı bir adla başvurmak istiyorsanız, bir noktada ayıklayıcıyı yeniden adlandırmanız gerekebilir. Örneğin, kuruluşunuz sözleşme belgelerinde değişiklik yapmaya karar verir ve belgelerinde "müşteriler"i "müşteriler" olarak ifade eder. Modelinizde bir "Müşteri" alanı ayıkladıysanız, alanı "İstemci" olarak yeniden adlandırmayı seçebilirsiniz.
 
-Güncelleştirilmiş modelinizi belge kitaplığınıza SharePoint, belge kitaplığı görünümde yeni bir "İstemci" sütunu görüntülersiniz. Görünümünüz geçmiş etkinlikler için "Müşteri" sütununu korur, ancak modeliniz tarafından işlenen tüm yeni belgeler için yeni "İstemci" sütununu güncelleştirecektir. 
+Güncelleştirilmiş modelinizi SharePoint belge kitaplığınızla eşitlediğinizde, belge kitaplığı görünümünüzde yeni bir "İstemci" sütunu görürsünüz. Görünümünüz geçmiş etkinlikler için "Müşteri" sütununu korur, ancak modeliniz tarafından işlenen tüm yeni belgeler için yeni "İstemci" sütununu güncelleştirir. 
 
 > [!IMPORTANT]
->  Güncelleştirilmiş modelinizi, yeni sütun adının lenmesi için daha önce uygulanmış olan belge kitaplıklarına eşitlemeye emin olun. 
+>  Güncelleştirilmiş modelinizi, yeni sütun adının görüntülenmesi için daha önce uyguladığınız belge kitaplıklarına eşitlediğinizden emin olun. 
 
-## <a name="rename-an-extractor"></a>Ayıklayı yeniden adlandırma
+## <a name="rename-an-extractor"></a>Ayıklayıcıyı yeniden adlandırma
 
-Varlık ayıklayı yeniden adlandırmak için bu adımları izleyin.
+Varlık ayıklayıcısını yeniden adlandırmak için bu adımları izleyin.
 
-1. Model listenizi görmek için içerik **merkezinde** Modeller'i seçin.
+1. model listenizi görmek için içerik merkezinde **Modeller'i** seçin.
 
-2. Modeller **sayfasındaki** **Ad sütununda,** ayıklaıcıyı yeniden adlandırmak istediğiniz modeli seçin.
+2. **Modeller** sayfasındaki **Ad** sütununda, ayıklayıcıyı yeniden adlandırmak istediğiniz modeli seçin.
 
-3. Varlık **ayıklaıcıları** altında, yeniden adlandırmak istediğiniz ayıklaıcının adını seçin ve sonra da Yeniden Adlandır'ı **seçin**.
+3. **Varlık ayıklayıcıları'nın** altında, yeniden adlandırmak istediğiniz ayıklayıcının adını seçin ve ardından **Yeniden Adlandır'ı** seçin.
 
-    ![Yeniden Adlandır seçeneğinin vurgulu olduğu seçili bir ayıklayanı gösteren Varlık ayıklayanlar bölümünün ekran görüntüsü.](../media/content-understanding/entity-extractor-rename.png) 
+    ![Yeniden Adlandır seçeneğinin vurgulandığı seçili ayıklayıcıyı gösteren Varlık ayıklayıcıları bölümünün ekran görüntüsü.](../media/content-understanding/entity-extractor-rename.png) 
 
-4. Varlık **ayıklaıcıyı yeniden adlandır** panelinde:
+4. **Varlık ayıklayıcısını yeniden adlandır** panelinde:
 
-   a. Yeni **ad'ın** altında ayıklaıcının yeni adını girin.
+   a. **Yeni ad'ın** altında ayıklayıcının yeni adını girin.
 
-    ![Varlık ayıkla panelinin ekran görüntüsü.](../media/content-understanding/rename-entity-extractor-panel.png) 
+    ![Varlık ayıklayıcı panelini gösteren ekran görüntüsü.](../media/content-understanding/rename-entity-extractor-panel.png) 
 
-   b. (İsteğe bağlı) Gelişmiş **ayarlar'ın** altında, var olan bir site sütununu ilişkilendirmek isteyip istemiyorsanız seçin.
+   b. (İsteğe bağlı) **Gelişmiş ayarlar'ın** altında, var olan bir site sütununu ilişkilendirmek isteyip istemediğinizi seçin.
 
-5. Yeniden **Adlandır'ı seçin**.
+5. **Yeniden Adlandır'ı** seçin.
 
-## <a name="see-also"></a>Ayrıca Bkz
-[Ayıklaıcı oluşturma](create-an-extractor.md)
+## <a name="see-also"></a>Ayrıca bkz.
+[Ayıklayıcı oluşturma](create-an-extractor.md)
 
 [Sınıflandırıcı oluşturma](create-a-classifier.md)
 
@@ -60,8 +60,8 @@ Varlık ayıklayı yeniden adlandırmak için bu adımları izleyin.
 
 [Açıklama türleri](explanation-types-overview.md)
 
-[Ayıklaıcı oluştururken terim deposu taksonomilerinden faydalanma](leverage-term-store-taxonomy.md)
+[Ayıklayıcı oluştururken terim deposu taksonomisini kullanma](leverage-term-store-taxonomy.md)
 
-[Belge Anlama'ya genel bakış](document-understanding-overview.md)
+[Document Understanding'e genel bakış](document-understanding-overview.md)
 
 [Model uygulama](apply-a-model.md) 

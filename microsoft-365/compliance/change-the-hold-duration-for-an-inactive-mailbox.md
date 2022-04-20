@@ -1,5 +1,5 @@
 ---
-title: Etkin olmayan posta kutusunun tutma süresini değiştirme
+title: Etkin olmayan posta kutusunun bekletme süresini değiştirme
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -19,76 +19,76 @@ search.appverid:
 ms.assetid: bdee24ed-b8cf-4dd0-92ae-b86ec4661e6b
 ms.custom:
 - seo-marvel-apr2020
-description: Posta Office 365 etkin değil yapıldıktan sonra, bekletme süresini veya etkin Office 365 posta kutusuna atanmış bekletme ilkesi değişikliğini geri alın.
-ms.openlocfilehash: bf1131aa0d14222bec7ab1c94983925cfe39e673
-ms.sourcegitcommit: 400ef9ac34247978e3de7ecc0b376c4abb6c99d8
+description: bir Office 365 posta kutusu devre dışı bırakıldıktan sonra, etkin olmayan posta kutusuna atanan saklama veya Office 365 bekletme ilkesinin süresini değiştirin.
+ms.openlocfilehash: d959195731ee0bf4de9b533f85fa2e2356259c12
+ms.sourcegitcommit: 1d972f15a45204e89e268c5ff257021aced5e775
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "63010864"
+ms.lasthandoff: 04/18/2022
+ms.locfileid: "64911378"
 ---
-# <a name="change-the-hold-duration-for-an-inactive-mailbox"></a>Etkin olmayan posta kutusunun tutma süresini değiştirme
+# <a name="change-the-hold-duration-for-an-inactive-mailbox"></a>Etkin olmayan posta kutusunun bekletme süresini değiştirme
 
-Etkin [olmayan posta kutusu](inactive-mailboxes-in-office-365.md) , kuruluşdan ayrıldıktan sonra eski çalışanın e-postalarını tutmak için kullanılan posta kutusu durumudur. Posta kutusu, kullanıcı nesnesi silinmeden önce posta kutusuna uygun bir Microsoft 365 devre dışı kalır.  Aşağıdaki 10 tür 10 farklı 100 100 1000 1000 1000 1000 1000 000 0000 0000 hesap silme işlemi
+[Etkin olmayan posta kutusu](inactive-mailboxes-in-office-365.md), eski bir çalışanın e-postasını kuruluşunuzdan ayrıldıktan sonra tutmak için kullanılan posta kutusu durumudur. Microsoft 365 kullanıcı nesnesi silinmeden önce geçerli bir ayrı tutma uygulandığında posta kutusu devre dışı olur.  Aşağıdaki tür ayrı tutmalar, kullanıcı hesabı silinerek etkin olmayan bir posta kutusunun oluşturulmasını başlatır:
 
-- [Microsoft 365 bekletme ve silme ayarlarıyla,](retention.md) bekletme ilkelerini ve etiketlerini değiştirme
+- [Bekletme ilkelerini ve etiketleri saklama](retention.md) veya saklama ve silme ayarlarıyla Microsoft 365
 
-- eBulma durumuyla [ilişkilendirilmiş tutma](ediscovery.md)
+- [eBulma](ediscovery.md) servis talebiyle ilişkili ayrı tutma
 
-- [Mahkeme Tutma](create-a-litigation-hold.md)
+- [Dava Tutma](create-a-litigation-hold.md)
 
-- Mevcut bir 1 In-Place tutma.
+- Mevcut bir In-Place Ayrı Tutma.
 
 > [!IMPORTANT]
-> Yukarıdaki bekletmelerden herhangi biri kullanıcı hesabı silinmesi üzerine posta kutusunun Microsoft 365 etkin olmaya zorlasa da, etkin olmayan posta kutularını önceden plan ederken Microsoft 365 bekletmeyi kullanmanız kesinlikle önerilir.
+> Yukarıdaki ayrı tutmalardan herhangi biri, kullanıcı hesabı silindiğinde Microsoft 365 posta kutusunun etkin olmayan duruma gelmesini zorunlu tutsa da, etkin olmayan posta kutularını proaktif olarak kullanmayı planlarken Microsoft 365 saklama kullanmanız kesinlikle önerilir.
 >
-> - eBulma ayrımları, bir yasal sorunla ilgili belirli, zaman bağlantılı davalara yöneliktir. Bir noktada, büyük olasılıkla bir dava sona erer ve davayla ilişkilendirilmiş esnalar kaldırılır ve eBulma vakası kapatılır (veya silinir). Etkin olmayan bir posta kutusuna yerleştirilen tutma bir eBulma durumuyla ilişkilendirilmişse ve tutma serbest bırakılırsa veya eBulma vakası kapatılır veya silinirse, etkin olmayan posta kutusu kalıcı olarak silinir.
+> - eBulma tutmaları, yasal bir sorunla ilgili belirli, zamana bağlı servis talepleri için tasarlanmıştır. Bir noktada, büyük olasılıkla bir yasal dava sona erer ve servis talebiyle ilişkili tutmalar kaldırılır ve eBulma olayı kapatılır (veya silinir). Etkin olmayan posta kutusuna yerleştirilen bir ayrı tutma bir eBulma olayıyla ilişkilendirilirse ve ayrı tutma serbest bırakılırsa veya eBulma olayı kapatılır veya silinirse, etkin olmayan posta kutusu kalıcı olarak silinir.
 >
-> - In-Place yönetim merkezinde Exchange 10 10 10 artık kaldırıldı. 1 Temmuz 2020'den In-Place 1 Temmuz 2020'den Exchange Online. 1 Ekim 2020'den sonra yerinde tutma süresi değiştirilemez. Tutma Tutma uygulanmış etkin olmayan In-Place posta kutuları yalnızca 1/6 /In-Place kaldırılarak silinebilir. Tutmada olan ve etkin olmayan In-Place, tutma kaldırılana kadar korunmaya devam eder. Eski eBulma araçlarının In-Place hakkında daha fazla bilgi için bkz. [Eski eBulma araçlarının emeklilik](legacy-ediscovery-retirement.md).
+> - Exchange yönetim merkezindeki In-Place Tutmalar artık kullanımdan kaldırılmıştır. 1 Temmuz 2020 itibarıyla yeni In-Place Tutmalar Exchange Online'da oluşturulamadı. 1 Ekim 2020 itibarıyla yerinde tutma süresi artık değiştirilemedi. In-Place Ayrı Tutma uygulanmış etkin olmayan posta kutuları yalnızca In-Place Ayrı Tutma kaldırılarak silinebilir. In-Place Ayrı Tutma'da bulunan etkin olmayan posta kutuları, ayrı tutma kaldırılana kadar korunmaya devam eder. In-Place Tutmaları kullanımdan kaldırma hakkında daha fazla bilgi için bkz. [Eski eKeşif araçlarının kullanımdan kaldırılması](legacy-ediscovery-retirement.md).
 >
-> - [Bir kullanıcı hesabı](create-a-litigation-hold.md) silindikten sonra posta kutusunda içeriği tutmak ve devre dışı kalmak için alternatif bir yöntem olarak mahkeme tutma destekleri devam ediyor. Bununla birlikte, daha eski bir teknoloji olarak bu Microsoft 365 öneririz.
+> - [Bir](create-a-litigation-hold.md) posta kutusunda içeriği tutmak ve kullanıcı hesabı silindikten sonra etkin olmayan hale getirmek için alternatif bir yöntem olarak dava tutma desteği devam eder. Ancak, eski bir teknoloji olarak bunun yerine Microsoft 365 saklama kullanmanızı öneririz.
 
-Devre dışı bırakılırsa, posta kutusunun Kurtarılabilir Öğeler klasörü de [](/exchange/security-and-compliance/recoverable-items-folder/recoverable-items-folder) içinde olmak üzere içeriği, devre dışı kalmadan önce posta kutusuna yerleştirilena kadar korunur.  
+Devre dışı bırakıldıktan sonra, [Kurtarılabilir Öğeler klasörü](/exchange/security-and-compliance/recoverable-items-folder/recoverable-items-folder) de dahil olmak üzere posta kutusunun içeriği, posta kutusu devre dışı bırakılmadan önce posta kutusuna yerleştirilen saklamaya kadar korunur.  
 
-Geçerli saklama, yalnızca süresiz bekletme ilkesi veya etiketiyle ilişkilendirilmiş bekletme Microsoft 365 bekletme ilkesi veya etiket, eBulma vakası veya Mahkeme Tutma (```LitigationHoldDuration```yapılandırılmamış olmadan) gibi zamana bağlı olmaksızın olursa, saklama kaldırılana kadar posta kutusu içeriği süresiz olarak korunur.  
+Geçerli ayrı tutma, süresiz saklama Microsoft 365 bekletme ilkesi veya etiketiyle ilişkili saklama, eBulma olayı veya Dava Tutma (yapılandırılmamış```LitigationHoldDuration```) gibi zamana bağlı değilse, saklama kaldırılana kadar posta kutusu içeriği süresiz olarak korunur.  
 
-Öte yandan, tutma süresi zaman tabanlı olursa, posta kutusu içeriği tutma süresi dolana kadar korunur; bu noktada, Kurtarılabilir Öğeler klasöründeki tüm öğeler etkin olmayan posta kutusundan kalıcı olarak silinir (temiz olur).
+Ancak, bekletme zamana bağlıysa, posta kutusu içeriği saklama süresi dolana kadar korunur ve bu noktada Kurtarılabilir Öğeler klasöründeki tüm öğeler etkin olmayan posta kutusundan kalıcı olarak silinir (temizlenir).
 
 > [!NOTE]
-> Etkin olmayan posta kutuları için, bekletme ilkeniz veya etiketleriniz için bekletme Microsoft 365 ve silme ayarı kullanmanızı öneririz.  Yalnızca koruma ayarını seçerseniz, Kurtarılabilir Öğeler klasörü tutma süresinin sonunda temiz olur, ancak diğer silinmemiş öğeler etkin olmayan posta kutusunda süresiz olarak kalır.
+> Etkin olmayan posta kutuları için, Microsoft 365 bekletme ilkeniz veya etiketleriniz için bir saklama ve silme ayarı kullanmanızı öneririz.  Yalnızca saklama ayarını seçerseniz, Kurtarılabilir Öğeler klasörü saklama süresinin sonunda temizlenir, ancak diğer silinmeyen öğeler süresiz olarak etkin olmayan posta kutusunda kalır.
 
-Düzenlemeler ve ilkeler geliştikçe, etkin olmayan posta kutusuna atanan tutma süresini değiştirmenizi gereken bazı durumlar olabilir.  Aşağıdaki adımlarda bunun nasıl yapl şekli ana hatlarıyla açık şekilde ve açık adımlar ve ardından açık bir şekilde açık ve açık bir şekilde açık ve açık
+Düzenlemeler ve ilkeler geliştikçe, etkin olmayan posta kutusuna atanan saklama süresini değiştirmeniz gereken bazı durumlar olabilir.  Aşağıdaki adımlarda bunun nasıl yapılacağının ana hatlarıyla anlatılacaktır.
 
-## <a name="connect-to-powershell"></a>Bağlan PowerShell'e
+## <a name="connect-to-powershell"></a>PowerShell'e Bağlan
 
-Daha önce de belirttiğimiz gibi, birçok farklı türde 0'lar devre dışı posta kutusunun oluşturulmasını tetikler.  Bu nedenle, etkin olmayan posta kutusuna uygulanan tutma süresini değiştirmek için, önce bunu etkileyen 10 tür 10 122 0124'leri tanımlamanız gerekir.  Bunu yapmak için, bekletme türlerini tanımlamak üzere Exchange Online PowerShell kullanmalıdır ve etkin olmayan posta kutusu Microsoft 365 bekletme ilkelerinden veya etiketlerden etkileniyorsa, belirli ilkeleri tanımlamak için Güvenlik ve Uyumluluk Merkezi PowerShell'i de kullanmalıdır.
+Daha önce de belirttiğimiz gibi, birçok farklı ayrı tutma türü etkin olmayan posta kutusunun oluşturulmasını tetikleyebilir.  Bu nedenle, etkin olmayan posta kutusuna uygulanan saklama süresini değiştirmek için önce hangi tür ayrı tutmaların onu etkilediğini belirlemeniz gerekir.  Bunu yapmak için Exchange Online PowerShell kullanarak saklama türlerini tanımlamanız ve etkin olmayan posta kutusunun Microsoft 365 bekletme ilkelerinden veya etiketlerden etkilenmesi durumunda, belirli ilkeleri tanımlamak için Güvenlik ve Uyumluluk Merkezi PowerShell'i de kullanmanız gerekir.
 
-- PowerShell veya Exchange Online PowerShell & Uyumluluk Merkezi'ne bağlanmak için, aşağıdaki konulardan birini bakın:
+- Exchange Online PowerShell veya Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanmak için aşağıdaki konulardan birine bakın:
 
-  - [Bağlan'Exchange Online PowerShell'e](/powershell/exchange/connect-to-exchange-online-powershell)
+  - [PowerShell'i Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell)
 
-  - [Bağlan ve Uyumluluk & PowerShell'e](/powershell/exchange/connect-to-scc-powershell)
+  - [Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell)
 
-## <a name="step-1-identify-the-holds-on-an-inactive-mailbox"></a>1. Adım: Etkin olmayan bir posta kutusunda 1. Adım: Etkin olmayan posta kutusunda 1.
+## <a name="step-1-identify-the-holds-on-an-inactive-mailbox"></a>1. Adım: Etkin olmayan posta kutusunda ayrı tutmaları belirleme
 
-Etkin olmayan bir posta kutusuna farklı türde bekletme Microsoft 365 veya birden çok bekletme ilkesi yerleştiril olabileceği için, ilk adım etkin olmayan bir posta kutusunda bekletmeyi tanımlamaktır.
+Etkin olmayan bir posta kutusuna farklı saklama türleri veya bir veya daha fazla Microsoft 365 bekletme ilkesi yerleştirilebileceği için, ilk adım etkin olmayan bir posta kutusunda ayrı tutmaları belirlemektir.
   
-PowerShell'de Exchange Online etkin olmayan belirli bir posta kutusunun tutma bilgilerini görüntülemek için bu komutu çalıştırın.
+Kuruluşunuzdaki belirli bir etkin olmayan posta kutusunun saklama bilgilerini görüntülemek için Exchange Online PowerShell'de aşağıdaki komutu çalıştırın.
   
 ```powershell
 Get-Mailbox -Identity <identity of inactive mailbox> -InactiveMailboxOnly | FL DisplayName,Name,DistinguishedName,ExchangeGuid,IsInactiveMailbox,LitigationHoldEnabled,LitigationHoldDuration,LitigationHoldDate,LitigationHoldOwner,InPlaceHolds,ComplianceTagHoldApplied
 ```
 
-Birden çok etkin olmayan posta kutusunun ne tür olduğunu tanımlamanız gerekirse ve kurumda çok fazla sayıda posta kutusu varsa, PowerShell kullanılarak görüntülenemeyen bir durum olabilir. Bu durumda, aşağıdaki komutu kullanarak ve ortamınız için gerekenleri değiştirerek tüm geçerli bilgileri bir CSV ```Path``` dosyasına aktarabilirsiniz:
+Birden çok etkin olmayan posta kutusu için ayrı tutma türünü belirlemeniz gerekiyorsa ve kuruluşunuzda çok sayıda ayrı tutma varsa, PowerShell kullanarak görüntülemek yönetilemez hale gelebilir. Bu durumda, aşağıdaki komutu kullanarak ve ortamınız için gereken şekilde değiştirerek ```Path``` tüm geçerli bilgileri bir CSV dosyasına aktarabilirsiniz:
 
 ```powershell
 Get-Mailbox -InactiveMailboxOnly -ResultSize Unlimited | Select DisplayName,Name,DistinguishedName,ExchangeGuid,IsInactiveMailbox,LitigationHoldEnabled,LitigationHoldDuration,LitigationHoldDate,LitigationHoldOwner,InPlaceHolds,ComplianceTagHoldApplied | Export-Csv -NoTypeInformation -Path "C:\Temp\InactiveMailboxHoldTypes.csv"
 ```
 
-Bu örnekte, aşağıdaki örnekte, farklı olası tutma türlerine sahip devre dışı altı posta kutusu için sonuçlar ve almaktadır.
+Bu örneğin amaçları doğrultusunda, aşağıda farklı olası ayrı tutma türlerine sahip altı etkin olmayan posta kutusunun sonuçları gösterilmektedir.
 
 > [!NOTE]
-> Birden çok türde 100 100 100 000 2013 ve 2013 arasında olmak üzere, birden çok 1000 0000 000
+> Birden çok ayrı tutma türü de dahil olmak üzere birden çok ayrı tutma, tek bir etkin olmayan posta kutusuna uygulanabilir.
   
 ```text
 DisplayName              : Ann Beebe
@@ -176,117 +176,117 @@ InPlaceHolds             : {c0ba3ce811b6432a8751430937152491}
 ComplianceTagHoldApplied : False
 ```
 
-Aşağıdaki tabloda, yukarıdaki örnekte yer alan her posta kutusunu devre dışı tutmak için kullanılan altı farklı tutma türü tanımkullanılmaktadır.
+Aşağıdaki tabloda, her posta kutusunu yukarıdaki örnekten etkin olmayan hale getirmek için kullanılan altı farklı ayrı tutma türü tanımlanmıştır.
   
-|**Etkin olmayan posta kutusu**|**Tutma türü**|**Etkin olmayan posta kutusunda 10.**|
+|**Etkin olmayan posta kutusu**|**Ayrı tutma türü**|**Etkin olmayan posta kutusunda bekletmeyi tanımlama**|
 |:-----|:-----|:-----|
-|Ann Beebe  <br/> |Mahkeme Tutma  <br/> | Özellik  `LitigationHoldEnabled`  , posta kutusunun  `True` Mahkeme Tutmada olduğunu belirten şekilde ayarlanmıştır. <br/><br/> Buna ek olarak `LitigationHoldDuration` , posta `365.00:00:00` kutusu öğelerinin oluşturma tarihten (gönderilen/alınan) sonra 365 gün boyunca mahkemelere tabi olmayacaklarını belirten şekilde ayarlanır.  <br/><br/> Bu `LitigationHoldDate` , MahkemeHold'in etkinleştiril `LitigationHoldOwner` olduğu tarihi gösterir ve mahkeme tutmayı başlatan kişiyi tanımlar. <br/> |
-|Carol Olson  <br/> |Microsoft 365 posta kutularına Microsoft 365 uyumluluk merkezi gelen kutusundan bekletme ilkesi yok  <br/> |Özellik`InPlaceHolds`, etkin olmayan posta kutusuna Microsoft 365 bekletme ilkesi GUID'lerini içerir. GUID ön ek ile başladığından `mbx` ve veya ile sona erdiğinde, bunun belirli posta kutularına uygulanan bir bekletme ilkesi olduğunu belirtebilirsiniz `:2` `:3`. <br/><br/> Daha fazla bilgi için bkz [. Bekletme ilkeleri için InPlaceHolds değerinin biçimini anlama](identify-a-hold-on-an-exchange-online-mailbox.md#understanding-the-format-of-the-inplaceholds-value-for-retention-policies).  <br/> |
-|Oya Bowen <br/> | Microsoft 365 saklama veya saklama ve silme eylemine sahip olan bir bekletme etiketi, posta kutusunda en az bir öğeye uygulanır  <br/> |Özellik `ComplianceTagHoldApplied` , öğenin `True` koruma veya koruma etiketiyle etiketlenmiş olduğunu gösterir.  <br/><br/> Ayrıca özellik, `InPlaceHolds` etkin olmayan posta kutusuna Microsoft 365 bekletme etiketi ilkesi GUID'lerini de içerir.  <br/><br/> Daha fazla bilgi için bkz [. Klasöre veya öğeye bekletme etiketi uygulandığı için tanımlayıcı posta kutuları saklamayı belirleme](identify-a-hold-on-an-exchange-online-mailbox.md#identifying-mailboxes-on-hold-because-a-retention-label-has-been-applied-to-a-folder-or-item) <br/>  |
-|Ayrıca Necaise  <br/> |Kuruluş genelinde Microsoft 365 bekletme ilkesi ilk Microsoft 365 uyumluluk merkezi  <br/> |Özellik  `InPlaceHolds`  boştur ve `LitigationHoldEnabled` böyledir `False` `ComplianceTagHoldApplied` `False`. Bu, etkin olmayan posta kutusunun devralınan kuruluşa Microsoft 365 bekletme ilkelerinin bir veya birden çok (Exchange) konumunun tamamına uygulandığını gösterir. <br/><br/> Daha fazla bilgi için bkz [. Posta kutusuna kuruluş genelinde bir bekletme ilkesi uygulandığını onaylama](identify-a-hold-on-an-exchange-online-mailbox.md#how-to-confirm-that-an-organization-wide-retention-policy-is-applied-to-a-mailbox) <br/> |
-|Abraham McMahon  <br/> |eBulma olay durumunda Microsoft 365 uyumluluk merkezi  <br/> |Özellik  `InPlaceHolds`  , etkin olmayan posta kutusuna yerleştirilen eBulma durumu GUID'sine sahip. Guid ön ek ile başladığından, bunun bir eBulma durumu olduğunu anlarız  `UniH` .  <br/><br/> Daha fazla bilgi için bkz. [eBulma 1](identify-a-hold-on-an-exchange-online-mailbox.md#ediscovery-holds). <br/> |
-|Pilar Pinilla  <br/> |In-Place Tutun  <br/> |Özellik  `InPlaceHolds`  , etkin olmayan posta kutusuna In-Place Posta Kutusu'nun GUID'lerini içerir. Bunun bir Ön Ek In-Place olduğunu anlarız, çünkü GUID bir önekle başlamaz.  <br/><br/> **NOT**: 1 Ekim 2020'den sonra yerinde tutma süresi değiştirilemez. Yalnızca Etkin Olmayan Posta In-Place etkin olmayan posta kutusunun silinmesiyle sonuçlandıracak bir  Hold işlemini kaldırabilirsiniz. <br/><br/> Daha fazla bilgi için bkz. [Eski eKbulma araçlarının eski bir şekilde çalışma.](legacy-ediscovery-retirement.md) <br/> |
+|Ann Beebe  <br/> |Dava Tutma  <br/> | `LitigationHoldEnabled` özelliği, posta kutusunun Dava Tutma'da olduğunu belirten olarak ayarlanır`True`. <br/><br/> Ayrıca, `LitigationHoldDuration` posta kutusu öğelerinin oluşturulma tarihinden (gönderildi/alındı) 365 gün sonra artık davaya tabi tutulmayacaklarını belirten olarak ayarlanır `365.00:00:00` .  <br/><br/> , `LitigationHoldDate` Dava Sahibi'nin etkinleştirildiği tarihi gösterir ve `LitigationHoldOwner` dava tutma işlemini başlatan kişiyi tanımlar. <br/> |
+|Carol Olson  <br/> |Belirli posta kutularına uygulanan Microsoft 365 uyumluluk merkezi bekletme ilkesini Microsoft 365  <br/> |özelliği, `InPlaceHolds` etkin olmayan posta kutusuna uygulanan Microsoft 365 bekletme ilkesinin GUID'sini içerir. GUID ön ekiyle başlayıp veya `:3`ile sona erdiğinden, bunun belirli posta kutularına `mbx` uygulanan bir `:2` bekletme ilkesi olduğunu anlayabilirsiniz. <br/><br/> Daha fazla bilgi için bkz [. Bekletme ilkeleri için InPlaceHolds değerinin biçimini anlama](identify-a-hold-on-an-exchange-online-mailbox.md#understanding-the-format-of-the-inplaceholds-value-for-retention-policies).  <br/> |
+|Megan Bowen <br/> | saklama veya saklama ve silme eylemi içeren Microsoft 365 bekletme etiketi posta kutusunda en az bir öğeye uygulanır  <br/> |`ComplianceTagHoldApplied` özelliği, `True` bir öğenin bir saklama veya saklama ve silme etiketiyle etiketlendiğini belirtir.  <br/><br/> Ayrıca özelliği, `InPlaceHolds` etkin olmayan posta kutusuna uygulanan Microsoft 365 bekletme etiketi ilkesinin GUID'sini içerir.  <br/><br/> Daha fazla bilgi için bkz. Bir [klasöre veya öğeye bekletme etiketi uygulandığından, beklemedeki posta kutularını tanımlama](identify-a-hold-on-an-exchange-online-mailbox.md#identifying-mailboxes-on-hold-because-a-retention-label-has-been-applied-to-a-folder-or-item) <br/>  |
+|Mario Necaise  <br/> |Microsoft 365 uyumluluk merkezi kuruluş genelinde Microsoft 365 bekletme ilkesi  <br/> |`InPlaceHolds` özelliği boş, `LitigationHoldEnabled` ve `False` `ComplianceTagHoldApplied` şeklindedir`False`. Bu, etkin olmayan posta kutusunun devraldığı kuruluşa uygulanan bir veya daha fazla tam (Exchange) konumun saklama ilkeleri Microsoft 365 gösterir. <br/><br/> Daha fazla bilgi için bkz. [Kuruluş genelinde saklama ilkesinin posta kutusuna uygulandığını onaylama](identify-a-hold-on-an-exchange-online-mailbox.md#how-to-confirm-that-an-organization-wide-retention-policy-is-applied-to-a-mailbox) <br/> |
+|Abraham McMahon  <br/> |Microsoft 365 uyumluluk merkezi eBulma servis talebi saklama  <br/> |özelliği,  `InPlaceHolds`  etkin olmayan posta kutusuna yerleştirilen eBulma servis talebi saklamanın GUID'sini içerir. GUID ön ekiyle  `UniH` başladığından bunun bir eBulma servis talebi saklama işlemi olduğunu anlayabilirsiniz.  <br/><br/> Daha fazla bilgi için bkz. [eBulma tutmaları](identify-a-hold-on-an-exchange-online-mailbox.md#ediscovery-holds). <br/> |
+|Pilar Pinilla  <br/> |In-Place Tutma  <br/> |özelliği,  `InPlaceHolds`  etkin olmayan posta kutusuna yerleştirilen In-Place Tutma guid'sini içerir. GUID bir ön ek ile başlamadığından bunun bir In-Place Ayrı Tutma olduğunu anlayabilirsiniz.  <br/><br/> **NOT**: 1 Ekim 2020 itibarıyla yerinde tutma süresi artık değiştirilemez. Yalnızca etkin olmayan posta kutusunun silinmesine neden olacak bir In-Place Ayrı Tutma'sını kaldırabilirsiniz. <br/><br/> Daha fazla bilgi için bkz [. Eski eBulma araçlarının kullanımdan kaldırılması](legacy-ediscovery-retirement.md). <br/> |
 
-## <a name="step-2-change-the-hold-duration-for-an-inactive-mailbox"></a>2. Adım: Etkin olmayan bir posta kutusunun kullanım süresini değiştirme
+## <a name="step-2-change-the-hold-duration-for-an-inactive-mailbox"></a>2. Adım: Etkin olmayan posta kutusunun saklama süresini değiştirme
 
-Etkin olmayan posta kutusunda ne tür bir  hold (ve birden çok  hold) olduğunu tanımdikten sonra, bir sonraki adım, tutma süresini değiştirmektir.  İşlem, uygulanan tutma türüne bağlı olarak değişir.
+Etkin olmayan posta kutusuna ne tür bir ayrı tutma yerleştirildiğini (ve birden çok ayrı tutma olup olmadığını) belirledikten sonra, sonraki adım ayrı tutma süresini değiştirmektir.  İşlem, uygulanan ayrı tutma türüne bağlı olarak değişir.
 
-- [Microsoft 365 bekletme Microsoft 365 değiştirme](#change-the-duration-for-a-microsoft-365-retention-policy)
+- [Microsoft 365 bekletme ilkesinin süresini değiştirme](#change-the-duration-for-a-microsoft-365-retention-policy)
 
-- [Yeni bir bekletme etiketinin Microsoft 365 değiştirme](#change-the-duration-for-a-microsoft-365-retention-label)
+- [Microsoft 365 bekletme etiketinin süresini değiştirme](#change-the-duration-for-a-microsoft-365-retention-label)
 
-- [eBulma  Tutma süresini değiştirme](#change-the-duration-for-an-ediscovery-hold)
+- [eBulma Ayrı Tutma süresini değiştirme](#change-the-duration-for-an-ediscovery-hold)
 
-- [Mahkeme Tutma süresini değiştirme](#change-the-duration-for-a-litigation-hold)
+- [Dava Tutma süresini değiştirme](#change-the-duration-for-a-litigation-hold)
 
-- [2010 12 Saat In-Place değiştirme](#change-the-duration-for-an-in-place-hold)
+- [In-Place Ayrı Tutma süresini değiştirme](#change-the-duration-for-an-in-place-hold)
 
-### <a name="change-the-duration-for-a-microsoft-365-retention-policy"></a>Microsoft 365 bekletme Microsoft 365 değiştirme
+### <a name="change-the-duration-for-a-microsoft-365-retention-policy"></a>Microsoft 365 bekletme ilkesinin süresini değiştirme
 
-Microsoft 365 bekletme ilkesi için bekletme süresini değiştirmek için, `Get-RetentionCompliancePolicy` önce Güvenlik ve Uyumluluk Merkezi PowerShell'de posta kutusunda bulunan özellikten ilişkili GUID `InPlaceHolds` ile çalıştırarak etkin olmayan posta kutusunu etkileyen ilkeyi tanımlamanız gerekir.
+Microsoft 365 bekletme ilkesinin saklama süresini değiştirmek için, önce Güvenlik ve Uyumluluk Merkezi PowerShell'deki posta kutusunda bulunan özelliğinden `InPlaceHolds` ilişkili GUID ile çalıştırarak `Get-RetentionCompliancePolicy` etkin olmayan posta kutusunu etkileyen ilkeyi tanımlamanız gerekir.
 
-Bu komutu çalıştırarak GUID'den öneki ve soneki kaldıryın.  Örneğin, yukarıdaki örnek bilgileri kullanarak, `InPlaceHolds` `:3` `mbxcdbbb86ce60342489bff371876e7f224:3` `mbx` değerini alıp GUID değerini kaldırabilir ve bunun sonucunda bir ilke GUID değeri elde etmiş olursunuz.`cdbbb86ce60342489bff371876e7f224`  Bu örnekte, çalıştırmak istediğiniz yer:
+Bu komutu çalıştırırken GUID'den ön eki ve son eki kaldırdığınızdan emin olun.  Örneğin, yukarıdaki örnek bilgileri kullanarak öğesinin `InPlaceHolds` değerini `:3` `mbxcdbbb86ce60342489bff371876e7f224:3` `mbx` alır ve öğesinin ilke GUID'sine `cdbbb86ce60342489bff371876e7f224`neden olursunuz.  Bu örnekte şunları çalıştırmak istersiniz:
 
 ```powershell
 Get-RetentionCompliancePolicy cdbbb86ce60342489bff371876e7f224 | FL Name
 ```
 
-İlkenin adını biliyorktan sonra, Uyumluluk Merkezi'nde bekletme Microsoft 365 değiştirebilirsiniz.  Bekletme ilkelerinin genellikle birden çok konuma uygulandığını unutmayın, bu nedenle ilkenin değiştirilmesi, hem etkin olmayan hem de etkin olmayan tüm konumları etkiler ve bu da bekletme dışında konumları Exchange.  Daha fazla bilgi için bkz [. Bekletme ilkeleri oluşturma ve yapılandırma](create-retention-policies.md).  
+İlkenin adını bildiğinizde, Microsoft 365 Uyumluluk merkezinde bekletme ilkesini değiştirebilirsiniz.  Bekletme ilkelerinin genellikle birden fazla konuma uygulandığını unutmayın; bu nedenle ilkenin değiştirilmesi, hem etkin hem de etkin olmayan tüm uygulanan konumları etkiler ve bu da Exchange dışındaki konumları da içerebilir.  Daha fazla bilgi için bkz. [Bekletme ilkeleri oluşturma ve yapılandırma](create-retention-policies.md).  
 
 > [!IMPORTANT]
-> Saklama kilidi [etkinleştirilmiş bekletme](retention-preservation-lock.md) ilkeleri bekletme süresi uzatılabilir, ancak azaltılamaz veya kaldırılamaz.
+> [Koruma kilidi etkinleştirilmiş bekletme](retention-preservation-lock.md) ilkeleri saklama süresini uzatabilir, ancak azaltılmayabilir veya kaldırılmayabilir.
 
-Bekletme dönemini yalnızca etkin olmayan posta kutuları veya yalnızca belirli etkin olmayan posta kutuları için değiştirmekse, Azure AD ve Exchange özniteliklerini ve özelliklerini kullanarak belirli posta [](retention.md#adaptive-or-static-policy-scopes-for-retention)kutularını veya etkin olmayan posta kutuları gibi posta kutularını tek tek hedef alan uyarlanabilir ilke kapsamlarını dağıtmayı düşünebilirsiniz.
+Amaç yalnızca etkin olmayan posta kutuları veya yalnızca belirli etkin olmayan posta kutuları için bekletme süresini değiştirmekse, Azure AD ve Exchange öznitelikleri ve özellikleri kullanarak belirli posta kutularını (veya etkin olmayan posta kutuları gibi posta kutusu türlerini) tek tek hedeflemek için kullanılabilecek [uyarlamalı ilke kapsamları](retention.md#adaptive-or-static-policy-scopes-for-retention) dağıtmayı düşünebilirsiniz.
 
-### <a name="change-the-duration-for-a-microsoft-365-retention-label"></a>Yeni bir bekletme etiketinin Microsoft 365 değiştirme
+### <a name="change-the-duration-for-a-microsoft-365-retention-label"></a>Microsoft 365 bekletme etiketinin süresini değiştirme
 
-Bekletme ilkelerinde olduğu gibi, Microsoft 365 bekletme etiketinin bekletme süresini değiştirirken, `Get-RetentionCompliancePolicy` önce Güvenlik ve Uyumluluk Merkezi PowerShell'de posta kutusunda bulunan özellikten ilişkili GUID `InPlaceHolds` ile çalıştırarak etkin olmayan posta kutusunun içeriğini etkileyen etiketi yayımlayan ilkeyi tanımlamanız gerekir.
+Bekletme ilkelerinde olduğu gibi, bir Microsoft 365 bekletme etiketinin saklama süresini değiştirirken, önce Güvenlik ve Uyumluluk Merkezi PowerShell'deki posta kutusunun özelliğinden `InPlaceHolds` ilişkili GUID ile çalıştırarak `Get-RetentionCompliancePolicy` etkin olmayan posta kutusu içindeki içeriği etkileyen etiketi yayımlayan ilkeyi tanımlamanız gerekir.
 
-Bu komutu çalıştırarak GUID'den öneki ve soneki kaldıryın.  Örneğin, yukarıdaki örnek bilgileri kullanarak, `InPlaceHolds` `:1` `mbx6fe063689d404a5bb9940eed0f0bf5d2:1` `mbx` değerini alıp GUID değerini kaldırabilir ve bunun sonucunda bir ilke GUID değeri elde etmiş olursunuz.`6fe063689d404a5bb9940eed0f0bf5d2`  Bu örnekte, çalıştırmak istediğiniz yer:
+Bu komutu çalıştırırken GUID'den ön eki ve son eki kaldırdığınızdan emin olun.  Örneğin, yukarıdaki örnek bilgileri kullanarak öğesinin `InPlaceHolds` değerini `:1` `mbx6fe063689d404a5bb9940eed0f0bf5d2:1` `mbx` alır ve öğesinin ilke GUID'sine `6fe063689d404a5bb9940eed0f0bf5d2`neden olursunuz.  Bu örnekte şunları çalıştırmak istersiniz:
 
 ```powershell
 Get-RetentionCompliancePolicy 6fe063689d404a5bb9940eed0f0bf5d2 | FL Name
 ```
 
-İlkeyi tanım verdiktan sonra, hangi etiketlerin yayımlanmış olduğunu ve bu etiketlerin ayarlarını bilirsiniz.  Etiketler tek tek öğeler için geçerli olduğundan, ilkeyle ve ayarlarıyla yayımlanan etiket sayısına bağlı olarak, içeriği etkileyen etiketi doğrudan tanımlamanız mümkün olabilir.  
+İlkeyi belirledikten sonra, hangi etiketlerin yayımlandığını ve ayarlarını bilirsiniz.  Etiketler tek tek öğeler için geçerli olduğundan, ilkeyle yayımlanan etiketlerin sayısına ve ayarlarına bağlı olarak, içeriği etkileyen etiketi doğrudan belirleyemeyebilirsiniz.  
 
-Her etiketin uygulandığı içeriği tanımlamak için kullanabileceğiniz bir yöntem, İçerik [Arama'dır](content-search.md).  Örneğin, yukarıdaki örnek bilgileri kullanarak, ilkenin biri "İk-İçerik" adlı birkaç etiket yayımla olduğunu varsayalım.  Doğru [izinlerle](microsoft-365-compliance-center-permissions.md), İçerik Arama, etkin olmayan posta kutusunun birincil SMTP`.``-AllowNotFoundExchangeLocationsEnabled $true` adresini (noktayla () önceden kaleme alınarak ve doğrulamayı atlamak için parametre belirterek Yeni Uyumluluklu [Arama PowerShell](/powershell/module/exchange/new-compliancesearch) komutuyla çalıştırabilirsiniz:
+Her etiketin geçerli olduğu içeriği tanımlamak için kullanabileceğiniz yöntemlerden biri [İçerik Arama'yı](content-search.md) kullanmaktır.  Örneğin, yukarıdaki örnek bilgileri kullanarak ilkenin biri "HR-Content" olarak adlandırılan birkaç etiket yayımladığı varsayılır.  [Doğru izinlerle](microsoft-365-compliance-center-permissions.md), etkin olmayan posta kutusunun birincil SMTP adresi, önceden nokta ()`.``-AllowNotFoundExchangeLocationsEnabled $true` ile belirlenmiş ve doğrulamayı atlayan parametre belirterek [New-ComplianceSearch PowerShell komutuyla](/powershell/module/exchange/new-compliancesearch) bir İçerik Araması çalıştırılabilir:
 
 ```powershell
 New-ComplianceSearch -Name "MeganB Inactive Mailbox HR-Content Label Search" -ExchangeLocation .meganb@contoso.onmicrosoft.com -AllowNotFoundExchangeLocationsEnabled $true -ContentMatchQuery "compliancetag=HR-Content"
 ```
 
-Arama oluşturulduktan sonra, aşağıdaki komutu kullanarak aramaya başlarsiniz:
+Arama oluşturulduktan sonra, aşağıdaki komutu kullanarak aramayı başlatacaksınız:
 
 ```powershell
 Start-ComplianceSearch "MeganB Inactive Mailbox HR-Content Label Search"
 ```
 
-Bu yöntemi kullanarak, artık tanımlanan etiket ilkesinden etkin olmayan posta kutusunun içeriğine hangi etiketlerin uygulanıyor olduğunu tanımlayabilir ve böylelikle bekletme dönemlerini değiştirebilirsiniz. Bekletme etiketlerinin genellikle birden çok konuma uygulandığını ve bu nedenle etiketin değiştirilmesi, etiketli ve konumlar dışında konumlar ile içeriğin de dahil olduğu tüm konumları ve etiketli içeriği Exchange. Daha fazla bilgi için bkz [. Bekletme etiketleri oluşturma ve bunları uygulamalarda uygulama](create-apply-retention-labels.md).
+Bu yöntemi kullanarak, tanımlanan etiket ilkesinden hangi etiketlerin etkin olmayan posta kutusu içindeki içeriğe uygulanacağını belirleyebilir ve böylece bekletme sürelerini değiştirebilirsiniz. Bekletme etiketlerinin genellikle birden fazla konuma uygulandığını unutmayın, bu nedenle bir etiketin değiştirilmesi tüm uygulanan konumları ve etiketlenmiş içeriği etkiler ve bu da Exchange dışındaki konumları ve içeriği de içerebilir. Daha fazla bilgi için bkz. [Bekletme etiketlerini yayımlama ve bunları uygulamalarda uygulama](create-apply-retention-labels.md).
 
 > [!NOTE]
-> Tüm bekletme etiketi türleri değiştirilemez.  Bazı etiketlerde yalnızca bekletme süresi artabilirken, bazıları için bekletme dönemini hiç değiştireyemesiniz.
+> Tüm bekletme etiketi türleri değiştirilemez.  Bazı etiketler için yalnızca saklama süresini artırabilirsiniz ve diğerleri için bekletme süresini hiç değiştiremeyebilirsiniz.
 
-### <a name="change-the-duration-for-an-ediscovery-hold"></a>eBulma  Tutma süresini değiştirme
+### <a name="change-the-duration-for-an-ediscovery-hold"></a>eBulma Ayrı Tutma süresini değiştirme
 
-eBulma servis servisleriyle ilişkilendirilmiş askıyaların süresi belirsizdir ve bu da değiştirilebilir bir tutma süresi yoktur. Öğeler sonsuza kadar veya tutma [kaldırılana ya da](create-ediscovery-holds.md#removing-content-locations-from-an-ediscovery-hold) vaka kapatılana kadar tutulacak.
+eBulma servis talepleri ile ilişkili ayrı tutmalar süresiz tutmalardır; başka bir deyişle değiştirilebilen ayrı tutma süresi yoktur. Öğeler sonsuza kadar veya [ayrı tutma kaldırılana](create-ediscovery-holds.md#removing-content-locations-from-an-ediscovery-hold) veya servis talebi kapatılana kadar tutulur.
   
-### <a name="change-the-duration-for-a-litigation-hold"></a>Mahkeme Tutma süresini değiştirme
+### <a name="change-the-duration-for-a-litigation-hold"></a>Dava Tutma süresini değiştirme
 
-Etkin olmayan bir Exchange Online posta kutusuna yerleştirilen mahkeme tutma süresini değiştirmek için Exchange Online PowerShell kullanabilirsiniz. EAC'i kullanaasiniz. Tutma süresini değiştirmek için aşağıdaki komutu çalıştırın. Bu örnekte, tutma süresi sınırsız süreyle değiştirilir:
+Etkin olmayan bir posta kutusuna yerleştirilen Dava Tutma süresini değiştirmek için powershell Exchange Online kullanmanız gerekir. EAC'yi kullanamazsınız. Bekletme süresini değiştirmek için aşağıdaki komutu çalıştırın. Bu örnekte saklama süresi sınırsız bir süre olarak değiştirilmiştir:
   
 ```powershell
 Set-Mailbox -InactiveMailbox -Identity <identity of inactive mailbox> -LitigationHoldDuration unlimited
 ```
 
-Sonuç olarak, etkin olmayan posta kutusu öğelerinin süresiz olarak veya tutma kaldırılana ya da tutma süresi farklı bir değere değiştirilene kadar korunur.
+Sonuç olarak, etkin olmayan posta kutusunda bulunan öğeler süresiz olarak veya ayrı tutma kaldırılana veya ayrı tutma süresi farklı bir değere değiştirilene kadar korunur.
   
 > [!TIP]
-> Etkin olmayan bir posta kutusunu belirlemenin en iyi yolu, Ayırt Edici Adını **veya** GUID **değerini Exchange kullanmaktır**. Bu değerlerden birini kullanmak, yanlışlıkla yanlış posta kutusunu belirtmeyi önlemeye yardımcı olur.
+> Etkin olmayan posta kutusunu tanımlamanın en iyi yolu **, Ayırt Edici Adı** veya **Exchange GUID** değerini kullanmaktır. Bu değerlerden birinin kullanılması yanlışlıkla yanlış posta kutusunun belirtilmesini önlemeye yardımcı olur.
 
-### <a name="change-the-duration-for-an-in-place-hold"></a>2010 12 Saat In-Place değiştirme
+### <a name="change-the-duration-for-an-in-place-hold"></a>In-Place Ayrı Tutma süresini değiştirme
 
-In-Place 10 Adedi kaldırıldı ve artık değiştirilemez. Etkin olmayan posta kutusuna In-Place  Hold uygulanmışsa, tutma süresini değiştiremezsiniz. Yalnızca Etkin Olmayan Posta In-Place kaldırabilirsiniz, bu durumda etkin olmayan posta kutusunun silinmesine neden olur. Daha fazla bilgi için bkz [. Etkin olmayan posta kutusunu silme](delete-an-inactive-mailbox.md#remove-in-place-holds).
+In-Place Tutmalar kullanımdan kaldırıldı ve artık değiştirilemez. Etkin olmayan bir posta kutusuna In-Place Ayrı Tutma uygulanmışsa saklama süresini değiştiremezsiniz. Yalnızca In-Place Ayrı Tutma'yı kaldırabilirsiniz, bu da etkin olmayan posta kutusunun silinmesine neden olur. Daha fazla bilgi için bkz [. Etkin olmayan posta kutusunu silme](delete-an-inactive-mailbox.md#remove-in-place-holds).
   
 ## <a name="more-information"></a>Daha fazla bilgi
 
-- **Etkin olmayan bir posta kutusunda bir öğe için tutma süresi nasıl hesaplanır?** Süre, bir posta kutusu öğesinin ilk alındıktan veya oluşturulduktan sonra hesaplanır.
+- **Etkin olmayan posta kutusunda bir öğe için ayrı tutma süresi nasıl hesaplanır?** Süre, bir posta kutusu öğesinin alındığı veya oluşturulduğu özgün tarihten hesaplanır.
     
-- **Tutma süresi sona erdiğinde ne olur?** Kurtarılabilir Öğeler klasöründeki bir posta kutusu öğesinin tutma süresi dolduğunda, öğe etkin olmayan posta kutusundan kalıcı olarak silinir (temiz olur). Etkin olmayan posta kutusuna yerleştirilen tutma için hiçbir süre belirtilmezse, Kurtarılabilir Öğeler klasöründeki öğeler hiçbir zaman temizilmez (etkin olmayan posta kutusunun tutma süresi değişmezse). 
+- **Saklama süresi dolduğunda ne olur?** Kurtarılabilir Öğeler klasöründeki bir posta kutusu öğesi için saklama süresi dolduğunda, öğe etkin olmayan posta kutusundan kalıcı olarak silinir (temizlenir). Etkin olmayan posta kutusuna yerleştirilen saklama için belirtilen süre yoksa, Kurtarılabilir Öğeler klasöründeki öğeler hiçbir zaman temizlenmez (etkin olmayan posta kutusunun saklama süresi değiştirilmediği sürece). 
     
-- **Etkin Exchange olmayan posta kutularında MRM ilkesi hala işleniyor mu?**  Bir MRM bekletme ilkesi posta kutusuna devre dışı gitmeden önce uygulanmışsa, tüm silme ilkeleri ( **Delete** eylemiyle yapılandırılmış MRM bekletme etiketleri) etkin olmayan posta kutusunda işlemeye devam eder. Bu, bekletme süresi sona erdiğinde MRM silme ilkesiyle etiketlenen öğelerin Kurtarılabilir Öğeler klasörüne taşınacak olduğu anlamına gelir. Bu öğeler, tutma süresi sona erdiğinde etkin olmayan posta kutusundan temiz olur. Etkin olmayan posta kutusu için bir tutma süresi belirtilmezse, Öğeleri Kurtar klasöründeki öğeler süresiz olarak korunur.
+- **Exchange MRM ilkesi hala etkin olmayan posta kutularında işleniyor mu?**  Bir MRM bekletme ilkesi, devre dışı bırakılmadan önce posta kutusuna uygulandıysa, tüm silme ilkeleri ( **Silme** eylemiyle yapılandırılmış MRM bekletme etiketleri) etkin olmayan posta kutusunda işlenmeye devam eder. Bu, MRM silme ilkesiyle etiketlenmiş öğelerin saklama süresi dolduğunda Kurtarılabilir Öğeler klasörüne taşınacağı anlamına gelir. Saklama süresi dolduğunda bu öğeler etkin olmayan posta kutusundan temizlenir. Etkin olmayan posta kutusu için ayrı tutma süresi belirtilmezse, Öğeleri Kurtar klasöründeki öğeler süresiz olarak korunur.
 
-    Buna karşılık, etkin olmayan bir posta kutusuna atanmış MRM bekletme ilkesinde yer alan tüm arşiv ilkeleri ( **MoveToArchive** eylemiyle yapılandırılmış MRM bekletme etiketleri) yoksayılır. Bu, etkin olmayan ve arşiv ilkesiyle etiketlenen öğelerin bekletme süresi dolduğunda birincil posta kutusunda kalacakları anlamına gelir. Bu öğeler arşiv posta kutusuna veya arşiv posta kutusunda Kurtarılabilir Öğeler klasörüne taşınmaz. Bunlar süresiz olarak korunurlar.
+    Buna karşılık, etkin olmayan bir posta kutusuna atanan MRM saklama ilkesine dahil edilen tüm arşiv ilkeleri ( **MoveToArchive** eylemiyle yapılandırılmış MRM bekletme etiketleri) yoksayılır. Bu, arşiv ilkesiyle etiketlenmiş etkin olmayan posta kutusunda bulunan öğelerin saklama süresi dolduğunda birincil posta kutusunda kaldığı anlamına gelir. Bunlar arşiv posta kutusuna veya arşiv posta kutusunda Kurtarılabilir Öğeler klasörüne taşınmaz. Süresiz olarak tutulacaklardır.
     > [!NOTE]
-    > Kullanıcı hesabı Exchange bekletme ilkesi (Exchange Online'te İleti Kayıtları Yönetimi veya MRM özelliği) uygulamak etkin olmayan bir posta kutusu oluşturmaz.
+    > Exchange saklama ilkesi (Exchange Online'daki Mesajlaşma Kayıtları Yönetimi veya MRM özelliği) uygulandığında, kullanıcı hesabı silindiğinde etkin olmayan bir posta kutusu oluşturulmaz.
 
-- **Normal posta kutularında olduğu gibi, Yönetilen Klasör Yardımcısı (MFA) etkin olmayan posta kutularını da işler.** Başka Exchange Online, MFA yaklaşık olarak yedi günde bir posta kutularını işler. Etkin olmayan bir posta kutusunun tutma süresini değiştirdikten sonra, etkin olmayan posta kutusunun yeni tutma süresini hemen işlemeye başlamak için **Start-ManagedFolderAssistant** cmdlet'ini kullanabilirsiniz. Aşağıdaki komutu çalıştırın. 
+- **Normal posta kutularında olduğu gibi, Yönetilen Klasör Yardımcısı (MFA) etkin olmayan posta kutularını da işler.** Exchange Online'de MFA, posta kutularını yaklaşık olarak yedi günde bir işler. Etkin olmayan posta kutusunun saklama süresini değiştirdikten sonra, etkin olmayan posta kutusunun yeni saklama süresini hemen işlemeye başlamak için **Start-ManagedFolderAssistant** cmdlet'ini kullanabilirsiniz. Aşağıdaki komutu çalıştırın. 
 
     ```powershell
     Start-ManagedFolderAssistant -InactiveMailbox <identity of inactive mailbox>
     ```
    
-- **Etkin olmayan `InPlaceHolds` bir posta kutusuna çok sayıda kullanıcı yerleştirilirse, TUTMA GUID'lerinin hepsi görüntülenmez.** Etkin olmayan bir posta kutusuna yerleştirilen her şey için `InPlaceHolds` GUID'leri görüntülemek için aşağıdaki komutu çalıştırabilirsiniz.
+- **Çok sayıda `InPlaceHolds` etkin olmayan posta kutusuna yerleştirilirse, tutma GUID'lerinin tümü görüntülenmez.** Etkin olmayan bir posta kutusuna yerleştirilen tüm `InPlaceHolds` GUID'leri görüntülemek için aşağıdaki komutu çalıştırabilirsiniz.
     
     ```powershell
     Get-Mailbox -InactiveMailboxOnly -Identity <identity of inactive mailbox> | Select-Object -ExpandProperty InPlaceHolds

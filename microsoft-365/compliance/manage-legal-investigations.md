@@ -1,5 +1,5 @@
 ---
-title: Web'de yasal Microsoft 365
+title: Microsoft 365 yasal araştırmalarını yönetme
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -16,62 +16,62 @@ search.appverid:
 ms.assetid: 2e5fbe9f-ee4d-4178-8ff8-4356bc1b168e
 ms.custom:
 - seo-marvel-apr2020
-description: eBulma olaylarını, Microsoft 365 uyumluluk merkezi araştırmalarını yönetmek için eBulma olaylarını kullanın.
-ms.openlocfilehash: fc4e89645ef1912c33ab89ec190c87dc9c8a8965
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Kuruluşunuzun yasal araştırmasını yönetmek için Microsoft Purview uyumluluk portalında eBulma servis taleplerini kullanın.
+ms.openlocfilehash: d218c7d624da837e685929d95e515687f54897ef
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985167"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64932011"
 ---
-# <a name="manage-legal-investigations-in-microsoft-365"></a>Web'de yasal Microsoft 365
+# <a name="manage-legal-investigations-in-microsoft-365"></a>Microsoft 365 yasal araştırmalarını yönetme
 
-Kuruluşların, belirli yöneticilerin veya kuruluş dahili diğer çalışanların katıldığı bir davaya yanıt vermek için birçok nedeni vardır. Bu, kişiler tarafından günlük iş görevlerinde kullanılan e-postada, belgelerde, anlık ileti konuşmalarında ve diğer içerik konumlarında bulunan daha fazla soruşturmaya özgü bilgiyi hızla bulmayı ve korumayı da içeriyor olabilir. Güvenlik ve uyumluluk merkezinde eBulma olay araçları kullanarak bu ve benzer birçok etkinlik gerçekleştirebilirsiniz.
+Kuruluşlar, kuruluşunuzdaki belirli yöneticilerin veya diğer çalışanların yer aldığı bir yasal davaya yanıt vermek için birçok nedene sahiptir. Bu, kişilerin günlük iş görevlerinde kullandıkları e-posta, belgeler, anlık ileti konuşmaları ve diğer içerik konumlarındaki araştırmaya özgü bilgileri hızla bulmayı ve saklamayı içerebilir. Güvenlik ve uyumluluk merkezindeki eKeşif servis talebi araçlarını kullanarak bunları ve diğer birçok benzer etkinliği gerçekleştirebilirsiniz.
   
-**Microsoft'un eBulma soruşturmalarını nasıl yöneteceklerini mi bilmek istiyor musunuz?** Burada, şirket [içi eKbulma](https://go.microsoft.com/fwlink/?linkid=852161) iş akışımızı yönetmek için aynı arama ve soruşturma araçlarını nasıl kullanabileceğimizi açıklayan teknik bir teknik inceleme ve belgemizi indirebilirsiniz.
+**Microsoft'un eBulma araştırmalarını nasıl yönettiğini öğrenmek ister misiniz?** burada, iç eBulma iş akışımızı yönetmek için aynı arama ve araştırma araçlarını nasıl kullandığımızı açıklayan [bir teknik inceleme](https://go.microsoft.com/fwlink/?linkid=852161) indirebilirsiniz.
 
-## <a name="manage-legal-investigations-with-ediscovery-cases"></a>eBulma davaları ile yasal soruşturmaları yönetme
+## <a name="manage-legal-investigations-with-ediscovery-cases"></a>eBulma davalarıyla yasal incelemeleri yönetme
 
-eBulma servis servis servis adayları, organizasyonda eBulma olaylarını kimlerin oluşturay, kimlere erişil erişeni ve yönetileni denetlemenizi sağlar. Üyeleri eklemek ve gerçekleştirecekleri işlem türlerini kontrol etmek için vakaları kullanın, bir davayla ilgili içerik konumlarına yerinde bekleyin ve davanıza yanıt olarak hazır olacak içerik için yerinde arama yapmak için İçerik Arama aracını kullanın. Böylece, dış gözden geçirenler tarafından daha fazla araştırma için bu sonuçları dışarı aktararak indirebilirsiniz.
+eBulma durumları, kuruluşunuzda eBulma servis taleplerini kimlerin oluşturabileceğini, erişebileceğini ve yönetebileceğini denetlemenize olanak sağlar. Üyeleri eklemek ve gerçekleştirebilecekleri eylem türlerini denetlemek, yasal bir olayla ilgili içerik konumlarında beklemeye almak ve servis talebinize yanıt veren içerik için beklemedeki konumlarda arama yapmak için İçerik Arama aracını kullanmak için örnekleri kullanın. Ardından, dış gözden geçirenler tarafından daha fazla araştırma için bu sonuçları dışarı aktarabilir ve indirebilirsiniz.
   
-- [eBulma iş akışınızı yönetmek için](./get-started-core-ediscovery.md) , kurumuz tarafından yapılması gereken her yasal soruşturma için eBulma davaları oluşturma ve kullanma.
+- Kuruluşunuzun gerçekleştirmesi gereken her yasal araştırma için eBulma davaları oluşturup kullanarak eBulma [iş akışınızı yönetin](./get-started-core-ediscovery.md).
 
-- [Organizasyonda eBulma servis](assign-ediscovery-permissions.md) durumlarını kimlerin oluşturayanı ve yönetileni kontrol etmek için eBulma izinleri attayabilirsiniz.
+- Kuruluşunuzda eBulma servis taleplerini kimlerin oluşturup yönetebileceğini denetlemek için eBulma [izinleri atayın](assign-ediscovery-permissions.md).
 
-- [eBulma yöneticilerinin](set-up-compliance-boundaries.md) arayabilirsiniz kullanıcı içerik konumlarını kontrol etmek için uyumluluk sınırlarını ayarlayın.
+- eBulma yöneticilerinin arayabileceği kullanıcı içerik konumlarını denetlemek için [uyumluluk sınırları ayarlayın](set-up-compliance-boundaries.md).
 
-- [İçeriğinizi](search-for-content.md) kuruluş içinde arama.
+- Kuruluşunuzdaki [içeriği arayın](search-for-content.md).
 
-### <a name="use-scripts-for-advanced-scenarios"></a>Gelişmiş senaryolar için betik kullanma
+### <a name="use-scripts-for-advanced-scenarios"></a>Gelişmiş senaryolar için betikleri kullanma
 
-İçerik arama senaryolarıyla ilgili betiklerin listelenmiş olduğu önceki bölümde olduğu gibi, eBulma olaylarını yönetmenize yardımcı olmak için bazı Güvenlik & ve Uyumluluk Merkezi PowerShell betikleri oluşturduk.
+İçerik arama senaryoları için betikleri listeleyen önceki bölümde olduğu gibi, eBulma servis taleplerini yönetmenize yardımcı olmak için bazı Güvenlik & Uyumluluk Merkezi PowerShell betikleri de oluşturduk.
   
-- [Kuruluşta eBulma davaları](create-a-report-on-holds-in-ediscovery-cases.md) ile ilişkilendirilmiş tüm tutmalarla ilgili bilgileri içeren bir eBulma tutma raporu oluşturun.
+- Kuruluşunuzdaki eBulma servis talepleri ile ilişkili tüm tutmalar hakkında bilgi içeren bir eBulma [bekletme raporu oluşturun](create-a-report-on-holds-in-ediscovery-cases.md).
 
-- [eBulma tutma OneDrive](use-a-script-to-add-users-to-a-hold-in-ediscovery.md) posta kutuları ve posta kutuları ekleme ve kullanıcı listesi için konum ekleme.
+- eBulma ayrı tutmasına kullanıcı listesi için [posta kutuları ve OneDrive konumları ekleyin](use-a-script-to-add-users-to-a-hold-in-ediscovery.md).
   
-## <a name="manage-legal-investigations-with-the-advanced-ediscovery-solution-in-microsoft-365"></a>Microsoft 365'de en son Advanced eDiscovery ile yasal Microsoft 365
+## <a name="manage-legal-investigations-with-the-ediscovery-premium-solution-in-microsoft-365"></a>Microsoft 365'da eKeşif (Premium) çözümüyle yasal araştırmaları yönetme
 
-Bu Advanced eDiscovery çözüm Microsoft 365, çalışma sayfalarındaki mevcut eKbulma ve çözümleme özelliklerini Office 365. *Advanced eDiscovery* adlı bu yeni çözüm, kuruluşun iç ve dış araştırmalarına yanıt veren içerikleri korumak, toplamak, gözden geçirmek, çözümlemek ve dışarı aktarmaya yönelik uç-uç iş akışı sağlar. Ayrıca, hukuk ekiplerinin bir olaya dahil olan koruyucularla iletişim kurmak için yasal tutma bildirimi iş akışının tamamını yönetmesini sağlar.
+Microsoft 365'deki Microsoft Purview eKeşif (Premium) çözümü, Office 365'deki mevcut eBulma ve analiz özelliklerini temel alır. *eBulma (Premium)* olarak adlandırılan bu yeni çözüm, kuruluşunuzun iç ve dış araştırmalarına yanıt veren içeriği korumak, toplamak, gözden geçirmek, analiz etmek ve dışarı aktarmak için uçtan uca bir iş akışı sağlar. Ayrıca, yasal ekiplerin bir olaya dahil olan koruyucularla iletişim kurmak için yasal tutma bildirimi iş akışının tamamını yönetmesine olanak tanır.
 
-Advanced eDiscovery e-postanız için E5 aboneliği Microsoft 365 veya Office 365 gerekir. Lisanslama hakkında daha fazla bilgi için bkz. [Advanced eDiscovery](get-started-with-advanced-ediscovery.md#step-1-verify-and-assign-appropriate-licenses).
+eBulma (Premium), Microsoft 365 veya Office 365 kuruluşunuz için bir E5 aboneliği gerektirir. Lisanslama hakkında daha fazla bilgi için bkz. [eBulma ayarlama (Premium)](get-started-with-advanced-ediscovery.md#step-1-verify-and-assign-appropriate-licenses).
 
-Burada, iş akışında yerleşik iş akışına hızlı bir genel Advanced eDiscovery. Daha fazla bilgi için bkz[. İş Advanced eDiscovery yönetme](create-and-manage-advanced-ediscoveryv2-case.md#manage-the-workflow).
+Aşağıda eBulma'daki (Premium) yerleşik iş akışına hızlı bir genel bakış verilmiştir. Daha fazla bilgi için bkz. [eBulma (Premium) iş akışını yönetme](create-and-manage-advanced-ediscoveryv2-case.md#manage-the-workflow).
 
-- [Bir vaka oluşturun](create-and-manage-advanced-ediscoveryv2-case.md#create-a-case) .
+- Başlamak için [bir servis talebi oluşturun](create-and-manage-advanced-ediscoveryv2-case.md#create-a-case).
 
-- [Koruyucuları bir](managing-custodians.md) vakaya ekp posta kutularına içerik bulundurarak, OneDrive hesabını yasal olarak tutarken Microsoft Teams üyesi olduklarını belirterek yönetin.
+- [Bir](managing-custodians.md) servis talebine ekleyerek ve posta kutularına, OneDrive hesabına ve üyesi oldukları Microsoft Teams içerik üzerinde yasal bir saklama yerleştirerek koruyucuları yönetin.
 
-- [Yasal tutma](managing-custodian-communications.md) bildirim sürecini otomatik olarak yapılandırarak koruyucularla iletişimi yönetin.
+- Yasal tutma bildirim sürecini otomatikleştirerek koruyucularla [iletişimleri yönetin](managing-custodian-communications.md).
 
-- [Araştırmanız için etkili](processing-data-for-case.md) bir şekilde veri toplayabilirsiniz, dizin koruyucu verileri ve dizin oluşturma hatalarını düzeltin.
+- [Araştırmalarınız](processing-data-for-case.md) için verileri etkili bir şekilde toplayabilmeniz için dizin koruyucu verilerini dizine alın ve dizin oluşturma hatalarını düzeltin.
 
-- [Olayla](collecting-data-for-ediscovery.md) ilgili verileri toplayın ve daha [fazla araştırma yapmak için gözden geçirme](collecting-data-for-ediscovery.md#add-search-results-to-a-review-set) kümesine ekleyin.
+- Bir olay için [veri toplayın](collecting-data-for-ediscovery.md) ve daha fazla araştırma için [bir inceleme kümesine ekleyin](collecting-data-for-ediscovery.md#add-search-results-to-a-review-set).
 
-- [Gözden](view-documents-in-review-set.md) geçirme [kümesinde](review-set-search.md) belgeleri, sorgu [verilerini](tagging-documents.md) ve etiket öğelerini görüntüleme.
+- [Gözden](view-documents-in-review-set.md) geçirme kümesindeki belgeleri, [sorgu](review-set-search.md) verilerini ve [etiket](tagging-documents.md) öğelerini görüntüleyin.
 
-- [Gelişmiş analiz araçlarıyla](analyzing-data-in-review-set.md) örnek olay verilerini çözümlenin.
+- Gelişmiş analiz araçlarıyla [olay verilerini analiz](analyzing-data-in-review-set.md) etme.
 
-- [Dava verilerini, dava danışmanının](exporting-data-ediscover20.md) incelemesi için dışarı aktarın.
+- Dış danışmana göre inceleme için [olay verilerini dışarı aktarın](exporting-data-ediscover20.md).
 
-- [İş yerlerinde uzun süreli](managing-jobs-ediscovery20.md) Advanced eDiscovery.
+- eBulma'da (Premium) [uzun süre çalışan işleri yönetin](managing-jobs-ediscovery20.md).

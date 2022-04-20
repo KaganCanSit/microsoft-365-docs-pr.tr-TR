@@ -14,111 +14,111 @@ ms.collection:
 - M365-security-compliance
 - Strat_O365_Enterprise
 ms.custom: ''
-description: Contoso'un, dijital varlıklarının buluttaki güvenliğini Microsoft 365 için Kurumsal'daki bilgi koruma özelliklerini nasıl kullandığını anlıyoruz.
-ms.openlocfilehash: 1dff2cadd5afa66b3b469a2debedddbb347db0e5
-ms.sourcegitcommit: 07405a81513d1c63071a128b9d5070d3a3bfe1cd
+description: Contoso'nın buluttaki dijital varlıklarının güvenliğini sağlamak için Microsoft 365'deki bilgi koruma özelliklerini nasıl kullandığını anlayın.
+ms.openlocfilehash: 70d5a0a6fba7204177771256d9a508c76a010d6d
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2021
-ms.locfileid: "63007219"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64931593"
 ---
 # <a name="information-protection-for-the-contoso-corporation"></a>Contoso Corporation için bilgi koruması
 
-Contoso, bilgi güvenliği konusunda ciddidir. Ürün tasarımlarını ve mülkiyeti üretim tekniklerini tanımlayan fikri mülkiyetin sızıntısını veya gizli kalmaları, bu ürünleri rekabetçi bir dezavantaja zorlar.
+Contoso, bilgi güvenliği konusunda ciddidir. Ürün tasarımlarını ve özel üretim tekniklerini açıklayan fikri mülkiyetin sızıntısı veya yok edilmesi, onları rekabet dezavantajına yerleştirir.
 
-Contoso, hassas dijital varlıklarını buluta taşımadan önce, şirket içi bilgi sınıflandırma ve koruma gereksinimlerini kurumsal hizmetlere ilişkin bulut tabanlı Microsoft 365 emin olmak için aldı.
+Contoso, hassas dijital varlıklarını buluta taşımadan önce, şirket içi bilgi sınıflandırma ve koruma gereksinimlerinin kuruluş için Microsoft 365 bulut tabanlı hizmetleri tarafından desteklendiğinden emin oldu.
 
 ## <a name="contoso-data-security-classification"></a>Contoso veri güvenliği sınıflandırması
 
-Contoso verileriyle ilgili bir çözümleme gerçekleştirdi ve aşağıdaki sınıflandırma düzeylerini belirledi.
+Contoso verilerinin analizini yaptı ve aşağıdaki sınıflandırma düzeylerini belirledi.
 
-| Düzey 1: Temel | Düzey 2: Hassas | Düzey 3: Son derece düzenlemeye tabi |
+| Düzey 1: Temel | Düzey 2: Hassas | Düzey 3: Yüksek oranda düzenlenmiş |
 |:-------|:-----|:-----|
-| Veriler şifrelenir ve yalnızca kimliği doğrulanmış kullanıcılar tarafından kullanılabilir.<BR> <BR> Şirket içinde ve bulut tabanlı depolama ve iş yüklerinde depolanan tüm veriler için sağlanır. Veriler hizmette yer alırken ve hizmet ile istemci cihazları arasında iletilirken şifrelenir. <BR><BR>Düzey 1 verilerine örnek olarak, yönetim, satış ve destek çalışanları için normal iş iletişimleri (e-posta) ve dosyalar örnek olarak verilmiştir. | Düzey 1'in yanı sıra güçlü kimlik doğrulama ve veri kaybına karşı koruma.<BR> <BR> Güçlü kimlik doğrulaması, SMS doğrulamasına sahip Azure AD Multi-Factor Authentication'i (MFA) içerir. Veri kaybını önleme özelliği hassas veya kritik bilgilerin Microsoft bulutu dışına çıkarılamamalarını sağlar.<BR><BR>Düzey 2 verilerine örnek olarak, yeni ürünler için finansal ve yasal bilgiler, araştırma ve geliştirme verileri örnek olarak verilmiştir. | Düzey 2'nin yanı sıra en yüksek şifreleme, kimlik doğrulama ve denetim düzeyleri.<BR><BR>Akıllı kartlarla ve ayrıntılı denetim ve uyarılarla birlikte MFA ile birlikte, bölgesel düzenlemelere uygun olarak, geriye kalanı ve buluttaki veriler için en yüksek şifreleme düzeyleri.<BR> <BR>Düzey 3 verilerine örnek olarak müşteri ve iş ortağı kişisel bilgileri, ürün mühendislik belirtimleri ve özel üretim teknikleri örnek olarak verilmiştir.  |
+| Veriler şifrelenir ve yalnızca kimliği doğrulanmış kullanıcılar tarafından kullanılabilir.<BR> <BR> Şirket içinde ve bulut tabanlı depolama ve iş yüklerinde depolanan tüm veriler için sağlanır. Veriler, hizmette bulunduğu ve hizmet ile istemci cihazları arasında aktarım sırasında şifrelenir. <BR><BR>Düzey 1 verilerine örnek olarak normal iş iletişimleri (e-posta) ve yönetim, satış ve destek çalışanlarının dosyaları verilebilir. | Düzey 1 artı güçlü kimlik doğrulaması ve veri kaybı koruması.<BR> <BR> Güçlü kimlik doğrulaması, SMS doğrulaması ile Azure AD Multi-Factor Authentication'ı (MFA) içerir. Microsoft Purview Veri Kaybı Önleme, hassas veya kritik bilgilerin Microsoft bulutunun dışına çıkmamasını sağlar.<BR><BR>Düzey 2 verilerine örnek olarak yeni ürünler için finansal ve yasal bilgiler ile araştırma ve geliştirme verileri verilebilir. | Düzey 2 ile en yüksek şifreleme, kimlik doğrulama ve denetim düzeyleri.<BR><BR>Bekleyen ve buluttaki veriler için en yüksek şifreleme düzeyleri, bölgesel düzenlemelere uygun, akıllı kartlar ve ayrıntılı denetim ve uyarı ile MFA ile birlikte.<BR> <BR>Düzey 3 verilerine örnek olarak müşteri ve iş ortağı kişisel bilgileri, ürün mühendisliği özellikleri ve özel üretim teknikleri verilebilir.  |
 ||||
 
 ## <a name="contoso-information-policies"></a>Contoso bilgi ilkeleri
-Aşağıdaki tabloda Contoso bilgi ilkeleri listelemektedir.
+Aşağıdaki tabloda Contoso bilgi ilkeleri listeledik.
 
 
-| Değer | Access | Veri bekletme | Bilgi koruması |
+| Değer | Access | Veri saklama | Bilgi koruması |
 |:-------|:-----|:-----|:-----|
-| Düşük iş değeri (Düzey 1: Temel) | Tüm kullanıcılara erişime izin ver'inin.  | 6 ay | Şifrelemeyi kullanın. |
-| Orta ölçekli iş değeri (Düzey 2: Hassas) | Contoso çalışanları, alt yüklenicileri ve iş ortaklarına erişim izni ver. <BR><BR> MFA, Aktarım Katmanı Güvenliği (TLS) ve Mobil Uygulama Yönetimi'yi (MAM) kullanın. | 2 yıl  | Veri bütünlüğü için karma değerler kullanın.  |
-| Yüksek iş değeri (Düzey 3: Çok düzenlemeye tabi) | Mühendislik ve üretimde yöneticilere ve liderlere erişim izni verme. <BR> <BR> Yalnızca yönetilen ağ cihazlarıyla Hak Yönetimi Sistemi (RMS).  | 7 yıl  | Inkarlamama için dijital imzaları kullanın.  |
+| Düşük iş değeri (Düzey 1: Temel) | Tümüne erişime izin ver.  | 6 ay | Şifrelemeyi kullanın. |
+| Orta iş değeri (Düzey 2: Hassas) | Contoso çalışanlarına, alt yüklenicilerine ve iş ortaklarına erişime izin verin. <BR><BR> MFA, Aktarım Katmanı Güvenliği (TLS) ve Mobil Uygulama Yönetimi (MAM) kullanın. | 2 yıl  | Veri bütünlüğü için karma değerleri kullanın.  |
+| Yüksek iş değeri (Düzey 3: Yüksek oranda düzenlenmiş) | Mühendislik ve üretimde yöneticilere ve müşteri adaylarına erişime izin verin. <BR> <BR> Yalnızca yönetilen ağ cihazlarıyla Rights Management System (RMS).  | 7 yıl  | İnkar edilemezler için dijital imzalar kullanın.  |
 |||||
 
-## <a name="the-contoso-path-to-information-protection-with-microsoft-365-for-enterprise"></a>Kurumsal belgelerle bilgi koruma için Contoso Microsoft 365 yolu
+## <a name="the-contoso-path-to-information-protection-with-microsoft-365-for-enterprise"></a>Kuruluş için Microsoft 365 ile bilgi korumanın Contoso yolu
 
-Contoso, bilgi koruma gereksinimlerine kurumsal Microsoft 365 için şu adımları izledi:
+Contoso, Microsoft 365 kuruluşa bilgi koruma gereksinimlerine hazırlamak için şu adımları izledi:
 
-1. Hangi bilgilerin korunması gerekenleri belirleme
+1. Hangi bilgilerin korunacaklarını belirleme
 
-   Contoso, şirket içinde bulunan ve site ve dosya paylaşımlarında bulunan mevcut dijital SharePoint kapsamlı bir inceleme yaptı ve her varlığı sınıflandırıldı.
+   Contoso, şirket içi SharePoint sitelerinde ve dosya paylaşımlarında bulunan mevcut dijital varlıklarını kapsamlı bir şekilde gözden geçirdi ve her varlığı sınıflandırdı.
 
-2. Veri düzeyleri için erişim, bekletme ve bilgi koruma ilkelerini belirleme
+2. Veri düzeyleri için erişim, saklama ve bilgi koruma ilkelerini belirleme
 
-   Contoso, veri düzeylerine bağlı olarak, buluta taşınırken var olan dijital varlıkları korumak için kullanılan ayrıntılı ilke gereksinimlerini belirledi.
+   Contoso, veri düzeylerine göre buluta taşınan mevcut dijital varlıkları korumak için kullanılan ayrıntılı ilke gereksinimlerini belirledi.
 
-3. Farklı bilgi düzeyleri için duyarlılık etiketleri ve ayarları oluşturma
+3. Farklı bilgi düzeyleri için duyarlılık etiketleri ve bunların ayarlarını oluşturma
 
-   Contoso, veri düzeyleri için duyarlılık etiketleri oluşturdu ve şifreleme, izinler ve filigranları içeren, yüksek düzeyde düzenlemeye tabi olan etiketlerini oluşturdu.
+   Contoso veri düzeyleri için şifreleme, izinler ve filigranlar içeren yüksek oranda düzenlenmiş etiketiyle duyarlılık etiketleri oluşturmuştur.
 
-4. Şirket içi sitelerden veya dosya SharePoint sitelerine, yeni şirket içi sitelerine SharePoint taşıma
+4. Verileri şirket içi SharePoint sitelerinden ve dosya paylaşımlarından yeni SharePoint sitelerine taşıma
 
-    Sitelere atanan varsayılan bekletme SharePoint devralınan dosyalar yeni sitelere geçirilir.
+    Yeni SharePoint sitelerine geçirilen dosyalar, siteye atanan varsayılan bekletme etiketlerini devraldı.
 
-5. Çalışanları yeni belgeler için duyarlılık etiketlerini nasıl kullanabileceğini, yeni site oluştururken Contoso SharePoint IT ile nasıl etkileşim kuracaklarını ve dijital varlıkları her zaman sitelerde nasıl depolayacaklarını SharePoint eğitin
+5. Çalışanları yeni belgeler için duyarlılık etiketlerini kullanmayı, yeni SharePoint siteleri oluştururken Contoso BT ile etkileşim kurmayı ve dijital varlıkları her zaman SharePoint sitelerde depolamayı eğitin
 
-    Kötü çalışan bilgi depolama alışkanlıklarını değiştirmek çoğunlukla bulut için bilgi koruma geçişinin en zor bölümü olarak kabul edilir. Contoso IT ve yönetimi, çalışanların dijital varlıklarını her zaman bulutta etiketleye ve depolamaya ihtiyacı vardır; şirket içi dosya paylaşımlarını kullanmaktan kaçınmak ve üçüncü taraf bulut depolama hizmetlerini veya USB sürücülerini kullanmaz.
+    Kötü çalışan bilgi depolama alışkanlıklarının değiştirilmesi genellikle bulut için bilgi koruma geçişinin en zor kısmı olarak kabul edilir. Contoso BT ve yönetimi, çalışanların dijital varlıklarını her zaman bulutta etiketlemesini ve depolamasını, şirket içi dosya paylaşımlarını kullanmaktan kaçınmasını ve üçüncü taraf bulut depolama hizmetlerini veya USB sürücülerini kullanmamalarını sağlamak için gereklidir.
 
-## <a name="conditional-access-policies-for-information-protection"></a>Bilgi koruması için koşullu Erişim ilkeleri
+## <a name="conditional-access-policies-for-information-protection"></a>Bilgi koruması için Koşullu Erişim ilkeleri
 
-Contoso, koşullu erişim ve Exchange Online SharePoint bir parçası olarak aşağıdaki Koşullu Erişim ilkeleri kümesi yapılandırdı ve bunları uygun gruplara uyguladı:
+Contoso, Exchange Online ve SharePoint dağıtımının bir parçası olarak aşağıdaki Koşullu Erişim ilkeleri kümesini yapılandırdı ve bunları uygun gruplara uyguladı:
 
-- [Cihazlar ilkeleri üzerinde yönetilen ve yönetilemeyen uygulama erişimi](../security/office-365-security/identity-access-policies.md)
-- [Exchange Online ilkelerini erişme](../security/office-365-security/secure-email-recommended-policies.md)
-- [SharePoint ilkelerini erişme](../security/office-365-security/sharepoint-file-access-policies.md)
+- [Cihaz ilkelerinde yönetilen ve yönetilmeyen uygulama erişimi](../security/office-365-security/identity-access-policies.md)
+- [erişim ilkelerini Exchange Online](../security/office-365-security/secure-email-recommended-policies.md)
+- [erişim ilkelerini SharePoint](../security/office-365-security/sharepoint-file-access-policies.md)
 
-Burada, bilgi koruması için Contoso ilkeleri kümesi ortaya çıkan bir dizi var.
+Burada bilgi koruması için contoso ilkeleri elde edilir.
 
-:::image type="content" alt-text="Cihaz, Exchange Online ve Koşullu SharePoint ilkelerini kullanın." source="../media/contoso-info-protect/contoso-info-protect-fig1.png" lightbox="../media/contoso-info-protect/contoso-info-protect-fig1.png":::
+:::image type="content" alt-text="Cihaz, Exchange Online ve koşullu erişim ilkelerini SharePoint." source="../media/contoso-info-protect/contoso-info-protect-fig1.png" lightbox="../media/contoso-info-protect/contoso-info-protect-fig1.png":::
 
 >[!Note]
->Contoso ayrıca kimlik ve oturum açma için ek Koşullu Erişim ilkeleri yapılandırdı. Bkz [. Contoso Corporation'ın kimliği](contoso-identity.md#conditional-access-policies-for-zero-trust-identity-and-device-access).
+>Contoso ayrıca kimlik ve oturum açma için ek Koşullu Erişim ilkeleri yapılandırdı. Bkz. [Contoso Corporation için Kimlik](contoso-identity.md#conditional-access-policies-for-zero-trust-identity-and-device-access).
 >
 
 Bu ilkeler şunları sağlar:
 
-- İzin verilen uygulamalar ve kuruluşun verileriyle gerçekleştir eylemleri, uygulama koruma ilkeleri tarafından tanımlanır.
+- İzin verilen uygulamalar ve kuruluşun verileriyle gerçekleştirebilecekleri eylemler, uygulama koruma ilkeleri tarafından tanımlanır.
 - Bilgisayarlar ve mobil cihazlar uyumlu olmalıdır.
-- Exchange Online için Office 365 şifreleme (OME) Exchange Online.
-- SharePoint zorlanan kısıtlamaları kullanır.
-- SharePoint yalnızca tarayıcı erişimi için ve yönetim dışı cihazlara erişimi engellemek için erişim denetimi ilkelerini kullanır.
+- Exchange Online Exchange Online için Office 365 ileti şifrelemesi (OME) kullanır.
+- SharePoint uygulama tarafından zorunlu kılınan kısıtlamaları kullanır.
+- SharePoint, yalnızca tarayıcı erişimi ve yönetilmeyen cihazlara erişimi engellemek için erişim denetimi ilkelerini kullanır.
 
-## <a name="mapping-microsoft-365-for-enterprise-features-to-contoso-data-levels"></a>Kurumsal Microsoft 365 Contoso veri düzeylerine eşleme
+## <a name="mapping-microsoft-365-for-enterprise-features-to-contoso-data-levels"></a>Kurumsal özellikler için Microsoft 365 Contoso veri düzeylerine eşleme
 
-Aşağıdaki tabloda, Contoso veri düzeyleri Kurumsal'daki bilgi koruma Microsoft 365 eşler.
+Aşağıdaki tabloda Contoso veri düzeyleri, kuruluş için Microsoft 365 bilgi koruma özellikleriyle eşlenmiştir.
 
-| Düzey | Microsoft 365 hizmetleri | Windows 10 ve Kurumlar için Microsoft 365 Uygulamaları | Güvenlik ve uyumluluk |
+| Düzey | bulut hizmetlerini Microsoft 365 | Windows 10 ve Kurumlar için Microsoft 365 Uygulamaları | Güvenlik ve uyumluluk |
 |:-------|:-----|:-----|:-----|
-| Düzey 1: Temel  | SharePoint Access Exchange Online ve koşullu erişim ilkelerini biçimlendirme <BR> Sitelere SharePoint izinler | Duyarlılık etiketleri <BR> BitLocker <BR> Windows Koruma | Cihaz Koşullu Erişim ilkeleri ve Mobil Uygulama Yönetimi ilkeleri |
-| Düzey 2: Hassas | Düzey 1 artı: <BR> <BR> Duyarlılık etiketleri <BR> Microsoft 365 sitelerde bekletme SharePoint tutma <BR> Veri Kaybı Önleme ve SharePoint Önleme Exchange Online <BR> Yalıtılmış SharePoint siteler  | Düzey 1 artı: <BR> <BR> Dijital varlıklarda duyarlılık etiketleri  | Düzey 1 |
-| Düzey 3: Son derece düzenlemeye tabi | Düzey 2 artı: <BR><BR> Ticari sır bilgileri için kendi anahtarınızı (BYOK) şifreleme ve koruma altına alma <BR> Microsoft 365 hizmetleriyle etkileşime sahip iş hattı uygulamaları için Azure Microsoft 365 kasa | Düzey 2 | Düzey 1 |
+| Düzey 1: Temel  | Koşullu Erişim ilkelerini SharePoint ve Exchange Online <BR> SharePoint sitelerdeki izinler | Duyarlılık etiketleri <BR> Bitlocker <BR> Windows Information Protection | Cihaz Koşullu Erişim ilkeleri ve Mobil Uygulama Yönetimi ilkeleri |
+| Düzey 2: Hassas | Düzey 1 artı: <BR> <BR> Duyarlılık etiketleri <BR> SharePoint sitelerde bekletme etiketlerini Microsoft 365 <BR> SharePoint ve Exchange Online için Veri Kaybı Önleme <BR> Yalıtılmış SharePoint siteleri  | Düzey 1 artı: <BR> <BR> Dijital varlıklardaki duyarlılık etiketleri  | Düzey 1 |
+| Düzey 3: Yüksek oranda düzenlenmiş | Düzey 2 artı: <BR><BR> Ticari gizli bilgiler için kendi anahtarını getir (BYOK) şifreleme ve koruma <BR> Microsoft 365 hizmetleriyle etkileşim kuran iş kolu uygulamaları için Azure Key Vault | Düzey 2 | Düzey 1 |
 |||||
 
-Sonuçta elde edilen Contoso bilgi koruma yapılandırması şu şekilde olur.
+Elde edilen Contoso bilgi koruma yapılandırması aşağıdadır.
 
-:::image type="content" alt-text="Contoso'nun sonuçta bilgi koruma yapılandırması yapılandırmasını sağlar." source="../media/contoso-info-protect/contoso-info-protect-fig2.png":::
+:::image type="content" alt-text="Contoso'nun sonuçta elde edilen bilgi koruma yapılandırması." source="../media/contoso-info-protect/contoso-info-protect-fig2.png":::
 
 ## <a name="next-step"></a>Sonraki adım
 
-Kimlik ve erişim yönetimi, tehdit [koruması, bilgi Microsoft 365](contoso-security-summary.md) ve güvenlik yönetimi için Contoso'nın kuruluş genelinde güvenlik özelliklerini nasıl kullandığını öğrenin.
+Contoso'nın kimlik ve erişim yönetimi, tehdit koruması, bilgi koruması ve [güvenlik yönetimi için kuruluş Microsoft 365 güvenlik özelliklerini](contoso-security-summary.md) nasıl kullandığını öğrenin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 [Güvenlik yol haritası](../security/office-365-security/security-roadmap.md)
 
-[Microsoft 365 genel bakış için genel bakış](microsoft-365-overview.md)
+[Microsoft 365 Kurumsal’a genel bakış](microsoft-365-overview.md)
 
 [Test laboratuvarı kılavuzları](m365-enterprise-test-lab-guides.md)

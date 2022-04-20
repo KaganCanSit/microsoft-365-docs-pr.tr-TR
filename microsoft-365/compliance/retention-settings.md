@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: İstediğinizi korumak ve istemediğinizden kurtulmak için bekletme ilkesinde veya bekletme etiketi ilkesinde yapılandırabileceğiniz ayarları anlayın.
-ms.openlocfilehash: 0ec9ace6d2a2205996baed8cd64ca0e29ac83ed3
-ms.sourcegitcommit: 5eff41a350a01e18d9cdd572c9d8ff99d6c9563a
+ms.openlocfilehash: 729c31935ee3ded04a12f7822a17082ef1b52c26
+ms.sourcegitcommit: 1d972f15a45204e89e268c5ff257021aced5e775
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64836094"
+ms.lasthandoff: 04/18/2022
+ms.locfileid: "64911522"
 ---
 # <a name="common-settings-for-retention-policies-and-retention-label-policies"></a>Bekletme ilkeleri ve bekletme etiketi ilkeleri için yaygın ayarlar
 
@@ -33,7 +33,7 @@ Bekletme için birçok ayar hem bekletme ilkeleri hem de bekletme etiketi ilkele
 Bekletme için bu ilkeleri destekleyen senaryolar için bkz:
 
 - [Bekletme ilkeleri oluşturun ve yapılandırın](create-retention-policies.md).
-- [Bekletme etiketleri oluşturma ve bunları uygulamalarda uygulama](create-apply-retention-labels.md)
+- [Bekletme etiketlerini yayımlama ve uygulamalarda uygulama](create-apply-retention-labels.md)
 - [İçeriğe otomatik olarak bekletme etiketi uygulama](apply-retention-labels-automatically.md)
 
 Her senaryoya özgü Ayarlar ilgili belgelerinde açıklanmıştır.

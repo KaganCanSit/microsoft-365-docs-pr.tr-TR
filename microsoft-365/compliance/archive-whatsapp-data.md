@@ -1,5 +1,5 @@
 ---
-title: WhatsApp verilerini aynı dosyada arşivlemek için bağlayıcıyı Microsoft 365
+title: Microsoft 365'da WhatsApp verilerini arşivleye bir bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -11,74 +11,74 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Yöneticiler, WhatsApp verilerini kendi dosya dosyalarında içeri aktaracak ve arşivecek bir TeleMessage Microsoft 365. Bu, üçüncü taraf veri kaynaklarından verileri Microsoft 365'te arşivlemenize olanak sağlar ve böylece yasal saklama, içerik araması ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanarak kuruluş üçüncü taraf verilerini yönetebilirsiniz.
-ms.openlocfilehash: b94d22b787e88de241bee404774caaabf5ac02ca
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Yöneticiler, Microsoft 365'da WhatsApp verilerini içeri aktarmak ve arşivlemek için bir TeleMessage bağlayıcısı ayarlayabilir. Bu, kuruluşunuzun üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilmeniz için üçüncü taraf veri kaynaklarından verileri Microsoft 365 arşivleyebilmenizi sağlar.
+ms.openlocfilehash: 507927fb2dd19eb9c1bef745db8e85e1d4e017e8
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63313237"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64934939"
 ---
-# <a name="set-up-a-connector-to-archive-whatsapp-data"></a>WhatsApp verilerini arşivlemek için bağlayıcıyı ayarlama
+# <a name="set-up-a-connector-to-archive-whatsapp-data"></a>WhatsApp verilerini arşivleye bağlayıcı ayarlama
 
-WhatsApp aramalarını, sohbetlerini, eklerini, dosyalarını ve silinen iletilerini içeri aktarın ve Microsoft 365 uyumluluk merkezi teleMessage bağlayıcıyı kullanın. Bir bağlayıcıyı ayardikten ve yapılandırdikten sonra, bu bağlayıcı her gün kuruluşun TeleMessage hesabına bağlanır ve TeleMessage WhatsApp Telefon Archiver veya TeleMessage WhatsApp Cloud Archiver kullanarak çalışanların mobil iletişimini Microsoft 365.
+WhatsApp çağrılarını, sohbetleri, ekleri, dosyaları ve silinen iletileri içeri aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalındaki TeleMessage bağlayıcısını kullanın. Bağlayıcıyı ayarlayıp yapılandırdıktan sonra, her gün bir kez kuruluşunuzun TeleMessage hesabına bağlanır ve TeleMessage WhatsApp Telefon Archiver veya TeleMessage WhatsApp Cloud Archiver kullanarak çalışanların mobil iletişimini Microsoft 365'daki posta kutularına aktarır.
 
-WhatsApp verileri kullanıcı posta kutularında depolandığı için, WhatsApp verilerine Microsoft 365 Saklama, İçerik araması ve bekletme Microsoft 365 gibi uyumluluk özelliklerini uygulayabilirsiniz. Örneğin, İçerik arama kullanarak WhatsApp iletilerinde arama veya WhatsApp iletilerini içeren posta kutusunu bir özel durumda bir özel durumla Advanced eDiscovery. WhatsApp bağlayıcısı kullanarak verileri başka bir kuruluşta içeri aktarın Microsoft 365 düzenlemeler ve devlet ilkeleriyle uyumlu kalmasınıza yardımcı olabilir.
+WhatsApp verileri kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, İçerik araması ve Microsoft 365 bekletme ilkeleri gibi Microsoft Purview özelliklerini WhatsApp verilerine uygulayabilirsiniz. Örneğin, İçerik aramasını kullanarak WhatsApp iletilerinde arama yapabilir veya WhatsApp iletilerini içeren posta kutusunu eBulma (Premium) durumundaki bir koruyucuyla ilişkilendirebilirsiniz. Microsoft 365'de verileri içeri aktarmak ve arşivlerken WhatsApp bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 
-## <a name="overview-of-archiving-whatsapp-data"></a>WhatsApp verilerini arşivlemeye genel bakış
+## <a name="overview-of-archiving-whatsapp-data"></a>WhatsApp verilerini arşivleme genel bakış
 
-Aşağıdaki genel bakış veri kaynağında WhatsApp verilerini arşivlemek için bağlayıcı kullanma Microsoft 365.
+Aşağıdaki genel bakış, Microsoft 365'da WhatsApp verilerini arşivlerken bağlayıcı kullanma işlemini açıklar.
 
 ![WhatsApp arşivleme iş akışı.](../media/WhatsAppConnectorWorkflow.png)
 
-1. Your organization works with TeleMessage to set a WhatsApp Archiver connector. Daha fazla bilgi için bkz [. WhatsApp Arşivleyici](https://www.telemessage.com/office365-activation-for-whatsapp-archiver).
+1. Kuruluşunuz, WhatsApp Archiver bağlayıcısı ayarlamak için TeleMessage ile birlikte çalışır. Daha fazla bilgi için bkz [. WhatsApp Archiver](https://www.telemessage.com/office365-activation-for-whatsapp-archiver).
 
-2. Gerçek zamanlı olarak, kuruluş whatsApp verileri TeleMessage sitesine kopyalanır.
+2. Gerçek zamanlı olarak, kuruluşunuzun WhatsApp verileri TeleMessage sitesine kopyalanır.
 
-3. Microsoft 365 uyumluluk merkezi'ta oluşturduktan sonra, WhatsApp bağlayıcısı her gün TeleMessage sitesine bağlanır ve önceki 24 saat içinde WhatsApp verilerini Microsoft bulutunda güvenli bir Azure Depolama konuma aktarıyor. Bağlayıcı, WhatsApp verilerini de e-posta iletisi biçimine dönüştürür.
+3. Uyumluluk portalında oluşturduğunuz WhatsApp bağlayıcısı her gün TeleMessage sitesine bağlanır ve önceki 24 saat içindeki WhatsApp verilerini Microsoft bulutunda güvenli bir Azure Depolama konumuna aktarır. Bağlayıcı ayrıca içeriği WhatsApp verilerini e-posta iletisi biçimine dönüştürür.
 
-4. Bağlayıcı, WhatsApp verilerini belirli bir kullanıcının posta kutusuna aktarıyor. Belirli bir kullanıcının posta **kutusunda WhatsApp Arşivleyicisi** adlı yeni bir klasör oluşturulur ve öğeler bu klasöre aktarılır. Bağlayıcı bu eşlemeyi Kullanıcının E-posta *adresi özelliğinin değerini kullanarak* yapar. Her WhatsApp iletisi, iletinin tüm katılımcılarının e-posta adresiyle doldurulan bu özelliği içerir.
+4. Bağlayıcı, WhatsApp verilerini belirli bir kullanıcının posta kutusuna aktarır. Belirli bir kullanıcının posta kutusunda **WhatsApp Archiver** adlı yeni bir klasör oluşturulur ve öğeler bu klasöre aktarılır. Bağlayıcı bu eşlemeyi *Kullanıcının E-posta adresi* özelliğinin değerini kullanarak yapar. Her WhatsApp iletisi, iletinin her katılımcısının e-posta adresiyle doldurulmuş olan bu özelliği içerir.
 
-   Kullanıcının E-posta adresi özelliğinin değerini kullanarak otomatik kullanıcı  eşlemeye ek olarak, CSV eşleme dosyası yükerek özel eşleme de kullanabilirsiniz. Bu eşleme dosyası, cep telefonu numarasını ve bunun Microsoft 365-posta adresini içerir. Her WhatsApp öğesi için bağlayıcı önce özel eşleme dosyasına bakarak hem otomatik kullanıcı eşlemesini hem de özel eşlemeyi etkinleştirirsiniz. Kullanıcının cep telefonu numarasına karşılık gelen Microsoft 365 bir kullanıcı bulamazsa, bağlayıcı içeri aktarmaya çalıştığı öğenin e-posta adresi özelliğinde yer alan değerleri kullanır. Bağlayıcı, kullanıcıya özel Microsoft 365 veya WhatsApp öğesinin e-posta adresi özelliğinde geçerli bir kullanıcı bulamazsa, öğe aktarılmaz.
+   *Kullanıcının E-posta adresi* özelliğinin değerini kullanan otomatik kullanıcı eşlemesine ek olarak, csv eşleme dosyasını karşıya yükleyerek de özel eşleme uygulayabilirsiniz. Bu eşleme dosyası, kuruluşunuzdaki kullanıcılar için cep telefonu numarasını ve ilgili Microsoft 365 e-posta adresini içerir. Hem otomatik kullanıcı eşlemesini hem de özel eşlemeyi etkinleştirirseniz, her WhatsApp öğesi için bağlayıcı önce özel eşleme dosyasına bakar. Kullanıcının cep telefonu numarasına karşılık gelen geçerli bir Microsoft 365 kullanıcısı bulamazsa, bağlayıcı içeri aktarmaya çalıştığı öğenin e-posta adresi özelliğindeki değerleri kullanır. Bağlayıcı, özel eşleme dosyasında veya WhatsApp öğesinin e-posta adresi özelliğinde geçerli bir Microsoft 365 kullanıcısı bulamazsa, öğe içeri aktarılamaz.
 
 ## <a name="before-you-set-up-a-connector"></a>Bağlayıcıyı ayarlamadan önce
 
-WhatsApp iletişim verilerini arşivlemek için gereken bazı uygulama adımları Microsoft 365 uyumluluk merkezinde bağlayıcı oluşturamadan önce tamamlanması gerekir.
+WhatsApp iletişim verilerini arşivlerken gereken uygulama adımlarından bazıları Microsoft 365 dışındadır ve bağlayıcıyı uyumluluk merkezinde oluşturabilmeniz için önce tamamlanması gerekir.
 
-- [TeleMessage'dan WhatsApp Arşivleyici hizmetini sipariş](https://www.telemessage.com/mobile-archiver/order-mobile-archiver-for-o365) etmek ve organizasyonunız için geçerli bir yönetim hesabı almak. Uyumluluk merkezinde bağlayıcıyı  oluşturmak için bu hesapta oturum açın.
+- [WhatsApp Archiver hizmetini TeleMessage'dan](https://www.telemessage.com/mobile-archiver/order-mobile-archiver-for-o365) sipariş edin ve kuruluşunuz için geçerli bir yönetim hesabı alın. Uyumluluk merkezinde bağlayıcıyı oluştururken bu hesapta oturum açmanız gerekir.
 
-- TeleMessage hesabında WhatsApp arşivlemesi gereken tüm kullanıcıları kaydettirin. Kullanıcıları kaydettirerek, kendi hesaplarında kullanılan e-posta adresinin aynısını Microsoft 365.
+- WhatsApp arşivlemeyi gerektiren tüm kullanıcıları TeleMessage hesabına kaydedin. Kullanıcıları kaydederken, Microsoft 365 hesapları için kullanılan e-posta adresini kullandığınızdan emin olun.
 
-- Çalışanlarının cep [telefonlarına TeleMessage whatsApp Telefon Archiver](https://www.telemessage.com/mobile-archiver/whatsapp-phone-archiver-2/) uygulamasını yükleyin ve etkinleştirin. Alternatif olarak, çalışanlarının cep telefonlarına normal WhatsApp veya WhatsApp İş uygulamalarını yükleyebilir ve TeleMessage web sitesinde QR kodunu taratarak WhatsApp Bulut Arşivleyici hizmetini etkinleştirebilirsiniz. Daha fazla bilgi için bkz [. WhatsApp Cloud Archiver](https://www.telemessage.com/mobile-archiver/whatsapp-archiver/whatsapp-cloud-archiver/).
+- TeleMessage [WhatsApp Telefon Archiver uygulamasını](https://www.telemessage.com/mobile-archiver/whatsapp-phone-archiver-2/) çalışanlarınızın cep telefonlarına yükleyin ve etkinleştirin. Alternatif olarak, çalışanlarınızın cep telefonlarına normal WhatsApp veya WhatsApp Business uygulamalarını yükleyebilir ve TeleMessage web sitesindeki bir QR kodunu tarayarak WhatsApp Cloud Archiver hizmetini etkinleştirebilirsiniz. Daha fazla bilgi için bkz [. WhatsApp Cloud Archiver](https://www.telemessage.com/mobile-archiver/whatsapp-archiver/whatsapp-cloud-archiver/).
 
-- Verizon Network bağlayıcısı oluşturan kullanıcıya Veri Bağlayıcısı Yönetici rolü atan olmalıdır. Bu rol, sayfanın en son veri **bağlayıcıları sayfasına bağlayıcı** eklemek Microsoft 365 uyumluluk merkezi. Bu rol varsayılan olarak birden çok rol gruplarına eklenir. Bu rol gruplarının listesi için, Güvenlik ve Uyumluluk Merkezi'nde İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki roller" [& bakın](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). Alternatif olarak, bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolü ata sonrasında uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için aşağıdaki İzinler bölümündeki "Özel bir rol grubu oluşturma" [bölümüne Microsoft 365 uyumluluk merkezi](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Verizon Ağ bağlayıcısı oluşturan kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için [Microsoft Purview uyumluluk portalındaki İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
-- Bu TeleMessage veri bağlayıcısı ABD GCC tarafından Microsoft 365 ortamlarda kullanılabilir. Üçüncü taraf uygulamaları ve hizmetleri, kuruluş müşteri verilerini Microsoft 365 altyapısının dışında olan üçüncü taraf sistemlerde depolamayı, iletip işlemeyi ve bu nedenle de Microsoft 365 uyumluluk ve veri koruma taahhütleri kapsamında değildir. Microsoft, bu ürünün üçüncü taraf uygulamalara bağlanmak için kullanılabileceğiyle ilgili hiçbir beyanda yoktur ve bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu da ima eder.
+- Bu TeleMessage veri bağlayıcısı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda kullanılabilir. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerinin Microsoft 365 altyapısı dışında olan ve bu nedenle Microsoft Purview ve veri koruma taahhütleri kapsamında olmayan üçüncü taraf sistemlerde depolanmasını, iletilmesini ve işlenmesini içerebilir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
 
-## <a name="create-a-whatsapp-archiver-connector"></a>WhatsApp Arşivleyici bağlayıcısı oluşturma
+## <a name="create-a-whatsapp-archiver-connector"></a>WhatsApp Archiver bağlayıcısı oluşturma
 
-Önceki bölümde açıklanan önkoşulları tamamlandıktan sonra, ilgili bölümde WhatsApp bağlayıcısı Microsoft 365 uyumluluk merkezi. Bağlayıcı, teleMessage sitesine bağlanmak ve WhatsApp verilerini İleti'de ilgili kullanıcı posta kutusu kutularına aktarımı için Microsoft 365.
+Önceki bölümde açıklanan önkoşulları tamamladıktan sonra uyumluluk portalında WhatsApp bağlayıcısını oluşturabilirsiniz. Bağlayıcı, TeleMessage sitesine bağlanmak ve WhatsApp verilerini Microsoft 365 ilgili kullanıcı posta kutusu kutularına aktarmak için sağladığınız bilgileri kullanır.
 
-1. Veri bağlayıcılarıWhatsApp [https://compliance.microsoft.com](https://compliance.microsoft.com/) **Arşivleyici'ye** >  gidin **ve bu bağlayıcılara tıklayın**.
+1. **Veri bağlayıcılarıWhatsApp** >  **Archiver'a**[https://compliance.microsoft.com](https://compliance.microsoft.com/) gidin ve tıklayın.
 
-2. **WhatsApp Arşivleyici ürün açıklaması** sayfasında Bağlayıcı **ekle'ye tıklayın**
+2. **WhatsApp Archiver** ürün açıklaması sayfasında **Bağlayıcı ekle'ye** tıklayın
 
-3. Hizmet Koşulları **sayfasında Kabul Et'e** **tıklayın**.
+3. **Hizmet koşulları** sayfasında **Kabul Et'e** tıklayın.
 
-4. **TeleMessage'da Oturum Aç** sayfasında, 3. Adım'ın altında aşağıdaki kutulara gerekli bilgileri girin ve ardından Sonraki'ye **tıklayın**.
+4. **TeleMessage'da Oturum Aç** sayfasındaki 3. Adım'ın altında, aşağıdaki kutulara gerekli bilgileri girin ve **İleri'ye** tıklayın.
 
-   - **Kullanıcı adı:** TeleMessage kullanıcı adınız.
+   - **Username:** TeleMessage kullanıcı adınız.
 
    - **Parola:** TeleMessage parolanız.
 
-5. Bağlayıcı oluşturulduktan sonra, açılır pencereyi kapatıp bir sonraki sayfaya gidebilirsiniz.
+5. Bağlayıcı oluşturulduktan sonra açılır pencereyi kapatabilir ve sonraki sayfaya gidebilirsiniz.
 
-6. Kullanıcı eşleme **sayfasında, otomatik** kullanıcı eşlemesini etkinleştirin ve Ardından'ya **tıklayın**. Özel eşlemeye ihtiyacınız olursa, CSV dosyasını karşıya yükleyin ve İleri'ye **tıklayın**.
+6. Kullanıcı eşleme sayfasında, otomatik kullanıcı **eşlemesini** etkinleştirin ve **İleri'ye** tıklayın. Özel eşlemeye ihtiyacınız olması durumunda bir CSV dosyasını karşıya yükleyin ve **İleri'ye** tıklayın.
 
-7. Ayarlarınızı gözden geçirip bağlayıcıyı oluşturmak **için Son'a** tıklayın.
+7. Ayarlarınızı gözden geçirin ve ardından **Son'a** tıklayarak bağlayıcıyı oluşturun.
 
-8. Yeni bağlayıcı için içeri aktarma **işleminin ilerlemesini** görmek için Veri bağlayıcıları sayfasındaki Bağlayıcılar sekmesine gidin.
+8. Yeni bağlayıcının içeri aktarma işleminin ilerleme durumunu görmek için **Veri bağlayıcıları sayfasındaki Bağlayıcılar** sekmesine gidin.
 
 ## <a name="known-issues"></a>Bilinen sorunlar
 
-- Şu anda ekleri veya 10 MB'den büyük öğeleri içeri aktarmayı desteklemez. Daha büyük öğeler için destek daha sonraki bir tarihte kullanılabilir.
+- Şu anda 10 MB'tan büyük eklerin veya öğelerin içeri aktarılmasını desteklemiyoruz. Daha büyük öğeler için destek daha sonraki bir tarihte sağlanacaktır.

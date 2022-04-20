@@ -1,5 +1,5 @@
 ---
-title: Denetim günlüğü bekletme ilkelerini yönetme
+title: Denetim günlüğü saklama ilkelerini yönetme
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -16,153 +16,153 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Denetim günlüğü bekletme ilkeleri, denetim ilkesi yönetimi kapsamındaki yeni Gelişmiş Denetim Microsoft 365. Denetim günlüğü bekletme ilkesi, denetim günlüklerinin kurumda ne kadar süreyle tutula tutula tutula açık olduğunu belirtmenize olanak sağlar.
-ms.openlocfilehash: f8c269aa4541c438942c69831857ed531681b742
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Denetim günlüğü saklama ilkeleri, yeni Microsoft Purview Denetimi (Premium) özelliklerinin bir parçasıdır. Denetim günlüğü saklama ilkesi, kuruluşunuzda denetim günlüklerinin ne kadar süre tutulacağını belirtmenize olanak tanır.
+ms.openlocfilehash: 7f745baa78ebf61c0d32d39c49e3158b2418553f
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62986488"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64934891"
 ---
-# <a name="manage-audit-log-retention-policies"></a>Denetim günlüğü bekletme ilkelerini yönetme
+# <a name="manage-audit-log-retention-policies"></a>Denetim günlüğü saklama ilkelerini yönetme
 
-Aşağıdaki çalışma sayfalarında denetim günlüğü bekletme ilkelerini oluşturabilir ve Microsoft 365 uyumluluk merkezi. Denetim günlüğü bekletme ilkeleri, denetim ilkesi yönetimi kapsamındaki yeni Gelişmiş Denetim Microsoft 365. Denetim günlüğü bekletme ilkesi, denetim günlüklerinin kurumda ne kadar süreyle tutula tutula tutula açık olduğunu belirtmenize olanak sağlar. Denetim günlüklerini en çok 10 yıl koruyebilirsiniz. İlkeleri aşağıdaki ölçütlere göre oluşturabilirsiniz:
+Microsoft Purview uyumluluk portalında denetim günlüğü saklama ilkeleri oluşturabilir ve yönetebilirsiniz. Denetim günlüğü saklama ilkeleri, yeni Microsoft Purview Denetimi (Premium) özelliklerinin bir parçasıdır. Denetim günlüğü saklama ilkesi, kuruluşunuzda denetim günlüklerinin ne kadar süre tutulacağını belirtmenize olanak tanır. Denetim günlüklerini 10 yıla kadar saklayabilirsiniz. İlkeleri aşağıdaki ölçütlere göre oluşturabilirsiniz:
 
-- Bir veya birden çok hizmette Microsoft 365 etkinlikleri
-- Tüm kullanıcılar veya belirli Microsoft 365 tarafından gerçekleştirilen belirli etkinlikler (bir hizmette)
-- Birden çok ilkeniz varsa, hangi ilkenin öncelikli olduğunu belirten bir öncelik düzeyi
+- Bir veya daha fazla Microsoft 365 hizmetindeki tüm etkinlikler
+- Tüm kullanıcılar veya belirli kullanıcılar tarafından gerçekleştirilen belirli etkinlikler (Microsoft 365 hizmetinde)
+- Kuruluşunuzda birden çok ilkeye sahip olduğunuzda hangi ilkenin öncelikli olduğunu belirten bir öncelik düzeyi
 
-## <a name="default-audit-log-retention-policy"></a>Varsayılan denetim günlüğü bekletme ilkesi
+## <a name="default-audit-log-retention-policy"></a>Varsayılan denetim günlüğü saklama ilkesi
 
-Gelişmiş Denetim Microsoft 365 tüm kuruluşlar için varsayılan denetim günlüğü bekletme ilkesi sağlar. Bu ilke bir yıl Exchange Online, SharePoint Online, OneDrive İş ve Azure Active Directory tüm denetim kayıtlarını korur. Bu varsayılan ilke **, workload** özelliği (**etkinliğin** olduğu hizmet) için Exchange, **SharePoint**, **OneDrive**, **AzureActiveDirectory** değerini içeren denetim kayıtlarını korur. Varsayılan ilke değiştirilemez. Varsayılan [ilkede](#more-information) yer alan her iş yükünün kayıt türlerinin listesi için, bu makalenin Daha fazla bilgi bölümüne bakın.
+Microsoft 365'daki denetim (Premium), tüm kuruluşlar için varsayılan denetim günlüğü saklama ilkesi sağlar. Bu ilke tüm Exchange Online, SharePoint Online, OneDrive İş ve Azure Active Directory denetim kayıtlarını bir yıl boyunca korur. Bu varsayılan ilke **, workload** özelliği (etkinliğin gerçekleştiği hizmettir) için **Exchange**, **SharePoint**, **OneDrive**, **AzureActiveDirectory** değerini içeren denetim kayıtlarını korur. Varsayılan ilke değiştirilemez. Varsayılan ilkeye dahil edilen her iş yükü için kayıt türlerinin listesi için bu makaledeki [Daha fazla bilgi](#more-information) bölümüne bakın.
 
 > [!NOTE]
-> Varsayılan denetim günlüğü bekletme ilkesi yalnızca Office 365 veya Microsoft 365 E5 lisansına sahip olan ya da Microsoft 365 E5 Uyumluluk veya E5 eKbulma ve Denetim eklenti lisansına sahip kullanıcılar tarafından gerçekleştirilen etkinliklere ilişkin denetim kayıtları için geçerlidir. Kuruluşta E5 kullanıcısı olmayan kullanıcılarınız veya konuk kullanıcılarınız varsa, buna karşılık gelen denetim kayıtları 90 gün boyunca korunur.
+> Varsayılan denetim günlüğü saklama ilkesi yalnızca Office 365 veya Microsoft 365 E5 lisansı atanmış ya da Microsoft 365 E5 Uyumluluk ya da E5 eBulma ve Denetim eklentisi lisansına sahip kullanıcılar tarafından gerçekleştirilen etkinlik denetim kayıtları için geçerlidir. Kuruluşunuzda E5 dışı kullanıcılarınız veya konuk kullanıcılarınız varsa, ilgili denetim kayıtları 90 gün boyunca saklanır.
 
-## <a name="before-you-create-an-audit-log-retention-policy"></a>Denetim günlüğü bekletme ilkesi oluşturmadan önce
+## <a name="before-you-create-an-audit-log-retention-policy"></a>Denetim günlüğü saklama ilkesi oluşturmadan önce
 
-- Denetim bekletme ilkesi oluşturmak veya değiştirmek için, Microsoft 365 uyumluluk merkezi Kuruluş Yapılandırması rolüne atanmış olmak gerekir.
+- Bir denetim bekletme ilkesi oluşturmak veya değiştirmek için uyumluluk portalında Kuruluş Yapılandırması rolüne atanmış olmanız gerekir.
 
-- Kuruluşta en çok 50 denetim günlüğü bekletme ilkesi olabilir.
+- Kuruluşunuzda en fazla 50 denetim günlüğü saklama ilkesine sahip olabilirsiniz.
 
-- Denetim günlüğünü 90 gün (ve 1 yıla kadar) süreyle tutmak için, denetim günlüğünü oluşturan kullanıcıya (denetim etkinliği gerçekleştirerek) bir Office 365 E5 veya Microsoft 365 E5 lisansı atanabilir ya da Microsoft 365 E5 Uyumluluk veya E5 eBulma ve Denetim eklenti lisansına sahip olması gerekir. 10 yıllık denetim günlüklerini tutmak için, denetim günlüğünü oluşturan kullanıcıya E5 lisansının yanı sıra 10 yıllık denetim günlüğü bekletme eklenti lisansı da atanabilir.
+- Denetim günlüğünü 90 günden (ve 1 yıla kadar) uzun süre saklamak için, denetim günlüğünü oluşturan kullanıcıya (denetim etkinliği gerçekleştirerek) bir Office 365 E5 veya Microsoft 365 E5 lisansı atanması ya da Microsoft 365 E5 Uyumluluk ya da E5 eBulma ve Denetim eklentisi lisansına sahip olması gerekir. Denetim günlüklerini 10 yıl boyunca tutmak için, denetim günlüğünü oluşturan kullanıcıya E5 lisansına ek olarak 10 yıllık denetim günlüğü saklama eklentisi lisansı da atanmalıdır.
 
-- Tüm özel denetim günlüğü bekletme ilkeleri (sizin oluşturduğunuz) varsayılan bekletme ilkesine göre önceliğe sahiptir. Örneğin, bir yıldan kısa bir bekletme süresi olan Exchange posta kutusu etkinliği için bir denetim günlüğü bekletme ilkesi oluşturmanız, Exchange posta kutusu etkinliklerinin denetim kayıtları özel ilke tarafından belirtilen süre boyunca korunur.
+- Tüm özel denetim günlüğü saklama ilkeleri (kuruluşunuz tarafından oluşturulan) varsayılan bekletme ilkesine göre önceliklidir. Örneğin, bir yıldan kısa bir saklama süresine sahip Exchange posta kutusu etkinliği için bir denetim günlüğü saklama ilkesi oluşturursanız, Exchange posta kutusu etkinliklerinin denetim kayıtları özel ilke tarafından belirtilen daha kısa süre boyunca korunur.
 
-## <a name="create-an-audit-log-retention-policy"></a>Denetim günlüğü bekletme ilkesi oluşturma
+## <a name="create-an-audit-log-retention-policy"></a>Denetim günlüğü saklama ilkesi oluşturma
 
-1. Oturum açma <https://compliance.microsoft.com> sayfasının İzinler sayfasında Kuruluş Yapılandırması rolüne atanmış bir kullanıcı hesabıyla Microsoft 365 uyumluluk merkezi.
+1. <https://compliance.microsoft.com> Uyumluluk portalındaki İzinler sayfasında Kuruluş Yapılandırması rolü atanmış bir kullanıcı hesabına gidin ve bu hesapla oturum açın.
 
-2. Denetim bölmesinin sol Microsoft 365 uyumluluk merkezi'a **tıklayın**.
+2. Uyumluluk portalının sol bölmesinde **Denetim'e** tıklayın.
 
-3. Denetim bekletme **ilkeleri sekmesine** tıklayın.
+3. **Saklama ilkelerini denetle** sekmesine tıklayın.
 
-4. Denetim **bekletme ilkesi oluştur'a** tıklayın ve sonra çıkış sayfasında aşağıdaki alanları doldurun:
+4. **Denetim bekletme ilkesi oluştur'a** tıklayın ve açılır sayfada aşağıdaki alanları tamamlayın:
 
-   ![Yeni denetim bekletme ilkesi uç sayfası.](../media/CreateAuditLogRetentionPolicy.png)
+   ![Yeni denetim bekletme ilkesi açılır sayfası.](../media/CreateAuditLogRetentionPolicy.png)
 
-   1. **İlke adı:** Denetim günlüğü bekletme ilkesi adı. Bu ad, kurum içinde benzersiz olmalıdır ve ilke oluşturulduktan sonra değiştirilmeyecektir.
+   1. **İlke adı:** Denetim günlüğü saklama ilkesinin adı. Bu ad kuruluşunuzda benzersiz olmalıdır ve ilke oluşturulduktan sonra değiştirilemez.
 
-   2. **Açıklama:** İsteğe bağlı, ancak ilke hakkında kayıt türü veya iş yükü, ilkede belirtilen kullanıcılar ve süre gibi bilgiler sağlamak yararlı olabilir.
+   2. **Açıklama:** İsteğe bağlı, ancak kayıt türü veya iş yükü, ilkede belirtilen kullanıcılar ve süre gibi ilke hakkında bilgi sağlamak yararlı olur.
 
-   3. **Kullanıcılar:** İlkeyi uygulamak için bir veya birden çok kullanıcı seçin. Bu kutuyu boş bırakırsanız, ilke tüm kullanıcılara uygulanır. Kayıt türünü boş **bırakırsanız** , bir kullanıcı seçmeniz gerekir.
+   3. **Kullanıcı:** İlkenin uygulanacağı bir veya daha fazla kullanıcıyı seçin. Bu kutuyu boş bırakırsanız, ilke tüm kullanıcılara uygulanır. **Kayıt türünü** boş bırakırsanız bir kullanıcı seçmelisiniz.
 
-   4. **Kayıt türü:** İlkenin geçerli olduğu denetim kayıt türü. Bu özelliği boş bırakırsanız, Kullanıcılar kutusundan **bir kullanıcı seçmeniz** gerekir. Tek bir kayıt türü veya birden çok kayıt türü seçin:
-      - Tek bir kayıt türü belirtirsiniz, **Etkinlikler alanı** dinamik olarak görüntülenir. Açılan listeyi kullanarak, seçilen kayıt türünden ilkeyi uygulamak üzere etkinlikleri seçebilirsiniz. Belirli etkinlikleri seçmezseniz, ilke seçilen kayıt türünün tüm etkinliklerine uygulanır.
-      - Birden çok kayıt türü seçerek etkinlikleri seçesiniz. İlke, seçilen kayıt türlerinin tüm etkinliklerine uygulanır.
+   4. **Kayıt türü:** İlkenin uygulandığı denetim kaydı türü. Bu özelliği boş bırakırsanız **, Kullanıcılar** kutusunda bir kullanıcı seçmelisiniz. Tek bir kayıt türü veya birden çok kayıt türü seçebilirsiniz:
+      - Tek bir kayıt türü seçerseniz **, Etkinlikler** alanı dinamik olarak görüntülenir. İlkenin uygulanacağı seçili kayıt türünden etkinlikleri seçmek için açılan listeyi kullanabilirsiniz. Belirli etkinlikleri seçmezseniz, ilke seçilen kayıt türünün tüm etkinliklerine uygulanır.
+      - Birden çok kayıt türü seçerseniz etkinlikleri seçemezsiniz. İlke, seçilen kayıt türlerinin tüm etkinliklerine uygulanır.
 
-   5. **Süre:** İlke ölçütlerine uyan denetim günlüklerinin tutulması için gereken süre.
+   5. **Süre:** İlkenin ölçütlerini karşılayan denetim günlüklerini tutma süresi.
 
-   6. **Öncelik:** Bu değer, kurumda denetim günlüğü bekletme ilkelerinin hangi sırayla işlenme sıralarını belirler. Daha düşük bir değer, daha yüksek öncelikli olduğunu gösterir. Geçerli öncelikler **1 ile** **10000 arasındaki sayısal değerlerdir**. **1 değeri en yüksek** önceliğe, **10000 değeri de en düşük** önceliktir. Örneğin, değeri 5 olan bir ilke **, değeri** 10 olan bir ilkeye göre **önceliğe sahiptir**. Daha önce de açıklanmıştır; tüm özel denetim günlüğü bekletme ilkesi, kurum için varsayılan ilkeden önceliğe sahiptir.
+   6. **Öncelik:** Bu değer, kuruluşunuzdaki denetim günlüğü saklama ilkelerinin işlenme sırasını belirler. Daha düşük bir değer daha yüksek bir önceliğe işaret eder. Geçerli öncelikler **1 ile** **10000** arasında sayısal değerlerdir. **1** değeri en yüksek öncelik, **10000** değeri ise en düşük önceliktir. Örneğin, değeri 5 olan bir ilke **, değeri** **10** olan bir ilkeye göre önceliklidir. Daha önce açıklandığı gibi, herhangi bir özel denetim günlüğü saklama ilkesi, kuruluşunuz için varsayılan ilkeden önceliklidir.
 
-5. Yeni **denetim günlüğü** bekletme ilkesi oluşturmak için Kaydet'e tıklayın.
+5. Yeni denetim günlüğü saklama ilkesini oluşturmak için **Kaydet'e** tıklayın.
 
-Yeni ilke, Denetim bekletme ilkeleri **sekmesindeki listede** görüntülenir.
+Yeni ilke, **Saklama ilkelerini denetle** sekmesindeki listede görüntülenir.
 
-## <a name="manage-audit-log-retention-policies-in-the-microsoft-365-compliance-center"></a>Denetim günlüğü bekletme ilkelerini aşağıdaki Microsoft 365 uyumluluk merkezi
+## <a name="manage-audit-log-retention-policies-in-the-compliance-portal"></a>Uyumluluk portalında denetim günlüğü saklama ilkelerini yönetme
 
-Denetim günlüğü bekletme ilkeleri, Denetim bekletme ilkeleri **sekmesinde (pano** olarak da denir) *listelenir*. Denetim bekletme ilkelerini görüntülemek, düzenlemek ve silmek için panoyu kullanabilirsiniz.
+Denetim günlüğü saklama ilkeleri **, Denetim bekletme ilkeleri** sekmesinde ( *pano* olarak da adlandırılır) listelenir. Denetim bekletme ilkelerini görüntülemek, düzenlemek ve silmek için panoyu kullanabilirsiniz.
 
 ### <a name="view-policies-in-the-dashboard"></a>Panoda ilkeleri görüntüleme
 
-Denetim günlüğü bekletme ilkeleri panoda listelenir. İlkeleri panoda görüntülemenin bir avantajı, öncelik sütununa tıklar ve uygulanacak önceliğe göre ilkeleri listeleyebilirsiniz. Daha önce de açıklanmıştır, düşük bir değer daha yüksek öncelikli olduğunu gösterir.
+Denetim günlüğü saklama ilkeleri panoda listelenir. İlkeleri panoda görüntülemenin avantajlarından biri, ilkeleri uygulandıkları öncelik içinde listelemek için **Öncelik** sütununa tıklayabilmenizdir. Daha önce açıklandığı gibi, daha düşük bir değer daha yüksek bir önceliğe işaret eder.
 
-![Denetim bekletme ilkeleri panosunda öncelik sütunu.](../media/AuditLogRetentionDashboardPriority.png)
+![Saklama ilkeleri panosundaki Öncelik sütunu.](../media/AuditLogRetentionDashboardPriority.png)
 
-Ayrıca, bir ilkeyi seçerek bu ilkenin ayarlarını uç uç sayfada görüntüleyebilirsiniz.
+Ayrıca, açılır sayfada ayarlarını görüntülemek için bir ilke seçebilirsiniz.
 
 > [!NOTE]
-> Panoda, kurum için varsayılan denetim günlüğü bekletme ilkesi görüntülenmez.
+> Kuruluşunuz için varsayılan denetim günlüğü saklama ilkesi panoda görüntülenmez.
 
 ### <a name="edit-policies-in-the-dashboard"></a>Panoda ilkeleri düzenleme
 
-Bir ilkeyi düzenlemek için, ilkeyi seçerek çıkış sayfasını görüntüleyebilirsiniz. Bir veya birden çok ayarı değiştirebilir ve sonra değişikliklerinizi kaydedebilirsiniz.
+İlkeyi düzenlemek için açılır sayfayı görüntülemek için seçin. Bir veya daha fazla ayarı değiştirebilir ve değişikliklerinizi kaydedebilirsiniz.
 
 > [!IMPORTANT]
 >
-> **New-UnifiedAuditLogRetentionPolicy** cmdlet'ini kullanıyorsanız, panoda Denetim bekletme ilkesi oluştur aracında yer alan kayıt türleri veya etkinlikler için bir denetim günlüğü bekletme ilkesi oluşturabilirsiniz. Bu durumda, Denetimin bekletme ilkeleri panosundan ilkeyi düzenleyemez (örneğin, bekletme süresini değiştiremez veya etkinlikleri ekleyemez ve **kaldırabilirsiniz** ). Uyumluluk merkezinde yalnızca ilkeyi  görüntüp silebilirsiniz. İlkeyi düzenlemek için, Güvenlik ve Uyumluluk Merkezi PowerShell.&'de [Set-UnifiedAuditLogRetentionPolicy](/powershell/module/exchange/set-unifiedauditlogretentionpolicy) cmdlet'ini kullan >
+> **New-UnifiedAuditLogRetentionPolicy** cmdlet'ini kullanıyorsanız, panodaki **Denetim bekletme ilkesi oluşturma** aracında bulunmayan kayıt türleri veya etkinlikler için bir denetim günlüğü bekletme ilkesi oluşturabilirsiniz. Bu durumda, ilkeyi **Denetim bekletme ilkeleri** panosundan düzenleyemezsiniz (örneğin, bekletme süresini değiştiremez veya etkinlik ekleyip kaldıramazsınız). İlkeyi yalnızca uyumluluk merkezinde görüntüleyebilir ve silebilirsiniz. İlkeyi düzenlemek için Güvenlik & Uyumluluk Merkezi PowerShell.>'da [Set-UnifiedAuditLogRetentionPolicy](/powershell/module/exchange/set-unifiedauditlogretentionpolicy) cmdlet'ini kullanmanız gerekir
 >
-> **İpucu:** PowerShell kullanılarak düzenleniyor olması gereken ilkelere yönelik olarak, çıkış sayfasının en üstünde bir ileti görüntülenir.
+> **Ipucu:** PowerShell kullanılarak düzenlenmesi gereken ilkeler için açılır sayfa üst kısmında bir ileti görüntülenir.
 
-### <a name="delete-policies-in-the-dashboard"></a>Panoda ilkeleri silme
+### <a name="delete-policies-in-the-dashboard"></a>Panodaki ilkeleri silme
 
-Bir ilkeyi silmek için Sil **simgesine** ![tıklayın.](../media/92a9f8e0-d469-48da-addb-69365e7ffb6f.jpg) simgesini seçin ve ardından ilkeyi silmek istediğinize onaylayın. İlke panodan kaldırılır, ancak ilkenin kuruluştan kaldırılması 30 dakika kadar sürebilir.
+İlkeyi silmek için **Sil** ![simgesine tıklayın.](../media/92a9f8e0-d469-48da-addb-69365e7ffb6f.jpg) simgesini seçin ve ardından ilkeyi silmek istediğinizi onaylayın. İlke panodan kaldırılır, ancak ilkenin kuruluşunuzdan kaldırılması 30 dakika kadar sürebilir.
 
-## <a name="create-and-manage-audit-log-retention-policies-in-powershell"></a>PowerShell'de denetim günlüğü bekletme ilkelerini oluşturma ve yönetme
+## <a name="create-and-manage-audit-log-retention-policies-in-powershell"></a>PowerShell'de denetim günlüğü saklama ilkeleri oluşturma ve yönetme
 
-Denetim günlüğü bekletme ilkelerini oluşturmak & için Güvenlik ve Uyumluluk Merkezi PowerShell'i de kullanabilirsiniz. PowerShell'i kullanmanın bir nedeni, kullanıcı arabiriminde olmayan bir kayıt türü veya etkinliği için ilke oluşturmaktır.
+Denetim günlüğü saklama ilkeleri oluşturmak ve yönetmek için Güvenlik & Uyumluluk Merkezi PowerShell'i de kullanabilirsiniz. PowerShell'i kullanmanın bir nedeni, kullanıcı arabiriminde bulunmayan bir kayıt türü veya etkinliği için ilke oluşturmaktır.
 
-### <a name="create-an-audit-log-retention-policy-in-powershell"></a>PowerShell'de denetim günlüğü bekletme ilkesi oluşturma
+### <a name="create-an-audit-log-retention-policy-in-powershell"></a>PowerShell'de denetim günlüğü saklama ilkesi oluşturma
 
-PowerShell'de denetim günlüğü bekletme ilkesi oluşturmak için şu adımları izleyin:
+PowerShell'de denetim günlüğü saklama ilkesi oluşturmak için şu adımları izleyin:
 
-1. [Bağlan ve Uyumluluk & PowerShell'e.](/powershell/exchange/connect-to-scc-powershell)
+1. [Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
 
-2. Denetim günlüğü bekletme ilkesi oluşturmak için aşağıdaki komutu çalıştırın:
+2. Denetim günlüğü saklama ilkesi oluşturmak için aşağıdaki komutu çalıştırın:
 
    ```powershell
    New-UnifiedAuditLogRetentionPolicy -Name "Microsoft Teams Audit Policy" -Description "One year retention policy for all Microsoft Teams activities" -RecordTypes MicrosoftTeams -RetentionDuration TenYears -Priority 100
    ```
 
-   Bu örnekte, bu ayarlarla birlikte "Denetim İlkesini Microsoft Teams denetim günlüğü bekletme ilkesi" adı ve oluşturur:
+   Bu örnek, şu ayarlarla "Microsoft Teams Denetim İlkesi" adlı bir denetim günlüğü saklama ilkesi oluşturur:
 
    - İlkenin açıklaması.
-   - Tüm Microsoft Teams korur (*RecordType parametresi tarafından tanımlandığı gibi*).
-   - Denetim Microsoft Teams 10 yıl süreyle korur.
-   - 100 öncelik.
+   - Tüm Microsoft Teams etkinliklerini korur (*RecordType* parametresi tarafından tanımlandığı şekilde).
+   - Microsoft Teams denetim günlüklerini 10 yıl boyunca korur.
+   - 100'ün önceliği.
 
-Denetim günlüğü bekletme ilkesi oluşturmanın başka bir örneği. Bu ilke, kullanıcı oturum açtığında altı ay boyunca "Oturum açan kullanıcı" etkinliğinin denetim günlüklerini admin@contoso.onmicrosoft.com.
+Aşağıda bir denetim günlüğü saklama ilkesi oluşturmaya yönelik başka bir örnek verilmiştir. Bu ilke, "Oturum açan kullanıcı" etkinliğinin denetim günlüklerini kullanıcı admin@contoso.onmicrosoft.com için altı ay boyunca saklar.
 
 ```powershell
 New-UnifiedAuditLogRetentionPolicy -Name "SixMonth retention for admin logons" -RecordTypes AzureActiveDirectoryStsLogon -Operations UserLoggedIn -UserIds admin@contoso.onmicrosoft.com -RetentionDuration SixMonths -Priority 25
 ```
 
-Daha fazla bilgi için bkz [. New-UnifiedAuditLogRetentionPolicy](/powershell/module/exchange/new-unifiedauditlogretentionpolicy).
+Daha fazla bilgi için bkz. [New-UnifiedAuditLogRetentionPolicy](/powershell/module/exchange/new-unifiedauditlogretentionpolicy).
 
 ### <a name="view-policies-in-powershell"></a>PowerShell'de ilkeleri görüntüleme
 
-Denetim günlüğü bekletme ilkelerini görüntülemek için Güvenlik ve Uyumluluk Merkezi PowerShell'de [Get-UnifiedAuditLogRetentionPolicy](/powershell/module/exchange/get-unifiedauditlogretentionpolicy) cmdlet'ini & kullanın.
+Denetim günlüğü saklama ilkelerini görüntülemek için Güvenlik & Uyumluluk Merkezi PowerShell'de [Get-UnifiedAuditLogRetentionPolicy](/powershell/module/exchange/get-unifiedauditlogretentionpolicy) cmdlet'ini kullanın.
 
-İşte, kurumuzda tüm denetim günlüğü bekletme ilkelerinin ayarlarını görüntülemeye yönelik örnek bir komut. Bu komut, ilkeleri en yüksekten en düşük önceliğe doğru sıralar.
+Burada, kuruluşunuzdaki tüm denetim günlüğü saklama ilkelerinin ayarlarını görüntülemek için örnek bir komut verilmiştir. Bu komut ilkeleri en yüksekten en düşük önceliğe sıralar.
 
 ```powershell
 Get-UnifiedAuditLogRetentionPolicy | Sort-Object -Property Priority -Descending | FL Priority,Name,Description,RecordTypes,Operations,UserIds,RetentionDuration
 ```
 
 > [!NOTE]
-> **Get-UnifiedAuditLogRetentionPolicy** cmdlet'i, sizin için varsayılan denetim günlüğü bekletme ilkesi geri dönmez.
+> **Get-UnifiedAuditLogRetentionPolicy** cmdlet'i kuruluşunuz için varsayılan denetim günlüğü saklama ilkesini döndürmez.
 
 ### <a name="edit-policies-in-powershell"></a>PowerShell'de ilkeleri düzenleme
 
-Var olan bir denetim günlüğü bekletme ilkesi düzenlemek için Güvenlik ve Uyumluluk Merkezi PowerShell'& de [Set-UnifiedAuditLogRetentionPolicy](/powershell/module/exchange/set-unifiedauditlogretentionpolicy) cmdlet'ini kullanın.
+Mevcut denetim günlüğü saklama ilkesini düzenlemek için Güvenlik & Uyumluluk Merkezi PowerShell'de [Set-UnifiedAuditLogRetentionPolicy](/powershell/module/exchange/set-unifiedauditlogretentionpolicy) cmdlet'ini kullanın.
 
 ### <a name="delete-policies-in-powershell"></a>PowerShell'de ilkeleri silme
 
-Denetim günlüğü bekletme ilkesi silmek için Güvenlik ve Uyumluluk Merkezi PowerShell'de [Remove-UnifiedAuditLogRetentionPolicy](/powershell/module/exchange/remove-unifiedauditlogretentionpolicy) cmdlet'ini & kullanın. İlkenin kuruluştan kaldırılması 30 dakika kadar sürebilir.
+Denetim günlüğü saklama ilkesini silmek için Güvenlik & Uyumluluk Merkezi PowerShell'de [Remove-UnifiedAuditLogRetentionPolicy](/powershell/module/exchange/remove-unifiedauditlogretentionpolicy) cmdlet'ini kullanın. İlkenin kuruluşunuzdan kaldırılması 30 dakika kadar sürebilir.
 
 ## <a name="more-information"></a>Daha fazla bilgi
 
-Daha önce de belirtildiği gibi, Azure Active Directory, Exchange Online, SharePoint Online ve OneDrive İş'daki işlemlerin denetim kayıtları varsayılan olarak bir yıl süreyle korunur. Aşağıdaki tabloda, varsayılan denetim günlüğü bekletme ilkesine dahil edilen tüm kayıt türleri (bu hizmetlerin her biri için) listelemektedir. Bu, belirli bir kayıt türü, işlem veya kullanıcı için özel bir denetim günlüğü bekletme ilkesi öncelikli olmadığı sürece, bu kayıt türüyle yapılan tüm işlemlerde denetim günlüklerinin bir yıl süreyle tutuldiği anlamına gelir. Her kayıt türünün Enum değeri (denetim kaydında RecordType özelliği için değer olarak görüntülenir) parantez içinde gösterilir.
+Daha önce belirtildiği gibi, Azure Active Directory, Exchange Online, SharePoint Online ve OneDrive İş'daki işlemlerin denetim kayıtları varsayılan olarak bir yıl boyunca saklanır. Aşağıdaki tabloda, varsayılan denetim günlüğü saklama ilkesine dahil edilen tüm kayıt türleri (bu hizmetlerin her biri için) listelenmektedir. Bu, özel denetim günlüğü saklama ilkesinin belirli bir kayıt türü, işlem veya kullanıcı için öncelikli olmadığı sürece, bu kayıt türüne sahip herhangi bir işlemin denetim günlüklerinin bir yıl boyunca tutulduğunu gösterir. Her kayıt türü için Enum değeri (bir denetim kaydındaki RecordType özelliğinin değeri olarak görüntülenir) parantez içinde gösterilir.
 
 <br>
 
@@ -177,7 +177,7 @@ Daha önce de belirtildiği gibi, Azure Active Directory, Exchange Online, Share
 ||ComplianceSupervisionExchange (68)|SharePointCommentOperation (37)|
 ||CustomerKeyServiceEncryption (69)|SharePointContentTypeOperation (55)|
 ||ExchangeAggregatedOperation (19)|SharePointFieldOperation (56)|
-||ExchangeItemAregated (50)|SharePointFileOperation (6)|
+||ExchangeItemAggregated (50)|SharePointFileOperation (6)|
 ||ExchangeItemGroup (3)|SharePointListOperation (36)|
 ||InformationBarrierPolicyApplication (53)|SharePointSharingOperation (14)|
 ||||

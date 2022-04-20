@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: reference
-ms.date: 04/12/2022
+ms.date: 04/18/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -17,12 +17,12 @@ ms.collection:
 - SMB
 - m365-initiative-defender-business
 - m365-security-compliance
-ms.openlocfilehash: b1dbe79aadea39bfc737ae9f5457715b669cc79b
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: e32018f52f3a45624fcf07ae03e44c662a594297
+ms.sourcegitcommit: dc415d784226c77549ba246601f34324c4f94e73
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64861828"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64916325"
 ---
 # <a name="compare-microsoft-defender-for-business-to-microsoft-365-business-premium"></a>İş için Microsoft Defender Microsoft 365 İş Ekstra ile karşılaştırma
 
@@ -73,9 +73,9 @@ Aşağıdaki tabloda İş için Defender'daki (tek başına) güvenlik özellikl
 
 İş için Defender, uç nokta için Defender'ın kurumsal düzeydeki özelliklerini küçük ve orta ölçekli işletmelere getirir.
 
-Aşağıdaki tabloda, İş için Defender'daki güvenlik özellikleri ve özellikleri Uç Nokta için Microsoft Defender Plan 1 ve 2 ile karşılaştırır.
+Aşağıdaki tabloda İş için Defender'daki güvenlik özellikleri ve özellikleri plan 1 ve 2 Uç Nokta için Microsoft Defender kurumsal tekliflerle karşılaştırmaktadır.
 
-|Özellik/Yetenek|[İş için Defender](mdb-overview.md)<br/>(tek başına; şu anda önizleme aşamasında)|[Uç Nokta için Defender Plan 1](../defender-endpoint/defender-endpoint-plan-1.md)|[Uç Nokta için Defender Plan 2](../defender-endpoint/microsoft-defender-endpoint.md)|
+|Özellik/Yetenek|[İş için Defender](mdb-overview.md)<br/>(tek başına; şu anda önizleme aşamasında)|[Uç Nokta için Defender Plan 1](../defender-endpoint/defender-endpoint-plan-1.md)<br/>(kurumsal müşteriler için) |[Uç Nokta için Defender Plan 2](../defender-endpoint/microsoft-defender-endpoint.md)<br/>(kurumsal müşteriler için) |
 |---|---|---|---|
 |[Merkezi yönetim](../defender-endpoint/manage-atp-post-migration.md) |Evet <sup>[[1](#fn1)]</sup>|Evet|Evet|
 |[Basitleştirilmiş istemci yapılandırması](mdb-simplified-configuration.md)|Evet|Hayır|Hayır|

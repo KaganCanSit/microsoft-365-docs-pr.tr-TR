@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 uyumluluk merkezi denetim günlüğünde arama yapma
+title: Microsoft Purview uyumluluk portalında denetim günlüğünde arama yapma
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -17,20 +17,20 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 0d4d0f35-390b-4518-800e-0c7ec95e946c
-description: Kuruluşunuzdaki kullanıcı ve yönetici etkinliğini görüntülemek üzere birleşik denetim günlüğünde arama yapmak için Microsoft 365 uyumluluk merkezi kullanın.
+description: Kuruluşunuzdaki kullanıcı ve yönetici etkinliğini görüntülemek üzere birleşik denetim günlüğünde arama yapmak için Microsoft Purview uyumluluk portalını kullanın.
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
-ms.openlocfilehash: 1a10bf738562f8fd9a263252d4a56eddf8acee9d
-ms.sourcegitcommit: e13c8fc28c68422308c9d356109797cfcf6f77be
+ms.openlocfilehash: f35bfbbe299495e912d018bd00615964f883031e
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/14/2022
-ms.locfileid: "64841951"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64936279"
 ---
 # <a name="search-the-audit-log-in-the-compliance-center"></a>Uyumluluk merkezinde denetim günlüğünde arama yapma
 
-Kullanıcının belirli bir belgeyi görüntüleyip görüntülemediğini veya bir öğeyi posta kutusundan temizleyip temizlemediğini bulmanız mı gerekiyor? Öyleyse, kuruluşunuzdaki kullanıcı ve yönetici etkinliğini görüntülemek üzere birleşik denetim günlüğünde arama yapmak için Microsoft 365 uyumluluk merkezi'deki denetim günlüğü arama aracını kullanabilirsiniz. Onlarca Microsoft 365 hizmeti ve çözümünde gerçekleştirilen binlerce kullanıcı ve yönetici işlemi, kuruluşunuzun birleşik denetim günlüğünde yakalanır, kaydedilir ve saklanır. Kuruluşunuzdaki kullanıcılar, bu işlemlerin denetim kayıtlarını aramak, görüntülemek ve dışarı aktarmak (CSV dosyasına) için denetim günlüğü arama aracını kullanabilir.
+Kullanıcının belirli bir belgeyi görüntüleyip görüntülemediğini veya bir öğeyi posta kutusundan temizleyip temizlemediğini bulmanız mı gerekiyor? Öyleyse, kuruluşunuzdaki kullanıcı ve yönetici etkinliğini görüntülemek üzere birleşik denetim günlüğünde arama yapmak için Microsoft Purview uyumluluk portalındaki denetim günlüğü arama aracını kullanabilirsiniz. Onlarca Microsoft 365 hizmeti ve çözümünde gerçekleştirilen binlerce kullanıcı ve yönetici işlemi, kuruluşunuzun birleşik denetim günlüğünde yakalanır, kaydedilir ve saklanır. Kuruluşunuzdaki kullanıcılar, bu işlemlerin denetim kayıtlarını aramak, görüntülemek ve dışarı aktarmak (CSV dosyasına) için denetim günlüğü arama aracını kullanabilir.
 
 ## <a name="microsoft-365-services-that-support-auditing"></a>Denetimi destekleyen Microsoft 365 hizmetleri
 
@@ -92,7 +92,7 @@ Denetim günlüğünde arama yapmaya başlamadan önce aşağıdaki öğeleri ok
 - Denetim günlüğünde arama yapmak için Exchange Online'da View-Only Denetim Günlükleri veya Denetim Günlükleri rolüne atanmış olmanız gerekir. Varsayılan olarak, bu roller Exchange yönetim merkezindeki **İzinler** sayfasındaki Uyumluluk Yönetimi ve Kuruluş Yönetimi rol gruplarına atanır. Office 365 ve Microsoft 365'deki genel yöneticiler otomatik olarak Exchange Online'da Kuruluş Yönetimi rol grubunun üyeleri olarak eklenir. Kullanıcıya en düşük ayrıcalık düzeyiyle denetim günlüğünde arama yapma olanağı vermek için, Exchange Online'da özel bir rol grubu oluşturabilir, View-Only Denetim Günlükleri veya Denetim Günlükleri rolünü ekleyebilir ve kullanıcıyı yeni rol grubunun bir üyesi olarak ekleyebilirsiniz. Daha fazla bilgi için bkz. [Exchange Online rol gruplarını yönetme](/Exchange/permissions-exo/role-groups).
 
   > [!IMPORTANT]
-  > Kullanıcıya Microsoft 365 uyumluluk merkezi İzinler sayfasında Denetim Günlükleri veya Denetim **Günlükleri** rolünü View-Only atarsanız, denetim günlüğünde arama yapamaz. İzinleri Exchange Online atamanız gerekir. Bunun nedeni, denetim günlüğünde arama yapmak için kullanılan temel cmdlet'in Exchange Online bir cmdlet olmasıdır.
+  > Kullanıcıya uyumluluk portalındaki İzinler sayfasında View-Only Denetim **Günlükleri veya Denetim Günlükleri** rolü atarsanız, denetim günlüğünde arama yapamaz. İzinleri Exchange Online atamanız gerekir. Bunun nedeni, denetim günlüğünde arama yapmak için kullanılan temel cmdlet'in Exchange Online bir cmdlet olmasıdır.
 
 - Bir kullanıcı veya yönetici tarafından denetlenen bir etkinlik gerçekleştirildiğinde, bir denetim kaydı oluşturulur ve kuruluşunuz için denetim günlüğünde depolanır. Denetim kaydının tutulacak süresi (ve denetim günlüğünde aranabilir) Office 365 veya Microsoft 365 Kurumsal aboneliğinize ve özellikle belirli kullanıcılara atanan lisansın türüne bağlıdır.
 
@@ -104,7 +104,7 @@ Denetim günlüğünde arama yapmaya başlamadan önce aşağıdaki öğeleri ok
   - Başka herhangi bir (E5 olmayan) Office 365 veya Microsoft 365 lisansı atanmış kullanıcılar için denetim kayıtları 90 gün boyunca saklanır. Birleşik denetim günlüğünü destekleyen Office 365 ve Microsoft 365 aboneliklerinin listesi için [güvenlik ve uyumluluk merkezi hizmet açıklamasına](/office365/servicedescriptions/office-365-platform-service-description/office-365-securitycompliance-center) bakın.
 
     > [!NOTE]
-    > Posta kutusu denetimi varsayılan olarak açık olsa bile, bazı kullanıcılar için posta kutusu denetim olaylarının Microsoft 365 uyumluluk merkezi veya Office 365 Yönetim Etkinliği API'sinin denetim günlüğü aramalarında bulunmadığını fark edebilirsiniz. Daha fazla bilgi için bkz. [Posta kutusu denetim günlüğü hakkında daha fazla bilgi](enable-mailbox-auditing.md#more-information).
+    > Posta kutusu denetimi varsayılan olarak açık olsa bile, uyumluluk portalında veya Office 365 Yönetim Etkinliği API'sinde bazı kullanıcılar için posta kutusu denetim olaylarının denetim günlüğü aramalarında bulunmadığını fark edebilirsiniz. Daha fazla bilgi için bkz. [Posta kutusu denetim günlüğü hakkında daha fazla bilgi](enable-mailbox-auditing.md#more-information).
 
 - Kuruluşunuz için denetim günlüğü aramasını kapatmak istiyorsanız, Exchange Online kuruluşunuza bağlı uzak PowerShell'de aşağıdaki komutu çalıştırabilirsiniz:
 
@@ -120,7 +120,7 @@ Denetim günlüğünde arama yapmaya başlamadan önce aşağıdaki öğeleri ok
 
   Daha fazla bilgi için bkz. [Denetim günlüğü aramasını kapatma](turn-audit-log-search-on-or-off.md).
 
-- Daha önce belirtildiği gibi, denetim günlüğünde arama yapmak için kullanılan temel alınan cmdlet, **Search-UnifiedAuditLog** olan bir Exchange Online cmdlet'idir. Bu, Microsoft 365 uyumluluk merkezi **Denetim sayfasındaki arama** aracını kullanmak yerine denetim günlüğünde arama yapmak için bu cmdlet'i kullanabileceğiniz anlamına gelir. Bu cmdlet'i Exchange Online PowerShell'de çalıştırmanız gerekir. Daha fazla bilgi için bkz [. Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog).
+- Daha önce belirtildiği gibi, denetim günlüğünde arama yapmak için kullanılan temel alınan cmdlet, **Search-UnifiedAuditLog** olan bir Exchange Online cmdlet'idir. Bu, uyumluluk portalındaki **Denetim** sayfasındaki arama aracını kullanmak yerine denetim günlüğünde arama yapmak için bu cmdlet'i kullanabileceğiniz anlamına gelir. Bu cmdlet'i Exchange Online PowerShell'de çalıştırmanız gerekir. Daha fazla bilgi için bkz [. Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog).
 
   **Search-UnifiedAuditLog** cmdlet'i tarafından döndürülen arama sonuçlarını csv dosyasına dışarı aktarma hakkında bilgi için, Denetim [günlüğü kayıtlarını dışarı aktarma, yapılandırma ve görüntüleme](export-view-audit-log-records.md#tips-for-exporting-and-viewing-the-audit-log) bölümündeki "Denetim günlüğünü dışarı aktarma ve görüntüleme İpuçları" bölümüne bakın.
 
@@ -147,9 +147,9 @@ Microsoft 365'da denetim günlüğünde arama yapma işlemi aşağıdadır.
 1. <https://compliance.microsoft.com> adresine gidin ve oturum açın.
 
     > [!TIP]
-    > Microsoft 365 uyumluluk merkezi erişmek için özel gözatma oturumu (normal oturum değil) kullanın çünkü bu, şu anda oturum açtığınız kimlik bilgilerinin kullanılmasını engeller. Microsoft Edge'da InPrivate Gözatma oturumu veya Google Chrome'da özel gözatma oturumu (gizli pencere olarak adlandırılır) açmak için **CTRL+SHIFT+N** tuşlarına basın.
+    > Uyumluluk portalına erişmek için özel gözatma oturumu (normal oturum değil) kullanın çünkü bu, şu anda oturum açtığınız kimlik bilgilerinin kullanılmasını engeller. Microsoft Edge'da InPrivate Gözatma oturumu veya Google Chrome'da özel gözatma oturumu (gizli pencere olarak adlandırılır) açmak için **CTRL+SHIFT+N** tuşlarına basın.
 
-2. Microsoft 365 uyumluluk merkezi sol bölmesinde **Denetim'e** tıklayın.
+2. Uyumluluk portalının sol bölmesinde **Denetim'e** tıklayın.
 
     **Denetim** sayfası görüntülenir.
 
@@ -314,7 +314,7 @@ Belirli bir tabloya gitmek için aşağıdaki bağlantılardan birine tıklayın
         [eBulma etkinlikleri](#ediscovery-activities)
     :::column-end:::
     :::column:::
-        [Advanced eDiscovery etkinlikleri](#advanced-ediscovery-activities)
+        [eBulma (Premium) etkinlikleri](#ediscovery-premium-activities)
     :::column-end:::
 :::row-end:::
 
@@ -644,7 +644,7 @@ Aşağıdaki tabloda, posta kutusu denetim günlüğü tarafından günlüğe ka
 
 |Kolay ad|Işlem|Açıklama|
 |:-----|:-----|:-----|
-|Erişilen posta kutusu öğeleri|MailItemsAccessed|İletiler posta kutusunda okundu veya bu iletilere erişildi. Bu etkinliğin denetim kayıtları iki yoldan biriyle tetiklenir: posta istemcisi (Outlook gibi) iletilerde bağlama işlemi gerçekleştirdiğinde veya posta protokolleri (Exchange ActiveSync veya IMAP gibi) posta klasöründeki öğeleri eşitlediğinde. Bu etkinlik yalnızca Office 365 veya Microsoft 365 E5 lisansı olan kullanıcılar için günlüğe kaydedilir. Bu etkinlik için denetim kayıtlarını analiz etmek, güvenliği aşılmış e-posta hesabı araştırılırken yararlıdır. Daha fazla bilgi için Gelişmiş Denetim'in " [Gelişmiş Denetim](advanced-audit.md#advanced-audit-events) olayları" bölümüne bakın. |
+|Erişilen posta kutusu öğeleri|MailItemsAccessed|İletiler posta kutusunda okundu veya bu iletilere erişildi. Bu etkinliğin denetim kayıtları iki yoldan biriyle tetiklenir: posta istemcisi (Outlook gibi) iletilerde bağlama işlemi gerçekleştirdiğinde veya posta protokolleri (Exchange ActiveSync veya IMAP gibi) posta klasöründeki öğeleri eşitlediğinde. Bu etkinlik yalnızca Office 365 veya Microsoft 365 E5 lisansı olan kullanıcılar için günlüğe kaydedilir. Bu etkinlik için denetim kayıtlarını analiz etmek, güvenliği aşılmış e-posta hesabı araştırılırken yararlıdır. Daha fazla bilgi için Denetim (Premium) bölümündeki "[Denetim (Premium](advanced-audit.md#audit-premium-events)) olayları" bölümüne bakın. |
 |Temsilci posta kutusu izinleri eklendi|Add-MailboxPermission|Yönetici, kullanıcıya (temsilci olarak bilinir) FullAccess posta kutusu iznini başka bir kişinin posta kutusuna atadı. FullAccess izni, temsilcinin diğer kişinin posta kutusunu açmasına ve posta kutusunun içeriğini okumasına ve yönetmesine olanak tanır. Bu etkinliğin denetim kaydı, Microsoft 365 hizmetindeki bir sistem hesabı kuruluşunuz adına düzenli aralıklarla bakım görevleri gerçekleştirdiğinde de oluşturulur. Sistem hesabı tarafından gerçekleştirilen yaygın bir görev, sistem posta kutuları için izinleri güncelleştirmektir. Daha fazla bilgi için bkz. [posta kutusu denetim kayıtları Exchange sistem hesapları](#system-accounts-in-exchange-mailbox-audit-records).|
 |Takvim klasörüne temsilci erişimi olan kullanıcı eklendi veya kaldırıldı|UpdateCalendarDelegation|Kullanıcı, başka bir kullanıcının posta kutusunun takvimine temsilci olarak eklendi veya kaldırıldı. Takvim temsilcisi, aynı kuruluştaki başka birine posta kutusu sahibinin takvimini yönetme izni verir.|
 |Klasöre izinler eklendi|AddFolderPermissions|Klasör izni eklendi. Klasör izinleri, kuruluşunuzdaki hangi kullanıcıların bir posta kutusundaki klasörlere ve bu klasörlerde bulunan iletilere erişebileceğini denetler.|
@@ -660,7 +660,7 @@ Aşağıdaki tabloda, posta kutusu denetim günlüğü tarafından günlüğe ka
 |İletileri posta kutusundan temizleme|HardDelete|Kurtarılabilir Öğeler klasöründen bir ileti temizlendi (posta kutusundan kalıcı olarak silindi).|
 |Temsilci posta kutusu izinleri kaldırıldı|Remove-MailboxPermission|Yönetici, bir kişinin posta kutusundan FullAccess iznini (temsilciye atanmış olan) kaldırdı. FullAccess izni kaldırıldıktan sonra, temsilci diğer kişinin posta kutusunu açamaz veya içindeki herhangi bir içeriğe erişemez.|
 |Klasörden izinler kaldırıldı|RemoveFolderPermissions|Klasör izni kaldırıldı. Klasör izinleri, kuruluşunuzdaki hangi kullanıcıların bir posta kutusundaki klasörlere ve bu klasörlerde bulunan iletilere erişebileceğini denetler.|
-|İleti gönderildi|Gönderin|Bir ileti gönderildi, yanıtlandı veya iletildi. Bu etkinlik yalnızca Office 365 veya Microsoft 365 E5 lisansı olan kullanıcılar için günlüğe kaydedilir. Daha fazla bilgi için Gelişmiş Denetim'in " [Gelişmiş Denetim](advanced-audit.md#advanced-audit-events) olayları" bölümüne bakın.|
+|İleti gönderildi|Gönderin|Bir ileti gönderildi, yanıtlandı veya iletildi. Bu etkinlik yalnızca Office 365 veya Microsoft 365 E5 lisansı olan kullanıcılar için günlüğe kaydedilir. Daha fazla bilgi için Denetim (Premium) bölümündeki "[Denetim (Premium](advanced-audit.md#audit-premium-events)) olayları" bölümüne bakın.|
 |Farklı Gönder izinleri kullanılarak gönderilen ileti|GöndermeLer|SendAs izni kullanılarak bir ileti gönderildi. Bu, başka bir kullanıcının iletiyi posta kutusu sahibinden gelmiş gibi gönderdiği anlamına gelir.|
 |Adına Gönder izinleri kullanılarak gönderilen ileti|SendOnBehalf|SendOnBehalf izni kullanılarak bir ileti gönderildi. Bu, başka bir kullanıcının iletiyi posta kutusu sahibi adına gönderdiği anlamına gelir. İleti, iletinin adına gönderildiği alıcıyı ve iletiyi gerçekten göndereni belirtir.|
 |Outlook istemcisinden gelen kutusu kuralları güncelleştirildi|UpdateInboxRules|Posta kutusu sahibi veya Outlook istemcisini kullanarak gelen kutusu kuralı oluşturulan, değiştirilen veya kaldırılan posta kutusuna erişimi olan başka bir kullanıcı.|
@@ -782,11 +782,11 @@ Güvenlik ve uyumluluk merkezinde veya ilgili PowerShell cmdlet'leri çalıştı
 Günlüğe kaydedilen eBulma etkinliklerinin listesi ve ayrıntılı açıklaması için bkz. [Denetim günlüğünde eBulma etkinliklerini arama](search-for-ediscovery-activities-in-the-audit-log.md).
 
 > [!NOTE]
-> **eBulma** etkinlikleri altında listelenen etkinliklerden kaynaklanan olayların ve **Etkinlikler açılan listesindeki** **etkinliklerin Advanced eDiscovery** arama sonuçlarında görüntülenmesi 30 dakikaya kadar sürer. Buna karşılık, eBulma cmdlet etkinliklerinden gelen olayların arama sonuçlarında görünmesi 24 saate kadar sürer.
+> Etkinlikler **açılan listesinde** **eBulma etkinlikleri** ve **eBulma (Premium) etkinlikleri altında listelenen etkinliklerden kaynaklanan olayların** arama sonuçlarında görüntülenmesi 30 dakikaya kadar sürer. Buna karşılık, eBulma cmdlet etkinliklerinden gelen olayların arama sonuçlarında görünmesi 24 saate kadar sürer.
 
-### <a name="advanced-ediscovery-activities"></a>Advanced eDiscovery etkinlikleri
+### <a name="ediscovery-premium-activities"></a>eBulma (Premium) etkinlikleri
 
-Denetim günlüğünde Advanced eDiscovery etkinlikleri için de arama yapabilirsiniz. Bu etkinliklerin açıklaması [için denetim günlüğünde eBulma](search-for-ediscovery-activities-in-the-audit-log.md#advanced-ediscovery-activities) etkinliklerini arama bölümündeki "Advanced eDiscovery etkinlikler" bölümüne bakın.
+Denetim günlüğünde Microsoft Purview eKeşif (Premium) etkinlikleri için de arama yapabilirsiniz. Bu etkinliklerin açıklaması [için denetim günlüğünde eBulma](search-for-ediscovery-activities-in-the-audit-log.md#ediscovery-premium-activities) etkinliklerini arama bölümündeki "eBulma (Premium) etkinlikleri" bölümüne bakın.
 
 ### <a name="power-bi-activities"></a>Power BI etkinlikleri
 
@@ -840,7 +840,7 @@ Vardiyalar uygulama etkinliklerinin açıklaması için bkz[. denetim günlüğ�
 Aşağıdaki tabloda, denetim günlüğüne kaydedilen Yammer kullanıcı ve yönetici etkinlikleri listelenir. Denetim günlüğünden Yammer ilgili etkinlikleri döndürmek için **Etkinlikler** listesindeki **Tüm etkinlikler için sonuçları göster'i** seçmeniz gerekir. Arama sonuçlarını daraltmak için tarih aralığı kutularını ve **Kullanıcılar** listesini kullanın.
 
 > [!NOTE]
-> Bazı Yammer denetim etkinlikleri yalnızca Gelişmiş Denetim'de kullanılabilir. Bu, bu etkinlikler denetim günlüğüne kaydedilmeden önce kullanıcılara uygun lisansın atanması gerektiği anlamına gelir. Yalnızca Gelişmiş Denetim'de kullanılabilen etkinlikler hakkında daha fazla bilgi için bkz. [Microsoft 365'de Gelişmiş Denetim](advanced-audit.md#advanced-audit-events). Gelişmiş Denetim lisanslama gereksinimleri için bkz. [Microsoft 365'de denetim çözümleri](auditing-solutions-overview.md#licensing-requirements). <br/><br/>Aşağıdaki tabloda Gelişmiş Denetim etkinlikleri yıldız (*) ile vurgulanır.
+> Bazı Yammer denetim etkinlikleri yalnızca Denetim (Premium) içinde kullanılabilir. Bu, bu etkinlikler denetim günlüğüne kaydedilmeden önce kullanıcılara uygun lisansın atanması gerektiği anlamına gelir. Yalnızca Denetim (Premium) içinde kullanılabilen etkinlikler hakkında daha fazla bilgi için bkz. [Microsoft 365'de Denetim (Premium).](advanced-audit.md#audit-premium-events) Denetim (Premium) lisans gereksinimleri için bkz. [Microsoft 365'de çözümleri denetleme](auditing-solutions-overview.md#licensing-requirements). <br/><br/>Aşağıdaki tabloda, Denetim (Premium) etkinlikleri yıldız (*) ile vurgulanır.
 
 |Kolay ad|Işlem|Açıklama|
 |:-----|:-----|:-----|
@@ -871,7 +871,7 @@ Aşağıdaki tabloda, denetim günlüğüne kaydedilen Yammer kullanıcı ve yö
 
 ### <a name="microsoft-power-automate-activities"></a>Microsoft Power Automate etkinlikleri
 
-denetim günlüğünde Power Automate(eski adıyla Microsoft Flow) etkinlikler için arama yapabilirsiniz. Bu etkinlikler arasında akış oluşturma, düzenleme ve silme ve akış izinlerini değiştirme yer alır. Power Automate etkinliklerinin denetimi hakkında bilgi için [Microsoft 365 uyumluluk merkezi'da kullanıma sunulan denetim olayları Power Automate bloga](https://flow.microsoft.com/blog/security-and-compliance-center) bakın.
+denetim günlüğünde Power Automate(eski adıyla Microsoft Flow) etkinlikler için arama yapabilirsiniz. Bu etkinlikler arasında akış oluşturma, düzenleme ve silme ve akış izinlerini değiştirme yer alır. Power Automate etkinlikleri için denetim hakkında bilgi için uyumluluk [portalında kullanıma sunulan denetim olayları Power Automate](https://flow.microsoft.com/blog/security-and-compliance-center) bloga bakın.
 
 ### <a name="microsoft-power-apps-activities"></a>Microsoft Power Apps etkinlikleri
 
@@ -883,7 +883,7 @@ denetim günlüğünde Microsoft Stream etkinlikleri arayabilirsiniz. Bu etkinli
 
 ### <a name="content-explorer-activities"></a>İçerik gezgini etkinlikleri
 
-Aşağıdaki tabloda, içerik gezgininde denetim günlüğüne kaydedilen etkinlikler listelenmektedir. Microsoft 365 uyumluluk merkezi Veri sınıflandırmaları aracından erişilen içerik gezgini. Daha fazla bilgi için bkz. [Veri sınıflandırması içerik gezginini kullanma](data-classification-content-explorer.md).
+Aşağıdaki tabloda, içerik gezgininde denetim günlüğüne kaydedilen etkinlikler listelenmektedir. Uyumluluk portalındaki Veri sınıflandırmaları aracından erişilen içerik gezgini. Daha fazla bilgi için bkz. [Veri sınıflandırması içerik gezginini kullanma](data-classification-content-explorer.md).
 
 |Kolay ad|Işlem|Açıklama|
 |:-----|:-----|:-----|
@@ -910,7 +910,7 @@ Bu bölümdeki tablolar, denetim günlüğüne kaydedilen Microsoft Forms kullan
 Bir Forms etkinliği bir ortak yazar veya anonim yanıtlayıcı tarafından gerçekleştiriliyorsa, biraz farklı günlüğe kaydedilir. Daha fazla bilgi için [, birlikte yazanlar ve anonim yanıtlayanlar tarafından gerçekleştirilen Formlar etkinlikleri](#forms-activities-performed-by-coauthors-and-anonymous-responders) bölümüne bakın.
 
 > [!NOTE]
-> Bazı Forms denetim etkinlikleri yalnızca Gelişmiş Denetim'de kullanılabilir. Bu, bu etkinlikler denetim günlüğüne kaydedilmeden önce kullanıcılara uygun lisansın atanması gerektiği anlamına gelir. Yalnızca Gelişmiş Denetim'de kullanılabilen etkinlikler hakkında daha fazla bilgi için bkz. [Microsoft 365'de Gelişmiş Denetim](advanced-audit.md#advanced-audit-events). Gelişmiş Denetim lisanslama gereksinimleri için bkz. [Microsoft 365'de denetim çözümleri](auditing-solutions-overview.md#licensing-requirements). <br/><br/>Aşağıdaki tabloda Gelişmiş Denetim etkinlikleri yıldız (*) ile vurgulanır.
+> Bazı Forms denetim etkinlikleri yalnızca Denetim (Premium) içinde kullanılabilir. Bu, bu etkinlikler denetim günlüğüne kaydedilmeden önce kullanıcılara uygun lisansın atanması gerektiği anlamına gelir. Yalnızca Denetim (Premium) içinde kullanılabilen etkinlikler hakkında daha fazla bilgi için bkz. [Microsoft 365'de Denetim (Premium).](advanced-audit.md#audit-premium-events) Denetim (Premium) lisans gereksinimleri için bkz. [Microsoft 365'de çözümleri denetleme](auditing-solutions-overview.md#licensing-requirements). <br/><br/>Aşağıdaki tabloda, Denetim (Premium) etkinlikleri yıldız (*) ile vurgulanır.
 
 |Kolay ad|Işlem|Açıklama|
 |:-----|:-----|:-----|

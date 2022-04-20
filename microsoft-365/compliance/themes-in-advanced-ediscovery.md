@@ -1,5 +1,5 @@
 ---
-title: Temalar - eBulma
+title: Advanced eDiscovery'da temalar
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -15,23 +15,23 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Her belgede baskın Advanced eDiscovery bularak gözden geçirme kümelerini düzenlemek için Temaları Düzen'de kullanın.
+description: Her belgede baskın temayı bularak gözden geçirme kümelerini düzenlemek için eBulma'da (Premium) Temalar'ı kullanın.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: ed7759353230e80359a771416c01e62d2ec03337
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 49605d2d7fb3103c672fd5ae4d2249956d52b6a0
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62987305"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64934539"
 ---
-# <a name="themes-in-advanced-ediscovery"></a>Advanced eDiscovery'de temalar
+# <a name="themes-in-ediscovery-premium"></a>eBulma'da temalar (Premium)
 
-Bir kişi belgeyi nasıl yazar? Genellikle belge içinde iletmek istemedileri bir veya daha fazla fikirle başlar ve fikirlere uygun sözcükler kullanarak oluşturmaları gerekir. Yaygın kullanılan bir fikir ne kadar yaygınsa, o görüşle ilgili sözcükler o kadar sık olur. Bu, kişilerin belgeleri nasıl tükettiğine de bilgi sağlar. Belgeyi okuyarak anlamanız gereken önemli şey, belgenin iletmeye çalıştığı fikirler, hangi fikirlerin nerede görünse görünse de fikirler arasındaki ilişkilerin ne olduğudır.
+Bir kişi nasıl belge yazar? Genellikle belgede iletmek istedikleri bir veya daha fazla fikirle başlar ve fikirlerle uyumlu sözcükler kullanarak oluştururlar. Bir fikir ne kadar yaygın olursa, bu fikirle ilgili sözcükler de o kadar sık olur. Bu, kişilerin belgeleri nasıl tükettiği konusunda da bilgi sağlar. Belgeyi okurken anlaşılması gereken önemli nokta, belgenin iletmeye çalıştığı fikirler, hangi fikirlerin nerede göründüğü ve fikirler arasındaki ilişkilerin ne olduğudur.
 
-Bu, bir kişinin bir dizi belgeyi nasıl tüketmek istediği uzatılabilir. Kümelerde hangi fikirlerin olduğunu ve bu fikirler hakkında hangi belgelerin konuştuğunu görmek ister. Ayrıca ilgilerini gereken belirli bir belgeyi bulsalar da benzer fikirlerin tartış olduğu belgeleri görmek ister.
+Bu, bir kişinin bir dizi belgeyi nasıl kullanmak istediğiyle genişletilebilir. Kümelerde hangi fikirlerin mevcut olduğunu ve hangi belgelerin bu fikirlerden bahsettiğini görmek isterler. Ayrıca, belirli bir ilgi çekici belge bulurlarsa, benzer fikirleri tartışan belgeleri görebilmek isterler.
 
-Advanced eDiscovery'daki Temalar işlevi, gözden geçirme kümesinde ele alınmıştır ve gözden geçirme kümesinde belgelere tema ataarak, belgeler üzerinde insanların neden olduğu gerekçeyi taklit etmek için kullanılır. Daha Advanced eDiscovery, Temalar bir adım daha ileri gider ve her belgede *baskın temayı* tanımlar. Baskın tema, belgede en sık görünen temadır.
+eBulma'daki (Premium) Temalar işlevi, bir gözden geçirme kümesinde ele alınan *temaları* analiz ederek ve gözden geçirme kümesindeki belgelere tema atayarak insanların belgelerle ilgili nedenlerini taklit etmeye çalışır. eBulma'da (Premium), Temalar bir adım ileri gider ve her belgedeki *baskın temayı* tanımlar. Baskın tema, belgede en sık görünen temadır.
 
 ## <a name="how-does-themes-work"></a>Temalar nasıl çalışır?
 
-Temalar işlevselliği, gözden geçirme kümesinde yer alan tüm belgelerde görünen ortak temaları ayrıştırmak için belgeleri gözden geçirme kümesinde metin ile analiz eder. Advanced eDiscovery, bu temaları içinde görünmeleri gereken belgelere atar. Ayrıca, her temayı, temayı temsil eden belgelerde kullanılan sözcüklerle etiketler. Bir belge çeşitli türlerde konu içereye sahip olduğundan, Advanced eDiscovery çoğu zaman belgelere birden çok tema atar. Belgede en göze çarpan tema, baskın teması olarak belirlenmiştir.
+Temalar işlevi, gözden geçirme kümesindeki tüm belgelerde görünen ortak temaları ayrıştırmak için, gözden geçirme kümesindeki metin içeren belgeleri analiz eder. eBulma (Premium), bu temaları göründükleri belgelere atar. Ayrıca her temayı belgelerde kullanılan ve temayı temsil eden sözcüklerle etiketler. Bir belge çeşitli konu türleri içerebileceğinden, eBulma (Premium) genellikle belgelere birden çok tema atar. Belgede en belirgin görünen tema, baskın tema olarak belirlenir.

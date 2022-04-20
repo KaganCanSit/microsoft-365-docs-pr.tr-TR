@@ -12,55 +12,55 @@ ms.collection:
 - enabler-strategic
 - m365initiative-syntex
 ms.localizationpriority: medium
-description: Microsoft web sitesinde belge anlama modelini nasıl ve neden yeniden adlandır SharePoint Syntex.
-ms.openlocfilehash: b1ced765d7a69fdf8b9fe9eb44d6716a840bf8a0
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+description: Microsoft SharePoint Syntex'da belge anlama modelini nasıl ve neden yeniden adlandıracağınızı öğrenin.
+ms.openlocfilehash: 0044b237705e6a716efb6133db392c68b82c7a25
+ms.sourcegitcommit: dc415d784226c77549ba246601f34324c4f94e73
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63450304"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64916149"
 ---
 # <a name="rename-a-model-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'da modeli yeniden adlandırma
 
-Bir noktada, belge anlama modelini yeniden adlandırmak iyi olabilir. Bunun yaygın bir örneği, modelin ilk taslağını  hazırlarken son adı iyi iyi düşünemeyebileceksiniz (örneğin, buna "AlexWilburModel1" adını verdiysiniz). Modelin sonlandırılması ve kullanımının ne kadar yakın olduğunu fark ettiyken, daha doğru bir adın "Sözleşme Yenilemeleri" olduğunu fark etti ve adını yeniden adlandırmak istiyor oldu.  
+Bir noktada, belge anlama modelini yeniden adlandırmak isteyebilirsiniz. Bir modelin ilk taslağını oluşturduğunuzda, son adı çok fazla düşünmemiş olabilirsiniz (örneğin, modeli "AlexWilburModel1" olarak adlandırmış olabilirsiniz). Modeli son haline getirmeye ve kullanmaya yaklaştığınızda daha uygun bir adın "Sözleşme Yenilemeleri" olacağını fark eder ve modeli yeniden adlandırmak istersiniz.  
 
-Diğer bir örnek de, kuruluş bir işlem veya belge türüne farklı bir adla başvurarak karar vermesindedir. Örneğin, modelinizi oluşturduk ve bunu uygulamaya hazır olduktan sonra, organizasyonunız tüm "Sözleşmeler" için artık resmi olarak "Sözleşmeler" olarak adlandırılan velilerde yer almaktadır. Gerekirse modelinizi "Sözleşme Yenilemeleri" olan modelinizi "Sözleşme Yenilemeleri" olarak yeniden adlandırmayı seçebilirsiniz.
+Bir diğer örnek de kuruluşunuzun bir işleme veya belge türüne farklı bir adla başvurma kararı verdiği durumdur. Örneğin, modelinizi oluşturduktan ve uygulamaya hazır olduktan sonra, kuruluşunuz tüm "Sözleşmelerin" artık resmi olarak "Sözleşmeler" olarak anılması zorunlu kılınabilir. Gerekirse modelinizi "Sözleşme Yenilemeleri" yerine "Sözleşme Yenilemeleri" olarak yeniden adlandırmayı seçebilirsiniz.
 
 > [!IMPORTANT]
-> Belge anlama modelini yalnızca belge kitaplığına uygulanmadı olarak yeniden adlandırabilirsiniz. 
+> Belge anlama modelini yalnızca belge kitaplığına uygulanmamışsa yeniden adlandırabilirsiniz. 
 
-Modeli yeniden adlandırmak, modelle [ilişkilendirilmiş içerik](/sharepoint/governance/content-type-and-workflow-planning#content-type-overview) türünü de yeniden adlandırıyor.
+Modeli yeniden adlandırmak, modelle ilişkili [içerik türünü](/sharepoint/governance/content-type-and-workflow-planning#content-type-overview) de yeniden adlandırır.
 
 ## <a name="rename-a-model"></a>Modeli yeniden adlandırma
 
 Belge anlama modelini yeniden adlandırmak için bu adımları izleyin.
 
-1. Model listenizi görmek için içerik **merkezinde** Modeller'i seçin.
+1. model listenizi görmek için içerik merkezinde **Modeller'i** seçin.
 
-2. Modeller **sayfasında** , yeniden adlandırmak istediğiniz modeli seçin.
+2. **Modeller** sayfasında, yeniden adlandırmak istediğiniz modeli seçin.
 
-3. Şeridi veya Eylemleri göster düğmesini **kullanarak** (model adının yanında) Yeniden Adlandır'ı **seçin**. </br>
+3. Şeridi veya **Eylemleri göster** düğmesini (model adının yanında) kullanarak **Yeniden Adlandır'ı** seçin. </br>
 
-    ![Yeniden Adlandır seçenekleri vurgulanmış seçili bir modeli gösteren Modeller sayfasının ekran görüntüsü.](../media/content-understanding/select-model-rename-both.png) </br>
+    ![Yeniden Adlandırma seçeneklerinin vurgulandığı seçili modeli gösteren Modeller sayfasının ekran görüntüsü.](../media/content-understanding/select-model-rename-both.png) </br>
 
-4. Modeli yeniden **adlandır panelinde** :
+4. **Modeli yeniden adlandır** panelinde:
 
-   a. Yeni **ad'ın** altında, yeniden adlandırmak istediğiniz modelin yeni adını girin.</br>
+   a. **Yeni ad'ın** altında, yeniden adlandırmak istediğiniz modelin yeni adını girin.</br>
 
     ![Modeli yeniden adlandır panelini gösteren ekran görüntüsü.](../media/content-understanding/rename-model-panel.png) </br>
 
-   b. (İsteğe bağlı) Gelişmiş **ayarlar'ın** altında, var olan bir içerik türünü ilişkilendirmek isteyip [istemiyorsanız bunu seçin](/sharepoint/governance/content-type-and-workflow-planning#content-type-overview). Varolan bir **içerik türünü kullan'ı seçerseniz** model, seçilen içerik türüyle eş olacak şekilde yeniden adlandırılır.
+   b. (İsteğe bağlı) **Gelişmiş ayarlar'ın** altında mevcut [bir içerik türünü](/sharepoint/governance/content-type-and-workflow-planning#content-type-overview) ilişkilendirmek isteyip istemediğinizi seçin. **Var olan bir içerik türünü kullan'ı** seçerseniz model seçilen içerik türüyle eşleşecek şekilde yeniden adlandırılır.
 
-5. Yeniden **Adlandır'ı seçin**.
+5. **Yeniden Adlandır'ı** seçin.
 
-## <a name="see-also"></a>Ayrıca Bkz
+## <a name="see-also"></a>Ayrıca bkz.
 [Sınıflandırıcı oluşturma](create-a-classifier.md)
 
-[Ayıklaıcı oluşturma](create-an-extractor.md)
+[Ayıklayıcı oluşturma](create-an-extractor.md)
 
-[Ayıklayı yeniden adlandırma](rename-an-extractor.md)
+[Ayıklayıcıyı yeniden adlandırma](rename-an-extractor.md)
 
-[Belge Anlama'ya genel bakış](document-understanding-overview.md)
+[Document Understanding'e genel bakış](document-understanding-overview.md)
 
 [Açıklama türleri](explanation-types-overview.md)
 

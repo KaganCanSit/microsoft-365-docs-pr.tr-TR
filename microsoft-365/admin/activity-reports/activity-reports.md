@@ -22,12 +22,12 @@ search.appverid:
 - GEA150
 ms.assetid: 0d6dfb17-8582-4172-a9a9-aed798150263
 description: Kuruluşunuzdaki kişilerin Microsoft 365 hizmetlerini nasıl kullandığını gösteren düzenli bir rapor alın ve daha fazla içgörü için her grafikte detaya gidin.
-ms.openlocfilehash: 224ed6ffb0fa44280f1b83d3a0f440d1a8571557
-ms.sourcegitcommit: 46e796c6b76a01516c48977335bbf5076ca74a06
+ms.openlocfilehash: 63684384f8f9d496767ef66ee6628653945ad8c9
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64738318"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64935949"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center"></a>Yönetim merkezinde raporları Microsoft 365
 
@@ -152,7 +152,7 @@ Genel yöneticiler, kiracıları için bu değişikliği geri alabilir ve kurulu
   
 3. Deyiminin işaretini kaldırın **Tüm raporlarda gizli kullanıcı, grup ve site adlarını görüntüleyin** ve değişikliklerinizi kaydedin.  
   
-Bu değişikliklerin rapor panosundaki raporlarına yansıması birkaç dakika sürer. Bu ayar[, Microsoft](/graph/api/resources/report) Graph ve Power BI'daki [Microsoft 365](/microsoft-365/admin/usage-analytics/usage-analytics) kullanım [raporları ile Microsoft Teams Yönetim merkezindeki kullanım raporları](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference) için de geçerlidir. Tanımlanabilir kullanıcı bilgilerini göstermek, Microsoft 365 uyumluluk merkezi denetim günlüğünde günlüğe kaydedilen bir olaydır.   
+Bu değişikliklerin rapor panosundaki raporlarına yansıması birkaç dakika sürer. Bu ayar[, Microsoft](/graph/api/resources/report) Graph ve Power BI'daki [Microsoft 365](/microsoft-365/admin/usage-analytics/usage-analytics) kullanım [raporları ile Microsoft Teams Yönetim merkezindeki kullanım raporları](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference) için de geçerlidir. Tanımlanabilir kullanıcı bilgilerinin gösterilmesi, Microsoft Purview uyumluluk portalı denetim günlüğünde günlüğe kaydedilen bir olaydır.   
 
   
 ## <a name="what-happens-to-usage-data-when-a-user-account-is-closed"></a>Kullanıcı hesabı kapatıldığında kullanım verilerine ne olur?

@@ -16,13 +16,13 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 3526fd06-b45f-445b-aed4-5ebd37b3762a
-description: Kuruluşunuzdaki tüm posta kutularında e-posta iletisi aramak ve silmek için Microsoft 365 uyumluluk merkezi arama ve temizleme özelliğini kullanın.
-ms.openlocfilehash: 8d283148b0a0cee0aed3d91a6332c96bd31111b4
-ms.sourcegitcommit: a7e1d155939e862337271fbe38bf26f62bd49bdd
+description: Kuruluşunuzdaki tüm posta kutularında e-posta iletisi aramak ve silmek için Microsoft Purview uyumluluk portalındaki arama ve temizleme özelliğini kullanın.
+ms.openlocfilehash: 23eeff8078dbd7ab65b0bddb9684aa81d65aab94
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/14/2022
-ms.locfileid: "64846981"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64936257"
 ---
 # <a name="search-for-and-delete-email-messages"></a>E-posta iletilerini arama ve silme
 
@@ -43,10 +43,10 @@ Kuruluşunuzdaki tüm posta kutularında e-posta iletilerini aramak ve silmek i�
 
 - Bu makalede açıklanan arama ve temizleme iş akışı, sohbet iletilerini veya diğer içeriği Microsoft Teams silmez. 2. Adımda oluşturduğunuz İçerik araması Microsoft Teams öğeleri döndürürse, 3. Adımda öğeleri temizlediğinizde bu öğeler silinmez. Sohbet iletilerini aramak ve silmek için bkz[. Teams sohbet iletilerini arama ve temizleme](search-and-delete-Teams-chat-messages.md).
 
-- İçerik araması oluşturmak ve çalıştırmak için **eBulma Yöneticisi** rol grubunun üyesi olmanız veya Microsoft 365 uyumluluk merkezi **Uyumluluk Araması** rolüne atanmış olmanız gerekir. İletileri silmek için **Kuruluş Yönetimi** rol grubunun üyesi olmanız veya uyumluluk merkezinde **Arama ve Temizleme** rolüne atanmış olmanız gerekir Rol grubuna kullanıcı ekleme hakkında bilgi için bkz. [eBulma izinleri atama](assign-ediscovery-permissions.md).
+- İçerik araması oluşturmak ve çalıştırmak için **eBulma Yöneticisi** rol grubunun üyesi olmanız veya Microsoft Purview uyumluluk portalında **Uyumluluk Araması** rolüne atanmış olmanız gerekir. İletileri silmek için **Kuruluş Yönetimi** rol grubunun üyesi olmanız veya uyumluluk merkezinde **Arama ve Temizleme** rolüne atanmış olmanız gerekir Rol grubuna kullanıcı ekleme hakkında bilgi için bkz. [eBulma izinleri atama](assign-ediscovery-permissions.md).
 
   > [!NOTE]
-  > **Kuruluş Yönetimi** rol grubu hem Exchange Online hem de Microsoft 365 uyumluluk merkezi bulunur. Bunlar, farklı izinler veren ayrı rol gruplarıdır. Exchange Online'da **Kuruluş Yönetimi** üyesi olmak, e-posta iletilerini silmek için gerekli izinleri vermez. Uyumluluk merkezinde (doğrudan veya **Kuruluş Yönetimi** gibi bir rol grubu aracılığıyla) **Arama ve Temizleme** rolü size atanmazsa, 3. Adım'da **New-ComplianceSearchAction** cmdlet'ini çalıştırdığınızda "Parametre adı 'Purge' ile eşleşen bir parametre bulunamıyor" iletisiyle bir hata alırsınız.
+  > **Kuruluş Yönetimi** rol grubu hem Exchange Online hem de uyumluluk portalında bulunur. Bunlar, farklı izinler veren ayrı rol gruplarıdır. Exchange Online'da **Kuruluş Yönetimi** üyesi olmak, e-posta iletilerini silmek için gerekli izinleri vermez. Uyumluluk merkezinde (doğrudan veya **Kuruluş Yönetimi** gibi bir rol grubu aracılığıyla) **Arama ve Temizleme** rolü size atanmazsa, 3. Adım'da **New-ComplianceSearchAction** cmdlet'ini çalıştırdığınızda "Parametre adı 'Purge' ile eşleşen bir parametre bulunamıyor" iletisiyle bir hata alırsınız.
 
 - İletileri silmek için Güvenlik & Uyumluluk Merkezi PowerShell'i kullanmanız gerekir. Bağlanma hakkında yönergeler için [bkz. 1. Adım](#step-1-connect-to-security--compliance-center-powershell) .
 
@@ -56,7 +56,7 @@ Kuruluşunuzdaki tüm posta kutularında e-posta iletilerini aramak ve silmek i�
 
 - Bu makaledeki yordam yalnızca Exchange Online posta kutularındaki ve ortak klasörlerdeki öğeleri silmek için kullanılabilir. SharePoint veya OneDrive İş sitelerden içerik silmek için kullanamazsınız.
 
-- Advanced eDiscovery durumda bir gözden geçirme kümesindeki e-posta öğeleri bu makaledeki yordamlar kullanılarak silinemez. Bunun nedeni, bir gözden geçirme kümesindeki öğelerin canlı hizmette değil Azure Depolama konumunda depolanmasıdır. Bu, 1. Adımda oluşturduğunuz içerik araması tarafından döndürülmeyecekleri anlamına gelir. Gözden geçirme kümesindeki öğeleri silmek için, gözden geçirme kümesini içeren Advanced eDiscovery servis talebini silmeniz gerekir. Daha fazla bilgi için bkz. [Advanced eDiscovery servis talebini kapatma veya silme](close-or-delete-case.md).
+- eBulma (Premium) durumundaki bir gözden geçirme kümesindeki e-posta öğeleri bu makaledeki yordamlar kullanılarak silinemez. Bunun nedeni, bir gözden geçirme kümesindeki öğelerin canlı hizmette değil Azure Depolama konumunda depolanmasıdır. Bu, 1. Adımda oluşturduğunuz içerik araması tarafından döndürülmeyecekleri anlamına gelir. Gözden geçirme kümesindeki öğeleri silmek için, gözden geçirme kümesini içeren eBulma (Premium) servis talebini silmeniz gerekir. Daha fazla bilgi için bkz. [eBulma (Premium) servis talebini kapatma veya silme](close-or-delete-case.md).
 
 ## <a name="step-1-connect-to-security--compliance-center-powershell"></a>1. Adım: Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan
 
@@ -64,7 +64,7 @@ Kuruluşunuzdaki tüm posta kutularında e-posta iletilerini aramak ve silmek i�
 
 ## <a name="step-2-create-a-content-search-to-find-the-message-to-delete"></a>2. Adım: Silinecek iletiyi bulmak için İçerik Araması oluşturma
 
-İkinci adım, kuruluşunuzdaki posta kutularından kaldırmak istediğiniz iletiyi bulmak için bir İçerik araması oluşturmak ve çalıştırmaktır. Microsoft 365 uyumluluk merkezi kullanarak veya Güvenlik & Uyumluluğu PowerShell'de **New-ComplianceSearch** ve **Start-ComplianceSearch** cmdlet'lerini çalıştırarak aramayı oluşturabilirsiniz. Bu aramanın sorgusuyla eşleşen iletiler [, 3. Adımda](#step-3-delete-the-message) **New-ComplianceSearchAction -Purge** komutu çalıştırılarak silinir. İçerik araması oluşturma ve arama sorgularını yapılandırma hakkında bilgi için aşağıdaki konulara bakın:
+İkinci adım, kuruluşunuzdaki posta kutularından kaldırmak istediğiniz iletiyi bulmak için bir İçerik araması oluşturmak ve çalıştırmaktır. Uyumluluk portalını kullanarak veya Güvenlik & Uyumluluk PowerShell'de **New-ComplianceSearch** ve **Start-ComplianceSearch** cmdlet'lerini çalıştırarak arama oluşturabilirsiniz. Bu aramanın sorgusuyla eşleşen iletiler [, 3. Adımda](#step-3-delete-the-message) **New-ComplianceSearchAction -Purge** komutu çalıştırılarak silinir. İçerik araması oluşturma ve arama sorgularını yapılandırma hakkında bilgi için aşağıdaki konulara bakın:
 
 - [Office 365'de içerik arama](content-search.md)
 
@@ -89,7 +89,7 @@ Arama sorgusunun amacı, arama sonuçlarını yalnızca kaldırmak istediğiniz 
 
 - Aramanın yalnızca silmek istediğiniz iletiyi (veya iletileri) döndürdüğünü doğrulamak için arama sonuçlarının önizlemesini görüntüleyin.
 
-- Toplam sonuç sayısını almak için arama tahmini istatistiklerini (Microsoft 365 uyumluluk merkezi aramanın ayrıntılar bölmesinde veya [Get-ComplianceSearch](/powershell/module/exchange/get-compliancesearch) cmdlet'ini kullanarak) kullanın.
+- Toplam sonuç sayısını almak için arama tahmini istatistiklerini kullanın (uyumluluk portalında veya [Get-ComplianceSearch](/powershell/module/exchange/get-compliancesearch) cmdlet'ini kullanarak aramanın ayrıntılar bölmesinde görüntülenir).
 
 Şüpheli e-posta iletilerini bulmak için iki sorgu örneği aşağıda verilmiştir.
 

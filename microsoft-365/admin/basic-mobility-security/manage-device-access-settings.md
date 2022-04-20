@@ -18,12 +18,12 @@ ms.custom:
 search.appverid:
 - MET150
 description: Basic Mobility ve Security, mobil cihazların güvenliğini sağlamanıza ve yönetmenize yardımcı olabilir.
-ms.openlocfilehash: fbd8df7bff6ffa24d2a951d86a85d699e0b1699f
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: aa5c6bb757604763e9ba7348d1d4f952a6555865
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64781039"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64935269"
 ---
 # <a name="manage-device-access-settings-in-basic-mobility-and-security"></a>Temel Mobilite ve Güvenlik'te cihaz erişim ayarlarını yönetme
 
@@ -36,9 +36,9 @@ Temel Mobilite ve Güvenlik kullanıyorsanız, Basic Mobility ve Security ile y�
 2. Tarayıcınızda şunu yazın: [https://protection.office.com](https://protection.office.com/).
 
     > [!IMPORTANT]
-    > Microsoft 365 Business Standard için Basic Mobility ve Security'yi ilk kez kullanıyorsanız buradan etkinleştirin: [Temel Güvenlik ve Mobilite'yi etkinleştirme](https://admin.microsoft.com/EAdmin/Device/IntuneInventory.aspx). Etkinleştirdikten sonra Office 365 [Güvenlik & Uyumluluğu](https://protection.office.com/) ile cihazlarınızı yönetin.
+    > Microsoft 365 İş Standart için Basic Mobility ve Security'yi ilk kez kullanıyorsanız buradan etkinleştirin: [Temel Güvenlik ve Hareketliliği Etkinleştirme](https://admin.microsoft.com/EAdmin/Device/IntuneInventory.aspx). Etkinleştirdikten sonra Office 365 [Güvenlik & Uyumluluğu](https://protection.office.com/) ile cihazlarınızı yönetin.
 
-3. **Cihaz yönetimiCihaz** >  **ilkeleri** > Veri kaybı önleme'ye gidin ve **Kuruluş genelinde cihaz erişim ayarlarını yönet'i** seçin.
+3.  **Veri kaybı**  **önlemeCihaz**>   **yönetimiCihaz** > ilkeleri'ne gidin ve  **Kuruluş genelinde cihaz erişim ayarlarını yönet'i** seçin.
 
 4. **Engelle'yi** seçin.
 

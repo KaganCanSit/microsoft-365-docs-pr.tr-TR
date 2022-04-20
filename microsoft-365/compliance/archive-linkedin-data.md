@@ -1,11 +1,11 @@
 ---
-title: LinkedIn verilerini arşivlemek için bağlayıcı ayarlama
+title: LinkedIn verilerini arşivleye bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: ''
+ms.date: 04/06/2022
 audience: Admin
 ms.topic: how-to
 ms.service: O365-seccomp
@@ -14,58 +14,58 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 ms.custom: seo-marvel-apr2020
-description: Yöneticilerin LinkedIn Şirket & verileri içeri aktararak yerel bir bağlayıcı kullanarak yerel bir bağlayıcıyı nasıl ayar kuruluş Microsoft 365.
-ms.openlocfilehash: 944a8bcbd06a07653ccf5e98e28807d279b66023
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Yöneticilerin bir LinkedIn Şirket Sayfasından Microsoft 365'a veri aktarmak için yerel bağlayıcıyı nasıl ayarlayabileceğinizi & nasıl kullanabileceğini öğrenin.
+ms.openlocfilehash: de39d0e3e95164a39f9aed1a227ab15f6e4fd7d6
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63322205"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64937245"
 ---
-# <a name="set-up-a-connector-to-archive-linkedin-data"></a>LinkedIn verilerini arşivlemek için bağlayıcı ayarlama
+# <a name="set-up-a-connector-to-archive-linkedin-data"></a>LinkedIn verilerini arşivleye bağlayıcı ayarlama
 
-LinkedIn Company sayfalarından verileri Microsoft 365 uyumluluk merkezi ve arşivlemek için aşağıdaki bağlantıda bir bağlayıcı kullanın. Bir bağlayıcıyı ayardikten ve yapılandırdikten sonra, bağlayıcı belirli LinkedIn Company sayfasının hesabına her 24 saatte bir bağlanır. Bağlayıcı, Şirket sayfasına gönderilen iletileri bir e-posta iletisine dönüştürür ve sonra bu öğeleri Şirket'te bir posta kutusuna Microsoft 365.
+LinkedIn Şirket sayfalarından verileri içeri aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında bir bağlayıcı kullanın. Bağlayıcıyı ayarlayıp yapılandırdıktan sonra, her 24 saatte bir belirli LinkedIn Şirket sayfasının hesabına bağlanır. Bağlayıcı, Şirket sayfasına gönderilen iletileri bir e-posta iletisine dönüştürür ve sonra bu öğeleri Microsoft 365 bir posta kutusuna aktarır.
 
-LinkedIn Company sayfa verileri bir posta kutusunda depo olduktan sonra, LinkedIn verilerine Microsoft 365 Bekletme, İçerik Araması, In-Place Arşivleme, Denetim ve Microsoft 365 bekletme ilkeleri gibi uyumluluk özelliklerini uygulayabilirsiniz. Örneğin, İçerik Arama kullanarak bu öğeleri arayabilir veya depolama posta kutusunu bir özel durum durumunda bir koruyucuyla Advanced eDiscovery. LinkedIn verilerini başka bir kuruluşta içeri aktarın ve Microsoft 365 bağlayıcı oluşturmak, kuruma resmi ve mevzuat ilkeleriyle uyumlu çalışma konusunda yardımcı olabilir.
+LinkedIn Şirket sayfası verileri bir posta kutusunda depolandıktan sonra, LinkedIn verilerine Dava Tutma, İçerik Arama, In-Place Arşivleme, Denetim ve Microsoft 365 bekletme ilkeleri gibi Microsoft Purview özelliklerini uygulayabilirsiniz. Örneğin, İçerik Arama'yı kullanarak bu öğeleri arayabilir veya depolama posta kutusunu Microsoft Purview eKeşif (Premium) olayındaki bir koruyucuyla ilişkilendirebilirsiniz. linkedIn verilerini Microsoft 365 içeri aktarmak ve arşivlemek için bağlayıcı oluşturmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 
 ## <a name="before-you-set-up-a-connector"></a>Bağlayıcıyı ayarlamadan önce
 
-- LinkedIn Şirket Sayfası bağlayıcısı oluşturan kullanıcıya Veri Bağlayıcısı Yönetici rolü atanabilir. Bu rol, sayfanın en son veri **bağlayıcıları sayfasına bağlayıcı** eklemek Microsoft 365 uyumluluk merkezi. Bu rol varsayılan olarak birden çok rol gruplarına eklenir. Bu rol gruplarının listesi için, Güvenlik ve Uyumluluk Merkezi'nde İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki roller" [& bakın](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). Alternatif olarak, bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolü ata sonrasında uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için aşağıdaki İzinler bölümündeki "Özel bir rol grubu oluşturma" [bölümüne Microsoft 365 uyumluluk merkezi](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- LinkedIn Şirket Sayfası bağlayıcısı oluşturan kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için [Microsoft Purview uyumluluk portalındaki İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
-- Arşivlemek istediğiniz LinkedIn Şirket Sayfasının yöneticisi olan bir LinkedIn kullanıcı hesabının oturum açma kimlik bilgilerine (e-posta adresi veya telefon numarası ve parola) sahip olmak gerekir. Bağlayıcıyı ayarlarken LinkedIn'de oturum ataş için bu kimlik bilgilerini kullanırsanız.
+- Arşivlediğiniz LinkedIn Şirket Sayfası'nın yöneticisi olan linkedIn kullanıcı hesabının oturum açma kimlik bilgilerine (e-posta adresi veya telefon numarası ve parola) sahip olmanız gerekir. Bağlayıcıyı ayarlarken LinkedIn'de oturum açmak için bu kimlik bilgilerini kullanırsınız.
 
-- LinkedIn bağlayıcısı, bir günde toplam 200.000 öğe içeri aktarabilirsiniz. Bir günde 200.000'den fazla LinkedIn öğesi varsa, bu öğelerin hiçbiri bu öğelere Microsoft 365.
+- LinkedIn bağlayıcısı tek bir günde toplam 200.000 öğeyi içeri aktarabilir. Bir günde 200.000'den fazla LinkedIn öğesi varsa, bu öğelerin hiçbiri Microsoft 365 aktarılamaz.
 
 ## <a name="create-a-linkedin-connector"></a>LinkedIn bağlayıcısı oluşturma
 
-1. Veri bağlayıcılarıLinkedIn <https://compliance.microsoft.com> Şirket **sayfalarına** >  **gidin ve bu sayfalara tıklayın**.
+1. <https://compliance.microsoft.com> Adresine gidin ve **Veri bağlayıcılarıLinkedIn** >  **Company pages** öğesine tıklayın.
 
-2. **LinkedIn şirket sayfaları ürün sayfasında** Bağlayıcı **ekle'ye tıklayın**.
+2. **LinkedIn şirket sayfaları** ürün sayfasında **Bağlayıcı ekle'ye** tıklayın.
 
-3. Hizmet koşulları **sayfasında Kabul** Et'i **seçin**.
+3. **Hizmet koşulları** sayfasında **Kabul Et'i** seçin.
 
-4. **LinkedIn ile oturum açma sayfasında LinkedIn** ile **oturum açma'ya tıklayın**.
+4. **LinkedIn ile oturum aç** sayfasında **LinkedIn ile oturum aç'a** tıklayın.
 
    LinkedIn oturum açma sayfası görüntülenir.
 
    ![LinkedIn oturum açma sayfası.](../media/LinkedInSigninPage.png)
 
-5. LinkedIn oturum açma sayfasında, arşivlemek istediğiniz şirket sayfasıyla ilişkilendirilmiş LinkedIn hesabının e-posta adresini (veya telefon numarasını) ve parolasını girin ve ardından Oturum **aç'a tıklayın**.
+5. LinkedIn oturum açma sayfasında, arşivlemesini istediğiniz şirket sayfasıyla ilişkili LinkedIn hesabının e-posta adresini (veya telefon numarasını) ve parolasını girin ve oturum **aç'a** tıklayın.
 
-   Oturum ataş hesabınızla ilişkilendirilmiş tüm LinkedIn Şirket Sayfalarının listesiyle bir sihirbaz sayfası görüntülenir. Bağlayıcı yalnızca bir şirket sayfası için yalnızdırabilirsiniz. Kuruluşta birden çok LinkedIn Şirket Sayfası varsa, her biri için bir bağlayıcı oluşturmanız gerekir.
+   Oturum açtığınız hesapla ilişkilendirilmiş tüm LinkedIn Şirket Sayfalarının listesiyle bir sihirbaz sayfası görüntülenir. Bağlayıcı yalnızca bir şirket sayfası için yapılandırılabilir. Kuruluşunuzun birden çok LinkedIn Şirket Sayfası varsa, her biri için bir bağlayıcı oluşturmanız gerekir.
 
-   ![LinkedIn Şirket Sayfaları listesinin yer olduğu bir sayfa görüntülenir.](../media/LinkedInSelectCompanyPage.png)
+   ![LinkedIn Şirket Sayfalarının listesini içeren bir sayfa görüntülenir.](../media/LinkedInSelectCompanyPage.png)
 
-6. Öğelerini arşivlemek istediğiniz şirket sayfasını seçin ve ardından Sonraki'ye **tıklayın**.
+6. Öğeleri arşivlemesini istediğiniz şirket sayfasını seçin ve ardından **İleri'ye** tıklayın.
 
-7. Depolama **konumunu seçin** sayfasında, kutunun içini tıklatın, LinkedIn öğelerinin aktarın Microsoft 365 posta kutusunun e-posta adresini seçin ve sonra da Sonraki'yi **tıklatın**. Öğeler bu posta kutusunun gelen kutusu klasörüne aktarılır.
+7. **Depolama konumu seçin** sayfasında, kutuya tıklayın, LinkedIn öğelerinin içeri aktarılacağı Microsoft 365 posta kutusunun e-posta adresini seçin ve ardından **İleri'ye** tıklayın. Öğeler bu posta kutusundaki gelen kutusu klasörüne aktarılır.
 
-8. Bağlayıcı **ayarlarını gözden** geçirmek için Sonraki'ne tıklayın ve sonra **da bağlayıcı kurulumunu** tamamlamak için Son'a tıklayın.
+8. Bağlayıcı ayarlarını gözden geçirmek için **İleri'ye** tıklayın ve ardından bağlayıcı kurulumunu tamamlamak için **Son'a** tıklayın.
 
-Bağlayıcıyı oluşturdukktan sonra, yeni bağlayıcının içeri aktarma işleminin ilerlemesini görmek için Veri bağlayıcıları sayfasına geri dönebilirsiniz (bağlayıcı listesini güncelleştirmek için Gerekirse  Yenile'yi seçin). Durum sütunundaki **değer** , **Başlamayı bekliyor olarak gösterir**. İlk içeri aktarma işleminin başlat olması 24 saat kadar sürebilir. Bağlayıcı LinkedIn öğelerini ilk kez çalıştırıyor ve içeri aktarıyorsa, bağlayıcı her 24 saatte bir çalışır ve önceki 24 saat içinde LinkedIn Şirket Sayfasında oluşturulan tüm yeni öğeleri içeri aktaracak.
+Bağlayıcıyı oluşturduktan sonra, yeni bağlayıcının içeri aktarma işleminin ilerleme durumunu görmek için **Veri bağlayıcıları** sayfasına geri dönebilirsiniz (bağlayıcı listesini güncelleştirmek için gerekirse **Yenile'yi** seçin). **Durum** sütunundaki değer **Başlamayı bekliyor** şeklindedir. İlk içeri aktarma işleminin başlatılması 24 saat kadar sürer. Bağlayıcı ilk kez çalıştırılıp LinkedIn öğelerini içeri aktardıktan sonra bağlayıcı 24 saatte bir çalıştırılır ve linkedin şirket sayfasında son 24 saat içinde oluşturulan tüm yeni öğeleri içeri aktarır.
 
-Daha fazla ayrıntı görüntülemek için Veri bağlayıcıları sayfasındaki **listeden** bağlayıcıyı seçerek uç uç sayfasını görüntüleyebilirsiniz. **Durum'un** altında, görüntülenen tarih aralığı bağlayıcı oluşturulurken seçilen yaş filtresini gösterir.
+Diğer ayrıntıları görüntülemek için **Veri bağlayıcıları** sayfasındaki listeden bağlayıcıyı seçerek açılır sayfayı görüntüleyin. **Durum'un** altında, görüntülenen tarih aralığı bağlayıcı oluşturulduğunda seçilen yaş filtresini gösterir.
 
 ## <a name="more-information"></a>Daha fazla bilgi
 
-LinkedIn öğeleri, dosyadaki depolama posta kutusunun gelen kutusunda yer alan LinkedIn alt klasörüne Microsoft 365. Bunlar, e-posta iletileri olarak görünür.
+LinkedIn öğeleri, Microsoft 365 depolama posta kutusunun gelen kutusundaki LinkedIn alt klasörüne aktarılır. Bunlar e-posta iletileri olarak görünür.

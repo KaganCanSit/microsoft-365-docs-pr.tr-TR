@@ -1,5 +1,5 @@
 ---
-title: Core eBulma örneğinde bir ayrı tutmaya kullanıcı eklemek için betik kullanma
+title: eBulma (Standart) durumunda bir ayrı tutmaya kullanıcı eklemek için betik kullanma
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -21,17 +21,17 @@ ms.assetid: bad352ff-d5d2-45d8-ac2a-6cb832f10e73
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkSPO
-description: Microsoft 365 uyumluluk merkezi bir eBulma olayıyla ilişkili yeni bir ayrı tutmaya posta kutuları & OneDrive İş siteleri eklemek için bir betik çalıştırmayı öğrenin.
-ms.openlocfilehash: 10a605b422178e5006d8a027a697ca6745f82b98
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+description: Microsoft Purview uyumluluk portalında eBulma olayıyla ilişkili yeni bir ayrı tutmaya posta kutuları & OneDrive İş siteleri eklemek için bir betik çalıştırmayı öğrenin.
+ms.openlocfilehash: 8835e853825786668ba1b7617078d899c0773779
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64824498"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64934543"
 ---
-# <a name="use-a-script-to-add-users-to-a-hold-in-a-core-ediscovery-case"></a>Core eBulma örneğinde bir ayrı tutmaya kullanıcı eklemek için betik kullanma
+# <a name="use-a-script-to-add-users-to-a-hold-in-a-ediscovery-standard-case"></a>eBulma (Standart) durumunda bir ayrı tutmaya kullanıcı eklemek için betik kullanma
 
-Güvenlik & Uyumluluk Merkezi PowerShell, eBulma servis taleplerini oluşturma ve yönetmeyle ilgili zaman alan görevleri otomatikleştirmenize olanak sağlayan cmdlet'ler sağlar. Şu anda Microsoft 365 uyumluluk merkezi Core eKescovery dosyasını kullanarak çok sayıda koruyucu içerik konumunu beklemeye almak zaman alır ve hazırlık yapılır. Örneğin, ayrı tutma oluşturmadan önce, ayrı tutmaya yerleştirmek istediğiniz her OneDrive İş sitesinin URL'sini toplamanız gerekir. Ardından, beklemeye almak istediğiniz her kullanıcı için posta kutusunu ve OneDrive İş sitesini ayrı tutmaya eklemeniz gerekir. Bu işlemi otomatikleştirmek için bu makaledeki betiği kullanabilirsiniz.
+Güvenlik & Uyumluluk Merkezi PowerShell, eBulma servis taleplerini oluşturma ve yönetmeyle ilgili zaman alan görevleri otomatikleştirmenize olanak sağlayan cmdlet'ler sağlar. Şu anda, Çok sayıda koruyucu içerik konumunu beklemeye almak için Microsoft Purview uyumluluk portalında Microsoft Purview eKeşif (Standart) durumunu kullanmak zaman ve hazırlık gerektirir. Örneğin, ayrı tutma oluşturmadan önce, ayrı tutmaya yerleştirmek istediğiniz her OneDrive İş sitesinin URL'sini toplamanız gerekir. Ardından, beklemeye almak istediğiniz her kullanıcı için posta kutusunu ve OneDrive İş sitesini ayrı tutmaya eklemeniz gerekir. Bu işlemi otomatikleştirmek için bu makaledeki betiği kullanabilirsiniz.
   
 Betik, kuruluşunuzun Sitem etki alanının adını ister (örneğin, URL'dehttps://contoso-my.sharepoint.com), `contoso` var olan bir eBulma servis talebinin adı, servis talebiyle ilişkili yeni ayrı tutmanın adı, beklemeye almak istediğiniz kullanıcıların e-posta adreslerinin listesi ve sorgu tabanlı ayrı tutma oluşturmak istiyorsanız kullanmak üzere bir arama sorgusu. Betik daha sonra listedeki her kullanıcı için OneDrive İş sitesinin URL'sini alır, yeni ayrı tutmayı oluşturur ve ardından listedeki her kullanıcı için posta kutusunu ve OneDrive İş sitesini ayrı tutmaya ekler. Betik ayrıca yeni ayrı tutma hakkında bilgi içeren günlük dosyaları da oluşturur.
   
@@ -45,9 +45,9 @@ Bunun gerçekleşmesi için adımlar şunlardır:
   
 ## <a name="before-you-add-users-to-a-hold"></a>Ayrı tutmaya kullanıcı eklemeden önce
 
-- 3. Adımda betiği çalıştırmak için Microsoft 365 uyumluluk merkezi eBulma Yöneticisi rol grubunun üyesi ve SharePoint Online yöneticisi olmanız gerekir. Daha fazla bilgi için bkz[. Office 365 Güvenlik & Uyumluluk Merkezi'nde eBulma izinleri atama](assign-ediscovery-permissions.md).
+- 3. Adımda betiği çalıştırmak için uyumluluk portalında eBulma Yöneticisi rol grubunun üyesi ve SharePoint Online yöneticisi olmanız gerekir. Daha fazla bilgi için bkz. [Office 365 Güvenlik & Uyumluluk Merkezi'nde eBulma izinleri atama](assign-ediscovery-permissions.md).
 
-- Microsoft 365 uyumluluk merkezi Core eBulma olayıyla ilişkili bir ayrı tutmaya en fazla 1.000 posta kutusu ve 100 site eklenebilir. Beklemeye almak istediğiniz her kullanıcının bir OneDrive İş sitesi olduğunu varsayarsak, bu makaledeki betiği kullanarak ayrı tutmaya en fazla 100 kullanıcı ekleyebilirsiniz.
+- Uyumluluk portalındaki bir eBulma olayıyla ilişkili bir ayrı tutmaya en fazla 1.000 posta kutusu ve 100 site eklenebilir. Beklemeye almak istediğiniz her kullanıcının bir OneDrive İş sitesi olduğunu varsayarsak, bu makaledeki betiği kullanarak ayrı tutmaya en fazla 100 kullanıcı ekleyebilirsiniz.
 
 - 2. Adımda oluşturduğunuz kullanıcıların listesini ve 3. Adım'daki betiği aynı klasöre kaydettiğinizden emin olun. Bu, betiği çalıştırmayı kolaylaştırır.
 
@@ -93,7 +93,7 @@ Bu adımda betiği çalıştırdığınızda sizden aşağıdaki bilgileri istey
 
 - **Sorgu tabanlı ayrı tutma için arama sorgusu:** Yalnızca belirtilen arama ölçütlerini karşılayan içeriğin beklemeye alınabilmesi için sorgu tabanlı bir ayrı tutma oluşturabilirsiniz. Tüm içeriği beklemeye almak için, arama sorgusu istendiğinde **Enter tuşuna** basmanız gerekir.
 
-- **Ayrı tutmayı açma veya açmama:** Betiğin oluşturulduktan sonra ayrı tutma özelliğini açmasını sağlayabilir veya betiğin etkinleştirmeden ayrı tutma oluşturmasını sağlayabilirsiniz. Betiği ayrı tutmada açmadıysanız, Microsoft 365 uyumluluk merkezi daha sonra veya aşağıdaki PowerShell komutlarını çalıştırarak açabilirsiniz:
+- **Ayrı tutmayı açma veya açmama:** Betiğin oluşturulduktan sonra ayrı tutma özelliğini açmasını sağlayabilir veya betiğin etkinleştirmeden ayrı tutma oluşturmasını sağlayabilirsiniz. Betiği ayrı tutmada açmadıysanız uyumluluk portalında veya aşağıdaki PowerShell komutlarını çalıştırarak açabilirsiniz:
 
   ```powershell
   Set-CaseHoldPolicy -Identity <name of the hold> -Enabled $true
@@ -114,7 +114,7 @@ Betiğin sizden soracağı bilgileri topladıktan sonra, son adım betiği çal�
 " "
 write-host "***********************************************"
 write-host "   Security & Compliance Center PowerShell  " -foregroundColor yellow -backgroundcolor darkgreen
-write-host "   Core eDiscovery cases - Add users to a hold   " -foregroundColor yellow -backgroundcolor darkgreen 
+write-host "   eDiscovery (Standard) cases - Add users to a hold   " -foregroundColor yellow -backgroundcolor darkgreen 
 write-host "***********************************************"
 " "
 # Connect to SCC PowerShell using modern authentication
@@ -283,7 +283,7 @@ Write-host "Script complete!" -foregroundColor Yellow
 
 4. Betiğin sizden sorduğunu bilgileri girin.
 
-   Betik, Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanır ve eBulma durumunda yeni ayrı tutma oluşturur ve listedeki kullanıcılar için posta kutularını ve OneDrive İş ekler. Yeni ayrı tutma işlemini görüntülemek için Microsoft 365 uyumluluk merkezi **eBulma** sayfasında servis talebine gidebilirsiniz.
+   Betik, Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanır ve eBulma durumunda yeni ayrı tutma oluşturur ve listedeki kullanıcılar için posta kutularını ve OneDrive İş ekler. Yeni ayrı tutma durumunu görüntülemek için uyumluluk portalındaki **eBulma** sayfasında servis talebine gidebilirsiniz.
 
 Betiğin çalışması tamamlandıktan sonra aşağıdaki günlük dosyalarını oluşturur ve betiğin bulunduğu klasöre kaydeder.
   

@@ -1,5 +1,5 @@
 ---
-title: Gözden geçirme kümesinde içeriği sorgulama
+title: gözden geçirme kümesindeki içeriği sorgulama
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -15,24 +15,24 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Bir çalışma durumunda daha verimli bir gözden geçirme için içeriği düzenlemek için bir gözden geçirme kümesinde sorguyu nasıl Advanced eDiscovery öğrenin.
+description: Microsoft Purview eKeşif (Premium) durumunda daha verimli bir inceleme için içeriği düzenlemek üzere bir gözden geçirme kümesinde sorgu oluşturmayı ve çalıştırmayı öğrenin.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: ebcb129241565321297b78072a5d02d173552ee1
-ms.sourcegitcommit: bb493f12701f6d6ee7d5e64b541adb87470bc7bc
+ms.openlocfilehash: ead066428d5c2404da5bf863ad428784b3c3a30c
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "63015552"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64936301"
 ---
-# <a name="query-and-filter-content-in-a-review-set"></a>Gözden geçirme kümesinde içeriği sorgulama ve filtreleme
+# <a name="query-and-filter-content-in-a-review-set"></a>Bir inceleme setindeki içeriği sorgulama ve filtreleme
 
-Çoğu durumda, gözden geçirme kümesinde içeriği daha derinden incelemeniz ve daha verimli bir inceleme için düzenlemeniz yararlı olur. Gözden geçirme kümesinde filtreler ve sorgular kullanmak, gözden geçirmenizin ölçütlerine uyan belgelerin bir alt kümesine odaklanmanıza yardımcı olur.
+Çoğu durumda, bir inceleme kümesindeki içeriği daha ayrıntılı incelemek ve daha verimli bir gözden geçirmeyi kolaylaştırmak için düzenlemek yararlı olacaktır. Gözden geçirme kümesinde filtreleri ve sorguları kullanmak, gözden geçirme ölçütlerinizi karşılayan belgelerin bir alt kümesine odaklanmanıza yardımcı olur.
 
 ## <a name="default-filters"></a>Varsayılan filtreler
 
-Bir gözden geçirme kümesinde, gözden geçirme kümesine önceden yüklenmiş beş varsayılan filtre vardır:
+Bir gözden geçirme kümesinde, gözden geçirme kümesinde önceden yüklenmiş beş varsayılan filtre vardır:
 
-- Anahtar Sözcükler
+- Anahtar kelime -ler
 - Tarih
 - Gönderen/Yazar
 - Konu/Başlık
@@ -40,13 +40,13 @@ Bir gözden geçirme kümesinde, gözden geçirme kümesine önceden yüklenmiş
 
 ![Varsayılan filtre türleri.](../media/DefaultFilterTypes.png)
 
-Genişletmek ve bir değer atamak için her filtreye tıklayın. Filtreyi gözden geçirme kümesine otomatik olarak uygulamak için filtrenin dışına tıklayın. Aşağıdaki ekran görüntüsünde, bir tarih aralığındaki belgeleri gösterecek şekilde yapılandırılmış olan Tarih filtresi görüntülenmiştir.
+Her filtreyi tıklayarak genişletin ve bir değer atayın. Filtreyi gözden geçirme kümesine otomatik olarak uygulamak için filtrenin dışına tıklayın. Aşağıdaki ekran görüntüsünde, bir tarih aralığındaki belgeleri göstermek için yapılandırılmış Tarih filtresi gösterilmektedir.
 
 ![Varsayılan filtre genişletildi.](../media/ExpandedFilter.png)
 
 ## <a name="add-or-remove-filters"></a>Filtre ekleme veya kaldırma
 
-Gözden geçirme kümesinde görüntülenen filtreleri eklemek veya kaldırmak için, Filtreler'i  seçerek bir açılır sayfada görüntülenen filtre panelini açın. 
+Gözden geçirme kümesinde görüntülenen filtreleri eklemek veya kaldırmak için **Filtreler'i** seçerek açılır sayfada görüntülenen filtre panelini açın. 
 
 ![Filtre paneli.](../media/FilterPanel.png)
 
@@ -54,85 +54,85 @@ Kullanılabilir filtreler dört bölümde düzenlenmiştir:
 
 - **Arama**: Farklı arama özellikleri sağlayan filtreler.
 
-- **Çözümleme & kodlaması** kullanır: Belge Ana &-posta analitik işini çalıştırarak veya tahmine **dayalı** kodlama modellerini kullanarak belgelerde oluşturulan ve belgelere eklenen özellikler için filtreler.
+- **Analiz & tahmine dayalı kodlama**: **Belge & e-posta analizi** işini çalıştırdığınızda veya tahmine dayalı kodlama modelleri kullandığınızda oluşturulan ve belgelere eklenen özelliklere yönelik filtreler.
 
 - **Kimlikler**: Belgelerin tüm kimlik özellikleri için filtreler.
 
 - **Öğe özellikleri**: Belge özellikleri için filtreler. 
 
-Filtre kümesinde eklemek veya kaldırmak için, her bölümü genişletin ve filtreleri seçin veya seçimleri kaldırın. Filtreyi eklerken, filtre kümesinde görüntülenir. 
+Her bölümü genişletin ve filtre kümesine eklemek veya kaldırmak için filtreleri seçin veya seçimini kaldırın. Filtre eklediğinizde, filtre kümesinde görüntülenir. 
 
-![Filtre panelinde filtre bölümlerinin ve özelliklerinin listesi.](../media/FilterPanel2.png)
+![Filtre panelindeki filtre bölümlerinin ve özelliklerin listesi.](../media/FilterPanel2.png)
 
 > [!NOTE]
-> Filtre panelinde bir bölümü genişletmişsinizdir; varsayılan filtre türlerinin seçili olduğunu fark edin. Bunları seçili bulundurarak veya seçimlerini kaldırarak filtre kümesinden kaldırılabilirsiniz. 
+> Filtre panelinde bir bölümü genişlettiğinizde, varsayılan filtre türlerinin seçili olduğunu fark edersiniz. Bunların seçili kalmasını sağlayabilir veya bunların seçimini kaldırıp filtre kümesinden kaldırabilirsiniz. 
 
 ## <a name="filter-types"></a>Filtre türleri
 
-Gözden geçirme kümesinde aranabilir her alanın, belirli bir alanı temel alan öğeleri filtrelemek için kullanabileceğiniz bir filtresi vardır.
+Gözden geçirme kümesindeki aranabilir her alanın, belirli bir alana göre öğeleri filtrelemek için kullanabileceğiniz bir filtresi vardır.
 
 Birden çok filtre türü vardır:
 
-- **Serbest Metin**: "Konu" gibi metin alanlarına serbest metin filtresi uygulanır. Birden çok arama terimlerini virgülle ayırarak liste edebilirsiniz.
+- **Serbest metin**: "Konu" gibi metin alanlarına serbest metin filtresi uygulanır. Birden çok arama terimlerini virgülle ayırarak listeleyebilirsiniz.
 
 - **Tarih**: "Son değiştirme tarihi" gibi tarih alanları için tarih filtresi kullanılır.
 
-- **Arama seçenekleri**: Arama seçenekleri filtresi, gözden geçirmede yer alan belirli alanlar için olası değerlerin listesini sunar (her değer seçebilirsiniz bir onay kutusuyla görüntülenir). Bu filtre, gözden geçirme kümesinde sonlu sayıda olası değer bulunduğu "Gönderen" gibi alanlar için kullanılır.
+- **Arama seçenekleri**: Arama seçenekleri filtresi, incelemedeki belirli alanlar için olası değerlerin listesini (her değer seçebileceğiniz bir onay kutusuyla görüntülenir) sağlar. Bu filtre, gözden geçirme kümesinde sınırlı sayıda olası değerin bulunduğu "Gönderen" gibi alanlar için kullanılır.
 
-- **Anahtar** sözcük: Anahtar sözcük koşulu, terimleri aramak için kullanabileceğiniz belirli bir serbest metin koşulu örneğidir. Bu filtre türünde KQL benzer sorgu dilini de kullanabilirsiniz. Daha fazla bilgi için, bu makaledeki Sorgu dili ve Gelişmiş sorgu oluşturucusu bölümlerine bakın.
+- **Anahtar sözcük**: Anahtar sözcük koşulu, terimleri aramak için kullanabileceğiniz belirli bir serbest metin koşulu örneğidir. Bu filtre türünde KQL benzeri sorgu dilini de kullanabilirsiniz. Daha fazla bilgi için bu makaledeki Sorgu dili ve Gelişmiş sorgu oluşturucu bölümlerine bakın.
 
-## <a name="include-and-exclude-filter-relationships"></a>Filtre ilişkilerini dahil etmek ve dışarıda tutmak
+## <a name="include-and-exclude-filter-relationships"></a>Filtre ilişkilerini dahil et ve hariç tut
 
-Belirli bir filtre için ilişki dahil ve dışlama ilişkisini değiştirebilirsiniz. Örneğin Etiket filtresinde, açılan filtrede Belirli bir etiketle etiketlenen öğelerin dışında tutabilirsiniz. 
+Belirli bir filtre için ekleme ve dışlama ilişkisini değiştirebilirsiniz. Örneğin, Etiket filtresinde, açılan filtrede **Eşittir hiçbiri'ni** seçerek belirli bir etiketle etiketlenen öğeleri dışlayabilirsiniz. 
 
-![Etiket filtresini dışla.](../media/TagFilterExclude.png)
+![Etiket filtrelerini hariç tut.](../media/TagFilterExclude.png)
 
 ## <a name="save-filters-as-queries"></a>Filtreleri sorgu olarak kaydetme
 
-Filtrelerden memnun olduktan sonra, filtre bileşimini filtre sorgusu olarak kaydedebilirsiniz. Bu, gelecekte gözden geçirme oturumlarında filtreyi uygulamana olanak sağlar.
+Filtrelerinizi tamamladıktan sonra, filtre bileşimini bir filtre sorgusu olarak kaydedebilirsiniz. Bu, filtreyi sonraki gözden geçirme oturumlarında uygulamanıza olanak tanır.
 
-Filtreyi kaydetmek için, **Sorguyu kaydet'i seçin** ve adını seçin. Siz veya diğer gözden geçirenler, Kaydedilmiş filtre sorguları açılan listesinden seçim yapan ve  ayarlanmış belgeleri gözden geçirmek için uygulanacak filtre sorgusunu seçerek, önceden kaydedilmiş filtre sorgularını çalıştırabilirsiniz. 
+Bir filtreyi kaydetmek için **Sorguyu kaydet'i** seçin ve adlandırın. Siz veya diğer gözden geçirenler **, Kaydedilmiş filtre sorguları** açılan listesini seçip ayarlanmış belgeleri gözden geçirmek için uygulanacak bir filtre sorgusu seçerek önceden kaydedilmiş filtre sorgularını çalıştırabilirsiniz. 
 
-![Filtre sorgusunu kaydetme.](../media/SaveFilterQuery.png)
+![Filtre sorgusunu kaydedin.](../media/SaveFilterQuery.png)
 
-Filtre sorgusunu silmek için, filtre panelini açın ve sorgunun yanındaki çöp kutusu simgesini seçin.
+Filtre sorgusunu silmek için filtre panelini açın ve sorgunun yanındaki çöp kutusu simgesini seçin.
 
-![Filtre sorgusunu silme.](../media/DeleteFilterQuery.png)
+![Filtre sorgusunu silin.](../media/DeleteFilterQuery.png)
 
 ## <a name="query-language"></a>Sorgu dili
 
-Filtreleri kullanmanın yanı sıra, gözden geçirme kümesi arama sorgusunu oluşturmak için Anahtar Sözcükler filtresinde KQL'ye benzer bir sorgu dili de kullanabilirsiniz. Gözden geçirme kümesi sorgularının sorgu dili, **VE, VEYA**, NOT ve NEAR gibi standart Boole **işleçlerini** **destekler**.  Ayrıca tek karakterli joker karakteri (?) ve çok karakterli joker karakteri (*) destekler.
+Filtreleri kullanmaya ek olarak, anahtar sözcükler filtresinde KQL benzeri bir sorgu dili kullanarak gözden geçirme kümesi arama sorgunuzu oluşturabilirsiniz. Gözden geçirme kümesi sorgularının sorgu dili **AND**, **OR**, **NOT** ve **NEAR** gibi standart Boole işleçlerini destekler. Ayrıca tek karakterli joker karakteri (?) ve çok karakterli joker karakteri (*) destekler.
 
 ## <a name="advanced-query-builder"></a>Gelişmiş sorgu oluşturucusu
 
-Ayrıca, gözden geçirme kümesinde belge aramak için daha gelişmiş sorgular da oluşturabilirsiniz.
+Ayrıca, bir gözden geçirme kümesindeki belgeleri aramak için daha gelişmiş sorgular oluşturabilirsiniz.
 
-1. Filtre panelini açın, **Filtreler'i** seçin ve Ara **bölümünü** genişletin.
+1. Filtre panelini açın, **Filtreler'i** seçin ve **Arama** bölümünü genişletin.
 
   ![KQL filtresi ekleyin.](../media/AddKQLFilter.png)
 
-2. **KQL filtresini seçin** ve Sorgu oluşturucusunu **aç'a tıklayın**.
+2. **KQL** filtresini seçin ve **Sorgu oluşturucusunu aç'a** tıklayın.
 
-   Bu panelde, sorgu oluşturucusunu kullanarak karmaşık KQL sorguları oluşturabilirsiniz. VE veya VEYA ilişkileriyle mantıksal olarak bağlantılı olan birden çok koşuldan yapılmış koşul **veya koşul** **grupları ekleyebilir** .
+   Bu panelde, sorgu oluşturucusunu kullanarak karmaşık KQL sorgular oluşturabilirsiniz. **AND** veya **OR** ilişkileri tarafından mantıksal olarak bağlanan birden çok koşuldan oluşan koşullar veya koşul grupları ekleyebilirsiniz.
 
    ![Karmaşık filtre sorgularını yapılandırmak için sorgu oluşturucusunu kullanın.](../media/ComplexQuery.png)
 
-## <a name="filter-partially-indexed-items"></a>Kısmen dizinelenmiş öğeleri filtreleme
+## <a name="filter-partially-indexed-items"></a>Kısmen dizine alınan öğeleri filtreleme
 
-Taslak koleksiyonunu gözden geçirme kümesine kabul ettiyseniz, ek veri kaynaklarından kısmen dizine alınan öğeleri ekleme seçeneğini seçtiyseniz. Bir öğenin araştırmanız ile ilgili olup olmadığını belirlemek ve bu öğeleri görüntülemek ve öğenin kısmen dizine alındı hatasına neden olan hatayı düzeltmek isteyip istemeyebilirsiniz.
+Taslak koleksiyonu bir gözden geçirme kümesine işlediğiniz sırada ek veri kaynaklarından kısmen dizinlenmiş öğeler ekleme seçeneğini belirlediyseniz. Bir öğenin araştırmanızla ilgili olup olmadığını ve öğenin kısmen dizine alınmasına neden olan hatayı düzeltmeniz gerekip gerekmediğini belirlemek için bu öğeleri tanımlamak ve görüntülemek isteyebilirsiniz.
 
-Şu anda, gözden geçirme kümesinde kısmen dizinelenmiş öğeleri görüntülemek için bir filtre seçeneği yok. Ancak bunun üzerinde çalışıyoruz. O zamana kadar, burada, gözden geçirme kümesine eklenmiş olan kısmen dizine eklenen öğeleri filtre uygulama ve görüntülemenin bir yolu vardır.
+Şu anda, bir gözden geçirme kümesinde kısmen dizine alınan öğeleri görüntülemek için bir filtre seçeneği yoktur. Ama üzerinde çalışıyoruz. O zamana kadar, bir gözden geçirme kümesine eklediğiniz kısmen dizinlenmiş öğeleri filtrelemenin ve görüntülemenin bir yolu aşağıdadır.
 
-1. Ek veri kaynaklarından kısmen dizine alınan öğeleri eklemeden *bir* koleksiyon oluşturun ve bunu yeni bir gözden geçirme kümesine ayarlayın.
+1. Bir koleksiyon oluşturun ve ek veri kaynaklarından kısmen dizinlenmiş öğeler *eklemeden* yeni bir gözden geçirme kümesine işleyin.
 
-2. 1. adımdan koleksiyonu kopyalayıp yeni bir koleksiyon oluşturun.
+2. 1. adımdaki koleksiyonu kopyalayarak yeni bir koleksiyon oluşturun.
 
-3. Yeni koleksiyonu aynı gözden geçirme kümesine işler. Ancak bu kez, ek veri kaynaklarından kısmen dizine alınan öğeleri ekleyin. 1. adımda oluşturduğunuz koleksiyondaki öğeler gözden geçirme kümesine önceden eklendiklerinden, gözden geçirme kümesine yalnızca ikinci koleksiyondaki kısmen dizine eklenen öğeler eklenir.
+3. Yeni koleksiyonu aynı gözden geçirme kümesine işleyin. Ancak bu kez, ek veri kaynaklarından kısmen dizine alınan öğeleri ekleyin. 1. adımda oluşturduğunuz koleksiyondaki öğeler gözden geçirme kümesine zaten eklendiğinden, gözden geçirme kümesine yalnızca ikinci koleksiyondan kısmen dizine alınmış öğeler eklenir.
 
-4. Her iki koleksiyon da gözden geçirme kümesine eklendikten sonra, gözden geçirme kümesine gidin ve **ManageLoad kümelerini** >  **seçin**.
+4. Her iki koleksiyon da gözden geçirme kümesine eklendikten sonra gözden geçirme kümesine gidin ve **YönetYükleme kümeleri'ni** >  seçin.
 
-5. İkinci koleksiyonun (2 **.** adımda oluşturduğunuz) Yükleme Kimliği'ne kopyalayın veya not edin. Koleksiyon adı Kaynak bilgi **sütununda tanımlanır** .
+5. İkinci koleksiyonun (2. adımda oluşturduğunuz **) Load Id** değerini kopyalayın veya not edin. Koleksiyon adı **Kaynak bilgileri** sütununda tanımlanır.
 
-6. Gözden geçirme kümesine geri dönerek **Filtre'ye** tıklayın, **Kimlikler** bölümünü genişletin ve Kimlik **Yükle onay** kutusunu seçin.
+6. Gözden geçirme kümesine geri dönün, **Filtre'ye** tıklayın, **Kimlikler** bölümünü genişletin ve ardından **Yük Kimliği** onay kutusunu seçin.
 
-7. Yükleme **Kimliği filtresini** genişletin ve ardından kısmen dizinelenmiş öğeleri görüntülemek için ikinci koleksiyona karşılık gelen yükleme kimliği onay kutusunu seçin.
+7. **Yük Kimliği** filtresini genişletin ve sonra kısmen dizine alınan öğeleri görüntülemek için ikinci koleksiyona karşılık gelen yük kimliğinin onay kutusunu seçin.

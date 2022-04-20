@@ -1,5 +1,5 @@
 ---
-title: Ayarlama SharePoint Syntex
+title: SharePoint Syntex ayarlama
 ms.author: mikeplum
 author: MikePlumleyMSFT
 ms.reviewer: ssquires
@@ -14,118 +14,120 @@ ms.custom:
 - admindeeplinkMAC
 search.appverid: MET150
 ms.localizationpriority: high
-description: Ayarlama SharePoint Syntex
-ms.openlocfilehash: 244038e4c49801cad59bd9cf8939c47291c5270f
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: SharePoint Syntex ayarlama
+ms.openlocfilehash: 0d7cbe0f99747629bcac581bd080d88af27e8a06
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63326951"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64935379"
 ---
-# <a name="set-up-sharepoint-syntex"></a>Ayarlama SharePoint Syntex
+# <a name="set-up-sharepoint-syntex"></a>SharePoint Syntex ayarlama
 
-Yöneticiler bu Microsoft 365 yönetim merkezi Microsoft <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> ayarlamak [için SharePoint Syntex](index.md). 
+Yöneticiler <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">microsoft SharePoint Syntex</a> ayarlamak için [Microsoft 365 yönetim merkezi](index.md) kullanabilir. 
 
-Başlamadan önce şunları göz önünde önünde yapın:
+Başlamadan önce aşağıdakileri göz önünde bulundurun:
 
-- Hangi SharePoint form işlemeyi etkinleştirecek? Bunların hepsi, bir bazıları veya belirli siteler?
-- Varsayılan içerik merkezinizi nasıl isimlesiniz?
+- Form işlemeyi hangi SharePoint sitelerde etkinleştirebilirsiniz? Bunların tümü, bazıları veya belirli siteler mi?
+- Varsayılan içerik merkezinize ne ad vereceksiniz?
 
-İlk kurulumdan sonra ayarlarınızı kurulumdan sonra <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a>.
+İlk kurulumdan sonra <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> ayarlarınızı değiştirebilirsiniz.
 
-Kurulumdan önce, ortamınıza içerik anını ayarlamanın ve yapılandırmanın en iyi yolunu planlamaya emin olun. Örneğin, aşağıdaki kararları alırsiniz:
+Kurulumdan önce ortamınızda içerik anlama özelliğini ayarlamanın ve yapılandırmanın en iyi yolunu planladığınızdan emin olun. Örneğin, aşağıdaki kararları vermeniz gerekir:
 
-- Form SharePoint etkinleştirmek istediğiniz tüm siteler, bazıları veya seçilen siteler gibi en son siteler
+- Form işlemeyi etkinleştirmek istediğiniz SharePoint siteler - bunların tümü, bazıları veya seçili siteler
 - İçerik merkezinizin adı ve yöneticileri
 
 ## <a name="requirements"></a>Gereksinimler 
 
 > [!NOTE]
-> Diğer kullanıcılara erişmek ve SharePoint için Genel yönetici veya Microsoft 365 yönetim merkezi izinlerine sahip SharePoint Syntex.
+> Microsoft 365 yönetim merkezi erişebilmek ve SharePoint Syntex ayarlamak için Genel yönetici veya SharePoint yönetici izinlerine sahip olmanız gerekir.
 
-Yönetici olarak, kurulumdan sonra seçilen ayarları istediğiniz zaman ve genel ayarlarda içerik yönetim ayarlarını anlama genelinde <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a>.
+Yönetici olarak, kurulumdan sonra istediğiniz zaman ve <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> içerik anlama yönetimi ayarları boyunca seçtiğiniz ayarlarda değişiklik yapabilirsiniz.
 
-Özel bir Power Platform ortamı kullanmayı planlıyorsanız, form işleme modelleri oluşturamadan önce bu ortamda [*Cortex Projesi için AI Builder*](/power-platform/admin/manage-apps#install-an-app-in-the-environment-view) uygulamasını yüklemeniz ve [AI Builder](/power-platform/admin/capacity-add-on) kredisi ayırmanız gerekir.
+Özel bir Power Platform ortamı kullanmayı planlıyorsanız, form işleme modelleri oluşturabilmeniz [için önce bu ortamda *Cortex Projesi için* AI Builder uygulamasını yüklemeniz](/power-platform/admin/manage-apps#install-an-app-in-the-environment-view) ve [buna AI Builder kredileri ayırmanız](/power-platform/admin/capacity-add-on) gerekir. Özel bir ortam kullanırken, model oluşturuculara Ortam Oluşturucu güvenlik rolü atanmalı ve model kullanıcılarına Temel Kullanıcı güvenlik rolü atanmalıdır. Daha fazla bilgi için bkz. [Kullanıcıya güvenlik rolü atama](/power-platform/admin/assign-security-roles) .
+
+[İçerik merkezi sitesinde](/microsoft-365/contentunderstanding/create-a-content-center) model oluşturan kullanıcıların site üyesi olması gerekir. İçerik merkezi dışında yerel olarak model oluşturan kullanıcıların bu sitelerin site sahipleri olması gerekir.
 
 ### <a name="licensing"></a>Lisanslama
 
-Bu SharePoint Syntex kullanmak için, kuruma abonelik SharePoint Syntex ve her kullanıcıya aşağıdaki lisansların atanmış olması gerekir:
+SharePoint Syntex kullanmak için kuruluşunuzun SharePoint Syntex aboneliğine sahip olması ve her kullanıcıya aşağıdaki lisansların atanmış olması gerekir:
 
 - SharePoint Syntex
 - SharePoint Syntex - SPO türü
-- Veriler için Ortak Veri SharePoint Syntex
+- SharePoint Syntex için Common Data Service
 
-Form işlemeyi kullanmak için AI Builder kredisi de gerekir. 300 veya daha fazla lisanslı kullanıcınız varsa, her ay bir AI Builder kredisi tahsisi sağlanır.
+Form işlemeyi kullanmak için AI Builder kredilerine de ihtiyacınız vardır. 300 veya daha fazla lisanslı kullanıcınız varsa, her ay bir AI Builder kredisi ayırması sağlanır.
 
-Lisanslama hakkında SharePoint Syntex için [lisanslama SharePoint Syntex bakın](syntex-licensing.md)
+SharePoint Syntex lisanslama hakkında ayrıntılı bilgi için bkz. [lisanslama SharePoint Syntex](syntex-licensing.md)
 
-## <a name="to-set-up-sharepoint-syntex"></a>Ayar yapmak SharePoint Syntex
+## <a name="to-set-up-sharepoint-syntex"></a>SharePoint Syntex ayarlamak için
 
-1. İçerik <a href="https://go.microsoft.com/fwlink/p/?linkid=2171997" target="_blank">**Microsoft 365 yönetim merkezi,Kurulum'u**</a> seçin ve dosyalar **ve içerik bölümünü** görüntüleme.
+1. Microsoft 365 yönetim merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=2171997" target="_blank">**Kurulum'u**</a> seçin ve ardından **Dosyalar ve içerik** bölümünü görüntüleyin.
 
-2. Dosyalar ve **içerik bölümünde İçeriğin** anlaşılmasını **otomatikleştir'i seçin**. Geçerli AI Builder kredi kullanılabilirliğinizin Bir bakışta bölümünde **gösterildiğini** unutmayın.<br/>
+2. **Dosyalar ve içerik** bölümünde **İçerik anlama işlemini otomatikleştir'i** seçin. Geçerli AI Builder kredi kullanılabilirliğinizin **Bir bakışta** bölümünde gösterildiğini unutmayın.<br/>
 
-3. İçeriği anlama **işlemini otomatikleştirme** sayfasında, **Kurulum sürecini takip etmeye** başlama'ya tıklayın. <br/>
+3. **İçerik anlama sürecini otomatikleştir** sayfasında **Kullanmaya başlayın'e** tıklayarak kurulum işlemine göz atın. <br/>
 
     > [!div class="mx-imgBorder"]
     > ![Kurulumu başlatın.](../media/content-understanding/admin-content-understanding-get-started.png)</br>
 
-4. Form **İşlemeyi Yapılandır sayfasında**, kullanıcıların belirli veri kaynağında veya belge kitaplıklarında form işleme modelleri oluştur SharePoint seçebilirsiniz. Menü seçeneği, etkinleştirilen belge kitaplıklarında Form işleme **modeli** SharePoint seçeneğiyle belge kitaplığı şeridinde kullanılabilir.
+4. **Form İşlemeyi Yapılandır** sayfasında, kullanıcıların belirli SharePoint belge kitaplıklarında form işleme modelleri oluşturmasına izin vermek isteyip istemediğinizi seçebilirsiniz. Belge kitaplığı şeridinde, etkinleştirildiği SharePoint belge kitaplıklarında **form işleme modeli oluşturma** seçeneği sağlanacaktır.
  
-     Hangi **SharePoint kitaplıkların form işleme modeli oluşturma seçeneğini göstermeleri gerekir**? seçeneği için:</br>
-      - **Tüm sitelerde SharePoint kitaplıklar**; bunu tüm SharePoint kitaplıklarında kullanılabilir.</br>
-      - **Seçili sitelerde SharePoint kitaplıklar** ve ardından içinde kullanılabilir yapmak istediğiniz siteleri seçin veya en çok 50 sitenin listesini karşıya yükleyin.</br>
-      - **Hiçbir SharePoint tarafından** kullanılabilir yapmak istemiyorsanız, bu kitaplıkları değiştiremezsiniz (kurulumdan sonra bunu değiştirebilirsiniz).
+     **Form işleme modeli oluşturma seçeneği gösterilecek SharePoint kitaplıklar** için şunları seçebilirsiniz:</br>
+      - **Kuruluşunuzdaki tüm SharePoint** kitaplıkları için tüm SharePoint sitelerdeki kitaplıklar.</br>
+      - **Seçili SharePoint sitelerdeki kitaplıklar** ve ardından kullanılabilir hale getirmek istediğiniz siteleri seçin veya en fazla 50 sitenin listesini karşıya yükleyin.</br>
+      - **Herhangi bir** sitenin kullanımına açmak istemiyorsanız SharePoint kitaplık yok (kurulumdan sonra bunu değiştirebilirsiniz).
 
    > [!div class="mx-imgBorder"]
-   > ![Form işleme sitesi seçeneklerini yapılandırma.](../media/content-understanding/admin-configforms.png)
+   > ![Form işleme sitesi seçeneklerini yapılandırın.](../media/content-understanding/admin-configforms.png)
 
    > [!Note]
-   > Site dahil edildikten sonra sitenin kaldırılması, bu sitenin kitaplıklarına uygulanan mevcut modelleri veya kitaplı kitaplara belge anlama modellerini uygulayabilme olanağını etkilemez. 
+   > Site eklendikten sonra kaldırılması, sitedeki kitaplıklara uygulanan mevcut modelleri veya bir kitaplığa belge anlama modelleri uygulama özelliğini etkilemez. 
     
-    Birden çok Power Platform ortamları yapılandırılmışsa, form işleme için hangisini kullanmak istediğinizi seçebilirsiniz. (Yalnızca bir ortamız varsa bu seçenek görünmez.)
+    Yapılandırılmış birden çok Power Platform ortamınız varsa, form işleme için hangisini kullanmak istediğinizi seçebilirsiniz. (Yalnızca bir ortamınız varsa bu seçenek görünmez.)
 
-    ![Form işleme Power Platform seçeneklerini yapılandırabilirsiniz.](../media/content-understanding/setup-power-platform-env.png)
+    ![Form işleme Power Platform seçeneklerini yapılandırın.](../media/content-understanding/setup-power-platform-env.png)
 
-    **Power Platform ortamı için** şunları seçin:
+    **Power Platform ortamı** için şunları seçebilirsiniz:
     - Varsayılan Power Platform **ortamınızı** kullanmak için varsayılan ortamı kullanın.
-    - **Özel bir ortam kullanmak** için özel bir ortam kullanın. Listeden kullanmak istediğiniz ortamı seçin. ([Özel ortam gereksinimlerine bakın](/microsoft-365/contentunderstanding/set-up-content-understanding#requirements)).
+    - **Özel ortam** kullanmak için özel bir ortam kullanın. Listeden kullanmak istediğiniz ortamı seçin. ([Özel ortam gereksinimlerine bakın](/microsoft-365/contentunderstanding/set-up-content-understanding#requirements)).
 
     **İleri**'ye tıklayın.
 
-5. İçerik **Merkezi Oluştur sayfasında**, kullanıcılarının belge anlama modellerini oluştur SharePoint yönetecekleri bir İçerik Merkezi sitesi oluşturabilirsiniz. Daha önce yönetim merkezinden bir içerik SharePoint, bu bilgiler burada görüntülenir ve Sonraki'yi seçmeniz **gerekir**.
+5. **İçerik Merkezi Oluştur** sayfasında, kullanıcılarınızın belge anlama modelleri oluşturup yönetebileceği bir SharePoint içerik merkezi sitesi oluşturabilirsiniz. daha önce SharePoint yönetim merkezinden bir içerik merkezi oluşturduysanız, bu bilgiler burada görüntülenir ve **İleri'yi** seçebilirsiniz.
 
-    1. **Site adı olarak**, içerik merkezi sitenize vermek istediğiniz adı yazın.
+    1. **Site adı** alanına, içerik merkezi sitenize vermek istediğiniz adı yazın.
     
-    1. **Site adresi**, site adı için ne seçtiğinize bağlı olarak sitenizin URL'sini gösterir. Bu değişikliği yapmak için Düzenle'ye **tıklayın**.
+    1. **Site adresi**, site adı için seçtiklerinize bağlı olarak sitenizin URL'sini gösterir. Değiştirmek istiyorsanız **Düzenle'ye** tıklayın.
 
        > [!div class="mx-imgBorder"]
        > ![İçerik merkezi oluşturma.](../media/content-understanding/admin-cu-create-cc.png)</br>
 
        **İleri**'yi seçin.
 
-6. Gözden **Geçir ve bitiş sayfasında** , seçili ayarınıza bakıp değişiklik yapmak için seçim yapabilirsiniz. Seçimlerden memnunsanız Etkinleştir'i **seçin**.
+6. **Gözden geçir ve bitir** sayfasında, seçtiğiniz ayara bakabilir ve değişiklik yapmayı seçebilirsiniz. Seçimlerinizden memnunsanız **Etkinleştir'i** seçin.
 
-7. Onay sayfasında Bitti'ye **tıklayın**.
+7. Onay sayfasında **Bitti'ye** tıklayın.
 
-8. İçeriği otomatikleştirme anlama **sayfanıza geri döndürülürsiniz** . Bu sayfada Yönet'i **seçerek** yapılandırma ayarlarınıza istediğiniz değişiklikleri yapabilirsiniz. 
+8. **Otomatik içerik anlama** sayfanıza geri dönersiniz. Bu sayfada **Yönet'i** seçerek yapılandırma ayarlarınızda herhangi bir değişiklik yapabilirsiniz. 
 
 ## <a name="assign-licenses"></a>Lisans atama
 
-SharePoint Syntex'i yapılandırdıktan sonra, bu özellikleri SharePoint Syntex atamanız gerekir.
+SharePoint Syntex yapılandırdıktan sonra, SharePoint Syntex özellikleri kullanacak kullanıcılara lisans atamanız gerekir.
 
 Lisans atamak için:
 
-1. Aşağıdaki Microsoft 365 yönetim merkezi altında Etkin <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">**kullanıcılar'ı seçin**</a>.
+1. Microsoft 365 yönetim merkezi, **Kullanıcılar'ın** altında <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">**Etkin kullanıcılar'ı**</a> seçin.
 
-2. Lisans eklemek istediğiniz kullanıcıları seçin ve Ürün lisanslarını **yönet'i seçin**.
+2. Lisanslamak istediğiniz kullanıcıları seçin ve **Ürün lisanslarını yönet'i** seçin.
 
-3. Açılan **menüden** Uygulamalar'ı seçin.
+3. Açılan menüden **Uygulamalar'ı** seçin.
 
-4. Uygulamalar **için uygulamaları göster'i SharePoint Syntex**. **Uygulamalar'ın** altında, SPO, **SharePoint Syntex****, SharePoint Syntex** ve - **SharePoint Syntex için Ortak Veri Hizmeti'nin** seçili olduğundan emin olun.
+4. **SharePoint Syntex için uygulamaları göster'i** seçin. **Uygulamalar'ın** altında SharePoint Syntex, **SharePoint Syntex** ve **SharePoint Syntex - SPO türü** **için Common Data Service'in** seçili olduğundan emin olun.
 
     > [!div class="mx-imgBorder"]
-    > ![SharePoint Syntex lisansları Microsoft 365 yönetim merkezi.](../media/content-understanding/sharepoint-syntex-licenses.png)
+    > ![Microsoft 365 yönetim merkezi lisansları SharePoint Syntex.](../media/content-understanding/sharepoint-syntex-licenses.png)
 
 5. **Değişiklikleri kaydet**’e tıklayın.
 

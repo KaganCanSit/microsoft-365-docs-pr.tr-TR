@@ -1,5 +1,5 @@
 ---
-title: Modellerinizi Microsoft SharePoint Syntex'da nasıl kullanıla
+title: Modellerinizin Microsoft SharePoint Syntex'de nasıl kullanıldığını analiz etme
 ms.author: chucked
 author: chuckedmonson
 manager: pamgreen
@@ -12,15 +12,15 @@ ms.collection:
 - enabler-strategic
 - m365initiative-syntex
 ms.localizationpriority: medium
-description: Belgenizi anlama ve form işleme modellerinin nasıl performans gösterir hakkında daha fazla bilgi edinebilirsiniz.
-ms.openlocfilehash: ddd4d602deae0fb871989e4739470a19b97b0238
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+description: Belge anlama ve form işleme modellerinizin performansı hakkında daha fazla bilgi bulmayı öğrenin.
+ms.openlocfilehash: e9586bbbd8510611747b81424f1fbe494f212cc5
+ms.sourcegitcommit: dc415d784226c77549ba246601f34324c4f94e73
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63450528"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64916193"
 ---
-# <a name="analyze-how-your-models-are-used-in-microsoft-sharepoint-syntex"></a>Modellerinizi Microsoft SharePoint Syntex'da nasıl kullanıla
+# <a name="analyze-how-your-models-are-used-in-microsoft-sharepoint-syntex"></a>Modellerinizin Microsoft SharePoint Syntex'de nasıl kullanıldığını analiz etme
 
 </br>
 
@@ -29,59 +29,59 @@ ms.locfileid: "63450528"
 </br>
 
 
-SharePoint Syntex merkeziniz, içerik merkezinden yayımlanmış modellerinizi nasıl kullandığı hakkında daha fazla bilgi sağlamak için model kullanım analizi sağlar. İçerik <b>merkezinin son 30</b> gün içinde modellerinin performansı, aşağıdaki grafik ve listelerde sağlanan 30 günlük kullanım analizi verilerini içerir:
+SharePoint Syntex içerik merkeziniz, içerik merkezinden yayımlanan modellerinizin nasıl kullanıldığı hakkında daha fazla bilgi sağlamak için model kullanım analizi sağlar. İçerik merkezinin <b>son 30 gün içinde modellerinizin performansı</b> bölümünde aşağıdaki grafiklerde ve listelerde sağlanan 30 günlük kullanım analizi verilerinin birleştirilmesi yer alır:
 
 - Modele göre sınıflandırma
-- Kitaplı sınıflandırma
+- Kitaplığa göre sınıflandırma
 - Model kullanımı 
 
  ![Model analizi.](../media/content-understanding/model-analytics.png) </br>
 
-### <a name="roll-up-of-model-usage-data-in-the-default-content-center"></a>Varsayılan içerik merkezinde model kullanım verilerini toplama
+### <a name="roll-up-of-model-usage-data-in-the-default-content-center"></a>Model kullanım verilerini varsayılan içerik merkezinden alma
 
-Varsayılan SharePoint Syntex, kurulum sırasında varsayılan içerik merkezi oluşturulur. Gerektiğinde başka içerik merkezleri de oluşturulabilir. Örneğin, departmanlar modellerini oluşturmak ve yönetmek için kendi içerik merkezleri oluşturabilir. 
+SharePoint Syntex'da, kurulum sırasında varsayılan içerik merkezi oluşturulur. Gerektiğinde ek içerik merkezleri de oluşturulabilir. Örneğin, departmanlar modellerini oluşturmak ve yönetmek için kendi içerik merkezlerini oluşturabilir. 
 
-Model kullanım analiziyle ilgili olarak, şunları unutmayın:
+Model kullanım analiziyle ilgili olarak şunları unutmayın:
 
-- Varsayılan içerik merkeziniz, ek içerik merkezlerinde oluşturulanlar da dahil olmak üzere, kuruluş dahil olmak üzere tüm içerik merkezleri ve modelleri için model kullanım çözümlemelerini gösterir. Bu, içerik yöneticilerine ve diğer proje katılımcılarına şirket genelinde içerik merkezlerini ve modellerini yönetmek ve denetlemek için merkezi bir portal sağlar.  
-- Diğer içerik merkezleri yalnızca içinde oluşturulan modeller için model kullanım çözümlemelerini gösterir. Bu, içerik yöneticilerine yalnızca ilgili modellerin kullanım verileriyle ilgili içgörüler sağlar.
+- Varsayılan içerik merkeziniz, ek içerik merkezlerinde oluşturulanlar da dahil olmak üzere kuruluşunuzdaki tüm içerik merkezleri ve modeller için model kullanım analizini gösterir. Bu, içerik yöneticilerine ve diğer paydaşlara şirket genelindeki içerik merkezlerini ve modellerini yönetmeleri ve denetlemeleri için merkezi bir portal sağlar.  
+- Diğer içerik merkezleri yalnızca kendilerinde oluşturulmuş modeller için model kullanım analizini gösterir. Bu, içerik yöneticilerine yalnızca ilgilendikleri modeller için kullanım verileriyle ilgili içgörüler sağlar.
 
 
 ## <a name="classification-by-model"></a>Modele göre sınıflandırma
 
    ![Toplam model yüzdesi.](../media/content-understanding/total-model-percentage.png) </br>
 
-Model **pastası modeline göre** sınıflandırma grafiği, en çok dosya sınıflandırılmış modelleri görüntüler. Yayımlanmış her modeli, içerik merkezinde tüm yayımlanan modeller tarafından işlenen toplam dosyaların yüzdesi olarak gösterir.
+**Modele göre sınıflandırma** pasta grafiği, hangi modellerin en çok dosyayı sınıflandırmış olduğunu gösterir. Yayımlanan her modeli, içerik merkezindeki tüm yayımlanan modeller tarafından işlenen toplam dosyaların yüzdesi olarak gösterir.
 
-Ayrıca her model, **karşıya yüklenen dosyaların** model tarafından başarıyla analiz edilen yüzdesini Tamlık Oranı olarak gösterir. Düşük tamlık oranı, model veya analize alınan dosyalarla ilgili sorunlar olduğu anlamına gelir.
+Her model, model tarafından başarıyla analiz edilen karşıya yüklenen dosyaların yüzdesi olan **Tamlık Oranı'nı** da gösterir. Düşük bir tamlık oranı, model veya analiz edilen dosyalarla ilgili sorunlar olduğu anlamına gelebilir.
 
-## <a name="classification-by-library"></a>Kitaplı sınıflandırma
+## <a name="classification-by-library"></a>Kitaplığa göre sınıflandırma
 
    ![İşlenen dosyalar.](../media/content-understanding/files-processed-over-time.png) </br>
 
-Kitaplık **çubuğuna göre sınıflandırma** çubuğu grafiği, kuruluş içinde içeriğin daha etkili anlaşılmasını belirlemenize yardımcı olur.  Size yalnızca her model için zaman içinde işlenen dosyaların sayısını değil, grafikte bir sütun seçerek de modelin uygulandığı belge kitaplıklarını gösterir.
+Kitaplık çubuğuna **göre sınıflandırma** grafiği, kuruluşunuzdaki içerik anlamanın etkinliğini belirlemenize yardımcı olur.  Her model için zaman içinde işlenen dosya sayısını göstermekle kalmaz, grafikte bir sütun seçerek modelin uygulandığı belge kitaplıklarını da gösterir.
 
 
 ## <a name="model-usage"></a>Model kullanımı
 
-Model Kullanımı listesinde, içerik merkezi aracılığıyla oluşturulan modellerin kullanım çözümlemeleri görüntülenir.  
+Model Kullanımı listesi, içerik merkezi aracılığıyla oluşturulan modeller için kullanım analizini gösterir.  
 
 > [!NOTE]
-> Varsayılan içerik merkezindeysiniz ve kuruluş içinde ek içerik merkezleriniz varsa, model kullanım listesi içerik merkezine göre gruplanacak.
+> Varsayılan içerik merkezindeyseniz ve kuruluşunuzda ek içerik merkezleri varsa, model kullanım listesi içerik merkezine göre gruplandırılır.
 
-Model kullanım listesinde yer alan her modelde kullanım verileri görüntülenir:
+Model kullanım listesindeki her model kullanım verilerini gösterir:
 
-- Sınıflandırılmış öğe sayısı: Model tarafından işlenen dosya sayısı.
-- Ortalama güven puanı: Dosyalar üzerinde çalıştırlarda modelin ortalama doğruluk puanı.
-- Hedef liste URL'si: SharePoint uygulandığı belge kitaplığının adı.
+- Sınıflandırılmış öğe sayısı: Model tarafından işlenen dosyaların sayısı.
+- Ortalama güvenilirlik puanı: Dosyalara karşı çalıştırıldığında modelin ortalama doğruluk puanı.
+- Hedef liste URL'si: Modelin uygulandığı SharePoint belge kitaplığı.
 
 
 
-## <a name="see-also"></a>Ayrıca Bkz
+## <a name="see-also"></a>Ayrıca bkz.
 [Sınıflandırıcı oluşturma](create-a-classifier.md)
 
-[Ayıklaıcı oluşturma](create-an-extractor.md)
+[Ayıklayıcı oluşturma](create-an-extractor.md)
 
-[Belge Anlama'ya genel bakış](document-understanding-overview.md)
+[Document Understanding'e genel bakış](document-understanding-overview.md)
 
 [Form işleme modeli oluşturma](create-a-form-processing-model.md)  

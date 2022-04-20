@@ -1,5 +1,5 @@
 ---
-title: E-Advanced eDiscovery'de hataları işlemeyle Advanced eDiscovery
+title: eBulma'daki işleme hatalarıyla çalışma (Premium)
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -17,26 +17,26 @@ search.appverid:
 ms.assetid: ''
 ms.custom:
 - seo-marvel-apr2020
-description: Veri kaynağında çeşitli veri biçimlerini işlemeye genel Advanced eDiscovery.
-ms.openlocfilehash: 9f44593983256079150ad48954c5f1883f836083
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: eBulma'da (Premium) çeşitli veri biçimlerini işlemeye genel bakış.
+ms.openlocfilehash: 043e1b2b023fdd4e379116109069674515153524
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985318"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64936323"
 ---
-# <a name="work-with-processing-errors-in-advanced-ediscovery"></a>E-Advanced eDiscovery'de hataları işlemeyle Advanced eDiscovery
+# <a name="work-with-processing-errors-in-ediscovery-premium"></a>eBulma'daki işleme hatalarıyla çalışma (Premium)
 
-*İşleme;* dosya tanımlama, ekli belge ve ekleri genişletme, metin ayıklama ve Optik Karakter Tanıma (OCR) resim dosyalarının genişletilmesi ve bu içeriğin sonraki dizin oluşturma işlemidir.  
+*İşleme* , dosya tanımlama, ekli belge ve eklerin genişletilmesi, metin ayıklama ve görüntü dosyalarının Optik Karakter Tanıma (OCR) ve bu içeriğin sonraki dizinleme işlemidir.  
 
-Kaynaklar sekmesinde bir vakaya özel kişi ve özel kişi olmayan veri kaynakları eklerken, Microsoft 365'den  kısmen dizine alınan öğeler Microsoft 365 tümüyle aranabilir hale gelir. Benzer şekilde, hem veri kaynaklarından hem de bu olmayan Microsoft 365 gözden Microsoft 365 içerikler eklendiğinde, bu içerik de işlenir.
+**Kaynaklar** sekmesindeki bir servis talebine koruyucular ve koruyucu olmayan veri kaynakları eklediğinizde, Microsoft 365 kısmen dizine alınan tüm öğeler tamamen aranabilir hale getirmek için işlenir. Benzer şekilde, hem Microsoft 365 hem de Microsoft 365 olmayan veri kaynaklarından bir gözden geçirme kümesine içerik eklendiğinde, bu içerik de işlenir.
 
-**Advanced eDiscovery'daki** İşleme sekmesi, farklı işleme senaryoları için gelişmiş dizin oluşturmanın durumuyla ilgili içgörü sağlar.
+eBulma(Premium) içindeki **İşleme** sekmesi, farklı işleme senaryoları için gelişmiş dizin oluşturmanın durumu hakkında içgörü sağlar.
 
 Daha fazla bilgi için aşağıdaki makalelere bakın:
 
-- [Custo custing advanced indexing](indexing-custodian-data.md)
+- [Koruyucu verilerinin gelişmiş dizini oluşturma](indexing-custodian-data.md)
 
-- [Veri işleme hatası düzeltmesi](error-remediation-when-processing-data-in-advanced-ediscovery.md)
+- [Verileri işlerken hata düzeltme](error-remediation-when-processing-data-in-advanced-ediscovery.md)
 
-- [Tek öğe hatası düzeltmesi](single-item-error-remediation.md)
+- [Tek öğede hata düzeltme](single-item-error-remediation.md)

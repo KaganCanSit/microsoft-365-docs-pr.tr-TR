@@ -1,5 +1,5 @@
 ---
-title: İçerik Arama'da ve diğer eBulma araçlarında kısmen dizine alınan öğeler
+title: İçerik Arama'da kısmen dizine alınan öğeler
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -20,154 +20,154 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: d1691de4-ca0d-446f-a0d0-373a4fc8487b
-description: Takvim ve takvim Exchange SharePoint, çalışma SharePoint bir eBul Microsoft 365 uyumluluk merkezi ma aramalarına ekyebilirsiniz.
-ms.openlocfilehash: b1adfaab1008cdfa9e7893273feaba38a71e85ac
-ms.sourcegitcommit: bb493f12701f6d6ee7d5e64b541adb87470bc7bc
+description: Microsoft Purview uyumluluk portalında çalıştırdığınız bir eBulma aramasında ekleyebileceğiniz Exchange ve SharePoint dizine alınmamış öğeler hakkında bilgi edinin.
+ms.openlocfilehash: 3e4f9521151755f97f3ad4b824c763f3ab5d807f
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "63015486"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64932055"
 ---
-# <a name="partially-indexed-items-in-ediscovery"></a>eBulma'da kısmen dizine alan öğeler
+# <a name="partially-indexed-items-in-ediscovery"></a>eBulma'da kısmen dizine alınan öğeler
 
-Arama sonuçlarından çalıştırmış Microsoft 365 uyumluluk merkezi, bir arama Microsoft 365 uyumluluk merkezi tahmin edilen arama sonuçlarına kısmen dizine alan öğeleri otomatik olarak dahil eder. Kısmen dizine alınan Exchange, SharePoint ve OneDrive İş sitelerinden posta kutusu öğeleriyle belgelerine, bazı nedenlerden dolayı arama için tamamen dizine alınmmış değil. Dizin Exchange kısmen dizine alan bir öğe normalde e-posta iletisine eklenmiş bir dosya (dizine alınamıyor dosya türünde) içerir. Burada, arama için öğelerin dizine alamama ve eBulma aramalarını çalıştırmanızı kısmen dizine alan öğeler olarak döndürül nedenleri ve bunların başka nedenleri vardır:
+Microsoft Purview uyumluluk portalından çalıştırdığınız Bir Microsoft Purview eKeşif araması, bir arama çalıştırdığınızda tahmini arama sonuçlarında otomatik olarak kısmen dizine alınmış öğeler içerir. Kısmen dizine alınan öğeler, SharePoint ve OneDrive İş sitelerindeki posta kutusu öğeleri ve belgeleri Exchange ve herhangi bir nedenle arama için tamamen dizine eklenmedi. Exchange'da, kısmen dizine alınan bir öğe genellikle bir e-posta iletisine eklenmiş bir dosya (dizine alınamaz dosya türünde) içerir. eBulma araması çalıştırdığınızda öğelerin arama için dizine alınamamalarının ve kısmen dizine alınan öğeler olarak döndürüllerinin diğer nedenlerinden bazıları şunlardır:
   
-- Dosya türü dizin oluşturma için tanınmıyor veya desteklenmiyor.
+- Dosya türü tanınmadı veya dizin oluşturma için desteklenmiyor.
 
-- İletilerin resim dosyaları gibi açılamıyor bir ekli dosyası vardır; kısmen dizine alınmış e-posta öğelerinin en yaygın nedeni bu olur.
+- İletilerde görüntü dosyaları gibi açılabilen ekli bir dosya vardır; Bu, kısmen dizine alınan e-posta öğelerinin en yaygın nedenidir.
 
-- Dosya türü dizin oluşturma için destekle birlikte, belirli bir dosya için dizin oluşturma hatası oluştu.
+- Dosya türü dizin oluşturma için desteklenir, ancak belirli bir dosya için dizin oluşturma hatası oluştu.
 
-- E-posta iletisine eklenmiş çok fazla dosya var.
+- E-posta iletisine çok fazla dosya iliştirildi.
 
-- E-posta iletisine eklenen dosya çok büyük.
+- E-posta iletisine eklenmiş bir dosya çok büyük.
 
-- Dosya, Microsoft olmayan teknolojilerle şifrelenir.
+- Dosya Microsoft dışı teknolojilerle şifrelenir.
 
 - Dosya parola korumalıdır.
 
 > [!NOTE]
-> Çoğu kuruluş içerik hacmine göre %1'den aza, kısmen dizine alan boyuta göre %12'den küçük içeriğe sahip olur. Ses düzeyi ile boyut arasındaki farkın nedeni, daha büyük dosyaların tamamen dizine alamayacak içerik içerik olasılığı daha yüksek olmasıdır.
+> Çoğu kuruluşun içeriği birime göre %1'den az, kısmen dizinlenmiş boyuta göre ise %12'den azı vardır. Birim ve boyut arasındaki farkın nedeni, büyük dosyaların tamamen dizine alınamaz içerik içerme olasılığının daha yüksek olmasıdır.
   
-Yasal soruşturmalar için, kuruluşta kısmen dizine alınan öğeleri gözden geçirmesi gerekebilir. Ayrıca, arama sonuçlarını yerel bir bilgisayara dışarı aktarıyorsanız veya sonuçları çözümleme için hazırlarken kısmen dizine alan öğelerin ek isteyip Advanced eDiscovery. Daha fazla bilgi için bkz [. eBulma'da kısmen dizine alınan öğeleri araştırma](investigating-partially-indexed-items-in-ediscovery.md).
+Yasal araştırmalarda kuruluşunuzun kısmen dizine alınan öğeleri gözden geçirmesi gerekebilir. Ayrıca, arama sonuçlarını yerel bir bilgisayara aktarırken veya sonuçları eBulma (Premium) ile analiz için hazırlarken kısmen dizine alınan öğeler eklenip eklenmeyeceğini de belirtebilirsiniz. Daha fazla bilgi için bkz [. eBulma'da kısmen dizine alınan öğeleri araştırma](investigating-partially-indexed-items-in-ediscovery.md).
   
-## <a name="file-types-not-indexed-for-search"></a>Arama için dizine alındı dosya türleri
+## <a name="file-types-not-indexed-for-search"></a>Dosya türleri arama için dizine alınmadı
 
-Bit eşlem veya MP3 dosyaları gibi bazı dosya türleri dizine alanın içerik içermez. Sonuç olarak, Exchange ve SharePoint dosyalarında tam metin dizin oluşturma işlemi gerçekleştirmezler. Bu tür dosyaların desteklenmeyen dosya türleri olduğu kabul edilir. Ayrıca, varsayılan olarak veya yönetici tarafından tam metin dizininin devre dışı bırakılmıştır. Desteklenmeyen ve devre dışı bırakılmış dosya türleri İçerik Aramalarında dizine eksiz öğeler olarak etiketlenmiş. Daha önce de belirtildiği gibi, bir arama çalıştırılan, arama sonuçlarını yerel bir bilgisayara dışarı aktaran veya arama sonuçlarını hazırlarken kısmen dizine alan öğeler, arama sonuçları kümesine Advanced eDiscovery.
+Bit Eşlem veya MP3 dosyaları gibi bazı dosya türleri dizine alınabilecek içerik içermez. Sonuç olarak, Exchange ve SharePoint arama dizin sunucuları bu tür dosyalarda tam metin dizini oluşturma gerçekleştirmez. Bu dosya türleri desteklenmeyen dosya türleri olarak kabul edilir. Tam metin dizini oluşturmanın varsayılan olarak veya yönetici tarafından devre dışı bırakıldığı dosya türleri de vardır. Desteklenmeyen ve devre dışı bırakılan dosya türleri İçerik Aramalarında dizine alınmamış öğeler olarak etiketlenir. Daha önce belirtildiği gibi, bir arama çalıştırdığınızda, arama sonuçlarını yerel bir bilgisayara aktardığınızda veya arama sonuçlarını eBulma (Premium) için hazırladığınızda, kısmen dizine alınmış öğeler arama sonuçları kümesine eklenebilir.
   
-Desteklenen ve devre dışı bırakılmış dosya biçimlerinin listesi için aşağıdaki konulara bakın:
+Desteklenen ve devre dışı bırakılan dosya biçimlerinin listesi için aşağıdaki konulara bakın:
   
--  -  Exchange [Search tarafından dizine alan Exchange biçimleri](/exchange/file-formats-indexed-by-exchange-search-exchange-2013-help)
+-  -  Exchange [Search tarafından dizinlenen Exchange Dosya biçimleri](/exchange/file-formats-indexed-by-exchange-search-exchange-2013-help)
 
 -  -  Exchange [Get-SearchDocumentFormat](/powershell/module/exchange/get-searchdocumentformat)
 
--  -  SharePoint [Default'da gezinilen dosya adı uzantılarını ve ayrıştırıldı dosya türlerini SharePoint](/SharePoint/technical-reference/default-crawled-file-name-extensions-and-parsed-file-types)
+-  -  SharePoint [Default gezinilen dosya adı uzantıları ve SharePoint ayrıştırılmış dosya türleri](/SharePoint/technical-reference/default-crawled-file-name-extensions-and-parsed-file-types)
   
-## <a name="messages-and-documents-with-partially-indexed-file-types-can-be-returned-in-search-results"></a>Kısmen dizine alındı dosya türlerine sahip iletiler ve belgeler arama sonuçlarında döndürül olabilir
+## <a name="messages-and-documents-with-partially-indexed-file-types-can-be-returned-in-search-results"></a>Kısmen dizinlenmiş dosya türlerine sahip iletiler ve belgeler arama sonuçlarında döndürülebilir
 
-Kısmen dizine ekli dosya eki olan veya kısmen dizine alan her e-SharePoint belge, otomatik olarak kısmen dizine alınmış bir öğe olarak döndürülür. Çünkü e-posta iletilerde Konu özelliği ve belgelerin Başlık veya **Yazar** özellikleri dizine alınarak aranma  özelliği kullanılabilir. Örneğin, "financial" anahtar sözcüğü araması, bu anahtar sözcük bir e-posta iletisi konu başlığında ya da bir belgenin dosya adı veya başlığında görünürse, kısmen dizine alındı dosyası ekli öğeleri geri alır. Öte yandan, anahtar sözcük yalnızca dosyanın gövdesinde görünüyorsa, ileti veya belge kısmen dizinelenmiş bir öğe olarak döndürülür.
+Kısmen dizinlenmiş dosya eki olan veya kısmen dizine alınan her SharePoint belge otomatik olarak kısmen dizinlenmiş öğe olarak döndürülmüyor. Bunun nedeni, e-posta iletilerindeki **Konu** özelliği ve belgelerin **Başlık** veya **Yazar** özellikleri gibi diğer ileti veya belge özelliklerinin dizine alınması ve aranmaya uygun olmasıdır. Örneğin, "financial" için anahtar sözcük araması, söz konusu anahtar sözcük bir e-posta iletisinin konusunda veya belgenin dosya adında veya başlığında görünüyorsa, kısmen dizinlenmiş dosya eki olan öğeleri döndürür. Ancak, anahtar sözcük yalnızca dosyanın gövdesinde görünüyorsa, ileti veya belge kısmen dizinlenmiş bir öğe olarak döndürülür.
   
-Benzer şekilde, kısmen dizine alınan dosya ekleri olan iletiler ve kısmen dizine alınan dosya türünün belgeleri, dizine alınan ve aranabilir olan diğer ileti veya belge özellikleri arama ölçütlerine uygun olduğunda, arama sonuçlarına dahil edilir. Arama için dizine alınan ileti özellikleri arasında gönderme ve alındı tarihleri, gönderen ve alıcı, ekin dosya adı ve ileti gövdesine metin yer alır. Arama için dizine alan belge özellikleri, oluşturulma ve değiştirilme tarihlerini içerir. Dolayısıyla, ileti eki kısmen dizine alınan bir öğe olsa bile, diğer iletinin veya belge özelliklerinin değeri arama ölçütleriyle eş görünüyorsa ileti normal arama sonuçlarına dahil edilir.
+Benzer şekilde, dizine alınan ve aranabilen diğer ileti veya belge özellikleri arama ölçütleriyle eşleştiğinde, kısmen dizine eklenmiş dosya ekleri ve kısmen dizinlenmiş dosya türüne sahip belgeler arama sonuçlarına eklenir. Arama için dizine alınan ileti özellikleri arasında gönderilen ve alınan tarihler, gönderen ve alıcı, ekin dosya adı ve ileti gövdesindeki metin bulunur. Arama için dizine alınan belge özellikleri, oluşturulan ve değiştirilen tarihleri içerir. Bu nedenle, ileti eki kısmen dizinlenmiş bir öğe olsa da, diğer iletinin veya belge özelliklerinin değeri arama ölçütleri ile eşleşiyorsa ileti normal arama sonuçlarına eklenir.
   
-EBulma araçlarını kullanarak arayabilirsiniz e-posta ve belge özelliklerinin listesi için Microsoft 365 uyumluluk merkezi bkz. eBulma için anahtar sözcük sorguları ve arama [koşulları](keyword-queries-and-search-conditions.md).
+Uyumluluk portalında eBulma araçlarını kullanarak arayabileceğiniz e-posta ve belge özelliklerinin listesi için bkz. [eBulma için anahtar sözcük sorguları ve arama koşulları](keyword-queries-and-search-conditions.md).
   
 > [!NOTE]
-> Posta kutusu öğesi dizine alınmış klasörden dizine alınmış bir klasörden taşınırsa, öğenin dizinini kaldıracak şekilde bir bayrak ayarlanır ve öğe dizinden kaldırılır ve aranamaz. Daha sonra aynı öğe yeniden dizine alan bir klasöre taşınırsa, bayrak sıfırlanmaz. Bu, öğenin satırsız kalacak ve aranamaz durumda olduğu anlamına gelir.
+> Posta kutusu öğesi dizine alınmamış bir klasörden dizine alınmamış bir klasöre taşınırsa, öğenin dizinini kaldırmak için bir bayrak ayarlanır ve öğe dizinden kaldırılır ve aranamaz. Daha sonra, aynı öğe dizine alınan bir klasöre geri taşınırsa, bayrak sıfırlanmaz. Bu, öğenin dizine alınmamış ve aranamaz kalacağı anlamına gelir.
 
-## <a name="partially-indexed-items-included-in-the-search-results"></a>Arama sonuçlarına kısmen dizine alan öğeler
+## <a name="partially-indexed-items-included-in-the-search-results"></a>Arama sonuçlarına dahil edilen kısmen dizinlenmiş öğeler
 
-Kuruluşta ne olduğunu, ne içerdiğini ve belirli bir araştırmayla ilgili olup olmadığını belirlemek üzere kısmen dizine alan öğeleri tanımlamak ve bunlar üzerinde ek çözümlemeler yapmak gerekebilir. Daha önce de belirtildiği gibi, arama yapılan içerik konumlarında kısmen dizine alan öğeler, tahmini arama sonuçlarına otomatik olarak eklenir. Arama sonuçlarını dışarı aktarıyorsanız veya arama sonuçlarını hazırlarken kısmen dizine alan bu öğeleri Advanced eDiscovery.
+Kuruluşunuzun ne olduğunu, ne içerdiğini ve belirli bir araştırmayla ilgili olup olmadığını belirlemek için kısmen dizinlenmiş öğeleri tanımlaması ve bu öğeler üzerinde ek analiz gerçekleştirmesi gerekebilir. Daha önce açıklandığı gibi, arama yapılan içerik konumlarındaki kısmen dizine alınan öğeler otomatik olarak tahmini arama sonuçlarına eklenir. Arama sonuçlarını dışarı aktarırken veya arama sonuçlarını eBulma (Premium) için hazırlarken bu kısmen dizinlenmiş öğeleri dahil etme seçeneğiniz vardır.
   
-Kısmen dizine alan öğelerle ilgili olarak aşağıdakini unutmayın:
+Kısmen dizine alınan öğeler hakkında aşağıdakileri göz önünde bulundurun:
   
-- eBulma aramanızı çalıştırarak, kısmen dizine alan Exchange öğelerinin (arama sorgusu tarafından döndürülen) toplam sayısı ve boyutu, çıkış sayfasındaki arama istatistiklerinde görüntülenir ve dizine eksiz öğeler olarak **etiketli olur**. Uç öğe sayfasında görüntülenen kısmen dizine alınan öğelerle ilgili istatistikler, özel sitelerde veya SharePoint hesaplarında kısmen dizine OneDrive içermemektedir.
+- Bir eBulma araması çalıştırdığınızda, kısmen dizine alınmış Exchange öğelerinin (arama sorgusu tarafından döndürülen) toplam sayısı ve boyutu açılır sayfadaki arama istatistiklerinde görüntülenir ve **dizinlenmemiş öğeler olarak etiketlenir**. Açılır sayfada görüntülenen kısmen dizinlenmiş öğelerle ilgili istatistikler, SharePoint sitelerde veya OneDrive hesaplarında kısmen dizine alınan öğeleri içermez.
 
-- Sonuçları dışarı aktarıyorsanız arama, belirli içerik konumlarında veya organizasyondaki tüm içerik konumlarında yapılan bir arama ise, yalnızca içerik konumlarından gelen ve arama ölçütleriyle eşleşmesi gereken öğeler içeren, tek tek sayfalık olmayan öğeler dışarı aktarıldı. Başka bir deyişle, bir posta kutusunda veya sitede hiç arama sonucu bulunamıyorsa, bu posta kutusu veya sitedeki tek hiçbirinde olmayan öğeler dışarı aktar olmaz. Bunun nedeni, kuruluşta birçok konumdan kısmen dizine alındı olarak dizine alan öğelerin dışarı aktarma işlemi, dışarı aktarma hataları olasılığını artırabilir ve arama sonuçlarını dışarı aktarma ve indirme için gereken zamanı artıracaktır.
+- Sonuçları dışarı aktardığınız arama belirli içerik konumlarında veya kuruluşunuzdaki tüm içerik konumlarında yapılan bir aramaysa, yalnızca içerik konumlarından arama ölçütlerine uyan öğeleri içeren dizine alınmamış öğeler dışarı aktarılır. Başka bir deyişle, bir posta kutusunda veya sitede arama sonucu bulunamazsa, bu posta kutusu veya sitedeki dizine alınmamış öğeler dışarı aktarılmaz. Bunun nedeni, kuruluştaki birçok konumdan kısmen dizine alınan öğeleri dışarı aktarmanın dışarı aktarma hataları olasılığını artırabileceği ve arama sonuçlarını dışarı aktarmak ve indirmek için gereken süreyi artırabileceğidir.
 
-    Kısmen dizine alınan öğeleri aramanın tüm içerik konumlarından dışarı aktarma için, aramanızı tüm öğeleri sonuç olarak geri dönecek şekilde yapılandırın (arama sorgusundan tüm anahtar sözcükleri kaldırarak) ve ardından arama sonuçlarını dışarı aktarıldığında yalnızca kısmen dizine alınan öğeleri dışarı aktarın (Yalnızca tanınmayan biçime sahip öğeler'e tıklayarak **,** Çıktı seçenekleri'nin altında şifrelenmiş veya dizine eklenmemiş diğer nedenlerden **dolayı).**
+    Aramanın tüm içerik konumlarından kısmen dizinlenmiş öğeleri dışarı aktarmak için, aramayı tüm öğeleri döndürecek şekilde yapılandırın (arama sorgusundan anahtar sözcükleri kaldırarak) ve ardından arama sonuçlarını dışarı aktardığınızda (**Yalnızca tanınmayan biçime sahip olan, şifrelenen veya Çıkış seçenekleri altında başka nedenlerle dizine eklenemeyen öğeler'e** tıklayarak) yalnızca kısmen dizine alınan öğeleri dışarı aktarın.
 
-- Arama sonuçlarına tüm posta kutusu öğelerini dahil etme seçeneğini kullanırsanız veya arama sorgusu hiçbir anahtar sözcük belirtmezseniz veya yalnızca bir tarih aralığı belirtirse, kısmen dizine alınan öğeler kısmen dizine alınan öğeleri içeren PST dosyasına kopyalanamaz. Bunun nedeni, kısmen dizine alınan öğeler de dahil olmak üzere tüm öğelerin normal arama sonuçlarına otomatik olarak dahil olmasıdır.
+- Arama sonuçlarına tüm posta kutusu öğelerini eklemeyi seçerseniz veya arama sorgusu herhangi bir anahtar sözcük belirtmezse veya yalnızca bir tarih aralığı belirtirse, kısmen dizine alınmış öğeler kısmen dizinlenmiş öğeleri içeren PST dosyasına kopyalanamayabilir. Bunun nedeni, kısmen dizine alınan öğeler de dahil olmak üzere tüm öğelerin otomatik olarak normal arama sonuçlarına dahil edilmesidir.
 
-- Kısmen dizine alan öğeler önizleme için kullanılamaz. Arama tarafından döndürülen kısmen dizine alındı öğeleri görüntülemek için arama sonuçlarını dışarı aktarmalısiniz.
+- Kısmen dizine alınan öğeler önizleme için kullanılamaz. Arama tarafından döndürülen kısmen dizine alınan öğeleri görüntülemek için arama sonuçlarını dışarı aktarmanız gerekir.
 
-   Buna ek olarak, arama sonuçlarını dışarı aktarıyor ve dışarı aktarmada kısmen dizine alan öğeler de dahil SharePoint dizine alan öğeler, "**Uncrawlable" adlı bir klasöre dışarı aktarılabilir**. Kısmen dizine sahip öğeleri Exchange, kısmen dizine alan öğelerin arama sorgusuyla ve dışarı aktarma ayarlarının yapılandırmasıyla eşleşmese de bunlar farklı şekilde dışarı aktarıldı. 
+   Buna ek olarak, arama sonuçlarını dışarı aktardığınızda ve dışarı aktarmaya kısmen dizinlenmiş öğeler eklediğinizde, SharePoint öğelerden kısmen dizine alınan öğeler **Gezinilemez** adlı bir klasöre aktarılır. Kısmen dizinlenmiş Exchange öğelerini dışarı aktardığınızda, kısmen dizine alınan öğelerin arama sorgusuyla eşleşip eşleşmediğine ve dışarı aktarma ayarlarının yapılandırmasına bağlı olarak bunlar farklı şekilde dışarı aktarılır. 
 
-- Aşağıdaki tablo, dizinli ve kısmen dizine alan öğelerin dışarı aktarma davranışını ve her öğenin farklı dışarı aktarma yapılandırma ayarlarına ekli olup olmadığını gösterir.
+- Aşağıdaki tabloda, dizine alınan ve kısmen dizine alınan öğelerin dışarı aktarma davranışı ve her birinin farklı dışarı aktarma yapılandırma ayarlarına dahil edilip edilmediği gösterilir.
 
-  |**Yapılandırmayı dışarı aktarma**|**Arama sorgusuyla eşan dizine alındı**|**Arama sorgusuyla eşan, kısmen dizine alan öğeler**|**Arama sorgusuyla eşleşmeen kısmen dizine alındı**|
+  |**Yapılandırmayı dışarı aktarma**|**Arama sorgusuyla eşleşen dizine alınan öğeler**|**Arama sorgusuyla eşleşen kısmen dizine alınan öğeler**|**Arama sorgusuyla eşleşmeyen kısmen dizine alınan öğeler**|
   |:-----|:-----|:-----|:-----|
-  |Yalnızca dizine alındı öğeleri dışarı aktarma  <br/> |Dışarı aktarıldı<br/> |Dışarı aktarıldı (dışarı aktaran dizine sahip öğelerle birlikte)<br/>  |Dışarı aktarıldı <br/>|
-  |Yalnızca kısmen dizine alan öğeleri dışarı aktarma  <br/> |Dışarı aktarıldı  <br/> |Dışarı aktarıldı (kısmen dizine alındı olarak)<br/> |Dışarı aktarıldı (kısmen dizine alındı olarak)|
-  |Dizine alındı ve kısmen dizine alındı öğeleri dışarı aktarma  <br/> |Dışarı aktarıldı<br/> |Dışarı aktarıldı (dışarı aktaran dizine sahip öğelerle birlikte)<br/>  |Dışarı aktarıldı (kısmen dizine alındı olarak)<br/>|
+  |Yalnızca dizine alınan öğeleri dışarı aktarma  <br/> |Verilen<br/> |Dışarı aktarıldı (dışarı aktarılan dizine alınan öğelere dahildir)<br/>  |Dışarı aktarılmadı <br/>|
+  |Yalnızca kısmen dizine alınan öğeleri dışarı aktarma  <br/> |Dışarı aktarılmadı  <br/> |Dışarı aktarıldı (kısmen dizinlenmiş öğeler olarak)<br/> |Dışarı aktarıldı (kısmen dizinlenmiş öğeler olarak)|
+  |Dizine alınan ve kısmen dizine alınan öğeleri dışarı aktarma  <br/> |Verilen<br/> |Dışarı aktarıldı (dışarı aktarılan dizine alınan öğelere dahildir)<br/>  |Dışarı aktarıldı (kısmen dizinlenmiş öğeler olarak)<br/>|
   ||||
   
-## <a name="workaround-for-using-a-date-range-to-exclude-partially-indexed-items"></a>Kısmen dizine alınmamış öğeleri dışarıda tutmak için tarih aralığı kullanmak için geçici çözüm
+## <a name="workaround-for-using-a-date-range-to-exclude-partially-indexed-items"></a>Kısmen dizine alınmış öğeleri dışlamak için tarih aralığı kullanmak için geçici çözüm
 
-İçerik arama ve Çekirdek eKbulma'da, kısmen dizine alan öğelerin arama sorgusu tarafından döndürülerek hariç tutulacak şekilde tarih aralığını kullanamayabilirsiniz. Başka bir deyişle, tarih aralığının dışından düşen kısmen dizine alınan öğeler, arama istatistiklerine kısmen dizine alınan öğeler olarak ve kısmen dizine alınan öğeleri dışarı aktarıyor olun. Bu Advanced eDiscovery, arama sorgusunda tarih aralığı kullanarak kısmen dizine alan öğeleri hariç tutabilirsiniz.
+İçerik arama ve Microsoft Purview eBulma (Standart) bölümünde, kısmen dizine alınmış öğelerin arama sorgusu tarafından döndürülmekten dışlanması için tarih aralığını kullanamazsınız. Başka bir deyişle, bir tarih aralığının dışında kalan kısmen dizinlenmiş öğeler, arama istatistiklerine kısmen dizinlenmiş öğeler olarak ve kısmen dizinlenmiş öğeleri dışarı aktardığınızda da dahil edilir. eBulma'da (Premium), arama sorgusunda bir tarih aralığı kullanarak kısmen dizine alınmış öğeleri dışlayabilirsiniz.
 
-Bu sınırlamaya geçici bir çözüm olarak aşağıdaki yordamı öneririz.
+Bu sınırlama için geçici bir çözüm olarak aşağıdaki yordamı öneririz.
 
-1. Gereksinimlerinizi karşılayacak ve istenen sonuçları döndüren bir arama sorgusu kullanarak arama oluşturun ve çalıştırın.
+1. Gereksinimlerinizi karşılayan ve istenen sonuçları döndüren bir arama sorgusu kullanarak arama oluşturun ve çalıştırın.
 
-2. 1. adımda arama sonuçlarını dışarı aktarın, ancak dışarı aktarmaya kısmen dizine ekli öğeleri dahil etme. Bunu yapmak için, tanınmayan biçime sahip olanlar, şifrelenmiş veya dizine henüz dizine almamış olanlar hariç olmak üzere Tüm **öğeler'i** seçmeniz gerekir. <sup>1</sup>
+2. 1. adımdaki aramanın sonuçlarını dışarı aktarın, ancak dışarı aktarma işlemine kısmen dizine alınan öğeleri eklemeyin. Bunu yapmak için, **Tanınmayan biçime sahip olanlar hariç tüm öğeler şifrelenir veya başka nedenlerle dizine eklenmemiş** olan tüm öğeler dışarı aktarma seçeneğini belirleyebilirsiniz. <sup>1</sup>
 
-   ![Çıkış seçeneklerini dışarı aktarma.](../media/ExportOutputOptions.png)
+   ![Çıkış seçeneklerini dışarı aktarın.](../media/ExportOutputOptions.png)
 
-3. 1. adımda aynı arama sorgusunu kullanan (ve aynı konumlarda aramalar) kullanan ikinci bir arama oluşturun ve çalıştırın. AND işlecini kullanarak aşağıdaki yan tümceyi özgün **sorguya** ekler:
+3. 1. adımda kullandığınız aynı arama sorgusunu (ve aynı konumları arar) kullanan ikinci bir arama oluşturun ve çalıştırın. **AND** işlecini kullanarak özgün sorguya aşağıdaki yan tümceyi ekleyin:
 
    ```text
    <original query> AND ((IndexingErrorCode>0 OR IndexingErrorCode<0) AND sent:date1..date2)
    ```
 
-   Bu yan tümce ek getirerek, özgün arama sorgunuzla ve belirli bir tarih aralığı içinde yer alan kısmen dizine alındı öğeleri döner. <sup>2</sup>
+   Bu yan tümcenin eklenmesi, özgün arama sorgunuzla eşleşen ve belirli bir tarih aralığında yer alan kısmen dizinlenmiş öğeler döndürür. <sup>2</sup>
 
-4. 3. adımda arama sonuçlarını dışarı aktarın ve bu kez dışarı aktarmada kısmen dizine alındı öğeleri içerir. Bunu yapmak için, Tanınmayan biçime sahip olanlar, şifrelenmiş veya dizine henüz dizine almamış olanlar da dahil olmak üzere tüm öğeler öğesini seçerek dışarı **aktarma seçeneğini** belirtin.
+4. 3. adımdaki aramanın sonuçlarını dışarı aktarın ve bu kez dışarı aktarma işlemine kısmen dizine alınan öğeleri ekleyin. Bunu yapmak için, **tanınmayan biçime sahip olanlar da dahil olmak üzere Tüm öğeler şifrelenir veya diğer nedenlerle dışarı aktarma seçeneği dizine eklenmez** .
 
    > [!NOTE]
-   > <sup>1</sup> 2. adımın çıkışı yalnızca dizine alındı öğeleri dışarı aktarmayla sonuç verir.<br/>
-   > <sup>2</sup> 3. adımda kullanılan koşul yalnızca belirtilen tarih aralığı içinde olan dizin oluşturma hatalarına sahip öğeleri tanımlar. Tümüyle dizine alınan hiçbir öğe geri dönmez. Bu, 4. adımda dışarı aktar geçen öğelerin yalnızca tarih aralığı içinde yer alan, tekinde olmayan öğeleri içermesi anlamına gelir. Dışarı aktarma, dizine alındı öğeleri içermez. Sonuç olarak, 2. ve 4. adımın birleştirilmiş çıktısı, belirtilen tarih aralığı içinde bulunan dizine alındı ve dizine eksiz tüm öğeleri içerir.
+   > <sup>1</sup> 2. adımın çıkışı yalnızca dizine alınan öğelerin dışarı aktarılmasıyla sonuçlanır.<br/>
+   > <sup>2</sup> 3. adımda kullanılan koşul yalnızca belirtilen tarih aralığındaki dizin oluşturma hatalarına sahip öğeleri tanımlar. Tamamen dizine alınan hiçbir öğe döndürmez. Bu, 4. adımda dışarı aktarılan öğelerin yalnızca tarih aralığında yer alan dizinlenmemiş öğeleri içerdiği anlamına gelir. Dışarı aktarma işlemi dizine alınan öğeleri içermez. Sonuç olarak, 2. ve 4. adımın birleşik çıkışı, belirtilen tarih aralığındaki tüm dizinlenmiş ve dizinlenmemiş öğeleri içerir.
 
-İlk arama sorgunuzla kısmen dizine oluşturulmuş öğeleri görüntülemek ve anlamak için, 3. adımda oluşturduğunuz ikinci arama ve karşılık gelen dışarı aktarmayı kullanın. İkinci aramadan dışarı aktarma, gerekirse gözden geçirebilirsiniz ve böylece dışarı aktarmış kısmen dizine alınmış tüm öğeleri de içerir.
+3. adımda oluşturduğunuz ikinci aramayı ve karşılık gelen dışarı aktarmayı kullanarak özgün arama sorgunuzla eşleşen kısmen dizine alınan öğeleri görüntüleyin ve öğrenin. İkinci aramadan dışarı aktarma işlemi, gerekirse bunları gözden geçirebilmeniz için dışarı aktarılan kısmen dizine alınan tüm öğeleri de içerir.
 
 > [!TIP]
-> Önceki yordamda, gerçek arama sonuçlarını dışarı aktarabilirsiniz veya yalnızca raporu dışarı aktarabilirsiniz.
+> Önceki yordamda, gerçek arama sonuçlarını dışarı aktarabilir veya yalnızca bir raporu dışarı aktarabilirsiniz.
 
 ## <a name="indexing-limits-for-messages"></a>İletiler için dizin oluşturma sınırları
 
-Aşağıdaki tabloda, e-posta iletisinin, Microsoft 365'te eBulma aramada kısmen dizine alınmış bir öğe olarak döndürülebilir olmasıyla sonuçlandıracak dizin oluşturma sınırları Microsoft 365.
+Aşağıdaki tabloda, e-posta iletisinin Microsoft 365'daki bir eBulma aramasında kısmen dizinlenmiş bir öğe olarak döndürülüp döndürülebileceği dizin oluşturma sınırları açıklanmaktadır.
   
-Belgeleriniz için dizin oluşturma sınırlarının listesi SharePoint bkz[. SharePoint Online için arama sınırları](/sharepoint/search-limits).
+SharePoint belgeler için dizin oluşturma sınırlarının listesi için bkz[. SharePoint Online için arama sınırları](/sharepoint/search-limits).
   
 |**Dizin oluşturma sınırı**|**En büyük değer**|**Açıklama**|
 |:-----|:-----|:-----|
-|En fazla ek boyutu (dosyalar Excel)  <br/> |150 MB  <br/> |Dizin oluşturma için ayrıştıracak en büyük e-posta eki boyutu. Bu sınırdan büyük olan hiçbir ek dizin oluşturma için ayrıştırılamaz ve ekin olduğu ileti kısmen dizine alındı olarak işaretlenir.  <br/><br/> **Not:** Ayrıştırma, dizin oluşturma hizmetinin ekten metni ayıklar, noktalama işaretleri ve boşluklar gibi gereksiz karakterleri kaldıran ve sonra metni, daha sonra dizinde depolanan sözcüklere bölen (belirteç oluşturma adı verilen bir işlemde) süreçtir.           |
-|En fazla Excel boyutu  <br/> |4 MB  <br/> |Bir sitede yer alan Excel e-posta iletisine eklenen ve dizin oluşturma için ayrıştıracak bir dosya boyutu için üst boyut. Bu Excel büyük olan hiçbir dosya ayrıştırımayacak ve dosya veya ekin olduğu e-posta iletisi, ekinde olmayan olarak işaretlenir.  <br/> |
-|En fazla ek sayısı  <br/> |250  <br/> |Dizin oluşturma için ayrıştıracak e-posta iletisine eklenen dosya sayısı üst sayısı. Bir iletide 250'den fazla ek varsa, ilk 250 ek ayrıştırıldı ve dizine alındı; ileti, ayrıştırnmış olan başka ekler de olduğundan kısmen dizine alındı olarak işaretlenir.  <br/> |
-|En fazla ek derinliği  <br/> |30  <br/> |Ayrıştırıla en fazla iç içe ek sayısı. Örneğin, e-posta iletisine eklenmiş başka bir ileti varsa ve bu iletide de ek olarak bir Word belgesi varsa, Word belgesi ve ekli ileti dizine alır. İç içe 30 eke kadar bu davranış devam eder.  <br/> |
-|En fazla ekli resim sayısı  <br/> |0  <br/> |E-posta iletisine eklenmiş olan resim ayrıştırıcı tarafından atlanır ve dizine alınmz.  <br/> |
-|Öğeyi ayrıştırmak için harcanan en fazla zaman  <br/> |30 saniye  <br/> |Bir öğeyi dizin oluşturma için ayrıştırmak için en fazla 30 saniye harcandı. Ayrıştırma süresi 30 saniyeyi aşarsa, öğe kısmen dizine alındı olarak işaretlenir.  <br/> |
-|En fazla ayrıştırıcı çıktısı  <br/> |2 milyon karakter  <br/> |Ayrıştırıcıdan gelen metin çıktılarından dizine alan en yüksek miktardır. Örneğin, ayrıştırıcı bir belgeden 8 milyon karakter ayıklamışsa, yalnızca ilk 2 milyon karakter dizine alındı.  <br/> |
-|En fazla ek açıklama belirteci  <br/> |2 milyon  <br/> |E-posta iletisi dizine alınca, her söz ek açıklamayla birlikte bu sözcüğün nasıl dizine alın olacağını belirten farklı işleme yönergeleri ek açıklamalır. Her işleme yönergeleri kümesine ek açıklama belirteci denir. Bir e-posta iletisinde Office 365 kalitesini korumak için, bir e-posta iletisinde 2 milyon ek açıklama belirteci sınırı vardır.  <br/> |
-|Dizinde en büyük gövde boyutu  <br/> |67 milyon karakter  <br/> |E-posta iletisi gövdesiyle tüm eklerinin toplam karakter sayısı. E-posta iletisi dizine alınca, iletinin gövdesinde ve tüm eklerde yer alan metnin hepsi tek bir dizede bir biri haline gönderilir. Dizine alan bu dizenin boyut üst değeri 67 milyon karakterdir.  <br/> |
-|Gövdede en fazla benzersiz belirteç sayısı  <br/> |1 milyon  <br/> |Daha önce de açıklandığı gibi, belirteçler içerikten metnin ayıklanır, noktalama işaretleriyle boşlukların kaldırılması ve dizinde depolanan sözcüklere (belirteç adı verilen sözcüklere) bölünmesi sonucu elde edilir. Örneğin, tümcecik  `"cat, mouse, bird, dog, dog"` 5 belirteç içerir. Ama bunların yalnızca 4'ü benzersiz belirteçtir. E-posta iletisi başına 1 milyon benzersiz belirteç sınırı vardır ve bu sınır dizinin rastgele belirteçlerle çok fazla fazla şey oluşturmasını engellemeye yardımcı olur.  <br/> |
+|En büyük ek boyutu (Excel dosyaları hariç)  <br/> |150 MB  <br/> |Dizin oluşturma için ayrıştırılacak bir e-posta ekinin en büyük boyutu. Bu sınırdan daha büyük olan ekler dizin oluşturma için ayrıştırılamaz ve eki içeren ileti kısmen dizinlenmiş olarak işaretlenir.  <br/><br/> **Not:** Ayrıştırma, dizin oluşturma hizmetinin ekten metin ayıkladığı, noktalama işaretleri ve boşluklar gibi gereksiz karakterleri kaldırdığı ve ardından metni daha sonra dizinde depolanan sözcüklere (belirteç oluşturma adı verilen bir işlemde) böldüğü işlemdir.           |
+|en büyük Excel dosya boyutu  <br/> |4 MB  <br/> |Bir sitede bulunan veya dizin oluşturma için ayrıştırılacak bir e-posta iletisine eklenmiş bir Excel dosyasının en büyük boyutu. Bu sınırdan daha büyük Excel dosyalar ayrıştırılmaz ve dosya eki içeren ileti veya e-posta dizinlenmemiş olarak işaretlenir.  <br/> |
+|En fazla ek sayısı  <br/> |250  <br/> |Dizin oluşturma için ayrıştırılacak bir e-posta iletisine eklenen dosya sayısı üst sınırı. İletinin 250'den fazla eki varsa, ilk 250 ek ayrıştırılır ve dizine eklenir ve ayrıştırılmamış ekleri olduğundan ileti kısmen dizinlenmiş olarak işaretlenir.  <br/> |
+|En fazla ek derinliği  <br/> |30  <br/> |Ayrıştırılan iç içe ek sayısı üst sınırı. Örneğin, e-posta iletisine başka bir ileti ekliyse ve ekli iletide ekli bir Word belgesi varsa, Word belgesi ve ekli ileti dizine eklenir. Bu davranış en fazla 30 iç içe ek için devam eder.  <br/> |
+|Ekli görüntü sayısı üst sınırı  <br/> |0  <br/> |E-posta iletisine eklenmiş bir resim ayrıştırıcı tarafından atlanır ve dizine eklenmez.  <br/> |
+|Öğe ayrıştırma için harcanan en uzun süre  <br/> |30 saniye  <br/> |Bir öğeyi dizin oluşturmak için ayrıştırma için en fazla 30 saniye harcanıyor. Ayrıştırma süresi 30 saniyeyi aşarsa, öğe kısmen dizinlenmiş olarak işaretlenir.  <br/> |
+|En fazla ayrıştırıcı çıkışı  <br/> |2 milyon karakter  <br/> |Dizine alınan ayrıştırıcıdan elde edilen en fazla metin çıkışı miktarı. Örneğin, ayrıştırıcı bir belgeden 8 milyon karakter ayıkladıysa, yalnızca ilk 2 milyon karakter dizine eklenir.  <br/> |
+|En fazla ek açıklama belirteci  <br/> |2 milyon  <br/> |Bir e-posta iletisi dizine alındığında, her sözcük, söz konusu sözcüğün nasıl dizinleneceğini belirten farklı işleme yönergeleriyle ek açıklama ekler. Her işleme yönergeleri kümesi ek açıklama belirteci olarak adlandırılır. Office 365'da hizmet kalitesini korumak için e-posta iletisi için 2 milyon ek açıklama belirteci sınırı vardır.  <br/> |
+|Dizindeki en büyük gövde boyutu  <br/> |67 milyon karakter  <br/> |E-posta iletisinin gövdesindeki toplam karakter sayısı ve tüm ekleri. Bir e-posta iletisi dizine alındığında, iletinin gövdesindeki ve tüm eklerdeki tüm metinler tek bir dizede birleştirilir. Dizine alınan bu dizenin en büyük boyutu 67 milyon karakterdir.  <br/> |
+|Gövdedeki en büyük benzersiz belirteç sayısı  <br/> |1 milyon  <br/> |Daha önce açıklandığı gibi belirteçler, içerikten metin ayıklamanın, noktalama işaretlerini ve boşlukları kaldırmanın ve ardından dizinde depolanan sözcüklere (belirteç olarak adlandırılır) bölünmesinin sonucu olur. Örneğin, tümcecik  `"cat, mouse, bird, dog, dog"` 5 belirteç içerir. Ancak bunların yalnızca 4'ünün benzersiz belirteçleri vardır. E-posta iletisi başına 1 milyon benzersiz belirteç sınırı vardır ve bu da dizinin rastgele belirteçlerle fazla büyük olmasını önlemeye yardımcı olur.  <br/> |
 ||||
 
 ## <a name="more-information-about-partially-indexed-items"></a>Kısmen dizine alınan öğeler hakkında daha fazla bilgi
 
-- Daha önce de belirtildiği gibi, ileti ve belge özellikleri ve meta verileri dizine alındıklarından, bir anahtar sözcük araması dizine alındı meta verilerinde bu anahtar sözcük görünürse sonuç verir. Öte yandan, anahtar sözcük yalnızca desteklenmeyen dosya türüne sahip bir öğenin içeriğinde görünüyorsa, aynı anahtar sözcük araması aynı öğeyi geri dönmez. Bu durumda, öğe kısmen dizine alan bir öğe olarak döndürülür.
+- Daha önce belirtildiği gibi, ileti ve belge özellikleri ve meta verileri dizine alındığından, bu anahtar sözcük dizine alınan meta verilerde görünürse bir anahtar sözcük araması sonuç döndürebilir. Ancak, anahtar sözcük yalnızca desteklenmeyen bir dosya türüne sahip bir öğenin içeriğinde görünüyorsa, aynı anahtar sözcük araması aynı öğeyi döndürmeyebilir. Bu durumda, öğe kısmen dizinlenmiş bir öğe olarak döndürülür.
 
-- Arama sorgusu ölçütleriyle eşleşmesi nedeniyle kısmen dizine alan bir öğe arama sonuçlarına dahil edilirse, bu öğe, tahmini arama istatistiklerinde kısmen dizine alan bir öğe olarak dahil edilir. Ayrıca, arama sonuçlarını dışarı aktararak kısmen dizine alan öğelere dahil de değildir.
+- Arama sonuçlarına arama sorgusu ölçütleriyle eşleştiğinden kısmen dizinlenmiş bir öğe dahil edilirse, tahmini arama istatistiklerine kısmen dizinlenmiş bir öğe olarak dahil edilmeyecektir. Ayrıca, arama sonuçlarını dışarı aktardığınızda kısmen dizine alınan öğelere dahil edilmeyecektir.
 
-- Bir dosya türü dizin oluşturma için desteklese ve dizine alındı olsa da, bir dosyanın kısmen dizine alındı öğesi olarak döndürül olmasına neden olacak dizin oluşturma veya arama hataları olabilir. Örneğin, büyük bir Excel arama işlemi kısmen başarılı olabilir (ilk 4 MB dizine alındı), ancak dosya boyutu sınırı aşılırken başarısız olabilir. Bu durumda, aynı dosyanın arama sonuçlarıyla birlikte kısmen dizine alındı öğesi olarak döndürül olması mümkündür.
+- Dizin oluşturma için bir dosya türü desteklense ve dizine alınsa da, bir dosyanın kısmen dizinlenmiş bir öğe olarak döndürülmesine neden olacak dizin oluşturma veya arama hataları olabilir. Örneğin, büyük bir Excel dosyasında arama kısmen başarılı olabilir (ilk 4 MB dizine eklendiğinden), ancak dosya boyutu sınırı aşıldığından başarısız olabilir. Bu durumda, arama sonuçlarıyla birlikte ve kısmen dizinlenmiş bir öğe olarak aynı dosya döndürülür.
 
-- Microsoft şifreleme teknolojileriyle [şifrelenen ve](encryption.md) bir aramanın ölçütlerine uyan bir e-posta iletisine eklenen dosyalar önizlemede 2'sinde önizlenir ve dışarı aktarıldıklarında şifreleri çözüler. Şu anda Microsoft şifreleme teknolojileriyle şifrelenmiş dosyalar (ve SharePoint veya OneDrive İş) kısmen dizine kaydedilir.
+- [Microsoft şifreleme teknolojileriyle](encryption.md) şifrelenen ve arama ölçütleriyle eşleşen bir e-posta iletisine eklenen dosyalar önizlemeye eklenebilir ve dışarı aktarıldığında şifresi çözülür. Şu anda, Microsoft şifreleme teknolojileriyle şifrelenmiş (ve SharePoint veya OneDrive İş içinde depolanan) dosyalar kısmen dizine alınır.
 
-- S/MIME ile şifrelenmiş e-posta iletileri kısmen dizine alır. Bu, dosya ekleri olan veya olmayan şifreli iletileri içerir.
+- S/MIME ile şifrelenen e-posta iletileri kısmen dizine eklenir. Bu, dosya ekleri olan veya olmayan şifrelenmiş iletileri içerir.
 
-- Azure Hak Yönetimi kullanılarak korunan e-posta iletileri dizine alır ve arama sorgusuyla eşlerise arama sonuçlarına dahil edilir. Hak korunan e-posta iletilerinin şifresi çözülmüş olur ve önizlemesi 2'ye sısır ve dışarı aktarabilirsiniz. Bu işlev için, eBulma Yöneticisi rol grubuna varsayılan olarak atanan RMS Şifre Çözme rolüne atanmış olması gerekir.
+- Azure Rights Management kullanılarak korunan e-posta iletileri dizine alınır ve arama sorgusuyla eşleşiyorsa arama sonuçlarına eklenir. Hak korumalı e-posta iletilerinin şifresi çözülür ve önizlenebilir ve dışarı aktarılabilir. Bu işlev, varsayılan olarak eBulma Yöneticisi rol grubuna atanan RMS Şifre Çözme rolüne atanmanızı gerektirir.
 
-- eBulma durumuyla ilişkilendirilmiş sorgu tabanlı bir tutma oluşturursanız, kısmen dizine alınan tüm öğeler ayrı tutunr. Bu, tutma için arama sorgu ölçütleriyle eşleşmeen kısmen dizine alındı öğeleri içerir. Sorgu tabanlı eK bulma tutmaları oluşturma hakkında daha fazla bilgi için bkz [. eBulma tutma oluşturma](create-ediscovery-holds.md).
+- eBulma olayıyla ilişkili sorgu tabanlı bir ayrı tutma oluşturursanız, kısmen dizine alınan tüm öğeler beklemeye alınır. Bu, ayrı tutma için arama sorgusu ölçütleri ile eşleşmeyen kısmen dizine alınan öğeleri içerir. Sorgu tabanlı eBulma tutmaları oluşturma hakkında daha fazla bilgi için bkz. [eBulma ayrı tutması oluşturma](create-ediscovery-holds.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[eBulma'da kısmen dizine alan öğeleri inceleme](investigating-partially-indexed-items-in-ediscovery.md)
+[eBulma'da kısmen dizine alınan öğeleri araştırma](investigating-partially-indexed-items-in-ediscovery.md)

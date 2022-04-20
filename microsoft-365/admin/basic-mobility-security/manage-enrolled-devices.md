@@ -19,18 +19,18 @@ ms.custom:
 search.appverid:
 - MET150
 description: Temel Mobilite ve Güvenlik, kuruluşunuzun mobil cihazlarının güvenliğini sağlamanıza ve yönetmenize yardımcı olabilir.
-ms.openlocfilehash: 02c8efbed8f781dfdb0e9abfaa2af3a2c92733ff
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: f2da9a20c496d5229d62e477fcf4cc0024436788
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64780819"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64935247"
 ---
 # <a name="manage-devices-enrolled-in-mobile-device-management-in-microsoft-365"></a>Microsoft 365'da Mobil Cihaz Yönetimi kayıtlı cihazları yönetme
 
 Microsoft 365 için yerleşik mobil cihaz yönetimi, kullanıcılarınızın iPhone, iPad, Android ve Windows telefonlar gibi mobil cihazlarının güvenliğini sağlamanıza ve yönetmenize yardımcı olur. İlk adım, Microsoft 365 oturum açmak ve Basic Mobility and Security'yi ayarlamaktır. Daha fazla bilgi için bkz. [Basic Mobility ve Security'yi ayarlama](set-up.md).
 
-Bunu ayarladıktan sonra, kuruluşunuzdaki kişilerin cihazlarını hizmete kaydetmesi gerekir. Daha fazla bilgi için bkz. [Mobil cihazınızı Temel Hareketlilik ve Güvenlik kullanarak kaydettirin](enroll-your-mobile-device.md). Ardından, kuruluşunuzdaki cihazları yönetmenize yardımcı olması için Basic Mobility ve Security'yi kullanabilirsiniz. Örneğin, e-posta erişimini veya diğer hizmetleri sınırlamaya, cihaz raporlarını görüntülemeye ve bir cihazı uzaktan temizlemeye yardımcı olmak için cihaz güvenlik ilkelerini kullanabilirsiniz. Bu görevleri gerçekleştirmek için genellikle Güvenlik & Uyumluluk Merkezi'ne gidersiniz. Daha fazla bilgi için bkz. [Microsoft 365 uyumluluk merkezi](../../compliance/microsoft-365-compliance-center.md).
+Bunu ayarladıktan sonra, kuruluşunuzdaki kişilerin cihazlarını hizmete kaydetmesi gerekir. Daha fazla bilgi için bkz. [Mobil cihazınızı Temel Hareketlilik ve Güvenlik kullanarak kaydettirin](enroll-your-mobile-device.md).Ardından, kuruluşunuzdaki cihazları yönetmenize yardımcı olması için Basic Mobility ve Security'yi kullanabilirsiniz. Örneğin, e-posta erişimini veya diğer hizmetleri sınırlamaya, cihaz raporlarını görüntülemeye ve bir cihazı uzaktan temizlemeye yardımcı olmak için cihaz güvenlik ilkelerini kullanabilirsiniz. Bu görevleri gerçekleştirmek için genellikle Güvenlik & Uyumluluk Merkezi'ne gidersiniz. Daha fazla bilgi için bkz. [Microsoft Purview uyumluluk portalı](../../compliance/microsoft-365-compliance-center.md).
 
 ## <a name="device-management-tasks"></a>Cihaz yönetimi görevleri
 

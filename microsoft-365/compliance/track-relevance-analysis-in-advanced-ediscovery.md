@@ -1,5 +1,5 @@
 ---
-title: İlgi Derecesi çözümlemesi Advanced eDiscovery
+title: eBulma'da İlgi analizini izleme (Premium)
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -16,154 +16,154 @@ search.appverid:
 - MET150
 ms.assetid: 3ab1e2c3-28cf-4bf5-b0a8-c0222f32bdf5
 ROBOTS: NOINDEX, NOFOLLOW
-description: İlgi Düzeyi eğitim durumunu görüntülemeyi ve yorumlamayı ve bu konu ile ilgili olay sorunlarına Advanced eDiscovery.
-ms.openlocfilehash: 7a2786a727fd233b6617779bae95a26c1b62644e
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: eBulma'daki (Premium) durum sorunları için İlgi eğitim durumunu ve sonuçlarını görüntülemeyi ve yorumlamayı öğrenin.
+ms.openlocfilehash: 53f1fa12849651cd01172a320eaa014614634e92
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62984686"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64935532"
 ---
-# <a name="track-relevance-analysis-in-advanced-ediscovery"></a>İlgi Derecesi çözümlemesi Advanced eDiscovery
+# <a name="track-relevance-analysis-in-ediscovery-premium"></a>eBulma'da İlgi analizini izleme (Premium)
   
-İlgi Advanced eDiscovery sekmesinde, İlgi Düzeyi İzle sekmesi Etiket sekmesinde gerçekleştirilen İlgi Düzeyi eğitimi'nin hesaplanan geçerliliğini görüntüler ve İlgi Düzeyi'ne uygun eğitim sürecinde atlanacak bir sonraki adımı gösterir. 
+Microsoft Purview eBulma'da (Premium), İlgi İzleme sekmesi Etiket sekmesinde gerçekleştirilen İlgi eğitiminin hesaplanmış geçerliliğini görüntüler ve İlgi alanındaki yinelemeli eğitim sürecinde atılması gereken sonraki adımı gösterir. 
   
-## <a name="tracking-relevance-training-status"></a>İlgi Düzeyi eğitim durumunu izleme
+## <a name="tracking-relevance-training-status"></a>İlgi eğitim durumunu izleme
 
-1. Aşağıdaki Sorun adı iletişim kutusunun aşağıdaki örneğinde gösterildiği gibi, olay sorunları için uygun uygunluk **Izleme'de aşağıdaki** ayrıntıları görüntüleyebilirsiniz.
+1. Aşağıdaki **Sorun adı** iletişim kutusunun aşağıdaki örneğinde gösterildiği gibi, servis talebi sorunları için İlgi İzleme bölümünde aşağıdaki ayrıntıları görüntüleyin.
 
-   - **Değerlendirme**: Bu ilerleme göstergesi, Bu noktaya gerçekleştirilen İlgi Düzeyi eğitimi'nin hata marjı açısından değerlendirme hedefini ne derece elde etmiş olduğunu gösterir. İlgi Düzeyi eğitim sonuçlarının zenginliği de görüntülenir.
+   - **Değerlendirme**: Bu ilerleme göstergesi, bu noktaya kadar gerçekleştirilen İlgi eğitiminin hata marjı açısından değerlendirme hedefine ne derece ulaştığını gösterir. İlgi eğitim sonuçlarının zenginliği de görüntülenir.
 
-   - **Eğitim**: Bu renk kodlu ilerleme göstergesi ve araç ipucu, İlgi Düzeyi eğitim sonuçları kararlılığını ve her bir sorun için etiketlenmiş Uygunlik eğitimi örneklerinin sayısını gösteren bir sayısal ölçek gösterir. Uzman, iteratif İlgi Eğitim sürecinin ilerlemesini izler. 
+   - **Eğitim**: Bu renk kodlu ilerleme göstergesi ve araç ipucu, İlgi eğitimi sonuçlarının kararlılığını ve her sorun için etiketlenen İlgi eğitimi örneklerinin sayısını gösteren sayısal ölçeği gösterir. Uzman, yinelemeli İlgi eğitim sürecinin ilerleme durumunu izler. 
   
-   - **Toplu işlem** hesaplama: Bu ilerleme göstergesi, Toplu işlem hesaplamanın tamamlanması hakkında bilgi sağlar.
+   - **Toplu işlem hesaplaması**: Bu ilerleme göstergesi Batch hesaplamasının tamamlanması hakkında bilgi sağlar.
   
-   - **Sonraki adım**: Gerçekleştirilecek bir sonraki adım önerilerini görüntüler. 
+   - **Sonraki adım**: Gerçekleştirilecek bir sonraki adım için öneriyi görüntüler. 
   
-    Örnekte, bir sorun için başarıyla tamamlanmış bir Değerlendirme gösterilir; bu, tamamlanan renk ilerleme göstergesiyle ve onay işaretiyle gösterilir. Etiketleme devam ediyor, ancak durum hala kararsız olarak kabul ediliyor (araç ipucunda kararlılık durumu da gösteriliyor). Sonraki adım öneri "Eğitim"dir. 
+    Örnekte, tamamlanmış renk ilerleme göstergesi ve onay işaretiyle gösterilen, bir sorun için başarıyla tamamlanmış bir Değerlendirme gösterilir. Etiketleme devam ediyor, ancak durum hala kararsız olarak kabul ediliyor (kararlılık durumu bir araç ipucunda da gösterilir). Sonraki adım önerisi "Eğitim"dir. 
   
-    ![İlgi Düzeyi Eğitimi izleme adım 1.](../media/a00fe607-680a-48eb-9d61-4565319f7ab6.png)
+    ![İlgi Eğitimi izleme adımı 1.](../media/a00fe607-680a-48eb-9d61-4565319f7ab6.png)
   
-    Genişletilmiş görünüm, ek bilgileri ve seçenekleri görüntüler. Görüntülenen geçerli hata kenar boşluğu, var olan (zaten etiketlenmiş) değerlendirme dosyalarına göre değerlendirmenin geçerli durumuna göre geri çekmenin hata kenar boşluğu olur.
+    Genişletilmiş görünümde ek bilgiler ve seçenekler görüntülenir. Görüntülenen geçerli hata kenar boşluğu, mevcut (zaten etiketli) değerlendirme dosyaları göz önüne alındığında, geçerli değerlendirme durumunda geri çağırmanın hata kenar boşluğudur.
   
     > [!NOTE]
-    >  Değerlendirme aşaması, her sorun için Değerlendirme onay kutusu ve sonra  da "tüm sorunlar" için temiz temiz kullanarak atlanır. Ancak bunun sonucunda, bu sorunun istatistikleri olmayacaktır. > Onay kutusunu **temizlemek** yalnızca değerlendirme yapılmadan önce yapılabilir. Bir olayda birden çok sorun varsa, değerlendirme yalnızca her soruna ilişkin onay kutusu temiz olursa atlanır 
+    >  Değerlendirme aşaması, sorun başına **Değerlendirme** onay kutusu ve ardından "tüm sorunlar" için temizlenerek atlanabilir. Ancak sonuç olarak, bu sorun için istatistik olmayacaktır. > **Değerlendirme** onay kutusunun temizlenmesi yalnızca değerlendirme gerçekleştirilmeden önce yapılabilir. Bir durumda birden çok sorun olduğunda, değerlendirme yalnızca her sorun için onay kutusu temizlenmişse atlanır 
   
-    Değerlendirme ilk örnek dosya kümesiyle tamamlanmazsa, daha fazla dosya etiketlemede bir sonraki adım değerlendirme olabilir.
+    Değerlendirme ilk örnek dosya kümesiyle tamamlanmadığında, daha fazla dosya etiketlemek için değerlendirme bir sonraki adım olabilir.
   
-    İlgi **Düzeyi** **İzle'de**\> eğitim ilerleme göstergesi ve araç ipucu, kararlılıka ulaşmak için gereken tahmini ek örneklerin sayısını gösteriyor. Bu tahmin, gereken ek eğitim için bir kılavuz sağlar.
+    **İlgi** \> **İzleme** bölümünde eğitim ilerleme durumu göstergesi ve araç ipucu, kararlılığı sağlamak için gereken ek örneklerin tahmini sayısını gösterir. Bu tahmin, gereken ek eğitim için bir kılavuz sağlar.
   
-    ![İlgi Düzeyi Eğitimi izleme.](../media/98dbc3f5-5238-4d73-9f88-1aa4d77ea729.png)
+    ![İlgi Eğitimi izleme.](../media/98dbc3f5-5238-4d73-9f88-1aa4d77ea729.png)
   
-2. Etiketlemeyi bitirin ve eğitime devam etmek için ihtiyacınız varsa Eğitim'e **tıklayın**. Ek eğitim için yüklenen dosya kümesinden başka bir örnek dosya kümesi oluşturulur. Ardından, daha fazla dosya etiketlemek ve eğitmek için Etiket sekmesine geri döndürülürsiniz.
+2. Etiketlemeyi bitirdiğinizde ve eğitime devam etmeniz gerekiyorsa **Eğitim'e** tıklayın. Ek eğitim için yüklenen dosya kümesinden başka bir örnek dosya kümesi oluşturulur. Daha sonra daha fazla dosyayı etiketlemek ve eğitmek için Etiket sekmesine dönersiniz.
 
-### <a name="reaching-stable-training-levels"></a>Kararlı eğitim düzeylerine ulaşıyor
+### <a name="reaching-stable-training-levels"></a>Kararlı eğitim düzeylerine ulaşma
 
-Değerlendirme dosyaları kararlı bir eğitim düzeyi elde edildikten sonra, Advanced eDiscovery hesaplama için hazır olur.
+Değerlendirme dosyaları kararlı bir eğitim düzeyine ulaştıktan sonra, eBulma (Premium) Batch hesaplaması için hazırdır.
   
 > [!NOTE]
-> Genellikle, üç kararlı eğitim örnek olayından sonra bir sonraki adım "Toplu hesaplama" adımıdır. Örneğin, önceki örneklerden dosya etiketlemede veya çekirdek dosyalarının ekli olduğu olaylarda özel durumlar olabilir. 
+> Genellikle üç kararlı eğitim örneğinden sonra bir sonraki adım "Batch hesaplaması"dır. Örneğin, önceki örneklerden dosyaların etiketlenmesinde değişiklikler olduğunda veya çekirdek dosyalar eklendiğinde özel durumlar olabilir. 
   
-### <a name="performing-batch-calculation"></a>Toplu işlem hesaplaması gerçekleştirme
+### <a name="performing-batch-calculation"></a>Batch hesaplaması gerçekleştirme
 
-Toplu hesaplama, eğitim başarıyla tamamlandıktan sonraki adım olarak yürütülür (ilerleme çubuğu tarafından kararlı bir eğitim durumu gösterildiğinde, araç ipucunda bir onay işareti ve kararlı durum.) Toplu hesaplama, dosyaların ilgi derecesini değerlendirmek ve İlgi Düzeyi puanları atamak için Uygunluk eğitimi sırasında alınan bilgileri tüm dosya popülasyonu için uygular.
+Toplu hesaplama, eğitim başarıyla tamamlandıktan sonraki adım olarak yürütülür (ilerleme çubuğu tarafından kararlı bir eğitim durumu gösterildiğinde, araç ipucunda bir onay işareti ve kararlı durum.) Toplu hesaplama, İlgi eğitimi sırasında elde edilen bilgileri tüm dosya popülasyonu için, dosyaların ilgi düzeyini değerlendirmek ve İlgi puanlarını atamak için uygular.
   
-Birden fazla sorun olduğunda, her sorun için Toplu işlem hesaplaması yapılır. Toplu işlem hesaplaması sırasında, dosyaların hepsi işlenirken ilerleme durumu izlenir. 
+Birden fazla sorun olduğunda, sorun başına Batch hesaplaması yapılır. Batch hesaplaması sırasında, tüm dosyalar işlenirken ilerleme durumu izlenir. 
   
-Burada, bu noktada ek bir ilgi düzeyi eğitimi gerek olmadığını belirten "Yok" adımı önerilir. Bir sonraki aşama İlgi **DüzeyiNe Göre Karar \> sekmesidir** . 
+Burada, önerilen bir sonraki adım ,bu noktada ek yinelemeli İlgi eğitimine gerek olmadığını belirten "Yok" adımıdır. Sonraki aşama İlgi Kararı sekmesidir **\>**. 
   
-Toplu işlem hesaplaması sonrasında yeni dosyaları içeri yüklemek için yönetici içeri aktarılan dosyaları yeni bir yüke ekleyebilir.
+Batch hesaplaması sonrasında yeni dosyaları içeri aktarmak istiyorsanız, yönetici içeri aktarılan dosyaları yeni bir yüke ekleyebilir.
   
 > [!NOTE]
-> Toplu işlem **hesaplaması sırasında** İptal'e tıklarsanız, işlem zaten yürütülen işlemi kaydeder. Toplu işlem hesaplamayı yeniden çalıştırdığınızda, işlem en son yürütülen noktadan devam eder. 
+> Batch hesaplaması sırasında **İptal'e** tıklarsanız, işlem zaten yürütülmüş olanları kaydeder. Batch hesaplamasını yeniden çalıştırırsanız, işlem son yürütülen noktadan devam eder. 
   
 ### <a name="assessing-tagging-consistency"></a>Etiketleme tutarlılığını değerlendirme
 
-Dosya etiketlemede tutarsızlıklar varsa çözümlemeyi etkileyebilir. Sonuçlar Advanced eDiscovery veya tutarlılık tam olarak emin olmadığı zaman, tutarlılık işleminin en iyi sonucu verir. Olası tutarsız etiketlenmiş dosyaların listesi döndürülür ve bunlar gerektiğinde gözden geçirip yeniden etiketlenir.
+Dosya etiketlemede tutarsızlıklar varsa, bu çözümlemeyi etkileyebilir. Sonuçlar en uygun olmadığında veya tutarlılık şüpheli olduğunda eBulma (Premium) etiketleme tutarlılığı işlemi kullanılabilir. Tutarsız olarak etiketlenmiş olabilecek dosyaların listesi döndürülür ve gerektiğinde bunlar gözden geçirilip yeniden etiketlenebilir.
   
 > [!NOTE]
-> Yedi veya daha fazla eğitim değerlendirmeyi yuvarlattıktan sonra,  \>  \>  \> etiketleme tutarlılığı uygun ilgi derecesini Sorunu İzle **Ayrıntılı sonuçları Eğitim ilerleme durumu'nda** \> **22223'te 2013'te 2013'te** 2013'te 2013 Eğitimin tutarlılığı 24 saat ve 24 saat daha kısa bir süre içinde 2 Bu gözden geçirme, bir defada tek bir sorun için yapılır.
+> Değerlendirmeden sonra yedi veya daha fazla eğitim turu sonrasında etiketleme tutarlılığı İlgi **İzleme** \> **Sorunu** \> **Ayrıntılı sonuçları** \> **Eğitim ilerleme durumu** **bölümünde** \> görüntülenebilir. Bu inceleme bir kerede bir sorun için yapılır.
   
-1. İlgi **Düzeyi İzle'de\>**, sorunun satırına genişletin.
+1. **İlgi \> İzleme** bölümünde bir sorunun satırını genişletin.
   
-2. Sonraki adımın sağ **tarafından Değiştir'e** **tıklayın**.
+2. **Sonraki adımın** sağındaki **Değiştir'e** tıklayın.
   
-3. **Tutarsızlıkları sonraki adım seçeneği olarak,** yedi **eğitim örnekten** sonra etiketle'yi seçin ve Tamam'a **tıklayın**.
+3. Yedi eğitim örneğinden sonra **Sonraki adım** seçeneği olarak **Etiket tutarsızlıkları'nı** seçin ve **Tamam'a** tıklayın.
   
-4. **Etiket tutarsızlıkları'ı seçin**. **Etiket sekmesi** açılır ve gerekirse yeniden etiketle ilgili tutarsızlıkların listesi görüntülenir.
+4. **Tutarsızlıkları etiketle'yi** seçin. **Etiket** sekmesi açılır ve gerektiğinde yeniden etiketlenmesi gereken tutarsızlıkların listesi görüntülenir.
   
-5. Değişiklikleri **göndermek için** Hesapla'ya tıklayın. Tutarsızlıkları etiketlemeden sonraki adım "Eğitim" adımıdır. 
+5. Değişiklikleri göndermek için **Hesapla'ya** tıklayın. Tutarsızlıkları etiketlemeden sonraki adım "Eğitim"dir. 
   
-## <a name="viewing-and-using-relevance-results"></a>İlgi Derecesi sonuçlarını görüntüleme ve kullanma
+## <a name="viewing-and-using-relevance-results"></a>İlgi sonuçlarını görüntüleme ve kullanma
 
-İlgi **Düzeyi İzle sekmesinde\>**, sorunun satırına genişletin ve Ayrıntılı sonuçlar'ın yanında **Görünüm'e** **tıklayın**. Ayrıntılı sonuçlar bölmeleri, aşağıda gösterildiği ve açıklandığı gibi görüntülenir.
+**İlgi \> İzleme** sekmesinde, sorunun satırını genişletin ve **Ayrıntılı sonuçlar'ın** yanındaki **Görünüm'e** tıklayın. Ayrıntılı sonuçlar bölmeleri aşağıda gösterildiği ve açıklandığı gibi görüntülenir.
   
-![İlgi düzeyi eğitimi ayrıntılı sonuçları.](../media/495c04a9-ed1e-4355-8cab-c14270ca2bbb.png)
+![İlgi eğitimi ayrıntılı sonuçları.](../media/495c04a9-ed1e-4355-8cab-c14270ca2bbb.png)
   
 ### <a name="tagging-summary"></a>Etiketleme özeti
 
- Aşağıda gösterilen örnekte Etiketleme özeti, Değerlendirme, Eğitim ve Yakalama dosyası etiketleme işlemlerinin her biri için toplamları görüntüler.
+ Aşağıda gösterilen örnekte Etiketleme **özeti** Değerlendirme, Eğitim ve Yakalama dosyası etiketleme işlemlerinin her birine ait toplamları görüntüler.
   
-![İlgi Alanı Etiketleme özetini takip etme.](../media/0ec906fc-bc84-4245-a964-fb3ca37891db.png)
+![İlgi İzleme etiketleme özeti.](../media/0ec906fc-bc84-4245-a964-fb3ca37891db.png)
   
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
-Anahtar sözcük, bir dosyanın uygun olup olmadığının önemli bir göstergesi olarak tanım Advanced eDiscovery bir dosyada benzersiz bir dize, sözcük, tümcecik veya sözcük dizisidir. "Ekle" sütun listesi, uygun olarak etiketlenen dosyalarda anahtar sözcük ve ağırlıkları, "Dışla" sütunlarında ise Uygun değil olarak etiketlenen dosyalarda anahtar sözcükler ve ağırlıklar listelenir.
+Anahtar sözcük, bir dosyanın ilgili olup olmadığının önemli bir göstergesi olarak eBulma (Premium) tarafından tanımlanan bir dosyadaki benzersiz bir dize, sözcük, tümcecik veya sözcük dizisidir. "Dahil Et" sütunları, İlgili olarak etiketlenen dosyalardaki anahtar sözcük ve ağırlıklar, "Hariç Tut" sütunları ise uygun değil olarak etiketlenen dosyalarda anahtar sözcükleri ve ağırlıkları listeler.
   
-Advanced eDiscovery veya pozitif anahtar sözcük ağırlık değerlerini atar. Ağırlık ne kadar yüksekse, anahtar sözcüğün göründüğü bir dosyaya Toplu işlem hesaplama sırasında daha yüksek bir İlgi Puanı atanma olasılığı da o kadar yüksektir.
+eBulma (Premium) negatif veya pozitif anahtar sözcük ağırlık değerleri atar. Ağırlık ne kadar yüksek olursa, Batch hesaplaması sırasında anahtar sözcüğün görüntülendiği bir dosyaya daha yüksek bir İlgi puanı atanma olasılığı o kadar yüksek olur.
   
-En Advanced eDiscovery listesi, dosya gözden geçirme işleminin herhangi bir noktasında uzman tarafından yapılan bir listeyi tamamlayıcı bir liste veya dolaylı bir sanity denetimi olarak kullanılabilir.
+EBulma (Premium) anahtar sözcük listesi, bir uzman tarafından oluşturulan bir listeyi tamamlamak veya dosya gözden geçirme sürecinin herhangi bir noktasında dolaylı bir akıl sağlığı denetimi olarak kullanılabilir.
   
 ### <a name="training-progress"></a>Eğitim ilerleme durumu
 
-Eğitim **İlerleme Durumu** bölmesi, aşağıdaki örnekte gösterildiği gibi bir eğitim ilerleme durumu grafiği ve kalite göstergesi görüntüsü içerir.
+**Eğitim İlerleme Durumu** bölmesi, aşağıdaki örnekte gösterildiği gibi bir eğitim ilerleme durumu grafiği ve kalite göstergesi görüntüsü içerir.
   
-![İlgi Düzeyi Eğitimin ilerlemesini izleme.](../media/8a5089f5-a162-4246-ae09-bc1921859860.png)
+![İlgi Eğitimin ilerleme durumunu izleme.](../media/8a5089f5-a162-4246-ae09-bc1921859860.png)
   
-**Eğitim kalitesi göstergesi**: Etiketleme tutarlılığının derecelendirmelerini aşağıdaki gibi görüntüler:
+**Eğitim kalitesi göstergesi**: Etiketleme tutarlılığının derecelendirmesini aşağıdaki gibi görüntüler:
   
-- **İyi**: Dosyalar tutarlı olarak etiketlenir. (Görüntülenen yeşil ışık)
+- **İyi**: Dosyalar tutarlı olarak etiketlenir. (Yeşil ışık görüntüleniyor)
   
-- **Orta**: Bazı dosyalar tutarsız etiketlenmiş olabilir. (Görüntülenen sarı ışık)
+- **Orta**: Bazı dosyalar tutarsız olarak etiketlenebilir. (Sarı ışık görüntülenir)
 
-- **Uyarı**: Birçok dosya tutarsız etiketlenmiş olabilir. (Kırmızı ışık görüntülenir)
+- **Uyarı**: Birçok dosya tutarsız olarak etiketlenebilir. (Kırmızı ışık görüntüleniyor)
 
-**Eğitim ilerleme grafiği**: F-measure değeriyle karşılaştırıldığında, birçok İlgi düzeyi eğitim döngüsü sonrasında ilgi düzeyi eğitim kararlılığının derecesini gösterir. Grafik boyunca soldan sağa doğru ilerlerken, uygunluk aralığı daralarak ve ilgi düzeyi eğitim sonuçları en iyi duruma geldiğinde kararlılığı belirlemek için F ölçümüyle birlikte Advanced eDiscovery Uygunluk düzeyi ile kullanılır.
+**Eğitim ilerleme durumu grafiği**: F ölçüsü değerine kıyasla birçok İlgi eğitim döngüsünden sonra İlgi eğitimi kararlılığının derecesini gösterir. Grafikte soldan sağa doğru ilerlerken güvenilirlik aralığı daralıyor ve F ölçüsüyle birlikte eBulma (Premium) İlgi ile birlikte, İlgi eğitim sonuçlarının ne zaman iyileştirileceğini belirlemek için kararlılığı belirlemek için kullanılıyor.
   
 > [!NOTE]
-> İlgi derecesi, Geri Çekme'nin Duyarlılık için iki kat fazla ağırlık aldığı F2 ölçüstü olan F2'yi kullanır. Yüksek zenginlik (%25'in üzerinde) olan durumlar için uygunluğu F1 (1:1 oranı) kullanır. F-measure oranı, Uygunluk Ayarı **Gelişmiş ayarları'nın içinde** \> **yatıtılabilirsiniz**.
+> İlgi, Yakalama işlevinin Duyarlık'ın iki katı ağırlık aldığı F2 ölçümünü kullanır. Yüksek zenginliğe (%25'in üzerinde) sahip durumlarda İlgi F1 (1:1 oran) kullanır. F ölçüsü oranı İlgi **kurulumu** \> **Gelişmiş ayarlar** bölümünde yapılandırılabilir.
   
-### <a name="batch-calculation-results"></a>Toplu işlem hesaplama sonuçları
+### <a name="batch-calculation-results"></a>Toplu hesaplama sonuçları
 
-Toplu **işlem hesaplama** sonuçları bölmesi, ilgi derecesi için puanlandı sayısını aşağıdaki gibi içerir: 
+**Batch hesaplama sonuçları** bölmesi, İlgi için puanlanan dosya sayısını aşağıda gösterildiği gibi içerir: 
   
-- **Başarılı**
+- **Başarı**
   
-- **Boş**: Metin eklemez, örneğin yalnızca boşluklar/sekmeler
+- **Boş**: Metin içermez; örneğin, yalnızca boşluklar/sekmeler
   
-- **Başarısız**: Aşırı boyuttan dolayı veya okunamadı
+- **Başarısız**: Aşırı boyut nedeniyle veya okunamadı
   
-- **Yoksayılan**: Aşırı boyuttan dolayı
+- **Yoksayıldı**: Aşırı boyut nedeniyle
   
-- **Anlamsız: Anlamsız** metinler içerir veya bu konuyla ilgili hiçbir özellik yoktur
+- **Nebulous**: Anlamsız metinler içeriyor veya sorunla ilgili özellik içermiyor
   
 > [!NOTE]
-> Boş, Başarısız, Yoksayılan veyaBulan -1 ilgi puanı alır.
+> Boş, Başarısız, Yoksayıldı veya Nebulous, -1 İlgi puanı alır.
   
 ### <a name="training-statistics"></a>Eğitim istatistikleri
 
-Eğitim **istatistikleri bölmesinde**, ilgi düzeyi eğitimi sonucunda elde Advanced eDiscovery istatistikleri ve grafikleri görüntüler. 
+**Eğitim istatistikleri** bölmesi, eBulma (Premium) İlgi eğitiminin sonuçlarını temel alan istatistikleri ve grafikleri görüntüler. 
   
-![İlgi Düzeyi Eğitim istatistiklerini izleme.](../media/9a07740e-20d3-49fb-b9b9-84265e0a1836.png)
+![İlgi Eğitim istatistiklerini izleme.](../media/9a07740e-20d3-49fb-b9b9-84265e0a1836.png)
   
-Bu görünümde aşağıdakiler gösterir:
+Bu görünümde aşağıdakiler gösterilir:
   
-- **Gözden geçirme-geri çekme** oranı: Varsayımsal olarak doğrusal bir gözden geçirmede, sonuçların Ilgi Dereceleri'ne göre karşılaştırılması. Gözden geçirme kümesi boyut kümesine göre geri çekme tahmin ediliyor.
+- **Gözden geçirme-geri çağırma oranı**: Varsayımsal olarak doğrusal bir incelemede sonuçların İlgi puanlarına göre karşılaştırması. Gözden geçirme kümesi boyut kümesine göre geri çağırma tahminidir.
   
-- **Parametreler**: Tüm vakanın dosya popülasyonına göre gözden geçirme kümesiyle ilgili kümülatif hesaplanan istatistikler.
+- **Parametreler**: Tüm servis talebi için dosya popülasyonuyla ilgili olarak gözden geçirme kümesiyle ilgili toplu hesaplanan istatistikler.
   
-- **Gözden** Geçir: Bu kesme kesmeye dayalı olarak gözden geçirilecek dosyaların yüzdesi.
+- **Gözden Geçir**: Bu kesmeye göre gözden geçirilecek dosyaların yüzdesi.
   
-- **Geri** Çekme: Gözden geçirme kümesinde İlgili dosyaların yüzdesi. 
+- **Geri çağırma**: Gözden geçirme kümesindeki İlgili dosyaların yüzdesi. 
   
-- **İlgi düzeyi puanına** göre dağılım: Solda koyu gri görünen dosyalar, kesmeoff puanının altında yer almaktadır. Araç ipucu, İlgi Derecesini ve toplam dosyalara göre ayarlanmış gözden geçirme dosyasındaki dosyaların ilgili yüzdesini görüntüler.
+- **İlgi puanına göre dağılım**: Soldaki koyu gri ekrandaki dosyalar kesme puanının altındadır. Araç ipucu, toplam dosyayla ilişkili olarak, inceleme dosyasındaki ilgi puanını ve ilgili dosya yüzdesini görüntüler.
