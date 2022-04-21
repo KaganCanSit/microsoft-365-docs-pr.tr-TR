@@ -1,10 +1,10 @@
 ### YamlMime:Hub
 title: Microsoft 365 belgeleri
-summary: 'İşletmenize veya kuruluşunuza yönelik çözümleri, senaryoları ve Microsoft 365 için ihtiyacınız olan kaynakları bulun. Microsoft 365, Teams ve SharePoint gibi hizmetleri ve Outlook, Word, Excel ve PowerPoint gibi Microsoft 365 uygulamalarını içerir.'
+summary: İşletmenize veya kuruluşunuza yönelik çözümleri, senaryoları ve Microsoft 365 için ihtiyacınız olan kaynakları bulun. Microsoft 365, Teams ve SharePoint gibi hizmetleri ve Outlook, Word, Excel ve PowerPoint gibi Microsoft 365 uygulamalarını içerir.
 brand: m365
 metadata:
   title: Microsoft 365 belgeleri
-  description: 'İşletmenize veya kuruluşunuza yönelik Office çözümleri dahil olmak üzere Microsoft 365 için ihtiyacınız olan çözümler, senaryoları ve kaynakları bulun.'
+  description: İşletmenize veya kuruluşunuza yönelik Office çözümleri dahil olmak üzere Microsoft 365 için ihtiyacınız olan çözümler, senaryoları ve kaynakları bulun.
   ms.service: o365-solutions
   ms.topic: hub-page
   ms.collection: m365-security-compliance
@@ -13,261 +13,267 @@ metadata:
   ms.author: samanro
   ms.date: 06/08/2021
   ms.localizationpriority: high
+  ms.openlocfilehash: 7e2e2fc3b0e35675338c54f930189e1ac94599f1
+  ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+  ms.translationtype: HT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 04/19/2022
+  ms.locfileid: "64934169"
 highlightedContent:
   items:
-    - title: Hibrit çalışma için altyapınızı ayarlayın
-      itemType: how-to-guide
-      url: solutions/empower-people-to-work-remotely.md
-    - title: Microsoft Teams ile uzaktan öğrenme
-      itemType: get-started
-      url: /MicrosoftTeams/remote-learning-edu
-    - title: Microsoft Learn ile becerilerinizi geliştirin
-      itemType: learn
-      url: /learn/m365/
-    - title: Küçük işletmenizi Microsoft 365 ile başlatın
-      itemType: quickstart
-      url: business-video/index.yml
+  - title: Hibrit çalışma için altyapınızı ayarlayın
+    itemType: how-to-guide
+    url: solutions/empower-people-to-work-remotely.md
+  - title: Microsoft Teams ile uzaktan öğrenme
+    itemType: get-started
+    url: /MicrosoftTeams/remote-learning-edu
+  - title: Microsoft Learn ile becerilerinizi geliştirin
+    itemType: learn
+    url: /learn/m365/
+  - title: Küçük işletmenizi Microsoft 365 ile başlatın
+    itemType: quickstart
+    url: business-video/index.yml
 productDirectory:
   title: Microsoft 365 çözümleri ve senaryoları
   items:
-    - title: Microsoft 365 çözümleri
-      imageSrc: 'https://docs.microsoft.com/office/media/icons/secure-document-blue.svg'
-      links:
-        - url: solutions/empower-people-to-work-remotely.md
-          text: Hibrit çalışma için altyapınızı ayarlayın
-        - url: solutions/setup-secure-collaboration-with-teams.md
-          text: Güvenli işbirliğini ayarlayın
-        - url: solutions/deploy-threat-protection.md
-          text: Tehdit korumasını dağıtın
-        - url: solutions/information-protection-deploy.md
-          text: Veri gizliliği düzenlemeleri için bilgi korumasını dağıtın
-        - url: business-premium/index.md
-          text: Küçük işletmeler ve kampanyalar için Microsoft 365
-    - title: Tanışın ve iletişim kurun
-      imageSrc: 'https://docs.microsoft.com/office/media/icons/call-phone-blue.svg'
-      links:
-        - url: /sharepoint/corporate-communications-overview
-          text: Kurumsal iletişimler
-        - url: /MicrosoftTeams/quick-start-meetings-live-events
-          text: Microsoft Teams'de toplantılar ve canlı etkinlikler
-        - url: solutions/deploy-voice.md
-          text: Teams ses çözümü planlayın ve dağıtın
-        - url: /MicrosoftTeams/business-voice/whats-business-voice
-          text: Microsoft 365 İş Sesi
-        - url: /MicrosoftTeams/cloud-voice-landing-page
-          text: Microsoft telefon çözümleri
-    - title: Ekibinizle işbirliği yapın
-      imageSrc: 'https://docs.microsoft.com/office/media/icons/users-people.svg'
-      links:
-        - url: solutions/collaborate-with-people-outside-your-organization.md
-          text: Dış paylaşımı yapılandırın
-        - url: /sharepoint/intelligent-internet-overview
-          text: Akıllı bir SharePoint intraneti oluşturun
-        - url: /sharepoint/deploy-file-collaboration
-          text: SharePoint'te dosya işbirliği
-        - url: /onedrive/plan-onedrive-enterprise
-          text: Kuruluşlar için OneDrive rehberi
-        - url: solutions/collaboration-governance-overview.md
-          text: İşbirliği idaresi
-    - title: Mimari kaynakları
-      imageSrc: 'https://docs.microsoft.com/office/media/icons/cloud-architecture2.svg'
-      links:
-        - url: solutions/productivity-illustrations.md
-          text: Microsoft 365 üretkenlik çizimleri
-        - url: solutions/cloud-architecture-models.md
-          text: Microsoft bulut mimarisi modelleri
-        - url: solutions/design-principles.md
-          text: Kurumsal mimari tasarım ilkeleri
-        - url: solutions/infographics-for-users.md
-          text: Kullanıcılarınız için bilgi grafikleri
-        - url: solutions/architecture-icons-templates.md
-          text: Mimari simgeleri ve şablonları
-    - title: Kuruluşunuzun güvenliğini sağlayın
-      imageSrc: 'https://docs.microsoft.com/office/media/icons/security-blue.svg'
-      links:
-        - url: security/top-security-tasks-for-remote-work.md
-          text: Güvenlik ekiplerinin evden çalışmayı desteklemesi için en önemli görevler
-        - url: solutions/configure-teams-three-tiers-protection.md
-          text: Microsoft Teams ile üç koruma katmanı yapılandırın
-        - url: security/defender/get-started.md
-          text: Microsoft 365 Defender’ı kullanmaya başlayın
-        - url: security/defender-endpoint/deployment-phases.md
-          text: Uç Nokta için Microsoft Defender'ı dağıtın
-        - url: security/office-365-security/defender-for-office-365.md
-          text: Office 365 için Microsoft Defender'ı dağıtın
-        - url: security/office-365-security/microsoft-365-policies-configurations.md
-          text: Kimlik ve cihaz erişim korumasını yapılandırın
-    - title: Bilgilerinizi koruyun ve yasal düzenlemelere uyun
-      imageSrc: 'https://docs.microsoft.com/office/media/icons/certificate-blue.svg'
-      links:
-        - url: compliance/insider-risk-solution-overview.md
-          text: Microsoft 365'te içerden risk çözümleri
-        - url: compliance/compliance-quick-tasks.md
-          text: Microsoft 365 uyumluluğunu kullanmaya başlamak için hızlı görevler
-        - url: compliance/information-protection.md
-          text: Bilgi korumasını yönetin
-        - url: compliance/manage-information-governance.md
-          text: Bilgi idareyi yönetin
-        - url: compliance/auditing-solutions-overview.md
-          text: Denetim çözümleri
-        - url: compliance/overview-ediscovery-20.md
-          text: Microsoft 365 Gelişmiş eKeşif
-    - title: Masaüstlerinizi ve cihazlarınızı dağıtın ve yönetin
-      imageSrc: 'https://docs.microsoft.com/office/media/icons/deploy-blue.svg'
-      links:
-        - url: /DeployOffice/plan-microsoft-365-apps
-          text: Microsoft 365 Uygulamaları’nı dağıtın
-        - url: /windows/deployment/
-          text: Windows 10'u dağıtın
-        - url: ./managed-desktop/index.yml
-          text: Microsoft Yönetilen Masaüstü
-        - url: /mem/intune/fundamentals/what-is-intune
-          text: Cihaz yönetimi ve Microsoft Intune
-    - title: Microsoft 365'e geçiş
-      imageSrc: 'https://docs.microsoft.com/office/media/icons/migration-blue.svg'
-      links:
-        - url: /MicrosoftTeams/journey-skypeforbusiness-teams
-          text: Microsoft Teams'e geçiş
-        - url: /sharepointmigration/migrate-to-sharepoint-online
-          text: 'İçeriğinizi SharePoint, OneDrive ve Teams''e geçirin'
-        - url: /Exchange/mailbox-migration/mailbox-migration
-          text: Birden çok e-posta hesabını Office 365'e geçirin
-    - title: Sektöre özgü çözümler ve senaryolar
-      imageSrc: 'https://docs.microsoft.com/office/media/icons/on-premises-blue.svg'
-      links:
-        - url: solutions/financial-services-secure-collaboration.md
-          text: Finansal hizmetler için güvenlik ve uyumluluk
-        - url: solutions/energy-secure-collaboration.md
-          text: Enerji ve kamu hizmetleri için güvenlik ve uyumluluk
-        - url: /MicrosoftTeams/expand-teams-across-your-org/healthcare/teams-in-hc
-          text: Sağlık kuruluşları için Teams
-        - url: /MicrosoftTeams/expand-teams-across-your-org/teams-for-education-landing-page
-          text: Eğitim için Teams
-        - url: /MicrosoftTeams/expand-teams-across-your-org/teams-for-government-landing-page
-          text: Kamu için Teams
-        - url: /MicrosoftTeams/expand-teams-across-your-org/gov-support-remote-work-with-teams
-          text: Microsoft Teams kullanarak uzaktan çalışan kamu çalışanlarını destekleyin
+  - title: Microsoft 365 çözümleri
+    imageSrc: https://docs.microsoft.com/office/media/icons/secure-document-blue.svg
+    links:
+    - url: solutions/empower-people-to-work-remotely.md
+      text: Hibrit çalışma için altyapınızı ayarlayın
+    - url: solutions/setup-secure-collaboration-with-teams.md
+      text: Güvenli işbirliğini ayarlayın
+    - url: solutions/deploy-threat-protection.md
+      text: Tehdit korumasını dağıtın
+    - url: solutions/information-protection-deploy.md
+      text: Veri gizliliği düzenlemeleri için bilgi korumasını dağıtın
+    - url: business-premium/index.md
+      text: Küçük işletmeler ve kampanyalar için Microsoft 365
+  - title: Tanışın ve iletişim kurun
+    imageSrc: https://docs.microsoft.com/office/media/icons/call-phone-blue.svg
+    links:
+    - url: /sharepoint/corporate-communications-overview
+      text: Kurumsal iletişimler
+    - url: /MicrosoftTeams/quick-start-meetings-live-events
+      text: Microsoft Teams'de toplantılar ve canlı etkinlikler
+    - url: solutions/deploy-voice.md
+      text: Teams ses çözümü planlayın ve dağıtın
+    - url: /MicrosoftTeams/business-voice/whats-business-voice
+      text: Microsoft 365 İş Sesi
+    - url: /MicrosoftTeams/cloud-voice-landing-page
+      text: Microsoft telefon çözümleri
+  - title: Ekibinizle işbirliği yapın
+    imageSrc: https://docs.microsoft.com/office/media/icons/users-people.svg
+    links:
+    - url: solutions/collaborate-with-people-outside-your-organization.md
+      text: Dış paylaşımı yapılandırın
+    - url: /sharepoint/intelligent-internet-overview
+      text: Akıllı bir SharePoint intraneti oluşturun
+    - url: /sharepoint/deploy-file-collaboration
+      text: SharePoint'te dosya işbirliği
+    - url: /onedrive/plan-onedrive-enterprise
+      text: Kuruluşlar için OneDrive rehberi
+    - url: solutions/collaboration-governance-overview.md
+      text: İşbirliği idaresi
+  - title: Mimari kaynakları
+    imageSrc: https://docs.microsoft.com/office/media/icons/cloud-architecture2.svg
+    links:
+    - url: solutions/productivity-illustrations.md
+      text: Microsoft 365 üretkenlik çizimleri
+    - url: solutions/cloud-architecture-models.md
+      text: Microsoft bulut mimarisi modelleri
+    - url: solutions/design-principles.md
+      text: Kurumsal mimari tasarım ilkeleri
+    - url: solutions/infographics-for-users.md
+      text: Kullanıcılarınız için bilgi grafikleri
+    - url: solutions/architecture-icons-templates.md
+      text: Mimari simgeleri ve şablonları
+  - title: Kuruluşunuzun güvenliğini sağlayın
+    imageSrc: https://docs.microsoft.com/office/media/icons/security-blue.svg
+    links:
+    - url: security/top-security-tasks-for-remote-work.md
+      text: Güvenlik ekiplerinin evden çalışmayı desteklemesi için en önemli görevler
+    - url: solutions/configure-teams-three-tiers-protection.md
+      text: Microsoft Teams ile üç koruma katmanı yapılandırın
+    - url: security/defender/get-started.md
+      text: Microsoft 365 Defender’ı kullanmaya başlayın
+    - url: security/defender-endpoint/deployment-phases.md
+      text: Uç Nokta için Microsoft Defender'ı dağıtın
+    - url: security/office-365-security/defender-for-office-365.md
+      text: Office 365 için Microsoft Defender'ı dağıtın
+    - url: security/office-365-security/microsoft-365-policies-configurations.md
+      text: Kimlik ve cihaz erişim korumasını yapılandırın
+  - title: Bilgilerinizi koruyun ve yasal düzenlemelere uyun
+    imageSrc: https://docs.microsoft.com/office/media/icons/certificate-blue.svg
+    links:
+    - url: compliance/insider-risk-solution-overview.md
+      text: Microsoft Purview’da içeriden risk çözümleri
+    - url: compliance/compliance-quick-tasks.md
+      text: Microsoft Purview’u kullanmaya başlamak için hızlı görevler
+    - url: compliance/information-protection.md
+      text: Bilgi korumasını yönetin
+    - url: compliance/manage-data-governance.md
+      text: Bilgi idareyi yönetin
+    - url: compliance/auditing-solutions-overview.md
+      text: Denetim çözümleri
+    - url: compliance/overview-ediscovery-20.md
+      text: eKeşif (Premium)
+  - title: Masaüstlerinizi ve cihazlarınızı dağıtın ve yönetin
+    imageSrc: https://docs.microsoft.com/office/media/icons/deploy-blue.svg
+    links:
+    - url: /DeployOffice/plan-microsoft-365-apps
+      text: Microsoft 365 Uygulamaları’nı dağıtın
+    - url: /windows/deployment/
+      text: Windows 10'u dağıtın
+    - url: ./managed-desktop/index.yml
+      text: Microsoft Yönetilen Masaüstü
+    - url: /mem/intune/fundamentals/what-is-intune
+      text: Cihaz yönetimi ve Microsoft Intune
+  - title: Microsoft 365'e geçiş
+    imageSrc: https://docs.microsoft.com/office/media/icons/migration-blue.svg
+    links:
+    - url: /MicrosoftTeams/journey-skypeforbusiness-teams
+      text: Microsoft Teams'e geçiş
+    - url: /sharepointmigration/migrate-to-sharepoint-online
+      text: İçeriğinizi SharePoint, OneDrive ve Teams'e geçirin
+    - url: /Exchange/mailbox-migration/mailbox-migration
+      text: Birden çok e-posta hesabını Office 365'e geçirin
+  - title: Sektöre özgü çözümler ve senaryolar
+    imageSrc: https://docs.microsoft.com/office/media/icons/on-premises-blue.svg
+    links:
+    - url: solutions/financial-services-secure-collaboration.md
+      text: Finansal hizmetler için güvenlik ve uyumluluk
+    - url: solutions/energy-secure-collaboration.md
+      text: Enerji ve kamu hizmetleri için güvenlik ve uyumluluk
+    - url: /MicrosoftTeams/expand-teams-across-your-org/healthcare/teams-in-hc
+      text: Sağlık kuruluşları için Teams
+    - url: /MicrosoftTeams/expand-teams-across-your-org/teams-for-education-landing-page
+      text: Eğitim için Teams
+    - url: /MicrosoftTeams/expand-teams-across-your-org/teams-for-government-landing-page
+      text: Kamu için Teams
+    - url: /MicrosoftTeams/expand-teams-across-your-org/gov-support-remote-work-with-teams
+      text: Microsoft Teams kullanarak uzaktan çalışan kamu çalışanlarını destekleyin
 additionalContent:
   sections:
-    - title: Tüm uygulamalar ve hizmetler
-      summary: Microsoft 365'e dahil olan tüm uygulamalar ve ürünler için belgeler.
-      items:
-        - title: Microsoft 365
-          summary: Kuruluşunuz için Microsoft 365 hizmetlerini kurun ve yönetin.
-          links:
-            - text: Microsoft 365 yönetici merkezi
-              url: admin/index.yml
-            - text: Microsoft 365 Business Premium
-              url: business/index.yml
-            - text: Microsoft 365 Kurumsal
-              url: enterprise/index.yml
-            - text: Microsoft 365 uyumluluğu
-              url: compliance/index.yml
-            - text: Microsoft 365 güvenliği
-              url: security/index.yml
-            - text: Microsoft Yönetilen Masaüstü
-              url: managed-desktop/index.yml
-            - text: Sorun giderme ve destek
-              url: /office/troubleshoot
-        - title: Microsoft Teams
-          links:
-            - text: Yönetici belgeleri
-              url: /MicrosoftTeams/Teams-overview
-            - text: Teams'de güvenlik ve uyumluluk
-              url: /MicrosoftTeams/security-compliance-overview
-            - text: Skype Kurumsal'dan Teams'e yükseltme
-              url: /MicrosoftTeams/journey-skypeforbusiness-teams
-            - text: Daha fazla >
-              url: /MicrosoftTeams
-        - title: Office'i dağıtma
-          links:
-            - text: Microsoft 365 Uygulamaları
-              url: /DeployOffice/plan-microsoft-365-apps
-            - text: Mac için Office
-              url: /DeployOffice/mac
-            - text: Office LTSC 2021
-              url: /DeployOffice/ltsc2021/overview
-            - text: Daha fazla >
-              url: /DeployOffice
-        - title: SharePoint
-          links:
-            - text: Microsoft 365’te SharePoint
-              url: /sharepoint/sharepoint-online
-            - text: SharePoint Syntex
-              url: contentunderstanding/index.md
-            - text: ' SharePoint Server'
-              url: /sharepoint/sharepoint-server
-            - text: Karma
-              url: /sharepoint/hybrid/hybrid
-            - text: SharePoint için PowerShell başvurusu
-              url: /powershell/sharepoint
-            - text: Daha fazla >
-              url: /sharepoint
-        - title: OneDrive
-          links:
-            - text: 'Planlama, dağıtma ve yönetme'
-              url: /onedrive/onedrive
-            - text: Daha fazla OneDrive >
-              url: /onedrive
-        - title: Outlook ve Exchange
-          links:
-            - text: iOS ve Android için Outlook
-              url: 'https://resources.techcommunity.microsoft.com/outlook-mobile-adoption/'
-            - text: Exchange Online
-              url: /Exchange/exchange-online
-            - text: Daha fazla Exchange >
-              url: /Exchange
-        - title: Planner ve Project
-          links:
-            - text: Planner yönetici yardımı
-              url: /office365/planner
-            - text: Web için Project
-              url: /project-for-the-web/projectforweb-admin-home
-            - text: Daha fazla Project >
-              url: /Project
-        - title: Microsoft Viva
-          links:
-            - text: Microsoft Viva Konular
-              url: /microsoft-365/knowledge/
-            - text: Microsoft Viva Analizler
-              url: /insights/viva-teams-app
-            - text: Microsoft Viva Bağlantılar
-              url: /sharepoint/viva-connections
-            - text: Microsoft Viva Öğrenme
-              url: /microsoft-365/learning/
-            - text: Daha fazla Microsoft Viva >
-              url: /microsoft-365/viva/
-        - title: Diğer uygulama ve hizmetler
-          links:
-            - text: Microsoft Kayıtları
-              url: bookings/index.yml
-            - text: Microsoft Kaizala
-              url: /Kaizala
-            - text: Microsoft Stream
-              url: /stream/
-            - text: Yammer
-              url: /yammer/yammer-landing-page
-            - text: Skype Kurumsal
-              url: /skypeforbusiness
-            - text: Office Online Server
-              url: /officeonlineserver
-    - title: İlgili rehber ve kaynaklar
-      items:
-        - title: Geliştiriciler
-          summary: 'Microsoft 365 Geliştirici Merkezi''nde geliştiriciler için öğreticiler, referanslar ve diğer kaynaklar bulun.'
-          url: 'https://developer.microsoft.com/microsoft-365'
-        - title: Son kullanıcılar
-          summary: 'support.microsoft.com sayfasında Microsoft 365 kullanıcıları için eğitim, nasıl yapılır ve yardım içeriği bulun.'
-          url: 'https://support.microsoft.com/microsoft-365'
-        - title: Eğitim BT
-          summary: 'Microsoft 365 Eğitim ile yaratıcılığın kilidini açmayı, ekip çalışmasını teşvik etmeyi ve güvenli ve basit bir deneyim yaşamayı öğrenin.'
-          url: /education
-        - title: Eğitimciler
-          summary: 'Microsoft 365 Eğitim kullanan eğitimciler için eğitim, nasıl yapılır ve yardım içeriği bulun.'
-          url: 'https://support.microsoft.com/education'
-        - title: Tech topluluğu
-          summary: 'Deneyimleri paylaşmak, etkileşim kurmak ve uzmanlardan bilgi edinmek için Microsoft 365 Tech topluluğuna katılın.'
-          url: 'https://techcommunity.microsoft.com/t5/Microsoft-365/ct-p/microsoft365'
-        - title: Microsoft 365 Topluluk İçeriği
-          summary: BT Uzmanı ve Yönetici topluluğu tarafından sağlanan Microsoft 365 kullanıcıları için çözüm ve senaryo rehberliği bulun.
-          url: /microsoft-365/community/
+  - title: Tüm uygulamalar ve hizmetler
+    summary: Microsoft 365'e dahil olan tüm uygulamalar ve ürünler için belgeler.
+    items:
+    - title: Microsoft 365
+      summary: Kuruluşunuz için Microsoft 365 hizmetlerini kurun ve yönetin.
+      links:
+      - text: Microsoft 365 yönetici merkezi
+        url: admin/index.yml
+      - text: Microsoft 365 Business Premium
+        url: business/index.yml
+      - text: Microsoft 365 Kurumsal
+        url: enterprise/index.yml
+      - text: Microsoft Purview
+        url: compliance/index.yml
+      - text: Microsoft 365 güvenliği
+        url: security/index.yml
+      - text: Microsoft Yönetilen Masaüstü
+        url: managed-desktop/index.yml
+      - text: Sorun giderme ve destek
+        url: /office/troubleshoot
+    - title: Microsoft Teams
+      links:
+      - text: Yönetici belgeleri
+        url: /MicrosoftTeams/Teams-overview
+      - text: Teams'de güvenlik ve uyumluluk
+        url: /MicrosoftTeams/security-compliance-overview
+      - text: Skype Kurumsal'dan Teams'e yükseltme
+        url: /MicrosoftTeams/journey-skypeforbusiness-teams
+      - text: Daha fazla >
+        url: /MicrosoftTeams
+    - title: Office'i dağıtma
+      links:
+      - text: Microsoft 365 Uygulamaları
+        url: /DeployOffice/plan-microsoft-365-apps
+      - text: Mac için Office
+        url: /DeployOffice/mac
+      - text: Office LTSC 2021
+        url: /DeployOffice/ltsc2021/overview
+      - text: Daha fazla >
+        url: /DeployOffice
+    - title: SharePoint
+      links:
+      - text: Microsoft 365’te SharePoint
+        url: /sharepoint/sharepoint-online
+      - text: SharePoint Syntex
+        url: contentunderstanding/index.md
+      - text: " SharePoint Server"
+        url: /sharepoint/sharepoint-server
+      - text: Karma
+        url: /sharepoint/hybrid/hybrid
+      - text: SharePoint için PowerShell başvurusu
+        url: /powershell/sharepoint
+      - text: Daha fazla >
+        url: /sharepoint
+    - title: OneDrive
+      links:
+      - text: Planlama, dağıtma ve yönetme
+        url: /onedrive/onedrive
+      - text: Daha fazla OneDrive >
+        url: /onedrive
+    - title: Outlook ve Exchange
+      links:
+      - text: iOS ve Android için Outlook
+        url: https://resources.techcommunity.microsoft.com/outlook-mobile-adoption/
+      - text: Exchange Online
+        url: /Exchange/exchange-online
+      - text: Daha fazla Exchange >
+        url: /Exchange
+    - title: Planner ve Project
+      links:
+      - text: Planner yönetici yardımı
+        url: /office365/planner
+      - text: Web için Project
+        url: /project-for-the-web/projectforweb-admin-home
+      - text: Daha fazla Project >
+        url: /Project
+    - title: Microsoft Viva
+      links:
+      - text: Microsoft Viva Konular
+        url: /microsoft-365/knowledge/
+      - text: Microsoft Viva Analizler
+        url: /insights/viva-teams-app
+      - text: Microsoft Viva Bağlantılar
+        url: /sharepoint/viva-connections
+      - text: Microsoft Viva Öğrenme
+        url: /microsoft-365/learning/
+      - text: Daha fazla Microsoft Viva >
+        url: /microsoft-365/viva/
+    - title: Diğer uygulama ve hizmetler
+      links:
+      - text: Microsoft Kayıtları
+        url: bookings/index.yml
+      - text: Microsoft Kaizala
+        url: /Kaizala
+      - text: Microsoft Stream
+        url: /stream/
+      - text: Yammer
+        url: /yammer/yammer-landing-page
+      - text: Skype Kurumsal
+        url: /skypeforbusiness
+      - text: Office Online Server
+        url: /officeonlineserver
+  - title: İlgili rehber ve kaynaklar
+    items:
+    - title: Geliştiriciler
+      summary: Microsoft 365 Geliştirici Merkezi'nde geliştiriciler için öğreticiler, referanslar ve diğer kaynaklar bulun.
+      url: https://developer.microsoft.com/microsoft-365
+    - title: Son kullanıcılar
+      summary: support.microsoft.com sayfasında Microsoft 365 kullanıcıları için eğitim, nasıl yapılır ve yardım içeriği bulun.
+      url: https://support.microsoft.com/microsoft-365
+    - title: Eğitim BT
+      summary: Microsoft 365 Eğitim ile yaratıcılığın kilidini açmayı, ekip çalışmasını teşvik etmeyi ve güvenli ve basit bir deneyim yaşamayı öğrenin.
+      url: /education
+    - title: Eğitimciler
+      summary: Microsoft 365 Eğitim kullanan eğitimciler için eğitim, nasıl yapılır ve yardım içeriği bulun.
+      url: https://support.microsoft.com/education
+    - title: Tech topluluğu
+      summary: Deneyimleri paylaşmak, etkileşim kurmak ve uzmanlardan bilgi edinmek için Microsoft 365 Tech topluluğuna katılın.
+      url: https://techcommunity.microsoft.com/t5/Microsoft-365/ct-p/microsoft365
+    - title: Microsoft 365 Topluluk İçeriği
+      summary: BT Uzmanı ve Yönetici topluluğu tarafından sağlanan Microsoft 365 kullanıcıları için çözüm ve senaryo rehberliği bulun.
+      url: /microsoft-365/community/
