@@ -19,12 +19,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Microsoft Teams kullanıcı etkinliği raporunu almayı ve kuruluşunuzdaki Teams etkinliğiyle ilgili içgörüler elde etmeyi öğrenin.
-ms.openlocfilehash: cbd9bdb73dc69da5e36e0fb9c3ff2ff15b5269a4
-ms.sourcegitcommit: 23e186b46b27a6a4863f507a52a11105afae9726
+ms.openlocfilehash: ad2701e10e6b71f6fdb6a7d9ccf4a6b795a38b94
+ms.sourcegitcommit: 5b321693214e3859f5af8f1774d2a5ff685ab3b7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64882274"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65015012"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---microsoft-teams-user-activity"></a>Yönetim merkezinde raporları Microsoft 365 - Microsoft Teams kullanıcı etkinliği
 
@@ -33,6 +33,7 @@ Microsoft 365 Raporları panosu, kuruluşunuzdaki ürünler genelindeki etkinli�
 ## <a name="how-to-get-to-the-microsoft-teams-user-activity-report"></a>Microsoft Teams kullanıcı etkinliği raporuna ulaşma
 
 1. Yönetim merkezinde, **Raporlar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2074756" target="_blank">Kullanımı</a> sayfasına gidin.
+
 2. Pano giriş sayfasında, Microsoft Teams etkinlik kartındaki **Daha fazla görüntüle** düğmesine tıklayın.
 
 ## <a name="interpret-the-microsoft-teams-user-activity-report"></a>Microsoft Teams kullanıcı etkinliği raporunu yorumlama
@@ -53,7 +54,7 @@ Veri kalitesini sağlamak için son üç güne ilişkin günlük veri doğrulama
 |Kullanıcı adı  <br/> |Kullanıcının e-posta adresi. Asıl e-posta adresini görüntüleyebilir veya bu alanın anonim olmasını sağlayabilirsiniz.   <br/> |
 |Kiracı adı  <br/> |Kullanıcının ait olduğu iç veya dış kiracının adı.   <br/> <br/> Bir kullanıcı dış kiracıya aitse, ilgili veri ölçümleri (örneğin, posta iletileri, yanıt iletileri vb.) yöneticinin kiracısının paylaşılan kanallarındaki etkileşimlerine göre hesaplanır. Kullanıcı tarafından kendi kiracısında (belirli bir kiracının paylaşılan kanalları dışında) yapılan etkileşimler, belirli bir kiracının yönetici kullanım raporu için dikkate alınmaz.  |
 |Paylaşılan kanal kiracı adları   <br/> |Kullanıcının katıldığı paylaşılan kanalların iç veya dış kiracılarının adları.   <br/> |
-|Kanal iletileri   <br/> |Kullanıcının belirtilen zaman aralığında bir ekip sohbetinde yayınladığı benzersiz iletilerin sayısı.  <br/> |
+|Kanal iletileri   <br/> |Kullanıcının belirtilen zaman aralığında bir ekip sohbetinde yayınladığı benzersiz iletilerin sayısı.   <br/> |
 |Mesaj   <br/> |Belirtilen zaman aralığındaki tüm kanallardaki posta iletilerinin sayısı <br/> |
 |Yanıt   <br/> |Belirtilen süre boyunca tüm kanallarda yanıtlanan ileti sayısı. <br/> |
 |Acil iletiler    <br/> |Belirtilen zaman aralığındaki acil ileti sayısı. <br/> |

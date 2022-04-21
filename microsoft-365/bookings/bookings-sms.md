@@ -8,21 +8,21 @@ ms.topic: article
 ms.service: bookings
 ms.localizationpriority: medium
 description: Microsoft Bookings'da istemciler, müşteriler ve iş ortakları için SMS metin bildirimlerini yapılandırmayı öğrenin.
-ms.openlocfilehash: 46f58081bc9df799323c0c5e85253d4593d9c3c7
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: 8183f89a73d3a9fa8573bfaa55935865eeb794dd
+ms.sourcegitcommit: 5b321693214e3859f5af8f1774d2a5ff685ab3b7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64715263"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65014968"
 ---
 # <a name="configure-sms-text-notifications-and-reminders-in-microsoft-bookings"></a>Microsoft Bookings'de SMS metin bildirimlerini ve anımsatıcılarını yapılandırma
-
-> [!NOTE]
-> Bu makale, Microsoft Bookings en son sürümüyle etkileşim kurmanıza yardımcı olur. Önceki sürümler önümüzdeki aylarda kullanımdan kaldırılacak.
 
 Microsoft Bookings ile, randevu alan kişiye gönderilecek SMS kısa mesaj bildirimlerini ayarlayabilirsiniz. SMS bildirimlerini Bookings web uygulamasındaki Bookings veya Teams'daki Bookings uygulamasında ayarlayabilirsiniz. Katılımcılar, müşteriler veya iş ortakları self servis rezervasyon sayfasında SMS bildirimleri almayı da kabul edebilir veya devre dışı bırakabilirsiniz. Ayrıca gönderene **STOP** yanıtını vererek SMS bildirimlerini almayı da geri çevirebilirler.
 
 SMS bildirimleri, sanal rezervasyon randevuları için Teams toplantı bağlantısını içerir.
+
+> [!Note]
+> Bookings lisansı olan müşteriler için 30 Eylül 2022'ye kadar sınırsız SMS bildirimi sağlayacağız. Promosyon döneminin sonuna yaklaştıkça lisans gereksinimleriyle ilgili ek ayrıntılar sağlayacağız. Promosyon döneminden sonra fiyatlandırma ayrıntılarını almak için hesap ekibinize veya desteğinize başvurun.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
@@ -41,7 +41,7 @@ SMS bildirimini Bookings birkaç yolla yapılandırabilirsiniz:
 > [!NOTE]
 > Teams ve Bookings verilerini Teams yönetim merkezinde görmek için Teams yöneticisi olmanız gerekir.
 
-Kuruluşunuzdaki SMS bildirimleri kullanımıyla ilgili önemli verileri Teams yönetim merkezinden izleyebilirsiniz. Kullanım raporları, gönderilen saat ve tarih, kaynak numarası, ileti türü, olay türü ve teslim durumu gibi verileri içerir. 1 Mayıs 2022'den sonraki SMS bildirimleri için tahmin ve bütçeye yardımcı olmak için tanıtım döneminde SMS bildirim telemetrisini kullanabilirsiniz.
+Kuruluşunuzdaki SMS bildirimleri kullanımıyla ilgili önemli verileri Teams yönetim merkezinden izleyebilirsiniz. Kullanım raporları, gönderilen saat ve tarih, kaynak numarası, ileti türü, olay türü ve teslim durumu gibi verileri içerir. 30 Eylül 2022'den sonra SMS bildirimleri için tahmin ve bütçeye yardımcı olmak için tanıtım döneminde SMS bildirim telemetrisini kullanabilirsiniz.
 
 1. Teams yönetim merkezinde **Sanal Ziyaretler SMS bildirimleri**.
 

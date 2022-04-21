@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Yöneticiler, Reuters Eikon verilerini Microsoft 365'da Veritas'tan içeri aktarmak ve arşivlemek için bir bağlayıcı ayarlayabilir. Bu bağlayıcı, Microsoft 365'da üçüncü taraf veri kaynaklarından verileri arşivleyabilmenizi sağlar. Bu verileri arşivledikten sonra, üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
-ms.openlocfilehash: c296e77023b893f63e5dbd8488c08374e855840d
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 3f5996b81668f917dfc566829733fe95eed04fb2
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64940609"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65001642"
 ---
 # <a name="set-up-a-connector-to-archive-reuters-eikon-data"></a>Reuters Eikon verilerini arşivleme için bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Verileri Reuters Eikon platformundan Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında bir Veritas bağlayıcısı kullanın. Veritas, üçüncü taraf veri kaynağından öğeleri yakalamak (düzenli olarak) ve bu öğeleri Microsoft 365 içeri aktarmak için yapılandırılmış bir [Reuters Eikon](https://globanet.com/eikon/) bağlayıcısı sağlar. Bağlayıcı, bir kullanıcının Reuters Eikon hesabından kişiler arası iletiler, grup sohbetleri, ekler ve sorumluluk reddi gibi içerikleri e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'da kullanıcının posta kutusuna aktarır.
 

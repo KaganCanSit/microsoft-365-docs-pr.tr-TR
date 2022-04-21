@@ -19,14 +19,16 @@ search.appverid:
 - MET150
 description: Microsoft 365 kuruluşunuzdaki kullanıcıların ve yöneticilerin etkinliklerini denetlemeyi öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: c7c6461868ee212e6b332181b9dea1560ce49558
-ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+ms.openlocfilehash: ee11ee5e02ee4342921776124813b71cf4468ad7
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64953749"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65001422"
 ---
 # <a name="auditing-solutions-in-microsoft-purview"></a>Microsoft Purview'da denetim çözümleri
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview denetim çözümleri, kuruluşların güvenlik olaylarına, adli araştırmalara, iç araştırmalara ve uyumluluk yükümlülüklerine etkili bir şekilde yanıt vermelerine yardımcı olmak için tümleşik bir çözüm sağlar. Onlarca Microsoft 365 hizmeti ve çözümünde gerçekleştirilen binlerce kullanıcı ve yönetici işlemi, kuruluşunuzun birleşik denetim günlüğünde yakalanır, kaydedilir ve saklanır. Bu olaylar için denetim kayıtları güvenlik işlemleri, BT yöneticileri, insider risk ekipleri ve kuruluşunuzdaki uyumluluk ve hukuk araştırmacıları tarafından aranabilir. Bu özellik, Microsoft 365 kuruluşunuz genelinde gerçekleştirilen etkinliklere görünürlük sağlar.
 
@@ -130,7 +132,7 @@ Aşağıdaki bölümlerde Denetim (Standart) ve Denetim (Premium) için lisansla
 
 Microsoft Purview'da denetim çözümlerini kullanmaya başlamak için aşağıdaki kurulum kılavuzuna bakın.
 
-### <a name="set-up-audit-standard"></a>Denetimi Ayarlama (Standart)
+### <a name="set-up-audit-standard"></a>Denetimi (Standart) Ayarlama
 
 İlk adım, Denetim (Standart) ayarlayıp denetim günlüğü aramalarını çalıştırmaya başlamaktır.
 
@@ -144,7 +146,7 @@ Microsoft Purview'da denetim çözümlerini kullanmaya başlamak için aşağıd
 
 Daha ayrıntılı yönergeler için bkz. [Denetimi Ayarlama (Standart)](set-up-basic-audit.md).
 
-### <a name="set-up-audit-premium"></a>Denetimi Ayarlama (Premium)
+### <a name="set-up-audit-premium"></a>Denetimi (Premium) Ayarlama
 
 Kuruluşunuzun Denetimi (Premium) destekleyen bir aboneliği varsa, Denetim (Premium) bölümündeki ek özellikleri ayarlamak ve kullanmak için aşağıdaki adımları gerçekleştirin.
 

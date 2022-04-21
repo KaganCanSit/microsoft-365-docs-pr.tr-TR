@@ -1,5 +1,5 @@
 ---
-title: E-posta ile iletili yeni etki alanları içgörü
+title: Yeni alan adları yönlendiriliyor e-posta içgörüsü
 f1.keywords:
 - NOCSH
 ms.author: dansimp
@@ -9,45 +9,44 @@ audience: ITPro
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.assetid: ''
-description: Yöneticiler, kullanıcılarının iletileri daha önce iletilen dış etki alanlarına ne zaman ileteceklerini araştırmak için Güvenlik & Uyumluluk Merkezi'nde Posta akışı panosunda yeni etki alanlarının iletilen e-posta ile ilgili içgörülerini nasıl kullanacaklarını öğrenebilirler.
+description: Yöneticiler, Güvenlik & Uyumluluk Merkezi'ndeki Posta akışı panosunda yeni etki alanlarının iletilen e-posta içgörülerini kullanarak kullanıcılarının hiç iletilmemiş dış etki alanlarına ne zaman ileti ilettiğini araştırabilir.
 ms.technology: mdo
 ms.prod: m365-security
 ms.collection: M365-security-compliance
-ms.openlocfilehash: e23d63a519bf69f94ce4990d8851d673826dcb5c
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 1dbcf83d234611af1d209d83191cee24f5bee579
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64475091"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64974355"
 ---
-# <a name="new-domains-being-forwarded-email-insight-in-the-security--compliance-center"></a>Güvenlik ve Uyumluluk Merkezi'nde e-posta ile iletili yeni & bilgileri
+# <a name="new-domains-being-forwarded-email-insight-in-the-security--compliance-center"></a>Güvenlik & Uyumluluk Merkezi'nde iletilen yeni etki alanları e-posta içgörüleri
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
-**Geçerli olduğu yer:**
+**Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
 - [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-E-posta iletilerini belirli etki alanlarındaki dış alıcılara iletmenin geçerli iş nedenleri vardır. Ancak, organizasyonu kullananlar aniden iletileri kuruluş içinde hiç kimsenin iletileri iletmemiştir (yeni bir etki alanına) iletmemiştir ve bu durum şüphelidir.
+E-posta iletilerini belirli etki alanlarındaki dış alıcılara iletmek için geçerli iş nedenleri vardır. Ancak, kuruluşunuzdaki kullanıcılar aniden iletileri kuruluşunuzdaki hiç kimsenin ileti iletmediği bir etki alanına (yeni bir etki alanı) iletmeye başladığında şüphelidir.
 
-Bu koşul kullanıcı hesaplarının güvenliği ihlal edilmiş olduğunu gösteriyor olabilir. Hesapların ele geçirildiklerine şüpheleniyorsanız bkz. Güvenliği tehlikeye [atılmış bir e-posta hesabını yanıtla.](responding-to-a-compromised-email-account.md)
+Bu koşul, kullanıcı hesaplarının gizliliğinin tehlikeye girdiğini gösterebilir. Hesapların gizliliğinin ihlal edildiğini düşünüyorsanız, bkz. [Güvenliği aşılmış bir e-posta hesabını yanıtlama](responding-to-a-compromised-email-account.md).
 
-Güvenlik **ve Uyumluluk Merkezi'nde** E-posta ile iletili yeni [etki alanları](https://protection.office.com) &, organizasyonu kullanan kullanıcılar iletileri yeni etki alanlarına ileteceklerini size haber verir.
+[Güvenlik & Uyumluluk Merkezi'nde](https://protection.office.com) **iletilen Yeni etki alanları e-posta** içgörüleri, kuruluşunuzdaki kullanıcılar iletileri yeni etki alanlarına iletirken size bildirir.
 
-Bu içgörü ancak sorun algılandığında ve Rapor [iletildi sayfasında görüntülenir](view-mail-flow-reports.md#forwarding-report) .
+Bu içgörü yalnızca sorun algılandığında ve [İletme raporu](view-mail-flow-reports.md#forwarding-report) sayfasında görüntülenir.
 
-:::image type="content" source="../../media/mfi-new-domains-being-forwarded.png" alt-text="E-posta ile iletili yeni etki alanları içgörü" lightbox="../../media/mfi-new-domains-being-forwarded.png":::
+:::image type="content" source="../../media/mfi-new-domains-being-forwarded.png" alt-text="İletilen Yeni etki alanları e-posta içgörüleri" lightbox="../../media/mfi-new-domains-being-forwarded.png":::
 
+Pencere öğesine tıkladığınızda, iletilen iletiler hakkında daha fazla ayrıntı bulabileceğiniz ve [İletme raporuna](view-mail-flow-reports.md#forwarding-report) bir bağlantı da dahil olmak üzere bir açılır pencere açılır öğesi görüntülenir.
 
-Widget'a tıklarsanız, iletili iletiler hakkında daha fazla ayrıntıya ulaşabilirsiniz ve bu açılır pencere öğesi, İletim raporuna [bir bağlantı içerir](view-mail-flow-reports.md#forwarding-report).
+:::image type="content" source="../../media/mfi-new-domains-being-forwarded-details.png" alt-text="Yeni etki alanları iletiliyor e-posta içgörülerine tıkladıktan sonra görüntülenen Ayrıntılar açılır öğesi" lightbox="../../media/mfi-new-domains-being-forwarded-details.png":::
 
-:::image type="content" source="../../media/mfi-new-domains-being-forwarded-details.png" alt-text="Yeni etki alanları iletildi e-posta içgörüne tıklandıktan sonra görüntülenen Ayrıntılar açılır" lightbox="../../media/mfi-new-domains-being-forwarded-details.png":::
+Ayrıca, (**Raporlar** \> **Panosu** veya <https://protection.office.com/insightdashboard>) üzerindeki **En iyi içgörüler & öneriler** alanında **Tümünü görüntüle'ye** tıkladıktan sonra içgörüleri seçtiğinizde de bu ayrıntılar sayfasına ulaşabilirsiniz.
 
-Ayrıca, En iyi öngörüler ve öneriler **alanında (** \> Raporlar Panosu veya ) Hepsini görüntüle'ye **tıklarken** & bu ayrıntılar sayfasına **da bakabilirsiniz**<https://protection.office.com/insightdashboard>.
-
-Dış etki alanlarına otomatik ileti iletmeyi önlemek için, dış etki alanlarının bir bazıları veya bazıları için uzak etki alanı yapılandırabilirsiniz. Daha fazla bilgi için bkz[. Exchange Online'da uzak etki alanlarını yönetme](/Exchange/mail-flow-best-practices/remote-domains/manage-remote-domains).
+Dış etki alanlarına otomatik ileti iletmeyi önlemek için, dış etki alanlarının bazıları veya tümü için bir uzak etki alanı yapılandırın. Daha fazla bilgi için bkz. [Exchange Online'de uzak etki alanlarını yönetme](/Exchange/mail-flow-best-practices/remote-domains/manage-remote-domains).
 
 ## <a name="related-topics"></a>İlgili konular
 
-Posta akışı panosunda yer alan diğer içgörüler hakkında bilgi için, Güvenlik ve Uyumluluk Merkezi'nde [Posta & bakın](mail-flow-insights-v2.md).
+Posta akışı panosundaki diğer içgörüler hakkında bilgi için [Bkz. Güvenlik & Uyumluluk Merkezi'ndeki Posta akışı içgörüleri](mail-flow-insights-v2.md).

@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Yöneticiler, Microsoft 365'da Rogers Network verilerini içeri aktarmak ve arşivlemek için bir TeleMessage bağlayıcısı ayarlayabilir. Bu, kuruluşunuzun üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilmeniz için üçüncü taraf veri kaynaklarından verileri Microsoft 365 arşivleyebilmenizi sağlar.
-ms.openlocfilehash: 790a41ce3d505e6381bb9d02ed9014132fe8f9f0
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 966810ba4cedb782fb860ebff72b4fc7b4e7248c
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64944029"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65001554"
 ---
 # <a name="set-up-a-connector-to-archive-rogers-network-data"></a>Rogers Network verilerini arşivleye bir bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Rogers mobil ağından SMS ve MMS verilerini içeri aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalındaki TeleMessage bağlayıcısını kullanın. [Rogers Network Archiver bağlayıcısını](https://www.telemessage.com/mobile-archiver/network-archiver/rogers/) ayarlayıp yapılandırdıktan sonra kuruluşunuzun Rogers mobil ağına bağlanır ve SMS ve MMS verilerini Microsoft 365'deki posta kutularına aktarır.
 

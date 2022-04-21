@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Yöneticiler, Microsoft 365'da Veritas'tan Web Sayfası Yakalama verilerini içeri aktarmak ve arşiv etmek için bir bağlayıcı ayarlayabilir. Bu bağlayıcı, kuruluşunuzun üçüncü taraf verilerini yönetmek için yasal saklama, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilmeniz için üçüncü taraf veri kaynaklarından verileri Microsoft 365 arşivleyebilmenizi sağlar.
-ms.openlocfilehash: 549af03a794c132bc11901618a60185722f24907
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: f4ba343d8c1a06f8c1eaf88189cae5e013a76414
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64935049"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65001532"
 ---
 # <a name="set-up-a-connector-to-archive-webpage-data"></a>Web sayfası verilerini arşivleye bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Web sayfalarındaki verileri Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında bir Veritas bağlayıcısı kullanın. Veritas, belirli bir web sitesinde veya etki alanının tamamında belirli web sayfalarını (ve bu sayfalardaki bağlantıları) yakalayan bir [Web Sayfası Yakalama](https://globanet.com/webpage-capture) bağlayıcısı sağlar. Bağlayıcı web sayfası içeriğini PDF, PNG veya özel dosya biçimine dönüştürür ve dönüştürülen dosyaları bir e-posta iletisine ekler ve ardından bu e-posta öğelerini Microsoft 365'deki kullanıcı posta kutularına aktarır.
 

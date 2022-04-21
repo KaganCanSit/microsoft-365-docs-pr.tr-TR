@@ -1,6 +1,7 @@
 ---
 title: İletişim uyumluluk ilkeleri
 description: İletişim uyumluluk ilkeleri hakkında daha fazla bilgi edinin.
+keywords: Microsoft 365, Microsoft Purview, uyumluluk, iletişim uyumluluğu
 f1.keywords:
 - NOCSH
 ms.author: robmazz
@@ -18,21 +19,23 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 25a8a25497485932ce0aeb12700af1557b4cea29
-ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
+ms.openlocfilehash: 47c7ddbc5ce935e8b9fedb7682daa6af468b66b4
+ms.sourcegitcommit: 5b321693214e3859f5af8f1774d2a5ff685ab3b7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64705440"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65015034"
 ---
 # <a name="communication-compliance-policies"></a>İletişim uyumluluk ilkeleri
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 ## <a name="policies"></a>İlkeler
 
 > [!IMPORTANT]
-> İletişim uyumluluk ilkeleri oluşturmak ve yönetmek için PowerShell'in kullanılması desteklenmez. Bu ilkeleri oluşturmak ve yönetmek için[, Microsoft 365 iletişim uyumluluk çözümündeki](https://compliance.microsoft.com/supervisoryreview) ilke yönetimi denetimlerini kullanmanız gerekir.
+> İletişim uyumluluk ilkeleri oluşturmak ve yönetmek için PowerShell'in kullanılması desteklenmez. Bu ilkeleri oluşturmak ve yönetmek için [, iletişim uyumluluk çözümünde](https://compliance.microsoft.com/supervisoryreview) ilke yönetimi denetimlerini kullanmanız gerekir.
 
-Microsoft 365 uyumluluk merkezi Microsoft 365 kuruluşlar için iletişim uyumluluk ilkeleri oluşturursunuz. İletişim uyumluluk ilkeleri, kuruluşunuzda hangi iletişimlerin ve kullanıcıların gözden geçirileceğini tanımlar, iletişimlerin hangi özel koşulları karşılaması gerektiğini tanımlar ve kimin inceleme yapacağını belirtir. *İletişim Uyumluluğu Yöneticisi* rolüne atanan kullanıcılar ilkeler ayarlayabilir ve bu role atanmış olan herkes Microsoft 365 uyumluluk merkezi **İletişim uyumluluğu** sayfasına ve genel ayarlara erişebilir. Gerekirse, bir ilkedeki değişikliklerin geçmişini gözden geçirmeyi bekleyen uyarıların, yükseltilmiş öğelerin ve çözümlenen öğelerin durumunu da içeren bir .csv (virgülle ayrılmış değerler) dosyasına aktarabilirsiniz. İlkeler yeniden adlandırılamaz ve artık gerekli olmadığında silinebilir.
+Microsoft Purview uyumluluk portalında Microsoft 365 kuruluşlar için iletişim uyumluluk ilkeleri oluşturursunuz. İletişim uyumluluk ilkeleri, kuruluşunuzda hangi iletişimlerin ve kullanıcıların gözden geçirileceğini tanımlar, iletişimlerin hangi özel koşulları karşılaması gerektiğini tanımlar ve kimin inceleme yapacağını belirtir. *İletişim Uyumluluğu Yöneticisi* rolüne atanan kullanıcılar ilkeleri ayarlayabilir ve bu role atanmış olan herkes Microsoft Purview uyumluluk portalında **İletişim uyumluluğu** sayfasına ve genel ayarlara erişebilir. Gerekirse, bir ilkedeki değişikliklerin geçmişini gözden geçirmeyi bekleyen uyarıların, yükseltilmiş öğelerin ve çözümlenen öğelerin durumunu da içeren bir .csv (virgülle ayrılmış değerler) dosyasına aktarabilirsiniz. İlkeler yeniden adlandırılamaz ve artık gerekli olmadığında silinebilir.
 
 ## <a name="policy-templates"></a>İlke şablonları
 
@@ -103,13 +106,16 @@ Teams sohbetlerden gelen kullanıcı tarafından bildirilen iletiler, Kullanıc�
 
 Yöneticiler, kuruluşunuza uygun şekilde bu ilkeye hemen özel gözden geçirenler atamalıdır. Bu, Uyumluluk Yetkiliniz, Risk Sorumlunuz veya İnsan Kaynakları departmanınızın üyeleri gibi gözden geçirenleri içerebilir. Gözden geçirenleri kullanıcı tarafından bildirilen iletiler olarak gönderilen sohbet iletileri için özelleştirmek için aşağıdaki adımları tamamlayın:
 
-1. [Microsoft 365](https://compliance.microsoft.com/) kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak Microsoft 365 uyumluluk merkezi oturum açın.
-2. Microsoft 365 uyumluluk merkezi **İletişim uyumluluğu'na** gidin.
+1. Microsoft 365 kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak [Microsoft Purview uyumluluk portalında](https://compliance.microsoft.com/) oturum açın.
+2. Uyumluluk portalında **İletişim uyumluluğu'na** gidin.
 3. **İlke** sekmesinde *Kullanıcı tarafından bildirilen iletiler* ilkesini ve **düzenle'yi** seçin.
 4. **Kullanıcı tarafından bildirilen iletileri izleme** bölmesinde, ilke için gözden geçirenleri atayın. Gözden geçirenlerin Exchange Online üzerinde barındırılan posta kutuları olmalıdır. Gözden geçirenler bir ilkeye eklendiğinde, ilkeye atamayı bildiren ve gözden geçirme işlemiyle ilgili bilgilerin bağlantılarını sağlayan bir e-posta iletisini otomatik olarak alır.
 5. **Kaydet**'i seçin.
 
-*Kullanıcıların sorun bildir seçeneğiyle* Teams iletileri bildirmesini devre dışı bırakmak için [, Teams Yönetim Merkezi'nde](/microsoftteams/manage-teams-in-modern-portal) **Son kullanıcı raporlama** seçeneğini devre dışı bırakın.
+*Kullanıcıların sorun bildir seçeneğiyle* Teams iletileri bildirmesini devre dışı bırakmak için [, Teams Yönetim Merkezi'nde](/microsoftteams/manage-teams-in-modern-portal) **Son kullanıcı raporlama** seçeneğini devre dışı bırakın. 
+
+>[!IMPORTANT]
+>Teams Yönetim Merkezi'nde **Son kullanıcı raporlama** seçeneğini devre dışı bırakmak için PowerShell kullanıyorsanız [, Microsoft Teams cmdlet'leri modülü sürüm 4.2.0](/MicrosoftTeams/teams-powershell-release-notes) veya üzerini kullanmanız gerekir.
 
 ## <a name="storage-limit-notification-preview"></a>Depolama sınırı bildirimi (önizleme)
 
@@ -140,7 +146,7 @@ Varsayılan olarak **Direction koşulu** görüntülenir ve kaldırılamaz. İlk
 
 ### <a name="sensitive-information-types"></a>Hassas bilgi türleri
 
-hassas bilgi türlerini iletişim uyumluluk ilkenizin bir parçası olarak dahil edebilirsiniz. Hassas bilgi türleri kredi kartı numaralarını, banka hesap numaralarını, pasaport numaralarını ve daha fazlasını tanımlamaya ve korumaya yardımcı olabilecek önceden tanımlanmış veya özel veri türleridir. [Veri kaybı önleme hakkında bilgi edinme'nin](dlp-learn-about-dlp.md) bir parçası olarak, hassas bilgi yapılandırması hassas olabilecek içeriği tanımlamaya ve işaretlemeye yardımcı olmak için desenleri, karakter yakınlığı, güvenilirlik düzeylerini ve hatta özel veri türlerini kullanabilir. Varsayılan hassas bilgi türleri şunlardır:
+hassas bilgi türlerini iletişim uyumluluk ilkenizin bir parçası olarak dahil edebilirsiniz. Hassas bilgi türleri kredi kartı numaralarını, banka hesap numaralarını, pasaport numaralarını ve daha fazlasını tanımlamaya ve korumaya yardımcı olabilecek önceden tanımlanmış veya özel veri türleridir. [Microsoft Purview Veri Kaybı Önleme hakkında bilgi edinme'nin](dlp-learn-about-dlp.md) bir parçası olarak, hassas bilgi yapılandırması hassas olabilecek içeriği tanımlamaya ve işaretlemeye yardımcı olmak için desenleri, karakter yakınlığı, güvenilirlik düzeylerini ve hatta özel veri türlerini kullanabilir. Varsayılan hassas bilgi türleri şunlardır:
 
 - Finansal
 - Tıbbi ve sağlık
@@ -186,7 +192,7 @@ Yerleşik eğitilebilir ve genel sınıflandırıcılar, bu alanlardaki terimler
 > [!NOTE]
 > Sınıflandırıcıları kullanan ilkeler, altı veya daha büyük sözcük sayısına sahip iletileri inceler ve değerlendirir. Altıdan az sözcük içeren iletiler sınıflandırıcılar kullanılarak ilkelerde değerlendirilmez. Uygunsuz içerik içeren daha kısa iletileri tanımlamak ve üzerinde işlem yapmak için, bu içerik türünü izleyen iletişim uyumluluk ilkelerine özel bir anahtar sözcük sözlüğü eklemenizi öneririz.
 
-Microsoft 365'daki eğitilebilir sınıflandırıcılar hakkında bilgi için bkz. [Eğitilebilir sınıflandırıcıları kullanmaya başlama](classifier-get-started-with.md).
+Eğitilebilir sınıflandırıcılar hakkında bilgi için bkz. [Eğitilebilir sınıflandırıcıları kullanmaya başlama](classifier-get-started-with.md).
 
 ### <a name="optical-character-recognition-ocr"></a>Optik karakter tanıma (OCR)
 
@@ -269,15 +275,15 @@ Bir ilkeyi yapılandırdıktan sonra, ilgili uyarı ilkesi otomatik olarak oluş
 > [!NOTE]
 > Etkinlikler için uyarı ilkesi eşik tetikleyici ayarları, iletişim uyumluluk ilkeleri için en az 3 veya daha yüksek bir değeri destekler.
 
-Microsoft 365 uyumluluk merkezi uyarı **ilkeleri** sayfasındaki uyarı ilkelerindeki etkinlik sayısı, etkinlikler dönemi ve belirli kullanıcılar için tetikleyiciler için varsayılan ayarları değiştirebilirsiniz.
+Microsoft Purview uyumluluk portalındaki **Uyarı ilkeleri** sayfasında, uyarı ilkelerindeki etkinlik sayısı, etkinlikler dönemi ve belirli kullanıcılar için tetikleyiciler için varsayılan ayarları değiştirebilirsiniz.
 
 ### <a name="change-the-severity-level-for-an-alert-policy"></a>Uyarı ilkesinin önem düzeyini değiştirme
 
 Belirli bir iletişim uyumluluk ilkesi için uyarı ilkesinde atanan önem düzeyini değiştirmek istiyorsanız aşağıdaki adımları tamamlayın:
 
-1. [Microsoft 365](https://compliance.microsoft.com) kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak Microsoft 365 uyumluluk merkezi oturum açın.
+1. Microsoft 365 kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak [Microsoft Purview uyumluluk portalında](https://compliance.microsoft.com) oturum açın.
 
-2. Microsoft 365 uyumluluk merkezi **İlkeler'e** gidin.
+2. Microsoft Purview uyumluluk portalında **İlkeler'e** gidin.
 
 3. **uyarılar ilkeleri** sayfasını açmak için **İlkeler** sayfasında **Office 365 uyarıyı** seçin.
 

@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Yöneticiler, Veritas'ın Merge1 sitesinde arşivlenen Facebook'un Çalışma Alanı'ndan verileri Microsoft 365 içeri aktarmak ve arşivlemesi için bir bağlayıcı ayarlayabilir. Bağlayıcıyı ayarlamak için Veritas ile çalışmanız gerekir Bu bağlayıcı, kuruluşunuzun üçüncü taraf verilerini yönetmek için yasal saklama, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilmeniz için Microsoft 365'da üçüncü taraf veri kaynaklarından verileri arşivleyebilmenizi sağlar.
-ms.openlocfilehash: 888697c6b5e340ebe82cd9466a260dc046622ee1
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 0dbd1bfaeea6a42db03793941b1fea894ee391b5
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64943941"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65001471"
 ---
 # <a name="set-up-a-connector-to-archive-workplace-from-facebook-data"></a>Facebook verilerinden Workplace'i arşivleye bir bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Çalışma Alanı'ndaki verileri Facebook'tan Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında bir Veritas bağlayıcısı kullanın. Veritas, üçüncü taraf veri kaynağından öğeleri yakalamak (düzenli olarak) ve bu öğeleri Microsoft 365'a aktarmak için yapılandırılmış bir [Facebook İş Yeri](https://globanet.com/workplace/) bağlayıcısı sağlar. Bağlayıcı, çalışma alanındaki sohbetler, ekler, gönderiler ve videolar gibi içeriği e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'deki kullanıcı posta kutularına aktarır.
 

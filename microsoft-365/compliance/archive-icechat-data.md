@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Yöneticiler ICE Sohbet aracındaki verileri Microsoft 365 içeri aktarmak ve arşivlemesi için bir bağlayıcı ayarlayabilir. Bu, kuruluşunuzun üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilmeniz için üçüncü taraf veri kaynaklarından verileri Microsoft 365 arşivleyebilmenizi sağlar.
-ms.openlocfilehash: 51c79127894f506f2f0f59a9c883f1b4c4bb5f24
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 55af0567fc5cb8dbdeb571209fb7d9f863561900
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64937333"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65001708"
 ---
 # <a name="set-up-a-connector-to-archive-ice-chat-data"></a>ICE Chat verilerini arşivleye bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]V
 
 ICE Chat işbirliği aracından finansal hizmetler sohbet verilerini içeri aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında yerel bir bağlayıcı kullanın. Bağlayıcıyı ayarlayıp yapılandırdıktan sonra, her gün bir kez kuruluşunuzun ICE Chat güvenli FTP (SFTP) sitesine bağlanır, sohbet iletilerinin içeriğini e-posta iletisi biçimine dönüştürür ve sonra bu öğeleri Microsoft 365'daki posta kutularına aktarır.
 

@@ -20,14 +20,16 @@ description: Microsoft Purview uyumluluk portalını kullanarak eBulma ile ilgil
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
-ms.openlocfilehash: 1f19c43e65993652628703f002b9537c71066013
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 3fef13fe96297b426dda4d72231846a99fb03179
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64946539"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65001378"
 ---
 # <a name="assign-ediscovery-permissions-in-the-compliance-portal"></a>Uyumluluk portalında eBulma izinleri atama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Kişilerin Microsoft Purview uyumluluk portalındaki [eBulma ile ilgili araçlardan](ediscovery.md) herhangi birini kullanmasını istiyorsanız, onlara uygun izinleri atamanız gerekir. Bunu yapmanın en kolay yolu, kişiyi uyumluluk merkezindeki **İzinler** sayfasında uygun rol grubuna eklemektir. Bu konuda, eBulma görevlerini gerçekleştirmek için gereken izinler açıklanmaktadır.
   
@@ -103,7 +105,7 @@ Bu rol, kullanıcıların uyumluluk portalında eBulma (Standart) ve eBulma (Pre
 
 Daha fazla bilgi için bkz.:
 
-- [eBulma ile Kullanmaya başlayın (Standart)](get-started-core-ediscovery.md)
+- [eKeşif’i (Standart) kullanmaya başlama](get-started-core-ediscovery.md)
 
 - [eBulma (Premium) ile Kullanmaya başlayın](get-started-with-advanced-ediscovery.md)
 
@@ -165,7 +167,7 @@ Bu rol, kullanıcıların içerik arama ölçütlerine uyan verileri toplu olara
 
 Rol gruplarını eBulma (Standart) ve eBulma (Premium) olaylarının üyeleri olarak ekleyebilirsiniz, böylece rol gruplarının üyeleri atanan durumlarda görevlere erişebilir ve görevleri gerçekleştirebilir. Rol grubuna atanan roller, rol grubunun üyelerinin neler yapabileceğini tanımlar. Ardından bir rol grubunu servis talebinin üyesi olarak eklemek, üyelerin belirli bir durumda bu görevlere erişmesine ve bunları gerçekleştirmesine olanak tanır. Rol gruplarını servis taleplerinin üyesi olarak ekleme hakkında daha fazla bilgi için bkz:
 
-- [eBulma ile Kullanmaya başlayın (Standart)](get-started-core-ediscovery.md#step-4-optional-add-members-to-a-ediscovery-standard-case)
+- [eKeşif’i (Standart) kullanmaya başlama](get-started-core-ediscovery.md#step-4-optional-add-members-to-a-ediscovery-standard-case)
 
 - [eBulma (Premium) olayına üye ekleme veya kaldırma](add-or-remove-members-from-a-case-in-advanced-ediscovery.md)
 

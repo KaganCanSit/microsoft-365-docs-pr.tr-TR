@@ -19,12 +19,12 @@ ms.localizationpriority: high
 f1.keywords: NOCSH
 recommendations: false
 description: Bu makalede, kimliği doğrulanmamış kullanıcılarla dosya ve klasör paylaşmaya yönelik en iyi yöntemler hakkında bilgi edineceksiniz.
-ms.openlocfilehash: ca6b75ba036aac826d657c8c907b512fe9d1f87a
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 43db59e0380f99a2312fd803970a73013445504a
+ms.sourcegitcommit: 5b321693214e3859f5af8f1774d2a5ff685ab3b7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64948385"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65015056"
 ---
 # <a name="best-practices-for-sharing-files-and-folders-with-unauthenticated-users"></a>Kimliği doğrulanmamış kullanıcılarla dosya ve klasör paylaşmaya yönelik en iyi yöntemler
 
@@ -47,6 +47,8 @@ Kuruluş genelindeki Herkes bağlantıları için son kullanma tarihi ayarlamak 
 1. **Herkes bağlantıları için süre sonu ve izin seçeneklerini seçin** altında **, Bu bağlantıların süresi bu kadar gün içinde dolmalıdır** onay kutusunu seçin.</br>
    ![Kuruluş düzeyinde Herkes bağlantısı süre sonu ayarlarının SharePoint ekran görüntüsü.](../media/sharepoint-organization-anyone-link-expiration.png)
 1. Kutuya gün sayısı yazın ve **Kaydet'e** tıklayın.
+
+Süre sonu süresini değiştirirseniz, yeni ayar daha uzunsa mevcut bağlantılar geçerli süre sonu süresini tutar veya yeni ayar daha kısaysa yeni ayara güncelleştirilir.
 
 Belirli bir sitedeki Herkes bağlantıları için son kullanma tarihi ayarlamak için
 
@@ -101,7 +103,7 @@ Belirli bir site için varsayılan dosya ve klasör paylaşım bağlantısını 
 
 ## <a name="prevent-unauthenticated-sharing-of-sensitive-content"></a>Hassas içeriğin kimliği doğrulanmamış olarak paylaşılmasını engelleme
 
-Hassas içeriğin kimliği doğrulanmamış şekilde paylaşılmasını önlemek için [Microsoft Purview veri kaybı önlemeyi (DLP)](../compliance/dlp-learn-about-dlp.md) kullanabilirsiniz. Veri kaybı önleme, dosyanın duyarlılık etiketine, bekletme etiketine veya dosyanın kendisindeki hassas bilgilere göre işlem yapabilir.
+Hassas içeriğin kimliği doğrulanmamış şekilde paylaşılmasını önlemek için [Microsoft Purview Veri Kaybı Önleme'yi (DLP)](../compliance/dlp-learn-about-dlp.md) kullanabilirsiniz. Veri kaybı önleme, dosyanın duyarlılık etiketine, bekletme etiketine veya dosyanın kendisindeki hassas bilgilere göre işlem yapabilir.
 
 DLP kuralı oluşturmak için
 1. Microsoft Purview yönetim merkezinde [Veri kaybı önleme sayfasına](https://compliance.microsoft.com/datalossprevention) gidin.

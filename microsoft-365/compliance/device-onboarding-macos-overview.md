@@ -1,5 +1,5 @@
 ---
-title: macOS cihazlarını Microsoft 365 genel bakışa ekleme
+title: macOS cihazlarının Microsoft 365'e katılımına genel bakış
 f1.keywords: NOCSH
 ms.author: chrfox
 author: chrfox
@@ -14,14 +14,14 @@ ms.collection:
 search.appverid:
 - MET150
 description: macOS cihazlarını Uyumluluk çözümlerine ekleme hakkında bilgi edinin
-ms.openlocfilehash: 6cc3323a94ee609c3c6674c12eb99fad3f18f3b4
-ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+ms.openlocfilehash: 09a35e47a237639a722047b11c24f9b2d09cf51d
+ms.sourcegitcommit: 5b321693214e3859f5af8f1774d2a5ff685ab3b7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64952736"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65014990"
 ---
-# <a name="onboard-macos-devices-into-microsoft-365-overview"></a>macOS cihazlarını Microsoft 365 genel bakışa ekleme
+# <a name="onboard-macos-devices-into-microsoft-365-overview"></a>macOS cihazlarının Microsoft 365'e katılımına genel bakış
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
@@ -54,7 +54,16 @@ macOS cihazlarınız zaten Intune veya JAMF Pro aracılığıyla yönetilmelidir
  
 - Intune eklemek için bkz[. Dağıtım kılavuzu: Microsoft Intune'da macOS cihazlarını yönetme](/mem/intune/fundamentals/deployment-guide-platform-macos) ve [Mac'inizi Intune Şirket Portalı ile kaydetme](/mem/intune/user-help/enroll-your-device-in-intune-macos-cp). 
 - JAMF Pro eklemek için bkz. [JAMF Pro yöneticileri kılavuzu](https://www.jamf.com/resources/product-documentation/jamf-pro-administrators-guide/) ve [JAMF Pro Mac için Yükleme ve Yapılandırma Kılavuzu](https://www.jamf.com/resources/product-documentation/jamf-pro-installation-guide-for-mac/)
-- macOS cihazlarınıza v95+ Edge tarayıcısını yükleme 
+<!--- Install the v95+ Edge browser on your macOS devices--> 
+
+### <a name="supported-browsers"></a>Desteklenen tarayıcılar
+
+Uç nokta DLP, macOS Catalina 10.15 veya üzeri sürümlerde şu tarayıcıları destekler:
+
+- Microsoft Edge (en son sürüm)
+- Safari (en son sürüm, yalnızca macOS)
+- Chrome (en son sürüm)
+- Firefox (en son sürüm)
 
 ## <a name="licensing-guidance"></a>Lisanslama kılavuzu
 
@@ -98,9 +107,9 @@ DLP algılayıcı telemetrisini almak ve veri kaybı önleme ilkelerini uygulama
 Konu | Açıklama
 :---|:---
 |[Intune kullanarak macOS cihazlarını Microsoft Purview çözümlerine ekleme ve çıkarma](device-onboarding-offboarding-macos-intune.md)|Intune aracılığıyla yönetilen macOS cihazları için
-|[Uç Nokta için Microsoft Defender müşterileri için Intune kullanarak macOS cihazlarını Uyumluluk çözümlerine ekleme ve çıkarma](device-onboarding-offboarding-macos-intune-mde.md) |Intune aracılığıyla yönetilen ve bunlara Uç Nokta için Microsoft Defender (MDE) dağıtılmış macOS cihazları için
+|[macOS cihazlarının Uç Nokta için Microsoft Defender müşterileri için Intune kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması](device-onboarding-offboarding-macos-intune-mde.md) |Intune aracılığıyla yönetilen ve bunlara Uç Nokta için Microsoft Defender (MDE) dağıtılmış macOS cihazları için
 |[JAMF Pro kullanarak macOS cihazlarını Microsoft Purview çözümlerine ekleme ve çıkarma](device-onboarding-offboarding-macos-jamfpro.md) | JAMF Pro aracılığıyla yönetilen macOS cihazları için
-|[Uç Nokta için Microsoft Defender müşterileri için JAMF Pro kullanarak macOS cihazlarını Uyumluluk çözümlerine ekleme ve çıkarma](device-onboarding-offboarding-macos-jamfpro-mde.md)|JAMF Pro aracılığıyla yönetilen ve bunlara Uç Nokta için Microsoft Defender (MDE) dağıtılmış macOS cihazları için
+|[macOS cihazlarının Uç Nokta için Microsoft Defender müşterileri için JAMF Pro kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması](device-onboarding-offboarding-macos-jamfpro-mde.md)|JAMF Pro aracılığıyla yönetilen ve bunlara Uç Nokta için Microsoft Defender (MDE) dağıtılmış macOS cihazları için
 
 
 ## <a name="related-topics"></a>İlgili konular

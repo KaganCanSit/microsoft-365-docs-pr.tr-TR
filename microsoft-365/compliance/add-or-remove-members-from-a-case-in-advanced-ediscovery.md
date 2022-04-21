@@ -17,14 +17,16 @@ search.appverid:
 ms.assetid: ''
 description: eBulma (Premium) servis talebini yönetirken servis talebine erişebilen üyeleri eklemeyi veya kaldırmayı öğrenin.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 9586fd0f606c3f95cda19ca9d6ae036bc23763dc
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: ae0404199506d5da18fb1579fbe6a125350afcde
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64943205"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65001686"
 ---
 # <a name="add-or-remove-members-from-a-case"></a>Bir vakaya üye ekleme veya kaldırma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Olaya kimlerin erişebileceğini yönetmek için üye ekleyebilir veya kaldırabilirsiniz. Ancak, bir üyenin bir eBulma (Premium) olayına erişebilmesi (ve bu durumda görevleri gerçekleştirmesi) için kullanıcıyı Microsoft Purview uyumluluk portalının **İzinler** sayfasındaki eBulma Yöneticisi rol grubuna eklemeniz gerekir. Daha fazla bilgi için bkz. [eBulma izinleri atama](./assign-ediscovery-permissions.md).
 

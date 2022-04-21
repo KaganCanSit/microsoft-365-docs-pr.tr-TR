@@ -11,62 +11,62 @@ metadata:
   ms.author: efrene
   ms.date: 03/31/2022
   ms.localizationpriority: high
-  ms.openlocfilehash: 9d9a9515cf9bda34d49cd927e0b59e90fa0c79ed
-  ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
+  ms.openlocfilehash: 036a15099420afbc356b1ae795e0f60cf5a81a7d
+  ms.sourcegitcommit: 5b321693214e3859f5af8f1774d2a5ff685ab3b7
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 04/04/2022
-  ms.locfileid: "64633226"
+  ms.lasthandoff: 04/21/2022
+  ms.locfileid: "65014946"
 landingContent:
 - title: Kullanmaya başlayın
   linkLists:
   - linkListType: video
     links:
-    - text: Ne Microsoft 365
+    - text: Microsoft 365 nedir?
       url: admin-overview/what-is-microsoft-365.md
     - text: Kuruluma genel bakış
       url: setup/plan-your-setup.md
-    - text: Abonelik seçin
+    - text: Abonelik seçme
       url: admin-overview/sign-up-for-office-365.md
 - title: Bulut kurulumu
   linkLists:
   - linkListType: video
     links:
-    - text: Abonelik için kaydolma
+    - text: Aboneliğe kaydolma
       url: admin-overview/sign-up-for-office-365.md
     - text: Hizmeti ayarlama
       url: setup/business-set-up.md
-    - text: Bilgisayarlarda Windows 10 sağlama
+    - text: Güvenli Windows 10 bilgisayarları
       url: setup/secure-win-10-pcs.md
 - title: Cihaz kurulumu
   linkLists:
   - linkListType: video
     links:
-    - text: Bağlan bilgisayarları Microsoft 365
+    - text: bilgisayarları Microsoft 365 Bağlan
       url: setup/set-up-windows-devices.md
-    - text: Microsoft Office uygulamalarını yükleme
+    - text: Microsoft Office uygulamaları yükleme
       url: setup/install-applications.md
-    - text: E-posta Outlook e-postayı ayarlama
+    - text: E-posta için Outlook ayarlama
       url: setup/setup-outlook.md
     - text: Postayı içeri aktarma ve yeniden yönlendirme
       url: setup/migrate-email-and-contacts-admin.md
-    - text: Dosyalarınızı Başka bir yere OneDrive
+    - text: Dosyalarınızı OneDrive taşıma
       url: setup/files-to-onedrive.md
-    - text: Şirket dosyalarını başka bir SharePoint
+    - text: Şirket dosyalarını SharePoint taşıma
       url: setup/files-to-sharepoint.md
 - title: Mobile
   linkLists:
   - linkListType: video
     links:
-    - text: Yönetici mobil uygulamasını edin
+    - text: Yönetici mobil uygulamasını edinin
       url: admin-overview/admin-mobile-app.md
-- title: İşletmenin Sesi
+- title: İş Sesi
   linkLists:
   - linkListType: video
     links:
-    - text: İşletmenin Sesi nedir?
+    - text: İş Sesi nedir?
       url: /microsoftteams/business-voice/whats-business-voice
-    - text: İşletmenin Sesini Ayarlama
+    - text: business voice'i ayarlama
       url: /microsoftteams/business-voice/set-up-overview
 - title: Hizmetleri yönetme
   linkLists:
@@ -78,11 +78,11 @@ landingContent:
       url: admin-overview/admin-center-overview.md
     - text: Şirket genelinde imza oluşturma
       url: setup/create-signatures-and-disclaimers.md
-    - text: Kullanım raporuna göre eylem uygulama
+    - text: Kullanım raporu üzerinde işlem yapma
       url: activity-reports/activity-reports.md
     - text: Başka bir etki alanı ekleme
       url: setup/add-domain.md
-    - text: Yeni iş e-posta adresi ayarlama
+    - text: Yeni bir iş e-posta adresi ayarlama
       url: email/change-email-address.md
 - title: Kullanıcıları yönetme
   linkLists:
@@ -90,7 +90,7 @@ landingContent:
     links:
     - text: Kullanıcı parolalarını sıfırlama
       url: add-users/reset-passwords.md
-    - text: Kendi kendine parola sıfırlamayı ayarlama
+    - text: Self servis parola sıfırlamayı ayarlama
       url: add-users/let-users-reset-passwords.md
     - text: Kullanıcı ekleme
       url: add-users/add-users.md
@@ -108,7 +108,7 @@ landingContent:
     links:
     - text: Faturanızı görüntüleme, indirme veya yazdırma
       url: ../commerce/billing-and-payments/view-your-bill-or-invoice.md
-    - text: Yeni lisans satın alma
+    - text: Yeni lisanslar satın alma
       url: ../commerce/licenses/buy-licenses.md
     - text: Mevcut lisansları kaldırma
       url: ../commerce/licenses/buy-licenses.md
@@ -118,23 +118,23 @@ landingContent:
   linkLists:
   - linkListType: video
     links:
-    - text: Mobil Windows 10 Pro güvenliğini sağlama
+    - text: Windows 10 Pro cihazlarının güvenliğini sağlama
       url: /microsoft-365/business-premium/m365bp-secure-windows-devices.md
-    - text: iOS Office uygulamaların güvenliğini sağlama
+    - text: iOS'ta güvenli Office uygulamaları
       url: /business-premium/m365bp-app-protection-settings-for-android-and-ios.md
 - title: Güvenlik & uyumluluğu
   linkLists:
   - linkListType: video
     links:
-    - text: Güvenlikle ilgili Microsoft 365 İş Ekstra genel bakış
+    - text: Microsoft 365 İş Ekstra güvenliğine genel bakış
       url: security-and-compliance/secure-your-business-data.md
-    - text: (Yenİ!) İş için Microsoft Defender
+    - text: (YENİ!) İş için Microsoft Defender
       url: /microsoft-365/security/defender-business/index.yml
     - text: MFA ile çalışan hesaplarının güvenliğini sağlama
       url: security-and-compliance/set-up-multi-factor-authentication.md
     - text: Kötü amaçlı yazılım algılamayı açma
       url: /microsoft-365/admin/security-and-compliance/increase-threat-protection#raise-the-level-of-protection-against-malware-in-mail
-    - text: Fidye yazılımları için e-posta kuralları oluşturma
+    - text: Fidye yazılımı için e-posta kuralları oluşturma
       url: /microsoft-365/admin/security-and-compliance/increase-threat-protection#protect-against-ransomware
     - text: Kimlik avı önlemeyi ayarlama
       url: /microsoft-365/admin/security-and-compliance/increase-threat-protection#protect-your-email-from-phishing-attacks
@@ -150,21 +150,21 @@ landingContent:
   linkLists:
   - linkListType: video
     links:
-    - text: Yardım veya destek al
+    - text: Yardım veya destek alma
       url: get-help-support.md
-    - text: Çalışanlara hızlı kurulum
+    - text: Çalışan hızlı kurulumu
       url: ../business-video/employee-quick-setup.md
-- title: Google Workspace'den M365'e geçiş
+- title: Google Workspace'ten M365'e geçiş yapma
   linkLists:
   - linkListType: video
     links:
-    - text: Google Workspace Microsoft 365 için kullanıcı ayarlama
-      url: /moveto-microsoft-365/set-up-microsoft-365-forgoogle
-    - text: Google Workspace etki alanlarınızı başka bir Microsoft 365
-      url: /moveto-microsoft-365/add-google-domain
-    - text: Google Workspace'den iş e-postası ve takvimi geçirme
-      url: /moveto-microsoft-365/migrate-email
-    - text: Bağlan işletmeler için Microsoft 365'e ekleme
-      url: /moveto-microsoft-365/connect-domain-tom365
-    - text: Geçiş Yöneticisi ile Google Microsoft 365 kurumsal'a geçirme
-      url: /moveto-microsoft-365/migrate-files-migration-manager
+    - text: Google Workspace geçişi için Microsoft 365 ayarlama
+      url: moveto-microsoft-365/set-up-microsoft-365-forgoogle.md
+    - text: Google Workspace etki alanınızı Microsoft 365 ekleme
+      url: moveto-microsoft-365/add-google-domain.md
+    - text: Google Workspace'ten iş e-postası ve takvimini geçirme
+      url: moveto-microsoft-365/migrate-email.md
+    - text: Etki alanınızı Microsoft 365 iş için Bağlan
+      url: moveto-microsoft-365/connect-domain-tom365.md
+    - text: Migration Manager ile Google dosyalarını Microsoft 365 İş'e geçirme
+      url: moveto-microsoft-365/migrate-files-migration-manager.md

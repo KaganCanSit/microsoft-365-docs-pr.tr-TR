@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Yöneticiler, RingCentral verilerini Veritas'tan Microsoft 365 içeri aktarmak ve arşivlemek için bir bağlayıcı ayarlayabilir. Bu bağlayıcı, Microsoft 365'da üçüncü taraf veri kaynaklarından verileri arşivleyabilmenizi sağlar. Bu verileri arşivledikten sonra, üçüncü taraf verilerini yönetmek için yasal tutma, eBulma ve saklama ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
-ms.openlocfilehash: 5b1186abdf842fcc2f66638258c20accb2b28980
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: c09adf8710014cbf031740902ffbb6c29232a5b8
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64944073"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65001636"
 ---
 # <a name="set-up-a-connector-to-archive-ringcentral-data"></a>RingCentral verilerini arşivleye bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 RingCentral platformundaki verileri Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında bir Veritas bağlayıcısı kullanın. Veritas, üçüncü taraf veri kaynağından öğeleri yakalamak ve bu öğeleri Microsoft 365 aktarmak için yapılandırılmış bir [RingCentral](https://www.veritas.com/insights/merge1/ringcentral) bağlayıcısı sağlar. Bağlayıcı sohbetler, ekler, görevler, notlar ve gönderiler gibi içerikleri RingCentral'dan e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'daki kullanıcı posta kutularına aktarır.
 
