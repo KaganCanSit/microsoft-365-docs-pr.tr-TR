@@ -17,14 +17,16 @@ search.appverid:
 ms.assetid: ''
 description: İş akışlarınızı koordine etmek ve bir durumda ilgili veri kaynaklarını tanımlamak için Microsoft Purview eKeşif'teki (Premium) yerleşik koruyucu yönetim aracını kullanmayı öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 7da45eca9e57ef64c9272c89e24c21a20dc5af80
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 46277524f616e91e89e9bccce1fdd3c3109b3d86
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64935818"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64999486"
 ---
 # <a name="add-custodians-to-an-ediscovery-premium-case"></a>eBulma (Premium) olayına koruyucu ekleme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview eKeşif'teki (Premium) yerleşik koruyucu yönetim aracını kullanarak, iş akışlarınızı koruyucuları yönetme ve bir olayla ilişkili ilgili, gözaltı veri kaynaklarını belirleme konusunda koordine edin. Bir koruyucu eklediğinizde, sistem Exchange posta kutusunu ve OneDrive İş hesabını otomatik olarak tanımlayabilir ve ayrı tutabilir. Araştırmanızın bulma işlemi sırasında, bir koruyucunun eriştiği veya katkıda bulunduğu diğer veri kaynaklarını (posta kutuları, siteler veya Teams gibi) de tanımlayabilirsiniz. Bu durumda, söz konusu veri kaynaklarını ilişkilendirmek için koruyucu yönetim aracını kullanabilirsiniz. Bir olaya koruyucular ekledikten ve diğer veri kaynaklarını bunlarla ilişkilendirdikten sonra, verileri hızla koruyabilir ve gözaltı verilerini arayabilirsiniz.
 

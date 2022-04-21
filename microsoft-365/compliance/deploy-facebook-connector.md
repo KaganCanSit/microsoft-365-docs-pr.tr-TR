@@ -16,14 +16,16 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
 ROBOTS: NOINDEX, NOFOLLOW
 description: Yöneticiler, Facebook İş sayfalarını Microsoft 365 içeri aktarmak ve arşiv uygulamak için yerel bir bağlayıcı ayarlayabilir. Bu veriler Microsoft 365 aktarıldıktan sonra, kuruluşunuzun Facebook verilerinin idaresini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
-ms.openlocfilehash: 126b4af3887632df5c8f83eac8e20fe5d88c8608
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: b58b3f1707a8c3bb52aa7fc5ebc9c359ef9a8a97
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64949189"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64998782"
 ---
 # <a name="deploy-a-connector-to-archive-facebook-business-pages-data"></a>Facebook business sayfaları verilerini arşivleye bağlayıcı dağıtma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bu makale, Facebook business sayfalarından Microsoft 365 verileri içeri aktarmak için Office 365 İçeri Aktarma hizmetini kullanan bir bağlayıcıyı dağıtmaya ilişkin adım adım işlemi içerir. Bu işleme üst düzey bir genel bakış ve Bir Facebook bağlayıcısını dağıtmak için gereken önkoşulların listesi için bkz. [Facebook verilerini arşiv etmek için bağlayıcı ayarlama](archive-facebook-data-with-sample-connector.md).
 

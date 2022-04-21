@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: 17a-4 Skype Kurumsal Sunucu DataParser bağlayıcısını ayarlamayı ve kullanarak Microsoft 365'da Skype Kurumsal Sunucu verileri içeri aktarmayı ve arşivlemeyi öğrenin.
-ms.openlocfilehash: 7b004068e255d5972a978d4e9650e9207a2da117
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 8a7c8e7b2d59aeabc2f21207d5b3ce2eb3d524e9
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64937707"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64997548"
 ---
 # <a name="set-up-a-connector-to-archive-skype-for-business-server-data"></a>Skype Kurumsal Sunucu verilerini arşivleye bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 bir Skype Kurumsal Sunucu Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına verileri içeri aktarmak ve arşivlemek için 17a-4 LLC'deki Skype [Server DataParser'ı](https://www.17a-4.com/skype-server-dataparser/) kullanın. DataParser, üçüncü taraf veri kaynağındaki öğeleri yakalamak ve bu öğeleri Microsoft 365 aktarmak için yapılandırılmış bir Skype Kurumsal bağlayıcısı içerir. Skype Kurumsal Sunucu DataParser bağlayıcısı, Skype Kurumsal Sunucu verileri e-posta iletisi biçimine dönüştürür ve sonra bu öğeleri Microsoft 365'deki kullanıcı posta kutularına aktarır.
 

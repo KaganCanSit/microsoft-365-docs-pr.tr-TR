@@ -20,14 +20,19 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview; Exchange posta kutuları, SharePoint ve OneDrive İş siteleri, Microsoft 365 Grupları, Microsoft Teams ve konuşmaları Skype Kurumsal. eBulma (Standart) ve eBulma (Premium), araştırmalarınızı yönetmenize yardımcı olacak birçok ek özellik sağlar.
-ms.openlocfilehash: efa7f12ec20377713598edc54f032e7c2a27d706
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 4c146e2eea1c0c462491444102365cb5c611e78d
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64932232"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65001158"
 ---
 # <a name="microsoft-purview-ediscovery-solutions"></a>Microsoft Purview eKeşif çözümleri
+
+> [!TIP]
+> *Dokuz Microsoft Purview çözümlerinin tamamının premium sürümlerini ücretsiz olarak deneyebileceğinizi biliyor muydunuz?* Sağlam Purview özelliklerinin kuruluşunuzun uyumluluk gereksinimlerini karşılamasına nasıl yardımcı olabileceğini keşfetmek için 90 günlük Purview çözümleri deneme sürümünü kullanın. Microsoft 365 E3 ve Office 365 E3 müşterileri artık [Microsoft Purview uyumluluk portalı deneme hub'ında](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef) başlayabilir. [Kaydolabilecek kişiler ve deneme koşulları](compliance-easy-trials.md) hakkında ayrıntılı bilgi edinin.
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Elektronik bulma veya eBulma, yasal davalarda kanıt olarak kullanılabilecek elektronik bilgileri tanımlama ve teslim etme işlemidir. Exchange Online, OneDrive İş, SharePoint Online, Microsoft Teams, Microsoft 365 Grupları ve Yammer ekiplerindeki içeriği aramak için Microsoft Purview'daki eBulma araçlarını kullanabilirsiniz. Aynı eBulma aramasında posta kutularını ve siteleri arayabilir ve ardından arama sonuçlarını dışarı aktarabilirsiniz. Posta kutularında ve sitelerde bulunan içeriği tanımlamak, tutmak ve dışarı aktarmak için Microsoft Purview eKeşif (Standart) servis taleplerini kullanabilirsiniz. Kuruluşunuzun bir Office 365 E5 veya Microsoft 365 E5 aboneliği (veya ilgili E5 eklenti abonelikleri) varsa, Microsoft 365 özellik bakımından zengin Microsoft Purview eKeşif (Premium) çözümünü kullanarak koruyucuları daha fazla yönetebilir ve içeriği analiz edebilirsiniz.
 
@@ -47,7 +52,7 @@ Microsoft Purview üç eBulma çözümü sağlar: İçerik arama, eBulma (Standa
 
 Aşağıdaki tabloda İçerik arama, eKeşif (Standart) ve eBulma (Premium) ile sağlanan temel özellikler karşılaştırılarak elde edilen özellikler karşılaştırılarak sağlanır.
 
-|Yeteneği|İçerik arama|eBulma (Standart)|eBulma (Premium)|
+|Yeteneği|İçerik arama|eKeşif (Standart)|eKeşif (Premium)|
 |:------|:-------------|:-------------|:-------------|
 |İçerik için arama yapma|![Desteklenir.](../media/check-mark.png)|![Desteklenir.](../media/check-mark.png)|![Desteklenir.](../media/check-mark.png)|
 |Anahtar sözcük sorguları ve arama koşulları|![Desteklenir.](../media/check-mark.png)|![Desteklenir.](../media/check-mark.png)|![Desteklenir.](../media/check-mark.png)|
@@ -138,7 +143,7 @@ Aşağıdaki bölümlerde İçerik arama, eBulma (Standart) ve eBulma (Premium) 
 - aboneliği Office 365 E1
 
 
-### <a name="ediscovery-standard"></a>eBulma (Standart)
+### <a name="ediscovery-standard"></a>eKeşif (Standart)
 
 - aboneliği Microsoft 365 E3
 - aboneliği Microsoft 365 G3
@@ -147,7 +152,7 @@ Aşağıdaki bölümlerde İçerik arama, eBulma (Standart) ve eBulma (Premium) 
 - A3 veya Office 365 Eğitim A3 aboneliğini Microsoft 365 Eğitim
 - aboneliği Office 365 E3
 
-### <a name="ediscovery-premium"></a>eBulma (Premium)
+### <a name="ediscovery-premium"></a>eKeşif (Premium)
 
 - Microsoft 365 E5 veya Office 365 E5 aboneliği
 - E5 Uyumluluk eklentisini içeren Microsoft 365 E3 aboneliği
@@ -168,15 +173,15 @@ Daha fazla bilgi edinmenize ve Microsoft 365'daki eBulma çözümlerini kullanma
 
 - [Arama oluşturma](content-search.md)
 
-### <a name="ediscovery-standard"></a>eBulma (Standart)
+### <a name="ediscovery-standard"></a>eKeşif (Standart)
 
-- [eBulma ile Kullanmaya başlayın (Standart)](get-started-core-ediscovery.md)
+- [eKeşif’i (Standart) kullanmaya başlama](get-started-core-ediscovery.md)
 
-### <a name="ediscovery-premium"></a>eBulma (Premium)
+### <a name="ediscovery-premium"></a>eKeşif (Premium)
 
 - [eBulma'ya genel bakış (Premium)](overview-ediscovery-20.md)
 
-- [eBulma'yı ayarlama (Premium)](get-started-with-advanced-ediscovery.md)
+- [eKeşif'i (Premium) ayarlama](get-started-with-advanced-ediscovery.md)
 
 - [eBulma (Premium) olayı oluşturma ve yönetme](create-and-manage-advanced-ediscoveryv2-case.md)
 

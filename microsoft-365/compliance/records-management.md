@@ -1,5 +1,5 @@
 ---
-title: Kayıt Yönetimi'Microsoft 365
+title: Microsoft Purview Kayıt Yönetimi hakkında bilgi edinin
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -20,98 +20,103 @@ ms.custom:
 - admindeeplinkCOMPLIANCE
 - seo-marvel-apr2020
 - seo-marvel-jun2020
-description: Microsoft 365'de kayıt yönetimiyle, bekletme, kayıt bildirimi ve yoklamayı yöneten bir dosya planına bekletme zamanlamalarınızı uygulayabilirsiniz.
-ms.openlocfilehash: ce00fdfc6db90b9c65051a31e8768d6cd661072d
-ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
+description: Microsoft Purview Kayıt Yönetimi'nin iş, yasal veya mevzuat kaydı tutma gereksinimleri için yüksek değerli öğeleri nasıl desteklediğini öğrenin.
+ms.openlocfilehash: dd554b4369a1f721d306bc301519ce3ef59e4569
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63755675"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64998540"
 ---
-# <a name="learn-about-records-management-in-microsoft-365"></a>Microsoft 365'de kayıt yönetimi hakkında bilgi Microsoft 365
+# <a name="learn-about-records-management"></a>Kayıt yönetimi hakkında daha fazla bilgi edinme
 
->*[Microsoft 365 uyumluluğu için lisans & kılavuzu.](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)*
+> [!TIP]
+> *Dokuz Microsoft Purview çözümlerinin tamamının premium sürümlerini ücretsiz olarak deneyebileceğinizi biliyor muydunuz?* Sağlam Purview özelliklerinin kuruluşunuzun uyumluluk gereksinimlerini karşılamasına nasıl yardımcı olabileceğini keşfetmek için 90 günlük Purview çözümleri deneme sürümünü kullanın. Microsoft 365 E3 ve Office 365 E3 müşterileri artık [Microsoft Purview uyumluluk portalı deneme hub'ında](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef) başlayabilir. [Kaydolabilecek kişiler ve deneme koşulları](compliance-easy-trials.md) hakkında ayrıntılı bilgi edinin.
 
-Her tür kuruluş, şirket verileri genelinde mevzuat, yasal ve iş açısından kritik kayıtları yönetmek için bir kayıt yönetimi çözümü gerektirir. Microsoft 365'te kayıt yönetimi, kuruluşun yasal yükümlülüklerini yönetmeye yardımcı olur, yasal düzenlemelere uyumluluğu gösterme olanağı sağlar ve artık korunacak, değeri olmayacak veya artık iş amacıyla gerekli olmayacak öğelerin normal olarak yok olmasıyla verimliliği artırır.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Kayıt yönetimi çözümlerinizi desteklemek için aşağıdaki özellikleri Microsoft 365:
+>*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-- **İçeriği kayıt olarak etiketleme**. İçeriği kullanıcılar tarafından uygulanmayacak veya hassas bilgiler, anahtar [](#records) sözcükler veya içerik türleri tanımarak otomatik olarak uygulanan bir kayıt olarak işaretlemek için bekletme etiketleri oluşturun ve yapılandıryın.
+Her türden kuruluş, kurumsal verileri genelinde yasal, yasal ve iş açısından kritik kayıtları yönetmek için bir kayıt yönetimi çözümüne ihtiyaç duyar. Microsoft Purview için kayıt yönetimi, bir kuruluşun yasal yükümlülüklerini yönetmesine yardımcı olur, düzenlemelere uyumluluğu gösterme olanağı sağlar ve artık saklanması gerekmeyen, artık değerli olmayan veya iş amaçları için artık gerekli olmayan öğelerin düzenli olarak elden bırakılmasıyla verimliliği artırır.
 
-- **Dosya planıyla bekletme gereksinimlerinizi geçirin ve yönetin**. Dosya planı [kullanarak, var](file-plan-manager.md) olan bir bekletme planını başka bir plana Microsoft 365 veya gelişmiş yönetim özellikleri için yeni bir plan oluşturabilirsiniz.
+Microsoft 365 hizmetleri ve uygulamaları için kayıt yönetimi çözümünüzü desteklemek için aşağıdaki özellikleri kullanın:
 
-- **Bekletme ve silme ayarlarını bekletme etiketleriyle yapılandırabilirsiniz**. Bekletme [etiketlerini,](retention.md#retention-labels) son değiştirme veya oluşturma tarihini içeren çeşitli etmenlere dayalı olarak bekletme dönemleri ve eylemleriyle yapılandırabilirsiniz.
+- **İçeriği kayıt olarak etiketle**. İçeriği kullanıcılar tarafından uygulanabilecek veya hassas bilgiler, anahtar sözcükler veya içerik türleri tanımlanarak otomatik olarak uygulanabilecek bir [kayıt](#records) olarak işaretlemek için bekletme etiketleri oluşturun ve yapılandırın.
 
-- **Olay tabanlı bekletme ile bir olay oluştuğunda farklı** [bekletme dönemleri başlatma](event-driven-retention.md).
+- **Dosya planıyla bekletme gereksinimlerinizi geçirin ve yönetin**. [Bir dosya planı](file-plan-manager.md) kullanarak, Microsoft 365 için mevcut bir bekletme planını getirebilir veya gelişmiş yönetim özellikleri için yeni bir tane oluşturabilirsiniz.
 
-- **Disposition incelemeleri ve** kayıt [silme kanıtı ile inceleme](disposition.md#disposition-reviews) [ve doğrulama.](disposition.md#disposition-of-records)
+- **Bekletme etiketleriyle bekletme ve silme ayarlarını yapılandırın**. [Bekletme etiketlerini,](retention.md#retention-labels) en son değiştirilme veya oluşturulma tarihini içeren çeşitli faktörlere göre bekletme dönemleri ve eylemleriyle yapılandırın.
 
-- **Dışarı aktarma seçeneğiyle, dışarı aktaran tüm** öğelerle ilgili [bilgileri dışarı aktarın](disposition.md#filter-and-export-the-views).
+- Olay [tabanlı](event-driven-retention.md) **saklama ile bir olay gerçekleştiğinde farklı saklama süreleri başlatın**.
 
-- **Doğru erişime** sahip olmak için, kuruluşta kayıt yöneticisi işlevleri [için belirli izinler ayarlayın](../security/office-365-security/permissions-in-the-security-and-compliance-center.md).
+- **Değerlendirme gözden geçirmeleri ve** [kayıt silme](disposition.md#disposition-of-records) kanıtı ile [değerlendirmeyi](disposition.md#disposition-reviews) gözden geçirin ve doğrulayın.
 
-Bu özellikleri kullanarak, içeriğinizin tüm yaşam döngüsünü desteklemek için, kuruluş bekletme zamanlamalarını ve gereksinimlerini bekletmeyi, kayıt bildirimini ve yoklamayı yöneten bir kayıt yönetimi çözümüne dahil edebilirsiniz.
+- **Dışarı aktarma seçeneğiyle, atılan tüm öğeler hakkındaki bilgileri** [dışarı aktarın](disposition.md#filter-and-export-the-views).
 
-Çevrimiçi belgelere ek olarak, bir kayıt yönetimi web sitesinden [SSS](https://aka.ms/MIPC/Blog-RecordsManagementWebinar) ile bir deste indirmeniz yararlı olabilir. Gerçek web tarayıcısı kaydı artık kullanılamaz.
+- Kuruluşunuzdaki kayıt yöneticisi [işlevlerinin doğru erişime sahip](../security/office-365-security/permissions-in-the-security-and-compliance-center.md) olması için **belirli izinleri ayarlayın**.
 
-## <a name="records"></a>Kayıtlar
+Bu özellikleri kullanarak, kuruluşunuzun bekletme zamanlamalarını ve gereksinimlerini, içeriğinizin tüm yaşam döngüsünü desteklemek için bekletmeyi, kayıt bildirimini ve eğilimi yöneten bir kayıt yönetimi çözümüne dahil edebilirsiniz.
 
-İçerik kayıt olarak bildir mu?
+Çevrimiçi belgelere ek olarak, kayıt yönetimi web seminerinden [SSS içeren bir deste](https://aka.ms/MIPC/Blog-RecordsManagementWebinar) indirmeyi yararlı bulabilirsiniz. Gerçek web seminerinin kaydı artık kullanılamaz.
 
-- Öğelere, izin verilen veya engellenen eylemlerle ilgili [kısıtlamalar yerleştirilir](#compare-restrictions-for-what-actions-are-allowed-or-blocked).
+## <a name="records"></a>Kayıt
+
+İçerik kayıt olarak bildirildiğinde:
+
+- Öğelere izin [verilen veya engellenen eylemler](#compare-restrictions-for-what-actions-are-allowed-or-blocked) açısından kısıtlamalar yerleştirilir.
 
 - Öğeyle ilgili ek etkinlikler günlüğe kaydedilir.
 
-- Bekletme döneminin sonunda öğeler silindiğinde, konumlandırma kanıtınız olur.
+- Öğeler saklama sürelerinin sonunda silindiğinde edat kanıtınız olur.
 
-İçeriği kayıt [veya mevzuat](retention.md#retention-labels) kaydı olarak **işaretlemek için** bekletme **etiketlerini kullanırsiniz**. Bu ikisi arasındaki fark sonraki bölümde açıklanmıştır. Bu etiketleri yayımlayın; böylece kullanıcılar ve yöneticiler bunları içeriğe el ile uygulayabilir ya da bu etiketleri bir kayıt veya mevzuat kaydı olarak işaretlemek istediğiniz içeriğe otomatik olarak uygulayabilir.
+İçeriği **kayıt** veya **mevzuat kaydı** olarak işaretlemek için [bekletme etiketlerini](retention.md#retention-labels) kullanırsınız. Bu ikisi arasındaki fark bir sonraki bölümde açıklanmıştır. Kullanıcıların ve yöneticilerin bunları içeriğe el ile uygulayabilmesi için bu etiketleri yayımlayabilir veya bu etiketleri kayıt veya mevzuat kaydı olarak işaretlemek istediğiniz içeriğe otomatik olarak uygulayabilirsiniz.
 
-Kayıtları beyan etmek için bekletme etiketlerini kullanarak, kayıt ortamınız genelinde kayıtları yönetmek için tek ve tutarlı bir Microsoft 365 gerçekleştirabilirsiniz.
+Kayıtları bildirmek için bekletme etiketlerini kullanarak, Microsoft 365 ortamınızda kayıtları yönetmek için tek ve tutarlı bir strateji uygulayabilirsiniz.
 
 ### <a name="compare-restrictions-for-what-actions-are-allowed-or-blocked"></a>İzin verilen veya engellenen eylemlerle ilgili kısıtlamaları karşılaştırma
 
-Standart bir bekletme etiketi ve içeriği kayıt veya mevzuat kaydı olarak işaretleyen bekletme etiketlerinin uygulanması sonucunda içerik üzerinde hangi kısıtlamaların yerleştiril olduğunu belirlemek için aşağıdaki tabloyu kullanın.
+Standart bir bekletme etiketi ve içeriği kayıt veya mevzuat kaydı olarak işaretleyen bekletme etiketlerinin uygulanması sonucunda içeriğe hangi kısıtlamaların uygulandığını belirlemek için aşağıdaki tabloyu kullanın.
 
-Standart bekletme etiketinde bekletme ayarları ve eylemleri vardır, ancak içeriği kayıt veya mevzuat kaydı olarak işaretlemez.
+Standart saklama etiketinde bekletme ayarları ve eylemleri vardır, ancak içeriği kayıt veya mevzuat kaydı olarak işaretlemez.
 
 > [!NOTE]
-> Eksiksizlik için, tablo kilitli ve kilitli kilitli kayıt için sütunlar içerir; bu sütun ve SharePoint OneDrive uygulanabilir, ancak Exchange. Kaydı kilitleme ve kilidini açma özelliği, kayıt [öğeleri](record-versioning.md) tarafından desteklenen kayıt sürümü Exchange kullanır. Dolayısıyla, Exchange olarak işaretlenmiş tüm kayıt öğeleri için davranış Kayıt **-** kilitli sütununa ve Kayıt **- kilitli olmayan** sütuna eşlenir.
+> Tamlık için, tablo kilitli ve kilidi açılmış bir kaydın sütunlarını içerir. Bu sütun SharePoint ve OneDrive için geçerlidir ancak Exchange için geçerli değildir. Kaydı kilitleme ve kilidini açma özelliği, Exchange öğeler için desteklenmeyen [kayıt sürümü oluşturmayı](record-versioning.md) kullanır. Bu nedenle, kayıt olarak işaretlenmiş tüm Exchange öğeler için davranış **Kayıt - kilitli** sütununa eşlenir ve **Kayıt - kilidi açılmış sütun** uygun değildir.
 
 
 |Eylem| Bekletme etiketi |Kayıt - kilitli| Kayıt - kilidi açık| Mevzuat kaydı |
 |:-----|:-----|:-----|:-----|:-----|:-----|
-|İçeriği düzenleme|İzin verildi | **Engellendi** | İzin verildi | **Engellendi**|
-|Yeniden adlandırma da dahil olmak üzere özellikleri düzenleme|İzin verildi |İzin <sup>verilen 1</sup> | İzin verildi | **Engellendi**|
-|Silme|İzin <sup>verildi 2</sup> |**Engellendi** |**Engellendi**| **Engellendi**|
-|Kopyala|İzin verildi |İzin verildi | İzin verildi| İzin verildi|
-|Kapsayıcı <sup>3 içinde hareket etme</sup>|İzin verildi |İzin verildi | İzin verildi| İzin verildi|
-|Kapsayıcılar arasında hareket <sup>etme 3</sup>|İzin verildi |Kilidi hiç açık değilken izin verildi | **Engellendi** | **Engellendi**|
-|Açma/Okuma|İzin verildi |İzin verildi | İzin verildi| İzin verildi|
-|Etiketi değiştir|İzin verildi |İzin verildi - yalnızca kapsayıcı yöneticisi | **Engellendi**| **Engellendi**
-|Etiketi kaldır|İzin verildi |İzin verildi - yalnızca kapsayıcı yöneticisi | **Engellendi**| **Engellendi**
+|İçeriği düzenle|Izin verilen | **Engellenen** | Izin verilen | **Engellenen**|
+|Yeniden adlandırma dahil olmak üzere özellikleri düzenleme|Izin verilen |İzin verilen <sup>1</sup> | Izin verilen | **Engellenen**|
+|Silme|İzin Verilen <sup>2</sup> |**Engellenen** |**Engellenen**| **Engellenen**|
+|Kopya|Izin verilen |Izin verilen | Izin verilen| Izin verilen|
+|<sup>Kapsayıcı 3</sup> içinde taşıma|Izin verilen |Izin verilen | Izin verilen| Izin verilen|
+|Kapsayıcılar arasında hareket etme <sup>3</sup>|Izin verilen |Kilidi hiç açmadıysa izin verilir | **Engellenen** | **Engellenen**|
+|Aç/Oku|Izin verilen |Izin verilen | Izin verilen| Izin verilen|
+|Etiketi değiştir|Izin verilen |İzin verildi - yalnızca kapsayıcı yöneticisi | **Engellenen**| **Engellenen**
+|Etiketi kaldır|Izin verilen |İzin verildi - yalnızca kapsayıcı yöneticisi | **Engellenen**| **Engellenen**
 
-Dipnotlar:
+Dipnot:
 
-<sup>1</sup> Kilitli kaydın özelliklerine varsayılan olarak izin verilir, ancak [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com/) >  **Decords yönetimiRecords** >  yönetim **ayarlarıRetention** >  **labelsAlt** >  özelliklerini düzenlemeye izin ver.
+<sup>1</sup> Kilitli bir kaydın düzenleme özelliklerine varsayılan olarak izin verilir, ancak [Microsoft Purview uyumluluk portalında](https://compliance.microsoft.com/) >  bir kiracı ayarı tarafından **engellenebilirKayıt yönetimikayıt yönetimi** >  **ayarlarıKayıt** >  **etiketleriKayıt** >  **özelliklerinin düzenlenmesine izin verin**.
 
-<sup>2</sup> SharePoint ve OneDrive etiketli öğelerin silinmesi [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com/) >  **Cords yönetimiRecords** >  >  yönetim **ayarlarıRetention etiketleriDeletion** >  of items altında kiracı ayarı **olarak engellenmiş olabilir**.
+<sup>2</sup> SharePoint ve OneDrive etiketli öğelerin silinmesi [, Microsoft Purview uyumluluk portalında](https://compliance.microsoft.com/) >  kiracı ayarı olarak engellenebilirKayıt **yönetimiKayıt yönetimi** >  **ayarlarıKayıt** >  **etiketleriSeçlerin** >  silinmesi.
 
-Belge eki olan bir liste öğesine bekletme etiketi uygulayabilirsiniz, bu belge bekletme ayarlarını devralmaz ve liste öğesinden silinebilir. Buna karşılık, bu liste öğesi bir bekletme etiketiyle kayıt olarak bildirmişse, belge eki bekletme ayarlarını devralabilir ve silinemez.
+Belge eki olan bir liste öğesine bekletme etiketi uyguladığınızda, bu belge bekletme ayarlarını devralamaz ve liste öğesinden silinebilir. Buna karşılık, bu liste öğesi bekletme etiketine sahip bir kayıt olarak bildirilmişse, belge eki bekletme ayarlarını devralır ve silinemez.
 
-<sup>3</sup> Kapsayıcılar belge SharePoint kitaplıklarını, OneDrive hesaplarını ve posta Exchange içerir.
+<sup>3</sup> Kapsayıcılar SharePoint belge kitaplıklarını, OneDrive hesaplarını ve Exchange posta kutularını içerir.
 
 > [!IMPORTANT]
-> Bir mevzuat kaydı için en önemli fark, bu kaydın içeriklere uygulandıktan sonra hiç kimsenin, hatta genel yöneticinin bile etiketi kaldıramamalıdır.
+> Yasal kayıt için en önemli fark, içeriğe uygulandıktan sonra, etiketi hiçbir genel yöneticinin bile kaldıramayacak olmasıdır.
 >
-> Mevzuat kayıtları için yapılandırılan bekletme etiketleri de aşağıdaki yönetici kısıtlamalarına sahiptir:
+> Mevzuat kayıtları için yapılandırılan bekletme etiketlerinin de aşağıdaki yönetici kısıtlamaları vardır:
 >
-> - Etiket kaydedildikten sonra bekletme süresi kısalıp yalnızca uzatılabilir.
-> - Bu etiketler otomatik etiket ilkeleri tarafından destek desteklemez ve bekletme etiketi ilkeleri kullanılarak [uygulanmalıdır](create-apply-retention-labels.md).
+> - Saklama süresi, etiket kaydedildikten sonra kısaltılamaz, yalnızca uzatılır.
+> - Bu etiketler otomatik etiketleme ilkeleri tarafından desteklenmez ve [bekletme etiketi ilkeleri](create-apply-retention-labels.md) kullanılarak uygulanmalıdır.
 >
-> Buna ek olarak, düzenleyici etiketi şirket içinde kullanıma alınmış olan bir belgeye SharePoint.
+> Ayrıca, SharePoint kullanıma alınmış bir belgeye mevzuat etiketi uygulanamaz.
 >
-> Kısıtlamalar ve geri alınamaz işlemler nedeniyle, bekletme etiketleriniz için bu seçeneği seçmeden önce yasal düzenleme kayıtlarını gerçekten kullanmaya gerek olduğundan emin olun. Yanlışlıkla yapılandırmayı önlemeye yardımcı olmak için, bu seçenek varsayılan olarak kullanılamaz, ancak önce PowerShell kullanılarak etkinleştirilmesi gerekir. Yönergeler, bekletme etiketleri [kullanılarak Kayıt bildir'e ek açıklamalarında bulunmaktadır](declare-records.md).
+> Kısıtlamalar ve geri alınamaz eylemler nedeniyle, bekletme etiketleriniz için bu seçeneği belirlemeden önce mevzuat kayıtlarını kullanmanız gerektiğinden emin olun. Yanlışlıkla yapılandırmayı önlemeye yardımcı olmak için bu seçenek varsayılan olarak kullanılamaz, ancak önce PowerShell kullanılarak etkinleştirilmesi gerekir. Yönergeler [, Bekletme etiketlerini kullanarak kayıtları bildirme](declare-records.md) bölümüne eklenir.
 
 ## <a name="configuration-guidance"></a>Yapılandırma kılavuzu
 
-Bkz [. Kayıt yönetimiyle çalışmaya başlama](get-started-with-records-management.md). Bu makalede abonelikler, izinler hakkında bilgiler ve kayıt yönetimi senaryoları için  uç  uç yapılandırma kılavuzuna bağlantılar vardır.
+Bkz. [kayıt yönetimiyle Kullanmaya başlayın](get-started-with-records-management.md). Bu makalede abonelikler, izinler ve kayıt yönetimi senaryoları için uçtan uca yapılandırma kılavuzu bağlantıları hakkında bilgiler yer alır.

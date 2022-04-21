@@ -18,14 +18,16 @@ ms.assetid: ''
 ms.custom:
 - seo-marvel-apr2020
 description: E-posta yoluyla yasal saklama bildirimleri göndermek ve takip etmek ve ayrıca yükümlülük durumunu izlemek için eKeşif (Premium) kullanmayı öğrenin.
-ms.openlocfilehash: 4be0781a273f842c043276a19688f36b96cfdb28
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: db13ed4a148238dbb677ece55999fd3fb907a1a1
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64947417"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64999596"
 ---
 # <a name="acknowledge-a-hold-notification"></a>Bekletme bildirimini onaylama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bir mevzuat talebine veya soruşturmasına yanıt verirken, koruyucuları elektronik olarak depolanan bilgileri (ESI) ve etkin veya yakın bir yasal konuyla ilgili olabilecek her türlü malzemeyi koruma yükümlülüğü hakkında bilgilendirmeniz gerekebilir. Gönderildikten sonra, hukuk ekipleri her koruyucunun verilen yönergeleri aldığını, okuduğunu, anladığını ve izlemeyi kabul ettiğini bilmelidir.
 

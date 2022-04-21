@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: FX Bağlan verilerini Microsoft 365 içeri aktarmak ve arşivlemek için 17a-4 FX Bağlan DataParser bağlayıcısını ayarlamayı ve kullanmayı öğrenin.
-ms.openlocfilehash: 6317657228c00a4dbb6c73d5211b13f4c4d2c790
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 1b4bd9c6dd68364db13d5e9795277bf6d91fdced
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64940807"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64998186"
 ---
 # <a name="set-up-a-connector-to-archive-data-from-fx-connect"></a>FX Bağlan verilerini arşivleye bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 17a-4 LLC'deki [FX Bağlan DataParser'ı](https://www.17a-4.com/dataparser-roadmap/) kullanarak FX Bağlan'daki verileri Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarın ve arşivleyebilirsiniz. DataParser, üçüncü taraf veri kaynağından öğeleri yakalamak ve bu öğeleri Microsoft 365'a aktarmak için yapılandırılmış bir FX Bağlan bağlayıcısı içerir. FX Bağlan DataParser bağlayıcısı, FX Bağlan verilerini e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365 kullanıcı posta kutularına aktarır.
 

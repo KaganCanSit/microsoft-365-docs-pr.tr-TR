@@ -15,30 +15,32 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: İçeriğinizi biçimlendiren metin ve alan değişkenlerini değiştirmek için İletişim Düzenleyicisi'ni kullanın.
+description: İçeriğinizi biçimlendirirken metin değiştirmek ve alan değişkenlerini birleştirmek için İletişim Düzenleyicisi'ni kullanın.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: aceebf9f8a19448c05c137f668c2bca5db2d99bd
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 6377da0dbb89963fdf25610c638e6f5ce4ccfd70
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988593"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64999662"
 ---
 # <a name="use-the-communications-editor"></a>İletişim düzenleyicisini kullanma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Portal içeriğinizin içeriğini, yasal tutma bildirimlerini ve ilgili anımsatıcıları/yükseltmeleri tanımlarken, içeriğinizi biçimlendirmek ve dinamik olarak özelleştirmek için İletişim Düzenleyicisi'ni kullanabilirsiniz.
 
 ## <a name="rich-text-editor"></a>Zengin metin düzenleyicisi
 
-İletişim Düzenleyicisi kullanıcının düzenleyici seçeneklerini kullanarak metni özelleştirmesini sağlar. Örneğin, kullanıcılar yazı tipi türlerini değiştirebilir, madde işaretli listeler oluşturabilir, içeriği vurgular ve daha birçok şey olabilir.
+İletişim Düzenleyicisi, kullanıcının düzenleyici seçeneklerini kullanarak metni özelleştirmesine olanak tanır. Örneğin, kullanıcılar yazı tipi türlerini değiştirebilir, madde işaretli listeler oluşturabilir, içeriği vurgulayabilir ve daha fazlasını yapabilir.
 
 ## <a name="merge-field-variables"></a>Alan değişkenlerini birleştirme
 
-İletişim düzenleyicisinin e-posta birleştirme değişkenlerini kullanarak, iletişimin gövde metnine özelleştirilmiş özel öznitelik özellikleri  katıştırabilirsiniz. Custo cust alanıyla doldurulur. Örneğin, Custo custo custo custo cust name] birleştirme alanına karşılık gelen adla çevrilir.
+İletişim Düzenleyicisi'nden gelen e-posta birleştirme değişkenlerini kullanarak bir iletişimin gövde metnine özelleştirilmiş koruyucu öznitelikler ekleyebilirsiniz. Koruyucuya gönderildiğinde, birleştirme alanı ilgili alanla doldurulur. Örneğin, koruyucu John Smith'e gönderildiğinde [Koruyucu Adı] birleştirme alanı karşılık gelen adla çevrilir.
 
-Zengin metin düzenleyicisi denetiminde Alan birleştir **simgelerini** seçerek e-posta birleştirme alanlarını kullanabilirsiniz. Yer tutucu, kullanıcıların imlecinin konumu temel alarak eklenir.
+Zengin metin düzenleyicisi denetiminin üst kısmındaki **Birleştirme alanı** simgelerini seçerek e-posta birleştirme alanlarını kullanabilirsiniz. Yer tutucu, kullanıcıların imlecinin konumuna göre eklenir.
 
-### <a name="list-of-merge-field-variables"></a>Birleştirme alanı değişkenlerinin listesi
+### <a name="list-of-merge-field-variables"></a>Birleştirme alanı değişkenleri listesi
 
 <br>
 
@@ -46,9 +48,9 @@ Zengin metin düzenleyicisi denetiminde Alan birleştir **simgelerini** seçerek
 
 |Alan adı|Alan ayrıntıları|
 |---|---|
-|Görünen Ad|Custohal'in adı ve soyadı.|
-|Bildirim Bağlantısı|Her custo belirli bir bilgi için bildirim kaydetmek için özelleştirilmiş bir bağlantı.|
-|Portal Bağlantısı|Özel güvenliklinin Uyumluluk Portalı için özelleştirilmiş bağlantı.|
-|Issuing Officer|Belirtilen görevlinin e-posta adresi.|
-|Verme Tarihi|Bildirimin yayın tarihi (UTC).|
+|Görünen Ad|Koruyucunun adı ve soyadı.|
+|Onay Bağlantısı|Her bekçinin onaylarını kaydetmek için özelleştirilmiş bir bağlantı.|
+|Portal Bağlantısı|Koruyucunun Uyumluluk Portalı için özelleştirilmiş bir bağlantı.|
+|Veren Memur|Belirtilen veren memurun e-posta adresi.|
+|Verme Tarihi|Bildirimin verildiği tarih (UTC).|
 |

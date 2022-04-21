@@ -22,14 +22,16 @@ search.appverid:
 ms.assetid: 5c8c1db6-d8ac-4dbb-8a7a-f65d452169b9
 description: Microsoft Purview uyumluluk portalında bir İçerik aramasının gerçek sonuçlarını dışarı aktarmak yerine, arama sonuçları raporunu dışarı aktarabilirsiniz. Rapor, arama sonuçlarının özetini ve dışarı aktarılacak her öğe hakkında ayrıntılı bilgi içeren bir belge içerir.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 6ac46944ab454271358168c95a7df94d606e0ec5
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: f8fc881ed57831aadb035d0ec1168b4f334ec085
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64944843"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65001136"
 ---
 # <a name="export-a-content-search-report"></a>İçerik arama raporunu dışarı aktarma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Arama sonuçlarının tamamını Microsoft Purview uyumluluk portalındaki bir İçerik aramasından (veya Microsoft Purview eKeşif (Standart) durumuyla ilişkili bir aramadan) dışarı aktarmak yerine, gerçek arama sonuçlarını dışarı aktardığınızda oluşturulan raporları dışarı aktarabilirsiniz.
   

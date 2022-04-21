@@ -17,14 +17,16 @@ search.appverid:
 ms.assetid: ''
 description: Bir eBulma (Premium) olayındaki koruyucular listesinin ayrıntılarını görüntülemeyi, düzenlemeyi ve toplu düzenlemeyi öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 905773ac500a394b4a2394eb221e23a51a5c197e
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 2ab30e1343acd4718f80f816abc6ef850acf7215
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64942501"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64996844"
 ---
 # <a name="manage-custodians-in-an-ediscovery-premium-case"></a>eBulma (Premium) durumunda koruyucuları yönetme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview eKeşif (Premium) olayının **Veri kaynakları** sekmesindeki **Koruyucular** sayfası, servis talebine eklenmiş olan tüm koruyucuların listesini içerir. Bir olaya koruyucu ekledikten sonra, her koruyucu hakkındaki ayrıntılar otomatik olarak Azure Active Directory toplanır ve eBulma (Premium) içinde görüntülenebilir.
 

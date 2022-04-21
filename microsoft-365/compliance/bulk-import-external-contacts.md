@@ -1,5 +1,5 @@
 ---
-title: Dış kişileri toplu olarak içeri Exchange Online
+title: Dış kişileri Exchange Online toplu içeri aktarma
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -15,19 +15,21 @@ search.appverid:
 - MOP150
 ms.assetid: bed936bc-0969-4a6d-a7a5-66305c14e958
 ms.custom: admindeeplinkEXCHANGE
-description: Yöneticilerin dış kişileri genel Exchange Online listesine toplu olarak içeri aktarması için PowerShell ve CSV dosyasını nasıl kullanabileceğini öğrenin.
-ms.openlocfilehash: fbb2d9bb93d9275e662872d945254d6bf27deb92
-ms.sourcegitcommit: b1066b2a798568afdea9c09401d52fa38fe93546
+description: Yöneticilerin dış kişileri genel adres listesine toplu olarak aktarmak için PowerShell ve CSV dosyasını Exchange Online nasıl kullanabileceğini öğrenin.
+ms.openlocfilehash: a85d24a4b20798df057250d9114f97563a6a8e2d
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/13/2021
-ms.locfileid: "63018830"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64999310"
 ---
-# <a name="bulk-import-external-contacts-to-exchange-online"></a>Dış kişileri toplu olarak içeri Exchange Online
+# <a name="bulk-import-external-contacts-to-exchange-online"></a>Dış kişileri Exchange Online toplu içeri aktarma
 
-**Bu makale yöneticilere aittir. Kişileri kendi posta kutunuza mı aktarmaya çalışıyorsunuz? Bkz [. Kişileri başka bir Outlook](https://support.office.com/article/bb796340-b58a-46c1-90c7-b549b8f3c5f8)**
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+**Bu makale yöneticilere yöneliktir. Kişileri kendi posta kutunuza aktarmaya mı çalışıyorsunuz? Bkz [. Kişileri Outlook içeri aktarma](https://support.office.com/article/bb796340-b58a-46c1-90c7-b549b8f3c5f8)**
    
-Şirketinizin paylaşılan adres defterine (genel adres listesi de denir) eklemek istediğiniz çok sayıda mevcut ilgili kişisi mi Exchange Online? Aynı şirketi içindeki kullanıcılarla olduğu gibi dış kişileri de dağıtım grubu üyeleri olarak eklemek istiyor musunuz? Öyleyse, dış kişileri Exchange Online içeri toplu olarak içeri aktar almak için Exchange Online PowerShell ve CSV (virgülle ayrılmış değer) Exchange Online. Bu üç adımlı bir işlemdir:
+Şirketinizin, Exchange Online paylaşılan adres defterine (genel adres listesi olarak da adlandırılır) dahil etmek istediğiniz çok sayıda mevcut ilgili kişisi var mı? Dış kişileri, şirketinizin içindeki kullanıcılarla yaptığınız gibi dağıtım gruplarının üyesi olarak eklemek istiyor musunuz? Bu durumda, dış kişileri Exchange Online toplu olarak içeri aktarmak için Exchange Online PowerShell ve CSV (virgülle ayrılmış değer) dosyası kullanabilirsiniz. Bu üç adımlı bir işlemdir:
   
 [1. Adım: Dış kişiler hakkında bilgi içeren bir CSV dosyası oluşturma](#step-1-create-a-csv-file-that-contains-information-about-the-external-contacts)
 
@@ -35,20 +37,20 @@ ms.locfileid: "63018830"
 
 [3. Adım: Dış kişilerin özelliklerine bilgi ekleme](#step-3-add-information-to-the-properties-of-the-external-contacts)
 
-Kişileri içeri aktarma işleminin bu adımlarını tamamlandıktan sonra, şu ek görevleri gerçekleştirebilirsiniz:
+Kişileri içeri aktarmak için bu adımları tamamladıktan sonra şu ek görevleri gerçekleştirebilirsiniz:
   
 - [Daha fazla dış kişi ekleme](#add-more-external-contacts)
   
-- [Paylaşılan adres defterine dış kişileri gizleme](#hide-external-contacts-from-the-shared-address-book)
+- [Paylaşılan adres defterinden dış kişileri gizleme](#hide-external-contacts-from-the-shared-address-book)
   
 ## <a name="step-1-create-a-csv-file-that-contains-information-about-the-external-contacts"></a>1. Adım: Dış kişiler hakkında bilgi içeren bir CSV dosyası oluşturma
 
-İlk adım, bu dosyaya içeri aktarma işlemi yapmak istediğiniz her dış kişi hakkında bilgi içeren bir CSV Exchange Online. 
+İlk adım, Exchange Online içeri aktarmak istediğiniz her dış kişi hakkında bilgi içeren bir CSV dosyası oluşturmaktır. 
   
-1. Not Defteri'te aşağıdaki metni bir metin dosyasına kopyalayın ve not defterinizin dosya adı son ekini kullanarak masaüstünüze CSV dosyası olarak .csv; örneğin, ExternalContacts.csv.
+1. Aşağıdaki metni Not Defteri'ndeki bir metin dosyasına kopyalayın ve .csv dosya adı son ekini kullanarak masaüstünüzde CSV dosyası olarak kaydedin; örneğin, ExternalContacts.csv.
     
     > [!TIP]
-    > Diliniz özel karakterler ( **å**, **ä** ve **ö** gibi İsveççe) içeriyorsa, dosyayı Not Defteri'ne kaydetmek için CSV dosyasını UTF-8 veya başka bir Unicode kodlamayla kaydedin. 
+    > Dilinizde özel karakterler (İsveççe dilinde **å**, **ä** ve **ö** gibi) varsa, dosyayı Not Defteri'ne kaydettiğinizde CSV dosyasını UTF-8 veya diğer Unicode kodlamasıyla kaydedin. 
   
     ```text
     ExternalEmailAddress,Name,FirstName,LastName,StreetAddress,City,StateorProvince,PostalCode,Phone,MobilePhone,Pager,HomePhone,Company,Title,OtherTelephone,Department,CountryOrRegion,Fax,Initials,Notes,Office,Manager
@@ -56,25 +58,25 @@ Kişileri içeri aktarma işleminin bu adımlarını tamamlandıktan sonra, şu 
     pilar@contoso.com,Pilar Pinilla,Pilar,Pinilla,1234 Main St.,Seattle,WA,98017,206-555-0100,206-555-0101,206-555-0102,206-555-1234,Contoso,HR Manager,206-555-0104,Executive,US,206-555-0105,P.,Technical decision maker,31/1000,Dan Park
     ```
 
-    CSV dosyasının ilk satırı veya üst bilgi satırı, kişileri içeri aktararak kişi listesinden içeri aktararak Exchange Online. Her özellik adı virgülle ayrılmıştır. Üst bilgi satırın altındaki her satır, tek bir dış kişinin içeri aktarma özelliği değerlerini temsil eder. 
+    CSV dosyasının ilk satırı veya üst bilgi satırı, kişileri Exchange Online içeri aktardığınızda kullanılabilecek özellikleri listeler. Her özellik adı virgülle ayrılır. Üst bilgi satırının altındaki her satır, tek bir dış kişiyi içeri aktarmaya yönelik özellik değerlerini temsil eder. 
     
     > [!NOTE]
-    > Bu metin örnek veriler içerir ve bu verileri silebilirsiniz. Ama ilk satırı (üst bilgi satırı) silme veya değiştirme. Dış kişilerin tüm özelliklerini içerir. 
+    > Bu metin, silebileceğiniz örnek verileri içerir. Ancak ilk (üst bilgi) satırını silmeyin veya değiştirmeyin. Dış kişilerin tüm özelliklerini içerir. 
   
-2. CSV dosyasını düzenlemek Microsoft Excel için csv dosyasını başka bir dosyada açın, çünkü CSV dosyasını düzenlemek Excel çok daha kolaydır.
+2. CSV dosyasını düzenlemek için Excel kullanmak çok daha kolay olduğundan CSV dosyasını düzenlemek için csv dosyasını Microsoft Excel açın.
     
-3. Kişi bilgilerine içeri aktarmayı istediğiniz her kişi için bir Exchange Online. Mümkün olduğunca çok hücreyi doldurmak. Bu bilgiler, kişilerin her biri için paylaşılan adres kitabında görüntülenir. 
+3. Exchange Online aktarmak istediğiniz her kişi için bir satır oluşturun. Mümkün olduğunca çok hücreyi doldurun. Bu bilgiler her kişinin paylaşılan adres defterinde görüntülenir. 
     
     > [!IMPORTANT]
-    >  Aşağıdaki özellikler (üst bilgi satırındaki ilk dört öğedir) dış kişi oluşturmak için gereklidir ve CSV dosyasında doldurulması gerekir: **ExternalEmailAddress**, **Name**, **FirstName**, **LastName**. 2. Adımda çalıştırabilirsiniz PowerShell komutu, kişileri oluşturmak için bu özelliklerin değerlerini kullanır. 
+    >  Dış kişi oluşturmak için aşağıdaki özellikler (üst bilgi satırındaki ilk dört öğedir) gereklidir ve CSV dosyasında doldurulmalıdır: **ExternalEmailAddress**, **Name**, **Name, LastName**.  2. Adımda çalıştırdığınız PowerShell komutu, kişileri oluşturmak için bu özelliklerin değerlerini kullanır. 
 
 ## <a name="step-2-create-the-external-contacts-with-powershell"></a>2. Adım: PowerShell ile dış kişileri oluşturma
 
-Sonraki adım, 1. Adımda oluşturduğunuz CSV dosyasını ve PowerShell'i kullanarak, CSV dosyasında listelenen dış kişileri toplu olarak içeri aktarmayı Exchange Online. 
+Sonraki adım, 1. Adım ve PowerShell'de oluşturduğunuz CSV dosyasını kullanarak CSV dosyasında listelenen dış kişileri toplu olarak Exchange Online. 
   
-1.  Bağlan PowerShell'i Exchange Online için. Adım adım yönergeler için bkz. [PowerShell'Bağlan Exchange Online kullanma](/powershell/exchange/connect-to-exchange-online-powershell). Exchange Online PowerShell'e bağlanarak genel yönetici hesabının kullanıcı adını ve parolasını kullanmaya Exchange Online. 
+1.  PowerShell'i Exchange Online kuruluşunuza Bağlan. Adım adım yönergeler için bkz. [PowerShell'i Exchange Online için Bağlan](/powershell/exchange/connect-to-exchange-online-powershell). Exchange Online PowerShell'e bağlanırken genel yönetici hesabınızın kullanıcı adını ve parolasını kullandığınızdan emin olun. 
     
-2. PowerShell'i Exchange Online'e bağdikten sonra, 1. Adımda CSV dosyasını kaydeden masaüstü klasörüne gidin; örneğin`C:\Users\Administrator\desktop`.
+2. PowerShell'i Exchange Online bağladıktan sonra, CSV dosyasını 1. Adımda kaydettiğiniz masaüstü klasörüne gidin; örneğin`C:\Users\Administrator\desktop`.
     
 3. Dış kişileri oluşturmak için aşağıdaki komutu çalıştırın:
 
@@ -82,29 +84,29 @@ Sonraki adım, 1. Adımda oluşturduğunuz CSV dosyasını ve PowerShell'i kulla
     Import-Csv .\ExternalContacts.csv|%{New-MailContact -Name $_.Name -DisplayName $_.Name -ExternalEmailAddress $_.ExternalEmailAddress -FirstName $_.FirstName -LastName $_.LastName}
     ```
 
-    İçeri aktarıyor olabileceğiniz kişilerin birçoğuna bağlı olarak, yeni kişileri oluşturmak biraz zaman alabilirsiniz. Komutun çalıştırması bittiğinde, PowerShell oluşturulan yeni kişilerin listesini görüntüler. 
+    İçeri aktardığınız kişilere bağlı olarak yeni kişilerin oluşturulması biraz zaman alabilir. Komutun çalışması tamamlandığında PowerShell, oluşturulan yeni kişilerin listesini görüntüler. 
     
-4. Yeni dış kişileri görüntülemek için, Exchange Yönetim Merkezi'ne (EAC) gidin ve Alıcılar **Kişileri'ne** \> <a href="https://go.microsoft.com/fwlink/?linkid=2182970" target="_blank">**tıklayın**</a>. 
+4. Yeni dış kişileri görüntülemek için Exchange yönetim merkezine (EAC) gidin ve **Alıcılar** \> <a href="https://go.microsoft.com/fwlink/?linkid=2182970" target="_blank">**Kişileri'ne**</a> tıklayın. 
     
     > [!TIP]
-    > EAC'ye bağlanma yönergeleri için bkz[. Exchange Yönetim Merkezi'Exchange Online](/exchange/exchange-admin-center). 
+    > EAC'ye bağlanma yönergeleri için bkz. [Exchange Online Exchange yönetim merkezi](/exchange/exchange-admin-center). 
   
-5. Gerekirse, listeyi **güncelleştirmek ve** aktarılan dış kişileri görmek için Yenile'yi tıklatın. 
+5. Gerekirse, listeyi güncelleştirmek ve içeri aktarılan dış kişileri görmek için **Yenile'ye** tıklayın. 
     
-    Alınan kişiler, aynı adres defteri içinde paylaşılan adres Outlook Web üzerinde Outlook.
+    İçeri aktarılan kişiler Outlook ve Web üzerinde Outlook paylaşılan adres defterinde görünür.
     
     > [!NOTE]
-    > Ayrıca, Kullanıcılar Kişiler'e Microsoft 365 yönetim merkezi kişiler'e de **bakabilirsiniz**\>. 
+    > **Ayrıca, Kullanıcılar** \> **Kişileri'ne** giderek Microsoft 365 yönetim merkezi kişileri de görüntüleyebilirsiniz. 
 
 ## <a name="step-3-add-information-to-the-properties-of-the-external-contacts"></a>3. Adım: Dış kişilerin özelliklerine bilgi ekleme
 
-2. Adımda komutu çalıştırdikten sonra dış kişiler oluşturulur, ancak bunlar CSV dosyasındaki hücrelerin çoğunda yer alan kişi veya kuruluş bilgilerinden herhangi birini içermez. Bunun nedeni, yeni dış kişiler  oluşturma sırasında yalnızca gerekli özelliklerin doldurulmasıdır. CSV dosyasında bilgilerin hepsi doldurulmadı ise merak etmeyin. Orada yoksa eklenmez.
+2. Adımda komutu çalıştırdıktan sonra dış kişiler oluşturulur, ancak bunlar CSV dosyasındaki hücrelerin çoğundan gelen bilgiler olan kişi veya kuruluş bilgilerini içermez. Bunun nedeni, yeni dış kişiler oluşturduğunuzda yalnızca gerekli özelliklerin doldurulacağıdır. CSV dosyasında tüm bilgileri doldurmadıysanız endişelenmeyin. Orada değilse, eklenmez.
   
-1.  Bağlan PowerShell'i Exchange Online için. Adım adım yönergeler için bkz. [PowerShell'Bağlan Exchange Online kullanma](/powershell/exchange/connect-to-exchange-online-powershell).
+1.  PowerShell'i Exchange Online kuruluşunuza Bağlan. Adım adım yönergeler için bkz. [PowerShell'i Exchange Online için Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
     
-2. 1. Adımda CSV dosyasını kaydeden masaüstü klasörüne gidin; örneğin, `C:\Users\Administrator\desktop`.
+2. 1. Adımda CSV dosyasını kaydettiğiniz masaüstü klasörüne gidin; örneğin, `C:\Users\Administrator\desktop`.
     
-3. CSV dosyasındaki diğer özellikleri 2. Adımda oluşturduğunuz dış kişiler'e eklemek için aşağıdaki iki komutu çalıştırın.
+3. CSV dosyasındaki diğer özellikleri 2. Adımda oluşturduğunuz dış kişilere eklemek için aşağıdaki iki komutu çalıştırın.
     
     ```powershell
     $Contacts = Import-CSV .\ExternalContacts.csv
@@ -116,30 +118,30 @@ Sonraki adım, 1. Adımda oluşturduğunuz CSV dosyasını ve PowerShell'i kulla
     ```
 
     > [!NOTE]
-    > _Manager parametresi_ sorun yaratabilir. CSV dosyasında hücre boşsa, hata alırsınız ve özellik bilgilerinde bu kişi eklenmez. Yönetici belirtmenize gerek yoksa, önceki PowerShell komutundan  ` -Manager $_.Manager ` silmeniz gerekir. 
+    > _Manager_ parametresi sorunlu olabilir. CSV dosyasında hücre boşsa bir hata alırsınız ve özellik bilgilerinin hiçbiri kişiye eklenmez. Yönetici belirtmeniz gerekmiyorsa önceki PowerShell komutundan silmeniz  ` -Manager $_.Manager ` yeterlidir. 
   
-    Bir kez daha, 1. Adımda aktarılan kişilerinin boyutuna bağlı olarak kişileri güncelleştirmek biraz zaman alsa da, bu işlem biraz zaman alsa da, bu işlem 1. 
+    1. Adımda içeri aktardığınız kişilere bağlı olarak kişilerin güncelleştirilmiş olması da biraz zaman alabilir. 
     
-4. Özelliklerin kişiler'e ekli olduğunu doğrulamak için: 
+4. Özelliklerin kişilere eklendiğini doğrulamak için: 
     
-1. Exchange <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">yönetim merkezinde</a> Alıcılar **Kişileri'ne** \> **gidin**.
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange yönetim merkezinde</a> **Alıcılar** \> **Kişileri'ne** gidin.
     
-2. Bir kişinin üzerine tıklayın ve sonra da Düzenle **simgesine** ![tıklayın.](../media/ebd260e4-3556-4fb0-b0bb-cc489773042c.gif) kişi özelliklerini görüntülemek için. 
+2. Bir kişiye tıklayın ve **düzenle Düzenle** simgesine tıklayın ![.](../media/ebd260e4-3556-4fb0-b0bb-cc489773042c.gif) öğesini seçin. 
     
-Hepsi bu kadar! Kullanıcılar kişileri ve ek bilgileri adres defteri ve adres defteri bilgileri Outlook Web üzerinde Outlook.
+İşte bu kadar! Kullanıcılar kişileri ve ek bilgileri adres defteri Outlook ve Web üzerinde Outlook görebilir.
   
 ## <a name="add-more-external-contacts"></a>Daha fazla dış kişi ekleme
 
-Aynı adrese yeni dış kişiler eklemek için 1 ile 3. adımı Exchange Online. Siz veya şirketinizi kullananlar yeni kişi için CSV dosyasına yeni bir satır  eklersiniz. Ardından, 2. Adımdan ve 3. Adım'dan PowerShell komutlarını çalıştırarak yeni kişiler için bilgi oluşturabilir ve bu bilgilere bilgi ebilirsiniz.
+Exchange Online yeni dış kişiler eklemek için 1. Adımdan 3. Adıma kadar olan adımları yineleyebilirsiniz. Siz veya şirketinizdeki kullanıcılar, yeni kişi için CSV dosyasına yeni bir satır ekleyebilirsiniz. Ardından 2. Adım ve 3. Adım'dan PowerShell komutlarını çalıştırarak yeni kişilere bilgi oluşturabilir ve bu kişilere bilgi ekleyebilirsiniz.
   
 > [!NOTE]
-> Yeni kişiler oluşturma komutunu çalıştırarak, daha önce oluşturulan kişilerin zaten var olduğunu söyleyen bir hata alabilirsiniz. Ancak, CSV dosyasına eklenen tüm yeni kişi oluşturulur. 
+> Yeni kişiler oluşturmak için komutunu çalıştırdığınızda, daha önce oluşturulmuş kişilerin zaten var olduğunu belirten bir hata alabilirsiniz. Ancak CSV dosyasına eklenen tüm yeni kişiler oluşturulur. 
   
-## <a name="hide-external-contacts-from-the-shared-address-book"></a>Dış kişileri paylaşılan adres defteri kişilerinden>
+## <a name="hide-external-contacts-from-the-shared-address-book"></a>Paylaşılan adres defterinden dış kişileri gizleme>
 
-Bazı şirketler yalnızca dış kişileri kullanıyor olabilir, dolayısıyla bunlar dağıtım grubu üyeleri olarak eklenebilir. Bu senaryoda, dış kişileri paylaşılan adres defterine gizlemek ister. Bunu şu şekilde yapabilirsiniz:
+Bazı şirketler, dağıtım gruplarının üyeleri olarak eklenebilmeleri için yalnızca dış kişileri kullanabilir. Bu senaryoda, dış kişileri paylaşılan adres defterinden gizlemek isteyebilirler. Bunu şu şekilde yapabilirsiniz:
   
-1.  Bağlan PowerShell'i Exchange Online için. Adım adım yönergeler için bkz. [PowerShell'Bağlan Exchange Online kullanma](/powershell/exchange/connect-to-exchange-online-powershell).
+1.  PowerShell'i Exchange Online kuruluşunuza Bağlan. Adım adım yönergeler için bkz. [PowerShell'i Exchange Online için Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
     
 2. Tek bir dış kişiyi gizlemek için aşağıdaki komutu çalıştırın.
     
@@ -147,16 +149,16 @@ Bazı şirketler yalnızca dış kişileri kullanıyor olabilir, dolayısıyla b
     Set-MailContact <external contact> -HiddenFromAddressListsEnabled $true 
     ```
 
-    Örneğin, Pilar Pinilla'yı paylaşılan adres defterine gizlemek için şu komutu çalıştırın:
+    Örneğin, Pilar Pinilla'yı paylaşılan adres defterinden gizlemek için şu komutu çalıştırın:
 
     ```powershell
     Set-MailContact "Pilar Pinilla" -HiddenFromAddressListsEnabled $true
     ```
 
-3. Paylaşılan adres defterine tüm dış kişileri gizlemek için şu komutu çalıştırın:
+3. Paylaşılan adres defterinden tüm dış kişileri gizlemek için şu komutu çalıştırın:
 
     ```powershell
     Get-Contact -ResultSize unlimited -Filter {(RecipientTypeDetails -eq 'MailContact')} | Set-MailContact -HiddenFromAddressListsEnabled $true  
     ```
 
-Dış kişileri gizledikten sonra, paylaşılan adres defteri içinde görüntülenmezler, ancak yine de bunları dağıtım grubunun üyeleri olarak  eklemeniz gerekir.
+Bunları gizledikten sonra, dış kişiler paylaşılan adres defterinde görüntülenmez, ancak yine de bunları bir dağıtım grubunun üyesi olarak ekleyebilirsiniz.

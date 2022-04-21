@@ -15,14 +15,16 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
 description: Yöneticiler, çalışan verilerini kuruluşlarının insan kaynakları (İk) sisteminden Microsoft 365 aktarmak için bir veri bağlayıcısı ayarlayabilir. Bu, kuruluşunuz için iç tehdit oluşturabilecek belirli kullanıcıların etkinliklerini algılamanıza yardımcı olmak için şirket içi risk yönetimi ilkelerinde İk verilerini kullanmanıza olanak tanır.
-ms.openlocfilehash: e1539661c987de8642639df777602fbcf05bdcc4
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 81ee1ae3841c4b30f7159d344a195d924d49030c
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64944821"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64999970"
 ---
 # <a name="set-up-a-connector-to-import-hr-data"></a>İk verilerini içeri aktarmak için bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Kullanıcının istifası veya kullanıcının iş düzeyindeki bir değişiklik gibi olaylarla ilgili insan kaynakları (İk) verilerini içeri aktarmak için Microsoft Purview uyumluluk portalında bir veri bağlayıcısı ayarlayabilirsiniz. daha sonra İk verileri, kuruluşunuzdaki kullanıcılar tarafından olası kötü amaçlı etkinlikleri veya veri hırsızlığını tanımlamanıza yardımcı olabilecek risk göstergeleri oluşturmak için [insider risk yönetimi çözümü](insider-risk-management.md) tarafından kullanılabilir.
 

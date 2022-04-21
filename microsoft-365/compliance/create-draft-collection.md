@@ -16,14 +16,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Taslak koleksiyon, eBulma (Premium) durumunda, koleksiyonun arama sorgusuyla eşleşen bir arama tahmini döndüren bir eBulma (Premium) durumundaki gözaltı ve gözetim dışı veri kaynaklarının eBulma aramasıdır. Sonuçları gözden geçirme kümesine işlemeden önce arama istatistiklerini gözden geçirebilir, öğelerin örneklemesini önizleyebilir ve koleksiyonu düzeltip yeniden çalıştırabilirsiniz.
-ms.openlocfilehash: 248e95f928c818dfb4eb5b864c2d34304893281c
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 2178e836809a24edec6d3d184ef8b699bec87bb5
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64934895"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64997086"
 ---
 # <a name="create-a-draft-collection-in-ediscovery-premium"></a>eBulma'da taslak koleksiyon oluşturma (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Olay için koruyucuları ve koruyucu olmayan veri kaynaklarını belirledikten sonra, ilgili bir belge kümesini belirlemeye ve bulmaya hazır olursunuz. Bunu, veri kaynaklarında ilgili içerik aramak için Koleksiyonlar aracını kullanarak yaparsınız. Bunu, belirtilen veri kaynaklarında arama ölçütlerinizle eşleşen içerik arayan bir koleksiyon oluşturarak yaparsınız. Öğelerin bulunduğuna ilişkin bir tahmin olan *bir taslak koleksiyon* oluşturma seçeneğiniz vardır veya öğeleri otomatik olarak bir gözden geçirme kümesine ekleyen bir koleksiyon oluşturabilirsiniz. Taslak koleksiyon oluşturduğunuzda, bulunan öğelerin toplam sayısı ve boyutu, bulundukları farklı veri kaynakları ve arama sorgusuyla ilgili istatistikler gibi arama sorgusuyla eşleşen tahmini sonuçlar hakkındaki bilgileri görüntüleyebilirsiniz. Koleksiyon tarafından döndürülen öğelerin bir örneğini de önizleyebilirsiniz. Bu istatistikleri kullanarak arama sorgusunu değiştirebilir ve sonuçlarınızı daraltmak için taslak koleksiyonu yeniden çalıştırabilirsiniz. Koleksiyon sonuçlarından memnun olduğunuzda, koleksiyonu bir gözden geçirme kümesine işleyebilirsiniz. Bir taslak koleksiyonu işlediğiniz zaman, koleksiyon tarafından döndürülen öğeler gözden geçirme, analiz ve dışarı aktarma için bir gözden geçirme kümesine eklenir.
 

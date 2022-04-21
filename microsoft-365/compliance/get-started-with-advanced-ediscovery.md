@@ -20,14 +20,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Bu makalede, servis taleplerini oluşturmaya ve yönetmeye başlayabilmeniz için eBulma 'nın (Premium) nasıl ayarlanacağı açıklanır. Ayrıca gerekli Microsoft abonelikleri ve lisanslama işlemleri de açıklanmaktadır. Birkaç hızlı adımı tamamladıktan sonra eBulma (Premium) aracı kullanıma hazır olur.
-ms.openlocfilehash: 29805066c2db26aca6992dc34ad8bf8c0966ceb7
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: dff99ab432ce5f2380a6fd5a81e855c946146c8c
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64939927"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64997724"
 ---
 # <a name="set-up-microsoft-purview-ediscovery-premium"></a>Microsoft Purview eKeşif'i ayarlama (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview eBulma (Premium), kuruluşunuzun iç ve dış araştırmalarına yanıt veren verileri korumak, toplamak, gözden geçirmek, analiz etmek ve dışarı aktarmak için uçtan uca bir iş akışı sağlar. eBulma (Premium) dağıtımı için hiçbir şey gerekmez, ancak kuruluşunuzun araştırmalarınızı yönetmek için eBulma (Premium) durumları oluşturmaya ve kullanmaya başlayabilmesi için önce BT yöneticisinin ve eBulma yöneticisinin tamamlaması gereken bazı önkoşul görevleri vardır.
 

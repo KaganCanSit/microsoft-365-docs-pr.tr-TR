@@ -21,14 +21,16 @@ description: eKeşif (Premium) olayınızla ilgili içeriği korumak için koruy
 ms.custom:
 - seo-marvel-mar2020
 - admindeeplinkMAC
-ms.openlocfilehash: 16a4932993a652d8d7d71be78fd23a238fc90759
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 6ec8e31fddba430a7a148eea5c8b07eb35872641
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64939663"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64996778"
 ---
 # <a name="manage-holds-in-ediscovery-premium"></a>eBulma'da ayrı tutmaları yönetme (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview eBulma (Premium) servis talebi kullanarak, servis talebinizle ilgili olabilecek içeriği korumak için ayrı tutmalar oluşturabilirsiniz. eBulma (Premium) tutma özelliklerini kullanarak, saklamaları koruyuculara ve veri kaynaklarına yerleştirebilirsiniz. Ayrıca, posta kutularına ve OneDrive İş sitelerine gözetimsiz bir saklama yerleştirebilirsiniz. Ayrıca bir Microsoft 365 Grubu için grup posta kutusuna, SharePoint sitesine ve OneDrive İş sitesine ayrı tutabilirsiniz. Benzer şekilde, Microsoft Teams ile ilişkili posta kutusuna ve siteye ayrı tutabilirsiniz. İçerik konumlarını beklemeye aldığınızda, siz koruyucuyu serbest bırakana, belirli bir veri konumunu kaldırana veya saklama ilkesini tamamen silene kadar içerik tutulur.
 

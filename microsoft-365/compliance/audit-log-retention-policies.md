@@ -17,14 +17,16 @@ search.appverid:
 - MET150
 ms.assetid: ''
 description: Denetim günlüğü saklama ilkeleri, yeni Microsoft Purview Denetimi (Premium) özelliklerinin bir parçasıdır. Denetim günlüğü saklama ilkesi, kuruluşunuzda denetim günlüklerinin ne kadar süre tutulacağını belirtmenize olanak tanır.
-ms.openlocfilehash: 7f745baa78ebf61c0d32d39c49e3158b2418553f
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: a19e12f82fc577406ea4257fc315902ca8238358
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64934891"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65000388"
 ---
 # <a name="manage-audit-log-retention-policies"></a>Denetim günlüğü saklama ilkelerini yönetme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview uyumluluk portalında denetim günlüğü saklama ilkeleri oluşturabilir ve yönetebilirsiniz. Denetim günlüğü saklama ilkeleri, yeni Microsoft Purview Denetimi (Premium) özelliklerinin bir parçasıdır. Denetim günlüğü saklama ilkesi, kuruluşunuzda denetim günlüklerinin ne kadar süre tutulacağını belirtmenize olanak tanır. Denetim günlüklerini 10 yıla kadar saklayabilirsiniz. İlkeleri aşağıdaki ölçütlere göre oluşturabilirsiniz:
 

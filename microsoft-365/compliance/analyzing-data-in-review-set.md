@@ -17,14 +17,16 @@ search.appverid:
 ms.assetid: ''
 description: Microsoft Purview eKeşif (Premium) servis talebini analiz ederken belge kümelerini düzenlemek için kullanılabilecek araçlar hakkında bilgi edinin.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: c12b71d4bc2ddbf39df4e9414689cafeb4f4f785
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 72be5cf0cd6e4d52200f1167b525aa354192672e
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64935708"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64998716"
 ---
 # <a name="analyze-data-in-a-review-set-in-ediscovery-premium"></a>eBulma'da bir gözden geçirme kümesindeki verileri analiz etme (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Toplanan belgelerin sayısı büyük olduğunda, hepsini gözden geçirmek zor olabilir. Microsoft Purview eBulma (Premium), herhangi bir bilgi kaybı olmadan gözden geçirilecek belgelerin hacmini azaltmak ve belgeleri tutarlı bir şekilde düzenlemenize yardımcı olmak için belgeleri analiz etmek için çeşitli araçlar sağlar. Bu özellikler hakkında daha fazla bilgi edinmek için bkz:
 

@@ -16,14 +16,16 @@ search.appverid:
 - MET150
 ms.assetid: ''
 description: Kuruluşunuzdaki her durumda herhangi bir gözetim iletişimine eklenebilmeleri için eBulma'da (Premium) kuruluş genelinde veren memurlar ekleyebilirsiniz.
-ms.openlocfilehash: 076e6ea8b8dbef18c6c34221937a039fc43fad75
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: f82d5359a90e21203c2ff882ceb831cc1630e008
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64943007"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65000564"
 ---
 # <a name="manage-issuing-officers-in-ediscovery-premium"></a>eBulma'da veren memurları yönetme (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Siz veya diğerleri saklama bildirimi veya koruyucu olan bir kullanıcıya gönderilen başka bir iletişim türü oluşturduğunuzda, veren bir memur belirtmeniz gerekir. Bildirim, belirtilen veren memur adına koruyucuya gönderilir. Örneğin, kuruluşunuzdaki bir avukat, bir olayda koruyuculara ayrı tutma bildirimleri oluşturmak ve göndermekle sorumlu olabilir. Bu senaryoda, paralegal kuruluşta veren memur olarak bir avukat belirtebilir. Who veren bir memur olarak belirtilebilir? Koruyucu iletişim için veren bir memur olarak seçilebilen iki tür kullanıcı vardır:
 

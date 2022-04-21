@@ -21,14 +21,16 @@ ms.collection:
 ms.assetid: 50bbf89f-7870-4c2a-ae14-42635e0cfc01
 description: Yönetici, kuruluş dışındaki kullanıcılarla paylaşılan kaynakları belirlemek için Microsoft 365 denetim günlüğünde paylaşım denetimini kullanmayı öğrenebilir.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 7643dfae2e7e9fa871976cfe92bdf7028e756d3e
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 785fdd2628a1e0bea9fd0361e7843939bf7b84a3
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64934499"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64999684"
 ---
 # <a name="use-sharing-auditing-in-the-audit-log"></a>Denetim günlüğünde paylaşım denetimini kullanma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Paylaşım, SharePoint Online ve OneDrive İş'da önemli bir etkinliktir ve kuruluşlarda yaygın olarak kullanılır. Yöneticiler, kuruluşlarında paylaşımın nasıl kullanıldığını belirlemek için denetim günlüğündeki paylaşım denetimini kullanabilir. 
   

@@ -16,14 +16,16 @@ search.appverid:
 - MET150
 ms.assetid: ''
 description: Microsoft Purview eKeşif (Premium) durumundaki içeriği gözden geçirirken makine öğrenmesi tabanlı ayrıcalıklı içerik algılamasını kullanmak için avukat-istemci ayrıcalık algılama modelini kullanın.
-ms.openlocfilehash: ce5cabad4a5487f6e18c1054f5c4d143bac4325e
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 477b741cf617179ffd9eb1a4c38230faf5a0fce0
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64947175"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64997306"
 ---
 # <a name="set-up-attorney-client-privilege-detection-in-ediscovery-premium"></a>eBulma'da avukat-istemci ayrıcalık algılamayı ayarlama (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Herhangi bir eBulma işleminin gözden geçirme aşamasının önemli ve maliyetli bir yönü, ayrıcalıklı içerik için belgeleri gözden geçirmektir. Microsoft Purview eKeşif (Premium), bu süreci daha verimli hale getirmek için makine öğrenmesi tabanlı ayrıcalıklı içerik algılaması sağlar. Bu özellik *, avukat-istemci ayrıcalık algılama* olarak adlandırılır.
 

@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Yöneticiler, Android cep telefonlarından SMS, MMS ve sesli aramaları içeri aktarmak ve arşivlendirmek için bir TeleMessage bağlayıcısı ayarlayabilir. Bu, kuruluşunuzun üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilmeniz için üçüncü taraf veri kaynaklarından verileri Microsoft 365 arşivleyebilmenizi sağlar.
-ms.openlocfilehash: 5edf3766b31d5d9171ff726f2c720aba36d88cae
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 30c6784c4a724f38c4f1e6e0e8ad81cf9c1b93cd
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64946802"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64997526"
 ---
 # <a name="set-up-a-connector-to-archive-android-mobile-data"></a>Android mobil verilerini arşivleye bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Android cep telefonlarından SMS, MMS, sesli aramalar ve arama günlüklerini içeri aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında bir TeleMessage bağlayıcısı kullanın. Bağlayıcıyı ayarlayıp yapılandırdıktan sonra, her gün bir kez kuruluşunuzun TeleMessage hesabına bağlanır ve TeleMessage Android Arşivleyicisi'ni kullanan çalışanların mobil iletişimini Microsoft 365'daki posta kutularına aktarır.
 

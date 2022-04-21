@@ -16,14 +16,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview eKeşif (Premium) içindeki koleksiyonları kullanarak bir araştırma veya olayda gözden geçirilmek üzere bulut eklerini toplayın.
-ms.openlocfilehash: 0a0d3dab3942dbdfcfa896d8e2f59fd2e2dca813
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 1dd48f343f9df43edf8553e73395d756eb6713a4
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64935730"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65000718"
 ---
 # <a name="collect-cloud-attachments-in-microsoft-purview-ediscovery-premium-preview"></a>Microsoft Purview eBulma'da (Premium) bulut eklerini toplama (önizleme)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bulut ekleri, genellikle SharePoint sitede ve OneDrive depolanan belgelerin bağlantılarıdır. Bu nedenle, e-posta iletisine veya Teams sohbet konuşmasına belgenin gerçek bir kopyasını eklemek yerine dosyanın bağlantısını paylaşma seçeneğiniz vardır. Bulut ekleri, belgeleri paylaşmanın ve kuruluşunuzdaki diğer kişilerle işbirliği yapmanın etkili bir yoludur. Ancak eBulma iş akışı sırasında bulut ekleri güçlükler sunar çünkü eBulma aramasında paylaşılan belgedeki gerçek içerik değil yalnızca bulut eki bağlantısı döndürülür. Bu zorluğu gidermek için eBulma (Premium), bulut eklerini toplamaya yönelik iki çözüm sağlar:  
 

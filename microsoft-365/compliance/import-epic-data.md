@@ -14,14 +14,16 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: Yöneticiler, kuruluşunuzun Epic sisteminden Microsoft 365 elektronik sağlık kayıtlarını (EHR) içeri aktarmak için bir veri bağlayıcısı ayarlayabilir. Bu, çalışanlarınız tarafından hasta verilerine yetkisiz erişim etkinliğini algılamanıza yardımcı olmak için iç risk yönetimi ilkelerinde Epic EHR verilerini kullanmanıza olanak tanır.
-ms.openlocfilehash: ce1e56d61d7930d5f604f52edc68cf480f6daa1a
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 1dfcedbc6242f16ce476dddd642567bef69c966f
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64932033"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65000146"
 ---
 # <a name="set-up-a-connector-to-import-epic-ehr-audit-data-preview"></a>Epic EHR denetim verilerini içeri aktarmak için bağlayıcı ayarlama (önizleme)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Kuruluşunuzun Epic Elektronik Sağlık Kayıtları (EHR) sistemindeki kullanıcı etkinliği için denetim kayıtlarını içeri aktarmak için Microsoft Purview uyumluluk portalında bir veri bağlayıcısı ayarlayabilirsiniz. Epic EHR sisteminizdeki denetim kayıtları, hastanın sağlık kayıtlarına erişmeyle ilgili olayların kayıtlarını içerir. Epic EHR denetim kayıtları, kuruluşunuzun hasta bilgilerine yetkisiz erişimden korunmasına yardımcı olmak için Microsoft 365 [insider risk yönetimi çözümü](insider-risk-management.md) tarafından kullanılabilir.
 

@@ -16,14 +16,16 @@ search.appverid:
 - MET150
 ms.assetid: ''
 description: Microsoft 365'da bulut tabanlı uygulamalar tarafından üretilen içerik, kullanıcının Exchange Online posta kutusuyla depolanır veya ilişkilendirilir. Bu içerik Microsoft eBulma araçları kullanılarak aranabilir.
-ms.openlocfilehash: b37295783883d689acc34dbff88e5a94186eb4a6
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: b5e8434f5345cda8ef4f637b3dff2d3cf704f748
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64947857"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65000806"
 ---
 # <a name="content-stored-in-exchange-online-mailboxes-for-ediscovery"></a>eBulma için Exchange Online posta kutularında depolanan içerik
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Exchange Online'deki posta kutusu öncelikli olarak iletiler, takvim öğeleri, görevler ve notlar gibi e-postayla ilgili öğeleri depolamak için kullanılır. Ancak daha fazla bulut tabanlı uygulama verilerini kullanıcının posta kutusunda depoladıkça bu durum değişir. Verileri posta kutusunda depolamanın avantajlarından biri, bu bulut tabanlı uygulamalardan verileri bulmak, görüntülemek ve dışarı aktarmak için içerik arama, Microsoft Purview eKeşif (Standart) ve Microsoft Purview eKeşif (Premium) içindeki arama araçlarını kullanabilmenizdir. Bu uygulamalardan bazılarına ait veriler, posta kutusunda kişiler arası olmayan bir ileti (IPM olmayan) alt ağaçta bulunan gizli klasörlerde depolanır. Diğer bulut tabanlı uygulamalardan gelen veriler posta _kutusunda depolanmayabilir_ , ancak posta _kutusuyla ilişkilendirilir_ ve aramalarda döndürülür (bu veriler arama sorgusuyla eşleşiyorsa). Bulut tabanlı verilerin bir kullanıcı posta kutusunda depolanıp depolanmadığına veya kullanıcı posta kutusuyla ilişkilendirilip ilişkilendirilmediğine bakılmaksızın, kullanıcı posta kutusunu açtığında veriler genellikle e-posta istemcisinde görünmez.
 

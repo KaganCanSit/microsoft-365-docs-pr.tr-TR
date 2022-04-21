@@ -21,14 +21,16 @@ description: Kuruluşunuzdaki kullanıcı ve yönetici etkinliğini görüntüle
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
-ms.openlocfilehash: f35bfbbe299495e912d018bd00615964f883031e
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 6c0f26bbda2ba28b98fc80b80ce4a520d9fb39c3
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64936279"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64998914"
 ---
 # <a name="search-the-audit-log-in-the-compliance-center"></a>Uyumluluk merkezinde denetim günlüğünde arama yapma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Kullanıcının belirli bir belgeyi görüntüleyip görüntülemediğini veya bir öğeyi posta kutusundan temizleyip temizlemediğini bulmanız mı gerekiyor? Öyleyse, kuruluşunuzdaki kullanıcı ve yönetici etkinliğini görüntülemek üzere birleşik denetim günlüğünde arama yapmak için Microsoft Purview uyumluluk portalındaki denetim günlüğü arama aracını kullanabilirsiniz. Onlarca Microsoft 365 hizmeti ve çözümünde gerçekleştirilen binlerce kullanıcı ve yönetici işlemi, kuruluşunuzun birleşik denetim günlüğünde yakalanır, kaydedilir ve saklanır. Kuruluşunuzdaki kullanıcılar, bu işlemlerin denetim kayıtlarını aramak, görüntülemek ve dışarı aktarmak (CSV dosyasına) için denetim günlüğü arama aracını kullanabilir.
 

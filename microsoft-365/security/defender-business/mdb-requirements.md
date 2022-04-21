@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 04/12/2022
+ms.date: 04/20/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -17,12 +17,12 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: cf6a74bbde2e32ae047f97a7198b7f263e91b048
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: 75c3df32bb3103ad818524da0972567d3fd11cc8
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64862708"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65000696"
 ---
 # <a name="microsoft-defender-for-business-requirements"></a>İş için Microsoft Defender gereksinimleri
 
@@ -53,7 +53,7 @@ Aşağıdaki tabloda, İş için Microsoft Defender yapılandırmak ve kullanmak
 | Kullanıcı hesapları | Kullanıcı hesapları Microsoft 365 yönetim merkezi oluşturulur ([https://admin.microsoft.com](https://admin.microsoft.com))<br/><br/>İş için Microsoft Defender lisansları Microsoft 365 yönetim merkezi<br/><br/>Bu görevle ilgili yardım almak için bkz. [Kullanıcı ekleme ve lisans atama](mdb-add-users.md). |
 | İzinler  | İş için Microsoft Defender kaydolmak için Genel Yönetici olmanız gerekir.<br/><br/>Microsoft 365 Defender portalına erişmek için kullanıcıların [Azure AD'de aşağıdaki rollerden](mdb-roles-permissions.md) birine atanmış olması gerekir: <br/>- Güvenlik Okuyucusu<br/>- Güvenlik Yöneticisi<br/>- Genel Yönetici<br/><br/>Daha fazla bilgi için bkz. [İş için Microsoft Defender'de roller ve izinler](mdb-roles-permissions.md). |
 | Tarayıcı gereksinimleri | Microsoft Edge veya Google Chrome |
-| İşletim sistemi | İş için Microsoft Defender cihazları yönetmek için, cihazlarınız aşağıdaki işletim sistemlerinden birini çalıştırıyor olmalıdır: <br/>- Windows 10 Business veya üzeri <br/>- Windows 10 Professional veya üzeri <br/>- Windows 10 Enterprise veya üzeri <br/><br/>[KB5006738'in](https://support.microsoft.com/topic/october-26-2021-kb5006738-os-builds-19041-1320-19042-1320-and-19043-1320-preview-ccbce6bf-ae00-4e66-9789-ce8e7ea35541) yüklü olduğundan emin olun. <br/><br/>Cihazları zaten Microsoft Intune 'de (veya Microsoft Endpoint Manager) yönetiyorsanız, bu cihazları İş için Defender'a ekleyebilirsiniz.<br/><br/>R2 ve sonraki Windows Server 2012 çalıştıran uç noktaları ekleme özelliği şu anda önizleme aşamasındadır. |
+| İşletim sistemi | İş için Microsoft Defender cihazları yönetmek için, cihazlarınız aşağıdaki işletim sistemlerinden birini çalıştırıyor olmalıdır: <br/>- Windows 10 Business veya üzeri <br/>- Windows 10 Professional veya üzeri <br/>- Windows 10 Enterprise veya üzeri <br/>- macOS (en güncel üç sürüm desteklenir)<br/><br/>[KB5006738'in](https://support.microsoft.com/topic/october-26-2021-kb5006738-os-builds-19041-1320-19042-1320-and-19043-1320-preview-ccbce6bf-ae00-4e66-9789-ce8e7ea35541) yüklü olduğundan emin olun. <br/><br/>Cihazları zaten Microsoft Intune 'de (veya Microsoft Endpoint Manager) yönetiyorsanız, bu cihazları İş için Defender'a ekleyebilirsiniz. |
 
 > [!NOTE]
 > [Azure Active Directory (Azure AD),](/azure/active-directory/fundamentals/active-directory-whatis) kullanıcı izinlerini ve cihaz gruplarını yönetmek için kullanılır. Azure AD, İş için Defender aboneliğinize dahildir. 

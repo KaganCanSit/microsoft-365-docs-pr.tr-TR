@@ -17,14 +17,16 @@ search.appverid:
 ms.assetid: ''
 description: Bir eBulma (Premium) örneğindeki verileri analiz etmek, sorgulamak, görüntülemek, etiketlemek ve dışarı aktarmak için gözden geçirme kümelerini yönetmeyi öğrenin.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 60e43d4d4983dd5171ed38f26096fba979c0f98c
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 64970cb3302c47dbab394b974bf1df8358ad3755
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64935598"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64999065"
 ---
 # <a name="manage-review-sets-in-ediscovery-premium"></a>eBulma'da gözden geçirme kümelerini yönetme (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Gözden geçirme kümeleri, bir durumda verileri çözümleyebileceğiniz, sorgulayabileceğiniz, görüntüleyebileceğiniz, etiketleyebileceğiniz ve dışarı aktarabileceğiniz statik bir belge kümesidir. Bu görevleri gerçekleştirme hakkında daha fazla bilgi için bkz:
 

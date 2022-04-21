@@ -17,14 +17,16 @@ search.appverid:
 ms.assetid: 3ab1e2c3-28cf-4bf5-b0a8-c0222f32bdf5
 ROBOTS: NOINDEX, NOFOLLOW
 description: eBulma'daki (Premium) durum sorunları için İlgi eğitim durumunu ve sonuçlarını görüntülemeyi ve yorumlamayı öğrenin.
-ms.openlocfilehash: 53f1fa12849651cd01172a320eaa014614634e92
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 72e12fe54b30c3d766f7a198e5e3417ff9d48a22
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64935532"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65000960"
 ---
 # <a name="track-relevance-analysis-in-ediscovery-premium"></a>eBulma'da İlgi analizini izleme (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
   
 Microsoft Purview eBulma'da (Premium), İlgi İzleme sekmesi Etiket sekmesinde gerçekleştirilen İlgi eğitiminin hesaplanmış geçerliliğini görüntüler ve İlgi alanındaki yinelemeli eğitim sürecinde atılması gereken sonraki adımı gösterir. 
   

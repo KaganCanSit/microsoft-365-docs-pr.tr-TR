@@ -20,14 +20,16 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 description: Microsoft Purview uyumluluk portalında İçerik araması veya eBulma (Standart) araması tarafından döndürülen sonuçların bir örneğini önizleme.
-ms.openlocfilehash: 83779ad333d6944b65b92b2032d46b3eaa016479
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 3397b82f088f9aff480b6893edbf7aa664d91dc4
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64934719"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64999024"
 ---
 # <a name="preview-ediscovery-search-results"></a>eKeşif arama sonuçlarını önizleme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bir İçerik araması veya Microsoft Purview eKeşif (Standart) olayıyla ilişkilendirilmiş bir arama çalıştırdıktan sonra, arama tarafından döndürülen sonuçların bir örneğini önizleyebilirsiniz. Arama sorgusu tarafından döndürülen öğelerin önizlemesini görüntülemek, aramanın umduğun sonuçları döndüreceğini veya arama sorgusunu değiştirip aramayı yeniden çalıştırmanız gerekip gerekmediğini belirlemenize yardımcı olabilir.
 

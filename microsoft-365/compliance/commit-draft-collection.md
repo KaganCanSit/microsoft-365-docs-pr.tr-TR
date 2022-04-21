@@ -16,14 +16,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Taslak koleksiyonu oluşturup yineledikten sonra, bir gözden geçirme kümesine işleyebilirsiniz. Taslak koleksiyonu işlediğinizde, toplanan öğeler servis talebindeki gözden geçirme kümesine eklenir. Toplanan öğeler gözden geçirme kümesinde yer aldıktan sonra bunları analiz edebilir, gözden geçirebilir ve dışarı aktarabilirsiniz.
-ms.openlocfilehash: 5637d97020d7fb086914a6debdaffc8050772828
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: f908d17d804487cd5e7e93085e418f9a94915c8e
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64940301"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64997944"
 ---
 # <a name="commit-a-draft-collection-to-a-review-set-in-ediscovery-premium"></a>Taslak koleksiyonu eBulma'da (Premium) bir gözden geçirme kümesine işleme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Taslak koleksiyonda topladığınız öğelerden memnun olduğunuzda ve bunları analiz etmeye, etiketlemeye ve gözden geçirmeye hazır olduğunuzda, bu durumda bir gözden geçirme kümesine koleksiyon ekleyebilirsiniz. Bir gözden geçirme kümesine taslak koleksiyon işlediğinizde, toplanan öğeler Microsoft 365'daki özgün içerik konumlarından bir gözden geçirme kümesine kopyalanır. Gözden geçirme kümesi, Microsoft tarafından sağlanan güvenli bir Azure Depolama Microsoft bulutu konumudur.
 

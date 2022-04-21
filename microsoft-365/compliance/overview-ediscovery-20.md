@@ -20,14 +20,16 @@ search.appverid:
 - MET150
 description: Microsoft Purview'da eBulma (Premium) çözümü hakkında bilgi edinin. Bu makalede, iç ve dış araştırmalarını yönetmenize yardımcı olacak bir araç olan Microsoft Purview'daki eBulma (Premium) konusuna genel bir bakış sağlanmaktadır. Ayrıca, yasal araştırmalarınızı yönetmek için eKeşif (Premium) kullanmanın iş nedenlerini de çerçeveler.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 7283adbf179f2d3dd04f45e2be808043e86ff88f
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 1a26d1abe9965ad71383a6d07e277999d85e31ef
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64932077"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64999090"
 ---
 # <a name="overview-of-microsoft-purview-ediscovery-premium"></a>Microsoft Purview eKeşif'e (Premium) genel bakış
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview eKeşif (Premium) çözümü, mevcut Microsoft eKeşif ve analiz özelliklerini temel alır. eBulma (Premium), kuruluşunuzun iç ve dış araştırmalarına yanıt veren içeriği korumak, toplamak, çözümlemek, gözden geçirmek ve dışarı aktarmak için uçtan uca bir iş akışı sağlar. Ayrıca, yasal ekiplerin bir olaya dahil olan koruyucularla iletişim kurmak için yasal tutma bildirimi iş akışının tamamını yönetmesine olanak tanır.
 
@@ -134,7 +136,7 @@ eKeşif 'i (Premium) kullanmaya başlamak için iki hızlı ve kolay adım vard�
 
 |Adımlar  |Açıklama  |
 |:---------|:---------|
-|[eBulma'yı ayarlama (Premium)](get-started-with-advanced-ediscovery.md)| Abonelik ve lisanslama gereksinimlerini doğruladıktan sonra, izinleri atayabilir ve eBulma (Premium) kullanmaya başlamak için kuruluş genelinde ayarları yapılandırabilirsiniz.|
+|[eKeşif'i (Premium) ayarlama](get-started-with-advanced-ediscovery.md)| Abonelik ve lisanslama gereksinimlerini doğruladıktan sonra, izinleri atayabilir ve eBulma (Premium) kullanmaya başlamak için kuruluş genelinde ayarları yapılandırabilirsiniz.|
 |[Servis taleplerini oluşturma ve yönetme](create-and-manage-advanced-ediscoveryv2-case.md) | Kuruluşunuzdaki tüm yasal ve diğer araştırma türleri için eBulma (Premium) iş akışını yönetmek için servis talepleri oluşturun.|
 |||
 

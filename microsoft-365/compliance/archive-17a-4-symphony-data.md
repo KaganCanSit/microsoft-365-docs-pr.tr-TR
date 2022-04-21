@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Microsoft 365'da Senfoni verilerini içeri aktarmak ve arşivlemek için 17a-4 Symphony DataParser bağlayıcısını ayarlamayı ve kullanmayı öğrenin.
-ms.openlocfilehash: 33c3bdcd3fcde1d098a2baad0dadd86685e8ee6f
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: f783e5f9f405223493e43e7b9966be50c2e58f10
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64938894"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64996624"
 ---
 # <a name="set-up-a-connector-to-archive-data-from-symphony"></a>Senfoni'den verileri arşivleye bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Senfoni iletişim verilerini Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarmak ve arşivlemek için 17a-4 LLC'deki [Symphony DataParser'ı](https://www.17a-4.com/Symphony-dataparser/) kullanın. DataParser, üçüncü taraf veri kaynağından öğeleri yakalamak ve bu öğeleri Microsoft 365 aktarmak için yapılandırılmış bir Senfoni bağlayıcısı içerir. Symphony DataParser bağlayıcısı, Symphony verilerini e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'deki kullanıcı posta kutularına aktarır.
 

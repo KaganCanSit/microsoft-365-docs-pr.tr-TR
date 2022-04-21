@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Slack verilerini Microsoft 365 içeri aktarmak ve arşivlemek için 17a-4 Slack DataParser bağlayıcısını ayarlamayı ve kullanmayı öğrenin.
-ms.openlocfilehash: 60aa2d532a561d2c08357de6437a55583fb5b4c3
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 9157db405f37b53b8637c466e9d6d8050c5a325b
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64937747"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64996662"
 ---
 # <a name="set-up-a-connector-to-archive-slack-data"></a>Slack verilerini arşivleye bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Slack platformundaki verileri Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarmak ve arşivlemek için [17a-4 LLC'deki DataParser'ı](https://www.17a-4.com/slack-dataparser/) kullanın. DataParser, üçüncü taraf veri kaynağındaki öğeleri yakalamak ve bu öğeleri Microsoft 365 aktarmak için yapılandırılmış bir Slack bağlayıcısı içerir. Slack DataParser bağlayıcısı Slack verilerini e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'deki kullanıcı posta kutularına aktarır.
 

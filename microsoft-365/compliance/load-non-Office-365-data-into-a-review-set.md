@@ -16,14 +16,16 @@ search.appverid:
 - MET150
 description: eBulma (Premium) durumunda analiz için Microsoft 365 olmayan verileri bir gözden geçirme kümesine aktarmayı öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: b9d27e2d1e306c189aa28a2c331a60c5b4d0c5dc
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: d7167f85760d0c1cc05e130413dbcdae9e0e3973
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64944755"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64996866"
 ---
 # <a name="load-non-microsoft-365-data-into-a-review-set"></a>gözden geçirme kümesine Microsoft 365 olmayan verileri yükleme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview eKeşif'te (Premium) analiz etmeniz gereken tüm belgeler Microsoft 365'da yer almamaktadır. eBulma'da (Premium) Microsoft 365 olmayan veri içeri aktarma özelliğiyle, Microsoft 365'da yer almayan belgeleri bir gözden geçirme kümesine yükleyebilirsiniz. Bu makalede, Microsoft 365 olmayan belgelerinizi analiz için eBulma'ya (Premium) nasıl getireceğiniz gösterilmektedir.
 

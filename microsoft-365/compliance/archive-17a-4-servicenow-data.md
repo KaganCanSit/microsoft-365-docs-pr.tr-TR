@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: ServiceNow verilerini Microsoft 365 içeri aktarmak ve arşivleme amacıyla 17a-4 ServiceNow DataParser bağlayıcısını ayarlamayı ve kullanmayı öğrenin.
-ms.openlocfilehash: 4120b54225bc8af6542f4936a9af3bcc4b982e02
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: de899dff29f91002259701b79b3ae6119fa1df66
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64937751"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64997570"
 ---
 # <a name="set-up-a-connector-to-archive-data-from-servicenow"></a>ServiceNow'dan verileri arşivleme için bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 ServiceNow'dan Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına verileri içeri aktarmak ve arşivlemek için 17a-4 LLC'deki [ServiceNow DataParser'ı](https://www.17a-4.com/dataparser/) kullanın. DataParser, üçüncü taraf veri kaynağındaki öğeleri yakalamak ve bu öğeleri Microsoft 365'a aktarmak için yapılandırılmış bir ServiceNow bağlayıcısı içerir. ServiceNow DataParser bağlayıcısı ServiceNow verilerini e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'deki kullanıcı posta kutularına aktarır.
 

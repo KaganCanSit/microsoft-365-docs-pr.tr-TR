@@ -17,14 +17,16 @@ search.appverid:
 ms.assetid: ''
 ROBOTS: NOINDEX, NOFOLLOW
 description: Akıllı etiketler, eBulma (Premium) durumundaki içeriği gözden geçirirken makine öğrenmesi özelliklerini uygulamanızı sağlar. Avukat-istemci ayrıcalık modeli gibi makine öğrenmesi algılama modellerinin sonuçlarını görüntülemek için akıllı etiket gruplarını kullanın.
-ms.openlocfilehash: 9fd4a53df00bcb096a885ed311e4fb4ed365725e
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 1adea2404192b9e715ad021f70ba07f7e64a89d5
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64934631"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64999750"
 ---
 # <a name="set-up-smart-tags-in-ediscovery-premium"></a>eBulma'da akıllı etiketleri ayarlama (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview eKeşif (Premium) içindeki makine öğrenmesi (ML) özellikleri, inceleme kümesindeki servis talebi belgelerini gözden geçirirken karar sürecini daha verimli hale getirmenize yardımcı olabilir. Akıllı etiketler, ML özelliklerini kararların kaydedildiği yere getirmenin bir yoludur: gözden geçirme sırasında belgeler etiketlenirken. Akıllı etiket grubu oluşturduğunuzda, akıllı etiket grubuyla ilişkilendirdiğiniz ML modelinin sonucu olan kararlar etiket grubundaki etiketlerle aynı hizada görüntülenir. Bu, belirli belgeleri gözden geçirirken ML sonuç bilgilerini satır içinde görmenize yardımcı olur.
 

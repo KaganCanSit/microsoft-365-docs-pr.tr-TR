@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: 17a-4 SQL DataParser bağlayıcısını ayarlamayı ve kullanarak Microsoft 365'da SQL verileri içeri aktarmayı ve arşivlemeyi öğrenin.
-ms.openlocfilehash: 7f1c3d919150ce48e0ecb3ab40a1434dff77ced9
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 5583b47276a6f8c5e48add47f3743c4792abd83c
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64937289"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64996668"
 ---
 # <a name="set-up-a-connector-to-archive-sql-data"></a>SQL verilerini arşivleye bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 17a-4 LLC'deki [SQL DataParser'ı](https://www.17a-4.com/sql-dataparser/) kullanarak bir SQL veritabanındaki verileri Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarın ve arşivleyin. DataParser, üçüncü taraf veri kaynağındaki öğeleri yakalamak ve bu öğeleri Microsoft 365 aktarmak için yapılandırılmış bir SQL bağlayıcısı içerir. SQL DataParser bağlayıcısı, SQL verileri e-posta iletisi biçimine dönüştürür ve sonra bu öğeleri Microsoft 365'deki kullanıcı posta kutularına aktarır.
 

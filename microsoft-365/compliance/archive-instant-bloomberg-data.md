@@ -15,14 +15,16 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: seo-marvel-apr2020
 description: Yöneticilerin Anlık Bloomberg sohbet aracındaki verileri Microsoft 365 içeri aktarmak ve arşivlemesi için veri bağlayıcısını nasıl ayarlayıp kullanabileceğini öğrenin.
-ms.openlocfilehash: 3729c36df27e6def709dc5d2c976885c3db5a518
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 22b581c332e8accad567bb7eb8b29e57ec981044
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64938675"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64998142"
 ---
 # <a name="set-up-a-connector-to-archive-instant-bloomberg-data"></a>Anlık Bloomberg verilerini arşivleye bir bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview uyumluluk portalında yerel bağlayıcı kullanarak [Instant Bloomberg](https://www.bloomberg.com/professional/product/collaboration/) işbirliği aracından finansal hizmetler sohbet verilerini içeri aktarın ve arşivleyin. Bağlayıcıyı ayarlayıp yapılandırdıktan sonra, her gün bir kez kuruluşunuzun Bloomberg güvenli FTP sitesine (SFTP) bağlanır, sohbet iletilerinin içeriğini e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'deki posta kutularına aktarır.
 

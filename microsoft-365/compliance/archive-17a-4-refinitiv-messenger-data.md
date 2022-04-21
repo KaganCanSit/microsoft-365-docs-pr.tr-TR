@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Bu verileri Microsoft 365 içeri aktarmak ve arşivleme amacıyla 17a-4 Refinitiv Eikon Messenger DataParser bağlayıcısı ayarlamayı ve kullanmayı öğrenin.
-ms.openlocfilehash: 090d658e5b18f639848a4ce3c2635865207a8833
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 444c31df6a247d40855235b3d0de4c98b76c6d30
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64940719"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64997643"
 ---
 # <a name="set-up-a-connector-to-archive-refinitiv-eikon-messenger-data"></a>Refinitiv Eikon Messenger verilerini arşivleme için bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 [Refinitiv Eikon Messenger'daki](https://www.17a-4.com/refinitiv-messenger-dataparser/) verileri Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarmak ve arşivlemek için 17a-4 LLC'deki Refinitiv Eikon Messenger DataParser'ı kullanın. DataParser, üçüncü taraf veri kaynağından öğeleri yakalamak ve bu öğeleri Microsoft 365'a aktarmak için yapılandırılmış bir Refinitiv Eikon Messenger bağlayıcısı içerir. Refinitiv Eikon Messenger DataParser bağlayıcısı Refinitiv Eikon Messenger verilerini e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'daki kullanıcı posta kutularına aktarır.
 

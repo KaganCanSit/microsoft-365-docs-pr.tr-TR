@@ -16,14 +16,16 @@ search.appverid:
 - MET150
 ms.assetid: ''
 description: Kuruluşunuzda her durumda kullanılabilmesi için eKeşif'e (Premium) koruyucu iletişim şablonları (bekletme bildirimi şablonu gibi) ekleyebilirsiniz.
-ms.openlocfilehash: be8311a9687eb4edb9cc44e15264808a2a05a69a
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 9ac944a3d845a770e35a84adcdc2f1f1dbefd172
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64945163"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65000608"
 ---
 # <a name="manage-custodian-communications-templates-in-ediscovery-premium"></a>eBulma'da koruyucu iletişim şablonlarını yönetme (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Siz veya diğer kullanıcılar ayrı tutma bildirimi veya diğer tür koruyucu iletişimler oluşturduğunuzda, eBulma (Premium) durumunda **İletişimler** sekmesindeki iletişim düzenleyicisini kullanarak iletişim belgesini sıfırdan oluşturmanız gerekiyordu. Şimdi, kuruluşunuzda her durumda iletişim oluşturmak için kullanılabilecek iletişim şablonları oluşturmanıza olanak tanıyan yeni bir özellik yayımladık. İletişim şablonları oluşturulduktan sonra, bir durumda kullanılabilir. Bu, avukatların veya koruyucu iletişim oluşturan diğer kullanıcıların bildirim oluşturmak için sıfırdan başlaması gerekmeyecek anlamına gelir. Bunun yerine, bir koruyucuya gönderilen bildirimi oluşturmak için bir şablon seçebilirler.
 

@@ -19,14 +19,16 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 description: Denetim günlüğünde arama yapmak için Exchange Online'da Search-UnifiedAuditLog cmdlet'ini çalıştıran bir PowerShell betiği kullanın. Bu betik, her çalıştırdığınızda büyük bir denetim kayıtları kümesi döndürecek şekilde iyileştirilmiştir. Betik, bu kayıtları Excel'da Power Query kullanarak görüntüleyebileceğiniz veya dönüştürebileceğiniz bir CSV dosyasına aktarır.
-ms.openlocfilehash: fc7f2e8626fd5b510dca08504d91dd0faadd78b6
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 00edbeb18bc882cf9113e80321b29d84ed43114c
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64943853"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65000256"
 ---
 # <a name="use-a-powershell-script-to-search-the-audit-log"></a>Denetim günlüğünü aramak için PowerShell betiği kullanma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Güvenlik, uyumluluk ve denetim, günümüzün dünyasında BT yöneticileri için en önemli öncelik haline gelmiştir. Microsoft 365, kuruluşların güvenlik, uyumluluk ve denetimi yönetmesine yardımcı olan çeşitli yerleşik özelliklere sahiptir. Özellikle, birleşik denetim günlüğü güvenlik olaylarını ve uyumluluk sorunlarını araştırmanıza yardımcı olabilir. Aşağıdaki yöntemleri kullanarak denetim günlüklerini alabilirsiniz:
 

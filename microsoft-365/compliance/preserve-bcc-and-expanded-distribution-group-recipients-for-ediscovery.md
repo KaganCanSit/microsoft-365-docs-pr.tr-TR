@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.assetid: eb8ddf15-0080-457e-9d83-e73e193da334
 description: In-Place Tutma, Dava Tutma ve Microsoft 365 saklama ilkeleri, mevzuat uyumluluğu ve eBulma gereksinimlerini karşılamak için posta kutusu içeriğini korumanıza olanak tanır.
-ms.openlocfilehash: a088407277f7ebced3aa69ee9ff807913f9b0c85
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 4c3c7b7be98959011473eeafc85f40b19be82fdc
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64942127"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64998518"
 ---
 # <a name="preserve-bcc-and-expanded-distribution-group-recipients-for-ediscovery"></a>eBulma için Gizli ve genişletilmiş dağıtım grubu alıcılarını koruma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
   
 Dava tutmaları, eBulma tutmaları ve [Microsoft 365 bekletme ilkeleri](./retention.md) (Microsoft Purview uyumluluk portalında oluşturulur), mevzuat uyumluluğu ve eBulma gereksinimlerini karşılamak için posta kutusu içeriğini korumanıza olanak tanır. Bir iletinin Kime ve Bilgi alanlarında doğrudan ele alınan alıcılar hakkındaki bilgiler varsayılan olarak tüm iletilere eklenir. Ancak kuruluşunuz, iletinin tüm alıcıları hakkındaki ayrıntıları arama ve yeniden oluşturma olanağı gerektirebilir. Buna şunlar dahildir:
   

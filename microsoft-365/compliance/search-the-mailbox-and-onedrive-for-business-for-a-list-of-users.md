@@ -19,14 +19,16 @@ search.appverid:
 ms.assetid: 5f4f8206-2d6a-4cb2-bbc6-7a0698703cc0
 description: Bu makaledeki İçerik Arama'yı ve betiği kullanarak posta kutularında ve OneDrive İş sitelerinde bir kullanıcı grubu arayın.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 14c518c4450b01e387f84b4211da8d0eb346fe7a
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 1bbfc26c2193c1bf31e081b8ded9e2e2baf56743
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64949277"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64998826"
 ---
 # <a name="use-content-search-to-search-the-mailbox-and-onedrive-for-business-site-for-a-list-of-users"></a>Kullanıcı listesi için posta kutusu ve OneDrive İş sitesinde arama yapmak için İçerik Arama'yı kullanma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Güvenlik & Uyumluluk Merkezi PowerShell, zaman alan eBulma ile ilgili görevleri otomatikleştirmenize olanak sağlayan bir dizi cmdlet sağlar. Şu anda, çok sayıda koruyucu içerik konumunu aramak için Microsoft Purview uyumluluk portalında İçerik araması oluşturmak zaman ve hazırlık gerektirir. Arama oluşturmadan önce, her OneDrive İş sitenin URL'sini toplamanız ve ardından her posta kutusunu ve OneDrive İş siteyi aramaya eklemeniz gerekir. Gelecek sürümlerde, uyumluluk portalında bunu yapmak daha kolay olacaktır. O zamana kadar, bu işlemi otomatikleştirmek için bu makaledeki betiği kullanabilirsiniz. Bu betik, kuruluşunuzun Sitem etki alanının adını (örneğin, URL'deki `https://contoso-my.sharepoint.com`**contoso** ), kullanıcı e-posta adreslerinin listesini, yeni İçerik Aramasının adını ve kullanılacak arama sorgusunu ister. Betik, listedeki her kullanıcı için OneDrive İş URL'sini alır ve ardından, sağladığınız arama sorgusunu kullanarak posta kutusunda arama yapıp listedeki her kullanıcı için siteyi OneDrive İş bir İçerik Araması oluşturur ve başlatır.
   

@@ -17,14 +17,16 @@ search.appverid:
 - MET150
 ms.assetid: 78fe3147-1979-4c41-83bb-aeccf244368d
 description: Microsoft Purview uyumluluk portalında İçerik arama ve eBulma (Standart) özellikleri için geçerli olan sınırlar hakkında bilgi edinin.
-ms.openlocfilehash: 53ecc3ceb879bc72040c5525e6bacc8d9802c5c9
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 8cba04c7ed3257d5a168d7754b2964eb4aa97b0d
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64944733"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64999068"
 ---
 # <a name="limits-for-ediscovery-search"></a>eBulma arama sınırları
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview uyumluluk portalında eBulma arama araçlarına çeşitli sınırlar uygulanır. Buna **İçerik arama** sayfasında çalıştırılacak aramalar ve eBulma **(Standart)** sayfasında eBulma olayıyla ilişkili aramalar dahildir. Bu sınırlar, kuruluşlara sağlanan hizmetlerin durumunu ve kalitesini korumaya yardımcı olur. Arama için Exchange Online'da e-posta iletilerinin dizinlenmesiyle ilgili sınırlar da vardır. eBulma aramalarının veya e-posta dizin oluşturmanın sınırlarını değiştiremezsiniz, ancak eBulma aramalarını planlarken, çalıştırırken ve sorun giderirken bu sınırları dikkate alabilmeniz için bunları bilmeniz gerekir.
 

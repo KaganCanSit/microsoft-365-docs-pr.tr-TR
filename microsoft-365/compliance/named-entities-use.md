@@ -16,14 +16,14 @@ ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
 description: Veri kaybı önleme ilkelerinizdeki adlandırılmış varlıklardan yararlanmak için bu yordamları kullanın
-ms.openlocfilehash: 108b21e7c5a6708a01a712dcd44788f489df0e73
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 6b00c45b95436e2425aedadd57a178fcb01ab50e
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 04/20/2022
-ms.locfileid: "64971593"
+ms.locfileid: "65001004"
 ---
-# <a name="use-named-entities-in-your-data-loss-prevention-policies"></a>Veri kaybı önleme ilkelerinizde adlandırılmış varlıkları kullanma
+# <a name="use-named-entities-in-your-data-loss-prevention-policies"></a>Veri kaybını önleme ilkelerinizde adlandırılmış varlıkları kullanma
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
@@ -83,7 +83,7 @@ DLP ilkesi oluşturmak veya düzenlemek için [DLP ilkesi oluşturma, test etme 
 |bekleyen çevrimiçi verileri SharePoint     |Destekleniyor         |
 |Bekleyen verileri Teams     |Destekleniyor         |
 |Bekleyen e-posta iletileri verileri     |Gizlilik Hizmeti Planı ile kiracılar için desteklenir         |
-|Bulut Uygulamaları için Microsoft Defender     |Desteklenen         |
+<!--|Bulut Uygulamaları için Microsoft Defender     |Desteklenen         |-->
 
 ### <a name="autolabeling"></a>Otomatik etiketleme
 

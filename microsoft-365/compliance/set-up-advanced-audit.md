@@ -20,14 +20,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Bu makalede, kullanıcı hesapları tehlikeye atıldığında veya güvenlikle ilgili diğer olayları araştırmak için adli incelemeler yapabilmeniz için Denetimin (Premium) nasıl ayarlanacağı açıklanır.
-ms.openlocfilehash: 9e758ce6a830569b007ee024e17abdddbce01f13
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 6f4f9953c88b1d994d4f033629cc89a6529fb9de
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64945857"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64998848"
 ---
 # <a name="set-up-microsoft-purview-audit-premium"></a>Microsoft Purview Denetimini Ayarlama (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Kuruluşunuzun Denetimi (Premium) destekleyen bir aboneliği ve son kullanıcı lisansı varsa, Denetim (Premium) bölümündeki ek özellikleri ayarlamak ve kullanmak için aşağıdaki adımları gerçekleştirin.
 

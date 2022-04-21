@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Microsoft 365'da InvestEdge verilerini içeri aktarmak ve arşivlemek için 17a-4 InvestEdge DataParser bağlayıcısını ayarlamayı ve kullanmayı öğrenin.
-ms.openlocfilehash: 08c89ede8e16a4635c56d0d4bcb50cb0dce69860
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: cc10c5a798e9e85da7f95769926df8446187434c
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64945119"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64998114"
 ---
 # <a name="set-up-a-connector-to-archive-investedge-data"></a>InvestEdge verilerini arşivleye bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 17a-4 LLC'deki [InvestEdge DataParser'ı](https://www.17a-4.com/investedge-dataparser/) kullanarak Verileri InvestEdge'den Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarın ve arşivleyebilirsiniz. DataParser, üçüncü taraf veri kaynağındaki öğeleri yakalamak ve bu öğeleri Microsoft 365 aktarmak için yapılandırılmış bir InvestEdge bağlayıcısı içerir. InvestEdge DataParser bağlayıcısı InvestEdge verilerini e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'deki kullanıcı posta kutularına aktarır.
 

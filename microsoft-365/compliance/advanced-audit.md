@@ -18,14 +18,19 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview Audit (Premium), kuruluşunuzun adli ve uyumluluk araştırmalarına yardımcı olmak için yeni denetim özellikleri sağlar.
-ms.openlocfilehash: 51add6560c12994470f5a6ad96fce5c3f293f4f7
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 4f936977c71a933dd05e5c0b2e0d2111b03bc8f7
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 04/20/2022
-ms.locfileid: "64972837"
+ms.locfileid: "64999508"
 ---
 # <a name="microsoft-purview-audit-premium"></a>Microsoft Purview Denetimi (Premium)
+
+> [!TIP]
+> *Dokuz Microsoft Purview çözümlerinin tamamının premium sürümlerini ücretsiz olarak deneyebileceğinizi biliyor muydunuz?* Sağlam Purview özelliklerinin kuruluşunuzun uyumluluk gereksinimlerini karşılamasına nasıl yardımcı olabileceğini keşfetmek için 90 günlük Purview çözümleri deneme sürümünü kullanın. Microsoft 365 E3 ve Office 365 E3 müşterileri artık [Microsoft Purview uyumluluk portalı deneme hub'ında](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef) başlayabilir. [Kaydolabilecek kişiler ve deneme koşulları](compliance-easy-trials.md) hakkında ayrıntılı bilgi edinin.
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview'daki [Denetim işlevi](search-the-audit-log-in-security-and-compliance.md), kuruluşlara Microsoft 365'deki birçok farklı hizmette birçok denetim etkinliği türüne görünürlük sağlar. Microsoft Purview Denetimi (Premium), kuruluşların bir araştırma yürütmek için gereken denetim günlüğü saklama süresini artırarak, önemli olaylara erişim sağlayarak (Microsoft Purview uyumluluk portalında ve Office 365 Yönetim Etkinliği API'sinde Denetim günlüğü aramasını kullanarak) güvenlik ihlallerinin kapsamını belirlemeye ve daha hızlı erişim sağlayarak, kuruluşların adli ve uyumluluk araştırmaları gerçekleştirmesine yardımcı olur Office 365 Yönetim Etkinliği API'si.
 

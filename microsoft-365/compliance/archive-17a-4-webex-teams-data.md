@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: 17a-4 Cisco Webex DataParser bağlayıcısını ayarlamayı ve kullanarak Cisco Webex verilerini Microsoft 365 içeri aktarmayı ve arşivlemeyi öğrenin.
-ms.openlocfilehash: 57a991f4a6d808dbcd22cb1d3466f10417e8d8e9
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 67cd7007d19ba37b20da4ea961e3ec16e3b63840
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64944139"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64996602"
 ---
 # <a name="set-up-a-connector-to-archive-cisco-webex-data"></a>Cisco Webex verilerini arşivleye bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 17a-4 LLC'deki [Cisco Webex DataParser'ı](https://www.17a-4.com/webex-dataparser/) kullanarak Cisco Cisco Webex platformundaki verileri Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarıp arşivleyebilirsiniz. DataParser, üçüncü taraf veri kaynağından öğeleri yakalamak ve bu öğeleri Microsoft 365 aktarmak için yapılandırılmış bir Cisco Webex bağlayıcısı içerir. Cisco Webex DataParser bağlayıcısı, Cisco Webex verilerini e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365 kullanıcı posta kutularına aktarır.
 

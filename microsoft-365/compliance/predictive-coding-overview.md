@@ -14,14 +14,16 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: eBulma'daki (Premium) yeni tahmine dayalı kodlama modülü, bir inceleme kümesindeki öğeleri analiz etmek için makine öğrenmesini kullanarak olay veya araştırmanızla ilgili öğeleri tahmin eder.
-ms.openlocfilehash: 2cf8541e3ca3928b1206eb824c21e21e49c4caa9
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 7d45c995fafe5b802713e101ad36a362ab77fa37
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64936565"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64999002"
 ---
 # <a name="learn-about-predictive-coding-in-ediscovery-premium-preview"></a>eBulma (Premium) (önizleme) içinde tahmine dayalı kodlama hakkında bilgi edinin
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 eBulma'daki (Premium) tahmine dayalı kodlama modülü, inceleyecek içerik miktarını azaltmanıza yardımcı olmak için akıllı, makine öğrenmesi özelliklerini kullanır. Tahmine dayalı kodlama, büyük hacimli servis talebi içeriğini gözden geçirmek üzere önceliklendirebileceğiniz ilgili bir öğe kümesiyle azaltmanıza ve bunları iptal etmenize yardımcı olur. Bu, bir gözden geçirme kümesindeki en ilgili öğelerin gözden geçirilmesini önceliklendirmenize yardımcı olan kendi tahmine dayalı kodlama modellerinizi oluşturup eğiterek gerçekleştirilir.
 

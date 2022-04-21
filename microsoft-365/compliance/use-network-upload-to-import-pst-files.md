@@ -19,14 +19,16 @@ search.appverid:
 ms.assetid: 103f940c-0468-4e1a-b527-cc8ad13a5ea6
 description: "Yöneticiler için: Microsoft 365'da birden çok PST dosyasını kullanıcı posta kutularına toplu olarak aktarmak için ağ yükleme özelliğini kullanmayı öğrenin."
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 8d63b83f8052fdd3ce973bba15df72ee4c7d6989
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 10a0b2e076c3a8d4fc6910e16ba89c3ce75d2d2d
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64935445"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64999816"
 ---
 # <a name="use-network-upload-to-import-your-organizations-pst-files-to-microsoft-365"></a>Kuruluşunuzun PST dosyalarını Microsoft 365 içeri aktarmak için ağ karşıya yükleme özelliğini kullanma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 > [!NOTE]
 > Bu makale yöneticilere yöneliktir. PST dosyalarını kendi posta kutunuza aktarmaya mı çalışıyorsunuz? Bkz[. Outlook .pst dosyasından e-postayı, kişileri ve takvimi içeri aktarma](https://go.microsoft.com/fwlink/p/?LinkID=785075)

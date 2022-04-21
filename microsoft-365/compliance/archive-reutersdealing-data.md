@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Yöneticiler, Veritas'tan Microsoft 365'a Veritas'tan veri dağıtan Reuters'i içeri aktaracak ve arşivleyebileceğiniz bir bağlayıcı ayarlayabilir. Bu bağlayıcı, Microsoft 365'da üçüncü taraf veri kaynaklarından verileri arşivleyabilmenizi sağlar. Bu verileri arşivledikten sonra, üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
-ms.openlocfilehash: 75b44a6ed76908a566edf8cb39c27f25788ce2c1
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: bbcc148b3e7176975be5e4e5624202a170c90f28
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64950709"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64999354"
 ---
 # <a name="set-up-a-connector-to-archive-reuters-dealing-data"></a>Reuters İşlem verilerini arşivleye bir bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Reuters Dealing platformundaki verileri Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında bir Veritas bağlayıcısı kullanın. Veritas, üçüncü taraf veri kaynağındaki öğeleri yakalamak (düzenli olarak) ve ardından bu öğeleri Microsoft 365'a aktarmak için yapılandırılmış bir [Reuters Dealing](https://globanet.com/reuters-dealing/) bağlayıcısı sağlar. Bağlayıcı, İletişim iletişimlerini Reuters Dealing hesabından e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'da kullanıcının posta kutusuna aktarır.
 

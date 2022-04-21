@@ -21,14 +21,16 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
 description: PST dosyalarını Microsoft 365 içeri aktarırken Microsoft 365 içeri aktarma hizmetindeki akıllı içeri aktarma özelliğini kullanarak verileri filtrelemeyi öğrenin.
-ms.openlocfilehash: 2b948352a3aff64dc06486a8380b9c81f7f5c020
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: dc60baf45be97e438875e0b045d9e8f3b6208d3f
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64948605"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64997922"
 ---
 # <a name="filter-data-when-importing-pst-files"></a>PST dosyalarını içe aktarırken verileri filtreleme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 hedef posta kutularına aktarılan PST dosyalarındaki öğeleri filtrelemek için Microsoft 365 İçeri Aktarma hizmetindeki yeni Akıllı İçeri Aktarma özelliğini kullanın. Şu şekilde çalışır:
   

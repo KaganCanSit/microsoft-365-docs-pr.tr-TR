@@ -16,14 +16,16 @@ search.appverid:
 - MET150
 description: Microsoft Purview uyumluluk portalında eBulma (Standart) olayıyla ilişkili İçerik aramalarının ve aramalarının istatistiklerini görüntülemek için arama istatistikleri özelliğini kullanmayı öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: e057a6e4997240dbaa4b9b7975274c5f3eab7589
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 5d35616823988562b3b075e7a513c8a98a4e3281
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64947109"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65000828"
 ---
 # <a name="view-statistics-for-ediscovery-search-results"></a>eBulma arama sonuçlarının istatistiklerini görüntüleme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bir İçerik araması veya Microsoft Purview eKeşif (Standart) olayıyla ilişkili bir arama oluşturup çalıştırdıktan sonra, tahmini arama sonuçlarıyla ilgili istatistikleri görüntüleyebilirsiniz. Bu, arama sonuçlarının özetini (arama açılır öğesi sayfasında görüntülenen tahmini arama sonuçlarının özetine benzer), arama sorgusuyla eşleşen öğelerin bulunduğu içerik konumlarının sayısı ve en çok eşleşen öğelere sahip içerik konumlarının kimliği gibi sorgu istatistiklerini içerir.
   

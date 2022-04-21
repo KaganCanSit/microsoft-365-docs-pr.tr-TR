@@ -15,14 +15,16 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: seo-marvel-apr2020
 description: Yöneticilerin bir LinkedIn Şirket Sayfasından Microsoft 365'a veri aktarmak için yerel bağlayıcıyı nasıl ayarlayabileceğinizi & nasıl kullanabileceğini öğrenin.
-ms.openlocfilehash: de39d0e3e95164a39f9aed1a227ab15f6e4fd7d6
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: f4def1c8946c8b09f1ba543762026572ceb229b6
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64937245"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64998054"
 ---
 # <a name="set-up-a-connector-to-archive-linkedin-data"></a>LinkedIn verilerini arşivleye bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 LinkedIn Şirket sayfalarından verileri içeri aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında bir bağlayıcı kullanın. Bağlayıcıyı ayarlayıp yapılandırdıktan sonra, her 24 saatte bir belirli LinkedIn Şirket sayfasının hesabına bağlanır. Bağlayıcı, Şirket sayfasına gönderilen iletileri bir e-posta iletisine dönüştürür ve sonra bu öğeleri Microsoft 365 bir posta kutusuna aktarır.
 

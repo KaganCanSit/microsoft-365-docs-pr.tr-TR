@@ -15,14 +15,16 @@ search.appverid:
 - MOE150
 - MET150
 description: eBulma (Premium) işleri, çeşitli eBulma (Premium) görevlerini gerçekleştirmeyle ilgili uzun süre çalışan işlemlerin durumunu izlemenize yardımcı olur.
-ms.openlocfilehash: 2c82b79458d59dd1176857cf37943c7676ad38a2
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: ab1b6cf45805a0d67492a5d386670f139b24f5e1
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64935620"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64998515"
 ---
 # <a name="manage-jobs-in-ediscovery-premium"></a>eBulma'da işleri yönetme (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Burada, Microsoft Purview eKeşif'teki (Premium) bir servis talebinin **İşler** sekmesinde izlenen işlerin (genellikle uzun süre çalışan işlemlerdir) listesi yer alır. Bu işler, servis taleplerini kullanırken ve yönetirken kullanıcı eylemleri tarafından tetiklenir.
 

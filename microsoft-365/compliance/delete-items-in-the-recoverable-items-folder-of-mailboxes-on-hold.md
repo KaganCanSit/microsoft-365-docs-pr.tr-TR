@@ -20,14 +20,16 @@ description: Yöneticilerin, kullanıcının Exchange Online posta kutusu için 
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
-ms.openlocfilehash: 29519b61d4a32b03772cfddba9183d3568afc209
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: b421be087980c7878b79e3dbc03759ec45c546d8
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64950257"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65001202"
 ---
 # <a name="delete-items-in-the-recoverable-items-folder-of-cloud-based-mailboxes-on-hold"></a>Beklemedeki bulut tabanlı posta kutularının Kurtarılabilir Öğeler klasöründeki öğeleri silme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bir Exchange Online posta kutusunun Kurtarılabilir Öğeler klasörü, yanlışlıkla veya kötü amaçlı silme işlemlerine karşı korunmak için mevcuttur. Ayrıca saklamalar ve eBulma aramaları gibi uyumluluk özellikleri tarafından tutulan ve erişilen öğeleri depolamak için de kullanılır. Ancak bazı durumlarda kuruluşların istemeden silmeleri gereken Kurtarılabilir Öğeler klasöründe tutulan verileri olabilir. Örneğin, bir kullanıcı ciddi iş sonuçlarına yol açabilecek hassas bilgiler veya bilgiler içeren bir e-posta iletisini bilmeden gönderebilir veya iletebilir. İleti kalıcı olarak silinse bile, posta kutusuna yasal bir saklama yerleştirildiği için ileti süresiz olarak tutulabilir. Veriler yanlışlıkla Office 365 *taştığı* için bu senaryo veri *taşması* olarak bilinir. Bu gibi durumlarda, kullanıcının Exchange Online posta kutusu için Kurtarılabilir Öğeler klasöründeki öğeleri silebilirsiniz. Bu posta kutusu, Office 365'daki farklı ayrı tutma özelliklerinden biriyle ayrı tutulsa bile. Bu tür ayrı tutmalar arasında Dava Tutmaları, In-Place Tutmalar, eBulma tutmaları ve Office 365 veya Microsoft 365 güvenlik ve uyumluluk merkezinde oluşturulan saklama ilkeleri yer alır.
 

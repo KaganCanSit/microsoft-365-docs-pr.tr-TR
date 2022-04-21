@@ -16,14 +16,16 @@ search.appverid:
 - MET150
 ms.assetid: ''
 description: SharePoint ve OneDrive depolanan belgelerin tüm sürümlerinden içerik toplamak için eBulma'daki (Premium) geçmiş sürümleri kullanın.
-ms.openlocfilehash: e73429744958698f275d33b52cc50805c274ef13
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: ebd706aa122da2f875adb0c210db8cb3a0c8ab10
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64943095"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65000630"
 ---
 # <a name="set-up-historical-versions-in-ediscovery-premium-preview"></a>eBulma'da geçmiş sürümleri ayarlama (Premium) (önizleme)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 eKeşif'teki (Premium) geçmiş sürümler özelliği, kuruluşunuzdaki eBulma yöneticilerinin SharePoint Online ve OneDrive İş'da depolanan tüm belge sürümlerinde içerik aramasına ve toplamasına olanak tanır. Ardından bu içeriği analiz ve gözden geçirme için bir gözden geçirme kümesine ekleyebilirsiniz. Bu, aynı belgenin en son sürümü ilgili bilgileri içermese bile, bir belgenin olay veya araştırmayla ilgili olabilecek belirli bir sürümündeki içeriği bulmanıza ve gözden geçirmenize yardımcı olur.
 

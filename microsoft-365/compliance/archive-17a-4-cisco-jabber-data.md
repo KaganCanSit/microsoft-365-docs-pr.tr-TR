@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Cisco Jabber verilerini Microsoft 365 içeri aktarmak ve arşivleme amacıyla 17a-4 Cisco Jabber DataParser bağlayıcısını ayarlamayı ve kullanmayı öğrenin.
-ms.openlocfilehash: 104d56b819f594e88aa478e6df817bf3c8f008a9
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 580294c4c05307c18458012d2789f481baaf4584
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64940961"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64998396"
 ---
 # <a name="set-up-a-connector-to-archive-cisco-jabber-data"></a>Cisco Jabber verilerini arşivleme amacıyla bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 17a-4 LLC'deki [Cisco Jabber DataParser'ı](https://www.17a-4.com/jabber-dataparser/) kullanarak Cisco Jabber'dan Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına verileri içeri aktarın ve arşivleyebilirsiniz. DataParser, üçüncü taraf veri kaynağından öğeleri yakalamak ve bu öğeleri Microsoft 365'a aktarmak için yapılandırılmış bir Cisco Jabber bağlayıcısı içerir. Cisco Jabber DataParser bağlayıcısı, Cisco Jabber verilerini e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365 kullanıcı posta kutularına aktarır.
 

@@ -1,5 +1,5 @@
 ---
-title: Mahkeme tutma oluşturma
+title: Yasal askıya alma oluşturma
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -12,96 +12,98 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 search.appverid: MET150
 ms.assetid: 39db1659-0b12-4243-a21c-2614512dcb44
-description: Bir posta kutusunu mahkemeler için tutma ve araştırma sırasında tüm posta kutusu içeriğini koruma hakkında bilgi alın.
+description: Bir araştırma sırasında tüm posta kutusu içeriğini koruyarak bir posta kutusunu Dava bekletmeye nasıl yerleştireceğinizi öğrenin.
 ms.custom:
 - seo-marvel-mar2020
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
-ms.openlocfilehash: d105813d7e34ece7641421bc7fed10919dda618e
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 8fdb5d8c388399a2ce93281947b5f14782db771b
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63021609"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64997077"
 ---
-# <a name="create-a-litigation-hold"></a>Mahkeme tutma oluşturma
+# <a name="create-a-litigation-hold"></a>Yasal askıya alma oluşturma
 
-Silinmiş öğeler ve değiştirilen öğelerin özgün sürümleri de dahil olmak üzere tüm posta kutusu içeriğini tutmak için posta kutusunu Mahkeme'de tutabilirsiniz. Bir kullanıcı posta kutusunu Mahkemeler'i yerinde tutarken, kullanıcının arşiv posta kutusunda (etkinse) içerik de korunur. Bir hold (zaman tabanlı tutma olarak da *adlandırılan) bir* tutma süresi belirtebilirsiniz; böylece silinmiş ve değiştirilmiş öğeler belirtilen süre boyunca korunur ve sonra da posta kutusundan kalıcı olarak silinir. Ya da içeriği süresiz (sonsuz tutma olarak anılır *) veya* Mahkeme tutma kaldırılana kadar tutabilirsiniz. Bir iletiyi tutma süresi belirtirse, iletinin teslim aldığı veya posta kutusu öğesinin oluşturulmuş olduğu tarihten itibaren hesaplanır. 
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Silinen öğeler ve değiştirilen öğelerin özgün sürümleri de dahil olmak üzere tüm posta kutusu içeriğini korumak için bir posta kutusunu Dava Tutma'ya yerleştirebilirsiniz. Bir kullanıcı posta kutusunu Dava Tutma'ya yerleştirdiğinizde, kullanıcının arşiv posta kutusunda (etkinse) içerik de korunur. Ayrı tutma oluşturduğunuzda, silinen ve değiştirilen öğelerin belirli bir süre boyunca saklanması ve ardından posta kutusundan kalıcı olarak silinmesi için bir *ayrı tutma süresi (zamana bağlı saklama* olarak da adlandırılır) belirtebilirsiniz. Ya da içeriği süresiz olarak ( *sonsuz ayrı tutma* olarak adlandırılır) veya Dava ayrılığı kaldırılana kadar saklayabilirsiniz. Ayrı tutma süresi belirtirseniz, iletinin alındığı veya posta kutusu öğesinin oluşturulduğu tarihten hesaplanır. 
   
-Mahkeme tutma 2013 2013'e 2013'e kadar farklı bir süre için 2013'e kadar süreye sahip olurken aşağıdakiler olur.
+Dava ayrılığı oluşturduğunuzda şunlar olur.
   
-- Kullanıcı tarafından kalıcı olarak silinen öğeler, tutma süresince kullanıcının posta kutusunda Kurtarılabilir Öğeler klasöründe korunur.
+- Kullanıcı tarafından kalıcı olarak silinen öğeler, saklama süresince kullanıcının posta kutusunun Kurtarılabilir Öğeler klasöründe tutulur.
 
-- Kullanıcı tarafından Kurtarılabilir Öğeler klasöründen temizlenebilir öğeler, tutma süresi boyunca korunur.
+- Kullanıcı tarafından Kurtarılabilir Öğeler klasöründen temizlenen öğeler ayrı tutma süresince korunur.
 
-- Kurtarılabilir Öğeler klasörünün depolama kotası 30 GB'tan 110 GB'a artırıldı.
+- Kurtarılabilir Öğeler klasörünün depolama kotası 30 GB'tan 110 GB'a yükseltilir.
 
-- Kullanıcının birincil ve arşiv posta kutularında yer alan öğeler korunur
+- Kullanıcının birincil ve arşiv posta kutularındaki öğeler korunur
 
-## <a name="assign-an-exchange-online-plan-2-license"></a>Plan 2 Exchange Online lisansı atama
+## <a name="assign-an-exchange-online-plan-2-license"></a>Exchange Online Plan 2 lisansı atama
 
-Bir posta kutusunu Exchange Online yerinde tutmak için bu posta kutusuna Bir Lisans 2 Exchange Online atanmış olması gerekir. Bir posta kutusuna Exchange Online Plan 1 lisansı atanırsa bu posta kutusuna ayrı bir Exchange Online Arşivleme lisansı atamanız gerekir.
+Bir Exchange Online posta kutusunu Dava bekletmeye yerleştirmek için, Exchange Online Plan 2 lisansı atanmış olmalıdır. Bir posta kutusuna Exchange Online Plan 1 lisansı atanırsa, ayrı bir Exchange Online Arşivleme lisansı atayarak saklamanız gerekir.
 
 > [!NOTE]
-> Diğer Office 365 Eğitim için, ek özelliklere sahip Office 365 A1 Plan 1 lisansı içeren Exchange Online abonelikleri için Mahkeme tutma özelliği de de geçerlidir. Daha fazla bilgi için, hizmet Exchange Online bölümünde yer [alan "Office 365 Eğitim" bölümüne bakın](/office365/servicedescriptions/office-365-platform-service-description/office-365-education#exchange-online-features).
+> Office 365 Eğitim kuruluşlar için, ek özelliklere sahip Exchange Online Plan 1 lisansı içeren Office 365 A1 aboneliklerde dava tutma desteklenir. Daha fazla bilgi için Office 365 Eğitim [hizmet açıklamasındaki "Exchange Online](/office365/servicedescriptions/office-365-platform-service-description/office-365-education#exchange-online-features) özellikler" bölümüne bakın.
 
-## <a name="place-a-mailbox-on-litigation-hold"></a>Mahkemeler'de posta kutusunu yerinde tutma
+## <a name="place-a-mailbox-on-litigation-hold"></a>Dava bekletmeye posta kutusu yerleştirme
 
-Aşağıdaki adımları kullanarak, posta kutusunu Mahkeme'de tutmak için Microsoft 365 yönetim merkezi.
+Microsoft 365 yönetim merkezi kullanarak bir posta kutusunu Dava bekletmeye yerleştirme adımları aşağıdadır.
 
-1. Etkin <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">Kullanıcılar'a Microsoft 365 yönetim merkezi</a> Etkin **Kullanıcılar'a** >  **tıklayın**.
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">Microsoft 365 yönetim merkezi</a> gidin ve **KullanıcılarEtkin** >  kullanıcılar'a tıklayın.
 
-2. Mahkeme tutma için kullanmak istediğiniz kullanıcıyı seçin.
+2. Dava ayrı tutmaya yerleştirmek istediğiniz kullanıcıyı seçin.
 
-3. Özellikler açılır sayfasında Posta sekmesine tıklayın **ve Diğer** eylemler'in **altında Mahkeme** tutmayı **yönet'e tıklayın**.
+3. Özellikler açılır sayfasında **, Posta** sekmesine tıklayın ve ardından **Diğer eylemler'in** altında **Dava tutmasını yönet'e** tıklayın.
 
-   ![Kullanıcı özellikleri açılır sayfasının Posta sekmesinde Mahkemeyi yönet'e tıklayın.](../media/M365AdminCenterLitHold1.png)
+   ![Kullanıcı özellikleri açılır sayfasının Posta sekmesindeKimliği yönet'e tıklayın.](../media/M365AdminCenterLitHold1.png)
 
-4. Mahkeme **tutma tutmalarını yönet** sayfasında, Mahkeme tutmada aç onay kutusunu  seçin ve sonra aşağıdaki isteğe bağlı bilgileri girin:
+4. **Dava bekletmeyi yönet** açılır sayfasında, **Dava bekletmeyi aç** onay kutusunu seçin ve ardından aşağıdaki isteğe bağlı bilgileri girin:
 
-    1. **Tutma süresi (gün)**: Zaman tabanlı bir tutma oluşturmak ve posta kutusu mahkemelere yerleştirilirken posta kutusu öğelerinin ne kadar süreyle tutulacaklarını belirtmek için bu kutuyu kullanın. Süre, posta kutusu öğesinin alın aldığı veya oluşturduğu tarihten itibaren hesaplanır. Belirli bir öğe için tutma süresi sona erdiğinde, bu öğe artık korunmaz. Bu kutuyu boş bırakırsanız, öğeler süresiz olarak veya tutma kaldırılana kadar korunur. Süreyi belirtmek için günleri kullanın.
+    1. **Saklama süresi (gün):** Zamana dayalı ayrı tutma oluşturmak ve posta kutusu Dava ayrı tutmaya yerleştirildiğinde posta kutusu öğelerinin ne kadar süre tutulacağını belirtmek için bu kutuyu kullanın. Süre, posta kutusu öğesinin alındığı veya oluşturulduğu tarihten hesaplanır. Belirli bir öğe için saklama süresi dolduğunda, bu öğe artık korunmaz. Bu kutuyu boş bırakırsanız, öğeler süresiz olarak veya ayrı tutma kaldırılana kadar korunur. Süreyi belirtmek için gün kullanın.
 
-    2. **Kullanıcıya görünür not**: Bu kutuyu kullanarak, posta kutusunun mahkemeler için tutmada olduğunu kullanıcıya bildirebilirsiniz. Bu not, 2010 veya daha yeni bir hesap kullanıyorsa kullanıcının posta kutusunun Hesap Bilgileri Outlook görünür. Bu sayfaya erişmek için, kullanıcılar Dosya'yı **veya Dosya'yı** Outlook.
+    2. **Kullanıcıya görünen not**: Bu kutuyu, kullanıcıya posta kutusunun Dava tutmada olduğunu bildirmek için kullanın. Not, Outlook 2010 veya sonraki bir sürümü kullanıyorsa kullanıcının posta kutusunda Hesap Bilgileri sayfasında görünür. Kullanıcılar bu sayfaya erişmek için Outlook'da **Dosya'ya** tıklayabilir.
 
-    3. **Kullanıcıya yönelik daha fazla bilgiyle birlikte web sayfası**: Mahkeme tutma hakkında daha fazla bilgi için bu kutuyu kullanarak bir web sitesine yönlendirin. Bu URL, 2010 veya daha yeni bir hesap kullanıyorsa kullanıcının posta kutusunun Outlook sayfasında görünür. Bu sayfaya erişmek için, kullanıcılar Dosya'yı **veya Dosya'yı** Outlook.
+    3. **Kullanıcı için daha fazla bilgi içeren web sayfası**: Dava tutma hakkında daha fazla bilgi için kullanıcıyı bir web sitesine yönlendirmek için bu kutuyu kullanın. Bu URL, Outlook 2010 veya sonraki bir sürümü kullanıyorsa kullanıcının posta kutusunda Hesap Bilgileri sayfasında görünür. Kullanıcılar bu sayfaya erişmek için Outlook'da **Dosya'ya** tıklayabilir.
 
-. Tutma **oluşturmak için** **Mahkeme tutma uç sayfası** Üzerinde Değişiklikleri kaydet'e tıklayın.
+. Ayrı tutma oluşturmak için **Dava tutma** açılır sayfasında **Değişiklikleri kaydet'e** tıklayın.
 
-   Sistem, değişikliğin etkin bir şekilde geçerlik 240 dakika kadar olabileceğini söyleyen bir başlık görüntüler.
+   Sistem, değişikliğin geçerlilik kazanmasının 240 dakika kadar sürebileceğini belirten bir başlık görüntüler.
 
-### <a name="create-a-litigation-hold-using-powershell"></a>PowerShell kullanarak mahkeme tutma oluşturma
+### <a name="create-a-litigation-hold-using-powershell"></a>PowerShell kullanarak dava tutma oluşturma
 
-Ayrıca, Exchange Online PowerShell'de aşağıdaki komutu çalıştırarak [da mahkeme Exchange Online oluşturabilirsiniz](/powershell/exchange/connect-to-exchange-online-powershell):
+Exchange Online [PowerShell'de](/powershell/exchange/connect-to-exchange-online-powershell) aşağıdaki komutu çalıştırarak da bir Dava Tutma oluşturabilirsiniz:
 
 ```powershell
 Set-Mailbox <username> -LitigationHoldEnabled $true
 ```
 
-Önceki komut, tutma süresi belirtilmemiş olduğundan öğeleri süresiz olarak korur. Zaman tabanlı bir tutma oluşturmak için aşağıdaki komutu kullanın:
+Önceki komut, saklama süresi belirtilmediğinden öğeleri süresiz olarak korur. Aşağıdaki komutu kullanarak zamana dayalı ayrı tutma oluşturmak için:
 
 ```powershell
 Set-Mailbox <username> -LitigationHoldEnabled $true -LitigationHoldDuration <number of days>
 ```
 
-Posta kutusunun Mahkemeler'de tutma amaçlı olarak yerleştiril olduğunu doğrulamak için aşağıdaki komutu da çalıştırabilirsiniz:
+Ayrıca, posta kutusunun Dava ayrılığına yerleştirilip yerleştirilmediğini doğrulamak için aşağıdaki komutu da çalıştırabilirsiniz:
 
 ```powershell
 Get-Mailbox <username> | FL LitigationHoldEnabled
 ```
 
-True değeri *posta kutusunun* mahkemeler için tutmada olduğunu gösterir/
+*True* değeri, posta kutusunun dava tutmada olduğunu/
 
 Daha fazla bilgi için bkz. [Set-Mailbox](/powershell/module/exchange/set-mailbox).
 
-## <a name="how-does-litigation-hold-work"></a>Mahkeme tutma nasıl çalışır?
+## <a name="how-does-litigation-hold-work"></a>Dava nasıl çalışır?
 
-Normal silinmiş öğe iş akışında, kullanıcı öğeyi kalıcı olarak sdiğinde (Shift + Delete) ya da Silinmiş Öğeler klasöründen sildiğinde posta kutusu öğesi Kurtarılabilir Öğeler klasöründeki Silmeler alt klasörüne taşınır. Silme ilkesi (Sil bekletme eylemiyle yapılandırılmış bir bekletme etiketidir), bekletme süresi dolduğunda öğeleri Silmeler alt klasörüne de taşır. Kullanıcı Kurtarılabilir Öğeler klasöründeki bir öğeyi temizlediğinde veya bir öğe için silinen öğe bekletme süresinin süresi dolduğunda, Kurtarılabilir Öğeler klasöründeki Temizlenenler alt klasörüne taşınır ve kalıcı silme için işaretlenir. Posta kutusu bir sonraki Exchange Yönetilen Klasör Yardımcısı (MFA) tarafından işlendiğinde bu alan temizlenecektir.
+Normal silinmiş öğe iş akışında, bir kullanıcı öğeyi kalıcı olarak sildiğinde (Shift + Delete) veya Silinmiş Öğeler klasöründen sildiğinde, posta kutusu öğesi Kurtarılabilir Öğeler klasöründeki Silmeler alt klasörüne taşınır. Silme ilkesi (saklamayı sil eylemiyle yapılandırılmış bir bekletme etiketidir) bekletme süresi dolduğunda öğeleri Silmeler alt klasörüne de taşır. Kullanıcı Kurtarılabilir Öğeler klasöründeki bir öğeyi temizlediğinde veya bir öğe için silinen öğe saklama süresinin süresi dolduğunda, Kurtarılabilir Öğeler klasöründeki Temizlemeler alt klasörüne taşınır ve kalıcı silme için işaretlenir. Posta kutusu Yönetilen Klasör Yardımcısı (MFA) tarafından bir sonraki işlendiğinde Exchange temizlenir.
 
-Posta kutusu Mahkeme tutma üzerine yerleştirilse, Temizleme alt klasörü içinde yer alan öğeler Mahkeme tutma tarafından belirtilen tutma süresi boyunca korunur. Tutma süresi, bir öğenin ilk alındıktan veya oluşturulduktan sonra hesaplanması ve Temizlendir alt klasördeki öğelerin ne kadar süreyle tutulacaklarını tanımlar. Temizlenenler alt klasör'de bir öğenin tutma süresi dolduğunda, öğe kalıcı olarak silinmek üzere işaretlenir ve posta kutusunun MFA tarafından bir sonraki işlenmesinde Exchange'den temizlenir. Posta kutusuna süresiz bir tutma yerleştirilmişse, öğeler hiçbir zaman Temiz temizlir alt klasörden temiz temizlemez.
+Bir posta kutusu Dava bekletmesine yerleştirildiğinde, Temizlemeler alt klasöründeki öğeler, Dava ayrı tutması tarafından belirtilen saklama süresi boyunca korunur. Saklama süresi, bir öğenin alındığı veya oluşturulduğu özgün tarihten hesaplanır ve Temizlemeler alt klasöründeki öğelerin ne kadar süre tutulduğunu tanımlar. Temizleme alt klasöründeki bir öğenin saklama süresi dolduğunda, öğe kalıcı silme için işaretlenir ve posta kutusu MFA tarafından bir sonraki işlendiğinde Exchange temizlenir. Bir posta kutusuna süresiz ayrı tutma yerleştirilirse, öğeler hiçbir zaman Temizleme alt klasöründen temizlenmez.
 
-Aşağıdaki çizimde, Kurtarılabilir Öğeler klasöründeki alt klasörler ve tutma iş akışı işlemi gösterilmiştir.
+Aşağıdaki çizimde Kurtarılabilir Öğeler klasörlerindeki alt klasörler ve tutma iş akışı işlemi gösterilmektedir.
 
-![Mahkemelere karşı ömür süresi.](../media/LitigationHoldLifeCycle.png)
+![Dava yaşam döngüsünü tutar.](../media/LitigationHoldLifeCycle.png)
 
 > [!NOTE]
-> eBulma durumuyla ilişkilendirilmiş bir tutma posta kutusuna yerleştirilirse, temizilen öğeler Silmeler alt klasörüne taşınır ve posta kutusu eBulma ayrımı'nın dışında bırakıncaya kadar korunur.
+> eBulma olayıyla ilişkili bir ayrı tutma bir posta kutusuna yerleştirilirse, temizlenen öğeler Silmeler alt klasöründen DiscoveryHolds alt klasörüne taşınır ve posta kutusu eBulma ayrılığından çıkana kadar korunur.

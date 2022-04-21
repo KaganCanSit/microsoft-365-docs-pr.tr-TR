@@ -21,14 +21,16 @@ ms.assetid: 0ce338d5-3666-4a18-86ab-c6910ff408cc
 ms.custom:
 - seo-marvel-apr2020
 description: Posta kutularını Microsoft 365 için sosyal medya platformlarından, anlık ileti platformlarından ve belge işbirliği platformlarından üçüncü taraf verileri içeri aktarmayı ve arşivlemeyi öğrenin.
-ms.openlocfilehash: 0588ab242f2d198c486b7ce0318939e204076421
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 820c4e2fb92720940a8b4f207d43aea649ef16e7
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64934961"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64997262"
 ---
 # <a name="learn-about-connectors-for-third-party-data"></a>Üçüncü taraf verileri için bağlayıcılar hakkında daha fazla bilgi edinme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft 365, yöneticilerin Microsoft dışı üçüncü taraf verileri sosyal medya platformlarından, anlık ileti platformlarından ve belge işbirliği platformlarından Microsoft 365 kuruluşunuzdaki posta kutularına aktarmak ve arşivlemek için veri bağlayıcılarını kullanmasına olanak tanır. Microsoft 365'da üçüncü taraf verileri içeri aktarmak ve arşivleme amacıyla veri bağlayıcılarını kullanmanın birincil avantajlarından biri, içeri aktarıldıktan sonra verilere çeşitli Microsoft Purview çözümleri uygulayabilmenizdir. Bu, kuruluşunuzun Microsoft dışı verilerinin kuruluşunuzu etkileyen düzenlemelere ve standartlara uygun olduğundan emin olmanıza yardımcı olur.
 

@@ -1,5 +1,5 @@
 ---
-title: Microsoft Uyumluluk Yöneticisi
+title: Microsoft Purview Uyumluluk Yöneticisi
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -17,118 +17,123 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MOE150
 - MET150
-description: Microsoft Uyumluluk Yöneticisi, kuruluşların risk değerlendirmelerini basitleştirmesini ve otomatikleştirmesini sağlar ve risklere yardımcı olmak için önerilen eylemler önerir.
-ms.openlocfilehash: 289d82e8bc5f404589b263a2b6dec499d9e3b7e2
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Microsoft Purview Uyumluluk Yöneticisi, kuruluşların risk değerlendirmelerini basitleştirmesine ve otomatikleştirmesine yardımcı olur ve riskleri gidermeye yardımcı olmak için önerilen eylemleri önerir.
+ms.openlocfilehash: 1d5f036b8bc97da431ed6e41017d59e01db749a4
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63317675"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64997108"
 ---
-# <a name="microsoft-compliance-manager"></a>Microsoft Uyumluluk Yöneticisi
+# <a name="microsoft-purview-compliance-manager"></a>Microsoft Purview Uyumluluk Yöneticisi
 
-**Bu makalede:** Uyumluluk Yöneticisi'nin ne olduğunu, uyumluluğu basitleştirmeye nasıl yardımcı olduğunu, riski ve önemli bileşenlerini öğrenin.
+> [!TIP]
+> *Dokuz Microsoft Purview çözümlerinin tamamının premium sürümlerini ücretsiz olarak deneyebileceğinizi biliyor muydunuz?* Sağlam Purview özelliklerinin kuruluşunuzun uyumluluk gereksinimlerini karşılamasına nasıl yardımcı olabileceğini keşfetmek için 90 günlük Purview çözümleri deneme sürümünü kullanın. Microsoft 365 E3 ve Office 365 E3 müşterileri artık [Microsoft Purview uyumluluk portalı deneme hub'ında](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef) başlayabilir. [Kaydolabilecek kişiler ve deneme koşulları](compliance-easy-trials.md) hakkında ayrıntılı bilgi edinin.
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+**Bu makalede:** Uyumluluk Yöneticisi'nin ne olduğunu, uyumluluğu basitleştirmeye ve riski azaltmaya nasıl yardımcı olduğunu ve temel bileşenlerini öğrenin.
 
 ## <a name="what-is-compliance-manager"></a>Uyumluluk Yöneticisi nedir?
 
-[Microsoft Uyumluluk Yöneticisi](https://compliance.microsoft.com/compliancemanager), web sitesinde yer alan ve <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 uyumluluk merkezi</a> uyumluluk gereksinimlerini daha kolay ve rahat yönetmenize yardımcı olan bir özelliktir. Uyumluluk Yöneticisi, veri koruma risklerinizi envanterini almaktan denetimleri uygulamanın karmaşıklıklarını yönetmeye, yasal düzenlemeler ve sertifikalarla güncel kalmanıza ve denetçilere bildirmeye kadar uyumluluk yolculuğunuz boyunca size yardımcı olabilir.
+[Microsoft Purview Uyumluluk Yöneticisi](https://compliance.microsoft.com/compliancemanager) , <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalında</a> kuruluşunuzun uyumluluk gereksinimlerini daha kolay ve kolay bir şekilde yönetmenize yardımcı olan bir özelliktir. Uyumluluk Yöneticisi, veri koruma risklerinizin envanterini almaktan denetimleri uygulama, düzenlemeler ve sertifikalarla güncel kalma ve denetçilere raporlama gibi karmaşıklıkları yönetmeye kadar uyumluluk yolculuğunuz boyunca size yardımcı olabilir.
 
-Uyumluluk Yöneticisi'nin, kurumuz tarafından uyumluluğu yönetmeyi basitleştirmeye nasıl yardımcı olduğunu öğrenmek için aşağıdaki videoyu izleyin:
+Uyumluluk Yöneticisi'nin kuruluşunuzun uyumluluğu yönetme biçimini basitleştirmeye nasıl yardımcı olabileceğini öğrenmek için aşağıdaki videoyu izleyin:
 <br>
 <br>
 >[!VIDEO https://www.microsoft.com/videoplayer/embed/RE4FGYZ]
 
 Uyumluluk Yöneticisi şunları sağlayarak uyumluluğu basitleştirmeye ve riski azaltmaya yardımcı olur:
 
-- Ortak endüstri ve bölgesel standartlar ve düzenlemeler için önceden yerleşik değerlendirmeler veya benzersiz uyumluluk gereksinimlerinizi karşılamak için özel değerlendirmeler (kullanılabilir değerlendirmeler lisans sözleşmenize bağlıdır; [daha fazla bilgi).](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)
+- Ortak endüstri ve bölgesel standartlar ve düzenlemeler için önceden oluşturulmuş değerlendirmeler veya benzersiz uyumluluk gereksinimlerinizi karşılamak için özel değerlendirmeler (kullanılabilir değerlendirmeler lisans sözleşmenize bağlıdır; [daha fazla bilgi edinin](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)).
 
-- İş akışı özellikleri, tek bir araçla risk değerlendirmelerinizi etkili bir şekilde tamamlamanıza yardımcı olur.
+- Risk değerlendirmelerinizi tek bir araçla verimli bir şekilde tamamlamanıza yardımcı olacak iş akışı özellikleri.
 
-- Organizasyonunıza en uygun standartlara ve düzenlemelere uymanıza yardımcı olacak önerilen iyileştirme işlemleri hakkında ayrıntılı adım adım kılavuz. Microsoft tarafından yönetilen eylemler için, uygulama ayrıntılarını ve denetim sonuçlarını görebilirler.
+- Kuruluşunuz için en uygun standartlara ve düzenlemelere uymanıza yardımcı olmak için önerilen iyileştirme eylemleriyle ilgili ayrıntılı adım adım kılavuz. Microsoft tarafından yönetilen eylemler için uygulama ayrıntılarını ve denetim sonuçlarını görürsünüz.
 
-- geliştirme eylemlerini tamamlamayla ilgili ilerlemenizi ölçerek uyumluluk nedenlerinizi anlamanıza yardımcı olan risk tabanlı bir uyumluluk puanı.
+- İyileştirme eylemlerini tamamlamadaki ilerlemenizi ölçerek uyumluluk duruşunuzu anlamanıza yardımcı olacak risk tabanlı uyumluluk puanı.
 
-Uyumluluk Yöneticisi panosu, geçerli uyumluluk puanınızı gösterir, dikkat gerekenleri görmenizi sağlar ve önemli geliştirme eylemleri için size yol gösterir. Aşağıda, Uyumluluk Yöneticisi panonun nasıl bir görünümde olduğu bir örnek verilmiştir:
+Uyumluluk Yöneticisi panonuz geçerli uyumluluk puanınızı gösterir, dikkat edilmesi gerekenleri görmenize yardımcı olur ve önemli iyileştirme eylemleri için size yol gösterir. Aşağıda Uyumluluk Yöneticisi panonuzun nasıl görüneceğine bir örnek verilmiştir:
 
 ![Uyumluluk Yöneticisi - pano.](../media/compliance-manager-dashboard.png "Uyumluluk Yöneticisi panosu")
 
 ## <a name="understanding-your-compliance-score"></a>Uyumluluk puanınızı anlama
 
-Uyumluluk Yöneticisi bir düzenlemeye, standarda veya ilkeye uymak üzere yapılan geliştirme işlemlerini tamamladıktan sonra size puan verdi ve bu puanları genel uyumluluk puanıyla bir araya getirdi. Her eylemin, söz konusu olası risklere bağlı olarak puanınız üzerinde farklı bir etkisi vardır. Uyumluluk puanınız, genel uyumluluk kalitenizi geliştirmek için hangi eyleme odaklanacaklarını belirlemeye yardımcı olabilir.
+Uyumluluk Yöneticisi, bir düzenlemeye, standarda veya ilkeye uymak için gerçekleştirilen iyileştirme eylemlerini tamamladığınız için puan alır ve bu puanları genel uyumluluk puanında birleştirir. Her eylemin, olası risklere bağlı olarak puanınız üzerinde farklı bir etkisi vardır. Uyumluluk puanınız, genel uyumluluk duruşunuzu geliştirmek için hangi eyleme odaklanabileceğinizi belirlemeye yardımcı olabilir.
 
-Uyumluluk Yöneticisi size, temel veri koruma Microsoft 365 bir başlangıç puanı verir. Bu taban çizgisi, veri koruma ve genel veri idaresi için temel düzenlemeleri ve standartları içeren bir dizi denetimdir.
+Uyumluluk Yöneticisi, Microsoft 365 veri koruma temeli temelinde size bir başlangıç puanı verir. Bu temel, veri koruma ve genel veri idaresi için temel düzenlemeleri ve standartları içeren bir dizi denetimdir.
 
 ##### <a name="learn-more"></a>Daha fazla bilgi
 
-[Uyumluluk puanının nasıl hesaplanmış olduğunu anlıyoruz](compliance-score-calculation.md).
+[Uyumluluk puanınızın nasıl hesaplanmış olduğunu anlayın](compliance-score-calculation.md).
 
-[Geliştirme eylemleriyle nasıl çalışıı öğrenin](compliance-manager-improvement-actions.md).
+[İyileştirme eylemleriyle çalışmayı öğrenin](compliance-manager-improvement-actions.md).
 
-## <a name="key-elements-controls-assessments-templates-improvement-actions"></a>Temel öğeler: denetimler, değerlendirmeler, şablonlar, geliştirme eylemleri
+## <a name="key-elements-controls-assessments-templates-improvement-actions"></a>Önemli öğeler: denetimler, değerlendirmeler, şablonlar, iyileştirme eylemleri
 
-Uyumluluk Yöneticisi, uyumluluk etkinliklerinizi yönetmenize yardımcı olmak için çeşitli veri öğeleri kullanır. Uyumluluk etkinliklerini atamak, test etmek ve izlemek için Uyumluluk Yöneticisi'ni kullanırken, denetimler, değerlendirmeler, şablonlar ve geliştirme eylemleri gibi temel öğeleri anlamak yararlı olabilir.
+Uyumluluk Yöneticisi, uyumluluk etkinliklerinizi yönetmenize yardımcı olmak için çeşitli veri öğeleri kullanır. Uyumluluk etkinliklerini atamak, test etmek ve izlemek için Uyumluluk Yöneticisi'ni kullanırken, temel öğeler hakkında temel bilgilere sahip olmak yararlı olur: denetimler, değerlendirmeler, şablonlar ve iyileştirme eylemleri.
 
-### <a name="controls"></a>Denetimler
+### <a name="controls"></a>Denetim
 
-Denetim bir düzenleme, standart veya ilkenin gereksinimidir. Bu belge, sistem yapılandırmasını, kuruluş sürecini ve bir düzenleme, standart veya ilkenin belirli bir gereksinimini karşılamakla sorumlu olan kişilerin değerlendirmesini ve yönetmesini tanımlar.
+Denetim, bir düzenlemenin, standardın veya ilkenin bir gereksinimidir. Sistem yapılandırmasını, kuruluş sürecini ve bir düzenlemenin, standardın veya ilkenin belirli bir gereksinimini karşılamadan sorumlu kişileri nasıl değerlendirip yönettiğinizi tanımlar.
 
 Uyumluluk Yöneticisi aşağıdaki denetim türlerini izler:
 
-1. **Microsoft tarafından yönetilen** denetimler: Microsoft'un uygulamakla sorumlu olduğu Microsoft bulut hizmetlerinin denetimleri
-2. **Denetimleriniz**: Bazen müşteri tarafından yönetilen denetimler olarak da adlandırılan bu denetimler, organizasyonu tarafından uygulanan ve yönetilen denetimlerdir.
-3. **Paylaşılan denetimler**: Bunlar hem sizin hem de Microsoft'un uygulama ve uygulama sorumluluğunu üstlenen denetimlerdir
+1. **Microsoft tarafından yönetilen denetimler**: Microsoft'un uygulamadan sorumlu olduğu Microsoft bulut hizmetleri denetimleri
+2. **Denetimleriniz**: bazen müşteri tarafından yönetilen denetimler olarak da adlandırılır, bunlar kuruluşunuz tarafından uygulanan ve yönetilen denetimlerdir
+3. **Paylaşılan denetimler**: Bunlar hem kuruluşunuzun hem de Microsoft'un uygulama sorumluluğunu paylaştığı denetimlerdir
 
 ##### <a name="learn-more"></a>Daha fazla bilgi
 
-[Denetimlerinizin ilerleme durumunu izleme](compliance-manager-assessments.md#monitor-assessment-progress-and-controls).
+[Denetimlerinizin ilerleme durumunu izleyin](compliance-manager-assessments.md#monitor-assessment-progress-and-controls).
 
-[Uyumluluk Yöneticisi'nin denetimleri sürekli nasıl değerlendiriyor olduğunu öğrenin](compliance-score-calculation.md#how-compliance-manager-continuously-assesses-controls).
+[Uyumluluk Yöneticisi'nin denetimleri sürekli olarak nasıl değerlendiriyor olduğunu öğrenin](compliance-score-calculation.md#how-compliance-manager-continuously-assesses-controls).
 
 ### <a name="assessments"></a>Değerlendirmeler
 
-Değerlendirme, belirli bir düzenleme, standart veya ilkeye göre denetimlerin gruplamadır. Bir değerlendirme içinde eylemlerin tamamlanması standart, düzenleme veya yasaların gereksinimlerini karşılamanıza yardımcı olur. Örneğin, içindeki tüm eylemleri tamamlarken ISO 27001 gereksinimlerine uygun Microsoft 365 değerlendirmeniz olabilir.
+Değerlendirme, belirli bir düzenleme, standart veya ilkeden gelen denetimleri gruplandırmadır. Değerlendirmedeki eylemleri tamamlamak standart, düzenleme veya yasa gereksinimlerini karşılamanıza yardımcı olur. Örneğin, içindeki tüm eylemleri tamamladığınızda Microsoft 365 ayarlarınızı ISO 27001 gereksinimlerine uygun bir şekilde getirmenize yardımcı olan bir değerlendirmeniz olabilir.
 
 Değerlendirmelerin çeşitli bileşenleri vardır:
 
-- **Kapsam içinde hizmetler**: Değerlendirme için Microsoft hizmetleri belirli hizmet kümesi
-- **Microsoft tarafından yönetilen** denetimler: Microsoft'un sizin adına gerçekleştireceği Microsoft bulut hizmetleri için denetimler
-- **Denetimleriniz**: Bazen müşteri tarafından yönetilen denetimler olarak da adlandırılan bu denetimler, organizasyonu tarafından uygulanan ve yönetilen denetimlerdir.
-- **Paylaşılan denetimler**: Bunlar hem sizin hem de Microsoft'un uygulama ve uygulama sorumluluğunu üstlenen denetimlerdir
-- **Değerlendirme puanı**: Organizasyonunız ve Microsoft tarafından yönetilen değerlendirme içindeki eylemlerden toplam olası puanlara ulaşmada ilerlemenizi gösterir
+- **Kapsam içi hizmetler**: değerlendirme için geçerli olan belirli Microsoft hizmetleri kümesi
+- **Microsoft tarafından yönetilen denetimler**: Microsoft'un sizin adına uyguladığı Microsoft bulut hizmetleri denetimleri
+- **Denetimleriniz**: bazen müşteri tarafından yönetilen denetimler olarak da adlandırılır, bunlar kuruluşunuz tarafından uygulanan ve yönetilen denetimlerdir
+- **Paylaşılan denetimler**: Bunlar hem kuruluşunuzun hem de Microsoft'un uygulama sorumluluğunu paylaştığı denetimlerdir
+- **Değerlendirme puanı**: Kuruluşunuz ve Microsoft tarafından yönetilen değerlendirmedeki eylemlerden toplam olası puan elde etme ilerlemenizi gösterir
 
-Değerlendirmeleri oluştururken, bunları bir gruba atarsiniz. Grupları, organizasyonunız için en mantıklı olan yolla yapılandırarak. Örneğin, değerlendirmeleri denetim yıllarına, bölgeye, çözüme, kurum içindeki ekiplere veya başka bir yolla gruplandı. Gruplar oluşturduktan sonra, bir [veya birden çok gruba](compliance-manager-setup.md#filtering-your-dashboard-view) göre puanınızı görüntülemek için Uyumluluk Yöneticisi panonızı filtreleyebilirsiniz.
+Değerlendirmeleri oluştururken bunları bir gruba atayacaksınız. Grupları kuruluşunuz için en mantıklı olan şekilde yapılandırabilirsiniz. Örneğin değerlendirmeleri denetim yılına, bölgeye, çözüme, kuruluşunuzdaki ekiplere veya başka bir yönteme göre gruplandırabilirsiniz. Grupları oluşturduktan sonra [Uyumluluk Yöneticisi panonuzu filtreleyerek](compliance-manager-setup.md#filtering-your-dashboard-view) puanınızı bir veya daha fazla gruba göre görüntüleyebilirsiniz.
 
 ##### <a name="learn-more"></a>Daha fazla bilgi
 
-[Uyumluluk Yöneticisi'nde değerlendirmeleri oluşturma ve yönetme](compliance-manager-assessments.md).
+[Uyumluluk Yöneticisi'nde değerlendirmeler oluşturun ve yönetin](compliance-manager-assessments.md).
 
 ### <a name="templates"></a>Şablonlar
 
-Uyumluluk Yöneticisi, değerlendirmeleri hızla oluşturmanıza yardımcı olacak şablonlar sağlar. İhtiyaçlarınızı en iyi duruma getirilmiş bir değerlendirme oluşturmak için bu şablonları değiştirebilirsiniz. Kendi denetimleriniz ve eylemleriniz ile bir şablon oluşturarak da özel bir değerlendirme oluşturabilirsiniz. Örneğin, bir iç iş süreci denetimi veya 325+ önceden var olan değerlendirme şablonlarımızın kapsamında olmayan bölgesel veri koruma standardını kapsaymasını istiyor olabilirsiniz.
+Uyumluluk Yöneticisi, hızlı bir şekilde değerlendirme oluşturmanıza yardımcı olacak şablonlar sağlar. Gereksinimleriniz için iyileştirilmiş bir değerlendirme oluşturmak için bu şablonları değiştirebilirsiniz. Ayrıca kendi denetimlerinizle ve eylemlerinizle bir şablon oluşturarak özel bir değerlendirme de oluşturabilirsiniz. Örneğin, iç iş süreci denetimini kapsayan bir şablon veya 325'inden fazla önceden oluşturulmuş değerlendirme şablonlarımızdan biri tarafından kapsanmayan bölgesel bir veri koruma standardı isteyebilirsiniz.
 
 ##### <a name="learn-more"></a>Daha fazla bilgi
 
-[Uyumluluk Yöneticisi tarafından sağlanan değerlendirme şablonlarının listesini görüntüleme](compliance-manager-templates-list.md).
+[Uyumluluk Yöneticisi tarafından sağlanan değerlendirme şablonlarının listesini görüntüleyin](compliance-manager-templates-list.md).
 
-[Değerlendirmeler için şablonları oluşturmak ve değiştirmek için ayrıntılı yönergelere bakın](compliance-manager-templates.md).
+[Değerlendirmeler için şablon oluşturma ve değiştirme hakkında ayrıntılı yönergeler alın](compliance-manager-templates.md).
 
-### <a name="improvement-actions"></a>Geliştirme eylemleri
+### <a name="improvement-actions"></a>İyileştirme eylemleri
 
-Geliştirme eylemleri uyumluluk etkinliklerinizi merkezileştirmeye yardımcı olur. Her geliştirme eylemi, veri koruma düzenlemelerine ve standartlara uygun şekilde uyum içinde size yardımcı olması için önerilen kılavuz bilgiler sağlar. Geliştirme eylemleri, uygulama ve test çalışması gerçekleştirmek için kuruluş kullanıcılarınıza atanabilir. Ayrıca geliştirme işlemi içinde belgeleri, notları depolar ve durum güncelleştirmelerini de kayda alabilirsiniz.
+İyileştirme eylemleri, uyumluluk etkinliklerinizi merkezileştirmenize yardımcı olur. Her iyileştirme eylemi, veri koruma düzenlemeleri ve standartlarıyla uyumlu olmanıza yardımcı olmak için önerilen rehberlik sağlar. Uygulama ve test çalışmalarını gerçekleştirmek için kuruluşunuzdaki kullanıcılara iyileştirme eylemleri atanabilir. Ayrıca belgeleri, notları ve kayıt durumu güncelleştirmelerini iyileştirme eylemi içinde depolayabilirsiniz.
 
 ##### <a name="learn-more"></a>Daha fazla bilgi
 
-[Uyumluluk iş akışınızı yönetmek için geliştirme eylemleri kullanın](compliance-manager-improvement-actions.md).
+[Uyumluluk iş akışınızı yönetmek için iyileştirme eylemlerini kullanın](compliance-manager-improvement-actions.md).
 
-[Eylemlerin uyumluluk puanınızı nasıl etkileyeni olduğunu öğrenin](compliance-score-calculation.md#action-types-and-points).
+[Eylemlerin uyumluluk puanınızı nasıl etkilediğini öğrenin](compliance-score-calculation.md#action-types-and-points).
 
 ## <a name="supported-languages"></a>Desteklenen diller
 
 Uyumluluk Yöneticisi aşağıdaki dillerde kullanılabilir:
 
 - English
-- Bahasa Indonesian
-- Bahasa Malayca
+- Bahasa Endonezya dili
+- Bahasa Malay
 - Çince (Basitleştirilmiş)
 - Çince (Geleneksel)
 - Czech
@@ -151,10 +156,10 @@ Uyumluluk Yöneticisi aşağıdaki dillerde kullanılabilir:
 - Thai
 - Turkish
 
-## <a name="next-steps-set-up-and-customize"></a>Sonraki adımlar: Ayarlama ve özelleştirme
+## <a name="next-steps-set-up-and-customize"></a>Sonraki adımlar: ayarlama ve özelleştirme
 
-Uyumluluk Yöneticisi'ni çalışmaya başlama'da oturum açma, izin ve roller atama, ayarları yapılandırma ve pano görünümlerinizi [kişiselleştirme hakkında bilgi edinebilirsiniz](compliance-manager-setup.md).
+[Uyumluluk Yöneticisi ile Kullanmaya başlayın](compliance-manager-setup.md) oturum açmayı, izinleri ve rolleri atamayı, ayarları yapılandırmayı ve pano görünümünüzü kişiselleştirmeyi öğrenin.
 
-Ardından, değerlendirmeleri ayarerek en önemli endüstri standartlarına uymanıza yardımcı olmak için Uyumluluk [Yöneticisi'ni özelleştirmeye başlayabilirsiniz](compliance-manager-assessments.md).
+Ardından [değerlendirmeleri ayarlayarak](compliance-manager-assessments.md) kuruluşunuz için en önemli endüstri standartlarına uymanıza yardımcı olmak için Uyumluluk Yöneticisi'ni özelleştirmeye başlayın.
 
-Veri gizliliği düzenlemelerine uymanıza yardımcı olmak için, Uyumluluk Yöneticisi'ni kullanma da dahil olmak üzere tüm Veri Gizliliği genelinde özellikleri planlamak ve uygulamak üzere  uç uç süreçte size yol Microsoft 365 bir iş akışı tasarladık. Daha fazla bilgi için bkz[. Gizlilikle birlikte veri gizliliği düzenlemelerine Microsoft 365](../solutions/information-protection-deploy.md) (aka.ms/m365dataprivacy). 
+Veri gizliliği düzenlemelerine uymanıza yardımcı olmak için, Uyumluluk Yöneticisi'nin kullanılması dahil olmak üzere Microsoft 365 genelinde özellikleri planlamak ve uygulamak için uçtan uca bir süreç boyunca size yol gösterecek bir iş akışı tasarladık. Daha fazla bilgi için bkz[. Microsoft 365 (aka.ms/m365dataprivacy) ile veri gizliliği düzenlemeleri için bilgi koruması dağıtma](../solutions/information-protection-deploy.md). 

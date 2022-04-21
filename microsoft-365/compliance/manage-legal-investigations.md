@@ -17,14 +17,16 @@ ms.assetid: 2e5fbe9f-ee4d-4178-8ff8-4356bc1b168e
 ms.custom:
 - seo-marvel-apr2020
 description: Kuruluşunuzun yasal araştırmasını yönetmek için Microsoft Purview uyumluluk portalında eBulma servis taleplerini kullanın.
-ms.openlocfilehash: d218c7d624da837e685929d95e515687f54897ef
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 28dead35cce2102cfd826fa1505cdd620e4a1b25
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64932011"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64999795"
 ---
 # <a name="manage-legal-investigations-in-microsoft-365"></a>Microsoft 365 yasal araştırmalarını yönetme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Kuruluşlar, kuruluşunuzdaki belirli yöneticilerin veya diğer çalışanların yer aldığı bir yasal davaya yanıt vermek için birçok nedene sahiptir. Bu, kişilerin günlük iş görevlerinde kullandıkları e-posta, belgeler, anlık ileti konuşmaları ve diğer içerik konumlarındaki araştırmaya özgü bilgileri hızla bulmayı ve saklamayı içerebilir. Güvenlik ve uyumluluk merkezindeki eKeşif servis talebi araçlarını kullanarak bunları ve diğer birçok benzer etkinliği gerçekleştirebilirsiniz.
   

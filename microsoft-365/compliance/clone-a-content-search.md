@@ -18,14 +18,16 @@ ms.assetid: 7b40eeaa-544c-4534-b89b-9f79998e374c
 ms.custom:
 - seo-marvel-apr2020
 description: Office 365 veya Microsoft 365 uyumluluk merkezinde var olan bir İçerik Aramasını hızla kopyalamak için bu makaledeki PowerShell betiğini kullanın.
-ms.openlocfilehash: 782620d3693f4659c135d2a52aa7062a490a7cd0
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 82994bcc87b76efe21bb1c68877b2bb8a5926424
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64940499"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64998672"
 ---
 # <a name="clone-a-content-search"></a>İçerik Araması Kopyalama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Office 365 veya Microsoft 365 uyumluluk merkezinde birçok posta kutusunda veya SharePoint ve OneDrive İş sitelerde arama yapılan bir İçerik Araması oluşturmak biraz zaman alabilir. Url'yi yanlış yazdığınızda, aranacak sitelerin belirtilmesi hatalara da açık olabilir. Bu sorunlardan kaçınmak için bu makaledeki Windows PowerShell betiğini kullanarak mevcut İçerik Aramasını hızla kopyalayabilirsiniz. Bir aramayı kopyaladığınızda, özgün aramayla aynı özellikleri (içerik konumları ve arama sorgusu gibi) içeren yeni bir arama (farklı bir ada sahip) oluşturulur. Ardından anahtar sözcük sorgusunu veya tarih aralığını değiştirerek yeni aramayı düzenleyebilir ve çalıştırabilirsiniz.
   

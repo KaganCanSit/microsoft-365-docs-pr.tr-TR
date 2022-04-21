@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Yöneticiler, Telegram iletişim verilerini Microsoft 365 içeri aktarmak ve arşivlerken kullanmak için telemessage bağlayıcısı ayarlayabilir. Bu, kuruluşunuzun üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilmeniz için üçüncü taraf veri kaynaklarından verileri Microsoft 365 arşivleyebilmenizi sağlar.
-ms.openlocfilehash: b18d05fa697f3d23e57444d5757d14dff7acfc23
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 6bee4eb9be5cf8c0d2719f391d89e268c5041b7f
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64947131"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64997460"
 ---
 # <a name="set-up-a-connector-to-archive-telegram-communications-data"></a>Telegram iletişim verilerini arşivleye bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Telegram sohbetlerini, eklerini, dosyalarını ve silinen iletileri ve aramaları içeri aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalındaki TeleMessage bağlayıcısını kullanın. Bağlayıcıyı ayarlayıp yapılandırdıktan sonra, kuruluşunuzun TeleMessage hesabına bağlanır ve Telegram Arşivleyicisi'ni kullanan çalışanların mobil iletişimini Microsoft 365'deki posta kutularına aktarır.
 

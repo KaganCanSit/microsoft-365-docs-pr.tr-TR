@@ -14,14 +14,16 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: ''
-ms.openlocfilehash: 37c0ae081223f321c87cafa18d0acbbbc6adb511
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 3335e437a659eab984943adda31abdb344908c1c
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64942149"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64997658"
 ---
 # <a name="train-a-predictive-coding-model-preview"></a>Tahmine dayalı kodlama modeli eğit (önizleme)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview eKeşif'te (Premium) tahmine dayalı bir kodlama modeli oluşturduktan sonra, sonraki adım modeli inceleme kümenizdeki ilgili ve ilgili olmayan içerik konusunda eğitmek için ilk eğitim turunu gerçekleştirmektir. Eğitimin ilk turunu tamamladıktan sonra modelin ilgili ve ilgili olmayan içeriği tahmin etme becerisini geliştirmek için sonraki eğitim turlarını gerçekleştirebilirsiniz.
 

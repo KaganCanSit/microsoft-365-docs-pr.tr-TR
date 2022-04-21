@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Yöneticiler, Microsoft 365'da Veritas'tan Jive verilerini içeri aktarmak ve arşivlemek için bir bağlayıcı ayarlayabilir. Bu bağlayıcı, kuruluşunuzun üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilmeniz için üçüncü taraf verilerini Microsoft 365 arşivleyebilmenizi sağlar.
-ms.openlocfilehash: dea7f1aaaf11c222baa3a5e5815846477b39cbfc
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 4fd5d7bbecd6fc6b0bfeeb90c0102ef30b67bdfe
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64938609"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65000498"
 ---
 # <a name="set-up-a-connector-to-archive-jive-data"></a>Jive verilerini arşivleme için bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 İşbirliği platformundaki verileri Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında bir Veritas bağlayıcısı kullanın. Veritas, üçüncü taraf veri kaynağındaki öğeleri yakalamak (düzenli olarak) ve ardından bu öğeleri Microsoft 365'a aktarmak için yapılandırılmış bir [Jive](https://globanet.com/jive/) bağlayıcısı sağlar. Bağlayıcı, kullanıcının Jive hesabından e-posta iletileri, sohbetler ve ekler gibi içerikleri e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'de kullanıcının posta kutusuna aktarır.
 

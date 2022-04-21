@@ -18,14 +18,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Bir soruşturma veya yasal davayla ilgili içeriği korumak için Microsoft 365 bir eBulma (Standart) olayıyla ilişkili bir ayrı tutma oluşturabilirsiniz.
-ms.openlocfilehash: 4448c9b8a55466c0cf626deff6e69acd247a5814
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 87a75923ccc270e7b9802ae5d366dd2930a84d82
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64938279"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65001246"
 ---
 # <a name="create-an-ediscovery-hold"></a>eBulma ayrı tutma oluşturma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Servis talebiyle ilgili olabilecek içeriği korumak üzere ayrı tutmalar oluşturmak için Microsoft Purview eBulma (Standart) servis talebi kullanabilirsiniz. Olayda araştırdığınız kişilerin Exchange posta kutularına ve OneDrive İş hesaplarına ayrı tutabilirsiniz. Ayrıca, Microsoft Teams, Office 365 Grupları ve Yammer Grupları ile ilişkili posta kutularına ve sitelere ayrı tutabilirsiniz. İçerik konumlarını ayrı tutarak yerleştirdiğinizde, içerik konumu ayrı tutmadan kaldırılana kadar veya siz saklamayı silene kadar içerik korunur.
 

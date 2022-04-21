@@ -18,14 +18,16 @@ ms.assetid: ''
 ms.custom:
 - seo-marvel-apr2020
 description: eBulma (Premium) servis talebi gözden geçirme kümesine arama sonuçlarını veya bu arama sonuçlarının örneklerini eklemeyi öğrenin.
-ms.openlocfilehash: 7b754aa09390d041de44cd2e82ed9d1f93eede7e
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: d41697f18360b277b060dd537020f9e04ef341ec
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 04/20/2022
-ms.locfileid: "64973761"
+ms.locfileid: "64997746"
 ---
 # <a name="add-search-results-to-a-review-set"></a>Gözden geçirme kümesine arama sonuçları ekleme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bir aramanın sonuçlarından memnun olduğunuzda ve bu arama sonuçlarını gözden geçirmeye ve analiz etmeye hazır olduğunuzda, bunları servis talebindeki bir gözden geçirme kümesine ekleyebilirsiniz. Özgün verilerin gözden geçirme kümesine kopyalanması ayrıca tema algılama, neredeyse yinelenen algılama ve e-posta iş parçacığı tanımlama gibi gelişmiş analiz araçları sağlayarak inceleme ve analiz sürecini kolaylaştırır. Ayrıca, Microsoft 365 olmayan veri kaynaklarından bir gözden geçirme kümesine veri ekleyebilirsiniz, böylece bu verileri Microsoft 365 topladığınız verilere ek olarak gözden geçirebilirsiniz.
 

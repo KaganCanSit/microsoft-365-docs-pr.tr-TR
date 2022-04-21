@@ -22,14 +22,16 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkSPO
 description: Microsoft Purview uyumluluk portalında eBulma olayıyla ilişkili yeni bir ayrı tutmaya posta kutuları & OneDrive İş siteleri eklemek için bir betik çalıştırmayı öğrenin.
-ms.openlocfilehash: 8835e853825786668ba1b7617078d899c0773779
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 70ec2481e8fa352be47544cd2fe6a772c2fbb325
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64934543"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65000897"
 ---
 # <a name="use-a-script-to-add-users-to-a-hold-in-a-ediscovery-standard-case"></a>eBulma (Standart) durumunda bir ayrı tutmaya kullanıcı eklemek için betik kullanma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Güvenlik & Uyumluluk Merkezi PowerShell, eBulma servis taleplerini oluşturma ve yönetmeyle ilgili zaman alan görevleri otomatikleştirmenize olanak sağlayan cmdlet'ler sağlar. Şu anda, Çok sayıda koruyucu içerik konumunu beklemeye almak için Microsoft Purview uyumluluk portalında Microsoft Purview eKeşif (Standart) durumunu kullanmak zaman ve hazırlık gerektirir. Örneğin, ayrı tutma oluşturmadan önce, ayrı tutmaya yerleştirmek istediğiniz her OneDrive İş sitesinin URL'sini toplamanız gerekir. Ardından, beklemeye almak istediğiniz her kullanıcı için posta kutusunu ve OneDrive İş sitesini ayrı tutmaya eklemeniz gerekir. Bu işlemi otomatikleştirmek için bu makaledeki betiği kullanabilirsiniz.
   

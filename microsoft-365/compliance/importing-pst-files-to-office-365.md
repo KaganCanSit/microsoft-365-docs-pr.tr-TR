@@ -21,14 +21,16 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
 description: E-posta verilerini (PST dosyaları) kullanıcı posta kutularına toplu olarak aktarmak için Microsoft Purview uyumluluk portalında İçeri Aktarma hizmetini kullanmayı öğrenin.
-ms.openlocfilehash: ba517359d54c698abd2ce50f07fe76d87fba472c
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: a1720b51a57569d676aeac37933f1dce3075e7ed
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64946231"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65001026"
 ---
 # <a name="learn-about-importing-your-organizations-pst-files"></a>Kuruluşunuzun PST dosyalarını içeri aktarma hakkında bilgi edinin
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 > [!NOTE]
 > Bu makale yöneticilere yöneliktir. PST dosyalarını kendi posta kutunuza aktarmaya mı çalışıyorsunuz? Bkz[. Outlook .pst dosyasından e-postayı, kişileri ve takvimi içeri aktarma](https://go.microsoft.com/fwlink/p/?LinkID=785075).

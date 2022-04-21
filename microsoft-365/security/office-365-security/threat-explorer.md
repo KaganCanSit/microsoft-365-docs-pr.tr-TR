@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 8a5029ad6de3de33eacdf814729ed2eafcd2cf89
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 6992af4483bedfe418610b752d2195a8d22f30d3
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64941687"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64974333"
 ---
 # <a name="threat-explorer-and-real-time-detections"></a>Tehdit Gezgini ve Gerçek zamanlı algılamalar
 
@@ -33,9 +33,9 @@ ms.locfileid: "64941687"
 - [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Kuruluşunuzun [Office 365 için Microsoft Defender](defender-for-office-365.md) varsa ve [gerekli izinlere](#required-licenses-and-permissions) sahipseniz **, Gezgin** veya **Gerçek zamanlı algılamalarınız** (eski *adıyla Gerçek zamanlı raporlar*— [yeniliklere bakın](#new-features-in-threat-explorer-and-real-time-detections)!) vardır. Güvenlik & Uyumluluk Merkezi'nde **Tehdit yönetimi'ne** gidin ve **gezgin** _veya_ **gerçek zamanlı algılamalar'ı** seçin.
+Kuruluşunuzun [Office 365 için Microsoft Defender'ı](defender-for-office-365.md) varsa ve [gerekli izinlere](#required-licenses-and-permissions) sahipseniz **Gezgin** veya **Gerçek zamanlı algılamalarınız** (eski *adıyla Gerçek zamanlı raporlar*— [yeniliklere bakın](#new-features-in-threat-explorer-and-real-time-detections)!). Güvenlik & Uyumluluk Merkezi'nde **Tehdit yönetimi'ne** gidin ve **gezgin** _veya_ **gerçek zamanlı algılamalar'ı** seçin.
 
-|Office 365 için Microsoft Defender Plan 2 ile şunları görürsünüz:|Office 365 için Microsoft Defender Plan 1 ile şunları görürsünüz:|
+|Office 365 için Microsoft Defender Plan 2 ile şunları görürsünüz:|Office 365 Plan 1 için Microsoft Defender ile şunları görürsünüz:|
 |---|---|
 |![Tehdit gezgini.](../../media/threatmgmt-explorer.png)|![Gerçek zamanlı algılamalar](../../media/threatmgmt-realtimedetections.png)|
 
@@ -47,13 +47,12 @@ Bu raporla şunları yapabilirsiniz:
 
 - [Microsoft 365 güvenlik özellikleri tarafından algılanan kötü amaçlı yazılımlara bakın](#see-malware-detected-in-email-by-technology)
 - [Kimlik avı URL'sini görüntüleyin ve karar verilerine tıklayın](#view-phishing-url-and-click-verdict-data)
-- [Gezgin'deki bir görünümden otomatik araştırma ve yanıt işlemi başlatma](#start-automated-investigation-and-response) (yalnızca Plan 2 Office 365 için Defender)
+- [Gezgin'deki bir görünümden otomatik araştırma ve yanıt işlemi başlatma](#start-automated-investigation-and-response) (yalnızca Office 365 Plan 2 için Defender)
 - [Kötü amaçlı e-postaları ve daha fazlasını araştırma](#more-ways-to-use-explorer-and-real-time-detections)
 
 ## <a name="improvements-to-threat-hunting-experience"></a>Tehdit Avcılığı Deneyiminde İyileştirmeler
 
-
-### <a name="introduction-of-alert-id-for-defender-for-office-365-alerts-within-explorerreal-time-detections"></a>Gezgin/Gerçek zamanlı algılamalar içindeki Office 365 için Defender uyarıları için Uyarı Kimliği'ne giriş
+### <a name="introduction-of-alert-id-for-defender-for-office-365-alerts-within-explorerreal-time-detections"></a>Gezgin/Gerçek zamanlı algılamalar içinde Office 365 uyarıları için Defender için Uyarı Kimliği'ne giriş
 
 Bugün bir uyarıdan Tehdit Gezgini'ne giderseniz, gezgin içinde, görünüm Uyarı ilkesi kimliğine göre filtrelenmiş bir görünüm açar (ilke kimliği, Uyarı ilkesi için benzersiz bir tanımlayıcıdır).
 Tehdit Gezgini'nde uyarı kimliğini (aşağıdaki uyarı kimliği örneğine bakın) ve belirli bir uyarıyla ilgili iletileri ve e-posta sayısını görebilmeniz için gerçek zamanlı algılamaları tanıtarak bu tümleştirmeyi daha uygun hale getiriyoruz. Ayrıca bir iletinin bir uyarının parçası olup olmadığını görebilir ve bu iletiden belirli bir uyarıya gidebilirsiniz.
@@ -80,7 +79,7 @@ Bu güncelleştirmenin bir parçası olarak, Tehdit Gezgini'nden dışarı aktar
 > [!NOTE]
 > Kullanıcı etiketleri özelliği *Önizleme* aşamasındadır, herkes tarafından kullanılamaz ve değiştirilebilir. Yayın zamanlaması hakkında bilgi için Microsoft 365 yol haritasına göz atın.
 
-Kullanıcı etiketleri, Office 365 için Microsoft Defender'daki belirli kullanıcı gruplarını tanımlar. Lisanslama ve yapılandırma dahil olmak üzere etiketler hakkında daha fazla bilgi için bkz. [Kullanıcı etiketleri](user-tags.md).
+Kullanıcı etiketleri, Office 365 için Microsoft Defender'da belirli kullanıcı gruplarını tanımlar. Lisanslama ve yapılandırma dahil olmak üzere etiketler hakkında daha fazla bilgi için bkz. [Kullanıcı etiketleri](user-tags.md).
 
 Tehdit Gezgini'nde aşağıdaki deneyimlerde kullanıcı etiketleri hakkındaki bilgileri görebilirsiniz.
 
@@ -506,12 +505,12 @@ Kuruluşunuzdaki kullanıcıların [Rapor İletisi eklentisi veya Rapor](enable-
    > [!div class="mx-imgBorder"]
    > :::image type="content" source="../../media/EmailUserReportedReportType.png" alt-text="Kullanıcı tarafından bildirilen kimlik avı" lightbox="../../media/EmailUserReportedReportType.png":::
 
-Rapor, kuruluşunuzdaki kişilerin kimlik avı girişimi olarak bildirdiği e-posta iletileri hakkındaki verileri göstermek için yenilenir. Daha fazla analiz yapmak ve gerekirse [kimlik avı önleme ilkelerinizi Office 365 için Microsoft Defender](configure-mdo-anti-phishing-policies.md) ayarlamak için bu bilgileri kullanabilirsiniz.
+Rapor, kuruluşunuzdaki kişilerin kimlik avı girişimi olarak bildirdiği e-posta iletileri hakkındaki verileri göstermek için yenilenir. Daha fazla analiz yapmak ve gerekirse Office 365 [için Microsoft Defender'da kimlik avı önleme ilkelerinizi ayarlamak için](configure-mdo-anti-phishing-policies.md) bu bilgileri kullanabilirsiniz.
 
 ## <a name="start-automated-investigation-and-response"></a>Otomatik araştırma ve yanıt başlatma
 
 > [!NOTE]
-> Otomatik araştırma ve yanıt özellikleri *Office 365 için Microsoft Defender Plan 2* ve *Office 365 E5'da* kullanılabilir.
+> Otomatik araştırma ve yanıt özellikleri *, Office 365 Plan 2 ve Office 365 E5 için Microsoft Defender'da* kullanılabilir.
 
 [Otomatik araştırma ve yanıt](automated-investigation-response-office.md) , güvenlik operasyonları ekibinize siber saldırıları araştırmak ve azaltmak için harcanan zamandan ve çabadan tasarruf edebilir. Güvenlik playbook'larını tetikleyebilecek uyarıları yapılandırmaya ek olarak, Gezgin'deki bir görünümden otomatik araştırma ve yanıt işlemi başlatabilirsiniz. Ayrıntılar için bkz [. Örnek: Güvenlik yöneticisi Gezgin'den araştırma tetikler](automated-investigation-response-office.md#example-a-security-administrator-triggers-an-investigation-from-threat-explorer).
 
@@ -527,10 +526,10 @@ Bu makalede açıklanan senaryolara ek olarak, Gezgin (veya Gerçek zamanlı alg
 
 ## <a name="required-licenses-and-permissions"></a>Gerekli lisanslar ve izinler
 
-Explorer veya Gerçek zamanlı algılamaları kullanmak için [Office 365 için Microsoft Defender](defender-for-office-365.md) sahip olmanız gerekir.
+Explorer veya Gerçek zamanlı algılamaları kullanmak [için Office 365 için Microsoft Defender'a](defender-for-office-365.md) sahip olmanız gerekir.
 
-- Explorer, Office 365 için Defender Plan 2'ye dahildir.
-- Gerçek zamanlı algılamalar raporu Office 365 için Defender Plan 1'e dahildir.
+- Explorer, Office 365 Plan 2 için Defender'a dahildir.
+- Gerçek zamanlı algılamalar raporu, Office 365 Plan 1 için Defender'a dahildir.
 - Office 365 için Defender tarafından korunması gereken tüm kullanıcılara lisans atamayı planlayın. Explorer ve Gerçek zamanlı algılamalar, lisanslı kullanıcılar için algılama verilerini gösterir.
 
 Gezgin veya Gerçek zamanlı algılamaları görüntülemek ve kullanmak için, güvenlik yöneticisine veya güvenlik okuyucuya verilen izinler gibi uygun izinlere sahip olmanız gerekir.
@@ -555,10 +554,10 @@ Roller ve izinler hakkında daha fazla bilgi edinmek için aşağıdaki kaynakla
 
 ## <a name="differences-between-threat-explorer-and-real-time-detections"></a>Tehdit Gezgini ile Gerçek zamanlı algılamalar arasındaki farklar
 
-- *Gerçek zamanlı algılamalar* raporu Office 365 için Defender Plan 1'de kullanılabilir. *Tehdit Gezgini*, Office 365 için Defender Plan 2'de kullanılabilir.
+- *Gerçek zamanlı algılamalar* raporu, Office 365 Plan 1 için Defender'da kullanılabilir. *Tehdit Gezgini*, Office 365 Plan 2 için Defender'da kullanılabilir.
 - Gerçek zamanlı algılamalar raporu, algılamaları gerçek zamanlı olarak görüntülemenizi sağlar. Tehdit Gezgini bunu da yapar, ancak belirli bir saldırı için ek ayrıntılar da sağlar.
 - *Tüm e-posta* görünümü Tehdit Gezgini'nde kullanılabilir ancak Gerçek zamanlı algılamalar raporunda kullanılamaz.
-- Tehdit Gezgini'ne daha fazla filtreleme özelliği ve kullanılabilir eylem dahildir. Daha fazla bilgi için bkz. [Office 365 için Microsoft Defender Hizmet Açıklaması: Office 365 için Defender planlarda özellik kullanılabilirliği](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#feature-availability-across-advanced-threat-protection-atp-plans).
+- Tehdit Gezgini'ne daha fazla filtreleme özelliği ve kullanılabilir eylem dahildir. Daha fazla bilgi için bkz. [Office 365 için Microsoft Defender Hizmet Açıklaması: Office 365 planları için Defender genelinde özellik kullanılabilirliği](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#feature-availability-across-advanced-threat-protection-atp-plans).
 
 ## <a name="other-articles"></a>Diğer makaleler
 

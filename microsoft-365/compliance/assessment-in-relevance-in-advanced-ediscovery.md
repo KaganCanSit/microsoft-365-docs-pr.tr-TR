@@ -18,14 +18,16 @@ ms.assetid: 1d33d4fb-91ed-41c0-b72e-5a26eca3a2a7
 description: Microsoft Purview eKeşif'te (Premium) İlgi eğitimi sırasındaki sorunların zenginliğini belirlemede Değerlendirme aşamasına ve rolüne genel bir bakış edinin.
 ROBOTS: NOINDEX, NOFOLLOW
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 29376b8c71947b1f09bd86de90facef6f73e0fdd
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 0fd7a4f23aa2f69dfa598faaa0c75df533356efc
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64943963"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65001334"
 ---
 # <a name="assessment-in-the-relevance-module-in-ediscovery-premium"></a>eBulma'daki İlgi modülünde değerlendirme (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
   
 Microsoft Purview eBulma (Premium), örneğin tanımlanan sorunlar ve bir servis talebi için içeri aktarılan veriler için erken değerlendirmeyi etkinleştirir. eBulma (Premium), uzmanın benimsenen bir yaklaşım hakkında karar vermesine ve bu kararları belge gözden geçirme projesine uygulamasına olanak tanır.
   

@@ -14,14 +14,16 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
 description: Exchange Online In-Place eBulma ve In-Place Tutma (ve ilgili PowerShell cmdlet'leri) 2020'nin ilk yarısında kullanımdan kaldırılacaktır. Search-Mailbox cmdlet'i ve Microsoft Purview eKeşif (Premium) v1.0 da aynı süre içinde kullanımdan kaldırılıyor.
-ms.openlocfilehash: 0a5a5c5a22aefbb0ad5abe6846915e1da653ee6b
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 19809b96574bf8d703264e0bedaada10f177ef31
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 04/20/2022
-ms.locfileid: "64973277"
+ms.locfileid: "64999222"
 ---
 # <a name="retirement-of-legacy-ediscovery-tools"></a>Eski eKeşif araçlarını kullanımdan kaldırma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 > [!IMPORTANT]
 > Bu makalede açıklanan eski eBulma araçlarının işlevselliği Microsoft 365 hizmetinden kaldırılmıştır veya hala kullanılabilir, ancak artık desteklenmemiştir. Hala kullanılabilir olan tüm işlevler bildirimde bulunulmadan kaldırılabilir. Bu eski araçlardan herhangi birini kullanmaya devam ediyorsanız, Microsoft Purview uyumluluk portalındaki eBulma araçlarına veya bu makalede açıklanan alternatiflerden birine geçiş yapmayı göz önünde bulundurun.

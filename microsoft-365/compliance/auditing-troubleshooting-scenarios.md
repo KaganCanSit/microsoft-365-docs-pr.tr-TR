@@ -19,14 +19,16 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 description: E-posta hesaplarıyla ilgili yaygın destek sorunlarını gidermeye yardımcı olmak için Microsoft 365 denetim günlüğü arama aracını kullanmayı öğrenin.
-ms.openlocfilehash: add354058a9e6e3d114c97a2932ff0302a27e272
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: dd82c735411592a3cfa7cb79ae4d1ce6f97798b4
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64946561"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64998010"
 ---
 # <a name="search-the-audit-log-to-investigate-common-support-issues"></a>Yaygın destek sorunlarını araştırmak için denetim günlüğünde arama yapma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bu makalede, yaygın destek sorunlarını araştırmanıza yardımcı olması için denetim günlüğü arama aracının nasıl kullanılacağı açıklanmaktadır. Bu, denetim günlüğünü kullanarak şunları içerir:
 

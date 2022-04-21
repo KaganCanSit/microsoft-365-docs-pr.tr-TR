@@ -17,14 +17,16 @@ ms.assetid: c9b0ff0c-282b-4a44-b43f-cfc5b96557f9
 ms.custom:
 - seo-marvel-apr2020
 description: Microsoft Purview uyumluluk portalından bir İçerik Aramasının sonuçlarını dışarı aktardığınızda raporları devre dışı bırakmak için yerel bilgisayarınızda Windows Kayıt Defteri'ni düzenleyin.
-ms.openlocfilehash: d1b305f1d6ce0aba835d21695e59a4166ec96b7a
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 5cd6816807af1b6da4fc8c41e7cdde7bc7f07d66
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64936829"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65000102"
 ---
 # <a name="disable-reports-when-you-export-content-search-results"></a>İçerik Arama sonuçlarını dışarı aktarırken raporları devre dışı bırakma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview uyumluluk portalında bir İçerik Aramasının sonuçlarını dışarı aktarmak için eBulma Dışarı Aktarma aracını kullandığınızda, araç dışarı aktarılan içerik hakkında ek bilgi içeren iki raporu otomatik olarak oluşturur ve dışarı aktarır. Bu raporlar Results.csv dosyası ve Manifest.xml dosyasıdır (bu raporların ayrıntılı açıklamaları için bu konudaki [Dışarı aktarma raporlarını devre dışı bırakma hakkında sık sorulan sorular](#frequently-asked-questions-about-disabling-export-reports) bölümüne bakın). Bu dosyalar çok büyük olabileceğinden, indirme süresini hızlandırabilir ve bu dosyaların dışarı aktarılmasını engelleyerek disk alanından tasarruf edebilirsiniz. Bunu yapmak için, arama sonuçlarını dışarı aktarmak için kullandığınız bilgisayardaki Windows Kayıt Defteri'ni değiştirebilirsiniz. Raporları daha sonra eklemek isterseniz kayıt defteri ayarını düzenleyebilirsiniz. 
   

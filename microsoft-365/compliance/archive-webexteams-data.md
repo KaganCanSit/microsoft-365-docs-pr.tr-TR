@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Yöneticiler Microsoft 365'da Veritas'ın Webex Teams bağlayıcısından verileri içeri aktarmak ve arşivlemek için bir bağlayıcı ayarlayabilir. Bu bağlayıcı, kuruluşunuzun üçüncü taraf verilerini yönetmek için yasal saklama, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilmeniz için üçüncü taraf veri kaynaklarından verileri Microsoft 365 arşivleyebilmenizi sağlar.
-ms.openlocfilehash: 1aa1a0ddd94aa2308c4884921138b12b0c152bab
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 6b879e62d2c94d9b61c47674be364927ea9dc1cc
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64942875"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64999332"
 ---
 # <a name="set-up-a-connector-to-archive-webex-teams-data"></a>Webex Teams verilerini arşivleye bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına Webex Teams verilerini içeri aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında bir Veritas bağlayıcısı kullanın. Veritas, [Webex Teams](https://globanet.com/webex-teams/) iletişim öğelerini yakalamak ve bunları Microsoft 365'a aktarmak için yapılandırılmış bir Webex Teams bağlayıcısı sağlar. Bağlayıcı, Webex Teams 1:1 sohbetleri, grup konuşmaları, kanal konuşmaları ve kuruluşunuzun Webex Teams hesabındaki ekler gibi içerikleri e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365 kullanıcının posta kutusuna aktarır.
 

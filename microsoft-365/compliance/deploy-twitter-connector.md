@@ -16,14 +16,16 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
 ROBOTS: NOINDEX, NOFOLLOW
 description: Yöneticiler, Twitter verilerini Microsoft 365 içeri aktarmak ve arşiv etmek için yerel bir bağlayıcı ayarlayabilir. Bu veriler Microsoft 365 aktarıldıktan sonra, kuruluşunuzun Twitter verilerinin idaresini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
-ms.openlocfilehash: e1ae371d59ef21955612c89b9e0bffc5c24d5950
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 6bf801d7c3443385ee0a2656753dcf069ac6aebc
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64950213"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64997152"
 ---
 # <a name="deploy-a-connector-to-archive-twitter-data"></a>Twitter verilerini arşivleye bağlayıcı dağıtma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bu makale, kuruluşunuzun Twitter hesabından Microsoft 365 verileri içeri aktarmak için Office 365 İçeri Aktarma hizmetini kullanan bir bağlayıcıyı dağıtmaya yönelik adım adım işlemi içerir. Bu işleme üst düzey bir genel bakış ve Twitter bağlayıcısı dağıtmak için gereken önkoşulların listesi için bkz. [Twitter verilerini arşivleye bağlayıcı ayarlama ](archive-twitter-data-with-sample-connector.md).
 

@@ -17,14 +17,16 @@ search.appverid:
 ms.assetid: ''
 description: Yasal tutma bildirimleri göndermek, toplamak ve izlemek için eBulma (Premium) durumunda İletişim aracını kullanın.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: f82e61b618c351f4dac05ce2559eab047f0e70a7
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: ca5c895ca98aafb67fd728e137f0d69dd8b98f8f
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64945075"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64997966"
 ---
 # <a name="create-a-legal-hold-notice"></a>Yasal tutma bildirimi oluşturma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Kuruluşlar, eKeşif (Premium) koruyucu iletişimlerini kullanarak, koruyucularla iletişim kurma konusunda iş akışlarını yönetebilir. İletişim aracı aracılığıyla, yasal ekipler yasal saklama bildirimlerini sistematik olarak gönderebilir, toplayabilir ve izleyebilir. Esnek oluşturma işlemi, ekiplerin saklama bildirimi iş akışını ve koruyuculara gönderilen bildirimlerdeki içeriği özelleştirmesine de olanak tanır.
 

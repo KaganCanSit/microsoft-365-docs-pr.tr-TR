@@ -16,14 +16,16 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
 ROBOTS: NOINDEX, NOFOLLOW
 description: ABD Kamu bulutundaki yöneticiler, çalışan verilerini kuruluşlarının insan kaynakları (İk) sisteminden Microsoft 365 aktarmak için bir veri bağlayıcısı ayarlayabilir. Bu, kuruluşunuz için iç tehdit oluşturabilecek belirli kullanıcıların etkinliklerini algılamanıza yardımcı olmak için şirket içi risk yönetimi ilkelerinde İk verilerini kullanmanıza olanak tanır.
-ms.openlocfilehash: 76de79cd856c9f114d219ffefbc45cf5e7692d40
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 3f3873830caea109cf09987a21791bb299a4bdaf
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64934763"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "65000036"
 ---
 # <a name="set-up-a-connector-to-import-hr-data-in-us-government"></a>ABD Kamu'da İk verilerini içeri aktarmak için bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 İnsan kaynakları (İk) verilerini ABD Kamu kuruluşunuza aktarmak için Microsoft Purview uyumluluk portalında bir veri bağlayıcısı ayarlayabilirsiniz. İk ile ilgili veriler, bir çalışanın istifasını gönderdiği tarihi ve çalışanın son gününü içerir. Bu İk verileri daha sonra kuruluşunuzun kuruluşunuzdaki kötü amaçlı etkinliklerden veya veri hırsızlığından korunmasına yardımcı olmak için [insider risk yönetimi çözümü](insider-risk-management.md) gibi Microsoft bilgi koruma çözümleri tarafından kullanılabilir. İk bağlayıcısı ayarlamak, Azure Active Directory'de bağlayıcı tarafından kimlik doğrulaması için kullanılan bir uygulama oluşturmak, İk verilerinizi içeren bir CSV eşleme dosyaları oluşturmak, uyumluluk merkezinde bir veri bağlayıcısı oluşturmak ve ardından CSV dosyasındaki İk verilerini Microsoft buluta alan bir betik (zamanlanmış olarak) çalıştırmaktır. Ardından veri bağlayıcısı, insider risk yönetimi aracı tarafından Microsoft 365 ABD Kamu kuruluşunuza aktarılan İk verilerine erişmek için kullanılır.
 

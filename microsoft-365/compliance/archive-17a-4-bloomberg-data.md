@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Bloomberg verilerini Microsoft 365 içeri aktarmak ve arşivlemek için 17a-4 Bloomberg DataParser bağlayıcısı ayarlamayı ve kullanmayı öğrenin.
-ms.openlocfilehash: 59fa3d24fd8493dfa6f564d5acd721421d124114
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 7160d55a7870f636b7d45f6d87e0254507dd58e9
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64941005"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64998418"
 ---
 # <a name="set-up-a-connector-to-archive-bloomberg-data"></a>Bloomberg verilerini arşivleye bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 17a-4 LLC'deki [Bloomberg DataParser'ı](https://www.17a-4.com/Bloomberg-dataparser/) kullanarak Verileri Bloomberg'den Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarın ve arşivleyebilirsiniz. DataParser, üçüncü taraf veri kaynağından öğeleri yakalamak ve bu öğeleri Microsoft 365'a aktarmak için yapılandırılmış bir Bloomberg bağlayıcısı içerir. Bloomberg DataParser bağlayıcısı, Bloomberg verilerini e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'deki kullanıcı posta kutularına aktarır.
 
