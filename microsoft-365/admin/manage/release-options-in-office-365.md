@@ -23,38 +23,37 @@ search.appverid:
 - BEA160
 - GEA150
 ms.assetid: 3b3adfa4-1777-4ff0-b606-fb8732101f47
-description: Yeni ürün ve özellikler güncelleştirmeleri için sürüm seçeneğini ayarlama hakkında bilgi Microsoft 365 yönetim merkezi.
-ms.openlocfilehash: 6e3cf1987d6b3c22ed1414bd8e352da7acf49e60
-ms.sourcegitcommit: e246725b0935067aad886530d5178972c0f895d7
+description: Microsoft 365 yönetim merkezi yeni ürün ve özellik güncelleştirmeleri için sürüm seçeneğini ayarlamayı öğrenin.
+ms.openlocfilehash: 67c6fe3f08549424c725589a50c647a876c151af
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "63012861"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65022459"
 ---
 # <a name="set-up-the-standard-or-targeted-release-options"></a>Standart veya Hedefli sürüm seçeneklerini ayarlama
 
 > [!IMPORTANT]
-> Bu Microsoft 365 açıklanan en son güncelleştirmeler Microsoft 365, SharePoint Online ve Exchange Online. Bu sürüm seçenekleri, değişiklikleri en iyi şekilde Yayınla seçeneğiyle Microsoft 365, ancak her zaman ve her güncelleştirmede garanti edilemez. Bu hizmetler diğer Microsoft 365 Uygulamaları, Skype Kurumsal Microsoft Teams hizmetler için geçerli değildir. Bu konudaki sürüm seçenekleri hakkında bilgi Microsoft 365 Uygulamaları bkz. Yayın [için güncelleştirme kanallarına Microsoft 365 Uygulamaları](/deployoffice/overview-update-channels).
+> Bu makalede açıklanan Microsoft 365 güncelleştirmeleri Microsoft 365, SharePoint Online ve Exchange Online için geçerlidir. Bu sürüm seçenekleri hedeflenir, Microsoft 365 değişiklikleri yayınlamak için en iyi çaba yöntemleridir, ancak her zaman veya tüm güncelleştirmeler için garanti edilemez. Bunlar Microsoft 365 Uygulamaları, Skype Kurumsal, Microsoft Teams ve ilgili hizmetler için geçerli değildir. Microsoft 365 Uygulamaları sürüm seçenekleri hakkında bilgi için bkz. [Microsoft 365 Uygulamaları için güncelleştirme kanallarına genel bakış](/deployoffice/overview-update-channels).
 
-Yeni Microsoft 365, birkaç yılda bir yüksek maliyetli güncelleştirmeleri yapmak yerine, kullanılabilir oldukları anda yeni ürün güncelleştirmeleri ve özellikleri alırsınız. Kuruluşunuzun bu güncelleştirmeleri nasıl alacağını yönetebilirsiniz. Örneğin, kuruluşun güncelleştirmeleri önceden alması için erken sürüme kaydolabilirsiniz. Yalnızca belirli kişilerin güncelleştirmeleri almasını sağlayabilirsiniz. Bunun yerine varsayılan zamanlamada kalarak güncelleştirmeleri daha sonra alabilirsiniz. Bu makalede, farklı sürüm seçenekleri ve bunları organizasyonunız için nasıl kullanabileceğiniz açıklanmıştır.
+Microsoft 365 sayesinde, birkaç yılda bir yüksek maliyetli güncelleştirmeler yapmak yerine yeni ürün güncelleştirmelerini ve özellikleri kullanıma sunuldukları anda alırsınız. Kuruluşunuzun bu güncelleştirmeleri nasıl alacağını yönetebilirsiniz. Örneğin, kuruluşun güncelleştirmeleri önceden alması için erken sürüme kaydolabilirsiniz. Yalnızca belirli kişilerin güncelleştirmeleri almasını sağlayabilirsiniz. Bunun yerine varsayılan zamanlamada kalarak güncelleştirmeleri daha sonra alabilirsiniz. Bu makalede farklı sürüm seçenekleri ve bunları kuruluşunuz için nasıl kullanabileceğiniz açıklanmaktadır.
 
 ## <a name="how-it-works---release-validation"></a>Nasıl çalışır? - Sürüm doğrulaması
 
-Tüm yeni sürümler önce özellik ekibi tarafından, ardından tüm Microsoft tarafından, Microsoft 365 ve tüm Microsoft tarafından test edilir ve doğrulanır. Şirket içinde yapılan test ve doğrulamadan sonraki adım, **Hedefli sürümün** (önceki adıyla İlk sürüm) katılan müşterilere yayımlanmasıdır. Microsoft, her sürüm halkasında geri bildirim toplar ve başlıca kullanım ölçümlerini izleyerek sürüm kalitesini tam olarak doğrular. Bu aşamalı doğrulama dizisi, dünya çapında yayımlanan sürümün olabildiğince güçlü olduğundan emin olmak için uygulanır. Sürümler aşağıdaki şekilde resmedilmiştir. 
+Yeni sürümler önce özellik ekibi, ardından tüm Microsoft 365 özellik ekibi ve ardından tüm Microsoft tarafından test edilir ve doğrulanır. Şirket içinde yapılan test ve doğrulamadan sonraki adım, **Hedefli sürümün** (önceki adıyla İlk sürüm) katılan müşterilere yayımlanmasıdır. Microsoft, her sürüm halkasında geri bildirim toplar ve başlıca kullanım ölçümlerini izleyerek sürüm kalitesini tam olarak doğrular. Bu aşamalı doğrulama dizisi, dünya çapında yayımlanan sürümün olabildiğince güçlü olduğundan emin olmak için uygulanır. Sürümler aşağıdaki şekilde resmedilmiştir. 
   
-![Geçerlilik halkaları için Microsoft 365.](../../media/73611ed3-2d8c-4e7b-8074-9f03b239f9ed.png)
+![Microsoft 365 için sürüm doğrulama halkaları.](../../media/73611ed3-2d8c-4e7b-8074-9f03b239f9ed.png)
   
-Önemli güncelleştirmeler için müşterilere yol haritasında Microsoft 365[.](https://products.office.com/business/office-365-roadmap) Bir güncelleştirmenin ne kadar yakınsa, bu güncelleştirme sizin ileti merkeziniz [Microsoft 365 iletmektedir](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/MessageCenter).
+Önemli güncelleştirmeler için, müşteriler başlangıçta [Microsoft 365 Yol Haritası](https://products.office.com/business/office-365-roadmap) tarafından bildirilir. Bir güncelleştirme kullanıma sunulmaya yaklaştıkça[, Microsoft 365 İleti merkeziniz](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/MessageCenter) üzerinden iletilir.
 
 > [!NOTE]
-> İleti merkezinize Microsoft 365 yönetim merkezi aracılığıyla erişebilirsiniz.[](/office365/admin/admin-overview/about-the-admin-center) Microsoft 365 ev planı kullanıcılarının yönetim merkezi olmaz.
-
+> [yönetim](/office365/admin/admin-overview/about-the-admin-center) merkezi üzerinden İleti merkezinize erişmek için bir Microsoft 365 veya Azure AD hesabınız olmalıdır. Microsoft 365 ev planı kullanıcılarının yönetim merkezi yoktur.
 
 ## <a name="standard-release"></a>Standart sürüm
 
-Bu, sizin ve kullanıcılarınızın tüm müşterilere geniş bir şekilde yayın geldiğinde en son güncelleştirmeleri almaları için varsayılan seçenektir.
+Bu, sizin ve kullanıcılarınızın en son güncelleştirmeleri tüm müşterilere geniş bir şekilde yayımlandıklarında aldığı varsayılan seçenektir.
   
-Kullanıcıların çoğunun Standart sürümde bırakılacağı ve yeni özellikleri  değerlendirmek ve ekipleri iş kullanıcılarını ve yöneticilere destek  olacak şekilde hazırlamak için Hedeflenen sürümde yer alan IT Pro'ları ve güçlü kullanıcıları bırakmak iyi bir uygulamadır. 
+İyi bir uygulama, yeni özellikleri değerlendirmek ve ekipleri iş kullanıcılarını ve yöneticilerini desteklemek üzere hazırlamak için **Standart sürümdeki** kullanıcıların çoğunluğunu ve BT Uzmanlarını ve ileri düzey kullanıcıları **Hedefli sürümde** bırakmaktır. 
   
 > [!NOTE]
 > Hedeflenen sürümden standart sürüme geçtiğinizde kullanıcılarınız, henüz standart sürümde olmayan özelliklere erişimi kaybedebilir. 
@@ -65,19 +64,22 @@ Bu seçenekte, siz ve kullanıcılarınız en son güncelleştirmeleri önceden 
   
 > [!IMPORTANT]
 > - Kullanıcıların olumsuz yönde etkilenmemesi için büyük ve karmaşık güncelleştirmelerin yayımlanması daha uzun sürebilir. Sürümler için kesin bir zaman çizelgesi yoktur.
-> - Hedefli sürüm, şu anda Office 365 GCC High ve DoD planına Office 365 GCC müşteriler için mevcut değildir.
+> - Hedefli sürüm şu anda Office 365 GCC planına veya Office 365 GCC High ve DoD planına sahip müşteriler tarafından kullanılamaz.
   
 ### <a name="targeted-release-for-entire-organization"></a>Tüm kuruluş için hedeflenen sürüm
 
-Yönetim [merkezinde sürüm seçeneğini bu seçenek için](#set-up-the-release-option-in-the-admin-center) ayarsanız tüm kullanıcılarınız Hedefli sürüm deneyimini elde edin. 300'den fazla kullanıcısı olan kuruluşlara bu seçenek için test aboneliği kullanmaları önerilir. Test aboneliği hakkında bilgi için lütfen Microsoft'taki ilgili kişiye ulaşın. 
+Bu [seçeneğin yönetim merkezinde yayın seçeneğini ayarlarsanız](#set-up-the-release-option-in-the-admin-center) , tüm kullanıcılarınız Hedeflenen sürüm deneyimine sahip olur. 300'den fazla kullanıcısı olan kuruluşlara bu seçenek için test aboneliği kullanmaları önerilir. Test aboneliği hakkında bilgi için lütfen Microsoft'taki ilgili kişiye ulaşın. 
   
 ### <a name="targeted-release-for-selected-users"></a>Seçili kullanıcılar için Hedefli sürüm
 
-Yönetim merkezinde [sürüm seçeneğini](#set-up-the-release-option-in-the-admin-center) bu seçenek için ayarladığınız durumda, özelliklere ve işlevlere erken erişim sağlamak için belirli kullanıcıları (çoğunlukla güçlü kullanıcılar) tanımlayabilirsiniz. 
+Bu [seçeneğin yönetim merkezinde sürüm seçeneğini ayarlarsanız](#set-up-the-release-option-in-the-admin-center) , özelliklere ve işlevlere erken erişim elde etmek için belirli kullanıcıları (genellikle güçlü kullanıcılar) tanımlayabilirsiniz.
+
+> [!IMPORTANT]
+> Bazı özellikler yalnızca kuruluş bazında kullanıma sunulur. Bu, kuruluşun tamamının özelliğe aynı anda erişim alacağı anlamına gelir. Bu gibi özellikler için, hedeflenen yayın programındaki seçili kullanıcıların özelliği erken alması mümkün değildir. Bu, hedeflenen sürümde seçili kullanıcıları yapılandırdıysanız kuruluşunuzun bu özellikleri erken alamayacağı anlamına gelir. Hedeflenen sürümdeki tüm özellikleri gördüğünüzden emin olmak için tüm kuruluş için hedefli sürümü yapılandırmanız veya bir test kuruluşu ayarlamanız gerekir.
   
 ## <a name="benefits-of-targeted-release"></a>Hedefli sürüm avantajları
 
-Hedefli sürüm yöneticilerin, değişiklik yöneticilerinin veya güncelleştirmelerden sorumlu Microsoft 365 onlara izin vererek yaklaşan değişikliklere hazırlanmalarına olanak sağlar:
+Hedeflenen sürüm, yöneticilerin, değişiklik yöneticilerinin veya güncelleştirmelerin Microsoft 365 sorumlu olan herkesin aşağıdakilere izin vererek yaklaşan değişikliklere hazırlanmalarına olanak tanır:
   
 - Yeni güncelleştirmeleri, kuruluşunuzdaki tüm kullanıcılara sunulmadan önce test edip doğrulama.
     
@@ -91,27 +93,27 @@ Hedefli sürüm yöneticilerin, değişiklik yöneticilerinin veya güncelleşti
     
 ## <a name="set-up-the-release-option-in-the-admin-center"></a>Yönetim merkezinde sürüm seçeneğini ayarlama
 
-Aşağıdaki adımları takip edinerek, Microsoft 365 güncelleştirmeleri nasıl aldığını değiştirebilirsiniz. Kabul etmek için bu iletişim Microsoft 365 genel yönetici olmak gerekir.
+Bu adımları izleyerek kuruluşunuzun Microsoft 365 güncelleştirmeleri alma şeklini değiştirebilirsiniz. Kabul etmek için Microsoft 365'da genel yönetici olmanız gerekir.
   
 > [!IMPORTANT]
-> Aşağıdaki değişikliklerin etkili bir şekilde son 24 saate kadar Microsoft 365. Etkinleştirdikten sonra hedefli sürümden ayrılırsanız kullanıcılarınız, henüz zamanlanan sürümlerde bulunmayan özelliklere erişimi kaybedebilir. 
+> Aşağıdaki değişikliklerin Microsoft 365 etkili olması 24 saat kadar sürebilir. Etkinleştirdikten sonra hedefli sürümden ayrılırsanız kullanıcılarınız, henüz zamanlanan sürümlerde bulunmayan özelliklere erişimi kaybedebilir. 
   
-1. Yönetim merkezinde Grup Ayarı Ayarlar  > **na** gidin ve Kuruluş profili <a href="https://go.microsoft.com/fwlink/p/?linkid=2067339" target="_blank">**sekmesinin Altında**</a> Sürüm tercihleri'ni **seçin**.
+1. Yönetim merkezinde **Ayarlar** >  **Org Ayarı'na** gidin ve <a href="https://go.microsoft.com/fwlink/p/?linkid=2067339" target="_blank">**Kuruluş profili** sekmesinin</a> altında **Yayın tercihleri'ni** seçin.
 
-5. Hedefli sürümü devre dışı bırakmak için Standart **sürüm'e ve** sonra Değişiklikleri **kaydet'e tıklayın**. 
+5. Hedeflenen sürümü devre dışı bırakmak için **Standart sürüm'e** ve ardından **Değişiklikleri kaydet'e** tıklayın. 
     
-6. Hedefli sürümü kuruluşta tüm kullanıcılar için etkinleştirmek için Herkes için hedeflenen **sürüm'e** ve ardından Değişiklikleri **kaydet'e tıklayın**. 
+6. Kuruluşunuzdaki tüm kullanıcılar için hedefli sürümü etkinleştirmek için **Herkes için hedeflenen sürüm'e** tıklayın ve ardından **Değişiklikleri kaydet'e** tıklayın. 
     
-7. Kuruluşta bazı kişiler için hedefli sürümü etkinleştirmek için Seçili kullanıcılar için hedeflenen **sürüm'e ve sonra Değişiklikleri** **kaydet'e tıklayın**. 
+7. Kuruluşunuzdaki bazı kişiler için hedefli sürümü etkinleştirmek için **Seçili kullanıcılar için hedefli sürüm'e** ve ardından **Değişiklikleri kaydet'e** tıklayın. 
     
-8. Kullanıcıları **tek tek** eklemek için Kullanıcıları seç'i veya kullanıcıları **Upload toplu olarak** eklemek için Kullanıcıları seç'i seçin.
+8. Kullanıcıları tek tek eklemek için **Kullanıcıları seçin'i** seçin veya kullanıcıları toplu olarak eklemek için **Upload**.
     
-9. Kullanıcı eklemeyi bitirerek Değişiklikleri **kaydet'i seçin**.
+9. Kullanıcı eklemeyi bitirdiğinizde **Değişiklikleri kaydet'i** seçin.
   
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Yaklaşan güncelleştirmeler [ve](/office365/admin/manage/message-center) sürümler [hakkında bildirim Microsoft 365](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/MessageCenter) için İleti merkezinize iletilerin Microsoft 365 keşfedin.
+Yaklaşan Microsoft 365 güncelleştirmeleri ve yayınları hakkında bildirim almak için [Microsoft 365 İleti merkezinizdeki](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/MessageCenter) [iletilerin nasıl yönetileceğini](/office365/admin/manage/message-center) keşfedin.
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Office Insider Programına katılma](https://insider.office.com/join/windows) (makale)
+[Office Insider Programı'na katılma](https://insider.office.com/join/windows) (makale)

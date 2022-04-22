@@ -1,5 +1,5 @@
 ---
-title: Kullanıcının oturum açmasını engelle
+title: Microsoft 365 Lighthouse kullanıcı oturum açmasını engelleme
 f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
@@ -15,49 +15,49 @@ ms.custom:
 - AdminSurgePortfolib
 - M365-Lighthouse
 search.appverid: MET150
-description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP)'ler için, kullanıcıların oturum a açmasını engellemek için güvenliğin ihlal edilmiş olduğunu düşünüyorsanız bir kullanıcı hesabını engellemeyi öğrenin.
-ms.openlocfilehash: be9089ef8c3a86b68ce5370d28a6e9be4472cce0
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP' ler) için, kullanıcıların oturum açamamaları için güvenliğin ihlal edilmiş olduğunu düşünüyorsanız bir kullanıcı hesabını engellemeyi öğrenin.
+ms.openlocfilehash: e301221e05bfb6423d16049c368fe949c6c6adb0
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63320851"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65023601"
 ---
-# <a name="block-user-sign-in"></a>Kullanıcının oturum açmasını engelle
+# <a name="block-user-sign-in-in-microsoft-365-lighthouse"></a>Microsoft 365 Lighthouse kullanıcı oturum açmasını engelleme
 
-Güvenliğin ihlal olduğunu düşünüyorsanız kullanıcı hesabını engelleyebilirsiniz. Bir kullanıcı hesabını engelle hesap, herkesin bu hesapta oturum açmasını hemen engeller. Kullanıcı oturum açmayı deniyorsa, 60 dakika içinde tüm Microsoft 365 oturumları otomatik olarak kapanır. Bir kullanıcı hesabının engellenmesi hiçbir veri silemez ve hesabın posta almalarını durdurmaz.
+Gizliliği tehlikeye girdiğini düşünüyorsanız bir kullanıcı hesabını engelleyebilirsiniz. Bir kullanıcı hesabını engellediğinizde, bu hesapta herkesin oturum açmasını hemen engeller. Bir kullanıcı oturum açmayı denerse, 60 dakika içinde tüm Microsoft 365 hizmetleri otomatik olarak kapattır. Kullanıcı hesabının engellenmesi hiçbir veriyi silmez ve hesabın posta almasını engellemez.
 
-## <a name="block-sign-in-for-a-user"></a>Kullanıcının oturum açmasını engelleme
+## <a name="block-sign-in-for-a-user"></a>Kullanıcı için oturum açmayı engelleme
 
-1. Deniz Feneri'nin sol gezinti bölmesinde Kullanıcılar'ı **seçin**.
+1. Lighthouse'un sol gezinti bölmesinde **Kullanıcılar'ı** seçin.
 
-2. Kullanıcıları ara **sekmesini** seçin.
+2. **Kullanıcı ara** sekmesini seçin.
 
-3. Arama kutusuna bir kullanıcının adını girin.
+3. Arama kutusuna bir kullanıcı adı girin.
 
-4. Arama sonuçları listesinden, kullanıcısı seçin.
+4. Arama sonuçları listesinden kullanıcıyı seçin.
 
-5. Kullanıcı ayrıntıları bölmesinde, Oturum açma **engelleme'yi seçin**.
+5. Kullanıcı ayrıntıları bölmesinde **Oturum açmayı engelle'yi** seçin.
 
-6. Oturum açma durumunu yönet bölmesinde Kullanıcıların oturum **açmasını engelle'yi seçin**.
+6. Oturum açma durumunu yönet bölmesinde **Kullanıcıların oturum açmasını engelle'yi** seçin.
 
 7. **Kaydet**'i seçin.
 
-## <a name="block-sign-in-for-risky-users"></a>Riskli kullanıcılar için oturum açma engelleme
+## <a name="block-sign-in-for-risky-users"></a>Riskli kullanıcılar için oturum açmayı engelleme
 
-1. Deniz Feneri'nin sol gezinti bölmesinde Kullanıcılar'ı **seçin**.
+1. Lighthouse'un sol gezinti bölmesinde **Kullanıcılar'ı** seçin.
 
-2. Riskli **kullanıcılar sekmesini** seçin.
+2. **Riskli kullanıcılar** sekmesini seçin.
 
 3. Listeden riskli bir kullanıcı seçin.
 
-4. Kullanıcı ayrıntıları bölmesinde, Oturum açma **engelleme'yi seçin**.
+4. Kullanıcı ayrıntıları bölmesinde **Oturum açmayı engelle'yi** seçin.
 
-5. Oturum açma durumunu yönet bölmesinde Kullanıcıların oturum **açmasını engelle'yi seçin**.
+5. Oturum açma durumunu yönet bölmesinde **Kullanıcıların oturum açmasını engelle'yi** seçin.
 
 6. **Kaydet**'i seçin.
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Kullanıcı Microsoft 365 yönetme](../enterprise/manage-microsoft-365-accounts.md) (makale)\
+[Microsoft 365 kullanıcı hesaplarını yönetme](../enterprise/manage-microsoft-365-accounts.md) (makale)\
 [Kullanıcı parolasını sıfırlama](m365-lighthouse-reset-user-password.md) (makale)

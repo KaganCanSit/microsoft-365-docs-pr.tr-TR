@@ -1,5 +1,5 @@
 ---
-title: Microsoft Defender Virüsten Koruma ile tehditleri azaltma
+title: Microsoft Defender Virüsten Koruma ile Microsoft 365 Lighthouse tehditleri azaltma
 f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
@@ -16,14 +16,14 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için Microsoft Defender Virüsten Koruma tehditleri azaltma hakkında bilgi edinin.
-ms.openlocfilehash: 428370ce5e49bba0bc9489143864f9b88b2e8c3f
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: da8a10b1ffc1932a6b4f84447028d2fa9b865e64
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64824354"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65023667"
 ---
-# <a name="mitigate-threats-with-microsoft-defender-antivirus"></a>Microsoft Defender Virüsten Koruma ile tehditleri azaltma
+# <a name="mitigate-threats-in-microsoft-365-lighthouse-with-microsoft-defender-antivirus"></a>Microsoft Defender Virüsten Koruma ile Microsoft 365 Lighthouse tehditleri azaltma
 
 Microsoft 365 Lighthouse, iş ortaklarının tüm kiracılarınızda tehditleri araştırmasına ve azaltmasına olanak tanır. Ayrıca cihazlarda virüsten koruma taramaları başlatabilir, cihazların Microsoft Defender Virüsten Koruma için en son güncelleştirmeleri almasını sağlayabilir ve virüsten koruma taramalarının ardından bekleyen eylemleri gözden geçirebilirsiniz. Lighthouse yalnızca Windows 10 veya üzerini çalıştıran cihazları destekler.
 
@@ -130,7 +130,7 @@ Ayrıca, listedeki her cihaz adının yanındaki onay kutusunu seçip **Cihazı 
 ## <a name="related-content"></a>İlgili içerik
 
 [Microsoft 365 Lighthouse gereksinimleri](m365-lighthouse-requirements.md) (makale)\
-[Tehdit yönetimi sayfasına genel bakış](m365-lighthouse-threat-management-page-overview.md) (makale)\
+[Microsoft 365 Lighthouse'daki Tehdit yönetimi sayfasına genel bakış](m365-lighthouse-threat-management-page-overview.md) (makale)\
 [Microsoft Intune'de uyumluluk ilkesi oluşturma](/mem/intune/protect/create-compliance-policy) (makale)\
 [Microsoft Defender Virüsten Koruma aç](/mem/intune/user-help/turn-on-defender-windows) (makale)\
 [Microsoft Güvenlik Zekası](https://www.microsoft.com/wdsi/threats) (web sayfası)

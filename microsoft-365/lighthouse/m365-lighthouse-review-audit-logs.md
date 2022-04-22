@@ -1,5 +1,5 @@
 ---
-title: Denetim günlüklerini gözden geçirme
+title: Microsoft 365 Lighthouse'de denetim günlüklerini gözden geçirme
 f1.keywords: CSH
 ms.author: sharik
 author: SKjerland
@@ -15,88 +15,88 @@ ms.custom:
 - AdminSurgePortfolio
 - M365-Lighthouse
 search.appverid: MET150
-description: Yönetilen Hizmet Sağlayıcıları (MSP) Microsoft 365 Lighthouse, denetim günlüklerinin nasıl gözden geçiril olduğunu öğrenin.
-ms.openlocfilehash: e16f6eb83d1fdc9f5aea2fdc6463959cc07e5650
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için denetim günlüklerini gözden geçirmeyi öğrenin.
+ms.openlocfilehash: ca4d1e9941e0c15fee169def7be0c2d801f522c2
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63329453"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65022855"
 ---
-# <a name="review-audit-logs"></a>Denetim günlüklerini gözden geçirme
+# <a name="review-audit-logs-in-microsoft-365-lighthouse"></a>Microsoft 365 Lighthouse'de denetim günlüklerini gözden geçirme
 
-Microsoft 365 Lighthouse, Deniz Feneri veya diğer hizmetlerde değişiklik oluşturan denetim günlükleri Microsoft 365 içerir. Tüm denetim olaylarını oluşturabilir, düzenleyebilir, silebilir, atayabilirsiniz ve uzaktan eylemlerin hepsi gözden geçirebilirsiniz. Varsayılan olarak, tüm müşteriler için denetim etkinleştirilir. Devre dışı bırakılamaz.
+Microsoft 365 Lighthouse denetim günlükleri Lighthouse veya diğer Microsoft 365 hizmetlerinde değişiklik oluşturan eylemleri kaydeder. Oluştur, düzenle, sil, ata ve uzak eylemlerin tümü gözden geçirebileceğiniz denetim olayları oluşturur. Varsayılan olarak, denetim tüm müşteriler için etkindir. Devre dışı bırakılamaz.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Denetim günlüklerini görüntülemek için, aşağıdaki izinlerden birini gerekir:
+Denetim günlüklerini görüntülemek için aşağıdaki izinlerden birine sahip olmanız gerekir:
 
-- Azure Active Directory (Azure AD) rolü - İş ortağı kiracısı Genel Yöneticisi
+- Azure Active Directory (Azure AD) rolü - İş ortağı kiracısının Genel Yöneticisi
 
-- Microsoft İş Ortağı Merkezi rolü - Yönetici Temsilcisi
+- Microsoft İş Ortağı Merkezi rolü - Yönetici Aracısı
 
 ## <a name="review-audit-logs"></a>Denetim günlüklerini gözden geçirme
 
-1. Deniz Feneri'nin sol gezinti bölmesinde Denetim **günlükleri'ni seçin**.
+1. Lighthouse'un sol gezinti bölmesinde **Denetim günlükleri'ni** seçin.
 
     > [!NOTE]
-    > Yeni günlüklerin görmek 1 saat kadar zaman alabiliyor. En son değişiklikleri görmek için ilgili hizmete gidin.
+    > Yeni günlüklerin görülmesi 1 saat kadar sürebilir. En son değişiklikleri görmek için ilgili hizmete gidin.
 
-2. Gerektiğinde aşağıdaki seçenekleri kullanarak günlükleri filtreleyebilirsiniz:
+2. Aşağıdaki seçenekleri kullanarak günlükleri gerektiği gibi filtreleyin:
 
     - **Tarih aralığı** - Önceki ay, hafta veya gün.
     - **Kiracılar** - Kiracı etiketleri veya müşteri kiracı adları.
-    - **Etkinlik** : Microsoft 365 karşılık gelen etkinlik türünü gösterir. Daha fazla bilgi için Etkinlikler [tablosuna](#activities) bakın.
-    - **Başlatan** - Who başlatan.
+    - **Etkinlik** - gerçekleştirilen eyleme karşılık gelen etkinlik türü Microsoft 365. Daha fazla bilgi için [Etkinlikler](#activities) tablosuna bakın.
+    - **Tarafından başlatıldı** - eylemi Who başlattı.
 
-3. İstek gövdesiyle birlikte tüm ayrıntıları görmek için listeden bir **günlük** seçin.
+3. **İstek** gövdesi de dahil olmak üzere tüm ayrıntıları görmek için listeden bir günlük seçin.
 
-    Günlük verilerini virgülle ayrılmış değerler (veri) dosyasına dışarı .csv dışarı aktar'ı **seçin**.
+    Günlük verilerini virgülle ayrılmış değerler (.csv) dosyasına aktarmak için **Dışarı Aktar'ı** seçin.
 
-## <a name="activities"></a>Etkinlikler
+## <a name="activities"></a>Faaliyetleri
 
-Aşağıdaki tabloda, Deniz Feneri denetim günlüklerinde yakalanan etkinlikler listelanır. Yeni eylemler oluşturulduktan sonra liste değişebilir. Hangi eylemin başlatıldığını görmek için denetim günlüğünde listelenen etkinliği kullanabilirsiniz.<br><br>
+Aşağıdaki tabloda Lighthouse denetim günlüklerinde yakalanan etkinlikler listelenir. Yeni eylemler oluşturulduktan sonra liste değiştirilebilir. Hangi eylemin başlatıldığını görmek için denetim günlüğünde listelenen etkinliği kullanabilirsiniz.<br><br>
 
-| Etkinlik adı | Deniz Feneri'nde alan | Başlatılan eylem | Hizmet etki edildi |
+| Etkinlik adı | Lighthouse'da alan | Eylem başlatıldı | Hizmet etkilendi |
 |--|--|--|--|
-| **uygulama** veya **dağıtma** | Kiracılar | Dağıtım planı uygulama | Azure AD, Microsoft Endpoint Manager (MEM) |
-| **assignTag** | Kiracılar | Müşteriden etiket uygulama | Deniz Feneri |
-| **changeDeploymentStatus veya** **assign** | Kiracılar | Dağıtım planı için eylem planı durumunu güncelleştirme | Deniz Feneri |
-| **managedTenantOperations** | Kiracılar | Dağıtım planıyla ilgili bilgileri görüntüleme | Azure AD |
-| **offboardTenant** | Kiracılar | Müşteriyi devre dışı bırakma | Deniz Feneri |
-| **resetTenantOnboardingStatus** | Kiracılar | Müşteriyi yeniden devre dışı bırakılır | Deniz Feneri |
-| **tenantTags** | Kiracılar | Etiket oluşturma veya silme | Deniz Feneri |
-| **tenantCustomizedInformation** | Kiracılar | Müşteri web sitesini veya iletişim bilgilerini oluşturma, güncelleştirme veya silme | Deniz Feneri |
-| **unassignTag** | Kiracılar | Müşteriden etiket kaldırma | Deniz Feneri |
-| **doğrulama** | Kiracılar | Dağıtım planını test etmek | Azure AD |
-| **blockUserSignin** | Kullanıcılar | Oturum açma engelleme | Azure AD |
-| **confirmUsersCompromised** | Kullanıcılar | Bir kullanıcının güvenliği ihlal edilmiş olduğunu onaylama | Azure AD |
-| **dismissUsersRisk** | Kullanıcılar | Kullanıcı riskini yok sayma | Azure AD |
+| **uygulama** veya **dağıtma** | Kiracı | Dağıtım planı uygulama | Azure AD, Microsoft Endpoint Manager (MEM) |
+| **assignTag** | Kiracı | Müşteriden etiket uygulama | Deniz feneri |
+| **changeDeploymentStatus** veya **assign** | Kiracı | Dağıtım planı için eylem planı durumunu güncelleştirme | Deniz feneri |
+| **managedTenantOperations** | Kiracı | Dağıtım planıyla ilgili bilgileri görüntüleme | Azure AD |
+| **offboardTenant** | Kiracı | Müşteriyi devre dışı bırakma | Deniz feneri |
+| **resetTenantOnboardingStatus** | Kiracı | Müşteriyi yeniden etkinleştirme | Deniz feneri |
+| **tenantTags** | Kiracı | Etiket oluşturma veya silme | Deniz feneri |
+| **tenantCustomizedInformation** | Kiracı | Müşteri web sitesi veya iletişim bilgilerini oluşturma, güncelleştirme veya silme | Deniz feneri |
+| **unassignTag** | Kiracı | Müşteriden etiket kaldırma | Deniz feneri |
+| **Doğrulamak** | Kiracı | Dağıtım planını test edin | Azure AD |
+| **blockUserSignin** | Kullanıcılar | Oturum açmayı engelle | Azure AD |
+| **confirmUsersCompromised** | Kullanıcılar | Bir kullanıcının gizliliğinin tehlikeye girdiğini onaylama | Azure AD |
+| **dismissUsersRisk** | Kullanıcılar | Kullanıcı riskini kapatma | Azure AD |
 | **resetUserPassword** | Kullanıcılar | Parolayı sıfırlayın | Azure AD |
 | **getConditionalAccessPolicies** | Kullanıcılar | MFA gerektiren CA ilkelerini görüntüleme | Azure AD |
-| **getTenantIDToTenantNameMap** | Kullanıcılar | Kimlik arama | Azure AD |
+| **getTenantIDToTenantNameMap** | Kullanıcılar | Kimlikleri arama | Azure AD |
 | **getUsers** | Kullanıcılar | Kullanıcı arama | Azure AD |
-| **getUsersWithoutMfa** | Kullanıcılar | MFA için kayıtlı olan kullanıcıları görüntüleme | Azure AD |
-| **getSsprEnabledButNotRegisteredUsers** | Kullanıcılar | SSPR için kayıtlı olan kullanıcıları görüntüleme | Azure AD |
-| **setCustomerSecurityDefaultsEnabledStatus** | Kullanıcılar | Çok faktörlü kimlik doğrulamasını (MFA) güvenlik varsayılanları ile etkinleştirme | Azure AD |
-|**getCompliancePolicyInfo** | Cihazlar | İlkeyi görüntüleme | MEM
-|**getDeviceCompliancePolicyStates** | Cihazlar | İlke durumları görüntüleme | MEM
-|**getDeviceCompliancePolicySettingStates** | Cihazlar | Uyumlu olmayan ayarları görüntüleme | MEM
-|**getDeviceCompliancePolicySettingStateSummaries** | Cihazlar | Uyumlu olmayan cihazları görüntüleme | MEM
-|**getTenantsDeviceCompliancePolicies** | Cihazlar | İlkeleri karşılaştırma | MEM
-| **Device'i yeniden başlatma** | Cihazlar | Yeniden başlatma | MEM |
-| **syncDevice** | Cihazlar | Eşitleme | MEM |
-| **rebootNow** | Tehdit yönetimi | Yeniden Başlatma | MEM |
-| **reprovision** | Windows 365 | Sağlamayı yeniden dene | Windows 365 |
+| **getUsersWithoutMfa** | Kullanıcılar | MFA için kayıtlı olmayan kullanıcıları görüntüleme | Azure AD |
+| **getSsprEnabledButNotRegisteredUsers** | Kullanıcılar | SSPR için kayıtlı olmayan kullanıcıları görüntüleme | Azure AD |
+| **setCustomerSecurityDefaultsEnabledStatus** | Kullanıcılar | Güvenlik varsayılanlarıyla çok faktörlü kimlik doğrulamasını (MFA) etkinleştirme | Azure AD |
+|**getCompliancePolicyInfo** | Aygıtları | İlke görüntüleme | MEM
+|**getDeviceCompliancePolicyStates** | Aygıtları | İlke durumlarını görüntüleme | MEM
+|**getDeviceCompliancePolicySettingStates** | Aygıtları | Uyumlu olmayan ayarları görüntüleme | MEM
+|**getDeviceCompliancePolicySettingStateSummaries** | Aygıtları | Uyumlu olmayan cihazları görüntüleme | MEM
+|**getTenantsDeviceCompliancePolicies** | Aygıtları | İlkeleri karşılaştırma | MEM
+| **restartCihaz** | Aygıtları | Yeniden başlatma | MEM |
+| **syncDevice** | Aygıtları | Eşitleme | MEM |
+| **rebootNow** | Tehdit yönetimi | Yeni -den başlatma | MEM |
+| **yeniden sağlama** | Windows 365 | Sağlamayı yeniden deneyin | Windows 365 |
 | **getDeviceUserInfo** | Tehdit yönetimi | Yönetilen cihaz kullanıcı bilgilerini görüntüleme  | MEM |
 | **getManagedDevice**, **remoteActionAudits** veya **deviceActionResults** | Tehdit yönetimi | Yönetilen cihaz bilgilerini görüntüleme  | MEM |
 | **windowsDefenderScanFull** | Tehdit yönetimi | Tam tarama | MEM |
 | **windowsDefenderScan** | Tehdit yönetimi | Hızlı tarama | MEM |
-| **windowsDefenderUpdateSignatures** | Tehdit yönetimi | Virüsten koruma yazılımını güncelleştirme | MEM |
+| **windowsDefenderUpdateSignatures** | Tehdit yönetimi | Virüsten korumayı güncelleştirme | MEM |
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Daha fazla bilgiye ihtiyacınız varsa, daha fazla denetim Graph erişmek için Microsoft Graph API'sini kullanın. Daha fazla bilgi için bkz[. Kullanıcı API'sini kullanarak çok kiracılı yönetim Microsoft 365 Lighthouse genel bakış](/graph/managedtenants-concept-overview).
+Daha fazla bilgiye ihtiyacınız varsa, daha fazla denetim olayına erişmek için Microsoft Graph API kullanın. Daha fazla bilgi için bkz. [Microsoft 365 Lighthouse API'sini kullanarak çok kiracılı yönetime genel bakış](/graph/managedtenants-concept-overview).
 
 ## <a name="related-content"></a>İlgili içerik
 

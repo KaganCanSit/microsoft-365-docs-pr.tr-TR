@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthous
 search.appverid: MET150
 description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için, Özellik alanına göre Lighthouse ile ilgili bilinen sorunların listesine bakın.
-ms.openlocfilehash: 3be71d225f1aa9974bb73e3b2e9d421ea81e16fa
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: aa3b5980b60e966b4edfbac4a6e8d706c399e943
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64824366"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65022789"
 ---
 # <a name="known-issues-with-microsoft-365-lighthouse"></a>Microsoft 365 Lighthouse ile ilgili bilinen sorunlar
 
@@ -91,5 +91,5 @@ Bu makalede, özellik alanına göre Microsoft 365 Lighthouse ile ilgili bilinen
 ## <a name="related-content"></a>İlgili içerik
 
 [Microsoft 365 Lighthouse SSS](m365-lighthouse-faq.yml) (makale)\
-[Microsoft 365 Lighthouse sorunları ve hata iletilerini giderme ve çözme](m365-lighthouse-troubleshoot.md) (makale)\
+[Microsoft 365 Lighthouse hata iletilerini ve sorunlarını giderme](m365-lighthouse-troubleshoot.md) (makale)\
 [Microsoft 365 Lighthouse için yardım ve destek alma](m365-lighthouse-get-help-and-support.md) (makale)

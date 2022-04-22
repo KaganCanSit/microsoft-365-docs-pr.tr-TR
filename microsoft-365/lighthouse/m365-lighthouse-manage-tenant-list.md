@@ -1,5 +1,5 @@
 ---
-title: Kiracı listenizi yönetme
+title: Microsoft 365 Lighthouse'de kiracı listenizi yönetme
 f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
@@ -16,14 +16,14 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için kiracı listenizi yönetmeyi öğrenin.
-ms.openlocfilehash: 2f9d38bad24d20c53a1bafe44b1b831369957b71
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: b4bffcfd5b8962253e68938a956949ca8470f818
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64824388"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65022437"
 ---
-# <a name="manage-your-tenant-list"></a>Kiracı listenizi yönetme
+# <a name="manage-your-tenant-list-in-microsoft-365-lighthouse"></a>Microsoft 365 Lighthouse'de kiracı listenizi yönetme
 
 Microsoft 365 Lighthouse kiracı listenizi yönetmenize yardımcı olmak için kiracılarınıza özel etiketler uygulayabilirsiniz. Bu etiketler, kiracılarınızı düzenlemek için kullanılabilir ve ilgili kiracı kümelerinin kullanabileceği mevcut görünümleri ve içgörüleri filtrelemenize de yardımcı olabilir. Etiketlerinizi Kiracılar sayfasından yönetebilirsiniz. Oluşturulduktan ve atandıktan sonra Kiracılar, Kullanıcılar, Cihazlar, Tehdit yönetimi ve Windows 365 sayfalardaki verileri bir etikete göre filtreleyebilirsiniz.
 
@@ -106,4 +106,4 @@ Etiketleri oluşturup atadıktan sonra, kiracılarınızı filtrelemek için bun
 
 ## <a name="related-content"></a>İlgili içerik
 
-Microsoft 365 Lighthouse (makale) [için kaydolma](m365-lighthouse-sign-up.md) [Microsoft 365 Lighthouse Cihaz uyumluluğu sayfasına genel bakış](m365-lighthouse-device-compliance-page-overview.md) (makale) [Microsoft 365 Lighthouse SSS](m365-lighthouse-faq.yml) (makale)
+[Microsoft 365 Lighthouse için kaydolma](m365-lighthouse-sign-up.md) (makale) [Microsoft 365 Lighthouse Cihaz uyumluluğu sayfasına genel bakış](m365-lighthouse-device-compliance-page-overview.md) (makale) [Microsoft 365 Lighthouse SSS](m365-lighthouse-faq.yml) (makale)

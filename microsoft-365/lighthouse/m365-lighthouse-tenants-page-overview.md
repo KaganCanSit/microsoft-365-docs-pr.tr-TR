@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 Lighthouse Kiracılar sayfasına genel bakış
+title: Microsoft 365 Lighthouse'da Kiracılar sayfasına genel bakış
 f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
@@ -16,14 +16,14 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için Kiracılar sayfası hakkında bilgi edinin.
-ms.openlocfilehash: 44111d62a9b8df9bf3b05ddbaa9cb4f3937159a4
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 7b8e26ddbe68059a9c5ecf4d5e396fd11c49be71
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64823531"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65023293"
 ---
-# <a name="microsoft-365-lighthouse-tenants-page-overview"></a>Microsoft 365 Lighthouse Kiracılar sayfasına genel bakış
+# <a name="overview-of-the-tenants-page-in-microsoft-365-lighthouse"></a>Microsoft 365 Lighthouse'da Kiracılar sayfasına genel bakış
 
 Microsoft 365 Lighthouse, kiracılar sayfasını açmak için sol gezinti bölmesinde **Kiracılar'ı** seçerek kiracı hesaplarını yönetmenize olanak tanır. Kiracılar sayfası tüm kiracılarınızın listesini içerir. Kişi ayrıntıları ve dağıtım durumu gibi ayrıntılı bilgileri görüntülemek için bir kiracı seçebilirsiniz.
 
@@ -70,7 +70,7 @@ Bir kiracıyı devre dışı bırakdıktan sonra, devre dışı bırakma işlemi
 
 ## <a name="tenant-tags"></a>Kiracı etiketleri
 
-Kiracılarınızı düzenlemeye ve mevcut görünümleri kolayca filtrelemeye yardımcı olmak için, kiracılarınıza etiketler oluşturabilir ve atayabilirsiniz. Daha fazla bilgi için bkz. [Kiracı listenizi yönetme](m365-lighthouse-manage-tenant-list.md).
+Kiracılarınızı düzenlemeye ve mevcut görünümleri kolayca filtrelemeye yardımcı olmak için, kiracılarınıza etiketler oluşturabilir ve atayabilirsiniz. Daha fazla bilgi için bkz. [Microsoft 365 Lighthouse'da kiracı listenizi yönetme](m365-lighthouse-manage-tenant-list.md).
 
 > [!NOTE]
 > Tüm kiracılarda en fazla 30 etiket oluşturabilirsiniz.
@@ -135,6 +135,6 @@ Dağıtım Planları sekmesi aşağıdaki seçenekleri de içerir:
 
 [Microsoft 365 Lighthouse gereksinimleri](m365-lighthouse-requirements.md) (makale)\
 [Microsoft 365 Lighthouse SSS](m365-lighthouse-faq.yml) (makale)\
-[Kiracı listenizi yönetme](m365-lighthouse-manage-tenant-list.md) (makale)\
-[Standart kiracı yapılandırmalarını dağıtmak için temelleri kullanmaya genel bakış](m365-lighthouse-deploy-standard-tenant-configurations-overview.md) (makale)\
+[kiracı listenizi Microsoft 365 Lighthouse 'de yönetme](m365-lighthouse-manage-tenant-list.md) (makale)\
+[Standart kiracı yapılandırmalarını dağıtmak için Microsoft 365 Lighthouse temellerini kullanmaya genel bakış](m365-lighthouse-deploy-standard-tenant-configurations-overview.md) (makale)\
 [Microsoft 365 Lighthouse temellerini dağıtma](m365-lighthouse-deploy-baselines.md) (makale)

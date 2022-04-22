@@ -1,5 +1,5 @@
 ---
-title: Hizmet durumu geçmişini görüntüleme
+title: kiracı hizmetinin durumunu Microsoft 365 Lighthouse görüntüleme
 f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
@@ -16,14 +16,14 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için kiracı hizmet durumunu görüntülemeyi öğrenin.
-ms.openlocfilehash: 5c15e004108606ce00a90e0fa3d675d00806b430
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: c5cfed4449fbdbb6cb63bc80dfd8e23ca4d5c4bb
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64822726"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65023623"
 ---
-# <a name="view-tenant-service-health"></a>Hizmet durumu geçmişini görüntüleme
+# <a name="view-tenant-service-health-in-microsoft-365-lighthouse"></a>kiracı hizmetinin durumunu Microsoft 365 Lighthouse görüntüleme
 
 Microsoft 365 Lighthouse'de yönettiğiniz kiracıların hizmet durumunu görüntüleyebilirsiniz. Hizmet durumu Microsoft Intune, Azure Active Directory (Azure AD) kimlik hizmetleri ve mobil cihaz yönetimi (MDM) bulut hizmetleri gibi çeşitli hizmetler için olaylar ve öneriler içerir. Yönetilen kiracılarınızdan kaçının olaylardan etkilendiğini de görebilirsiniz. Örneğin, kiracılarınızdan biri sorun yaşıyorsa, Hizmet durumu sayfasını denetleyebilir ve bunun devam eden bir çözümle ilgili bilinen bir sorun olup olmadığını veya son bir değişikliğin bunları etkileyip etkilemediğini belirleyebilirsiniz. Bu, sorun giderme ve destek çağrılarını azaltma konusunda size zaman kazandırabilir.
 

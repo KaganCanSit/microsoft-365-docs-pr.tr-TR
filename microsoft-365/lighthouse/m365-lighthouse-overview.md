@@ -16,56 +16,56 @@ ms.custom:
 - M365-Lighthouse
 - intro-overview
 search.appverid: MET150
-description: Yönetilen Hizmet Sağlayıcıları (MSP'ler) için, Microsoft 365 Lighthouse bir konumda müşteri kiracılarını güvenlik altına alımanıza ve yönetmenize nasıl yardımcı olduğunu öğrenin.
-ms.openlocfilehash: fde2ee27692b1d8fb53d46077cf58deb6d9a0550
-ms.sourcegitcommit: 2bbccbcffce3ea6d10ea6d307349874eafb21339
+description: Yönetilen Hizmet Sağlayıcıları (MSP' ler) için Microsoft 365 Lighthouse tek bir konumdaki müşteri kiracılarının güvenliğini sağlamanıza ve yönetmenize nasıl yardımcı olabileceğini öğrenin.
+ms.openlocfilehash: 96ae7647107a1be89d9fe4d800374ce8a8970cb8
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/05/2022
-ms.locfileid: "64645066"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65023645"
 ---
 # <a name="overview-of-microsoft-365-lighthouse"></a>Microsoft 365 Lighthouse'a genel bakış
 
-Microsoft 365 Lighthouse, Yönetilen Hizmet Sağlayıcılarının (MSP) küçük ve orta ölçekli işletme (SMB) müşterileri için küçük ve orta ölçekli işletme (SMB) müşterileri için cihazları, verileri ve kullanıcıları güvenlik altına alma ve yönetmeye yardımcı olan bir Microsoft 365 İş Ekstra Microsoft 365 E3 veya Windows 365 Business. 
+Microsoft 365 Lighthouse, Yönetilen Hizmet Sağlayıcılarının (MSP' ler) Microsoft 365 İş Ekstra, Microsoft 365 E3 veya Microsoft 365 İş Ekstra kullanan küçük ve orta ölçekli işletme (SMB) müşterileri için cihazları, verileri ve kullanıcıları uygun ölçekte güvenlik altına almalarına ve yönetmelerine yardımcı olan bir yönetim portalıdır Windows 365 Business. 
 
-Deniz feneri, SMB müşterileri için uyarlanmış güvenlik yapılandırma taban çizgilerini önererek ve tüm müşteri ortamlarında çok kiracılı görünümler sağlayarak Microsoft 365 İş Ekstra, Microsoft 365 E3 ve Windows 365 Business kiracılarını kullanmayı basitleştiriyor. Deniz Feneri ile MSP'ler müşterilerinin yönetimini ölçeklendirin, en önemlilere odaklanın, riskleri hızla bulun ve araştırın, müşterilerinin iyi durumda ve güvenli bir durumda olması için önlem alın.
+Lighthouse, SMB müşterilerine özel güvenlik yapılandırma temelleri önererek ve tüm müşteri ortamlarında çok kiracılı görünümler sağlayarak Microsoft 365 İş Ekstra, Microsoft 365 E3 ve Windows 365 Business kiracılarının eklenmelerini kolaylaştırır. Lighthouse ile MSP'ler müşterilerinin yönetimini ölçeklendirebilir, en önemli şeylere odaklanabilir, riskleri hızla bulabilir ve araştırabilir ve müşterilerini sağlıklı ve güvenli bir duruma getirmek için harekete geçebilir.
 
-Deniz Feneri kullanarak diğer hizmetleri ve bağlı cihazları yönetmek Microsoft 365 ek ücret yoktur. Deniz feneri, Bulut Çözümü Sağlayıcısı (CSP) programına kaydolan ve Microsoft 365 İş Ekstra, Microsoft 365 E3 veya Windows 365 Business SMB müşterilerine kullanılabilir.
+Lighthouse'un Microsoft 365 hizmetlerini ve bağlı cihazları yönetmek için kullanılmasıyla ilgili ek maliyet yoktur. Lighthouse, Bulut Çözümü Sağlayıcısı (CSP) programına kayıtlı VE SMB müşterilerine Microsoft 365 İş Ekstra, Microsoft 365 E3 veya Windows 365 Business aboneliği sunan MSP'ler tarafından kullanılabilir.
 
-Microsoft CSP kanal ortaklarının deniz feneri kullanımını Microsoft 365 İş Ekstra, Microsoft 365 E3 veya Windows 365 Business kullanan müşteriler destekler. Bu, doğrudan Microsoft'la ve dolaylı bir sağlayıcı (distributor) üzerinden işlem yapan CSP iş ortaklarını içerir. 
+Microsoft 365 İş Ekstra, Microsoft 365 E3 veya Windows 365 Business kullanan müşterilerin olduğu Microsoft CSP kanal iş ortakları tarafından Lighthouse kullanımı desteklenir. Bu, doğrudan Microsoft ile işlem yapan CSP iş ortaklarını ve dolaylı bir sağlayıcı (dağıtımcı) aracılığıyla işlem yapanları içerir. 
 
 > [!IMPORTANT] 
-> Deniz Feneri'i kullanmak için MSP'ler ve müşteri kiracıları bu hizmet Microsoft 365 Lighthouse [karşılamalıdır](m365-lighthouse-requirements.md).     
+> Lighthouse'un kullanılabilmesi için MSP'lerin ve müşteri kiracılarının [Microsoft 365 Lighthouse gereksinimlerinde listelenen gereksinimleri](m365-lighthouse-requirements.md) karşılaması gerekir.     
 
-CSP programı hakkında daha fazla bilgi için programa genel [Bulut Çözümü Sağlayıcısı bakın](/partner-center/csp-overview).
+CSP programı hakkında daha fazla bilgi için bkz. [Bulut Çözümü Sağlayıcısı programa genel bakış](/partner-center/csp-overview).
 
 > [!NOTE]  
-> Benzer bir teklif olan Azure Lighthouse, Azure platformunda yerleşik olarak yer alan kapsamlı ve güçlü yönetim aracını kullanarak hizmet sağlayıcıların Azure hizmetleri için yönetilen hizmetler sunlarına yardımcı olur. Daha fazla bilgi edinmek için bkz [. Azure Lighthouse nedir?](/azure/lighthouse/overview)   
+> Benzer bir teklif olan Azure Lighthouse, hizmet sağlayıcılarının Azure platformunda yerleşik olarak bulunan kapsamlı ve sağlam yönetim araçlarını kullanarak Azure hizmetleri için yönetilen hizmetler sunmalarına yardımcı olur. Daha fazla bilgi edinmek için bkz. [Azure Lighthouse nedir?](/azure/lighthouse/overview)   
 
-## <a name="watch-what-is-microsoft-365-lighthouse"></a>İzle: Microsoft 365 Lighthouse?
+## <a name="watch-what-is-microsoft-365-lighthouse"></a>İzleyin: Microsoft 365 Lighthouse nedir?
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4QVMP]
 
 ## <a name="microsoft-365-lighthouse-benefits"></a>Microsoft 365 Lighthouse avantajları
 
-Lighthouse, MSP'lerin şu ölçekte Microsoft 365 uç noktaları güvenlik altına asın ve yönetmesine yardımcı olur:
+Lighthouse, MSP'lerin Microsoft 365 hizmetlerinin ve bağlı uç noktaların güvenliğini sağlamalarına ve yönetmelerine yardımcı olur:
 
-- Teknisyenlerin müşteri kiracılarını güvence altına almak ve yapılandırmak için tutarlı bir adım kümesi izlemesi için kiracı dağıtım seyahatleri sağlama. 
-- Küçük ve orta ölçekli işletme kiracılarına yönelik en iyi yöntemlerin önkeserini alan bir varsayılan SMB güvenlik temeli kullanma. 
-- Tüm kuruluşlarda cihazların nasıl değerlendirilip değerlendirilemediklerine, ilkeleri karşılaştırmaya yönelik araçlara ve karşı olmayan en önemli ayarlara ilişkin net bir görünüm elde etmek için cihaz uyumluluğu hakkında çok kiracılı öngörüler sağlama. 
-- Parola sıfırlama gibi sık kullanılan görevleri basitleştirme.
-- Çok faktörlü kimlik doğrulaması ve self servis parola sıfırlamayı yapılandırma ve kullanıcılar tarafından benimsemeye yardımcı olacak araçlar. 
-- Riskli oturum açmaların anlaşılması ve korunması.
-- Kullanıcı tarafından Windows 10 tehditlere ilişkin ayrıntılar sağlayarak cihazlarınız üzerinde tehditleri Microsoft 365 Defender sorunları çözmek ve cihazları güncel tutmak için gerekli eylemleri gerçekleştirebilirsiniz.
-- Yönetecekleri müşteri Microsoft 365 etkileyen hizmet olayları ve tavsiyeleri hakkında içgörüler sağlama.
+- Teknisyenlerin müşteri kiracılarını güvenli hale getirmek ve yapılandırmak için tutarlı bir dizi adımı izleyebilmesi için kiracı dağıtım yolculukları sağlama. 
+- Küçük ve orta ölçekli işletme kiracılarını hedefleyen en iyi yöntemleri belirten varsayılan bir SMB güvenlik temeli kullanma. 
+- Cihazların tüm kuruluşlarda nasıl değerlendirildiğini, ilkeleri karşılaştıracak araçları ve karşılanmayan en üst ayarları net bir şekilde görüntülemek için cihaz uyumluluğu hakkında çok kiracılı içgörüler sağlama. 
+- Parola sıfırlama gibi yaygın görevleri basitleştirme.
+- Kullanıcıların benimsemesini sağlamaya yardımcı olacak araçlar da dahil olmak üzere çok faktörlü kimlik doğrulamasını ve self servis parola sıfırlamayı yapılandırma. 
+- Riskli oturum açma işlemlerine karşı koruma ve anlama.
+- Windows 10 cihazlardaki tehditleri yönetmek için Microsoft 365 Defender tarafından algılanan tehditlerle ilgili ayrıntılar ve sorunları çözmek ve cihazları güncel tutmak için yapılması gereken eylemler.
+- Yönettiği müşteri kiracılarını etkileyen Microsoft 365 hizmet olayları ve danışmanları hakkında içgörüler sağlama.
 
 > [!NOTE] 
-> Kaydolma hakkında daha fazla bilgi için bkz. İş [için Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md).
+> Kaydolma hakkında daha fazla bilgi için bkz. [Microsoft 365 Lighthouse için kaydolma](m365-lighthouse-sign-up.md).
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Oturum açma için Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md) (makale)  
+[Microsoft 365 Lighthouse için kaydolma](m365-lighthouse-sign-up.md) (makale)  
 [Microsoft 365 Lighthouse Kiracılar sayfasına genel bakış](m365-lighthouse-tenants-page-overview.md) (makale)   
-[Microsoft 365 Lighthouse uyumluluğu sayfasına genel bakış](m365-lighthouse-device-compliance-page-overview.md) (makale)   
+[Microsoft 365 Lighthouse'deki Cihaz uyumluluğu sayfasına genel bakış](m365-lighthouse-device-compliance-page-overview.md) (makale)   
 [Microsoft 365 Lighthouse SSS](m365-lighthouse-faq.yml) (makale)   
 [İş için Microsoft Defender](../security/defender-business/index.yml) (bağlantı sayfası)

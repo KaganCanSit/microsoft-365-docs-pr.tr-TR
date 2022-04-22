@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Yönetilen Hizmet Sağlayıcıları (MSP' ler) için Microsoft 365 Lighthouse kullanmak için gereksinimlerin listesini alın.
-ms.openlocfilehash: d5f04c39cbce9726fefa4b410be63cd5ee4e959d
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 06d5c5bb0de76ecc8ba9fc28677f480f5f4d5561
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64823684"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65023271"
 ---
 # <a name="requirements-for-microsoft-365-lighthouse"></a>Microsoft 365 Lighthouse için gereksinimler
 
@@ -62,7 +62,7 @@ Microsoft Defender Virüsten Koruma Windows işletim sisteminin bir parçasıdı
 ## <a name="related-content"></a>İlgili içerik
 
 [Microsoft 365 Lighthouse portal güvenliğini yapılandırma](m365-lighthouse-configure-portal-security.md) (makale)\
-[Microsoft 365 Lighthouse Cihaz uyumluluğu sayfasına genel bakış](m365-lighthouse-device-compliance-page-overview.md) (makale)\
-[Microsoft 365 Lighthouse Kullanıcılar sayfasına genel bakış](m365-lighthouse-users-page-overview.md) (makale)\
-[Microsoft 365 Lighthouse Tehdit yönetimi sayfasına genel bakış](m365-lighthouse-threat-management-page-overview.md) (makale)\
+[Microsoft 365 Lighthouse'de Cihaz uyumluluğu sayfasına genel bakış](m365-lighthouse-device-compliance-page-overview.md) (makale)\
+[Microsoft 365 Lighthouse'deki Kullanıcılar sayfasına genel bakış](m365-lighthouse-users-page-overview.md) (makale)\
+[Microsoft 365 Lighthouse'daki Tehdit yönetimi sayfasına genel bakış](m365-lighthouse-threat-management-page-overview.md) (makale)\
 [Microsoft 365 Lighthouse SSS](m365-lighthouse-faq.yml) (makale)

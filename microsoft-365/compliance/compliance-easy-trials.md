@@ -14,12 +14,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview çözümleri deneme sürümü ve nasıl kaydolacağınızı öğrenin.
-ms.openlocfilehash: a019ac3a2e16dfd6ae83ba1564f0031f77757b62
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: ed7848a12483062c2873f4735ecb2188cad373a1
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64972001"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65023689"
 ---
 # <a name="about-the-microsoft-purview-solutions-trial"></a>Microsoft Purview çözümleri deneme sürümü hakkında
 
@@ -70,7 +70,7 @@ Başlamanıza yardımcı olması için [deneme playbook'umuzu](compliance-easy-t
 
 #### <a name="finding-support"></a>Destek bulma
 
-Kiracının en az 150 lisansı varsa kuruluşlar deneme dağıtımı desteği için FastTrack kullanabilir. [FastTrack hakkında](https://docs.microsoft.com/fasttrack/introduction) daha fazla bilgi edinin.
+Kiracının en az 150 lisansı varsa kuruluşlar deneme dağıtımı desteği için FastTrack kullanabilir. [FastTrack hakkında](/fasttrack/introduction) daha fazla bilgi edinin.
 
 #### <a name="extending-the-trial"></a>Deneme süresini uzatma
 
@@ -98,6 +98,10 @@ Yöneticiler, Microsoft 365 denemeler hub'ında **Purview çözümleri deneme** 
 
   Microsoft Purview Uyumluluk Yöneticisi, veri koruma risklerinizin envanterini almaktan denetimleri uygulama, düzenlemeler ve sertifikalarla güncel kalma ve denetçilere raporlama gibi karmaşıklıkları yönetmeye kadar uyumluluk yolculuğunuz boyunca size yardımcı olabilir. [Uyumluluk Yöneticisi](compliance-manager.md) hakkında daha fazla bilgi edinin
 
+- **Veri Yaşam Döngüsü Yönetimi**
+
+  Uyarlamalı ilke kapsamlarını kullanarak bekletme kapsamınızı otomatikleştirin. Bu özellik, bekletme ilkelerini belirli kullanıcılara, gruplara veya sitelere dinamik olarak hedeflemenizi sağlar. Kuruluşunuzda değişiklikler olduğunda bu ilkeler otomatik olarak güncelleştirilir. Buna ek olarak, uyarlamalı kapsamlar kullanan ilkeler konum sınırlarına tabi değildir. [Uyarlamalı ilke kapsamları](retention.md#adaptive-or-static-policy-scopes-for-retention) hakkında daha fazla bilgi edinin.
+
 - **Veri Kaybı Önleme**
 
   Microsoft Purview Veri Kaybı Önleme (DLP), cihazlarda, uygulamalarda ve hizmetlerde hassas bilgilerin paylaşımını ve kullanımını denetlemenize yardımcı olur. Denemeler sayesinde DLP ilkelerinin kapsamını Teams ve cihazlara genişletebilir, eğitilebilir sınıflandırıcıları ve tam veri eşleşmesini (EDM) kullanarak daha da hassas içerikleri koruyabilir ve önerilen DLP ilkelerimizle hızlı bir şekilde çalışmaya başlayabilirsiniz.  [Veri Kaybı Önleme hakkında daha fazla bilgi edinin](dlp-learn-about-dlp.md)
@@ -106,10 +110,6 @@ Yöneticiler, Microsoft 365 denemeler hub'ında **Purview çözümleri deneme** 
 
   - Siz kapatmadığınız sürece mevcut ilkeleriniz açık kalır.
   - Deneme süresi sona erdikten sonra Teams veya Cihazlar konumlarını içeren DLP ilkelerini düzenlerseniz, bu konumlar ilkeden kaldırılır.
-
-- **Veri Yaşam Döngüsü Yönetimi**
-
-  Uyarlamalı ilke kapsamlarını kullanarak bekletme kapsamınızı otomatikleştirin. Bu özellik, bekletme ilkelerini belirli kullanıcılara, gruplara veya sitelere dinamik olarak hedeflemenizi sağlar. Kuruluşunuzda değişiklikler olduğunda bu ilkeler otomatik olarak güncelleştirilir. Buna ek olarak, uyarlamalı kapsamlar kullanan ilkeler konum sınırlarına tabi değildir. [Uyarlamalı ilke kapsamları](retention.md#adaptive-or-static-policy-scopes-for-retention) hakkında daha fazla bilgi edinin.
 
 - **Ediscovery**
 
@@ -144,6 +144,7 @@ Yöneticiler, Microsoft 365 denemeler hub'ında **Purview çözümleri deneme** 
 - **Kayıt Yönetimi**
 
   Şunları yapmak için tümleşik Microsoft Purview Kayıt Yönetimi özelliklerini kullanın:
+
   - Düzenlemelerin, yasaların veya kuruluş ilkesinin gerektirdiği şekilde kullanıcıların düzenlemesini önlemek için içeriği kayıt olarak sınıflandırma
   - Etiket ilkelerini otomatik uygulama kullanarak belirttiğiniz ölçütlere uygun olduğunda içeriğe bekletme etiketlerini otomatik olarak uygulama
   - Bekletme etiketi ilkelerinizi konumlara dinamik olarak hedeflemek için uyarlamalı kapsam ilkelerini kullanın ve dahil edilen konum sayısıyla ilgili bir sınır yoktur

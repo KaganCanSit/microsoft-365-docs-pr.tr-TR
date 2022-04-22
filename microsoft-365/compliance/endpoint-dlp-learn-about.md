@@ -19,12 +19,12 @@ ms.collection:
 search.appverid:
 - MET150
 description: 'Uç nokta veri kaybını önleme, dosya etkinliklerinin ve bu dosyalar için koruyucu eylemlerin izlenmesini uç noktalara genişletir. Dosyalar Uyumluluk çözümlerinde görünür hale getiriliyor '
-ms.openlocfilehash: e84d2de72e05991a7d8374a2e5214df90fb939d9
-ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+ms.openlocfilehash: 76649559b1110c02f29584afdfb7e48f57a41f1e
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64953315"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65023381"
 ---
 # <a name="learn-about-endpoint-data-loss-prevention"></a>Uç nokta veri kaybı önleme hakkında daha fazla bilgi edinme
 
@@ -95,7 +95,7 @@ Yalnızca ilke eşleşmelerindeki izleme verilerini istiyorsanız, uç nokta DLP
 
 Uç nokta DLP, MIME türüne göre etkinliği izler, bu nedenle dosya uzantısı değiştirilse bile etkinlikler yakalanır.
 
-### <a name="file-types-preview"></a>Dosya türleri (önizleme)
+### <a name="file-types"></a>Dosya türleri
 
 Dosya Türleri, belirli iş akışlarını veya iş alanlarını korumak için kullanılan bir dosya biçimleri gruplandırmadır. DLP ilkelerinizde koşul olarak bir veya daha fazla Dosya türü kullanabilirsiniz.
 
@@ -107,7 +107,7 @@ Dosya Türleri, belirli iş akışlarını veya iş alanlarını korumak için k
 |Arşiv  |dosya arşiv ve sıkıştırma araçları | .zip, .zipx, .rar, .7z, .tar, .gz        |
 |E-posta    |Outlook |.pst, .ost, .msg         |
 
-### <a name="file-extensions-preview"></a>Dosya uzantıları (önizleme)
+### <a name="file-extensions"></a>Dosya uzantıları
 
 Dosya türleri bir ilkede koşul olarak listelemeniz gereken dosya uzantılarını kapsamazsa, bunun yerine virgülle ayrılmış dosya uzantılarını kullanabilirsiniz.
 

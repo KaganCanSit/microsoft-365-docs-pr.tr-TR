@@ -22,12 +22,12 @@ search.appverid:
 - MOE150
 ms.assetid: 38fb3333-bfcc-4340-a37b-deda509c2093
 description: Microsoft 365 İleti merkezi ve yeni ve değiştirilmiş özellikleri ve diğer önemli duyuruları izlemedeki rolüne genel bakış edinin.
-ms.openlocfilehash: 6fabb66407eb21dc97880eaf2532b89ce02f9281
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 2d2f76d401e68fb7494cd74b169bcfe6cd6e6758
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64935291"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65022921"
 ---
 # <a name="message-center"></a>İleti merkezi
 
@@ -270,7 +270,7 @@ Bir iletiyi okuma bölmesinde açtığınızda, bir sonrakine veya listedeki ön
 
 Microsoft 365 hizmetlerinde yapılan değişikliklerle ilgili birçok eyleme dönüştürülebilir bilgi Microsoft 365 ileti merkezine ulaşır. Hangi değişikliklerin, görevlerin ne zaman, kim tarafından yapılmasını gerektirdiğini ve her görevin tamamlanması için izlenmesini izlemek zor olabilir. Ayrıca bir şeyi not almak ve daha sonra denetlemek için etiketlemek de isteyebilirsiniz. İletilerinizi Microsoft 365 yönetim merkezi Microsoft Planner eşitlerken tüm bunları ve daha fazlasını yapabilirsiniz. Daha fazla bilgi için bkz. [Planner'da ileti merkezi görevlerinizi izleme](/office365/planner/track-message-center-tasks-planner).
 
-İleti merkezine genel bakış için bkz. [Microsoft 365'da İleti merkezi](message-center.md). Öte yandan, İleti merkezi gönderileri için makine çevirisini etkinleştirmek üzere dil tercihlerinizi nasıl ayarlayacağınızı öğrenmek için bkz. [İleti merkezi gönderileri için dil çevirisi](language-translation-for-message-center-posts.md). Gerçek zamanlı hizmet durumu bilgilerini ve İleti merkezi iletişimlerini almak için alternatif bir yol programlamak istiyorsanız lütfen [Microsoft Graph'da hizmet iletişimleri API'siyle çalışma makalesine](/graph/api/resources/service-communications-api-overview?view=graph-rest-beta) başvurun.
+İleti merkezine genel bakış için bkz. [Microsoft 365'da İleti merkezi](message-center.md). Öte yandan, İleti merkezi gönderileri için makine çevirisini etkinleştirmek üzere dil tercihlerinizi nasıl ayarlayacağınızı öğrenmek için bkz. [İleti merkezi gönderileri için dil çevirisi](language-translation-for-message-center-posts.md). Gerçek zamanlı hizmet durumu bilgilerini ve İleti merkezi iletişimlerini almak için alternatif bir yol programlamak istiyorsanız bkz[. Microsoft Graph'de hizmet iletişimleri API'siyle çalışma](/graph/api/resources/service-communications-api-overview).
 
 ## <a name="unsubscribe-from-message-center-emails"></a>İleti merkezi e-postalarının aboneliğini kaldırma
 

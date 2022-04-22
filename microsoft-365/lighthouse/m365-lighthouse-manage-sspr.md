@@ -1,5 +1,5 @@
 ---
-title: Kendi kendine parola sıfırlamayı yönetme
+title: Microsoft 365 Lighthouse'de self servis parola sıfırlamayı yönetme
 f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
@@ -15,65 +15,65 @@ ms.custom:
 - AdminSurgePortfolio
 - M365-Lighthouse
 search.appverid: MET150
-description: Yönetilen Servis Sağlayıcıları (MSP) Microsoft 365 Lighthouse kendi kendine parola sıfırlamayı yönetmeyi öğrenin.
-ms.openlocfilehash: f9f8ef9a3c81281629c378fb4b55cd4c9a839c1d
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için self servis parola sıfırlamayı yönetmeyi öğrenin.
+ms.openlocfilehash: 4d618eb80dfd4a37ad5548de997b3d551bcbbf85
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63311571"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65022371"
 ---
-# <a name="manage-self-service-password-reset"></a>Kendi kendine parola sıfırlamayı yönetme
+# <a name="manage-self-service-password-reset-in-microsoft-365-lighthouse"></a>Microsoft 365 Lighthouse'de self servis parola sıfırlamayı yönetme
 
-Microsoft 365 Lighthouse, iş ortaklarının kendi kendine Azure Active Directory (Azure AD) parola sıfırlamayı (SSPR) yönetmelerini sağlar. SSPR, kullanıcılara yönetici veya yardım masası katılımı olmazken parolalarını değiştirme veya sıfırlama olanağı verir. Kullanıcının hesabı kilitliyse veya parolasını unutursa, kendi engellemesini kaldırmak ve işe dönmek için istemleri takip eder. Bu özellik, kullanıcı cihazında veya bir uygulamada oturum alayama geldiğinde yardım masası aramalarını ve üretkenlik kaybını azaltır.
+Microsoft 365 Lighthouse, iş ortaklarının Azure Active Directory (Azure AD) self servis parola sıfırlamayı (SSPR) yönetmesini sağlar. SSPR, kullanıcılara yönetici veya yardım masası katılımı olmadan parolalarını değiştirme veya sıfırlama olanağı sağlar. Kullanıcının hesabı kilitliyse veya parolasını unutursa, engellemesini kaldırmak ve işe geri dönmek için istemleri izleyebilir. Bu özellik, kullanıcı cihazında veya uygulamada oturum açamazsa yardım masası çağrılarını ve üretkenlik kaybını azaltır.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Kiracının listede görünmesi için aşağıdaki koşulların karşı görünmesi gerekir:
+Kiracı listede görünmeden önce aşağıdaki koşulların karşılanması gerekir:
 
-- Müşteri kiracısı, her kullanıcı Azure AD Premium lisansına sahip olması gerekir. Hangi lisansların SSPR'yı desteklemesi hakkında daha fazla bilgi için bkz. Kendi [kendine parola sıfırlama Azure Active Directory gereksinimleri](/azure/active-directory/authentication/concept-sspr-licensing).
+- Müşteri kiracısının her kullanıcı için bir Azure AD Premium lisansı olmalıdır. Hangi lisansların SSPR'yi desteklediği hakkında daha fazla bilgi için bkz. [Self servis parola sıfırlama Azure Active Directory için lisans gereksinimleri](/azure/active-directory/authentication/concept-sspr-licensing).
 
-- Müşteri kiracısı, Deniz Feneri'nin içinde etkin olmalı. Kiracının etkin olup olmadığını belirlemeyi öğrenmek için Kiracılar sayfasına [Microsoft 365 Lighthouse genel bakış sayfasına bakın](m365-lighthouse-tenants-page-overview.md).
+- Müşteri kiracısının Lighthouse içinde etkin olması gerekir. Kiracının etkin olup olmadığını belirlemeyi öğrenmek için [Microsoft 365 Lighthouse'daki Windows 365 (Bulut Bilgisayarlar) sayfasına genel bakış bölümüne](m365-lighthouse-tenants-page-overview.md) bakın.
 
 ## <a name="view-sspr-tenant-status"></a>SSPR kiracı durumunu görüntüleme
 
-1. Deniz Feneri'nin sol gezinti bölmesinde Kullanıcılar'ı **seçin**.
+1. Lighthouse'un sol gezinti bölmesinde **Kullanıcılar'ı** seçin.
 
-2. Parola sıfırlama **sekmesini** seçin.
+2. **Parola sıfırlama** sekmesini seçin.
 
-Parola sıfırlama sekmesi önerilen ayarlar aracılığıyla SSPR'i etkinleştiren kiracılara, SSPR için kayıtlı olmadığınız kullanıcıların sayısına ve yönetmek istediğiniz kuruluşlar genelinde SSPR dağıtımının ilerleme durumu kiracısına göre ayrıntılı çözümleme sağlar.
+Parola sıfırlama sekmesi, önerilen ayarlar, SSPR'ye kaydolmamış kullanıcı sayısı ve yönettiğiniz kuruluşlar genelinde SSPR dağıtım ilerleme durumunun kiracıya göre ayrıntılı dökümü aracılığıyla SSPR'yi etkinleştiren kiracılara genel bir bakış sağlar.
 
 ## <a name="enable-sspr-for-a-tenant"></a>Kiracı için SSPR'yi etkinleştirme
 
-1. Deniz Feneri'nin sol gezinti bölmesinde Kullanıcılar'ı **seçin**.
+1. Lighthouse'un sol gezinti bölmesinde **Kullanıcılar'ı** seçin.
 
-2. Parola sıfırlama **sekmesini** seçin.
+2. **Parola sıfırlama** sekmesini seçin.
 
-3. Kiracı listesinden, ayrıntılar bölmesini açmak için bir kiracı seçin.
+3. Kiracı listesinden bir kiracı seçerek ayrıntılar bölmesini açın.
 
-4. **SSPR ayarlarını düzenle'yi Azure Active Directory** (Azure AD) Azure Active Directory için SSPR ayarlarını düzenle'yi seçin.
+4. Azure Active Directory 'a (Azure AD) gitmek için **Azure Active Directory SSPR ayarlarını düzenle'yi** seçin.
 
-5. Azure AD'de, tüm veya seçili kullanıcılar için SSPR'yi etkinleştirin. Daha fazla bilgi için bkz. Öğretici: Kullanıcıların kendi kendine parola sıfırlama kullanarak hesaplarının kilidini açmalarını veya [Azure Active Directory parolalarını sıfırlamalarını etkinleştirme](/azure/active-directory/authentication/tutorial-enable-sspr).
+5. Azure AD'de tüm veya seçili kullanıcılar için SSPR'yi etkinleştirin. Daha fazla bilgi edinmek için bkz[. Öğretici: Kullanıcıların self servis parola sıfırlama Azure Active Directory kullanarak hesap kilidini açmalarını veya parolaları sıfırlamalarını sağlama](/azure/active-directory/authentication/tutorial-enable-sspr).
 
-## <a name="notify-users-to-register-for-sspr"></a>Kullanıcıları SSPR için kaydolmalarını bildirme
+## <a name="notify-users-to-register-for-sspr"></a>Kullanıcılara SSPR'ye kaydolmalarını bildirme
 
-1. Deniz Feneri'nin sol gezinti bölmesinde Kullanıcılar'ı **seçin**.
+1. Lighthouse'un sol gezinti bölmesinde **Kullanıcılar'ı** seçin.
 
-2. Parola sıfırlama **sekmesini** seçin.
+2. **Parola sıfırlama** sekmesini seçin.
 
-3. Kiracı listesinden, ayrıntılar bölmesini açmak için bir kiracı seçin.
+3. Kiracı listesinden bir kiracı seçerek ayrıntılar bölmesini açın.
 
 4. Bildirmek istediğiniz kullanıcıları seçin.
 
-5. **E-posta oluştur'a seçin**.
+5. **E-posta oluştur'u** seçin.
 
-Deniz Feneri varsayılan e-posta istemcinizi açar ve E-posta iletisiyle SSPR için kaydolma yönergelerini önceden doldurmaya devam ediyor. Seçilen tüm kullanıcılar Gizli satırına dahil edilir. Tek tek kullanıcılara e-posta göndermeyi tercih ediyorsanız, kullanıcı adı'nın yanındaki e-posta simgesini seçin.
+Lighthouse varsayılan e-posta istemcinizi açar ve E-posta iletisini SSPR'ye kaydolma yönergeleriyle önceden doldurulur. Seçilen tüm kullanıcılar Gizli satırına eklenir. Kullanıcılara tek tek e-posta göndermeyi tercih ederseniz, kullanıcı adının yanındaki e-posta simgesini seçebilirsiniz.
 
-Farklı bir e-posta hesabı kullanmak için, kullanıcı listesini bir dosyaya aktarabilirsiniz. Ayrıca, şirketi markalamayla özelleştirebileceğiniz örnek e-posta şablonları da indirebilirsiniz.
+Farklı bir e-posta hesabı kullanmak istiyorsanız, kullanıcı listesini bir dosyaya aktarabilirsiniz. Ayrıca, şirketinizin markasıyla özelleştirebileceğiniz örnek e-posta şablonlarını da indirebilirsiniz.
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Kendi kendine Azure Active Directory sıfırlama dağıtımını planlama](/azure/active-directory/authentication/howto-sspr-deployment) (makale)\
-[Öğretici: Kullanıcıların kendi kendine parola sıfırlama kullanarak hesaplarının kilidini açmalarını veya Azure Active Directory parolalarını](/azure/active-directory/authentication/tutorial-enable-sspr) sıfırlamalarını etkinleştirme (makale)\
-[Azure AD'de SSPR'yi etkinleştirme ve](https://www.youtube.com/watch?v=rA8TvhNcCvQ) yapılandırma (video)\
-[Çok faktörlü kimlik doğrulamasını](m365-lighthouse-manage-mfa.md) yönetme (makale)
+[Azure Active Directory self servis parola sıfırlama dağıtımı planlama](/azure/active-directory/authentication/howto-sspr-deployment) (makale)\
+[Öğretici: Kullanıcıların Azure Active Directory self servis parola sıfırlama (makale)\ kullanarak hesap kilidini açmalarını veya parolaları sıfırlamalarını sağlama](/azure/active-directory/authentication/tutorial-enable-sspr)
+[Azure AD'de SSPR'yi etkinleştirme ve yapılandırma](https://www.youtube.com/watch?v=rA8TvhNcCvQ) (video)\
+[Microsoft 365 Lighthouse'de çok faktörlü kimlik doğrulamasını yönetme](m365-lighthouse-manage-mfa.md) (makale)

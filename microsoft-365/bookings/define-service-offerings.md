@@ -1,5 +1,5 @@
 ---
-title: hizmet tekliflerinizi Bookings'de tanımlama
+title: Bookings hizmet tekliflerinizi tanımlama
 ms.author: kwekua
 author: kwekuako
 manager: scotv
@@ -9,12 +9,12 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 4a1c391e-524f-48e0-bef8-185df3a9634b
 description: Hizmet adı, açıklama, konum, süre ve fiyatlandırma gibi hizmet teklifleri bilgilerini girme yönergeleri. Hizmeti sağlamak için uygun çalışanları da etiketleyebilirsiniz.
-ms.openlocfilehash: 576babc8a1cc64734c3d11f761b3b848d3fb2639
-ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
+ms.openlocfilehash: 818d0d84e78907047df41e30f0ded62fc16c6ce4
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64746685"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65023777"
 ---
 # <a name="define-your-service-offerings-in-bookings"></a>hizmet tekliflerinizi Bookings'de tanımlama
 

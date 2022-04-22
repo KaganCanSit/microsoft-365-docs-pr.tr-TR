@@ -1,5 +1,5 @@
 ---
-title: Riskli kullanıcıları görüntüleme ve yönetme
+title: Microsoft 365 Lighthouse'de riskli kullanıcıları görüntüleme ve yönetme
 f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
@@ -16,14 +16,14 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için riskli kullanıcıları görüntülemeyi ve yönetmeyi öğrenin.
-ms.openlocfilehash: 0b7567404b909927a80b69184299baae131f8eb7
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: dad86fedeb27f13752bcd1c07efd0d51aa33cf2a
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64824278"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65022943"
 ---
-# <a name="view-and-manage-risky-users"></a>Riskli kullanıcıları görüntüleme ve yönetme
+# <a name="view-and-manage-risky-users-in-microsoft-365-lighthouse"></a>Microsoft 365 Lighthouse'de riskli kullanıcıları görüntüleme ve yönetme
 
 Microsoft, her gün trilyonlarca kullanıcı oturum açma sinyali toplar ve analiz eder. Bu sinyaller, iyi kullanıcı oturum açma davranışı desenleri oluşturmaya ve olası riskli oturum açma girişimlerini belirlemeye yardımcı olmak için kullanılır. Azure Active Directory (Azure AD) Kimlik Koruması, bu sinyalleri kullanarak kullanıcı oturum açma girişimlerini gözden geçirir ve şüpheli bir etkinlik varsa işlem gerçekleştirir.
 
@@ -44,7 +44,7 @@ Kullanıcıların riskli kullanıcılar listesinde görünebilmesi için aşağ�
 
 - Müşteri kiracısının her kullanıcı için bir Azure AD Premium lisansı olmalıdır. Azure AD Kimlik Koruması'nın desteklendiği lisanslar hakkında daha fazla bilgi için bkz. [Kimlik Koruması nedir?](/azure/active-directory/identity-protection/overview-identity-protection)
 
-- Müşteri kiracısının Microsoft 365 Lighthouse içinde etkin olması gerekir. Kiracının etkin olup olmadığını belirlemek için bkz. [Microsoft 365 Lighthouse Kiracılar sayfasına genel bakış](m365-lighthouse-tenant-list-overview.md).
+- Müşteri kiracısının Microsoft 365 Lighthouse içinde etkin olması gerekir. Kiracının etkin olup olmadığını belirlemek için bkz. [Microsoft 365 Lighthouse'deki Windows 365 (Bulut Bilgisayarlar) sayfasına genel bakış](m365-lighthouse-tenant-list-overview.md).
 
 ## <a name="review-detected-risks-and-take-action"></a>Algılanan riskleri gözden geçirin ve işlem yapın
 

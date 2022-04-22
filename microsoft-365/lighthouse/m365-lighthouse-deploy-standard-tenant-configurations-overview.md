@@ -1,5 +1,5 @@
 ---
-title: Standart kiracı yapılandırmalarını dağıtmak için taban çizgilerini kullanmaya genel bakış
+title: Standart kiracı yapılandırmalarını dağıtmak için Microsoft 365 Lighthouse temellerini kullanmaya genel bakış
 f1.keywords: CSH
 ms.author: sharik
 author: SKjerland
@@ -15,41 +15,41 @@ ms.custom:
 - AdminSurgePortfolio
 - M365-Lighthouse
 search.appverid: MET150
-description: Standart Hizmet Sağlayıcıları (MSP) kullanarak Yönetilen Microsoft 365 Lighthouse için, standart kiracı yapılandırmalarını dağıtmak için taban çizgilerini kullanma hakkında bilgi öğrenin.
-ms.openlocfilehash: 643bb962277d30caf8ea067b9276a5986af8914f
-ms.sourcegitcommit: 8423f47fce3905a48db9daefe69c21c841da43a0
+description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için standart kiracı yapılandırmalarını dağıtmak için temelleri kullanma hakkında bilgi edinin.
+ms.openlocfilehash: a12abd14064559ec92fc735bd90c1f8d58d24cb1
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63504518"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65023315"
 ---
-# <a name="overview-of-using-baselines-to-deploy-standard-tenant-configurations"></a>Standart kiracı yapılandırmalarını dağıtmak için taban çizgilerini kullanmaya genel bakış 
+# <a name="overview-of-using-microsoft-365-lighthouse-baselines-to-deploy-standard-tenant-configurations"></a>Standart kiracı yapılandırmalarını dağıtmak için Microsoft 365 Lighthouse temellerini kullanmaya genel bakış 
 
-Microsoft 365 Lighthouse temel, birden çok müşteri kiracısı genelinde güvenlik ayarlarını yönetebilirsiniz Microsoft 365 ve ölçeklendirilebilir bir yol sağlar. Taban çizgisi, kiracıların kullanıcılarını, cihazlarını ve verilerini güvende tutmak için temel güvenlik ilkelerini ve uyumluluk standartlarını dağıtan standart kiracı yapılandırmaları sağlar.
+Microsoft 365 Lighthouse temelleri, birden çok müşteri kiracısı arasında Microsoft 365 güvenlik ayarlarını yönetmeniz için yinelenebilir ve ölçeklenebilir bir yol sağlar. Temeller, kiracılarınızın kullanıcılarını, cihazlarını ve verilerini güvenli tutan temel güvenlik ilkelerini ve uyumluluk standartlarını dağıtan standart kiracı yapılandırmaları sağlar.
 
-Deniz Feneri'nin içinde varsayılan taban çizgisini ve bu temelin dağıtım adımlarını görüntüebilirsiniz. Bir kiracıya taban çizgisi uygulamak için, sol gezinti **bölmesinde Kiracılar'ı** seçin ve sonra da bir kiracı seçin. Ardından, dağıtımı başlamak **için Dağıtım** planları sekmesine gidin.
+Varsayılan temeli ve dağıtım adımlarını Lighthouse'un içinden görüntüleyebilirsiniz. Kiracıya taban çizgisi uygulamak için sol gezinti bölmesinde **Kiracılar'ı** seçin ve ardından bir kiracı seçin. Ardından dağıtıma başlamak için **Dağıtım planları** sekmesine gidin.
 
-## <a name="lighthouse-baseline"></a>Deniz feneri taban çizgisi
+## <a name="lighthouse-baseline"></a>Deniz feneri temeli
 
-Deniz feneri taban çizgisi yapılandırmaları, yönetilen tüm kiracıların güvenli ve uyumlu olduğundan emin olmak için tasarlanmıştır. Tüm **kiracılara** uygulanan varsayılan temeli görüntülemek için sol gezinti bölmesinde Taban Çizgisi'ni seçin.  Varsayılan taban çizgisine dahil edilen dağıtım adımlarını görüntülemek için, **Temeli** görüntüle'yi seçerek varsayılan taban çizgisi sayfasını açın. Dağıtım ayrıntılarını ve kullanıcı etkisini görüntülemek için herhangi bir dağıtım adımlarını seçin.
+Lighthouse temel yapılandırmaları, tüm yönetilen kiracıların güvenli ve uyumlu olduğundan emin olmak için tasarlanmıştır. Tüm **kiracılar** için geçerli olan varsayılan temeli görüntülemek için sol gezinti bölmesinden Temeller'i seçin.  Varsayılan taban çizgisine dahil edilen dağıtım adımlarını görüntülemek için **Temeli görüntüle'yi** seçerek varsayılan temel sayfasını açın. Dağıtım ayrıntılarını ve kullanıcı etkisini görüntülemek için dağıtım adımlarından herhangi birini seçin.
 
-:::image type="content" source="../media/m365-lighthouse-deploy-baselines/default-baseline-page.png" alt-text="Varsayılan taban çizgisi sayfasının ekran görüntüsü.":::
+:::image type="content" source="../media/m365-lighthouse-deploy-baselines/default-baseline-page.png" alt-text="Varsayılan temel sayfasının ekran görüntüsü.":::
 
-### <a name="default-lighthouse-configurations"></a>Varsayılan Deniz Feneri yapılandırmaları
+### <a name="default-lighthouse-configurations"></a>Varsayılan Lighthouse yapılandırmaları
 
 | Temel yapılandırma | Açıklama |
 |--|--|
-| Yöneticiler için MFA gerektirme | Tüm yöneticiler için çok faktörlü kimlik doğrulaması gerektiren bir Koşullu Erişim ilkesi. Tüm bulut uygulamaları için gereklidir. Bu taban çizgisi hakkında daha fazla bilgi için bkz. [Koşullu Erişim: Tüm yöneticiler için MFA gerektirme](/azure/active-directory/conditional-access/howto-conditional-access-policy-admin-mfa).|
-| Son kullanıcılar için MFA gerektirme | Tüm kullanıcılar için çok faktörlü kimlik doğrulaması gerektiren bir Koşullu Erişim ilkesi.  Tüm bulut uygulamaları için gereklidir. Bu taban çizgisi hakkında daha fazla bilgi için bkz. [Koşullu Erişim: Tüm kullanıcılar için MFA gerektirme](/azure/active-directory/conditional-access/howto-conditional-access-policy-all-users-mfa). |
-| Eski kimlik doğrulamayı engelle | Eski istemci kimlik doğrulamasını engellemek için koşullu Erişim ilkesi. Bu taban çizgisi hakkında daha fazla bilgi için bkz. Koşullu [Erişimle Azure AD'nin eski kimlik doğrulamasını engelleme](/azure/active-directory/conditional-access/block-legacy-authentication).|
-| Cihaz kaydı ayarlama | Kiracı cihazlarınızı postanıza kaydolmasına izin vermek için cihaz Microsoft Endpoint Manager. Bu, Azure Active Directory ile Microsoft Endpoint Manager arasında Otomatik Kayıt Azure Active Directory. Bu taban çizgisi hakkında daha fazla bilgi için bkz[. Birden fazla Windows ayarlama](/mem/intune/enrollment/windows-enroll). |
-| Microsoft Defender Virüsten Koruma ve sonraki Windows 10 yapılandırma | Önceden yapılandırılmış sistem ayarlarına Windows cihazlar için cihaz yapılandırma Microsoft Defender Virüsten Koruma. Bu taban çizgisi hakkında daha fazla bilgi için bkz. [Intune'da Uç Nokta için Microsoft Defender'ı yapılandırma](/mem/intune/protect/advanced-threat-protection-configure).|
-| Güvenlik Duvarı'nı güvenlik Windows 10 yapılandırma | İstenmeyen ve yetkisiz ağ trafiğini engelleyen cihazların güvenliğini sağlamak için güvenlik duvarı ilkesi. Bu taban çizgisi hakkında daha fazla bilgi için bkz[. Güvenlik Duvarı'nı yapılandırmaya Windows Defender yöntemleri](/windows/security/threat-protection/windows-firewall/best-practices-configuring).  |
-| Uyumluluk ve sonrası için cihaz Windows 10 ilkesi yapılandırma | Temel Windows gereksinimlerini karşılamak için önceden yapılandırılmış ayarları olan en iyi cihaz ilkesi. Bu taban çizgisi hakkında daha fazla bilgi için bkz. [Koşullu Erişim: Uyumlu veya karma Azure AD'ye katılmış cihaz gerektirme](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device). |
+| Yöneticiler için MFA gerektir | Tüm yöneticiler için çok faktörlü kimlik doğrulaması gerektiren bir Koşullu Erişim ilkesi. Tüm bulut uygulamaları için gereklidir. Bu temel hakkında daha fazla bilgi için bkz [. Koşullu Erişim: Tüm yöneticiler için MFA gerektirme](/azure/active-directory/conditional-access/howto-conditional-access-policy-admin-mfa).|
+| Son kullanıcılar için MFA gerektir | Tüm kullanıcılar için çok faktörlü kimlik doğrulaması gerektiren bir Koşullu Erişim ilkesi.  Tüm bulut uygulamaları için gereklidir. Bu temel hakkında daha fazla bilgi için bkz [. Koşullu Erişim: Tüm kullanıcılar için MFA gerektirme](/azure/active-directory/conditional-access/howto-conditional-access-policy-all-users-mfa). |
+| Eski kimlik doğrulamasını engelle | Eski istemci kimlik doğrulamasını engelleyen bir Koşullu Erişim ilkesi. Bu temel hakkında daha fazla bilgi için bkz. [Koşullu Erişim ile Azure AD'de eski kimlik doğrulamasını engelleme](/azure/active-directory/conditional-access/block-legacy-authentication).|
+| Cihaz kaydını ayarlama | Kiracı cihazlarınızın Microsoft Endpoint Manager kaydolmasına izin vermek için cihaz kaydı. Bu, Azure Active Directory ve Microsoft Endpoint Manager arasında Otomatik Kayıt ayarlanarak yapılır. Bu temel hakkında daha fazla bilgi için bkz. [Windows cihazlar için kaydı ayarlama](/mem/intune/enrollment/windows-enroll). |
+| Windows 10 ve üzeri için Microsoft Defender Virüsten Koruma yapılandırma | Önceden yapılandırılmış Microsoft Defender Virüsten Koruma ayarlarına sahip Windows cihazlar için bir cihaz yapılandırma profili. Bu temel hakkında daha fazla bilgi için bkz[. Intune'da Uç Nokta için Microsoft Defender yapılandırma](/mem/intune/protect/advanced-threat-protection-configure).|
+| Windows 10 ve üzeri için Microsoft Defender Güvenlik Duvarı'nı yapılandırma | İstenmeyen ve yetkisiz ağ trafiğini engelleyerek cihazların güvenliğini sağlamaya yardımcı olan bir güvenlik duvarı ilkesi. Bu temel hakkında daha fazla bilgi için bkz. [Windows Defender Güvenlik Duvarı'nı yapılandırmaya yönelik en iyi yöntemler](/windows/security/threat-protection/windows-firewall/best-practices-configuring).  |
+| Windows 10 ve üzeri için cihaz uyumluluk ilkesi yapılandırma | Temel uyumluluk gereksinimlerini karşılamak için önceden yapılandırılmış ayarlara sahip bir Windows cihaz ilkesi. Bu temel hakkında daha fazla bilgi için bkz [. Koşullu Erişim: Uyumlu veya karma Azure AD'ye katılmış cihaz gerektirme](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device). |
 
 ## <a name="deployment-plans"></a>Dağıtım Planları
 
-Her etkin kiracının, temel dağıtımdan gelen dağıtım adımlarını içeren bir Microsoft 365 Lighthouse vardır. Kiracının dağıtım planına erişmek için, Kiracılar sayfasındaki listeden etkin bir kiracı seçin ve  sonra da Dağıtım Planı **sekmesini** seçin.
+Her etkin kiracının, Microsoft 365 Lighthouse temelden dağıtım adımlarını içeren bir dağıtım planı vardır. Kiracının dağıtım planına erişmek için **Kiracılar** sayfasındaki listeden etkin bir kiracı seçin ve ardından **Dağıtım Planı** sekmesini seçin.
 
 :::image type="content" source="../media/m365-lighthouse-deploy-baselines/deployment-plan-tab.png" alt-text="Dağıtım Planı sekmesinin ekran görüntüsü.":::
 
@@ -60,31 +60,31 @@ Dağıtım Planı sekmesi aşağıdaki bilgileri içerir:
 |---------|---------|
 |Dağıtım adımı     |  Dağıtım adımının açıklaması.       |
 |Durum     |Dağıtım adımının durumu.         |
-|Taban çizgisi     |Dağıtım adımının türetilen temeli.         |
-|Kategori     | Dağıtım adımının Cihazlar, Kimlik veya Veri yönetimiyle ilişkili olup olmadığı.        |
-|Son güncelleştirme    | Dağıtım adımının son güncelleştirme tarihi.        |
+|Temel     |Dağıtım adımının türetildiği temel.         |
+|Kategori     | Dağıtım adımının Cihazları, Kimliği veya Verileri yönetmeyle ilişkili olup olmadığı.        |
+|Son güncelleştirme    | Dağıtım adımının son güncelleştirildiği tarih.        |
 
 
 Dağıtım Planı sekmesi aşağıdaki seçenekleri de içerir:
 
-- **Dışarı aktar:** Dağıtım adımı verilerini virgülle ayrılmış değerler (Excel) dosyasına dışarı .csv seçin.
-- **Yenile:** En güncel dağıtım adımı verilerini almak için bunu seçin.
-- **Arama:** Listede belirli bir dağıtım adımını hızla bulmak için anahtar sözcükleri girin.
+- **Ihracat:** Dağıtım adımı verilerini virgülle ayrılmış Excel değerler (.csv) dosyasına aktarmak için seçin.
+- **Yenileme:** En güncel dağıtım adımı verilerini almak için öğesini seçin.
+- **Arama:** Listede belirli bir dağıtım adımını hızla bulmak için anahtar sözcükler girin.
 
 ## <a name="deployment-steps-and-processes"></a>Dağıtım adımları ve işlemleri
 
-Her kiracının dağıtım planı, temel dağıtımdan Microsoft 365 Lighthouse içerir. Her dağıtım adımı, dağıtım adımının gereksinimlerini karşılamak için tamamlanması gereken bir veya daha fazla işlemden oluşur. Yeni bir kiracı etkin olduğunda, dağıtım adımları ve işlemleriyle ilişkilendirilmiş dağıtım etkinliklerini tamamlamanız gerekir.
+Her kiracının dağıtım planı, Microsoft 365 Lighthouse temelden dağıtım adımlarını içerir. Her dağıtım adımı, tamamlanması gereken bir veya daha fazla işlem içerir. Yeni bir kiracı etkin hale geldiğinde, dağıtım adımları ve işlemleriyle ilişkili dağıtım etkinliklerini tamamlamanız gerekir.
 
 Her dağıtım adımı için aşağıdaki eylemleri gerçekleştirebilirsiniz:
 
 |Eylem  |Açıklama  |
 |---------|---------|
-| Paylaşma    |  Dağıtım Adımı'nın içeriğinin bir bağlantı veya e-postayla paylaşılıyor olması için olanak sağlar.    |
-| Gözden geçirme ve dağıtma    |  Kullanıcının şunları şunları şunları sağlar: <ul><li>Desteklandığında, ayarları kiracıya dağıtmadan dağıtım adımını yapılandırma ayarlarıyla var olan ilkelerde yer alan ayarlarla karşılaştırın.<br>Aşağıdaki dağıtım adımları karşılaştırmayı destekler:</br><ul><li>Uyumluluk ve sonrası için cihaz Windows 10 ilkesi yapılandırma</li><li>Son kullanıcılar için MFA gerektirme</li><li>Yöneticiler için MFA gerektirme</li><li>Eski kimlik doğrulamayı engelle</li></ul></li> <li>Yapılandırma ayarlarını kiracıya dağıtın.</li></ul>**Not:** Ayarları kiracıya dağıtmadan karşılaştırma olanağını desteklemeen adımlar, yapılandırma ayarlarını gözden geçirmenizi ve bunları dağıtmanizi sağlar.|
-| Eylem planı durumunu güncelleştirme    |  Kullanıcının, dağıtım adımı için eylem planının durumunu bildirmesini sağlar.      |
+| Paylaşma    |  Dağıtım Adımı'nın içeriğinin bir bağlantı veya e-posta ile paylaşılabilmesini sağlar.    |
+| Gözden geçirme ve dağıtma    |  Kullanıcının şunları etkinleştirmesini sağlar: <ul><li>Desteklendiğinde, ayarları kiracıya dağıtmadan dağıtım adımındaki yapılandırma ayarlarını mevcut ilkelerdeki ayarlarla karşılaştırın.<br>Aşağıdaki dağıtım adımları karşılaştırmayı destekler:</br><ul><li>Windows 10 ve üzeri için cihaz uyumluluk ilkesi yapılandırma</li><li>Son kullanıcılar için MFA gerektir</li><li>Yöneticiler için MFA gerektir</li><li>Eski kimlik doğrulamasını engelle</li></ul></li> <li>Yapılandırma ayarlarını kiracıya dağıtın.</li></ul>**Not:** Ayarları kiracıya dağıtmadan karşılaştırma özelliğini desteklemeyen adımlar, yapılandırma ayarlarını gözden geçirmenize ve dağıtmanıza olanak tanır.|
+| Eylem planı durumunu güncelleştirme    |  Kullanıcının dağıtım adımı için eylem planının durumunu bildirmesini sağlar.      |
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Temel Microsoft 365 Lighthouse dağıtma](m365-lighthouse-deploy-baselines.md) (makale)\
-[Ortak Koşullu Erişim ilkeleri](/azure/active-directory/conditional-access/concept-conditional-access-policy-common) (makale)\
+[Microsoft 365 Lighthouse temellerini dağıtma](m365-lighthouse-deploy-baselines.md) (makale)\
+[Yaygın Koşullu Erişim ilkeleri](/azure/active-directory/conditional-access/concept-conditional-access-policy-common) (makale)\
 [Microsoft 365 Lighthouse SSS](m365-lighthouse-faq.yml) (makale)

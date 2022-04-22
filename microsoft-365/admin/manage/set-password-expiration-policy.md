@@ -25,78 +25,78 @@ search.appverid:
 - MOE150
 - GEA150
 ms.assetid: 0f54736f-eb22-414c-8273-498a0918678f
-description: Bir yöneticinin, iş, okul veya kar amacı gütmeyen kuruluş için parola süre sonu ilkesi ayarlamasını Microsoft 365 yönetim merkezi.
-ms.openlocfilehash: 9ba871a166169a0125b68808c124b10802424dfd
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+description: Bir yöneticinin Microsoft 365 yönetim merkezi'da işletmeniz, okuluniz veya kar amacı gütmeyen kuruluşunuz için parola süre sonu ilkesi ayarlamayı öğrenin.
+ms.openlocfilehash: ed94cb8bc3bdcc1c1f30c6cb9bf56907c83de41e
+ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63011829"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "65022349"
 ---
 # <a name="set-the-password-expiration-policy-for-your-organization"></a>Kuruluşunuzun parola süre sonu ilkesini belirleyin
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Bu makale, bir işletme, okul veya kar amacı gütmeyen kuruluş için parola süre sonu ilkesi belirleyen kişilere yöneliktir. Bu adımları tamamlamak için yönetici hesabınızla oturum Microsoft 365 gerekir. [Yönetici hesabı nedir?](/microsoft-365/admin/add-users/about-admin-roles).
+Bu makale, bir işletme, okul veya kar amacı gütmeyen kuruluş için parola süre sonu ilkesi belirleyen kişilere yöneliktir. Bu adımları tamamlamak için Microsoft 365 yönetici hesabınızla oturum açmanız gerekir. [Yönetici hesabı nedir?](/microsoft-365/admin/add-users/about-admin-roles).
 
-Yönetici olarak, kullanıcı parolalarının süresinin belirli sayıda gün sonunda dolmasını sağlayabilir veya parolaları süresi hiçbir zaman dolmayacak şekilde ayarlayabilirsiniz. Varsayılan olarak, parolaların süresi hiç dolmay olarak ayarlanmıştır.
+Yönetici olarak, kullanıcı parolalarının süresinin belirli sayıda gün sonunda dolmasını sağlayabilir veya parolaları süresi hiçbir zaman dolmayacak şekilde ayarlayabilirsiniz. Varsayılan olarak, kuruluşunuz için parolaların süresi hiçbir zaman dolmaz olarak ayarlanır.
 
-Güncel araştırma, zorunlu parola değişikliklerinin kesinlikle yarardan çok zarara neden olduğunu göstermektedir. Bunlar, kullanıcıları daha zayıf parolalar kullanmaya, parolaları yeniden kullanmaya ya da saldırganlar tarafından kolayca tahmin edilebilecek şekilde güncellemeye itmektedir. Çok faktörlü kimlik [doğrulamasını etkinleştirmenizi öneririz](../security-and-compliance/set-up-multi-factor-authentication.md). Parola ilkesi hakkında daha fazla bilgi edinmek için Parola ilkesi [önerileri'ne göz atabilirsiniz](../misc/password-policy-recommendations.md).
+Güncel araştırma, zorunlu parola değişikliklerinin kesinlikle yarardan çok zarara neden olduğunu göstermektedir. Bunlar, kullanıcıları daha zayıf parolalar kullanmaya, parolaları yeniden kullanmaya ya da saldırganlar tarafından kolayca tahmin edilebilecek şekilde güncellemeye itmektedir. [Çok faktörlü kimlik doğrulamasını](../security-and-compliance/set-up-multi-factor-authentication.md) etkinleştirmenizi öneririz. Parola ilkesi hakkında daha fazla bilgi edinmek için [Bkz. Parola ilkesi önerileri](../misc/password-policy-recommendations.md).
 
-Bu adımları gerçekleştirmek [için genel](../add-users/about-admin-roles.md) yönetici olmak gerekir.
+Bu adımları gerçekleştirmek için [genel yönetici](../add-users/about-admin-roles.md) olmanız gerekir.
 
 Kullanıcıysanız, parolanızı süresi hiç dolmayacak şekilde ayarlamak için gereken izinleriniz yoktur. İş veya okulunuzun teknik desteğinden, bu makaledeki adımları sizin için uygulamalarını isteyin.
 
 > [!TIP]
-> Bu konudaki adımlarda yardıma ihtiyacınız varsa, [Microsoft küçük işletme uzmanıyla çalışmayı göz önünde bulundurabilirsiniz](https://go.microsoft.com/fwlink/?linkid=2186871). İş Yardımı ile, işe alımtan günlük kullanıma kadar işlerinizi büyüttükçe siz ve çalışanlarınız küçük işletme uzmanlarına 24 saat erişim elde ediyor.
+> Bu konuda verilen adımlarla ilgili yardıma ihtiyacınız varsa[bir Microsoft küçük işletme uzmanıyla çalışmayı](https://go.microsoft.com/fwlink/?linkid=2186871) göz önünde bulundurun. İşletme Yardımı ile, işletmenizi büyütürken işe alımdan gündelik kullanıma kadar her aşamada siz ve çalışanlarınız günün 24 saati küçük işletme uzmanlarına erişebilirsiniz.
 
 ## <a name="set-password-expiration-policy"></a>Parola süre sonu ilkesini ayarlama
 
 Belirli bir süre sonra kullanıcı parolalarının süresinin dolmasını ayarlamak istiyorsanız aşağıdaki adımları izleyin.
 
-1. Kuruluş Microsoft 365 yönetim merkezi Altında Güvenlik ayarları <a href="https://go.microsoft.com/fwlink/p/?linkid=2072756" target="_blank">**&** gizlilik</a> **sekmesine Ayarlar**.
+1. Microsoft 365 yönetim merkezi Kuruluş <a href="https://go.microsoft.com/fwlink/p/?linkid=2072756" target="_blank">**Ayarlar altındaki Güvenlik & gizlilik** sekmesine</a> gidin.
 
-    Genel yönetici değilseniz, Güvenlik ve gizlilik seçeneğini görmüyorsanız.
+    Genel yönetici veya güvenlik yöneticisi değilseniz Güvenlik ve gizlilik seçeneğini görmezsiniz.
   
 1. **Parola süre sonu ilkesini** seçin.
   
-1. Kullanıcıların parolalarını değiştirmek zorunda açmalarını istemiyorsanız, Kullanıcı parolalarını süresi dolmak üzere birkaç gün sonra süresi dolacak şekilde **ayarla'nın yanındaki kutunun işaretini kaldırın**.
+1. Kullanıcıların parolaları değiştirmesini istemiyorsanız, **Kullanıcı parolalarını birkaç gün sonra sona erecek şekilde ayarla'nın** yanındaki kutunun işaretini kaldırın.
 
 1. Parolaların ne sıklıkla süre sonunun geleceğini tuşlayın. 14 ile 730 arasında bir gün sayısı seçin.
   
 1. İkinci kutuya, kullanıcılara parola süresinin dolacağının ne zaman bildirileceğini yazın ve sonra **Kaydet**’e tıklayın. 1 ile 30 arasında bir gün sayısı seçin.
 
 > [!IMPORTANT]
-> Parola süre sonu bildirimleri artık web uygulamaları veya Office yönetim merkezinde [desteklenmiyor](https://portal.office.com).
+> Parola süre sonu bildirimleri artık Office web uygulamalarında veya [yönetim merkezinde desteklenmemektedir](https://portal.office.com).
   
 ## <a name="important-things-you-need-to-know-about-the-password-expiration-feature"></a>Parola süre sonu özelliği hakkında bilmeniz gereken önemli noktalar
   
-Yalnızca Outlook uygulamasını kullanan kişilerin, önbellekte süresi dolana kadar Microsoft 365 parolalarını sıfırlamaları zorunlu olmayacaktır. Bu, gerçek sona erme tarihinden sonra birkaç gün sürebilir. Bu durumun yönetici düzeyinde geçici çözümü yoktur.
+Yalnızca Outlook uygulamasını kullanan kişiler, önbellekte süresi dolana kadar Microsoft 365 parolalarını sıfırlamak zorunda kalmaz. Bu, gerçek sona erme tarihinden sonra birkaç gün sürebilir. Bu durumun yönetici düzeyinde geçici çözümü yoktur.
 
 ## <a name="prevent-last-password-from-being-used-again"></a>Son parolanın yeniden kullanılmasını engelleme
 
-Kullanıcılarının eski parolaları geri dönüşümlerini engellemek için şirket içi Active Directory'de (AD) parola geçmişini zorlayarak bunu yapmaya devam edin. Bkz [. Özel parola ilkesi oluşturma](/azure/active-directory-domain-services/password-policy#create-a-custom-password-policy).
+Kullanıcılarınızın eski parolaları geri dönüştürmesini engellemek istiyorsanız, şirket içi Active Directory (AD) içinde parola geçmişini zorunlu kılarak bunu yapabilirsiniz. Bkz. [Özel parola ilkesi oluşturma](/azure/active-directory-domain-services/password-policy#create-a-custom-password-policy).
 
-Azure AD'de, kullanıcı bir parolayı değiştirse son parola yeniden kullanılamaz. Parola ilkesi, doğrudan Azure AD'de oluşturulan ve yönetilen tüm kullanıcı hesaplarına uygulanır. Bu parola ilkesi değiştirilemez. Bkz [. Azure AD parola ilkeleri](/azure/active-directory/authentication/concept-sspr-policy#password-policies-that-only-apply-to-cloud-user-accounts).
+Azure AD'de, kullanıcı parolayı değiştirdiğinde son parola yeniden kullanılamaz. Parola ilkesi, doğrudan Azure AD'de oluşturulan ve yönetilen tüm kullanıcı hesaplarına uygulanır. Bu parola ilkesi değiştirilemez. Bkz. [Azure AD parola ilkeleri](/azure/active-directory/authentication/concept-sspr-policy#password-policies-that-only-apply-to-cloud-user-accounts).
 
-## <a name="synchronize-user-passwords-hashes-from-an-on-premises-active-directory-to-azure-ad-microsoft-365"></a>Kullanıcı parola karmalarını şirket içi Active Directory'den Azure AD'ye (Kullanıcı Microsoft 365) eşitleme
+## <a name="synchronize-user-passwords-hashes-from-an-on-premises-active-directory-to-azure-ad-microsoft-365"></a>Kullanıcı parola karmalarını bir şirket içi Active Directory Azure AD(Microsoft 365) ile eşitleme
 
-Bu makale, yalnızca bulut kullanan kullanıcıların (Azure AD) süre sonu ilkesini ayarlamaya yöneliktir. Parola karması eşitlemesi, geçişli kimlik doğrulama veya ADFS gibi şirket içi federasyon kullanan karma kimlikli kullanıcılar için geçerli değildir.
+Bu makale, yalnızca bulut kullanan kullanıcıların (Azure AD) süre sonu ilkesini ayarlamaya yöneliktir. Parola karması eşitleme, doğrudan kimlik doğrulaması veya ADFS gibi şirket içi federasyon kullanan karma kimlik kullanıcıları için geçerli değildir.
   
 Kullanıcı parola karmalarını şirket içi AD'den Azure AD'ye eşitlemeyi öğrenmek için bkz. [Azure AD Connect eşitlemesiyle parola karması eşitlemesi gerçekleştirme](/azure/active-directory/hybrid/how-to-connect-password-hash-synchronization).
 
-## <a name="password-policies-and-account-restrictions-in-azure-active-directory"></a>E-postada parola ilkeleri ve hesap Azure Active Directory
+## <a name="password-policies-and-account-restrictions-in-azure-active-directory"></a>Azure Active Directory'da parola ilkeleri ve hesap kısıtlamaları
 
-Azure Active Directory'de daha fazla parola ilkeleri ve kısıtlaması kullanabilirsiniz. Daha fazla [bilgi için parola ilkeleri ve hesap kısıtlamaları Azure Active Directory](/azure/active-directory/authentication/concept-sspr-policy) göz atabilirsiniz.
+Azure Active Directory'de daha fazla parola ilkesi ve kısıtlama ayarlayabilirsiniz. Daha fazla bilgi için [Azure Active Directory'daki Parola ilkeleri ve hesap kısıtlamaları'ne](/azure/active-directory/authentication/concept-sspr-policy) göz atın.
 
-## <a name="update-password-policy"></a>Parolayı güncelleştirme İlkesi
+## <a name="update-password-policy"></a>Parola İlkesini güncelleştirme
 
-Aşağıdaki Set-MsolPasswordPolicy cmdlet'i, belirtilen etki alanı veya kiracının parola ilkesine güncelleştirme sağlar ve parolanın değişmeden önce geçerli olduğu süresini belirtir.
+Set-MsolPasswordPolicy cmdlet'i, belirtilen etki alanı veya kiracının parola ilkesini güncelleştirir ve parolanın değiştirilmesi gerekmeden önce geçerli kaldığı süreyi gösterir.
 
-Belirli bir etki alanı veya kiracı için parola ilkesi güncelleştirme hakkında bilgi edinmek için [bkz. Set-MsolPasswordPolicy](/powershell/module/msonline/set-msolpasswordpolicy).
+Belirli bir etki alanı veya kiracı için parola ilkesinin nasıl güncelleştirildiğini öğrenmek için bkz [. Set-MsolPasswordPolicy](/powershell/module/msonline/set-msolpasswordpolicy).
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Kullanıcıların kendi parolalarını sıfırlamasına izin verme](../add-users/let-users-reset-passwords.md) (makale)/
+[Kullanıcıların kendi parolalarını sıfırlamasına izin ver](../add-users/let-users-reset-passwords.md) (makale)/
 
 [Parolaları sıfırlama](../add-users/reset-passwords.md) (makale)
