@@ -42,7 +42,7 @@
           href: device-onboarding-script.md
         - name: Kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarının katılımı
           href: device-onboarding-vdi.md
-    - name: macOS cihazlarının katılımı (önizleme)
+    - name: macOS cihazlarının katılımı
       items:
         - name: macOS cihazlarının Microsoft 365'e katılımına genel bakış
           href: device-onboarding-macos-overview.md
