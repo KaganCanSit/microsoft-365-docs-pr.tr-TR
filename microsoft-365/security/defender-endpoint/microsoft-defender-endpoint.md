@@ -17,12 +17,12 @@ ms.collection:
 ms.custom: intro-overview
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 3a67d73475301096df8be691f2c5e0dc6db23db8
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: 77766c153582f519aa0ba9853d18c216092747bc
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64862202"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65092315"
 ---
 # <a name="microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender
 
@@ -81,8 +81,8 @@ Uç Nokta için Defender, Windows 10 ve Microsoft'un sağlam bulut hizmetinde ye
 > - Uç Nokta için Microsoft Defender son MITRE değerlendirmesinde sektör lideri optik ve algılama özelliklerini göstermiştir. Okuma: [MITRE ATT&CK tabanlı değerlendirmeden Analizler](https://cloudblogs.microsoft.com/microsoftsecure/2018/12/03/insights-from-the-mitre-attack-based-evaluation-of-windows-defender-atp/).
 
 
->[!IMPORTANT]
->Windows olmayan platformlardaki özellikler, Windows için olandan farklı olabilir. Windows olmayan platformlarda kullanılabilen özellikler hakkında daha fazla bilgi için bkz. [Windows olmayan platformlar için Uç Nokta için Microsoft Defender](/security/defender-endpoint/non-windows).
+> [!IMPORTANT]
+> Windows olmayan platformlardaki özellikler, Windows için olandan farklı olabilir. Windows olmayan platformlarda kullanılabilen özellikler hakkında daha fazla bilgi için bkz. [Windows olmayan platformlar için Uç Nokta için Microsoft Defender](/microsoft-365/security/defender-endpoint/non-windows).
 
 <a name="tvm"></a>
 
@@ -153,7 +153,7 @@ Uç Nokta için Defender, aşağıdakiler de dahil olmak üzere çeşitli Micros
 
 **[Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-defender)**
 
-Microsoft 365 Defender ile Uç Nokta için Defender ve çeşitli Microsoft güvenlik çözümleri gelişmiş saldırıları algılamak, önlemek, araştırmak ve otomatik olarak yanıtlamak için uç nokta, kimlik, e-posta ve uygulamalar arasında yerel olarak tümleşen birleşik bir ihlal öncesi ve sonrası kurumsal savunma paketi oluşturur.
+Microsoft 365 Defender, Uç Nokta için Defender ve çeşitli Microsoft güvenlik çözümleriyle gelişmiş saldırıları algılamak, önlemek, araştırmak ve otomatik olarak yanıtlamak için uç nokta, kimlik, e-posta ve uygulamalar arasında yerel olarak tümleşen birleşik bir ihlal öncesi ve sonrası kurumsal savunma paketi oluşturur.
 
 
 ## <a name="training-for-security-analysts"></a>Güvenlik analistleri için eğitim

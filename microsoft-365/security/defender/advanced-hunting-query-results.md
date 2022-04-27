@@ -20,12 +20,12 @@ ms.collection:
 - m365initiative-m365-defender
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: 0bfec0b56a67b1242d8dfd76b845aa273a76d27e
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: cb17e2a3624471031eb4f72199705d6b8fe06979
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64667262"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65092877"
 ---
 # <a name="work-with-advanced-hunting-query-results"></a>Gelişmiş tehdit avcılığı sorgu sonuçlarıyla çalışma
 
@@ -42,7 +42,7 @@ Hassas bilgiler döndürmek için [gelişmiş tehdit avcılığı](advanced-hunt
 - Sonuçları tablo veya grafik olarak görüntüleme
 - Tabloları ve grafikleri dışarı aktarma
 - Ayrıntılı varlık bilgilerini detaya gitme
-- Sorgularınızı doğrudan sonuçlardan ayarlama veya filtre uygulama
+- Sorgularınızı doğrudan sonuçlardan ayarlama
 
 ## <a name="view-query-results-as-a-table-or-chart"></a>Sorgu sonuçlarını tablo veya grafik olarak görüntüleme
 
@@ -52,12 +52,12 @@ Varsayılan olarak, gelişmiş avcılık sorgu sonuçlarını tablosal veriler o
 |--|--|
 | **Tablo** | Sorgu sonuçlarını tablo biçiminde görüntüler |
 | **Sütun grafik** | X ekseninde bir dizi benzersiz öğeyi, yükseklikleri başka bir alandaki sayısal değerleri temsil eden dikey çubuklar olarak işler |
-| **Yığılmış sütun grafik** | X ekseninde bir dizi benzersiz öğeyi, yükseklikleri bir veya daha fazla alandan sayısal değerleri temsil eden yığılmış dikey çubuklar olarak işler |
 | **Pasta grafik** | Benzersiz öğeleri temsil eden bölüm pastalarını işler. Her pastanın boyutu başka bir alandaki sayısal değerleri temsil eder. |
-| **Halka grafik** | Benzersiz öğeleri temsil eden bölümsel yayları işler. Her yay uzunluğu başka bir alandan sayısal değerleri temsil eder. |
 | **Çizgi grafik** | Bir dizi benzersiz öğe için sayısal değerleri çizer ve çizilen değerleri bağlar |
 | **Dağılım grafiği** | Bir dizi benzersiz öğe için sayısal değerler çizer |
 | **Alan grafiği** | Bir dizi benzersiz öğe için sayısal değerler çizer ve çizilen değerlerin altındaki bölümleri doldurur |
+| **Yığılmış alan grafiği** | Bir dizi benzersiz öğe için sayısal değerler çizer ve doldurulmuş bölümleri çizilen değerlerin altına yığır  |
+| **Zaman grafiği** | Değerleri doğrusal zaman ölçeğine göre sayarak çizer |
 
 ### <a name="construct-queries-for-effective-charts"></a>Etkin grafikler için sorgu oluşturma
 

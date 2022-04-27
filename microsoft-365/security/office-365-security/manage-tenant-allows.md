@@ -16,12 +16,12 @@ ms.collection:
 description: Yöneticiler, güvenlik portalındaki Kiracı İzin Ver/Engelle Listesi'nde izin vermeleri yapılandırmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: ad2a55d19f60bf310b62ac13dfbe2563709673d2
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: ad2ef693848b664be6ec9b48cc4fc320a8b4b9c2
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64970957"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65090154"
 ---
 # <a name="add-allows-in-the-tenant-allowblock-list"></a>Kiracı İzin Verilenler/Engellenenler Listesine izinler ekleme
 
@@ -117,7 +117,7 @@ Microsoft 365 Defender **Gönderiler** sayfasında Dosyalara İzin Ver.
    - **Kimlik sahtekarı türü**: Aşağıdaki değerlerden birini seçin:
      - **İç**: Sahte gönderen, kuruluşunuza ait bir etki alanındadır ( [kabul edilen bir etki alanı](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains)).
      - **Dış**: Sahte gönderen bir dış etki alanında.
-   - **Eylem**: **İzin Ver** veya **Engelle'yi** seçin.
+   - **Eylem**: **İzin Ver'i** seçin.
 
 4. İşiniz bittiğinde **Ekle'ye** tıklayın.
 

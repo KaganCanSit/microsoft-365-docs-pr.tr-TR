@@ -1,14 +1,14 @@
 ---
-title: Güvenlik önerileri kullanıcılarınızı nasıl etkileyebilir?
+title: Microsoft 365 İş Ekstra işletmenize nasıl yardımcı olur?
 f1.keywords:
 - NOCSH
 ms.author: deniseb
 author: denisebmsft
-manager: scotv
+manager: dansimp
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection:
 - Adm_O365
 - M365-subscription-management
@@ -23,63 +23,70 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Kullanıcılarınızı nasıl etkileyeceğini Microsoft 365 İş Ekstra için güvenlik önerilerini ve verilerinizi korumayı öğrenin.
-ms.openlocfilehash: 5704e4c6b0675e8d69ffb2a81b8b6d7bf57bb0b4
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Microsoft 365 İş Ekstra işletmenize üretkenlik ve güvenlik konusunda nasıl yardımcı olduğunu öğrenin.
+ms.openlocfilehash: f9501ce8a478af45d8d1b79db1411575636eda36
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63704992"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098140"
 ---
-# <a name="how-security-recommendations-affect-your-users"></a>Güvenlik önerileri kullanıcılarınızı nasıl etkiler?
+# <a name="how-microsoft-365-business-premium-helps-your-business"></a>Microsoft 365 İş Ekstra işletmenize nasıl yardımcı olur?
 
-Bu çözümde yer alan Microsoft 365 için güvenlik önerileri, bilgisayar korsanlarının ortamınıza erişim kazanmasını çok daha zorlaştırır. Bu sorunun en iyi şekilde karşılandır olması, kullanıcılarının bu daha güvenli ortamda nasıl çalışacaklarını biliyor olması gerekir. Biraz daha sabrın gerekli olduğunu anlıyoruz, ancak organizasyonlarınızı korumanız değerlidir.
+Microsoft 365 İş Ekstra, küçük ve orta ölçekli işletmelere eskisinden daha verimli ve daha güvenli çalışma gücü veren uygun maliyetli bir çözümdür. Bu makalede, Microsoft 365 İş Ekstra işletmenize nasıl yardımcı olabileceği açıklanır ve şu bölümler yer alır:
 
-:::image type="content" source="media/m365-democracy-users.png" alt-text="Çizim, cihazlar için önemli noktaları özetler.":::
+- [Video: Microsoft 365 İş Ekstra en iyi 5 avantajı](#video-top-5-benefits-of-microsoft-365-business-premium)
+- İşletmenizi daha güvenli bir şekilde, cihazlar arasında ve hemen her yerden çalıştırmanızı sağlayan [üretkenlik ve gelişmiş güvenlik özellikleri](#productivity-and-security)
+- [Ekibinizi ve tüm personelinizi](#resources-to-train-your-users) daha güvenli bir ortamı korurken verimli çalışma konusunda eğitecek kaynaklar
+- Farklı tehdit türlerini ve günlük çalışmanızda bunlara karşı korumayı açıklayan [indirilebilir dijital tehditler kılavuzu](#download-the-digital-threats-guide)
+- [Sonraki adımlar](#next-steps)
 
-## <a name="use-secure-email-practices"></a>Güvenli e-posta uygulamalarını kullanma
+## <a name="video-top-5-benefits-of-microsoft-365-business-premium"></a>Video: Microsoft 365 İş Ekstra en iyi 5 avantajı
 
-Tüm kullanıcıların e-postalarını güvenli tutmaya yardımcı olmak için bu e-posta uygulamalarından haberdar olması ve bu uygulamaları kullanıyor olması gerekir:
+Microsoft 365 İş Ekstra işletmenizin daha üretken ve güvenli olmasını nasıl yardımcı olduğunu öğrenmek için aşağıdaki videoyu izleyin: <p>
 
-- Doğrulayıcı uygulamasıyla çok faktörlü kimlik doğrulamasını kullanmak için e-postayı ayarlayın.
-- Güvenli e-postaları doğrulayın ve Kimlik Koruması için Defender'da Gelişmiş Kimlik Avı'Office 365 bakın.
-- Yalnızca güvenli bağlantıları ve ekleri, Bağlantıları ve Ekleri Kasa doğrulandığında Kasa açın.
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4Pq0G]
 
-Çok faktörlü kimlik [doğrulaması ve kimlik avı ve](m365bp-multifactor-authentication.md) diğer [saldırılar hakkında daha fazla bilgi öğrenin](m365-campaigns-phishing-and-attacks.md).
+> [!TIP]
+> Daha fazla bilgi için bkz. [Microsoft 365 İş Ekstra](https://www.microsoft.com/microsoft-365/business/microsoft-365-business-premium?activetab=pivot:overviewtab).
 
-Size [ve ekibinizin](m365-campaigns-protect-campaign-infographic.md) üyelerine ipuçları olan bir bilgi görseli indirin.
+## <a name="productivity-and-security"></a>Üretkenlik ve güvenlik
 
-## <a name="set-up-iphones-and-android-devices"></a>iPhone ve Android cihazlarını ayarlama
+Microsoft 365 İş Ekstra sık kullandığınız Office üretkenlik uygulamalarını, Microsoft Teams gibi işbirliği araçlarını ve kurumsal düzeyde güvenlik, kimlik ve cihaz yönetimi çözümlerini içerir. Microsoft 365 İş Ekstra ile işinizi daha güvenli bir şekilde, cihazlar arasında ve hemen her yerden çalıştırabilirsiniz. Microsoft 365 İş Ekstra şunları içerir:
 
-Ortamınıza eklerken iPhone ve Android cihazlarını ayarlamanın güvenli [bir şekilde çalışması için tüm kullanıcıların](../business/set-up-mobile-devices.md?toc=%2Fmicrosoft-365%2Fcampaigns%2Ftoc.json) birkaç dakikası gerekir:
+- Şirketinizin Windows cihazları için **Windows 10 ve 11** Pro yükseltmeleri
+- Bilgisayarlarınıza (Windows ve Mac) ve mobil cihazlarınıza (Windows, iOS ve Android) yükleyebileceğiniz Word, Excel ve PowerPoint gibi **uygulamaları** Office. Ayrıca Windows cihazlarınız için Publisher ve Access'e de sahip olursunuz.
+- **E-posta, takvimler,** toplantılar ve işbirliği için Microsoft Teams, Outlook ve Exchange
+- İş dosyalarınızı **depolamak ve yönetmek için SharePoint ve OneDrive**
+- Kimlik avı, kötü amaçlı yazılım ve fidye yazılımı koruması gibi **tehditlere karşı gelişmiş** koruma
+- Sizin ve müşterilerinizin hassas bilgilerine erişimi korumak ve denetlemek için **uyumluluk ve gizlilik özellikleri**
+- Güvenlik ekibinizin bilgisayarları, tabletleri ve telefonları güncel ve güvenli tutmaya yardımcı olmasını sağlayan **cihaz yönetimi özellikleri**
 
-- Cihazları, doğrulayıcı uygulamasıyla çok faktörlü kimlik doğrulamasını kullanmak üzere ayarlayın.
-- Outlook Mobile, Word, OneDrive ve uygulama mağazasından Microsoft uygulamaları da dahil olmak üzere Microsoft mobil uygulamalarını kullanın. iPhone ve Android cihazlarda bulunan yerel posta uygulamaları destek kapsamında değildir. 
-- Kullanıcıların cihaz kilidini açması için PIN gerektir.
+> [!TIP]
+> Microsoft 365 İş Ekstra neler içerdiği hakkında daha ayrıntılı bilgi için bkz. [Küçük ve Orta Ölçekli İşletmeler için Microsoft 365 Kullanıcı Aboneliği Paketleri](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWR6bM).
 
-Bunları ayardikten sonra, kullanıcılarınıza posta da dahil olmak üzere bu cihazlardan kuruluş verilerinize erişirken doğrulayıcı uygulamayı kullanmaları istenir.
+## <a name="resources-to-train-your-users"></a>Kullanıcılarınızı eğitmek için kaynaklar
 
-## <a name="keep-byod-macs-and-windows-10-pcs-fresh"></a>BYOD Mac'leri ve Windows 10 bilgisayarları yeni tutma
+Bu kitaplıkta sağlanan güvenlik önerileri, siber saldırıların ortamınıza erişmesini çok daha zor hale getirir. Ancak, güvenlik stratejinizin önemli bir parçası, kullanıcıları&mdash; sisteminizi düzenli olarak kullanan şirketinizdeki kişileri eğiterek içerir. Kullanıcılar, ön savunma hattınız olmanıza yardımcı olabilir. Herkesin daha güvenli bir ortamı korurken üretken bir şekilde nasıl çalışılması gerektiğini bilmesi gerekir. 
 
-Ayrıca kullanıcıların birincil iş cihazlarını güncel tutmaları da önemlidir:
+Kuruluşunuzdaki herkesin şunlara yardımcı olması için kaynaklar sağlanır:
 
-- Masaüstü uygulamalarına en son Office yükleyin ve istendiğinde bu güncelleştirmeleri güncel olarak kullanın.
-- İşletim sistemi güncelleştirmeleri, örneğin işletim sistemi güncelleştirmelerini Windows olun.
+- [Cihazları koruyun](m365bp-devices-overview.md)
+- [E-postayı daha güvenli kullanma](m365bp-protect-email-overview.md)
+- [Daha güvenli bir şekilde işbirliği yapma ve bilgi paylaşma](m365bp-collaborate-share-securely.md)
 
-Mac [ve cihazları Windows 10 için](m365bp-protect-pcs-macs.md), temel güvenlik özelliklerinin etkinleştirildiğinden emin olmak kullanıcıların sorumluluğundadır.
+Kullanıcılarınızın işlerinde üretken ve daha güvenli olmalarına yardımcı olmak için bu kitaplıktaki önerileri kullanın.
 
-**TEKMİ veya Mac cihazlarda temel Windows 10 özelliklerini etkinleştirme**
+## <a name="download-the-digital-threats-guide"></a>Dijital tehditler kılavuzunu indirin
 
-|**Windows 10**|**Mac**|
-|:-----|:------|
-|BitLocker cihaz korumasını açma<p><p> Windows Defender açık kalmasını sağlar <p>Güvenlik Duvarı'Windows açma| FileVault'u kullanarak Mac diskini şifreleme <p><p>Güvenilir bir virüsten koruma yazılımı kullanma <p>Güvenlik duvarı korumasını açma|
+Dijital tehditler kılavuzumuzda farklı tehdit türleri ve sizin ve personelinizin bu tehditlere karşı korunmak için yapabilecekleriniz açıklanmaktadır. Siz ve ekibiniz için bu görsel kılavuzu indirin:
 
-Bu öneriler hakkında daha fazla bilgi edinmek için, bkz [. Hesaplarınızı ve cihazlarınızı bilgisayar korsanlarından ve kötü amaçlı yazılımdan koruma](https://support.office.com/article/Protect-your-account-and-devices-from-hackers-and-malware-066d6216-a56b-4f90-9af3-b3a1e9a327d6#ID0EAABAAA=Windows_10).
+[:::image type="content" source="media/m365bp-whatuserscandotosecure.png" alt-text="İndirilebilir kılavuzun küçük resmi.":::](https://download.microsoft.com/download/9/1/f/91fa8f24-9953-4f33-9d87-a95624db5e0b/M365BPWhatCanUsersDoToSecure.pdf)
 
-## <a name="collaborate-using-microsoft-teams-onedrive-sharepoint-online-and-other-tools"></a>Microsoft Teams, OneDrive, SharePoint Online ve diğer araçları kullanarak işbirliği yapma
+[PDF](https://download.microsoft.com/download/9/1/f/91fa8f24-9953-4f33-9d87-a95624db5e0b/M365BPWhatCanUsersDoToSecure.pdf) |  [PowerPoint](https://download.microsoft.com/download/9/1/f/91fa8f24-9953-4f33-9d87-a95624db5e0b/M365BPWhatCanUsersDoToSecure.pptx)
 
-Kullanıcılarınız, kuruluş dosyalarınızı diğer yerlerde paylaşmak ve depolamak cazip Microsoft 365. Microsoft 365 işbirliğini ve güvenli bir şekilde paylaşmayı mümkün olduğunca kolaylaştırır. Dosya [ve videoları dosyanın](share-files-and-videos.md) içinde Microsoft Teams, OneDrive, Stream'den ve hatta dosyanın içinde paylaşabilirsiniz. Bu araçların içinde paylaşmanız, verilerinizin sızdır ızdıramalarını korumanıza yardımcı olur. Kuruluş dışında paylaşımı önlemek için hassas verilere ek koruma abilirsiniz.
+## <a name="next-steps"></a>Sonraki adımlar
 
-## <a name="set-up-managed-windows-10-devices"></a>Yönetilen cihazları Windows 10 ayarlama
+1. [Kampanyalar için](get-microsoft-365-campaigns.md) [Microsoft 365 İş Ekstra](get-microsoft-365-business-premium.md) veya Microsoft 365 alın.
 
-En önemli personel üyelerinizin, yeni edinilen ve yönetmek Windows 10 cihazları kullanmalarını öneririz. Bu cihazları nasıl yönetecek ve [güvenli hale nasıl yöneteceklerini göstereceğiz](../business/set-up-windows-devices.md?toc=/microsoft-365/campaigns/toc.json). Bu, bilgisayar korsanları için en yüksek değerli hedef olan personel üyelerinin en iyi korumayı almalarını sağlar.
+2. [Kurulum işlemini başlatın](m365bp-setup-overview.md).

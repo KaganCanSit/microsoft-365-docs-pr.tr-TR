@@ -2,8 +2,8 @@
 title: Beklemedeki posta kutuları için Kurtarılabilir Öğeler kotasını artırma
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 ms.assetid: a8bdcbdd-9298-462f-b889-df26037a990c
 description: arşiv posta kutusunu etkinleştirin ve Microsoft 365 bir posta kutusunun Kurtarılabilir Öğeler klasörünün boyutunu artırmak için otomatik genişletme arşivlemeyi açın.
-ms.openlocfilehash: 68ef8cfe1751ed5822d99edf9e7efeb4bd3766f2
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: a05851f1019405a495a7b909bf4a8d096227163d
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64999904"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65100819"
 ---
 # <a name="increase-the-recoverable-items-quota-for-mailboxes-on-hold"></a>Beklemedeki posta kutuları için Kurtarılabilir Öğeler kotasını artırma
 

@@ -4,7 +4,7 @@ f1.keywords:
 - NOCSH
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 11/21/2019
 audience: ITPro
 ms.topic: article
@@ -17,110 +17,110 @@ ms.custom:
 - TLGS
 - Ent_TLGs
 ms.assetid: ''
-description: "Özet: Test ortamınız için Azure AD Sorunsuz Çoklu Oturum Açma'Microsoft 365 ve test edin."
-ms.openlocfilehash: 4a420da5251ecef900f2efe9573db1d51a6bd597
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: "Özet: Microsoft 365 test ortamınız için Azure AD Sorunsuz Çoklu Oturum Açma'yi yapılandırın ve test edin."
+ms.openlocfilehash: 2d6af0600044dea59cbcdd9ee51f76c061e3dcd7
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988145"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65093338"
 ---
 # <a name="azure-ad-seamless-single-sign-on-for-your-microsoft-365-test-environment"></a>Microsoft 365 test ortamınız için Azure AD Sorunsuz Çoklu Oturum Açma
 
-*Bu Test Laboratuvarı Kılavuzu, hem kurumsal hem de Microsoft 365 test ortamları için Office 365 Kurumsal kullanılabilir.*
+*Bu Test Laboratuvarı Kılavuzu hem kurumsal hem de Office 365 Kurumsal test ortamları için Microsoft 365 için kullanılabilir.*
 
-Azure AD Sorunsuz Sign-On Çoklu Oturum (Sorunsuz SSO), bilgisayarlarını veya kuruluş ağlarına bağlı cihazlarına bağlı kullanıcılarda otomatik olarak oturumlar. Azure AD Sorunsuz SSO, ek şirket içi bileşenlere gerek kalmadan kullanıcılara bulut tabanlı uygulamalara kolay erişim sağlar.
+Azure AD Sorunsuz Tek Sign-On (Sorunsuz SSO), kuruluş ağına bağlı bilgisayarlarında veya cihazlarında bulunan kullanıcılarda otomatik olarak oturum açar. Azure AD Sorunsuz SSO, kullanıcılara ek şirket içi bileşenlere gerek kalmadan bulut tabanlı uygulamalara kolay erişim sağlar.
 
-Bu makalede, Azure AD Sorunsuz SSO için Microsoft 365 test ortamınızı nasıl yapılandırabilirsiniz?
+Bu makalede Azure AD Sorunsuz SSO için Microsoft 365 test ortamınızı yapılandırma adımları açıklanmaktadır.
 
-Azure AD Sorunsuz SSO'nun ayarlama işlemi iki aşama içerir:
-- [Aşama 1: Test ortamınız için parola Microsoft 365 eşitlemesini yapılandırma](#phase-1-configure-password-hash-synchronization-for-your-microsoft-365-test-environment)
-- [Aşama 2: Azure AD Sorunsuz SSO Bağlan App1'de Azure AD'yi yapılandırma](#phase-2-configure-azure-ad-connect-on-app1-for-azure-ad-seamless-sso)
+Azure AD Sorunsuz SSO'nun ayarlanması iki aşamadan oluşur:
+- [1. Aşama: Microsoft 365 test ortamınız için parola karması eşitlemesini yapılandırma](#phase-1-configure-password-hash-synchronization-for-your-microsoft-365-test-environment)
+- [2. Aşama: Azure AD Sorunsuz SSO için APP1'de Azure AD Bağlan yapılandırma](#phase-2-configure-azure-ad-connect-on-app1-for-azure-ad-seamless-sso)
    
 ![Microsoft bulutu için Test Laboratuvarı Kılavuzları.](../media/m365-enterprise-test-lab-guides/cloud-tlg-icon.png) 
     
 > [!TIP]
-> Kurumsal Test Laboratuvarı Kılavuzu yığınına Microsoft 365 görsel bir harita için Kurumsal Test Laboratuvarı Kılavuzu Yığını [için Microsoft 365'e gidin](../downloads/Microsoft365EnterpriseTLGStack.pdf).
+> Kurumsal Test Laboratuvarı Kılavuzu yığınındaki Microsoft 365 tüm makalelere yönelik görsel bir harita için [kurumsal Test Laboratuvarı Kılavuzu Yığını için Microsoft 365](../downloads/Microsoft365EnterpriseTLGStack.pdf) bölümüne gidin.
   
-## <a name="phase-1-configure-password-hash-synchronization-for-your-microsoft-365-test-environment"></a>Aşama 1: Test ortamınız için parola Microsoft 365 eşitlemesini yapılandırma
+## <a name="phase-1-configure-password-hash-synchronization-for-your-microsoft-365-test-environment"></a>1. Aşama: Microsoft 365 test ortamınız için parola karması eşitlemesini yapılandırma
 
-Karma parola [eşitlemesi için verilen yönergeleri Microsoft 365](password-hash-sync-m365-ent-test-environment.md). 
+[Microsoft 365 için parola karması eşitlemesindeki](password-hash-sync-m365-ent-test-environment.md) yönergeleri izleyin. 
 
-Sonuçta elde edilen yapılandırmanız şöyle görünüyor:
+Sonuçta elde edilen yapılandırmanız şöyle görünür:
   
-![Parola karma eşitlemesi test ortamına sahip sanal kuruluş.](../media/pass-through-auth-m365-ent-test-environment/Phase1.png)
+![Parola karması eşitleme testi ortamı ile sanal kuruluş.](../media/pass-through-auth-m365-ent-test-environment/Phase1.png)
   
-Bu yapılandırma şunları oluşur:
+Bu yapılandırma şunlardan oluşur:
   
-- Deneme Microsoft 365 E5 ücretli abonelik.
-- İnternet'e bağlı, Azure sanal ağının alt ağına DC1, APP1 ve CLIENT1 sanal makinelerinden oluşan basitleştirilmiş bir kuruluş intraneti.
-- Azure AD Bağlan, TESTLAB Active Directory Etki Alanı Hizmetleri (AD DS) etki alanını düzenli aralıklarla Microsoft 365 aboneliğinizin Azure AD kiracısına eşitlemek için APP1'de çalışır.
+- Microsoft 365 E5 deneme sürümü veya ücretli abonelik.
+- Azure sanal ağının alt ağındaki DC1, APP1 ve CLIENT1 sanal makinelerinden oluşan, internete bağlı basitleştirilmiş bir kuruluş intraneti.
+- Azure AD Bağlan, TESTLAB Active Directory Domain Services (AD DS) etki alanını düzenli aralıklarla Microsoft 365 aboneliğinizin Azure AD kiracısıyla eşitlemek için APP1 üzerinde çalışır.
 
-## <a name="phase-2-configure-azure-ad-connect-on-app1-for-azure-ad-seamless-sso"></a>Aşama 2: Azure AD Sorunsuz SSO Bağlan App1'de Azure AD'yi yapılandırma
+## <a name="phase-2-configure-azure-ad-connect-on-app1-for-azure-ad-seamless-sso"></a>2. Aşama: Azure AD Sorunsuz SSO için APP1'de Azure AD Bağlan yapılandırma
 
-Bu aşamada, Azure AD Sorunsuz SSO Bağlan App1'de Azure AD Ad'yi yapılandırın ve çalıştığını doğrulayın.
+Bu aşamada, Azure AD Sorunsuz SSO için APP1'de Azure AD Bağlan yapılandırın ve çalıştığını doğrulayın.
 
-### <a name="configure-azure-ad-connect-on-app1"></a>APP1'te Azure AD Bağlan'yi yapılandırma
+### <a name="configure-azure-ad-connect-on-app1"></a>APP1'de Azure AD Bağlan yapılandırma
 
-1. [Azure portalında](https://portal.azure.com), genel yönetici hesabınızla oturum açın ve SONRA TESTLAB\User1 hesabıyla APP1'e bağlanın.
+1. [Azure portal](https://portal.azure.com) genel yönetici hesabınızla oturum açın ve ARDıNDAN TESTLAB\User1 hesabıyla APP1'e bağlanın.
 
-2. APP1 masaüstünden Azure AD Bağlan.
+2. APP1 masaüstünden Azure AD Bağlan çalıştırın.
 
-3. Hoş Geldiniz **sayfasında Yapılandır'ı** **seçin**.
+3. **Hoş Geldiniz sayfasında** **Yapılandır'ı** seçin.
 
-4. Ek görevler **sayfasında,** Kullanıcı oturum açma **ayarlarını değiştir'i seçin ve** sonra da Sonraki'yi **seçin**.
+4. **Ek görevler** sayfasında **Kullanıcı oturumunu değiştir'i ve ardından İleri'yi** seçin.
 
-5. **Azure AD'Bağlan** oturum açma sayfasında genel yönetici hesabı kimlik bilgilerinizi girin ve Ardından Sonraki'yi **seçin**.
+5. **Azure AD'ye Bağlan** sayfasında genel yönetici hesabı kimlik bilgilerinizi girin ve **İleri'yi** seçin.
 
-6. Kullanıcı oturum **açma sayfasında,** Çoklu oturum açma **etkinleştir'i seçin ve sonra** da Sonraki'yi **seçin**.
+6. **Kullanıcı oturum açma** sayfasında **Çoklu oturum açmayı etkinleştir'i ve ardından İleri'yi** seçin.
 
-7. Çoklu oturum **açma etkinleştir sayfasında Kimlik** bilgilerini **girin'i seçin**.
+7. **Çoklu oturum açmayı etkinleştir** sayfasında **Kimlik bilgilerini girin'i** seçin.
 
-8. Kullanıcı **Windows Güvenliği** **kullanıcı1** ve parolasını girin, Tamam'ı ve sonra **da Sonraki'yi** **seçin**.
+8. **Windows Güvenliği** iletişim kutusunda **user1 ve user1** hesabının parolasını girin, **Tamam'ı** ve ardından **İleri'yi** seçin.
 
-9. Yapılandırmaya **Hazır sayfasında Yapılandır'ı** **seçin**.
+9. **Yapılandırmaya Hazır** sayfasında **Yapılandır'ı** seçin.
 
-10. Yapılandırma tamamlandı **sayfasında Çıkış'ı** **seçin**.
+10. **Yapılandırma tamamlandı** sayfasında **Çıkış'ı** seçin.
 
-11. Azure portalında, sol bölmede Azure Active Directory  > **Azure AD Bağlan**. Sorunsuz çoklu **oturum açma özelliğinin Etkin** olarak görüntülendiğinden **emin olun**.
+11. Azure portal sol bölmede **Azure Active Directory** >  **Azure AD Bağlan'ı** seçin. **Sorunsuz çoklu oturum açma** özelliğinin **Etkin** olarak göründüğünü doğrulayın.
 
-Ardından, abonelik aboneliğiniz için oturum açma becerinizi test user1@testlab <strong>.</strong>\<*your public domain*> kullanıcı adını girin.
+Ardından, user1@testlab ile aboneliğinizde oturum açma özelliğini test edin <strong>.</strong>\<*your public domain*> Kullanıcı1 hesabının kullanıcı adı.
 
-1. APP1 üzerinde Internet Explorer'dan, ayarlar simgesini seçin ve sonra İnternet **Seçenekleri'ni seçin**.
+1. APP1'de Internet Explorer'dan ayarlar simgesini ve ardından **İnternet Seçenekleri'ni** seçin.
  
-2. İnternet **Seçenekleri'nin** altında Güvenlik **sekmesini** seçin.
+2. **İnternet Seçenekleri'nde** **Güvenlik** sekmesini seçin.
 
-3. Yerel **intranet'i** ve ardından Siteler'i **seçin**.
+3. **Yerel intranet'i** ve ardından **Siteler'i** seçin.
 
-4. Yerel **intranet'te** Gelişmiş'i **seçin**.
+4. **Yerel intranet'te** **Gelişmiş'i** seçin.
 
-5. Bu **web sitesini bölgeye ekle'de** **https <span>://</span>** autologon.microsoftazuread-sso.com **AddCloseOKOK'u** >  >  >  **seçin**.
+5. **Bu web sitesini bölgeye ekle bölümüne** **https <span>://</span>autologon.microsoftazuread-sso.com** girin, **EkleTamamTamam'ı** >  >  >  seçin.
 
-6. Bu kez farklı bir hesap belirterek oturum açın ve ardından yeniden oturum açın.
+6. Bu kez farklı bir hesap belirterek oturumu kapatın ve yeniden oturum açın.
 
-7. Oturum açmanız istendiğinde oturum açma <strong>user1@testlab.</strong>\<*your public domain*> seçin ve ardından Sonraki'yi **seçin**. Parola sorulmadan Kullanıcı1 olarak başarıyla oturum açın. Bu, Azure AD Sorunsuz SSO'nun çalıştığını kanıtlar.
+7. Oturum açmanız istendiğinde <strong>user1@testlab belirtin.</strong>\<*your public domain*> adını seçin ve **ardından İleri'yi** seçin. Parola istenmeden Kullanıcı1 olarak başarıyla oturum açmanız gerekir. Bu, Azure AD Sorunsuz SSO'nun çalıştığını kanıtlar.
 
-Kullanıcı1'in TESTLAB AD DS etki alanı için etki alanı yöneticisi izinleri olmasına rağmen, bunun Azure AD için bir genel yönetici olmadığınına dikkat edin. Bu nedenle, bir seçenek olarak **Yönetici** simgesini görmeyebilirsiniz.
+User1'in TESTLAB AD DS etki alanı için etki alanı yöneticisi izinleri olmasına rağmen Azure AD için genel yönetici olmadığını fark edin. Bu nedenle, **yönetici** simgesini bir seçenek olarak görmezsiniz.
 
-Sonuçta elde edilen yapılandırmanız şöyledir:
+Elde edilen yapılandırmanız şunlardır:
 
-![Geçişli kimlik doğrulama test ortamına sahip sanal kuruluş.](../media/pass-through-auth-m365-ent-test-environment/Phase1.png)
+![Doğrudan kimlik doğrulama testi ortamına sahip sanal kuruluş.](../media/pass-through-auth-m365-ent-test-environment/Phase1.png)
 
-Bu yapılandırma şunları oluşur:
+Bu yapılandırma şunlardan oluşur:
 
-- A Microsoft 365 E5 trial or paid subscriptions with the DNS domain testlab.\<*your domain name*> kaydedildi.
-- İnternet'e bağlı, Azure sanal ağının alt ağına DC1, APP1 ve CLIENT1 sanal makinelerinden oluşan basitleştirilmiş bir kuruluş intraneti.
-- Azure AD Bağlan, Microsoft 365 aboneliğinizin Azure AD kiracısı olan hesap ve grupların listesini TESTLAB AD DS etki alanıyla eşitlemek için APP1'te çalışır.
-- Azure AD Sorunsuz SSO etkinleştirildiğinden, sanal intranet'te bilgisayarlar kullanıcı hesabı parolası belirtmeden Microsoft 365 bulut kaynaklarında oturum açabilirsiniz.
+- DNS etki alanı testlab'ine sahip Microsoft 365 E5 deneme sürümü veya ücretli abonelikler.\<*your domain name*> Kayıtlı.
+- Azure sanal ağının alt ağındaki DC1, APP1 ve CLIENT1 sanal makinelerinden oluşan, internete bağlı basitleştirilmiş bir kuruluş intraneti.
+- Azure AD Bağlan, Microsoft 365 aboneliğinizin Azure AD kiracısından TESTLAB AD DS etki alanına hesap ve grup listesini eşitlemek için APP1 üzerinde çalışır.
+- Azure AD Sorunsuz SSO etkinleştirildiğinden, sanal intranetteki bilgisayarlar kullanıcı hesabı parolası belirtmeden Microsoft 365 bulut kaynaklarında oturum açabilir.
 
 ## <a name="next-step"></a>Sonraki adım
 
-Test [ortamınıza](m365-enterprise-test-lab-guides.md#identity) başka kimlik özelliklerini ve özelliklerini keşfedin.
+Test ortamınızdaki ek [kimlik](m365-enterprise-test-lab-guides.md#identity) özelliklerini ve özelliklerini keşfedin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Microsoft 365 Test Laboratuvarı Kılavuzları için kılavuzlar](m365-enterprise-test-lab-guides.md)
+[Kurumsal Test Laboratuvarı Kılavuzları için Microsoft 365](m365-enterprise-test-lab-guides.md)
 
-[Microsoft 365 genel bakış için genel bakış](microsoft-365-overview.md)
+[Microsoft 365 Kurumsal’a genel bakış](microsoft-365-overview.md)
 
-[Microsoft 365 belgeleri için belgeler](/microsoft-365-enterprise/)
+[Kurumsal belgeler için Microsoft 365](/microsoft-365-enterprise/)

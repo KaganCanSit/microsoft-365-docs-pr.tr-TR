@@ -19,13 +19,13 @@ ms.custom:
 - AdminSurgePortfolio
 search.appverid: MET150
 description: İşletmeler için Microsoft 365 aboneliğiniz için kullanıcılardan gelen lisans isteklerini gözden geçirmeyi ve onaylamayı veya reddetmeyi öğrenin.
-ms.date: 06/07/2021
-ms.openlocfilehash: cc1d03717cbdf0ce8768c630044990363feded8a
-ms.sourcegitcommit: e13c8fc28c68422308c9d356109797cfcf6f77be
+ms.date: 04/22/2022
+ms.openlocfilehash: 802b84445c83c2831e5fd88598cc00fb8b0ab867
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/14/2022
-ms.locfileid: "64841800"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098702"
 ---
 # <a name="manage-license-requests"></a>Lisans isteklerini yönetme
 

@@ -1,8 +1,8 @@
 ---
-title: DAP iş ortakları için etki alanı, Windows PowerShell kiraya ekleme
+title: DAP iş ortakları için Windows PowerShell ile istemci kiracısına etki alanı ekleme
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -18,64 +18,64 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
 ms.assetid: f49b4d24-9aa0-48a6-95dd-6bae9cf53d2c
-description: "Özet: Mevcut bir müşteri kiracısına Microsoft 365 etki alanı adı eklemek için PowerShell for Microsoft 365'i kullanın."
-ms.openlocfilehash: 1a121407ebe242747a693084289e972e56e1cbee
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: 'Özet: Mevcut bir müşteri kiracısına alternatif bir etki alanı adı eklemek için Microsoft 365 için PowerShell kullanın.'
+ms.openlocfilehash: c4dcdb34f9065009ccaa77d23222601506b537b5
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62973848"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65099048"
 ---
-# <a name="add-a-domain-to-a-client-tenancy-with-windows-powershell-for-delegated-access-permission-dap-partners"></a>Temsilci Erişim İzni (DAP) iş ortakları için Windows PowerShell hesabı olan bir istemci kiraya etki alanı ekleme
+# <a name="add-a-domain-to-a-client-tenancy-with-windows-powershell-for-delegated-access-permission-dap-partners"></a>TemsilciLi Erişim İzni (DAP) iş ortakları için Windows PowerShell ile istemci kiracısına etki alanı ekleme
 
-*Bu makale hem Yeni hem de Microsoft 365 Kurumsal için Office 365 Kurumsal.*
+*Bu makale hem Microsoft 365 Kurumsal hem de Office 365 Kurumsal için geçerlidir.*
 
-Yeni etki alanlarını daha hızlı bir şekilde kullanmak yerine, yeni etki alanlarını daha hızlı bir şekilde Microsoft 365 için PowerShell'in kirala Microsoft 365 yönetim merkezi.
+Microsoft 365 yönetim merkezi kullanmaktan daha hızlı Microsoft 365 için yeni etki alanları oluşturabilir ve müşterinizin kiracısıyla PowerShell ile ilişkilendirebilirsiniz.
 
-Temsilcili Erişim İzni (DAP) iş ortakları Dağıtım ve Bulut Çözümü Sağlayıcıları (CSP) İş Ortaklarıdır. Bunlar çoğunlukla diğer şirketlere yönelik ağ veya telekom sağlayıcılarıdır. Aboneliklerini Microsoft 365 kendi hizmet tekliflerinde paketler. Microsoft 365 aboneliği satarken, müşteri eğilimlerini yönetip raporlaymalarını sağlamak için müşteri eğilimlerini yönetme (AOBO) izinleri otomatik olarak yapılır.
+Temsilci Erişim İzni (DAP) iş ortakları, Dağıtım ve Bulut Çözümü Sağlayıcıları (CSP) İş Ortaklarıdır. Bunlar genellikle diğer şirketlerin ağ veya telekom sağlayıcılarıdır. Microsoft 365 aboneliklerini müşterilerine sunulan hizmet tekliflerine paketlemektedir. bir Microsoft 365 aboneliği sattıklarında, müşteri kiracılarını yönetebilmeleri ve raporlamaları için otomatik olarak müşteri kiracılarına Adına Yönetme (AOBO) izinleri verilir.
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Başlamadan önce bilmeniz gerekenler
 
-Bu konudaki yordamlar için[, Bağlan'a Microsoft 365 PowerShell'e bağlanmanız gerekir](connect-to-microsoft-365-powershell.md).
+Bu konudaki yordamlar[, PowerShell ile Microsoft 365 için Bağlan](connect-to-microsoft-365-powershell.md) bağlanmanızı gerektirir.
 
-Ayrıca, iş ortağı kiracı yöneticisi kimlik bilgileriniz de gerekir.
+Ayrıca iş ortağı kiracı yöneticisi kimlik bilgilerinize de ihtiyacınız vardır.
 
-Ayrıca aşağıdaki bilgilere de ihtiyacınız var:
+Ayrıca aşağıdaki bilgilere de ihtiyacınız vardır:
 
-- Müşterinizin istediği tam etki alanı adı (FQDN) gerekir.
+- Müşterinizin istediği tam etki alanı adına (FQDN) ihtiyacınız vardır.
 
-- Müşterinin **TenantId'sına ihtiyacınız var**.
+- Müşterinin **TenantId** değeri gerekir.
 
-- FQDN'nin GoDaddy gibi bir İnternet etki alanı adı hizmeti (DNS) kayıt şirketine kaydedilmiş olması gerekir. Etki alanı adını genel olarak kaydetme hakkında daha fazla bilgi için bkz [. Etki alanı adı satın alma](../admin/get-help-with-domains/buy-a-domain-name.md).
+- FQDN, GoDaddy gibi bir İnternet etki alanı adı hizmeti (DNS) kayıt şirketine kayıtlı olmalıdır. Bir etki alanı adını genel olarak kaydetme hakkında daha fazla bilgi için bkz. [Etki alanı adı satın alma](../admin/get-help-with-domains/buy-a-domain-name.md).
 
-- DNS kayıt şirketiniz için kayıtlı DNS bölgesine txt kaydının nasıl ekileceğini bilmek gerekir. TXT kaydını ekleme hakkında daha fazla bilgi için bkz. [Etki alanınıza bağlanmak için DNS kayıtları ekleme](../admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider.md). Bu yordamlar işe yaramadı mı? DNS kayıt şirketinizin yordamlarını bulmanız gerekir.
+- DNS kayıt şirketiniz için kayıtlı DNS bölgesine txt kaydının nasıl ekleneceğini bilmeniz gerekir. TXT kaydı ekleme hakkında daha fazla bilgi için bkz. [Etki alanınıza bağlanmak için DNS kayıtları ekleme](../admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider.md). Bu yordamlar sizin için işe yaramazsa, DNS kayıt şirketiniz için yordamları bulmanız gerekir.
 
 ## <a name="create-domains"></a>Etki alanı oluşturma
 
- Müşterileriniz, varsayılan \<domain>.onmicrosoft.com etki alanının dünya için kurumsal kimliklerini temsil eden birincil etki alanı olduğundan, kirala ilişkilendirmek için başka etki alanları oluşturmanızı ister. Bu yordam, müşterinizin kira alanıyla ilişkilendirilmiş yeni bir etki alanı oluştururken size yol sağlar.
+ Müşterileriniz, varsayılan \<domain>.onmicrosoft.com etki alanının şirket kimliklerini dünyaya temsil eden birincil etki alanı olmasını istemediklerinden, kiracılarıyla ilişkilendirmek için büyük olasılıkla ek etki alanları oluşturmanızı isteyecektir. Bu yordam, müşterinizin kiracısıyla ilişkili yeni bir etki alanı oluşturma konusunda size yol gösterir.
 
 > [!NOTE]
-> Bu işlemlerden bazıları gerçekleştirmek için, destek istediğiniz şirketlere yönetici erişimi ata ayarının Yönetici hesabının ayrıntılarda yer alan Yönetici  erişimi atama ayarı için oturum ataydığınız iş ortağı yönetici hesabının Tam yönetim <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a>. İş ortağı yöneticisi rollerini yönetme hakkında daha fazla bilgi için bkz. [İş Ortakları: Temsili yönetim teklif edin](https://go.microsoft.com/fwlink/p/?LinkId=532435).
+> Bu işlemlerden bazılarını gerçekleştirmek için, Microsoft 365 yönetim merkezi yönetici hesabının ayrıntılarında bulunan **Desteklediğiniz şirketlere yönetim erişimi ata** ayarı için oturum açabileceğiniz iş ortağı yönetici hesabının **Tam yönetim** olarak ayarlanması <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">gerekir.</a> İş ortağı yöneticisi rollerini yönetme hakkında daha fazla bilgi için bkz [. İş ortakları: Temsilcili yönetim teklifi](https://go.microsoft.com/fwlink/p/?LinkId=532435).
 
-### <a name="create-the-domain-in-azure-active-directory"></a>Etki alanını Azure Active Directory
+### <a name="create-the-domain-in-azure-active-directory"></a>etki alanını Azure Active Directory'de oluşturma
 
-Bu komut, etki alanını Azure Active Directory genel olarak kaydedilmiş etki alanıyla ilişkilendirmez. Bu, kuruluşlar için Microsoft Microsoft 365'de genel olarak kayıtlı bir etki alanının sahibi Microsoft 365 gelir.
+Bu komut etki alanını Azure Active Directory oluşturur ancak genel olarak kayıtlı etki alanıyla ilişkilendirmez. Bu, kuruluşlar için Microsoft Microsoft 365 genel olarak kayıtlı etki alanının sahibi olduğunuzu kanıtladığınızda ortaya çıkar.
 
 ```powershell
 New-MsolDomain -TenantId <customer TenantId> -Name <FQDN of new domain>
 ```
 
 > [!NOTE]
-> PowerShell Core, adı **Msol** Microsoft Azure Active Directory modül Windows PowerShell cmdlet'ler için Modül Desteklemez. Bu cmdlet'leri kullanmaya devam etmek için, tüm cmdlet'leri Windows PowerShell.
+> PowerShell Core, Windows PowerShell modülü için Microsoft Azure Active Directory Modülünü ve adında **Msol** bulunan cmdlet'leri desteklemez. Bu cmdlet'leri kullanmaya devam etmek için bunları Windows PowerShell çalıştırmanız gerekir.
 
-### <a name="get-the-data-for-the-dns-txt-verification-record"></a>DNS TXT doğrulama kaydıyla ilgili verileri alma
+### <a name="get-the-data-for-the-dns-txt-verification-record"></a>DNS TXT doğrulama kaydı için verileri alma
 
- Microsoft 365 DNS TXT doğrulama kaydına eklemek için ihtiyacınız olan belirli verileri üretir. Verileri almak için bu komutu çalıştırın.
+ Microsoft 365, DNS TXT doğrulama kaydına yerleştirmeniz gereken belirli verileri oluşturur. Verileri almak için bu komutu çalıştırın.
 
 ```powershell
 Get-MsolDomainVerificationDNS -TenantId <customer TenantId> -DomainName <FQDN of new domain> -Mode DnsTxtRecord
 ```
 
-Bu size şu şekilde çıkış sağlar:
+Bu size aşağıdaki gibi bir çıkış verir:
 
  `Label: domainname.com`
 
@@ -84,19 +84,19 @@ Bu size şu şekilde çıkış sağlar:
  `Ttl: 3600`
 
 > [!NOTE]
-> Genel olarak kaydedilmiş DNS bölgesinde TXT kaydını oluşturmak için bu metne ihtiyacınız vardır. Dosyayı kopyalayıp kaydetmeye emin olun.
+> Genel olarak kayıtlı DNS bölgesinde TXT kaydını oluşturmak için bu metne ihtiyacınız olacaktır. Kopyalayıp kaydettiğinizden emin olun.
 
-### <a name="add-a-txt-record-to-the-publically-registered-dns-zone"></a>Genel olarak kaydedilmiş DNS bölgesine TXT kaydı ekleme
+### <a name="add-a-txt-record-to-the-publically-registered-dns-zone"></a>Genel olarak kayıtlı DNS bölgesine TXT kaydı ekleme
 
-Bu Microsoft 365 genel olarak kaydedilmiş etki alanı adına yönlendirilen trafiği kabul etmeye başlamadan önce, etki alanına sahip ve yönetici izinlerine sahip olamanız gerekir. Etki alanında bir TXT kaydı oluşturarak etki alanının sahibi olduğunu kanıtlarsiniz. TXT kaydı etki alanınız içinde hiçbir şey yapmaz ve etki alanı sahipliğiniz belirlendikten sonra silinebilir. TXT kayıtlarını oluşturmak için, Etki alanınıza bağlanmak [için DNS kayıtları ekleme yordamlarını izleyin](../admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider.md). Bu yordamlar size uygunsa, DNS kayıt şirketi yordamlarını bulmanız gerekir.
+Microsoft 365 genel olarak kayıtlı etki alanı adına yönlendirilen trafiği kabul etmeye başlamadan önce, etki alanına sahip olduğunuzu ve etki alanı üzerinde yönetici izinlerine sahip olduğunuzu kanıtlamanız gerekir. Etki alanında bir TXT kaydı oluşturarak etki alanının sahibi olduğunuzu kanıtlarsınız. TXT kaydı etki alanınızda hiçbir şey yapmaz ve etki alanı sahipliğiniz oluşturulduktan sonra silinebilir. TXT kayıtlarını oluşturmak için ETKI [alanınıza bağlanmak için DNS kayıtları ekleme](../admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider.md) başlığı altında yer alan yordamları izleyin. Bu yordamlar sizin için işe yaramazsa, DNS kayıt şirketiniz için yordamları bulmanız gerekir.
 
-nslookup yoluyla TXT kaydının başarıyla oluşturulmasını onaylayın. Aşağıdaki söz dizimlerini izleyin.
+nslookup aracılığıyla TXT kaydının başarıyla oluşturulduğundan emin olun. Bu söz dizimlerini izleyin.
 
 ```console
 nslookup -type=TXT <FQDN of registered domain>
 ```
 
-Bu size şu şekilde çıkış sağlar:
+Bu size aşağıdaki gibi bir çıkış verir:
 
  `Non-authoritative answer:`
 
@@ -104,21 +104,21 @@ Bu size şu şekilde çıkış sağlar:
 
  `text=MS=ms########`
 
-### <a name="validate-domain-ownership-in-microsoft-365"></a>E-postada etki alanı sahipliğini Microsoft 365
+### <a name="validate-domain-ownership-in-microsoft-365"></a>Microsoft 365'de etki alanı sahipliğini doğrulama
 
-Bu son adımda, genel olarak kayıtlı Microsoft 365 etki alanının sahibi olduğunu doğrulamanız gerekir. Bu adımdan Microsoft 365, yeni etki alanı adına yönlendirilen trafiği kabul etmeye başlar. Etki alanı oluşturma ve kayıt işlemini tamamlamak için bu komutu çalıştırın.
+Bu son adımda, genel olarak kayıtlı etki alanının sahibi olduğunuzu Microsoft 365 doğrularsınız. Bu adımdan sonra, Microsoft 365 yeni etki alanı adına yönlendirilen trafiği kabul etmeye başlar. Etki alanı oluşturma ve kayıt işlemini tamamlamak için bu komutu çalıştırın.
 
 ```powershell
 Confirm-MsolDomain -TenantId <customer TenantId> -DomainName <FQDN of new domain>
 ```
 
-Bu komut hiçbir çıktı geri dönmez, bu nedenle bu komutu çalıştırarak çalıştığını onaylayın.
+Bu komut herhangi bir çıkış döndürmez, bu nedenle bunun çalıştığını onaylamak için bu komutu çalıştırın.
 
 ```powershell
 Get-MsolDomain -TenantId <customer TenantId> -DomainName <FQDN of new domain>
 ```
 
-Bu, buna benzer bir şey
+Bu, şuna benzer bir şey döndürür
 
 ```console
 Name                   Status      Authentication

@@ -2,8 +2,8 @@
 title: Microsoft Purview uyumluluk portalında eBulma izinleri atama
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -20,12 +20,12 @@ description: Microsoft Purview uyumluluk portalını kullanarak eBulma ile ilgil
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
-ms.openlocfilehash: 3fef13fe96297b426dda4d72231846a99fb03179
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: e764aae4313a8e5d4dfc402e4c1f87eb8c1a5bbb
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "65001378"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65090527"
 ---
 # <a name="assign-ediscovery-permissions-in-the-compliance-portal"></a>Uyumluluk portalında eBulma izinleri atama
 

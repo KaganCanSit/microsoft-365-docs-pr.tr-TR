@@ -1,10 +1,10 @@
 ---
-title: Test ortamınıza doğrudan kimlik doğrulaması için kimlik ve cihaz erişimi Microsoft 365 önkoşulları
+title: Microsoft 365 test ortamınızda doğrudan kimlik doğrulaması için kimlik ve cihaz erişimi önkoşulları
 author: kelleyvice-msft
 f1.keywords:
 - NOCSH
 ms.author: kvice
-manager: laurawi
+manager: scotv
 audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -13,100 +13,100 @@ ms.collection:
 - M365-subscription-management
 - Strat_O365_Enterprise
 ms.custom: ''
-description: Doğrudan Microsoft 365 önkoşulları ile kimliği ve cihaz erişimini test etmek için bir kullanıcı ortamı oluşturun.
-ms.openlocfilehash: 662cf1aa45c2d297600baf63bd3970f31d437f95
-ms.sourcegitcommit: 6c57f1e90339d5a95c9e7875599dac9d3e032c3a
+description: Doğrudan kimlik doğrulaması önkoşullarıyla kimlik ve cihaz erişimini test etmek için bir Microsoft 365 ortamı oluşturun.
+ms.openlocfilehash: 3a93f0562e8ff2f2c561b4709810bb2cb1049e71
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2022
-ms.locfileid: "63016461"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098262"
 ---
-# <a name="identity-and-device-access-prerequisites-for-pass-through-authentication-in-your-microsoft-365-test-environment"></a>Test ortamınıza doğrudan kimlik doğrulaması için kimlik ve cihaz erişimi Microsoft 365 önkoşulları
+# <a name="identity-and-device-access-prerequisites-for-pass-through-authentication-in-your-microsoft-365-test-environment"></a>Microsoft 365 test ortamınızda doğrudan kimlik doğrulaması için kimlik ve cihaz erişimi önkoşulları
 
-*Bu Test Laboratuvarı Kılavuzu yalnızca kurumsal test Microsoft 365 test ortamları için kullanılabilir.*
+*Bu Test Laboratuvarı Kılavuzu yalnızca kurumsal test ortamları için Microsoft 365 için kullanılabilir.*
 
-[Kimlik ve cihaz erişimi yapılandırmaları](../security/office-365-security/microsoft-365-policies-configurations.md), Microsoft 365'de (Azure AD) ile tümleşik olan tüm hizmetlere erişimi korumaya yönelik bir dizi yapılandırma Azure Active Directory koşullu erişim ilkesidir.
+[Kimlik ve cihaz erişim yapılandırmaları](../security/office-365-security/microsoft-365-policies-configurations.md), Azure Active Directory (Azure AD) ile tümleştirilen kuruluş için Microsoft 365'daki tüm hizmetlere erişimi korumaya yönelik bir dizi yapılandırma ve koşullu erişim ilkesidir.
 
-Bu makalede, kimlik ve cihaz erişimi Microsoft 365 için Doğrudan kimlik doğrulaması önkoşul yapılandırmasının gereksinimlerini karşılayacak bir test [](../security/office-365-security/identity-access-prerequisites.md#prerequisites) ortamını nasıl yapılandırabilirsiniz?
+Bu makalede, kimlik ve cihaz erişimi için [Doğrudan kimlik doğrulaması önkoşul yapılandırmasının](../security/office-365-security/identity-access-prerequisites.md#prerequisites) gereksinimlerini karşılayan bir Microsoft 365 test ortamını nasıl yapılandırabileceğiniz açıklanır.
 
-Bu test ortamını ayarlamanın on aşaması vardır:
+Bu test ortamını ayarlamak için on aşama vardır:
 
-1. Test ortamını kullanarak geçişli kimlik doğrulama ve sanal Microsoft 365 oluşturma
-2. Azure AD sorunsuz çoklu oturum açma yapılandırma
+1. Doğrudan kimlik doğrulaması Microsoft 365 test ortamı ile sanal kuruluşunuzu oluşturun
+2. Azure AD sorunsuz çoklu oturum açmayı yapılandırma
 3. Adlandırılmış konumları yapılandırma
-4. Parola geri yazma ayarlarını yapılandırma
-5. Kendi kendine parola sıfırlamayı yapılandırma
+4. Parola geri yazmayı yapılandırma
+5. Self servis parola sıfırlamayı yapılandırma
 6. Çok faktörlü kimlik doğrulamasını yapılandırma
-7. Bilgisayarlara etki alanına katılmış bilgisayarlarda otomatik cihaz Windows etkinleştirme
+7. Etki alanına katılmış Windows bilgisayarların otomatik cihaz kaydını etkinleştirme
 8. Azure AD parola korumasını yapılandırma 
-9. Azure AD Identity Protection'i etkinleştirme
-10. Exchange Online Skype Kurumsal Online için modern kimlik doğrulamayı etkinleştirme
+9. Azure AD Kimlik Koruması'nı etkinleştirme
+10. Exchange Online ve Skype Kurumsal Online için modern kimlik doğrulamasını etkinleştirme
 
-## <a name="phase-1-build-out-your-simulated-enterprise-with-pass-through-authentication-microsoft-365-test-environment"></a>Aşama 1: Test ortamına geçişli kimlik doğrulama ve sanal Microsoft 365 oluşturma
+## <a name="phase-1-build-out-your-simulated-enterprise-with-pass-through-authentication-microsoft-365-test-environment"></a>1. Aşama: Doğrudan kimlik doğrulaması Microsoft 365 test ortamı ile sanal kuruluşunuzu oluşturma
 
-Geçişli kimlik [doğrulama'daki yönergeleri izleyin](pass-through-auth-m365-ent-test-environment.md).
+[Doğrudan kimlik doğrulamasındaki](pass-through-auth-m365-ent-test-environment.md) yönergeleri izleyin.
 
-Sonuçta elde edilen yapılandırma şu şekildedir.
+Sonuçta elde edilen yapılandırma aşağıdadır.
 
-![Geçişli kimlik doğrulama test ortamına sahip sanal kuruluş.](../media/pass-through-auth-m365-ent-test-environment/Phase2.png)
+![Doğrudan kimlik doğrulama testi ortamına sahip sanal kuruluş.](../media/pass-through-auth-m365-ent-test-environment/Phase2.png)
  
-## <a name="phase-2-configure-azure-ad-seamless-single-sign-on"></a>Aşama 2: Azure AD'yi sorunsuz çoklu oturum açma yapılandırma
+## <a name="phase-2-configure-azure-ad-seamless-single-sign-on"></a>2. Aşama: Azure AD sorunsuz çoklu oturum açmayı yapılandırma
 
-[Azure AD Sorunsuz Çoklu Oturum Açma Test Laboratuvarı Kılavuzu'nın Aşama 2'sinde verilen yönergeleri izleyin](single-sign-on-m365-ent-test-environment.md#phase-2-configure-azure-ad-connect-on-app1-for-azure-ad-seamless-sso).
+[Azure AD Sorunsuz Çoklu Oturum Açma Test Laboratuvarı Kılavuzu'nun 2. Aşamasındaki](single-sign-on-m365-ent-test-environment.md#phase-2-configure-azure-ad-connect-on-app1-for-azure-ad-seamless-sso) yönergeleri izleyin.
 
-## <a name="phase-3-configure-named-locations"></a>Aşama 3: Adlandırılmış konumları yapılandırma
+## <a name="phase-3-configure-named-locations"></a>3. Aşama: Adlandırılmış konumları yapılandırma
 
-İlk olarak, kurum tarafından kullanılan genel IP adreslerini veya adres aralıklarını belirlersiniz.
+İlk olarak, kuruluşunuz tarafından kullanılan genel IP adreslerini veya adres aralıklarını belirleyin.
 
-Ardından, adresleri veya adres [aralıklarını adlandırılmış konumlar olarak eklemek Azure Active Directory](/azure/active-directory/reports-monitoring/quickstart-configure-named-locations) Konumlar'da adlandırılmış konumları yapılandırma konusunda verilen yönergeleri izleyin. 
+Ardından, adresleri veya adres [aralıklarını adlandırılmış konumlar olarak eklemek için Azure Active Directory'de](/azure/active-directory/reports-monitoring/quickstart-configure-named-locations) adlandırılmış konumları yapılandırma başlığı altında verilen yönergeleri izleyin. 
 
-## <a name="phase-4-configure-password-writeback"></a>Aşama 4: Parola geri yazma ayarlarını yapılandırma
+## <a name="phase-4-configure-password-writeback"></a>4. Aşama: Parola geri yazmayı yapılandırma
 
-Parola geri yazma [Test Laboratuvarı Kılavuzu'nın Aşama 2'sinde verilen yönergeleri izleyin](password-writeback-m365-ent-test-environment.md#phase-2-enable-password-writeback-for-the-testlab-ad-ds-domain).
+[Parola geri yazma Test Laboratuvarı Kılavuzu'nun 2. Aşamasındaki](password-writeback-m365-ent-test-environment.md#phase-2-enable-password-writeback-for-the-testlab-ad-ds-domain) yönergeleri izleyin.
 
-## <a name="phase-5-configure-self-service-password-reset"></a>Aşama 5: Self servis parola sıfırlamayı yapılandırma
+## <a name="phase-5-configure-self-service-password-reset"></a>5. Aşama: Self servis parola sıfırlamayı yapılandırma
 
-Parola sıfırlama Test Laboratuvarı [Kılavuzu'nın Aşama 3'lü yönergeleri izleyin](password-reset-m365-ent-test-environment.md#phase-3-configure-and-test-password-reset). 
+[Parola sıfırlama Test Laboratuvarı Kılavuzu'nun 3. Aşamasındaki](password-reset-m365-ent-test-environment.md#phase-3-configure-and-test-password-reset) yönergeleri izleyin. 
 
-Belirli bir Azure AD grubunda hesaplar için parola sıfırlamayı etkinleştirerek, bu hesapları Parola sıfırlama **grubuna** ekleyin:
-
-- Kullanıcı 2
-- Kullanıcı 3
-- Kullanıcı 4
-- Kullanıcı 5
-
-Yalnızca Kullanıcı 2 hesabı için parola sıfırlamayı test edin.
-
-## <a name="phase-6-configure-multi-factor-authentication"></a>Aşama 6: Çok faktörlü kimlik doğrulamasını yapılandırma
-
-Aşağıdaki kullanıcı hesapları [için Multi-Factor Authentication Test Lab Kılavuzu'nın Aşama 2'sinde](multi-factor-authentication-microsoft-365-test-environment.md#phase-2-enable-and-test-multi-factor-authentication-for-the-user-2-account) verilen yönergeleri izleyin:
+Belirli bir Azure AD grubundaki hesaplar için parola sıfırlamayı etkinleştirirken bu hesapları **Parola sıfırlama** grubuna ekleyin:
 
 - Kullanıcı 2
 - Kullanıcı 3
 - Kullanıcı 4
 - Kullanıcı 5
 
-Yalnızca Kullanıcı 2 hesabı için çok faktörlü kimlik doğrulamasını test etmek.
+Parola sıfırlamayı yalnızca Kullanıcı 2 hesabı için test edin.
 
-## <a name="phase-7-enable-automatic-device-registration-of-domain-joined-windows-computers"></a>Aşama 7: Etki alanına katılmış bilgisayarlarda otomatik cihaz Windows etkinleştirme 
+## <a name="phase-6-configure-multi-factor-authentication"></a>6. Aşama: Çok faktörlü kimlik doğrulamasını yapılandırma
 
-Etki [alanına katılmış](/azure/active-directory/devices/hybrid-azuread-join-plan) bilgisayarlarda otomatik cihaz kaydını etkinleştirmek için bu Windows izleyin.
+Aşağıdaki kullanıcı hesapları için [çok faktörlü kimlik doğrulaması Test Laboratuvarı Kılavuzu'nun 2. Aşamasındaki](multi-factor-authentication-microsoft-365-test-environment.md#phase-2-enable-and-test-multi-factor-authentication-for-the-user-2-account) yönergeleri izleyin:
 
-## <a name="phase-8-configure-azure-ad-password-protection"></a>Aşama 8: Azure AD parola korumasını yapılandırma 
+- Kullanıcı 2
+- Kullanıcı 3
+- Kullanıcı 4
+- Kullanıcı 5
 
-Zayıf [parolaları](/azure/active-directory/authentication/concept-password-ban-bad) ve değişkenlerini engellemek için bu yönergeleri izleyin.
+Çok faktörlü kimlik doğrulamasını yalnızca Kullanıcı 2 hesabı için test edin.
 
-## <a name="phase-9-enable-azure-ad-identity-protection"></a>Aşama 9: Azure AD Kimlik Korumasını Etkinleştirme
+## <a name="phase-7-enable-automatic-device-registration-of-domain-joined-windows-computers"></a>7. Aşama: Etki alanına katılmış Windows bilgisayarların otomatik cihaz kaydını etkinleştirme 
 
-[Azure AD Kimlik Koruma Test Laboratuvarı Kılavuzu'nın 2. Aşaması'nın yönergelerini izleyin](azure-ad-identity-protection-microsoft-365-test-environment.md#phase-2-use-azure-ad-identity-protection). 
+Etki alanına katılmış Windows bilgisayarların otomatik cihaz kaydını etkinleştirmek için [bu yönergeleri](/azure/active-directory/devices/hybrid-azuread-join-plan) izleyin.
 
-## <a name="phase-10-enable-modern-authentication-for-exchange-online-and-skype-for-business-online"></a>Aşama 10: Exchange Online ve Skype Kurumsal Online için modern kimlik doğrulamayı etkinleştirme
+## <a name="phase-8-configure-azure-ad-password-protection"></a>8. Aşama: Azure AD parola korumasını yapılandırma 
 
-Daha Exchange Online için bu [yönergeleri izleyin](/Exchange/clients-and-mobile-in-exchange-online/enable-or-disable-modern-authentication-in-exchange-online#enable-or-disable-modern-authentication-in-exchange-online-for-client-connections-in-outlook-2013-or-later). 
+Bilinen zayıf parolaları ve bunların değişkenlerini engellemek için [bu yönergeleri](/azure/active-directory/authentication/concept-password-ban-bad) izleyin.
+
+## <a name="phase-9-enable-azure-ad-identity-protection"></a>9. Aşama: Azure AD Kimlik Koruması'nı etkinleştirme
+
+[Azure AD Kimlik Koruması Test Laboratuvarı Kılavuzu'nun 2. Aşamasındaki](azure-ad-identity-protection-microsoft-365-test-environment.md#phase-2-use-azure-ad-identity-protection) yönergeleri izleyin. 
+
+## <a name="phase-10-enable-modern-authentication-for-exchange-online-and-skype-for-business-online"></a>10. Aşama: Exchange Online ve Skype Kurumsal Online için modern kimlik doğrulamasını etkinleştirme
+
+Exchange Online için [bu yönergeleri](/Exchange/clients-and-mobile-in-exchange-online/enable-or-disable-modern-authentication-in-exchange-online#enable-or-disable-modern-authentication-in-exchange-online-for-client-connections-in-outlook-2013-or-later) izleyin. 
 
 Skype Kurumsal Online için:
 
-1. Bağlan [Online'Skype Kurumsal edin](/SkypeForBusiness/set-up-your-computer-for-windows-powershell/set-up-your-computer-for-windows-powershell).
+1. Skype Kurumsal [Online'a Bağlan](/SkypeForBusiness/set-up-your-computer-for-windows-powershell/set-up-your-computer-for-windows-powershell).
 
 2. Bu komutu çalıştırın.
 
@@ -114,17 +114,17 @@ Skype Kurumsal Online için:
   Set-CsOAuthConfiguration -ClientAdalAuthOverride Allowed
   ```
 
-3. Değişikliğin bu komutla başarılı olduğunu doğrulayın.
+3. Bu komutla değişikliğin başarılı olduğunu doğrulayın.
 
   ```powershell
   Get-CsOAuthConfiguration
   ```
 
-Sonuç, kimlik ve cihaz erişimi için Doğrudan kimlik doğrulaması önkoşul yapılandırmasının [gereksinimlerini karşılamaya](../security/office-365-security/identity-access-prerequisites.md#prerequisites) uygun bir test ortamıdır. 
+Sonuç, kimlik ve cihaz erişimi için [Geçiş kimlik doğrulaması önkoşul yapılandırmasının](../security/office-365-security/identity-access-prerequisites.md#prerequisites) gereksinimlerini karşılayan bir test ortamıdır. 
 
 ## <a name="next-step"></a>Sonraki adım
 
-[Önkoşulları temel alan ilkeleri](../security/office-365-security/identity-access-policies.md) yapılandırmak ve kimlikleri ve cihazları korumak için Ortak kimlik ve cihaz erişimi ilkelerini kullanın.
+[Önkoşulları oluşturan ilkeleri yapılandırmak ve](../security/office-365-security/identity-access-policies.md) kimlikleri ve cihazları korumak için Ortak kimlik ve cihaz erişim ilkelerini kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -132,8 +132,8 @@ Sonuç, kimlik ve cihaz erişimi için Doğrudan kimlik doğrulaması önkoşul 
 
 [Kimliği dağıtma](deploy-identity-solution-overview.md)
 
-[Microsoft 365 Test Laboratuvarı Kılavuzları için kılavuzlar](m365-enterprise-test-lab-guides.md)
+[Kurumsal Test Laboratuvarı Kılavuzları için Microsoft 365](m365-enterprise-test-lab-guides.md)
 
-[Microsoft 365 genel bakış için genel bakış](microsoft-365-overview.md)
+[Microsoft 365 Kurumsal’a genel bakış](microsoft-365-overview.md)
 
-[Microsoft 365 belgeleri için belgeler](/microsoft-365-enterprise/)
+[Kurumsal belgeler için Microsoft 365](/microsoft-365-enterprise/)

@@ -2,7 +2,7 @@
 title: SharePoint Server 2007 destek sonu yol haritası
 ms.author: tracyp
 author: MSFTTracyP
-manager: laurawi
+manager: scotv
 ms.date: 01/28/2019
 audience: ITPro
 ms.topic: conceptual
@@ -36,114 +36,114 @@ search.appverid:
 - BSA160
 - OSU160
 ms.assetid: ba124775-d5c0-4d68-b88d-8458ad4c3717
-description: Sunucu 2007 SharePoint desteği Ekim 2017'de sona erdi. Bu makalede, yükseltme, geçiş ve destek seçenekleriniz hakkında bilgi bulabilirsiniz.
-ms.openlocfilehash: d09e0cf58ef814a76cdac28f6029189eaf655efc
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: SharePoint Server 2007 desteği Ekim 2017'de sona erdi. Bu makalede yükseltme, geçiş ve destek seçenekleriniz hakkında bilgi edinin.
+ms.openlocfilehash: 260949f73fbb4530436484e70ca39d4e2f99bbcf
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62986715"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098240"
 ---
 # <a name="sharepoint-server-2007-end-of-support-roadmap"></a>SharePoint Server 2007 destek sonu yol haritası
 
-*Bu makale hem son hem de Microsoft 365 Kurumsal hem de Office 365 Kurumsal.*
+*Bu makale hem Microsoft 365 Kurumsal hem de Office 365 Kurumsal için geçerlidir.*
 
-**10 Ekim 2017'de** Microsoft Office SharePoint Server 2007 destek sonuna ulaştı. SharePoint Server 2007'den Microsoft 365'e veya daha yeni bir SharePoint Server şirket içi sürümüne geçiş yaptıysanız, şimdi planlamaya başlamanın tam zamanı. Bu makale, verileri SharePoint Online'a geçirmenize veya SharePoint Server şirket içi sürümüne yükseltmenize yardımcı olacak kaynaklar sağlar.
+**10 Ekim 2017'de** Microsoft Office SharePoint Server 2007 destek sonuna ulaştı. SharePoint Server 2007'den Microsoft 365 veya şirket içi SharePoint Server'ın daha yeni bir sürümüne geçiş yapmadıysanız, şimdi planlamaya başlamanın tam zamanı. Bu makale, verileri SharePoint Online'a geçirmenize veya şirket içi SharePoint Sunucunuzu yükseltmenize yardımcı olacak kaynaklar sağlar.
   
-## <a name="what-does-end-of-support-mean"></a>Desteğin *sonu ne anlama* geliyor?
+## <a name="what-does-end-of-support-mean"></a>*Destek sonu* ne anlama gelir?
 
-SharePoint Microsoft ürünlerinin çoğu gibi Microsoft'un da bir destek yaşam döngüsü vardır ve bu süre boyunca Microsoft yeni özellikler, hata düzeltmeleri ve güvenlik düzeltmeleri gibi özellikler sağlar. Bu yaşam döngüsü normalde ürünün ilk sürümüne göre 10 yıl devam eder. Bu yaşam döngüsünün sonu ürünün destek sonu olarak bilinir. Desteğin sona erdikten sonra Microsoft artık şunları sağlar:
+çoğu Microsoft ürünü gibi SharePoint Server'da da Microsoft'un yeni özellikler, hata düzeltmeleri, güvenlik düzeltmeleri vb. sağladığı bir destek yaşam döngüsü vardır. Bu yaşam döngüsü genellikle ürünün ilk sürümünden itibaren 10 yıl sürer. Bu yaşam döngüsünün sonu, ürünün destek sonu olarak bilinir. Destek sona erdikten sonra Microsoft artık şunları sağlamaz:
   
-- Ortaya çıkabilir sorunlar için teknik destek.
+- Oluşabilecek sorunlar için teknik destek.
     
-- Sunucunun kararlılığını ve kullanılabilirliğini etkilebilir sorunlar için hata düzeltmeleri.
+- Sunucunun kararlılığını ve kullanılabilirliğini etkileyebilecek sorunlar için hata düzeltmeleri.
     
-- Sunucuda güvenlik ihlallerine neden olan güvenlik açıklarına yönelik güvenlik düzeltmeleri.
+- Sunucuyu güvenlik ihlallerine açık hale getirebilecek güvenlik açıklarına yönelik güvenlik düzeltmeleri.
     
 - Saat dilimi güncelleştirmeleri.
     
-SharePoint Server 2007 sunucu grubu 10 Ekim 2017'den sonra da çalışır ancak ürün için güvenlik yamaları/düzeltmeleri de içinde olmak üzere başka güncelleştirme, yama veya düzeltme yayımlamayacak. Microsoft Desteği, destek çalışmalarını tümüyle ürünün daha yeni sürümlerine kaydırdı. Yükleme işleminiz artık desteklenmiyor veya yamalı olmadığı için, ürünü yükseltmeniz veya önemli verileri geçirmeniz gerekir.
+SharePoint Server 2007 grubunuz 10 Ekim 2017'nin ardından çalışmaya devam edecektir, ancak ürün için güvenlik düzeltme ekleri/düzeltmeler de dahil olmak üzere başka güncelleştirme, düzeltme eki veya düzeltme yayımlanmayacaktır. Microsoft Desteği, destek çalışmalarını tamamen ürünün daha yeni sürümlerine kaydırdı. Yüklemeniz artık desteklenmediğinden veya düzeltme eki uygulanmadığından, ürünü yükseltmeli veya önemli verileri geçirmelisiniz.
   
 > [!TIP]
-> Yükseltme veya geçiş işlemini henüz planlamadıysanız, nereden SharePoint göz önünde bulundurarak göz önünde bulundurabilirsiniz: [2007](sharepoint-2007-migration-options.md) geçiş seçeneklerini ayarlama. Ayrıca, yükseltme veya yükseltme veya [geçiş işlemi](https://go.microsoft.com/fwlink/?linkid=841249) sırasında yardımcı olan Microsoft Microsoft 365 de arayabilirsiniz.
+> Yükseltme veya geçiş için henüz plan yapmadıysanız bkz. [SharePoint 2007 geçiş seçenekleri](sharepoint-2007-migration-options.md) nereden başlayacağınıza ilişkin bazı örnekler için dikkate alın. Yükseltme veya Microsoft 365 geçişi (veya her ikisini birden) konusunda yardımcı olabilecek [Microsoft İş Ortaklarını](https://go.microsoft.com/fwlink/?linkid=841249) da arayabilirsiniz.
   
-Office 2007 sunucuları ve desteğin sonu hakkında daha fazla bilgi için, Office 2007 sunucularından ve istemcilerinden yükseltmeye [yardımcı olacak kaynaklar'a bakın](upgrade-from-office-2007-servers-and-products.md).
+Office 2007 sunucuları ve destek sonu hakkında daha fazla bilgi için bkz. [Office 2007 sunucularından ve istemcilerinden yükseltmenize yardımcı olacak kaynaklar](upgrade-from-office-2007-servers-and-products.md).
   
-## <a name="what-are-my-options"></a>Seçeneklerim neler?
+## <a name="what-are-my-options"></a>Seçeneklerim nelerdir?
 
-İlk durağınız Ürün Yaşam Döngüsü [sitesidir](/lifecycle/products/?alpha=Microsoft+Office+SharePoint+Server+2007). Yaşlandırma olan bir şirket içi Microsoft ürününüz varsa, yükseltme veya geçiş zamanlaması için bir yıl kadar süreniz olacak şekilde destek sonu tarihini kontrol edin. Sonraki adımı seçerseniz, hangi ürün özelliklerinin yeterince iyi, daha iyi ve en iyi olacağını düşünün. İşte bir örnek: 
+İlk durağınız [Ürün Yaşam Döngüsü sitesi](/lifecycle/products/?alpha=Microsoft+Office+SharePoint+Server+2007) olmalıdır. Eskiyen bir şirket içi Microsoft ürününüz varsa, yükseltme veya geçiş zamanlamak için bir yıl veya daha fazla süreniz olması için destek sonu tarihini denetleyin. Bir sonraki adımı seçtiğinizde, hangi ürün özelliklerinin yeterince iyi, daha iyi ve en iyi olacağını göz önünde bulundurun. İşte bir örnek: 
   
-|**İyi**|**Daha iyi**|**En iyi**|
+|**Iyi**|**Iyi**|**En iyi**|
 |:-----|:-----|:-----|
 |SharePoint Server 2010  <br/> |SharePoint Server 2013  <br/> |SharePoint Online  <br/> |
-||SharePoint Karma  <br/> |SharePoint Server 2016  <br/> |
-| | |SharePoint Karma  <br/> |
+||karma SharePoint  <br/> |SharePoint Server 2016  <br/> |
+| | |karma SharePoint  <br/> |
    
-"Yeterince iyi" seçeneğini belirtirseniz, kısa süre sonra Sunucu 2007'den geçiş tamamlandıktan sonra başka bir yükseltme SharePoint gerekir. 
+"Yeterince iyi" bir seçenek belirlerseniz, SharePoint Server 2007'den geçiş tamamlandıktan sonra yakında başka bir yükseltme planlamaya başlamanız gerekir. 
 
 >[!NOTE] 
->Destek sonu tarihleri değişebilir. Ürün Yaşam [Döngüsü sitesini kontrol edin](https://support.microsoft.com/lifecycle).
+>Destek sonu tarihleri değiştirilebilir. [Ürün Yaşam Döngüsü sitesini](https://support.microsoft.com/lifecycle) denetleyin.
   
 ## <a name="where-can-i-go-next"></a>Bundan sonra nereye gidebilirim?
 
-SharePoint Sunucu şirket içinde kendi sunucularınıza yükleyebilir. Ya da SharePoint parçası olan çevrimiçi bir hizmet olan Microsoft 365. Seçenekleriniz şunlardır:
+SharePoint Sunucusu şirket içinde kendi sunucularınıza yüklenebilir. Microsoft 365 bir parçası olan çevrimiçi bir hizmet olan SharePoint Online'ı da kullanabilirsiniz. Seçenekleriniz şunlardır:
   
 - SharePoint Online'a geçiş.
     
-- SharePoint Server şirket içi sürümüne yükseltin.
+- Şirket içi SharePoint Sunucusu'nu yükseltin.
     
-- Yukarıdakilerin ikisini de yapma.
+- Yukarıdakilerin ikisini de yapın.
     
-- Karma bir [SharePoint](https://support.office.com/article/4c89a95a-a58c-4fc1-974a-389d4f195383.aspx) hayata geçirin.
+- [SharePoint bir karma](https://support.office.com/article/4c89a95a-a58c-4fc1-974a-389d4f195383.aspx) çözüm uygulayın.
     
-Sunucu sunucu sunucusunun bakımıyla, özelleştirmelerin bakımıyla veilmesiyle, Sunucu gereksinimleri olan donanımın yükseltilmesiyle ilişkili gizli SharePoint dikkat edebilirsiniz. Gerekirse, bir SharePoint Sunucu sunucu grubu olması çok faydalıdır. Ancak, sunucu grubunızı çok fazla özelleştirme SharePoint eski SharePoint Servers'ta çalıştırsanız, SharePoint Online'a geçişten yararlanabilirsiniz.
+Sunucu grubunun bakımının yapılması, özelleştirmelerin bakımı veya geçirilmesi ve sunucuya gereken donanımın yükseltilmesiyle ilgili gizli maliyetlerin farkında SharePoint. Gerekirse şirket içi SharePoint Sunucu grubuna sahip olmak ödüllendiricidir. Ancak grubunuzu ağır özelleştirmeler olmadan eski SharePoint Sunucularında çalıştırıyorsanız SharePoint Online'a geçişten yararlanabilirsiniz.
   
 > [!IMPORTANT]
-> 2007'de yer alan SharePoint seyrek kullanılıyorsa, bir seçenek daha vardır. Bazı SharePoint Yöneticileri bir Microsoft 365 aboneliği oluşturma, yeni bir SharePoint Online sitesi ayarlamayı ve ardından yeni SharePoint Online sitelerine yalnızca temel belgeleri alarak SharePoint 2007'yi temiz bir şekilde SharePoint seçer. Daha sonra veriler 2007 SharePoint ve arşivlere tüketebilirsiniz. Kullanıcılarınızı, SharePoint 2007 yüklemesi verilerinizle nasıl çalışacaklarını göz önünde bulundurabilirsiniz. İhtiyaçlarınızı yönetmek için yaratıcı yollar olabilir.
+> SharePoint 2007'deki içerik seyrek kullanılıyorsa başka bir seçenek vardır. Bazı SharePoint Yöneticileri Microsoft 365 bir abonelik oluşturmayı, yeni bir SharePoint Online sitesi ayarlamayı ve ardından SharePoint 2007'den temiz bir şekilde kesip yalnızca temel belgeleri yeni SharePoint Çevrimiçi sitelerine götürmeyi seçer. Daha sonra veriler SharePoint 2007 sitesinden arşivlere boşaltılabilir. Kullanıcılarınızın SharePoint 2007 yüklemenizdeki verilerle nasıl çalıştığını düşünün. İhtiyaçlarınızı yönetmenin yaratıcı yolları olabilir.
   
-|**SharePoint Online (SPO)**|**SharePoint Server şirket içi**|
+|**SharePoint Online (SPO)**|**şirket içi SharePoint Sunucusu**|
 |:-----|:-----|
-|Zaman içinde yüksek maliyet (plan / yürütme/doğrulama)  <br/> |Zaman içinde yüksek maliyet (plan / yürütme/doğrulama)  <br/> |
-|Fonlarda düşük maliyet (donanım satın alma yok)  <br/> |Kredilerde yüksek maliyet (donanım + dev/yöneticiler)  <br/> |
-|Geçişte bir defalık maliyet  <br/> |Gelecek geçiş başına tekrarlanan tek seferlik maliyet  <br/> |
+|Zaman içinde yüksek maliyet (plan/yürütme/doğrulama)  <br/> |Zaman içinde yüksek maliyet (plan/yürütme/doğrulama)  <br/> |
+|Fonlarda daha düşük maliyet (donanım satın alma işlemi yapılmaz)  <br/> |Fonlarda daha yüksek maliyet (donanım + geliştirmeler/yöneticiler)  <br/> |
+|Geçişte tek seferlik maliyet  <br/> |Gelecekteki geçiş başına tek seferlik maliyet yinelenir  <br/> |
 |Düşük toplam sahip olma/bakım maliyeti  <br/> |Yüksek toplam sahip olma/bakım maliyeti  <br/> |
    
-Microsoft 365'a geçiş yaparken, verileri düzenleyecek ve buluta neleri bırakılacağına ve nelerin geride bırakılacağına karar verirken, bir defalık taşımanın bir defalık geçişi ön maliyet daha ağır olur. Ama gelecek yükseltmeler otomatik olarak gelecektir ve artık donanım ve yazılım güncelleştirmelerini yönetmenize gerek olmayacaktır. Ayrıca, grup süreniz Microsoft Hizmet Düzeyi Sözleşmesi ([SLA) ile de destek dönecektir](/office365/servicedescriptions/office-365-platform-service-description/service-level-agreement).
+Microsoft 365 geçiş yaptığınızda, verileri düzenlerken ve buluta nelerin alınacağına ve nelerin geride bırakılacağına karar verirken, tek seferlik taşımanın maliyeti daha yüksek olur. Ancak gelecekteki yükseltmeler otomatik olacaktır ve artık donanım ve yazılım güncelleştirmelerini yönetmeniz gerekmez. Ayrıca, grubunuzun çalışma süresi bir Microsoft Hizmet Düzeyi Sözleşmesi ([SLA](/office365/servicedescriptions/office-365-platform-service-description/service-level-agreement)) tarafından yedeklenir.
   
 ### <a name="migrate-to-sharepoint-online"></a>SharePoint Online'a geçiş
 
-SharePoint Online'da ihtiyacınız olan tüm özelliklerin olduğundan emin olun. Hizmet [Microsoft 365 ve Office 365 açıklamalarını görme.](/office365/servicedescriptions/office-365-service-descriptions-technet-library)
+SharePoint Online'da ihtiyacınız olan tüm özelliklerin bulunduğundan emin olun. Bkz. [hizmet açıklamalarını Microsoft 365 ve Office 365](/office365/servicedescriptions/office-365-service-descriptions-technet-library).
   
-SharePoint 2007'den SharePoint Online'a SharePoint. SharePoint Online'a taşımanız el ile yapılabilir. SharePoint Server 2013 veya SharePoint Server 2016'ya yükseltersiniz, SharePoint Geçiş API'sini kullanabilirsiniz (örneğin, bilgileri OneDrive İş'e geçirmek için).
+doğrudan SharePoint 2007'den SharePoint Online'a geçiş yapamazsınız. SharePoint Online'a taşıma işleminiz el ile yapılır. SharePoint Server 2013 veya SharePoint Server 2016'ya yükseltirseniz, SharePoint Geçiş API'sini kullanabilirsiniz (örneğin, bilgileri OneDrive İş geçirmek için).
   
 |**Çevrimiçi profesyonel**|**Çevrimiçi con**|
 |:-----|:-----|
-|Microsoft, SPO donanımlarını ve tüm donanım yönetimini sağlar.  <br/> |Kullanılabilir özellikler, SharePoint Server şirket içi ile SPO arasında farklılık gösterebilir.  <br/> |
-|Aboneliğinizin SharePoint yöneticisi veya genel yöneticisisiniz ve SPO sitelerine yöneticiler atabilirsiniz.  <br/> |SharePoint Server şirket içi sunucu grubu yöneticisi tarafından kullanılabilen bazı eylemler yoktur ve bu eylemler SharePoint Sunucu Grubu'Microsoft 365.  <br/> |
-|Microsoft, temel donanım ve yazılımlara yamaları, düzeltmeleri ve güncelleştirmeleri uygular. <br/> |Hizmette temel dosya sistemine erişim olduğundan, özelleştirme sınırlıdır.  <br/> |
-|Microsoft Hizmet düzeyi [anlaşmaları yayımlar ve](/office365/servicedescriptions/office-365-platform-service-description/service-level-agreement) hizmet düzeyi olaylarını çözmek için hızla harekete geçen bir yöntemdir. <br/> |SharePoint Online'da yedekleme, geri yükleme ve diğer kurtarma seçenekleri hizmet SharePoint. Kullanılmazsa yedeklerin üzerine yazılır. <br/> |
-|Güvenlik testi ve sunucu performans ayarı, Microsoft tarafından hizmette sürekli olarak gerçekleştirilen bir hizmettir. <br/> |Kullanıcı arabiriminde ve diğer SharePoint özelliklerinde yapılan değişiklikler hizmet tarafından yüklenir ve bunun açık veya kapalı olması gerekir. <br/> |
-|Microsoft 365 birçok endüstri standarda uygundur: [Microsoft uyumluluk teklifleri](/compliance/regulatory/offering-home).  <br/> |[FastTrack](https://www.microsoft.com/fasttrack/microsoft-365) yardımı sınırlıdır.  <br/> Yükseltmenin büyük bir yolu el ile veya SharePoint Online ve Geçiş İçeriği Yol Haritası'OneDrive açıklanan SPO [Geçiş API'si aracılığıyla ılacaktır](/sharepointmigration/upload-on-premises-content-to-sharepoint-online-using-powershell-cmdlets).  <br/> |
-|Microsoft Destek mühendisleri ve veri merkezi çalışanlarının aboneliğinize kısıtlamasız yönetici erişimi olmayacaktır. <br/> |Donanım yükseltme işleminin daha yeni sürümünü desteklemek için donanımın yükselt yapılması gerekirse veya yükseltme için ikincil bir grup gerekirse ek maliyetler SharePoint.  <br/> |
-|İş ortakları, SharePoint Online'a verilerinizin tek seferlik bir şekilde SharePoint olabilir.  <br/> ||
-|Çevrimiçi ürünler otomatik olarak güncelleştirilir. Özellikler kullanımdan kullanımdan kullanım dışı olsa da, desteğin gerçek bir sonu yoktur. <br/> ||
+|Microsoft, SPO donanımlarını ve tüm donanım yönetimini sağlar.  <br/> |Kullanılabilir özellikler şirket içi SharePoint Sunucusu ile SPO arasında farklılık gösterebilir.  <br/> |
+|Aboneliğinizin Sharepoint yöneticisi veya genel yöneticisisiniz ve SPO sitelerine yönetici atayabilirsiniz.  <br/> |şirket içi SharePoint Sunucusu'ndaki bir grup yöneticisinin kullanabileceği bazı eylemler yoktur veya Microsoft 365'daki SharePoint Yöneticisi rolüne dahil olmayabilir.  <br/> |
+|Microsoft, temel alınan donanım ve yazılımlara yamalar, düzeltmeler ve güncelleştirmeler uygular. <br/> |Hizmette temel alınan dosya sistemine erişim olmadığından özelleştirme sınırlıdır.  <br/> |
+|Microsoft [, Hizmet düzeyi sözleşmeleri yayımlar](/office365/servicedescriptions/office-365-platform-service-description/service-level-agreement) ve hizmet düzeyi olaylarını çözmek için hızlı bir şekilde taşınır. <br/> |Yedekleme ve geri yükleme ile diğer kurtarma seçenekleri SharePoint Online'da hizmet tarafından otomatik hale getirilir. Kullanılmıyorsa yedeklemelerin üzerine yazılır. <br/> |
+|Güvenlik testi ve sunucu performansı ayarlama, Microsoft tarafından hizmette sürekli olarak gerçekleştirilir. <br/> |Kullanıcı arabiriminde ve diğer SharePoint özelliklerinde yapılan değişiklikler hizmet tarafından yüklenir ve açık veya kapalı olması gerekebilir. <br/> |
+|Microsoft 365 birçok endüstri standardına uygundur: [Microsoft uyumluluk teklifleri](/compliance/regulatory/offering-home).  <br/> |[Geçiş için FastTrack](https://www.microsoft.com/fasttrack/microsoft-365) yardımı sınırlıdır.  <br/> Yükseltmenin büyük bir kısmını el ile veya [SharePoint Online ve OneDrive Geçiş İçeriği Yol Haritası'nda](/sharepointmigration/upload-on-premises-content-to-sharepoint-online-using-powershell-cmdlets) açıklanan SPO Geçiş API'sini kullanarak yapacaktır.  <br/> |
+|Microsoft Desteği mühendislerin ve veri merkezi çalışanlarının aboneliğinize sınırsız yönetici erişimi olmaz. <br/> |Donanımın daha yeni SharePoint sürümünü destekleyecek şekilde yükseltilmesi gerekiyorsa veya yükseltme için ikincil bir grup gerekiyorsa ek maliyetler olabilir.  <br/> |
+|İş ortakları, verilerinizi SharePoint Online'a tek seferlik geçirme konusunda yardımcı olabilir.  <br/> ||
+|Çevrimiçi ürünler otomatik olarak güncelleştirilir. Özellikler kullanımdan kaldırılabilir ancak gerçek destek sonu yoktur. <br/> ||
    
-Yeni bir site oluşturmaya karar Microsoft 365 ve gerektiğinde verileri bu siteye el ile geçirecekse, Microsoft 365 [kontrol edin](https://www.microsoft.com/microsoft-365/).
+Yeni bir Microsoft 365 sitesi oluşturmaya karar verdiyseniz ve gerektiğinde verileri bu siteye el ile geçirirseniz [Microsoft 365 seçeneklerinizi](https://www.microsoft.com/microsoft-365/) denetleyin.
   
-### <a name="upgrade-sharepoint-server-on-premises"></a>SharePoint Server şirket içi sürümüne yükseltme
+### <a name="upgrade-sharepoint-server-on-premises"></a>Şirket içi SharePoint Sunucusu'nu yükseltme
 
-Yükseltmelerde sürüm atlamanın hiçbir yolu SharePoint yoktur. Yükseltmeler seri olarak devam ediyor:
+SharePoint Yükseltmeleri'nde sürümleri atlamanın hiçbir yolu yoktur. Yükseltmeler seri olarak gider:
   
-- SharePoint Server 2007 \> SharePoint Server 2010 \> SharePoint Server 2013 \> SharePoint Server 2016
+- SharePoint 2007 \> SharePoint Server 2010 \> SharePoint Server 2013 \> SharePoint Server 2016
    
-SharePoint 2007'den SharePoint Server 2016'ya gitmek önemli ölçüde zaman yatırım anlamına gelir ve donanım (SQL sunucuları da yükseltilsin), yazılım ve yönetim maliyetlerini içerir. Özelleştirmelerin yükseltildikten veya vazgeçilmiş olması gerekir.
+SharePoint 2007'den SharePoint Server 2016'ya geçmek, önemli bir zaman yatırımı anlamına gelir ve donanım (SQL sunucuların da yükseltilmesi gerekir), yazılım ve yönetim maliyetlerini içerir. Özelleştirmelerin yükseltilmesi veya terk edilmesi gerekir.
   
 > [!NOTE]
-> Kullanım ömrü sona ermiş SharePoint 2007 sunucu grubunızı korumak, yeni donanıma bir SharePoint Server 2016 sunucu grubu yüklemek (dolayısıyla ayrı gruplarda yan yana çalıştırıldı) ve ardından içeriğin el ile geçişini planlamak ve yürütmek (örneğin, içeriği indirmek ve yeniden karşıya yüklemek için) mümkündür. Ancak, el ile taşımada son değiştirilen hesabı el ile taşımayı yapan hesabın diğer adıyla değiştiren belge taşımaları gibi bazı aksalıklara karşı dikkatli olun. Siteleri, alt siteleri, izinleri ve liste yapılarını yeniden ekleme gibi, öncesinde yapılması gereken çalışmalara da dikkat edin. Geçişin etkisini azaltmak için, hangi verileri önceden depolamaya taşıyabilirsiniz veya silebilirsiniz.
+> Kullanım süresi sonu SharePoint 2007 grubunuzun bakımını yapmak, yeni donanıma bir SharePoint Server 2016 grubu yüklemek (böylece ayrı gruplarda yan yana çalışmak) ve ardından el ile içerik geçişi planlamak ve yürütmek mümkündür (örneğin, içeriği indirmek ve yeniden yüklemek için). Ancak, belgelerin son değiştirilen hesabı el ile taşımayı yapan hesabın diğer adıyla değiştirmesi gibi el ile taşımanın bazı tuzaklarına dikkat edin. Ayrıca siteleri, alt siteleri, izinleri ve liste yapılarını yeniden oluşturma gibi önceden yapılması gereken işleri de göz önünde bulundurun. Geçişin etkisini azaltmak için depolama alanına taşıyabileceğiniz veya silebileceğiniz verileri önceden göz önünde bulundurun.
   
-Yükseltmeden önce ortamınızı temizlemeniz önemlidir. Yükseltmeden önce ve kesinlikle siz izin olmadan önce, var olan grubun işlevsel olduğunu emin olun!
+Yükseltmeden önce ortamınızı temizlemeniz önemlidir. Yükseltmeden önce mevcut grubunuzun işlevsel olduğundan emin olun ve kesinlikle yetkisini almadan önce!
   
-Desteklenen ve desteklenmeyen *yükseltme yollarını gözden geçirmeyi unutmayın*: 
+*Desteklenen ve desteklenmeyen yükseltme yollarını* gözden geçirmeyi unutmayın: 
   
 - [SharePoint Server 2007](/previous-versions/office/sharepoint-2007-products-and-technologies/cc262747(v=office.12))
     
@@ -151,7 +151,7 @@ Desteklenen ve desteklenmeyen *yükseltme yollarını gözden geçirmeyi unutmay
     
 - [SharePoint Server 2013](/SharePoint/upgrade-and-update/review-supported-editions-and-products-for-upgrading-to-sharepoint-2013)
     
-Özelleştirmeleriniz varsa, geçiş yolu üzerinde her adım için bir plan yapmak kritik öneme sahip olur: 
+Özelleştirmeleriniz varsa, geçiş yolundaki her adım için bir plan yapmak kritik öneme sahiptir: 
   
 - [SharePoint 2007](/previous-versions/office/sharepoint-2007-products-and-technologies/cc263203(v=office.12))
     
@@ -159,60 +159,60 @@ Desteklenen ve desteklenmeyen *yükseltme yollarını gözden geçirmeyi unutmay
     
 - [SharePoint Server 2013](/SharePoint/upgrade-and-update/create-a-communication-plan-for-the-upgrade-to-sharepoint-2013)
     
-|**Şirket içi artı**|**Şirket içi con**|
+|**Şirket içi profesyonel**|**Şirket içi con**|
 |:-----|:-----|
-|Sunucu donanımından yukarıya, SharePoint Sunucu Grubu'hepsinin tam denetimi.  <br/> |Tüm kesmeler ve düzeltmeler, şirketin sorumluluğundadır (ürününüz destek sonunu geçmişse ücretli Microsoft Desteği'nin dahil olabilir).  <br/> |
-|Şirket içi sunucu grubunızı karma aracılığıyla bir SharePoint Online aboneliğine bağlama seçeneğiyle, SharePoint SharePoint Server şirket içi özelliğinin tam özellik kümesi.  <br/> |Yükseltme, yamalar, güvenlik düzeltmeleri ve şirket içinde yönetilen SharePoint Sunucusunun tüm bakımı.  <br/> |
-|Daha fazla özelleştirme için tam erişim.  <br/> |[Microsoft uyumluluk tekliflerini](/compliance/regulatory/offering-home) şirket içinde el ile yapılandırmalısınız.  <br/> |
-|Güvenlik testleri ve sunucu performans ayarı şirket içinde gerçekleştirilen (sizin denetiminiz altında).  <br/> |Microsoft 365, SharePoint Server şirket içi ile birlikte çalışmayan SharePoint SharePoint tarafından kullanılabilir.  <br/> |
-|İş ortakları, verilerin SharePoint Server(ve ötesi) sürümüne SharePoint yardımcı olabilir.  <br/> |SharePoint Server siteleriniz, SharePoint Online'da olduğu gibi [SSL/TLS](/SharePoint/security-for-sharepoint-server/enable-tls-1-1-and-tls-1-2-support-in-sharepoint-server-2016) sertifikalarını otomatik olarak kullanmaz.  <br/> |
-|SharePoint Server şirket içi için adlandırma kuralları, yedekleme ve geri yükleme ve diğer kurtarma seçenekleri üzerinde tam denetim.  <br/> |SharePoint Server şirket içi, ürün yaşam döngüleri için çok duyarlıdır.  <br/> |
+|Sunucu donanımından SharePoint Grubunuzun tüm yönleriyle tam denetim.  <br/> |Tüm molalar ve düzeltmeler şirketinizin sorumluluğundadır (ürününüz destek sonu geçmiş değilse ücretli Microsoft Desteği devreye girebilirsiniz).  <br/> |
+|Şirket içi grubunuzu karma aracılığıyla bir SharePoint Online aboneliğine bağlama seçeneğiyle şirket içi SharePoint Server'ın tam özellik kümesi.  <br/> |Yükseltme, düzeltme ekleri, güvenlik düzeltmeleri ve şirket içinde yönetilen SharePoint Sunucusu'nun tüm bakımları.  <br/> |
+|Daha fazla özelleştirme için tam erişim.  <br/> |[Microsoft uyumluluk teklifleri](/compliance/regulatory/offering-home) şirket içinde el ile yapılandırılmalıdır.  <br/> |
+|Güvenlik testi ve sunucu performansı ayarlama işlemleri şirket içinde (sizin denetiminizde) gerçekleştirilir.  <br/> |Microsoft 365, SharePoint Online'da şirket içi SharePoint Server ile birlikte çalışmamayan özellikleri kullanıma sunabilir.  <br/> |
+|İş ortakları, verileri SharePoint Sunucusu'nun sonraki sürümüne (ve ötesine) geçirme konusunda yardımcı olabilir.  <br/> |SharePoint Server siteleriniz, SharePoint Online'da görüldüğü gibi ssl[/TLS](/SharePoint/security-for-sharepoint-server/enable-tls-1-1-and-tls-1-2-support-in-sharepoint-server-2016) sertifikalarını otomatik olarak kullanmaz.  <br/> |
+|şirket içi SharePoint Sunucusu'nda adlandırma kuralları, yedekleme ve geri yükleme ve diğer kurtarma seçenekleri üzerinde tam denetim.  <br/> |SharePoint Server şirket içi, ürün yaşam döngülerine duyarlıdır.  <br/> |
    
 ### <a name="upgrade-resources"></a>Kaynakları yükseltme
 
-Ortamının donanım ve yazılım gereksinimlerini karşı olduğundan emin olun ve desteklenen yükseltme yöntemlerini izleyin.
+Ortamınızın donanım ve yazılım gereksinimlerini karşıladığından emin olun ve ardından desteklenen yükseltme yöntemlerini izleyin.
   
 - **Donanım/yazılım gereksinimleri**: 
     
     [SharePoint Server 2010](/previous-versions/office/sharepoint-server-2010/cc262485(v=office.14)) |  [SharePoint Server 2010](/previous-versions/office/sharepoint-server-2010/cc262485(v=office.14)) |  [SharePoint Server 2013](/SharePoint/install/hardware-and-software-requirements-0) |  [SharePoint Server 2016](/SharePoint/install/hardware-and-software-requirements)
     
-- **Yazılım sınırları ve sınırlamaları**: 
+- **Yazılım sınırları ve sınırları**: 
     
     [SharePoint Server 2007](/previous-versions/office/sharepoint-2007-products-and-technologies/cc262787(v=office.12)) |  [SharePoint Server 2010](/previous-versions/office/sharepoint-server-2010/cc262787(v=office.14)) |  [SharePoint Server 2013](/SharePoint/install/software-boundaries-and-limits) |  [SharePoint Server 2016](/SharePoint/install/software-boundaries-and-limits-0)
     
-- **Yükseltme sürecine genel bakış**: 
+- **Yükseltme işlemine genel bakış**: 
     
     [SharePoint Server 2007](/previous-versions/office/sharepoint-2007-products-and-technologies/cc303420(v=office.12)) |  [SharePoint Server 2010](/previous-versions/office/sharepoint-server-2010/cc303420(v=office.14)) |  [SharePoint Server 2013](/SharePoint/upgrade-and-update/upgrade-to-sharepoint-server-2016) |  [SharePoint Server 2016](/SharePoint/upgrade-and-update/upgrade-to-sharepoint-server-2016)
     
-### <a name="create-a-sharepoint-hybrid-solution-between-sharepoint-online-and-on-premises"></a>SharePoint Online SharePoint şirket içi arasında karma bir çözüm oluşturma
+### <a name="create-a-sharepoint-hybrid-solution-between-sharepoint-online-and-on-premises"></a>SharePoint Online ile şirket içi arasında SharePoint karma çözüm oluşturma
 
-Geçiş ihtiyaçlarının yanıtı şirket içi tarafından sunulan kendi kendine denetim ile SharePoint Online'ın sunduğu düşük sahip olma maliyeti arasında bir yerde ise, karmalar aracılığıyla SharePoint Server 2013 veya 2016 sunucu gruplarınızı SharePoint Online'a bağlanabilirsiniz. [Karma çözümleri SharePoint öğrenin](https://support.office.com/article/4c89a95a-a58c-4fc1-974a-389d4f195383.aspx).
+Geçiş gereksinimlerinizin yanıtı şirket içinde sunulan kendi kendine denetim ile SharePoint Online tarafından sunulan daha düşük sahip olma maliyeti arasında bir yerdeyse, SharePoint Server 2013 veya 2016 gruplarını karmalar aracılığıyla SharePoint Online'a bağlayabilirsiniz. [Karma çözümler SharePoint hakkında bilgi edinin](https://support.office.com/article/4c89a95a-a58c-4fc1-974a-389d4f195383.aspx).
   
-Karma bir SharePoint Server sunucu sunucusunun işletmenize yararına olduğuna karar verirsiniz, var olan karma türleri öğrenin ve şirket içi SharePoint sunucu grubuyla Microsoft 365 aboneliğiniz arasındaki bağlantıyı nasıl yapılandırın.
+Karma SharePoint Sunucu grubunun işletmenize fayda sağlayacağına karar verirseniz, mevcut karma türleri ve şirket içi SharePoint grubunuzla Microsoft 365 aboneliğiniz arasındaki bağlantıyı yapılandırma hakkında bilgi edinin.
   
-| Seçenek | Açıklama |
+| Seçeneği | Açıklama |
 |:-----|:-----|
-[Microsoft uyumluluk teklifleri](/compliance/regulatory/offering-home)  <br/> |[FastTrack](https://www.microsoft.com/fasttrack/microsoft-365) yardımı sınırlıdır.  <br/> Yükseltmenin büyük bir yolu el ile veya SharePoint Online ve Geçiş İçeriği Yol Haritası'OneDrive açıklanan SPO [Geçiş API'si aracılığıyla esnetir](/sharepointmigration/upload-on-premises-content-to-sharepoint-online-using-powershell-cmdlets).  <br/> |
-|Microsoft Destek mühendisleri ve veri merkezi çalışanlarının aboneliğinize kısıtlamasız yönetici erişimi yok.<br/> |Donanım altyapısının yeni sürümüne destek olmak için donanım altyapısının yükselt yapılması gerekirse veya yükseltme için ikincil bir grup gerekirse ek maliyetler SharePoint.  <br/> |
-|İş ortakları, SharePoint Online'a verilerinizin tek seferlik bir şekilde SharePoint olabilir.  <br/> ||
-|Çevrimiçi ürünler hizmet genelinde otomatik olarak güncelleştirilir. Özellikler kullanımdan sönse de destek sona erer.<br/> ||
+[Microsoft uyumluluk teklifleri](/compliance/regulatory/offering-home)  <br/> |[Geçiş için FastTrack](https://www.microsoft.com/fasttrack/microsoft-365) yardımı sınırlıdır.  <br/> Yükseltmenin büyük bir kısmını el ile veya [SharePoint Online ve OneDrive Geçiş İçeriği Yol Haritası'nda](/sharepointmigration/upload-on-premises-content-to-sharepoint-online-using-powershell-cmdlets) açıklanan SPO Geçiş API'sini kullanarak yapacaktır.  <br/> |
+|Microsoft Desteği mühendislerin ve veri merkezi çalışanlarının aboneliğinize sınırsız yönetici erişimi yoktur.<br/> |Donanım altyapısının daha yeni SharePoint sürümünü destekleyecek şekilde yükseltilmesi gerekiyorsa veya yükseltme için ikincil bir grup gerekiyorsa ek maliyetler olabilir.  <br/> |
+|İş ortakları, verilerinizi SharePoint Online'a tek seferlik geçirme konusunda yardımcı olabilir.  <br/> ||
+|Çevrimiçi ürünler hizmet genelinde otomatik olarak güncelleştirilir. Özellikler kullanımdan kaldırılabilir ancak gerçek destek sonu yoktur.<br/> ||
    
-Yeni bir site oluşturmaya karar Microsoft 365 ve gerektiğinde verileri bu siteye el ile geçirecekse, Microsoft 365 [kontrol edin](https://www.microsoft.com/microsoft-365/).
+Yeni bir Microsoft 365 sitesi oluşturmaya karar verdiyseniz ve gerektiğinde verileri bu siteye el ile geçirirseniz [Microsoft 365 seçeneklerinizi](https://www.microsoft.com/microsoft-365/) denetleyin.
   
-### <a name="upgrade-sharepoint-server-on-premises"></a>SharePoint Server şirket içi sürümüne yükseltme
+### <a name="upgrade-sharepoint-server-on-premises"></a>Şirket içi SharePoint Sunucusu'nu yükseltme
 
-Yükseltmelerde sürüm atlamanın hiçbir yolu SharePoint yoktur. Yükseltmeler seri olarak devam ediyor:
+SharePoint Yükseltmeleri'nde sürümleri atlamanın hiçbir yolu yoktur. Yükseltmeler seri olarak gider:
   
-- SharePoint Server 2007 \> SharePoint Server 2010 \> SharePoint Server 2013 \> SharePoint Server 2016
+- SharePoint 2007 \> SharePoint Server 2010 \> SharePoint Server 2013 \> SharePoint Server 2016
    
-SharePoint 2007'den SharePoint Server 2016'ya gitmek önemli ölçüde zaman anlamına geliyor ve donanım (SQL sunucuları da yükseltilsin), yazılım ve yönetim maliyetlerini içerir. Özelleştirmelerin yükseltildikten veya vazgeçilmiş olması gerekir.
+SharePoint 2007'den SharePoint Server 2016'ya geçmek, önemli bir zaman yatırımı anlamına gelir ve donanım (SQL sunucuların da yükseltilmesi gerekir), yazılım ve yönetim maliyetlerini içerir. Özelleştirmelerin yükseltilmesi veya terk edilmesi gerekir.
   
 > [!NOTE]
-> Kullanım ömrü sona ermiş SharePoint 2007 sunucu grubunızı korumak, yeni donanıma bir SharePoint Server 2016 sunucu grubu yüklemek (dolayısıyla ayrı gruplarda yan yana çalıştırıldı) ve ardından içeriğin el ile geçişini planlamak ve yürütmek (örneğin, içeriği indirmek ve yeniden karşıya yüklemek için) mümkündür. Ancak el ile taşıma, son değiştirme hesabının el ile taşıma yapılan hesabın diğer adıyla değiştirilme ve siteleri, alt siteleri, izinleri ve liste yapılarını yeniden ekleme gibi, öncesinde yapılması gereken çalışma gibi el ile taşıma hareketlerinde meydana gelecek olası aksalara karşı dikkatli olun. Geçişin etkisini azaltmak için, depolamaya hangi verileri taşıyabilirsiniz veya silebilirsiniz.
+> Kullanım süresi sonu SharePoint 2007 grubunuzun bakımını yapmak, yeni donanıma bir SharePoint Server 2016 grubu yüklemek (böylece ayrı gruplarda yan yana çalışmak) ve ardından el ile içerik geçişi planlamak ve yürütmek mümkündür (örneğin, içeriği indirmek ve yeniden yüklemek için). Ancak, el ile yapılan son değiştirilen hesabı el ile taşımayı yapan hesabın diğer adıyla değiştiren belge taşımaları ve siteleri, alt siteleri, izinleri ve liste yapılarını yeniden oluşturma gibi önceden yapılması gereken işler gibi el ile taşımaların olası tuzaklarına dikkat edin. Geçişin etkisini azaltmak için depolama alanına taşıyabileceğiniz veya silebileceğiniz verileri göz önünde bulundurun.
   
-Yükseltmeden önce ortamınızı temizleyin. Yükseltmeden önce ve kesinlikle siz izin olmadan önce, var olan grubun işlevsel olduğunu emin olun! 
+Yükseltmeden önce ortamınızı temizleyin. Yükseltmeden önce mevcut grubunuzun işlevsel olduğundan emin olun ve kesinlikle yetkisini almadan önce! 
   
-Desteklenen ve desteklenmeyen *yükseltme yollarını gözden geçirmeyi unutmayın*: 
+*Desteklenen ve desteklenmeyen yükseltme yollarını* gözden geçirmeyi unutmayın: 
   
 - [SharePoint Server 2007](/previous-versions/office/sharepoint-2007-products-and-technologies/cc262747(v=office.12))
     
@@ -220,7 +220,7 @@ Desteklenen ve desteklenmeyen *yükseltme yollarını gözden geçirmeyi unutmay
     
 - [SharePoint Server 2013](/SharePoint/upgrade-and-update/review-supported-editions-and-products-for-upgrading-to-sharepoint-2013)
     
-Özelleştirmeleriniz *varsa*, geçiş yolunun her adımı için yükseltme planınız kritik öneme sahipse: 
+*Özelleştirmeleriniz* varsa, geçiş yolundaki her adım için bir yükseltme planınız olması önemlidir: 
   
 - [SharePoint 2007](/previous-versions/office/sharepoint-2007-products-and-technologies/cc263203(v=office.12))
     
@@ -230,48 +230,48 @@ Desteklenen ve desteklenmeyen *yükseltme yollarını gözden geçirmeyi unutmay
     
 |**Şirket içi Pro**|**Şirket İçi Con**|
 |:-----|:-----|
-|Sunucu donanımından yukarıya, SharePoint Sunucu Grubu'hepsinin tam denetimi.  <br/> |Tüm kesmeler ve düzeltmeler, tüm şirketin sorumluluğundadır. (Ürününüz destek sona ermiş değilse ücretli Microsoft Desteği ile etkileşime geçsiniz.)  <br/> |
-|Şirket içi sunucu grubunızı karma aracılığıyla bir SharePoint Online aboneliğine bağlama seçeneğiyle, SharePoint SharePoint Server şirket içi özelliğinin tam özellik kümesi.  <br/> |Yükseltme, yamalar, güvenlik düzeltmeleri ve şirket içinde yönetilen SharePoint Sunucusunun tüm bakımı.  <br/> |
-|Daha fazla özelleştirme için tam erişim.  <br/> |[Microsoft uyumluluk tekliflerini](/compliance/regulatory/offering-home) şirket içinde el ile yapılandırmalısınız.  <br/> |
-|Şirket içinde güvenlik testi ve sunucu performans ayarı sizin denetiminiz altında gerçekleştirilen bir hizmettir.  <br/> |Microsoft 365, SharePoint Server şirket içi ile birlikte çalışmayan SharePoint Online'a özellikler sağlar  <br/> |
-|İş ortakları, verilerin SharePoint Server'ın sonraki sürümüne (ve ötesine) geçişe yardımcı olabilir.  <br/> |SharePoint Server siteleriniz, [SharePoint Online'da olduğu gibi SSL/TLS](/SharePoint/security-for-sharepoint-server/enable-tls-1-1-and-tls-1-2-support-in-sharepoint-server-2016) sertifikalarını otomatik olarak kullanmaz.  <br/> |
-|SharePoint Server şirket içi için adlandırma kuralları, yedekleme ve geri yükleme ve diğer kurtarma seçenekleri üzerinde tam denetim.  <br/> |SharePoint Server şirket içi, ürün yaşam döngüleri için çok duyarlıdır.  <br/> |
+|Sunucu donanımından SharePoint Grubunuzun tüm yönleriyle tam denetim.  <br/> |Tüm kesmeler ve düzeltmeler şirketinizin sorumluluğundadır. (Ürününüz destek sonunu geçmezse ücretli Microsoft Desteği etkileşim kurabilirsiniz.)  <br/> |
+|Şirket içi grubunuzu karma aracılığıyla bir SharePoint Online aboneliğine bağlama seçeneğiyle şirket içi SharePoint Server'ın tam özellik kümesi.  <br/> |Yükseltme, düzeltme ekleri, güvenlik düzeltmeleri ve şirket içinde yönetilen SharePoint Sunucusu'nun tüm bakımları.  <br/> |
+|Daha fazla özelleştirme için tam erişim.  <br/> |[Microsoft uyumluluk teklifleri](/compliance/regulatory/offering-home) şirket içinde el ile yapılandırılmalıdır.  <br/> |
+|Güvenlik testi ve sunucu performansı ayarlama işlemleri, sizin denetiminizde şirket içinde gerçekleştirilir.  <br/> |Microsoft 365, SharePoint Online'da şirket içi SharePoint Server ile birlikte çalışmamayan özellikleri kullanıma sunabilir  <br/> |
+|İş ortakları, verileri SharePoint Sunucusu'nun sonraki sürümüne (ve ötesine) geçirmeye yardımcı olabilir.  <br/> |SharePoint Server siteleriniz, SharePoint Online'da görüldüğü gibi ssl[/TLS](/SharePoint/security-for-sharepoint-server/enable-tls-1-1-and-tls-1-2-support-in-sharepoint-server-2016) sertifikalarını otomatik olarak kullanmaz.  <br/> |
+|şirket içi SharePoint Sunucusu'nda adlandırma kuralları, yedekleme ve geri yükleme ve diğer kurtarma seçenekleri üzerinde tam denetim.  <br/> |SharePoint Server şirket içi, ürün yaşam döngülerine duyarlıdır.  <br/> |
    
 ### <a name="upgrade-resources"></a>Kaynakları yükseltme
 
-Ortamının donanım ve yazılım gereksinimlerini karşı olduğundan emin olun. Sonra da desteklenen yükseltme yöntemlerini izleyin.
+Ortamınızın donanım ve yazılım gereksinimlerini karşıladığından emin olun. Ardından desteklenen yükseltme yöntemlerini izleyin.
   
 - **Donanım/yazılım gereksinimleri:** 
     
     [SharePoint Server 2010](/previous-versions/office/sharepoint-server-2010/cc262485(v=office.14)) |  [SharePoint Server 2010](/previous-versions/office/sharepoint-server-2010/cc262485(v=office.14)) |  [SharePoint Server 2013](/SharePoint/install/hardware-and-software-requirements-0) |  [SharePoint Server 2016](/SharePoint/install/hardware-and-software-requirements)
     
-- **Yazılım sınırları ve sınırlamaları:** 
+- **Yazılım sınırları ve sınırları:** 
     
     [SharePoint Server 2007](/previous-versions/office/sharepoint-2007-products-and-technologies/cc262787(v=office.12)) |  [SharePoint Server 2010](/previous-versions/office/sharepoint-server-2010/cc262787(v=office.14)) |  [SharePoint Server 2013](/SharePoint/install/software-boundaries-and-limits) |  [SharePoint Server 2016](/SharePoint/install/software-boundaries-and-limits-0)
     
-- **Yükseltme sürecine genel bakış:** 
+- **Yükseltme işlemine genel bakış:** 
     
     [SharePoint Server 2007](/previous-versions/office/sharepoint-2007-products-and-technologies/cc303420(v=office.12)) |  [SharePoint Server 2010](/previous-versions/office/sharepoint-server-2010/cc303420(v=office.14)) |  [SharePoint Server 2013](/SharePoint/upgrade-and-update/upgrade-to-sharepoint-server-2016) |  [SharePoint Server 2016](/SharePoint/upgrade-and-update/upgrade-to-sharepoint-server-2016)
     
-### <a name="create-a-sharepoint-hybrid-solution-between-sharepoint-online-and-on-premises"></a>SharePoint Online SharePoint şirket içi arasında karma bir çözüm oluşturma
+### <a name="create-a-sharepoint-hybrid-solution-between-sharepoint-online-and-on-premises"></a>SharePoint Online ile şirket içi arasında SharePoint karma çözüm oluşturma
 
-Geçiş ihtiyaçlarının yanıtı şirket içi tarafından sunulan kendi kendine denetim ile SharePoint Online'ın sunduğu düşük sahip olma maliyeti arasında bir yerde ise, karmalar aracılığıyla SharePoint Server 2013 veya 2016 sunucu gruplarınızı SharePoint Online'a bağlanabilirsiniz. [Karma çözümler SharePoint öğrenin](https://support.office.com/article/4c89a95a-a58c-4fc1-974a-389d4f195383.aspx)
+Geçiş gereksinimlerinizin yanıtı şirket içinde sunulan kendi kendine denetim ile SharePoint Online tarafından sunulan daha düşük sahip olma maliyeti arasında bir yerdeyse, SharePoint Server 2013 veya 2016 gruplarını karmalar aracılığıyla SharePoint Online'a bağlayabilirsiniz. [Karma çözümleri SharePoint hakkında bilgi edinin](https://support.office.com/article/4c89a95a-a58c-4fc1-974a-389d4f195383.aspx)
   
-Karma bir SharePoint Server sunucu sunucusunun işletmenize yararına olduğuna karar verirsiniz, var olan karma türleri öğrenin ve şirket içi SharePoint sunucu grubuyla Microsoft 365 aboneliğiniz arasındaki bağlantıyı nasıl yapılandırın.
+Karma SharePoint Sunucu grubunun işletmenize fayda sağlayacağına karar verirseniz, mevcut karma türleri ve şirket içi SharePoint grubunuzla Microsoft 365 aboneliğiniz arasındaki bağlantıyı yapılandırma hakkında bilgi edinin.
   
-Bunun nasıl çalıştığını görmenin en iyi yollarından biri, Test Laboratuvarı Microsoft 365 ile kurabilirsiniz bir geliştirme/[test ortamı oluşturmaktır](m365-enterprise-test-lab-guides.md). Deneme veya satın alınan bir Microsoft 365 sonra, SharePoint Online'da verileri geçirebilirsiniz ve site koleksiyonları, web'ler ve belge kitaplıkları oluşturabilirsiniz. Geçiş API'sini kullanarak el ile veya Sitem içeriğini karma sihirbazı aracılığıyla OneDrive İş'e geçirebilirsiniz.
+Bunun nasıl çalıştığını görmenin iyi bir yolu, [Test Laboratuvarı Kılavuzları](m365-enterprise-test-lab-guides.md) ile ayarlayabileceğiniz bir Microsoft 365 geliştirme/test ortamı oluşturmaktır. Deneme sürümünü aldıktan veya Microsoft 365 aboneliği satın aldıktan sonra, SharePoint Online'da verileri geçirebileceğiniz site koleksiyonları, web'ler ve belge kitaplıkları oluşturabilirsiniz. Geçiş API'sini kullanarak veya Sitem içeriğini karma sihirbaz aracılığıyla OneDrive İş geçirmek istiyorsanız el ile geçirebilirsiniz.
   
 > [!NOTE]
-> Karma seçeneğin kullan unutmayın; SharePoint 2007 sunucu grubu, şirket içinde SharePoint Server 2013 veya SharePoint Server 2016'ya yükseltilir.
+> Karma seçeneği kullanmak için SharePoint 2007 grubunuzun şirket içinde SharePoint Server 2013 veya SharePoint Server 2016'ya yükseltilmesi gerektiğini unutmayın.
   
 ## <a name="related-topics"></a>İlgili konular
 
-[Yükseltme sorunlarını giderme ve sürdürme (Office SharePoint Server 2007)](/previous-versions/office/sharepoint-2007-products-and-technologies/cc262967(v=office.12))
+[Yükseltme sorunlarını giderme ve yükseltmeyi sürdürme (Office SharePoint Server 2007)](/previous-versions/office/sharepoint-2007-products-and-technologies/cc262967(v=office.12))
   
 [Yükseltme sorunlarını giderme (SharePoint Server 2010)](/previous-versions/office/sharepoint-server-2010/cc262967(v=office.14))
   
 [SharePoint 2013'te veritabanı yükseltme sorunlarını giderme](/SharePoint/upgrade-and-update/troubleshoot-database-upgrade-issues-in-sharepoint-2013)
   
-[Yükseltmeye yardımcı olmak için Microsoft İş Ortaklarını arama](https://go.microsoft.com/fwlink/?linkid=841249)
+[Yükseltme konusunda yardımcı olması için Microsoft İş Ortaklarını arayın](https://go.microsoft.com/fwlink/?linkid=841249)
   
-[Office 2007 sunucularından ve istemcilerinden yükseltmeye yardımcı olan kaynaklar](upgrade-from-office-2007-servers-and-products.md)
+[Office 2007 sunucularından ve istemcilerinden yükseltmenize yardımcı olacak kaynaklar](upgrade-from-office-2007-servers-and-products.md)

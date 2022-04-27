@@ -1,14 +1,14 @@
 ---
-title: Kampanyalar Microsoft 365'i edinin
+title: Kampanyalar için Microsoft 365 alma
 f1.keywords:
 - NOCSH
-ms.author: sharik
-author: SKjerland
-manager: scotv
+ms.author: deniseb
+author: denisebmsft
+manager: dansimp
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection:
 - Adm_O365
 - M365-subscription-management
@@ -23,60 +23,58 @@ search.appverid:
 - BCS160
 - MET150
 ms.assetid: 5abfef7b-5957-484a-b06b-a7c55e013e44
-description: Kampanyalar Microsoft 365 alın ve kampanyanızı e-posta, veri ve iletişimlere yönelik siber güvenlik tehditlerine karşı koruyun.
-ms.openlocfilehash: f612fa2d47e8085fa79773bbea139d6b67f45130
-ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
+description: Kampanyalarınızı e-posta, veri ve iletişimlere yönelik siber güvenlik tehditlerine karşı koruyabilmeniz için Kampanyalar için Microsoft 365 alın.
+ms.openlocfilehash: 945948b378bc67bf52f04740fb00220b4606b294
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "64634283"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65100125"
 ---
-# <a name="get-microsoft-365-for-campaigns"></a>Kampanyalar Microsoft 365'i edinin
+# <a name="how-to-get-microsoft-365-for-campaigns"></a>Kampanyalar için Microsoft 365 alma
 
-E-Microsoft 365 İş Ekstra ve işbirliği için ek güvenlik yapılandırmak üzere bu kılavuzu kullanan herkes. Bununla birlikte, ABD'de kampanyalar ve parti partileri diğer kampanyalar için özel Microsoft 365. Şu anda bu özel fiyatlandırma şu anda kullanılabilir:
+ABD'deki kampanyalar ve siyasi partiler, Microsoft 365 İş Ekstra için özel fiyatlandırmaya uygundur. Şu anda bu özel fiyatlandırma şu şekilde kullanılabilir:
 
-- Birleşik Devletler, Kanada ve Yeni Zelanda'daki ulusal düzeydeki partilere
+- Birleşik Devletler, Kanada ve Yeni Zelanda'da ulusal düzeyde siyasi partiler
+- Birleşik Devletler ve Yeni Zelanda'da ulusal veya federal siyasi kampanyalar
+- Birleşik Devletler devlet düzeyindeki siyasi partiler
+- ABD devlet genelindeki siyasi kampanyalar (örneğin: valilik, devlet yasama organı veya başsavcılık için ofis arayan kampanyalar)
 
-- Birleşik Devletler ve Yeni Zelanda'da ulusal veya federal kampanyalar
+   > [!IMPORTANT]
+   > Yerel düzenlemeler nedeniyle şu anda şu durumlarda Kampanyalar için Microsoft 365 sunamazsınız: CO, DE, IL, Ok, WI & WY. İş [için Microsoft 365](https://www.office.com/business) ek teklifleri keşfetmeleri için bu eyaletlerdeki kampanyaları teşvik ediyoruz.
 
-- ABD Eyaleti genelindeki kara kampanyaları (örneğin: promosyon için ofis, devlet okunaklıliği veya avukat geneli için yapılan kampanyalar)*
+Kampanyanız veya siyasi partiniz uygunsa, Kampanyalar için Microsoft 365 Microsoft aracılığıyla sağlanan en ucuz plandır. Bkz. [Kampanyalar için Microsoft 365 kaydolma](m365-campaigns-sign-up.md).  
 
-    *Yerel düzenlemeler nedeniyle, şu anda aşağıdaki eyaletlerde Microsoft 365 Kampanyaları için destek sunaamadığız: CO, DE, IL, OK, WI & WY. Bu eyaletlerde, işletmeler için Microsoft 365'de ek [teklifleri keşfetmeye Microsoft 365 teşvik edeceğiz](https://www.office.com/business).
+> [!TIP]
+> Özel fiyatlandırma için uygun değilseniz, Microsoft 365 İş Ekstra işbirliği ortamı için kapsamlı güvenlik elde etmenin en uygun maliyetli yoludur. Bkz[. Microsoft 365 İş Ekstra alma](get-microsoft-365-business-premium.md).
 
-- Birleşik Devletler'de devlet düzeyindeki partilerin Birleşik Devletler
+## <a name="what-does-microsoft-365-for-campaigns-include"></a>Kampanyalar için Microsoft 365 neler içerir?
 
-Kampanyanız veya partiniz uygunsa, Microsoft 365 planı Microsoft tarafından kullanılabilen en ucuz plandır. Bkz[. Kampanyalar için Microsoft 365'e kaydolma](m365-campaigns-sign-up.md).  
+Kampanyalar için Microsoft 365, sizin ve personelinizin güvenli bir şekilde birlikte çalışmasına yardımcı olan basit denetimler içerir:
 
-Özel fiyatlandırma için uygun değilsiniz, ancak Microsoft 365 İş Ekstra işbirliği ortamı için kapsamlı bir güvenlik elde etmek için en uygun maliyetli yol yine de bu olabilir. Daha [fazla güvenlik Microsoft 365 İş Ekstra](../business/set-up.md?toc=/microsoft-365/campaigns/toc.json&bc=/microsoft-365/campaigns/breadcrumb/toc.json) ve ekibinin güvenli bir şekilde birlikte çalışmalarına yardımcı olmak için bkz. Güvenlik ayarlarını yapma ve bu kitaplığı kullanma.
+- **Kullanıcı kimliğini koruma**: Kullanıcıların e-posta göndermek veya dosyalara erişmek için (çok faktörlü kimlik doğrulaması) oturum açtıklarında söyledikleri kişi olduklarından emin olun.
+- **Hassas bilgileri koruma**: Kuruluşunuzun dışında paylaşılan bilgileri izlemek için hassas bilgileri koruyun (veri kaybı önleme).
+- **Mobil cihazları koruma**: Mobil cihazlardaki verileri koruma (mobil uygulama koruma ilkesi).
+- **Kötü amaçlı içeriğe karşı koruma**: E-posta eklerini (Office 365 için Defender) tarayarak kötü amaçlı içeriğe erişimi engelleyin.
+- **Parolaları koruma**: Parolaları hiçbir zaman sona ermeyecek şekilde ayarlayın; bu daha güvenlidir ve iş durdurmalarını önlemeye yardımcı olur (parola ilkesi).
+- **AccountGuard Program Erişimi**: Microsoft AccountGuard, siyasi alandaki müşterilere ek ücret ödemeden sunulan bir güvenlik hizmetidir. Hizmet, bu yüksek oranda hedeflenen müşterilerin kuruluş ve kişisel Microsoft e-posta hesapları genelinde siber güvenlik tehditlerinden korunmalarını sağlamak ve bilgilendirmek için tasarlanmıştır. [Microsoft AccountGuard](https://www.microsoftaccountguard.com/) daha fazla bilgi görüntüleyin.
 
-## <a name="what-does-microsoft-365-for-campaigns-include"></a>Kampanyalar Microsoft 365 neler içerir?
+## <a name="what-does-it-cost-who-needs-it-and-what-is-the-commitment"></a>Neye mal olur, kimin ihtiyacı olur ve taahhüt nedir?
 
-Bu yapılandırma Microsoft 365 İş Ekstra personeliniz ile güvenli bir şekilde birlikte çalışmanıza yardımcı olan basit denetimler içerir:
+Kampanyanız özel fiyatlandırma için uygunsa, Kampanyalar için Microsoft 365 aylık kullanıcı başına 5 ABD doları ücrete mal olur.
 
-- **Kullanıcı kimliğini koruma**: Kullanıcıların, e-posta göndermek veya dosyalara erişmek için oturum aken olduklarını söylemeleri gerekir (çok faktörlü kimlik doğrulaması).
+Kampanyanızı korumak için aday, kampanya yöneticisi, kampanyanın veya partinin parçası olan tüm üst düzey personelin ve genellikle tüm tam zamanlı personelin lisansını öneririz. Bazı gönüllü çalışanların lisansa da ihtiyacı olabilir. Genel olarak, kampanyanızda korumalı e-posta ve cihazlara ihtiyacı olan herkese bir lisans atayın.
 
-- **Hassas bilgileri koruma**: Hassas bilgileri, kuruluş dışında paylaşılan bilgileri izlemek için koruyun (veri kaybını önleme).
+Kampanyalar için Microsoft 365 kaydolduğunda minimum zaman taahhüdü yoktur. İhtiyacınız olan lisanslar için aylık ödeme yapabilir ve hizmeti kullanmayı istediğiniz zaman durdurabilirsiniz.
 
-- **Mobil cihazları koruma**: Mobil cihazlardaki verileri koruyun (mobil uygulama koruma ilkesi).
+## <a name="how-do-i-qualify-for-special-pricing"></a>Özel fiyatlandırma için uygun Nasıl yaparım??
 
-- **Kötü amaçlı içeriğe karşı koruma**: E-posta eklerini taraarak (veya yenilerini) kötü amaçlı içeriğe erişimi Office 365 için Defender.
+1. [aka.ms/m365forcampaigns'a](https://aka.ms/m365forcampaigns/) gidin ve kuruluşunuzla ilgili birkaç ayrıntı sağlayın. Sağladığınız ayrıntılar, Birleşik Devletler ulusal düzeyde bir siyasi kampanyayı veya partiyi temsil ettiğinizi doğrulamamıza yardımcı olur. Bu formu tamamladığınızda herhangi bir taahhüt yoktur.
 
-- **Parolaları koruma**: Parolaları süresi hiç dolmaacak şekilde ayarlayın. Bu daha güvenlidir ve iş durdurma sayfalarını engellemeye yardımcı olur (parola ilkesi).
+2. Formu tamamladıktan sonra bilgilerinizi gözden geçirmemiz birkaç gün sürer.
 
-- **AccountGuard Program Erişimi**: Microsoft AccountGuard, para alanı içinde müşterilere ek ücret ödemeden sunulan bir güvenlik hizmetidir. Hizmet, bu üst düzeyde hedefli müşterilerin kuruluş ve kişisel Microsoft e-posta hesapları genelinde siber güvenlik tehditlerine karşı kendilerini korumak için tasarlanmıştır. Diğer bilgileri bu makalenin [Microsoft AccountGuard](https://www.microsoftaccountguard.com/).
+3. Ulusal düzeyde bir siyasi kampanyayı veya partiyi temsil ettiğinizi doğruladıktan sonra Microsoft'tan bir e-posta daveti alacaksınız. Davetiniz, kuruluşunuza özgü bir kaydolma bağlantısı içerir.
 
-## <a name="what-does-it-cost-who-needs-it-and-what-is-the-commitment"></a>Maliyeti nedir, kime ihtiyacı vardır ve taahhüt nedir?
+## <a name="next-steps"></a>Sonraki adımlar
 
-Kampanyanız özel fiyatlandırmaya uygunsa Microsoft 365 başına maliyeti aylık 5 ABD Dolarıdır.
-Kampanyanızı korumak için adayın, kampanya yöneticisinin, kampanyanın veya partinin parçası olan tüm üst düzey personelin ve çoğunlukla tam zamanlı personelin lisansı önerilir. Bazı gönüllü çalışanların da lisansa ihtiyacı olabilir. Genelde, kampanyanıza, korumalı e-posta ve cihazlara ihtiyacı olan herkese lisans attayabilirsiniz.
-Kampanyalar için Microsoft 365 için kaydolarak, minimum bir Microsoft 365 taahhüdü yoktur. Ihtiyacınız olan lisanslar için aylık ödeme yapabilirsiniz ve hizmeti istediğiniz zaman kullanmayı durdurabilirsiniz.
-
-## <a name="how-do-i-qualify-for-special-pricing"></a>Nasıl yaparım? fiyatlandırmaya hak kazanmak mı?
-
-1. Sizin için [aka.ms/m365forcampaigns](https://aka.ms/m365forcampaigns/) gidin ve organizasyonunız hakkında birkaç ayrıntı bilgi edinin. Bize ilişkin ayrıntılar, yerel seçimde ulusal düzeyde bir kampanyayı veya partiyi temsil etmeye Birleşik Devletler. Bu formu tamamlarken herhangi bir taahhütte yoktur.
-
-2. Formu tamamlandıktan sonra, bize birkaç gün içinde bilgileri gözden geçirebilirsiniz.
-
-3. Ulusal düzeyde bir kampanyayı veya partiyi temsil ifadenizi doğruladıktan sonra, Microsoft'tan bir e-posta daveti alırsınız. Davetin, kuruma özel bir kaydolma bağlantısı içerir.
-
-Davetinizi aldıklarında [Kampanyalar için Microsoft 365'e kaydolabilirsiniz](m365-campaigns-sign-up.md).
+Davetinizi aldığınızda [Kampanyalar için Microsoft 365 kaydolun](m365-campaigns-sign-up.md).

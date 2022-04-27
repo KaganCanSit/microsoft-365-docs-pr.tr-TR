@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview Uyumluluk Yöneticisi, kuruluşların risk değerlendirmelerini basitleştirmesine ve otomatikleştirmesine yardımcı olur ve riskleri gidermeye yardımcı olmak için önerilen eylemleri önerir.
-ms.openlocfilehash: 1d5f036b8bc97da431ed6e41017d59e01db749a4
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: deb3c3755a8afbab0071b8f829da620676f926ff
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64997108"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65078227"
 ---
 # <a name="microsoft-purview-compliance-manager"></a>Microsoft Purview Uyumluluk Yöneticisi
 
@@ -41,7 +41,7 @@ ms.locfileid: "64997108"
 Uyumluluk Yöneticisi'nin kuruluşunuzun uyumluluğu yönetme biçimini basitleştirmeye nasıl yardımcı olabileceğini öğrenmek için aşağıdaki videoyu izleyin:
 <br>
 <br>
->[!VIDEO https://www.microsoft.com/videoplayer/embed/RE4FGYZ]
+>[!VIDEO https://www.microsoft.com/videoplayer/embed/RE4VdoO]
 
 Uyumluluk Yöneticisi şunları sağlayarak uyumluluğu basitleştirmeye ve riski azaltmaya yardımcı olur:
 

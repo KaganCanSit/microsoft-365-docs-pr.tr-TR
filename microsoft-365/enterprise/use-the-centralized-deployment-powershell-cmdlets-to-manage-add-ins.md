@@ -2,7 +2,7 @@
 title: Eklentileri yönetmek için Merkezi Dağıtım PowerShell cmdlet'lerini kullanma
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 1/24/2020
 audience: Admin
 ms.topic: article
@@ -19,17 +19,17 @@ f1.keywords:
 ms.assetid: 94f4e86d-b8e5-42dd-b558-e6092f830ec9
 ms.custom:
 - seo-marvel-apr2020
-description: Microsoft 365 kuruluşunuz için Office eklentileri dağıtmanıza ve yönetmenize yardımcı olması için Merkezi Dağıtım PowerShell cmdlet'lerini kullanın.
-ms.openlocfilehash: 9f9a3e36c6e1c76d99d8abb7dc47f97a04541322
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+description: Microsoft 365 kuruluşunuz için Office Eklentileri dağıtmanıza ve yönetmenize yardımcı olması için Merkezi Dağıtım PowerShell cmdlet'lerini kullanın.
+ms.openlocfilehash: 07e0f69cd95bc1553adea96242bf44eb9f1217f1
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64824750"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65078479"
 ---
 # <a name="use-the-centralized-deployment-powershell-cmdlets-to-manage-add-ins"></a>Eklentileri yönetmek için Merkezi Dağıtım PowerShell cmdlet'lerini kullanma
 
-Microsoft 365 genel yöneticisi olarak, Merkezi Dağıtım özelliği aracılığıyla kullanıcılara Office eklentileri dağıtabilirsiniz (bkz. [Yönetim merkezinde Office Eklentileri dağıtma](../admin/manage/manage-deployment-of-add-ins.md). Microsoft 365 yönetim merkezi aracılığıyla Office eklentileri dağıtmanın yanı sıra Microsoft PowerShell'i de kullanabilirsiniz. [Windows PowerShell için O365 Merkezi Add-In Dağıtım Modülünü](https://www.powershellgallery.com/packages/O365CentralizedAddInDeployment) yükleyin.
+Microsoft 365 genel yöneticisi olarak, Office Eklentileri Merkezi Dağıtım özelliği aracılığıyla kullanıcılara dağıtabilirsiniz (bkz. [Yönetim merkezinde Office Eklentileri dağıtma](../admin/manage/manage-deployment-of-add-ins.md). Microsoft 365 yönetim merkezi aracılığıyla Office Eklentileri dağıtmanın yanı sıra Microsoft PowerShell'i de kullanabilirsiniz. [Windows PowerShell için O365 Merkezi Add-In Dağıtım Modülünü](https://www.powershellgallery.com/packages/O365CentralizedAddInDeployment) yükleyin.
 
 Modülü indirdikten sonra normal bir Windows PowerShell penceresi açın ve aşağıdaki cmdlet'i çalıştırın:
 

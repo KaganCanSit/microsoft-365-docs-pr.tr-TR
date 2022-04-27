@@ -18,16 +18,16 @@ search.appverid:
 - MOE150
 - GEA150
 description: Microsoft 365 yönetim merkezi Microsoft 365 Raporları panosunu kullanarak Microsoft tarayıcı kullanım raporu almayı öğrenin.
-ms.openlocfilehash: 29b4161b9bb6cbc509d6541e13fa9222628534b4
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 5515c00b5c7fc64a6f0295bdce724e5b798fb018
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64782027"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65078323"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---microsoft-browser-usage"></a>Yönetim merkezinde Microsoft 365 Raporları - Microsoft tarayıcı kullanımı
 
-Microsoft 365 Raporları panosu, kuruluşunuzdaki ürünler genelinde bir etkinliğe genel bakış gösterir. Her bir üründeki etkinlikler hakkında daha ayrıntılı içgörüler elde etmek için tek tek ürün düzeyi raporlarında detaya gitmenizi sağlar. [Raporlara genel bakış konusuna](activity-reports.md) göz atın. Microsoft tarayıcı kullanım raporunda Internet Explorer, Microsoft Edge'in eski sürümü ve yeni Microsoft Edge kullanımı hakkında içgörüler elde edebilirsiniz. Kullanım raporlaması, Microsoft tarayıcısı kullanılarak erişilen Microsoft 365 çevrimiçi hizmetler temel alır.
+Microsoft 365 Raporları panosu, kuruluşunuzdaki ürünler genelinde bir etkinliğe genel bakış gösterir. Her bir üründeki etkinlikler hakkında daha ayrıntılı içgörüler elde etmek için tek tek ürün düzeyi raporlarında detaya gitmenizi sağlar. [Raporlara genel bakış konusuna](activity-reports.md) göz atın. Microsoft tarayıcı kullanım raporunda Internet Explorer, Microsoft Edge'in eski sürümü ve yeni Microsoft Edge kullanımı hakkında içgörüler elde edebilirsiniz. Kullanım raporlaması, Microsoft 365 hesabı kullanan herhangi bir cihazda Microsoft tarayıcısı kullanılarak erişilen Microsoft 365 çevrimiçi hizmetler temel alır.
 
 ## <a name="how-to-get-to-the-microsoft-browser-usage-report"></a>Microsoft tarayıcı kullanım raporuna erişme
 

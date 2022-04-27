@@ -1,8 +1,8 @@
 ---
-title: Azure'a yüksek kullanılabilirlik federasyon kimlik doğrulaması Aşama 1 Yapılandırma
+title: Yüksek kullanılabilirlik federasyon kimlik doğrulaması 1. Aşama Azure'ı yapılandırma
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 11/25/2019
 audience: ITPro
 ms.topic: article
@@ -13,23 +13,23 @@ f1.keywords:
 - CSH
 ms.custom: Ent_Solutions
 ms.assetid: 91266aac-4d00-4b5f-b424-86a1a837792c
-description: 'Özet: Posta için Microsoft Azure kullanılabilirliği yüksek federasyon kimlik doğrulaması barındırmak üzere kullanıcı altyapısını Microsoft 365.'
-ms.openlocfilehash: 35666baf98b45419f41a0078729ac5a5a6fab995
-ms.sourcegitcommit: 6c57f1e90339d5a95c9e7875599dac9d3e032c3a
+description: 'Özet: Microsoft 365 için yüksek kullanılabilirlikli federasyon kimlik doğrulamasını barındırmak için Microsoft Azure altyapısını yapılandırın.'
+ms.openlocfilehash: f83aa494fcdead8f29810dea06193934b8ef26b9
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2022
-ms.locfileid: "63014387"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098394"
 ---
-# <a name="high-availability-federated-authentication-phase-1-configure-azure"></a>Yüksek kullanılabilirlik federasyon kimlik doğrulaması Aşama 1: Azure'i yapılandırma
+# <a name="high-availability-federated-authentication-phase-1-configure-azure"></a>Yüksek kullanılabilirlik federasyon kimlik doğrulaması 1. Aşama: Azure'ı yapılandırma
 
-Bu aşamada, azure'da sanal makineleri 2, 3 ve 4. aşamalarda barındıracak kaynak gruplarını, sanal ağı (VNet) ve kullanılabilirlik kümelerini oluşturmanız gerekir. Aşama 2: Etki alanı denetleyicilerini [yapılandırmaya başlamadan önce bu aşamayı tamamlamanız gerekir](high-availability-federated-authentication-phase-2-configure-domain-controllers.md). Tüm [aşamalar için Bkz. Azure'da Microsoft 365](deploy-high-availability-federated-authentication-for-microsoft-365-in-azure.md) için yüksek kullanılabilirlik federal kimlik doğrulamasını dağıtma.
+Bu aşamada, Azure'da sanal makineleri 2, 3 ve 4. aşamalarda barındıracak kaynak gruplarını, sanal ağı (VNet) ve kullanılabilirlik kümelerini oluşturursunuz. [2. Aşama: Etki alanı denetleyicilerini yapılandırma](high-availability-federated-authentication-phase-2-configure-domain-controllers.md) aşamasına geçmeden önce bu aşamayı tamamlamanız gerekir. Tüm aşamalar için bkz. [Azure'da Microsoft 365 için yüksek kullanılabilirlik federasyon kimlik doğrulamasını dağıtma](deploy-high-availability-federated-authentication-for-microsoft-365-in-azure.md).
   
-Azure'a şu temel bileşenler sağ):
+Azure şu temel bileşenlerle sağlanmalıdır:
   
 - Kaynak grupları
     
-- Azure sanal makinelerini barındırmak için alt ağların olduğu şirket içi bir Azure sanal ağı (VNet)
+- Azure sanal makinelerini barındırmak için alt ağlara sahip bir şirket içi Azure sanal ağı (VNet)
     
 - Alt ağ yalıtımı gerçekleştirmek için ağ güvenlik grupları
     
@@ -37,109 +37,109 @@ Azure'a şu temel bileşenler sağ):
     
 ## <a name="configure-azure-components"></a>Azure bileşenlerini yapılandırma
 
-Azure bileşenlerini yapılandırmaya başlamadan önce aşağıdaki tabloları doldurun. Azure'ı yapılandırma yordamlarında size yardımcı olmak için, bu bölümü yazdırarak gerekli bilgileri bir yere yazın veya bu bölümü bir belgeye kopyalayıp doldurun. VNet'in ayarları için, Tablo V'ye doldurun.
+Azure bileşenlerini yapılandırmaya başlamadan önce aşağıdaki tabloları doldurun. Azure'ı yapılandırma yordamlarında size yardımcı olmak için bu bölümü yazdırın ve gerekli bilgileri yazın veya bu bölümü bir belgeye kopyalayıp doldurun. VNet ayarları için Tablo V'yi doldurun.
   
 |**Öğe**|**Yapılandırma ayarı**|**Açıklama**|**Değer**|
 |:-----|:-----|:-----|:-----|
-|1.  <br/> |VNet adı  <br/> |VNet'e atanacak ad (örnek FedAuthNet).  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |
-|2.  <br/> |VNet konumu  <br/> |Sanal ağı içeren bölgesel Azure veri merkezi.  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |
-|3.  <br/> |VPN cihazı IP adresi  <br/> |İnternet'te VPN cihazınızın arabiriminin genel IPv4 adresi.  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |
-|4.  <br/> |VNet adres alanı  <br/> |Sanal ağın adres alanı. Bu adres alanı belirlemek için IT departmanınız ile birlikte çalışabilirsiniz.  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |
-|5.  <br/> |I Yer paylaşım anahtarı  <br/> |Siteden siteye VPN bağlantısının her iki yanında da kimlik doğrulaması yapmak için kullanılacak 32 karakterlik rastgele, alfasayısal dize. Bu anahtar değerini belirlemek için, IT veya güvenlik departmanınız ile birlikte çalışma. Alternatif olarak bkz [. Önceden paylaşılan bir I İleti anahtarı için rastgele dize oluşturma](https://social.technet.microsoft.com/wiki/contents/articles/32330.create-a-random-string-for-an-ipsec-preshared-key.aspx).  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |
+|1.  <br/> |Sanal ağ adı  <br/> |Sanal ağa atanacak bir ad (örneğin FedAuthNet).  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |
+|2.  <br/> |Sanal ağ konumu  <br/> |Sanal ağı içerecek bölgesel Azure veri merkezi.  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |
+|3.  <br/> |VPN cihazı IP adresi  <br/> |VPN cihazınızın İnternet üzerindeki arabiriminin genel IPv4 adresi.  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |
+|4.  <br/> |Sanal ağ adres alanı  <br/> |Sanal ağın adres alanı. Bu adres alanını belirlemek için BT departmanınızla birlikte çalışın.  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |
+|5.  <br/> |IPsec paylaşılan anahtarı  <br/> |Siteden siteye VPN bağlantısının her iki tarafının kimliğini doğrulamak için kullanılacak 32 karakterlik rastgele, alfasayısal bir dize. Bu anahtar değerini belirlemek için BT veya güvenlik departmanınızla birlikte çalışın. Alternatif olarak, bkz. [Önceden paylaşılan IPsec anahtarı için rastgele bir dize oluşturma](https://social.technet.microsoft.com/wiki/contents/articles/32330.create-a-random-string-for-an-ipsec-preshared-key.aspx).  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |
    
  **Tablo V: Şirket içi sanal ağ yapılandırması**
   
-Ardından, bu çözümün alt ağları için Tablo S'de doldurun. Tüm adres alanları, ağ öneki biçimi olarak da bilinen Sınıfsız Etki Alanı Yönlendirme (CIDR) biçiminde olmalıdır. Örnek 10.24.64.0/20.
+Ardından, bu çözümün alt ağları için Tablo S'yi doldurun. Tüm adres alanları, ağ ön eki biçimi olarak da bilinen Sınıfsız Etki Alanları Arası Yönlendirme (CIDR) biçiminde olmalıdır. 10.24.64.0/20 örnektir.
   
-İlk üç alt ağ için, sanal ağ adres alanı temel alarak bir ad ve tek bir IP adresi alanı belirtin. Ağ geçidi alt ağın 27 bit adres süresini (/27 ön ek uzunluğuna sahip) Azure ağ geçidi alt ağın şu şekilde belirler:
+İlk üç alt ağ için, sanal ağ adres alanını temel alan bir ad ve tek bir IP adresi alanı belirtin. Ağ geçidi alt ağı için Azure ağ geçidi alt ağı için 27 bit adres alanını (/27 ön ek uzunluğuyla) aşağıdakilerle belirleyin:
   
-1. VNet'in adres alanı içinde değişken bitleri 1 olarak ayarlayın; ağ geçidi alt ağı tarafından kullanılan bitlere kadar, sonra da kalan bitleri 0 olarak ayarlayın.
+1. Sanal ağın adres alanında değişken bitlerini 1 olarak, ağ geçidi alt ağı tarafından kullanılan bitlere kadar ayarlayın, ardından kalan bitleri 0 olarak ayarlayın.
     
-2. Sonuçta elde edilen bitleri ondalık değere dönüştürerek ağ geçidi alt ağ boyutuna ayarlanmış ön ek uzunluğu ile bir adres alanı olarak ifade etme.
+2. Elde edilen bitleri ondalık değere dönüştürün ve ön ek uzunluğu ağ geçidi alt ağı boyutuna ayarlanmış bir adres alanı olarak ifade edin.
     
-Bu [hesaplamayı sizin için gerçekleştiren bir](address-space-calculator-for-azure-gateway-subnets.md) PowerShell komut bloğu ve C# veya Python konsolu uygulaması için bkz. Azure ağ geçidi alt ağları için adres alanı hesaplayıcı.
+PowerShell komut bloğu ve sizin için bu hesaplamayı gerçekleştiren C# veya Python konsol uygulaması için bkz. [Azure ağ geçidi alt ağları için adres alanı hesaplayıcısı](address-space-calculator-for-azure-gateway-subnets.md) .
   
-Sanal ağ adresi bölümünden bu adres boşluklarını belirlemek için, IT departmanınız ile birlikte çalışabilirsiniz.
+Sanal ağ adres alanından bu adres alanlarını belirlemek için BT departmanınızla birlikte çalışın.
   
 |**Öğe**|**Alt ağ adı**|**Alt ağ adres alanı**|**Amaç**|
 |:-----|:-----|:-----|:-----|
-|1.  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |Active Directory Etki Alanı Hizmetleri (AD DS) etki alanı denetleyicisi ve dizin eşitleme sunucusu sanal makineleri (SANAL CIHAZLARı) tarafından kullanılan alt ağ.  <br/> |
-|2.  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |AD FS sanal bilgisayarları tarafından kullanılan alt ağ.  <br/> |
-|3.  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |Web uygulaması ara sunucusu VM'leri tarafından kullanılan alt ağ.  <br/> |
-|4.  <br/> |GatewaySubnet  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |Azure ağ geçidi sanal bilgisayarları tarafından kullanılan alt ağ.  <br/> |
+|1.  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |Active Directory Domain Services (AD DS) etki alanı denetleyicisi ve dizin eşitleme sunucusu sanal makineleri (VM) tarafından kullanılan alt ağ.  <br/> |
+|2.  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |AD FS VM'leri tarafından kullanılan alt ağ.  <br/> |
+|3.  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |Web uygulaması proxy VM'leri tarafından kullanılan alt ağ.  <br/> |
+|4.  <br/> |GatewaySubnet  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |Azure ağ geçidi VM'leri tarafından kullanılan alt ağ.  <br/> |
    
  **Tablo S: Sanal ağdaki alt ağlar**
   
-Ardından, sanal makinelere atanan statik IP adresleri ve yük dengeleyici örnekleri için Tablo I'yi doldurun.
+Ardından, sanal makinelere ve yük dengeleyici örneklerine atanan statik IP adresleri için Tablo I'yi doldurun.
   
-|**Öğe**|**Amaç**|**Alt ağ üzerinde IP adresi**|**Değer**|
+|**Öğe**|**Amaç**|**Alt ağda IP adresi**|**Değer**|
 |:-----|:-----|:-----|:-----|
-|1.  <br/> |İlk etki alanı denetleyicisinin statik IP adresi  <br/> |Tablo S'nin Öğe 1'inde tanımlanan alt ağın adres alanı için dördüncü olası IP adresi.  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |
-|2.  <br/> |İkinci etki alanı denetleyicisinin statik IP adresi  <br/> |Tablo S'nin Öğe 1'inde tanımlanan alt ağın adres alanı için beşinci olası IP adresi.  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |
-|3.  <br/> |Dizin eşitleme sunucusunun statik IP adresi  <br/> |Tablo S'nin Öğe 1'inde tanımlanan alt ağın adres alanı için altıncı olası IP adresi.  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |
-|4.  <br/> |AD FS sunucuları için iç yük dengeleyicinin statik IP adresi  <br/> |Tablo S'nin Öğe 2'de tanımlanan alt ağın adres alanı için dördüncü olası IP adresi.  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |
-|5.  <br/> |İlk AD FS sunucusunun statik IP adresi  <br/> |Tablo S'nin Öğe 2'de tanımlanan alt ağın adres alanı için beşinci olası IP adresi.  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |
-|6.  <br/> |İkinci AD FS sunucusunun statik IP adresi  <br/> |Tablo S'nin Öğe 2'de tanımlanan alt ağın adres alanı için altıncı olası IP adresi.  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |
-|7.  <br/> |İlk web uygulaması ara sunucusunun statik IP adresi  <br/> |Tablo S'nin Öğe 3'te tanımlanan alt ağın adres alanı için dördüncü olası IP adresi.  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |
-|8.  <br/> |İkinci web uygulaması ara sunucusunun statik IP adresi  <br/> |Tablo S'nin Öğe 3'te tanımlanan alt ağın adres alanı için beşinci olası IP adresi.  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |
+|1.  <br/> |İlk etki alanı denetleyicisinin statik IP adresi  <br/> |Tablo S'nin Madde 1'de tanımlanan alt ağın adres alanı için dördüncü olası IP adresi.  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |
+|2.  <br/> |İkinci etki alanı denetleyicisinin statik IP adresi  <br/> |Tablo S'nin Madde 1'inde tanımlanan alt ağın adres alanı için beşinci olası IP adresi.  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |
+|3.  <br/> |Dizin eşitleme sunucusunun statik IP adresi  <br/> |Tablo S'nin Madde 1'inde tanımlanan alt ağın adres alanı için altıncı olası IP adresi.  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |
+|4.  <br/> |AD FS sunucuları için iç yük dengeleyicinin statik IP adresi  <br/> |Tablo S'nin Madde 2'de tanımlanan alt ağın adres alanı için dördüncü olası IP adresi.  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |
+|5.  <br/> |İlk AD FS sunucusunun statik IP adresi  <br/> |Tablo S'nin Madde 2'de tanımlanan alt ağın adres alanı için beşinci olası IP adresi.  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |
+|6.  <br/> |İkinci AD FS sunucusunun statik IP adresi  <br/> |Tablo S'nin Madde 2'sinde tanımlanan alt ağın adres alanı için altıncı olası IP adresi.  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |
+|7.  <br/> |İlk web uygulaması proxy sunucusunun statik IP adresi  <br/> |Tablo S'nin Madde 3'te tanımlanan alt ağın adres alanı için dördüncü olası IP adresi.  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |
+|8.  <br/> |İkinci web uygulaması proxy sunucusunun statik IP adresi  <br/> |Tablo S'nin Madde 3'te tanımlanan alt ağın adres alanı için beşinci olası IP adresi.  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |
    
  **Tablo I: Sanal ağdaki statik IP adresleri**
   
-Başlangıçta sanal ağda etki alanı denetleyicilerini ayarlarken kullanmak istediğiniz şirket içi ağdaki iki Etki Alanı Adı Sistemi (DNS) sunucusu için Tablo D'yi doldurun. Bu listeyi belirlemek için IT departmanınız ile birlikte çalışabilirsiniz.
+Şirket içi ağınızda ilk olarak sanal ağınızdaki etki alanı denetleyicilerini ayarlarken kullanmak istediğiniz iki Etki Alanı Adı Sistemi (DNS) sunucusu için Tablo D'yi doldurun. Bu listeyi belirlemek için BT departmanınızla birlikte çalışın.
   
 |**Öğe**|**DNS sunucusu kolay adı**|**DNS sunucusu IP adresi**|
 |:-----|:-----|:-----|
-|1.  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |
-|2.  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |
+|1.  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |
+|2.  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |
    
  **Tablo D: Şirket içi DNS sunucuları**
   
-Paketleri şirket içi ağdan siteden siteye VPN bağlantısı üzerinden kuruluş ağınıza yönlendirmek için, sanal ağı, kurum içi ağ bağlantınız için tüm erişilebilir konumlarda adres alanlarının listesini (CIDR notasyonunda) bulunan yerel bir ağ ile yapılandırmanız gerekir. Yerel anızı tanımlayan adres alanları listesi benzersiz olmalı ve diğer sanal ağlarda veya diğer yerel ağlarda kullanılan adres alanıyla çakışmalı.
+Paketleri şirket içi ağdan kuruluş ağınıza siteden siteye VPN bağlantısı üzerinden yönlendirmek için, kuruluşunuzun şirket içi ağındaki tüm ulaşılabilir konumlar için adres alanlarının (CIDR gösteriminde) listesini içeren yerel bir ağ ile sanal ağı yapılandırmanız gerekir. Yerel ağınızı tanımlayan adres alanları listesi benzersiz olmalı ve diğer sanal ağlar veya diğer yerel ağlar için kullanılan adres alanıyla çakışmamalıdır.
   
-Yerel ağ adresi alanları kümesi için, Tablo L'de doldurun. Üç boş girdinin listelenmiş olduğunu, ancak normalde daha fazla girişe ihtiyacınız olduğunu unutmayın. Bu adres alanı listesini belirlemek için, IT departmanınız ile birlikte çalışabilirsiniz.
+Yerel ağ adres alanları kümesi için Tablo L'yi doldurun. Üç boş girdinin listelendiğini ancak genellikle daha fazlasına ihtiyacınız olacağını unutmayın. Bu adres alanları listesini belirlemek için BT bölümünüzle birlikte çalışın.
   
-|**Öğe**|**Yerel ağ adresi alanı**|
+|**Öğe**|**Yerel ağ adres alanı**|
 |:-----|:-----|
-|1.  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |
-|2.  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |
-|3.  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |
+|1.  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |
+|2.  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |
+|3.  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |
    
- **Tablo L: Yerel ağın adres ön ekleri**
+ **Tablo L: Yerel ağ için adres ön ekleri**
   
-Şimdi de iş yeriz için federasyon kimlik doğrulamanızı barındırmak üzere Azure altyapısını Microsoft 365.
+Şimdi Microsoft 365 için federasyon kimlik doğrulamanızı barındıracak Azure altyapısını oluşturmaya başlayalım.
   
 > [!NOTE]
-> Aşağıdaki komut kümeleri, en son Sürüm Azure PowerShell. Bkz[. Yeni e-Azure PowerShell](/powershell/azure/get-started-azureps). 
+> Aşağıdaki komut kümeleri Azure PowerShell en son sürümünü kullanır. Bkz. [Azure PowerShell ile Kullanmaya başlayın](/powershell/azure/get-started-azureps). 
   
-İlk olarak, bir Azure PowerShell istemini başlatarak hesabınızla oturum açın.
+İlk olarak bir Azure PowerShell istemi başlatın ve hesabınızda oturum açın.
   
 ```powershell
 Connect-AzAccount
 ```
 
 > [!TIP]
-> Özel ayarlarınıza bağlı olarak hazır çalıştırlı PowerShell komut blokları oluşturmak için bu Microsoft Excel [kullanın](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/downloads/O365FedAuthInAzure_Config.xlsx). 
+> Özel ayarlarınıza göre çalışmaya hazır PowerShell komut blokları oluşturmak için bu [Microsoft Excel yapılandırma çalışma kitabını](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/downloads/O365FedAuthInAzure_Config.xlsx) kullanın. 
 
-Aşağıdaki komutu kullanarak abonelik adı alın.
+Aşağıdaki komutu kullanarak abonelik adınızı alın.
   
 ```powershell
 Get-AzSubscription | Sort Name | Select Name
 ```
 
-Dosyanın daha eski Azure PowerShell, bunun yerine bu komutu kullanın.
+Azure PowerShell'ın eski sürümleri için bunun yerine bu komutu kullanın.
   
 ```powershell
 Get-AzSubscription | Sort Name | Select SubscriptionName
 ```
 
-Azure aboneliğinizi ayarlayın. Tırnak içindeki her şeyi, karakterlerle birlikte \< and > doğru adla değiştirin.
+Azure aboneliğinizi ayarlayın. Karakterler de dahil olmak üzere \< and > tırnak içindeki her şeyi doğru adla değiştirin.
   
 ```powershell
 $subscrName="<subscription name>"
 Select-AzSubscription -SubscriptionName $subscrName
 ```
 
-Ardından, yeni kaynak gruplarını oluşturun. Benzersiz bir kaynak grubu adları kümesi belirlemek için, bu komutu kullanarak varolan kaynak gruplarınızı listelenin.
+Ardından yeni kaynak gruplarını oluşturun. Benzersiz bir kaynak grubu adı kümesini belirlemek için, mevcut kaynak gruplarınızı listelemek için bu komutu kullanın.
   
 ```powershell
 Get-AzResourceGroup | Sort ResourceGroupName | Select ResourceGroupName
@@ -149,10 +149,10 @@ Benzersiz kaynak grubu adları kümesi için aşağıdaki tabloyu doldurun.
   
 |**Öğe**|**Kaynak grubu adı**|**Amaç**|
 |:-----|:-----|:-----|
-|1.  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |Etki alanı denetleyicileri  <br/> |
-|2.  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |AD FS sunucuları  <br/> |
-|3.  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |Web uygulaması ara sunucuları  <br/> |
-|4.  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |Altyapı öğeleri  <br/> |
+|1.  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |Etki alanı denetleyicileri  <br/> |
+|2.  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |AD FS sunucuları  <br/> |
+|3.  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |Web uygulaması proxy sunucuları  <br/> |
+|4.  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |Altyapı öğeleri  <br/> |
    
  **Tablo R: Kaynak grupları**
   
@@ -170,7 +170,7 @@ $rgName="<Table R - Item 4 - Name column>"
 New-AzResourceGroup -Name $rgName -Location $locName
 ```
 
-Ardından, Azure sanal ağına ve alt ağlarını oluşturun.
+Ardından Azure sanal ağını ve alt ağlarını oluşturacaksınız.
   
 ```powershell
 $rgName="<Table R - Item 4 - Resource group name column>"
@@ -199,7 +199,7 @@ New-AzVirtualNetwork -Name $vnetName -ResourceGroupName $rgName -Location $locNa
 
 ```
 
-Ardından, sanal makineleri olan her alt ağ için ağ güvenlik grupları oluşturun. Alt ağ yalıtımnı gerçekleştirmek için, alt ağın ağ güvenlik grubuna izin verilen veya reddedilen belirli trafik türleri için kurallar  ekebilirsiniz.
+Ardından, sanal makineleri olan her alt ağ için ağ güvenlik grupları oluşturursunuz. Alt ağ yalıtımı gerçekleştirmek için, bir alt ağın ağ güvenlik grubuna izin verilen veya reddedilen belirli trafik türleri için kurallar ekleyebilirsiniz.
   
 ```powershell
 # Create network security groups
@@ -219,7 +219,7 @@ Set-AzVirtualNetworkSubnetConfig -VirtualNetwork $vnet -Name $subnet3Name -Addre
 $vnet | Set-AzVirtualNetwork
 ```
 
-Ardından, bu komutları kullanarak siteden siteye VPN bağlantısı için ağ geçitleri oluşturun.
+Ardından, siteden siteye VPN bağlantısı için ağ geçitlerini oluşturmak için bu komutları kullanın.
   
 ```powershell
 $rgName="<Table R - Item 4 - Resource group name column>"
@@ -253,37 +253,37 @@ $vnetConnection=New-AzVirtualNetworkGatewayConnection -Name $vnetConnectionName 
 ```
 
 > [!NOTE]
-> Tek tek kullanıcıların şirket içi kimlik doğrulaması şirket içi kaynaklara güvenmez. Ancak, bu siteden siteye VPN bağlantısı kullanılamaz hale gelirse, VNet'te etki alanı denetleyicileri şirket içi Active Directory Etki Alanı Hizmetleri'ne yapılan kullanıcı hesapları ve gruplar için güncelleştirmeleri almaz. Bunun olmasını sağlamak için, siteden siteye VPN bağlantınız için yüksek kullanılabilirliği yapılandırabilirsiniz. Daha fazla bilgi için bkz [. Yüksek Kullanılabilir Şirket İçi ve VNet-To-VNet Bağlantısı](/azure/vpn-gateway/vpn-gateway-highlyavailable)
+> Tek tek kullanıcıların federasyon kimlik doğrulaması, şirket içi kaynakları kullanmaz. Ancak, bu siteden siteye VPN bağlantısı kullanılamaz hale gelirse, VNet'teki etki alanı denetleyicileri şirket içi Active Directory Etki Alanı Hizmetleri'nde yapılan kullanıcı hesapları ve gruplarında güncelleştirmeleri almaz. Bunun olmamasını sağlamak için siteden siteye VPN bağlantınız için yüksek kullanılabilirlik yapılandırabilirsiniz. Daha fazla bilgi için bkz [. Yüksek Oranda Kullanılabilir Şirket İçi Ve Sanal Ağdan Sanal Ağa Bağlantı](/azure/vpn-gateway/vpn-gateway-highlyavailable)
   
-Ardından, bu komutun görüntüsünden sanal ağınız için Azure VPN ağ geçidinin genel IPv4 adresini kaydedin:
+Ardından, şu komutun görüntüsünden sanal ağınız için Azure VPN ağ geçidinin genel IPv4 adresini kaydedin:
   
 ```powershell
 Get-AzPublicIpAddress -Name $publicGatewayVipName -ResourceGroupName $rgName
 ```
 
-Ardından, şirket içi VPN cihazınızı Azure VPN ağ geçidine bağlanıyor olacak şekilde yapılandırın. Daha fazla bilgi için bkz [. VPN cihazınızı yapılandırma](/azure/vpn-gateway/vpn-gateway-about-vpn-devices).
+Ardından, şirket içi VPN cihazınızı Azure VPN ağ geçidine bağlanacak şekilde yapılandırın. Daha fazla bilgi için bkz. [VPN cihazınızı yapılandırma](/azure/vpn-gateway/vpn-gateway-about-vpn-devices).
   
-Şirket içi VPN cihazınızı yapılandırmak için aşağıdakilere ihtiyacınız vardır:
+Şirket içi VPN cihazınızı yapılandırmak için aşağıdakilere ihtiyacınız olacaktır:
   
 - Azure VPN ağ geçidinin genel IPv4 adresi.
     
-- Siteden siteye VPN bağlantısı için I İleti önceden paylaşılan anahtar (Tablo V - Öğe 5 - Değer sütunu).
+- Siteden siteye VPN bağlantısı için IPsec önceden paylaşılan anahtarı (Tablo V - Öğe 5 - Değer sütunu).
     
-Ardından, şirket içi ağınız üzerinden sanal ağın adres alanınıza erişilebilir olduğundan emin olun. Bu işlem genellikle VPN cihazınıza sanal ağ adresi alanı için karşılık gelen bir rota ekleniyor ve ardından bu yönlendirmenin, kuruluş ağının yönlendirme altyapısının kalan alanlarına reklam yapılmasıyla yapılır. Bunun nasıl yapacaklarını belirlemek için, IT bölümüyle birlikte çalışma.
+Ardından, sanal ağın adres alanına şirket içi ağınızdan erişilebilir olduğundan emin olun. Bu genellikle VPN cihazınıza sanal ağ adres alanına karşılık gelen bir yol ekleyerek ve ardından bu yolu kuruluş ağınızın yönlendirme altyapısının geri kalanına tanıtarak yapılır. Bunun nasıl yapılacağını belirlemek için BT bölümünüzle birlikte çalışın.
   
-Ardından, üç kullanılabilirlik kümesi adlarını tanımlayın. Tablo A'ya doldurma. 
+Ardından üç kullanılabilirlik kümesinin adlarını tanımlayın. A Tablosunu doldurun. 
   
 |**Öğe**|**Amaç**|**Kullanılabilirlik kümesi adı**|
 |:-----|:-----|:-----|
-|1.  <br/> |Etki alanı denetleyicileri  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |
-|2.  <br/> |AD FS sunucuları  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |
-|3.  <br/> |Web uygulaması ara sunucuları  <br/> |![çizgi.](../media/Common-Images/TableLine.png)  <br/> |
+|1.  <br/> |Etki alanı denetleyicileri  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |
+|2.  <br/> |AD FS sunucuları  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |
+|3.  <br/> |Web uygulaması proxy sunucuları  <br/> |![Satır.](../media/Common-Images/TableLine.png)  <br/> |
    
  **Tablo A: Kullanılabilirlik kümeleri**
   
-Sanal makineleri aşama 2, 3 ve 4'te  oluştur sırasında bu adlara ihtiyacınız olur.
+Sanal makineleri 2, 3 ve 4. aşamalarda oluştururken bu adlara ihtiyacınız olacaktır.
   
-Bu yeni komutlarla yeni kullanılabilirlik Azure PowerShell oluşturun.
+Bu Azure PowerShell komutlarıyla yeni kullanılabilirlik kümelerini oluşturun.
   
 ```powershell
 $locName="<the Azure location for your new resource group>"
@@ -298,22 +298,22 @@ $avName="<Table A - Item 3 - Availability set name column>"
 New-AzAvailabilitySet -ResourceGroupName $rgName -Name $avName -Location $locName -Sku Aligned  -PlatformUpdateDomainCount 5 -PlatformFaultDomainCount 2
 ```
 
-Bu, bu aşamanın başarıyla tamamlanmasının sonucunda elde edilen yapılandırmadır.
+Bu, bu aşamanın başarıyla tamamlanmasından kaynaklanan yapılandırmadır.
   
-**Aşama 1: Projeniz için yüksek kullanılabilirlik federal kimlik doğrulaması için Azure Microsoft 365**
+**1. Aşama: Microsoft 365 için yüksek kullanılabilirliğe yönelik federasyon kimlik doğrulaması için Azure altyapısı**
 
-![Azure altyapısıyla Azure'da federasyon Microsoft 365 için yüksek kullanılabilirlik aşaması 1. aşama.](../media/4e7ba678-07df-40ce-b372-021bf7fc91fa.png)
+![Azure altyapısıyla Azure'da federasyon kimlik doğrulaması Microsoft 365 yüksek kullanılabilirlik aşamasının 1. aşaması.](../media/4e7ba678-07df-40ce-b372-021bf7fc91fa.png)
   
 ## <a name="next-step"></a>Sonraki adım
 
-Aşama [2'yi kullanma: Etki alanı denetleyicilerini bu](high-availability-federated-authentication-phase-2-configure-domain-controllers.md) iş yükünün yapılandırmasına devam edecek şekilde yapılandırabilirsiniz.
+2. Aşama: Bu iş yükünün yapılandırmasına devam etmek için [etki alanı denetleyicilerini yapılandırın](high-availability-federated-authentication-phase-2-configure-domain-controllers.md) .
   
 ## <a name="see-also"></a>Ayrıca Bkz
 
-[Azure'da şirket için yüksek kullanılabilirlik Microsoft 365 federasyon kimlik doğrulamasını dağıtma](deploy-high-availability-federated-authentication-for-microsoft-365-in-azure.md)
+[Azure'da Microsoft 365 için yüksek kullanılabilirlik federasyon kimlik doğrulamasını dağıtma](deploy-high-availability-federated-authentication-for-microsoft-365-in-azure.md)
   
-[Microsoft 365/test ortamınız için federasyon kimliği](federated-identity-for-your-microsoft-365-dev-test-environment.md)
+[Microsoft 365 geliştirme/test ortamınız için federasyon kimliği](federated-identity-for-your-microsoft-365-dev-test-environment.md)
   
 [Microsoft 365 çözüm ve mimari merkezi](../solutions/index.yml)
 
-[Kimlik Microsoft 365 anlama](deploy-identity-solution-identity-model.md)
+[Microsoft 365 kimlik modellerini anlama](deploy-identity-solution-identity-model.md)

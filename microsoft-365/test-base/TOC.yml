@@ -20,14 +20,6 @@
           href: uploadApplication.md
     - name: Paket Oluşturun
       href: buildpackage.md
-    - name: İkili Dosyaları ve Bağımlılıkları yükleyin
-      href: binaries.md
-    - name: Test Görevlerini Ayarlayın
-      href: testtask.md
-    - name: Test Seçeneklerini Ayarlayın
-      href: testoptions.md
-    - name: Gözden geçirin
-      href: review.md
     - name: Paket kılavuzu
       href: contentguideline.md
     - name: Uygulama/Test kuralları

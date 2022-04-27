@@ -2,8 +2,8 @@
 title: CellTrust SL2 platformundaki verileri Microsoft 365 arşivle
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -12,12 +12,12 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Mobil iletişim verilerini içeri aktarmak ve arşivlemek için CellTrust SL2 veri bağlayıcısını ayarlamayı ve kullanmayı öğrenin.
-ms.openlocfilehash: a4cbfc9dccd2541de0a9dca1a3791d5f213aa73d
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 0ac1137c8b6ee2d2267421c80adbbf65eaf9e5b7
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64996404"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65100907"
 ---
 # <a name="archive-data-from-celltrust-sl2-to-microsoft-365"></a>CellTrust SL2'den Microsoft 365 verileri arşivle
 

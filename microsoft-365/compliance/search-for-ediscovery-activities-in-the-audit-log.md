@@ -2,8 +2,8 @@
 title: Denetim günlüğünde eKeşif etkinliklerini ara
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -17,12 +17,12 @@ search.appverid:
 ms.assetid: 67cc7f42-a53d-4751-b929-6005c80798f7
 description: Kullanıcılara eBulma izinleri atanan kullanıcılar Microsoft Purview uyumluluk portalında İçerik arama, eBulma (Standart) ve eBulma (Premium) görevlerini gerçekleştirdiğinde hangi olayların günlüğe kaydedileceklerini öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 1e21fcff71d050e09a60a6708678d46f2b894bdc
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 6a11c8a939954b7319b88b45ea8f0d43b1b72442
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64995876"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65090871"
 ---
 # <a name="search-for-ediscovery-activities-in-the-audit-log"></a>Denetim günlüğünde eKeşif etkinliklerini ara
 

@@ -15,14 +15,16 @@ search.appverid:
 - MET150
 recommendations: false
 description: dlp ilkesi koşulları ve özel durumları hakkında bilgi edinin
-ms.openlocfilehash: f4a3521d0e5aab73cc16d97e0aea9c5830d9ddec
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: cd252002f2fcef3e3935dd44b1333e801bcba46d
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64762067"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65090461"
 ---
 # <a name="dlp-policy-conditions-exceptions-and-actions"></a>DLP ilke koşulları, özel durumlar ve eylemler
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 DLP ilkelerindeki koşullar ve özel durumlar, ilkenin uygulandığı hassas öğeleri tanımlar. Eylemler, bir özel durumun karşılanmasının bir sonucu olarak ne olacağını tanımlar.
 
@@ -94,11 +96,12 @@ Gönderen adresi konumunu DLP kural düzeyinde yapılandırmak için parametresi
 
 |DLP'de koşul veya özel durum|Microsoft 365 PowerShell'de koşul/özel durum parametreleri|özellik türü|Açıklama|
 |---|---|---|---|
-|Konu sözcükleri veya tümcecikleri içerir|koşul: *SubjectContainsWords* <br/><br/> exception: *ExceptIf SubjectContainsWords*|Kelime|Konu alanında belirtilen sözcükleri içeren iletiler.|
-|Konu desenleri eşleştirir|koşul: *SubjectMatchesPatterns* <br/><br/> exception: *ExceptIf SubjectMatchesPatterns*|Desen|Konu alanının belirtilen normal ifadelerle eşleşen metin desenleri içerdiği iletiler.|
-|İçerik içeriği|condition: *ContentContainsSensitiveInformation* <br/><br/> exception *ExceptIfContentContainsSensitiveInformation*|SensitiveInformationTypes|Veri kaybı önleme (DLP) ilkeleri tarafından tanımlanan hassas bilgiler içeren iletiler veya belgeler.|
-|Konu veya Gövde desenle eşleşir|koşul: *SubjectOrBodyMatchesPatterns* <br/><br/> özel durum: *ExceptIfSubjectOrBodyMatchesPatterns*|Desen|Konu alanının veya ileti gövdesinin belirtilen normal ifadelerle eşleşen metin desenleri içerdiği iletiler.|
-|Konu veya Gövde sözcükleri içeriyor|koşul: *SubjectOrBodyContainsWords* <br/><br/> özel durum: *ExceptIfSubjectOrBodyContainsWords*|Kelime|Konu alanında veya ileti gövdesinde belirtilen sözcükleri içeren iletiler|
+|Konu sözcükleri veya tümcecikleri içerir|koşul: *SubjectContainsWords* <br/> exception: *ExceptIf SubjectContainsWords*|Kelime|Konu alanında belirtilen sözcükleri içeren iletiler.|
+|Konu desenleri eşleştirir|koşul: *SubjectMatchesPatterns* <br/> exception: *ExceptIf SubjectMatchesPatterns*|Desen|Konu alanının belirtilen normal ifadelerle eşleşen metin desenleri içerdiği iletiler.|
+|İçerik içeriği|condition: *ContentContainsSensitiveInformation* <br/> exception *ExceptIfContentContainsSensitiveInformation*|SensitiveInformationTypes|Microsoft Purview Veri Kaybı Önleme (DLP) ilkeleri tarafından tanımlanan hassas bilgiler içeren iletiler veya belgeler.|
+|Konu veya Gövde desenle eşleşir|koşul: *SubjectOrBodyMatchesPatterns* <br/> özel durum: *ExceptIfSubjectOrBodyMatchesPatterns*|Desen|Konu alanının veya ileti gövdesinin belirtilen normal ifadelerle eşleşen metin desenleri içerdiği iletiler.|
+|Konu veya Gövde sözcükleri içeriyor|koşul: *SubjectOrBodyContainsWords* <br/> özel durum: *ExceptIfSubjectOrBodyContainsWords*|Kelime|Konu alanında veya ileti gövdesinde belirtilen sözcükleri içeren iletiler|
+|
 
 ### <a name="attachments"></a>Ekler
 
@@ -147,7 +150,6 @@ Bu tabloda DLP'de kullanılabilen eylemler açıklanmaktadır.
 |Gönderenin yöneticisini alıcı olarak ekleme|AddRecipients|İlk özellik: *AddedManagerAction*<br/><br/>İkinci özellik: *Alan*|Gönderenin yöneticisini belirtilen alıcı türü olarak iletiye ekler (Kime, Bilgi, Gizli) veya gönderene veya alıcıya bildirmeden iletiyi gönderenin yöneticisine yönlendirir. Bu eylem yalnızca gönderenin Yöneticisi özniteliği Active Directory'de tanımlandığında çalışır. Bu parametre şu söz dizimini kullanır: @{AddManagerAsRecipientType = "\<To \| Cc \| Bcc\>"}|
 Ekli konu|PrependSubject|Dize|Belirtilen metni iletinin Konu alanının başına ekler. Boşluk veya iki nokta üst üste kullanmayı göz önünde bulundurun (:) özgün konu metninden ayırt etmek için belirtilen metnin son karakteri olarak.<br/><br/>Aynı dizenin konu içindeki metni (örneğin, yanıtlar) içeren iletilere eklenmesini önlemek için kurala "Konu sözcükler içeriyor" (ExceptIfSubjectContainsWords) özel durumunu ekleyin.|
 |HTML bildirimi uygulama|ApplyHtmlDisclaimer|İlk özellik: *Metin*<br/><br/>İkinci özellik: *Konum*<br/><br/>Üçüncü özellik: *Geri dönüş eylemi*|Belirtilen HTML bildirimini iletinin gerekli konumuna uygular.<br/><br/>Bu parametre söz dizimini kullanır: @{ Text = " " ; Konum = \<Append \| Prepend\>; FallbackAction = \<Wrap \| Ignore \| Reject\> }|
-|Office 365 İleti Şifrelemesini ve hak korumasını kaldırma|RemoveRMSTemplate|yok|E-postaya uygulanan Office 365 şifrelemeyi kaldırır|
+|İleti şifrelemesini ve hak korumasını kaldırma|RemoveRMSTemplate|yok|E-postaya uygulanan ileti şifrelemesini kaldırır|
 |İletiyi barındırılan karantinaya teslim etme |*Karantina*|yok| Bu eylem şu anda **genel önizleme** aşamasındadır. Bu aşamada, DLP ilkeleri tarafından karantinaya alınan e-postalar, ilke türünü ExchangeTransportRule olarak gösterir.<br/><br/> EOP'de iletiyi karantinaya teslim eder. Daha fazla bilgi için bkz. [EOP'de karantinaya alınan e-posta iletileri](/microsoft-365/security/office-365-security/quarantine-email-messages).|
-
-<!--|Modify Subject|ModifySubject|PswsHashTable | Remove text from the subject line that matches a specific pattern and replace it with different text. See the example below. You can: <br/><br/>- **Replace** all matches in the subject with the replacement text <br/><br/>- **Append** to remove all matches in the subject and inserts the replacement text at the end of the subject. <br/><br/>- **Prepend** to remove all matches and inserts the replacement text at the beginning of the subject. See ModifySubject parameter in, /powershell/module/exchange/new-dlpcompliancerule|-->
+|Konuyu Değiştir|ModifySubject|PswsHashTable | Konu satırından belirli bir desenle eşleşen metni kaldırın ve farklı bir metinle değiştirin. Aşağıdaki örniğe bakın. Şunları yapabilirsiniz: <br/><br/>- Konu içindeki tüm eşleşmeleri değiştirme metniyle **değiştirme** <br/><br/>- Konu içindeki tüm eşleşmeleri kaldırmak için **sonuna ekleyin** ve konunun sonuna yeni metni ekler. <br/><br/>- Tüm eşleşmeleri kaldırmak için **önceden** ekleyin ve konunun başına yeni metni ekler. Bkz. ModifySubject parametresi, /powershell/module/exchange/new-dlpcompliancerule|

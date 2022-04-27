@@ -2,8 +2,8 @@
 title: Microsoft 365'da metinle ayrılmış verileri arşivleye bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -12,12 +12,12 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Yöneticiler, veritas'tan Microsoft 365 metinle ayrılmış verileri içeri aktarmak ve arşivlerken kullanmak için bir bağlayıcı ayarlayabilir. Bu bağlayıcı, Microsoft 365'da üçüncü taraf veri kaynaklarından verileri arşivleyabilmenizi sağlar. Bu verileri arşivledikten sonra, üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
-ms.openlocfilehash: b2039c3b850f7d266425d464235b62d0ce4a78ad
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 9b61b37a1748208a7bd0c55e7659acc9d9066767
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64997240"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65090508"
 ---
 # <a name="set-up-a-connector-to-archive-text-delimited-data"></a>Metinle sınırlandırılmış verileri arşivleye bağlayıcı ayarlama
 

@@ -1,10 +1,10 @@
 ---
-title: Daha fazla bilgi için kimlik altyapınızı Microsoft 365
+title: kimlik altyapınızı Microsoft 365 için dağıtma
 f1.keywords:
 - NOCSH
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -18,79 +18,79 @@ ms.collection:
 - m365solution-overview
 ms.custom:
 - intro-overview
-description: Daha fazla bilgi için kimlik altyapınızı Microsoft 365.
-ms.openlocfilehash: 77dbb7c5c38e2ecd8d8ef5ae71044565c2ae6b20
-ms.sourcegitcommit: 954c8af658adb270fe843991e048c6a30e86e77c
+description: kimlik altyapınızı Microsoft 365 için dağıtın.
+ms.openlocfilehash: 6128daa59bfece9403953e041f258d87ef6a7413
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2022
-ms.locfileid: "63016605"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65092965"
 ---
-# <a name="deploy-your-identity-infrastructure-for-microsoft-365"></a>Daha fazla bilgi için kimlik altyapınızı Microsoft 365
+# <a name="deploy-your-identity-infrastructure-for-microsoft-365"></a>kimlik altyapınızı Microsoft 365 için dağıtma
 
-Kurumsal Microsoft 365'de, iyi planlanmış ve yürütülen bir kimlik altyapısı, üretkenlik iş yüklerinize ve bu iş yüklerine erişimi yalnızca kimliği doğrulanmış kullanıcılar ve cihazlara erişimi kısıtlama dahil olmak üzere daha güçlü bir güvenlik yolunun önünü kılar. Kimlikler için güvenlik Sıfır Güveni dağıtımının önemli bir öğesidir; bu dağıtımda hem şirket içinde hem de buluttaki kaynaklara erişme girişimleri kimlik doğrulaması ve yetkilendirilmiştir.
+Microsoft 365 kurumsal olarak iyi planlanmış ve yürütülen bir kimlik altyapısı, üretkenlik iş yüklerinize ve verilerine erişimi yalnızca kimliği doğrulanmış kullanıcılar ve cihazlarla kısıtlama da dahil olmak üzere daha güçlü bir güvenliğin önünü açar. Kimlikler için güvenlik, hem şirket içindeki hem de buluttaki kaynaklara erişmeye yönelik tüm girişimlerin kimliğinin doğrulandığı ve yetkilendirildiği Sıfır Güven dağıtımının önemli bir öğesidir.
 
-Kurumsal her bir Microsoft 365 kimlik özellikleri, Azure Active Directory (Azure AD), şirket içi ve bulut tabanlı bileşenlerin rolü ve en yaygın kimlik doğrulama yapılandırmaları hakkında bilgi için Kimlik Altyapısı [posteri'ne bakın](../downloads/m365e-identity-infra.pdf).
+Kuruluş için her Microsoft 365 kimlik özellikleri, Azure Active Directory (Azure AD), şirket içi ve bulut tabanlı bileşenlerin rolü ve en yaygın kimlik doğrulama yapılandırmaları hakkında bilgi için [Kimlik Altyapısı posteri'ne](../downloads/m365e-identity-infra.pdf) bakın.
 
 [![Kimlik Altyapısı posteri.](../downloads/m365e-identity-infra.png)](../downloads/m365e-identity-infra.pdf)
 
-Kurumsal kimlik kavramları ve yapılandırmaları hızla takip etmek için bu iki sayfalık posteri Microsoft 365 gözden geçirin.
+Kuruluş için Microsoft 365 kimlik kavramlarını ve yapılandırmalarını hızla geliştirme amacıyla bu iki sayfalık posteri gözden geçirin.
 
-Bu [posteri indirebilir ve](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/m365e-identity-infra.pdf) mektup, yasal veya tabloid (11 x 17) biçiminde yazdırabilirsiniz.
+[Bu posteri indirebilir](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/m365e-identity-infra.pdf) ve mektup, yasal veya tabloid (11 x 17) biçiminde yazdırabilirsiniz.
 
-Bu çözüm, sıfır güveni olan dağıtım yığınını Microsoft 365 adımdır.
+Bu çözüm, Microsoft 365 Sıfır Güven dağıtım yığınını oluşturmanın ilk adımıdır.
 
-![En Microsoft 365 Sıfır Güven dağıtım yığını](../media/deploy-identity-solution-overview/zero-trust-deployment-stack.png)
+![Microsoft 365 Sıfır Güven dağıtım yığını](../media/deploy-identity-solution-overview/zero-trust-deployment-stack.png)
 
-Daha fazla bilgi için Sıfır Güven [Microsoft 365 planına bakın](/microsoft-365/security/microsoft-365-zero-trust).
+Daha fazla bilgi için [bkz. Microsoft 365 Sıfır Güven dağıtım planı](/microsoft-365/security/microsoft-365-zero-trust).
 
 ## <a name="whats-in-this-solution"></a>Bu çözümde neler var?
 
-Bu çözüm, çalışanlarınıza erişim ve kimlik tabanlı saldırılara karşı koruma sağlamak Microsoft 365 kiracınız için bir kimlik altyapısının dağıtımında size yol sunar.
+Bu çözüm, çalışanlarınıza erişim ve kimlik tabanlı saldırılara karşı koruma sağlamak üzere Microsoft 365 kiracınız için bir kimlik altyapısı dağıtımında size yol gösterir.
 
-![Daha fazla bilgi için kimlik altyapınızı Microsoft 365](../media/deploy-identity-solution-overview/deploy-identity-solution-overview.png)
+![kimlik altyapınızı Microsoft 365 için dağıtma](../media/deploy-identity-solution-overview/deploy-identity-solution-overview.png)
 
-Bu çözümde adımlar şöyledir:
+Bu çözümdeki adımlar şunlardır:
 
-1. [Kimlik modelinizi belirleme.](deploy-identity-solution-identity-model.md)
-2. [Ayrıcalıklı Microsoft 365 hesaplarınızı koruyun.](protect-your-global-administrator-accounts.md)
-3. [Kullanıcı Microsoft 365 hesaplarınızı koruyun.](microsoft-365-secure-sign-in.md)
+1. [Kimlik modelinizi belirleyin.](deploy-identity-solution-identity-model.md)
+2. [Microsoft 365 ayrıcalıklı hesaplarınızı koruyun.](protect-your-global-administrator-accounts.md)
+3. [Microsoft 365 kullanıcı hesaplarınızı koruyun.](microsoft-365-secure-sign-in.md)
 4. [Kimlik modelinizi dağıtın.](cloud-only-identities.md)
 
-Bu çözüm Sıfır Güven'in temel [ilkelerini destekler](https://www.microsoft.com/security/business/zero-trust/):
+Bu çözüm[, Sıfır Güven](https://www.microsoft.com/security/business/zero-trust/) temel ilkelerini destekler:
 
-- **Açık bir şekilde doğrulama:** Her zaman kullanılabilir tüm veri noktalarına göre kimlik doğrulama ve yetkilendirme.
-- **En az ayrıcalık erişimini kullanın:** Kullanıcı erişimini Just-In-Time ve Just-Enough-Access (JIT/JEA), risk tabanlı uyarlanabilir ilkeler ve veri koruması ile sınırlandırın.
-- **İhlal varsayalım:** Yarıçap yarıçapını ve segment erişimini en aza indirgeyin. Ender şifrelemeyi doğrulayın ve görünürlük elde etmek, tehdit algılamayı geliştirmek ve savunmayı geliştirmek için çözümlemeleri kullanın.
+- **Açıkça doğrula:** Kullanılabilir tüm veri noktalarına göre her zaman kimlik doğrulaması ve yetkilendirme.
+- **En az ayrıcalık erişimi kullanın:** Tam Zamanında ve Yeterli Erişim (JIT/JEA), risk tabanlı uyarlamalı ilkeler ve veri koruması ile kullanıcı erişimini sınırlayın.
+- **İhlal olduğunu varsay:** Patlama yarıçapı ve segment erişimini en aza indirin. Uçtan uca şifrelemeyi doğrulayın ve görünürlük elde etmek, tehdit algılamayı yönlendirmek ve savunmaları geliştirmek için analizi kullanın.
 
-Kuruluşun güvenlik duvarının arkasında bulunan her şeye güvenen alışılmış intranet erişiminden farklı olarak, Sıfır Güven her oturum açma ve erişime, kuruluş güvenlik duvarının arkasında ya da İnternet'te bulunan denetimsiz bir ağdan geliyor gibi davranır. Sıfır Güven ağ, altyapı, kimlikler, uç noktalar, uygulamalar ve veriler için koruma gerektirir.
+Bir kuruluşun güvenlik duvarının arkasındaki her şeye güvenen geleneksel intranet erişiminin aksine, Sıfır Güven her oturum açma ve erişimi kuruluş güvenlik duvarının arkasında veya İnternet'te olduğu gibi denetimsiz bir ağdan geliyormuş gibi davranır. Sıfır Güven ağ, altyapı, kimlikler, uç noktalar, uygulamalar ve veriler için koruma gerektirir.
 
-## <a name="microsoft-365-capabilities-and-features"></a>Microsoft 365 özellikleri ve özellikleri hakkında
+## <a name="microsoft-365-capabilities-and-features"></a>Microsoft 365 özellikleri ve özellikleri
 
-Azure AD, kiracınız için tam kimlik yönetimi ve güvenlik Microsoft 365 sağlar.
+Azure AD, Microsoft 365 kiracınız için eksiksiz bir kimlik yönetimi ve güvenlik özellikleri paketi sağlar.
 
-|Özellik veya özellik|Açıklama|Lisanslama|
+|Yetenek veya özellik|Açıklama|Lisanslama|
 |---|---|---|
-|[Çok faktörlü kimlik doğrulaması (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks)|MFA, kullanıcıların iki tür doğrulama (kullanıcı parolası, ayrıca Microsoft Authenticator uygulamasından gelen bildirim veya telefon görüşmesi gibi) sağlamasını gerektirir. MFA, çalınmış kimlik bilgilerinin ortamınıza erişmek için kullanılma riskini büyük ölçüde azaltır. Microsoft 365, MFA tabanlı oturum açmalarda Azure AD Multi-Factor Authentication hizmetini kullanır.|Microsoft 365 E3 E5|
-|[Koşullu Erişim](/azure/active-directory/conditional-access/overview)|Azure AD, kullanıcının oturum açma koşullarını değerlendirir ve izin verilen erişimi belirlemek için Koşullu Erişim ilkelerini kullanır. Örneğin, bu kılavuzda size hassas verilere erişim için cihaz uyumluluğu gerektirmeye yönelik bir Koşullu Erişim ilkesi oluşturma hakkında bilgi sağlarız. Bu, bilgisayar korsanı ve çalınmış kimlik bilgileriyle hassas verilerinize erişme riskini önemli ölçüde azaltır. Ayrıca cihazlar hassas verileri de korur, çünkü cihazlar sistem durumu ve güvenlik için belirli gereksinimleri karşılamalıdır.|Microsoft 365 E3 E5|
-|[Azure AD grupları](/azure/active-directory/fundamentals/active-directory-manage-groups)|Koşullu Erişim ilkeleri, Intune ile cihaz yönetimi, hatta kuruluşta dosyaların ve sitelerin izinleri bile atamayı kullanıcı hesaplarına veya Azure AD gruplarına dayandırıyor. Uygulamakta olduğu koruma düzeylerine karşılık gelen Azure AD grupları oluşturmanızı öneririz. Örneğin, üst düzey personeliniz korsanlar için büyük olasılıkla daha yüksek değerli hedeflere sahip. Bu nedenle, bu çalışanların kullanıcı hesaplarını bir Azure AD grubuna eklemek ve bu grubu, erişim için daha yüksek bir koruma düzeyi uygulayan Koşullu Erişim ilkelerine ve diğer ilkelere atamak anlamlıdır.|Microsoft 365 E3 E5|
-|[Azure AD Identity Protection](/azure/active-directory/identity-protection/overview)|Kuruluş kimliklerini etkileyen olası güvenlik açıklarını algılamanıza olanak sağlar ve otomatik düzeltme ilkesi düşük, orta ve yüksek oturum açma riski ile kullanıcı risklerini yapılandırabilir. Bu kılavuz, çok faktörlü kimlik doğrulamasına Koşullu Erişim ilkeleri uygulamak için bu risk değerlendirmesini temel almaktadır. Bu kılavuzda ayrıca, kullanıcıların hesapları için yüksek riskli etkinlik algılandığında parolalarını değiştirmelerini gerektiren bir Koşullu Erişim ilkesi de yerlanır.|Microsoft 365 E5, Microsoft 365 E3 E5 Güvenlik eklenti, EMS E5 veya diğer kullanıcı Azure AD Premium P2 seçin|
-|[Kendi kendine parola sıfırlama (SSPR)](/azure/active-directory/authentication/concept-sspr-howitworks)|Yöneticinin denetiminde olduğu birden çok kimlik doğrulama yönteminin doğrulamasını sağlayarak, kullanıcılarınızı parolalarını güvenli bir şekilde ve yardım masası müdahalesi olmadan sıfırlamasına izin verme.|Microsoft 365 E3 E5|
-|[Azure AD parola koruması](/azure/active-directory/authentication/concept-password-ban-bad)|Bilinen zayıf parolaları, değişkenlerini ve zayıf olan organizasyona özgü ek zayıf terimlerini algıla ve engelle. Varsayılan genel yasaklanmış parola listeleri, Bir Azure AD kiracısı'nın tüm kullanıcılarına otomatik olarak uygulanır. Özel bir yasaklanan parola listesinde ek girişler tanımlayabilirsiniz. Kullanıcılar parolalarını değiştirse veya sıfırlasa, güçlü parolaların kullanımını zorunlu yapmak için bu yasaklanmış parola listeleri denetlenir.|Microsoft 365 E3 E5|
+|[Çok faktörlü kimlik doğrulaması (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks)|MFA, kullanıcıların kullanıcı parolası ve Microsoft Authenticator uygulamasından gelen bildirim veya telefon görüşmesi gibi iki doğrulama biçimi sağlamasını gerektirir. MFA, çalınan kimlik bilgilerinin ortamınıza erişmek için kullanılabilmesi riskini büyük ölçüde azaltır. Microsoft 365, MFA tabanlı oturum açma işlemleri için Azure AD Multi-Factor Authentication hizmetini kullanır.|Microsoft 365 E3 veya E5|
+|[Koşullu Erişim](/azure/active-directory/conditional-access/overview)|Azure AD, kullanıcı oturum açma koşullarını değerlendirir ve izin verilen erişimi belirlemek için Koşullu Erişim ilkelerini kullanır. Örneğin, bu kılavuzda hassas verilere erişim için cihaz uyumluluğu gerektiren bir Koşullu Erişim ilkesinin nasıl oluşturulacağını gösteririz. Bu, kendi cihazına ve çalınan kimlik bilgilerine sahip bir korsanın hassas verilerinize erişme riskini büyük ölçüde azaltır. Ayrıca cihazlardaki hassas verileri de korur çünkü cihazların sistem durumu ve güvenliği için belirli gereksinimleri karşılaması gerekir.|Microsoft 365 E3 veya E5|
+|[Azure AD grupları](/azure/active-directory/fundamentals/active-directory-manage-groups)|Koşullu Erişim ilkeleri, Intune ile cihaz yönetimi ve hatta kuruluşunuzdaki dosya ve sitelere yönelik izinler, kullanıcı hesaplarına veya Azure AD gruplarına atamayı kullanır. Uyguladığınız koruma düzeylerine karşılık gelen Azure AD grupları oluşturmanızı öneririz. Örneğin, yönetici personeliniz korsanlar için büyük olasılıkla daha yüksek değer hedefleridir. Bu nedenle, bu çalışanların kullanıcı hesaplarını bir Azure AD grubuna eklemek ve bu grubu Koşullu Erişim ilkelerine ve erişim için daha yüksek bir koruma düzeyini zorlayan diğer ilkelere atamak mantıklıdır.|Microsoft 365 E3 veya E5|
+|[Azure AD Kimlik Koruması](/azure/active-directory/identity-protection/overview)|Kuruluşunuzun kimliklerini etkileyen olası güvenlik açıklarını algılamanıza ve otomatik düzeltme ilkesini düşük, orta ve yüksek oturum açma riski ile kullanıcı riski olarak yapılandırmanıza olanak tanır. Bu kılavuz, çok faktörlü kimlik doğrulaması için Koşullu Erişim ilkelerini uygulamak için bu risk değerlendirmesine dayanır. Bu kılavuz, hesaplarında yüksek riskli etkinlik algılandığında kullanıcıların parolalarını değiştirmelerini gerektiren bir Koşullu Erişim ilkesi de içerir.|Microsoft 365 E5, E5 Güvenlik eklentisi, EMS E5 veya Azure AD Premium P2 lisanslarıyla Microsoft 365 E3|
+|[Kendi kendine parola sıfırlama (SSPR)](/azure/active-directory/authentication/concept-sspr-howitworks)|Yöneticinin denetleyebileceği birden çok kimlik doğrulama yönteminin doğrulanmasını sağlayarak kullanıcılarınızın parolalarını güvenli bir şekilde ve yardım masası müdahalesi olmadan sıfırlamasına izin verin.|Microsoft 365 E3 veya E5|
+|[Azure AD parola koruması](/azure/active-directory/authentication/concept-password-ban-bad)|Bilinen zayıf parolaları ve bunların değişkenlerini ve kuruluşunuza özgü ek zayıf terimleri algılayın ve engelleyin. Varsayılan genel yasaklanmış parola listeleri, Bir Azure AD kiracısında tüm kullanıcılara otomatik olarak uygulanır. Özel yasaklanmış parola listesinde ek girdiler tanımlayabilirsiniz. Kullanıcılar parolalarını değiştirdiğinde veya sıfırladığında, bu yasaklanmış parola listeleri güçlü parolaların kullanımını zorunlu kılmak için denetlenir.|Microsoft 365 E3 veya E5|
 |
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Kiracınız için kimlik modeli ve kimlik doğrulama altyapısını dağıtmak Microsoft 365 kullanın:
+Microsoft 365 kiracınız için kimlik modeli ve kimlik doğrulama altyapısı dağıtmak için şu adımları kullanın:
 
-1. [Bulut kimlik modelinizi belirleme.](deploy-identity-solution-identity-model.md)
-2. [Ayrıcalıklı Microsoft 365 hesaplarınızı koruyun.](protect-your-global-administrator-accounts.md)
-3. [Kullanıcı Microsoft 365 hesaplarınızı koruyun.](microsoft-365-secure-sign-in.md)
-4. Bulut kimliği modelinizi dağıtma: [Yalnızca bulut veya](cloud-only-identities.md) [karma](prepare-for-directory-synchronization.md).
+1. [Bulut kimliği modelinizi belirleyin.](deploy-identity-solution-identity-model.md)
+2. [Microsoft 365 ayrıcalıklı hesaplarınızı koruyun.](protect-your-global-administrator-accounts.md)
+3. [Microsoft 365 kullanıcı hesaplarınızı koruyun.](microsoft-365-secure-sign-in.md)
+4. Bulut kimlik modelinizi dağıtın: [yalnızca bulut](cloud-only-identities.md) veya [karma](prepare-for-directory-synchronization.md).
 
-[![Kiracınız için hangi kimlik modelini Microsoft 365 belirleme](../media/deploy-identity-solution-overview/identity-solution-identity-model.png)](deploy-identity-solution-identity-model.md)
+[![Microsoft 365 kiracınız için kullanılacak kimlik modelini belirleme](../media/deploy-identity-solution-overview/identity-solution-identity-model.png)](deploy-identity-solution-identity-model.md)
   
-## <a name="additional-microsoft-cloud-identity-resources"></a>Ek Microsoft bulut kimlik kaynakları
+## <a name="additional-microsoft-cloud-identity-resources"></a>Ek Microsoft bulut kimliği kaynakları
 
 ### <a name="manage"></a>Yönetme
 
@@ -101,19 +101,19 @@ Microsoft bulut kimliği dağıtımınızı yönetmek için bkz:
 - [Parolalar](manage-microsoft-365-passwords.md)
 - [Gruplar](manage-microsoft-365-groups.md)
 - [İdare](manage-microsoft-365-identity-governance.md)
-- [Dizin eşitlemesi](view-directory-synchronization-status.md)
+- [Dizin eşitleme](view-directory-synchronization-status.md)
 
-### <a name="how-microsoft-does-identity-for-microsoft-365"></a>Microsoft'un kimlik Microsoft 365
+### <a name="how-microsoft-does-identity-for-microsoft-365"></a>Microsoft Microsoft 365 için kimlik oluşturma
 
-Microsoft'un KIMLIKleri nasıl [yöneteceklerini ve güvenli erişimi nasıl yöneteceklerini öğrenin](https://www.microsoft.com/en-us/itshowcase/managing-user-identities-and-secure-access-at-microsoft).
+Microsoft'taki BT uzmanlarının [kimlikleri ve güvenli erişimi nasıl yönettiğini](https://www.microsoft.com/en-us/itshowcase/managing-user-identities-and-secure-access-at-microsoft) öğrenin.
 
 >[!Note]
->Bu IT Vitrini kaynağı yalnızca İngilizce olarak kullanılabilir.
+>Bu BT Vitrini kaynağı yalnızca İngilizce olarak kullanılabilir.
 >
 
-### <a name="how-contoso-did-identity-for-microsoft-365"></a>Contoso'nın kimliklerini nasıl Microsoft 365
+### <a name="how-contoso-did-identity-for-microsoft-365"></a>Contoso Microsoft 365 için nasıl kimlik yaptı?
 
-Kurgusal ama çok uluslu bir kuruluşun bulut hizmetleri için karma bir kimlik altyapısı dağıtımına Microsoft 365, [bkz. Contoso Corporation için Identity](contoso-identity.md).
+Kurgusal ama temsili çok uluslu bir kuruluşun Microsoft 365 bulut hizmetleri için hibrit kimlik altyapısını nasıl dağıttığını gösteren bir örnek için bkz. [Contoso Corporation için kimlik](contoso-identity.md).
 
 <!--
 

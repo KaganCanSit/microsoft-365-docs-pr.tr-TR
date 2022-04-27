@@ -1,8 +1,8 @@
 ---
-title: Ağ istekleri Office Mac
+title: Mac için Office'te ağ istekleri
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 11/9/2018
 audience: ITPro
 ms.topic: conceptual
@@ -16,20 +16,20 @@ ms.custom:
 - seo-marvel-apr2020
 search.appverid: MOM160
 ms.assetid: afdae969-4046-44b9-9adb-f1bab216414b
-description: Bu makalede, uygulamaların hangi uç noktalara Office Mac url'leri ve sağlanan hizmetlere ulaşmaya çalış olduğu açıklanmıştır.
-ms.openlocfilehash: 37071b0aaf9e6f172d99a10cb4a1506f1627ef03
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Bu makalede, uygulamaların Office Mac hangi uç noktalara ve URL'lere erişmeye çalıştığı ve sağlanan hizmetler açıklanmaktadır.
+ms.openlocfilehash: 477225cf99ead3f5609c8082644293d4ac006603
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62984439"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65091137"
 ---
-# <a name="network-requests-in-office-for-mac"></a>Ağ istekleri Office Mac
+# <a name="network-requests-in-office-for-mac"></a>Mac için Office'te ağ istekleri
 
-Office Mac uygulamaları macOS platformunda yerel bir uygulama deneyimi sunar. Her uygulama, ağ erişiminin mevcut olmadığını durumlarla birlikte çok çeşitli senaryolarda çalışacak şekilde tasarlanmıştır. Makine bir ağa bağlandığında, uygulamalar gelişmiş işlevsellik sağlamak için bir dizi Web tabanlı hizmetlere otomatik olarak bağlanır. Aşağıdaki bilgi, uygulamaların hangi uç noktalara ve URL'lere ulaşmaya çalışta olduğunu ve sağlanan hizmetleri açıklar. Bu bilgiler, ağ yapılandırma sorunlarını giderirken ve ağ ara sunucuları için ilkeleri ayarlarken yararlı olur. Bu makaledeki ayrıntıların, Microsoft Office 365 bilgisayarlar için uç noktaları içeren en iyi [URL](urls-and-ip-address-ranges.md) ve adres aralıkları makalesini tamamlar Windows. Bu makaledeki bilgiler, not olmadığı sürece, bir perakende satış mağazasından veya toplu lisans sözleşmesi aracılığıyla bir defalık satın alınan Mac ve Office Mac 2016 için Office 2019 için de geçerlidir. 
+Office Mac uygulamaları, macOS platformunda yerel bir uygulama deneyimi sağlar. Her uygulama, ağ erişimi olmadığı durumlar da dahil olmak üzere çeşitli senaryolarda çalışacak şekilde tasarlanmıştır. Bir makine bir ağa bağlandığında, uygulamalar gelişmiş işlevsellik sağlamak için bir dizi web tabanlı hizmete otomatik olarak bağlanır. Aşağıdaki bilgiler, uygulamaların erişmeye çalıştığı uç noktaları ve URL'leri ve sağlanan hizmetleri açıklar. Bu bilgiler, ağ yapılandırma sorunlarını giderirken ve ağ proxy sunucuları için ilkeler ayarlarken yararlıdır. Bu makaledeki ayrıntılar, Microsoft Windows çalıştıran bilgisayarlar için uç noktaları içeren [Office 365 URL ve adres aralıkları makalesini](urls-and-ip-address-ranges.md) tamamlamaya yöneliktir. Not edilmediği sürece, bu makaledeki bilgiler bir perakende mağazasından veya toplu lisans sözleşmesi aracılığıyla tek seferlik satın alma olarak sunulan Mac için Office 2019 ve Office Mac 2016 için de geçerlidir. 
 
   
-Bu makalenin büyük bölümü, o uç nokta tarafından sağlanan hizmet veya özelliğin ağ URL'lerini, türünü ve açıklamasını ayrıntılarıyla anlatan tablolardır. Her bir Office, hizmet ve uç nokta kullanımına göre farklılık gösterebilir. Aşağıdaki tablolarda aşağıdaki uygulamalar tanımlanmıştır:
+Bu makalenin çoğu ağ URL'lerini, türünü ve bu uç nokta tarafından sağlanan hizmetin veya özelliğin açıklamasını açıklayan tablolardır. Office uygulamalarının her biri hizmet ve uç nokta kullanımında farklılık gösterebilir. Aşağıdaki tablolarda aşağıdaki uygulamalar tanımlanmıştır:
   
 - W: Word
 - P: PowerPoint
@@ -39,103 +39,103 @@ Bu makalenin büyük bölümü, o uç nokta tarafından sağlanan hizmet veya ö
    
 URL türü aşağıdaki gibi tanımlanır:
   
-- ST: Statik - URL, istemci uygulamasında sabit kodludur.
+- ST: Statik - URL, istemci uygulamasına sabit olarak kodlanmıştır.
     
-- SS: Semi-Static - URL, bir web sayfasının veya yönlendirmesinin parçası olarak kodlanmış.
+- SS: Semi-Static - URL bir web sayfasının veya yeniden yönlendiricinin bir parçası olarak kodlanmıştır.
     
-- CS: Yapılandırma Hizmeti - URL, yapılandırma yapılandırması hizmetinin bir Office verilir.
+- CS: Yapılandırma Hizmeti - URL, Office Yapılandırma Hizmeti'nin bir parçası olarak döndürülür.
 
     
-## <a name="office-for-mac-default-configuration"></a>Office Mac yapılandırmayı yapılandırma
+## <a name="office-for-mac-default-configuration"></a>Varsayılan yapılandırmayı Office Mac
 
  **Yükleme ve güncelleştirmeler**
   
-Aşağıdaki ağ uç noktaları, microsoft Office Mac yükleme programını (Content Delivery Network) indirmek CDN.
+Microsoft Content Delivery Network'dan (CDN) Office Mac yükleme programını indirmek için aşağıdaki ağ uç noktaları kullanılır.
   
 |**URL**|**Tür**|**Açıklama**|
 |:-----|:-----|:-----|
-|```https://go.microsoft.com/fwlink/```  <br/> |ST  <br/> |Microsoft 365 Yükleme Portalı ileri bağlantı hizmetini en son yükleme paketlerine iletme bağlantısı hizmetidir.  <br/> |
-|```https://officecdn-microsoft-com.akamaized.net/```  <br/> |SS  <br/> |Yükleme paketlerinin yükleme konumu Content Delivery Network.  <br/> |
-|```https://officecdn.microsoft.com/```  <br/> |SS  <br/> |Yükleme paketlerinin yükleme konumu Content Delivery Network.  <br/> |
+|```https://go.microsoft.com/fwlink/```  <br/> |ST  <br/> |Yükleme Portalı'nın en son yükleme paketlerine bağlantı iletme hizmetini Microsoft 365.  <br/> |
+|```https://officecdn-microsoft-com.akamaized.net/```  <br/> |SS  <br/> |yükleme paketlerinin Content Delivery Network konumu.  <br/> |
+|```https://officecdn.microsoft.com/```  <br/> |SS  <br/> |yükleme paketlerinin Content Delivery Network konumu.  <br/> |
 |```https://officeci-mauservice.azurewebsites.net/```  <br/> |ST  <br/> |Microsoft AutoUpdate için Yönetim Denetimi uç noktası  <br/> |
    
  **İlk uygulama başlatma**
   
-Bir sonraki ilk başlatmada aşağıdaki ağ uç noktalarıyla Office uygulaması. Bu uç noktalar kullanıcılara Office gelişmiş kimlik özellikleri sağlar ve lisans türüne bakılmaksızın (Toplu Lisans yüklemeleri dahil) URL'lerle bağlantı kurabilirsiniz.
+Bir Office uygulaması ilk kez başlatıldığında aşağıdaki ağ uç noktalarıyla iletişime geçilir. Bu uç noktalar, kullanıcılar için gelişmiş Office işlevselliği sağlar ve lisans türüne bakılmaksızın URL'lerle bağlantı kurulmaktadır (Toplu Lisans yüklemeleri dahil).
   
-|**URL**|**Uygulamalar**|**Tür**|**Açıklama**|
+|**URL**|**Apps**|**Tür**|**Açıklama**|
 |:-----|:-----|:-----|:-----|
-|```https://config.edge.skype.com/```  <br/> |WXPON  <br/> |ST  <br/> |'Flighting' Yapılandırması - Özelliğin aydınlatması ve denemelere olanak sağlar.  <br/> |
-|```https://ocos-office365-s2s.msedge.net/```  <br/> |WXPON  <br/> |ST  <br/> |'Flighting' Ağ Yapılandırma Testi  <br/> |
-|```https://client-office365-tas.msedge.net/```  <br/> |WXPON  <br/> |ST  <br/> |'Flighting' Ağ Yapılandırma Testi  <br/> |
+|```https://config.edge.skype.com/```  <br/> |WXPON  <br/> |ST  <br/> |'Uçuş' Yapılandırması - Özelliğin ışıklandırmasına ve denemesine olanak tanır.  <br/> |
+|```https://ocos-office365-s2s.msedge.net/```  <br/> |WXPON  <br/> |ST  <br/> |'Uçuş' Ağ Yapılandırma Testi  <br/> |
+|```https://client-office365-tas.msedge.net/```  <br/> |WXPON  <br/> |ST  <br/> |'Uçuş' Ağ Yapılandırma Testi  <br/> |
 |```https://officeclient.microsoft.com/```  <br/> |WXPON  <br/> |ST  <br/> |Office Yapılandırma Hizmeti - Hizmet uç noktalarının ana listesi.  <br/> |
-|```https://nexusrules.officeapps.live.com/```  <br/> |WXPON  <br/> |ST  <br/> |Office Telemetrisi indirme - İstemciyi telemetri hizmetine hangi verilerin ve olayların yük durumuyla ilgili bilgi sağlar.  <br/> |
+|```https://nexusrules.officeapps.live.com/```  <br/> |WXPON  <br/> |ST  <br/> |Office Kuralları Telemetri indirme - İstemciyi telemetri hizmetine yüklenecek veriler ve olaylar hakkında bilgilendirmektedir.  <br/> |
 |```https://mobile.pipe.aria.microsoft.com/```  <br/> |N  <br/> |CS  <br/> |OneNote Telemetri Hizmeti  <br/> |
-|```https://nexus.officeapps.live.com/```  <br/> |WXPON  <br/> |ST  <br/> |Office Telemetri Upload Raporlama - İstemcide oluşan "Heartbeart" ve hata olayları telemetri hizmetine yüklendi.  <br/> |
-|```https://templateservice.office.com/```  <br/> |WXP  <br/> |CS  <br/> |Office Şablonu Hizmeti - Kullanıcılara çevrimiçi belge şablonları sağlar.  <br/> |
-|```https://omextemplates.content.office.net/```  <br/> |WXP  <br/> |CS  <br/> |Office yüklemeleri - PNG Depolama resimlerini içerir.  <br/> |
-|```https://store.office.com/```  <br/> |WXP  <br/> |CS  <br/> |Uygulama yapılandırmalarını Office depolar.  <br/> |
-|```https://odc.officeapps.live.com/```  <br/> |WXPN  <br/> |CS  <br/> |Office Tümleştirme Hizmetleri Kataloğu (hizmetlerin ve uç noktaların listesi) ve Ana Realm Bulma'ya tıklayın.  <br/> |
-|```https://cdn.odc.officeapps.live.com/```  <br/> |WXPON  <br/> |CS  <br/> |Ana Realm Keşif v2 (15.40 ve sonrası) için kaynaklar  <br/> |
-|```https://officecdn.microsoft.com/```  <br/> |WXPON  <br/> |ST  <br/> |Microsoft AutoUpdate Bildirimleri - Güncelleştirme olup olduğunu denetler  <br/> |
+|```https://nexus.officeapps.live.com/```  <br/> |WXPON  <br/> |ST  <br/> |Office Telemetri Upload Raporlama - İstemcide gerçekleşen "Heartbeart" ve hata olayları telemetri hizmetine yüklenir.  <br/> |
+|```https://templateservice.office.com/```  <br/> |WXP  <br/> |CS  <br/> |Office Şablon Hizmeti - Kullanıcılara çevrimiçi belge şablonları sağlar.  <br/> |
+|```https://omextemplates.content.office.net/```  <br/> |WXP  <br/> |CS  <br/> |Office Şablonları İndirmeleri - PNG şablon görüntülerinin Depolama.  <br/> |
+|```https://store.office.com/```  <br/> |WXP  <br/> |CS  <br/> |Office uygulamaları için depolama yapılandırması.  <br/> |
+|```https://odc.officeapps.live.com/```  <br/> |WXPN  <br/> |CS  <br/> |Office Belge Tümleştirme Hizmetleri Kataloğu (hizmetlerin ve uç noktaların listesi) ve Ev Bölgesi Bulma.  <br/> |
+|```https://cdn.odc.officeapps.live.com/```  <br/> |WXPON  <br/> |CS  <br/> |Ev Bölgesi Bulma v2 (15.40 ve üzeri) kaynakları  <br/> |
+|```https://officecdn.microsoft.com/```  <br/> |WXPON  <br/> |ST  <br/> |Microsoft AutoUpdate Bildirimleri - Kullanılabilir güncelleştirme olup olmadığını denetler  <br/> |
 |```https://ajax.aspnetcdn.com/```  <br/> |WXPO  <br/> |SS  <br/> |Microsoft Ajax JavaScript Kitaplığı  <br/> |
-|```https://wikipedia.firstpartyapps.oaspapps.com/```  <br/> |W  <br/> |SS  <br/> |Daha fazla yapılandırma ve Office için Wikipedia uygulaması.  <br/> |
-|```https://excelbingmap.firstpartyapps.oaspapps.com/```  <br/> |X  <br/> |SS  <br/> |Bing kaynakları ve yapılandırma için Office Map uygulamasını kullanın.  <br/> |
-|```https://peoplegraph.firstpartyapps.oaspapps.com/```  <br/> |X  <br/> |SS  <br/> |Kişiler Graph yapılandırma ve Office için uygulama kullanır.  <br/> |
-|```https://www.onenote.com/```  <br/> |N  <br/> |ST  <br/> |Yeni içerikler hakkında OneNote.  <br/> |
-|```https://site-cdn.onenote.net/```  <br/> |N  <br/> |ST  <br/> |Yeni içerikler: OneNote.  <br/> |
-|```https://site-cdn.onenote.net/```  <br/> |N  <br/> |SS  <br/> |Fotoğraflar için Yeni resimler OneNote.  <br/> |
-|```https://acompli.helpshift.com/```  <br/> |O  <br/> |ST  <br/> |Uygulama içinde Destek Hizmeti.  <br/> |
+|```https://wikipedia.firstpartyapps.oaspapps.com/```  <br/> |W  <br/> |SS  <br/> |Office yapılandırması ve kaynakları için Wikipedia uygulaması.  <br/> |
+|```https://excelbingmap.firstpartyapps.oaspapps.com/```  <br/> |X  <br/> |SS  <br/> |Bing Office yapılandırması ve kaynakları için Eşleme uygulaması.  <br/> |
+|```https://peoplegraph.firstpartyapps.oaspapps.com/```  <br/> |X  <br/> |SS  <br/> |Office yapılandırması ve kaynakları için kişiler Graph uygulama.  <br/> |
+|```https://www.onenote.com/```  <br/> |N  <br/> |ST  <br/> |OneNote için Yenilikler içeriği.  <br/> |
+|```https://site-cdn.onenote.net/```  <br/> |N  <br/> |ST  <br/> |OneNote için yeni içerik.  <br/> |
+|```https://site-cdn.onenote.net/```  <br/> |N  <br/> |SS  <br/> |OneNote için Yenilikler görüntüleri.  <br/> |
+|```https://acompli.helpshift.com/```  <br/> |O  <br/> |ST  <br/> |Uygulama içi Destek Hizmeti.  <br/> |
 |```https://prod-global-autodetect.acompli.net/```  <br/> |O  <br/> |ST  <br/> |E-posta Hesabı Algılama Hizmeti.  <br/> |
-|```https://autodiscover-s.outlook.com/```  <br/> |WXPO  <br/> |ST  <br/> |Outlook Bulma  <br/> |
-|```https://outlook.office365.com/```  <br/> |WXPO  <br/> |ST  <br/> |Outlook hizmeti için Microsoft 365 uç noktası.  <br/> |
-|```https://r1.res.office365.com/```  <br/> |O  <br/> |ST  <br/> |Eklenti Outlook simgeler.  <br/> |
+|```https://autodiscover-s.outlook.com/```  <br/> |WXPO  <br/> |ST  <br/> |Otomatik Bulma'Outlook  <br/> |
+|```https://outlook.office365.com/```  <br/> |WXPO  <br/> |ST  <br/> |Microsoft 365 hizmeti için Outlook uç noktası.  <br/> |
+|```https://r1.res.office365.com/```  <br/> |O  <br/> |ST  <br/> |Outlook eklentileri için simgeler.  <br/> |
    
 > [!NOTE]
-> Hızlı Office Hizmeti, yalnızca Mac için değil, tüm Microsoft Office için otomatik bulma hizmeti olarak davranır. Yanıtta döndürülen uç noktalar yarı statiktir ve bu değişiklik çok seyrek olabilir ama yine de mümkündür. 
+> Office Yapılandırma Hizmeti, yalnızca Mac için değil, tüm Microsoft Office istemcileri için otomatik bulma hizmeti işlevi görür. Yanıtta döndürülen uç noktalar yarı statiktir, bu değişiklik çok seyrek olsa da yine de mümkündür. 
   
  **Oturum aç**
   
-Aşağıdaki ağ uç noktaları, bulut tabanlı depolamada oturum aken bağlantı kurabilirsiniz. Hesap türünüze bağlı olarak, farklı hizmetlerle bağlantı kurabilirsiniz. Örneğin:
+Bulut tabanlı depolamada oturum açarken aşağıdaki ağ uç noktalarıyla bağlantı kurulur. Hesap türünüze bağlı olarak farklı hizmetlerle iletişim kurulabilir. Örneğin:
   
-- **MSA: Microsoft Hesabı** - normalde tüketici ve perakende senaryolarında kullanılır 
+- **MSA: Microsoft Hesabı** - genellikle tüketici ve perakende senaryoları için kullanılır 
     
-- **OrgID: Kuruluş Hesabı** - normalde ticari senaryolarda kullanılır 
+- **OrgID: Kuruluş Hesabı** - genellikle ticari senaryolar için kullanılır 
     
-|**URL**|**Uygulamalar**|**Tür**|**Açıklama**|
+|**URL**|**Apps**|**Tür**|**Açıklama**|
 |:-----|:-----|:-----|:-----|
 |```https://login.windows.net/```  <br/> |WXPON  <br/> |ST  <br/> |Windows Yetkilendirme Hizmeti  <br/> |
-|```https://login.microsoftonline.com/```  <br/> |WXPON  <br/> |ST  <br/> |Microsoft 365 Açma Hizmeti (OrgID)  <br/> |
+|```https://login.microsoftonline.com/```  <br/> |WXPON  <br/> |ST  <br/> |Microsoft 365 Oturum Açma Hizmeti (OrgID)  <br/> |
 |```https://login.live.com/```  <br/> |WXPON  <br/> |ST  <br/> |Microsoft Hesabı Oturum Açma Hizmeti (MSA)  <br/> |
 |```https://auth.gfx.ms/```  <br/> |WXPON  <br/> |CS  <br/> |Microsoft Hesabı Oturum Açma Hizmeti Yardımcısı (MSA)  <br/> |
-|```https://secure.aadcdn.microsoftonline-p.com/```  <br/> |WXPON  <br/> |SS  <br/> |Microsoft 365 Oturum Açma Markalama (OrgID)  <br/> |
-|```https://ocws.officeapps.live.com/```  <br/> |WXPN  <br/> |CS  <br/> |Konum Belirleyicisi'Depolama ve Yerler  <br/> |
+|```https://secure.aadcdn.microsoftonline-p.com/```  <br/> |WXPON  <br/> |SS  <br/> |Microsoft 365 Oturum Açma Markası (OrgID)  <br/> |
+|```https://ocws.officeapps.live.com/```  <br/> |WXPN  <br/> |CS  <br/> |Belge ve Yerler Depolama Bulucu  <br/> |
 |```https://roaming.officeapps.live.com/```  <br/> |WXPN  <br/> |CS  <br/> |En Son Kullanılan (MRU) belge hizmeti  <br/> |
    
 > [!NOTE]
-> Abonelik tabanlı lisanslar ve perakende lisansları için, oturum açma özelliği hem ürünü etkinleştirir hem de Faturalar gibi bulut kaynaklarına OneDrive. Toplu Lisans yüklemeleri için, kullanıcılardan yine oturum açması istenir (varsayılan olarak) ancak ürün zaten etkinleştirildiğinden bu yalnızca bulut kaynaklarına erişim için gereklidir. 
+> Abonelik tabanlı ve perakende lisanslarda oturum açmak hem ürünü etkinleştirir hem de OneDrive gibi bulut kaynaklarına erişim sağlar. Toplu Lisans yüklemelerinde kullanıcılardan hala oturum açmaları istenir (varsayılan olarak), ancak ürün zaten etkinleştirildiğinden bu yalnızca bulut kaynaklarına erişim için gereklidir. 
   
  **Ürün etkinleştirme**
   
-Aşağıdaki ağ uç noktaları, abonelik Microsoft 365 Perakende Lisansı etkinleştirmeleri için geçerlidir. Özel olarak, Toplu Lisans yüklemeleri için geçerli OLMAZ.
+Aşağıdaki ağ uç noktaları Microsoft 365 Abonelik ve Perakende Lisansı etkinleştirmeleri için geçerlidir. Özel olarak, bu Toplu Lisans yüklemeleri için GEÇERLI OLMAZ.
   
-|**URL**|**Uygulamalar**|**Tür**|**Açıklama**|
+|**URL**|**Apps**|**Tür**|**Açıklama**|
 |:-----|:-----|:-----|:-----|
-|```https://ols.officeapps.live.com/```  <br/> |WXPON  <br/> |CS  <br/> |Office Lisans Hizmeti  <br/> |
+|```https://ols.officeapps.live.com/```  <br/> |WXPON  <br/> |CS  <br/> |lisanslama hizmeti Office  <br/> |
    
- **What's New content**
+ **Yenilikler içeriği**
   
-Aşağıdaki ağ uç noktaları yalnızca Microsoft 365 için geçerlidir.
+Aşağıdaki ağ uç noktaları yalnızca Microsoft 365 Aboneliği için geçerlidir.
   
-|**URL**|**Uygulamalar**|**Tür**|**Açıklama**|
+|**URL**|**Apps**|**Tür**|**Açıklama**|
 |:-----|:-----|:-----|:-----|
-|```https://contentstorage.osi.office.net/```  <br/> |WXPO  <br/> |SS  <br/> |What's New JSON page content.  <br/> |
+|```https://contentstorage.osi.office.net/```  <br/> |WXPO  <br/> |SS  <br/> |Yenilikler JSON sayfası içeriği.  <br/> |
    
  **Araştırmacı**
   
-Aşağıdaki ağ uç noktaları yalnızca Microsoft 365 için geçerlidir.
+Aşağıdaki ağ uç noktaları yalnızca Microsoft 365 Aboneliği için geçerlidir.
   
-|**URL**|**Uygulamalar**|**Tür**|**Açıklama**|
+|**URL**|**Apps**|**Tür**|**Açıklama**|
 |:-----|:-----|:-----|:-----|
 |```https://entity.osi.office.net/```  <br/> |W  <br/> |CS  <br/> |Araştırmacı Web Hizmeti  <br/> |
 |```https://cdn.entity.osi.office.net/```  <br/> |W  <br/> |CS  <br/> |Araştırmacı Statik İçeriği  <br/> |
@@ -143,73 +143,73 @@ Aşağıdaki ağ uç noktaları yalnızca Microsoft 365 için geçerlidir.
    
  **Akıllı Arama**
   
-Aşağıdaki ağ uç noktaları hem Abonelik hem Microsoft 365 Perakende/Toplu Lisans etkinleştirmeleri için geçerlidir.
+Aşağıdaki ağ uç noktaları hem Microsoft 365 Aboneliği hem de Perakende/Toplu Lisans etkinleştirmeleri için geçerlidir.
   
-|**URL**|**Uygulamalar**|**Tür**|**Açıklama**|
+|**URL**|**Apps**|**Tür**|**Açıklama**|
 |:-----|:-----|:-----|:-----|
 |```https://uci.officeapps.live.com/```  <br/> |WXPN  <br/> |CS  <br/> |Analizler Web Hizmeti  <br/> |
 |```https://ajax.googleapis.com/```  <br/> |WXPN  <br/> |CS  <br/> |JQuery Kitaplığı  <br/> |
-|```https://cdnjs.cloudflare.com/```  <br/> |WXPN  <br/> |CS  <br/> |JavaScript Kitaplığını destekleme  <br/> |
-|```https://www.bing.com/```  <br/> |WXPN  <br/> |CS  <br/> |Analizler Sağlayıcısı  <br/> |
-|```https://tse1.mm.bing.net/```  <br/> |WXPN  <br/> |CS  <br/> |Analizler Sağlayıcısı  <br/> |
+|```https://cdnjs.cloudflare.com/```  <br/> |WXPN  <br/> |CS  <br/> |JavaScript Kitaplığını Destekleme  <br/> |
+|```https://www.bing.com/```  <br/> |WXPN  <br/> |CS  <br/> |Analizler İçerik Sağlayıcısı  <br/> |
+|```https://tse1.mm.bing.net/```  <br/> |WXPN  <br/> |CS  <br/> |Analizler İçerik Sağlayıcısı  <br/> |
    
  **PowerPoint Tasarımcısı**
   
-Aşağıdaki ağ uç noktaları yalnızca Microsoft 365 için geçerlidir.
+Aşağıdaki ağ uç noktaları yalnızca Microsoft 365 Aboneliği için geçerlidir.
   
-|**URL**|**Uygulamalar**|**Tür**|**Açıklama**|
+|**URL**|**Apps**|**Tür**|**Açıklama**|
 |:-----|:-----|:-----|:-----|
 |```https://pptsgs.officeapps.live.com/```  <br/> |P  <br/> |CS  <br/> |PowerPoint Tasarımcısı web hizmeti  <br/> |
    
  **PowerPoint Hızlı Başlangıç**
   
-Aşağıdaki ağ uç noktaları yalnızca Microsoft 365 için geçerlidir.
+Aşağıdaki ağ uç noktaları yalnızca Microsoft 365 Aboneliği için geçerlidir.
   
-|**URL**|**Uygulamalar**|**Tür**|**Açıklama**|
+|**URL**|**Apps**|**Tür**|**Açıklama**|
 |:-----|:-----|:-----|:-----|
-|```https://pptcts.officeapps.live.com/```  <br/> |P  <br/> |CS  <br/> |PowerPoint Hızlı Başlangıç web hizmeti  <br/> |
+|```https://pptcts.officeapps.live.com/```  <br/> |P  <br/> |CS  <br/> |hızlı başlangıç web hizmetini PowerPoint  <br/> |
    
- **Gülümseme/Kaş Çatma gönderme**
+ **Gülümseme/Kaş Çatma Gönder**
   
-Aşağıdaki ağ uç noktaları hem Abonelik hem Microsoft 365 Perakende/Toplu Lisans etkinleştirmeleri için geçerlidir.
+Aşağıdaki ağ uç noktaları hem Microsoft 365 Aboneliği hem de Perakende/Toplu Lisans etkinleştirmeleri için geçerlidir.
   
-|**URL**|**Uygulamalar**|**Tür**|**Açıklama**|
+|**URL**|**Apps**|**Tür**|**Açıklama**|
 |:-----|:-----|:-----|:-----|
-|```https://sas.office.microsoft.com/```  <br/> |WXPON  <br/> |CS  <br/> |'Send a Smile' Hizmeti  <br/> |
+|```https://sas.office.microsoft.com/```  <br/> |WXPON  <br/> |CS  <br/> |Gülümseme Hizmeti Gönder  <br/> |
    
  **Desteğe Başvurun**
   
-Aşağıdaki ağ uç noktaları hem Abonelik hem Microsoft 365 Perakende/Toplu Lisans etkinleştirmeleri için geçerlidir.
+Aşağıdaki ağ uç noktaları hem Microsoft 365 Aboneliği hem de Perakende/Toplu Lisans etkinleştirmeleri için geçerlidir.
   
-|**URL**|**Uygulamalar**|**Tür**|**Açıklama**|
+|**URL**|**Apps**|**Tür**|**Açıklama**|
 |:-----|:-----|:-----|:-----|
-|```https://powerlift-frontdesk.acompli.net/```  <br/> |O  <br/> |CS  <br/> |Destek Hizmetine Başvurun  <br/> |
-|```https://acompli.helpshift.com/```  <br/> |O  <br/> |CS  <br/> |Uygulama içinde Destek Hizmeti  <br/> |
+|```https://powerlift-frontdesk.acompli.net/```  <br/> |O  <br/> |CS  <br/> |Destek Hizmeti ile iletişime geçin  <br/> |
+|```https://acompli.helpshift.com/```  <br/> |O  <br/> |CS  <br/> |Uygulama İçi Destek Hizmeti  <br/> |
    
  **PDF Olarak Kaydet**
   
-Aşağıdaki ağ uç noktaları hem Abonelik hem Microsoft 365 Perakende/Toplu Lisans etkinleştirmeleri için geçerlidir.
+Aşağıdaki ağ uç noktaları hem Microsoft 365 Aboneliği hem de Perakende/Toplu Lisans etkinleştirmeleri için geçerlidir.
   
-|**URL**|**Uygulamalar**|**Tür**|**Açıklama**|
+|**URL**|**Apps**|**Tür**|**Açıklama**|
 |:-----|:-----|:-----|:-----|
 |```https://wordcs.officeapps.live.com/```  <br/> |W  <br/> |CS  <br/> |Word belge dönüştürme hizmeti (PDF)  <br/> |
    
  **Office Uygulamaları (diğer adıyla eklentiler)**
   
-Aşağıdaki ağ uç noktaları, Microsoft 365 eklentilerine güveni olduğunda hem Microsoft 365 Hem de Office Perakende/Toplu Lisans etkinleştirmeleri için geçerlidir.
+Aşağıdaki ağ uç noktaları, Office Uygulama eklentilerine güvenildiğinde hem Microsoft 365 Aboneliği hem de Perakende/Toplu Lisans etkinleştirmeleri için geçerlidir.
   
-|**URL**|**Uygulamalar**|**Tür**|**Açıklama**|
+|**URL**|**Apps**|**Tür**|**Açıklama**|
 |:-----|:-----|:-----|:-----|
-|```https://store.office.com/```  <br/> |WXPO  <br/> |CS  <br/> |Office uygulaması depolama yapılandırmasını yapılandırma  <br/> |
+|```https://store.office.com/```  <br/> |WXPO  <br/> |CS  <br/> |depolama yapılandırmasını Office uygulaması  <br/> |
 |```https://wikipedia.firstpartyapps.oaspapps.com/```  <br/> |W  <br/> |SS  <br/> |Wikipedia uygulama kaynakları  <br/> |
-|```https://excelbingmap.firstpartyapps.oaspapps.com/```  <br/> |X  <br/> |SS  <br/> |Bing Map uygulama kaynakları  <br/> |
-|```https://peoplegraph.firstpartyapps.oaspapps.com```  <br/> |X  <br/> |SS  <br/> |Kişiler Graph kaynakları  <br/> |
-|```https://o15.officeredir.microsoft.com/```  <br/> |WPX  <br/> |SS  <br/> |Office Yeniden Yönlendirme Hizmeti  <br/> |
-|```https://appsforoffice.microsoft.com/```  <br/> |WXP  <br/> |SS  <br/> |Office JavaScript Kitaplıkları  <br/> |
+|```https://excelbingmap.firstpartyapps.oaspapps.com/```  <br/> |X  <br/> |SS  <br/> |Uygulama kaynaklarını Bing eşleme  <br/> |
+|```https://peoplegraph.firstpartyapps.oaspapps.com```  <br/> |X  <br/> |SS  <br/> |Uygulama kaynaklarını Graph kişiler  <br/> |
+|```https://o15.officeredir.microsoft.com/```  <br/> |WPX  <br/> |SS  <br/> |yeniden yönlendirme hizmetini Office  <br/> |
+|```https://appsforoffice.microsoft.com/```  <br/> |WXP  <br/> |SS  <br/> |JavaScript Kitaplıklarını Office  <br/> |
 |```https://telemetry.firstpartyapps.oaspapps.com/```  <br/> |WX  <br/> |SS  <br/> |Office uygulamaları için Telemetri ve Raporlama Hizmeti  <br/> |
 |```https://ajax.microsoft.com/```  <br/> |W  <br/> |SS  <br/> |Microsoft Ajax JavaScript Kitaplığı  <br/> |
 |```https://ajax.aspnetcdn.com/```  <br/> |X  <br/> |SS  <br/> |Microsoft Ajax JavaScript Kitaplığı  <br/> |
-|```https://c.microsoft.com/```  <br/> |WPXO  <br/> |SS  <br/> |Office JavaScript Kitaplıkları  <br/> |
+|```https://c.microsoft.com/```  <br/> |WPXO  <br/> |SS  <br/> |JavaScript Kitaplıklarını Office  <br/> |
 |```https://c1.microsoft.com/```  <br/> |WPXO  <br/> |SS  <br/> |Destek kaynakları  <br/> |
 |```https://cs.microsoft.com/```  <br/> |WPXO  <br/> |SS  <br/> |Destek kaynakları  <br/> |
 |```https://c.bing.com/```  <br/> |WPXO  <br/> |SS  <br/> |Destek kaynakları  <br/> |
@@ -218,36 +218,36 @@ Aşağıdaki ağ uç noktaları, Microsoft 365 eklentilerine güveni olduğunda 
 |```https://*-contentstorage.osi.office.net/```  <br/> |WPXO  <br/> |SS  <br/> |Yazı tipi kaynakları  <br/> |
 |```https://nexus.ensighten.com/```  <br/> |WPXO  <br/> |SS  <br/> |Telemetri Hizmeti  <br/> |
 |```https://browser.pipe.aria.microsoft.com/```  <br/> |WPXO  <br/> |SS  <br/> |Telemetri Raporlama  <br/> |
-|```https://*.vo.msecnd.net/```  <br/> |WPXO  <br/> |SS  <br/> |Microsoft Store Varlık Kitaplığı  <br/> |
-|```https://*.wikipedia.org/```  <br/> |W  <br/> |SS  <br/> |Wikipedia sayfa kaynakları  <br/> |
+|```https://*.vo.msecnd.net/```  <br/> |WPXO  <br/> |SS  <br/> |Varlık Kitaplığını Microsoft Store  <br/> |
+|```https://*.wikipedia.org/```  <br/> |W  <br/> |SS  <br/> |Wikipedia sayfası kaynakları  <br/> |
 |```https://upload.wikimedia.org/```  <br/> |W  <br/> |SS  <br/> |Wikipedia medya kaynakları  <br/> |
 |```https://wikipedia.firstpartyappssandbox.oappseperate.com/```  <br/> |W  <br/> |SS  <br/> |Wikipedia korumalı alan çerçevesi  <br/> |
 |```https://*.virtualearth.net/```  <br/> |X  <br/> |SS  <br/> |Harita şablonları  <br/> |
    
  **Güvenli Bağlantılar**
   
-Aşağıdaki ağ uç noktası, yalnızca Office abonelik için tüm Microsoft 365 için geçerlidir.
+Aşağıdaki ağ uç noktası yalnızca Microsoft 365 Aboneliği için tüm Office uygulamaları için geçerlidir.
   
 |**URL**|**Tür**|**Açıklama**|
 |:-----|:-----|:-----|
 |```https://*.oscs.protection.outlook.com/```  <br/> |CS  <br/> |Microsoft Kasa Bağlantı Hizmeti  <br/> |
    
- **Kilitlenme raporlaması**
+ **Kilitlenme raporlama**
   
-Aşağıdaki ağ uç noktası, hem Office hem de Perakende Microsoft 365 Toplu Lisans etkinleştirmeleri için tüm etki alan uygulamaları için geçerlidir. İşlem beklenmedik bir şekilde kilitleniyorsa, bir rapor oluşturulur ve Watson hizmetine gönderilir.
+Aşağıdaki ağ uç noktası, hem Microsoft 365 Aboneliği hem de Perakende/Toplu Lisans etkinleştirmeleri için tüm Office uygulamaları için geçerlidir. Bir işlem beklenmedik bir şekilde kilitlendiğinde, bir rapor oluşturulur ve Watson hizmetine gönderilir.
   
 |**URL**|**Tür**|**Açıklama**|
 |:-----|:-----|:-----|
 |```https://watson.microsoft.com/```  <br/> |ST  <br/> |Microsoft Hata Raporlama Hizmeti  <br/> |
-|```https://officeci.azurewebsites.net/```  <br/> |ST  <br/> |Office İşbirliğine Analizler Hizmeti  <br/> |
+|```https://officeci.azurewebsites.net/```  <br/> |ST  <br/> |İşbirliğine Dayalı Analizler Hizmeti Office  <br/> |
    
-## <a name="options-for-reducing-network-requests-and-traffic"></a>Ağ isteklerini ve trafiğini azaltma seçenekleri
+## <a name="options-for-reducing-network-requests-and-traffic"></a>Ağ isteklerini ve trafiği azaltma seçenekleri
 
-Varsayılan varsayılan Office Mac hem işlevsellik hem de makinenin güncelliği açısından en iyi kullanıcı deneyimini sağlar. Bazı senaryolarda, uygulamaların ağ uç noktalarıyla bağlantı kurmasını engellemek isterseniz. Bu bölümde, bunu yapma seçenekleri ele almaktadır.
+Office Mac varsayılan yapılandırması, hem işlevsellik hem de makineyi güncel tutma açısından en iyi kullanıcı deneyimini sağlar. Bazı senaryolarda, uygulamaların ağ uç noktalarıyla iletişim kurmasını engellemek isteyebilirsiniz. Bu bölümde bunu yapma seçenekleri açıklanmaktadır.
   
- ### <a name="disabling-cloud-sign-in-and-office-add-ins"></a>Bulut Bulut Bağlantı Sign-In devre dışı Office Add-Ins
+ ### <a name="disabling-cloud-sign-in-and-office-add-ins"></a>Bulut Sign-In ve Office Add-Ins devre dışı bırakma
   
-Toplu Lisans müşterilerinin belgeleri bulut tabanlı depolamaya kaydetmeyle ilgili sıkı ilkeleri olabilir. Aşağıdaki uygulama başına tercih, MSA/OrgID Oturum açma özelliğini devre dışı bırakmak ve eklentilere erişim Office için ayarlanmış olabilir.
+Toplu Lisans müşterileri, belgeleri bulut tabanlı depolamaya kaydetme konusunda katı ilkelere sahip olabilir. Aşağıdaki uygulama başına tercih, MSA/OrgID Oturum Açma'yı devre dışı bırakmak ve Office Eklentilerine erişimi devre dışı bırakmak için ayarlanabilir.
   
 - ```defaults write com.microsoft.Word UseOnlineContent -integer 0```
 
@@ -255,34 +255,34 @@ Toplu Lisans müşterilerinin belgeleri bulut tabanlı depolamaya kaydetmeyle il
 
 - ```defaults write com.microsoft.Powerpoint UseOnlineContent -integer 0```
 
-Kullanıcılar Sign-In erişmeye denerse, ağ bağlantısının olmadığını hata ileleri görebilirler. Bu tercih çevrimiçi ürün etkinleştirmesini de engellemesi nedeniyle, yalnızca Toplu Lisans yüklemelerinde kullanılmalıdır. Özel olarak, bu tercihin Office uygulamaların aşağıdaki uç noktalara erişmesini engellemektedir:
+Kullanıcılar Sign-In işlevine erişmeye çalışırsa, ağ bağlantısının mevcut olmadığını belirten bir hata görürler. Bu tercih çevrimiçi ürün etkinleştirmeyi de engellediğinden, yalnızca Toplu Lisans yüklemeleri için kullanılmalıdır. Özellikle, bu tercihin kullanılması Office uygulamaların aşağıdaki uç noktalara erişmesini engeller:
   
 - ```https://odc.officeapps.live.com```
     
 - ```https://*.firstpartyapps.oaspapps.com```
     
-- Yukarıdaki 'Oturum Açma' bölümünde listelenen tüm uç noktalar.
+- Yukarıdaki 'Oturum Aç' bölümünde listelenen tüm uç noktalar.
     
 - Yukarıdaki 'Akıllı Arama' bölümünde listelenen tüm uç noktalar.
     
-- Yukarıdaki 'Ürün Etkinleştirme' bölümünde listelenen tüm uç noktalar.
+- Yukarıdaki 'Ürün Etkinleştirmesi' bölümünde listelenen tüm uç noktalar.
     
-- Yukarıdaki 'En Son Uygulamalar (diğer Office)' bölümünde listelenen tüm uç noktalar.
+- Yukarıdaki 'Office Uygulamaları (diğer adıyla eklentiler)' bölümünde listelenen tüm uç noktalar.
     
-Kullanıcıya tüm işlevselliği yeniden oluşturmak için tercihi '2' olarak ayarlayın veya kaldırın.
+Kullanıcının tam işlevselliğini yeniden oluşturmak için tercihi '2' olarak ayarlayın veya kaldırın.
   
 > [!NOTE]
-> Bu tercih, Office Mac 15.25 [160726] veya sonraki bir derleme gerektirir. 
+> Bu tercih için Office Mac derleme 15.25 [160726] veya üzeri gerekir. 
   
 ### <a name="telemetry"></a>Telemetri 
   
-Office Mac aralıklarla telemetri bilgilerini Microsoft'a geri gönderir. Veriler 'Nexus' uç noktasına karşıya yüklendi. Telemetri verileri mühendislik ekibinin her bir veri kaynağında durumu ve beklenmedik davranışları değerlendirmesine yardımcı Office uygulaması. Telemetriye iki kategori vardır:
+Office Mac düzenli aralıklarla telemetri bilgilerini Microsoft'a geri gönderir. Veriler 'Nexus' uç noktasına yüklenir. Telemetri verileri, mühendislik ekibinin her Office uygulaması sistem durumunu ve beklenmeyen davranışlarını değerlendirmesine yardımcı olur. Telemetrinin iki kategorisi vardır:
   
-- **Sinyal** , sürüm ve lisans bilgilerini içerir. Bu veriler uygulama başlatma sırasında hemen gönderilir. 
+- **Sinyal** sürüm ve lisans bilgilerini içerir. Bu veriler uygulama başlatıldığında hemen gönderilir. 
     
-- **Kullanım** , uygulamaların nasıl kullanıldıklarına ilişkin bilgileri ve önemli olmayan hataları içerir. Bu veriler her 60 dakikada bir gönderilir. 
+- **Kullanım** , uygulamaların nasıl kullanıldığı ve önemli olmayan hatalar hakkında bilgi içerir. Bu veriler her 60 dakikada bir gönderilir. 
     
-Microsoft gizliliğinizi çok ciddiye alır. Microsoft'un veri toplama ilkesi hakkında bilgi için: [https://privacy.microsoft.com](https://privacy.microsoft.com). Uygulamaların 'Kullanım' telemetrisi göndermesini önlemek için **, SendAllTelemetryEnabled** tercihi ayarlanabilir. Tercih uygulama başına yöneliktir ve macOS Yapılandırma Profilleri üzerinden veya el ile Terminal'den ayarlanabilir: 
+Microsoft gizliliğinizi çok ciddiye alır. Microsoft'un veri toplama ilkesi hakkındaki bilgileri adresinden [https://privacy.microsoft.com](https://privacy.microsoft.com)okuyabilirsiniz. Uygulamaların 'Kullanım' telemetrisi göndermesini önlemek için **SendAllTelemetryEnabled** tercihi ayarlanabilir. Tercih uygulama başınadır ve macOS Yapılandırma Profilleri aracılığıyla veya Terminal'den el ile ayarlanabilir: 
   
 ```defaults write com.microsoft.Word SendAllTelemetryEnabled -bool FALSE```
 
@@ -300,28 +300,28 @@ Microsoft gizliliğinizi çok ciddiye alır. Microsoft'un veri toplama ilkesi ha
 
 Sinyal telemetrisi her zaman gönderilir ve devre dışı bırakılamaz.
   
-### <a name="crash-reporting"></a>Kilitlenme raporlaması
+### <a name="crash-reporting"></a>Kilitlenme raporlama
   
-Önemli bir uygulama hatası oluştuğunda, uygulama beklenmedik bir şekilde sonlandırılır ve 'Watson' hizmetine kilitlenme raporu yükler. Kilitlenme raporu, uygulamanın kilitlenmeye yol aken adımlarının listesi olan bir çağrı yığınını oluşur. Bu adımlar, mühendislik ekibinin başarısız olan işlevi ve başarısız olan işlevi tam olarak belirlemelerini sağlar.
+Önemli bir uygulama hatası oluştuğunda uygulama beklenmedik şekilde sonlandırılır ve 'Watson' hizmetine bir kilitlenme raporu yüklenir. Kilitlenme raporu, uygulamanın kilitlenmeye yol açan adımların listesi olan bir çağrı yığınından oluşur. Bu adımlar mühendislik ekibinin başarısız olan tam işlevi ve nedenini belirlemesine yardımcı olur.
   
-Bazı durumlarda, belgenin içeriği uygulamanın kilitlenmeye neden olabilir. Uygulama bu nedenle belgeyi tanımlarsa, kullanıcıya çağrı yığınıyla birlikte belgeyi de göndermeyi onay verip göndermeyeceklerini sorar. Kullanıcılar bu soruya bilinçli bir seçim yapmak için kullanılabilir. IT yöneticileri belgelerin aktarımı konusunda sıkı gereksinimlere sahip olabilir ve kullanıcı adına belgeleri hiçbir zaman gönderme kararına sahip olabilir. Belgelerin gönderilmesini önlemek ve kullanıcıya sorulması engellemek için aşağıdaki tercih ayarlanmış olabilir:
+Bazı durumlarda, belgenin içeriği uygulamanın kilitlenmesine neden olur. Uygulama belgeyi neden olarak tanımlarsa, kullanıcıya belgeyi çağrı yığınıyla birlikte göndermenin uygun olup olmadığını sorar. Kullanıcılar bu soruya bilinçli bir seçim yapabilir. BT yöneticileri, belgelerin iletimi konusunda katı gereksinimlere sahip olabilir ve kullanıcı adına hiçbir zaman belge göndermemeye karar verebilir. Belgelerin gönderilmesini önlemek ve kullanıcıya istemi engellemek için aşağıdaki tercih ayarlanabilir:
   
 ```defaults write com.microsoft.errorreporting IsAttachFilesEnabled -bool FALSE```
 
 > [!NOTE]
-> **SendAllTelemetryEnabled** **FALSE olarak ayarlanırsa**, bu işlem için tüm kilitlenme raporlaması devre dışı bırakılır. Kullanım telemetrisi göndermeden kilitlenme bildirimini etkinleştirmek için aşağıdaki tercih kullanılabilir: ```defaults write com.microsoft.errorreporting IsMerpEnabled -bool TRUE``` 
+> **SendAllTelemetryEnabled** **FALSE** olarak ayarlanırsa, bu işlemin tüm kilitlenme raporlaması devre dışı bırakılır. Kullanım telemetrisi göndermeden kilitlenme raporlamayı etkinleştirmek için aşağıdaki tercih ayarlanabilir: ```defaults write com.microsoft.errorreporting IsMerpEnabled -bool TRUE``` 
   
-### <a name="updates"></a>Güncelleştirmeler
+### <a name="updates"></a>Güncelleştirme
   
-Microsoft, düzenli Office Mac (normalde ayda bir) güncelleştirmeler yayımlar. En son güvenlik düzeltmelerini yüklemek için, kullanıcıların ve IT yöneticilerinin makinelerini güncel tutmalarını kesinlikle tavsiye etmekz. MAKINE yöneticilerinin makine güncelleştirmelerini yakından kontrol etmek ve yönetmek istediğiniz durumlarda, Otomatik Güncelleştirme işleminin ürün güncelleştirmelerini otomatik olarak algılamasını ve sunması engellemek için aşağıdaki tercih kullanılabilir:
+Microsoft düzenli aralıklarla (genellikle ayda bir kez) güncelleştirmeler Office Mac yayınlar. En son güvenlik düzeltmelerinin yüklendiğinden emin olmak için kullanıcıların ve BT yöneticilerinin makineleri güncel tutmalarını kesinlikle öneririz. BT yöneticilerinin makine güncelleştirmelerini yakından denetlemek ve yönetmek istediği durumlarda, Otomatik Güncelleştirme işleminin ürün güncelleştirmelerini otomatik olarak algılamasını ve sunmasını önlemek için aşağıdaki tercih ayarlanabilir:
   
 ```defaults write com.microsoft.autoupdate2 HowToCheck -string 'Manual'```
 
 ### <a name="blocking-requests-with-a-firewallproxy"></a>Güvenlik Duvarı/Ara Sunucu ile İstekleri Engelleme
   
-Kuruluş bir güvenlik duvarı veya ara sunucu aracılığıyla URL'lere yönelik istekleri engellerse, bu belgede listelenen URL'leri izin verilen veya 40X yanıtıyla (örneğin 403 veya 404) listelenen engellemeyi yapılandırmış olun. 40X yanıtı, Office uygulamalarının kaynağa erişimemelerini zarif bir şekilde kabul etmelerine olanak sağlar ve yalnızca bağlantıyı bırakmaktansa daha hızlı bir kullanıcı deneyimi sağlar; bu da istemcinin yeniden denemesine neden olur.
+Kuruluşunuz bir güvenlik duvarı veya ara sunucu aracılığıyla URL'lere yönelik istekleri engelliyorsa, bu belgede listelenen URL'leri izin verilen veya 40X yanıtla listelenen URL'leri (ör. 403 veya 404) yapılandırıldığından emin olun. 40X yanıtı, Office uygulamalarının kaynağa erişememe durumunu düzgün bir şekilde kabul etmelerine olanak tanır ve bağlantıyı bırakmaktan daha hızlı bir kullanıcı deneyimi sağlar ve bu da istemcinin yeniden denemesine neden olur.
   
-Ara sunucunuz kimlik doğrulaması gerektiriyorsa, istemciye 407 yanıtı döndürülür. En iyi deneyimi yaşamak için, NTLM ve Kerberos sunucularıyla çalışmak için belirli düzeltmeler içeren Office Mac derlemeleri Office Mac veya daha yeni bir sürüm kullanırsanız, bu derlemeleri kullanmaya devam edin.
+Proxy sunucunuz kimlik doğrulaması gerektiriyorsa istemciye 407 yanıtı döndürülür. En iyi deneyim için, NTLM ve Kerberos sunucularıyla çalışmaya yönelik belirli düzeltmeler içerdiğinden Office Mac derlemeleri 15.27 veya üzerini kullandığınızdan emin olun.
   
   
 ## <a name="see-also"></a>Ayrıca bkz.

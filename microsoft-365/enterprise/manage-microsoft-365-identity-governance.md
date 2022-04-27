@@ -1,8 +1,8 @@
 ---
-title: Kimlik Microsoft 365 yönetme
+title: Microsoft 365 kimlik idaresi yönetme
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 audience: Admin
 ms.topic: overview
 ms.prod: office-online-server
@@ -21,33 +21,33 @@ search.appverid:
 - MED150
 - BCS160
 ms.assetid: 98ca5b3f-f720-4d8e-91be-fe656548a25a
-description: Kimlik yönetimi özelliklerini nasıl Microsoft 365 hakkında bilgi öğrenin.
-ms.openlocfilehash: 35b2092412ddbeacd5d6962e110de1931b2d0f4b
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Microsoft 365 kimlik idaresi özelliklerini kullanma hakkında bilgi edinin.
+ms.openlocfilehash: f4fcfed9fcb978e40c3bf7c0e7a35eb717fee343
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62977672"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65091181"
 ---
-# <a name="manage-microsoft-365-identity-governance"></a>Kimlik Microsoft 365 yönetme
+# <a name="manage-microsoft-365-identity-governance"></a>Microsoft 365 kimlik idaresi yönetme
 
-Kimlik yönetimi, kritik varlıklara erişimi koruma, izleme ve denetlemeyle, ayrıca çalışanların üretkenliğini sağlamayla da önemlidir. Örneğin, kimlik yönetimiyle, doğru kullanıcıların doğru kaynaklara doğru erişimi olduğundan emin olabilir ve bu erişimin zaman içinde değişirse bunu belirlersiniz.
+Kimlik idaresi, çalışanların üretkenliğini sağlarken kritik varlıklara erişimi korumak, izlemek ve denetlemekle alakalıdır. Örneğin, kimlik idaresi ile doğru kullanıcıların doğru kaynaklara doğru erişime sahip olduğundan emin olabilir ve bu erişimin zaman içinde değişip değişmediğini belirleyebilirsiniz.
 
-Daha fazla bilgi için bu Kimlik [Yönetimi (Azure AD) Azure Active Directory genel bakış bilgilerine bakın](/azure/active-directory/governance/identity-governance-overview).
+Daha fazla bilgi için bkz. [Azure Active Directory (Azure AD) için kimlik idaresine genel bakış](/azure/active-directory/governance/identity-governance-overview).
 
-## <a name="set-up-azure-ad-access-reviews"></a>Azure AD erişim incelemelerini ayarlama
+## <a name="set-up-azure-ad-access-reviews"></a>Azure AD erişim gözden geçirmelerini ayarlama
 
-Azure AD erişim incelemeleri, yalnızca doğru kişilerin erişmeye devam olduğundan emin olmak için kullanıcının erişimini gözden geçirmenıza olanak sağlar. Örneğin:
+Azure AD erişim gözden geçirmeleri, yalnızca doğru kişilerin erişimine devam ettiğinden emin olmak için kullanıcının erişimini gözden geçirmenize olanak tanır. Örneğin:
 
-- Organizasyona yeni bir çalışan kat kat katıldı olarak, üretken olmak için doğru erişime sahip olduğundan emin olun.
-- Bu çalışan başka ekiplere, konumlara veya departmanlara taşınırken, önceki ekiplere, konumlara veya departmanlara erişiminin gerektiğinde kaldırıldıklarından emin olmak gerekir.
-- Bu çalışan veya bir konuk kuruluştan ayrıldığında, erişiminin kaldırıldıklarından emin olun.
+- Kuruluşunuza yeni bir çalışan katıldığında, üretken olmak için doğru erişime sahip olduklarından emin olmanız gerekir.
+- Bu çalışan diğer ekiplere, konumlara veya departmanlara taşınırken, önceki ekiplere, konumlara veya departmanlara erişiminin gerektiğinde kaldırıldığından emin olmanız gerekir.
+- Bu çalışan veya konuk kuruluşunuzdan ayrıldığında, erişiminin kaldırıldığından emin olmanız gerekir.
 
-Bu özellikle, kuruluş kullanıcı hesaplarına çok fazla erişim olup olmadığını belirlemek için güvenlik denetimlerine tabi olması açısından önemlidir; bu durum sektör veya bölgesel düzenlemelerin ihlalinde ince neden olabilir.
+Bu özellikle, kuruluşunuzun kullanıcı hesaplarının çok fazla erişime sahip olup olmadığını belirlemek için güvenlik denetimlerine tabi olması durumunda önemlidir ve bu da sektör veya bölgesel düzenlemelerin ihlali durumunda para cezasına neden olabilir.
 
-Daha fazla bilgi için erişim [incelemelerine genel bakış bilgilerine bakın](/azure/active-directory/governance/access-reviews-overview).
+Daha fazla bilgi için [erişim gözden geçirmelerine genel bakış bölümüne](/azure/active-directory/governance/access-reviews-overview) bakın.
 
-Farklı erişim incelemeleri türlerini yapılandırmak için şu makalelere bakın:
+Farklı erişim gözden geçirme türlerini yapılandırmak için şu makalelere bakın:
 
 - [Gruplar ve uygulamalar](/azure/active-directory/governance/create-access-review)
 - [Azure AD rolleri](/azure/active-directory/privileged-identity-management/pim-how-to-start-security-review?toc=%2fazure%2factive-directory%2fgovernance%2ftoc.json)
@@ -55,10 +55,10 @@ Farklı erişim incelemeleri türlerini yapılandırmak için şu makalelere bak
 
 ## <a name="set-up-azure-ad-entitlement-management"></a>Azure AD yetkilendirme yönetimini ayarlama
 
-Azure AD yetkilendirme yönetimi ile erişim isteği iş akışlarını otomatik başlatarak, atamalara, incelemelere ve süre sonuyla kimlik ve erişim yaşam döngüsünü ölçekte yönetebilirsiniz.
+Wiht Azure AD yetkilendirme yönetimi; erişim isteği iş akışlarını, erişim atamalarını, incelemeleri ve süre sonunu otomatikleştirerek kimliği ve erişim yaşam döngüsünü uygun ölçekte yönetebilirsiniz.
 
-Çalışanlarınızı, yaptıkları işi gerçekleştirmek için çeşitli gruplara, uygulamalara ve sitelere erişmeleri gerekir. Gereksinimler değişmesi, yeni uygulamalar ekli olması veya kullanıcıların ek erişim haklarına ihtiyacı olduğundan, bu erişimi yönetmek zor olabilir. Başka kuruluşlarla işbirliği yapıyorsanız, diğer kuruluşta kimlerin kuruluş kaynaklarına erişmesi gerektiğini bilmiyorsanız ve dış kullanıcılar da kurum hangi uygulamaları, grupları veya siteleri kullanmakta olduğunu bilmiyor olabilir.
+Çalışanlarınızın işlerini gerçekleştirmek için çeşitli gruplara, uygulamalara ve sitelere erişmesi gerekir. Gereksinimler değiştiği, yeni uygulamalar eklendiği veya kullanıcıların ek erişim haklarına ihtiyacı olduğu için bu erişimi yönetmek zor olabilir. Diğer kuruluşlarla işbirliği yaptığınızda, diğer kuruluşta kimlerin kuruluşunuzun kaynaklarına erişmesi gerektiğini bilmiyor olabilirsiniz ve dış kullanıcılar kuruluşunuzun hangi uygulamaları, grupları veya siteleri kullandığını bilmeyecektir.
 
-Azure AD yetkilendirme yönetimi, iç ve dış kullanıcılar için gruplara, uygulamalara ve sitelere SharePoint şekilde yönetmenize yardımcı olabilir.
+Azure AD yetkilendirme yönetimi, iç ve dış kullanıcılar için gruplara, uygulamalara ve SharePoint sitelerine erişimi daha verimli bir şekilde yönetmenize yardımcı olabilir.
  
-Daha fazla bilgi için bkz [. Azure AD yetkilendirme yönetimine genel bakış](/azure/active-directory/governance/entitlement-management-overview).
+Daha fazla bilgi için bkz. [Azure AD yetkilendirme yönetimine genel bakış](/azure/active-directory/governance/entitlement-management-overview).

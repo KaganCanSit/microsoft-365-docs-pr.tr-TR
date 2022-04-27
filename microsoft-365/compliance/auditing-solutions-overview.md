@@ -2,8 +2,8 @@
 title: Microsoft Purview denetim çözümleri
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -19,12 +19,12 @@ search.appverid:
 - MET150
 description: Microsoft 365 kuruluşunuzdaki kullanıcıların ve yöneticilerin etkinliklerini denetlemeyi öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: ee11ee5e02ee4342921776124813b71cf4468ad7
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: cc70060872c9f416120e859673ad9a3799322048
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "65001422"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65100885"
 ---
 # <a name="auditing-solutions-in-microsoft-purview"></a>Microsoft Purview'da denetim çözümleri
 

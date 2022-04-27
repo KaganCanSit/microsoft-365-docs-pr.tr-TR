@@ -1,6 +1,6 @@
 ---
-title: Düzeltme eylemlerini gözden Microsoft 365 İş Ekstra
-description: İşlem merkezinde otomatik olarak alınan veya onay bekleyen düzeltmelerin nasıl görüntü gerektirilir
+title: Microsoft 365 İş Ekstra'de düzeltme eylemlerini gözden geçirme
+description: İşlem merkezinde otomatik olarak alınan veya onay bekleyen düzeltmelerin nasıl görüntülendiğini görün
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
@@ -10,27 +10,29 @@ ms.topic: how-to
 ms.date: 02/24/2022
 ms.prod: m365-security
 ms.technology: mdb
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.reviewer: inbadian, shlomiakirav
 f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 160cef2ec7691fbc9debad809b20461a0d3efe23
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: df99f73275e0aa83216bd1de101638dee628f0f2
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63705542"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65091907"
 ---
-# <a name="review-remediation-actions-in-microsoft-365-business-premium"></a>Düzeltme eylemlerini gözden Microsoft 365 İş Ekstra
+# <a name="review-remediation-actions-in-microsoft-365-business-premium"></a>Microsoft 365 İş Ekstra'de düzeltme eylemlerini gözden geçirme
 
-Tehdit algılandığında düzeltme eylemleri ortaya çıktı. Belirli tehdide ve güvenlik ayarlarınızın nasıl yapılandırılana bağlı olarak, düzeltme eylemleri otomatik olarak veya yalnızca onay üzerine gerçek olabilir. Düzeltme eylemlerine örnek olarak, dosyayı karantinaya gönderme, bir işlemi çalıştırmayı durdurma ve zamanlanmış görevi kaldırma işlemleri örnek olarak verilmiştir. Tüm düzeltme eylemleri, üzerinde yer alan İşlem merkezinde izlenr.[https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)
+Tamam, bir güvenlik ihlali keşfettiniz ama ne yapacaksınız? Doğasına bağlı. 
 
-:::image type="content" source="../media/defender-business/mdb-actioncenter.png" alt-text="M365'te İşlem Merkezi'nin ekran görüntüsü.":::
+Karantinaya dosya gönderme, işlemin çalışmasını durdurma veya zamanlanmış bir görevi tamamen kaldırma gibi düzeltme eylemlerine örnek olarak verilebilir. Tüm düzeltme eylemleri, konumunda [https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)bulunan İşlem merkezinde izlenir.
 
-**Bu makalede şu açıklanmıştır**:
+:::image type="content" source="../media/defender-business/mdb-actioncenter.png" alt-text="M365'teki İşlem Merkezi'nin ekran görüntüsü.":::
+
+**Bu makalede şunlar açıklanmaktadır**:
 
 - [İşlem merkezini kullanma](#how-to-use-your-action-center)
 
@@ -39,22 +41,22 @@ Tehdit algılandığında düzeltme eylemleri ortaya çıktı. Belirli tehdide v
 
 ## <a name="how-to-use-your-action-center"></a>İşlem merkezinizi kullanma
 
-1. Microsoft 365 Defender portalına () gidin[https://security.microsoft.com](https://security.microsoft.com) ve oturum açın.
+1. Microsoft 365 Defender portalına ()[https://security.microsoft.com](https://security.microsoft.com) gidin ve oturum açın.
 
-2. Gezinti bölmesinde İşlem **merkezi'ni seçin**.
+2. Gezinti bölmesinde **İşlem merkezi'ni** seçin.
 
-3. Bekleyen eylemleri **görüntülemek** ve onaylamak (veya reddetmek) için Beklemede sekmesini seçin. Bu tür eylemler virüsten koruma/kötü amaçlı yazılımlardan koruma, otomatik soruşturmalar, el ile yanıt etkinlikleri veya canlı yanıt oturumlarından oluşabilir.
+3. Bekleyen eylemleri görüntülemek ve onaylamak (veya reddetmek) için **Beklemede** sekmesini seçin. Bu tür eylemler virüsten koruma/kötü amaçlı yazılımdan koruma, otomatik araştırma, el ile yanıt etkinlikleri veya canlı yanıt oturumlarından kaynaklanabilir.
 
-4. Tamamlanmış **eylemlerin** listesini görüntülemek için Geçmiş sekmesini seçin. 
+4. Tamamlanan eylemlerin listesini görüntülemek için **Geçmiş** sekmesini seçin. 
 
 ## <a name="types-of-remediation-actions"></a>Düzeltme eylemi türleri
 
-Aboneliğiniz, algılanan tehditlere yönelik çeşitli düzeltme eylemleri içerir. Bu eylemler, el ile yanıt eylemlerini, otomatik soruşturmayı takip eden eylemleri ve canlı yanıt eylemlerini içerir.
+Aboneliğiniz algılanan tehditler için birkaç farklı düzeltme eylemi türü içerir. Bu eylemler el ile yanıt eylemlerini, otomatik araştırmadan sonraki eylemleri ve canlı yanıt eylemlerini içerir.
 
-Aşağıdaki tabloda, kullanılabilir düzeltme eylemleri listele:
+Aşağıdaki tabloda, kullanılabilen düzeltme eylemleri listelenir:
 
-| Kaynak  | Eylemler  |
+| Kaynak  | Eylem  |
 |---------|---------|
-| [Otomatik soruşturmalar](../security/defender-endpoint/automated-investigations.md)      | - Dosyayı karantinaya alın <br/>- Kayıt defteri anahtarını kaldırma <br/>- Süreci kill <br/>- Hizmeti durdurma <br/>- Sürücüyü devre dışı bırakma <br/>- Zamanlanmış görevi kaldırma        |
-| [El ile yanıt eylemleri](../security/defender-endpoint/respond-machine-alerts.md)   | - Virüsten koruma taraması çalıştırma <br/>- Cihazı yalıt <br/>- Durdurma ve karantina <br/>- Dosyayı engellemek veya dosyaya izin vermek için bir gösterge ekleyin       |
-| [Canlı yanıt](../security/defender-endpoint/live-response.md)   | - Bilgi toplama <br/>- Dosyayı çözümleme <br/>- Betik çalıştırma <br/>- Çözümleme için Microsoft'a şüpheli bir varlık gönderin <br/>- Dosyayı düzeltme <br/>- Tehditlere karşı önceden önlem almak         |
+| [Otomatik araştırma](../security/defender-endpoint/automated-investigations.md)      | - Dosyayı karantinaya al <br/>- Kayıt defteri anahtarını kaldırma <br/>- Bir işlemi sonlandırma <br/>- Hizmeti durdurma <br/>- Sürücüyü devre dışı bırakma <br/>- Zamanlanmış görevi kaldırma        |
+| [El ile yanıt eylemleri](../security/defender-endpoint/respond-machine-alerts.md)   | - Virüsten koruma taraması çalıştırma <br/>- Cihazı yalıtma <br/>- Durdurma ve karantinaya al <br/>- Bir dosyayı engellemek veya dosyaya izin vermek için gösterge ekleme       |
+| [Canlı yanıt](../security/defender-endpoint/live-response.md)   | - Adli veri toplama <br/>- Bir dosyayı analiz etme <br/>- Betik çalıştırma <br/>- Şüpheli bir varlığı analiz için Microsoft'a gönderme <br/>- Dosyayı düzeltme <br/>- Tehditleri proaktif olarak avlama         |

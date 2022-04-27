@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için Windows 365 (Bulut bilgisayarları) sayfası hakkında bilgi edinin.
-ms.openlocfilehash: 843e241c796d626ecca2180b0bce1372059701a2
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: 325fe39c144227052c966b81a8a2109a07fb0cf2
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65022899"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65100291"
 ---
 # <a name="overview-of-the-windows-365-cloud-pcs-page-in-microsoft-365-lighthouse"></a>Microsoft 365 Lighthouse'daki Windows 365 (Bulut Bilgisayarlar) sayfasına genel bakış  
   
@@ -57,22 +57,25 @@ Tüm Bulut Bilgisayarları sekmesinde, renkli count-annotation çubuğu tüm mü
 Tüm Bulut bilgisayarlarını ve sağlama durumlarını ek açıklama çubuğunun altındaki listede görüntüleyebilirsiniz. Aşağıdaki bilgiler sağlanır:
 
 - **Bulut bilgisayar adı:** Bulut bilgisayara atanan ad.
-- **Kiracı:** Bulut bilgisayarın sağlandığı müşteri kiracısı.
-- **Cihaz adı:** Intune cihaz adı; Bulut bilgisayarın benzersiz tanımlayıcısı.
-- **Bilgisayar türü:** Standart SKU'lara göre Bulut bilgisayar türü.
-- **Durum:** Bulut bilgisayarın sağlama durumu.
 - **Kullanıcı:** Bulut bilgisayarının sağlandığı veya sağlanmaya çalışıldığı kullanıcı.
+- **Cihaz adı:** Intune cihaz adı; Bulut bilgisayarın benzersiz tanımlayıcısı.
+- **Kiracı:** Bulut bilgisayarın sağlandığı müşteri kiracısı.
+- **Durum:** Bulut bilgisayarın sağlama durumu.
+- **Lisans türü:** Enterprise veya İş.
+- **Özellikler:** Bulut bilgisayar donanım yapılandırması.
 
 Hangi kiracıların belirli bir sağlama durumuna sahip Bulut bilgisayarlarına sahip olduğunu görmek için, listeyi filtrelemek için count-annotation çubuğundan bu durumu seçin. Bir veya daha fazla belirli müşteri kiracısının Bulut Bilgisayar sağlama durumlarını görmek için **Kiracılar** açılan menüsünü kullanarak listeyi filtreleyin.
 
-Daha fazla ayrıntı görüntülemek için listeden herhangi bir Cloud PC'yi seçin. Bulut bilgisayarda işlem yapmanız gerekiyorsa, kiracı sağlama ilkelerini ve cihaz ayrıntılarını Microsoft Endpoint Manager görüntüleme seçenekleri vardır.
+Daha fazla ayrıntı görüntülemek ve aşağıdaki gibi yönetim eylemlerini yürütmek için listeden herhangi bir Cloud PC'yi seçin:
+- **Yeni -den başlatın:** Cihazı yeniden başlatmak için öğesini seçin. 
+- **Yeniden sağlama:** Cihazı sıfırlamak için öğesini seçin. Sağlama ilkesini Microsoft Endpoint Manager bağlantısında da görüntüleyebilirsiniz.
+- **Yeni -den adlandırmak:** Kullanıcıya atanan cihazı yeniden adlandırmak için öğesini seçin.
 
 Tüm Bulut Bilgisayarları sekmesi aşağıdaki seçenekleri de içerir:
 
-- **Yenileme:** En güncel Cloud PC verilerini almak için öğesini seçin.
 - **Ihracat:** Cloud PC verilerini virgülle ayrılmış Excel değerler (.csv) dosyasına dışarı aktarmak için seçin.
+- **Yenileme:** En güncel Cloud PC verilerini almak için öğesini seçin.
 - **Arama:** Listede belirli bir Bulut bilgisayarı hızla bulmak için anahtar sözcükler girin.
-- **Sağlamayı yeniden deneyin:** **Sağlama başarısız** durumundaki listeden 1 ila 20 Bulut bilgisayarı seçin ve ardından bu Bulut bilgisayarları için sağlamayı yeniden denemek için bu seçeneği belirleyin.
 
 Bulut bilgisayar sağlama durumlarının tam listesini ve bunların ne anlama olduğunu görmek için Windows 365 belge kitaplığındaki [Bulut bilgisayarlar için cihaz yönetimine genel bakış](/windows-365/enterprise/device-management-overview#column-details) bölümüne bakın.
 
@@ -80,7 +83,7 @@ Bulut bilgisayar sağlama durumlarının tam listesini ve bunların ne anlama ol
 
 ## <a name="azure-network-connections-tab"></a>Azure ağ bağlantıları sekmesi
 
-Azure ağ bağlantıları sekmesindeki renkli count-annotation çubuğu, tüm müşteri kiracılarınız genelinde aşağıdaki durumlara sahip azure ağ bağlantılarının toplam sayısını görüntüler: Başarılı bağlantılar ve Başarısız bağlantılar.
+Azure ağ bağlantıları sekmesindeki renkli count-annotation çubuğu, Windows 365 Enterprise Bulut bilgisayarlarına sahip olan ve şu durumlara sahip olabilecek tüm müşteri kiracılarınız genelinde toplam Azure ağ bağlantısı sayısını görüntüler: Başarılı bağlantılar ve Başarısız bağlantılar.
 
 Ek açıklama ekleme çubuğunun altındaki listede tüm Azure ağ bağlantılarını ve bunların bağlantı durumunu görüntüleyebilirsiniz.
 
@@ -90,8 +93,8 @@ Listede bir işlem yapmanız veya bağlantı sorunlarını gidermeniz gerekiyors
 
 Azure ağ bağlantıları sekmesi aşağıdaki seçenekleri de içerir:
 
-- **Yenileme:** En güncel bağlantı verilerini almak için öğesini seçin.
 - **Ihracat:** Bağlantı verilerini virgülle ayrılmış Excel değerler (.csv) dosyasına aktarmak için seçin.
+- **Yenileme:** En güncel bağlantı verilerini almak için öğesini seçin.
 - **Arama:** Belirli bir bağlantıyı hızla bulmak için anahtar sözcükler girin.
 
 :::image type="content" source="../media/m365-lighthouse-win365-page-overview/azure-network-connections-tab.png" alt-text="Azure ağ bağlantıları sekmesinin ekran görüntüsü." lightbox="../media/m365-lighthouse-win365-page-overview/azure-network-connections-tab.png":::

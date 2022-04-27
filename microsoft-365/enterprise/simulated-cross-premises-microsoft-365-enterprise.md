@@ -1,10 +1,10 @@
 ---
-title: Bir test ortamında benzetimi yapılan şirket Microsoft 365 sanal ağı
+title: Microsoft 365 test ortamında şirket içi sanal ağın benzetimi
 f1.keywords:
 - NOCSH
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 11/14/2019
 audience: ITPro
 ms.topic: article
@@ -16,93 +16,93 @@ ms.collection:
 - M365-subscription-management
 - Strat_O365_Enterprise
 ms.custom: seo-marvel-apr2020
-description: 'Özet: Bir test ortamı olarak bu ağda sanal bir Microsoft Azure şirket içi sanal Microsoft 365 oluşturun.'
-ms.openlocfilehash: 0d0e22b5c9a12f4757a6dff5892ef72a757d2bda
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: "Özet: Microsoft Azure'da Microsoft 365 test ortamı olarak sanal bir şirket içi sanal ağ oluşturun."
+ms.openlocfilehash: a3bc5c130ad03d1896abcf98ba9fc26d9ff2f422
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988147"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65099179"
 ---
-# <a name="simulated-cross-premises-virtual-network-in-a-microsoft-365-test-environment"></a>Bir test ortamında benzetimi yapılan şirket Microsoft 365 sanal ağı
+# <a name="simulated-cross-premises-virtual-network-in-a-microsoft-365-test-environment"></a>Microsoft 365 test ortamında şirket içi sanal ağın benzetimi
 
-*Bu Test Laboratuvarı Kılavuzu, hem kurumsal hem de Microsoft 365 test ortamları için Office 365 Kurumsal kullanılabilir.*
+*Bu Test Laboratuvarı Kılavuzu hem kurumsal hem de Office 365 Kurumsal test ortamları için Microsoft 365 için kullanılabilir.*
 
-Bu makale, iki Azure sanal ağı kullanarak karma ve sanal bir Microsoft Azure bir bulut ortamı oluşturma konusunda size yol verir. Sonuçta elde edilen yapılandırma şu şekildedir. 
+Bu makalede, iki Azure sanal ağı kullanarak Microsoft Azure ile sanal hibrit bulut ortamı oluşturma adımları gösterilir. Sonuçta elde edilen yapılandırma aşağıdadır. 
   
-![XPrem VNet'te DC2 sanal makinesiyle, sanal şirket içi sanal ağ test ortamının 3. aşaması.](../media/simulated-cross-premises-microsoft-365-enterprise/df458c56-022b-4688-ab18-056c3fd776b4.png)
+![XPrem sanal ağında DC2 sanal makinesi ile sanal şirket içi sanal ağ test ortamının 3. aşaması.](../media/simulated-cross-premises-microsoft-365-enterprise/df458c56-022b-4688-ab18-056c3fd776b4.png)
   
-Bu işlem, Azure IaaS karma bulut üretim ortamının benzetimini eder ve aşağıdakilerden oluşur:
+Bu, Azure IaaS hibrit bulut üretim ortamının simülasyonunu oluşturur ve şunlardan oluşur:
   
-- Azure sanal ağına (TestLab sanal ağı) barındırılan sanal ve basitleştirilmiş bir şirket içi ağ.
+- Azure sanal ağında (TestLab sanal ağı) barındırılan sanal ve basitleştirilmiş bir şirket içi ağ.
     
-- Azure'da (XPrem) barındırılan sanal bir şirket içi ağ benzetimi.
+- Azure'da barındırılan sanal bir şirket içi sanal ağ (XPrem).
     
-- İki sanal ağ arasındaki VNet eşleme ilişkisi.
+- İki sanal ağ arasındaki sanal ağ eşleme ilişkisi.
     
-- XPrem sanal ağın ikincil etki alanı denetleyicisi.
+- XPrem sanal ağında ikincil etki alanı denetleyicisi.
     
-Bu, temel ve genel bir başlangıç noktası sağlar; burada: 
+Bu, şu işlemleri yapabileceğiniz bir temel ve ortak başlangıç noktası sağlar: 
   
-- Sanal bir Azure IaaS karma bulut ortamında uygulamaları geliştirin ve test edin.
+- Sanal Azure IaaS hibrit bulut ortamında uygulama geliştirin ve test edin.
     
-- Bulut tabanlı karma IT iş yüklerinin benzetimini yapmak için, bazıları TestLab sanal ağı içinde ve bazıları da XPrem sanal ağı içinde olmak üzere bilgisayarların test yapılandırmaları oluşturun.
+- Karma bulut tabanlı BT iş yüklerinin benzetimini yapmak için, bazıları TestLab sanal ağında, bazıları da XPrem sanal ağındaki bilgisayarların test yapılandırmalarını oluşturun.
     
-Bu test ortamını ayarlamanın üç önemli aşaması vardır:
+Bu test ortamını ayarlamanın üç ana aşaması vardır:
   
-1. TestLab sanal ağına yapılandırma.
+1. TestLab sanal ağını yapılandırın.
     
 2. Şirket içi sanal ağı oluşturun.
     
-3. DC2'yi yapılandırma.
+3. DC2'yi yapılandırın.
     
 > [!NOTE]
-> Bu yapılandırma için ücretli bir Azure aboneliği gerekir. 
+> Bu yapılandırma ücretli bir Azure aboneliği gerektirir. 
 
-Sonuç ortamını, ek Test Laboratuvarı Kılavuzları ile veya kendi [Microsoft 365](https://www.microsoft.com/microsoft-365/enterprise) kurumsal özelliklerin ve [işlevlerinin test](m365-enterprise-test-lab-guides.md) etmek için kullanabilirsiniz.
+Elde edilen ortamı, ek [Test Laboratuvarı Kılavuzları](m365-enterprise-test-lab-guides.md) ile veya kendi başınıza [kuruluş için Microsoft 365](https://www.microsoft.com/microsoft-365/enterprise) özelliklerini ve işlevselliğini test etmek için kullanabilirsiniz.
 
 ![Microsoft bulutu için Test Laboratuvarı Kılavuzları.](../media/m365-enterprise-test-lab-guides/cloud-tlg-icon.png)
 
 > [!TIP]
-> Kurumsal [test Microsoft 365 Kılavuzu yığınına](../downloads/Microsoft365EnterpriseTLGStack.pdf) göre görsel bir harita için Microsoft 365 Test Laboratuvarı Kılavuzu Yığını'nın görsel bir haritasına gidin.
+> [Kurumsal Test Laboratuvarı Kılavuzu yığınındaki Microsoft 365](../downloads/Microsoft365EnterpriseTLGStack.pdf) tüm makalelere görsel bir harita için kurumsal Test Laboratuvarı Kılavuz Yığını için Microsoft 365 gidin.
 
-## <a name="phase-1-configure-the-testlab-virtual-network"></a>Aşama 1: TestLab sanal ağına yapılandırma
+## <a name="phase-1-configure-the-testlab-virtual-network"></a>1. Aşama: TestLab sanal ağını yapılandırma
 
-TestLab adlı Azure sanal ağına DC1 [](simulated-ent-base-configuration-microsoft-365-enterprise.md), APP1 ve CLIENT1 bilgisayarlarını yapılandırmak için sanal kurumsal temel yapılandırmanın Aşama **1'inde** verilen yönergeleri kullanın.
+TestLab adlı Azure sanal ağında DC1, APP1 ve CLIENT1 bilgisayarlarını yapılandırmak için [sanal kurumsal temel yapılandırmanın](simulated-ent-base-configuration-microsoft-365-enterprise.md) 1. **aşamasındaki** yönergeleri kullanın.
   
 Bu, geçerli yapılandırmanızdır. 
   
-![Azure'daki sanal kurumsal temel yapılandırmadır.](../media/simulated-cross-premises-microsoft-365-enterprise/25a010a6-c870-4690-b8f3-84421f8bc5c7.png)
+![Azure'da sanal kurumsal temel yapılandırma.](../media/simulated-cross-premises-microsoft-365-enterprise/25a010a6-c870-4690-b8f3-84421f8bc5c7.png)
   
-## <a name="phase-2-create-the-xprem-virtual-network"></a>Aşama 2: XPrem sanal ağı oluşturma
+## <a name="phase-2-create-the-xprem-virtual-network"></a>2. Aşama: XPrem sanal ağını oluşturma
 
-Bu aşamada, yeni XPrem sanal ağına bağlanma ve ardından bunu VNet eşliğiyle TestLab sanal ağına bağlamanız gerekir.
+Bu aşamada yeni XPrem sanal ağını oluşturup yapılandıracak ve ardından VNet eşlemesi ile TestLab sanal ağına bağlayacaksınız.
   
-İlk olarak, yerel Azure PowerShell bir bağlantı istemi başlatın.
+İlk olarak, yerel bilgisayarınızda bir Azure PowerShell istemi başlatın.
   
 > [!NOTE]
-> Aşağıdaki komut kümeleri, en son Sürüm Azure PowerShell. Bkz[. Yeni cmdlet'leri Azure PowerShell başlama](/powershell/azureps-cmdlets-docs/). 
+> Aşağıdaki komut kümeleri Azure PowerShell en son sürümünü kullanır. Bkz. [Azure PowerShell cmdlet'lerle Kullanmaya başlayın](/powershell/azureps-cmdlets-docs/). 
   
-Bu komutla Azure hesabınızla oturum açın.
+Bu komutla Azure hesabınızda oturum açın.
   
 ```powershell
 Connect-AzAccount
 ```
 
-Bu komutu kullanarak abonelik adı alın.
+Bu komutu kullanarak abonelik adınızı alın.
   
 ```powershell
 Get-AzSubscription | Sort Name | Select Name
 ```
 
-Azure aboneliğinizi ayarlayın. Tırnak içindeki her şeyi, karakterlerle birlikte \< and > doğru adlarla değiştirin.
+Azure aboneliğinizi ayarlayın. Karakterler de dahil olmak üzere \< and > tırnak içindeki her şeyi doğru adlarla değiştirin.
   
 ```powershell
 $subscrName="<subscription name>"
 Select-AzSubscription -SubscriptionName $subscrName
 ```
 
-Ardından, XPrem sanal ağına oluşturun ve bu komutlarla bir ağ güvenlik grubuyla koruyun.
+Ardından XPrem sanal ağını oluşturun ve bu komutlarla bir ağ güvenlik grubuyla koruyun.
   
 ```powershell
 $rgName="<name of the resource group that you used for your TestLab virtual network>"
@@ -117,7 +117,7 @@ Set-AzVirtualNetworkSubnetConfig -VirtualNetwork $vnet -Name "Testnet" -AddressP
 $vnet | Set-AzVirtualNetwork
 ```
 
-Ardından, bu komutlarla TestLab ve XPrem VNet'leri arasında VNet eşleme ilişkisi oluşturun.
+Ardından, bu komutlarla TestLab ile XPrem sanal ağları arasında sanal ağ eşleme ilişkisi oluşturursunuz.
   
 ```powershell
 $rgName="<name of the resource group that you used for your TestLab virtual network>"
@@ -129,13 +129,13 @@ Add-AzVirtualNetworkPeering -Name XPrem2TestLab -VirtualNetwork $vnet2 -RemoteVi
 
 Bu, geçerli yapılandırmanızdır. 
   
-![XPrem VNet ve VNet eşleme ilişkisiyle, sanal şirket içi sanal ağ test ortamının aşama 2. aşaması.](../media/simulated-cross-premises-microsoft-365-enterprise/cac5e999-69c7-4f4c-bfce-a7f4006115ef.png)
+![XPrem sanal ağı ve sanal ağ eşleme ilişkisi ile simülasyon şirket içi sanal ağ test ortamının 2. aşaması.](../media/simulated-cross-premises-microsoft-365-enterprise/cac5e999-69c7-4f4c-bfce-a7f4006115ef.png)
   
-## <a name="phase-3-configure-dc2"></a>Aşama 3: DC2'yi yapılandırma
+## <a name="phase-3-configure-dc2"></a>3. Aşama: DC2'yi yapılandırma
 
-Bu aşamada, XPrem sanal ağına DC2 sanal makinesi oluşturun ve sonra bunu bir çoğaltma etki alanı denetleyicisi olarak yapılandırabilirsiniz.
+Bu aşamada, XPrem sanal ağında DC2 sanal makinesini oluşturacak ve ardından bir çoğaltma etki alanı denetleyicisi olarak yapılandıracaksınız.
   
-İlk olarak, DC2 için bir sanal makine oluşturun. Bu komutları yerel Azure PowerShell Komut İstemi'nde çalıştırın.
+İlk olarak DC2 için bir sanal makine oluşturun. Bu komutları yerel bilgisayarınızdaki Azure PowerShell komut isteminde çalıştırın.
   
 ```powershell
 $rgName="<your resource group name>"
@@ -155,33 +155,33 @@ $vm=Add-AzVMDataDisk -VM $vm -Name "DC2-DataDisk1" -CreateOption Attach -Managed
 New-AzVM -ResourceGroupName $rgName -Location $locName -VM $vm
 ```
 
-Ardından, yerel yönetici hesap adını ve parolasını kullanarak [Azure portaldan](https://portal.azure.com) yeni DC2 sanal makinesine bağlanın.
+Ardından, yerel yönetici hesabı adını ve parolasını kullanarak [Azure portal](https://portal.azure.com) yeni DC2 sanal makinesine bağlanın.
   
-Ardından, temel bağlantı Windows izin verecek bir Güvenlik Duvarı kuralı yapılandırabilirsiniz. DC2'de yönetici Windows PowerShell komut isteminde, bu komutları çalıştırın. 
+Ardından, temel bağlantı testine yönelik trafiğe izin vermek için bir Windows Güvenlik Duvarı kuralı yapılandırın. DC2'de yönetici düzeyinde Windows PowerShell komut isteminden bu komutları çalıştırın. 
   
 ```powershell
 Set-NetFirewallRule -DisplayName "File and Printer Sharing (Echo Request - ICMPv4-In)" -enabled True
 ping dc1.corp.contoso.com
 ```
 
-Ping komutu IP adresi 10.0.0.4'den dört başarılı yanıta neden olacaktır. Bu, VNet eşleme ilişkisi genelindeki trafiğin bir sınamasıdır. 
+Ping komutu 10.0.0.4 IP adresinden dört başarılı yanıta neden olmalıdır. Bu, sanal ağ eşleme ilişkisi genelinde trafik testidir. 
   
-Ardından, EK veri diskini, DC2'de yer alan Sürücü komutu isteminde yer alan bu komutla F Windows PowerShell harfiyle yeni bir birim olarak ekleyin.
+Ardından, DC2'de Windows PowerShell komut isteminden bu komutla ek veri diskini F: sürücü harfiyle yeni bir birim olarak ekleyin.
   
 ```powershell
 Get-Disk | Where PartitionStyle -eq "RAW" | Initialize-Disk -PartitionStyle MBR -PassThru | New-Partition -AssignDriveLetter -UseMaximumSize | Format-Volume -FileSystem NTFS -NewFileSystemLabel "WSAD Data"
 ```
 
-Ardından, DC2'yi etki alanı için bir çoğaltma etki corp.contoso.com olarak yapılandırabilirsiniz. Bu komutları DC2'de Windows PowerShell komut isteminden çalıştırın.
+Ardından DC2'yi corp.contoso.com etki alanı için çoğaltma etki alanı denetleyicisi olarak yapılandırın. Dc2'de Windows PowerShell komut isteminden bu komutları çalıştırın.
   
 ```powershell
 Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
 Install-ADDSDomainController -Credential (Get-Credential CORP\User1) -DomainName "corp.contoso.com" -InstallDns:$true -DatabasePath "F:\NTDS" -LogPath "F:\Logs" -SysvolPath "F:\SYSVOL"
 ```
 
-HEM CORPUser1\\ parolasını hem de Dizin Hizmetleri Geri Yükleme Modu (DSRM) parolasını girmenizi ve DC2'yi yeniden başlatmanızı istenir. 
+Hem CORPUser1\\ parolasını hem de Dizin Hizmetleri Geri Yükleme Modu (DSRM) parolasını sağlamanız ve DC2'yi yeniden başlatmanız istendiğini unutmayın. 
   
-XPrem sanal ağının kendi DNS sunucusuna (DC2) sahip olduğu için, XPrem sanal ağına bu DNS sunucusunu kullanmak üzere yapılandırmanız gerekir. Bu komutları yerel Azure PowerShell Komut İstemi'ne göre çalıştırın.
+Artık XPrem sanal ağının kendi DNS sunucusu (DC2) olduğuna göre, XPrem sanal ağını bu DNS sunucusunu kullanacak şekilde yapılandırmanız gerekir. Bu komutları yerel bilgisayarınızdaki Azure PowerShell komut isteminden çalıştırın.
   
 ```powershell
 $vnet=Get-AzVirtualNetwork -ResourceGroupName $rgName -name "XPrem"
@@ -190,7 +190,7 @@ Set-AzVirtualNetwork -VirtualNetwork $vnet
 Restart-AzVM -ResourceGroupName $rgName -Name "DC2"
 ```
 
-Yerel bilgisayarınızda Azure portalında CORPUser1 kimlik bilgileriyle DC1'e\\ bağlanın. CORP etki alanını bilgisayarlar ve kullanıcılar kimlik doğrulaması için yerel etki alanı denetleyicisini kullanacak şekilde yapılandırmak için, bu komutları DC1'de yönetici Windows PowerShell komut isteminden çalıştırın.
+Yerel bilgisayarınızdaki Azure portal CORPUser1\\ kimlik bilgileriyle DC1'e bağlanın. BILGISAYARLARıN ve kullanıcıların kimlik doğrulaması için yerel etki alanı denetleyicilerini kullanacak şekilde CORP etki alanını yapılandırmak için bu komutları DC1'de yönetici düzeyinde bir Windows PowerShell komut isteminden çalıştırın.
   
 ```powershell
 New-ADReplicationSite -Name "TestLab" 
@@ -201,15 +201,15 @@ New-ADReplicationSubnet -Name "192.168.0.0/16" -Site "XPrem"
 
 Bu, geçerli yapılandırmanızdır. 
   
-![XPrem VNet'te DC2 sanal makinesiyle, sanal şirket içi sanal ağ test ortamının 3. aşaması.](../media/simulated-cross-premises-microsoft-365-enterprise/df458c56-022b-4688-ab18-056c3fd776b4.png)
+![XPrem sanal ağında DC2 sanal makinesi ile sanal şirket içi sanal ağ test ortamının 3. aşaması.](../media/simulated-cross-premises-microsoft-365-enterprise/df458c56-022b-4688-ab18-056c3fd776b4.png)
   
-Sanal Azure karma bulut ortamınız artık test etmeye hazır.
+Sanal Azure hibrit bulut ortamınız artık test için hazır.
   
-Artık kurumsal kullanıma uygun uygulamanın ek özelliklerini [Microsoft 365 hazır mısınız](https://www.microsoft.com/microsoft-365/enterprise)?
+Artık [kurumsal Microsoft 365](https://www.microsoft.com/microsoft-365/enterprise) ek özellikleriyle deneme yapmaya hazırsınız.
   
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu ek Test Laboratuvarı Kılavuzlarını keşfedin:
+Bu ek Test Laboratuvarı Kılavuzları kümelerini keşfedin:
   
 - [Kimlik](m365-enterprise-test-lab-guides.md#identity)
 - [Mobil cihaz yönetimi](m365-enterprise-test-lab-guides.md#mobile-device-management)
@@ -217,8 +217,8 @@ Bu ek Test Laboratuvarı Kılavuzlarını keşfedin:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Microsoft 365 Test Laboratuvarı Kılavuzları için kılavuzlar](m365-enterprise-test-lab-guides.md)
+[Kurumsal Test Laboratuvarı Kılavuzları için Microsoft 365](m365-enterprise-test-lab-guides.md)
 
-[Microsoft 365 genel bakış için genel bakış](microsoft-365-overview.md)
+[Microsoft 365 Kurumsal’a genel bakış](microsoft-365-overview.md)
 
-[Microsoft 365 belgeleri için belgeler](/microsoft-365-enterprise/)
+[Kurumsal belgeler için Microsoft 365](/microsoft-365-enterprise/)

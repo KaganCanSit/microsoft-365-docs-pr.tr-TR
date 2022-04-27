@@ -15,18 +15,20 @@ ms.custom: nextgen
 ms.reviewer: pahuijbr, mkaminska
 manager: dansimp
 ms.technology: mde
-ms.date: 04/11/2022
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: cc2032c547cbd9c75a73da2f47f7baed21e7438e
-ms.sourcegitcommit: 5eff41a350a01e18d9cdd572c9d8ff99d6c9563a
+ms.openlocfilehash: 6822f736cae73d7d4654f8b4310e0e397cffa677
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64835941"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65077486"
 ---
 # <a name="manage-microsoft-defender-antivirus-updates-and-apply-baselines"></a>Microsoft Defender Virüsten Koruma güncelleştirmelerini yönetme ve temelleri uygulama
+
+> [!IMPORTANT]
+> Mart 2022 Microsoft Defender altyapı güncelleştirmesini (**1.1.19100.5**) uygulayan müşteriler yüksek kaynak kullanımıyla (CPU ve/veya bellek) karşılaşmış olabilir. Microsoft, önceki sürümde sunulan hataları gideren bir güncelleştirme (**1.1.19200.5**) yayımladı. Müşterilerin Virüsten Koruma Altyapısı'nın bu yeni altyapı derlemesine (**1.1.19200.5**) güncelleştirmeleri önerilir. Performans sorunlarının tamamen düzeltildiğinden emin olmak için, güncelleştirme uygulandıktan sonra makinelerin yeniden başlatılması önerilir. [Bkz. Aylık platform ve altyapı sürümleri](#monthly-platform-and-engine-versions) (bu makalede).
 
 **Şunlar için geçerlidir:**
 - [Uç Nokta için Microsoft Defender Planları 1 ve 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
@@ -37,8 +39,8 @@ ms.locfileid: "64835941"
 
 Microsoft Defender Virüsten Koruma güncel tutmak, cihazlarınızın yeni kötü amaçlı yazılımlara ve saldırı tekniklerine karşı korunmak için gereken en son teknolojiye ve özelliklere sahip olduğundan emin olmak için kritik öneme sahiptir. Microsoft Defender Virüsten Koruma [pasif modda](microsoft-defender-antivirus-compatibility.md) çalışıyor olsa bile virüsten korumanızı güncelleştirin. Microsoft Defender Virüsten Koruma güncel tutmayla ilgili iki tür güncelleştirme vardır:
 
-- Güvenlik bilgileri güncelleştirmeleri
-- Ürün güncelleştirmeleri
+- [Güvenlik bilgileri güncelleştirmeleri](#security-intelligence-updates)
+- [Ürün güncelleştirmeleri](#product-updates)
 
 > [!TIP]
 > En güncel altyapı, platform ve imza tarihini görmek [için Microsoft Defender Virüsten Koruma ve diğer Microsoft kötü amaçlı yazılımdan koruma yazılımlarına yönelik güvenlik bilgileri güncelleştirmelerini ziyaret edin](https://www.microsoft.com/en-us/wdsi/defenderupdates)
@@ -88,6 +90,29 @@ Tüm güncelleştirmelerimiz
 - Tümleştirme geliştirmeleri (Bulut, [Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-defender))
 <br/><br/>
 <details>
+<summary>Mart-2022 *UPDATE* (Platform: 4.18.2203.5 | Motor: 1.1.19200.5)</summary>
+
+*Mart 2022 Microsoft Defender altyapı güncelleştirmesini (**1.1.19100.5**) uygulayan müşteriler yüksek kaynak kullanımıyla (CPU ve/veya bellek) karşılaşmış olabilir. Microsoft, önceki sürümde sunulan hataları gideren bir güncelleştirme (**1.1.19200.5**) yayımladı. Müşterilerin Virüsten Koruma Altyapısı'nın bu yeni altyapı derlemesine (**1.1.19200.5**) güncelleştirmeleri önerilir. Performans sorunlarının tamamen düzeltildiğinden emin olmak için, güncelleştirme uygulandıktan sonra makinelerin yeniden başlatılması önerilir.*
+
+&ensp;Güvenlik bilgileri güncelleştirme sürümü: **1.363.817.0**<br/>
+&ensp;Yayın tarihi: **22 Nisan 2022**<br/>
+&ensp;Platform: **4.18.2203.5**<br/>
+&ensp;Motor: **1.1.19200.5**<br/>
+&ensp;Destek aşaması: **Güvenlik ve Kritik Güncelleştirmeler**<br/>
+
+Altyapı sürümü: 1.1.19200.5 <br/>
+Güvenlik bilgileri güncelleştirme sürümü: 1.363.817.0<br/>
+
+### <a name="whats-new"></a>Yenilikler
+
+- Önceki Mart 2022 Microsoft Defender altyapı güncelleştirmesi (1.1.19100.5) ile ilgili yüksek kaynak kullanımı (CPU ve/veya bellek) ile ilgili sorunları giderir
+
+### <a name="known-issues"></a>Bilinen Sorunlar
+
+Bilinen sorun yok
+
+<br/><br/>
+</details><details>
 <summary>Mart-2022 (Platform: 4.18.2203.5 | Motor: 1.1.19100.5)</summary>
 
 &ensp;Güvenlik bilgileri güncelleştirme sürümü: **1.361.1449.0**<br/>
@@ -191,7 +216,7 @@ Altyapı sürümü: 1.1.18800.4 Güvenlik bilgileri güncelleştirme sürümü: 
 
 - Exchange sunucularda belirli yoğun senaryoların CPU kullanım verimliliği iyileştirildi
 - Defender PowerShell modülünde Get-MpComputerStatus altına yeni cihaz denetimi durum alanları eklendi. Daha fazla bilgi için bkz. [Uç Nokta için Microsoft Defender Cihaz Denetimi Çıkarılabilir Depolama Access Control](device-control-removable-storage-access-control.md).
-- PowerShell ile ayarlandığında değerin kaldırılamadığı hata `SharedSignatureRoot` düzeltildi
+- PowerShell ile ayarlandığında değerin kaldırılamamasına neden olan `SharedSignatureRoot` hata düzeltildi
 - Uç Nokta için Microsoft Defender [kurcalama korumasının](prevent-changes-to-security-settings-with-tamper-protection.md) açık olduğunu belirtmesine rağmen kurcalama korumasının etkinleştirilemediği hata düzeltildi
 - Microsoft Defender Virüsten Koruma aracı için performans çözümleyicisine desteklenebilirlik ve hata düzeltmeleri eklendi. Daha fazla bilgi için bkz. [Microsoft Defender Virüsten Koruma için performans çözümleyicisi](tune-performance-defender-antivirus.md).   
    - için PowerShell ISE desteği eklendi `New-MpPerformanceRecording`
@@ -661,7 +686,7 @@ Bu güncelleştirme yüklendiğinde, cihazın en son platform sürümüne günce
 
 Platform ve altyapı güncelleştirmeleri aylık tempoda sağlanır. Tam olarak desteklenmek için en son platform güncelleştirmelerini güncel tutun. Destek yapımız dinamiktir ve en son platform sürümünün kullanılabilirliğine bağlı olarak iki aşamaya dönüşmektedir:
 
-- **Güvenlik ve Kritik Güncelleştirmeler hizmet aşaması** - En son platform sürümünü çalıştırırken, kötü amaçlı yazılımdan koruma platformunda hem Güvenlik hem de Kritik güncelleştirmeleri almaya uygun olacaksınız.
+- **Güvenlik ve Kritik Güncelleştirmeler hizmet aşaması** - En son platform sürümünü çalıştırırken kötü amaçlı yazılımdan koruma platformunda hem Güvenlik hem de Kritik güncelleştirmeleri almaya uygun olacaksınız.
 
 - **Teknik Destek (Yalnızca) aşaması** - Yeni bir platform sürümü yayımlandıktan sonra, eski sürümler (N-2) desteği yalnızca teknik desteğe indirgenecektir. N-2'den eski platform sürümleri artık desteklenmeyecektir.*
 

@@ -2,13 +2,13 @@
 title: Bu güvenlik önerileri kullanıcılarınızı nasıl etkiler?
 f1.keywords:
 - NOCSH
-ms.author: sharik
-author: SKjerland
+ms.author: v-kcirillo
+author: cirilk
 manager: scotv
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection:
 - Adm_O365
 - M365-subscription-management
@@ -23,68 +23,68 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Bu güvenlik önerilerinin kullanıcılarınızı Microsoft 365 İş Ekstra ve verilerinizi nasıl etkilediğini öğrenin.
-ms.openlocfilehash: f1c327badefcd7f5d7f1728489a8388e7e7925e8
-ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
+description: Microsoft 365 İş Ekstra için bu güvenlik önerilerinin kullanıcılarınızı nasıl etkilediğini ve verilerinizi nasıl koruyacağınızı öğrenin.
+ms.openlocfilehash: 202df778e74fb0f14a92b572df977088f8319595
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "64635163"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65099971"
 ---
 # <a name="how-these-security-recommendations-affect-your-users"></a>Bu güvenlik önerileri kullanıcılarınızı nasıl etkiler?
 
-Bu çözümde yer alan Microsoft 365 için güvenlik önerileri, bilgisayar korsanlarının ortamınıza erişim kazanmasını çok daha zorlaştırır. Bu sorunun en iyi şekilde karşılandır olması, kullanıcılarının bu daha güvenli ortamda nasıl çalışacaklarını biliyor olması gerekir. Biraz daha sabrın gerekli olduğunu anlıyoruz, ancak organizasyonlarınızı korumanız değerlidir.
+Bu çözümdeki Microsoft 365 için güvenlik önerileri, bilgisayar korsanlarının ortamınıza erişmesini çok daha zor hale getirir. Bunun dezavantajı, kullanıcılarınızın bu daha güvenli ortamda nasıl çalışılacağının farkında olması gerekir. Biraz daha sabır gerektiğinin farkındayız, ancak kuruluşunuzun korunmasına değer.
 
-![iPhone, Android cihaz, Mac, uygulama ve Windows 10, paylaşım ve önemli personel için aşağıdaki önemli noktaların toplamını alan çizim.](../media/M365-democracy-Users_900px.png)
+![iPhone'lar, Android cihazlar, Mac'ler, Windows 10, paylaşım ve önemli personel için aşağıdan önemli noktaları toplayan çizim.](../media/M365-democracy-Users_900px.png)
 
 ## <a name="use-secure-email-practices"></a>Güvenli e-posta uygulamalarını kullanma
 
-Tüm kullanıcıların e-postalarını güvenli tutmaya yardımcı olmak için bu e-posta uygulamalarından haberdar olması ve bu uygulamaları kullanıyor olması gerekir:
+Tüm kullanıcılar, e-postalarının güvenli kalmasına yardımcı olmak için bu e-posta uygulamalarının farkında olmalı ve kullanmalıdır:
 
-- Doğrulayıcı uygulamasıyla çok faktörlü kimlik doğrulamasını kullanmak için e-postayı ayarlayın.
+- Kimlik doğrulayıcı uygulamasıyla çok faktörlü kimlik doğrulamasını kullanmak için e-postayı ayarlayın.
 
-- Yasal e-postaları doğrulayın ve gelişmiş kimlik avı koruması (kimlik avı) güvenlik ipuçlarına Office 365 için Defender.
+- Geçerli e-postaları doğrulayın ve gelişmiş kimlik avı korumasından (Office 365 için Defender) güvenlik ipuçları arayın.
 
-- Yalnızca güvenli bağlantıları ve ekleri, Bağlantıları ve Ekleri Kasa doğrulandığında Kasa açın.
+- Kasa Bağlantıları ve Kasa Ekleri tarafından doğrulanan yalnızca güvenli bağlantıları ve ekleri açın.
 
-Çok faktörlü kimlik [doğrulaması ve kimlik avı ve](m365bp-multifactor-authentication.md) diğer [saldırılar hakkında daha fazla bilgi öğrenin](m365-campaigns-phishing-and-attacks.md).
+[Çok faktörlü kimlik doğrulaması](m365bp-multifactor-authentication.md), [kimlik avı ve diğer saldırılar](avoid-phishing-and-attacks.md) hakkında daha fazla bilgi edinin.
 
-Size [ve ekibinizin](m365-campaigns-protect-campaign-infographic.md) üyelerine ipuçları olan bir bilgi görseli indirin.
+Siz ve ekibinizin üyeleri için ipuçları içeren bir [bilgi grafiği](m365-campaigns-protect-campaign-infographic.md) indirin.
 
-## <a name="set-up-iphones-and-android-devices"></a>iPhone ve Android cihazlarını ayarlama
+## <a name="set-up-iphones-and-android-devices"></a>iPhone ve Android cihazları ayarlama
 
-Ortamınıza eklerken iPhone ve Android cihazlarını ayarlamanın güvenli [bir şekilde çalışması için tüm kullanıcıların](../business/set-up-mobile-devices.md) birkaç dakikası gerekir:
+Ortamınıza eklediğiniz tüm kullanıcıların güvenli bir şekilde çalışması için [iPhone'ları ve Android cihazları ayarlamaları](../business/set-up-mobile-devices.md) birkaç dakika sürer:
 
-- Cihazları, doğrulayıcı uygulamasıyla çok faktörlü kimlik doğrulamasını kullanmak üzere ayarlayın.
+- Cihazları kimlik doğrulayıcı uygulamasıyla çok faktörlü kimlik doğrulamasını kullanacak şekilde ayarlayın.
 
-- Outlook Mobile, Word, OneDrive ve uygulama mağazasından Microsoft uygulamaları da dahil olmak üzere Microsoft mobil uygulamalarını kullanın. iPhone ve Android cihazlarda bulunan yerel posta uygulamaları destek kapsamında değildir. 
+- Outlook Mobile, Word, OneDrive ve uygulama mağazasındaki diğer Microsoft uygulamaları dahil olmak üzere Microsoft mobil uygulamalarını kullanın. iPhone'larda ve Android cihazlarda bulunan yerel posta uygulamaları desteklenmez. 
 
-- Kullanıcıların cihaz kilidini açması için PIN gerektir.
+- Kullanıcıların cihazlarının kilidini açması için bir PIN iste.
 
-Bunları ayardikten sonra, kullanıcılarınıza posta da dahil olmak üzere bu cihazlardan kuruluş verilerinize erişirken doğrulayıcı uygulamayı kullanmaları istenir.
+Bunları ayarladıktan sonra, kullanıcılarınızdan bu cihazlardaki posta da dahil olmak üzere kuruluş verilerinize erişirken kimlik doğrulayıcı uygulamasını kullanmaları istenir.
 
-## <a name="keep-byod-macs-and-windows-10-pcs-fresh"></a>BYOD Mac'leri ve Windows 10 bilgisayarları yeni tutma
+## <a name="keep-byod-macs-and-windows-10-pcs-fresh"></a>KCG Mac'leri ve Windows 10 bilgisayarları güncel tutun
 
-Ayrıca kullanıcıların birincil iş cihazlarını güncel tutmaları da önemlidir:
+Kullanıcıların birincil iş cihazlarını güncel tutmaları da önemlidir:
 
-- Masaüstü uygulamalarına en son Office yükleyin ve istendiğinde bu güncelleştirmeleri güncel olarak kullanın.
+- Office masaüstü uygulamalarının en son sürümlerini yükleyin ve istendiğinde güncelleştirmeleri güncel tutun.
 
-- İşletim sistemi güncelleştirmeleri, örneğin işletim sistemi güncelleştirmelerini Windows olun.
+- Windows güncelleştirmeleri gibi işletim sistemi güncelleştirmelerinden haberdar olun.
 
-Mac [ve cihazları Windows 10 için](m365bp-protect-pcs-macs.md), temel güvenlik özelliklerinin etkinleştirildiğinden emin olmak kullanıcıların sorumluluğundadır.
+[Yönetilmeyen Windows 10 ve Mac cihazlarda](m365bp-protect-pcs-macs.md), kullanıcılar temel güvenlik özelliklerinin etkinleştirildiğinden emin olmakla sorumluluğa sahiptir.
 
-**TEKMİ veya Mac cihazlarda temel Windows 10 özelliklerini etkinleştirme**
+**KCG Windows 10 ve Mac cihazlarda temel güvenlik özelliklerini etkinleştirme**
 
 |**Windows 10**|**Mac**|
 |:-----|:------|
-|BitLocker cihaz korumasını açma<p><p> Windows Defender açık kalmasını sağlar <p>Güvenlik Duvarı'Windows açma| FileVault'u kullanarak Mac diskini şifreleme <p><p>Güvenilir bir virüsten koruma yazılımı kullanma <p>Güvenlik duvarı korumasını açma|
+|BitLocker cihaz korumasını açma<p><p> Windows Defender açık kaldığından emin olun <p>Windows Güvenlik Duvarı'nı açma| Mac diskini şifrelemek için FileVault kullanma <p><p>Güvenilir bir virüsten koruma yazılımı kullanma <p>Güvenlik duvarı korumasını açma|
 
-Bu öneriler hakkında daha fazla bilgi edinmek için, bkz [. Hesaplarınızı ve cihazlarınızı bilgisayar korsanlarından ve kötü amaçlı yazılımdan koruma](https://support.office.com/article/Protect-your-account-and-devices-from-hackers-and-malware-066d6216-a56b-4f90-9af3-b3a1e9a327d6#ID0EAABAAA=Windows_10).
+Bu öneriler hakkında daha fazla bilgi edinmek için bkz. [Hesabınızı ve cihazlarınızı korsanlara ve kötü amaçlı yazılımlara karşı koruma](https://support.office.com/article/Protect-your-account-and-devices-from-hackers-and-malware-066d6216-a56b-4f90-9af3-b3a1e9a327d6#ID0EAABAAA=Windows_10).
 
 ## <a name="collaborate-using-microsoft-teams-onedrive-sharepoint-online-and-other-tools"></a>Microsoft Teams, OneDrive, SharePoint Online ve diğer araçları kullanarak işbirliği yapma
 
-Kullanıcılarınız, kuruluş dosyalarınızı diğer yerlerde paylaşmak ve depolamak cazip Microsoft 365. Microsoft 365 işbirliğini ve güvenli bir şekilde paylaşmayı mümkün olduğunca kolaylaştırır. Dosya [ve videoları dosyanın](share-files-and-videos.md) içinde Microsoft Teams, OneDrive, Stream'den ve hatta dosyanın içinde paylaşabilirsiniz. Bu araçların içinde paylaşmanız, verilerinizin sızdır ızdıramalarını korumanıza yardımcı olur. Kuruluş dışında paylaşımı önlemek için hassas verilere ek koruma abilirsiniz.
+Kullanıcılarınız kuruluş dosyalarınızı Microsoft 365 dışındaki yerlerde paylaşmak ve depolamak isteyebilir. Microsoft 365 işbirliği ve güvenli bir şekilde paylaşmanızı mümkün olduğunca kolaylaştırır. [Dosyaları ve videoları](share-files-and-videos.md) doğrudan Microsoft Teams, OneDrive, Stream ve hatta bir dosyanın içinden paylaşabilirsiniz. Bu araçların içinden paylaşım, verilerinizin sızmasını engellemeye yardımcı olur. Kuruluşunuzun dışında paylaşılmasını önlemek için hassas verilere ek koruma ekleyebilirsiniz.
 
-## <a name="set-up-managed-windows-10-devices"></a>Yönetilen cihazları Windows 10 ayarlama
+## <a name="set-up-managed-windows-10-devices"></a>Yönetilen Windows 10 cihazlarını ayarlama
 
-En önemli personel üyelerinizin, yeni edinilen ve yönetmek Windows 10 cihazları kullanmalarını öneririz. Bu cihazları nasıl yönetecek ve [güvenli hale nasıl yöneteceklerini göstereceğiz](../business/set-up-windows-devices.md?toc=/microsoft-365/campaigns/toc.json). Bu, bilgisayar korsanları için en yüksek değerli hedef olan personel üyelerinin en iyi korumayı almalarını sağlar.
+En önemli personel üyelerinizin yönettiğiniz yeni Windows 10 cihazları kullanmasını öneririz. [Size bu cihazları yönetmeyi ve güvenli hale](../business/set-up-windows-devices.md?toc=/microsoft-365/campaigns/toc.json) nasıl sağlayacağınızı göstereceğiz. Bu, korsanların en yüksek değer hedefi olan personel üyelerinin en fazla korumayı almasını sağlar.

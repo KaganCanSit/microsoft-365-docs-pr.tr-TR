@@ -18,12 +18,12 @@ ms.collection:
 - M365-security-compliance
 description: Uyumluluk merkezine yeni çözümler eklemek, mevcut özellikleri geri bildiriminize göre güncelleştirmek veya yeni ve güncelleştirilmiş belgeler kullanıma sunarken Microsoft 365 sürekli değişen uyumluluk ortamını takip etme konusunda size yardımcı olur. Bu ay neler yaptığımıza bakın.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: b5f231abfbfe943f0b2ab0cf33a14267f0940820
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: b79015ce0ca55bf9a74b6acac8f38f09b9e5e984
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64972485"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65100555"
 ---
 # <a name="whats-new-in-microsoft-purview"></a>Microsoft Purview'daki yenilikler
 
@@ -61,12 +61,64 @@ Günümüzün merkezi olmayan, veri açısından zengin çalışma alanının zo
 | Microsoft 365 Bilgi Engelleri | Microsoft Purview Bilgi Engelleri | Bilgi Engelleri, iç bilgileri korumak için kuruluşunuz içindeki belirli kişiler arasındaki iletişimi ve işbirliğini kısıtlayan bir çözümdür. Daha fazla bilgi için bkz. [Microsoft Purview Bilgi Engelleri](information-barriers-solution-overview.md). |
 | Microsoft Bilgi Koruması | Microsoft Purview Information Protection | Bilgi koruması, hassas bilgileri nerede yaşarsa yaşasın veya nereye giderse gitsin keşfetmenize, sınıflandırmanıza ve korumanıza yardımcı olur. Daha fazla bilgi için bkz. [Microsoft Purview Information Protection](information-protection.md). |
 | Microsoft Bilgi İdaresi | Microsoft Purview Veri Yaşam Döngüsü Yönetimi | Veri yaşam döngüsü yönetimi, saklamanız ve silmeniz gereken içeriği saklamanız için araçlar ve özellikler sağlar. Daha fazla bilgi için bkz. [Microsoft Purview Veri Yaşam Döngüsü Yönetimi](data-lifecycle-management.md). |
-| insider Risk Management'ı Microsoft 365 | Microsoft Purview Insider Risk Management | Insider risk yönetimi, riskli kullanıcı etkinliklerini hızla tanımlamanıza, önceliklendirmenize ve harekete geçirmenize yardımcı olmak için hizmetin ve üçüncü taraf göstergelerin tamamını kullanır. Daha fazla bilgi için bkz. [Microsoft Purview Insider Risk Management](insider-risk-management.md). |
+| insider Risk Management'ı Microsoft 365 | Microsoft Purview İçeriden Risk Yönetimi | Insider risk yönetimi, riskli kullanıcı etkinliklerini hızla tanımlamanıza, önceliklendirmenize ve harekete geçirmenize yardımcı olmak için hizmetin ve üçüncü taraf göstergelerin tamamını kullanır. Daha fazla bilgi için bkz. [Microsoft Purview Insider Risk Management](insider-risk-management.md). |
 | Office 365 İleti Şifrelemesi | Microsoft Purview İleti Şifrelemesi | İleti Şifreleme ile kuruluşunuz, kuruluşunuzun içindeki ve dışındaki kişiler arasında şifreli e-posta iletileri gönderebilir ve alabilir. Daha fazla bilgi için bkz. [Microsoft Purview İleti Şifrelemesi](ome.md). |
 | Microsoft 365'da Ayrıcalıklı Erişim Yönetimi | Microsoft Purview Privileged Access Management | Privileged Access Management, kuruluşunuzun ihlallere karşı korunmasına yardımcı olur ve hassas verilere veya kritik yapılandırma ayarlarına erişimi sınırlayarak uyumluluk en iyi yöntemlerini karşılamaya yardımcı olur. Daha fazla bilgi için bkz. [Microsoft Purview Privileged Access Management](privileged-access-management-solution-overview.md). |
 | Microsoft veri bağlayıcıları | Microsoft Purview veri bağlayıcıları | Microsoft 365, yöneticilerin Microsoft dışı üçüncü taraf verileri sosyal medya platformlarından, anlık ileti platformlarından ve belge işbirliği platformlarından Microsoft 365 kuruluşunuzdaki posta kutularına aktarmak ve arşivlemek için veri bağlayıcılarını kullanmasına olanak tanır. Daha fazla bilgi için bkz. [Microsoft Purview veri bağlayıcıları](compliance-extensibility.md). |
 | Microsoft 365 Gelişmiş eKeşif <br><br> Microsoft 365 Core eKeşif | Microsoft Purview eKeşif (Premium) <br><br> Microsoft Purview eKeşif (Standart) | Elektronik bulma veya eBulma, yasal davalarda kanıt olarak kullanılabilecek elektronik bilgileri tanımlama ve teslim etme işlemidir. Daha fazla bilgi için bkz. [Microsoft Purview eKeşif (Premium)](overview-ediscovery-20.md) ve [Microsoft Purview eKeşif (Standart)](get-started-core-ediscovery.md). |
 | Microsoft 365 uyumluluk merkezi | Microsoft Purview uyumluluk portalı | Microsoft 365 E5 Uyumluluk paketindeki çözümlere ve çözüm kataloğuna erişmek için yönetici portalı. Daha fazla bilgi için bkz. [Microsoft Purview uyumluluk portalı](microsoft-365-compliance-center.md). |
+
+## <a name="march-2022"></a>Mart 2022
+
+### <a name="communication-compliance"></a>İletişim uyumluluğu
+
+- [İletişim uyumluluk uyarılarını araştırma ve düzeltme](communication-compliance-investigate-remediate.md) - kullanım dışı ek açıklama görünümü için rehber kaldırıldı.
+
+### <a name="compliance-manager"></a>Uyumluluk Yöneticisi
+
+- [Uyumluluk Yöneticisi ile Kullanmaya başlayın](compliance-manager-setup.md) [geliştirme eylemleriyle çalışma](compliance-manager-improvement-actions.md) - otomatik olarak izlenebilen ve test edilebilen daha fazla iyileştirme eylemi hakkında bilgi eklendi ("sürekli uyumluluk değerlendirmesi"); bu, bir eylemin test durumunu başka bir eyleminkine aktarmaya yönelik yeni yetenekleri içerir.
+
+### <a name="data-classification"></a>Veri Sınıflandırma
+
+- [İçerik Gezgini ile Başlarken](data-classification-content-explorer.md) - hizmet açıklamalarına işaret eden lisanslama bölümü eklenmiş Teams kılavuz.
+
+### <a name="data-lifecycle-management-and-records-management"></a>Veri yaşam döngüsü yönetimi ve kayıt yönetimi
+
+- [Yammer için bekletme ilkeleri](create-retention-policies.md#retention-policy-for-yammer-locations) genel kullanıma sunuldu (GA).
+- Şu anda önizleme aşamasında olan paylaşılan kanallar için destek. Teams kanalı ileti konumu için bir bekletme ilkesi yapılandırdığınızda, paylaşılan kanallar bekletme ayarlarını üst ekiplerinden devralır.
+- [İçerik eğilimi için kiracı başına sınırlar](retention-limits.md#maximum-number-of-items-for-disposition).
+
+### <a name="data-loss-prevention"></a>Veri Kaybı Önleme
+
+- [Veri kaybı önleme ve Microsoft Teams](dlp-microsoft-teams.md) - Teams Kanalları paylaş içeriğinin genel önizlemesi.
+- [Microsoft Uyumluluk Uzantısı ile Kullanmaya başlayın](dlp-chrome-get-started.md) - kısıtlı uygulama gruplarının genel önizlemesi, kayıt defteri anahtarı yönergelerini kaldırın, yapılandırma artık varsayılan olarak etkindir.
+- Sınırlı uygulama gruplarının genel önizlemesi için yeni [olan uç nokta veri kaybı önleme ayarlarını yapılandırın](dlp-configure-endpoint-settings.md).
+- [Veri kaybı önleme ilkesi başvurusu](dlp-policy-reference.md) - kısıtlı uygulama gruplarının genel önizlemesi için güncelleştirildi.
+- [Power BI için veri kaybı önleme ile Kullanmaya başlayın](dlp-powerbi-get-started.md) - genel önizleme için yeni.
+
+### <a name="insider-risk-management"></a>İçeriden risk yönetimi
+
+- [insider risk yönetimiyle Kullanmaya başlayın](insider-risk-management-configure.md) - Önerilen eylemler kılavuzu için yeni görevler eklendi.
+- [insider risk yönetimi ayarlarıyla Kullanmaya başlayın](insider-risk-management-settings.md) - bildirim ve e-posta uyarıları özellikleri için yeni güncelleştirmeler, analiz bildirimleri için yeni güncelleştirmeler.
+
+### <a name="microsoft-information-protection"></a>Microsoft Bilgi Koruması
+
+- [Çift bayt karakter kümesi sürüm notları desteği](mip-dbcs-relnotes.md) - macOS için rehberlik eklendi.
+
+### <a name="microsoft-priva"></a>Microsoft Priva
+
+- [Priva ayarlarını yapılandırma](/privacy/priva/priva-settings) - konu hakları istekleri için veri saklama süreleri hakkındaki bilgileri netleştiren güncelleştirildi; konu hakları istekleri için veri gözden geçirme etiketlerini yönetme ve uygulama hakkında ayrıntılar eklendi.
+- [Konu hakları isteği oluşturma](/privacy/priva/subject-rights-requests-create) - aramaları iyileştirme ve koşulları ve öznitelikleri seçme hakkında ayrıntılar eklendi; kullanıcıların aramalarında SharePoint öğelerin tüm sürümlerini seçmesine olanak tanıyan yeni işlevler hakkında bilgi eklendi (SharePoint öğelerinin yalnızca geçerli sürümünü döndüren varsayılan ayara karşılık).
+- [Konu hakları isteği için verileri gözden geçirme](/privacy/priva/subject-rights-requests-data-review) - 3. adımda, verileri ekleme/dışlama olarak işaretleme, yeniden işleme uygulamak için dosyalara açıklama ekleme, etiket uygulama ve not girme gibi verileri gözden geçirme aşamasına ayrıntılar eklendi.
+- [Raporlar oluşturma ve bir konu hakları isteğini yerine getirme](/privacy/priva/subject-rights-requests-reports) - raporların nasıl anlaşılıp anlaşılmadığına ilişkin ayrıntılar eklendi; dışarı aktarma paketi oluşturulduğunda ve paketin içeriğiyle nasıl çalışıldığı netleştirildiğinde; SRR verileri ve raporları için denetim günlükleri, etiketli dosya raporları ve saklama süreleri hakkında bilgi eklendi.
+
+### <a name="sensitivity-labels"></a>Duyarlılık etiketleri
+
+- [Teams için duyarlılık etiketleri](sensitivity-labels-teams-groups-sites.md):
+  - Şu anda önizleme aşamasında olan paylaşılan kanallar için destek. Bir ekibin paylaşılan kanalları varsa, duyarlılık etiketi ayarlarını üst ekibinden otomatik olarak devralır ve bu etiket kaldırılamaz veya başka bir etiketle değiştirilemez.
+  - Daha önce [Teams Graph API'leri ve PowerShell cmdlet'leri ile desteklenmediği]( /microsoftteams/sensitivity-labels#limitations) listelenen şablonlar için destek.  
+- Word, Excel ve Web üzerinde PowerPoint denetlemek için gerekçe metni artık tamamen dağıtılır.
+- Word, Excel ve Web üzerinde PowerPoint için var olan belgelere varsayılan bir etiket uygulama artık tamamen kullanıma hazır.
 
 ## <a name="february-2022"></a>Şubat 2022
 
@@ -109,7 +161,7 @@ Günümüzün merkezi olmayan, veri açısından zengin çalışma alanının zo
 
 - Artık önizleme aşamasında olan yeni [rol grupları ve rolleri](get-started-with-sensitivity-labels.md#permissions-required-to-create-and-manage-sensitivity-labels) için destek.
 - Otomatik etiketleme ilkeleri için yeni [izleme özellikleri](apply-sensitivity-label-automatically.md#monitoring-your-auto-labeling-policy) .
-- Şimdi kullanıma sunuldu: Geçerli Kanaldaki (Önizleme) mevcut belgeler için varsayılan etiket ve Web üzerinde Office için gerekçe metni.
+- Şimdi kullanıma sunulacak: mevcut belgeler için varsayılan etiket ve Web üzerinde Office için gerekçe metni.
 - Temmuz Semi-Annual Enterprise Kanalı için sürüm 2202+ ile duyuruldu: Outlook için birlikte yazma ve denetim.
 
 ## <a name="december-2021"></a>Aralık 2021
@@ -152,7 +204,7 @@ Yeni içerik güncelleştirmeleri [Microsoft Purview Uyumluluk Yöneticisi'ndeki
 Cihaz ekleme için aşağıdaki makaleler eklendi:
 
 - [macOS cihazlarının Microsoft 365'e katılımına genel bakış (önizleme)](device-onboarding-macos-overview.md)
-- [Intune kullanarak macOS cihazlarını Microsoft Purview çözümlerine ekleme ve çıkarma (önizleme)](device-onboarding-offboarding-macos-intune.md)
+- [Intune (önizleme) kullanarak macOS cihazlarını Microsoft Purview çözümlerine ekleme ve çıkarma](device-onboarding-offboarding-macos-intune.md)
 - [macOS cihazlarının Uç Nokta için Microsoft Defender müşterileri için Intune kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması (önizleme)](device-onboarding-offboarding-macos-intune-mde.md)
 - [JAMF Pro (önizleme) kullanarak macOS cihazlarını Microsoft Purview çözümlerine ekleme ve çıkarma](device-onboarding-offboarding-macos-jamfpro.md)
 - [macOS cihazlarının Uç Nokta için Microsoft Defender müşterileri için JAMF Pro kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması (önizleme)](device-onboarding-offboarding-macos-jamfpro-mde.md)
@@ -206,7 +258,7 @@ Aşağıdaki yeni makaleler eklendi:
 - [Veri Kaybı Önleme ilkesi ipuçları başvurusu](dlp-policy-tips-reference.md) macOS desteği ve gelişmiş sınıflandırma için güncelleştirildi.
 - [macOS cihazlarını Microsoft 365(önizleme) içine ekleme](device-onboarding-macos-overview.md), macOS desteği ve gelişmiş sınıflandırma için güncelleştirildi.
 - Cihaz ekleme için aşağıdaki yeni sayfalar eklendi:
-  - [Intune kullanarak macOS cihazlarını Microsoft Purview çözümlerine ekleme ve çıkarma (önizleme)](device-onboarding-offboarding-macos-intune.md)
+  - [Intune (önizleme) kullanarak macOS cihazlarını Microsoft Purview çözümlerine ekleme ve çıkarma](device-onboarding-offboarding-macos-intune.md)
   - [macOS cihazlarının Uç Nokta için Microsoft Defender müşterileri için Intune kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması (önizleme)](device-onboarding-offboarding-macos-intune-mde.md)
   - [JAMF Pro (önizleme) kullanarak macOS cihazlarını Microsoft Purview çözümlerine ekleme ve çıkarma](device-onboarding-offboarding-macos-jamfpro.md)
   - [macOS cihazlarının Uç Nokta için Microsoft Defender müşterileri için JAMF Pro kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması (önizleme)](device-onboarding-offboarding-macos-jamfpro-mde.md)

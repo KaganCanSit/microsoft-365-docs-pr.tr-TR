@@ -1,7 +1,7 @@
 ---
-title: Microsoft 365 Defender'te gelişmiş arama sorgusu dilini Microsoft 365 Defender
-description: İlk tehdit arama sorgunuz oluşturun ve yaygın kullanılan işleçler ve gelişmiş arama sorgusu dilinin diğer yönleri hakkında bilgi öğrenin
-keywords: gelişmiş av, tehdit avı, siber tehdit avı, Microsoft 365 Defender, Microsoft 365, m365, arama, sorgu, dil, öğrenme, ilk sorgu, telemetri, olaylar, telemetri, özel algılamalar, şema, kusto, işleçler, veri türleri, powershell indirme, sorgu örneği
+title: Microsoft 365 Defender'de gelişmiş tehdit avcılığı sorgu dilini öğrenin
+description: İlk tehdit avcılığı sorgunuzu oluşturun ve yaygın işleçler ve gelişmiş tehdit avcılığı sorgu dilinin diğer yönleri hakkında bilgi edinin
+keywords: gelişmiş tehdit avcılığı, tehdit avcılığı, siber tehdit avcılığı, Microsoft 365 Defender, microsoft 365, m365, arama, sorgu, dil, learn, ilk sorgu, telemetri, olaylar, telemetri, özel algılamalar, şema, kusto, operatörler, veri türleri, powershell indirme, sorgu örneği
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.prod: m365-security
@@ -20,33 +20,33 @@ ms.collection:
 - m365initiative-m365-defender
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: 7092b4ed30400fb559751d4d939801c1982407f8
-ms.sourcegitcommit: 400ef9ac34247978e3de7ecc0b376c4abb6c99d8
+ms.openlocfilehash: 5e474505eecca0c42aa919b42364a1ad54c27e17
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "63010885"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65094767"
 ---
-# <a name="learn-the-advanced-hunting-query-language"></a>Gelişmiş arama sorgusu dilini öğrenin
+# <a name="learn-the-advanced-hunting-query-language"></a>Gelişmiş tehdit avcılığı sorgu dilini öğrenme
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 - Microsoft 365 Defender
 - Uç Nokta için Microsoft Defender
 
-Gelişmiş av, [Kusto sorgu diline dayalıdır](/azure/kusto/query/). Özel bir şemada bilgi bulunan sorguları oluşturmak için Kusto işleçlerini ve deyimlerini [kullanabilirsiniz](advanced-hunting-schema-tables.md). 
+Gelişmiş avcılık[, Kusto sorgu dilini](/azure/kusto/query/) temel alır. Kusto işleçlerini ve deyimlerini kullanarak özel bir [şemadaki](advanced-hunting-schema-tables.md) bilgileri bu alan sorgular oluşturabilirsiniz. 
 
-Bu kısa videoyu izleyin ve kullanışlı Bire bir sorgu diliyle ilgili temel bilgileri öğrenin.
+Kullanışlı Kusto sorgu dili temel bilgilerini öğrenmek için bu kısa videoyu izleyin.
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRwfJ]
  
-Bu kavramları daha iyi anlamak için ilk sorguyu çalıştırın.
+Bu kavramları daha iyi anlamak için ilk sorgunuzu çalıştırın.
 
-## <a name="try-your-first-query"></a>İlk sorguyu deneme
+## <a name="try-your-first-query"></a>İlk sorgunuzu deneyin
 
-Microsoft 365 Defender sorguyu çalıştırmak için **Atla'ya** gidin. Aşağıdaki örneği kullanın: 
+Microsoft 365 Defender portalında, ilk sorgunuzu çalıştırmak için **Avcılık'a** gidin. Aşağıdaki örneği kullanın: 
 
 ```kusto
 // Finds PowerShell execution events that could involve a download
@@ -68,29 +68,29 @@ FileName, ProcessCommandLine, RemoteIP, RemoteUrl, RemotePort, RemoteIPType
 | top 100 by Timestamp
 ```
 
-**[Gelişmiş avda bu sorguyu çalıştır](https://security.microsoft.com/hunting?query=H4sIAAAAAAAEAI2TW0sCURSF93PQfxh8Moisp956yYIgQtLoMaYczJpbzkkTpN_et_dcdPQkcpjbmrXXWftyetKTQG5lKqmMpeB9IJksJJKZDOWdZ8wKeP5wvcm3OLgZbMXmXCmIxjnYIfcAVgYvRi8w3TnfsXEDGAG47pCCZXyP5ViO4KeNbt-Up-hEuJmB6lvButnY8XSL-cDl0M2I-GwxVX8Fe2H5zMzHiKjEVB0eEsnBrszfBIWuXOLrxCJ7VqEBfM3DWUYTkNKrv1p5y3X0jwetemzOQ_NSVuuXZ1c6aNTKRaN8VvWhY9n7OS-o6J5r7mYeQypdEKc1m1qfiqpjCSuspsDntt2J61bEvTlXls5AgQfFl5bHM_gr_BhO2RF1rztoBv2tWahrso_TtzkL93KGMGZVr2pe7eWR-xeZl91f_113UOsx3nDR4Y9j5R6kaCq8ajr_YWfFeedsd27L7it-Z6dAZyxsJq1d9-2ZOSzK3y2NVd8-zUPjtZaJnYsIH4Md7AmdeAcd2Cl1XoURc5PzXlfU8U9P54WcswL6t_TW9Q__qX-xygQAAA&runQuery=true&timeRangeId=week)**
+**[Bu sorguyu gelişmiş avcılıkta çalıştırın](https://security.microsoft.com/hunting?query=H4sIAAAAAAAEAI2TW0sCURSF93PQfxh8Moisp956yYIgQtLoMaYczJpbzkkTpN_et_dcdPQkcpjbmrXXWftyetKTQG5lKqmMpeB9IJksJJKZDOWdZ8wKeP5wvcm3OLgZbMXmXCmIxjnYIfcAVgYvRi8w3TnfsXEDGAG47pCCZXyP5ViO4KeNbt-Up-hEuJmB6lvButnY8XSL-cDl0M2I-GwxVX8Fe2H5zMzHiKjEVB0eEsnBrszfBIWuXOLrxCJ7VqEBfM3DWUYTkNKrv1p5y3X0jwetemzOQ_NSVuuXZ1c6aNTKRaN8VvWhY9n7OS-o6J5r7mYeQypdEKc1m1qfiqpjCSuspsDntt2J61bEvTlXls5AgQfFl5bHM_gr_BhO2RF1rztoBv2tWahrso_TtzkL93KGMGZVr2pe7eWR-xeZl91f_113UOsx3nDR4Y9j5R6kaCq8ajr_YWfFeedsd27L7it-Z6dAZyxsJq1d9-2ZOSzK3y2NVd8-zUPjtZaJnYsIH4Md7AmdeAcd2Cl1XoURc5PzXlfU8U9P54WcswL6t_TW9Q__qX-xygQAAA&runQuery=true&timeRangeId=week)**
 
-### <a name="describe-the-query-and-specify-the-tables-to-search"></a>Sorguyu açıklar ve aranan tabloları belirtir
-Ne için olduğunu açıklamak için sorgunun başına kısa bir açıklama eklenmiştir. Bu açıklama, daha sonra sorguyu kaydedecek ve sorguyu organizasyonunu diğerleriyle paylaşacağız. 
+### <a name="describe-the-query-and-specify-the-tables-to-search"></a>Sorguyu açıklama ve aranacak tabloları belirtme
+Sorgunun ne için olduğunu açıklamak için sorgunun başına kısa bir açıklama eklenmiştir. Bu açıklama, daha sonra sorguyu kaydetmeye ve kuruluşunuzdaki diğer kişilerle paylaşmaya karar vermenize yardımcı olur. 
 
 ```kusto
 // Finds PowerShell execution events that could involve a download
 ```
 
-Sorgunun kendisi normalde bir tablo adı ile başlar ve bunu bir boru () ile başlatan birkaç öğe devam eder`|`. Bu örnekte, iki tabloyu bir bütün olarak oluşturarak  `DeviceProcessEvents` `DeviceNetworkEvents`ve ve gerektiğinde boruları ekerek başlayacağız.
+Sorgunun kendisi genellikle bir tablo adıyla başlar ve ardından bir kanalla (`|` ile başlayan birkaç öğe gösterilir). Bu örnekte, iki tablo  `DeviceProcessEvents` ve öğesinin birleşimini oluşturarak başlayacağız ve `DeviceNetworkEvents`gerektiğinde kanallı öğeler ekleyeceğiz.
 
 ```kusto
 union DeviceProcessEvents, DeviceNetworkEvents
 ```
 ### <a name="set-the-time-range"></a>Zaman aralığını ayarlama
-İlk borusu yapılan öğe, önceki yedi gün kapsamındaki bir zaman filtresidir. Zaman aralığını sınırlamak, sorguların iyi performans gösterip yönetilebilir sonuçlar elde  etmelerine ve zaman çıkmamalarına yardımcı olur.
+İlk kanallı öğe, kapsamı önceki yedi güne göre belirlenmiş bir zaman filtresidir. Zaman aralığını sınırlamak sorguların iyi performans göstermesini, yönetilebilir sonuçlar döndürmesini ve zaman aşımına neden olmamasını sağlamaya yardımcı olur.
 
 ```kusto
 | where Timestamp > ago(7d)
 ```
 
 ### <a name="check-specific-processes"></a>Belirli işlemleri denetleme
-Zaman aralığı hemen arkasından PowerShell uygulamasını temsil eden işlem dosyası adlarını arayabilir.
+Zaman aralığı hemen ardından PowerShell uygulamasını temsil eden işlem dosyası adları araması yapılır.
 
 ```kusto
 // Pivoting on PowerShell processes
@@ -98,7 +98,7 @@ Zaman aralığı hemen arkasından PowerShell uygulamasını temsil eden işlem 
 ```
 
 ### <a name="search-for-specific-command-strings"></a>Belirli komut dizelerini arama
-Daha sonra sorgu, normalde PowerShell kullanılarak dosya indirmek için kullanılan komut satırlarında dizeler için arama yapmaktır.
+Daha sonra sorgu, genellikle PowerShell kullanarak dosyaları indirmek için kullanılan komut satırlarındaki dizeleri arar.
 
 ```kusto
 // Suspicious commands
@@ -113,7 +113,7 @@ Daha sonra sorgu, normalde PowerShell kullanılarak dosya indirmek için kullan�
 ```
 
 ### <a name="customize-result-columns-and-length"></a>Sonuç sütunlarını ve uzunluğunu özelleştirme 
-Artık sorgunuz bulmak istediğiniz verileri net bir şekilde tanımladığınıza göre, sonuçların nasıl bir görünümde olduğunu tanımlayabilirsiniz. `project` belirli sütunları döndürür ve `top` sonuç sayısını sınırlar. Bu işleçler, sonuçların iyi biçimlendirilmiş ve makul ölçüde büyük ve işlemesi kolay olmasını sağlamaya yardımcı olur.
+Artık sorgunuz bulmak istediğiniz verileri net bir şekilde tanımladığınıza göre sonuçların nasıl görüneceğini tanımlayabilirsiniz. `project` belirli sütunları döndürür ve `top` sonuç sayısını sınırlar. Bu işleçler, sonuçların iyi biçimlendirildiğinden, makul ölçüde büyük ve işlenmesi kolay olduğundan emin olunmasını sağlar.
 
 ```kusto
 | project Timestamp, DeviceName, InitiatingProcessFileName, InitiatingProcessCommandLine, 
@@ -121,78 +121,89 @@ FileName, ProcessCommandLine, RemoteIP, RemoteUrl, RemotePort, RemoteIPType
 | top 100 by Timestamp
 ```
 
-Sonuçları **görmek için Sorguyu** çalıştır'ı seçin.
+Sonuçları görmek için **Sorguyu çalıştır'ı** seçin.
 
 >[!TIP]
->Sorgu sonuçlarını grafik olarak ekleyebilirsiniz ve filtreleri hızla ayarlayabilirsiniz. Kılavuz için, [sorgu sonuçlarıyla çalışma hakkında bilgi](advanced-hunting-query-results.md)
+>Sorgu sonuçlarını grafik olarak görüntüleyebilir ve filtreleri hızla ayarlayabilirsiniz. Yönergeler için [sorgu sonuçlarıyla çalışma hakkında bilgi edinin](advanced-hunting-query-results.md)
 
-## <a name="learn-common-query-operators"></a>Sık kullanılan sorgu işleçlerini öğrenme
+## <a name="learn-common-query-operators"></a>Yaygın sorgu işleçlerini öğrenme
 
-İlk sorguyu çalıştırdınız ve bileşenleri hakkında genel bir fikirniz var. Biraz geri dönmenin ve bazı temel bilgileri öğrenmenin zamanı geldi. Gelişmiş atlar tarafından kullanılan Kusto sorgu dili, yaygın kullanılanlar da dahil olmak üzere bir dizi operatöre destek sağlar.
+İlk sorgunuzu çalıştırdıktan sonra bileşenleri hakkında genel bir fikir edindiniz. Biraz geri dönüp bazı temel bilgileri öğrenmenin zamanı geldi. Gelişmiş avcılık tarafından kullanılan Kusto sorgu dili, aşağıdaki yaygın olanlar da dahil olmak üzere çeşitli işleçleri destekler.
 
-| İşleç | Açıklama ve kullanım |
+| Işleç | Açıklama ve kullanım |
 |--|--|
-| `where` | Tabloyu, bir ölçüte karşılayan satırların alt kümesine filtre uygulama. |
-| `summarize` | Giriş tablonun içeriğini topan bir tablo üretin. |
-| `join` | Her tabloda belirtilen sütun veya sütunların değerlerini eşleştirerek yeni bir tablo oluşturmak için iki tablonun satırlarını birleştirin. |
-| `count` | Giriş kaydı kümesinde kayıtların sayısını iade eder. |
-| `top` | Belirtilen sütunlara göre sıralanmış ilk N kaydı geri dönme. |
-| `limit` | Belirtilen sayıda satıra kadar dönme. |
-| `project` | Dahil etmek, yeniden adlandırmak veya bırakmak ve yeni hesaplanan sütunlar eklemek için sütunları seçin. |
-| `extend` | Hesaplanan sütunlar oluşturun ve bunları sonuç kümesine ekler. |
-| `makeset` |  Expr'in gruba kattır olduğu farklı değerler kümesi dinamik (JSON) dizisini döndürür. |
-| `find` | Bir tablo kümesi genelindeki bir yüklem ile eşan satırları bulun. |
+| `where` | Bir tabloyu koşula uyan satırların alt kümesine göre filtreleyin. |
+| `summarize` | Giriş tablosunun içeriğini toplayan bir tablo oluşturma. |
+| `join` | Her tablodan belirtilen sütunların değerlerini eşleştirerek yeni bir tablo oluşturmak için iki tablonun satırlarını birleştirin. |
+| `count` | Giriş kaydı kümesindeki kayıt sayısını döndürür. |
+| `top` | Belirtilen sütunlara göre sıralanmış ilk N kayıtlarını döndürür. |
+| `limit` | Belirtilen satır sayısına kadar geri dönün. |
+| `project` | Eklenecek sütunları seçin, yeniden adlandırın veya bırakın ve yeni hesaplanan sütunlar ekleyin. |
+| `extend` | Hesaplanmış sütunlar oluşturun ve bunları sonuç kümesine ekler. |
+| `makeset` |  İfade'nin grupta aldığı ayrı değerler kümesinin dinamik (JSON) dizisini döndürür. |
+| `find` | Bir tablo kümesinde koşulla eşleşen satırları bulun. |
 
-Bu işleçlerin canlı bir örneğini görmek için bunları gelişmiş **avına başlama** bölümünden çalıştırın.
+Bu işleçlerin canlı bir örneğini görmek için bunları gelişmiş avcılık **bölümündeki Kullanmaya başlayın** bölümünden çalıştırın.
 
 ## <a name="understand-data-types"></a>Veri türlerini anlama
 
-Gelişmiş av, şu yaygın türler de dahil olmak üzere Kuşto veri türlerini destekler:
+Gelişmiş avcılık, aşağıdaki yaygın türler de dahil olmak üzere Kusto veri türlerini destekler:
 
-| Veri türü | Açıklama ve sorgu sonuçlarının sonuçları |
+| Veri türü | Açıklama ve sorgu etkileri |
 |--|--|
-| `datetime` | Normalde olay zaman damgasını temsil eden veri ve saat bilgisi. [Desteklenen tarih saat biçimlerine bakın](/azure/data-explorer/kusto/query/scalar-data-types/datetime) |
-| `string` | Tek tırnak () veya çift tırnak ( ) içine alınmış UTF-8`'` karakter dizesi`"`. [Dizeler hakkında daha fazla makale okuyun](/azure/data-explorer/kusto/query/scalar-data-types/string) |
-| `bool` | Bu veri türü, durumları `true` destekler veya `false` durumlarını destekler. [Desteklenen değişmez metinlere ve işleçlere bakın](/azure/data-explorer/kusto/query/scalar-data-types/bool) |
+| `datetime` | Veri ve zaman bilgileri genellikle olay zaman damgalarını temsil eder. [Desteklenen tarih saat biçimlerine bakın](/azure/data-explorer/kusto/query/scalar-data-types/datetime) |
+| `string` | UTF-8'de tek tırnak () veya çift tırnak (`'``"`) içine alınmış karakter dizesi. [Dizeler hakkında daha fazla bilgi edinin](/azure/data-explorer/kusto/query/scalar-data-types/string) |
+| `bool` | Bu veri türü veya `false` durumlarını destekler`true`. [Desteklenen değişmez değerlere ve işleçlere bakın](/azure/data-explorer/kusto/query/scalar-data-types/bool) |
 | `int` | 32 bit tamsayı  |
 | `long` | 64 bit tamsayı |
 
-Bu veri türleri hakkında daha fazla bilgi edinmek için [, Kusto skaler veri türleri hakkında bilgi okuyun](/azure/data-explorer/kusto/query/scalar-data-types/).
+Bu veri türleri hakkında daha fazla bilgi edinmek için [Kusto skaler veri türleri hakkında bilgi edinin](/azure/data-explorer/kusto/query/scalar-data-types/).
 
-## <a name="get-help-as-you-write-queries"></a>Sorgular yazarken yardım al
-Sorguları daha hızlı yazmak için aşağıdaki işlevlerden faydalanabilirsiniz:
-- **Sorgu yazmaya devam ettirdiğiniz** gibi, gelişmiş arama özelliği IntelliSense'in önerilerini sağlar. 
-- **Şema ağacı**: Tablo listesini ve sütunlarını içeren bir şema gösterimi, çalışma alanınız yanında sağlanır. Daha fazla bilgi için bir öğenin üzerine gelin. Sorgu düzenleyicisine eklemek istediğiniz öğeye çift tıklayın.
-- **[Şema başvurusu](advanced-hunting-schema-tables.md#get-schema-information-in-the-security-center)**— tablo ve sütun açıklamalarının yanı sıra desteklenen olay türleri (`ActionType` değerler) ve örnek sorgularla portal içinde başvuru
+## <a name="get-help-as-you-write-queries"></a>Sorgu yazarken yardım alma
+Sorguları daha hızlı yazmak için aşağıdaki işlevlerden yararlanın:
+- **Otomatik öneri**: Sorgu yazarken gelişmiş avcılık, IntelliSense'ten öneriler sağlar. 
+- **Şema ağacı**; çalışma alanınızın yanında tabloların ve sütunlarının listesini içeren bir şema gösterimidir. Daha fazla bilgi için bir öğenin üzerine gelin. Bir öğeyi sorgu düzenleyicisine eklemek için çift tıklayın.
+- **[Şema başvurusu](advanced-hunting-schema-tables.md#get-schema-information-in-the-security-center)**— tablo ve sütun açıklamalarının yanı sıra desteklenen olay türleri (`ActionType` değerler) ve örnek sorgularla portal içi başvuru
 
 ## <a name="work-with-multiple-queries-in-the-editor"></a>Düzenleyicide birden çok sorguyla çalışma
-Birden çok sorguyla denemeler yapmak için sorgu düzenleyicisini kullanabilirsiniz. Birden çok sorgu kullanmak için:
+Birden çok sorguyla deneme yapmak için sorgu düzenleyicisini kullanabilirsiniz. Birden çok sorgu kullanmak için:
 
-- Her sorguyu boş bir çizgiyle birbirinden ayırabilirsiniz.
-- çalıştırmadan önce imleci sorgunun herhangi bir yerine yerleştirerek o sorguyu seçin. Bu yalnızca seçili sorguyu çalıştıracak. Başka bir sorgu çalıştırmak için, imleci uygun şekilde hareket ettirin ve Sorguyu **çalıştır'ı seçin**.
+- Her sorguyu boş bir satırla ayırın.
+- Çalıştırmadan önce sorguyu seçmek için imleci sorgunun herhangi bir bölümüne getirin. Bu işlem yalnızca seçili sorguyu çalıştırır. Başka bir sorgu çalıştırmak için imleci uygun şekilde hareket ettirin ve **Sorguyu çalıştır'ı** seçin.
 
-:::image type="content" source="../../media/learn-work-with-multiple.png" alt-text="Portalda **New query** sayfasında birden çok sorgu yürütme Microsoft 365 Defender" lightbox="../../media/learn-work-with-multiple.png":::
+:::image type="content" source="../../media/multiple-queries.png" alt-text="Microsoft 365 Defender portalındaki **Yeni sorgu** sayfasında birden çok sorgu yürütme örneği" lightbox="../../media/multiple-queries.png":::
+
+Daha verimli bir çalışma alanı için aynı avlanma sayfasında birden çok sekme de kullanabilirsiniz. **Yeni sorgunuz** için bir sekme açmak için Yeni sorgu'yu seçin.
+
+:::image type="content" source="../../media/multitab.png" alt-text="Microsoft 365 Defender portalındaki **Yeni sorgu** sayfasında birden çok sorgu yürütme örneği" lightbox="../../media/multitab.png":::
+
+Daha sonra yeni bir tarayıcı sekmesi açmadan farklı sorgular çalıştırabilirsiniz. 
+
+:::image type="content" source="../../media/multitab-examples.png" alt-text="Microsoft 365 Defender portalındaki **Yeni sorgu** sayfasında birden çok sorgu yürütme örneği" lightbox="../../media/multitab-examples.png":::
+
+>[!NOTE] 
+> Yeni bir sorgu için yeni bir tarayıcı sekmesi açarsanız kaydedilmemiş sorguları kaybetme riskiniz vardır.
 
 ## <a name="use-sample-queries"></a>Örnek sorguları kullanma
 
-Kullanmaya **başlama bölümünde** , sık kullanılan işleçleri kullanan birkaç basit sorgu vardır. Bu sorguları çalıştırmayı ve bunlarda küçük değişiklikler yapmaya deneyin.
+**Kullanmaya başlayın** bölümü, yaygın olarak kullanılan işleçleri kullanan birkaç basit sorgu sağlar. Bu sorguları çalıştırmayı ve küçük değişiklikler yapmayı deneyin.
 
-:::image type="content" source="../../media/get-started-section.png" alt-text="Yeni portalda **Gelişmiş av** sayfasındaki **Başlarken** Microsoft 365 Defender" lightbox="../../media/get-started-section.png":::
-
->[!NOTE]
->Temel sorgu örnekleri dışında, belirli tehdit avı senaryoları [için](advanced-hunting-shared-queries.md) paylaşılan sorgulara da erişebilirsiniz. Sayfanın veya ana veri havuzun sol tarafındaki [paylaşılan GitHub keşfedin](https://aka.ms/hunting-queries).
-
-## <a name="access-query-language-documentation"></a>Access sorgu dili belgeleri
-
-Kusto sorgu dili ve desteklenen işleçler hakkında daha fazla bilgi için [, Kusto sorgu dili belgelerine bakın](/azure/kusto/query/).
+:::image type="content" source="../../media/get-started-section.png" alt-text="Microsoft 365 Defender portalındaki **Gelişmiş avcılık** sayfasındaki **Başlarken** bölümü" lightbox="../../media/get-started-section.png":::
 
 >[!NOTE]
->Bu makaledeki bazı tablolar Uç Nokta için Microsoft Defender'da kullanılamıyor olabilir. [Daha fazla Microsoft 365 Defender](m365d-enable.md) kullanarak tehdit yakalamak için çok daha fazla kaynağı açabilirsiniz. Gelişmiş av iş akışlarınızı Uç Nokta için Microsoft Defender'dan Microsoft 365 Defender için [Microsoft Defender'dan gelişmiş arama sorgularını geçirme makalesinde](advanced-hunting-migrate-from-mde.md) yer alan adımları takip edebilirsiniz.
+>Temel sorgu örneklerinin dışında, belirli tehdit avcılığı senaryoları için [paylaşılan sorgulara](advanced-hunting-shared-queries.md) da erişebilirsiniz. Sayfanın sol tarafındaki paylaşılan sorguları veya [GitHub sorgu deposunu](https://aka.ms/hunting-queries) keşfedin.
+
+## <a name="access-query-language-documentation"></a>Sorgu dili belgelerine erişme
+
+Kusto sorgu dili ve desteklenen işleçler hakkında daha fazla bilgi için [Kusto sorgu dili belgelerine bakın](/azure/kusto/query/).
+
+>[!NOTE]
+>Bu makaledeki bazı tablolar Uç Nokta için Microsoft Defender'de kullanılamayabilir. Daha fazla veri kaynağı kullanarak tehditleri avlamak için [Microsoft 365 Defender açın](m365d-enable.md). Gelişmiş avcılık sorgularını Uç Nokta için Microsoft Defender'den geçirme bölümünde yer alan adımları izleyerek [gelişmiş avcılık iş akışlarınızı Uç Nokta için Microsoft Defender'den Microsoft 365 Defender](advanced-hunting-migrate-from-mde.md) taşıyabilirsiniz.
 
 ## <a name="related-topics"></a>İlgili konular
-- [Gelişmiş ava genel bakış](advanced-hunting-overview.md)
-- [Sorgu sonuçlarıyla çalışma](advanced-hunting-query-results.md)
-- [Paylaşılan sorguları kullanma](advanced-hunting-shared-queries.md)
-- [Cihazlar, e-postalar, uygulamalar ve kimlikler arasında iş avı](advanced-hunting-query-emails-devices.md)
-- [Şemayı anlama](advanced-hunting-schema-tables.md)
-- [Sorguyla ilgili en iyi yöntemleri uygulama](advanced-hunting-best-practices.md)
+- [Gelişmiş avcılığa genel bakış](advanced-hunting-overview.md)
+- [Sorgu sonuçlarıyla çalışın](advanced-hunting-query-results.md)
+- [Paylaşılan sorguları kullanın](advanced-hunting-shared-queries.md)
+- [Cihazlar, e-postalar, uygulamalar ve kimlikler arasında avlayın](advanced-hunting-query-emails-devices.md)
+- [Şemayı anlayın](advanced-hunting-schema-tables.md)
+- [Sorgu en iyi yöntemlerini uygulayın](advanced-hunting-best-practices.md)

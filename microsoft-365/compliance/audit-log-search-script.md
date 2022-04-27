@@ -2,8 +2,8 @@
 title: Denetim günlüğünü aramak için PowerShell betiği kullanma
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: how-to
@@ -19,12 +19,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 description: Denetim günlüğünde arama yapmak için Exchange Online'da Search-UnifiedAuditLog cmdlet'ini çalıştıran bir PowerShell betiği kullanın. Bu betik, her çalıştırdığınızda büyük bir denetim kayıtları kümesi döndürecek şekilde iyileştirilmiştir. Betik, bu kayıtları Excel'da Power Query kullanarak görüntüleyebileceğiniz veya dönüştürebileceğiniz bir CSV dosyasına aktarır.
-ms.openlocfilehash: 00edbeb18bc882cf9113e80321b29d84ed43114c
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 8799f1a4ddf2ef7dd536ccb3e6e70a4b731b4cd6
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "65000256"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65100863"
 ---
 # <a name="use-a-powershell-script-to-search-the-audit-log"></a>Denetim günlüğünü aramak için PowerShell betiği kullanma
 

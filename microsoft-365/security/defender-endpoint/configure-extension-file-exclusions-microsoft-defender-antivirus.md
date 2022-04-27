@@ -13,20 +13,19 @@ ms.topic: article
 ms.custom: nextgen
 ms.reviewer: ''
 manager: dansimp
-ms.date: 02/27/2022
 ms.collection: M365-security-compliance
-ms.openlocfilehash: e8c2b464b7a4559ba316826400cfd0ad308d8786
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: 4db7b8f13f1f4860d8cd88f6dec0ff588a89ab41
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64790228"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098922"
 ---
 # <a name="configure-and-validate-exclusions-based-on-file-extension-and-folder-location"></a>Dosya uzantısına ve klasör konumuna göre dışlamaları yapılandırma ve doğrulama
 
 **Şunlar için geçerlidir:**
 
-- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Virüsten Koruma
 
@@ -39,8 +38,8 @@ ms.locfileid: "64790228"
 - [İşlemler tarafından açılan dosyalar için dışlamalar](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
 
 > [!IMPORTANT]
-> Microsoft Defender Virüsten Koruma dışlamalar uç noktada algılama ve yanıtlama [(EDR)](/microsoft-365/security/defender-endpoint/overview-endpoint-detection-response), saldırı gibi diğer Pertahanan Microsoft untuk Titik Akhir özellikleri için geçerli değildir [ yüzey azaltma (ASR) kuralları](/microsoft-365/security/defender-endpoint/attack-surface-reduction) ve [denetimli klasör erişimi](/microsoft-365/security/defender-endpoint/controlled-folders). Bu makalede açıklanan yöntemleri kullanarak dışladığınız dosyalar yine de EDR uyarıları ve diğer algılamaları tetikleyebilir.
-> Dosyaları geniş bir şekilde dışlamak için bunları Pertahanan Microsoft untuk Titik Akhir [özel göstergelerine](/microsoft-365/security/defender-endpoint/manage-indicators) ekleyin.
+> Microsoft Defender Virüsten Koruma dışlamalar uç noktada algılama ve yanıtlama [(EDR)](/microsoft-365/security/defender-endpoint/overview-endpoint-detection-response) ve [saldırı yüzeyini azaltma gibi diğer Uç Nokta için Microsoft Defender özellikleri için geçerli değildir (ASR) kuralları](/microsoft-365/security/defender-endpoint/attack-surface-reduction) ve [denetimli klasör erişimi](/microsoft-365/security/defender-endpoint/controlled-folders). Bu makalede açıklanan yöntemleri kullanarak dışladığınız dosyalar yine de EDR uyarıları ve diğer algılamaları tetikleyebilir.
+> Dosyaları geniş kapsamlı bir şekilde dışlamak için bunları Uç Nokta için Microsoft Defender [özel göstergelerine](/microsoft-365/security/defender-endpoint/manage-indicators) ekleyin.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
@@ -107,7 +106,7 @@ Microsoft Endpoint Manager (geçerli dal) yapılandırma ayrıntıları için bk
 
 2. **grup ilkesi Yönetim Düzenleyicisi'nde** **Bilgisayar yapılandırması'na** gidin ve **Yönetim şablonları'nı** seçin.
 
-3. **Dışlamalar Microsoft Defender Virüsten Koruma bileşenleri** \> **Windows** \> için ağacı genişletin.
+3. **Dışlamalar Windows Defender Virüsten Koruma bileşenleri** \> **Windows** \> için ağacı genişletin.
 
 4. Düzenlemek için **Yol Dışlamaları** ayarını açın ve dışlamalarınızı ekleyin.
     1. Seçeneği **Etkin** olarak ayarlayın.
@@ -380,14 +379,14 @@ $client.DownloadFile("http://www.eicar.org/download/eicar.com.txt","c:\test.txt"
 Ayrıca, dizeyi boş bir metin dosyasına kopyalayabilir ve dosya adıyla veya dışlamaya çalıştığınız klasöre kaydetmeye çalışabilirsiniz.
 
 > [!TIP]
-> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
-> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> Diğer platformlar için Virüsten Koruma ile ilgili bilgi edinmek isterseniz, bkz:
+> - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
-> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
-> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](linux-preferences.md)
 > - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
-> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
-> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
+> - [Android özelliklerinde Uç Nokta için Defender’ı yapılandırın](android-configure.md)
+> - [iOS özelliklerinde Uç Nokta için Microsoft Defender’ı yapılandırın](ios-configure-features.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

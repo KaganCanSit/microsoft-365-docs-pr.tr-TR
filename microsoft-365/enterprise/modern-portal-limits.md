@@ -1,8 +1,8 @@
 ---
-title: SharePoint Online modern portal sitesi sınırları
+title: çevrimiçi modern portal site sınırlarını SharePoint
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 10/9/2019
 audience: Admin
 ms.topic: interactive-tutorial
@@ -18,59 +18,59 @@ ms.custom:
 - seo-marvel-apr2020
 search.appverid:
 - MET150
-description: SharePoint Online'da modern siteler için, aramaları SharePoint uç noktalarıyla sınırlama gibi performans önerileri hakkında bilgi alın.
-ms.openlocfilehash: 6d09af30f5bdc8866b44047771060ced86362565
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: SharePoint Online'daki modern siteler için çağrıları SharePoint ve dış uç noktalarla sınırlama gibi performans önerileri hakkında bilgi edinin.
+ms.openlocfilehash: a0163cd808ce3eb25da8d1c94fb27ed9d238d75a
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988785"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65091159"
 ---
-# <a name="sharepoint-online-modern-portal-site-limits"></a>SharePoint Online modern portal sitesi sınırları
+# <a name="sharepoint-online-modern-portal-site-limits"></a>çevrimiçi modern portal site sınırlarını SharePoint
 
-Bu makale, SharePoint Online'daki modern portal siteleri için performans önerileri sağlar. Modern portal sitesi performansını iyileştirmek ve sık karşılaşılan performans sorunlarından kaçınmak için bu makaledeki yönergeleri kullanın.
+Bu makale, SharePoint Online'daki modern portal siteleri için performans önerileri sağlar. Modern portal sitesi performansını iyileştirmek ve yaygın performans sorunlarından kaçınmak için bu makaledeki yönergeleri kullanın.
 
-## <a name="performance-considerations-for-modern-portal-sites"></a>Modern portal sitelerinde performansla ilgili dikkat edilmesi gereken noktalar
+## <a name="performance-considerations-for-modern-portal-sites"></a>Modern portal siteleri için performansla ilgili dikkat edilmesi gerekenler
 
-Performans iyileştirme açısından, modern portal sitelerini benzersiz hale gelen birkaç özellik vardır. SharePoint Online'da işbirliği ve portal siteleri arasındaki temel fark ölçektir. Portal sitelerinin genel olarak işbirliği sitelerine göre daha fazla sayıda kullanıcıya daha fazla sayfa görüntülemesi beklendiği gibi, daha fazla statik içerik ve daha az düzenlenebilir kaynak içermesi de gerekir. Buna ek olarak, modern sitelerin mimarisi klasik sitelerden farklıdır. Burada sayfaları işleme ve kodu yürütme işlemlerinin çoğu sunucu yerine istemcide  sürer.
+Performans iyileştirme açısından, modern portal sitelerini benzersiz hale getiren birkaç özellik vardır. SharePoint Online'da işbirliği ve portal siteleri arasındaki temel fark ölçektir. Portal sitelerinin genellikle işbirliği sitelerinden daha fazla sayıda kullanıcıya daha fazla sayfa görünümü sunması beklenir ve büyük olasılıkla daha fazla statik içerik ve daha az düzenlenebilir kaynak içerir. Ayrıca, modern sitelerin mimarisi klasik sitelerden farklıdır, bu nedenle sayfaları işleme ve kod yürütmeyle ilgili işlemlerin çoğu sunucu yerine istemcide gerçekleşir.
 
-Modern portal siteleri için performans iyileştirme öncelikle birkaç genel amaca odaklanıyor:
+Modern portal siteleri için performans iyileştirme öncelikle birkaç genel hedefe odaklanır:
 
-- Her site sayfasının bileşenlerinin toplam boyutunu azaltma
-- Resimler, stil sayfaları ve betikler gibi yaygın statik dosyaların barındırma yükünü CDN
-- Çağrıyı yalnızca SharePoint uç noktalarıyla ve dış uç noktalarla sınırlandırma
-- Aynı içerik için yinelenen isteklerden kaçınma
+- Her site sayfasının bileşenlerinin toplam boyutunu küçültme
+- Görüntüler, stil sayfaları ve betikler gibi yaygın statik dosyaların barındırılması yükünü CDN
+- Çağrıları SharePoint ve dış uç noktalarla yalnızca gerekli olanlarla sınırlayın
+- Aynı içerik için yinelenen isteklerden kaçının
 
-Bu makaledeki yönergelerin birçoğu, SharePoint Online'a yapılan çağrıları en aza indirmeye ve iyileştirmeye SharePoint odaklanmaktadır. Bir sayfa her yüklendiğinde yinelenen aramalar yapmak, bilgiler değişmemiş olsa bile hizmetten alına kadar kullanıcıların performansını etkiler. Bu nedenle, gelen istekler SharePoint kullanıcıların ortak olduğu aramalar veya her bir kullanıcı için gerekli aramalar olarak kategorilere ayırabilirsiniz. Kullanıcı deneyimini en iyi duruma getirmek için bu iki arama kategorisinin sonuçları önbelleğe alınarak elde etmek gerekir.
+Bu makaledeki yönergelerin çoğu, SharePoint Online çağrılarını en aza indirmeye ve iyileştirmeye odaklanır. Bir sayfa her yüklendiğinde yinelenen çağrılar yapmak, kullanıcılar için performansı etkiler, bu nedenle bilgiler değişmese bile hizmetten her seferinde alınır. Bu nedenle, SharePoint istekleri tüm kullanıcılar için ortak olan çağrılar veya her bir kullanıcı için gereken çağrılar olarak kategorilere ayırılabilir. Kullanıcı deneyimini iyileştirmek için bu iki çağrı kategorisinin sonuçları önbelleğe alınmalıdır.
 
 >[!NOTE]
->Çevrimiçi site [sayfalarındaki belirli SharePoint](./page-diagnostics-for-spo.md) ölçümlerini çözümlemek için başlangıç noktası olarak Sayfa Tanılama SharePoint kullanın.
+>SharePoint Çevrimiçi site sayfalarında belirli performans ölçümlerini analiz etmek için başlangıç noktası olarak SharePoint [için Sayfa Tanılama aracını](./page-diagnostics-for-spo.md) kullanın.
 
 ## <a name="modern-portal-site-limits-and-recommendations"></a>Modern portal sitesi sınırları ve önerileri
 
-|**Sınır**|**En fazla önerilen değer**|**Notlar**|
+|**Sınırı**|**Önerilen en büyük değer**|**Notlar**|
 |:-----|:-----|:-----|:-----|
-|Sayfalar ve haber öğeleri  <br/> |Site başına 5.000  <br/> |Modern bir portal sitesinde bulunan sayfa ve haber öğelerinin sayısını 5.000'in altına sınırlamanız önerilir.  <br/> |
-|Sayfada Web bölümleri  <br/> |Sayfa başına 20  <br/> |Sayfa başına 20 veya daha az sayıda toplam web bölümü kullanmanızı öneririz. Bu, hem ilk kullanmayan Microsoft web bölümleri hem de özel web bölümleri de dahil. <br/> Daha fazla bilgi için bkz. [SharePoint Online modern site sayfalarında web bölümü performansını iyileştirme](modern-web-part-optimization.md).  <br/> |
-|Sayfada dinamik web bölümleri  <br/> |Sayfa başına 4  <br/> |En son verileri getirmek için bir veya daha fazla SharePoint sorgular alan dinamik web bölümleri, sayfa başına 4 ile sınırlandırılamaz. _Haberler web_ bölümü, dinamik web bölümü örneğidir. <br/> Daha fazla bilgi için bkz. [SharePoint Online modern site sayfalarında web bölümü performansını iyileştirme](modern-web-part-optimization.md).    <br/> |
-|Güvenlik grupları  <br/> |Site başına 20  <br/> |Modern portal sitelerinde, güvenlik gruplarının sayısı birçok sorgunun ölçeğini etkiler. Güvenlik gruplarının sayısını mümkün olduğunca küçük bir kümeyle (site başına 20'den fazla değil) sınırlamanız önerilir.  <br/> |
-|Site gezintisinde öğeler  <br/> |Site başına 100  <br/> |Site gezintilerine 100'den az öğe eklemenizi ve ilk kullanımdaki gezinti denetimlerini kullanmanizi öneririz.  <br/> Daha fazla bilgi için bkz. [SharePoint Online modern site sayfalarında sayfa ağırlıklarını en iyi duruma getirme](modern-page-weight-optimization.md). <br/> |
-|En büyük resim boyutu  <br/> |Resim başına 300 Kb  <br/> |Resimlerin boyutunu 300 kb/sn veya daha küçük bir boyutla sınırlamayı ve resimleri, stil CDN betikleri barındırmak için yeni bir resim kullanmalarını öneririz. <br/>Daha fazla bilgi için bkz. [SharePoint Online modern site](modern-image-optimization.md) sayfalarında resimleri iyileştirme ve Office 365 Content Delivery Network Online ile [CDN'SharePoint kullanma](use-microsoft-365-cdn-with-spo.md).  <br/> |
-|Düzenleme hakları olan kullanıcılar  <br/> |Site başına 200 kullanıcı  <br/> |SharePoint portalı siteleri içeriği görüntülemek ve tüketmek için en iyi duruma getirilmiş sitedir. Düzenleme izinleri ek denetimleri indirecek ve bu nedenle bu kullanıcılar için daha yavaş gerçekleştirecek olduğundan portalda düzenleme izinleri kısıtlanmış bir kullanıcı grubuyla sınırlı olmalı. Bu nedenle, düzenleme izinleri olan çok fazla kullanıcı genel deneyimi etkiler. <br/> |
-|Üçüncü taraf iFrame'ler  <br/> |Sayfa başına 2  <br/> |iFrame'ler javascript, CSS ve çerçeve öğeleri gibi ilişkili tüm içerikler de içinde olmak üzere ayrı bir dış sayfa yükleyemleri nedeniyle ne olacağı önceden kestirilemez yavaştır. iFrame kullanmak zorundasanız, sayfa başına bu sayı 2 veya daha az olacak şekilde sınırlandırabilirsiniz.<br/> Daha fazla bilgi için bkz. [SharePoint Online modern ve klasik yayımlama sitesi sayfalarında iFrame'leri iyileştirme](modern-iframe-optimization.md). <br/> |
-|UPA hizmetine yapılan aramalar  <br/> |Saatte bir kullanıcı başına 1  <br/> |UPA (Kullanıcı Profili _Uygulaması_ ) hizmetine yapılan istek başına çağrı yapmamanizi öneririz. Kullanıcı [Graph sorgulamak için Microsoft Metin API'si](/graph/call-api) ve [PageContext](/javascript/api/sp-page-context/pagecontext) kullanılabilir.  <br/> UPA hizmet çağrısı gerekiyorsa, gerektiğinde tek bir arama yapmak ve ardından bilgileri aynı oturumda yeniden kullanmak üzere önbelleğe alın. |
-|Taksonomi hizmetine yapılan aramalar  <br/> |Saatte 5 kullanıcı başına  <br/> |Taksonomi _hizmetine istek başına_ çağrı yapmamanizi öneririz. Taksonomi hizmeti çağrıları gerekiyorsa, bilgileri aynı oturumda yeniden kullanmak üzere önbelleğe alın. <br/> Daha fazla bilgi için bkz. [SharePoint Online modern ve klasik yayımlama sitesi sayfalarında sayfa aramalarını en iyi duruma getirme](modern-page-call-optimization.md). <br/> |
+|Sayfalar ve haber öğeleri  <br/> |Site başına 5.000  <br/> |Modern bir portal sitesindeki sayfa ve haber öğelerinin sayısını 5.000'in altına sınırlamanızı öneririz.  <br/> |
+|Sayfadaki web bölümleri  <br/> |Sayfa başına 20  <br/> |Hem kullanıma kullanıma uygun Microsoft web bölümleri hem de özel web bölümleri dahil olmak üzere sayfa başına toplam 20 veya daha az web bölümü kullanmanızı öneririz. <br/> Daha fazla bilgi için bkz[. SharePoint Çevrimiçi modern site sayfalarında web bölümü performansını iyileştirme](modern-web-part-optimization.md).  <br/> |
+|Sayfadaki dinamik web bölümleri  <br/> |Sayfa başına 4  <br/> |En son verileri getirmek için SharePoint için bir veya daha fazla sorgu oluşturan dinamik web bölümleri sayfa başına 4 ile sınırlanmalıdır. _Haber_ web bölümü, dinamik bir web bölümüne örnektir. <br/> Daha fazla bilgi için bkz[. SharePoint Çevrimiçi modern site sayfalarında web bölümü performansını iyileştirme](modern-web-part-optimization.md).    <br/> |
+|Güvenlik grupları  <br/> |Site başına 20  <br/> |Güvenlik gruplarının sayısı, modern portal sitelerindeki birçok sorgunun ölçeğini etkiler. Güvenlik grubu sayısını, site başına 20'den fazla olmayan mümkün olduğunca küçük bir kümeyle sınırlamanızı öneririz.  <br/> |
+|Site gezintisindeki öğeler  <br/> |Site başına 100  <br/> |Site gezintisine 100'den az öğe eklemenizi ve kullanıma uygun gezinti denetimlerini kullanmanızı öneririz.  <br/> Daha fazla bilgi için bkz. [SharePoint Çevrimiçi modern site sayfalarında sayfa kalınlığını iyileştirme](modern-page-weight-optimization.md). <br/> |
+|En büyük görüntü boyutu  <br/> |Görüntü başına 300 Kb  <br/> |Görüntülerin boyutunu 300 kb veya daha küçük olarak sınırlamanızı ve görüntüleri, stil sayfalarını ve betikleri barındırmak için bir CDN kullanmanızı öneririz. <br/>Daha fazla bilgi için bkz. [SharePoint Online modern site sayfalarında görüntüleri iyileştirme](modern-image-optimization.md) ve [SharePoint Online ile Office 365 Content Delivery Network (CDN) kullanma](use-microsoft-365-cdn-with-spo.md).  <br/> |
+|Düzenleme haklarına sahip kullanıcılar  <br/> |Site başına 200 kullanıcı  <br/> |SharePoint portal siteleri, içeriği görüntülemek ve kullanmak için iyileştirilmiştir. Düzenleme izinleri ek denetimler indirdiğinden ve bu nedenle bu kullanıcılar için daha yavaş çalıştığından, portaldaki düzenleme izinleri kısıtlı bir kullanıcı grubuyla sınırlandırılmalıdır. Bu nedenle, düzenleme izinlerine sahip çok fazla sayıda kullanıcı genel deneyimi etkiler. <br/> |
+|Üçüncü taraf iFrame'ler  <br/> |Sayfa başına 2  <br/> |iFrame'ler javascript, CSS ve çerçeve öğeleri gibi tüm ilişkili içerikler de dahil olmak üzere ayrı bir dış sayfa yüklediklerinden tahmin edilemeyen yavaştır. iFrame'leri kullanmanız gerekiyorsa, bunların sayısını sayfa başına 2 veya daha azla sınırlayın.<br/> Daha fazla bilgi için bkz. [SharePoint Online modern ve klasik yayımlama sitesi sayfalarında iFrame'leri iyileştirme](modern-iframe-optimization.md). <br/> |
+|UPA hizmetine yapılan çağrılar  <br/> |Saat başına kullanıcı başına 1  <br/> |UPA (Kullanıcı Profili Uygulaması) hizmetine _istek başına_ çağrı yapmamanızı öneririz. Kullanıcı bilgilerini sorgulamak için [Microsoft Graph API](/graph/call-api) ve [PageContext](/javascript/api/sp-page-context/pagecontext) kullanılabilir.  <br/> UPA hizmet çağrısı gerekiyorsa, gerektiğinde tek bir çağrı yapın ve ardından bilgileri aynı oturumda yeniden kullanmak üzere önbelleğe alın. |
+|Taksonomi hizmetine çağrılar  <br/> |Kullanıcı başına saatte 5  <br/> |Taksonomi hizmetine _istek başına_ çağrı yapmamanızı öneririz. Taksonomi hizmeti çağrıları gerekiyorsa, bilgileri aynı oturumda yeniden kullanmak üzere önbelleğe alın. <br/> Daha fazla bilgi için bkz. [SharePoint Çevrimiçi modern ve klasik yayımlama sitesi sayfalarında sayfa çağrılarını iyileştirme](modern-page-call-optimization.md). <br/> |
 
 ## <a name="related-topics"></a>İlgili konular
 
-[Sağlıklı bir yaşam SharePoint oluşturma](/sharepoint/portal-health)
+[İyi durumda bir SharePoint portalı oluşturma](/sharepoint/portal-health)
 
-[Çevrimiçi SharePoint performansını ayarlama](tune-sharepoint-online-performance.md)
+[çevrimiçi SharePoint performansını ayarlama](tune-sharepoint-online-performance.md)
 
-[Performans Office 365 ayarlama](tune-microsoft-365-performance.md)
+[Office 365 performansını ayarlama](tune-microsoft-365-performance.md)
 
-[SharePoint Online sınırları](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits)
+[çevrimiçi sınırları SharePoint](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits)
 
-[Modern deneyimde SharePoint deneyimi](/sharepoint/modern-experience-performance)
+[Modern SharePoint deneyiminde performans](/sharepoint/modern-experience-performance)
 
-[Çevrimiçi portallarda SharePoint kılavuzu](/sharepoint/dev/solution-guidance/portal-performance)
+[SharePoint Online portalları için performans kılavuzu](/sharepoint/dev/solution-guidance/portal-performance)

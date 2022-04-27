@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için hata iletilerini ve sorunlarını giderme konusunda yardım alın.
-ms.openlocfilehash: 3da40291742ae85ef897aeceae0def27aca8abe2
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: a150213c2e202c96afeae14843708daa58ab4f92
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65023227"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65093294"
 ---
 # <a name="troubleshoot-error-messages-and-problems-in-microsoft-365-lighthouse"></a>Microsoft 365 Lighthouse hata iletilerini ve sorunlarını giderme
 
@@ -65,7 +65,7 @@ Bu makalede, Microsoft 365 Lighthouse kullanırken karşılaşabileceğiniz hata
 |--|--|--|
 | Etkin olmayan | Kiracı, MSP'nin isteği üzerine kapatıldı ve artık Lighthouse'da yönetilmedi. | Kiracıyı yeniden etkinleştirmeniz gerekir. **Kiracılar** sayfasında, yeniden etkinleştirmek istediğiniz kiracının yanındaki üç noktayı (daha fazla eylem) seçin ve ardından **Kiracıyı etkinleştir'i** seçin. İlk müşteri verilerinin Lighthouse'da görünmesi 24-48 saat sürebilir. |
 | Uygun değil - DAP veya GDAP ayarlanmadı | Lighthouse'un gerektirdiği kiracıyla ayarlanmış DAP veya GDAP yönetici ayrıcalıklarınız yoktur. | Microsoft İş Ortağı Merkezi'nde DAP veya GDAP yönetici ayrıcalıklarını ayarlayın. |
-| Uygun değil - Gerekli lisans eksik | Kiracıda gerekli bir lisans eksik. En az bir Microsoft 365 İş Ekstra, Microsoft 365 E3 veya Windows 365 Business lisansı gerekir. | Kiracıya en az bir Microsoft 365 İş Ekstra, Microsoft 365 E3 veya Windows 365 Business lisansı atandığından emin olun. |
+| Uygun değil - Gerekli lisans eksik | Kiracıda gerekli bir lisans eksik. En az bir Microsoft 365 İş Ekstra veya Microsoft 365 E3 lisansı gerekir. | Kiracıya en az bir Microsoft 365 İş Ekstra, Microsoft 365 E3 veya Windows 365 Business lisansı atandığından emin olun. |
 | Uygun değil - Kullanıcı sayısı aşıldı | Kiracı, Lighthouse tarafından izin verilen en fazla 1000 lisanslı kullanıcıya sahiptir. | Kiracının 1000'den fazla lisanslı kullanıcısı olmadığını doğrulayın. |
 | Uygun değil - Coğrafi denetim başarısız oldu | Siz ve müşteriniz Lighthouse'un gerektirdiği aynı coğrafi bölgede ikamet etmezsiniz. | Müşterinin coğrafi bölgenizde bulunduğunu doğrulayın. Aksi takdirde, Lighthouse'da kiracıyı yönetemezsiniz. |
 | İşlemde | Lighthouse kiracıyı keşfetti ama hala ekleme aşamasında. | Lighthouse'un kiracıyı ekleme işlemini tamamlaması için 48 saat bekleyin. |

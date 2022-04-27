@@ -2,7 +2,7 @@
 title: Microsoft Azure'da SharePoint Server 2013 Olağanüstü Durum Kurtarma
 ms.author: bcarter
 author: brendacarter
-manager: laurawi
+manager: scotv
 ms.date: 04/17/2018
 audience: ITPro
 ms.topic: article
@@ -17,124 +17,124 @@ ms.custom:
 - Ent_Deployment
 - seo-marvel-apr2020
 ms.assetid: e9d14cb2-ff28-4a18-a444-cebf891880ea
-description: Bu makalede, şirket içi kurtarma ortamınız için olağanüstü durum kurtarma ortamı oluşturmak üzere Azure'ın nasıl SharePoint açıklanmıştır.
-ms.openlocfilehash: 873d0c9ccfdc8c6a978b89416a7492a2141c825d
-ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
+description: Bu makalede, şirket içi SharePoint grubunuz için olağanüstü durum kurtarma ortamı oluşturmak üzere Azure'ın nasıl kullanılacağı açıklanmaktadır.
+ms.openlocfilehash: 1b1951e70cfbecc0f6586e68d7142bc26fb6252f
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64569146"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65077406"
 ---
 # <a name="sharepoint-server-2013-disaster-recovery-in-microsoft-azure"></a>Microsoft Azure'da SharePoint Server 2013 Olağanüstü Durum Kurtarma
 
- Azure'ı kullanarak, şirket içi acil durum kurtarma ortamınız için bir acil durum SharePoint oluşturabilirsiniz. Bu makalede, bu çözümün nasıl tasarlan ve uygulandığını açıklanmıştır.
+ Azure'ı kullanarak, şirket içi SharePoint grubunuz için bir olağanüstü durum kurtarma ortamı oluşturabilirsiniz. Bu makalede, bu çözümün nasıl tasarlandığı ve uygulandığı açıklanmaktadır.
 
- **Acil durum kurtarma SharePoint Server 2013'e genel bakış videosunu izleyin**
+ **SharePoint Server 2013 olağanüstü durum kurtarmaya genel bakış videosunu izleyin**
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/1b73ec8f-29bd-44eb-aa3a-f7932784bfd9?autoplay=false]
 
- Şirket içi ortamınız olağanüstü SharePoint olduğunda, önceliğiniz sistemin yeniden hızlı bir şekilde yeniden kullanılabilirliğe sahip olmaktır. Acil durum kurtarma SharePoint içinde zaten çalışan bir yedek ortamınız olduğunda daha hızlı ve daha Microsoft Azure. Bu videoda, açık bir yük devretme SharePoint ana kavramlar açıklanmıştır ve bu makaledeki tüm ayrıntılar tamamlanmıştır.
+ SharePoint şirket içi ortamınıza olağanüstü durum geldiğinde, en yüksek önceliğiniz sistemin hızla yeniden çalışmasını sağlamaktır. SharePoint ile olağanüstü durum kurtarma, zaten Microsoft Azure çalışan bir yedekleme ortamınız olduğunda daha hızlı ve kolaydır. Bu videoda, SharePoint sıcak yük devretme ortamının ana kavramları açıklanmaktadır ve bu makaledeki tüm ayrıntılar tamamlanmaktadır.
 
-Bu makaleyi aşağıdaki çözüm modeliyle kullanın: Acil **SharePoint Kurtarma'ya Microsoft Azure**.
+Bu makaleyi aşağıdaki çözüm modeliyle kullanın: **Microsoft Azure'da Olağanüstü Durum Kurtarma'yı SharePoint**.
 
-[![SharePoint kurtarma işlemini Azure'a  gerektir.](../media/SP-DR-Azure.png)](https://go.microsoft.com/fwlink/p/?LinkId=392555)
+[![Olağanüstü durum kurtarma işlemini Azure'a SharePoint.](../media/SP-DR-Azure.png)](https://go.microsoft.com/fwlink/p/?LinkId=392555)
 
  [PDF](https://go.microsoft.com/fwlink/p/?LinkId=392555) | [Visio](https://go.microsoft.com/fwlink/p/?LinkId=392554)
 
-## <a name="use-azure-infrastructure-services-for-disaster-recovery"></a>Olağanüstü durum kurtarma için Azure Altyapı Hizmetlerini kullanma
+## <a name="use-azure-infrastructure-services-for-disaster-recovery"></a>Olağanüstü durum kurtarma için Azure Altyapı Hizmetleri'ni kullanma
 
-Birçok kuruluş, şirket içi derleme ve bakım bakımları SharePoint olağanüstü durumlara neden olan bir kurtarma ortamına sahip değildir. Azure Altyapı Hizmetleri, olağanüstü durum kurtarma ortamları için, şirket içi alternatiflerden daha esnek ve daha ucuz olan etkileyici seçenekler sağlar.
+Birçok kuruluşun SharePoint için olağanüstü durum kurtarma ortamı yoktur ve bu ortam şirket içinde derlemek ve bakımını yapmak pahalı olabilir. Azure Altyapı Hizmetleri, şirket içi alternatiflerden daha esnek ve daha ucuz olağanüstü durum kurtarma ortamları için cazip seçenekler sağlar.
 
-Azure Altyapı Hizmetleri'nin kullanımıyla ilgili avantajlar şunlardır:
+Azure Altyapı Hizmetleri'ni kullanmanın avantajları şunlardır:
 
-- **Daha az maliyetli kaynak** Şirket içi olağanüstü durum kurtarma ortamlarının bakımını ve ödemesini şirket içi durumlara göre daha az kaynak için kullanın. Kaynakların sayısı, hangi olağanüstü durum kurtarma ortamını seçtiğinize bağlıdır: soğuk bekleme, sıcak bekleme veya sıcak bekleme.
+- **Daha az maliyetli kaynak** Şirket içi olağanüstü durum kurtarma ortamlarından daha az kaynak için bakım ve ödeme. Kaynak sayısı hangi olağanüstü durum kurtarma ortamını seçtiğinize bağlıdır: soğuk bekleme, sıcak bekleme veya etkin bekleme.
 
-- **Daha iyi kaynak esnekliği** Bir facia durumunda, yükleme gereksinimlerini karşılamak için kurtarma SharePoint ölçeğini kolayca ölçeklendirin. Artık kaynaklara ihtiyacınız kalmadan ölçeklendirin.
+- **Daha iyi kaynak esnekliği** Olağanüstü bir durumda, yük gereksinimlerini karşılamak için kurtarma SharePoint grubunuzun ölçeğini kolayca genişletin. Kaynaklara artık ihtiyacınız kalmadığında ölçeği daraltın.
 
-- **Daha düşük veri merkezi taahhüdü** Farklı bir bölgeye ikincil veri merkezi yatırım yapmak yerine Azure Altyapı Hizmetleri'nde kullanın.
+- **Daha düşük veri merkezi taahhüdü** Farklı bir bölgedeki ikincil veri merkezine yatırım yapmak yerine Azure Altyapı Hizmetleri'ni kullanın.
 
-Olağanüstü durum kurtarma ile yeni başlayan kuruluşlar için daha az karmaşık seçenekler ve yüksek güvenlik gereksinimlerine sahip kuruluşlar için gelişmiş seçenekler vardır. Soğuk, sıcak ve sıcak bekleme ortamlarının tanımları, ortam bir bulut platformunda barındırıldıyken biraz farklıdır. Aşağıdaki tabloda, Azure'da bir kurtarma grubu SharePoint için bu ortamlar açık almaktadır.
+Olağanüstü durum kurtarmayı kullanmaya yeni başlayan kuruluşlar için daha az karmaşık seçenekler ve yüksek dayanıklılık gereksinimleri olan kuruluşlar için gelişmiş seçenekler vardır. Ortam bir bulut platformunda barındırıldığında soğuk, sıcak ve sıcak bekleme ortamlarının tanımları biraz farklıdır. Aşağıdaki tabloda, Azure'da bir SharePoint kurtarma grubu oluşturmak için bu ortamlar açıklanmaktadır.
 
 **Tablo: Kurtarma ortamları**
 
 |Kurtarma ortamı türü|Açıklama|
 |---|---|
-|Sıcak|Tam boyutlu bir grup sağlandı, güncelleştirildi ve bekleme modunda çalışıyor.|
-|Isınma|Sunucu grubu yerleşiktir ve sanal makineler de çalışıyor ve güncelleştirilir. <br/> Kurtarma işlemi, içerik veritabanlarını iliştirme, hizmet uygulamaları sağlama ve içerikte gezinmeyi içerir. <br/> Grup, üretim grubu daha küçük bir sürümü olabilir ve tam kullanıcı tabanına hizmet edecek şekilde ölçeklendirildi.|
-|Soğuk|Sunucu grubu tümüyle yerleşiktir, ancak sanal makineler durdurulur. <br/> Ortamın korunması, sanal makineleri zaman zaman başlatmayı, ortamı düzeltme eki uygulama, güncelleştirme ve doğrulamayı içerir. <br/> Bir facia durumunda ortamın tamamını başlatma.|
+|Sıcak|Tam boyutlu bir grup sağlanır, güncelleştirilir ve beklemede çalışır.|
+|Sıcak|Grup oluşturulur ve sanal makineler çalışır ve güncelleştirilir. <br/> Kurtarma, içerik veritabanlarını eklemeyi, hizmet uygulamalarını sağlamayı ve içeriği gezinmeyi içerir. <br/> Grup, üretim grubunun daha küçük bir sürümü olabilir ve ardından tam kullanıcı tabanına hizmet vermek için ölçeği genişletilebilir.|
+|Soğuk|Grup tamamen oluşturulmuş, ancak sanal makineler durdurulmuş. <br/> Ortamın bakımı, sanal makineleri zaman zaman başlatmayı, düzeltme eki uygulama, güncelleştirme ve doğrulamayı içerir. <br/> Olağanüstü bir durumda ortamın tamamını başlatın.|
 
-Kuruluş kurtarma süresi hedeflerini (RTOS) ve Kurtarma Noktası Hedeflerini (RRP) değerlendirmek önemlidir. Bu gereksinimler, hangi ortamın organizasyonunıza en uygun yatırım olduğunu belirler.
+Kuruluşunuzun Kurtarma Süresi Hedeflerini (RTO' lar) ve Kurtarma Noktası Hedeflerini (RPO' lar) değerlendirmek önemlidir. Bu gereksinimler, kuruluşunuz için en uygun yatırımın hangi ortam olduğunu belirler.
 
-Bu makaledeki kılavuzda, sıcak bir bekleme ortamının nasıl uygulanıyor olduğu açıklanmıştır. Bu tür bir ortamı desteklemek için ek yordamları takip etmek zorunda da olsalar, bunu soğuk bekleme ortamına uyarlanabilir. Bu makalede, bekleme modundaki bir ortamın nasıl uygulanıyor olduğu açık değildir.
+Bu makaledeki kılavuzda, sıcak bir bekleme ortamının nasıl uygulandığı açıklanmaktadır. Bu tür bir ortamı desteklemek için ek yordamları izlemeniz gerekse de, bunu soğuk bekleme ortamına da uyarlayabilirsiniz. Bu makalede, etkin bekleme ortamının nasıl uygulandığı açıklanmaz.
 
-Olağanüstü durum kurtarma çözümleri hakkında daha fazla bilgi için bkz. [SharePoint 2013'te](/SharePoint/administration/high-availability-and-disaster-recovery-concepts) yüksek kullanılabilirlik ve olağanüstü durum kurtarma kavramları ve [SharePoint 2013](/SharePoint/administration/plan-for-disaster-recovery) için bir olağanüstü durum kurtarma stratejisi seçme.
+Olağanüstü durum kurtarma çözümleri hakkında daha fazla bilgi için bkz. [SharePoint 2013'te yüksek kullanılabilirlik ve olağanüstü durum kurtarma kavramları](/SharePoint/administration/high-availability-and-disaster-recovery-concepts) ve [SharePoint 2013 için olağanüstü durum kurtarma stratejisi seçme](/SharePoint/administration/plan-for-disaster-recovery).
 
 ## <a name="solution-description"></a>Çözüm açıklaması
 
-Acil durum kurtarma için sıcak bekleme çözümü aşağıdaki ortamı gerektirir:
+Hazır bekleyen olağanüstü durum kurtarma çözümü aşağıdaki ortamı gerektirir:
 
-- Şirket içi bir SharePoint üretim grubu
+- Şirket içi SharePoint üretim grubu
 
-- Azure'SharePoint kurtarma grubu
+- Azure'da kurtarma SharePoint grubu
 
 - İki ortam arasında siteden siteye VPN bağlantısı
 
-Aşağıdaki resimde bu üç öğenin gösterildiği yer almaktadır.
+Aşağıdaki şekilde bu üç öğe gösterilmektedir.
 
-**Şekil: Azure'daki bir sıcak bekleme çözümünün öğeleri**
+**Şekil: Azure'da sıcak bekleme çözümünün öğeleri**
 
-![Azure'da SharePoint bekleme çözümünün öğeleri.](../media/AZarch-AZWarmStndby.png)
+![Azure'da SharePoint sıcak bekleme çözümünün öğeleri.](../media/AZarch-AZWarmStndby.png)
 
-SQL Server Yedeklemeleri ve işlem günlüklerini Azure'daki kurtarma sunucu grubuna kopyalamak için Dağıtılmış Dosya Sistemi Çoğaltması (ANDR) ile günlük gönderimi işlemi kullanılır:
+Dağıtılmış Dosya Sistemi Çoğaltması (DFSR) ile SQL Server günlük gönderimi, veritabanı yedeklemelerini ve işlem günlüklerini Azure'daki kurtarma grubuna kopyalamak için kullanılır:
 
-- BUDTİr, günlükleri üretim ortamından kurtarma ortamına iletir. WAN senaryosunda, BULIR, günlükleri doğrudan Azure'daki ikincil sunucuya teslim etmekten daha verimlidir.
+- DFSR günlükleri üretim ortamından kurtarma ortamına aktarır. WAN senaryosunda DFSR, günlükleri doğrudan Azure'daki ikincil sunucuya göndermekten daha verimlidir.
 
-- Günlükler, Azure'SQL Server ortamındaki sistemlere yeniden oynatıldı.
+- Günlükler Azure'daki kurtarma ortamındaki SQL Server yeniden oynatılır.
 
-- Kurtarma alıştırması yapılana kadar, SharePoint gönderilen günlük dosyasını, kurtarma ortamındaki içerik veritabanlarına eklemezsiniz.
+- Bir kurtarma alıştırması gerçekleştirilene kadar günlükle gönderilen SharePoint içerik veritabanlarını kurtarma ortamına ekleyemezsiniz.
 
-Grubu kurtarmak için aşağıdaki adımları uygulayın:
+Grubu kurtarmak için aşağıdaki adımları gerçekleştirin:
 
-1. Günlük gönderimi durdurun.
+1. Günlük gönderimi durdurulsun.
 
-2. Birincil grup için trafik kabul etmeyi durdurun.
+2. Birincil sunucu grubuna gelen trafiği kabul etmeyi durdurun.
 
 3. Son işlem günlüklerini yeniden yürütme.
 
-4. İçerik veritabanlarını sunucu grubuyla birlikte ekleme.
+4. İçerik veritabanlarını grubuna ekleyin.
 
-5. Çoğaltılmış hizmet veritabanlarından hizmet uygulamalarını geri yükleme.
+5. Çoğaltılan hizmet veritabanlarından hizmet uygulamalarını geri yükleyin.
 
-6. Kurtarma sunucu alanına işaret etmek için Etki Alanı Adı Sistemi (DNS) kayıtlarını güncelleştirin.
+6. Etki Alanı Adı Sistemi (DNS) kayıtlarını kurtarma grubuna işaret etmek için güncelleştirin.
 
-7. Tam gezinmeye başlama.
+7. Tam gezinme başlatın.
 
-Canlı kurtarmanın sorunsuzca çalışmasını sağlamak için bu adımları düzenli olarak provanızı ve bunları belgelenizi öneririz. İçerik veritabanlarını eklemek ve hizmet uygulamalarını geri yüklemek biraz zaman alır ve genellikle bazı el ile yapılandırmalar gerektirir.
+Canlı kurtarmanızın sorunsuz bir şekilde çalıştığından emin olmak için bu adımları düzenli olarak provanızı ve belgelenizi öneririz. İçerik veritabanlarını eklemek ve hizmet uygulamalarını geri yüklemek biraz zaman alabilir ve genellikle el ile yapılandırma gerektirir.
 
-Kurtarma işlemi gerçekleştirildikten sonra, bu çözüm aşağıdaki tabloda listelenen öğeleri sağlar.
+Bir kurtarma gerçekleştirildikten sonra, bu çözüm aşağıdaki tabloda listelenen öğeleri sağlar.
 
 **Tablo: Çözüm kurtarma hedefleri**
 
 |Öğe|Açıklama|
 |---|---|
 |Siteler ve içerik|Siteler ve içerik kurtarma ortamında kullanılabilir.|
-|Yeni bir arama örneği|Bu sıcak bekleme çözümünde, arama veritabanlarından arama geri yüklendi değildir. Kurtarma grubu içinde yer alan arama bileşenleri, üretim grubuyla mümkün olduğunca benzer şekilde yapılandırılır. Siteler ve içerik geri yüklendikten sonra, arama dizinini yeniden oluşturma için tam gezinmeye başlandı. Sitelerin ve içeriğin kullanılabilir hale tamamlanması için gezinmeyi beklemeniz gerekmemektedir.|
-|Hizmetler|Veritabanlarında veri depolana hizmetler, günlük olarak gönderilen veritabanlarından geri yüklenir. Veritabanlarında veri depolamayan hizmetler basit bir şekilde çalışmaya başlamıştır. <br/> Veritabanlarına sahip tüm hizmetlerin geri yüklenebilir olması gerekir. Aşağıdaki hizmetlerin veritabanlarından geri yüklenemez ve yük devretme sonrasında başlatabilirsiniz: <br/> Kullanım ve Durum VeriSi Toplama <br/> Eyalet hizmeti <br/> Word otomasyonu <br/> Veritabanı kullanmayan diğer hizmetler|
+|Yeni bir arama örneği|Bu sıcak bekleme çözümünde arama, arama veritabanlarından geri yüklenmez. Kurtarma grubundaki arama bileşenleri, üretim grubuna mümkün olduğunca benzer şekilde yapılandırılır. Siteler ve içerik geri yüklendikten sonra, arama dizinini yeniden oluşturmak için tam gezinme başlatılır. Siteleri ve içeriği kullanılabilir hale getirmek için gezinmenin tamamlanmasını beklemeniz gerekmez.|
+|Hizmetleri|Verileri veritabanlarında depolayan hizmetler, günlükle gönderilen veritabanlarından geri yüklenir. Veritabanlarında veri depolamayan hizmetler basitçe başlatılır. <br/> Veritabanlarına sahip tüm hizmetlerin geri yüklenmesi gerekmez. Aşağıdaki hizmetlerin veritabanlarından geri yüklenmesi gerekmez ve yük devretmeden sonra başlatılabilir: <br/> Kullanım ve Sistem Durumu Veri Toplama <br/> Durum hizmeti <br/> Word otomasyonu <br/> Veritabanı kullanmayan diğer tüm hizmetler|
 
-Daha karmaşık kurtarma hedefleri için Microsoft Consulting Services (MCS) ile veya bir iş ortağıyla çalışabilirsiniz. Bunlar aşağıdaki tabloda özetlenmiştir.
+Daha karmaşık kurtarma hedeflerini ele almak için Microsoft Danışmanlık Hizmetleri (MCS) veya bir iş ortağıyla çalışabilirsiniz. Bunlar aşağıdaki tabloda özetlenir.
 
-**Tablo: MCS veya bir iş ortağı tarafından adreslenen diğer öğeler**
+**Tablo: MCS veya iş ortağı tarafından ele alınabilecek diğer öğeler**
 
 |Öğe|Açıklama|
 |---|---|
-|Özel grup çözümlerini eşitleme|İdeal olarak, kurtarma grubu yapılandırması üretim grubuyla aynıdır. Özel sunucu grubu çözümlerinin çoğaltılmış olup olmadığını ve iki ortamları eşitlenmiş durumda tutmak için bu işlemde olup olmadığını değerlendirmek üzere bir danışman veya iş ortağıyla çalışabilirsiniz.|
-|Şirket içi veri kaynaklarına bağlantılar|Yedek etki alanı denetleyicisi (İVB) bağlantıları ve arama içerik kaynakları gibi arka uç veri sistemlerine bağlantıları çoğaltmak pratik olmaz.|
-|Arama geri yükleme senaryoları|Kurumsal arama dağıtımları oldukça benzersiz ve karmaşık olduğundan, arama veritabanlarından geri yüklemek için daha fazla yatırım gerekir. Bir danışman veya iş ortağıyla birlikte, kuruma gereksinsin arama geri yükleme senaryolarını belirlemek ve uygulamak için çalış çalışıyoruz.|
+|Özel grup çözümlerini eşitleme|İdeal olarak, kurtarma grubu yapılandırması üretim grubuyla aynıdır. Özel grup çözümlerinin çoğaltılıp çoğaltılmadığını ve iki ortamı eşitlenmiş durumda tutma işleminin uygulanıp gerçekleştirilmediğini değerlendirmek için bir danışman veya iş ortağıyla çalışabilirsiniz.|
+|Şirket içi veri kaynaklarına bağlantılar|Yedekleme etki alanı denetleyicisi (İVB) bağlantıları ve arama içeriği kaynakları gibi arka uç veri sistemlerine bağlantıları çoğaltmak pratik olmayabilir.|
+|Geri yükleme senaryolarında arama|Kurumsal arama dağıtımları oldukça benzersiz ve karmaşık olma eğiliminde olduğundan, veritabanlarından aramayı geri yüklemek için daha fazla yatırım gerekir. Kuruluşunuzun gerektirebileceği arama geri yükleme senaryolarını belirlemek ve uygulamak için bir danışman veya iş ortağıyla çalışabilirsiniz.|
 
-Bu makalede sağlanan kılavuzda, şirket içi grubu zaten tasarlanmış ve dağıtılmış olduğu varsayılacaktır.
+Bu makalede sağlanan kılavuzda, şirket içi grubu zaten tasarlanmış ve dağıtılmış olduğu varsayılmaktadır.
 
 ## <a name="detailed-architecture"></a>Ayrıntılı mimari
 
-İdeal olarak, Azure'daki kurtarma grubu yapılandırması aşağıdakiler de dahil olmak üzere şirket içi üretim grubuyla aynıdır:
+İdeal olarak, Azure'daki kurtarma grubu yapılandırması, aşağıdakiler de dahil olmak üzere şirket içi üretim grubuyla aynıdır:
 
 - Sunucu rollerinin aynı gösterimi
 
@@ -142,213 +142,213 @@ Bu makalede sağlanan kılavuzda, şirket içi grubu zaten tasarlanmış ve dağ
 
 - Arama bileşenlerinin aynı yapılandırması
 
-Azure'daki ortam, üretim grubu için daha küçük bir sürüm olabilir. Yük devretme sonrasında kurtarma sunucu grubu ölçeğini ölçeklendirmeyi planlıyorsanız, başlangıçta her sunucu rolü türünün temsil olması önemlidir.
+Azure'daki ortam, üretim grubunun daha küçük bir sürümü olabilir. Yük devretmeden sonra kurtarma grubunun ölçeğini genişletmeyi planlıyorsanız, her sunucu rolü türünün başlangıçta temsil edilmesi önemlidir.
 
-Bazı yapılandırmalar yük devretme ortamında çoğaltmak pratik olmaz. Yük devretme grubu beklenen hizmet düzeyini sağladığından emin olmak için yük devretme yordamlarını ve ortamı test etmeye emin olun.
+Bazı yapılandırmaların yük devretme ortamında çoğaltılması pratik olmayabilir. Yük devretme kümesinin beklenen hizmet düzeyini sağladığından emin olmak için yük devretme yordamlarını ve ortamını test etmeye özen gösterin.
 
-Bu çözüm, bir veri grubu için belirli bir topoloji SharePoint değildir. Bu çözümün odak noktası, yük devretme grubu için Azure'i kullanmak ve iki ortam arasında günlük gönderimi ile DEPOLA'ya uygulamaktır.
+Bu çözüm, SharePoint grubu için belirli bir topolojiyi reçete etmez. Bu çözümün odak noktası, yük devretme grubu için Azure'ı kullanmak ve iki ortam arasında günlük gönderimi ve DFSR uygulamaktır.
 
 ### <a name="warm-standby-environments"></a>Sıcak bekleme ortamları
 
-Sıcak bir bekleme ortamında, Azure ortamındaki tüm sanal makineler çalışıyor. Ortam yük devretme alıştırması veya olayı için hazır.
+Sıcak bir bekleme ortamında, Azure ortamındaki tüm sanal makineler çalışır durumdadır. Ortam, yük devretme alıştırması veya olayı için hazırdır.
 
-Aşağıdaki resimde, şirket içi bir SharePoint sunucu grubuyla, sıcak bekleme ortamı olarak yapılandırılan Azure tabanlı bir SharePoint sunucu grubuyla olağanüstü durum kurtarma çözümü yer almaktadır.
+Aşağıdaki şekilde, şirket içi SharePoint grubundan sıcak bekleme ortamı olarak yapılandırılmış Azure tabanlı SharePoint grubuna olağanüstü durum kurtarma çözümü gösterilmektedir.
 
-**Şekil: Üretim grubu için topoloji ve önemli öğeler ve sıcak bir bekleme kurtarma grubu**
+**Şekil: Bir üretim grubunun ve sıcak bekleme kurtarma grubunun topolojisi ve temel öğeleri**
 
-![SharePoint grubu ve sıcak bir bekleme kurtarma grubu topolojisi.](../media/AZarch-AZWarmStndby.png)
+![bir SharePoint grubunun topolojisi ve sıcak bir bekleme kurtarma grubu.](../media/AZarch-AZWarmStndby.png)
 
 Bu diyagramda:
 
-- İki ortam yan yana resim göstermektedir: şirket içi depolama SharePoint ve Azure'daki sıcak bekleme grubu.
+- İki ortam yan yana gösterilir: şirket içi SharePoint grubu ve Azure'daki sıcak bekleme grubu.
 
-- Her ortamda bir dosya paylaşımı vardır.
+- Her ortam bir dosya paylaşımı içerir.
 
-- Her grup dört katman içerir. Yüksek kullanılabilirlik elde etmek için, her katman ön uç hizmetleri, dağıtılmış önbellek, arka uç hizmetleri ve veritabanları gibi belirli bir rol için aynı şekilde yapılandırılmış iki sunucu veya sanal makine içerir. Bu çizimde belirli bileşenlerin çağrılsı çok önemli değil. İki grup da aynı şekilde yapılandırılmıştır.
+- Her grup dört katman içerir. Yüksek kullanılabilirlik elde etmek için her katman ön uç hizmetleri, dağıtılmış önbellek, arka uç hizmetleri ve veritabanları gibi belirli bir rol için aynı şekilde yapılandırılmış iki sunucu veya sanal makine içerir. Bu çizimde belirli bileşenleri çağırmak önemli değildir. İki grup aynı şekilde yapılandırılır.
 
-- Dördüncü katman, veritabanı katmanıdır. Günlük gönderimi, şirket içi ortamdaki ikincil veritabanı sunucusundaki günlükleri aynı ortamdaki dosya paylaşımına kopyalamak için kullanılır.
+- Dördüncü katman, veritabanı katmanıdır. Günlük gönderimi, günlükleri şirket içi ortamdaki ikincil veritabanı sunucusundan aynı ortamdaki dosya paylaşımına kopyalamak için kullanılır.
 
-- BELGEYİ, şirket içi ortamdaki dosya paylaşımından Azure ortamında dosya paylaşımına dosyaları kopyalar.
+- DFSR, şirket içi ortamdaki dosya paylaşımındaki dosyaları Azure ortamındaki dosya paylaşımına kopyalar.
 
-- Günlük gönderimi, Azure ortamındaki dosya paylaşımından günlükleri kurtarma ortamındaki SQL Server AlwaysOn kullanılabilirlik grubunda birincil kopyaya yeniden oynatır.
+- Günlük gönderimi, günlükleri Azure ortamındaki dosya paylaşımından kurtarma ortamındaki SQL Server AlwaysOn kullanılabilirlik grubundaki birincil çoğaltmaya yeniden yürüter.
 
 ### <a name="cold-standby-environments"></a>Soğuk bekleme ortamları
 
-Soğuk bekleme ortamında, SharePoint sunucu grubu sanal makineleri kapatabilirsiniz. (Her sanal makinenin etki alanıyla eşitleymesi için, bazen sanal makinelere her iki haftada bir veya ayda bir gibi başlamalarını öneririz.) Günlük gönderimi ve LOGR'ya sürekli işlemlerin sağlanmasına yardımcı olmak için, Azure kurtarma ortamında aşağıdaki sanal makineler çalışıyor kalmalıdır:
+Soğuk bekleme ortamında, SharePoint grubu sanal makinelerinin çoğu kapatılabilir. (Her sanal makinenin etki alanıyla eşitlenebilmesi için sanal makineleri zaman zaman başlatmanızı (örneğin, iki haftada bir veya ayda bir) öneririz.) Günlük gönderme ve DFSR işlemlerinin sürekli olarak gerçekleştirilmesini sağlamak için Azure kurtarma ortamında aşağıdaki sanal makinelerin çalışır durumda kalması gerekir:
 
 - Dosya paylaşımı
 
 - Birincil veritabanı sunucusu
 
-- Etki Alanı Hizmetleri ve DNS'Windows Server Active Directory en az bir sanal makine
+- Etki Alanı Hizmetleri ve DNS Windows Server Active Directory çalıştıran en az bir sanal makine
 
-Aşağıdaki resimde, dosyanın sanal makinesi ve birincil veritabanı sanal makinesi'nin çalıştır SharePoint bir Azure yük devretme ortamı yer alır. Diğer tüm SharePoint makineleri durdurulur. Otomatik olarak çalışan sanal makine Windows Server Active Directory DNS gösterilmez.
+Aşağıdaki şekilde, dosya paylaşımı sanal makinesinin ve birincil SharePoint veritabanı sanal makinesinin çalıştığı bir Azure yük devretme ortamı gösterilmektedir. Diğer tüm SharePoint sanal makineler durdurulur. Windows Server Active Directory ve DNS çalıştıran sanal makine gösterilmez.
 
-**Şekil: Çalışan sanal makinelerle soğuk bekleme kurtarma grubu**
+**Şekil: Çalışan sanal makineler ile soğuk bekleme kurtarma grubu**
 
-![Azure'daki SharePoint bekleme modundaki çözümün öğeleri.](../media/AZarch-AZColdStndby.png)
+![Azure'da SharePoint soğuk bekleme çözümünün öğeleri.](../media/AZarch-AZColdStndby.png)
 
-Soğuk bekleme ortamına yük devretmeden sonra, tüm sanal makineler başlatıldı ve veritabanı sunucularının yüksek kullanılabilirliğini elde etmek için kullanılan yöntem SQL Server AlwaysOn kullanılabilirlik grupları gibi yapılandırmalıdır.
+Soğuk bekleme ortamına yük devretme işleminden sonra tüm sanal makineler başlatılır ve veritabanı sunucularının yüksek kullanılabilirliğini elde etme yöntemi, SQL Server AlwaysOn kullanılabilirlik grupları gibi yapılandırılmalıdır.
 
-Birden çok depolama grubu uygulanırsa (veritabanları birden çok veritabanına SQL Server yüksek kullanılabilirlik kümesine yayılmışsa), depolama grubuyla ilişkilendirilmiş günlükleri kabul etmek için her depolama grubunun birincil veritabanı çalışıyor olmalıdır.
+Birden çok depolama grubu uygulanırsa (veritabanları birden fazla SQL Server yüksek kullanılabilirlik kümesine yayılır), depolama grubuyla ilişkili günlükleri kabul etmek için her depolama grubu için birincil veritabanının çalışıyor olması gerekir.
 
 ### <a name="skills-and-experience"></a>Beceriler ve deneyim
 
-Bu olağanüstü kurtarma çözümünde birden fazla teknoloji kullanılır. Bu teknolojilerin beklendiği gibi etkileşimli çalışmanıza yardımcı olmak için, şirket içi ve Azure ortamındaki her bileşenin doğru bir şekilde yüklenmiş ve yapılandırılmış olması gerekir. Bu çözümü ayarleyen kişi veya ekibin, aşağıdaki makalelerde açıklanan teknolojilerle ilgili güçlü çalışma bilgilerine ve el altında becerilere sahip olması önerilir:
+Bu olağanüstü durum kurtarma çözümünde birden çok teknoloji kullanılır. Bu teknolojilerin beklendiği gibi etkileşimde bulunmasına yardımcı olmak için şirket içi ve Azure ortamındaki her bileşenin doğru şekilde yüklenmesi ve yapılandırılması gerekir. Bu çözümü ayarlayan kişi veya ekibin, aşağıdaki makalelerde açıklanan teknolojilerle ilgili güçlü bir çalışma bilgisi ve uygulamalı becerilere sahip olması önerilir:
 
-- [Dağıtılmış Dosya Sistemi (BUMS) Çoğaltma Hizmetleri](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127250(v=ws.11))
+- [Dağıtılmış Dosya Sistemi (DFS) Çoğaltma Hizmetleri](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127250(v=ws.11))
 
-- [Windows Sunucu Yük Devretme Kümesi 'ni (WSFC) SQL Server](/sql/sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server)
+- [SQL Server ile sunucu yük devretme kümelemesi (WSFC) Windows](/sql/sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server)
 
 - [AlwaysOn Kullanılabilirlik Grupları (SQL Server)](/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server)
 
-- [Veritabanı Veritabanlarını Yedekleme ve SQL Server Geri Yükleme](/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases)
+- [SQL Server Veritabanlarını Yedekleme ve Geri Yükleme](/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases)
 
 - [SharePoint Server 2013 yükleme ve grup dağıtımı](/SharePoint/install/installation-and-configuration-overview)
 
 - [Microsoft Azure](/azure/)
 
-Son olarak, bu teknolojilerle ilişkili görevleri otomatikleştirmek için kullanabileceğiniz komut dosyası becerilerini öneririz. Bu çözümde açıklanan tüm görevleri tamamlamak için kullanılabilir kullanıcı arabirimlerini kullanabilirsiniz. Bununla birlikte, el ile yapılan bir yaklaşım zaman alıcı ve hataya neden olabilir ve tutarsız sonuçlar verir.
+Son olarak, bu teknolojilerle ilişkili görevleri otomatikleştirmek için kullanabileceğiniz betik oluşturma becerilerini öneririz. Bu çözümde açıklanan tüm görevleri tamamlamak için kullanılabilir kullanıcı arabirimlerini kullanmak mümkündür. Ancak el ile uygulanan bir yaklaşım zaman alıcı ve hataya yatkın olabilir ve tutarsız sonuçlar verir.
 
-Azure, Windows PowerShell, Windows PowerShell Server ve Azure SQL Server SharePoint için Windows PowerShell kitaplıkları da vardır. Bu, olağanüstü durum kurtarma SQL yapılandırma ve koruma sürenizi azaltmaya yardımcı olan Güvenlik Güvenlik 365'i unutmayın.
+Windows PowerShell ek olarak, SQL Server, SharePoint Server ve Azure için Windows PowerShell kitaplıklar da vardır. Olağanüstü durum kurtarma ortamınızı yapılandırma ve koruma süresini azaltmaya yardımcı olabilecek T-SQL'ı unutmayın.
 
 ## <a name="disaster-recovery-roadmap"></a>Olağanüstü durum kurtarma yol haritası
 
-![Olağanüstü bir kurtarma yol SharePoint için görsel temsil.](../media/Azure-DRroadmap.png)
+![SharePoint olağanüstü durum kurtarma yol haritasının görsel gösterimi.](../media/Azure-DRroadmap.png)
 
-Bu yol haritasında, üretimde dağıtılan bir SharePoint Server 2013 sunucu grubu zaten olduğu varsayıldı.
+Bu yol haritası, üretimde dağıtılmış bir SharePoint Server 2013 grubuna sahip olduğunuzu varsayar.
 
 **Tablo: Olağanüstü durum kurtarma yol haritası**
 
 |Aşama|Açıklama|
 |---|---|
-|Aşama 1|Olağanüstü durum kurtarma ortamını tasarlar.|
-|Aşama 2|Azure sanal ağı ve VPN bağlantısını oluşturun.|
-|Aşama 3|Active Directory Windows Etki Alanı Adı Hizmetlerini Azure sanal ağına dağıtın.|
-|Aşama 4|Azure'SharePoint kurtarma sunucu grubu dağıtımı.|
-|Aşama 5|Kümeler arasında DEPOLA'yi ayarlayın.|
-|Aşama 6|Kurtarma grubu için günlük gönderimi ayarlama.|
-|Aşama 7|Yük devretme ve kurtarma çözümlerini doğrulama. Bu, aşağıdaki yordamları ve teknolojileri içerir: <br/> Günlük gönderimi durdurun. <br/> Yedekleri geri yükleyin. <br/> İçerikte gezinme. <br/> Hizmetleri kurtarabilirsiniz. <br/> DNS kayıtlarını yönetin.|
+|1. Aşama|Olağanüstü durum kurtarma ortamını tasarlayın.|
+|2. Aşama|Azure sanal ağını ve VPN bağlantısını oluşturun.|
+|3. Aşama|Windows Active Directory ve Etki Alanı Ad Hizmetleri'ni Azure sanal ağına dağıtın.|
+|4. Aşama|Azure'da SharePoint kurtarma grubu dağıtın.|
+|5. Aşama|Grupların arasında DFSR'yi ayarlayın.|
+|6. Aşama|Kurtarma grubuna günlük gönderimini ayarlayın.|
+|7. Aşama|Yük devretme ve kurtarma çözümlerini doğrulayın. Bu, aşağıdaki yordamları ve teknolojileri içerir: <br/> Günlük gönderimi durdurulsun. <br/> Yedekleri geri yükleyin. <br/> Gezinme içeriği. <br/> Hizmetleri kurtarma. <br/> DNS kayıtlarını yönetme.|
 
-## <a name="phase-1-design-the-disaster-recovery-environment"></a>Aşama 1: Olağanüstü durum kurtarma ortamını tasarlama
+## <a name="phase-1-design-the-disaster-recovery-environment"></a>1. Aşama: Olağanüstü durum kurtarma ortamını tasarlama
 
-SharePoint [2013 için Microsoft Azure](microsoft-azure-architectures-for-sharepoint-2013.md) Mimarileri'ne bakarak, acil durum kurtarma ortamı da içinde olmak üzere acil durum kurtarma ortamını SharePoint kullanın. Tasarım işlemini başlatmak için [Azure Visio'SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=392554) Acil Durum Kurtarma Çözümü dosyasındaki grafikleri kullanabilirsiniz. Azure ortamında herhangi bir çalışmaya başlamadan önce ortamın tamamını tasarlamanız önerilir.
+SharePoint kurtarma grubu da dahil olmak üzere olağanüstü durum kurtarma ortamını tasarlamak [için SharePoint 2013 için Microsoft Azure Mimarileri'ndeki](microsoft-azure-architectures-for-sharepoint-2013.md) yönergeleri kullanın. Tasarım işlemini başlatmak için [Azure Visio dosyasındaki SharePoint Olağanüstü Durum Kurtarma Çözümü'ndeki](https://go.microsoft.com/fwlink/p/?LinkId=392554) grafikleri kullanabilirsiniz. Azure ortamında herhangi bir çalışmaya başlamadan önce ortamın tamamını tasarlamanızı öneririz.
 
-[SharePoint 2013 için Microsoft Azure Architectures'da sağlanan sanal](microsoft-azure-architectures-for-sharepoint-2013.md) ağ, VPN bağlantısı, Active Directory ve SharePoint sunucu grubu tasarımında sağlanan kılavuzun yanı sıra, Azure ortamına dosya paylaşımı rolü eklemeye de emin olun.
+[SharePoint 2013 için Microsoft Azure Mimarileri'nde](microsoft-azure-architectures-for-sharepoint-2013.md) sanal ağı, VPN bağlantısını, Active Directory'yi ve SharePoint grubunu tasarlama yönergelerine ek olarak, Azure ortamına bir dosya paylaşımı rolü eklediğinizden emin olun.
 
-Bir olağanüstü durum kurtarma çözümünde günlük gönderimi desteklemek için, veritabanı rollerinin bulunduğu alt ağa bir dosya paylaşım sanal makinesi eklenir. Dosya paylaşımı, SQL Server AlwaysOn kullanılabilirlik grubunda Düğüm Çoğunluğu'SQL Server düğümünü de sağlar. Bu, AlwaysOn kullanılabilirlik gruplarında SharePoint standart bir SQL Server grubu için önerilen yapılandırmadır.
+Olağanüstü durum kurtarma çözümünde günlük gönderimini desteklemek için veritabanı rollerinin bulunduğu alt ağa bir dosya paylaşımı sanal makinesi eklenir. Dosya paylaşımı, SQL Server AlwaysOn kullanılabilirlik grubu için düğüm çoğunluğunun üçüncü düğümü olarak da görev alır. Bu, SQL Server AlwaysOn kullanılabilirlik gruplarını kullanan standart bir SharePoint grubu için önerilen yapılandırmadır.
 
 > [!NOTE]
-> bir SQL Server AlwaysOn kullanılabilirlik grubuna katılmak için veritabanının önkoşullarını gözden geçirmek önemlidir. Daha fazla bilgi için Bkz[. AlwaysOn Kullanılabilirlik Grupları için Öneriler, Kısıtlamalar ve Önkoşullar](/sql/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability).
+> Veritabanının SQL Server AlwaysOn kullanılabilirlik grubuna katılması için önkoşulları gözden geçirmek önemlidir. Daha fazla bilgi için bkz. [AlwaysOn Kullanılabilirlik Grupları için Önkoşullar, Kısıtlamalar ve Öneriler](/sql/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability).
 
 **Şekil: Olağanüstü durum kurtarma çözümü için kullanılan dosya sunucusunun yerleşimi**
 
-![Veritabanı sunucu rollerini içeren aynı bulut hizmetine eklenmiş bir dosya SharePoint sanal makine gösterir.](../media/AZenv-FSforDFSRandWSFC.png)
+![SharePoint veritabanı sunucusu rollerini içeren aynı bulut hizmetine eklenen bir dosya paylaşımı VM'sini gösterir.](../media/AZenv-FSforDFSRandWSFC.png)
 
-Bu diyagramda, dosya paylaşımı sanal makinesi, veritabanı sunucu rollerini içeren Azure'da aynı alt ağa eklenir. Dosya paylaşımı sanal makinesi, kullanıcı rolleri gibi diğer sunucu rolleriyle bir kullanılabilirlik kümesine SQL Server.
+Bu diyagramda, Azure'da veritabanı sunucusu rollerini içeren aynı alt ağa bir dosya paylaşımı sanal makinesi eklenir. Dosya paylaşımı sanal makinesini SQL Server rolleri gibi diğer sunucu rolleriyle bir kullanılabilirlik kümesine eklemeyin.
 
-Günlüklerin yüksek kullanılabilirliği konusunda endişeleriniz varsa, Azure Blob Depolama Hizmeti ile yedekleme ve geri yükleme SQL Server [kullanarak farklı bir yaklaşım benimseyebilirsiniz](/sql/relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service). Bu, Azure'da günlükleri doğrudan bir blob depolama URL'sinde kaydeden yeni bir özelliktir. Bu çözüm, bu özelliğin kullanımıyla ilgili rehberlik içermez.
+Günlüklerin yüksek kullanılabilirliği konusunda endişe duyuyorsanız, [Azure Blob Depolama Hizmeti ile SQL Server yedekleme ve geri yükleme](/sql/relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service) kullanarak farklı bir yaklaşım benimsemeyi göz önünde bulundurun. Bu, Azure'da günlükleri doğrudan blob depolama URL'sine kaydeden yeni bir özelliktir. Bu çözüm, bu özelliği kullanma hakkında rehberlik içermez.
 
-Kurtarma grubu tasarlarken, başarılı bir olağanüstü durum kurtarma ortamının kurtarmak istediğiniz üretim ortamını doğru bir şekilde yansıtdığını unutmayın. Kurtarma grubu tasarımı, dağıtımı ve testi için, kurtarma grubu boyutu en önemli şey değildir. Grup ölçeği, iş gereksinimlerine göre kuruluştan kuruluşa değişiklik sağlar. Kısa bir kesinti için veya performans ve kapasite talepleri grubu ölçeklendirmeniz gerekene kadar, ölçeği aşağı doğru bir grup kullanmak mümkün olabilir.
+Kurtarma grubu tasarlarken, başarılı bir olağanüstü durum kurtarma ortamının kurtarmak istediğiniz üretim grubuna doğru yansıttığını unutmayın. Kurtarma grubunun boyutu, kurtarma grubunun tasarımında, dağıtımında ve testinde en önemli şey değildir. Grup ölçeği, iş gereksinimlerine göre kuruluştan kuruluşa değişir. Ölçeği azaltılmış bir grubu kısa bir kesinti için veya performans ve kapasite talepleri grubu ölçeklendirmenizi gerektirene kadar kullanmak mümkün olabilir.
 
-Kurtarma sunucu çiftini, hizmet düzeyi sözleşmeniz (SLA) gereksinimlerinizi karşılayacak ve işletmenizi desteklemek için gereken işlevleri sağlamak üzere üretim grubuyla mümkün olduğunca aynı şekilde yapılandırabilirsiniz. Olağanüstü durum kurtarma ortamı tasarlarken, üretim ortamınız için değişiklik yönetim sürecinize de bakın. Kurtarma ortamını üretim ortamıyla aynı zaman aralığında güncelleştirerek, değişiklik yönetim sürecini kurtarma ortamına genişletmenizi öneririz. Değişiklik yönetimi işleminin bir parçası olarak, grup yapılandırmanız, uygulamalarınız ve kullanıcılarınız için ayrıntılı envanteri korumanızı öneririz.
+Kurtarma grubu, hizmet düzeyi sözleşmesi (SLA) gereksinimlerinizi karşılayacak ve işinizi desteklemek için ihtiyacınız olan işlevselliği sağlayacak şekilde üretim grubuyla mümkün olduğunca aynı şekilde yapılandırın. Olağanüstü durum kurtarma ortamını tasarlarken, üretim ortamınız için değişiklik yönetimi sürecinize de bakın. Üretim ortamıyla aynı aralıkta kurtarma ortamını güncelleştirerek değişiklik yönetimi işlemini kurtarma ortamına genişletmenizi öneririz. Değişiklik yönetimi sürecinin bir parçası olarak grup yapılandırmanızın, uygulamalarınızın ve kullanıcılarınızın ayrıntılı envanterini korumanızı öneririz.
 
-## <a name="phase-2-create-the-azure-virtual-network-and-vpn-connection"></a>Aşama 2: Azure sanal ağ ve VPN bağlantısı oluşturma
+## <a name="phase-2-create-the-azure-virtual-network-and-vpn-connection"></a>2. Aşama: Azure sanal ağını ve VPN bağlantısını oluşturma
 
-[Bağlan ağdan bir Microsoft Azure](connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md) ağına bağlanıyorsanız, Azure'da sanal ağı planlama ve dağıtma ve VPN bağlantısını oluşturma hakkında bilgi gösterir. Aşağıdaki yordamları tamamlamak için konu başlığında yer alan yönergeleri izleyin:
+[Microsoft Azure bir sanal ağa şirket içi ağ Bağlan](connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md), sanal ağı Azure'da nasıl planlayıp dağıtabileceğinizi ve VPN bağlantısını nasıl oluşturabileceğinizi gösterir. Aşağıdaki yordamları tamamlamak için konudaki yönergeleri izleyin:
 
-- Bağlantı sunucusunun özel IP adresi Sanal Ağ.
+- Sanal Ağ özel IP adresi alanını planlayın.
 
-- Proje için yönlendirme altyapısı değişikliklerini Sanal Ağ.
+- Sanal Ağ için yönlendirme altyapısı değişikliklerini planlayın.
 
-- Şirket içi VPN cihazından gelen ve bu cihazdan gelen trafik için güvenlik duvarı kurallarını plan edin.
+- Şirket içi VPN cihazına gelen ve bu cihazdan gelen trafik için güvenlik duvarı kuralları planlayın.
 
 - Azure'da şirket içi sanal ağı oluşturun.
 
-- Şirket içi ağınız ve şirket içi ağınız arasında yönlendirmeyi Sanal Ağ.
+- Şirket içi ağınız ile Sanal Ağ arasında yönlendirmeyi yapılandırın.
 
-## <a name="phase-3-deploy-active-directory-and-domain-name-services-to-the-azure-virtual-network"></a>Aşama 3: Active Directory ve Etki Alanı Adı Hizmetlerini Azure sanal ağına dağıtma
+## <a name="phase-3-deploy-active-directory-and-domain-name-services-to-the-azure-virtual-network"></a>3. Aşama: Active Directory ve Etki Alanı Ad Hizmetleri'ni Azure sanal ağına dağıtma
 
-Bu aşama, [Microsoft Azure 2013'te](microsoft-azure-architectures-for-sharepoint-2013.md) Microsoft Azure Mimarileri'de açıklandığı gibi hem Windows Server Active Directory hem de DNS'i SharePoint Sanal Ağ'e dağıtmayı içerir ve aşağıdaki şekilde gösterildiği gibi.
+Bu aşama, SharePoint [2013 için Microsoft Azure Mimarileri'nde](microsoft-azure-architectures-for-sharepoint-2013.md) açıklandığı gibi ve aşağıdaki şekilde gösterildiği gibi karma bir senaryoda Sanal Ağ hem Windows Server Active Directory hem de DNS dağıtmayı içerir.
 
 **Şekil: Karma Active Directory etki alanı yapılandırması**
 
-![Azure sanal ağına dağıtılan iki sanal makine ve SharePoint Grubu alt ağ, çoğaltma etki alanı denetleyicileri ve DNS sunucularıdır.](../media/AZarch-HyADdomainConfig.png)
+![Azure sanal ağına dağıtılan iki sanal makine ve SharePoint Grubu alt ağı çoğaltma etki alanı denetleyicileri ve DNS sunucularıdır.](../media/AZarch-HyADdomainConfig.png)
 
-Çizimde, aynı alt ağ için iki sanal makine dağıtılır. Bu sanal makinelerde her biri iki rol barındırabilirsiniz: Active Directory ve DNS.
+Çizimde, aynı alt ağa iki sanal makine dağıtılır. Bu sanal makinelerin her ikisi de iki rol barındırmaktadır: Active Directory ve DNS.
 
-Azure'da Active Directory'yi dağıtmadan önce, Azure [Windows Server Active Directory'de Dizin Dağıtımı Sanal Makineler](/windows-server/identity/ad-ds/introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100). Bu yönergeler, çözümünüz için farklı bir mimariye mi yoksa farklı yapılandırma ayarlarına mı ihtiyacınız olduğunu belirlemenize yardımcı olur.
+Azure'da Active Directory'yi dağıtmadan önce [Azure Sanal Makineler'da Windows Server Active Directory Dağıtma Yönergeleri'ne](/windows-server/identity/ad-ds/introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100) bakın. Bu yönergeler, çözümünüz için farklı bir mimariye mi yoksa farklı yapılandırma ayarlarına mı ihtiyacınız olduğunu belirlemenize yardımcı olur.
 
-Azure'da etki alanı denetleyicisini ayarlama hakkında ayrıntılı kılavuz için bkz. [Azure Sanal](/windows-server/identity/ad-ds/introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100) Ağlarında Active Directory Etki Alanı Denetleyicisi Yükleme.
+Azure'da etki alanı denetleyicisi ayarlama hakkında ayrıntılı yönergeler için bkz. [Azure Sanal Ağlarında Çoğaltma Active Directory Etki Alanı Denetleyicisi Yükleme](/windows-server/identity/ad-ds/introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100).
 
-Bu aşamadan önce, sanal makineleri diğer sunuculara Sanal Ağ. Active Directory ve DNS'yi barındırmak için sanal makineler büyük olasılıkla çözüm için ihtiyacınız olan en büyük sanal makine değildir. Bu sanal makineleri dağıtmadan önce, makinenizin en büyük sanal makinenini Sanal Ağ. Bu, çözüme ihtiyacınız olan en büyük boyutu sağlayan Azure'daki bir etiketin üzerinde olmasını sağlamaya yardımcı olur. Şu anda bu sanal makinesi yapılandırmaya gerek yok. Bunu oluşturun ve bir yana bırakın. Bunu yapmak zorunda değilsanız, daha sonra daha büyük sanal makineler oluşturmada bir sınırlamayla çalışabilirsiniz; bu, makalenin yazıldığı sırada soruna neden olur.
+Bu aşamadan önce sanal makineleri Sanal Ağ dağıtmadınız. Active Directory ve DNS barındırmak için sanal makineler büyük olasılıkla çözüm için ihtiyacınız olan en büyük sanal makineler değildir. Bu sanal makineleri dağıtmadan önce, önce Sanal Ağ kullanmayı planladığınız en büyük sanal makineyi oluşturun. Bu, çözümünüzün Azure'da ihtiyacınız olan en büyük boyuta izin veren bir etikete sahip olmasını sağlamaya yardımcı olur. Şu anda bu sanal makineyi yapılandırmanız gerekmez. Sadece oluşturun ve bir kenara bırakın. Bunu yapmazsanız, daha sonra daha büyük sanal makineler oluşturmaya çalıştığınızda bir sınırlamayla karşılaşabilirsiniz. Bu, bu makalenin yazıldığı sırada bir sorundu.
 
-## <a name="phase-4-deploy-the-sharepoint-recovery-farm-in-azure"></a>Aşama 4: Azure'SharePoint kurtarma sunucu grubu dağıtma
+## <a name="phase-4-deploy-the-sharepoint-recovery-farm-in-azure"></a>4. Aşama: Azure'da SharePoint kurtarma grubu dağıtma
 
-Tasarım SharePoint göre Sanal Ağ grubu grubu dağıtın. Azure'da daha fazla rol [dağıtmadan önce SharePoint 2013 Azure Altyapı](/previous-versions/azure/dn275958(v=azure.100)) Hizmetleri'SharePoint planlamayı gözden geçirmek yararlı olabilir.
+SharePoint grubu tasarım planlarınıza göre Sanal Ağ dağıtın. Azure'da SharePoint rolleri dağıtmadan önce [Azure Altyapı Hizmetleri'nde SharePoint 2013 planlama'nın](/previous-versions/azure/dn275958(v=azure.100)) gözden geçirilmesi yararlı olabilir.
 
-Kavram kanıtı ortamımızı inşaarak öğrendiklerimizi aşağıdaki uygulamaları göz önünde bulundurabilirsiniz:
+Kavram kanıtı ortamımızı oluşturarak öğrendiğimiz aşağıdaki uygulamaları göz önünde bulundurun:
 
-- Azure portal PowerShell kullanarak sanal makineler oluşturun.
+- Azure portal veya PowerShell kullanarak sanal makineler oluşturun.
 
-- Azure ve Hyper-V dinamik belleği desteklemez. Bunun performans ve kapasite planlarınızı faktöre dönüştür olduğundan emin olun.
+- Azure ve Hyper-V dinamik belleği desteklemez. Bunun performans ve kapasite planlarınıza dahil olduğundan emin olun.
 
-- Sanal makineleri, sanal makine oturum açmanın kendi üzerinden değil, Azure arabirimi üzerinden yeniden başlatın. Azure arabirimini kullanmak daha iyi çalışır ve daha öngörülebilirdir.
+- Sanal makineleri, sanal makinenin oturum açma işleminden değil Azure arabiriminden yeniden başlatın. Azure arabirimini kullanmak daha iyi çalışır ve daha tahmin edilebilirdir.
 
-- Maliyetleri kaydetmek için sanal bir makineyi kapatmak için Azure arabirimini kullanın. Sanal makine oturum açma sesini kapatırsanız, ücretler tahakkuk edene kadar devam eder.
+- Maliyetlerden tasarruf etmek için bir sanal makineyi kapatmak istiyorsanız Azure arabirimini kullanın. Sanal makine oturum açma işlemini kapatırsanız ücretler tahakkuk etmeye devam eder.
 
 - Sanal makineler için bir adlandırma kuralı kullanın.
 
-- Sanal makinelerin dağıtıldı olduğu veri merkezi konumuyla ilgili dikkat seçin.
+- Sanal makinelerin dağıtıldığı veri merkezi konumuna dikkat edin.
 
-- Azure'daki otomatik ölçeklendirme özelliği, bu roller için SharePoint desteklenmiyor.
+- Azure'daki otomatik ölçeklendirme özelliği SharePoint rolleri için desteklenmez.
 
-- Geri yüklenecek sunucu grubu içinde bulunan site koleksiyonları gibi öğeleri yapılandırmayın.
+- Site koleksiyonları gibi geri yüklenecek öğeleri grup içinde yapılandırmayın.
 
-## <a name="phase-5-set-up-dfsr-between-the-farms"></a>Aşama 5: KÜMELER arasında DEPOLA'yi ayarlama
+## <a name="phase-5-set-up-dfsr-between-the-farms"></a>5. Aşama: Gruplarda DFSR'yi ayarlama
 
-MMCR kullanarak dosya çoğaltmasını ayarlamak için DNS Yönetimi ek bileşenini kullanın. Bununla birlikte, AŞAĞıDAKILER GIBI) ÖNCE, ŞIRKET içi dosya sunucunuzda ve Azure dosya sunucunuzda oturum açın ve HIZMETI WINDOWS Windows.
+DFSR kullanarak dosya çoğaltmayı ayarlamak için DNS Yönetimi ek bileşenini kullanın. Ancak DFSR kurulumundan önce şirket içi dosya sunucunuzda ve Azure dosya sunucunuzda oturum açın ve hizmeti Windows'de etkinleştirin.
 
-Pano Sunucu Yöneticisi aşağıdaki adımları tamamlayın:
+Sunucu Yöneticisi Panosu'ndan aşağıdaki adımları tamamlayın:
 
-- Yerel sunucuyu yapılandırma.
+- Yerel sunucuyu yapılandırın.
 
-- Rol ve **Özellik Ekleme Sihirbazı'nı başlatın**.
+- **Rol ve Özellik Ekleme Sihirbazı'nı** başlatın.
 
-- Dosya ve **Depolama düğümünü** açın.
+- **Dosya ve Depolama Hizmetleri** düğümünü açın.
 
-- **YERKİ Ad Alanları ve** **DEPO çoğaltması'ni seçin**.
+- **DFS Ad Alanları** ve **DFS çoğaltma'ya** tıklayın.
 
-- **Sihirbazın** adımlarını tamamlamak için Sonraki'ne tıklayın.
+- Sihirbaz adımlarını tamamlamak için **İleri'ye** tıklayın.
 
-Aşağıdaki tablo, YALNıZ12 başvuru makalelerinin ve blog gönderilerinin bağlantılarını sağlar.
+Aşağıdaki tabloda DFSR başvuru makalelerine ve blog gönderilerine bağlantılar sağlanmaktadır.
 
-**Tablo: BUR için başvuru makaleleri**
+**Tablo: DFSR için başvuru makaleleri**
 
 |Başlık|Açıklama|
 |---|---|
-|[Çoğaltma](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770278(v=ws.11))|Çoğaltma bağlantıları içeren BIRMYA Yönetim TechNet konusu|
-|[HID Çoğaltması: Sağ Kalma Kılavuzu](https://go.microsoft.com/fwlink/p/?LinkId=392737)|EDNİ bilgilerine bağlantılar içeren wiki|
-|[YINELEME Çoğaltması: Sık Sorulan Sorular](/previous-versions/windows/it-pro/windows-server-2003/cc773238(v=ws.10))|HIÇ YINELEME Çoğaltması TechNet konusu|
-|[Her iki postayı da aynı şekilde ifade edebilirsiniz.](/archive/blogs/josebda/)|Microsoft'ta Dosya Sunucusu ekibinde Program Yöneticisi tarafından yazılan blog|
-|[Microsoft Depolama - Dosya Dolabı Blogu'nda En Iyi Ekip](https://go.microsoft.com/fwlink/p/?LinkId=392740)|Windows Server'da dosya hizmetleri ve depolama özellikleri hakkında blog|
+|[Çoğaltma](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770278(v=ws.11))|Çoğaltma bağlantıları içeren DFS Yönetimi TechNet konusu|
+|[DFS Çoğaltma: Hayatta Kalma Kılavuzu](https://go.microsoft.com/fwlink/p/?LinkId=392737)|DFS bilgilerine bağlantılar içeren wiki|
+|[DFS Çoğaltma: Sık Sorulan Sorular](/previous-versions/windows/it-pro/windows-server-2003/cc773238(v=ws.10))|DFS Çoğaltma TechNet konusu|
+|[Jose Barreto'nun Blogu](/archive/blogs/josebda/)|Microsoft'taki Dosya Sunucusu ekibinde Sorumlu Program Yöneticisi tarafından yazılan blog|
+|[Microsoft'taki Depolama Ekibi - Dosya Dolabı Blogu](https://go.microsoft.com/fwlink/p/?LinkId=392740)|Windows Server'daki dosya hizmetleri ve depolama özellikleri hakkında blog|
 
-## <a name="phase-6-set-up-log-shipping-to-the-recovery-farm"></a>Aşama 6: Kurtarma grubu için günlük gönderimi ayarlama
+## <a name="phase-6-set-up-log-shipping-to-the-recovery-farm"></a>6. Aşama: Kurtarma grubuna günlük gönderimini ayarlama
 
-Günlük gönderimi, bu ortamda olağanüstü durum kurtarmayı ayarlamanın kritik bileşenidir. Birincil veritabanı sunucu örneğinden ikinci bir veritabanı sunucu örneğine veritabanları için işlem günlüğü dosyalarını otomatik olarak göndermek üzere günlük gönderimini kullanabilirsiniz. Günlük gönderimi ayarlamak için bkz. [SharePoint 2013'te günlük gönderimi yapılandırma](/sharepoint/administration/configure-log-shipping).
+Günlük gönderimi, bu ortamda olağanüstü durum kurtarmayı ayarlamak için kritik bir bileşendir. Birincil veritabanı sunucusu örneğinden ikincil veritabanı sunucusu örneğine veritabanları için işlem günlüğü dosyalarını otomatik olarak göndermek için günlük gönderimi kullanabilirsiniz. Günlük gönderimini ayarlamak için bkz. [SharePoint 2013'te günlük gönderimini yapılandırma](/sharepoint/administration/configure-log-shipping).
 
 > [!IMPORTANT]
-> SharePoint Server'da günlük gönderim desteği belirli veritabanlarıyla sınırlıdır. Daha fazla bilgi için bkz. Veritabanları için desteklenen yüksek kullanılabilirlik ve olağanüstü durum [SharePoint seçenekleri (SharePoint 2013)](/SharePoint/administration/supported-high-availability-and-disaster-recovery-options-for-sharepoint-databas).
+> SharePoint Server'da günlük gönderim desteği belirli veritabanlarıyla sınırlıdır. Daha fazla bilgi için bkz[. SharePoint veritabanları için desteklenen yüksek kullanılabilirlik ve olağanüstü durum kurtarma seçenekleri (SharePoint 2013)](/SharePoint/administration/supported-high-availability-and-disaster-recovery-options-for-sharepoint-databas).
 
-## <a name="phase-7-validate-failover-and-recovery"></a>Aşama 7: Yük devretme ve kurtarmayı doğrulama
+## <a name="phase-7-validate-failover-and-recovery"></a>7. Aşama: Yük devretmeyi ve kurtarmayı doğrulama
 
-Bu son aşama, olağanüstü durum kurtarma çözümünün planlandığı gibi çalıştığını doğrulamaktır. Bunu yapmak için, üretim grubu kapatan ve kurtarma grubu'nu yeni bir grup olarak başlatan bir yük devretme olayı oluşturun. Yük devretme senaryosunu el ile veya betikleri kullanarak başlatabilirsiniz.
+Bu son aşamanın amacı olağanüstü durum kurtarma çözümünün planlandığı gibi çalıştığını doğrulamaktır. Bunu yapmak için üretim grubu kapatan ve kurtarma grubu yerine başlatan bir yük devretme olayı oluşturun. Yük devretme senaryolarını el ile veya betikleri kullanarak başlatabilirsiniz.
 
-İlk adım, grup hizmetleri veya içerik için gelen kullanıcı isteklerini durdurmaktır. DNS girdilerini devre dışı bırakarak veya ön uç web sunucularını kapatarak bunu kullanabilirsiniz. Grup "aşağı" olduktan sonra, kurtarma grubu için başarısız olabilir.
+İlk adım, grup hizmetleri veya içerik için gelen kullanıcı isteklerini durdurmaktır. Bunu, DNS girdilerini devre dışı bırakarak veya ön uç web sunucularını kapatarak yapabilirsiniz. Grup "devre dışı" olduktan sonra kurtarma grubuna yük devredebilirsiniz.
 
-### <a name="stop-log-shipping"></a>Günlük gönderimi durdurma
+### <a name="stop-log-shipping"></a>Günlük gönderimi durdurulsun
 
-Grup kurtarma işlemi öncesinde günlük gönderimi durdurmanız gerekir. Önce Azure'da ikincil sunucuda günlük gönderimini durdurun ve ardından bunu şirket içi birincil sunucuda durdurun. önce ikincil sunucuda ve sonra da birincil sunucuda günlük gönderimini durdurmak için aşağıdaki betiği kullanın. Betikte yer alan veritabanı adları, ortamınıza bağlı olarak farklı olabilir.
+Grup kurtarmadan önce günlük gönderimi durdurmanız gerekir. Önce Azure'daki ikincil sunucuda günlük gönderimini durdurun ve ardından şirket içi birincil sunucuda durdurun. Önce ikincil sunucuda, ardından birincil sunucuda günlük gönderimini durdurmak için aşağıdaki betiği kullanın. Betikteki veritabanı adları ortamınıza bağlı olarak farklı olabilir.
 
 ```
 -- This script removes log shipping from the server.
@@ -384,87 +384,87 @@ from msdb.dbo.log_shipping_monitor_primary prm INNER JOIN msdb.dbo.log_shipping_
 where prm.primary_database in ( ' + @PriDB + ' )')
 ```
 
-### <a name="restore-the-backups"></a>Yedekleri geri yükleme
+### <a name="restore-the-backups"></a>Yedeklemeleri geri yükleme
 
-Yedeklerin oluşturulduk sırayla geri yüklemeleri gerekir. Belirli bir işlem günlüğü yedeklemesini geri yükleymeden önce, atlanmamış işlemleri geri almadan (yani,  `WITH NORECOVERY`):
+Yedeklemeler oluşturuldukları sırayla geri yüklenmelidir. Belirli bir işlem günlüğü yedeklemesini geri yükleyebilmeniz için önce kaydedilmemiş işlemleri (yani kullanarak  `WITH NORECOVERY`) geri almadan aşağıdaki önceki yedeklemeleri geri yüklemeniz gerekir:
 
-- Tam veritabanı yedeklemesi ve son farklılık yedeklemesi - Herhangi biri varsa, söz konusu işlem günlüğü yedeğine alınan bu yedekleri geri yükleyin. En yeni tam veya farklılık veritabanı yedeklemesi oluşturulmadan önce, veritabanı tam kurtarma modeli veya toplu olarak kaydedilmiş kurtarma modeli kullanmıştı.
+- Tam veritabanı yedeklemesi ve son değişiklik yedeklemesi - Varsa, belirli bir işlem günlüğü yedeğinden önce alınan bu yedeklemeleri geri yükleyin. En son tam veya değişiklik veritabanı yedeklemesi oluşturulmadan önce veritabanı tam kurtarma modelini veya toplu günlüğe kaydedilen kurtarma modelini kullanıyordu.
 
-- Tüm işlem günlüğü yedeklemeleri - Tam veritabanı yedeklemeden veya farklılıklı yedeklemeden (birini geri yükledikten sonra) ve belirli işlem günlüğü yedeklemeden önce alınan işlem günlüğü yedeklemelerini geri yükleyin. Günlük yedekleri, oluşturulduk sırayla ve günlük zincirinde boşluklar olmadan uygulanmalıdır.
+- Tüm işlem günlüğü yedeklemeleri - Tam veritabanı yedeklemesi veya değişiklik yedeğinden sonra (geri yüklerseniz) ve belirli bir işlem günlüğü yedeğinden önce alınan tüm işlem günlüğü yedeklemelerini geri yükleyin. Günlük yedeklemeleri, günlük zincirinde herhangi bir boşluk olmadan oluşturuldukları sırada uygulanmalıdır.
 
-İkincil sunucuya, sitelerin işlen böyle bir şekilde içerik veritabanını kurtarmak için, kurtarma öncesinde tüm veritabanı bağlantılarını kaldırın. Veritabanını geri yüklemek için aşağıdaki son SQL çalıştırın.
+sitelerin işlenmesi için ikincil sunucudaki içerik veritabanını kurtarmak için kurtarmadan önce tüm veritabanı bağlantılarını kaldırın. Veritabanını geri yüklemek için aşağıdaki SQL deyimini çalıştırın.
 
 ```SQL
 restore database WSS_Content with recovery
 ```
 
 > [!IMPORTANT]
-> T-SQL kullanıyorken, belirsizlik ortadan kaldırmak için her RESTORE deyiminde **WITH NORECOVERY** veya **WITH RECOVERY** belirtin; betikler yazarken bu çok önemlidir. Tam ve farklı yedeklemeler geri yüklendikten sonra, işlem günlükleri farklı bir SQL Server Management Studio. Ayrıca, günlük gönderimi zaten durdurulurken içerik veritabanı bekleme durumunda olduğundan, durumu tam erişime geçirmeniz gerekir.
+> T-SQL'ı açıkça kullandığınızda, belirsizliği ortadan kaldırmak için her RESTORE deyiminde **WITH NORECOVERY** veya **WITH RECOVERY** belirtin; betikler yazılırken bu çok önemlidir. Tam ve değişiklik yedeklemeleri geri yüklendikten sonra işlem günlükleri SQL Server Management Studio geri yüklenebilir. Ayrıca günlük gönderimi zaten durdurulduğu için içerik veritabanı bekleme durumunda olduğundan, durumu tam erişim olarak değiştirmeniz gerekir.
 
-Başka SQL Server Management Studio veritabanına sağ tıklayın,  > **WSS_Content** SevlerSyaları'nın üzerine gelin ve ardından İşlem Günlüğü'ne **tıklayın (tam** yedeklemeyi geri yüklemedıysanız, bu kullanılamaz). Daha fazla bilgi için bkz[. İşlem Günlüğü Yedeğini (Yedekle) SQL Server](/sql/relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server).
+SQL Server Management Studio **WSS_Content veritabanına sağ** tıklayın, **TasksRestore'un** >  üzerine gelin ve **İşlem Günlüğü'ne** tıklayın (tam yedeklemeyi geri yüklemediyseniz bu kullanılamaz). Daha fazla bilgi için bkz[. İşlem Günlüğü Yedeklemesini (SQL Server) kaydetme](/sql/relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server).
 
 ### <a name="crawl-the-content-source"></a>İçerik kaynağında gezinme
 
-Arama Hizmeti'ne geri yüklemek için her içerik kaynağında tam gezinmeye başlamalıdır. Şirket içi grupla ilgili arama önerileri gibi bazı çözümleme bilgilerini kaybettiğimizi unutmayın. Tam gezinmelere başlamadan önce, Windows PowerShell **restore-SPEnterpriseSearchServiceApplication** cmdlet'ini kullanın ve günlükte sevk edilen ve çoğaltılmış Arama Yönetimi veritabanını (varsayılan) **Search_Service__DB_\<GUID\>**. Bu cmdlet arama yapılandırması, şema, yönetilen özellikler, kurallar ve kaynaklar verir ve diğer bileşenlerin varsayılan bir kümesi oluşturur.
+Arama Hizmetini geri yüklemek için her içerik kaynağı için tam gezinme başlatmanız gerekir. Şirket içi grubundan arama önerileri gibi bazı analiz bilgilerini kaybettiğinizi unutmayın. Tüm gezinmeleri başlatmadan önce **Restore-SPEnterpriseSearchServiceApplication** Windows PowerShell cmdlet'ini kullanın ve Search_Service__DB_ günlük tarafından gönderilen ve çoğaltılan Arama Yönetimi veritabanını **\<GUID\>belirtin.** Bu cmdlet arama yapılandırması, şema, yönetilen özellikler, kurallar ve kaynaklar sağlar ve diğer bileşenlerin varsayılan kümesini oluşturur.
 
-Tam gezinmeye başlamak için aşağıdaki adımları tamamlayın:
+Tam gezinme başlatmak için aşağıdaki adımları tamamlayın:
 
-1. SharePoint 2013 Yönetim Merkezi'nde **Application ManagementService** >  **ApplicationsManage** >  hizmet uygulamaları'na gidin ve gezinmek istediğiniz Search Service uygulamasına tıklayın.
+1. SharePoint 2013 Yönetim Merkezi'nde **, Uygulama** **YönetimiHizmet** >  uygulamalarını  > **yönet'e** gidin ve gezinmek istediğiniz Arama Hizmeti uygulamasına tıklayın.
 
-2. Arama Yönetimi **sayfasında İçerik** **Kaynakları'ne** tıklayın, istediğiniz içerik kaynağının üzerine gelin, oka tıklayın ve sonra da Tam Gezinmeyi **Başlat'a tıklayın**.
+2. **Arama Yönetimi** sayfasında **İçerik Kaynakları'na** tıklayın, istediğiniz içerik kaynağının üzerine gelin, oka tıklayın ve ardından **Tam Gezinmeyi Başlat'a** tıklayın.
 
 ### <a name="recover-farm-services"></a>Grup hizmetlerini kurtarma
 
-Aşağıdaki tabloda, günlük olarak sevk edilen veritabanları olan hizmetlerin, veritabanlarının olduğu, ancak günlük gönderimi ile geri yüklemenin önerilmez olduğu hizmetler ve veritabanları olmayan hizmetlerin nasıl kurtarılmaları önerilir.
+Aşağıdaki tabloda, günlükle gönderilen veritabanlarına sahip hizmetlerin, veritabanları olan ancak günlük gönderimi ile geri yüklenmesi önerilmeyen hizmetlerin ve veritabanı olmayan hizmetlerin nasıl kurtarılması gösterilmektedir.
 
 > [!IMPORTANT]
-> Şirket içi veritabanı SharePoint Azure ortamına geri yükleniyorsa, Azure'a henüz SharePoint olmayan hiçbir hizmet kurtarılamaz.
+> Şirket içi SharePoint veritabanını Azure ortamına geri yüklemek, Azure'a el ile yüklemediğiniz SharePoint hizmetlerini kurtarmaz.
 
 **Tablo: Hizmet uygulaması veritabanı başvurusu**
 
-|Bu hizmetleri günlük olarak gönderilen veritabanlarından geri yükleme|Bu hizmetlerin veritabanları vardır, ancak veritabanlarını geri yüklemeden bu hizmetleri başlatmanızı öneririz|Bu hizmetler veritabanlarında veri depolamaz; yük devretme sonrasında bu hizmetleri başlatma|
+|Bu hizmetleri günlükle gönderilen veritabanlarından geri yükleme|Bu hizmetlerin veritabanları vardır, ancak veritabanlarını geri yüklemeden bu hizmetleri başlatmanızı öneririz|Bu hizmetler verileri veritabanlarında depolamaz; yük devretmeden sonra bu hizmetleri başlatın|
 |---|---|---|
-|Makine Çevirisi Hizmeti <br/> Yönetilen Meta Veri Hizmeti <br/> Güvenli Depolama Hizmeti <br/> Kullanıcı Profili. (Yalnızca Profil ve Sosyal Etiketleme veritabanlarını destekler. Eşitleme veritabanı desteklenmiyor.) <br/> Microsoft SharePoint Foundation Abonelik Ayarlar Hizmeti|Kullanım ve Durum VeriSi Toplama <br/> Eyalet hizmeti <br/> Word otomasyonu|Excel Services <br/> PerformancePoint Hizmetleri <br/> PowerPoint Dönüştürme <br/> Visio Grafik Hizmeti <br/> Çalışma Yönetimi|
+|Makine Çevirisi Hizmeti <br/> Yönetilen Meta Veri Hizmeti <br/> Güvenli Depolama Hizmeti <br/> Kullanıcı Profili. (Yalnızca Profil ve Sosyal Etiketleme veritabanları desteklenir. Eşitleme veritabanı desteklenmiyor.) <br/> Microsoft SharePoint Foundation Aboneliği Ayarlar Hizmeti|Kullanım ve Sistem Durumu Veri Toplama <br/> Durum hizmeti <br/> Word otomasyonu|Excel Services <br/> PerformancePoint Hizmetleri <br/> PowerPoint Dönüştürme <br/> Visio Grafik Hizmeti <br/> İş Yönetimi|
 
-Aşağıdaki örnekte, Yönetilen Meta Veri hizmetinin bir veritabanından nasıl geri yük kaynağı olduğu gösterir.
+Aşağıdaki örnekte, Yönetilen Meta Veri hizmetinin veritabanından nasıl geri yükleneceği gösterilmektedir.
 
-Bu, var olan Managed_Metadata_DB kullanır. Bu veritabanı günlük gönderildi, ancak ikincil grup üzerinde etkin bir hizmet uygulaması yok, bu nedenle hizmet uygulaması yerine gerçekleştikten sonra bağlı olması gerekir.
+Bu, mevcut Managed_Metadata_DB veritabanını kullanır. Bu veritabanı günlük olarak gönderilir, ancak ikincil grup üzerinde etkin bir hizmet uygulaması yoktur, bu nedenle hizmet uygulaması uygulandıktan sonra bağlanması gerekir.
 
-İlk olarak ,  `New-SPMetadataServiceApplication`kullanın ve geri  `DatabaseName` yüklenen veritabanının adıyla anahtarı belirtin.
+İlk olarak kullanın  `New-SPMetadataServiceApplication`ve geri yüklenen veritabanının  `DatabaseName` adıyla anahtarı belirtin.
 
-Ardından, ikincil sunucuda yeni Yönetilen Meta Veri Hizmeti Uygulaması'nda aşağıdaki gibi yapılandırabilirsiniz:
+Ardından, ikincil sunucuda yeni Yönetilen Meta Veri Hizmeti Uygulamasını aşağıdaki gibi yapılandırın:
 
 - Ad: Yönetilen Meta Veri Hizmeti
 
-- Veritabanı sunucusu: Sevk edilen işlem günlüğünden gelen veritabanı adı
+- Veritabanı sunucusu: Gönderilen işlem günlüğünden veritabanı adı
 
 - Veritabanı adı: Managed_Metadata_DB
 
-- Uygulama havuzu: SharePoint Uygulamaları
+- Uygulama havuzu: hizmet uygulamalarını SharePoint
 
 ### <a name="manage-dns-records"></a>DNS kayıtlarını yönetme
 
-KENDI sunucu grubunıza işaret etmek için DNS kayıtlarını el SharePoint gerekir.
+SharePoint grubunuzu işaret etmek için DNS kayıtlarını el ile oluşturmanız gerekir.
 
-Birden çok ön uç web sunucularının olduğu çoğu durumda, istekleri sunucu grubu önündeki web ön uç sunucuları arasında dağıtmak için, Windows Server 2012'te Ağ Yükü Dengeleme özelliğiden veya bir donanım yük dengeleyiciden yararlanmak anlamlıdır. Ağ yükü dengeleme, web ön uç sunucularından biri başarısız olduğunda istekleri diğer sunuculara dağıtarak riski azaltmaya da yardımcı olabilir.
+Birden çok ön uç web sunucunuzun olduğu çoğu durumda, Windows Server 2012 ağ yükü dengeleme özelliğinden veya istekleri grubunuzdaki web ön uç sunucuları arasında dağıtmak için bir donanım yük dengeleyiciden yararlanmak mantıklıdır. Ağ yükü dengeleme, web ön uç sunucularınızdan biri başarısız olursa istekleri diğer sunuculara dağıtarak riski azaltmaya da yardımcı olabilir.
 
-Normalde, ağ yük dengelemeyi ayarsanız, kümenize tek bir IP adresi atanır. Ardından, ağınız için kümeyi alan DNS sağlayıcısında bir DNS ana bilgisayar kaydı oluşturun. (Bu proje için, şirket içi veri merkezi hatası durumunda azure'a bir DNS sunucusu veririz.) Örneğin, Active Directory'de DNS Yöneticisi'nde yük  `https://sharepoint.contoso.com`dengelemeli kümenizin IP adresini ifade etmek için bir DNS kaydı oluşturabilirsiniz.
+Genellikle, ağ yükü dengelemeyi ayarladığınızda kümenize tek bir IP adresi atanır. Ardından, ağınız için DNS sağlayıcısında kümeye işaret eden bir DNS ana bilgisayar kaydı oluşturursunuz. (Bu proje için, şirket içi veri merkezi hatası durumunda dayanıklılık için Azure'a bir DNS sunucusu yerleştireceğiz.) Örneğin, Active Directory'deki DNS Yöneticisi'nde, örneğin adlı  `https://sharepoint.contoso.com`, yük dengeli kümenizin IP adresine işaret eden bir DNS kaydı oluşturabilirsiniz.
 
-SharePoint sunucu grubunıza dış erişim için, istemcilerin intranet'te kullanan URL'sini (örneğin, `https://sharepoint.contoso.com`) güvenlik duvarınıza bağlı bir dış IP adresini kullanan bir dış DNS sunucusunda ana bilgisayar kaydı oluşturabilirsiniz. (Bu örneği kullanarak en iyi yöntem, bölünmüş DNS'yi ayararak iç DNS `contoso.com` sunucusunun yetkili olduğunu ve DNS isteklerini dış DNS sunucunuza yönlendirmek yerine istekleri doğrudan SharePoint grup kümesine yönlendirecek şekilde ayarlamaktır.) Daha sonra dış IP adresini şirket içi kümenizin iç IP adresiyle eşleyenin, böylece istemciler araylıklarının kaynaklarını bulur.
+SharePoint grubunuza dış erişim için, istemcilerin intranetinizde kullandığı URL'ye (örneğin, `https://sharepoint.contoso.com`) sahip bir dış DNS sunucusunda güvenlik duvarınızdaki bir dış IP adresine işaret eden bir konak kaydı oluşturabilirsiniz. (Bu örneği kullanarak en iyi yöntem, iç DNS sunucusunun dns isteklerini dış DNS sunucunuza yönlendirmek yerine doğrudan SharePoint grubu kümesi için yetkili olması ve istekleri doğrudan yönlendirmesi için `contoso.com` bölünmüş DNS ayarlamaktır.) Ardından, istemcilerin aradıkları kaynakları bulması için dış IP adresini şirket içi kümenizin iç IP adresiyle eşleyebilirsiniz.
 
-Buradan, bir kaç farklı olağanüstü durum kurtarma senaryosuyla yüz yüzersiniz:
+Buradan birkaç farklı olağanüstü durum kurtarma senaryosuyla karşılaşabilirsiniz:
 
- **Örnek senaryo: Şirket içi SharePoint, şirket içi sunucu grubu donanım hatası nedeniyle SharePoint kullanılamaz.** Bu durumda, Azure SharePoint sunucu grubu üzerinde yük devretme adımlarını tamamlandıktan sonra, aynı şirket içi sunucu grubu için olduğu gibi, kurtarma SharePoint sunucu grubu web-ön uç sunucularında ağ yükü dengelemeyi yapılandırabilirsiniz. Ardından, iç DNS sağlayıcınızda ana bilgisayar kaydını kurtarma grubu küme IP adresine işaret edecek şekilde yönlendirebilirsiniz. İstemcilerde önbelleğe alınan DNS kayıtlarının yenilenmesi ve kurtarma sunucu grubu üzerine işaretlenmesi biraz zaman al götürebilirsiniz.
+ **Örnek senaryo: Şirket içi SharePoint grubu, şirket içi SharePoint grubunda donanım hatası nedeniyle kullanılamıyor.** Bu durumda, Azure SharePoint grubuna yük devretme adımlarını tamamladıktan sonra, şirket içi grupta yaptığınız gibi kurtarma SharePoint grubundaki web ön uç sunucularında ağ yükü dengelemeyi yapılandırabilirsiniz. Ardından, iç DNS sağlayıcınızdaki konak kaydını kurtarma grubu küme IP adresine işaret etmek için yeniden yönlendirebilirsiniz. İstemcilerde önbelleğe alınmış DNS kayıtlarının yenilenmesi ve kurtarma grubuna işaret etmelerinin biraz zaman alabileceğini unutmayın.
 
- **Örnek senaryo: Şirket içi veri merkezi tamamen kaybolur.** Bu senaryo, fire veya sel gibi doğal bir olağanüstü durum nedeniyle oluşabilir. Bu durumda, bir kuruluş için, büyük olasılıkla başka bir bölgede ve Kendi dizin hizmetleri ve DNS'i olan Azure alt ağlarında barındırılan ikincil bir veri merkeziniz olabilir. Önceki olağanüstü durum senaryolarında olduğu gibi, iç ve dış DNS kayıtlarınızı Azure SharePoint sunucu SharePoint yönlendirin. BIR kez daha, DNS kaydı yayılmasının biraz zaman al etki alanı olduğunu unutmayın.
+ **Örnek senaryo: Şirket içi veri merkezi tamamen kaybolur.** Bu senaryo, yangın veya sel gibi doğal bir afet nedeniyle ortaya çıkabilir. Bu durumda, bir kuruluş için büyük olasılıkla başka bir bölgede barındırılan ikincil bir veri merkezinizin yanı sıra kendi dizin hizmetleri ve DNS'sine sahip Azure alt ağınız olacaktır. Önceki olağanüstü durum senaryosunda olduğu gibi, iç ve dış DNS kayıtlarınızı Azure SharePoint grubuna yönlendirecek şekilde yeniden yönlendirebilirsiniz. Dns kaydı yayma işleminin biraz zaman alabileceğini de unutmayın.
 
-Ana bilgisayar adı alan site koleksiyonu mimarisi ve dağıtımında [(SharePoint 2013)](/SharePoint/administration/host-named-site-collection-architecture-and-deployment) önerilen şekilde ana bilgisayar adı alan site koleksiyonları kullanıyorsanız, benzersiz DNS adlarla (örneğin, `https://sales.contoso.com` `https://marketing.contoso.com`ve ) SharePoint sunucu grubu içinde aynı web uygulaması tarafından barındırılan birkaç site koleksiyonunuz olabilir. Bu durumda, küme IP adresinize işaret her site koleksiyonu için DNS kayıtları oluşturabilirsiniz. Bir istek web SharePoint ön uç sunucularına ulaştığında, her bir isteği uygun site koleksiyonuna yönlendirmeyi ele alıyor.
+Konak adlı site [koleksiyonu mimarisi ve dağıtımında (SharePoint 2013)](/SharePoint/administration/host-named-site-collection-architecture-and-deployment) önerilen ana bilgisayar adlı site koleksiyonları kullanıyorsanız, SharePoint grubunuzda aynı web uygulaması tarafından barındırılan ve benzersiz DNS adlarıyla (örneğin, `https://sales.contoso.com` ve `https://marketing.contoso.com`) birkaç site koleksiyonunuz olabilir. Bu durumda, küme IP adresinize işaret eden her site koleksiyonu için DNS kayıtları oluşturabilirsiniz. bir istek SharePoint web ön uç sunucularınıza ulaştıktan sonra, her isteği uygun site koleksiyonuna yönlendirmeyi işler.
 
 ## <a name="microsoft-proof-of-concept-environment"></a>Microsoft kavram kanıtı ortamı
 
-Bu çözüm için bir kavram kanıtı ortamı tasarladık ve test ettik. Test ortamımızın tasarım hedefi, müşteri ortamında SharePoint bir grup grubu dağıtmak ve kurtarmaktır. Birkaç varsayım yaptık, ancak hiçbir özelleştirme yapmadan, grup için ilk kullanımdan önce tüm işlevlerin sağlan gerektiğini biliyorum. Topoloji, alan ve ürün grubundan gelen en iyi uygulama kılavuzu kullanılarak yüksek kullanılabilirlik için tasarlanmıştır.
+Bu çözüm için kavram kanıtı ortamı tasarladık ve test ettik. Test ortamımızın tasarım hedefi, müşteri ortamında bulabileceğimiz bir SharePoint grubu dağıtmak ve kurtarmaktı. Birkaç varsayımda bulunduk, ancak çiftliğin herhangi bir özelleştirme olmadan kullanıma hazır tüm işlevleri sağlaması gerektiğini biliyorduk. Topoloji, alandan ve ürün grubundan en iyi yöntem kılavuzu kullanılarak yüksek kullanılabilirlik için tasarlanmıştır.
 
-Aşağıdaki tabloda, şirket içi test ortamı için oluşturduğumız ve yapılandırılan Hyper-V sanal makineleri açıklandı.
+Aşağıdaki tabloda, şirket içi test ortamı için oluşturduğumuz ve yapılandırdığımız Hyper-V sanal makineleri açıklanmaktadır.
 
 **Tablo: Şirket içi test için sanal makineler**
 
@@ -472,28 +472,28 @@ Aşağıdaki tabloda, şirket içi test ortamı için oluşturduğumız ve yapı
 |---|---|---|
 |DC1|Active Directory ile etki alanı denetleyicisi.|İki işlemci <br/> 512 MB ile 4 GB RAM arasında <br/> 1 x 127 GB sabit disk|
 |RRAS|Yönlendirme ve Uzaktan Erişim Hizmeti (RRAS) rolüyle yapılandırılmış sunucu.|İki işlemci <br/> 2-8 GB RAM <br/> 1 x 127 GB sabit disk|
-|FS1|Yedekler için paylaşımların ve BUR'nin bitiş noktasının olduğu dosya sunucusu.|Dört işlemci <br/> 2-12 GB RAM <br/> 1 x 127 GB sabit disk <br/> 1 x 1 TB sabit disk (SAN) <br/> 1 x 750 GB sabit disk|
+|FS1|Yedekler için paylaşımları ve DFSR için bir bitiş noktası olan dosya sunucusu.|Dört işlemci <br/> 2-12 GB RAM <br/> 1 x 127 GB sabit disk <br/> 1 x 1 TB sabit disk (SAN) <br/> 1 x 750 GB sabit disk|
 |SP-WFE1, SP-WFE2|Ön uç web sunucuları.|Dört işlemci <br/> 16 GB RAM|
 |SP-APP1, SP-APP2, SP-APP3|Uygulama sunucuları.|Dört işlemci <br/> 2-16 GB RAM|
-|SP-SQL-HA1, SP-SQL-HA2|SQL Server 2012 AlwaysOn kullanılabilirlik gruplarıyla yapılandırılan veritabanı sunucuları. Bu yapılandırmada birincil ve ikincil SQL olarak SP-SQL-HA1 ve SP-SQL-HA2 kullanılabilir.|Dört işlemci <br/> 2-16 GB RAM|
+|SP-SQL-HA1, SP-SQL-HA2|Yüksek kullanılabilirlik sağlamak için SQL Server 2012 AlwaysOn kullanılabilirlik gruplarıyla yapılandırılmış veritabanı sunucuları. Bu yapılandırmada birincil ve ikincil çoğaltmalar olarak SP-SQL-HA1 ve SP-SQL-HA2 kullanılır.|Dört işlemci <br/> 2-16 GB RAM|
 
-Aşağıdaki tabloda, şirket içi test ortamı için ön uç web ve uygulama sunucuları için oluşturduğumız ve yapılandırmışmız Hyper-V sanal makinelerinin sürücü yapılandırmaları açık almaktadır.
+Aşağıdaki tabloda, şirket içi test ortamı için ön uç web ve uygulama sunucuları için oluşturduğumuz ve yapılandırdığımız Hyper-V sanal makineleri için sürücü yapılandırmaları açıklanmaktadır.
 
 **Tablo: Şirket içi test için Ön Uç Web ve Uygulama sunucuları için sanal makine sürücüsü gereksinimleri**
 
-|Sürücü harfi|Boyut|Dizin adı|Yol|
+|Sürücü harfi|Boyutu|Dizin adı|Yol|
 |---|---|---|---|
-|C|80|Sistem sürücüsü|\<DriveLetter\>:\\Program Dosyaları\\ Microsoft SQL Server\\|
-|E|80|Günlük sürücü (40 GB)|\<DriveLetter\>:\\Program Files\\ Microsoft SQL Server\\ MSSQL10_50.MSSQLSERVERMSSQLDATA\\\\|
+|C|80|Sistem sürücüsü|\<DriveLetter\>:\\Program Files\\ Microsoft SQL Server\\|
+|E|80|Günlük sürücüsü (40 GB)|\<DriveLetter\>:\\Program Files\\ Microsoft SQL Server\\ MSSQL10_50.MSSQLSERVERMSSQLDATA\\\\|
 |F|80|Sayfa (36 GB)|\<DriveLetter\>:\\Program Files\\ Microsoft SQL Server\\ MSSQLDATA\\|
 
-Aşağıdaki tabloda, oluşturulan ve şirket içi veritabanı sunucuları olarak hizmet verecek şekilde yapılandırılan Hyper-V sanal makinelerinin sürücü yapılandırmaları açık almaktadır. Veritabanı **Altyapısı Yapılandırması sayfasında** , aşağıdaki tabloda **gösterilen ayarları** ayarlamak ve onaylamak için Veri Dizinleri sekmesine erişin.
+Aşağıdaki tabloda, şirket içi veritabanı sunucuları olarak kullanılmak üzere oluşturulan ve yapılandırılan Hyper-V sanal makineleri için sürücü yapılandırmaları açıklanmaktadır. **Veritabanı Altyapısı Yapılandırması** sayfasında, aşağıdaki tabloda gösterilen ayarları ayarlamak ve onaylamak için **Veri Dizinleri** sekmesine erişin.
 
 **Tablo: Şirket içi test için veritabanı sunucusu için sanal makine sürücüsü gereksinimleri**
 
-|Sürücü harfi|Boyut|Dizin adı|Yol|
+|Sürücü harfi|Boyutu|Dizin adı|Yol|
 |---|---|---|---|
-|C|80|Veri kök dizini|\<DriveLetter\>:\\Program Dosyaları\\ Microsoft SQL Server\\|
+|C|80|Veri kök dizini|\<DriveLetter\>:\\Program Files\\ Microsoft SQL Server\\|
 |E|500|Kullanıcı veritabanı dizini|\<DriveLetter\>:\\Program Files\\ Microsoft SQL Server\\ MSSQL10_50.MSSQLSERVERMSSQLDATA\\\\|
 |F|500|Kullanıcı veritabanı günlük dizini|\<DriveLetter\>:\\Program Files\\ Microsoft SQL Server\\ MSSQL10_50.MSSQLSERVERMSSQLDATA\\\\|
 |G|500|Temp DB dizini|\<DriveLetter\>:\\Program Files\\ Microsoft SQL Server\\ MSSQL10_50.MSSQLSERVERMSSQLDATA\\\\|
@@ -501,137 +501,137 @@ Aşağıdaki tabloda, oluşturulan ve şirket içi veritabanı sunucuları olara
 
 ### <a name="setting-up-the-test-environment"></a>Test ortamını ayarlama
 
-Farklı dağıtım aşamaları sırasında, test ekibi normalde önce şirket içi mimari üzerinde, sonra da ilgili Azure ortamında çalıştı. Bu, ev için üretim gruplarının zaten çalışan olduğu genel gerçek dünya durumlarını yansıtıyor. Daha da önemlisi, geçerli üretim iş yükünü, kapasiteyi ve tipik performansı biliyor olmasıdır. İş gereksinimlerini karşıy acil durum kurtarma modeli yapılandırmaya ek olarak, en düşük hizmet düzeyini sunmak için kurtarma grubu sunucularını da boyutla karşılamanız gerekir. Soğuk veya sıcak bir bekleme ortamında, kurtarma grubu normalde üretim grubundan daha küçüktür. Kurtarma grubu kararlı ve üretimde olduktan sonra, grup iş yükü gereksinimlerini karşılamak için ölçeklendirildi ve ölçeklendirildi.
+Farklı dağıtım aşamaları sırasında, test ekibi genellikle önce şirket içi mimaride, ardından ilgili Azure ortamında çalışırdı. Bu, şirket içi üretim çiftliklerinin zaten çalışmakta olduğu genel gerçek dünya durumlarını yansıtır. Daha da önemlisi, geçerli üretim iş yükünü, kapasitesini ve tipik performansı bilmeniz gerekir. İş gereksinimlerini karşılayabilen bir olağanüstü durum kurtarma modeli oluşturmaya ek olarak, kurtarma grubu sunucularını minimum hizmet düzeyi sunmak için boyutlandırmanız gerekir. Soğuk veya sıcak bekleme ortamında kurtarma grubu genellikle bir üretim grubundan daha küçüktür. Kurtarma grubu kararlı ve üretimde olduktan sonra, iş yükü gereksinimlerini karşılamak için grup ölçeği artırılabilir ve genişletilebilir.
 
-Test ortamımızı şu üç aşamada dağıttık:
+Test ortamımızı aşağıdaki üç aşamada dağıttık:
 
 - Karma altyapıyı ayarlama
 
 - Sunucuları sağlama
 
-- Grup SharePoint dağıtma
+- SharePoint gruplarını dağıtma
 
 #### <a name="set-up-the-hybrid-infrastructure"></a>Karma altyapıyı ayarlama
 
-Bu aşama, şirket içi grup için ve Azure'daki kurtarma grubu için bir etki alanı ortamı ayarlamayı da dahil eder. Test ekibi, Active Directory'i yapılandırmayla ilişkilendirilmiş normal görevlere ek olarak, iki ortam arasında bir yönlendirme çözümü ve bir VPN bağlantısı uygulamaya başladı.
+Bu aşama, şirket içi grubu ve Azure'daki kurtarma grubu için bir etki alanı ortamı ayarlamayı içerir. Test ekibi, Active Directory'yi yapılandırmayla ilişkili normal görevlere ek olarak bir yönlendirme çözümü ve iki ortam arasında vpn bağlantısı uyguladı.
 
 #### <a name="provision-the-servers"></a>Sunucuları sağlama
 
-Sunucu grubu sunucularına ek olarak, etki alanı denetleyicileri için sunucu sağlanması ve hem RRAS'yi hem de siteden siteye VPN'yi işlemek üzere bir sunucuyu yapılandırmanız gerekmektedir. BUR hizmeti için iki dosya sunucusu sağlandı ve test etmek için birkaç istemci bilgisayar sağlandı.
+Grup sunucularına ek olarak, etki alanı denetleyicileri için sunucuların sağlanması ve bir sunucunun RRAS'nin yanı sıra siteden siteye VPN'yi işleyecek şekilde yapılandırılması gerekiyordu. DFSR hizmeti için iki dosya sunucusu sağlandı ve test ediciler için birkaç istemci bilgisayar sağlandı.
 
-#### <a name="deploy-the-sharepoint-farms"></a>Grup SharePoint dağıtma
+#### <a name="deploy-the-sharepoint-farms"></a>SharePoint gruplarını dağıtma
 
-Ana SharePoint, gerektiğinde ortamı sabitlemeyi ve sorun gidermeyi basitleştirmek için iki aşamalı olarak dağıtılmıştır. İlk aşama sırasında, her sunucu grubu gerekli işlevselliği desteklemek için topolojinin her katmanında en az sayıda sunucuya dağıtılmıştır.
+SharePoint grupları, gerekirse ortam sabitlemeyi ve sorun gidermeyi basitleştirmek için iki aşamada dağıtıldı. İlk aşamada her grup, gerekli işlevselliği desteklemek üzere topolojinin her katmanı için en az sunucu sayısına dağıtıldı.
 
-SQL Server 2013 sunucularını oluşturmadan önce, SharePoint sunucularını oluşturduk. Bu yeni bir dağıtım olduğundan, dağıtım öncesinde kullanılabilirlik gruplarını SharePoint. MCS en iyi uygulama kılavuzuna dayalı üç grup oluşturduk.
+SharePoint 2013 sunucularını oluşturmadan önce SQL Server yüklü veritabanı sunucularını oluşturduk. Bu yeni bir dağıtım olduğundan, SharePoint dağıtmadan önce kullanılabilirlik gruplarını oluşturduk. MCS en iyi uygulama kılavuzlarını temel alan üç grup oluşturduk.
 
 > [!NOTE]
-> Yüklemeden önce kullanılabilirlik grupları oluştur oluşturmak için yer tutucu SharePoint oluşturun. Daha fazla bilgi için bkz. [SQL Server 2013 için AlwaysOn](/SharePoint/administration/configure-an-alwayson-availability-group) Kullanılabilirlik Gruplarını yapılandırma SharePoint
+> SharePoint yüklemeden önce kullanılabilirlik grupları oluşturabilmek için yer tutucu veritabanları oluşturun. Daha fazla bilgi için bkz. [SharePoint 2013 için SQL Server 2012 AlwaysOn Kullanılabilirlik Gruplarını Yapılandırma](/SharePoint/administration/configure-an-alwayson-availability-group)
 
-Sunucu grubu ve ek sunucuları aşağıdaki sırada oluşturduk:
+Grubu oluşturduk ve aşağıdaki sırayla ek sunuculara katıldık:
 
 - SP-SQL-HA1 ve SP-SQL-HA2 sağlama.
 
-- AlwaysOn'un yapılandırılması ve sunucu grubu için üç kullanılabilirlik grubu oluşturma.
+- AlwaysOn'u yapılandırın ve grup için üç kullanılabilirlik grubu oluşturun.
 
 - Merkezi Yönetim'i barındırmak için SP-APP1 sağlama.
 
-- Dağıtılmış önbelleği barındırmak için SP-WFE1 ve SP-WFE2 sağlama.
+- Dağıtılmış önbelleği barındırmak için SP-WFE1 ve SP-WFE2 sağlayın.
 
-Komut satırına başka bir ad kullandık ve  _skipRegisterAsDistributedCache_ **psconfig.exe** host parametresini kullandık. Daha fazla bilgi için bkz. [SharePoint Server 2013'te akışlar ve Dağıtılmış Önbellek hizmetini planlama](/sharepoint/administration/plan-for-feeds-and-the-distributed-cache-service).
+Komut satırında **psconfig.exe** çalıştırdığınızda _skipRegisterAsDistributedCachehost_ parametresini kullandık. Daha fazla bilgi için bkz. [SharePoint Server 2013'te akışları ve Dağıtılmış Önbellek hizmetini planlama](/sharepoint/administration/plan-for-feeds-and-the-distributed-cache-service).
 
-Kurtarma ortamında aşağıdaki adımları tekrarlarız:
+Kurtarma ortamında aşağıdaki adımları yineledik:
 
-- Az-SQL-HA1 ve AZ-SQL-HA2 hazırlama.
+- AZ-SQL-HA1 ve AZ-SQL-HA2'yi sağlayın.
 
-- AlwaysOn'un yapılandırılması ve sunucu grubu için üç kullanılabilirlik grubu oluşturma.
+- AlwaysOn'u yapılandırın ve grup için üç kullanılabilirlik grubu oluşturun.
 
-- Merkezi Yönetim'i barındırmak için AZ-APP1 sağlama.
+- Merkezi Yönetim'i barındırmak için AZ-APP1 sağlayın.
 
-- Dağıtılmış önbelleği barındırmak için AZ-WFE1 ve AZ-WFE2 sağlama.
+- Dağıtılmış önbelleği barındırmak için AZ-WFE1 ve AZ-WFE2 sağlayın.
 
-Dağıtılmış önbelleği yapılandırdikten ve test kullanıcılarını ekledikten ve içeriği test ettikten sonra dağıtımın ikinci aşamasına başladık. Bu, sunucu grubu mimarisinde açıklanan yüksek kullanılabilirlik topolojilerini destekleyecek şekilde katmanları ölçeklendirme ve sunucu grubu sunucularını yapılandırmayı gerektirmektedir.
+Dağıtılmış önbelleği yapılandırıp test kullanıcıları ve test içeriği ekledikten sonra dağıtımın ikinci aşamasını başlattık. Bunun için katmanların ölçeği genişletildi ve grup sunucularında grup mimarisinde açıklanan yüksek kullanılabilirlik topolojisini destekleyecek şekilde yapılandırıldı.
 
-Aşağıdaki tabloda, kurtarma grubumuz için ayarlarımız sanal makine, alt ağ ve kullanılabilirlik kümeleri açık almaktadır.
+Aşağıdaki tabloda kurtarma grubumuz için ayarladığımız sanal makineler, alt ağlar ve kullanılabilirlik kümeleri açıklanmaktadır.
 
 **Tablo: Kurtarma grubu altyapısı**
 
-|Sunucu adı|Rol|Yapılandırma|Alt Ağ|Kullanılabilirlik kümesi|
+|Sunucu adı|Rol|Yapılandırma|Alt ağ|Kullanılabilirlik kümesi|
 |---|---|---|---|---|
 |spDRAD|Active Directory ile etki alanı denetleyicisi|İki işlemci <br/> 512 MB ile 4 GB RAM arasında <br/> 1 x 127 GB sabit disk|sp-ADservers||
-|AZ-SP-FS|Yedekler için paylaşımların ve ANDR için uç noktası olan dosya sunucusu|A5 yapılandırması: <br/> İki işlemci <br/> 14 GB RAM <br/> 1 x 127 GB sabit disk <br/> 1 x 135 GB sabit disk <br/> 1 x 127 GB sabit disk <br/> 1 x 150 GB sabit disk|sp-databaseservers|DATA_SET|
+|AZ-SP-FS|Yedekler için paylaşımları olan dosya sunucusu ve DFSR için bir uç nokta|A5 yapılandırması: <br/> İki işlemci <br/> 14 GB RAM <br/> 1 x 127 GB sabit disk <br/> 1 x 135 GB sabit disk <br/> 1 x 127 GB sabit disk <br/> 1 x 150 GB sabit disk|sp-databaseservers|DATA_SET|
 |AZ-WFE1, AZ -WFE2|Ön Uç Web sunucuları|A5 yapılandırması: <br/> İki işlemci <br/> 14 GB RAM <br/> 1 x 127 GB sabit disk|sp-webservers|WFE_SET|
 |AZ -APP1, AZ -APP2, AZ -APP3|Uygulama sunucuları|A5 yapılandırması: <br/> İki işlemci <br/> 14 GB RAM <br/> 1 x 127 GB sabit disk|sp-applicationservers|APP_SET|
 |AZ -SQL-HA1, AZ -SQL-HA2|AlwaysOn kullanılabilirlik grupları için veritabanı sunucuları ve birincil ve ikincil çoğaltmalar|A5 yapılandırması: <br/> İki işlemci <br/> 14 GB RAM|sp-databaseservers|DATA_SET|
 
 ### <a name="operations"></a>Operasyonlar
 
-Test ekibi sunucu grubu ortamlarını yapılandırdikten ve işlevsel testi tamamlandıktan sonra, şirket içi kurtarma ortamını yapılandırmak için gereken aşağıdaki işlemler görevlerini başlatmışlardır:
+Test ekibi grup ortamlarını dengeleyip işlevsel testi tamamladıktan sonra, şirket içi kurtarma ortamını yapılandırmak için gereken aşağıdaki işlem görevlerini başlattı:
 
-- Yedekleri tam ve farklılıkla yapılandırma.
+- Tam ve değişiklik yedeklemelerini yapılandırın.
 
-- Şirket içi ortamla Azure ortamı arasında işlem günlüklerini aktaran dosya sunucularında BUR'yi yapılandırabilirsiniz.
+- İşlem günlüklerini şirket içi ortamıyla Azure ortamı arasında aktaran dosya sunucularında DFSR'yi yapılandırın.
 
-- Birincil veritabanı sunucusunda günlük gönderimini yapılandırma.
+- Birincil veritabanı sunucusunda günlük gönderimini yapılandırın.
 
-- Gerekli olduğu şekilde günlük gönderimi ile ilgili sorunları giderin, doğrulama yapın ve sorun giderin. Bu, ağ gecikme süresi gibi soruna neden olacak her türlü davranışı belirleme ve belgele birlikte, günlük gönderimi veya BULANİS dosya eşitleme hatalarının neden olduğu bilgileri içerir.
+- Gerektiğinde günlük gönderimi durumunu dengeleyebilir, doğrulayabilir ve sorun giderebilirsiniz. Bu, günlük gönderimi veya DFSR dosya eşitleme hatalarına neden olabilecek ağ gecikmesi gibi sorunlara neden olabilecek tüm davranışları tanımlamayı ve belgelemesini içerir.
 
-### <a name="databases"></a>Veritabanları
+### <a name="databases"></a>Veritaban -ları
 
 Yük devretme testlerimiz aşağıdaki veritabanlarını içerir:
 
-- WSS_Content
+- Wss_content
 
 - ManagedMetadata
 
-- Profil DB
+- Profil VERITABANı
 
-- Eşitleme DB
+- Db'yi eşitleme
 
-- Sosyal DB
+- Sosyal Veritabanı
 
-- İçerik Türü Merkezi (adanmış bir İçerik Türü Dağıtım Merkezi için bir veritabanı)
+- İçerik Türü Hub'ı (ayrılmış İçerik Türü Dağıtım Hub'ı için bir veritabanı)
 
 ## <a name="troubleshooting-tips"></a>Sorun giderme ipuçları
 
-Bu bölümde test sırasında karşılaştığımız sorunlar ve bunların çözümleri açıklandı.
+bölümünde, testimiz sırasında karşılaştığımız sorunlar ve çözümleri açıklanmaktadır.
 
-### <a name="using-the-term-store-management-tool-caused-the-error-the-managed-metadata-store-or-connection-is-currently-not-available"></a>Terim Deposu Yönetim Aracı'nın kullanımı "Yönetilen Meta Veri Deposu veya Bağlantı şu anda kullanılamıyor" hatasına neden oldu.
+### <a name="using-the-term-store-management-tool-caused-the-error-the-managed-metadata-store-or-connection-is-currently-not-available"></a>Terim Deposu Yönetim Aracı'nın kullanılması "Yönetilen Meta Veri Deposu veya Bağlantı şu anda kullanılamıyor" hatasına neden oldu.
 
-Web uygulaması tarafından kullanılan uygulama havuzu hesabının Terim Deposuna Okuma iznine sahip olduğundan emin olun.
+Web uygulaması tarafından kullanılan uygulama havuzu hesabının Terim Deposuna Okuma Erişimi iznine sahip olduğundan emin olun.
 
 ### <a name="custom-term-sets-are-not-available-in-the-site-collection"></a>Özel terim kümeleri site koleksiyonunda kullanılamaz
 
-İçerik site koleksiyonunuzla içerik türü hub'nız arasındaki hizmet uygulaması ilişkilendirmesi eksik mi? Buna ek olarak, **Yönetilen Meta Veri - \<site collection name\>** Bağlantı özellikleri ekranında, şu seçeneğin etkinleştirildiğinden emin olun: Bu hizmet uygulaması sütuna özgü terim kümeleri için **varsayılan depolama konumutur.**
+İçerik site koleksiyonunuz ile içerik türü hub'ınız arasında eksik bir hizmet uygulaması ilişkisi olup olmadığını denetleyin. Ayrıca, **Yönetilen Meta Veriler - \<site collection name\> Bağlantı** özellikleri ekranının altında bu seçeneğin etkinleştirildiğinden emin olun: **Bu hizmet uygulaması, sütuna özgü terim kümeleri için varsayılan depolama konumudur.**
 
-### <a name="the-get-adforest-windows-powershell-command-generates-the-error-the-term-get-adforest-is-not-recognized-as-the-name-of-a-cmdlet-function-script-file-or-operable-program"></a>Get-ADForest Windows PowerShell komutu "'Get-ADForest' terimi cmdlet, işlev, betik dosyası veya işlenen programın adı olarak tanınmıyor" hatasını üretir.
+### <a name="the-get-adforest-windows-powershell-command-generates-the-error-the-term-get-adforest-is-not-recognized-as-the-name-of-a-cmdlet-function-script-file-or-operable-program"></a>Get-ADForest Windows PowerShell komutu şu hatayı oluşturur: "'Get-ADForest' terimi cmdlet, işlev, betik dosyası veya çalıştırılabilir programın adı olarak tanınmıyor."
 
-Kullanıcı profillerini ayarlarken, Active Directory ormanı adına ihtiyacınız vardır. Rol ve Özellik Ekleme Sihirbazı'nda, Windows PowerShell için Active Directory Modülü'dür (Uzak Sunucu Yönetim Araçları>Rol Yönetimi Araçları **>AD DS ve AD LDS Araçları** bölümünde). Buna ek olarak, yazılım bağımlılıklarının yüklendiğinden emin olmak için **Get-ADForest'i** kullanmadan önce aşağıdaki komutları çalıştırın.
+Kullanıcı profillerini ayarlarken Active Directory orman adına ihtiyacınız vardır. Rol ve Özellik Ekleme Sihirbazı'nda, Windows PowerShell için Active Directory Modülü'nü etkinleştirdiğinizden emin olun (**Ad DS ve AD LDS Araçları bölümü>Rol Yönetim Araçları>Uzak Sunucu Yönetim Araçları'nın** altında). Ayrıca, yazılım bağımlılıklarınızın yüklendiğinden emin olmak için **Get-ADForest** kullanmadan önce aşağıdaki komutları çalıştırın.
 
 ```powershell
 Import-Module ServerManager
 Import-Module ActiveDirectory
 ```
 
-### <a name="availability-group-creation-fails-at-starting-the-alwayson_health-xevent-session-on-server-name"></a>'' üzerinde 'AlwaysOn_health' XEvent oturumu başlatma sırasında kullanılabilirlik grubu oluşturma başarısız\<server name\> oluyor
+### <a name="availability-group-creation-fails-at-starting-the-alwayson_health-xevent-session-on-server-name"></a>Kullanılabilirlik grubu oluşturma işlemi '' üzerinde 'AlwaysOn_health' XEvent oturumunu başlatma sırasında\<server name\> başarısız oluyor
 
-Yük devretme kümenizin her iki düğümünün de "Duraklatıldı" veya "Durduruldu" değil Durum "Yukarı" durumunda olduğundan emin olun.
+Yük devretme kümenizin her iki düğümünün de "Duraklatıldı" veya "Durduruldu" durumunda olmadığından emin olun.
 
-### <a name="sql-server-log-shipping-job-fails-with-access-denied-error-trying-to-connect-to-the-file-share"></a>SQL Server günlüğü gönderim işi dosya paylaşımına bağlanmaya çalışırken erişim reddedildi hatasıyla başarısız oluyor
+### <a name="sql-server-log-shipping-job-fails-with-access-denied-error-trying-to-connect-to-the-file-share"></a>SQL Server günlük gönderme işi, dosya paylaşımına bağlanmaya çalışırken erişim reddedildi hatasıyla başarısız oluyor
 
-Kimlik bilgilerinizin SQL Server Agent, varsayılan kimlik bilgileri yerine ağ kimlik bilgileri altında çalıştır olduğundan emin olun.
+SQL Server Agent varsayılan kimlik bilgileri yerine ağ kimlik bilgileri altında çalıştığından emin olun.
 
-### <a name="sql-server-log-shipping-job-indicates-success-but-no-files-are-copied"></a>SQL Server sevkiyat işi başarıyı gösterir, ancak hiçbir dosya kopyalanmaz
+### <a name="sql-server-log-shipping-job-indicates-success-but-no-files-are-copied"></a>SQL Server günlük gönderim işi başarılı olduğunu gösterir, ancak hiçbir dosya kopyalanır
 
-Bunun nedeni, kullanılabilirlik grubu için varsayılan yedekleme tercihi İkincil Tercih **İkincil'indir**. Kullanılabilirlik grubu için birincil yerine ikincil sunucudan günlük gönderimi işini çalıştır grubuna; Aksi takdirde, iş sessizce başarısız olur.
+Bunun nedeni, bir kullanılabilirlik grubu için varsayılan yedekleme tercihinin **İkincil'i Tercih Et** olmasıdır. Günlük gönderim işini birincil sunucu yerine kullanılabilirlik grubu için ikincil sunucudan çalıştırdığınızdan emin olun; aksi takdirde iş sessizce başarısız olur.
 
-### <a name="managed-metadata-service-or-other-sharepoint-service-fails-to-start-automatically-after-installation"></a>Yönetilen Meta Veri hizmeti (veya SharePoint hizmet) yüklemeden sonra otomatik olarak başlatılam
+### <a name="managed-metadata-service-or-other-sharepoint-service-fails-to-start-automatically-after-installation"></a>Yönetilen Meta Veri hizmeti (veya diğer SharePoint hizmeti) yüklemeden sonra otomatik olarak başlatılamıyor
 
-Hizmetlerin başlaması, SharePoint Server performansınız ve geçerli yüküne bağlı olarak SharePoint sürebilir. Hizmet için **başlat'ı** el ile tıklatın ve durumu izlemek için Sunucu'da Hizmetler ekranında zaman zaman yenileme yaparken yeterli başlangıç süresi sağlamalısınız. Hizmet durdurulursa, tanı günlüğünü SharePoint, hizmeti yeniden başlatmayı deneyin ve sonra günlükte hataları denetleyin. Daha fazla bilgi için bkz[. SharePoint 2013'te tanılama günlüğünü yapılandırma](/sharepoint/administration/configure-diagnostic-logging)
+SharePoint Sunucunuzun performansına ve geçerli yüküne bağlı olarak hizmetlerin başlatılması birkaç dakika sürebilir. Hizmet için **El ile Başlat'a** tıklayın ve zaman zaman Sunucudaki Hizmetler ekranını yenileyerek hizmetin durumunu izlemek için başlangıç için yeterli zaman sağlayın. Hizmetin durdurulmuş durumda kalması durumunda tanılama günlüğü SharePoint etkinleştirin, hizmeti yeniden başlatmayı deneyin ve ardından günlükte hatalar olup olmadığını denetleyin. Daha fazla bilgi için bkz[. SharePoint 2013'te tanılama günlüğünü yapılandırma](/sharepoint/administration/configure-diagnostic-logging)
 
-### <a name="after-changing-dns-to-the-azure-failover-environment-client-browsers-continue-to-use-the-old-ip-address-for-the-sharepoint-site"></a>DNS'yi Azure yük devretme ortamına değiştirdikten sonra, istemci tarayıcıları site için eski IP SharePoint kullanmaya devam eder
+### <a name="after-changing-dns-to-the-azure-failover-environment-client-browsers-continue-to-use-the-old-ip-address-for-the-sharepoint-site"></a>DNS'yi Azure yük devretme ortamına değiştirdikten sonra istemci tarayıcıları SharePoint sitesi için eski IP adresini kullanmaya devam eder
 
-DNS değişikliğiniz hemen tüm istemciler tarafından görülemeyebilir. Test istemciinde, yükseltilmiş komut isteminden aşağıdaki komutu gerçekleştirin ve siteye yeniden erişmeyi deneyin.
+DNS değişikliğiniz tüm istemciler tarafından hemen görülemeyebilir. Test istemcisinde, yükseltilmiş bir komut isteminden aşağıdaki komutu gerçekleştirin ve siteye yeniden erişmeyi deneyin.
 
 ```DOS
 Ipconfig /flushdns
@@ -639,9 +639,9 @@ Ipconfig /flushdns
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-[Veritabanları için desteklenen yüksek kullanılabilirlik ve olağanüstü durum SharePoint seçenekleri](/sharepoint/administration/supported-high-availability-and-disaster-recovery-options-for-sharepoint-databas)
+[SharePoint veritabanları için desteklenen yüksek kullanılabilirlik ve olağanüstü durum kurtarma seçenekleri](/sharepoint/administration/supported-high-availability-and-disaster-recovery-options-for-sharepoint-databas)
 
-[SQL Server 2013 için AlwaysOn Kullanılabilirlik Gruplarında SharePoint yapılandırma](/SharePoint/administration/configure-an-alwayson-availability-group)
+[SharePoint 2013 için SQL Server 2012 AlwaysOn Kullanılabilirlik Gruplarını Yapılandırma](/SharePoint/administration/configure-an-alwayson-availability-group)
 
 ## <a name="see-also"></a>Ayrıca Bkz
 

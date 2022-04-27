@@ -1,8 +1,8 @@
 ---
-title: Azure'da şirket için yüksek kullanılabilirlik Microsoft 365 federasyon kimlik doğrulamasını dağıtma
+title: Azure'da Microsoft 365 için yüksek kullanılabilirlik federasyon kimlik doğrulamasını dağıtma
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 11/25/2019
 audience: ITPro
 ms.topic: article
@@ -18,51 +18,51 @@ f1.keywords:
 ms.custom:
 - Ent_Solutions
 ms.assetid: 34b1ab9c-814c-434d-8fd0-e5a82cd9bff6
-description: 'Özet: Yeni bir abonelikte Microsoft 365 için yüksek kullanılabilirlik federal kimlik doğrulamasını Microsoft Azure.'
-ms.openlocfilehash: 70d597663a1920706dbab164dda05b7142f7fd04
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: "Özet: Microsoft Azure'da Microsoft 365 aboneliğiniz için yüksek kullanılabilirlik federasyon kimlik doğrulamasını yapılandırın."
+ms.openlocfilehash: 64fc02e6ecaa400da6d6130cb9ae630279102fcc
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62984023"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65093426"
 ---
-# <a name="deploy-high-availability-federated-authentication-for-microsoft-365-in-azure"></a>Azure'da şirket için yüksek kullanılabilirlik Microsoft 365 federasyon kimlik doğrulamasını dağıtma
+# <a name="deploy-high-availability-federated-authentication-for-microsoft-365-in-azure"></a>Azure'da Microsoft 365 için yüksek kullanılabilirlik federasyon kimlik doğrulamasını dağıtma
 
-Bu makalede, Bu sanal makineler ile Azure altyapı hizmetlerde Microsoft Microsoft 365 için yüksek kullanılabilirlik federal kimlik doğrulaması dağıtımına ilişkin adım adım yönergelerin bağlantıları vardır:
+Bu makalede, şu sanal makinelerle Azure altyapı hizmetlerinde Microsoft Microsoft 365 için yüksek kullanılabilirlik federasyon kimlik doğrulaması dağıtmaya yönelik adım adım yönergelere bağlantılar bulunur:
   
-- İki web uygulaması ara sunucusu
+- İki web uygulaması proxy sunucusu
     
-- İki Active Directory Federasyon Hizmetleri (AD FS) sunucusu
+- İki Active Directory Federasyon Hizmetleri (AD FS) (AD FS) sunucusu
     
 - İki çoğaltma etki alanı denetleyicisi
     
-- Azure AD eşitlemesini çalıştıran bir dizin eşitleme Bağlan
+- Azure AD Bağlan çalıştıran bir dizin eşitleme sunucusu
     
-Her sunucunun yer tutucu adlarının yer tutucu adlarının yer tutucu olduğu yapılandırma burada ve şekildedir.
+Her sunucu için yer tutucu adları içeren yapılandırma aşağıdadır.
   
-**Azure'da yeni altyapı için yüksek Microsoft 365 federasyon kimlik doğrulaması**
+**Azure'da Microsoft 365 altyapısı için yüksek kullanılabilirlik federasyon kimlik doğrulaması**
 
 ![Azure'da yüksek kullanılabilirlik Microsoft 365 federasyon kimlik doğrulama altyapısının son yapılandırması.](../media/c5da470a-f2aa-489a-a050-df09b4d641df.png)
   
-Tüm sanal makineler tek bir şirket içi Azure sanal ağına (VNet) bulunmaktadır. 
+Tüm sanal makineler tek bir şirket içi Azure sanal ağında (VNet) bulunur. 
   
 > [!NOTE]
-> Tek tek kullanıcıların şirket içi kimlik doğrulaması şirket içi kaynaklara güvenmez. Bununla birlikte, şirket içi bağlantı kullanılamaz hale gelirse, VNet'te etki alanı denetleyicileri şirket içi Active Directory Etki Alanı Hizmetleri'ne (AD DS) yapılan kullanıcı hesapları ve gruplar için güncelleştirmeleri almaz. Bunun olmasını sağlamak için, şirket içi bağlantınız için yüksek kullanılabilirliği yapılandırabilirsiniz. Daha fazla bilgi için bkz [. Yüksek Kullanılabilir Şirket İçi ve VNet-To-VNet Bağlantısı](/azure/vpn-gateway/vpn-gateway-highlyavailable)
+> Tek tek kullanıcıların federasyon kimlik doğrulaması, şirket içi kaynakları kullanmaz. Ancak, şirket içi bağlantılar kullanılamaz duruma gelirse, sanal ağdaki etki alanı denetleyicileri şirket içi Active Directory Etki Alanı Hizmetleri'nde (AD DS) yapılan kullanıcı hesapları ve gruplarında güncelleştirme almaz. Bunun olmamasını sağlamak için, şirket içi bağlantınız için yüksek kullanılabilirlik yapılandırabilirsiniz. Daha fazla bilgi için bkz [. Yüksek Oranda Kullanılabilir Şirket İçi Ve Sanal Ağdan Sanal Ağa Bağlantı](/azure/vpn-gateway/vpn-gateway-highlyavailable)
   
-Belirli bir rol için her sanal makine çifti kendi alt ağ ve kullanılabilirlik kümesindedir.
+Belirli bir rol için her sanal makine çifti kendi alt ağı ve kullanılabilirlik kümesindedir.
   
 > [!NOTE]
-> Bu VNet şirket içi ağa bağlı olduğundan, bu yapılandırma bir yönetim alt ağına atlama kutusu veya izleme sanal makinelerini dahil değildir. Daha fazla bilgi için [bkz. N Windows mimarisi için çalışan sanallar](/azure/guidance/guidance-compute-n-tier-vm). 
+> Bu sanal ağ şirket içi ağa bağlı olduğundan, bu yapılandırma bir yönetim alt ağında sıçrama kutusu veya izleme sanal makinelerini içermez. Daha fazla bilgi için bkz[. N katmanlı mimari için Windows VM'leri çalıştırma](/azure/guidance/guidance-compute-n-tier-vm). 
   
-Bu yapılandırmanın sonucu, tüm Microsoft 365 kullanıcınız için federal kimlik doğrulamanız olacak ve bu kullanıcılar kendi ad DS kimlik bilgilerini kullanarak Microsoft 365. Şirket içi kimlik doğrulama altyapısı, şirket içi uç ağınız yerine Azure altyapı hizmetlerde daha kolay dağıtılan yedekli bir sunucu kümesi kullanır.
+Bu yapılandırmanın sonucu, tüm Microsoft 365 kullanıcılarınız için federasyon kimlik doğrulamasına sahip olmanızdır. Bu kimlik doğrulamasında, Microsoft 365 hesapları yerine oturum açmak için AD DS kimlik bilgilerini kullanabilirler. Federasyon kimlik doğrulama altyapısı, şirket içi uç ağınız yerine Azure altyapı hizmetlerinde daha kolay dağıtılan yedekli bir sunucu kümesi kullanır.
   
-## <a name="bill-of-materials"></a>Malzeme faturası
+## <a name="bill-of-materials"></a>Ürün reçetesi
 
-Bu temel yapılandırma için aşağıdaki Azure hizmetleri ve bileşenleri kümesi gerekir:
+Bu temel yapılandırma aşağıdaki Azure hizmetleri ve bileşenleri kümesini gerektirir:
   
 - Yedi sanal makine
     
-- Dört alt ağ ile bir şirket içi sanal ağ
+- Dört alt ağı olan bir şirket içi ağlar arası sanal ağ
     
 - Dört kaynak grubu
     
@@ -70,42 +70,42 @@ Bu temel yapılandırma için aşağıdaki Azure hizmetleri ve bileşenleri küm
     
 - Bir Azure aboneliği
     
-İşte sanal makineler ve bu yapılandırma için varsayılan boyutları.
+Bu yapılandırma için sanal makineler ve bunların varsayılan boyutları aşağıdadır.
   
-|**Öğe**|**Sanal makine açıklaması**|**Azure galerisi resmi**|**Varsayılan boyut**|
+|**Öğe**|**Sanal makine açıklaması**|**Azure galeri görüntüsü**|**Varsayılan boyut**|
 |:-----|:-----|:-----|:-----|
-|1.  <br/> |İlk etki alanı denetleyicisi  <br/> |Windows Server 2016 Center  <br/> |D2  <br/> |
-|2.  <br/> |İkinci etki alanı denetleyicisi  <br/> |Windows Server 2016 Center  <br/> |D2  <br/> |
-|3.  <br/> |Azure AD Bağlan sunucusu  <br/> |Windows Server 2016 Center  <br/> |D2  <br/> |
-|4.  <br/> |İlk AD FS sunucusu  <br/> |Windows Server 2016 Center  <br/> |D2  <br/> |
-|5.  <br/> |İkinci AD FS sunucusu  <br/> |Windows Server 2016 Center  <br/> |D2  <br/> |
-|6.  <br/> |İlk web uygulaması ara sunucusu  <br/> |Windows Server 2016 Center  <br/> |D2  <br/> |
-|7.  <br/> |İkinci web uygulaması ara sunucusu  <br/> |Windows Server 2016 Center  <br/> |D2  <br/> |
+|1.  <br/> |İlk etki alanı denetleyicisi  <br/> |Windows Server 2016 Datacenter  <br/> |D2  <br/> |
+|2.  <br/> |İkinci etki alanı denetleyicisi  <br/> |Windows Server 2016 Datacenter  <br/> |D2  <br/> |
+|3.  <br/> |Azure AD Bağlan sunucusu  <br/> |Windows Server 2016 Datacenter  <br/> |D2  <br/> |
+|4.  <br/> |İlk AD FS sunucusu  <br/> |Windows Server 2016 Datacenter  <br/> |D2  <br/> |
+|5.  <br/> |İkinci AD FS sunucusu  <br/> |Windows Server 2016 Datacenter  <br/> |D2  <br/> |
+|6.  <br/> |İlk web uygulaması ara sunucusu  <br/> |Windows Server 2016 Datacenter  <br/> |D2  <br/> |
+|7.  <br/> |İkinci web uygulaması proxy sunucusu  <br/> |Windows Server 2016 Datacenter  <br/> |D2  <br/> |
    
-Bu yapılandırmanın tahmini maliyetlerini hesaplamak için bkz. [Azure fiyatlandırma hesaplayıcı](https://azure.microsoft.com/pricing/calculator/)
+Bu yapılandırmanın tahmini maliyetlerini hesaplamak için bkz. [Azure fiyatlandırma hesaplayıcısı](https://azure.microsoft.com/pricing/calculator/)
   
 ## <a name="phases-of-deployment"></a>Dağıtım aşamaları
 
-Bu iş yükünü aşağıdaki aşamalarda dağıtın:
+Bu iş yükünü aşağıdaki aşamalarda dağıtırsınız:
   
-- [Aşama 1: Azure'i yapılandırma](high-availability-federated-authentication-phase-1-configure-azure.md). Kaynak grupları, depolama hesapları, kullanılabilirlik kümeleri ve şirket içi sanal ağ oluşturun.
+- [1. Aşama: Azure'ı yapılandırma](high-availability-federated-authentication-phase-1-configure-azure.md). Kaynak grupları, depolama hesapları, kullanılabilirlik kümeleri ve şirket içi sanal ağ oluşturun.
     
-- [Aşama 2: Etki alanı denetleyicilerini yapılandırma](high-availability-federated-authentication-phase-2-configure-domain-controllers.md). Çoğaltma AD DS etki alanı denetleyicileri ve dizin eşitleme sunucusu oluşturun ve yapılandırabilirsiniz.
+- [2. Aşama: Etki alanı denetleyicilerini yapılandırın](high-availability-federated-authentication-phase-2-configure-domain-controllers.md). Çoğaltma AD DS etki alanı denetleyicilerini ve dizin eşitleme sunucusunu oluşturun ve yapılandırın.
     
-- [Aşama 3: AD FS sunucularını yapılandırma](high-availability-federated-authentication-phase-3-configure-ad-fs-servers.md). İki AD FS sunucusu oluşturun ve yapılandırabilirsiniz.
+- [3. Aşama: AD FS sunucularını yapılandırın](high-availability-federated-authentication-phase-3-configure-ad-fs-servers.md). İki AD FS sunucusunu oluşturun ve yapılandırın.
     
-- [Aşama 4: Web uygulaması sunucularını yapılandırma](high-availability-federated-authentication-phase-4-configure-web-application-pro.md). İki web uygulaması ara sunucularını oluşturun ve yapılandırabilirsiniz.
+- [4. Aşama: Web uygulaması proxy'lerini yapılandırın](high-availability-federated-authentication-phase-4-configure-web-application-pro.md). İki web uygulaması proxy sunucusunu oluşturun ve yapılandırın.
     
-- [Aşama 5: Posta için federasyon kimlik Microsoft 365](high-availability-federated-authentication-phase-5-configure-federated-authentic.md). Microsoft 365 aboneliğiniz için federasyon kimlik Microsoft 365 yapılandırma.
+- [5. Aşama: Microsoft 365 için federasyon kimlik doğrulamasını yapılandırın](high-availability-federated-authentication-phase-5-configure-federated-authentic.md). Microsoft 365 aboneliğiniz için federasyon kimlik doğrulamasını yapılandırın.
     
-Bu makalelerde, Azure altyapı hizmetlerde iş için işlevsel, yüksek kullanılabilirlikli bir federasyon kimlik doğrulaması oluşturmak üzere önceden tanımlanmış bir mimariye Microsoft 365, aşama aşama kılavuz sağlanır. Şunları unutmayın:
+Bu makaleler, Azure altyapı hizmetlerinde Microsoft 365 için işlevsel, yüksek kullanılabilirliğe sahip federasyon kimlik doğrulaması oluşturmak üzere önceden tanımlanmış bir mimari için açıklayıcı, aşama aşama kılavuz sağlar. Aşağıdakileri unutmayın:
   
-- Deneyimli bir AD FS uygulayıcısıysanız, 3. ve 4. aşamalarda yer alan yönergeleri uyarlamak ve ihtiyaçlarınıza en uygun sunucu kümelerini oluşturmakta özgür olursanız.
+- Deneyimli bir AD FS uygulayıcısıysanız, 3. ve 4. aşamalardaki yönergeleri uyarlamak ve ihtiyaçlarınıza en uygun sunucu kümesini oluşturmaktan çekinmeyin.
     
-- Zaten var olan bir şirket içi sanal ağı olan bir Azure karma bulut dağıtımınız varsa, 1. ve 2. aşamalarda verilen yönergeleri uyarlamak veya atlayıp AD FS ve web uygulaması ara sunucularını uygun alt ağlara yer değiştirebilirsiniz.
+- Mevcut bir şirket içi sanal ağa sahip mevcut bir Azure hibrit bulut dağıtımınız varsa, 1. ve 2. aşamalardaki yönergeleri uyarlamak veya atlamaktan ve AD FS ile web uygulaması proxy sunucularını uygun alt ağlara yerleştirmekten çekinmeyin.
     
-Bu yapılandırmanın bir geliştirme/test ortamı veya kavram kanıtı oluşturması için bkz. Microsoft 365 [geliştirme/test ortamınız için federasyon kimliği](federated-identity-for-your-microsoft-365-dev-test-environment.md).
+Geliştirme/test ortamı veya bu yapılandırmanın kavram kanıtı oluşturmak için bkz. [Microsoft 365 geliştirme/test ortamınız için federasyon kimliği](federated-identity-for-your-microsoft-365-dev-test-environment.md).
   
 ## <a name="next-step"></a>Sonraki adım
 
-Aşama 1: Azure'la bu iş [yükünün yapılandırmasını başlatma.](high-availability-federated-authentication-phase-1-configure-azure.md) 
+[1. Aşama: Azure'ı yapılandırma](high-availability-federated-authentication-phase-1-configure-azure.md) ile bu iş yükünün yapılandırmasını başlatın. 

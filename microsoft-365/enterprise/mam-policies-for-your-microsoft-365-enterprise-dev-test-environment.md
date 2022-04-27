@@ -1,10 +1,10 @@
 ---
-title: Kurumsal test ortamınız için Microsoft 365 uyumluluk ilkeleri
+title: Kurumsal test ortamınız için Microsoft 365 cihaz uyumluluk ilkeleri
 f1.keywords:
 - NOCSH
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 11/19/2020
 audience: ITPro
 ms.topic: article
@@ -13,71 +13,71 @@ ms.localizationpriority: medium
 ms.collection: M365-identity-device-management
 ms.custom: Ent_TLGs
 ms.assetid: 1aa9639b-2862-49c4-bc33-1586dda636b8
-description: Kurumsal test ortamı için test ortamınıza Intune cihaz uyumluluk ilkelerini eklemek Microsoft 365 Test Laboratuvarı Kılavuzunu kullanın.
-ms.openlocfilehash: ec73211a21e9e064b729b93d9e88b7c5c69b21fe
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Kurumsal test ortamınıza Microsoft 365 Intune cihaz uyumluluk ilkeleri eklemek için bu Test Laboratuvarı Kılavuzu'nu kullanın.
+ms.openlocfilehash: 3037ca846fe74fb8de51c78799e69c510821a034
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62977676"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65099465"
 ---
-# <a name="device-compliance-policies-for-your-microsoft-365-for-enterprise-test-environment"></a>Kurumsal test ortamınız için Microsoft 365 uyumluluk ilkeleri
+# <a name="device-compliance-policies-for-your-microsoft-365-for-enterprise-test-environment"></a>Kurumsal test ortamınız için Microsoft 365 cihaz uyumluluk ilkeleri
 
-*Bu Test Laboratuvarı Kılavuzu yalnızca kurumsal test Microsoft 365 test ortamları için kullanılabilir.*
+*Bu Test Laboratuvarı Kılavuzu yalnızca kurumsal test ortamları için Microsoft 365 için kullanılabilir.*
 
-Bu makalede, Kurumsal test ortamı için Mobil Cihaz Yönetiminize ve Windows 10 için Intune cihaz Kurumlar için Microsoft 365 Uygulamaları ilkesi Microsoft 365 ilkenin nasıl ekli olduğu açıklanmıştır.
+Bu makalede, Windows 10 cihazlar için Intune cihaz uyumluluk ilkesinin nasıl ekleneceği ve kurumsal test ortamı için Microsoft 365 Kurumlar için Microsoft 365 Uygulamaları nasıl ekleneceği açıklanır.
 
-Intune cihaz uyumluluk ilkesi ekleme iki aşamadan sonrasını içerir:
-- [Aşama 1: Kurumsal test Microsoft 365 yapınızı oluşturma](#phase-1-build-out-your-microsoft-365-for-enterprise-test-environment)
-- [Aşama 2: Mobil cihazlarınız için cihaz Windows 10 ilkesi oluşturma](#phase-2-create-a-device-compliance-policy-for-windows-10-devices)
+Intune cihaz uyumluluk ilkesi eklemek iki aşamayı içerir:
+- [1. Aşama: Kurumsal test ortamı için Microsoft 365 oluşturma](#phase-1-build-out-your-microsoft-365-for-enterprise-test-environment)
+- [2. Aşama: Windows 10 cihazlar için cihaz uyumluluk ilkesi oluşturma](#phase-2-create-a-device-compliance-policy-for-windows-10-devices)
 
 ![Microsoft bulutu için Test Laboratuvarı Kılavuzları.](../media/m365-enterprise-test-lab-guides/cloud-tlg-icon.png)
 
 > [!TIP]
-> Kurumsal Test Laboratuvarı Kılavuzu yığınına Microsoft 365 görsel bir harita için Kurumsal Test Laboratuvarı Kılavuzu Yığını [için Microsoft 365'e gidin](../downloads/Microsoft365EnterpriseTLGStack.pdf).
+> Kurumsal Test Laboratuvarı Kılavuzu yığınındaki Microsoft 365 tüm makalelere yönelik görsel bir harita için [kurumsal Test Laboratuvarı Kılavuzu Yığını için Microsoft 365](../downloads/Microsoft365EnterpriseTLGStack.pdf) bölümüne gidin.
 
-## <a name="phase-1-build-out-your-microsoft-365-for-enterprise-test-environment"></a>Aşama 1: Kurumsal test Microsoft 365 yapınızı oluşturma
+## <a name="phase-1-build-out-your-microsoft-365-for-enterprise-test-environment"></a>1. Aşama: Kurumsal test ortamı için Microsoft 365 oluşturma
 
-MAM ilkelerini en düşük gereksinimleri olan basit bir yolla yapılandırmak için Hafif temel yapılandırma [yönergelerini izleyin](lightweight-base-configuration-microsoft-365-enterprise.md).
+MAM ilkelerini en düşük gereksinimlerle yalnızca basit bir şekilde yapılandırmak istiyorsanız [, Basit temel yapılandırma](lightweight-base-configuration-microsoft-365-enterprise.md) yönergelerini izleyin.
   
-Sanal bir kuruluşta MAM ilkelerini yapılandırmak için, Geçişli kimlik [doğrulama'daki yönergeleri izleyin](pass-through-auth-m365-ent-test-environment.md).
+Mam ilkelerini sanal bir kuruluşta yapılandırmak istiyorsanız Doğrudan [kimlik doğrulaması](pass-through-auth-m365-ent-test-environment.md) bölümündeki yönergeleri izleyin.
   
 > [!NOTE]
-> Otomatik lisanslama ve grup üyeliğini test etmek, Active Directory Etki Alanı Hizmetleri (AD DS) ormanı için İnternet ve dizin eşitlemeye bağlı sanal bir intranet içeren sanal kurumsal test ortamını gerektirmez. Burada, otomatik lisanslama ve grup üyeliğini test etmek ve normal bir kuruluşu temsil eden bir ortamda bu üyelikle denemeler yapmak için bir seçenek olarak sağlanmıştır.
+> Otomatik lisanslama ve grup üyeliğinin test edilmesi için İnternet'e bağlı bir sanal intranet ve bir Active Directory Domain Services (AD DS) ormanı için dizin eşitlemesi içeren sanal kurumsal test ortamı gerekmez. Burada, otomatik lisanslama ve grup üyeliğini test edebilmeniz ve tipik bir kuruluşu temsil eden bir ortamda denemeler yapabileceğiniz bir seçenek olarak sağlanır.
 >  
 
-## <a name="phase-2-create-a-device-compliance-policy-for-windows-10-devices"></a>Aşama 2: Mobil cihazlarınız için cihaz Windows 10 ilkesi oluşturma
+## <a name="phase-2-create-a-device-compliance-policy-for-windows-10-devices"></a>2. Aşama: Windows 10 cihazlar için cihaz uyumluluk ilkesi oluşturma
 
-Bu aşamada, tüm cihazlarınız için bir cihaz Windows 10 oluştursunuz. Bu aşama Microsoft Intune ve [Microsoft Endpoint Manager yönetim](https://go.microsoft.com/fwlink/?linkid=2109431) merkezini kullanarak grup ekler ve uyumluluk ilkesi oluşturabilir.
+Bu aşamada, Windows 10 cihazlar için bir cihaz uyumluluk ilkesi oluşturursunuz. Bu aşamada grup eklemek ve uyumluluk ilkesi oluşturmak için [Microsoft Intune ve Microsoft Endpoint Manager yönetim merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) kullanılır.
 
-1. Genel [Microsoft 365 yönetim merkezi gidin,](https://admin.microsoft.com) genel yönetici hesabınızla Microsoft 365 test laboratuvarı aboneliğinde oturum açın ve genel <a href="https://go.microsoft.com/fwlink/?linkid=2109431" target="_blank">Endpoint Manager seçin</a>.
+1. [Microsoft 365 yönetim merkezi](https://admin.microsoft.com) gidin, genel yönetici hesabınızla Microsoft 365 test laboratuvarı aboneliğinizde oturum açın ve <a href="https://go.microsoft.com/fwlink/?linkid=2109431" target="_blank">Endpoint Manager yönetim merkezini</a> seçin.
 
-    Cihaz yönetimini henüz **etkinleştirmediyseniz benzer bir ileti** gösteriliyorsa, MDM yetkilisi olarak Intune'ı seçin. Belirli adımlar için bkz. [Mobil cihaz yönetim yetkilisini ayarlama](/mem/intune/fundamentals/mdm-authority-set).
+    **Henüz cihaz yönetimini etkinleştirmediğinize** benzer bir ileti gösteriliyorsa, MDM yetkilisi olarak Intune seçin. Belirli adımlar için bkz. [Mobil cihaz yönetimi yetkilisini ayarlama](/mem/intune/fundamentals/mdm-authority-set).
 
-    Yönetim Endpoint Manager yönetim merkezi, cihaz yönetimi ve uygulama yönetimine odaklanır. Bu yönetim merkezi turu için bkz. [Öğretici: Gezinti Merkezi'nde Adım Adım Microsoft Endpoint Manager](/mem/intune/fundamentals/tutorial-walkthrough-endpoint-manager).
+    Endpoint Manager yönetim merkezi, cihaz yönetimine ve uygulama yönetimine odaklanır. Bu yönetim merkezi turu için bkz[. Öğretici: Microsoft Endpoint Manager'da İzlenecek yol Intune](/mem/intune/fundamentals/tutorial-walkthrough-endpoint-manager).
 
-2. **Gruplar'a**, atanan üyelik **Microsoft 365** **yönetilen cihaz** kullanıcıları **Windows 10** yönetilen kullanıcı adı ve Güvenlik **grubu** ekleyin. Sonraki adımlarda, uyumluluk ilkenizi bu gruba atayacağız. 
+2. **Gruplar'da**, **Atanmış** üyelik türüne sahip **Yönetilen Windows 10 cihaz kullanıcıları** adlı yeni bir Microsoft 365 veya **Güvenlik** grubu ekleyin. Sonraki adımlarda uyumluluk ilkenizi bu gruba atayacaksınız. 
 
-    Belirli adımlar ve güvenlik grupları hakkında bilgi **Microsoft 365** **için bkz**. [Kullanıcıları ve cihazları düzenlemek için grup ekleme](/mem/intune/fundamentals/groups-add).
+    Belirli adımlar ve **Microsoft 365** veya **Güvenlik** grupları hakkında bilgi için bkz. [Kullanıcıları ve cihazları düzenlemek için grup ekleme](/mem/intune/fundamentals/groups-add).
 
-3. **Cihazlar'da** bir uyumluluk Windows 10 oluşturun. Bu ilkeyi, oluşturduğunuz **Windows 10 Yönetilen Cihaz Kullanıcıları** grubuna attayabilirsiniz.
+3. **Cihazlar'da** bir Windows 10 uyumluluk ilkesi oluşturun. Bu ilkeyi, oluşturduğunuz **Yönetilen Windows 10 cihaz kullanıcıları** grubuna atayın.
 
-    İlkenize göre, basit parolaları engelleyebilir, güvenlik duvarına gerek engelleyebilir, Microsoft Defender Kötü Amaçlı Yazılımdan Koruma hizmetinin çalışıyor olması ve daha fazlasını kullanabilirsiniz. Uyumluluk ilkesi normalde her cihazın sahip olması gereken temel ayarları veya minimum minimum ayarı içerir.
+    İlkenizde basit parolaları engelleyebilir, güvenlik duvarı gerektirebilir, Microsoft Defender Kötü Amaçlı Yazılımdan Koruma hizmetinin çalışmasını gerektirebilir ve daha fazlasını yapabilirsiniz. Uyumluluk ilkesi genellikle temel ayarları veya her cihazın sahip olması gereken minimum ayarları içerir.
 
-    Belirli adımlar ve yapılandırabilirsiniz kullanılabilir uyumluluk ayarları hakkında bilgi için bkz. Yönetmek istediğiniz cihazlara yönelik kurallar ayarlamak [için uyumluluk ilkelerini kullanma](/mem/intune/protect/device-compliance-get-started).
+    Belirli adımlar ve yapılandırabileceğiniz kullanılabilir uyumluluk ayarları hakkında bilgi için bkz. [Yönettiğiniz cihazlar için kurallar ayarlamak için uyumluluk ilkelerini kullanma](/mem/intune/protect/device-compliance-get-started).
 
-Tamamlandığında, Yönetilen Cihaz Kullanıcıları grubunda üyeleri test etmek için cihaz **Windows 10 ilkeye sahip olursunuz**.
+İşiniz bittiğinde, **Yönetilen Windows 10 cihaz kullanıcıları** grubundaki üyeleri test eden bir cihaz uyumluluk ilkeniz vardır.
   
 ## <a name="next-step"></a>Sonraki adım
 
-Test [ortamınıza ek mobil](m365-enterprise-test-lab-guides.md#mobile-device-management) cihaz yönetim özelliklerini ve özelliklerini keşfedin.
+Test ortamınızdaki ek [mobil cihaz yönetimi](m365-enterprise-test-lab-guides.md#mobile-device-management) özelliklerini ve özelliklerini keşfedin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Microsoft 365 Test Laboratuvarı Kılavuzları için kılavuz.](m365-enterprise-test-lab-guides.md)
+[Kurumsal Test Laboratuvarı Kılavuzları için Microsoft 365](m365-enterprise-test-lab-guides.md).
   
-[Kurumsal test ortamına iOS ve Android Microsoft 365 cihazları kaydetme](enroll-ios-and-android-devices-in-your-microsoft-enterprise-365-dev-test-environ.md)
+[Kurumsal test ortamınız için iOS ve Android cihazları Microsoft 365 kaydetme](enroll-ios-and-android-devices-in-your-microsoft-enterprise-365-dev-test-environ.md)
   
-[Microsoft 365 genel bakış için genel bakış](microsoft-365-overview.md)
+[Microsoft 365 Kurumsal’a genel bakış](microsoft-365-overview.md)
 
 [Enterprise Mobility + Security (EMS)](https://www.microsoft.com/cloud-platform/enterprise-mobility-security)

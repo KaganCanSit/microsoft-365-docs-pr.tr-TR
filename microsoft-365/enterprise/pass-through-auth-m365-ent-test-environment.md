@@ -1,10 +1,10 @@
 ---
-title: Test ortamınız için Microsoft 365 doğrulama
+title: Microsoft 365 test ortamınız için doğrudan kimlik doğrulaması
 f1.keywords:
 - NOCSH
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 11/21/2019
 audience: ITPro
 ms.topic: article
@@ -17,94 +17,94 @@ ms.custom:
 - TLG
 - Ent_TLGs
 ms.assetid: ''
-description: 'Özet: Test ortamınız için geçişli Microsoft 365 yapılandırın.'
-ms.openlocfilehash: dcc23662683ffaf65a0ec5fa3698f729dc215af7
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: 'Özet: Microsoft 365 test ortamınız için doğrudan kimlik doğrulamasını yapılandırın.'
+ms.openlocfilehash: f6ad952ebde8556bd3c0c9b7e4e66c006b1c7578
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983836"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65094382"
 ---
-# <a name="pass-through-authentication-for-your-microsoft-365-test-environment"></a>Test ortamınız için Microsoft 365 doğrulama
+# <a name="pass-through-authentication-for-your-microsoft-365-test-environment"></a>Microsoft 365 test ortamınız için doğrudan kimlik doğrulaması
 
-*Bu Test Laboratuvarı Kılavuzu, hem kurumsal hem de Microsoft 365 test ortamları için Office 365 Kurumsal kullanılabilir.*
+*Bu Test Laboratuvarı Kılavuzu hem kurumsal hem de Office 365 Kurumsal test ortamları için Microsoft 365 için kullanılabilir.*
 
-Microsoft bulut tabanlı hizmet ve uygulamalarında kimlik doğrulaması için doğrudan şirket içi Active Directory Etki Alanı Hizmetleri (AD DS) altyapılarını kullanmak isteyen kuruluşlar, doğrudan kimlik doğrulamayı kullanabilir. Bu makalede, Microsoft 365 test ortamınızı geçişli kimlik doğrulaması için nasıl yapılandırabilirsiniz ve bunun sonucunda aşağıdaki yapılandırmalar açıklanmıştır:
+Microsoft bulut tabanlı hizmetler ve uygulamalarda kimlik doğrulaması için doğrudan şirket içi Active Directory Etki Alanı Hizmetleri (AD DS) altyapısını kullanmak isteyen kuruluşlar doğrudan kimlik doğrulaması kullanabilir. Bu makalede, Microsoft 365 test ortamınızı doğrudan kimlik doğrulaması için nasıl yapılandırabileceğiniz açıklanır ve bu da aşağıdaki yapılandırmayla sonuçlanır:
   
-![Geçişli kimlik doğrulama test ortamına sahip sanal kuruluş.](../media/pass-through-auth-m365-ent-test-environment/Phase2.png)
+![Doğrudan kimlik doğrulama testi ortamına sahip sanal kuruluş.](../media/pass-through-auth-m365-ent-test-environment/Phase2.png)
   
 Bu test ortamını ayarlamanın iki aşaması vardır:
 
-1.    Parola karması Microsoft 365 sanal kurumsal test ortamı oluşturun.
-2.    Uygulama1'Bağlan Azure AD kimlik doğrulamasını yapılandırabilirsiniz.
+1.    Parola karması eşitlemesi ile Microsoft 365 simülasyon kurumsal test ortamını oluşturun.
+2.    Doğrudan kimlik doğrulaması için APP1'de Azure AD Bağlan yapılandırın.
     
 ![Microsoft bulutu için Test Laboratuvarı Kılavuzları.](../media/m365-enterprise-test-lab-guides/cloud-tlg-icon.png) 
     
 > [!TIP]
-> Kurumsal [Test](../downloads/Microsoft365EnterpriseTLGStack.pdf) Laboratuvarı Kılavuzu yığınına göre görsel bir harita Microsoft 365 için buraya tıklayın.
+> Kurumsal Test Laboratuvarı Kılavuzu yığınının Microsoft 365 tüm makalelerin görsel haritası için [buraya](../downloads/Microsoft365EnterpriseTLGStack.pdf) tıklayın.
   
-## <a name="phase-1-configure-password-hash-synchronization-for-your-microsoft-365-test-environment"></a>Aşama 1: Test ortamınız için parola Microsoft 365 eşitlemesini yapılandırma
+## <a name="phase-1-configure-password-hash-synchronization-for-your-microsoft-365-test-environment"></a>1. Aşama: Microsoft 365 test ortamınız için parola karması eşitlemesini yapılandırma
 
-Karma parola [eşitlemesi için verilen yönergeleri Microsoft 365](password-hash-sync-m365-ent-test-environment.md). Sonuçta elde edilen yapılandırmanız şu şekildedir.
+[Microsoft 365 için parola karması eşitlemesindeki](password-hash-sync-m365-ent-test-environment.md) yönergeleri izleyin. Elde edilen yapılandırmanız aşağıdadır.
   
-![Parola karma eşitlemesi test ortamına sahip sanal kuruluş.](../media/pass-through-auth-m365-ent-test-environment/Phase1.png)
+![Parola karması eşitleme testi ortamı ile sanal kuruluş.](../media/pass-through-auth-m365-ent-test-environment/Phase1.png)
   
-Bu yapılandırma şunları oluşur: 
+Bu yapılandırma şunlardan oluşur: 
   
-- Microsoft 365 E5 veya ücretli aboneliği seçin.
-- İnternet'e bağlı, Azure sanal ağının alt ağına DC1, APP1 ve CLIENT1 sanal makinelerinden oluşan basitleştirilmiş bir kuruluş intraneti. Azure AD Bağlan, APP1'de çalıştırarak TESTLAB AD DS etki alanını düzenli aralıklarla Microsoft 365 Azure AD kiracısına eşitler.
+- Deneme veya ücretli aboneliği Microsoft 365 E5.
+- Azure sanal ağının alt ağındaki DC1, APP1 ve CLIENT1 sanal makinelerinden oluşan, İnternet'e bağlı basitleştirilmiş bir kuruluş intraneti. Azure AD Bağlan, TESTLAB AD DS etki alanını düzenli aralıklarla Microsoft 365 aboneliğinizin Azure AD kiracısıyla eşitlemek için APP1 üzerinde çalışır.
 
-## <a name="phase-2-configure-azure-ad-connect-on-app1-for-pass-through-authentication"></a>Aşama 2: Geçişli kimlik Bağlan app1 üzerinde Azure AD'yi yapılandırma
+## <a name="phase-2-configure-azure-ad-connect-on-app1-for-pass-through-authentication"></a>2. Aşama: Doğrudan kimlik doğrulaması için APP1'de Azure AD Bağlan yapılandırma
 
-Bu aşamada, uygulama1 üzerinde Azure AD Bağlan'yi geçişli kimlik doğrulamayı kullanmak üzere yapılandırın ve sonra çalıştığını doğrulayın.
+Bu aşamada, APP1'de Azure AD Bağlan doğrudan kimlik doğrulamasını kullanacak şekilde yapılandıracak ve ardından çalıştığını doğrulaacaksınız.
 
-### <a name="configure-azure-ad-connect-on-app1"></a>APP1'te Azure AD Bağlan'yi yapılandırma
+### <a name="configure-azure-ad-connect-on-app1"></a>APP1'de Azure AD Bağlan yapılandırma
 
-1.    [Azure portalında](https://portal.azure.com), genel yönetici hesabınızla oturum açın ve SONRA TESTLAB\User1 hesabıyla APP1'e bağlanın.
+1.    [Azure portal](https://portal.azure.com) genel yönetici hesabınızla oturum açın ve ARDıNDAN TESTLAB\User1 hesabıyla APP1'e bağlanın.
 
-2.    APP1'in masaüstünden Azure AD Bağlan.
+2.    APP1'in masaüstünden Azure AD Bağlan çalıştırın.
 
-3.    Hoş Geldiniz **sayfasında Yapılandır'a** **tıklayın**.
+3.    **Hoş Geldiniz sayfasında** **Yapılandır'a** tıklayın.
 
-4.    Ek görevler sayfasında, Kullanıcı oturum açma **ayarlarını değiştir'e tıklayın ve** sonra da Sonraki'ye **tıklayın**.
+4.    Ek görevler sayfasında **Kullanıcı oturumunu değiştir'e** ve ardından **İleri'ye** tıklayın.
 
-5.    **Azure AD Bağlan e** Ekle sayfasında genel yönetici hesabı kimlik bilgilerinizi yazın ve ardından Sonraki'ye **tıklayın**.
+5.    **Azure AD'ye Bağlan** sayfasında genel yönetici hesabı kimlik bilgilerinizi yazın ve **İleri'ye** tıklayın.
 
-6.    Kullanıcı oturum **açma sayfasında,** Geçişli kimlik **doğrulama'ya tıklayın ve** sonra da Sonraki'ye **tıklayın**.
+6.    **Kullanıcı oturum açma** sayfasında Doğrudan **kimlik doğrulaması'na** ve ardından **İleri'ye** tıklayın.
 
-7.    Yapılandırmaya **hazır sayfasında Yapılandır'a** **tıklayın**.
+7.    **Yapılandırmaya hazır** sayfasında **Yapılandır'a** tıklayın.
 
-8.    Yapılandırma tamamlandı **sayfasında Çıkış'a** **tıklayın**.
+8.    **Yapılandırma tamamlandı** sayfasında **Çıkış'a** tıklayın.
 
-9.    Azure portalında, sol bölmede Azure **AD Azure Active Directory >'e Bağlan**. Geçişli kimlik **doğrulama özelliğinin Etkin** olarak görüntülendiğinden **emin olun**.
+9.    Azure portal sol bölmede **Azure AD Bağlan Azure Active Directory >'e** tıklayın. **Geçiş kimlik doğrulaması** özelliğinin **Etkin** olarak göründüğünü doğrulayın.
 
-10.    **Geçişli kimlik doğrulama'ya tıklayın**. **Geçişli kimlik doğrulama** bölmesinde, Kimlik Doğrulama Aracılarının yüklü olduğu sunucular gösterilir. Listede APP1'i görüyor olması gerekir. Geçişli **kimlik doğrulama bölmesini** kapatın.
+10.    **Doğrudan kimlik doğrulama'ya** tıklayın. **Doğrudan kimlik doğrulama bölmesi,** Kimlik Doğrulama Aracılarınızın yüklü olduğu sunucuları listeler. Listede APP1'i görmeniz gerekir. **Geçiş kimlik doğrulaması** bölmesini kapatın.
 
-Ardından, abonelik aboneliğiniz için oturum açma becerinizi test user1@testlab <strong>.</strong>\<your public domain> kullanıcı adını girin.
+Ardından, user1@testlab ile aboneliğinizde oturum açma özelliğini test edin <strong>.</strong>\<your public domain> Kullanıcı1 hesabının kullanıcı adı.
 
-1. Uygulama1'den, oturumları ve sonra bu kez farklı bir hesap belirterek yeniden oturum açın.
+1. APP1'de oturumu kapatın ve bu kez farklı bir hesap belirterek yeniden oturum açın.
 
-2. Kullanıcı adı ve parola istendiğinde, parolayı <strong>user1@testlab.</strong>\<your public domain> ve Kullanıcı1 parolası. Kullanıcı1 olarak başarıyla oturum a girişlisiniz.
+2. Kullanıcı adı ve parola istendiğinde <strong>user1@testlab belirtin.</strong>\<your public domain> ve User1 parolasını seçin. Kullanıcı1 olarak başarıyla oturum açmalısınız.
 
-Kullanıcı1'in TESTLAB AD DS etki alanı için etki alanı yöneticisi izinleri olmasına rağmen, bu bir genel yönetici değildir. Bu nedenle, bir seçenek olarak **Yönetici** simgesini görmeyebilirsiniz.
+User1'in TESTLAB AD DS etki alanı için etki alanı yöneticisi izinlerine sahip olmasına rağmen genel yönetici olmadığını fark edin. Bu nedenle, **yönetici** simgesini bir seçenek olarak görmezsiniz.
 
-Sonuçta elde edilen yapılandırmanız şöyledir:
+Elde edilen yapılandırmanız şunlardır:
 
-![Geçişli kimlik doğrulama test ortamına sahip sanal kuruluş.](../media/pass-through-auth-m365-ent-test-environment/Phase2.png)
+![Doğrudan kimlik doğrulama testi ortamına sahip sanal kuruluş.](../media/pass-through-auth-m365-ent-test-environment/Phase2.png)
  
-Bu yapılandırma şunları oluşur:
+Bu yapılandırma şunlardan oluşur:
 
-- A Microsoft 365 E5 trial or paid subscriptions with the DNS domain testlab.\<your domain name> kaydedildi.
-- İnternet'e bağlı, Azure sanal ağının alt ağına DC1, APP1 ve CLIENT1 sanal makinelerinden oluşan basitleştirilmiş bir kuruluş intraneti. Bir Kimlik Doğrulama Aracısı, Microsoft 365 aboneliğinizin Azure AD kiracıdan gelen geçişli kimlik doğrulama isteklerini işlemek için APP1 Microsoft 365 çalışır.
+- DNS etki alanı testlab'ine sahip Microsoft 365 E5 deneme sürümü veya ücretli abonelikler.\<your domain name> Kayıtlı.
+- Azure sanal ağının alt ağındaki DC1, APP1 ve CLIENT1 sanal makinelerinden oluşan, İnternet'e bağlı basitleştirilmiş bir kuruluş intraneti. Kimlik Doğrulama Aracısı, Microsoft 365 aboneliğinizin Azure AD kiracısından gelen doğrudan kimlik doğrulama isteklerini işlemek için APP1 üzerinde çalışır.
 
 ## <a name="next-step"></a>Sonraki adım
 
-Test [ortamınıza](m365-enterprise-test-lab-guides.md#identity) başka kimlik özelliklerini ve özelliklerini keşfedin.
+Test ortamınızdaki ek [kimlik](m365-enterprise-test-lab-guides.md#identity) özelliklerini ve özelliklerini keşfedin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Microsoft 365 Test Laboratuvarı Kılavuzları için kılavuzlar](m365-enterprise-test-lab-guides.md)
+[Kurumsal Test Laboratuvarı Kılavuzları için Microsoft 365](m365-enterprise-test-lab-guides.md)
 
-[Microsoft 365 genel bakış için genel bakış](microsoft-365-overview.md)
+[Microsoft 365 Kurumsal’a genel bakış](microsoft-365-overview.md)
 
-[Microsoft 365 belgeleri için belgeler](/microsoft-365-enterprise/)
+[Kurumsal belgeler için Microsoft 365](/microsoft-365-enterprise/)

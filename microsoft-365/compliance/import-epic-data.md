@@ -2,8 +2,8 @@
 title: Epic EHR verilerini içeri aktarmak için bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -14,12 +14,12 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: Yöneticiler, kuruluşunuzun Epic sisteminden Microsoft 365 elektronik sağlık kayıtlarını (EHR) içeri aktarmak için bir veri bağlayıcısı ayarlayabilir. Bu, çalışanlarınız tarafından hasta verilerine yetkisiz erişim etkinliğini algılamanıza yardımcı olmak için iç risk yönetimi ilkelerinde Epic EHR verilerini kullanmanıza olanak tanır.
-ms.openlocfilehash: 1dfcedbc6242f16ce476dddd642567bef69c966f
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 55f33358af7b53dc6042fce94b1ddc92e9f130fa
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "65000146"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65078011"
 ---
 # <a name="set-up-a-connector-to-import-epic-ehr-audit-data-preview"></a>Epic EHR denetim verilerini içeri aktarmak için bağlayıcı ayarlama (önizleme)
 

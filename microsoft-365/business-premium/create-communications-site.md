@@ -4,11 +4,11 @@ f1.keywords:
 - NOCSH
 ms.author: samanro
 author: samanro
-manager: scotv
+manager: dansimp
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection:
 - Adm_O365
 - M365-subscription-management
@@ -23,37 +23,37 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Kampanyanız veya iş için kampanyanız SharePoint bir iletişim sitesi oluşturmak için neden ve nasıl yeni bir iletişim Microsoft 365.
-ms.openlocfilehash: ba0f8f559bc8843a61baca1bbb6615c596ffdc65
-ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
+description: Microsoft 365 ile kampanyanız veya işletmeniz için neden ve nasıl SharePoint iletişim sitesi oluşturacağınızı öğrenin ve yanlış dosya paylaşımı nedeniyle ekibi siber saldırılara ve kötü amaçlı yazılımlara ve diğer tehditlere karşı koruyun.
+ms.openlocfilehash: 1e1e2792e4a667737118974b95ae5f77cb6ae224
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "64634393"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65100191"
 ---
-# <a name="create-a-communications-site-in-sharepoint"></a>Web sitesinde iletişim sitesi SharePoint
+# <a name="create-a-communications-site-in-sharepoint"></a>SharePoint'de iletişim sitesi oluşturma
 
-Öncelikleri iletişim kurmanın, strateji belgelerini paylaşmanın ve yaklaşan etkinlikleri vurgulamanın mükemmel bir yolu, iş yerinde bir iletişim sitesi SharePoint. İletişim siteleri, tüm işletmeniz veya kampanyanız için genel olarak paylaşıma yöneliktir; bu sizin iç strateji sitenizdir.
+Öncelikleri iletmenin, strateji belgelerini paylaşmanın ve yaklaşan etkinlikleri vurgulamanın harika bir yolu, SharePoint bir iletişim sitesi kullanmaktır ve bu görevin amacı da budur. İletişim siteleri, tüm işletmeniz veya kampanyanız &mdash; genelinde öğeleri geniş bir şekilde paylaşmaya yöneliktir. Bu, şirket içi strateji siteniz ve taktiksel odanızdır. 
 
 ## <a name="best-practices"></a>En iyi uygulamalar
 
-İletişim sitenize aşağıdaki öğeleri dahil edin:
+İletişim sitesine aşağıdaki öğeleri ekleyin:
 
 1. Logonuzu ve renklerinizi üst bilgi resmi ve tema olarak ekleyin.
 
-2. Hero web bölümünde stratejiniz, iletiniz, önemli belgeleriniz, dizininiz ve SSS'lerinizi **kontrol edin**.
+2. **Hero web bölümünde** stratejiniz, iletiniz, önemli belgeleriniz, dizininiz ve SSS'niz ile liderlik yapın.
 
-3. Metin web bölümünde eks gereken bir CEO'veya aday **açıklaması ekleme**.
+3. **Metin web bölümüne** bir CEO veya aday bildirimi ekleyin.
 
-4. Herkesin neler olduğunu **görmeleri için etkinlikler web** bölümü ekleyin.
+4. Herkesin yaklaşanları görebilmesi için **olaylar web bölümüne olaylar** ekleyin.
 
-5. Kişilerin kullanabileceği fotoğraflar ekleyin veya bir Resim galerisi **web bölümünde paylaşın**.
+5. Kişilerin kullanabileceği veya paylaşabileceği fotoğrafları **bir Resim galerisi web bölümüne** ekleyin.
 
-![Kampanyanın gerek SharePoint ortak öğeleri için alan olan bir SharePoint İletişim sayfasının diyagramı.](../media/m365-democracy-comms-site.png)
+![Kampanyanın ihtiyaç duyacağı ortak öğeler için alan içeren bir SharePoint İletişim sayfasının diyagramı.](../media/m365-democracy-comms-site.png)
 
-## <a name="infographic-create-a-communications-site-infographic"></a>Bilgi Grafiği: İletişim Sitesi Oluşturma bilgi grafiği
+## <a name="infographic-create-a-communications-site-infographic"></a>Bilgi Grafiği: İletişim Sitesi bilgi grafiği oluşturma
 
-PDF ve PDF PowerPoint aşağıdaki bağlantılar tabloid biçiminde (genel muhasebe, 11 x 17 veya A3 olarak da bilinir) indirilebilir ve yazdırılabilir.
+PowerPoint ve PDF için aşağıdaki bağlantılar tabloid biçiminde (kayıt defteri, 11 x 17 veya A3 olarak da bilinir) indirilebilir ve yazdırılabilir.
 
 [![İletişim sitesi bilgi grafiği görüntüsü.](../media/M365-Campaigns-CreateCommunicationSite-358-201.png)](https://download.microsoft.com/download/3/f/f/3ff49b41-e5a4-4993-a00c-7f791a80b627/M365CampaignsCreateCommunicationSite.pdf)
 
@@ -63,12 +63,14 @@ PDF ve PDF PowerPoint aşağıdaki bağlantılar tabloid biçiminde (genel muhas
 
 1. https://Office.com'te oturum açın.
 
-2. Sayfanın sol üst köşesinde uygulama başlatıcı simgesini seçin ve sonra **SharePoint seçin.** Siteler kutucuğunu görmüyorsanız **, SharePoint** veya Siteler **kutucuğunu** görmüyorsanız SharePoint Tüm'e tıklayın.
+2. Sayfanın sol üst köşesinde uygulama başlatıcı simgesini ve ardından **SharePoint** kutucuğunu seçin. **SharePoint** kutucuğunu görmüyorsanız **Siteler** kutucuğuna veya SharePoint görünmüyorsa **Tümü'ne** tıklayın.
 
-3. Sayfa giriş sayfasının en SharePoint + Site **oluştur'a tıklayın** ve İletişim sitesi **seçeneğini** belirtin.
+3. SharePoint giriş sayfasının üst kısmında **+ Site oluştur'a** tıklayın ve **İletişim sitesi** seçeneğini belirleyin.
 
-İletişim siteleri [ve](https://support.office.com/article/What-is-a-SharePoint-communication-site-94A33429-E580-45C3-A090-5512A8070732) [SharePoint Online'da iletişim sitesi oluşturma hakkında SharePoint öğrenin](https://support.microsoft.com/en-us/office/create-a-communication-site-in-sharepoint-online-7fb44b20-a72f-4d2c-9173-fc8f59ba50eb).
+[İletişim siteleri ve](https://support.office.com/article/What-is-a-SharePoint-communication-site-94A33429-E580-45C3-A090-5512A8070732) [iletişim sitesi oluşturma hakkında her şeyi SharePoint Online'da](https://support.microsoft.com/en-us/office/create-a-communication-site-in-sharepoint-online-7fb44b20-a72f-4d2c-9173-fc8f59ba50eb) öğrenin.
 
 ## <a name="admin-settings"></a>Yönetici ayarları
 
-**+** Site oluştur bağlantısını görmüyorsanız, kendi kendine site oluşturma, kendi kendine site oluşturma Microsoft 365. Ekip sitesi oluşturmak için, kuruluşta yönetim Microsoft 365 kişiye ulaşın. Microsoft 365 yöneticisiyseniz, SharePoint [Online'da kendi kendine site](/sharepoint/manage-site-creation) oluşturulmasını etkinleştirmek için bkz. SharePoint Online'da site oluşturma ve SharePoint yönetim merkezinden site oluşturmak için [](/sharepoint/manage-sites-in-new-admin-center) <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">yeni SharePoint SharePoint</a> yönetim merkezinde siteleri yönetme.
+**+ Site oluştur** bağlantısını görmüyorsanız, self servis site oluşturma özelliği Microsoft 365'da kullanılamayabilir. Ekip sitesi oluşturmak için kuruluşunuzda Microsoft 365 yöneten kişiye başvurun. Microsoft 365 yöneticisiyseniz, kuruluşunuzda self servis site oluşturmayı etkinleştirmek için [bkz. SharePoint Online'da site oluşturmayı yönetme](/sharepoint/manage-site-creation) veya SharePoint <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">yönetim merkezinden</a> site oluşturmak için [yeni SharePoint yönetim merkezinde siteleri yönetme](/sharepoint/manage-sites-in-new-admin-center).
+
+&mdash; Görevi tamamladığınız için tebrikler! Şimdi, [kuruluşunuzun tamamı için yönetilen cihazları korumaya](m365bp-protect-devices.md) hemen odaklanın!

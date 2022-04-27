@@ -14,24 +14,24 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 73afd0751e34fbb020019e6f28056c9f2a935c07
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: 3c517d9adcdc2181b43c430a92be3de9ac889dd6
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64788600"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65101127"
 ---
 # <a name="performance-analyzer-for-microsoft-defender-antivirus"></a>Microsoft Defender Virüsten Koruma için performans çözümleyicisi
 
 **Uygulandığı öğe**
-- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Virüsten Koruma
 
 **Platform**
 - Windows
 
-**Microsoft Defender Virüsten Koruma performans çözümleyicisi nedir?**
+## <a name="what-is-microsoft-defender-antivirus-performance-analyzer"></a>Microsoft Defender Virüsten Koruma performans çözümleyicisi nedir?
 
 Bazı durumlarda, belirli dosya ve klasörleri tararken Microsoft Defender Virüsten Koruma performansını ayarlamanız gerekebilir. Performans çözümleyicisi, hangi dosyaların, dosya uzantılarının ve işlemlerin tek tek uç noktalarda performans sorunlarına neden olabileceğini saptamaya yardımcı olan bir PowerShell komut satırı aracıdır. Bu bilgiler, performans sorunlarını daha iyi değerlendirmek ve düzeltme eylemleri uygulamak için kullanılabilir.
 
@@ -74,28 +74,30 @@ Komut satırı parametreleri ve seçenekleri hakkında daha fazla bilgi için bk
 > [!NOTE]
 > Kayıt çalıştırırken "Performans Kaydedicisi Windows zaten kayıt olduğundan performans kaydı başlatılamıyor" hatasını alırsanız, yeni komutla var olan izlemeyi durdurmak için aşağıdaki komutu çalıştırın: **wpr -cancel -instancename MSFT_MpPerformanceRecording**
 
-### <a name="performance-tuning-data-and-information"></a>Performans ayarlama verileri ve bilgileri
+## <a name="performance-tuning-data-and-information"></a>Performans ayarlama verileri ve bilgileri
 
 Sorguya bağlı olarak, kullanıcı tarama sayıları, süre (toplam/min/ortalama/maksimum/ortanca), yol, işlem ve tarama nedeni verilerini görüntüleyebilir. Aşağıdaki resimde tarama etkisi için ilk 10 dosyanın basit bir sorgusu için örnek çıktı gösterilmektedir.
 
 :::image type="content" source="images/example-output.png" alt-text="Temel topfiles sorgusu için örnek çıktı" lightbox="images/example-output.png":::
 
-### <a name="additional-functionality-exporting-and-converting-to-csv-and-json"></a>Ek işlevsellik: CSV ve JSON'a dışarı aktarma ve dönüştürme
+## <a name="additional-functionality-exporting-and-converting-to-csv-and-json"></a>Ek işlevsellik: CSV ve JSON'a dışarı aktarma ve dönüştürme
 
 Performans çözümleyicisinin sonuçları da dışarı aktarılabilir ve csv veya JSON dosyasına dönüştürülebilir.
 Örnek kodlar aracılığıyla "dışarı aktarma" ve "dönüştürme" işlemini açıklayan örnekler için aşağıya bakın.
 
-#### <a name="for-csv"></a>CSV için
+### <a name="for-csv"></a>CSV için
 
 - **Dışarı aktarmak için**: `(Get-MpPerformanceReport -Path:.\Repro-Install.etl -Topscans:1000). TopScans | Export-CSV -Path:.\Repro-Install-Scans.csv -Encoding:UTF8 -NoTypeInformation`
 
 - **Dönüştürmek için**: `(Get-MpPerformanceReport -Path:.\Repro-Install.etl -Topscans:100). TopScans | ConvertTo-Csv -NoTypeInformation`
 
-#### <a name="for-json"></a>JSON için
+### <a name="for-json"></a>JSON için
 
 - **Dönüştürmek için**: `(Get-MpPerformanceReport -Path:.\Repro-Install.etl -Topscans:1000). TopScans | ConvertTo-Json -Depth:1`
 
-### <a name="requirements"></a>Gereksinimler
+Diğer veri işleme sistemleriyle dışarı aktarma için makine tarafından okunabilir bir çıkış sağlamak için Get-MpPerformanceReport için -Raw parametresinin kullanılması önerilir. Ayrıntılar için aşağıya bakın
+
+## <a name="requirements"></a>Gereksinimler
 
 Microsoft Defender Virüsten Koruma performans çözümleyicisi aşağıdaki önkoşullara sahiptir:
 
@@ -157,6 +159,12 @@ New-MpPerformanceRecording -RecordTo C:\LocalPathOnServer02\trace.etl -Session $
 
 Yukarıdaki komut Server02'de bir performans kaydı toplar (Session parametresinin bağımsız değişkeni $s belirtildiği gibi) ve bunu belirtilen yola kaydeder: **Server02'de C:\LocalPathOnServer02\trace.etl** .
 
+##### <a name="example-3-collect-a-performance-recording-in-non-interactive-mode"></a>Örnek 3: Etkileşimli olmayan modda performans kaydı toplama
+```powershell
+New-MpPerformanceRecording -RecordTo:.\Defender-scans.etl -Seconds 60 
+```
+Yukarıdaki komut, -Seconds parametresi tarafından belirtilen saniye cinsinden süre için bir performans kaydı toplar. Bu, etkileşim veya istem gerektirmeyen toplu koleksiyonlar yürüten kullanıcılar için önerilir.
+
 #### <a name="parameters-new-mpperformancerecording"></a>Parametreler: New-MpPerformanceRecording
 
 ##### <a name="-recordto"></a>-RecordTo
@@ -179,6 +187,17 @@ Microsoft Defender Virüsten Koruma performans kaydının oluşturulup kaydedild
 Type: PSSession[]
 Position: 0
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+##### <a name="-seconds"></a>-Saniye
+Performans kaydının süresini saniye cinsinden belirtir. Bu, etkileşim veya istem gerektirmeyen toplu koleksiyonlar yürüten kullanıcılar için önerilir.
+
+```yaml
+Type: Int32
+Position: Named
+Default value: 0
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -218,6 +237,7 @@ Get-MpPerformanceReport    [-Path] <String>
     [-TopScansPerFilePerProcess <Int32>]
 ]
 [-MinDuration <String>]
+[-Raw]
 ```
 
 #### <a name="description-get-mpperformancereport"></a>Açıklama: Get-MpPerformanceReport
@@ -260,6 +280,12 @@ Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopProcesses:10 -TopExtensio
 ```powershell
 Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopScans:100 -MinDuration:100ms
 ```
+##### <a name="example-5-using--raw-parameter"></a>Örnek 5: -Raw parametresini kullanma
+
+```powershell
+Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopFiles:10 -TopExtensions:10 -TopProcesses:10 -TopScans:10 -Raw | ConvertTo-Json
+```
+Yukarıdaki komutta -Raw kullanılması, çıkışın makine tarafından okunabilir ve JSON gibi serileştirme biçimlerine dönüştürülebilir olması gerektiğini belirtir
 
 #### <a name="parameters-get-mpperformancereport"></a>Parametreler: Get-MpPerformanceReport
 
@@ -286,8 +312,19 @@ Default value: None
 Accept pipeline input: True
 Accept wildcard characters: False
 ```
+##### <a name="-raw"></a>-Ham
 
-### <a name="-topextensions"></a>-TopExtensions
+Performans kaydının çıktısının makine tarafından okunabilir ve JSON gibi serileştirme biçimlerine (örneğin, JSON'a Dönüştür komutu aracılığıyla) dönüştürülebilir olması gerektiğini belirtir. Bu, diğer veri işleme sistemleriyle toplu işlemeyle ilgilenen kullanıcılar için önerilir. 
+
+```yaml
+Type: <SwitchParameter>
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+##### <a name="-topextensions"></a>-TopExtensions
 
 Çıkış için "Süre" ölçütüne göre sıralanmış en çok kaç uzantı olduğunu belirtir.
 
@@ -299,7 +336,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <a name="-topextensionsperprocess"></a>-TopExtensionsPerProcess
+##### <a name="-topextensionsperprocess"></a>-TopExtensionsPerProcess
 
 "Süre" ölçütüne göre sıralanmış her bir üst işlem için kaç tane üst uzantının çıkışını yapılacağını belirtir.
 
@@ -311,7 +348,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <a name="-topfiles"></a>-TopFiles
+##### <a name="-topfiles"></a>-TopFiles
 
 Bir en çok kullanılan dosyalar raporu istemektedir ve "Süre" ölçütüne göre sıralanmış en çok kaç dosyanın çıkışını oluşturacaklarını belirtir.
 
@@ -323,7 +360,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <a name="-topfilesperextension"></a>-TopFilesPerExtension
+##### <a name="-topfilesperextension"></a>-TopFilesPerExtension
 
 "Süre" ölçütüne göre sıralanmış her bir üst uzantı için en çok kaç dosyanın çıkışını yapılacağını belirtir.
 
@@ -335,7 +372,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <a name="-topfilesperprocess"></a>-TopFilesPerProcess
+##### <a name="-topfilesperprocess"></a>-TopFilesPerProcess
 
 "Süre" ölçütüne göre sıralanmış her bir üst işlem için en çok kaç dosyanın çıkışını yapılacağını belirtir.
 
@@ -347,7 +384,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <a name="-topprocesses"></a>-TopProcesses
+##### <a name="-topprocesses"></a>-TopProcesses
 
 Bir üst işlemler raporu istemektedir ve "Süre" ölçütüne göre sıralanmış en çok kullanılan işlem sayısını belirtir.
 
@@ -359,7 +396,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <a name="-topprocessesperextension"></a>-TopProcessesPerExtension
+##### <a name="-topprocessesperextension"></a>-TopProcessesPerExtension
 
 "Süre" ölçütüne göre sıralanmış her bir üst uzantı için en çok kaç işlemin çıkışlanacağını belirtir.
 
@@ -371,7 +408,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <a name="-topprocessesperfile"></a>-TopProcessesPerFile
+##### <a name="-topprocessesperfile"></a>-TopProcessesPerFile
 
 "Süre" ölçütüne göre sıralanmış, her bir üst dosya için kaç tane en çok işlem çıkışı yapılacağını belirtir.
 
@@ -383,7 +420,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <a name="-topscans"></a>-TopScans
+##### <a name="-topscans"></a>-TopScans
 
 Bir üst tarama raporu isteğinde bulunur ve "Süre" ölçütüne göre sıralanmış olarak kaç tane en çok tarama yapılacağını belirtir.
 
@@ -395,7 +432,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <a name="-topscansperextension"></a>-TopScansPerExtension
+##### <a name="-topscansperextension"></a>-TopScansPerExtension
 
 "Süre" ölçütüne göre sıralanmış her bir üst uzantı için kaç tane ilk taramanın çıkışını yapılacağını belirtir.
 
@@ -407,7 +444,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <a name="-topscansperextensionperprocess"></a>-TopScansPerExtensionPerProcess
+##### <a name="-topscansperextensionperprocess"></a>-TopScansPerExtensionPerProcess
 
 "Süre" ölçütüne göre sıralanmış her üst işlem için her üst uzantı için kaç tane en çok tarama yapılacağını belirtir.
 
@@ -419,7 +456,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <a name="-topscansperfile"></a>-TopScansPerFile
+##### <a name="-topscansperfile"></a>-TopScansPerFile
 
 "Süre" ölçütüne göre sıralanmış her bir üst dosya için en çok kaç taramanın çıkışını yapılacağını belirtir.
 
@@ -431,7 +468,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <a name="-topscansperfileperextension"></a>-TopScansPerFilePerExtension
+##### <a name="-topscansperfileperextension"></a>-TopScansPerFilePerExtension
 
 "Süre" ölçütüne göre sıralanmış her üst uzantı için her bir üst dosya için çıkış olarak kaç tane en çok tarama yapılacağını belirtir.
 
@@ -443,7 +480,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <a name="-topscansperfileperprocess"></a>-TopScansPerFilePerProcess
+##### <a name="-topscansperfileperprocess"></a>-TopScansPerFilePerProcess
 
 "Süre" ölçütüne göre sıralanmış her üst işlem için her bir üst dosya için çıkış için en çok kaç tarama yapılacağını belirtir.
 
@@ -455,7 +492,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <a name="-topscansperprocess"></a>-TopScansPerProcess
+##### <a name="-topscansperprocess"></a>-TopScansPerProcess
 
 "Süre" ölçütüne göre sıralanmış, En İyi İşlemler raporundaki her bir üst işlem için kaç tane en çok tarama yapılacağını belirtir.
 
@@ -467,7 +504,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <a name="-topscansperprocessperextension"></a>-TopScansPerProcessPerExtension
+##### <a name="-topscansperprocessperextension"></a>-TopScansPerProcessPerExtension
 
 "Süre" ölçütüne göre sıralanmış her üst uzantı için her bir üst işlem için en çok kaç tarama yapıldığını belirtir.
 
@@ -479,7 +516,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <a name="-topscansperprocessperfile"></a>-TopScansPerProcessPerFile
+##### <a name="-topscansperprocessperfile"></a>-TopScansPerProcessPerFile
 
 "Süre" ölçütüne göre sıralanmış her bir üst dosya için her bir üst işlem için çıkış için en çok kaç tarama yapıldığını belirtir.
 
@@ -490,12 +527,14 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-> [!TIP]
-> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
-> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
-> - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
-> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
-> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
-> - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
-> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
-> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
+
+## <a name="additional-resources"></a>Ek kaynaklar
+
+Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+
+- [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
+- [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
+- [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+- [Linux'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](linux-preferences.md)
+- [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
+- [Android'de Uç Nokta için Defender özelliklerini](android-configure.md)-  yapılandırma [iOS özelliklerinde Uç Nokta için Microsoft Defender yapılandırma](ios-configure-features.md)

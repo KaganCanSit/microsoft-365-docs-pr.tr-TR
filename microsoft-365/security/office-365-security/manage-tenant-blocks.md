@@ -16,12 +16,12 @@ ms.collection:
 description: Yöneticiler, Güvenlik portalındaki Kiracı İzin Ver/Engelle Listesi'nde blokları yapılandırmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 1ea87a29d93c43b89bcfb482d185bd4b397dcc5b
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: 60038a2b82ea452ed921d16042cb81d4f0e023a9
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64862466"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65100665"
 ---
 # <a name="add-blocks-in-the-tenant-allowblock-list"></a>Kiracı İzin Verilenler/Engellenenler Listesine engellemeler ekleme
 
@@ -115,9 +115,11 @@ ms.locfileid: "64862466"
    - **Kimlik sahtekarı türü**: Aşağıdaki değerlerden birini seçin:
      - **İç**: Sahte gönderen, kuruluşunuza ait bir etki alanındadır ( [kabul edilen bir etki alanı](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains)).
      - **Dış**: Sahte gönderen bir dış etki alanında.
-   - **Eylem**: **İzin Ver** veya **Engelle'yi** seçin.
+   - **Eylem**: **Engelle'yi** seçin.
 
 4. İşiniz bittiğinde **Ekle'ye** tıklayın.
+> [!NOTE]
+> Bu gönderenlerden gelen e-postalar *kimlik avı* olarak engellenir. 
 
 ## <a name="use-powershell"></a>PowerShell kullanma
 
