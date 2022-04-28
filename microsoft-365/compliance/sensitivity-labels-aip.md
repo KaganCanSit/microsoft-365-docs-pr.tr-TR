@@ -1,5 +1,5 @@
 ---
-title: Azure Microsoft Bilgi Koruması Koruma (AIP) eklentisinde, Office uygulamaları için yerleşik etiket (MIP) etiketini seçme
+title: Azure Information Protection (AIP) eklentisi üzerinden Office uygulamalar için Microsoft Purview Information Protection yerleşik etiketlemeyi seçin
 f1.keywords:
 - CSH
 ms.author: cabailey
@@ -16,83 +16,85 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Azure Information Protection (AIP) birleşik etiketleme istemcisini kullanırken, AIP eklentisini kullanmak yerine Office uygulamaları için yerleşik etiketleme kullanmanın avantajlarını öğrenin.
-ms.openlocfilehash: 88849422d295cc7caf2eb39837f7f1bb82b7a378
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Azure Information Protection (AIP) birleşik etiketleme istemcisini kullandığınızda, AIP eklentisi yerine Office uygulamalar için yerleşik etiketleme kullanmanın avantajlarını anlayın.
+ms.openlocfilehash: 99710520b1b687fe6fc2469badb3ad18e6070371
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63704732"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65093514"
 ---
-# <a name="why-choose-mip-built-in-labeling-over-the-aip-add-in-for-office-apps"></a>Office uygulamaları için AIP eklentisinde yerleşik MIP etiketlemeyi neden Office?
+# <a name="why-choose-built-in-labeling-over-the-aip-add-in-for-office-apps"></a>neden Office uygulamalar için AIP eklentisi yerine yerleşik etiketlemeyi seçmelisiniz?
 
->*[Microsoft 365 uyumluluğu için lisans & kılavuzu.](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)*
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Windows bilgisayarlarında [](sensitivity-labels.md) Microsoft 365 Uygulamaları'te duyarlılık etiketlerini kullanırken, Office uygulamalarına yerleşik olarak gelen etiketlemeyi veya [Azure Information Protection (AIP)](/azure/information-protection/rms-client/aip-clientv2) birleşik etiketleme istemcisinde yer alan bir eklentiyi kullanabilirsiniz. 
+>*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-Yerleşik etiketleme, [Microsoft Bilgi Koruması (MIP)](information-protection-solution.md) dağıtımının temel taşını oluşturur, çünkü bu etiketleme teknolojisi platformlar genelinde (Windows, macOS, iOS, Android ve web) yanı sıra Microsoft uygulamaları ve hizmetleri genelinde ve daha birçok platformda genişler. Yerleşik etiketleme, veri sınıflandırması ve veri kaybı önleme (DLP) gibi diğer MIP özellikleriyle de çalışacak şekilde tasarlanmıştır.
+Windows bilgisayarlardaki Microsoft 365 Uygulamaları [duyarlılık etiketlerini](sensitivity-labels.md) kullandığınızda, Office uygulamalarında yerleşik olarak bulunan etiketlemeyi veya [Azure Information Protection (AIP) birleşik etiketleme istemcisinden bir eklentiyi](/azure/information-protection/rms-client/aip-clientv2) kullanabilirsiniz. 
 
-Yerleşik etiketlerde birden çok etiket Office olduğundan, daha fazla kararlılık ve daha iyi performanstan yararlanabilirler. Ayrıca, gelişmiş sınıflayıcılar gibi en son MIP özelliklerini de desteklerler.
+Yerleşik etiketleme[, Microsoft Purview bilgi koruma dağıtımının](information-protection-solution.md) temel taşını oluşturur çünkü bu etiketleme teknolojisi hem platformlar (Windows, macOS, iOS, Android ve web) hem de Microsoft uygulamaları ve hizmetleri ve ötesinde genişler. Yerleşik etiketleme ayrıca veri sınıflandırma ve Microsoft Purview veri kaybı önleme (DLP) gibi diğer Microsoft Purview özellikleriyle çalışacak şekilde tasarlanmıştır.
 
-AIP istemcisi yüklü olduğunda, Office Windows'de yerleşik etiketleme kapalıdır. Aşağıdaki bölümde yer alan Yönergeler'i kullanarak bu varsayılan davranışı değiştirebilirsiniz: AIP eklentisini devre dışı bırakarak, Office [kullanabilirsiniz](#how-to-disable-the-aip-add-in-to-use-built-in-labeling-for-office-apps).
+Yerleşik etiketler Office Eklentisi kullanmadığından daha fazla kararlılık ve daha iyi performanstan yararlanırlar. Ayrıca gelişmiş sınıflandırıcılar gibi en son Microsoft Purview özelliklerini de destekler.
 
-AIP istemcisini aynı uygulama içinde yüklü ancak Office bırakarak AIP istemcisinin diğer özellikleri destekle kalır:
+Varsayılan olarak, AIP istemcisi yüklendiğinde Windows uygulamalar için Office yerleşik etiketleme kapatılır. Aşağıdaki [AIP eklentisini Office uygulamalar için yerleşik etiketlemeyi kullanmak üzere devre dışı bırakma](#how-to-disable-the-aip-add-in-to-use-built-in-labeling-for-office-apps) bölümündeki yönergeleri kullanarak bu varsayılan davranışı değiştirebilirsiniz.
 
-- Kullanıcıların tüm dosya türlerine etiket uygulayabilecekleri Dosya Gezgini'nde seçeneklere sağ tıklayın.
+AIP istemcisini Office uygulamalarda yüklü ancak devre dışı durumda tuttuğunuzda, AIP istemcisinin diğer özellikleri desteklenmeye devam eder:
 
-- Metin, resim veya PDF belgelerinin şifrelenmiş dosyalarını görüntüleyen bir görüntüleyici.
+- Kullanıcıların tüm dosya türlerine etiket uygulaması için Dosya Gezgini seçeneklerine sağ tıklayın.
 
-- Şirket içi dosyalarda hassas bilgileri bulmak ve bu dosyalarda etiketler ve şifrelemeler uygulamak veya kaldırmak için bir PowerShell modülü.
+- Metin, resim veya PDF belgeleri için şifrelenmiş dosyaları görüntüleyen bir görüntüleyici.
 
-- Şirket içi veri depolarında depolanan hassas bilgileri keşfeden ve isteğe bağlı olarak bu içeriği etiket alan bir tarayıcı.
+- Şirket içindeki dosyalardaki hassas bilgileri bulmak ve bu dosyalardan etiket ve şifreleme uygulamak veya kaldırmak için bir PowerShell modülü.
 
-Etiketleri diğer uygulamaların ötesine genişleten bu özellikler hakkında Office için, AIP belgelerinde yer alan [Azure Information Protection](/azure/information-protection/rms-client/clientv2-admin-guide) birleşik etiketleme istemcisi yönetici kılavuzuna bakın.
+- Şirket içi veri depolarında depolanan hassas bilgileri bulmak ve ardından isteğe bağlı olarak bu içeriği etiketlemek için bir tarayıcı.
 
-Etiketlemeden bağımsız olarak, şifreleme hizmetinin kiracı düzeyinde yönetimi için [AIPService](/powershell/module/aipservice) PowerShell modülünü kullanmaya devamabilirsiniz. Örneğin, veri kurtarma şifrelemesini kaldırmanız, AIP istemcisi tarafından açılmış belgeleri izlemeniz ve iptalniz ve çevrimdışı erişim için kullanım lisansı geçerlilik dönemini yapılandırmanız için süper kullanıcı erişimini yapılandırabilirsiniz. Daha fazla bilgi için bkz [. PowerShell kullanarak Azure Information Protection'dan Korumayı Yönetme](/azure/information-protection/administer-powershell).
+Etiketlemeyi Office uygulamaların ötesine genişleten bu özellikler hakkında daha fazla bilgi için AIP belgelerindeki [Azure Information Protection birleşik etiketleme istemcisi yönetici kılavuzuna](/azure/information-protection/rms-client/clientv2-admin-guide) bakın.
 
-## <a name="decide-whether-to-use-built-in-labeling-for-office-apps-or-the-aip-add-in"></a>Bir uygulama veya AIP eklentisinde yerleşik Office kullanmaya karar verme
+Etiketlemeden bağımsız olarak, şifreleme hizmetinin kiracı düzeyinde yönetimi için [AIPService](/powershell/module/aipservice) PowerShell modülünü kullanmaya devam edebilirsiniz. Örneğin, veri kurtarma için şifrelemeyi kaldırmanız gerektiğinde süper kullanıcı erişimini yapılandırın, AIP istemcisi tarafından açılmış belgeleri izleyin ve iptal edin ve çevrimdışı erişim için kullanım lisansı geçerlilik süresini yapılandırın. Daha fazla bilgi için bkz. [PowerShell kullanarak Azure Information Protection korumasını yönetme](/azure/information-protection/administer-powershell).
 
-Artık AIP istemcisi bakım modunda [olduğu için](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/announcing-aip-unified-labeling-client-maintenance-mode-and/ba-p/3043613), aşağıdaki nedenlerden dolayı AIP eklentisini Office öneririz:
+## <a name="decide-whether-to-use-built-in-labeling-for-office-apps-or-the-aip-add-in"></a>Office uygulamaları için yerleşik etiketlemenin mi yoksa AIP eklentisinin mi kullanılacağına karar verme
 
-- Yeni etiketleme özelliği destek olmayacaktır.
-- Eklentiler daha az kararlıdır, çünkü eklentilerin kilitlenmesi, kilitlenmesi veya eklentinin otomatik olarak devre dışı bırakılmasına neden Office eklentilerle çakışmaya neden olabilir.
-- Eklenti olarak, daha yavaş çalışır ve kullanıcılar etiket gereksinimlerini atlayarak devre dışı bırakılabilir.
-- Hata düzeltmeleri için Azure Information Protection istemcisinin yeniden yüklenmesi gerekir.
-- Kullanıcılar için etiket oluşturma deneyimi, kullanıcıların diğer cihazlarında (macOS, iOS, Android) ve diğer cihazlardaki yerleşik etiketlerden biraz Web için Office. Bu fark, eğitim ve destek maliyetlerini artırabilir.
-- Yalnızca yerleşik Office desteklenen, etiket özellikleriyle ilgili yeni özellikler zaten vardır ve liste [](#features-supported-only-by-built-in-labeling-for-office-apps)sürekli büyüyen bir listedir.
+AIP istemcisi [bakım modunda](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/announcing-aip-unified-labeling-client-maintenance-mode-and/ba-p/3043613) olduğuna göre, aşağıdaki nedenlerle Office uygulamalar için AIP eklentisini kullanmanızı önermiyoruz:
 
-Windows Office uygulamalarınız için AIP eklentinizi yalnızca, kullanıcılarınıza zaten dağıttıysanız ve bunları yerleşik etiketlemeye geçirmek için zaman gerekirse kullanın. Ya da kullanıcıların yerleşik etiketleme tarafından desteklemeyen bir özellik de gerekir. Bu [özellikleri tanımlamanıza yardımcı](#feature-parity-for-built-in-labeling-and-the-aip-add-in-for-office-apps) olmak için bu sayfada yer alan özellik eşlik bilgilerini kullanın.
+- Yeni etiketleme özellikleri desteklenmeyecektir.
+- Eklentiler, Office uygulamaların kilitlenmesine, kilitlenmesine veya eklentinin otomatik olarak devre dışı bırakılmasına neden olabilecek diğer eklentilerle çakışabileceğinden daha az kararlıdır.
+- Eklenti olarak daha yavaş çalışır ve etiketleme gereksinimlerini atlamak için kullanıcılar tarafından devre dışı bırakılabilir.
+- Tüm hata düzeltmeleri için Azure Information Protection istemcisinin yeniden yüklenmesi gerekir.
+- Kullanıcılar için etiketleme deneyimi, kullanıcıların diğer cihazlarında (macOS, iOS, Android) ve Web için Office kullandıkları yerleşik etiketlerden biraz farklıdır. Bu fark, eğitim ve destek maliyetlerini artırabilir.
+- Yalnızca [yerleşik etiketleme tarafından desteklenen](#features-supported-only-by-built-in-labeling-for-office-apps) yeni Office etiketleme özellikleri kullanıma sunuldu ve liste sürekli büyüyor.
 
-## <a name="features-supported-only-by-built-in-labeling-for-office-apps"></a>Yalnızca Office uygulamaları için yerleşik etiketlemeyle desteklenen özellikler
+Windows Office uygulamalarınız için AIP eklentisini yalnızca kullanıcılara zaten dağıttıysanız ve bunları yerleşik etiketlemeye geçirmek için zamana ihtiyacınız varsa kullanın. Veya kullanıcıların yerleşik etiketleme tarafından desteklenmeyen bir özelliğe ihtiyacı vardır. Bu özellikleri belirlemenize yardımcı olması için bu sayfadaki [özellik eşlik bilgilerini](#feature-parity-for-built-in-labeling-and-the-aip-add-in-for-office-apps) kullanın.
+
+## <a name="features-supported-only-by-built-in-labeling-for-office-apps"></a>Yalnızca Office uygulamaları için yerleşik etiketleme tarafından desteklenen özellikler
 
 > [!NOTE]
-> Birçok yeni etiketleme özelliği planlama veya geliştirme aşamasındadır, dolayısıyla bu bölümdeki listenin zaman içinde büyümelerini beklersiniz.
+> Birçok yeni etiketleme özelliği planlama veya geliştirme aşamasındadır, bu nedenle bu bölümdeki listenin zaman içinde büyümesi beklenir.
 
-Bazı özellikler yalnızca Office uygulamaları için yerleşik etiketleme ile destekler ve AIP eklentisinde destek desteklemez. Şunlar dahildir:
+Bazı özellikler yalnızca Office uygulamalar için yerleşik etiketlemeyle desteklenir ve AIP eklentisi tarafından desteklenmez. Şunlar dahildir:
 
 - Otomatik ve önerilen etiketleme için:
-    - Eğitilebilir sınıflayıcılar, Tam [Veri Eşleşmesi](classifier-learn-about.md) [(EDM)](sit-learn-about-exact-data-match-based-sits.md) ve adlandırılmış varlıklar içeren akıllı sınıflandırma [hizmetlerine erişim](named-entities-learn.md)
-    - Kullanıcılar yazarak hassas bilgileri algılama
-    - Word'de, kullanıcılar tanımlanan hassas içeriği gözden geçirebilirsiniz ve kaldırabilir
-- Kullanıcıların izin atamasına izin verilen etiketler için, kullanıcılara veya gruplara farklı izinler (Okuma veya Değiştirme) izni verebilirsiniz
-- Encrypt-Only-postalar için e-postalar için e-postalar
-- Durum çubuğundaki etiketlerin görünürlüğü
+    - [Eğitilebilir sınıflandırıcılar](classifier-learn-about.md), [tam veri eşleşmesi (EDM)](sit-learn-about-exact-data-match-based-sits.md) ve [adlandırılmış varlıklar](named-entities-learn.md) içeren akıllı sınıflandırma hizmetlerine erişim
+    - Kullanıcılar yazarken hassas bilgilerin algılanması
+    - Word'de, kullanıcılar tanımlanan hassas içeriği gözden geçirebilir ve kaldırabilir
+- Kullanıcıların izin atamasına izin veren etiketler için kullanıcılara veya gruplara farklı izinler (Okuma veya Değiştirme) verilebilir
+- E-postalar için Encrypt-Only
+- Durum çubuğunda etiketlerin görünürlüğü
 - Hesap değiştirme desteği
-- Kullanıcılar etiketlemeyi devre dışı bıraka
+- Kullanıcılar etiketlemeyi devre dışı bırakamıyor
 
-Kullanıcıların Word'de tanımlanan hassas içeriği nasıl gözden geçiremediklerini ve isteğe bağlı olarak nasıl kaldırabiliyorlarını gösteren örnek:
+Kullanıcıların Word'de tanımlanan hassas içeriği nasıl gözden geçirip isteğe bağlı olarak kaldırabileceğini gösteren örnek:
 
-![Kullanıcılara duyarlılık içeriği olarak tanımlanan kredi kartı numaralarını kaldırma seçeneği de vardır.](../media/detect-sensitive-content.png)
+![Kullanıcılara duyarlılık içeriği olarak tanımlanan ve kaldırma seçeneğine sahip kredi kartı numaraları.](../media/detect-sensitive-content.png)
 
-Yerleşik etiketleme için yeni etiketleme özellikleri ne zaman kullanılabilir hale geldiğinde bilgi sahibi olmak için bkz. Uyumluluk ve [](whats-new.md) Duyarlılık **Microsoft 365'daki** özellikler.
+Yerleşik etiketleme için yeni etiketleme özellikleri kullanıma sunulduğunda haberdar olmak için bkz. [Microsoft Purview'daki yenilikler](whats-new.md) ve **Duyarlılık etiketleri** bölümleri.
 
 ## <a name="how-to-disable-the-aip-add-in-to-use-built-in-labeling-for-office-apps"></a>Office uygulamaları için yerleşik etiketlemeyi kullanmak üzere AIP eklentisini devre dışı bırakma
 
-AIP istemcisini, etiketleri Office uygulamalarının ötesine genişletip istemcinin eklentisini Office uygulamalarına yüklemesini önlemek için yüklemişseniz, [Office 2013 ve Office 2016](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off) programlarının grup ilkesi ayarları  nedeniyle Yüklenmedi altında belgelenmiş olarak Yönetilen eklentilerin Grup İlkesi ayarı Listesini kullanın.
+Etiketlemeyi Office uygulamaların ötesine genişletmek için AIP istemcisini yüklediğinizde ancak istemci eklentisinin Office uygulamalarda yüklenmesini önlemek istiyorsanız, Office [2013 ve Office 2016 programlarının grup ilkesi ayarları nedeniyle Yüklü Eklenti Yok](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off) bölümünde belgelendiği gibi **yönetilen eklentiler listesi** grup ilkesi ayarını kullanın.
 
-Yerleşik etiketlemeyi destekleyen Windows Office uygulamalarınız için Microsoft Word 2016, Excel 2016, PowerPoint 2016 ve Outlook 2016 yapılandırmasını kullanın, AIP **istemcisi için aşağıdaki programlı tanımlayıcıları (ProgID) belirtin ve 0: Eklenti her zaman devre dışı bırakılır (engellenir)**
+Yerleşik etiketlemeyi destekleyen Windows Office uygulamalarınız için Microsoft Word 2016, Excel 2016, PowerPoint 2016 ve Outlook 2016 yapılandırmasını kullanın, AIP istemcisi için aşağıdaki programlı tanımlayıcıları (ProgID) belirtin ve seçeneğini **0: Eklenti her zaman devre dışıdır (engellenir)**
 
-|Uygulama  |ProgID  |
+|Uygulama  |Progıd  |
 |---------|---------|
 |Word     |     `MSIP.WordAddin`    |
 |Excel     |  `MSIP.ExcelAddin`       |
@@ -100,84 +102,84 @@ Yerleşik etiketlemeyi destekleyen Windows Office uygulamalarınız için Micros
 |Outlook | `MSIP.OutlookAddin` |
 | | | 
 
-Grup İlkesi kullanarak veya Office bulut [ilkesi hizmetini kullanarak bu ayarı dağıtın](/DeployOffice/overview-office-cloud-policy-service).
+Bu ayarı grup ilkesi kullanarak veya [Office bulut ilkesi hizmetini](/DeployOffice/overview-office-cloud-policy-service) kullanarak dağıtın.
 
 > [!IMPORTANT]
-> Grup İlkesi ayarını kullanıyorsanız duyarlılık etiketlerini uygulamak ve görüntülemek için **Office'te** Duyarlılık özelliğini kullanın ve bunu **1** olarak ayarlayın. Bazı durumlarda AIP eklentisi Office uygulamalarına yüklenmeye devam ediyor olabilir. Eklentinin her uygulamaya yüklenmesini engellemek bu durumdan engellenmesine neden olur.
+> **Duyarlılık etiketlerini uygulamak ve görüntülemek için Office'de Duyarlılık özelliğini kullan** grup ilkesi ayarını kullanıyorsanız ve bunu **1** olarak ayarlarsanız, AIP eklentisinin Office uygulamalarda hala yüklenebileceği bazı durumlar vardır. Eklentinin her uygulamada yüklenmesini engellemek, bunun olmasını önler.
 
-Alternatif olarak Word, Excel, PowerPoint ve Microsoft Azure'den Microsoft Azure Information Office **Protection** eklentisini etkileşimli olarak devre dışı Outlook. Bu yöntem tek bir bilgisayar ve geçici test için uygundur. Yönergeler için bkz[. Programlarda eklentileri görüntüleme, yönetme Office yükleme](https://support.office.com/article/16278816-1948-4028-91e5-76dca5380f8d).
+Alternatif olarak, **word, Excel, PowerPoint ve Outlook** Microsoft Azure Information Protection Office Eklentisini etkileşimli olarak devre dışı bırakabilir veya kaldırabilirsiniz. Bu yöntem tek bir bilgisayar ve geçici test için uygundur. Yönergeler için bkz. [Office programlarında eklentileri görüntüleme, yönetme ve yükleme](https://support.office.com/article/16278816-1948-4028-91e5-76dca5380f8d).
 
-Hangi yöntemi seçerseniz seçin, uygulamalar yeniden başlatıldığında Office geçerli olur.
+Hangi yöntemi seçerseniz seçin, uygulamalar yeniden başlatıldığında değişiklikler Office etkinleşir.
 
 > [!NOTE]
-> Yerleşik etiketler, bir uygulamanın abonelik Office gerektirir. bazen "Office Kalıcı" olarak da adlandırılan tek başına Office sürümleriniz varsa, en son etiketleme yeteneklerinden yararlanmak için Microsoft 365 Uygulamaları for Enterprise [sürümüne yükseltmenizi öneririz](sensitivity-labels-office-apps.md#support-for-sensitivity-label-capabilities-in-apps).
+> Yerleşik etiketler, Office uygulamalarının abonelik sürümünü gerektirir. Bazen "Office Perpetual" olarak da adlandırılan tek başına Office sürümleriniz varsa, [en son etiketleme özelliklerinden](sensitivity-labels-office-apps.md#support-for-sensitivity-label-capabilities-in-apps) yararlanmak üzere Enterprise için Microsoft 365 Uygulamaları yükseltmenizi öneririz.
 
-AIP eklentisini devre dışı bırakmak için bu yöntemi kullanırsanız, etiketi diğer uygulamaların ötesine genişletmek için AIP istemcisini Office unutmayın.
+AIP eklentisini devre dışı bırakmak için bu yöntemi kullandığınızda, etiketlemeyi Office uygulamaların ötesine genişletmek için AIP istemcisini kullanmaya devam edebilirsiniz.
 
-## <a name="feature-parity-for-built-in-labeling-and-the-aip-add-in-for-office-apps"></a>Yerleşik etiketleme ve Office uygulamaları için AIP eklentisinde özellik Office.
+## <a name="feature-parity-for-built-in-labeling-and-the-aip-add-in-for-office-apps"></a>Yerleşik etiketleme için özellik eşliği ve Office uygulamalar için AIP eklentisi
 
-AIP eklentisinde desteklenen etiketleme özelliklerinin birçoğu artık yerleşik etiketleme tarafından da desteklenmiş durumdadır. Daha ayrıntılı bir özellik listesi, gerekebilecek minimum sürümler ve yapılandırma bilgileri için bkz. Office [uygulamalarına göre duyarlılık etiketlerini yönetme](sensitivity-labels-office-apps.md).
+AIP eklentisi tarafından desteklenen etiketleme özelliklerinin çoğu artık yerleşik etiketleme tarafından desteklenmektedir. Özelliklerin daha ayrıntılı listesi, gerekli olabilecek en düşük sürümler ve yapılandırma bilgileri için bkz. [Office uygulamalarında duyarlılık etiketlerini yönetme](sensitivity-labels-office-apps.md).
 
-Daha fazla özellik planlanmaktadır ve geliştirme aşamasındadır. ilgilendiğiniz belirli bir özellik varsa, yol haritasını kontrol [edin Microsoft 365](https://aka.ms/MIPC/Roadmap) Özel Önizleme'de Microsoft Bilgi Koruması'e [Office göz önünde bulundurabilirsiniz](https://aka.ms/MIP/PreviewRing).
+Daha fazla özellik planlanıyor ve geliştiriliyor. İlgilendiğiniz belirli bir özellik varsa [Microsoft 365 yol haritasını](https://aka.ms/MIPC/Roadmap) gözden geçirin ve [Office Özel Önizleme'de Microsoft Bilgi Koruması](https://aka.ms/MIP/PreviewRing) katılmayı düşünün.
 
-Yerleşik etiketleme tarafından henüz desteklememiş bir AIP eklentisinde yer alan bir özellik olup olmadığını belirlemek için aşağıdaki bilgileri kullanın:
+AIP eklentisinden henüz yerleşik etiketleme tarafından desteklenmeyen bir özellik kullanıp kullanmadığınızı belirlemenize yardımcı olması için aşağıdaki bilgileri kullanın:
 
-|AIP eklenti özelliği veya özelliği|Yerleşik etiketleme |
+|AIP eklentisi özelliği veya özelliği|Yerleşik etiketleme |
 |:-------------------------------|:----------------:|
 |**Kategori: Genel** ||
 |Merkezi raporlama ve denetim|![Desteklenir.](../media/yes-icon.png) <br>[Daha fazla bilgi edinin](sensitivity-labels-office-apps.md#auditing-labeling-activities) |
 |Kamu Bulutu|![Desteklenir.](../media/yes-icon.png)|
-|Yönetici etiketlemeyi devre dışı bırakarak <br> - Tüm uygulamalar|  ![Desteklenir.](../media/yes-icon.png) <br>[Daha fazla bilgi edinin](sensitivity-labels-office-apps.md#office-built-in-labeling-client-and-other-labeling-solutions)|
-|Yönetici etiketlemeyi devre dışı bırakarak <br> - Uygulama başına|  Planlama veya geliştirmede|
+|Yönetici etiketlemeyi devre dışı bırakabilir <br> - Tüm uygulamalar|  ![Desteklenir.](../media/yes-icon.png) <br>[Daha fazla bilgi edinin](sensitivity-labels-office-apps.md#if-you-need-to-turn-off-built-in-labeling-in-office-apps-on-windows)|
+|Yönetici etiketlemeyi devre dışı bırakabilir <br> - Uygulama başına|  Planlama veya geliştirme aşamasında|
 |**Kategori: Kullanıcı Deneyimi** ||
-|Şeritteki Etiket düğmesi|![Desteklenir.](../media/yes-icon.png)|
-|Etiket adları ve araç ipucu için çok dilli destek| ![Desteklenir.](../media/yes-icon.png) <br>[Daha fazla bilgi edinin](create-sensitivity-labels.md#example-configuration-to-configure-a-sensitivity-label-for-different-languages) |
-|Etiket renkleri| Planlama veya geliştirmede |
-|Araç çubuğunda etiketlerin görünürlüğü| Planlama veya geliştirmede |
+|Şeritteki etiketleme düğmesi|![Desteklenir.](../media/yes-icon.png)|
+|Etiket adları ve araç ipuçları için çok dilli destek| ![Desteklenir.](../media/yes-icon.png) <br>[Daha fazla bilgi edinin](create-sensitivity-labels.md#example-configuration-to-configure-a-sensitivity-label-for-different-languages) |
+|Etiket renkleri| Planlama veya geliştirme aşamasında |
+|Araç çubuğunda etiketlerin görünürlüğü| Planlama veya geliştirme aşamasında |
 |**Kategori: Etiketleme eylemleri** ||
 |El ile etiketleme |  ![Desteklenir.](../media/yes-icon.png) <br>[Daha fazla bilgi edinin](https://support.microsoft.com/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) |
 |Zorunlu etiketleme | ![Desteklenir.](../media/yes-icon.png) <br>[Daha fazla bilgi edinin](sensitivity-labels.md#what-label-policies-can-do)|
-|Varsayılan etiketleme <br> - Yeni ve var olan öğeler <br> - E-posta için ayrı ayarlar|  ![Desteklenir.](../media/yes-icon.png) <br>[Daha fazla bilgi edinin](sensitivity-labels.md#what-label-policies-can-do) |
+|Varsayılan etiketleme <br> - Yeni ve mevcut öğeler <br> - E-posta için ayrı ayarlar|  ![Desteklenir.](../media/yes-icon.png) <br>[Daha fazla bilgi edinin](sensitivity-labels.md#what-label-policies-can-do) |
 |Önerilen veya otomatik |![Desteklenir.](../media/yes-icon.png) <br>[Daha fazla bilgi edinin](apply-sensitivity-label-automatically.md#how-to-configure-auto-labeling-for-office-apps) |
-|Gerekçelendirmeyi düşürme |  ![Desteklenir.](../media/yes-icon.png) <br>[Daha fazla bilgi edinin](sensitivity-labels.md#what-label-policies-can-do)|
+|Eski sürüme düşürme gerekçesi |  ![Desteklenir.](../media/yes-icon.png) <br>[Daha fazla bilgi edinin](sensitivity-labels.md#what-label-policies-can-do)|
 | **Kategori: Görsel işaretler** | |
-|Üstbilgiler, altbilgiler, filigran| ![Desteklenir.](../media/yes-icon.png) <br>[Daha fazla bilgi edinin](sensitivity-labels.md#what-label-policies-can-do)|
+|Üst bilgiler, alt bilgiler, filigran| ![Desteklenir.](../media/yes-icon.png) <br>[Daha fazla bilgi edinin](sensitivity-labels.md#what-label-policies-can-do)|
 |Dinamik işaretler| ![Desteklenir.](../media/yes-icon.png) <br>[Daha fazla bilgi edinin](sensitivity-labels-office-apps.md#dynamic-markings-with-variables)|
-|Uygulama başına görsel işaretleme| ![Desteklenir.](../media/yes-icon.png) <br>[Daha fazla bilgi edinin](sensitivity-labels-office-apps.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)|
+|Uygulama görseli işaretleme başına| ![Desteklenir.](../media/yes-icon.png) <br>[Daha fazla bilgi edinin](sensitivity-labels-office-apps.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)|
 | **Kategori: Şifreleme** | |
 |Yönetici tanımlı izinler | ![Desteklenir.](../media/yes-icon.png) <br>[Daha fazla bilgi edinin](encryption-sensitivity-labels.md#assign-permissions-now) |
-|Kullanıcı tanımlı izinler <br> - E-posta için İleri'Outlook <br> - Word, Excel ve PowerPoint için kullanıcı ve grup PowerPoint| ![Desteklenir.](../media/yes-icon.png) <br>[Daha fazla bilgi edinin](encryption-sensitivity-labels.md#let-users-assign-permissions)|
-|Kullanıcı tanımlı izinler <br> - Word, Excel ve diğer etki alanlarını belirterek kuruluş genelinde PowerPoint | Planlama veya geliştirmede |
+|Kullanıcı tanımlı izinler <br> - Outlook İçin İletme <br> - Word, Excel PowerPoint için kullanıcı ve grup özel izinleri| ![Desteklenir.](../media/yes-icon.png) <br>[Daha fazla bilgi edinin](encryption-sensitivity-labels.md#let-users-assign-permissions)|
+|Kullanıcı tanımlı izinler <br> - Word, Excel PowerPoint için etki alanları belirterek kuruluş genelinde özel izinler | Planlama veya geliştirme aşamasında |
 |Birlikte yazma ve Otomatik Kaydetme | ![Desteklenir.](../media/yes-icon.png) <br>[Daha fazla bilgi edinin](sensitivity-labels-coauthoring.md) |
-|Çift anahtar şifrelemesi | Planlama veya geliştirmede |
-|Kullanıcılar için belge iptali | Gözden geçirme altında |
+|Çift anahtarlı şifreleme | Planlama veya geliştirme aşamasında |
+|Kullanıcılar için belge iptali | İnceleme altında |
 | | |
 
 ### <a name="support-for-powershell-advanced-settings"></a>PowerShell gelişmiş ayarları desteği
 
-AIP istemcisi, PowerShell gelişmiş ayarlarını kullanarak birçok [özelleştirmeyi destekler](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#configuring-advanced-settings-for-the-client-via-powershell). Bu gelişmiş ayarlardan bazıları artık [New-Label veya Set-Label](/powershell/module/exchange/new-label), [New-LabelPolicy veya Set-LabelPolicy'de](/powershell/module/exchange/new-labelpolicy) belgelenmiş olarak yerleşik etiketleme tarafından [destek almaktadır](/powershell/module/exchange/set-labelpolicy).[](/powershell/module/exchange/set-label)
+AIP istemcisi [, PowerShell gelişmiş ayarlarını](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#configuring-advanced-settings-for-the-client-via-powershell) kullanarak birçok özelleştirmeyi destekler. Bu gelişmiş ayarlardan bazıları artık [New-Label veya Set-Label](/powershell/module/exchange/new-label) ve [New-LabelPolicy ya da Set-LabelPolicy](/powershell/module/exchange/new-labelpolicy) belgelerinde belirtildiği gibi yerleşik etiketleme tarafından desteklenmektedir.[](/powershell/module/exchange/set-label)[](/powershell/module/exchange/set-labelpolicy)
 
-Bununla birlikte, desteklenen ayarları yapılandırmanız için PowerShell'i kullanmak zorunda olmadığınız gibi, desteklenen ayarların standart yapılandırmada yer Microsoft 365 uyumluluk merkezi. Örneğin, varsayılan etiket için zorunlu etiketlemeyi kapatabilme Outlook farklı bir varsayılan etiket ayarlama özelliği.
+Ancak desteklenen ayarları yapılandırmak için PowerShell'i kullanmanıza gerek olmadığını fark edebilirsiniz çünkü bunlar Microsoft Purview uyumluluk portalından standart yapılandırmaya dahildir. Örneğin, Outlook için zorunlu etiketlemeyi kapatma ve farklı bir varsayılan etiket ayarlama olanağı.
 
-AIP eklentisinde yer alan aşağıdaki yapılandırmalar henüz yerleşik etiketlemeyle destek desteklemez:
+AIP eklentisinden gelen aşağıdaki yapılandırmalar henüz yerleşik etiketleme tarafından desteklenmemektedir:
 
 - [E-posta eklerinden etiket devralma](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
-- [S/MIME for Outlook](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#configure-a-label-to-apply-smime-protection-in-outlook)
-- [E-posta iletileri için oversharing Outlook](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
+- [Outlook için S/MIME](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#configure-a-label-to-apply-smime-protection-in-outlook)
+- [Outlook için açılan iletileri fazla paylaşma](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
 - [Üst etiket için varsayılan alt etiket](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#specify-a-default-sublabel-for-a-parent-label)
-- [Dış içerik işaretlemelerini kaldırma](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#remove-headers-and-footers-from-other-labeling-solution )
+- [Dış içerik işaretlerini kaldırma](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#remove-headers-and-footers-from-other-labeling-solution )
 
-## <a name="features-not-planned-to-be-supported-by-built-in-labeling-for-office-apps"></a>Özellikler, Office uygulamaları için yerleşik etiketlemeyle destek Office planlanmaz
+## <a name="features-not-planned-to-be-supported-by-built-in-labeling-for-office-apps"></a>Office uygulamaları için yerleşik etiketleme tarafından desteklenmeyen özellikler
 
-Yerleşik etiketlemeyle ilgili yeni özellikler her zaman eklense de, AIP Office eklentisi, yerleşik etiketleme için gelecek sürümlerde kullanılabilir olması planlanan aşağıdaki özellikleri destekler:
+Yerleşik etiketlemeye yönelik yeni özellikler her zaman eklense de, AIP Office Eklentisi, yerleşik etiketleme için gelecek sürümlerde kullanıma sunulması planlanmayan aşağıdaki özellikleri destekler:
 
-- Dosya ekleme gibi Microsoft Office 97-2003 biçimlerini .doc uygulama
-- Kalıcı olarak bağlantısı olmayan bilgisayarlar
-- Abonelik tabanlı Office Office bağımsız sürümleri ("Office Kalıcı" olarak da adlandırılır)
+- etiketlerin .doc dosyaları gibi Microsoft Office 97-2003 biçimlerine uygulanması
+- Kalıcı olarak bağlantısı kesilmiş bilgisayarlar
+- Abonelik tabanlı değil, tek başına Office sürümleri ("Office Kalıcı" olarak da adlandırılır)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu etiketleme özelliklerini oluşturma ve yapılandırma yönergeleri için bkz. [Duyarlılık etiketlerini ve ilkelerini oluşturma ve yapılandırma](create-sensitivity-labels.md).
+Bu etiketleme özelliklerini oluşturma ve yapılandırma yönergeleri için bkz. [Duyarlılık etiketleri ve ilkeleri oluşturma ve yapılandırma](create-sensitivity-labels.md).
 
 > [!TIP]
-> Dosyanın içinde zaten duyarlılık etiketleriniz Microsoft 365 uyumluluk merkezi, otomatik olarak varsayılan etiketler oluşturmak için uygun olmayacaktır. Ancak yine de yapılandırmalarına başvuru yapmak yararlı olabilir: [Varsayılan duyarlılık etiketleri](mip-easy-trials.md#default-sensitivity-labels). 
+> Microsoft Purview uyumluluk portalında duyarlılık etiketleriniz zaten varsa, varsayılan etiketlerin otomatik olarak oluşturulması için uygun olmazsınız. Ancak, yapılandırmalarına başvurmayı yine de yararlı bulabilirsiniz: [Varsayılan duyarlılık etiketleri](mip-easy-trials.md#default-sensitivity-labels). 

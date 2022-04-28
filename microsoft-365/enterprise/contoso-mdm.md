@@ -4,7 +4,7 @@ author: kelleyvice-msft
 f1.keywords:
 - NOCSH
 ms.author: kvice
-manager: laurawi
+manager: scotv
 audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -13,70 +13,70 @@ ms.collection:
 - M365-identity-device-management
 - Strat_O365_Enterprise
 ms.custom: ''
-description: Contoso'ya Microsoft Intune Microsoft 365 cihazları ve bu cihazlarda çalışan uygulamaları yönetmek için Kurumsal'da Nasıl Contoso'ya sahip olduğunu öğrenin.
-ms.openlocfilehash: dedda98083dd5a27c4c7721b5ae8e5dc1fed4bad
-ms.sourcegitcommit: 07405a81513d1c63071a128b9d5070d3a3bfe1cd
+description: Contoso'un cihazlarını ve üzerinde çalışan uygulamaları yönetmek için Microsoft 365'de Microsoft Intune nasıl kullandığını anlayın.
+ms.openlocfilehash: c321fc9bdaf27577e32d934aa771c92d1a0bdd79
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2021
-ms.locfileid: "63006806"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65092701"
 ---
 # <a name="mobile-device-management-for-contoso"></a>Contoso için mobil cihaz yönetimi
 
-Microsoft 365 uygulamaları, Intune'ı ve mobil cihaz ile uygulama yönetimini ve güvenliğini destekleyen bir dizi Azure hizmeti içerir.
+Kuruluş için Microsoft 365 Intune ve mobil cihaz ile uygulama yönetimi ve güvenliğini destekleyen bir dizi Azure hizmeti içerir.
 
-Contoso'da mobil etkinleştirilmiş birçok çalışan var. Bazılarında Contoso konumlarında ofisleri, bazıları ise ofisleri yoktur. Contoso'ya çalışanların üretkenliğini etkinleştirmenin ama cihazları, bu cihazlarda depolanan Contoso verilerini ve uygulama davranışını güvenli tutmak için bir yol gerekiyordu.
+Contoso'nun mobil etkinleştirilmiş birçok çalışanı vardır. Bazılarında Contoso konumlarında ofisler, bazılarının ise ofisi yoktur. Contoso çalışan üretkenliğini sağlamak için bir yönteme ihtiyaç duyar, ancak cihazları, bu cihazlarda depolanan Contoso verilerini ve uygulama davranışını güvenli tutar.
 
 ## <a name="plan"></a>Plan
 
-Contoso, Kurumsal cihazlar için mobil cihaz yönetimiyle ilgili aşağıdaki Intune Microsoft 365 belirledi:
+Contoso, kuruluş için Microsoft 365 için mobil cihaz yönetiminin aşağıdaki Intune kullanım örneklerini tanımladı:
 
-- Mobil Exchange Online güvenli bir şekilde erişilebilen e-posta ve verileri koruyun.
-- Contoso çalışanları için kendi cihazınızı getirin (BYOD) programı kullanın.
-- Contoso çalışanlarına kuruluşa ait telefon ve sınırlı kullanımlı paylaşılan tabletleri sorun.
+- Mobil cihazlar tarafından güvenli bir şekilde erişilebilmesi için Exchange Online e-postayı ve verileri koruyun.
+- Contoso çalışanları için kendi cihazını getir (KCG) programı uygulayın.
+- Contoso çalışanlarına kuruluşa ait telefonlar ve sınırlı kullanımlı paylaşılan tabletler oluşturun.
 
-Contoso, Intune'i kullanarak şunları yapmak için kullanmaz:
+Contoso aşağıdakiler için Intune kullanmaz:
 
-- Çalışanların, erişilen bir genel Microsoft 365 bilgi noktası üzerinden güvenli bir şekilde erişmesine izin verme.
-- Şirket içi e-postayı ve verileri koruyun; bu şekilde mobil cihazlar tarafından güvenle erişilebilir, çünkü şirket içi Microsoft Exchange yoktur.
+- Çalışanların yönetilmeyen bir genel bilgi noktası Microsoft 365 güvenli bir şekilde erişmesine izin verin.
+- Şirket içi Microsoft Exchange sunucusu olmadığından, şirket içi e-postayı ve verileri mobil cihazlar tarafından güvenli bir şekilde erişilebilmeleri için koruyun.
 
-## <a name="deploy"></a>Dağıtma
+## <a name="deploy"></a>Dağıtım
 
-Contoso mobil cihaz yönetim altyapısını şu şekilde kuracak:
+Contoso mobil cihaz yönetimi altyapısını böyle ayarlar:
 
-- Intune'i Mobil Cihaz Yönetimi (MDM) yetkilisi olarak ayarlayın ve Azure'da Intune'i kullanarak içeriği yönetin ve cihazları yönetin
-- Kayıt Azure Active Directory Intune ayarları ve cihaz tabanlı Koşullu Erişim ilkeleri için cihazlar için kullanıcı grupları (Azure AD) grupları oluşturuldu
+- Intune Mobil Cihaz Yönetimi (MDM) yetkilisi olarak ayarlayın ve içeriği yönetmek ve cihazları yönetmek için Azure'da Intune kullanın
+- Kayıt ve Intune ayarları ile cihaz tabanlı Koşullu Erişim ilkeleri için cihazlar için Azure Active Directory (Azure AD) grupları oluşturuldu
 
   Daha fazla bilgi için bkz. [Contoso Koşullu Erişim ilkeleri](contoso-identity.md#conditional-access-policies-for-zero-trust-identity-and-device-access).
 
-- iPad, iMac, iPhone ve kurumsal iPhone'lara sahip çalışanları desteklemek için Apple cihaz platformu etkinleştirildi
-- Contoso'ya özgü hüküm ve koşullar ilkeleri oluşturulmuştur ve bu ilkeler Contoso'Şirket Portalı mobil cihazlara yüklemesi sırasında görülür
-- Kaydolmamış cihazlar için, Microsoft 365 hizmetleri için kimlik doğrulaması gerektiren bir dizi Mobil Uygulama Yönetimi (MAM) ilkeleri uygulanmıştır
-- Zorunlu olan Intune ilkeleri oluşturuldu:
+- iPad' ler, iMac'ler, iPhone'lar ve şirkete ait iPhone'lar ile çalışanları desteklemek için Apple cihaz platformunu etkinleştirdi
+- Contoso için Şirket Portalı mobil cihazlara yüklenmesi sırasında görülen Contoso'ya özgü hüküm ve koşullar ilkeleri oluşturuldu
+- Kaydedilmemiş cihazlar için, Microsoft 365 hizmetlerine erişim için kimlik doğrulaması gerektiren bir dizi Mobil Uygulama Yönetimi (MAM) ilkesi uyguladınız
+- Şunları zorunlu kılan Intune ilkeleri oluşturuldu:
   - İzin verilen uygulamalar.
   - Yetkisiz erişimi önlemeye yardımcı olmak için cihaz şifrelemesi.
-  - Altı basamaklı bir PIN veya parola.
-  - Etkileşim dışı zaman aşımı süresi.
-  - Virüsten koruma ve kötü amaçlı yazılıma karşı koruma ve Windows Defender ve Windows 10 güncelleştirmeleri.
-  - En son Windows 10 güncelleştirmeleri içeren mobil cihazlarda otomatik güncelleştirmeler.
-  - Yönetilen cihazlara sertifikalar iletir.
-  - İş ve kişisel verilerin net bir ayrımı. Kullanıcılar veya yöneticiler cihazdan şirket verilerini seçmeli olarak temizlerken, resimler, kişisel e-posta hesapları ve kişisel dosyalar gibi kişisel verileri olduğu gibi kişisel dosyaları olduğu gibi bırakabilirsiniz.
+  - Altı basamaklı PIN veya parola.
+  - Etkinlik dışı-zaman aşımı süresi.
+  - Virüsten koruma ve kötü amaçlı yazılım koruması ve Windows 10 cihazlarda Windows Defender ile imza güncelleştirmeleri.
+  - En son güvenlik güncelleştirmelerini içeren Windows 10 cihazlarda otomatik güncelleştirmeler.
+  - Sertifikaları yönetilen cihazlara gönderme.
+  - İş ve kişisel verilerin net bir şekilde ayrılması. Kullanıcılar veya yöneticiler cihazdan şirket verilerini seçerek silebilir ve resimler, kişisel e-posta hesapları ve kişisel dosyalar gibi kişisel verileri el değmemiş olarak bırakabilir.
 
-Contoso, uygun Intune cihaz gruplarına ekleyerek dağıtılmış bilgisayarları ve şirkete ait akıllı telefon ve tabletleri kaydetti. Ayrıca, çalışanların kişisel cihazlarını kaydetmeleri için bir BYOD programı da kurtılar. Kayıtlı cihazlar Intune ilkeleri alır ve sonuçta yönetilen ve güvenli cihazlar ve uygulamaları elde olur. Kaydolmamış olan cihazlar, izin verilen uygulamaları belirten Mobil Uygulama Yönetimi (MAM) ilkelerine sahiptir.
+Contoso, dağıtılan bilgisayarları ve şirkete ait akıllı telefonları ve tabletleri uygun Intune cihaz gruplarına ekleyerek kaydetti. Ayrıca çalışanların kişisel cihazlarını kaydetmeleri için bir KCG programı oluşturdular. Kayıtlı cihazlar, yönetilen ve güvenli cihazlara ve uygulamalarına neden olan Intune ilkeleri alır. Kaydedilmemiş cihazların, izin verilen uygulamaları belirten Mobil Uygulama Yönetimi (MAM) ilkeleri vardır.
 
-Burada, Contoso mobil cihaz yönetimi dağıtım mimarisi ve bilgileri bulunmaktadır.
+Contoso mobil cihaz yönetimi dağıtım mimarisi aşağıdadır.
 
 ![Contoso mobil cihaz yönetimi dağıtım altyapısı.](../media/contoso-mdm/contoso-mdm-fig1.png)
 
 ## <a name="next-step"></a>Sonraki adım
 
-Contoso'nın [kuruluş genelinde çok](contoso-info-protect.md) önemli dijital varlıkları sınıflandırmak, Microsoft 365 ve korumak için kurumsal şirketlere yardımcı olan bilgi koruma özelliklerini nasıl kullandığını öğrenin.
+Contoso'nun kuruluş genelinde önemli dijital varlıkları sınıflandırmak, tanımlamak ve korumak için Microsoft 365 [bilgi koruma özelliklerini](contoso-info-protect.md) nasıl kullandığını öğrenin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Mobil cihaz için cihaz Microsoft 365](device-management-roadmap-microsoft-365.md)
+[Microsoft 365 için cihaz yönetimi](device-management-roadmap-microsoft-365.md)
 
-[Microsoft 365 genel bakış için genel bakış](microsoft-365-overview.md)
+[Microsoft 365 Kurumsal’a genel bakış](microsoft-365-overview.md)
 
 [Test laboratuvarı kılavuzları](m365-enterprise-test-lab-guides.md)
 

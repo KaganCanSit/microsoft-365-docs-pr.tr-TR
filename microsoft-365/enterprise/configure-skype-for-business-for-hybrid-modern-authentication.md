@@ -1,8 +1,8 @@
 ---
-title: Karma Modern Skype Kurumsal kullanmak için şirket içinde nasıl yapılandırılan?
+title: Şirket içi Skype Kurumsal Karma Modern Kimlik Doğrulaması kullanacak şekilde yapılandırma
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 12/3/2019
 audience: ITPro
 ms.topic: article
@@ -15,131 +15,131 @@ ms.collection:
 - M365-security-compliance
 f1.keywords:
 - NOCSH
-description: Şirket içinde karma kimlik Skype Kurumsal kullanarak, size daha güvenli kullanıcı kimlik doğrulaması ve yetkilendirme sunan Karma Modern Kimlik Doğrulama'yı (HMA) kullanmayı öğrenin.
+description: Daha güvenli kullanıcı kimlik doğrulaması ve yetkilendirmesi sunarak şirket içi Skype Kurumsal Karma Modern Kimlik Doğrulaması (HMA) kullanacak şekilde yapılandırmayı öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: dd42aa6befdbb646217a9829dd59c0821fbd29d3
-ms.sourcegitcommit: 348f3998a029a876a9dcc031f808e9e350804f22
+ms.openlocfilehash: 7f5e48905416f84ed1a4c48f7e6f1a4b6477f73e
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "62996529"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65093492"
 ---
-# <a name="how-to-configure-skype-for-business-on-premises-to-use-hybrid-modern-authentication"></a>Karma Modern Skype Kurumsal kullanmak için şirket içinde nasıl yapılandırılan?
+# <a name="how-to-configure-skype-for-business-on-premises-to-use-hybrid-modern-authentication"></a>Şirket içi Skype Kurumsal Karma Modern Kimlik Doğrulaması kullanacak şekilde yapılandırma
 
-*Bu makale hem son hem de Microsoft 365 Kurumsal hem de Office 365 Kurumsal.*
+*Bu makale hem Microsoft 365 Kurumsal hem de Office 365 Kurumsal için geçerlidir.*
 
-Modern Kimlik Doğrulama, daha güvenli kullanıcı kimlik doğrulaması ve yetkilendirme sunan bir kimlik yönetimi yöntemidir; şirket içi Skype Kurumsal ve Exchange sunucusu ile bölünmüş etki alanı karmaları için Skype Kurumsal kullanılabilir.
+Daha güvenli kullanıcı kimlik doğrulaması ve yetkilendirmesi sunan bir kimlik yönetimi yöntemi olan Modern Kimlik Doğrulaması, şirket içi Skype Kurumsal sunucu ve şirket içi Exchange sunucu ile karmalar Skype Kurumsal bölünmüş etki alanı için kullanılabilir.
 
 > [!IMPORTANT]
-> Modern Kimlik Doğrulama (MA) hakkında daha fazla bilgi sahibi olmak ister misiniz ve bunu şirket veya kuruluşta neden kullanmayı tercih edersiniz? Genel [bir bakış için](hybrid-modern-auth-overview.md) bu belgeye bakın. MA tarafından desteklenen Skype Kurumsal bilmek zorundaysanız, burada belgelenmiş olur!
+> Modern Kimlik Doğrulaması (MA) hakkında daha fazla bilgi edinmek ve bunu neden şirketinizde veya kuruluşunuzda kullanmayı tercih edebileceğinizi öğrenmek ister misiniz? Genel bakış için [bu belgeyi](hybrid-modern-auth-overview.md) denetleyin. MA ile hangi Skype Kurumsal topolojilerinin desteklendiğini bilmeniz gerekiyorsa, burada belgelenmiştir!
 
-**Başlamadan önce** şu terimleri kullanıyoruz:
+**Başlamadan önce** şu terimleri kullanıyorum:
 
-- Modern Kimlik Doğrulama (MA)
+- Modern Kimlik Doğrulaması (MA)
 
 - Karma Modern Kimlik Doğrulaması (HMA)
 
-- Exchange (EXCH)
+- şirket içi (EXCH) Exchange
 
 - Exchange Online (EXO)
 
-- Skype Kurumsal (SFB)
+- şirket içi (SFB) Skype Kurumsal
 
 - Skype Kurumsal Online (SFBO)
 
-Ayrıca, bu makaledeki grafikte gri veya soluk gösterilen bir nesne varsa, gri olarak gösterilen öğe MA'ya özgü yapılandırmaya dahil değildir.
+Ayrıca, bu makaledeki bir grafik gri veya soluk bir nesneye sahipse, gri olarak gösterilen öğenin MA'ya özgü yapılandırmaya dahil **olmadığı** anlamına gelir.
 
-## <a name="read-the-summary"></a>Özeti okuma
+## <a name="read-the-summary"></a>Özeti okuyun
 
-Bu özet, işlemi yürütme sırasında kaybolabilecek adımlara göre kırar ve genel denetim listesinin, işlemde neredenizi takip etmek için iyi bir uygulamadır.
+Bu özet, işlemi yürütme sırasında kaybolabilecek adımlara böler ve işlemin neresinde olduğunuzu izlemek için genel bir denetim listesi için iyidir.
 
-1. İlk olarak, tüm önkoşullara uygun olduğundan emin olun.
+1. İlk olarak, tüm önkoşulları karşıladığınızdan emin olun.
 
-1. Birçok **önkokolun** yaygın Skype Kurumsal iki Exchange, önkoşullar denetim listenizin [genel bakış makalesine bakın](hybrid-modern-auth-overview.md). Bu  *makaledeki*  adımlardan herhangi birini başlamadan önce bunu uygulayın.
+1. Hem Skype Kurumsal hem de Exchange için birçok **önkoşul** yaygın olduğundan, [giriş öncesi denetim listenize yönelik genel bakış makalesine bakın](hybrid-modern-auth-overview.md). Bu makaledeki adımlardan herhangi birine başlamadan  *önce*  bunu yapın.
 
-1. Bir dosyada veya başka bir dosyada ihtiyacınız olacak HMA'ya özgü OneNote.
+1. Bir dosyada veya OneNote ihtiyacınız olacak HMA'ya özgü bilgileri toplayın.
 
-1. EXO için Modern Kimlik Doğrulama'ya (henüz açık değilse) açık olarak seçin.
+1. EXO için Modern Kimlik Doğrulaması'nı açın (henüz açık değilse).
 
-1. SFBO için Modern Kimlik Doğrulamayı AÇ (henüz açık değilse).
+1. SFBO için Modern Kimlik Doğrulaması'nı aç (henüz açık değilse).
 
-1. Şirket içi kimlik doğrulaması için karma modern Exchange açma.
+1. Şirket içi Exchange için Karma Modern Kimlik Doğrulaması'nı AÇIN.
 
-1. Şirket içi kimlik doğrulaması için karma modern Skype Kurumsal açma.
+1. Şirket içi Skype Kurumsal için Karma Modern Kimlik Doğrulaması'nı AÇIN.
 
-Bu adımlar SFB, SFBO, EXCH ve EXO için MA'yı, yani SFB ve SFBO'nun HMA yapılandırmasına (EXCH/EXO bağımlılıkları da dahil) katılabilirsiniz. Başka bir deyişle, kullanıcılarınız karmanın herhangi bir bölümünde (EXO + SFBO, EXO + SFB, EXCH + SFBO veya EXCH + SFB) oluşturulmuş posta kutuları varsa, ürününüz aşağıdaki gibi olur:
+Bu adımlar SFB, SFBO, EXCH ve EXO için MA'yı açar. Yani, SFB ve SFBO'nun HMA yapılandırmasına katılabilen tüm ürünler (EXCH/EXO bağımlılıkları dahil). Başka bir deyişle, kullanıcılarınız Karma'nın herhangi bir bölümünde (EXO + SFBO, EXO + SFB, EXCH + SFBO veya EXCH + SFB) posta kutuları oluşturulduysa, tamamlanmış ürününüz şu şekilde görünür:
 
-![Her dört olası Skype, iş HMA topolojisi için Karma 6 matris vardır.](../media/ab89cdf2-160b-49ac-9b71-0160800acfc8.png)
+![İş için Karma 6 Skype HMA topolojisi, olası dört konumda da MA'ya sahiptir.](../media/ab89cdf2-160b-49ac-9b71-0160800acfc8.png)
 
-Gördüğünüz gibi, MA'da aç yalnızca dört farklı yer vardır! En iyi kullanıcı deneyimini yaşamak için bu konumların dörtsinde de MA'ı açmanizi öneririz. MA'ı bu konumların tümsinde açamazsanız, ma'ı yalnızca ortamınız için gereken konumlarda açacak şekilde adımları ayarlayın.
+Gördüğünüz gibi MA'yi açmak için dört farklı yer var! En iyi kullanıcı deneyimi için bu konumların dördünde de MA'yı açmanızı öneririz. Tüm bu konumlarda MA'yı açamıyorsanız, yalnızca ortamınız için gerekli olan konumlarda MA'yı açmak için adımları ayarlayın.
 
-Desteklenen [topolojiler için ma ile Skype Kurumsal](/skypeforbusiness/plan-your-deployment/modern-authentication/topologies-supported) için Desteklanabilirlik başlığına bakın.
+Desteklenen topolojiler [için MA ile Skype Kurumsal için Desteklenebilirlik konusuna](/skypeforbusiness/plan-your-deployment/modern-authentication/topologies-supported) bakın.
 
 > [!IMPORTANT]
-> Başlamadan önce önkoşulların tamamını karşıp karşılamıştınız bir kez daha kontrol edin. Bu bilgiyi Karma modern kimlik doğrulamasına [genel bakış ve önkoşullarda bulabilirsiniz](hybrid-modern-auth-overview.md).
+> Başlamadan önce tüm önkoşulları karşıladığınızdan bir kez daha kontrol edin. Bu bilgileri [Karma modern kimlik doğrulamasına genel bakış ve önkoşullar](hybrid-modern-auth-overview.md) bölümünde bulabilirsiniz.
 
-## <a name="collect-all-hma-specific-info-youll-need"></a>HMA'ya özgü gereken tüm bilgileri toplayın
+## <a name="collect-all-hma-specific-info-youll-need"></a>İhtiyacınız olan tüm HMA'ya özgü bilgileri toplayın
 
-Modern Kimlik Doğrulama'yı kullanmak için önkoşullara uygun olduğunu iki kez kontrol ettikten sonra (yukarıdaki nota bakın), ileriki adımlarda HMA'yı yapılandırmak için ihtiyacınız olacak bilgileri tutmak üzere bir dosya oluşturmanız gerekir.[](hybrid-modern-auth-overview.md) Bu makalede kullanılan örnekler:
+Modern Kimlik Doğrulaması'nı kullanmak için [önkoşulları](hybrid-modern-auth-overview.md) karşılayıp karşılamadığını bir kez daha denetledikten sonra (yukarıdaki nota bakın), sonraki adımlarda HMA'yi yapılandırmak için ihtiyacınız olacak bilgileri tutmak için bir dosya oluşturmanız gerekir. Bu makalede kullanılan örnekler:
 
 - **SIP/SMTP etki alanı**
 
-  - Örn. contoso.com (diğerleriyle federasyon Office 365)
+  - Örn. contoso.com (Office 365 ile birleştirilir)
 
 - **Kiracı Kimliği**
 
-  - Kiracınızı temsil eden GUID Office 365 (kullanıcı oturum açma contoso.onmicrosoft.com.
+  - Office 365 kiracınızı temsil eden GUID (contoso.onmicrosoft.com oturum açma sırasında).
 
 - **SFB 2015 CU5 Web Hizmeti URL'leri**
 
-Dağıtılan tüm SfB 2015 havuzları için iç ve dış web hizmeti URL'leri gerekir. Bunları almak için, Yönetim Kabuğu'Skype Kurumsal çalıştırın:
+Dağıtılan tüm SfB 2015 havuzları için iç ve dış web hizmeti URL'lerine ihtiyacınız olacaktır. Bunları edinmek için Skype Kurumsal Yönetim Kabuğu'ndan aşağıdakileri çalıştırın:
 
 ```powershell
 Get-CsService -WebServer | Select-Object PoolFqdn, InternalFqdn, ExternalFqdn | FL
 ```
 
-- Örn. İç: https://lyncwebint01.contoso.com
+- Örn. Iç: https://lyncwebint01.contoso.com
 
 - Örn. Dış: https://lyncwebext01.contoso.com
 
-Standard Sürümü sunucusu kullanıyorsanız iç URL boş olacaktır. Bu durumda, iç URL için havuz fqdn'sini kullanın.
+Standard Sürümü sunucusu kullanıyorsanız iç URL boş olur. Bu durumda, iç URL için havuz fqdn'sini kullanın.
 
-## <a name="turn-on-modern-authentication-for-exo"></a>EXO için Modern Kimlik Doğrulama'ı açma
+## <a name="turn-on-modern-authentication-for-exo"></a>EXO için Modern Kimlik Doğrulaması'nı açma
 
-Buradaki yönergeleri izleyin: [Exchange Online: Kiracınızı modern kimlik doğrulama için etkinleştirme.](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx)
+Buradaki yönergeleri izleyin: [Exchange Online: Kiracınızı modern kimlik doğrulaması için etkinleştirme.](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx)
 
-## <a name="turn-on-modern-authentication-for-sfbo"></a>SFBO için Modern Kimlik Doğrulama'yu açma
+## <a name="turn-on-modern-authentication-for-sfbo"></a>SFBO için Modern Kimlik Doğrulaması'nı açma
 
-Buradaki yönergeleri izleyin: [Skype Kurumsal Online: Modern kimlik doğrulama için kiracınızı etkinleştirin](https://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx).
+Buradaki yönergeleri izleyin: [çevrimiçi Skype Kurumsal: Kiracınızı modern kimlik doğrulaması için etkinleştirme](https://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx).
 
-## <a name="turn-on-hybrid-modern-authentication-for-exchange-on-premises"></a>Şirket içi kimlik doğrulaması için Exchange Modern Kimlik Doğrulama'ya
+## <a name="turn-on-hybrid-modern-authentication-for-exchange-on-premises"></a>Şirket içi Exchange için Karma Modern Kimlik Doğrulaması'nı açma
 
-Buradaki yönergeleri izleyin: [Şirket içinde Exchange Server Karma Modern Kimlik Doğrulama'nın kullanımı için yapılandırma](configure-exchange-server-for-hybrid-modern-authentication.md).
+Buradaki yönergeleri izleyin: [Şirket içi Exchange Server Karma Modern Kimlik Doğrulaması kullanacak şekilde yapılandırma](configure-exchange-server-for-hybrid-modern-authentication.md).
 
-## <a name="turn-on-hybrid-modern-authentication-for-skype-for-business-on-premises"></a>Şirket içi kimlik doğrulaması için Skype Kurumsal Modern Kimlik Doğrulamayı açma
+## <a name="turn-on-hybrid-modern-authentication-for-skype-for-business-on-premises"></a>Şirket içi Skype Kurumsal için Karma Modern Kimlik Doğrulaması'nı açma
 
-### <a name="add-on-premises-web-service-urls-as-spns-in-azure-active-directory"></a>Şirket içi web hizmeti URL'lerini POSTA'ya SPN olarak Azure Active Directory
+### <a name="add-on-premises-web-service-urls-as-spns-in-azure-active-directory"></a>Azure Active Directory'da SPN olarak şirket içi web hizmeti URL'leri ekleme
 
-Şimdi, SFBO'da Hizmet Sorumluları olarak URL'leri (daha önce toplanan) eklemek için komutları çalıştırmalısınız.
+Şimdi URL'leri (daha önce toplanan) SFBO'da Hizmet Sorumluları olarak eklemek için komutları çalıştırmanız gerekir.
 
 > [!NOTE]
-> Hizmet sorumlusu adları (SPN) web hizmetlerini tanımlayabilir ve yetkili bir kullanıcı adına hareket etmek için bunları bir güvenlik sorumlusuyla (hesap adı veya grup gibi) ilişkilendirme. Sunucuya kimlik doğrulayıcılar SPN'lerde yer alan bilgileri kullanır.
+> Hizmet sorumlusu adları (SPN) web hizmetlerini tanımlar ve hizmetin yetkili bir kullanıcı adına hareket edebilmesi için bunları bir güvenlik sorumlusuyla (hesap adı veya grup gibi) ilişkilendirir. Bir sunucuda kimlik doğrulaması yapılan istemciler, SPN'lerde bulunan bilgileri kullanır.
 
-1. İlk olarak, bu yönergeleri Azure Active Directory Azure AD)'[ye bağlanın](/powershell/azure/active-directory/overview).
+1. İlk olarak[, bu yönergelerle](/powershell/azure/active-directory/overview) Azure Active Directory 'a (Azure AD) bağlanın.
 
-2. SFB web hizmeti URL'lerinin listesini almak için bu şirket içi komutu çalıştırın.
+2. SFB web hizmeti URL'lerinin listesini almak için bu komutu şirket içinde çalıştırın.
 
-   AppPrincipalId ile başladığını unutmayın `00000004`. Bu, Skype Kurumsal Online'a karşılıkdır.
+   AppPrincipalId değerinin ile `00000004`başladığını unutmayın. Bu, Skype Kurumsal Online'a karşılık gelir.
 
-   Bu komutun çıktısını (ve daha sonraki karşılaştırmalar için ekran görüntüsünü) not alın. Bu komutun çıktısı SE WS URL'sini içerir, ancak çoğunlukla ile başlayan SPN'lerden oluşur`00000004-0000-0ff1-ce00-000000000000/`.
+   Bir SE ve WS URL'sini içerecek ancak çoğunlukla ile `00000004-0000-0ff1-ce00-000000000000/`başlayan SPN'lerden oluşan bu komutun çıkışını (ve daha sonra karşılaştırma için ekran görüntüsünü) not alın.
 
    ```powershell
    Get-MsolServicePrincipal -AppPrincipalId 00000004-0000-0ff1-ce00-000000000000 | Select -ExpandProperty ServicePrincipalNames
    ```
 
-3. Şirket içi **veya** dış SFB URL'leri eksikse (örneğin, https://lyncwebint01.contoso.com https://lyncwebext01.contoso.com) bu belirli kayıtları bu listeye eklememiz gerekir).
+3. Şirket içinden gelen iç **veya** dış SFB URL'leri eksikse (örneğin, https://lyncwebint01.contoso.com https://lyncwebext01.contoso.com) bu belirli kayıtları bu listeye eklememiz gerekir).
 
-    Aşağıdaki örnek  *URL'leri, Ekle* komutlarında gerçek URL'leri ile değiştir
+    Aşağıdaki  *örnek URL'leri* Ekle komutlarındaki gerçek URL'lerinizle değiştirmeyi unutmayın!
 
     ```powershell
     $x= Get-MsolServicePrincipal -AppPrincipalId 00000004-0000-0ff1-ce00-000000000000
@@ -148,38 +148,38 @@ Buradaki yönergeleri izleyin: [Şirket içinde Exchange Server Karma Modern Kim
     Set-MSOLServicePrincipal -AppPrincipalId 00000004-0000-0ff1-ce00-000000000000 -ServicePrincipalNames $x.ServicePrincipalNames
     ```
 
-4. **Get-MsolServicePrincipal** komutunu yeniden 2. adımda çalıştırarak ve çıktıya bakarak yeni kayıtlarınızı eklenmiştir. Önceki listeyi veya ekran görüntüsünü yeni SPN'ler listesiyle karşılaştırın. Kayıtlarınız için yeni listenin ekran görüntüsü de ekleyebilirsiniz. Başarılı olursanız, listede iki yeni URL'ye sahip olursanız. Örneğimize göre, SPN'ler listesi artık belirli URL'leri ve .https://lyncwebint01.contoso.com https://lyncwebext01.contoso.com/
+4. 2. adımdaki **Get-MsolServicePrincipal** komutunu yeniden çalıştırıp çıkışa bakarak yeni kayıtlarınızın eklendiğini doğrulayın. Önceki listeyi veya ekran görüntüsünü yeni SPN listesiyle karşılaştırın. Ayrıca, kayıtlarınızın yeni listesinin ekran görüntüsünü de görüntüleyebilirsiniz. Başarılıysanız, listede iki yeni URL görürsünüz. Örneğimize göre, SPN'lerin listesi artık belirli URL'leri https://lyncwebint01.contoso.com ve https://lyncwebext01.contoso.com/içerecektir.
 
-### <a name="create-the-evosts-auth-server-object"></a>EvoSTS Auth Server Nesnesi Oluşturma
+### <a name="create-the-evosts-auth-server-object"></a>EvoSTS Kimlik Doğrulama Sunucusu Nesnesi Oluşturma
 
-Dış Yönetim Kabuğu'Skype Kurumsal aşağıdaki komutu çalıştırın.
+Skype Kurumsal Yönetim Kabuğu'nda aşağıdaki komutu çalıştırın.
 
 ```powershell
 New-CsOAuthServer -Identity evoSTS -MetadataURL https://login.windows.net/common/FederationMetadata/2007-06/FederationMetadata.xml -AcceptSecurityIdentifierInformation $true -Type AzureAD
 ```
 
-### <a name="enable-hybrid-modern-authentication"></a>Karma Modern Kimlik Doğrulamayı Etkinleştirme
+### <a name="enable-hybrid-modern-authentication"></a>Karma Modern Kimlik Doğrulamasını Etkinleştirme
 
-Bu, ASLıNDA MA'ya dönüşen adımdır. Önceki adımların hepsi, istemci kimlik doğrulaması akışı değişmeden 44 saat çalıştırabilirsiniz. Kimlik doğrulama akışını değiştirmeye hazırsanız, Yönetim Kabuğu'na bu Skype Kurumsal çalıştırın.
+Bu aslında MA'yi açan adımdır. Önceki adımların tümü, istemci kimlik doğrulama akışını değiştirmeden önceden çalıştırılabilir. Kimlik doğrulama akışını değiştirmeye hazır olduğunuzda, Skype Kurumsal Yönetim Kabuğu'nda bu komutu çalıştırın.
 
 ```powershell
 Set-CsOAuthConfiguration -ClientAuthorizationOAuthServerIdentity evoSTS
 ```
 
-## <a name="verify"></a>Doğrula
+## <a name="verify"></a>Doğrulamak
 
-HMA'yı etkinleştiren bir istemcinin bir sonraki oturum açması yeni kimlik doğrulama akışını kullanır. Yalnızca HMA'yı açmanın hiçbir istemci için yeniden kimlik doğrulaması tetiklenene olmadığını unutmayın. İstemciler, sahip olduğu kimlik doğrulama belirteçlerinin yaşam süresine ve/veya sertifikalarına göre yeniden yazar.
+HMA'yı etkinleştirdiğinizde, istemcinin bir sonraki oturum açma bilgileri yeni kimlik doğrulama akışını kullanır. HMA'nın yalnızca etkinleştirilmesi herhangi bir istemci için yeniden kimlik doğrulaması tetiklemez. İstemciler, sahip oldukları kimlik doğrulama belirteçlerinin ve/veya sertifikaların kullanım ömrüne göre yeniden kimlik doğrulamasından geçer.
 
-Etkinleştirdikten sonra HMA'nın çalıştığını test etmek için, test SFB Windows istemcisinde oturumları kesin ve 'Kimlik bilgilerimi sil'e tıklamayı seçin. Yeniden oturum açma. İstemci artık Modern Kimlik Doğrulaması akışını kullansın. Oturum açma isteminde, istemci sunucuyla  bağlantı Office 365 oturum açmadan hemen önce görülen 'İş veya okul' hesabı istenir.
+Etkinleştirdikten sonra HMA'nın çalıştığını test etmek için test SFB Windows istemcisini kapatın ve 'kimlik bilgilerimi sil'e tıkladığınızdan emin olun. Yeniden oturum açın. İstemci artık Modern Kimlik Doğrulama akışını kullanmalıdır ve oturum açma bilgileriniz artık istemci sunucuyla iletişim kurar ve oturum açmadan hemen önce görülen bir **Office 365** 'İş veya okul' hesabı istemi içerir.
 
-Ayrıca, 'OAuth Authority' için İstemciler Skype Kurumsal'ı da denetlemelisiniz. Bunu istemci bilgisayarınızda yapmak için, Bildirim tepsisinde Sağ Ok simgesine sağ Skype Kurumsal CTRL Windows basılı tutun. Görüntülenen **menüde Yapılandırma** Bilgileri'ne tıklayın. Masaüstünde Skype Kurumsal 'Yapılandırma Bilgileri' penceresinde, şunları bakın:
+'OAuth Yetkilisi' için Skype Kurumsal İstemcileri için 'Yapılandırma Bilgileri'ni de denetlemeniz gerekir. Bunu istemci bilgisayarınızda yapmak için, CTRL tuşunu basılı tutarak Windows Bildirim tepsisindeki Skype Kurumsal Simgesine sağ tıklayın. Görüntülenen menüde **Yapılandırma Bilgileri'ne** tıklayın. Masaüstünde görünecek olan 'Skype Kurumsal Yapılandırma Bilgileri' penceresinde aşağıdakileri arayın:
 
-:::image type="content" alt-text="Modern Kimlik Doğrulaması kullanan bir Skype Kurumsal İstemcisi'nin Yapılandırma bilgileri' içinde bir Lync ve EWS OAUTH Authority URL'si gösterirhttps://login.windows.net/common/oauth2/authorize." source="../media/4e54edf5-c8f8-4e7f-b032-5d413b0232de.png":::
+:::image type="content" alt-text="Modern Kimlik Doğrulaması kullanan bir Skype Kurumsal İstemcisinin Yapılandırma bilgileri, lync ve EWS OAUTH Yetkili URL'sini https://login.windows.net/common/oauth2/authorizegösterir." source="../media/4e54edf5-c8f8-4e7f-b032-5d413b0232de.png":::
 
-Ayrıca, Outlook istemcisinin simgesine sağ tıklarken (Windows Bildirimleri tepsisinde) CTRL tuşunu basılı tutarak da 'Bağlantı Durumu' öğesini tıklatabilirsiniz. İstemcinin SMTP adresini, OAuth'ta kullanılan taşıyıcı belirtecinin temsil ettiği '\*Taşıyıcı' türünde bir AuthN türüne göre bakın.
+Ayrıca, Outlook istemcisinin simgesine (Windows Bildirimler tepsisinde de) sağ tıklayıp 'Bağlantı Durumu'na tıkladığınızda da CTRL tuşunu basılı tutmalısınız. İstemcinin SMTP adresini OAuth'da kullanılan taşıyıcı belirtecini temsil eden 'Taşıyıcı\*' AuthN türünde arayın.
 
 ## <a name="related-articles"></a>İlgili makaleler
 
-[Modern Kimlik Doğrulamaya genel bakış bağlantısına geri dönebilirsiniz](hybrid-modern-auth-overview.md).
+[Modern Kimlik Doğrulamasına genel bakış bağlantısı](hybrid-modern-auth-overview.md).
 
-Modern Kimlik Doğrulama'nın istemcilerinizi nasıl kullanabileceğini Skype Kurumsal gerekiyor? Burada bazı adımlar var: Karma modern kimlik doğrulamaya genel bakış ve bunu şirket içi şirket içi posta ve sunucularla [Skype Kurumsal için Exchange önkoşullar](./hybrid-modern-auth-overview.md).
+Skype Kurumsal istemcileriniz için Modern Kimlik Doğrulaması'nın nasıl kullanılacağını bilmeniz gerekiyor mu? Burada adımlar var: [Karma modern kimlik doğrulamasına genel bakış ve bunu şirket içi Skype Kurumsal ve Exchange sunucularla kullanmak için önkoşullar](./hybrid-modern-auth-overview.md).

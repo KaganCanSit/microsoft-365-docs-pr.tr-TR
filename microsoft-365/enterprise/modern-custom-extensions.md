@@ -1,8 +1,8 @@
 ---
-title: SharePoint Online modern site sayfalarında özel uzantıları en iyi duruma getirme
+title: SharePoint Online modern site sayfalarında özel uzantıları iyileştirme
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 03/11/2020
 audience: Admin
 ms.topic: conceptual
@@ -19,105 +19,105 @@ ms.reviewer: sstewart
 search.appverid:
 - MET150
 description: SharePoint Online modern site sayfalarında özel uzantıların performansını iyileştirmeyi öğrenin.
-ms.openlocfilehash: 6493f140a1335b5439707fed94372760ac6fab50
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: a31b6e68227d433359537b9655d68c63b5893cce
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62986527"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65093865"
 ---
-# <a name="optimize-custom-extension-performance-in-sharepoint-online-modern-site-pages"></a>SharePoint Online modern site sayfalarında özel uzantı performansını iyileştirme
+# <a name="optimize-custom-extension-performance-in-sharepoint-online-modern-site-pages"></a>SharePoint Çevrimiçi modern site sayfalarında özel uzantı performansını iyileştirme
 
-Bu makale, özel uzantıların kullanıcı gecikme süresini nasıl etkilediğini belirleme ve yaygın sorunları düzeltme konularını anlamanıza yardımcı olur.
+Bu makale, özel uzantıların kullanıcı tarafından algılanan gecikme süresini nasıl etkileyeceğini ve yaygın sorunları nasıl gidereceğini anlamanıza yardımcı olur.
 
-## <a name="use-the-page-diagnostics-for-sharepoint-tool-to-analyze-custom-extensions"></a>Özel uzantıları çözümlemek için SharePoint Tanılama aracını kullanma
+## <a name="use-the-page-diagnostics-for-sharepoint-tool-to-analyze-custom-extensions"></a>Özel uzantıları analiz etmek için SharePoint için Sayfa Tanılama aracını kullanma
 
-SharePoint için Sayfa Tanılama aracı, hem SharePointhttps://www.microsoft.com/edge) Online modern portalı hem de klasik yayımlama sitesi sayfalarını analizen yeni Microsoft Edge ve Chrome tarayıcıları için tarayıcı uzantısıdır. Bu araç, sayfanın tanımlanmış bir performans ölçütleri kümesine karşı nasıl bir performans performansına sahip olduğunu gösteren, analize tabi her sayfa için bir rapor sağlar. Yeni uygulama için Sayfa Tanılama aracını yüklemek ve SharePoint için, SharePoint [Online'da Sayfa Tanılama aracını kullanma sayfasını ziyaret edin](page-diagnostics-for-spo.md).
+SharePoint için Sayfa Tanılama aracı, hem SharePoint Çevrimiçi modern portalı hem de klasik yayımlama sitesi sayfalarını analiz eden yeni Microsoft Edge (https://www.microsoft.com/edge) ve Chrome tarayıcıları) için bir tarayıcı uzantısıdır. Araç, analiz edilen her sayfa için sayfanın tanımlı bir performans ölçütleri kümesine göre nasıl performans gösterdiğini gösteren bir rapor sağlar. SharePoint için Sayfa Tanılama aracını yüklemek ve hakkında bilgi edinmek için [SharePoint Online için Sayfa Tanılama aracını kullanma](page-diagnostics-for-spo.md) sayfasını ziyaret edin.
 
 >[!NOTE]
 >Sayfa Tanılama aracı yalnızca SharePoint Online için çalışır ve SharePoint sistem sayfasında kullanılamaz.
 
-SharePoint için Sayfa Tanılama aracıyla bir SharePoint sitesi sayfasını çözümlerken, Uzantılar'daki temel ölçümü aşan özel uzantılar hakkında bilgi görebilirsiniz. Yükleme süresi ve/veya Tanılama testleri bölmesinde  Çok fazla kullanılan uzantı sonucu   
+SharePoint için Sayfa Tanılama aracıyla bir SharePoint site sayfasını analiz ettiğinizde, **Uzantılar yük süresini etkiliyor** ve/veya _Tanılama testleri_ bölmesinde kullanılan **çok fazla uzantı** sonucuyla ilgili temel ölçümü aşan özel uzantılar hakkındaki bilgileri görebilirsiniz 
 
 Olası sonuçlar şunlardır:
 
-- **Dikkat (** kırmızı): Bir _saniyeden_ uzun sürebilir tüm **özel** uzantılar. Test sonuçlarında görüntülendiğinde toplam yükleme süresi, modül yükleme ve init ile bozulur. Ayrıca, sayfada çok fazla uzantı varsa, bunlar sayfa yükleme sürelerini etkileyebilirsiniz ve sayfada yedi veya daha fazla uzantı kullanılıyorsa bu vurgulanır.
-- **Geliştirme Fırsatları** (sarı) Beş  veya daha fazla uzantı kullanılırsa, yedi veya daha fazla uzantı kullanıncaya kadar bu bölümde bir uyarı olarak vurgulanır ve bu durumda Dikkat Gerekiyor olarak vurgulanır.
-- **Herhangi bir işlem gerekmez** (yeşil): Uzantı yükleme işlemi bir saniyeden uzun sürer.
+- **Dikkat gerekiyor** (kırmızı): Yüklenmesi bir saniyeden uzun süren herhangi **bir** _özel_ uzantı. Test sonuçlarında gösterildiği gibi toplam yük süresi modül yüküne ve başlatmaya göre ayrılmıştır. Ayrıca, bir sayfada çok fazla uzantı varsa, bunlar sayfa yükleme süresini etkileyebilir ve sayfada **yedi** veya daha fazla uzantı kullanılıyorsa bu vurgulanır.
+- **İyileştirme Fırsatları** (sarı) **Beş** veya daha fazla uzantı kullanılırsa, yedi veya daha fazla uzantı kullanılana kadar bu bölümde uyarı olarak vurgulanır ve daha sonra Dikkat Gerekiyor olarak vurgulanır.
+- **Eylem gerekmez** (yeşil): Uzantının yüklenmesi bir saniyeden uzun sürmemektedir.
 
-Bir uzantı sayfa yükleme sürelerini etkiliyorsa veya sayfada çok fazla uzantı varsa, sonuç sonuçların **Dikkat** gerekiyor bölümünde görünür. Hangi uzantının yavaş yükleniyor hakkında ayrıntılı bilgi için veya çok fazla sayıda uzantının vurgulanmış olduğunu görmek için sonucu tıklatın. Daha sonra Çözümleme Kuralları için Sayfa Tanılama SharePoint çözümleme kurallarında güncelleştirmeler olabilir, bu nedenle lütfen aracın her zaman en son sürümüne sahip olduğundan emin olun.
+Bir uzantı sayfa yükleme süresini etkiliyorsa veya sayfada çok fazla uzantı varsa, sonuç sonuçların **Dikkat gerekiyor** bölümünde görünür. Hangi uzantının yavaş yüklendiği veya çok fazla uzantının vurgulandığıyla ilgili ayrıntıları görmek için sonuca tıklayın. SharePoint için Sayfa Tanılama aracında gelecekteki güncelleştirmeler analiz kuralları güncelleştirmelerini içerebilir, bu nedenle lütfen aracın her zaman en son sürümüne sahip olduğunuzdan emin olun.
 
 ![Sayfa yükleme süresi sonuçları.](../media/page-diagnostics-for-spo/pagediag-extensions-load-time.png)
 
-Sonuçlarda yer alan bilgiler:
+Sonuçlarda bulunan bilgiler şunları içerir:
 
-- **Ad ve Kimlik** , sayfada uzantıyı bu konuda size yardımcı olacak tanımlayıcı bilgileri gösterir
-- **Toplam** , modül yükleme ve başlatma uzantısı için toplam zamanı gösterir. Bu, uzantının sayfada başından sonuna kadar yürütmesi gereken toplam göreli süredir.
-- **Modül Yükleme** , JavaScript ve CSS dosyalarını indirme, değerlendirme ve yükleme sürelerini gösterir. Ardından Init işlemi başlar.
-- **Init** , verileri başlatmak üzere uzantı için alınan zamanı gösterir.
+- **Ad ve kimlik** , sayfada uzantıyı bulmanıza yardımcı olabilecek tanımlayıcı bilgileri gösterir
+- **Toplam** , modülü yüklemek ve başlatmak için uzantının toplam süresini gösterir. Uzantının sayfada baştan sona kadar yürütülmesi için geçen toplam göreli süredir.
+- **Modül Yükleme** , JavaScript ve CSS dosyalarını indirmek, değerlendirmek ve yüklemek için geçen süreyi gösterir. Ardından Init işlemini başlatır.
+- **Init** , uzantının verileri başlatması için geçen süreyi gösterir.
 
-  Bu zaman uyumsuz bir çağrıdır ve init zaman, döndürülen taa kinaye çözüm olduğunda OnInit işlevinin zaman hesaplamasıdır.
+  Bu zaman uyumsuz bir çağrıdır ve döndürülen söz çözümlendiğinde onInit işlevinin zaman hesaplaması başlatma zamanıdır.
 
-Tasarımcıların ve geliştiricilerin sorunları gidermesine yardımcı olmak için bu bilgiler sağlanır. Bu bilgiler tasarım ve geliştirme ekibinize sağlanmalıdır.
+Bu bilgiler tasarımcıların ve geliştiricilerin sorunları gidermesine yardımcı olmak için sağlanır. Bu bilgiler tasarım ve geliştirme ekibinize sağlanmalıdır.
 
 ## <a name="overview-of-extensions"></a>Uzantılara genel bakış
 
-SharePoint Framework (SPFx) Uzantılar, kullanıcı deneyimini SharePoint için kullanılabilir. Uzantılar SharePoint Framework, bildirim alanları, araç çubukları ve liste SharePoint görünümler de dahil olmak üzere, kullanıcı deneyiminin daha fazla görünümünü özelleştirebilirsiniz.
+SharePoint Framework (SPFx) Uzantıları, SharePoint kullanıcı deneyimini genişletmek için kullanılabilir. SharePoint Framework Uzantıları ile bildirim alanları, araç çubukları ve liste veri görünümleri dahil olmak üzere SharePoint deneyiminin daha fazla modelini özelleştirebilirsiniz.
 
-Aynı zamanda CPU ve ağ kaynaklarını gerekli işi yapmak için gerektiğinden, uzantılar bir SharePoint sayfasının performansını kötü etkileyebilir.
+Uzantıların SharePoint sayfasının performansı üzerinde kötü bir etkisi olabilir çünkü gerekli işleri yapmak için CPU ve ağ kaynaklarını da kullanır.
 
 Dört tür uzantı vardır:
 
-- **Uygulama Özelleştiricileri** sayfaya betikler ekler ve iyi bilinen HTML öğesi yer tutucularına erişer ve bunları özel işlemelerle genişleter.
-- **Alan Özelleştirleştiricileri** , liste içindeki alanların verilerine değiştirilmiş görünümler sağlar.
-- **Komut Kümeleri**, SharePoint eklemek üzere komut yüzeylerini genişlettir ve eylemleri uygulamak için kullanabileceğiniz istemci tarafı kodu sağlar.
-- **Arama Sorgusu Değiştirici (yalnızca önizleme),** arama sorgusu yürütülmeden hemen önce çağırıldı.
+- **Uygulama Özelleştiricileri** sayfaya betikler ekler ve iyi bilinen HTML öğesi yer tutucularına erişir ve bunları özel işlemelerle genişletir.
+- **Alan Özelleştiricileri** , liste içindeki alanların verilerine değiştirilmiş görünümler sağlar.
+- **Komut Kümeleri**, yeni eylemler eklemek için SharePoint komut yüzeylerini genişletir ve davranışları uygulamak için kullanabileceğiniz istemci tarafı kodu sağlar.
+- **Arama Sorgusu Değiştiricisi (yalnızca önizleme)** arama sorgusu yürütülmeden hemen önce çağrılır.
 
-## <a name="remediate-extension-performance-issues"></a>Uzantı performans sorunlarını düzeltme
+## <a name="remediate-extension-performance-issues"></a>Uzantı performansı sorunlarını düzeltme
 
-Uzantılar bölümünde listelenen uzantılarla ilgili performans sorunlarını tanımlamak ve düzeltmek için bu bölümdeki yönergeleri izleyin ve **sayfa yükleme süresi sonuçlarını** etkiler.
+**Uzantılar sayfa yükleme süresi sonuçlarını etkiliyor** bölümünde listelenen uzantılarla ilgili performans sorunlarını belirlemek ve düzeltmek için bu bölümdeki yönergeleri izleyin.
 
 >[!NOTE]
->Uygulama özelleştiricileri, bir sayfanın yaşam döngüsü boyunca erken aşamada yürütülebilir ve bu da sayfada diğer uzantıların performansını etkileyebilir.
+>Uygulama özelleştiricileri bir sayfanın yaşam döngüsü sırasında erken aşamada yürütülebilir ve sayfadaki diğer uzantıların performansını etkileyebilir.
 
-Sayfa Tanılama Aracı'nın denetim sonuçlarında, performans üzerindeki olası etkiyi belirlemeye yardımcı olmak için bir uzantıyı yürütmenin iki aşamasında görüntülenir.
+Sayfa Tanılama Aracı'ndaki denetim sonuçları, olası performans etkisini belirlemeye yardımcı olmak için uzantı yürütmenin iki aşamasını görüntüler.
 
-- **Modül yüklemesi** , uzantıyı yüklemenin ne kadar uzun sürer? Bu uzantının boyutundan etki büyük olduğu için, uzantıda yalnızca gerekli kitaplıkları paketli yapmak ve daha açık kitaplıkları seçmek iyi bir fikirdir.
-- **Init** , uzantıyı ve uzantı geliştiricilerinin başlatma zamanıdır; uzantının gereksiz çalışmalar mı yaptığını yoksa başlatma aşamasında çok fazla komutu yürütüp yürütme yaptığını dikkate almaları gerekir.
+- **Modül yükü** , uzantının yüklenmesinin ne kadar sürdüğüdür ve uzantının boyutundan etkilenir, bu nedenle uzantıda yalnızca gerekli kitaplıkları paketlemek ve daha açık kitaplıklar seçmek iyi bir fikirdir.
+- **Init** , uzantının başlatma zamanıdır ve uzantı geliştiricilerinin uzantının başlatma aşamasında gereksiz iş mi yoksa çok fazla komut mu yürüttüğüne karar vermesi gerekir.
 
-Sayfa yazarları da denetim sonucu kullanarak bir sayfanın çok fazla uzantısının olup olmadığını görmek için sayfanın performansını olumsuz etkileyebilir.
+Sayfa yazarları, bir sayfanın çok fazla uzantıya sahip olup olmadığını ve çok fazla uzantının sayfanın performansını olumsuz etkileyip etkilemediğini görmek için denetim sonucunu da kullanabilir.
 
 - **Uzantı boyutu ve bağımlılıkları**
-  - En iyi statik Office 365 CDN için kaynağın kullanımı gereklidir. Genel CDN _js/css dosyaları için tercih_ edilir. Web siteyi kullanma hakkında daha fazla Office 365 CDN için bkz[. Office 365 Content Delivery Network (CDN) SharePoint Online](use-microsoft-365-cdn-with-spo.md).
-  - Yeni e-React _parçası_ olarak _gelen Doku_ ve Kumaş içeri aktarmaları gibi çerçeveleri SharePoint Framework SPFx. Daha fazla bilgi için bkz[. 2010'a SharePoint Framework](/sharepoint/dev/spfx/sharepoint-framework-overview).
-  - Yeni sürümün en son sürümünü kullanmaya SharePoint Framework ve kullanılabilir hale geldikleri anda yeni sürümlere yükseltin.
-- **Veri alma/önbelleğe alma**
-  - Uzantı, görüntü için veri getirmek için fazladan sunucu aramalarına dayanıyorsa, bu sunucu API'leri için hızlı olduğundan emin olun ve/veya istemci tarafı önbelleğe alma (daha büyük kümeler için _localStorage_ veya _IndexDB_ kullanma gibi).
-  - Kritik verileri işlemek için birden çok arama gerekirse, sunucuda toplu işlem yapmak veya istekleri tek bir aramada birleştirmenin diğer yöntemlerini kullanabilirsiniz.
-  - Alternatif olarak, bazı veri öğelerine daha yavaş bir API gerektir ise ancak işlemenin başlatması için kritik öneme sahip değildir; kritik veriler iş geçirildikten sonra yürütülecek ayrı bir çağrı için bu kod çözebilirsiniz.
-  - Birden fazla parça aynı verileri kullanıyorsa, yinelenen çağrıları önlemek için ortak bir veri katmanından faydalanabilirsiniz.
+  - en iyi statik kaynak indirmesi için Office 365 CDN kullanılması gerekir. _Js/css_ dosyaları için genel CDN kaynakları tercih edilir. Office 365 CDN kullanma hakkında daha fazla bilgi için bkz. [SharePoint Online ile Office 365 Content Delivery Network (CDN) kullanma](use-microsoft-365-cdn-with-spo.md).
+  - _SharePoint Framework (SPFx_) parçası olarak gelen React ve _Doku içeri aktarmaları gibi çerçeveleri_ yeniden kullanma. Daha fazla bilgi için bkz. [SharePoint Framework genel bakış](/sharepoint/dev/spfx/sharepoint-framework-overview).
+  - SharePoint Framework en son sürümünü kullandığınızdan emin olun ve kullanıma sunulduklarında yeni sürümlere yükseltin.
+- **Veri getirme/önbelleğe alma**
+  - Uzantı, görüntülenmek üzere veri getirmek için ek sunucu çağrılarına dayanırsa, bu sunucu API'lerinin hızlı olduğundan emin olun ve/veya istemci tarafı önbelleğe alma uygulayın (daha büyük _kümeler için localStorage_ veya _IndexDB_ kullanma gibi).
+  - Kritik verileri işlemek için birden çok çağrı gerekiyorsa, sunucuda toplu işlem yapmayı veya istekleri tek bir çağrıya birleştirmenin diğer yöntemlerini göz önünde bulundurun.
+  - Alternatif olarak, bazı veri öğeleri daha yavaş bir API gerektiriyorsa ancak ilk işleme için kritik değilse, bunları kritik veriler işlendikten sonra yürütülen ayrı bir çağrıya ayırın.
+  - Birden çok parça aynı verileri kullanıyorsa, yinelenen çağrıları önlemek için ortak bir veri katmanı kullanın.
 - **İşleme süresi**
-  - Gereksiz büyük varlıkları indirmek için, resim ve videolar gibi medya kaynakları kapsayıcı, cihaz ve/veya ağ sınırlarına göre boyutlandırılmalıdır. İçerik bağımlılıkları hakkında daha fazla bilgi için bkz[. Office 365 Content Delivery Network (CDN) SharePoint Online..](use-microsoft-365-cdn-with-spo.md)
-  - Yeniden akışa, karmaşık CSS kurallarına veya karmaşık animasyonlara neden olan API çağrılarından kaçının. Daha fazla bilgi için bkz [. Tarayıcı yeniden akışını en aza indirme](https://developers.google.com/speed/docs/insights/browser-reflow).
-  - Zincirleme uzun çalışan görevleri kullanmaktan kaçının. Bunun yerine, uzun süre çalışan görevleri birbirinden ayrı kuyruklara ayırabilirsiniz. Daha fazla bilgi için bkz. [JavaScript Yürütmeyi En İyi Duruma Getirme](https://developers.google.com/web/fundamentals/performance/rendering/optimize-javascript-execution).
-  - Atlanan kareleri ve teklemeleri (yalçın olarak da bilinir) önlemek için, zaman uyumsuz olarak medya veya görsel öğeleri işlemeye karşılık gelen _alanı rezerve etmek._
-  - Belirli bir tarayıcı işlemede kullanılan bir özelliği desteklemezse, çoklu doldurmayı yükleyin veya bağımlı kodu çalıştırmayı dışlayın. Özellik kritik öneme sahip değilse, bellek sızıntılarını önlemek için olay işleyicileri gibi kaynakları atabilirsiniz.
+  - Görüntüler ve videolar gibi tüm medya kaynakları gereksiz büyük varlıkların indirilmesini önlemek için kapsayıcı, cihaz ve/veya ağın sınırlarına göre boyutlandırılmalıdır. İçerik bağımlılıkları hakkında daha fazla bilgi için bkz. [SharePoint Online ile Office 365 Content Delivery Network (CDN) kullanma](use-microsoft-365-cdn-with-spo.md).
+  - Yeniden akışa, karmaşık CSS kurallarına veya karmaşık animasyonlara neden olan API çağrılarından kaçının. Daha fazla bilgi için bkz. [Tarayıcı yeniden akışını en aza indirme](https://developers.google.com/speed/docs/insights/browser-reflow).
+  - Zincirlenmiş uzun süre çalışan görevleri kullanmaktan kaçının. Bunun yerine, uzun süre çalışan görevleri ayrı kuyruklara ayırın. Daha fazla bilgi için bkz. [JavaScript Yürütmesini İyileştirme](https://developers.google.com/web/fundamentals/performance/rendering/optimize-javascript-execution).
+  - Atlanan çerçeveleri ve takılmayı ( _jank_ olarak da bilinir) önlemek için zaman uyumsuz olarak medya veya görsel öğeleri işlemek için ilgili alanı ayırın.
+  - Belirli bir tarayıcı işlemede kullanılan bir özelliği desteklemiyorsa, polyfill yükleyin veya bağımlı kodu çalıştırmayı dışlayın. Özellik kritik değilse, bellek sızıntılarını önlemek için olay işleyicileri gibi kaynakları atın.
 
-Performans sorunlarını düzeltmek için sayfa düzeltmeleri öncesinde, çözümleme sonuçlarında sayfa yükleme sürelerini not edin. Yeni sonucun taban çizgisi standardı içinde olup olmadığını görmek için düzeltmeden sonra aracı yeniden çalıştırın ve bir geliştirme olup olmadığını görmek için yeni sayfa yükleme süresine bakın.
+Performans sorunlarını düzeltmek için sayfa düzeltmeleri yapmadan önce, çözümleme sonuçlarında sayfa yükleme süresini not edin. Yeni sonucun temel standart içinde olup olmadığını görmek için düzeltmenizden sonra aracı yeniden çalıştırın ve bir iyileştirme olup olmadığını görmek için yeni sayfa yükleme süresini denetleyin.
 
 ![Sayfa yükleme süresi sonuçları.](../media/modern-portal-optimization/pagediag-page-load-time.png)
 
 >[!NOTE]
->Sayfa yükleme süresi ağ yükü, günün saati ve diğer geçici koşullar gibi çeşitli faktörlere bağlı olarak değişiklik gösterebilir. Sonuçların ortalamasını alarken değişiklik yaparak sayfa yükleme sürelerini birkaç kez test edebilirsiniz.
+>Sayfa yükleme süresi, ağ yükü, günün saati ve diğer geçici koşullar gibi çeşitli faktörlere bağlı olarak farklılık gösterebilir. Sonuçları ortalamanıza yardımcı olacak değişiklikler yapmadan önce ve sonra sayfa yükleme süresini birkaç kez test etmelisiniz.
 
 ## <a name="related-topics"></a>İlgili konular
 
-[Çevrimiçi SharePoint performansını ayarlama](tune-sharepoint-online-performance.md)
+[çevrimiçi SharePoint performansını ayarlama](tune-sharepoint-online-performance.md)
 
-[Performans Office 365 ayarlama](tune-microsoft-365-performance.md)
+[Office 365 performansını ayarlama](tune-microsoft-365-performance.md)
 
-[Modern deneyimde SharePoint deneyimi](/sharepoint/modern-experience-performance)
+[Modern SharePoint deneyiminde performans](/sharepoint/modern-experience-performance)
 
 [İçerik teslim ağları](content-delivery-networks.md)
 
-[CDN Online ile Office 365 Content Delivery Network (CDN) SharePoint kullanma](use-microsoft-365-cdn-with-spo.md)
+[SharePoint Online ile Office 365 Content Delivery Network (CDN) kullanma](use-microsoft-365-cdn-with-spo.md)

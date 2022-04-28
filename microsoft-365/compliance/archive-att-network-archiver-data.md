@@ -2,8 +2,8 @@
 title: AT&T SMS/MMS Ağ verilerini arşivecek bir bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -12,12 +12,12 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Yöneticiler, AT&T Mobil Ağı'ndan SMS ve MMS verilerini içeri aktarmak ve arşiv etmek için bir TeleMessage bağlayıcısı ayarlayabilir. Bu, kuruluşunuzun üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilmeniz için Microsoft Purview'daki üçüncü taraf veri kaynaklarından verileri arşivlemenizi sağlar.
-ms.openlocfilehash: 87b933117fae134572ccf4a152a83ec4165b1caf
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 7d73e6a5e5a5190609cd50bd055af8b7aec969b7
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64992776"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65093185"
 ---
 # <a name="set-up-a-connector-to-archive-att-smsmms-data"></a>AT&T SMS/MMS verilerini arşivleye bağlayıcı ayarlama
 

@@ -2,8 +2,8 @@
 title: Tahmini ve gerçek eBulma arama sonuçları
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -19,12 +19,12 @@ search.appverid:
 - MET150
 ms.assetid: 8f20ca4f-a908-46ec-99e6-9890d269ecf2
 description: Office 365'deki eBulma araçlarıyla yapılan aramalarda tahmini ve gerçek arama sonuçlarının neden farklılık gösterebileceğini anlayın.
-ms.openlocfilehash: a71b246b71e7b3cca3ef361510042b6292c36c8b
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 694d850d568aee4965530317f9bbc9f95727338c
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64993962"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65092789"
 ---
 # <a name="differences-between-estimated-and-actual-ediscovery-search-results"></a>Tahmini ve gerçek eBulma arama sonuçları arasındaki farklar
 

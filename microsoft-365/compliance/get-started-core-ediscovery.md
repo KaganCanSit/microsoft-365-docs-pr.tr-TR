@@ -2,8 +2,8 @@
 title: Microsoft Purview'da eBulma (Standart) durumlarıyla Kullanmaya başlayın
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -18,14 +18,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview'da eKeşif (Standart) kullanmaya başlamayı açıklar. eBulma izinlerini atadıktan ve bir servis talebi oluşturduktan sonra, üyeleri ekleyebilir, eBulma tutmaları oluşturabilir ve ardından araştırmanızla ilgili içeriği arayabilir ve dışarı aktarabilirsiniz.
-ms.openlocfilehash: 3619a3097567251d012594831081f0929d5ca80e
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: e224bf22741d0e1599d099802470e231b11fd785
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64972419"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65094956"
 ---
 # <a name="get-started-with-ediscovery-standard-in-microsoft-purview"></a>Microsoft Purview'da eBulma (Standart) ile Kullanmaya başlayın
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview'daki Microsoft Purview eKeşif (Standart), kuruluşların Microsoft 365 ve Office 365 içeriği aramak ve dışarı aktarmak için kullanabileceği temel bir eBulma aracı sağlar. eBulma (Standart) özelliğini, Exchange posta kutuları, SharePoint siteleri, OneDrive hesapları ve Microsoft Teams gibi içerik konumlarına eBulma bekletmesi yapmak için de kullanabilirsiniz. eKeşif 'i (Standart) dağıtmak için hiçbir şey gerekmez, ancak kuruluşunuzun içeriği aramak, dışarı aktarmak ve korumak için eKeşif 'i (Standart) kullanmaya başlayabilmesi için bt yöneticisinin ve eBulma yöneticisinin tamamlaması gereken bazı önkoşul görevleri vardır.
 

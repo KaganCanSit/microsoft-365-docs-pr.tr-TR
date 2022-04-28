@@ -1,8 +1,8 @@
 ---
-title: Azure ağ geçidi alt ağları için adres alanı hesaplayıcı
+title: Azure ağ geçidi alt ağları için adres alanı hesaplayıcısı
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 01/07/2021
 audience: ITPro
 ms.topic: landing-page
@@ -15,28 +15,28 @@ ms.custom:
 - PowerShell
 - Ent_Office_Other
 - seo-marvel-apr2020
-description: 'Özet: C3, Python veya PowerShell ile Azure ağ geçidi alt ağının adres alanı değerini hesaplama.'
-ms.openlocfilehash: 129c64e4484110517edf3640861636324e59de57
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+description: 'Özet: C3, Python veya PowerShell ile bir Azure ağ geçidi alt 6 6 sının adres alanını hesaplayın.'
+ms.openlocfilehash: a19233b6ec68c92dbf65ecb6a73fc1a0a16e6d31
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63681798"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65094890"
 ---
-# <a name="address-space-calculator-for-azure-gateway-subnets"></a>Azure ağ geçidi alt ağları için adres alanı hesaplayıcı
+# <a name="address-space-calculator-for-azure-gateway-subnets"></a>Azure ağ geçidi alt ağları için adres alanı hesaplayıcısı
 
-Diğer ağlara bağlı Azure altyapı hizmetlerinde sanal ağ (VNet) bir ağ geçidi alt ağına sahip olmalıdır. Ağ geçidi alt ağın tanımlaması için en iyi yöntemler:
+Diğer ağlara bağlı Azure altyapı hizmetlerindeki bir sanal ağın (VNet) ağ geçidi alt ağına sahip olması gerekir. Ağ geçidi alt ağı tanımlamaya yönelik en iyi yöntemler şunlardır:
 
-- Ağ geçidi alt ağının ön ek uzunluğu en fazla 29 olabilir (örneğin, 10.119.255.248/29), ancak geçerli öneriniz 27 önek uzunluğu (örneğin, 10.119.255.224/27) belirtmenizdir.
-- Ağ geçidi alt ağının adres alanı tanımlarken VNet adres alanı son bölümünü kullanın.
+- Ağ geçidi alt ağı ön ek uzunluğu en fazla 29 olabilir (örneğin, 10.119.255.248/29), ancak geçerli öneri 27 ön ek uzunluğu kullanmanızdır (örneğin, 10.119.255.224/27).
+- Ağ geçidi alt ağlarının adres alanını tanımlarken, sanal ağ adres alanının son bölümünü kullanın.
 
-İkinci öneri için, ağ geçidi alt ağı için kullanılan bitleri 0'a ve VNet adres alanı içinde kalan bitleri 1'e ayarerek ağ geçidi alt ağının adres alanı hakkında karar veabilirsiniz. Ağ geçidi alt ağ adresi alanı ikilik alt ağ adresine dönüştürmek ve ondalık basamağa geri dönmek zorunda kalmadan hızla hesaplamak için, C# veya Python ile yazılmış bir konsol uygulamasını veya PowerShell komut bloğuyla kullanabilirsiniz.
+İkinci öneri için, ağ geçidi alt ağı için kullanılan bitleri 0 ve sanal ağ adres alanında kalan bitleri 1 olarak ayarlayarak ağ geçidi alt 6'nın adres alanını belirleyebilirsiniz. ağ geçidi alt ağ adres alanını ikiliye ve ondalık değere dönüştürmeye gerek kalmadan hızlı bir şekilde hesaplamak için, C# veya Python ile yazılmış veya PowerShell komut bloğuyla yazılmış bir konsol uygulaması kullanabilirsiniz.
 
-Bu makale, VNet adresi öneki ve ağ geçidi alt ağ öneki uzunluğu için w.x.y.z/n değerlerine dayalı olarak ağ geçidi alt ağ adresi alanı hesap oluşturan C#, Python ve PowerShell kod bloklarını içerir.
+Bu makale, sanal ağ adresi ön eki ve ağ geçidi alt ağ ön eki uzunluğu için w.x.y.z/n değerlerine göre ağ geçidi alt ağ adres alanını hesaplayan C#, Python ve PowerShell kod bloklarını içerir.
 
 ## <a name="c-code-block"></a>C# kod bloğu
 
-C# içinde bir konsol uygulaması oluşturmak için bu kod bloğu kullanın.
+C# dilinde bir konsol uygulaması oluşturmak için bu kod bloğunu kullanın.
 
 ```c#
 using System; 
@@ -110,7 +110,7 @@ namespace ConsoleApplication1
 
 ## <a name="python-code-block"></a>Python kod bloğu
 
-Python'da konsol uygulaması oluşturmak için bu kod bloğuni kullanın.
+Python'da konsol uygulaması oluşturmak için bu kod bloğunu kullanın.
 
 ```python
 import math 
@@ -149,7 +149,7 @@ print(gwAddrPref)
 
 ## <a name="powershell-command-block"></a>PowerShell komut bloğu
 
-Değerleri doldurun ve sonuçta elde edilen komut bloğuyu PowerShell penceresinde veya PowerShell Tümleşik Betik Ortamı'nda (ISE) çalıştırın.
+Değerleri doldurun ve sonuçta elde edilen komut bloğunu bir PowerShell penceresinde veya PowerShell Tümleşik Betik Ortamı'nda (ISE) çalıştırın.
 
 ```powershell
 # Specify the values of w.x.y.z/n for your VNet address space and g, the prefix length of your gateway subnet: 
@@ -179,4 +179,4 @@ Write-Host "Your gateway address prefix is: " $dx
     
 ## <a name="related-topics"></a>İlgili konular
 
-[PowerShell Microsoft 365'i yönetme](manage-microsoft-365-with-microsoft-365-powershell.md)
+[PowerShell ile Microsoft 365’i yönetme](manage-microsoft-365-with-microsoft-365-powershell.md)

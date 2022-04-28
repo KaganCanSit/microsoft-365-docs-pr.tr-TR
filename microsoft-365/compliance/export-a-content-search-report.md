@@ -2,8 +2,8 @@
 title: İçerik arama raporunu dışarı aktarma
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: how-to
@@ -22,12 +22,12 @@ search.appverid:
 ms.assetid: 5c8c1db6-d8ac-4dbb-8a7a-f65d452169b9
 description: Microsoft Purview uyumluluk portalında bir İçerik aramasının gerçek sonuçlarını dışarı aktarmak yerine, arama sonuçları raporunu dışarı aktarabilirsiniz. Rapor, arama sonuçlarının özetini ve dışarı aktarılacak her öğe hakkında ayrıntılı bilgi içeren bir belge içerir.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: f8fc881ed57831aadb035d0ec1168b4f334ec085
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 35e0a0b13594a6396ae1f757e3a1fc8a3e952173
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "65001136"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65093075"
 ---
 # <a name="export-a-content-search-report"></a>İçerik arama raporunu dışarı aktarma
 

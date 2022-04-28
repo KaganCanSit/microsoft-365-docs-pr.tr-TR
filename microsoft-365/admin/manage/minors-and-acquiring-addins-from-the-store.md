@@ -20,18 +20,18 @@ search.appverid:
 - MOE150
 ms.assetid: 737e8c86-be63-44d7-bf02-492fa7cd9c3f
 description: Reşit olmayanların kişisel verilerini yöneten Genel Veri Koruma Yönetmeliği (GDPR) düzenlemeleri hakkında bilgi edinin.
-ms.openlocfilehash: 15b35798ba03132b35285dc16ce57b139e4d7222
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 9b348ce47b5deef8f012428a402a4a83eaa6dcf1
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64782379"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65094250"
 ---
 # <a name="minors-and-acquiring-add-ins-from-the-store"></a>Reşit olmayanlar ve Store'dan eklenti edinme
 
 Genel Veri Koruma Yönetmeliği (GDPR) 25 Mayıs 2018 tarihinde yürürlüğe girecek olan bir Avrupa Birliği yönetmeliğidir. Kullanıcılara verilerini koruma hakkı verir. GDPR'nin bir başka boyutu da, reşit olmayanların kişisel bilgilerinin, ebeveynleri veya vasilerinin onayı olmadan üçüncü şahıslara gönderilemeyeceğidir. Reşit olma yaşı, kişilerin yaşadığı bölgeye bağlı olarak belirlenir.
 
-Ebeveyn onayı hakkında kanuni yönetmeliklere sahip olan bölgeler arasında Amerika Birleşik Devletleri, Güney Kore, Birleşik Krallık ve Avrupa Birliği yer alır. Bu bölgelerde, reşit olmayanların Store'dan yeni Office eklentileri edinmeleri ve daha önce edinilen eklentileri çalıştırmaları engellenecektir (Azure Active Directory üzerinden). Yasal düzenlemelere tabii olmayan bölgeler için indirme kısıtlaması olmayacaktır.
+Ebeveyn onayı hakkında kanuni yönetmeliklere sahip olan bölgeler arasında Amerika Birleşik Devletleri, Güney Kore, Birleşik Krallık ve Avrupa Birliği yer alır. Bu bölgeler için, küçük bir reşit olmayanın (Azure Active Directory aracılığıyla) Mağaza'dan yeni Office Eklentileri alması ve daha önce alınmış eklentileri çalıştırması engellenir. Yasal düzenlemelere tabii olmayan bölgeler için indirme kısıtlaması olmayacaktır.
 
 Bir kullanıcının reşit olup olmadığı Azure Active Directory'de belirtilen verilere göre belirlenir. Kuruluş yöneticisi, yasal yaş grubunu ve bu kullanıcı için ebeveyn iznini bildirmekle sorumludur.
 

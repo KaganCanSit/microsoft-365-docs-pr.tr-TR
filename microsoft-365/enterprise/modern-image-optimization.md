@@ -1,8 +1,8 @@
 ---
-title: SharePoint Online modern site sayfalarında resimleri iyileştirme
+title: SharePoint Çevrimiçi modern site sayfalarında görüntüleri iyileştirme
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 03/11/2020
 audience: ITPro
 ms.topic: conceptual
@@ -20,60 +20,60 @@ ms.custom:
 ms.reviewer: sstewart
 search.appverid:
 - MET150
-description: SharePoint Online modern site sayfalarındaki resimleri iyileştirmek için SharePoint Online'da bulunan SharePoint araçları kullanmayı öğrenin.
-ms.openlocfilehash: 85280dfc903c56c89308c50fa94979fd98b2003c
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: SharePoint Online modern site sayfalarında resimleri iyileştirmek için SharePoint Online'daki araçları kullanmayı öğrenin.
+ms.openlocfilehash: 102555e25e48af19432a26e6e2a0cb17c78044b3
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62984019"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65093843"
 ---
-# <a name="optimize-images-in-sharepoint-online-modern-site-pages"></a>SharePoint Online modern site sayfalarında resimleri iyileştirme
+# <a name="optimize-images-in-sharepoint-online-modern-site-pages"></a>SharePoint Çevrimiçi modern site sayfalarında görüntüleri iyileştirme
 
-Bu makale, SharePoint Online modern site sayfalarında resimleri SharePoint anlamanıza yardımcı olur.
+Bu makale, SharePoint Çevrimiçi modern site sayfalarında resimleri nasıl iyileştirebileceğinizi anlamanıza yardımcı olur.
 
-Klasik yayımlama sitelerinde resimleri iyileştirme hakkında bilgi için bkz. [SharePoint Online için görüntü iyileştirme](image-optimization-for-sharepoint-online.md).
+Klasik yayımlama sitelerindeki görüntüleri iyileştirme hakkında bilgi için bkz. [SharePoint Online için görüntü iyileştirme](image-optimization-for-sharepoint-online.md)...
 
 >[!NOTE]
->Çevrimiçi modern portallarda performans SharePoint için bkz[. Modern modern portalda SharePoint.](/sharepoint/modern-experience-performance)
+>SharePoint Çevrimiçi modern portallardaki performans hakkında daha fazla bilgi için bkz. [Modern SharePoint deneyiminde performans](/sharepoint/modern-experience-performance).
 
-## <a name="use-the-page-diagnostics-for-sharepoint-tool-to-analyze-image-optimization"></a>Resim iyileştirmeyi çözümlemek için SharePoint Tanılama aracını kullanma
+## <a name="use-the-page-diagnostics-for-sharepoint-tool-to-analyze-image-optimization"></a>Görüntü iyileştirmeyi analiz etmek için SharePoint için Sayfa Tanılama aracını kullanma
 
-SharePoint için Sayfa Tanılama aracı, hem SharePointhttps://www.microsoft.com/edge) Online modern portalı hem de klasik yayımlama sitesi sayfalarını analizen yeni Microsoft Edge ve Chrome tarayıcıları için tarayıcı uzantısıdır. Bu araç, sayfanın tanımlanmış bir performans ölçütleri kümesine karşı nasıl bir performans performansına sahip olduğunu gösteren, analize tabi her sayfa için bir rapor sağlar. Yeni uygulama için Sayfa Tanılama aracını yüklemek ve SharePoint için, SharePoint [Online'da Sayfa Tanılama aracını kullanma sayfasını ziyaret edin](page-diagnostics-for-spo.md).
+SharePoint için Sayfa Tanılama aracı, hem SharePoint Çevrimiçi modern portalı hem de klasik yayımlama sitesi sayfalarını analiz eden yeni Microsoft Edge (https://www.microsoft.com/edge) ve Chrome tarayıcıları) için bir tarayıcı uzantısıdır. Araç, analiz edilen her sayfa için sayfanın tanımlı bir performans ölçütleri kümesine göre nasıl performans gösterdiğini gösteren bir rapor sağlar. SharePoint için Sayfa Tanılama aracını yüklemek ve hakkında bilgi edinmek için [SharePoint Online için Sayfa Tanılama aracını kullanma](page-diagnostics-for-spo.md) sayfasını ziyaret edin.
 
 >[!NOTE]
 >Sayfa Tanılama aracı yalnızca SharePoint Online için çalışır ve SharePoint sistem sayfasında kullanılamaz.
 
-Yeni bir modern siteyi SharePoint Tanılama aracıyla modern bir siteyi SharePoint, büyük resimlerle ilgili bilgileri Tanılama _testleri bölmesinde_ görebilirsiniz.
+SharePoint için Sayfa Tanılama aracıyla SharePoint modern bir siteyi analiz ettiğinizde, _Tanılama testleri_ bölmesinde büyük görüntüler hakkındaki bilgileri görebilirsiniz.
 
 Olası sonuçlar şunlardır:
 
-- **Dikkat (** kırmızı): Sayfa boyutu 300 **KB'ın** üzerinde olan bir veya daha fazla resim içeriyor
-- **Herhangi bir işlem gerekmez** (yeşil): Sayfa boyutu 300 KB'yi geçen hiç resim içeriyor
+- **Dikkat gerekiyor** (kırmızı): Sayfada boyutu 300 KB'ın üzerinde **bir veya daha fazla** resim var
+- **Eylem gerekmez** (yeşil): Sayfada boyutu 300 KB'ın üzerinde resim yok
 
-Algılanan **büyük resimler sonucu sonuçların** Dikkat gerekiyor bölümünde görünüyorsa, ek ayrıntıları görmek için sonucu tıkabilirsiniz.
+**Algılanan Büyük görüntüler** sonucu sonuçların **Dikkat gerekli** bölümünde görünüyorsa, ek ayrıntıları görmek için sonuda tıklayabilirsiniz.
 
 ![Sayfa Tanılama aracı sonuçları.](../media/modern-portal-optimization/pagediag-large-images.png)
 
-## <a name="remediate-large-image-issues"></a>Büyük resim sorunlarını düzeltme
+## <a name="remediate-large-image-issues"></a>Büyük görüntü sorunlarını düzeltme
 
-Bir sayfa boyutu 300 KB'nin üzerinde olan resimler içeriyorsa, hangi  resimlerin fazla büyük olduğunu görmek için Algılanan büyük resimler sonucu seçin. Modern SharePoint Online sayfalarında, görüntü yorumları tarayıcı penceresinin boyutuna ve istemci monitör çözünürlüğüne bağlı olarak otomatik olarak sağlanır ve boyutlandırılır. SharePoint Online'a yüklemeden önce resimleri web kullanımı için her SharePoint gerekir. Çok büyük resimlerin boyutu ve çözünürlüğü otomatik olarak azaltılır ve bu da beklenmedik işleme özelliklerine neden olabilir.
+Bir sayfada boyutu 300 KB'ın üzerinde görüntüler varsa, hangi görüntülerin çok büyük olduğunu görmek için **Algılanan büyük resimler** sonucunu seçin. Modern SharePoint Çevrimiçi sayfalarında, tarayıcı penceresinin boyutuna ve istemci monitörün çözünürlüğüne bağlı olarak görüntülerin işlemeleri otomatik olarak sağlanır ve boyutlandırılır. SharePoint Online'a yüklemeden önce resimleri her zaman web kullanımı için iyileştirmeniz gerekir. Çok büyük görüntülerin boyutu ve çözünürlüğü otomatik olarak azaltılır ve bu da beklenmeyen işleme özelliklerine neden olabilir.
 
-Performans sorunlarını düzeltmek için sayfa düzeltmeleri öncesinde, çözümleme sonuçlarında sayfa yükleme sürelerini not edin. Yeni sonucun taban çizgisi standardı içinde olup olmadığını görmek için düzeltmeden sonra aracı yeniden çalıştırın ve bir geliştirme olup olmadığını görmek için yeni sayfa yükleme süresine bakın.
+Performans sorunlarını düzeltmek için sayfa düzeltmeleri yapmadan önce, çözümleme sonuçlarında sayfa yükleme süresini not edin. Yeni sonucun temel standart içinde olup olmadığını görmek için düzeltmenizden sonra aracı yeniden çalıştırın ve bir iyileştirme olup olmadığını görmek için yeni sayfa yükleme süresini denetleyin.
 
 ![Sayfa yükleme süresi sonuçları.](../media/modern-portal-optimization/pagediag-page-load-time.png)
 
 >[!NOTE]
->Sayfa yükleme süresi ağ yükü, günün saati ve diğer geçici koşullar gibi çeşitli faktörlere bağlı olarak değişiklik gösterebilir. Sonuçların ortalamasını alarken değişiklik yaparak sayfa yükleme sürelerini birkaç kez test edebilirsiniz.
+>Sayfa yükleme süresi, ağ yükü, günün saati ve diğer geçici koşullar gibi çeşitli faktörlere bağlı olarak farklılık gösterebilir. Sonuçları ortalamanıza yardımcı olacak değişiklikler yapmadan önce ve sonra sayfa yükleme süresini birkaç kez test etmelisiniz.
 
 ## <a name="related-topics"></a>İlgili konular
 
-[Çevrimiçi SharePoint performansını ayarlama](tune-sharepoint-online-performance.md)
+[çevrimiçi SharePoint performansını ayarlama](tune-sharepoint-online-performance.md)
 
-[Performans Office 365 ayarlama](tune-microsoft-365-performance.md)
+[Office 365 performansını ayarlama](tune-microsoft-365-performance.md)
 
-[Modern deneyimde SharePoint deneyimi](/sharepoint/modern-experience-performance)
+[Modern SharePoint deneyiminde performans](/sharepoint/modern-experience-performance)
 
 [İçerik teslim ağları](content-delivery-networks.md)
 
-[CDN Online ile Office 365 Content Delivery Network (CDN) SharePoint kullanma](use-microsoft-365-cdn-with-spo.md)
+[SharePoint Online ile Office 365 Content Delivery Network (CDN) kullanma](use-microsoft-365-cdn-with-spo.md)

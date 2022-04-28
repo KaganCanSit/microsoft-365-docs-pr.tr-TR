@@ -2,8 +2,8 @@
 title: eBulma (Standart) durumundaki sınırlar
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Bu makalede, Microsoft 365'deki eBulma (Standart) durumundaki sınırlar açıklanmaktadır.
-ms.openlocfilehash: 29d1ef4d017ebf26a0c5ed1cc03fcf4361266e94
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 6cc058bee09563d6a9914b9602b2fc6a3bfdf7f6
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64994116"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65093053"
 ---
 # <a name="limits-in-ediscovery-standard"></a>eBulma sınırları (Standart)
 

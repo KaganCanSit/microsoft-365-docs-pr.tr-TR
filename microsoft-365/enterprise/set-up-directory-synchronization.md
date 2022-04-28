@@ -1,8 +1,8 @@
 ---
-title: Etki alanı için dizin eşitlemesini Microsoft 365
+title: Microsoft 365 için dizin eşitlemesini ayarlama
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 09/30/2020
 audience: Admin
 ms.topic: article
@@ -21,81 +21,81 @@ search.appverid:
 - MBS150
 - BCS160
 ms.assetid: 1b3b5318-6977-42ed-b5c7-96fa74b08846
-description: Etki alanınız ve şirket içi Active Directory Microsoft 365 arasında dizin eşitlemesi ayarlamayı öğrenin.
-ms.openlocfilehash: 61b2dd822d0e65ebbf97ddcbfc3c8a03887c45a6
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Microsoft 365 ile şirket içi Active Directory arasında dizin eşitlemesi ayarlamayı öğrenin.
+ms.openlocfilehash: 49240d056520a83c0828440e21c5cf26943bae8e
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988715"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65092899"
 ---
-# <a name="set-up-directory-synchronization-for-microsoft-365"></a>Etki alanı için dizin eşitlemesini Microsoft 365
+# <a name="set-up-directory-synchronization-for-microsoft-365"></a>Microsoft 365 için dizin eşitlemesini ayarlama
 
-*Bu makale hem son hem de Microsoft 365 Kurumsal hem de Office 365 Kurumsal.*
+*Bu makale hem Microsoft 365 Kurumsal hem de Office 365 Kurumsal için geçerlidir.*
 
-Microsoft 365, kimlik Azure Active Directory için kimlikleri depolamak ve yönetmek ve bulut tabanlı kaynaklara erişim izinleri için bir Azure Active Directory (Azure AD) kiracısı kullanır. 
+Microsoft 365, kimlik doğrulaması için kimlikleri ve bulut tabanlı kaynaklara erişim izinlerini depolamak ve yönetmek için bir Azure Active Directory (Azure AD) kiracısı kullanır. 
 
-Şirket içi Active Directory Etki Alanı Hizmetleri (AD DS) etki alanınız veya ormanınız varsa, AD DS kullanıcı hesaplarınızı, gruplarınızı ve kişilerinizi Microsoft 365 aboneliğinizin Azure AD kiracısı ile eşit edebilirsiniz. Bu, kimlik yönetiminin karma Microsoft 365. Bileşenleriniz burada vemektedir.
+şirket içi Active Directory Etki Alanı Hizmetleri (AD DS) etki alanınız veya ormanınız varsa, AD DS kullanıcı hesaplarınızı, gruplarınızı ve kişilerinizi Microsoft 365 aboneliğinizin Azure AD kiracısıyla eşitleyebilirsiniz. Bu, Microsoft 365 için karma kimliktir. Bileşenleri şunlardır.
 
-![Eşitleme için dizin eşitlemesi Microsoft 365.](../media/about-microsoft-365-identity/hybrid-identity.png)
+![Microsoft 365 için dizin eşitleme bileşenleri.](../media/about-microsoft-365-identity/hybrid-identity.png)
 
-Azure AD Bağlan şirket içi bir sunucuda çalışır ve AD DS'nizi Azure AD kiracısı ile eşitler. Dizin eşitlemeyle birlikte, şu kimlik doğrulama seçeneklerini de belirtebilirsiniz:
+Azure AD Bağlan bir şirket içi sunucuda çalışır ve AD DS'nizi Azure AD kiracısıyla eşitler. Dizin eşitlemesi ile birlikte şu kimlik doğrulama seçeneklerini de belirtebilirsiniz:
 
 - Parola karması eşitlemesi (PHS)
 
-  Azure AD, kimlik doğrulamayı kendisinin gerçekleştirir.
+  Azure AD kimlik doğrulamasının kendisini gerçekleştirir.
 
-- Geçişli kimlik doğrulaması (PTA)
+- Doğrudan kimlik doğrulaması (PTA)
 
-  Azure AD'nin kimlik doğrulamayı gerçekleştirmesi için AD DS vardır.
+  Azure AD' de kimlik doğrulamasını gerçekleştiren AD DS vardır.
 
-- Federasyon kimlik doğrulaması
+- Şirket Dışı Kimlik Doğrulaması
 
-  Azure AD, başka bir kimlik sağlayıcısına kimlik doğrulaması talep etmek için istemci bilgisayara başvurur.
+  Azure AD, başka bir kimlik sağlayıcısına kimlik doğrulaması isteyen istemci bilgisayarı ifade eder.
 
-Daha [fazla bilgi için bkz](plan-for-directory-synchronization.md) . Karma kimlikler.
+Daha fazla bilgi için bkz [. Karma kimlikler](plan-for-directory-synchronization.md) .
   
-## <a name="1-review-prerequisites-for-azure-ad-connect"></a>1. Azure AD önkoşullarını Bağlan
+## <a name="1-review-prerequisites-for-azure-ad-connect"></a>1. Azure AD Bağlan önkoşullarını gözden geçirin
 
-Microsoft 365 aboneliğiyle, ücretsiz bir Azure AD Microsoft 365 alırsınız. Dizin eşitlemesini ayar zaman, şirket içi sunuculardan Bağlan Azure AD Eşitlemesi'ne yüklemiş oluruz.
+Microsoft 365 aboneliğinizle ücretsiz bir Azure AD aboneliği alırsınız. Dizin eşitlemesini ayarladığınızda, şirket içi sunucularınızdan birine Azure AD Bağlan yüklersiniz.
   
-Bu Microsoft 365 şunları da gerekir:
+Microsoft 365 için yapmanız gerekenler:
   
-- Şirket içi etki alanınızı doğrulayın. Azure AD Bağlan sihirbazı bu işlemde size yol sunar.
-- Kiracınız ve AD DS'nizin yönetici hesapları için kullanıcı Microsoft 365 ve parolaları alın.
+- Şirket içi etki alanınızı doğrulayın. Azure AD Bağlan sihirbazı bu konuda size yol gösterir.
+- Microsoft 365 kiracınızın ve AD DS'nizin yönetici hesaplarının kullanıcı adlarını ve parolalarını alın.
 
-Azure AD Bağlan'i yüklemeniz gereken şirket içi sunucunuz için:
+Azure AD Bağlan yüklediğiniz şirket içi sunucunuz için şunları yapmanız gerekir:
   
-|**Sunucu işletim sistemi**|**Diğer yazılımlar**|
+|**Sunucu İşletim Sistemi**|**Diğer yazılımlar**|
 |:-----|:-----|
-|Windows Server 2012 R2 ve sonrası | - PowerShell varsayılan olarak yüklenir, herhangi bir işlem gerekmez.  <br> - NET 4.5.1 ve sonraki sürümler, Sürüm Güncelleştirmesi Windows sunulur. Denetim Masası'nda Windows Server için en son güncelleştirmeleri yüklemiş olun. |
-|Windows Pack 1 (SP1)** ile Windows Server 2008 R2 veya Windows Server 2012 | - PowerShell'in en son sürümü Windows Management Framework 4.0 sürümünde kullanılabilir. [Microsoft İndirme Merkezi'nde arama.](https://go.microsoft.com/fwlink/p/?LinkId=717996)  <br> - .NET 4.5.1 ve sonraki sürümler [Microsoft İndirme Merkezi'nde kullanılabilir](https://go.microsoft.com/fwlink/p/?LinkId=717996). |
-|Windows Server 2008 | - PowerShell'in desteklenen en son sürümü microsoft indirme Windows Management Framework 3.0 sürümünde [kullanılabilir](https://go.microsoft.com/fwlink/p/?LinkId=717996).  <br> - .NET 4.5.1 ve sonraki sürümler [Microsoft İndirme Merkezi'nde kullanılabilir](https://go.microsoft.com/fwlink/p/?LinkId=717996). |
+|R2 ve üzerini Windows Server 2012 | - PowerShell varsayılan olarak yüklenir, hiçbir eylem gerekmez.  <br> - Net 4.5.1 ve üzeri sürümler Windows Update aracılığıyla sunulur. Denetim Masası Windows Sunucusu'na en son güncelleştirmeleri yüklediğinizden emin olun. |
+|Service Pack 1 (SP1) ile Windows Server 2008 R2** veya Windows Server 2012 | - PowerShell'in en son sürümü Windows Management Framework 4.0 sürümünde kullanılabilir. [Microsoft İndirme Merkezi'nden](https://go.microsoft.com/fwlink/p/?LinkId=717996) arama yapın.  <br> - .Net 4.5.1 ve üzeri sürümler [Microsoft İndirme Merkezi'nden](https://go.microsoft.com/fwlink/p/?LinkId=717996) edinilebilir. |
+|Windows Server 2008 | - PowerShell'in desteklenen en son sürümü Windows Management Framework 3.0 sürümünde, [Microsoft İndirme Merkezi'nde](https://go.microsoft.com/fwlink/p/?LinkId=717996) kullanılabilir.  <br> - .Net 4.5.1 ve üzeri sürümler [Microsoft İndirme Merkezi'nden](https://go.microsoft.com/fwlink/p/?LinkId=717996) edinilebilir. |
 
-Azure AD [Azure Active Directory Bağlan](/azure/active-directory/hybrid/how-to-connect-install-prerequisites) donanım, yazılım, hesap ve izin gereksinimleri, SSL sertifika gereksinimleri ve nesne sınırları ayrıntıları için bkz. Bağlan.
+Donanım, yazılım, hesap ve izin gereksinimleri, SSL sertifika gereksinimleri ve Azure AD [Bağlan](/azure/active-directory/hybrid/how-to-connect-install-prerequisites) için nesne sınırları ayrıntıları için bkz. Azure Active Directory Bağlan önkoşulları.
   
-Ayrıca, her sürüme nelerin dahil olduğunu Bağlan [için](/azure/active-directory/hybrid/reference-connect-version-history) Azure AD'nin sürüm geçmişini de gözden geçirsiniz.
+Ayrıca azure AD Bağlan [sürüm yayın geçmişini](/azure/active-directory/hybrid/reference-connect-version-history) gözden geçirerek her sürüme nelerin dahil olduğunu ve düzelttiklerini görebilirsiniz.
 
-## <a name="2-install-azure-ad-connect-and-configure-directory-synchronization"></a>2. Azure AD eşitlemesini Bağlan eşitlemesini yapılandırma
+## <a name="2-install-azure-ad-connect-and-configure-directory-synchronization"></a>2. Azure AD Bağlan yükleme ve dizin eşitlemesini yapılandırma
 
-Başlamadan önce şunları sahip olduğunu emin olun:
+Başlamadan önce şunları yaptığınızdan emin olun:
 
-- Genel yöneticinin kullanıcı adı Microsoft 365 parolası
+- Microsoft 365 genel yöneticisinin kullanıcı adı ve parolası
 - AD DS etki alanı yöneticisinin kullanıcı adı ve parolası
 - Hangi kimlik doğrulama yöntemi (PHS, PTA, federasyon)
-- [Azure AD Sorunsuz Çoklu Oturum Açma(SSO) kullanmak isteyip istemeysiniz](/azure/active-directory/hybrid/how-to-connect-sso)
+- [Azure AD Sorunsuz Çoklu Oturum Açma (SSO)](/azure/active-directory/hybrid/how-to-connect-sso) kullanmak isteyip istemediğiniz
 
 Şu adımları izleyin:
 
-1. Gezinti Bölmesinde [oturum Microsoft 365 yönetim merkezi (](https://admin.microsoft.com) vehttps://admin.microsoft.com) sol **gezintide** \> **Kullanıcılar Etkin** Kullanıcılar'ı seçin.
-2. Etkin kullanıcılar **sayfasında,** Diğer (üç **nokta**) Dizin **eşitlemesi'ne**\> tıklayın.
+1. [Microsoft 365 yönetim merkezi](https://admin.microsoft.com) ()https://admin.microsoft.com) oturum açın ve sol gezinti bölmesinde **Etkin Kullanıcılar'ı** \> seçin.
+2. **Etkin kullanıcılar** sayfasında **Diğer** (üç nokta) **Dizin eşitlemesi'ni**\> seçin.
   
-3. Hazırlığı **Azure Active Directory,** Azure AD Destek Aracı bağlantısını almak **için İndirme merkezine Bağlan'ı** seçin. 
-4. [Azure AD Bağlan Azure AD Bağlan Yükleme yol haritası'daki adımları izleyin](/azure/active-directory/hybrid/how-to-connect-install-roadmap).
+3. **Azure Active Directory hazırlık** sayfasında, başlamak **için İndirme merkezine git'i seçerek Azure AD Bağlan aracını edinin**. 
+4. [Azure AD Bağlan ve Azure AD Bağlan Sistem Durumu yükleme yol haritasındaki](/azure/active-directory/hybrid/how-to-connect-install-roadmap) adımları izleyin.
 
-## <a name="3-finish-setting-up-domains"></a>3. Etki alanlarını ayarlamayı bitirme
+## <a name="3-finish-setting-up-domains"></a>3. Etki alanlarını ayarlamayı bitirin
 
-Etki alanlarınızı [ayarlamayı bitirmek için MICROSOFT 365 DNS kayıtlarınızı](/office365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider) yönetirken DNS kayıtları oluşturma'daki adımları izleyin.
+Etki alanlarınızı ayarlamayı tamamlamak [için DNS kayıtlarınızı yönetirken Microsoft 365 için DNS kayıtları oluşturma](/office365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider) başlığı altında yer alan adımları izleyin.
 
 ## <a name="next-step"></a>Sonraki adım
 

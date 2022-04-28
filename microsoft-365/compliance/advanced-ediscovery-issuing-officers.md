@@ -2,8 +2,8 @@
 title: eBulma'da veren memurları yönetme (Premium)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 ms.assetid: ''
 description: Kuruluşunuzdaki her durumda herhangi bir gözetim iletişimine eklenebilmeleri için eBulma'da (Premium) kuruluş genelinde veren memurlar ekleyebilirsiniz.
-ms.openlocfilehash: f82d5359a90e21203c2ff882ceb831cc1630e008
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 894da37088599d1c8b0f9d473bf64311a09cc566
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "65000564"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65093646"
 ---
 # <a name="manage-issuing-officers-in-ediscovery-premium"></a>eBulma'da veren memurları yönetme (Premium)
 

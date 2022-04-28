@@ -2,8 +2,8 @@
 title: Kuruluş PST dosyalarını içeri aktarma hakkında bilgi edinin
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
 description: E-posta verilerini (PST dosyaları) kullanıcı posta kutularına toplu olarak aktarmak için Microsoft Purview uyumluluk portalında İçeri Aktarma hizmetini kullanmayı öğrenin.
-ms.openlocfilehash: a1720b51a57569d676aeac37933f1dce3075e7ed
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: c1a7cd9a2c2c0a3ee564710461796c690c7391b5
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "65001026"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65092767"
 ---
 # <a name="learn-about-importing-your-organizations-pst-files"></a>Kuruluşunuzun PST dosyalarını içeri aktarma hakkında bilgi edinin
 

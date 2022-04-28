@@ -1,8 +1,8 @@
 ---
-title: Ekran Microsoft 365 izleme
+title: Microsoft 365 bağlantısını izleyin
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 8/4/2020
 audience: ITPro
 ms.topic: conceptual
@@ -19,38 +19,38 @@ search.appverid:
 - MOE150
 - BCS160
 ms.assetid: 53cdb60c-a6b2-4848-b3ff-e7b75dc3fd1f
-description: Bu makalede, bu bağlantının izlenmesi ve bakımı için kullanabileceğiniz araçlar ve Microsoft 365 öğrenebilirsiniz.
-ms.openlocfilehash: 783278ad69fbe47afd6ea85fdb70c8bb0057005c
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Bu makalede, Microsoft 365 bağlantısını izlemek ve korumak için kullanabileceğiniz araçlar ve teknikler hakkında bilgi edineceksiniz.
+ms.openlocfilehash: 0e7c18a10dc851596af6a652fb80c9c72852ee0d
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985577"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65093317"
 ---
-# <a name="monitor-microsoft-365-connectivity"></a>Ekran Microsoft 365 izleme
+# <a name="monitor-microsoft-365-connectivity"></a>Microsoft 365 bağlantısını izleyin
 
-E-postanın Microsoft 365, aşağıdaki araçlardan Microsoft 365 tekniklerini kullanarak bağlantının daha iyi korunmasını sebilirsiniz. Resmi Hizmet Durumu ve Sürekliliği yönergelerimizi [](/office365/servicedescriptions/office-365-platform-service-description/service-health-and-continuity) ve ayrıca yavaş bir ağ üzerinde Microsoft 365 [iyi yöntemler'i anlamak istiyoruz](https://support.office.com/article/fd16c8d2-4799-4c39-8fd7-045f06640166). Ayrıca, Microsoft 365 yöneticisi uygulamasını [da Microsoft 365](https://blogs.office.com/2015/03/13/administer-on-the-go-with-the-updated-office-365-admin-app/) - [Yönetici Yardımı yer işareti eklemek isteyebilirsiniz](https://support.office.com/article/17d3ff3f-3601-466e-b5a1-482b31cfb791).
+Microsoft 365 dağıttıktan sonra, aşağıdaki araç ve tekniklerden bazılarını kullanarak Microsoft 365 bağlantıyı sürdürebilirsiniz. Resmi [Hizmet Durumu ve Süreklilik](/office365/servicedescriptions/office-365-platform-service-description/service-health-and-continuity) yönergelerinin yanı sıra [yavaş bir ağda Microsoft 365 kullanmaya yönelik en iyi yöntemlerimizi](https://support.office.com/article/fd16c8d2-4799-4c39-8fd7-045f06640166) anlamak isteyeceksiniz. Ayrıca[, Microsoft 365 yönetici uygulamasını](https://blogs.office.com/2015/03/13/administer-on-the-go-with-the-updated-office-365-admin-app/) alıp [İş için Microsoft 365 - Yönetici Yardımı'na](https://support.office.com/article/17d3ff3f-3601-466e-b5a1-482b31cfb791) yer işareti eklemek istersiniz.
   
-## <a name="monitoring-microsoft-365-connectivity"></a>Microsoft 365 Bağlantısını İzleme
+## <a name="monitoring-microsoft-365-connectivity"></a>İzleme Microsoft 365 Bağlantısı
 
 |İzleme türü |Açıklama |
 |:-----|:-----|
-|**Yeni iş noktası uç noktalarının Microsoft 365 alma** <br/> |Genel Ağ Uç [noktalarını Microsoft 365](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a) kullanıyorsanız, yeni uç noktalar yayımla yayınla verilerine bildirim almak isteyebilirsiniz ve bunun için sık kullanılan RSS okuyucuyu kullanarak RSS akışımıza abone olabilirsiniz. Buradan, [e-posta Outlook](https://go.microsoft.com/fwlink/p/?LinkId=532416) aracılığıyla abone olma veya [RSS akışı güncelleştirmelerinin size e-posta ile göndermesini sebilirsiniz](https://go.microsoft.com/fwlink/p/?LinkId=532417).  <br/> |
-|**İzlemek System Center'i Microsoft 365** <br/> |Microsoft System Center kullanıyorsanız, bugün Microsoft 365 için [Microsoft System Center Operations Manager](https://www.microsoft.com/download/details.aspx?id=103379) Yönetim Paketi'ni Microsoft 365 indirebilirsiniz. Daha ayrıntılı kılavuz için lütfen yönetim paketi işlemleri kılavuzuna bakın. <br/> |
-|**Azure ExpressRoute'un durumunu izleme** <br/> |Microsoft 365'e Microsoft 365 için Azure ExpressRoute kullanarak bağlanıyorsanız, hem Microsoft 365 Hizmet Durumu Panosu'nı hem [de Azure Kaynak](https://azure.microsoft.com/blog/reduce-troubleshooting-time-with-azure-resource-health/) durumu ile sorun giderme süresini azaltma <br/> |
-|**Azure AD Bağlan Health'i AD FS ile kullanma** <br/> |MICROSOFT 365'de Single Sign-On için AD FS Microsoft 365 kullanıyorsanız, AD FS altyapınızı izlemek için [Azure AD Bağlan Health'i](/azure/active-directory/hybrid/how-to-connect-health-adfs) kullanmaya başlamak gerekir.  <br/> |
-|**Programlı olarak izleme Microsoft 365** <br/> |Yönetim API'si ile ilgili [Microsoft 365 bakın](/office/office-365-management-api/office-365-management-apis-overview).  <br/> |
+|**Yeni Microsoft 365 uç noktalarıyla ilgili bildirim alma** <br/> |[Microsoft 365 uç noktalarını yönetiyorsanız, yeni uç noktaları](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a) yayımladığımızda bildirim almak istersiniz. Sık kullandığınız RSS okuyucusunu kullanarak RSS akışımıza abone olabilirsiniz. [Outlook aracılığıyla abone](https://go.microsoft.com/fwlink/p/?LinkId=532416) olma veya [RSS akışı güncelleştirmelerini size e-posta ile göndermeyi burada bulabilirsiniz](https://go.microsoft.com/fwlink/p/?LinkId=532417).  <br/> |
+|**Microsoft 365 İzlemek için System Center kullanma** <br/> |Microsoft System Center kullanıyorsanız, Microsoft 365 bugün izlemeye başlamak [üzere Microsoft 365 için Microsoft System Center Operations Manager Yönetim Paketi'ni](https://www.microsoft.com/download/details.aspx?id=103379) indirebilirsiniz. Daha ayrıntılı yönergeler için lütfen yönetim paketi işlemleri kılavuzuna bakın. <br/> |
+|**Azure ExpressRoute'un durumunu izleme** <br/> |Microsoft 365 için Azure ExpressRoute'u kullanarak Microsoft 365 bağlanıyorsanız hem Microsoft 365 Hizmet Durumu Panosu'nu hem de Azure [Kaynak durumu ile azure sorunlarını giderme süresini azaltmayı](https://azure.microsoft.com/blog/reduce-troubleshooting-time-with-azure-resource-health/) kullandığınızdan emin olmak istersiniz <br/> |
+|**AZURE AD Bağlan Health'i AD FS ile kullanma** <br/> |Microsoft 365 ile Tek Sign-On için AD FS kullanıyorsanız, [AD FS altyapınızı izlemek için Azure AD Bağlan Health kullanmaya](/azure/active-directory/hybrid/how-to-connect-health-adfs) başlamak istersiniz.  <br/> |
+|**Microsoft 365 program aracılığıyla izleme** <br/> |[Microsoft 365 Yönetim API'siyle](/office/office-365-management-api/office-365-management-apis-overview) ilgili kılavuzumuza bakın.  <br/> |
 
 İşte geri dönmek için kullanabileceğiniz kısa bir bağlantı: [https://aka.ms/monitorconnectivity365]()
   
 ## <a name="related-topics"></a>İlgili konular
 
-[Hizmet Microsoft 365 Kurumsal uygulamaları yapılandırma](configure-services-and-applications.md)
+[Microsoft 365 Kurumsal hizmetlerini ve uygulamalarını yapılandırma](configure-services-and-applications.md)
   
-[Organizasyonlarınızı her şey için Microsoft 365 Kurumsal](get-your-organization-ready-for-office-365.md)
+[Kuruluşunuzu Microsoft 365 Kurumsal için hazırlama](get-your-organization-ready-for-office-365.md)
   
-[Ağ planlaması ve performans ayarı Microsoft 365](network-planning-and-performance.md)
+[Microsoft 365 için ağ planlama ve performans ayarlama](network-planning-and-performance.md)
   
-[Microsoft 365 ortamlarla tümleştirmeyi sağlar](microsoft-365-integration.md)
+[Şirket içi ortamlarla Microsoft 365 tümleştirme](microsoft-365-integration.md)
   
-[Veri Microsoft 365 yönetme](managing-office-365-endpoints.md)
+[Microsoft 365 uç noktalarını yönetme](managing-office-365-endpoints.md)

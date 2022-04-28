@@ -2,8 +2,8 @@
 title: Belgeleri eBulma'da (Premium) bir gözden geçirme kümesinde görüntüleme
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -15,12 +15,12 @@ search.appverid:
 - MET150
 description: eBulma 'da (Premium) metin, açıklama ekleme, dönüştürülen veya yerel görünüm gibi içeriği nasıl görüntüleyebileceğinizi seçin.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 8248eaa1fd8bce5c34bb8c936b9fecc0dd29deba
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: d21ee5f24b12f010ba9869ca1dfe9af9251ab64c
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64992842"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65093536"
 ---
 # <a name="view-documents-in-a-review-set-in-ediscovery-premium"></a>Belgeleri eBulma'da (Premium) bir gözden geçirme kümesinde görüntüleme
 

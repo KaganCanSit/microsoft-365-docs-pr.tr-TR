@@ -1,10 +1,10 @@
 ---
-title: Microsoft 365 Corporation'ın kurumsal adı
+title: Contoso Corporation için kuruluş için Microsoft 365
 author: kelleyvice-msft
 f1.keywords:
 - NOCSH
 ms.author: kvice
-manager: laurawi
+manager: scotv
 audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -13,85 +13,85 @@ ms.collection:
 - Strat_O365_Enterprise
 - M365-subscription-management
 ms.custom: ''
-description: Kurgusal ama temsili bir küresel kuruluşun kuruluş için nasıl Microsoft 365 benimseyen bir kuruluş.
-ms.openlocfilehash: 9598464e982d5f5804056f9c9ddb782bd438aa87
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Kurgusal ama temsili bir küresel kuruluşun kuruluş için Microsoft 365 nasıl benimsediği.
+ms.openlocfilehash: 9c623c181e6583d03f9e6d175a169caf77831e39
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983225"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65094470"
 ---
-# <a name="microsoft-365-for-enterprise-for-the-contoso-corporation"></a>Microsoft 365 Corporation'ın kurumsal adı
+# <a name="microsoft-365-for-enterprise-for-the-contoso-corporation"></a>Contoso Corporation için kuruluş için Microsoft 365
 
-Microsoft 365 özellikleri, yerel ve bulut tabanlı üretkenlik uygulamalarını ve hizmetlerini masaüstü ve gelişmiş güvenlik özellikleriyle birleştiren Microsoft Windows 10 Enterprise bulut teklifidir. Bu, herkesin yaratıcı ve güvenli bir şekilde birlikte çalışmasına olanak sağlayan eksiksiz ve akıllı bir çözümdür.
+kurumsal Microsoft 365, yerel ve bulut tabanlı üretkenlik uygulamalarını ve hizmetlerini Windows 10 Enterprise ve gelişmiş güvenlik özellikleriyle birleştiren Microsoft premier bulut teklifidir. Herkesin yaratıcı ve güvenli bir şekilde birlikte çalışmasını sağlayan eksiksiz ve akıllı bir çözüm.
 
-Contoso Corporation, merkezi Paris'teki merkeziyle bire bir olan kurgusal ama temsili bir küresel üretim şirketidir. Kuruluş için Microsoft 365 dağıtıldı ve ağ, kimlik, Windows 10 Enterprise Kurumlar için Microsoft 365 Uygulamaları, mobil cihaz yönetimi, bilgi koruması ve güvenlikle ilgili önemli tasarım kararlarını ve uygulama ayrıntılarını ele aldı.
+Contoso Corporation, merkezi Paris'te olan kurgusal ama temsili bir küresel üretim holdingidir. Şirket, kuruluş için Microsoft 365 dağıttı ve ağ, kimlik, Windows 10 Enterprise, Kurumlar için Microsoft 365 Uygulamaları, mobil cihaz yönetimi, bilgi koruması ve güvenlikle ilgili önemli tasarım kararları ve uygulama ayrıntılarına değindi.
 
-Şirketin kurumsal kurumsal destekle ilgili genel hedefi, Microsoft 365 bulut hizmetlerini kullanarak müşteri değeri oluşturmak ve dijital birinci dünyada rekabetçi avantajını korumak için çalışanlarını, ortaklarını, verilerini ve süreçlerini bir araya getirerek dijital dönüşümünü hızlandırmaktır.
+Şirketin kurumsal Microsoft 365 genel hedefi, müşteri değeri oluşturmak ve dijital öncelikli bir dünyada rekabet avantajını korumak üzere çalışanlarını, iş ortaklarını, verilerini ve süreçlerini bir araya getirmek üzere bulut hizmetlerini kullanarak dijital dönüşümünü hızlandırmaktır.
 
 Ayrıntılar için şu makalelere bakın:
 
-- [Genel bakış](contoso-overview.md)
+- [Genel Bakış](contoso-overview.md)
 
-  Contoso, 100.000'den fazla ürüne sahip bir küresel üretim, satış ve destek kuruluşudur.
+  Contoso, 100.000'den fazla ürünü olan küresel bir üretim, satış ve destek kuruluşudur.
 
-- [Contoso IT altyapısı ve ihtiyaçları](contoso-infra-needs.md)
+- [Contoso BT altyapısı ve gereksinimleri](contoso-infra-needs.md)
 
-  Contoso, şirket içi, merkezi bir IT altyapısından bulut tabanlı kişisel üretkenlik iş yüklerini, uygulamalarını ve karma senaryoları içeren, bulut dahil bir kuruluma geçiş ediyor.
+  Contoso şirket içi, merkezi bir BT altyapısından bulut tabanlı kişisel üretkenlik iş yüklerini, uygulamaları ve karma senaryoları içeren bulut kapsayıcı bir kuruluma geçiş yapmakta.
 
 - [Ağ](contoso-networking.md)
 
-  Contoso ağ mühendisleri, şirket içi kullanıcıları için trafiği intranet kenarlarına ve İnternet'te en yakın Microsoft ağ konumuna en iyi duruma getirirler.
+  Contoso ağ mühendisleri, şirket içi kullanıcıları için intranet uçlarına ve İnternet'te en yakın Microsoft ağ konumuna trafiği en iyi duruma getirmektedir.
 
 - [Kimlik](contoso-identity.md)
 
-  Bulut içinde Contoso kimliği çözümü, şirketin şirket içi Active Directory Etki Alanı Hizmetleri (AD DS) ormanının avantajlarını sağlar. Mevcut güvenilir üçüncü taraf kimlik sağlayıcılarıyla federasyon kimlik doğrulamasını içerir.
+  Contoso bulutta kimlik çözümü, şirketin şirket içi Active Directory Etki Alanı Hizmetleri (AD DS) ormanından yararlanıyor. Mevcut güvenilir, üçüncü taraf kimlik sağlayıcılarıyla federasyon kimlik doğrulamasını içerir.
 
 - [Windows 10 Enterprise](contoso-win10.md)
 
-  Şirket için Contoso altyapısı Windows 10 Enterprise şirketin birincil bilgisayar ve cihaz işletim sistemini çalıştıran cihazlar için güncelleştirmeleri dağıtıyor ve otomatik olarak yüklür.
+  Windows 10 Enterprise için Contoso altyapısı, şirketin birincil bilgisayar ve cihaz işletim sistemini çalıştıran cihazlar için güncelleştirmeleri dağıtır ve otomatik olarak yükler.
 
 - [Microsoft 365 Kurumsal Uygulamaları](contoso-o365pp.md)
 
-  Yeni üretkenlik Kurumlar için Microsoft 365 Uygulamaları Contoso altyapısı, bu üretkenlik yazılımı paketinin güncelleştirmelerini Microsoft Office ve otomatik olarak yüklür.
+  Kurumlar için Microsoft 365 Uygulamaları için Contoso altyapısı, Microsoft Office üretkenlik yazılımı paketi için güncelleştirmeleri dağıtır ve otomatik olarak yükler.
 
 - [Mobil cihaz yönetimi](contoso-mdm.md)
 
-  Contoso, hem şirket hem de kişisel akıllı telefonlara ve tabletlere sahip birçok dolaşım çalışanıyla, cihazları ve verilerini kaydetmek, güvenliklerini sağlamak ve uygulamaları yönetmek için mobil cihaz yönetimini kullanır.
+  Hem şirkete hem de kişisel akıllı telefonlara ve tabletlere sahip birçok dolaşım çalışanı ile Contoso, mobil cihaz yönetimini kullanarak cihazları ve verilerini kaydedip güvenliğini sağlar ve uygulamaları yönetir.
 
 - [Bilgi koruması](contoso-info-protect.md)
 
-  Hem ortak hem de yüksek değerli verilerin tanım olduğundan, etiketlenmiş olduğundan ve güvenlik katmanlarına tabi olduğundan emin olmak için, Contoso kurumsal bilgi koruması için Microsoft 365 ve güvenlik ilkelerini zorunludur.
+  Hem ortak hem de yüksek değerli verilerin tanımlanmasını, etiketlanmasını ve güvenlik katmanlarına tabi olmasını sağlamak için Contoso, kurumsal bilgi koruması için Microsoft 365 ile veri güvenliği ilkelerini zorunlu kılır.
 
-- [Kurumsal güvenlik Microsoft 365 Özeti](contoso-security-summary.md)
+- [Kurumsal güvenlik Microsoft 365 özeti](contoso-security-summary.md)
 
-  Contoso; kimlik ve erişim yönetimi Microsoft 365, tehdit koruması, bilgi koruması ve güvenlik yönetimi için kurumsal güvenlik özellikleriyle ilgili her çeşitli özelliği kullanır.
+  Contoso, kimlik ve erişim yönetimi, tehdit koruması, bilgi koruması ve güvenlik yönetimi için kurumsal güvenlik özelliklerine yönelik tüm Microsoft 365 yelpazesini kullanır.
 
-Aşağıdaki ek IT senaryolarına ve yapılandırmalarına bakın:
+Şu ek BT senaryolarına ve yapılandırmalarına bakın:
 
-- [Uzak ve yerinde çalışma için COVID-19 yanıtı ve altyapısı](../solutions/contoso-remote-onsite-work.md)
+- [Uzaktan ve yerinde çalışma için COVID-19 yanıtı ve altyapısı](../solutions/contoso-remote-onsite-work.md)
 
-  Contoso'un uzaktan erişim kapasitesini ve uzak ve site içi çalışanlar için yeni yükleme ve güncelleştirme altyapısını nasıl güncelle yerinde olduğunu öğrenin.
+  Contoso'nın uzaktan erişim özelliğini ve uzaktan ve yerinde çalışanlar için yeni yükleme ve güncelleştirme altyapısını nasıl güncelleştirdiğinden haberdar olun.
 
 - [Çok gizli bir proje için ekip](../solutions/contoso-team-for-top-secret-project.md)
 
-  Çok gizli bir proje için güvenli bir işbirliği ortamı oluşturmak için Contoso, güvenlik yalıtımlı bir ekip kullandı.
+  Contoso, çok gizli bir proje için güvenli bir işbirliği ortamı oluşturmak için güvenlik yalıtımına sahip bir ekip kullandı.
 
-- [Teams geçiş](/MicrosoftTeams/voice-case-study-overview)
+- [Teams ses geçişi](/MicrosoftTeams/voice-case-study-overview)
 
-  Contoso'nın birleşik iletişim, işbirliği ve ses için şirket içi kullanıcılarını Microsoft Teams'e nasıl geçir olduğunu öğrenin.
+  Contoso'un şirket içi kullanıcılarını birleşik iletişim, işbirliği ve ses için Microsoft Teams nasıl geçirip geçirmedilerini öğrenin.
 
 - [İletişim uyumluluğu rahatsız edici dil ilkesi](../compliance/communication-compliance-case-study.md)
 
-  Contoso'nın iletişimleri takip, takip ve iletişim için rahatsız edici bir Microsoft Teams Exchange ilkeyi nasıl Yammer öğrenin.
+  Contoso'nın Microsoft Teams, Exchange ve Yammer iletişimleri için rahatsız edici bir dil ilkesini nasıl hızlı bir şekilde yapılandırıldığını öğrenin.
 
 ## <a name="next-step"></a>Sonraki adım
 
-[Contoso Corporation ve kurumsal](contoso-overview.md) ürün dağıtımı yapılan tasarımla ilgili dikkate Microsoft 365 öğrenin.
+[Contoso Corporation ve](contoso-overview.md) kuruluş için Microsoft 365 dağıtılırken ele alınan tasarım konuları hakkında bilgi edinin.
 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Microsoft 365 genel bakış için genel bakış](microsoft-365-overview.md)
+[Microsoft 365 Kurumsal’a genel bakış](microsoft-365-overview.md)
 
 [Test laboratuvarı kılavuzları](m365-enterprise-test-lab-guides.md)

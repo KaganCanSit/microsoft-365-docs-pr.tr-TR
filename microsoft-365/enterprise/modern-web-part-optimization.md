@@ -2,7 +2,7 @@
 title: SharePoint Online modern site sayfalarında web bölümü performansını iyileştirme
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 03/11/2020
 audience: Admin
 ms.topic: conceptual
@@ -21,97 +21,97 @@ ms.reviewer: sstewart
 search.appverid:
 - MET150
 description: SharePoint Online modern site sayfalarında web bölümlerinin performansını iyileştirmek için Sayfa Tanılama'yı kullanmayı öğrenin.
-ms.openlocfilehash: 15b15e56a1c490cab86f225c5784d8bb9adcb36e
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 543ee889831d08b2b465c077cc391a653fa0b9a9
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62977693"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65093360"
 ---
 # <a name="optimize-web-part-performance-in-sharepoint-online-modern-site-pages"></a>SharePoint Online modern site sayfalarında web bölümü performansını iyileştirme
 
-SharePoint Online modern site sayfalarında, genel sayfa yükleme zamanlarında katkıda bulunabilirsiniz. Bu makale, sayfalarınıza web bölümlerinin kullanıcı gecikme süresini nasıl etkilediğini belirleme ve sık karşılaşılan sorunları düzeltme konularını anlamanıza yardımcı olur.
+SharePoint Çevrimiçi modern site sayfaları, genel sayfa yükleme sürelerine katkıda bulunabilecek web bölümleri içerir. Bu makale, sayfalarınızdaki web bölümlerinin kullanıcı tarafından algılanan gecikme süresini nasıl etkileyeceğini ve yaygın sorunları nasıl giderebileceğinizi anlamanıza yardımcı olur.
 
 > [!NOTE]
-> Çevrimiçi modern portallarda performans SharePoint için bkz[. Modern modern portalda SharePoint.](/sharepoint/modern-experience-performance)
+> SharePoint Çevrimiçi modern portallardaki performans hakkında daha fazla bilgi için bkz. [Modern SharePoint deneyiminde performans](/sharepoint/modern-experience-performance).
 
-## <a name="use-the-page-diagnostics-for-sharepoint-tool-to-analyze-web-parts"></a>Web bölümlerini çözümlemek için SharePoint Tanılama aracını kullanma
+## <a name="use-the-page-diagnostics-for-sharepoint-tool-to-analyze-web-parts"></a>Web bölümlerini analiz etmek için SharePoint için Sayfa Tanılama aracını kullanma
 
-SharePoint için Sayfa Tanılama aracı, hem SharePointhttps://www.microsoft.com/edge) Online modern portalı hem de klasik yayımlama sitesi sayfalarını analizen yeni Microsoft Edge ve Chrome tarayıcıları için tarayıcı uzantısıdır. Bu araç, sayfanın tanımlanmış bir performans ölçütleri kümesine karşı nasıl bir performans performansına sahip olduğunu gösteren, analize tabi her sayfa için bir rapor sağlar. Yeni uygulama için Sayfa Tanılama aracını yüklemek ve SharePoint için, SharePoint [Online'da Sayfa Tanılama aracını kullanma sayfasını ziyaret edin](page-diagnostics-for-spo.md).
+SharePoint için Sayfa Tanılama aracı, hem SharePoint Çevrimiçi modern portalı hem de klasik yayımlama sitesi sayfalarını analiz eden yeni Microsoft Edge (https://www.microsoft.com/edge) ve Chrome tarayıcıları) için bir tarayıcı uzantısıdır. Araç, analiz edilen her sayfa için sayfanın tanımlı bir performans ölçütleri kümesine göre nasıl performans gösterdiğini gösteren bir rapor sağlar. SharePoint için Sayfa Tanılama aracını yüklemek ve hakkında bilgi edinmek için [SharePoint Online için Sayfa Tanılama aracını kullanma](page-diagnostics-for-spo.md) sayfasını ziyaret edin.
 
 > [!NOTE]
 > Sayfa Tanılama aracı yalnızca SharePoint Online için çalışır ve SharePoint sistem sayfasında kullanılamaz.
 
-SharePoint için Sayfa Tanılama aracıyla bir SharePoint sitesi sayfasını çözümlerken, **Tanılama testleri bölmesindeki Web** bölümleri temel ölçümlerini aşan web bölümleri hakkında bilgilerin sayfa yükleme zamanlarını etkilemesini _görebilirsiniz._
+SharePoint için Sayfa Tanılama aracıyla bir SharePoint site sayfasını çözümlediğinizde, _Tanılama testleri_ bölmesinde Web bölümlerinde temel ölçümü aşan **web bölümleri hakkındaki bilgilerin sayfa yükleme süresi sonucunu etkilediğini** görebilirsiniz.
 
 Olası sonuçlar şunlardır:
 
-- **Dikkat (** kırmızı): görünüm görünümünde görünen herhangi bir _özel web bölümünün_ (önce yüklenen sayfanın ekran görünür bölümü) yüklenm süresi iki saniyeden uzun sürer. Görünüm _görünümünün_ dışında yer alan ve dört saniyeden uzun sürecek **tüm özel** web bölümlerinin yüklemesi. Toplam yükleme süresi test sonuçlarında görüntülenir ve modül yükü, tembel yükleme, init ve işleme ile bozulur.
-- **Geliştirme fırsatları** (sarı): Bu bölümde sayfa yükleme sürelerini etkiliyor olabilir ve gözden geçirili ve izleniyor olması gerekir. Bu, "ilk önce" (OOTB) Microsoft web bölümlerini içerebilir. Bu bölümde gösterilen tüm Microsoft web bölümlerinin sonuçları otomatik olarak Microsoft'a bildirilir, dolayısıyla **işlem yapmak gerekmez**. Sayfada çok yavaş performansla ilgili sorunlar yaşıyorsanız ve sayfada tüm **Microsoft web** bölümleri Geliştirme fırsatları bölümündeki sonuçlarda görüntülenirse, yalnızca araştırma için bir destek bileti **günlüğe kaydedilir** . Gelecekteki bir Sayfa Tanılama aracı SharePoint güncelleştirmesi, Microsoft web sayfasının belirli yapılandırmasına bağlı olarak sonuçları daha da bozacak.
-- **Herhangi bir işlem gerekmez** (yeşil): Hiçbir web bölümü, verileri geri almak **iki saniyeden** uzun sürüyor.
+- **Dikkat gerekiyor** (kırmızı): Görünüm penceresi içinde görünen herhangi bir _özel_ web bölümü (sayfanın ilk yüklenen ekran görünür bölümü) yüklenmesi **iki** saniyeden uzun sürer. Görünüm penceresi dışında **dört saniyeden** uzun sürecek _tüm özel_ web bölümlerinin yüklenmesi. Toplam yük süresi test sonuçlarında görüntülenir ve modül yükü, gecikmeli yük, başlatma ve işlemeye göre ayrılmıştır.
+- **İyileştirme fırsatları** (sarı): Sayfa yükleme süresini etkileyebilecek öğeler bu bölümde gösterilir ve gözden geçirilip izlenmesi gerekir. Bu, "kullanıma açık" (OOTB) Microsoft web bölümlerini içerebilir. Bu bölümde gösterilen tüm Microsoft web bölümlerinin sonuçları otomatik olarak Microsoft'a bildirilir, bu nedenle **herhangi bir eylem gerekmez**. Yalnızca sayfada çok yavaş performansla karşılaşıyorsanız ve sayfadaki **tüm Microsoft web bölümleri** **İyileştirme fırsatları** bölümündeki sonuçlarda görünüyorsa araştırma için bir destek bileti kaydetmeniz gerekir. SharePoint araç güncelleştirmesi için gelecek bir Sayfa Tanılaması'nın, Microsoft web bölümünün belirli yapılandırmasına bağlı olarak sonuçları daha da böleceğini unutmayın.
+- **Eylem gerekmez** (yeşil): Hiçbir web bölümünün veri döndürmesi **iki** saniyeden uzun sürmemektedir.
 
-**Web bölümleri sayfa yükleme** süresi sonuçlarını etkiliyorsa, sonuçların Dikkat gerekiyor veya Geliştirme  fırsatları bölümünde görünüyorsa, hangi web bölümlerinin yavaş yükleniyor olduğuyla ilgili ayrıntıları görmek için sonucu tıklatın. Daha sonra Çözümleme Kuralları için Sayfa Tanılama SharePoint çözümleme kurallarında güncelleştirmeler olabilir, bu nedenle lütfen aracın her zaman en son sürümüne sahip olduğundan emin olun.
+**Web bölümleri sayfa yükleme süresini etkiliyorsa**, sonuçların **Dikkat gerekiyor** veya **İyileştirme fırsatları** bölümünde görünüyorsa, hangi web bölümlerinin yavaş yüklendiğiyle ilgili ayrıntıları görmek için sonuca tıklayın. SharePoint için Sayfa Tanılama aracında gelecekteki güncelleştirmeler analiz kuralları güncelleştirmelerini içerebilir, bu nedenle lütfen aracın her zaman en son sürümüne sahip olduğunuzdan emin olun.
 
 ![Sayfa Tanılama aracı sonuçları.](../media/modern-portal-optimization/pagediag-web-part.png)
 
-Sonuçlarda yer alan bilgiler:
+Sonuçlarda bulunan bilgiler şunları içerir:
 
-- **Made by** shows whether the web part is custom or Microsoft OOTB.
-- **Ad ve Kimlik** , sayfada web bölümünü bu konuda size yardımcı olacak tanımlayıcı bilgileri gösterir.
-- **Toplam** , web bölümü için modül yükleme, başlatma ve işleme için toplam zamanı gösterir. Bu, web bölümü tarafından sayfada başından sonuna kadar işlemek için alınan toplam göreli süredir.
-- **Modül Yükleme** , JavaScript ve CSS dosyalarını indirme, değerlendirme ve yükleme sürelerini gösterir. Ardından Init işlemi başlar.
-- **Tembel Yükleme** , sayfanın ana bölümünde görülemez web bölümlerinin ertelenmiş yüklenme zamanlarını gösterir. İş için çok fazla web bölümü bulunduğu ve sayfa yükleme süresini en aza indirmek için iş işlemek için sıraya alınan bazı koşullar vardır.
-- **Init** , web bölümü için verileri başlatma süresi gösterir.
+- **Oluşturan** , web bölümünün özel mi yoksa Microsoft OOTB mi olduğunu gösterir.
+- **Ad ve kimlik** , sayfada web bölümünü bulmanıza yardımcı olabilecek tanımlayıcı bilgileri gösterir.
+- **Toplam** , web bölümünün modül yükleme, başlatma ve işleme için toplam süresini gösterir. Başlangıçtan sonuna kadar web bölümünün sayfada işlenmesi için geçen toplam göreli süredir.
+- **Modül Yükleme** , JavaScript ve CSS dosyalarını indirmek, değerlendirmek ve yüklemek için geçen süreyi gösterir. Ardından Init işlemini başlatır.
+- **Gecikmeli Yükleme** , sayfanın ana bölümünde görünmeyen web bölümlerinin ertelenmiş yükleme süresini gösterir. İşlenmek üzere çok fazla web bölümü olduğu ve sayfa yükleme süresini en aza indirmek için işlenmek üzere kuyruğa alındığı bazı koşullar vardır.
+- **Init** , web bölümünün verileri başlatması için geçen süreyi gösterir.
 
-  Bu zaman uyumsuz bir çağrıdır ve init zaman, döndürülen taa kinaye çözüm olduğunda OnInit işlevinin zaman hesaplamasıdır.
+  Bu zaman uyumsuz bir çağrıdır ve döndürülen söz çözümlendiğinde onInit işlevinin zaman hesaplaması başlatma zamanıdır.
 
-- **Oluşturma** işlemi, modül yüklemesi ve Init tamamlandıktan sonra kullanıcı arabirimini işlemek için gereken zamanı gösterir.
+- **İşleme** , modül yükü ve Init tamamlandıktan sonra kullanıcı arabirimini (kullanıcı arabirimi) işlemek için geçen süreyi gösterir.
 
-  Belgede (sayfa) DOM'leri bağlamanın JavaScript yürütme süresidir.
-  Resimler gibi zaman uyumsuz kaynakların işlemesi ek zaman alsa da bu işlem biraz daha sürebilir.
+  DoM'u belgeye (sayfa) bağlamak için JavaScript yürütme zamanıdır.
+  Zaman uyumsuz kaynakların (örneğin, görüntülerin) işlenmesinin tamamlanması ek zaman alabilir.
 
-Tasarımcıların ve geliştiricilerin sorunları gidermesine yardımcı olmak için bu bilgiler sağlanır. Bu bilgiler tasarım ve geliştirme ekibinize sağlanmalıdır.
+Bu bilgiler tasarımcıların ve geliştiricilerin sorunları gidermesine yardımcı olmak için sağlanır. Bu bilgiler tasarım ve geliştirme ekibinize sağlanmalıdır.
 
 ## <a name="remediate-web-part-performance-issues"></a>Web bölümü performans sorunlarını düzeltme
 
-Web bölümleri içinde listelenen web bölümleriyle ilgili performans sorunlarını tanımlamak ve düzeltmek için bu bölümdeki yönergeleri izleyin ve sayfa **yükleme süresi sonuçlarını** etkiler.
+Web bölümlerinde listelenen web bölümleri sayfa **yükleme süresi sonuçlarını etkiliyorsa** performans sorunlarını belirlemek ve düzeltmek için bu bölümdeki yönergeleri izleyin.
 
-Kötü web bölümü performansının üç olası nedeni vardır. Senaryo için hangi sorunların geçerli olduğunu belirlemek ve düzeltmek için aşağıdaki bilgileri kullanın.
+Kötü web bölümü performansının üç olası nedeni kategorisi vardır. Senaryonuz için hangi sorunların geçerli olduğunu belirlemek ve bunları düzeltmek için aşağıdaki bilgileri kullanın.
 
-- Web bölümü komut dosyası boyutu ve bağımlılıkları
-  - Ana hat senaryosunu yalnızca görüntüleme modu için işen ilk _betiği en iyi duruma getirme_.
-  - Import() deyimini kullanarak öbekleri ayırmak için daha az sık senaryolar ve düzenleme modu kodunu (özellik bölmesi _gibi)_ taşıma.
-  - Tüm eski kodu tamamen _kaldırmak için paket.json_ dosyasının bağımlılıklarını gözden geçirebilirsiniz. Tüm sınama/derleme yalnızca bağımlılıkları Bağımlılıklara taşıma.
-  - En iyi statik Office 365 CDN için kaynağın kullanımı gereklidir. Genel CDN _js/css dosyaları için tercih_ edilir. Web siteyi kullanma hakkında daha fazla Office 365 CDN için bkz[. Office 365 Content Delivery Network (CDN) SharePoint Online](use-microsoft-365-cdn-with-spo.md).
-  - Yeni e-React _parçası_ olarak _gelen Doku_ ve Kumaş içeri aktarmaları gibi çerçeveleri SharePoint Framework SPFx. Daha fazla bilgi için bkz[. 2010'a SharePoint Framework](/sharepoint/dev/spfx/sharepoint-framework-overview).
-  - Yeni sürümün en son sürümünü kullanmaya SharePoint Framework ve kullanılabilir hale geldikleri anda yeni sürümlere yükseltin.
-- Veri alma/önbelleğe alma
-  - Web bölümü, görüntü için veri getirmek için fazladan sunucu aramalarına dayanıyorsa, bu sunucu API'leri için hızlı olduğundan emin olun ve/veya istemci tarafı önbelleğe alma (daha büyük kümeler için _localStorage_ veya _IndexedDB_ kullanma gibi).
-  - Kritik verileri işlemek için birden çok arama gerekirse, sunucuda toplu işlem yapmak veya istekleri tek bir aramada birleştirmenin diğer yöntemlerini kullanabilirsiniz.
-  - Alternatif olarak, bazı veri öğelerine daha yavaş bir API gerektir ise ancak işlemenin başlatması için kritik öneme sahip değildir; kritik veriler iş geçirildikten sonra yürütülecek ayrı bir çağrı için bu kod çözebilirsiniz.
-  - Birden fazla parça aynı verileri kullanıyorsa, yinelenen çağrıları önlemek için ortak bir veri katmanından faydalanabilirsiniz.
+- Web bölümü betik boyutu ve bağımlılıkları
+  - _Yalnızca görüntüleme modu_ için ana hat senaryosunu işleyen ilk betiği iyileştirin.
+  - _Import()_ deyimini kullanarak daha az sıklıkta senaryoları ve düzenleme modu kodunu (özellik bölmesi gibi) ayrı öbeklere taşıyın.
+  - Tüm ölü kodları tamamen kaldırmak için _package.json_ dosyasının bağımlılıklarını gözden geçirin. Tüm test/derleme bağımlılıklarını devDependencies'e taşıyın.
+  - en iyi statik kaynak indirmesi için Office 365 CDN kullanılması gerekir. _Js/css_ dosyaları için genel CDN kaynakları tercih edilir. Office 365 CDN kullanma hakkında daha fazla bilgi için bkz. [SharePoint Online ile Office 365 Content Delivery Network (CDN) kullanma](use-microsoft-365-cdn-with-spo.md).
+  - _SharePoint Framework (SPFx_) parçası olarak gelen React ve _Doku içeri aktarmaları gibi çerçeveleri_ yeniden kullanma. Daha fazla bilgi için bkz. [SharePoint Framework genel bakış](/sharepoint/dev/spfx/sharepoint-framework-overview).
+  - SharePoint Framework en son sürümünü kullandığınızdan emin olun ve kullanıma sunulduklarında yeni sürümlere yükseltin.
+- Veri getirme/önbelleğe alma
+  - Web bölümü, görüntülenmek üzere veri getirmek için ek sunucu çağrılarına dayanırsa, bu sunucu API'lerinin hızlı olduğundan emin olun ve/veya istemci tarafı önbelleğe alma (daha büyük _kümeler için localStorage_ veya _IndexedDB_ kullanma gibi) uygulayın.
+  - Kritik verileri işlemek için birden çok çağrı gerekiyorsa, sunucuda toplu işlem yapmayı veya istekleri tek bir çağrıya birleştirmenin diğer yöntemlerini göz önünde bulundurun.
+  - Alternatif olarak, bazı veri öğeleri daha yavaş bir API gerektiriyorsa ancak ilk işleme için kritik değilse, bunları kritik veriler işlendikten sonra yürütülen ayrı bir çağrıya ayırın.
+  - Birden çok parça aynı verileri kullanıyorsa, yinelenen çağrıları önlemek için ortak bir veri katmanı kullanın.
 - İşleme süresi
-  - Gereksiz büyük varlıkları indirmek için, resim ve videolar gibi medya kaynakları kapsayıcı, cihaz ve/veya ağ sınırlarına göre boyutlandırılmalıdır. İçerik bağımlılıkları hakkında daha fazla bilgi için bkz[. Office 365 Content Delivery Network (CDN) SharePoint Online..](use-microsoft-365-cdn-with-spo.md)
-  - Yeniden akışa, karmaşık CSS kurallarına veya karmaşık animasyonlara neden olan API çağrılarından kaçının. Daha fazla bilgi için bkz [. Tarayıcı yeniden akışını en aza indirme](https://developers.google.com/speed/docs/insights/browser-reflow).
-  - Zincirleme uzun çalışan görevleri kullanmaktan kaçının. Bunun yerine, uzun süre çalışan görevleri birbirinden ayrı kuyruklara ayırabilirsiniz. Daha fazla bilgi için bkz. [JavaScript Yürütmeyi En İyi Duruma Getirme](https://developers.google.com/web/fundamentals/performance/rendering/optimize-javascript-execution).
-  - Atlanan kareleri ve teklemeleri (yalçın olarak da bilinir) önlemek için, zaman uyumsuz olarak medya veya görsel öğeleri işlemeye karşılık gelen _alanı rezerve etmek._
-  - Belirli bir tarayıcı işlemede kullanılan bir özelliği desteklemezse, çoklu doldurmayı yükleyin veya bağımlı kodu çalıştırmayı dışlayın. Özellik kritik öneme sahip değilse, bellek sızıntılarını önlemek için olay işleyicileri gibi kaynakları atabilirsiniz.
+  - Görüntüler ve videolar gibi tüm medya kaynakları gereksiz büyük varlıkların indirilmesini önlemek için kapsayıcı, cihaz ve/veya ağın sınırlarına göre boyutlandırılmalıdır. İçerik bağımlılıkları hakkında daha fazla bilgi için bkz. [SharePoint Online ile Office 365 Content Delivery Network (CDN) kullanma](use-microsoft-365-cdn-with-spo.md).
+  - Yeniden akışa, karmaşık CSS kurallarına veya karmaşık animasyonlara neden olan API çağrılarından kaçının. Daha fazla bilgi için bkz. [Tarayıcı yeniden akışını en aza indirme](https://developers.google.com/speed/docs/insights/browser-reflow).
+  - Zincirlenmiş uzun süre çalışan görevleri kullanmaktan kaçının. Bunun yerine, uzun süre çalışan görevleri ayrı kuyruklara ayırın. Daha fazla bilgi için bkz. [JavaScript Yürütmesini İyileştirme](https://developers.google.com/web/fundamentals/performance/rendering/optimize-javascript-execution).
+  - Atlanan çerçeveleri ve takılmayı ( _jank_ olarak da bilinir) önlemek için zaman uyumsuz olarak medya veya görsel öğeleri işlemek için ilgili alanı ayırın.
+  - Belirli bir tarayıcı işlemede kullanılan bir özelliği desteklemiyorsa, polyfill yükleyin veya bağımlı kodu çalıştırmayı dışlayın. Özellik kritik değilse, bellek sızıntılarını önlemek için olay işleyicileri gibi kaynakları atın.
 
-Performans sorunlarını düzeltmek için sayfa düzeltmeleri öncesinde, çözümleme sonuçlarında sayfa yükleme sürelerini not edin. Yeni sonucun taban çizgisi standardı içinde olup olmadığını görmek için düzeltmeden sonra aracı yeniden çalıştırın ve bir geliştirme olup olmadığını görmek için yeni sayfa yükleme süresine bakın.
+Performans sorunlarını düzeltmek için sayfa düzeltmeleri yapmadan önce, çözümleme sonuçlarında sayfa yükleme süresini not edin. Yeni sonucun temel standart içinde olup olmadığını görmek için düzeltmenizden sonra aracı yeniden çalıştırın ve bir iyileştirme olup olmadığını görmek için yeni sayfa yükleme süresini denetleyin.
 
 ![Sayfa yükleme süresi sonuçları.](../media/modern-portal-optimization/pagediag-page-load-time.png)
 
 >[!NOTE]
->Sayfa yükleme süresi ağ yükü, günün saati ve diğer geçici koşullar gibi çeşitli faktörlere bağlı olarak değişiklik gösterebilir. Sonuçların ortalamasını alarken değişiklik yaparak sayfa yükleme sürelerini birkaç kez test edebilirsiniz.
+>Sayfa yükleme süresi, ağ yükü, günün saati ve diğer geçici koşullar gibi çeşitli faktörlere bağlı olarak farklılık gösterebilir. Sonuçları ortalamanıza yardımcı olacak değişiklikler yapmadan önce ve sonra sayfa yükleme süresini birkaç kez test etmelisiniz.
 
 ## <a name="related-topics"></a>İlgili konular
 
-[Çevrimiçi SharePoint performansını ayarlama](tune-sharepoint-online-performance.md)
+[çevrimiçi SharePoint performansını ayarlama](tune-sharepoint-online-performance.md)
 
-[Performans Office 365 ayarlama](tune-microsoft-365-performance.md)
+[Office 365 performansını ayarlama](tune-microsoft-365-performance.md)
 
-[Modern deneyimde SharePoint deneyimi](/sharepoint/modern-experience-performance)
+[Modern SharePoint deneyiminde performans](/sharepoint/modern-experience-performance)
 
 [İçerik teslim ağları](content-delivery-networks.md)
 
-[CDN Online ile Office 365 Content Delivery Network (CDN) SharePoint kullanma](use-microsoft-365-cdn-with-spo.md)
+[SharePoint Online ile Office 365 Content Delivery Network (CDN) kullanma](use-microsoft-365-cdn-with-spo.md)

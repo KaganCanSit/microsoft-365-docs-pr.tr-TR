@@ -17,25 +17,23 @@ ms.custom:
 - intro-overview
 search.appverid: MET150
 description: Yönetilen Hizmet Sağlayıcıları (MSP' ler) için Microsoft 365 Lighthouse tek bir konumdaki müşteri kiracılarının güvenliğini sağlamanıza ve yönetmenize nasıl yardımcı olabileceğini öğrenin.
-ms.openlocfilehash: 96ae7647107a1be89d9fe4d800374ce8a8970cb8
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: 9a75cd43ac09d63c4524495a3146bf0b860627a4
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65023645"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65094692"
 ---
 # <a name="overview-of-microsoft-365-lighthouse"></a>Microsoft 365 Lighthouse'a genel bakış
 
-Microsoft 365 Lighthouse, Yönetilen Hizmet Sağlayıcılarının (MSP' ler) Microsoft 365 İş Ekstra, Microsoft 365 E3 veya Microsoft 365 İş Ekstra kullanan küçük ve orta ölçekli işletme (SMB) müşterileri için cihazları, verileri ve kullanıcıları uygun ölçekte güvenlik altına almalarına ve yönetmelerine yardımcı olan bir yönetim portalıdır Windows 365 Business. 
+Microsoft 365 Lighthouse, Yönetilen Hizmet Sağlayıcılarının (MSP' ler) Microsoft 365 İş Ekstra veya Microsoft 365 E3 kullanan küçük ve orta ölçekli işletme (SMB) müşterileri için cihazları, verileri ve kullanıcıları büyük ölçekte güvenlik altına almalarına ve yönetmelerine yardımcı olan bir yönetici portalıdır.
 
-Lighthouse, SMB müşterilerine özel güvenlik yapılandırma temelleri önererek ve tüm müşteri ortamlarında çok kiracılı görünümler sağlayarak Microsoft 365 İş Ekstra, Microsoft 365 E3 ve Windows 365 Business kiracılarının eklenmelerini kolaylaştırır. Lighthouse ile MSP'ler müşterilerinin yönetimini ölçeklendirebilir, en önemli şeylere odaklanabilir, riskleri hızla bulabilir ve araştırabilir ve müşterilerini sağlıklı ve güvenli bir duruma getirmek için harekete geçebilir.
+Lighthouse, SMB müşterilerine özel güvenlik yapılandırma temelleri önererek ve tüm müşteri ortamlarında çok kiracılı görünümler sağlayarak müşteri kiracılarının eklemeyi kolaylaştırır. Lighthouse ile MSP'ler müşterilerinin yönetimini ölçeklendirebilir, en önemli şeylere odaklanabilir, riskleri hızla bulabilir ve araştırabilir ve müşterilerini sağlıklı ve güvenli bir duruma getirmek için harekete geçebilir.
 
-Lighthouse'un Microsoft 365 hizmetlerini ve bağlı cihazları yönetmek için kullanılmasıyla ilgili ek maliyet yoktur. Lighthouse, Bulut Çözümü Sağlayıcısı (CSP) programına kayıtlı VE SMB müşterilerine Microsoft 365 İş Ekstra, Microsoft 365 E3 veya Windows 365 Business aboneliği sunan MSP'ler tarafından kullanılabilir.
-
-Microsoft 365 İş Ekstra, Microsoft 365 E3 veya Windows 365 Business kullanan müşterilerin olduğu Microsoft CSP kanal iş ortakları tarafından Lighthouse kullanımı desteklenir. Bu, doğrudan Microsoft ile işlem yapan CSP iş ortaklarını ve dolaylı bir sağlayıcı (dağıtımcı) aracılığıyla işlem yapanları içerir. 
+Lighthouse'un Microsoft 365 hizmetlerini ve bağlı cihazları yönetmek için kullanılmasıyla ilgili ek maliyet yoktur. Lighthouse, SMB müşterilerine hizmet veren Bulut Çözümü Sağlayıcısı (CSP) programına kayıtlı MSP'ler tarafından kullanılabilir. Bu, doğrudan Microsoft ile işlem yapan CSP iş ortaklarını ve dolaylı bir sağlayıcı (dağıtımcı) aracılığıyla işlem yapanları içerir.
 
 > [!IMPORTANT] 
-> Lighthouse'un kullanılabilmesi için MSP'lerin ve müşteri kiracılarının [Microsoft 365 Lighthouse gereksinimlerinde listelenen gereksinimleri](m365-lighthouse-requirements.md) karşılaması gerekir.     
+> Lighthouse'un kullanılabilmesi için MSP'lerin ve müşteri kiracılarının [Microsoft 365 Lighthouse gereksinimlerinde listelenen gereksinimleri](m365-lighthouse-requirements.md) karşılaması gerekir.
 
 CSP programı hakkında daha fazla bilgi için bkz. [Bulut Çözümü Sağlayıcısı programa genel bakış](/partner-center/csp-overview).
 

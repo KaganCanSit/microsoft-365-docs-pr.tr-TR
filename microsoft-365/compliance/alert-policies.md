@@ -2,8 +2,8 @@
 title: uyarı ilkelerini Microsoft 365
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -20,12 +20,12 @@ ms.custom:
 - admindeeplinkCOMPLIANCE
 - admindeeplinkDEFENDER
 description: Olası tehditleri, veri kaybını ve izin sorunlarını izlemek için Microsoft Purview uyumluluk portalında veya Microsoft 365 Defender portalında uyarı ilkeleri oluşturun.
-ms.openlocfilehash: beecaf86a013480e0c5546e07189e8be5b622b17
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: b0f7d037731bc1073ac177667927ca4f691e9904
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64995920"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65094602"
 ---
 # <a name="alert-policies-in-microsoft-365"></a>Microsoft 365 uyarı ilkeleri
 
@@ -105,7 +105,7 @@ Kullanıcı etiketlerini uyarı ilkesinin koşulu olarak da tanımlayabilirsiniz
 
   - Veri kaybı önleme
 
-  - Bilgi Yönetişimi
+  - Veri yaşam döngüsü yönetimi
 
   - Posta akışı
 
@@ -128,7 +128,7 @@ Kullanıcı etiketlerini uyarı ilkesinin koşulu olarak da tanımlayabilirsiniz
 
 ## <a name="default-alert-policies"></a>Varsayılan uyarı ilkeleri
 
-Microsoft, Exchange yönetici izinlerinin kötüye kullanımı, kötü amaçlı yazılım etkinliği, olası dış ve iç tehditler ile bilgi idaresi risklerinin belirlenmesine yardımcı olan yerleşik uyarı ilkeleri sağlar. **Uyarı ilkeleri** sayfasında, bu yerleşik ilkelerin adları kalın yazı tipindedir ve ilke türü **Sistem** olarak tanımlanır. Bu ilkeler varsayılan olarak açıktır. Bu ilkeleri kapatabilir (veya yeniden açabilir), e-posta bildirimleri gönderecek alıcıların listesini ayarlayabilir ve günlük bildirim sınırı ayarlayabilirsiniz. Bu ilkelerin diğer ayarları düzenlenemez.
+Microsoft, Exchange yönetici izinlerinin kötüye kullanılması, kötü amaçlı yazılım etkinliği, olası dış ve iç tehditler ve veri yaşam döngüsü yönetimi risklerinin belirlenmesine yardımcı olan yerleşik uyarı ilkeleri sağlar. **Uyarı ilkeleri** sayfasında, bu yerleşik ilkelerin adları kalın yazı tipindedir ve ilke türü **Sistem** olarak tanımlanır. Bu ilkeler varsayılan olarak açıktır. Bu ilkeleri kapatabilir (veya yeniden açabilir), e-posta bildirimleri gönderecek alıcıların listesini ayarlayabilir ve günlük bildirim sınırı ayarlayabilirsiniz. Bu ilkelerin diğer ayarları düzenlenemez.
 
 Aşağıdaki tabloda, kullanılabilir varsayılan uyarı ilkeleri ve her ilkenin atandığı kategori listelenip açıklanmaktadır. Kategori, kullanıcının Uyarılar sayfasında hangi uyarıları görüntüleyebileceğini belirlemek için kullanılır. Daha fazla bilgi için bkz. [Uyarıları görüntülemek için gereken RBAC izinleri](#rbac-permissions-required-to-view-alerts).
 
@@ -166,9 +166,9 @@ Tabloda ayrıca her biri için gereken Office 365 Kurumsal ve Office 365 ABD Kam
 |**Kiracı İzin Ver/Engelle Listesi girdisi süresi dolmak üzere**|Kiracı İzin Ver/Engelle Listesi girdisi kaldırılacakken bir uyarı oluşturur. Bu olay, son kullanma tarihinden üç gün önce tetiklenerek girişin oluşturulduğu veya en son güncelleştirildiği tarih temel alınmıştır. Bu uyarı ilkesi bir **Bilgilendirici** önem derecesi ayarına sahiptir. Bunun nedeni, izin verme veya engellemenin ortadan kalkabileceği için filtrelerde yapılacak değişiklikler hakkında yöneticileri bilgilendirmektir. Bloklar için, bloğu yerinde tutmak için sona erme tarihini uzatabilirsiniz. İzin vermek için, analistlerimizin bir daha bakabilmesi için öğeyi yeniden göndermeniz gerekir. Ancak, izin verilen değer hatalı pozitif olarak zaten derecelendirildiyse, girişin süresi yalnızca sistem filtreleri girişe doğal olarak izin verecek şekilde güncelleştirildiğinde sona erer. Bu uyarıyı tetikleyen olaylar hakkında daha fazla bilgi için bkz. [Kiracı İzin Ver/Engelle listesini yönetme](../security/office-365-security/tenant-allow-block-list.md).|Tehdit yönetimi|Hayır|E5/G5 veya Office 365 için Defender P2 eklenti aboneliği|
 |**Kiracının e-posta göndermesi kısıtlandı**|Kuruluşunuzdan gelen e-posta trafiğinin çoğu şüpheli olarak algılandığında ve Microsoft kuruluşunuzun e-posta göndermesini kısıtladığında bir uyarı oluşturur. Güvenliği aşılmış olabilecek kullanıcı ve yönetici hesaplarını, yeni bağlayıcıları veya açık geçişleri araştırın ve kuruluşunuzun engelini kaldırmak için Microsoft Desteği başvurun. Bu ilkenin **Yüksek** önem derecesi ayarı vardır. Kuruluşların neden engellendiği hakkında daha fazla bilgi için bkz. [Exchange Online'de hata kodu 5.7.7xx için e-posta teslim sorunlarını düzeltme](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-5-7-700-through-5-7-750).|Tehdit yönetimi|Hayır|E1/F1/G1, E3/F3/G3 veya E5/G5|
 |**Kiracının sağlanmamış e-posta göndermesi kısıtlandı**|Kayıtlı olmayan etki alanlarından (sağlanmamış etki *alanları olarak da* bilinir) çok fazla e-posta gönderildiğinde bir uyarı oluşturur. Office 365, kayıtlı olmayan etki alanlarından makul miktarda e-posta gönderilmesine izin verir, ancak kullandığınız her etki alanını e-postayı kabul edilen bir etki alanı olarak gönderecek şekilde yapılandırmanız gerekir. Bu uyarı, kuruluştaki tüm kullanıcıların artık e-posta gönderemeyeceklerini gösterir. Bu ilkenin **Yüksek** önem derecesi ayarı vardır. Kuruluşların neden engellendiği hakkında daha fazla bilgi için bkz. [Exchange Online'de hata kodu 5.7.7xx için e-posta teslim sorunlarını düzeltme](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-5-7-700-through-5-7-750).|Tehdit yönetimi|Hayır|E1/F1/G1, E3/F3/G3 veya E5/G5|
-|**Olağan dışı dış kullanıcı dosyası etkinliği**|Kuruluşunuz dışındaki kullanıcılar tarafından SharePoint veya OneDrive dosyalar üzerinde olağan dışı derecede çok sayıda etkinlik gerçekleştirildiğinde bir uyarı oluşturur. Bu, dosyalara erişme, dosyaları indirme ve dosyaları silme gibi etkinlikleri içerir. Bu ilkenin **Yüksek** önem derecesi ayarı vardır.|Bilgi Yönetişimi|Hayır|E5/G5, Office 365 için Microsoft Defender P2 veya Microsoft 365 E5 eklenti aboneliği|
-|**Olağan dışı dış dosya paylaşımı hacmi**|SharePoint veya OneDrive'daki çok fazla sayıda dosya kuruluşunuzun dışındaki kullanıcılarla paylaşıldığında bir uyarı oluşturur. Bu ilkenin **Orta** önem derecesi ayarı vardır.|Bilgi Yönetişimi|Hayır|E5/G5, Office 365 için Defender P2 veya Microsoft 365 E5 eklenti aboneliği|
-|**Olağan dışı dosya silme hacmi**|SharePoint veya OneDrive kısa bir süre içinde olağan dışı derecede çok sayıda dosya silindiğinde bir uyarı oluşturur. Bu ilkenin **Orta** önem derecesi ayarı vardır.|Bilgi Yönetişimi|Hayır|E5/G5, Office 365 için Defender P2 veya Microsoft 365 E5 eklenti aboneliği|
+|**Olağan dışı dış kullanıcı dosyası etkinliği**|Kuruluşunuz dışındaki kullanıcılar tarafından SharePoint veya OneDrive dosyalar üzerinde olağan dışı derecede çok sayıda etkinlik gerçekleştirildiğinde bir uyarı oluşturur. Bu, dosyalara erişme, dosyaları indirme ve dosyaları silme gibi etkinlikleri içerir. Bu ilkenin **Yüksek** önem derecesi ayarı vardır.|Veri yaşam döngüsü yönetimi|Hayır|E5/G5, Office 365 için Microsoft Defender P2 veya Microsoft 365 E5 eklenti aboneliği|
+|**Olağan dışı dış dosya paylaşımı hacmi**|SharePoint veya OneDrive'daki çok fazla sayıda dosya kuruluşunuzun dışındaki kullanıcılarla paylaşıldığında bir uyarı oluşturur. Bu ilkenin **Orta** önem derecesi ayarı vardır.|Veri yaşam döngüsü yönetimi|Hayır|E5/G5, Office 365 için Defender P2 veya Microsoft 365 E5 eklenti aboneliği|
+|**Olağan dışı dosya silme hacmi**|SharePoint veya OneDrive kısa bir süre içinde olağan dışı derecede çok sayıda dosya silindiğinde bir uyarı oluşturur. Bu ilkenin **Orta** önem derecesi ayarı vardır.|Veri yaşam döngüsü yönetimi|Hayır|E5/G5, Office 365 için Defender P2 veya Microsoft 365 E5 eklenti aboneliği|
 |**Kimlik avı olarak bildirilen e-postada olağan dışı artış**|İletileri kimlik avı postası olarak raporlamak için Outlook Rapor İletisi eklentisini kullanan kuruluşunuzdaki kişi sayısında önemli bir artış olduğunda bir uyarı oluşturur. Bu ilkenin **Orta** önem derecesi ayarı vardır. Bu eklenti hakkında daha fazla bilgi için bkz. [Rapor İletisi eklentisini kullanma](https://support.office.com/article/b5caa9f1-cdf3-4443-af8c-ff724ea719d2).|Tehdit yönetimi|Hayır|E5/G5 veya Office 365 için Defender P2 eklenti aboneliği|
 |**Gelen kutusuna/klasörüne teslim edilen kullanıcı kimliğe bürünme kimlik** <sup>avı1,2</sup><sup></sup>|Microsoft, bir yönetici veya kullanıcı geçersiz kılmasının bir kullanıcının kimliğe bürünme kimlik avı iletisinin bir posta kutusunun gelen kutusuna (veya kullanıcı tarafından erişilebilen başka bir klasöre) teslim edilmesine izin ettiğini algıladığında bir uyarı oluşturur. Geçersiz kılmalara örnek olarak, belirli bir gönderenden veya etki alanından gelen iletilere izin veren bir gelen kutusu veya posta akışı kuralı ya da belirli gönderenlerden veya etki alanlarından gelen iletilere izin veren istenmeyen posta önleme ilkesi verilebilir. Bu ilkenin **Orta** önem derecesi ayarı vardır.|Tehdit yönetimi|Hayır|E5/G5 veya Office 365 için Defender P2 eklenti aboneliği|
 |**Kullanıcı karantinaya alınmış bir iletiyi serbest bırakmak istedi**|Kullanıcı karantinaya alınmış bir iletinin yayınlanmasını istediğinde bir uyarı oluşturur. Karantinaya alınan iletilerin yayımlanmasını istemek için, karantina ilkesinde (örneğin, **Sınırlı erişim** önceden ayarlanmış izinler grubundan) **alıcıların karantinadan çıkarılacak bir ileti istemesine izin ver** (_PermissionToRequestRelease_) izni gerekir. Daha fazla bilgi için bkz. [Alıcıların karantina izninden serbest bırakılacak bir ileti istemesine izin verme](../security/office-365-security/quarantine-policies.md#allow-recipients-to-request-a-message-to-be-released-from-quarantine-permission). Bu ilkenin **Bilgilendirici** önem derecesi ayarı vardır.|Tehdit yönetimi|Hayır|E1/F1/G1, E3/F3/G3 veya E5/G5|
@@ -250,7 +250,7 @@ Uyarı toplama hakkında aşağıdaki şeyleri göz önünde bulundurun:
 
 Kuruluşunuzdaki kullanıcılara atanan Rol Tabanlı Access Control (RBAC) izinleri, kullanıcının **Uyarılar** sayfasında hangi uyarıları görebileceğini belirler. Bu nasıl başarıldı? Kullanıcılara atanan yönetim rolleri (uyumluluk portalındaki veya Microsoft 365 Defender portalındaki rol gruplarındaki üyeliklerine bağlı olarak), kullanıcının Uyarılar sayfasında hangi uyarı **kategorilerini** görebileceğini belirler. İşte birkaç örnek:
 
-- Kayıt Yönetimi rol grubunun üyeleri yalnızca **Bilgi idaresi** kategorisine atanan uyarı ilkeleri tarafından oluşturulan uyarıları görüntüleyebilir.
+- Kayıt Yönetimi rol grubunun üyeleri yalnızca **Veri yaşam döngüsü yönetimi** kategorisine atanan uyarı ilkeleri tarafından oluşturulan uyarıları görüntüleyebilir.
 
 - Uyumluluk Yöneticisi rol grubunun üyeleri **, Tehdit yönetimi** kategorisine atanan uyarı ilkeleri tarafından oluşturulan uyarıları görüntüleyemez.
 
@@ -262,7 +262,7 @@ Aşağıdaki tabloda, altı farklı uyarı kategorisindeki uyarıları görünt�
 
 Varsayılan uyarı ilkesinin atandığı kategoriyi görmek için [Varsayılan uyarı ilkeleri'ndeki](#default-alert-policies) tabloya bakın.
 
-|Rol|Bilgi Yönetişimi|Veri kaybı önleme|Posta akışı|İzinler|Tehdit yönetimi|Diğer|
+|Rol|Veri yaşam döngüsü yönetimi|Veri kaybı önleme|Posta akışı|İzinler|Tehdit yönetimi|Diğer|
 |:---------|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
 |Denetim Günlükleri|||||||
 |Olay Yönetimi|||||||

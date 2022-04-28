@@ -1,112 +1,90 @@
 ---
-title: Ayarlama Microsoft 365 İş Ekstra
-description: E-Microsoft 365 İş Ekstra'i ayarlamayı Microsoft 365 İş Ekstra
+title: Microsoft 365 İş Ekstra'yı ayarlama
+description: Microsoft 365 İş Ekstra ayarlamayı öğrenin
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 03/01/2022
+ms.date: 04/08/2022
 ms.service: o365-administration
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: 5b6f187f93e8a135bfb67c78509553d2963b011b
-ms.sourcegitcommit: b67385243fb56ad20f2a6f1c40be46f5691c1c2a
+ms.openlocfilehash: f888556ea32d9d59c53728b30b629169bc9db45d
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63705642"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65093250"
 ---
-# <a name="set-up-microsoft-365-business-premium"></a>Ayarlama Microsoft 365 İş Ekstra
+# <a name="set-up-microsoft-365-business-premium"></a>Microsoft 365 İş Ekstra'yı ayarlama
 
-Bu ayarları yapılandırmak ve yapılandırmak için çeşitli seçenekleriniz Microsoft 365 İş Ekstra. Şunları yapabilirsiniz:
+[Deneme sürümü başlattıktan veya Microsoft 365 İş Ekstra satın](get-microsoft-365-business-premium.md) aldıktan sonra, bir sonraki adımınız her şeyi ayarlamaktır. Kullanabileceğiniz çeşitli seçenekler vardır. Şunları yapabilirsiniz:
 
-- [Temel kurulum ve yapılandırma için rehberli kurulum deneyimi kullanma](#guided-process-for-basic-setup)
-- [İş ortağı, örneğin bir Microsoft Bulut Çözümü Sağlayıcısı (CSP) ile çalışma](#work-with-a-microsoft-partner)
-- [Kurulum işlemiyle el ile çalışma](#manual-setup-and-configuration)
-
+- Temel kurulum ve yapılandırma için [kılavuzlu kurulum deneyimiyle başlayın](#use-the-guided-process-for-basic-setup); Veya
+- [Microsoft Bulut Çözümü Sağlayıcısı (CSP) gibi bir iş ortağıyla çalışın](#work-with-a-microsoft-partner).
 
 Bu makaleyi kılavuz olarak kullanın.
 
-## <a name="guided-process-for-basic-setup"></a>Temel kurulum için rehberli işlem
+## <a name="before-you-begin"></a>Başlamadan önce
 
-Microsoft 365 İş Ekstra kurulum için yönlendiren bir işlem içerir. Bu görevler arasında özel bir etki alanına bağlanma, kullanıcı ekleme, lisans atama, Outlook cihazlarına yükleme, veri koruma ayarlarını gözden geçirme ve mobil uygulama koruma ilkesi uygulama görevleri yer almaktadır. 
+Kurulum işleminize başlamadan önce aşağıdaki gereksinimleri karşıladığınızdan emin olun:
 
-Rehberli kurulumun nasıl çalıştığını görmek için aşağıdaki videoyu izleyin: <br/><br/>
-
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE471FJ?autoplay=false]
-
-Rehberli kurulumu tamamlandıktan sonra, güvenlik ve uyumluluk yeteneklerinizin düzgün bir şekilde ayarlandıktan ve uygulandığıktan emin olmak için tamamlamanız gereken ek adımlar vardır. Söz konusu adımlar şunlardır:
-
-- [Cihaz Windows güvenliğini sağlama](m365bp-secure-windows-devices.md)
-- [Uygulama Microsoft 365 dağıtma](../admin/setup/install-applications.md)
-- [Yeni İş için Defender yeteneklerinizi ayarlama ve yapılandırma](../security/defender-business/mdb-setup-configuration.md)
-
-[Rehberli kurulum işlemi ile Kurulum sayfası arasındaki farklar hakkında daha fazla bilgi edinebilirsiniz](../admin/setup/o365-setup-wizard-and-setup-page.md).
+| Gereksinim | Açıklama |
+|:---|:---|
+| Abonelik | Kampanyalar için Microsoft 365 İş Ekstra veya Microsoft 365 <br/><br/> Deneme sürümü başlatmak veya aboneliğinizi satın almak için aşağıdaki makalelere bakın: <br/>- [Microsoft 365 İş Ekstra alın](get-microsoft-365-business-premium.md)<br/>- [Kampanyalar için Microsoft 365 alma](get-microsoft-365-campaigns.md) |
+| İzinler  | İlk kurulum işlemini tamamlamak için Genel Yönetici olmanız gerekir. [Yönetici rolleri hakkında daha fazla bilgi edinin](../admin/add-users/about-admin-roles.md). |
+| Tarayıcı gereksinimleri | Microsoft Edge, Safari, Chrome veya Firefox. [Tarayıcı gereksinimleri hakkında daha fazla bilgi edinin](https://www.microsoft.com/microsoft-365/microsoft-365-and-office-resources#coreui-heading-uyetipy).  |
+| İşletim sistemi | **Windows**: Windows 11, Windows 10, Windows 8.1, Windows Server 2019 veya üzeri ya da Windows Server 2016<br/><br/>**macOS: macOS'un** en son üç sürümünden biri |
 
 > [!TIP]
-> E-tablo ayarlarını ve yapılandırma hakkında daha fazla ayrıntı için aşağıdaki Microsoft 365 İş Ekstra.
+> Microsoft 365, Office ve sistem gereksinimleri hakkında daha ayrıntılı bilgi için bkz. [kaynakları Microsoft 365 ve Office](https://www.microsoft.com/microsoft-365/microsoft-365-and-office-resources).
 
+## <a name="use-the-guided-process-for-basic-setup"></a>Temel kurulum için kılavuzlu işlemi kullanma
+
+Microsoft 365 İş Ekstra temel kurulum için kılavuzlu bir işlem içerir. Kılavuzlu işlem şu görevleri içerir:
+
+- [Oturum açmayı kişiselleştirmek için mevcut etki alanınızı ekleme](../admin/setup/setup-business-basic.md#add-your-domain-to-personalize-sign-in)
+- [Kullanıcı ekleme ve lisans atama](../admin/add-users/add-users.md)
+- [DNS kayıtlarınızı güncelleştirme](../admin/setup/setup-business-basic.md#connect-your-domain)
+
+Aşağıdaki videoda, Microsoft 365 İş Ekstra aynı şekilde çalışan Microsoft 365 İş Temel için kılavuzlu kurulum işlemi gösterilmektedir.<br/><br/>
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vk3W]
+
+> [!TIP]
+> Kullanıcıları ekledikten sonra, onlara [Çalışan hızlı kurulum kılavuzunun](../admin/setup/employee-quick-setup.md) bağlantısını verin. Kılavuz, oturum açma, Office uygulamaları alma ve dosyaları kaydetme, kopyalama ve paylaşma işlemlerinde onlara yol gösterir.
 
 ## <a name="work-with-a-microsoft-partner"></a>Bir Microsoft iş ortağıyla çalışma
 
-Microsoft'un teklif satışı için yetkili çözüm sağlayıcılarının listesi vardır ve bu sağlayıcılar da Microsoft 365 İş Ekstra. 
+Microsoft 365 almanıza ve ayarlamanıza yardımcı olacak bir Microsoft iş ortağı olmasını tercih ederseniz şu adımları izleyin:
 
-Bölgenize çözüm sağlayıcısı bulmak için aşağıdaki adımları izleyin:
+1. **Microsoft Çözüm Sağlayıcıları** sayfasına ([https://www.microsoft.com/solution-providers](https://www.microsoft.com/solution-providers) ) gidin.
 
-1. **Microsoft Çözüm Sağlayıcıları sayfasına** () gidin [https://www.microsoft.com/solution-providers](https://www.microsoft.com/solution-providers).
- 
-2. Arama kutusunda, konum ve şirket boyutunu doldurun. 
+2. Arama kutusunda konumunuzu ve şirketinizin boyutunu doldurun. 
 
-3. Ürün **, hizmet, beceri, endüstri ara kutusuna ,** ve ardından `Microsoft 365`Git'i **seçin**.
+3. **Ürün, hizmet, beceri, endüstri ara** kutusuna yazın `Microsoft 365`ve **ardından Git'i** seçin.
 
-4. Sonuç listesini gözden geçirme. Uzmanlıkları ve sağ yaptıkları hizmetler hakkında daha fazla bilgi edinmek için bir sağlayıcı seçin.
+4. Sonuç listesini gözden geçirin. Uzmanlığı ve sağladığı hizmetler hakkında daha fazla bilgi edinmek için bir sağlayıcı seçin.
 
-Ayrıca bkz [. İş ortağınızı veya satıcınızı bulma](../admin/manage/find-your-partner-or-reseller.md).
+Ayrıca bkz [. İş ortağınızı veya kurumsal bayinizi bulma](../admin/manage/find-your-partner-or-reseller.md).
 
-## <a name="manual-setup-and-configuration"></a>El ile kurulum ve yapılandırma
+## <a name="next-objectives"></a>Sonraki hedefler
 
-Kurulum ve yapılandırma işleminizi el ile tamamlamayı tercih ediyorsanız, kılavuz olarak aşağıdaki tabloyu kullanın:
+İlk kurulum işleminizi tamamladıktan sonra, sonraki hedefleriniz güvenlik ve uyumluluk özelliklerinizi ayarlamaktır:
 
-| Aşama  | Görev  | Daha fazla bilgi edinmek için kaynaklar  |
-|---------|---------|---------|
-| **Planlama**     | Kurulum ve yapılandırma işleminizi planlama  | [Microsoft 365 Kurumsal kurulumlarınızı planlama](../admin/setup/plan-your-setup.md)   |
-|  | Gereksinimleri gözden geçirme | [Microsoft 365 İş Ekstra gereksinimleri](https://www.microsoft.com/microsoft-365/business/microsoft-365-business-premium?activetab=pivot:overviewtab) |
-| **Temel kurulum**     | Özel alan adı gibi özel `rob@contoso.com` bir Microsoft 365 | [Postanıza etki Microsoft 365](../admin/setup/add-domain.md) |
-|      | Posta'da kullanıcı ekleme ve lisans Microsoft 365      | [Kullanıcıları ekleme ve lisansları aynı anda atama](../admin/add-users/add-users.md)        |
-|  | Aşağıdakiler gibi belirli işlevleri gerçekleştirecek kullanıcılara yönetici rolleri attayabilirsiniz: <br/>- Özellikleri yönetme<br/>- Kullanıcı hesaplarını yönetme<br/>- Cihazları yönetme<br/>- Kuruluş güvenlik ve uyumluluk bilgilerini görüntüleme veya yönetme | [Yönetici rolleri hakkında bilgi](../admin/add-users/about-admin-roles.md) <br/><br/> [Yönetici rollerini atama](../admin/add-users/assign-admin-roles.md)  |
-|  | Sözcük Microsoft 365 Uygulamaları (Word, Excel, PowerPoint gibi) yükleme | [Office uygulamalarını yükleme](../admin/setup/install-applications.md) |
-| **Kuruluş güvenliğini sağlama** | Microsoft 365 aboneliğinizin güvenliğini sağlamak için son 10 Microsoft 365 bakın |  [kurumsal planların güvenliğini sağlamanın en Microsoft 365 10 yolu](../admin/security-and-compliance/secure-your-business-data.md) |
-|  | Başka bir e-postada oturum aken herkesin ek bir doğrulama yöntemi Microsoft 365 | [Çok faktörlü kimlik doğrulamasını ayarlama](../admin/security-and-compliance/set-up-multi-factor-authentication.md) | 
-| **E-postayı ve içeriği koruma** |  Kötü amaçlı kimliğe bürünme tabanlı kimlik avı saldırılarına ve diğer kimlik avı saldırılarına karşı korunmak için gelişmiş kimlik avı korumasını ayarlama | [E-postanızı kimlik avı saldırılarından koruma](../admin/security-and-compliance/secure-your-business-data.md) |
-|   | E-Kasa kötü amaçlı e-posta eklerinden korumak için Ekleri Ayarlama | [Dosya Ekleriyle kötü amaçlı eklere ve Kasa koruma](../admin/security-and-compliance/secure-your-business-data.md) |
-|  | E-Kasa iletilerde ve diğer belgelerde kötü amaçlı web sitelerine (URL) karşı korumak için Office ayarlama | [Bağlantı Kasa ayarlama](../admin/security-and-compliance/secure-your-business-data.md) |
-|  | Hassas bilgilerin paylaşılmalarını önlemek için veri kaybı önleme ilkelerini ayarlama | [Uyumluluk özelliklerini ayarlama](../admin/security-and-compliance/set-up-compliance.md) |
-| **Cihazları yönetme ve koruma** | Kuruluş cihazlarının güvenliğini Windows sağlama | [Mobil Windows güvenliğini sağlama](m365bp-secure-windows-devices.md) <br/><br/>[Cihazlar için uygulama koruma ayarlarını Windows 10 düzenleme](../admin/devices/protection-settings-for-windows-10-devices.md) |
-|   | Mobil Microsoft 365 uygulamaların güvenliğini sağlama | [Android veya iOS cihazlara yönelik uygulama koruma ayarlarını belirleme](../admin/devices/app-protection-settings-for-android-and-ios.md) |
-|  | İş için Microsoft Defender'ı ayarlama (kiracınız için uygun olduğunda) | [İş için Microsoft Defender'a genel bakış](../security/defender-business/mdb-overview.md)<br/><br/>[İş için Defender'ı ayarlamak için sihirbazı kullanma](../security/defender-business/mdb-use-wizard.md) |
-| **Dosya depolama ve içeriğigrat** | Dosya depolamayı ayarlama ve paylaşımın kurum için nasıl çalışması | [Dosya depolamayı ve dosya paylaşımını Microsoft 365](../admin/setup/set-up-file-storage-and-sharing.md) |
-| | E-postayı ve kişileri içeri aktarma veya geçirme | [E-postayı ve kişileri başka bir Microsoft 365](../admin/setup/migrate-email-and-contacts-admin.md) |
-|  | Herkesin erişmesi gereken şirket dosyalarını taşıma SharePoint (SharePoint çoğunlukla dosya paylaşımı veya ağ sürücüsü kullanımının yerini almaktadır) | [Dosyaları başka bir yere SharePoint](../admin/setup/files-to-sharepoint.md) |
-|  | Kişisel iş dosyaları veya hassas iş dosyaları gibi mevcut iş dosyalarınızı başka bir OneDrive | [Dosyaları başka bir yere OneDrive](../admin/setup/files-to-onedrive.md) |
-| **Eğitim yöneticileri ve güvenlik ekipleriniz** | Yönetim merkezini kullanmayı öğrenin | [Genel bakış Microsoft 365 yönetim merkezi](../admin/admin-overview/admin-center-overview.md) |
-|  | Bu yöneticiler için ücretsiz eğitim Microsoft 365 kitaplığını kullanma | [Yönetici eğitimi video kitaplığı](../admin/admin-video-library.yml)  |
-|  | Microsoft 365 Defender portalını kullanmayı öğrenin ([https://security.microsoft.com](https://security.microsoft.com)) | [Microsoft 365 Defender portalını kullanmaya başlama](../security/defender-business/mdb-get-started.md) |
+1. [Güvenlik korumanızı ayarlayın](m365bp-security-overview.md).
 
-> [!TIP]
-> Yardıma mı ihtiyacınız var? Daha fazla yardım [için İş Yardımı'Microsoft 365](https://support.microsoft.com/en-us/office/business-assist-for-microsoft-365-37deb8fe-61cc-4cf9-9ad1-1c8d93475070)
+2. Ekibinizi eğitin:
 
-## <a name="see-also"></a>Ayrıca bkz.
+   - [İş verilerine erişmek için kullanılan kişisel cihazları ayarlama](m365bp-devices-overview.md)
+   - [E-postayı daha güvenli kullanma](m365bp-protect-email-overview.md)
+   - [daha güvenli işbirliği yapma ve paylaşma](m365bp-collaborate-share-securely.md)
 
-- [İş için Microsoft Defender'a genel bakış](../security/defender-business/mdb-overview.md) (artık Microsoft 365 İş Ekstra!)
+3. [Yönetilen cihazları koruma](m365bp-protect-devices.md).
 
-- [İş abonelikleri ve faturalama belgeleri](../commerce/index.yml)
-
-- [Genel bakış Microsoft 365 Lighthouse](../lighthouse/m365-lighthouse-overview.md) (Microsoft CSP'ler için)
-
-- [kurumsal planların güvenliğini sağlamanın en Microsoft 365 10 yolu](../admin/security-and-compliance/secure-your-business-data.md)

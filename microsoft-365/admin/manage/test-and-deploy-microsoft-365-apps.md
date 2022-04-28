@@ -1,5 +1,5 @@
 ---
-title: Tümleşik uygulamalar portalında iş ortakları tarafından Microsoft 365 应用版 test edin ve dağıtın
+title: Tümleşik uygulamalar portalında iş ortakları tarafından Microsoft 365 Uygulamaları test edin ve dağıtın
 f1.keywords:
 - NOCSH
 ms.author: kwekua
@@ -14,31 +14,31 @@ ms.custom: AdminSurgePortfolio
 search.appverid: MET150
 ROBOTS: NOINDEX, NOFOLLOW
 description: Microsoft 365 yönetim merkezi tümleşik uygulamalar portalından kuruluşunuzdaki kullanıcılar ve gruplar için Microsoft ve Microsoft iş ortağı uygulamalarını bulun, test edin ve dağıtın.
-ms.openlocfilehash: 2baf6aea136736b1239df9a4da7b7e6a5b456ea6
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 491315b36a7698399bcd22c60173db8cec482148
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64782401"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65094670"
 ---
-# <a name="test-and-deploy-microsoft-365-apps-by-partners-in-the-integrated-apps-portal"></a>Tümleşik uygulamalar portalında iş ortakları tarafından Microsoft 365 应用版 test edin ve dağıtın
+# <a name="test-and-deploy-microsoft-365-apps-by-partners-in-the-integrated-apps-portal"></a>Tümleşik uygulamalar portalında iş ortakları tarafından Microsoft 365 Uygulamaları test edin ve dağıtın
 
 Microsoft 365 yönetim merkezi tek mağaza uygulamalarını, özel iş kolu uygulamalarını ve Microsoft 365 iş ortağı uygulamalarını tek bir konumdan dağıtma esnekliği sağlar. Konuma Tümleşik uygulamalar'daki Microsoft Yönetim merkezi ayarlarından erişilebilir. Tümleşik uygulamalar portalından Microsoft iş ortakları tarafından satın alınan ve lisanslı uygulamaları bulma, test etme ve tam olarak dağıtma olanağı, kuruluşunuzun iş hizmetlerini düzenli olarak güncel tutmak ve verimli bir şekilde çalışmasını sağlamak için gereken kolaylık ve avantajları sağlar.
 
-Kuruluşunuz için iş ortaklarından uygulama satın alma ve lisanslama Microsoft 365 hakkında ek bilgi için bkz. [Microsoft 365 yönetim merkezi Microsoft 365 应用版 yönetme ve dağıtma](https://techcommunity.microsoft.com/t5/microsoft-365-blog/manage-and-deploy-microsoft-365-apps-from-the-microsoft-365/ba-p/1194324).
+Kuruluşunuz için iş ortaklarından uygulama satın alma ve lisanslama Microsoft 365 hakkında ek bilgi için bkz. [Microsoft 365 yönetim merkezi Microsoft 365 Uygulamaları yönetme ve dağıtma](https://techcommunity.microsoft.com/t5/microsoft-365-blog/manage-and-deploy-microsoft-365-apps-from-the-microsoft-365/ba-p/1194324).
 
 İş ortaklarının bu uygulamaları nasıl oluşturduğu hakkında daha fazla bilgi için bkz. [Ticari market için SaaS teklifi planlama](https://go.microsoft.com/fwlink/?linkid=2158277)
 
 Tümleşik uygulamalar portalına yalnızca genel yöneticiler erişebilir ve yalnızca dünya çapındaki müşteriler tarafından kullanılabilir. Bu özellik bağımsız ve kamu bulutlarında kullanılamaz.
 
-Tümleşik uygulamalar portalı, kuruluşunuza dağıtılan iş ortaklarının tek uygulamalarını ve Microsoft 365 uygulamalarını içeren uygulamaların listesini görüntüler. Yalnızca web uygulamaları, SPFx uygulamaları, Office eklentileri ve Teams uygulamaları listelenir. Web uygulamaları için iki tür uygulama görebilirsiniz.
+Tümleşik uygulamalar portalı, kuruluşunuza dağıtılan iş ortaklarının tek uygulamalarını ve Microsoft 365 uygulamalarını içeren uygulamaların listesini görüntüler. Yalnızca web uygulamaları, SPFx uygulamaları, Office Eklentileri ve Teams uygulamaları listelenir. Web uygulamaları için iki tür uygulama görebilirsiniz.
 
 - appsource.microsoft.com'de kullanılabilen ve kuruluş adına onay veren yöneticiler tarafından dağıtılabilir SaaS uygulamaları.
 - Office eklentileriyle bağlantılı SAML galeri uygulamaları.
 
 ## <a name="manage-apps-in-the-integrated-apps-portal"></a>Tümleşik uygulamalar portalında uygulamaları yönetme
 
-satın alınan ve lisanslı Microsoft 365 应用版 iş ortaklarından test ve dağıtımını yönetebilirsiniz.
+İş ortaklarından satın alınan ve lisanslı Microsoft 365 Uygulamaları test ve dağıtımını yönetebilirsiniz.
 
 1. Yönetim merkezinde **Ayarlar** ve ardından **Tümleşik uygulamalar'ı** seçin.
 
@@ -64,7 +64,7 @@ Tümleşik uygulamalar sayfasındaki listede henüz görünmeyen yayımlanmış 
 
 2. Uygulamaların görünümünü almak için **Uygulamaları al'ı** seçin.
 
-3. **Yayımlanan Microsoft 365 应用版** uygulamalar sayfasında Şimdi **edinin'i** seçerek dağıtmak istediğiniz uygulamayı seçin. Birincil olarak görüntülenen uygulamalar Word, PowerPoint, Excel, Outlook eklentileri, Teams uygulama ve SharePoint uygulamalarıdır (SharePoint Framework teknolojisine dayalıdır). İzinleri kabul edin ve **Devam'ı** seçin.
+3. **Yayımlanan Microsoft 365 Uygulamaları** uygulamalar sayfasında Şimdi **edinin'i** seçerek dağıtmak istediğiniz uygulamayı seçin. Birincil olarak görüntülenen uygulamalar Word, PowerPoint, Excel, Outlook eklentileri, Teams uygulama ve SharePoint uygulamalarıdır (SharePoint Framework teknolojisine dayalıdır). İzinleri kabul edin ve **Devam'ı** seçin.
 
 5. Dağıtılmayı beklemeyi belirten iletinin yanındaki sayfanın üst kısmında **Dağıt'ı** seçin.
 
@@ -83,7 +83,7 @@ Tümleşik uygulamalar sayfasındaki listede henüz görünmeyen yayımlanmış 
 
 ## <a name="unsupported-scenarios"></a>Desteklenmeyen senaryolar
 
-Aşağıdaki senaryolar için Tümleşik uygulamalar portalından iş ortağı tarafından tek bir mağaza uygulaması veya Microsoft 365 应用版 dağıtamazsınız.
+Aşağıdaki senaryolar için Tümleşik uygulamalar portalından iş ortağı tarafından tek bir mağaza uygulaması veya Microsoft 365 Uygulamaları dağıtamazsınız.
 
 - Aynı eklenti birden fazla SaaS teklifine bağlıdır.
 - SaaS teklifi eklentilere bağlıdır, ancak Microsoft Graph ile tümleştirilmez ve AAD Uygulama Kimliği sağlanmaz.
@@ -107,7 +107,7 @@ Aşağıdaki senaryolar için Tümleşik uygulamalar portalından iş ortağı t
 
 ## <a name="prepare-to-deploy-add-ins-in-integrated-apps"></a>Tümleşik uygulamalarda eklentileri dağıtmaya hazırlanma
 
-Office eklentileri, belgelerinizi kişiselleştirmenize ve web'deki bilgilere erişme şeklinizi kolaylaştırmanıza yardımcı olur (bkz. Office Eklentinizi kullanmaya başlama). 
+Office Eklentileri, belgelerinizi kişiselleştirmenize ve web'deki bilgilere erişme şeklinizi kolaylaştırmanıza yardımcı olur (bkz. Office Eklentinizi kullanmaya başlama). 
 
 Eklentiler aşağıdaki avantajları sağlar: 
 
@@ -123,7 +123,7 @@ Bugün hem Exchange Yöneticileri hem de Genel Yöneticiler Tümleşik uygulamal
 
 ### <a name="before-you-begin"></a>Başlamadan önce
 
-Eklentilerin dağıtımı için kullanıcıların Microsoft 365 İş lisansları (Business Basic, Business Standard, Business Premium), Office 365 Enterprise lisansları (E1/E3/E5/F3) veya Microsoft 365 Enterprise lisansları (E3/E5/F3) kullanmaları gerekir. Ayrıca kullanıcıların kuruluş kimliklerini kullanarak Office oturum açmaları ve Exchange Online ve etkin Exchange Online posta kutularına sahip olmaları gerekir. Abonelik dizininizin içinde veya Azure Active Directory federasyonda olması gerekir. 
+Eklentilerin dağıtımı için kullanıcıların Microsoft 365 İş lisansları (Business Basic, Business Standard, Business Premium), Office 365 Kurumsal lisansları (E1/E3/E5/F3) veya Microsoft 365 Kurumsal lisansları (E3/E5/F3) kullanmaları gerekir. Ayrıca kullanıcıların kuruluş kimliklerini kullanarak Office oturum açmaları ve Exchange Online ve etkin Exchange Online posta kutularına sahip olmaları gerekir. Abonelik dizininizin içinde veya Azure Active Directory federasyonda olması gerekir. 
 
 Dağıtım aşağıdakileri desteklemez: 
 
@@ -131,16 +131,16 @@ Dağıtım aşağıdakileri desteklemez:
 - Şirket içi dizin hizmeti 
 - Exchange Şirket İçi Posta Kutusuna Eklenti Dağıtımı 
 - Bileşen Nesne Modeli (COM) veya Office için Visual Studio Araçları (VSTO) eklentilerinin dağıtımı. 
-- İş için Microsoft 365 应用版 ve Enterprise için Microsoft 365 应用版 gibi Exchange Online içermeyen Microsoft 365 dağıtımları.  
+- İş için Microsoft 365 Uygulamaları ve Enterprise için Microsoft 365 Uygulamaları gibi Exchange Online içermeyen Microsoft 365 dağıtımları.  
 
 ### <a name="office-requirements"></a>Office Gereksinimleri 
 
 Word, Excel ve PowerPoint eklentileri için kullanıcılarınızın aşağıdakilerden birini kullanıyor olması gerekir: 
-- Windows bir cihazda, Microsoft 365 İş lisanslarının Sürüm 1704 veya üzeri (Business Basic, business standard, business Premium), Office 365 Enterprise lisansları (E1/E3/E5/F3) veya Microsoft 365 Enterprise lisansları (E3/E5/F3). 
+- Windows bir cihazda, Microsoft 365 İş lisanslarının Sürüm 1704 veya üzeri (Business Basic, Business Standard, Business Premium), Office 365 Kurumsal lisansları (E1/E3/E5/F3) veya Microsoft 365 Kurumsal lisansları (E3/E5/F3). 
 - Mac'te Sürüm 15.34 veya üzeri. 
 
 Outlook için kullanıcılarınızın aşağıdakilerden birini kullanıyor olması gerekir: 
-- Microsoft 365 business lisanslarının (Business Basic, Business Standard, Business Premium), Office 365 Enterprise lisanslarının (E1/E3/E5/F3) veya Microsoft 365 Enterprise lisanslarının (E3/E5/F3) 1701 veya sonraki sürümleri. 
+- Microsoft 365 business lisanslarının (Business Basic, Business Standard, Business Premium), Office 365 Kurumsal lisanslarının (E1/E3/E5/F3) veya Microsoft 365 Kurumsal lisanslarının (E3/E5/F3) 1701 veya sonraki sürümleri. 
 - Office Professional Plus 2019 veya Office Standard 2019 sürümü 1808 veya üzeri. 
 - Office Professional Plus 2016 (MSI) veya Office Standard 2016 (MSI) sürüm 16.0.4494.1000 veya üzeri.
     > [!NOTE]
@@ -179,7 +179,7 @@ Grubun, herhangi bir grubun üyesi olup olmadığını öğrenmek için grubu ç
 
 Azure Active Directory Graph API kullanarak bir grup içindeki grupların listesini bulmak üzere sorgu çalıştırabileceğinizi unutmayın. Daha fazla bilgi için bkz[. Gruplarda işlemler | başvuru Graph API](/previous-versions/azure/ad/graph/api/groups-operations). 
 
-## <a name="recommended-approach-for-deploying-office-add-ins"></a>Office eklentilerini dağıtmak için önerilen yaklaşım 
+## <a name="recommended-approach-for-deploying-office-add-ins"></a>Office Eklentileri dağıtmak için önerilen yaklaşım 
 Aşamalı bir yaklaşım kullanarak eklentilerin dağıtımını yapmak için aşağıdakileri öneririz: 
 1. Eklentiyi küçük bir iş paydaşları kümesine ve BT departmanının üyelerine dağıtın. **Bu bir test dağıtımı mı**? bayrağını açabilirsiniz. Dağıtım başarılı olursa 2. adıma geçin. 
 
@@ -189,7 +189,7 @@ Aşamalı bir yaklaşım kullanarak eklentilerin dağıtımını yapmak için a�
 
 Hedef kitlenin boyutuna bağlı olarak, dağıtım adımları ekleyebilir veya kaldırabilirsiniz.  
 
-## <a name="deploy-an-office-add-in-using-the-admin-center"></a>Yönetim merkezini kullanarak bir Office eklentisi dağıtma 
+## <a name="deploy-an-office-add-in-using-the-admin-center"></a>Yönetim merkezini kullanarak Office Eklentisi dağıtma 
 
 1. Yönetim merkezinde **Ayarlar** ve ardından **Tümleşik uygulamalar'ı** seçin. 
 
@@ -224,13 +224,13 @@ Genel yöneticiler ve Exchange yöneticileri herkese veya belirli kullanıcılar
 
 Kuruluşunuz için doğru seçenek yapılandırmanıza bağlıdır. Ancak, grupları kullanarak atamalar yapmanızı öneririz. Yönetici olarak, her seferinde tek tek kullanıcılar atamak yerine grupları kullanarak ve bu grupların üyeliğini denetleyerek eklentileri yönetmeyi daha kolay bulabilirsiniz. Bazı durumlarda, kullanıcıları el ile atayarak belirli kullanıcılara atamalar yaparak küçük bir kullanıcı kümesine erişimi kısıtlamak isteyebilirsiniz. 
 
-### <a name="more-about-office-add-ins-security"></a>Office eklentilerin güvenliği hakkında daha fazla bilgi 
-Office eklentileri, eklenti hakkında meta veriler içeren XML bildirim dosyalarını birleştirir ve daha da önemlisi, tüm kodları ve mantıkları içeren bir web uygulamasına yönlendirir. Eklentiler, özellikleri açısından farklılık gösterebilir. Örneğin, şu işlemleri yapabilirler:
+### <a name="more-about-office-add-ins-security"></a>Office Eklentilerin güvenliği hakkında daha fazla bilgi 
+Office Eklentileri, eklentiyle ilgili bazı meta verileri içeren bir XML bildirim dosyasını birleştirir, ancak en önemlisi tüm kodu ve mantığı içeren bir web uygulamasına işaret eder. Eklentiler, özellikleri açısından farklılık gösterebilir. Örneğin, şu işlemleri yapabilirler:
 - Veri görüntüleme 
 - Bağlamsal hizmet sağlamak amacıyla bir kullanıcının belgesini okuma 
 - Kullanıcıya değer sağlamak amacıyla, kullanıcının belgesini okuma veya belgeye yazma  
 
-Office eklentilerinin özellikleri ve türleri hakkında daha fazla bilgi edinmek için [Office eklentileri platformuna genel bakış](/office/dev/add-ins/overview/office-add-ins) makalesine ve özellikle de "Office Eklentilerinin Anatomisi" bölümüne bakabilirsiniz. 
+Office Eklentilerin türleri ve özellikleri hakkında daha fazla bilgi için, özellikle de "Office Eklentisinin Anatomisi" bölümü Office [Eklentiler platformuna genel bakış](/office/dev/add-ins/overview/office-add-ins) bölümüne bakın. 
 
 Eklentilerin kullanıcının belgeleriyle etkileşim kurabilmesi için, ihtiyaç duyduğu izinleri bildirim kısmında belirtmesi gerekir. Beş düzeyli JavaScript API erişim-izinler modeli, görev bölmesi eklentilerini kullananların gizliliğini ve güvenliğini sağlar. Office Mağazası eklentilerinin çoğu, ReadWriteDocument seviyesindedir ve neredeyse tüm eklentiler en az ReadDocument düzeyini destekler. İzin düzeyleri hakkında daha fazla bilgi için bkz. [İçerikte API kullanımı ve görev bölmesi eklentileri için izin isteme](/office/dev/add-ins/develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins). 
 
@@ -255,7 +255,7 @@ Eklenti **Açık** veya **Kapalı** durumda olabilir.
  
 Artık kimse kullanmıyorsa eklentiyi silmeyi göz önünde bulundurun. Örneğin, bir eklentinin yalnızca yılın belirli zamanlarında kullanılması durumunda eklentinin kapatılması mantıklı olabilir. 
 
-## <a name="manage-an-office-add-in-using-the-admin-center"></a>Yönetim merkezini kullanarak Office eklentisini yönetme
+## <a name="manage-an-office-add-in-using-the-admin-center"></a>Yönetim merkezini kullanarak Office Eklentisini yönetme
 
 Dağıtım sonrasında, yöneticiler eklentilere kullanıcı erişimini de yönetebilir. 
 

@@ -2,7 +2,7 @@
 title: PowerShell ile Microsoft 365’e bağlanma
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -16,12 +16,12 @@ ms.custom:
 - Ent_Office_Other
 ms.assetid: 5ebc0e21-b72d-46d8-96fa-00643b18eaec
 description: Microsoft 365 için PowerShell kullanarak Microsoft 365 kiracınıza Bağlan ve komut satırından yönetim merkezi görevlerini gerçekleştirin.
-ms.openlocfilehash: 4083ffdf240664947b1d35e726a400f292b6d3bf
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: a7f493bd0073762d995a232918d732e999a85777
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64713503"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65093931"
 ---
 # <a name="connect-to-microsoft-365-with-powershell"></a>PowerShell ile Microsoft 365’e bağlanma
 
