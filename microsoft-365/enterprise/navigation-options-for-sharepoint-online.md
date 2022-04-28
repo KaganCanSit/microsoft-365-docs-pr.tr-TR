@@ -2,7 +2,7 @@
 title: SharePoint Online için gezinti seçenekleri
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 4/7/2020
 audience: Admin
 ms.topic: overview
@@ -20,116 +20,116 @@ search.appverid:
 - SPO160
 - MET150
 ms.assetid: adb92b80-b342-4ecb-99a1-da2a2b4782eb
-description: Bu makalede, SharePoint Online'da SharePoint Yayımlama etkinleştirilmiş gezinti SharePoint açıklanmıştır.
-ms.openlocfilehash: c59006db8505991bd41d29714caae144b284f07d
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Bu makalede, SharePoint Online'da SharePoint Yayımlama'nın etkinleştirildiği gezinti seçenekleri siteleri açıklanmaktadır.
+ms.openlocfilehash: 67bf1c854d97cf254d1484151987a87853e1ae9d
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62984461"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65101193"
 ---
 # <a name="navigation-options-for-sharepoint-online"></a>SharePoint Online için gezinti seçenekleri
 
-Bu makalede, SharePoint Online'da SharePoint Yayımlama etkinleştirilmiş gezinti SharePoint açıklanmıştır. Gezinti seçimi ve yapılandırması, SharePoint Online'da sitelerin performansını ve ölçeklenebilirliğini önemli ölçüde etkiler. SharePoint Yayımlama sitesi şablonu, yalnızca merkezi bir portal için gerekli olduğunda ve yayımlama özelliği yalnızca belirli sitelerde etkinleştirildiyse ve ancak gerçekten gerekli olduğu zaman performansı yanlış kullanıldıklarında etkileyebilir.
+Bu makalede, SharePoint Online'da SharePoint Yayımlama'nın etkinleştirildiği gezinti seçenekleri siteleri açıklanmaktadır. Gezinti seçimi ve yapılandırması, SharePoint Online'daki sitelerin performansını ve ölçeklenebilirliğini önemli ölçüde etkiler. SharePoint Yayımlama sitesi şablonu yalnızca merkezi bir portal için gerekliyse ve yayımlama özelliği yalnızca belirli sitelerde etkinleştirilmelidir ve yalnızca yanlış kullanıldığında performansı etkileyeebileceği için kesinlikle gerekli olduğunda kullanılmalıdır.
 
 >[!NOTE]
->Mega menü, basamaklı gezinti SharePoint hub gezintisi gibi modern gezinti seçeneklerini kullanıyorsanız, bu makale siteniz için geçerli değildir. Modern SharePoint yapıtları daha düz site hiyerarşisi ve merkez ve sözcük bir modelden yararlanmaktadır. Bu, yayımlama özelliğinin kullanımını GEREKTIRMEYEN birçok senaryoyu SharePoint sağlar.
+>Mega menü, basamaklı gezinti veya hub gezintisi gibi modern SharePoint gezinti seçeneklerini kullanıyorsanız, bu makale siteniz için geçerli değildir. Modern SharePoint site mimarileri daha düzleştirilmiş bir site hiyerarşisi ve merkez-uç modelinden yararlanıyor. Bu, SharePoint Yayımlama özelliğinin kullanılmasını gerektirmeyen birçok senaryonun gerçekleştirilmesini sağlar.
 
 ## <a name="overview-of-navigation-options"></a>Gezinti seçeneklerine genel bakış
 
-Gezinti sağlayıcısı yapılandırması sitenin tamamı için performansı önemli ölçüde etkileyebilir ve bir sitenin gereksinimlerine göre etkili bir şekilde ölçeklendirilen bir gezinti sağlayıcısı ve yapılandırması seçmek için dikkatli bir SharePoint alınması gerekir. İlk kullanılanın dışında iki gezinti sağlayıcısının yanı sıra özel gezinti uygulamaları vardır.
+Gezinti sağlayıcısı yapılandırması tüm sitenin performansını önemli ölçüde etkileyebilir ve SharePoint sitenin gereksinimleri için etkili bir şekilde ölçeklendirilen bir gezinti sağlayıcısı ve yapılandırma seçmek için dikkatli bir şekilde dikkat edilmelidir. kullanıma uygun iki gezinti sağlayıcısının yanı sıra özel gezinti uygulamaları da vardır.
 
-İlk seçenek olan [**Yapısal gezinti**](#using-structural-navigation-in-sharepoint-online), siteniz için yapısal gezinti önbelleğini SharePoint Online'da klasik SharePoint siteleri için önerilen **gezinti seçeneğidir**. Bu gezinti sağlayıcısı, gezinti öğelerini geçerli sitenin altında, isteğe bağlı olarak da geçerli siteyi ve bu sitenin öğelerini görüntüler. Güvenlik kırpma ve site yapısı numaralama gibi ek özellikler sağlar. Önbelleğe alma devre dışı bırakılmışsa, bu durum performansı ve ölçeklenebilirliği olumsuz etkiler ve azaltmaya tabi olabilir.
+İlk seçenek [**olan Yapısal gezinti**](#using-structural-navigation-in-sharepoint-online), **siteniz için yapısal gezinti önbelleğini açarsanız** klasik SharePoint siteleri için SharePoint Online'da önerilen gezinti seçeneğidir. Bu gezinti sağlayıcısı, geçerli sitenin altındaki gezinti öğelerini ve isteğe bağlı olarak geçerli siteyi ve eşdüzey öğelerini görüntüler. Güvenlik kırpması ve site yapısı numaralandırması gibi ek özellikler sağlar. Önbelleğe alma devre dışı bırakılırsa, bu durum performansı ve ölçeklenebilirliği olumsuz etkiler ve azaltmaya tabi olabilir.
 
-İkinci seçenek olan Yönetilen [**(Meta Veri) gezintisi**](#using-managed-navigation-and-metadata-in-sharepoint-online), Yönetilen Meta Veri terim kümesi kullanan gezinti öğelerini temsil eder. Güvenlik kırpmanın gerekli olmadığı sürece devre dışı bırakılabilir. Bu gezinti sağlayıcısı için güvenlik kırpma, varsayılan güvenli bir ayar olarak etkinleştirilir; bununla birlikte, gezinti öğeleri sitenin tüm kullanıcıları için çoğunlukla tutarlı olduğu için birçok site için güvenlik kırpma yükünün yükü gerekli değildir. Güvenlik kırpmayı devre dışı bırakmak için önerilen yapılandırmayla, bu gezinti sağlayıcısı site yapısını numaralama gerektirmez ve kabul edilebilir performans etkisiyle üst düzeyde ölçeklenebilirdir.
+İkinci seçenek olan [**Yönetilen (Meta Veri) gezintisi**](#using-managed-navigation-and-metadata-in-sharepoint-online), Yönetilen Meta Veri terim kümesi kullanan gezinti öğelerini temsil eder. Gerekmedikçe güvenlik kırpmanın devre dışı bırakılması önerilir. Güvenlik kırpması, bu gezinti sağlayıcısı için varsayılan olarak güvenli bir ayar olarak etkinleştirilir; ancak, gezinti öğeleri genellikle sitenin tüm kullanıcıları için tutarlı olduğundan, birçok site güvenlik kırpma ek yükü gerektirmez. Güvenlik kırpmayı devre dışı bırakmak için önerilen yapılandırmayla, bu gezinti sağlayıcısı site yapısını listelemeyi gerektirmez ve kabul edilebilir performans etkisiyle yüksek oranda ölçeklenebilir.
 
-Gelen gezinti sağlayıcılarına ek olarak, birçok müşteri alternatif özel gezinti uygulamalarını başarıyla gerçekleştirdi. Bu [makaledeki Arama odaklı istemci tarafı betikleri](#using-search-driven-client-side-scripting) makalesine bakın.
+Kullanıma sunulan gezinti sağlayıcılarına ek olarak, birçok müşteri alternatif özel gezinti uygulamalarını başarıyla uyguladı. Bu makaledeki [Arama temelli istemci tarafı betiği oluşturma](#using-search-driven-client-side-scripting) bölümüne bakın.
   
-## <a name="pros-and-cons-of-sharepoint-online-navigation-options"></a>Çevrimiçi gezinti seçeneklerinin Artıları SharePoint Eksileri
+## <a name="pros-and-cons-of-sharepoint-online-navigation-options"></a>SharePoint Çevrimiçi gezinti seçeneklerinin Avantajları ve Dezavantajları
 
-Aşağıdaki tabloda her seçeneğin artıları ve eksileri özetlenmiştir.
+Aşağıdaki tabloda her seçeneğin artıları ve eksileri özetlemektedir.
 
-|Yapısal gezinti  |Yönetilen gezinti  |Arama odaklı gezinti  |Özel gezinti sağlayıcısı  |
+|Yapısal gezinti  |Yönetilen gezinti  |Arama temelli gezinti  |Özel gezinti sağlayıcısı  |
 |---------|---------|---------|---------|
-|Profesyoneller:<br/><br/>Bakımı kolay<br/>Güvenlik kırpıldı<br/>İçerik değiştirilirken 24 saat içinde otomatik olarak  güncellemeler<br/>     |Profesyoneller:<br/><br/>Bakımı kolay<br/>|Profesyoneller:<br/><br/>Güvenlik kırpıldı<br/>Otomatik olarak siteler eklendikken güncelleştirmeler<br/>Hızlı yükleme süresi ve yerel olarak önbelleğe alınmış gezinti yapısı<br/>|Profesyoneller:<br/><br/>Daha geniş seçenek seçeneği<br/>Önbelleğe alma doğru kullanılırken hızlı yükleme<br/>Birçok seçenek iyi yanıt veren sayfa tasarımıyla iyi çalışır<br/>|
-|Eksiler:<br/><br/>**Önbelleğe alma devre dışı bırakılmıştır, performansı etkiler**<br/>Azaltmaya tabi<br/>|Eksiler:<br/><br/>Site yapısını yansıtacak şekilde otomatik olarak güncelleştirilmez<br/>**Güvenlik kırpma etkinleştirildiğinde veya gezinti yapısı karmaşık** olduğunda performansı etkiler<br/>|Eksiler:<br/><br/>Siteleri kolayca sıralayabilme özelliği yok<br/>Ana sayfanın özelleştirilmesi gerekir (teknik beceriler gereklidir)<br/>|Eksiler:<br/><br/>Özel geliştirme gereklidir<br/>Azure gibi dış veri kaynağı / önbelleğinin depolanmış olması gerekir<br/>|
+|Profesyonel:<br/><br/>Bakımı kolay<br/>Güvenlik kırpıldı<br/>İçerik değiştirildiğinde 24 saat içinde otomatik olarak güncelleştirilir<br/>     |Profesyonel:<br/><br/>Bakımı kolay<br/>|Profesyonel:<br/><br/>Güvenlik kırpıldı<br/>Siteler eklendikçe otomatik olarak güncelleştirilir<br/>Hızlı yükleme süresi ve yerel olarak önbelleğe alınmış gezinti yapısı<br/>|Profesyonel:<br/><br/>Daha geniş seçenek seçenekleri<br/>Önbelleğe alma doğru kullanıldığında hızlı yükleme<br/>Hızlı yanıt veren sayfa tasarımıyla birçok seçenek iyi çalışır<br/>|
+|Eksi -lerini:<br/><br/>**Önbelleğe alma devre dışı bırakılırsa performansı etkiler**<br/>Azaltmaya tabi<br/>|Eksi -lerini:<br/><br/>Site yapısını yansıtacak şekilde otomatik olarak güncelleştirilmez<br/>**Güvenlik kırpma etkinse** veya gezinti yapısı karmaşıksa performansı etkiler<br/>|Eksi -lerini:<br/><br/>Siteleri kolayca sipariş etme olanağı yok<br/>Ana sayfanın özelleştirilmesini gerektirir (teknik beceriler gereklidir)<br/>|Eksi -lerini:<br/><br/>Özel geliştirme gereklidir<br/>Dış veri kaynağı /depolanan önbellek gereklidir, örneğin Azure<br/>|
 
-Siteniz için en uygun seçenek site gereksinimlerinize ve teknik yeteneklerinize bağlıdır. İçerik değiştirildiğinde otomatik olarak güncelleştirmeler kullanan, kullanımı kolay bir gezinti sağlayıcısını tercih ediyorsanız, önbelleğe alma etkinleştirilmiş yapısal [gezinti iyi bir](https://support.office.com/article/structural-navigation-and-performance-f163053f-8eca-4b9c-b973-36b395093b43) seçenektir.
+Siteniz için en uygun seçenek, site gereksinimlerinize ve teknik yeteneğinize bağlıdır. İçerik değiştirildiğinde otomatik olarak güncelleştirilen, yapılandırması kolay bir gezinti sağlayıcısı istiyorsanız, [önbelleğe alma etkin](https://support.office.com/article/structural-navigation-and-performance-f163053f-8eca-4b9c-b973-36b395093b43) yapısal gezinti iyi bir seçenektir.
 
 >[!NOTE]
->Genel site yapısını daha hoş, hiyerarşik olmayan bir yapıya basitleştirerek modern SharePoint sitelerle aynı ilkeyi uygulamak, performansı iyileştirir ve modern sitelere SharePoint kolaylaştırır. Bunun anlamı, yüzlerce sitede (alt web) olan tek bir site koleksiyonu olması yerine, çok az alt sitesi (alt web) olan birçok site koleksiyonu olmasıdır.
+>Genel site yapısını düz ve hiyerarşik olmayan bir yapıya basitleştirerek modern SharePoint sitelerle aynı ilkeyi uygulamak, performansı artırır ve modern SharePoint sitelerine geçişi basitleştirir. Bunun anlamı, yüzlerce site (alt web) içeren tek bir site koleksiyonuna sahip olmak yerine, çok az alt siteye (alt web) sahip birçok site koleksiyonuna sahip olmak daha iyi bir yaklaşımdır.
 
-## <a name="analyzing-navigation-performance-in-sharepoint-online"></a>SharePoint Online'da gezinti SharePoint çözümleme
+## <a name="analyzing-navigation-performance-in-sharepoint-online"></a>SharePoint Online'da gezinti performansını analiz etme
 
-[SharePoint için](./page-diagnostics-for-spo.md) Sayfa Tanılama aracı, hem Microsoft Edge Online modern portalı hem de klasik yayımlama sitesi sayfalarını analizen SharePoint Chrome tarayıcıları için tarayıcı uzantısıdır. Bu araç yalnızca SharePoint Online'da çalışır ve SharePoint sayfasında kullanılamaz.
+[SharePoint için Sayfa Tanılama aracı](./page-diagnostics-for-spo.md), hem SharePoint Çevrimiçi modern portalı hem de klasik yayımlama sitesi sayfalarını analiz eden Microsoft Edge ve Chrome tarayıcıları için bir tarayıcı uzantısıdır. Bu araç yalnızca SharePoint Online için çalışır ve SharePoint sistem sayfasında kullanılamaz.
 
-Araç, önceden tanımlanmış bir dizi kurala karşı sayfanın nasıl bir performans göstermesini gösteren, analize alınan her sayfa için bir rapor üretir ve bir sınamanın sonuçları temel değerinin dışında kalıyorsa ayrıntılı bilgi görüntüler. SharePoint Online yöneticileri ve tasarımcıları, yeni sayfaların yayımlamadan önce en iyi duruma getirilmiş performans sorunlarını gidermek için bu aracı kullanabilir.
+Araç, analiz edilen her sayfa için sayfanın önceden tanımlanmış bir kural kümesine göre nasıl performans gösterdiğini gösteren bir rapor oluşturur ve test sonuçları temel değerin dışında olduğunda ayrıntılı bilgiler görüntüler. SharePoint Çevrimiçi yöneticiler ve tasarımcılar, yayımlama öncesinde yeni sayfaların iyileştirildiğinden emin olmak için performans sorunlarını gidermek için aracı kullanabilir.
 
-**Özel olarak, SPRequestDuration** sayfanın nasıl iş SharePoint kadar sürer. Yoğun gezinti (gezinti sayfaları dahil), karmaşık site hiyerarşileri ve diğer yapılandırma ve topoloji seçeneklerinin hepsi, daha uzun sürelere büyük ölçüde katkıda bulunabilirsiniz.
+**SPRequestDuration** özellikle SharePoint sayfayı işleme süresidir. Ağır gezinti (gezintideki sayfalar dahil), karmaşık site hiyerarşileri ve diğer yapılandırma ve topoloji seçeneklerinin tümü daha uzun sürelere önemli ölçüde katkıda bulunabilir.
 
 ## <a name="using-structural-navigation-in-sharepoint-online"></a>SharePoint Online'da yapısal gezintiyi kullanma
 
-Bu, varsayılan olarak kullanılan ilk kullanımdan gezintidir ve en kolay çözümdür. Herhangi bir özelleştirme gerektirmez ve teknik olmayan bir kullanıcı da ayarlar sayfasında kolayca öğe ekleyebilir, öğeleri gizleebilir ve gezintiyi yönetebilir. Önbelleğe [almayı etkinleştirmenizi öneririz](https://support.office.com/article/structural-navigation-and-performance-f163053f-8eca-4b9c-b973-36b395093b43), aksi takdirde pahalı bir performans satın alma işleminin olmasıdır.
+Bu, varsayılan olarak kullanılan kullanıma hazır gezintidir ve en basit çözümdür. Herhangi bir özelleştirme gerektirmez ve teknik olmayan bir kullanıcı da kolayca öğe ekleyebilir, öğeleri gizleyebilir ve ayarlar sayfasından gezintiyi yönetebilir. [Önbelleğe almayı etkinleştirmenizi](https://support.office.com/article/structural-navigation-and-performance-f163053f-8eca-4b9c-b973-36b395093b43) öneririz, aksi takdirde pahalı bir performans dengelemesi vardır.
 
-### <a name="how-to-implement-structural-navigation-caching"></a>Yapısal gezinti önbelleği uygulama
+### <a name="how-to-implement-structural-navigation-caching"></a>Yapısal gezinti önbelleğini uygulama
 
-**Site Gezintisi Ayarlar** >  **Look ve** **FeelNavigation** >  altında, genel gezinti veya geçerli gezinti için yapısal gezintinin seçili olup olduğunu doğrulayan bir araçtır. Sayfaları göster **seçeneği performansı** olumsuz etkiler.
+**Site Ayarlar** >  **Look ve** **FeelNavigation** >  altında, genel gezinti veya geçerli gezinti için yapısal gezintinin seçili olup olmadığını doğrulayabilirsiniz. **Sayfaları göster'in** seçilmesi performansı olumsuz etkiler.
 
 ![Alt Siteleri Göster'in seçili olduğu yapısal gezinti.](../media/SPONavOptionsStructuredShowSubsites.png)
 
-Önbelleğe Alma koleksiyonu düzeyinde ve site düzeyinde etkinleştirilebilir veya devre dışı bırakılabilir ve her ikisi için de varsayılan olarak etkindir. Site koleksiyonu düzeyinde etkinleştirmek için Site Koleksiyonu Yönetimi **Site Ayarlar** >  **Site Koleksiyonu** >  Gezintisi'nin **altında Önbelleğe** almayı etkinleştir **kutusunu işaretleyin**.
+Önbelleğe Alma, site koleksiyonu düzeyinde ve site düzeyinde etkinleştirilebilir veya devre dışı bırakılabilir ve her ikisi için de varsayılan olarak etkinleştirilir. Site koleksiyonu düzeyinde etkinleştirmek için **, Site Ayarlar** >  **Site Koleksiyonu YönetimiSite** >  **Koleksiyonu Gezintisi'nin** altında **Önbelleğe almayı etkinleştir** kutusunu işaretleyin.
 
 ![Site düzeyinde önbelleğe almayı etkinleştirin.](../media/structural-nav/structural-nav-caching-site-coll.png)
 
-Site düzeyinde etkinleştirmek için, **Site Özellikleri'Ayarlar** >  **Gerekleme'nin** altında Önbelleğe almayı **etkinleştir kutusunu işaretleyin**.
+Site düzeyinde etkinleştirmek için **Site Ayarlar** >  **Navigation** altında **Önbelleğe almayı etkinleştir** kutusunu işaretleyin.
 
 ![Site düzeyinde önbelleğe almayı etkinleştirin.](../media/structural-nav/structural-nav-caching-site.png)
 
-## <a name="using-managed-navigation-and-metadata-in-sharepoint-online"></a>SharePoint Online'da yönetilen gezintiyi ve meta verileri kullanma
+## <a name="using-managed-navigation-and-metadata-in-sharepoint-online"></a>SharePoint Online'da yönetilen gezinti ve meta verileri kullanma
 
-Yönetilen gezinti, yapısal gezintiyle aynı işlevlerin çoğunu yeniden oluşturmak için kullanabileceğiniz, ilk kullanımdan çıkma seçeneklerden biridir. Yönetilen meta veriler, güvenlik kırpmanın etkinleştirilmesi veya devre dışı bırakılabilir. Güvenlik kırpma devre dışı bırakıldığında, yönetilen gezinti oldukça verimlidir çünkü sabit sayıda sunucu çağrısı içeren tüm gezinti bağlantılarını yükler. Bununla birlikte, güvenlik kırpmanın etkinleştirilmesi, yönetilen gezintinin performans avantajlarından bazılarını olumsuz artırır.
+Yönetilen gezinti, yapısal gezintiyle aynı işlevlerin çoğunu yeniden oluşturmak için kullanabileceğiniz bir diğer kullanıma uygun seçenektir. Yönetilen meta veriler, güvenlik kırpmanın etkinleştirilmesi veya devre dışı bırakılması için yapılandırılabilir. Güvenlik kırpma devre dışıyken yapılandırıldığında, tüm gezinti bağlantılarını sabit sayıda sunucu çağrısıyla yüklediğinden yönetilen gezinti oldukça verimlidir. Bununla birlikte, güvenlik kırpmanın etkinleştirilmesi, yönetilen gezintinin bazı performans avantajlarını engeller.
 
-Güvenlik kırpmayı etkinleştirmeniz gerekirse şunları öneririz:
+Güvenlik kırpmasını etkinleştirmeniz gerekiyorsa şunları yapmanızı öneririz:
 
 - Tüm kolay URL bağlantılarını basit bağlantılara güncelleştirin
 - Gerekli güvenlik kırpma düğümlerini kolay URL'ler olarak ekleme
-- Gezinti öğelerinin sayısını 100'den fazla değil ve 3 düzeyden daha derinle sınırlama
+- Gezinti öğelerinin sayısını en fazla 100 ve en fazla 3 düzey derinliğinde sınırlayın
 
-Gezinti yapısı genellikle sitenin tüm kullanıcıları için tutarlı olduğu için birçok sitede güvenlik kırpması gerektirmez. Güvenlik kırpma devre dışı bırakılırsa ve gezintiye tüm kullanıcıların erişeliklerini sağymayacak bir bağlantı eklenirse, bağlantı yine de gösterir ancak erişim reddedildi iletisine yol gösterir. İçeriklere yanlışlıkla erişim riski yoktur.
+Gezinti yapısı genellikle sitenin tüm kullanıcıları için tutarlı olduğundan, birçok site güvenlik kırpması gerektirmez. Güvenlik kırpma devre dışı bırakılırsa ve gezintiye tüm kullanıcıların erişimi olmayan bir bağlantı eklenirse, bağlantı yine de gösterilir ancak erişim reddedildi iletisine yol açar. İçeriğe yanlışlıkla erişim riski yoktur.
 
 ### <a name="how-to-implement-managed-navigation-and-the-results"></a>Yönetilen gezintiyi ve sonuçları uygulama
 
-Yönetilen gezintinin ayrıntıları hakkında docs.microsoft.com hakkında birçok makale bulunmaktadır. Örneğin, [SharePoint Server'da yönetilen gezintiye genel bakış.](/sharepoint/administration/overview-of-managed-navigation)
+yönetilen gezintinin ayrıntıları hakkında docs.microsoft.com birkaç makale vardır. Örneğin, bkz. [SharePoint Server'da yönetilen gezintiye genel bakış](/sharepoint/administration/overview-of-managed-navigation).
 
-Yönetilen gezintiyi uygulamak için, sitenin gezinti yapısına karşılık gelen URL'ler için terimler ayarlayın. Yönetilen gezinti, birçok durumda yapısal gezintinin yerini alacak şekilde el ile bile ayarlanabilir. Örneğin:
+Yönetilen gezintiyi uygulamak için, sitenin gezinti yapısına karşılık gelen URL'lerle terimler ayarlarsınız. Yönetilen gezinti, çoğu durumda yapısal gezintiyi değiştirmek için el ile de kullanılabilir. Örneğin:
 
 ![SharePoint Online site yapısı.](../media/SPONavOptionsListOfSites.png))
 
-## <a name="using-search-driven-client-side-scripting"></a>Arama odaklı istemci tarafı betiklerini kullanma
+## <a name="using-search-driven-client-side-scripting"></a>Arama temelli istemci tarafı betiği kullanma
 
-Ortak bir özel gezinti uygulaması sınıfı, yerel gezinti düğümleri önbelleğini depolayan istemci tarafından işlenen tasarım desenlerini sağlar.
+Yaygın bir özel gezinti uygulaması sınıfı, yerel gezinti düğümleri önbelleğini depolayan istemci tarafından işlenmiş tasarım desenlerini benimser.
 
 Bu gezinti sağlayıcılarının birkaç önemli avantajı vardır:
 
-- Genel olarak iyi yanıt veren sayfa tasarımlarla iyi çalışırlar.
-- Bunlar aşırı ölçeklendirilebilir ve performans gösterirler çünkü kaynak maliyeti yoktur (ve zaman aşımı sonrasında arka planda yenilenirler).
-- Bu gezinti sağlayıcıları, basit statik yapılandırmalardan çeşitli dinamik veri sağlayıcılarına kadar çeşitli stratejiler kullanarak gezinti verilerini alabilir.
+- Genellikle hızlı yanıt veren sayfa tasarımlarıyla iyi çalışırlar.
+- Bunlar son derece ölçeklenebilir ve yüksek performanslıdır çünkü kaynak maliyeti olmadan işlenebilirler (ve zaman aşımından sonra arka planda yenileyebilirler).
+- Bu gezinti sağlayıcıları, basit statik yapılandırmalardan çeşitli dinamik veri sağlayıcılarına kadar çeşitli stratejileri kullanarak gezinti verilerini alabilir.
 
-Veri sağlayıcısına örnek olarak, gezinti düğümlerini numaralandırma ve güvenlik kırpmayı verimli bir şekilde işleme esnekliği sağlayan Arama odaklı gezintiyi kullanabilirsiniz.
+Veri sağlayıcısına örnek olarak, gezinti düğümlerini listeleme ve güvenlik kırpma işlemlerini verimli bir şekilde işleme esnekliği sağlayan **Arama temelli gezinti** kullanmaktır.
 
-Özel gezinti sağlayıcıları oluşturmak için diğer popüler **seçenekler vardır**. Özel gezinti [sağlayıcısı oluşturma konusunda SharePoint için lütfen](/sharepoint/dev/solution-guidance/portal-navigation) Web Sitem Online portalları için Gezinti çözümleri'ni gözden geçin.
+**Özel gezinti sağlayıcıları** oluşturmak için başka popüler seçenekler de vardır. Özel gezinti sağlayıcısı oluşturma konusunda daha fazla rehberlik [için lütfen SharePoint Çevrimiçi portallar](/sharepoint/dev/solution-guidance/portal-navigation) için gezinti çözümlerini gözden geçirin.
 
-Arama'ı kullanarak, sürekli gezinmeyi kullanarak arka planda yerleşik olarak yer alan dizinlerden yararlan bulabilirsiniz. Arama sonuçları arama dizininden çekilir ve sonuçlar güvenlikle birlikte kırpıldı. Bu genellikle, güvenlik kırpma gerektiğinde, ilk kullanıma kullanıman gezinti sağlayıcılarından daha hızlıdır. Özellikle karmaşık bir site yapınız varsa, yapısal gezinti aramanızı kullanmak sayfa yükleme sürelerini önemli ölçüde hızlandıracak. Yönetilen gezinti üzerinden bunun en büyük avantajı, güvenlik kırpmadan yararlanmadır.
+Aramayı kullanarak, sürekli gezinmeyi kullanarak arka planda oluşturulan dizinleri kullanabilirsiniz. Arama sonuçları arama dizininden çekilir ve sonuçlar güvenlikle kırpılır. Bu genellikle güvenlik kırpması gerektiğinde kullanıma kullanıma yönelik gezinti sağlayıcılarından daha hızlıdır. Özellikle karmaşık bir site yapınız varsa yapısal gezinti araması kullanmak sayfa yükleme süresini önemli ölçüde hızlandıracaktır. Bunun yönetilen gezintiye göre temel avantajı, güvenlik kırpmasından yararlanmanızdır.
 
-Bu yaklaşım, özel bir ana sayfa oluşturmayı ve ilk önce gezinti kodunu özel HTML'ye değiştirmeyi içerir. Dosyada gezinti kodunu değiştirmek için aşağıdaki örnekte belirtilen bu yordamı izleyin `seattle.html`. Bu örnekte, dosyayı açar ve tüm `seattle.html` öğeyi özel HTML koduyla `id="DeltaTopNavigation"` değiştirirsiniz.
+Bu yaklaşım, özel bir ana sayfa oluşturmayı ve kullanıma açık gezinti kodunu özel HTML ile değiştirmeyi içerir. dosyasındaki `seattle.html`gezinti kodunu değiştirmek için aşağıdaki örnekte özetlenen bu yordamı izleyin. Bu örnekte, dosyayı açar `seattle.html` ve öğenin tamamını `id="DeltaTopNavigation"` özel HTML koduyla değiştirirsiniz.
 
-### <a name="example-replace-the-out-of-the-box-navigation-code-in-a-master-page"></a>Örnek: Ana sayfada ilk önce kullanılan gezinti kodunu değiştirme
+### <a name="example-replace-the-out-of-the-box-navigation-code-in-a-master-page"></a>Örnek: Bir ana sayfadaki kullanıma özel gezinti kodunu değiştirme
 
-1. Site Sayfası sayfasına Ayarlar gidin.
-2. Ana Sayfalar'a tıklayarak ana sayfa **galerisini açın**.
-3. Buradan kitaplıkta gezinerek dosyayı indirebilirsiniz `seattle.master`.
-4. Aşağıdaki ekran görüntüsinde, metin düzenleyicisi kullanarak kodu düzenleyin ve kod bloğunı silin.<br/>![Gösterilen kod bloğuni silin.](../media/SPONavOptionsDeleteCodeBlock.png)<br/>
-5. Etiketler arasındaki kodu kaldırın `<SharePoint:AjaxDelta id="DeltaTopNavigation">` ve `<\SharePoint:AjaxDelta>` aşağıdaki kod parçacığıyla değiştirin:<br/>
+1. Site Ayarlar sayfasına gidin.
+2. **Ana Sayfalar'a** tıklayarak ana sayfa galerisini açın.
+3. Buradan kitaplıkta gezinebilir ve dosyasını `seattle.master`indirebilirsiniz.
+4. Bir metin düzenleyicisi kullanarak kodu düzenleyin ve aşağıdaki ekran görüntüsünde kod bloğunu silin.<br/>![Gösterilen kod bloğunu silin.](../media/SPONavOptionsDeleteCodeBlock.png)<br/>
+5. ve `<\SharePoint:AjaxDelta>` etiketleri arasındaki `<SharePoint:AjaxDelta id="DeltaTopNavigation">` kodu kaldırın ve aşağıdaki kod parçacığıyla değiştirin:<br/>
 
 ```javascript
 <div id="loading">
@@ -200,28 +200,28 @@ Bu yaklaşım, özel bir ana sayfa oluşturmayı ve ilk önce gezinti kodunu öz
 ```
 
 <br/>
-6. Başlangıçtaki yükleme resmi bağlantısı etiketinde URL'yi, site koleksiyonu yükleme resminin bağlantısıyla değiştirin. Değişikliklerinizi yapın ve dosyayı yeniden adlandırarak ana sayfa galerisine yükleyin. Bu, yeni bir .master dosyası üretir.<br/>
-7. Bu HTML, JavaScript kodundan döndürülen arama sonuçları tarafından doldurulacak temel işaretlemedir. Aşağıdaki parçacıkta da göstermek istediğiniz var kök = "site koleksiyonu URL'si" değerini değiştirmek için kodu düzenlemeniz gerekir:<br/>
+6. Başlangıçtaki yükleme görüntüsü tutturucu etiketindeki URL'yi site koleksiyonunuzdaki bir yükleme görüntüsünün bağlantısıyla değiştirin. Değişiklikleri yaptıktan sonra dosyayı yeniden adlandırın ve ana sayfa galerisine yükleyin. Bu, yeni bir .master dosyası oluşturur.<br/>
+7. Bu HTML, JavaScript kodundan döndürülen arama sonuçlarıyla doldurulacak temel işaretlemedir. Aşağıdaki kod parçacığında gösterildiği gibi var root = "site koleksiyonu URL'si" değerini değiştirmek için kodu düzenlemeniz gerekir:<br/>
 
 ```javascript
 var root = "https://spperformance.sharepoint.com/sites/NavigationBySearch";
 ```
 
 <br/>
-8. Sonuçlar self.nodes dizisine atanır ve çıktıyı kendi kendine.hiyerarşiye atamak için linq.js kullanılarak nesnelerden bir hiyerarşi yerleşik olarak bulunur. Bu dizi, HTML'ye bağlı olan nesnedir. Bu, öz nesneyi ko.applyBinding() işlevine ileterek toggleView() işlevinde yapılır.<br/>Bu da hiyerarşi dizisinin aşağıdaki HTML'ye bağlı olmasına neden olur:<br/>
+8. Sonuçlar self.nodes dizisine atanır ve çıkışı bir dizi self.hierarchy'e atamak linq.js kullanılarak nesnelerden bir hiyerarşi oluşturulur. Bu dizi, HTML'ye bağlı nesnedir. Bu işlem, toggleView() işlevinde kendi nesnesini ko.applyBinding() işlevine geçirerek yapılır.<br/>Bu, hiyerarşi dizisinin aşağıdaki HTML'ye bağlanmasına neden olur:<br/>
 
 ```javascript
 <div data-bind="foreach: hierarchy" class="noindex ms-core-listMenu-horizontalBox">
 ```
 
-İşlevde yapılan alt `mouseenter` `mouseexit` site açılan menülerini işlemek için olay işleyicileri ve bunlar en üst düzey gezintiye `addEventsToElements()` eklenir.
+ve `mouseexit` için `mouseenter` olay işleyicileri, işlevinde yapılan alt site açılan menülerini işlemek için üst düzey gezintiye `addEventsToElements()` eklenir.
 
-Karmaşık gezinti örneğimizde, yerel önbelleğe almadan temiz bir sayfa yükü, yönetilen gezinti yaklaşımına benzer bir sonuç elde etmek için sunucuya harcanan zamanı karşılaştırma yapısal gezinti bölmesinden kestiğini gösteriyor.
+Karmaşık gezinti örneğimizde, yerel önbelleğe alma olmadan yapılan yeni bir sayfa yükü, yönetilen gezinti yaklaşımına benzer bir sonuç elde etmek için sunucuda harcanan sürenin karşılaştırma yapısal gezintisinden azaltıldığını gösterir.
 
 ### <a name="about-the-javascript-file"></a>JavaScript dosyası hakkında...
 
 >[!NOTE]
->Özel JavaScript kullanıyorsanız, ortak javascript CDN ve dosyanın farklı bir konumda CDN olun.
+>Özel JavaScript kullanıyorsanız, genel CDN etkinleştirildiğinden ve dosyanın CDN bir konumda olduğundan emin olun.
 
 JavaScript dosyasının tamamı aşağıdaki gibidir:
 
@@ -458,27 +458,27 @@ function addEventsToElements() {
 
 ```
 
-Yukarıda işlevde gösterilen kodu özetlemek `jQuery $(document).ready` için, bir oluşturuldu `viewModel object` ve sonra bu nesne `loadNavigationNodes()` üzerindeki işlev çağrılır. Bu işlev, istemci tarayıcısının HTML5 yerel depolamasında depolanan önceden yerleşik gezinti hiyerarşisini yükler veya işlevi arar `queryRemoteInterface()`.
+İşlevde `jQuery $(document).ready` yukarıda gösterilen kodu özetlemek için bir `viewModel object` oluşturulur ve bu nesnedeki `loadNavigationNodes()` işlev çağrılır. Bu işlev, istemci tarayıcısının HTML5 yerel depolama alanında depolanan önceden oluşturulmuş gezinti hiyerarşisini yükler veya işlevini `queryRemoteInterface()`çağırır.
 
-`QueryRemoteInterface()` betikte daha önce tanımlanan `getRequest()` sorgu parametresiyle işlevi kullanarak bir istek oluşturur ve sonra da sunucudan veri döndürür. Bu veriler temelde, site koleksiyonunda çeşitli özelliklere sahip veri aktarma nesneleri olarak temsil edilen tüm sitelerin bir dizisidir.
+`QueryRemoteInterface()` betiğinde `getRequest()` daha önce tanımlanan sorgu parametresiyle işlevini kullanarak bir istek oluşturur ve ardından sunucudan veri döndürür. Bu veriler temelde çeşitli özelliklere sahip veri aktarım nesneleri olarak temsil edilen site koleksiyonundaki tüm sitelerin dizisidir.
 
-Daha sonra bu veriler `SPO.Models.NavigationNode` `Knockout.js` önceden tanımlanmış olan nesnelere ayrıştırılabilir ve bunlar, değerleri daha önce tanımlandığı HTML'e bağleyerek, gözlemlenebilir özellikler oluşturmak için kullanılır.
+Daha sonra bu veriler, değerleri daha önce tanımladığımız HTML'ye bağlayan veriler tarafından kullanılmak üzere gözlemlenebilir özellikler oluşturmak için kullanılan `Knockout.js` önceden tanımlanmış `SPO.Models.NavigationNode` nesnelere ayrıştırılır.
 
-Bundan sonra nesneler bir sonuç dizisine yer verir. Bu dizi, Açılır öğe kullanılarak JSON'da ayrıştırıldı ve gelecek sayfa yüklemelerinde daha iyi performans için yerel tarayıcı depolamasında depolanır.
+Nesneler daha sonra bir sonuç dizisine konur. Bu dizi, Knockout kullanılarak JSON'a ayrıştırılır ve gelecekteki sayfa yüklemelerinde daha iyi performans için yerel tarayıcı depolama alanında depolanır.
 
 ### <a name="benefits-of-this-approach"></a>Bu yaklaşımın avantajları
 
-Bu yaklaşımın en [büyük](#example-replace-the-out-of-the-box-navigation-code-in-a-master-page) faydalarından biri, HTML5 yerel depolama alanı kullanılarak gezintinin, sayfayı bir sonraki yükleykisinde kullanıcı için yerel olarak depolanmasıdır. Yapısal gezinti için arama API'sini kullanmayla ilgili önemli performans iyileştirmeleri elde ediyor; bununla birlikte, bu işlevselliği yürütmek ve özelleştirmek için bazı teknik özellikler de gerektir.
+[Bu yaklaşımın](#example-replace-the-out-of-the-box-navigation-code-in-a-master-page) önemli avantajlarından biri, HTML5 yerel depolama kullanılarak gezintinin sayfayı bir sonraki yükleyişinde kullanıcı için yerel olarak depolanmasıdır. Yapısal gezinti için arama API'sini kullanarak önemli performans iyileştirmeleri elde ederiz; ancak bu işlevi yürütmek ve özelleştirmek için bazı teknik yetenekler gerekir.
 
-Örnek [uygulama içinde](#example-replace-the-out-of-the-box-navigation-code-in-a-master-page), siteler ilk ve son kullanılan yapısal gezintiyle aynı şekilde sıralandı; alfabetik sıra. Bu düzenden sapmak istediysiniz, geliştirmeniz ve sürdürmeniz daha karmaşık olur. Ayrıca, bu yaklaşım desteklenen ana sayfalardan sapmayı gerektirir. Özel ana sayfa korunamazsa, siteniz Microsoft'un ana sayfalarda edatları ve geliştirmeleri kaçıracak.
+[Örnek uygulamada](#example-replace-the-out-of-the-box-navigation-code-in-a-master-page), siteler kullanıma yönelik yapısal gezinti ile aynı şekilde sıralanır; alfabetik sıra. Bu düzenden sapmak istiyorsanız, geliştirmek ve korumak daha karmaşık olacaktır. Ayrıca, bu yaklaşım desteklenen ana sayfalardan sapmanızı gerektirir. Özel ana sayfa korunmazsa, siteniz Microsoft'un ana sayfalarda yaptığı güncelleştirmeleri ve iyileştirmeleri kaçıracaktır.
 
-Yukarıdaki [kod aşağıdaki](#about-the-javascript-file) bağımlılıklara sahip:
+[Yukarıdaki kod](#about-the-javascript-file) aşağıdaki bağımlılıklara sahiptir:
 
 - jQuery - https://jquery.com/
-- NakavtJ'ler - https://knockoutjs.com/
-- Linq.js - https://linqjs.codeplex.com/, veya github.com/neuecc/linq.js
+- KnockoutJS - https://knockoutjs.com/
+- Linq.js - https://linqjs.codeplex.com/veya github.com/neuecc/linq.js
 
-LinqJS'nin geçerli sürümü, yukarıdaki kodda kullanılan ByHierarchy yöntemini içermemektedir ve gezinti kodunu bozar. Bunu düzeltmek için dosya dosyasına satırdan Linq.js yöntemini ekleyin `Flatten: function ()`.
+LinqJS'nin geçerli sürümü yukarıdaki kodda kullanılan ByHierarchy yöntemini içermez ve gezinti kodunu bozar. Bunu düzeltmek için, satırından `Flatten: function ()`önce Linq.js dosyasına aşağıdaki yöntemi ekleyin.
 
 ```javascript
 ByHierarchy: function(firstLevel, connectBy, orderBy, ascending, parent) {
@@ -547,4 +547,4 @@ ByHierarchy: function(firstLevel, connectBy, orderBy, ascending, parent) {
 
 [SharePoint Server'da yönetilen gezintiye genel bakış](/sharepoint/administration/overview-of-managed-navigation)
 
-[Yapısal gezinti önbelleğe alma ve performans](https://support.office.com/article/structural-navigation-and-performance-f163053f-8eca-4b9c-b973-36b395093b43)
+[Yapısal gezinti önbelleği ve performansı](https://support.office.com/article/structural-navigation-and-performance-f163053f-8eca-4b9c-b973-36b395093b43)

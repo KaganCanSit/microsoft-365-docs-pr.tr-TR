@@ -1,8 +1,8 @@
 ---
-title: SharePoint Online modern ve klasik yayımlama sitesi sayfalarında sayfa aramalarını en iyi duruma getirme
+title: SharePoint Çevrimiçi modern ve klasik yayımlama sitesi sayfalarında sayfa çağrılarını iyileştirme
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 03/11/2020
 audience: ITPro
 ms.topic: conceptual
@@ -18,67 +18,67 @@ ms.custom: Adm_O365
 ms.reviewer: sstewart
 search.appverid:
 - MET150
-description: SharePoint Online'da, çağrı sayısını SharePoint Online hizmeti uç noktalarıyla sınırlandırarak modern ve klasik yayımlama sitesi sayfalarını nasıl en SharePoint öğrenin.
-ms.openlocfilehash: 298e928f339d82f472f73e22998b8762461cc209
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: SharePoint Online hizmet uç noktalarına yapılan çağrı sayısını sınırlayarak SharePoint Online'da modern ve klasik yayımlama sitesi sayfalarını iyileştirmeyi öğrenin.
+ms.openlocfilehash: 7636e1cf2dfac6dc7fea4158f1f22a7336d6485e
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988625"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65101237"
 ---
-# <a name="optimize-page-calls-in-sharepoint-online-modern-and-classic-publishing-site-pages"></a>SharePoint Online modern ve klasik yayımlama sitesi sayfalarında sayfa aramalarını en iyi duruma getirme
+# <a name="optimize-page-calls-in-sharepoint-online-modern-and-classic-publishing-site-pages"></a>SharePoint Çevrimiçi modern ve klasik yayımlama sitesi sayfalarında sayfa çağrılarını iyileştirme
 
-Çevrimiçi SharePoint klasik yayımlama sitelerinin her ikisi de özellikler ve CDN'lerden veri yük SharePoint bağlantılar içerir. Bir sayfa tarafından ne kadar çok çağrı yapılırsa, sayfanın yüklenmesi o kadar uzun sürer. Bu, son kullanıcının **gecikme süresini veya EUPL'i** **algıladığı olarak bilinir**.
+Hem SharePoint Çevrimiçi modern hem de klasik yayımlama siteleri, özellikler ve CDN'ler SharePoint veri yükleyen (veya aramalar yapılan) bağlantılar içerir. Bir sayfa tarafından ne kadar çok çağrı yapılırsa, sayfanın yüklenmesi o kadar uzun sürer. Bu, **son kullanıcının algılanan gecikme süresi** veya **EUPL** olarak bilinir.
 
-Bu makale, modern ve klasik yayımlama sitesi sayfalarından dış uç noktalara yapılan çağrıların sayısını ve etkisini belirlemenin ve son kullanıcının gecikme süresini algıladığı etkiyi sınırlamayı anlamanıza yardımcı olur.
+Bu makale, modern ve klasik yayımlama sitesi sayfalarınızdaki dış uç noktalara yapılan çağrıların sayısını ve etkisini belirlemeyi ve son kullanıcının algıladığı gecikme süresini nasıl sınırlayacağınızı anlamanıza yardımcı olur.
 
 >[!NOTE]
->Çevrimiçi modern portallarda performans SharePoint için bkz[. Modern modern portalda SharePoint.](/sharepoint/modern-experience-performance)
+>SharePoint Çevrimiçi modern portallardaki performans hakkında daha fazla bilgi için bkz. [Modern SharePoint deneyiminde performans](/sharepoint/modern-experience-performance).
 
-## <a name="use-the-page-diagnostics-for-sharepoint-tool-to-analyze-page-calls"></a>Sayfa aramalarını çözümlemek için SharePoint Tanılama aracını kullanma
+## <a name="use-the-page-diagnostics-for-sharepoint-tool-to-analyze-page-calls"></a>Sayfa çağrılarını analiz etmek için SharePoint için Sayfa Tanılama aracını kullanma
 
-SharePoint için Sayfa Tanılama aracı, hem SharePointhttps://www.microsoft.com/edge) Online modern portalı hem de klasik yayımlama sitesi sayfalarını analizen yeni Microsoft Edge ve Chrome tarayıcıları için tarayıcı uzantısıdır. Bu araç, sayfanın tanımlanmış bir performans ölçütleri kümesine karşı nasıl bir performans performansına sahip olduğunu gösteren, analize tabi her sayfa için bir rapor sağlar. Yeni uygulama için Sayfa Tanılama aracını yüklemek ve SharePoint için, SharePoint [Online'da Sayfa Tanılama aracını kullanma sayfasını ziyaret edin](page-diagnostics-for-spo.md).
+SharePoint için Sayfa Tanılama aracı, hem SharePoint Çevrimiçi modern portalı hem de klasik yayımlama sitesi sayfalarını analiz eden yeni Microsoft Edge (https://www.microsoft.com/edge) ve Chrome tarayıcıları) için bir tarayıcı uzantısıdır. Araç, analiz edilen her sayfa için sayfanın tanımlı bir performans ölçütleri kümesine göre nasıl performans gösterdiğini gösteren bir rapor sağlar. SharePoint için Sayfa Tanılama aracını yüklemek ve hakkında bilgi edinmek için [SharePoint Online için Sayfa Tanılama aracını kullanma](page-diagnostics-for-spo.md) sayfasını ziyaret edin.
 
 >[!NOTE]
 >Sayfa Tanılama aracı yalnızca SharePoint Online için çalışır ve SharePoint sistem sayfasında kullanılamaz.
 
-SharePoint için Sayfa Tanılama aracıyla bir SharePoint sitesi sayfasını çözümleyebilirsiniz; Dış aramalar hakkında bilgileri Tanılama testleri bölmesindeki SharePoint istekleri _sonucunda_ görebilirsiniz. Site sayfasında arama taban çizgisi sayısından daha az arama varsa, çizgi yeşil, sayfa taban çizgisi numarasını aşıyorsa kırmızı görüntülenir. Taban çizgisi numarası, modern ve klasik sayfalar için farklıdır, çünkü klasik site sayfalarında HTTP1.1 ve modern sayfalar HTTP2.0 kullanır:
+SharePoint için Sayfa Tanılama aracıyla bir SharePoint site sayfasını çözümlediğinizde, _Tanılama testleri_ bölmesindeki **SharePoint için istekler bölmesinde dış çağrılar** hakkındaki bilgileri görebilirsiniz. Site sayfası çağrıların taban çizgisi sayısından daha azını içeriyorsa çizgi yeşil, sayfa taban çizgisi numarasını aşarsa kırmızı görünür. Klasik site sayfaları HTTP1.1 ve modern sayfalar HTTP2.0 kullandığından, modern ve klasik sayfalar için taban çizgisi numarası farklıdır:
 
-- Modern site sayfalarında **25'den fazla arama** içermesi gerekir
-- Klasik yayımlama sayfalarında **6'dan fazla arama** içermesi gerekir
+- Modern site sayfaları **en fazla 25** çağrı içermelidir
+- Klasik yayımlama sayfaları **en fazla 6** çağrı içermelidir
 
 Olası sonuçlar şunlardır:
 
-- **Dikkat (** kırmızı): Sayfa, temel çağrı sayısını aşıyor
-- **Herhangi bir işlem** gerekmez (yeşil): Sayfa, temel arama sayısından daha az arama içeriyor
+- **Dikkat gerekiyor** (kırmızı): Sayfa, çağrıların taban çizgisi sayısını aşıyor
+- **Eylem gerekmez** (yeşil): Sayfa, temel çağrı sayısından daha az sayıda çağrı içeriyor
 
-Bu **kısmı** SharePoint İstekler sonucu Dikkat gerekiyor bölümünde görünüyorsa, sayfada  toplam arama sayısı ve URL'lerin listesi gibi ayrıntılar için sonucu tıkleyebilirsiniz.
+**SharePoint istekleri** sonucu **Dikkat gerekiyor** bölümünde görünüyorsa, sayfadaki toplam çağrı sayısı ve URL'lerin listesi de dahil olmak üzere ayrıntılar için sonuda tıklayabilirsiniz.
 
-![Sonuçların SharePoint istekler.](../media/modern-portal-optimization/pagediag-requests.png)
+![Sonuçları SharePoint istekleri.](../media/modern-portal-optimization/pagediag-requests.png)
 
 ## <a name="remediate-performance-issues-related-to-too-many-calls-on-a-page"></a>Bir sayfada çok fazla çağrıyla ilgili performans sorunlarını düzeltme
 
-Bir sayfada çok fazla çağrı varsa, yinelenen çağrılar, toplu olarak iş yapılan aramalar veya önbelleğe **alınmış** veri dönüşecek aramalar olup olmadığını belirlemek için SharePoint'ye istekler sonuçları'nın URL'leri listesini kullanabilirsiniz.
+Bir sayfada çok fazla çağrı varsa, sonuçları **SharePoint için İstekler'deki** URL'lerin listesini kullanarak yinelenen çağrılar, toplu işlenmeleri gereken çağrılar veya önbelleğe alınması gereken verileri döndüren çağrılar olup olmadığını belirleyebilirsiniz.
 
-**REST aramalarını toplu olarak çalıştırmak** performans yükünü azaltmaya yardımcı olabilir. API arama toplu işlemi hakkında daha fazla bilgi için bkz [. REST API'leriyle toplu işlem istekleri yapma](/sharepoint/dev/sp-add-ins/make-batch-requests-with-the-rest-apis).
+**REST çağrılarının toplu olarak gerçeklenmesi** , performans yükünü azaltmaya yardımcı olabilir. API çağrısı toplu işlemi hakkında daha fazla bilgi için bkz. [REST API'leriyle toplu iş istekleri yapma](/sharepoint/dev/sp-add-ins/make-batch-requests-with-the-rest-apis).
 
-API **aramalarının** sonuçlarını depolamak için önbellek kullanmak, istemcinin sonraki her sayfa yüklemesi için ek çağrı yapmak yerine önbelleğe alınmış verileri kullanmasına izin vererek, sıcak bir isteğin performansını geliştirebilir. İş gereksinimine bağlı olarak bu çözüme yaklaşımda birçok yol vardır. Normalde veriler tüm kullanıcılar için aynı olacaksa, [_Azure YenidenDis_](https://azure.microsoft.com/services/cache/) önbelleği gibi bir orta katman önbelleğe alma hizmeti kullanmak, kullanıcıların verileri doğrudan SPO'dan değil de önbellek hizmetlerinden istenecek olması nedeniyle, bir sitede API trafiğini önemli ölçüde azaltmaya yönelik harika bir seçenektir. Yalnızca orta katmanın önbelleğini yenilemek için gereken SPO çağrılarıdır. Veriler tek tek kullanıcı temelinde dalgalanma olacaksa, en iyisi LocalStorage ve hatta Tanımlama Bilgisi gibi bir istemci tarafı önbelleği uygulamak olabilir. Bu işlem, aynı kullanıcı tarafından önbellek süresi boyunca daha sonra yapılan sonraki istekleri eleyerek arama hacmini azaltmaya devam eder, ancak ayrılmış bir önbellek hizmetine göre daha az verimli olur. PnP, LocalStorage'i çok az ek geliştirmeyle birlikte kullanabileceğiniz şekilde olanak sağlar.
+Bir API çağrısının sonuçlarını depolamak için **önbellek kullanmak**, istemcinin izleyen her sayfa yükü için ek çağrı yapmak yerine önbelleğe alınmış verileri kullanmasına izin vererek sıcak bir isteğin performansını artırabilir. İş gereksinimine bağlı olarak bu çözüme yaklaşmanın birden çok yolu vardır. Genellikle veriler tüm kullanıcılar için aynı olacaksa [_, Azure Redis_ önbelleği](https://azure.microsoft.com/services/cache/) gibi bir orta katman önbelleğe alma hizmeti kullanmak, kullanıcılar verileri doğrudan SPO'dan değil önbelleğe alma hizmetinden istediğinden, sitedeki API trafiğini önemli ölçüde azaltmak için harika bir seçenektir. Gereken tek SPO çağrısı, orta katmanın önbelleğini yenilemektir. Veriler tek tek kullanıcı bazında dalgalanacaksa, LocalStorage ve hatta Tanımlama Bilgisi gibi bir istemci tarafı önbelleği uygulamak en iyi yöntem olabilir. Bu, önbellek süresi boyunca aynı kullanıcı tarafından yapılan sonraki istekleri ortadan kaldırarak çağrı birimlerini azaltmaya devam eder, ancak ayrılmış önbelleğe alma hizmetinden daha az verimli olur. PnP, LocalStorage'ı çok az ek geliştirmeyle kullanmanıza olanak tanır.
 
-Performans sorunlarını düzeltmek için sayfa düzeltmeleri öncesinde, çözümleme sonuçlarında sayfa yükleme sürelerini not edin. Yeni sonucun taban çizgisi standardı içinde olup olmadığını görmek için düzeltmeden sonra aracı yeniden çalıştırın ve bir geliştirme olup olmadığını görmek için yeni sayfa yükleme süresine bakın.
+Performans sorunlarını düzeltmek için sayfa düzeltmeleri yapmadan önce, çözümleme sonuçlarında sayfa yükleme süresini not edin. Yeni sonucun temel standart içinde olup olmadığını görmek için düzeltmenizden sonra aracı yeniden çalıştırın ve bir iyileştirme olup olmadığını görmek için yeni sayfa yükleme süresini denetleyin.
 
 ![Sayfa yükleme süresi sonuçları.](../media/modern-portal-optimization/pagediag-page-load-time.png)
 
 >[!NOTE]
->Sayfa yükleme süresi ağ yükü, günün saati ve diğer geçici koşullar gibi çeşitli faktörlere bağlı olarak değişiklik gösterebilir. Sonuçların ortalamasını alarken değişiklik yaparak sayfa yükleme sürelerini birkaç kez test edebilirsiniz.
+>Sayfa yükleme süresi, ağ yükü, günün saati ve diğer geçici koşullar gibi çeşitli faktörlere bağlı olarak farklılık gösterebilir. Sonuçları ortalamanıza yardımcı olacak değişiklikler yapmadan önce ve sonra sayfa yükleme süresini birkaç kez test etmelisiniz.
 
 ## <a name="related-topics"></a>İlgili konular
 
-[Çevrimiçi SharePoint performansını ayarlama](tune-sharepoint-online-performance.md)
+[çevrimiçi SharePoint performansını ayarlama](tune-sharepoint-online-performance.md)
 
-[Performans Office 365 ayarlama](tune-microsoft-365-performance.md)
+[Office 365 performansını ayarlama](tune-microsoft-365-performance.md)
 
-[Modern deneyimde SharePoint deneyimi](/sharepoint/modern-experience-performance)
+[Modern SharePoint deneyiminde performans](/sharepoint/modern-experience-performance)
 
 [İçerik teslim ağları](content-delivery-networks.md)
 
-[CDN Online ile Office 365 Content Delivery Network (CDN) SharePoint kullanma](use-microsoft-365-cdn-with-spo.md)
+[SharePoint Online ile Office 365 Content Delivery Network (CDN) kullanma](use-microsoft-365-cdn-with-spo.md)

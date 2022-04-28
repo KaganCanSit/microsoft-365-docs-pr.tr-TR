@@ -1,8 +1,8 @@
 ---
-title: SharePoint Online'da resimleri ve JavaScript'i SharePoint geciktirme
+title: SharePoint Online'da görüntülerin ve JavaScript'in yüklenmesini geciktirme
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 12/3/2019
 audience: Admin
 ms.topic: troubleshooting
@@ -20,33 +20,33 @@ search.appverid:
 - SPO160
 - MET150
 ms.assetid: 74d327e5-755f-4135-b9a5-7b79578c1bf9
-description: Resimlerin ve temel olmayan JavaScript'in yüklenmesini geciktirmek için JavaScript kullanarak SharePoint Online sayfalarının yüklenme sürelerini azaltmayı öğrenin.
-ms.openlocfilehash: 6b8eb479ae33b47081e33e45338c02d46f36e055
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Görüntülerin ve temel olmayan JavaScript'in yüklenmesini geciktirmek için JavaScript kullanarak SharePoint Çevrimiçi sayfaların yükleme süresini nasıl azaltacağınızı öğrenin.
+ms.openlocfilehash: af75b3ede1136894bea0a7f4c00cc9498d194fe3
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62986720"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65101303"
 ---
-# <a name="delay-loading-images-and-javascript-in-sharepoint-online"></a>SharePoint Online'da resimleri ve JavaScript'i SharePoint geciktirme
+# <a name="delay-loading-images-and-javascript-in-sharepoint-online"></a>SharePoint Online'da görüntülerin ve JavaScript'in yüklenmesini geciktirme
 
-Bu makalede, SharePoint Online sayfalarında resimlerin yüklenmesini geciktirmek için JavaScript kullanarak ve ayrıca temel öneme sahip olmayan JavaScript'in sayfa yüklenene kadar yüklenmesini bekletirerek, bu sayfaların yüklenme sürelerini nasıl azaltabilirsiniz? açıklanmıştır.
+Bu makalede, görüntülerin yüklenmesini geciktirmek için JavaScript kullanarak ve sayfa yüklenene kadar gerekli olmayan JavaScript'i yüklemeyi bekleyerek SharePoint Çevrimiçi sayfaların yükleme süresini nasıl azaltabileceğiniz açıklanır.
   
-SharePoint Online'da resimler sayfa yükleme hızlarını olumsuz etkileyebilir. Varsayılan olarak, modern İnternet tarayıcılarının çoğu HTML sayfasını yüklerken resimleri önceden getirir. Bu durum, resimler ekranda görünmüyorsa kullanıcı aşağı kaydırana kadar sayfanın gereksiz bir yavaşlık içinde yüklemesi için neden olabilir. Resimler tarayıcının sayfanın görünür bölümünü yüklemesini engelleyebilir. Bu sorunu çözmek için, JavaScript kullanarak önce resimlerin yüklenmesini atlayabilirsiniz. Ayrıca, temel öneme sahip olmayan JavaScript'in yüklenmesi de SharePoint yavaşlatabilirsiniz. Bu konuda, SharePoint Online'da JavaScript ile sayfa yükleme sürelerini geliştirmek için kullanabileceğiniz bazı yöntemler açıklanmıştır.
+Görüntüler SharePoint Online'da sayfa yükleme hızlarını olumsuz etkileyebilir. Varsayılan olarak, çoğu modern İnternet tarayıcısı html sayfası yüklenirken görüntüleri önceden getirir. Bu, kullanıcı aşağı kaydırana kadar görüntüler ekranda görünmüyorsa sayfanın gereksiz şekilde yavaş yüklenmesine neden olabilir. Görüntüler, tarayıcının sayfanın görünür bölümünü yüklemesini engelleyebilir. Bu sorunu geçici olarak çözmek için javascript kullanarak önce görüntüleri yüklemeyi atlayabilirsiniz. Ayrıca, temel olmayan JavaScript'i yüklemek SharePoint sayfalarınızda indirme sürelerini de yavaşlatabilir. Bu konuda, SharePoint Online'da JavaScript ile sayfa yükleme sürelerini iyileştirmek için kullanabileceğiniz bazı yöntemler açıklanmaktadır.
   
-## <a name="improve-page-load-times-by-delaying-image-loading-in-sharepoint-online-pages-by-using-javascript"></a>JavaScript kullanarak SharePoint Online sayfalarında resim yüklemesini geciktirerek sayfa yükleme sürelerini geliştirme
+## <a name="improve-page-load-times-by-delaying-image-loading-in-sharepoint-online-pages-by-using-javascript"></a>JavaScript kullanarak SharePoint Çevrimiçi sayfalarda görüntü yüklemesini geciktirerek sayfa yükleme sürelerini iyileştirme
 
-Web tarayıcısının resimleri önceden getirmesini önlemek için JavaScript kullanabilirsiniz. Bu, bir bütün olarak belge işlemeyi hızlandırır. Bunu yapmak için, etiketten src \<img\> özniteliğinin değerini kaldırır ve onun yerine bir veri özniteliğinde (data-src gibi) bir dosya yolu kullanılır. Örneğin:
+Bir web tarayıcısının görüntüleri önceden getirmesini önlemek için JavaScript kullanabilirsiniz. Bu, genel belge işlemeyi hızlandırır. Bunu yapmak için src özniteliğinin değerini etiketinden \<img\> kaldırır ve şunun gibi bir veri özniteliğindeki bir dosyanın yoluyla değiştirirsiniz: data-src. Örneğin:
   
 ```html
 <img src="" data-src="/sites/NavigationBySearch/_catalogs/masterpage/media/microsoft-white-8.jpg" />
 ```
 
-Bu yöntem kullanarak, tarayıcı resimleri hemen indirmez. Resim zaten görünüm penceresinde ise, JavaScript tarayıcıya veri özniteliğinden URL'yi almasını ve bunu src özniteliğinin değeri olarak eklemesini söyler. Resim ancak kullanıcı sayfayı kaydırarak görüntüye geldiğinde yüklenir.
+Bu yöntemi kullanarak tarayıcı görüntüleri hemen indirmez. Görüntü zaten görünüm penceresindeyse, JavaScript tarayıcıya url'yi veri özniteliğinden almasını ve src özniteliğinin değeri olarak eklemesini söyler. Görüntü yalnızca kullanıcı kaydırdıkça yüklenir ve görüntüye gelir.
   
-Bunların hepsini yapmak için JavaScript kullan gerekir.
+Bunların tümünü gerçekleştirmek için JavaScript kullanmanız gerekir.
   
-Bir metin dosyasında, öğenin tarayıcıda kullanıcı tarafından görülebilecek bir bölümde olup olmadığını kontrol etmek için **isElementInViewport()** işlevini tanımlayın.
+Bir metin dosyasında, bir öğenin tarayıcının kullanıcı tarafından görünen bölümünde olup olmadığını denetlemek için **isElementInViewport()** işlevini tanımlayın.
   
 ```javascript
 function isElementInViewport(el) {
@@ -62,7 +62,7 @@ function isElementInViewport(el) {
 }
 ```
 
-Ardından, **loadItemsInView()** işlevinde **isElementInViewport() işlevini** kullanın. **loadItemsInView()** işlevi, tarayıcıda kullanıcının görüntülebilen bir bölümünde yer alan ve data-src özniteliğinde değere sahip olan tüm resimleri yükletir. Metin dosyasına aşağıdaki işlevi ekleyin:
+Ardından **, loadItemsInView()** işlevinde **isElementInViewport**() kullanın. **loadItemsInView()** işlevi, tarayıcının kullanıcı tarafından görülebilen bölümünde yer alan data-src özniteliği için bir değere sahip tüm görüntüleri yükler. Metin dosyasına aşağıdaki işlevi ekleyin:
   
 ```javascript
 function loadItemsInView() {
@@ -78,7 +78,7 @@ function loadItemsInView() {
 }
 ```
 
-Son olarak, aşağıdaki örnekte gösterildiği gibi **window.onscroll() işlevinin** içinde **loadItemsInView()** çağrısı yapın. Bu, görünüm görünümündeki tüm resimlerin, kullanıcıya gereken zamanda değil, yüklenirken tam olarak bundan sonra yüklenmelerini sağlar. Metin dosyasına aşağıdakini ekleyin:
+Son olarak, aşağıdaki örnekte gösterildiği gibi **window.onscroll()** içinden **loadItemsInView**() öğesini çağırın. Bu, görünüm penceresindeki tüm görüntülerin kullanıcının ihtiyaç duyduğu şekilde yüklenmesini sağlar, ancak daha önce yüklenmez. Metin dosyasına aşağıdakileri ekleyin:
   
 ```javascript
 //Example of calling loadItemsInView() from within window.onscroll()
@@ -88,7 +88,7 @@ $(window).on("scroll", function () {
 
 ```
 
-SharePoint Online için, #s4-workspace etiketinde kaydırma olayına aşağıdaki #s4 gerekir\<div\>. Bunun nedeni, şeridin sayfanın en üstünde kalmasını sağlamak için pencere olaylarının geçersiz kılınmasıdır.
+SharePoint Online için, #s4 çalışma alanı \<div\> etiketindeki kaydırma olayına aşağıdaki işlevi eklemeniz gerekir. Bunun nedeni, şeridin sayfanın en üstüne bağlı kalmasını sağlamak için pencere olaylarının geçersiz kılınmasıdır.
   
 ```javascript
 //Keep the ribbon at the top of the page
@@ -97,34 +97,34 @@ $('#s4-workspace').on("scroll", function () {
 });
 ```
 
-Metin dosyasını uzantısı JavaScript dosyası olarak kaydedin .js, örneğin delayLoadImages.js.
+Metin dosyasını .js uzantısıyla javascript dosyası olarak kaydedin, örneğin delayLoadImages.js.
   
-delayLoadImages.js Online'da dosyanın içeriğini bir ana sayfaya SharePoint. Bunu yapmak için, ana sayfada üst bilgiye bir betik bağlantısı eklersiniz. Ana sayfaya uygulandıktan sonra, JavaScript SharePoint Online siteniz içinde bu ana sayfa düzenini kullanan tüm sayfalara uygulanır. Alternatif olarak, bunu sitenizin tek bir sayfasında kullanmayı planlasanız, sayfaya JavaScript'i eklemek için betik düzenleyicisi Web Bölümünü kullanın. Daha fazla bilgi için şu konulara bakın:
+delayLoadImages.js yazmayı tamamladıktan sonra, dosyanın içeriğini SharePoint Online'daki bir ana sayfaya ekleyebilirsiniz. Bunu, ana sayfadaki üst bilgiye bir betik bağlantısı ekleyerek yaparsınız. Ana sayfaya eklendikten sonra JavaScript, SharePoint Online sitenizdeki bu ana sayfa düzenini kullanan tüm sayfalara uygulanır. Alternatif olarak, bunu sitenizin yalnızca bir sayfasında kullanmak istiyorsanız, JavaScript'i sayfaya eklemek için betik düzenleyicisi Web Bölümünü kullanın. Daha fazla bilgi için şu konulara bakın:
   
-- [Nasıl yapılır: SharePoint 2013'te siteye ana sayfa uygulama](/sharepoint/dev/general-development/how-to-apply-a-master-page-to-a-site-in-sharepoint)
+- [Nasıl yapılır: SharePoint 2013'te bir siteye ana sayfa uygulama](/sharepoint/dev/general-development/how-to-apply-a-master-page-to-a-site-in-sharepoint)
 
-- [SharePoint 2013'te sayfa düzeni oluşturma](/sharepoint/dev/general-development/how-to-create-a-page-layout-in-sharepoint)
+- [Nasıl yapılır: SharePoint 2013'te sayfa düzeni oluşturma](/sharepoint/dev/general-development/how-to-create-a-page-layout-in-sharepoint)
 
-### <a name="example-referencing-the-javascript-delayloadimagesjs-file-from-a-master-page-in-sharepoint-online"></a>Örnek: SharePoint Online'da delayLoadImages.js sayfasından JavaScript dosyası başvuru
+### <a name="example-referencing-the-javascript-delayloadimagesjs-file-from-a-master-page-in-sharepoint-online"></a>Örnek: SharePoint Online'da ana sayfadan JavaScript delayLoadImages.js dosyasına başvurma
   
-Bu düzenin çalışması için, ana sayfada jQuery'ye de başvurabilirsiniz. Aşağıdaki örnekte, sayfada birkaç resim daha vardır, ancak ilk sayfa yüklemesinde yalnızca bir resmin yükleniyor olduğunu görebilirsiniz.
+Bunun çalışması için ana sayfada jQuery'ye de başvurmanız gerekir. Aşağıdaki örnekte, ilk sayfa yüklemesinde yalnızca bir görüntünün yüklendiğini ancak sayfada birkaç resim daha olduğunu görebilirsiniz.
   
-![Bir resmin sayfaya yükleniyor olduğunu gösteren ekran görüntüsü.](../media/3d177ddb-67e5-43a7-b327-c9f9566ca937.png)
+![Sayfaya yüklenen bir görüntüyü gösteren ekran görüntüsü.](../media/3d177ddb-67e5-43a7-b327-c9f9566ca937.png)
   
-Aşağıdaki ekran görüntüsünde, kalan resimler ekranı kaydırarak görüntüye indirildikten sonra bunlarda indirilir.
+Aşağıdaki ekran görüntüsünde, görüntüye kaydırıldıktan sonra indirilen görüntülerin geri kalanı gösterilmektedir.
   
-![Sayfaya yüklenen birkaç resmi gösteren ekran görüntüsü.](../media/95eb2b14-f6a1-4eac-a5cb-96097e49514c.png)
+![Sayfaya yüklenen birkaç görüntüyü gösteren ekran görüntüsü.](../media/95eb2b14-f6a1-4eac-a5cb-96097e49514c.png)
   
-Performansı artırmaya yönelik etkili bir teknik olan JavaScript kullanarak resim yüklemesini geciktirme; Bununla birlikte, teknik bir genel web sitesinde uygulanırsa, arama motorları resimlerde, normal uzatlı resimlerde olduğu gibi gezinememektedir. Bu durum arama motorlarında sıralamaları etkileyebilir, çünkü resmin kendi meta verileri, sayfa yüklenirken gerçekten orada olmaz. Arama motoru gezginleri yalnızca HTML'yi okur ve bu nedenle resimleri sayfada içerik olarak görmez. Resimler, arama sonuçlarında sayfaları dereceli yapmak için kullanılan faktörlerdendir. Bu işe giriş niteliğindeki bir yol, resimleriniz için giriş metinlerini kullanmaktır.
+JavaScript kullanarak görüntü yüklemesini geciktirme, performansı artırmada etkili bir teknik olabilir; Ancak, teknik genel bir web sitesine uygulanırsa, arama motorları görüntüleri düzenli olarak biçimlendirilmiş bir görüntüde gezindikleri gibi gezinemez. Görüntüdeki meta veriler sayfa yüklenene kadar orada olmadığından bu durum arama motorlarının derecelendirmelerini etkileyebilir. Arama motoru gezginleri yalnızca HTML'yi okur ve bu nedenle resimleri sayfada içerik olarak görmez. Görüntüler, arama sonuçlarında sayfaları sıralamak için kullanılan faktörlerden biridir. Bunun geçici bir yolu, resimleriniz için giriş metni kullanmaktır.
   
-## <a name="github-code-sample-injecting-javascript-to-improve-performance"></a>GitHub kodu örneği: Performansı artırmak için JavaScript ekleme
+## <a name="github-code-sample-injecting-javascript-to-improve-performance"></a>GitHub kod örneği: Performansı artırmak için JavaScript ekleme
 
-Bu makalede verilen JavaScript eklemesi makalesi [ve kod](https://go.microsoft.com/fwlink/p/?LinkId=524759) örneğini GitHub.
+GitHub'de sağlanan [JavaScript ekleme](https://go.microsoft.com/fwlink/p/?LinkId=524759) makalesini ve kod örneğini kaçırmayın.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Office 2013 ve Kurumlar için Microsoft 365 Uygulamaları'de desteklenen tarayıcılar](https://support.office.com/article/57342811-0dc4-4316-b773-20082ced8a82)
+[Office 2013 ve Kurumlar için Microsoft 365 Uygulamaları'da desteklenen tarayıcılar](https://support.office.com/article/57342811-0dc4-4316-b773-20082ced8a82)
   
-[Nasıl yapılır: SharePoint 2013'te siteye ana sayfa uygulama](/sharepoint/dev/general-development/how-to-apply-a-master-page-to-a-site-in-sharepoint)
+[Nasıl yapılır: SharePoint 2013'te bir siteye ana sayfa uygulama](/sharepoint/dev/general-development/how-to-apply-a-master-page-to-a-site-in-sharepoint)
   
-[SharePoint 2013'te sayfa düzeni oluşturma](/sharepoint/dev/general-development/how-to-create-a-page-layout-in-sharepoint)
+[Nasıl yapılır: SharePoint 2013'te sayfa düzeni oluşturma](/sharepoint/dev/general-development/how-to-create-a-page-layout-in-sharepoint)

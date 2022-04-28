@@ -1,8 +1,8 @@
 ---
-title: Yüksek kullanılabilirlik federasyon kimlik doğrulaması Aşama 3 AD FS sunucularını yapılandırma
+title: Yüksek kullanılabilirlik federasyon kimlik doğrulaması 3. Aşama AD FS sunucularını yapılandırma
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 11/25/2019
 audience: ITPro
 ms.topic: article
@@ -15,45 +15,45 @@ ms.custom:
 - Ent_Solutions
 - seo-marvel-apr2020
 ms.assetid: 202b76ff-74a6-4486-ada1-a9bf099dab8f
-description: Aynı dosyada yüksek kullanılabilirlik federal kimlik doğrulamanız için AD FS sunucularını Microsoft 365 yapılandırmayı Microsoft Azure.
-ms.openlocfilehash: c26fc68aa382ce93c62b6edbce4040b7e0813474
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Microsoft Azure'da Microsoft 365 için yüksek kullanılabilirlik federasyon kimlik doğrulamanız için AD FS sunucularını oluşturmayı ve yapılandırmayı öğrenin.
+ms.openlocfilehash: ed0974c8286a5bbad083152d2e2f9aeb01f659df
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988735"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65101259"
 ---
-# <a name="high-availability-federated-authentication-phase-3-configure-ad-fs-servers"></a>Yüksek kullanılabilirlik federasyon kimlik doğrulaması Aşama 3: AD FS sunucularını yapılandırma
+# <a name="high-availability-federated-authentication-phase-3-configure-ad-fs-servers"></a>Yüksek kullanılabilirlik federasyon kimlik doğrulaması 3. Aşama: AD FS sunucularını yapılandırma
 
-Azure altyapı hizmetlerde şirket içi kimlik doğrulaması için Microsoft 365 dağıtımın bu aşamasında, bir iç yük dengeleyici ve iki AD FS sunucusu oluşturun.
+Azure altyapı hizmetlerinde Microsoft 365 federasyon kimlik doğrulaması için yüksek kullanılabilirlik dağıtmanın bu aşamasında, bir iç yük dengeleyici ve iki AD FS sunucusu oluşturursunuz.
   
-Aşama 4: Web uygulaması sunucularını [yapılandırma aşamasına başlamadan önce bu aşamayı tamamlamanız gerekir](high-availability-federated-authentication-phase-4-configure-web-application-pro.md). Tüm [aşamalar için Bkz. Azure'da Microsoft 365](deploy-high-availability-federated-authentication-for-microsoft-365-in-azure.md) için yüksek kullanılabilirlik federal kimlik doğrulamasını dağıtma.
+[4. Aşama: Web uygulaması proxy'lerini yapılandırma](high-availability-federated-authentication-phase-4-configure-web-application-pro.md) aşamasına geçmeden önce bu aşamayı tamamlamanız gerekir. Tüm aşamalar için bkz. [Azure'da Microsoft 365 için yüksek kullanılabilirlik federasyon kimlik doğrulamasını dağıtma](deploy-high-availability-federated-authentication-for-microsoft-365-in-azure.md).
   
 ## <a name="create-the-ad-fs-server-virtual-machines-in-azure"></a>Azure'da AD FS sunucusu sanal makinelerini oluşturma
 
-İki AD FS sunucusu için sanal makineler oluşturmak üzere aşağıdaki PowerShell komut bloğunı kullanın. Bu PowerShell komut kümesi aşağıdaki tablolarda yer alan değerleri kullanır:
+İki AD FS sunucusu için sanal makineleri oluşturmak için aşağıdaki PowerShell komut bloğunu kullanın. Bu PowerShell komut kümesi aşağıdaki tablolardaki değerleri kullanır:
   
-- Sanal makineleriniz için M Tablosu
+- Sanal makineleriniz için Tablo M
     
 - Kaynak gruplarınız için Tablo R
     
 - Sanal ağ ayarlarınız için Tablo V
     
-- Alt ağların için S Tablosu
+- Alt ağlarınız için Tablo S
     
-- Tablo I, statik IP adresleriniz için
+- Statik IP adresleriniz için Tablo I
     
-- Kullanılabilirlik kümeniz için A Tablosu
+- Kullanılabilirlik kümeleriniz için Tablo A
     
-Aşama [2'de](high-availability-federated-authentication-phase-2-configure-domain-controllers.md) Tablo M'yi tanımlamış olmalısınız: Aşama 1'de etki alanı denetleyicileriyle Tabloları R, V, S, I ve [A'da yapılandırın: Azure'i yapılandırma](high-availability-federated-authentication-phase-1-configure-azure.md).
+[2. Aşama: 1. Aşamada R](high-availability-federated-authentication-phase-2-configure-domain-controllers.md), V, S, I ve A Tablolarını yapılandırma: [Azure'ı yapılandırma](high-availability-federated-authentication-phase-1-configure-azure.md) aşamasında M Tablosunu tanımlamış olduğunuzu hatırlayın.
   
 > [!NOTE]
-> Aşağıdaki komut kümeleri, en son Sürüm Azure PowerShell. Bkz[. Yeni e-Azure PowerShell](/powershell/azure/get-started-azureps). 
+> Aşağıdaki komut kümeleri Azure PowerShell en son sürümünü kullanır. Bkz. [Azure PowerShell ile Kullanmaya başlayın](/powershell/azure/get-started-azureps). 
   
-İlk olarak, iki AD FS sunucusu için bir Azure iç yük dengeleyicisi oluşturun. Karakterleri kaldırarak değişkenler için değerleri \< and > belirtin. Tüm doğru değerleri sağladığınız zaman, sonuç bloğunı Azure PowerShell isteminde veya PowerShell ISE'de çalıştırın.
+İlk olarak, iki AD FS sunucusu için bir Azure iç yük dengeleyici oluşturursunuz. Karakterleri kaldırarak değişkenlerin \< and > değerlerini belirtin. Tüm uygun değerleri sağladığınızda, elde edilen bloğu Azure PowerShell komut isteminde veya PowerShell ISE'de çalıştırın.
   
 > [!TIP]
-> Özel ayarlarınıza bağlı olarak hazır çalıştırlı PowerShell komut blokları oluşturmak için bu Microsoft Excel [kullanın](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/downloads/O365FedAuthInAzure_Config.xlsx). 
+> Özel ayarlarınıza göre çalışmaya hazır PowerShell komut blokları oluşturmak için bu [Microsoft Excel yapılandırma çalışma kitabını](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/downloads/O365FedAuthInAzure_Config.xlsx) kullanın. 
 
 ```powershell
 # Set up key variables
@@ -74,9 +74,9 @@ $lbrule=New-AzLoadBalancerRuleConfig -Name "HTTPSTraffic" -FrontendIpConfigurati
 New-AzLoadBalancer -ResourceGroupName $rgName -Name "ADFSServers" -Location $locName -LoadBalancingRule $lbrule -BackendAddressPool $beAddressPool -Probe $healthProbe -FrontendIpConfiguration $frontendIP
 ```
 
-Ardından, AD FS sunucusu sanal makinelerini oluşturun.
+Ardından AD FS sunucusu sanal makinelerini oluşturun.
   
-Tüm doğru değerleri sağladığınız zaman, sonuç bloğunı Azure PowerShell isteminde veya PowerShell ISE'de çalıştırın.
+Tüm uygun değerleri sağladığınızda, elde edilen bloğu Azure PowerShell komut isteminde veya PowerShell ISE'de çalıştırın.
   
 ```powershell
 # Set up variables common to both virtual machines
@@ -131,11 +131,11 @@ New-AzVM -ResourceGroupName $rgName -Location $locName -VM $vm
 ```
 
 > [!NOTE]
-> Bu sanal makineler bir intranet uygulamasına yönelik olduğundan, onlara bir genel IP adresi veya DNS etki alanı adı etiketi atanmaz ve İnternet'e açık olur. Ancak bu, onlara Azure portaldan bağlanamazsınız anlamına da gelir. Bu **Bağlan**, sanal makinenin özelliklerini görüntülerken kullanılamaz. Sanal makineye özel IP adresini veya intranet DNS adını kullanarak bağlanmak için Uzak Masaüstü Bağlantısı donatısını veya başka bir Uzak Masaüstü aracını kullanın.
+> Bu sanal makineler bir intranet uygulamasına ait olduğundan, bunlara bir genel IP adresi veya DNS etki alanı adı etiketi atanıp İnternet'e sunulmaz. Ancak bu, bunlara Azure portal bağlanamayacağınız anlamına da gelir. sanal makinenin özelliklerini görüntülediğinizde **Bağlan** seçeneği kullanılamaz. Özel IP adresini veya intranet DNS adını kullanarak sanal makineye bağlanmak için Uzak Masaüstü Bağlantısı aksesuarını veya başka bir Uzak Masaüstü aracını kullanın.
   
-Her sanal makine için, tercihiniz uzak masaüstü istemcisini kullanın ve bir uzak masaüstü bağlantısı oluşturun. İntranet DNS'sini veya bilgisayar adını ve yerel yönetici hesabının kimlik bilgilerini kullanın.
+Her sanal makine için, seçtiğiniz uzak masaüstü istemcisini kullanın ve bir uzak masaüstü bağlantısı oluşturun. İntranet DNS'sini veya bilgisayar adını ve yerel yönetici hesabının kimlik bilgilerini kullanın.
   
-Her sanal makinede, komut isteminde şu komutları kullanarak bunları uygun Active Directory Etki Alanı Hizmetleri (AD DS) Windows PowerShell katılın.
+Her sanal makine için, Windows PowerShell isteminde bu komutlarla bunları uygun Active Directory Domain Services (AD DS) etki alanına ekleyin.
   
 ```powershell
 $domName="<AD DS domain name to join, such as corp.contoso.com>"
@@ -144,18 +144,18 @@ Add-Computer -DomainName $domName -Credential $cred
 Restart-Computer
 ```
 
-Bu aşamanın başarıyla tamamlanmasından sonra, yer tutucu bilgisayar adlarla elde edilen yapılandırma şu şekildedir.
+Yer tutucu bilgisayar adlarıyla bu aşamanın başarıyla tamamlanmasından kaynaklanan yapılandırma aşağıdadır.
   
-**Aşama 3: Azure'da yüksek kullanılabilirlik şirket içi kimlik doğrulama altyapınız için AD FS sunucuları ve iç yük dengeleyici**
+**3. Aşama: Azure'daki yüksek kullanılabilirlik federasyon kimlik doğrulama altyapınız için AD FS sunucuları ve iç yük dengeleyici**
 
-![AD FS sunucularıyla Azure'Microsoft 365 federasyon kimlik doğrulama altyapısının yüksek kullanılabilirlik 3. aşaması.](../media/f39b2d2f-8a5b-44da-b763-e1f943fcdbc4.png)
+![AD FS sunucularıyla Azure'da federasyon kimlik doğrulama altyapısı Microsoft 365 yüksek kullanılabilirlik aşaması 3. aşama.](../media/f39b2d2f-8a5b-44da-b763-e1f943fcdbc4.png)
   
 ## <a name="next-step"></a>Sonraki adım
 
-Aşama [4: Bu iş yükünü yapılandırmaya devam etmek için web](high-availability-federated-authentication-phase-4-configure-web-application-pro.md) uygulaması sunucularını yapılandırma.
+4. Aşama: Bu iş yükünü yapılandırmaya devam etmek için [web uygulaması proxy'lerini](high-availability-federated-authentication-phase-4-configure-web-application-pro.md) yapılandırın.
   
 ## <a name="see-also"></a>Ayrıca Bkz
 
-[Azure'da şirket için yüksek kullanılabilirlik Microsoft 365 federasyon kimlik doğrulamasını dağıtma](deploy-high-availability-federated-authentication-for-microsoft-365-in-azure.md)
+[Azure'da Microsoft 365 için yüksek kullanılabilirlik federasyon kimlik doğrulamasını dağıtma](deploy-high-availability-federated-authentication-for-microsoft-365-in-azure.md)
   
-[Microsoft 365/test ortamınız için federasyon kimliği](federated-identity-for-your-microsoft-365-dev-test-environment.md)
+[Microsoft 365 geliştirme/test ortamınız için federasyon kimliği](federated-identity-for-your-microsoft-365-dev-test-environment.md)

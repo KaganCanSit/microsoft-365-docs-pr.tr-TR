@@ -1,8 +1,8 @@
 ---
-title: PowerShell Microsoft 365 hesapları oluşturma
+title: PowerShell ile Microsoft 365 kullanıcı hesabı oluşturma
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -18,43 +18,43 @@ ms.custom:
 - O365ITProTrain
 - seo-marvel-apr2020
 ms.assetid: 6770c5fa-b886-4512-8c67-ffd53226589e
-description: PowerShell kullanarak tek tek veya birden çok Microsoft 365 hesapları oluşturma.
-ms.openlocfilehash: 7396e98e597491910b639e5a0d0c57b8f685bc02
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Bireysel veya birden çok Microsoft 365 kullanıcı hesabı oluşturmak için PowerShell'i kullanma.
+ms.openlocfilehash: 2b0ef749dc0a0d38d84d1086dee50ce416d93e9b
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985554"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65101061"
 ---
-# <a name="create-microsoft-365-user-accounts-with-powershell"></a>PowerShell Microsoft 365 hesapları oluşturma
+# <a name="create-microsoft-365-user-accounts-with-powershell"></a>PowerShell ile Microsoft 365 kullanıcı hesabı oluşturma
 
-*Bu makale hem son hem de Microsoft 365 Kurumsal hem de Office 365 Kurumsal.*
+*Bu makale hem Microsoft 365 Kurumsal hem de Office 365 Kurumsal için geçerlidir.*
 
-Birden çok hesap gibi kullanıcı hesaplarını Microsoft 365 için PowerShell for Microsoft 365'i kullanabilirsiniz.
+Birden çok hesap dahil olmak üzere kullanıcı hesaplarını verimli bir şekilde oluşturmak için Microsoft 365 için PowerShell'i kullanabilirsiniz.
 
-PowerShell'de kullanıcı hesapları sanız, bazı hesap özellikleri her zaman gereklidir. Diğer özellikler gerekli değildir, ancak önemlidir. Aşağıdaki tabloya bakın.
+PowerShell'de kullanıcı hesapları oluşturduğunuzda, belirli hesap özellikleri her zaman gereklidir. Diğer özellikler gerekli değildir ancak önemlidir. Aşağıdaki tabloya bakın.
   
 |**Özellik adı**|**Gerekli mi?**|**Açıklama**|
 |:-----|:-----|:-----|
-|**DisplayName** <br/> |Evet  <br/> |Bu, diğer hizmetlerde kullanılan görünen Microsoft 365. Örneğin, *Sil silleri*. <br/> |
-|**UserPrincipalName** <br/> |Evet  <br/> |Bu, hizmetlerde oturum a açmada kullanılan hesap Microsoft 365 adıdır. Örneğin, *Çok contoso.onmicrosoft.com\@*.  <br/> |
+|**Displayname** <br/> |Evet  <br/> |Bu, Microsoft 365 hizmetlerinde kullanılan görünen addır. Örneğin, *Caleb Sills*. <br/> |
+|**Userprincipalname** <br/> |Evet  <br/> |Bu, Microsoft 365 hizmetlerinde oturum açmak için kullanılan hesap adıdır. Örneğin, *Calebs\@ contoso.onmicrosoft.com*.  <br/> |
 |**Ad** <br/> |Hayır  <br/> ||
 |**Soyadı** <br/> |Hayır  <br/> ||
-|**LicenseAssignment** <br/> |Hayır  <br/> |Bu, kullanıcı hesabına kullanılabilir bir lisansın atandığı lisans planıdır (lisans planı veya SKU olarak da bilinir). Lisans, Microsoft 365 kullanılabilen kullanıcı hizmetlerini tanımlar. Hesabı yken kullanıcıya lisans atamanız gerekmektedir, ancak bu hesabın kullanıcı hizmetleri için erişim lisansı olması Microsoft 365 gerekir. Oluşturduk sonra kullanıcı hesabına lisans oluşturmak için 30 gün süreniz vardır. |
-|**Password** <br/> |Hayır  <br/> | Bir parola belirtmezseniz, kullanıcı hesabına rastgele bir parola atanır ve komutun sonuçlarında parola görünür. Parola belirtirseniz, aşağıdaki türlerde 8 - 16 ASCII metin karakteri olması gerekir: küçük harfler, büyük harfler, sayılar ve simgeler.<br/> |
-|**UsageLocation** <br/> |Hayır  <br/> |Bu geçerli bir ISO 3166-1 alfa-2 ülke kodudur. Örneğin, *ABD* için US ve *Fransa için FR* . Bu değeri sağlamak önemlidir, çünkü bazı Microsoft 365 hizmetleri bazı ülkelerde sağlanıyor değildir. Hesap bu değeri yapılandırmadığınız sürece kullanıcı hesabına lisans atayabilirsiniz. Daha fazla bilgi için bkz [. Lisans kısıtlamaları hakkında](https://go.microsoft.com/fwlink/p/?LinkId=691730).<br/> |
+|**LicenseAssignment** <br/> |Hayır  <br/> |Bu, kullanıcı hesabına kullanılabilir bir lisansın atandığı lisans planıdır (lisans planı veya SKU olarak da bilinir). Lisans, hesaba sağlanan Microsoft 365 hizmetlerini tanımlar. Hesabı oluştururken kullanıcıya lisans atamanız gerekmez, ancak hesabın Microsoft 365 hizmetlerine erişmek için bir lisansı olmalıdır. Kullanıcı hesabını oluşturduktan sonra lisans vermek için 30 gününüz vardır. |
+|**Password** <br/> |Hayır  <br/> | Parola belirtmezseniz kullanıcı hesabına rastgele bir parola atanır ve parola komutun sonuçlarında görünür. Parola belirtirseniz, şu türlerde 8 ile 16 ASCII metin karakteri olmalıdır: küçük harfler, büyük harfler, sayılar ve simgeler.<br/> |
+|**UsageLocation** <br/> |Hayır  <br/> |Bu geçerli bir ISO 3166-1 alfa-2 ülke kodudur. Örneğin, Birleşik Devletler için *ABD* ve Fransa için *FR*. Bazı Microsoft 365 hizmetleri belirli ülkelerde kullanılamadığından bu değeri sağlamak önemlidir. Hesapta bu değer yapılandırılmadığı sürece kullanıcı hesabına lisans atayamazsınız. Daha fazla bilgi için bkz. [Lisans kısıtlamaları hakkında](https://go.microsoft.com/fwlink/p/?LinkId=691730).<br/> |
 
 >[!Note]
->[Kullanıcı hesaplarını oluşturmak için aşağıdaki bilgileri](../admin/add-users/add-users.md) Microsoft 365 yönetim merkezi.
+>Microsoft 365 yönetim merkezi kullanarak [kullanıcı hesapları oluşturmayı öğrenin](../admin/add-users/add-users.md).
 > 
 > Ek kaynakların listesi için bkz. [Kullanıcıları ve grupları yönetme](/admin).
 >   
 
-## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a>Graph modülü için Azure Active Directory PowerShell'i kullanma
+## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a>Graph için Azure Active Directory PowerShell modülünü kullanma
 
-İlk olarak[, kiracınıza bağlan Microsoft 365 bağlanin](connect-to-microsoft-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module).
+İlk olarak [Microsoft 365 kiracınıza bağlanın](connect-to-microsoft-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module).
 
-Bağlandikten sonra, tek bir hesap oluşturmak için aşağıdaki söz dizimi kullanın:
+Bağlandıktan sonra, tek bir hesap oluşturmak için aşağıdaki söz dizimini kullanın:
   
 ```powershell
 $PasswordProfile=New-Object -TypeName Microsoft.Open.AzureAD.Model.PasswordProfile
@@ -62,7 +62,7 @@ $PasswordProfile.Password="<user account password>"
 New-AzureADUser -DisplayName "<display name>" -GivenName "<first name>" -SurName "<last name>" -UserPrincipalName <sign-in name> -UsageLocation <ISO 3166-1 alpha-2 country code> -MailNickName <mailbox name> -PasswordProfile $PasswordProfile -AccountEnabled $true
 ```
 
-Bu örnek, ABD kullanıcısı *Olan Sills için bir hesap oluşturur*:
+Bu örnek, ABD'de *Caleb Sills* kullanıcısı için bir hesap oluşturur:
   
 ```powershell
 $PasswordProfile=New-Object -TypeName Microsoft.Open.AzureAD.Model.PasswordProfile
@@ -70,29 +70,29 @@ $PasswordProfile.Password="3Rv0y1q39/chsy"
 New-AzureADUser -DisplayName "Caleb Sills" -GivenName "Caleb" -SurName "Sills" -UserPrincipalName calebs@contoso.onmicrosoft.com -UsageLocation US -MailNickName calebs -PasswordProfile $PasswordProfile -AccountEnabled $true
 ```
 
-## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a>Kaynak için Microsoft Azure Active Directory Modülü'Windows PowerShell
+## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a>Windows PowerShell için Microsoft Azure Active Directory Modülünü kullanma
 
-İlk olarak[, kiracınıza bağlan Microsoft 365 bağlanin](connect-to-microsoft-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell).
+İlk olarak [Microsoft 365 kiracınıza bağlanın](connect-to-microsoft-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell).
 
 ### <a name="create-an-individual-user-account"></a>Tek bir kullanıcı hesabı oluşturma
 
-Tek bir hesap oluşturmak için aşağıdaki söz dizimlerini kullanın:
+Tek bir hesap oluşturmak için aşağıdaki söz dizimini kullanın:
   
 ```powershell
 New-MsolUser -DisplayName <display name> -FirstName <first name> -LastName <last name> -UserPrincipalName <sign-in name> -UsageLocation <ISO 3166-1 alpha-2 country code> -LicenseAssignment <licensing plan name> [-Password <Password>]
 ```
 
 >[!Note]
->PowerShell Core, *Msol'Microsoft Azure Active Directory Msol* Windows PowerShell cmdlet'ler için Modülünü desteklemez. Bu cmdlet'leri çalışma Windows PowerShell.
+>PowerShell Core, Windows PowerShell modülü için Microsoft Azure Active Directory Modülünü ve adında *Msol* bulunan cmdlet'leri desteklemez. Bu cmdlet'leri Windows PowerShell çalıştırın.
 >
 
-Kullanılabilir lisans planı adlarını listeleyebilirsiniz, şu komutu kullanın:
+Kullanılabilir lisans planı adlarını listelemek için şu komutu kullanın:
 
 ````powershell
 Get-MsolAccountSku
 ````
 
-Bu örnek, ABD kullanıcısı *Olan Sills*`contoso:ENTERPRISEPACK` için bir hesap oluşturur ve (Office 365 Kurumsal E3) lisans planından bir lisans atar.
+Bu örnek, ABD kullanıcısı *Caleb Sills* için bir hesap oluşturur ve (Office 365 Kurumsal E3) lisans planından `contoso:ENTERPRISEPACK` bir lisans atar.
   
 ```powershell
 New-MsolUser -DisplayName "Caleb Sills" -FirstName Caleb -LastName Sills -UserPrincipalName calebs@contoso.onmicrosoft.com -UsageLocation US -LicenseAssignment contoso:ENTERPRISEPACK
@@ -110,7 +110,7 @@ New-MsolUser -DisplayName "Caleb Sills" -FirstName Caleb -LastName Sills -UserPr
      ```
 
    >[!NOTE]
-   >CSV dosyasının ilk sütunundaki sütun adları ve bunların sırası rastgeledir. Ancak, dosyanın geri kalanındaki verilerin sıralarının sütun adlarının sırasıyla eş olduğundan emin olun. Ve bu parametre için PowerShell komutunda parametre değerleri için sütun Microsoft 365 kullanın.
+   >CSV dosyasının ilk satırındaki sütun adları ve sıraları rastgeledir. Ancak, dosyanın geri kalanındaki verilerin sırasının sütun adlarının sırasıyla eşleştiğinden emin olun. Ayrıca, Microsoft 365 için PowerShell komutundaki parametre değerlerinin sütun adlarını kullanın.
     
 2. Aşağıdaki sözdizimini kullanın:
     
@@ -118,18 +118,18 @@ New-MsolUser -DisplayName "Caleb Sills" -FirstName Caleb -LastName Sills -UserPr
      Import-Csv -Path <Input CSV File Path and Name> | foreach {New-MsolUser -DisplayName $_.DisplayName -FirstName $_.FirstName -LastName $_.LastName -UserPrincipalName $_.UserPrincipalName -UsageLocation $_.UsageLocation -LicenseAssignment $_.AccountSkuId [-Password $_.Password]} | Export-Csv -Path <Output CSV File Path and Name>
     ```
 
-   Bu örnek, *C:\* Documents\NewAccounts.csvdosyasından kullanıcı hesapları oluşturur ve *C:\My Documents\NewAccountResults.csvadlı bir dosyada sonuçları günlüğe Documents\NewAccountResults.csv*.
+   Bu örnek *, C:\My Documents\NewAccounts.csv* dosyasından kullanıcı hesapları oluşturur ve sonuçları *C:\My Documents\NewAccountResults.csv* adlı bir dosyada günlüğe kaydeder.
     
     ```powershell
     Import-Csv -Path "C:\My Documents\NewAccounts.csv" | foreach {New-MsolUser -DisplayName $_.DisplayName -FirstName $_.FirstName -LastName $_.LastName -UserPrincipalName $_.UserPrincipalName -UsageLocation $_.UsageLocation -LicenseAssignment $_.AccountSkuId} | Export-Csv -Path "C:\My Documents\NewAccountResults.csv"
     ```
 
-3. Sonuçları görmek için çıkış dosyasını gözden geçirebilirsiniz. Parolaları belirtmedik, dolayısıyla oluşturulan Microsoft 365 rastgele parolalar çıkış dosyasında görünür durumda olur.
+3. Sonuçları görmek için çıkış dosyasını gözden geçirin. Parola belirtmediğimiz için, Microsoft 365 oluşturulan rastgele parolalar çıkış dosyasında görünür.
     
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[PowerShell Microsoft 365 hesaplarını, lisanslarını ve gruplarını yönetme](manage-user-accounts-and-licenses-with-microsoft-365-powershell.md)
+[PowerShell ile Microsoft 365 kullanıcı hesaplarını, lisanslarını ve gruplarını yönetme](manage-user-accounts-and-licenses-with-microsoft-365-powershell.md)
   
-[PowerShell Microsoft 365'i yönetme](manage-microsoft-365-with-microsoft-365-powershell.md)
+[PowerShell ile Microsoft 365’i yönetme](manage-microsoft-365-with-microsoft-365-powershell.md)
   
-[Microsoft 365 için PowerShell ile çalışmaya Microsoft 365](getting-started-with-microsoft-365-powershell.md)
+[Microsoft 365 için PowerShell'i kullanmaya başlama](getting-started-with-microsoft-365-powershell.md)

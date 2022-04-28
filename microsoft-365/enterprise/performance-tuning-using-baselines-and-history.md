@@ -1,8 +1,8 @@
 ---
-title: Office 365 ve performans geçmişini kullanarak performans ayarlamayı ayarlama
+title: Temelleri ve performans geçmişini kullanarak performans ayarlamayı Office 365
 ms.author: tracyp
 author: MSFTTracyP
-manager: laurawi
+manager: scotv
 ms.date: 07/08/2021
 audience: Admin
 ms.topic: conceptual
@@ -22,149 +22,149 @@ ms.collection:
 - M365-security-compliance
 - Ent_O365
 - SPO_Content
-description: Ortaya çıkan sorunları daha önce algılamanıza yardımcı olmak için istemci bilgisayar bağlantılarının geçmişini nasıl kontrol etmeyi öğrenin.
-ms.openlocfilehash: 7395b7459264a9463b2b850590163983873a13db
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+description: Ortaya çıkan sorunları erken algılamanıza yardımcı olmak için istemci bilgisayar bağlantılarınızın geçmişini denetlemeyi öğrenin.
+ms.openlocfilehash: ceb56f88d057d3a003f158369c9d35223852c7fa
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63019481"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65100445"
 ---
-# <a name="office-365-performance-tuning-using-baselines-and-performance-history"></a>Office 365 ve performans geçmişini kullanarak performans ayarlamayı ayarlama
+# <a name="office-365-performance-tuning-using-baselines-and-performance-history"></a>Temelleri ve performans geçmişini kullanarak performans ayarlamayı Office 365
 
-İş bağlantınız ve işletmeniz arasındaki bağlantı Office 365 denetlemenin birkaç basit yolu vardır ve bu, bağlantınız için kabaca bir taban çizgisi kurmanızı sağlar. İstemci bilgisayar bağlantılarının performans geçmişini bilmek yeni ortaya çıkan sorunları önceden algılamanıza, sorunları tanımlamanıza ve tahmin kurmanıza yardımcı olabilir.
+Office 365 ile işletmeniz arasındaki bağlantı performansını denetlemenin bazı basit yolları vardır ve bağlantınızın kaba bir temelini belirlemenize olanak tanır. İstemci bilgisayar bağlantılarınızın performans geçmişini bilmek, ortaya çıkan sorunları erken algılamanıza, sorunları tanımlamanıza ve tahmin etmenize yardımcı olabilir.
   
-Performans sorunları üzerinde çalışmaya alışmadıysanız, bu makale bazı yaygın soruları değerlendirmenizi sağlamak için tasarlanmıştır. Bu sorunun bir hizmet olayı değil de performans sorunu olduğunu Office 365 biliyor musunuz? Uzun dönemde iyi bir performans için nasıl plan hazırlarsınız? Performansı nasıl takip musunuz? Takımınız veya müşterileriniz e-postanızı kullanırken yavaş performansla Office 365 ve bu sorulardan herhangi birini merak ediyorsanız okumaya devam okuyun.
+Performans sorunları üzerinde çalışmaya alışkın değilseniz, bu makale bazı yaygın soruları göz önünde bulundurmanıza yardımcı olacak şekilde tasarlanmıştır. Gördüğünüz sorunun Office 365 hizmet olayı değil performans sorunu olduğunu nasıl anlarsınız? İyi bir performans için nasıl plan yapabilirsiniz, uzun vadeli? Performansı nasıl takip edebilirsiniz? Ekibiniz veya istemcileriniz Office 365 kullanırken yavaş performans görüyorsa ve bu sorulardan herhangi birini merak ediyorsanız okumaya devam edin.
   
 > [!IMPORTANT]
-> **İstemciniz ile şu anda Office 365 bir performans sorunu mu var?** Sorunları gidermek için Performans sorunlarını giderme [planında belirtilen Office 365](performance-troubleshooting-plan.md). 
+> **İstemcinizle Office 365 arasında şu anda bir performans sorunu mu var?** [Office 365 için Performans sorun giderme planında](performance-troubleshooting-plan.md) açıklanan adımları izleyin. 
     
-## <a name="something-you-should-know-about-office-365-performance"></a>Performans hakkında bilgi Office 365 şey
+## <a name="something-you-should-know-about-office-365-performance"></a>Office 365 performansı hakkında bilmeniz gereken bir şey
 
-Office 365, otomasyon ve gerçek kişiler tarafından izlenen, yüksek kapasiteli özel bir Microsoft ağı içinde yer alıyor. Bulut tabanlı bulutun Office 365 mümkün olduğunca performans ayarlaması ve akışıdır. Bulut tabanlı Office 365 İnternet üzerinden bağlanmak zorunda olduğu için, bu hizmetlerde performans üzerinde ince ayarlamalar yapmak için Office 365 vardır.
+Office 365, otomasyon ve gerçek kişiler tarafından izlenen yüksek kapasiteli, ayrılmış bir Microsoft ağında yaşar. Office 365 bulutu korumanın bir parçası, mümkün olduğunda performans ayarlama ve akış sağlamadır. Office 365 bulutu istemcilerinin İnternet üzerinden bağlanması gerektiğinden, Office 365 hizmetlerinde de performansa ince ayar yapmak için sürekli çaba sarf edilmektedir.
 
-Performans iyileştirmeleri hiçbir zaman gerçekten bulutta durur, dolayısıyla bulutu sağlıklı ve hızlı tutma deneyimi de aynı değildir. Konumunuzdan Başka bir yere bağlanırken performans sorunu Office 365, Destek sorunuyla başlamamanız veya beklemeniz en iyisidir. Bunun yerine, sorunu 'içeriden' araştırmaya başlasın. Başka bir ifadeyle, ağınız içinden işe başlayabilir ve işlerinizi tamam Office 365. Destek ile bir vakayı açmadan önce veri toplanacak ve sorunu inceleyecek ve çözülecek işlemler gerçekleştirebilirsiniz.
+Performans iyileştirmeleri bulutta hiçbir zaman durmaz, bu nedenle bulutu sağlıklı ve hızlı tutma deneyimi de yoktur. Konumunuzdan Office 365'a bağlanırken bir performans sorununuz varsa, destek olayıyla başlamamak veya beklememek en iyisidir. Bunun yerine, sorunu 'içeriden dışa' araştırmaya başlamanız gerekir. Başka bir ifadeyle ağınızın içinden başlayın ve Office 365... Destek ile bir servis talebi açmadan önce, verileri toplayabilir ve sorunu keşfedecek ve çözebilecek eylemler gerçekleştirebilirsiniz.
   
 > [!IMPORTANT]
-> Kapasite planlaması ve sınırlamalarına dikkat Office 365. Bu bilgiler, bir performans sorununu çözmeye çalışırken eğrinin ilerisinde çalışmamanize neden olur. İşte, hizmet açıklamalarını [Microsoft 365 Office 365 bağlantı](/office365/servicedescriptions/office-365-service-descriptions-technet-library). Burası merkezi bir merkezdir ve merkez tarafından sunulan Office 365 kendi Hizmet Açıklamalarına giden bir bağlantı vardır. Başka bir ifadeyle, örneğin SharePoint Online için standart sınırları görmek zorunda olacağınız anlamına gelir; örneğin, [SharePoint Çevrimiçi](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-service-description) Hizmet Açıklaması'SharePoint [bulabilirsiniz](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits).
+> Office 365 kapasite planlaması ve sınırları hakkında bilgi edinin. Bu bilgiler, bir performans sorununu çözmeye çalışırken sizi eğrinin önüne koyar. burada [Microsoft 365 ve Office 365 hizmet açıklamalarının bağlantısı yer alır](/office365/servicedescriptions/office-365-service-descriptions-technet-library). Bu merkezi bir merkezdir ve Office 365 tarafından sunulan tüm hizmetlerin buradan kendi Hizmet Açıklamalarına giden bir bağlantısı vardır. Başka bir deyişle, SharePoint Online'ın standart sınırlarını görmeniz gerekirse, örneğin Çevrimiçi [Hizmet Açıklaması'nı SharePoint](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-service-description) tıklayıp [SharePoint Çevrimiçi Sınırlar bölümünü](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits) bulursunuz.
   
-Performans ölçeğinin kaydırılarak olduğunu anarak sorun gidermeye devam edin. Ideal bir değer elde etmek ve bunu kalıcı olarak korumakla ilgili değildir. Çok fazla sayıda kullanıcı tarafından işe alma veya büyük veri geçişleri yapma gibi zaman zaman yüksek bant genişliğine sahip görevlere bu nedenle performans  etkilerini planlamanız gerekir. Performans hedefleriniz hakkında kabaca bir fikri olması gerekir, ancak birçok değişken performansla oynayabilir, dolayısıyla performans değişiklik gösterir.
+Performansın kayan bir ölçek olduğunu anlayarak sorun giderme işleminize girdiğinizden emin olun. Bu idealleştirilmiş bir değer elde etmek ve kalıcı olarak korumakla ilgili değildir. Çok sayıda kullanıcıya ekleme veya büyük veri geçişleri yapma gibi bazen yüksek bant genişliğine sahip görevler stresli olacaktır, bu nedenle performans etkilerini *planlayın* . Performans hedefleriniz hakkında kabaca bir fikriniz olmalıdır, ancak birçok değişken performansa dahil olduğundan performans değişir.
   
-Performans sorunlarını gidermek için belirli hedeflere ulaşamaz ve bu sayıları süresiz olarak koruyabilirsiniz; önemli olan, mevcut etkinlikleri tüm değişkenlere göre geliştirmektir. 
+Performans sorunlarını giderme, belirli hedeflere ulaşmak ve bu sayıları süresiz olarak korumakla ilgili değildir, tüm değişkenler göz önünde bulundurulduğunda mevcut etkinlikleri iyileştirmekle ilgilidir. 
   
-## <a name="okay-what-does-a-performance-problem-look-like"></a>Tamam, bir performans sorunu nasıl görünüyor?
+## <a name="okay-what-does-a-performance-problem-look-like"></a>Tamam, performans sorunu nasıl görünür?
 
-Öncelikle bir hizmet sorunu değil, gerçekten performans sorunu olduğundan emin olun. Performans sorunu, o e-Office 365. Bunları şu şekilde ayıracağız:
+İlk olarak, karşılaştığınız şeyin gerçekten bir hizmet olayı değil performans sorunu olduğundan emin olmanız gerekir. Performans sorunu, Office 365 hizmet olayından farklıdır. Bunları nasıl ayırt etmek istediğiniz aşağıda anlatılıyor.
   
-Hizmet Olayları, hizmet Office 365 sorunlar olduğunda olur. Geçerli durum altında kırmızı veya sarı **simgeler** Microsoft 365 yönetim merkezi. E-posta bağlantılarına bağlanan istemci bilgisayarlarda performansın yavaş Office 365 olabilir. Örneğin, Geçerli durum raporları kırmızı bir simge gösterirse ve Exchange'in yanında Araştırılıyor ifadesini görüyorsanız, yine de organizasyonu kullanan istemci posta kutularının yavaş Exchange Online gelen kişilerden gelen aramaları alabilirsiniz. Böyle bir durumda, performansının Hizmet sorunları Exchange Online olduğunu varsayabilirsiniz.
+Hizmet Olayları, Office 365 hizmetinin kendisi sorun yaşadığında gerçekleşir. Microsoft 365 yönetim merkezi **Geçerli sistem durumu** altında kırmızı veya sarı simgeler görebilirsiniz. Office 365 bağlanan istemci bilgisayarlarda performansın yavaş olduğunu fark edebilirsiniz. Örneğin Geçerli sistem durumu kırmızı bir simge bildirirse ve Exchange yanında **Araştırılıyor** ifadesini görüyorsanız, kuruluşunuzda Exchange Online kullanan istemci posta kutularının yavaş olduğundan şikayet eden kişilerden de arama alabilirsiniz. Bu durumda, Exchange Online performansınızın Hizmet sorunlarının kurbanı olduğunu varsaymak mantıklıdır.
   
-![Hizmet Office 365 durumu olarak gösterilen Sistem Durumu panosu, yeşil renkle Exchange iş yüklerinin olduğu sistem durumu panosu.](../media/ec7f0325-9e61-4e1a-bec0-64b87f4469be.PNG)
+![Exchange hariç tüm iş yüklerinin yeşil gösterildiği ve Hizmetin Geri Yüklendiği'ni gösteren Office 365 Sistem Durumu panosu.](../media/ec7f0325-9e61-4e1a-bec0-64b87f4469be.PNG)
   
-Bu noktada, sistem yöneticisi Office 365 sistem durumunu denetlemeniz ve sonra sistem bakımıyla  ilgili güncel bilgileri tutmak için sık sık Ayrıntıları ve geçmişi görüntülemeniz gerekir. Geçerli **durum** panosu, sizi hizmette yapılan değişiklikler ve sorunlar hakkında güncelleştirmek için yapıldı. Yöneticiden yöneticiye olmak için durum geçmişine yazılan notlar ve açıklamalar, ölçerken yardımcı olmak ve devam eden çalışma hakkında sizi bilgili tutmak için hazırlanmıştır.
+Bu noktada, Office 365 yöneticisi olarak sistem bakımı hakkında güncel bilgiler edinmek için **Geçerli sistem durumunu** denetlemeniz **ve ardından Ayrıntıları ve geçmişi görüntüle** seçeneğini sık sık denetlemeniz gerekir. **Geçerli sistem durumu** panosu, hizmetteki değişiklikler ve sorunlar hakkında sizi güncelleştirmek için yapılmıştır. Sistem durumu geçmişine, yöneticiden yöneticiye yazılan notlar ve açıklamalar, ölçmenize ve devam eden çalışmalar hakkında sizi haberdar etmeye yardımcı olur.
   
-![Hizmet durumu panosunun Office 365 ve neden Exchange Online geri yüklendi ifadesinin resmi.](../media/66609554-426a-4448-8be6-ea09817f41ba.PNG)
+![Exchange Online hizmetinin geri yüklendiğini ve nedenini açıklayan Office 365 sistem durumu panosunun resmi.](../media/66609554-426a-4448-8be6-ea09817f41ba.PNG)
   
-Olaylar performansın yavaşlamaya neden olmasına rağmen, bir performans sorunu hizmet olayı değildir. Bir performans sorunu şu şekildedir:
+Olaylar performansın yavaşlamasına neden olabilse de performans sorunu bir hizmet olayı değildir. Performans sorunu şöyle görünür:
   
-- Yönetim merkezi Geçerli durum'da hizmet için nelerin raporlanması **önemli** değil; bir performans sorunu ortaya çıkar.
+- Yönetim merkezi **Geçerli sistem** durumu hizmet için ne bildirse de bir performans sorunu oluşur.
     
--  Akış için kullanılan bir davranışın tamamlanması veya hiç tamamlanmadı olması çok uzun zaman alır.
+-  Akışı yapılan bir davranışın tamamlanması uzun sürüyor veya hiçbir zaman tamamlanamadı.
     
-- Sorunu çoğaltabilirsiniz veya doğru adım dizilerini uygulayın ve soruna neden olacağını bilebilirsiniz.
+- Sorunu da çoğaltabilirsiniz veya doğru adım dizisini yaparsanız bunun gerçekleşeceğini bilirsiniz.
     
--  Sorun aralıklı olarak devam ediyorsa, yine de bir desen olabilir. Örneğin, saat 10:00'da her zaman erişim iznine sahip ola kullanıcılardan gelen aramaların Office 365. Aramalar öğlen saat civarında bitirecek.
+-  Sorun aralıklıysa, yine de bir desen olabilir. Örneğin, saat 10:00'a kadar Office 365 her zaman erişemeyen kullanıcılardan aramalar yapacağınızı biliyorsunuz. Aramalar öğlen saatlerine kadar sona erecek.
     
-Bu liste büyük olasılıkla tanıdık gelecektir; Belki çok tanıdık geliyordur. Bunun bir performans sorunu olduğunu an olduğunda, "Bundan sonra ne yapacak?" sorusu gelir. Bu makalenin kalan bölümü tam olarak bunu belirlemenize yardımcı olur.
+Bu liste muhtemelen tanıdık geliyordur; belki de çok tanıdık. Bunun bir performans sorunu olduğunu fark ettikten sonra soru şu olur: "Bundan sonra ne yapacaksınız?" Bu makalenin geri kalanı tam olarak bunu belirlemenize yardımcı olur.
   
-## <a name="how-to-define-and-test-the-performance-problem"></a>Performans sorununu tanımlama ve sınama
+## <a name="how-to-define-and-test-the-performance-problem"></a>Performans sorununu tanımlama ve test etme
 
-Performans sorunları genellikle zaman içinde ortaya çıkıyor, bu nedenle asıl sorunu tanımlamak zor olabilir. Sorun bağlamında iyi bir fikir olan iyi bir sorun deyimi oluşturun ve sonra tekrarlanabilir test adımları gerekir. Burada, yeterli bilgi sağ sağlayacak sorun ifadelerine bazı örnekler verilmiştir:
+Performans sorunları genellikle zaman içinde ortaya çıkar, bu nedenle gerçek sorunu tanımlamak zor olabilir. Sorun bağlamı hakkında iyi bir fikirle iyi bir sorun deyimi oluşturun ve ardından tekrarlanabilir test adımları uygulamanız gerekir. Yeterli bilgi sağlamayan sorun deyimlerine bazı örnekler aşağıda verilmiştir:
   
-- Eskiden Gelen Kutumdan Takvimime geçiş, önceden fark etmedim ve şimdi kahve molası verdim. Eskiden olduğu gibi davranması için bir neden var mı?
+- Gelen Kutumdan Takvimime geçmek eskiden fark etmediğim bir şeydi ve şimdi kahve molası oldu. Eskiden olduğu gibi davranmasını sağlayabilir misin?
     
-- Dosyalarımı SharePoint Online'a yüklemem sonsuza dek devam ediyor. Neden öğleden sonra yavaş da, diğer saatlerinde hızlı? Hızlı değil mi?
+- Dosyalarımı SharePoint Online'a yüklemek sonsuza kadar sürüyor. Neden öğleden sonra yavaş oluyor ama başka bir zaman hızlı oluyor? Hızlı olamaz mı?
     
-Yukarıdaki sorun açıklamalarına göre bazı büyük güçlükler vardır. Özel olarak, anlaşılamay gereken çok fazla ambiyans. Örneğin:
+Yukarıdaki sorun ifadelerinin neden olduğu birçok büyük zorluk vardır. Özellikle, ilgilenemeyecek kadar çok belirsizlik var. Örneğin:
   
-- Gelen kutusu ile Takvim arasında geçişin önceden dizüstü bilgisayarda nasıl olduğu belirsizdir.
+- Dizüstü bilgisayarda hareket etmek için Gelen Kutusu ve Takvim arasında nasıl geçiş yapılır belirsizdir.
     
-- Kullanıcı "Hızlı değil mi" de olduğunda, "hızlı" olan nedir?
+- Kullanıcı "Hızlı olamaz mı" dediğinde, "hızlı" nedir?
     
-- "Sonsuza dek" ne kadar sürer? Birkaç saniye mi? Ya da birkaç dakika? Yoksa kullanıcı yemeğe çıkar ve eylem geri döndükten 10 dakika sonra biter mi?
+- "Sonsuza dek" ne kadar sürer? Birkaç saniye mi? Ya da birkaç dakika? Ya da kullanıcı öğle yemeğine çıkabilir ve eylem geri döndükten 10 dakika sonra tamamlanabilir mi?
     
-Yönetici ve sorun giderici, aşağıdaki genel açıklamalarda yer alan sorunun  ayrıntılarını fark etmeyebilirsiniz. Örneğin, sorunun ne zaman başladığı onlar tarafından bilmiyor. Sorun giderici kullanıcının evden çalıştığını bilmiyor ve yalnızca kendi ev ağlarındayken yavaş geçişle çalıştığını görüyor olabilir. Ya da kullanıcının yerel istemcide yoğun RAM ile çalışan diğer uygulamaları çalıştırması da olabilir. Yöneticiler, kullanıcının daha eski bir işletim sistemi çalıştırıyor veya son güncelleştirmeleri çalıştırmamış olduğunu bilmiyor olabilir.
+Yönetici ve sorun giderici, aşağıdaki gibi genel *deyimlerden sorunun ayrıntılarının* farkında olamaz. Örneğin, sorunun ne zaman başladığını bilmezler. Sorun giderici, kullanıcının evden çalıştığını bilmiyor olabilir ve yalnızca ev ağında yavaş geçiş görüyor olabilir. Veya kullanıcının yerel istemcide yoğun RAM kullanan diğer uygulamaları çalıştırması. Yöneticiler kullanıcının eski bir işletim sistemi çalıştırdığını bilmiyor veya son güncelleştirmeleri çalıştırmamış olabilir.
   
-Kullanıcılar bir performans sorunu raporlasa, topları gereken çok fazla bilgi vardır. Bilgileri alma ve kaydetme, sorunun tanınması olarak adlandırılan bir çağrıdır. Performans sorunları hakkında bilgi toplamak için kullanabileceğiniz temel bir listeye aşağıdan bakabilirsiniz. Bu liste çok kapsamlı değildir, ancak başlangıç için bir yerdir:
+Kullanıcılar bir performans sorunu bildirdiğinde toplayacak çok fazla bilgi vardır. Bilgileri alma ve kaydetme, sorunun kapsamını belirleme olarak adlandırılır. Performans sorunları hakkında bilgi toplamak için kullanabileceğiniz temel bir kapsam listesi aşağıdadır. Bu liste kapsamlı değildir, ancak başlamak için bir yerdir:
   
-- Sorun hangi tarihte ve günün veya gecenin hangi saatlerinde başladı?
+- Sorun hangi tarihte ve günün veya gecenin hangi saatinde meydana geldi?
     
-- Ne tür bir istemci bilgisayar kullanıyorsunuz ve iş ağınıza nasıl bağlan bağlanmalı (VPN, Kablolu, Kablosuz)?
+- Ne tür bir istemci bilgisayar kullanıyordunuz ve iş ağına (VPN, Kablolu, Kablosuz) nasıl bağlanır?
     
-- Uzaktan mı çalışıyor, ofiste miydiniz?
+- Uzaktan mı çalışıyordunuz yoksa ofiste miydiniz?
     
-- Başka bir bilgisayarda da aynı eylemleri deneyp aynı davranışı mı görüyorsunuz?
+- Aynı eylemleri başka bir bilgisayarda denediniz ve aynı davranışı gördünüz mü?
     
-- Gerçekleştireceğimiz eylemleri not al aşağıdan yazmak için, soruna neden olan adımları izleyin.
+- Gerçekleştirdiğiniz eylemleri yazabilmeniz için size sorun veren adımları izleyin.
     
-- Performans saniye veya dakika olarak ne kadar yavaş?
+- Performans saniye veya dakika cinsinden ne kadar yavaş?
     
-- Dünyanın nerede bulunuyorsunuz?
+- Dünyanın neresindesin?
     
-Bu sorulardan bazıları diğerlerine göre daha belirgindir. Çoğu kişi, sorun gidericinin sorunu yeniden oluşturmak için tam adımlara ihtiyacı olduğunu anlar. Sonuçta, neyin yanlış olduğunu başka nasıl kaydınız olur ve sorunun düzeldi mi olduğunu başka nasıl sın derliysiniz? Daha az belirgin olan şeyler, "Sorunu hangi tarih ve saatle görüyorsunuz?" ve "Dünyanın neredesiniz?" gibi, birlikte kullanılmaktadır. Kullanıcının ne zaman çalıştığına bağlı olarak, birkaç saatlik zaman farkı, şirket ağlarının bazı bölümleri üzerinde bakım çalışmaları devam ediyor olabilir. Örneğin, şirketinizin hem SharePoint Online'da hem de Şirket içi SharePoint Server 2013 örneğinde arama dizinlerini sorguldıran karma bir SharePoint Arama gibi karma bir uygulaması vardır, şirket içi sunucuda güncelleştirmeler devam ediyor olabilir. Şirketinizin hepsi bulutta ise, sistem bakımı ağ donanımı eklemeyi veya kaldırmayı, şirket çapında güncelleştirmeler sağlamayı ya da DNS'te veya diğer çekirdek altyapıda değişiklikler eklemeyi veya kaldırmayı içerebilir.
+Bu soruların bazıları diğerlerinden daha belirgindir. Çoğu kullanıcı sorun gidericinin sorunu yeniden oluşturmak için tam adımlara ihtiyacı olduğunu anlar. Sonuçta, sorunun ne olduğunu başka nasıl kaydedebilirsiniz ve sorunun düzeltilip gidermediğini başka nasıl test edebilirsiniz? "Sorunu hangi tarih ve saatle gördünüz?" ve "Dünyanın neresinde bulunuyorsunuz?", birlikte kullanılabilecek bilgiler gibi şeyler daha az açıktır. Kullanıcının ne zaman çalıştığına bağlı olarak, birkaç saatlik zaman farkı, şirketinizin ağının bazı bölümlerinde bakımın zaten devam ettiği anlamına gelebilir. Örneğin, şirketinizin hem SharePoint Online hem de Şirket İçi SharePoint Server 2013 örneğindeki arama dizinlerini sorgulayan karma SharePoint Arama gibi karma bir uygulaması vardır; güncelleştirmeler şirket içi grubunda devam ediyor olabilir. Şirketinizin tamamı buluttaysa, sistem bakımı ağ donanımı eklemeyi veya kaldırmayı, şirket genelinde güncelleştirmeleri dağıtmayı ya da DNS'de veya diğer temel altyapıda değişiklik yapmayı içerebilir.
   
-Bir performans sorununu giderirken, bu biraz olay yeri incelemeye benzer, kanıtlardan sonuç elde etmek için hassas ve dikkatli olmak gerekir. Bunu yapmak için, kanıt toparak iyi bir sorun açıklaması elde etmek gerekir. Bilgisayarın bağlamı, kullanıcının bağlamı, sorunun ne zaman başladığı ve performans sorununu ortaya çıkaran tam adımlar buna dahildir. Bu sorun açıklaması notlarınız arasında en üstteki sayfada olmalı ve orada kal olmalı. Çözüm üzerinde çalışıp çalışmadıktan sonra sorun açıklamasının yeniden üzerinden geçerek gerçekleştirip gerçekleştirip gerçekleştir olmadığını test edip kanıtlamak için gerekli adımları atabilirsiniz. Bu, orada çalışmanızı ne zaman tamamla ilgili olduğunu bilmek açısından önemlidir.
+Bir performans sorununu giderirken, bu biraz olay yeri gibidir, kanıttan herhangi bir sonuç elde etmek için hassas ve dikkatli olmanız gerekir. Bunu yapmak için kanıt toplayarak iyi bir sorun bildirimi almanız gerekir. Bilgisayarın bağlamını, kullanıcının bağlamını, sorunun ne zaman başladığını ve performans sorununu ortaya çıkarmış tam adımları içermelidir. Bu sorun deyimi notlarınızdaki en üstteki sayfa olmalıdır ve kalmalıdır. Çözüm üzerinde çalıştıktan sonra sorun bildiriminde yeniden gezinerek, gerçekleştirdiğiniz eylemlerin sorunu çözmüş olup olmadığını test etmek ve kanıtlamak için adımları atmış olursunuz. Bu, işinizin ne zaman yapıldığını bilmek için kritik öneme sahiptir.
   
-## <a name="do-you-know-how-performance-used-to-look-when-it-was-good"></a>Performansın iyi olduğu zaman nasıl olduğunu biliyor musunuz?
+## <a name="do-you-know-how-performance-used-to-look-when-it-was-good"></a>Performans iyiyken nasıl görünürdü biliyor musun?
 
-Şanslı değilsanız, kimse bilmiyor. Hiç kimsenin numarası yoktu. Bu, hiç kimsenin "Office 365'ta bir Gelen Kutusu'na göz attırma süresi kaç saniye sürüyordu?" veya "Yöneticilerin bir Lync Online toplantısı olduğunda ne kadar sürüyordu?" sorusunu yanıtlamayacak. Bu, birçok şirket için yaygın bir senaryodur.
+Eğer şanssızsan, kimse bilmiyor. Kimsenin numarası yoktu. Başka bir deyişle, hiç kimse "Office 365'da Bir Gelen Kutusu'nu getirmek için kaç saniye sürdüğünü?" veya "Yöneticiler Lync Online toplantısı yaparken ne kadar süre geçti?" sorusunu yanıtlayamıyor. Bu, birçok şirket için yaygın bir senaryodur.
   
-Performans taban çizgisi burada ne eksik?
+Performans temeli burada eksik mi?
   
-Taban çizgisi performansınız için size bir bağlam sunar. Şirketinizin gereksinimlerine bağlı olarak, sık sık bir taban çizgisi alsanız iyi olur. Daha büyük bir şirketseniz, Operasyon ekibinin şirket içi ortamınız için taban çizgilerini zaten almaları gerekir. Örneğin, ayın ilk Pazartesi günü tüm Exchange sunucularında ve üçüncü Pazartesi günü tüm SharePoint sunucularında düzeltme ekleri gerçekleştirıyorsanız, Operasyon ekibinin büyük olasılıkla düzeltme eki uygulama sonrası çalıştırılacak görevlerin ve senaryoların listesi vardır ve bu liste kritik işlevlerin çalışır durumda olduğunu kanıtlayabilir. Örneğin, Gelen Kutusu'na açma, Gönder/Al'a tıklama ve klasörlerin güncelleştiril olduğundan emin olun veya SharePoint'ta sitenin ana sayfasına göz atarak kurumsal Arama sayfasına gidin ve sonuç döndüren bir arama yapma.
+Temeller, performansınız için bir bağlam sağlar. Şirketinizin gereksinimlerine bağlı olarak zaman zaman taban çizgisini sık sık almalısınız. Daha büyük bir şirketseniz, Operasyon ekibiniz şirket içi ortamınız için temelleri zaten alabilir. Örneğin, ayın ilk Pazartesi günü tüm Exchange sunucularına ve üçüncü Pazartesi günü tüm SharePoint sunucularınıza düzeltme eki uygularsanız, Operasyon ekibinizin büyük olasılıkla kritik işlevlerin çalışır durumda olduğunu kanıtlamak için düzeltme eki uygulama sonrasında çalıştırdığı görevlerin ve senaryoların bir listesi vardır. Örneğin, Gelen Kutusu'nu açmak, Gönder/Al'a tıklamak ve klasörlerin güncelleştirilmesini sağlamak veya SharePoint, sitenin ana sayfasına göz atmak, kurumsal Arama sayfasına gitmek ve sonuçları döndüren bir arama yapmak.
   
-Uygulamalarınız Office 365'te ise, ağın içindeki bir istemci bilgisayardan, çıkış noktasına veya ağdan çıkıp çıkış noktasına kadar olan zamanı (mili saniye) ölçmek için atılacak en temel taban çizgilerinden bazıları Office 365. Araştırılması ve kaydednuz için bazı yararlı taban çizgilerini burada bulabilirsiniz:
+Uygulamalarınız Office 365 ise, en temel taban çizgilerinden bazıları ağınızdaki bir istemci bilgisayardan, çıkış noktasına veya ağınızdan ayrılıp Office 365 çıktığınız noktaya kadar geçen süreyi (milisaniye cinsinden) ölçebilirsiniz. Araştırabileceğiniz ve kaydedebileceğiniz bazı yararlı temeller şunlardır:
   
-- İstemci bilgisayarınızla çıkış noktanız (örneğin, proxy sunucunuz) arasındaki cihazları seçin.
+- İstemci bilgisayarınızla çıkış noktanız (örneğin, ara sunucunuz) arasındaki cihazları tanımlayın.
     
-  - Ortaya çıkan performans sorunlarına bağlam (IP adresleri, cihazın türü, ve veri türü) sahip olmak için cihazlarınızı tanıyor olun.
+  - Ortaya çıkan performans sorunları için bağlamınız (IP adresleri, cihaz türü ve cetera) olması için cihazlarınızı bilmeniz gerekir.
     
-  - Proxy sunucuları yaygın çıkış noktalarıdır, dolayısıyla web tarayıcınızın varsa kullanmak üzere ayarlanmış ara sunucuyu denetlemesini sebilirsiniz.
+  - Proxy sunucuları yaygın çıkış noktalarıdır, bu nedenle web tarayıcınızın hangi ara sunucuyu kullanacak şekilde ayarlandığını (varsa) kontrol edebilirsiniz.
     
-  - Anızı keşfetmesi ve eşlemesi için üçüncü taraf araçlar vardır, ancak cihazlarınızı bulmanın en güvenli yolu ağ ekibinin bir üyesine sormaktır.
+  - Ağınızı keşfedip eşleyebilecek üçüncü taraf araçlar vardır, ancak cihazlarınızı öğrenmenin en güvenli yolu ağ ekibinizin bir üyesine sormaktır.
     
-- İnternet servis sağlayıcınızı (ISS) seçin, iletişim bilgilerini not edin ve kaç devreniz olduğunu ve ne kadar bant genişliğiniz olduğunu sorun.
+- İnternet servis sağlayıcınızı (ISS) tanımlayın, iletişim bilgilerini yazın ve kaç bağlantı hattına sahip olduğunuzu sorun.
     
-- Şirketi içinde, istemciniz ile çıkış noktası arasındaki kaynakları tanımlayabilir veya ağ sorunları hakkında konuşmak için bir acil durum kişisi tanımlayabilirsiniz.
+- Şirketinizin içinde, istemcinizle çıkış noktası arasındaki cihazların kaynaklarını belirleyin veya ağ sorunları hakkında konuşmak için acil durum kişisini belirleyin.
     
-Burada, araçlarla yapılan basit bir testin sizin için hesapy maliyet hesapy maliyete sahip bazı taban çizgilerini vardır:
+Araçlarla basit testlerin sizin için hesaplayabileceğiniz bazı temeller şunlardır:
   
-- İstemci bilgisayarınızdan çıkış noktanıza kadar olan mili saniye cinsinden süre
+- İstemci bilgisayarınızdan çıkış noktanıza milisaniye cinsinden süre
     
-- Çıkış noktanızı mili saniye Office 365 kadar olan süre
+- Çıkış noktanızdan milisaniye cinsinden Office 365 zaman
     
-- Gözatmanıza göre sunucu URL'lerini çözüm Office 365 konum
+- Gözattığınızda Office 365 URL'lerini çözümleyen sunucu dünyasındaki konum
     
-- Mili saniye cinsinden ISS'nizin DNS çözümleme hızı, paket geliş (ağ değişimi), yükleme ve indirme süreleri ile ilgili tutarsızlıklar
+- ISS'nizin DNS çözümlemesinin milisaniye cinsinden hızı, paket gelişindeki tutarsızlıklar (ağ değişimi), karşıya yükleme ve indirme süreleri milisaniye cinsinden
     
-Bu adımları nasıl gerçekleştirmiş olduğunu biliyorsanız, bu makalede daha ayrıntılı bilgi edinacağız. 
+Bu adımların nasıl gerçekleştirildiğini bilmiyorsanız, bu makalede daha ayrıntılı bilgi vereceğiz. 
   
-## <a name="what-is-a-baseline"></a>Taban çizgisi nedir?
+## <a name="what-is-a-baseline"></a>Temel nedir?
 
-Kötü gittiği zaman etkisini bilirsiniz, ancak geçmiş performans verilerinizi bilmiyorsanız, ne zaman ve ne kadar kötü hale geldiğinde bir bağlama sahip olmak mümkün değildir. Dolayısıyla bir taban çizgisi olmadan, bulmacayı çözmek için en önemli ipucu olan bulmaca kutusunda resim eksik olur. Performans sorunlarını gidermede, bir karşılaştırma noktasına ihtiyacınız  *vardır*. Basit performans taban çizgilerini almak zor değildir. Operasyon ekibinin bir takvime göre bunları taşıma görevi olabilir. Örneğin, bağlantının aşağıdaki gibi olduğunu varsayabilirsiniz: 
+Kötü gittiğinde etkisini anlarsınız, ancak geçmiş performans verilerinizi bilmiyorsanız, ne kadar kötü olabileceğine ve ne zaman kötüleşebileceğine ilişkin bir bağlam elde etmek mümkün değildir. Temel olmadan, bulmacayı çözmek için önemli ipucunu kaçırıyorsunuz: bulmaca kutusundaki resim. Performans sorunlarını gidermede bir  *karşılaştırma* noktasına ihtiyacınız vardır. Basit performans taban çizgilerini almak zor değildir. Operasyon ekibinize bunları belirli bir zamanlamaya göre yürütmekle görev yapılabilir. Örneğin, bağlantınızın şöyle göründüğünü düşünelim: 
   
-![İstemci, proxy ve sunucu bulutlarını gösteren Office 365 grafiği.](../media/c6ca7140-09f9-4c2d-a775-dbf2820eaa0c.PNG)
+![İstemci, ara sunucu ve Office 365 bulutu gösteren temel ağ grafiği.](../media/c6ca7140-09f9-4c2d-a775-dbf2820eaa0c.PNG)
   
-Bu, ağ ekibiyle birlikte kontrol aldığınız ve şirketinizi İnternet için bir proxy sunucusu üzerinden İnternet'e aldığınızı ve istemci bilgisayarınızın buluta gönderdiği tüm istekleri bu proxy'nin işleyeceği anlamına gelir. Bu durumda, bağlantının aradaki tüm cihazları liste halinde liste halinde basitleştirilmiş bir sürümünü çizmeniz gerekir. Şimdi de istemciyle çıkış noktası (İnternet için ağınıza çıkış noktası) ve bulut arasında performansı test etmek için kullanabileceğiniz Office 365 sınayın.
+Bu, ağ ekibinize danıştığınız ve şirketinizden bir ara sunucu aracılığıyla İnternet'e ayrıldığınızı ve bu proxy'nin istemci bilgisayarınızın buluta gönderdiği tüm istekleri işlediğini öğrendiğiniz anlamına gelir. Bu durumda, bağlantınızın tüm aradaki cihazları listeleyen basitleştirilmiş bir sürümünü çizmeniz gerekir. Şimdi istemci, çıkış noktası (İnternet için ağınızı bıraktığınız yer) ve Office 365 bulut arasındaki performansı test etmek için kullanabileceğiniz araçlar ekleyin.
   
-![İstemci, proxy ve bulut ile temel ağ ve araç önerileri PSPing, TraceTCP ve ağ izleme.](../media/627bfb77-abf7-4ef1-bbe8-7f8cbe48e1d2.png)
+![İstemci, ara sunucu ve bulut ile temel ağ ve PSPing, TraceTCP ve ağ izlemeleri için araç önerileri.](../media/627bfb77-abf7-4ef1-bbe8-7f8cbe48e1d2.png)
   
-Performans verilerini bulmak **için gereken** **uzmanlık** miktarından dolayı seçenekler Basit ve Gelişmiş olarak listelenmiştir. Ağ izleme, PsPing ve TraceTCP gibi komut satırı araçlarını çalıştırmaya göre çok uzun zaman alır. Bu iki komut satırı aracı, Office 365 tarafından engellenen ICMP paketleri kullanmamaları ve istemci bilgisayardan veya proxy sunucusundan (erişiminiz varsa) ayrılacak mili saniye cinsinden zaman vermeleri ve Office 365'e ulaşacakları için seçilmiştir. Bir bilgisayardan diğerine her sıçrama bir zaman değeriyle sonuçlanır ve bu da taban çizgisi için mükemmeldir! En önemlisi, bu komut satırı araçları komuta bir bağlantı noktası numarası eklemenize olanak sağlar; Office 365 Güvenli Yuva Katmanı ve Aktarım Katmanı Güvenliği (SSL ve TLS) tarafından kullanılan bağlantı noktası olan bağlantı noktası 443 üzerinden iletişim kurarsa, bu yararlı olur. Bununla birlikte, diğer üçüncü taraf araçları sizin durumunuz için daha iyi bir çözüm olabilir. Microsoft bu araçların hepsini desteklemez, bu nedenle herhangi bir nedenden dolayı PsPing ve TraceTCP'nin çalışmaya devam etmelerini alamasanız da Netmon gibi bir araçla ağ izlemeye devam edin. 
+Seçenekler, performans verilerini bulmak için ihtiyacınız olan uzmanlık miktarı nedeniyle **Basit** ve **Gelişmiş** olarak listelenir. Bir ağ izlemesi, PsPing ve TraceTCP gibi komut satırı araçlarını çalıştırmaya kıyasla çok zaman alır. Bu iki komut satırı aracı, Office 365 tarafından engellenecek ICMP paketlerini kullanmadığından ve istemci bilgisayardan veya proxy sunucusundan (erişiminiz varsa) ayrılıp Office 365 ulaşması için gereken süreyi milisaniye cinsinden verdikleri için seçilmiştir. Bir bilgisayardan diğerine her bir atlama bir zaman değeriyle sonuçlanır ve bu temeller için harikadır! Aynı şekilde, bu komut satırı araçları da komuta bir bağlantı noktası numarası eklemenize olanak tanır, çünkü Office 365 Güvenli Yuva Katmanı ve Aktarım Katmanı Güvenliği (SSL ve TLS) tarafından kullanılan bağlantı noktası olan 443 numaralı bağlantı noktası üzerinden iletişim kurar. Ancak, diğer üçüncü taraf araçları sizin durumunuz için daha iyi çözümler olabilir. Microsoft bu araçların tümünü desteklemez, bu nedenle herhangi bir nedenle PsPing ve TraceTCP'yi çalıştıramazsanız Netmon gibi bir araçla bir ağ izlemesine geçin. 
   
-Taban çizgilerini iş saatlerinden önce, tekrar yoğun kullanım sırasında ve tekrar saatler sonra alırsınız. Bu, sonunda biraz buna benzer bir klasör yapınız olduğu anlamına gelir:
+İş saatlerinin öncesinde, yeniden yoğun kullanım sırasında ve sonra da saatler sonra bir temel alabilirsiniz. Bu, sonunda aşağıdakine benzer bir klasör yapısına sahip olabileceğiniz anlamına gelir:
   
-![Performans verilerinizi klasörlerde düzenleme yolunu teklifen grafik.](../media/13e01ffa-f0f2-4d10-b89d-d5980ec89fae.png)
+![Performans verilerinizi klasörler halinde düzenlemenin bir yolunu öneren grafik.](../media/13e01ffa-f0f2-4d10-b89d-d5980ec89fae.png)
   
-Ayrıca dosyalarınıza bir adlandırma kuralı da koyabilirsiniz. İşte birkaç örnek:
+Ayrıca dosyalarınızı adlandırma kuralı da seçmelisiniz. İşte birkaç örnek:
   
 - Feb_09_2015_9amPST_PerfBaseline_Netmon_ClientToEgress_Normal
     
@@ -174,48 +174,48 @@ Ayrıca dosyalarınıza bir adlandırma kuralı da koyabilirsiniz. İşte birka�
     
 - Feb_08_2015_8-30amEST_PerfBaseline_GoodPerf
     
-Bunu yapmak için birçok farklı yol vardır, ancak bu biçimi kullanmak **\<dateTime\>\<what's happening in the test\>** iyi bir başlangıç olabilir. Bu konuda titiz olmak, daha sonra sorunları gidermeye çalışırken size çok yardımcı olur. Daha sonra şöyle dersiniz: "8 Şubat'ta iki izleme aldım, biri iyi, biri kötü performans gösterdiği için bunları karşılaştıracağız". Bu, sorun giderme için yararlıdır. 
+Bunu yapmanın birçok farklı yolu vardır, ancak biçimi **\<dateTime\>\<what's happening in the test\>** kullanmak başlamak için iyi bir yerdir. Bu konuda dikkatli olmak, sorunları daha sonra gidermeye çalışırken çok yardımcı olacaktır. Daha sonra "8 Şubat'ta iki iz aldım, biri iyi performans gösterdi, biri kötü gösterdi, böylece bunları karşılaştırabiliriz" diyebilirsiniz. Bu, sorun giderme için yararlıdır. 
   
-Geçmiş taban çizgilerinizi tutmak için düzenli bir yol gerekir. Bu örnekte, basit yöntemler üç komut satırı çıktısı üretti ve sonuçlar ekran görüntüsü olarak toplanıyor, ancak bunun yerine ağ yakalama dosyalarınız da olabilir. Size en uygun yöntemi kullanın. Geçmiş taban çizgilerinizi depolar ve çevrimiçi hizmetlerin davranışında değişiklik fark eden noktalarda bu taban çizgilerine bakın. 
+Geçmiş taban çizgilerinizi korumak için düzenli bir yönteme sahip olmanız gerekir. Bu örnekte, basit yöntemler üç komut satırı çıkışı üretti ve sonuçlar ekran görüntüsü olarak toplandı, ancak bunun yerine ağ yakalama dosyalarınız olabilir. Sizin için en uygun yöntemi kullanın. Geçmiş taban çizgilerinizi depolayın ve çevrimiçi hizmetler davranışında değişiklikler fark ettiğiniz noktalarda bunlara başvurun. 
   
-## <a name="why-collect-performance-data-during-a-pilot"></a>Pilot çalışma sırasında neden performans verileri toplayabilirsiniz?
+## <a name="why-collect-performance-data-during-a-pilot"></a>Pilot sırasında neden performans verileri toplanır?
 
-Temel yapmaya başlamak için, temel uygulama hizmetinin pilot çalışma süresinden daha Office 365 yoktur. Ofisinizin binlerce, yüz binlerce kullanıcısı veya beş olabilir, ancak birkaç kullanıcıyla bile performans dalgalanmalarını ölçmek üzere testler gerçekleştirebilirsiniz. Büyük bir şirket durumunda, birkaç yüz kullanıcıdan sadece Office 365 temsili bir örnek, birkaç bin kullanıcıya kadar proje dışında proje olabileceği için, sorunlardan önce sorunların nerede ortaya çık olabileceğini bilirsiniz.
+Temelleri oluşturmak için Office 365 hizmetinin pilot aşamasından daha iyi bir zaman yoktur. Ofisinizde binlerce kullanıcı, yüz binlerce veya beş kullanıcı olabilir, ancak birkaç kullanıcıyla bile performans dalgalanmalarını ölçmek için testler yapabilirsiniz. Büyük bir şirket söz konusu olduğunda, Office 365 pilot çalışması Office 365 birkaç yüz kullanıcıdan oluşan temsili bir örnek, sorunların ortaya çıkmadan önce nerede ortaya çıkabileceğini bilmeniz için birkaç bin kullanıcıya yansıtılabilir.
   
-Pilot çalışma olmayan tüm kullanıcıların aynı anda hizmete gidecekleri küçük bir şirket olması durumunda, performansı kötü olan bir işlemde sorun gidermesi gerekebilecek herhangi birine gösterecek verileriniz olması için performans ölçülerini alın. Örneğin daha önce çabuk olan orta büyüklükte bir grafiği karşıya yüklemek için gereken sürede bütün binayı dolaştırabiliyorsanız.
+Küçük bir şirket söz konusu olduğunda, tüm kullanıcıların aynı anda hizmete gittiği ve pilot çalışma olmadığı küçük bir şirket söz konusu olduğunda, kötü performans gösteren bir işlemle ilgili sorunları gidermesi gerekebilecek herkese gösterilecek verileriniz olması için performans önlemlerini koruyun. Örneğin, aniden binanızda gezinebileceğinizi fark ederseniz, önceden hızlı bir şekilde gerçekleşen orta ölçekli bir grafiği karşıya yüklemek için gereken sürede gezinebilirsiniz.
   
-## <a name="how-to-collect-baselines"></a>Taban çizgilerini toplama
+## <a name="how-to-collect-baselines"></a>Temelleri toplama
 
-Tüm sorun giderme planlarında, en azından bunları tanımlamanıza gerek vardır:
+Tüm sorun giderme planları için en azından bunları tanımlamanız gerekir:
   
-- Kullanmakta olduğunu istemci bilgisayar (bilgisayar veya cihazın türü, IP adresi ve soruna neden olan eylemler)
+- Kullandığınız istemci bilgisayar (bilgisayar veya cihaz türü, IP adresi ve soruna neden olan eylemler)
     
-- İstemci bilgisayarın dünyada bulunduğu yer (örneğin, bu kullanıcının ağa yönelik bir VPN'de olup olmadığı, uzaktan çalışma veya şirket intraneti üzerinde çalışma)
+- İstemci bilgisayarın dünyanın neresinde bulunduğu (örneğin, bu kullanıcının ağa yönelik bir VPN'de, uzaktan veya şirket intranetinde çalışıp çalışmadığı)
     
-- İstemci bilgisayarın ağınız üzerinden kullandığı çıkış noktası (trafiğin işletmeden ISS veya İnternet'e çıkış noktası)
+- İstemci bilgisayarın ağınızdan kullandığı çıkış noktası (trafiğin bir ISS veya İnternet için işletmenizden ayrıldığı nokta)
     
- Ağ yöneticinizden, ağ düzeninizi bulabilirsiniz. Küçük bir ağa bağlıysanız, sizi İnternet'e bağlayan cihazlara bakın ve düzen hakkında sorularınız varsa ISS'nizi arayın. Başvuru için son düzenin bir grafiğini oluşturun. 
+ Ağınızın düzenini ağ yöneticisinden öğrenebilirsiniz. Küçük bir ağdaysanız sizi İnternet'e bağlayan cihazlara göz atın ve düzen hakkında sorularınız varsa ISS'nizi arayın. Başvurunuz için son düzenin grafiğini oluşturun. 
   
-Bu bölüm, basit komut satırı araçlarına ve yöntemlerine ve daha gelişmiş araç seçeneklerine bozuk olur. Önce basit yöntemleri açıklarız. Ancak, şu anda bir performans sorunun varsa, gelişmiş yöntemlere atlayıp örnek performans sorunlarını giderme eylem planını denemeniz gerekir.
+Bu bölüm, basit komut satırı araçlarına ve yöntemlerine ve daha gelişmiş araç seçeneklerine ayrılmıştır. Önce basit yöntemleri ele alacağız. Ancak şu anda bir performans sorununuz varsa gelişmiş yöntemlere atlayıp örnek performans sorunlarını giderme eylem planını denemeniz gerekir.
   
 ### <a name="simple-methods"></a>Basit yöntemler
 
-Bu basit yöntemlerin amacı, performans hakkında bilinçli olmak için zaman içinde basit performans taban çizgilerini alma, anlama ve uygun şekilde depolamayı Office 365 etmektir. Daha önce de bildiğiniz gibi basit bir diyagram şu şekilde:
+Bu basit yöntemlerin amacı, Office 365 performansı hakkında bilgi sahibi olmanız için zaman içinde basit performans taban çizgilerini almayı, anlamayı ve uygun şekilde depolamayı öğrenmektir. Aşağıda daha önce gördüğünüz gibi basit bir diyagram bulabilirsiniz:
   
-![İstemci, proxy ve bulut ile temel ağ ve araç önerileri PSPing, TraceTCP ve ağ izleme.](../media/627bfb77-abf7-4ef1-bbe8-7f8cbe48e1d2.png)
+![İstemci, ara sunucu ve bulut ile temel ağ ve PSPing, TraceTCP ve ağ izlemeleri için araç önerileri.](../media/627bfb77-abf7-4ef1-bbe8-7f8cbe48e1d2.png)
   
 > [!NOTE]
-> TraceTCP'nin bu ekran görüntüde yer aldığı için, bir isteğin işlemeye alındığına mili saniye cinsinden ve isteğin hedefe ulaşmak için bir bilgisayardan bir sonrakine kaç sıçrama veya bağlantı atlayıp ulaştığını mili saniye cinsinden göstermede yararlı bir araçtır. TraceTCP ayrıca sıçramalarda kullanılan sunucuların adlarını da verir ve bu Destek'te bir sorun giderici Microsoft Office 365 yararlı olabilir. > TraceTCP komutları çok basit olabilir, örneğin: >  `tracetcp.exe outlook.office365.com:443`> Bağlantı noktası numarasını komuta dahil edin! > [TraceTCP](https://simulatedsimian.github.io/tracetcp_download.html) ücretsiz bir indirmedir, ancak Wincap ile dayandır. Wincap de Netmon tarafından kullanılan ve yüklenmiş bir araçtır. Netmon'i ayrıca gelişmiş yöntemler bölümünde de kullanıruz. 
+> Bir isteğin işlenmesinin ne kadar sürdüğünü ve isteğin hedefe ulaşması için gereken ağ atlamaları veya bir bilgisayardan diğerine kaç bağlantı olduğunu milisaniye cinsinden göstermek için kullanışlı bir araç olduğundan TraceTCP bu ekran görüntüsüne eklenir. TraceTCP, atlamalar sırasında kullanılan sunucuların adlarını da verebilir ve bu da Destek'teki bir Microsoft Office 365 sorun gidericisi için yararlı olabilir. > TraceTCP komutları çok basit olabilir, örneğin: >  `tracetcp.exe outlook.office365.com:443`> Komuta bağlantı noktası numarasını eklemeyi unutmayın! > [TraceTCP](https://simulatedsimian.github.io/tracetcp_download.html) ücretsiz bir indirmedir ancak Wincap'e dayanır. Wincap, Netmon tarafından da kullanılan ve yüklenen bir araçtır. Ayrıca gelişmiş yöntemler bölümünde Netmon kullanıyoruz. 
   
- Birden fazla ofisiniz varsa, bu konumların her birsinde de bir istemciden gelen bir veri kümesi tutmalısiniz. Bu sınama, bu durumda Office 365'e istek gönderen bir istemciyle isteği yanıtlayın arasındaki Office 365 bir sayı değeri olan gecikme süresini zamanlar. Test, etki alanınız içinde bir istemci bilgisayardan kaynak olur ve ağınız içinde, bir çıkış noktasından İnternet'e ve geri doğru gidiş dönüş Office 365 baktır. 
+ Birden çok ofisiniz varsa, bu konumların her birinde bir istemciden veri kümesi saklamanız gerekir. Bu test gecikme süresini ölçer. Bu durumda, bir istemcinin Office 365 istek göndermesi ile isteği yanıtlaması arasındaki süreyi açıklayan Office 365 bir sayı değeridir. Test, bir istemci bilgisayarda etki alanınızın içinden kaynaklanır ve ağınızın içinden, çıkış noktası üzerinden, İnternet üzerinden Office 365 ve geriye doğru gidiş dönüşlü bir gidiş dönüş ölçmeyi arar. 
   
-Bu durumda proxy sunucusu çıkış noktasıyla başa çıkış noktasına birkaç yol vardır. 1'den 2'ye ve sonra 2'den 3'e kadar izleme ve sonra da sayıları mili saniye cinsinden ekp, toplamını ağ bağlantınızı kenarına çıkarabilirsiniz. Ya da, bu adresler için proxy'yi atlayarak bağlantıyı Office 365 yapılandırabilirsiniz. Güvenlik duvarı, ters ara sunucu veya bu ikinin bir birleşiminin birleşiminin olduğu daha büyük bir ağda, çok sayıda URL için trafiğin geçişini sağlayacak ara sunucu üzerinde özel durumlar yapmak gerekebilir. OFFICE 365 tarafından kullanılan uç noktaların listesi için bkz. Office 365 [VE IP adresi aralıkları](https://support.office.com/article/8548a211-3fe7-47cb-abb1-355ea5aa88a2). Kimlik doğrulayıcı bir proxy'niz varsa, aşağıdaki özel durumları test etmekle başlayabilirsiniz:
+Çıkış noktasıyla( bu örnekte ara sunucu) ilgilenmenin birkaç yolu vardır. 1'den 2'ye ve sonra 2'den 3'e kadar izleyebilir ve ardından ağınızın kenarına son toplamı almak için sayıları milisaniye cinsinden ekleyebilirsiniz. Ya da bağlantıyı, Office 365 adresleri için ara sunucuyu atlayacak şekilde yapılandırabilirsiniz. Güvenlik duvarı, ters ara sunucu veya ikisinin bir birleşimine sahip daha büyük bir ağda, ara sunucuda trafiğin çok sayıda URL için geçmesine izin verecek özel durumlar yapmanız gerekebilir. Office 365 tarafından kullanılan uç noktaların listesi için bkz. [URL'leri ve IP adresi aralıklarını Office 365](https://support.office.com/article/8548a211-3fe7-47cb-abb1-355ea5aa88a2). Kimlik doğrulama ara sunucunuz varsa, aşağıdakiler için özel durumları test ederek başlayın:
   
 - 80 ve 443 bağlantı noktaları
     
 - TCP ve HTTP'ler
     
-- Şu URL'lerin herhangi birini giden bağlantılar:
+- Bu URL'lerden herhangi birine giden bağlantılar:
     
 - \*.microsoftonline.com
     
@@ -229,29 +229,29 @@ Bu durumda proxy sunucusu çıkış noktasıyla başa çıkış noktasına birka
     
 - osub.microsoft.com
     
-Tüm kullanıcıların, herhangi bir proxy müdahalesi veya kimlik doğrulaması olmadan bu adreslere erişim iznine sahip olması gerekir. Daha küçük bir ağ üzerinde, bunları web tarayıcınızdaki proxy atlama listeniz'e eklemeniz gerekir. 
+Tüm kullanıcıların herhangi bir ara sunucu girişimi veya kimlik doğrulaması olmadan bu adreslere girmesine izin verilmelidir. Daha küçük bir ağda, bunları web tarayıcınızda ara sunucu atlama listenize eklemelisiniz. 
   
-Bunları Internet Explorer'da proxy atlama listene eklemek için Araçlar  \> İnternet Seçenekleri Bağlantılar LAN **ayarları** \> **Gelişmiş'e** \>  \> **gidin**. Gelişmiş sekmesi, proxy sunucu ve proxy sunucu bağlantı noktasınızı da burada bulur. Gelişmiş düğmesine erişmek için LAN'niz için **ara sunucu kullanın** onay kutusuna **tıklamanız** gerekir. Yerel adresler için ara sunucuyu **atla'nın işaretli olduğundan emin** olun. **Gelişmiş'e** tıklarken, özel durumları girebilirsiniz. Yukarıda listelenen joker karakter URL'leri noktalı virgülle birbirinden ayırma; örneğin:
+Bunları Internet Explorer'daki proxy atlama listenize eklemek için **Araçlar** \> **İnternet Seçenekleri** \> **Bağlantıları** \> **LAN ayarları** \> **Gelişmiş'e** gidin. Gelişmiş sekmesi, proxy sunucunuzu ve proxy sunucu bağlantı noktanızı da bulacağınız yerdir. **Gelişmiş** düğmesine erişmek **için LAN'ınız için ara sunucu kullan** onay kutusuna tıklamanız gerekebilir. **Yerel adresler için proxy sunucusunu atla** seçeneğinin işaretli olduğundan emin olmak istersiniz. **Gelişmiş'e** tıkladığınızda, özel durumlar girebileceğiniz bir metin kutusu görürsünüz. Yukarıda listelenen joker karakter URL'lerini noktalı virgüllerle ayırın, örneğin:
   
 \*.microsoftonline.com; \*.sharepoint.com
   
-Proxy'nizi atlayan bir kez ping veya PsPing'i doğrudan bir URL'de Office 365 gerekir. Sıradaki **adım ping testi** yapmak outlook.office365.com. Ya da PsPing veya komutta bağlantı noktası numarası sağlarken başka bir araç kullanıyorsanız, ortalama gidiş dönüş sürelerini mili saniye cinsinden görmek için **portal.microsoftonline.com:443** karşı PsPing. 
+Proxy'nizi atladıktan sonra ping veya PsPing'i doğrudan bir Office 365 URL'sinde kullanabilmeniz gerekir. Sonraki adım ping **outlook.office365.com** test etmek olacaktır. Veya PsPing veya komuta bağlantı noktası numarası sağlamanıza olanak sağlayacak başka bir araç kullanıyorsanız, milisaniye cinsinden ortalama gidiş dönüş süresini görmek için **portal.microsoftonline.com:443** karşı PsPing. 
   
-Gidiş dönüş süresi veya RTT, outlook.office365.com gibi bir sunucuya HTTP isteği göndermenin ve sunucunun bunu yaptığını bildiğini kabul eden bir yanıt almak için ne kadar zaman yaptığını ölçüleri alan bir sayı değeridir. Bunu bazen RTT olarak kısaltılmış olarak da görüyorsunuz. Bu, görece kısa bir süre olabilir.
+Gidiş dönüş süresi veya RTT, outlook.office365.com gibi bir sunucuya HTTP isteği göndermenin ne kadar sürdüğünü ölçen ve sunucunun bunu yaptığını bildiğini kabul eden bir yanıt alan bir sayı değeridir. Bazen bunun RTT olarak kısaltılmış olduğunu görürsünüz. Bu, nispeten kısa bir süre olmalıdır.
   
-Bu testi yapmak için [PSPing](/sysinternals/downloads/psping) veya güvenlik tarafından engellenen ICMP paketleri kullanmayan başka bir Office 365 kullanalım. 
+Bu testi yapmak için [PSPing'i](/sysinternals/downloads/psping) veya Office 365 tarafından engellenen ICMP paketlerini kullanmayan başka bir aracı kullanmanız gerekir. 
   
- **Doğrudan bir URL'den mili saniye cinsinden genel bir gidiş dönüş süresi almak için PsPing Office 365 kullanma**
+ **Doğrudan bir Office 365 URL'sinden milisaniye cinsinden genel gidiş dönüş süresi almak için PsPing'i kullanma**
   
-1. Şu adımları tamamlayarak yükseltilmiş komut istemini çalıştırın:
+1. Şu adımları tamamlayarak yükseltilmiş bir komut istemi çalıştırın:
     
 1. **Başlat**'a tıklayın.
     
-2. Arama Başlat **kutusuna** cmd yazın ve ardından CTRL+SHIFT+ENTER tuşlarına basın.
+2. **Aramayı Başlat** kutusuna cmd yazın ve CTRL+SHIFT+ENTER tuşlarına basın.
     
-3. Kullanıcı Hesabı **Denetimi iletişim** kutusu görüntülenirse, görüntülenen eylemin istediğiniz eylem olduğunu onaylayın ve sonra Devam'a **tıklayın**.
+3. **Kullanıcı Hesabı Denetimi** iletişim kutusu görüntülenirse, görüntülenen eylemin istediğiniz eylem olduğunu onaylayın ve **ardından Devam'a** tıklayın.
     
-2. Aracın (bu durumda PsPing) yüklü olduğu klasöre gidin ve şu kullanıcı URL'lerini test Office 365:
+2. Aracın (bu örnekte PsPing) yüklü olduğu klasöre gidin ve şu Office 365 URL'leri test edin:
     
   - psping admin.microsoft.com:443
     
@@ -261,27 +261,27 @@ Bu testi yapmak için [PSPing](/sysinternals/downloads/psping) veya güvenlik ta
     
   - psping www.yammer.com:443
     
-    ![Bağlantı noktası 443'microsoft-my.sharepoint.com PSPing komutu.](../media/3258f620-4513-4e82-95c9-06b387fc3a82.PNG)
+    ![PSPing komutu 443 numaralı bağlantı noktasını microsoft-my.sharepoint.com.](../media/3258f620-4513-4e82-95c9-06b387fc3a82.PNG)
   
-Bağlantı noktası numarası 443'ü de içermeye emin olun. Şifreli Office 365 kanalda çalıştığını unutmayın. Bağlantı noktası numarası olmadan PsPing yaptıysanız, isteğiniz başarısız olur. Kısa listeniz için ping işlemi yaptıktan sonra, mili saniye olarak (ms) Ortalama süreye bakın. Kaydetmek istediğiniz şey bu!
+443 bağlantı noktası numarasını eklediğinizden emin olun. Office 365 şifrelenmiş bir kanalda çalıştığını unutmayın. Bağlantı noktası numarası olmadan PsPing yaparsanız isteğiniz başarısız olur. Kısa listenize ping işlemi yaptıktan sonra Milisaniye (ms) cinsinden Ortalama süre'yi arayın. Kaydetmek istediğiniz şey bu!
   
-![İstemci ile proxy arasında 2,8 milisaniyelik bir gidiş dönüş süresine sahip PSPing'i gösteren grafik.](../media/96901aea-1093-4f1b-b5a3-6078e9035e6c.png)
+![2,8 milisaniyelik gidiş dönüş süresiyle PSPing'e proxy uygulama istemcisini gösteren grafik.](../media/96901aea-1093-4f1b-b5a3-6078e9035e6c.png)
   
-Proxy atlama hakkında bilginiz yoksa ve her şeyi adım adım yapmak isterseniz, önce proxy sunucu adını bulmanız gerekir. Internet Explorer'da Araçlar Internet **Seçenekleri** \> **Connections** LAN **ayarları** \> \> **Advanced seçeneğine** \> **gidin**. Gelişmiş **sekmesi** , proxy sunucu listenizin listelenmiş olduğudur. Bir komut isteminde şu görevi tamamlayarak bu proxy sunucusunda ping sınaması yapmak: 
+Ara sunucu atlama hakkında bilginiz yoksa ve her şeyi adım adım gerçekleştirmeyi tercih ediyorsanız, önce ara sunucunuzun adını öğrenmeniz gerekir. Internet Explorer'da **Araçlar** \> **İnternet Seçenekleri** \> **Bağlantıları** \> **LAN ayarları** \> **Gelişmiş'e** gidin. **Gelişmiş** sekmesi, proxy sunucunuzun listelendiğini göreceğiniz yerdir. Bu görevi tamamlayarak bir komut isteminde ara sunucuya ping gönderin: 
   
- **Proxy sunucusunda ping yapmak ve aşama 1'den 2'ye mili saniye cinsinden bir gidiş dönüş değeri almak için**
+ **Proxy sunucusuna ping göndermek ve 1- 2. aşama için milisaniye cinsinden gidiş dönüş değeri almak için**
   
-1. Şu adımları tamamlayarak yükseltilmiş komut istemini çalıştırın:
+1. Şu adımları tamamlayarak yükseltilmiş bir komut istemi çalıştırın:
     
 1. **Başlat**'a tıklayın.
     
-2. Arama Başlat **kutusuna** cmd yazın ve ardından CTRL+SHIFT+ENTER tuşlarına basın.
+2. **Aramayı Başlat** kutusuna cmd yazın ve CTRL+SHIFT+ENTER tuşlarına basın.
     
-3. Kullanıcı Hesabı **Denetimi iletişim** kutusu görüntülenirse, görüntülenen eylemin istediğiniz eylem olduğunu onaylayın ve sonra Devam'a **tıklayın**.
+3. **Kullanıcı Hesabı Denetimi** iletişim kutusu görüntülenirse, görüntülenen eylemin istediğiniz eylem olduğunu onaylayın ve **ardından Devam'a** tıklayın.
     
-2. ping yazın ve \<the name of the proxy server your browser uses, or the IP address of the proxy server\> ENTER tuşuna basın. PsPing veya başka bir araç yüklüyse, bunun yerine o aracı kullanmayı da seçebilirsiniz. 
+2. ping yazıp \<the name of the proxy server your browser uses, or the IP address of the proxy server\> ENTER tuşuna basın. PsPing veya başka bir araç yüklüyse, bunun yerine bu aracı kullanmayı seçebilirsiniz. 
     
-    Komutunuz aşağıdaki örneklerden herhangi biri gibi olabilir: 
+    Komutunuz şu örneklerden herhangi biri gibi görünebilir: 
     
   - ping ourproxy.ourdomain.industry.business.com
     
@@ -295,40 +295,40 @@ Proxy atlama hakkında bilginiz yoksa ve her şeyi adım adım yapmak isterseniz
     
   - psping ourproxy:80
     
-3. İzleme işlemi test paketleri göndermeyi durdurursa, mili saniye cinsinden ortalamayı listeleen küçük bir özet elde olur ve bundan sonra da aynı değere sahip oluruz. İstemin ekran görüntüsünü alın ve adlandırma kuralınızı kullanarak kaydedin. Bu noktada, diyagramı değerle doldurmanıza da yardımcı olabilir.
+3. İzleme test paketleri göndermeyi durdurduğunda, milisaniye cinsinden ortalamayı listeleyen küçük bir özet alırsınız ve bu, peşinde olduğunuz değerdir. komut isteminin ekran görüntüsünü alın ve adlandırma kuralınızı kullanarak kaydedin. Bu noktada, diyagramı değerle doldurmaya da yardımcı olabilir.
     
-Sabah erken saatlerde bir izleme almış ve istemciniz proxy'e (veya İnternet'e çıkışta hangi çıkış sunucusuna olursa olsun) hızlı şekilde bağlanıyor olabilir. Bu durumda, numaralarınız aşağıdaki gibi olabilir:
+Belki sabahın erken saatlerinde bir izleme almış olabilirsiniz ve istemciniz ara sunucuya (veya İnternet'e çıkan çıkış sunucusuna) hızlı bir şekilde ulaşabilir. Bu durumda, numaralarınız aşağıdaki gibi görünebilir:
   
-![Bir istemciden proxy'ye 2,8 milisaniyelik gidiş dönüş süresi gösteren grafik.](../media/1bd03544-23fc-47d4-bbae-c1feb466a5d8.PNG)
+![İstemciden 2,8 milisaniyelik ara sunucuya gidiş dönüş süresini gösteren grafik.](../media/1bd03544-23fc-47d4-bbae-c1feb466a5d8.PNG)
   
-İstemci bilgisayarınız proxy (veya çıkış) sunucusuna erişimi olan az sayıda bilgisayardan biri ise, bu bilgisayara uzaktan bağlanarak ve buradan bir Office 365 URL'sinde PsPing yapmak için komut istemini çalıştırarak testin bir sonraki adımını atabilirsiniz. Bu bilgisayara erişiminiz yoksa, sonraki adımla ilgili yardım için ağ kaynaklarınıza başvurarak tam sayıları bu şekilde edinebilirsiniz. Bu mümkün değilse, söz konusu URL'Office 365 PsPing kullanın ve proxy sunucunuza karşı PsPing veya Ping süresiyle karşılaştırın. 
+İstemci bilgisayarınız ara sunucu (veya çıkış) sunucusuna erişimi olan birkaç seçimden biriyse, bu bilgisayara uzaktan bağlanarak, buradan bir Office 365 URL'sine PsPing komut istemini çalıştırarak testin bir sonraki ayağını çalıştırabilirsiniz. Bu bilgisayara erişiminiz yoksa, bir sonraki adımla ilgili yardım almak için ağ kaynaklarınıza başvurabilir ve tam sayıları bu şekilde alabilirsiniz. Bu mümkün değilse, söz konusu Office 365 URL'sine karşı bir PsPing alın ve proxy sunucunuza karşı PsPing veya Ping zamanı ile karşılaştırın. 
   
-Örneğin, istemciden Office 365 URL'sinin 51,84 mili saniyesi varsa ve istemciden proxy sunucusuna (veya çıkış noktasına) 2,8 mili saniyelik mili saniyeniz varsa, çıkıştan Office 365. Benzer şekilde, günün yoğun saatlerinde istemciden proxy sunucusuna 12,25 mili saniye ve istemciden Office 365 URL'sinde 62,01 mili saniyelik PsPing aldıysanız, Office 365 URL'nize proxy çıkış için ortalama değeriniz 49,76 milisaniyedir.
+Örneğin, istemciden Office 365 URL'sine 51,84 milisaniyeniz varsa ve istemciden ara sunucuya (veya çıkış noktasına) 2,8 milisaniyeniz varsa, çıkıştan Office 365 49,04 milisaniyeye sahip olursunuz. Benzer şekilde, günün yüksekliği boyunca istemciden ara sunucuya 12,25 milisaniye ve istemciden Office 365 URL'ye 62,01 milisaniye PsPing'iniz varsa, Office 365 URL'sine proxy çıkışı için ortalama değeriniz 49,76 milisaniyedir.
   
-![Değerlerin çıkarılana kadar istemciden proxy'e ve istemciden proxy Office 365 milisaniye cinsinden ping'i gösteren ek grafik.](../media/cd764e77-5154-44ba-a5cd-443a628eb2d9.PNG)
+![Değerlerin çıkarılabilmesi için istemciden ara sunucuya istemciden Office 365'a kadar milisaniye cinsinden ping'i gösteren ek grafik.](../media/cd764e77-5154-44ba-a5cd-443a628eb2d9.PNG)
   
-Sorun giderme anlamında, bu taban çizgilerini saklayarak ilginç bir şey bulabilirsiniz. Örneğin, Genelde proxy veya çıkış noktasından Office 365 URL'sinde yaklaşık 40 mili saniye ile 59 mili saniye arasında gecikme süresine sahip olduğunu ve yaklaşık 3 mili saniye ile 7 mili saniye arasında (günün belirli bir saatlerinde karşınıza gelen ağ trafiğinin miktarına bağlı olarak) yaklaşık 3 milisaniye ile çıkış noktası gecikme süresinin olduğunu bulursanız, son üç istemcinizin ara sunucu veya çıkış taban çizgilerinden birini gösteriyorsa mutlaka bir sorun olduğunu bilirsiniz 45 milisaniyelik bir gecikme süresidir.
+Sorun giderme açısından, yalnızca bu taban çizgilerini korumaktan ilginç bir şey bulabilirsiniz. Örneğin, ara sunucu veya çıkış noktasından Office 365 URL'sine kadar genellikle yaklaşık 40 milisaniye ile 59 milisaniye arasında gecikme süresine sahip olduğunuzu fark ederseniz, ve yaklaşık 3 milisaniye ile 7 milisaniye (günün bu saatinde gördüğünüz ağ trafiği miktarına bağlı olarak) ara sunucu veya çıkış noktası gecikme süresine sahip bir istemciniz varsa, ara sunucuya veya çıkış taban çizgilerine son üç istemciniz gösteriliyorsa mutlaka bir sorun olduğunu anlarsınız 45 milisaniyelik bir gecikme süresi.
   
 ### <a name="advanced-methods"></a>Gelişmiş yöntemler
 
-İnternet isteklerinize ne olduğunu gerçekten bilmek Office 365, ağ izlemeleri hakkında bilgi sahibi olmak gerekir. Bu izlemeler için hangi araçları tercih ederseniz kullanın, HTTPWatch, Netmon, Message Analyzer, Wireshark, Fiddler, Geliştirici Pano aracı veya diğer araçlar, ağ trafiğini yakalayıp filtreleyebilirsiniz. Bu bölümde, sorunun daha eksiksiz bir resmini görmek için bu araçlardan birden fazlasını çalıştırmanın yararlı olacağını göreceğiniz. Test sırasında, bu araçlardan bazıları kendi sağlarına da aracı gibi davranır. [Netmon 3.4](https://www.microsoft.com/download/details.aspx?id=4865), [HTTPWatch](https://www.httpwatch.com/download/) [veya](performance-troubleshooting-plan.md) [WireShark](https://www.wireshark.org/) Office 365 performans sorunu giderme planı yardımcı makalesinde kullanılan araçlar.
+Office 365 için İnternet isteklerinizde neler olduğunu gerçekten öğrenmek istiyorsanız, ağ izlemeleri hakkında bilgi sahibi olmanız gerekir. Bu izlemeler için hangi araçları tercih ettiğiniz fark etmez; HTTPWatch, Netmon, İleti Çözümleyicisi, Wireshark, Fiddler, Geliştirici Panosu aracı veya diğer araçlar ağ trafiğini yakalayıp filtreleyebilir. Bu bölümde, sorunun daha eksiksiz bir resmini elde etmek için bu araçlardan birden fazlasını çalıştırmanın yararlı olduğunu göreceksiniz. Test ederken, bu araçlardan bazıları kendi başına proxy görevi de görür. Office 365 [için performans sorun giderme planı](performance-troubleshooting-plan.md) başlıklı yardımcı makalede kullanılan araçlar [Netmon 3.4](https://www.microsoft.com/download/details.aspx?id=4865), [HTTPWatch](https://www.httpwatch.com/download/) veya [WireShark'ı](https://www.wireshark.org/) içerir.
   
-Performans taban çizgisi almak bu yöntemin basit kısmıdır ve adımların çoğu bir performans sorunu gidermek için kullanılan adımlarla aynıdır. Performans için taban çizgisi oluşturmanın daha gelişmiş yöntemleri, ağ izleri alıp depolamanız gerekir. Bu makaledeki örneklerin çoğunda SharePoint Online ekleyebilirsiniz, ancak test etmek ve kaydetmek için abone Office 365 hizmetlerde bir ortak eylemler listesi geliştirmeniz gerekir. Temel bir örnek şöyledir:
+Performans temeli almak bu yöntemin basit bir parçasıdır ve adımların çoğu, bir performans sorununu giderme işlemiyle aynıdır. Performans için temel oluşturmanın daha gelişmiş yöntemleri, ağ izlemelerini alıp depolamanızı gerektirir. Bu makaledeki örneklerin çoğu SharePoint Online'ı kullanır, ancak test etmek ve kaydetmek için abone olduğunuz Office 365 hizmetlerindeki yaygın eylemlerin bir listesini geliştirmeniz gerekir. Aşağıda bir temel örnek verilmiştir:
   
-- SPO için taban çizgisi listesi - ** 1. Adım: ** SPO web sitesinin giriş sayfasına gidin ve ağ izleme yapma. İzlemeyi kaydedin. 
+- SPO için temel liste - ** 1. Adım: ** SPO web sitesinin giriş sayfasına göz atın ve bir ağ izlemesi yapın. İzlemeyi kaydedin. 
     
-- SPO için taban çizgisi listesi - 2. Adım **:** Genel Arama yoluyla bir terim (örneğin şirket adınız) için arama Enterprise ve ağ izlemesi yapma. İzlemeyi kaydedin. 
+- SPO için temel liste - **2. Adım:** Enterprise Ara ve ağ izlemesi yaparak terim (şirketinizin adı gibi) arayın. İzlemeyi kaydedin. 
     
-- SPO için taban çizgisi listesi- **3. Adım:** Upload Online belge kitaplığına büyük bir dosya SharePoint ve ağ izlemesi yapma. İzlemeyi kaydedin. 
+- SPO için temel liste - **3. Adım:** Büyük bir dosyayı SharePoint Çevrimiçi belge kitaplığına Upload ve ağ izlemesi yapın. İzlemeyi kaydedin. 
     
-- SPO için taban çizgisi listesi- **4. Adım:** Web sitenizin OneDrive sayfasına göz atın ve ağ izleme ekleyin. İzlemeyi kaydedin. 
+- SPO için temel liste - **4. Adım:** OneDrive web sitesinin giriş sayfasına göz atın ve bir ağ izlemesi yapın. İzlemeyi kaydedin. 
     
-Bu liste, kullanıcıların SharePoint Online'a karşı  gerçekleştir yaptıkları en önemli SharePoint içerir. Son adım olan OneDrive İş'a gidip izleme yapmak için, SharePoint Online giriş sayfasının yükü (çoğu zaman şirketler tarafından özelleştirilebilir) ile OneDrive İş sayfası (nadiren özelleştirilebilir) arasında bir karşılaştırma sağlar. Bu, SharePoint Online sitesinde yavaş yüklenen bir testtir. Testniz için bu farkın kaydını  derlemeniz gerekir.
+Bu liste, kullanıcıların SharePoint Online'a karşı gerçekleştirebilecekleri en önemli yaygın eylemleri içermelidir. OneDrive İş giden izlemenin son adımının, SharePoint Online giriş sayfasının yükü (genellikle şirketler tarafından özelleştirilir) ile nadiren özelleştirilen OneDrive İş giriş sayfası arasında bir karşılaştırma oluşturduğuna dikkat edin. Yavaş yüklenen SharePoint Online sitesine gelince bu temel bir testtir. Testinizde bu farkın kaydını oluşturabilirsiniz.
   
-Bir performans sorununun ortasındaysanız, taban çizgisi almakla aynı adımların çoğu aynıdır. Ağ izleri çok önemli hale gelebilir, bu nedenle bundan  *sonra önemli*  izlerin nasıl ele ala idare olacağız. 
+Bir performans sorununun ortasındaysanız, adımların çoğu temel alma işlemiyle aynıdır. Ağ izlemeleri kritik hale gelir, bu nedenle sonraki önemli izlemeleri  *nasıl*  alacağımıza bakacağız. 
   
-Bir performans sorunuyla  *başa olmak* için, hemen şimdi performans sorunuyla karşılaşılırken bir izleme alıyor olması gerekir. Günlükleri toplamak için uygun araçlarınız olması ve bir eylem planınız, başka bir ifadeyle, toplanabilirsiniz en iyi bilgileri toplamak için atlanacak sorun giderme eylemlerinin listesi olması gerekir. İlk olarak, dosyaların zamanlamasını yansıtan bir klasöre kaydedilebilir ve bu şekilde testin tarih ve saati kaydedilebilir. Ardından, sorunun adımlarını kendi kendilerine göre daraltabilirsiniz. Bunlar test etmek için tam olarak hangi adımları kullanacağız? Temel bilgileri unutmayın: Sorun yalnızca Başka bir Outlook ise, sorun davranışının tek bir hizmette veya hizmette Office 365 olun. Bu sorunun kapsamını daraltmak, çözerek üzerinde odaklanmanıza yardımcı olur. 
+Bir performans sorununu çözmek için,  *şu anda* performans sorununu yaşadığınız sırada bir izleme almanız gerekir. Günlükleri toplamak için uygun araçlara sahip olmanız ve bir eylem planına, yani mümkün olan en iyi bilgileri toplamak için gerçekleştirebileceğiniz sorun giderme eylemlerinin listesine ihtiyacınız vardır. Yapılacak ilk şey, dosyaların zamanlamayı yansıtan bir klasöre kaydedilebilmesi için testin tarih ve saatini kaydetmektir. Ardından, sorun adımlarını daraltın. Bunlar test için kullanacağınız tam adımlardır. Temel bilgileri unutmayın: Sorun yalnızca Outlook ile ilgiliyse, sorun davranışının yalnızca bir Office 365 hizmetinde oluştuğundan emin olun. Bu sorunun kapsamını daraltmak, çözebileceğiniz bir şeye odaklanmanıza yardımcı olur. 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Kullanıcı Office 365 yönetme](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a)
+[Office 365 uç noktalarını yönetme](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a)

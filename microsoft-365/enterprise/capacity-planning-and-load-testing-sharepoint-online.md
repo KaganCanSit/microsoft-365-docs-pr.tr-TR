@@ -2,7 +2,7 @@
 title: SharePoint Online’da kapasite planlaması ve yük testi
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 04/10/2019
 audience: Admin
 ms.topic: conceptual
@@ -18,31 +18,31 @@ search.appverid:
 - SPO160
 - MET150
 ms.assetid: c932bd9b-fb9a-47ab-a330-6979d03688c0
-description: Bu makalede, izin verilmediğini ve geleneksel yükleme testlerini gerçekleştirmeden SharePoint Online'a nasıl dağıtım ver verildiği açıklanmıştır.
-ms.openlocfilehash: 8792c59ef96ef97cc36d0908100fd9ebb330857a
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+description: Bu makalede, izin verilmediğinden geleneksel yük testi gerçekleştirmeden SharePoint Online'a nasıl dağıtım yapabileceğiniz açıklanmaktadır.
+ms.openlocfilehash: 1d1714bbcdefdbc41ff3ac5d038c6b59a7043a26
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63015184"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65101105"
 ---
 # <a name="capacity-planning-and-load-testing-sharepoint-online"></a>SharePoint Online’da kapasite planlaması ve yük testi
-Bu makalede, SharePoint Online'da yükleme testine izin verilmediğiniden geleneksel yükleme testine gerek kalmadan SharePoint açıklanmıştır. SharePoint Online bir bulut hizmetidir ve hizmet üzerindeki yükleme özellikleri, hizmet durumu ve genel yük dengesi Microsoft tarafından yönetilir.
+Bu makalede, SharePoint Online'da yük testine izin verilmediğinden, geleneksel yük testi olmadan SharePoint Online'a nasıl dağıtabileceğiniz açıklanır. SharePoint Online bir bulut hizmetidir ve hizmetteki yük özellikleri, sistem durumu ve genel yük dengelemesi Microsoft tarafından yönetilir.
   
-Sitenizi başlatma başarılarından emin olmak için en iyi yaklaşım, portal lansmanında plan üzerinde vurgulanan temel ilkelere, uygulamalara ve [önerilere uymanızdır](planportallaunchroll-out.md).
+Sitenizi başlatmanın başarısını sağlamaya yönelik en iyi yaklaşım, [portalınızın piyasaya](planportallaunchroll-out.md) sürülmesini planlarken vurgulanan temel ilkeleri, uygulamaları ve önerileri izlemektir.
 
-## <a name="overview-of-how-sharepoint-online-performs-capacity-planning"></a>SharePoint Online'ın Kapasite planlamasının nasıl gerçekleştirdiğine genel bakış 
-SharePoint Online'ın şirket içi dağıtımdan yararlanmanın en büyük avantajlarından biri, bulutun esnekliği ve dağıtılmış bölgelerdeki kullanıcılar için iyileştirmelerdir. Büyük ölçekli ortamımız milyonlarca kullanıcıya günlük olarak hizmet olacak şekilde ayarlanmıştır; dolayısıyla gruplarla denge kurarak ve genişleterek kapasiteyi etkili bir şekilde işlememiz önemlidir.
+## <a name="overview-of-how-sharepoint-online-performs-capacity-planning"></a>SharePoint Online'ın Kapasite planlaması gerçekleştirme şekline genel bakış 
+SharePoint Online'ın şirket içi dağıtım üzerindeki temel avantajlarından biri, bulutun esnekliği ve dağıtılmış bölgelerdeki kullanıcılar için iyileştirmelerdir. Büyük ölçekli ortamımız günlük olarak milyonlarca kullanıcıya hizmet vermek üzere ayarlanmıştır, bu nedenle grupları dengeleyerek ve genişleterek kapasiteyi etkili bir şekilde ele almamız önemlidir.
   
-Büyüme, herhangi bir grupta yer alan herhangi bir kiracı için çoğunlukla öngörülemez durumdayken, toplam istek toplamı zamanla öngörülebilir olur. SharePoint Online'da büyüme eğilimlerini tanımarak, gelecekteki genişletmeyi planlayacağız.
+Büyüme genellikle tek bir gruptaki herhangi bir kiracı için tahmin edilemez olsa da, isteklerin toplam toplamı zaman içinde tahmin edilebilir. SharePoint Online'daki büyüme eğilimlerini belirleyerek gelecekteki genişlemeyi planlayabiliriz.
   
-Her grup için kapasiteyi verimli bir şekilde kullanmak ve beklenmedik büyümeyle başa çık sağlamak için, hizmetin çeşitli öğelerini izleyen ve izleyen otomasyon kaynakmız vardır. Ana ölçümlerden biri CPU yüküdir ve ön uç sunucularını ölçeklendirmek için sinyal olarak kullanılır. Buna ek olarak, SQL ortamları zaman içinde yük ve gelişmeye göre ölçeklendirilecek ve aşamalarla dalgalara göre doğru dağılımı sağlayan bir aşama [/](planportallaunchroll-out.md)dalga yaklaşımı öneririz. 
+Kapasiteyi verimli bir şekilde kullanmak ve beklenmeyen büyümeyle başa çıkmak için, herhangi bir çiftlikte hizmetin çeşitli öğelerini izleyen ve izleyen otomasyona sahibiz. Ana ölçümlerden biri CPU yükü olan ve ön uç sunucularının ölçeğini artırmak için sinyal olarak kullanılan birden çok ölçüm kullanılır. Buna ek olarak, SQL ortamlar zaman içinde yük ve büyümeye göre ölçeklendirileceği ve aşamaların ve dalgaların izlenmesi bu yükün ve büyümenin doğru dağılımını sağladığından, [aşamalı / dalga yaklaşımı](planportallaunchroll-out.md) öneririz. 
 
-Kapasite, sürekli olarak daha fazla donanım eklemekten çok daha fazlasıdır, ancak aynı zamanda geçerli yükleme isteklerine hizmet olduğundan emin olmak için bu kapasiteyi yönetmeyi ve denetlemeyi de içerir. Müşterilerin en iyi deneyime sahip olduğundan emin olmak için önerilen yönergeleri izlemelerini öneririz. Ayrıca, hizmette "kötü amaçlı" davranışa izin verme vermemiz için azaltma düzenleri ve denetimlerimiz olduğu anlamına da gelir. Tüm "kötü" davranışlar bilerek yapmasa da, bu davranışın etkisini sınırlayın. Azaltma ve bundan kaçınma hakkında daha fazla bilgi için, kısıtlamaya neden olan [kısıtlamayı önleme kılavuz makalesini gözden](/sharepoint/dev/general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online) geçirebilirsiniz.
+Kapasite, sürekli olarak daha fazla donanım eklemekten ibaret değildir, aynı zamanda geçerli yük isteklerine hizmet sağladığından emin olmak için bu kapasiteyi yönetmeye ve denetlemeye de bağlıdır. Müşterilerin en iyi deneyime sahip olduklarından emin olmak için önerilen yönergeleri izlemelerini öneririz. Ayrıca hizmette "kötü amaçlı" davranışa izin vermediğimizden emin olmak için azaltma desenleri ve denetimlerimiz olduğu anlamına gelir. Tüm "kötü" davranışlar kasıtlı olmasa da, bu davranışın etkisini sınırladığımızdan emin olmamız gerekir. Azaltma ve bundan kaçınma hakkında daha fazla bilgi için [kısıtlanmaktan kaçınma kılavuzu](/sharepoint/dev/general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online) makalesini gözden geçirin.
 
-## <a name="why-you-cannot-load-test-sharepoint-online"></a>Test e-SharePoint Online'SharePoint yükleyemedik
-Şirket içi ortamlarda, yükleme testi ölçek varsayımı doğrulamak ve sonuçta bir sunucu grubunun en son noktasını bulmak için kullanılır; yük ile doygunlukla doldurarak. 
+## <a name="why-you-cannot-load-test-sharepoint-online"></a>Test SharePoint neden Çevrimiçi yükleyemezsiniz?
+Şirket içi ortamlarda yük testi, ölçek varsayımını doğrulamak ve sonuçta bir çiftliğin kırılma noktasını bulmak için kullanılır; yüke doygunluk sağlayarak. 
 
-SharePoint Online ile, ölçeğin görece akıcı olduğundan, belirli küçük ayarlara dayalı olarak yük yüklerini, azaltmaları ve denetimleri ayarlay olduğundan işleri farklı bir şekilde yapacağız. Bu kadar büyük ölçekli çok kiracılı bir ortam olması dolayısıyla tüm yükleme testlerini otomatik olarak azaltmamız için aynı grup içinde tüm kiracıları korumamız gerekir. Öte yandan test yükleme girişimi yapıyorsanız, kısıtlamanın yanı sıra sizi yanıltmaya da neden olabilecek sonuçlar alırsınız, çünkü bugün test ettiyniz grup test penceresinde veya test sonrası saatleri içinde ölçek değişiklikleri gerçekleştirecek olduğundan, ölçek ve grup dengeleme eylemleri düzenli olarak gerçekleştirilir.
+SharePoint Online ile, ölçek görece akıcı olduğundan ve belirli buluşsal yöntemlere göre yük ayarlayıp kısıtlayıp kontrol ettiği için işleri farklı yapmamız gerekir. Bu kadar büyük ölçekli çok kiracılı bir ortam olarak, tüm yük testlerini otomatik olarak azaltmamız için aynı gruptaki tüm kiracıları korumamız gerekir. Ancak testi yüklemeyi denerseniz, azaltmanın yanı sıra hayal kırıklığı ve yanıltıcı sonuçlar alırsınız çünkü bugün test ettiğiniz grup muhtemelen test penceresi sırasında veya test sonrasında saatler içinde ölçek değişiklikleri yapmış olacaktır çünkü ölçek ve grup dengeleme eylemleri sürekli olarak gerçekleştirilir.
 
-Test sonuçlarını bir hizmet SharePoint yerine, önerilen uygulamaları takip etmeye ve sağlıklı bir [portal oluşturma,](/sharepoint/portal-health) başlatma ve koruma yönergelerini takip etmeye odaklanın.
+Hizmet olarak test SharePoint yüklemeye çalışmak yerine, önerilen uygulamaları izlemeye odaklanın ve [sağlıklı bir portal oluşturma, başlatma ve koruma](/sharepoint/portal-health) yönergelerini izleyin.

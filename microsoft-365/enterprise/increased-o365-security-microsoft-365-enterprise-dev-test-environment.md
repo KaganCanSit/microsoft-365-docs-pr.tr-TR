@@ -1,10 +1,10 @@
 ---
-title: Kurumsal Microsoft 365 ortamınız için Microsoft 365 güvenliğinizi artırmış
+title: Kurumsal test ortamınız için Microsoft 365 için daha fazla Microsoft 365 güvenliği
 f1.keywords:
 - NOCSH
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 12/09/2019
 audience: ITPro
 ms.topic: article
@@ -17,114 +17,114 @@ ms.custom:
 - admindeeplinkDEFENDER
 - admindeeplinkSPO
 ms.assetid: 1aa9639b-2862-49c4-bc33-1586dda636b8
-description: Test Laboratuvarı Kılavuzu'Microsoft 365 test Microsoft 365 için güvenlik Microsoft 365 ayarlarını etkinleştirin.
-ms.openlocfilehash: bf64bb23192eb4a4d2b3700a2b0c4390efc1f53e
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Kurumsal test ortamı için Microsoft 365 ek Microsoft 365 güvenlik ayarlarını etkinleştirmek için bu Test Laboratuvarı Kılavuzu'nu kullanın.
+ms.openlocfilehash: 4c69fadd3fb3e6744fad850e76282ea2339f48ee
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63327917"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65100731"
 ---
-# <a name="increased-microsoft-365-security-for-your-microsoft-365-for-enterprise-test-environment"></a>Kurumsal Microsoft 365 ortamınız için Microsoft 365 güvenliğinizi artırmış
+# <a name="increased-microsoft-365-security-for-your-microsoft-365-for-enterprise-test-environment"></a>Kurumsal test ortamınız için Microsoft 365 için daha fazla Microsoft 365 güvenliği
 
-*Bu Test Laboratuvarı Kılavuzu yalnızca kurumsal test Microsoft 365 test ortamları için kullanılabilir.*
+*Bu Test Laboratuvarı Kılavuzu yalnızca kurumsal test ortamları için Microsoft 365 için kullanılabilir.*
 
-Bu makaledeki yönergelerle, kurumsal test Microsoft 365 ortamınıza güvenliği artırmak üzere ek Microsoft 365 ayarları yapılandırabilirsiniz.
+Bu makaledeki yönergelerle, kurumsal test ortamınıza yönelik Microsoft 365 güvenliği artırmak için ek Microsoft 365 ayarları yapılandıracaksınız.
 
 ![Microsoft bulutu için Test Laboratuvarı Kılavuzları.](../media/m365-enterprise-test-lab-guides/cloud-tlg-icon.png)
 
 > [!TIP]
-> Kurumsal [Test](../downloads/Microsoft365EnterpriseTLGStack.pdf) Laboratuvarı Kılavuzu yığınına göre görsel bir harita Microsoft 365 için buraya tıklayın.
+> Kurumsal Test Laboratuvarı Kılavuzu yığınının Microsoft 365 tüm makalelerin görsel haritası için [buraya](../downloads/Microsoft365EnterpriseTLGStack.pdf) tıklayın.
   
-## <a name="phase-1-build-out-your-microsoft-365-for-enterprise-test-environment"></a>Aşama 1: Kurumsal test Microsoft 365 yapınızı oluşturma
+## <a name="phase-1-build-out-your-microsoft-365-for-enterprise-test-environment"></a>1. Aşama: Kurumsal test ortamı için Microsoft 365 oluşturma
 
-Yalnızca en düşük gereksinimlerle yüksek Microsoft 365 kolay bir şekilde yapılandırmaksanız, Hafif taban [yapılandırma'daki yönergeleri izleyin](lightweight-base-configuration-microsoft-365-enterprise.md).
+Yalnızca en düşük gereksinimlerle daha yüksek Microsoft 365 güvenliği basit bir şekilde yapılandırmak istiyorsanız [Basit temel yapılandırma](lightweight-base-configuration-microsoft-365-enterprise.md) yönergelerini izleyin.
   
-Sanal bir kuruluşta artırılmış Microsoft 365 yapılandırmak için, Geçişli kimlik [doğrulama'daki yönergeleri izleyin](pass-through-auth-m365-ent-test-environment.md).
+Sanal bir kuruluşta artırılmış Microsoft 365 güvenlik yapılandırmak istiyorsanız Doğrudan [kimlik doğrulamasındaki](pass-through-auth-m365-ent-test-environment.md) yönergeleri izleyin.
   
 > [!NOTE]
-> Artırılmış Microsoft 365 testi, Active Directory Etki Alanı Hizmetleri (AD DS) ormanı için İnternet ve dizin eşitlemeye bağlı sanal bir intranet içeren sanal kurumsal test ortamı gerektirmez. Burada, otomatik lisanslama ve grup üyeliğini test etmek ve normal bir kuruluşu temsil eden bir ortamda bu üyelikle denemeler yapmak için bir seçenek olarak sağlanmıştır. 
+> Artan güvenlik Microsoft 365 test etmek, İnternet'e bağlı bir sanal intranet ve bir Active Directory Domain Services (AD DS) ormanı için dizin eşitlemesi içeren sanal kurumsal test ortamını gerektirmez. Burada, otomatik lisanslama ve grup üyeliğini test edebilmeniz ve tipik bir kuruluşu temsil eden bir ortamda denemeler yapabileceğiniz bir seçenek olarak sağlanır. 
 
-## <a name="phase-2-configure-increased-microsoft-365-security"></a>Aşama 2: Artırılmış güvenlik Microsoft 365 yapılandırma
+## <a name="phase-2-configure-increased-microsoft-365-security"></a>2. Aşama: Artırılmış Microsoft 365 güvenliği yapılandırma
 
-Bu aşamada, kurumsal test Microsoft 365 için güvenlik Microsoft 365 artırılmış güvenlik etkinleştirildi. Ek ayrıntılar ve ayarlar için bkz. [Daha yüksek güvenlik için kiracınızı yapılandırma](/office365/securitycompliance/tenant-wide-setup-for-increased-security).
+Bu aşamada, kurumsal test ortamı için Microsoft 365 için daha fazla Microsoft 365 güvenliği etkinleştirirsiniz. Ek ayrıntılar ve ayarlar için bkz [. Artan güvenlik için kiracınızı yapılandırma](/office365/securitycompliance/tenant-wide-setup-for-increased-security).
 
-### <a name="configure-sharepoint-online-to-block-apps-that-dont-support-modern-authentication"></a>Modern SharePoint desteklemez uygulamaları engellemek için SharePoint Online'da yapılandırma
+### <a name="configure-sharepoint-online-to-block-apps-that-dont-support-modern-authentication"></a>Modern kimlik doğrulamasını desteklemeyen uygulamaları engellemek için SharePoint Online'ı yapılandırma
 
-Modern kimlik doğrulamayı desteklemez, bu uygulamalara kimlik ve cihaz erişimi yapılandırmaları uygulanamaz. Bu, Microsoft 365 aboneliğinizin ve dijital varlıklarının güvenliğini sağlamanın önemli bir öğesidir.[](../security/office-365-security/microsoft-365-policies-configurations.md) 
+Modern kimlik doğrulamasını desteklemeyen uygulamalar, Microsoft 365 aboneliğinizin ve dijital varlıklarınızın güvenliğini sağlamanın önemli bir öğesi olan [kimlik ve cihaz erişim yapılandırmalarına](../security/office-365-security/microsoft-365-policies-configurations.md) sahip olamaz. 
 
-1. Genel yönetici <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> oturum açın ve Microsoft 365 test laboratuvarı aboneliğiniz ile oturum açın.
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> gidin ve genel yönetici hesabınızla Microsoft 365 test laboratuvarı aboneliğinizde oturum açın.
     
-  - Basit sınama ortamını Microsoft 365, yerel bilgisayarınızdan oturum açma.
+  - Basit Microsoft 365 test ortamını kullanıyorsanız yerel bilgisayarınızdan oturum açın.
     
-  - Sanal kurumsal sınama ortamını Microsoft 365, CLIENT1 sanal makinesine bağlanmak için [Azure portalını](https://portal.azure.com) kullanın ve ardından İSTEMCI1'den oturum açın.
+  - Sanal kurumsal Microsoft 365 test ortamını kullanıyorsanız, [İstemci1](https://portal.azure.com) sanal makinesine bağlanmak için Azure portal kullanın ve ardından CLIENT1'den oturum açın.
  
-2. Yeni **Gezinti Microsoft 365 yönetim merkezi,** sol gezinti **bölmesindeki** Yönetim merkezleri'nin altında Seçenekler'e **SharePoint**.
-3. Yeni Yönetim **merkezi SharePoint PoliciesAccess** **denetimi'ni** >  <a href="https://go.microsoft.com/fwlink/?linkid=2185071" target="_blank">**seçin**</a>.
-4. Modern **kimlik doğrulamasını desteklemez uygulamalar'ı seçin, Erişimi** **engelle'yi ve** ardından Kaydet'i **seçin**.
+2. Yeni **Microsoft 365 yönetim merkezi** sekmesinde, sol gezinti bölmesindeki **Yönetim merkezleri'nin** altında **SharePoint'e** tıklayın.
+3. Yeni **SharePoint yönetim merkezi** sekmesinde **İlkelerAccess denetimi'ni** >  seçin.<a href="https://go.microsoft.com/fwlink/?linkid=2185071" target="_blank"></a>
+4. **Modern kimlik doğrulamayı desteklemeyen uygulamalar'ı** seçin, **Erişimi engelle'yi** ve ardından **Kaydet'i** seçin.
 
 
-### <a name="enable-defender-for-office-365-for-sharepoint-onedrive-for-business-and-microsoft-teams"></a>SharePoint, OneDrive İş ve Office 365 için Defender'ı Microsoft Teams
+### <a name="enable-defender-for-office-365-for-sharepoint-onedrive-for-business-and-microsoft-teams"></a>SharePoint, OneDrive İş ve Microsoft Teams için Office 365 için Defender etkinleştirme
 
-SharePoint, OneDrive için Office 365 Defender, Microsoft Teams yanlışlıkla kötü amaçlı dosyaları paylaşmaya karşı korur.
+SharePoint, OneDrive ve Microsoft Teams için Office 365 için Defender, kuruluşunuzu yanlışlıkla kötü amaçlı dosyaları paylaşmaya karşı korur.
 
-1. Güvenlik ve <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Uyumluluk & gidin</a> ve genel yönetici hesabınızla oturum açın.
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Güvenlik & Uyumluluk Merkezi'ne</a> gidin ve genel yönetici hesabınızla oturum açın.
 
-2. Sol gezinti bölmesinde, Tehdit yönetimi'nin **altında İlke'ye** **tıklayın** ve sonra Ekleri **Ekle'Kasa tıklayın**. 
+2. Sol gezinti bölmesinde, **Tehdit yönetimi'nin** altında **İlke'ye** tıklayın ve ardından **Ekler'Kasa** tıklayın. 
 
-3. Dosyaları **Dosya, Klasör SharePoint, OneDrive altında Microsoft Teams**. **AtP'yi sırasıyla, SharePoint, OneDrive aç'ı Microsoft Teams**.
+3. **SharePoint, OneDrive ve Microsoft Teams dosyaları koruma** altında. **SharePoint, OneDrive ve Microsoft Teams için ATP'yi aç'ı** seçin.
 
 4. **Kaydet**'e tıklayın.
 
 
 ### <a name="enable-anti-malware"></a>Kötü amaçlı yazılımdan korumayı etkinleştirme
 
-Kötü amaçlı yazılım virüslerden ve casus yazılımlardan oluşur. Virüs diğer programlara ve verilere bulaşarak bulaşarak, bilgisayarınızın her yerinde bulaşarak bulaştırılacak programlar arıyor. Casus yazılım, oturum açma bilgileri ve kişisel veriler gibi kişisel bilgilerinizi toplayıp kötü amaçlı yazılım yazarına geri gönderen kötü amaçlı yazılım anlamına gelir. 
+Kötü amaçlı yazılım virüslerden ve casus yazılımlardan oluşur. Virüsler diğer programlara ve verilere bulaşır ve bilgisayarınıza yayılarak bulaşacak programları arar. Casus yazılım, oturum açma bilgileri ve kişisel veriler gibi kişisel bilgilerinizi toplayan ve kötü amaçlı yazılım yazarına geri gönderen kötü amaçlı yazılımları ifade eder. 
 
-Microsoft 365 gelen ve giden iletileri kötü amaçlı yazılımlardan korumaya ve sizi istenmeyen postalardan korumaya yardımcı olan yerleşik kötü amaçlı yazılım ve istenmeyen posta filtreleme özellikleri vardır. Daha fazla bilgi için bkz[. İstenmeyen postadan koruma & kötü amaçlı yazılımdan koruma.](../security/office-365-security/anti-spam-and-anti-malware-protection.md)
+Microsoft 365, gelen ve giden iletileri kötü amaçlı yazılımlardan korumaya ve istenmeyen postalardan korunmanıza yardımcı olan yerleşik kötü amaçlı yazılım ve istenmeyen posta filtreleme özelliklerine sahiptir. Daha fazla bilgi için bkz [. İstenmeyen posta önleme & kötü amaçlı yazılımdan koruma](../security/office-365-security/anti-spam-and-anti-malware-protection.md).
 
-Kötü amaçlı yazılımdan koruma dosya türleri yaygın olarak kullanılan dosya türlerine sahip dosyalar üzerinde gerçekleştirile olduğundan emin olmak için:
+Yaygın ek dosya türlerine sahip dosyalarda kötü amaçlı yazılımdan koruma işleminin gerçekleştirildiğinden emin olmak için:
 
-1. İlke sayfasına dönmek için tarayıcınızda **geri düğmesine tıklayın** .
-2. Kötü amaçlı **yazılımdan koruma'ya tıklayın**.
-3. Varsayılan adlı ilkeye çift **tıklayın**.
-4. Kötü amaçlı **yazılımdan koruma ilkesi penceresinde,** Kötü amaçlı **yazılımdan koruma** ilkesi Ayarlar.
-4. Ortak **Ek Türleri filtresi altında,** **Aç'ı seçin** ve kaydet'e **tıklayın**.
-
-
-## <a name="phase-3-examine-the-security-dashboard"></a>Aşama 3: Güvenlik panosuyu inceleme
-
-Microsoft 365'da tehdit yönetimi, kuruluş verilerinize mobil cihaz erişimini denetlemenize ve yönetmenize, kurum verilerinizin veri kaybına karşı korunmasına ve gelen ve giden iletilerin kötü amaçlı yazılımlardan ve istenmeyen postalardan korunmasına yardımcı olabilir. Ayrıca, tehdit yönetimini etki alanınıza karşı itibarını korumak ve gönderenlerin etki alanınıza yönelik kötü amaçlı hesaplara yönelik kötü amaçlı hesap olup olmadığını belirlemek için kullanırsınız. 
-
-Güvenlik panosuyu görmek için:
-
-1. Gerekirse Güvenlik ve Uyumluluk Merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">'& gidin</a> ve genel yönetici hesabınızla oturum açın.
-
-2. Sol gezinti bölmesinde, Tehdit **yönetimi'nin altında Pano'ya** **tıklayın**.
-
-Sağlanan bilgileri tanımanız için panonun tüm kartlarına yakından bakın.
-
-Daha fazla bilgi için bkz. [Güvenlik Panosu](../security/office-365-security/security-dashboard.md).
+1. **İlke** sayfasına dönmek için tarayıcınızda geri düğmesine tıklayın.
+2. **Kötü amaçlı yazılımdan koruma'ya** tıklayın.
+3. **Varsayılan** adlı ilkeye çift tıklayın.
+4. **Kötü amaçlı yazılımdan koruma ilkesi** penceresinde **Ayarlar'e** tıklayın.
+4. **Ortak Ek Türleri filtresi** altında **Açık'ı** seçin ve **kaydet'e** tıklayın.
 
 
-## <a name="phase-4-examine-microsoft-secure-score"></a>Aşama 4: Microsoft Güvenli Puanı'nın incele
+## <a name="phase-3-examine-the-security-dashboard"></a>3. Aşama: Güvenlik panosunu inceleme
 
-Microsoft Güvenli Puanı, geçerli düzeyinizin aboneliğinize bağlı olarak güvenlik nedenini bir sayı olarak gösterir. Ayrıca, puanınızı geliştirmek için gerçekleştirebilirsiniz geliştirme eylemlerinin bir listesini de verir.
+Microsoft 365'de tehdit yönetimi, kuruluşunuzun verilerine mobil cihaz erişimini denetlemenize ve yönetmenize, kuruluşunuzun veri kaybına karşı korunmasına yardımcı olabilir ve gelen ve giden iletileri kötü amaçlı yazılımlardan ve istenmeyen postalardan korumaya yardımcı olabilir. Ayrıca etki alanınızın itibarını korumak ve gönderenlerin etki alanınızdan kötü amaçlı olarak hesap sahtekarlığı yapıp yapmadığını belirlemek için de tehdit yönetimini kullanırsınız. 
 
-1. Tarayıcınızda yeni bir sekme oluşturun, Puanlar <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">portalına Microsoft 365 Defender ardından</a> Güvenli **puan'a tıklayın**.
-2. Genel Bakış **sekmesinde**  , geçerli Güvenli Puanınızı ve genel ortalamayla ve benzer sayıda lisansla aboneliklerle karşılaştırmasını not alın.
-3. Geliştirme **eylemleri sekmesinde** , puanınızı artırmak için gerçekleştirebilirsiniz eylemler listesini okuyun.
+Güvenlik panosunu görmek için:
 
-Daha fazla bilgi için [bkz. Microsoft Güvenli Puanı](../security/defender/microsoft-secure-score.md).
+1. Gerekirse <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Güvenlik & Uyumluluk Merkezi'ne</a> gidin ve genel yönetici hesabınızla oturum açın.
+
+2. Sol gezinti bölmesindeki **Tehdit yönetimi'nin** altında **Pano'ya** tıklayın.
+
+Sağlanan bilgileri öğrenmek için panodaki tüm kartları yakından inceleyin.
+
+Daha fazla bilgi için bkz [. Güvenlik Panosu](../security/office-365-security/security-dashboard.md).
+
+
+## <a name="phase-4-examine-microsoft-secure-score"></a>4. Aşama: Microsoft Güvenli Puanını İnceleme
+
+Microsoft Güvenli Puanı, güvenlik duruşunuzu bir sayı olarak gösterir ve bu da aboneliğinizde kullanılabilen özelliklere göre geçerli düzeyinizi gösterir. Ayrıca puanınızı geliştirmek için gerçekleştirebileceğiniz iyileştirme eylemlerinin bir listesini de sunar.
+
+1. Tarayıcınızda yeni bir sekme oluşturun, <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalına</a> gidin ve **ardından Güvenli puan'a** tıklayın.
+2. **Genel Bakış** sekmesinde, geçerli Güvenli Puanınızı ve genel ortalamayla ve benzer sayıda lisansa sahip aboneliklerle karşılaştırmasını not edin.
+3. **İyileştirme eylemleri** sekmesinde, puanınızı artırmak için gerçekleştirebileceğiniz eylemlerin listesini okuyun.
+
+Daha fazla bilgi için bkz. [Microsoft Güvenli Puanı](../security/defender/microsoft-secure-score.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Test [ortamınıza ek](m365-enterprise-test-lab-guides.md#information-protection) bilgi koruma özelliklerini ve özelliklerini keşfedin.
+Test ortamınızdaki ek [bilgi koruma](m365-enterprise-test-lab-guides.md#information-protection) özelliklerini ve özelliklerini keşfedin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Microsoft 365 Test Laboratuvarı Kılavuzları için kılavuzlar](m365-enterprise-test-lab-guides.md)
+[Kurumsal Test Laboratuvarı Kılavuzları için Microsoft 365](m365-enterprise-test-lab-guides.md)
 
-[Microsoft 365 genel bakış için genel bakış](microsoft-365-overview.md)
+[Microsoft 365 Kurumsal’a genel bakış](microsoft-365-overview.md)
 
-[Microsoft 365 belgeleri için belgeler](/microsoft-365-enterprise/)
+[Kurumsal belgeler için Microsoft 365](/microsoft-365-enterprise/)

@@ -1,8 +1,8 @@
 ---
-title: E-posta için üçüncü taraf SSL sertifikalarını Microsoft 365
+title: Microsoft 365 için üçüncü taraf SSL sertifikalarını planlama
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 audience: ITPro
 ms.date: 05/15/2019
 ms.topic: conceptual
@@ -19,62 +19,62 @@ search.appverid:
 - MOE150
 - BCS160
 ms.assetid: b48cdf63-07e0-4cda-8c12-4871590f59ce
-description: 'Özet: Şirket içi ve karma, AD FS Exchange, Exchange Online hizmetleri ve Diğer Web Hizmetleri kullanan SSO için gereken SSL Exchange açıklar.'
-ms.openlocfilehash: 8c0bf69090abb87e71f2d51b73405ccf4e54d4bb
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: 'Özet: Şirket içi ve karma Exchange, AD FS kullanarak SSO, Exchange Online hizmetleri ve Exchange Web Hizmetleri için gereken SSL sertifikalarını açıklar.'
+ms.openlocfilehash: 0cd7cce2cd5f0aba8baecab7048d86d629d30427
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988148"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65100313"
 ---
-# <a name="plan-for-third-party-ssl-certificates-for-microsoft-365"></a>E-posta için üçüncü taraf SSL sertifikalarını Microsoft 365
+# <a name="plan-for-third-party-ssl-certificates-for-microsoft-365"></a>Microsoft 365 için üçüncü taraf SSL sertifikalarını planlama
 
-*Bu makale hem son hem de Microsoft 365 Kurumsal hem de Office 365 Kurumsal.*
+*Bu makale hem Microsoft 365 Kurumsal hem de Office 365 Kurumsal için geçerlidir.*
 
-İstemcileriniz ve dış ortam Microsoft 365 iletişimi şifrelemek için, altyapı sunucularınıza üçüncü taraf Güvenli Yuva Katmanı (SSL) sertifikaları yükmalıdır.
+İstemcilerinizle Microsoft 365 ortamı arasındaki iletişimi şifrelemek için, altyapı sunucularınıza üçüncü taraf Güvenli Yuva Katmanı (SSL) sertifikaları yüklenmelidir.
 
-Bu makale, proje ayarları [için ağ planlaması ve performans Microsoft 365](./network-planning-and-performance.md).
+Bu makale, [Microsoft 365 için ağ planlama ve performans ayarlamanın](./network-planning-and-performance.md) bir parçasıdır.
    
-Sertifikalar aşağıdaki veri bileşenleri Microsoft 365 gereklidir:
+Sertifikalar aşağıdaki Microsoft 365 bileşenleri için gereklidir:
   
-- Exchange şirket içi
+- Şirket içi Exchange
     
-- Çoklu oturum açma (SSO) (hem Active Directory Federasyon Hizmetleri (AD FS) federasyon sunucuları hem de AD FS federasyon sunucusu sunucuları için)
+- Çoklu oturum açma (SSO) (hem Active Directory Federasyon Hizmetleri (AD FS) (AD FS) federasyon sunucuları hem de AD FS federasyon sunucusu proxy'leri için)
     
-- Exchange Online Bulma, Her Yerden Bulma ve Outlook Web Hizmetleri Exchange hizmetleri
+- Otomatik Bulma, Outlook Her Yerde ve Exchange Web Hizmetleri gibi Exchange Online hizmetleri
     
-- Exchange sunucu
+- Karma sunucu Exchange
     
-## <a name="certificates-for-exchange-on-premises"></a>Şirket İçi Exchange sertifikalar
+## <a name="certificates-for-exchange-on-premises"></a>şirket içi Exchange için sertifikalar
 
-Şirket içi kuruluşla şirket içi kuruluş arasındaki iletişimi güvenli hale Exchange dijital sertifikaların nasıl kullanmaya Exchange Online genel bakış için, TechNet'te Sertifika Gereksinimlerini Anlama [makalesine bakın](/previous-versions/exchange-server/exchange-141/gg476123(v=exchg.141)).
+Şirket içi Exchange kuruluş ile Exchange Online arasındaki iletişimi güvenli hale getirmek için dijital sertifikaları kullanma hakkında genel bir bakış için [Sertifika Gereksinimlerini Anlama](/previous-versions/exchange-server/exchange-141/gg476123(v=exchg.141)) TechNet makalesine bakın.
   
 ## <a name="certificates-for-single-sign-on"></a>Çoklu Oturum Açma için sertifikalar
 
-Kullanıcılarınıza güçlü bir güvenlik içeren basitleştirilmiş bir çoklu oturum açma deneyimi sağlamak için, aşağıdaki tabloda gösterilen sertifikaların federasyon sunucularında veya federasyon sunucusu sunucularında olması gerekir. Aşağıdaki tablo Active Directory Federasyon Hizmetleri'ne (AD FS) odaklanır, ayrıca üçüncü taraf kimlik sağlayıcıları kullanma [hakkında daha fazla bilgimiz var](/azure/active-directory/hybrid/how-to-connect-fed-compatibility).
+Kullanıcılarınıza güçlü güvenlik içeren basitleştirilmiş bir çoklu oturum açma deneyimi sağlamak için, aşağıdaki tabloda gösterilen sertifikalar federasyon sunucularında veya federasyon sunucusu proxy'lerinde gereklidir. Aşağıdaki tabloda Active Directory Federasyon Hizmetleri (AD FS) (AD FS) ele alınmaktadır; [üçüncü taraf kimlik sağlayıcılarını kullanma](/azure/active-directory/hybrid/how-to-connect-fed-compatibility) hakkında daha fazla bilgi de mevcuttur.
   
-| Sertifika Türü | Açıklama | Dağıtım öncesinde neleri bilmek gerekir? |
+| Sertifika Türü | Açıklama | Dağıtmadan önce bilmeniz gerekenler |
 |:-----|:-----|:-----|
-|**SSL sertifikası (sunucu kimlik doğrulama sertifikası olarak da adlandırılan)** <br/> |Bu, federasyon sunucuları, istemciler ve federasyon sunucusu ara sunucu bilgisayarları arasındaki iletişimi güvenli hale etmek için kullanılan standart bir SSL sertifikasıdır.  <br/> |AD FS için bir SSL sertifikası gerekir. Varsayılan olarak AD FS, Internet Information Services'de (IIS) varsayılan web sitesi için yapılandırılmış SSL Internet Information Services kullanır.  <br/> Bu SSL sertifikasının konu adı, dağıtan her AD FS örneğinin Federasyon Hizmeti (FS) adını belirlemek için kullanılır. Sertifika yetkilisi (CA) tarafından verilen tüm yeni sertifikalar için, bu sertifikalara sahip olmak istediğiniz şirketin veya kuruluşun adını en iyi şekilde temsil eden bir konu Microsoft 365. Bu adın İnternet'e yönlendirilebilir olması gerekir.  <br/>**Dikkat:** AD FS, bu SSL sertifikasının konu adı noktasız (kısa ad) olmadığını gerektirir.          <br/> **Öneri:** Bu sertifikaya AD FS istemcileri tarafından güveni olması gerekir, çünkü ortak (üçüncü taraf) CA veya genel olarak güvenilen bir kökün alt adı olan bir CA tarafından verilen SSL sertifikasını öneririz; örneğin, VeriSign veya Thawte.  <br/> |
-|**Belirteç imzalama sertifikası** <br/> |Bu, federasyon sunucusunun sorun kullandığı ve sunucu tarafından kabul edilen ve doğrulayan tüm belirteçleri güvenli bir şekilde imzalamak için Microsoft 365 standart bir X.509 sertifikasıdır.  <br/> |Belirteç imzalama sertifikası, FS'de güvenilir bir köke zincirler olan bir özel anahtar içeriyor olabilir. Varsayılan olarak, AD FS otomatik olarak imzalanan bir sertifika oluşturur. Bununla birlikte, kurumnizin gereksinimlerine bağlı olarak, AD FS yönetim ek bileşenini kullanarak bu sertifikayı CA tarafından verilen bir sertifikaya değiştirebilirsiniz.  <br/>**Dikkat:** Belirteç imzalama sertifikası, FS kararlılığı açısından çok önemlidir. Sertifika değiştirilirse, Microsoft 365 hakkında bu değişikliğin bildirmiş olması gerekir. Bildirim sağlanmazsa, kullanıcılar kendi müşteri hizmetleri tekliflerinde Microsoft 365 oturum açmaz.<br/>**Öneri:** AD FS tarafından oluşturulan otomatik olarak imzalanan belirteç imzalama sertifikasını öneririz. Bunu yaparak, bu sertifikayı sizin için varsayılan olarak yönetir. Örneğin, bu sertifikanın süresinin dolmak üzere olduğu zaman, AD FS yeni bir otomatik olarak imzalanan sertifika oluşturacak.  <br/> |
+|**SSL sertifikası (sunucu kimlik doğrulama sertifikası olarak da adlandırılır)** <br/> |Bu, federasyon sunucuları, istemciler ve federasyon sunucusu proxy bilgisayarları arasındaki iletişimi güvenli hale getirmek için kullanılan standart bir SSL sertifikasıdır.  <br/> |AD FS bir SSL sertifikası gerektirir. Varsayılan olarak AD FS, Internet Information Services(IIS) içindeki varsayılan web sitesi için yapılandırılan SSL sertifikasını kullanır.  <br/> Bu SSL sertifikasının konu adı, dağıttığınız her AD FS örneğinin Federasyon Hizmeti (FS) adını belirlemek için kullanılır. Microsoft 365 için şirketinizin veya kuruluşunuzun adını en iyi şekilde temsil eden yeni sertifika yetkilisi (CA) tarafından verilen sertifikalar için bir konu adı seçmeyi göz önünde bulundurun. Bu ad İnternet'e yönlendirilebilir olmalıdır.  <br/>**Dikkat:** AD FS, bu SSL sertifikasının noktasız (kısa ad) konu adına sahip olmamasını gerektirir.          <br/> **Öneri:** Bu sertifikanın AD FS istemcileri tarafından güvenilir olması gerektiğinden, genel (üçüncü taraf) CA veya genel olarak güvenilen bir köke bağlı bir CA tarafından verilen bir SSL sertifikası kullanmanızı öneririz; örneğin, VeriSign veya Thawte.  <br/> |
+|**Belirteç imzalama sertifikası** <br/> |Bu, federasyon sunucusunun dışarı aktarıp Microsoft 365 kabul edip doğrulayan tüm belirteçleri güvenli bir şekilde imzalamak için kullanılan standart bir X.509 sertifikasıdır.  <br/> |Belirteç imzalama sertifikası, FS'de güvenilir bir köke zincirleyen özel bir anahtar içermelidir. Varsayılan olarak, AD FS otomatik olarak imzalanan bir sertifika oluşturur. Ancak, kuruluşunuzun gereksinimlerine bağlı olarak, AD FS yönetim ek bileşenini kullanarak bu sertifikayı CA tarafından verilen bir sertifikayla değiştirebilirsiniz.  <br/>**Dikkat:** Belirteç imzalama sertifikası, FS'nin kararlılığı açısından kritik öneme sahiptir. Sertifika değiştirilirse, değişiklik Microsoft 365 bildirilmelidir. Bildirim sağlanmazsa, kullanıcılar Microsoft 365 hizmet tekliflerinde oturum açamaz.<br/>**Öneri:** AD FS tarafından oluşturulan otomatik olarak imzalanan belirteç imzalama sertifikasını kullanmanızı öneririz. Bunu yaparak, bu sertifikayı varsayılan olarak sizin için yönetir. Örneğin, bu sertifikanın süresi dolmak üzereyken AD FS yeni bir otomatik olarak imzalanan sertifika oluşturur.  <br/> |
    
-Federasyon sunucusu sunucu sunucularında, aşağıdaki tabloda açıklanan sertifika gerekir.
+Federasyon sunucusu proxy'leri aşağıdaki tabloda açıklanan sertifikayı gerektirir.
   
-| Sertifika Türü | Açıklama | Dağıtım öncesinde neleri bilmek gerekir? |
+| Sertifika Türü | Açıklama | Dağıtmadan önce bilmeniz gerekenler |
 |:-----|:-----|:-----|
-|SSL sertifikası  <br/> |Bu, federasyon sunucusu, federasyon sunucusu ara sunucu ve İnternet istemci bilgisayarları arasındaki iletişimin güvenliğini sağlamak için kullanılan standart bir SSL sertifikasıdır.  <br/> |AD FS Federasyon Sunucusu Ara Sunucu Yapılandırması sihirbazını başarıyla çalıştıramadan önce bu SSL sertifikasının IIS'de varsayılan web sitesine bağlı olması gerekir.  <br/> Bu sertifikanın konu adı, şirket ağının federasyon sunucusunda yapılandırılmış olan SSL sertifikasıyla aynı olmalıdır.  <br/> **Öneri:** Bu federasyon sunucusu ara sunucusunun bağlandığı federasyon sunucusunda yapılandırılan aynı sunucu kimlik doğrulama sertifikasını öneririz.  <br/> |
+|SSL sertifikası  <br/> |Bu, federasyon sunucusu, federasyon sunucusu ara sunucusu ve İnternet istemci bilgisayarları arasındaki iletişimin güvenliğini sağlamak için kullanılan standart bir SSL sertifikasıdır.  <br/> |AD FS Federasyon Sunucusu Proxy Yapılandırma sihirbazını başarıyla çalıştırabilmeniz için önce bu SSL sertifikası IIS'deki varsayılan web sitesine bağlı olmalıdır.  <br/> Bu sertifika, şirket ağındaki federasyon sunucusunda yapılandırılan SSL sertifikasıyla aynı konu adına sahip olmalıdır.  <br/> **Öneri:** Bu federasyon sunucusu proxy'sinin bağlanıldığı federasyon sunucusunda yapılandırılan sunucu kimlik doğrulama sertifikasını kullanmanızı öneririz.  <br/> |
    
-## <a name="certificates-for-autodiscover-outlook-anywhere-and-active-directory-synchronization"></a>Otomatik Bulma, Her Yerden Outlook Active Directory Eşitlemesi için sertifikalar
+## <a name="certificates-for-autodiscover-outlook-anywhere-and-active-directory-synchronization"></a>Otomatik Bulma, her yerde Outlook ve Active Directory Eşitlemesi için sertifikalar
 
-Dış dış Exchange 2013, Exchange 2010, Exchange 2007 ve Exchange 2003 İstemci Erişimi sunucularınıza (CASs), Otomatik Bulma, Outlook Her Yerden ve Active Directory eşitleme hizmetlerinin güvenli bağlantıları için bir üçüncü taraf SSL sertifikası gerekir. Bu sertifikayı şirket içi ortamınıza zaten yüklemişsiniz olabilir.
+Dış kullanıma yönelik Exchange 2013, Exchange 2010, Exchange 2007 ve Exchange 2003 İstemci Erişimi sunucularınız (CAS) Otomatik Bulma, Outlook Her Yerde ve Active Directory eşitleme hizmetleri için güvenli bağlantılar için üçüncü taraf bir SSL sertifikası gerektirir. Bu sertifika şirket içi ortamınızda zaten yüklü olabilir.
   
-## <a name="certificate-for-an-exchange-hybrid-server"></a>Karma Sunucu Exchange sertifikası
+## <a name="certificate-for-an-exchange-hybrid-server"></a>Exchange Karma Sunucusu için sertifika
 
-Dış hizmete Exchange karma sunucunuza veya sunucularınıza, Exchange Online hizmetiyle güvenli bağlantı için bir üçüncü taraf SSL sertifikası gerekir. Bu sertifikayı üçüncü taraf SSL sağlayıcınızdan alımalısınız.
+Dış Exchange karma sunucunuz veya sunucularınız, Exchange Online hizmetiyle güvenli bağlantı için üçüncü taraf bir SSL sertifikası gerektirir. Bu sertifikayı üçüncü taraf SSL sağlayıcınızdan almanız gerekir.
   
-## <a name="microsoft-365-certificate-chains"></a>Microsoft 365 Zincirleri
+## <a name="microsoft-365-certificate-chains"></a>sertifika zincirlerini Microsoft 365
 
-Bu makalede, altyapınıza yüklemeniz gereksinsin tüm sertifikalar açıklanmıştır. Birden fazla sunucumuza yüklenmiş olan sertifikalar hakkında daha fazla Microsoft 365 bkz. [Sertifika Zincirleri Microsoft 365 e bakın](https://support.office.com/article/0c03e6b3-e73f-4316-9e2b-bf4091ae96bb).
+Bu makalede altyapınıza yüklemeniz gereken sertifikalar açıklanmaktadır. Microsoft 365 sunucularımıza yüklenen sertifikalar hakkında daha fazla bilgi için bkz. [Microsoft 365 Sertifika Zincirleri](https://support.office.com/article/0c03e6b3-e73f-4316-9e2b-bf4091ae96bb).
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

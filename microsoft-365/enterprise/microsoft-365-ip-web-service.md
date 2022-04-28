@@ -1,8 +1,8 @@
 ---
-title: Office 365 IP Adresi ve URL web hizmeti
+title: OFFICE 365 IP Adresi ve URL web hizmeti
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 8/6/2019
 audience: ITPro
 ms.topic: conceptual
@@ -22,75 +22,75 @@ search.appverid:
 - MET150
 - MOE150
 - BCS160
-description: Ağ trafiğini daha iyi Office 365 tanımlamanıza ve ayırt etmeye yardımcı olmak için IP Adresi ve URL web hizmetini Office 365 öğrenin.
-ms.openlocfilehash: e4976bafbedc8f5289e2992569bbd5de28e9de75
-ms.sourcegitcommit: 584b4757f715a3eedf748858461c568f45137438
+description: Ağ trafiğini daha iyi tanımlamanıza ve ayırt Office 365 yardımcı olmak için Office 365 IP Adresi ve URL web hizmetini kullanmayı öğrenin.
+ms.openlocfilehash: b13377c6230c869231b7cecda8375f663cbcd33b
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63494492"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65100643"
 ---
-# <a name="office-365-ip-address-and-url-web-service"></a>Office 365 IP Adresi ve URL web hizmeti
+# <a name="office-365-ip-address-and-url-web-service"></a>OFFICE 365 IP Adresi ve URL web hizmeti
 
-Hızlı OFFICE 365 adresi ve URL web hizmeti, ağ trafiğini daha iyi tanımlamanıza ve ayırt Office 365 yardımcı olarak, değişiklikleri değerlendirmenizi, yapılandırmanızı ve güncel olarak takip edin. Bu REST tabanlı web hizmeti, 2 Ekim 2018'de aşamalı olarak zaman aşamalı olarak bulunan önceki XML indirilebilir dosyalarının yerini almaktadır.
+Office 365 IP Adresi ve URL web hizmeti, Office 365 ağ trafiğini daha iyi tanımlamanıza ve ayırt etmenize yardımcı olur, böylece değişiklikleri değerlendirmenizi, yapılandırmanızı ve güncel kalmanızı kolaylaştırır. Bu REST tabanlı web hizmeti, 2 Ekim 2018'de kullanıma sunulan önceki XML indirilebilir dosyalarının yerini alır.
 
-Müşteri veya ağ çevre cihazı satıcısı olarak, IP adresi ve FQDN girdileri oluşturmak Office 365 web hizmetine karşı hazır bulabilirsiniz. Şu URL'leri kullanarak verilere doğrudan web tarayıcısında erişebilirsiniz:
+Müşteri veya ağ çevre cihazı satıcısı olarak, Office 365 IP adresi ve FQDN girişleri için web hizmetine göre derleme yapabilirsiniz. Şu URL'leri kullanarak verilere doğrudan bir web tarayıcısında erişebilirsiniz:
 
-- Url'leri ve IP adresi Office 365 en son sürümü için, kullanın[https://endpoints.office.com/version](https://endpoints.office.com/version?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7).
-- Güvenlik duvarları ve ara sunucular Office 365 URL'ler ve IP adresi aralıkları sayfasındaki veriler için, bunu kullanın[https://endpoints.office.com/endpoints/worldwide](https://endpoints.office.com/endpoints/worldwide?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7).
-- Web hizmeti ilk kez kullanılabilir olduğunda Temmuz 2018'den bu yana yapılan en son değişikliklerin hepsini almak için , kullanın [https://endpoints.office.com/changes/worldwide/0000000000](https://endpoints.office.com/changes/worldwide/0000000000?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7).
+- Office 365 URL'lerinin ve IP adresi aralıklarının en son sürümü için kullanın[https://endpoints.office.com/version](https://endpoints.office.com/version?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7).
+- Güvenlik duvarları ve ara sunucuların Office 365 URL'leri ve IP adresi aralıkları sayfasındaki veriler için kullanın[https://endpoints.office.com/endpoints/worldwide](https://endpoints.office.com/endpoints/worldwide?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7).
+- Web hizmetinin ilk kullanıma sunulduğu Temmuz 2018'den bu yana yapılan en son değişiklikleri almak için kullanın [https://endpoints.office.com/changes/worldwide/0000000000](https://endpoints.office.com/changes/worldwide/0000000000?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7).
 
-Bir müşteri olarak bu web hizmetini kullanarak şunları yapmak için kullanabilirsiniz:
+Müşteri olarak bu web hizmetini kullanarak şunları yapabilirsiniz:
 
-- Uç nokta verilerini almak ve ağ cihazlarınız için Office 365 biçimlendirmelerini değiştirmek için PowerShell betiklerinizi güncelleştirin.
-- İstemci bilgisayarlarına dağıtılan PAC dosyalarını güncelleştirmek için bu bilgileri kullanın.
+- PowerShell betiklerinizi güncelleştirerek Office 365 uç nokta verilerini alın ve ağ cihazlarınız için tüm biçimlendirmeleri değiştirin.
+- İstemci bilgisayarlara dağıtılan PAC dosyalarını güncelleştirmek için bu bilgileri kullanın.
 
-Ağ çevre cihazı satıcısı olarak bu web hizmetini kullanarak şunları yapmak için kullanabilirsiniz:
+Ağ çevre cihazı satıcısı olarak bu web hizmetini kullanarak şunları yapabilirsiniz:
 
-- Otomatik yapılandırma için listeyi indirmek için cihaz yazılımını oluşturun ve test edin.
-- Geçerli sürümü denetleme.
-- Geçerli değişiklikleri almak.
+- Otomatik yapılandırma listesini indirmek için cihaz yazılımı oluşturun ve test edin.
+- Geçerli sürümü denetleyin.
+- Geçerli değişiklikleri alın.
 
 > [!NOTE]
-> Office 365'a bağlanmak için Azure ExpressRoute kullanıyorsanız, Azure ExpressRoute üzerinden desteklenen Office 365 Office 365 hizmetleri hakkında bilgi sahibi olmak için Office 365 Azure [ExpressRoute'u](azure-expressroute.md) gözden geçirmeniz gerekir. Ayrıca, internet bağlantısı [Office 365 ağ isteklerini anlamak için URL'ler ve IP](urls-and-ip-address-ranges.md) Office 365 aralıkları makalesini gözden geçirebilirsiniz. Bu, çevre güvenlik cihazlarınızı daha iyi yapılandırmanıza yardımcı olur.
+> Office 365 bağlanmak için Azure ExpressRoute kullanıyorsanız, Azure ExpressRoute üzerinden desteklenen Office 365 hizmetleri hakkında bilgi edinmek [için lütfen Office 365 için Azure ExpressRoute'u](azure-expressroute.md) gözden geçirin. Ayrıca, Office 365 uygulamaları için hangi ağ isteklerinin İnternet bağlantısı gerektirdiğini anlamak için [URL'ler ve IP adresi aralıkları](urls-and-ip-address-ranges.md) Office 365 makalesini gözden geçirin. Bu, çevre güvenlik cihazlarınızı daha iyi yapılandırmanıza yardımcı olur.
 
 Daha fazla bilgi için bkz.:
 
-- [teknoloji forumunda duyuru Office 365 blog Community gönderisi](https://techcommunity.microsoft.com/t5/Office-365-Blog/Announcing-Office-365-endpoint-categories-and-Office-365-IP/ba-p/177638)
-- [Office 365 hizmetlerinin Community hakkında sorular için Teknik Destek Forumu](https://techcommunity.microsoft.com/t5/Office-365-Networking/bd-p/Office365Networking)
+- [Office 365 Tech Community Forumu'ndaki duyuru blog gönderisi](https://techcommunity.microsoft.com/t5/Office-365-Blog/Announcing-Office-365-endpoint-categories-and-Office-365-IP/ba-p/177638)
+- [web hizmetlerinin kullanımıyla ilgili sorular için Office 365 Tech Community Forumu](https://techcommunity.microsoft.com/t5/Office-365-Networking/bd-p/Office365Networking)
 
 ## <a name="common-parameters"></a>Ortak parametreler
 
 Bu parametreler tüm web hizmeti yöntemlerinde ortaktır:
 
-- **format=\<JSON \| CSV\>** —Varsayılan olarak, JSON biçiminde veri döndürülür. Verileri virgülle ayrılmış değerler (CSV) biçiminde geri dönmek için bu isteğe bağlı parametreyi kullanın.
-- **ClientRequestId=\<guid\>** —İstemci ilişkilendirmesi için oluşturulan, gerekli GUID. Web hizmetini çağıran her makine için benzersiz bir GUID üretin (bu sayfada yer alan betikler sizin için bir GUID üretir). Aşağıdaki örneklerde gösterilen GUID'leri kullanmayın çünkü bunlar gelecekte web hizmeti tarafından engellenmiş olabilir. GUID _xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx_ biçimindedir; burada x, onaltılık bir sayıdır.
+- **format=\<JSON \| CSV\>** —Varsayılan olarak, döndürülen veri biçimi JSON'dır. Verileri virgülle ayrılmış değerler (CSV) biçiminde döndürmek için bu isteğe bağlı parametreyi kullanın.
+- **ClientRequestId=\<guid\>** —İstemci ilişkilendirmesi için oluşturduğunuz gerekli bir GUID. Web hizmetini çağıran her makine için benzersiz bir GUID oluşturun (bu sayfadaki betikler sizin için bir GUID oluşturur). Gelecekte web hizmeti tarafından engellenebileceği için aşağıdaki örneklerde gösterilen GUID'leri kullanmayın. GUID biçimi _xxxxxxxx-xxxx-xxxx-xxxx-xxxxx_ biçimindedir; burada x onaltılık bir sayıyı temsil eder.
 
-  GUID oluşturmak için [New-Guid](/powershell/module/microsoft.powershell.utility/new-guid) PowerShell komutunu veya Çevrimiçi GUID Oluşturucu gibi bir [çevrimiçi hizmet kullanabilirsiniz](https://www.guidgenerator.com/).
+  GUID oluşturmak için [New-Guid](/powershell/module/microsoft.powershell.utility/new-guid) PowerShell komutunu veya [Çevrimiçi GUID Oluşturucu](https://www.guidgenerator.com/) gibi çevrimiçi bir hizmeti kullanabilirsiniz.
 
 ## <a name="version-web-method"></a>Sürüm web yöntemi
 
-Microsoft, Office 365 başında yeni IP adresi ve FQDN girdilerini günceller. Destek olayları, güvenlik güncelleştirmeleri veya diğer işlem gereksinimleri nedeniyle bazen bant dışında güncelleştirmeler yayımlanır.
+Microsoft, her ayın başında Office 365 IP adresini ve FQDN girdilerini güncelleştirir. Destek olayları, güvenlik güncelleştirmeleri veya diğer operasyonel gereksinimler nedeniyle bant dışı güncelleştirmeler bazen yayımlanır.
 
-Yayımlanan her örneğin verilerine bir sürüm numarası atanır ve sürüm web yöntemi, her bir Office 365 hizmetinin en son sürümünü denetlemenize olanak sağlar. Sürümü saatte bir kereden fazla denetlemenizi öneririz.
+Yayımlanan her örneğin verilerine bir sürüm numarası atanır ve sürüm web yöntemi, her Office 365 hizmet örneğinin en son sürümünü denetlemenize olanak tanır. Sürümü saatte bir kereden fazla denetlemenizi öneririz.
 
-Sürüm web yönteminin parametreleri:
+Sürüm web yönteminin parametreleri şunlardır:
 
-- **AllVersions=\<true \| false\>** —Varsayılan olarak, en son sürüm döndürülür. Web hizmeti ilk yayımlanır bu yana tüm yayımlanan sürümlerin isteğinde etmek için bu isteğe bağlı parametreyi dahil edin.
-- **Format=\<JSON \| CSV \| RSS\>** —JSON ve CSV biçimlerine ek olarak, sürüm web yöntemi RSS'yi de destekler. Bu isteğe bağlı parametreyi _AllVersions=true_ parametresiyle birlikte kullanarak, diğer RSS okuyucularıyla veya diğer RSS okuyucularıyla Outlook RSS akışı isteyebilirsiniz.
-- **Instance=\<Worldwide \| China \| USGovDoD \| USGovGCCHigh\>** —Bu isteğe bağlı parametre, sürümün getirile örneklerini belirtir. Atlanırsa, tüm örnekler döndürülür. Geçerli örnekler: Worldwide, Çin, USGovDoD, USGovGCCHigh.
+- **AllVersions=\<true \| false\>** —Varsayılan olarak, döndürülen sürüm en son sürümdür. Web hizmeti ilk kez yayımlandıktan sonra yayımlanan tüm sürümleri istemek için bu isteğe bağlı parametreyi ekleyin.
+- **Format=\<JSON \| CSV \| RSS\>** —JSON ve CSV biçimlerine ek olarak, sürüm web yöntemi RSS'yi de destekler. bu isteğe bağlı parametreyi _AllVersions=true_ parametresiyle birlikte kullanarak Outlook veya diğer RSS okuyucularla kullanılabilecek bir RSS akışı isteyebilirsiniz.
+- **Örnek=\<Worldwide \| China \| USGovDoD \| USGovGCCHigh\>** —Bu isteğe bağlı parametre sürümü döndürülecek örneği belirtir. Atlanırsa, tüm örnekler döndürülür. Geçerli örnekler şunlardır: Dünya çapında, Çin, USGovDoD, USGovGCCHigh.
 
-Sürüm web yöntemi oranı sınırlı değildir ve 429 HTTP Yanıt Kodları'nın hiç bir zaman geri dönmez. Sürüm web yönteminin yanıtı, 1 saat süreyle verilerin önbelleğe alınmasını öneren bir önbellek denetimi başlığı içerir. Sürüm web yönteminden elde edilen sonuç tek bir kayıt veya bir kayıt dizisi olabilir. Her kaydın öğeleri:
+Sürüm web yöntemi hız sınırlı değildir ve hiçbir zaman 429 HTTP Yanıt Kodları döndürmez. Sürüm web yöntemine verilen yanıt, verilerin 1 saat önbelleğe alınmasını öneren bir önbellek denetimi üst bilgisi içerir. Sürüm web yönteminin sonucu tek bir kayıt veya bir kayıt dizisi olabilir. Her kaydın öğeleri şunlardır:
 
-- instance—En iyi hizmet Office 365 adı.
+- instance—Office 365 hizmet örneğinin kısa adı.
 - latest—Belirtilen örneğin uç noktaları için en son sürüm.
-- versions—Belirtilen örneğin önceki tüm sürümlerinin listesi. Bu öğe yalnızca _AllVersions parametresi doğruysa_ dâhil edilir.
+- versions—Belirtilen örnek için tüm önceki sürümlerin listesi. Bu öğe yalnızca _AllVersions_ parametresi true olduğunda eklenir.
 
 ### <a name="version-web-method-examples"></a>Sürüm web yöntemi örnekleri
 
 Örnek 1 istek URI'si: <https://endpoints.office.com/version?ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7>
 
-Bu URI, her bir hizmet örneğinin Office 365 sürümünü döndürür. Örnek sonuç:
+Bu URI, her Office 365 hizmet örneğinin en son sürümünü döndürür. Örnek sonuç:
 
 ```json
 [
@@ -114,11 +114,11 @@ Bu URI, her bir hizmet örneğinin Office 365 sürümünü döndürür. Örnek s
 ```
 
 > [!IMPORTANT]
-> Bu  URL'lerde ClientRequestID parametresinin GUID değeri yalnızca örnek olarak ve vere. Web hizmeti  URL'lerini denemek için, kendi GUID değerinizi üretin. Bu örneklerde gösterilen GUID'ler, gelecekte web hizmeti tarafından engellenmiş olabilir.
+> Bu URI'lerdeki ClientRequestID parametresinin GUID değeri yalnızca bir örnektir. Web hizmeti URI'lerini denemek için kendi GUID'nizi oluşturun. Bu örneklerde gösterilen GUID'ler gelecekte web hizmeti tarafından engellenebilir.
 
 Örnek 2 istek URI'si: <https://endpoints.office.com/version/Worldwide?ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7>
 
-Bu URI, belirtilen hizmet örneğinin en Office 365 döndürür. Örnek sonuç:
+Bu URI, belirtilen Office 365 hizmet örneğinin en son sürümünü döndürür. Örnek sonuç:
 
 ```json
 {
@@ -138,7 +138,7 @@ Worldwide,2018063000
 
 Örnek 4 istek URI'si: <https://endpoints.office.com/version/Worldwide?AllVersions=true&ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7>
 
-Bu URI, dünya çapında bir hizmet örneğinin yayımlanmış tüm Office 365 sürümleri gösterir. Örnek sonuç:
+Bu URI, dünya çapındaki Office 365 hizmet örneği için yayımlanmış olan önceki tüm sürümleri gösterir. Örnek sonuç:
 
 ```json
 {
@@ -153,7 +153,7 @@ Bu URI, dünya çapında bir hizmet örneğinin yayımlanmış tüm Office 365 s
 
 Örnek 5 RSS Akışı URI'si: <https://endpoints.office.com/version/worldwide?clientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7&allVersions=true&format=RSS>
 
-Bu URI, yayımlanan sürümlerin, her sürümün değişiklik listesine bağlantılar içeren bir RSS akışı gösterir. Örnek sonuç:
+Bu URI, her sürüm için değişiklik listesine bağlantılar içeren yayımlanmış sürümlerin RSS akışını gösterir. Örnek sonuç:
 
 ```xml
 <?xml version="1.0" encoding="ISO-8859-1"?>
@@ -172,35 +172,35 @@ Bu URI, yayımlanan sürümlerin, her sürümün değişiklik listesine bağlant
 
 ## <a name="endpoints-web-method"></a>Uç noktalar web yöntemi
 
-Uç noktalar web yöntemi, en iyi hizmette yer alan IP adresi aralıkları ve URL'ler için Office 365 döndürür. Uç noktalar web yönteminden gelen en son veriler her zaman ağ cihazı yapılandırması için kullanılmalıdır. Microsoft, erişim denetim listelerini ve ara sunucu atlama listelerini güncelleştirmek için size zaman vermek için, yeni eklemeleri yayımlamadan 30 gün önce önceden bildirim sağlar. Yalnızca sürüm web yöntemi verilerin yeni bir sürümünün kullanılabilir olduğunu gösteriyor olduğunda, uç noktalar web yöntemini yeniden çağırmanız önerilir.
+Uç noktalar web yöntemi, Office 365 hizmetini oluşturan IP adresi aralıkları ve URL'ler için tüm kayıtları döndürür. Uç noktalar web yönteminden en son veriler her zaman ağ cihazı yapılandırması için kullanılmalıdır. Microsoft, erişim denetimi listelerini ve ara sunucu atlama listelerini güncelleştirmeniz için size zaman vermek üzere yeni eklemeleri yayımlamadan 30 gün önce önceden bildirimde bulunur. Endpoints web yöntemini yalnızca sürüm web yöntemi verilerin yeni bir sürümünün kullanılabilir olduğunu gösterdiğinde yeniden çağırmanızı öneririz.
 
-Uç noktalar web yönteminin parametreleri:
+Uç nokta web yönteminin parametreleri şunlardır:
 
-- **ServiceAreas=\<Common \| Exchange \| SharePoint \| Skype\>** —Hizmet alanlarının virgülle ayrılmış listesi. Geçerli _öğeler Yaygın,_ Ortak, _Exchange_, _SharePoint_ _ve Skype_. Ortak _hizmet_ alanı öğeleri diğer tüm hizmet alanlarının önkoşulları olduğundan, web hizmeti bunları her zaman içerir. Bu parametreyi dahil değilken tüm hizmet alanları döndürülür.
-- **TenantName=\<tenant_name\>** —Kiracı Office 365 adınız. Web hizmeti sağlanan adını alır ve URL'lerin kiracı adını içeren bölümlerine ekler. Kiracı adı sağlayasanız bile, URL'lerin bu bölümleri joker karaktere () sahiptir\*.
-- **NoIPv6=\<true \| false\>** —Ağda IPv6 _kullanmayacaksanız_ , çıktıdan IPv6 adreslerini hariç tutmak için değeri doğru olarak ayarlayın.
-- **Instance=\<Worldwide \| China \| USGovDoD \| USGovGCCHigh\>** —Bu gerekli parametre, uç noktaların hangi örnekten getir mu olduğunu belirtir. Geçerli örnekler: _Worldwide_, _Çin_, _USGovDoD_ ve _USGovGCCHigh_.
+- **ServiceAreas=\<Common \| Exchange \| SharePoint \| Skype\>** —Hizmet alanlarının virgülle ayrılmış listesi. Geçerli öğeler _Ortak_, _Exchange_, _SharePoint_ ve _Skype_' dır. _Ortak_ hizmet alanı öğeleri diğer tüm hizmet alanları için bir önkoşul olduğundan, web hizmeti bunları her zaman içerir. Bu parametreyi eklemezseniz, tüm hizmet alanları döndürülür.
+- **TenantName=\<tenant_name\>** —Office 365 kiracı adınız. Web hizmeti, sağlanan adınızı alır ve kiracı adını içeren URL'lerin bölümlerine ekler. Kiracı adı sağlamazsanız, URL'lerin bu bölümleri joker karaktere (\* ) sahiptir.
+- **NoIPv6=\<true \| false\>** —Ağınızda IPv6 kullanmıyorsanız IPv6 adreslerini çıkıştan dışlamak için değeri _true_ olarak ayarlayın.
+- **Örnek=\<Worldwide \| China \| USGovDoD \| USGovGCCHigh\>** —Bu gerekli parametre, uç noktaların döndürüleceği örneği belirtir. Geçerli örnekler şunlardır: _Dünya çapında_, _Çin_, _USGovDoD_ ve _USGovGCCHigh_.
 
-Uç noktalar web yöntemini aynı istemci IP adresinden birçok kez çağırıyorsanız, HTTP yanıt kodu _429(Çok Fazla İstek) alırsınız_. Bu yanıt kodunu aldıysanız, isteğinizi yinelemeden önce 1 saat bekleyin veya istek için yeni bir GUID üretin. Genel bir en iyi uygulama olarak, yalnızca sürüm web yöntemi yeni bir sürümün kullanılabilir olduğunu gösteriyorsa uç noktalar web yöntemini çağırabilirsiniz.
+Uç noktalar web yöntemini aynı istemci IP adresinden çok fazla çağırırsanız, HTTP yanıt kodu _429 (Çok Fazla İstek)_ alabilirsiniz. Bu yanıt kodunu alırsanız, isteğinizi yinelemeden önce 1 saat bekleyin veya istek için yeni bir GUID oluşturun. Genel bir en iyi yöntem olarak, yalnızca sürüm web yöntemi yeni bir sürümün kullanılabilir olduğunu gösterdiğinde endpoints web yöntemini çağırın.
 
-Uç noktalar web yönteminden elde edilen sonuç, her kaydın belirli bir uç nokta kümesi temsil ettiği bir kayıt dizisidir. Her kaydın öğeleri:
+Endpoints web yönteminden elde edilen sonuç, her kaydın belirli bir uç nokta kümesini temsil ettiği bir kayıt dizisidir. Her kaydın öğeleri şunlardır:
 
-- id—Uç nokta kümesi değişmez kimlik numarası.
-- serviceArea— Bunun parçası olduğu hizmet alanı: _Ortak_, _Genel, Exchange_, _SharePoint_ veya _Skype_.
-- urls—uç nokta kümesi için URL'ler. DNS kayıtlarının JSON dizisi. Boşsa atlanır.
-- tcpPorts—uç nokta kümesi için TCP bağlantı noktaları. Tüm bağlantı noktası öğeleri, tire karakteriyle (-) birbirinden ayrılmış bağlantı noktalarının veya bağlantı noktası aralıklarının virgülle ayrılmış listesi olarak biçimlendirildi. Bağlantı noktaları, verilen bir kategori için uç nokta kümesinde tüm IP adreslerinde ve tüm URL'lerde geçerlidir. Boşsa atlanır.
-- udpPorts—Bu uç nokta kümesinde IP adresi aralıkları için UDP bağlantı noktaları. Boşsa atlanır.
-- ips —Listelenen TCP veya UDP bağlantı noktalarıyla ilişkilendirilmiş olan bu uç nokta kümesiyle ilişkilendirilmiş IP adresi aralıkları. IP adresi aralıklarının JSON dizisi. Boşsa atlanır.
-- category—Uç nokta kümesi için bağlantı kategorisi. Geçerli değerler En İyi _Duruma Getirme_, _İzin Ver ve_ _Varsayılan'dır_. Belirli bir IP adresinin veya URL'nin kategorisi için uç noktalar web yöntemi çıktısını aratırsanız, sorgunuz birden çok kategori geri dönecektir. Böyle bir durumda, en yüksek öncelik kategorisi önerisini izleyin. Örneğin, uç nokta hem En İyi Duruma Getirme hem de İzin _Ver'de_ _görünüyorsa_, En İyi Duruma Getirme gereksinimlerini _izleyebilirsiniz_. Gerekli.
-- expressRoute — _Bu uç_ nokta kümesi ExpressRoute üzerinden yönlendirildiyse _True, yönlendirme_ yoksa Yanlış.
-- required — _Destek_ olmak için bu uç nokta kümesi bir bağlantı Office 365 doğru. _Bu_ uç nokta kümesi isteğe bağlı ise False.
-- notes—İsteğe bağlı uç noktaları için, bu metin Office 365 uç nokta kümesinde IP adreslerine veya URL'lere ağ katmanında erişilenene kadar kullanılamayacak tüm veri işlevselliğini açıklar. Boşsa atlanır.
+- id—Uç nokta kümesinin sabit kimlik numarası.
+- serviceArea—Bunun parçası olduğu hizmet alanı: _Ortak_, _Exchange_, _SharePoint_ veya _Skype_.
+- url'ler—uç nokta kümesinin URL'leri. DNS kayıtlarının JSON dizisi. Boşsa atlanır.
+- tcpPorts—Uç nokta kümesi için TCP bağlantı noktaları. Tüm bağlantı noktaları öğeleri, bir tire karakteri (-) ile ayrılmış bağlantı noktalarının veya bağlantı noktası aralıklarının virgülle ayrılmış bir listesi olarak biçimlendirilir. Bağlantı noktaları, belirli bir kategori için uç nokta kümesindeki tüm IP adreslerine ve tüm URL'lere uygulanır. Boşsa atlanır.
+- udpPorts—Bu uç nokta kümesindeki IP adresi aralıkları için UDP bağlantı noktaları. Boşsa atlanır.
+- ips —Listelenen TCP veya UDP bağlantı noktalarıyla ilişkili olarak bu uç nokta kümesiyle ilişkilendirilmiş IP adresi aralıkları. IP adresi aralıklarından oluşan bir JSON dizisi. Boşsa atlanır.
+- category—Uç nokta kümesinin bağlantı kategorisi. Geçerli değerler _İyileştir_, _İzin Ver_ ve _Varsayılan'dır_. Belirli bir IP adresinin veya URL'nin kategorisi için uç noktalar web yöntemi çıkışında arama yaparsanız, sorgunuz birden çok kategori döndürecektir. Böyle bir durumda, en yüksek öncelikli kategori için öneriyi izleyin. Örneğin, uç nokta hem _İyileştir_ hem de _İzin Ver'de_ görünüyorsa _İyileştir_ gereksinimlerini izlemeniz gerekir. Gerekli.
+- expressRoute — Bu uç nokta kümesi ExpressRoute üzerinden yönlendiriliyorsa _True_ , yönlendirilmediyse _False_ .
+- gerekli — Bu uç nokta kümesinin Office 365 desteklenmesi için bağlantıya sahip olması gerekiyorsa _true_. Bu uç nokta kümesi isteğe bağlıysa _False_.
+- notlar—İsteğe bağlı uç noktalar için bu metinde, bu uç nokta kümesindeki IP adreslerine veya URL'lere ağ katmanından erişilemediğinde kullanılamayacak Office 365 işlev açıklanır. Boşsa atlanır.
 
 ### <a name="endpoints-web-method-examples"></a>Uç noktalar web yöntemi örnekleri
 
 Örnek 1 istek URI'si: <https://endpoints.office.com/endpoints/Worldwide?ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7>
 
-Bu URI, tüm iş yükleri için dünya çapında Office 365 için tüm uç noktaları sağlar. Çıkışta bir alıntının yer alan örnek sonuç:
+Bu URI, tüm iş yükleri için dünya çapındaki Office 365 örneğinin tüm uç noktalarını alır. Çıktının bir alıntısını gösteren örnek sonuç:
 
 ```json
 [
@@ -230,55 +230,55 @@ Bu URI, tüm iş yükleri için dünya çapında Office 365 için tüm uç nokta
    ],
 ```
 
-Bu örnekteki isteğin tam çıktısı başka uç nokta kümeleri içerebilir.
+Bu örnekteki isteğin tam çıkışı diğer uç nokta kümelerini içerir.
 
 Örnek 2 istek URI'si: [https://endpoints.office.com/endpoints/Worldwide?ServiceAreas=Exchange&amp; ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7](https://endpoints.office.com/endpoints/Worldwide?ServiceAreas=Exchange&amp;ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7)
 
-Bu örnekte, yalnızca kimlik ve bağımlılıklar Office 365 Dünya Çapında örneğinin Exchange Online uç noktaları elde edilir.
+Bu örnek yalnızca Exchange Online ve bağımlılıklar için Office 365 Worldwide örneğinin uç noktalarını alır.
 
-Örneğin 2, 1. örneğin çıkışına benzer, ancak sonuçlar SharePoint Online veya Skype Kurumsal Online uç noktalarını içermez.
+Örneğin, 2, örnek 1'e benzer, ancak sonuçlar SharePoint Online veya Skype Kurumsal Online için uç noktaları içermeyecektir.
 
-## <a name="changes-web-method"></a>Değişiklikler web yöntemi
+## <a name="changes-web-method"></a>Web yöntemini değiştirir
 
-Değişiklikler web yöntemi yayımlanmış olan en son güncelleştirmeleri, ip adresi aralıkları ve URL'lerde bir önceki ayın değişikliklerini döndürür.
+Değişiklik web yöntemi, yayımlanan en son güncelleştirmeleri( genellikle önceki ayın IP adresi aralıklarında ve URL'lerinde yapılan değişiklikleri) döndürür.
 
-Uç nokta verilerinde en kritik değişiklikler yeni URL'ler ve IP adresleridir. Güvenlik duvarı erişim denetim listesine veya proxy sunucusu atlama listesine bir URL'nin eklen hatası, bu ağ aygıtının arkasında çalışan kullanıcıların Office 365 kesintiye neden olabilir. İşlem gereksinimlerine bakamasa da, yeni uç noktalar, erişim denetim listelerini ve ara sunucu atlama listelerini güncelleştirmek için size zaman vermek üzere uç noktaların sağlandık tarihten 30 gün önce web hizmetine yayımlanır.
+Uç nokta verilerinde yapılan en önemli değişiklikler yeni URL'ler ve IP adresleridir. Bir güvenlik duvarı erişim denetim listesine IP adresi veya ara sunucu atlama listesine URL eklenememesi, bu ağ cihazının arkasındaki Office 365 kullanıcılar için kesintiye neden olabilir. İşletimsel gereksinimlere bakılmaksızın, yeni uç noktalar, erişim denetim listelerini ve ara sunucu atlama listelerini güncelleştirmeniz için size zaman vermek üzere uç noktaların sağlandığı tarihten 30 gün önce web hizmetinde yayımlanır.
 
-Değişiklikler web yöntemi için gereken parametre:
+Changes web yöntemi için gerekli parametre:
 
-- **Version=\<YYYYMMDDNN>** —Gerekli URL yönlendirme parametresi. Bu değer, şu anda uygulaymış olduğunuz sürümdür. Web hizmeti, bu sürümden itibaren değişiklikleri geri dönecektir. _YYYYAADNN_ biçimindedir; burada _NN_, tek gün içinde yayımlanacak birden çok sürüm varsa her sürümün yayımlanacak olmasıyla bir gün için _ilk güncelleştirmeyi temsil eden 00_ ile artırılır. Web hizmeti, sürüm _parametresinin tam_ olarak 10 basamak içermesini gerektirir.
+- **Sürüm=\<YYYYMMDDNN>** —Gerekli URL yol parametresi. Bu değer, şu anda uyguladığınız sürümdür. Web hizmeti, bu sürümden bu yana yapılan değişiklikleri döndürür. Biçim _YYYYMMDDNN'dir_; burada tek bir günde yayımlanması gereken birden çok sürüm varsa _NN_ doğal bir sayı artırılır ve belirli bir gün için ilk güncelleştirmeyi temsil eden _00_ olur. Web hizmeti _sürüm parametresinin_ tam olarak 10 basamak içermesini gerektirir.
 
-Değişiklikler web yöntemi, uç noktalar web yöntemiyle aynı şekilde sınırlıdır. 429 HTTP yanıt kodu alırsanız, isteğinizi yinelemeden önce 1 saat bekleyin veya istek için yeni bir GUID üretin.
+Değişiklik web yöntemi, uç noktalar web yöntemiyle aynı şekilde hız sınırına sahiptir. 429 HTTP yanıt kodu alırsanız, isteğinizi yinelemeden önce 1 saat bekleyin veya istek için yeni bir GUID oluşturun.
 
-Değişiklikler web yönteminden elde edilen sonuç, her kaydın belirli bir uç nokta sürümündeki bir değişikliği temsil ettiği bir kayıt dizisidir. Her kaydın öğeleri:
+Değişiklik web yönteminden elde edilen sonuç, her kaydın uç noktaların belirli bir sürümündeki değişikliği temsil ettiği bir kayıt dizisidir. Her kaydın öğeleri şunlardır:
 
-- id—Değişiklik kaydının değişmez kimliği.
-- endpointSetId—Değiştirilmiş olan uç nokta kümesi kaydının kimliği.
-- disposition—Uç nokta kümesi kaydında yapılan değişikliği açıklar. Değerler _değişir,_ _ekler veya_ _kaldırır_.
-- etki—Tüm değişiklikler her ortam için eşit derecede önemli olmaz. Bu öğe, bu değişiklik sonucunda kurumsal ağ çevre ortamı üzerindeki beklenen etkiyi açıklar. Bu öğe yalnızca sürüm ve sonraki sürümlerde **2018112800** dahildir. Etkiyi etkileyen seçenekler şunlardır: — AddedIp – IP adresi Office 365 ve kısa süre sonra hizmette yayınlanacak. Bu, bir güvenlik duvarında veya başka bir katman 3 ağ çevre cihazında almak için gereken değişikliği temsil eder. Bunu kullanmaya başlamadan önce ekleyemeyysiniz, kesintiyle karşınıza çıkabilirsiniz.
-  — AddedUrl – URL Office 365 ve yakında hizmette yayınlanacak. Bu, ara sunucu veya URL'de ağ çevre cihazı ayrıştırma için gereken bir değişikliği temsil eder. Bu URL'yi kullanmaya başlamadan önce ekleyemeyebilirsiniz; kesintiyle de karşınıza çıkabilirsiniz.
-  — AddedIpAndUrl—Ip adresi ve URL'nin her ikisi de eklenmiştir. Bu, güvenlik duvarı katmanı 3 cihazı veya ara sunucu ya da URL ayrıştırma cihazı üzerinde almak istediğiniz değişikliği temsil eder. Kullanmaya başlamadan önce bu IP/URL çiftini ekleyemeyebilirsiniz.
-  — RemovedIpOrUrl – Siteden en az bir IP adresi veya URL Office 365. Çevre cihazlarından ağ uç noktalarını kaldırın, ancak bunu yapmak için son tarih yoktur.
-  — ChangedIsExpressRoute – ExpressRoute destek özniteliği değiştirilmiştir. ExpressRoute kullanıyorsanız, yapılandırmanıza bağlı olarak bir işlem yapmak zorundaysanız.
-  — MovedIpOrUrl – Bu uç nokta kümesi ile başka bir uç nokta kümesi arasında bir IP adresi veya URL taşıdık. Genelde herhangi bir işlem gerekmez.
-  — RemovedDuplicateIpOrUrl – Yinelenen IP adresini veya Url'yi kaldırdık ancak hala IP adresi için Office 365. Genelde herhangi bir işlem gerekmez.
-  — OtherNonPriorityChanges – Not alanının içeriği gibi diğer tüm seçeneklerden daha az kritik olan bir değişiklik yaptık.
-- version—Değişikliğin tanıt olduğu yayımlanmış uç nokta kümesi sürümü. Sürüm numaraları _YYYYAADNN_ biçimindedir; burada _NN_ , aynı gün içinde birden çok sürümün yayım olması gerektiğinde her sürüm için bir artırılır doğal bir sayıdır.
-- previous—Uç nokta kümesi üzerinde değiştirilmiş ögelerin önceki değerlerinin ayrıntılarına ayrıntılarıyla bir alt yapı. Yeni eklenen uç nokta kümelerine bu dâhil olmaz. _ExpressRoute_, _serviceArea_, _category_, _required_, _tcpPorts_, _udpPorts_ ve _notları içerir_.
-- current—Uç nokta kümesinde değişiklik öğelerinin güncelleştirilmiş değerlerinin ayrıntılarını ayrıntılarıylaen bir alt yapı. _ExpressRoute_, _serviceArea_, _category_, _required_, _tcpPorts_, _udpPorts_ ve _notları içerir_.
-- add —Uç nokta kümesi koleksiyonlarına eklenecek olan öğelerin ayrıntılarıyla ilgili bir alt yapı. Ekleme yoksa atlanır.
+- id—Değişiklik kaydının sabit kimliği.
+- endpointSetId—Değiştirilen uç nokta kümesi kaydının kimliği.
+- disposition—Uç nokta kümesi kaydında yapılan değişikliği açıklar. Değerler _değişiklik_, _ekleme_ veya _kaldırma işlemleridir_.
+- etki— Tüm değişiklikler her ortam için eşit derecede önemli olmayacaktır. Bu öğe, bu değişikliğin bir sonucu olarak kurumsal ağ çevre ortamına beklenen etkiyi açıklar. Bu öğe yalnızca **sürüm 2018112800** ve sonraki sürümlerin değişiklik kayıtlarına eklenir. Etki seçenekleri şunlardır: — AddedIp – Office 365 bir IP adresi eklendi ve yakında hizmette yayınlanacak. Bu, bir güvenlik duvarında veya 3. katmandaki başka bir ağ çevre cihazında yapmanız gereken bir değişikliği temsil eder. Bunu kullanmaya başlamadan önce eklemezseniz bir kesintiyle karşılaşabilirsiniz.
+  — AddedUrl – Office 365'a bir URL eklendi ve yakında hizmette yayınlanacak. Bu, bir ara sunucu veya URL ayrıştırma ağ çevre cihazında yapmanız gereken bir değişikliği temsil eder. Bu URL'yi kullanmaya başlamadan önce eklemezseniz bir kesintiyle karşılaşabilirsiniz.
+  — AddedIpAndUrl—Hem IP adresi hem de URL eklendi. Bu, güvenlik duvarı katman 3 cihazında ya da ara sunucu ya da URL ayrıştırma cihazında yapmanız gereken bir değişikliği temsil eder. Bu IP/URL çifti kullanmaya başlamadan önce eklemezseniz bir kesintiyle karşılaşabilirsiniz.
+  — RemovedIpOrUrl – Office 365 en az bir IP adresi veya URL kaldırıldı. Çevre cihazlarınızdan ağ uç noktalarını kaldırın, ancak bunu yapmanız için son tarih yoktur.
+  — ChangedIsExpressRoute – ExpressRoute destek özniteliği değiştirildi. ExpressRoute kullanıyorsanız, yapılandırmanıza bağlı olarak işlem yapmanız gerekebilir.
+  — MovedIpOrUrl – Bir IP adresini veya Url'yi bu uç nokta kümesi ile başka bir uç nokta kümesi arasında taşıdık. Genellikle hiçbir eylem gerekmez.
+  — RemovedDuplicateIpOrUrl – Yinelenen bir IP adresini veya Url'yi kaldırdık ancak Office 365 için yayımlanmaya devam ediyor. Genellikle hiçbir eylem gerekmez.
+  — OtherNonPriorityChanges – Not alanının içeriği gibi diğer tüm seçeneklerden daha az kritik bir şeyi değiştirdik.
+- version—Değişikliğin sunulduğu yayımlanmış uç nokta kümesinin sürümü. Sürüm numaraları _YYYYMMDDNN_ biçimindedir; burada _NN_ , tek bir günde yayımlanması gereken birden çok sürüm varsa doğal bir sayı artırılır.
+- previous—Uç nokta kümesindeki değiştirilen öğelerin önceki değerlerinin ayrıntılarını veren bir alt yapı. Bu, yeni eklenen uç nokta kümelerine dahil edilmeyecektir. _ExpressRoute_, _serviceArea_, _category_, _required_, _tcpPorts_, _udpPorts_ ve _notları_ içerir.
+- current—Uç nokta kümesindeki değişiklik öğelerinin güncelleştirilmiş değerlerinin ayrıntılarını veren bir alt yapı. _ExpressRoute_, _serviceArea_, _category_, _required_, _tcpPorts_, _udpPorts_ ve _notları_ içerir.
+- add —Uç nokta kümesi koleksiyonlarına eklenecek öğeleri ayrıntılarıyla belirten bir alt yapı. Ekleme yoksa atlanır.
   — effectiveDate—Eklemelerin hizmette ne zaman canlı olacağını tanımlar.
   — ips— _ips_ dizisine eklenecek öğeler.
-  — urls - _urls_ dizisine eklenecek öğeler.
-- remove—Uç nokta kümesinden kaldırılacak olan öğelerin ayrıntılarıyla ilgili bir alt yapı. Kaldırma işlemi yoksa atlanır.
-  — ips— _ips diziden kaldırılacak_ öğeler.
-  — urls - _urls diziden kaldırılacak_ öğeler.
+  — urls- _urls_ dizisine eklenecek öğeler.
+- remove—Uç nokta kümesinden kaldırılacak öğelerin ayrıntılarını içeren bir alt yapı. Kaldırma yoksa atlanır.
+  — ips— _ips_ dizisinden kaldırılacak öğeler.
+  — urls- _Urls_ dizisinden kaldırılacak öğeler.
 
-### <a name="changes-web-method-examples"></a>Değişiklikler web yöntemi örnekleri
+### <a name="changes-web-method-examples"></a>Web yöntemi örneklerini değiştirir
 
 Örnek 1 istek URI'si: <https://endpoints.office.com/changes/worldwide/0000000000?ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7>
 
-Bu, dünya çapında bir hizmet örneğinde Office 365 yapılan tüm değişiklikleri talep etmektedir. Örnek sonuç:
+Bu, dünya çapındaki Office 365 hizmet örneğinde önceki tüm değişiklikleri istemektedir. Örnek sonuç:
 
 ```json
 [
@@ -316,7 +316,7 @@ Bu, dünya çapında bir hizmet örneğinde Office 365 yapılan tüm değişikli
 
 Örnek 2 istek URI'si: <https://endpoints.office.com/changes/worldwide/2018062700?ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7>
 
-Bu, Office 365 Worldwide örneğinde belirtilen sürümden bu yana yapılan değişiklikleri talep ediyor. Bu durumda, belirtilen sürüm en son sürümüdür. Örnek sonuç:
+Bu, belirtilen sürümden bu yana Office 365 Worldwide örneğine değişiklik isteğinde bulunur. Bu durumda, belirtilen sürüm en son sürümdür. Örnek sonuç:
 
 ```json
 [
@@ -347,34 +347,34 @@ Bu, Office 365 Worldwide örneğinde belirtilen sürümden bu yana yapılan değ
 
 ## <a name="example-powershell-script"></a>Örnek PowerShell betiği
 
-Güncelleştirilmiş veriler için başka işlemler de gerçekleştirebilir ve bu eylemleri görmek için bu PowerShell betiği çalıştırabilirsiniz. Sürüm güncelleştirmesini kontrol etmek için bu betiği zamanlanmış görev olarak çalıştırebilirsiniz. Web hizmetine aşırı yük yüklemesini önlemek için betiği saatte birden çok çalıştırmamaya deneyin.
+Güncelleştirilmiş veriler için gerçekleştirmeniz gereken eylemler olup olmadığını görmek için bu PowerShell betiğini çalıştırabilirsiniz. Sürüm güncelleştirmesini denetlemek için bu betiği zamanlanmış bir görev olarak çalıştırabilirsiniz. Web hizmetinde aşırı yük oluşmasını önlemek için betiği saatte bir kereden fazla çalıştırmamaya çalışın.
 
-Betik şunları yapar:
+Betik aşağıdakileri yapar:
 
-- Web hizmeti REST API'sini çağırarak Office 365 Dünya Çapında örnek uç noktalarının sürüm numarasını denetler.
-- Geçerli sürüm dosyasını $Env:TEMP\O365_endpoints_latestversion.txt _._ $Env **:TEMP genel değişkeninin** yolu genellikle _C:\Users\\<kullanıcıadı\>\AppData\Local\Temp yolundadır_.
-- Betiği ilk kez çalıştırıyorsanız, betik geçerli sürümü ve tüm geçerli IP adreslerini ve URL'leri döndürür, _$Env:TEMP\O365_endpoints_latestversion.txt_ dosyasına uç nokta sürümünü ve _$Env:TEMP\O365_endpoints_data.txt_ dosyasına uç nokta veri çıkışı yazar. Şu satırları düzenleyerek çıkış dosyasının yolunu ve/veya adını değiştirebilirsiniz:
+- Web hizmeti REST API'sini çağırarak geçerli Office 365 Dünya çapında örnek uç noktalarının sürüm numarasını denetler.
+- _$Env:TEMP\O365_endpoints_latestversion.txt_ konumundaki geçerli bir sürüm dosyasını denetler. **$Env:TEMP** genel değişkeninin yolu genellikle _C:\Users\\<username\>\AppData\Local\Temp şeklindedir_.
+- Betik ilk kez çalıştırılıyorsa, betik geçerli sürümü ve tüm geçerli IP adreslerini ve URL'lerini döndürür, uç nokta sürümünü _$Env:TEMP\O365_endpoints_latestversion.txt_ dosyasına ve uç nokta veri çıkışını _$Env:TEMP\O365_endpoints_data.txt_ dosyasına yazar. Şu satırları düzenleyerek çıkış dosyasının yolunu ve/veya adını değiştirebilirsiniz:
 
     ``` powershell
     $versionpath = $Env:TEMP + "\O365_endpoints_latestversion.txt"
     $datapath = $Env:TEMP + "\O365_endpoints_data.txt"
     ```
 
-- Betiğin sonraki her yürütülmesinde, en son web hizmeti sürümü _O365_endpoints_latestversion.txt_ dosyasındaki sürümle aynısa, betik herhangi bir değişiklik yapmadan çıkar.
-- En son web hizmeti sürümü _O365_endpoints_latestversion.txt_ dosyasının sürümünden daha yeni olduğunda, betik, izin ver ve En İyi Duruma Getir kategorisi uç noktalarının uç noktalarını  ve filtrelerini döndürür, _O365_endpoints_latestversion.txt_ dosyasındaki sürümü güncelleştirilir ve güncelleştirilmiş verileri _O365_endpoints_data.txt_ dosyasına yazar.
+- Betiğin sonraki her yürütmesinde, en son web hizmeti sürümü _O365_endpoints_latestversion.txt_ dosyasındaki sürümle aynıysa, betik herhangi bir değişiklik yapmadan çıkar.
+- En son web hizmeti sürümü _O365_endpoints_latestversion.txt_ dosyasındaki sürümden daha yeni olduğunda betik, **İzin Ver** ve **İyileştir** kategori uç noktaları için uç noktaları ve filtreleri döndürür, _O365_endpoints_latestversion.txt_ dosyasındaki sürümü güncelleştirir ve güncelleştirilmiş verileri _O365_endpoints_data.txt_ dosyasına yazar.
 
-Betik, yürütülen bilgisayar için benzersiz bir _ClientRequestId_ üretir ve bu kimliği birden çok çağrıda yeniden verir. Bu kimlik, _O365_endpoints_latestversion.txtdepolanır._
+Betik, yürütülür bilgisayar için benzersiz bir _ClientRequestId_ oluşturur ve bu kimliği birden çok çağrıda yeniden kullanılır. Bu kimlik _O365_endpoints_latestversion.txt_ dosyasında depolanır.
 
-### <a name="to-run-the-powershell-script"></a>PowerShell betiği çalıştırmak için
+### <a name="to-run-the-powershell-script"></a>PowerShell betiğini çalıştırmak için
 
-1. Betiği kopyalayın ve yerel sabit sürücünize veya betik konumunuzla aynı _Get-O365WebServiceUpdates.ps1_.
-1. Tercih ettiğiniz betik düzenleyicisinde (PowerShell ISE veya VS Code) ya da aşağıdaki komutu kullanarak betiği bir PowerShell konsolundan yürütün:
+1. Betiği kopyalayın ve yerel sabit sürücünüze veya betik konumunuza _Get-O365WebServiceUpdates.ps1_ olarak kaydedin.
+1. Betiği PowerShell ISE veya VS Code gibi tercih ettiğiniz betik düzenleyicisinde veya aşağıdaki komutu kullanarak bir PowerShell konsolundan yürütür:
 
     ``` powershell
    powershell.exe -file <path>\Get-O365WebServiceUpdates.ps1
     ```
 
-    Betikle geçecek parametre yok.
+    Betike geçirecek parametre yok.
 
 ```powershell
 <# Get-O365WebServiceUpdates.ps1
@@ -524,7 +524,7 @@ else {
 
 ## <a name="example-python-script"></a>Örnek Python Betiği
 
-Burada, güncelleştirilmiş veriler için başka eylemler gerçekleştirebilir veya çalıştırabilirsiniz; bu betik Windows 10 üzerinde Python 3.6.3 ile test edilmiş bir Python betiğidir. Bu betik, dünya çapında örnek uç noktalarının Office 365 numarasını denetler. Bir değişiklik olduğunda, uç noktaları ve İzin Ver ve En İyi Duruma Getirme kategori _uç noktalarının_ filtrelerini indirir. Ayrıca, birden çok çağrıda bulunan benzersiz ClientRequestId dosyasını kullanır ve bulunan en son sürümü geçici bir dosyaya kaydeder. Sürüm güncelleştirmesini kontrol etmek için bu betiği saatte bir çağır.
+Windows 10 üzerinde Python 3.6.3 ile test edilen ve güncelleştirilmiş veriler için yapmanız gereken eylemler olup olmadığını görmek için çalıştırabileceğiniz bir Python betiği aşağıdadır. Bu betik, Office 365 Worldwide örnek uç noktalarının sürüm numarasını denetler. Bir değişiklik olduğunda, _İzin Ver_ ve _İyileştir_ kategori uç noktaları için uç noktaları ve filtreleri indirir. Ayrıca birden çok çağrıda benzersiz bir ClientRequestId kullanır ve geçici bir dosyada bulunan en son sürümü kaydeder. Sürüm güncelleştirmesini denetlemek için bu betiği saatte bir kez çağır.
 
 ```python
 import json
@@ -589,44 +589,44 @@ else:
     print('Office 365 worldwide commercial service instance endpoints are up-to-date')
 ```
 
-## <a name="web-service-interface-versioning"></a>Web Hizmeti arabirimi sürümü
+## <a name="web-service-interface-versioning"></a>Web Hizmeti arabirimi sürüm oluşturma
 
-Gelecekte bu web hizmeti yöntemlerinin parametrelerinde veya sonuçlarında güncelleştirmeler yapmak gerekebilir. Bu web hizmetlerinin genel kullanılabilirlik sürümü yayımlandıktan sonra, Microsoft web hizmeti için önemli güncelleştirmeleri önceden bildirim sağlamak için makul çabayı tamamlar. Microsoft bir güncelleştirmenin web hizmetini kullanan istemcilerde değişiklik yapmak gerektir olduğuna inandığında, yeni sürümün piyasaya çıkışlarından sonraki en az 12 ay boyunca web hizmetinin bir önceki sürümünü (bir sürüm geri) kullanmaya devam ettir. Bu süre içinde yükseltme yapmayan müşteriler web hizmetine ve bu hizmetin yöntemlerine erişe edemler. Web hizmeti arabirimi imzalarında aşağıdaki değişiklikler yapılırsa, müşteriler web hizmeti istemcilerinin hatasız çalışmaya devam edecektir:
+Gelecekte bu web hizmeti yöntemleri için parametrelerde veya sonuçlarda güncelleştirme yapılması gerekebilir. Bu web hizmetlerinin genel kullanılabilirlik sürümü yayımlandıktan sonra, Microsoft web hizmetine malzeme güncelleştirmeleri için önceden bildirim sağlamak için makul çaba gösterecektir. Microsoft bir güncelleştirmenin web hizmetini kullanan istemcilerde değişiklik gerektirdiğine inandığında, Microsoft web hizmetinin önceki sürümünü (bir sürüm geri) yeni sürümün yayımlanmasından sonra en az 12 ay boyunca kullanılabilir durumda tutar. Bu süre boyunca yükseltme yapmayan müşteriler web hizmetine ve yöntemlerine erişemeyebilir. Web hizmeti arabirimi imzasına aşağıdaki değişiklikler yapılırsa müşteriler web hizmeti istemcilerinin hatasız çalışmaya devam ettiğinden emin olmalıdır:
 
-- Var olan bir web yöntemine, daha eski istemciler tarafından sağlanmalıdır ve daha eski istemcilerin aldığı sonuçları etkilemeden isteğe bağlı yeni bir parametre ekleme.
-- Yanıt REST öğelerinin veya diğer sütunlardan birlarına yanıt CSV'sinde yeni bir adlandırılmış öznitelik ekleme.
-- Yeni bir adla, eski istemciler tarafından çağrıl yer alan yeni bir web yöntemi ekleme.
+- Eski istemciler tarafından sağlanması gerekmeyen ve eski bir istemcinin aldığı sonucu etkilemeyen mevcut bir web yöntemine yeni bir isteğe bağlı parametre ekleme.
+- Yanıt REST öğelerinden birine veya diğer sütunlardan birine yanıt CSV'sine yeni bir adlandırılmış öznitelik ekleme.
+- Eski istemciler tarafından çağrılmayan yeni bir ada sahip yeni bir web yöntemi ekleme.
 
 ## <a name="update-notifications"></a>Bildirimleri güncelleştirme
 
-IP adreslerinde ve URL'lerde yapılan değişiklikler web hizmetine yayımlanırken e-posta bildirimleri almak için birkaç farklı yöntem kullanabilirsiniz.
+IP adreslerinde ve URL'lerde yapılan değişiklikler web hizmetinde yayımlandığında e-posta bildirimleri almak için birkaç farklı yöntem kullanabilirsiniz.
 
-- Daha iyi bir Power Automate için bkz. IP Adreslerinde [ve URL'lerde Power Automate e-posta Office 365 e-posta alma](https://techcommunity.microsoft.com/t5/Office-365-Networking/Use-Microsoft-Flow-to-receive-an-email-for-changes-to-Office-365/m-p/240651).
-- Azure Logic App'i bir ARM şablonu kullanarak dağıtmak için bkz. Office 365 [Bildirimi (v1.1)](https://aka.ms/ipurlws-updates-template).
+- Power Automate çözümü kullanmak için bkz. [Office 365 IP Adresleri ve URL'lerinde yapılan değişiklikler için e-posta almak için Power Automate kullanma](https://techcommunity.microsoft.com/t5/Office-365-Networking/Use-Microsoft-Flow-to-receive-an-email-for-changes-to-Office-365/m-p/240651).
+- ARM şablonu kullanarak Azure Logic App dağıtmak için bkz. [Office 365 Güncelleştirme Bildirimi (v1.1)](https://aka.ms/ipurlws-updates-template).
 - PowerShell kullanarak kendi bildirim betiğinizi yazmak için bkz. [Send-MailMessage](/powershell/module/microsoft.powershell.utility/send-mailmessage).
 
-## <a name="exporting-a-proxy-pac-file"></a>Ara Sunucu PAC dosyasını dışarı aktarma
+## <a name="exporting-a-proxy-pac-file"></a>Proxy PAC dosyasını dışarı aktarma
 
-[Get-PacFile](https://www.powershellgallery.com/packages/Get-PacFile), Office 365 IP Adresi ve URL web hizmetinin en son ağ uç noktalarını okur ve örnek bir PAC dosyası oluşturan bir PowerShell betiğidir. Get-PacFile kullanma hakkında bilgi için önemli ve önemli trafiğin doğrudan yönlendiri [için PAC dosyası Office 365 bakın](managing-office-365-endpoints.md#use-a-pac-file-for-direct-routing-of-vital-office-365-traffic).
+[Get-PacFile](https://www.powershellgallery.com/packages/Get-PacFile), Office 365 IP Adresi ve URL web hizmetinden en son ağ uç noktalarını okuyan ve örnek bir PAC dosyası oluşturan bir PowerShell betiğidir. Get-PacFile kullanma hakkında bilgi için bkz. [Önemli Office 365 trafiğinin doğrudan yönlendirilmesi için PAC dosyası kullanma](managing-office-365-endpoints.md#use-a-pac-file-for-direct-routing-of-vital-office-365-traffic).
 
 ## <a name="related-topics"></a>İlgili Konular
   
 [Office 365 URL'leri ve IP adresi aralıkları](https://support.office.com/article/8548a211-3fe7-47cb-abb1-355ea5aa88a2)
 
-[Kullanıcı Office 365 yönetme](managing-office-365-endpoints.md)
+[Office 365 uç noktalarını yönetme](managing-office-365-endpoints.md)
   
 [Office 365 uç noktaları hakkında SSS](https://support.office.com/article/d4088321-1c89-4b96-9c99-54c75cae2e6d)
 
-[Office 365 Bağlantısı İlkeleri](microsoft-365-network-connectivity-principles.md)
+[Office 365 Ağ Bağlantı İlkeleri](microsoft-365-network-connectivity-principles.md)
 
-[Office 365 ve performans ayarını yapılandırma](network-planning-and-performance.md)
+[ağ ve performans ayarlamayı Office 365](network-planning-and-performance.md)
 
-[Ağ Office 365 değerlendirme](assessing-network-connectivity.md)
+[Office 365 ağ bağlantısını değerlendirme](assessing-network-connectivity.md)
   
 [Skype Kurumsal Online'da Medya Kalitesi ve Ağ Bağlantısı Performansı](https://support.office.com/article/5fe3e01b-34cf-44e0-b897-b0b2a83f0917)
   
-[Skype Kurumsal Online için a Skype Kurumsal iyileştirme](https://support.office.com/article/b363bdca-b00d-4150-96c3-ec7eab5a8a43)
+[Ağınızı Skype Kurumsal Online için iyileştirme](https://support.office.com/article/b363bdca-b00d-4150-96c3-ec7eab5a8a43)
 
-[Office 365 ve performans geçmişini kullanarak performans ayarlamayı ayarlama](performance-tuning-using-baselines-and-history.md)
+[Temelleri ve performans geçmişini kullanarak performans ayarlamayı Office 365](performance-tuning-using-baselines-and-history.md)
   
-[Destek için performans sorunlarını giderme Office 365](performance-troubleshooting-plan.md)
+[Office 365 için performans sorunlarını giderme planı](performance-troubleshooting-plan.md)

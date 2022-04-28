@@ -1,8 +1,8 @@
 ---
-title: Destek için performans sorunlarını giderme Office 365
+title: Office 365 için performans sorunlarını giderme planı
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 5/10/2019
 audience: Admin
 ms.topic: conceptual
@@ -21,63 +21,63 @@ ms.assetid: e241e5d9-b1d8-4f1d-a5c8-4106b7325f8c
 ms.collection:
 - M365-security-compliance
 - Ent_O365
-description: Bu makale, performans sorunlarını Office 365 gidermenize ve hatta en yaygın sorunlardan bazılarını düzeltmenize yardımcı olabilir.
-ms.openlocfilehash: 23779158c250a94873f44139faa783e0079ab642
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Bu makale, Office 365 performans sorunlarını gidermenize ve hatta en yaygın sorunlardan bazılarını düzeltmenize yardımcı olabilir.
+ms.openlocfilehash: 7380d6beb89cdd128ccf86f47e1e3c236aabda77
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988728"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65100577"
 ---
-# <a name="performance-troubleshooting-plan-for-office-365"></a>Destek için performans sorunlarını giderme Office 365
+# <a name="performance-troubleshooting-plan-for-office-365"></a>Office 365 için performans sorunlarını giderme planı
 
-SharePoint Online, OneDrive İş, Exchange Online veya Skype Kurumsal Online ile istemci bilgisayarınız arasındaki gecikmeleri, askıda kalmaları ve düşük performansı belirlemeye yönelik adımları biliyor musunuz? Desteği aramadan önce, bu makale Office 365 sorunları gidermenize, hatta en yaygın sorunlardan bazılarını çözmenize yardımcı olabilir.
+SharePoint Online, OneDrive İş, Exchange Online veya Skype Kurumsal Online ile istemci bilgisayarınız arasındaki gecikmeleri, kilitlenmeleri ve yavaş performansı belirlemek ve düzeltmek için atılacak adımları bilmeniz gerekiyor mu? Desteği çağırmadan önce, bu makale Office 365 performans sorunlarını gidermenize ve hatta en yaygın sorunlardan bazılarını düzeltmenize yardımcı olabilir.
 
-Bu makale aslında, performans sorun yaşanıyorken bu sorunla ilgili değerli veriler yakalamak için kullanabileceğiniz örnek bir eylem planıdır. Bu makalede en önemli bazı sorunlar da yer almaktadır.
+Bu makale aslında performans sorununuzla ilgili değerli verileri yakalamak için kullanabileceğiniz örnek bir eylem planıdır. Bu makalede bazı önemli sorunlar da yer alır.
 
-Ağ performansında yeniyseniz ve istemci makineleriniz ile Office 365 arasındaki performansı izlemek için uzun vadeli bir plan yapmak için, Office 365 performans ayarlama ve sorun giderme [- Yönetici](performance-tuning-using-baselines-and-history.md) ve PRO.
+Ağ performansı konusunda yeniyseniz ve istemci makinelerinizle Office 365 arasındaki performansı izlemek için uzun vadeli bir plan yapmak istiyorsanız Office 365 [performans ayarlama ve sorun giderme - Yönetici ve BT Pro'ne](performance-tuning-using-baselines-and-history.md) göz atın.
 
 ## <a name="sample-performance-troubleshooting-action-plan"></a>Örnek performans sorunlarını giderme eylem planı
 
-Bu eylem planı iki parçadan oluşur; bir hazırlık aşaması ve bir de günlüğe kaydetme aşaması. Şu anda bir performans sorunun varsa ve veri toplamanız gerekirse, hemen bu planı kullanmaya başlayabilirsiniz.
+Bu eylem planı iki bölümden oluşur; bir hazırlık aşaması ve günlüğe kaydetme aşaması. Şu anda bir performans sorununuz varsa ve veri toplama işlemi yapmanız gerekiyorsa, bu planı hemen kullanmaya başlayabilirsiniz.
 
 ### <a name="prepare-the-client-computer"></a>İstemci bilgisayarı hazırlama
 
-- Performans sorununu yeniden üretebilir bir istemci bilgisayar bulun. Bu bilgisayar sorun giderme sırasında kullanılır.
-- Performans sorununa neden olan adımları not edin, böylece test zamanı geldiğinde hazır oluruz.
-- Bilgileri toplamak ve kaydını oluşturmak için araçları yükleyin:
-  - [Netmon 3.4'ü yükleyin](https://www.microsoft.com/download/details.aspx?id=4865) (veya eşdeğer bir ağ izleme aracı kullanın).
-  - HTTPWatch'ın ücretsiz Basic [Edition'ı yükleyin](https://www.httpwatch.com/download/) (veya eşdeğer bir ağ izleme aracı kullanın).
-  - Test sırasında atılacak adımların kaydını tutmak için bir ekran kaydedici kullanın veya Windows Vista ve sonraki sürümlerle birlikte gelen Adım Kaydedicisi (PSR.exe) kaydedicisini çalıştırın.
+- Performans sorununu yeniden oluşturabilen bir istemci bilgisayar bulun. Bu bilgisayar sorun giderme sırasında kullanılacaktır.
+- Test etme zamanı geldiğinde hazır olmanız için performans sorununun gerçekleşmesine neden olan adımları not edin.
+- Bilgileri toplamak ve kaydetmek için araçları yükleyin:
+  - [Netmon 3.4'ü](https://www.microsoft.com/download/details.aspx?id=4865) yükleyin (veya eşdeğer bir ağ izleme aracı kullanın).
+  - Ücretsiz [HTTPWatch](https://www.httpwatch.com/download/) Basic Edition'ı yükleyin (veya eşdeğer bir ağ İzleme aracı kullanın).
+  - Test sırasında uyguladığınız adımların kaydını tutmak için bir ekran kaydedici kullanın veya Windows Vista ve sonraki sürümlerle birlikte gelen Adım Kaydedicisi'ni (PSR.exe) çalıştırın.
 
-### <a name="log-the-performance-issue"></a>Performans sorunu günlüğe kaydedilir
+### <a name="log-the-performance-issue"></a>Performans sorununu günlüğe kaydetme
 
-- Tüm fazla kullanılan İnternet tarayıcılarını kapatın.
-- Adım Kaydedicisi'ne veya başka bir ekran kaydediciyi başlatma.
-- Netmon yakalamanızı (veya ağ izleme aracını) başlatma.
-- İstemci bilgisayarda komut satırlarından ipconfig flushdns yazarak DNS önbelleğinizi temizleyin.
-- Yeni bir tarayıcı oturumu başlatarak HTTPWatch'i açın.
-- İsteğe bağlı: Exchange Online test ediyorsanız, Exchange Performans Çözümleyicisi aracını yönetici Office 365 çalıştırın.
-- Performans sorununa neden olan tam adımları yeniden üretin.
-- Netmon veya başka bir aracın izlemesini durdurun.
-- Komut satırına bir izleme yolu çalıştırarak Office 365 komutunu yazın ve ENTER tuşuna basın:
+- Tüm gereksiz İnternet tarayıcılarını kapatın.
+- Adım Kaydedicisi'ni veya başka bir ekran kaydediciyi başlatın.
+- Netmon yakalamanızı (veya ağ izleme aracını) başlatın.
+- ipconfig /flushdns yazarak istemci bilgisayardaki DNS önbelleğinizi komut satırından temizleyin.
+- Yeni bir tarayıcı oturumu başlatın ve HTTPWatch'u açın.
+- İsteğe bağlı: Exchange Online test ediyorsanız, Office 365 yönetici konsolundan Exchange İstemci Performans Analizi aracını çalıştırın.
+- Performans sorununa neden olan tam adımları yeniden oluşturun.
+- Netmon'unuzun veya başka bir aracın izini durdurun.
+- Komut satırında, aşağıdaki komutu yazıp ENTER tuşuna basarak Office 365 aboneliğinize bir izleme yolu çalıştırın:
 
   ``` cmd
   tracert <subscriptionname>.onmicrosoft.com
   ```
 
-- Adım Kaydedicisi'i durdurun ve videoyu kaydedin. Yakalama tarih ve saatlerini ve iyi veya kötü performans gösterdiğine emin olun.
-- İzleme dosyalarını kaydedin. Yine, yakalama tarih ve saatlerini ve iyi veya kötü performans gösterdiğine de emin olun.
+- Adım Kaydedicisi'ni durdurun ve videoyu kaydedin. Yakalamanın tarih ve saatini ve iyi veya kötü performans gösterip göstermediğini eklediğinizden emin olun.
+- İzleme dosyalarını kaydedin. Yine, yakalamanın tarih ve saatini ve iyi veya kötü performans gösterip göstermediğini eklemeyi unutmayın.
 
-Bu makalede sözü geçen araçları çalıştırmaya alışık değilsanız, merak etmeyin, bir sonraki adımda bu adımlar sağlanmıştır. Bu tür ağ yakalama çalışmalara alışkınsanız, günlükleri filtreleme ve okumanın açık olduğu Temel toplama'ya geçebilirsiniz.[](performance-tuning-using-baselines-and-history.md#how-to-collect-baselines)
+Bu makalede bahsedilen araçları çalıştırma hakkında bilginiz yoksa endişelenmeyin çünkü sonraki adımlarda bu adımları sağlayacağız. Bu tür bir ağ yakalama işlemine alışkınsanız, günlükleri filtrelemeyi ve okumayı açıklayan [Temelleri toplama](performance-tuning-using-baselines-and-history.md#how-to-collect-baselines) bölümüne atlayabilirsiniz.
 
-### <a name="flush-the-dns-cache-first"></a>Önce DNS Önbelleğini temizleyin
+### <a name="flush-the-dns-cache-first"></a>Önce DNS Önbelleği'ni temizleyin
 
-Neden mi? DNS önbelleğini temizerek, testlerinizi temiz bir sayfayla başlatıyor oluruz. Önbelleği temizlayarak, DNS çözümleyici içeriğini en güncel girdilere sıfırlarsiniz. Temizlemenin, ANTS dosya girdilerini kaldırma olmadığını unutmayın. HOST dosyası girdilerini yoğun olarak kullanıyorsanız, bu girdileri başka bir dizindeki bir dosyaya kopyalamanız ve sonra HOST dosyasını boşaltmanız gerekir.
+Neden mi? DNS önbelleğini boşaltarak testlerinizi temiz bir sayfayla başlatmış olacaksınız. Önbelleği temizleyerek DNS çözümleyici içeriğini en güncel girişlere sıfırlamış olursunuz. Temizlemenin HOSTs dosya girdilerini kaldırmadığını unutmayın. HOST dosya girdilerini kapsamlı bir şekilde kullanıyorsanız, bu girdileri başka bir dizindeki bir dosyaya kopyalamanız ve ardından HOST dosyasını boşaltmanız gerekir.
 
 #### <a name="flush-your-dns-resolver-cache"></a>DNS çözümleyici önbelleğinizi temizleme
 
-1. Komut istemini açın, (**Start** \> **Run** \> **cmd veya Windows**  \> **cmd**).
+1. Komut istemini açın (**Çalıştırma** \> **cmd'sini** **başlat** \> veya **Windows anahtar** \> **cmd**).
 2. Aşağıdaki komutu yazın ve ENTER tuşuna basın:
 
     ``` cmd
@@ -86,175 +86,175 @@ Neden mi? DNS önbelleğini temizerek, testlerinizi temiz bir sayfayla başlatı
 
 ## <a name="netmon"></a>Netmon
 
-Microsoft'un Ağ İzleme aracı ([Netmon](https://www.microsoft.com/download/details.aspx?id=4865)) paketleri, yani ağlarda bilgisayarlar arasında geçen trafiği analiz eder. Office 365'la trafiği takip etmek için Netmon'ı kullanarak paket üst bilgilerini yakalamak, görüntülemek ve okumak, aradaki cihazları tanımlamak, ağ donanımının önemli ayarlarını kontrol etmek, bırakılan paketleri görmek ve şirket ağınız ile şirket ağınızdaki bilgisayarlar arasındaki trafiğin akışını Office 365. Trafiğin gerçek gövdesi şifrelenmiş olduğundan (yani SSL/TLS üzerinden bağlantı noktası 443 üzerinden seyahat olduğundan) gönderilen dosyaları okuyamabilirsiniz. Bunun yerine, paketin izlemesi gereken yolun filtrelenmemiş bir izlemesini alır ve bu da sorun davranışını takip etmeye yardımcı olabilir.
+Microsoft'un Ağ İzleme aracı ([Netmon](https://www.microsoft.com/download/details.aspx?id=4865)), ağlardaki bilgisayarlar arasında geçen paketleri(trafik) analiz eder. Office 365 ile trafiği izlemek için Netmon kullanarak paket üst bilgilerini yakalayabilir, görüntüleyebilir ve okuyabilir, arayan cihazları tanımlayabilir, ağ donanımındaki önemli ayarları denetleyebilir, bırakılan paketleri arayabilir ve şirket ağınızdaki bilgisayarlar ile Office 365 arasındaki trafik akışını izleyebilirsiniz. Trafiğin gerçek gövdesi şifrelendiğinden, yani SSL/TLS aracılığıyla 443 numaralı bağlantı noktasında hareket ettiğinden, gönderilen dosyaları okuyamazsınız. Bunun yerine, sorunun davranışını izlemenize yardımcı olabilecek paketin izlediği yolun filtrelenmemiş bir izlemesini alırsınız.
 
-Şu anda filtre uygulamamayı lütfen. Bunun yerine, izleme ve kaydetmeyi durdurmadan önce adımların üzerinden geçerek sorunu gösterin.
+Şu anda filtre uygulamadığınızdan emin olun. Bunun yerine, izleme ve kaydetmeyi durdurmadan önce adımları izleyin ve sorunu gösterin.
 
 Netmon 3.4'ü yükledikten sonra aracı açın ve şu adımları izleyin:
 
-### <a name="take-a-netmon-trace-and-reproduce-the-issue"></a>Netmon izlemesi alma ve sorunu yeniden oluşturma
+### <a name="take-a-netmon-trace-and-reproduce-the-issue"></a>Bir Netmon izlemesi alın ve sorunu yeniden oluşturun
 
-1. Netmon 3.4'ü başlat.
-Başlat sayfasında üç bölme **vardır: Son** Yakalamalar **, Ağları** Seçin ve **Microsoft Ağ İzleyicisi 3.4'ü Başlarken. Bildirim**. Ağları Seçin paneli, yakalamanız için uygun olan varsayılan ağların listesini de verir. Burada ağ kartlarının seçili olduğundan emin olun.
+1. Netmon 3.4'i başlatın.
+**Başlangıç** sayfasında üç bölme vardır: **Son Yakalamalar**, **Ağları Seçme** ve **Microsoft Ağ İzleyicisi'ni Kullanmaya Başlama 3.4. Dikkat edin**. Ağları Seç paneli, yakalayabileceğiniz varsayılan ağların listesini de verir. Burada ağ kartlarının seçili olduğundan emin olun.
 
-2. Başlangıç **sayfasının en** üstünde Yeni **Yakalama'ya** tıklayın. Böylece, Başlat sayfa sekmesinin yanına **Yakalama** **1 adında yeni bir sekme ekler**.
-![Yeni Yakalama, Başlat ve Durdur düğmelerinin vurgulu olduğu Netmon kullanıcı arabirimi.](../media/d4527d84-62ec-4301-82d5-e0166ff71f20.PNG)
+2. **Başlangıç** sayfasının üst kısmındaki **Yeni Yakalama'ya** tıklayın. Bu, **Başlangıç** sayfası sekmesinin yanına **Capture 1** adlı yeni bir sekme ekler.
+![Netmon'un Yeni Yakalama, Başlat ve Durdur düğmeleri vurgulanmış kullanıcı arabirimi.](../media/d4527d84-62ec-4301-82d5-e0166ff71f20.PNG)
 
-3. Basit bir yakalama almak için araç çubuğunda **Başlat'a** tıklayın.
+3. Basit bir yakalama yapmak için araç çubuğunda **Başlat'a** tıklayın.
 
-4. Bir performans sorunu ortaya konu alan adımları yeniden üretin.
+4. Performans sorunu oluşturan adımları yeniden oluşturun.
 
-5. Dosyayı **Farklı** **Kaydet'i** \> \> **Durdur'a tıklayın**. Saat dilimiyle birlikte tarih ve saat vermeyi ve iyi performans mı yoksa kötü performans mı gösterdiğinden bahsetmeyi unutmayın.
+5. **Dosya** \> **Farklı Kaydetmeyi** **Durdur'a** \> tıklayın. Saat dilimiyle birlikte tarih ve saat vermeyi ve bunun kötü veya iyi bir performans gösterip göstermediğini belirtmeyi unutmayın.
 
 ## <a name="httpwatch"></a>HTTPWatch
 
-[HTTPWatch](https://www.httpwatch.com/download/) ücretli ve ücretsiz sürüm olarak gelir. Ücretsiz olan Basic Edition, bu test için ihtiyacınız olan her şeyi kapsar. HTTPWatch ağ trafiğini ve tarayıcı pencerenizin hemen üzerinden sayfa yükleme sürelerini izler. HTTPWatch, performansı grafik olarak tanımlayan bir Internet Explorer eklentisidir. Çözümleme HTTPWatch Studio'da kaydedilebilir ve  görüntüilebilir.
+[HTTPWatch](https://www.httpwatch.com/download/) ücretli ve ücretsiz bir sürüm olarak gelir. Ücretsiz Basic Edition, bu test için ihtiyacınız olan her şeyi kapsar. HTTPWatch, ağ trafiğini ve sayfa yükleme süresini doğrudan tarayıcı pencerenizden izler. HTTPWatch, Internet Explorer'ın performansı grafik olarak açıklayan bir eklentisidir. Analiz HTTPWatch Studio'da kaydedilebilir ve görüntülenebilir.
 
 > [!NOTE]
-> Firefox, Google Chrome gibi başka bir tarayıcı kullanıyorsanız veya Internet Explorer'da HTTPWatch yükleyeyebilirsiniz, yeni bir tarayıcı penceresi açın ve klavyenizde F12 tuşuna basın. Tarayıcınızın en altında Geliştirici Aracı açılır kutusunu görüyorsanız. Opera kullanıyorsanız, Web Inspector için CTRL+SHIFT+I tuşlarına basın, ardından Ağ sekmesine tıklayın ve aşağıda açıklanan testleri yapın. Bilgiler biraz farklı olur, ancak yükleme süreleri mili saniye cinsinden görüntülenir. > HTTPWatch, çevrimiçi çevrimiçi sayfa yükleme süreleriyle SharePoint sorunlar için de kullanışlıdır.
+> Firefox, Google Chrome gibi başka bir tarayıcı kullanıyorsanız veya Internet Explorer'da HTTPWatch yükleyemiyorsanız, yeni bir tarayıcı penceresi açın ve klavyenizde F12 tuşuna basın. Tarayıcınızın en altında Geliştirici Aracı açılır penceresini görmeniz gerekir. Opera kullanıyorsanız, Web Denetçisi için CTRL+SHIFT+I tuşlarına basın, ardından **Ağ** sekmesine tıklayın ve aşağıda özetlenen testi tamamlayın. Bilgiler biraz farklı olacaktır, ancak yükleme süreleri milisaniye cinsinden görüntülenmeye devam eder. > HTTPWatch, SharePoint Çevrimiçi sayfa yükleme süreleriyle ilgili sorunlar için de çok kullanışlıdır.
 
-### <a name="run-httpwatch-and-reproduce-the-issue"></a>HTTPWatch'i çalıştırma ve sorunu yeniden oluşturma
+### <a name="run-httpwatch-and-reproduce-the-issue"></a>HTTPWatch'u çalıştırın ve sorunu yeniden oluşturun
 
-HTTPWatch bir tarayıcı eklentisidir, bu nedenle aracın tarayıcıda açık hali Internet Explorer'ın her sürümü için biraz farklıdır. Normalde, HTTPWatch'ı Internet Explorer tarayıcısında Komut çubuğunun altında bulabilirsiniz. Tarayıcı pencerenizin HTTPWatch eklentisını görmüyorsanız,  \> Yardım Hakkında'ya tıklayarak veya Internet Explorer'ın daha sonraki sürümlerinde dişli simgesine ve ardından **Internet Explorer** Hakkında'ya tıklayarak tarayıcınızın sürümünü kontrol edin. Komut çubuğunu **başlatmak için** Internet Explorer'da menü çubuğuna sağ tıklayın ve Komut çubuğu'ne **tıklayın**.
+HTTPWatch bir tarayıcı eklentisidir, bu nedenle aracı tarayıcıda kullanıma açmak Internet Explorer'ın her sürümü için biraz farklıdır. Genellikle, HTTPWatch'u Internet Explorer tarayıcısında Komutlar çubuğunun altında bulabilirsiniz. Tarayıcı pencerenizde HTTPWatch eklentisini görmüyorsanız **, Yardım** \> **Hakkında'ya** tıklayarak tarayıcınızın sürümünü denetleyin veya Internet Explorer'ın sonraki sürümlerinde dişli simgesine ve **Internet Explorer Hakkında'ya** tıklayın. **Komutlar** çubuğunu başlatmak için Internet Explorer'da menü çubuğuna sağ tıklayın ve **Komutlar çubuğu'na** tıklayın.
 
-Geçmişte, HTTPWatch Komutlar ve Explorer çubuklarının her ikiyle de ilişkilendirildi, dolayısıyla yükledikten sonra simgeyi hemen görmüyorsanız (yeniden başlattıktan sonra bile), Araçlar'ı ve araç çubuklarınıza simgeyi kontrol edin. Araç çubuklarının özelleştirebileceğinizi ve bu araç çubuklarına seçenekler eklenebileceğinizi unutmayın.
+Geçmişte HTTPWatch hem Komutlar hem de Gezgin çubuklarıyla ilişkilendirilmiştir. Bu nedenle, yükledikten sonra simgeyi hemen görmüyorsanız (yeniden başlatmadan sonra bile) **Araçlar'ı** ve simge için araç çubuklarınızı işaretleyin. Araç çubuklarının özelleştirilebileceğini ve bunlara seçeneklerin eklenebileceğini unutmayın.
 
-![HTTPWatch simgesinin görüntülendiğinde Internet Explorer'ın Komut araç çubuğu.](../media/198590b0-d7b1-4bff-a6ad-e4ec3a1e83df.png)
+![HTTPWatch simgesinin görüntülendiği Internet Explorer'ın Komut araç çubuğu.](../media/198590b0-d7b1-4bff-a6ad-e4ec3a1e83df.png)
 
-1. HTTPWatch'ı bir Internet Explorer tarayıcı penceresinde başlatın. Pencerenin en altında tarayıcıya yerleştirildi olarak görünür. **Kayıt'a tıklayın**.
+1. Internet Explorer tarayıcı penceresinde HTTPWatch'ı başlatın. Bu pencerenin en altındaki tarayıcıya yerleştirilmiş olarak görünür. **Kaydet'e** tıklayın.
 
-2. Performans sorunuyla ilgili tam adımları yeniden üretin. **HTTPWatch'da** Durdur düğmesine tıklayın.
+2. Performans sorununa dahil olan tam adımları yeniden oluşturun. HTTPWatch'ta **Durdur** düğmesine tıklayın.
 
-3. **HTTPWatch'ı** kaydedin veya **E-postaYla Gönder'i seçin**. Dosyayı, tarih ve saat bilgisi olacak şekilde ve İzlemenizin iyi veya kötü performans göstergesini içerdiğine ilişkin bir ad ve veri içerdiğini unutmayın.
+3. HTTPWatch veya **E-posta ile Gönder'i** **kaydedin**. Dosyayı tarih ve saat bilgilerini ve watch'unuzun iyi veya kötü performans gösterimi içerip içermediğini gösteren bir göstergeyi içermesi için adlandırmayı unutmayın.
 
-![Giriş sayfasının Ağ sekmesini gösteren HTTPWatch Office 365.](../media/021a2c64-d581-49fd-adf4-4c364f589d75.PNG)
+![Office 365 giriş sayfasının sayfa yükü için Ağ sekmesini gösteren HTTPWatch.](../media/021a2c64-d581-49fd-adf4-4c364f589d75.PNG)
 
-Bu ekran görüntü httpwatch'un Professional sürümündendir. Temel Sürümde alınan izlemeleri, basit sürümü olan bir Professional açıp okuyabilirsiniz. Bu yöntemle alınan izlemeden ek bilgiler edinebilirsiniz.
+Bu ekran görüntüsü HTTPWatch'un Professional sürümünden alınmıştı. Professional sürümü olan bir bilgisayarda Temel Sürüm'de alınan izlemeleri açabilir ve burada okuyabilirsiniz. bu yöntem aracılığıyla izlemeden ek bilgiler bulunabilir.
 
 ## <a name="problem-steps-recorder"></a>Sorun Adımları Kaydedicisi
 
-Adım Kaydedicisi veya PSR.exe, sorunları oluşurken kaydetmeye olanak sağlar. Bu çok yararlı bir araçtır ve çalıştırması çok basittir.
+Adım Kaydedicisi veya PSR.exe, oluşan sorunları kaydetmenize olanak tanır. Çok kullanışlı bir araçtır ve çalıştırılması çok basittir.
 
-### <a name="run-problem-steps-recorder-psrexe-to-record-your-work"></a>Çalışmanızı kaydetmek için Sorun Adımları Kaydedicisi PSR.exe'i (PSR.exe) çalıştırma
+### <a name="run-problem-steps-recorder-psrexe-to-record-your-work"></a>Çalışmanızı kaydetmek için Sorun Adımları Kaydedicisi'yi (PSR.exe) çalıştırın
 
-1. **Tamam'a** **tıklarsanız** \> \> **PSR.exe** \> **Çalıştır** türünü kullanın veya **Tamam'a Windows tuşuna** \> **PSR.exe** \> ENTER tuşuna basın.
+1. Tamam **PSR.exe** \> **ÇalıştırmaYı** \> **Başlat** \> türünü kullanın veya **Windows Tuş** \> türü **PSR.exe** \> tıklayın ve enter tuşuna basın.
 
-2. Küçük ekran PSR.exe, Kaydı **Başlat'a tıklayın** ve performans sorunu yeniden üretin adımları yeniden üretin. Gerekirse, Açıklama Ekle'ye tıklayarak **açıklama abilirsiniz**.
+2. Küçük PSR.exe penceresi görüntülendiğinde **Kaydı Başlat'a** tıklayın ve performans sorununu yeniden oluşturan adımları yeniden oluşturun. Gerekirse Açıklama **Ekle'ye tıklayarak açıklama ekleyebilirsiniz**.
 
-3. Adımları **tamamlamışken** Kaydı Durdur'a tıklayın. Performans sorunu bir sayfa işlemede ise kaydı durdurmadan önce sayfanın işlemesi için bekleyin.
+3. Adımları tamamladığınızda **Kaydı Durdur'a** tıklayın. Performans sorunu bir sayfa işleme ise, kaydı durdurmadan önce sayfanın işlenmesini bekleyin.
 
 4. **Kaydet**'e tıklayın.
 
-![Adım Kaydedicisi veya Kaydedicisi'nin ekran PSR.exe.](../media/8542b0aa-a3ff-4718-8dc4-43f5521c6c34.PNG)
+![Adım Kaydedicisi'nin veya PSR.exe ekran görüntüsü.](../media/8542b0aa-a3ff-4718-8dc4-43f5521c6c34.PNG)
 
-Tarih ve saat sizin için kaydedilir. Bu, PSR'nizi zamanında Netmon izlemenize ve HTTPWatch'a bağlar ve hassas sorun gidermede yardımcı olur. PSR kaydında tarih ve saat; örneğin, oturum açma ile URL'ye göz atma arasında bir dakika geçerek yönetici sitesinin kısmen iş günü olduğunu gösterebilir.
+Tarih ve saat sizin için kaydedilir. Bu, PSR'nizi Netmon izlemenize ve HTTPWatch'unuza zamanında bağlar ve hassas sorun gidermeye yardımcı olur. PSR kaydındaki tarih ve saat, örneğin, oturum açma ve URL'ye göz atma ile yönetici sitesinin kısmi işlenmesi arasında bir dakika geçtiğini gösterebilir.
 
 ## <a name="read-your-traces"></a>İzlemelerinizi okuma
 
-Ağ ve performans sorunlarını gidermeyle ilgili her şeyi bir makaleyle öğretmek mümkün değildir. İyi bir performans elde olmak için deneyim ve ağ bağlantılarının nasıl çalıştığını ve genelde performansının nasıl olduğunu öğrenebilirsiniz. Ancak, bir sık karşılaşılan sorunlar listesi oluşturmak ve araçların en yaygın sorunları ortadan kaldırmayı nasıl kolaylaştıracaklarını göstermek mümkündür.
+Ağ ve performans sorunlarını giderme hakkında bir makale aracılığıyla bilinmesi gereken her şeyi öğretmek mümkün değildir. Performans konusunda iyi bir deneyim elde eder ve ağınızın nasıl çalıştığını ve genellikle nasıl performans gösterdiği hakkında bilgi sahibi olur. Ancak en sık karşılaşılan sorunları ortadan kaldırmanızı nasıl kolaylaştırabileceğini göstermek ve en sık karşılaşılan sorunların listesini toparlamak mümkündür.
 
-Office 365 siteleriniz için ağ izlemelerini okuma becerileri almak için, düzenli olarak sayfa yükleme izlemeleri oluşturmak ve bunları okuma deneyimi kazanmaktan daha iyi bir öğretmen yoktur. Örneğin, fırsatın olduğunda, bir veri hizmeti Office 365 ve işlemi takip etme. DNS trafiğine yönelik izlemeye filtre uygulama veya FrameData'da göz atttıyır hizmetinin adını aratır. Hizmet yüklenirken oluşan adımlar hakkında bir fikir almak için izlemeyi tarayın. Bu normal sayfa yüklemelerinin nasıl bir görünüme sahip olması gerektiğini öğrenmenıza yardımcı olur ve sorun giderme durumunda, özellikle de performansla ilgili iyi ve kötü izleri karşılaştırmak size çok şey öğretebilir.
+Office 365 siteleriniz için ağ izlemelerini okuma becerileri edinmek istiyorsanız, düzenli olarak sayfa yüklemelerinin izlerini oluşturmak ve bunları okuma deneyimi kazanmaktan daha iyi bir öğretmen yoktur. Örneğin, fırsatınız olduğunda bir Office 365 hizmeti yükleyin ve işlemi takip edin. DNS trafiğinin izlemesini filtreleyin veya FrameData'da göz attığınız hizmetin adını arayın. Hizmet yüklendiğinde gerçekleşen adımlar hakkında bir fikir edinmek için izlemeyi tarayın. Bu, normal sayfa yükünün nasıl görünmesi gerektiğini öğrenmenize yardımcı olur ve sorun giderme söz konusu olduğunda, özellikle performansla ilgili olarak iyi ve kötü izlemeleri karşılaştırmak size çok şey öğretebilir.
 
-Netmon, Görüntü filtresi alanında Microsoft Intellisense kullanır. Intellisense veya akıllı kod tamamlama, bir nokta yazmanın ve kullanılabilir tüm seçeneklerin açılan seçim kutusunda görüntülenebilir olduğu bir püf noktasıdır. Örneğin TCP pencere ölçeklendirmesi hakkında endişe ediyorsanız, filtreye (  `.protocol.tcp.window < 100`örneğin) bu şekilde yolunu bulabilirsiniz.
+Netmon, Görüntüleme filtresi alanında Microsoft Intellisense kullanır. Intellisense veya akıllı kod tamamlama, nokta yazdığınız ve tüm kullanılabilir seçeneklerin açılan seçim kutusunda görüntülendiği numaradır. Örneğin, TCP penceresi ölçeklendirmesinden endişeleniyorsanız, bu yolla bir filtreye (örneğin  `.protocol.tcp.window < 100`) giden yolu bulabilirsiniz.
 
-![Görüntüleme Filtresi alanında intellisense'in kullandığını gösteren Netmon ekran görüntüsü.](../media/75a56c11-9a60-47ee-a100-aabdfb1ba10f.PNG)
+![Görüntü Filtresi alanının intellisense kullandığını gösteren Netmon ekran görüntüsü.](../media/75a56c11-9a60-47ee-a100-aabdfb1ba10f.PNG)
 
-Netmon izleri içinde çok fazla trafik olabilir. Bunları okumada deneyimli değilsanız, izlemenin ilk kez açılması sizi bunaltmış olabilir. Öncelikle izde sinyali arka plan gürültüsünden ayırmamız gerekir. Test Office 365 ve görmek istediğiniz trafik de bu. İzlerde gezinmeye alışıyorsanız, bu listeye ihtiyacınız olmayabilir.
+Netmon izlemelerinde çok fazla trafik olabilir. Bunları okuma konusunda deneyimli değilseniz, büyük olasılıkla izlemeyi ilk kez açarken bunalmış olursunuz. yapılacak ilk şey, sinyali izlemedeki arka plan gürültüsünden ayırmaktır. Office 365 karşı test ettiyseniz, görmek istediğiniz trafik de bu şekildedir. İzlemelerde gezinmeye alışkınsanız, bu listeye ihtiyacınız olmayabilir.
 
-İstemciniz ve müşteriniz Office 365 TLS üzerinden seyahat ediyor, bu da trafik gövdesinin şifrelenir ve genel bir Netmon izlemesinde okunamaz olduğu anlamına gelir. Performans çözümlemenizin pakette yer alan bilgilerin belirli bilgilerini bilmek zorunda değil. Bununla birlikte, paket üst bilgileri ve içeren bilgilerle çok ilgileniyor.
+İstemciniz ile Office 365 arasındaki trafik TLS üzerinden hareket eder, bu da trafiğin gövdesinin şifrelendiği ve genel bir Netmon izlemesinde okunamaz hale gelir. Performans analizinizin paketteki bilgilerin ayrıntılarını bilmesi gerekmez. Bununla birlikte, paket üst bilgileri ve içerdikleri bilgilerle çok ilgilidir.
 
-### <a name="tips-to-get-a-good-trace"></a>İpuçları bir iz almak için yardım
+### <a name="tips-to-get-a-good-trace"></a>İyi bir izleme almak için İpuçları
 
-- İstemci bilgisayarınızın IPv4 veya IPv6 adresinin değerini bilebilirsiniz. Bunu, komut isteminde IPConfig yazarak ve ENTER **tuşuna** basarak elde edebilirsiniz. Bu adresi bilmek izteki trafiğin doğrudan istemci bilgisayarınızla ilgili olup olmadığını bir bakışta öğrenmenizi sağlar. Bilinen bir proxy varsa, ona da ping işlemi yapmak ve IP adresini almak.
+- İstemci bilgisayarınızın IPv4 veya IPv6 adresinin değerini bilin. **IpConfig** yazıp ENTER tuşuna basarak komut isteminden bunu alabilirsiniz. Bu adresi bilmek, izlemedeki trafiğin doğrudan istemci bilgisayarınızı içerip içermediğini bir bakışta anlamanızı sağlar. Bilinen bir ara sunucu varsa, ping yapın ve IP adresini de alın.
 
-- DNS çözümleyici önbelleğinizi temizleyin ve mümkünse, testleri çalıştıracak olan tarayıcı dışındaki tüm tarayıcıları kapatın. Bunu, örneğin destek, istemci bilgisayarınızın masaüstünü görmek için tarayıcı tabanlı bir araç kullanıyorsa izlemenizi filtrelemeye hazır olun.
+- DNS çözümleyici önbelleğinizi temizleyin ve mümkünse testlerinizi çalıştırdığınız tarayıcı dışında tüm tarayıcıları kapatın. Örneğin bunu yapamıyorsanız, örneğin destek istemci bilgisayarınızın masaüstünü görmek için tarayıcı tabanlı bir araç kullanıyorsa, izlemenizi filtrelemeye hazır olun.
 
-- Meşgul izlemesinde, Office 365 hizmeti bulun. Daha önce trafiğinizi hiç ya da nadiren gören bu, performans sorununa diğer ağ gürültülerinden ayırmak için yararlı bir adımdır. Bunu birkaç şekilde yapabilirsiniz. Sınamadan hemen önce, _ping veya_ _PsPing'i_ belirli hizmetin URL'sinde (`ping outlook.office365.com` veya , örneğin) `psping -4 microsoft-my.sharepoint.com:443`kullanabilirsiniz. Ayrıca, ping veya PsPing'i bir Netmon izlemesinde (işlem adına göre) kolayca bulabilirsiniz. Bu, aramaya başlamana bir yer olur.
+- Yoğun bir izlemede, kullanmakta olduğunuz Office 365 hizmetini bulun. Trafiğinizi daha önce hiç veya nadiren gördüyseniz bu, performans sorununu diğer ağ gürültüsünden ayırmada yararlı bir adımdır. Bunu yapmanın birkaç yolu vardır. Testinizin hemen öncesinde, belirli bir hizmetin (`ping outlook.office365.com`veya gibi) URL'sinde _ping_ veya `psping -4 microsoft-my.sharepoint.com:443`_PsPing_ kullanabilirsiniz. Bu ping'i veya PsPing'i bir Netmon izlemesinde (işlem adına göre) kolayca da bulabilirsiniz. Bu sana aramaya başlamak için bir yer verir.
 
-Netmon izlemesini yalnızca sorunun olduğu zaman kullanıyorsanız, bu da sorun değildir. Kendinizi yönlendirmek için veya gibi bir filtre `ContainsBin(FrameData, ASCII, "office")` kullanın `ContainsBin(FrameData, ASCII, "outlook")`. Çerçeve numaranızı izleme dosyasından kaydedebilirsiniz. Ayrıca Çerçeve Özeti bölmesini en _sağa kaydırarak_ Konuşma Kimliği sütununa bakmanız da iyi olabilir. Burada, bu belirli konuşmanın kimliği için gösterilen bir sayı vardır; bunu kaydedebilirsiniz ve daha sonra yalıtım altında bakabilirsiniz. Başka herhangi bir filtre uygulamadan önce bu filtreyi kaldırmayı unutmayın.
+Sorun sırasında yalnızca Netmon izlemeyi kullanıyorsanız, bu da sorun değil. Kendinizi yönlendirmek için veya `ContainsBin(FrameData, ASCII, "outlook")`gibi `ContainsBin(FrameData, ASCII, "office")` bir filtre kullanın. Çerçeve numaranızı izleme dosyasından kaydedebilirsiniz. _Çerçeve Özeti_ bölmesini sağa doğru kaydırmak ve Konuşma Kimliği sütununu aramak da isteyebilirsiniz. Burada, bu özel konuşmanın kimliği için daha sonra kaydedebileceğiniz ve yalıtılmış olarak bakabileceğiniz bir sayı gösterilir. Başka bir filtreleme uygulamadan önce bu filtreyi kaldırmayı unutmayın.
 
 > [!TIP]
-> Netmon'un yararlı birçok yerleşik filtresi vardır. Görüntü **filtresi bölmesinin** üst kısmında yer alan Filtre _Yükle düğmesini_ deneyin.
+> Netmon'da birçok yararlı yerleşik filtre vardır. _Filtre_ görüntüle bölmesinin üst kısmındaki **Filtreyi Yükle** düğmesini deneyin.
 
-![İstemci bilgisayarın komut satırda PSPing komutunu kullanarak IP'nizi bulun.](../media/4c43ac67-e28e-4536-842d-7add7aa28847.PNG)
+![İstemci bilgisayardaki komut satırında PSPing kullanarak IP'nizi bulun.](../media/4c43ac67-e28e-4536-842d-7add7aa28847.PNG)
 
-![TCP filtresi aracılığıyla aynı PSPing komutunu gösteren istemciden Netmon izlemesi. Flags.Syn == 1.](../media/0ae7ef7d-e003-4d01-a006-dc49bd1fcef2.PNG)
+![İstemciden gelen netmon izlemesi, TCP filtresi aracılığıyla aynı PSPing komutunu gösterir. Flags.Syn == 1.](../media/0ae7ef7d-e003-4d01-a006-dc49bd1fcef2.PNG)
 
-Trafiğinize aşinalık elde edin ve ihtiyacınız olan bilgileri bulmayı öğrenin. Örneğin, kullanmakta olduğu hizmet için ilk başvuruya izlemede hangi paketin Office 365 olduğunu belirlemeyi öğrenin ("Outlook").
+Trafiğinizi öğrenin ve ihtiyacınız olan bilgileri bulmayı öğrenin. Örneğin, izlemedeki hangi paketin kullandığınız Office 365 hizmetine ilk başvuruya sahip olduğunu belirlemeyi öğrenin ("Outlook" gibi).
 
-Örnek Office 365 Outlook Çevrimiçi olarak ele alınarak, trafik aşağıdakine benzer şekilde başlar:
+Office 365 Outlook Online'ı örnek olarak ele alarak trafik şu şekilde başlar:
 
-- Eşleşen QueryID'lerle eşleşen outlook.office365.com için DNS Standart Sorgusu ve DNS Yanıtı. Bu dönüş süresi için saat farksını ve ayrıca dünyanın en Office 365 DNS'in ad çözümleme isteği gönderdiğini not etmek önemlidir. İdeal olarak, dünyanın yarısını değil, mümkün olduğunca yerel olarak.
+- Eşleşen QueryID'lere sahip outlook.office365.com için DNS Standart Sorgusu ve DNS Yanıtı. Bu geri dönüş için zaman farkının yanı sıra Office 365 Genel DNS'nin ad çözümleme isteğini dünyanın neresinde gönderdiğini not etmek önemlidir. İdeal olarak, dünyanın yarısının ortasından çok, mümkün olduğunca yerel olarak.
 
-- Durum raporu Kalıcı Olarak Taşınmış olan bir HTTP GET İsteği (301)
+- Durum raporu Kalıcı Olarak Taşınan BIR HTTP GET İsteği (301)
 
-- RWS istekleri ve yanıtlarını Bağlan RWS Bağlan. (Bu, sizin için bağlantı yapan Uzak Winsock'un bağlantısıdır.)
+- RWS Bağlan istekleri ve Bağlan yanıtları içeren RWS Trafiği. (Bu, sizin için bağlantı yapan Uzak Winsock'tır.)
 
-- Bir TCP SYN ve TCP SYN/CK görüşmesi. Bu konuşmanın birçok ayarı performansınızı etkiler.
+- TCP SYN ve TCP SYN/ACK konuşması. Bu konuşmadaki ayarların çoğu performansınızı etkiler.
 
-- Sonra, TLS el sıkışması ve TLS sertifika görüşmeleri yapılan bir dizi TLS:TLS trafiği. (Verilerin SSL/TLS ile şifrelenmiş olduğunu unutmayın.)
+- Ardından TLS el sıkışması ve TLS sertifika konuşmalarının gerçekleştiği bir dizi TLS:TLS trafiği. (Verilerin SSL/TLS aracılığıyla şifrelenmesini unutmayın.)
 
-Trafiğin tüm bölümleri önemli ve bağlantılıdır, ancak izlemenin küçük bölümleri özellikle performans sorunlarını gidermeyle ilgili önemli bilgiler içerir ve bu yüzden bu alanlara odaklanacağız. Ayrıca, Sık karşılaşılan sorunlar için bir İlk On listesi derlemek üzere Microsoft'ta Office 365 performans sorunlarını gidermeye yetecek kadar performans sorunu giderme yaptık, bu sorunlara ve sonra da bunların köküne indirecek araçları nasıl kullanabileceğimize odaklanacağız.
+Trafiğin tüm bölümleri önemlidir ve bağlantılıdır, ancak izlemenin küçük bölümleri performans sorunlarını giderme açısından özellikle önemli bilgiler içerir, bu nedenle bu alanlara odaklanacağız. Ayrıca Microsoft'ta sık karşılaşılan sorunların ilk on listesini derlemek için yeterli Office 365 performans sorunlarını giderme işlemi yaptığımızdan, bu sorunlara ve bunları kökten çıkarmak için sahip olduğumuz araçları nasıl kullanacağımıza odaklanacağız.
 
-Bunların hepsini yüklememişsiniz, aşağıdaki matris çeşitli araçlardan kullanır. Mümkün olduğu her yerde. Yükleme noktalarına bağlantılar sağlanır. Liste [Netmon](https://www.microsoft.com/download/details.aspx?id=4865) ve [Wireshark](https://www.wireshark.org/) gibi yaygın ağ izleme araçlarını içerir, ancak rahat kullanılan ve ağ trafiğini filtrelemeye alışık olduğunuz herhangi bir izleme aracını kullanın. Test sırasında şunları unutmayın:
+Tümünü hazır olarak yüklemediyseniz aşağıdaki matris birkaç aracı kullanır. Mümkün olduğunda. Yükleme noktalarına bağlantılar sağlanır. Listede [Netmon](https://www.microsoft.com/download/details.aspx?id=4865) ve [Wireshark](https://www.wireshark.org/) gibi yaygın ağ izleme araçları bulunur, ancak rahatça kullanabileceğiniz ve ağ trafiğini filtrelemeye alışkın olduğunuz herhangi bir izleme aracını kullanabilirsiniz. Test ederken şunları unutmayın:
 
-- *Tarayıcılarınızı kapatın ve yalnızca bir tarayıcı çalıştırarak test*  edin - Bu, toplam yakalama trafiğinizi azaltır. Daha az yoğun bir izleme yapar.
-- *İstemci bilgisayarda DNS çözümleyici önbelleğinizi*  temizleyin - Bu, yakalamanızı almaya başsanız daha temiz bir izleme için size temiz bir başlangıç sağlar.
+- *Tarayıcılarınızı kapatın ve yalnızca bir tarayıcı çalıştırarak test*  edin- Bu, yakaladığınız genel trafiği azaltır. Daha az meşgul bir izleme yapar.
+- *İstemci bilgisayarda DNS çözümleyici önbelleğinizi temizleyin*  - Bu, daha temiz bir izleme için yakalamaya başladığınızda size temiz bir sayfa sağlar.
 
-## <a name="common-issues"></a>Sık karşılaşılan sorunlar
+## <a name="common-issues"></a>Yaygın sorunlar
 
-Karşılaş karşılaşabilirsiniz bazı yaygın sorunlar ve bunları Ağ izlemesinde nasıl bu şekilde bulabilirsiniz.
+Karşılaşabileceğiniz bazı yaygın sorunlar ve bunları Ağ izlemenizde bulma.
 
 ### <a name="tcp-windows-scaling"></a>TCP Windows Ölçeklendirme
 
-SYN - SYN/ACK'de bulunur. Eski donanım ve eskime donanımı TCP pencereleri ölçeklendirmeden yararlanamayy.  Uygun TCP pencereleri ölçeklendirme ayarları olmadan, TCP üst bilgilerindaki varsayılan 16 bit ara bellek mili saniyeler içinde dolar.  İstemci orijinal verilerin alınmıştır ve bu da gecikmelere neden olmak için bildirim alana kadar trafik göndermeye devamamaz.
+SYN - SYN/ACK içinde bulunur. Eski veya eskiyen donanımlar TCP pencereleri ölçeklendirmeden yararlanamayabilir.  Uygun TCP pencereleri ölçeklendirme ayarları olmadan, TCP üst bilgilerindeki varsayılan 16 bit arabellek milisaniye cinsinden doldurulur.  İstemci, özgün verilerin alındığına dair bir bildirim alıncaya kadar trafik göndermeye devam edemez ve bu da gecikmelere neden olur.
 
 #### <a name="tools"></a>Araçlar
 
 - Netmon
 - Wireshark
 
-#### <a name="what-to-look-for"></a>Nelere bakmalı?
+#### <a name="what-to-look-for"></a>Aranacaklar
 
-Ağ izlemesinde SYN - SYN/ACK trafiğine bakın.  Netmon'da, gibi bir filtre kullanın  `tcp.flags.syn == 1`. Bu filtre Wireshark'ta da aynıdır.
+Ağ izlemenizde SYN - SYN/ACK trafiğini arayın.  Netmon'da gibi  `tcp.flags.syn == 1`bir filtre kullanın. Bu filtre Wireshark'ta aynıdır.
 
-![Her iki araç için Syn paketleri için Netmon veya Wireshark filtresi: TCP. Flags.Syn == 1.](../media/4b9a12a1-c915-43c8-ac2f-a679d0435a29.PNG)
+![Her iki araç için de Netmon veya Syn paketleri için Wireshark filtreleyin: TCP. Flags.Syn == 1.](../media/4b9a12a1-c915-43c8-ac2f-a679d0435a29.PNG)
 
-Her SYN için, ilgili Bildirimin (SYN/ACK) hedef bağlantı noktasıyla (DstPort) eşan bir kaynak bağlantı noktası (SrcPort) numarası olduğunu fark edin.
+Her SYN için ilgili Bildirim'in (SYN/ACK) hedef bağlantı noktasında (DstPort) eşleşen bir kaynak bağlantı noktası (SrcPort) numarası olduğuna dikkat edin.
 
-Ağ bağlantınız Windows ölçeklendirme değerini görmek için, önce SYN'i ve sonra da ilişkili SYN/ACK'ı genişletin.
+Ağ bağlantınız tarafından kullanılan Windows Ölçeklendirme değerini görmek için önce SYN'yi ve ardından ilgili SYN/ACK'yi genişletin.
 
-![Zaman aralığına almak için SrcPort'un bir izlemede DstPort ile nasıl eş zaman olacağını gösteren grafik.](../media/6a4ca573-0253-4fbd-93e8-92821ee1c351.png)
+![Zaman değişimlerini elde etmek için bir izlemede SrcPort ile DstPort'un nasıl eşleştirildiğini gösteren grafik.](../media/6a4ca573-0253-4fbd-93e8-92821ee1c351.png)
 
 ### <a name="tcp-idle-time-settings"></a>TCP Boşta Kalma Süresi Ayarlar
 
-Geçmişten, çoğu çevre ağı geçici bağlantılar için yapılandırılır ve bu da boşta kalma bağlantıların genellikle sonlandırildiği anlamına gelir. Boşta kalma TCP oturumları 100 ile 300 saniyeden uzun bir süre içinde, sunucu ve güvenlik duvarları tarafından sonlandırılır. Bu, Outlook Online için sorundur çünkü boşta olsun veya olsun, uzun süreli bağlantılar oluşturur ve kullanır.
+Geçmişe dönük olarak, çoğu çevre ağı geçici bağlantılar için yapılandırılır, yani boştaki bağlantılar genel olarak sonlandırılır. Boştaki TCP oturumları proxy'ler ve güvenlik duvarları tarafından 100 ile 300 saniyeden daha uzun bir süre arasında sonlandırılabilir. Boşta olsalar da olmasalar da uzun süreli bağlantılar oluşturup kullandığından bu durum Outlook Online için sorunludur.
 
-Bağlantılar ara sunucu veya güvenlik duvarı cihazları tarafından sonlandırılsa, istemciye bildirilmez ve Outlook Online'ı kullanmaya çalışmanız, istemci bilgisayarın yeni bir bağlantı kurmadan önce bağlantıyı tekrar tekrar canlandırmaya çalışması anlamına gelecektir. Sayfa yüklemesinde ürün, istemler veya performansın yanıtlanmaz olduğunu görebilirsiniz.
+Bağlantılar ara sunucu veya güvenlik duvarı cihazları tarafından sonlandırıldığında istemciye bilgi verilmez ve Outlook Online'ı kullanma girişimi, istemci bilgisayarın yeni bir bağlantı kurmadan önce bağlantıyı yeniden canlandırmayı tekrar tekrar deneyeceği anlamına gelir. Üründe askıda kalmalar, istemler veya sayfa yükleme performansında yavaşlık görebilirsiniz.
 
 #### <a name="tools"></a>Araçlar
 
 - Netmon
 - Wireshark
 
-#### <a name="what-to-look-for"></a>Nelere bakmalı?
+#### <a name="what-to-look-for"></a>Aranacaklar
 
-Netmon'da, bir gidiş dönüş için Saat Farkı alanına bakın. Gidiş dönüş, istemcinin sunucuya istek göndermesi ile yanıt alma arasındaki zamandır. İstemci ile çıkış noktası (ör. İstemci --\> Proxy) veya İstemcinin Office 365 (İstemci -- Office 365\>). Bunu birçok paket türü içinde görüyoruz.
+Netmon'da gidiş dönüş için Zaman Farkı alanına bakın. Gidiş dönüş, istemcinin sunucuya istek göndermesi ile geri yanıt alması arasındaki süredir. İstemci ile çıkış noktası (örn. İstemci --\> Ara Sunucu) veya Office 365 İstemcisi (İstemci --\> Office 365). Bunu birçok paket türünde görebilirsiniz.
 
-Örneğin, Netmon'daki filtre , veya  `.Protocol.IPv4.Address == 10.102.14.112 AND .Protocol.IPv4.Address == 10.201.114.12`Wireshark'ta gibi olabilir  `ip.addr == 10.102.14.112 &amp;&amp; ip.addr == 10.201.114.12`.
+Örneğin, Netmon'daki filtre , veya Wireshark'ta `ip.addr == 10.102.14.112 &amp;&amp; ip.addr == 10.201.114.12`gibi `.Protocol.IPv4.Address == 10.102.14.112 AND .Protocol.IPv4.Address == 10.201.114.12`görünebilir.
 
 > [!TIP]
-> İzlemenizin IP adresinin DNS sunucunuza ait olup olmadığını bilmiyor musunuz? Komut satırına bakarak deneyin. **Çalıştır'ı** \>  \> başlat'a **tıklayın ve cmd yazın** veya **Windows tuşuna** \> basarak **cmd yazın**. Komut istemine yazın  `nslookup <the IP address from the network trace>`. Test etmek için, kendi bilgisayarınızın IP adresine karşı nslookup kullanın. > Microsoft'un IP aralıklarının listesini görmek için bkz. OFFICE 365 [VE IP adresi aralıkları](./urls-and-ip-address-ranges.md).
+> İzlemenizdeki IP adresinin DNS sunucunuza ait olup olmadığını bilmiyor musunuz? Komut satırında aramayı deneyin. **Çalıştırmayı** \> **Başlat'a** \> tıklayın ve **cmd** yazın veya **Windows Tuşuna** \> basın ve **cmd** yazın. İstemde yazın  `nslookup <the IP address from the network trace>`. Test etmek için, kendi bilgisayarınızın IP adresinde nslookup kullanın. > Microsoft'un IP aralıklarının listesini görmek için bkz. [OFFICE 365 URL'leri ve IP adresi aralıkları](./urls-and-ip-address-ranges.md).
 
-Bir sorun varsa, bu durumda (Outlook Online) Uygulama Verileri pasajı görünen özellikle TLS:TLS paketlerinde uzun Saat Farkları görünmesi gerekir (örneğin Netmon'da `.Protocol.TLS AND Description == "TLS:TLS Rec Layer-1 SSL Application Data"`uygulama veri paketlerini üzerinden bulabilirsiniz). Oturumlar arasında zaman içinde düzgün bir ilerlemeyle bakabilirsiniz. Outlook Online'nızı yenilerken uzun gecikmeler görüyorsanız, bunun nedeni gönderilen büyük ölçüde sıfırlamalar olabilir.
+Bir sorun varsa, özellikle Uygulama Verilerinin geçişini gösteren TLS:TLS paketlerinde (örneğin, Netmon'da uygulama veri paketlerini aracılığıyla `.Protocol.TLS AND Description == "TLS:TLS Rec Layer-1 SSL Application Data"`bulabilirsiniz) bu durumda (Outlook Online) uzun Zaman Farklarının görünmesini bekleyin. Oturum boyunca zaman içinde sorunsuz bir ilerleme görmeniz gerekir. Outlook Online'ınızı yenilerken uzun gecikmeler görürseniz, bunun nedeni yüksek düzeyde sıfırlamaların gönderilmesi olabilir.
 
 ### <a name="latencyround-trip-time"></a>Gecikme/Gidiş Dönüş Süresi
 
-Gecikme süresi; eski cihazların yükseltilmesi, ağa çok sayıda kullanıcı ekleme ve ağ bağlantısında diğer görevler tarafından kullanılan genel bant genişliğinin yüzdesi gibi birçok değişkene bağlı olarak çok değişebilecek bir ölçüdür.
+Gecikme süresi, eskiyen cihazları yükseltme, ağa çok sayıda kullanıcı ekleme ve ağ bağlantısındaki diğer görevler tarafından kullanılan genel bant genişliği yüzdesi gibi birçok değişkene bağlı olarak çok fazla değişiklik gösterebilen bir ölçüdür.
 
-Bu çalışma sayfası için ağ Office 365 ve performans ayarı seçenekleri için bant genişliği [hesaplayıcıları Office 365](network-planning-and-performance.md) vardır.
+Office 365 için ağ [planlama ve performans ayarlama](network-planning-and-performance.md) sayfasında Office 365 için bant genişliği hesaplayıcıları vardır.
 
-Bağlantı hızınızı veya ISS bağlantı bant genişliğini mi ölçmeniz gerekiyor? Bu siteyi (veya benzer siteleri) deneyin: [Speedtest Resmi Sitesi](https://www.speedtest.net/) veya tümcecik hız testi için en sevdiğiniz arama **motorunu sorgular**.
+Bağlantınızın hızını veya ISS bağlantınızın bant genişliğini ölçmeniz mi gerekiyor? Bu siteyi (veya bunun gibi siteleri) deneyin: [Speedtest Resmi Sitesi](https://www.speedtest.net/) veya tümcecik **hız testi** için favori arama motorunuzu sorgulayın.
 
 #### <a name="tools"></a>Araçlar
 
@@ -263,89 +263,89 @@ Bağlantı hızınızı veya ISS bağlantı bant genişliğini mi ölçmeniz ger
 - Netmon
 - Wireshark
 
-#### <a name="what-to-look-for"></a>Nelere bakmalı?
+#### <a name="what-to-look-for"></a>Aranacaklar
 
-Bir izlemede gecikme süresini izlemek için, istemci bilgisayarın IP adresini ve dns sunucusunun IP adresini aynı adrese kaydeden Office 365. Bu, izleme filtrelemeyi kolaylaştırmak için kullanılır. Bir proxy aracılığıyla bağlanıyorsanız, işi kolaylaştırmak için istemci bilgisayarınızın IP adresine, proxy/çıkış IP adresine Office 365 DNS IP adresine ihtiyacınız olacaktır.
+bir izlemedeki gecikme süresini izlemek için istemci bilgisayarın IP adresini ve DNS sunucusunun IP adresini Office 365 kaydettikten yararlanabilirsiniz. Bu, daha kolay izleme filtrelemesi için kullanılır. Bir ara sunucu üzerinden bağlanırsanız, işi kolaylaştırmak için istemci bilgisayarınızın IP adresine, ara sunucu/çıkış IP adresine ve Office 365 DNS IP adresine ihtiyacınız olacaktır.
 
-Alıcıya gönderilen bir ping isteği outlook.office365.com ping ticari markayı art arda ICMP paketleri göndermek üzere bağlanamıyor olsa bile, isteği alan  veri merkezi adını size söyler. PsPing (ücretsiz indirme aracı) ve belirli bağlantı noktasını (443) kullanıyorsanız ve belki IPv4 (-4) kullanmak için gönderilen paketler için ortalama bir gidiş dönüş süresi elde olur. Bu, aşağıdaki gibi Office 365 hizmetlerde yer alan diğer URL'lerde çalışır`psping -4 yourSite.sharepoint.com:443`. Aslında, ortalamanız için daha büyük bir örnek almak için bir dizi ping belirterek bunun gibi bir şey deneyin `psping -4 -n 20 yourSite-my.sharepoint.com:443`.
-
-> [!NOTE]
-> PsPing, ICMP paketleri göndermez. TCP paketleriyle belirli bir bağlantı noktası üzerinden ping gönderir, böylece açık olduğunu biliyor herhangi birini kullanabilirsiniz. SSL/TLS kullanan Office 365, PsPing bağlantı noktası 443'ü bağlamayı deneyin.
-
-![6,5m ortalama RTT'yi de raporlamak için, outlook.office365.com ping çözümlemesi ve 443 aynı işlemi yapan PSPing'i gösteren ekran görüntü.](../media/c64339f2-2c96-45b8-b168-c2a060430266.PNG)
-
-Yavaş performans gösteren bir Office 365 ağ izleme yaparken yüklemiş olursanız, için netmon veya Wireshark izlemesini filtrelemeniz gerekir`DNS`. Bu, bizim de araymız olan IP'lerden biri.
-
-IP adresini almak (ve DNS Gecikme Süresine göz atarak) Netmon'a filtre uygulama adımlarını izleyin. Bu örnekte outlook.office365.com, ancak bir SharePoint Online kiracının URL'sini de (örneğin hithere.sharepoint.com) kullanabilirsiniz.
-
-1. URL'ye ping `ping outlook.office365.com` sınaması ekleyin ve sonuçlarda, ping isteğinin gönderildiği DNS sunucusunun adını ve IP adresini yazın.
-2. Sayfayı açmak veya size performans sorununu veren eylemi yapmak ya da ping'de yüksek gecikme süresi görüyorsanız, kendi başına ağ izleme işlemi.
-3. İzlemeyi Netmon'da açın ve DNS için filtre (bu filtre Wireshark'ta da çalışır, ancak büyük/harfe duyarlıdır `-- dns`). DNS sunucusunun adını ping'inize göre de netmon'da şu şekilde daha hızlı filtre kullanabilirsiniz: `DNS AND ContainsBin(FrameData, ASCII, "namnorthwest")`Wireshark'ta şu şekilde görünen dns and frame contains "namnorthwest".<br/>Yanıt paketini açın ve Netmon **Frame Details** penceresinde, daha fazla bilgi için **genişletmek için DNS'e** tıklayın. DNS bilgisinde, isteğin Posta'da gitti DNS sunucusunun IP adresini Office 365. Bir sonraki adım (PsPing aracı) için bu IP adresi gerekir. Filtreyi kaldırın, DNS Sorgusunu ve Yanıtını yan yana görmek için Netmon'da DNS Yanıtına sağ tıklayın (Frame **Summary** \> **Find Conversations** \> **DNS**).
-4. Netmon'da ayrıca, DNS İsteği ile Yanıt arasındaki Saat Farkı sütununu da notun. Sonraki adımda, yüklemesi ve kullanımı kolay [PsPing](/sysinternals/downloads/psping) aracı çok kullanışlıdır, çünkü hem ICMP çoğu zaman Güvenlik Duvarlarında engellenir hem de PsPing gecikme süresini mili saniye cinsinden zarif bir şekilde izler. PsPing, bir adrese ve bağlantı noktasına (bu durumda açık bağlantı noktası 443) bir TCP bağlantısı tamamlar.
-5. PsPing yükleyin.
-6. Komut istemini açın (\> \> Çalıştır komutu cmd yazın veya Windows Tuşu \> cmd yazın) ve Dizini PsPing komutunu çalıştırmak için PsPing'i yüklemiş olduğunu dizine değiştirme. Örneklerimde, C'nin kökünde bir 'Perf' klasörü oluşturmamı görüyorsunuz. Hızlı erişim için de aynı şeyi yapabiliriz.
-7. PsPing'inizi bağlantı noktası numarası gibi önceki Netmon izlemenizin Office 365 DNS sunucusunun IP adresine göre yapmak için komutu yazın`psping -n 20 132.245.24.82:445`. Bu size 20 ping'den örnekleme ve PsPing durduğunda gecikme süresinin ortalamasını sağlar.
-
-Bir proxy sunucusu üzerinden Office 365, adımlar biraz farklıdır. Önce proxy/çıkış ve geri için mili saniye cinsinden ortalama bir gecikme süresi değeri almak için proxy sunucunuza PsPing atlarsınız ve sonra eksik değeri (proxy'ye ve geri dönmek için) proxy'de veya doğrudan İnternet bağlantısı olan bir bilgisayarda PsPing Office 365 çalıştırmanız gerekir.
-
-Proxy sunucudan PsPing çalıştırmayı seçerseniz, mili saniye cinsinden iki değeriniz olur: İstemci bilgisayardan proxy sunucusuna veya çıkış noktasına ve proxy sunucusundan Office 365. Hepsi bu kadar! Yine de değerleri kaydediyor.
-
-PsPing'i İnternet'e doğrudan bağlantısı olan, yani proxy olmayan başka bir istemci bilgisayarda çalıştırmanız, mili saniye cinsinden iki değeriniz olur: İstemci bilgisayardan proxy sunucusuna veya çıkış noktasına ve aynı noktadan diğerine Office 365. Bu durumda, istemci bilgisayardan proxy sunucusuna veya çıkış noktasına değerini, istemci bilgisayardan Office 365'e değerinden çıkarırsınız ve istemci bilgisayarınızdan proxy sunucusuna veya çıkış noktasına ve proxy sunucusundan veya çıkış noktasından Office 365.
-
-Öte yandan, etkilenen bir bilgisayarı doğrudan bağlı veya proxy'yi atlayan bir istemci bilgisayar bulsanız bile, öncelikle sorunun bu bilgisayarda yeniden ortaya çıkar mı olduğunu görebilir ve bundan sonra bu bilgisayarla test edin.
-
-Netmon izlemesinde de görülen gecikme süresi, herhangi bir oturumda yeterince varsa bu fazladan milisaniyelerin bir bedeli olabilir.
-
-![Çerçeve Özeti'ne eklenmiş varsayılan Netmon Zaman Aralığı sütunuyla Netmon'daki genel gecikme süresi.](../media/7ad17380-8527-4bc2-9b9b-6310cf19ba6b.PNG)
+outlook.office365.com gönderilen bir ping isteği, ticari markanın ardışık ICMP paketlerini göndermek için bağlanamasa bile isteği alan veri  merkezinin adını size söyler. PsPing (ücretsiz indirme aracı) ve belirli bir bağlantı noktası (443) ve belki de IPv4 (-4) kullanıyorsanız, gönderilen paketler için ortalama gidiş dönüş süresi elde edersiniz. Bu, gibi `psping -4 yourSite.sharepoint.com:443`Office 365 hizmetlerindeki diğer URL'lerde bu işe yarayacaktır. Aslında, ortalamanız için daha büyük bir örnek almak için bir dizi ping belirtebilirsiniz, gibi `psping -4 -n 20 yourSite-my.sharepoint.com:443`bir şey deneyin.
 
 > [!NOTE]
-> IP adresiniz burada gösterilen IP'lerden farklı olabilir, örneğin, ping'iniz 157.56.0.0/16 gibi bir aralık veya benzer bir aralık geri dönecektir. E-posta adresleri tarafından kullanılan aralıkların Office 365 için [URL'ler Office 365 IP adresi aralıklarını denetleme.](./urls-and-ip-address-ranges.md)
+> PsPing, ICMP paketleri göndermez. Tcp paketlerine belirli bir bağlantı noktası üzerinden ping gönderir, böylece açık olduğunu bildiğiniz herhangi bir bağlantı noktasını kullanabilirsiniz. SSL/TLS kullanan Office 365'da PsPing'inize :443 bağlantı noktası eklemeyi deneyin.
 
-Örneğin 132,245'i aramak için tüm düğümleri genişletmeyi unutmayın (bunun için en üstte bir düğme vardır).
+![outlook.office365.com çözümleyen ping'i ve 443'lü psping'i gösteren ve aynı zamanda ortalama 6,5ms ortalama RTT'yi bildiren ekran görüntüsü.](../media/c64339f2-2c96-45b8-b168-c2a060430266.PNG)
+
+Ağ izlemesi yaparken yavaş çalışan Office 365 sayfasını yüklediyseniz, için `DNS`bir Netmon veya Wireshark izlemesini filtrelemeniz gerekir. Bu, aradığımız IP'lerden biridir.
+
+IP adresini almak için Netmon'unuzu filtrelemek için atılması gereken adımlar aşağıdadır (ve DNS Gecikme Süresi'ne göz atın). Bu örnek outlook.office365.com kullanır, ancak SharePoint Online kiracısının URL'sini de kullanabilir (örneğin hithere.sharepoint.com).
+
+1. URL'ye `ping outlook.office365.com` ping atın ve sonuçlarda ping isteğinin gönderildiği DNS sunucusunun adını ve IP adresini kaydedin.
+2. Sayfayı açan ağ izlemesi veya performans sorununu size veren eylemi gerçekleştirme ya da ping üzerinde yüksek gecikme süresi görürseniz ağ izlemesi.
+3. İzlemeyi Netmon'da açın ve DNS için filtreleyin (bu filtre Wireshark'ta da çalışır, ancak büyük/küçük harfe `-- dns`duyarlıdır). Ping'inizden DNS sunucusunun adını bildiğiniz için, Netmon'da şu şekilde daha hızlı filtreleyebilirsiniz: `DNS AND ContainsBin(FrameData, ASCII, "namnorthwest")`, Wireshark dns ve frame'te şuna benzer şekilde "namnorthwest" içerir.<br/>Yanıt paketini açın ve Netmon **Çerçeve Ayrıntıları** penceresinde **DNS'ye** tıklayarak daha fazla bilgi için genişletin. DNS bilgilerinde, isteğin Office 365 gittiği DNS sunucusunun IP adresini bulacaksınız. Sonraki adım (PsPing aracı) için bu IP adresine ihtiyacınız olacaktır. Filtreyi kaldırın, DNS Sorgusu ve Yanıtı'nı yan yana görmek için Netmon'da DNS Yanıtı'na (**Çerçeve Özeti** \> **Konuşmaları** \> Bul **DNS**) sağ tıklayın.
+4. Netmon'da, DNS İsteği ile Yanıt arasındaki Zaman Uzaklığı sütununu da not edin. Sonraki adımda, kurulumu ve kullanımı kolay [PsPing](/sysinternals/downloads/psping) aracı, hem ICMP genellikle Güvenlik Duvarları'nda engellendiğinden hem de PsPing gecikme süresini milisaniye cinsinden zarif bir şekilde izlediğinden çok kullanışlıdır. PsPing bir adrese ve bağlantı noktasına tcp bağlantısını tamamlar (bizim örneğimizde 443 numaralı bağlantı noktasını aç).
+5. PsPing'i yükleyin.
+6. Bir komut istemi açın (Çalıştırma \> türü cmd'sini başlatın \> veya Windows Anahtar \> türü cmd) ve PsPing komutunu çalıştırmak için psping'i yüklediğiniz dizinle değiştirin. Örneklerimde C kökünde bir 'Perf' klasörü yaptığım görebilirsiniz. Hızlı erişim için de aynı işlemi yapabilirsiniz.
+7. Komutunu yazarak PsPing'inizi önceki Netmon izlemenizdeki Office 365 DNS sunucusunun IP adresiyle (gibi `psping -n 20 132.245.24.82:445`bağlantı noktası numarası dahil) karşı oluşturuyorsunuz. Bu size 20 ping örneklemesi verir ve PsPing durduğunda gecikme süresinin ortalamasını alırsınız.
+
+Ara sunucu üzerinden Office 365 yapacaksanız adımlar biraz farklıdır. Proxy/çıkış ve geri için milisaniye cinsinden ortalama gecikme süresi değerini almak için önce proxy sunucunuza PsPing uygularsınız ve ardından eksik değeri (Office 365 ve geri) almak için PsPing'i proxy'de veya doğrudan İnternet bağlantısı olan bir bilgisayarda çalıştırırsınız.
+
+Proxy'den PsPing çalıştırmayı seçerseniz, iki milisaniye değeriniz olur: İstemci bilgisayardan ara sunucuya veya çıkış noktasına ve ara sunucu Office 365. Ve işin bitti! Değerleri kaydetmeye devam et.
+
+PsPing'i İnternet'e doğrudan bağlantısı olan başka bir istemci bilgisayarda çalıştırırsanız, yani ara sunucu olmadan iki milisaniye değeriniz olur: İstemci bilgisayardan ara sunucuya veya çıkış noktasına ve istemci bilgisayar Office 365. Bu durumda, istemci bilgisayarın değerini proxy sunucuya veya çıkış noktasına istemci bilgisayarın değerinden Office 365 çıkarın ve RTT numaralarını istemci bilgisayarınızdan ara sunucuya veya çıkış noktasına, ara sunucudan veya çıkış noktasından Office 365'ye sahip olursunuz.
+
+Ancak, etkilenen konumda doğrudan bağlı olan bir istemci bilgisayar bulabilir veya ara sunucuyu atlarsanız, sorunun başlangıçta orada yeniden üretilip üretmediğini görmeyi ve bundan sonra kullanmayı test etmeyi seçebilirsiniz.
+
+Netmon izlemesinde görüldüğü gibi gecikme süresi, belirli bir oturumda yeterli sayıda varsa bu fazladan milisaniyeler eklenebilir.
+
+![Netmon'da genel gecikme süresi; Netmon varsayılan Zaman Aralığı sütunu Çerçeve Özeti'ne eklenir.](../media/7ad17380-8527-4bc2-9b9b-6310cf19ba6b.PNG)
+
+> [!NOTE]
+> IP adresiniz burada gösterilen IP'lerden farklı olabilir, örneğin ping'iniz 157.56.0.0/16 veya benzer bir aralık döndürebilir. Office 365 tarafından kullanılan aralıkların listesi için [Office 365 URL'leri ve IP adresi aralıklarını](./urls-and-ip-address-ranges.md) gözden geçirin.
+
+Örneğin 132.245 için arama yapmak istiyorsanız tüm düğümleri genişletmeyi unutmayın (bunun üst kısmında bir düğme vardır).
 
 ### <a name="proxy-authentication"></a>Proxy Kimlik Doğrulaması
 
-Bu yalnızca, bir proxy sunucu üzerinden gidiyorsanız sizin için geçerlidir. Yoksa, bu adımları atlayabilirsiniz. Düzgün çalışırken, proxy kimlik doğrulaması mili saniye cinsinden tutarlı şekilde olmalıdır. Tepe kullanım dönemleri (örneğin) sırasında aralıklı kötü performans görmeyin.
+Bu, yalnızca bir ara sunucu üzerinden geçiyorsanız sizin için geçerlidir. Aksi takdirde bu adımları atlayabilirsiniz. Düzgün çalışırken, ara sunucu kimlik doğrulaması milisaniye cinsinden tutarlı bir şekilde gerçekleşmelidir. Yoğun kullanım dönemlerinde (örneğin) aralıklı kötü performans görmemeniz gerekir.
 
-Proxy kimlik doğrulaması açıksa, bilgi almak için ara sunucu hizmetine Office 365 her TCP bağlantısı sanız perde arkasında bir kimlik doğrulama sürecinden geçmelisiniz. Dolayısıyla, örneğin, Outlook Online'da Takvim'den Posta'ya geçişte, kimlik doğrulamanız olur. SharePoint Online'da ise, bir sayfada birden çok site veya konumdan medya veya veriler görüntü varsa, verileri işlemek için gereken her farklı TCP bağlantısı için kimlik doğrulamanız gerekir.
+Ara sunucu kimlik doğrulaması açıksa, bilgi almak için Office 365 her yeni TCP bağlantısı yaptığınızda arka planda bir kimlik doğrulama işleminden geçmeniz gerekir. Örneğin, Outlook Online'da Takvim'den Posta'ya geçiş yaparken kimlik doğrulaması yaparsınız. SharePoint Online'da bir sayfada birden çok site veya konumdan medya veya veri görüntüleniyorsa, verileri işlemek için gereken her farklı TCP bağlantısı için kimlik doğrulaması yaparsınız.
 
-Outlook Online'da, Takvim ile posta kutunuz arasında her geçişte yavaş yükleme süreleriyle veya SharePoint Online'da sayfa yüklemeleri yavaş olabilir. Bununla birlikte, burada listelenmiyor başka belirtiler de vardır.
+Outlook Online'da, Takvim ile posta kutunuz arasında geçiş yaptığınızda yavaş yükleme süreleri yaşayabilir veya SharePoint Online'da yavaş sayfa yüklemeleri yaşayabilirsiniz. Ancak, burada listelenmeyen başka belirtiler de vardır.
 
-Proxy kimlik doğrulaması, çıkış proxy sunucunuzda bir ayardır. Bu sorun, e-Office 365 bir performans sorununa neden oluyorsa, ağ ekibinize danışmanız gerekir.
+Proxy kimlik doğrulaması, çıkış proxy sunucunuzda bir ayardır. Office 365 ile ilgili bir performans sorununa neden oluyorsa ağ ekibinize danışmanız gerekir.
 
 #### <a name="tools"></a>Araçlar
 
 - Netmon
 - Wireshark
 
-#### <a name="what-to-look-for"></a>Nelere bakmalı?
+#### <a name="what-to-look-for"></a>Aranacaklar
 
-Yeni bir TCP oturumu gerekirken, yaygın olarak sunucudan dosya veya bilgi talep etmek veya bilgi sağlamak için proxy kimlik doğrulaması  sürer. Örneğin, HTTP GET veya HTTP POST istekleri çevresinde proxy kimlik doğrulaması görebilirler. İzlemenize istekleri kimlik doğrulayanın çerçevelerini görmek için Netmon'a 'NTLMSSP Özeti' sütununu ekleyin ve için filtre kullanın  `.property.NTLMSSPSummary`. Kimlik doğrulamanın ne kadar süreyle devam ye alan olduğunu görmek için Zaman Aralığı sütununu ekleyin.
+Proxy kimlik doğrulaması, genellikle sunucudan dosya veya bilgi istemek ya da bilgi sağlamak için yeni bir TCP oturumunun yüklenmesi gerektiğinde gerçekleşir. Örneğin, HTTP GET veya HTTP POST isteklerinde ara sunucu kimlik doğrulaması görebilirsiniz. İzlemenizde isteklerin kimliğini doğruladığınız çerçeveleri görmek istiyorsanız, Netmon'a 'NTLMSSP Özeti' sütununu ekleyin ve için  `.property.NTLMSSPSummary`filtreleyin. Kimlik doğrulamasının ne kadar sürdüğünü görmek için Zaman Aralığı sütununu ekleyin.
 
 Netmon'a sütun eklemek için:
 
-1. Açıklama gibi bir sütuna sağ **tıklayın**.
-2. Sütunları **Seç'e tıklayın**.
-3. Listede _NTLMSSP Özet_ ve _Zaman Aralığı'nın_ yerini bulun ve Ekle'ye **tıklayın**.
-4. Yan yana okuyabilk için yeni sütunları _Açıklama_ sütunlarının önünde veya arkasında bir yere taşıma.
+1. **Açıklama** gibi bir sütuna sağ tıklayın.
+2. **Sütunları Seç'e** tıklayın.
+3. Listede _NTLMSSP Özeti_ ve _Zaman Aralığı'nı_ bulun ve **Ekle'ye** tıklayın.
+4. Yeni sütunları yan yana okuyabilmeniz için _Açıklama_ sütununun önüne veya arkasına taşıyın.
 5. **Tamam**'a tıklayın.
 
-Sütunu eklemese bile Netmon filtresi çalışır. Ancak, kimlik doğrulamanın hangi aşamasında olduğunu görebilirseniz, sorun gidermeniz çok daha kolay olur.
+Sütunu eklemeseniz bile Netmon filtresi çalışır. Ancak kimlik doğrulamasının hangi aşamasında olduğunuzu görebiliyorsanız sorun gidermeniz çok daha kolay olacaktır.
 
-Proxy Kimlik Doğrulaması örneklerini arıyorsanız, NTLM Görev veya Kimlik Doğrulama İletisi bulunan tüm çerçeveleri incelemeyi sağlar. Gerekirse, trafiğin belirli bir parçasını sağ tıklatın ve Konuşmaları Bul TCP'sini \> tıklatın. Bu Konuşmalar'daki Zaman Aralığı değerlerine dikkat edersiniz.
+Ara Sunucu Kimlik Doğrulaması örneklerini ararken, NTLM Sınaması veya Kimlik Doğrulama İletisi bulunan tüm çerçeveleri incelediğinizden emin olun. Gerekirse, belirli bir trafik parçasına sağ tıklayın ve Konuşmaları \> Bul TCP. Bu Konuşmalardaki Zaman Aralığı değerlerine dikkat edin.
 
-![Konuşmaya göre filtrelenmiş proxy kimlik doğrulamasını gösteren Netmon izlemesi.](../media/b640f176-0a52-4bbb-972e-60fb3d6aece2.PNG)
+![Konuşmaya göre filtrelenmiş ara sunucu kimlik doğrulamasını gösteren Netmon izlemesi.](../media/b640f176-0a52-4bbb-972e-60fb3d6aece2.PNG)
 
-Wireshark'ta olduğu gibi proxy kimlik doğrulamasında dört saniyelik gecikme. Önceki **görüntülenen kareden** zaman aralığı sütunu, çerçeve ayrıntılarında aynı addaki alana sağ tıklar ve Sütun Olarak Ekle seçerek yapılmış.  <br/> ![Wireshark'ta 'Önceki görüntülenen kareden zaman aralığı' sütunu, çerçeve ayrıntılarında aynı addaki alana sağ tık tıklar ve Sütun Olarak Ekle seçerek kullanılabilir.](../media/f5b7bde4-8067-4ee0-bc7f-e9062ce1ba6f.PNG)
+Wireshark'ta görüldüğü gibi proxy kimlik doğrulamasında dört saniyelik gecikme. **Önceki görüntülenen kare sütunundaki Zaman aralığı, çerçeve** ayrıntılarında aynı addaki alana sağ tıklayıp Sütun Olarak Ekle seçerek yapıldı.  <br/> ![Wireshark'ta 'Önceki görüntülenen çerçeveden zaman aralığı' sütunu, çerçeve ayrıntılarında aynı addaki alana sağ tıklayıp Sütun Olarak Ekle'yi seçerek yapılabilir.](../media/f5b7bde4-8067-4ee0-bc7f-e9062ce1ba6f.PNG)
 
 ### <a name="dns-performance"></a>DNS Performansı
 
-Ad çözümlemesi, istemcinin ülkesine mümkün olduğunca yakın olduğunda en iyi ve en hızlı şekilde çalışır.
+Ad çözümleme, müşterinin ülkesine mümkün olduğunca yakın bir yerde gerçekleştiğinde en iyi ve en hızlı şekilde çalışır.
 
-DNS ad çözümlemesi deniz aşırı sürüyorsa, sayfa yüklemeleri saniyeler sürebilir. İdeal olarak, ad çözümlemesi 100ms altında gerçekleşir. Yoksa, daha fazla araştırma yapsanız gerekir.
+DNS ad çözümlemesi denizaşırı bir yerde gerçekleştiriliyorsa, sayfa yüklemelerine saniyeler ekleyebilir. İdeal olarak, ad çözümlemesi 100m'nin altında gerçekleşir. Aksi takdirde, daha fazla araştırma yapmalısınız.
 
 > [!TIP]
-> İstemci Bağlantısı'nın bu bağlantıda nasıl olduğundan emin Office 365? Buradaki İstemci Bağlantısı Başvurusu belgesine göz [atabilirsiniz](/previous-versions//dn741250(v=technet.10)).
+> İstemci Bağlantısı'nın Office 365 nasıl çalıştığından emin değil misiniz? [burada](/previous-versions//dn741250(v=technet.10)) İstemci Bağlantısı Başvurusu belgesine göz atın.
 
 #### <a name="tools"></a>Araçlar
 
@@ -353,142 +353,142 @@ DNS ad çözümlemesi deniz aşırı sürüyorsa, sayfa yüklemeleri saniyeler s
 - Wireshark
 - PsPing
 
-#### <a name="what-to-look-for"></a>Nelere bakmalı?
+#### <a name="what-to-look-for"></a>Aranacaklar
 
-DNS performansını çözümlemek, bir ağ izlemesi için genellikle başka bir iştir. Bununla birlikte, PsPing de olası bir nedenin in veya çıkışını ortaya çıkmada yararlıdır.
+DNS performansını analiz etmek genellikle bir ağ izlemesi için başka bir iştir. Ancak PsPing, olası bir nedeni karara varma veya çıkarma açısından da yararlıdır.
 
-DNS trafiği TCP ve UDP isteklerine dayalıdır ve yanıtlar, belirli bir isteği kendi yanıtıyla eşleşmeye yardımcı olacak bir Kimlikle açıkça işaretlenir. DNS trafiğini, örneğin SharePoint Online bir web sayfasında bir ağ adı veya URL'si kullandığında görebilirsiniz. Bir kural olarak, Bölgeleri aktarılması dışında bu trafiğin çoğu UDP üzerinden çalışır.
+DNS trafiği TCP ve UDP isteklerini temel alır ve yanıtlar, belirli bir isteğin belirli yanıtıyla eşleşmesine yardımcı olacak bir kimlikle açıkça işaretlenir. Örneğin, SharePoint Online bir web sayfasında ağ adı veya URL kullandığında DNS trafiğini görürsünüz. Kural olarak, Bölgeleri aktarma dışında bu trafiğin çoğu UDP üzerinden çalışır.
 
-Hem Netmon hem de Wireshark'ta, DNS trafiğine bakmanın en basit filtresi basit bir filtredir `dns`. Filtreyi belirtirken küçük harf kullanmaya emin olun. İstemci bilgisayarınızda sorunu yeniden oluşturmaya başlamadan önce DNS çözümleyici önbelleğinizi temizlemeyi unutmayın. Örneğin, Giriş sayfası için yavaş SharePoint Online sayfa yüklemesi kullanıyorsanız, tüm tarayıcıları kapatmanız, yeni bir tarayıcı açmanız, izlemeyi başlatmanız, DNS çözümleyici önbelleğini temizlemeniz ve SharePoint Online sitenize göz atması gerekir. Sayfanın tamamı çözümlenin, izlemenin tamamını durdurarak kaydetmeniz gerekir.
+Hem Netmon hem de Wireshark'ta, DNS trafiğine bakmanıza olanak sağlayacak en temel filtre basitçedır `dns`. Filtreyi belirtirken küçük harf kullandığınızdan emin olun. Sorunu istemci bilgisayarınızda yeniden oluşturmaya başlamadan önce DNS çözümleyici önbelleğinizi temizlemeyi unutmayın. Örneğin, Giriş sayfası için yavaş SharePoint Çevrimiçi sayfa yükünüz varsa, tüm tarayıcıları kapatmanız, yeni bir tarayıcı açmanız, izlemeye başlamanız, DNS çözümleyici önbelleğinizi temizlemeniz ve SharePoint Online sitenize göz atmalısınız. Sayfanın tamamı çözümlenince izlemeyi durdurmanız ve kaydetmeniz gerekir.
 
-![DNS, Netmon'daki DNS için temel bir filtredir.](../media/1bebc118-ca13-45f3-803f-ab73e7af401d.png)
+![Netmon'da DNS için temel bir filtre DNS'dir.](../media/1bebc118-ca13-45f3-803f-ab73e7af401d.png)
 
-Saat farkına buradan bakabilirsiniz. Ayrıca Zaman Aralığı sütununu **Netmon'a** eklemek yararlı olabilir; bunu aşağıdaki adımları tamamlayarak da bunuabilirsiniz:
+Burada zaman uzaklığını görmek istiyorsunuz. Ayrıca, şu adımları tamamlayarak yapabileceğiniz **Zaman Aralığı** sütununu Netmon'a eklemek yararlı olabilir:
 
-1. Açıklama gibi bir sütuna sağ **tıklayın**.
-2. Sütunları **Seç'e tıklayın**.
-3. Listede _Zaman Aralığı'nın_ yerini bulun ve Ekle'ye **tıklayın**.
-4. Yan yana okuyabilk için yeni sütunu _Açıklama_ sütunlarının önünde veya arkasında bir yere taşıma.
+1. **Açıklama** gibi bir sütuna sağ tıklayın.
+2. **Sütunları Seç'e** tıklayın.
+3. Listede _Zaman Aralığı'nı_ bulun ve **Ekle'ye** tıklayın.
+4. Yan yana okuyabilmeniz için yeni sütunu _Açıklama_ sütununun önüne veya arkasına taşıyın.
 5. **Tamam**'a tıklayın.
 
-İlginizi gereken bir sorgu bulursanız, bunu, çerçeve ayrıntıları panelinde o sorguyu sağ tıklatıp Konuşmaları Bul **DNS'sini seçerek çıkarabilirsiniz**\>. Ağ Konuşmaları paneli UDP trafiği günlüğünde sağa doğru, belirli bir konuşmaya atlar.
+İlgilendiğiniz bir sorgu bulursanız, çerçeve ayrıntıları panelinde söz konusu sorguya sağ tıklayıp **Konuşma bul** \> **DNS'sini** seçerek bu sorguyu yalıtmayı göz önünde bulundurun. Ağ Konuşmaları panelinin UDP trafiği günlüğünde doğrudan belirli bir konuşmaya atlandığını görebilirsiniz.
 
-![DNS'e göre filtrelenmiş Outlook Çevrimiçi yüklemenin Netmon izlemesi ve sonuçları daraltmak için Konuşmaları Bul ve DNS'i kullanma.](../media/763cf20e-7b48-4a37-9449-c9978cfe118b.PNG)
+![DNS tarafından filtrelenmiş Outlook Çevrimiçi yükünün Netmon izlemesi ve sonuçları daraltmak için Konuşma Bul'u ve ardından DNS'yi kullanma.](../media/763cf20e-7b48-4a37-9449-c9978cfe118b.PNG)
 
-Wireshark'ta DNS süresi için bir sütun oluşturabilirsiniz. Wireshark'ta izlemenizi alma (veya bir izleme açma) ve 'ya göre filtreleme `dns`veya daha da yararlı bir şekilde filtreleme  `dns.time`. Herhangi bir DNS sorgusuna tıklayın ve ayrıntıları gösteren panelde ayrıntıları  `Domain Name System (response)` genişletin. Zaman için bir alan (örneğin, `[Time: 0.001111100 seconds]`. Bu kez sağ tıklayın ve Sütun Olarak **Uygula'yı seçin**. Bu size izlemenizi **daha** hızlı sıralamanız için bir Zaman sütunu ve verecek. Hangi DNS aramasını çözümlemenin en uzun süren olduğunu görmek için azalan değerlere göre sıralamak için yeni sütuna tıklayın.
+Wireshark'ta DNS süresi için bir sütun oluşturabilirsiniz. Wireshark'ta izlemenizi alın (veya bir izleme açın) ve veya daha yararlı bir şekilde `dns.time`filtreleyin`dns`. Herhangi bir DNS sorgusuna tıklayın ve ayrıntıların gösterildiği panelde  `Domain Name System (response)` ayrıntıları genişletin. Zaman için bir alan görürsünüz (örneğin, `[Time: 0.001111100 seconds]`. Bu kez sağ tıklayın ve **Sütun Olarak Uygula'yı** seçin. Bu, izlemenizin daha hızlı sıralanması için size bir **Time** sütunu verir. Hangi DNS çağrısının çözülmesinin en uzun sürdüğünü görmek için azalan değerlere göre sıralamak için yeni sütuna tıklayın.
 
-[Wireshark'ta dns.time (küçük harf) ile filtrelenmiş SharePoint Online göz atma (ayrıntılardaki saat sütun haline gelen saat ve artan düzende sıralanmış).](../media/1439dcc2-12ff-4ee2-9ef3-1484cf79c384.PNG)
+[Wireshark'ta dns.time değerine (küçük harf) göre filtrelenmiş SharePoint Online'a göz atma; ayrıntılardaki süre bir sütuna dönüştürülür ve artan düzende sıralanır.](../media/1439dcc2-12ff-4ee2-9ef3-1484cf79c384.PNG)
 
-DNS çözümleme süresiyle ilgili daha fazla araştırma yapmak için, TCP tarafından kullanılan DNS bağlantı noktasına (örneğin, ) karşı bir PsPing deneyin  `psping <IP address of DNS server>:53`. Hala bir performans sorunu görüyor musunuz? Bunu biliyorsanız, sorun muhtemelen, çözümleme yapmak için o dns uygulamasındaki bir sorundan daha geniş bir ağ sorunu olur. Ayrıca, outlook.office365.com için DNS ad çözümlemesi için DNS ad çözümlemesi'nin nerede (örneğin, Outlook) yer alıyor olduğunu bir kez daha outlook-namnorthwest.office365.com.
+DNS çözümleme süresi hakkında daha fazla araştırma yapmak isterseniz, TCP tarafından kullanılan DNS bağlantı noktasına karşı bir PsPing deneyin (örneğin,  `psping <IP address of DNS server>:53`) . Hala bir performans sorunu görüyor musunuz? Bunu yaparsanız, sorunun çözümü yapmak için bastığınız BELIRLI DNS uygulamasıyla ilgili bir sorundan daha geniş bir ağ sorunu olma olasılığı daha yüksektir. Ayrıca, outlook.office365.com'a yapılan bir ping'in size Outlook Online için DNS ad çözümlemenin nerede gerçekleştiğini (örneğin, outlook-namnorthwest.office365.com) göstereceğini de belirtmek gerekir.
 
-Sorun DNS'e özgü görünüyorsa, sorunu daha fazla araştırmak üzere DNS yapılandırmalarını ve DNS Forwarders'i incelemeleri için IT departmanınıza başvurılması gerekebilir.
+Sorun DNS'ye özgü gibi görünüyorsa, bu sorunu daha fazla araştırmak için DNS yapılandırmalarına ve DNS İleticilerine bakmak için BT bölümünüze başvurmanız gerekebilir.
 
-### <a name="proxy-scalability"></a>Proxy Ölçeklenebilirliği
+### <a name="proxy-scalability"></a>Ara Sunucu Ölçeklenebilirliği
 
-İnternet'Outlook Online gibi Office 365 hizmetler istemcilere birden çok uzun vadeli bağlantı sağlar. Bu nedenle, her kullanıcı daha uzun ömür gerektiren daha fazla bağlantı kullanabilir.
+Office 365'da Outlook Online gibi hizmetler istemcilere birden çok uzun süreli bağlantı verir. Bu nedenle, her kullanıcı daha uzun bir yaşam gerektiren daha fazla bağlantı kullanabilir.
 
 #### <a name="tools"></a>Araçlar
 
 Matematik
 
-#### <a name="what-to-look-for"></a>Nelere bakmalı?
+#### <a name="what-to-look-for"></a>Aranacaklar
 
-Buna özgü bir ağ izleme veya sorun giderme aracı yoktur. Bunun yerine, sınırlamalar ve diğer değişkenler verilen bant genişliği hesaplamalarına dayalıdır.
+Buna özgü bir ağ izleme veya sorun giderme aracı yoktur. Bunun yerine, sınırlamalar ve diğer değişkenler verilen bant genişliği hesaplamalarını temel alır.
 
-### <a name="tcp-max-segment-size"></a>TCP Maksimum Segment Boyutu
+### <a name="tcp-max-segment-size"></a>TCP En Büyük Segment Boyutu
 
-SYN - SYN/ACK'de bulunur.  TCP paketlerinin mümkün olan en fazla miktarda veri taşıy sağlayacak şekilde yapılandırıldığından emin olmak için, gerçekleştirilen tüm performans ağ izlemesinde bu denetimi gerçekleştirin.
+SYN - SYN/ACK içinde bulunur.  Tcp paketlerinin mümkün olan en fazla veri miktarını taşıyacak şekilde yapılandırıldığından emin olmak için, bu denetimi yaptığınız performans ağ izlemelerinde yapın.
 
-Hedef, veri iletimi için 1460 baytlık MSS görmektir. Bir proxy arkasındaysanız veya NAT kullanıyorsanız, en iyi sonuçları elde etmek için istemciden proxy/çıkış/NAT'ye ve proxy/çıkış/NAT'tan NAT'a bu testi Office 365 unutmayın! Bunlar farklı TCP oturumlarıdır.
+Amaç, verilerin iletimi için 1460 bayt mss görmektir. Ara sunucu arkasındaysanız veya NAT kullanıyorsanız, en iyi sonuçları elde etmek için bu testi istemciden proxy/çıkış/NAT'ye ve ara sunucu/çıkış/NAT'den Office 365 çalıştırmayı unutmayın! Bunlar farklı TCP oturumlarıdır.
 
 #### <a name="tools"></a>Araçlar
 
 Netmon
 
-#### <a name="what-to-look-for"></a>Nelere bakmalı?
+#### <a name="what-to-look-for"></a>Aranacaklar
 
-TCP Maksimum Segment Boyutu (MSS), ağ izlemesi sırasındaki üç yollı el sıkışmalarının bir başka parametresidir ve buna göre, ihtiyacınız olan verileri SYN - SYN/ACK paketinde bulabilirsiniz. MSS'i görmek gerçekten oldukça basittir.
+TCP Maksimum Segment Boyutu (MSS), ağ izlemenizdeki üç yönlü el sıkışmasının bir diğer parametresidir; bu da ihtiyacınız olan verileri SYN - SYN/ACK paketinde bulacağınız anlamına gelir. MSS'yi görmek oldukça kolaydır.
 
-Sahip olunan herhangi bir performans ağ izlemesi açın ve merak ettiğim veya performans sorununu gösteren bağlantıyı bulun.
+Sahip olduğunuz tüm performans ağ izlemelerini açın ve merak ettiğiniz veya performans sorununu gösteren bağlantıyı bulun.
 
 > [!NOTE]
-> Bir izlemeye bakıyorsanız ve konuşmanıza uygun trafiği bulmanız gerekirse İstemcinin IP'sini veya proxy sunucusunun veya çıkış noktasının IP'sini ya da her ikisini birden filtrenin. Doğrudan gidip, izlemede yer alan ip adresi için ping Office 365 ve buna göre filtre uygulamanız gerekir.
+> İzlemeye bakıyorsanız ve konuşmanızla ilgili trafiği bulmanız gerekiyorsa İstemci'nin IP'sine, ara sunucunun veya çıkış noktasının IP'sine ya da her ikisine de göre filtreleyin. Doğrudan giderek, izlemedeki Office 365 IP adresi için test ettiğiniz URL'ye ping göndermeniz ve buna göre filtrelemeniz gerekir.
 
-İzlemeye ikinci el mi bakıyorsunuz? Kendinizi yönlendirmek için filtreler kullanmayı deneyin. Netmon'da, URL'yi temel alan bir arama çalıştırın `Containsbin(framedata, ascii, "sphybridExample")`; örneğin, çerçeve numarasını not edin.
+İzlere ikinci el mi bakıyorsun? Kendinizi yönlendirmek için filtreleri kullanmayı deneyin. Netmon'da URL'yi temel alan bir arama çalıştırın; örneğin `Containsbin(framedata, ascii, "sphybridExample")`, çerçeve numarasını not alın.
 
-Wireshark'ta gibi bir şey kullanın  `frame contains "sphybridExample"`. Uzak Winsock (RWS) trafiği tespit ettiysanız (Wireshark'ta [PSH, ACK] olarak görünebilir), daha önce açıktığı gibi, RW bağlantılarında ilgili SYN - SYN/ACK'lar öncesinde kısa süre görülebnin olduğunu unutmayın.
+Wireshark'ta gibi  `frame contains "sphybridExample"`bir şey kullanın. Wireshark'ta Uzak Winsock (RWS) trafiği bulduğunuzu fark ederseniz (Wireshark'ta [PSH, ACK] olarak görünebilir), daha önce açıklandığı gibi RWS bağlantıları ilgili SYN - SYN/ACK'lerden kısa süre önce görülebilir.
 
-Bu noktada, çerçeve numarasını kaydedebilirsiniz, filtreyi atabilirsiniz, en yakın SYN'ye bakmak için Netmon'daki Ağ Konuşmaları penceresinde Tüm Trafik'e tıklarsınız.
+Bu noktada, çerçeve numarasını kaydedebilir, filtreyi bırakabilir, Netmon'daki Ağ Konuşmaları penceresinde **Tüm Trafik'e** tıklayarak en yakın SYN'ye bakabilirsiniz.
 
-En önemlisi, izlemenin olduğu sırada herhangi bir IP adresi bilgisi almadıysanız, izlemede URL'nizi bulmak ( `sphybridExample-my.sharepoint.com`örneğin, bir parçası) size filtre için gereken IP adreslerini ve verecek.
+Daha da önemlisi, izleme sırasında IP adresi bilgilerinden hiçbirini almadıysanız, izlemede URL'nizi bulmak (örneğin, öğesinin `sphybridExample-my.sharepoint.com`bir parçası) size filtrelemeniz için IP adresleri verir.
 
-İzlemede görmek istediğiniz bağlantıyı bulun. Bunu yapmak için izlemeyi tarayın, IP adreslerine göre filtrelenin veya Netmon'daki Ağ Konuşmaları penceresini kullanarak belirli Konuşma Kimliklerini seçin. SYN paketini bulanın, Çerçeve Ayrıntıları panelinde TCP (Netmon'da) veya İletim Denetimi Protokolü'ne (Wireshark'ta) genişletin. TCP Seçenekleri ve MaxSegmentSize'ı genişletin. İlgili SYN-ACK çerçevesini bulun ve TCP Seçenekleri ve MaxSegmentSize'ı genişletin. İki değerden küçük olan boyut, Maksimum Segment Boyutunuz olur. Bu resimde Netmon'daki TCP Sorun Giderme adlı yerleşik Sütundan istiyorum.
+İzlemede görmek istediğiniz bağlantıyı bulun. Bunu, izlemeyi tarayarak, IP adreslerine göre filtreleyerek veya Netmon'daki Ağ Konuşmaları penceresini kullanarak belirli Konuşma Kimliklerini seçerek yapabilirsiniz. SYN paketini bulduğunuzda, Çerçeve Ayrıntıları panelinde TCP (Netmon'da) veya İletim Denetimi Protokolü'ne (Wireshark'ta) genişletin. TCP Seçenekleri ve MaxSegmentSize seçeneklerini genişletin. İlgili SYN-ACK çerçevesini bulun ve TCP Seçenekleri ve MaxSegmentSize'ı genişletin. İki değerin küçük kısmı En Büyük Segment Boyutunuz olur. Bu resimde, Netmon'da TCP Sorun Giderme adlı yerleşik Sütunu kullanıyorum.
 
-![Netmon'da yerleşik sütunlar kullanılarak filtrelenmiş ağ izlemesi.](../media/e073df13-71f8-497a-83b4-bb9f70bd9833.PNG)
+![Yerleşik sütunlar kullanılarak Netmon'da filtrelenen ağ izlemesi.](../media/e073df13-71f8-497a-83b4-bb9f70bd9833.PNG)
 
-Yerleşik sütun Çerçeve Ayrıntıları panelinin **en üstündedir** . (Normal görünüme dönmek için tekrar **Sütunlar'a tıklayın ve** ardından Saat Dilimi'ne **tıklayın**.)
+Yerleşik sütun **, Çerçeve Ayrıntıları** panelinin en üstünde yer alır. (Normal görünümünüze geri dönmek için **Sütunlar'a** yeniden tıklayın ve **saat dilimi'ni** seçin.)
 
-![TCP Sorun Giderme seçeneği için Sütunlar açılan listesinde (Çerçeve Özeti'nin üstünde) bulun.](../media/64fd4baa-a872-4f07-b959-752d7d37fd62.PNG)
+![TCP Sorun Giderme seçeneği için Sütunlar açılan listesinin bulunduğu yer (Çerçeve Özeti'nin üstünde).](../media/64fd4baa-a872-4f07-b959-752d7d37fd62.PNG)
 
-Burada, Wireshark'ta filtre uygulanmış bir izleme ve var. MSS değerine () özgü bir filtre vardır`tcp.options.mss`. Bir SYN, SYN/ACK, ACK el sıkışması çerçeveleri Wireshark'ın en altında bağlantılıdır ve Çerçeve Ayrıntılarına eşdeğerdir (buna göre 47 ACK çerçevesi 46 SYN/ACK'ya, 43 SYN'ye bağlar) ve böylece bu tür çalışma daha kolay olur.
+İşte Wireshark'ta filtrelenmiş bir izleme. MSS değerine (`tcp.options.mss`) özgü bir filtre vardır. Syn, SYN/ACK, ACK el sıkışmasının çerçeveleri, Çerçeve Ayrıntılarına eşdeğer Wireshark'ın alt kısmında bağlanır (çerçeve 47 ACK, 46 SYN/ACK'ye bağlantılar, 43 SYN'ye bağlantılar) bu tür işleri kolaylaştırmak için.
 
-![Wireshark'ta Max Segment Size (MSS) için tcp.options.mss ile filtrelenmiş izleme.](../media/51e278db-801b-48bc-9b68-87cf92f03fd6.PNG)
+![Wireshark'ta En Büyük Segment Boyutu (MSS) için tcp.options.mss tarafından filtrelenen izleme.](../media/51e278db-801b-48bc-9b68-87cf92f03fd6.PNG)
 
-Seçmeli Bildirim'i **denetlemeniz gerekirse (bu matriste** bir sonraki konu), izlemenizi kapatabilirsiniz!
+**Seçmeli Bildirim'i** denetlemeniz gerekiyorsa (bu matristeki bir sonraki konu), izlemenizi kapatmayın!
 
 ### <a name="selective-acknowledgment"></a>Seçmeli Bildirim
 
-SYN - SYN/ACK'de bulunur. Hem SYN hem de SYN/ACK'da İzin Verilen olarak rapor gerekir. Seçmeli Bildirim (SACK), bir paket veya paketler kaybolduğunda daha sorunsuz veri iletimsine olanak sağlar. Cihazlar bu özelliği devre dışı bırakarak performans sorunlarına yol açabilir.
+SYN - SYN/ACK içinde bulunur. Hem SYN hem de SYN/ACK'de İzin Verilir olarak bildirilmelidir. Seçmeli Bildirim (SACK), bir paket veya paket eksik olduğunda verilerin daha sorunsuz bir şekilde yeniden iletimini sağlar. Cihazlar bu özelliği devre dışı bırakabilir ve bu da performans sorunlarına yol açabilir.
 
-Bir proxy arkasındaysanız veya NAT kullanıyorsanız, en iyi sonuçları elde etmek için istemciden proxy/çıkış/NAT'ye ve proxy/çıkış/NAT'tan NAT'a bu testi Office 365 unutmayın! Bunlar farklı TCP oturumlarıdır.
+Ara sunucu arkasındaysanız veya NAT kullanıyorsanız, en iyi sonuçları elde etmek için bu testi istemciden proxy/çıkış/NAT'ye ve ara sunucu/çıkış/NAT'den Office 365 çalıştırmayı unutmayın! Bunlar farklı TCP oturumlarıdır.
 
 #### <a name="tools"></a>Araçlar
 
 Netmon
 
-#### <a name="what-to-look-for"></a>Nelere bakmalı?
+#### <a name="what-to-look-for"></a>Aranacaklar
 
-Seçmeli Bildirim (SACK), SYN-SYN/ACK el sıkışması içinde bir başka parametredir. SYN - SYN/ACK için izlemenizi birçok şekilde filtreleyebilirsiniz.
+Seçmeli Bildirim (SACK), SYN-SYN/ACK el sıkışmasında başka bir parametredir. SYN - SYN/ACK izlemenizi birçok şekilde filtreleyebilirsiniz.
 
-Görmek istediğiniz izlemede bağlantıyı bulmak için izlemeyi tarayın, IP adreslerine göre filtre kullanın veya Netmon'daki Ağ Konuşmaları penceresini kullanarak Konuşma Kimliği'ne tıklayın. SYN paketini bulanın, Çerçeve Ayrıntıları bölümünde TCP (Netmon'da) veya İletim Denetimi Protokolü'ne (Wireshark'ta) gidin. TCP Seçenekleri'ne ve sonra SACK'ya tıklayın. İlgili SYN-ACK çerçevesini bulun ve TCP Seçenekleri ve SACK alanını genişletin. Hem SYN hem de SYN/ACK'da belirli bir SACK'ya izin ver. Burada, hem Netmon'da hem de Wireshark'ta görülen SACK değerleri ve ve daha sonraları yer almaktadır.
+İzlemeyi tarayarak, IP adreslerine göre filtreleyerek veya Netmon'daki Ağ Konuşmaları penceresini kullanarak konuşma kimliğine tıklayarak görmek istediğiniz izlemedeki bağlantıyı bulun. SYN paketini bulduğunuzda, Çerçeve Ayrıntıları bölümünde Netmon'da TCP'yi veya Wireshark'ta İletim Denetimi Protokolü'ni genişletin. TCP Seçenekleri'ni ve ardından SACK'i genişletin. İlgili SYN-ACK çerçevesini bulun ve TCP Seçeneklerini ve SACK alanını genişletin. Hem SYN hem de SYN/ACK'de belirli SACK'e izin verilir. Hem Netmon hem de Wireshark'ta görüldüğü gibi SACK değerleri aşağıdadır.
 
-![tcp.flags.syn == 1 sonucunda Netmon'daki Seçmeli Bildirim (SACK).](../media/216f556f-5031-4ed2-b066-a0d9b3251fa2.PNG)
+![Tcp.flags.syn == 1 sonucu olarak Netmon'da Seçmeli Bildirim (SACK).](../media/216f556f-5031-4ed2-b066-a0d9b3251fa2.PNG)
 
-![Wireshark'ta tcp.flags.syn == 1 filtresine sahip SACK.](../media/0a6e26e5-43dc-403b-adc9-3349a55f4e4b.PNG)
+![Wireshark'ta tcp.flags.syn == 1 filtresiyle görüldüğü gibi SACK.](../media/0a6e26e5-43dc-403b-adc9-3349a55f4e4b.PNG)
 
 ### <a name="dns-geolocation"></a>DNS Coğrafi Konumu
 
-Dünyanın diğer yerleri Office 365 DNS aramanızı çözümlemeye çalıştığında bağlantı hızınız buna neden olur.
+Dünyanın neresinde Office 365 DNS çağrınızı çözümlemeye çalışır bağlantı hızınızı etkiler.
 
-Outlook Online'da, ilk DNS araması tamamlandıktan sonra, en yakın veri merkezinize bağlanmak için bu DNS'in konumu kullanılır. Bir Outlook Online CAS sunucusuna bağlanırsınız ve bu da verilerinizin depolandığı veri merkezine (dC) bağlanmak için omurga ağı kullanır. Bu daha hızlıdır.
+Outlook Online'da, ilk DNS araması tamamlandıktan sonra, en yakın veri merkezinize bağlanmak için bu DNS'nin konumu kullanılır. Verilerinizin depolandığı veri merkezine (dC) bağlanmak için omurga ağını kullanan bir Outlook Çevrimiçi CAS sunucusuna bağlanacaksınız. Bu daha hızlı.
 
-SharePoint Online'a erişirken, yurt dışındaki bir kullanıcı kendi etkin veri merkezlerine yönlendirilir. Bu, konumu SPO kiracılarının yurt üssüne dayalı olan dC'dir (dolayısıyla kullanıcı ABD tabanlı ise ABD'de bir dC).
+SharePoint Online'a erişirken, yurt dışında seyahat eden bir kullanıcı etkin veri merkezine yönlendirilir. Bu, konumu SPO kiracısının ana tabanına (kullanıcının ABD tabanlı olması durumunda ABD'de bir dC) dayanan dC'dir.
 
-Lync online'ın bir defada birden çok dC'de etkin düğümleri vardır. Lync çevrimiçi örnekleri için istekler gönder geldiğinde, Microsoft'un DNS'i isteğin dünyanın nereden geldiğini belirler ve Lync Online'ın etkin olduğu en yakın bölgesel dC'den IP adresleri geri dönecektir.
+Lync Online'da aynı anda birden fazla dC'de etkin düğümler vardır. Lync çevrimiçi örnekleri için istek gönderildiğinde, Microsoft'un DNS'i isteğin dünyanın neresinden geldiğini belirler ve Lync Online'ın etkin olduğu en yakın bölgesel dC'den IP adreslerini döndürür.
 
 > [!TIP]
-> İstemcilerin E-İş'e nasıl bağlan daha fazla bilgi Office 365? İstemci Bağlantısı başvuru [makalesine](/previous-versions//dn741250(v=technet.10)) (ve yararlı grafiklerine) göz atabilirsiniz.
+> İstemcilerin Office 365 nasıl bağlanacakları hakkında daha fazla bilgi sahibi olmanız mı gerekiyor? [İstemci Bağlantısı](/previous-versions//dn741250(v=technet.10)) başvuru makalesine (ve yararlı grafiklerine) göz atın.
 
 #### <a name="tools"></a>Araçlar
 
 - Ping
 - PsPing
 
-#### <a name="what-to-look-for"></a>Nelere bakmalı?
+#### <a name="what-to-look-for"></a>Aranacaklar
 
-İstemcinin DNS sunucularından Microsoft'un DNS sunucularına yapılan istekler çoğu durumda Microsoft DNS'in bir bölgesel veri merkezinde (dC) IP'sini döndüren Microsoft DNS'sine neden olması gerekir. Bu sizin için ne anlama geliyor? Merkeziniz Hindistan Bangalore'ta bulunuyorsa, ancak siz ABD'de seyahat ediyorsanız, tarayıcınız Outlook Online için bir istekte bulunuyorsa, Microsoft'un DNS sunucularının IP adreslerini ABD'nin veri merkezlerine (bölgesel bir veri merkezi) teslim olması gerekir. Bir postanın posta Outlook, bu veriler Microsoft'un hızlı omurga ağı üzerinden veri merkezleri arasında ilerler.
+İstemcinin DNS sunucularından Microsoft'un DNS sunucularına ad çözümleme istekleri çoğu durumda Microsoft DNS'nin bölgesel bir veri merkezinin (dC) IP adresini döndürmesine neden olmalıdır. Bu senin için ne anlama geliyor? Merkeziniz Hindistan'ın Bangalore kentindeyse ancak Birleşik Devletler seyahat ediyorsanız, tarayıcınız Outlook Online için istekte bulunduğunda Microsoft'un DNS sunucuları ip adreslerini bölgesel bir veri merkezi olan Birleşik Devletler veri merkezlerine teslim etmelidir. Outlook posta gerekiyorsa, bu veriler Microsoft'un veri merkezleri arasındaki hızlı omurga ağında gezinecektir.
 
-Ad çözümlemesi kullanıcının bulunduğu konuma mümkün olduğunca yakın olduğunda DNS en hızlı şekilde çalışır. Avrupa'daysanız Avrupa'daki bir Microsoft DNS'ine gitmek ve (ideal olarak) Avrupa'daki bir veri merkeziyle uğraşmak gerekir. Avrupa'daki bir istemciden ve Amerika'daki bir DNS'e ve veri merkezinden performans yavaş olacaktır.
+Ad çözümlemesi kullanıcı konumuna mümkün olduğunca yakın olduğunda DNS en hızlı şekilde çalışır. Avrupa'daysanız, Avrupa'da bir Microsoft DNS'ye gitmek ve (ideal olarak) Avrupa'daki bir veri merkeziyle ilgilenmek istiyorsunuz. Avrupa'daki bir istemcinin DNS'ye ve Amerika'daki bir veri merkezine giden performansı daha yavaş olacaktır.
 
-DNS isteğinizin dünyanın outlook.office365.com nereye yönlendirileceğini belirlemek için Ping aracını karşıdan çalıştırabilirsiniz. Avrupa'daysanız, Böyle bir şey tarafından yanıt outlook-emeawest.office365.com. Amerika'da, böyle bir şey outlook-namnorthwest.office365.com.
+DNS isteğinizin dünyanın neresinde yönlendirildiğini belirlemek için Ping aracını outlook.office365.com karşı çalıştırın. Avrupa'daysanız, outlook-emeawest.office365.com gibi bir yanıt görmeniz gerekir. Amerika'da, outlook-namnorthwest.office365.com gibi bir şey beklersin.
 
-İstemci bilgisayarda komut istemini açın (Çalıştırmayı \> \> Başlat cmd veya cmd Windows \> cmd yazın). ping outlook.office365.com ENTER tuşuna basın. IPv4 üzerinden ping belirtmek için -4 belirtmeyi unutmayın. ICMP paketlerinden yanıt alamayasınız, ancak isteğin yönlendirilen DNS'in adını görmeniz gerekir. Bu bağlantının gecikme süresi numaralarını görmek için ping tarafından döndürülen sunucunun IP adresine PsPing yapmaya deneyin.
+İstemci bilgisayarda komut istemini açın (Başlatma \> Çalıştırma \> cmd veya Windows anahtar \> türü cmd aracılığıyla). ping outlook.office365.com yazın ve ENTER tuşuna basın. IPv4 aracılığıyla ping yapmak istiyorsanız -4 belirtmeyi unutmayın. ICMP paketlerinden yanıt alamayabilirsiniz, ancak isteğin yönlendirildiği DNS'nin adını görmeniz gerekir. Bu bağlantının gecikme numaralarını görmek istiyorsanız ping ile döndürülen sunucunun IP adresine PsPing uygulamayı deneyin.
 
-![outlook-namnorthwest outlook.office365.com çözünürlük gösteren ping sınaması.](../media/06c944d5-6159-43ec-aa31-757770695e8b.PNG)
+![Outlook-namnorthwest'te çözünürlüğü gösteren outlook.office365.com ping'i.](../media/06c944d5-6159-43ec-aa31-757770695e8b.PNG)
 
 ![Ortalama 28 milisaniyelik gecikme süresini gösteren outlook.office365.com ping tarafından döndürülen IP adresine PSPing.](../media/f2b25a75-1a87-4479-b8a7-fa4375683507.PNG)
 
-### <a name="office-365-application-troubleshooting"></a>Office 365 Sorunlarını Giderme
+### <a name="office-365-application-troubleshooting"></a>Office 365 Uygulama Sorunlarını Giderme
 
 #### <a name="tools"></a>Araçlar
 
@@ -496,10 +496,10 @@ DNS isteğinizin dünyanın outlook.office365.com nereye yönlendirileceğini be
 - HTTPWatch
 - Tarayıcıda F12 Konsolu
 
-Ağa özel bu makalede uygulamaya özgü sorun gidermede kullanılan araçlar bizim için gerekli değil. Ancak, kullanabileceğiniz kaynakları  *bu* [sayfada bulabilirsiniz](https://support.office.com/article/Network-planning-and-performance-tuning-for-Office-365-e5f1228c-da3c-4654-bf16-d163daee8848).
+Ağa özgü bu makalede uygulamaya özgü sorun gidermede kullanılan araçları ele almayacağız. Ancak [bu sayfada](https://support.office.com/article/Network-planning-and-performance-tuning-for-Office-365-e5f1228c-da3c-4654-bf16-d163daee8848) *kullanabileceğiniz* kaynaklar bulabilirsiniz.
 
 ## <a name="related-topics"></a>İlgili Konular
 
-[Kullanıcı Office 365 yönetme](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a)
+[Office 365 uç noktalarını yönetme](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a)
 
 [Office 365 uç noktaları hakkında SSS](https://support.office.com/article/d4088321-1c89-4b96-9c99-54c75cae2e6d)
