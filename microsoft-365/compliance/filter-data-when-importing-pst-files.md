@@ -2,8 +2,8 @@
 title: PST dosyalarını içe aktarırken verileri filtreleme
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
 description: PST dosyalarını Microsoft 365 içeri aktarırken Microsoft 365 içeri aktarma hizmetindeki akıllı içeri aktarma özelliğini kullanarak verileri filtrelemeyi öğrenin.
-ms.openlocfilehash: dc60baf45be97e438875e0b045d9e8f3b6208d3f
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 5ff78126f9e2d02181635433d7a94ede0e191c8d
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64997922"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65099751"
 ---
 # <a name="filter-data-when-importing-pst-files"></a>PST dosyalarını içe aktarırken verileri filtreleme
 
@@ -70,7 +70,7 @@ PST içeri aktarma işini oluşturduktan sonra, verileri Office 365 içeri aktar
   
 1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalına</a> gidin ve kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak oturum açın.
     
-2. Uyumluluk portalının sol bölmesinde **Bilgi idaresi** \> **İçeri Aktarma'ya** tıklayın.
+2. Uyumluluk portalının sol bölmesinde **Veri yaşam döngüsü yönetimi** \> **İçeri Aktar'a** tıklayın.
     
     Kuruluşunuzun içeri aktarma işleri **İçeri Aktar** sekmesinde listelenir. **Durum** sütunundaki **Çözümleme tamamlandı** değeri, Microsoft 365 tarafından analiz edilmiş ve içeri aktarma için hazır olan içeri aktarma işlerini gösterir.
     

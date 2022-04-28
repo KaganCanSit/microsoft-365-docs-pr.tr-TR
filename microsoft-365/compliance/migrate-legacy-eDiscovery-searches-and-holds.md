@@ -2,8 +2,8 @@
 title: Eski eBulma aramalarını ve tutmalarını Microsoft Purview uyumluluk portalına geçirme
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -15,14 +15,16 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkEXCHANGE
 ROBOTS: NOINDEX, NOFOLLOW
 description: ''
-ms.openlocfilehash: 07740a6569f67b04db22351f4b4e1214ccfbc787
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 416baed923884d9cbabbd6ee7607a48b0a19ab62
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64973717"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65092387"
 ---
 # <a name="migrate-legacy-ediscovery-searches-and-holds-to-the-compliance-portal"></a>Eski eBulma aramalarını ve tutmalarını uyumluluk portalına geçirme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview uyumluluk portalı, eKeşif kullanımı için gelişmiş bir deneyim sağlar: daha yüksek güvenilirlik, daha iyi performans ve içeriğinizi maddeye göre düzenleme örnekleri dahil olmak üzere eBulma iş akışlarına uyarlanmış birçok özellik, içeriği gözden geçirmek için inceleme kümeleri ve analizler de dahil olmak üzere, verileri gözden geçirmek üzere neredeyse yinelenen gruplandırma, e-posta iş parçacığı oluşturma, tema analizi ve tahmine dayalı kodlama gibi birçok özellik.
 

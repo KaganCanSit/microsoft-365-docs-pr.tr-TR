@@ -1,8 +1,8 @@
 ---
-title: Geçişe aşamalı geçiş yapmak için PowerShell Microsoft 365
+title: Microsoft 365'e aşamalı geçiş gerçekleştirmek için PowerShell'i kullanma
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 07/17/2020
 audience: Admin
 ms.topic: article
@@ -17,42 +17,42 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 ms.assetid: a20f9dbd-6102-4ffa-b72c-ff813e700930
-description: Zaman içinde kaynak e-posta sisteminden içerik taşımak için PowerShell kullanarak aşamalı geçiş ve kaynak e-posta Microsoft 365.
-ms.openlocfilehash: 562dcb8f32a0cd2b8452f2145dcb608dac353e2f
-ms.sourcegitcommit: b1066b2a798568afdea9c09401d52fa38fe93546
+description: Microsoft 365 aşamalı geçiş kullanarak zaman içinde kaynak e-posta sisteminden içerik taşımak için PowerShell'i kullanmayı öğrenin.
+ms.openlocfilehash: 872ae883728e1c20a6233e14e56bda804e757590
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/13/2021
-ms.locfileid: "63018828"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65091973"
 ---
-# <a name="use-powershell-to-perform-a-staged-migration-to-microsoft-365"></a>Geçişe aşamalı geçiş yapmak için PowerShell Microsoft 365
+# <a name="use-powershell-to-perform-a-staged-migration-to-microsoft-365"></a>Microsoft 365'e aşamalı geçiş gerçekleştirmek için PowerShell'i kullanma
 
-*Bu makale hem son hem de Microsoft 365 Kurumsal hem de Office 365 Kurumsal.*
+*Bu makale hem Microsoft 365 Kurumsal hem de Office 365 Kurumsal için geçerlidir.*
 
-Kullanıcı posta kutularının içeriğini kaynak e-posta sisteminden zaman içinde aşamalı Microsoft 365 geçişe geçirebilirsiniz.
+Aşamalı geçiş kullanarak kullanıcı posta kutularının içeriğini bir kaynak e-posta sisteminden zaman içinde Microsoft 365 geçirebilirsiniz.
 
-Bu makalede, Exchange Online PowerShell kullanarak aşamalı e-posta geçişiyle ilgili görevlerde size yol gösterir. Aşamalı [e-posta geçişi hakkında bilmek istediğiniz konu](/Exchange/mailbox-migration/what-to-know-about-a-staged-migration) başlığı, geçiş sürecine genel bir bakış sağlar. Bu makalenin içeriğini rahatça anladığınızda, posta kutularını bir e-posta sisteminden diğerine geçirmeye başlamak için bunu kullanın.
+Bu makalede, PowerShell'i Exchange Online kullanarak aşamalı e-posta geçişi için ilgili görevlerde size yol gösterilir. [Aşamalı e-posta geçişi hakkında bilmeniz gerekenler](/Exchange/mailbox-migration/what-to-know-about-a-staged-migration) konusu, geçiş işlemine genel bir bakış sağlar. Bu makalenin içeriğini rahatça anladığınızda, posta kutularını bir e-posta sisteminden diğerine geçirmeye başlamak için bunu kullanın.
 
 > [!NOTE]
-> Ayrıca, aşamalı geçiş <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange yönetim</a> merkezini de kullanabilirsiniz. Bkz[. E-postanın aşamalı geçişini Microsoft 365](/Exchange/mailbox-migration/perform-a-staged-migration/perform-a-staged-migration).
+> Aşamalı geçiş gerçekleştirmek için <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange yönetim merkezini</a> de kullanabilirsiniz. Bkz[. E-postanın Microsoft 365 aşamalı geçişini gerçekleştirme](/Exchange/mailbox-migration/perform-a-staged-migration/perform-a-staged-migration).
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Başlamadan önce bilmeniz gerekenler
 
-Bu görevi tamamlamak için tahmini süre: Geçiş toplu işlemini oluşturmak için 2-5 dakika. Geçiş toplu işlemi başlatıldıktan sonra, toplu işlemde yer alan posta kutularının sayısına, her posta kutusunun boyutuna ve kullanılabilir ağ kapasitenize bağlı olarak geçiş süresi değişir. Posta kutularını bu posta kutusuna geçirmenin ne kadar sürer olduğunu etkileyen diğer faktörler hakkında bilgi Microsoft 365 bkz. [Geçiş Performansı](/Exchange/mailbox-migration/office-365-migration-best-practices).
+Bu görevi tamamlamak için tahmini süre: Geçiş toplu işlemini oluşturmak için 2-5 dakika. Geçiş toplu işlemi başlatıldıktan sonra, geçiş süresi toplu işlemdeki posta kutularının sayısına, her posta kutusunun boyutuna ve kullanılabilir ağ kapasitenize göre değişir. Posta kutularının Microsoft 365 geçirilmesinin ne kadar sürdüğünü etkileyen diğer faktörler hakkında bilgi için bkz[. Geçiş Performansı](/Exchange/mailbox-migration/office-365-migration-best-practices).
 
-Bu yordamı veya yordamları gerçekleştirebilmeniz için, önce izinlerin atanması gerekir. Size hangi izinlerin gerekli olduğunu görmek için, Alıcı İzinleri konu başlığında yer alan " [Geçiş" girdisini](/exchange/recipients-permissions-exchange-2013-help) bakın.
+Bu yordamı veya yordamları gerçekleştirebilmeniz için, önce izinlerin atanması gerekir. Hangi izinlere ihtiyacınız olduğunu görmek için [Alıcılar İzinleri](/exchange/recipients-permissions-exchange-2013-help) konusunda "Geçiş" girdisine bakın.
 
-Exchange Online PowerShell cmdlet'lerini kullanmak için oturum açmalı ve cmdlet'leri yerel Windows PowerShell gerekir. Yönergeler [Bağlan uzak PowerShell Exchange Online için bkz. Uzak PowerShell'i](/powershell/exchange/connect-to-exchange-online-powershell) kullanma hakkında daha fazla bilgi.
+Exchange Online PowerShell cmdlet'lerini kullanmak için oturum açmanız ve cmdlet'leri yerel Windows PowerShell oturumunuza aktarmanız gerekir. Yönergeler için bkz. [Uzak PowerShell kullanarak Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
 
-Geçiş komutlarının tam listesi için bkz. [Taşıma ve geçiş cmdlet'leri](/powershell/exchange/).
+Geçiş komutlarının tam listesi için bkz [. Taşıma ve geçiş cmdlet'leri](/powershell/exchange/).
 
 ## <a name="migration-steps"></a>Geçiş adımları
 
 ### <a name="step-1-prepare-for-a-staged-migration"></a>1. Adım: Aşamalı geçişe hazırlanma
 
-Aşamalı geçiş kullanarak posta Microsoft 365 geçirmeden önce, posta kutunuzda veya ortamınız için birkaç Exchange vardır.
+Aşamalı geçiş kullanarak posta kutularını Microsoft 365 geçirmeden önce, Exchange ortamınızda yapmanız gereken birkaç değişiklik vardır.
 
- **Her Yerden Outlook'u şirket içi Exchange Server**'ınızda yapılandırma E-posta geçiş hizmeti şirket içi Exchange Server'ınıza bağlanmak için Her Yerden Outlook (HTTP üzerinden RPC olarak da bilinir) kullanır. Outlook 2007 ve Exchange 2003'te her Exchange Server'i ayarlama hakkında bilgi için aşağıdakilere bakın:
+ **Her Yerden Outlook'u şirket içi Exchange Server**'ınızda yapılandırma E-posta geçiş hizmeti şirket içi Exchange Server'ınıza bağlanmak için Her Yerden Outlook (HTTP üzerinden RPC olarak da bilinir) kullanır. Exchange Server 2007 ve Exchange 2003 için Outlook Anywhere'yi ayarlama hakkında bilgi için aşağıdakilere bakın:
 
 - [Exchange 2007: Her Yerden Outlook'u Etkinleştirme](/previous-versions/office/exchange-server-2007/bb123889(v=exchg.80))
 
@@ -65,7 +65,7 @@ Aşamalı geçiş kullanarak posta Microsoft 365 geçirmeden önce, posta kutunu
 
 - Şirket içi Exchange posta kutunuza bağlanmak için şirket ağınızın dışından Outlook'u kullanın.
 
-- Bağlantı ayarlarınızı [test etmek için Microsoft Uzak Bağlantı](https://https://testconnectivity.microsoft.com/) Çözümleyicisi'ne tıklayın. Her Yerden Outlook (HTTP üzerinden RPC) veya Outlook Otomatik Bulma testlerini kullanın.
+- Bağlantı ayarlarınızı test etmek için [Microsoft Uzak Bağlantı Çözümleyicisi'ni](https://https://testconnectivity.microsoft.com/) kullanın. Her Yerden Outlook (HTTP üzerinden RPC) veya Outlook Otomatik Bulma testlerini kullanın.
 
 - Exchange Online PowerShell'de aşağıdaki komutları çalıştırın:
 
@@ -77,36 +77,36 @@ Aşamalı geçiş kullanarak posta Microsoft 365 geçirmeden önce, posta kutunu
   Test-MigrationServerAvailability -ExchangeOutlookAnywhere -Autodiscover -EmailAddress <email address for on-premises administrator> -Credentials $credentials
   ```
 
- **İzinleri ayarlama** Şirket içi Exchange hesabınıza bağlanmak için (geçiş yöneticisi olarak da adlandırılan) şirket içi kullanıcı hesabının, Microsoft 365'e geçirmek istediğiniz şirket içi posta kutularına erişmek için gerekli izinlere sahip olması gerekir. Bu kullanıcı hesabı, daha sonra bu yordamın 3. Adımı: Geçiş uç noktası oluşturma yordamında bir geçiş uç noktası oluşturarak e-posta [sisteminize bağlanarak kullanılır](#step-3-create-a-migration-endpoint).
+ **İzinleri ayarlama** Şirket içi Exchange kuruluşunuza (geçiş yöneticisi olarak da adlandırılır) bağlanmak için kullandığınız şirket içi kullanıcı hesabının, Microsoft 365 geçirmek istediğiniz şirket içi posta kutularına erişmek için gerekli izinlere sahip olması gerekir. Bu kullanıcı hesabı, [3. Adım:](#step-3-create-a-migration-endpoint) Geçiş uç noktası oluşturma yordamının ilerleyen bölümlerinde bir geçiş uç noktası oluşturarak e-posta sisteminize bağlandığınızda kullanılır.
 
 Posta kutularını geçirmek için yöneticinin şu izin kümelerinden birine sahip olması gerekir:
 
-- Şirket içi **kuruluşta Active** Directory'de Domain Admins grubuna üye olun.
+- Şirket içi kuruluşta Active Directory'de **Domain Admins** grubunun üyesi olun.
 
     veya
 
-- Şirket içi posta kutularının her biri için **fullAccess** izni ve şirket içi kullanıcı hesaplarda **TargetAddress** özelliğini değiştirmek için **WriteProperty** izni atanabilir.
+- Şirket içi kullanıcı hesaplarında **TargetAddress** özelliğini değiştirmek için her şirket içi posta kutusu için **FullAccess** izni ve **WriteProperty** izni atanmalıdır.
 
     veya
 
-- Kullanıcı posta **kutularının depolu** olduğu şirket içi posta kutusu veritabanında receive As izni ve şirket içi kullanıcı hesaplarında **TargetAddress** özelliğini değiştirmek için **WriteProperty** izni atanabilir.
+- Kullanıcı posta kutularını depolayan şirket içi posta kutusu veritabanında **Farklı Al** iznine ve şirket içi kullanıcı hesaplarında **TargetAddress** özelliğini değiştirmek için **WriteProperty** iznine atanmalıdır.
 
-Bu izinleri ayarlama yönergeleri için Posta kutularını başka bir klasöre [geçirmek için izin Microsoft 365](/Exchange/mailbox-migration/assign-permissions-for-migration).
+Bu izinleri ayarlama hakkında yönergeler için bkz. [Posta kutularını Microsoft 365 geçirmek için izin atama](/Exchange/mailbox-migration/assign-permissions-for-migration).
 
- **Birleşik Mesajlaşma'yi (UM) devre dışı bırakma** Geçişini tamamlarken şirket içi posta kutuları için UM açıksa, geçiş öncesinde UM'i kapatın. Geçiş tamamlandıktan sonra posta kutuları için UM'i açabilirsiniz. Nasıl bilgi adımları için bkz. [Dağıtılabilir birleşik mesajlaşma](/previous-versions/office/exchange-server-2007/bb124691(v=exchg.80)).
+ **Birleşik Mesajlaşmayı Devre Dışı Bırakma (UM)** Geçirmekte olduğunuz şirket içi posta kutuları için UM açıksa geçişten önce UM'yi kapatın. Geçiş tamamlandıktan sonra posta kutuları için UM'yi açın. Nasıl yapılır adımları için bkz. [Dağıtılabilir birleşik mesajlaşma](/previous-versions/office/exchange-server-2007/bb124691(v=exchg.80)).
 
- **Yeni bir hesapta yeni kullanıcılar oluşturmak için dizin Microsoft 365.** Dizin eşitlemesini, şirket içi kullanıcı sayısınıza göre tüm şirket içi kullanıcıları oluşturmak Microsoft 365 kullanır.
+ **Microsoft 365'de yeni kullanıcılar oluşturmak için dizin eşitlemesini kullanın.** dizin eşitlemesini, Microsoft 365 kuruluşunuzdaki tüm şirket içi kullanıcıları oluşturmak için kullanırsınız.
 
-Oluşturulduktan sonra kullanıcılara lisans alınız. Kullanıcılar oluşturulduktan sonra lisans eklemek için 30 gün süreniz vardır. Lisans ekleme adımları için bkz. [8. Adım: Geçiş sonrası görevlerini tamamlama](#step-8-complete-post-migration-tasks).
+Oluşturulduktan sonra kullanıcıları lisanslamalısınız. Kullanıcılar oluşturulduktan sonra lisans eklemek için 30 gününüz vardır. Lisans ekleme adımları için bkz [. 8. Adım: Geçiş sonrası görevleri tamamlama](#step-8-complete-post-migration-tasks).
 
- Şirket içi kullanıcılarınızı aynı Microsoft Azure Active Directory için Eşitleme Hizmetleri'ni veya Microsoft Azure AD Eşitleme Hizmetleri'ni Microsoft 365. Posta kutuları Microsoft 365'a geçirildikten sonra, şirket içi kuruluşta kullanıcı hesaplarını yönetirsiniz ve bu hesaplar Microsoft 365 eşitlenir. Daha fazla bilgi için [bkz.Directory Tümleştirmesi](/previous-versions/azure/azure-services/jj573653(v=azure.100)) .
+ şirket içi kullanıcılarınızı eşitlemek ve Microsoft 365 oluşturmak için Microsoft Azure Active Directory (Azure AD) Eşitleme Aracı'nı veya Microsoft Azure AD Eşitleme Hizmetleri'ni kullanabilirsiniz. Posta kutuları Microsoft 365 geçirildikten sonra, şirket içi kuruluşunuzdaki kullanıcı hesaplarını yönetirsiniz ve bunlar Microsoft 365 kuruluşunuzla eşitlenir. Daha fazla bilgi için [bkz.Directory Integration](/previous-versions/azure/azure-services/jj573653(v=azure.100)) .
 
 ### <a name="step-2-create-a-csv-file-for-a-staged-migration-batch"></a>2. Adım: Aşamalı geçiş toplu işlemi için CSV dosyası oluşturma
 
-Şirket içi posta kutularını Microsoft 365'a geçirmek istediğiniz kullanıcıları tanımdikten sonra, bir virgülle ayrılmış değer (CSV) dosyası kullanarak geçiş toplu işlemini oluşturabilirsiniz. MICROSOFT 365 tarafından geçişi çalıştırmak için kullanılan CSV dosyasının her satırı, bir şirket içi posta kutusuyla ilgili bilgileri içerir.
+Şirket içi posta kutularını Microsoft 365 geçirmek istediğiniz kullanıcıları belirledikten sonra, geçiş toplu işlemi oluşturmak için virgülle ayrılmış değer (CSV) dosyası kullanırsınız. GEÇIŞI çalıştırmak için Microsoft 365 tarafından kullanılan CSV dosyasındaki her satır, şirket içi posta kutusu hakkında bilgi içerir.
 
 > [!NOTE]
-> Aşamalı geçiş kullanarak posta kutusuna geçirebilirsiniz ve bu posta kutularının Microsoft 365 sınırı yoktur. Geçiş toplu işleminde kullanılan CSV dosyası en çok 2.000 satır içerebilir. 2.000'den çok posta kutusunu geçirmek için, ek CSV dosyaları oluşturun ve her dosyayı yeni bir geçiş toplu işlemi oluşturmak için kullanın.
+> Aşamalı geçiş kullanarak Microsoft 365 geçirebileceğiniz posta kutusu sayısı için bir sınır yoktur. Geçiş toplu işleminde kullanılan CSV dosyası en çok 2.000 satır içerebilir. 2.000'den çok posta kutusunu geçirmek için, ek CSV dosyaları oluşturun ve her dosyayı yeni bir geçiş toplu işlemi oluşturmak için kullanın.
 
  **Desteklenen öznitelikler**
 
@@ -114,13 +114,13 @@ Aşamalı geçiş için CSV dosyası aşağıdaki üç özniteliği destekler. C
 
 |**Öznitelik**|**Açıklama**|**Gerekli mi?**|
 |:-----|:-----|:-----|
-|EmailAddress  <br/> |Şirket içi posta kutuları için birincil SMTP e-posta adresini belirtir; örneğin, pilarp@contoso.com.  <br/> Şirket içi posta kutuları için birincil SMTP adresini kullanın ve posta kutusundan kullanıcı Microsoft 365. Örneğin, şirket içi etki alanının adı contoso.com ancak Microsoft 365 e-posta etki alanının adı service.contoso.com ise, CSV dosyasındaki e-posta adresleri için contoso.com etki alanı adını kullanabilirsiniz.  <br/> |Gerekli  <br/> |
-|Password  <br/> |Yeni ve yeni posta kutusu için Microsoft 365 ayarlanır. E-postanıza uygulanan tüm Microsoft 365 uygulanan parola kısıtlamaları, CSV dosyasına dahil edilen parolalara da uygulanır.  <br/> |İsteğe bağlı  <br/> |
-|ForceChangePassword  <br/> |Kullanıcının yeni posta kutusunda ilk kez oturum a açma parolasını değiştirmesi gerekip gerek Microsoft 365 belirtir. Bu parametrenin değeri olarak **True** veya **False** kullanın. <br/> > [!NOTE]> Şirket içi kuruluşta Active Directory Federasyon Hizmetleri'ni (AD FS) veya daha büyük bir bölümü dağıtarak çoklu oturum açma (SSO) çözümü uygulamadınız, **ForceChangePassword** özniteliğinin değeri olarak **False** kullansanız gerekir.          |İsteğe bağlı  <br/> |
+|Emailaddress  <br/> |Şirket içi posta kutuları için birincil SMTP e-posta adresini belirtir; örneğin, pilarp@contoso.com.  <br/> Microsoft 365 kullanıcı kimlikleri için değil, şirket içi posta kutuları için birincil SMTP adresini kullanın. Örneğin, şirket içi etki alanının adı contoso.com ancak Microsoft 365 e-posta etki alanı service.contoso.com olarak adlandırılmışsa, CSV dosyasındaki e-posta adresleri için contoso.com etki alanı adını kullanırsınız.  <br/> |Gerekli  <br/> |
+|Password  <br/> |Yeni Microsoft 365 posta kutusu için ayarlanacak parola. Microsoft 365 kuruluşunuza uygulanan tüm parola kısıtlamaları CSV dosyasındaki parolalar için de geçerlidir.  <br/> |İsteğe bağlı  <br/> |
+|Forcechangepassword  <br/> |Kullanıcının yeni Microsoft 365 posta kutusunda ilk kez oturum açışında parolayı değiştirmesi gerekip gerekmediğini belirtir. Bu parametrenin değeri olarak **True** veya **False** kullanın. <br/> > [!NOTE]> Şirket içi kuruluşunuzda Active Directory Federasyon Hizmetleri (AD FS) (AD FS) veya üzerini dağıtarak bir çoklu oturum açma (SSO) çözümü uyguladıysanız, **ForceChangePassword** özniteliğinin değeri için **False** kullanmanız gerekir.          |İsteğe bağlı  <br/> |
 
  **CSV dosya biçimi**
 
-Aşağıda, CSV dosyasının biçimi için bir örnek verilmiştir. Bu örnekte, üç şirket içi posta kutusu Posta Kutusu'Microsoft 365.
+Aşağıda, CSV dosyasının biçimi için bir örnek verilmiştir. Bu örnekte üç şirket içi posta kutusu Microsoft 365 geçirilir.
 
 CSV dosyasının ilk satırında veya üst bilgi satırında, izleyen satırlarda belirtilen özniteliklerin veya alanların adları listelenir. Öznitelik adları birbirinden virgülle ayrılır.
 
@@ -136,15 +136,15 @@ briant@contoso.com,Pa$$w0rd,False
 CSV dosyasını oluşturmak için herhangi bir metin düzenleyicisini veya Excel gibi bir uygulamayı kullanın. Dosyayı .csv veya .txt dosyası olarak kaydedin.
 
 > [!NOTE]
-> CSV dosyası ASCII olmayan veya özel karakterler içeriyorsa, CSV dosyasını UTF-8 veya başka bir Unicode kodlamayla kaydedin. Uygulamaya bağlı olarak, bilgisayarın sistem yerel ayarları CSV dosyasında kullanılan dille eşlaşıyorsa CSV dosyasını UTF-8 veya başka bir Unicode kodlamayla kaydetme işlemi daha kolay olabilir.
+> CSV dosyası ASCII olmayan veya özel karakterler içeriyorsa, CSV dosyasını UTF-8 veya başka bir Unicode kodlamayla kaydedin. Uygulamaya bağlı olarak, bilgisayarın sistem yerel ayarı CSV dosyasında kullanılan dille eşleştiğinde CSV dosyasını UTF-8 veya diğer Unicode kodlamasıyla kaydetmek daha kolay olabilir.
 
 ### <a name="step-3-create-a-migration-endpoint"></a>3. Adım: Geçiş uç noktası oluşturma
 
-E-postayı geçirmeyi Microsoft 365, e-postanın kaynak e-posta sistemine bağlanması ve bu sistemle iletişim kurması gerekir. Bunu yapmak için, Microsoft 365 uç noktasını kullanır. PowerShell kullanarak Outlook Her Yerden geçiş uç noktası oluşturmak için, aşamalı geçiş için, önce [Exchange Online.](/powershell/exchange/connect-to-exchange-online-powershell)
+E-postayı başarıyla geçirmek için Microsoft 365 bağlantı kurması ve kaynak e-posta sistemiyle iletişim kurması gerekir. Bunu yapmak için Microsoft 365 bir geçiş uç noktası kullanır. PowerShell kullanarak Outlook Her Yerden geçiş uç noktası oluşturmak için, aşamalı geçiş için önce [Exchange Online bağlanın](/powershell/exchange/connect-to-exchange-online-powershell).
 
-Geçiş komutlarının tam listesi için bkz. [Taşıma ve geçiş cmdlet'leri](/powershell/exchange/).
+Geçiş komutlarının tam listesi için bkz [. Taşıma ve geçiş cmdlet'leri](/powershell/exchange/).
 
-Exchange Online PowerShell'Outlook Her Yerden geçiş uç noktası oluşturmak için, aşağıdaki komutları çalıştırın:
+Exchange Online PowerShell'de "StagedEndpoint" adlı bir Outlook Anywhere geçiş uç noktası oluşturmak için aşağıdaki komutları çalıştırın:
 
 ```powershell
 $Credentials = Get-Credential
@@ -154,28 +154,28 @@ $Credentials = Get-Credential
 New-MigrationEndpoint -ExchangeOutlookAnywhere -Name StagedEndpoint -Autodiscover -EmailAddress administrator@contoso.com -Credentials $Credentials
 ```
 
-**New-MigrationEndpoint cmdlet'i** hakkında daha fazla bilgi için [bkz.New-MigrationEndpoint](/powershell/module/exchange/new-migrationendpoint).
+**New-MigrationEndpoint** cmdlet'i hakkında daha fazla bilgi için [bkz.Yeni-MigrationEndpoint](/powershell/module/exchange/new-migrationendpoint).
 
 > [!NOTE]
-> **New-MigrationEndpoint** cmdlet'i, **-TargetDatabase seçeneği kullanılarak hizmetin kullanabileceği bir veritabanı belirtmek için** kullanılabilir. Aksi takdirde, yönetim posta kutusunun bulunduğu Active Directory Federasyon Hizmetleri (AD FS) 2.0 sitesinden bir veritabanı rastgele atanır.
+> **New-MigrationEndpoint** cmdlet'i **, -TargetDatabase** seçeneği kullanılarak hizmetin kullanacağı bir veritabanı belirtmek için kullanılabilir. Aksi takdirde bir veritabanı, yönetim posta kutusunun bulunduğu Active Directory Federasyon Hizmetleri (AD FS) (AD FS) 2.0 sitesinden rastgele atanır.
 
 #### <a name="verify-it-worked"></a>Çalıştığını doğrulayın
 
-PowerShell Exchange Online te, "StagedEndpoint" geçiş uç noktası hakkında bilgi görüntülemek için aşağıdaki komutu çalıştırın:
+Exchange Online PowerShell'de aşağıdaki komutu çalıştırarak "StagedEndpoint" geçiş uç noktası hakkındaki bilgileri görüntüleyin:
 
 ```powershell
 Get-MigrationEndpoint StagedEndpoint | Format-List EndpointType,ExchangeServer,UseAutoDiscover,Max*
 ```
 
-### <a name="step-4-create-and-start-a-stage-migration-batch"></a>4. Adım: Aşama geçiş toplu işlemini oluşturma ve başlatma
+### <a name="step-4-create-and-start-a-stage-migration-batch"></a>4. Adım: Aşama geçişi toplu işlemini oluşturma ve başlatma
 
-PowerShell'de **New-MigrationBatch** cmdlet'ini kullanarak Exchange Online geçişi için bir geçiş toplu işlemi oluşturabilirsiniz. Otomatik Başlat parametresini de dahilerek geçiş toplu işlemini oluşturabilir ve _otomatik olarak başlatabilirsiniz_ . Alternatif olarak, geçiş toplu işlemini oluşturabilir ve daha sonra **Start-MigrationBatch** cmdlet'ini kullanarak el ile başlatabilirsiniz. Bu örnekte, "StagedBatch1" adlı bir geçiş toplu işlemi oluşturulur ve önceki adımda oluşturulmuş geçiş uç noktasını kullanır.
+Exchange Online PowerShell'de **New-MigrationBatch** cmdlet'ini kullanarak tam geçiş için bir geçiş toplu işlemi oluşturabilirsiniz. _Otomatik Başlangıç_ parametresini ekleyerek bir geçiş toplu işlemi oluşturabilir ve bunu otomatik olarak başlatabilirsiniz. Alternatif olarak, geçiş toplu işlemini oluşturabilir ve daha sonra **Start-MigrationBatch** cmdlet'ini kullanarak el ile başlatabilirsiniz. Bu örnek, "StagedBatch1" adlı bir geçiş toplu işlemi oluşturur ve önceki adımda oluşturulan geçiş uç noktasını kullanır.
 
 ```powershell
 New-MigrationBatch -Name StagedBatch1 -SourceEndpoint StagedEndpoint -AutoStart
 ```
 
-Bu örnek, "StagedBatch1" adlı bir geçiş toplu işlemi oluşturur ve önceki adımda oluşturulan geçiş uç noktasını kullanır. Otomatik Başlat  _parametresi dahil_ etme nedeniyle, geçiş toplu işleminin geçiş panosunda veya **Start-MigrationBatch** cmdlet'i kullanılarak el ile başlatılabilir. Daha önce de belirtildiği gibi, bir defada yalnızca bir geçiş toplu işlemi olabilir.
+Bu örnek ayrıca "StagedBatch1" adlı bir geçiş toplu işlemi oluşturur ve önceki adımda oluşturulan geçiş uç noktasını kullanır. _AutoStart_ parametresi dahil edilmediğinden, geçiş toplu işleminin geçiş panosunda veya **Start-MigrationBatch** cmdlet'i kullanılarak el ile başlatılması gerekir. Daha önce belirtildiği gibi, aynı anda yalnızca bir tam geçiş toplu işlemi bulunabilir.
 
 ```powershell
 New-MigrationBatch -Name StagedBatch1 -SourceEndpoint StagedEndpoint
@@ -183,69 +183,69 @@ New-MigrationBatch -Name StagedBatch1 -SourceEndpoint StagedEndpoint
 
 #### <a name="verify-it-worked"></a>Çalıştığını doğrulayın
 
-"StagedBatch1" Exchange Online görüntülemek için PowerShell'de aşağıdaki komutu çalıştırın:
+"StagedBatch1" hakkındaki bilgileri görüntülemek için Exchange Online PowerShell'de aşağıdaki komutu çalıştırın:
 
 ```powershell
 Get-MigrationBatch -Identity StagedBatch1 | Format-List
 ```
 
-Ayrıca, aşağıdaki komutu çalıştırarak toplu işleminin başlat doğrulayın:
+Aşağıdaki komutu çalıştırarak toplu işleminin başlatıldığını da doğrulayabilirsiniz:
 
 ```powershell
 Get-MigrationBatch -Identity StagedBatch1 | Format-List Status
 ```
 
-**Get-MigrationBatch cmdlet'i** hakkında daha fazla bilgi için [bkz.Get-MigrationBatch](/powershell/module/exchange/get-migrationbatch).
+**Get-MigrationBatch** cmdlet'i hakkında daha fazla bilgi için [bkz.Get-MigrationBatch](/powershell/module/exchange/get-migrationbatch).
 
-### <a name="step-5-convert-on-premises-mailboxes-to-mail-enabled-users"></a>5. Adım: Şirket içi posta kutularını posta özelliği etkin kullanıcılara dönüştürme
+### <a name="step-5-convert-on-premises-mailboxes-to-mail-enabled-users"></a>5. Adım: Şirket içi posta kutularını posta özellikli kullanıcılara dönüştürme
 
-Bir grup posta kutusunu başarıyla geçirdikten sonra, kullanıcıların e-postalarına ulaşmalarını sağlamak için bir yol bulmanız gerekir. Posta kutusu geçirilen bir kullanıcının, artık hem şirket içinde hem de posta kutularında bir posta Microsoft 365. Aynı adreste posta kutusu Microsoft 365 kullanıcılar artık şirket içi posta kutularında yeni posta almayacak.
+Bir grup posta kutusunu başarıyla geçirdikten sonra, kullanıcıların e-postalarına ulaşmalarını sağlamak için bir yol bulmanız gerekir. Posta kutusu geçirilen bir kullanıcının hem şirket içinde hem de Microsoft 365 bir posta kutusu vardır. Microsoft 365'da posta kutusu olan kullanıcılar, şirket içi posta kutularına yeni posta almayı durdurur.
 
-Geçişlerinizi henüz bitiremediklerinden, henüz tüm kullanıcıları e-postalarını E-posta için Microsoft 365 hazır olmazsınız. Peki her iki posta kutusu da olan kişiler için ne yapacaksınız? Yapabileceğiniz, zaten geçirmiş olduğunuz şirket içi posta kutularını posta özelliği etkin kullanıcılara dönüştürmektir. Posta kutusundan posta hesabı etkin kullanıcıya değiştirildiğinde, kullanıcıyı e-postası için Microsoft 365 posta kutusuna değil de E-posta adresine yönlendirebilirsiniz.
+Geçiş işlemleriniz tamamlanmamış olduğundan, tüm kullanıcıları e-postaları için Microsoft 365 yönlendirmeye henüz hazır değilsiniz. Peki her iki posta kutusu da olan kişiler için ne yapacaksınız? Yapabileceğiniz, zaten geçirmiş olduğunuz şirket içi posta kutularını posta özelliği etkin kullanıcılara dönüştürmektir. Posta kutusundan posta özellikli bir kullanıcıya geçiş yaptığınızda, kullanıcıyı şirket içi posta kutusuna gitmek yerine e-postası için Microsoft 365 yönlendirebilirsiniz.
 
-Şirket içi posta kutularını posta özelliği etkin kullanıcılara dönüştürmenin bir diğer önemli nedeni de, ara sunucu adreslerini posta özelliği etkin kullanıcılara kopyalayıp Microsoft 365 posta kutularından ara sunucu adreslerini tutmaktır. Bu, Active Directory kullanarak şirket içi kuruluşunuzdaki bulut tabanlı kullanıcıları yönetebilmenizi sağlar. Ayrıca, tüm posta kutuları Microsoft 365'e geçirildikten sonra şirket içi Exchange Server organizasyon undan izin olmaya karar verirsiniz, posta özelliği etkin kullanıcılara kopyalanmış olan ara sunucu adresleri şirket içi Active Directory'niz içinde kalır.
+Şirket içi posta kutularını posta özellikli kullanıcılara dönüştürmenin bir diğer önemli nedeni de, proxy adreslerini posta özellikli kullanıcılara kopyalayarak Microsoft 365 posta kutularından ara sunucu adreslerini korumaktır. Bu, Active Directory kullanarak şirket içi kuruluşunuzdaki bulut tabanlı kullanıcıları yönetebilmenizi sağlar. Ayrıca, tüm posta kutuları Microsoft 365 geçirildikten sonra şirket içi Exchange Server kuruluşunuzun yetkisini kaldırmaya karar verirseniz, posta etkin kullanıcılara kopyaladığınız proxy adresleri şirket içi Active Directory kalır.
 
 ### <a name="step-6-delete-a-staged-migration-batch"></a>6. Adım: Aşamalı geçiş toplu işlemini silme
 
- Geçiş toplu işlemi'nde yer alan tüm posta kutuları başarıyla geçirildikten ve toplu işlemde şirket içi posta kutularını posta özelliği etkin kullanıcılara dönüştürüldikten sonra, aşamalı geçiş toplu işlemini silebilirsiniz. Geçiş toplu işlemi içinde postanın postanın posta kutusuna Microsoft 365 emin olun. Aşamalı geçiş toplu işlemini silebilirsiniz, geçiş hizmeti geçiş toplu işlemiyle ilgili tüm kayıtları temizler ve geçiş toplu işlemini siler.
+ Geçiş toplu işlemindeki tüm posta kutuları başarıyla geçirildikten ve toplu işteki şirket içi posta kutularını posta özellikli kullanıcılara dönüştürdükten sonra, aşamalı geçiş toplu işlemini silmeye hazır olursunuz. Postanın geçiş toplu işlemindeki Microsoft 365 posta kutularına iletildiğini doğrulamayı unutmayın. Aşamalı bir geçiş toplu işlemini sildiğinizde, geçiş hizmeti geçiş toplu işlemiyle ilgili tüm kayıtları temizler ve geçiş toplu işlemini siler.
 
-PowerShell'de "StagedBatch1" geçiş toplu Exchange Online silmek için aşağıdaki komutu çalıştırın.
+Exchange Online PowerShell'de "StagedBatch1" geçiş toplu işlemini silmek için aşağıdaki komutu çalıştırın.
 
 ```powershell
 Remove-MigrationBatch -Identity StagedBatch1
 ```
 
-**Remove-MigrationBatch cmdlet'i** hakkında daha fazla bilgi için [bkz.Remove-MigrationBatch](/powershell/module/exchange/remove-migrationbatch).
+**Remove-MigrationBatch** cmdlet'i hakkında daha fazla bilgi için [bkz.Remove-MigrationBatch](/powershell/module/exchange/remove-migrationbatch).
 
 #### <a name="verify-it-worked"></a>Çalıştığını doğrulayın
 
-"IMAPBatch1 Exchange Online bilgi görüntülemek için PowerShell'de aşağıdaki komutu çalıştırın:
+"IMAPBatch1" hakkındaki bilgileri görüntülemek için Exchange Online PowerShell'de aşağıdaki komutu çalıştırın:
 
 ```powershell
 Get-MigrationBatch StagedBatch1
 ```
 
-Komut, geçiş toplu işlemini Kaldırma durumuyla döndürür veya geçiş toplu işleminin bulunamadısını ve toplu İşlemin silindikten sonra bulunamadısını belirten bir hata döndürür.
+Komut, **Kaldırılıyor** durumuna sahip geçiş toplu işlemini döndürür veya toplu işleminin silindiğini doğrulayarak geçiş toplu işleminin bulunamadığını belirten bir hata döndürür.
 
-**Get-MigrationBatch cmdlet'i** hakkında daha fazla bilgi için [bkz.Get-MigrationBatch](/powershell/module/exchange/get-migrationbatch).
+**Get-MigrationBatch** cmdlet'i hakkında daha fazla bilgi için [bkz.Get-MigrationBatch](/powershell/module/exchange/get-migrationbatch).
 
-### <a name="step7-assign-licenses-to-microsoft-365-users"></a>Adım7: Kullanıcılara lisans Microsoft 365 atama
+### <a name="step7-assign-licenses-to-microsoft-365-users"></a>7. Adım: Microsoft 365 kullanıcılara lisans atama
 
-Geçirilen Microsoft 365 için kullanıcı hesaplarını lisans ataarak etkinleştirin. Lisans ata atadığınız zaman, yetkisiz kullanım süresi (30 gün) sona erdiğinde posta kutusu devre dışı bırakılır. Lisans atama ve lisans Microsoft 365 yönetim merkezi için bkz. [Lisansları atama veya atamayı iptal et](../admin/manage/assign-licenses-to-users.md).
+Lisans atayarak geçirilen hesaplar için Microsoft 365 kullanıcı hesaplarını etkinleştirin. Lisans atamazsanız, yetkisiz kullanım süresi (30 gün) sona erdiğinde posta kutusu devre dışı bırakılır. Microsoft 365 yönetim merkezi lisans atamak için bkz. [Lisans atama veya atamasını kaldırma](../admin/manage/assign-licenses-to-users.md).
 
-### <a name="step-8-complete-post-migration-tasks"></a>8. Adım: Geçiş sonrası görevlerini tamamlama
+### <a name="step-8-complete-post-migration-tasks"></a>8. Adım: Geçiş sonrası görevleri tamamlama
 
-- **Kullanıcıların posta kutularına kolayca ulaşabilmeleri için bir Otomatik Bulma DNS kaydı oluşturun.** Tüm şirket içi posta kutuları Microsoft 365'e geçirildikten sonra, kullanıcıların Outlook ve mobil istemcilerle yeni Microsoft 365 posta kutularına kolayca bağlanmalarına olanak sağlamak üzere Microsoft 365 kuruluşu için bir Otomatik Bulma DNS kaydı yapılandırabilirsiniz. Bu yeni Otomatik Bulma DNS kaydında, bu kaydın tüm kuruluşlarında kullanmakta olduğu ad alanıyla Microsoft 365 gerekir. Örneğin, bulut tabanlı ad alanınız bulut.contoso.com ise, oluşturmanız gereken Otomatik Bulma DNS kaydı autodiscover.bulut.contoso.com'dur.
+- **Kullanıcıların posta kutularına kolayca ulaşabilmeleri için bir Otomatik Bulma DNS kaydı oluşturun.** Tüm şirket içi posta kutuları Microsoft 365 geçirildikten sonra, kullanıcıların Outlook ve mobil istemcilerle yeni Microsoft 365 posta kutularına kolayca bağlanmasını sağlamak üzere Microsoft 365 kuruluşunuz için bir Otomatik Bulma DNS kaydı yapılandırabilirsiniz. Bu yeni Otomatik Bulma DNS kaydının, Microsoft 365 kuruluşunuz için kullandığınız ad alanını kullanması gerekir. Örneğin, bulut tabanlı ad alanınız bulut.contoso.com ise, oluşturmanız gereken Otomatik Bulma DNS kaydı autodiscover.bulut.contoso.com'dur.
 
-    Microsoft 365 müşterilere ve mobil istemcilere Otomatik Bulma hizmetini uygulamak için CNAME Outlook kullanır. Otomatik Bulma CNAME kaydı aşağıdaki bilgileri içermelidir:
+    Microsoft 365, Outlook ve mobil istemciler için Otomatik Bulma hizmetini uygulamak için bir CNAME kaydı kullanır. Otomatik Bulma CNAME kaydı aşağıdaki bilgileri içermelidir:
 
   - **Alias:** autodiscover
 
   - **Target:** autodiscover.outlook.com
 
-    Daha fazla bilgi için bkz [. Etki alanınıza bağlanmak için DNS kayıtları ekleme](../admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider.md).
+    Daha fazla bilgi için bkz. [Etki alanınıza bağlanmak için DNS kayıtları ekleme](../admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider.md).
 
-- **Şirket içi Exchange sunucularının yetkisini alın.** Tüm e-postanın doğrudan Microsoft 365 posta kutularına yönlendirildikten ve artık şirket içi e-posta kuruluşlarınızı korumanız gerekmeyecektir veya SSO çözümü uygulamayı planlamayacaksanız, Exchange'i sunuculardan kaldırabilir ve şirket içi Exchange kuruluşu kaldırabilirsiniz.
+- **Şirket içi Exchange sunucularının yetkisini alın.** Tüm e-postaların doğrudan Microsoft 365 posta kutularına yönlendirildiğini doğruladıktan ve şirket içi e-posta kuruluşunuzun bakımını yapmanıza gerek kalmaz veya bir SSO çözümü uygulamayı planlamazsanız, sunucularınızdan Exchange kaldırabilir ve şirket içi Exchange kuruluşunuzu kaldırabilirsiniz.
 
     Daha fazla bilgi için aşağıdakilere bakın:
 

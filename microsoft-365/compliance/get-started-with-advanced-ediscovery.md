@@ -2,8 +2,8 @@
 title: Microsoft Purview'da eBulma'yı (Premium) ayarlama
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -20,12 +20,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Bu makalede, servis taleplerini oluşturmaya ve yönetmeye başlayabilmeniz için eBulma 'nın (Premium) nasıl ayarlanacağı açıklanır. Ayrıca gerekli Microsoft abonelikleri ve lisanslama işlemleri de açıklanmaktadır. Birkaç hızlı adımı tamamladıktan sonra eBulma (Premium) aracı kullanıma hazır olur.
-ms.openlocfilehash: dff99ab432ce5f2380a6fd5a81e855c946146c8c
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: b23203d374b7ecf2f447c2f6b906345537ec6cf4
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64997724"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65092425"
 ---
 # <a name="set-up-microsoft-purview-ediscovery-premium"></a>Microsoft Purview eKeşif'i ayarlama (Premium)
 

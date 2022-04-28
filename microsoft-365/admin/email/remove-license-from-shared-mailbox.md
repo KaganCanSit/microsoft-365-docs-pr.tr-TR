@@ -21,27 +21,27 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: 'Paylaşılan posta kutusunun lisansını kaldırmak ve bu lisansı başka bir kullanıcıya atamak için kaldırın veya ödeme yapmak zorunda olmadığınız lisansı geri iade etmek için kullanın. '
-ms.date: 05/11/2021
-ms.openlocfilehash: 6de6f213cc0df7a216122d55ef07e270586aea12
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: 'Paylaşılan bir posta kutusundan lisansı kaldırarak başka bir kullanıcıya atayın veya lisansı iade edin; böylece bu lisansı ödemezsiniz. '
+ms.date: 04/22/2022
+ms.openlocfilehash: 4445163281e403505612066285192b31adc44979
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63314805"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65091929"
 ---
 # <a name="remove-a-license-from-a-shared-mailbox"></a>Paylaşılan posta kutusundan lisans kaldırma
 
-Paylaşılan posta kutularına genellikle lisans gerek yoktur. Paylaşılan posta kutusundan lisans kaldırmak için bu yönergeleri izleyin; böylelikle, lisansı kullanıcıya atayabilirsiniz veya ihtiyacınız olmayan bir lisans için ödeme yapmak zorunda olmadığınız bir lisansa geri dönebilirsiniz.
+Paylaşılan posta kutuları genellikle lisans gerektirmez. Paylaşılan posta kutusundan lisansı kaldırmak için bu yönergeleri izleyin; böylece kullanıcıya atayabilir veya ihtiyacınız olmayan bir lisans için ödeme yapmamak için lisansı iade edebilirsiniz.
 
 > [!NOTE]
 >
-> Aşağıdaki Exchange Online bir Plan 2 lisansı gereklidir:
+> Aşağıdaki senaryolarda Exchange Online Plan 2 lisansı gereklidir:
 >
-> - Paylaşılan posta kutusunun kullanım alanı 50 GB'den fazladır.
-> - Paylaşılan posta kutusu yerinde arşivlemeyi kullanır.
-> - Paylaşılan posta kutusu mahkemelere yerleştirilir.
-> - Paylaşılan posta kutusuna kullanıcı Microsoft 365 Defender bir lisans atanmıştır.
+> - Paylaşılan posta kutusunda 50 GB'tan fazla depolama alanı kullanılıyor.
+> - Paylaşılan posta kutusu yerinde arşivleme kullanır.
+> - Paylaşılan posta kutusu, dava beklemeye alınır.
+> - Paylaşılan posta kutusuna atanmış bir Microsoft 365 Defender lisansı vardır.
 > 
 > Lisans atama hakkında adım adım yönergeler için bkz. [Kullanıcılara lisans atama](/microsoft-365/admin/manage/assign-licenses-to-users). 
 
@@ -61,17 +61,17 @@ Paylaşılan posta kutularına genellikle lisans gerek yoktur. Paylaşılan post
 ::: moniker-end
 
    > [!NOTE]
-   > Lisansı Etkin kullanıcılar sayfasından kaldırmanız gerekir. Lisanslar kullanıcı ayarları olduğundan Paylaşılan posta kutusu sayfasından lisansı kaldıraaabilirsiniz.
+   > Lisansı Etkin kullanıcılar sayfasından kaldırmanız gerekir. Lisanslar kullanıcı ayarları olduğundan, paylaşılan posta kutusu sayfasından lisansı kaldıramazsınız.
   
 2. Paylaşılan posta kutusunu seçin.
 
-3. Lisanslar **ve Uygulamalar sekmesinde** **Lisanslar'ı genişletin** ve kaldırmak istediğiniz lisansın kutusunun işaretini kaldırın.
+3. **Lisanslar ve Uygulamalar** **sekmesinden Lisanslar'ı** genişletin ve kaldırmak istediğiniz lisansın kutusunun işaretini kaldırın.
 
-4. Değişiklikleri **kaydet'i seçin**.
+4. **Değişiklikleri kaydet'i** seçin.
 
-5. Etkin kullanıcılar sayfasına **geri dönüp** paylaşılan posta kutusunun durumu Lisanssız **olur**.
+5. **Etkin kullanıcılar** sayfasına döndüğünüzde, paylaşılan posta kutusunun durumu **Lisanssız** olur.
 
-6. Lisans için ödeme hala devam ediyor. Ödemeyi durdurmak için lisansı [aboneliğinden kaldırın](../../commerce/licenses/buy-licenses.md).
+6. Hala lisans için ödeme yapıyorsun. Bunun için ödeme yapmayı durdurmak için [lisansı aboneliğinizden kaldırın](../../commerce/licenses/buy-licenses.md).
 
 ## <a name="related-content"></a>İlgili içerik
 

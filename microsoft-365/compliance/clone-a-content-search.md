@@ -2,8 +2,8 @@
 title: İçerik Araması Kopyalama
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: 4/26/2017
 audience: Admin
@@ -18,12 +18,12 @@ ms.assetid: 7b40eeaa-544c-4534-b89b-9f79998e374c
 ms.custom:
 - seo-marvel-apr2020
 description: Office 365 veya Microsoft 365 uyumluluk merkezinde var olan bir İçerik Aramasını hızla kopyalamak için bu makaledeki PowerShell betiğini kullanın.
-ms.openlocfilehash: 82994bcc87b76efe21bb1c68877b2bb8a5926424
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: b13dce49030b76e6e83494687302cc8409f9c454
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64998672"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65091775"
 ---
 # <a name="clone-a-content-search"></a>İçerik Araması Kopyalama
 

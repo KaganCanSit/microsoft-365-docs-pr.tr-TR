@@ -2,7 +2,7 @@
 title: SharePoint Online ile Office 365 Content Delivery Network (CDN) kullanma
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 07/13/2021
 audience: ITPro
 ms.topic: article
@@ -20,216 +20,216 @@ search.appverid:
 - MET150
 - SPO160
 ms.assetid: bebb285f-1d54-4f79-90a5-94985afc6af8
-description: SharePoint Online varlıklarınızı Office 365 Content Delivery Network için CDN (SharePoint) kullanma hakkında bilgi alın.
-ms.openlocfilehash: f4279da3bba7647f2e99179acb0147fe5d002f57
-ms.sourcegitcommit: 9af389e4787383cd97bc807f7799ef6ecf0664d0
+description: SharePoint Online varlıklarınızın teslimini hızlandırmak için Office 365 Content Delivery Network (CDN) kullanmayı öğrenin.
+ms.openlocfilehash: 42836fa8a43b7251be27cfd841b67d47e12b036e
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63468968"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65092017"
 ---
-# <a name="use-the-office-365-content-delivery-network-cdn-with-sharepoint-online"></a>CDN Online ile Office 365 Content Delivery Network (CDN) SharePoint kullanma
+# <a name="use-the-office-365-content-delivery-network-cdn-with-sharepoint-online"></a>SharePoint Online ile Office 365 Content Delivery Network (CDN) kullanma
 
-SharePoint Online sayfalarınıza daha iyi performans sağlamak üzere statik varlıkları barındırmak için Office 365 Content Delivery Network (CDN) yerleşik SharePoint kullanabilirsiniz. Bu Office 365 CDN, statik varlıkları istekte bulunan tarayıcılara yaklaştırarak performansı geliştirmektedir ve bu da indirmeleri hızlandırmak ve gecikme süresini azaltmaya yardımcı olur. Ayrıca, Office 365 CDN [http/2 protokolünü](https://en.wikipedia.org/wiki/HTTP/2), geliştirilmiş sıkıştırma ve HTTP pipelining için kullanır. Office 365 CDN Hizmeti, SharePoint Online aboneliğinizin bir parçası olarak dahil edilir.
+SharePoint Online sayfalarınız için daha iyi performans sağlamak amacıyla statik varlıkları barındırmak için yerleşik Office 365 Content Delivery Network (CDN) kullanabilirsiniz. Office 365 CDN statik varlıkları isteyen tarayıcılara daha yakın önbelleğe alarak performansı artırır ve bu da indirmeleri hızlandırmaya ve gecikme süresini azaltmaya yardımcı olur. Ayrıca, Office 365 CDN gelişmiş sıkıştırma ve HTTP kanal oluşturma için HTTP[/2 protokollerini](https://en.wikipedia.org/wiki/HTTP/2) kullanır. Office 365 CDN hizmeti, SharePoint Online aboneliğinizin bir parçası olarak dahil edilir.
 
 > [!NOTE]
-> Ürün Office 365 CDN yalnızca Üretim (dünya çapında) **bulutunda** bulunan kiracılar tarafından kullanılabilir. ABD Kamu, Çin ve Almanya bulutlarında yer alan kiracılar şu anda bu Office 365 CDN.
+> Office 365 CDN yalnızca **Üretim** (dünya çapında) buluttaki kiracılar tarafından kullanılabilir. ABD Hükümeti, Çin ve Almanya bulutlarındaki kiracılar şu anda Office 365 CDN desteklememektedir.
 
-Kaynak Office 365 CDN birden çok konumda veya kaynakta statik varlıkları barındırmana ve bunları genel yüksek hızlı ağlardan hizmet vermesine olanak sağlayan birden çok CDN'den oluşur. Kaynak 2013'te barındırmak istediğiniz içeriğin türüne Office 365 CDN, özel kökenleri veya **her ikisini birden** ebilirsiniz. Genel [ve özel kaynak arasındaki fark hakkında daha fazla bilgi için bkz.](use-microsoft-365-cdn-with-spo.md#CDNOriginChoosePublicPrivate) Her kaynağın genel mi yoksa özel mi olacağını seçme.
+Office 365 CDN, statik varlıkları birden çok konumda veya _kaynakta_ barındırmanıza ve bunları genel yüksek hızlı ağlardan sunmanıza olanak sağlayan birden çok CDN'den oluşur. Office 365 CDN barındırmak istediğiniz içerik türüne bağlı olarak **genel kaynaklar,** **özel** kaynaklar veya her ikisini birden ekleyebilirsiniz. Genel ve özel kaynaklar arasındaki fark hakkında daha fazla bilgi için bkz. [Her kaynağın genel mi yoksa özel mi olacağını seçme](use-microsoft-365-cdn-with-spo.md#CDNOriginChoosePublicPrivate) .
 
-![Office 365 CDN diyagramı oluşturma.](../media/O365-CDN/o365-cdn-flow-transparent.png "Office 365 CDN kavramsal diyagramı")
+![kavramsal diyagramı Office 365 CDN.](../media/O365-CDN/o365-cdn-flow-transparent.png "kavramsal diyagramı Office 365 CDN")
 
-CDNs'lerin çalışma yolunu zaten biliyorsanız, kiracınız için Office 365 CDN yalnızca birkaç adımı tamamlamanız gerekir. Bu konuda nasıl olduğu açıklanmıştır. Statik varlıklarınızı barındırmaya başlama hakkında bilgi için okumaya devam edin.
+CDN'lerin çalışma şeklini zaten biliyorsanız, kiracınız için Office 365 CDN etkinleştirmek için yalnızca birkaç adımı tamamlamanız yeterlidir. Bu konuda nasıl yapılır açıklanmaktadır. Statik varlıklarınızı barındırmaya başlama hakkında bilgi için okumaya devam edin.
 
 > [!TIP]
-> Microsoft tarafından barındırılan ve özel kullanım senaryoları için Office 365 ile kullanılmaktadır ancak bu konuda ele alınmayacak başka Microsoft tarafından barındırılan CDN'ler de vardır, çünkü bunlar Office 365 CDN. Daha fazla bilgi için bkz. [Diğer Microsoft CDN'leri](content-delivery-networks.md#other-microsoft-cdns).
+> Özel kullanım senaryoları için Office 365 ile kullanılabilecek, ancak Office 365 CDN kapsamının dışında olduklarından bu konuda tartışılmayan başka Microsoft tarafından barındırılan CDN'ler de vardır. Daha fazla bilgi için bkz. [Diğer Microsoft CDN'leri](content-delivery-networks.md#other-microsoft-cdns).
 
- **Daha fazla bilgi [için ağ planlaması ve performans ayarı Office 365](./network-planning-and-performance.md).**
+ **[Office 365 için Ağ planlama ve performans ayarlama'ya](./network-planning-and-performance.md) dönün.**
 
 ## <a name="overview-of-working-with-the-office-365-cdn-in-sharepoint-online"></a>SharePoint Online'da Office 365 CDN ile çalışmaya genel bakış
 
-E-Office 365 CDN ayarlamak için şu temel adımları izleyin:
+Kuruluşunuz için Office 365 CDN ayarlamak için şu temel adımları izleyin:
 
-+ [Dağıtım planı için Office 365 CDN](use-microsoft-365-cdn-with-spo.md#plan-for-deployment-of-the-office-365-cdn)
++ [Office 365 CDN dağıtımını planlama](use-microsoft-365-cdn-with-spo.md#plan-for-deployment-of-the-office-365-cdn)
 
-  + [Kaynakta hangi statik varlıkları barındırmak istediğiniz CDN](use-microsoft-365-cdn-with-spo.md#CDNAssets).
-  + [Varlıklarınızı nerede depolamak istediğinize karar verenin](use-microsoft-365-cdn-with-spo.md#CDNStoreAssets). Bu konum, SharePoint, kitaplık veya klasör olabilir ve kaynak _olarak adlandırılan bir konum olabilir_.
-  + [Her kaynağın genel mi yoksa özel mi olacağını seçin](use-microsoft-365-cdn-with-spo.md#CDNOriginChoosePublicPrivate). Hem genel hem de özel türlerin birden çok kaynağını  eklersiniz.
+  + [CDN hangi statik varlıkları barındırmak istediğinizi belirleyin](use-microsoft-365-cdn-with-spo.md#CDNAssets).
+  + [Varlıklarınızı nerede depolamak istediğinizi belirleyin](use-microsoft-365-cdn-with-spo.md#CDNStoreAssets). Bu konum bir SharePoint site, kitaplık veya klasör olabilir ve _kaynak_ olarak adlandırılır.
+  + [Her kaynağın genel mi yoksa özel mi olacağını seçin](use-microsoft-365-cdn-with-spo.md#CDNOriginChoosePublicPrivate). Hem genel hem de özel türlerin birden çok kaynağını ekleyebilirsiniz.
 
-+ PowerShell veya CDN CLI'yi kullanarak e-postayı ayarlayın ve Microsoft 365
++ Microsoft 365 için PowerShell veya CLI kullanarak CDN ayarlama ve yapılandırma
 
-  + [Çevrimiçi Yönetim Kabuğu'CDN kullanarak varsayılan SharePoint ayarlama ve yapılandırma](use-microsoft-365-cdn-with-spo.md#CDNSetupinPShell)
-  + [PnP PowerShell CDN ayarlama ve yapılandırma](use-microsoft-365-cdn-with-spo.md#CDNSetupinPnPPosh)
-  + [Cli for CDN kullanarak e-postayı ayarlayın ve Microsoft 365](use-microsoft-365-cdn-with-spo.md#CDNSetupinCLI)
+  + [SharePoint Online Management Shell kullanarak CDN ayarlama ve yapılandırma](use-microsoft-365-cdn-with-spo.md#CDNSetupinPShell)
+  + [PnP PowerShell kullanarak CDN ayarlama ve yapılandırma](use-microsoft-365-cdn-with-spo.md#CDNSetupinPnPPosh)
+  + [Microsoft 365 için CLI kullanarak CDN ayarlama ve yapılandırma](use-microsoft-365-cdn-with-spo.md#CDNSetupinCLI)
 
-  Bu adımı tamamlarken şunları edin:
+  Bu adımı tamamladığınızda şunları yapacaksınız:
 
-  + Varsayılan CDN etkinleştirildi.
-  + Kaynaklarınızı eklenmiştir ve her bir kaynak genel veya özel olarak tanımlenmiştir.
+  + Kuruluşunuz için CDN etkinleştirildi.
+  + Her kaynağı genel veya özel olarak tanımlayarak kaynaklarınızı eklediniz.
 
-Kurulum tamam olduktan sonra Zaman [içinde Office 365 CDN](use-microsoft-365-cdn-with-spo.md#CDNManage) yönetebilirsiniz:
+Kurulumu tamamladıktan sonra, [zaman içinde Office 365 CDN şu şekilde yönetebilirsiniz](use-microsoft-365-cdn-with-spo.md#CDNManage):
 
 + Varlıkları ekleme, güncelleştirme ve kaldırma
-+ Kaynak ekleme ve kaldırma
-+ İlkeleri CDN yapılandırma
-+ Gerekirse, devre dışı bırakma CDN
++ Çıkış noktaları ekleme ve kaldırma
++ CDN ilkelerini yapılandırma
++ Gerekirse, CDN devre dışı bırakma
 
-Son olarak, [hem genel CDN özel](use-microsoft-365-cdn-with-spo.md#using-your-cdn-assets) kaynaklardan CDN için Kaynak varlıklarınızı kullanma'ya bakın.
+Son olarak, [CDN varlıklarınıza](use-microsoft-365-cdn-with-spo.md#using-your-cdn-assets) hem genel hem de özel kaynaklardan erişme hakkında bilgi edinmek için bkz. CDN varlıklarınızı kullanma.
 
-Sık [karşılaşılan Office 365 CDN](use-microsoft-365-cdn-with-spo.md#CDNTroubleshooting) ilgili yol gösterici bilgi için bkz. Yardım konularına bakın.
+Yaygın sorunları çözme yönergeleri için bkz. [Office 365 CDN sorunlarını giderme](use-microsoft-365-cdn-with-spo.md#CDNTroubleshooting).
 
-## <a name="plan-for-deployment-of-the-office-365-cdn"></a>Dağıtım planı için Office 365 CDN
+## <a name="plan-for-deployment-of-the-office-365-cdn"></a>Office 365 CDN dağıtımını planlama
 
-Kiracınız için Office 365 CDN dağıtmadan Office 365 planlama sürecinizin bir parçası olarak aşağıdaki faktörleri göz önünde bulundurarak değerlendirmeniz gerekir.
+Office 365 kiracınız için Office 365 CDN dağıtmadan önce, planlama sürecinizin bir parçası olarak aşağıdaki faktörleri dikkate almanız gerekir.
 
-  + [Kaynakta hangi statik varlıkları barındırmak istediğiniz CDN](use-microsoft-365-cdn-with-spo.md#CDNAssets)
-  + [Varlıklarınızı nerede depolamak istediğinize karar belirleme](use-microsoft-365-cdn-with-spo.md#CDNStoreAssets)
-  + [Her kaynağın genel mi yoksa özel mi olacağını seçme](use-microsoft-365-cdn-with-spo.md#CDNOriginChoosePublicPrivate)
+  + [CDN hangi statik varlıkları barındırmak istediğinizi belirleme](use-microsoft-365-cdn-with-spo.md#CDNAssets)
+  + [Varlıklarınızı nerede depolamak istediğinizi belirleme](use-microsoft-365-cdn-with-spo.md#CDNStoreAssets)
+  + [Her kaynağın genel mi yoksa özel mi olacağını seçin](use-microsoft-365-cdn-with-spo.md#CDNOriginChoosePublicPrivate)
 
 <a name="CDNAssets"> </a>
-### <a name="determine-which-static-assets-you-want-to-host-on-the-cdn"></a>Kaynakta hangi statik varlıkları barındırmak istediğiniz CDN
+### <a name="determine-which-static-assets-you-want-to-host-on-the-cdn"></a>CDN hangi statik varlıkları barındırmak istediğinizi belirleme
 
-Genel olarak, CDN'ler statik varlıkları veya çok sık değişmeen varlıkları barındırmak için etkilidir. Şu koşulların bir veya birkaçı ile karşılaşan dosyaları tanımlamak iyi bir kuraldır:
+Genel olarak, CDN'ler en çok _statik varlıkları_ veya çok sık değişmeyen varlıkları barındırmak için etkilidir. İyi bir kural, bu koşulların bazılarını veya tümünü karşılayan dosyaları tanımlamaktır:
 
-+ Sayfaya eklenmiş statik dosyalar (betikler ve resimler gibi), sayfa yükleme sürelerini önemli ölçüde artımlı olarak etkileyebilir
++ Sayfa yükleme süreleri üzerinde önemli bir artımlı etkiye sahip olabilecek bir sayfaya eklenmiş statik dosyalar (betikler ve resimler gibi)
 + Yürütülebilir dosyalar ve yükleme dosyaları gibi büyük dosyalar
 + İstemci tarafı kodunu destekleyen kaynak kitaplıkları
 
-Örneğin, site resimleri ve betikler gibi sürekli olarak istenen küçük dosyalar, site işleme performansını önemli ölçüde geliştirebilir ve bunları bir kaynak kaynağına eklerken SharePoint Online sitelerinin yükü artımlı olarak CDN azaltır. Yükleme yürütülebilir dosyaları gibi daha büyük dosyalar CDN'den indirilebilir ve bu da çok sık erişilmese bile olumlu bir performans etkisi sağlar ve SharePoint Online siteniz üzerindeki yükü daha sonra azaltmaya yardımcı olur.
+Örneğin, site görüntüleri ve betikleri gibi sürekli olarak istenen küçük dosyalar, site işleme performansını önemli ölçüde artırabilir ve CDN bir kaynak alanına eklediğinizde SharePoint Çevrimiçi sitelerinizdeki yükü artımlı olarak azaltabilir. Yükleme yürütülebilir dosyaları gibi daha büyük dosyalar CDN indirilebilir ve bu dosyalara sık erişilmese bile SharePoint Online sitenizdeki yükün olumlu bir performans etkisi ve daha sonra azaltılması sağlanır.
 
-Dosya başına performans iyileştirme, istemcinin en yakın CDN uç noktasına yakınlığı, yerel ağda geçici koşullar vb. gibi birçok etmene bağlıdır. Birçok statik dosya oldukça küçüktür ve dosyalardan Office 365 saniye içinde indirilebilir. Bununla birlikte, bir web sayfasında, bir kaç saniyelik bir indirme süresi olan birçok ekli dosya olabilir. Bu dosyaların ilk sayfadan CDN, toplam sayfa yükleme süresini önemli ölçüde azaltır. Örneğin[, Bir e-CDN ne performans](content-delivery-networks.md#what-performance-gains-does-a-cdn-provide) kazançları sağlar? örneğin bkz.
+Dosya başına performans iyileştirmesi, istemcinin en yakın CDN uç noktasına yakınlığı, yerel ağdaki geçici koşullar vb. gibi birçok faktöre bağlıdır. Birçok statik dosya oldukça küçüktür ve Office 365 bir saniyeden kısa bir süre içinde indirilebilir. Ancak, bir web sayfası birkaç saniyelik toplu indirme süresine sahip birçok ekli dosya içerebilir. Bu dosyaları CDN sunma, genel sayfa yükleme süresini önemli ölçüde azaltabilir. Örnek olarak bkz[. CDN hangi performans kazançlarını sağlar?](content-delivery-networks.md#what-performance-gains-does-a-cdn-provide)
 
 <a name="CDNStoreAssets"> </a>
-### <a name="determine-where-you-want-to-store-your-assets"></a>Varlıklarınızı nerede depolamak istediğinize karar belirleme
+### <a name="determine-where-you-want-to-store-your-assets"></a>Varlıklarınızı nerede depolamak istediğinizi belirleme
 
-Kaynak CDN, varlıklarınızı kaynak olarak adlandırılan bir konumdan _getirir_. Köken, URL SharePoint erişilebilen bir site, belge kitaplığı veya klasör olabilir. Kuruluşun kaynaklarını belirtirken büyük bir esnekliğiniz olur. Örneğin, birden çok kaynağı veya kaynak olarak tüm kaynaklarınızı koymak istediğiniz CDN belirtsiniz. Hem genel hem de özel kaynaklarda yer a seçebilirsiniz. Çoğu kuruluş bu ikisi için bir birleşim uygulamayı seçer.
+CDN varlıklarınızı _kaynak_ olarak adlandırılan bir konumdan getirir. Kaynak, URL tarafından erişilebilen bir SharePoint sitesi, belge kitaplığı veya klasör olabilir. Kuruluşunuz için kaynak belirtirken büyük bir esnekliğe sahip olursunuz. Örneğin, tüm CDN varlıklarınızı yerleştirmek istediğiniz birden çok kaynak veya tek bir çıkış noktası belirtebilirsiniz. Kuruluşunuz için hem genel hem de özel kaynaklardan birini seçebilirsiniz. Çoğu kuruluş ikisinin birleşimini uygulamayı seçecektir.
 
-Kaynak olarak klasörler veya belge kitaplıkları gibi yeni kapsayıcılar oluşturabilir ve ilk kapsayıcıda kullanılabilir hale gelen dosyalar CDN. CDN'de kullanılabilir durumda olmak istediğiniz belirli bir varlık kümeniz varsa ve CDN varlık kümelerini kapsayıcıda yalnızca bu dosyalar ile kısıtlamak istiyorsanız, bu yaklaşım iyi bir yaklaşımdır.
+Kaynaklarınız için klasörler veya belge kitaplıkları gibi yeni kapsayıcılar oluşturabilir ve CDN kullanılabilir hale getirmek istediğiniz dosyaları ekleyebilirsiniz. CDN kullanılabilir olmasını istediğiniz belirli bir varlık kümeniz varsa ve CDN varlık kümesini yalnızca kapsayıcıdaki dosyalarla kısıtlamak istiyorsanız bu iyi bir yaklaşımdır.
 
-Var olan bir site koleksiyonunu, siteyi, kitaplığı veya klasörü kaynak olarak yapılandırabilirsiniz ve kapsayıcıda bulunan tüm uygun varlıklar kaynak klasörden CDN. Var olan bir kapsayıcıyı kaynak olarak eklemeden önce, bu kapsayıcının içeriğini ve izinlerini bildiğinizden emin olun, böylece varlıkları istemeden anonim erişime veya yetkisiz kullanıcılara açık hale gelirsiniz.
+Ayrıca kaynak olarak mevcut bir site koleksiyonunu, siteyi, kitaplığı veya klasörü yapılandırabilirsiniz; bu da kapsayıcıdaki tüm uygun varlıkların CDN kullanılabilir olmasını sağlar. Var olan bir kapsayıcıyı kaynak olarak eklemeden önce, varlıkları yanlışlıkla anonim erişime veya yetkisiz kullanıcılara sunmamak için içeriklerini ve izinlerini bildiğinizden emin olmanız önemlidir.
 
-Kaynak içeriği _CDN için_ farklı ilkeler CDN. CDN ilkeleri, dosya türü ve _site_ sınıflandırması gibi özniteliklere göre genel veya özel kaynaklarda bulunan varlıkları dışlar ve ilkede belirttiğiniz CdnType (özel veya genel) tüm kaynaklarında uygulanır. Örneğin, birden çok alt site içeren bir siteden oluşan bir özel kaynak eklerseniz, Gizli olarak işaretlenmiş siteleri dışarıda tutmak için bir ilke tanımlayabilirsiniz; bu sınıflandırma  uygulanmış olan sitelerden içerik servis CDN. İlke, ekli _kaynaklarda yer_ alan tüm özel kaynaklarda yer alan içeriğe CDN.
+Kaynaklarınızdaki içeriği _CDN_ dışında tutmak için CDN ilkeleri tanımlayabilirsiniz. CDN ilkeleri, ortak veya özel kaynaklardaki varlıkları _dosya türü_ ve _site sınıflandırması_ gibi özniteliklere göre dışlar ve ilkede belirttiğiniz CdnType'ın (özel veya genel) tüm çıkış noktalarına uygulanır. Örneğin, birden çok alt site içeren bir siteden oluşan özel bir kaynak eklerseniz, **gizli** olarak işaretlenmiş siteleri dışlamak için bir ilke tanımlayabilirsiniz, böylece bu sınıflandırmaya sahip sitelerden içerik CDN sunulmaz. İlke, CDN eklediğiniz _tüm_ özel kaynaklardan gelen içeriğe uygulanır.
 
-Kaynak sayısını ne kadar büyük olursa, istekleri işlemesi için kaynak hizmet CDN zaman içinde o kadar büyük bir etki olduğunu unutmayın. Kaynak sayısını mümkün olduğunca fazla sınırlandırmanizi öneririz.
+Kaynak sayısı ne kadar fazlaysa, CDN hizmetinin istekleri işleme süresi üzerindeki etkisinin de o kadar fazla olduğunu unutmayın. Kaynak sayısını mümkün olduğunca sınırlamanızı öneririz.
 
 <a name="CDNOriginChoosePublicPrivate"> </a>
-### <a name="choose-whether-each-origin-should-be-public-or-private"></a>Her kaynağın genel mi yoksa özel mi olacağını seçme
+### <a name="choose-whether-each-origin-should-be-public-or-private"></a>Her kaynağın genel mi yoksa özel mi olacağını seçin
 
-Bir kaynağı tanımlığında, genel mi yoksa özel mi _olacağını belirtirsiniz_. Ortak kaynaklarda CDN erişim anonimdir ve özel CDN içeriklerin güvenliği daha yüksek güvenlik için dinamik olarak oluşturulan belirteçler tarafından güvence altına alınır. Hangi seçeneği tercih ederseniz belirtin, söz konusu yönetim söz konusu olduğunda Microsoft tüm ağır CDN yapar. Ayrıca, daha sonra kaynaklarınızı ayardikten ve kaynaklarınızı belirledikten CDN fikir değiştirebilirsiniz.
+Bir kaynağı belirlediğinizde, _bunun genel_ mi yoksa _özel_ mi olacağını belirtirsiniz. Genel kaynaklarda CDN varlıklara erişim anonimdir ve özel kaynaklardaki CDN içerik daha fazla güvenlik için dinamik olarak oluşturulan belirteçlerle güvenli hale getirilmiştir. Hangi seçeneği belirlediğinizden bağımsız olarak, CDN yönetimi söz konusu olduğunda Microsoft sizin için tüm ağır işi yapar. Ayrıca, CDN ayarladıktan ve kaynaklarınızı belirledikten sonra fikrinizi daha sonra değiştirebilirsiniz.
 
-Hem genel hem de özel seçenekler benzer performans kazançları sağlar, ancak her seçeneğin benzersiz öznitelikleri ve avantajları vardır.
+Hem genel hem de özel seçenekler benzer performans kazançları sağlar, ancak her birinde benzersiz öznitelikler ve avantajlar vardır.
 
-**Kaynakta** yer alan Office 365 CDN anonim olarak erişilebilir ve barındırılan varlıklara, varlığın URL'si olan herkes tarafından erişilebilir. Genel kaynaklarda içeriğe erişim anonim olduğundan, bunları yalnızca JavaScript dosyaları, betikler, simgeler ve resimler gibi hassas olmayan genel içeriği önbelleğe alırsiniz.
+Office 365 CDN içindeki **genel** kaynaklara anonim olarak erişilebilir ve barındırılan varlıklara, varlığın URL'sine sahip olan herkes erişebilir. Genel kaynaklardaki içeriğe erişim anonim olduğundan, bunları yalnızca JavaScript dosyaları, betikler, simgeler ve görüntüler gibi hassas olmayan genel içerikleri önbelleğe almak için kullanmanız gerekir.
 
-**Site** içindeki özel Office 365 CDN, SharePoint Online belge kitaplıkları, siteler ve özel resimler gibi kullanıcı içeriğine özel erişim sağlar. Özel kaynaklarda içeriğe erişim dinamik olarak oluşturulan belirteçler tarafından güvence altına alınır, dolayısıyla bu içeriğe yalnızca özgün belge kitaplığı veya depolama konumu izinleri olan kullanıcılar tarafından erişilebilir. Office 365 CDN'daki özel varlıklar yalnızca SharePoint Online içeriği için kullanılabilir ve SharePoint Online kiracınızı yeniden yönlendirme yoluyla özel kaynaklarda yer alan varlıklara erişebilirsiniz.
+Office 365 CDN içindeki **özel** kaynaklar, SharePoint Çevrimiçi belge kitaplıkları, siteler ve özel görüntüler gibi kullanıcı içeriğine özel erişim sağlar. Özel kaynaklardaki içeriğe erişim dinamik olarak oluşturulan belirteçlerle güvenli hale getirildiğinden, içeriğe yalnızca özgün belge kitaplığı veya depolama konumu izinleri olan kullanıcılar tarafından erişilebilir. Office 365 CDN özel kaynaklar yalnızca çevrimiçi SharePoint içerik için kullanılabilir ve yalnızca SharePoint Online kiracınızdan yeniden yönlendirme yoluyla özel kaynaklardaki varlıklara erişebilirsiniz.
 
-Özel kaynakta yer alan varlıklara CDN nasıl eriş erişilen hakkında daha fazla bilgi için Özel kaynaklarda varlıkları [kullanma makalesinde okuyabilirsiniz](use-microsoft-365-cdn-with-spo.md#using-assets-in-private-origins).
+Özel bir kaynaktaki varlıklara CDN erişimin nasıl çalıştığı hakkında daha fazla bilgi için bkz. [Varlıkları özel kaynaklarda kullanma](use-microsoft-365-cdn-with-spo.md#using-assets-in-private-origins).
 
 #### <a name="attributes-and-advantages-of-hosting-assets-in-public-origins"></a>Varlıkları genel kaynaklarda barındırmanın öznitelikleri ve avantajları
 
-+ Genel kökende açığa açığa çıkaran varlıklara herkes anonim olarak erişmektedir.
++ Genel bir kaynakta kullanıma sunulan varlıklara anonim olarak herkes erişebilir.
     > [!IMPORTANT]
-    > Hiçbir zaman kullanıcı bilgileri içeren veya genel olarak organizasyona duyarlı kabul edilen kaynakları değerlendirmeniz gerekir.
+    > Kullanıcı bilgilerini içeren veya kuruluşunuza duyarlı olarak kabul edilen kaynakları hiçbir zaman genel bir kaynakta yerleştirmemelisiniz.
 
-+ Bir varlığı genel kaynaktan kaldırırsanız, mal önbellekten 30 gün boyunca kullanılabilir olmaya devam eder; ancak 15 dakika içinde e-postada CDN geçersiz kılınacak.
++ Bir varlığı genel kaynaktan kaldırırsanız, varlık önbellekten 30 güne kadar kullanılabilir olmaya devam edebilir; ancak, 15 dakika içinde CDN varlığın bağlantılarını geçersiz kılacaktır.
 
-+ Genel kaynak olarak stil sayfalarını (CSS dosyaları) barındırıyorken, kod içindeki göreli yolları ve  URL'leri kullanabilirsiniz. Bu, adı geçen varlığın konumuyla ilgili olarak arka plan resimleri ve diğer nesnelerin konumlarını başvurabilirsiniz.
++ Stil sayfalarını (CSS dosyaları) genel bir kaynakta barındırdığınızda, kod içinde göreli yolları ve URI'leri kullanabilirsiniz. Bu, arka plan görüntülerinin ve diğer nesnelerin konumuna, onu çağıran varlığın konumuna göre başvurabileceğiniz anlamına gelir.
 
-+ Genel bir kaynağın URL'sini hazır bulundurabilirsiniz, ancak dikkatli olmalı ve sayfa bağlam özelliğinden faydalanmalı ve bunu yapmak için yönergeleri takip etlisiniz. Bunun nedeni, URL'nin CDN Veritabanına erişimin kullanılamaz hale gelirse, SharePoint Online'da url'nin otomatik olarak çözülmezse bağlantılarının koparak başka hatalara neden olabileceğidir. URL de değişebilir ve bu nedenle geçerli değerine sabit kodlu olarak kodlanmayacaktır.
++ Genel bir kaynağın URL'sini oluşturabilmenize rağmen dikkatli olmalı ve sayfa bağlamı özelliğini kullandığınızdan emin olmalı ve bunu yapmak için yönergeleri izlemelisiniz. Bunun nedeni, CDN erişim kullanılamaz duruma gelirse URL'nin SharePoint Online'da kuruluşunuza otomatik olarak çözümlenmeyecek olması ve bağlantıların bozulmasına ve diğer hatalara neden olmasıdır. URL de değiştirilebilir ve bu nedenle yalnızca geçerli değerine sabit kodlanmamalıdır.
 
-+ Genel kökenler için dahil edilen varsayılan dosya türleri .css, .eot, .gif, .ico, .jpeg, .jpg, .js, .map, .png, .svg, .ttf, .woff ve .woff2'tir. Ek dosya türleri belirtebilirsiniz.
++ Genel kaynaklar için eklenen varsayılan dosya türleri .css, .eot, .gif, .ico, .jpeg, .jpg, .js, .map, .png, .svg, .ttf, .woff ve .woff2'dir. Ek dosya türleri belirtebilirsiniz.
 
-+ Belirttiğiniz site sınıflandırmalarına göre tanımlanan varlıkları dışarıda tutmak için bir ilke yapılandırabilirsiniz. Örneğin, izin verilen dosya türünde olsalar ve genel kaynakta yer alıyor olsalar bile "gizli" veya "kısıtlanmış" olarak işaretlenmiş tüm varlıkları hariç tutabilirsiniz.
++ Bir ilkeyi, belirttiğiniz site sınıflandırmaları tarafından tanımlanan varlıkları dışlamak için yapılandırabilirsiniz. Örneğin, "gizli" veya "kısıtlanmış" olarak işaretlenen tüm varlıkları, izin verilen bir dosya türü olsalar ve genel bir kaynakta yer alıyor olsalar bile hariç tutabilirsiniz.
 
 #### <a name="attributes-and-advantages-of-hosting-assets-in-private-origins"></a>Varlıkları özel kaynaklarda barındırmanın öznitelikleri ve avantajları
 
-+ Özel varlıklar yalnızca çevrimiçi varlıklar için SharePoint kullanılabilir.
++ Özel kaynaklar yalnızca SharePoint Çevrimiçi varlıklar için kullanılabilir.
 
-+ Kullanıcılar özel kökenden varlıklara ancak kapsayıcıya erişim izinleri varsa erişim sağlar. Bu varlıklara anonim erişim engellenebilir.
++ Kullanıcılar varlıklara yalnızca kapsayıcıya erişim izinleri varsa özel bir kaynaktan erişebilir. Bu varlıklara anonim erişim engellenir.
 
-+ Özel kaynaklarda yer alan varlıklar çevrimiçi kiracıdan SharePoint gerekir. Özel veya özel CDN doğrudan erişim çalışmaz.
++ Özel kaynaklardaki varlıklar SharePoint Online kiracısından yönlendirilmelidir. Özel CDN varlıklarına doğrudan erişim çalışmaz.
 
-+ Bir varlığı özel kaynaktan kaldırırsanız, önbellekten bir saate kadar kullanılabilir olmaya devam eder; ancak, varlık kaldırma işlemi CDN 15 dakika içinde var olan varlık bağlantılarını geçersiz kılınz.
++ Bir varlığı özel kaynaktan kaldırırsanız, varlık önbellekten bir saate kadar kullanılabilir olmaya devam edebilir; ancak, varlığın kaldırılmasından sonra 15 dakika içinde CDN varlık bağlantılarını geçersiz kılacaktır.
 
-+ Özel kökenler için varsayılan dosya türleri .gif, .ico, .jpeg, .jpg, .js ve .png. Ek dosya türleri belirtebilirsiniz.
++ Özel kaynaklarda bulunan varsayılan dosya türleri .gif, .ico, .jpeg, .jpg, .js ve .png'dır. Ek dosya türleri belirtebilirsiniz.
 
-+ Genel kaynaklarda olduğu gibi, bir klasör veya belge kitaplığı içindeki tüm varlıkları eklemek için joker karakterler kullansanız bile, belirttiğiniz site sınıflandırmaları tarafından tanımlanan varlıkları dışarıda tutmak için bir ilke yapılandırabilirsiniz.
++ Genel kaynaklarda olduğu gibi, klasör veya belge kitaplığındaki tüm varlıkları dahil etmek için joker karakterler kullansanız bile belirttiğiniz site sınıflandırmalarıyla tanımlanan varlıkları dışlamak için bir ilke yapılandırabilirsiniz.
 
-Office 365 kiracınız ile kullanabileceğiniz Office 365 CDN, genel CDN kavramlarını ve diğer Microsoft CDN'lerini neden kullanabileceğiniz hakkında daha fazla bilgi için bkz. İçerik Teslim [Ağları](content-delivery-networks.md).
+Office 365 CDN, genel CDN kavramlarını ve Office 365 kiracınızla kullanabileceğiniz diğer Microsoft CDN'lerini kullanma hakkında daha fazla bilgi için bkz. [Content Delivery Networks](content-delivery-networks.md).
 
-### <a name="default-cdn-origins"></a>Varsayılan CDN kaynak
+### <a name="default-cdn-origins"></a>Varsayılan CDN çıkış noktaları
 
-Aksini belirtmedikçe, Office 365 etkinleştirmeniz bazı varsayılan kaynak ayarlarını Office 365 CDN. Başlangıçta sağlamamayı tercih ediyorsanız, kurulumu tamamladikten sonra bu kökenleri  eklersiniz. Varsayılan kaynak kurulumunu atlamanın sonuçlarını anlamadıysanız ve bunun belirli bir nedeni yoksa, varsayılan ayarı etkinleştirirken onların oluşturulmalarına izin CDN.
+Aksini belirtmediğiniz sürece, Office 365 Office 365 CDN etkinleştirdiğinizde sizin için bazı varsayılan çıkış noktaları ayarlar. Başlangıçta sağlamamayı tercih ederseniz, kurulumu tamamladıktan sonra bu kaynakları ekleyebilirsiniz. Varsayılan çıkış noktalarının kurulumunu atlamanın sonuçlarını anlamadığınız ve bunu yapmak için belirli bir nedeniniz olmadığı sürece, CDN etkinleştirdiğinizde bunların oluşturulmasına izin vermelisiniz.
 
-Varsayılan özel CDN kaynaktır:
+Varsayılan özel CDN çıkış noktaları:
 
 + \*/userphoto.aspx
 + \*/siteassets
 
-Varsayılan genel CDN kaynaktır:
+Varsayılan genel CDN çıkış noktaları:
 
 + \*/masterpage
 + \*/style library
 + \*/clientsideassets
 
 > [!NOTE]
-> _clientsideassets_, aralık 2017'de Office 365 CDN hizmetine eklenen varsayılan genel kaynaktır. Çalışma 2013'te çözüm SharePoint Framework için bu CDN olması gerekir. İlk ayarı Office 365 CDN Aralık 2017'den önce etkinleştirdiyseniz veya kaynağı etkinleştirdikten sonra varsayılan kaynak kurulumunu CDN, bu kaynağı el ile ekleyebilirsiniz. Daha fazla bilgi [için bkz. İstemci tarafı web bölümüm veya SharePoint Framework çözüm çalışmıyor](use-microsoft-365-cdn-with-spo.md#my-client-side-web-part-or-sharepoint-framework-solution-isnt-working).
+> _clientsideassets_, Aralık 2017'de Office 365 CDN hizmetine eklenen varsayılan bir genel kaynaktır. CDN SharePoint Framework çözümlerinin çalışması için bu kaynağın mevcut olması gerekir. Office 365 CDN Aralık 2017'ye kadar etkinleştirdiyseniz veya CDN etkinleştirdiğinizde varsayılan çıkış noktalarının kurulumunu atladıysanız, bu kaynağı el ile ekleyebilirsiniz. Daha fazla bilgi için bkz. [İstemci tarafı web bölümüm veya SharePoint Framework çözümüm çalışmıyor](use-microsoft-365-cdn-with-spo.md#my-client-side-web-part-or-sharepoint-framework-solution-isnt-working).
 
 <a name="CDNSetupinPShell"> </a>
-## <a name="set-up-and-configure-the-office-365-cdn-by-using-the-sharepoint-online-management-shell"></a>SharePoint Online Yönetim Kabuğu'Office 365 CDN ayarlama ve yapılandırma
+## <a name="set-up-and-configure-the-office-365-cdn-by-using-the-sharepoint-online-management-shell"></a>SharePoint Online Management Shell kullanarak Office 365 CDN ayarlama ve yapılandırma
 
-Bu bölümdeki yordamlar için, SharePoint Online'a bağlanmak için SharePoint gerekir. Yönergeler için bkz. [Bağlan Online PowerShell SharePoint e yükleme](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
+Bu bölümdeki yordamlar, SharePoint Online'a bağlanmak için SharePoint Çevrimiçi Yönetim Kabuğu'nı kullanmanızı gerektirir. Yönergeler için bkz. [Çevrimiçi PowerShell'i SharePoint için Bağlan](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
 
-çevrimiçi Yönetim Kabuğu'CDN kullanarak SharePoint Online'da varlıklarınızı barındırmak üzere SharePoint adımları tamamlayın.
+SharePoint Online Management Shell'i kullanarak varlıklarınızı SharePoint Online'da barındıracak CDN ayarlamak ve yapılandırmak için bu adımları tamamlayın.
 
 <details>
   <summary>Genişletmek için tıklayın</summary>
 
-### <a name="enable-your-organization-to-use-the-office-365-cdn"></a>Kuruluşun diğer özellikleri kullanmalarını Office 365 CDN
+### <a name="enable-your-organization-to-use-the-office-365-cdn"></a>Kuruluşunuzun Office 365 CDN kullanmasını sağlama
 
-Kiracının son ayarlarını değiştirmeden CDN, kiracınız için özel güvenlik CDN durumunu Office 365 gerekir. Bağlan Çevrimiçi Yönetim Kabuğu'SharePoint kiracınıza geri alın:
+Kiracı CDN ayarlarında değişiklik yapmadan önce, Office 365 kiracınızdaki özel CDN yapılandırmasının geçerli durumunu almanız gerekir. SharePoint Çevrimiçi Yönetim Kabuğu'nı kullanarak kiracınıza Bağlan:
 
 ```powershell
 Connect-SPOService -Url https://contoso-admin.sharepoint.com
 ```
 
-Şimdi, **Get-SPOTenantCdnEnabled** cmdlet'ini kullanarak kiracıdan CDN ayarları alın:
+Şimdi kiracıdan CDN durum ayarlarını almak için **Get-SPOTenantCdnEnabled cmdlet'ini** kullanın:
 
 ```powershell
 Get-SPOTenantCdnEnabled -CdnType <Public | Private>
 ```
 
-Belirtilen CdnType CDN dosyanın durumu ekrana çıktısı olarak gelir.
+Belirtilen CdnType için CDN durumu ekrana yansıtılır.
 
-**Set-SPOTenantCdnEnabled** cmdlet'ini kullanarak kuruluş bu cmdlet'i Office 365 CDN. Kuruluş genel kaynaklarınızı, özel kaynaklarınızı veya her ikisini de aynı anda kullanmalarını s sağlar. Ayrıca, ayarları CDN varsayılan kaynak ayarlarını atlayıp atlamayı da yapılandırabilirsiniz. Bu kökenleri daha sonra bu konuda açıklandığı gibi daha sonra istediğiniz zaman  eklersiniz.
+Kuruluşunuzun Office 365 CDN kullanmasını sağlamak için **Set-SPOTenantCdnEnabled cmdlet'ini** kullanın. Kuruluşunuzun ortak kaynakları, özel kaynakları veya her ikisini birden aynı anda kullanmasını sağlayabilirsiniz. Ayrıca, etkinleştirdiğinizde varsayılan çıkış noktalarının kurulumunu atlamak için CDN yapılandırabilirsiniz. Bu kaynakları daha sonra bu konuda açıklandığı gibi ekleyebilirsiniz.
 
-Windows PowerShell Online için SharePoint'de:
+SharePoint Online için Windows PowerShell'da:
 
 ```powershell
 Set-SPOTenantCdnEnabled -CdnType <Public | Private | Both> -Enable $true
 ```
 
-Örneğin, kuruluşun hem genel hem de özel kaynak kullanımına izin vermek için aşağıdaki komutu yazın:
+Örneğin, kuruluşunuzun hem genel hem de özel kaynakları kullanmasını sağlamak için aşağıdaki komutu yazın:
 
 ```powershell
 Set-SPOTenantCdnEnabled -CdnType Both -Enable $true
 ```
 
-Kuruluşta hem genel hem de özel kökenleri kullanmalarını sağlamak, ancak varsayılan kaynak ayarlarını atlamak için aşağıdaki komutu yazın:
+Kuruluşunuzun hem genel hem de özel kaynak kullanmasını sağlamak ancak varsayılan çıkış noktalarını ayarlamayı atlamak için aşağıdaki komutu yazın:
 
 ```powershell
 Set-SPOTenantCdnEnabled -CdnType Both -Enable $true -NoDefaultOrigins
 ```
 
-Varsayılan [CDN etkinleştirme sırasında](use-microsoft-365-cdn-with-spo.md#default-cdn-origins) varsayılan olarak sağlanan kaynaklarla ilgili bilgiler için varsayılan kaynak Office 365 CDN ve varsayılan kaynak kurulumlarını atlamanın olası etkileri hakkında bilgi için bkz.
+Office 365 CDN etkinleştirdiğinizde varsayılan olarak sağlanan kaynaklar ve varsayılan [çıkış](use-microsoft-365-cdn-with-spo.md#default-cdn-origins) noktalarının kurulumunu atlamanın olası etkisi hakkında bilgi için bkz. Varsayılan CDN çıkış noktaları.
 
-Kuruluş genel kaynak kullanımına olanak sağlamak için aşağıdaki komutu yazın:
+Kuruluşunuzun genel kaynakları kullanmasını sağlamak için aşağıdaki komutu yazın:
 
 ```powershell
 Set-SPOTenantCdnEnabled -CdnType Public -Enable $true
 ```
 
-Kuruluşta özel kökenleri kullanmalarını sağlamak için, aşağıdaki komutu yazın:
+Kuruluşunuzun özel çıkış noktalarını kullanmasını sağlamak için aşağıdaki komutu yazın:
 
 ```powershell
 Set-SPOTenantCdnEnabled -CdnType Private -Enable $true
@@ -238,26 +238,26 @@ Set-SPOTenantCdnEnabled -CdnType Private -Enable $true
 Bu cmdlet hakkında daha fazla bilgi için bkz. [Set-SPOTenantCdnEnabled](/powershell/module/sharepoint-online/Set-SPOTenantCdnEnabled).
 
 <a name="Office365CDNforSPOFileType"> </a>
-### <a name="change-the-list-of-file-types-to-include-in-the-office-365-cdn-optional"></a>Dosya türleri listesini dosyaya eklemek için değiştirme (Office 365 CDN)
+### <a name="change-the-list-of-file-types-to-include-in-the-office-365-cdn-optional"></a>Dosya türlerinin listesini Office 365 CDN eklenecek şekilde değiştirme (İsteğe bağlı)
 
 > [!TIP]
-> **Set-SPOTenantCdnPolicy** cmdlet'ini kullanarak dosya türlerini tanımladığınız zaman, o anda tanımlanmış olan listenin üzerine yazmanız gerekir. Listeye başka dosya türleri eklemek için önce cmdlet'i kullanarak hangi dosya türlerine zaten izin verilmiyor ve yeni dosya türleriyle birlikte bu türler de listeye dahil edildi.
+> **Set-SPOTenantCdnPolicy cmdlet'ini** kullanarak dosya türlerini tanımladığınızda, şu anda tanımlanmış olan listenin üzerine yazarsınız. Listeye başka dosya türleri eklemek istiyorsanız, önce cmdlet'ini kullanarak hangi dosya türlerine zaten izin verilip bunları yeni dosya türlerinizle birlikte listeye ekleyin.
 
-Küme içinde genel ve özel kökenler tarafından barındırılan statik dosya türlerini tanımlamak için **Set-SPOTenantCdnPolicy** cmdlet'ini CDN. Varsayılan olarak, yaygın varlık türlerine izin verilir (.css, .gif, .jpg, ve .js.
+CDN genel ve özel kaynaklar tarafından barındırılabilir statik dosya türlerini tanımlamak için **Set-SPOTenantCdnPolicy** cmdlet'ini kullanın. Varsayılan olarak, .css, .gif, .jpg ve .js gibi ortak varlık türlerine izin verilir.
 
-Windows PowerShell Online için SharePoint'de:
+SharePoint Online için Windows PowerShell'da:
 
 ```powershell
 Set-SPOTenantCdnPolicy -CdnType <Public | Private> -PolicyType IncludeFileExtensions -PolicyValue "<Comma-separated list of file types >"
 ```
 
-Örneğin, .css CDN dosyaları barındırmak .png etkinleştirmek için şu komutu girmeniz gerekir:
+Örneğin, .css ve .png dosyalarını barındırmak için CDN etkinleştirmek için komutunu girersiniz:
 
 ```powershell
 Set-SPOTenantCdnPolicy -CdnType Private -PolicyType IncludeFileExtensions -PolicyValue "CSS,PNG"
 ```
 
-O anda hangi dosya türlerine izin verilmiyor? CDN **Get-SPOTenantCdnPolicies** cmdlet'ini kullanın:
+CDN tarafından şu anda hangi dosya türlerine izin verıldığını görmek için **Get-SPOTenantCdnPolicies** cmdlet'ini kullanın:
 
 ```powershell
 Get-SPOTenantCdnPolicies -CdnType <Public | Private>
@@ -266,74 +266,74 @@ Get-SPOTenantCdnPolicies -CdnType <Public | Private>
 Bu cmdlet'ler hakkında daha fazla bilgi için bkz. [Set-SPOTenantCdnPolicy](/powershell/module/sharepoint-online/) ve [Get-SPOTenantCdnPolicies](/powershell/module/sharepoint-online/).
 
 <a name="Office365CDNforSPOSiteClassification"> </a>
-### <a name="change-the-list-of-site-classifications-you-want-to-exclude-from-the-office-365-cdn-optional"></a>Sınıflandırmaların dışında tutmak istediğiniz site sınıflandırmalarının listesini değiştirme (Office 365 CDN)
+### <a name="change-the-list-of-site-classifications-you-want-to-exclude-from-the-office-365-cdn-optional"></a>Office 365 CDN dışında tutmak istediğiniz site sınıflandırmaları listesini değiştirme (İsteğe bağlı)
 
 > [!TIP]
-> **Set-SPOTenantCdnPolicy** cmdlet'ini kullanarak site sınıflandırmalarını dışarıda bıraksanız bile, o anda tanımlanmış olan listenin üzerine yazmazsanız. Ek site sınıflandırmalarını dışarıda tutmak için önce cmdlet'i kullanarak hangi sınıflandırmaların zaten hariç tutuldiğini bulun ve yeni sınıflandırmalarla birlikte ekleyin.
+> **Set-SPOTenantCdnPolicy cmdlet'ini** kullanarak site sınıflandırmalarını dışladığınızda, şu anda tanımlanmış olan listenin üzerine yazarsınız. Ek site sınıflandırmalarını dışlamak istiyorsanız, önce hangi sınıflandırmaların zaten dışlandığını öğrenmek için cmdlet'ini kullanın ve ardından bunları yeni sınıflandırmalarınızla birlikte ekleyin.
 
-Küme üzerinde kullanılabilir yapmak istediğiniz site sınıflandırmalarını dışarıda tutmak için **Set-SPOTenantCdnPolicy** cmdlet'ini CDN. Varsayılan olarak, site sınıflandırmaları dahil değildir.
+CDN üzerinde kullanılabilir hale getirmek istemediğiniz site sınıflandırmalarını dışlamak için **Set-SPOTenantCdnPolicy** cmdlet'ini kullanın. Varsayılan olarak, hiçbir site sınıflandırması hariç tutulmaz.
 
-Windows PowerShell Online için SharePoint'de:
+SharePoint Online için Windows PowerShell'da:
 
 ```powershell
 Set-SPOTenantCdnPolicy -CdnType <Public | Private> -PolicyType ExcludeRestrictedSiteClassifications  -PolicyValue "<Comma-separated list of site classifications >"
 ```
 
-Şu anda kısıtlanmış site sınıflandırmalarını görmek için **Get-SPOTenantCdnPolicies** cmdlet'ini kullanın:
+Şu anda hangi site sınıflandırmalarının kısıtlandığını görmek için **Get-SPOTenantCdnPolicies** cmdlet'ini kullanın:
 
 ```powershell
 Get-SPOTenantCdnPolicies -CdnType <Public | Private>
 ```
 
-Döndürülen özellikler _IncludeFileExtensions_, _ExcludeRestrictedSiteClassifications ve_ _ExcludeIfNoScriptDisabled'dır_.
+Döndürülecek özellikler _IncludeFileExtensions_, _ExcludeRestrictedSiteClassifications_ ve _ExcludeIfNoScriptDisabled'dır_.
 
-_IncludeFileExtensions_ özelliği, hizmet dosyasından gelen dosya uzantılarının listesini CDN.
+_IncludeFileExtensions_ özelliği, CDN sunulacak dosya uzantılarının listesini içerir.
 
 > [!NOTE]
-> Varsayılan dosya uzantıları ortak ve özel arasında farklıdır.
+> Varsayılan dosya uzantıları genel ve özel arasında farklıdır.
 
-_ExcludeRestrictedSiteClassifications özelliği_, sınıflandırmaların dışında tutmak istediğiniz site sınıflandırmalarını CDN. Örneğin, Gizli olarak işaretlenmiş siteleri hariç **tutabilirsiniz**; böylece sınıflandırma uygulanmış olan sitelerde bu sınıflandırmaya hizmet CDN.
+_ExcludeRestrictedSiteClassifications_ özelliği, CDN dışında tutmak istediğiniz site sınıflandırmalarını içerir. Örneğin, **Gizli** olarak işaretlenen siteleri dışlayabilirsiniz, böylece bu sınıflandırmaya sahip sitelerdeki içerikler CDN sunulmaz.
 
-_ExcludeIfNoScriptDisabled özelliği_, site CDN _NoScript_ öznitelik ayarlarına bağlı olarak içeriği dışlar. Varsayılan olarak, _NoScript özniteliği_ Modern siteler için **Etkin ve** _Klasik siteler_ için **Devre Dışı** _olarak_ ayarlanır. Bu, kiracı ayarlarınıza bağlıdır.
+_ExcludeIfNoScriptDisabled_ özelliği, site düzeyi _NoScript_ öznitelik ayarlarına göre içeriği CDN dışında tutar. Varsayılan olarak _, NoScript_ özniteliği _Modern_ siteler için **etkin** ve _Klasik_ siteler için **devre dışı** olarak ayarlanır. Bu, kiracı ayarlarınıza bağlıdır.
 
 Bu cmdlet'ler hakkında daha fazla bilgi için bkz. [Set-SPOTenantCdnPolicy](/powershell/module/sharepoint-online/) ve [Get-SPOTenantCdnPolicies](/powershell/module/sharepoint-online/).
 
 <a name="Office365CDNforSPOOriginPosh"> </a>
 ### <a name="add-an-origin-for-your-assets"></a>Varlıklarınız için kaynak ekleme
 
-Bir kaynak **tanımlamak için Add-SPOTenantCdnOrigin** cmdlet'ini kullanın. Birden çok kaynak tanımlayabilirsiniz. Kaynak, ana bilgisayar tarafından barındır SharePoint istediğiniz varlıkları içeren bir kitaplık veya klasöre CDN.
+Bir kaynak tanımlamak için **Add-SPOTenantCdnOrigin** cmdlet'ini kullanın. Birden çok kaynak tanımlayabilirsiniz. Kaynak, CDN tarafından barındırılmasını istediğiniz varlıkları içeren bir SharePoint kitaplığına veya klasöre işaret eden bir URL'dir.
 
 > [!IMPORTANT]
-> Hiçbir zaman kullanıcı bilgileri içeren veya genel olarak organizasyona duyarlı kabul edilen kaynakları değerlendirmeniz gerekir.
+> Kullanıcı bilgilerini içeren veya kuruluşunuza duyarlı olarak kabul edilen kaynakları hiçbir zaman genel bir kaynakta yerleştirmemelisiniz.
 
 ```powershell
 Add-SPOTenantCdnOrigin -CdnType <Public | Private> -OriginUrl <path>
 ```
 
-Yol değeri _,_ varlıkları içeren kitaplık veya klasörün göreli yoludur. Göreli yollara ek olarak joker karakterler de kullanabilirsiniz. Kökenler, URL'ye hazır joker karakterleri destekler. Bu, birden çok siteyi kapsayan kökenler oluşturmanıza olanak sağlar. Örneğin, tüm sitelerinizi ana sayfalar klasöründe bulunan varlıkları kaynak bilgisinde genel kaynak olarak CDN, aşağıdaki komutu yazın:
+_Yol_ değeri, varlıkları içeren kitaplığın veya klasörün göreli yoludur. Göreli yollara ek olarak joker karakterler de kullanabilirsiniz. Kaynaklar, URL'ye önceden eklenen joker karakterleri destekler. Bu, birden çok siteye yayılan kaynaklar oluşturmanıza olanak tanır. Örneğin, tüm sitelerinizin masterpages klasörüne tüm varlıkları CDN genel kaynak olarak eklemek için aşağıdaki komutu yazın:
 
 ```powershell
 Add-SPOTenantCdnOrigin -CdnType Public -OriginUrl */masterpage
 ```
 
-+ * joker karakter değiştiricisi ***/** yalnızca yolun başında kullanılabilir ve belirtilen URL'nin altındaki tüm URL kesimlerini eşler.
-+ Yol bir belge kitaplığına, klasöre veya siteye işaret ediyor olabilir. Örneğin, _*/site1 yolu sitenin_ altındaki tüm belge kitaplıklarını eşler.
++ Joker karakter değiştirici ***/** yalnızca yolun başında kullanılabilir ve belirtilen URL'nin altındaki tüm URL kesimleriyle eşleşir.
++ Yol bir belge kitaplığına, klasöre veya siteye işaret edebilir. Örneğin, _*/site1_ yolu sitenin altındaki tüm belge kitaplıkları ile eşleşir.
 
-Belirli bir göreli yol ile bir kaynak  eklersiniz. Tam yolu kullanarak bir kaynak ekamazsiniz.
+Belirli bir göreli yola sahip bir kaynak ekleyebilirsiniz. Tam yolu kullanarak kaynak ekleyemezsiniz.
 
-Bu örnekte, belirli bir sitede site parçaları kitaplığının özel kaynağı ek açıklama yer almaktadır:
+Bu örnek, belirli bir sitedeki siteassets kitaplığının özel kaynağını ekler:
 
 ```powershell
 Add-SPOTenantCdnOrigin -CdnType Private -OriginUrl sites/site1/siteassets
 ```
 
-Bu örnek, site koleksiyonunun site _varlıkları kitaplığında klasör1_ klasörünün özel kaynağını ekler:
+Bu örnek, site koleksiyonunun site varlıkları kitaplığına _folder1_ klasörünün özel kaynağını ekler:
 
 ```powershell
 Add-SPOTenantCdnOrigin -CdnType Private -OriginUrl sites/test/siteassets/folder1
 ```
 
-Yolda boşluk varsa, yolu çift tırnak içine veya %20 URL kodlaması ile değiştirebilirsiniz. Aşağıdaki örnekler, site koleksiyonunun site varlıkları _kitaplığında yer alan klasör 1_ klasörünün özel kaynağını ekler:
+Yolda bir boşluk varsa, yolu çift tırnak içine alabilir veya alanı %20 URL kodlamasıyla değiştirebilirsiniz. Aşağıdaki örnekler, site koleksiyonunun site varlıkları kitaplığında _klasör 1_ klasörünün özel kaynağını ekler:
 
 ```powershell
 Add-SPOTenantCdnOrigin -CdnType Private -OriginUrl sites/test/siteassets/folder%201
@@ -343,112 +343,112 @@ Add-SPOTenantCdnOrigin -CdnType Private -OriginUrl sites/test/siteassets/folder%
 Add-SPOTenantCdnOrigin -CdnType Private -OriginUrl "sites/test/siteassets/folder 1"
 ```
 
-Bu komut ve söz dizimi hakkında daha fazla bilgi için bkz [. Add-SPOTenantCdnOrigin](/powershell/module/sharepoint-online/Add-SPOTenantCdnOrigin).
+Bu komut ve söz dizimi hakkında daha fazla bilgi için bkz. [Add-SPOTenantCdnOrigin](/powershell/module/sharepoint-online/Add-SPOTenantCdnOrigin).
 
 > [!NOTE]
-> Özel kaynaklarda, bir kaynaktan paylaşılan varlıklara kaynak olarak erişilmeden önce yayımlanan ana sürümlerden biri CDN.
+> Özel kaynaklarda, bir kaynaktan paylaşılan varlıkların CDN erişilebilmesi için önce yayımlanmış bir ana sürüme sahip olması gerekir.
 
-Siz komutu çalıştırarak, sistem yapılandırmayı veri merkezi genelinde eşitler. Bu, 15 dakika kadar sürebilir.
+Komutunu çalıştırdıktan sonra sistem yapılandırmayı veri merkezi genelinde eşitler. Bu işlem 15 dakika kadar sürebilir.
 
 <a name="ExamplePublicOrigin"> </a>
-### <a name="example-configure-a-public-origin-for-your-master-pages-and-for-your-style-library-for-sharepoint-online"></a>Örnek: Ana sayfalarınız için ve SharePoint Online için stil kitaplığınız için genel SharePoint yapılandırma
+### <a name="example-configure-a-public-origin-for-your-master-pages-and-for-your-style-library-for-sharepoint-online"></a>Örnek: SharePoint Online için ana sayfalarınız ve stil kitaplığınız için genel kaynak yapılandırma
 
-Normalde, varsayılan ayarı etkinleştirerek bu kökenler sizin için Office 365 CDN. Bununla birlikte, bunları el ile etkinleştirmek için aşağıdaki adımları izleyin.
+Normalde, Office 365 CDN etkinleştirdiğinizde bu kaynaklar varsayılan olarak sizin için ayarlanır. Ancak, bunları el ile etkinleştirmek istiyorsanız aşağıdaki adımları izleyin.
 
-+ Stil **kitaplığını genel kaynak olarak tanımlamak için Add-SPOTenantCdnOrigin** cmdlet'ini kullanın.
++ Stil kitaplığını genel kaynak olarak tanımlamak için **Add-SPOTenantCdnOrigin** cmdlet'ini kullanın.
 
   ```powershell
   Add-SPOTenantCdnOrigin -CdnType Public -OriginUrl */style%20library
   ```
 
-+ Ana sayfaları **genel kaynak olarak tanımlamak için Add-SPOTenantCdnOrigin** cmdlet'ini kullanın.
++ Ana sayfaları genel kaynak olarak tanımlamak için **Add-SPOTenantCdnOrigin** cmdlet'ini kullanın.
 
   ```powershell
   Add-SPOTenantCdnOrigin -CdnType Public -OriginUrl */masterpage
   ```
 
-Bu komut ve söz dizimi hakkında daha fazla bilgi için bkz [. Add-SPOTenantCdnOrigin](/powershell/module/sharepoint-online/Add-SPOTenantCdnOrigin).
+Bu komut ve söz dizimi hakkında daha fazla bilgi için bkz. [Add-SPOTenantCdnOrigin](/powershell/module/sharepoint-online/Add-SPOTenantCdnOrigin).
 
-Siz komutu çalıştırarak, sistem yapılandırmayı veri merkezi genelinde eşitler. Bu, 15 dakika kadar sürebilir.
+Komutunu çalıştırdıktan sonra sistem yapılandırmayı veri merkezi genelinde eşitler. Bu işlem 15 dakika kadar sürebilir.
 
 <a name="ExamplePrivateOrigin"> </a>
-### <a name="example-configure-a-private-origin-for-your-site-assets-site-pages-and-publishing-images-for-sharepoint-online"></a>Örnek: SharePoint Online için site varlıklarınız, site sayfalarınız ve yayımlama resimleriniz için özel SharePoint yapılandırma
+### <a name="example-configure-a-private-origin-for-your-site-assets-site-pages-and-publishing-images-for-sharepoint-online"></a>Örnek: SharePoint Online için site varlıklarınız, site sayfalarınız ve yayımlama görüntüleriniz için özel bir kaynak yapılandırma
 
-+ Site varlıkları **klasörünü özel kaynak olarak tanımlamak için Add-SPOTenantCdnOrigin** cmdlet'ini kullanın.
++ Site varlıkları klasörünü özel kaynak olarak tanımlamak için **Add-SPOTenantCdnOrigin** cmdlet'ini kullanın.
 
   ```powershell
   Add-SPOTenantCdnOrigin -CdnType Private -OriginUrl */siteassets
   ```
 
-+ Site sayfaları **klasörünü özel bir kaynak olarak tanımlamak için Add-SPOTenantCdnOrigin** cmdlet'ini kullanın.
++ Site sayfaları klasörünü özel kaynak olarak tanımlamak için **Add-SPOTenantCdnOrigin** cmdlet'ini kullanın.
 
   ```powershell
   Add-SPOTenantCdnOrigin -CdnType Private -OriginUrl */sitepages
   ```
 
-+ Yayımlama resimleri **klasörünü özel bir kaynak olarak tanımlamak için Add-SPOTenantCdnOrigin** cmdlet'ini kullanın.
++ Yayımlama görüntüleri klasörünü özel kaynak olarak tanımlamak için **Add-SPOTenantCdnOrigin** cmdlet'ini kullanın.
 
   ```powershell
   Add-SPOTenantCdnOrigin -CdnType Private -OriginUrl */publishingimages
   ```
 
-Bu komut ve söz dizimi hakkında daha fazla bilgi için bkz [. Add-SPOTenantCdnOrigin](/powershell/module/sharepoint-online/Add-SPOTenantCdnOrigin).
+Bu komut ve söz dizimi hakkında daha fazla bilgi için bkz. [Add-SPOTenantCdnOrigin](/powershell/module/sharepoint-online/Add-SPOTenantCdnOrigin).
 
-Siz komutu çalıştırarak, sistem yapılandırmayı veri merkezi genelinde eşitler. Bu, 15 dakika kadar sürebilir.
+Komutunu çalıştırdıktan sonra sistem yapılandırmayı veri merkezi genelinde eşitler. Bu işlem 15 dakika kadar sürebilir.
 
 <a name="ExamplePrivateOriginSiteCollection"> </a>
-### <a name="example-configure-a-private-origin-for-a-site-collection-for-sharepoint-online"></a>Örnek: SharePoint Online için site koleksiyonu için özel SharePoint yapılandırma
+### <a name="example-configure-a-private-origin-for-a-site-collection-for-sharepoint-online"></a>Örnek: SharePoint Online için site koleksiyonu için özel çıkış noktası yapılandırma
 
-Bir site **koleksiyonunu özel kaynak olarak tanımlamak için Add-SPOTenantCdnOrigin** cmdlet'ini kullanın. Örneğin:
+Site koleksiyonunu özel kaynak olarak tanımlamak için **Add-SPOTenantCdnOrigin** cmdlet'ini kullanın. Örneğin:
 
 ```powershell
 Add-SPOTenantCdnOrigin -CdnType Private -OriginUrl sites/site1/siteassets
 ```
 
-Bu komut ve söz dizimi hakkında daha fazla bilgi için bkz [. Add-SPOTenantCdnOrigin](/powershell/module/sharepoint-online/Add-SPOTenantCdnOrigin).
+Bu komut ve söz dizimi hakkında daha fazla bilgi için bkz. [Add-SPOTenantCdnOrigin](/powershell/module/sharepoint-online/Add-SPOTenantCdnOrigin).
 
-Siz komutu çalıştırarak, sistem yapılandırmayı veri merkezi genelinde eşitler. SharePoint Online _kiracısı_ CDN hizmetine bağlandığından, Yapılandırma beklemede iletisiyle CDN alabilirsiniz. Bu, 15 dakika kadar sürebilir.
+Komutunu çalıştırdıktan sonra sistem yapılandırmayı veri merkezi genelinde eşitler. SharePoint Online kiracısı CDN hizmetine bağlandığından beklenen yapılandırma _beklemede_ iletisi görebilirsiniz. Bu işlem 15 dakika kadar sürebilir.
 
 <a name="CDNManage"> </a>
-### <a name="manage-the-office-365-cdn"></a>Posta Office 365 CDN
+### <a name="manage-the-office-365-cdn"></a>Office 365 CDN yönetme
 
-Yapılandırmayı bir kez CDN, içeriği güncelleştirken veya ihtiyaçlar değiştiksinde, bu bölümde açıklandığı gibi yapılandırmanız üzerinde değişiklikler yapabilirsiniz.
+CDN ayarladıktan sonra, bu bölümde açıklandığı gibi içeriği güncelleştirdikçe veya gereksinimleriniz değiştikçe yapılandırmanızda değişiklikler yapabilirsiniz.
 
 <a name="Office365CDNforSPOaddremoveasset"> </a>
-#### <a name="add-update-or-remove-assets-from-the-office-365-cdn"></a>Varlıklar ekleme, güncelleştirme veya kaldırma Office 365 CDN
+#### <a name="add-update-or-remove-assets-from-the-office-365-cdn"></a>Office 365 CDN varlık ekleme, güncelleştirme veya kaldırma
 
-Kurulum adımlarını tamamlandıktan sonra, istediğiniz zaman yeni varlıklar ekleyebilir, var olan varlıkları güncelleştirebilirsiniz veya kaldırabilirsiniz. Kaynak olarak tanım istediğiniz klasör veya kitaplıkta SharePoint değişikliklerinizi yapın. Yeni bir varlık eklersiniz, bu varlık e-CDN kullanılabilir. Ancak, varlığı güncellersanız, yeni kopyanın yayılması ve bu kopyanın kullanılabilir olması 15 dakika CDN.
+Kurulum adımlarını tamamladıktan sonra yeni varlıklar ekleyebilir ve mevcut varlıkları istediğiniz zaman güncelleştirebilir veya kaldırabilirsiniz. Kaynak olarak tanımladığınız klasör veya SharePoint kitaplığındaki varlıklarda yaptığınız değişiklikleri yapmanız yeter. Yeni bir varlık eklerseniz, bu varlık CDN hemen kullanılabilir. Ancak, varlığı güncelleştirirseniz yeni kopyanın yayılması ve CDN kullanılabilir duruma gelmesi 15 dakika kadar sürer.
 
-Kaynağın konumunu geri almak için **Get-SPOTenantCdnOrigins** cmdlet'ini kullanabilirsiniz. Bu cmdlet'in nasıl kullanımı hakkında bilgi için bkz. [Get-SPOTenantCdnOrigins](/powershell/module/sharepoint-online/Get-SPOTenantCdnOrigins).
+Kaynağın konumunu almanız gerekiyorsa **Get-SPOTenantCdnOrigins** cmdlet'ini kullanabilirsiniz. Bu cmdlet'in nasıl kullanılacağı hakkında bilgi için bkz. [Get-SPOTenantCdnOrigins](/powershell/module/sharepoint-online/Get-SPOTenantCdnOrigins).
 
 <a name="Office365CDNforSPORemoveOriginPosh"> </a>
-#### <a name="remove-an-origin-from-the-office-365-cdn"></a>Kaynak kaynak Office 365 CDN
+#### <a name="remove-an-origin-from-the-office-365-cdn"></a>Office 365 CDN kaynağı kaldırma
 
-Kaynak olarak tanım istediğiniz klasöre veya SharePoint erişimini kaldırabilirsiniz. Bunu yapmak için **Remove-SPOTenantCdnOrigin** cmdlet'ini kullanın.
+Kaynak olarak tanımladığınız bir klasöre veya SharePoint kitaplığına erişimi kaldırabilirsiniz. Bunu yapmak için **Remove-SPOTenantCdnOrigin** cmdlet'ini kullanın.
 
 ```powershell
 Remove-SPOTenantCdnOrigin -OriginUrl <path> -CdnType <Public | Private | Both>
 ```
 
-Bu cmdlet'in nasıl kullanımı hakkında bilgi için bkz. [Remove-SPOTenantCdnOrigin](/powershell/module/sharepoint-online/Remove-SPOTenantCdnOrigin).
+Bu cmdlet'in nasıl kullanılacağı hakkında bilgi için bkz [. Remove-SPOTenantCdnOrigin](/powershell/module/sharepoint-online/Remove-SPOTenantCdnOrigin).
 
 <a name="Office365CDNforSPOModifyOrigin"> </a>
-#### <a name="modify-an-origin-in-the-office-365-cdn"></a>Kaynakta bir kaynağı Office 365 CDN
+#### <a name="modify-an-origin-in-the-office-365-cdn"></a>Office 365 CDN kaynağı değiştirme
 
-Oluşturduğunuz bir kaynağı değiştiremezsiniz. Bunun yerine, kaynağı kaldırın ve yeni bir tane ekleyin. Daha fazla bilgi için bkz[. Kaynak kaynak Office 365 CDN](use-microsoft-365-cdn-with-spo.md#Office365CDNforSPORemoveOriginPosh) [Kaynak eklemek için ve Varlıklarınızı kaynak eklemek için](use-microsoft-365-cdn-with-spo.md#Office365CDNforSPOOriginPosh).
+Oluşturduğunuz bir kaynağı değiştiremezsiniz. Bunun yerine, kaynağı kaldırın ve sonra yenisini ekleyin. Daha fazla bilgi için bkz. [Office 365 CDN kaynağı kaldırmak](use-microsoft-365-cdn-with-spo.md#Office365CDNforSPORemoveOriginPosh) [için ve Varlıklarınız için kaynak eklemek için](use-microsoft-365-cdn-with-spo.md#Office365CDNforSPOOriginPosh).
 
 <a name="Office365CDNforSPODisable"> </a>
-#### <a name="disable-the-office-365-cdn"></a>Seçeneği devre dışı Office 365 CDN
+#### <a name="disable-the-office-365-cdn"></a>Office 365 CDN devre dışı bırakma
 
-**Set-SPOTenantCdnEnabled cmdlet'ini** kullanarak, CDN için bu cmdlet'i kullanın. Kaynak etkinleştirilmiş hem genel hem de özel CDN varsa, aşağıdaki örneklerde gösterildiği gibi cmdlet'i iki kez çalıştırmalısiniz.
+Kuruluşunuzda CDN devre dışı bırakmak için **Set-SPOTenantCdnEnabled cmdlet'ini** kullanın. CDN için hem genel hem de özel kaynakları etkinleştirdiyseniz, cmdlet'i aşağıdaki örneklerde gösterildiği gibi iki kez çalıştırmanız gerekir.
 
-Kaynakta genel kaynak kullanımını devre dışı CDN için, aşağıdaki komutu girin:
+CDN genel kaynak kullanımını devre dışı bırakmak için aşağıdaki komutu girin:
 
 ```powershell
 Set-SPOTenantCdnEnabled -CdnType Public -Enable $false
 ```
 
-Kaynak 2013'te özel kaynak kullanımını CDN için aşağıdaki komutu girin:
+CDN özel çıkış noktalarının kullanımını devre dışı bırakmak için aşağıdaki komutu girin:
 
 ```powershell
 Set-SPOTenantCdnEnabled -CdnType Private -Enable $false
@@ -459,32 +459,32 @@ Bu cmdlet hakkında daha fazla bilgi için bkz. [Set-SPOTenantCdnEnabled](/power
 </details>
 
 <a name="CDNSetupinPnPPosh"> </a>
-## <a name="set-up-and-configure-the-office-365-cdn-by-using-pnp-powershell"></a>PnP PowerShell Office 365 CDN ayarları ve yapılandırma
+## <a name="set-up-and-configure-the-office-365-cdn-by-using-pnp-powershell"></a>PnP PowerShell kullanarak Office 365 CDN ayarlama ve yapılandırma
 
-Bu bölümdeki yordamlarda, SharePoint Online'a bağlanmak için PnP PowerShell SharePoint gerekir. Yönergeler için bkz [. PnP PowerShell ile çalışmaya başlama](https://github.com/SharePoint/PnP-PowerShell#getting-started).
+Bu bölümdeki yordamlar, SharePoint Online'a bağlanmak için PnP PowerShell kullanmanızı gerektirir. Yönergeler için bkz. [PnP PowerShell'i kullanmaya başlama](https://github.com/SharePoint/PnP-PowerShell#getting-started).
 
-PnP PowerShell kullanarak SharePoint Online'da varlıklarınızı barındırmak üzere CDN ayarlamak ve yapılandırmak için bu adımları tamamlayın.
+PnP PowerShell kullanarak varlıklarınızı SharePoint Online'da barındıracak CDN ayarlamak ve yapılandırmak için bu adımları tamamlayın.
 
 <details>
   <summary>Genişletmek için tıklayın</summary>
 
-### <a name="enable-your-organization-to-use-the-office-365-cdn"></a>Kuruluşun diğer özellikleri kullanmalarını Office 365 CDN
+### <a name="enable-your-organization-to-use-the-office-365-cdn"></a>Kuruluşunuzun Office 365 CDN kullanmasını sağlama
 
-Kiracının son ayarlarını değiştirmeden CDN, kiracınız için özel güvenlik CDN durumunu Office 365 gerekir. Bağlan PnP PowerShell kullanarak kiracınıza şunları  olur:
+Kiracı CDN ayarlarında değişiklik yapmadan önce, Office 365 kiracınızdaki özel CDN yapılandırmasının geçerli durumunu almanız gerekir. PnP PowerShell kullanarak kiracınıza Bağlan:
 
 ```powershell
 Connect-PnPOnline -Url https://contoso-admin.sharepoint.com -UseWebLogin
 ```
 
-Şimdi, **Get-PnPTenantCdnEnabled** cmdlet'ini kullanarak kiracıdan CDN ayarları alın:
+Şimdi kiracıdan CDN durum ayarlarını almak için **Get-PnPTenantCdnEnabled cmdlet'ini** kullanın:
 
 ```powershell
 Get-PnPTenantCdnEnabled -CdnType <Public | Private>
 ```
 
-Belirtilen CdnType CDN dosyanın durumu ekrana çıktısı olarak gelir.
+Belirtilen CdnType için CDN durumu ekrana yansıtılır.
 
-Kuruluş bu **cmdlet'ini**, yalnızca bu cmdlet'i kullanarak Office 365 CDN. Kuruluş genel kaynaklarınızı, özel kaynaklarınızı veya her ikisini aynı anda kullanmalarını sabilirsiniz. Ayrıca, ayarları CDN varsayılan kaynak ayarlarını atlayıp atlamayı da yapılandırabilirsiniz. Bu kökenleri daha sonra bu konuda açıklandığı gibi daha sonra istediğiniz zaman  eklersiniz.
+Kuruluşunuzun Office 365 CDN kullanmasını sağlamak için **Set-PnPTenantCdnEnabled cmdlet'ini** kullanın. Kuruluşunuzun ortak kaynakları, özel kaynakları veya her ikisini aynı anda kullanmasını sağlayabilirsiniz. Ayrıca, etkinleştirdiğinizde varsayılan çıkış noktalarının kurulumunu atlamak için CDN yapılandırabilirsiniz. Bu kaynakları daha sonra bu konuda açıklandığı gibi ekleyebilirsiniz.
 
 PnP PowerShell'de:
 
@@ -492,27 +492,27 @@ PnP PowerShell'de:
 Set-PnPTenantCdnEnabled -CdnType <Public | Private | Both> -Enable $true
 ```
 
-Örneğin, kuruluşun hem genel hem de özel kaynak kullanımına izin vermek için aşağıdaki komutu yazın:
+Örneğin, kuruluşunuzun hem genel hem de özel kaynakları kullanmasını sağlamak için aşağıdaki komutu yazın:
 
 ```powershell
 Set-PnPTenantCdnEnabled -CdnType Both -Enable $true
 ```
 
-Kuruluşta hem genel hem de özel kökenleri kullanmalarını sağlamak, ancak varsayılan kaynak ayarlarını atlamak için aşağıdaki komutu yazın:
+Kuruluşunuzun hem genel hem de özel kaynak kullanmasını sağlamak ancak varsayılan çıkış noktalarını ayarlamayı atlamak için aşağıdaki komutu yazın:
 
 ```powershell
 Set-PnPTenantCdnEnabled -CdnType Both -Enable $true -NoDefaultOrigins
 ```
 
-Varsayılan [CDN etkinleştirme sırasında](use-microsoft-365-cdn-with-spo.md#default-cdn-origins) varsayılan olarak sağlanan kaynaklarla ilgili bilgiler için varsayılan kaynak Office 365 CDN ve varsayılan kaynak kurulumlarını atlamanın olası etkileri hakkında bilgi için bkz.
+Office 365 CDN etkinleştirdiğinizde varsayılan olarak sağlanan kaynaklar ve varsayılan [çıkış](use-microsoft-365-cdn-with-spo.md#default-cdn-origins) noktalarının kurulumunu atlamanın olası etkisi hakkında bilgi için bkz. Varsayılan CDN çıkış noktaları.
 
-Kuruluş genel kaynak kullanımına olanak sağlamak için aşağıdaki komutu yazın:
+Kuruluşunuzun genel kaynakları kullanmasını sağlamak için aşağıdaki komutu yazın:
 
 ```powershell
 Set-PnPTenantCdnEnabled -CdnType Public -Enable $true
 ```
 
-Kuruluşta özel kökenleri kullanmalarını sağlamak için, aşağıdaki komutu yazın:
+Kuruluşunuzun özel çıkış noktalarını kullanmasını sağlamak için aşağıdaki komutu yazın:
 
 ```powershell
 Set-PnPTenantCdnEnabled -CdnType Private -Enable $true
@@ -521,12 +521,12 @@ Set-PnPTenantCdnEnabled -CdnType Private -Enable $true
 Bu cmdlet hakkında daha fazla bilgi için bkz. [Set-PnPTenantCdnEnabled](/powershell/module/sharepoint-pnp/set-pnptenantcdnenabled).
 
 <a name="Office365CDNforPnPPoshFileType"> </a>
-### <a name="change-the-list-of-file-types-to-include-in-the-office-365-cdn-optional"></a>Dosya türleri listesini dosyaya eklemek için değiştirme (Office 365 CDN)
+### <a name="change-the-list-of-file-types-to-include-in-the-office-365-cdn-optional"></a>Dosya türlerinin listesini Office 365 CDN eklenecek şekilde değiştirme (İsteğe bağlı)
 
 > [!TIP]
-> **Dosya türlerini Set-PnPTenantCdnPolicy** cmdlet'ini kullanarak tanımladığınız zaman, o anda tanımlanmış olan listenin üzerine yazmanız gerekir. Listeye başka dosya türleri eklemek için önce cmdlet'i kullanarak hangi dosya türlerine zaten izin verilmiyor ve yeni dosya türleriyle birlikte bu türler de listeye dahil edildi.
+> **Set-PnPTenantCdnPolicy cmdlet'ini** kullanarak dosya türlerini tanımladığınızda, şu anda tanımlanmış olan listenin üzerine yazarsınız. Listeye başka dosya türleri eklemek istiyorsanız, önce cmdlet'ini kullanarak hangi dosya türlerine zaten izin verilip bunları yeni dosya türlerinizle birlikte listeye ekleyin.
 
-Küme içinde genel ve özel kaynaklarla barındırılan statik dosya türlerini tanımlamak için **Set-PnPTenantCdnPolicy** cmdlet'ini CDN. Varsayılan olarak, yaygın varlık türlerine izin verilir (.css, .gif, .jpg, ve .js.
+CDN genel ve özel kaynaklar tarafından barındırılabilir statik dosya türlerini tanımlamak için **Set-PnPTenantCdnPolicy** cmdlet'ini kullanın. Varsayılan olarak, .css, .gif, .jpg ve .js gibi ortak varlık türlerine izin verilir.
 
 PnP PowerShell'de:
 
@@ -534,13 +534,13 @@ PnP PowerShell'de:
 Set-PnPTenantCdnPolicy -CdnType <Public | Private> -PolicyType IncludeFileExtensions -PolicyValue "<Comma-separated list of file types >"
 ```
 
-Örneğin, .css CDN dosyaları barındırmak .png etkinleştirmek için şu komutu girmeniz gerekir:
+Örneğin, .css ve .png dosyalarını barındırmak için CDN etkinleştirmek için komutunu girersiniz:
 
 ```powershell
 Set-PnPTenantCdnPolicy -CdnType Private -PolicyType IncludeFileExtensions -PolicyValue "CSS,PNG"
 ```
 
-O anda hangi dosya türlerine izin verilmiyor? CDN **Get-PnPTenantCdnPolicies** cmdlet'ini kullanın:
+CDN tarafından şu anda hangi dosya türlerine izin verıldığını görmek için **Get-PnPTenantCdnPolicies** cmdlet'ini kullanın:
 
 ```powershell
 Get-PnPTenantCdnPolicies -CdnType <Public | Private>
@@ -549,12 +549,12 @@ Get-PnPTenantCdnPolicies -CdnType <Public | Private>
 Bu cmdlet'ler hakkında daha fazla bilgi için bkz. [Set-PnPTenantCdnPolicy](/powershell/module/sharepoint-pnp/set-pnptenantcdnpolicy) ve [Get-PnPTenantCdnPolicies](/powershell/module/sharepoint-pnp/get-pnptenantcdnpolicies).
 
 <a name="Office365CDNforPnPPoshSiteClassification"> </a>
-### <a name="change-the-list-of-site-classifications-you-want-to-exclude-from-the-office-365-cdn-optional"></a>Sınıflandırmaların dışında tutmak istediğiniz site sınıflandırmalarının listesini değiştirme (Office 365 CDN)
+### <a name="change-the-list-of-site-classifications-you-want-to-exclude-from-the-office-365-cdn-optional"></a>Office 365 CDN dışında tutmak istediğiniz site sınıflandırmaları listesini değiştirme (İsteğe bağlı)
 
 > [!TIP]
-> **Set-PnPTenantCdnPolicy** cmdlet'ini kullanarak site sınıflandırmalarını dışarıda bıraksanız bile, o anda tanımlanmış olan listenin üzerine yazmazsanız. Ek site sınıflandırmalarını dışarıda tutmak için önce cmdlet'i kullanarak hangi sınıflandırmaların zaten hariç tutuldiğini bulun ve yeni sınıflandırmalarla birlikte ekleyin.
+> **Set-PnPTenantCdnPolicy cmdlet'ini** kullanarak site sınıflandırmalarını dışladığınızda, şu anda tanımlanmış olan listenin üzerine yazarsınız. Ek site sınıflandırmalarını dışlamak istiyorsanız, önce hangi sınıflandırmaların zaten dışlandığını öğrenmek için cmdlet'ini kullanın ve ardından bunları yeni sınıflandırmalarınızla birlikte ekleyin.
 
-Küme üzerinde kullanılabilir yapmak istediğiniz site sınıflandırmalarını dışarıda tutmak için **Set-PnPTenantCdnPolicy** cmdlet'ini CDN. Varsayılan olarak, site sınıflandırmaları dahil değildir.
+CDN üzerinde kullanılabilir hale getirmek istemediğiniz site sınıflandırmalarını dışlamak için **Set-PnPTenantCdnPolicy** cmdlet'ini kullanın. Varsayılan olarak, hiçbir site sınıflandırması hariç tutulmaz.
 
 PnP PowerShell'de:
 
@@ -562,61 +562,61 @@ PnP PowerShell'de:
 Set-PnPTenantCdnPolicy -CdnType <Public | Private> -PolicyType ExcludeRestrictedSiteClassifications  -PolicyValue "<Comma-separated list of site classifications>"
 ```
 
-Şu anda hangi site sınıflandırmaların kısıtlanmış olduğunu görmek için **Get-PnPTenantCdnPolicies** cmdlet'ini kullanın:
+Şu anda hangi site sınıflandırmalarının kısıtlandığını görmek için **Get-PnPTenantCdnPolicies cmdlet'ini** kullanın:
 
 ```powershell
 Get-PnPTenantCdnPolicies -CdnType <Public | Private>
 ```
 
-Döndürülen özellikler _IncludeFileExtensions_, _ExcludeRestrictedSiteClassifications ve_ _ExcludeIfNoScriptDisabled'dır_.
+Döndürülecek özellikler _IncludeFileExtensions_, _ExcludeRestrictedSiteClassifications_ ve _ExcludeIfNoScriptDisabled'dır_.
 
-_IncludeFileExtensions_ özelliği, hizmet dosyasından gelen dosya uzantılarının listesini CDN.
+_IncludeFileExtensions_ özelliği, CDN sunulacak dosya uzantılarının listesini içerir.
 
 > [!NOTE]
-> Varsayılan dosya uzantıları ortak ve özel arasında farklıdır.
+> Varsayılan dosya uzantıları genel ve özel arasında farklıdır.
 
-_ExcludeRestrictedSiteClassifications özelliği_, sınıflandırmaların dışında tutmak istediğiniz site sınıflandırmalarını CDN. Örneğin, Gizli olarak işaretlenmiş siteleri hariç **tutabilirsiniz**; böylece sınıflandırma uygulanmış olan sitelerde bu sınıflandırmaya hizmet CDN.
+_ExcludeRestrictedSiteClassifications_ özelliği, CDN dışında tutmak istediğiniz site sınıflandırmalarını içerir. Örneğin, **Gizli** olarak işaretlenen siteleri dışlayabilirsiniz, böylece bu sınıflandırmaya sahip sitelerdeki içerikler CDN sunulmaz.
 
-_ExcludeIfNoScriptDisabled özelliği_, site CDN _NoScript_ öznitelik ayarlarına bağlı olarak içeriği dışlar. Varsayılan olarak, _NoScript özniteliği_ Modern siteler için **Etkin ve** _Klasik siteler_ için **Devre Dışı** _olarak_ ayarlanır. Bu, kiracı ayarlarınıza bağlıdır.
+_ExcludeIfNoScriptDisabled_ özelliği, site düzeyi _NoScript_ öznitelik ayarlarına göre içeriği CDN dışında tutar. Varsayılan olarak _, NoScript_ özniteliği _Modern_ siteler için **etkin** ve _Klasik_ siteler için **devre dışı** olarak ayarlanır. Bu, kiracı ayarlarınıza bağlıdır.
 
 Bu cmdlet'ler hakkında daha fazla bilgi için bkz. [Set-PnPTenantCdnPolicy](/powershell/module/sharepoint-pnp/set-pnptenantcdnpolicy) ve [Get-PnPTenantCdnPolicies](/powershell/module/sharepoint-pnp/get-pnptenantcdnpolicies).
 
 <a name="Office365CDNforSPOOriginPnPPosh"> </a>
 ### <a name="add-an-origin-for-your-assets"></a>Varlıklarınız için kaynak ekleme
 
-Bir kaynak **tanımlamak için Add-PnPTenantCdnOrigin** cmdlet'ini kullanın. Birden çok kaynak tanımlayabilirsiniz. Kaynak, ana bilgisayar tarafından barındır SharePoint istediğiniz varlıkları içeren bir kitaplık veya klasöre CDN.
+Bir kaynak tanımlamak için **Add-PnPTenantCdnOrigin** cmdlet'ini kullanın. Birden çok kaynak tanımlayabilirsiniz. Kaynak, CDN tarafından barındırılmasını istediğiniz varlıkları içeren bir SharePoint kitaplığına veya klasöre işaret eden bir URL'dir.
 
 > [!IMPORTANT]
-> Hiçbir zaman kullanıcı bilgileri içeren veya genel olarak organizasyona duyarlı kabul edilen kaynakları değerlendirmeniz gerekir.
+> Kullanıcı bilgilerini içeren veya kuruluşunuza duyarlı olarak kabul edilen kaynakları hiçbir zaman genel bir kaynakta yerleştirmemelisiniz.
 
 ```powershell
 Add-PnPTenantCdnOrigin -CdnType <Public | Private> -OriginUrl <path>
 ```
 
-Yol değeri _,_ varlıkları içeren kitaplık veya klasörün göreli yoludur. Göreli yollara ek olarak joker karakterler de kullanabilirsiniz. Kökenler, URL'ye hazır joker karakterleri destekler. Bu, birden çok siteyi kapsayan kökenler oluşturmanıza olanak sağlar. Örneğin, tüm sitelerinizi ana sayfalar klasöründe bulunan varlıkları kaynak bilgisinde genel kaynak olarak CDN, aşağıdaki komutu yazın:
+_Yol_ değeri, varlıkları içeren kitaplığın veya klasörün göreli yoludur. Göreli yollara ek olarak joker karakterler de kullanabilirsiniz. Kaynaklar, URL'ye önceden eklenen joker karakterleri destekler. Bu, birden çok siteye yayılan kaynaklar oluşturmanıza olanak tanır. Örneğin, tüm sitelerinizin masterpages klasörüne tüm varlıkları CDN genel kaynak olarak eklemek için aşağıdaki komutu yazın:
 
 ```powershell
 Add-PnPTenantCdnOrigin -CdnType Public -OriginUrl */masterpage
 ```
 
-+ * joker karakter değiştiricisi ***/** yalnızca yolun başında kullanılabilir ve belirtilen URL'nin altındaki tüm URL kesimlerini eşler.
-+ Yol bir belge kitaplığına, klasöre veya siteye işaret ediyor olabilir. Örneğin, _*/site1 yolu sitenin_ altındaki tüm belge kitaplıklarını eşler.
++ Joker karakter değiştirici ***/** yalnızca yolun başında kullanılabilir ve belirtilen URL'nin altındaki tüm URL kesimleriyle eşleşir.
++ Yol bir belge kitaplığına, klasöre veya siteye işaret edebilir. Örneğin, _*/site1_ yolu sitenin altındaki tüm belge kitaplıkları ile eşleşir.
 
-Belirli bir göreli yol ile bir kaynak  eklersiniz. Tam yolu kullanarak bir kaynak ekamazsiniz.
+Belirli bir göreli yola sahip bir kaynak ekleyebilirsiniz. Tam yolu kullanarak kaynak ekleyemezsiniz.
 
-Bu örnek, belirli bir siteki site varlıkları kitaplığının özel kaynağını ekler:
+Bu örnek, belirli bir sitedeki site varlıkları kitaplığının özel kaynağını ekler:
 
 ```powershell
 Add-PnPTenantCdnOrigin -CdnType Private -OriginUrl sites/site1/siteassets
 ```
 
-Bu örnek, site koleksiyonunun site _varlıkları kitaplığında klasör1_ klasörünün özel kaynağını ekler:
+Bu örnek, site koleksiyonunun site varlıkları kitaplığına _folder1_ klasörünün özel kaynağını ekler:
 
 ```powershell
 Add-PnPTenantCdnOrigin -CdnType Private -OriginUrl sites/test/siteassets/folder1
 ```
 
-Yolda boşluk varsa, yolu çift tırnak içine veya %20 URL kodlaması ile değiştirebilirsiniz. Aşağıdaki örnekler, site koleksiyonunun site varlıkları _kitaplığında yer alan klasör 1_ klasörünün özel kaynağını ekler:
+Yolda bir boşluk varsa, yolu çift tırnak içine alabilir veya alanı %20 URL kodlamasıyla değiştirebilirsiniz. Aşağıdaki örnekler, site koleksiyonunun site varlıkları kitaplığında _klasör 1_ klasörünün özel kaynağını ekler:
 
 ```powershell
 Add-PnPTenantCdnOrigin -CdnType Private -OriginUrl sites/test/siteassets/folder%201
@@ -629,22 +629,22 @@ Add-PnPTenantCdnOrigin -CdnType Private -OriginUrl "sites/test/siteassets/folder
 Bu komut ve söz dizimi hakkında daha fazla bilgi için bkz. [Add-PnPTenantCdnOrigin](/powershell/module/sharepoint-pnp/add-pnptenantcdnorigin).
 
 > [!NOTE]
-> Özel kaynaklarda, bir kaynaktan paylaşılan varlıklara kaynak olarak erişilmeden önce yayımlanan ana sürümlerden biri CDN.
+> Özel kaynaklarda, bir kaynaktan paylaşılan varlıkların CDN erişilebilmesi için önce yayımlanmış bir ana sürüme sahip olması gerekir.
 
-Siz komutu çalıştırarak, sistem yapılandırmayı veri merkezi genelinde eşitler. Bu, 15 dakika kadar sürebilir.
+Komutunu çalıştırdıktan sonra sistem yapılandırmayı veri merkezi genelinde eşitler. Bu işlem 15 dakika kadar sürebilir.
 
 <a name="ExamplePublicOriginPnPPosh"> </a>
-### <a name="example-configure-a-public-origin-for-your-master-pages-and-for-your-style-library-for-sharepoint-online"></a>Örnek: Ana sayfalarınız için ve SharePoint Online için stil kitaplığınız için genel SharePoint yapılandırma
+### <a name="example-configure-a-public-origin-for-your-master-pages-and-for-your-style-library-for-sharepoint-online"></a>Örnek: SharePoint Online için ana sayfalarınız ve stil kitaplığınız için genel kaynak yapılandırma
 
-Normalde, varsayılan ayarı etkinleştirerek bu kökenler sizin için Office 365 CDN. Bununla birlikte, bunları el ile etkinleştirmek için aşağıdaki adımları izleyin.
+Normalde, Office 365 CDN etkinleştirdiğinizde bu kaynaklar varsayılan olarak sizin için ayarlanır. Ancak, bunları el ile etkinleştirmek istiyorsanız aşağıdaki adımları izleyin.
 
-+ Stil **kitaplığını genel kaynak olarak tanımlamak için Add-PnPTenantCdnOrigin** cmdlet'ini kullanın.
++ Stil kitaplığını genel kaynak olarak tanımlamak için **Add-PnPTenantCdnOrigin** cmdlet'ini kullanın.
 
   ```powershell
   Add-PnPTenantCdnOrigin -CdnType Public -OriginUrl */style%20library
   ```
 
-+ Ana sayfaları **genel kaynak olarak tanımlamak için Add-PnPTenantCdnOrigin** cmdlet'ini kullanın.
++ Ana sayfaları genel kaynak olarak tanımlamak için **Add-PnPTenantCdnOrigin** cmdlet'ini kullanın.
 
   ```powershell
   Add-PnPTenantCdnOrigin -CdnType Public -OriginUrl */masterpage
@@ -652,24 +652,24 @@ Normalde, varsayılan ayarı etkinleştirerek bu kökenler sizin için Office 36
 
 Bu komut ve söz dizimi hakkında daha fazla bilgi için bkz. [Add-PnPTenantCdnOrigin](/powershell/module/sharepoint-pnp/add-pnptenantcdnorigin).
 
-Siz komutu çalıştırarak, sistem yapılandırmayı veri merkezi genelinde eşitler. Bu, 15 dakika kadar sürebilir.
+Komutunu çalıştırdıktan sonra sistem yapılandırmayı veri merkezi genelinde eşitler. Bu işlem 15 dakika kadar sürebilir.
 
 <a name="ExamplePrivateOriginPnPPosh"> </a>
-### <a name="example-configure-a-private-origin-for-your-site-assets-site-pages-and-publishing-images-for-sharepoint-online"></a>Örnek: SharePoint Online için site varlıklarınız, site sayfalarınız ve yayımlama resimleriniz için özel SharePoint yapılandırma
+### <a name="example-configure-a-private-origin-for-your-site-assets-site-pages-and-publishing-images-for-sharepoint-online"></a>Örnek: SharePoint Online için site varlıklarınız, site sayfalarınız ve yayımlama görüntüleriniz için özel bir kaynak yapılandırma
 
-+ Site varlıkları **klasörünü özel kaynak olarak tanımlamak için Add-PnPTenantCdnOrigin** cmdlet'ini kullanın.
++ Site varlıkları klasörünü özel kaynak olarak tanımlamak için **Add-PnPTenantCdnOrigin** cmdlet'ini kullanın.
 
   ```powershell
   Add-PnPTenantCdnOrigin -CdnType Private -OriginUrl */siteassets
   ```
 
-+ Site sayfaları **klasörünü özel bir kaynak olarak tanımlamak için Add-PnPTenantCdnOrigin** cmdlet'ini kullanın.
++ Site sayfaları klasörünü özel kaynak olarak tanımlamak için **Add-PnPTenantCdnOrigin** cmdlet'ini kullanın.
 
   ```powershell
   Add-PnPTenantCdnOrigin -CdnType Private -OriginUrl */sitepages
   ```
 
-+ Yayımlama resimleri **klasörünü özel bir kaynak olarak tanımlamak için Add-PnPTenantCdnOrigin** cmdlet'ini kullanın.
++ Yayımlama görüntüleri klasörünü özel kaynak olarak tanımlamak için **Add-PnPTenantCdnOrigin** cmdlet'ini kullanın.
 
   ```powershell
   Add-PnPTenantCdnOrigin -CdnType Private -OriginUrl */publishingimages
@@ -677,12 +677,12 @@ Siz komutu çalıştırarak, sistem yapılandırmayı veri merkezi genelinde eş
 
 Bu komut ve söz dizimi hakkında daha fazla bilgi için bkz. [Add-PnPTenantCdnOrigin](/powershell/module/sharepoint-pnp/add-pnptenantcdnorigin).
 
-Siz komutu çalıştırarak, sistem yapılandırmayı veri merkezi genelinde eşitler. Bu, 15 dakika kadar sürebilir.
+Komutunu çalıştırdıktan sonra sistem yapılandırmayı veri merkezi genelinde eşitler. Bu işlem 15 dakika kadar sürebilir.
 
 <a name="ExamplePrivateOriginSiteCollectionPnPPosh"> </a>
-### <a name="example-configure-a-private-origin-for-a-site-collection-for-sharepoint-online"></a>Örnek: SharePoint Online için site koleksiyonu için özel SharePoint yapılandırma
+### <a name="example-configure-a-private-origin-for-a-site-collection-for-sharepoint-online"></a>Örnek: SharePoint Online için site koleksiyonu için özel çıkış noktası yapılandırma
 
-Site koleksiyonunu **özel kaynak olarak tanımlamak için Add-PnPTenantCdnOrigin** cmdlet'ini kullanın. Örneğin:
+Site koleksiyonunu özel kaynak olarak tanımlamak için **Add-PnPTenantCdnOrigin** cmdlet'ini kullanın. Örneğin:
 
 ```powershell
 Add-PnPTenantCdnOrigin -CdnType Private -OriginUrl sites/site1/siteassets
@@ -690,48 +690,48 @@ Add-PnPTenantCdnOrigin -CdnType Private -OriginUrl sites/site1/siteassets
 
 Bu komut ve söz dizimi hakkında daha fazla bilgi için bkz. [Add-PnPTenantCdnOrigin](/powershell/module/sharepoint-pnp/add-pnptenantcdnorigin).
 
-Siz komutu çalıştırarak, sistem yapılandırmayı veri merkezi genelinde eşitler. SharePoint Online _kiracısı_ CDN hizmetine bağlandığından, Yapılandırma beklemede iletisiyle CDN alabilirsiniz. Bu, 15 dakika kadar sürebilir.
+Komutunu çalıştırdıktan sonra sistem yapılandırmayı veri merkezi genelinde eşitler. SharePoint Online kiracısı CDN hizmetine bağlandığından beklenen yapılandırma _beklemede_ iletisi görebilirsiniz. Bu işlem 15 dakika kadar sürebilir.
 
 <a name="CDNManagePnPPosh"> </a>
-### <a name="manage-the-office-365-cdn"></a>Posta Office 365 CDN
+### <a name="manage-the-office-365-cdn"></a>Office 365 CDN yönetme
 
-Yapılandırmayı bir kez CDN, içeriği güncelleştirken veya ihtiyaçlar değiştiksinde, bu bölümde açıklandığı gibi yapılandırmanız üzerinde değişiklikler yapabilirsiniz.
+CDN ayarladıktan sonra, bu bölümde açıklandığı gibi içeriği güncelleştirdikçe veya gereksinimleriniz değiştikçe yapılandırmanızda değişiklikler yapabilirsiniz.
 
 <a name="Office365CDNforSPOaddremoveassetPnPPosh"> </a>
-#### <a name="add-update-or-remove-assets-from-the-office-365-cdn"></a>Varlıklar ekleme, güncelleştirme veya kaldırma Office 365 CDN
+#### <a name="add-update-or-remove-assets-from-the-office-365-cdn"></a>Office 365 CDN varlık ekleme, güncelleştirme veya kaldırma
 
-Kurulum adımlarını tamamlandıktan sonra, istediğiniz zaman yeni varlıklar ekleyebilir, var olan varlıkları güncelleştirebilirsiniz veya kaldırabilirsiniz. Kaynak olarak tanım istediğiniz klasör veya kitaplıkta SharePoint değişikliklerinizi yapın. Yeni bir varlık eklersiniz, bu varlık e-CDN kullanılabilir. Ancak, varlığı güncellersanız, yeni kopyanın yayılması ve bu kopyanın kullanılabilir olması 15 dakika CDN.
+Kurulum adımlarını tamamladıktan sonra yeni varlıklar ekleyebilir ve mevcut varlıkları istediğiniz zaman güncelleştirebilir veya kaldırabilirsiniz. Kaynak olarak tanımladığınız klasör veya SharePoint kitaplığındaki varlıklarda yaptığınız değişiklikleri yapmanız yeter. Yeni bir varlık eklerseniz, bu varlık CDN hemen kullanılabilir. Ancak, varlığı güncelleştirirseniz yeni kopyanın yayılması ve CDN kullanılabilir duruma gelmesi 15 dakika kadar sürer.
 
-Kaynağın konumunu geri almak için **, Get-PnPTenantCdnOrigin** cmdlet'ini kullanabilirsiniz. Bu cmdlet'in nasıl kullanımı hakkında bilgi için bkz. [Get-PnPTenantCdnOrigin](/powershell/module/sharepoint-pnp/get-pnptenantcdnorigin).
+Kaynağın konumunu almanız gerekiyorsa **Get-PnPTenantCdnOrigin** cmdlet'ini kullanabilirsiniz. Bu cmdlet'in nasıl kullanılacağı hakkında bilgi için bkz. [Get-PnPTenantCdnOrigin](/powershell/module/sharepoint-pnp/get-pnptenantcdnorigin).
 
 <a name="Office365CDNforSPORemoveOriginPnPPosh"> </a>
-#### <a name="remove-an-origin-from-the-office-365-cdn"></a>Kaynak kaynak Office 365 CDN
+#### <a name="remove-an-origin-from-the-office-365-cdn"></a>Office 365 CDN kaynağı kaldırma
 
-Kaynak olarak tanım istediğiniz klasöre veya SharePoint erişimini kaldırabilirsiniz. Bunu yapmak için **Remove-PnPTenantCdnOrigin** cmdlet'ini kullanın.
+Kaynak olarak tanımladığınız bir klasöre veya SharePoint kitaplığına erişimi kaldırabilirsiniz. Bunu yapmak için **Remove-PnPTenantCdnOrigin cmdlet'ini** kullanın.
 
 ```powershell
 Remove-PnPTenantCdnOrigin -OriginUrl <path> -CdnType <Public | Private | Both>
 ```
 
-Bu cmdlet'in nasıl kullanımı hakkında bilgi için bkz. [Remove-PnPTenantCdnOrigin](/powershell/module/sharepoint-pnp/remove-pnptenantcdnorigin).
+Bu cmdlet'in nasıl kullanılacağı hakkında bilgi için bkz [. Remove-PnPTenantCdnOrigin](/powershell/module/sharepoint-pnp/remove-pnptenantcdnorigin).
 
 <a name="Office365CDNforSPOModifyOriginPnPPosh"> </a>
-#### <a name="modify-an-origin-in-the-office-365-cdn"></a>Kaynakta bir kaynağı Office 365 CDN
+#### <a name="modify-an-origin-in-the-office-365-cdn"></a>Office 365 CDN kaynağı değiştirme
 
-Oluşturduğunuz bir kaynağı değiştiremezsiniz. Bunun yerine, kaynağı kaldırın ve yeni bir tane ekleyin. Daha fazla bilgi için bkz[. Kaynak kaynak Office 365 CDN](use-microsoft-365-cdn-with-spo.md#Office365CDNforSPORemoveOriginPnPPosh) [Kaynak eklemek için ve Varlıklarınızı kaynak eklemek için](use-microsoft-365-cdn-with-spo.md#Office365CDNforSPOOriginPnPPosh).
+Oluşturduğunuz bir kaynağı değiştiremezsiniz. Bunun yerine, kaynağı kaldırın ve sonra yenisini ekleyin. Daha fazla bilgi için bkz. [Office 365 CDN kaynağı kaldırmak](use-microsoft-365-cdn-with-spo.md#Office365CDNforSPORemoveOriginPnPPosh) [için ve Varlıklarınız için kaynak eklemek için](use-microsoft-365-cdn-with-spo.md#Office365CDNforSPOOriginPnPPosh).
 
 <a name="Office365CDNforSPODisable"> </a>
-#### <a name="disable-the-office-365-cdn"></a>Seçeneği devre dışı Office 365 CDN
+#### <a name="disable-the-office-365-cdn"></a>Office 365 CDN devre dışı bırakma
 
-**Set-PnPTenantCdnEnabled cmdlet'ini** kullanarak, CDN için bu cmdlet'i kullanın. Kaynak etkinleştirilmiş hem genel hem de özel CDN varsa, aşağıdaki örneklerde gösterildiği gibi cmdlet'i iki kez çalıştırmalısiniz.
+Kuruluşunuzda CDN devre dışı bırakmak için **Set-PnPTenantCdnEnabled cmdlet'ini** kullanın. CDN için hem genel hem de özel kaynakları etkinleştirdiyseniz, cmdlet'i aşağıdaki örneklerde gösterildiği gibi iki kez çalıştırmanız gerekir.
 
-Kaynakta genel kaynak kullanımını devre dışı CDN için, aşağıdaki komutu girin:
+CDN genel kaynak kullanımını devre dışı bırakmak için aşağıdaki komutu girin:
 
 ```powershell
 Set-PnPTenantCdnEnabled -CdnType Public -Enable $false
 ```
 
-Kaynak 2013'te özel kaynak kullanımını CDN için aşağıdaki komutu girin:
+CDN özel çıkış noktalarının kullanımını devre dışı bırakmak için aşağıdaki komutu girin:
 
 ```powershell
 Set-PnPTenantCdnEnabled -CdnType Private -Enable $false
@@ -742,125 +742,125 @@ Bu cmdlet hakkında daha fazla bilgi için bkz. [Set-PnPTenantCdnEnabled](/power
 </details>
 
 <a name="CDNSetupinCLI"> </a>
-## <a name="set-up-and-configure-the-office-365-cdn-using-the-cli-for-microsoft-365"></a>E-posta için CLI Office 365 CDN kullanarak e-postayı ayarlayın ve Microsoft 365
+## <a name="set-up-and-configure-the-office-365-cdn-using-the-cli-for-microsoft-365"></a>Microsoft 365 için CLI kullanarak Office 365 CDN ayarlama ve yapılandırma
 
-Bu bölümdeki yordamlar için CLI'ya daha [fazla Microsoft 365](https://aka.ms/cli-m365). Ardından oturum aç komutunu Office 365 [kiracınıza](https://pnp.github.io/cli-microsoft365/cmd/login/) bağlanabilirsiniz.
+Bu bölümdeki yordamlar[, Microsoft 365 için CLI'yi](https://aka.ms/cli-m365) yüklemenizi gerektirir. Ardından [oturum açma](https://pnp.github.io/cli-microsoft365/cmd/login/) komutunu kullanarak Office 365 kiracınıza bağlanın.
 
-CDN MICROSOFT 365 için CLI kullanarak SharePoint Online'da varlıklarınızı barındırmak üzere etki alanlarınızı ayarlamak ve yapılandırmak için bu Microsoft 365.
+Microsoft 365 için CLI kullanarak varlıklarınızı SharePoint Online'da barındırmak üzere CDN ayarlamak ve yapılandırmak için bu adımları tamamlayın.
 
 <details>
   <summary>Genişletmek için tıklayın</summary>
 
-### <a name="enable-the-office-365-cdn"></a>Ayarı Office 365 CDN
+### <a name="enable-the-office-365-cdn"></a>Office 365 CDN etkinleştirme
 
-Spo cdn kümesi komutunu Office 365 CDN kiracınız içinde yer alan [cdn'nin durumunu yönetebilirsiniz](https://pnp.github.io/cli-microsoft365/cmd/spo/cdn/cdn-set/).
+[spo cdn set](https://pnp.github.io/cli-microsoft365/cmd/spo/cdn/cdn-set/) komutunu kullanarak kiracınızdaki Office 365 CDN durumunu yönetebilirsiniz.
 
-Kiracı yürütülecek Office 365 Genel CDN etkinleştirmek için:
+Kiracınızda genel CDN Office 365 etkinleştirmek için şu komutu yürütür:
 
 ```cli
 spo cdn set --type Public --enabled true
 ```
 
-Bu özelliği etkinleştirmek Office 365 SharePoint CDN yürütün:
+Office 365 SharePoint CDN etkinleştirmek için şunu yürütebilirsiniz:
 
 ```cli
 spo cdn set --type Private --enabled true
 ```
 
-#### <a name="view-the-current-status-of-the-office-365-cdn"></a>Tsppnin geçerli durumunu Office 365 CDN
+#### <a name="view-the-current-status-of-the-office-365-cdn"></a>Office 365 CDN geçerli durumunu görüntüleme
 
-Belirli bir dosya türünün etkin veya Office 365 CDN olduğunu kontrol etmek için [spo cdn get komutunu](https://pnp.github.io/cli-microsoft365/cmd/spo/cdn/cdn-get/) kullanın.
+Belirli bir Office 365 CDN türünün etkin veya devre dışı olup olmadığını denetlemek için [spo cdn get](https://pnp.github.io/cli-microsoft365/cmd/spo/cdn/cdn-get/) komutunu kullanın.
 
-Ortak Office 365 etkinleştirildiğinden CDN için yürütün:
+Office 365 Genel CDN etkinleştirilip etkinleştirilmediğini denetlemek için şunu yürütür:
 
 ```cli
 spo cdn get --type Public
 ```
 
-### <a name="view-the-office-365-cdn-origins"></a>Kaynak Office 365 CDN görüntüleme
+### <a name="view-the-office-365-cdn-origins"></a>Office 365 CDN çıkış noktalarını görüntüleme
 
-Şu anda yapılandırılmış olan genel Office 365 kaynak CDN görüntülemek için:
+Şu anda yapılandırılmış Office 365 Genel CDN çıkış noktalarını görüntülemek için:
 
 ```cli
 spo cdn origin list --type Public
 ```
 
-Varsayılan [CDN, varsayılan](use-microsoft-365-cdn-with-spo.md#default-cdn-origins) olarak sağlanan kaynaklarla ilgili bilgi için varsayılan kaynak Office 365 CDN.
+Office 365 CDN etkinleştirdiğinizde varsayılan olarak sağlanan [kaynaklarla](use-microsoft-365-cdn-with-spo.md#default-cdn-origins) ilgili bilgi için bkz. Varsayılan CDN çıkış noktaları.
 
-### <a name="add-an-office-365-cdn-origin"></a>Kaynak Office 365 CDN ekleme
+### <a name="add-an-office-365-cdn-origin"></a>Office 365 CDN kaynağı ekleme
 
 > [!IMPORTANT]
-> Genel kaynak olarak yapılandırılan bir belge kitaplığında, SharePoint olarak kabul edilen kaynakları hiçbir zaman bir yere eklemeyebilirsiniz.
+> Kuruluşunuza duyarlı olarak kabul edilen kaynakları hiçbir zaman genel kaynak olarak yapılandırılmış bir SharePoint belge kitaplığına yerleştirmemelisiniz.
 
-Bir [kaynak tanımlamak için spo cdn origin add](https://pnp.github.io/cli-microsoft365/cmd/spo/cdn/cdn-origin-add/) komutunu CDN kullanın. Birden çok kaynak tanımlayabilirsiniz. Kaynak, ana bilgisayar tarafından barındır SharePoint istediğiniz varlıkları içeren bir kitaplık veya klasöre CDN.
+CDN kaynağı tanımlamak için [spo cdn origin add](https://pnp.github.io/cli-microsoft365/cmd/spo/cdn/cdn-origin-add/) komutunu kullanın. Birden çok kaynak tanımlayabilirsiniz. Kaynak, CDN tarafından barındırılmasını istediğiniz varlıkları içeren bir SharePoint kitaplığına veya klasöre işaret eden bir URL'dir.
 
 ```cli
 spo cdn origin add --type [Public | Private] --origin <path>
 ```
 
-Burada `path` , varlıkları içeren klasörün göreli yolu vardır. Göreli yollara ek olarak joker karakterler de kullanabilirsiniz.
+Burada `path` , varlıkları içeren klasörün göreli yoludur. Göreli yollara ek olarak joker karakterler de kullanabilirsiniz.
 
-Tüm sitelerin Ana Sayfa **Galerisi'nde yer alan tüm** varlıkları genel kaynak olarak dahil etmek için, yürütme:
+Tüm sitelerin **Ana Sayfa Galerisi'ndeki** tüm varlıkları genel kaynak olarak eklemek için şunu yürütür:
 
 ```cli
 spo cdn origin add --type Public --origin */masterpage
 ```
 
-Belirli bir site koleksiyonu için özel kaynak yapılandırmak için yürütme:
+Belirli bir site koleksiyonu için özel bir kaynak yapılandırmak için şunu yürütebilirsiniz:
 
 ```cli
 spo cdn origin add --type Private --origin sites/site1/siteassets
 ```
 
 > [!NOTE]
-> Kaynak CDN ekledikten sonra, dosyaları kaynak hizmeti aracılığıyla geri alayabilirsiniz ve bu 15 CDN sürebilir. Spo CDn kaynak listesi komutunu kullanarak belirli kaynağın zaten [etkinleştirildiğinden emin](https://pnp.github.io/cli-microsoft365/cmd/spo/cdn/cdn-origin-list/) olun.
+> CDN kaynağı ekledikten sonra, dosyaları CDN hizmeti aracılığıyla almanız 15 dakika kadar sürebilir. [Spo cdn kaynak listesi](https://pnp.github.io/cli-microsoft365/cmd/spo/cdn/cdn-origin-list/) komutunu kullanarak belirli kaynağın zaten etkinleştirilip etkinleştirilmediğini doğrulayabilirsiniz.
 
-### <a name="remove-an-office-365-cdn-origin"></a>Kaynak Office 365 CDN kaldırma
+### <a name="remove-an-office-365-cdn-origin"></a>Office 365 CDN kaynağını kaldırma
 
-Belirtilen [kaynak türüne bir kaynak CDN için spo cdn](https://pnp.github.io/cli-microsoft365/cmd/spo/cdn/cdn-origin-remove/) kaynağını kaldır komutunu CDN kullanın.
+Belirtilen CDN türü için CDN kaynağını kaldırmak için [spo cdn origin remove](https://pnp.github.io/cli-microsoft365/cmd/spo/cdn/cdn-origin-remove/) komutunu kullanın.
 
-Kaynak yapılandırmadan genel CDN kaldırmak için yürütme:
+CDN yapılandırmasından genel bir kaynağı kaldırmak için şunu yürütür:
 
 ```cli
 spo cdn origin remove --type Public --origin */masterpage
 ```
 
 > [!NOTE]
-> Kaynak CDN kaldırılması, o kaynakla eşleşen herhangi bir belge kitaplığında depolanan dosyaları etkilemez. Bu varlıklara en son URL'leri kullanılarak SharePoint, SharePoint otomatik olarak belge kitaplığına işaret eder ve özgün URL'ye döner. Öte yandan, varlıklara genel kullanıcı URL'si kullanılarak başvuruldu CDN, kaynağın kaldırılması bağlantıyı bozacak ve bunları el ile değiştirmelisiniz.
+> CDN kaynağının kaldırılması, bu kaynakla eşleşen herhangi bir belge kitaplığında depolanan dosyaları etkilemez. Bu varlıklara SharePoint URL'si kullanılarak başvurulduysa, SharePoint otomatik olarak belge kitaplığına işaret eden özgün URL'ye geri döner. Ancak varlıklara genel CDN URL'si kullanılarak başvurulduysa, kaynağın kaldırılması bağlantıyı bozar ve bunları el ile değiştirmeniz gerekir.
 
-### <a name="modify-an-office-365-cdn-origin"></a>Kaynak Office 365 CDN değiştirme
+### <a name="modify-an-office-365-cdn-origin"></a>Office 365 CDN kaynağını değiştirme
 
-Varolan bir kaynakta değişiklik CDN. Bunun yerine, komutu kullanarak önceden CDN tanımlı kaynağı `spo cdn origin remove` kaldırmanız ve komutu kullanarak yeni bir tane eklemeniz `spo cdn origin add` gerekir.
+Mevcut bir CDN kaynağını değiştirmek mümkün değildir. Bunun yerine, komutunu kullanarak `spo cdn origin remove` önceden tanımlanmış CDN kaynağını kaldırmanız ve komutunu kullanarak `spo cdn origin add` yenisini eklemeniz gerekir.
 
-### <a name="change-the-types-of-files-to-include-in-the-office-365-cdn"></a>Dosya türlerini klasöre dahil etmek Office 365 CDN
+### <a name="change-the-types-of-files-to-include-in-the-office-365-cdn"></a>Office 365 CDN eklenecek dosya türlerini değiştirme
 
-Varsayılan olarak aşağıdaki dosya türleri CDN'a dahildir: _.css, .eot, .gif, .ico, .jpeg, .jpg, .js, .map, .png, .svg, .ttf, .woff ve .woff2_. Dosyaya başka dosya türleri de eklemek CDN, [spo CDN ilke kümesi komutunu CDN dosya yapılandırmasını değiştirebilirsiniz](https://pnp.github.io/cli-microsoft365/cmd/spo/cdn/cdn-policy-set/).
+Varsayılan olarak, şu dosya türleri CDN eklenir: _.css, .eot, .gif, .ico, .jpeg, .jpg, .js, .map, .png, .svg, .ttf, .woff ve .woff2_. CDN ek dosya türleri eklemeniz gerekiyorsa, [spo cdn ilke kümesi](https://pnp.github.io/cli-microsoft365/cmd/spo/cdn/cdn-policy-set/) komutunu kullanarak CDN yapılandırmasını değiştirebilirsiniz.
 
 > [!NOTE]
-> Dosya türleri listesini değiştirirken, şu anda tanımlanmış olan listenin üzerine yazmanız gerekir. Başka dosya türleri de eklemek için, ilk olarak [spo CDN](https://pnp.github.io/cli-microsoft365/cmd/spo/cdn/cdn-origin-list/) ilke listesi komutunu kullanarak hangi dosya türlerinin yapılandırılmış olduğunu bulun.
+> Dosya türleri listesini değiştirirken, şu anda tanımlanmış olan listenin üzerine yazarsınız. Ek dosya türleri eklemek istiyorsanız, şu anda hangi dosya türlerinin yapılandırıldığını öğrenmek için önce [spo cdn ilke listesi](https://pnp.github.io/cli-microsoft365/cmd/spo/cdn/cdn-origin-list/) komutunu kullanın.
 
-_Genel dosya türlerine dahil_ edilen varsayılan dosya türleri listesine JSON dosya türünü eklemek için CDN yürütün:
+_JSON_ dosya türünü genel CDN dahil edilen varsayılan dosya türleri listesine eklemek için şunu yürütür:
 
 ```cli
 spo cdn policy set --type Public --policy IncludeFileExtensions --value "CSS,EOT,GIF,ICO,JPEG,JPG,JS,MAP,PNG,SVG,TTF,WOFF,JSON"
 ```
 
-### <a name="change-the-list-of-site-classifications-you-want-to-exclude-from-the-office-365-cdn"></a>Site sınıflandırmalarının dışında tutmak istediğiniz sınıflandırmaların listesini Office 365 CDN
+### <a name="change-the-list-of-site-classifications-you-want-to-exclude-from-the-office-365-cdn"></a>Office 365 CDN dışında tutmak istediğiniz site sınıflandırmaları listesini değiştirme
 
-Varsayılan ayar [üzerinde kullanılabilir yapmak istediğiniz](https://pnp.github.io/cli-microsoft365/cmd/spo/cdn/cdn-policy-set/) site sınıflandırmalarını dışarıda tutmak için spo cdn ilke kümesi komutunu CDN. Varsayılan olarak, site sınıflandırmaları dahil değildir.
+CDN üzerinde kullanılabilir hale getirmek istemediğiniz site sınıflandırmalarını dışlamak için [spo cdn ilke kümesi](https://pnp.github.io/cli-microsoft365/cmd/spo/cdn/cdn-policy-set/) komutunu kullanın. Varsayılan olarak, hiçbir site sınıflandırması hariç tutulmaz.
 
 > [!NOTE]
-> Dışarıda bırakılan site sınıflandırmaları listesini değiştirirken, şu anda tanımlanmış olan listenin üzerine yazmaz. Ek sınıflandırmaları dahil etmek istemiyorsanız, şu anda hangi sınıflandırmaların yapılandırılmış olduğunu bulmak için ilk olarak [spo CDN](https://pnp.github.io/cli-microsoft365/cmd/spo/cdn/cdn-policy-list/) ilke listesi komutunu kullanın.
+> Dışlanan site sınıflandırmaları listesini değiştirirken, şu anda tanımlanmış olan listenin üzerine yazarsınız. Ek sınıflandırmaları dışlamak istiyorsanız, şu anda hangi sınıflandırmaların yapılandırıldığını bulmak için önce [spo cdn ilke listesi](https://pnp.github.io/cli-microsoft365/cmd/spo/cdn/cdn-policy-list/) komutunu kullanın.
 
-Genel kuruluştan _HBI olarak sınıflandırılmış_ siteleri CDN, yürütme
+_HBI_ olarak sınıflandırılan siteleri genel CDN dışında tutmak için
 
 ```cli
 spo cdn policy set --type Public --policy ExcludeRestrictedSiteClassifications --value "HBI"
 ```
 
-### <a name="disable-the-office-365-cdn"></a>Seçeneği devre dışı Office 365 CDN
+### <a name="disable-the-office-365-cdn"></a>Office 365 CDN devre dışı bırakma
 
-Bu komutu Office 365 CDN için `spo cdn set` komutu kullanın; örneğin:
+Office 365 CDN devre dışı bırakmak için komutunu kullanın`spo cdn set`, örneğin:
 
 ```cli
 spo cdn set --type Public --enabled false
@@ -870,159 +870,159 @@ spo cdn set --type Public --enabled false
 
 ## <a name="using-your-cdn-assets"></a>CDN varlıklarınızı kullanma
 
-Kaynak ve ilkeleri etkinleştirdikten CDN kaynak ve ilkeleri etkinleştirdikten sonra, kaynak varlıklarınızı ve CDN başlayabilirsiniz.
+artık CDN etkinleştirdiğinize ve kaynaklarla ilkeleri yapılandırdığınıza göre, CDN varlıklarınızı kullanmaya başlayabilirsiniz.
 
-Bu bölüm, SharePoint sayfaları ve içeriğinde CDN URL'lerini nasıl kullanabileceğinizi anlamanıza yardımcı olur ve böylece SharePoint hem genel hem özel kaynaklarda yer alan varlıklarla ilgili istekleri CDN.
+Bu bölüm, SharePoint sayfalarınızda ve içeriğinizde CDN URL'leri nasıl kullanacağınızı anlamanıza yardımcı olur, böylece SharePoint hem genel hem de özel kaynaklardaki varlıklara yönelik istekleri CDN yönlendirir.
 
-+ [CDN varlıklarının bağlantılarını güncelleştirme](use-microsoft-365-cdn-with-spo.md#updating-links-to-cdn-assets)
-+ [Ortak kaynaklarda varlıkları kullanma](use-microsoft-365-cdn-with-spo.md#using-assets-in-public-origins)
-+ [Özel kaynaklarda varlıkları kullanma](use-microsoft-365-cdn-with-spo.md#using-assets-in-private-origins)
++ [CDN varlıkların bağlantılarını güncelleştirme](use-microsoft-365-cdn-with-spo.md#updating-links-to-cdn-assets)
++ [Varlıkları genel kaynaklarda kullanma](use-microsoft-365-cdn-with-spo.md#using-assets-in-public-origins)
++ [Varlıkları özel kaynaklarda kullanma](use-microsoft-365-cdn-with-spo.md#using-assets-in-private-origins)
 
-CDN'de istemci tarafı web bölümlerini barındırmak için nasıl kullanabileceğiniz hakkında bilgi için, [Office 365 CDN(Hello World part 4)](/sharepoint/dev/spfx/web-parts/get-started/hosting-webpart-from-office-365-cdn)) başlığına bakın.
+İstemci tarafı web bölümlerini barındırmak için CDN kullanma hakkında bilgi için, Office 365 CDN [istemci tarafı web bölümünüzü barındırma (Merhaba Dünya bölüm 4)](/sharepoint/dev/spfx/web-parts/get-started/hosting-webpart-from-office-365-cdn) konusuna bakın.
 
 > [!NOTE]
-> _ClientSideAssets_ klasörünü özel kaynak **listesine CDN,** CDN barındırılan özel web bölümleri iş devretmez. SPFX web bölümleri tarafından kullanılan dosyalar yalnızca genel kaynak CDN ve genel kaynak olarak ClientSideAssets klasörü CDN.
+> _ClientSideAssets_ klasörünü **özel** CDN kaynak listesine eklerseniz, CDN barındırılan özel web bölümleri işlenemez. SPFX web bölümleri tarafından kullanılan dosyalar yalnızca genel CDN kullanabilir ve ClientSideAssets klasörü genel CDN için varsayılan bir kaynaktır.
 
-### <a name="updating-links-to-cdn-assets"></a>CDN varlıklarının bağlantılarını güncelleştirme
+### <a name="updating-links-to-cdn-assets"></a>CDN varlıkların bağlantılarını güncelleştirme
 
-Kaynak olarak ekleytniz varlıkları kullanmak için, özgün dosyanın bağlantılarını kaynak dosyanın yoluyla güncelleştirmeniz basit olur.
+Kaynak öğeye eklediğiniz varlıkları kullanmak için, özgün dosyanın bağlantılarını kaynaktaki dosyanın yoluyla güncelleştirmeniz yeterlidir.
 
-+ Bir kaynakta yer alan varlıklara bağlantılar içeren sayfayı veya içeriği düzenleyin. Görüntülenen her yerde belirli bir varlığın bağlantısını güncelleştirmek istediğiniz bir site veya site koleksiyonu genelinde bağlantıları genel olarak aramak ve değiştirmek için de çeşitli yöntemlerden birini kullanabilirsiniz.
-+ Bir kaynakta yer alan bir varlıkla ilgili her bağlantı için bu yolu kaynak dosyanın CDN değiştirin. Göreli yollar kullanabilirsiniz.
++ Bir kaynakta eklediğiniz varlıkların bağlantılarını içeren sayfayı veya içeriği düzenleyin. Ayrıca, belirli bir varlığın bağlantısını göründüğü her yerde güncelleştirmek istiyorsanız, bir enter sitesi veya site koleksiyonundaki bağlantıları genel olarak aramak ve değiştirmek için çeşitli yöntemlerden birini de kullanabilirsiniz.
++ Kaynaktaki bir varlığın her bağlantısı için, yolu CDN kaynağındaki dosyanın yoluyla değiştirin. Göreli yolları kullanabilirsiniz.
 + Sayfayı veya içeriği kaydedin.
 
-Örneğin, belge kitaplığı klasörüne _/site/CDN_origins/public/ kopyalanmış olan /site/SiteAssets/images/image.png_/ görüntüsünü düşünün. Kaynak CDN kullanmak için, yeni _URL'yi /site/CDN_origins/public/image.png_ yapmak için özgün yolu resim dosyası konumuyla başlangıç yoluyla değiştirin.
+Örneğin, _/site/site/CDN_origins/_ public/ belge kitaplığı klasörüne kopyaladığınız _/site/_ SiteAssets/images/image.pnggörüntüsünü göz önünde bulundurun. CDN varlığını kullanmak için, yeni _URL'yi /site/CDN_origins/public/image.png_ yapmak için görüntü dosyası konumunun özgün yolunu kaynağın yoluyla değiştirin.
 
-Varlığın göreli yol yerine tam URL'sini kullanmak için, bağlantıyı şöyle oluşturun:
+Göreli yol yerine varlığın tam URL'sini kullanmak istiyorsanız bağlantıyı şöyle yapın:
 
 `https://<TenantHostName>.sharepoint.com/sites/site/CDN_origins/public/image.png`
 
 > [!NOTE]
-> Genel olarak, URL'leri doğrudan bağlı varlıklara zor CDN. Bununla birlikte, gerekirse genel kaynaklarda yer alan varlıklar için URL'leri el ile kurabilirsiniz. Daha fazla bilgi için bkz[. Ortak varlıklar için CDN url'leri sabit şekilde koruma](use-microsoft-365-cdn-with-spo.md#constructing-cdn-urls-for-public-assets).
+> Genel olarak, URL'leri doğrudan CDN varlıklara sabit kodlamamalısınız. Ancak, gerekirse genel kaynaklardaki varlıklar için URL'leri el ile oluşturabilirsiniz. Daha fazla bilgi için bkz. [Ortak varlıklar için sabit kodlama CDN URL'leri](use-microsoft-365-cdn-with-spo.md#constructing-cdn-urls-for-public-assets).
 
-CDN hizmetlerinden varlıklara hizmet verili olduğunu doğrulama hakkında bilgi edinmek için Aşağıdaki sorun giderme konusunda CDN[](use-microsoft-365-cdn-with-spo.md#CDNConfirm). Varlıklara hizmet [Office 365 CDN.](use-microsoft-365-cdn-with-spo.md#CDNTroubleshooting)
+Varlıkların CDN sunulduğunun nasıl doğrulandığını öğrenmek için, Office 365 CDN [sorunlarını giderme](use-microsoft-365-cdn-with-spo.md#CDNTroubleshooting) bölümünde [varlıkların CDN tarafından sunulduğundan emin Nasıl yaparım? onaylayın](use-microsoft-365-cdn-with-spo.md#CDNConfirm)? bölümüne bakın.
 
-### <a name="using-assets-in-public-origins"></a>Ortak kaynaklarda varlıkları kullanma
+### <a name="using-assets-in-public-origins"></a>Varlıkları genel kaynaklarda kullanma
 
-SharePoint  Online'daki Yayımlama özelliği, genel kaynaklarda depolanan varlıkların URL'lerini CDN eşdeğerlerine otomatik olarak yeniden yazarak, varlıklara posta yerine CDN hizmetine SharePoint.
+SharePoint Online'daki **Yayımlama özelliği**, genel kaynaklarda depolanan varlıkların URL'lerini otomatik olarak CDN eşdeğerlerine yeniden yazar, böylece varlıklar SharePoint yerine CDN hizmetinden sunulur.
 
-Kaynağınız Yayımlama özelliğinin etkin olduğu bir sitedeyseniz ve CDN'e devredmek istediğiniz varlıklar aşağıdaki kategorilerden birini içerirse, SharePoint, varlığın bir CDN ilkesi tarafından dışlamamış olması şartıyla, kaynakta bulunan varlıklara ait URL'leri otomatik olarak yeniden yazmaz.
+Kaynağınız Yayımlama özelliği etkinleştirilmiş bir sitedeyse ve CDN boşaltmak istediğiniz varlıklar aşağıdaki kategorilerden birindeyse, SharePoint varlığın bir CDN ilkesi tarafından dışlanmaması koşuluyla kaynaktaki varlıklar için URL'leri otomatik olarak yeniden yazar.
 
-Aşağıda, Yayımlama özelliği tarafından hangi bağlantıların otomatik olarak yeniden SharePoint genel bir bakış yer almaktadır:
+Aşağıda, SharePoint Yayımlama özelliği tarafından bağlantıların otomatik olarak yeniden yazıldığına genel bir bakış sağlanır:
 
 + Klasik yayımlama sayfası HTML yanıtlarında IMG/LINK/CSS URL'leri
-  + Bunlar, yazarların sayfanın HTML içeriğinde ekli resimleri içerir
-+ Resim Kitaplığı Slayt Gösterisi web bölümü resmi URL'leri
-+ SPList REST API'de resim alanları (RenderListDataAsStream) sonuçları
-  + Virgülle ayrılmış alan _listesi sağlamak için ImageFieldsToTryRewriteToCdnUrls_ özelliğini kullanın
+  + Bu, bir sayfanın HTML içeriğine yazarlar tarafından eklenen görüntüleri içerir
++ Resim Kitaplığı Slayt Gösterisi web bölümü resim URL'leri
++ SPList REST API'sindeki görüntü alanları (RenderListDataAsStream) sonuçları
+  + Alanların virgülle ayrılmış listesini sağlamak için _ImageFieldsToTryRewriteToCdnUrls_ yeni özelliğini kullanın
   + Köprü alanlarını ve PublishingImage alanlarını destekler
-+ SharePoint görüntüditionları
++ görüntü işlemelerini SharePoint
 
-Aşağıdaki diyagramda, kullanıcı genel SharePoint varlıklarını içeren bir sayfa isteği aldığında iş akışını gösterir.
+Aşağıdaki diyagramda, SharePoint ortak bir kaynaktan varlıklar içeren bir sayfa için istek aldığında iş akışı gösterilmektedir.
 
-![İş akışı diyagramı: Office 365 CDN kaynak olan varlıklar geri alınıyor.](../media/O365-CDN/o365-cdn-public-steps-transparent.png "İş Akışı: Office 365 CDN kaynaktan Office 365 CDN varlıklarını alma")
+![İş akışı diyagramı: Genel bir kaynaktan Office 365 CDN varlıkları alma.](../media/O365-CDN/o365-cdn-public-steps-transparent.png "İş Akışı: Genel bir kaynaktan Office 365 CDN varlıkları alma")
 
 > [!TIP]
-> Bir sayfada belirli URL'ler için otomatik yeniden yazma özelliğini devre dışı bırakmak için sayfayı kontrol edin ve sorgu dizesi parametresini ekleyin **? Devre dışı bırakmak istediğiniz her bağlantının sonuna NoAutoReWrites=true** tıklayın.
+> Sayfadaki belirli URL'ler için otomatik yeniden yazmayı devre dışı bırakmak istiyorsanız, sayfayı kullanıma alabilir ve sorgu dizesi parametresini ekleyebilirsiniz **? Devre dışı bırakmak istediğiniz her bağlantının sonuna doğru NoAutoReWrites=true** .
 
-#### <a name="constructing-cdn-urls-for-public-assets"></a>Ortak CDN URL'lerini oluşturma
+#### <a name="constructing-cdn-urls-for-public-assets"></a>Genel varlıklar için CDN URL'leri oluşturma
 
-Yayımlama özelliği  genel kaynak için etkinleştirilmediyse veya varlık CDN hizmetinin otomatik yeniden yazma özelliği tarafından desteklenen bağlantı türlerinden biri yoksa, varlıkların CDN konumu için URL'leri el ile oluşturmak ve bu URL'leri içeriğiniz içinde kullanmak için kullanabilirsiniz.
+_Yayımlama_ özelliği genel kaynak için etkinleştirilmemişse veya varlık, CDN hizmetinin otomatik yeniden yazma özelliği tarafından desteklenen bağlantı türlerinden biri değilse, varlıkların CDN konumuna URL'leri el ile oluşturabilir ve içeriğinizde bu URL'leri kullanabilirsiniz.
 
 > [!NOTE]
-> Url'nin son bölümünü oluşturan CDN bir erişim belirteci, kaynak istenen zamanda oluşturulacak şekilde gerekli erişim belirteci olduğundan, özel kaynak olan varlıklara yönelik URL'leri zor kod olarak oluşturamaz veya oluşturamazsiniz. Genel Posta için URL'yi CDN ve değişiklike tabi olduğu için URL'nin sabit kodlu olması gerekir.
+> URL'nin son bölümünü oluşturan gerekli erişim belirteci kaynağın istendiği anda oluşturulduğundan, url'leri özel bir kaynaktaki varlıklara sabit kodlayamaz veya CDN URL'leri oluşturamazsınız. Genel CDN URL'sini oluşturabilirsiniz ve url değiştirilebilir olduğundan sabit kodlanmamalıdır.
 
-Ortak CDN varlıkları için, URL biçimi aşağıdakine benzer olur:
+Genel CDN varlıkları için URL biçimi aşağıdaki gibi görünür:
 
 ```http
 https://publiccdn.sharepointonline.com/<TenantHostName>/sites/site/library/asset.png
 ```
 
-**TenantHostName'i** kiracı adınızla değiştirin. Örneğin:
+**TenantHostName** değerini kiracı adınız ile değiştirin. Örneğin:
 
 ```http
 https://publiccdn.sharepointonline.com/contoso.sharepoint.com/sites/site/library/asset.png
 ```
 
 > [!NOTE]
-> Sayfa bağlam özelliği, "" zor kodlama yerine ön eki oluşturmak içinhttps://publiccdn.sharepointonline.com kullanılmalıdır. URL değişebilir ve sabit kodlu olmalı. Klasik SharePoint Online ile görüntüleme şablonları kullanıyorsanız, görüntü şablonlarında URL'nin ön eki için "window._spPageContextInfo.publicCdnBaseUrl" özelliğini kullanabilirsiniz. Modern ve klasik SPFx web bölümleriniz varsa SharePoint "this.context.pageContext.legacyPageContext.publicCdnBaseUrl" özelliğinden faydalanabilirsiniz. Bu, ön eki sağlar; bu şekilde değiştirilirse, uygulamanız bu ön ekle güncelleştirmeyi sağlar. SPFx örneğinde olduğu gibi, URL "bu.context.pageContext.legacyPageContext.publicCdnBaseUrl" + "/" + "host" + "/" + "öğe için göreliURL" özelliği kullanılarak oluşturulur. Lütfen 1[. CDN performans serisinin](https://youtu.be/IH1RbQlbhIA) parçası olan İstemci tarafı kodunda [CDN'i kullanma'ya bakın](https://aka.ms/sppnp-perfvideos).
+> "" sabit kodlamasıhttps://publiccdn.sharepointonline.com yerine ön eki oluşturmak için sayfa bağlamı özelliği kullanılmalıdır. URL değiştirilebilir ve sabit kodlanmamalıdır. Klasik SharePoint Online ile görüntüleme şablonları kullanıyorsanız, URL'nin ön eki için görüntü şablonunuzda "window._spPageContextInfo.publicCdnBaseUrl" özelliğini kullanabilirsiniz. Modern ve klasik SharePoint için web bölümleri SPFx "this.context.pageContext.legacyPageContext.publicCdnBaseUrl" özelliğini kullanabilirsiniz. Bu, değiştirildiğinde uygulamanızın onunla güncelleştirilmesi için ön eki sağlar. SPFx örneği olarak, URL "this.context.pageContext.legacyPageContext.publicCdnBaseUrl" + "/" + "host" + "/" + "öğe için relativeURL" özelliği kullanılarak oluşturulabilir. Lütfen [1. sezon performans serisinin](https://aka.ms/sppnp-perfvideos) bir parçası olan [İstemci tarafı kodunda CDN kullanma](https://youtu.be/IH1RbQlbhIA) bölümüne bakın
 
 
-### <a name="using-assets-in-private-origins"></a>Özel kaynaklarda varlıkları kullanma
+### <a name="using-assets-in-private-origins"></a>Varlıkları özel kaynaklarda kullanma
 
-Özel kaynaklarda varlıkları kullanmak için ek yapılandırma gerekmez. SharePoint Online özel kaynaklarda bulunan varlıklarla ilgili URL'leri otomatik olarak yeniden yazarak bu varlıklara yapılan isteklere her zaman servis CDN. Özel kaynaklarda yer alan CDN için URL'leri el ile oluşturamazsınız, çünkü bu URL'ler, varlık istenen zamanda SharePoint Online tarafından otomatik olarak oluşturulacak belirteçler içerir.
+Varlıkları özel kaynaklarda kullanmak için ek yapılandırma gerekmez. SharePoint Online, özel kaynaklardaki varlıklar için URL'leri otomatik olarak yeniden yazar, böylece bu varlıklara yönelik istekler her zaman CDN sunulur. Bu URL'ler, varlığın istendiği sırada SharePoint Online tarafından otomatik olarak oluşturulması gereken belirteçler içerdiğinden, varlıkları özel kaynaklarda CDN için URL'leri el ile oluşturamazsınız.
 
-Özel kaynaklarda varlıklara erişim, aşağıdaki bölümlerde açıklanan uyarılarla birlikte, kaynak kullanıcı izinlerine dayalı olarak dinamik olarak oluşturulan belirteçlerle korunur. Kullanıcıların, içeriğin işlemesi **için** kaynak bilgilere en az CDN erişimi olması gerekir.
+Özel kaynaklardaki varlıklara erişim, aşağıdaki bölümlerde açıklanan uyarılarla, kaynak üzerindeki kullanıcı izinlerine göre dinamik olarak oluşturulan belirteçlerle korunur. Kullanıcıların içeriği işlemek için CDN kaynaklarına en azından **okuma** erişimi olmalıdır.
 
-Aşağıdaki diyagramda, İş Akışı'SharePoint özel kaynak varlıkları içeren bir sayfa için istek geldiğinde ortaya çıktı.
+Aşağıdaki diyagramda, SharePoint özel bir kaynaktan varlıklar içeren bir sayfa için istek aldığında iş akışı gösterilmektedir.
 
-![İş akışı diyagramı: Özel Office 365 CDN kaynak olan varlıklar geri alınıyor.](../media/O365-CDN/o365-cdn-private-steps-transparent.png "İş Akışı: Office 365 CDN kaynak olan varlıklar geri alınıyor")
+![İş akışı diyagramı: Özel bir kaynaktan Office 365 CDN varlıkları alma.](../media/O365-CDN/o365-cdn-private-steps-transparent.png "İş Akışı: Özel bir kaynaktan Office 365 CDN varlıkları alma")
 
 #### <a name="token-based-authorization-in-private-origins"></a>Özel kaynaklarda belirteç tabanlı yetkilendirme
 
-kaynaklarda özel kaynaklarda yer alan varlıklara Office 365 CDN, SharePoint Online tarafından oluşturulan belirteçler tarafından verilmesini sağlar. Kaynak tarafından belirlenen klasör veya kitaplara erişim iznine zaten sahip olan kullanıcılara, kullanıcının izin düzeyine göre dosyaya erişme izni veren belirteçler otomatik olarak atanır. Bu erişim belirteçleri, belirteç yeniden yürütme saldırılarını önlemeye yardımcı olmak için, oluşturulan 30 - 90 dakika için geçerlidir.
+Office 365 CDN özel çıkış noktalarındaki varlıklara erişim, SharePoint Online tarafından oluşturulan belirteçler tarafından verilir. Kaynak tarafından belirlenen klasöre veya kitaplığa erişim izni olan kullanıcılara, izin düzeyine göre kullanıcının dosyaya erişmesine izin veren belirteçler otomatik olarak verilir. Bu erişim belirteçleri, belirteç yeniden yürütme saldırılarını önlemeye yardımcı olmak için oluşturulduktan sonra 30 ile 90 dakika boyunca geçerlidir.
 
-Erişim belirteci oluşturulduktan sonra, SharePoint Online iki yetkilendirme parametresi (kenar yetkilendirme belirteci) ve _oat_ _(kaynak_ yetkilendirme belirteci) içeren istemciye özel bir URI döndürür. Her belirtecin yapısı _,< süresi Epoch saat biçimindedir ve >__< imzanın güvenli bir şekilde >_. Örneğin:
+Erişim belirteci oluşturulduktan sonra, SharePoint Online iki yetkilendirme parametresi _(_ uç yetkilendirme belirteci) ve _yulaf_ (kaynak yetkilendirme belirteci) içeren istemciye özel bir URI döndürür. Her belirtecin yapısı _,<'>__<'secure signature'>zaman biçimindeki süre sonu süresidir_. Örneğin:
 
 ```http
 https://privatecdn.sharepointonline.com/contoso.sharepoint.com/sites/site1/library1/folder1/image1.jpg?eat=1486154359_cc59042c5c55c90b26a2775323c7c8112718431228fe84d568a3795a63912840&oat=1486154359_7d73c2e3ba4b7b1f97242332900616db0d4ffb04312
 ```
 
 > [!NOTE]
-> Belirteç sahibi olan herkes kaynakta olan herkes kaynakta CDN. Bununla birlikte, bu erişim belirteçlerini içeren URL'ler yalnızca HTTPS üzerinden paylaşılır, dolayısıyla belirteç süresi sona ermeden önce URL son kullanıcı tarafından açıkça paylaşılmadıkça, varlık yetkisiz kullanıcılar için erişilebilir olmayacaktır.
+> Belirtecin sahibi olan herkes CDN kaynağa erişebilir. Ancak, bu erişim belirteçlerini içeren URL'ler yalnızca HTTPS üzerinden paylaşılır, bu nedenle belirtecin süresi dolmadan önce URL son kullanıcı tarafından açıkça paylaşılmadığı sürece, varlığa yetkisiz kullanıcılar erişemez.
 
-#### <a name="item-level-permissions-are-not-supported-for-assets-in-private-origins"></a>Özel kaynaklarda öğe düzeyinde izinler desteklenmiyor
+#### <a name="item-level-permissions-are-not-supported-for-assets-in-private-origins"></a>Özel kaynaklardaki varlıklar için öğe düzeyi izinleri desteklenmez
 
-SharePoint Online'ın özel varlıklar için öğe düzeyinde izinleri destekleme olmadığını unutmayın. Örneğin, 'da bulunan bir dosya `https://contoso.sharepoint.com/sites/site1/library1/folder1/image1.jpg`için, kullanıcılar aşağıdaki koşullar altında verilen dosyaya etkili bir şekilde erişim sağlar:
+SharePoint Online'ın özel kaynaklardaki varlıklar için öğe düzeyinde izinleri desteklemediğini unutmayın. Örneğin, konumunda `https://contoso.sharepoint.com/sites/site1/library1/folder1/image1.jpg`bulunan bir dosya için, kullanıcılar aşağıdaki koşullar göz önünde bulundurularak dosyaya etkin erişime sahiptir:
 
 |Kullanıcı  |İzinler  |Etkin erişim  |
 |---------|---------|---------|
-|Kullanıcı 1     |Klasör1'e erişimi var         |E-image1.jpg bağlantılara doğrudan CDN         |
-|Kullanıcı 2     |Klasöre erişimi yok1         |Dosyadan image1.jpg erişe CDN         |
-|Kullanıcı 3     |Klasör1'e erişimi yok, ancak image1.jpg Online'da image1.jpg için açık izin SharePoint.         |Varlık bilgilerine doğrudan image1.jpg SharePoint Online'dan erişebilirsiniz, ancak doğrudan CDN         |
-|Kullanıcı 4     |Klasör1'e erişimi vardır, ancak SharePoint Online'da image1.jpg açıkça SharePoint reddedildi         |SharePoint Online'dan varlıkla bağlantınız bulunamaz, ancak CDN Online'da dosyaya erişimi reddedilmiş olmasına rağmen varlıktan SharePoint.         |
+|Kullanıcı 1     |Klasör1'e erişimi var         |CDN image1.jpg erişebilir         |
+|Kullanıcı 2     |Klasör1'e erişimi yok         |CDN image1.jpg erişilemiyor         |
+|Kullanıcı 3     |klasör1'e erişimi yoktur, ancak SharePoint Online'da image1.jpg erişim için açık izin verilir         |Varlık image1.jpg doğrudan SharePoint Online'dan erişebilir, ancak CDN         |
+|Kullanıcı 4     |klasör1'e erişimi var, ancak SharePoint Online'da image1.jpg erişimi açıkça reddedildi         |SharePoint Online'dan varlığa erişilemiyor, ancak SharePoint Online'da dosyaya erişimi reddedilse de varlığa CDN erişebilir         |
 
 <a name="CDNTroubleshooting"></a>
 
-## <a name="troubleshooting-the-office-365-cdn"></a>Sorun giderme Office 365 CDN
+## <a name="troubleshooting-the-office-365-cdn"></a>Office 365 CDN sorunlarını giderme
 
 <a name="CDNConfirm"></a>
 
-### <a name="how-do-i-confirm-that-assets-are-being-served-by-the-cdn"></a>Varlıklara hizmet olarak diğer varlıklara hizmet CDN?
+### <a name="how-do-i-confirm-that-assets-are-being-served-by-the-cdn"></a>Varlıkların CDN tarafından sunulduğundan emin Nasıl yaparım??
 
-CDN varlıklarının bağlantılarını bir sayfaya ekledikten sonra, sayfaya göz atarak ve görüntü URL'sini gözden geçirerek, görüntüye sağ tıklayarak CDN'den hizmet sağ tıklatarak varlığınız size hizmet edilir.
+Bir sayfaya CDN varlıkların bağlantılarını ekledikten sonra, sayfaya göz atarak, görüntü işlendikten sonra resme sağ tıklayarak ve görüntü URL'sini gözden geçirerek varlığın CDN sunulduğundan emin olabilirsiniz.
 
-Ayrıca tarayıcınızın geliştirici araçlarını kullanarak bir sayfa üzerinde her varlığın URL'sini  görüntüleyebilirsiniz veya bir üçüncü taraf ağ izleme aracı kullanabilirsiniz.
+Ayrıca, tarayıcınızın geliştirici araçlarını kullanarak sayfadaki her bir varlığın URL'sini görüntüleyebilir veya bir üçüncü taraf ağ izleme aracı kullanabilirsiniz.
 
 > [!NOTE]
-> Varlıklarınızı bir SharePoint sayfasından işleme dışında test etmek için Fiddler gibi bir ağ aracı kullanırsanız, URL'nin SharePoint Online kiracının kök URL'si olduğu GET isteğine başvuru sahibi üst bilgisini "Başvuran: `https://yourdomain.sharepoint.com`" el ile eklemeniz gerekir.
+> Varlıklarınızı bir SharePoint sayfasından işleme dışında test etmek için Fiddler gibi bir ağ aracı kullanıyorsanız, URL'nin SharePoint Online kiracınızın kök URL'si olduğu GET isteğine "Başvuran: `https://yourdomain.sharepoint.com`" başvuran üst bilgisini el ile eklemeniz gerekir.
 
-Web tarayıcısında CDN URL'leri test SharePoint çünkü. Bununla birlikte, CDN varlık URL'sini SharePoint sayfayı tarayıcıda açarsanız, sayfada işlenen CDN varlık olduğunu görebilirsiniz.
+CDN URL'lerini doğrudan web tarayıcısında test edemezsiniz çünkü SharePoint Online'dan gelen bir başvuru sahibiniz olmalıdır. Ancak, CDN varlık URL'sini bir SharePoint sayfasına ekler ve sonra sayfayı tarayıcıda açarsanız, sayfada CDN varlığının işlendiğini görürsünüz.
 
-Geliştirici araçlarını tarayıcıda kullanma hakkında daha fazla bilgi Microsoft Edge Geliştirici [Araçları'Microsoft Edge bkz](/microsoft-edge/devtools-guide).
+Microsoft Edge tarayıcısında geliştirici araçlarını kullanma hakkında daha fazla bilgi için bkz. [Geliştirici Araçları Microsoft Edge](/microsoft-edge/devtools-guide).
 
-[CDN'nizin çalıştığını doğrulamayı gösteren SharePoint](https://aka.ms/sppnp-videos) Geliştirici Desenleri ve Uygulamaları kanalında barındırılan kısa bir video izlemek için lütfen CDN kullanımınızı doğrulama ve en iyi ağ bağlantısını sağlama CDN [bakın.](https://www.youtube.com/watch?v=ClCtBAtGjE8&list=PLR9nK3mnD-OWMfr1BA9mr5oCw2aJXw4WA&index=5)
+CDN çalıştığınızı doğrulamayı gösteren [SharePoint Geliştirici Desenleri ve Uygulamaları YouTube kanalında](https://aka.ms/sppnp-videos) barındırılan kısa bir videoyu izlemek için bkz. [CDN kullanımınızı doğrulama ve en iyi ağ bağlantısını sağlama](https://www.youtube.com/watch?v=ClCtBAtGjE8&list=PLR9nK3mnD-OWMfr1BA9mr5oCw2aJXw4WA&index=5).
 
-### <a name="why-are-assets-from-a-new-origin-unavailable"></a>Yeni bir kaynakta yer alan varlıklar neden kullanılamıyor?
-Kayıt işleminin CDN aracılığıyla yayılması ve kaynaktan varlıkların depolama alanına yüklenmeleri için kayıt, yeni kaynaklarda bulunan varlıklar hemen CDN. Varlıklar için gereken süre, CDN ve dosyaların boyutlarına bağlıdır.
+### <a name="why-are-assets-from-a-new-origin-unavailable"></a>Yeni bir kaynaktan gelen varlıklar neden kullanılamıyor?
+Kaydın CDN yayılması ve varlıkların kaynaktan CDN depolama alanına yüklenmesi zaman aldığından, yeni kaynaklardaki varlıklar hemen kullanılamaz. Varlıkların CDN kullanılabilir olması için gereken süre, kaç varlık ve dosya boyutuna bağlıdır.
 
 ### <a name="my-client-side-web-part-or-sharepoint-framework-solution-isnt-working"></a>İstemci tarafı web bölümüm veya SharePoint Framework çözümüm çalışmıyor
 
-Kaynak ayarlarını etkinleştir Office 365 CDN kaynak olarak, CDN aşağıdaki varsayılan kökenleri otomatik olarak oluşturur:
+Genel kaynaklar için Office 365 CDN etkinleştirdiğinizde, CDN hizmeti otomatik olarak şu varsayılan kaynakları oluşturur:
 
 + */MASTERPAGE
 + */STYLE LIBRARY
 + */CLIENTSIDEASSETS
 
-*/clientsideassets kaynağı yoksa, SharePoint Framework çözümleri başarısız olur ve uyarı veya hata iletisi oluşturulmaz. kaynak, -_NoDefaultOrigins_ parametresi CDN olarak ayarlanmış olduğundan veya kaynak el ile silindiğinde $true eksik olabilir.
+*/clientsideassets kaynağı eksikse, SharePoint Framework çözümler başarısız olur ve hiçbir uyarı veya hata iletisi oluşturulmaz. CDN _-NoDefaultOrigins_ parametresi **$true** olarak ayarlandığından veya kaynak el ile silindiğinden bu kaynak eksik olabilir.
 
-Aşağıdaki PowerShell komutuyla hangi kökenlerin mevcut olduğunu kontrol edin:
+Aşağıdaki PowerShell komutuyla hangi çıkış noktalarının mevcut olduğunu kontrol edebilirsiniz:
 
 ```powershell
 Get-SPOTenantCdnOrigins -CdnType Public
 ```
 
-Ya da CLI'ya Office 365 kontrol edin:
+İsterseniz Office 365 CLI ile de kontrol edebilirsiniz:
 
 ```cli
 spo cdn origin list
@@ -1034,17 +1034,17 @@ PowerShell'de kaynağı eklemek için:
 Add-SPOTenantCdnOrigin -CdnType Public -OriginUrl */CLIENTSIDEASSETS
 ```
 
-KÖKENİ CLI'ya Office 365 için:
+kaynağı Office 365 CLI'ya eklemek için:
 
 ```cli
 spo cdn origin add --origin */CLIENTSIDEASSETS
 ```
 
-### <a name="what-powershell-modules-and-cli-shells-do-i-need-to-work-with-the-office-365-cdn"></a>Yeni modüllerle çalışmam gereken PowerShell modülleri ve CLI kabukları Office 365 CDN?
+### <a name="what-powershell-modules-and-cli-shells-do-i-need-to-work-with-the-office-365-cdn"></a>Office 365 CDN ile çalışmak için hangi PowerShell modüllerine ve CLI kabuklarına ihtiyacım var?
 
-SharePoint Online Management Shell PowerShell modülünü veya **CLI'Office 365 CDN** kullanarak ana **bilgisayarla Office 365 seçebilirsiniz**.
+**SharePoint Çevrimiçi Yönetim Kabuğu** PowerShell modülünü veya Office 365 **CLI'yı kullanarak Office 365 CDN** ile çalışmayı seçebilirsiniz.
 
-+ [SharePoint Online Yönetim Kabuğu ile çalışmaya başlama](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
++ [SharePoint Online Management Shell'i kullanmaya başlama](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
 + [Office 365 CLI'yi yükleme](https://pnp.github.io/cli-microsoft365/user-guide/installing-cli/)
 
 ## <a name="see-also"></a>Ayrıca bkz.
@@ -1053,4 +1053,4 @@ SharePoint Online Management Shell PowerShell modülünü veya **CLI'Office 365 
 
 [Network planning and performance tuning for Office 365](./network-planning-and-performance.md)
 
-[SharePoint Serisi - Office 365 CDN video serisi](https://www.youtube.com/playlist?list=PLR9nK3mnD-OWMfr1BA9mr5oCw2aJXw4WA)
+[SharePoint Performans Serisi - Office 365 CDN video serisi](https://www.youtube.com/playlist?list=PLR9nK3mnD-OWMfr1BA9mr5oCw2aJXw4WA)

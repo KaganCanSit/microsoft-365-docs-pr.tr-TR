@@ -1,8 +1,8 @@
 ---
-title: DAP Microsoft 365 iş Windows PowerShell iş ortağı e-postalarını yönet
+title: DAP iş ortakları için Windows PowerShell ile Microsoft 365 yönetme
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 audience: Admin
 ms.topic: landing-page
 ms.service: o365-administration
@@ -16,30 +16,30 @@ f1.keywords:
 - NOCSH
 ms.custom: seo-marvel-apr2020
 ms.assetid: be497751-596f-431d-b256-0a89d36a47ce
-description: Dağıtım ve Dağıtım (BULUT ÇÖZÜMÜ SAĞLAYıCıSı) iş ortakları, Windows PowerShell kiracılarını yönetmek Microsoft 365 nasıl Microsoft 365 kullanabilir.
-ms.openlocfilehash: db991416c88c88541bd5e9ec77bbca538e4e376c
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+description: Dağıtım ve Bulut Çözümü Sağlayıcısı (CSP) iş ortaklarının Microsoft 365 müşteri kiracılarını yönetmek için Windows PowerShell nasıl kullanabileceği.
+ms.openlocfilehash: 9eb1b37f89f7850fe0680bbc43d39abfb68e9954
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63675316"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65091599"
 ---
-# <a name="how-to-manage-microsoft-365-with-windows-powershell-for-delegated-access-permissions-partners"></a>Temsilcili Erişim Microsoft 365 iş Windows PowerShell nasıl yönetebilirsiniz?
+# <a name="how-to-manage-microsoft-365-with-windows-powershell-for-delegated-access-permissions-partners"></a>Temsilci Erişim İzinleri iş ortakları için Windows PowerShell ile Microsoft 365 yönetme
 
-*Bu makale hem son hem de Microsoft 365 Kurumsal hem de Office 365 Kurumsal.*
+*Bu makale hem Microsoft 365 Kurumsal hem de Office 365 Kurumsal için geçerlidir.*
 
-Temsilcili Erişim İzni (DAP) iş ortakları Dağıtım ve Bulut Çözümü Sağlayıcıları (CSP) İş Ortaklarıdır. Birçoğu ağ veya telekom sağlayıcısıdır. Abonelikleri Microsoft 365 tekliflerinde paketler. Microsoft 365 aboneliği satarken, müşterinizin eğilimlerini yönetmesi ve bu eğilimleri rapor etmelerini sağlamak için otomatik olarak Adına Yönetme (AOBO) izinleri verilmesini sağlar. Bu görevleri aynı anda yapmak Microsoft 365 yönetim merkezi. Aşağıdakiler gibi yönetim görevlerini gerçekleştirmek için Microsoft 365 PowerShell'i kullanmak çok daha kolaydır:
-- Tüm müşteri **TenantId'lerini ve onların** etki alanlarını listele 
-- Müşteri kiralığında yer alan tüm kullanıcıları ve onların atanmış lisanslarını tanımlama
+Temsilci Erişim İzni (DAP) iş ortakları, Dağıtım ve Bulut Çözümü Sağlayıcıları (CSP) İş Ortaklarıdır. Çoğu ağ veya telekom sağlayıcısıdır. Microsoft 365 abonelikleri hizmet tekliflerine paketlemektedir. bir Microsoft 365 aboneliği sattıklarında, bu kiracıları yönetebilmeleri ve rapor verebilmeleri için müşterinin kiracıları üzerinde otomatik olarak Adına Yönetme (AOBO) izinleri verilir. Bu görevlerin Microsoft 365 yönetim merkezi yapılması zordur. PowerShell'i Microsoft 365 gibi yönetim görevlerini gerçekleştirmek için kullanmak çok daha kolaydır:
+- Tüm müşteri **TenantId'lerini** ve etki alanlarını listeleme 
+- Müşteri kiracısı içindeki tüm kullanıcıları ve atanmış lisanslarını belirleme
 > [!NOTE]
 > Bazı yönetim görevleri yalnızca PowerShell'de yapılabilir.
 
-Aşağıdaki makalelerde Dağıtım ve CSP iş ortaklarının, müşteri eğilimlerini yönetmek için PowerShell'i nasıl kullanıldığı listelemektedir:
+Aşağıdaki makalelerde Dağıtım ve CSP iş ortaklarının müşteri eğilimlerini yönetmek için PowerShell'i nasıl kullandığı gösterilmiştir:
   
-- [Temsilci Microsoft 365 İzinleri (DAP) Windows PowerShell iş ortaklarıyla kiracıları yönetme](manage-microsoft-365-tenants-with-windows-powershell-for-delegated-access-permissio.md)
+- [Temsilci Erişim İzinleri (DAP) iş ortakları için Windows PowerShell ile Microsoft 365 kiracılarını yönetme](manage-microsoft-365-tenants-with-windows-powershell-for-delegated-access-permissio.md)
     
-- [Temsilci Erişim İzni (DAP) iş ortakları için Windows PowerShell hesabı olan bir istemci kiraya etki alanı ekleme](add-a-domain-to-a-client-tenancy-with-windows-powershell-for-delegated-access-pe.md)
+- [TemsilciLi Erişim İzni (DAP) iş ortakları için Windows PowerShell ile istemci kiracısına etki alanı ekleme](add-a-domain-to-a-client-tenancy-with-windows-powershell-for-delegated-access-pe.md)
     
-- [Bağlan'Exchange Online PowerShell'e](/powershell/exchange/connect-to-exchange-online-powershell)
+- [PowerShell'i Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell)
     
-- [Temsilcili Erişim İzinleri (DAP) Windows PowerShell iş ortaklarıyla müşteri kiracı raporlama verilerini alma](retrieve-customer-tenant-reporting-data-with-windows-powershell-for-delegated-ac.md)
+- [Temsilci Erişim İzinleri (DAP) iş ortakları için Windows PowerShell ile müşteri kiracı raporlama verilerini alma](retrieve-customer-tenant-reporting-data-with-windows-powershell-for-delegated-ac.md)

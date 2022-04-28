@@ -2,8 +2,8 @@
 title: İçerik için arama yapma
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -11,12 +11,12 @@ ms.topic: article
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 description: Exchange posta kutularında e-postayı, SharePoint sitelerdeki ve OneDrive konumlarındaki belgeleri ve Skype Kurumsal'deki anlık ileti konuşmalarını hızla bulmak için Microsoft Purview uyumluluk portalındaki İçerik arama eBulma aracını kullanın.
-ms.openlocfilehash: 4efe2f4b4735005c10fd59e618bb6ecc8be51ec0
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 30398f91a0ab7807ea3438e6bfdde3606e918a4d
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64993671"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65092259"
 ---
 # <a name="search-for-content-using-the-content-search-tool"></a>İçerik arama aracını kullanarak içerik arama
 

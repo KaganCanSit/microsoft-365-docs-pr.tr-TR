@@ -1,10 +1,10 @@
 ---
-title: En son sürümlere geniş dağıtım örneği
+title: En son sürümler için geniş dağıtım örneği
 author: kelleyvice-msft
 f1.keywords:
 - NOCSH
 ms.author: kvice
-manager: laurawi
+manager: scotv
 ms.date: 07/21/2020
 audience: ITPro
 ms.topic: article
@@ -14,101 +14,101 @@ ms.collection:
 - Strat_O365_Enterprise
 - M365-subscription-management
 ms.custom: ''
-description: En son sürümün dağıtımı yapılan bir kuruluş, uygulama ve uygulama Windows 10 kanalları Microsoft 365 kullanır.
-ms.openlocfilehash: 6b0226a226742a89dc65ca0d32792db03c77e465
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: En son sürümü dağıtan bir kuruluşun Windows 10 ve Microsoft 365 uygulamaları için kanalları nasıl kullandığı.
+ms.openlocfilehash: 6f52bc8fc55fe94361961585aacae1f48c4fbce5
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985055"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65092149"
 ---
-# <a name="example-of-broad-deployment-for-the-latest-releases"></a>En son sürümlere geniş dağıtım örneği
+# <a name="example-of-broad-deployment-for-the-latest-releases"></a>En son sürümler için geniş dağıtım örneği
 
-Bu kanal yapılandırma örneği, şu işletme önceliklerine uygun olarak en son sürümler için hızlı dağıtım kullanan bir kuruluşa özeldir:
+Bu kanal yapılandırma örneği, bu iş önceliklerine uyacak şekilde en son sürümlerin hızlı dağıtımını kullanan bir kuruluşa yöneliktir:
 
-- Microsoft uygulamaları ve hizmetleri ile iş sürekliliğini sağlar.
-- Microsoft'un en son özellikleri ve düzeltmeleriyle cihaz, hizmet ve veri güvenliğini en üst düzeye çıkarma.
-- Microsoft'un en son özellikleriyle kullanıcı üretkenliğini en üst düzeye çıkarmak.
+- Microsoft uygulamaları ve hizmetleriyle iş sürekliliğini sağlayın.
+- Microsoft'un en son özellikleri ve düzeltmeleriyle cihaz, hizmet ve veri güvenliğini en üst düzeye çıkarın.
+- Microsoft'un en son özellikleriyle kullanıcı üretkenliğini en üst düzeye çıkarın.
 
-Bu hedefler, hızlı üretim dağıtımıyla, temsili bir kullanıcı ve cihaz alt kümesiyle genişletilen ve geniş dağıtımdan önce işlevsel olarak doğrulanması gereken hızlı dağıtım arasındaki dengeyi bulmayla ilgili IT görevine çevrilir.
+Bu hedefler, hızlı üretim dağıtımı ile erken inceleme arasındaki dengeyi bulma BT görevine çevrilir ve geniş dağıtım öncesinde işlevsel olarak doğrulanması için kullanıcıların ve cihazların temsili bir alt kümesiyle çalışır.
 
-Örnek kuruluşlarımızın Avrupa, Afrika, Asya ve Amerika'daki dünya genelinde binalarda 5.000 çalışan bulunuyor. Çalışanların %70'i Microsoft 365 E3 diğerleri çalışan tarafından varsayılan kullanım Microsoft 365 E5.
+Örnek kuruluşumuzun Avrupa, Afrika, Asya ve Amerika'daki binalarda 5.000 çalışanı vardır. Çalışanların %70'i Microsoft 365 E3, kuruluşun geri kalanı Microsoft 365 E5 kullanıyor.
 
 >[!Note]
->Bu örnek, birçok tür ve boyuttaki kuruluşlara uygun dağıtım aşamalarını ve grupları nasıl kullanabileceğiniz göstermek üzere tasarlanmıştır.
+>Bu örnek, dağıtım aşamalarını ve gruplarını nasıl kullanabileceğinizi gösterecek şekilde tasarlanmıştır. Bu, birçok türde ve boyuttaki kuruluşlarda kullanılabilir.
 >
 
-Bu kuruluşun IT altyapısı: 
+Bu kuruluşun BT altyapısı: 
 
-- Yüklü tabanın %60'larından oluşan Windows, Microsoft 365 Uygulamaları ve Microsoft bulut hizmetleriyle büyük ölçüde eşgenizedir. BT altyapısını basitleştirmek ve kolaylaştırmak için yoğun, çok yıllık bir çalışmadan sonra birkaç eski sistem kalır.
-- Deneyimli personel tarafından sürdürür ve sürümlerinde Microsoft'un liderlik ekibini takip eden kullanıcıların ve cihazlarının verimli ve güvenli bir şekilde korunmasıyla görev almaktadır.
+- Yüklü tabanın %60'ını oluşturan Windows, Microsoft 365 Uygulamaları ve Microsoft bulut hizmetleriyle büyük ölçüde homojendir. BT altyapısını basitleştirmek ve kolaylaştırmak için yoğun ve çok yıllık bir çabanın ardından birkaç eski sistem kaldı.
+- Son derece deneyimli personel tarafından korunur ve microsoft'un yayınlarındaki liderliğini izleyerek kullanıcıları ve cihazlarını üretken ve güvenli tutmakla görevlendirilir.
 
 ## <a name="deployment-and-update-stages"></a>Dağıtım ve güncelleştirme aşamaları
 
-Bu örnek kuruluş, en son sürümün hızlı dağıtım hedeflerine dayanarak iki adımlı bir dağıtım işlemi kullanır.
+En son sürümün hızlı dağıtım hedeflerine bağlı olarak, bu örnek kuruluş iki aşamalı bir dağıtım işlemi kullanır.
 
-1. **Önizleme veya pilot dağıtım kullanma:** Erken benimseyenlerle, IT personeliyle, temsili yapılandırmaları olan kullanıcılarla ve eğitim personeliyle doğrulayın ve iterersiniz. 
+1. **Önizleme veya pilot dağıtım kullanın:** Erken benimseyenler, BT personeli, temsili yapılandırmaları olan kullanıcılar ve eğitim personeli ile doğrulama ve yineleme. 
 
-   Yeni özellikler kuruluşun geri kalanına gitmeden önce, temsili yapılandırmaları olan kullanıcılar, erken benimseyen IT personeli diğer uygulamalarla ve cihazlarda işlevleri doğrular.
+   İlk benimseyenler, BT personeli, temsili yapılandırmaları olan kullanıcılar, yeni özellikler kuruluşun geri kalanına sunulmadan önce diğer uygulamalarla ve cihazlardaki işlevleri doğrulayabilir.
 
-   Değişiklik yöneticilerinin yaygın olarak yaygın olarak yaygın hale gelmeden önce yeni özelliklere önceden göz atları vardır ve mesajlaşmayı ve yaygınlaşmayı plan olabilir.
+   Değişiklik yöneticileri, yaygın kullanıma sunulmadan önce yeni özelliklere erken göz atar ve mesajlaşma ve dağıtım planlayabilir.
 
-   Eğitim personeli yaygın olarak yaygın hale gelmeden önce yeni iç kursları planlar veya yeni özellikler için mevcut kursları güncelleştirin.
+   Eğitim personeli yeni dahili kurslar planlayabilir veya yaygın kullanıma sunulmadan önce yeni özellikler için mevcut kursları güncelleştirebilir.
 
-2. **Üretim dağıtımı:** Kalan tüm kullanıcıları bölgeye, bölüme veya başka bir dağıtım yöntemine göre dağıtma.
+2. **Üretim dağıtımı:** Kalan tüm kullanıcılara bölgeye, departmana veya diğer dağıtım yöntemine göre dağıtılır.
 
-## <a name="deployment-configuration-for-windows-10"></a>Dağıtım yapılandırması Windows 10
+## <a name="deployment-configuration-for-windows-10"></a>Windows 10 için dağıtım yapılandırması
 
-Genel olarak amaç, Sürüm Önizleme Kanalı değişikliklerinin doğrulanmasında en son Semi-Annual Kanalı sürümünün, temsili bir grup kullanıcı ve cihazlarının kapsamlı olarak dağıtımını yapmaktır.
+Genel hedef, bir grup temsilci kullanıcı ve cihazları tarafından Sürüm Önizleme Kanalı değişiklikleri doğrulandıktan sonra en son Semi-Annual Kanalı sürümünün geniş bir dağıtımını gerçekleştirmektir.
 
-Dağıtım [Windows 10 ve](/windows/deployment/) stratejiler hakkında daha fazla bilgi Windows 10 için bkz.
+[Windows 10 dağıtım](/windows/deployment/) yöntemleri ve stratejileri hakkında daha fazla bilgi için bkz. dağıtım Windows 10.
 
-| Aşama | Kanal | Dağıtım grubu |
+| Sahne | Kanal | Dağıtım grubu |
 |:-------|:-------|:-----|
-| Pilot |  **Sürüm Önizleme Kanalı**  <ul><li>Amaç: Temsili cihazlar ve yapılandırmalarda (diller, üçüncü taraf uygulamalar) doğrulama için, IT personeline ve erken benimsenenlere özellik güncelleştirmeleri dağıtımı. </li><li> Durum: Tamamen uyumlu ve ticari müşteriler için desteklenen ürün ve destek sözleşmelerinizi kabul desteklemez. </li></ul> | **Win10ReleasePreviewChannel** (örnek ad) <br><br> Üyeler şunları içeren gruplardır: <ul><li> Windows ve konumların en büyük tutkunları </li><li> Geçerlilik ihtiyacı olan yapılandırmaları olan personel </li><li> IT yöneticileri ve IT dağıtım personeli </li><li> Değişiklik yöneticileri </li><li> İç eğitim personeli </li></ul> |
-| Üretim |  **Yarı Yıllık Kanal**  <ul><li>Amaç: En son özellik güncelleştirmelerinin kuruluşun geri kalanına geniş dağıtım. </li><li> Durum: Tam uyumlu ve desteklenen. </li></ul> | **Win10SnelAnnualChannel** (örnek ad) <br><br> Üyeler, Win10ReleasePreviewChannel grubunda yer almamış olan tüm kullanıcılardır. |
+| Pilot |  **Sürüm Önizleme Kanalı**  <ul><li>Amaç: Özellik güncelleştirmelerinin, temsili cihazlarda ve yapılandırmalarda (diller, üçüncü taraf uygulamalar) doğrulanması için BT personeline ve erken benimseyenlere dağıtımı. </li><li> Durum: Ticari müşteriler için tam uyumlu ve desteklenir ve destek sözleşmelerinize göre sayılmaz. </li></ul> | **Win10ReleasePreviewChannel** (örnek ad) <br><br> Üyeler şunlar içeren gruplardır: <ul><li> Departmanlar ve konumlar arasında meraklıları Windows </li><li> Doğrulama gerektiren yapılandırmalara sahip personel </li><li> BT yöneticileri ve BT dağıtım personeli </li><li> Değişiklik yöneticileri </li><li> İç eğitim personeli </li></ul> |
+| Üretim |  **Altı Aylık Kanal**  <ul><li>Amaç: En son özellik güncelleştirmelerinin kuruluşun geri kalanına geniş kapsamlı dağıtımı. </li><li> Durum: Tam uyumlu ve desteklenir. </li></ul> | **Win10SemiAnnualChannel** (örnek ad) <br><br> Üyeler Win10ReleasePreviewChannel grubunda olmayan tüm kullanıcılardır. |
 ||||
 
-Bu kuruluş, Windows Update veya Windows Server Update Services gibi Semi-Annual Kanalı yayınlarını dağıtmak ve her iki kanal güncelleştirmesinde de aynı ilkeleri uygulamak için olduğu gibi, Sürüm Önizleme Kanalı yüklemesini dağıtmak için en iyi uygulamayı kullanır.
+Bu kuruluş, Windows Update veya Windows Server Update Services gibi Semi-Annual Kanal sürümlerini dağıttığı ve her iki kanal güncelleştirmesi için de aynı ilkeleri uyguladığı şekilde Yayın Önizleme Kanalı yükünü dağıtmanın en iyi uygulamasını kullanır.
 
-Devam eden güncelleştirme işlemi:
+Devam eden güncelleştirmeler işlemi:
 
 1. Sürüm Önizleme Kanalı değişiklikleri Win10ReleasePreviewChannel (örnek ad) dağıtım grubuna dağıtılır.
-2. Win10ReleasePreviewChannel grup üyeleri, Microsoft'a geri bildirim sağlayan ve ek doğrulama için bir sonraki Sürüm Önizleme Kanalı değişikliklerini bekley isteyen IT dağıtım personeli için Sürüm Önizleme Kanalı değişikliklerinin çalıştığını onaylar.
-3. Semi-Annual özellik değişiklikleri Win10SnelAnnualChannel dağıtım grubuna dağıtılır. 
+2. Win10ReleasePreviewChannel grup üyeleri, Microsoft'a geri bildirim sağlayabilen ve ek doğrulama için sonraki Sürüm Önizleme Kanalı değişikliklerini bekleyebilen Release Preview Kanalı değişikliklerinin BT dağıtım personeline çalıştığını onaylar.
+3. Semi-Annual Kanal özelliği değişiklikleri Win10SemiAnnualChannel dağıtım grubuna dağıtılır. 
 
 >[!Note]
->Semi-Annual Kanalı önerilen kanal olduğu halde, IT departmanınız kendi yönetim araçlarını kullanmalı ve kuruluş içinde en son Semi-Annual Kanalı sürümünü ne zaman dağıtacaklarını belirlemeli ve ardından dalga olarak dağıtsalar.
+>önerilen kanal Semi-Annual Kanal olsa da, BT departmanınızın yönetim araçlarını kullanması ve en son Semi-Annual Kanal sürümünün ne zaman kuruluş içinde dağıtılacağına karar vermesi ve ardından dalgalar halinde kullanıma sunması gerekir.
 >
 
-## <a name="deployment-configuration-for-microsoft-365-apps"></a>Dağıtım yapılandırması Microsoft 365 Uygulamaları
+## <a name="deployment-configuration-for-microsoft-365-apps"></a>Microsoft 365 Uygulamaları için dağıtım yapılandırması
 
-Genel olarak amaç, Güncel Kanal (Önizleme) değişikliklerini doğrulanın ardından, bir grup temsilci kullanıcı tarafından son Güncel Kanal sürümünün kapsamlı olarak dağıtımını yapmaktır.
+Genel hedef, bir grup temsilci kullanıcı tarafından Geçerli Kanal (Önizleme) değişiklikleri doğrulandıktan sonra en son Güncel Kanal sürümünün geniş bir dağıtımını gerçekleştirmektir.
 
-Dağıtım [Microsoft 365 Uygulamaları ve](/deployoffice/plan-office-365-proplus) stratejiler hakkında daha fazla bilgi Microsoft 365 Uygulamaları için bkz. Dağıtımda daha fazla bilgi.
+[Microsoft 365 Uygulamaları dağıtım](/deployoffice/plan-office-365-proplus) yöntemleri ve stratejileri hakkında daha fazla bilgi için bkz. Microsoft 365 Uygulamaları dağıtımı.
 
-| Aşama | Kanal | Dağıtım grubu |
+| Sahne | Kanal | Dağıtım grubu |
 |:-------|:-------|:-----|
-| Pilot |  **Güncel Kanal (Önizleme)** <ul><li> Amaç: {give a group of representative users a sneak peek of new Microsoft 365 Uygulamaları features} Current Channel (Preview) kullanıcıları ile test edilir ve üretime hazır olur olmaz özellik güncelleştirmeleri dağıtımı. </li><li> Durum: Tam uyumlu ve desteklenen.</li><li> Ne sıklıkta: Her ay 2-3 kez güncelleştirme. </li></ul> | **AppsCurrentChannelPreview** (örnek ad) <br><br> Üyeler şunları içeren gruplardır: <ul><li> Office ve yerlerdeki uygulama tutkunlarına yol verin </li><li> Geçerlilik ihtiyacı olan yapılandırmaları olan personel </li><li> IT yöneticileri ve IT dağıtım personeli </li><li> Değişiklik yöneticileri </li><li> İç eğitim personeli </li></ul>|
-| Üretim | **Güncel Kanal** <ul><li> Amaç: En son özellik güncelleştirmelerinin kuruluşun geri kalanına geniş dağıtım. </li><li> Durum: Tam uyumlu ve desteklenen. </li></ul> |  **AppsCurrentChannel** (örnek ad) <br><br> Üyeler, AppsCurrentChannelPreview grubunda yer almamış olan tüm kullanıcılardır. |
+| Pilot |  **Geçerli Kanal (Önizleme)** <ul><li> Amaç: {bir grup temsilci kullanıcıya yeni Microsoft 365 Uygulamaları özelliklerine göz atın} Özellik güncelleştirmelerinin Güncel Kanal (Önizleme) kullanıcıları ile test edilir ve üretime hazır oldukları anda dağıtımı. </li><li> Durum: Tam uyumlu ve desteklenir.</li><li> Ne sıklıkta: Her ay 2-3 kez güncelleştirir. </li></ul> | **AppsCurrentChannelPreview** (örnek ad) <br><br> Üyeler şunlar içeren gruplardır: <ul><li> Departmanlar ve konumlar arasında uygulama meraklılarını Office </li><li> Doğrulama gerektiren yapılandırmalara sahip personel </li><li> BT yöneticileri ve BT dağıtım personeli </li><li> Değişiklik yöneticileri </li><li> İç eğitim personeli </li></ul>|
+| Üretim | **Geçerli Kanal** <ul><li> Amaç: En son özellik güncelleştirmelerinin kuruluşun geri kalanına geniş kapsamlı dağıtımı. </li><li> Durum: Tam uyumlu ve desteklenir. </li></ul> |  **AppsCurrentChannel** (örnek ad) <br><br> Üyeler, AppsCurrentChannelPreview grubunda olmayan tüm kullanıcılardır. |
 |||
 
-Devam eden güncelleştirme işlemi:
+Devam eden güncelleştirmeler işlemi:
 
 1. Geçerli Kanal (Önizleme) değişiklikleri AppsCurrentChannelPreview dağıtım grubuna dağıtılır.
-2. AppsCurrentChannelPreview grup üyeleri, Microsoft'a geri bildirim sağlayan ve ek doğrulama için bir sonraki Güncel Kanal (Önizleme) sürümü için beklemeleri gereken GÜNCEL Kanal (Önizleme) personeli için Geçerli Kanal (Önizleme) değişikliklerinin çalıştığını onaylar.
+2. AppsCurrentChannelPreview grup üyeleri, Microsoft'a geri bildirim sağlayabilen ve ek doğrulama için bir sonraki Geçerli Kanal (Önizleme) sürümünü bekleyebilen Geçerli Kanal (Önizleme) değişikliklerinin BT dağıtım personeline çalıştığını onaylar.
 3. Geçerli Kanal değişiklikleri AppsCurrentChannel dağıtım grubuna dağıtılır. 
 
 ## <a name="visual-summary"></a>Görsel özet
 
-Bu örnek kuruluş tarafından kullanılan ürünler, kanalları ve dağıtım grupları burada ve şekildedir. 
+Bu örnek kuruluş tarafından kullanılan ürünler, kanalları ve dağıtım grupları aşağıda verilmiştir. 
 
-![En son sürümlere geniş dağıtım için dağıtım grupları.](../media/deploy-update-channels-examples-rapid-deploy/group-summary.png)
+![En son sürümlerin geniş dağıtımı için dağıtım grupları.](../media/deploy-update-channels-examples-rapid-deploy/group-summary.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 [Dağıtım ve güncelleştirme kanalı örnek yapılandırmaları](deploy-update-channels-examples.md)
 
-[Microsoft 365 genel bakış için genel bakış](microsoft-365-overview.md)
+[Microsoft 365 Kurumsal’a genel bakış](microsoft-365-overview.md)
 
 [Test laboratuvarı kılavuzları](m365-enterprise-test-lab-guides.md)

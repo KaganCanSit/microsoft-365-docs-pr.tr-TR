@@ -1,8 +1,8 @@
 ---
-title: Eşitleme görünümünde dizin eşitlemesi Microsoft 365
+title: dizin eşitleme durumunu Microsoft 365
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -20,51 +20,51 @@ search.appverid:
 - MOE150
 - MED150
 ms.assetid: 18be3b98-34ae-47be-9337-ab6c3fb372ac
-description: Bu makalede, microsoft iş yerizsinde dizin eşitlemenizin durumunu nasıl Office 365.
-ms.openlocfilehash: 0cc5b5244c5809d3f1b13b15b200bd8cea585c7c
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Bu makalede, Office 365'da dizin eşitlemenizin durumunu nasıl denetleyeceğinizi öğrenin.
+ms.openlocfilehash: 8f21985f8db3539e8dd1a839cc6cb499a425feeb
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62959929"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65095564"
 ---
-# <a name="view-directory-synchronization-status-in-microsoft-365"></a>Eşitleme görünümünde dizin eşitlemesi Microsoft 365
+# <a name="view-directory-synchronization-status-in-microsoft-365"></a>dizin eşitleme durumunu Microsoft 365
 
-Şirket içi ortamınızı Microsoft 365 ile eşitleyerek şirket içi Active Directory Etki Alanı Hizmetleri'nizi (AD DS) Azure Active Directory (Azure AD) ile tümleştirdıysanız, eşitlemenizin durumunu da kontrol edin.
+Şirket içi ortamınızı Microsoft 365 ile eşitleyerek şirket içi Active Directory Etki Alanı Hizmetlerinizi (AD DS) Azure Active Directory (Azure AD) ile tümleştirdiyseniz, eşitlemenizin durumunu da de kontrol edebilirsiniz.
   
 ## <a name="view-directory-synchronization-status"></a>Dizin eşitleme durumunu görüntüleme
 
-- E-Microsoft 365 yönetim merkezi [giriş sayfasında](https://admin.microsoft.com) **DirSync Durumu'ne** tıklayın.
-- Alternatif olarak, Kullanıcılar Etkin **kullanıcılar'a** \> **gidebilir** ve Etkin kullanıcılar sayfasında **Diğer Dizin** **eşitlemesi'ne** \> **seçebilirsiniz**. Dizin **Eşitlemesi bölmesinde** **DirSync yönetimine git'i seçin**.
+- [Microsoft 365 yönetim merkezi](https://admin.microsoft.com) oturum açın ve giriş sayfasında **DirSync Durumu'nu** seçin.
+- Alternatif olarak, **Kullanıcılar** \> **Etkin kullanıcılar'a** gidebilir ve **Etkin kullanıcılar** sayfasında **Diğer** \> **Dizin eşitlemesi'ni** seçebilirsiniz. **Dizin Eşitleme** bölmesinde **DirSync yönetimine git'i** seçin.
 
 ## <a name="information-on-the-manage-directory-synchronization-page"></a>Dizin eşitlemesini yönet sayfasındaki bilgiler
 
-Aşağıdaki tabloda, sayfa hakkında bilgi edinebilirsiniz özellikler listeledik.
+Aşağıdaki tabloda, sayfada hakkında bilgi alabileceğiniz özellikler listelenmiştir.
   
-Dizin eşitlemeniz ile ilgili bir sorun varsa, hatalar da bu sayfada listelenir. Karşılaş karşılaşabilirsiniz farklı hatalar hakkında daha fazla bilgi için bkz. Bu [hatalarda dizin eşitleme Microsoft 365](identify-directory-synchronization-errors.md).
+Dizin eşitlemenizle ilgili bir sorun varsa, hatalar bu sayfada da listelenir. Karşılaşabileceğiniz farklı hatalar hakkında daha fazla bilgi için bkz. [Microsoft 365 dizin eşitleme hatalarını belirleme](identify-directory-synchronization-errors.md).
   
 |Öğe|Kullanım amacı|
 |:-----|:-----|
-|**Doğrulanan etki alanları** | Etki alanı kiracınız içinde Microsoft 365 sahip olduğunu doğruladığınız etki alanı sayısı. |
-|**Doğrulanmamış etki alanları** | Kendi ekledik ancak doğrulanmamış etki alanları. |
-|**Dizin eşitlemesi etkin** |Doğru veya Yanlış. Dizin eşitlemeyi etkinleştirip etkinleştirmediysenizi belirtir. |
-|**En son dizin eşitlemesi** | Dizin eşitlemesi en son ne zaman başladı? Son eşitlemenin üç gün öncesine kadar olan bir uyarı ve sorun giderme aracının bağlantısı görüntülenir. |
-|**Parola eşitlemesi etkin** | Doğru veya Yanlış. Bizim şirket içi parola karma eşitlemeniz ile kiracınız arasında parola karma eşitlemesi Microsoft 365 belirtir. |
-|**Son Parola Eşitlemesi** | Parola karma eşitlemesi en son ne zaman başladı? Son eşitlemenin üç gün öncesine kadar olan bir uyarı ve sorun giderme aracının bağlantısı görüntülenir. |
-|**Dizin eşitleme istemcisi sürümü** | Azure AD'nin yeni bir sürümü yayınlandı Bağlan indirme bağlantısı içerir. |
-|**Dizin eşitleme hizmeti hesabı** | Dizin eşitleme hizmeti Microsoft 365 adını görüntüler. |
+|**Doğrulanan etki alanları** | sahip olduğunuzu doğruladığınız Microsoft 365 kiracınızdaki etki alanı sayısı. |
+|**Etki alanları doğrulanmadı** | Eklediğiniz ancak doğrulanmamış etki alanları. |
+|**Dizin eşitleme etkin** |Doğru veya Yanlış. Dizin eşitlemeyi etkinleştirip etkinleştirmediğiniz belirtir. |
+|**En son dizin eşitleme** | Dizin eşitlemenin son çalıştırışı. Son eşitleme üç günden uzun bir süre önceyse bir uyarı ve sorun giderme aracının bağlantısını görüntüler. |
+|**Parola eşitleme etkin** | Doğru veya Yanlış. Şirket içi ile Microsoft 365 kiracınız arasında parola karması eşitlemesi yapıp yapmadığınızı belirtir. |
+|**Son Parola Eşitleme** | Parola karması eşitlemenin son çalıştırışı. Son eşitleme üç günden uzun bir süre önceyse bir uyarı ve sorun giderme aracının bağlantısını görüntüler. |
+|**Dizin eşitleme istemcisi sürümü** | Azure AD Bağlan'nin yeni bir sürümü yayımlandıysa indirme bağlantısı içerir. |
+|**Dizin eşitleme hizmeti hesabı** | Microsoft 365 dizin eşitleme hizmeti hesabınızın adını görüntüler. |
 |||
 
 ## <a name="monitor-synchronization-health"></a>Eşitleme durumunu izleme
 
-Bu bölümde, kimlik altyapınızı ve Azure AD Bağlan tarafından sağlanan eşitleme hizmetlerini izlemek için şirket içi AD DS etki alanı denetleyicilerinizin her bir bölümüne bir Azure AD Bağlan Health aracısı Bağlan. İzleme bilgileri, uyarıları, performansı izleme, kullanım Bağlan ve diğer bilgileri görüntüley yeri olan Azure AD Bağlan Health portalında kullanılabilir.
+Bu bölümde, kimlik altyapınızı ve Azure AD Bağlan tarafından sağlanan eşitleme hizmetlerini izlemek için şirket içi AD DS etki alanı denetleyicilerinizin her birine bir Azure AD Bağlan Health aracısı yükleyeceksiniz. İzleme bilgileri, uyarıları, performans izlemeyi, kullanım analizini ve diğer bilgileri görüntüleyebileceğiniz bir Azure AD Bağlan Health portalında sağlanır.
 
-Azure AD Bağlan Health'in nasıl kullanımına ilişkin temel tasarım kararı, Azure AD Bağlan:
+Azure AD Bağlan Health'in nasıl kullanılacağına ilişkin temel tasarım kararı, Azure AD Bağlan nasıl kullandığınıza bağlıdır:
 
-- Yönetilen kimlik doğrulama seçeneğini **kullanıyorsanız**, Azure AD kimlik durumunu anlamak ve yapılandırmak için [Azure AD Bağlan Health'i](/azure/active-directory/connect-health/active-directory-aadconnect-health-sync) eşitlemeyle kullanma ile Bağlan kullanın.
-- Active Directory Federasyon Hizmetleri (AD FS) ile federasyon kimlik doğrulaması kullanarak yalnızca hesapların ve grupların adlarını eşitlerken, Azure AD Bağlan Health'i anlamak ve yapılandırmak için [Azure AD Bağlan Health'i AD FS](/azure/active-directory/connect-health/active-directory-aadconnect-health-adfs) ile kullanma ile çalışmaya başlama.
+- **Yönetilen kimlik doğrulama** seçeneğini kullanıyorsanız Azure AD Bağlan Health'i anlamak ve yapılandırmak için Azure [AD Bağlan Health'i eşitleme ile kullanma](/azure/active-directory/connect-health/active-directory-aadconnect-health-sync) ile başlayın.
+- Active Directory Federasyon Hizmetleri (AD FS) (AD FS) ile **federasyon kimlik doğrulaması** kullanarak hesapların ve grupların yalnızca adlarını eşitlerseniz, [Azure AD Bağlan Health'i anlamak ve yapılandırmak için AD FS ile Azure AD Bağlan Health kullanma ile](/azure/active-directory/connect-health/active-directory-aadconnect-health-adfs) başlayın.
 
-Tamamlandığında şunları sahip oluruz:
+Tamamlandığında şunları yapacaksınız:
 
-- Azure AD Bağlan hizmet durumu aracısı şirket içi kimlik sağlayıcısı sunucularına yüklenmiştir.
-- Microsoft 365 aboneliği Bağlan niz için Azure AD kiracısı ile şirket içi altyapı ve eşitleme etkinliklerinizin geçerli durumunu gösteren Azure AD Microsoft 365 portalı.
+- Şirket içi kimlik sağlayıcısı sunucularınıza yüklenen Azure AD Bağlan Health aracısı.
+- Microsoft 365 aboneliğiniz için Azure AD kiracısıyla şirket içi altyapınızın ve eşitleme etkinliklerinizin geçerli durumunu görüntüleyen Azure AD Bağlan Health portalı.

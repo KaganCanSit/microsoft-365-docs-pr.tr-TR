@@ -2,7 +2,7 @@
 title: Office 365'te Skype Kurumsal Çevrimiçi Sürüm - Yönetici Yardımı
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 6/29/2018
 audience: Admin
 ms.topic: landing-page
@@ -21,19 +21,19 @@ search.appverid:
 - MSO150
 - BCS160
 ms.assetid: 4307bdbf-6097-458d-9a6a-048112695c59
-description: Yönetici olarak, Skype Kurumsal Online'ın ağ, toplantı ve im ve kullanıcılara dış erişim dahil olmak üzere bölümlerini ayarlamayla ilgili yardım bulun.
-ms.openlocfilehash: 3be6eaaf5d39ebb62dcc4a7cc090633147681301
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+description: Yönetici olarak, Skype Kurumsal Online'ın ağınız, toplantılarınız ve anlık iletiniz ve kullanıcılar için dış erişimi dahil olmak üzere bölümlerini ayarlama konusunda yardım bulun.
+ms.openlocfilehash: d9c290cbf756cb0ec7a8a6f042409498d7a379b4
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63682140"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65092083"
 ---
 # <a name="skype-for-business-online-in-office-365---admin-help"></a>Office 365'te Skype Kurumsal Çevrimiçi Sürüm - Yönetici Yardımı
 
 ## <a name="were-here-to-help"></a>We're here to help!
 
-İşletmeler için Office 365 yöneticisi olarak, bilgili destek aracılarımıza ücretsiz erişim sağlayabilirsiniz. Gereken bilgileri bu web sitesinde bulamazsanız, İş ürünleri için **[deha başvurun - Yönetici Yardımı](https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)**
+İşletmeler için Office 365 yöneticisi olarak, bilgili destek aracılarımıza ücretsiz erişim sağlayabilirsiniz. İhtiyacınız olan bilgileri bu web sitesinde bulamazsanız **[, İş ürünleri için desteğe başvurun - Yönetici Yardımı](https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)**
   
 ## <a name="let-your-users-contact-external-skype-or-skype-for-business-users"></a>Kullanıcılarınızın dış Skype veya Skype Kurumsal kullanıcılarına izin verme
 
@@ -41,7 +41,7 @@ Skype Kurumsal kullanıcılarının kuruluşunuzun dışındaki kullanıcılara 
   
 - [Kullanıcıların kuruluş dışındaki Skype Kurumsal kullanıcılarıyla bağlantı kurmasına izin verme](https://support.office.com/article/b414873a-0059-4cd5-aea1-e5d0857dbc94)
     
-- [Kullanıcıların Skype Kurumsal kişi eklemesine Skype verme](https://support.office.com/article/08666236-1894-42ae-8846-e49232bbc460)
+- [kullanıcıların Skype kişi eklemesine izin Skype Kurumsal](https://support.office.com/article/08666236-1894-42ae-8846-e49232bbc460)
     
 ## <a name="improve-call-and-video-quality"></a>Çağrı ve görüntü kalitesini geliştirin
 
@@ -65,23 +65,23 @@ Ayrıca bkz.:
     
 ## <a name="fix-problems-for-your-users"></a>Kullanıcılarınızın karşılaştığı sorunları giderme
 
-- [Seçeneklerde Kişisel seçenekleri Skype Kurumsal](https://support.office.com/article/68bacc31-71d3-44c3-a4d4-64da78c447aa#bkmk-stop-automatic-startup)
+- [Skype Kurumsal'de Kişisel seçenekleri ayarlama](https://support.office.com/article/68bacc31-71d3-44c3-a4d4-64da78c447aa#bkmk-stop-automatic-startup)
     
-- [E-Skype Kurumsal'da oturum açma ile ilgili yardıma mı ihtiyacınız var?](https://support.office.com/article/448b8ea7-5b33-444a-afd4-175fc9930d05)
+- [Skype Kurumsal oturum açarken yardıma mı ihtiyacınız var?](https://support.office.com/article/448b8ea7-5b33-444a-afd4-175fc9930d05)
     
-- [Video: Oturum açma ve oturum Skype Kurumsal](https://support.office.com/article/8abed4b3-ac48-493e-9d76-0e10140e9451)
+- [Video: Skype Kurumsal oturum açma ve kapatma](https://support.office.com/article/8abed4b3-ac48-493e-9d76-0e10140e9451)
     
-- [Ses Aygıtı seçeneklerini Skype Kurumsal](https://support.office.com/article/2533d929-9814-4349-8ae4-fca29246e2ff)
+- [Skype Kurumsal'de Ses Cihazı seçeneklerini ayarlama](https://support.office.com/article/2533d929-9814-4349-8ae4-fca29246e2ff)
     
 - [Skype Kurumsal toplantısına katılma](https://support.office.com/article/3862be6d-758a-4064-a016-67c0febf3cd5)
     
-- [Kaldır Skype Kurumsal](https://support.office.com/article/28C4A036-7F22-406C-B7F4-87894CBAF902)
+- [Skype Kurumsal kaldırma](https://support.office.com/article/28C4A036-7F22-406C-B7F4-87894CBAF902)
     
 ## <a name="help-your-users-get-started-quickly"></a>Kullanıcılarınızın hızlıca başlamasına yardımcı olun!
 
 - [Skype Kurumsal'ı keşfedin](https://support.office.com/article/8a3491a3-c095-4718-80cf-cbbe4afe4eba): Kullanıcılarınız için eğitim kaynakları 
     
-- [Yükleme Skype Kurumsal](https://support.office.com/article/8a0d4da8-9d58-44f9-9759-5c8f340cb3fb)
+- [yükleme Skype Kurumsal](https://support.office.com/article/8a0d4da8-9d58-44f9-9759-5c8f340cb3fb)
     
 - [Video: Skype Kurumsal'da iletişim durumu ve anlık ileti](https://support.office.com/article/c873b869-4ce0-4375-9bea-5de150eaf081)
     
@@ -89,6 +89,6 @@ Ayrıca bkz.:
     
 - [Skype Kurumsal konferans araması başlatma](https://support.office.com/article/8dc8ac52-91ac-4db9-8672-11551fdaf997)
     
- **Kullanıcılara ilgili diğer makaleler için yardım [Skype Kurumsal bakın](https://support.office.com/article/4fbe07ce-6b15-4a06-bcf0-baea57890410).**
+ **Kullanıcılara yönelik diğer makaleler için yardım [Skype Kurumsal bakın](https://support.office.com/article/4fbe07ce-6b15-4a06-bcf0-baea57890410).**
   
 

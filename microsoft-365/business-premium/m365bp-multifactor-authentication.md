@@ -1,14 +1,14 @@
 ---
-title: Etki için çok faktörlü kimlik doğrulamasını Microsoft 365 İş Ekstra
+title: Microsoft 365 İş Ekstra için çok faktörlü kimlik doğrulamasını ayarlama
 f1.keywords:
 - NOCSH
-ms.author: sharik
-author: SKjerland
-manager: scotv
+ms.author: deniseb
+author: denisebmsft
+manager: dansimp
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection:
 - Adm_O365
 - M365-subscription-management
@@ -24,21 +24,26 @@ search.appverid:
 - MET150
 - MOE150
 description: Mobil cihazlar için çok faktörlü kimlik doğrulamasını ayarlayın.
-ms.openlocfilehash: 7e2032fdd7b2ef35fac53726601d730f21782c5b
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 16f160eb3d489837cdd3588c3e8a68267da9ffc0
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63705132"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65097502"
 ---
-# <a name="set-up-multifactor-authentication-on-your-mobile-device"></a>Mobil aygıtınızda çok faktörlü kimlik doğrulamasını ayarlama
+# <a name="set-up-multi-factor-authentication-with-your-mobile-device"></a>Mobil cihazınızla çok faktörlü kimlik doğrulamasını ayarlama
 
-Çok faktörlü kimlik doğrulaması işletmeniz için daha fazla güvenlik sağlar. Yöneticiniz tarafından MFA'nın kullanımı için gerekli bulunduktan sonra, Microsoft Authenticator uygulamasını ayar kullanarak önemli uygulamalarda telefonunuzla güvenli bir şekilde oturum açabilirsiniz. 
+Çok faktörlü kimlik doğrulaması daha fazla güvenlik sağlar çünkü erişimi doğrulamak için yalnızca parola veya metin aracılığıyla kod kullanmak yerine telefonunuzdaki ayrı bir uygulama kullanılır. Bu, hacklemesini zorlaştırıyor. MFA gerektiğinde, kuruluş üyeleri cihazlarında güvenli bir şekilde oturum açmak için Microsoft Authenticator uygulamasını kullanabilir. <br/><br/>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE2MmQR]
 
-Çok faktörlü kimlik [doğrulamasını ayarlama hakkında daha fazla bilgi için bkz Microsoft 365](https://support.office.com/article/a32541df-079c-420d-9395-9d59354f7225)
+daha fazla bilgi için bkz. [Microsoft 365'de çok faktörlü kimlik doğrulamasını ayarlama](https://support.office.com/article/a32541df-079c-420d-9395-9d59354f7225)
 
-## <a name="use-the-outlook-app-in-your-devices"></a>Outlook uygulamasını cihazlarınız içinde kullanma
+## <a name="use-the-outlook-app-on-your-devices"></a>Cihazlarınızda Outlook uygulamasını kullanma
 
-Yöneticiniz sizi MFA'da kullanmak için gerekli verdikten ve ikinci bir kimlik doğrulama biçimi olarak bir doğrulayıcı uygulama ayar verdikten sonra, Microsoft 365 e-postanıza erişmek için Outlook uygulamasını yüklemenizi ve kullanmanızı öneririz. Mobil [cihazlar da dahil olmak](../business/set-up-mobile-devices.md) üzere Office uygulamaları telefonunuza Outlook için bkz. Mobil cihazları ayarlama.
+Bir yönetici ön saf kullanıcıların MFA kullanmasını zorunlu kıldıktan sonra, kimlik doğrulayıcı uygulaması ikinci bir kimlik doğrulama biçimi olarak hizmet eder. Microsoft 365 e-postalarına erişmek için Outlook uygulamasını yüklemelerini ve kullanmalarını öneririz. Outlook dahil olmak üzere Office uygulamalarını telefona yükleme hakkında bilgi için bkz. [Mobil cihazları ayarlama](../business/set-up-mobile-devices.md).
+
+## <a name="next-objective"></a>Sonraki hedef
+
+[Office uygulamaları yükleme](m365bp-install-office-apps.md) yönergelerini izleyin.
+

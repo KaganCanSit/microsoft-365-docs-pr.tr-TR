@@ -1,10 +1,10 @@
 ---
-title: Kurumsal test ortamınız için lisans ve grup Microsoft 365 otomatikleştirme
+title: Kurumsal test ortamınız için Microsoft 365 lisanslama ve grup üyeliğini otomatikleştirme
 f1.keywords:
 - NOCSH
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 12/09/2019
 audience: ITPro
 ms.topic: article
@@ -14,97 +14,97 @@ ms.collection: M365-identity-device-management
 ms.custom:
 - TLG
 - Ent_TLGs
-description: Kurumsal test ortamınız için grup tabanlı lisanslama ve dinamik Microsoft 365 üyeliğinizi yapılandırma.
-ms.openlocfilehash: cbf10436ded2fbdcbe34c2a0bfa15b0a70a30eeb
-ms.sourcegitcommit: 6c57f1e90339d5a95c9e7875599dac9d3e032c3a
+description: Kurumsal test ortamı için Microsoft 365 grup tabanlı lisanslama ve dinamik grup üyeliğini yapılandırın.
+ms.openlocfilehash: 1d471076ac07acb023cdf785233ea2222690b596
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2022
-ms.locfileid: "63016451"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65097546"
 ---
-# <a name="automate-licensing-and-group-membership-for-your-microsoft-365-for-enterprise-test-environment"></a>Kurumsal test ortamınız için lisans ve grup Microsoft 365 otomatikleştirme
+# <a name="automate-licensing-and-group-membership-for-your-microsoft-365-for-enterprise-test-environment"></a>Kurumsal test ortamınız için Microsoft 365 lisanslama ve grup üyeliğini otomatikleştirme
 
-*Bu Test Laboratuvarı Kılavuzu yalnızca kurumsal test Microsoft 365 test ortamları için kullanılabilir.*
+*Bu Test Laboratuvarı Kılavuzu yalnızca kurumsal test ortamları için Microsoft 365 için kullanılabilir.*
 
-Grup tabanlı lisanslama, grup üyeliğine göre kullanıcı hesabına otomatik olarak lisans atar veya lisansları kaldırır. Dinamik grup üyeliği, Bölüm veya Ülke gibi kullanıcı hesabı özelliklerine bağlı olarak **gruba üye ekler** veya **kaldırır**. Bu makalede, kurumsal test ortamına projeniz için grup üyelerini ekleme ve kaldırma Microsoft 365 tanıtımları adım adım göstermektedir.
+Grup tabanlı lisanslama, grup üyeliğine bağlı olarak bir kullanıcı hesabı için lisansları otomatik olarak atar veya kaldırır. Dinamik grup üyeliği, **Departman** veya **Ülke** gibi kullanıcı hesabı özelliklerine göre gruba üye ekler veya kaldırır. Bu makalede, kurumsal test ortamınız için Microsoft 365 hem grup üyeleri ekleme hem de kaldırma işlemleri gösterilir.
 
-Kurumsal test ortamınız için test ortamınıza otomatik lisanslama Microsoft 365 dinamik grup üyeliğini ayarlama iki aşama içerir:
+Kurumsal test ortamı için Microsoft 365 otomatik lisanslama ve dinamik grup üyeliğini ayarlamak iki aşamayı içerir:
 
-- [Aşama 1: Kurumsal test Microsoft 365 yapınızı oluşturma](#phase-1-build-out-your-microsoft-365-for-enterprise-test-environment)
-- [Aşama 2: Dinamik grup üyeliğini ve otomatik lisansları yapılandırma ve test edin](#phase-2-configure-and-test-dynamic-group-membership-and-automatic-licensing)
+- [1. Aşama: Kurumsal test ortamı için Microsoft 365 oluşturma](#phase-1-build-out-your-microsoft-365-for-enterprise-test-environment)
+- [2. Aşama: Dinamik grup üyeliğini ve otomatik lisanslamayı yapılandırma ve test edin](#phase-2-configure-and-test-dynamic-group-membership-and-automatic-licensing)
 
 ![Microsoft bulutu için Test Laboratuvarı Kılavuzları.](../media/m365-enterprise-test-lab-guides/cloud-tlg-icon.png) 
     
 > [!TIP]
-> Kurumsal Test Laboratuvarı Kılavuzu yığınına Microsoft 365 görsel bir harita için Kurumsal Test Laboratuvarı Kılavuzu Yığını [için Microsoft 365'e gidin](../downloads/Microsoft365EnterpriseTLGStack.pdf).
+> Kurumsal Test Laboratuvarı Kılavuzu yığınındaki Microsoft 365 tüm makalelere yönelik görsel bir harita için [kurumsal Test Laboratuvarı Kılavuzu Yığını için Microsoft 365](../downloads/Microsoft365EnterpriseTLGStack.pdf) bölümüne gidin.
   
-## <a name="phase-1-build-out-your-microsoft-365-for-enterprise-test-environment"></a>Aşama 1: Kurumsal test Microsoft 365 yapınızı oluşturma
+## <a name="phase-1-build-out-your-microsoft-365-for-enterprise-test-environment"></a>1. Aşama: Kurumsal test ortamı için Microsoft 365 oluşturma
 
-En düşük gereksinimlerle yalnızca basit bir yolla otomatik lisanslama ve grup üyeliğini test etmek için Basit temel [yapılandırma'daki yönergeleri izleyin](lightweight-base-configuration-microsoft-365-enterprise.md).
+Otomatik lisanslama ve grup üyeliğini yalnızca minimum gereksinimlerle basit bir şekilde test etmek istiyorsanız [Basit temel yapılandırma](lightweight-base-configuration-microsoft-365-enterprise.md) yönergelerini izleyin.
   
-Sanal bir kuruluşta otomatik lisanslama ve grup üyeliğini test etmek için, Geçişli kimlik [doğrulama'daki yönergeleri izleyin](pass-through-auth-m365-ent-test-environment.md).
+Sanal bir kuruluşta otomatik lisanslama ve grup üyeliğini test etmek istiyorsanız [Geçişli kimlik doğrulamasındaki](pass-through-auth-m365-ent-test-environment.md) yönergeleri izleyin.
   
 > [!NOTE]
-> Otomatik lisanslama ve grup üyeliğini test etmek, Active Directory Etki Alanı Hizmetleri (AD DS) ormanı için İnternet ve dizin eşitlemeye bağlı sanal bir intranet içeren sanal kurumsal test ortamını gerektirmez. Burada, otomatik lisanslama ve grup üyeliğini test etmek ve normal bir kuruluşu temsil eden bir ortamda bu üyelikle denemeler yapmak için bir seçenek olarak sağlanmıştır.
+> Otomatik lisanslama ve grup üyeliğinin test edilmesi için İnternet'e bağlı bir sanal intranet ve bir Active Directory Domain Services (AD DS) ormanı için dizin eşitlemesi içeren sanal kurumsal test ortamı gerekmez. Burada, otomatik lisanslama ve grup üyeliğini test edebilmeniz ve tipik bir kuruluşu temsil eden bir ortamda denemeler yapabileceğiniz bir seçenek olarak sağlanır.
   
-## <a name="phase-2-configure-and-test-dynamic-group-membership-and-automatic-licensing"></a>Aşama 2: Dinamik grup üyeliğini ve otomatik lisansları yapılandırma ve test edin
+## <a name="phase-2-configure-and-test-dynamic-group-membership-and-automatic-licensing"></a>2. Aşama: Dinamik grup üyeliğini ve otomatik lisanslamayı yapılandırma ve test edin
 
-İlk olarak Satış adlı yeni bir grup oluşturun ve Departman olarak ayarlanmış kullanıcı hesaplarının otomatik olarak Satışlar grubuna katılması için dinamik  bir grup üyeliği  kuralı ekleyin.
+İlk olarak Sales adlı yeni bir grup oluşturun ve **Departman'ın** **Satış** olarak ayarlandığı kullanıcı hesaplarının Sales grubuna otomatik olarak katılması için dinamik bir grup üyeliği kuralı ekleyin.
 
-1. İnternet tarayıcınızın özel bir örneğinde, [Microsoft 365 yönetim merkezi](https://admin.microsoft.com) test laboratuvarı aboneliğinizin genel yönetici Microsoft 365 E5 oturum açın.
-2. Tarayıcınızın ayrı bir sekmesinde, üzerinde Azure portalına gidin [https://portal.azure.com](https://portal.azure.com).
-3. Azure portalında, arama **kutusuna gruplar** girin ve Ardından Gruplar'ı **seçin**.
-4. Tüm gruplar **bölmesinde Yeni** **grup'a tıklayın**.
-5. Grup **türü'ne** bir metin **Microsoft 365**.
-6. Grup **adı alanına** **Satış girin.**
-7. Üyelik **türü'ne** dinamik **kullanıcı'ya seçin**.
-8. Dinamik **kullanıcı üyeleri'ne seçin**.
-9. Dinamik **üyelik kuralları bölmesinde** : 
-   - Bölüm **özelliğini** seçin.
-   - Eşittir **işlecini** seçin.
-   - Değer **kutusuna** **Satış girin.**
+1. İnternet tarayıcınızın özel bir örneğinde[, Microsoft 365 E5](https://admin.microsoft.com) test laboratuvarı aboneliğinizin genel yönetici hesabıyla Microsoft 365 yönetim merkezi oturum açın.
+2. Tarayıcınızın ayrı bir sekmesinde konumundaki Azure portal [https://portal.azure.com](https://portal.azure.com)gidin.
+3. Azure portal, arama kutusuna **gruplar** girin ve ardından **Gruplar'ı** seçin.
+4. **Tüm gruplar** bölmesinde **Yeni grup'a** tıklayın.
+5. **Grup türü'nde** **Microsoft 365'ı** seçin.
+6. **Grup adı** alanına **Satışlar** yazın.
+7. **Üyelik türü'nde** **Dinamik kullanıcı'yı** seçin.
+8. **Dinamik kullanıcı üyeleri'ne tıklayın**.
+9. **Dinamik üyelik kuralları** bölmesinde: 
+   - **Departman** özelliğini seçin.
+   - **Eşittir** işlecini seçin.
+   - **Değer** kutusuna **Satışlar** yazın.
 10. **Kaydet**'i seçin.
 11. **Oluştur**’u seçin.
 
-Ardından, Satış grubunu, üyelere otomatik olarak lisans atamaları için Microsoft 365 E5 basın.
+Ardından Satış grubunu, üyelere otomatik olarak Microsoft 365 E5 lisansı atanması için yapılandırın.
 
-1. Satış grubunu **seçin** ve ardından Lisanslar'ı **seçin**.
-2. Lisans **atamalarını güncelleştir bölmesinde Yenile'yi** ve **Microsoft 365 E5** Kaydet'i **seçin**.
+1. **Satış** grubunu ve ardından **Lisanslar'ı** seçin.
+2. **Lisans atamalarını güncelleştir** bölmesinde **Microsoft 365 E5** ve ardından **Kaydet'i** seçin.
 3. Tarayıcınızda Azure portal sekmesini kapatın.
 
 Ardından, User 4 hesabında dinamik grup üyeliğini ve otomatik lisanslamayı test edin:
 
-1. Tarayıcınızdaki **Microsoft Office Giriş** sekmesinde Yönetici'yi **seçin**.
-2. Seçenekler **Microsoft 365 yönetim merkezi** Etkin **kullanıcılar'ı seçin**.
-3. Etkin **kullanıcılar sayfasında** Kullanıcı **4 hesabını** seçin.
-4. Kullanıcı **4 bölmesinde** Ürün **lisansları için** **Düzenle'yi seçin**.
-5. Ürün **lisansları bölmesinde,** Ürün lisansını devre **Microsoft 365 E5** ardından **SaveClose'yi** >  seçin.
-6. Kullanıcı 4 hesabının özelliklerinde, hiçbir ürün lisansı atanmamış ve grup üyeliği olmadığını doğrulayın.
-7. Kişi **bilgileri için Düzenle'yi** **seçin**.
-8. Kişi bilgilerini **düzenle bölmesinde Kişi** **bilgilerini seçin.**
-9. Bölüm kutusuna **Satış'ı** **girin ve** ardından **SaveClose'yi** >  seçin.
-10. Birkaç dakika bekleyin ve sonra düzenli olarak Kullanıcı 4 hesabı bölmesinin sağ üst kısmında bulunan Yenile simgesini seçin.
+1. Tarayıcınızdaki **Microsoft Office Giriş** sekmesinde **Yönetici'yi** seçin.
+2. **Microsoft 365 yönetim merkezi** sekmesinde **Etkin kullanıcılar'ı** seçin.
+3. **Etkin kullanıcılar** sayfasında **Kullanıcı 4** hesabını seçin.
+4. **Kullanıcı 4** bölmesinde **Ürün lisansları** için **düzenle'yi** seçin.
+5. **Ürün lisansları** bölmesinde **Microsoft 365 E5** lisansını devre dışı bırakın ve ardından **KaydetKapat'ı** >  seçin.
+6. Kullanıcı 4 hesabının özelliklerinde, hiçbir ürün lisansının atanmadığını ve grup üyeliği olmadığını doğrulayın.
+7. **Kişi bilgileri** için **Düzenle'yi** seçin.
+8. **Kişi bilgilerini düzenle** bölmesinde **Kişi bilgileri'ni** seçin.
+9. **Departman** kutusuna **Satışlar** yazın ve **Ardından KaydetKapat'ı** >  seçin.
+10. Birkaç dakika bekleyin ve ardından Kullanıcı 4 hesabı bölmesinin sağ üst köşesindeki **Yenile** simgesini düzenli aralıklarla seçin.
 
-Zamanında şunları görüyor olur:
+Zaman içinde şunları görmeniz gerekir:
 
-- **Satış grubuyla** güncelleştirilen Grup **üyelikleri** özelliği.
-- **Otomatik lisansla** güncelleştirilen ürün **Microsoft 365 E5**.
+- **Grup üyelikleri** özelliği **Sales** grubuyla güncelleştirildi.
+- **Ürün lisansları** özelliği **Microsoft 365 E5** lisansıyla güncelleştirildi.
 
-Üretimde dinamik grup üyeliğini ve otomatik lisansları dağıtmak için şu makalelere bakın:
+Üretimde dinamik grup üyeliği ve otomatik lisanslama dağıtmak için şu makalelere bakın:
 
-- [Web'de grup Azure Active Directory](/azure/active-directory/fundamentals/active-directory-licensing-whatis-azure-portal)
+- [Azure Active Directory'de grup tabanlı lisanslama](/azure/active-directory/fundamentals/active-directory-licensing-whatis-azure-portal)
 - [Azure Active Directory'da dinamik gruplar](/azure/active-directory/users-groups-roles/groups-create-rule)
 
 ## <a name="next-step"></a>Sonraki adım
 
-Test [ortamınıza](m365-enterprise-test-lab-guides.md#identity) başka kimlik özelliklerini ve özelliklerini keşfedin.
+Test ortamınızdaki ek [kimlik](m365-enterprise-test-lab-guides.md#identity) özelliklerini ve özelliklerini keşfedin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 [Kimliği dağıtma](deploy-identity-solution-overview.md)
 
-[Microsoft 365 Test Laboratuvarı Kılavuzları için kılavuzlar](m365-enterprise-test-lab-guides.md)
+[Kurumsal Test Laboratuvarı Kılavuzları için Microsoft 365](m365-enterprise-test-lab-guides.md)
 
-[Microsoft 365 genel bakış için genel bakış](microsoft-365-overview.md)
+[Microsoft 365 Kurumsal’a genel bakış](microsoft-365-overview.md)
 
-[Microsoft 365 belgeleri için belgeler](/microsoft-365-enterprise/)
+[Kurumsal belgeler için Microsoft 365](/microsoft-365-enterprise/)

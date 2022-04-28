@@ -1,75 +1,75 @@
 ---
-title: Mobil cihazda cihaz gruplarıyla Microsoft 365 İş Ekstra
-description: Microsoft 365 İş Ekstra'de cihaz grupları hakkında bilgi Microsoft 365 İş Ekstra
+title: Microsoft 365 İş Ekstra'da cihaz gruplarıyla çalışma
+description: Microsoft 365 İş Ekstra'de cihaz grupları hakkında bilgi edinin
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: how-to
-ms.date: 03/08/2022
+ms.date: 03/16/2022
 ms.prod: m365-security
 ms.technology: mdb
-ms.localizationpriority: medium
-ms.reviewer: inbadian, shlomiakirav
+ms.localizationpriority: high
+ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-- m365-initiative-defender-business
-ms.openlocfilehash: 2cc874580dad24e1b3d5349d6075956a9e518704
-ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
+ms.openlocfilehash: ee73b5a83a669653087bf787061e8ad59b23ed18
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "64634657"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65095222"
 ---
-# <a name="device-groups-in-microsoft-365-business-premium"></a>Microsoft 365 İş Ekstra'da cihaz Microsoft 365 İş Ekstra
+# <a name="device-groups-in-microsoft-365-business-premium"></a>Microsoft 365 İş Ekstra'da cihaz grupları
 
-Microsoft 365 İş Ekstra, kimlik koruması aracılığıyla uç nokta İş için Microsoft Defender. Cihaz koruma ilkeleri, cihaz grupları olarak adlandırılan bazı koleksiyonlar aracılığıyla cihazlara uygulanır. 
+Microsoft 365 İş Ekstra, İş için Microsoft Defender aracılığıyla uç nokta korumasını içerir. Cihaz koruma ilkeleri, cihaz grupları olarak adlandırılan belirli koleksiyonlar aracılığıyla cihazlara uygulanır. 
 
-**Bu makalede şu açıklanmıştır**:  
+**Bu kılavuzda aşağıdakiler açıklanmaktadır**:  
 
-- [Cihaz grupları hangileridir?](#whats-a-device-group)
+- [Cihaz grupları nelerdir?](#whats-a-device-group)
 - [Yeni cihaz grubu oluşturma](#how-do-i-create-a-new-device-group)
 
 ## <a name="whats-a-device-group"></a>Cihaz grubu nedir?
 
-Cihaz grubu, işletim sistemi sürümü gibi belirli ölçütler nedeniyle birlikte grup olunan cihazlar koleksiyonudur. Ölçütleri karşılanan cihazlar, siz dışlamadıysanız bu cihaz grubuna dahil edilir. 
+Cihaz grubu, işletim sistemi sürümü gibi belirli ölçütler nedeniyle birlikte gruplandırılmış bir cihaz koleksiyonudur. Ölçütleri karşılayan cihazlar, siz hariç tutmadığınız sürece bu cihaz grubuna dahil edilir. 
 
-Aboneliğiniz ile, kullanabileceğiniz varsayılan cihaz grupları vardır. Varsayılan cihaz grupları, İş için Defender'a ekli tüm cihazları içerir. Bununla birlikte, bazı cihazlara belirli ayarlarla cihaz koruma ilkeleri atamak için yeni cihaz grupları da oluşturabilirsiniz. 
+Aboneliğinizle, kullanabileceğiniz varsayılan cihaz gruplarınız vardır. Varsayılan cihaz grupları, İş için Defender'a eklenen tüm cihazları içerir. Ancak, belirli cihazlara belirli ayarlarla cihaz koruma ilkeleri atamak için yeni cihaz grupları da oluşturabilirsiniz. 
 
-Varsayılan cihaz gruplarınız ve tanımladığınız tüm özel cihaz grupları da dahil olmak üzere tüm cihaz grupları tüm cihaz grupları [Azure Active Directory (Azure](/azure/active-directory/fundamentals/active-directory-whatis) AD) içinde depolanır.
+Varsayılan cihaz gruplarınız ve tanımladığınız tüm özel cihaz grupları dahil olmak üzere tüm cihaz grupları [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis)(Azure AD) içinde depolanır.
 
-## <a name="how-do-i-create-a-new-device-group"></a>Nasıl yaparım? bir cihaz grubu mu oluştursunuz?
+## <a name="how-do-i-create-a-new-device-group"></a>Nasıl yaparım? yeni bir cihaz grubu oluşturacak mısınız?
 
 Cihaz koruma ilkesi oluşturma veya düzenleme sürecindeyken yeni bir cihaz grubu oluşturabilirsiniz. 
 
-1. Erişim portalına Microsoft 365 Defender ([https://security.microsoft.com](https://security.microsoft.com) ) ve oturum açın.
+1. Microsoft 365 Defender portalına ([https://security.microsoft.com](https://security.microsoft.com)) gidin ve oturum açın.
 
-2. Gezinti bölmesinde Cihaz **yapılandırması'ni seçin**. 
+2. Gezinti bölmesinde **Cihaz yapılandırması'nı** seçin. 
 
-3. Aşağıdaki işlemlerden birini yapın:
+3. Aşağıdaki eylemlerden birini gerçekleştirin:
 
-    1. Var olan bir ilkeyi seçin ve sonra da Düzenle'yi **seçin**.
+    1. Var olan bir ilkeyi seçin ve ardından **Düzenle'yi** seçin.
     
-    2. Yeni **bir ilke oluşturmak için +** Ekle'yi seçin.
+    2. Yeni bir ilke oluşturmak için **+ Ekle'yi** seçin.
 
     > [!TIP]
-    > İlkeyi oluşturma veya düzenleme konusunda yardım almak için bkz[. İlkeleri tek bir çalışma İş için Microsoft Defender](m365bp-view-edit-create-mdb-policies.md).
+    > İlke oluşturma veya düzenleme konusunda yardım almak için bkz. [İş için Microsoft Defender'da ilkeleri görüntüleme veya düzenleme](m365bp-view-edit-create-mdb-policies.md).
 
-4. Genel bilgiler **adımını** takip edin, bilgileri gözden geçirin, gerekirse düzenleyin ve ardından Sonraki'yi **seçin**.
+4. **Genel bilgiler** adımında bilgileri gözden geçirin, gerekirse düzenleyin ve ardından **İleri'yi** seçin.
 
-5. **+ Yeni grup oluştur'a seçin**. 
+5. **+ Yeni grup oluştur'u** seçin. 
 
-6. Cihaz grubu için bir ad ve açıklama belirtin ve ardından Sonraki'yi **seçin**.
+6. Cihaz grubu için bir ad ve açıklama belirtin ve ardından **İleri'yi** seçin.
 
-7. Gruba dahil etmek istediğiniz cihazları seçin ve ardından Grup **oluştur'a seçin**.
+7. Gruba eklenecek cihazları seçin ve ardından **Grup oluştur'u** seçin.
 
-8. Cihaz **grupları adımlarında** , ilkeye yönelik cihaz grupları listesini gözden geçirebilirsiniz. Gerekirse, listeden bir grubu kaldırın. Sonra, **Sonraki'yi seçin**.
+8. **Cihaz grupları** adımında, ilke için cihaz gruplarının listesini gözden geçirin. Gerekirse, listeden bir grubu kaldırın. Ardından **İleri'yi** seçin.
 
-9. Yapılandırma ayarları **sayfasında,** ayarları gerektiğinde gözden geçirin ve düzenleyin, sonra da Sonraki'yi **seçin**. Bu ayarlar hakkında daha fazla bilgi için bkz. Yeni nesil [yapılandırma ayarlarını daha iyi İş için Microsoft Defender](../security/defender-business/mdb-next-gen-configuration-settings.md).
+9. **Yapılandırma ayarları** sayfasında, ayarları gerektiği gibi gözden geçirin ve düzenleyin ve **ardından İleri'yi** seçin. Bu ayarlar hakkında daha fazla bilgi için bkz. [İş için Microsoft Defender'deki yeni nesil yapılandırma ayarlarını anlama](../security/defender-business/mdb-next-gen-configuration-settings.md).
 
-10. **İlkenizi gözden geçirme** adımını takip edin, tüm ayarları gözden geçirin, gerekli düzenlemeleri yapın ve ardından İlke **oluştur'a veya İlkeyi** **güncelleştir'e tıklayın**.
+10. **İlkenizi gözden geçirin** adımında tüm ayarları gözden geçirin, gerekli düzenlemeleri yapın ve ardından **İlke oluştur veya İlkeyi** **güncelleştir'i** seçin.
 
+Birincil görevlerinizi tamamladığınıza göre [, yanıt ekiplerinizi](m365bp-security-incident-management.md) ayarlayın ve [ortamınızı koruyun](m365bp-maintain-environment.md).
 

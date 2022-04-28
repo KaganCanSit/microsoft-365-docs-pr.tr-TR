@@ -2,8 +2,8 @@
 title: Bell SMS/MMS Ağ verilerini arşivleye bir bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -12,12 +12,12 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Yöneticiler, Bell Network'ten SMS ve MMS verilerini içeri aktarmak ve arşivlemek için bir TeleMessage bağlayıcısı ayarlayabilir. Bu, kuruluşunuzun üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilmeniz için üçüncü taraf veri kaynaklarından verileri Microsoft 365 arşivleyebilmenizi sağlar.
-ms.openlocfilehash: dc23e3788958270712bab493cd0364a80a0377f9
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 5d1b44df9a343020419d684c9a91a982a0f0df57
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64992798"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65095088"
 ---
 # <a name="set-up-a-connector-to-archive-bell-network-data"></a>Bell Network verilerini arşivleye bağlayıcı ayarlama
 

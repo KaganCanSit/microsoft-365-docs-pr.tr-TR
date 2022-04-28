@@ -1,8 +1,8 @@
 ---
-title: Performans Microsoft 365 ayarlama
+title: Microsoft 365 performansını ayarlama
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 04/09/2019
 audience: Admin
 ms.topic: troubleshooting
@@ -16,22 +16,22 @@ search.appverid:
 - MET150
 - BCS160
 ms.assetid: fce71911-5c54-455d-b937-1b5a0b674620
-description: Eğitim kurslarının, blogların, makalelerin ve diğer kaynakların size bu çalışma kalitesini nasıl artıracaklarını haber Microsoft 365.
-ms.openlocfilehash: 7d9fe9c1a5725eba59d6ef13eaeb4f2f15d9c8a9
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+description: Microsoft 365 performansını nasıl artırabileceğinizi gösteren eğitim kurslarına, bloglara, makalelere ve diğer kaynaklara bağlantılar.
+ms.openlocfilehash: ede2c6ff63ad0525448a61b14d6dd18ac77f1d65
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63015197"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65091995"
 ---
-# <a name="tune-microsoft-365-performance"></a>Performans Microsoft 365 ayarlama
+# <a name="tune-microsoft-365-performance"></a>Microsoft 365 performansını ayarlama
 
-Bu makalede, çalışma sayfalarının performansını iyileştirmeyle ilgili eğitim kurslarının, blogların, makalelerin ve diğer Microsoft 365.
+Bu makale, Microsoft 365 performansını nasıl artırabileceğinizi gösteren eğitim kurslarına, bloglara, makalelere ve diğer kaynaklara bağlantı sağlar.
   
-Bu makale, Projeniz için [ağ planlaması ve performans ayarı Microsoft 365](./network-planning-and-performance.md) bölümüyle hazırlanmıştır.
+Bu makale, [Microsoft 365 projesi için ağ planlama ve performans ayarlamanın](./network-planning-and-performance.md) bir parçasıdır.
 
-## <a name="articles-about-fine-tuning-microsoft-365-and-office-365-performance"></a>Performans ve performans ayarlarını Microsoft 365 ilgili Office 365 makaleler
+## <a name="articles-about-fine-tuning-microsoft-365-and-office-365-performance"></a>Microsoft 365 ve Office 365 performansında ince ayarlama hakkındaki makaleler
 
-Paul Collinge [tarafından yapılan ve ağ](/archive/blogs/onthewire/top-10-tips-for-optimising-troubleshooting-your-office-365-network-connectivity) bağlantınızı iyileştirmeniz ve Office 365 için en iyi 10 ipucuna göz atabilirsiniz.
+Paul Collinge tarafından Office 365 [ağ bağlantınızı iyileştirmeye ve sorun gidermeye yönelik en iyi 10 ipucuna](/archive/blogs/onthewire/top-10-tips-for-optimising-troubleshooting-your-office-365-network-connectivity) göz atın.
   
-Ağ adresi çevirisini ağ adresi ve Microsoft 365 [kullanma hakkında bilgi için bkz. AĞ adresi Microsoft 365](nat-support-with-microsoft-365.md).
+Microsoft 365 ile ağ adresi çevirisi kullanma hakkında bilgi için bkz. [Microsoft 365 ile NAT desteği](nat-support-with-microsoft-365.md).

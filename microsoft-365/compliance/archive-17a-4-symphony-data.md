@@ -2,8 +2,8 @@
 title: Microsoft 365'de verileri arşivleyemek için Symphony DataParser bağlayıcısı ayarlama
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -12,12 +12,12 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Microsoft 365'da Senfoni verilerini içeri aktarmak ve arşivlemek için 17a-4 Symphony DataParser bağlayıcısını ayarlamayı ve kullanmayı öğrenin.
-ms.openlocfilehash: f783e5f9f405223493e43e7b9966be50c2e58f10
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 17ae381b1a76f572f101becfb60e8eed18c687dc
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64996624"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65099817"
 ---
 # <a name="set-up-a-connector-to-archive-data-from-symphony"></a>Senfoni'den verileri arşivleye bağlayıcı ayarlama
 

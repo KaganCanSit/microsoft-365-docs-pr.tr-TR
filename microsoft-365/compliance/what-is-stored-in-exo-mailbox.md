@@ -2,8 +2,8 @@
 title: Exchange Online posta kutularında depolanan içerik
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 ms.assetid: ''
 description: Microsoft 365'da bulut tabanlı uygulamalar tarafından üretilen içerik, kullanıcının Exchange Online posta kutusuyla depolanır veya ilişkilendirilir. Bu içerik Microsoft eBulma araçları kullanılarak aranabilir.
-ms.openlocfilehash: b5e8434f5345cda8ef4f637b3dff2d3cf704f748
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 113cbb9c386dab2339fa1b265b3443efe1ba91fd
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "65000806"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65091687"
 ---
 # <a name="content-stored-in-exchange-online-mailboxes-for-ediscovery"></a>eBulma için Exchange Online posta kutularında depolanan içerik
 

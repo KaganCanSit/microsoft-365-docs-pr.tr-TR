@@ -2,8 +2,8 @@
 title: Microsoft 365'de WeChat verilerini arşivleye bir bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -12,12 +12,12 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Microsoft 365'de WeChat verilerini içeri aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında bir bağlayıcı ayarlayın ve kullanın.
-ms.openlocfilehash: 8d87cbaf25396dc9af1497737450126e90b54a7a
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: ab23d79983f8ccc9a2e7a9a90a755957c6eda8bd
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64997233"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65091819"
 ---
 # <a name="set-up-a-connector-to-archive-wechat-data"></a>WeChat verilerini arşivleye bağlayıcı ayarlama
 

@@ -1,10 +1,10 @@
 ---
-title: Kurumsal test ortamı için ağ Microsoft 365 ayrıcalıklı erişim yönetimi
+title: Kurumsal test ortamınız için Microsoft 365 ayrıcalıklı erişim yönetimi
 f1.keywords:
 - NOCSH
 ms.author: robmazz
 author: robmazz
-manager: laurawi
+manager: scotv
 audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -14,97 +14,97 @@ ms.collection:
 - Strat_O365_Enterprise
 - M365-security-compliance
 ms.custom: Ent_TLGs
-description: Kurumsal test ortamı için test test ortamınıza erişimin ayrıcalıklı bir şekilde Microsoft 365 için bu Test Laboratuvarı Kılavuzunu kullanın.
-ms.openlocfilehash: 424b7c09a89b20d134654293a1e9c9abd69d6ff2
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Kurumsal test ortamı için Microsoft 365 ayrıcalıklı erişim yönetimini etkinleştirmek için bu Test Laboratuvarı Kılavuzu'nu kullanın.
+ms.openlocfilehash: 0c92cbd398e4c388fe3c5999c5e0aa9973c4ee06
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988624"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65092105"
 ---
-# <a name="privileged-access-management-for-your-microsoft-365-for-enterprise-test-environment"></a>Kurumsal test ortamı için ağ Microsoft 365 ayrıcalıklı erişim yönetimi
+# <a name="privileged-access-management-for-your-microsoft-365-for-enterprise-test-environment"></a>Kurumsal test ortamınız için Microsoft 365 ayrıcalıklı erişim yönetimi
 
-*Bu Test Laboratuvarı Kılavuzu, hem kurumsal hem de Microsoft 365 test ortamları için Office 365 Kurumsal kullanılabilir.*
+*Bu Test Laboratuvarı Kılavuzu hem kurumsal hem de Office 365 Kurumsal test ortamları için Microsoft 365 için kullanılabilir.*
 
-Bu makalede, kurumsal test ortamınız için ağ ağ güvenliğinizi artırmak üzere ayrıcalıklı erişim Microsoft 365 yapılandırmanız açıklanmıştır.
+Bu makalede, kurumsal test ortamınıza yönelik Microsoft 365 güvenliği artırmak için ayrıcalıklı erişim yönetiminin nasıl yapılandırıldığı açıklanır.
 
-Ayrıcalıklı erişim yönetimini yapılandırmak üç aşama içerir:
+Ayrıcalıklı erişim yönetiminin yapılandırılması üç aşamayı kapsar:
 
-- [Aşama 1: Kurumsal test Microsoft 365 yapınızı oluşturma](#phase-1-build-out-your-microsoft-365-for-enterprise-test-environment)
-- [Aşama 2: Ayrıcalıklı erişim yönetimini yapılandırma](#phase-2-configure-privileged-access-management)
-- [Aşama 3: Yükseltilmiş ve ayrıcalıklı görevler için onay gerektir olduğunu doğrulama](#phase-3-verify-that-approval-is-required-for-elevated-and-privileged-tasks)
+- [1. Aşama: Kurumsal test ortamı için Microsoft 365 oluşturma](#phase-1-build-out-your-microsoft-365-for-enterprise-test-environment)
+- [2. Aşama: Ayrıcalıklı erişim yönetimini yapılandırma](#phase-2-configure-privileged-access-management)
+- [3. Aşama: Yükseltilmiş ve ayrıcalıklı görevler için onay gerektiğini doğrulayın](#phase-3-verify-that-approval-is-required-for-elevated-and-privileged-tasks)
 
 ![Microsoft bulutu için Test Laboratuvarı Kılavuzları.](../media/m365-enterprise-test-lab-guides/cloud-tlg-icon.png)
 
 > [!TIP]
-> Kurumsal Test Laboratuvarı Kılavuzu yığınına Microsoft 365 görsel bir harita için Kurumsal Test Laboratuvarı Kılavuzu Yığını [için Microsoft 365'e gidin](../downloads/Microsoft365EnterpriseTLGStack.pdf).
+> Kurumsal Test Laboratuvarı Kılavuzu yığınındaki Microsoft 365 tüm makalelere yönelik görsel bir harita için [kurumsal Test Laboratuvarı Kılavuzu Yığını için Microsoft 365](../downloads/Microsoft365EnterpriseTLGStack.pdf) bölümüne gidin.
   
-## <a name="phase-1-build-out-your-microsoft-365-for-enterprise-test-environment"></a>Aşama 1: Kurumsal test Microsoft 365 yapınızı oluşturma
+## <a name="phase-1-build-out-your-microsoft-365-for-enterprise-test-environment"></a>1. Aşama: Kurumsal test ortamı için Microsoft 365 oluşturma
 
-Ayrıcalıklı erişim yönetimini en düşük gereksinimlerle basit bir şekilde yapılandırmak için, Basit temel [yapılandırma'daki yönergeleri izleyin](lightweight-base-configuration-microsoft-365-enterprise.md).
+Ayrıcalıklı erişim yönetimini minimum gereksinimlerle basit bir şekilde yapılandırmak istiyorsanız [, Basit temel yapılandırma](lightweight-base-configuration-microsoft-365-enterprise.md) yönergelerini izleyin.
   
-Sanal bir kuruluşta ayrıcalıklı erişim yönetimini yapılandırmak için, Doğrudan kimlik doğrulama'daki [yönergeleri izleyin](pass-through-auth-m365-ent-test-environment.md).
+Sanal bir kuruluşta ayrıcalıklı erişim yönetimini yapılandırmak istiyorsanız Doğrudan [kimlik doğrulamasındaki](pass-through-auth-m365-ent-test-environment.md) yönergeleri izleyin.
   
 >[!NOTE]
->Ayrıcalıklı erişim yönetimini sınamak, Active Directory Etki Alanı Hizmetleri ormanı için İnternet ve dizin eşitlemesi bağlantılı sanal bir intranet içeren sanal kurumsal test ortamını gerektirmez. Burada, ayrıcalıklı erişim yönetimini test etmek ve tipik bir kuruluşu temsil eden bir ortamda bu erişimle denemeler yapmak için bir seçenek olarak sağlanır.
+>Ayrıcalıklı erişim yönetimini test etmek, İnternet'e bağlı bir sanal intranet ve bir Active Directory Domain Services ormanı için dizin eşitlemesi içeren sanal kurumsal test ortamını gerektirmez. Ayrıcalıklı erişim yönetimini test edebilmeniz ve tipik bir kuruluşu temsil eden bir ortamda denemeler yapabilmeniz için burada bir seçenek olarak sağlanır.
 
-## <a name="phase-2-configure-privileged-access-management"></a>Aşama 2: Ayrıcalıklı erişim yönetimini yapılandırma
+## <a name="phase-2-configure-privileged-access-management"></a>2. Aşama: Ayrıcalıklı erişim yönetimini yapılandırma
 
-Bu aşamada bir onaylayanlar grubu yapılandırarak kurumsal test ortamınız için Microsoft 365 yönetimine olanak tanıyın. Ek ayrıntılar ve ayrıcalıklı erişim yönetimine genel bakış için bkz. [Ayrıcalıklı erişim yönetimi](../compliance/privileged-access-management-overview.md).
+Bu aşamada, bir onaylayan grubu yapılandırın ve kurumsal test ortamı için Microsoft 365 için ayrıcalıklı erişim yönetimini etkinleştirin. Ek ayrıntılar ve ayrıcalıklı erişim yönetimine genel bakış için bkz [. Ayrıcalıklı erişim yönetimi](../compliance/privileged-access-management-overview.md).
 
-Kuruluşta ayrıcalıklı erişimi ayarlamak ve kullanmak için aşağıdaki adımları uygulayın.
+Kuruluşunuzda ayrıcalıklı erişimi ayarlamak ve kullanmak için aşağıdaki adımları uygulayın.
 
 #### <a name="step-1-create-an-approvers-group"></a>[1. Adım: Onaylayan grubu oluşturma](../compliance/privileged-access-management-configuration.md#step-1-create-an-approvers-group)
 
-Ayrıcalıklı erişimi kullanmaya başlamadan önce, yükseltilmiş ve ayrıcalıklı görevlere erişim için gelen istekler için kimlerin onay yetkisine sahip olacaklarını belirleme. Onaylayanlar grubunun parçası olan tüm kullanıcılar erişim isteklerini onaylar. Ayrıcalıklı erişimi kullanmak için, bu konumda posta özellikli bir güvenlik grubu Microsoft 365. Test ortamınıza yeni güvenlik grubunu "Ayrıcalıklı Erişim Onaylayanlar" olarak ad girin ve önceki test laboratuvarı kılavuzu adımlarında daha önce oluşturulmuş olan "Kullanıcı 3"ü ekleyin.
+Ayrıcalıklı erişimi kullanmaya başlamadan önce, yükseltilmiş ve ayrıcalıklı görevlere erişim için gelen istekler için kimlerin onay yetkisine sahip olacağını belirleyin. Onaylayanlar grubunun parçası olan tüm kullanıcılar erişim isteklerini onaylayabilir. Ayrıcalıklı erişimi kullanmak için, Microsoft 365 posta özellikli bir güvenlik grubu oluşturmanız gerekir. Test ortamınızda yeni güvenlik grubunu "Privileged Access Approvers" olarak adlandırın ve önceki test laboratuvarı kılavuzu adımlarında daha önce oluşturulmuş olan "Kullanıcı 3" öğesini ekleyin.
 
 #### <a name="step-2-enable-privileged-access"></a>[2. Adım: Ayrıcalıklı erişimi etkinleştirme](../compliance/privileged-access-management-configuration.md#step-2-enable-privileged-access)
 
-Ayrıcalıklı erişimin, Microsoft 365'da varsayılan onaylayan grupla açıkça açık olarak açık olması ve ayrıca erişim yönetimi erişim denetimi dışında tutmak istediğiniz bir dizi sistem hesabı içermesi gerekir. Bu kılavuzun 3. Aşamasına başlamadan önce, organizasyonda ayrıcalıklı erişimi etkinleştirmeye emin olun.
+Ayrıcalıklı erişimin, varsayılan onaylayan grubuyla Microsoft 365 açıkça açılması ve ayrıcalıklı erişim yönetimi erişim denetiminden dışlanmasını istediğiniz bir dizi sistem hesabı içermesi gerekir. Bu kılavuzun 3. aşamasına başlamadan önce kuruluşunuzda ayrıcalıklı erişimi etkinleştirdiğinizden emin olun.
 
-## <a name="phase-3-verify-that-approval-is-required-for-elevated-and-privileged-tasks"></a>Aşama 3: Yükseltilmiş ve ayrıcalıklı görevler için onay gerektir olduğunu doğrulama
+## <a name="phase-3-verify-that-approval-is-required-for-elevated-and-privileged-tasks"></a>3. Aşama: Yükseltilmiş ve ayrıcalıklı görevler için onay gerektiğini doğrulayın
 
-Bu aşamada, ayrıcalıklı erişim ilkesi'nin çalıştığını ve kullanıcıların tanımlı yükseltilmiş ve ayrıcalıklı görevleri yürütmek için onay gerektirmelerini doğrulayın.
+Bu aşamada ayrıcalıklı erişim ilkesinin çalıştığını ve kullanıcıların tanımlı yükseltilmiş ve ayrıcalıklı görevleri yürütmek için onay gerektirdiğini doğrulayın.
 
-### <a name="test-the-ability-to-execute-a-task-not-defined-in-a-privileged-access-policy"></a>Ayrıcalıklı erişim ilkesinde tanımlanmamış bir görevi yürütme becerisini test etme
+### <a name="test-the-ability-to-execute-a-task-not-defined-in-a-privileged-access-policy"></a>Ayrıcalıklı erişim ilkesinde tanımlanmayan bir görevi yürütme özelliğini test etme
 
-İlk olarak, Exchange ortamınıza Exchange Rol Yönetimi rolüyle yapılandırılmış bir kullanıcının kimlik bilgileriyle Exchange Yönetimi PowerShell'e bağlanın ve yeni bir Günlük kuralı oluşturma girişiminde bulundurabilirsiniz. [New-JournalRule](/powershell/module/exchange/new-journalrule) görevi şu anda, kuruluşu için ayrıcalıklı bir erişim ilkesinde tanımlanmamıştır.
+İlk olarak, test ortamınızda Exchange Rol Yönetimi rolüyle yapılandırılmış bir kullanıcının kimlik bilgileriyle Exchange Yönetimi PowerShell'e bağlanın ve yeni bir Günlük kuralı oluşturmayı deneyin. [New-JournalRule](/powershell/module/exchange/new-journalrule) görevi şu anda kuruluşunuz için ayrıcalıklı erişim ilkesinde tanımlanmamıştır.
 
-1. Yerel bilgisayarınızda, test ortamınız için Exchange Online Rol Yönetimi rolüne sahip kimlik bilgilerini kullanarak **Microsoft Corporation** >  **Microsoft Exchange Online uzak PowerShell** Modülü'nde Exchange Uzak PowerShell Modülü'nde oturum açın.
-2. PowerShell Exchange'de, organizasyonunız için yeni bir Günlük kuralı oluşturun:
+1. Yerel bilgisayarınızda, test ortamınız için Exchange Rol Yönetimi rolüne sahip kimlik bilgilerini kullanarak **Microsoft Corporation** >  **Microsoft Exchange Online Uzak PowerShell Modülü'nde Exchange Online Uzak PowerShell Modülü'nü** açın ve oturum açın.
+2. Exchange Yönetimi PowerShell'de kuruluşunuz için yeni bir Günlük kuralı oluşturun:
 
    ```ExchangeManagementPowerShell
    New-JournalRule -Name "JournalRule1" -Recipient joe@contoso.onmicrosoft.com -JournalEmailAddress barbara@adatum.com -Scope Global -Enabled $true
    ```
 
-3. Yeni Günlük Kuralının PowerShell Yönetimi'nde başarıyla Exchange görünümü.
+3. Yeni Günlük Kuralının Exchange Yönetimi PowerShell'de başarıyla oluşturulduğunu görüntüleyin.
 
-### <a name="create-a-new-privileged-access-policy-for-the-new-journalrule-task"></a>Hızlı erişim görevi için yeni bir ayrıcalıklı New-JournalRule ilkesi oluşturma
+### <a name="create-a-new-privileged-access-policy-for-the-new-journalrule-task"></a>New-JournalRule görevi için yeni bir ayrıcalıklı erişim ilkesi oluşturma
 
 >[!NOTE]
->Bu kılavuzun Aşama 2'den 1. ve 2. Adımlarını henüz tamamlanmadıysanız, test ortamınıza ayrıcalıklı erişimi etkinleştirmek için onaylayanların "Ayrıcalık Erişim Onaylayanlar" adlı grubunu oluşturmak için adımları takip edin.
+>Bu kılavuzun 2. Aşamasından 1. ve 2. Adımları henüz tamamlamadıysanız, test ortamınızda ayrıcalıklı erişimi etkinleştirmek için onaylayanın "Privilege Access Approvers" adlı grubunu oluşturma adımlarını izlediğinizden emin olun.
 
-1. Test ortamınız için [Microsoft 365 yönetim merkezi](https://admin.microsoft.com) ve Rol Yönetimi rolü Exchange kimlik bilgilerini kullanarak oturum açma.
-2. Yönetim Merkezi'nde Ayarlar  > **Security &** **PrivacyPrivileged** >  access'e gidin.
-3. Erişim **ilkelerini ve isteklerini yönet'i seçin**.
-4. **İlkeleri yapılandır'ı** ve sonra İlke **ekle'yi seçin**.
-5. Açılan alanlarda, aşağıdaki değerleri seçin veya girin:
+1. Test ortamınız için [Exchange](https://admin.microsoft.com) Rol Yönetimi rolüyle kimlik bilgilerini kullanarak Microsoft 365 yönetim merkezi oturum açın.
+2. Yönetim Merkezi'nde **Ayarlar** >  **Güvenlik &** **GizlilikGizli** >  erişim'e gidin.
+3. **Erişim ilkelerini ve isteklerini yönet'i** seçin.
+4. **İlkeleri yapılandır'ı** ve ardından **İlke ekle'yi** seçin.
+5. Açılan alanlardan aşağıdaki değerleri seçin veya girin:
 
-    **İlke türü**: Görev **İlkesi kapsamı**: Exchange **Policy adı**: Yeni Günlük Kuralı **Onay türü**: El ile **Onay grubu**: Ayrıcalıklı Erişim Onaylayanlar  
+    **İlke türü**: Görev **İlkesi kapsamı**: Exchange **İlke adı**: Yeni Günlük Kuralı **Onay türü**: El ile **Onay grubu**: Ayrıcalıklı Erişim Onaylayanları  
 
-6. **Oluştur'a** ve sonra Kapat'a **seçin**. İlkenin tam olarak yapılandırılması ve etkinleştirilmesi birkaç dakika sürebilir. Onay gereksinimini test etmek için sonraki adımda ilkenin tam olarak etkinleştirilmesine izin verildiğinden emin olun.
+6. **Oluştur'u** ve ardından **Kapat'ı** seçin. İlkenin tam olarak yapılandırılması ve etkinleştirilmesi birkaç dakika sürebilir. Sonraki adımda onay gereksinimini test etmeden önce ilkenin tam olarak etkinleştirilmesi için zaman tanıyın.
 
-### <a name="test-approval-requirement-for-the-new-journalrule-task-defined-in-a-privileged-access-policy"></a>Ayrıcalıklı bir erişim ilkesinde New-JournalRule görev için onay gereksinimini test etmek
+### <a name="test-approval-requirement-for-the-new-journalrule-task-defined-in-a-privileged-access-policy"></a>Ayrıcalıklı erişim ilkesinde tanımlanan New-JournalRule görevi için test onayı gereksinimi
 
-1. Yerel bilgisayarınızda, test ortamınız için Exchange Online Rol Yönetimi rolüne sahip kimlik bilgilerini kullanarak **Microsoft Corporation** >  **Microsoft Exchange Online uzak PowerShell** Modülü'nde Exchange Uzak PowerShell Modülü'nde oturum açın.
+1. Yerel bilgisayarınızda, test ortamınız için Exchange Rol Yönetimi rolüne sahip kimlik bilgilerini kullanarak **Microsoft Corporation** >  **Microsoft Exchange Online Uzak PowerShell Modülü'nde Exchange Online Uzak PowerShell Modülü'nü** açın ve oturum açın.
 
-2. PowerShell Exchange'de, organizasyonunız için yeni bir Günlük kuralı oluşturun:
+2. Exchange Yönetimi PowerShell'de kuruluşunuz için yeni bir Günlük kuralı oluşturun:
 
    ```ExchangeManagementPowerShell
    New-JournalRule -Name "JournalRule2" -Recipient user1@<your subscription domain> -JournalEmailAddress user1@<your subscription domain> -Scope Global -Enabled $true
    ```
 
-3. PowerShell Yönetimi'nin "yetersiz Exchange" hatasını görüntüleme:
+3. Exchange Yönetimi PowerShell'de "Yetersiz izinler" hatasını görüntüleyin:
 
    ```ExchangeManagementPowerShell
    Insufficient permissions. Please raise an elevated access request for this task.
@@ -114,48 +114,48 @@ Bu aşamada, ayrıcalıklı erişim ilkesi'nin çalıştığını ve kullanıcı
        + PSComputerName        : outlook.office365.com
    ```
 
-### <a name="request-access-to-create-a-new-journal-rule-using-the-new-journalrule-task"></a>Özel görev kullanarak yeni bir Günlük Kuralı oluşturmak için New-JournalRule isteğinde New-JournalRule isteğinde
+### <a name="request-access-to-create-a-new-journal-rule-using-the-new-journalrule-task"></a>New-JournalRule görevini kullanarak yeni günlük kuralı oluşturmak için erişim isteme
 
-1. Test ortamınız için [Microsoft 365 yönetim merkezi](https://admin.microsoft.com) ve Rol Yönetimi rolü Exchange kimlik bilgilerini kullanarak oturum açma.
+1. Test ortamınız için [Exchange](https://admin.microsoft.com) Rol Yönetimi rolüyle kimlik bilgilerini kullanarak Microsoft 365 yönetim merkezi oturum açın.
 
-2. Yönetim Merkezi'nde Ayarlar  > **Security &** **PrivacyPrivileged** >  access'e gidin.
+2. Yönetim Merkezi'nde **Ayarlar** >  **Güvenlik &** **GizlilikGizli** >  erişim'e gidin.
 
-3. Erişim **ilkelerini ve isteklerini yönet'i seçin**.
+3. **Erişim ilkelerini ve isteklerini yönet'i** seçin.
 
-4. Yeni **istek'i seçin**. Açılan alanlardan, organizasyonunız için uygun değerleri seçin:
+4. **Yeni istek'i** seçin. Açılan alanlardan kuruluşunuz için uygun değerleri seçin:
 
-    **İstek türü**: Görev **İsteği kapsamı**: Exchange **Yazdır**: Yeni Günlük Kuralı Süresi **(saat)****: 2 Açıklama**: Yeni bir Günlük Kuralı oluşturmak için izin isteği  
+    **İstek türü**: Görev **İsteği kapsamı**: Exchange **Request for**: New Journal Rule **Duration (hours)**: 2 **Comments**: Request permission to create a new Journal Rule  
 
-5. **Kaydet'i** ve sonra Kapat'ı **seçin**. İsteğiniz, e-posta yoluyla onaylayan grubuna gönderilir.
+5. **Kaydet'i** ve ardından **Kapat'ı** seçin. İsteğiniz onaylayanın grubuna e-postayla gönderilir.
 
-### <a name="approve-privileged-access-request-for-the-creation-of-a-new-journal-rule"></a>Yeni Günlük Kuralı oluşturmak için ayrıcalıklı erişim isteğini onaylama
+### <a name="approve-privileged-access-request-for-the-creation-of-a-new-journal-rule"></a>Yeni günlük kuralı oluşturmak için ayrıcalıklı erişim isteğini onaylama
 
-1. Test [ortamı Microsoft 365 yönetim merkezi 3](https://admin.microsoft.com) Kullanıcı'nın kimlik bilgilerini kullanarak oturum açma (test ortamınıza "Ayrıcalıklı Erişim Onaylayanlar" güvenlik grubunun üyesi).
+1. Test ortamınızdaki Kullanıcı 3 için kimlik bilgilerini kullanarak [Microsoft 365 yönetim merkezi](https://admin.microsoft.com) oturum açın (test ortamınızdaki "Ayrıcalıklı Erişim Onaylayanları" güvenlik grubunun üyesi).
 
-2. Yönetim Merkezi'nde Ayarlar  > **Security &** **PrivacyPrivileged** >  access'e gidin.
+2. Yönetim Merkezi'nde **Ayarlar** >  **Güvenlik &** **GizlilikGizli** >  erişim'e gidin.
 
-3. Erişim **ilkelerini ve isteklerini yönet'i seçin**.
+3. **Erişim ilkelerini ve isteklerini yönet'i** seçin.
 
-4. Bekleyen isteği seçin ve sonra yeni **bir Günlük Kuralı oluşturmak** üzere kullanıcı hesabına erişim vermek için Onayla'ya seçin. Hesap (istekte olan kullanıcı) onay verilmiş bir e-posta onayı alır.
+4. Bekleyen isteği seçin ve ardından yeni bir Günlük Kuralı oluşturmak üzere kullanıcı hesabına erişim vermek için **Onayla'yı** seçin. Hesap (istekte bulunan kullanıcı) onay verildiğine ilişkin bir e-posta onayı alır.
 
-### <a name="test-creating-a-new-journal-rule-with-privileged-access-approved-for-the-new-journalrule-task"></a>Bu görev için ayrıcalıklı erişimle yeni bir Günlük Kuralı New-JournalRule test
+### <a name="test-creating-a-new-journal-rule-with-privileged-access-approved-for-the-new-journalrule-task"></a>New-JournalRule görevi için ayrıcalıklı erişim onaylı yeni bir Günlük Kuralı oluşturmayı test edin
 
-1. Yerel bilgisayarınızda, test ortamınız için Exchange Online Rol Yönetimi rolüne sahip kimlik bilgilerini kullanarak **Microsoft Corporation** >  **Microsoft Exchange Online uzak PowerShell** Modülü'nde Exchange Uzak PowerShell Modülü'nde oturum açın.
+1. Yerel bilgisayarınızda, test ortamınız için Exchange Rol Yönetimi rolüne sahip kimlik bilgilerini kullanarak **Microsoft Corporation** >  **Microsoft Exchange Online Uzak PowerShell Modülü'nde Exchange Online Uzak PowerShell Modülü'nü** açın ve oturum açın.
 
-2. PowerShell Exchange'de, organizasyonunız için yeni bir Günlük kuralı oluşturun:
+2. Exchange Yönetimi PowerShell'de kuruluşunuz için yeni bir Günlük kuralı oluşturun:
 
    ```ExchangeManagementPowerShell
    New-JournalRule -Name "JournalRule2" -Recipient user1@<your subscription domain> -JournalEmailAddress user1@<your subscription domain> -Scope Global -Enabled $true
    ```
 
-3. Yeni Günlük Kuralının PowerShell Yönetimi'nde başarıyla Exchange görünümü.
+3. Yeni Günlük Kuralının Exchange Yönetimi PowerShell'de başarıyla oluşturulduğunu görüntüleyin.
 
 ## <a name="next-step"></a>Sonraki adım
 
-Test [ortamınıza ek](m365-enterprise-test-lab-guides.md#information-protection) bilgi koruma özelliklerini ve özelliklerini keşfedin.
+Test ortamınızdaki ek [bilgi koruma](m365-enterprise-test-lab-guides.md#information-protection) özelliklerini ve özelliklerini keşfedin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Microsoft 365 Test Laboratuvarı Kılavuzları için kılavuzlar](m365-enterprise-test-lab-guides.md)
-- [Microsoft 365 genel bakış için genel bakış](microsoft-365-overview.md)
-- [Microsoft 365 belgeleri için belgeler](/microsoft-365-enterprise/)
+- [Kurumsal Test Laboratuvarı Kılavuzları için Microsoft 365](m365-enterprise-test-lab-guides.md)
+- [Microsoft 365 Kurumsal’a genel bakış](microsoft-365-overview.md)
+- [Kurumsal belgeler için Microsoft 365](/microsoft-365-enterprise/)

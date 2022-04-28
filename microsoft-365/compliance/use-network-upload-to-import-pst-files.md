@@ -2,8 +2,8 @@
 title: PST dosyalarını içe aktarmak için ağ yüklemesini kullanma
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -19,12 +19,12 @@ search.appverid:
 ms.assetid: 103f940c-0468-4e1a-b527-cc8ad13a5ea6
 description: "Yöneticiler için: Microsoft 365'da birden çok PST dosyasını kullanıcı posta kutularına toplu olarak aktarmak için ağ yükleme özelliğini kullanmayı öğrenin."
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 10a0b2e076c3a8d4fc6910e16ba89c3ce75d2d2d
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: cd025adb7100e6dff0d8cb97c195e851414afd81
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64999816"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65095432"
 ---
 # <a name="use-network-upload-to-import-your-organizations-pst-files-to-microsoft-365"></a>Kuruluşunuzun PST dosyalarını Microsoft 365 içeri aktarmak için ağ karşıya yükleme özelliğini kullanma
 
@@ -92,7 +92,7 @@ PST dosyalarını Microsoft 365 posta kutularına aktarmak için 1. Adımı yaln
   
 1. <https://compliance.microsoft.com> Adresine gidin ve kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak oturum açın.
 
-2. Uyumluluk portalının sol bölmesinde **Bilgi idaresi** \> **İçeri Aktarma'ya** tıklayın.
+2. Uyumluluk portalının sol bölmesinde **Veri yaşam döngüsü yönetimi** \> **İçeri Aktar'a** tıklayın.
 
     > [!NOTE]
     > Uyumluluk portalında **İçeri Aktar** sayfasına erişmek için size uygun izinlerin atanması gerekir. Daha fazla bilgi için **Başlamadan önce** bölümüne bakın. 
@@ -260,7 +260,7 @@ Sonraki adım, Microsoft 365'da İçeri Aktarma hizmetinde PST İçeri Aktarma i
   
 1. <https://compliance.microsoft.com> Adresine gidin ve kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak oturum açın.
 
-2. Uyumluluk portalının sol bölmesinde **bilgi idaresi > İçeri Aktar'a** tıklayın.
+2. Uyumluluk portalının sol bölmesinde **veri yaşam döngüsü yönetimi > İçeri Aktar'a** tıklayın.
 
 3. **İçeri Aktar** sekmesinde Simge Ekle'ye tıklayın![.](../media/ITPro-EAC-AddIcon.gif) **Yeni içeri aktarma işi**.
 

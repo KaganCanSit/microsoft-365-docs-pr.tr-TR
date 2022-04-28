@@ -2,8 +2,8 @@
 title: eBulma'da bir gözden geçirme kümesindeki verileri analiz etme (Premium)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -17,12 +17,12 @@ search.appverid:
 ms.assetid: ''
 description: Microsoft Purview eKeşif (Premium) servis talebini analiz ederken belge kümelerini düzenlemek için kullanılabilecek araçlar hakkında bilgi edinin.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 72be5cf0cd6e4d52200f1167b525aa354192672e
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: af34a790881cad2af5d278cf187b963f0aa58146
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64998716"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65099839"
 ---
 # <a name="analyze-data-in-a-review-set-in-ediscovery-premium"></a>eBulma'da bir gözden geçirme kümesindeki verileri analiz etme (Premium)
 

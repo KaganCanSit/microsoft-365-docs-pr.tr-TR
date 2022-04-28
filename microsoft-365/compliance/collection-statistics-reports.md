@@ -2,8 +2,8 @@
 title: Koleksiyon istatistikleri ve raporları
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 ms.reviewer: nickrob
 manager: laurawi
 ms.date: 04/08/2022
@@ -16,12 +16,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview eKeşif'te (Premium) bir gözden geçirme kümesine kaydedilmiş taslak koleksiyonlar ve koleksiyonlar için istatistiklere ve raporlara erişmeyi ve bunları kullanmayı öğrenin.
-ms.openlocfilehash: 140a6aa2ac0a0ebbff7cf2ab2ee8618cd45cdf07
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 54d5fde3ee9d75a0ad592a81d04b860267c16eeb
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64995766"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65092469"
 ---
 # <a name="collection-statistics-and-reports-in-microsoft-purview-ediscovery-premium"></a>Microsoft Purview eKeşif'te (Premium) toplama istatistikleri ve raporları
 

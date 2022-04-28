@@ -2,8 +2,8 @@
 title: PST dosyalarını almak için sürücü gönderimini kullanma
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -19,12 +19,12 @@ search.appverid:
 ms.assetid: 40829b57-793c-4d41-b171-e9270129173d
 ms.custom: seo-marvel-apr2020
 description: Yönetici, PST dosyalarını bir sabit sürücüye kopyalayıp Microsoft'a göndererek PST dosyalarını Microsoft 365 posta kutularına toplu olarak aktarmayı öğrenebilir.
-ms.openlocfilehash: d2255a01c49e3837365735e1c3300b7f6b34c42c
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 4f3c38c203b98fd4448657edfac6ee9b72a515be
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64996030"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65095454"
 ---
 # <a name="use-drive-shipping-to-import-your-organizations-pst-files"></a>Kuruluşunuzun PST dosyalarını içeri aktarmak için sürücü gönderimini kullanma
 
@@ -115,7 +115,7 @@ PST dosyalarını Office 365 aktarmak için sürücü gönderimi kullanma hakkı
   
 1. <https://compliance.microsoft.com> Adresine gidin ve kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak oturum açın.
 
-2. Uyumluluk portalının sol gezinti bölmesinde **Bilgi idaresi** \> **İçeri Aktar'a** tıklayın.
+2. Uyumluluk portalının sol gezinti bölmesinde **Veri yaşam döngüsü yönetimi** \> **İçeri Aktar'a** tıklayın.
     
     > [!NOTE]
     > Daha önce belirtildiği gibi, uyumluluk portalındaki **İçeri Aktar** sayfasına erişmek için size uygun izinlerin atanması gerekir.
@@ -242,7 +242,7 @@ Sonraki adım, Office 365'da İçeri Aktarma hizmetinde PST İçeri Aktarma işi
   
 1. <https://compliance.microsoft.com> Adresine gidin ve kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak oturum açın.
 
-2. Uyumluluk portalının sol gezinti bölmesinde **Bilgi idaresi** \> **İçeri Aktar'a** tıklayın.
+2. Uyumluluk portalının sol gezinti bölmesinde **Veri yaşam döngüsü yönetimi** \> **İçeri Aktar'a** tıklayın.
 
 3. **İçeri Aktar** sekmesinde Simge Ekle'ye tıklayın![.](../media/ITPro-EAC-AddIcon.gif) **Yeni içeri aktarma işi**.
 
@@ -326,7 +326,7 @@ Sabit sürücüyü Microsoft'a gönderdikten sonra hizmeti içeri aktarma sayfas
   
 1. <https://compliance.microsoft.com> Adresine gidin ve kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak oturum açın.
 
-2. Uyumluluk portalının sol gezinti bölmesinde **bilgi idaresi > İçeri Aktar'a** tıklayın.
+2. Uyumluluk portalının sol gezinti bölmesinde **Veri yaşam döngüsü yönetimiİleri** >  **aktar'a** tıklayın.
 
 3. **İçeri Aktar** sekmesinde, takip numarasını girmek istediğiniz sürücü sevkiyatının işine tıklayın.
 
@@ -352,7 +352,7 @@ PST dosyaları Azure'a yüklendikten sonra durum **Analiz sürüyor** olarak de�
   
 1. <https://compliance.microsoft.com> Adresine gidin ve kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak oturum açın.
 
-2. Uyumluluk portalının sol gezinti bölmesinde **Bilgi idaresi** \> **İçeri aktar***'a tıklayın.
+2. Uyumluluk portalının sol gezinti bölmesinde **Veri yaşam döngüsü yönetimi** \> **İçeri aktar***'a tıklayın.
 
 3. **İçeri Aktar** sekmesinde, 4. Adımda oluşturduğunuz içeri aktarma işini seçin ve **Office 365 için İçeri Aktar'a** tıklayın.
   
@@ -391,7 +391,7 @@ Azure Depolama Gezgini yüklemek ve Azure Depolama alanınıza bağlanmak için:
 
 1. <https://compliance.microsoft.com> Adresine gidin ve kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak oturum açın.
 
-2. Uyumluluk portalının sol bölmesinde **bilgi idaresi > İçeri Aktar'a** tıklayın.
+2. Uyumluluk portalının sol bölmesinde **Veri yaşam döngüsü yönetimiİleri** >  **aktar'a** tıklayın.
 
 3. **İçeri Aktar** sekmesinde Simge Ekle'ye tıklayın![.](../media/ITPro-EAC-AddIcon.gif) **Yeni içeri aktarma işi**.
 

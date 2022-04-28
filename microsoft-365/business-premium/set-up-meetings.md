@@ -4,11 +4,11 @@ f1.keywords:
 - NOCSH
 ms.author: twerner
 author: twerner
-manager: scotv
+manager: dansimp
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection:
 - Adm_O365
 - M365-subscription-management
@@ -25,16 +25,18 @@ search.appverid:
 - MET150
 - MOE150
 description: Microsoft Teams ile çevrimiçi toplantılar ayarlayın.
-ms.openlocfilehash: d945d5526e3cdd06bc0a7c7a80ef7cff0160d07d
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 9ed624d8fe607f460d36eb391d801066b69f7141
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64823112"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65095154"
 ---
 # <a name="set-up-meetings"></a>Toplantıları ayarlama
 
-Microsoft Teams toplantılar ses, video ve paylaşım içerir. Çevrimiçi oldukları için, personeliniz coğrafi olarak dağıtılmış veya uzaktan çalışıyor olsa bile her zaman bir toplantı alanınız (oda veya projektöre gerek kalmadan!) olur. Microsoft Teams toplantıları, kuruluşunuzun içinde ve dışında personelinizle bir araya gelmek için harika bir yoldur. Bir toplantıya katılmak için kuruluşunuzun bir üyesi olmanıza veya hesabınıza sahip olmanıza gerek yoktur. Microsoft Teams kullanarak çevrimiçi toplantılar zamanlayabilir ve çalıştırabilirsiniz. Toplantı sırasında ekranınızı paylaşabilir, dosyaları paylaşabilir, görev atayabilir ve daha fazlasını yapabilirsiniz. Siyasi kampanyalar, toplantıya personeli, gönüllüleri ve kuruluşunuzun dışındaki konukları içerebilir. Küçük firmalar veya uygulamalar personeliyle görüşebilir veya Microsoft Teams üzerinden müşteriler veya iş ortaklarıyla toplantı yapabilir.
+Kuruluş üyelerinin tüm toplantılar için Microsoft Teams kullandığından emin olun. Teams toplantı dosyaları ses, video ve paylaşım içerir ve çevrimiçi oldukları için her zaman bir toplantı alanı vardır ve projektör içeren bir odaya gerek yoktur! Microsoft Teams toplantıları, kuruluşunuzun içinde ve dışında personelinizle bir araya gelmek için harika bir yoldur. 
+
+Teams kullanarak, bir toplantıya katılmak için kuruluşun üyesi olmanıza ve hatta bir hesabınız olmasına gerek yoktur. Ekranınızı paylaşabileceğiniz, dosya paylaşabileceğiniz, görev atayabileceğiniz ve daha fazlasını yapabileceğiniz çevrimiçi toplantılar zamanlayabilir ve çalıştırabilirsiniz. Siyasi kampanyalar personel, gönüllüler veya kuruluşunuzun dışındaki konukları içerebilir. Microsoft Teams üzerinden ve güvenli ve endişesiz bir ortamda müşteriler, personel veya iş ortaklarıyla kolayca toplantı yapabilirsiniz.
 
 [![Toplantıdaki iki kullanıcının çizimi.](../media/HostOnlineMeeting-thumb-358x201.png)](https://go.microsoft.com/fwlink/?linkid=2078712)
 
@@ -58,3 +60,9 @@ Microsoft Teams toplantılar ses, video ve paylaşım içerir. Çevrimiçi olduk
 Microsoft Teams'de toplantı hakkında daha fazla bilgi edinin:
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWeokQ]
+
+## <a name="next-objective"></a>Sonraki hedef
+
+Bu görev hedefi tamamlandıktan sonra [dosyaları ve videoları](share-files-and-videos.md) güvenli bir şekilde paylaşmayı öğrenin
+
+

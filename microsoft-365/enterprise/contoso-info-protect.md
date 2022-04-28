@@ -4,7 +4,7 @@ author: kelleyvice-msft
 f1.keywords:
 - NOCSH
 ms.author: kvice
-manager: laurawi
+manager: scotv
 ms.date: 10/02/2019
 audience: ITPro
 ms.topic: article
@@ -15,12 +15,12 @@ ms.collection:
 - Strat_O365_Enterprise
 ms.custom: ''
 description: Contoso'nın buluttaki dijital varlıklarının güvenliğini sağlamak için Microsoft 365'deki bilgi koruma özelliklerini nasıl kullandığını anlayın.
-ms.openlocfilehash: 70d5a0a6fba7204177771256d9a508c76a010d6d
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: eda36fab658a8352289a6245c565e54758fdd87a
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64931593"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65092193"
 ---
 # <a name="information-protection-for-the-contoso-corporation"></a>Contoso Corporation için bilgi koruması
 

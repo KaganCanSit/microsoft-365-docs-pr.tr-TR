@@ -1,14 +1,14 @@
 ---
-title: Microsoft 365 İş Ekstra Genel Bakış
+title: Microsoft 365 İş Ekstra’ya Genel Bakış
 f1.keywords:
 - NOCSH
-ms.author: samanro
-author: samanro
+ms.author: v-kcirillo
+author: cirilk
 manager: scotv
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection:
 - Adm_O365
 - M365-subscription-management
@@ -24,77 +24,111 @@ search.appverid:
 - BCS160
 - MET150
 ms.assetid: 5abfef7b-5957-484a-b06b-a7c55e013e44
-description: Yeni ekiplerle küçük işletmeniz veya kampanyanız için güvenli bir şekilde işbirliği Microsoft 365 İş Ekstra.
-ms.openlocfilehash: 77ca1cb7171097a0cae6063db20b1868dcd1b448
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
-ms.translationtype: MT
+description: Microsoft 365 İş Ekstra ile küçük veya orta ölçekli işletmeler için siber güvenliği nasıl uygulayacağınızı öğrenin. Siber güvenlik işlevleri ve özellikleri, siber saldırıları ve güvenlik ihlallerini önlemek ve üst düzey siber savunmalarla verileri, cihazları ve bilgileri korumaya yardımcı olmak için iyileştirilmiştir.
+ms.openlocfilehash: ac152ca67e7bdf62931b64e008669ca60b0a8031
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63321635"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65100087"
 ---
-# <a name="microsoft-365-business-premium-overview"></a>Microsoft 365 İş Ekstra Genel Bakış
+# <a name="microsoft-365-business-premium-mdash-cybersecurity-for-small-business"></a>Microsoft 365 İş Ekstra &mdash; küçük işletmeler için siber güvenlik
 
-Mevcut dünyamızda, özellikle tıbbi ve yasal uygulamalar, ticari kampanyalar ve diğer küçük işletmeler için verileri ve iletişimi güvenli tutmak önceliklidir. Küçük işletmeniz içinde güvenli bir Microsoft 365 İş Ekstra için bu hizmetteki güvenlik özelliklerinden faydalanabilirsiniz. Bu çözüm, sizi ve verilerinizi korumaya yardımcı olmak için tasarlanmış bir dizi öneri sunar. Bu kitaplık, iş türünüz ne olursa olsun, bu önerilen ortamı ayarlama ve kullanmayla ilgili yardım içerir.
+İlk olarak, Microsoft 365 İş Ekstra ve onun birinci sınıf üretkenlik araçlarını benimsemekle akıllıca bir seçim yaptığınızı söyleyerek başlayalım. Siber güvenlik göz önünde bulundurularak tasarlanan Microsoft 365 İş Ekstra, verilerinizi, cihazlarınızı ve bilgilerinizi korur. Rastgele bireyler, organize suçlar veya son derece gelişmiş ulus devletler dahil olmak üzere bilgisayar korsanlarına ve siber saldırganlara karşı kuruluşunuzun ilk ve en iyi savunması sizsiniz.
 
-:::image type="content" source="media/m365-whatisit-securityfocus2.png" alt-text="Microsoft 365 İş Ekstra, dosya depolaması, e-posta, cihazlar ve kimliklerinizi korur.":::
+Önünüzdeki görev şu &mdash; Microsoft 365 İş Ekstra'nın kuruluşunuzun geleceğini güvence altına almanıza yardımcı olmasına izin verin! Ortamınızı güçlendirmenize, ekibinizi eğitmenize ve yönetilen cihazları korumanıza yardımcı olacak aşağıdaki görevleri üstlenerek bu göreve yaklaşın. Görevler önem sırasına göre sınıflandırılmıştır ve bunları tamamlamak, bilgisayar korsanlarını engellemenin, fidye yazılımlarına karşı koruma sağlamanın ve kuruluşunuzun geleceğinin en iyi siber güvenlik savunmalarıyla korunmasını sağlamanın en etkili yoludur. Haydi başlayalım.
 
-Bu yapılandırma, işlerinizi korumak için üretkenlik, işbirliği, dosya depolama, e-posta, cihazlar ve kimlik ile ilgili aşağıdaki kılavuzu içerir:
+Her bir görev ve Microsoft 365 İş Ekstra güvenliğinin nasıl ayarlanacağı hakkında bilgi edinmek için aşağıdaki sekmelere tıklayın.
 
-| Koruma: | Açıklama | Bağlantılar |
-| ----- | ----- | ----- | ----- |
-|E-posta | Hassas bilgiler için çok faktörlü kimlik doğrulaması, gelişmiş kimlik Kasa, Bağlantılar ve Kasa Ekleri ile şifrelenmiş e-postayı kullanın.| [Çok faktörlü kimlik doğrulamasını ayarlama](m365bp-multifactor-authentication.md) <br/><br/>[Kimlik avı saldırılarına karşı koruma](m365-campaigns-phishing-and-attacks.md)<br/><br/>[Hassas e-postanızı şifreleme veya etiketleme](send-encrypted-email.md) |
-|iPhone ve Android cihazları |Çok faktörlü kimlik doğrulamasını kullanma, Microsoft mobil uygulamalarını ayarlama ve PIN gerektirme | [Çok faktörlü kimlik doğrulamasını ayarlama](m365bp-multifactor-authentication.md)<br/><br/>[Mobil cihazları ayarlama](../business/set-up-mobile-devices.md)|
-|Mac ve diğer bilgisayarlar için kendi cihazlarınızı (BYOD) Windows getirin |Güncel Office, işletim sistemlerini güncel tutma ve güvenlik özelliklerini etkinleştirme. | [Bilgisayarınızı ve Mac Windows için korumaya devam edin](m365bp-protect-pcs-macs.md) |
-|Dosyaları güvenli bir şekilde depolama ve paylaşma | E-posta, Microsoft Teams, OneDrive, SharePoint ve Microsoft Stream'den dosya ve video paylaşın ve hassas verileri koruyun.| [Dosya ve video paylaşma](share-files-and-videos.md) |
-|Yönetilen Windows cihazları |Önemli personel için yönetilen cihazlar kullanın ve bu cihazların güvenliğini suzin. | [Yönetilen cihazları ayarlama](../business/set-up-windows-devices.md) |
+## <a name="fortify-your-environment"></a>[**Ortamınızı Güçlendirme**](#tab/Fortify)
 
-## <a name="a-recommended-security-configuration-for-microsoft-365-business-premium"></a>Sistem ayarları için önerilen bir güvenlik Microsoft 365 İş Ekstra
+Bu ilk görevlerde oturum açın ve hesap erişim korumalarından başlayarak ilk savunma duvarlarınızı ayarlayın.
 
-Bu güvenlik yapılandırması önerilen güvenlik Microsoft 365 İş Ekstra şunları sağlar:
+[**Ortamınızı ayarlama**](m365bp-setup-overview.md). Bu görev, sistemdeki tüm hesaplarda güvenlik ayarlamanızı ve uygulamanızı gerektirir.
 
-- Güvenilir iş üretkenliğini ve Outlook, Word, Excel gibi işbirliği araçlarını Office kullanın.
+[**Siber güvenlik korumalarını artırma**](m365bp-security-overview.md). Siber saldırıları önlemek için kritik ön saf güvenlik önlemleri ayarlayın.
 
-- Tüm iOS, Android ve Windows cihazlarınız üzerinde iş dosyalarınızı, yönetimi kolay kurumsal sınıf bir güvenlikle koruyun.
+[:::image type="content" source="media/m365bp-fortify-environment.jpg" alt-text="Microsoft 365 İş Ekstra uygulamalarınızı, dosya depolama alanınızı, e-postanızı, cihazlarınızı ve kimliklerinizi korur,.":::](m365bp-setup-overview.md)
 
-- Kullanıcı hesapları ve kimlik için ek koruma uygulama.
+## <a name="cybersecurity-playbook"></a>Siber güvenlik taktik defteri
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE3clbH]
+Bu görevlerdeki rehberlik, işletmenizin Harvard Kennedy School  [Cybersecurity Campaign Playbook](https://go.microsoft.com/fwlink/p/?linkid=2015598)'unda açıklanan hedeflere ulaşmasına yardımcı olur. İndirmeniz için bir özet sağlanır.
 
-ABD'de federal ve bazı eyalet seçim kampanyaları, Microsoft 365 İş Ekstra'in [](get-microsoft-365-campaigns.md) Kampanya tekliflerinde Microsoft 365 için özel fiyatlandırma almaya hak kazanmakla birlikte, İş Premium planı olan tüm kuruluşlar, daha yüksek güvenliği yapılandırmak ve güvenli bir şekilde işbirliği yapmayı öğrenmek için bu kılavuzdan faydalanebilir.
+Daha büyük bir versiyonunu görmek için bilgi grafiğine tıklayın veya [Siber Güvenlik taktik defteri posteri](https://download.microsoft.com/download/9/c/1/9c167271-8209-492e-acc2-38a39d1834c2/m365bp-cybersecurity-playbook.pdf)’nin bir kopyasını indirin!
 
-Bu kitaplık şunları içerir:
+:::image type="content" source="media/m365bp-cyber-security-playbook.png" alt-text="Siber güvenlik taktik defteri" lightbox="media/m365bp-cyber-security-playbook.png":::
 
-- Artırılmış güvenlik eklemeye yönelik önkesif kurulum kılavuzu.
+[PDF'yi edinin](https://download.microsoft.com/download/9/c/1/9c167271-8209-492e-acc2-38a39d1834c2/m365bp-cybersecurity-playbook.pdf)!
 
-- Kullanıcıların güvenli erişim için cihazları ayarlaması için yardım.
+## <a name="how-microsoft-365-business-premium-helps-you"></a>Microsoft 365 İş Ekstra size nasıl yardımcı olur?
 
-- Güvenli bir şekilde işbirliği yapma ve paylaşma konusunda yol gösterici.
+[Microsoft 365 İş Ekstra avantajları](m365bp-secure-users.md)’nı öğrenmek için buraya tıklayın.
 
-Nelerin dahil olduğu hakkında daha fazla bilgi için bkz. [Microsoft 365 İş Ekstra](https://www.microsoft.com/microsoft-365/business).
+## <a name="next-steps"></a>Sonraki adımlar
 
-## <a name="get-started"></a>Kullanmaya başlayın
+Şimdi [ortamınızı siber saldırılara karşı güçlendirelim](m365bp-setup-overview.md)!
 
-Çalışmaya başlama için şu adımları izleyin:
+> [!Note]
+> Bir terim veya yönerge belirsiz olduğunda [terimler sözlüğü](m365bp-glossary.md)’nde tanımları bulabilirsiniz.
 
-- Küçük ve orta ölçekli işletmeler için: Daha [fazla Microsoft 365 İş Ekstra](get-microsoft-365-business-premium.md)
+## <a name="train-your-team"></a>[**Ekibinizi Eğitme**](#tab/Train)
 
-- Kampanyalar için: [Microsoft 365 edinin](get-microsoft-365-campaigns.md)
+Ekibiniz tarafından tamamlanması gereken bazı hedefleri içeren bir dizi görevi buraya dahil ettik. Ekibin cihazlarının korunduğundan ve ekibin e-posta ve dosya paylaşımını güvenli bir şekilde kullanmak ve tehditleri tanımak ve bildirmek için eğitildiğinden emin olmanız gerekir.
 
-## <a name="solutions-for-your-business"></a>İşletmenize yönelik çözümler
+[**KCG cihazlarını ayarlama**](m365bp-protect-pcs-macs.md). Bu görevde, tüm yönetilmeyen (KCG) cihazları güvenli bir şekilde ekosistemin bir parçası olacak şekilde ayarlarsınız.
 
-Güvenli güvenlik ortamınızı Microsoft 365, çalışmaya devam etmek için aşağıdaki çözümleri kullanabilirsiniz:
+[**E-postayı koruma**](m365bp-protect-email-overview.md). E-posta sistemlerini saldırılara karşı korumak için gerekli adımları uygulayın.
 
-| İşbirliği için ekipler oluşturma | Çevrimiçi toplantılar ayarlama |
-| ------------- | ------------- |
-| ![SharePoint sitesi.](../media/sm-m365-democracy-teams-collab.png) | ![çevrimiçi toplantı](../media/m365-democracy-teams-meetings.png) |
-| Önemli personel, tüm personel ve iş ortakları veya satıcılar için ekiplerle işbirliği yapın.<br>[Ekibinizi oluşturma](create-teams-for-collaboration.md) | Sesli, görüntülü görüşme ve paylaşım ile toplantı Microsoft Teams.<br>[Toplantı ayarlama](set-up-meetings.md) |
+[**Güvenli bir şekilde işbirliği yapma ve paylaşma**](m365bp-collaborate-share-securely.md). Bu görevin hedefleri, kuruluşun tüm üyeleri için güvenli dosya paylaşımı ayarlamanızı gerektirir.
 
-| Hassas e-postanızı şifreleme veya etiketleme | İletişim sitesi oluşturma |
-| ------------- | ------------- |
-| ![Şifreli ve etiketli e-posta.](../media/sm-m365-campaign-email-encrypt.png) | ![SharePoint iletişim sitesi](../media/sm-m365-democracy-comms-site.png) |
-| Gizli veya hassas bilgiler içeren e-postaları korumak için şifreleme ve duyarlılık etiketleri kullanın.<br>[Şifreli e-posta gönderme](send-encrypted-email.md) | Etkinlik, ileti, resim ve diğer bilgileri, ekip arkadaşlarınızla oluşturulacak iç iletişim SharePoint.<br>[Sitenizi oluşturma](create-communications-site.md) |
+[:::image type="content" source="media/m365bp-train-team.jpg" alt-text="Microsoft 365 İş Ekstra uygulamalarınızı, dosya depolama alanınızı, e-postanızı, cihazlarınızı ve kimliklerinizi korur.":::](m365bp-devices-overview.md)
 
-| Dosya ve video paylaşma |
-| ------------- |
-| ![e-Microsoft Teams.](../media/m365-democracy-teams-sharefiles.png) |
-| Dosyalarınızı ve videolarınızı kullanılabilir olması için buluta kaydetme <br>uygun tüm kişiler için.<br>[Paylaşmaya başla](share-files-and-videos.md) |
+## <a name="cybersecurity-playbook"></a>Siber güvenlik taktik defteri
+
+Bu görevlerdeki rehberlik, işletmenizin Harvard Kennedy School  [Cybersecurity Campaign Playbook](https://go.microsoft.com/fwlink/p/?linkid=2015598)'unda açıklanan hedeflere ulaşmasına yardımcı olur. İndirmeniz için bir özet sağlanır.
+
+Daha büyük bir versiyonunu görmek için bilgi grafiğine tıklayın veya [Siber Güvenlik taktik defteri posteri](https://download.microsoft.com/download/9/c/1/9c167271-8209-492e-acc2-38a39d1834c2/m365bp-cybersecurity-playbook.pdf)’nin bir kopyasını indirin!
+
+:::image type="content" source="media/m365bp-cyber-security-playbook.png" alt-text="Siber güvenlik taktik defteri" lightbox="media/m365bp-cyber-security-playbook.png":::
+
+[PDF'yi edinin](https://download.microsoft.com/download/9/c/1/9c167271-8209-492e-acc2-38a39d1834c2/m365bp-cybersecurity-playbook.pdf)!
+
+## <a name="how-microsoft-365-business-premium-helps-you"></a>Microsoft 365 İş Ekstra size nasıl yardımcı olur?
+
+[Microsoft 365 İş Ekstra avantajları](m365bp-secure-users.md)’nı öğrenmek için buraya tıklayın.
+
+## <a name="next-steps"></a>Sonraki adımlar
+
+Şimdi [ortamınızı siber saldırılara karşı güçlendirelim](m365bp-setup-overview.md)!
+
+> [!Note]
+> Bir terim veya yönerge belirsiz olduğunda [terimler sözlüğü](m365bp-glossary.md)’nde tanımları bulabilirsiniz.
+
+## <a name="safeguard-managed-devices"></a>[**Yönetilen Cihazları Koruma**](#tab/Safeguard)
+
+Güvenli cihaz, kuruluş tarafından izlenen bir cihazdır. Bu son kritik görevde, cihazları İş için Microsoft Defender’a ekleyip kaydederek kullanılabilecek en iyi araçlarla güvenli hale gelmelerini ve korunmalarını sağlarsınız.
+
+[**Yönetilen cihazları ayarlama ve güvenliğini sağlama**](m365bp-protect-devices.md). Kuruluş tarafından izlenmeleri ve korunmaları için bu cihazları güvence altına almak adına gerekli adımları atın!
+
+[:::image type="content" source="media/m365bp-safeguard-managed-devices.jpg" alt-text="Microsoft 365 İş Ekstra uygulamalarınızı, dosya depolama alanınızı, e-postanızı, cihazlarınızı ve kimliklerinizi korur.":::](m365bp-protect-devices.md)
+
+## <a name="cybersecurity-playbook"></a>Siber güvenlik taktik defteri
+
+Bu görevlerdeki rehberlik, işletmenizin Harvard Kennedy School  [Cybersecurity Campaign Playbook](https://go.microsoft.com/fwlink/p/?linkid=2015598)'unda açıklanan hedeflere ulaşmasına yardımcı olur. İndirmeniz için bir özet sağlanır.
+
+Daha büyük bir versiyonunu görmek için bilgi grafiğine tıklayın veya [Siber Güvenlik taktik defteri posteri](https://download.microsoft.com/download/9/c/1/9c167271-8209-492e-acc2-38a39d1834c2/m365bp-cybersecurity-playbook.pdf)’nin bir kopyasını indirin!
+
+:::image type="content" source="media/m365bp-cyber-security-playbook.png" alt-text="Siber güvenlik taktik defteri" lightbox="media/m365bp-cyber-security-playbook.png":::
+
+[PDF'yi edinin](https://download.microsoft.com/download/9/c/1/9c167271-8209-492e-acc2-38a39d1834c2/m365bp-cybersecurity-playbook.pdf)!
+
+## <a name="how-microsoft-365-business-premium-helps-you"></a>Microsoft 365 İş Ekstra size nasıl yardımcı olur?
+
+[Microsoft 365 İş Ekstra avantajları](m365bp-secure-users.md)’nı öğrenmek için buraya tıklayın.
+
+## <a name="next-steps"></a>Sonraki adımlar
+
+Şimdi [ortamınızı siber saldırılara karşı güçlendirelim](m365bp-setup-overview.md)!
+
+> [!Note]
+> Bir terim veya yönerge belirsiz olduğunda [terimler sözlüğü](m365bp-glossary.md)’nde tanımları bulabilirsiniz.

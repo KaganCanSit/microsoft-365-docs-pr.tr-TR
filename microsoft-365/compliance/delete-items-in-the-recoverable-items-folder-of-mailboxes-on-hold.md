@@ -2,8 +2,8 @@
 title: Kurtarılabilir Öğeler klasöründeki öğeleri silme
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -20,12 +20,12 @@ description: Yöneticilerin, kullanıcının Exchange Online posta kutusu için 
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
-ms.openlocfilehash: b421be087980c7878b79e3dbc03759ec45c546d8
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 808bc02eb711ff72ec8bd329b1367145d2d991a9
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "65001202"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65091753"
 ---
 # <a name="delete-items-in-the-recoverable-items-folder-of-cloud-based-mailboxes-on-hold"></a>Beklemedeki bulut tabanlı posta kutularının Kurtarılabilir Öğeler klasöründeki öğeleri silme
 
@@ -214,7 +214,7 @@ Posta kutusuna uygulanan bekletme ilkesini belirlemek için [Güvenlik & Uyumlul
 Get-RetentionCompliancePolicy <retention policy GUID without prefix> | FL Name
 ```
 
-Bekletme ilkesini tanımladıktan sonra uyumluluk portalında **Bilgi** **idaresiRetention** >  sayfasına gidin, önceki adımda tanımladığınız bekletme ilkesini düzenleyin ve posta kutusunu bekletme ilkesine dahil edilen alıcılar listesinden kaldırın.
+Bekletme ilkesini tanımladıktan sonra uyumluluk portalında **Veri yaşam döngüsü** **yönetimiYenileştirme** >  sayfasına gidin, önceki adımda tanımladığınız bekletme ilkesini düzenleyin ve posta kutusunu bekletme ilkesine dahil edilen alıcılar listesinden kaldırın.
   
 ### <a name="organization-wide-retention-policies"></a>Kuruluş genelinde saklama ilkeleri
   
@@ -224,7 +224,7 @@ Kuruluş genelinde, Exchange genelinde ve Teams genelinde saklama ilkeleri kurul
 Get-RetentionCompliancePolicy <retention policy GUID without prefix> | FL Name
 ```
 
-Kuruluş genelinde saklama ilkelerini tanımladıktan sonra uyumluluk portalında Bilgi **idaresiRetention**  >  sayfasına gidin, önceki adımda tanımladığınız kuruluş genelindeki her saklama ilkesini düzenleyin ve posta kutusunu dışlanan alıcılar listesine ekleyin. Bunu yaptığınızda kullanıcının posta kutusu bekletme ilkesinden kaldırılır.
+Kuruluş genelinde saklama ilkelerini tanımladıktan sonra, uyumluluk portalında **Veri yaşam döngüsü** **yönetimiYenileştirme** >  sayfasına gidin, önceki adımda tanımladığınız kuruluş genelindeki her saklama ilkesini düzenleyin ve posta kutusunu dışlanan alıcılar listesine ekleyin. Bunu yaptığınızda kullanıcının posta kutusu bekletme ilkesinden kaldırılır.
 
 > [!IMPORTANT]
 > Bir posta kutusunu kuruluş genelinde saklama ilkesinden dışladıktan sonra, bu değişikliğin eşitlenmesi ve posta kutusunun ilkeden kaldırılması 24 saat kadar sürebilir.
@@ -399,11 +399,11 @@ Exchange Online PowerShell'de aşağıdaki adımları (belirtilen sırada) gerç
 
     **Belirli posta kutularına uygulanan bekletme ilkeleri**
 
-    Posta kutusunu bekletme ilkesine geri eklemek için uyumluluk portalını kullanın. Uyumluluk merkezindeki **Information governanceRetention** >  sayfasına gidin, bekletme ilkesini düzenleyin ve posta kutusunu bekletme ilkesinin uygulandığı alıcılar listesine geri ekleyin.
+    Posta kutusunu bekletme ilkesine geri eklemek için uyumluluk portalını kullanın. Uyumluluk merkezindeki **Veri yaşam döngüsü** **yönetimiYenileştirme** >  sayfasına gidin, bekletme ilkesini düzenleyin ve posta kutusunu bekletme ilkesinin uygulandığı alıcılar listesine yeniden ekleyin.
 
     **Kuruluş genelinde saklama ilkeleri**
 
-    Kuruluş genelinde veya Exchange genelinde saklama ilkesini ilkenin dışında tutarak kaldırdıysanız, posta kutusunu dışlanan kullanıcılar listesinden kaldırmak için uyumluluk portalını kullanın. Uyumluluk merkezinde **Information governanceRetention** >  sayfasına gidin, kuruluş genelinde bekletme ilkesini düzenleyin ve posta kutusunu dışlanan alıcılar listesinden kaldırın. Bunu yaptığınızda, bekletme ilkesi kullanıcının posta kutusuna yeniden gerçekleştirilir.
+    Kuruluş genelinde veya Exchange genelinde saklama ilkesini ilkenin dışında tutarak kaldırdıysanız, posta kutusunu dışlanan kullanıcılar listesinden kaldırmak için uyumluluk portalını kullanın. Uyumluluk merkezindeki **Veri yaşam döngüsü** **yönetimiYenileştirme** >  sayfasına gidin, kuruluş genelinde bekletme ilkesini düzenleyin ve posta kutusunu dışlanan alıcılar listesinden kaldırın. Bunu yaptığınızda, bekletme ilkesi kullanıcının posta kutusuna yeniden gerçekleştirilir.
 
     **eBulma büyük/küçük harf tutmaları**
 

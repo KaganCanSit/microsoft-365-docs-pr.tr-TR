@@ -2,8 +2,8 @@
 title: İk verilerini ABD Kamu buluta aktarmak için bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -16,12 +16,12 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
 ROBOTS: NOINDEX, NOFOLLOW
 description: ABD Kamu bulutundaki yöneticiler, çalışan verilerini kuruluşlarının insan kaynakları (İk) sisteminden Microsoft 365 aktarmak için bir veri bağlayıcısı ayarlayabilir. Bu, kuruluşunuz için iç tehdit oluşturabilecek belirli kullanıcıların etkinliklerini algılamanıza yardımcı olmak için şirket içi risk yönetimi ilkelerinde İk verilerini kullanmanıza olanak tanır.
-ms.openlocfilehash: 3f3873830caea109cf09987a21791bb299a4bdaf
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 4404eb9cd70ed41616fa5ed9b775b55c4c59e192
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "65000036"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65092403"
 ---
 # <a name="set-up-a-connector-to-import-hr-data-in-us-government"></a>ABD Kamu'da İk verilerini içeri aktarmak için bağlayıcı ayarlama
 

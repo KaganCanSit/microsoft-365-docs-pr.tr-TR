@@ -1,8 +1,8 @@
 ---
-title: Microsoft 365'de Yalıtım ve Erişim Denetimi
+title: Microsoft 365'de yalıtım ve Access Control
 ms.author: robmazz
 author: robmazz
-manager: laurawi
+manager: scotv
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -15,27 +15,27 @@ ms.collection:
 - SPO_Content
 f1.keywords:
 - NOCSH
-description: 'Özet: Bir denetimin çeşitli uygulamaları içindeki yalıtlama ve erişim denetimi Microsoft 365.'
-ms.openlocfilehash: 65845a8d6c8e6be578e997fa1455aa280c787897
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+description: 'Özet: Microsoft 365 çeşitli uygulamalarındaki yalıtım ve erişim denetiminin açıklaması.'
+ms.openlocfilehash: dbb5ceb8b0e1e4ef6bb80ba2c3c771fc6d6cac5b
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63019505"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65099399"
 ---
-# <a name="isolation-and-access-control-in-microsoft-365"></a>Microsoft 365'de Yalıtım ve Erişim Denetimi
+# <a name="isolation-and-access-control-in-microsoft-365"></a>Microsoft 365'de yalıtım ve Access Control
 
-Azure Active Directory (Azure AD) ve Microsoft 365, onlarca hizmet, yüzlerce varlık, binlerce ilişki ve on binlerce öznitelik içeren son derece karmaşık bir veri modeli kullanır. Üst düzeyde, Azure AD ve hizmet dizinleri durum tabanlı çoğaltma protokolleri kullanılarak eşitlenen kiracı ve alıcılar kapsayıcılarıdır. Azure AD'de alınan dizin bilgilerine ek olarak, hizmet iş yüklerinin her biri kendi dizin hizmetleri altyapısına da sahip olur.
+Azure Active Directory (Azure AD) ve Microsoft 365 onlarca hizmet, yüzlerce varlık, binlerce ilişki ve on binlerce özniteliği içeren son derece karmaşık bir veri modeli kullanır. Yüksek düzeyde Azure AD ve hizmet dizinleri, durum tabanlı çoğaltma protokollerini kullanarak eşitlenmiş durumda tutulan kiracıların ve alıcıların kapsayıcılarıdır. Azure AD'de tutulan dizin bilgilerine ek olarak, hizmet iş yüklerinin her birinin kendi dizin hizmetleri altyapısı vardır.
  
-![Microsoft 365 veri eşitlemeyi seçin.](../media/office-365-isolation-tenant-data-sync.png)
+![Kiracı veri eşitlemesini Microsoft 365.](../media/office-365-isolation-tenant-data-sync.png)
 
-Bu modelin içinde tek bir dizin veri kaynağı yoktur. Belirli sistemlerin ayrı ayrı veri parçaları vardır, ancak tek sistem tüm verileri bulundur olmaz. Microsoft 365 hizmetleri, bu veri modelinde Azure AD ile işbirliği yapar. Azure AD, paylaşılan veriler için genellikle her hizmet tarafından kullanılan küçük ve statik veriler olan "tek doğru sistem" sistemidir. Verilerin paylaşılan görünümünü, Microsoft 365 ve Azure AD'de kullanılan federasyon modeli sağlar.
+Bu modelde tek bir dizin veri kaynağı yoktur. Belirli sistemler tek tek veri parçalarına sahiptir, ancak tüm verileri tek bir sistem tutmaz. Microsoft 365 hizmetleri bu veri modelinde Azure AD ile işbirliği yapma. Azure AD, paylaşılan veriler için genellikle her hizmet tarafından kullanılan küçük ve statik veriler olan "doğruluk sistemidir". Microsoft 365 ve Azure AD içinde kullanılan federasyon modeli, verilerin paylaşılan görünümünü sağlar.
 
-Microsoft 365 hem fiziksel depolama alanı hem de Azure bulut depolaması kullanır. Exchange Online verileri için (Exchange Online Protection dahil) ve Skype Kurumsal kendi depolama alanını kullanabilirsiniz. SharePoint Online hem depolama SQL Server Azure Depolama'i kullanır; dolayısıyla müşteri verilerini depolama düzeyinde fazladan ayırma ihtiyacı olur.
+Microsoft 365 hem fiziksel depolamayı hem de Azure bulut depolamayı kullanır. Exchange Online (Exchange Online Protection dahil) ve Skype Kurumsal müşteri verileri için kendi depolama alanını kullanır. SharePoint Online hem SQL Server depolamayı hem de Azure Depolama kullanır, bu nedenle müşteri verilerinin depolama düzeyinde fazladan yalıtıma ihtiyacı vardır.
 
 ## <a name="exchange-online"></a>Exchange Online
 
-Exchange Online verilerini posta kutuları içinde depolar. Posta kutuları, posta kutusu veritabanları olarak adlandırılan Genişletilebilir Depolama Altyapısı (ESE) veritabanlarında barındırılabilir. Bu, kullanıcı posta kutularını, bağlantılı posta kutularını, paylaşılan posta kutularını ve ortak klasör posta kutularını içerir. Kullanıcı posta kutuları, konuşma Skype Kurumsal gibi kaydedilmiş içerikler içerir.
+Exchange Online, müşteri verilerini posta kutuları içinde depolar. Posta kutuları, posta kutusu veritabanları olarak adlandırılan Genişletilebilir Depolama Altyapısı (ESE) veritabanlarında barındırılır. Buna kullanıcı posta kutuları, bağlı posta kutuları, paylaşılan posta kutuları ve ortak klasör posta kutuları dahildir. Kullanıcı posta kutuları, konuşma geçmişleri gibi kaydedilmiş Skype Kurumsal içeriği içerir.
 
 Kullanıcı posta kutusu içeriği şunları içerir:
 
@@ -45,58 +45,58 @@ Kullanıcı posta kutusu içeriği şunları içerir:
 - Görevler
 - Notlar
 - Gruplar
-- Verileri çıkartır
+- Çıkarım verileri
 
-E-posta Exchange Online posta kutusu veritabanı, birden çok kiracının posta kutularını içerir. Yetkilendirme kodu, bir kira da içinde olmak üzere her posta kutusunun güvenliğini sağlar. Varsayılan olarak, posta kutusuna yalnızca atanan kullanıcının erişimi olur. Posta kutusunun güvenliğini altına alan erişim denetim listesi (ACL), kiracı düzeyinde Azure AD tarafından kimliği doğrulanmış bir kimlik içerir. Her kiracının posta kutuları, kiracının kimlik doğrulaması sağlayıcısında kimliği doğrulanmış kimliklerle sınırlıdır ve bu kimlikler yalnızca o kiracıdan gelen kullanıcıları içerir. A kiracısı içeriği, A kiracısı tarafından açıkça onaylanmadı sürece, B kiracısı kullanıcıları tarafından hiçbir şekilde alınamaz.
+Exchange Online içindeki her posta kutusu veritabanı, birden çok kiracıdan gelen posta kutularını içerir. Yetkilendirme kodu, kiracı da dahil olmak üzere her posta kutusunun güvenliğini sağlar. Varsayılan olarak, posta kutusuna yalnızca atanan kullanıcının erişimi vardır. Posta kutusunun güvenliğini sağlayan erişim denetimi listesi (ACL), Azure AD tarafından kiracı düzeyinde doğrulanmış bir kimlik içerir. Her kiracının posta kutuları, kiracının kimlik doğrulama sağlayıcısında kimliği doğrulanmış kimliklerle sınırlıdır ve bu kimlikler yalnızca bu kiracıdaki kullanıcıları içerir. A kiracısında içerik, A kiracısı tarafından açıkça onaylanmadığı sürece B kiracısında bulunan kullanıcılar tarafından hiçbir şekilde alınamaz.
 
 ## <a name="skype-for-business"></a>Skype Kurumsal
 
-Skype Kurumsal çeşitli yerlerde depolar:
+Skype Kurumsal verileri çeşitli yerlerde depolar:
 
-- Bağlantı uç noktaları, kiracı kimlikleri, arama planları, dolaşım ayarları, iletişim durumu, kişi listeleri vb. içeren kullanıcı ve hesap bilgileri, Skype Kurumsal Active Directory sunucularında ve çeşitli Skype Kurumsal veritabanı sunucularında depolanır. Kişi listeleri, kullanıcı hem ürün Exchange Online, hem de kullanıcı etkin değilse Skype Kurumsal sunucularında kullanıcının posta kutusunda depolanır. Skype Kurumsal veritabanı sunucuları kiracı başına bölümlenmiş değildir, ancak rol tabanlı erişim denetimi (RBAC) aracılığıyla verilerin çok kiracılı yalıtımsı zorunludur.
-- Toplantı içeriği ve karşıya yüklenen veriler Dağıtılmış Dosya Sistemi (AİS) paylaşımlarda depolanır. Bu içerik, etkinleştirildiyse aynı zamanda Exchange Online arşivlenir. TABLO paylaşımları kiracı başına bölümlemez. içeriği ACL'lerle güvence altına alınır ve çok kiralanan alan RBAC aracılığıyla uygulanır.
-- Arama geçmişi, IM oturumları, uygulama paylaşımı, IM geçmişi gibi etkinlik geçmişi olan arama ayrıntı kayıtları da Exchange Online'te depolansa da, arama ayrıntı kayıtlarının çoğu arama ayrıntı kaydı (CDR) sunucularında geçici olarak depolanır. İçerik kiracı başına bölümlemez, ancak RBAC aracılığıyla çok kiracılı kiracı uygulanır.
+- Bağlantı uç noktalarını, kiracı kimliklerini, arama planlarını, dolaşım ayarlarını, iletişim durumu, kişi listelerini vb. içeren kullanıcı ve hesap bilgileri, Skype Kurumsal Active Directory sunucularında ve çeşitli Skype Kurumsal veritabanı sunucularında depolanır. Kişi listeleri, kullanıcı her iki ürün için de etkinleştirildiyse kullanıcının Exchange Online posta kutusunda veya kullanıcı etkinleştirilmediyse Skype Kurumsal sunucularda depolanır. Skype Kurumsal veritabanı sunucuları kiracı başına bölümlenmez, ancak rol tabanlı erişim denetimi (RBAC) aracılığıyla verilerin çok kiracılı yalıtımı uygulanır.
+- Toplantı içeriği ve karşıya yüklenen veriler Dağıtılmış Dosya Sistemi (DFS) paylaşımlarında depolanır. Bu içerik, etkinleştirilirse Exchange Online içinde de arşivlenebilir. DFS paylaşımları kiracı başına bölümlenmez. içeriğin güvenliği ACL'lerle sağlanır ve çok kiracılılık RBAC aracılığıyla zorlanır.
+- Arama geçmişi, anlık ileti oturumları, uygulama paylaşımı, anlık ileti geçmişi gibi etkinlik geçmişi olan arama ayrıntı kayıtları da Exchange Online depolanabilir, ancak çoğu arama ayrıntısı kaydı geçici olarak arama ayrıntı kaydı (CDR) sunucularında depolanır. İçerik kiracı başına bölümlenmez, ancak RBAC aracılığıyla çok kiracılılık uygulanır.
 
 ## <a name="sharepoint-online"></a>SharePoint Online
 
-SharePoint Online'da veri yalıtım sağlayan çeşitli bağımsız mekanizmalar vardır. Nesneleri uygulama veritabanları içinde özet kod olarak depolar. Örneğin, bir kullanıcı dosyayı SharePoint Online'a yükledikten sonra dosya parçalarına çevrilir, uygulama koduna çevrilir ve birden çok veritabanında birden çok tabloda depolanır.
+SharePoint Online, veri yalıtımı sağlayan çeşitli bağımsız mekanizmalara sahiptir. Nesneleri uygulama veritabanlarında soyut kod olarak depolar. Örneğin, bir kullanıcı SharePoint Online'a dosya yüklediğinde dosya ayrıştırılır, uygulama koduna çevrilir ve birden çok veritabanında birden çok tabloda depolanır.
 
-Kullanıcı verileri içeren depolama alanına doğrudan erişim elde ettiyse, içerik insanlar veya SharePoint Online dışında herhangi bir sistem için yorumlanmaz. Bu mekanizmalar, güvenlik erişimi denetimi ve özelliklerini içerir. Tüm SharePoint Çevrimiçi kaynakları, bir kiraya dahil olmak üzere yetkilendirme kodu ve RBAC ilkesi ile güvence altına alınır. Kaynağın kiracı düzeyinde kimliği doğrulanmış bir kimlik içerdiğini güvence altına alan erişim denetim listesi (ACL). SharePoint çevrimiçi verileri, kiracının kimlik doğrulama sağlayıcısı tarafından kimlik doğrulaması yapılan kimliklerle sınırlıdır.
+Bir kullanıcı verileri içeren depolama alanına doğrudan erişim elde edebilirse, içerik bir insan veya SharePoint Online dışında herhangi bir sistem tarafından yorumlanamaz. Bu mekanizmalar güvenlik erişim denetimi ve özellikleri içerir. Tüm SharePoint Çevrimiçi kaynaklarının güvenliği, kiracı içinde olmak üzere yetkilendirme kodu ve RBAC ilkesiyle sağlanır. Bir kaynağın güvenliğini sağlayan erişim denetimi listesi (ACL), kiracı düzeyinde kimliği doğrulanmış bir kimlik içerir. SharePoint Bir kiracının çevrimiçi verileri, kiracı için kimlik doğrulama sağlayıcısı tarafından kimliği doğrulanan kimlikler ile sınırlıdır.
 
-ACL'lere ek olarak, kimlik doğrulama sağlayıcısını (kiracıya özgü Azure AD'ye) belirten kiracı düzeyi özelliği bir kez yazılır ve bir kez ayarlanamıyor. Kimlik doğrulama sağlayıcısı kiracı özelliği bir kiracı için ayarlanamıyorsa, kiracıya açık olan hiçbir API kullanılarak değiştirilemez.
+ACL'lere ek olarak, kimlik doğrulama sağlayıcısını belirten bir kiracı düzeyi özelliği (kiracıya özgü Azure AD'dir) bir kez yazılır ve ayarlandıktan sonra değiştirilemez. Bir kiracı için kimlik doğrulama sağlayıcısı kiracı özelliği ayarlandıktan sonra, kiracıya sunulan API'ler kullanılarak değiştirilemez.
 
-Her kiracı *için benzersiz bir SubscriptionId* kullanılır. Tüm müşteri siteleri bir kiracıya aittir ve kiracıya benzersiz bir *SubscriptionId* atanır. *Sitenin SubscriptionId* özelliği bir kez yazılır ve kalıcıdır. Bir kiracıya atandıktan sonra, site farklı bir kiracıya taşınabilir. *SubscriptionId,* kimlik doğrulama sağlayıcısının güvenlik kapsamını oluşturmak için kullanılan anahtardır ve kiracıya bağlıdır.
+Her kiracı için benzersiz *bir SubscriptionId* kullanılır. Tüm müşteri siteleri bir kiracıya aittir ve kiracıya benzersiz bir *SubscriptionId* atanır. Bir sitedeki *SubscriptionId* özelliği bir kez yazılır ve kalıcıdır. Bir kiracıya atandıktan sonra site farklı bir kiracıya taşınamaz. *SubscriptionId*, kimlik doğrulama sağlayıcısının güvenlik kapsamını oluşturmak için kullanılan anahtardır ve kiracıya bağlıdır.
 
-SharePoint Online, içerik meta SQL Server depolaması Depolama Azure Depolama'i kullanır. İçerik deposu için bölüm anahtarı, site sitesinde *SiteId* SQL. SQL Online, bir SharePoint SQL düzeyindeki *SubscriptionId* denetimi kapsamında doğrulanmış bir *SiteId kullanır*.
+SharePoint Online, içerik meta veri depolaması için SQL Server ve Azure Depolama kullanır. İçerik deposunun bölüm anahtarı, *SQL'de SiteId'dir*. bir SQL sorgusu çalıştırırken, SharePoint Online kiracı düzeyi *SubscriptionId* denetiminin bir parçası olarak doğrulanmış bir *SiteId* kullanır.
 
-SharePoint Online şifrelenmiş dosya içeriğini blob'lara Microsoft Azure depolar. Her SharePoint Online sunucu grubu kendi Microsoft Azure hesabına sahiptir ve Azure'da kaydedilen tüm blob'lar, SQL içerik mağazasında depolanan bir anahtarla tek tek şifrelenir. Yetkilendirme katmanı tarafından kodda korunan ve doğrudan son kullanıcıya açıkta yer alan şifreleme anahtarı. SharePoint Online'da HTTP isteğinin birden çok kiracı için verileri okuduğunda veya yazdığında algılayan gerçek zamanlı izleme vardır. İstek kimliği *SubscriptionId* , erişilen kaynağın *SubscriptionId'sinde* izilir. Birden çok kiracının kaynaklarına erişim istekleri, son kullanıcılar tarafından asla yaşanmaz. Çok kiracılı bir ortamdaki hizmet istekleri tek istisnadır. Örneğin, arama gezinicisi tüm veritabanının içerik değişikliklerini bir kerede alır. Bu genellikle, verimlilik nedenleriyle yapılan tek bir hizmet isteğinde birden çok kiracının sitelerini sorgulamayı içerir.
+SharePoint Online, şifrelenmiş dosya içeriğini Microsoft Azure bloblarda depolar. Her SharePoint Online grubu kendi Microsoft Azure hesabına sahiptir ve Azure'da kaydedilen tüm bloblar SQL içerik deposunda depolanan bir anahtarla tek tek şifrelenir. Kimlik doğrulama katmanı tarafından kodda korunan ve doğrudan son kullanıcıya sunulmayan şifreleme anahtarı. SharePoint Online, bir HTTP isteğinin birden çok kiracı için verileri ne zaman okuduğunu veya yazdığını algılamak için gerçek zamanlı izleme özelliğine sahiptir. *SubscriptionId* istek kimliği, erişilen kaynağın *SubscriptionId* değeriyle izlenir. Birden fazla kiracının kaynaklarına erişim istekleri hiçbir zaman son kullanıcılar tarafından gerçekleşmemelidir. Çok kiracılı bir ortamdaki hizmet istekleri tek istisnadır. Örneğin, arama gezgini tüm veritabanı için içerik değişikliklerini aynı anda çeker. Bu genellikle, verimlilik nedenleriyle yapılan tek bir hizmet isteğinde birden fazla kiracının sitelerini sorgulamayı içerir.
 
 ## <a name="teams"></a>Teams
 
-Veri Teams, içerik türüne bağlı olarak farklı bir şekilde depolanır. 
+Teams verileriniz, içerik türüne bağlı olarak farklı şekilde depolanır. 
 
-Ayrıntılı bir tartışma [için Ignite ara oturumunu Microsoft Teams](https://channel9.msdn.com/Events/Ignite/Microsoft-Ignite-Orlando-2017/BRK3071) mimariye göz atabilirsiniz.
+Ayrıntılı bir tartışma için [Microsoft Teams mimarisinde Ignite tartışma oturumuna](https://channel9.msdn.com/Events/Ignite/Microsoft-Ignite-Orlando-2017/BRK3071) göz atın.
 
 ### <a name="core-teams-customer-data"></a>Temel Teams müşteri verileri
 
-Kiracınız Avustralya, Kanada, Avrupa Birliği, Fransa, Almanya, Hindistan, Japonya, Güney Afrika, Güney Kore, İsviçre'de (Liechtenstein'ı içerir), Birleşik Arap Emirlikleri'nde, Birleşik Krallık'ta veya ABD'de sağlanıyorsa, Microsoft yalnızca bu konumda bulunan aşağıdaki müşteri verilerini depolar:
+Kiracınız Avustralya, Kanada, Avrupa Birliği, Fransa, Almanya, Hindistan, Japonya, Güney Afrika, Güney Kore, İsviçre (Liechtenstein dahil), Birleşik Arap Emirlikleri, Birleşik Krallık veya Birleşik Devletler sağlanırsa, Microsoft aşağıdaki müşteri verilerini yalnızca bu konumda bekleyen olarak depolar:
 
-- Teams, ekip ve kanal görüşmelerini, resimleri, sesli mesajları ve kişileri görüntü olarak görüntüler.
-- SharePoint Online site içeriğini ve bu site içinde depolanan dosyaları içerir.
-- İş veya okul OneDrive dosyaları OneDrive dosyaları.
+- Sohbetleri, ekip ve kanal konuşmalarını, görüntüleri, sesli mesajları ve kişileri Teams.
+- Çevrimiçi site içeriğini ve bu site içinde depolanan dosyaları SharePoint.
+- İş veya okul için OneDrive yüklenen dosyalar.
 
 #### <a name="chat-channel-messages-team-structure"></a>Sohbet, kanal iletileri, ekip yapısı
 
-E-posta Teams her ekip bir Microsoft 365 Grubu ve SharePoint posta kutusuyla Exchange vardır. Özel sohbetler (grup sohbetleri dahil), kanalda bir konuşmanın parçası olarak gönderilen iletiler ve ekiplerin ve kanalların yapısı, Azure'da çalışan bir sohbet hizmette depolanır. Ayrıca, Bilgi Koruması özelliklerini etkinleştirmek için veriler kullanıcı ve grup posta kutularında gizli bir klasörde depolanır.
+Teams'deki her ekip bir Microsoft 365 Grubu ve SharePoint sitesi ve Exchange posta kutusu tarafından desteklenir. Özel sohbetler (grup sohbetleri dahil), kanaldaki konuşmanın parçası olarak gönderilen iletiler ve ekiplerin ve kanalların yapısı Azure'da çalışan bir sohbet hizmetinde depolanır. Veriler, Information Protection özellikleri etkinleştirmek için kullanıcı ve grup posta kutularında gizli bir klasörde de depolanır.
 
 #### <a name="voicemail-and-contacts"></a>Sesli mesaj ve kişiler
 
-Sesli mesajları tek bir Exchange. Kişiler, Exchange bulut veri depolarında depolanır. Exchange ve Exchange tabanlı bulut deposu, dünya çapında veri merkezi coğrafilerinin her birsinde zaten veri ikameti sağlar. Tüm ekipler için sesli mesaj ve kişiler, Avustralya, Kanada, Fransa, Almanya, Hindistan, Japonya, Birleşik Arap Emirlikleri, Birleşik Krallık, Güney Afrika, Güney Kore, İsviçre (Liechtenstein'ı da içerir) ve ABD'de ülke içinde depolanır. Diğer tüm ülkelerde, dosyalar kiracıya yakınlığı temel Asia-Pacific ABD, Avrupa veya Asia-Pacific bir konumda depolanır.
+Sesli mesajlar Exchange depolanır. Kişiler Exchange tabanlı bulut veri deposunda depolanır. Exchange ve Exchange tabanlı bulut deposu, dünya çapındaki veri merkezi bölgelerinin her birinde zaten veri yerleşimi sağlar. Tüm ekipler için sesli mesaj ve kişiler Avustralya, Kanada, Fransa, Almanya, Hindistan, Japonya, Birleşik Arap Emirlikleri, Birleşik Krallık, Güney Afrika, Güney Kore, İsviçre (Liechtenstein dahil) ve Birleşik Devletler için ülke içinde depolanır. Diğer tüm ülkelerde dosyalar, kiracı benzeşimi temelinde ABD, Avrupa veya Asia-Pacific konumunda depolanır.
 
-#### <a name="images-and-media"></a>Resimler ve medya
+#### <a name="images-and-media"></a>Görüntüler ve medya
 
-Sohbetlerde kullanılan medyalar (depolanmış olmayan ama özgün Giphy hizmeti URL'sinin başvuru bağlantısı olan Giphy GIF'ler dışında, Giphy Microsoft dışı bir hizmettir) sohbet hizmetiyle aynı konumlara dağıtılan Azure tabanlı bir medya hizmetinde depolanır.
+Sohbetlerde kullanılan medya (depolanmayan ancak özgün Giphy hizmeti URL'sine başvuru bağlantısı olan Giphy, Microsoft dışı bir hizmettir) sohbet hizmetiyle aynı konumlara dağıtılan Azure tabanlı bir medya hizmetinde depolanır.
 
-#### <a name="files"></a>Dosyalar
+#### <a name="files"></a>Dosyaları
 
-Kanalda birinin OneNote biri tarafından paylaşıldı olan dosyalar (Wiki ve Wiki dahil) ekibin SharePoint depolanır. Özel sohbette veya toplantı ya da arama sırasında paylaşılan dosyalar karşıya OneDrive paylaşan kullanıcının iş veya okul hesabı için hesapta depolanır. Exchange, SharePoint ve OneDrive zaten dünya çapında veri merkezi coğrafilerinin her birsinde veri ikameti sağlar. Dolayısıyla, mevcut müşteriler için tüm dosyalar, OneNote defterleri, Teams wiki içeriği ve Teams deneyiminin parçası olan posta kutuları, kiracıya yakınlığınıza bağlı olarak zaten bu konumda depolanır. Dosyalar Avustralya, Kanada, Fransa, Almanya, Hindistan, Japonya, Birleşik Arap Emirlikleri, Birleşik Krallık, Güney Afrika, Güney Kore ve İsviçre'de (Liechtenstein'ı da içerir) ülke içinde depolanır. Diğer tüm ülkelerde, dosyalar kiracıya yakınlığı temel alarak ABD, Avrupa veya Asya Pasifik konumunda depolanır.
+Birinin kanalda paylaştığı dosyalar (OneNote ve Wiki dahil) ekibin SharePoint sitesinde depolanır. Toplantı veya arama sırasında özel sohbette veya sohbette paylaşılan dosyalar karşıya yüklenir ve dosyayı paylaşan kullanıcının iş veya okul hesabı için OneDrive depolanır. Exchange, SharePoint ve OneDrive, dünya çapındaki veri merkezi coğrafi bölgelerinin her birinde zaten veri yerleşimi sağlar. Bu nedenle, mevcut müşteriler için tüm dosyalar, OneNote not defterleri, Teams wiki içeriği ve Teams deneyiminin bir parçası olan posta kutuları kiracı benzitenize bağlı olarak konumda zaten depolanır. Dosyalar Avustralya, Kanada, Fransa, Almanya, Hindistan, Japonya, Birleşik Arap Emirlikleri, Birleşik Krallık, Güney Afrika, Güney Kore ve İsviçre (Liechtenstein dahil) için ülke içinde depolanır. Diğer tüm ülkelerde dosyalar, kiracı benzeşimi temelinde ABD, Avrupa veya Asya Pasifik konumunda depolanır.

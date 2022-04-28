@@ -2,8 +2,8 @@
 title: eBulma'da iş akışını Teams (Premium)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 ms.reviewer: jefwan
 manager: laurawi
 audience: Admin
@@ -14,14 +14,16 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: eBulma'da (Premium) Microsoft Teams içeriği korumayı, toplamayı, gözden geçirmeyi ve dışarı aktarmayı öğrenin.
-ms.openlocfilehash: 043cfb070c008b4c58e48df40dfbb069ca859edd
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 36bfcde1b2ee5ad9b088db008249cdeb1cf90eb4
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64972397"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65092281"
 ---
 # <a name="ediscovery-premium-workflow-for-content-in-microsoft-teams"></a>Microsoft Teams içeriği için eBulma (Premium) iş akışı
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bu makalede, Microsoft Teams içeriğini korumak, toplamak, gözden geçirmek ve dışarı aktarmak için Microsoft Purview eKeşif 'i (Premium) kullanmaya yönelik kapsamlı yordamlar, yönergeler ve en iyi yöntemler kümesi sağlanır. Bu makalenin amacı, eBulma iş akışınızı Teams içerik için iyileştirmenize yardımcı olmaktır.
 
