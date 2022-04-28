@@ -2,8 +2,8 @@
 title: Etkinlik uyarıları oluşturma
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: 11/7/2017
 audience: Admin
@@ -19,12 +19,12 @@ search.appverid:
 ms.assetid: 72bbad69-035b-4d33-b8f4-549a2743e97d
 ROBOTS: NOINDEX, NOFOLLOW
 description: Kullanıcılar belirli etkinlikleri gerçekleştirdiğinde Microsoft 365 size e-posta bildirimleri göndermesi için Microsoft Purview uyumluluk portalında etkinlik uyarıları ekleme ve yönetme
-ms.openlocfilehash: 43991eaf0f80957b0d72a2f16a2021f24194f2d6
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 99cbbe4a03047b5cf8ef366a228fc78fe9dfbda1
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64995040"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65097018"
 ---
 # <a name="create-activity-alerts"></a>Etkinlik uyarıları oluşturma
 

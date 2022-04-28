@@ -2,8 +2,8 @@
 title: Microsoft 365'de eBulma (Premium) servis taleplerini oluşturma ve yönetme
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: 04/08/2022
 audience: Admin
@@ -20,12 +20,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Bu makalede, Microsoft Purview eKeşif (Premium) servis taleplerinin nasıl oluşturulacağı ve yönetildiği açıklanır. İlk adım bir servis talebi oluşturmak ve eBulma (Premium) özelliklerini ve işlevselliğini kullanmaya başlamaktır.
-ms.openlocfilehash: 294a07c2f43559943482c3e17c98289f41dff7bc
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: e5773f54d0ce6efbfc5aae22eb616f96c3777eda
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64999288"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65096996"
 ---
 # <a name="create-and-manage-an-ediscovery-premium-case"></a>eBulma (Premium) olayı oluşturma ve yönetme
 

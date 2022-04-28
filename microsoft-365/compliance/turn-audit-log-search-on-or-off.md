@@ -2,8 +2,8 @@
 title: Denetimi açma veya kapatma
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -20,12 +20,12 @@ search.appverid:
 ms.assetid: e893b19a-660c-41f2-9074-d3631c95a014
 ms.custom: seo-marvel-apr2020
 description: Yöneticilerin denetim günlüğünde arama yapma özelliğini etkinleştirmek veya devre dışı bırakmak için Microsoft Purview uyumluluk portalında Denetim günlüğü arama özelliğini açma veya kapatma.
-ms.openlocfilehash: e74effad1803b9a55167d1cd3bb5725bd042616a
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 3602a35169670b61a124cda40c9ab50b481571d8
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64991830"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65078877"
 ---
 # <a name="turn-auditing-on-or-off"></a>Denetimi açma veya kapatma
 

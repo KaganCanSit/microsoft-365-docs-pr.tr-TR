@@ -1,8 +1,8 @@
 ---
-title: Karma Modern Kimlik Doğrulama'nın dosya ve ağ bağlantılarından Skype Kurumsal veya devre dışı Exchange
+title: karma modern kimlik doğrulamasını Skype Kurumsal ve Exchange kaldırma veya devre dışı bırakma
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 11/3/2017
 audience: ITPro
 ms.topic: article
@@ -17,54 +17,54 @@ f1.keywords:
 - NOCSH
 ms.custom:
 - seo-marvel-apr2020
-description: Bu makalede, Karma Modern Kimlik Doğrulama'nın etki ve denetimlerinden nasıl kaldır Skype Kurumsal Exchange.
-ms.openlocfilehash: efc84ead5ea8219e77391f2a8ebe51e5fa23da8c
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Bu makalede Karma Modern Kimlik Doğrulaması'nın Skype Kurumsal ve Exchange'den nasıl kaldırılacağı veya devre dışı bırakılacağı açıklanmaktadır.
+ms.openlocfilehash: 27768d5f2ee1a2d223d0979a80d3fff003ed65ec
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988146"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65097348"
 ---
-# <a name="removing-or-disabling-hybrid-modern-authentication-from-skype-for-business-and-exchange"></a>Karma Modern Kimlik Doğrulama'nın dosya ve ağ bağlantılarından Skype Kurumsal veya devre dışı Exchange
+# <a name="removing-or-disabling-hybrid-modern-authentication-from-skype-for-business-and-exchange"></a>karma modern kimlik doğrulamasını Skype Kurumsal ve Exchange kaldırma veya devre dışı bırakma
 
-*Bu makale hem son hem de Microsoft 365 Kurumsal hem de Office 365 Kurumsal.*
+*Bu makale hem Microsoft 365 Kurumsal hem de Office 365 Kurumsal için geçerlidir.*
 
-Karma Modern Kimlik Doğrulama'yı (HMA) yalnızca geçerli ortamınıza uygun bulmanız için etkinleştirdiyseniz HMA'yı devre dışı abilirsiniz. Bu makalede nasıl olduğu açıklanmıştır.
+Karma Modern Kimlik Doğrulamasını (HMA) yalnızca geçerli ortamınız için uygun olmadığını bulmak için etkinleştirdiyseniz HMA'yı devre dışı bırakabilirsiniz. Bu makalede nasıl yapılır açıklanmaktadır.
   
-## <a name="who-is-this-article-for"></a>Who ne için?
+## <a name="who-is-this-article-for"></a>Bu makale Who içindir?
 
-Skype Kurumsal Online'da veya Şirket İçi'de Modern Kimlik Doğrulama'yı etkinleştirdiyse, ve/veya Exchange Online veya Şirket İçi'ne yönelikse ve HMA'yı devre dışı bırakmanız gerekiyorsa, bu adımlar size yöneliktir.
+Skype Kurumsal Online veya Şirket İçi ve/veya Exchange Online ya da Şirket İçi'nde Modern Kimlik Doğrulama'yı etkinleştirdiyseniz ve HMA'yı devre dışı bırakmanız gerektiğini fark ettiyseniz, bu adımlar size yöneliktir.
 
 > [!IMPORTANT]
-> Skype Kurumsal Online'da veya Şirket içinde isanız, karma topoloji HMA'nız varsa ve başlamadan önce desteklenen topolojilere bakmanız gerekirse , 'Modern Kimlik Doğrulaması ile desteklenen [Skype Kurumsal topolojileri](/skypeforbusiness/plan-your-deployment/modern-authentication/topologies-supported)' makalesine bakın.
+> Skype Kurumsal Online veya Şirket İçi'ndeyseniz, karma topoloji HMA'nız varsa ve başlamadan önce desteklenen topolojilere bakmanız gerekiyorsa '[Modern Kimlik Doğrulaması ile desteklenen Skype Kurumsal topolojileri](/skypeforbusiness/plan-your-deployment/modern-authentication/topologies-supported)' makalesine bakın.
   
-## <a name="how-to-disable-hybrid-modern-authentication-exchange"></a>Karma Modern Kimlik Doğrulama 'ı (Karma Modern Kimlik Doğrulama) devre dışı Exchange
+## <a name="how-to-disable-hybrid-modern-authentication-exchange"></a>Karma Modern Kimlik Doğrulamasını devre dışı bırakma (Exchange)
 
-1. **Exchange Için:** Exchange Yönetim Kabuğu'Exchange aşağıdaki komutları çalıştırın: 
+1. **şirket içi Exchange**: Exchange Yönetim Kabuğu'nı açın ve aşağıdaki komutları çalıştırın: 
 
 ```powershell
 Set-OrganizationConfig -OAuth2ClientProfileEnabled $false
 Set-AuthServer -Identity evoSTS -IsDefaultAuthorizationEndpoint $false
 ```
 
-2. **Exchange Online**: [Bağlan Uzak PowerShell Exchange Online'i](/powershell/exchange/connect-to-exchange-online-powershell) kullanabilirsiniz. *OAuth2ClientProfileEnabled bayrağınızı 'false' bayrağına* çevirmek için aşağıdaki komutu çalıştırın:
+2. **Exchange Online**: Uzak PowerShell ile [Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell). *OAuth2ClientProfileEnabled* bayrağınızı 'false' olarak dönüştürmek için aşağıdaki komutu çalıştırın:
 
 ```powershell    
 Set-OrganizationConfig -OAuth2ClientProfileEnabled:$false
 ```
     
-## <a name="how-to-disable-hybrid-modern-authentication-skype-for-business"></a>Karma Modern Kimlik Doğrulama'nın (Kimlik Doğrulama) devre dışı Skype Kurumsal
+## <a name="how-to-disable-hybrid-modern-authentication-skype-for-business"></a>Karma Modern Kimlik Doğrulamasını devre dışı bırakma (Skype Kurumsal)
 
-1. **Skype Kurumsal Için: Yönetim** Kabuğu'Skype Kurumsal çalıştırın:
+1. **şirket içi Skype Kurumsal**: Skype Kurumsal Yönetim Kabuğu'nda aşağıdaki komutları çalıştırın:
 
 ```powershell
 Set-CsOAuthConfiguration -ClientAuthorizationOAuthServerIdentity ""
 ```
 
-2. **Skype Kurumsal Online**: Bağlan PowerShell [ile Skype Kurumsal Online'a](manage-skype-for-business-online-with-microsoft-365-powershell.md) bağlanın. Modern Kimlik Doğrulama'yi devre dışı bırakmak için aşağıdaki komutu çalıştırın:
+2. **Skype Kurumsal Online**: Uzak PowerShell ile [Skype Kurumsal Online'a Bağlan](manage-skype-for-business-online-with-microsoft-365-powershell.md). Modern Kimlik Doğrulamasını devre dışı bırakmak için aşağıdaki komutu çalıştırın:
 
 ```powershell    
 Set-CsOAuthConfiguration -ClientAdalAuthOverride Disallowed
 ```
 
-[Modern Kimlik Doğrulamaya genel bakış bağlantısına geri dönebilirsiniz](hybrid-modern-auth-overview.md) . 
+[Modern Kimlik Doğrulamasına genel bakış bağlantısına geri dönün](hybrid-modern-auth-overview.md) . 

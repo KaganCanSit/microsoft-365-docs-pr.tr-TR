@@ -1,8 +1,8 @@
 ---
-title: PowerShell ile Microsoft 365 hesaplarına rol atama
+title: PowerShell ile Microsoft 365 kullanıcı hesaplarına rol atama
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 09/23/2020
 audience: Admin
 ms.topic: article
@@ -19,38 +19,38 @@ ms.custom:
 - Ent_Office_Other
 - seo-marvel-apr2020
 ms.assetid: ede7598c-b5d5-4e3e-a488-195f02f26d93
-description: Bu makalede, kullanıcı hesaplarına yönetici rolleri atamak üzere Microsoft 365 için PowerShell'in ne kadar hızlı ve kolay bir şekilde kullanıldığı hakkında bilgi edinebilirsiniz.
-ms.openlocfilehash: 0b0fc0a5da1a6b84d4f13f95ace4846e367ae111
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Bu makalede, kullanıcı hesaplarına yönetici rolleri atamak üzere Microsoft 365 için PowerShell'i ne kadar hızlı ve kolay bir şekilde kullanabileceğinizi öğrenin.
+ms.openlocfilehash: 8ac98920dd3d2d0487905b001434d73274463f9a
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985057"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65097458"
 ---
-# <a name="assign-admin-roles-to-microsoft-365-user-accounts-with-powershell"></a>PowerShell ile Microsoft 365 hesaplarına yönetici rolleri atama
+# <a name="assign-admin-roles-to-microsoft-365-user-accounts-with-powershell"></a>PowerShell ile Microsoft 365 kullanıcı hesaplarına yönetici rolleri atama
 
-*Bu makale hem son hem de Microsoft 365 Kurumsal hem de Office 365 Kurumsal.*
+*Bu makale hem Microsoft 365 Kurumsal hem de Office 365 Kurumsal için geçerlidir.*
 
-Microsoft 365 için PowerShell kullanarak kullanıcı hesaplarına kolayca rol Microsoft 365.
+Microsoft 365 için PowerShell'i kullanarak kullanıcı hesaplarına kolayca rol atayabilirsiniz.
 
 >[!Note]
->Yeni yönetici [rolüyle kullanıcı](../admin/add-users/assign-admin-roles.md) hesaplarına yönetici rolleri Microsoft 365 yönetim merkezi.
+>Microsoft 365 yönetim merkezi ile kullanıcı hesaplarına [yönetici rolleri atamayı](../admin/add-users/assign-admin-roles.md) öğrenin.
 >
 >Ek kaynakların listesi için bkz. [Kullanıcıları ve grupları yönetme](/admin).
 >
 
-## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a>Graph modülü için Azure Active Directory PowerShell'i kullanma
+## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a>Graph için Azure Active Directory PowerShell modülünü kullanma
 
-İlk olarak, **kiracınıza bağlanmak için Azure AD DC** **yöneticisi**, Bulut Uygulaması  Yöneticisi veya [Genel yönetici Microsoft 365 kullanın](connect-to-microsoft-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module).
+İlk olarak, [Microsoft 365 kiracınıza bağlanmak](connect-to-microsoft-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module) için **bir Azure AD DC yöneticisi**, **Bulut Uygulaması Yöneticisi** veya **Genel yönetici** hesabı kullanın.
  
 Daha fazla bilgi için bkz. [Yönetici rolleri hakkında](/microsoft-365/admin/add-users/about-admin-roles?).
 
-Ardından, bir role eklemek istediğiniz kullanıcı hesabının oturum açma adını (örneğin: fredsm\@ contoso.com). Bu, kullanıcı asıl adı (UPN) olarak da bilinir.
+Ardından, bir role eklemek istediğiniz kullanıcı hesabının oturum açma adını tanımlayın (örnek: fredsm\@ contoso.com). Bu, kullanıcı asıl adı (UPN) olarak da bilinir.
 
-Ardından, rolün adını belirlersiniz. Bkz [. Azure AD yerleşik rolleri](/azure/active-directory/roles/permissions-reference).
+Ardından rolün adını belirleyin. Bkz. [Azure AD yerleşik rolleri](/azure/active-directory/roles/permissions-reference).
 
 >[!Note]
->Bu makaledeki notlara dikkatin. Bazı rol adları Azure Active Directory (Azure AD) PowerShell'de farklıdır. Örneğin, Azure AD PowerShell *SharePoint* te Microsoft 365 yönetim merkezi Yönetici rolü *SharePoint* Yönetici rolüne sahip olur.
+>Bu makaledeki notlara dikkat edin. Bazı rol adları Azure Active Directory (Azure AD) PowerShell için farklıdır. Örneğin, *Microsoft 365 yönetim merkezi SharePoint Yöneticisi* rolü Azure AD PowerShell'de *SharePoint Hizmet Yöneticisi'dir*.
 >
 
 Ardından, oturum açma ve rol adlarını doldurun ve şu komutları çalıştırın:
@@ -67,7 +67,7 @@ $role = Get-AzureADDirectoryRole | Where {$_.displayName -eq $roleName}
 Add-AzureADDirectoryRoleMember -ObjectId $role.ObjectId -RefObjectId (Get-AzureADUser | Where {$_.UserPrincipalName -eq $userName}).ObjectID
 ```
 
-aşağıdaki örnekte, hizmet yöneticisi rolünü *belindan\@ SharePoint* hesabına ataan tamamlanmış contoso.com vardır:
+Aşağıda, SharePoint Hizmet Yöneticisi rolünü *belindan\@ contoso.com* hesabına atayan tamamlanmış bir komut kümesi örneği verilmiştir:
   
 ```powershell
 $userName="belindan@contoso.com"
@@ -81,54 +81,54 @@ $role = Get-AzureADDirectoryRole | Where {$_.displayName -eq $roleName}
 Add-AzureADDirectoryRoleMember -ObjectId $role.ObjectId -RefObjectId (Get-AzureADUser | Where {$_.UserPrincipalName -eq $userName}).ObjectID
 ```
 
-Belirli bir yönetici rolüne yönelik kullanıcı adlarının listesini görüntülemek için bu komutları kullanın.
+Belirli bir yönetici rolünün kullanıcı adlarının listesini görüntülemek için bu komutları kullanın.
 
 ```powershell
 $roleName="<role name>"
 Get-AzureADDirectoryRole | Where { $_.DisplayName -eq $roleName } | Get-AzureADDirectoryRoleMember | Ft DisplayName
 ```
 
-## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a>Kaynak için Microsoft Azure Active Directory Modülü'Windows PowerShell
+## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a>Windows PowerShell için Microsoft Azure Active Directory Modülünü kullanma
 
-İlk olarak, bir genel yönetici hesabı kullanarak [kiracınıza Microsoft 365 kullanın](connect-to-microsoft-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell).
+İlk olarak, [Microsoft 365 kiracınıza bağlanmak için](connect-to-microsoft-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell) bir genel yönetici hesabı kullanın.
   
 ### <a name="for-a-single-role-change"></a>Tek bir rol değişikliği için
 
-Kullanıcı hesabını belirtmenin en yaygın yolu, oturum açma adı veya kullanıcı asıl adı (UPN) olarak da bilinen görünen adını veya e-posta adını kullanmaktır.
+Kullanıcı hesabını belirtmenin en yaygın yolları, oturum açma adı veya kullanıcı asıl adı (UPN) olarak da bilinen görünen adını veya e-posta adını kullanmaktır.
 
-#### <a name="display-names-of-user-accounts"></a>Kullanıcı hesaplarının görünen adları
+#### <a name="display-names-of-user-accounts"></a>Kullanıcı hesaplarının adlarını görüntüleme
 
-Kullanıcı hesaplarının görünen adlarla çalışmaya alışdısanız, aşağıdaki bilgileri seçin:
+Kullanıcı hesaplarının görünen adlarıyla çalışmaya alışkınsanız aşağıdaki bilgileri belirleyin:
   
 - Yapılandırmak istediğiniz kullanıcı hesabı
     
-    Kullanıcı hesabını belirtmek için, o hesabın Görünen Adını belirlemeniz gerekir. Hesapların tam listesini almak için şu komutu kullanın:
+    Kullanıcı hesabını belirtmek için Görünen Adını belirlemeniz gerekir. Hesapların tam listesini almak için şu komutu kullanın:
     
   ```powershell
   Get-MsolUser -All | Sort DisplayName | Select DisplayName | More
   ```
 
-    Bu komutta, kullanıcı hesaplarınızı Görünen Ad'a göre sıralanmış, her bir ekrana göre sıralanmış Görünen Ad listele. Where cmdlet'ini kullanarak listeyi daha küçük bir **kümeye** filtreleyebilirsiniz. Aşağıdaki örnekle bakın.
+    Bu komut, kullanıcı hesaplarınızın Görünen Adı'nı, Görünen Ad'a göre sıralanmış olarak listeler. **Where** cmdlet'ini kullanarak listeyi daha küçük bir kümeye filtreleyebilirsiniz. Aşağıdaki örne bakın.
 
    >[!Note]
-   >PowerShell Core, adı *Msol* olan Microsoft Azure Active Directory Modülü Windows PowerShell cmdlet'leri desteklemez. Bu cmdlet'leri çalışma Windows PowerShell.
+   >PowerShell Core, Windows PowerShell modülü için Microsoft Azure Active Directory Modülünü ve adında *Msol* bulunan cmdlet'leri desteklemez. Bu cmdlet'leri Windows PowerShell çalıştırın.
    >
     
   ```powershell
   Get-MsolUser -All | Where DisplayName -like "John*" | Sort DisplayName | Select DisplayName | More
   ```
 
-    Bu komut yalnızca Görünen Ad'ın "Can" ile başladığı kullanıcı hesaplarını listeler.
+    Bu komut yalnızca Görünen Ad'ın "John" ile başladığı kullanıcı hesaplarını listeler.
     
 - Atamak istediğiniz rol
     
-    Kullanıcı hesaplarına atayabilirsiniz kullanılabilir yönetici rollerinin listesini görüntülemek için şu komutu kullanın:
+    Kullanıcı hesaplarına atayabileceğiniz kullanılabilir yönetici rollerinin listesini görüntülemek için şu komutu kullanın:
     
   ```powershell
   Get-MsolRole | Sort Name | Select Name,Description
   ```
 
-Hesabın Görünen Adı'nı ve rolün adını belirlerken, rolü hesaba atamak için şu komutları kullanın:
+Hesabın Görünen Adını ve rolün adını belirledikten sonra, rolü hesaba atamak için şu komutları kullanın:
   
 ```powershell
 $dispName="<The Display Name of the account>"
@@ -136,9 +136,9 @@ $roleName="<The admin role name you want to assign to the account>"
 Add-MsolRoleMember -RoleMemberEmailAddress (Get-MsolUser -All | Where DisplayName -eq $dispName).UserPrincipalName -RoleName $roleName
 ```
 
-Komutları diğer Not Defteri. Açıklama *$dispName* *değişkenlerini $roleName* , açıklama metnini kendi değerleriyle değiştirin. Karakterleri kaldırın \< and > ama tırnak işaretlerini kaldırın. Değiştirilen çizgileri, çalıştırmak Microsoft Azure Active Directory Için Windows PowerShell Modüle yapıştırın. Alternatif olarak, Windows PowerShell Betik Ortamı'nda (ISE) kullanabilirsiniz.
+Komutları Not Defteri yapıştırın. *$dispName* ve *$roleName* değişkenleri için açıklama metnini değerleriyle değiştirin. \< and > Karakterleri kaldırın ancak tırnak işaretlerini koruyun. Değiştirilen satırları çalıştırmak üzere Windows PowerShell için Microsoft Azure Active Directory Modülüne yapıştırın. Alternatif olarak, Windows PowerShell Tümleşik Betik Ortamı'nı (ISE) kullanabilirsiniz.
   
-İşte tamamlanmış bir komut kümesi örneği:
+Aşağıda tamamlanmış bir komut kümesi örneği verilmişti:
   
 ```powershell
 $dispName="Scott Wallace"
@@ -148,33 +148,33 @@ Add-MsolRoleMember -RoleMemberEmailAddress (Get-MsolUser -All | Where DisplayNam
 
 #### <a name="sign-in-names-of-user-accounts"></a>Kullanıcı hesaplarının oturum açma adları
 
-Kullanıcı hesaplarının oturum açma adlarında veya UPN'lerde çalışmaya alışdısanız, aşağıdaki bilgileri seçin:
+Kullanıcı hesaplarının oturum açma adlarıyla veya UPN'leriyle çalışmaya alışkınsanız aşağıdaki bilgileri belirleyin:
   
-- Kullanıcı hesabının UPN'si
+- Kullanıcı hesabının UPN'sini
     
-    UPN'leri bilmiyorsanız, şu komutu kullanın:
+    UPN'yi bilmiyorsanız şu komutu kullanın:
     
   ```powershell
   Get-MsolUser -All | Sort UserPrincipalName | Select UserPrincipalName | More
   ```
 
-    Bu komut, kullanıcı hesaplarınızı UPN'ye göre sıralanmış, her bir ekrandan tek bir ekranda listeler. Listeyi filtrelemek **için Where** cmdlet'ini kullanabilirsiniz. İşte bir örnek:
+    Bu komut, kullanıcı hesaplarınızın UPN'sini UPN'ye göre sıralanmış ve her seferinde bir ekran olarak listeler. Listeyi filtrelemek için **Where** cmdlet'ini kullanabilirsiniz. İşte bir örnek:
     
   ```powershell
   Get-MsolUser -All | Where DisplayName -like "John*" | Sort UserPrincipalName | Select UserPrincipalName | More
   ```
 
-    Bu komut yalnızca Görünen Ad'ın "Can" ile başladığı kullanıcı hesaplarını listeler.
+    Bu komut yalnızca Görünen Ad'ın "John" ile başladığı kullanıcı hesaplarını listeler.
     
 - Atamak istediğiniz rol
     
-    Kullanıcı hesaplarına atayabilirsiniz kullanılabilir rollerin listesini görüntülemek için şu komutu kullanın:
+    Kullanıcı hesaplarına atayabileceğiniz kullanılabilir rollerin listesini görüntülemek için şu komutu kullanın:
     
   ```powershell
   Get-MsolRole | Sort Name | Select Name,Description
   ```
 
-Hesabın UPN'niz ve rolün adı olduktan sonra, rolü hesaba atamak için şu komutları kullanın:
+Hesabın UPN'sine ve rolün adına sahip olduktan sonra, rolü hesaba atamak için şu komutları kullanın:
   
 ```powershell
 $upnName="<The UPN of the account>"
@@ -182,9 +182,9 @@ $roleName="<The role name you want to assign to the account>"
 Add-MsolRoleMember -RoleMemberEmailAddress $upnName -RoleName $roleName
 ```
 
-Komutları kopyalayın ve başka bir Not Defteri. Değişken **ve $upnName** **$roleName** için. Açıklama metnini değerleriyle değiştirin. Karakterleri kaldırın \< and > ama tırnak işaretlerini kaldırın. Değiştirilen çizgileri, Microsoft Azure Active Directory için Modül Windows PowerShell bu pencereye yapıştırın. Alternatif olarak, ISE Windows PowerShell kullanabilirsiniz.
+Komutları kopyalayın ve Not Defteri yapıştırın. **$upnName** ve **$roleName** değişkenleri için. Açıklama metnini değerleriyle değiştirin. \< and > Karakterleri kaldırın ancak tırnak işaretlerini koruyun. Değiştirilen satırları çalıştırmak üzere Windows PowerShell penceresi için Microsoft Azure Active Directory Modülüne yapıştırın. Alternatif olarak, WINDOWS POWERSHELL ISE'yi kullanabilirsiniz.
   
-İşte tamamlanmış bir komut kümesi örneği:
+Aşağıda tamamlanmış bir komut kümesi örneği verilmişti:
   
 ```powershell
 $upnName="scottw@contoso.com"
@@ -194,19 +194,19 @@ Add-MsolRoleMember -RoleMemberEmailAddress $upnName -RoleName $roleName
 
 ### <a name="multiple-role-changes"></a>Birden çok rol değişikliği
 
-Birden çok rol değişikliği için aşağıdaki bilgileri belirler:
+Birden çok rol değişikliği için aşağıdaki bilgileri belirleyin:
   
-- Yapılandırmak istediğiniz kullanıcı hesapları. Önceki bölümde yer alan yöntemleri kullanarak görünen adlar veya UPN'ler kümelerini topabilirsiniz.
+- Yapılandırmak istediğiniz kullanıcı hesapları. Görüntü adları veya UPN'ler kümesini toplamak için önceki bölümdeki yöntemleri kullanabilirsiniz.
     
-- Her kullanıcı hesabına atamak istediğiniz roller. Kullanıcı hesaplarına atayabilirsiniz kullanılabilir rollerin listesini görüntülemek için şu komutu kullanın:
+- Her kullanıcı hesabına atamak istediğiniz roller. Kullanıcı hesaplarına atayabileceğiniz kullanılabilir rollerin listesini görüntülemek için şu komutu kullanın:
     
   ```powershell
   Get-MsolRole | Sort Name | Select Name,Description
   ```
 
-Ardından, görünen ad veya UPN ve rol adı alanlarının bulunduğu bir virgülle ayrılmış değer (CSV) metin dosyası oluşturun. Bunu kendi iş yerleri için Microsoft Excel.
+Ardından görünen ad veya UPN ve rol adı alanlarını içeren bir virgülle ayrılmış değer (CSV) metin dosyası oluşturun. Bunu Microsoft Excel kolayca yapabilirsiniz.
 
-Görünen adlar için bir örnek:
+Görünen adlar için bir örnek aşağıda verilmişti:
   
 ```powershell
 DisplayName,RoleName
@@ -222,7 +222,7 @@ $roleChanges=Import-Csv $fileName | ForEach {Add-MsolRoleMember -RoleMemberEmail
 
 ```
 
-İşte UPN'ler için bir örnek:
+UPN'ler için bir örnek aşağıda verilmiştir:
   
 ```powershell
 UserPrincipalName,RoleName
@@ -240,6 +240,6 @@ $roleChanges=Import-Csv $fileName | ForEach { Add-MsolRoleMember -RoleMemberEmai
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [PowerShell Microsoft 365 hesaplarını, lisanslarını ve gruplarını yönetme](manage-user-accounts-and-licenses-with-microsoft-365-powershell.md)
-- [PowerShell Microsoft 365'i yönetme](manage-microsoft-365-with-microsoft-365-powershell.md)
-- [Microsoft 365 için PowerShell'i Microsoft 365](getting-started-with-microsoft-365-powershell.md)
+- [PowerShell ile Microsoft 365 kullanıcı hesaplarını, lisanslarını ve gruplarını yönetme](manage-user-accounts-and-licenses-with-microsoft-365-powershell.md)
+- [PowerShell ile Microsoft 365’i yönetme](manage-microsoft-365-with-microsoft-365-powershell.md)
+- [Microsoft 365 için PowerShell ile Kullanmaya başlayın](getting-started-with-microsoft-365-powershell.md)

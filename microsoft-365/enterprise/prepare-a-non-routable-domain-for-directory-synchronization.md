@@ -1,8 +1,8 @@
 ---
-title: Yönlendirilebilir olmayan etki alanını dizin eşitlemesi için hazırlama
+title: Dizin eşitlemesi için yönlendirilebilir olmayan bir etki alanını hazırlama
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -21,82 +21,82 @@ search.appverid:
 - MED150
 - BCS160
 ms.assetid: e7968303-c234-46c4-b8b0-b5c93c6d57a7
-description: Şirket içi kullanıcı hesaplarınız ile ilişkilendirilmiş yönlendirilebilir olmayan bir etki alanınız varsa, bunları kiracınıza eşitlemeden önce ne Microsoft 365 öğrenin.
-ms.openlocfilehash: bea80123c1a2db11baa07cd3344f65303cdd1084
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+description: Microsoft 365 kiracınızla eşitlemeden önce şirket içi kullanıcı hesaplarınızla ilişkilendirilmiş yönlendirilebilir olmayan bir etki alanınız varsa ne yapmanız gerekir öğrenin.
+ms.openlocfilehash: 7c0fd93f327305477908fba0cfb495fa73205ebe
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63019515"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65096380"
 ---
-# <a name="prepare-a-non-routable-domain-for-directory-synchronization"></a>Yönlendirilebilir olmayan etki alanını dizin eşitlemesi için hazırlama
+# <a name="prepare-a-non-routable-domain-for-directory-synchronization"></a>Dizin eşitlemesi için yönlendirilebilir olmayan bir etki alanını hazırlama
 
-Şirket içi dizininizi Microsoft 365 eşitlemek için, Azure Active Directory (Azure AD) içinde doğrulanmış bir etki alanınız olmalıdır. Yalnızca şirket içi Active Directory Etki Alanı Hizmetleri (AD DS) etki alanıyla ilişkilendirilmiş Kullanıcı Asıl Adları (UPN)eşitlenir. Bununla birlikte, ".local" (örneğin: billa@contoso.local) gibi yönlendirilebilir olmayan bir etki alanı içeren tüm UPN'ler, .onmicrosoft.com etki alanıyla eşitlenir (örneğin: billa@contoso.onmicrosoft.com). 
+Şirket içi dizininizi Microsoft 365 ile eşitlerken, Azure Active Directory(Azure AD) içinde doğrulanmış bir etki alanınızın olması gerekir. Yalnızca şirket içi Active Directory Etki Alanı Hizmetleri (AD DS) etki alanıyla ilişkilendirilmiş Kullanıcı Asıl Adları (UPN) eşitlenir. Ancak, ".local" (örneğin: billa@contoso.local) gibi yönlendirilebilir olmayan bir etki alanı içeren tüm UPN'ler bir .onmicrosoft.com etki alanıyla eşitlenir (örnek: billa@contoso.onmicrosoft.com). 
 
-Şu anda AD DS'de kullanıcı hesaplarınız için ".local" etki alanını kullanıyorsanız, etki alanınız ile düzgün eşitlenmesi için bunları billa@contoso.com gibi doğrulanmış bir etki alanı kullanmak üzere Microsoft 365 önerilir.
+ŞU anda AD DS'deki kullanıcı hesaplarınız için ".local" etki alanı kullanıyorsanız, Microsoft 365 etki alanınızla düzgün eşitlemek için bunları billa@contoso.com gibi doğrulanmış bir etki alanı kullanacak şekilde değiştirmeniz önerilir.
   
-## <a name="what-if-i-only-have-a-local-on-premises-domain"></a>Yalnızca ".local" şirket içi etki alanım varsa ne olacak?
+## <a name="what-if-i-only-have-a-local-on-premises-domain"></a>Yalnızca ".local" şirket içi etki alanım varsa ne olur?
 
-AD DS'nizi Bağlan kiracınizin Azure AD kiracısı ile eşitlemek için Azure AD Microsoft 365 kullanırsiniz. Daha fazla bilgi için bkz [. Şirket içi kimliklerinizi Azure AD ile tümleştirme](/azure/architecture/reference-architectures/identity/azure-ad).
+AD DS'nizi Microsoft 365 kiracınızın Azure AD kiracısına eşitlemek için Azure AD Bağlan kullanırsınız. Daha fazla bilgi için bkz. [Şirket içi kimliklerinizi Azure AD ile tümleştirme](/azure/architecture/reference-architectures/identity/azure-ad).
   
-Azure AD Bağlan, kullanıcılarınızı UPN ve parolalarını eşitler; böylelikle kullanıcılar şirket içinde kullanmakta olduğu kimlik bilgileriyle oturum açmalarını sağlar. Bununla birlikte, Azure AD Bağlan yalnızca etki alanları tarafından doğrulanan etki alanlarıyla Microsoft 365. Bu da, kimliklerinin Azure AD tarafından yönetil Microsoft 365 etki alanının Azure AD tarafından da doğrulanmış olduğu anlamına gelir. Başka bir deyişle, etki alanı geçerli bir İnternet etki alanı (.com, .org, .net, .us gibi) olmalıdır. İç AD DS'niz yalnızca yönlendirilebilir olmayan bir etki alanı kullanıyorsa (örneğin, ".local"), bu durum kullanıcı kiracınız için sahip olduğunuz doğrulanmış etki alanıyla Microsoft 365 olabilir. Bu sorunu, şirket içi AD DS'nizin birincil etki alanını değiştirerek veya bir veya birden çok UPN soneki ekleyerek düzeltebilirsiniz.
+Azure AD Bağlan, kullanıcıların şirket içinde kullandıkları kimlik bilgileriyle oturum açabilmesi için kullanıcılarınızın UPN'sini ve parolasını eşitler. Ancak Azure AD Bağlan kullanıcıları yalnızca Microsoft 365 tarafından doğrulanan etki alanlarıyla eşitler. Bu, Microsoft 365 kimlikleri Azure AD tarafından yönetildiğinden etki alanının Azure AD tarafından da doğrulandığını gösterir. Başka bir deyişle, etki alanının geçerli bir İnternet etki alanı (.com, .org, .net, .us gibi) olması gerekir. İç AD DS'niz yalnızca yönlendirilemeyen bir etki alanı kullanıyorsa (örneğin, ".local"), Microsoft 365 kiracınız için sahip olduğunuz doğrulanmış etki alanıyla eşleşmesi mümkün değildir. Bu sorunu, şirket içi AD DS'nizdeki birincil etki alanınızı değiştirerek veya bir veya daha fazla UPN soneki ekleyerek düzeltebilirsiniz.
   
 ### <a name="change-your-primary-domain"></a>Birincil etki alanınızı değiştirme
 
-Birincil etki alanınızı doğrulanmış bir etki alanıyla (örneğin, Microsoft 365 bir etki contoso.com. Contoso.local etki alanına sahip olan her kullanıcı bu etki alanıyla contoso.com. Bununla birlikte bu, söz konusu bir işlemdir ve aşağıdaki bölümde daha kolay bir çözüm açıklanmıştır.
+Birincil etki alanınızı Microsoft 365'de doğruladığınız bir etki alanıyla değiştirin( örneğin, contoso.com). Contoso.local etki alanına sahip her kullanıcı daha sonra contoso.com olarak güncelleştirilir. Bununla birlikte, bu ilgili bir süreçtir ve aşağıdaki bölümde daha kolay bir çözüm açıklanmaktadır.
   
-### <a name="add-upn-suffixes-and-update-your-users-to-them"></a>UPN sonekleri ekleme ve kullanıcılarınızı bu soneklere güncelleştirme
+### <a name="add-upn-suffixes-and-update-your-users-to-them"></a>UPN sonekleri ekleme ve kullanıcılarınızı bunlara güncelleştirme
 
-".local" sorununu çözmek için AD DS'de doğrulanmış etki alanıyla (veya etki alanlarıyla) eşleşmesi için yeni UPN soneki veya sonekleri Microsoft 365. Yeni soneki kaydettikten sonra, kullanıcı UPN'lerini, ".local" yerine yeni etki alanı adını alacak şekilde (örneğin, bir kullanıcı hesabının son kullanıcı adı gibi) değiştir billa@contoso.com.
+".local" sorununu çözmek için AD DS'de yeni UPN sonekini veya soneklerini Microsoft 365'de doğruladığınız etki alanıyla (veya etki alanlarıyla) eşleşecek şekilde kaydedebilirsiniz. Yeni soneki kaydettikten sonra, kullanıcı UPN'lerini ".local" yerine yeni etki alanı adıyla (örneğin, bir kullanıcı hesabı billa@contoso.com gibi görünecek şekilde) güncelleştirirsiniz.
   
-UPN'leri doğrulanmış etki alanını kullanmak üzere güncelleştirildikten sonra, şirket içi AD DS'nizi doğrulanmış etki alanıyla eşitlemeye Microsoft 365.
+UPN'leri doğrulanmış etki alanını kullanacak şekilde güncelleştirdikten sonra, şirket içi AD DS'nizi Microsoft 365 ile eşitlemeye hazır olursunuz.
   
-#### <a name="step-1-add-the-new-upn-suffix"></a>1. Adım: Yeni UPN soneki** ekleme
+#### <a name="step-1-add-the-new-upn-suffix"></a>1. Adım: Yeni UPN sonekini ekleme**
   
-1. AD DS etki alanı denetleyicisinde, Sunucu Yöneticisi'nde Araçlar Active Directory Etki **Alanları** \> **ve Güvenleri'ni seçin**.
+1. AD DS etki alanı denetleyicisinin Sunucu Yöneticisi **Araçlar** \> **Active Directory Etki Alanları ve Güvenleri'ni** seçin.
     
-    **Ayrıca, e-Windows Server 2012**
+    **Ya da Windows Server 2012**
     
-    Çalıştır **Windows + R tuşlarına** basın, Domain.msc yazın ve Tamam'ı **seçin**.
+    **Çalıştır** iletişim kutusunu açmak için **Windows tuşu + R** tuşlarına basın ve ardından Domain.msc yazın ve **Tamam'ı** seçin.
     
-    ![Active Directory Etki Alanları ve Güvenleri'ne seçin.](../media/46b6e007-9741-44af-8517-6f682e0ac974.png)
+    ![Active Directory Etki Alanları ve Güvenleri'ni seçin.](../media/46b6e007-9741-44af-8517-6f682e0ac974.png)
   
-2. **Active Directory Etki Alanları ve Güvenleri penceresinde Active** **Directory** Etki Alanları ve Güvenleri'ne sağ tıklayın ve Özellikler'i **seçin**.
+2. **Active Directory Etki Alanları ve Güvenleri** penceresinde **Active Directory Etki Alanları ve Güvenleri'ne** sağ tıklayın ve **özellikler'i** seçin.
     
     ![Active Directory Etki Alanları ve Güvenleri'ne sağ tıklayın ve Özellikler'i seçin.](../media/39d20812-ffb5-4ba9-8d7b-477377ac360d.png)
   
-3. **UPN Sonekleri** sekmesindeki Alternatif **UPN Sonekleri kutusuna yeni UPN** soneki veya soneklerinizi yazın ve ardından Uygula **Ekle'yi** \> **seçin**.
+3. **UPN Sonekleri** sekmesindeki **Alternatif UPN Sonekleri** kutusuna yeni UPN sonekini veya soneklerini yazın ve **Uygula** **Ekle'yi** \> seçin.
     
     ![Yeni bir UPN soneki ekleyin.](../media/a4aaf919-7adf-469a-b93f-83ef284c0915.PNG)
   
-    **Sonek** eklemeyi bitirerek Tamam'ı seçin. 
+    Sonek eklemeyi bitirdiğinizde **Tamam'ı** seçin. 
     
- #### <a name="step-2-change-the-upn-suffix-for-existing-users"></a>2. Adım: Var olan kullanıcıların UPN soneki'ne değiştirme
+ #### <a name="step-2-change-the-upn-suffix-for-existing-users"></a>2. Adım: Mevcut kullanıcılar için UPN sonekini değiştirme
   
-1. AD DS etki alanı denetleyicisinde, Sunucu Yöneticisi'nde Araçlar Active Directory **Kullanıcıları** \> **ve Bilgisayarları'ı seçin**.
+1. AD DS etki alanı denetleyicisinin Sunucu Yöneticisi **Araçlar** \> **Active Directory Kullanıcıları ve Bilgisayarları'ı** seçin.
     
-    **Ayrıca, e-Windows Server 2012**
+    **Ya da Windows Server 2012**
     
-    Çalıştır **Windows + R tuşlarına** basın, ardından Dsa.msc yazın ve Tamam'a **tıklayın**.
+    **Çalıştır** iletişim kutusunu açmak için **Windows tuşu + R** tuşlarına basın ve ardından Dsa.msc yazın ve **Tamam'a** tıklayın
     
-2. Bir kullanıcı seçin, sağ tıklayın ve özellikler'i **seçin**.
+2. Bir kullanıcı seçin, sağ tıklayın ve **özellikler'i** seçin.
     
-3. Hesap **sekmesindeki** UPN soneki açılan listesinde, yeni UPN soneki'ne ve sonra Tamam'a **tıklayın**.
+3. **Hesap** sekmesinde, UPN soneki açılan listesinde yeni UPN sonekini ve ardından **Tamam'ı** seçin.
     
-    ![Kullanıcı için yeni UPN soneki ekleyin.](../media/54876751-49f0-48cc-b864-2623c4835563.png)
+    ![Bir kullanıcı için yeni UPN soneki ekleyin.](../media/54876751-49f0-48cc-b864-2623c4835563.png)
   
 4. Her kullanıcı için bu adımları tamamlayın.
     
    
-### <a name="use-powershell-to-change-the-upn-suffix-for-all-of-your-users"></a>Tüm kullanıcılarınızı UPN soneki değiştirmek için PowerShell kullanma
+### <a name="use-powershell-to-change-the-upn-suffix-for-all-of-your-users"></a>Tüm kullanıcılarınız için UPN sonekini değiştirmek için PowerShell kullanma
 
-Güncelleştirilen çok sayıda kullanıcı hesabınız varsa, PowerShell kullanmak daha kolaydır. Aşağıdaki örnekte, [get-ADUser](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617241(v=technet.10)) ve [Set-ADUser](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617215(v=technet.10)) cmdlet'leri tüm contoso.local soneklerini AD DS'de contoso.com olarak değiştirir. 
+Güncelleştirilecek çok sayıda kullanıcı hesabınız varsa PowerShell'i kullanmak daha kolaydır. Aşağıdaki örnek, tüm contoso.local soneklerini AD DS'de contoso.com olarak değiştirmek için [Get-ADUser](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617241(v=technet.10)) ve [Set-ADUser](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617215(v=technet.10)) cmdlet'lerini kullanır. 
 
-Örneğin, tüm contoso.local soneklerini güncelleştirin ve aşağıdaki PowerShell komutlarını çalıştırarak tüm contoso.com:
+Örneğin, tüm contoso.local soneklerini contoso.com olarak güncelleştirmek için aşağıdaki PowerShell komutlarını çalıştırabilirsiniz:
     
   ```powershell
   $LocalUsers = Get-ADUser -Filter "UserPrincipalName -like '*contoso.local'" -Properties userPrincipalName -ResultSetSize $null
   $LocalUsers | foreach {$newUpn = $_.UserPrincipalName.Replace("@contoso.local","@contoso.com"); $_ | Set-ADUser -UserPrincipalName $newUpn}
   ```
 
-AD DS [Windows PowerShell de dizin](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617195(v=technet.10)) kullanma hakkında daha fazla bilgi için Windows PowerShell Active Directory Posta Modülü'ne bakın.
+AD [DS'de Windows PowerShell](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617195(v=technet.10)) kullanma hakkında daha fazla bilgi edinmek için bkz. Active Directory Windows PowerShell modülü.

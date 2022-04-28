@@ -2,8 +2,8 @@
 title: Yasal askıya alma oluşturma
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -17,12 +17,12 @@ ms.custom:
 - seo-marvel-mar2020
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
-ms.openlocfilehash: 8fdb5d8c388399a2ce93281947b5f14782db771b
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 00c7e809fd878b677947dc1db2a55c612ef04997
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64997077"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65097062"
 ---
 # <a name="create-a-litigation-hold"></a>Yasal askıya alma oluşturma
 

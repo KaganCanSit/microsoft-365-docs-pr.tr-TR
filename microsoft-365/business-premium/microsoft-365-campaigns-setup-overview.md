@@ -1,15 +1,15 @@
 ---
-title: Kampanyalar için Microsoft 365 kurulumuna genel bakış
+title: Kampanyalar için Microsoft 365 kuruluma genel bakış
 f1.keywords:
 - NOCSH
-ms.author: sharik
-author: SKjerland
-manager: scotv
+ms.author: deniseb
+author: denisebmsft
+manager: dansimp
 ms.date: 03/02/2022
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection:
 - Adm_O365
 - M365-subscription-management
@@ -24,45 +24,31 @@ search.appverid:
 - BCS160
 - MET150
 ms.assetid: 496e690b-b75d-4ff5-bf34-cc32905d0364
-description: Kampanyalar ve diğer Microsoft 365 İş Ekstra yönelik kuruluma genel bakış
-ms.openlocfilehash: 324a4f994b4c28ea6636d280d0dfa0e0bd1fa758
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Kampanyalar veya diğer işletmeler için Microsoft 365 İş Ekstra kuruluma genel bakış
+ms.openlocfilehash: 0dc5fcda0d2f3ece91e294fea3a59d5e536c8088
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63316625"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65086985"
 ---
-# <a name="set-up-microsoft-365-for-campaigns"></a>Kampanyalar Microsoft 365 ayarlama
+# <a name="set-up-microsoft-365-for-campaigns"></a>Kampanyalar için Microsoft 365 ayarlama
 
-Bu makalede, microsoft e-Microsoft 365. Güvenliği Microsoft 365 İş Ekstra için bu kılavuzu kullanan herkes.
+## <a name="overview"></a>Genel bakış
 
-## <a name="admins-set-up-microsoft-365"></a>Yöneticiler: Posta Microsoft 365
+İlk görevinize hoş geldiniz. Aşağıda, kampanyalar için özellikle yararlı olan gelişmiş güvenlik önlemleri yer alır, ancak bunları daha fazla güvenlik elde etmek için misyonunuzun bir parçası olarak herhangi bir kuruluşla birlikte kullanmak isteyebilirsiniz.
 
-Aşağıdaki diyagramda yöneticilerin e-postayı nasıl Microsoft 365.
+Bu ilk görev için, kuruluşunuzun sistemlerini ve ağlarını korumak ve savunmak için ilk güvenlik savunmalarınızı oluşturacaksınız. Ekiplerinizin genel güvenliğini ve lisanslarını yapılandırmak için oturum açın ve [kurulum sihirbazını](../business/set-up.md?toc=/microsoft-365/campaigns/toc.json) başlatın. 
 
-![E-Microsoft 365.](../media/M365-democracy-SetUpProcess.png)
+Hedefleriniz şunlardır:
 
-Özel fiyatlandırmaya uygun kampanyalar için, Microsoft'tan davet talep etmek ve ardından [Kampanyalar](https://m365forcampaigns.microsoft.com/) için [Microsoft 365'e kaydolarak işe başlama](m365-campaigns-sign-up.md). Kurulumu tamamlamak için kurulum [sihirbazını çalıştırarak](../business/set-up.md?toc=/microsoft-365/campaigns/toc.json) temel ayarları yapılandırabilirsiniz.
+- Kaydolun ve Microsoft 365 İş Ekstra'da oturum açın
+- Microsoft 365 İş Ekstra ortamınızı ayarlama
 
-Diğer tüm kuruluşlarda, Microsoft 365 İş Ekstra'e Microsoft 365 İş Ekstra çekirdek [](../admin/admin-overview/sign-up-for-office-365.md)ayarlarını yapılandırmak için [kurulum sihirbazını](../business/set-up.md?toc=/microsoft-365/campaigns/toc.json) çalıştırarak kurulumu tamamlayın.
-
-Tüm kuruluşlar için, şu şekilde güvenlik korumasını artırabilirsiniz [: yönetici](m365bp-protect-admin-accounts.md) hesaplarının [korunması, posta](m365bp-conditional-access.md) ve verilere erişimin korunması ve tehdit [korumasının artırılması](m365bp-increase-protection.md).
-
-## <a name="everyone-set-up-your-devices"></a>Herkes: Cihazlarınızı ayarlayın
-
-Kullanıcıların bu ortamla çalışmak için cihazları ayarlaması birkaç dakika kadar sürebilir. Önemli kullanıcılarınız (korsanlar için en yüksek değere sahip hedeflere sahip olanlar) yeni cihazları kurabilirsiniz ve önceden yapılandırabilirsiniz. Bu, kullanıcı kimlik bilgileriyle oturum aken başlamalarına yardımcı Microsoft 365 olur.
-
-:::image type="content" source="../media/m365-democracy-user-device-setup.png" alt-text="Kullanıcı cihazı ayarlama işlemi.":::
-  
-Kullanıcı cihazlarını ayarlamak için:
-
-1. Her kullanıcı [mobil cihazlarını ayarlar](../business/set-up-mobile-devices.md?toc=%2Fmicrosoft-365%2Fcampaigns%2Ftoc.json).
-2. Unmanaged devices, users set up their [PC and Macs](m365bp-protect-pcs-macs.md).
-Önemli personel için, daha da iyi koruma için [yönetilen cihazlar](../business/set-up-windows-devices.md) kullanmalarını öneririz. Tüm cihazlar için çok faktörlü kimlik [doğrulamasını ayarlamak gerekir](m365bp-multifactor-authentication.md).
-3. Tüm kullanıcılar kimlik avı ve diğer saldırılar hakkında bilgi öğrenerek kendilerini ve kampanyanızı [korumayı öğrenmeli](m365-campaigns-phishing-and-attacks.md). Bu [bilgi görseli](m365-campaigns-protect-campaign-infographic.md) , kullanıcılarının kampanyanızı çevrimiçi tehditlere karşı nasıl koruyacaklarını anlamalarını da sağlar.
+Bu hedeflere ulaştıktan sonra [bir sonraki göreve](m365bp-security-overview.md) geçebilirsiniz.
 
 ## <a name="contact-support"></a>Destek ekibine başvurun
 
  **Desteğe başvurmanız gerekiyorsa:**
   
-Yönetici Microsoft 365 olarak, müşteri desteği ekibimize erişin, İş ürünleri **[için destan ile iletişime geçin - Yönetici Yardımı](../business-video/get-help-support.md)**
+Microsoft 365 yöneticisi olarak müşteri destek ekibimize erişebilirsiniz, **[İş ürünleri için desteğe başvurun - Yönetici Yardımı](../business-video/get-help-support.md)**

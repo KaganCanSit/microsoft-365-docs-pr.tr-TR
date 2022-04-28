@@ -2,8 +2,8 @@
 title: Yaygın senaryolarda sorun gidermek için denetim günlüğünde arama yapma
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -19,12 +19,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 description: E-posta hesaplarıyla ilgili yaygın destek sorunlarını gidermeye yardımcı olmak için Microsoft 365 denetim günlüğü arama aracını kullanmayı öğrenin.
-ms.openlocfilehash: dd82c735411592a3cfa7cb79ae4d1ce6f97798b4
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 57d8cfd1cbb07300b7cd69fb78ff6a0b33b302f5
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64998010"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65097194"
 ---
 # <a name="search-the-audit-log-to-investigate-common-support-issues"></a>Yaygın destek sorunlarını araştırmak için denetim günlüğünde arama yapma
 

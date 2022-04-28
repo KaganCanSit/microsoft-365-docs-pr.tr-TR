@@ -2,8 +2,8 @@
 title: Microsoft 365'de Veri dağıtan Reuters'i arşivleye bir bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -12,12 +12,12 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Yöneticiler, Veritas'tan Microsoft 365'a Veritas'tan veri dağıtan Reuters'i içeri aktaracak ve arşivleyebileceğiniz bir bağlayıcı ayarlayabilir. Bu bağlayıcı, Microsoft 365'da üçüncü taraf veri kaynaklarından verileri arşivleyabilmenizi sağlar. Bu verileri arşivledikten sonra, üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
-ms.openlocfilehash: bbcc148b3e7176975be5e4e5624202a170c90f28
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: ce1ad22e1ffa7417dc393b2a81bb957e35bd6e64
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64999354"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65095938"
 ---
 # <a name="set-up-a-connector-to-archive-reuters-dealing-data"></a>Reuters İşlem verilerini arşivleye bir bağlayıcı ayarlama
 

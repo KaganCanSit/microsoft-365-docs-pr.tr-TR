@@ -2,7 +2,7 @@
 title: Posta iletilerini okurken kullanılan belleği azaltmak için yalın açılır pencereleri kullanma
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 12/3/2019
 audience: ITPro
 ms.topic: article
@@ -13,47 +13,47 @@ search.appverid:
 ms.assetid: a6d6ba01-2562-4c3d-a8f1-78748dd506cf
 f1.keywords:
 - NOCSH
-description: Bu makale, bu makalede ileti indirme performansını geliştirmek için yalın açılır pencereleri kullanma Web üzerinde Outlook.
+description: Bu makale, Web üzerinde Outlook'da ileti indirme performansını geliştirmek için yalın açılır pencereleri kullanmaya yönelik bilgiler içerir.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: aaacacc0c1db418181690a5a4691bd251180d97c
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 40494b43438a491fc200fd19e3015eed58b17493
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985143"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65096292"
 ---
 # <a name="use-lean-popouts-to-reduce-memory-used-when-reading-mail-messages"></a>Posta iletilerini okurken kullanılan belleği azaltmak için yalın açılır pencereleri kullanma
 
-Bu makale, çalışma sayfalarında ileti indirme performansını iyileştirme Web üzerinde Outlook. Bu makale, Projeniz için [ağ planlaması ve performans ayarı Office 365](./network-planning-and-performance.md) bölümüyle hazırlanmıştır.
+Bu makale, Web üzerinde Outlook'da ileti indirme performansını geliştirmeye yönelik bilgiler içerir. Bu makale, [Office 365 projesi için ağ planlama ve performans ayarlamanın](./network-planning-and-performance.md) bir parçasıdır.
   
-Office 365 **Uygulama** **Yöneticisi, Genel** yönetici veya Kullanıcı Yöneticisi **olarak, Web üzerinde Outlook** Microsoft Edge veya Internet Explorer'da belirli e-posta iletilerinin daha _küçük, daha_ az yoğun bellek kullanımlı sürümü gibi bilgili açılır iletiler sunmak için Microsoft Edge'ı yapılandırabilirsiniz. Açılan menüler daha iyi Web üzerinde Outlook, sunucu tarafı işlenmiş bileşenleri en iyi duruma getirmek için yüklenir.
+Office 365 **Uygulama Yöneticisi**, **Genel yönetici** veya **Kullanıcı Yöneticisi** olarak, Microsoft Edge veya Internet Explorer'da belirli e-posta iletilerinin daha küçük, daha az bellek kullanan bir sürümü olan _yalın açılır_ pencereler sunmak için Web üzerinde Outlook yapılandırabilirsiniz. Yalın açılır pencereler Web üzerinde Outlook için yapılandırıldığında, performansı en iyi duruma getiren sunucu tarafı işlenmiş bileşenler yüklenir.
   
 > [!NOTE]
-> Mart 2018'den sonra, kullanım hakları kısıtlamaları belirten, Bilgi Hakları Yönetimi (IRM) gibi iletilerde yalın açılan menüler kullanılamaz.
+> Mart 2018 itibarıyla bilgi hakları yönetimi (IRM) gibi kullanım hakları kısıtlamalarını belirten iletilerde yalın açılır pencereler kullanılamaz.
   
 Bu özellikler ana pencerede çalışmaya devam eder ancak yalın açılır pencerelerde kullanılamaz:
   
 - Outlook eklentileri
   
-- Skype Kurumsal durumu
+- Skype Kurumsal iletişim durumu
   
-## <a name="to-configure-lean-popouts-for-all-users-within-your-office-365-organization"></a>Kuruluş kapsamındaki tüm kullanıcılar için yalın açılır pencereleri Office 365 için
+## <a name="to-configure-lean-popouts-for-all-users-within-your-office-365-organization"></a>Office 365 kuruluşunuzdaki tüm kullanıcılar için yalın açılır pencereleri yapılandırmak için
   
-1. [Bağlan PowerShell Exchange Online'e bağlanın](/powershell/exchange/connect-to-exchange-online-powershell).
+1. [Uzak PowerShell kullanarak Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
   
-2. [Set-OrganizationConfig](/powershell/module/exchange/set-organizationconfig) cmdlet'ini Aşağıdaki gibi LeanPopoutEnabled parametresiyle çalıştırın:
+2. [Set-OrganizationConfig](/powershell/module/exchange/set-organizationconfig) cmdlet'ini LeanPopoutEnabled parametresiyle aşağıdaki gibi çalıştırın:
 
   ```powershell
   Set-OrganizationConfig -LeanPopoutEnabled <$true |$false >
   ```
 
-  Örneğin, kuruluşun tüm kullanıcıları için yalın açılır pencereleri etkinleştirmek için:
+  Örneğin, kuruluşunuzdaki tüm kullanıcılar için yalın açılır pencereleri etkinleştirmek için:
   
   ```powershell
   Set-OrganizationConfig -LeanPopoutEnabled $true
   ```
 
-  Kuruluş 2013'te açılan pencereleri devre dışı bırakmak için:
+  Kuruluşunuzdaki tüm kullanıcılar için yalın açılır pencereleri devre dışı bırakmak için:
 
   ```powershell
   Set-OrganizationConfig -LeanPopoutEnabled $false

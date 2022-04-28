@@ -2,8 +2,8 @@
 title: eBulma için CJK/Double Byte desteği (Premium)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -16,12 +16,12 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 description: Microsoft 365'deki Microsoft Purview eKeşif (Premium) uygulamasının çift baytlık karakter kümesi kullanan Çince, Japonca ve Korece (CJK) dilleri nasıl desteklediğini öğrenin.
-ms.openlocfilehash: e6221d37a3ebb07414f87f349b020365c80990e3
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: e6399136713ff7be4b3c065de05b587a3f942b01
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64992226"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65095916"
 ---
 # <a name="cjk-language-support-for-ediscovery-premium"></a>eKeşif için CJK dil desteği (Premium)
 

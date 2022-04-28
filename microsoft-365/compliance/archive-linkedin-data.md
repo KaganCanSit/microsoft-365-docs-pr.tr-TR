@@ -2,8 +2,8 @@
 title: LinkedIn verilerini arşivleye bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: 04/06/2022
 audience: Admin
@@ -15,12 +15,12 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: seo-marvel-apr2020
 description: Yöneticilerin bir LinkedIn Şirket Sayfasından Microsoft 365'a veri aktarmak için yerel bağlayıcıyı nasıl ayarlayabileceğinizi & nasıl kullanabileceğini öğrenin.
-ms.openlocfilehash: f4def1c8946c8b09f1ba543762026572ceb229b6
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 352e33ed4c78dd57533312e3f7c37bb3357216f3
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64998054"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65095982"
 ---
 # <a name="set-up-a-connector-to-archive-linkedin-data"></a>LinkedIn verilerini arşivleye bağlayıcı ayarlama
 

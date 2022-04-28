@@ -2,8 +2,8 @@
 title: Arama ve analiz ayarlarını yapılandırma - eBulma (Premium)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -17,12 +17,12 @@ search.appverid:
 ms.assetid: ''
 ms.custom: seo-marvel-mar2020
 description: Bir durumda ayarlanan tüm incelemeler için geçerli olan Microsoft Purview eBulma (Premium) ayarlarını yapılandırın. Bu, analiz ve Optik karakter tanıma ayarlarını içerir.
-ms.openlocfilehash: c5b542f224e35a6505dca9cbfacb5f1095fa2dbe
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 0ef76833d18b44a2a1c39db41f7d6fa31f99293e
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64992314"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65097150"
 ---
 # <a name="configure-search-and-analytics-settings-in-ediscovery-premium"></a>eBulma'da arama ve analiz ayarlarını yapılandırma (Premium)
 

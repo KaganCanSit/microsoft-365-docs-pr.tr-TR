@@ -2,8 +2,8 @@
 title: Koruyucu verilerinin gelişmiş dizini oluşturma
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 ms.assetid: ''
 description: Bir eBulma (Premium) olayına bir koruyucu eklendiğinde, kısmen dizinlenmiş olarak kabul edilen tüm içerik, tamamen aranabilir hale getirmek için yeniden işlenmiştir.
-ms.openlocfilehash: 8b7dbbb13b9a667a7b5a50a5535634414c0caec5
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 2a4cea13291bd592cf47a61b500a4f3a6012ac85
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64993632"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65096688"
 ---
 # <a name="advanced-indexing-of-custodian-data"></a>Koruyucu verilerinin gelişmiş dizini oluşturma
 

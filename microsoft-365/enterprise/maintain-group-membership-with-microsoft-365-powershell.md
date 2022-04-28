@@ -2,7 +2,7 @@
 title: PowerShell ile güvenlik grubu üyeliğini koruma
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -17,30 +17,30 @@ ms.custom:
 - Ent_Office_Other
 - O365ITProTrain
 ms.assetid: 6770c5fa-b886-4512-8c67-ffd53226589e
-description: Yeni gruplarda üyeliği korumak için PowerShell Microsoft 365 öğrenin.
-ms.openlocfilehash: 3637fb7d2e68091c43e624e9b6780d032c1930bc
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Microsoft 365 gruplarında üyeliği korumak için PowerShell'i kullanmayı öğrenin.
+ms.openlocfilehash: 48720d5f3922598feec5a64eaa2c2532e17248ad
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988717"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65095696"
 ---
 # <a name="maintain-security-group-membership-with-powershell"></a>PowerShell ile güvenlik grubu üyeliğini koruma
 
-*Bu makale hem son hem de Microsoft 365 Kurumsal hem de Office 365 Kurumsal.*
+*Bu makale hem Microsoft 365 Kurumsal hem de Office 365 Kurumsal için geçerlidir.*
 
-Microsoft 365'te güvenlik Microsoft 365 grubu üyeliğini korumak için Microsoft 365 yönetim merkezi alternatif olarak, Microsoft 365. 
+Microsoft 365'da güvenlik grubu üyeliğini korumak için Microsoft 365 yönetim merkezi alternatif olarak Microsoft 365 için PowerShell'i kullanabilirsiniz. 
 
 >[!Note]
->[Grup üyeliğinizi nasıl Microsoft 365 bu grup üyeliğiyle](../admin/create-groups/add-or-remove-members-from-groups.md) nasıl Microsoft 365 yönetim merkezi. Ek kaynakların listesi için bkz. [Kullanıcıları ve grupları yönetme](/admin).
+>[Microsoft 365 yönetim merkezi ile Microsoft 365 grup üyeliğini korumayı öğrenin](../admin/create-groups/add-or-remove-members-from-groups.md). Ek kaynakların listesi için bkz. [Kullanıcıları ve grupları yönetme](/admin).
 >
 
-## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a>Graph modülü için Azure Active Directory PowerShell'i kullanma
-İlk olarak[, kiracınıza bağlan Microsoft 365 bağlanin](connect-to-microsoft-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module).
+## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a>Graph için Azure Active Directory PowerShell modülünü kullanma
+İlk olarak [Microsoft 365 kiracınıza bağlanın](connect-to-microsoft-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module).
 
-### <a name="add-or-remove-user-accounts-as-members-of-a-group"></a>Kullanıcı hesaplarını grubun üyeleri olarak ekleme veya kaldırma
+### <a name="add-or-remove-user-accounts-as-members-of-a-group"></a>Kullanıcı hesaplarını grubun üyesi olarak ekleme veya kaldırma
 
-**UPN'sini** kullanarak bir kullanıcı hesabı eklemek için, kullanıcı hesabını Kullanıcı Asıl Adı (UPN) (örnek: belindan@contoso.com) ve güvenlik grubu görünen adını doldurun, "<" ve ">" karakterlerini kaldırarak PowerShell penceresinde veya PowerShell Tümleşik Betik Ortamı'nda (ISE) bu komutları çalıştırın.
+**UpN'sine göre kullanıcı hesabı eklemek için** kullanıcı hesabı Kullanıcı Asıl Adı (UPN) (örnek: belindan@contoso.com) ve güvenlik grubu görünen adını doldurun, "<" ve ">" karakterlerini kaldırıp bu komutları PowerShell penceresinde veya PowerShell Tümleşik Betik Ortamı'nda (ISE) çalıştırın.
 
 ```powershell
 $userUPN="<UPN of the user account to add>"
@@ -48,7 +48,7 @@ $groupName="<display name of the group>"
 Add-AzureADGroupMember -RefObjectId (Get-AzureADUser | Where { $_.UserPrincipalName -eq $userUPN }).ObjectID -ObjectId (Get-AzureADGroup | Where { $_.DisplayName -eq $groupName }).ObjectID
 ```
 
-**Kullanıcı hesabını görünen adına göre** eklemek için, kullanıcı hesabı görünen adını (örneğin: Belina Newman) ve grup görünen adını doldurun ve Bu komutları PowerShell penceresinde veya PowerShell ISE'de çalıştırın.
+**Kullanıcı hesabını görünen adına göre eklemek için kullanıcı hesabının** görünen adını (örneğin: Belinda Newman) ve grup görünen adını doldurun ve bu komutları PowerShell penceresinde veya PowerShell ISE'de çalıştırın.
 
 ```powershell
 $userName="<display name of the user account to add>"
@@ -56,7 +56,7 @@ $groupName="<display name of the group>"
 Add-AzureADGroupMember -RefObjectId (Get-AzureADUser | Where { $_.DisplayName -eq $userName }).ObjectID -ObjectId (Get-AzureADGroup | Where { $_.DisplayName -eq $groupName }).ObjectID
 ```
 
-**Kullanıcı hesabını UPN'sini** kullanarak kaldırmak için, kullanıcı hesabı UPN'sini (örneğin: belindan@contoso.com) ve grup görünen adını doldurun ve bu komutları PowerShell penceresinde veya PowerShell ISE'de çalıştırın.
+**Bir kullanıcı hesabını UPN'siyle kaldırmak için**, kullanıcı hesabı UPN'sini (örnek: belindan@contoso.com) ve grubun görünen adını doldurun ve bu komutları PowerShell penceresinde veya PowerShell ISE'de çalıştırın.
 
 ```powershell
 $userUPN="<UPN of the user account to remove>"
@@ -64,7 +64,7 @@ $groupName="<display name of the group>"
 Remove-AzureADGroupMember -MemberId (Get-AzureADUser | Where { $_.UserPrincipalName -eq $userUPN }).ObjectID -ObjectID (Get-AzureADGroup | Where { $_.DisplayName -eq $groupName }).ObjectID
 ```
 
-**Kullanıcı hesabını görünen** adıyla kaldırmak için, kullanıcı hesabı görünen adını (örneğin: Belina Newman) ve grup görünen adını doldurun ve bu komutları PowerShell penceresinde veya PowerShell ISE'de çalıştırın.
+**Bir kullanıcı hesabını görünen adına göre kaldırmak için**, kullanıcı hesabının görünen adını (örneğin: Belinda Newman) ve grup görünen adını doldurun ve bu komutları PowerShell penceresinde veya PowerShell ISE'de çalıştırın.
 
 ```powershell
 $userName="<display name of the user account to remove>"
@@ -74,9 +74,9 @@ Remove-AzureADGroupMember -MemberId (Get-AzureADUser | Where { $_.DisplayName -e
 
 ### <a name="add-or-remove-groups-as-members-of-a-group"></a>Grupları grubun üyesi olarak ekleme veya kaldırma
 
-Güvenlik grupları, üye olarak başka gruplar içerebilir. Microsoft 365, ancak gruplarda hayır. Bu bölüm, yalnızca güvenlik grubu için grup ekleme veya kaldırma PowerShell komutlarını içerir.
+Güvenlik grupları, üye olarak diğer grupları içerebilir. Ancak Microsoft 365 gruplar bunu yapamaz. Bu bölüm, yalnızca bir güvenlik grubu için grup eklemek veya kaldırmak için PowerShell komutlarını içerir.
 
-Grubu **görünen adına göre** eklemek için, ekleyeceksiniz grubun görünen adını ve üye grubu içeren grubun görünen adını doldurun ve bu komutları PowerShell penceresinde veya PowerShell ISE'de çalıştırın.
+**Bir grubu görünen adına göre eklemek için**, ekleyeceğiniz grubun görünen adını ve üye grubu içerecek grubun görünen adını doldurun ve bu komutları PowerShell penceresinde veya PowerShell ISE'de çalıştırın.
 
 ```powershell
 $groupMemberName="<display name of the group to add>"
@@ -84,7 +84,7 @@ $groupName="<display name of the group that will contain the member group>"
 Add-AzureADGroupMember -RefObjectId (Get-AzureADGroup | Where { $_.DisplayName -eq $groupMemberName }).ObjectID -ObjectID (Get-AzureADGroup | Where { $_.DisplayName -eq $groupName }).ObjectID
 ```
 
-Grubu **görünen adına** göre kaldırmak için, kaldıracağız grubun görünen adını ve üye grubu içeren grubun görünen adını doldurun ve bu komutları PowerShell penceresinde veya PowerShell ISE'de çalıştırın.
+**Bir grubu görünen adına göre kaldırmak için**, kaldıracağınız grubun görünen adını ve üye grubu içerecek grubun görünen adını doldurun ve bu komutları PowerShell penceresinde veya PowerShell ISE'de çalıştırın.
 
 ```powershell
 $groupMemberName="<display name of the group to add>"
@@ -92,14 +92,14 @@ $groupName="<display name of the group that will contain the member group>"
 Remove-AzureADGroupMember -MemberId (Get-AzureADGroup | Where { $_.DisplayName -eq $groupMemberName }).ObjectID -ObjectID (Get-AzureADGroup | Where { $_.DisplayName -eq $groupName }).ObjectID
 ```
 
-## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a>Kaynak için Microsoft Azure Active Directory Modülü'Windows PowerShell
+## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a>Windows PowerShell için Microsoft Azure Active Directory Modülünü kullanma
 
-İlk olarak[, kiracınıza bağlan Microsoft 365 bağlanin](connect-to-microsoft-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell).
+İlk olarak [Microsoft 365 kiracınıza bağlanın](connect-to-microsoft-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell).
 
 
-### <a name="add-or-remove-user-accounts-as-members-of-a-group"></a>Kullanıcı hesaplarını grubun üyeleri olarak ekleme veya kaldırma
+### <a name="add-or-remove-user-accounts-as-members-of-a-group"></a>Kullanıcı hesaplarını grubun üyesi olarak ekleme veya kaldırma
 
-**UPN'sini** kullanarak bir kullanıcı hesabı eklemek için, kullanıcı hesabını Kullanıcı Asıl Adı (UPN) (örnek: belindan@contoso.com) ve grup görünen adını doldurun, "<" ve ">" karakterlerini kaldırarak PowerShell penceresinde veya PowerShell ISE'de bu komutları çalıştırın.
+**UPN'sine göre kullanıcı hesabı eklemek için** kullanıcı hesabı Kullanıcı Asıl Adı (UPN) (örnek: belindan@contoso.com) ve grup görünen adını doldurun, "<" ve ">" karakterlerini kaldırıp bu komutları PowerShell penceresinde veya PowerShell ISE'de çalıştırın.
 
 ```powershell
 $userUPN="<UPN of the user account to add>"
@@ -107,7 +107,7 @@ $groupName="<display name of the group>"
 Add-MsolGroupMember -GroupMemberObjectId (Get-MsolUser | Where { $_.UserPrincipalName -eq $userUPN }).ObjectID -GroupObjectId (Get-MsolGroup | Where { $_.DisplayName -eq $groupName }).ObjectID
 ```
 
-**Kullanıcı hesabını görünen adına göre** eklemek için, kullanıcı hesabı görünen adını (örneğin: Belina Newman) ve grup görünen adını doldurun ve Bu komutları PowerShell penceresinde veya PowerShell ISE'de çalıştırın.
+**Kullanıcı hesabını görünen adına göre eklemek için kullanıcı hesabının** görünen adını (örneğin: Belinda Newman) ve grup görünen adını doldurun ve bu komutları PowerShell penceresinde veya PowerShell ISE'de çalıştırın.
 
 ```powershell
 $userName="<display name of the user account to add>"
@@ -115,7 +115,7 @@ $groupName="<display name of the group>"
 Add-MsolGroupMember -GroupMemberObjectId (Get-MsolUser | Where { $_.DisplayName -eq $userName }).ObjectID -GroupObjectId (Get-MsolGroup | Where { $_.DisplayName -eq $groupName }).ObjectID
 ```
 
-**Kullanıcı hesabını UPN'sini** kullanarak kaldırmak için, kullanıcı hesabı UPN'sini (örneğin: belindan@contoso.com) ve grup görünen adını doldurun ve bu komutları PowerShell penceresinde veya PowerShell ISE'de çalıştırın.
+**Bir kullanıcı hesabını UPN'siyle kaldırmak için**, kullanıcı hesabı UPN'sini (örnek: belindan@contoso.com) ve grubun görünen adını doldurun ve bu komutları PowerShell penceresinde veya PowerShell ISE'de çalıştırın.
 
 ```powershell
 $userUPN="<UPN of the user account to remove>"
@@ -123,7 +123,7 @@ $groupName="<display name of the group>"
 Remove-MsolGroupMember -GroupMemberObjectId (Get-MsolUser | Where { $_.UserPrincipalName -eq $userUPN }).ObjectID -GroupObjectId (Get-MsolGroup | Where { $_.DisplayName -eq $groupName }).ObjectID
 ```
 
-**Kullanıcı hesabını görünen** adıyla kaldırmak için, kullanıcı hesabı görünen adını (örneğin: Belina Newman) ve grup görünen adını doldurun ve bu komutları PowerShell penceresinde veya PowerShell ISE'de çalıştırın.
+**Bir kullanıcı hesabını görünen adına göre kaldırmak için**, kullanıcı hesabının görünen adını (örneğin: Belinda Newman) ve grup görünen adını doldurun ve bu komutları PowerShell penceresinde veya PowerShell ISE'de çalıştırın.
 
 ```powershell
 $userName="<display name of the user account to remove>"
@@ -133,9 +133,9 @@ Remove-MsolGroupMember -GroupMemberObjectId (Get-MsolUser | Where { $_.DisplayNa
 
 ### <a name="add-or-remove-groups-as-members-of-a-group"></a>Grupları grubun üyesi olarak ekleme veya kaldırma
 
-Güvenlik grupları, üye olarak başka gruplar içerebilir. Microsoft 365, ancak gruplarda hayır. Bu bölüm, yalnızca güvenlik grubu için grup ekleme veya kaldırma PowerShell komutlarını içerir.
+Güvenlik grupları, üye olarak diğer grupları içerebilir. Ancak Microsoft 365 gruplar bunu yapamaz. Bu bölüm, yalnızca bir güvenlik grubu için grup eklemek veya kaldırmak için PowerShell komutlarını içerir.
 
-Grubu **görünen adına göre** eklemek için, ekleyeceksiniz grubun görünen adını ve üye grubu içeren grubun görünen adını doldurun ve bu komutları PowerShell penceresinde veya PowerShell ISE'de çalıştırın.
+**Bir grubu görünen adına göre eklemek için**, ekleyeceğiniz grubun görünen adını ve üye grubu içerecek grubun görünen adını doldurun ve bu komutları PowerShell penceresinde veya PowerShell ISE'de çalıştırın.
 
 ```powershell
 $groupMemberName="<display name of the group to add>"
@@ -143,7 +143,7 @@ $groupName="<display name of the group that will contain the member group>"
 Add-MsolGroupMember -GroupMemberObjectId (Get-MsolGroup | Where { $_.DisplayName -eq $groupMemberName }).ObjectID -GroupObjectId (Get-MsolGroup | Where { $_.DisplayName -eq $groupName }).ObjectID -GroupMemberType Group
 ```
 
-Grubu **görünen adına** göre kaldırmak için, kaldıracağız grubun görünen adını ve üye grubu içeren grubun görünen adını doldurun ve bu komutları PowerShell penceresinde veya PowerShell ISE'de çalıştırın.
+**Bir grubu görünen adına göre kaldırmak için**, kaldıracağınız grubun görünen adını ve üye grubu içerecek grubun görünen adını doldurun ve bu komutları PowerShell penceresinde veya PowerShell ISE'de çalıştırın.
 
 ```powershell
 $groupMemberName="<display name of the group to add>"
@@ -153,8 +153,8 @@ Remove-MsolGroupMember -GroupMemberObjectId (Get-MsolGroup | Where { $_.DisplayN
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[PowerShell Microsoft 365 hesaplarını, lisanslarını ve gruplarını yönetme](manage-user-accounts-and-licenses-with-microsoft-365-powershell.md)
+[PowerShell ile Microsoft 365 kullanıcı hesaplarını, lisanslarını ve gruplarını yönetme](manage-user-accounts-and-licenses-with-microsoft-365-powershell.md)
   
-[PowerShell Microsoft 365'i yönetme](manage-microsoft-365-with-microsoft-365-powershell.md)
+[PowerShell ile Microsoft 365’i yönetme](manage-microsoft-365-with-microsoft-365-powershell.md)
   
-[Microsoft 365 için PowerShell ile çalışmaya Microsoft 365](getting-started-with-microsoft-365-powershell.md)
+[Microsoft 365 için PowerShell'i kullanmaya başlama](getting-started-with-microsoft-365-powershell.md)

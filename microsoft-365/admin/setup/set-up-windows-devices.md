@@ -1,5 +1,5 @@
 ---
-title: Mobil Windows cihazları Microsoft 365 İş Ekstra ayarlama
+title: Microsoft 365 İş Ekstra kullanıcılar için Windows cihazları ayarlama
 f1.keywords:
 - CSH
 ms.author: deniseb
@@ -29,56 +29,57 @@ search.appverid:
 - BCS160
 - MET150
 ms.assetid: 2d7ff45e-0da0-4caa-89a9-48cabf41f193
-description: Merkezi yönetim Windows ve güvenlik Windows 10 Pro için Microsoft 365 İş Ekstra çalıştıran cihazları ayarlayın.
-ms.openlocfilehash: f64114ac6a117ac3eacc9b6aa9de31366e847f33
-ms.sourcegitcommit: 601ab9ad2b624e3b5e04eed927a08884c885c72a
+description: Microsoft 365 İş Ekstra kullanıcılar için Windows 10 Pro çalıştıran Windows cihazları ayarlayarak merkezi yönetim ve güvenlik denetimlerini etkinleştirme.
+ms.openlocfilehash: 57db37f73d2b9145f7c4fb9c1ee1005318c629d7
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "64403599"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65096236"
 ---
-# <a name="set-up-windows-devices-for-microsoft-365-business-premium-users"></a>Mobil Windows cihazları Microsoft 365 İş Ekstra ayarlama
+# <a name="set-up-windows-devices-for-microsoft-365-business-premium-users"></a>Microsoft 365 İş Ekstra kullanıcılar için Windows cihazları ayarlama
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Microsoft 365 İş Ekstra kullanıcıları için Windows cihazları ayarlamadan önce tüm Windows cihazlarının Windows 10 Pro, sürüm 1703 (Creators Update) veya üzerinde Windows 11 Pro. 
+Microsoft 365 İş Ekstra kullanıcılar için Windows cihazları ayarlamadan önce tüm Windows cihazların Windows 10 Pro, sürüm 1703 (Creators Update) veya Windows 11 Pro çalıştığından emin olun. 
 
-Windows 10 Pro (veya Windows 11 Pro), her bir ortamı tamamlayıcı nitelikte bir bulut hizmetleri ve cihaz yönetimi kümesi olan Windows 10 Business'in dağıtımı için önkoşul Windows 10 Pro Windows 11 Pro ve güvenlik denetimlerinin merkezi yönetimini ve güvenlik denetimlerini Microsoft 365 İş Ekstra.
+Windows 10 Pro (veya Windows 11 Pro), Windows 10 Pro ve Windows 11 Pro tamamlayan bir dizi bulut hizmeti ve cihaz yönetimi özelliği olan Windows 10 Business dağıtmak için önkoşuldur ve Microsoft 365 İş Ekstra merkezi yönetim ve güvenlik denetimlerini etkinleştirin.
 
-[Bu gereksinimler hakkında daha fazla bilgi Microsoft 365 İş Ekstra](https://www.microsoft.com/microsoft-365/business/microsoft-365-business-premium?activetab=pivot:techspecstab).
+[Microsoft 365 İş Ekstra gereksinimleri hakkında daha fazla bilgi edinin](https://www.microsoft.com/microsoft-365/business/microsoft-365-business-premium?activetab=pivot:techspecstab).
 
 ## <a name="windows-10-pro-and-windows-11-pro"></a>Windows 10 Pro ve Windows 11 Pro
 
-Windows'Windows 7 Pro, Windows Windows 8 Pro veya Windows 8.1 Pro gibi önceki sürümlerini çalıştıran Microsoft 365 İş Ekstra cihazlarınız varsa, Microsoft 365 İş Ekstra aboneliğiniz size bu sürümleri yükseltme hakkı verir cihazlara Windows 10 Pro veya Windows 11 Pro.
+Windows 7 Pro, Windows 8 Pro veya Windows 8.1 Pro gibi Windows önceki sürümlerini çalıştıran Windows cihazlarınız varsa, Microsoft 365 İş Ekstra aboneliğiniz bunları yükseltmenizi sağlar Windows 10 Pro veya Windows 11 Pro cihazlar.
   
-Cihazları yükseltme hakkında daha fazla Windows için aşağıdaki makalelere bakın:
+Windows cihazları yükseltme hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 
-- [Yükseltme Windows Giriş'i Windows Pro](https://support.microsoft.com/windows/upgrade-windows-home-to-windows-pro-ef34d520-e73f-3198-c525-d1a218cc2818)
-- [Yükseltme Windows 10 Pro](https://support.microsoft.com/windows/upgrade-to-windows-10-pro-71ecc746-0f81-a4c0-bd4b-0db8559e0796)
+- [giriş Windows Windows Pro yükseltme](https://support.microsoft.com/windows/upgrade-windows-home-to-windows-pro-ef34d520-e73f-3198-c525-d1a218cc2818)
+- [Windows 10 Pro'ye yükseltme](https://support.microsoft.com/windows/upgrade-to-windows-10-pro-71ecc746-0f81-a4c0-bd4b-0db8559e0796)
   
-Yükseltmeyi tamamladıktan sonra, yükseltmeye sahip olduğunuzdan emin olmak veya yükseltmenin çalıştığını doğrulamak için bkz. [Cihazın Azure AD'ye](#verify-the-device-is-connected-to-azure-ad) bağlı olduğunu doğrulama.
+Yükselttikten sonra, [yükseltmeye sahip olduğunuzu doğrulamak veya yükseltmenin çalıştığından emin olmak için bkz. Cihazın Azure AD'ye bağlı olduğunu](#verify-the-device-is-connected-to-azure-ad) doğrulama.
 
-## <a name="join-windows-devices-to-your-organizations-azure-ad"></a>Diğer Windows cihazlarınızı kuruluş Azure AD'nize katılma
+## <a name="join-windows-devices-to-your-organizations-azure-ad"></a>Windows cihazları kuruluşunuzun Azure AD'sine ekleme
 
-Şirketinizin tüm iş Windows cihazları Windows 10 Pro veya Windows 11 Pro, bu cihazları kuruluş kuruluşlarının web hizmetine (Azure AD) Azure Active Directory katılabilirsiniz. 
+Şirketinizin tüm Windows cihazları Windows 10 Pro veya Windows 11 Pro çalıştırıyorsa, bu cihazları kuruluşunuzun Azure Active Directory (Azure AD) ile birleştirebilirsiniz. 
 
-1. Mobil Windows, logoyu Windows ve Simge Resmi Ayarlar seçin.
+1. Windows bir cihazda Windows logosunu ve ardından Ayarlar simgesini seçin.
   
-2. Daha **Ayarlar** **AccountsAccess iş veya** >  **okul hesabı'Bağlan**\>.
+2. **Ayarlar'de** **AccountsAccess** >  **iş veya okul** \> **Bağlan** gidin.
   
-3. E-posta adresinizi yazın ve Ardından Sonraki'yi **seçin**.
+3. E-posta adresinizi yazın ve **İleri'yi** seçin.
 
-4. Süreci tamamlamak için istemleri izleyin.
+4. İşlemi tamamlamak için istemleri izleyin.
 
 ## <a name="verify-the-device-is-connected-to-azure-ad"></a>Cihazın Azure AD'ye bağlı olduğunu doğrulama
 
-Eşitleme durumunu doğrulamak için, İş yeriz veya okul için **erişim**  \<organization name\> sayfasında Ayarlar_ _ alanına bağlandı öğesini seçerek Bilgi ve Bağlantıyı **Kes düğmelerini** **gösterebilirsiniz**. **Eşitlemenizin durumunu** almak için Bilgi'yi seçin. 
+Eşitleme durumunuzu doğrulamak için, **Ayarlar'daki İşe veya okula erişim** sayfasında, **Bilgi** ve **Bağlantıyı Kes** düğmelerini kullanıma açmak **için _** _ \<organization name\> konumuna bağlı alanını seçin. Eşitleme durumunuzu almak için **Bilgi'yi** seçin. 
   
-En son **mobil cihaz yönetim** ilkelerini **bilgisayara almak** için Eşitleme durumu sayfasında Eşitle'yi seçin.  
+**Eşitleme durumu** sayfasında **Eşitle'yi** seçerek bilgisayara en son mobil cihaz yönetimi ilkelerini alın.  
   
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Mobil cihazlarınızı ayarlamak için bkz. [Mobil cihazları kullanıcılar için Microsoft 365 İş Ekstra ayarlama](set-up-mobile-devices.md), 
+Mobil cihazlarınızı ayarlamak için bkz[. Microsoft 365 İş Ekstra kullanıcılar için mobil cihazları ayarlama](set-up-mobile-devices.md), 
 
-Korumayı artırmak için bkz[. İş planları için güvenliği sağlamanın Microsoft 365 10 yolu](../security-and-compliance/secure-your-business-data.md).
+Korumayı artırmak için bkz. [İş planları için Microsoft 365 güvenliğini sağlamanın en iyi 10 yolu](../security-and-compliance/secure-your-business-data.md).
   
+

@@ -19,12 +19,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Microsoft Teams kullanıcı etkinliği raporunu almayı ve kuruluşunuzdaki Teams etkinliğiyle ilgili içgörüler elde etmeyi öğrenin.
-ms.openlocfilehash: ad2701e10e6b71f6fdb6a7d9ccf4a6b795a38b94
-ms.sourcegitcommit: 5b321693214e3859f5af8f1774d2a5ff685ab3b7
+ms.openlocfilehash: a2bfa434d5a564307498f621cb5105f411daff4d
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65015012"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65087227"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---microsoft-teams-user-activity"></a>Yönetim merkezinde raporları Microsoft 365 - Microsoft Teams kullanıcı etkinliği
 
@@ -54,8 +54,8 @@ Veri kalitesini sağlamak için son üç güne ilişkin günlük veri doğrulama
 |Kullanıcı adı  <br/> |Kullanıcının e-posta adresi. Asıl e-posta adresini görüntüleyebilir veya bu alanın anonim olmasını sağlayabilirsiniz.   <br/> |
 |Kiracı adı  <br/> |Kullanıcının ait olduğu iç veya dış kiracının adı.   <br/> <br/> Bir kullanıcı dış kiracıya aitse, ilgili veri ölçümleri (örneğin, posta iletileri, yanıt iletileri vb.) yöneticinin kiracısının paylaşılan kanallarındaki etkileşimlerine göre hesaplanır. Kullanıcı tarafından kendi kiracısında (belirli bir kiracının paylaşılan kanalları dışında) yapılan etkileşimler, belirli bir kiracının yönetici kullanım raporu için dikkate alınmaz.  |
 |Paylaşılan kanal kiracı adları   <br/> |Kullanıcının katıldığı paylaşılan kanalların iç veya dış kiracılarının adları.   <br/> |
-|Kanal iletileri   <br/> |Kullanıcının belirtilen zaman aralığında bir ekip sohbetinde yayınladığı benzersiz iletilerin sayısı.   <br/> |
-|Mesaj   <br/> |Belirtilen zaman aralığındaki tüm kanallardaki posta iletilerinin sayısı <br/> |
+|Kanal iletileri   <br/> |Kullanıcının belirtilen zaman aralığında bir ekip sohbetinde yayınladığı benzersiz iletilerin sayısı. Buna özgün gönderiler ve yanıtlar dahildir.   <br/> |
+|Mesaj   <br/> |Belirtilen zaman aralığındaki tüm kanallardaki posta iletilerinin sayısı. Gönderi, teams sohbetindeki özgün iletidir.<br/> |
 |Yanıt   <br/> |Belirtilen süre boyunca tüm kanallarda yanıtlanan ileti sayısı. <br/> |
 |Acil iletiler    <br/> |Belirtilen zaman aralığındaki acil ileti sayısı. <br/> |
 |Sohbet iletileri   <br/> |Kullanıcının belirtilen zaman aralığında özel bir sohbette yayınladığı benzersiz iletilerin sayısı.  <br/> |

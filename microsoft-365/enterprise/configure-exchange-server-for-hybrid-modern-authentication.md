@@ -1,8 +1,8 @@
 ---
-title: Karma Modern Kimlik Exchange Server kullanmak üzere şirket içinde nasıl yapılandırılan?
+title: Şirket içi Exchange Server Karma Modern Kimlik Doğrulaması kullanacak şekilde yapılandırma
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 12/27/2021
 audience: ITPro
 ms.topic: article
@@ -15,65 +15,65 @@ ms.collection:
 - M365-security-compliance
 f1.keywords:
 - NOCSH
-description: Şirket içinde karma bir Exchange Server, size daha güvenli kullanıcı kimlik doğrulaması ve yetkilendirme sunan Karma Modern Kimlik Doğrulama'yı (HMA) kullanmak üzere yapılandırmayı öğrenin.
+description: Size daha güvenli kullanıcı kimlik doğrulaması ve yetkilendirmesi sunan Karma Modern Kimlik Doğrulaması (HMA) kullanmak için şirket içi Exchange Server yapılandırmayı öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: d0889008595717308695c1ad9c5d2a9f1766d1ea
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 2ee190a541fdf3e4e77a251e040f2cb69416088c
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63021770"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65095762"
 ---
-# <a name="how-to-configure-exchange-server-on-premises-to-use-hybrid-modern-authentication"></a>Karma Modern Kimlik Exchange Server kullanmak üzere şirket içinde nasıl yapılandırılan?
+# <a name="how-to-configure-exchange-server-on-premises-to-use-hybrid-modern-authentication"></a>Şirket içi Exchange Server Karma Modern Kimlik Doğrulaması kullanacak şekilde yapılandırma
 
-*Bu makale hem son hem de Microsoft 365 Kurumsal hem de Office 365 Kurumsal.*
+*Bu makale hem Microsoft 365 Kurumsal hem de Office 365 Kurumsal için geçerlidir.*
 
-Karma Modern Kimlik Doğrulama (HMA), daha güvenli kullanıcı kimlik doğrulaması ve yetkilendirme sunan ve Exchange sunucusu şirket içi karma dağıtımlarda kullanılabilen bir kimlik yönetimi yöntemidir.
+Karma Modern Kimlik Doğrulaması (HMA), daha güvenli kullanıcı kimlik doğrulaması ve yetkilendirmesi sunan bir kimlik yönetimi yöntemidir ve Exchange sunucu şirket içi karma dağıtımları için kullanılabilir.
 
 ## <a name="definitions"></a>Tanımlar
 
-Başlamadan önce bazı tanımlara aşina olmak gerekir:
+Başlamadan önce bazı tanımlar hakkında bilgi sahibi olmanız gerekir:
 
-- Karma Modern Kimlik Doğrulama \> HMA
+- Karma Modern Kimlik Doğrulaması \> HMA
 
-- Exchange şirket içi \> EXCH
+- Şirket içi \> Exchange DÖVİZ KURLARI
 
-- \> Exchange Online EXO
+- \> exo Exchange Online
 
-Ayrıca, bu makaledeki grafikte 'gri gri' veya 'soluk' olan bir nesne varsa, gri olarak gösterilen öğe *HMA'ya* özgü yapılandırmaya dahil değildir.
+Ayrıca *, bu makaledeki bir grafikte 'gri gösterilmiş' veya 'soluk' bir nesne varsa, gri olarak gösterilen öğenin HMA'ya özgü yapılandırmaya dahil edilmediği anlamına gelir*.
 
-## <a name="enabling-hybrid-modern-authentication"></a>Karma Modern Kimlik Doğrulama'nın etkinleştirilmesi
+## <a name="enabling-hybrid-modern-authentication"></a>Karma Modern Kimlik Doğrulamasını Etkinleştirme
 
-HMA'yı açma, şu anlama gelir:
+HMA'nın etkinleştirilmesi şu anlama gelir:
 
-1. Başlamadan önce ön hazırlıkları karşılarken emin olmak.
+1. Başlamadan önce önkoşullarla karşılaştığından emin olmak.
 
-1. Hem şirket **içinde** hem de Skype Kurumsal Exchange birçok önkoşul yaygın olduğu için, Karma Modern Kimlik Doğrulamasına genel bakış ve bunu şirket içi posta ve Skype Kurumsal sunucularla kullanmanın [önkoşulları Exchange vardır](hybrid-modern-auth-overview.md). Bu makaledeki adımlardan herhangi birini başlamadan önce bunu uygulayın.
+1. Hem Skype Kurumsal hem de Exchange için birçok **önkoşul** yaygın olduğundan [, Karma Modern Kimlik Doğrulamasına genel bakış ve bunu şirket içi Skype Kurumsal ve Exchange sunucularla kullanmak için önkoşullar](hybrid-modern-auth-overview.md). Bu makaledeki adımlardan herhangi birine başlamadan önce bunu yapın.
 Eklenecek bağlantılı posta kutularıyla ilgili gereksinimler.
 
-1. Azure AD'de Hizmet Asıl Adları **(SPN)** olarak şirket içi web hizmeti URL'leri ekleme. EXCH'nin birden çok kiracıyla karma olarak olması **durumunda, bu** şirket içi web hizmeti URL'leri EXCH ile karma olarak bulunan tüm kiracıların Azure AD'sinde SPN'ler olarak ek gerekir.
+1. Azure AD'de **Hizmet Asıl Adları (SPN)** olarak şirket içi web hizmeti URL'leri ekleme. EXCH'nin **birden çok kiracıyla** karma olması durumunda, bu şirket içi web hizmeti URL'leri, EXCH ile karma olan tüm kiracıların Azure AD'sine SPN'ler olarak eklenmelidir.
 
 1. HMA için tüm Sanal Dizinlerin etkinleştirildiğinden emin olun
 
-1. EvoSTS Auth Server nesnesini denetleme
+1. EvoSTS Kimlik Doğrulama Sunucusu nesnesi denetleniyor
 
-1. EXCH'de HMA'yı etkinleştirme.
-
-> [!NOTE]
-> Office sürümünüz MA'ya destek oluyor mu? Office [2013 ve Office 2016](modern-auth-for-office-2013-and-2016.md) istemci uygulamaları için bkz. Modern kimlik doğrulama nasıl çalışır?
-
-## <a name="make-sure-you-meet-all-the-prerequisites"></a>Tüm önkoşullara uygun olduğundan emin olun
-
-Birçok önkoşul hem kimlik Skype Kurumsal hem de Exchange yaygın olduğu için, Karma Modern Kimlik Doğrulamaya genel bakış ve bunu şirket içi posta ve Skype Kurumsal sunucularla kullanmak için [önkoşulları Exchange gözden geçirebilirsiniz](hybrid-modern-auth-overview.md). Bu  *makaledeki*  adımlardan herhangi birini başlamadan önce bunu uygulayın.
+1. EXCH'te HMA'nın etkinleştirilmesi.
 
 > [!NOTE]
-> Outlook Web App denetim Exchange denetim masası karma Modern Kimlik Doğrulama ile çalışmaz.
+> Office sürümünüz MA'Office destekliyor mu? Bkz[. Office 2013 ve Office 2016 istemci uygulamaları için modern kimlik doğrulaması nasıl çalışır](modern-auth-for-office-2013-and-2016.md)?
 
-## <a name="add-on-premises-web-service-urls-as-spns-in-azure-ad"></a>Şirket içi web hizmeti URL'lerini Azure AD'de SPN'ler olarak ekleme
+## <a name="make-sure-you-meet-all-the-prerequisites"></a>Tüm önkoşulları karşıladığınızdan emin olun
 
-Şirket içi web hizmeti URL'lerinizi Azure AD SPN'leri olarak ataan komutları çalıştırın. SPN'ler, istemci makineleri ve cihazlar tarafından kimlik doğrulama ve yetkilendirme sırasında kullanılır. Şirket içinden Dış Ad'ye (Azure AD) bağlanmak için Azure Active Directory tüm URL'lerin Azure AD'de kaydedilmiş olması gerekir (bu hem iç hem de dış ad alanlarını içerir).
+Hem Skype Kurumsal hem de Exchange için birçok önkoşul yaygın olduğundan, [karma modern kimlik doğrulamasına genel bakış ve bunu şirket içi Skype Kurumsal ve Exchange sunucularla kullanmak için önkoşulları](hybrid-modern-auth-overview.md) gözden geçirin. Bu makaledeki adımlardan herhangi birine başlamadan  *önce*  bunu yapın.
 
-İlk olarak, bu belgeye eklemeniz gereken tüm URL'leri AAD. Şu komutları şirket içinde çalıştırın:
+> [!NOTE]
+> Outlook Web App ve Exchange Denetim Masası karma Modern Kimlik Doğrulaması ile çalışmaz.
+
+## <a name="add-on-premises-web-service-urls-as-spns-in-azure-ad"></a>Azure AD'de SPN olarak şirket içi web hizmeti URL'leri ekleme
+
+Şirket içi web hizmeti URL'lerinizi Azure AD SPN'leri olarak atayan komutları çalıştırın. SPN'ler, kimlik doğrulaması ve yetkilendirme sırasında istemci makineleri ve cihazlar tarafından kullanılır. Şirket içinden Azure Active Directory 'a (Azure AD) bağlanmak için kullanılabilecek tüm URL'lerin Azure AD'ye kaydedilmesi gerekir (bu hem iç hem de dış ad alanlarını içerir).
+
+İlk olarak, AAD eklemeniz gereken tüm URL'leri toplayın. Şirket içinde şu komutları çalıştırın:
 
 ```powershell
 Get-MapiVirtualDirectory | FL server,*url*
@@ -84,22 +84,22 @@ Get-AutodiscoverVirtualDirectory | FL server,*url*
 Get-OutlookAnywhere | FL server,*hostname*
 ```
 
-BAĞLANTı kurabilirsiniz ve bu istemcilerin URL'ler listesinde HTTPS hizmet sorumlusu adları AAD. EXCH'nin birden çok kiracıyla karma olması **durumunda, bu** HTTPS SPN'leri EXCH ile karma AAD kiracıların genel alanlarına eklenmiştir.
+İstemcilerin bağlanabileceği URL'lerin AAD HTTPS hizmet sorumlusu adları olarak listelenmiş olduğundan emin olun. EXCH'nin **birden çok kiracıyla** karma olması durumunda, bu HTTPS SPN'leri EXCH ile karma olarak tüm kiracıların AAD eklenmelidir.
 
-1. İlk olarak, bu yönergeleri AAD [Bilgisayarınıza bağlanin](connect-to-microsoft-365-powershell.md).
+1. İlk olarak[, bu yönergelerle](connect-to-microsoft-365-powershell.md) AAD bağlanın.
 
     > [!NOTE]
-    > Aşağıdaki komutu kullanmak _Bağlan bu sayfadan Bağlan-MsolService_ seçeneğini kullansanız gerekir.
+    > Aşağıdaki komutu kullanabilmek için bu sayfadaki _Bağlan-MsolService_ seçeneğini kullanmanız gerekir.
 
-2. İlişkili Exchange URL'leriniz için aşağıdaki komutu yazın:
+2. Exchange ilgili URL'leriniz için aşağıdaki komutu yazın:
 
    ```powershell
    Get-MsolServicePrincipal -AppPrincipalId 00000002-0000-0ff1-ce00-000000000000 | select -ExpandProperty ServicePrincipalNames
    ```
 
-   Bir ve URL içermesi gereken, ancak çoğunlukla ile başlayan SPN'lerden oluşan bu komutun çıktısını (ve daha sonraki karşılaştırmalar için ekran görüntüsünü) `https://*autodiscover.yourdomain.com*` `https://*mail.yourdomain.com*` not alın `00000002-0000-0ff1-ce00-000000000000/`. Şirket içi `https://` URL'niz eksikse, bu belirli kayıtların bu listeye eklenmiş olması gerekir.
+   Ve URL'sini içermesi `https://*autodiscover.yourdomain.com*` `https://*mail.yourdomain.com*` gereken ancak çoğunlukla ile `00000002-0000-0ff1-ce00-000000000000/`başlayan SPN'lerden oluşan bu komutun çıkışını not edin (ve daha sonra karşılaştırma için ekran görüntüsü). Şirket içi ortamınızdan eksik URL'ler varsa `https://` , bu belirli kayıtlar bu listeye eklenmelidir.
 
-3. İç ve dış MAPI/HTTP, EWS, ActiveSync, OAB ve Otomatik Bulma kayıtlarınızı bu listede görmüyorsanız, aşağıdaki komutu (örnek URL'ler ve ) kullanarak bunları eklemeniz gerekir (`mail.corp.contoso.com``owa.contoso.com`örnek URL'ler ve , ancak örnek URL'leri kendi URL'lerinizi ile **değiştirirsiniz**):
+3. İç ve dış MAPI/HTTP, EWS, ActiveSync, OAB ve Otomatik Bulma kayıtlarınızı bu listede görmüyorsanız, bunları aşağıdaki komutu kullanarak eklemeniz gerekir (örnek URL'ler ve'dir `mail.corp.contoso.com` `owa.contoso.com`, ancak **örnek URL'leri kendi URL'nizle değiştirirsiniz**):
 
    ```powershell
    $x= Get-MsolServicePrincipal -AppPrincipalId 00000002-0000-0ff1-ce00-000000000000
@@ -108,11 +108,11 @@ BAĞLANTı kurabilirsiniz ve bu istemcilerin URL'ler listesinde HTTPS hizmet sor
    Set-MSOLServicePrincipal -AppPrincipalId 00000002-0000-0ff1-ce00-000000000000 -ServicePrincipalNames $x.ServicePrincipalNames
    ```
 
-4. 2. adımda yer alan komutu çalıştırarak `Get-MsolServicePrincipal` ve çıktıya bakarak yeni kayıtlarınızı eklenmi olduğunu doğrulayın. Önceki listeyi / ekran görüntüsünü yeni SPN'ler listesiyle karşılaştırın. Kayıtlarınız için yeni listenin ekran görüntüsünü de seçebilirsiniz. Başarılı olursanız, listede iki yeni URL'ye bakabilirsiniz. Örneğimize göre, SPN'ler listesi artık belirli URL'leri ve .`https://mail.corp.contoso.com` `https://owa.contoso.com`
+4. 2. adımdaki komutu yeniden çalıştırıp çıkışa `Get-MsolServicePrincipal` bakarak yeni kayıtlarınızın eklendiğini doğrulayın. Önceki listeyi / ekran görüntüsünü yeni SPN listesiyle karşılaştırın. Ayrıca, kayıtlarınız için yeni listenin ekran görüntüsünü de çekebilirsiniz. Başarılıysanız, listede iki yeni URL görürsünüz. Örneğimize göre, SPN'lerin listesi artık belirli URL'leri `https://mail.corp.contoso.com` ve `https://owa.contoso.com`içerecektir.
 
-## <a name="verify-virtual-directories-are-properly-configured"></a>Sanal Dizinlerin Düzgün Yapılandırıldığından emin olun
+## <a name="verify-virtual-directories-are-properly-configured"></a>Sanal Dizinlerin Düzgün Yapılandırıldığını Doğrulama
 
-Şimdi, OAuth'Exchange aşağıdaki komutları çalıştırarak kullanabileceği tüm Sanal Dizinler Outlook'de düzgün etkinleştirildiğinden emin olun:
+Şimdi aşağıdaki komutları çalıştırarak Outlook tüm Sanal Dizinlerde Exchange OAuth'un düzgün etkinleştirildiğini doğrulayın:
 
 ```powershell
 Get-MapiVirtualDirectory | FL server,*url*,*auth*
@@ -121,7 +121,7 @@ Get-OABVirtualDirectory | FL server,*url*,*oauth*
 Get-AutoDiscoverVirtualDirectory | FL server,*oauth*
 ```
 
-Çıktıyı kontrol edin ve bu VDir'lerin her biri üzerinde **OAuth'ın** etkinleştirildiğinden emin olun; böyle bir görünümde olur (ve bakma gereken önemli nokta 'OAuth'tur):
+Bu VDir'lerin her birinde **OAuth'un** etkinleştirildiğinden emin olmak için çıktıyı denetleyin; şuna benzer olacaktır (ve bakılacak önemli şey 'OAuth'):
 
 ```powershell
 Get-MapiVirtualDirectory | fl server,*url*,*auth*
@@ -134,27 +134,27 @@ InternalAuthenticationMethods : {Ntlm, OAuth, Negotiate}
 ExternalAuthenticationMethods : {Ntlm, OAuth, Negotiate}
 ```
 
-OAuth hiçbir sunucuda ve dört sanal dizinde yoksa, devam etmeden önce ilgili komutları kullanarak bunu eklemeniz gerekir ([Set-MapiVirtualDirectory](/powershell/module/exchange/set-mapivirtualdirectory), [Set-WebServicesVirtualDirectory](/powershell/module/exchange/set-webservicesvirtualdirectory), [Set-OABVirtualDirectory](/powershell/module/exchange/set-oabvirtualdirectory) ve [Set-AutodiscoverVirtualDirectory](/powershell/module/exchange/set-autodiscovervirtualdirectory)).
+Herhangi bir sunucuda ve dört sanal dizinden herhangi birinde OAuth eksikse, devam etmeden önce ilgili komutları kullanarak eklemeniz gerekir ([Set-MapiVirtualDirectory](/powershell/module/exchange/set-mapivirtualdirectory), [Set-WebServicesVirtualDirectory](/powershell/module/exchange/set-webservicesvirtualdirectory), [Set-OABVirtualDirectory](/powershell/module/exchange/set-oabvirtualdirectory) ve [Set-AutodiscoverVirtualDirectory](/powershell/module/exchange/set-autodiscovervirtualdirectory)).
 
-## <a name="confirm-the-evosts-auth-server-object-is-present"></a>EvoSTS Auth Server Nesnesi'nin Var Olduğunu Onaylama
+## <a name="confirm-the-evosts-auth-server-object-is-present"></a>EvoSTS Kimlik Doğrulama Sunucusu Nesnesinin Mevcut Olduğunu Onaylayın
 
-Bu son komut için Exchange Yönetim Kabuğu'na dönme. Artık şirket içinizin evoSTS kimlik doğrulama sağlayıcısı için bir girdisi olduğunu doğruabilirsiniz:
+Bu son komut için şirket içi Exchange Yönetim Kabuğu'na dönün. Artık şirket içi ortamınızda evoSTS kimlik doğrulama sağlayıcısı için bir giriş olduğunu doğrulayabilirsiniz:
 
 ```powershell
 Get-AuthServer | where {$_.Name -like "EvoSts*"} | ft name,enabled
 ```
 
-Çıkışta, Name EvoSts'nin GUID'si olan bir AuthServer ve 'Enabled' durumu da True olmalıdır. Bunu görmüyorsanız, Karma Yapılandırma Sihirbazı'nın en son sürümünü indirmeli ve çalıştırabilirsiniz.
+Çıkışınızın GUID'i olan EvoSts Adında bir AuthServer göstermesi ve 'Etkin' durumunun True olması gerekir. Bunu görmüyorsanız Karma Yapılandırma Sihirbazı'nın en son sürümünü indirip çalıştırmanız gerekir.
 
 > [!NOTE]
-> EXCH'nin birden çok kiracıyla karma olması **durumunda,**`EvoSts - {GUID}` çıkışta EXCH ile karma olarak her kiracı için bir Kimlik Doğrulama Sunucusu ve bu AuthServer nesnelerinin tümsinde Etkin durumu True olmalıdır.
+> EXCH'nin **birden çok kiracıyla** karma olması durumunda, çıkışınız EXCH ile karma olan her kiracı için Ad'ın `EvoSts - {GUID}` bir AuthServer'ını göstermelidir ve **Bu** AuthServer nesnelerinin tümü için Etkin durumu True olmalıdır.
 
 > [!IMPORTANT]
-> Ortamınız içinde Exchange 2010 çalıştırıyorsanız, EvoSTS kimlik doğrulama sağlayıcısı oluşturulmaz.
+> Ortamınızda Exchange 2010 çalıştırıyorsanız EvoSTS kimlik doğrulama sağlayıcısı oluşturulmaz.
 
 ## <a name="enable-hma"></a>HMA'yı etkinleştirme
 
-Şirket içi Yönetim Kabuğu Exchange ta aşağıdaki komutu çalıştırın; bunun yerine, \<GUID\> ortamınız içinde komut satırıyla dizeyi kullanın:
+Şirket içi Exchange Yönetim Kabuğu'nda aşağıdaki komutu çalıştırın ve komut satırında değerini ortamınızdaki dizeyle değiştirin\<GUID\>:
 
 ```powershell
 Set-AuthServer -Identity "EvoSTS - <GUID>" -IsDefaultAuthorizationEndpoint $true
@@ -162,13 +162,13 @@ Set-OrganizationConfig -OAuth2ClientProfileEnabled $true
 ```
 
 > [!NOTE]
-> Karma Yapılandırma Sihirbazı'nın eski sürümlerinde EvoSts AuthServer, GUID ekli olmadan yalnızca EvoSTS olarak adlandırılmıştır. Herhangi bir eyleme gerek yoktur; komutun GUID kısmını kaldırarak yukarıdaki komut satırı üzerinde bunu yansıtacak şekilde değiştirmeniz gerekir:
+> Karma Yapılandırma Sihirbazı'nın eski sürümlerinde EvoSts AuthServer, GUID ekli olmadan evoSTS olarak adlandırıldı. Yapmanız gereken bir eylem yoktur, komutun GUID bölümünü kaldırarak yukarıdaki komut satırını bunu yansıtacak şekilde değiştirmeniz yeterlidir:
 >
 > ```powershell
 > Set-AuthServer -Identity EvoSTS -IsDefaultAuthorizationEndpoint $true
 > ```
 
-EXCH sürümü Exchange 2016 (CU18 veya sonrası) veya Exchange 2019 (CU7 veya sonrası) ise ve karma Eylül 2020'den sonra HCW ile yapılandırılmışsa, şirket içi Exchange Yönetim Kabuğu'nda aşağıdaki komutu çalıştırın:
+EXCH sürümü Exchange 2016 (CU18 veya üzeri) veya Exchange 2019 (CU7 veya üzeri) ise ve karma Eylül 2020'de indirilen HCW ile yapılandırılmışsa, şirket içi Exchange Yönetim Kabuğu'nda aşağıdaki komutu çalıştırın:
 
 ```powershell
 Set-AuthServer -Identity "EvoSTS - {GUID}" -DomainName "Tenant Domain" -IsDefaultAuthorizationEndpoint $true
@@ -176,30 +176,30 @@ Set-OrganizationConfig -OAuth2ClientProfileEnabled $true
 ```
 
 > [!NOTE]
-> EXCH'nin karma olarak birden çok kiracılı olduğu **durumda,** EXCH'de her kiracıya karşılık gelen etki alanlarıyla birlikte birden çok AuthServer nesnesi vardır.  Bu AuthServer nesnelerinden herhangi biri için **IsDefaultAuthorizationEndpoint** bayrağı true olarak ayar olmalıdır ( **IsDefaultAuthorizationEndpoint** cmdlet kullanılarak). Bu bayrak tüm Authserver nesneleri için true olarak ayarlanamaz ve bu AuthServer nesnelerinden birinin **IsDefaultAuthorizationEndpoint** bayrağı true olarak ayarlanmış olsa bile HMA etkinleştirilebilir.
+> EXCH'nin **birden çok kiracıyla** karma olması durumunda, EXCH'de her kiracıya karşılık gelen etki alanlarıyla birlikte birden çok AuthServer nesnesi vardır.  Bu AuthServer nesnelerinden herhangi biri için **IsDefaultAuthorizationEndpoint** bayrağı true ( **IsDefaultAuthorizationEndpoint** cmdlet'i kullanılarak) olarak ayarlanmalıdır. Bu bayrak tüm Authserver nesneleri için true olarak ayarlanamaz ve bu AuthServer nesnelerinden birinin **IsDefaultAuthorizationEndpoint** bayrağı true olarak ayarlansa bile HMA etkinleştirilir.
 > 
-> **DomainName parametresinde**, çoğunlukla formda olan kiracı etki alanı değerini kullanın`contoso.onmicrosoft.com`.
+> **DomainName** parametresi için genellikle biçimindeki `contoso.onmicrosoft.com`kiracı etki alanı değerini kullanın.
 
-## <a name="verify"></a>Doğrula
+## <a name="verify"></a>Doğrulamak
 
-HMA'yı etkinleştiren bir istemcinin bir sonraki oturum açması yeni kimlik doğrulama akışını kullanır. Yalnızca HMA'yı açmanın hiçbir istemci için yeniden kimlik doğrulamasına neden olmadığını ve yeni ayarların Exchange için zaman al olabileceğini unutmayın.
+HMA'yı etkinleştirdiğinizde, istemcinin bir sonraki oturum açma bilgileri yeni kimlik doğrulama akışını kullanır. HMA'yı açmanın herhangi bir istemci için yeniden kimlik doğrulaması tetiklemeyeceğini ve Exchange yeni ayarları almasının biraz zaman alabileceğini unutmayın.
 
-Ayrıca, Outlook istemcisinin simgesine sağ tıklarken (Windows Bildirimleri tepsisinde) CTRL tuşunu basılı tutarak da 'Bağlantı Durumu' öğesini tıklatabilirsiniz. İstemcinin SMTP adresini, **OAuth'da** kullanılan taşıyıcı belirtecinin temsil ettiği Authn `Bearer\*`türüne göre bakın.
+Ayrıca, Outlook istemcisinin simgesine (Windows Bildirimler tepsisinde de) sağ tıklayıp 'Bağlantı Durumu'na tıkladığınızda da CTRL tuşunu basılı tutmalısınız. İstemcinin SMTP adresini, **OAuth'da** kullanılan taşıyıcı belirtecini temsil eden Authn türünde `Bearer\*`arayın.
 
 > [!NOTE]
-> HMA ile kimlik Skype Kurumsal mi gerekiyor? size iki makale gerekir: Biri desteklenen [topolojilerin](/skypeforbusiness/plan-your-deployment/modern-authentication/topologies-supported) listeli olduğu gibi, biri de yapılandırmanın [nasıl yapılacaklarını gösterir](configure-skype-for-business-for-hybrid-modern-authentication.md).
+> HMA ile Skype Kurumsal yapılandırmanız mı gerekiyor? İki makaleniz olması gerekir: [Biri desteklenen topolojileri](/skypeforbusiness/plan-your-deployment/modern-authentication/topologies-supported) listeler, diğeri de [yapılandırmayı nasıl yapacağınızı](configure-skype-for-business-for-hybrid-modern-authentication.md) gösterir.
 
-## <a name="using-hybrid-modern-authentication-with-outlook-for-ios-and-android"></a>iOS ve Android için Outlook ile karma Modern Kimlik Doğrulama'ı kullanma
+## <a name="using-hybrid-modern-authentication-with-outlook-for-ios-and-android"></a>iOS ve Android için Outlook ile karma Modern Kimlik Doğrulaması kullanma
 
-TCP 443 üzerinde Exchange sunucusu kullanan şirket içi müşteriysiniz, aşağıdaki IP aralıklarından ağ trafiğine izin ver:
+TCP 443'te Exchange sunucusu kullanan bir şirket içi müşteriyseniz, aşağıdaki IP aralıklarından gelen ağ trafiğine izin verin:
 
 ```console
 52.125.128.0/20
 52.127.96.0/23
 ```
 
-Bu IP adresi aralıkları, Adres Defteri IP Adresi ve URL Web hizmetine dahil [Office 365 uç noktalar altında da belge edilir](/microsoft-365/enterprise/additional-office365-ip-addresses-and-urls).
+Bu IP adresi aralıkları, [Office 365 IP Adresi ve URL Web hizmetine dahil olmayan ek uç noktalar](/microsoft-365/enterprise/additional-office365-ip-addresses-and-urls) bölümünde de belgelenmiştir.
 
 ## <a name="related-topics"></a>İlgili konular
 
-[Özel bağlantıdan/ITAR'dan vNext'e Office 365 için Modern Kimlik Doğrulama yapılandırma gereksinimleri](/exchange/troubleshoot/modern-authentication/modern-authentication-configuration)
+[Office 365 ayrılmış/ITAR'dan vNext'e geçiş için Modern Kimlik Doğrulama yapılandırma gereksinimleri](/exchange/troubleshoot/modern-authentication/modern-authentication-configuration)

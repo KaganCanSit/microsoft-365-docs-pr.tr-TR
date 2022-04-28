@@ -1,8 +1,8 @@
 ---
-title: PowerShell SharePoint Online site gruplarını yönetme
+title: PowerShell ile SharePoint Çevrimiçi site gruplarını yönetme
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 12/17/2019
 audience: Admin
 ms.topic: landing-page
@@ -19,34 +19,34 @@ ms.custom:
 - SPO_Content
 - seo-marvel-apr2020
 ms.assetid: d0d3877a-831f-4744-96b0-d8167f06cca2
-description: Bu makalede, Microsoft 365 Online site gruplarını yönetmek SharePoint PowerShell kullanımı yordamlarını bulabilirsiniz.
-ms.openlocfilehash: 393771fec5346b10d76bbe5af471ca3dd42ebf80
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+description: Bu makalede, SharePoint Çevrimiçi site gruplarını yönetmek üzere Microsoft 365 için PowerShell kullanma yordamlarını bulabilirsiniz.
+ms.openlocfilehash: 411ab477668b7956a63843d0b58b8d6d9bfc9059
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63681226"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65096446"
 ---
-# <a name="manage-sharepoint-online-site-groups-with-powershell"></a>PowerShell SharePoint Online site gruplarını yönetme
+# <a name="manage-sharepoint-online-site-groups-with-powershell"></a>PowerShell ile SharePoint Çevrimiçi site gruplarını yönetme
 
-*Bu makale hem son hem de Microsoft 365 Kurumsal hem de Office 365 Kurumsal.*
+*Bu makale hem Microsoft 365 Kurumsal hem de Office 365 Kurumsal için geçerlidir.*
 
-Microsoft 365 yönetim merkezi Online site gruplarınızı yönetmek için Microsoft 365 için PowerShell SharePoint de kullanabilirsiniz.
+Microsoft 365 yönetim merkezi kullanabilmenize rağmen, SharePoint Çevrimiçi site gruplarınızı yönetmek için Microsoft 365 için PowerShell'i de kullanabilirsiniz.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Bu makaledeki yordamlar için SharePoint Online'a bağlanmanız gerekir. Yönergeler için bkz. [Bağlan Online PowerShell SharePoint e yükleme](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
+Bu makaledeki yordamlar, SharePoint Online'a bağlanmanızı gerektirir. Yönergeler için bkz. [Çevrimiçi PowerShell'i SharePoint için Bağlan](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
 
-## <a name="view-sharepoint-online-with-powershell-for-microsoft-365"></a>Microsoft 365 için PowerShell ile SharePoint Online'Microsoft 365
+## <a name="view-sharepoint-online-with-powershell-for-microsoft-365"></a>Microsoft 365 için PowerShell ile SharePoint Online'i görüntüleme
 
-Web SharePoint Yönetim Merkezi'nde site gruplarını yönetmek için kullanımı kolay bazı yöntemler vardır. Örneğin, site için gruplara ve grup üyelerine bakmak istediğiniz varsayalım `https://litwareinc.sharepoint.com/sites/finance` . İşte yapmak için şunları yapacaksınız:
+SharePoint Online yönetim merkezinde site gruplarını yönetmek için bazı kolay kullanım yöntemleri vardır. Örneğin, sitenin gruplarına ve grup üyelerine `https://litwareinc.sharepoint.com/sites/finance` bakmak istediğinizi varsayalım. Yapmanız gerekenler şunlardır:
 
-1. Genel SharePoint merkezinde Etkin <a href="https://go.microsoft.com/fwlink/?linkid=2185220" target="_blank">**siteler'i seçin**</a> ve sonra da sitenin URL'sini seçin.
-2. Site sayfasında, Seçenekler <a href="https://go.microsoft.com/fwlink/?linkid=2185072" target="_blank">**Ayarlar**</a> (sayfanın sağ üst köşesinde bulunur) öğesini ve sonra da **Site izinleri'ne tıklayın**.
+1. SharePoint yönetim merkezinde <a href="https://go.microsoft.com/fwlink/?linkid=2185220" target="_blank">**Etkin siteler'i**</a> ve ardından sitenin URL'sini seçin.
+2. Site sayfasında <a href="https://go.microsoft.com/fwlink/?linkid=2185072" target="_blank">**Ayarlar**</a> seçin (sayfanın sağ üst köşesinde bulunur) ve ardından **Site izinleri'ni** seçin.
 
-Ardından, bakmak istediğiniz bir sonraki site için işlemi tekrarlayın.
+Ardından, bakmak istediğiniz sonraki site için işlemi yineleyin.
 
-Microsoft 365 için PowerShell ile grupların listesini Microsoft 365 aşağıdaki komutları kullanabilirsiniz:
+Microsoft 365 için PowerShell ile grupların listesini almak için aşağıdaki komutları kullanabilirsiniz:
 
 ```powershell
 $siteURL = "https://litwareinc.sharepoint.com/sites/finance"
@@ -59,22 +59,22 @@ foreach ($y in $x)
     }
 ```
 
-SharePoint Online Yönetim Kabuğu komut isteminde bu komut SharePoint çalıştırabilirsiniz:
+SharePoint Online Management Shell komut isteminde bu komut kümesini çalıştırmanın iki yolu vardır:
 
-- Komutları Not Defteri (veya başka bir metin düzenleyicisine) kopyalayın, **$siteURL** değişkeninin değerini değiştirebilir, komutları seçin ve sonra da SharePoint Çevrimiçi Yönetim Kabuğu komut istemine yapıştırın. Bunu yapmak için, PowerShell komut isteminde durur **>>** . Komutu yürütmek için Enter tuşuna `foreach` basın.<br/>
-- Komutları Not Defteri (veya başka bir metin düzenleyicisine) kopyalayın, **$siteURL** değişkeninin değerini değiştirebilir ve sonra bu metin dosyasını bir adla ve .ps1 uzantısıyla uygun bir klasöre kaydedin. Ardından, betiği, yolunu SharePoint dosya adını belirterek Çevrimiçi Yönetim Kabuğu komut isteminden çalıştırın. İşte örnek bir komut:
+- Komutları Not Defteri (veya başka bir metin düzenleyicisine) kopyalayın, **$siteURL** değişkeninin değerini değiştirin, komutları seçin ve SharePoint Çevrimiçi Yönetim Kabuğu komut istemine yapıştırın. Bunu yaptığınızda, PowerShell bir **>>** istemde durur. Komutu yürütmek için Enter tuşuna `foreach` basın.<br/>
+- Komutları Not Defteri (veya başka bir metin düzenleyicisine) kopyalayın, **$siteURL** değişkeninin değerini değiştirin ve ardından bu metin dosyasını bir adla ve .ps1 uzantısıyla uygun bir klasöre kaydedin. Ardından, yolunu ve dosya adını belirterek SharePoint Çevrimiçi Yönetim Kabuğu komut isteminden betiği çalıştırın. Aşağıda örnek bir komut verilmiştir:
 
 ```powershell
 C:\Scripts\SiteGroupsAndUsers.ps1
 ```
 
-Her iki durumda da, aşağıdakine benzer bir şey görüyor gerekir:
+Her iki durumda da şuna benzer bir şey görmeniz gerekir:
 
-![SharePoint Online site grupları.](../media/SPO-site-groups.png)
+![çevrimiçi site gruplarını SharePoint.](../media/SPO-site-groups.png)
 
-Bunlar, site için oluşturulmuş tüm gruplar ve `https://litwareinc.sharepoint.com/sites/finance`bu gruplara atanan tüm kullanıcılardır. Grup adlarını üyelerinden ayırmanıza yardımcı olmak için grup adları sarıdır.
+Bunlar, sitesi `https://litwareinc.sharepoint.com/sites/finance`için oluşturulan tüm gruplar ve bu gruplara atanan tüm kullanıcılardır. Grup adlarını üyelerinden ayırmanıza yardımcı olması için grup adları sarı renktedir.
 
-Başka bir örnek olarak, bu komut kümesi tüm gruplarınızı ve tüm Grup üyeliklerini listelemektedir SharePoint Online siteleriniz için.
+Başka bir örnek olarak, SharePoint Online sitelerinizin tümü için grupları ve tüm grup üyeliklerini listeleyen bir komut kümesi aşağıda verilmiştir.
 
 ```powershell
 $x = Get-SPOSite
@@ -94,12 +94,12 @@ foreach ($y in $x)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Bağlan Online PowerShell SharePoint e geri ödeme](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
+[Çevrimiçi PowerShell'i SharePoint için Bağlan](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
 
-[PowerShell SharePoint ve kullanıcı ekleme](create-sharepoint-sites-and-add-users-with-powershell.md)
+[PowerShell ile SharePoint Online siteleri oluşturma ve kullanıcı ekleme](create-sharepoint-sites-and-add-users-with-powershell.md)
 
-[PowerShell SharePoint Online kullanıcılarını ve gruplarını yönetme](manage-sharepoint-users-and-groups-with-powershell.md)
+[PowerShell ile SharePoint Çevrimiçi kullanıcıları ve grupları yönetme](manage-sharepoint-users-and-groups-with-powershell.md)
 
-[PowerShell Microsoft 365'i yönetme](manage-microsoft-365-with-microsoft-365-powershell.md)
+[PowerShell ile Microsoft 365’i yönetme](manage-microsoft-365-with-microsoft-365-powershell.md)
 
-[Microsoft 365 için PowerShell ile çalışmaya Microsoft 365](getting-started-with-microsoft-365-powershell.md)
+[Microsoft 365 için PowerShell'i kullanmaya başlama](getting-started-with-microsoft-365-powershell.md)

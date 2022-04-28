@@ -1,8 +1,8 @@
 ---
-title: ExpressRoute ile ağ planlama Office 365
+title: Office 365 için ExpressRoute ile Ağ planlaması
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 2/14/2018
 audience: ITPro
 ms.topic: conceptual
@@ -19,209 +19,209 @@ search.appverid:
 - MOE150
 - BCS160
 ms.assetid: 103208f1-e788-4601-aa45-504f896511cd
-description: Bu makalede, İş için Azure ExpressRoute hakkında bilgi Office 365 ve Ağ planlama için nasıl kullanacağız?
-ms.openlocfilehash: d411d44ffe08da684b3cbca9a9449c4d04126a39
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+description: Bu makalede, Office 365 için Azure ExpressRoute hakkında bilgi edinecek ve ağ planlaması için nasıl kullanacağınızı öğreneceksiniz.
+ms.openlocfilehash: a284472ad84139a5e76eeab38121d62cf3757829
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63019516"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65095652"
 ---
-# <a name="network-planning-with-expressroute-for-office-365"></a>ExpressRoute ile ağ planlama Office 365
+# <a name="network-planning-with-expressroute-for-office-365"></a>Office 365 için ExpressRoute ile Ağ planlaması
 
-*Bu makale hem son hem de Microsoft 365 Kurumsal hem de Office 365 Kurumsal.*
+*Bu makale hem Microsoft 365 Kurumsal hem de Office 365 Kurumsal için geçerlidir.*
 
-Dış Kullanıcılar için ExpressRoute Office 365 ağınız ve Microsoft'un veri merkezleri arasında katman 3 bağlantısı sağlar. Devreler, bağlantı hatlarının ön uç sunucularının Kenarlık Ağ Geçidi Protokolü (BGP) yönlendirme Office 365 tanıtımlarını kullanır. Şirket içi cihazlarınız açısından, cihazlarınız İnternet'e doğru TCP/IP yolunu seçmeleri gereken Office 365, Azure ExpressRoute İnternet'in alternatifi olarak görülür.
+Office 365 için ExpressRoute, ağınızla Microsoft'un veri merkezleri arasında katman 3 bağlantısı sağlar. Devreler, Office 365 ön uç sunucularının Sınır Ağ Geçidi Protokolü (BGP) yol tanıtımlarını kullanır. Şirket içi cihazlarınız açısından bakıldığında, Office 365 için doğru TCP/IP yolunu seçmeleri gerektiğinde, Azure ExpressRoute İnternet'e alternatif olarak görülür.
   
-Azure ExpressRoute, Microsoft'un veri merkezlerinde yer alan belirli bir dizi desteklenen özellik ve Office 365 doğrudan bir yol ekler. Azure ExpressRoute, Microsoft veri merkezleriyle veya etki alanı ad çözümlemesi gibi temel İnternet hizmetleriyle İnternet bağlantısının yerini vermez. Azure ExpressRoute ve İnternet devreleri güvenli ve yedekli olması gerekir.
+Azure ExpressRoute, Microsoft'un veri merkezlerindeki Office 365 sunucuları tarafından sunulan belirli bir desteklenen özellik ve hizmet kümesine doğrudan bir yol ekler. Azure ExpressRoute, Microsoft veri merkezlerine İnternet bağlantısının veya etki alanı adı çözümlemesi gibi temel İnternet hizmetlerinin yerini almaz. Azure ExpressRoute ve İnternet bağlantı hatlarınız güvenli ve yedekli olmalıdır.
   
-Aşağıdaki tabloda, İnternet ile Azure ExpressRoute bağlantıları arasındaki bağlantı sayısı arasındaki bazı farklar, çalışma Office 365.
+Aşağıdaki tabloda, Office 365 bağlamında İnternet ile Azure ExpressRoute bağlantıları arasındaki birkaç fark vurgulanır.
 
-|**Ağ planlama farklılıkları**|**İnternet ağ bağlantısı**|**ExpressRoute ağ bağlantısı**|
+|**Ağ planlamadaki farklar**|**İnternet ağ bağlantısı**|**ExpressRoute ağ bağlantısı**|
 |:-----|:-----|:-----|
-| Gerekli İnternet hizmetlerine erişim;  <br/>  DNS ad çözümlemesi  <br/>  Sertifika iptal doğrulaması  <br/>  İçerik Teslim Ağları (CDN)  <br/> |Evet  <br/> |Microsoft'a ait DNS ve/veya CDN istekleri ExpressRoute ağına sahip olabilir.  <br/> |
-| Şu Office 365 hizmetlere erişim;  <br/>  Exchange Online  <br/>  SharePoint Online  <br/>  Skype Kurumsal Çevrimiçi  <br/>  Office tarayıcıda yeniden kullanma  <br/>  Office 365 Portalı ve Kimlik Doğrulaması  <br/> |Evet, tüm uygulamalar ve özellikler  <br/> |Evet, [belirli uygulamalar ve özellikler](./urls-and-ip-address-ranges.md) <br/> |
+| Gerekli internet hizmetlerine erişim;  <br/>  DNS ad çözümlemesi  <br/>  Sertifika iptal doğrulaması  <br/>  İçerik Teslim Ağları (CDN'ler)  <br/> |Evet  <br/> |Microsoft'a ait DNS ve/veya CDN altyapısına yönelik istekler ExpressRoute ağını kullanabilir.  <br/> |
+| Office 365 hizmetlerine erişim;  <br/>  Exchange Online  <br/>  SharePoint Online  <br/>  Skype Kurumsal Çevrimiçi  <br/>  Tarayıcıda Office  <br/>  Office 365 Portalı ve Kimlik Doğrulaması  <br/> |Evet, tüm uygulamalar ve özellikler  <br/> |Evet, [belirli uygulamalar ve özellikler](./urls-and-ip-address-ranges.md) <br/> |
 |Çevrede şirket içi güvenlik.  <br/> |Evet  <br/> |Evet  <br/> |
-|Yüksek kullanılabilirlik planlaması.  <br/> |Alternatif İnternet ağ bağlantısı üzerinden başarısız olun  <br/> |Alternatif ExpressRoute bağlantısına yük devretme  <br/> |
-|Öngörülebilir bir ağ profiliyle doğrudan bağlantı.  <br/> |Hayır  <br/> |Evet  <br/> |
+|Yüksek kullanılabilirlik planlaması.  <br/> |Alternatif bir İnternet ağ bağlantısına yük devretme  <br/> |Alternatif bir ExpressRoute bağlantısına yük devretme  <br/> |
+|Tahmin edilebilir bir ağ profiliyle doğrudan bağlantı.  <br/> |Hayır  <br/> |Evet  <br/> |
 |IPv6 bağlantısı.  <br/> |Evet  <br/> |Evet  <br/> |
 
-Daha fazla ağ planlama kılavuzu için aşağıdaki başlıkları genişletin. Ayrıca, daha derine inen bir Eğitim serisi için 10 bölüm [Office 365 Azure ExpressRoute](https://channel9.msdn.com/series/aer) kaydettik.
+Daha fazla ağ planlama kılavuzu için aşağıdaki başlıkları genişletin. Ayrıca daha derine inen Office 365 Eğitim serisi için 10 parçalık bir [Azure ExpressRoute](https://channel9.msdn.com/series/aer) kaydettik.
 
 ## <a name="existing-azure-expressroute-customers"></a>Mevcut Azure ExpressRoute müşterileri
 
-Mevcut Azure ExpressRoute devresini kullanıyorsanız ve bu devre üzerinden Office 365 bağlantısı eklemek istiyorsanız, devrelerin sayısına, çıkış konumlarının ve devrelerin boyutuna bakarak bunların Office 365 kullanımınıza uygun olduğundan emin olun. Çoğu müşteri fazladan bant genişliği gerektirir ve çok sayıda da daha fazla devre gerektirir.
+Mevcut bir Azure ExpressRoute bağlantı hattı kullanıyorsanız ve bu bağlantı hattı üzerinden Office 365 bağlantı hattı eklemek istiyorsanız, Office 365 kullanımınızın gereksinimlerini karşıladığından emin olmak için devrelerin sayısına, çıkış konumlarına ve bağlantı hatlarının boyutuna bakmanız gerekir. Müşterilerin çoğu fazladan bant genişliğine ve çoğu daha fazla bağlantı hattına ihtiyaç duyar.
   
-Mevcut Azure ExpressRoute devreleri Office 365 erişimi [etkinleştirmek için,](/azure/expressroute/how-to-routefilter-portal) yol filtrelerini yapılandırarak yol filtrelerini Office 365 erişilebilir olmasını sekleyebilirsiniz.
+Mevcut Azure ExpressRoute bağlantı hatlarınız üzerinden Office 365 erişimi etkinleştirmek için, Office 365 hizmetlerinin erişilebilir olduğundan emin olmak için [yol filtrelerini yapılandırın](/azure/expressroute/how-to-routefilter-portal).
   
-Azure ExpressRoute aboneliği müşteri odaklıdır; bu da aboneliklerin müşterilere bağlı olduğu anlamına gelir. Müşteri olarak, birden çok Azure ExpressRoute devreniz olabilir ve bu devreler üzerinden birçok Microsoft bulut kaynağına erişebilirsiniz. Örneğin, bir çift yedekli Azure ExpressRoute devresi üzerinden Azure tarafından barındırılan bir sanal makineye, Office 365 test kiracısına ve Office 365 üretim kiracısına erişmeyi seçebilirsiniz.
+Azure ExpressRoute aboneliği müşteri odaklıdır ve bu da aboneliklerin müşterilere bağlı olduğu anlamına gelir. Müşteri olarak birden çok Azure ExpressRoute bağlantı hattınız olabilir ve bu bağlantı hatları üzerinden birçok Microsoft bulut kaynağına erişebilirsiniz. Örneğin, azure tarafından barındırılan bir sanal makineye, Office 365 test kiracısına ve bir Office 365 üretim kiracısına bir çift yedekli Azure ExpressRoute bağlantı hattı üzerinden erişmeyi seçebilirsiniz.
   
-Bu tabloda, devreleri üzerinden uygulamaya koyabilirsiniz iki eşleme ilişkisi türü özetler.
+Bu tabloda, devreleriniz üzerinde uygulamayı seçebileceğiniz iki tür eşleme ilişkisi özetlenmiştir.
 
 |**Eşleme ilişkisi**|**Azure Özel**|**Microsoft**|
 |:-----|:-----|:-----|
-|**Hizmetler** <br/> |IaaS: Azure Sanal Makineleri  <br/> |PaaS: Azure genel hizmetleri  <br/> SaaS: Office 365  <br/> Saas: Dynamics 365  <br/> |
-|Bağlantının başlatı**** <br/> |Müşteriden Microsoft'a  <br/> Microsoft'u Müşteriden Müşteriye  <br/> |Müşteriden Microsoft'a  <br/> Microsoft'u Müşteriden Müşteriye  <br/> |
-|**QoS desteği** <br/> |QoS Yok  <br/> |<sup>QoS1</sup> <br/> |
+|**Hizmetleri** <br/> |IaaS: Azure Sanal Makineler  <br/> |PaaS: Azure genel hizmetleri  <br/> SaaS: Office 365  <br/> SaaS: Dynamics 365  <br/> |
+|Bağlantı başlatma*** <br/> |Müşteriden Microsoft'a  <br/> Microsoft'ta Müşteri  <br/> |Müşteriden Microsoft'a  <br/> Microsoft'ta Müşteri  <br/> |
+|**QoS desteği** <br/> |QoS yok  <br/> |<sup>QoS1</sup> <br/> |
 
-<sup>1 </sup> QoS şu Skype Kurumsal anda destekle almaktadır.
+<sup>1 </sup> QoS yalnızca şu anda Skype Kurumsal destekler.
   
 ## <a name="bandwidth-planning-for-azure-expressroute"></a>Azure ExpressRoute için bant genişliği planlaması
 
-Her Office 365 müşterisi, her konumdaki kişi sayısına, her Office 365 uygulamasında ne kadar etkin olduklarının yanı sıra şirket içi veya karma donanımın kullanımı ve ağ güvenlik yapılandırmaları gibi diğer faktörlere bağlı olarak benzersiz bant genişliği gereksinimlerine sahiptir.
+Her Office 365 müşterinin her konumdaki kişi sayısına, her Office 365 uygulamasında ne kadar etkin olduklarına ve şirket içi veya hibrit ekipman kullanımı ve ağ güvenlik yapılandırmaları gibi diğer faktörlere bağlı olarak benzersiz bant genişliği gereksinimleri vardır.
   
-Bant genişliğinin çok az olması tıkanıklığı, verilerin yeniden iletir ve öngörülemeyen gecikmelere neden olur. Bant genişliğinin çok fazla olması gereksiz bir maliyete neden olur. Mevcut bir ağ üzerinde, bant genişliği çoğunlukla devrede bulunan yüzde olarak kullanılabilir oda miktarı olarak adlandırılır. Yüzde 10 olması büyük olasılıkla tıkanıklığı ve %80 olması genellikle gereksiz maliyet anlamına gelir. Tipik hedef hedef ayırmalar %20 ile %50 arasındadır.
+Bant genişliğinin çok az olması tıkanıklık, verilerin yeniden iletimleri ve öngörülemeyen gecikmelere neden olur. Çok fazla bant genişliğine sahip olmak gereksiz maliyete neden olur. Mevcut bir ağda bant genişliği genellikle bağlantı hattındaki kullanılabilir oda miktarı açısından yüzde olarak adlandırılır. %10 tuvalete sahip olmak büyük olasılıkla tıkanıklıklara neden olur ve %80'lik bir oda olması genellikle gereksiz maliyet anlamına gelir. Tipik oda başı hedef ayırmaları %20 ile %50 arasındadır.
   
-Doğru bant genişliği düzeyini bulmak için, en iyi mekanizma mevcut ağ kullanımınızı test etmektir. Her ağ yapılandırması ve uygulamaları bazı şekillerde benzersiz olduğu için, kullanımı ve ihtiyacı doğru ölçmenin tek yolu bu olmalıdır. Ölçümlerken ağ gereksinimlerini anlamak için toplam bant genişliği tüketimine, gecikme süresine ve TCP tıkanıklığına özellikle dikkat etmek gerekir.
+Doğru bant genişliği düzeyini bulmak için en iyi mekanizma mevcut ağ tüketiminizi test etmektir. Her ağ yapılandırması ve uygulaması bazı yönlerden benzersiz olduğundan, gerçek bir kullanım ve ihtiyaç ölçüsü almanın tek yolu budur. Ölçüm yaparken ağ gereksinimlerinizi anlamak için toplam bant genişliği tüketimine, gecikme süresine ve TCP tıkanıklığına dikkat etmek istersiniz.
   
-Tüm ağ uygulamalarını içeren tahmini bir taban çizgisiniz olduktan sonra, gerçek kullanımı belirlemek için kuruluş genelinde farklı kişi profillerini oluşturan küçük bir grupla pilot Office 365 ve her ofis konumu için gereken bant genişliği miktarını tahmin etmek için bu iki ölçümü kullanın. Testinde bulunan gecikme süresi veya TCP tıkanıklığı sorunları varsa, Office 365 kullanan kişilerin çıkışını daha yakına taşımanız veya SSL şifre çözme/denetim gibi yoğun ağ taramasını kaldırmanız gerekir.
+Tüm ağ uygulamalarını içeren tahmini bir temele sahip olduğunuzda, gerçek kullanımı belirlemek için kuruluşunuzdaki farklı kişi profillerini içeren küçük bir grupla pilot Office 365 ve her ofis konumu için gereken bant genişliği miktarını tahmin etmek için iki ölçümü kullanın. Testinizde herhangi bir gecikme süresi veya TCP tıkanıklığı sorunu varsa, Office 365 kullanarak çıkışı kişilere yaklaştırmanız veya SSL şifre çözme/denetleme gibi yoğun ağ taramasını kaldırmanız gerekebilir.
   
-Önerilen ağ işleme türüyle ilgili tüm önerilerimiz hem ExpressRoute hem de İnternet devreleri için geçerlidir. Aynı şey performans ayarlama sitemizde bulunan diğer [kılavuzlar için de aynısı olur](./network-planning-and-performance.md).
+Önerilen ağ işleme türüyle ilgili tüm önerilerimiz hem ExpressRoute hem de İnternet bağlantı hatları için geçerlidir. Aynı durum [, performans ayarlama sitemizdeki](./network-planning-and-performance.md) yönergelerin geri kalanı için de geçerlidir.
   
-## <a name="applying-security-controls-to-azure-expressroute-for-office-365-scenarios"></a>Daha fazla bilgi için Azure ExpressRoute'a güvenlik Office 365 uygulama
+## <a name="applying-security-controls-to-azure-expressroute-for-office-365-scenarios"></a>Office 365 senaryoları için Azure ExpressRoute'a güvenlik denetimleri uygulama
 
-Azure ExpressRoute bağlantısının güvenliğini sağlama, İnternet bağlantısının güvenliğini sağlama ile aynı ilkelerle başlar. Birçok müşteri, şirket içi ağlarını Kendi Microsoft bulutlarına ve diğer Microsoft bulutlarına bağlarken ExpressRoute yolu boyunca ağ Office 365 denetimleri dağıtmayı tercih eder. Bu denetimler güvenlik duvarları, uygulama aracıları, veri sızıntısını önleme, izinsiz giriş algılaması önleme, izinsiz giriş önleme sistemleri gibi özellikleri içerebilir. Birçok durumda, müşteriler şirket içinden başlatılan Microsoft'a olan trafiğe ve Microsoft'tan başlatılan trafikle müşterinin şirket içi ağına gelen trafiğe ve şirket içinden başlatılan ve genel bir İnternet hedefine olan trafik için farklı denetim düzeyleri uygulamaz.
+Azure ExpressRoute bağlantısının güvenliğini sağlamak, İnternet bağlantısının güvenliğini sağlamakla aynı ilkelerle başlar. Birçok müşteri, şirket içi ağlarını Office 365 ve diğer Microsoft bulutlarına bağlayan ExpressRoute yolu boyunca ağ ve çevre denetimleri dağıtmayı tercih eder. Bu denetimler güvenlik duvarları, uygulama proxy'leri, veri sızıntısını önleme, izinsiz giriş algılama, izinsiz girişi önleme sistemleri vb. içerebilir. Çoğu durumda müşteriler şirket içinden Microsoft'a giden trafiğe, Microsoft'tan müşteri şirket içi ağına giden trafikle şirket içi ortamdan genel bir İnternet hedefine giden trafik arasında farklı denetim düzeyleri uygular.
   
-Aşağıda, güvenliği dağıtmayı seçtiğiniz [ExpressRoute bağlantı modeliyle tümleştirmeye örnek](/azure/expressroute/expressroute-connectivity-models) olarak birkaç örnek verilmiştir.
+Dağıtımı seçtiğiniz [ExpressRoute bağlantı modeliyle](/azure/expressroute/expressroute-connectivity-models) güvenliği tümleştirmeye yönelik birkaç örnek aşağıda verilmiştir.
 
 |**ExpressRoute tümleştirme seçeneği**|**Ağ güvenliği çevre modeli**|
 |:-----|:-----|
-|Bulut değişiminde birlikte konumlandı  <br/> |ExpressRoute bağlantısının kurul olduğu birlikte yükleme tesisinde yeni güvenlik/çevre altyapısını yükleyin veya mevcut altyapıyı kullanın.  <br/> Birlikte yükleme tesisini yalnızca yönlendirme/bağlantı amacıyla kullanın ve birlikte yükleme tesisinden gelen bağlantıları şirket içi güvenlik/çevre altyapısına taşıyın.  <br/> |
-|Noktadan Noktaya Ethernet  <br/> |Noktadan Noktaya ExpressRoute bağlantısını mevcut şirket içi güvenlik/çevre altyapısı konumuyla sonlandırın.  <br/> ExpressRoute yoluna özgü yeni bir güvenlik/çevre altyapısı yükleyin ve Noktadan Noktaya bağlantıyı orada sonlandırın.  <br/> |
-|Any-to-Any IPVPN  <br/> |Bağlantıda expressRoute için kullanılan IPVPN'e çıkış yapılan tüm konumlarda mevcut bir şirket içi güvenlik/çevre altyapısını Office 365 kullanın.  <br/> ExpressRoute'ta güvenlik/çevre Office 365 üzere belirlenmiş belirli şirket içi konumlara expressRoute için kullanılan IPVPN'de geri tarak.  <br/> |
+|Bulut değişiminde birlikte bulunma  <br/> |ExpressRoute bağlantısının kurulduğu ortak konum tesisinde yeni bir güvenlik/çevre altyapısı yükleyin veya mevcut güvenlik/çevre altyapısını kullanın.  <br/> Birlikte bulundurma tesisini yalnızca yönlendirme/ara bağlantı amaçları için kullanın ve birlikte bulundurma tesisinden şirket içi güvenlik/çevre altyapısına geri taşıma bağlantıları.  <br/> |
+|Noktadan Noktaya Ethernet  <br/> |Mevcut şirket içi güvenlik/çevre altyapısı konumunda Noktadan Noktaya ExpressRoute bağlantısını sonlandırın.  <br/> ExpressRoute yoluna özgü yeni güvenlik/çevre altyapısı yükleyin ve noktadan noktaya bağlantıyı orada sonlandırın.  <br/> |
+|Herhangi bir IPVPN'e  <br/> |Office 365 bağlantısı için ExpressRoute için kullanılan IPVPN'e çıkış yapılan tüm konumlarda mevcut bir şirket içi güvenlik/çevre altyapısı kullanın.  <br/> Güvenlik/çevre görevi görecek şekilde belirlenen belirli şirket içi konumlara Office 365 için ExpressRoute için kullanılan IPVPN'i saça sabitle.  <br/> |
 
-Bazı hizmet sağlayıcılar, Azure ExpressRoute ile tümleştirme çözümlerinin bir parçası olarak yönetilen güvenlik/çevre işlevselliği de sunar.
+Bazı hizmet sağlayıcıları, Azure ExpressRoute ile tümleştirme çözümlerinin bir parçası olarak yönetilen güvenlik/çevre işlevleri de sunar.
   
-Çevre bağlantıları için ExpressRoute'da kullanılan ağ/güvenlik çevresi seçeneklerinin topolojide yerleşimi dikkate alınırken, Office 365 noktalar şunlardır:
+Office 365 bağlantıları için ExpressRoute için kullanılan ağ/güvenlik çevre seçeneklerinin topoloji yerleşimi göz önünde bulundurulduğunda, aşağıda dikkat edilmesi gereken ek noktalar bulunmaktadır
   
-- Ağ/güvenlik denetimlerinin derinliği ve türü, kullanıcı deneyiminin performansını ve Office 365 etkileyebilir.
+- Derinlik ve tür ağ/güvenlik denetimleri, Office 365 kullanıcı deneyiminin performansını ve ölçeklenebilirliğini etkileyebilir.
 
-- Giden (şirket içi\> Microsoft) ve gelen (Microsoft şirket\> içi) [etkinleştirildiyse] akışların farklı gereksinimleri olabilir. Bunlar büyük olasılıkla genel İnternet hedeflere giden bağlantılardan farklıdır.
+- Giden (şirket içi-Microsoft\>) ve gelen (microsoft-şirket\> içi) akışların [etkinse] akışları farklı gereksinimlere sahip olabilir. Bunlar büyük olasılıkla genel İnternet hedeflerine giden hedeflerden farklıdır.
 
-- Office 365 ister İnternet üzerinden ExpressRoute aracılığıyla yönlendirildi olsun, bağlantı noktası/protokoller ve gerekli IP alt ağlarının gereksinimleri Office 365 aynıdır.
+- trafiğin Office 365 için ExpressRoute üzerinden veya İnternet üzerinden yönlendirilmesi fark etmeksizin bağlantı noktaları/protokoller ve gerekli IP alt ağları için Office 365 gereksinimleri aynıdır.
 
-- Kullanıcıyla Office 365 hizmeti arasındaki  uç  uç ağı müşterinin ağ/güvenlik denetimlerinin topolojik yerleşimi belirler ve ağ gecikmesi ve tıkanıklığı üzerinde önemli bir etki sağlar.
+- Müşteri ağı/güvenlik denetimlerinin topolojik yerleşimi, kullanıcı ve Office 365 hizmeti arasındaki nihai uçtan uca ağı belirler ve ağ gecikmesi ve tıkanıklığı üzerinde önemli bir etkiye sahip olabilir.
 
-- Müşterilerin güvenlik/çevre topolojilerini yedekli çalışma, yüksek kullanılabilirlik ve olağanüstü durum kurtarma için en iyi yöntemlere uygun olarak Office 365 için ExpressRoute ile birlikte kullanmaları önerilir.
+- Müşterilerin, yedeklilik, yüksek kullanılabilirlik ve olağanüstü durum kurtarma için en iyi yöntemlere uygun olarak Office 365 için ExpressRoute ile kullanılacak güvenlik/çevre topolojilerini tasarlamaları teşvik edilir.
 
-Burada, farklı Azure ExpressRoute bağlantı seçeneklerini yukarıda ele alan çevre güvenlik modelleriyle karşılaştıran bir Woodgrove Bank örneği ve bulunmaktadır.
+Aşağıda, yukarıda açıklanan çevre güvenlik modelleri ile farklı Azure ExpressRoute bağlantı seçeneklerini karşılaştıran woodgrove bank örneği verilmiştir.
   
-### <a name="example-1-securing-azure-expressroute"></a>Örnek 1: Azure ExpressRoute'un güvenliğini sağlama
+### <a name="example-1-securing-azure-expressroute"></a>Örnek 1: Azure ExpressRoute güvenliğini sağlama
   
-Woodgrove Bank, Azure ExpressRoute'u uygulamaya konur ve [Office 365 için ExpressRoute](routing-with-expressroute.md) ile yönlendirmeye yönelik en iyi mimariyi planladikten sonra, bant genişliği gereksinimlerini anlamak için yukarıdaki kılavuzu kullandıktan sonra, çevrenin güvenliğini sağlamak için en iyi yöntemi belirler.
+Woodgrove Bank, Azure ExpressRoute'u uygulamayı düşünüyor ve [Office 365 için ExpressRoute ile Yönlendirme için](routing-with-expressroute.md) en uygun mimariyi planladıktan sonra ve bant genişliği gereksinimlerini anlamak için yukarıdaki kılavuzu kullandıktan sonra çevrelerinin güvenliğini sağlamak için en iyi yöntemi belirler.
   
-Woodgrove gibi birkaç kıtada konumları olan çok uluslu bir kuruluş için, güvenliğin tüm çevrelere yayılması gerekir. Woodgrove için en iyi bağlantı seçeneği, her kıtada çalışanlarının ihtiyaçlarına hizmet sağlamak için dünyanın her yanında çeşitli eşleme konumlarıyla çok noktalı bir bağlantıdır. Her kıtanın içinde yedekli Azure ExpressRoute devreleri vardır ve güvenlik bunların tamama yayılmak gerekir.
+Birden çok kıtada konumları olan çok uluslu bir kuruluş olan Woodgrove için güvenliğin tüm çevrelere yayılması gerekir. Woodgrove için en uygun bağlantı seçeneği, her kıtadaki çalışanlarının ihtiyaçlarına hizmet etmek için dünyanın dört bir yanındaki birden fazla eşleme konumuyla çok noktalı bir bağlantıdır. Her kıtada, kıta içindeki yedekli Azure ExpressRoute bağlantı hatları vardır ve güvenlik bunların tümüne yayılmalıdır.
   
-Woodgrove'un mevcut altyapısı güvenilirdir ve ek çalışmayla başa çıkabilir; bunun sonucunda, Woodgrove Bank Azure ExpressRoute ve İnternet çevre güvenliği için altyapıyı kullanabilir. Durum böyle olmasaydı, Woodgrove mevcut donanımlarına destek olmak veya farklı bir bağlantı türü işlemek için daha fazla donanım satın almak seçebilirdi.
+Woodgrove'un mevcut altyapısı güvenilirdir ve ek işleri gerçekleştirebilir. Bunun sonucunda Woodgrove Bank, Azure ExpressRoute ve internet çevre güvenliği için altyapıyı kullanabilir. Böyle bir durum olmasaydı Woodgrove mevcut ekipmanlarını desteklemek veya farklı bir bağlantı türünü işlemek için daha fazla ekipman satın almayı seçebilirdi.
   
 ## <a name="high-availability-and-failover-with-azure-expressroute"></a>Azure ExpressRoute ile yüksek kullanılabilirlik ve yük devretme
 <a name="BKMK_high-availability"> </a>
 
-ExpressRoute ile birlikte her çıkıştan ExpressRoute sağlayıcınıza en az iki etkin devre sağlanmasını öneririz. Burası, müşterilerin hatalarla sık karşılaşılan bir yeridir ve bir çift etkin/etkin ExpressRoute devresi hazırarak bunu kolayca önlayabilirsiniz. Birçok etkin/etkin İnternet devresi de önerilmez, çünkü Office 365 devreleri yalnızca İnternet üzerinden kullanılabilir.
+ExpressRoute ile her çıkıştan ExpressRoute sağlayıcınıza en az iki etkin bağlantı hattı sağlamanızı öneririz. Burası, müşteriler için hatalar gördüğümüz en yaygın yerdir ve bir çift etkin/etkin ExpressRoute bağlantı hattı sağlayarak bunu kolayca önleyebilirsiniz. Ayrıca, birçok Office 365 hizmeti yalnızca İnternet üzerinden kullanılabilir olduğundan en az iki etkin/etkin İnternet bağlantı hattı öneririz.
   
-Ağ'ın çıkış noktasının içinde, kişilerin kullanılabilirliği algıladığı konusunda önemli bir rol oynarken, diğer birçok cihaz ve devre vardır. Bağlantı senaryolarının bu bölümleri ExpressRoute veya Office 365 SLA'larının kapsamına değildir, ancak  uç hizmet kullanılabilirliği açısından, kurumuz kişilerin algıladığı  uç hizmetlerde önemli bir rol oynar.
+Ağınızın çıkış noktasının içinde, kişilerin kullanılabilirliği nasıl algıladıklarında kritik bir rol oynayan diğer birçok cihaz ve bağlantı hattı vardır. Bağlantı senaryolarınızın bu bölümleri ExpressRoute veya Office 365 SLA'ları kapsamında değildir, ancak kuruluşunuzdaki kişiler tarafından algılanan uçtan uca hizmet kullanılabilirliği açısından kritik bir rol oynar.
   
-Etki alanı kullanan ve bu Office 365 çalışanlara odaklanın; bileşenlerden herhangi bir hata hizmeti kullanan kişilerin deneyimini etkiliyorsa, etkilenen toplam kişi yüzdesini sınırlamanın yollarını bakın. Yük devretme modunun faaliyeti karmaşıksa, kişilerin kurtarma için uzun süreyle sahip olduğunu düşünün ve işlem için basit ve otomatik yük devretme modları olup bakmaz.
+Office 365 kullanan ve çalıştıran kişilere odaklanın. Herhangi bir bileşenin başarısız olması kişilerin hizmeti kullanma deneyimini etkileyecekse, etkilenen kişilerin toplam yüzdesini sınırlamanın yollarını arayın. Bir yük devretme modu operasyonel olarak karmaşıksa, insanların kurtarma için uzun süre yaşadığı deneyimi göz önünde bulundurun ve operasyonel olarak basit ve otomatik yük devretme modlarını arayın.
   
-Ağ, ağ, Office 365 ExpressRoute ve ExpressRoute sağlayıcınızın hepsi farklı kullanılabilirlik düzeylerine sahiptir.
+Ağınızın dışında, Office 365, ExpressRoute ve ExpressRoute sağlayıcınızın tümü farklı kullanılabilirlik düzeylerine sahiptir.
   
 ### <a name="service-availability"></a>Hizmet Kullanılabilirliği
   
-- Office 365 hizmetleri, tek tek hizmetlerin çalışma süresi ve kullanılabilirlik [](/office365/servicedescriptions/office-365-platform-service-description/service-level-agreement)ölçümlerini de içeren iyi tanımlanmış hizmet düzeyi sözleşmelerinin kapsamındadır. Bu tür Office 365 hizmet kullanılabilirlik düzeylerini koruyabilmenin bir nedeni, tek tek bileşenlerin genel Microsoft ağına bağlı olarak birçok Microsoft veri merkezi arasında sorunsuz bir şekilde yük devretmesini sağlamaktır. Bu yük devretme, veri merkezinden ve ağdan birden çok İnternet çıkış noktasına genişletilen ve hizmeti kullanan kişiler açısından sorunsuz yük devretmeye olanak sağlar.
+- Office 365 hizmetleri, tek tek hizmetler için çalışma süresi ve kullanılabilirlik ölçümlerini içeren iyi tanımlanmış [hizmet düzeyi sözleşmeleri](/office365/servicedescriptions/office-365-platform-service-description/service-level-agreement) kapsamındadır. Office 365 bu kadar yüksek hizmet kullanılabilirlik düzeylerini koruyabilmesinin bir nedeni, tek tek bileşenlerin genel Microsoft ağını kullanarak birçok Microsoft veri merkezi arasında sorunsuz bir şekilde yük devretme yapabilmesidir. Bu yük devretme, veri merkezinden ve ağdan birden çok İnternet çıkış noktasına genişletir ve hizmeti kullanan kişilerin perspektifinden sorunsuz bir şekilde yük devretmeyi etkinleştirir.
 
-- ExpressRoute, Microsoft Network Edge ile ExpressRoute sağlayıcısı veya iş ortağı altyapısı arasında, tek tek ayrılmış devrelerde [%99,9 kullanılabilirlik SLA](https://azure.microsoft.com/support/legal/sla/expressroute/v1_0/) sağlar. Bu hizmet düzeyleri, her eşleme konumu için yedekli Microsoft donanımıyla ağ sağlayıcısı donanımı arasında [](/azure/expressroute/expressroute-introduction) iki bağımsız bağlantıdan oluşan ExpressRoute devre düzeyinde uygulanır.
+- ExpressRoute, Microsoft Network Edge ile ExpressRoute sağlayıcısı veya iş ortağı altyapısı arasındaki ayrı ayrılmış devrelerde [%99,9 kullanılabilirlik SLA'sı sağlar](https://azure.microsoft.com/support/legal/sla/expressroute/v1_0/) . Bu hizmet düzeyleri, her eşleme konumunda yedekli Microsoft ekipmanı ile ağ sağlayıcısı ekipmanı arasında [iki bağımsız bağlantıdan](/azure/expressroute/expressroute-introduction) oluşan ExpressRoute bağlantı hattı düzeyinde uygulanır.
 
 ### <a name="provider-availability"></a>Sağlayıcı Kullanılabilirliği
   
-- Microsoft'un hizmet düzeyi düzenlemeleri ExpressRoute sağlayıcınızda veya iş ortağında durur. Bu, kullanılabilirlik düzeyinizi etkileecek seçimlerin ilk olduğu yerdir. Her Microsoft eşleme alanında, ExpressRoute sağlayıcınızın ağ çevreniz ile sağlayıcılarınız arasındaki bağlantıda sunduğu mimari, kullanılabilirlik ve güvenlik özelliklerini yakından değerlendirmeniz gerekir. Yedekli çalışma, eşleme donanımı ve taşıyıcının sağladığı WAN devrelerinin yanı sıra NAT hizmetleri veya yönetilen güvenlik duvarları gibi fazladan değer ek hizmetlerin hem mantıksal hem de fiziksel yönlerine çok dikkat olun.
+- Microsoft'un hizmet düzeyi düzenlemeleri ExpressRoute sağlayıcınızda veya iş ortağınızda durduruluyor. Burası aynı zamanda kullanılabilirlik düzeyinizi etkileyecek seçimler yapabileceğiniz ilk yerdir. ExpressRoute sağlayıcınızın ağ çevreniz ile her Microsoft eşleme konumundaki sağlayıcılarınız arasında sunduğu mimari, kullanılabilirlik ve dayanıklılık özelliklerini yakından değerlendirmeniz gerekir. Yedeklilik, eşleme ekipmanı, taşıyıcı tarafından sağlanan WAN devreleri ve nat hizmetleri veya yönetilen güvenlik duvarları gibi ek değer ekleme hizmetlerinin hem mantıksal hem de fiziksel yönlerine çok dikkat edin.
 
 ### <a name="designing-your-availability-plan"></a>Kullanılabilirlik planınızı tasarlama
   
-Sizin için  uç-uç bağlantı senaryolarınız için yüksek kullanılabilirlik ve kullanım yüksekliğini planlamanızı ve tasarlamanızı Office 365. Bir tasarım;
+Office 365 için uçtan uca bağlantı senaryolarınızda yüksek kullanılabilirlik ve dayanıklılık planlamanızı ve tasarlamanızı kesinlikle öneririz. Tasarım şunları içermelidir:
   
-- Hem İnternet hem de ExpressRoute devreleri dahil tek bir hata noktası yoktur.
+- Hem İnternet hem de ExpressRoute bağlantı hatları dahil olmak üzere tek bir hata noktası yoktur.
 
-- En çok beklenen hata modlarında etkilenen kişi sayısını ve bu etkinin süresini en aza indirme.
+- En çok beklenen hata modları için etkilenen kişi sayısını ve bu etkinin süresini en aza indirme.
 
-- En çok beklenen hata modlarından basit, yinelenebilir ve otomatik kurtarma işlemi için en iyi duruma getirilebilir.
+- En çok beklenen hata modlarından basit, tekrarlanabilir ve otomatik kurtarma işlemi için iyileştirme.
 
-- Yedekli yollar aracılığıyla, önemli bir performans düşüşü olmaksızın ağ trafiğinize ve işlevselliğinize tüm talepleri destekleme.
+- Önemli bir düşüş olmadan, yedekli yollar aracılığıyla ağ trafiğinizin ve işlevselliğinizin tüm taleplerini destekleme.
 
-Bağlantı senaryolarınız, birden çok bağımsız ve etkin ağ yolu için en iyi duruma getirilmiş bir ağ topolojisi Office 365. Bu, yalnızca tek bir cihaz veya donanım düzeyinde yedekli çalışma için iyileştirilmiş bir topolojiden daha iyi bir  uç-bitiş kullanılabilirliği sağlar.
+Bağlantı senaryolarınız, Office 365 için birden çok bağımsız ve etkin ağ yolu için iyileştirilmiş bir ağ topolojisi içermelidir. Bu, yalnızca tek tek cihaz veya ekipman düzeyinde yedeklilik için iyileştirilmiş bir topolojiden daha iyi bir uçtan uca kullanılabilirlik sağlar.
   
 > [!TIP]
-> Kullanıcılarınız birden çok kıtaya veya coğrafi bölgeye dağıtılıyorsa ve bu konumlardan her biri yedekli WAN devreleri üzerinden tek bir ExpressRoute devresi bulunan tek bir şirket içi konuma bağlanıyorsa, kullanıcılarınız farklı bölgeleri en yakın eşleme yerine bağlayan bağımsız ExpressRoute devreleri içeren bir ağ topolojisi tasarımına göre  end-uç hizmet kullanılabilirliğini daha az deneyimle deneyimler.
+> Kullanıcılarınız birden çok kıtaya veya coğrafi bölgeye dağıtılmışsa ve bu konumların her biri yedekLI WAN bağlantı hatları üzerinden tek bir ExpressRoute bağlantı hattının bulunduğu tek bir şirket içi konuma bağlanırsa, kullanıcılarınız farklı bölgeleri en yakın eşleme konumuna bağlayan bağımsız ExpressRoute bağlantı hatları içeren ağ topolojisi tasarımından daha az uçtan uca hizmet kullanılabilirliğiyle karşılaşır.
   
-Her devrenin farklı coğrafi eşleme konumuyla bağlanıyor olması için en az iki ExpressRoute devresi sağlanmasını öneririz. Kişilerin diğer hizmetler için ExpressRoute bağlantısını kullanmaları gereken her bölge için bu etkin etkin devre çiftini Office 365 gerekir. Bu sayede her bölgenin, veri merkezi veya eşleme konumu gibi önemli bir konumda olağanüstü bir durumla karşıtlı kalmalarına olanak sağlar. Bunları etkin/etkin olarak yapılandırmak, son kullanıcı trafiğinin birden çok ağ yolu arasında dağıtılmasını sağlar. Bu, cihaz veya ağ donanımı kesintileri sırasında etkilenen kişi kapsamını azaltır.
+Her bağlantı hattının farklı bir coğrafi eşleme konumuna bağlanmasıyla en az iki ExpressRoute bağlantı hattı sağlamanızı öneririz. Kişilerin Office 365 hizmetleri için ExpressRoute bağlantısını kullanacağı her bölge için bu etkin-etkin bağlantı hattı çiftini sağlamalısınız. Bu, her bölgenin veri merkezi veya eşleme konumu gibi önemli bir konumu etkileyen bir olağanüstü durum sırasında bağlı kalmasını sağlar. Bunları içinde etkin/etkin olarak yapılandırmak, son kullanıcı trafiğinin birden çok ağ yoluna dağıtılmasını sağlar. Bu, cihaz veya ağ ekipmanı kesintileri sırasında etkilenen kişilerin kapsamını azaltır.
   
-Yedek olarak İnternet'in olduğu tek bir ExpressRoute devresi kullanmamanızı öneririz.
+Yedek olarak İnternet ile tek bir ExpressRoute bağlantı hattı kullanmanızı önermeyiz.
   
 ### <a name="example-2-failover-and-high-availability"></a>Örnek 2: Yük Devretme ve Yüksek Kullanılabilirlik
   
-Woodgrove Bank'in birden çok coğrafi bölgeli tasarımı yönlendirme, bant genişliği ve güvenlik gözden geçirildi ve şimdi de yüksek kullanılabilirlik gözden geçirmesi gerekiyor. Woodgrove, yüksek kullanılabilirliği üç kategoriyi kapsaıyor; dayanıklılık, güvenilirlik ve yedekli çalışma.
+Woodgrove Bank'ın çok coğrafi tasarımında yönlendirme, bant genişliği, güvenlik gözden geçirildi ve şimdi yüksek kullanılabilirlik gözden geçirmesi gerekiyor. Woodgrove üç kategoriyi kapsayan yüksek kullanılabilirlik hakkında düşünür; dayanıklılık, güvenilirlik ve yedeklilik.
   
-Resilicy Woodgrove'un hatalardan hızla geri kurtarmalarını sağlar. Güvenilirlik, Woodgrove'un sistem için tutarlı bir sonuç sunmalarını sağlar. Yedekli çalışma, Woodgrove'un bir veya birden çok yansıtılmış altyapı örnekleri arasında geçişe olanak sağlar.
+Dayanıklılık, Woodgrove'un hatalardan hızlı bir şekilde kurtulmasını sağlar. Güvenilirlik, Woodgrove'un sistem içinde tutarlı bir sonuç sunmasını sağlar. Yedeklilik, Woodgrove'un bir veya daha fazla yansıtılmış altyapı örneği arasında geçiş yapmasını sağlar.
   
-Her kenar yapılandırması içinde, Woodgrove'un yedekli Güvenlik Duvarları, Aracılar ve Kimlikler vardır. Kuzey Amerika için, Woodgrove Dallas veri merkezinde bir uç yapılandırmaya ve Virginia veri merkezinde de bir diğer uç yapılandırmaya sahip. Her konumdaki yedekli donanım, o konuma yedekli donanım sağlar.
+Her kenar yapılandırmasında Woodgrove yedekli Güvenlik Duvarları, Proxy'ler ve IDS'ye sahiptir. Woodgrove, Kuzey Amerika için Dallas veri merkezinde bir uç yapılandırmaya ve Virginia veri merkezinde başka bir uç yapılandırmasına sahiptir. Her konumdaki yedekli ekipman, bu konuma dayanıklılık sağlar.
   
-Woodgrove Bank'in ağ yapılandırması birkaç temel ilkeye dayalıdır:
+Woodgrove Bank'ın ağ yapılandırması birkaç temel ilkeye göre oluşturulmuştur:
   
-- Her coğrafi bölgede, birden çok Azure ExpressRoute devresi vardır.
+- Her coğrafi bölgede birden çok Azure ExpressRoute bağlantı hattı vardır.
 
-- Bir bölgedeki her devre, o bölge içindeki ağ trafiğinin hepsini destekleyebilirsiniz.
+- Bir bölgedeki her bağlantı hattı, o bölgedeki tüm ağ trafiğini destekleyebilir.
 
-- Yönlendirme; kullanılabilirlik ve konum gibi konumlara bağlı olarak yollardan birini veya diğerini açıkça tercih eder.
+- Yönlendirme, kullanılabilirliğe, konuma vb. bağlı olarak bir yolu veya diğer yolu açıkça tercih eder.
 
-- Azure ExpressRoute devreleri arasında yük devretme, Woodgrove'un herhangi bir ek yapılandırma veya eyleme gerek kalmadan otomatik olarak yapılır.
+- Azure ExpressRoute bağlantı hatları arasında yük devretme, Woodgrove tarafından gereken ek yapılandırma veya eylem olmadan otomatik olarak gerçekleşir.
 
-- İnternet devreleri arasında yük devretme, Woodgrove'un herhangi bir ek yapılandırma veya eyleme gerek kalmadan otomatik olarak yapılır.
+- İnternet devreleri arasında yük devretme, Woodgrove tarafından gereken ek yapılandırma veya eylem olmadan otomatik olarak gerçekleşir.
 
-Fiziksel ve sanal düzeyde yedekli çalışma ile bu yapılandırmada, Woodgrove Bank güvenilir bir yolla yerel dayanıklılık, bölgesel dayanıklılık ve küresel dayanıklılık sunabilecektir. Woodgrove, hem bölge başına tek Azure ExpressRoute devresini hem de İnternet'e başarısız olma olasılığını değerlendirdikten sonra bu yapılandırmayı seçmiştir.
+Bu yapılandırmada, fiziksel ve sanal düzeyde yedeklilik ile Woodgrove Bank, güvenilir bir şekilde yerel dayanıklılık, bölgesel dayanıklılık ve küresel dayanıklılık sunabilir. Woodgrove, bölge başına tek bir Azure ExpressRoute bağlantı hattının yanı sıra İnternet'e yük devretme olasılığını değerlendirdikten sonra bu yapılandırmayı seçti.
   
-Woodgrove bölge başına birden fazla Azure ExpressRoute devresi alamasa da, Kuzey Amerika'da kaynaklanan trafiğin Asya Pasifik'te Azure ExpressRoute devrelerine yönlendirılması kabul edilemez bir gecikme düzeyi ekler ve gereken DNS iletici yapılandırması da karmaşıklığı ekler.
+Woodgrove bölge başına birden çok Azure ExpressRoute bağlantı hattına sahip olamadıysa, Kuzey Amerika kaynaklı trafiğin Asya Pasifik'teki Azure ExpressRoute bağlantı hattına yönlendirilmesi kabul edilemez bir gecikme düzeyi ekler ve gerekli DNS ileticisi yapılandırması karmaşıklık ekler.
   
-Yedek yapılandırma olarak İnternet'in kullanılması önerilmez. Bu Woodgrove'un güvenilirlik ilkesine aykırıdır ve sonuçta bağlantının kullanımı tutarsız bir deneyime neden olur. Buna ek olarak, yapılandırılmış olan BGP tanıtımları, NAT yapılandırması, DNS yapılandırması ve ara sunucu yapılandırması dikkate alınarak başarısız olması için el ile yapılandırma gerekebilir. Bu ek yük devretme karmaşıklığı, kurtarma ve ilgili adımları tanılama ve sorun giderme becerilerini azaltır.
+İnternet'i yedekleme yapılandırması olarak kullanmak önerilmez. Bu, Woodgrove'un güvenilirlik ilkesini bozarak bağlantıyı tutarsız bir deneyime neden olur. Ayrıca yapılandırılan BGP tanıtımları, NAT yapılandırması, DNS yapılandırması ve ara sunucu yapılandırması dikkate alınarak el ile yapılandırmanın yük devretmesi gerekir. Bu ek yük devretme karmaşıklığı kurtarma süresini artırır ve ilgili adımları tanılama ve sorun giderme becerilerini azaltır.
   
-Trafik yönetimini planlama ve uygulama veya Azure ExpressRoute hakkında hala sorularınız mı var? Ağ ve performans [kılavuzumuzla Azure](./network-planning-and-performance.md) [ExpressRoute SSS'nin kalan bölümünü okuyun](/azure/expressroute/expressroute-faqs).
+Trafik yönetimini veya Azure ExpressRoute'u planlama ve uygulama hakkında hala sorularınız mı var? [Ağ ve performans kılavuzumuzun](./network-planning-and-performance.md) geri kalanını veya [Azure ExpressRoute SSS](/azure/expressroute/expressroute-faqs) bölümünü okuyun.
   
 ## <a name="working-with-azure-expressroute-providers"></a>Azure ExpressRoute sağlayıcılarıyla çalışma
 <a name="BKMK_high-availability"> </a>
 
-Bant genişliğiniz, gecikme süresi, güvenlik ve yüksek kullanılabilirlik planlamanıza bağlı olarak devrelerin konumlarını seçin. En iyi konumları bir kez biliyorktan sonra, devreleri yerlerinin bölgeye [göre geçerli sağlayıcı listesini gözden geçirmek istediğinize emin oluruz](/azure/expressroute/expressroute-locations).
+Bant genişliği, gecikme süresi, güvenlik ve yüksek kullanılabilirlik planlamanıza göre bağlantı hatlarınızın konumlarını seçin. En uygun konumları öğrendiğiniz zaman, bağlantı hatlarının [bölgeye göre geçerli sağlayıcı listesini gözden geçirmesini](/azure/expressroute/expressroute-locations) istersiniz.
   
-Noktadan noktaya, çok noktalı veya barındırılan en iyi bağlantı seçeneklerini seçmek için sağlayıcınız veya sağlayıcılarınız ile birlikte çalışabilirsiniz. Bant genişliği ve diğer yedekli bileşenler yönlendirme ve yüksek kullanılabilirlik tasarımınızı desteklemektedir.
+En iyi bağlantı seçeneklerini, noktadan noktaya, çok noktaya veya barındırılan seçenekleri seçmek için sağlayıcınız veya sağlayıcılarınızla birlikte çalışın. Bant genişliği ve diğer yedekli bileşenler yönlendirme ve yüksek kullanılabilirlik tasarımınızı desteklediği sürece bağlantı seçeneklerini karıştırıp eşleştirebileceğinizi unutmayın.
   
 İşte geri dönmek için kullanabileceğiniz kısa bir bağlantı: [https://aka.ms/planningexpressroute365]()
   
 ## <a name="related-topics"></a>İlgili Konular
 <a name="BKMK_high-availability"> </a>
 
-[Ağ Office 365 değerlendirme](assessing-network-connectivity.md)
+[Office 365 ağ bağlantısını değerlendirme](assessing-network-connectivity.md)
   
 [Office 365 için Azure ExpressRoute](azure-expressroute.md)
   
-[Daha fazla bağlantı için ExpressRoute Office 365 yönetme](managing-expressroute-for-connectivity.md)
+[Office 365 bağlantısı için ExpressRoute'u yönetme](managing-expressroute-for-connectivity.md)
   
-[Posta için ExpressRoute ile yönlendirme Office 365](routing-with-expressroute.md)
+[Office 365 için ExpressRoute ile Yönlendirme](routing-with-expressroute.md)
   
-[Proje için ExpressRoute'u Office 365](implementing-expressroute.md)
+[Office 365 için ExpressRoute Uygulama](implementing-expressroute.md)
   
-[Daha fazla senaryo için ExpressRoute'ta BGP Office 365 kullanma](bgp-communities-in-expressroute.md)
+[Office 365 senaryoları için ExpressRoute'ta BGP topluluklarını kullanma](bgp-communities-in-expressroute.md)
   
 [Skype Kurumsal Online'da Medya Kalitesi ve Ağ Bağlantısı Performansı](https://support.office.com/article/5fe3e01b-34cf-44e0-b897-b0b2a83f0917)
   
-[Skype Kurumsal Online için a Skype Kurumsal iyileştirme](https://support.office.com/article/b363bdca-b00d-4150-96c3-ec7eab5a8a43)
+[Ağınızı Skype Kurumsal Online için iyileştirme](https://support.office.com/article/b363bdca-b00d-4150-96c3-ec7eab5a8a43)
   
 [Skype Kurumsal Online'da ExpressRoute ve QoS](https://support.office.com/article/20c654da-30ee-4e4f-a764-8b7d8844431d)
   
-[ExpressRoute kullanarak arama akışı](https://support.office.com/article/413acb29-ad83-4393-9402-51d88e7561ab)
+[ExpressRoute kullanarak çağrı akışı](https://support.office.com/article/413acb29-ad83-4393-9402-51d88e7561ab)
   
-[Office 365 ve performans geçmişini kullanarak performans ayarlamayı ayarlama](performance-tuning-using-baselines-and-history.md)
+[Temelleri ve performans geçmişini kullanarak performans ayarlamayı Office 365](performance-tuning-using-baselines-and-history.md)
   
-[Destek için performans sorunlarını giderme Office 365](performance-troubleshooting-plan.md)
+[Office 365 için performans sorunlarını giderme planı](performance-troubleshooting-plan.md)
   
 [Office 365 URL'leri ve IP adresi aralıkları](https://support.office.com/article/8548a211-3fe7-47cb-abb1-355ea5aa88a2)
   
-[Office 365 ve performans ayarını yapılandırma](network-planning-and-performance.md)
+[ağ ve performans ayarlamayı Office 365](network-planning-and-performance.md)
   
 [Office 365 uç noktaları hakkında SSS](https://support.office.com/article/d4088321-1c89-4b96-9c99-54c75cae2e6d)

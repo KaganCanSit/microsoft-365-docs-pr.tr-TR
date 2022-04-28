@@ -2,8 +2,8 @@
 title: MICROSOFT 365'da ICE Bağlan Sohbet verilerini arşivleye bir bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -12,12 +12,12 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Microsoft 365'da ICE Bağlan Sohbet verilerini içeri aktarmak ve arşiv etmek için 17a-4 ICE Bağlan Sohbet VerileriParser bağlayıcısı ayarlamayı ve kullanmayı öğrenin.
-ms.openlocfilehash: fcc700546a15c6dad39b9ebcaeb7385194727016
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 106b425886b6294f7c96ead439be30c5e61030a0
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64998119"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65097238"
 ---
 # <a name="set-up-a-connector-to-archive-ice-connect-chat-data"></a>ICE Bağlan Sohbet verilerini arşivleye bağlayıcı ayarlama
 

@@ -2,8 +2,8 @@
 title: eBulma'da koruyucularla çalışma (Premium)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -18,12 +18,12 @@ ms.assetid: ''
 ms.custom:
 - seo-marvel-apr2020
 description: Yasal bir davaya ilişkin verileri yönetmek için eBulma'da (Premium) koruyucu yönetim aracını kullanmayı öğrenin.
-ms.openlocfilehash: 0c529b339c79789072cf160916db8c21acff7d86
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 360e66c3244b614624b6817f7fe95d9204c34bef
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64992204"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65096666"
 ---
 # <a name="work-with-custodians-and-non-custodial-data-sources-in-ediscovery-premium"></a>eKeşif'te (Premium) koruyucular ve gözetimsiz veri kaynaklarıyla çalışma
 

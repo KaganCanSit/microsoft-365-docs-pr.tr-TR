@@ -1,10 +1,10 @@
 ---
-title: Contoso Kurumlar için Microsoft 365 Uygulamaları dağıtımı
+title: Contoso için Kurumlar için Microsoft 365 Uygulamaları dağıtımı
 author: kelleyvice-msft
 f1.keywords:
 - NOCSH
 ms.author: kvice
-manager: laurawi
+manager: scotv
 audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -13,77 +13,77 @@ ms.collection:
 - M365-modern-desktop
 - Strat_O365_Enterprise
 ms.custom: ''
-description: Contoso'ya dağıtım yapmak Microsoft Endpoint Configuration Manager Contoso'Kurumlar için Microsoft 365 Uygulamaları.
-ms.openlocfilehash: 6442deb0c6b7dce83a997bab28aa1c9cc85e8564
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Contoso'un Kurumlar için Microsoft 365 Uygulamaları dağıtmak için Microsoft Endpoint Configuration Manager nasıl kullandığını anlama.
+ms.openlocfilehash: 8b6fb639083145c728870156d848b75897483d25
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983506"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65096556"
 ---
-# <a name="microsoft-365-apps-for-enterprise-deployment-for-contoso"></a>Contoso Kurumlar için Microsoft 365 Uygulamaları dağıtımı
+# <a name="microsoft-365-apps-for-enterprise-deployment-for-contoso"></a>Contoso için Kurumlar için Microsoft 365 Uygulamaları dağıtımı
 
-Contoso, daha etkili bir işbirliği Windows 10 Enterprise daha iyi güvenlik Kurumlar için Microsoft 365 Uygulamaları daha modern bir masaüstü deneyimi sağlamak için bilgisayarlarını Daha Yüksek ve Gelişmiş Sürüm'e yükseltti. Contoso, altyapı ve iş gereksinimlerini değerlendirdikten sonra dağıtım için şu önemli gereksinimleri belirledi:
+Contoso daha etkili işbirliği, daha iyi güvenlik ve daha modern bir masaüstü deneyimi sağlamak için bilgisayarlarını Windows 10 Enterprise ve Kurumlar için Microsoft 365 Uygulamaları yükseltti. Contoso, altyapı ve iş gereksinimlerini değerlendirdikten sonra dağıtım için şu önemli gereksinimleri tanımladı:
 
-- Tüm bilgisayarlar tek bir Kurumlar için Microsoft 365 Uygulamaları.
-- Dağıtım mümkün olduğunda mevcut yönetim araçlarını ve altyapısını kullanmalısınız.
-- Dağıtım, kullanıcıların cihazlerinde birden çok dili ve mevcut mimariyi desteklemesi gerekir.
-- Bilgisayarlar, en düşük IT yönetim maliyeti ve kullanıcılar üzerinde çok az etki ile güncel ve güvenli kalsın.
+- Tüm bilgisayarlar Kurumlar için Microsoft 365 Uygulamaları çalıştırılmalıdır.
+- Dağıtım mümkün olduğunda mevcut yönetim araçlarını ve altyapısını kullanmalıdır.
+- Dağıtımın kullanıcıların cihazlarında birden çok dili ve mevcut mimarileri desteklemesi gerekir.
+- Bilgisayarlar en düşük BT yönetim maliyetleriyle ve kullanıcılara minimum etkiyle güncel ve güvenli kalmalıdır.
 
 ## <a name="deployment-tools"></a>Dağıtım araçları
 
-Contoso, gereksinimlerine bağlı olarak dağıtım tercih etti ve Windows 10 Enterprise (Geçerli Kurumlar için Microsoft 365 Uygulamaları) aracılığıyla dağıtıldı. Configuration Manager, büyük ortamlar için ölçekler ve yükleme, güncelleştirmeler ve ayarlar üzerinde kapsamlı denetim sağlar. Ayrıca, e-posta postalarınızı dağıtmayı ve yönetmeyi daha kolay ve verimli hale getirir, ayrıca Office özellikleri vardır:
+Contoso, gereksinimlerine göre Configuration Manager (Geçerli Dal) aracılığıyla Windows 10 Enterprise ve Kurumlar için Microsoft 365 Uygulamaları dağıtmayı seçti. Configuration Manager büyük ortamlar için ölçeklendirilir ve yükleme, güncelleştirmeler ve ayarlar üzerinde kapsamlı denetim sağlar. Ayrıca, Office dağıtmayı ve yönetmeyi kolaylaştırmak ve daha verimli hale getirmek için yerleşik özelliklere sahiptir:
 
-- Uzak konumlarda cihazlara dağıtımda sınırlı ağ kapasitesine yardımcı olan eş önbelleği.
-- Güncelleştirmelerin Office ve izlenmesini kolaylaştıran ve yöneticilere en son dağıtım ve yönetim özelliklerine erişim veren Office Yönetimi panosu.
-- İşletim sistemiyle aynı dili otomatik olarak dağıtma da dahil olmak üzere akıllı dil paketi dağıtımı.
-- Tam olarak desteklenen ve kullanımı kolay bir yöntem olan ve dağıtım sırasında bir istemciden Office sürümlerini kaldırma.
+- Eş önbelleği, uzak konumlardaki cihazlara dağıtılırken sınırlı ağ kapasitesine yardımcı olabilir.
+- Office dağıtmayı ve güncelleştirmeleri izlemeyi kolaylaştıran ve yöneticilere en son dağıtım ve yönetim özelliklerine erişim sağlayan Office İstemci Yönetimi panosu.
+- İşletim sistemiyle aynı dili otomatik olarak dağıtma dahil olmak üzere akıllı dil paketi dağıtımı.
+- Dağıtım sırasında istemciden mevcut Office sürümlerini kaldırmaya yönelik, tam olarak desteklenen ve kullanımı kolay bir yöntem.
 
-Contoso, Yapılandırma Yöneticisi'ne ek olarak, Microsoft'un ücretsiz bir aracı olan Office eklentileri ve [VBA](/deployoffice/readiness-toolkit-application-compatibility-microsoft-365-apps) için Hazırlık Araç Seti'ni kullanarak makrolarında ve eklentilerinde Office sorunları değerlendirdi.
+Contoso, Configuration Manager ek olarak[, Office makroları ve eklentileriyle uyumluluk sorunlarını değerlendirmek için Office Eklentileri için Hazırlık Araç Seti'ni](/deployoffice/readiness-toolkit-application-compatibility-microsoft-365-apps) ve Microsoft'un ücretsiz bir aracı olan VBA'yı kullandı.
 
 ## <a name="managing-deployment-and-updates"></a>Dağıtım ve güncelleştirmeleri yönetme
 
-Kurumlar için Microsoft 365 Uygulamaları bir sürüm modeli vardır: Office olarak kullanın. Hizmet modeli, yeni özelliklerle güncel kalmayı kolaylaştırır. Ancak, çoğunlukla, IT departmanların yeni sürümlerde dağıtım ve test çalışmalarını değiştirmesi gerektirmektedir. Uyumluluk sorunlarını en aza indirmek ve bilgisayarlarının güncel kalmasını sağlamak için Contoso dağıtıldı ve Windows iki Office dağıtıldı:
+Kurumlar için Microsoft 365 Uygulamaları yeni bir sürüm modeline sahiptir: hizmet olarak Office. Hizmet modeli, yeni özelliklerle güncel kalmayı kolaylaştırır. Ancak genellikle BT departmanlarının yeni sürümleri dağıtma ve test etme şeklini değiştirmesini gerektirir. Uyumluluk sorunlarını en aza indirmek ve bilgisayarlarının güncel kalmasını sağlamak için Contoso, Windows ve Office iki aşamada dağıttı:
 
-- İlk olarak, Kurumlar için Microsoft 365 Uygulamaları küçük bir temsili cihaz kümesine dağıtıldılar. Bu pilot grup uygulamaları, eklentileri ve donanımı test etmek için kullanılan bir uygulama Kurumlar için Microsoft 365 Uygulamaları.
-- Dört ay sonra pilot gruptaki uygulamalar, eklentiler ve donanımla ilgili tüm kritik sorunları eledikten sonra, Contoso Kurumlar için Microsoft 365 Uygulamaları'i kuruluşun diğer cihazlarına (geniş grup) dağıttı.
+- İlk olarak, Kurumlar için Microsoft 365 Uygulamaları kuruluş genelinde küçük bir temsilci cihaz kümesine dağıttılar. Bu pilot grup uygulamaları, eklentileri ve donanımları Kurumlar için Microsoft 365 Uygulamaları ile test etmek için kullanılmıştır.
+- Dört ay sonra, pilot gruptaki uygulamalar, eklentiler ve donanımlarla ilgili tüm kritik sorunları ele aldıktan sonra Contoso, kuruluştaki diğer cihazlara (geniş grup) Kurumlar için Microsoft 365 Uygulamaları dağıttı.
 
-Contoso, Yapılandırma Yöneticisi'Office güncelleştirmeleri yönetmek yerine buluttan otomatik güncelleştirmeleri etkinleştirdi. Bulut tabanlı güncelleştirmeler, yönetim yükünü azaltırken cihazların güncel kalmasını da sağlar.
+Contoso, Configuration Manager kullanarak Office güncelleştirmelerini yönetmek yerine buluttan otomatik güncelleştirmeleri etkinleştirdi. Bulut tabanlı güncelleştirmeler, yönetim yükünü azaltırken cihazların güncel kalmasını sağlar.
 
-Contoso, özellik güncelleştirmeleri için Office'in dağıtımında kullandığı iki aşamalı yaklaşımı izledi: Pilot gruptaki cihazlar, kuruluşun geri kalanından (geniş grup) dört ay önce özellik güncelleştirmeleri aldı. Bu seçeneği etkinleştirmek için, Contoso Office iki önerilen güncelleştirme [kanalı kullandı](/DeployOffice/overview-update-channels):
+Contoso, özellik güncelleştirmeleri için Office dağıtmak için kullandıkları iki aşamalı yaklaşımı takip etti: Pilot gruptaki cihazlar, kuruluşun geri kalanındaki cihazlardan (geniş grup) dört ay önce özellik güncelleştirmeleri aldı. Contoso, bunu Office etkinleştirmek için önerilen iki [güncelleştirme kanalını](/DeployOffice/overview-update-channels) kullandı:
 
-- Semi-Annual Enterprise grubu güncelleştirmeleri için Kanal Önizlemesi (Önizleme)
-- Semi-Annual Enterprise grup güncelleştirmeleri için Kanal Kanalı
+- Pilot grup güncelleştirmeleri için Semi-Annual Enterprise Kanalı (Önizleme)
+- Geniş grup güncelleştirmeleri için kanal Semi-Annual Enterprise
 
-Altı Semi-Annual Enterprise (Önizleme) kanalı, Altı Aylık Kanal'dan Kurumlar için Microsoft 365 Uygulamaları Semi-Annual Enterprise dört ay önce bir sürüm yayımlayalır, Contoso'da güncelleştirmeleri yönetmek zorunda kalmadan doğrulamaya zaman vardır.
+Semi-Annual Enterprise Kanalı (Önizleme) Semi-Annual Enterprise Kanalından dört ay önce Kurumlar için Microsoft 365 Uygulamaları sürümünü yayımladığından, Contoso'nun güncelleştirmeleri yönetmek zorunda kalmadan doğrulamak için zamanı vardır.
 
 ## <a name="deployment-process"></a>Dağıtım işlemi
 
-Contoso, posta kutusu dağıtımını Office Microsoft'un en iyi uygulama önerilerini içeren aşağıdaki süreci uygulamaya başladı:
+Contoso, Office dağıtımını tamamlamak için Microsoft'un en iyi uygulama önerilerini içeren aşağıdaki işlemi uyguladı:
 
-1. Dağıtımdan önce, Contoso Office ve VBA için Hazırlık Araç Seti'ni kullanarak uygulamalarını test etti ve Office Eklentileri ile uyumluluklarını değerlendirmek için Kurumlar için Microsoft 365 Uygulamaları.
-1. Configuration Manager'da, istemci cihazlarında eş önbelleği etkinleştirdi. Bu, uzak konumlarda istemci cihazlarına dağıtım için sınırlı ağ kapasitesine yardımcı olur. 
-1. Contoso, Configuration Manager'da cihaz koleksiyonları olarak iki dağıtım grubu tanımladı: pilot grup ve geniş bir grup. Kuruluş genelinde küçük bir temsili cihaz kümesi de dahil olan pilot grup, uygulama, eklenti ve donanımla ilgili ek test için Windows 10 Enterprise ve Kurumlar için Microsoft 365 Uygulamaları.
-1. Her ikisi de Configuration Manager Office parçası olan Office İstemci Yönetimi panosu ve Office 365 Yükleyici sihirbazını kullanarak Office için dağıtım paketleri oluşturdular. Bu grup, Kurumlar için Microsoft 365 Uygulamaları Kanal'da pilot grup (Önizleme) Semi-Annual Enterprise bir tane de Kanal'da geniş grup için olmak Semi-Annual Enterprise hazırlar.
-2. Her Office paketi İngilizce, Fransızca ve Almanca Dil paketleri içerir. Cihaz, Office paketinde yer alan bir dile gerek Office, bu dil paketi otomatik olarak paketten Office Content Delivery Network (CDN).
-3. Kullanıcılar, bu özellikleri yüklemeden önce Office paketinin var olan tüm MSI sürümlerini otomatik olarak kaldırmak için Office yerleşik özelliğini Kurumlar için Microsoft 365 Uygulamaları.
-4. Configuration Manager'da, dağıtım Windows ve Office dağıtım noktalarına paketler dağıtıldı. Ardından, pilot uygulama paketini pilot gruba dağıtmak için Configuration Manager dağıtım Kurumlar için Microsoft 365 Uygulamaları sıralarını kullandılar.
-5. Pilot gruptaki uyumluluk sorunlarını çözümledikten sonra, Contoso görev sıralarını hazır paket paketini Kurumlar için Microsoft 365 Uygulamaları grubuna dağıttı.
+1. Contoso dağıtımdan önce Office Eklentisi ve VBA için Hazırlık Araç Seti'ni kullanarak uygulamalarını test etti ve Kurumlar için Microsoft 365 Uygulamaları uyumluluğunu değerlendirmek için eklentileri Office.
+1. Configuration Manager'da istemci cihazlarında eş önbelleği etkinleştirerek uzak konumlardaki istemci cihazlara dağıtım yaparken sınırlı ağ kapasitesine yardımcı olur. 
+1. Contoso, Configuration Manager cihaz koleksiyonu olarak iki dağıtım grubu tanımlamıştı: pilot grup ve geniş bir grup. Kuruluş genelinde küçük bir temsili cihaz kümesini içeren pilot grup, Windows 10 Enterprise ve Kurumlar için Microsoft 365 Uygulamaları ile uygulamaların, eklentilerin ve donanımların ek testinde kullanıldı.
+1. her ikisi de Configuration Manager konsolunun parçası olan Office İstemci Yönetimi panosunu ve Office 365 Yükleyicisi sihirbazını kullanarak Office için dağıtım paketleri oluşturdular. Biri Semi-Annual Enterprise Kanalındaki pilot grup (Önizleme) ve diğeri de Semi-Annual Enterprise Kanalındaki geniş grup için iki Kurumlar için Microsoft 365 Uygulamaları paketi oluşturmşlardır.
+2. Her Office paketi İngilizce, Fransızca ve Almanca Dil paketlerini içerir. Bir cihaz Office paketine dahil olmayan bir dil gerektiriyorsa, bu dil paketi otomatik olarak Office Content Delivery Network (CDN) içinden indirilir.
+3. Kurumlar için Microsoft 365 Uygulamaları yüklemeden önce Office tüm mevcut MSI sürümlerini otomatik olarak kaldırmak için Office paketindeki yerleşik özelliği kullandılar.
+4. Configuration Manager'da Windows ve Office paketlerini ağlarındaki dağıtım noktalarına dağıttılar. Ardından pilot Kurumlar için Microsoft 365 Uygulamaları paketini pilot gruba dağıtmak için Configuration Manager dağıtım görev dizilerini çalıştırdılar.
+5. Pilot grupla ilgili uyumluluk sorunlarını giderdikten sonra Contoso, Kurumlar için Microsoft 365 Uygulamaları paketini geniş gruba dağıtmak için görev dizilerini çalıştırdı.
 
-Contoso cihazları buluttan otomatik olarak güncelleştirmeyi seçtiğinden, işlemi Configuration Manager'da yönetmenize gerek yoktu. Cihazları, ilk dağıtımda tanımlanan güncelleştirme kanalına göre doğrudan buluttan otomatik olarak güncelleştirilir.
+Contoso cihazları buluttan otomatik olarak güncelleştirmeyi seçtiğinden, işlemi Configuration Manager'da yönetmeye gerek yoktu. Cihazları, ilk dağıtımda tanımlanan güncelleştirme kanalına bağlı olarak doğrudan buluttan otomatik olarak güncelleştirilir.
 
-Burada Contoso 2013 yükleme Kurumlar için Microsoft 365 Uygulamaları devam eden güncelleştirmelerin dağıtım mimarisini nasıl güncellemektedir.
+Contoso Kurumlar için Microsoft 365 Uygulamaları yüklemesi ve devam eden güncelleştirmeler dağıtım mimarisi aşağıdadır.
 
-![E-posta için Contoso dağıtım Kurumlar için Microsoft 365 Uygulamaları.](../media/contoso-o365pp/contoso-o365pp-fig1.png)
+![Kurumlar için Microsoft 365 Uygulamaları için Contoso dağıtım altyapısı.](../media/contoso-o365pp/contoso-o365pp-fig1.png)
  
 ## <a name="next-step"></a>Sonraki adım
 
-Contoso'ya[, Microsoft Intune](contoso-mdm.md) cihazlarını ve kuruluş genelinde çalıştıracakları uygulamaları yönetmek için Microsoft 365 Kurumsal'da Contoso'ya nasıl yardımcı olduğunu öğrenin.
+Contoso'un kuruluş genelinde çalıştırdıkları cihazları ve uygulamaları yönetmek için Microsoft 365'da Microsoft Intune nasıl [kullandığını](contoso-mdm.md) öğrenin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 [Microsoft 365 Kurumsal Uygulamaları](/deployoffice/deployment-guide-microsoft-365-apps)
 
-[Microsoft 365 genel bakış için genel bakış](microsoft-365-overview.md)
+[Microsoft 365 Kurumsal’a genel bakış](microsoft-365-overview.md)
 
 [Test laboratuvarı kılavuzları](m365-enterprise-test-lab-guides.md)

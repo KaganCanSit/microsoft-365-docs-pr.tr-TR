@@ -9,12 +9,12 @@ metadata:
   ms.service: bookings
   ms.localizationpriority: medium
   description: Microsoft Bookings sık sorulan sorular.
-  ms.openlocfilehash: c904a60fafd980de7bc8559e5025538957fdd7b4
-  ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+  ms.openlocfilehash: 6a61179849e01f60e46a53f12f1ad5c125987527
+  ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 04/13/2022
-  ms.locfileid: "64822826"
+  ms.lasthandoff: 04/27/2022
+  ms.locfileid: "65096038"
 title: Microsoft Bookings Sık Sorulan Sorular
 summary: ''
 sections:
@@ -25,17 +25,16 @@ sections:
     answer: >
       Microsoft Bookings, randevuları zamanlamayı ve yönetmeyi kolaylaştıran Microsoft 365 bir uygulamadır. Bookings Web tabanlı bir rezervasyon takvimi içerir ve personelinizin takvimini iyileştirmek için Outlook tümleştirerek müşterilerinizin kendilerine en uygun zamanı ayırma esnekliğini sağlar. Otomatik bildirim e-postaları gösterilmemesini azaltır ve kuruluşlar yinelenen zamanlama görevlerinde azalmayla zaman kazandırır. Bookings, sanal randevuları Skype veya Microsoft Teams aracılığıyla kolayca yönetmenize yardımcı olur ve Teams'daki Bookings uygulaması aracılığıyla günlük zamanlamayı yönetmenize yardımcı olur. Yerleşik özelleştirme özelliği sayesinde Bookings, herhangi bir kuruluşun birden çok parçasının gereksinimlerini karşılayacak şekilde tasarlanmıştır.
   - question: >
+      Aboneliğim için Bookings kullanılabilir mi?
+    answer: "Bookings aşağıdaki aboneliklerle kullanılabilir: \n- Office 365: A3, A5, E1, E3, E5, F1, F3, Office 365 21Vianet tarafından çalıştırılır.\n- Microsoft 365: A3, A5, E3, E5, F1, F3, Business Basic, Business Standard, business Premium. Bookings bir iOS ve Android yardımcı uygulamasıyla kullanabilirsiniz. Bookings tek başına uygulama olarak kullanılamaz. Outlook Web App veya Web üzerinde Outlook, verileri Outlook içinde depoladıkça Bookings kullanmak için etkinleştirilmelidir.\n\nBookings lisansı, takvim oluşturma ve yönetme dahil olmak üzere tam işlevsellik sağlar. Kullanıcılar, bir Yönetici veya Görüntüleyici rolüne personel olarak eklendiğinde mevcut takvimleri görüntüleyebilir ve düzenleyebilir.\n"
+  - question: >
       Microsoft Bookings kullanmak Nasıl yaparım??
     answer: >
       Bookings çevrimiçi bir hizmet olduğundan hiçbir şey indirmeniz gerekmez. Microsoft 365 Web deneyiminde uygulama seçiciye gitmeniz gerekir. Yöneticiler ayrıca müşteriler ve randevularıyla ilgili en son bilgilerle güncel kalmak için Bookings yardımcı uygulamasını kullanabilir.
   - question: >
-      Who Microsoft Bookings erişimi var mı?
-    answer: >
-      Bookings dünya çapındaki Microsoft 365 İş Ekstra, Microsoft 365 İş Standart, F1, F3, A3, A5, E3 ve E5 müşterileri için varsayılan olarak kullanılabilir ve etkindir. Bookings, 21Vianet tarafından sağlanan Office 365'da da mevcuttur.
-  - question: >
       Müşterilerim kişisel takvimimi mi yoksa iş takvimimi mi görecek?
     answer: >
-      Müşterileriniz yalnızca kaydolmayı seçtiğiniz hizmetler, saatler ve personel için çevrimiçi olarak yayımladığınız Bookings takvimi görür.
+      Müşterileriniz yalnızca seçtiğiniz hizmetler, saatler ve personel için çevrimiçi olarak yayımladığınız Bookings takvimi görür.
   - question: >
       Personeli yönet'in altında ayrılabilir bir özniteliği değiştirmek Nasıl yaparım??
     answer: >
@@ -43,7 +42,7 @@ sections:
   - question: >
       Son kullanıcılar Bookings uygulamasına nasıl erişecek?
     answer: >
-      Microsoft 365 İş Ekstra, Microsoft 365 İş Standart, A3, A5, E3, E5, F1, F3 lisansına sahip olan veya Yönetici veya Görüntüleyici rollerine personel üyesi olarak eklenen herkes, Microsoft 365 Web deneyimindeki uygulama seçicisindeki Bookings erişebilir. Ayrıca iOS ve Android için kullanılabilen bir yardımcı uygulama da vardır.
+      Desteklenen bir abonelik için lisanslanan veya Yönetici veya Görüntüleyici rollerine personel üyesi olarak eklenen herkes, Microsoft 365 Web deneyimindeki uygulama seçicideki Bookings erişebilir. Ayrıca iOS ve Android için kullanılabilen bir yardımcı uygulama da vardır.
   - question: >
       Bookings kendi Web sitemde kullanabilir miyim?
     answer: >
@@ -55,7 +54,7 @@ sections:
   - question: >
       BT departmanımız son kullanıcıların Bookings erişip erişemeyeceğini denetleyebiliyor mu?
     answer: >
-      Bookings varsayılan olarak Microsoft 365 İş Ekstra, Microsoft 365 İş Standart, M365 A3/A5 ve E3/E5 kiracılarında kullanılabilir, ancak yöneticiler tercih ederlerse Microsoft 365 yönetim merkezi kapatabilir. Bunu yapmak için [bu yönergeleri izleyin](turn-bookings-on-or-off.md).
+      Yöneticiler Bookings Microsoft 365 yönetim merkezi kapatabilir. Bunu yapmak için [bu yönergeleri izleyin](turn-bookings-on-or-off.md).
 
 
       Müşteri kiracısında belirli uygun lisanslar için Bookings erişimini devre dışı bırakmak isterse, lisansları kısıtlamak için grup ilkesi kullanabilir veya yeni Bookings takvim oluşturabilecek kullanıcıları kısıtlayacak bir OWA Posta Kutusu ilkesi uygulayabilir.
@@ -118,11 +117,8 @@ sections:
           - teknik destek
           - yasal incelemeler
           - Tesis
-- name: Fiyatlandırma ve lisanslama
+- name: Hesap bilgileri
   questions:
-  - question: >
-      Microsoft Bookings Nasıl yaparım??
-    answer: "Bookings aşağıdaki aboneliklerle kullanılabilir: \n- Office 365: A3, A5, E3, E5, F1, F3\n- Microsoft 365: A3, A5, E3, E5, F1, F3, İş Standardı, İş Premium. Bookings bir iOS ve Android yardımcı uygulamasıyla kullanabilirsiniz. Bookings tek başına uygulama olarak kullanılamaz. Outlook Web App veya Web üzerinde Outlook, verileri Outlook içinde depoladıkça Bookings kullanmak için etkinleştirilmelidir.\n\nBookings lisansı, takvim oluşturma ve yönetme dahil olmak üzere ürüne tam işlevsellik sağlar. Ayrıca, bu kullanıcılar Yönetici veya Görüntüleyici rolüne personel olarak eklendiğinde kullanıcıların mevcut takvimleri görüntülemesine ve düzenlemesine olanak tanır.\n"
   - question: >
       E-posta hesabımı geçerli sağlayıcımdan Microsoft 365 geçirmem gerekiyor mu?
     answer: >
@@ -285,7 +281,7 @@ sections:
   questions:
   - question: >
       Bu personel üyesinin takvimi eşitlenemiyor
-    answer: "\"Bu personel üyesinin takvimi eşitlenemiyor\" hatasını alırsanız, bu bölümde hatayı çözmenize yardımcı olacak çeşitli sorun giderme yordamları bulunur.\n\n> [!NOTE]\n> Bookings, Microsoft 365 İş Standart, Microsoft 365 A3 veya Microsoft 365 A5 abonelikleri olan müşteriler için varsayılan olarak açıktır. Bookings Office 365 Kurumsal E3 ve Office 365 Kurumsal E5 kullanan müşteriler de kullanılabilir ancak varsayılan olarak kapalıdır. Başlamak için bkz. [Microsoft Bookings erişme](get-access.md). Bookings açmak veya kapatmak için bkz[. Kuruluşunuz için Bookings açma veya kapatma](turn-bookings-on-or-off.md).\n\nPersonelinizin takvimini eşitleme hakkında bilgi arıyorsanız bkz. [Bookings personel ekleme](add-staff.md). **Personel ayrıntıları** sayfasında **Takvimdeki etkinlikler kullanılabilirliği etkiler** seçeneğinin işaretli olduğundan emin olun.\n"
+    answer: "\"Bu personel üyesinin takvimi eşitlenemiyor\" hatasını alırsanız, bu bölümde hatayı çözmenize yardımcı olacak çeşitli sorun giderme yordamları bulunur.\n\nPersonelinizin takvimini eşitleme hakkında bilgi arıyorsanız bkz. [Bookings personel ekleme](add-staff.md). **Personel ayrıntıları** sayfasında **Takvimdeki etkinlikler kullanılabilirliği etkiler** seçeneğinin işaretli olduğundan emin olun.\n"
   - question: >
       Personel üyesinin takvim izinlerini değiştirmesi gerekiyor
     answer: >

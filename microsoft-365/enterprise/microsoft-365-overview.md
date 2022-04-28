@@ -1,10 +1,10 @@
 ---
-title: Microsoft 365 genel bakış için genel bakış
+title: Microsoft 365 Kurumsal’a genel bakış
 f1.keywords:
 - NOCSH
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 02/01/2021
 audience: ITPro
 ms.topic: article
@@ -14,150 +14,150 @@ ms.collection: M365-subscription-management
 ms.custom:
 - it-pro
 - intro-overview
-description: Kurumsal destek hizmetleri için bileşenlere, planlara ve dağıtım yollarına Microsoft 365 sağlar.
-ms.openlocfilehash: 358b160dcad5a1b0a4ed961febd9c6bfb63abe36
-ms.sourcegitcommit: 36a19d80fe3f053df0fec398a7ff2dfc777f9730
+description: Kuruluş için Microsoft 365 bileşenlerine, planlarına ve dağıtım yollarına giriş sağlar.
+ms.openlocfilehash: ccbc91dbaf49b8470f90ca8ea732c6a9580058bf
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/30/2021
-ms.locfileid: "63021552"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65096754"
 ---
-# <a name="microsoft-365-for-enterprise-overview"></a>Microsoft 365 genel bakış için genel bakış
+# <a name="microsoft-365-for-enterprise-overview"></a>Microsoft 365 Kurumsal’a genel bakış
 
-Microsoft 365 kurumsal çözüm, herkesi yaratıcı olmak ve birlikte güvenli bir şekilde çalışma gücü veren eksiksiz ve akıllı bir çözümdür.
+Microsoft 365 kurumsal, herkesin yaratıcı olmasını ve güvenli bir şekilde birlikte çalışmasını sağlayan eksiksiz ve akıllı bir çözümdür.
 
-Microsoft 365 özellik büyük kuruluşlar için tasarlanmıştır, ancak en gelişmiş güvenlik ve üretkenlik özelliklerine ihtiyaçen orta ölçekli ve küçük işletmeler için de kullanılabilir.
+kurumsal Microsoft 365 büyük kuruluşlar için tasarlanmıştır, ancak en gelişmiş güvenlik ve üretkenlik özelliklerine ihtiyaç duyan orta ölçekli ve küçük işletmeler için de kullanılabilir.
 
-## <a name="components"></a>Bileşenler
+## <a name="components"></a>Bileşen
 
-Microsoft 365 aşağıdakilerden oluşur:
+Kuruluş için Microsoft 365 şunlardan oluşur:
 
-|Hizmetler|Açıklama|
+|Hizmetleri|Açıklama|
 |---|---|
-|Yerel uygulamalar ve bulut tabanlı uygulamalar ve üretkenlik hizmetleri|Hem Kurumlar için Microsoft 365 Uygulamaları'i, hem PC ve Mac bilgisayarınız için en son Office uygulamalarını (Word, Excel, PowerPoint, Outlook ve diğerleri) hem de e-posta, dosya depolama ve işbirliği, toplantılar gibi daha fazlası için eksiksiz çevrimiçi hizmetler paketi içerir.|
-|Windows 10 Enterprise|Hem büyük hem de orta ölçekli kuruluşların  ihtiyaçlarını karşılar. Bu, kullanıcıların en üretken ve güvenli Windows sürümüdür. BT uzmanları için kapsamlı dağıtım, cihaz ve uygulama yönetimi de sağlar.|
-|Cihaz yönetimi ve gelişmiş güvenlik hizmetleri|İş Microsoft Intune verilerinizi korurken iş gücünüzün üretken olmasına yardımcı olan bulut tabanlı bir kurumsal mobil kullanım yönetimi hizmeti olan Kurumsal Mobil Kullanım'ı içerir.|
+|Yerel uygulamalar ve bulut tabanlı uygulamalar ve üretkenlik hizmetleri|Hem Kurumlar için Microsoft 365 Uygulamaları, PC ve Mac bilgisayarınız için en son Office uygulamaları (Word, Excel, PowerPoint, Outlook ve diğerleri gibi) hem de tam kapsamlı bir çevrimiçi hizmetler paketi içerir  e-posta, dosya depolama ve işbirliği, toplantılar ve daha fazlası için.|
+|Windows 10 Enterprise|Hem büyük hem de orta ölçekli kuruluşların gereksinimlerini karşılar. Kullanıcılar için Windows en üretken ve güvenli sürümüdür. BT uzmanları için kapsamlı dağıtım, cihaz ve uygulama yönetimi de sağlar.|
+|Cihaz yönetimi ve gelişmiş güvenlik hizmetleri|İş gücünüzün kuruluş verilerinizi korurken üretken olmasına yardımcı olan bulut tabanlı bir kurumsal mobilite yönetimi hizmeti olan Microsoft Intune içerir.|
 |||
 
-## <a name="plans"></a>Planlar
+## <a name="plans"></a>Plan
 
-Microsoft 365 planı üç plan içinde kullanılabilir.
+Kurumsal Microsoft 365 üç planda kullanılabilir.
 
-|Plan adı|Özellikler|
+|Plan adı|Yetenek -lerini|
 |---|---|
-|E3|Çalışma alanı üretkenliğini Microsoft 365 ve yeniliği geliştirmek için en önemli ürün ve özelliklere erişin.|
-|E5|En son Microsoft 365 ve özelliklere erişin. Bunlara güvenlik araçları ve Office 365 için Defender dahildir. Bu plan, tüm E3 özelliklerini, ayrıca gelişmiş güvenlik, ses ve veri çözümleme araçlarını içerir.|
-|F3|Bağlan işlerinde en iyi şekilde çalışmalarına yardımcı olmak için kullanabileceği, amaca yönelik araçlar ve kaynaklar aracılığıyla ilk satır çalışanlarınız ile birlikte çalışabilirsiniz.|
+|E3|İş yeri üretkenliğini güvenli bir şekilde geliştirmek ve yenilikleri yönlendirmek için Microsoft 365 temel ürün ve özelliklerine erişin.|
+|E5|Microsoft 365 en son ürün ve özelliklere erişin. Bunlar Office 365 için Defender, güvenlik araçları ve işbirliği araçlarını içerir. Bu plan tüm E3 özelliklerinin yanı sıra gelişmiş güvenlik, ses ve veri analizi araçlarını içerir.|
+|F3|en iyi işlerini yapmalarına yardımcı olmak için kullanabilecekleri amaca yönelik araçlar ve kaynaklar aracılığıyla birinci sınıf çalışanlarınızla Bağlan.|
 |||
 
-Bu Microsoft 365 E3, şu eklentileri de eldesiniz:
+Microsoft 365 E3 varsa şu eklentileri de alabilirsiniz:
 
 - Kimlik & Tehdit Koruması
-- Bilgi Koruma & Uyumluluğu
+- Information Protection & Uyumluluğu
 - [Microsoft 365 E5 Uyumluluk](https://www.microsoft.com/microsoft-365/business/e5-compliance)
-- Microsoft 365 E5 Insider Riski
+- Insider Risk Microsoft 365 E5
 
-Microsoft 365 E3 kullanıcıların bu eklentileri kullanarak, bu eklentilerin dahil olduğu ek özelliklerden Microsoft 365 E5 olabilir.
+Microsoft 365 E3 kullanıcılar, Microsoft 365 E5 ek özelliklerden yararlanmak için bu eklentileri kullanabilir.
 
-Daha fazla bilgi için bkz [. Her planın özellikleri ve özellikleri](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans).
+Daha fazla bilgi için bkz. [Her plan için özellikler ve özellikler](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans).
 
-## <a name="get-the-big-picture"></a>Büyük resmi seçin
+## <a name="get-the-big-picture"></a>Büyük resmi edinin
 
-Kurumsal [Microsoft 365 posteri](../downloads/Microsoft365Enterprise.pdf), şunları görüntülemeyi istediğiniz merkezi bir konum sağlar:
+[Kurumsal posterin Microsoft 365](../downloads/Microsoft365Enterprise.pdf), aşağıdakileri görüntüleyebileceğiniz merkezi bir konumdur:
 
-- Kurumsal faydalar Microsoft 365, uygulamalar ve hizmetlerin değer sütunlarıyla nasıl eşlemektedir?
-- Microsoft 365 planlarına ve bunların hangi bileşenlerine sahip olduğunu içerir.
-- Kurumsal özelliklerle uyumlu olan Microsoft modern çalışma Microsoft 365 bileşenleri.
-- Yaygın [Microsoft 365 bölüme](https://www.microsoft.com/microsoft-365/success/) uygun Üretkenlik Kitaplığı ve temsili senaryolar.
+- kurumsal Microsoft 365 avantajları ve uygulamaların ve hizmetlerin değer sütunlarıyla nasıl eşleştirilmesi.
+- Kurumsal planlar ve içerdikleri bileşenler için Microsoft 365.
+- Kuruluş için Microsoft 365 sağlayan Microsoft modern çalışma alanının temel bileşenleri.
+- [Microsoft 365 Üretkenlik Kitaplığı](https://www.microsoft.com/microsoft-365/success/) ve bazı ortak kuruluş bölümleri için temsili senaryolar.
 
-[![Kurumsal poster Microsoft 365 resmi.](../media/microsoft-365-overview/m365e-poster.png)](../downloads/Microsoft365Enterprise.pdf)
+[![Kurumsal poster için Microsoft 365 görüntüsü.](../media/microsoft-365-overview/m365e-poster.png)](../downloads/Microsoft365Enterprise.pdf)
 
-Ayrıca [posterin bir kopyasını da indirebilirsiniz](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/Microsoft365Enterprise.pdf).
+[Posterin bir kopyasını da indirebilirsiniz](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/Microsoft365Enterprise.pdf).
 
 
-## <a name="transition-your-entire-organization"></a>Tüm kuruluşa geçiş
+## <a name="transition-your-entire-organization"></a>Kuruluşunuzun tamamına geçiş
 
-Tüm kuruluş ürünlerinizi kurumsal ürün ve hizmetlere taşıma hakkında daha iyi bir resim Microsoft 365 geçiş [posteri'ne bakın](https://download.microsoft.com/download/2/c/7/2c7bcc04-aae3-4604-9707-1ffff66b9851/transition-org-to-m365.pdf).
+Kuruluşunuzun tamamını kuruluş için Microsoft 365 ürün ve hizmetlere taşıma hakkında daha iyi bir resim edinmek için [geçiş posterine](https://download.microsoft.com/download/2/c/7/2c7bcc04-aae3-4604-9707-1ffff66b9851/transition-org-to-m365.pdf) bakın.
 
-[![Postere geçiş posteri Microsoft 365 görüntüsü.](../media/microsoft-365-overview/transition-org-to-m365.png)](https://download.microsoft.com/download/2/c/7/2c7bcc04-aae3-4604-9707-1ffff66b9851/transition-org-to-m365.pdf)
+[![Microsoft 365 posterine geçiş resmi.](../media/microsoft-365-overview/transition-org-to-m365.png)](https://download.microsoft.com/download/2/c/7/2c7bcc04-aae3-4604-9707-1ffff66b9851/transition-org-to-m365.pdf)
 
-Bu iki sayfalık poster, var olan altyapının envanterini inimini yapmak için hızlı bir yol sağlar. Kurum için bir hizmette kılavuz bulmanıza ve ilgili ürüne veya hizmete Microsoft 365 yardımcı olur. Cihaz yönetimi Windows kimlik Office bilgiler ve tehdit koruması gibi güvenlik öğeleri ile diğer altyapı ve güvenlik öğelerini içerir.
+Bu iki sayfalık poster, mevcut altyapınızın envanterini oluşturmanın hızlı bir yoludur. Rehberliği bulmanıza ve kuruluş için Microsoft 365 ilgili ürüne veya hizmete geçmenize yardımcı olur. Windows ve Office ürünleri ile cihaz yönetimi, kimlik, bilgi ve tehdit koruması gibi diğer altyapı ve güvenlik öğelerini içerir.
 
 ## <a name="end-of-support-for-windows-7-and-office-2010-clients-and-servers"></a>Windows 7 ve Office 2010 istemcileri ve sunucuları için destek sonu
 
-[Windows 7'den](https://aka.ms/win7upgrade) fazla destek **14 Ocak 2020'de sona erdi**.
+[Windows 7](https://aka.ms/win7upgrade)**, 14 Ocak 2020'de** destek sonuna ulaşmıştır.
 
-Bu ürünler **13 Ekim 2020'de destek sonuna ulaştı**:
+Bu ürünler **13 Ekim 2020'de** destek sonuna ulaşmıştır:
 
 - [Office 2010](/DeployOffice/office-2010-end-support-roadmap)
 - [Exchange Server 2010](exchange-2010-end-of-support.md)
 
-[SharePoint Server 2010](upgrade-from-sharepoint-2010.md), **13 Nisan 2021'de destek sonuna ulaşacak**.
+[SharePoint Server 2010](upgrade-from-sharepoint-2010.md)**, 13 Nisan 2021'de** destek sonuna ulaşacaktır.
 
-Bu ürünler için yükseltme, geçirme ve buluta taşıma seçeneklerinin görsel bir özeti için destek [posteri sonuna bakın](../downloads/Office2010Windows7EndOfSupport.pdf).
+Bu ürünlerin yükseltme, geçiş ve buluta taşıma seçeneklerinin görsel bir özeti için [destek sonu posterine](../downloads/Office2010Windows7EndOfSupport.pdf) bakın.
 
-[![Office 2010 istemcileri ve sunucuları ve Posta 7 posteri için Windows resmi.](../media/microsoft-365-overview/office2010-windows7-end-of-support.png)](../downloads/Office2010Windows7EndOfSupport.pdf)
+[![Office 2010 istemcileri ve sunucuları ve Windows 7 posteri için destek sonu resmi.](../media/microsoft-365-overview/office2010-windows7-end-of-support.png)](../downloads/Office2010Windows7EndOfSupport.pdf)
 
-Bu tek sayfalı poster, Windows 7 ve Office 2010 istemci ve sunucu ürünlerinin destek sonuna ulaşmasını önlemek üzere at İlk olarak, Microsoft 365 Kurumsal'da tercih edilen yollar ve destek vurgulanmış şekilde çeşitli yolları anlamanın hızlı bir yoludur.
+Bu tek sayfalık poster, Windows 7 ve Office 2010 istemci ve sunucu ürünlerinin destek sonuna ulaşmasını önlemek için izleyebileceğiniz çeşitli yolları anlamanın hızlı bir yoludur ve kurumsal Microsoft 365 tercih edilen yollar ve destek vurgulanır.
 
-Ayrıca bu [posteri indirip mektup](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/Office2010Windows7EndOfSupport.pdf) , yasal veya tabloid (11 x 17) biçimlerinde yazdırabilirsiniz.
+[Ayrıca bu posteri indirebilir](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/Office2010Windows7EndOfSupport.pdf) ve mektup, yasal veya tabloid (11 x 17) biçimlerinde yazdırabilirsiniz.
 
 ## <a name="plan-for-and-deploy"></a>Planlama ve dağıtma
 
-Kurumsal ürün, özellik ve bileşenleri planlamanın ve dağıtmanın üç Microsoft 365 vardır:
+Kuruluş için Microsoft 365 ürünlerini, özelliklerini ve bileşenlerini planlamanın ve dağıtmanın üç yolu vardır:
 
-- İş ortaklığında FastTrack
+- FastTrack ortaklığıyla
 
-   Microsoft FastTrack, buluta kendi hızınızı göre taşımanıza yardımcı olur. Bkz[. FastTrack için Microsoft 365](https://fasttrack.microsoft.com/microsoft365).
+   FastTrack ile Microsoft mühendisleri buluta kendi hızınızda geçmenize yardımcı olur. [Microsoft 365 için](https://fasttrack.microsoft.com/microsoft365) bkz. FastTrack.
 
-- Microsoft Danışmanlık Hizmetleri'nin veya bir [Microsoft iş ortağının yardımıyla](https://partner.microsoft.com/)
+- Microsoft Danışmanlık Hizmetleri'nin veya bir [Microsoft iş ortağının](https://partner.microsoft.com/) yardımıyla
 
-   Danışmanlar geçerli altyapınızı analiz edebilir ve kurumsal destek hizmetleri için tüm yazılım ve hizmetleri dahil edecek bir plan Microsoft 365 yardımcı olabilir.
+   Danışmanlar, mevcut altyapınızı analiz edebilir ve kurumsal Microsoft 365 tüm yazılım ve hizmetlerini dahil etmek üzere bir plan geliştirmenize yardımcı olabilir.
 
-- Bunu kendiniz yapma
+- Kendiniz yapın
 
-   Var olan [altyapınızı ve üretkenlik](networking-roadmap-microsoft-365.md) iş yüklerinizi oluşturmak veya doğrulamak için Ağ yol haritası ile çalışmaya başlama.
+   Mevcut altyapınızı ve üretkenlik iş yüklerinizi oluşturmak veya doğrulamak için [Ağ yol haritasıyla](networking-roadmap-microsoft-365.md) başlayın.
 
-Kurgusal ama çok uluslu bir kuruluşun kuruluş için Microsoft 365 dağıtıldı örneği için [Contoso Corporation örnek olay incelemesini incele.](contoso-overview.md)
+Kurgusal ama temsili çok uluslu bir kuruluşun kuruluş için Microsoft 365 nasıl dağıttığını gösteren bir örnek için bkz. [Contoso Corporation örnek olay incelemesi](contoso-overview.md).
 
 ## <a name="additional-microsoft-365-products"></a>Ek Microsoft 365 ürünleri
 
 - [Microsoft 365 Business Premium](../admin/index.yml)
 
-  Küçük ve orta ölçekli işletmelere yönelik iş verilerini korumak için cihaz yönetimi ve güvenlik çözümleriyle sınıf içerisinde en iyi üretkenlik ve işbirliği özelliklerini bir araya getirin.
+  Küçük ve orta ölçekli işletmeler için iş verilerini korumak için cihaz yönetimi ve güvenlik çözümleriyle sınıfının en iyi üretkenlik ve işbirliği özelliklerini bir araya getirin.
 
 - [Microsoft 365 Eğitim](/education)
 
-  Eğitime yönelik tek bir uygun fiyatlı çözümde yaratıcılığı ortaya kilidi açmak, ekip çalışması geliştirmek ve basit ve güvenli bir deneyim sağlamak için eğitimcileri güçlendirin.
+  Eğitim için oluşturulmuş tek ve uygun fiyatlı bir çözümde yaratıcılığı ortaya çıkarma, ekip çalışmasını teşvik etme ve basit ve güvenli bir deneyim sunmaları için eğitimcileri güçlendirin.
 
 - [Microsoft 365 Kamu](https://www.microsoft.com/microsoft-365/government)
 
-  Amerika Birleşik Devletleri kamu sektörü çalışanlarının güvenli bir şekilde birlikte çalışmalarını sağlama.
+  Birleşik Devletler kamu sektörü çalışanlarını birlikte, güvenli bir şekilde çalışacak şekilde güçlendirin.
 
 ## <a name="best-together-with-surface-and-the-edge-browser"></a>Surface ve Edge tarayıcısıyla birlikte en iyi
 
-Kurumsal, Microsoft Surface cihazları ve Microsoft 365 tarayıcısı için en iyi birlikte kullanım bileşimini kullanarak kullanıcınizin tümleşik ve güvenli üretkenliğini Microsoft Edge. Bu çapraz ürün tümleştirmesi şunları sağlar:
+Kurumsal cihazlar, Microsoft Surface cihazları ve Microsoft Edge tarayıcı için en iyi Microsoft 365 birleşimiyle kullanıcınızın tümleşik ve güvenli üretkenliğini iyileştirin. Bu ürün arası tümleştirme şunu sağlar:
 
-- Yaygın bir kimlik ve oturum açma güvenlik altyapısı.
+- Ortak kimlik ve oturum açma güvenlik altyapısı.
 - Arama, işbirliği, üretkenlik ve uyumluluk için tümleşik yerel ve bulut uygulamaları.
 - Donanım, tarayıcı, yerel uygulama ve bulut uygulamaları için kapsamlı ve tümleşik güvenlik.
-- Yüklemelerin ve güncelleştirmelerin IT yönetimi için yaygın bir altyapı.
+- Yüklemelerin ve güncelleştirmelerin BT yönetimi için ortak bir altyapı.
 
-İşte büyük bir kuruluşa örnek.
+Aşağıda kurumsal bir kuruluş için bir örnek verilmiştir.
 
-![Cihazlar, Surface Microsoft 365 Edge tarayıcısına sahip kurumsal bir kuruluş.](../media/microsoft-365-overview/best-together-with-surface-and-edge.png)
+![Microsoft 365, Surface cihazları ve Edge tarayıcısına sahip kurumsal bir kuruluş.](../media/microsoft-365-overview/best-together-with-surface-and-edge.png)
 
-Küçük ve orta ölçekli bir işletme ve bir eğitim kurumuna yönelik daha fazla bilgi ve yapılandırma örnekleri için Best [together posterini indirin](https://download.microsoft.com/download/2/8/d/28db0cf9-2f5a-4f63-91e2-46ff5c4d3baf/microsoft-best-together-poster.pdf).
+Küçük ve orta ölçekli bir işletme ve eğitim kurumu için daha fazla bilgi ve yapılandırma örnekleri için [Birlikte en iyi posterini](https://download.microsoft.com/download/2/8/d/28db0cf9-2f5a-4f63-91e2-46ff5c4d3baf/microsoft-best-together-poster.pdf) indirin.
 
-[![Surface ile birlikte En iyi ve Edge tarayıcı posteri görüntüsü.](../media/microsoft-365-overview/best-together-poster-thumbnail.png)](https://download.microsoft.com/download/2/8/d/28db0cf9-2f5a-4f63-91e2-46ff5c4d3baf/microsoft-best-together-poster.pdf)
+[![Surface ve Edge tarayıcı posteriyle birlikte En İyi için resim.](../media/microsoft-365-overview/best-together-poster-thumbnail.png)](https://download.microsoft.com/download/2/8/d/28db0cf9-2f5a-4f63-91e2-46ff5c4d3baf/microsoft-best-together-poster.pdf)
 
 
 ## <a name="microsoft-365-training"></a>Microsoft 365 eğitimi
 
-![Microsoft 365 TemelLeri Eğitimi.](../media/microsoft-365-overview/m365-fundamentals.svg)
+![Microsoft 365 Temel Bilgiler eğitimi.](../media/microsoft-365-overview/m365-fundamentals.svg)
 
-Sertifikayı temel alma Microsoft 365 ve Microsoft 365 hakkında daha fazla bilgi edinmek için Microsoft 365 [Sertifikalı: Temeller ile başlayabilirsiniz](/learn/paths/m365-fundamentals/).
+Microsoft 365 hakkında daha fazla bilgi edinmek ve Microsoft 365 sertifikası almak için [Microsoft 365 Sertifikalı: Temel Bilgiler](/learn/paths/m365-fundamentals/) ile başlayabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Microsoft 365 ürün sayfası](https://www.microsoft.com/microsoft-365/enterprise)
+[Kurumsal ürün için Microsoft 365 sayfası](https://www.microsoft.com/microsoft-365/enterprise)

@@ -2,8 +2,8 @@
 title: Microsoft 365'de InvestEdge verilerini arşivleye bir bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -12,12 +12,12 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Microsoft 365'da InvestEdge verilerini içeri aktarmak ve arşivlemek için 17a-4 InvestEdge DataParser bağlayıcısını ayarlamayı ve kullanmayı öğrenin.
-ms.openlocfilehash: cc10c5a798e9e85da7f95769926df8446187434c
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 434363cfb2cc66003fa3c900ec58d3ba38b71a0e
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64998114"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65097216"
 ---
 # <a name="set-up-a-connector-to-archive-investedge-data"></a>InvestEdge verilerini arşivleye bağlayıcı ayarlama
 

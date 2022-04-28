@@ -2,7 +2,7 @@
 title: PerformancePoint Server 2007 destek sonu yol haritası
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 audience: ITPro
 ms.topic: conceptual
 ms.service: o365-solutions
@@ -15,142 +15,142 @@ search.appverid:
 ms.assetid: 89d9feee-2285-419c-8c14-0f7f583536e0
 f1.keywords:
 - NOCSH
-description: PerformancePoint Server 2007, ProClarity ve SharePoint Server 2007 destek sonuna ulaştı. BI çözümü yükseltmenizi planlamanıza yardımcı olmak için bu makaleyi okuyun.
-ms.openlocfilehash: f4e0662109cc5bdbdfbf922086715a0de4d91c37
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: PerformancePoint Server 2007, ProClarity ve SharePoint Server 2007 destek sonuna ulaşmıştır. BI çözüm yükseltmenizi planlamanıza yardımcı olması için bu makaleyi okuyun.
+ms.openlocfilehash: 381faab617828d3bb30106deaaae993ed8d2b786
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983835"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65096358"
 ---
 # <a name="performancepoint-server-2007-end-of-support-roadmap"></a>PerformancePoint Server 2007 destek sonu yol haritası
 
-*Bu makale hem son hem de Microsoft 365 Kurumsal hem de Office 365 Kurumsal.*
+*Bu makale hem Microsoft 365 Kurumsal hem de Office 365 Kurumsal için geçerlidir.*
 
-Office 2007 sunucu ve uygulamalarının, iş zekası (BI) çözümlerinizin bir parçası olarak kullanıyor olabileceğiniz sunucular ve uygulamalar da dahil olmak üzere, destek sonu geldi. Aşağıdaki tabloda etkilenen BI uygulamaları listelemektedir:
+Office 2007 sunucu ve uygulamaları, iş zekası (BI) çözümlerinizin bir parçası olarak kullanıyor olabileceğiniz sunucular ve uygulamalar da dahil olmak üzere destek sonuna ulaşmıştır. Aşağıdaki tabloda etkilenen BI uygulamaları listelenmiştir:
   
-|**Microsoft BI uygulamaları**|**Desteğin sona er iş başlangıç tarihi**|
+|**Microsoft BI uygulamaları**|**Desteğin sona erme tarihi**|
 |:-----|:-----|
-|ProClarity Analytics Server 6.3 Service Pack 3  <br/> ProClarity Masaüstü Professional 6.3  <br/> ProClarity SharePoint Görüntüleyicisi 6.3  <br/> |11 Temmuz 2017  <br/> |
+|ProClarity Analytics Server 6.3 Service Pack 3  <br/> ProClarity Desktop Professional 6.3  <br/> ProClarity SharePoint Viewer 6.3  <br/> |11 Temmuz 2017 Salı  <br/> |
 |SharePoint Server 2007 Service Pack 3  <br/> |10 Ekim 2017  <br/> |
-|PerformancePoint Server 2007 Service Pack 3  <br/> |9 Ocak 2018  <br/> |
+|PerformancePoint Server 2007 Service Pack 3  <br/> |9 Ocak 2018 Salı  <br/> |
    
-Daha fazla bilgi için bkz[. Office 2007 sunucularından ve istemcilerinden yükseltmeye yardımcı olacak kaynaklar](upgrade-from-office-2007-servers-and-products.md).
+Daha fazla bilgi için bkz[. Office 2007 sunucularından ve istemcilerinden yükseltmenize yardımcı olacak kaynaklar](upgrade-from-office-2007-servers-and-products.md).
   
-## <a name="what-does-end-of-support-mean"></a>Desteğin *sonu ne anlama* geliyor?
+## <a name="what-does-end-of-support-mean"></a>*Destek sonu* ne anlama gelir?
 
-Çoğu Microsoft ürünü, PerformancePoint Server 2007 SP3, ProClarity yazılımı ve SharePoint Server 2007 SP3 gibi çoğu için de bir destek yaşam döngüsü vardır ve bu süre boyunca Microsoft yeni özellikler, hata düzeltmeleri ve güvenlik güncelleştirmeleri sağlar. Bir ürünün yaşam döngüsü normalde ürünün ilk yayımı ile 10 yıl devam eder. Bu yaşam döngüsünün sonu, ürünün destek sonu olarak bilinir. ProClarity, PerformancePoint Server SharePoint Server 2007'nin destek sonuna ulaştığı için, Microsoft artık şunları sağlar:
+Çoğu Microsoft ürünü gibi PerformancePoint Server 2007 SP3, ProClarity yazılımı ve SharePoint Server 2007 SP3'ün de destek yaşam döngüsü vardır ve bu süre boyunca Microsoft yeni özellikler, hata düzeltmeleri ve güvenlik güncelleştirmeleri sağlar. Bir ürünün yaşam döngüsü genellikle ürünün ilk sürümünden itibaren 10 yıl sürer. Bu yaşam döngüsünün sonu, ürünün destek sonu olarak bilinir. ProClarity, PerformancePoint Server ve SharePoint Server 2007 destek sonuna ulaştığından, Microsoft artık şunları sağlamaz:
   
-- Ortaya çıkabilir sorunlar için teknik destek.
+- Oluşabilecek sorunlar için teknik destek.
     
-- Bulunan ve sunucuların kararlılığıyla kullanılabilirliğini etkilebilir olan sorunlar için hata düzeltmeleri.
+- Bulunan ve sunucuların kararlılığını ve kullanılabilirliğini etkileyebilecek sorunlar için hata düzeltmeleri.
     
-- Bulunan ve sunucuların veya uygulamaların güvenlik ihlallerine neden olduğu bulunan güvenlik açıklarına yönelik güvenlik düzeltmeleri.
+- Bulunan ve sunucuları veya uygulamaları güvenlik ihlallerine karşı savunmasız hale getirebilecek güvenlik açıklarına yönelik güvenlik düzeltmeleri.
     
 - Saat dilimi güncelleştirmeleri.
     
-ProClarity, SharePoint Server 2007 SP3 ve PerformancePoint Server 2007 SP3 yüklemeniz, destek sona erse bile çalışmaya devam edecektir. Bununla birlikte, en kısa zamanda bu uygulamalardan geçişnizi kesinlikle öneririz.
+Destek sona ermiş olsa bile ProClarity, SharePoint Server 2007 SP3 ve PerformancePoint Server 2007 SP3 yüklemeniz çalışmaya devam edecektir. Ancak, bu uygulamalardan mümkün olan en kısa sürede geçmenizi kesinlikle öneririz.
   
-## <a name="what-are-my-options"></a>Seçeneklerim neler?
+## <a name="what-are-my-options"></a>Seçeneklerim nelerdir?
 
-2007'den bu yana Microsoft BI uygulamalarında çok fazla değişiklik oldu ve aşağıdaki tabloda özetlenmiştir ve göz önünde bulunduracak çeşitli seçenekleriniz var.
+2007'den bu yana Microsoft BI uygulamalarında birçok değişiklik yapıldı ve aşağıdaki tabloda özetlendiği gibi dikkate almanız gereken birkaç seçenek vardır.
   
-|**Bunu kullanıyorsanız ...**|**Bu seçenekleri keşfedin ...**|**Bunu da unutmayın ...**|
+|**Bunu kullanıyorsanız ...**|**Bu seçenekleri keşfedin...**|**Ve bunu aklınızda bulundurun ...**|
 |:-----|:-----|:-----|
-| PerformancePoint Server 2007 İzleme &amp; Analizi özellikleri, şunları da içerir:<br/>- PerformancePoint İzleme Sunucusu <br/>- PerformancePoint Pano Tasarımcısı<br/>- Pano Görüntüleyicisi, SharePoint Hizmetleri için Pano Görüntüleyicisi (PerformancePoint panolarını, karnelerini ve raporlarını işlemede kullanılır)<br/> |**Excel (Excel veya şirket içinde**) e-postayı kullanarak da devam edin. Genel bir bakış için bkz. [Excel BI özellikleri Microsoft 365](https://support.office.com/article/26c0548e-124c-4fd3-aab3-5f64568cb743.aspx).<br/><br/> **Power BI** (bulutta veya şirket içinde). Genel bakış için bkz[. Ne Power BI?](https://go.microsoft.com/fwlink/?linkid=841341) <br/><br/> **SQL Server Reporting Services** (şirket içi). Genel bir bakış için bkz. SQL Server Reporting Services: Mobil ve sayfalı raporlar oluşturma[, dağıtma ve yönetme](/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports). <br/><br/> **PerformancePoint Hizmetleri** (şirket içi). Genel bakış için bkz[. PerformancePoint Hizmetleri Server 2010) ile ilgili SharePoint.](/previous-versions/office/sharepoint-server-2010/ee661741(v=office.14)) <br/> |Excel çevrimiçi (bulut tabanlı) veya şirket içi bir çözüm olarak kullanılabilir. Birçok raporlama ve pano ihtiyacı tek tek Excel.  <br/><br/> Power BI çevrimiçi veya şirket içi bir çözüm olarak kullanılabilir. Power BI, diğer e-Microsoft 365. Ancak Power BI kullanmaya başlayabilirsiniz. Daha sonra veri kullanımınıza ve iş gereksinimlerinize bağlı olarak, diğer iş Power BI Pro yükseltme Microsoft 365 E5.<br/> <br/> Reporting Services ve PerformancePoint Hizmetleri ikisi de şirket içi çözümlerdir. <br/><br/> PerformancePoint Hizmetleri, SharePoint Server 2010, SharePoint Server 2013 ve SharePoint Server 2016'da kullanılabilir. <br/> <br/> PerformancePoint Server 2007'de bulunan bazı özellikler ve rapor türleri, Excel, Power BI, Reporting Services veya PerformancePoint Hizmetleri. İş ihtiyaçlarına en uygun çözümü belirlemek için kullanılabilir özellikleri gözden geçirebilirsiniz. <br/> |
-| ProClarity yazılımı, şunları içerir:<br/>- ProClarity Masaüstü Professional<br/> - ProClarity Analytics Sunucusu<br/>- ProClarity SharePoint Görüntüleyicisi<br/> |**İhtiyaçlarınızı en iyi karşılayacak** çözümü belirlemek için bir Microsoft iş ortağıyla birlikte çalışın. [Microsoft İş Ortağı Merkezi'ne ziyaret edin](https://go.microsoft.com/fwlink/?linkid=841249). <br/><br/> Excel'ı tarayıcıda Excel, Power BI, SQL Server Reporting Services veya PerformancePoint Hizmetleri.  <br/> |ProClarity yazılımının bazı özellikleri, Excel, Power BI, Reporting Services ve diğer Microsoft teklif PerformancePoint Hizmetleri.  <br/> |
-|SharePoint Server 2007 KIS'leri (MOSS KIP'leri olarak da adlandırılan)  <br/> |**Excel Hizmetleri ile Excel.** Genel bakış için bkz. [Excel ve Excel Hizmetlerde (SharePoint Server 2013) iş zekası](https://support.office.com/article/2740f10c-579d-4b40-a1d9-7beb5d38547c.aspx). <br/> |SharePoint Server 2007 kullanılarak oluşturulmuş MOSS KP'leri SharePoint Server 2010, SharePoint Server 2013 ve SharePoint Server 2016'da kullanılabilir. Ancak yeni MOSS KIP'leri oluşturayaz.  <br/> |
-|Excel 2007  <br/> |**Excel** (bulutta veya şirket içinde). Genel bakış için bkz. [Excel Office 365](https://support.office.com/article/26c0548e-124c-4fd3-aab3-5f64568cb743.aspx). <br/><br/> **Power BI** (bulutta veya şirket içinde). Genel bakış için bkz[. Ne Power BI?](https://go.microsoft.com/fwlink/?linkid=841341) <br/> |Hem Excel hem de Power BI, çok çeşitli veri kaynaklarını destekleyen bulut tabanlı ve şirket içi çözümler sunar.  <br/> |
+| PerformancePoint Server 2007 İzleme &amp; Analizi özellikleri, örneğin:<br/>- PerformancePoint İzleme Sunucusu <br/>- PerformancePoint Pano Tasarımcısı<br/>- SharePoint Hizmetleri için Pano Görüntüleyicisi (PerformancePoint panolarını, karnelerini ve raporlarını işlemek için kullanılır)<br/> |tarayıcıda (bulutta veya şirket içinde) **Excel ile Excel**. Genel bakış için bkz[. Excel ve Microsoft 365'deki BI özellikleri](https://support.office.com/article/26c0548e-124c-4fd3-aab3-5f64568cb743.aspx).<br/><br/> **Power BI** (bulutta veya şirket içinde). Genel bakış için bkz. [Power BI nedir?](https://go.microsoft.com/fwlink/?linkid=841341) <br/><br/> **SQL Server Reporting Services** (şirket içi). Genel bakış için bkz. [SQL Server Reporting Services (SSRS): Mobil ve sayfalandırılmış raporlar oluşturma, dağıtma ve yönetme](/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports). <br/><br/> **PerformancePoint Hizmetleri** (şirket içi). Genel bakış için bkz[. PerformancePoint Hizmetleri için yenilikler (SharePoint Server 2010)](/previous-versions/office/sharepoint-server-2010/ee661741(v=office.14)). <br/> |Excel çevrimiçi (bulut tabanlı) veya şirket içi çözüm olarak kullanılabilir. Birçok raporlama ve pano gereksinimi Excel ile karşılanabilir.  <br/><br/> Power BI çevrimiçi veya şirket içi bir çözüm olarak kullanılabilir. Power BI Microsoft 365 dahil değildir. Ancak Power BI ücretsiz kullanmaya başlayabilirsiniz. Daha sonra, veri kullanımınıza ve iş gereksinimlerinize bağlı olarak, Microsoft 365 E5 ile Power BI Pro yükseltebilirsiniz.<br/> <br/> Reporting Services ve PerformancePoint Hizmetleri hem şirket içi çözümlerdir. <br/><br/> PerformancePoint Hizmetleri SharePoint Server 2010, SharePoint Server 2013 ve SharePoint Server 2016'da kullanılabilir. <br/> <br/> PerformancePoint Server 2007'de kullanılabilen bazı özellikler ve rapor türleri Excel, Power BI, Reporting Services veya PerformancePoint Hizmetleri'da kullanılamaz. İş gereksinimleriniz için en iyi çözümü belirlemek için kullanılabilir özellikleri gözden geçirin. <br/> |
+| ProClarity yazılımı, örneğin:<br/>- ProClarity Desktop Professional<br/> - ProClarity Analytics Sunucusu<br/>- ProClarity SharePoint Görüntüleyicisi<br/> |Gereksinimlerinize en uygun çözümü belirlemek için **bir Microsoft iş ortağıyla birlikte çalışın**. [Microsoft İş Ortağı Merkezi'ni ziyaret edin](https://go.microsoft.com/fwlink/?linkid=841249). <br/><br/> Excel tarayıcıda, Power BI, SQL Server Reporting Services veya PerformancePoint Hizmetleri Excel ile kullanmayı da düşünebilirsiniz.  <br/> |ProClarity yazılımının çeşitli ancak tüm özellikleri Excel, Power BI, Reporting Services ve PerformancePoint Hizmetleri gibi diğer Microsoft tekliflerinde kullanılabilir.  <br/> |
+|SharePoint Server 2007 KPI'leri (MOSS KPI'leri olarak da adlandırılır)  <br/> |**Excel Hizmetleri ile Excel**. Genel bakış için bkz. [Excel ve Excel Hizmetleri'nde iş zekası (SharePoint Server 2013)](https://support.office.com/article/2740f10c-579d-4b40-a1d9-7beb5d38547c.aspx). <br/> |SharePoint Server 2007 kullanılarak oluşturulan MOSS KPI'leri SharePoint Server 2010, SharePoint Server 2013 ve SharePoint Server 2016'da kullanılabilir. Ancak yeni MOSS KPI'leri oluşturamazsınız.  <br/> |
+|Excel 2007  <br/> |**Excel** (bulutta veya şirket içinde). Genel bakış için bkz[. Excel ve Office 365'deki BI özellikleri](https://support.office.com/article/26c0548e-124c-4fd3-aab3-5f64568cb743.aspx). <br/><br/> **Power BI** (bulutta veya şirket içinde). Genel bakış için bkz. [Power BI nedir?](https://go.microsoft.com/fwlink/?linkid=841341) <br/> |Hem Excel hem de Power BI, kuruluşunuza çok çeşitli veri kaynakları desteğiyle bulut tabanlı ve şirket içi çözümler sunar.  <br/> |
    
 ### <a name="help-selecting-a-solution"></a>Çözüm seçme yardımı
 
-Kullanılabilir çok fazla BI seçeneği varsa, hangi seçeneğin en iyi olduğunu belirlemek bunaltıcı bir iş olabilir. Size yardımcı olacak bir çevrimiçi kılavuzumuz var. Bkz [. Çözümleme ve raporlama için Microsoft İş Zekası (BI) araçlarını seçme](/sql/reporting-services/choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting).
+Bu kadar çok iş zekası seçeneği olduğundan, hangi seçeneğin en iyi olduğunu belirlemek zor görünebilir. Yardımcı olabilecek çevrimiçi bir kılavuzumuz var. Bkz. [Analiz ve raporlama için Microsoft İş Zekası (BI) araçlarını seçme](/sql/reporting-services/choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting).
   
-### <a name="what-if-i-dont-upgrade-now"></a>Şimdi yükselte olursam ne olur?
+### <a name="what-if-i-dont-upgrade-now"></a>Şimdi yükseltme yapmazsam ne olur?
 
-Hemen yükseltmeyebilirsiniz. Var olan sunucularınız ve uygulamalarınız çalışmaya devam eder. Ancak destek sona ermiştir ve güvenlik güncelleştirmeleri de içinde olmak üzere başka güncelleştirme almazsınız. Sunucu uygulamalarınız ile ilgili bir sorun olursa, Microsoft teknik desteğinden yardım alamazsınız.
+Hemen yükseltmemeyi seçebilirsiniz. Mevcut sunucularınız ve uygulamalarınız çalışmaya devam eder. Ancak destek sona erdiğinden güvenlik güncelleştirmeleri de dahil olmak üzere başka güncelleştirme almazsınız. Sunucu uygulamalarınızda bir sorun olursa Microsoft teknik desteğinden yardım alamazsınız.
   
-## <a name="how-do-i-plan-my-upgrade"></a>Yükseltmemi nasıl planlarım?
+## <a name="how-do-i-plan-my-upgrade"></a>Yükseltmemi Nasıl yaparım? planlayın?
 
-Yükseltme seçeneklerinizi inceledikten sonra, bir sonraki adım yükseltme planını hazırlamaktır. Aşağıdaki bölümler, size yardımcı olacak bilgiler ve ek kaynaklar içerir. İkisi bulutta veya şirket içinde çalışır, ikisi de şirket içi olan dört ana seçeneğiniz vardır:
+Yükseltme seçeneklerinizi inceledikten sonra, sonraki adım bir yükseltme planı hazırlamaktır. Aşağıdaki bölümlerde yardımcı olacak bilgiler ve ek kaynaklar yer alır. Hem bulutta hem de şirket içinde çalışan iki ve yalnızca şirket içi iki seçenek de dahil olmak üzere dört ana seçeneğiniz vardır:
   
-|**Seçenek**|**Bulutta mı yoksa şirket içinde mi?**|
+|**Seçeneği**|**Bulutta mı yoksa şirket içinde mi?**|
 |:-----|:-----|
-|[Excel Server SharePoint (şirket içi) ile bağlantı](#excel-with-sharepoint-server-on-premises) <br/> |Her ikisi  <br/> |
-|[Power BI](#use-power-bi-in-the-cloud-or-on-premises)<br/> |Her ikisi  <br/> |
+|[SharePoint Server (şirket içi) ile Excel](#excel-with-sharepoint-server-on-premises) <br/> |Hem  <br/> |
+|[Power BI](#use-power-bi-in-the-cloud-or-on-premises)<br/> |Hem  <br/> |
 |[Reporting Services](#use-reporting-services-on-premises) <br/> |Yalnızca şirket içi  <br/> |
 |[PerformancePoint Hizmetleri](#use-performancepoint-services-on-premises) <br/> |Yalnızca şirket içi  <br/> |
    
-### <a name="use-excel-in-the-cloud-or-on-premises"></a>E Excel kullanma (bulutta veya şirket içinde)
+### <a name="use-excel-in-the-cloud-or-on-premises"></a>Excel kullanma (bulutta veya şirket içinde)
 
-SharePoint Server'da *Excel Hizmetleri* olarak da bilinen Excel ile, bilgisayarda Excel yüklü değilse bile çalışma kitaplarını tarayıcı penceresinde görüntüleyebilirsiniz ve kullanabilirsiniz. Raporları, Excel karneleri ve panoları oluşturmak için bu panoları kullanabilirsiniz. Ardından, ister Microsoft 365 ister Excel SharePoint Server şirket içinde ister tarayıcıda SharePoint Online kullanıyor olsunlar, çalışma kitaplarınızı tarayıcıda SharePoint başkalarla paylaşın. Şirket içinde veya bulutta depolanan verileri kullanabilirsiniz, bu sayede çok çeşitli veri kaynaklarını kullanabilirsiniz.
+SharePoint Server'da *Excel Hizmetleri* olarak da bilinen Excel ile, bilgisayarda Excel yüklü olmasa bile çalışma kitaplarını tarayıcı penceresinde görüntüleyebilir ve kullanabilirsiniz. raporlar, karneler ve panolar oluşturmak için Excel kullanabilirsiniz. Ardından çalışma kitaplarınızı, ister Microsoft 365 ister şirket içi SharePoint Server'ın bir parçası olarak SharePoint Online kullanıyor olsunlar, tarayıcıda Excel kullanabilen başkalarıyla paylaşın. Şirket içinde veya bulutta depolanan verileri kullanabilirsiniz. Bu sayede çok çeşitli veri kaynakları kullanabilirsiniz.
   
-Aşağıdaki tabloda, Excel'i Microsoft 365 ile Excel Server ile kullanmanın SharePoint karşılaştırıldı. Daha fazla bilgi aşağıda verilmiştir.
+Aşağıdaki tabloda, Microsoft 365 ile Excel kullanmanın temel avantajları, Excel SharePoint Server ile kullanmakla karşılaştırır. Daha fazla bilgi aşağıdadır.
   
-|**Excel (Microsoft 365) ile birlikte**|**Excel Server SharePoint (şirket içi) ile bağlantı**|
+|**Microsoft 365 ile Excel (bulutta)**|**SharePoint Server (şirket içi) ile Excel**|
 |:-----|:-----|
-|**En son ve en büyük Excel**. Microsoft 365 ile, güçlü yeni grafik türlerini, hızla ve kolayca grafik ve tablo oluşturma olanağını ve daha fazla veri kaynağı desteğini içeren en son Excel sürümünü edinebilirsiniz. <br/> <br/> **Kurulum çok daha basittir**. Excel İş için Microsoft 365 da dahil olduğu için sizin tarafınıza ağır işler ekli değildir. Kaydolarak oturum asın; şirket içi sunucularınızı yükseltmeye göre daha hızlı ve daha verimli bir şekilde çalışırsınız. <br/> <br/> **Kişiler çalışma kitaplarına her yerden erişime sahip olur**. Kişiler, bilgisayarlarını, akıllı telefonlarını ve tabletlerini kullanarak, nerede olursa olsunlar çalışma kitaplarını güvenli bir şekilde  görüntülemeye devam ediyor. <br/> <br/> **Dahası da var!** Bi [özellikleri hakkında bilgi için Excel BI Office 365](https://support.office.com/article/26c0548e-124c-4fd3-aab3-5f64568cb743.aspx). <br/> |**Genel ayarlarınızı yönetirsiniz**. Genel SharePoint olarak, güvenlik, yük dengeleme, oturum yönetimi, çalışma kitabını önbelleğe alma ve dış veri bağlantıları gibi genel ayarları belirtebilirsiniz. <br/> <br/> **PerformancePoint Hizmetleri ile Excel Hizmetleri'PerformancePoint Hizmetleri**. SharePoint Server Excel PerformancePoint Hizmetleri bir parçası olarak Excel Hizmetleri'ni yapılandırabilirsiniz ve PerformancePoint panolarınıza Excel Services raporları ebilirsiniz. <br/> <br/> **Dahası da var!** Bkz[. Excel ve Excel Hizmetlerde (SharePoint Server 2013) iş zekası](https://support.office.com/article/2740f10c-579d-4b40-a1d9-7beb5d38547c.aspx). <br/> |
+|**Excel en son ve en iyi sürümünü alırsınız**. Microsoft 365 ile güçlü yeni grafik türleri, hızlı ve kolay bir şekilde grafik ve tablo oluşturma ve daha fazla veri kaynağı desteği içeren en son Excel sürümünü elde edersiniz. <br/> <br/> **Kurulum çok daha basittir**. Excel iş için Microsoft 365 dahil olduğundan sizin için ağır bir kaldırma yoktur. Kaydolun ve oturum açın. Şirket içi sunucularınızı yükseltip yükseltmediğinize göre daha hızlı ve daha verimli bir şekilde çalışır duruma geleceksiniz. <br/> <br/> **Kişilerin çalışma kitaplarına her yerden erişimi vardır**. Kişiler bilgisayarlarını, akıllı telefonlarını ve tabletlerini kullanarak çalışma kitaplarını bulundukları her yerden güvenli bir şekilde görüntüleyebilir. <br/> <br/> **Dahası da var!** Bkz[. Excel ve Office 365'deki BI özellikleri](https://support.office.com/article/26c0548e-124c-4fd3-aab3-5f64568cb743.aspx). <br/> |**Genel ayarlarınızı siz yönetirsiniz**. SharePoint yöneticisi olarak güvenlik, yük dengeleme, oturum yönetimi, çalışma kitabı önbelleğe alma ve dış veri bağlantıları gibi genel ayarları belirtebilirsiniz. <br/> <br/> **PerformancePoint Hizmetleri ile Excel Hizmetleri'ni kullanabilirsiniz**. SharePoint Sunucusu yüklemenizin bir parçası olarak Excel Hizmetleri ve PerformancePoint Hizmetleri yapılandırabilir ve PerformancePoint panolarınıza Excel Hizmetleri raporları ekleyebilirsiniz. <br/> <br/> **Dahası da var!** Bkz[. Excel ve Excel Hizmetleri'nde iş zekası (SharePoint Server 2013)](https://support.office.com/article/2740f10c-579d-4b40-a1d9-7beb5d38547c.aspx). <br/> |
    
-#### <a name="excel-with-microsoft-365-in-the-cloud"></a>Excel (Microsoft 365) ile birlikte
+#### <a name="excel-with-microsoft-365-in-the-cloud"></a>Microsoft 365 ile Excel (bulutta)
 
-Microsoft 365'a Microsoft 365, hizmetler ve uygulamalar dahil, en güncel hizmetlere ve uygulamalara Excel 2016. PerformancePoint Hizmetleri, Microsoft 365 bu nedenle PerformancePoint pano içeriğinizi kendi çalışma kitaplarınızı veya diğer Excel başka raporlarla değiştirirsiniz. Ancak birçok yeni Excel 2016 türüne sahip olduğunu ve bu panolarda etkileyici panolar oluşturmanın her zamankinden daha kolay olduğunu Excel. Düzenli olarak yeni özellikler eklenir. Daha fazla bilgi edinmek için [bkz. Excel 2016'daki Windows](https://support.office.com/article/5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73.aspx).
+Microsoft 365 geçerseniz, Excel 2016 dahil olmak üzere en güncel hizmetlere ve uygulamalara sahip olursunuz. PerformancePoint Hizmetleri Microsoft 365'da kullanılamadığından PerformancePoint pano içeriğinizi Excel çalışma kitapları veya diğer raporlarla değiştireceksiniz. İyi haber, Excel 2016 birçok yeni grafik türüne sahip olması ve Excel etkileyici panolar oluşturmak her zamankinden daha kolay. Ayrıca düzenli olarak yeni özellikler eklenir. Daha fazla bilgi edinmek için bkz[. Windows için Excel 2016'deki Yenilikler](https://support.office.com/article/5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73.aspx).
   
-Ayrıca 50 veya daha fazla lisans satın Microsoft 365, Microsoft FastTrack ekibi, ayarlamalar için size yardımcı olabilir. Daha fazla bilgi edinmek [için E-FastTrack](https://www.microsoft.com/fasttrack/microsoft-365).
+Ayrıca, 50 veya daha fazla Microsoft 365 satın alırsanız, Microsoft FastTrack ekibi kuruluma başlamanıza yardımcı olabilir. Daha fazla bilgi edinmek için [FastTrack](https://www.microsoft.com/fasttrack/microsoft-365) ziyaret edin.
   
-#### <a name="excel-with-sharepoint-server-on-premises"></a>Excel Server SharePoint (şirket içi) ile bağlantı
+#### <a name="excel-with-sharepoint-server-on-premises"></a>SharePoint Server (şirket içi) ile Excel
 
-SharePoint'un daha yeni bir sürümüne yükseltersiniz, Excel'i Excel Hizmetleri ile veya bir tarayıcıda aşağıdaki gibi kullanabilirsiniz:
+SharePoint daha yeni bir sürümüne yükseltirseniz, Excel Excel Hizmetleri ile veya tarayıcıda aşağıdaki gibi kullanabilirsiniz:
   
-- Excel Server 2010'da SharePoint Hizmetleri
+- SharePoint Server 2010'da Excel Hizmetleri
     
-- Excel Server 2013'SharePoint Hizmetleri
+- SharePoint Server 2013'te Excel Hizmetleri
     
-- Excel bir parçası olan Office Online Server, SharePoint Server 2016'dan ayrı yüklenir
+- Office Online Server parçası olan Excel, SharePoint Server 2016'dan ayrı olarak yüklenir
     
-SharePoint Server'ın yeni sürümünde de PerformancePoint Hizmetleri bu etkiyi yapılandırabilirsiniz ve bu etkiyi diğer Excel.
+yeni SharePoint Server sürümünüzde de PerformancePoint Hizmetleri yapılandırabilir ve bunu Excel ile birlikte kullanabilirsiniz.
   
-Yükseltme seçenekleriniz hakkında daha fazla SharePoint için bkz. [SharePoint Server 2007 destek sonu Yol Haritası](sharepoint-2007-end-of-support.md).
+SharePoint yükseltme seçenekleriniz hakkında daha fazla bilgi edinmek için bkz. [SharePoint Server 2007 destek sonu Yol Haritası](sharepoint-2007-end-of-support.md).
   
-Hizmetler hakkında daha fazla bilgi Excel için bkz. [Excel Services'a genel SharePoint Server 2010)](/previous-versions/office/sharepoint-server-2010/ee424405(v=office.14)).
+Excel Hizmetleri hakkında daha fazla bilgi edinmek için bkz. [Excel Hizmetlerine genel bakış (SharePoint Server 2010)](/previous-versions/office/sharepoint-server-2010/ee424405(v=office.14)).
   
 ### <a name="use-power-bi-in-the-cloud-or-on-premises"></a>Power BI kullanma (bulutta veya şirket içinde)
 
-Power BI verileri çözümlemeye ve öngörüleri paylaşmaya yardımcı olacak bir iş analizi araçları paketidir. Diğer Power BI, etkileşimli raporlar ve panolar oluşturmak için şirket içi veya çevrimiçi veri kaynaklarını kullanabilirsiniz. Kişiler raporlarınızı ve panolarınızı kendi bilgisayarlarında veya mobil cihazlarında  görüntüleyebilirsiniz ve kullanabilirler.
+Power BI, verileri analiz etmeye ve içgörüleri paylaşmaya yönelik bir iş analizi araçları paketidir. Power BI ile şirket içi veya çevrimiçi veri kaynaklarını kullanarak etkileşimli raporlar ve panolar oluşturabilirsiniz. Kişiler raporlarınızı ve panolarınızı bilgisayarlarında veya mobil cihazlarında görüntüleyebilir ve kullanabilir.
   
-Power BI, Microsoft 365 veya SharePoint kapsamında değil. Bu ayrı bir tekliftir; hizmetler, Power BI Desktop Power BI ve ağ geçitleri Power BI hizmetidir. Power BI, SharePoint Online ile de tümleşiktir. Power BI'i ücretsiz Power BI başlatarak yeni bir e-Power BI başlamaya hazırsiniz. Veri kullanımınıza ve iş ihtiyaçlarına bağlı olarak, daha sonra diğer iş Power BI Pro yükseltme Microsoft 365 E5. Daha fazla bilgi edinmek için [bkz. Power BI?](https://go.microsoft.com/fwlink/?linkid=841341)
+Power BI Microsoft 365 veya SharePoint Sunucusu'nun bir parçası değildir. Power BI Desktop, Power BI ağ geçitleri ve Power BI hizmeti içeren ayrı bir tekliftir. Power BI ayrıca SharePoint Online ile tümleşir. Power BI ücretsiz olarak kullanmaya başlayabilirsiniz. Veri kullanımınıza ve iş gereksinimlerinize bağlı olarak, daha sonra Microsoft 365 E5 ile Power BI Pro yükseltebilirsiniz. Daha fazla bilgi edinmek için bkz. [Power BI nedir?](https://go.microsoft.com/fwlink/?linkid=841341)
   
-### <a name="use-reporting-services-on-premises"></a>Reporting Services kullanma (şirket içinde)
+### <a name="use-reporting-services-on-premises"></a>Reporting Services'ı (şirket içi) kullanma
 
-SQL Server Reporting Services bir raporlama çözümü sağlar. Reporting Services'i yerel modda veya SharePoint modunda yapılandırabilirsiniz. Rapor Tasarımcısı, Rapor Tasarımcısı ve Rapor Tasarımcısı gibi çeşitli raporlar Report Builder araç Power View. SQL Server'in en son sürümüyle, SQL Server ekran boyutuna ölçeklendiren raporlar sunmak için Publisher Mobil Rapor Rapor Raporları'nın yanı sıra kullanabilirsiniz. Bu, izleyicilerin raporları mobil cihazlarında tüketmelerine olanak tanır. Daha fazla bilgi edinmek için bkz. SQL Server Reporting Services: Mobil ve sayfalı raporlar oluşturma[, dağıtma ve yönetme](/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports).
+SQL Server Reporting Services sağlam bir raporlama çözümü sağlar. Reporting Services'i yerel modda veya SharePoint tümleşik modda yapılandırabilirsiniz. Rapor yazmak için Rapor Tasarımcısı, Report Builder ve Power View gibi çeşitli araçlar kullanabilirsiniz. en son SQL Server sürümüyle, SQL Server Mobil Rapor Publisher kullanarak herhangi bir ekran boyutuna ölçeklendirilen raporlar da sunabilirsiniz. Bu, izleyicilerin raporları mobil cihazlarında kullanmasına olanak tanır. Daha fazla bilgi edinmek için bkz. [SQL Server Reporting Services (SSRS): Mobil ve sayfalandırılmış raporlar oluşturma, dağıtma ve yönetme](/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports).
   
 ### <a name="use-performancepoint-services-on-premises"></a>PerformancePoint Hizmetleri kullanma (şirket içi)
 
-PerformancePoint Server 2007, SharePoint Server 2007'den ayrı olarak satılırdı. SharePoint Server 2010'dan baş PerformancePoint Hizmetleri, SharePoint Server'da bir hizmet uygulamasıdır. Dolayısıyla, bu özellikleri kullanmak için ayrı sunucu lisansları veya donanım satın PerformancePoint Hizmetleri.
+PerformancePoint Server 2007, SharePoint Server 2007'den ayrı olarak satıldı. SharePoint Server 2010'da PerformancePoint Hizmetleri, SharePoint Server'daki bir hizmet uygulamasıdır. Bu nedenle, PerformancePoint Hizmetleri kullanmak için ayrı sunucu lisansları veya donanım satın almak zorunda değilsiniz.
   
-PerformancePoint Server 2007'den PerformancePoint Hizmetleri'e taşımak için, SharePoint Server'ın daha yeni bir sürümüne PerformancePoint Hizmetleri. Var olan pano içeriğinizi PerformancePoint Server 2007'den başka bir sürüme aktarıp aktaramanıza, hareket SharePoint Server sürümü PerformancePoint Hizmetleri.
+PerformancePoint Server 2007'den PerformancePoint Hizmetleri geçmek için, SharePoint Server'ın daha yeni bir sürümüne geçer ve PerformancePoint Hizmetleri yapılandırabilirsiniz. SharePoint Server'ın taşımakta olduğunuz sürümü, mevcut pano içeriğinizi PerformancePoint Server 2007'den PerformancePoint Hizmetleri içeri aktarıp aktaramayacağınızı belirler.
   
-- SharePoint Server 2010'a yükseltebilir, PerformancePoint pano içeriğinizi PerformancePoint Server 2007'den PerformancePoint Hizmetleri Server 2010'da SharePoint'e aktarabilirsiniz. Daha fazla bilgi için bkz. [İçeri Aktarma Sihirbazı: PerformancePoint Server 2007 içeriği SharePoint Server 2010](/previous-versions/office/sharepoint-server-2010/ee681485(v=office.14)).
+- SharePoint Server 2010'a yükseltirseniz PerformancePoint pano içeriğinizi PerformancePoint Server 2007'den SharePoint Server 2010'daki PerformancePoint Hizmetleri aktarabilirsiniz. Daha fazla bilgi edinmek için bkz[. İçeri Aktarma Sihirbazı: PerformancePoint Server 2007 içeriğini SharePoint Server 2010'a](/previous-versions/office/sharepoint-server-2010/ee681485(v=office.14)) aktarma.
     
-- SharePoint Server 2013 veya SharePoint Server 2016'ya taşısanız, büyük olasılıkla yeni pano içeriği (veri kaynakları, raporlar, karneler ve pano sayfaları) oluşturmanız gerekir.
+- SharePoint Server 2013 veya SharePoint Server 2016'ya geçerseniz, büyük olasılıkla yeni pano içeriği (veri kaynakları, raporlar, karneler ve pano sayfaları) oluşturmanız gerekir.
     
-Yükseltme planınızı ilk PerformancePoint Hizmetleri için aşağıdaki kaynaklara bakın:
+PerformancePoint Hizmetleri yükseltme planınıza başlamak için aşağıdaki kaynaklara bakın:
   
 - [SharePoint Server 2007 destek sonu Yol Haritası](sharepoint-2007-end-of-support.md)
     
-- Hangi sürüme SharePoint olduğunu biliyorken, bu makaleye karşılık gelen PerformancePoint Hizmetleri:
+- Hangi SharePoint sürümüne geçtiğinizi bildiğinizde, PerformancePoint Hizmetleri ilgili makaleye bakın:
     
-  - [Sunucu Hizmeti PerformancePoint Hizmetleri (SharePoint Server 2010)](/previous-versions/office/sharepoint-server-2010/ee681486(v=office.14))
+  - [PerformancePoint Hizmetleri planı (SharePoint Server 2010)](/previous-versions/office/sharepoint-server-2010/ee681486(v=office.14))
     
-  - [PerformancePoint Hizmetleri Server 2013'SharePoint genel bakış](/sharepoint/administration/performancepoint-services-overview)
+  - [SharePoint Server 2013'te PerformancePoint Hizmetleri genel bakış](/sharepoint/administration/performancepoint-services-overview)
     
-  - [PerformancePoint Hizmetleri Server 2016'da SharePoint genel bakış](/sharepoint/administration/performancepoint-services-overview)
+  - [SharePoint Server 2016'da PerformancePoint Hizmetleri genel bakış](/sharepoint/administration/performancepoint-services-overview)
     
-Yeni sürüme yükselt PerformancePoint Hizmetleri, çeşitli yeni özellikler ve iyileştirmeler elde olur. PerformancePoint Hizmetleri geliştirilmiş karneler; Ayrıştırma Ağacı ve KPI Ayrıntıları raporu gibi yeni görselleştirmeler; daha fazla grafik türü; daha iyi Akıllı Zaman Zekası filtreleme özellikleri ve gelişmiş erişilebilirlik uyumluluğu sunar. Daha fazla bilgi edinmek için bkz. PerformancePoint Hizmetleri [Server 2010) SharePoint.](/previous-versions/office/sharepoint-server-2010/ee661741(v=office.14))
+PerformancePoint Hizmetleri'a yükselttiğiniz zaman birkaç yeni özellik ve geliştirme alırsınız. PerformancePoint Hizmetleri iyileştirilmiş karneler; Ayrıştırma Ağacı ve KPI Ayrıntıları raporu gibi yeni görselleştirmeler; daha fazla grafik türü; daha iyi Akıllı Zaman Gösterimi filtreleme özellikleri ve geliştirilmiş erişilebilirlik uyumluluğu sunar. Daha fazla bilgi edinmek için bkz[. PerformancePoint Hizmetleri için yenilikler (SharePoint Server 2010)](/previous-versions/office/sharepoint-server-2010/ee661741(v=office.14)).
   
-## <a name="where-can-i-get-help-with-my-upgrade"></a>Yükseltme işlemimde nereden yardım buedebilirim?
+## <a name="where-can-i-get-help-with-my-upgrade"></a>Yükseltmemle ilgili nereden yardım alabilirim?
 
-İster şirket içinde yükseltin, ister Microsoft 365'e taşınsın, bir Microsoft iş ortağıyla çalışmanızı öneririz. Yetkili bir iş ortağı, iş ihtiyaçlarını en iyi karşılayacak çözümü tanımlamanıza ve dağıtımınıza yardımcı olabilir. [Microsoft İş Ortağı Merkezi'ne](https://go.microsoft.com/fwlink/?linkid=841249) başvurun ve çözüm sağlayıcısı bulmak için arama filtrelerini kullanın.
+İster şirket içi sürümü yükseltin ister Microsoft 365 geçin, bir Microsoft iş ortağıyla çalışmanızı öneririz. Nitelikli bir iş ortağı, iş gereksinimlerinizi en iyi karşılayan çözümü belirlemenize ve dağıtımınıza yardımcı olmanıza yardımcı olabilir. [Microsoft İş Ortağı Merkezi'ni](https://go.microsoft.com/fwlink/?linkid=841249) ziyaret edin ve bir çözüm sağlayıcısı bulmak için arama filtrelerini kullanın.
   
 ## <a name="related-topics"></a>İlgili konular
 
-[Office 2007 sunucularından ve istemcilerinden yükseltmeye yardımcı olan kaynaklar](upgrade-from-office-2007-servers-and-products.md)
+[Office 2007 sunucularından ve istemcilerinden yükseltmenize yardımcı olacak kaynaklar](upgrade-from-office-2007-servers-and-products.md)

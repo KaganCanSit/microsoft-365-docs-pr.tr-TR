@@ -2,8 +2,8 @@
 title: eBulma'daki İletişim kitaplığında koruyucu iletişim şablonlarını yönetme (Premium)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 ms.assetid: ''
 description: Kuruluşunuzda her durumda kullanılabilmesi için eKeşif'e (Premium) koruyucu iletişim şablonları (bekletme bildirimi şablonu gibi) ekleyebilirsiniz.
-ms.openlocfilehash: 9ac944a3d845a770e35a84adcdc2f1f1dbefd172
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: faf4ea91ae6f160b2ba7388a7cfea8ad6cb9797b
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "65000608"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65097282"
 ---
 # <a name="manage-custodian-communications-templates-in-ediscovery-premium"></a>eBulma'da koruyucu iletişim şablonlarını yönetme (Premium)
 

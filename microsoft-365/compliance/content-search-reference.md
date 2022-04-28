@@ -2,8 +2,8 @@
 title: İçerik arama için özellik referansı
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
 description: Bu makale, İçerik arama hakkındaki birçok ayrıntıyı öğrenmenize yardımcı olmak için Microsoft Purview uyumluluk portalındaki İçerik arama eBulma aracı hakkında başvuru bilgileri içerir.
-ms.openlocfilehash: 72088b1a1bd2e3f3ba2c38ee827c6eb46b7c893a
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 8d7f1497a0dbd400536dd74c5abd4b9e3be7e29f
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64995722"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65097128"
 ---
 # <a name="feature-reference-for-content-search"></a>İçerik arama için özellik referansı
 
@@ -192,7 +192,7 @@ Yammer Gruplarındaki konuşma öğelerini özel olarak aramak için **ItemClass
 
 ## <a name="searching-inactive-mailboxes"></a>Etkin olmayan posta kutularını arama
 
-İçerik aramasında etkin olmayan posta kutularında arama yapabilirsiniz. Kuruluşunuzdaki etkin olmayan posta kutularının listesini almak için powershell Exchange Online komutunu `Get-Mailbox -InactiveMailboxOnly` çalıştırın. Alternatif olarak, Güvenlik & Uyumluluk Merkezi'nde **Bilgi idaresi** \> **Saklama'ya** gidebilir ve ardından **DiğerYükleme**![ Çubuğu üç nokta'ya tıklayabilirsiniz.](../media/9723029d-e5cd-4740-b5b1-2806e4f28208.gif) \>**Etkin olmayan posta kutuları**.
+İçerik aramasında etkin olmayan posta kutularında arama yapabilirsiniz. Kuruluşunuzdaki etkin olmayan posta kutularının listesini almak için powershell Exchange Online komutunu `Get-Mailbox -InactiveMailboxOnly` çalıştırın. Alternatif olarak, Microsoft Purview uyumluluk portalında **Veri yaşam döngüsü yönetimi** \> **Bekletme'ye** gidebilir ve ardından **Daha FazlaKızlama**![ Çubuğu üç nokta simgesine tıklayabilirsiniz.](../media/9723029d-e5cd-4740-b5b1-2806e4f28208.gif) \>**Etkin olmayan posta kutuları**.
 
 Etkin olmayan posta kutularında arama yaparken göz önünde bulundurmak istediğiniz birkaç şey aşağıdadır.
 

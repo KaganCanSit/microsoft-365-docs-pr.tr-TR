@@ -17,12 +17,12 @@ ms.collection:
 - M365-security-compliance
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 053326cacaeb2b4110f71edaa290ed10454aa720
-ms.sourcegitcommit: dd7e5b67ff4ae4e7f74490e437c1795933c74cc7
+ms.openlocfilehash: 56e22e0525324c59d2d62adaf2325edc3317ccd6
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64731658"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65096060"
 ---
 # <a name="whats-new-in-microsoft-365-defender"></a>Microsoft 365 Defender'daki yenilikler
 
@@ -46,10 +46,13 @@ Diğer Microsoft Defender güvenlik ürünleriyle ilgili yenilikler hakkında da
 Ayrıca, ürün güncelleştirmelerini ve önemli bildirimleri [ileti merkezi](https://admin.microsoft.com/Adminportal/Home#/MessageCenter) üzerinden de alabilirsiniz. 
 
 
+## <a name="april-2022"></a>Nisan 2022
+- (Önizleme) Artık doğrudan tehdit avcılığı sorgu sonuçlarından e-posta iletilerinde [eylemler](advanced-hunting-take-action.md) yapılabilir. E-postalar diğer klasörlere taşınabilir veya kalıcı olarak silinebilir. 
 
 ## <a name="march-2022"></a>Mart 2022
 
 - (Önizleme) Olay kuyruğu, araştırmalarınıza yardımcı olmak için tasarlanmış çeşitli özelliklerle geliştirilmiştir. Geliştirmeler, olayları kimliğe veya ada göre arama, özel bir zaman aralığı belirtme ve diğerleri gibi özellikleri içerir.
+
 
 ## <a name="december-2021"></a>Aralık 2021
 

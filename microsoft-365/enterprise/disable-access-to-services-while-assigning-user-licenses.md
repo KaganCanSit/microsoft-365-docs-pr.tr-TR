@@ -1,8 +1,8 @@
 ---
-title: Kullanıcı lisansları atarken Microsoft 365'e erişimi devre dışı bırakma
+title: Kullanıcı lisansları atarken Microsoft 365 hizmetlerine erişimi devre dışı bırakma
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 04/24/2020
 audience: Admin
 ms.topic: article
@@ -17,36 +17,36 @@ ms.custom:
 - PowerShell
 - Ent_Office_Other
 ms.assetid: bb003bdb-3c22-4141-ae3b-f0656fc23b9c
-description: Microsoft 365 için PowerShell kullanarak kullanıcı hesaplarına lisans atamayı ve belirli hizmet planlarını devre dışı bırakmayı Microsoft 365.
-ms.openlocfilehash: 5b7130930097970f5cfabc9a7599c211393b7c7a
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Microsoft 365 için PowerShell kullanarak kullanıcı hesaplarına lisans atamayı ve belirli hizmet planlarını aynı anda devre dışı bırakmayı öğrenin.
+ms.openlocfilehash: 6c0c3a3860da8a1935152fcaefb29f2f355cfa49
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985149"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65095740"
 ---
-# <a name="disable-access-to-microsoft-365-services-while-assigning-user-licenses"></a>Kullanıcı lisansları atarken Microsoft 365'e erişimi devre dışı bırakma
+# <a name="disable-access-to-microsoft-365-services-while-assigning-user-licenses"></a>Kullanıcı lisansları atarken Microsoft 365 hizmetlerine erişimi devre dışı bırakma
 
-*Bu makale hem son hem de Microsoft 365 Kurumsal hem de Office 365 Kurumsal.*
+*Bu makale hem Microsoft 365 Kurumsal hem de Office 365 Kurumsal için geçerlidir.*
 
-Microsoft 365 abonelikler, tek tek hizmetler için hizmet planları içerir. Microsoft 365 kullanıcılarına lisans atarken genellikle bazı planları devre dışı bırakması gerekir. Bu makaledeki yönergelerle, tek bir kullanıcı hesabı veya birden çok kullanıcı hesabı için PowerShell kullanarak belirli hizmet planlarını devre dışı bırakarak Microsoft 365 lisansı atabilirsiniz.
+Microsoft 365 abonelikler tek tek hizmetler için hizmet planları ile birlikte gelir. Microsoft 365 yöneticilerin genellikle kullanıcılara lisans atarken belirli planları devre dışı bırakması gerekir. Bu makaledeki yönergelerle, tek bir kullanıcı hesabı veya birden çok kullanıcı hesabı için PowerShell kullanarak belirli hizmet planlarını devre dışı bırakırken bir Microsoft 365 lisansı atayabilirsiniz.
 
-## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a>Graph modülü için Azure Active Directory PowerShell'i kullanma
+## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a>Graph için Azure Active Directory PowerShell modülünü kullanma
 
-İlk olarak[, kiracınıza bağlan Microsoft 365 bağlanin](connect-to-microsoft-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module).
+İlk olarak [Microsoft 365 kiracınıza bağlanın](connect-to-microsoft-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module).
 
 
-Ardından, bu komutla kiracınıza uygun lisans planlarını listelenin.
+Ardından, bu komutla kiracınızın lisans planlarını listeleyin.
 
 ```powershell
 Get-AzureADSubscribedSku | Select SkuPartNumber
 ```
 
-Ardından, lisans eklemek istediğiniz hesabın kullanıcı asıl adı (UPN) olarak da bilinen oturum açma adını alın.
+Ardından, lisans eklemek istediğiniz hesabın oturum açma adını (kullanıcı asıl adı (UPN) olarak da bilinir) alın.
 
-Ardından, etkinleştirmek için hizmetlerin listesini derlenin. Lisans planlarının (ürün adları olarak da bilinir), dahil edilen hizmet planlarının ve bunların uygun adlarının tam listesi için bkz. Lisans için ürün adları ve [hizmet planı tanımlayıcıları](/azure/active-directory/users-groups-roles/licensing-service-plan-reference).
+Ardından, etkinleştirecek hizmetlerin listesini derleyin. Lisans planlarının tam listesi (ürün adları olarak da bilinir), bunların dahil edilen hizmet planları ve bunlara karşılık gelen kolay adları için bkz. [Lisanslama için ürün adları ve hizmet planı tanımlayıcıları](/azure/active-directory/users-groups-roles/licensing-service-plan-reference).
 
-Aşağıdaki komut bloğunda, açıklayıcı metni ve karakterleri etkinleştirmek ve kaldırmak için kullanıcı hesabının kullanıcı asıl adını, SKU parça numarasını ve hizmet planlarının listesini \< and > doldurun. Ardından, PowerShell komut isteminde sonuç komutlarını çalıştırın.
+Aşağıdaki komut bloğu için, açıklayıcı metni ve karakterleri etkinleştirmek ve kaldırmak için kullanıcı hesabının kullanıcı asıl adını, SKU parça numarasını ve \< and > hizmet planlarının listesini doldurun. Ardından, PowerShell komut isteminde sonuç komutlarını çalıştırın.
 
 ```powershell
 $userUPN="<user account UPN>"
@@ -65,63 +65,63 @@ $LicensesToAssign.AddLicenses = $License
 Set-AzureADUserLicense -ObjectId $user.ObjectId -AssignedLicenses $LicensesToAssign
 ```
 
-## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a>Kaynak için Microsoft Azure Active Directory Modülü'Windows PowerShell
+## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a>Windows PowerShell için Microsoft Azure Active Directory Modülünü kullanma
 
-İlk olarak[, kiracınıza bağlan Microsoft 365 bağlanin](connect-to-microsoft-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell).
+İlk olarak [Microsoft 365 kiracınıza bağlanın](connect-to-microsoft-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell).
 
-Ardından, geçerli aboneliklerinizi görmek için bu komutu çalıştırın:
+Ardından, geçerli aboneliklerinizi görmek için şu komutu çalıştırın:
 
 ```powershell
 Get-MsolAccountSku
 ```
 
 >[!Note]
->PowerShell Core, **Msol'Microsoft Azure Active Directory Msol** Windows PowerShell cmdlet'leri için Modül Adını Desteklemez. Bu cmdlet'leri kullanmaya devam etmek için, tüm cmdlet'leri Windows PowerShell.
+>PowerShell Core, Windows PowerShell modülü için Microsoft Azure Active Directory Modülünü ve adında **Msol** bulunan cmdlet'leri desteklemez. Bu cmdlet'leri kullanmaya devam etmek için bunları Windows PowerShell çalıştırmanız gerekir.
 >
 
 Komutun görüntüsünde  `Get-MsolAccountSku` :
 
-- **AccountSkuId** , organizasyon için : biçimindeki bir \<OrganizationName>aboneliktir\<Subscription> . Bu\<OrganizationName>, e-okul hizmetine kaydolarak Microsoft 365 ve benzersiz olan değerdir. Değer \<Subscription> belirli bir abonelik içindir. Örneğin, litwareinc:ENTERPRISEPACK için, kuruluşun adı litwareinc ve abonelik adı da ENTERPRISEPACK (Office 365 Kurumsal E3) olur.
+- **AccountSkuId**, kuruluşunuz için biçimindeki \<OrganizationName>\<Subscription> bir aboneliktir. \<OrganizationName>, Microsoft 365 kaydolduğunuz sırada sağladığınız değerdir ve kuruluşunuz için benzersizdir. \<Subscription> Değer belirli bir aboneliğe yöneliktir. Örneğin, litwareinc:ENTERPRISEPACK için kuruluş adı litwareinc, abonelik adı ise ENTERPRISEPACK (Office 365 Kurumsal E3) şeklindedir.
 
-- **ActiveUnits** , abonelik için satın aldığınız lisansların sayısıdır.
+- **ActiveUnits** , abonelik için satın aldığınız lisans sayısıdır.
 
-- **UyarıUnits** , yenilememiş bir abonelikte yer alan ve 30 günlük yetkisiz kullanım süresinin ardından sona erecek olan lisansların sayısıdır.
+- **WarningUnits** , abonelikte yenilemediğiniz lisansların sayısıdır ve bu lisans 30 günlük yetkisiz kullanım süresinden sonra sona erer.
 
-- **ConsumedUnits** , aboneliğe atadınız lisansların sayısıdır.
+- **ConsumedUnits** , abonelik için kullanıcılara atadığınız lisans sayısıdır.
 
-Lisans almak istediğiniz kullanıcıları içeren Microsoft 365 AccountSkuId hesabına dikkat edin. Ayrıca, atamak için yeterli lisans olduğundan emin olun (**ActiveUnits'den ConsumedUnits'i çıkarma**).
+Lisanslamak istediğiniz kullanıcıları içeren Microsoft 365 aboneliğinizin AccountSkuId değerini not edin. Ayrıca, atanacak yeterli lisans olduğundan emin olun (**ConsumedUnits'i ActiveUnits'ten** çıkarın).
 
-Ardından, tüm aboneliklerinize uygun olan Microsoft 365 planlarına ilişkin ayrıntıları görmek için bu komutu çalıştırın:
+Ardından, tüm aboneliklerinizde kullanılabilen Microsoft 365 hizmet planları hakkındaki ayrıntıları görmek için şu komutu çalıştırın:
 
 ```powershell
 Get-MsolAccountSku | Select -ExpandProperty ServiceStatus
 ```
 
-Bu komutun görüntüsünden, kullanıcılara lisans atarken devre dışı bırakmak istediğiniz hizmet planlarını seçin.
+Bu komutun görüntüsünden, kullanıcılara lisans atarken hangi hizmet planlarını devre dışı bırakmak istediğinizi belirleyin.
 
-Burada, hizmet planlarının ve ilgili hizmet planlarının kısmi bir listesi Microsoft 365 ve sonra Microsoft 365 ve ve devammektedir.
+Hizmet planlarının ve ilgili Microsoft 365 hizmetlerinin kısmi listesi aşağıdadır.
 
-Aşağıdaki tabloda, en yaygın Microsoft 365 planları ve kolay adları yer alır. Hizmet planları listeniz farklı olabilir.
+Aşağıdaki tabloda Microsoft 365 hizmet planları ve bunların en yaygın hizmetler için kolay adları gösterilmektedir. Hizmet planlarınızın listesi farklı olabilir.
 
 |**Hizmet planı**|**Açıklama**|
 |:-----|:-----|
 | `SWAY` <br/> |Sway  <br/> |
 | `TEAMS1` <br/> |Microsoft Teams  <br/> |
 | `YAMMER_ENTERPRISE` <br/> |Yammer  <br/> |
-| `RMS_S_ENTERPRISE` <br/> |Azure Hak Yönetimi (RMS)  <br/> |
-| `OFFICESUBSCRIPTION` <br/> |Kurumlar için Microsoft 365 Uygulamaları *(daha önce adlandırılmış Office 365 ProPlus)*  <br/> |
+| `RMS_S_ENTERPRISE` <br/> |Azure Rights Management (RMS)  <br/> |
+| `OFFICESUBSCRIPTION` <br/> |Kurumlar için Microsoft 365 Uygulamaları *(eski adıyla Office 365 ProPlus)*  <br/> |
 | `MCOSTANDARD` <br/> |Skype Kurumsal Çevrimiçi  <br/> |
 | `SHAREPOINTWAC` <br/> |Office   <br/> |
 | `SHAREPOINTENTERPRISE` <br/> |SharePoint Online  <br/> |
 | `EXCHANGE_S_ENTERPRISE` <br/> |Exchange Online Plan 2  <br/> |
 
-Lisans planlarının (ürün adları olarak da bilinir), dahil edilen hizmet planlarının ve bunların uygun adlarının tam listesi için bkz. Lisans için ürün adları ve [hizmet planı tanımlayıcıları](/azure/active-directory/users-groups-roles/licensing-service-plan-reference).
+Lisans planlarının tam listesi (ürün adları olarak da bilinir), bunların dahil edilen hizmet planları ve bunlara karşılık gelen kolay adları için bkz. [Lisanslama için ürün adları ve hizmet planı tanımlayıcıları](/azure/active-directory/users-groups-roles/licensing-service-plan-reference).
 
-Artık AccountSkuId'niz ve devre dışı bırakmak istediğiniz hizmet planlarına sahip olduğunuz için, tek bir kullanıcıya veya birden çok kullanıcıya lisans atabilirsiniz.
+Artık AccountSkuId'niz ve devre dışı bırakabileceğiniz hizmet planlarınız olduğuna göre, tek bir kullanıcı veya birden çok kullanıcı için lisans atayabilirsiniz.
 
 ### <a name="for-a-single-user"></a>Tek bir kullanıcı için
 
-Tek bir kullanıcı için, açıklayıcı metni ve karakterleri devre dışı bırakmak ve kaldırmak için kullanıcı hesabının kullanıcı asıl adını, AccountSkuId'yi ve hizmet planlarının listesini \< and > doldurun. Ardından, PowerShell komut isteminde sonuç komutlarını çalıştırın.
+Tek bir kullanıcı için, açıklayıcı metni ve karakterleri devre dışı bırakmak ve kaldırmak için kullanıcı hesabının kullanıcı asıl adını, AccountSkuId değerini ve \< and > hizmet planlarının listesini doldurun. Ardından, PowerShell komut isteminde sonuç komutlarını çalıştırın.
 
 ```powershell
 $userUPN="<the user's account name in email format>"
@@ -133,7 +133,7 @@ Sleep -Seconds 5
 Set-MsolUserLicense -UserPrincipalName $userUpn -LicenseOptions $licenseOptions -ErrorAction SilentlyContinue
 ```
 
-contoso:ENTERPRISEPACK lisansı için belindan@contoso.com adlı hesabın örnek bir komut bloğu ve devre dışı bırakılma planları RMS_S_ENTERPRISE, SWAY, INTUNE_O365 ve YAMMER_ENTERPRISE:
+contoso:ENTERPRISEPACK lisansı için belindan@contoso.com adlı hesap için örnek bir komut bloğu ve devre dışı bırakılma planları RMS_S_ENTERPRISE, SWAY, INTUNE_O365 ve YAMMER_ENTERPRISE:
 
 ```powershell
 $userUPN="belindan@contoso.com"
@@ -147,7 +147,7 @@ Set-MsolUserLicense -UserPrincipalName $userUpn -LicenseOptions $licenseOptions 
 
 ### <a name="for-multiple-users"></a>Birden çok kullanıcı için
 
-Bu yönetim görevini birden çok kullanıcı için gerçekleştirmek için, UserPrincipalName ve UsageLocation alanlarını içeren bir virgülle ayrılmış değer (CSV) metin dosyası oluşturun. İşte bir örnek:
+Bu yönetim görevini birden çok kullanıcı için gerçekleştirmek için UserPrincipalName ve UsageLocation alanlarını içeren bir virgülle ayrılmış değer (CSV) metin dosyası oluşturun. Aşağıda bir örnek verilmiştir:
 
 ```powershell
 UserPrincipalName,UsageLocation
@@ -156,7 +156,7 @@ LynneB@contoso.onmicrosoft.com,US
 ShawnM@contoso.onmicrosoft.com,US
 ```
 
-Ardından, CSV dosyaları için giriş ve çıkış konumlarını, hesap SKU Kimliği'ni ve devre dışı bırakacak hizmet planlarının listesini doldurun, ardından PowerShell komut isteminde sonuç komutlarını çalıştırın.
+Ardından, giriş ve çıkış CSV dosyalarının konumunu, hesap SKU kimliğini ve devre dışı bırakılacak hizmet planlarının listesini doldurun ve ardından PowerShell komut isteminde sonuç komutlarını çalıştırın.
 
 ```powershell
 $inFileName="<path and file name of the input CSV file that contains the users, example: C:\admin\Users2License.CSV>"
@@ -182,14 +182,14 @@ Bu PowerShell komut bloğu:
 
 - Her kullanıcıya özelleştirilmiş lisanslar atar.
 
-- İşlenen tüm kullanıcılarla bir CSV dosyası oluşturur ve bu kullanıcıların lisans durumlarını gösterir.
+- İşlenen tüm kullanıcılarla birlikte bir CSV dosyası oluşturur ve lisans durumlarını gösterir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[PowerShell ile Microsoft 365 erişimini devre dışı bırakma](disable-access-to-services-with-microsoft-365-powershell.md)
+[PowerShell ile Microsoft 365 hizmetlerine erişimi devre dışı bırakma](disable-access-to-services-with-microsoft-365-powershell.md)
 
 [PowerShell ile Sway erişimini devre dışı bırakma](disable-access-to-sway-with-microsoft-365-powershell.md)
 
-[PowerShell Microsoft 365 hesaplarını, lisanslarını ve gruplarını yönetme](manage-user-accounts-and-licenses-with-microsoft-365-powershell.md)
+[PowerShell ile Microsoft 365 kullanıcı hesaplarını, lisanslarını ve gruplarını yönetme](manage-user-accounts-and-licenses-with-microsoft-365-powershell.md)
 
-[PowerShell Microsoft 365'i yönetme](manage-microsoft-365-with-microsoft-365-powershell.md)
+[PowerShell ile Microsoft 365’i yönetme](manage-microsoft-365-with-microsoft-365-powershell.md)

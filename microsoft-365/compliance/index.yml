@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: Microsoft Purview belgeleri
+title: Microsoft Purview uyumluluk belgeleri
 summary: Kuruluşunuzun yasal veya düzenleyici standartlara uyması gerekiyorsa, Microsoft Purview'da uyumluluk hakkında bilgi edinmek için buradan başlayın.
 metadata:
-  title: Microsoft Purview belgeleri
-  description: Bu sayfa, Microsoft Purview özellikleriyle ilgili bazı önemli konular için bağlantılar içerir. Microsoft 365'te uyumluluk hakkında bilgi edinmek için buradan başlayın.
+  title: Microsoft Purview uyumluluk belgeleri
+  description: Bu sayfa, Microsoft Purview uyumluluk özellikleriyle ilgili bazı önemli konular için bağlantılar içerir. Microsoft Purview uyumluluğu hakkında bilgi edinmek için buradan başlayın.
   services: office-365-security-compliance
   ms.service: O365-seccomp
   ms.subservice: subservice
@@ -12,14 +12,14 @@ metadata:
   ms.custom: intro-hub-or-landing
   author: robmazz
   ms.author: robmazz
-  ms.date: 09/20/2019
+  ms.date: 04/22/2022
   ms.localizationpriority: high
-  ms.openlocfilehash: 3b86087d8f8fea8e9b3b143f7e38997d07fca3ec
-  ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+  ms.openlocfilehash: 465f54a97d099611d6a03c857a5c4e754bb45cf3
+  ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
   ms.translationtype: HT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 04/19/2022
-  ms.locfileid: "64953359"
+  ms.lasthandoff: 04/27/2022
+  ms.locfileid: "65077865"
 landingContent:
 - title: Bilgi korumasını ve idaresini yönetme
   linkLists:

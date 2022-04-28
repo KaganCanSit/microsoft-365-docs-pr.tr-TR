@@ -2,8 +2,8 @@
 title: eBulma'da desteklenen dosya türleri (Premium)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 description: eBulma'da (Premium) OCR işlevselliği tarafından desteklenen görüntü dosyası türleri de dahil olmak üzere Microsoft 365 eBulma'da (Premium) desteklenen dosya türlerinin listesi.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 95adaf84f5281b943720be595b0e0e4aababd91f
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 422200b3015ff86566507cbe3f63bc2a75a84bea
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64996756"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65095806"
 ---
 # <a name="supported-file-types-in-ediscovery-premium"></a>eBulma'da desteklenen dosya türleri (Premium)
 
