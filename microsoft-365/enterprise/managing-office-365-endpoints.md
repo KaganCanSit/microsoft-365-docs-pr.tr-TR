@@ -1,8 +1,8 @@
 ---
-title: Kullanıcı Office 365 yönetme
+title: Office 365 uç noktalarını yönetme
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
@@ -17,162 +17,162 @@ ms.custom:
 - seo-marvel-apr2020
 search.appverid: MOE150
 ms.assetid: 99cab9d4-ef59-4207-9f2b-3728eb46bf9a
-description: Kurumsal kuruluş ağ mimarisiyle Office 365 uç noktalarını yönetmeyi öğrenin.
-ms.openlocfilehash: 5d5e51b789ef0336a2e7aaa6a923ca2957ea6edf
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Office 365 uç noktalarının kurumsal kuruluşunuz ağ mimarinizle çalışması için nasıl yönetileceğini öğrenin.
+ms.openlocfilehash: 6743ab1c3241b84b0eb1dd3e9f5e67e100e18b40
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63314539"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65090351"
 ---
-# <a name="managing-office-365-endpoints"></a>Kullanıcı Office 365 yönetme
+# <a name="managing-office-365-endpoints"></a>Office 365 uç noktalarını yönetme
 
-Birden fazla ofis konumu olan ve WAN'a bağlanan çoğu kuruluşta, ağ bağlantısının yapılandırmasını Office 365 gerekir. Tüm güvenilen ağ isteklerini, ek paket düzeyindeki tüm Office 365 veya işlemeyi atlayarak, doğrudan güvenlik duvarınız üzerinden göndererek anızı en iyi duruma getirme. Bu işlem gecikme süresini ve çevre kapasite gereksinimlerinizi azaltır. Ağ Office 365 belirlemek kullanıcılarınız için en iyi performansı sağlamanın ilk adımıdır. Daha fazla bilgi için bkz[. Office 365 İlkeleri](microsoft-365-network-connectivity-principles.md).
+Birden çok ofis konumu ve bağlantı WAN'ı olan çoğu kuruluş, Office 365 ağ bağlantısı için yapılandırmaya ihtiyaç duyar. Tüm güvenilen Office 365 ağ isteklerini doğrudan güvenlik duvarınız üzerinden göndererek ve tüm ek paket düzeyinde incelemeyi veya işlemeyi atlayarak ağınızı iyileştirebilirsiniz. Bu, gecikme süresini ve çevre kapasitesi gereksinimlerinizi azaltır. Office 365 ağ trafiğini belirlemek, kullanıcılarınız için en iyi performansı sağlamanın ilk adımıdır. Daha fazla bilgi için bkz. [Ağ Bağlantı İlkeleri Office 365](microsoft-365-network-connectivity-principles.md).
 
-Microsoft, yeni IP Adresi Office 365 URL Web Hizmeti'yi kullanarak ağ uç noktalarına Office 365 devam eden [değişikliklere erişmenizi öneririz](microsoft-365-ip-web-service.md).
+Microsoft, Office 365 [IP Adresi ve URL Web Hizmeti kullanarak Office 365](microsoft-365-ip-web-service.md) ağ uç noktalarına ve bu uç noktalarda devam eden değişikliklere erişmenizi önerir.
 
-Önemli ağ trafiğini nasıl yönetirken Office 365 bakılmaksızın, İnternet Office 365 gerektirir. Bağlantının gerekli olduğu diğer ağ uç noktaları Bu IP Adresi ve [URL Web hizmetine dahil Office 365 uç noktalar listelenmiştir](additional-office365-ip-addresses-and-urls.md).
+Önemli Office 365 ağ trafiğini nasıl yönettiğinize bakılmaksızın, Office 365 İnternet bağlantısı gerektirir. Bağlantının gerekli olduğu diğer ağ uç noktaları[, Office 365 IP Adresi ve URL Web hizmetine dahil olmayan ek uç noktalar](additional-office365-ip-addresses-and-urls.md) bölümünde listelenir.
 
-Ağ uç noktalarının Office 365 kullanımı, kurumsal kuruluş ağ mimarinize bağlıdır. Bu makalede, kurumsal ağ mimarileriyle IP adreslerinin ve URL'lerin tümleştiri Office 365 yolları ana hatlarıyla açıklanmıştır. Hangi ağ isteklerine güveneceklerini seçmenin en kolay yolu, ofis konumlarının her birsinde otomatik ağ yapılandırmasını destekleyen SD-WAN Office 365 kullanmaktır.
+Office 365 ağ uç noktalarını nasıl kullanacağınız, kuruluşunuzun ağ mimarisine bağlıdır. Bu makalede, kurumsal ağ mimarilerinin Office 365 IP adresleri ve URL'lerle tümleştirebileceği çeşitli yollar özetlenmektedir. Güvenecek ağ isteklerini seçmenin en kolay yolu, ofis konumlarınızın her birinde otomatik Office 365 yapılandırmasını destekleyen SD-WAN cihazlarını kullanmaktır.
 
-## <a name="sd-wan-for-local-branch-egress-of-vital-office-365-network-traffic"></a>Önemli ağ trafiğinin yerel şube çıkışları için SD-WAN Office 365 çıkış
+## <a name="sd-wan-for-local-branch-egress-of-vital-office-365-network-traffic"></a>Önemli Office 365 ağ trafiğinin yerel dal çıkışı için SD-WAN
 
-Her şubenin farklı konumlarında, trafiği uç nokta en iyi duruma Office 365 için yönlendirecek şekilde yapılandırılmış bir SD-WAN cihazı veya Kategorileri en iyi duruma getirme ve İzin ver kategorilerini doğrudan Microsoft'un ağına yönlendirebilirsiniz. Şirket içi veri merkezi trafiği, genel İnternet web siteleri trafiği ve Office 365 varsayılan kategori uç noktalarına yönelik trafik, daha önemli bir ağ çevreniz olan başka bir konuma gönderilir.
+Her şube ofisi konumunda, uç nokta kategorisini iyileştir veya İyileştir ve İzin Ver kategorilerine Office 365 yönelik trafiği doğrudan Microsoft'un ağına yönlendirmek üzere yapılandırılmış bir SD-WAN cihazı sağlayabilirsiniz. Şirket içi veri merkezi trafiği, genel İnternet web siteleri trafiği ve Office 365 Varsayılan kategori uç noktalarına giden trafik gibi diğer ağ trafiği, daha önemli bir ağ çevrenize sahip olduğunuz başka bir konuma gönderilir.
 
-Microsoft, otomatik yapılandırmayı etkinleştirmek için SD-WAN sağlayıcılarıyla birlikte çalışıyor. Daha fazla bilgi için bkz. [Office 365 Ağ İş Ortağı Programı](microsoft-365-networking-partner-program.md).
+Microsoft, otomatik yapılandırmayı etkinleştirmek için SD-WAN sağlayıcılarıyla birlikte çalışmaktadır. Daha fazla bilgi için bkz. [Office 365 Ağ İş Ortağı Programı](microsoft-365-networking-partner-program.md).
 
 <a name="pacfiles"> </a>
-## <a name="use-a-pac-file-for-direct-routing-of-vital-office-365-traffic"></a>Önemli ve önemli trafiğin doğrudan yönlendiri için PAC Office 365 kullanma
+## <a name="use-a-pac-file-for-direct-routing-of-vital-office-365-traffic"></a>Önemli Office 365 trafiğinin doğrudan yönlendirilmesi için PAC dosyası kullanma
 
-PAC veya WPAD dosyalarını kullanarak, bir IP adresiyle ilişkilendirilmiş Office 365 ağ isteklerini yönetin. Ara sunucu veya çevre cihazı aracılığıyla gönderilen tipik ağ istekleri gecikme süresini artırmaktadır. SSL Kesme ve Denetleme en uzun gecikmeyi oluştururken, ara sunucu kimlik doğrulaması ve saygınlık araması gibi diğer hizmetler performansta kötü performansa ve kötü bir kullanıcı deneyimine neden olabilir. Buna ek olarak, bu çevre ağı cihazlarının tüm ağ bağlantısı isteklerini işlemesi için yeterli kapasite gerekir. Ağ istekleriyle ilgili doğrudan erişim için ara sunucu veya Office 365 atlamanızı öneririz.
+Office 365 ile ilişkilendirilmiş ancak IP adresi olmayan ağ isteklerini yönetmek için PAC veya WPAD dosyalarını kullanın. Ara sunucu veya çevre cihazı aracılığıyla gönderilen tipik ağ istekleri gecikme süresini artırır. SSL Break ve Inspect en büyük gecikme süresini oluştururken, ara sunucu kimlik doğrulaması ve saygınlık araması gibi diğer hizmetler düşük performansa ve kötü bir kullanıcı deneyimine neden olabilir. Ayrıca, bu çevre ağ cihazlarının tüm ağ bağlantı isteklerini işlemek için yeterli kapasiteye ihtiyacı vardır. Doğrudan Office 365 ağ istekleri için ara sunucu veya denetim cihazlarınızı atlamanızı öneririz.
   
-[PowerShell Galerisi Get-PacFile](https://www.powershellgallery.com/packages/Get-PacFile), Office 365 IP Adresi ve URL Web hizmetinin en son ağ uç noktalarını okur ve örnek bir PAC dosyası oluşturan bir PowerShell betiğidir. Betiği, var olan PAC dosya yönetiminiz ile tümleştirin şekilde değiştirebilirsiniz.
+[PowerShell Galerisi Get-PacFile](https://www.powershellgallery.com/packages/Get-PacFile), Office 365 IP Adresi ve URL Web hizmetinden en son ağ uç noktalarını okuyan ve örnek bir PAC dosyası oluşturan bir PowerShell betiğidir. Betiği, mevcut PAC dosya yönetiminizle tümleştirileceği şekilde değiştirebilirsiniz.
 
-![Güvenlik duvarları Office 365 ya da sunucu üzerinden bağlantı.](../media/34d402f3-f502-42a0-8156-24a7c4273fa5.png)
+![Güvenlik duvarları ve ara sunucular aracılığıyla Office 365 bağlanma.](../media/34d402f3-f502-42a0-8156-24a7c4273fa5.png)
 
 **Şekil 1 - Basit kurumsal ağ çevresi**
 
-PAC dosyası, Şekil 1'in 1. noktasında web tarayıcılarına dağıtılır. Önemli bir ağ trafiğinin doğrudan çıkışını sağlayan bir PAC dosyası Office 365, ayrıca ağ çevre güvenlik duvarınızda bu URL'lerin arkasında yer alan IP adreslerine bağlantıya izin vermeniz gerekir. Bu, PAC dosyasında belirtilen aynı uç nokta Office 365 IP adresleri getirerek ve bu adreslere dayalı güvenlik duvarı ACL'leri oluşturarak yapılır. Şekil 1'de güvenlik duvarı 3. noktadadır.
+PAC dosyası, Şekil 1'de 1. noktada web tarayıcılarına dağıtılır. Önemli Office 365 ağ trafiğinin doğrudan çıkışı için bir PAC dosyası kullanırken, ağ çevre güvenlik duvarınızdaki bu URL'lerin arkasındaki IP adreslerine de bağlantıya izin vermeniz gerekir. Bu, PAC dosyasında belirtilen aynı Office 365 uç nokta kategorileri için IP adresleri getirilerek ve bu adreslere göre güvenlik duvarı ACL'leri oluşturularak yapılır. Güvenlik duvarı Şekil 1'de 3. noktadır.
 
-Ayrıca, Yalnızca En İyi Duruma Getirme kategori uç noktaları için doğrudan yönlendirmeyi seçerseniz, gerekli tüm kategori uç noktalarının ara sunucuya gönderilebilir olması için, ilerideki işlemleri atlamak için ara sunucuda listelenmiş olması gerekir. Örneğin, SSL sonu ve Denetle ve Proxy Kimlik Doğrulaması, hem En İyi Duruma Getirme hem de İzin Ver kategori uç noktalarıyla uyumlu değildir. Proxy sunucusu Şekil 1'de 2. noktadadır.
+Ayrıca, Kategori uç noktalarını en iyi duruma getirme için yalnızca doğrudan yönlendirme yapmayı seçerseniz, daha fazla işlemeyi atlamak için ara sunucuya gönderdiğiniz tüm gerekli İzin ver kategori uç noktalarının ara sunucuda listelenmesi gerekir. Örneğin, SSL kesmesi ve İnceleme ve Proxy Kimlik Doğrulaması hem İyileştir hem de kategori uç noktalarına izin ver ile uyumlu değildir. Şekil 1'de ara sunucu 2. noktadır.
 
-Yaygın yapılandırma, ara sunucuya isabet alan ağ trafiğinin hedef IP adresleri için ara sunucudan gelen tüm giden trafiğin Office 365 izin verir. SSL Kesme ve Denetleme ile ilgili sorunlar hakkında bilgi için bkz. Trafiğin herhangi bir yerindeki üçüncü taraf [ağ cihazlarını veya Office 365 kullanma](https://support.microsoft.com/help/2690045/using-third-party-network-devices-or-solutions-with-office-365).
+Yaygın yapılandırma, ara sunucuya isabet eden Office 365 ağ trafiği için hedef IP adresleri için ara sunucudan giden tüm trafiği işlemeden izin vermektir. SSL Kesme ve İnceleme ile ilgili sorunlar hakkında bilgi için bkz. [Office 365 trafiğinde üçüncü taraf ağ cihazlarını veya çözümlerini kullanma](https://support.microsoft.com/help/2690045/using-third-party-network-devices-or-solutions-with-office-365).
 
-Bu betikte oluşturulacak iki Get-PacFile PAC dosyası vardır.
+Get-PacFile betiğinin oluşturacağı iki tür PAC dosyası vardır.
 
 | Tür | Açıklama |
 |:-----|:-----|
-|**1** <br/> |Uç nokta trafiğini doğrudan ve diğer her şeyi ara sunucuya gönderin. <br/> |
-|**2** <br/> |Uç nokta trafiğini doğrudan ve diğer her şeyi ara sunucuya En İyi Duruma Getirme ve İzin Ver'i gönderin. Bu tür, tüm desteklenen ExpressRoute trafiğini ExpressRoute ağ kesimlerine Office 365 diğer her şeyi ara sunucuya göndermek için de kullanılabilir. <br/> |
+|**1** <br/> |Uç nokta trafiğini en iyi duruma getir'i doğrudan ve diğer her şeyi proxy sunucusuna gönderin. <br/> |
+|**2** <br/> |İyileştir ve Uç nokta trafiğine izin ver'i doğrudan ve diğer her şeyi ara sunucuya gönderin. Bu tür, Office 365 trafiği için desteklenen tüm ExpressRoute'u ExpressRoute ağ kesimlerine ve diğer her şeyi ara sunucuya göndermek için de kullanılabilir. <br/> |
 
-PowerShell betiğine çağrı yapmak için basit bir örnek şu şekildedir:
+PowerShell betiğini çağırmanın basit bir örneği aşağıda verilmiştir:
 
 ```powershell
 Get-PacFile -ClientRequestId b10c5ed1-bad1-445f-b386-b919946339a7
 ```
 
-Betiğin geçeceği birçok parametre vardır:
+Betike geçirebileceğiniz birçok parametre vardır:
 
 | Parametre | Açıklama |
 |:-----|:-----|
-|**ClientRequestId** <br/> |Bu gereklidir ve arama yapan istemci makinesi temsil eden web hizmetine geçirilen bir GUID'dir. <br/> |
-|**Örnek** <br/> |Varsayılan Office 365 Dünya Çapında olan varsayılan hizmet örneğidir. Bu ayrıca web hizmetine de geçirr. <br/> |
-|**TenantName** <br/> |Kiracı Office 365 adınız. Web hizmetine geçirilebilir ve bazı önemli URL'lerde değiştirilebilir Office 365 kullanılır. <br/> |
+|**ClientRequestId** <br/> |Bu gereklidir ve çağrıyı yapan istemci makinesini temsil eden web hizmetine geçirilen bir GUID'dir. <br/> |
+|**Örnek** <br/> |Varsayılan olarak Worldwide olarak gösterilen Office 365 hizmet örneği. Bu, web hizmetine de geçirilir. <br/> |
+|**TenantName** <br/> |Office 365 kiracı adınız. Web hizmetine geçirilir ve bazı Office 365 URL'lerde değiştirilebilir parametre olarak kullanılır. <br/> |
 |**Tür** <br/> |Oluşturmak istediğiniz ara sunucu PAC dosyasının türü. <br/> |
 
-Burada, ek parametrelerle PowerShell betiği çağrısının başka bir örneği ve almaktadır:
+Ek parametrelerle PowerShell betiğini çağırmanın başka bir örneği aşağıda verilmiştir:
 
 ```powershell
 Get-PacFile -Type 2 -Instance Worldwide -TenantName Contoso -ClientRequestId b10c5ed1-bad1-445f-b386-b919946339a7
 ```
 
-## <a name="proxy-server-bypass-processing-of-office-365-network-traffic"></a>Ağ trafiği için ara sunucu Office 365'i atlama
+## <a name="proxy-server-bypass-processing-of-office-365-network-traffic"></a>Office 365 ağ trafiğinin proxy sunucusu atlama işlemi
 
-Doğrudan giden trafik için PAC dosyaları kullanılmazken, yine de ara sunucuyu yapılandırarak ağ çevrenize işlemeyi atlamak istiyor olursanız. Bazı ara sunucu satıcıları, aşağıdaki adreslerde açıklandığı gibi bunun otomatik yapılandırmasını [Office 365 Ağ İş Ortağı Programı](microsoft-365-networking-partner-program.md).
+PAC dosyalarının doğrudan giden trafik için kullanılmadığı durumlarda, proxy sunucunuzu yapılandırarak ağ çevrenizdeki işlemeyi atlamak istersiniz. Bazı ara sunucu satıcıları[, Office 365 Ağ İş Ortağı Programı](microsoft-365-networking-partner-program.md) açıklandığı gibi bunun otomatik yapılandırmasını etkinleştirdi.
 
-Bunu el ile yapıyorsanız, grup IP Adresi ve URL Web Hizmeti'ne En İyi Duruma Getirme ve İzin Ver uç nokta kategorisi verilerini Office 365 VE PROXY sunucuyu bunlar için işlemeyi at edecek şekilde yapılandırmanız gerekir. En İyi Duruma Getirme ve İzin Ver kategori uç noktaları için SSL Sonu, Denetle ve Ara Sunucu Kimlik Doğrulaması'nın önüne geçebilirsiniz.
+Bunu el ile yapıyorsanız, Office 365 IP Adresi ve URL Web Hizmeti'nden İyileştirme ve İzin Ver uç nokta kategorisi verilerini almanız ve proxy sunucunuzu bunlar için işlemeyi atlayacak şekilde yapılandırmanız gerekir. İyileştirme ve İzin Ver kategori uç noktaları için SSL Kesme ve İnceleme ve Ara Sunucu Kimlik Doğrulamasından kaçınmak önemlidir.
   
 <a name="bkmk_changes"> </a>
-## <a name="change-management-for-office-365-ip-addresses-and-urls"></a>IP adreslerini ve URL'leri Office 365 yönetimi
+## <a name="change-management-for-office-365-ip-addresses-and-urls"></a>Office 365 IP adresleri ve URL'ler için değişiklik yönetimi
 
-Ağ çevreniz için uygun yapılandırmayı seçmeye ek olarak, belirli uç noktaları kullanmak için bir değişiklik yönetim süreci Office 365 önemlidir. Bu uç noktalar düzenli olarak değişir ve değişiklikleri yönetmiyorsanız, yeni bir IP adresi veya URL eklendikten sonra engellenen veya performansı kötü olan kullanıcılarla sonuçlanmaz.
+Ağ çevreniz için uygun yapılandırmayı seçmeye ek olarak, Office 365 uç noktaları için bir değişiklik yönetimi süreci benimsemeniz de önemlidir. Bu uç noktalar düzenli olarak değişir ve değişiklikleri yönetmezseniz, yeni bir IP adresi veya URL eklendikten sonra kullanıcılar engellenmiş veya düşük performansla sonuçlanabilir.
 
-IP adreslerinde Office 365 URL'lerde genellikle her ayın son günü yakın bir yerde yayımlanır. Bazen işlem, destek veya güvenlik gereksinimleri nedeniyle zamanlamanın dışında bir değişiklik yayımlanır.
+Office 365 IP adreslerinde ve URL'lerde yapılan değişiklikler genellikle her ayın son gününe yakın yayımlanır. Bazen işletimsel, destek veya güvenlik gereksinimleri nedeniyle bu zamanlamanın dışında bir değişiklik yayımlanır.
 
-BIR IP adresi veya URL ekli olduğu için işlemnizi gerektiren bir değişiklik yayımlanırsa, bu uç noktada bir Office 365 hizmeti gelene kadar değişikliği yayımlayıncaya kadar 30 gün uyarı alırsınız. Bu, Geçerli Tarih olarak yansıtıldı. Bu bildirim dönemini hedeflese de, işlem, destek veya güvenlik gereksinimleri nedeniyle bu her zaman mümkün olamıyor olabilir. Kaldırılan IP adresleri veya URL'ler gibi hemen bir işlem gerektirmeyen değişiklikler veya daha az önemli değişiklikler, önceden bildirim içermez. Bu gibi örneklerde, Herhangi bir Geçerli Tarih sağlanacaktır. Hangi bildirimin sağlanmıştır, her değişiklikte hizmet için beklenen etkin tarihi listelemektedir.
+BIR IP adresi veya URL eklendiği için işlem yapmanızı gerektiren bir değişiklik yayımlandığında, değişikliği yayımladığımızdan bu uç noktada bir Office 365 hizmeti olana kadar 30 gün bildirim almayı beklemeniz gerekir. Bu, Geçerlilik Tarihi olarak yansıtılır. Bu bildirim dönemini hedeflesek de operasyonel, destek veya güvenlik gereksinimleri nedeniyle her zaman mümkün olmayabilir. Kaldırılan IP adresleri veya URL'ler veya daha az önemli değişiklikler gibi bağlantıyı korumak için hemen eylem gerektirmeyen değişiklikler, önceden bildirim içermez. Bu örneklerde Geçerlilik Tarihi sağlanamaz. Hangi bildirimin sağlandığına bakılmaksızın, her değişiklik için beklenen hizmet etkin tarihini listeleyeceğiz.
 
-### <a name="change-notification-using-the-web-service"></a>Web Hizmeti'i kullanarak bildirimi değiştirme
+### <a name="change-notification-using-the-web-service"></a>Web Hizmeti'ni kullanarak bildirimi değiştirme
 
-Değişiklik bildirimini almak Office 365 IP Adresi ve URL Web Hizmeti'ne gönderebilirsiniz. Office 365'e bağlanmak için kullanmakta olduğu uç noktaların sürümünü kontrol etmek için **saatte bir /version** web yöntemini Office 365. Bu sürüm kullanımda olan sürümle karşılaştırıldığında değişirse, **/endpoints** web yönteminden en son uç nokta verilerini allı ve isteğe bağlı olarak **/changes** web yönteminden farkları alırnız. Bulunan sürümde herhangi bir değişiklik yoksa **/endpoints** veya **/changes** web yöntemlerini çağırmanız gerekmez.
+Değişiklik bildirimi almak için Office 365 IP Adresi ve URL Web Hizmeti'ni kullanabilirsiniz. Office 365 bağlanmak için kullandığınız uç noktaların sürümünü denetlemek için **/version** web yöntemini saatte bir çağırmanızı öneririz. Bu sürüm kullanımdaki sürümle karşılaştırıldığında değişirse, **/endpoints** web yönteminden en son uç nokta verilerini almanız ve isteğe bağlı olarak **/changes** web yönteminden farkları almanız gerekir. Bulduğunuz sürümde herhangi bir değişiklik yapılmadıysa **/endpoints** veya **/changes** web yöntemlerini çağırmak gerekli değildir.
 
-Daha fazla bilgi için IP [Office 365 URL Web Hizmeti'ne bakın](microsoft-365-ip-web-service.md).
+Daha fazla bilgi için bkz. [OFFICE 365 IP Adresi ve URL Web Hizmeti](microsoft-365-ip-web-service.md).
 
 ### <a name="change-notification-using-rss-feeds"></a>RSS akışlarını kullanarak bildirimi değiştirme
 
-Site Office 365 URL Adresi ve URL Web Hizmeti, web sitesinde abone olyabilirsiniz bir RSS akışı Outlook. IP adresleri ve URL'ler için, Office 365 örneğine özgü sayfalarda RSS URL'lerinin bağlantıları vardır. Daha fazla bilgi için IP [Office 365 URL Web Hizmeti'ne bakın](microsoft-365-ip-web-service.md).
+Office 365 IP Adresi ve URL Web Hizmeti, Outlook abone olabileceğiniz bir RSS akışı sağlar. IP adresleri ve URL'ler için Office 365 hizmet örneğine özgü sayfaların her birinde RSS URL'lerinin bağlantıları vardır. Daha fazla bilgi için bkz. [OFFICE 365 IP Adresi ve URL Web Hizmeti](microsoft-365-ip-web-service.md).
 
-### <a name="change-notification-and-approval-review-using-power-automate"></a>Onay bildirimini ve onay incelemesini değiştir'i Power Automate
+### <a name="change-notification-and-approval-review-using-power-automate"></a>Power Automate kullanarak bildirim ve onay incelemesini değiştirme
 
-Yine de her ay ortaya gelen ağ uç noktası değişiklikleri için el ile işleme gerektir olabileceğini anlıyoruz. Power Automate'i kullanarak size e-postayla haber veren bir akış oluşturabilir ve isteğe bağlı olarak ağ uç noktalarının değişiklikleri olduğunda değişiklikler Office 365 onay işlemini çalıştırabilirsiniz. Gözden geçirme tamamlandıktan sonra, akışın değişiklikleri güvenlik duvarınıza ve ara sunucu yönetim ekibine otomatik olarak e-postayla göndermesini sebilirsiniz.
+Her ay gelen ağ uç noktası değişiklikleri için el ile işlemeye ihtiyaç duyabileceğinizi anlıyoruz. Power Automate kullanarak sizi e-postayla bilgilendiren ve isteğe bağlı olarak Office 365 ağ uç noktalarının değişiklikleri olduğunda değişiklikler için bir onay işlemi çalıştıran bir akış oluşturabilirsiniz. Gözden geçirme tamamlandıktan sonra akışın değişiklikleri otomatik olarak güvenlik duvarınıza ve ara sunucu yönetim ekibinize e-postayla göndermesini sağlayabilirsiniz.
 
-Örnek ve şablon Power Automate bilgi için bkz. IP adreslerinde ve [URL'lerde Power Automate e-posta Office 365 e-posta alma](https://techcommunity.microsoft.com/t5/Office-365-Networking/Use-Microsoft-Flow-to-receive-an-email-for-changes-to-Office-365/td-p/240651).
+Power Automate örneği ve şablonu hakkında bilgi için bkz. [Office 365 IP adreslerinde ve URL'lerde yapılan değişiklikler için e-posta almak için Power Automate kullanma](https://techcommunity.microsoft.com/t5/Office-365-Networking/Use-Microsoft-Flow-to-receive-an-email-for-changes-to-Office-365/td-p/240651).
   
 <a name="FAQ"> </a>
-## <a name="office-365-network-endpoints-faq"></a>Office 365 uç noktaları hakkında SSS
+## <a name="office-365-network-endpoints-faq"></a>ağ uç noktalarını Office 365 hakkında SSS
 
-Ağ bağlantınız hakkında sık sorulan Office 365 bakın.
+Office 365 ağ bağlantısı hakkında sık sorulan bu sorulara bakın.
   
-### <a name="how-do-i-submit-a-question"></a>Nasıl soru gönderim?
+### <a name="how-do-i-submit-a-question"></a>Soru göndermek Nasıl yaparım??
 
-Makalenin yardımcı olup olmadığını belirtmek için en alttaki bağlantıya tıklayın ve başka sorular gönderin. Geri bildirimleri takip ediyor ve buradaki soruları en sık sorulan sorularla güncelleştir alıyoruz.
+Makalenin yararlı olup olmadığını belirtmek için alttaki bağlantıya tıklayın ve ek sorular gönderin. Geri bildirimleri izler ve buradaki soruları en sık sorulanlarla güncelleştiririz.
   
-### <a name="how-do-i-determine-the-location-of-my-tenant"></a>Kiracının konumunu nasıl belirlerim?
+### <a name="how-do-i-determine-the-location-of-my-tenant"></a>Kiracımın konumunu belirlemek Nasıl yaparım??
 
- **Kiracı konumu** en iyi şekilde veri merkezi [haritamız kullanılarak belirlenir](./o365-data-locations.md).
+ **Kiracı konumu** en iyi [veri merkezi haritamız](./o365-data-locations.md) kullanılarak belirlenir.
   
-### <a name="am-i-peering-appropriately-with-microsoft"></a>Microsoft ile uygun şekilde eşleme var mı?
+### <a name="am-i-peering-appropriately-with-microsoft"></a>Microsoft ile uygun şekilde eşleme yapıyorum mu?
 
- **Eşleme konumları,** Microsoft'la eşleme konusunda [daha ayrıntılı olarak açıklanmıştır](https://www.microsoft.com/peering).
+ **Eşleme konumları** [Microsoft ile eşleme](https://www.microsoft.com/peering) konusunda daha ayrıntılı olarak açıklanmıştır.
   
-Tüm dünyada 2500'den fazla ISS eşleme ilişkisi ve 70 bulunma noktasıyla, ağınızı bizim ağımıza sorunsuz bir şekilde ağın içinde ağın geçebilirsiniz. IsS'nizin eşleme ilişkisinin en iyi durumda olduğundan emin olmak için birkaç dakikanızı harcamanız zararı [olmaz, burada](/archive/blogs/onthewire/__guidance) ağımıza uygun, iyi ve iyi bir eşliği olan eldu bilgilerinden birkaç örnek verilmiştir.
+Küresel olarak 2500'den fazla ISS eşleme ilişkisi ve 70'in üzerinde iletişim noktası ile ağınızdan bizim ağımıza sorunsuz bir şekilde erişim sağlamanız gerekir. ISS'nizin eşleme ilişkisinin en uygun olduğundan emin olmak için birkaç dakika harcamanın bir zararı olmaz. Aşağıda ağımıza yönelik iyi ve iyi olmayan eşleme izinlerinin [birkaç örneği](/archive/blogs/onthewire/__guidance) verilmiştir.
   
 <a name="bkmk_MissingIP"> </a>
-### <a name="i-see-network-requests-to-ip-addresses-not-on-the-published-list-do-i-need-to-provide-access-to-them"></a>Yayımlanan listede yer alan IP adreslerine yapılan ağ istekleri görüyorum, bu adreslere erişim sağlamam gerekiyor mu?
+### <a name="i-see-network-requests-to-ip-addresses-not-on-the-published-list-do-i-need-to-provide-access-to-them"></a>Yayımlanan listede olmayan IP adreslerine yönelik ağ istekleri görüyorum, bunlara erişim sağlamam gerekiyor mu?
 
-Yalnızca doğrudan yönlendirmesi gereken Office 365 IP adresleri sağlaruz. Bu, ağ isteklerini göreceğiniz tüm IP adreslerinin kapsamlı bir listesi değildir. Microsoft'a ve üçüncü taraflara ait yayımlanmamış IP adreslerine yapılan ağ istekleriyle ilgili istekler vardır. Bu IP adresleri dinamik olarak oluşturulur veya değiştiklerinde zamanında bildirim verilmesini önleyen bir şekilde yönetilir. Güvenlik duvarınız bu ağ istekleri için FQDN'lere dayalı olarak erişime izin veramıyorsa, istekleri yönetmek için bir PAC veya WPAD dosyası kullanın.
+Yalnızca doğrudan yönlendirmeniz gereken Office 365 sunucuları için IP adresleri sağlarız. Bu, ağ isteklerini göreceğiniz tüm IP adreslerinin kapsamlı bir listesi değildir. Microsoft'a ve üçüncü tarafa ait, yayımdan kaldırılmış IP adreslerine yönelik ağ isteklerini görürsünüz. Bu IP adresleri dinamik olarak oluşturulur veya değiştiklerinde zamanında fark edilmesini önleyecek şekilde yönetilir. Güvenlik duvarınız bu ağ istekleri için FQDN'leri temel alarak erişime izin veremiyorsa, istekleri yönetmek için pac veya WPAD dosyası kullanın.
   
-Hakkında daha fazla bilgi Office 365 IP görüyor musunuz?
+Daha fazla bilgi edinmek istediğiniz Office 365 ilişkilendirilmiş bir IP'ye mi bakın?
   
-1. IP adresinin yayımlanmış daha geniş bir aralıkta yer alan BIR CIDR hesaplayıcısı kullanarak ( [örneğin, IPv4 veya IPv6](https://www.ipaddressguide.com/cidr) için [) olup olmadığını kontrol edin](https://www.ipaddressguide.com/ipv6-cidr). Örneğin 40.96.0.0/13, 40.96 ile eşleşmese de 40.103 IP Adresi 40.103.0.1'i içerir.
-2. Bir whois sorgusuyla IP'nin bir iş ortağına [ait olup bakın](https://dnsquery.org/). Microsoft'a ait bir şirket içi iş ortağı olabilir. Birçok iş ortağı ağı uç noktası, IP adreslerinin _yayımlanmayacak_ varsayılan kategoriye ait olarak listelenir.
-3. IP adresi, bu IP adresinin bir Office 365 veya bağımlılığın parçası olabilir. Office 365 uç noktası yayımlama, Microsoft ağ uç noktalarının hepsini içermez.
-4. Sertifikayı kontrol edin. Tarayıcıyla, IP adresine bağlanmak için HTTPS://*\<IP_ADDRESS\>*'i kullanın ve IP adresiyle hangi etki alanlarının ilişkilendiril olduğunu anlamak için sertifikada listelenen etki alanlarını kontrol edin. Bu Microsoft'a ait bir IP adresi ise ve Office 365 IP adresleri listesinde yer alıyorsa, IP adresi büyük olasılıkla yayımlanmış IP bilgileri olmayan CDN gibi bir Microsoft *MSOCDN.NET CDN veya başka* bir Microsoft etki alanıyla ilişkilendirildi. Sertifikada etki alanının IP adresini listelediz talebimizi ifade eden bir etki alanı olduğunu bulursanız, lütfen bize yazın.
+1. IP adresinin [IPv4](https://www.ipaddressguide.com/cidr) veya [IPv6](https://www.ipaddressguide.com/ipv6-cidr) için bunlar gibi bir CIDR hesaplayıcısı kullanarak daha büyük bir yayımlanmış aralığa eklenip eklenmediğini denetleyin. Örneğin, 40.96.0.0/13, 40.96'nın 40.103 ile eşleşmediği halde 40.103.0.1 IP Adresini içerir.
+2. [Whois sorgusuyla](https://dnsquery.org/) IP'nin iş ortağına ait olup olmadığını görün. Microsoft'un sahip olduğu bir şirket içi iş ortağı olabilir. Birçok iş ortağı ağ uç noktası, IP adreslerinin yayımlanmadığı _varsayılan_ kategoriye ait olarak listelenir.
+3. IP adresi Office 365 veya bağımlılığın parçası olmayabilir. Office 365 ağ uç noktası yayımlama, tüm Microsoft ağ uç noktalarını içermez.
+4. Sertifikayı denetleyin. Bir tarayıcıyla  *HTTPS://\<IP_ADDRESS\>* kullanarak IP adresine bağlanın ve IP adresiyle ilişkili etki alanlarını anlamak için sertifikada listelenen etki alanlarını denetleyin. Office 365 IP adresleri listesinde değil de Microsoft'a ait bir IP adresiyse, IP adresi büyük olasılıkla MSOCDN.NET veya yayımlanmış IP bilgisi olmayan başka bir Microsoft etki alanı gibi bir Microsoft *CDN* ile ilişkilendirilir. Sertifikadaki etki alanının IP adresini listelediğimiz bir etki alanı olduğunu fark ederseniz lütfen bize bildirin.
 
 <a name="bkmk_cname"> </a>
-### <a name="some-office-365-urls-point-to-cname-records-instead-of-a-records-in-the-dns-what-do-i-have-to-do-with-the-cname-records"></a>Bazı Office 365 URL'ler DNS'te A kayıtları yerine CNAME kayıtlarını işaret ettir. CNAME kayıtlarıyla ne yapabilirim?
+### <a name="some-office-365-urls-point-to-cname-records-instead-of-a-records-in-the-dns-what-do-i-have-to-do-with-the-cname-records"></a>Bazı Office 365 URL'leri, DNS'deki A kayıtları yerine CNAME kayıtlarını işaret eder. CNAME kayıtlarıyla ne yapmam gerekiyor?
 
-İstemci bilgisayarların bir bulut hizmetine bağlanmak için bir veya birden çok IP adresi (es) içeren bir DNS A veya AAAA kaydına ihtiyacı vardır. Bir dosyada yer alan bazı URL Office 365 A veya AAAA kayıtları yerine CNAME kayıtlarını gösterir. Bu CNAME kayıtları aracıdır ve zincirde birkaç kayıt olabilir. Her zaman BIR IP Adresi için A veya AAAA kaydına çözüm bu kayıt çözümleyiciler. Örneğin, IP adresi bilgi dizisini sonuç olarak çözen aşağıdaki DNS _IP_1:_
+İstemci bilgisayarların bir bulut hizmetine bağlanmak için bir veya daha fazla IP adresi içeren bir DNS A veya AAAA kaydına ihtiyacı vardır. Office 365 dahil edilen bazı URL'ler A veya AAAA kayıtları yerine CNAME kayıtlarını gösterir. Bu CNAME kayıtları aracıdır ve zincirde birkaç tane olabilir. Her zaman bir IP Adresi için A veya AAAA kaydına çözümlenir. Örneğin, sonunda IP adresi _IP_1_ çözümlenen aşağıdaki DNS kaydı serisini göz önünde bulundurun:
 
 ```console
 serviceA.office.com -> CNAME: serviceA.domainA.com -> CNAME: serviceA.domainB.com -> A: IP_1
 ```
 
-Bu CNAME yönlendirmeleri DNS'nin normal bir parçasıdır ve istemci bilgisayarda saydam, proxy sunucularında saydamdır. Yük dengeleme, içerik teslim ağları, yüksek kullanılabilirlik ve hizmet olayı azaltma için kullanılırlar. Microsoft aracı CNAME kayıtlarını yayımlamaz, her zaman  değişiklik gösterir ve bunları ara sunucunuzda izin verilen şekilde yapılandırmanız gerekmemektedir.
+Bu CNAME yeniden yönlendirmeleri DNS'nin normal bir parçasıdır ve istemci bilgisayar için saydam ve ara sunuculara saydamdır. Bunlar yük dengeleme, içerik teslim ağları, yüksek kullanılabilirlik ve hizmet olayı azaltma için kullanılır. Microsoft aracı CNAME kayıtlarını yayımlamaz, bunlar herhangi bir zamanda değiştirilebilir ve bunları proxy sunucunuzda izin verilen şekilde yapılandırmanız gerekmez.
 
-Proxy sunucusu, yukarıdaki örnekte yer alan ilk URL'yi serviceA.office.com ve bu URL de yayında Office 365. Ara sunucu, bir IP Adresine bu URL'nin DNS çözümlemesini talep ediyor ve yanıt IP_1. Aracı CNAME yeniden yönlendirme kayıtlarını doğrulamaz.
+Ara sunucu, yukarıdaki örnekte serviceA.office.com olan ilk URL'yi doğrular ve bu URL Office 365 yayımlamaya dahil edilir. Proxy sunucusu, bu URL'nin DNS çözümlemesini bir IP Adresine gönderir ve IP_1 geri alır. Aracı CNAME yeniden yönlendirme kayıtlarını doğrulamaz.
 
-Sabit kodlu yapılandırmalar veya dolaylı FQDN'Office 365 lere dayalı bir izin listesi kullanılması önerilmez, Microsoft tarafından desteklmemektedir ve bu yapılandırmaların müşteri bağlantı sorunlarına neden olduğu bilinmektedir. CNAME yeniden yönlendirmesini engellayan veya DNS girdilerini yanlış olarak çözen DNS çözümleri Office 365 DNS ileticileri aracılığıyla, DNS yeniden iletme etkinleştirildiğinde veya DNS kök ipuçları kullanılarak çözülebilir. Birçok üçüncü taraf ağ çevre ürünü, Office 365 IP Adresi ve URL Web hizmetini kullanarak yapılandırmalarına bir izin listesi eklemek için önerilen Office 365 uç noktasını [yerel olarak tümleştirin](microsoft-365-ip-web-service.md).
+Sabit kodlanmış yapılandırmalar veya dolaylı Office 365 FQDN'leri temel alan bir izin listesi kullanılması önerilmez, Microsoft tarafından desteklenmez ve müşteri bağlantı sorunlarına neden olduğu bilinmektedir. CNAME yeniden yönlendirmesini engelleyen veya Office 365 DNS girişlerini yanlış çözümleyen DNS çözümleri, DNS özyineleme etkinleştirilmiş DNS ileticileri aracılığıyla veya DNS kök ipuçlarını kullanarak çözülebilir. Birçok üçüncü taraf ağ çevre ürünü, önerilen Office 365 uç noktasını [Office 365 IP Adresi ve URL Web hizmetini](microsoft-365-ip-web-service.md) kullanarak yapılandırmalarına izin verilenler listesi eklemek için yerel olarak tümleştirir.
 
 <a name="bkmk_akamai"> </a>
-### <a name="why-do-i-see-names-such-as-nsatcnet-or-akadnsnet-in-the-microsoft-domain-names"></a>Microsoft etki alanı adlarında nsatc.net veya akadns.net adları neden görüyorum?
+### <a name="why-do-i-see-names-such-as-nsatcnet-or-akadnsnet-in-the-microsoft-domain-names"></a>Microsoft etki alanı adlarında neden nsatc.net veya akadns.net gibi adlar görüyorum?
 
-Office 365 diğer Microsoft hizmetleri bu deneyimi iyileştirmek için Akamai ve MarkMonitor gibi çeşitli üçüncü taraf hizmetlerini Office 365 kullanır. Size mümkün olan en iyi deneyimi vermeye devam etmek için, gelecekte bu hizmetleri değiştirebiliriz. Üçüncü taraf etki alanları posta hizmetleri gibi CDN veya coğrafi trafik yönetim hizmeti gibi bir hizmet barındırıyor olabilir. Şu anda kullanmakta olan hizmetlerden bazıları şunlardır:
+Office 365 ve diğer Microsoft hizmetleri, Office 365 deneyiminizi geliştirmek için Akamai ve MarkMonitor gibi çeşitli üçüncü taraf hizmetleri kullanır. Size mümkün olan en iyi deneyimi vermeye devam etmek için gelecekte bu hizmetleri değiştirebiliriz. Üçüncü taraf etki alanları, CDN gibi içeriği barındırabilir veya coğrafi trafik yönetimi hizmeti gibi bir hizmeti barındırabilir. Şu anda kullanımda olan hizmetlerden bazıları şunlardır:
   
-.nsatc.net içeren istekler gördüğünüzde [MarkMonitor](https://www.markmonitor.com/) *\*kullanımdadır*. Bu hizmet kötü amaçlı davranışlara karşı korumak için etki alanı koruma ve izleme sağlar.
+*.nsatc.net içeren\** istekler gördüğünüzde [MarkMonitor](https://www.markmonitor.com/) kullanımdadır. Bu hizmet, kötü amaçlı davranışlara karşı koruma sağlamak için etki alanı adı koruması ve izleme sağlar.
   
-.exacttarget.com'e gelen istekleri gördüğünüzde *\**[ExactTarget](https://www.marketingcloud.com/) exacttarget.com. Bu hizmet kötü amaçlı davranışlara karşı e-posta bağlantısı yönetimi ve izleme sağlar.
+*.exacttarget.com isteklerini\** gördüğünüzde [ExactTarget](https://www.marketingcloud.com/) kullanımda olur. Bu hizmet, kötü amaçlı davranışlara karşı e-posta bağlantısı yönetimi ve izleme sağlar.
   
-Aşağıdaki FQDN'lerden birini içeren istekler gördüğünüzde [Akamai](https://www.akamai.com/) kullanımdadır. Bu hizmet coğrafi DNS ve içerik teslim ağı hizmetleri sunar.
+Aşağıdaki FQDN'lerden birini içeren istekler gördüğünüzde [Akamai](https://www.akamai.com/) kullanılır. Bu hizmet coğrafi DNS ve içerik teslim ağı hizmetleri sunar.
   
 ```console
 *.akadns.net
@@ -187,47 +187,47 @@ Aşağıdaki FQDN'lerden birini içeren istekler gördüğünüzde [Akamai](http
 ```
 
 <a name="bkmk_thirdparty"> </a>
-### <a name="i-have-to-have-the-minimum-connectivity-possible-for-office-365"></a>E-Office 365 için mümkün olan en düşük Office 365
+### <a name="i-have-to-have-the-minimum-connectivity-possible-for-office-365"></a>Office 365 için mümkün olan en düşük bağlantıya sahip olmak zorundayım
 
-Aynı Office 365 İnternet üzerinden işlev yapmak için yerleşik bir hizmet paketi olduğu gibi, güvenilirlik ve kullanılabilirlik konusunda verilen sözler birçok standart İnternet hizmetlerinin kullanılabilir olduğu konusundadır. Örneğin, aynı modern İnternet hizmetlerinin çoğunu kullanmak için olduğu gibi, Office 365 ve CDN'ler gibi standart İnternet hizmetlerinin de kullanılabilir olması gerekir.
+Office 365 İnternet üzerinden çalışması için oluşturulmuş bir hizmet paketi olduğundan, güvenilirlik ve kullanılabilirlik vaatleri birçok standart İnternet hizmetini temel alır. Örneğin, DNS, CRL ve CDN gibi standart internet hizmetlerinin Office 365 kullanılabilmesi için aynı modern internet hizmetlerinin çoğuna ulaşılabilmesi gerektiği gibi erişilebilir olması gerekir.
 
-En Office 365 paketi ana hizmet alanlarına göre bozulmuştır. Bunlar bağlantı için seçmeli olarak etkinleştirilebilir ve herkes için bir bağımlılık olan ve her zaman gereken Ortak bir alan vardır.
+Office 365 paketi ana hizmet alanlarına ayrılmıştır. Bunlar bağlantı için seçmeli olarak etkinleştirilebilir ve herkes için bir bağımlılık olan ve her zaman gerekli olan ortak bir alan vardır.
 
 | Hizmet Alanı | Açıklama |
 |:-----|:-----|
 |**Exchange** <br/> |Exchange Online ve Exchange Online Protection <br/> |
 |**SharePoint** <br/> |SharePoint Online ve OneDrive İş <br/> |
-|**Skype Kurumsal Online ve Microsoft Teams** <br/> |Skype Kurumsal ve Microsoft Teams <br/> |
-|**Ortak** <br/> |Office 365 Pro, Office, Azure AD ve diğer yaygın ağ uç noktalarında kullanılabilir <br/> |
+|**Skype Kurumsal Çevrimiçi ve Microsoft Teams** <br/> |Skype Kurumsal ve Microsoft Teams <br/> |
+|**Ortak** <br/> |Office 365 Pro Plus, tarayıcıda Office, Azure AD ve diğer yaygın ağ uç noktaları <br/> |
 
-Temel İnternet hizmetlerinin yanı sıra, yalnızca işlevselliği tümleştirin için kullanılan üçüncü taraf hizmetleri de vardır. Tümleştirme için bunlar gerekli olmakla birlikte, Office 365 uç noktaları makalesinde isteğe bağlı olarak işaretlenir ve bu da uç nokta erişilebilir değilse hizmetin temel işlevselliğinin çalışmaya devam edeceğini gösterir. Gerekli olan tüm ağ uç noktalarında, gerekli öznitelik true olarak ayarlanır. İsteğe bağlı olan tüm ağ uç noktalarında false olarak ayarlanmış gerekli öznitelik vardır ve notlar özniteliği, bağlantı engellenirse beklemenız gereken eksik işlevselliği ayrıntılarıyla gösterir.
+Temel internet hizmetlerine ek olarak, yalnızca işlevselliği tümleştirmek için kullanılan üçüncü taraf hizmetler vardır. Bunlar tümleştirme için gerekli olsa da, Office 365 uç noktaları makalesinde isteğe bağlı olarak işaretlenir ve bu da uç nokta erişilebilir olmadığında hizmetin temel işlevselliğinin çalışmaya devam edeceği anlamına gelir. Gerekli olan tüm ağ uç noktalarının gerekli özniteliği true olarak ayarlanır. İsteğe bağlı herhangi bir ağ uç noktası gerekli özniteliği false olarak ayarlanır ve notes özniteliği, bağlantı engellenirse beklemeniz gereken eksik işlevselliği ayrıntılı olarak açıklar.
   
-Office 365 kullanmaya çalışıyor ve üçüncü taraf hizmetlerinin erişilebilir olmadığını bulmaya çalışıyorsanız, bu makalede gerekli olarak işaretlenmiş tüm [FQDN'lere ara](urls-and-ip-address-ranges.md) sunucu ve güvenlik duvarı üzerinden izin verili olduğundan emin olun.
+Office 365 kullanmaya çalışıyorsanız ve üçüncü taraf hizmetlere erişilemiyorsa, [bu makalede gerekli veya isteğe bağlı olarak işaretlenmiş tüm FQDN'lere ara sunucu ve güvenlik duvarı üzerinden izin verildiğinden emin olmak](urls-and-ip-address-ranges.md) istersiniz.
   
 <a name="bkmk_consumer"> </a>
-### <a name="how-do-i-block-access-to-microsofts-consumer-services"></a>Microsoft'un tüketici hizmetlerine erişimi nasıl engelleyebilirim?
+### <a name="how-do-i-block-access-to-microsofts-consumer-services"></a>Microsoft'un tüketici hizmetlerine erişimi Nasıl yaparım? engelleyemiyor musunuz?
 
-Kiracı kısıtlamaları özelliği artık OneDrive, Hotmail ve Xbox.com gibi tüm Microsoft tüketici uygulamalarının (MSA uygulamaları) kullanımını engellemeyi destekler. Bu, login.live.com uç noktası için ayrı login.live.com kullanır. Daha fazla ayrıntı için bkz [. SaaS bulut uygulamalarına erişimi yönetmek için kiracı kısıtlamalarını kullanma](/azure/active-directory/manage-apps/tenant-restrictions#blocking-consumer-applications).
+Kiracı kısıtlamaları özelliği artık OneDrive, Hotmail ve Xbox.com gibi tüm Microsoft tüketici uygulamalarının (MSA uygulamaları) kullanımını engellemeyi destekliyor. Bu, login.live.com uç noktası için ayrı bir üst bilgi kullanır. Diğer ayrıntılar için bkz. [SaaS bulut uygulamalarına erişimi yönetmek için kiracı kısıtlamalarını kullanma](/azure/active-directory/manage-apps/tenant-restrictions#blocking-consumer-applications).
 
 <a name="bkmk_IPOnlyFirewall"> </a>
-### <a name="my-firewall-requires-ip-addresses-and-cannot-process-urls-how-do-i-configure-it-for-office-365"></a>Güvenlik duvarım IP Adresleri gerektirir ve URL'leri işleyememektedir. Bunu iş için nasıl Office 365?
+### <a name="my-firewall-requires-ip-addresses-and-cannot-process-urls-how-do-i-configure-it-for-office-365"></a>Güvenlik duvarım IP Adresleri gerektiriyor ve URL'leri işleyemiyor. Nasıl yaparım? Office 365 için yapılandırılır?
 
-Office 365 tüm gerekli ağ uç noktalarının IP adreslerini sağlamaz. Bazıları yalnızca URL olarak sağlanır ve varsayılan olarak kategorilere ayrılmıştır. Gereken varsayılan kategorideki URL'lere ara sunucu üzerinden izin ver gerekir. Proxy sunucunuz yoksa, kullanıcıların bir web tarayıcısının adres çubuğuna yazarak URL'ler için nasıl web istekleri yapılandırmış olduğunu nasıl yapılandırmış olduğunuz; kullanıcı da bir IP adresi sağlamaz. IP Office 365 sağ yapmayan varsayılan kategori URL'leri de aynı şekilde yapılandırıldı.
+Office 365 tüm gerekli ağ uç noktalarının IP adreslerini sağlamaz. Bazıları yalnızca URL'ler olarak sağlanır ve varsayılan olarak kategorilere ayrılır. Varsayılan kategoride yer alan ve gerekli olan URL'lere ara sunucu üzerinden izin verilmelidir. Proxy sunucunuz yoksa, kullanıcıların bir web tarayıcısının adres çubuğuna yazdığı URL'ler için web isteklerini nasıl yapılandırdığınıza bakın; kullanıcı da bir IP adresi sağlamaz. IP adresleri sağlamayan Office 365 varsayılan kategori URL'leri de aynı şekilde yapılandırılmalıdır.
 
 ## <a name="related-topics"></a>İlgili konular
 
 [Office 365 IP Adresi ve URL Web hizmeti](microsoft-365-ip-web-service.md)
 
-[Microsoft Azure Merkezi IP Aralıkları](https://www.microsoft.com/download/details.aspx?id=41653)
+[Veri Merkezi IP Aralıklarını Microsoft Azure](https://www.microsoft.com/download/details.aspx?id=41653)
   
 [Microsoft Genel IP Alanı](https://www.microsoft.com/download/details.aspx?id=53602)
   
-[Altyapı hizmetleri için ağ Microsoft Intune](/intune/get-started/network-infrastructure-requirements-for-microsoft-intune)
+[Microsoft Intune için ağ altyapısı gereksinimleri](/intune/get-started/network-infrastructure-requirements-for-microsoft-intune)
   
 [ExpressRoute ve Power BI](https://powerbi.microsoft.com/documentation/powerbi-admin-power-bi-expressroute/)
   
 [Office 365 URL'leri ve IP adresi aralıkları](urls-and-ip-address-ranges.md)
   
-[Daha fazla bağlantı için ExpressRoute Office 365 yönetme](managing-expressroute-for-connectivity.md)
+[Office 365 bağlantısı için ExpressRoute'u yönetme](managing-expressroute-for-connectivity.md)
   
-[Office 365 Bağlantısı İlkeleri](microsoft-365-network-connectivity-principles.md)
+[Office 365 Ağ Bağlantı İlkeleri](microsoft-365-network-connectivity-principles.md)

@@ -2,8 +2,8 @@
 title: Genel sağlık denetim verilerini içeri aktarmak için bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -14,12 +14,12 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: Yöneticiler, elektronik sağlık kayıtlarını (EHR) sağlık sisteminden Microsoft 365 aktarmak için bir veri bağlayıcısı ayarlayabilir. Bu, çalışanlarınız tarafından hasta verilerine yetkisiz erişim etkinliğini algılamanıza yardımcı olmak için iç risk yönetimi ilkelerinde EHR verilerini kullanmanıza olanak tanır.
-ms.openlocfilehash: b1745d8f91253132748fe08d724386d2e6633a4c
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 90f50628e255267baeff7d39c776f9a6bf8cc426
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64993172"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65077894"
 ---
 # <a name="set-up-a-connector-to-import-healthcare-ehr-audit-data-preview"></a>Sağlık EHR denetim verilerini içeri aktarmak için bağlayıcı ayarlama (önizleme)
 

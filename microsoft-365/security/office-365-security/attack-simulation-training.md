@@ -1,5 +1,5 @@
 ---
-title: Saldırı benzetimi eğitimi ile kimlik avı saldırılarını benzetimini uygulama
+title: Saldırı simülasyonu eğitimi ile kimlik avı saldırısı simüle etme
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -11,367 +11,461 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
 ms.custom: ''
-description: Yöneticiler, Plan 2'de Saldırı benzetimi eğitimini kullanarak kimlik avı saldırılarının benzetimini yapmayı ve kullanıcılarını kimlik avı engellemesi konusunda Office 365 için Microsoft Defender öğrenebilirsiniz.
+description: Yöneticiler, Office 365 için Microsoft Defender Plan 2'deki Saldırı benzetimi eğitimini kullanarak kimlik avı saldırılarının simülasyonunu yapmayı ve kullanıcılarını kimlik avı önleme konusunda eğitmeyi öğrenebilir.
 ms.technology: mdo
-ms.openlocfilehash: 924fef8e5aba8a797cf6754b6c507624e51a64c2
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 94e002adf3fcdefcb3d2483f4f32ce7b10be8dab
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64474321"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65077647"
 ---
-# <a name="simulate-a-phishing-attack-with-attack-simulation-training-in-defender-for-office-365"></a>Office 365 için Defender'ta Saldırı benzetimi eğitimi ile kimlik avı saldırılarını benzetim Office 365 için Defender
+# <a name="simulate-a-phishing-attack-with-attack-simulation-training-in-defender-for-office-365"></a>Office 365 için Defender'de Saldırı simülasyonu eğitimi ile kimlik avı saldırısı simülasyonu
 
-**Plan** [2 Office 365 için Microsoft Defender için geçerlidir](defender-for-office-365.md)
+[Office 365 için Microsoft Defender plan 2](defender-for-office-365.md) **için geçerlidir**
 
-Plan 2 veya Office 365 için Microsoft Defender'daki saldırı benzetim eğitimi Microsoft 365 E5 siber benzetimleri çalıştırmanıza olanak sağlar. Bu benzetimler güvenlik ilkelerinizi ve uygulamalarınızı test edin, ayrıca çalışanlarınızı saldırılara karşı duyarlılıklarını artırmaya ve azaltmaya eğitin. Bu makale, Saldırı benzetimi eğitimini kullanarak sanal bir kimlik avı saldırısı oluşturma konusunda size yol yardımcı oluyor.
+Office 365 için Microsoft Defender Plan 2 veya Microsoft 365 E5'da saldırı simülasyonu eğitimi, kuruluşunuzda zararsız siber saldırı simülasyonları çalıştırmanıza olanak tanır. Bu simülasyonlar güvenlik ilkelerinizi ve uygulamalarınızı test eder, ayrıca çalışanlarınızı farkındalıklarını artırmaları ve saldırılara karşı duyarlılıklarını azaltmaları için eğitebilir. Bu makalede, Saldırı simülasyonu eğitimini kullanarak sanal kimlik avı saldırısı oluşturma konusunda size yol gösterir.
 
-Saldırı benzetimi eğitimi hakkında bilgi almak için Saldırı [benzetim Kullanmaya başlayın'i kullanma hakkında daha fazla bilgi için bkz](attack-simulation-training-get-started.md).
+Saldırı simülasyonu eğitimi hakkında başlangıç bilgileri için bkz. [Saldırı simülasyonu eğitimini kullanarak Kullanmaya başlayın](attack-simulation-training-get-started.md).
 
-Sanal bir kimlik avı saldırısı başlatmak için aşağıdaki adımları uygulayın:
+Kimlik avı simülasyonu saldırısı başlatmak için aşağıdaki adımları uygulayın:
 
-1. aşağıdaki Microsoft 365 Defender portalında, E-posta <https://security.microsoft.com>gönder ve **işbirliği &** \> **Saldırı benzetim eğitimi** \> **Benzetimler sekmesine** gidin.
+1. konumundaki Microsoft 365 Defender portalında<https://security.microsoft.com>**, E-posta & işbirliği** \> **Saldırı benzetimi eğitimi** \> **Simülasyonları** sekmesine gidin.
 
-   Doğrudan Benzetimler **sekmesine gitmek** için kullanın <https://security.microsoft.com/attacksimulator?viewid=simulations>.
+   Doğrudan **Simülasyonlar** sekmesine gitmek için kullanın <https://security.microsoft.com/attacksimulator?viewid=simulations>.
 
-2. **Benzetimler sekmesinde** Benzetim simgesi ![başlat'ı seçin.](../../media/m365-cc-sc-create-icon.png) **Benzetim başlat.**
+2. **Simülasyonlar sekmesinde Simülasyon** simgesini başlat'ı seçin![.](../../media/m365-cc-sc-create-icon.png) **Simülasyonu başlatın**.
 
-   :::image type="content" source="../../media/attack-sim-training-simulations-launch.png" alt-text="Analiz portalının Saldırı benzetim eğitimi'nin Benzetimler sekmesindeki Benzetim Microsoft 365 Defender başlatma" lightbox="../../media/attack-sim-training-simulations-launch.png":::
+   :::image type="content" source="../../media/attack-sim-training-simulations-launch.png" alt-text="Microsoft 365 Defender portalındaki Saldırı simülasyonu eğitimi'ndeki Simülasyonlar sekmesindeki Simülasyon başlat düğmesi" lightbox="../../media/attack-sim-training-simulations-launch.png":::
 
-3. Benzetim oluşturma sihirbazı açılır. Bu makalenin kalan kalanında, sayfaları ve bunların içerdiği ayarlar açıklanmıştır.
+3. Simülasyon oluşturma sihirbazı açılır. Bu makalenin geri kalanında sayfalar ve içerdikleri ayarlar açıklanmaktadır.
 
 > [!NOTE]
-> Benzetim oluşturma sihirbazının herhangi bir noktasında, ilerlemenizi kaydetmek  ve benzetimi daha sonra yapılandırmaya devam etmek için Kaydet ve kapat'a tıklarsınız. Tamamlanmamış benzetimlerin **Benzetimler** **sekmesinde** Durum değeri **Taslağı** vardır. Benzetimi seçerek ve benzetim simgesini düzenle'ye tıklayarak, kalan yerden ![devamabilirsiniz.](../../media/m365-cc-sc-edit-icon.png) **Benzetimi** düzenleyin.
+> Simülasyon oluşturma sihirbazı sırasında herhangi bir noktada Kaydet **ve kapat'a** tıklayarak ilerlemenizi kaydedebilir ve simülasyonu daha sonra yapılandırmaya devam edebilirsiniz. Tamamlanmamış simülasyon, **Simülasyonlar** sekmesinde **Taslak Durum** değerine sahiptir. Simülasyonu seçip Simülasyonu düzenle simgesine tıklayarak ![kaldığınız yerden devam edebilirsiniz.](../../media/m365-cc-sc-edit-icon.png) **Simülasyonu düzenleme** .
 
-## <a name="select-a-social-engineering-technique"></a>Bir sosyal mühendislik tekniği seçin
+## <a name="select-a-social-engineering-technique"></a>Sosyal mühendislik tekniği seçme
 
-Select **technique sayfasında** , [MITRE ATT&CK Framework'den&seçin®](https://attack.mitre.org/techniques/enterprise/). Farklı teknikler için farklı yük kullanılabilir. Aşağıdaki sosyal mühendislik tekniklerini kullanabilirsiniz:
+**Tekniği seçin** sayfasında, [MITRE ATT&CK® çerçevesinden](https://attack.mitre.org/techniques/enterprise/) seçilen kullanılabilir bir sosyal mühendislik tekniği seçin. Farklı teknikler için farklı yükler kullanılabilir. Aşağıdaki sosyal mühendislik teknikleri mevcuttur:
 
-- **Kimlik bilgileri toplama**: Kullanıcıları bir kullanıcı adı ve parola göndermek üzere giriş kutuları olan iyi bilinen bir web sitesine götürerek kimlik bilgilerini toplamaya çalışır.
-- **Kötü amaçlı yazılım** eki: İletiye kötü amaçlı bir ek ekler. Kullanıcı eki açtığında, rastgele kod çalıştırarak saldırgan hedef cihazı tehlikeye atabilir.
-- **Ekin bağlantısı**: Karma için bir kimlik bilgisi türü. Bir saldırgan e-posta eke bir URL ekler. Ekin içindeki URL, kimlik bilgisi toplama yöntemiyle aynı teknikten sonra gelir.
-- **Kötü amaçlı yazılıma** bağlantı: İyi bilinen bir dosya paylaşım hizmetlerinden barındırılan bir dosyadan bazı rastgele kodlar çalıştırır. Kullanıcıya gönderilen ileti, bu kötü amaçlı dosyanın bağlantısını içerir. Dosyanın açılması, saldırganin hedef cihazından ödün vermelerine yardımcı olur.
-- **Sürücüye Göre URL**: İletide yer alan kötü amaçlı URL, kullanıcıya, kullanıcının cihazında kodu sessiz olarak çalıştıran ve/veya yüken tanıdık görünümlü bir web sitesine alır.
+- **Kimlik bilgisi toplama**: Kullanıcı adı ve parola göndermek için kullanıcıları giriş kutularıyla iyi bilinen bir web sitesine götürerek kimlik bilgilerini toplamaya çalışır.
+- **Kötü amaçlı yazılım eki**: İletiye kötü amaçlı bir ek ekler. Kullanıcı eki açtığında, saldırganın hedefin cihazını tehlikeye atılmasına yardımcı olacak rastgele kod çalıştırılır.
+- **Ekteki bağlantı**: Kimlik bilgisi toplama karma türü. Saldırgan bir e-posta ekine URL ekler. Ek içindeki URL, kimlik bilgisi toplama ile aynı tekniği izler.
+- **Kötü amaçlı yazılım bağlantısı**: İyi bilinen bir dosya paylaşım hizmetinde barındırılan bir dosyadan rastgele kod çalıştırır. Kullanıcıya gönderilen ileti bu kötü amaçlı dosyanın bağlantısını içerir. Dosyayı açmak, saldırganın hedefin cihazını tehlikeye atılmasına yardımcı olur.
+- **Sürücü URL'si**: İletideki kötü amaçlı URL, kullanıcıyı sessizce çalışan ve/veya kullanıcının cihazına kod yükleyen tanıdık görünen bir web sitesine götürür.
 
-Açıklamada Ayrıntıları **görüntüle bağlantısına** tıklarsanız, tekniğin ve teknikten elde edilen benzetim adımlarını açıklayan bir ayrıntılar açılır.
+Açıklamadaki **Ayrıntıları görüntüle** bağlantısına tıklarsanız, tekniği ve teknikten kaynaklanan simülasyon adımlarını açıklayan bir ayrıntı açılır öğesi açılır.
 
-:::image type="content" source="../../media/attack-sim-training-simulations-select-technique-sim-steps.png" alt-text="Seçme tekniği sayfasındaki kimlik bilgisi depolama tekniği için Ayrıntılar uç sayfası" lightbox="../../media/attack-sim-training-simulations-select-technique-sim-steps.png":::
+:::image type="content" source="../../media/attack-sim-training-simulations-select-technique-sim-steps.png" alt-text="Seçme tekniği sayfasındaki kimlik bilgisi toplama tekniği için Ayrıntılar açılır öğesi" lightbox="../../media/attack-sim-training-simulations-select-technique-sim-steps.png":::
 
-Bitirdikten sonra, Sonraki'ne **tıklayın**.
+İşiniz bittiğinde **İleri'ye** tıklayın.
 
-## <a name="name-and-describe-the-simulation"></a>Benzetimi adla ve açıkla
+## <a name="name-and-describe-the-simulation"></a>Benzetimi adlandırma ve açıklama
 
-Ad **benzetim sayfasında** aşağıdaki ayarları yapılandırabilirsiniz:
+**Ad benzetimi** sayfasında aşağıdaki ayarları yapılandırın:
 
-- **Ad**: Benzetim için benzersiz, açıklayıcı bir ad girin.
-- **Açıklama**: Benzetim için isteğe bağlı olarak ayrıntılı bir açıklama girin.
+- **Ad**: Simülasyon için benzersiz, açıklayıcı bir ad girin.
+- **Açıklama**: Simülasyon için isteğe bağlı ayrıntılı bir açıklama girin.
 
-Bitirdikten sonra, Sonraki'ne **tıklayın**.
+İşiniz bittiğinde **İleri'ye** tıklayın.
 
 ## <a name="select-a-payload"></a>Yük seçin
 
-Yük **seçin sayfasında** , listeden mevcut bir yük seçmeniz veya yeni bir yük oluşturmanız gerekir.
+**Yükü seçin** sayfasında, listeden mevcut bir yükü seçmeniz veya yeni bir yük oluşturmanız gerekir.
 
-Aşağıdaki ayrıntılar, seçime yardımcı olmak için yük listesinde görüntülenir:
+Aşağıdaki ayrıntılar, seçmenize yardımcı olacak yük listesinde görüntülenir:
 
-- **Ad**
-- **Dil**: Yük içeriğinin dili. Microsoft'un yük kataloğu (genel) 10'dan fazla dilde yük sağlar ve bu da filtre kullanılabilir.
-- **Ücrete** tıklayın: Bu yüke kaç kişi tıklamış?
-- **Öngörülen güvenlik oranı**: Yük genelindeki yükle ilgili geçmiş veriler Microsoft 365 yükten tehlikeye atacak olan kişi yüzdesini tahmin ediyor.
-- **Benzetimler** başlatıldı, bu yüklemenin diğer benzetimlerde kaç kez kullanıldıklarını sayar.
+- **Yük adı**
+- **Dil**: Yük içeriğinin dili. Microsoft'un yük kataloğu (genel), filtrelenebilen 10'undan fazla dilde yük sağlar.
+- **Tıklama oranı**: Bu yüke kaç kişinin tıklamış olduğu.
+- **Tahmin edilen risk oranı**: Microsoft 365 genelinde yükün geçmiş verileri, bu yük tarafından tehlikeye atılacak kişilerin yüzdesini tahmin eder.
+- **Başlatılan simülasyonlar** , bu yükün diğer simülasyonlarda kaç kez kullanıldığını sayar.
 
-![Ara simgesinde.](../../media/m365-cc-sc-search-icon.png) **Arama** kutusunda, yükün adının bir kısmını yazın ve Enter tuşuna basarak sonuçları filtrelenin.
+![Ara simgesinde.](../../media/m365-cc-sc-search-icon.png) **Arama** kutusuna yük adının bir kısmını yazabilir ve sonuçları filtrelemek için Enter tuşuna basabilirsiniz.
 
-**Filtre'ye tıklarsanız**, aşağıdaki filtreler kullanılabilir:
+**Filtre'ye** tıklarsanız aşağıdaki filtreler kullanılabilir:
 
-- **Karmaşıklık**: Yük yükünde olası bir saldırının (yazım hataları, aciliyet, vb.) olduğunu belirten gösterge sayısına bağlı olarak hesaplanır. Daha fazla gösterge, saldırı olarak tanımlamak daha kolaydır ve daha düşük karmaşıklık gösterir. Kullanılabilir değerler:
+- **Kaynak**: Yükün kuruluşunuzda mı oluşturulduğunu yoksa Microsoft'un önceden var olan yük kataloğunun bir parçası mı olduğunu gösterir. Geçerli değerler şunlardır:
+  - **Genel** (yerleşik)
+  - **Kiracı** (özel)
+  - **Tüm**
+
+- **Karmaşıklık**: Yükteki olası bir saldırıyı (yazım hataları, aciliyet vb.) gösteren gösterge sayısına göre hesaplanır. Daha fazla göstergenin saldırı olarak tanımlanması daha kolaydır ve daha düşük karmaşıklığı gösterir. Kullanılabilir değerler şunlardır:
   - **Düşük**
   - **Orta**
   - **Yüksek**
-- **Kaynak**: Yükün kurumda oluşturularak mı yoksa Microsoft'un önceden var olan yük kataloğunda mı yer alıyor olduğunu gösterir. Geçerli değerler:
-  - **Genel** (yerleşik)
-  - **Kiracı** (özel)
-  - **Hepsi**
-- **Dil**: Kullanılabilir değerler: Çince **(Basitleştirilmiş)**, Çince **(Geleneksel)**, **İngilizce**, **Fransızca****, Almanca**, **İtalyanca**, **Japonca**, **Korece**, **Portekizce****, Rusça**, **İspanyolca** ve Felemenkçe.
-- **Etiket ekle**
-- **Temaya** göre filtreleme: Kullanılabilir **değerler: Hesap** **etkinleştirme, Hesap** **doğrulama, Faturalama****,** Postayı **temizleme, Alınan** belge, **Gider**, **Faks****, Finans** raporu, **Gelen iletiler**, **Fatura****, Öğeler** **alındı, Oturum** açma uyarısı, **Alınan posta**, **Parola**, **Ödeme**, **Bordro**, **Kişiselleştirilmiş teklif****, Karantina**, **Uzaktan çalışma**, **İletiyi gözden geçir****, Güvenlik** **güncelleştirmesi,** Hizmet askıya alındı, İmza **gerekli**, **Posta kutusu depolamasını yükseltme Posta** kutusunu, **Sesli** mesajı ve Diğer'i **doğrulayın**.
-- Markaya göre filtrele **: Kullanılabilir** değerler: **American Express**, **Capital One**, **DHL**, **DocuSign**, **Dropbox**, **Facebook**, **First American**, **Microsoft**, **Netflix**, **Scotiabank**, **SendGrid**, **Title**, **Tgrid**, **Wells Fargo**, **Syrinx Cloud** ve **Other**.
-- **Sektöre** göre filtre uygulama: Kullanılabilir **değerler: Bankacılık****, İş** **hizmetleri, Tüketici** hizmetleri, **Eğitim**, **Enerji**, **Inşaat**, **Danışmanlık**, **Finansal** hizmetler, **Kamu****, Hastane**, **Sigorta**, **Yasal**, **Courier** hizmetleri, **IT**, **Sağlık**, **Üretim**, **Perakende**, **Telecom**, **Emlak**, ve **Diğer'i de.**
-- **Geçerli olay**: Kullanılabilir değerler Evet **veya** **Hayır'dır**.
-- **Neden**: Kullanılabilir değerler Evet **veya** **Hayır'dır**.
 
-Filtreleri yapılandırmayı bitirdikten sonra, Filtreleri Uygula, İptal **et** **veya Temizle'yi** **tıklatın**.
+- **Dil**: Kullanılabilir değerler şunlardır: **Çince (Basitleştirilmiş)**, **Çince (Geleneksel)**, **İngilizce**, **Fransızca**, **Almanca**, **İtalyanca**, **Japonca**, **Korece**, **Portekizce**, **Rusça**, **İspanyolca** ve **Felemenkçe**.
 
-:::image type="content" source="../../media/attack-sim-training-simulations-select-payload.png" alt-text="Geçiş portalında Saldırı benzetimi eğitimi'nin yük Microsoft 365 Defender sayfası" lightbox="../../media/attack-sim-training-simulations-select-payload.png":::
+- **Etiket ekleme**
 
-Listeden bir yük seçersiniz, yükle ilgili ayrıntılar bir çıkışta gösterilir:
+- **Temaya göre filtrele**: Hesap **etkinleştirme**, **Hesap doğrulama**, **Faturalama**, **Posta temizleme**, **Alınan belge**, **Gider**, **Faks**, **Finans raporu**, **Gelen iletiler**, **Fatura**, **Alınan Öğeler**, **Oturum açma uyarısı**, **Alınan posta**, **Parola**, **Ödeme**, **Bordro**, **Kişiselleştirilmiş teklif**, **Karantina**, **Uzaktan çalışma**, **İletiyi gözden geçirme**, **Güvenlik güncelleştirmesi**, **Hizmet askıya alındı**, **İmza gerekiyor**, **Posta kutusu depolama alanını yükselt Posta kutusunu**, **Sesli mesajı** ve **Diğer'i** doğrulayın.
 
-- Genel **Bakış** sekmesi, yük hakkında bir örnek ve diğer ayrıntıları içerir.
-- **Benzetimler başlatıldı** sekmesi Benzetim adı, **Tıklama** oranı, Güvenliği **ihlal** **edildi oranı ve** **Eylem'i içerir**.
+- **Markaya göre filtrele**: Kullanılabilir değerler şunlardır: **American Express**, **Capital One**, **DHL**, **DocuSign**, **Dropbox**, **Facebook**, **First American**, **Microsoft**, **Netflix**, **Scotiabank**, **SendGrid**, **Stewart Title**, **Tesco**, **Wells Fargo**, **Syrinx Cloud** ve **Diğer**.
 
-:::image type="content" source="../../media/attack-sim-training-simulations-select-payload-details.png" alt-text="Yeni portalda Saldırı benzetimi eğitimi altında Yük ayrıntıları Microsoft 365 Defender." lightbox="../../media/attack-sim-training-simulations-select-payload-details.png":::
+- **Sektöre göre filtrele**: **Bankacılık**, **İş hizmetleri**, **Tüketici hizmetleri**, **Eğitim**, **Enerji**, **İnşaat**, **Danışmanlık**, **Finansal hizmetler**, **Kamu**, **Konaklama**, **Sigorta**, **Yasal**, **Kurye hizmetleri**, **BT**, **Sağlık**, **İmalat**, **Perakende**, **Telekom**, **Emlak**, ve **Diğer**.
 
-Adı tıklatarak listeden bir yük seçin, bir ![Test yüklemesi gönder simgesi.](../../media/m365-cc-sc-create-icon.png) **Yükleme e-postanın** bir kopyasını inceleme için kendinize (şu anda oturum açmış olan kullanıcı) gönderebilirsiniz.
+- **Geçerli olay**: Kullanılabilir değerler **Evet** veya **Hayır'dır**.
 
-Kendi yüklerinizi oluşturmak için Yükleme simgesi ![oluştur'a tıklayın.](../../media/m365-cc-sc-create-icon.png) **Yük oluşturun**. Daha fazla bilgi için Saldırı [benzetimi eğitimi için özel yüklemeler oluşturma'ya bakın](attack-simulation-training-payloads.md).
+- **Tartışmalı**: Kullanılabilir değerler **Evet** veya **Hayır'dır**.
 
-Bitirdikten sonra, Sonraki'ne **tıklayın**.
+Filtreleri yapılandırmayı bitirdiğinizde **Uygula**, **İptal veya** **Filtreleri temizle'ye** tıklayın.
+
+:::image type="content" source="../../media/attack-sim-training-simulations-select-payload.png" alt-text="Microsoft 365 Defender portalındaki Saldırı benzetimi eğitimi'ndeki Yük seçin sayfası" lightbox="../../media/attack-sim-training-simulations-select-payload.png":::
+
+Listeden bir yük seçerseniz, yükle ilgili ayrıntılar açılır pencerede gösterilir:
+
+- **Genel Bakış** sekmesi, yükle ilgili bir örnek ve diğer ayrıntıları içerir.
+- **Başlatılan Simülasyonlar** sekmesi **Benzetimi adı**, **Tıklama oranı**, **Risk altındaki hız** ve **Eylem'i** içerir.
+
+:::image type="content" source="../../media/attack-sim-training-simulations-select-payload-details.png" alt-text="Microsoft 365 Defender portalındaki Saldırı simülasyonu eğitiminde Yük ayrıntıları açılır öğesi" lightbox="../../media/attack-sim-training-simulations-select-payload-details.png":::
+
+Listeden ada tıklayarak bir yük seçerseniz, Test ![yükü gönder simgesi.](../../media/m365-cc-sc-create-icon.png) Ana sayfada yük e-postasının bir kopyasını inceleme için kendinize (şu anda oturum açmış olan kullanıcı) gönderebileceğiniz **bir test** düğmesi görüntülenir.
+
+Kendi yükünüzü oluşturmak için Yük oluştur simgesine tıklayın ![.](../../media/m365-cc-sc-create-icon.png) **Yük oluşturma**. Daha fazla bilgi için bkz [. Saldırı benzetimi eğitimi için özel yük oluşturma](attack-simulation-training-payloads.md).
+
+İşiniz bittiğinde **İleri'ye** tıklayın.
 
 ## <a name="target-users"></a>Hedef kullanıcılar
 
-Hedef **kullanıcılar sayfasında** benzetimi alacak olan kullanıcıları seçin. Aşağıdaki ayarlardan birini yapılandırma:
+**Hedef kullanıcılar** sayfasında simülasyonu alacak kullanıcıları seçin. Aşağıdaki ayarlardan birini yapılandırın:
 
-- **Organizasyon dahil tüm kullanıcıları dahil:** Etkilenen kullanıcılar 10 listelerinde gösterir. Listede kaydırmak **için kullanıcı** **listesinin** hemen altındaki Sonraki ve Önceki düğmelerini kullanabilirsiniz. Arama simgesini de ![kullanabilirsiniz.](../../media/m365-cc-sc-search-icon.png) **Etkilenen** kullanıcıları bulmak için sayfada Ara simgesi.
+- **Kuruluşunuzdaki tüm kullanıcıları dahil et**: Etkilenen kullanıcılar 10'lu listelerde gösterilir. Listede gezinmek için doğrudan kullanıcı listesinin altındaki **İleri** ve **Önceki** düğmelerini kullanabilirsiniz. Arama simgesini de kullanabilirsiniz ![.](../../media/m365-cc-sc-search-icon.png) Etkilenen kullanıcıları bulmak için sayfadaki **arama** simgesi.
 
-- **Yalnızca belirli kullanıcıları ve grupları dahil** etmek için: Aşağıdaki seçeneklerden birini belirleyin:
-  - ![Kullanıcı ekle simgesi.](../../media/m365-cc-sc-create-icon.png) **Kullanıcı ekleme**: Görüntülenen **Kullanıcı ekle** açılır yapısında, kullanıcıları ve grupları aşağıdaki ölçütlere göre bulabilirsiniz:
+- **Yalnızca belirli kullanıcıları ve grupları dahil et**: Aşağıdaki seçeneklerden birini belirleyin:
+  - ![Kullanıcı ekle simgesi.](../../media/m365-cc-sc-create-icon.png) **Kullanıcı ekle**: Görüntülenen **Kullanıcı ekle** açılır listesinde, aşağıdaki ölçütlere göre kullanıcıları ve grupları bulabilirsiniz:
 
-    - **Kullanıcıları veya grupları arama**: Kutusuna, kullanıcının veya grubun Ad veya E-posta  adresinin  bir kısmını yazarak Enter tuşuna basabilirsiniz. Sonuçların bir veya hepsini seçin. Bitirdikten sonra X kullanıcı **ekle'ye tıklayın**.
+    - **Kullanıcıları veya grupları arayın**: Kutuya, kullanıcı veya grubun **Ad** veya **E-posta adresinin** bir bölümünü yazıp Enter tuşuna basabilirsiniz. Sonuçların bir kısmını veya tümünü seçebilirsiniz. İşiniz bittiğinde **X kullanıcı ekle'ye** tıklayın.
 
       > [!NOTE]
-      > Kullanıcıları **kategorilere göre** filtrele seçeneklerine dönmek  için Filtre ekle düğmesine tıkıldığında, arama sonuçlarında seçtiğiniz tüm kullanıcılar veya gruplar temiz olur.
+      > **Kullanıcıları kategorilere göre filtrele** seçeneklerine dönmek için **Filtre ekle** düğmesine tıklanması, arama sonuçlarında seçtiğiniz tüm kullanıcıları veya grupları temizler.
 
-    - **Kullanıcıları kategorilere göre filtreleme**: Yok, bazıları veya tüm aşağıdaki seçeneklerden birini belirleyin:
+    - **Kullanıcıları kategorilere göre filtrele**: Aşağıdaki seçeneklerden hiçbiri, bazıları veya tümü arasından seçim yapın:
 
       - **Önerilen kullanıcı grupları**: Aşağıdaki değerlerden birini seçin:
-        - **Tüm önerilen kullanıcı grupları**
-        - **Son üç ay içinde kullanıcılar bir benzetim tarafından hedef kitleye ulaşmdı**
-        - **Yinelemelileri yineleme**
+        - **Önerilen tüm kullanıcı grupları**
+        - **Son üç ay içinde bir simülasyon tarafından hedeflenmemiş kullanıcılar**
+        - **Tekrar eden suçlular**
 
-      - **Kullanıcı etiketleri**: Kullanıcı etiketleri belirli kullanıcı grupları için tanımlayıcılardır (örneğin, Öncelik hesapları). Daha fazla bilgi için bkz[. Web'de Office 365 için Microsoft Defender](user-tags.md).
+      - **Kullanıcı etiketleri**: Kullanıcı etiketleri, belirli kullanıcı gruplarının tanımlayıcılarıdır (örneğin, Öncelik hesapları). Daha fazla bilgi için bkz. [Office 365 için Microsoft Defender'de kullanıcı etiketleri](user-tags.md).
 
           Aşağıdaki seçenekleri kullanın:
 
-        - **Ara**: Kullanıcı ![etiketlerine göre ara simgesinde.](../../media/m365-cc-sc-search-icon.png) **Kullanıcı etiketlerine göre** arama yaptıysanız, kullanıcı etiketinin bir kısmını yazarak Enter tuşuna basabilirsiniz. Sonuçların bir veya hepsini seçin.
-        - Tüm **kullanıcı etiketleri'yi seçin**
-        - Var olan kullanıcı etiketlerini seçin.
+        - **Arama**: ![Kullanıcı etiketlerine göre ara simgesi.](../../media/m365-cc-sc-search-icon.png) **Kullanıcı etiketlerine göre arama** yapın, kullanıcı etiketinin bir kısmını yazıp Enter tuşuna basabilirsiniz. Sonuçların bir kısmını veya tümünü seçebilirsiniz.
+        - **Tüm kullanıcı etiketlerini** seçin
+        - Mevcut kullanıcı etiketlerini seçin.
 
-      - **Bölüm**: Aşağıdaki seçenekleri kullanın:
-        - **Ara**: Departmana ![göre ara simgesinde.](../../media/m365-cc-sc-search-icon.png) **Departmana göre arama** bölümünde Bölüm değerini yazın ve Enter tuşuna basın. Sonuçların bir veya hepsini seçin.
-        - Tüm **Departmanları Seçme**
+      - **Departman**: Aşağıdaki seçenekleri kullanın:
+        - **Arama**: ![Bölüme Göre Ara simgesinde.](../../media/m365-cc-sc-search-icon.png) **Departmana göre arama** yapın, Bölüm değerinin bir kısmını yazıp Enter tuşuna basabilirsiniz. Sonuçların bir kısmını veya tümünü seçebilirsiniz.
+        - **Tüm Departman'ı** seçin
         - Mevcut Departman değerlerini seçin.
 
       - **Başlık**: Aşağıdaki seçenekleri kullanın:
-        - **Arama**: Başa ![Göre Ara simgesinde.](../../media/m365-cc-sc-search-icon.png) **Başt'a** göre arama bölümünde Başlık değerinin bir kısmını yazın ve Enter tuşuna basın. Sonuçların bir veya hepsini seçin.
-        - Tüm **Başlığı Seç**
+        - **Arama**: ![Başlığa Göre Ara simgesi.](../../media/m365-cc-sc-search-icon.png) **Başlığa göre arama** yapın, Başlık değerinin bir kısmını yazıp Enter tuşuna basabilirsiniz. Sonuçların bir kısmını veya tümünü seçebilirsiniz.
+        - **Tüm Başlığı** Seç
         - Mevcut Başlık değerlerini seçin.
 
-      :::image type="content" source="../../media/attack-sim-training-simulations-target-users-filter-by-category.png" alt-text="Kullanıcı profili portalında Saldırı benzetimi eğitimi'nin Hedef kullanıcılar sayfasındaki Microsoft 365 Defender filtrelemesi" lightbox="../../media/attack-sim-training-simulations-target-users-filter-by-category.png":::
+      :::image type="content" source="../../media/attack-sim-training-simulations-target-users-filter-by-category.png" alt-text="Microsoft 365 Defender portalındaki Saldırı simülasyonu eğitimi sayfasındaki Hedef kullanıcılar sayfasında Kullanıcı filtrelemesi" lightbox="../../media/attack-sim-training-simulations-target-users-filter-by-category.png":::
 
-      Ölçütlerinizi tanımdikten sonra, etkilenen kullanıcılar görüntülenen Kullanıcı listesi bölümünde gösterilir  ve burada bulunan alıcıların bir bölümünü veya hepsini seçebilirsiniz.
+      Ölçütlerinizi belirledikten sonra, etkilenen kullanıcılar görüntülenen **Kullanıcı listesi** bölümünde gösterilir ve burada bulunan alıcılardan bazılarını veya tümünü seçebilirsiniz.
 
-      Bitirdikten sonra Uygula **(x)'e tıklayın** ve sonra da X kullanıcı **ekle'ye tıklayın**.
+      İşiniz bittiğinde **Uygula(x)**'e ve ardından **X kullanıcı ekle'ye** tıklayın.
 
-  Ana Hedef kullanıcılar **sayfasına** dönüp Arama simgesini kullanabilirsiniz ![.](../../media/m365-cc-sc-search-icon.png) **Etkilenen** kullanıcıları bulmak için arama kutusu. Ayrıca, Kullanıcıları sil simgesine ![de tıkabilirsiniz.](../../media/m365-cc-sc-search-icon.png) **Belirli** kullanıcıları kaldırmak için silin.
+  **Ana Hedef kullanıcılar** sayfasına döndüğünüzde ![Ara simgesini kullanabilirsiniz.](../../media/m365-cc-sc-search-icon.png) Etkilenen kullanıcıları bulmak için **arama** kutusu. Kullanıcıları sil simgesine de tıklayabilirsiniz ![.](../../media/m365-cc-sc-search-icon.png) Belirli kullanıcıları kaldırmak için **silin**.
 
-- ![İçeri Aktar simgesi.](../../media/m365-cc-sc-create-icon.png) **İçeri** Aktar: Açılan iletişim kutusunda, satır başına bir e-posta adresi içeren bir CSV dosyası belirtin.
+- ![İçeri aktar simgesi.](../../media/m365-cc-sc-create-icon.png) **İçeri Aktarma**: Açılan iletişim kutusunda, satır başına bir e-posta adresi içeren bir CSV dosyası belirtin.
 
-  CSV dosyasını buktan sonra, kullanıcı listesi içeri aktarılır ve Hedefli kullanıcılar **sayfasında** gösterilir. Arama simgesini ![kullanabilirsiniz.](../../media/m365-cc-sc-search-icon.png) **Etkilenen** kullanıcıları bulmak için arama kutusu. Ayrıca, Hedefli kullanıcıları ![sil simgesine de tıkabilirsiniz.](../../media/m365-cc-sc-delete-icon.png) **Belirli** kullanıcıları kaldırmak için silin.
+  CSV dosyasını seçtikten sonra, kullanıcı listesi içeri aktarılır ve **Hedeflenen kullanıcılar** sayfasında gösterilir. Arama simgesini kullanabilirsiniz ![.](../../media/m365-cc-sc-search-icon.png) Etkilenen kullanıcıları bulmak için **arama** kutusu. Hedeflenen kullanıcıları sil simgesine de tıklayabilirsiniz ![.](../../media/m365-cc-sc-delete-icon.png) Belirli kullanıcıları kaldırmak için **silin**.
 
-Bitirdikten sonra, Sonraki'ne **tıklayın**.
+İşiniz bittiğinde **İleri'ye** tıklayın.
 
 ## <a name="assign-training"></a>Eğitim atama
 
-Eğitim **atama sayfasında** benzetim için eğitimler atabilirsiniz. Eğitimde geçen çalışanlar benzer saldırılara karşı daha az duyarlıklı olduğu için her benzetim için eğitim atamanız önerilir. Aşağıdaki ayarlar kullanılabilir:
+**Eğitim ata** sayfasında simülasyon için eğitimler atayabilirsiniz. Eğitimden geçen çalışanlar benzer saldırılara daha az duyarlı olduğundan her simülasyon için eğitim atamanızı öneririz. Aşağıdaki ayarlar kullanılabilir:
 
-- **Eğitim içeriği tercihini** seçin: Aşağıdaki seçeneklerden birini belirleyin:
-  - **Microsoft eğitim deneyimi**: Bu, yapılandırmada aşağıdaki ilişkili seçeneklerin yer alan varsayılan değerdir:
+- **Eğitim içeriği tercihini seçin**: Aşağıdaki seçeneklerden birini belirleyin:
+  - **Microsoft eğitim deneyimi**: Bu, yapılandırmak için aşağıdaki ilişkili seçenekleri içeren varsayılan değerdir:
     - Aşağıdaki seçeneklerden birini belirleyin:
-      - **Benim için eğitim ata**: Bu, varsayılan ve önerilen değerdir. Bir kullanıcının önceki benzetim ve eğitim sonuçlarına göre eğitim atadığınız gibi, sihirbazın sonraki adımlarında da seçimleri gözden geçirebilirsiniz.
-      - **Eğitim kursları ve modülleri** kendim seçiyorum: Bu değeri seçersiniz, sihirbazın sonraki adımlarında önerilen içeriği ve kullanılabilir tüm kursları ve modülleri görmeye devam edersiniz.
+      - **Benim için eğitim ata**: Bu varsayılan ve önerilen değerdir. Kullanıcının önceki simülasyon ve eğitim sonuçlarına göre eğitim atarız ve sihirbazın sonraki adımlarında seçimleri gözden geçirebilirsiniz.
+      - **Eğitim kurslarını ve modülleri kendim seçin**: Bu değeri seçerseniz, sihirbazın bir sonraki adımında önerilen içeriğin yanı sıra tüm kullanılabilir kursları ve modülleri görmeye devam edebilirsiniz.
     - **Son tarih**: Aşağıdaki değerlerden birini seçin:
-      - **Benzetim sona erdikten 30 gün** sonra: Bu varsayılan değerdir.
-      - **Benzetim sona erdikten 15 gün sonra**
-      - **Benzetim sona erdikten 7 gün sonra**
-  - **Özel bir URL'ye yeniden yönlendirme**: Bu değerin yapılandırılması için aşağıdaki ilişkili seçenekler vardır:
+      - **Simülasyon sona erdikten 30 gün sonra**: Bu varsayılan değerdir.
+      - **Simülasyon bittikten 15 gün sonra**
+      - **Simülasyon bittikten 7 gün sonra**
+  - **Özel URL'ye yeniden yönlendirme**: Bu değer, yapılandırmak için aşağıdaki ilişkili seçeneklere sahiptir:
     - **Özel eğitim URL'si** (gerekli)
     - **Özel eğitim adı** (gerekli)
     - **Özel eğitim açıklaması**
-    - **Özel eğitim süresi (dakika olarak)**: Varsayılan değer 0'dır, bu da eğitim için belirtilen sürenin olmadığını anlamına gelir.
+    - **Özel eğitim süresi (dakika cinsinden):** Varsayılan değer 0'dır ve bu da eğitim için belirtilen süre olmadığı anlamına gelir.
     - **Son tarih**: Aşağıdaki değerlerden birini seçin:
-      - **Benzetim sona erdikten 30 gün** sonra: Bu varsayılan değerdir.
-      - **Benzetim sona erdikten 15 gün sonra**
-      - **Benzetim sona erdikten 7 gün sonra**
-  - **Eğitim yok**: Bu değeri seçerseniz, sayfada yer alan tek seçenek Giriş sayfası sayfasına sizi  alan Sonraki [**düğmesidir**](#landing-page).
+      - **Simülasyon sona erdikten 30 gün sonra**: Bu varsayılan değerdir.
+      - **Simülasyon bittikten 15 gün sonra**
+      - **Simülasyon bittikten 7 gün sonra**
+  - **Eğitim yok**: Bu değeri seçerseniz sayfadaki tek seçenek, sizi [**Giriş sayfası**](#landing-page) sayfasına götüren **İleri** düğmesidir.
 
-:::image type="content" source="../../media/attack-sim-training-simulations-assign-training-add-recommended-training.png" alt-text="Yeni portalda, Saldırı benzetimi eğitimi sayfasındaki Eğitim atama sayfasına önerilen Microsoft 365 Defender ekleme seçeneği" lightbox="../../media/attack-sim-training-simulations-assign-training-add-recommended-training.png":::
+:::image type="content" source="../../media/attack-sim-training-simulations-assign-training-add-recommended-training.png" alt-text="Önerilen eğitimi Microsoft 365 Defender portalındaki Saldırı simülasyonu eğitimi'ndeki Eğitim ataması sayfasına ekleme seçeneği" lightbox="../../media/attack-sim-training-simulations-assign-training-add-recommended-training.png":::
 
-### <a name="training-assignment"></a>Eğitim ödevi
+### <a name="training-assignment"></a>Eğitim ataması
 
 > [!NOTE]
-> Eğitim **ödev sayfası** , yalnızca Microsoft eğitim deneyimini **seçtiyken** \> önceki sayfada kendim eğitim **kursları ve modülleri** seçiyorum.
+> **Eğitim ataması** sayfası yalnızca önceki sayfada Eğitim **kursları ve modüllerini kendim seç** **Microsoft eğitim deneyimini** \> seçtiyseniz kullanılabilir.
 
-Eğitim **atama sayfasında** , Eğitim ekle simgesine tıklayarak benzetime eklemek istediğiniz ![eğitimleri seçin.](../../media/m365-cc-sc-create-icon.png) **Eğitimler ekleyin**.
+**Eğitim ataması** sayfasında Eğitim ekle simgesine tıklayarak ![simülasyona eklemek istediğiniz eğitimleri seçin.](../../media/m365-cc-sc-create-icon.png) **Eğitimler ekleyin**.
 
-Görüntülenen **Eğitim ekle** açılır öğesinin altında, kullanılabilir olan aşağıdaki sekmelerde kullanmak üzere eğitimleri seçin:
+Görüntülenen **Eğitim ekle** açılır öğesinde, aşağıdaki sekmelerde kullanılacak eğitimleri seçebilirsiniz:
 
-- **Önerilen** sekmesi: Benzetim yapılandırmasına dayalı olarak, önerilen yerleşik eğitimleri gösterir. Önceki sayfada Benim için eğitim ata'nın seçili olmasıyla aynı eğitimler atanmıştır.
-- **Tüm eğitimler** sekmesi: Kullanılabilen tüm yerleşik eğitimleri gösterir.
+- **Önerilen** sekmesi: Simülasyon yapılandırmasına göre önerilen yerleşik eğitimleri gösterir. Bunlar, önceki sayfada **Eğitimi benim için ata'yı** seçtiğinizde atanmış olan eğitimlerle aynıdır.
+- **Tüm eğitimler** sekmesi: Kullanılabilir olan tüm yerleşik eğitimleri gösterir.
 
   Her eğitim için aşağıdaki bilgiler gösterilir:
 
   - **Eğitim adı**
   - **Kaynak**: Değer **Genel'dir**.
   - **Süre (mins)**
-  - **Önizleme**: Eğitimi **görmek** için Önizleme düğmesine tıklayın.
+  - **Önizleme**: Eğitimi görmek için **Önizleme** düğmesine tıklayın.
 
-  ![Ara simgesinde.](../../media/m365-cc-sc-search-icon.png) **Arama** kutusunda, eğitim adının bir bölümünü yazın ve Enter tuşuna basarak geçerli sekmede yer alan sonuçları filtreleyebilirsiniz.
+  ![Ara simgesinde.](../../media/m365-cc-sc-search-icon.png) **Arama** kutusuna eğitim adının bir kısmını yazabilir ve geçerli sekmedeki sonuçları filtrelemek için Enter tuşuna basabilirsiniz.
 
-  Geçerli sekmeden eklemek istediğiniz tüm eğitimleri seçin ve Ekle'ye **tıklayın**.
+  Geçerli sekmeden eklemek istediğiniz tüm eğitimleri seçin ve **ekle'ye** tıklayın.
 
-Ana Eğitim atama **sayfasına** geri dönebilirsiniz; seçtiğiniz eğitimler gösterilir. Her eğitim için aşağıdaki bilgiler gösterilir:
+Ana **Eğitim ödevi** sayfasına döndüğünüzde, seçtiğiniz eğitimler gösterilir. Her eğitim için aşağıdaki bilgiler gösterilir:
 
 - **Eğitim adı**
 - **Kaynak**
 - **Süre (mins)**
 
-Listede yer alan her eğitim için, Ata sütunundaki değerleri seçerek eğitimi kimlerin **alasınız? öğesini seçmeniz** gerekir:
+Listedeki her eğitim için **, Ata** sütunundaki değerleri seçerek eğitimi kimlerin aldığını seçmeniz gerekir:
 
 - **Tüm kullanıcılar**
 
-  ya da aşağıdaki değerlerden birini veya her ikisini birden kullanabilirsiniz:
+  veya aşağıdaki değerlerden biri veya her ikisi:
 
-- **Tıklı yük**
-- **Güvenliği ihlal edildi**
+- **Tıklanan yük**
+- **Tehlikeye**
 
-Gösterilen bir eğitimi kullanmak istemiyorsanız, Eğitim simgesini sil'e ![tıklayın.](../../media/m365-cc-sc-delete-icon.png) **Sil'i seçin**.
+Gösterilen bir eğitimi kullanmak istemiyorsanız Eğitimi sil simgesine tıklayın ![.](../../media/m365-cc-sc-delete-icon.png) **Sil'i seçin**.
 
-:::image type="content" source="../../media/attack-sim-training-training-assignment.png" alt-text="Yeni portalda Saldırı benzetimi eğitimi'nin Eğitim Microsoft 365 Defender sayfası" lightbox="../../media/attack-sim-training-training-assignment.png":::
+:::image type="content" source="../../media/attack-sim-training-training-assignment.png" alt-text="Microsoft 365 Defender portalındaki Saldırı simülasyonu eğitimi'ndeki Eğitim atama sayfası" lightbox="../../media/attack-sim-training-training-assignment.png":::
 
-Bitirdikten sonra, Sonraki'ne **tıklayın**.
+İşiniz bittiğinde **İleri'ye** tıklayın.
 
 ### <a name="landing-page"></a>Giriş sayfası
 
-Giriş **sayfası sayfasında** , yükleme benzetimde bir yük açılırsa kullanıcının ziyarette olduğu web sayfasını yapılandırabilirsiniz.
+**Giriş sayfası sayfasında**, simülasyonda yükü açan kullanıcının alındığı web sayfasını yapılandırabilirsiniz.
 
-Microsoft tarafından el ile yapılan giriş sayfaları 12 dilde kullanılabilir: Çince (Basitleştirilmiş), Çince (Geleneksel), İngilizce, Fransızca, Almanca, İtalyanca, Japonca, Kore dili, Portekizce, Rusça, İspanyolca ve Felemenkçe.
+Microsoft tarafından seçilmiş giriş sayfaları 12 dilde kullanılabilir: Çince (Basitleştirilmiş), Çince (Geleneksel), İngilizce, Fransızca, Almanca, İtalyanca, Japonca, Korece, Portekizce, Rusça, İspanyolca ve Felemenkçe.
 
-- **Giriş sayfası tercihini seçin**: Kullanılabilir değerler:
-  - **Microsoft varsayılan giriş sayfasını kullanma**: Bu, yapılandırmayla ilgili aşağıdaki seçeneklerin yer alan varsayılan değerdir:
+- **Giriş sayfası tercihini seçin**: Kullanılabilir değerler şunlardır:
+  - **Microsoft varsayılan giriş sayfasını kullan**: Bu, yapılandırmak için aşağıdaki ilişkili seçenekleri içeren varsayılan değerdir:
     - **Giriş sayfası düzenini seçin**: Kullanılabilir şablonlardan birini seçin.
-    - **Logo ekleme**: Bir dosya **,** .jpeg veya .png bulmak ve seçmek için Gözat'.gif tıklayın. Bozulmayı önlemek için logo boyutu en fazla 210 x 70 olabilir. Logoyu kaldırmak için Kaldır'a **tıklayın**.
-    - **E-postaya yük göstergeleri ekleme**: Seçme tekniği sayfasında önceden Kötü amaçlı yazılım eki veya  Kötü amaçlı yazılıma bağlantı yükle'yi seçtiyseniz **bu** [ayar](#select-a-social-engineering-technique) kullanılamaz.
+    - **Logo ekle**: .png, .jpeg veya .gif dosyasını bulmak ve seçmek için **Gözat'a** tıklayın. Bozulmayı önlemek için logo boyutu en fazla 210 x 70 olmalıdır. Logoyu kaldırmak için **Kaldır'a** tıklayın.
+    - **E-postaya yük göstergeleri ekleme**: Daha önce [Tekniği seç](#select-a-social-engineering-technique) sayfasında **Kötü amaçlı yazılım eki** veya **Kötü amaçlı yazılım bağlantısı'nı** seçtiyseniz bu ayar kullanılamaz.
 
-    Sayfanın en altındaki Önizleme panelini **aç düğmesine tıklayarak** sonuçların önizlemesini görüntüleyebilirsiniz.
+    Sayfanın alt kısmındaki **Önizleme panelini aç** düğmesine tıklayarak sonuçların önizlemesini görüntüleyebilirsiniz.
 
-  - **Özel URL kullanın: Daha** önce Teknik seçin sayfasında Kötü amaçlı yazılım eki veya  Kötü amaçlı yazılıma **bağlantı ekle'yi** seçtiyseniz bu [ayar](#select-a-social-engineering-technique) kullanılamaz.
+  - **Özel URL kullanın**: Daha önce [Teknik seç](#select-a-social-engineering-technique) sayfasında **Kötü amaçlı yazılım eki** veya **Kötü amaçlı yazılım bağlantısı'nı** seçtiyseniz bu ayar kullanılamaz.
 
-    Özel BIR **URL kullan'ı seçiyorsanız**, görüntülenen Özel giriş sayfası **URL'sini girin kutusuna URL'yi** eklemeniz gerekir. Sayfada başka seçenek yoktur.
+    **Özel URL kullan'ı** seçerseniz, görüntülenen **Özel giriş sayfası URL'sini girin** kutusuna URL'yi eklemeniz gerekir. Sayfada başka seçenek yoktur.
 
-  - **Kendi giriş sayfanızı oluşturma**: Bu değeri yapılandırmak için aşağıdaki ilişkili seçenekler vardır:
-    - **E-postaya yük göstergeleri ekleyin**: Bu ayar yalnızca aşağıdaki koşulların ikisi de doğruysa kullanılabilir:
-      - Seçme tekniği sayfasında **daha önce** **Kimlik bilgisi** toplama, Ek içinde bağlantı **veya Sürücü URL'si'ne** [seçtiniz](#select-a-social-engineering-technique) .
-      - Sayfa içeriğine **E-posta içeriği** **ekle adlı** Dinamik etiketi eklemenizden sonra.
+  - **Kendi giriş sayfanızı oluşturun**: Bu değer, yapılandırmak için aşağıdaki ilişkili seçeneklere sahiptir:
+    - **E-postaya yük göstergeleri ekleme**: Bu ayar yalnızca aşağıdaki koşulların her ikisi de doğruysa seçilebilir:
+      - Daha önce [Tekniği seç](#select-a-social-engineering-technique) sayfasında **Kimlik bilgisi toplama**, **Ekteki bağlantı** veya **SürücüYE göre URL'yi** seçtiniz.
+      - Sayfa **içeriğine e-posta içeriği ekle** adlı **Dinamik etiketi** ekledikten sonra.
 
     - Sayfa içeriği: İki sekme kullanılabilir:
-      - **Metin**: Giriş sayfanız oluşturmak için zengin bir metin düzenleyicisi kullanılabilir. Normal yazı tipi ve biçimlendirme ayarlarına ek olarak, aşağıdaki ayarlar da kullanılabilir:
-        - **Dinamik etiket**: Aşağıdaki etiketlerden seçim yapın:
+      - **Metin**: Giriş sayfanızı oluşturmak için zengin bir metin düzenleyicisi kullanılabilir. Tipik yazı tipi ve biçimlendirme ayarlarına ek olarak aşağıdaki ayarlar da kullanılabilir:
+        - **Dinamik etiket**: Aşağıdaki etiketler arasından seçim yapın:
           - **Ad ekle**
-          - **Gönderen adını ekleme**
+          - **Gönderen adı ekle**
           - **Gönderen e-postası ekleme**
-          - **E-posta konusu ekleme**
+          - **E-posta konusu ekle**
           - **E-posta içeriği ekleme**
           - **Tarih ekle**
-        - **Varsayılan olarak kullan**: Başlamak için kullanılabilir bir şablon seçin. Düzenleme alanında metin ve düzeni değiştirebilirsiniz. Giriş sayfasını şablonun varsayılan metnine ve düzenine sıfırlamak için Varsayılana **sıfırla'ya tıklayın**.
-    - **Kod**: HTML kodunu doğrudan görüntüp değiştirebilirsiniz.
+        - **Varsayılandan kullanın**: Başlamak için kullanılabilir bir şablon seçin. Düzenleme alanındaki metni ve düzeni değiştirebilirsiniz. Giriş sayfasını şablonun varsayılan metnine ve düzenine geri döndürmek **için Varsayılana sıfırla'ya** tıklayın.
+    - **Kod**: HTML kodunu doğrudan görüntüleyebilir ve değiştirebilirsiniz.
 
-    Sayfanın ortasındaki Önizleme panelini **aç düğmesine tıklayarak** sonuçların önizlemesini görüntüleyebilirsiniz.
+    Sayfanın ortasındaki **Önizleme panelini aç** düğmesine tıklayarak sonuçların önizlemesini görüntüleyebilirsiniz.
 
-Bitirdikten sonra, Sonraki'ne **tıklayın**.
+İşiniz bittiğinde **İleri'ye** tıklayın.
 
 > [!NOTE]
-> Bazı ticari markalar, logolar, simgeler, insignias ve diğer kaynak tanımlayıcıları yerel, eyalet ve federal yasalara göre daha yüksek koruma sağlar. Bu gibi göstergelerin yetkisiz kullanımı, kullanıcılara cezai para cezaları dahil olmak üzere penceler konur. Kapsamlı bir liste olsa da, bu listede Başkan Yardımcısı, Başkan Yardımcısı ve Uluslararası iş üyeleri, CIA, CIA, Social Security, Medicare ve Medicaid, Birleşik Devletler Internal Revenue Service ve Olimpiyatlar yer almaktadır. Bu ticari marka kategorilerinin ötesinde, üçüncü taraf ticari markaların yapısal bir miktarda risk taşıyan kullanım ve değiştirilmesi. Yüklemede kendi ticari markalarınızı ve logolarınızı kullanmak, özellikle de kuruluş izinli olduğu bir yüklemede daha az riskli olabilir. Yük oluşturma veya yapılandırmada kullanımın ne olduğu veya uygun olmadığınız hakkında başka sorularınız varsa, yasal danışmanlarınıza danışmanız ile görüşmeniz gerekir.
+> Bazı ticari markalar, logolar, simgeler, insignias ve diğer kaynak tanımlayıcıları, yerel, eyalet ve federal tüzükler ve yasalar kapsamında yüksek koruma alır. Bu tür göstergelerin yetkisiz kullanımı, kullanıcıları cezai para cezaları da dahil olmak üzere cezalara tabi yapabilir. Kapsamlı bir liste olmasa da, buna Başkanlık, Başkan Yardımcısı ve Kongre mühürleri, CIA, FBI, Sosyal Güvenlik, Medicare ve Medicaid, Birleşik Devletler İç Gelir Servisi ve Olimpiyatlar dahildir. Bu ticari marka kategorilerinin ötesinde, herhangi bir üçüncü taraf ticari markanın kullanılması ve değiştirilmesi doğal bir risk taşır. Yükte kendi ticari markalarınızı ve logolarınızı kullanmak, özellikle de kuruluşunuzun kullanıma izin vermesinde daha az riskli olabilir. Yük oluştururken veya yapılandırırken nelerin kullanılması uygun veya uygun olmadığı hakkında başka sorularınız varsa, hukuk danışmanlarınıza danışmanız gerekir.
 
 ## <a name="select-end-user-notification"></a>Son kullanıcı bildirimini seçme
 
-Son **kullanıcı bildirimi seç sayfasında** , aşağıdaki bildirim seçeneklerinden birini belirleyin:
+**Son kullanıcı bildirimini seçin** sayfasında aşağıdaki bildirim seçeneklerinden birini belirleyin:
 
-- **Bildirimleri teslim edin: Görüntülenen** uyarı **iletişim kutusunda** Devam'a tıklayın. Bu seçeneği tercih ettiyseniz, Sonraki'ye tıklarsanız [Ayrıntıları](#launch-details) başlat sayfasına **olursanız**.
+- **Bildirimleri teslim etme**: Görüntülenen uyarı iletişim kutusunda **Devam'a** tıklayın. Bu seçeneği seçerseniz **İleri'ye** tıkladığınızda [Başlatma ayrıntıları](#launch-details) sayfasına yönlendirilirsiniz.
 
-- **Microsoft varsayılan bildirimi (önerilir)**: Sayfada aşağıdaki ek ayarlar kullanılabilir:
-  - **Varsayılan dili seçin**: Kullanılabilir değerler: **Çince (Basitleştirilmiş)**, Çince **(Geleneksel)**, **İngilizce****, Fransızca**, **Almanca**, **İtalyanca**, **Japonca**, **Kore dili****, Portekizce**, **Rusça**, **İspanyolca** ve Felemenkçe.
-  - Varsayılan olarak, seçilmesi gereken tek bildirim Microsoft tarafından olumlu **bir bildirimdir**. Bildirim için aşağıdaki bilgiler kullanılabilir:
-    - **Bildirimler** (ad): Değer **, Microsoft'un varsayılan olarak pozitif bildirim bildirimidir**.
-    - **Dil**: Bildirim birden çok çeviri içeriyorsa, ilk iki dil doğrudan gösterilir. Kalan dilleri görmek için sayısal simgenin (örneğin, **+10) üzerine gelin**.
-    - **Tür**: Değer Pozitif **pozitif bir gelecektir**.
-    - **Teslim tercihleri**: Aşağıdaki değerlerden birini seçin:
-      - **Teslim yapma**
+- **Microsoft varsayılan bildirimi (önerilen)**: Sayfada aşağıdaki ek ayarlar kullanılabilir:
+
+  - **Varsayılan dili seçin**: Kullanılabilir değerler şunlardır: **Çince (Basitleştirilmiş)**, **Çince (Geleneksel)**, **İngilizce**, **Fransızca**, **Almanca**, **İtalyanca**, **Japonca**, **Korece**, **Portekizce**, **Rusça**, **İspanyolca** ve **Felemenkçe**.
+
+  - Varsayılan olarak, aşağıdaki bildirimler dahil edilir:
+    - **Microsoft pozitif takviye bildirimi**
+    - **Microsoft varsayılan eğitim ataması bildirimi**
+    - **Microsoft varsayılan eğitim anımsatıcı bildirimi**
+
+    Her bildirim için aşağıdaki bilgiler sağlanır:
+    - **Bildirimler**: Bildirimin adı.
+    - **Dil**: Bildirim birden çok çeviri içeriyorsa, ilk iki dil doğrudan gösterilir. Kalan dilleri görmek için, sayısal simgenin üzerine gelin (örneğin, **+10**).
+    - **Tür**: Aşağıdaki değerlerden biri:
+      - **Pozitif pekiştirme bildirimi**
+      - **Eğitim ataması bildirimi**
+      - **Eğitim anımsatıcısı bildirimi**
+    - **Teslim tercihleri**: **Pozitif pekiştirme bildirimi** ve **Eğitim anımsatıcısı bildirim** türleri için aşağıdaki değerler kullanılabilir
+      - **Teslim etme**
       - **Kampanya sona erdikten sonra teslim**
       - **Kampanya sırasında teslim**
-    - **Teslim Tarihi**: Değer **uygulanamaz**.
-    - **Eylemler**: Görünüm simgesine tıklarsanız ![.](../../media/m365-cc-sc-view-icon.png) **Görüntüle** simgesi, **Bildirim sayfasını** gözden geçir aşağıdaki bilgilerle birlikte görüntülenir:
-      - **Önizleme** sekmesi: Bildirim mesajını görüntüleyin. İletiyi farklı dillerde görüntülemek için Dil seçin **kutusunu** kullanın.
+    - **Eylemler**: Görünüm simgesine ![tıklarsanız.](../../media/m365-cc-sc-view-icon.png) **Görünüm** simgesi, **Gözden geçir bildirimi** sayfası aşağıdaki bilgilerle birlikte görüntülenir:
+      - **Önizleme** sekmesi: Bildirim iletisini görüntüleyin.
+        - İletiyi farklı dillerde görüntülemek için **Dil seçin** kutusunu kullanın.
+        - Birden çok yük içeren simülasyonlar için bildirim iletisini seçmek için **Önizlemeye yük seçin** kutusunu kullanın.
       - **Ayrıntılar** sekmesi: Bildirimle ilgili ayrıntıları görüntüleyin:
         - **Bildirim açıklaması**
-        - **Kaynak**: Yerleşik bildirimler için değer **Genel'edir**. Özel bildirimler için değer **Kiracı'dır**.
-        - **Bildirim türü**
+        - **Kaynak**: Yerleşik bildirimler için değer **Genel'dir**. Özel bildirimler için değer **Kiracı'dır**.
+        - **Bildirim türü**: Aşağıdaki türlerden biri başlangıçta seçtiğiniz bildirimi temel alır:
+          - **Pozitif pekiştirme bildirimi**
+          - **Eğitim ataması bildirimi**
+          - **Eğitim anımsatıcısı bildirimi**
         - **Değiştiren**
         - **Son değiştirme**
 
         İşlemi tamamladığınızda, **Kapat**'a tıklayın.
 
-  Bu seçeneği tercih ettiyseniz, Sonraki'ye tıklarsanız [Ayrıntıları](#launch-details) başlat sayfasına **olursanız**.
+  **İleri'ye** tıkladığınızda [Başlatma ayrıntıları](#launch-details) sayfasına yönlendirilirsiniz.
 
-- **Özelleştirilmiş son kullanıcı** bildirimleri: Sonraki'ye tıklarsanız **, bir** sonraki bölümde açıklandığı gibi Pozitif  bildirim bildirimleri sayfasına olur ve burada mevcut bildirimlerden seçim veya yeni bildirimler oluşturabilirsiniz.
+- **Özelleştirilmiş son kullanıcı bildirimleri**: **İleri'ye** tıkladığınızda, sonraki bölümlerde açıklandığı gibi **Eğitim ataması bildirim** sayfasına yönlendirilirsiniz.
 
-Bitirdikten sonra, Sonraki'ne **tıklayın**.
+### <a name="training-assignment-notification"></a>Eğitim ataması bildirimi
 
-### <a name="positive-reinforcement-notification"></a>Olumlu olumlu bildirim
+**Eğitim ataması bildirim** sayfası yalnızca **[Son](#select-end-user-notification)** **kullanıcı bildirimini seçin sayfasında Özelleştirilmiş son kullanıcı bildirimleri'ni** seçtiğinizde kullanılabilir.
 
-Pozitif **bildirim sayfası** yalnızca önceki sayfada Özelleştirilmiş son kullanıcı **bildirimleri'ne tıklayın** .
+Bu sayfada aşağıdaki bildirimler ve yapılandırılan dilleri gösterilir:
 
-- **Teslim tercihleri**: Aşağıdaki değerlerden birini seçin:
-  - **Teslim yapma**
-  - **Kullanıcı kimlik avı ve kampanyanın sona erdikten sonra teslimi**
-  - **Kullanıcı bir kimlik avı bildirdikten hemen sonra teslim edin**
+- **Microsoft varsayılan eğitim ataması bildirimi**
+- Daha önce oluşturduğunuz tüm özel eğitim atama bildirimleri.
 
-- **Pozitif bir bildirim bildirimi seçin**: Mevcut bir bildirimi seçerek veya kullanmak üzere Pozitif bildirim bildirimi türünde **yeni bir bildirim** oluşturabilirsiniz:
-  - Var olan bir bildirimi seçmek için bildirim adının yanındaki boş alana tıklayın. Bildirim adına tıklarsanız bildirim seçilir ve bir önizleme açılır sayfası görüntülenir. Bildirimin seçimini kaldırmak için bildirimin yanındaki onay kutusunu temizleyin.
-  - Var olan bir bildirimi aramak için Ara simgesini ![kullanın.](../../media/m365-cc-sc-search-icon.png) **Adı** aramak için Arama kutusu.
-  - Yeni bildirim oluşturmak için Yeni simge oluştur'a ![tıklayın.](../../media/m365-cc-sc-create-icon.png) **Yeni oluştur'a.**
-  - Var olan bir özel bildirimi değiştirmek için, bildirimi seçin ve ardından Bildirim simgesini düzenle'ye ![tıklayın.](../../media/m365-cc-sc-edit-icon.png) **Bildirimi düzenle'yi seçin**.
+  Bu bildirimler, konumundaki Saldırı benzetimi eğitimi'nin <https://security.microsoft.com/attacksimulator?viewid=endUserNotification>**Son kullanıcı bildirimleri** sekmesinde de kullanılabilir. **Microsoft varsayılan eğitim ataması bildirimi** Genel **bildirimler** sekmesinde bulunur. Özel eğitim ataması bildirimleri **Kiracı bildirimleri** sekmesinde bulunur. Daha fazla bilgi için bkz [. Saldırı benzetimi eğitimi için son kullanıcı bildirimleri](attack-simulation-training-end-user-notifications.md).
 
-#### <a name="create-new-notification-wizard"></a>Yeni bildirim sihirbazı oluşturma
+Var olan bir eğitim ataması bildirimini seçebilir veya kullanmak için yeni bir bildirim oluşturabilirsiniz:
 
-Yeni simge oluştur'a ![tıkladıysanız.](../../media/m365-cc-sc-create-icon.png) **Olumlu bildirim** sayfasında **yeni bir bildirim oluşturma** sihirbazı açılır.
+- Mevcut bir bildirimi seçmek için bildirim adının yanındaki boş alana tıklayın. Bildirim adına tıklarsanız bildirim seçilir ve önizleme açılır öğesi görüntülenir. Bildirimin seçimini kaldırmak için bildirimin yanındaki onay kutusunu temizleyin.
+- Var olan bir bildirimi aramak için Ara simgesini kullanın ![.](../../media/m365-cc-sc-search-icon.png) Adı aramak için **arama kutusu.**
 
-Oluşturma adımları, Son kullanıcı bildirimleri [oluşturma konusunda açıklananla aynıdır](attack-simulation-traning-end-user-notifications.md#create-end-user-notifications).
+  Kullanmak istediğiniz bildirimi seçin ve **İleri'ye** tıklayın.
+
+- Yeni bildirim oluşturmak ve kullanmak için Yeni oluştur simgesine tıklayın ![.](../../media/m365-cc-sc-create-icon.png) **Yeni oluşturun**.
+
+#### <a name="create-new-training-assignment-notification-wizard"></a>Yeni eğitim ataması bildirim sihirbazı oluşturma
+
+Yeni oluştur simgesine ![tıkladıysanız.](../../media/m365-cc-sc-create-icon.png) **Eğitim ataması bildirim** sayfasında **yeni oluşturun**; bildirim oluşturma sihirbazı açılır.
+
+Oluşturma adımları [, Son kullanıcı bildirimleri oluşturma](attack-simulation-training-end-user-notifications.md#create-end-user-notifications) bölümünde açıklandığı gibi aynıdır.
 
 > [!NOTE]
-> Ayrıntıları tanımla **sayfasında** , Bildirim türünü seçin için Pozitif **bildirim bildirimi değerini seçmeye** **emin olun**. Benzetim **bildirimi'yi seçmeyin**.
+> **Ayrıntıları tanımla** sayfasında, **Bildirim türünü seçin** için **Eğitim atama bildirimi** değerini seçtiğinizden emin olun.
 
-Bitirdikten sonra, Yeni oluşturduğunuz bildirimin pozitif bir bildirim bildirim seçin  listesinde göründüğü Pozitif bildirim sayfasına **dönersiniz**.
+İşiniz bittiğinde, yeni oluşturduğunuz **bildirimin listede göründüğü Eğitim ataması bildirim** sayfasına geri dönersiniz.
 
-- Yeni bildirim oluşturmak için ![Yeni oluştur simgesi.](../../media/m365-cc-sc-create-icon.png).
-- Bildirimi değiştirmek veya başka çeviriler eklemek için listeden bildirimi seçin ve ardından Bildirim simgesini düzenle'ye ![tıklayın.](../../media/m365-cc-sc-edit-icon.png) **Daha önce** açıklandığı gibi (çoğu değer zaten doldurulmuş olarak) bildirim sihirbazını başlatmak için bildirimi düzenleyin. Bildirimde desteklenen 12 dilin çevirileri zaten varsa, daha fazla çeviri ekzzzzsiniz.
+Kullanmak istediğiniz bildirimi seçin ve **İleri'ye** tıklayın.
 
-Kullanmak istediğiniz bildirimi seçin ve ardından Sonraki'ye **tıklayın**.
+### <a name="training-reminder-notification"></a>Eğitim anımsatıcısı bildirimi
+
+**Eğitim anımsatıcısı bildirim** sayfası yalnızca **[Son kullanıcı](#select-end-user-notification)** **bildirimini seçin sayfasında Özelleştirilmiş son kullanıcı bildirimleri'ni** seçtiğinizde kullanılabilir.
+
+- **Anımsatıcı bildirimi için sıklık ayarla**: **Haftalık** (varsayılan) veya **Haftada iki kez'yi** seçin.
+
+- **Anımsatıcı bildirimi seçin**: Bu bölümde aşağıdaki bildirimler ve yapılandırılan dilleri gösterilir:
+
+  - **Microsoft varsayılan eğitim anımsatıcı bildirimi**
+  - Daha önce oluşturduğunuz tüm özel eğitim anımsatıcı bildirimleri.
+
+    Bu bildirimler, konumundaki Saldırı benzetimi eğitimi'nin <https://security.microsoft.com/attacksimulator?viewid=endUserNotification>**Son kullanıcı bildirimleri** sekmesinde de kullanılabilir. **Microsoft varsayılan eğitim anımsatıcı bildirimi** Genel **bildirimler** sekmesinde bulunur. Özel eğitim anımsatıcısı bildirimleri **Kiracı bildirimleri** sekmesinde bulunur. Daha fazla bilgi için bkz [. Saldırı benzetimi eğitimi için son kullanıcı bildirimleri](attack-simulation-training-end-user-notifications.md).
+
+  Var olan bir eğitim anımsatıcısı bildirimini seçebilir veya kullanmak için yeni bir bildirim oluşturabilirsiniz:
+
+  - Mevcut bir bildirimi seçmek için bildirim adının yanındaki boş alana tıklayın. Bildirim adına tıklarsanız bildirim seçilir ve önizleme açılır öğesi görüntülenir. Bildirimin seçimini kaldırmak için bildirimin yanındaki onay kutusunu temizleyin.
+  - Var olan bir bildirimi aramak için Ara simgesini kullanın ![.](../../media/m365-cc-sc-search-icon.png) Adı aramak için **arama kutusu.**
+
+    Kullanmak istediğiniz bildirimi seçin ve **İleri'ye** tıklayın.
+
+  - Yeni bildirim oluşturmak ve kullanmak için Yeni oluştur simgesine tıklayın ![.](../../media/m365-cc-sc-create-icon.png) **Yeni oluşturun**.
+
+#### <a name="create-new-training-reminder-notification-wizard"></a>Yeni eğitim anımsatıcısı bildirim sihirbazı oluşturma
+
+Yeni oluştur simgesine ![tıkladıysanız.](../../media/m365-cc-sc-create-icon.png) **Eğitim anımsatıcısı bildirim** sayfasında **yeni oluşturun**; bildirim oluşturma sihirbazı açılır.
+
+Oluşturma adımları [, Son kullanıcı bildirimleri oluşturma](attack-simulation-training-end-user-notifications.md#create-end-user-notifications) bölümünde açıklandığı gibi aynıdır.
+
+> [!NOTE]
+> **Ayrıntıları tanımla** sayfasında, **Bildirim türünü seçin** için **Eğitim anımsatıcı bildirimi** değerini seçtiğinizden emin olun.
+
+İşiniz bittiğinde, yeni oluşturduğunuz **bildirimin listede göründüğü Eğitim anımsatıcısı bildirim** sayfasına geri dönersiniz.
+
+Kullanmak istediğiniz bildirimi seçin ve **İleri'ye** tıklayın.
+
+### <a name="positive-reinforcement-notification"></a>Pozitif pekiştirme bildirimi
+
+**Pozitif pekiştirme bildirimi** sayfası yalnızca **[Son kullanıcı](#select-end-user-notification)** **bildirimlerini seçin sayfasında Özelleştirilmiş son kullanıcı bildirimleri'ni** seçtiğinizde kullanılabilir.
+
+- **Teslim tercihleri**: Aşağıdaki değerlerden birini seçin:
+
+  - **Teslim etme**: Bu seçeneği seçerseniz **, İleri'ye** tıkladığınızda [Başlatma ayrıntıları](#launch-details) sayfasına yönlendirilirsiniz.
+
+  - **Kullanıcı kimlik avı ve kampanya sona erdikten** sonra **teslim etme veya Kullanıcı kimlik avı bildirdikten hemen sonra teslim etme**: Bu bölümlerde, görüntülenen **Pozitif bir pekiştirme bildirimi seçin** bölümünde aşağıdaki bildirimler ve yapılandırılan dilleri gösterilir:
+
+  - **Microsoft varsayılan pozitif takviye bildirimi**
+  - Daha önce oluşturduğunuz tüm özel pozitif takviye bildirimleri.
+
+    Bu bildirimler, konumundaki Saldırı benzetimi eğitimi'nin <https://security.microsoft.com/attacksimulator?viewid=endUserNotification>**Son kullanıcı bildirimleri** sekmesinde de kullanılabilir. **Microsoft varsayılan pozitif takviye bildirimi** Genel **bildirimler** sekmesinde bulunur. Kiracı bildirimleri sekmesinde özel pozitif takviye **bildirimleri** bulunur. Daha fazla bilgi için bkz [. Saldırı benzetimi eğitimi için son kullanıcı bildirimleri](attack-simulation-training-end-user-notifications.md).
+
+  Mevcut bir pozitif takviye bildirimi seçebilir veya kullanmak için yeni bir bildirim oluşturabilirsiniz:
+
+  - Mevcut bir bildirimi seçmek için bildirim adının yanındaki boş alana tıklayın. Bildirim adına tıklarsanız bildirim seçilir ve önizleme açılır öğesi görüntülenir. Bildirimin seçimini kaldırmak için bildirimin yanındaki onay kutusunu temizleyin.
+  - Var olan bir bildirimi aramak için Ara simgesini kullanın ![.](../../media/m365-cc-sc-search-icon.png) Adı aramak için **arama kutusu.**
+
+    Kullanmak istediğiniz bildirimi seçin ve **İleri'ye** tıklayın.
+
+  - Yeni bildirim oluşturmak ve kullanmak için Yeni oluştur simgesine tıklayın ![.](../../media/m365-cc-sc-create-icon.png) **Yeni oluşturun**.
+
+#### <a name="create-new-positive-reinforcement-notification-wizard"></a>Yeni pozitif takviye bildirimi oluşturma sihirbazı
+
+Yeni oluştur simgesine ![tıkladıysanız.](../../media/m365-cc-sc-create-icon.png) **Pozitif pekiştirme bildirimi** sayfasında **yeni bir oluşturma** sihirbazı açılır.
+
+Oluşturma adımları [, Son kullanıcı bildirimleri oluşturma](attack-simulation-training-end-user-notifications.md#create-end-user-notifications) bölümünde açıklandığı gibi aynıdır.
+
+> [!NOTE]
+> **Ayrıntıları tanımla** sayfasında Bildirim **türünü seçin** için **Pozitif destek bildirimi** değerini seçtiğinizden emin olun.
+
+İşiniz bittiğinde, yeni oluşturduğunuz **bildirimin listede göründüğü Pozitif pekiştirme bildirimi** sayfasına geri dönersiniz.
+
+Kullanmak istediğiniz bildirimi seçin ve **İleri'ye** tıklayın.
 
 ## <a name="launch-details"></a>Başlatma ayrıntıları
 
-Başlatma **ayrıntıları sayfasında** benzetimi ne zaman başlatmanız ve benzetimi ne zaman bitireceklerini seçersiniz. Belirttiğiniz bitiş sonunda bu benzetimle etkileşimi yakalamayı durdururuz.
+**Başlatma ayrıntıları** sayfasında simülasyonu ne zaman başlatabileceğinizi ve simülasyonu ne zaman sonlandırabileceğinizi seçersiniz. Belirttiğiniz bitiş tarihinden sonra bu simülasyonla etkileşimi yakalamayı durduracağız.
 
 Aşağıdaki ayarlar kullanılabilir:
 
 - Aşağıdaki değerlerden birini seçin:
-  - **Benzetimi tamamlayacağız**
-  - **Bu benzetimi daha sonra başlatacağız şekilde planla**: Bu değer, yapılandırmak için aşağıdaki ilişkili seçeneklere sahiptir:
-    - **Başlangıç tarihini seçin**
-    - **Başlatma saati seçin**
-- **Benzetimi sona erdirecek gün sayısını yapılandırma**: Varsayılan değer 2'dir.
-- **Bölgeyi biliyorsanız saat dilimi teslimini** etkinleştirin: Çalışanlarınızı bölgelerine göre çalışma saatleri içinde sanal saldırı iletileri teslim edin.
-- **Drive-by technique interstitial data toplanmış** sayfasını görüntüleme: Sürücü-BU URL tekniği saldırılarına yönelik yer paylaşımını gösterebilirsiniz. Yer paylaşımını gizlemek ve doğrudan giriş sayfasına gitmek için, bu seçeneğin de-işaretleyin.
+  - **bitirdiğim anda bu simülasyonu başlat**
+  - **Bu simülasyonu daha sonra başlatılacak şekilde zamanlayın**: Bu değer, yapılandırmak için aşağıdaki ilişkili seçeneklere sahiptir:
+    - **Başlatma tarihini seçin**
+    - **Başlatma zamanını seçin**
+- **Benzetimi sona erdirecek gün sayısını yapılandırın**: Varsayılan değer 2'dir.
+- **Bölge algılamalı saat dilimi teslimini etkinleştirme**: Çalışanlarınıza bölgelerine göre çalışma saatleri içinde sanal saldırı iletileri iletin.
+- **Toplanan sürücüye göre teknik ara verileri görüntüleme sayfası**: Sürücü veri yolu URL'si tekniği saldırıları için ortaya çıkan katmanı gösterebilirsiniz. Yer paylaşımını gizlemek ve doğrudan giriş sayfasına gitmek için bu seçeneği kaldırın.
 
-Bitirdikten sonra, Sonraki'ne **tıklayın**.
+İşiniz bittiğinde **İleri'ye** tıklayın.
 
 ## <a name="review-simulation"></a>Benzetimi gözden geçirme
 
-Benzetimi **gözden geçir** sayfasında, benzetiminizin ayrıntılarını gözden geçirebilirsiniz.
+**Simülasyonu gözden geçir** sayfasında simülasyonunuzun ayrıntılarını gözden geçirebilirsiniz.
 
-Test gönder ![simgesine tıklayın.](../../media/m365-cc-sc-send-icon.png) **Yüklü e-postanın** bir kopyasını inceleme için kendinize (şu anda oturum açmış olan kullanıcı) göndermek için Test gönder düğmesi.
+![Test gönder simgesine tıklayın.](../../media/m365-cc-sc-send-icon.png) Yük e-postasının bir kopyasını inceleme için kendinize (şu anda oturum açmış olan kullanıcı) göndermek için **bir test düğmesi gönderin**.
 
-Bölümün içindeki **ayarları değiştirmek** için her bölümde Düzenle'yi seçebilirsiniz. Geri'ye **tıklar** veya sihirbazda belirli bir sayfayı seçersiniz.
+Bölümün içindeki ayarları değiştirmek için her bölümde **Düzenle'yi** seçebilirsiniz. Ya da **Geri'ye** tıklayabilir veya sihirbazdaki belirli bir sayfayı seçebilirsiniz.
 
-Bitirdikten sonra Gönder'e **tıklayın**.
+İşiniz bittiğinde **Gönder'e** tıklayın.
 
-:::image type="content" source="../../media/attack-sim-training-simulations-review-simulation.png" alt-text="Microsoft 365 Defender portalında Saldırı benzetimi eğitimi'nin benzetim Microsoft 365 Defender sayfası" lightbox="../../media/attack-sim-training-simulations-review-simulation.png":::
+:::image type="content" source="../../media/attack-sim-training-simulations-review-simulation.png" alt-text="Microsoft 365 Defender portalındaki Saldırı simülasyonu eğitiminin Simülasyonu gözden geçirme sayfası" lightbox="../../media/attack-sim-training-simulations-review-simulation.png":::

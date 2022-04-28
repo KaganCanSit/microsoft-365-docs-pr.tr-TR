@@ -2,8 +2,8 @@
 title: Microsoft 365'da XIP kaynak verilerini arşivleye bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -12,12 +12,12 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Yöneticiler, XIP kaynak verilerini Veritas'tan Microsoft 365 içeri aktaracak ve arşivecek bir bağlayıcı ayarlayabilir. Bu bağlayıcı, Microsoft 365'da üçüncü taraf veri kaynaklarından verileri arşivleyabilmenizi sağlar. Bu verileri arşivledikten sonra, üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
-ms.openlocfilehash: 06309397db05034e3df3263efa30a5cca5a78682
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 038572b401730e66d08ac05ad1f9df0a2e246c22
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "65001510"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65099273"
 ---
 # <a name="set-up-a-connector-to-archive-xip-source-data"></a>XIP kaynak verilerini arşivleye bağlayıcı ayarlama
 

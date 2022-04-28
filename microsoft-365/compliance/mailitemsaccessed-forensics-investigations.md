@@ -2,8 +2,8 @@
 title: Risk altındaki hesapları araştırmak için Denetimi (Premium) kullanın
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 ms.assetid: ''
 description: Güvenliği aşılmış kullanıcı hesaplarının adli araştırmalarını gerçekleştirmek için MailItemsAccessed posta kutusu denetim eylemini kullanın.
-ms.openlocfilehash: 2256e331075074348e2a72d6528bed1944567b94
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 5ff3c078dfd29b5b44bfac5f04b329bf014507ea
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64996206"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65090949"
 ---
 # <a name="use-microsoft-purview-audit-premium-to-investigate-compromised-accounts"></a>Güvenliği aşılmış hesapları araştırmak için Microsoft Purview Denetimi'ni (Premium) kullanma
 

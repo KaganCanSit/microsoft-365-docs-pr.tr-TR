@@ -1,10 +1,10 @@
 ---
-title: Kurumsal test ortamı için Microsoft 365 yönetici hesaplarını koruma
+title: Kurumsal test ortamı için Microsoft 365 genel yönetici hesaplarını koruma
 f1.keywords:
 - NOCSH
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 12/12/2019
 audience: ITPro
 ms.topic: article
@@ -14,99 +14,99 @@ ms.collection: M365-identity-device-management
 ms.custom:
 - TLG
 - Ent_TLGs
-description: Kurumsal test ortamınız için çalışma alanınıza genel yönetici Microsoft 365 için bu adımları kullanın.
-ms.openlocfilehash: a759d4e8720216019886f33ca0df7325b5209930
-ms.sourcegitcommit: 6c57f1e90339d5a95c9e7875599dac9d3e032c3a
+description: Kurumsal test ortamınız için Microsoft 365 genel yönetici hesaplarını korumak için bu adımları kullanın.
+ms.openlocfilehash: bf053b9767aea4a290c5357d6309c57677a36cad
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2022
-ms.locfileid: "63014389"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098284"
 ---
-# <a name="protect-global-administrator-accounts-in-your-microsoft-365-for-enterprise-test-environment"></a>Kurumsal test ortamı için Microsoft 365 yönetici hesaplarını koruma
+# <a name="protect-global-administrator-accounts-in-your-microsoft-365-for-enterprise-test-environment"></a>Kurumsal test ortamı için Microsoft 365 genel yönetici hesaplarını koruma
 
-*Bu Test Laboratuvarı Kılavuzu yalnızca kurumsal test Microsoft 365 test ortamları için kullanılabilir.*
+*Bu Test Laboratuvarı Kılavuzu yalnızca kurumsal test ortamları için Microsoft 365 için kullanılabilir.*
 
-Yönetici hesaplarının mümkün olduğunca güvenli olmasını sağlayarak, dijital saldırıların organizasyon üzerinde önüne geçebilirsiniz. 
+Yönetici hesaplarınızın mümkün olduğunca güvenli olduğundan emin olarak kuruluşunuza yönelik dijital saldırıları önleyebilirsiniz. 
 
-Bu makalede, genel yönetici hesaplarını korumak Azure Active Directory (Azure AD) koşullu erişim ilkelerinin nasıl kullanımı açıklanmıştır.
+Bu makalede, genel yönetici hesaplarını korumak için Azure Active Directory (Azure AD) koşullu erişim ilkelerinin nasıl kullanılacağı açıklanmaktadır.
 
-Kurumsal test ortamınız için ağ Microsoft 365 genel yönetici hesaplarının korunması iki aşama içerir:
-- [Aşama 1: Kurumsal test Microsoft 365 yapınızı oluşturma](#phase-1-build-out-your-microsoft-365-for-enterprise-test-environment)
-- [Aşama 2: Koşullu erişim ilkelerini yapılandırma](#phase-2-configure-conditional-access-policies)
+Kurumsal test ortamı için Microsoft 365 genel yönetici hesaplarının korunması iki aşamayı içerir:
+- [1. Aşama: Kurumsal test ortamı için Microsoft 365 oluşturma](#phase-1-build-out-your-microsoft-365-for-enterprise-test-environment)
+- [2. Aşama: Koşullu erişim ilkelerini yapılandırma](#phase-2-configure-conditional-access-policies)
 
 ![Microsoft bulutu için Test Laboratuvarı Kılavuzları.](../media/m365-enterprise-test-lab-guides/cloud-tlg-icon.png) 
     
 > [!TIP]
-> Kurumsal Test Laboratuvarı Kılavuzu yığınına Microsoft 365 görsel bir harita için Kurumsal Test Laboratuvarı Kılavuzu Yığını [için Microsoft 365'e gidin](../downloads/Microsoft365EnterpriseTLGStack.pdf).
+> Kurumsal Test Laboratuvarı Kılavuzu yığınındaki Microsoft 365 tüm makalelere yönelik görsel bir harita için [kurumsal Test Laboratuvarı Kılavuzu Yığını için Microsoft 365](../downloads/Microsoft365EnterpriseTLGStack.pdf) bölümüne gidin.
 
-## <a name="phase-1-build-out-your-microsoft-365-for-enterprise-test-environment"></a>Aşama 1: Kurumsal test Microsoft 365 yapınızı oluşturma
+## <a name="phase-1-build-out-your-microsoft-365-for-enterprise-test-environment"></a>1. Aşama: Kurumsal test ortamı için Microsoft 365 oluşturma
 
-Genel yönetici hesap korumasını en düşük gereksinimlerle basit bir şekilde test etmek için Hafif taban yapılandırma [yönergelerini izleyin](lightweight-base-configuration-microsoft-365-enterprise.md).
+Genel yönetici hesabı korumasını minimum gereksinimlerle basit bir şekilde test etmek istiyorsanız [Basit temel yapılandırma](lightweight-base-configuration-microsoft-365-enterprise.md) yönergelerini izleyin.
   
-Sanal bir kuruluşta genel yönetici hesabı korumasını test etmek için, Geçişli kimlik [doğrulama'daki yönergeleri izleyin](pass-through-auth-m365-ent-test-environment.md).
+Sanal bir kuruluşta genel yönetici hesabı korumasını test etmek istiyorsanız Doğrudan [kimlik doğrulamasındaki](pass-through-auth-m365-ent-test-environment.md) yönergeleri izleyin.
   
 > [!NOTE]
-> Genel yönetici hesap korumasını test etmek, active Directory Etki Alanı Hizmetleri (AD DS) için İnternet ve dizin eşitlemesi bağlantılı sanal bir intranet içeren sanal kurumsal test ortamını gerektirmez. Burada bir seçenek olarak sağlanır; böylelikle genel yönetici hesabı korumasını sınayabilirsiniz ve normal bir kuruluşu temsil eden bir ortamda bu korumayı sınabilirsiniz. 
+> Genel yönetici hesabı korumasını test etmek için, bir Active Directory Domain Services (AD DS) için İnternet'e bağlı bir sanal intranet ve dizin eşitlemesi içeren sanal kurumsal test ortamı gerekmez. Genel yönetici hesabı korumasını test edebilmeniz ve tipik bir kuruluşu temsil eden bir ortamda denemeler yapabilmeniz için burada bir seçenek olarak sağlanır. 
   
-## <a name="phase-2-configure-conditional-access-policies"></a>Aşama 2: Koşullu erişim ilkelerini yapılandırma
+## <a name="phase-2-configure-conditional-access-policies"></a>2. Aşama: Koşullu erişim ilkelerini yapılandırma
 
-İlk olarak, adanmış bir genel yönetici olarak yeni bir kullanıcı hesabı oluşturun.
+İlk olarak, ayrılmış genel yönetici olarak yeni bir kullanıcı hesabı oluşturun.
 
-1. Ayrı bir sekmede, sayfayı [Microsoft 365 yönetim merkezi](https://admin.microsoft.com/).
-2. **UsersActive** >  **users öğesini seçin** ve sonra da **Add a user öğesini seçin**.
-3. Kullanıcı ekle **bölmesinde** Ad, Görünen ad ve Kullanıcı adı **kutularına** **DedicatedAdmin** **girin**.
-4. **Parola'yi** seçin, **Parolayı oluşturmama izin ver'i** seçin ve güçlü bir parola girin. Bu yeni hesabın parolasını güvenli bir konuma yazın.
+1. Ayrı bir sekmede [Microsoft 365 yönetim merkezi](https://admin.microsoft.com/) açın.
+2. **KullanıcılarEtkin** >  **kullanıcılar'ı** ve ardından **Kullanıcı ekle'yi** seçin.
+3. **Kullanıcı ekle** bölmesinde Ad, **Görünen ad** ve **Kullanıcı adı** kutularına **DedicatedAdmin** girin.
+4. **Parola'yı** seçin, **Parolayı oluşturmama izin ver'i** seçin ve ardından güçlü bir parola girin. Bu yeni hesabın parolasını güvenli bir konuma kaydedin.
 5. **İleri**'yi seçin.
-6. Ürün **lisanslarını ata bölmesinde** Lisanslar'ı **Microsoft 365 E5** sonra da Sonraki'yi **seçin**.
-7. İsteğe **bağlı ayarlar bölmesinde** **RolesAdmin** >  center **accessOtobal** >  **adminNext** >  öğesini seçin.
-8. Neredeyse bitti **bölmesinde Eklemeyi bitir'i** ve **sonra Kapat'ı** **seçin**.
+6. **Ürün lisansları ata** bölmesinde **Microsoft 365 E5** ve ardından **İleri'yi** seçin.
+7. **İsteğe bağlı ayarlar** bölmesinde **RollerYöntem** >  merkezi **erişimiGlobal** >  **yöneticiİleri'ni** >  seçin.
+8. **Neredeyse bitti** bölmesinde **Eklemeyi bitir'i** ve ardından **Kapat'ı** seçin.
 
-Ardından GlobalAdmins adlı yeni bir grup oluşturun ve DedicatedAdmin hesabını buna ekleyin.
+Ardından GlobalAdmins adlı yeni bir grup oluşturun ve Buna DedicatedAdmin hesabını ekleyin.
 
-1. Gezinti **Microsoft 365 yönetim merkezi** gezintide **Gruplar'ı** seçin ve sonra da Gruplar'ı **seçin**.
-2. Grup **ekle'yi seçin**.
-3. Grup **türü seçin bölmesinde Güvenlik'i** seçin ve **sonra** da Sonraki'yi **seçin**.
-4. Temel **bilgileri ayarlama bölmesinde Grup oluştur'a** ve **sonra Kapat'a** **tıklayın**.
-5. Gözden Geçir **ve grup eklemeyi bitir bölmesinde** **GlobalAdmins** girin ve ardından Sonraki'yi **seçin**.
-7. Grup listesinde **GlobalAdmins grubunu** seçin.
-8. **GlobalAdmins bölmesinde Üyeler'i** seçin ve **sonra** da Tüm üyeleri **görüntüle ve üyeleri yönet'i seçin**.
-9. **GlobalAdmins bölmesinde** Üye ekle'yi **seçin,** **DedicatedAdmin** hesabını ve genel yönetici hesabını seçin ve sonra da **SaveCloseClose'yi** >  >  **seçin**.
+1. **Microsoft 365 yönetim merkezi** sekmesinde sol gezinti bölmesinde **Gruplar'ı** ve ardından **Gruplar'ı** seçin.
+2. **Grup ekle'yi** seçin.
+3. **Grup türü seçin** bölmesinde **Güvenlik'i** ve ardından **İleri'yi** seçin.
+4. **Temel bilgileri ayarla** bölmesinde **Grup oluştur'u** ve ardından **Kapat'ı** seçin.
+5. **Grup eklemeyi gözden geçir ve bitir** bölmesinde **GlobalAdmins** yazın ve **İleri'yi** seçin.
+7. Grup listesinde **GlobalAdmins** grubunu seçin.
+8. **GlobalAdmins** bölmesinde **Üyeler'i** ve ardından **Tümünü görüntüle ve üyeleri yönet'i** seçin.
+9. **GlobalAdmins** bölmesinde **Üye ekle'yi** seçin, **DedicatedAdmin** hesabını ve genel yönetici hesabınızı seçin ve ardından **SaveCloseClose** >  >  öğesini seçin.
 
-Ardından, genel yönetici hesaplarında çok faktörlü kimlik doğrulaması gerektirecek ve oturum açma riski orta veya yüksekse kimlik doğrulamasını reddetmek için koşullu erişim ilkeleri oluşturun.
+Ardından, genel yönetici hesapları için çok faktörlü kimlik doğrulaması gerektirmek ve oturum açma riski orta veya yüksekse kimlik doğrulamasını reddetmek için koşullu erişim ilkeleri oluşturun.
 
-Bu ilk ilke, tüm genel yönetici hesaplarının MFA kullanmalarını gerektirir.
+Bu ilk ilke, tüm genel yönetici hesaplarının MFA kullanmasını gerektirir.
 
-1. Tarayıcınızın yeni sekmesinde' gidin [https://portal.azure.com](https://portal.azure.com).
-2. **Azure Active Directory** >  **SecurityConditional** >  **Access'e tıklayın**.
-3. Koşullu erişim **– İlkeler bölmesinde** Temel ilke **: Yöneticiler için MFA gerektir (önizleme)'yi seçin**.
-4. Temel ilke **bölmesinde İlkeyi** hemen **kullan'ı ve ardından Kaydet> seçin**.
+1. Tarayıcınızın yeni bir sekmesinde adresine [https://portal.azure.com](https://portal.azure.com)gidin.
+2. **Azure Active Directory** >  **GüvenlikKonaksal** >  **Erişim'e** tıklayın.
+3. **Koşullu erişim – İlkeler** bölmesinde **Temel ilke: Yöneticiler için MFA gerektir (önizleme)** seçeneğini belirleyin.
+4. **Temel ilke** bölmesinde **İlkeyi hemen kullan > Kaydet'i** seçin.
 
 Bu ikinci ilke, oturum açma riski orta veya yüksek olduğunda genel yönetici hesabı kimlik doğrulamasına erişimi engeller.
 
-1. Koşullu erişim **– İlkeler bölmesinde** Yeni **ilke'yi seçin**.
-2. Yeni bölmesinde **,** Ad alanına **Genel yöneticiler'i** **girin**.
-3. Ödevler **bölümünde Kullanıcılar** ve **gruplar'ı seçin**.
-4. Kullanıcılar ve **gruplar** bölmesinin Ekle **sekmesinde Kullanıcıları ve** grupları seçinKullanıcıları ve **grupları** >  **seçinSelect** **öğesini** >  seçin.
-5. Seç **bölmesinde** **GlobalAdmins grubunu ve ardından** **SelectDone** **öğesini** >  seçin.
-6. Ödevler **bölümünde Koşullar'ı** **seçin**.
-7. Koşullar bölmesinde **Oturum açma** riski'ni seçin, **Yapılandır** için **Evet'i****, Yüksek** ve  Orta'ı ve ardından Seç ve **Bitti'yi** **seçin**.
-8. Yeni **bölmesinin Erişim** denetimleri bölümünde **Ver'i** **seçin**.
-9. Ver bölmesinde **Erişimi** **engelle'yi seçin ve** sonra da Seç'i **seçin**.
-10. Yeni bölmesinde **İlkeyi** etkinleştir **için** **Aç'ı seçin ve** sonra da Oluştur'a **tıklayın**.
-11. **Azure portalını kapatın** ve **Microsoft 365 yönetim merkezi** kapatın.
+1. **Koşullu erişim – İlkeler** bölmesinde **Yeni ilke'yi** seçin.
+2. **Yeni** bölmesinde **Ad** alanına **Genel yöneticiler** yazın.
+3. **Atamalar** bölümünde **Kullanıcılar ve gruplar'ı** seçin.
+4. **Kullanıcılar ve gruplar** bölmesinin **Ekle** sekmesinde **Kullanıcıları ve grupları** >  **seçKullanıçlar ve** **gruplarSeçim'i** >  seçin.
+5. **Seç** bölmesinde **GlobalAdmins** grubunu ve ardından **SelectDone'ı** >  seçin.
+6. **Atamalar** bölümünde **Koşullar'ı** seçin.
+7. **Koşullar** bölmesinde **Oturum açma riski'ni** seçin, Yapılandır için **Evet'i** seçin, **Yüksek** ve **Orta'yı** seçin ve ardından Seç ve **Bitti'yi** seçin. 
+8. **Yeni** bölmesinin **Erişim denetimleri** bölümünde **Ver'i** seçin.
+9. **Ver** bölmesinde **Erişimi engelle'yi** ve ardından **Seç'i** seçin.
+10. **Yeni** bölmesinde **İlkeyi etkinleştir** için **Açık'ı** ve ardından **Oluştur'u** seçin.
+11. **Azure portal** ve **Microsoft 365 yönetim merkezi** sekmelerini kapatın.
 
-İlk ilkeyi test etmek için, oturum açın ve DedicatedAdmin hesabıyla oturum açın. MFA'yi yapılandırmanız istendiğinde. Bu, ilk ilkenin uygulandığını gösteriyor.
+İlk ilkeyi test etmek için oturumu kapatın ve DedicatedAdmin hesabıyla oturum açın. MFA'yi yapılandırmanız istenmelidir. Bu, ilk ilkenin uygulandığını gösterir.
 
 ## <a name="next-step"></a>Sonraki adım
 
-Test [ortamınıza](m365-enterprise-test-lab-guides.md#identity) başka kimlik özelliklerini ve özelliklerini keşfedin.
+Test ortamınızdaki ek [kimlik](m365-enterprise-test-lab-guides.md#identity) özelliklerini ve özelliklerini keşfedin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 [Kimliği dağıtma](deploy-identity-solution-overview.md)
 
-[Microsoft 365 Test Laboratuvarı Kılavuzları için kılavuzlar](m365-enterprise-test-lab-guides.md)
+[Kurumsal Test Laboratuvarı Kılavuzları için Microsoft 365](m365-enterprise-test-lab-guides.md)
 
-[Microsoft 365 genel bakış için genel bakış](microsoft-365-overview.md)
+[Microsoft 365 Kurumsal’a genel bakış](microsoft-365-overview.md)
 
-[Microsoft 365 belgeleri için belgeler](/microsoft-365-enterprise/)
+[Kurumsal belgeler için Microsoft 365](/microsoft-365-enterprise/)

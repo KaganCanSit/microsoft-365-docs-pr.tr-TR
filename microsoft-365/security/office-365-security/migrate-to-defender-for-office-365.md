@@ -19,19 +19,19 @@ ms.custom: ''
 description: Google Postini, Barracuda İstenmeyen Posta ve Virüs Güvenlik Duvarı veya Cisco IronPort gibi üçüncü taraf koruma hizmetlerinden veya cihazlardan Office 365 için Microsoft Defender korumaya geçiş yapmak için doğru yolu öğrenin.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: b00051effd6ee77fd29ba0a5a07ee27c9113a439
-ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
+ms.openlocfilehash: 2f67135e2b8a3700a2fb6a6e24fc4f66696db2e3
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64704833"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098724"
 ---
 # <a name="migrate-from-a-third-party-protection-service-or-device-to-microsoft-defender-for-office-365"></a>Üçüncü taraf koruma hizmetinden veya cihazından Office 365 için Microsoft Defender geçiş
 
 **Uygulandığı öğe**
 - [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 
-zaten Microsoft 365 önünde duran bir üçüncü taraf koruma hizmetiniz veya cihazınız varsa, birleştirilmiş bir yönetim deneyiminin avantajlarından, potansiyel olarak düşük maliyetlerden (zaten ödeme yaptığınız ürünleri kullanarak) ve tümleşik güvenlikle olgun bir üründen yararlanmak için korumanızı Office 365 için Microsoft Defender geçirmek için bu kılavuzu kullanabilirsiniz  Koruma. Daha fazla bilgi için bkz. [Office için Microsoft Defender](https://www.microsoft.com/security/business/threat-protection/office-365-defender).
+zaten Microsoft 365 önünde duran bir üçüncü taraf koruma hizmetiniz veya cihazınız varsa, birleştirilmiş bir yönetim deneyiminin avantajlarından, potansiyel olarak düşük maliyetlerden (zaten ödeme yaptığınız ürünleri kullanarak) ve tümleşik güvenlikle olgun bir üründen yararlanmak için korumanızı Office 365 için Microsoft Defender geçirmek için bu kılavuzu kullanabilirsiniz  Koruma. Daha fazla bilgi için bkz. [Office 365 için Microsoft Defender](https://www.microsoft.com/security/business/threat-protection/office-365-defender).
 
 Bu kılavuz, geçişiniz için belirli ve eyleme dönüştürülebilir adımlar sağlar ve aşağıdaki olguları varsayar:
 
@@ -58,7 +58,7 @@ Mevcut koruma hizmetinizi Office 365 için Defender lehine ortadan kaldırmak, h
 BT sektöründe sürprizler genellikle kötü olur. MX kayıtlarınızı önceden ve düşünceli test yapmadan Microsoft 365 işaret edecek şekilde çevirmek birçok sürprize neden olur. Örneğin:
 
 - Siz veya öncülleriniz büyük olasılıkla en iyi posta teslimi için mevcut koruma hizmetinizi özelleştirmek için çok zaman ve çaba harcamışsınızdır (başka bir deyişle, engellenmesi gerekenleri engelleme ve izin verilmesi gereken şeylere izin verme). Geçerli koruma hizmetinizdeki her özelleştirmenin Office 365 için Defender gerekmediği neredeyse garanti edilir. Ayrıca Office 365 için Defender, geçerli koruma hizmetinizde gerçekleşmemiş veya gerekli olmayan yeni sorunlar (izinler veya bloklar) ortaya çıkacaktır.
-- Yardım masanızın ve güvenlik personelinizin Office 365 için Defender ne yapacağını bilmesi gerekir. Örneğin, bir kullanıcı eksik bir iletiden şikayet ederse yardım masanız bu iletiyi nerede veya nasıl arayabileceğinizi biliyor mu? Bunlar büyük olasılıkla mevcut koruma hizmetinizdeki araçları doğrular, ancak Office 365 için Defender araçlar ne olacak?
+- Yardım masanızın ve güvenlik personelinizin Office 365 için Defender ne yapacağını bilmesi gerekir. Örneğin, bir kullanıcı eksik bir iletiden şikayet ederse yardım masanız bu iletiyi nerede veya nasıl arayabileceğinizi biliyor mu? Mevcut koruma hizmetinizdeki araçları biliyor olabilirler ama Office 365 için Defender araçları ne olacak?
 
 Buna karşılık, bu geçiş kılavuzundaki adımları izlerseniz, geçişiniz için aşağıdaki somut avantajları elde edersiniz:
 

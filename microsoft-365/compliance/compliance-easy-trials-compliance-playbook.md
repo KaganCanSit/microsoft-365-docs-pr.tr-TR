@@ -15,12 +15,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview çözümleri deneme playbook'u.
-ms.openlocfilehash: 4544e07baa5b8d2b89991d9a31c84a2d7cefb7f8
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 3ff103a2e6ebc260f5f00964ae09c6b6bbc1fd69
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64973783"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098900"
 ---
 # <a name="trial-playbook-microsoft-purview-solutions"></a>Deneme playbook'u: Microsoft Purview çözümleri
 
@@ -35,6 +35,7 @@ Her çözümü denemek, kuruluşunuzun uyumluluk gereksinimlerini karşılamak i
 - [Denetim (Premium)](#audit-premium)
 - [İletişim Uyumluluğu](#communication-compliance)
 - [Uyumluluk Yöneticisi](#compliance-manager)
+- [Veri Yaşam Döngüsü Yönetimi](#data-lifecycle-management)
 - [Microsoft Purview Veri Kaybı Önleme](#data-loss-prevention)
 - [Ediscovery](#ediscovery)
 - [Information Protection](#information-protection)
@@ -168,6 +169,31 @@ Değerlendirmelerle çalışmaya başlayın ve denetimleri uygulamak ve uyumlulu
 1. [Denetimleri ve eylemleri eklemek veya kaldırmak için mevcut şablonu değiştirme](compliance-manager-templates-modify.md)
 1. [İyileştirme eylemlerinin otomatik testini ayarlama](compliance-manager-setup.md#set-up-automated-testing)
 1. [Geliştirme eylemlerini başka bir kullanıcıya yeniden atama](compliance-manager-setup.md#reassign-improvement-actions-to-another-user)
+
+## <a name="data-lifecycle-management"></a>Veri Yaşam Döngüsü Yönetimi
+
+**Otomasyon ile büyük ölçekte idare**
+
+Otomatik olarak güncelleştirilen ilke kapsamları ile kuruluşunuzdaki değişikliklere uyum sağlama becerinizi geliştirin. El ile yapılan çabaları azaltmak ve uyumluluk duruşunu geliştirmek için içeriğin etiketlenmesinde otomatikleştirme.
+
+### <a name="step-1-dynamically-target-retention-policies-with-adaptive-policy-scopes"></a>1. Adım: Uyarlamalı İlke Kapsamları ile bekletme ilkelerini dinamik olarak hedefleme
+> [!TIP]
+> Deneme için en iyi uygulama: 1. Gün
+
+Uyarlamalı ilke kapsamları, bir ilkeyi AD özniteliklerine göre belirli kullanıcılara, gruplara veya sitelere dinamik olarak hedeflemenizi sağlar.  Kapsamların öznitelikleri listeden seçilebilir veya gelişmiş sorgu oluşturucu kullanılarak özelleştirilebilir.
+
+Uyarlamalı ilke kapsamlarını kullanan ilkeler, yeni çalışanların katılması veya ayrılmasıyla kuruluş değiştikçe güncel kalır. Ayrıca, ilkeye dahil edilen 100/1.000 konumun önceki sınırlarına tabi değildir.
+
+- Uyarlamalı İlke Kapsamı oluşturma ve bunu bekletme ilkesiyle kullanma
+
+### <a name="step-2-automate-labeling-to-apply-a-label-to-all-items-by-default"></a>2. Adım: Varsayılan olarak tüm öğelere etiket uygulamak için etiketlemeyi otomatikleştirme
+
+> [!TIP]
+> Deneme için en iyi uygulama: İlk 30 gün içinde kurulum
+
+Varsayılan etiketler, SharePoint'da belirtilen kitaplık, klasör veya belge kümesi içindeki tüm öğelere otomatik olarak bekletme etiketi uygulamanıza olanak sağlar.
+
+- Etiketi yayımlama ve SharePoint'de varsayılan olarak uygulama
 
 ## <a name="data-loss-prevention"></a>Veri Kaybı Önleme
 
@@ -356,59 +382,38 @@ Insider risk Analizi'ni etkinleştirmek için Insider Risk Management veya Insid
 
 ## <a name="records-management"></a>Kayıt Yönetimi
 
-**İş açısından kritik kayıtlar için bekletme zamanlamasını otomatikleştirme**
+**İş, yasal veya mevzuat kaydı tutma gereksinimleri için yüksek değerli öğeleri yönetme**
 
-Kurumsal mevzuat, yasal ve iş açısından kritik kayıtların bekletme zamanlamasını otomatikleştirmek için tümleşik Microsoft Purview Kayıt Yönetimi özelliklerini kullanın. Oluşturmadan işbirliğine, kayıt bildirimine, saklamaya ve elden çıkarma işlemine kadar tam içerik yaşam döngüsü desteği alın.
+Kuruluş düzenleme, yasal ve iş açısından kritik kayıtların bekletme zamanlamasını otomatikleştirmek için Microsoft Purview Kayıt Yönetimi özelliklerini kullanın. Kayıtları bildirmek, içeriği saklamak ve bunları en sonda atmak için işbirliği aracılığıyla oluşturmadan otomasyon özelliklerinden yararlanın.
 
-### <a name="step-1-dynamically-target-retention-policies-with-adaptive-policy-scopes"></a>1. Adım: Uyarlamalı İlke Kapsamları ile bekletme ilkelerini dinamik olarak hedefleme
+### <a name="step-1-mark-contents-as-records"></a>1. Adım: İçeriği kayıt olarak işaretleme  
 
 > [!TIP]
 > Deneme için en iyi uygulama: 1. Gün
 
-Uyarlamalı ilke kapsamları, bir ilkeyi AD özniteliklerine göre belirli kullanıcılara, gruplara veya sitelere dinamik olarak hedeflemenizi sağlar.
+İçerik kayıt olarak bildirildiğinde, öğeye izin verilen veya engellenen eylemlere göre kısıtlamalar uygulanır, öğelerle ilgili ek etkinlikler günlüğe kaydedilir ve öğelerin saklama süresinin sonunda silinmesi durumunda değerlendirme kanıtınız olur.
 
-Kapsamların öznitelikleri listeden seçilebilir veya gelişmiş sorgu oluşturucu kullanılarak özelleştirilebilir.
+- İçerikleri kayıt veya mevzuat kaydı olarak bildiren bir bekletme etiketi oluşturma
 
-Uyarlamalı ilke kapsamlarını kullanan ilkeler, yeni çalışanların katılması veya ayrılmasıyla kuruluş değiştikçe güncel kalır. Ayrıca, ilkeye dahil edilen 100/1.000 konumun önceki sınırlarına tabi değildir.
+### <a name="step-2-review-content-to-approve-before-its-permanently-deleted"></a>2. Adım: Kalıcı olarak silinmeden önce onaylayacak içeriği gözden geçirme
 
-- [Uyarlamalı İlke Kapsamı](retention.md#adaptive-or-static-policy-scopes-for-retention) oluşturma ve bunu bekletme ilkesiyle kullanma
+> [!TIP]
+> Deneme için en iyi uygulama: 1. Gün
 
-### <a name="step-2-automate-labeling-of-sensitive-information-with-the-ability-to-review-before-disposal"></a>2. Adım: Elden çıkarmadan önce gözden geçirme özelliğiyle hassas bilgilerin etiketlenmesi otomatikleştirin
+Saklama süresinin sonunda, belirttiğiniz kullanıcılara ("gözden geçirenler") içeriği gözden geçirmeleri ve kalıcı elden çıkarma eylemini onaylamaları bildirilebilir. Bu, silme işleminden farklı bir eylemin içeriğe farklı bir saklama süresi atama veya bir denetim için silme işlemini askıya alma gibi daha uygun olup olmadığını destekler.
+
+- Değerlendirme gözden geçirmesini kullanan bir bekletme etiketi oluşturma
+
+### <a name="step-3-apply-labels-automatically-to-content-that-matches-specific-conditions"></a>3. Adım: Etiketleri belirli koşullarla eşleşen içeriğe otomatik olarak uygulama
 
 > [!TIP]
 > Deneme için en iyi uygulama: İlk 30 gün içinde kurulum
 
-Bekletme etiketleri, kredi kartı numarası gibi hassas bilgiler algıladığında içeriğe otomatik olarak uygulanacak şekilde ayarlanabilir. Bu, kullanıcıların etiketleme etkinliğini el ile gerçekleştirme gereksinimini ortadan kaldırır.
+Etiketlerin otomatik uygulanması, kullanıcıların etiketleme etkinliklerini el ile gerçekleştirme gereksinimini ortadan kaldırır. Bu içerikte henüz bir bekletme etiketi uygulanmamışsa ve hassas bilgiler, anahtar sözcükler veya aranabilir özellikler ya da eğitilebilir sınıflandırıcılar için eşleşme içerdiğinde içeriğe otomatik olarak bekletme etiketleri uygulayabilirsiniz.
 
-Saklama süresinin sonunda, belirttiğiniz kullanıcılara ("gözden geçirenler") içeriği gözden geçirmeleri ve kalıcı elden çıkarma eylemini onaylamaları bildirilir. Bu şekilde, bir şeyin daha uzun süre saklanması gerekiyorsa, olabilir.
-
-Hem etiket uygulaması etkinliği hem de edat gözden geçirme etkinliği Kayıt Yönetimine Genel Bakış ekranınızda görüntülenebilir.
-
-1. [Hassas bilgiler içeren içeriğe bekletme etiketlerini otomatik uygulama](retention.md#retention-labels)
-1. Bekletme döneminin [sonundaki değerlendirmeyi içeren](disposition.md#disposition-reviews) bir bekletme etiketi oluşturma ve uygulama
-
-### <a name="step-3-label-content-as-records-automatically-using-trainable-classifiers"></a>3. Adım: Eğitilebilir sınıflandırıcıları kullanarak içeriği otomatik olarak kayıt olarak etiketleme
-
-İçerik kayıt olarak bildirildiğinde, öğeye izin verilen veya engellenen eylemlere göre kısıtlamalar uygulanır, öğelerle ilgili ek etkinlikler günlüğe kaydedilir ve öğelerin saklama süresinin sonunda silinmesi durumunda değerlendirme kanıtınız olur.
-
-Eğitilebilir sınıflandırıcılar, verilen örnekler temelinde çeşitli içerik türlerini tanıyan araçlardır. Çeşitli yerleşik seçenekler arasından seçim yapın veya özel gereksinimlerinizi karşılayacak özel bir sınıflandırıcı ayarlayın.
-
-1. [İçerikleri kayıt veya mevzuat kaydı olarak bildiren bir](records-management.md#records) bekletme etiketi oluşturma
-1. [Eğitilebilir sınıflandırıcıları kullanarak içeriğe bekletme etiketlerini otomatik uygulama](apply-retention-labels-automatically.md#auto-apply-labels-to-content-by-using-trainable-classifiers)
-
-### <a name="more-information-auto-apply-retention-labels--disposition-review"></a>Daha fazla bilgi: Bekletme etiketlerini otomatik uygulama + elden çıkarma incelemesi
-
-**İhtiyacınız olanı korumak için etiketleri otomatik olarak uygula...** Bekletme etiketleri, içeriği içerdiğinde içeriğe otomatik olarak uygulanabilir:
-
-- [Belirli hassas bilgi türleri](apply-retention-labels-automatically.md#auto-apply-labels-to-content-with-specific-types-of-sensitive-information)
-- [Oluşturduğunuz sorguyla eşleşen belirli anahtar sözcükler veya aranabilir özellikler](apply-retention-labels-automatically.md#auto-apply-labels-to-content-with-keywords-or-searchable-properties)
-- [Eğitilebilir sınıflandırıcılar için eşleşme](apply-retention-labels-automatically.md#auto-apply-labels-to-content-by-using-trainable-classifiers)
-
-**... ardından en sonda güvenli bir şekilde atın.**
-
-Bekletme süresinin sonunda bir değerlendirme gözden geçirmesi tetiklendiğinde, seçtiğiniz gözden geçirenler gözden geçirebilecekleri içeriğe sahip olduklarına dair bir e-posta bildirimi alır.
-
-Bir değerlendirme gözden geçirmesi bekleyen içerik kalıcı olarak silinir, ancak değerlendirmenin son aşaması için gözden geçiren içeriği kalıcı olarak silmeyi seçtikten sonra silinir.
+- Belirli türde hassas bilgilere sahip içeriğe bekletme etiketlerini otomatik uygulama
+- Eğitilebilir sınıflandırıcıları kullanarak içeriğe bekletme etiketlerini otomatik uygulama
+- Anahtar sözcükler veya aranabilir özelliklerle bekletme etiketlerini otomatik uygulama
 
 ## <a name="additional-trials-and-add-ons"></a>Ek denemeler ve eklentiler
 

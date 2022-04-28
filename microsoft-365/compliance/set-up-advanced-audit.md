@@ -2,8 +2,8 @@
 title: Microsoft 365'de Denetimi (Premium) ayarlama
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -20,12 +20,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Bu makalede, kullanıcı hesapları tehlikeye atıldığında veya güvenlikle ilgili diğer olayları araştırmak için adli incelemeler yapabilmeniz için Denetimin (Premium) nasıl ayarlanacağı açıklanır.
-ms.openlocfilehash: 6f4f9953c88b1d994d4f033629cc89a6529fb9de
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: f1c858964ee3cb5e6cdfcdb7416468318393ebba
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64998848"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65097964"
 ---
 # <a name="set-up-microsoft-purview-audit-premium"></a>Microsoft Purview Denetimini Ayarlama (Premium)
 

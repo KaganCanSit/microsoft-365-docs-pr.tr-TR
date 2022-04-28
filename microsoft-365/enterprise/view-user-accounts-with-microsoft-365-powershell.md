@@ -1,8 +1,8 @@
 ---
-title: PowerShell Microsoft 365 hesaplarını görüntüleme
+title: PowerShell ile Microsoft 365 kullanıcı hesaplarını görüntüleme
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 07/17/2020
 audience: Admin
 ms.topic: article
@@ -19,23 +19,23 @@ ms.custom:
 - Ent_Office_Other
 - seo-marvel-apr2020
 ms.assetid: bb12f49d-a85d-4f3b-ada2-5c4e33977b10
-description: PowerShell ile kullanıcı hesaplarınızı farklı şekillerde görüntülemeyi, Microsoft 365 ve görüntülemeyi öğrenin.
-ms.openlocfilehash: 5c434825da95fd7d90594b2424cab287305f7d26
-ms.sourcegitcommit: bf3965b46487f6f8cf900dd9a3af8b213a405989
+description: PowerShell ile Microsoft 365 kullanıcı hesaplarınızı farklı şekillerde görüntülemeyi, listelemeyi veya görüntülemeyi öğrenin.
+ms.openlocfilehash: cbbb188c50e4d163d5ef4226a83968c64e8a260c
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "62989972"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65090739"
 ---
-# <a name="view-microsoft-365-user-accounts-with-powershell"></a>PowerShell Microsoft 365 hesaplarını görüntüleme
+# <a name="view-microsoft-365-user-accounts-with-powershell"></a>PowerShell ile Microsoft 365 kullanıcı hesaplarını görüntüleme
 
-*Bu makale hem son hem de Microsoft 365 Kurumsal hem de Office 365 Kurumsal.*
+*Bu makale hem Microsoft 365 Kurumsal hem de Office 365 Kurumsal için geçerlidir.*
 
-Microsoft 365 yönetim merkezi'i kullanarak kiracınız için hesapları Microsoft 365 kullanabilirsiniz. Microsoft 365 için PowerShell bunu sağlar, ancak ek işlevler de sağlar.
+Microsoft 365 kiracınızın hesaplarını görüntülemek için Microsoft 365 yönetim merkezi kullanabilirsiniz. Microsoft 365 için PowerShell bunu etkinleştirir ancak ek işlevler de sağlar.
   
-## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a>Graph modülü için Azure Active Directory PowerShell'i kullanma
+## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a>Graph için Azure Active Directory PowerShell modülünü kullanma
 
-İlk olarak[, kiracınıza bağlan Microsoft 365 bağlanin](connect-to-microsoft-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module).
+İlk olarak [Microsoft 365 kiracınıza bağlanın](connect-to-microsoft-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module).
   
 ### <a name="view-all-accounts"></a>Tüm hesapları görüntüleme
 
@@ -45,7 +45,7 @@ Kullanıcı hesaplarının tam listesini görüntülemek için şu komutu çalı
 Get-AzureADUser
 ```
 
-Aşağıdakine benzer bilgiler alalısiniz:
+Şuna benzer bilgiler almalısınız:
   
 ```powershell
 ObjectId                             DisplayName                                           UserPrincipalName
@@ -60,7 +60,7 @@ be4bdddd-c790-424c-9f96-a0cf609b7815 Allan Deyoung                              
 
 ### <a name="view-a-specific-account"></a>Belirli bir hesabı görüntüleme
 
-Belirli bir kullanıcı hesabını görüntülemek için aşağıdaki komutu çalıştırın. Kullanıcı hesabının, kullanıcı asıl adı (UPN) olarak da bilinen oturum açma hesabı adını doldurun. "<" ve ">" karakterlerini kaldırın.
+Belirli bir kullanıcı hesabını görüntülemek için aşağıdaki komutu çalıştırın. Kullanıcı hesabının oturum açma hesabı adını (kullanıcı asıl adı (UPN) olarak da bilinir) doldurun. "<" ve ">" karakterlerini kaldırın.
   
 ```powershell
 Get-AzureADUser -ObjectID <sign-in name of the user account>
@@ -72,29 +72,29 @@ Get-AzureADUser -ObjectID <sign-in name of the user account>
 Get-AzureADUser -ObjectID BelindaN@litwareinc.onmicosoft.com
 ```
 
-### <a name="view-additional-property-values-for-a-specific-account"></a>Belirli bir hesabın ek özellik değerlerini görüntüleme
+### <a name="view-additional-property-values-for-a-specific-account"></a>Belirli bir hesap için ek özellik değerlerini görüntüleme
 
-Varsayılan olarak, **Get-AzureADUser** cmdlet'i hesapların *yalnızca ObjectID*, *DisplayName* *ve UserPrincipalName* özelliklerini görüntüler.
+Varsayılan olarak, **Get-AzureADUser** cmdlet'i hesapların yalnızca *ObjectID*, *DisplayName* ve *UserPrincipalName* özelliklerini görüntüler.
 
-Görüntülenmek üzere özellikler konusunda daha seçici olmak için **, Get-AzureADUser cmdlet'iyle birlikte Select** cmdlet'ini kullanın. İki cmdlet'i birleştirmek için, Graph için PowerShell'Azure Active Directory bir komutun sonuçlarını alıp bir sonraki komuta göndermenizi söyleyen "pipe" karakterini ("|") kullanın. Her kullanıcı hesabı için *DisplayName*, *Department* ve *UsageLocation* komutlarını görüntüleyen örnek bir komut şöyledir:
+Görüntülenecek özellikler hakkında daha seçici olmak için Select cmdlet'ini **Get-AzureADUser** cmdlet'iyle birlikte kullanın. İki cmdlet'i birleştirmek için, Azure Active Directory PowerShell'e Graph için bir komutun sonuçlarını alıp sonraki komuta göndermesini bildiren "kanal" karakterini ("|") kullanın. Her kullanıcı hesabı için *DisplayName*, *Department* ve *UsageLocation* değerlerini görüntüleyen örnek bir komut aşağıda verilmiştir:
   
 ```powershell
 Get-AzureADUser | Select DisplayName,Department,UsageLocation
 ```
 
-Bu komut PowerShell'e şunları sağlar:
+Bu komut PowerShell'e şunları yönerge eder:
   
-1. Kullanıcı hesaplarından (**Get-AzureADUser**) tüm bilgileri edinin ve sonraki komuta () gönderin **|**.
+1. Kullanıcı hesaplarıyla ilgili tüm bilgileri (**Get-AzureADUser**) alın ve sonraki komuta (**|**) gönderin.
     
-1.  Yalnızca kullanıcı hesabı adını, departmanı ve kullanım konumunu görüntüler (**DisplayName, Department, UsageLocation öğesini seçin**).
+1.  Yalnızca kullanıcı hesabı adını, departmanı ve kullanım konumunu görüntüleyin (**DisplayName, Department, UsageLocation'ı seçin**).
   
-Belirli bir kullanıcı hesabının tüm özelliklerini görmek için, **Seç cmdlet'ini** ve joker karakteri (*) kullanın. İşte bir örnek:
+Belirli bir kullanıcı hesabının tüm özelliklerini görmek için **Select** cmdlet'ini ve joker karakterini (*) kullanın. İşte bir örnek:
   
 ```powershell
 Get-AzureADUser -ObjectID BelindaN@litwareinc.onmicosoft.com | Select *
 ```
 
-Başka bir örnek olarak, belirli bir kullanıcı hesabının etkin durumunu kontrol etmek için aşağıdaki komutu çalıştırın:
+Başka bir örnek olarak, belirli bir kullanıcı hesabının etkin durumunu denetlemek için aşağıdaki komutu çalıştırın:
   
 ```powershell
 Get-AzureADUser -ObjectID <sign-in name of the user account> | Select DisplayName,UserPrincipalName,AccountEnabled
@@ -104,55 +104,55 @@ Get-AzureADUser -ObjectID <sign-in name of the user account> | Select DisplayNam
 
 Kullanıcı hesaplarının iki kaynağı vardır: 
 
-- Windows Server Active Directory (AD), şirket içi AD'den buluta eşitlenen hesaplardır.
+- şirket içi AD'den buluta eşitlenen hesaplar olan Windows Server Active Directory (AD).
 
-- Azure Active Directory bulutta oluşturulan kullanıcı hesapları (Azure AD) hesaplarıdır.
+- doğrudan bulutta oluşturulan Azure Active Directory (Azure AD) hesapları.
 
-Şirket içi AD'den eşitleyen hesapları bulmak için aşağıdaki **komutu kullanabilirsiniz** . Bu özellik, PowerShell'e *DirSyncEnabled özniteliğine* sahip olan tüm kullanıcıları True olarak ayarlamalarını *sağlar*. 
+**Şirket içi** AD'den eşitlenen hesapları bulmak için aşağıdaki komutu kullanabilirsiniz. PowerShell'e *DirSyncEnabled* özniteliği *True* olarak ayarlanmış olan tüm kullanıcıları alma talimatını sağlar. 
 
 ```powershell
 Get-AzureADUser | Where {$_.DirSyncEnabled -eq $true}
 ```
 
-Aşağıdaki komutu yalnızca bulut hesaplarını **bulmak için kullanabilirsiniz** . PowerShell'e *, DirSyncEnabled* özniteliği false olarak ayarlanmış veya ayarlenmemiş (Null) olan  tüm kullanıcıları ayarlaması *için bilgi verir*.
-Şirket içi AD'den hiç eşitlenmemiş bir hesapta *DirSyncEnabled Null* olarak *ayarlanmıştır*. Başlangıçta şirket içi AD'den eşitlenen ancak artık eşitlenmemiş olan bir *hesapta DirSyncEnabled* *False olarak ayarlanmıştır*. 
+**Yalnızca bulut** hesaplarını bulmak için aşağıdaki komutu kullanabilirsiniz. PowerShell'e *DirSyncEnabled* özniteliği *False* olarak ayarlanmış veya ayarlanmamış (*Null*) tüm kullanıcıları alma talimatını vemektedir.
+Şirket içi AD'den hiçbir zaman eşitlenmemiş bir hesabın *DirSyncEnabled* değeri *Null* olarak ayarlanmıştır. Başlangıçta şirket içi AD'den eşitlenen ancak artık eşitlenemeyen bir hesabın *DirSyncEnabled* değeri *False* olarak ayarlanmıştır. 
 
 ```powershell
 Get-AzureADUser | Where {$_.DirSyncEnabled -ne $true}
 ```
 
-### <a name="view-accounts-based-on-a-common-property"></a>Hesapları ortak bir özele dayalı olarak görüntüleme
+### <a name="view-accounts-based-on-a-common-property"></a>Ortak bir özelliğe göre hesapları görüntüleme
 
-Görünen hesap listesi konusunda daha seçici olmak için **Where** cmdlet'ini **Get-AzureADUser cmdlet'iyle birlikte** kullanabilirsiniz. İki cmdlet'i birleştirmek için, Graph için PowerShell'Azure Active Directory bir komutun sonuçlarını alıp bir sonraki komuta göndermenizi söyleyen "pipe" karakterini ("|") kullanın. İşte, yalnızca belirtilmemiş bir kullanım konumu olan kullanıcı hesaplarını görüntüleyen örnek bir komut:
+Görüntülenecek hesap listesi hakkında daha seçici olmak için **Get-AzureADUser** cmdlet'iyle birlikte **Where** cmdlet'ini kullanabilirsiniz. İki cmdlet'i birleştirmek için, Azure Active Directory PowerShell'e Graph için bir komutun sonuçlarını alıp sonraki komuta göndermesini bildiren "kanal" karakterini ("|") kullanın. Aşağıda, yalnızca belirtilmemiş kullanım konumuna sahip olan kullanıcı hesaplarını görüntüleyen örnek bir komut verilmiştir:
   
 ```powershell
 Get-AzureADUser | Where {$_.UsageLocation -eq $Null}
 ```
 
-Bu komut, Azure Active Directory PowerShell'e şunları Graph:
+Bu komut, Graph için Azure Active Directory PowerShell'e şu yönergeleri sağlar:
   
-1. Kullanıcı hesaplarından (**Get-AzureADUser**) tüm bilgileri edinin ve sonraki komuta () gönderin **|**.
+1. Kullanıcı hesaplarıyla ilgili tüm bilgileri (**Get-AzureADUser**) alın ve sonraki komuta (**|**) gönderin.
     
-1. Belirtilmemiş kullanım konumu olan tüm kullanıcı hesaplarını bulun (**Burada {$\_. UsageLocation -eq $Null}**). Küme ayraçlarının içindeki komut, PowerShell'e yalnızca UsageLocation kullanıcı hesabı özelliğinin () kullanıldığı hesap kümelerini bulmalarını sağlar **$\_. UsageLocation**) belirtilmemiş (**-eq $Null**).
+1. Belirtilmemiş kullanım konumu olan tüm kullanıcı hesaplarını bulun (**Burada {$\_. UsageLocation -eq $Null}**). Küme ayraçlarının içinde, komut PowerShell'e yalnızca UsageLocation kullanıcı hesabı özelliğinin (**$\_) bulunduğu hesap kümesini bulmasını ister. UsageLocation**) belirtilmemiş (**-eq $Null**).
     
-**UsageLocation** özelliği, kullanıcı hesabıyla ilişkilendirilmiş birçok özelliktir. Belirli bir kullanıcı hesabının tüm özelliklerini görüntülemek için, **Seç cmdlet'ini** ve joker karakteri (*) kullanın. İşte bir örnek:
+**UsageLocation** özelliği, bir kullanıcı hesabıyla ilişkili birçok özelliknden yalnızca biridir. Belirli bir kullanıcı hesabının tüm özelliklerini görüntülemek için **Select** cmdlet'ini ve joker karakterini (*) kullanın. İşte bir örnek:
   
 ```powershell
 Get-AzureADUser -ObjectID BelindaN@litwareinc.onmicosoft.com | Select *
 ```
 
-Örneğin, **Şehir** , kullanıcı hesabı özelliğinin adıdır. Londra'da yaşayan kullanıcıların tüm hesaplarını listeleyen aşağıdaki komutu kullanabilirsiniz:
+Örneğin, **City** bir kullanıcı hesabı özelliğinin adıdır. Londra'da yaşayan kullanıcıların tüm hesaplarını listelemek için aşağıdaki komutu kullanabilirsiniz:
   
 ```powershell
 Get-AzureADUser | Where {$_.City -eq "London"}
 ```
 
 > [!TIP]
-> Bu örneklerde **Where** cmdlet'inin söz dizimi **Where {$\_.** [kullanıcı hesabı özellik adı] [karşılaştırma işleci] [değer] **}**.> [karşılaştırma işleci] eşittir **için -eq** , eşittir için **-ne** , **küçükten küçük için -lt** , **büyüktür için -gt** ve diğerleri.  [değer], genellikle bir dizedir (harf, sayı dizisi ve diğer karakterlerden oluşur), sayısal değerdir **$Null** belirtilmemiş bir dizedir. Daha fazla bilgi için bkz. [Where](/powershell/module/microsoft.powershell.core/where-object).
+> Bu örneklerde **Where** cmdlet'inin söz dizimi **Where {$\_** şeklindedir. [kullanıcı hesabı özellik adı] [karşılaştırma işleci] [değer] **}**.> [karşılaştırma işleci] eşittir için **-eq** , eşit değil için **-ne** , küçüktür için **-lt** , büyüktür ve diğerleri için **-gt** şeklindedir.  [value] genellikle bir dizedir (harf, sayı ve diğer karakter dizisi), sayısal bir değer veya belirtilmemiş için **$Null** . Daha fazla bilgi için bkz [. Where](/powershell/module/microsoft.powershell.core/where-object).
 
-## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a>Kaynak için Microsoft Azure Active Directory Modülü'Windows PowerShell
+## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a>Windows PowerShell için Microsoft Azure Active Directory Modülünü kullanma
 
-İlk olarak[, kiracınıza bağlan Microsoft 365 bağlanin](connect-to-microsoft-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell).
+İlk olarak [Microsoft 365 kiracınıza bağlanın](connect-to-microsoft-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell).
 
 ### <a name="view-all-accounts"></a>Tüm hesapları görüntüleme
 
@@ -163,10 +163,10 @@ Get-MsolUser
 ```
 
 >[!Note]
->PowerShell Core, adı *Msol* olan Microsoft Azure Active Directory Modülü Windows PowerShell cmdlet'leri desteklemez. Bu cmdlet'leri çalışma Windows PowerShell.
+>PowerShell Core, Windows PowerShell modülü için Microsoft Azure Active Directory Modülünü ve adında *Msol* bulunan cmdlet'leri desteklemez. Bu cmdlet'leri Windows PowerShell çalıştırın.
 >
 
-Aşağıdakine benzer bilgiler alalısiniz:
+Şuna benzer bilgiler almalısınız:
   
 ```powershell
 UserPrincipalName                     DisplayName           isLicensed
@@ -178,13 +178,13 @@ AnneWlitwareinc.onmicrosoft.com       Anne Wallace          True
 ScottW@litwareinc.onmicrosoft.com     Scott Wallace         False
 ```
 
-**Get-MsolUser** cmdlet'in, görüntülenen kullanıcı hesapları kümesine filtre uygulama için bir parametre kümesi de vardır. Örneğin, lisanssız kullanıcıların listesi için (Microsoft 365'e eklenmiş olan ancak hizmetlerden herhangi birini kullanmak üzere henüz lisanslanmamış kullanıcılar) şu komutu çalıştırın:
+**Get-MsolUser** cmdlet'i, görüntülenen kullanıcı hesapları kümesini filtrelemek için bir dizi parametreye de sahiptir. Örneğin, lisanssız kullanıcıların listesi için (Microsoft 365 eklenmiş ancak henüz hizmetlerden herhangi birini kullanma lisansına sahip olmayan kullanıcılar) şu komutu çalıştırın:
   
 ```powershell
 Get-MsolUser -UnlicensedUsersOnly
 ```
 
-Aşağıdakine benzer bilgiler alalısiniz:
+Şuna benzer bilgiler almalısınız:
   
 ```powershell
 UserPrincipalName                     DisplayName           isLicensed
@@ -193,31 +193,31 @@ BrianJ@litwareinc.onmicrosoft.com     Brian Johnson         False
 ScottW@litwareinc.onmicrosoft.com     Scott Wallace         False
 ```
 
-Görüntülenen kullanıcı hesapları kümesine filtre uygulamanın ek parametreleri hakkında bilgi için bkz. [Get-MsolUser](/previous-versions/azure/dn194133(v=azure.100)).
+Görüntülenen kullanıcı hesapları kümesini filtrelemeye yönelik ek parametreler hakkında bilgi için bkz. [Get-MsolUser](/previous-versions/azure/dn194133(v=azure.100)).
   
 ### <a name="view-a-specific-account"></a>Belirli bir hesabı görüntüleme
 
-Belirli bir kullanıcı hesabını görüntülemek için aşağıdaki komutu çalıştırın. Kullanıcı hesabının, kullanıcı asıl adı (UPN) olarak da bilinen oturum açma adını doldurun. "<" ve ">" karakterlerini kaldırın.
+Belirli bir kullanıcı hesabını görüntülemek için aşağıdaki komutu çalıştırın. Kullanıcı hesabının oturum açma adını (kullanıcı asıl adı (UPN) olarak da bilinir) doldurun. "<" ve ">" karakterlerini kaldırın.
   
 ```powershell
 Get-MsolUser -UserPrincipalName <sign-in name of the user account>
 ```
 
-### <a name="view-accounts-based-on-a-common-property"></a>Hesapları ortak bir özele dayalı olarak görüntüleme
+### <a name="view-accounts-based-on-a-common-property"></a>Ortak bir özelliğe göre hesapları görüntüleme
 
-Görünen hesap listesi konusunda daha seçici olmak için **, Get-MsolUser** cmdlet'iyle birlikte **Where** cmdlet'ini kullanabilirsiniz. İki cmdlet'i birleştirmek için, PowerShell'e bir komutun sonuçlarını almalarını ve bir sonraki komuta göndermelerini söyleyen "pipe" karakterini ("|") kullanın. Burada, yalnızca belirtilmemiş bir kullanım konumu olan kullanıcı hesaplarını gösteren bir örnek ve almaktadırsınız:
+Görüntülenecek hesap listesi hakkında daha seçici olmak için **Where** cmdlet'ini **Get-MsolUser** cmdlet'iyle birlikte kullanabilirsiniz. İki cmdlet'i birleştirmek için PowerShell'e bir komutun sonuçlarını alıp sonraki komuta göndermesini söyleyen "kanal" karakterini ("|") kullanın. Aşağıda, yalnızca belirtilmemiş kullanım konumuna sahip olan kullanıcı hesaplarını gösteren bir örnek verilmiştir:
   
 ```powershell
 Get-MsolUser | Where {$_.UsageLocation -eq $Null}
 ```
 
-Bu komut PowerShell'e şunları sağlar:
+Bu komut PowerShell'e şunları yönerge eder:
   
-1. Kullanıcı hesaplarından (**Get-MsolUser) tüm bilgileri alır** ve bir sonraki komuta () gönderir **|**.
+1. Kullanıcı hesaplarındaki (**Get-MsolUser**) tüm bilgileri alın ve sonraki komuta (**|**) gönderin.
     
-1. Belirtilmemiş kullanım konumu olan tüm kullanıcı hesaplarını bulun (**Burada {$\_. UsageLocation -eq $Null}**). Küme ayraçlarının içindeki komut, PowerShell'e yalnızca UsageLocation kullanıcı hesabı özelliğinin () kullanıldığı hesap kümelerini bulmalarını sağlar **$\_. UsageLocation**) belirtilmemiş (**-eq $Null**).
+1. Belirtilmemiş kullanım konumuna sahip tüm kullanıcı hesaplarını bulun (**Burada {$\_. UsageLocation -eq $Null}**). Küme ayraçlarının içinde, komut PowerShell'e yalnızca UsageLocation kullanıcı hesabı özelliğinin (**$\_) bulunduğu hesap kümesini bulmasını ister. UsageLocation**) belirtilmemiş (**-eq $Null**).
     
-Aşağıdakine benzer bilgiler alalısiniz:
+Şuna benzer bilgiler almalısınız:
   
 ```powershell
 UserPrincipalName                     DisplayName           isLicensed
@@ -227,50 +227,50 @@ ScottW@litwareinc.onmicrosoft.com     Scott Wallace         False
 
 ```
 
-*UsageLocation* özelliği, kullanıcı hesabıyla ilişkilendirilmiş birçok özelliktir. Kullanıcı hesaplarının tüm özelliklerini görmek için, **Select** cmdlet'ini ve joker karakteri (*) kullanarak belirli bir kullanıcı hesabının tüm özelliklerini görüntüye açın. İşte bir örnek:
+*UsageLocation* özelliği, bir kullanıcı hesabıyla ilişkili birçok özelliknden yalnızca biridir. Kullanıcı hesaplarının tüm özelliklerini görmek için **Select** cmdlet'ini ve joker karakterini (*) kullanarak belirli bir kullanıcı hesabının tümünü görüntüleyin. İşte bir örnek:
   
 ```powershell
 Get-MsolUser -UserPrincipalName BelindaN@litwareinc.onmicosoft.com | Select *
 ```
 
-Örneğin, *Şehir* , kullanıcı hesabı özelliğinin adıdır. Londra'da yaşayan kullanıcıların tüm kullanıcı hesaplarını listeleyen aşağıdaki komutu kullanabilirsiniz:
+Örneğin, *City* bir kullanıcı hesabı özelliğinin adıdır. Londra'da yaşayan kullanıcıların tüm kullanıcı hesaplarını listelemek için aşağıdaki komutu kullanabilirsiniz:
   
 ```powershell
 Get-MsolUser | Where {$_.City -eq "London"}
 ```
 
 > [!TIP]
-> Bu örneklerde **Where** cmdlet'inin söz dizimi **Where {$\_.** [kullanıcı hesabı özellik adı] [karşılaştırma işleci] [değer] **}**.  [karşılaştırma işleci] eşittir **için -eq** , eşittir için **-ne** , **küçük için -lt** , **büyüktür için -gt** ve diğerleri.  [değer], genellikle bir dizedir (harf, sayı dizisi ve diğer karakterlerden oluşur), sayısal değerdir **$Null** belirtilmemiş bir dizedir. Daha fazla bilgi için bkz. [Where](/powershell/module/microsoft.powershell.core/where-object).
+> Bu örneklerde **Where** cmdlet'inin söz dizimi **Where {$\_** şeklindedir. [kullanıcı hesabı özellik adı] [karşılaştırma işleci] [değer] **}**.  [comparison operator] eşittir için **-eq** , eşit değil için **-ne** , küçüktür için **-lt** , büyüktür ve diğerleri için **-gt** şeklindedir.  [value] genellikle bir dizedir (harf, sayı ve diğer karakter dizisi), sayısal bir değer veya belirtilmemiş için **$Null** . Daha fazla bilgi için bkz [. Where](/powershell/module/microsoft.powershell.core/where-object).
   
-Kullanıcı hesabının engellenmiş durumunu kontrol etmek için aşağıdaki komutu kullanın:
+Kullanıcı hesabının engellenen durumunu denetlemek için aşağıdaki komutu kullanın:
   
 ```powershell
 Get-MsolUser -UserPrincipalName <UPN of user account> | Select DisplayName,BlockCredential
 ```
 
-### <a name="view-additional-property-values-for-accounts"></a>Hesapların ek özellik değerlerini görüntüleme
+### <a name="view-additional-property-values-for-accounts"></a>Hesaplar için ek özellik değerlerini görüntüleme
 
-Varsayılan olarak, **Get-MsolUser** cmdlet'i kullanıcı hesaplarının şu üç özelliklerini görüntüler:
+Varsayılan olarak **, Get-MsolUser** cmdlet'i kullanıcı hesaplarının şu üç özelliğini görüntüler:
   
-- UserPrincipalName
+- Userprincipalname
 
-- DisplayName
+- Displayname
 
 - isLicensed
 
-Kullanıcının çalışma bölümü ve Microsoft 365 hizmetlerini kullanan ülke/bölge gibi ek özelliklere ihtiyacınız varsa, kullanıcı hesabı özelliklerinin listesini belirtmek için **Get-MsolUser'ı** **Select** cmdlet'iyle birlikte çalıştırabilirsiniz. İşte bir örnek:
+Kullanıcının çalıştığı departman ve Microsoft 365 hizmetlerini kullandığı ülke/bölge gibi ek özelliklere ihtiyacınız varsa, kullanıcı hesabı özelliklerinin listesini belirtmek için **Get-MsolUser'ı** **Seç** cmdlet'iyle birlikte çalıştırabilirsiniz. İşte bir örnek:
   
 ```powershell
 Get-MsolUser | Select DisplayName, Department, UsageLocation
 ```
 
-Bu komut PowerShell'e şunları sağlar:
+Bu komut PowerShell'e şunları yönerge eder:
   
-1. Kullanıcı hesapları (**Get-MsolUser) hakkında tüm bilgileri alır** ve bir sonraki komuta () gönderir **|**.
+1. Kullanıcı hesapları (**Get-MsolUser**) hakkındaki tüm bilgileri alın ve sonraki komuta (**|**) gönderin.
     
-1. Yalnızca kullanıcı hesabı adını, departmanı ve kullanım konumunu görüntüler (**DisplayName, Department, UsageLocation öğesini seçin**).
+1. Yalnızca kullanıcı hesabı adını, departmanı ve kullanım konumunu görüntüleyin (**DisplayName, Department, UsageLocation'ı seçin**).
     
-Aşağıdakine benzer bilgiler alalısiniz:
+Şuna benzer bilgiler almalısınız:
   
 ```powershell
 DisplayName             Department                       UsageLocation
@@ -283,27 +283,27 @@ Alex Darrow             Sales & Marketing                    US
 Scott Wallace           Operations
 ```
 
-**Seç** cmdlet'i, hangi özelliklerin görüntüleniyor olduğunu seçmenize olanak sağlar. Belirli bir kullanıcı hesabının tüm özelliklerini görüntülemek için, joker karakteri (*) kullanın. İşte bir örnek:
+**Seç** cmdlet'i hangi özelliklerin görüntüleneceğini seçmenize olanak tanır. Belirli bir kullanıcı hesabının tüm özelliklerini görüntülemek için (*) joker karakterini kullanın. İşte bir örnek:
   
 ```powershell
 Get-MsolUser -UserPrincipalName BelindaN@litwareinc.onmicosoft.com | Select *
 ```
 
-Görünen hesap listesi konusunda daha seçici olmak için Where **cmdlet'ini de** kullanabilirsiniz. İşte, yalnızca belirtilmemiş bir kullanım konumu olan kullanıcı hesaplarını görüntüleyen örnek bir komut:
+Görüntülenecek hesap listesi hakkında daha seçici olmak için **Where** cmdlet'ini de kullanabilirsiniz. Aşağıda, yalnızca belirtilmemiş kullanım konumuna sahip olan kullanıcı hesaplarını görüntüleyen örnek bir komut verilmiştir:
   
 ```powershell
 Get-MsolUser | Where {$_.UsageLocation -eq $Null} | Select DisplayName, Department, UsageLocation
 ```
 
-Bu komut PowerShell'e şunları sağlar:
+Bu komut PowerShell'e şunları yönerge eder:
   
-1. Kullanıcı hesapları (**Get-MsolUser) hakkında tüm bilgileri alır** ve bir sonraki komuta () gönderir **|**.
+1. Kullanıcı hesapları (**Get-MsolUser**) hakkındaki tüm bilgileri alın ve sonraki komuta (**|**) gönderin.
     
-1. Belirtilmemiş kullanım konumu olan tüm kullanıcı hesaplarını bulun (**Burada {$\_. UsageLocation -eq $Null}**) ve sonuç bilgilerini sonraki komuta () gönderin **|**. Küme ayraçlarının içindeki komut, PowerShell'e yalnızca UsageLocation kullanıcı hesabı özelliğinin () kullanıldığı hesap kümelerini bulmalarını sağlar **$\_. UsageLocation**) belirtilmemiş (**-eq $Null**).
+1. Belirtilmemiş kullanım konumuna sahip tüm kullanıcı hesaplarını bulun (**Burada {$\_. UsageLocation -eq $Null}**) ve elde edilen bilgileri sonraki komuta (**|**) gönderin. Küme ayraçlarının içinde, komut PowerShell'e yalnızca UsageLocation kullanıcı hesabı özelliğinin (**$\_) bulunduğu hesap kümesini bulmasını ister. UsageLocation**) belirtilmemiş (**-eq $Null**).
     
-1. Yalnızca kullanıcı hesabı adını, departmanı ve kullanım konumunu görüntüler (**DisplayName, Department, UsageLocation öğesini seçin**).
+1. Yalnızca kullanıcı hesabı adını, departmanı ve kullanım konumunu görüntüleyin (**DisplayName, Department, UsageLocation'ı seçin**).
     
-Aşağıdakine benzer bilgiler alalısiniz:
+Şuna benzer bilgiler almalısınız:
   
 ```powershell
 DisplayName              Department                      UsageLocation
@@ -312,10 +312,10 @@ Brian Johnson
 Scott Wallace            Operations
 ```
 
-Kullanıcılarınızı oluşturmak ve yönetmek için dizin eşitlemesi kullanıyorsanız, Microsoft 365 kullanıcılarının projesinin Microsoft 365 yerel hesabı görüntüebilirsiniz. Aşağıdaki örnekte, aşağıdakilerin olduğu varsay varsay almaktadır:
+Microsoft 365 kullanıcılarınızı oluşturmak ve yönetmek için dizin eşitlemesi kullanıyorsanız, Microsoft 365 kullanıcının yansıtıldığı yerel hesabı görüntüleyebilirsiniz. Aşağıdaki örnekte şu varsayımlar yer alır:
 
-- Azure AD Bağlan, ObjectGUID'nin varsayılan kaynak bağlantısı kullanmak üzere yapılandırılır. (Kaynak bağlantısı yapılandırma hakkında daha fazla bilgi için bkz. [Azure AD Bağlan: Tasarım kavramları](/azure/active-directory/hybrid/plan-connect-design-concepts)).
-- PowerShell için Active Directory Etki Alanı Hizmetleri modülü yüklenmiştir ( [bkz. RSAT araçları](https://www.microsoft.com/en-gb/download/details.aspx?id=45520)).
+- Azure AD Bağlan, ObjectGUID'nin varsayılan kaynak bağlantı noktasını kullanacak şekilde yapılandırılmıştır. (Kaynak tutturucu yapılandırma hakkında daha fazla bilgi için bkz. [Azure AD Bağlan: Tasarım kavramları](/azure/active-directory/hybrid/plan-connect-design-concepts)).
+- PowerShell için Active Directory Domain Services modülü yüklendi (bkz[. RSAT araçları](https://www.microsoft.com/en-gb/download/details.aspx?id=45520)).
 
 ```powershell
 Get-ADUser ([guid][System.Convert]::FromBase64String((Get-MsolUser -UserPrincipalName <UPN of user account>).ImmutableID)).guid
@@ -323,8 +323,8 @@ Get-ADUser ([guid][System.Convert]::FromBase64String((Get-MsolUser -UserPrincipa
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[PowerShell Microsoft 365 hesaplarını, lisanslarını ve gruplarını yönetme](manage-user-accounts-and-licenses-with-microsoft-365-powershell.md)
+[PowerShell ile Microsoft 365 kullanıcı hesaplarını, lisanslarını ve gruplarını yönetme](manage-user-accounts-and-licenses-with-microsoft-365-powershell.md)
   
-[PowerShell Microsoft 365'i yönetme](manage-microsoft-365-with-microsoft-365-powershell.md)
+[PowerShell ile Microsoft 365’i yönetme](manage-microsoft-365-with-microsoft-365-powershell.md)
   
-[Microsoft 365 için PowerShell'i Microsoft 365](getting-started-with-microsoft-365-powershell.md)
+[Microsoft 365 için PowerShell ile Kullanmaya başlayın](getting-started-with-microsoft-365-powershell.md)

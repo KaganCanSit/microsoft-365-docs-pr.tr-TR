@@ -2,7 +2,7 @@
 title: Microsoft 365 uç noktaları
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 audience: ITPro
 ms.topic: landing-page
 ms.service: o365-solutions
@@ -19,12 +19,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.assetid: ''
 description: Microsoft 365 trafiğine yönelik hedef IP adresleri ve URL'ler için, farklı Microsoft 365 bulutlarının İnternet uç noktaları için bu makale listesini kullanın.
-ms.openlocfilehash: e06ca4abc1d8fe918fab4f786712f704e941714a
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 44b28fdda30dcfee904eb1e447f37dea6e9fbd3f
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64931571"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65090307"
 ---
 # <a name="microsoft-365-endpoints"></a>Microsoft 365 uç noktaları
 

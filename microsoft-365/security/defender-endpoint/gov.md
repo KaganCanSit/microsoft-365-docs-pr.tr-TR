@@ -16,12 +16,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 32baee17e01aa4223124e21b7d20c219c0dc4b7f
-ms.sourcegitcommit: e13c8fc28c68422308c9d356109797cfcf6f77be
+ms.openlocfilehash: 51f9c373a68e34ffafa5c3763b8efe77fa2c6146
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/14/2022
-ms.locfileid: "64841861"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098746"
 ---
 # <a name="microsoft-defender-for-endpoint-for-us-government-customers"></a>Kamu görevlisi müşterilere yönelik Uç Nokta için Microsoft Defender
 
@@ -78,7 +78,7 @@ US Government müşterileri için Uç Nokta için Microsoft Defender portalı UR
 |---|---|
 |GCC|<https://security.microsoft.com>|
 |yüksek GCC|<https://security.microsoft.us>|
-|Dod|<https://security.microsoft.us>|
+|Dod|<https://security.apps.mil>|
 |
 > [!NOTE]
 > GCC bir müşteriyseniz ve Uç Nokta için Microsoft Defender ticariden GCC geçiş sürecinde Uç Nokta için Microsoft Defender ticari verilerinize erişmek için kullanınhttps://transition.security.microsoft.com.

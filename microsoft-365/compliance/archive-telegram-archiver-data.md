@@ -2,8 +2,8 @@
 title: Microsoft 365'da Telegram iletişim verilerini arşivleye bir bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -12,12 +12,12 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Yöneticiler, Telegram iletişim verilerini Microsoft 365 içeri aktarmak ve arşivlerken kullanmak için telemessage bağlayıcısı ayarlayabilir. Bu, kuruluşunuzun üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilmeniz için üçüncü taraf veri kaynaklarından verileri Microsoft 365 arşivleyebilmenizi sağlar.
-ms.openlocfilehash: 6bee4eb9be5cf8c0d2719f391d89e268c5041b7f
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 3c207edd3d7243396668c73f936a05531438f970
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64997460"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098052"
 ---
 # <a name="set-up-a-connector-to-archive-telegram-communications-data"></a>Telegram iletişim verilerini arşivleye bağlayıcı ayarlama
 

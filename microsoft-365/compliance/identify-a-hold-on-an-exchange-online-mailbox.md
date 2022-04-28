@@ -2,8 +2,8 @@
 title: Exchange Online posta kutusunda bekletmeyi tanımlama
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: ITPro
@@ -18,12 +18,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 description: Microsoft 365'da bir Exchange Online posta kutusuna yerleştirilebilen farklı saklama türlerini tanımlamayı öğrenin.
-ms.openlocfilehash: 2e62d8f6fd0dc6352b4bf6fc5766b9cd33f8ffb4
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 4b4ff5064f59285412c4c20108df9dbbae992f7e
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64994182"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65097766"
 ---
 # <a name="how-to-identify-the-type-of-hold-placed-on-an-exchange-online-mailbox"></a>Exchange Online posta kutusuna yerleştirilmiş saklama türünü tanımlama
 

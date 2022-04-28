@@ -2,8 +2,8 @@
 title: Twitter verilerini arşivleye bağlayıcı dağıtma
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -16,12 +16,12 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
 ROBOTS: NOINDEX, NOFOLLOW
 description: Yöneticiler, Twitter verilerini Microsoft 365 içeri aktarmak ve arşiv etmek için yerel bir bağlayıcı ayarlayabilir. Bu veriler Microsoft 365 aktarıldıktan sonra, kuruluşunuzun Twitter verilerinin idaresini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
-ms.openlocfilehash: 6bf801d7c3443385ee0a2656753dcf069ac6aebc
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: a928e24c73fcbb290bde2caa0f508610fc18728d
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64997152"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65090971"
 ---
 # <a name="deploy-a-connector-to-archive-twitter-data"></a>Twitter verilerini arşivleye bağlayıcı dağıtma
 

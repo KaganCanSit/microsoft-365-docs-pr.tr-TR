@@ -2,8 +2,8 @@
 title: Microsoft 365'de BlackBerry verilerini arşivleye bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -12,12 +12,12 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: BlackBerry verilerini Microsoft 365 içeri aktarmak ve arşivlemek için 17a-4 BlackBerry DataParser bağlayıcısı ayarlamayı ve kullanmayı öğrenin.
-ms.openlocfilehash: b75d91db9458a31156e9508cc2ddb8cc0da46076
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 93b876a8091007d99584269c7d9b3114b72d18fe
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64995810"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098074"
 ---
 # <a name="set-up-a-connector-to-archive-blackberry-data"></a>BlackBerry verilerini arşivleye bağlayıcı ayarlama
 

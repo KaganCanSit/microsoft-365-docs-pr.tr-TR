@@ -2,8 +2,8 @@
 title: Belgeleri bir kuruluş Azure Depolama hesabına aktarma
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 ms.custom: seo-marvel-mar2020
 description: Gözden geçirme kümesindeki belgeleri Azure Depolama hesabına aktarın ve ardından Azure Depolama Gezgini kullanarak bunları yerel bir bilgisayara indirin.
-ms.openlocfilehash: 6c8709fe1540393164e00222b728b10d5f809012
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: e0dfe3eb37ea440c93dc7753c7c4206d8d33c1f3
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64994908"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098636"
 ---
 # <a name="export-documents-in-a-review-set-to-an-azure-storage-account"></a>Gözden geçirme kümesindeki belgeleri Azure Depolama hesabına aktarma
 

@@ -2,8 +2,8 @@
 title: eBulma'da yeni büyük/küçük harf biçimi (Premium)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 ms.reviewer: ninachen
 manager: laurawi
 ms.date: ''
@@ -16,14 +16,16 @@ search.appverid:
 - MOE150
 - MET150
 description: EBulma (Premium) içinde yeni büyük/küçük harf biçimini kullanarak kümeleri gözden geçirmek ve artan diğer sınırlardan ve yeni işlevlerden yararlanmak için daha fazla öğe ekleyebilirsiniz.
-ms.openlocfilehash: 55a5fdc2493fe046ebb8952fcbcb382750f511a5
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 50713ea585655b441d624a70cf0986245566b8bf
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64973431"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098680"
 ---
 # <a name="use-the-new-case-format-in-ediscovery-premium"></a>eBulma'da yeni servis talebi biçimini kullanma (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Daha fazla kuruluş, kritik eBulma süreçleri için Microsoft Purview'da eBulma (Premium) çözümünü kullanıyor. Bu, mevzuat isteklerine, araştırmalara ve davalara yanıt vermeyi içerir. eBulma (Premium) kullanımı arttıkça, ortak bir müşteri gereksinimi tek bir eBulma (Premium) durumunda yönetilebilen toplam içerik miktarını genişletmektir. Hem toplam veri hacmi hem de toplam öğe sayısı için büyük/küçük harf boyutundaki önemli artışları karşılamak için artık eBulma (Premium) servis talebi oluştururken yeni servis talebi biçimini seçebilirsiniz.  
 

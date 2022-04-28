@@ -2,8 +2,8 @@
 title: eBulma'daki koleksiyonlara genel bakış (Premium)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 ms.reviewer: nickrob
 manager: laurawi
 ms.date: ''
@@ -16,12 +16,12 @@ search.appverid:
 - MOE150
 - MET150
 description: eBulma (Premium) içindeki koleksiyonları kullanarak olay veya araştırmanıza göre içerik arayın ve toplayın.
-ms.openlocfilehash: f57748d54bc177812fd89eca13252311d4ab269f
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: ab2cb4baa1e8d60816fbf7c053d49b5a718746d5
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64996250"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65091059"
 ---
 # <a name="learn-about-collections-in-ediscovery-premium"></a>eBulma'daki koleksiyonlar hakkında bilgi edinin (Premium)
 

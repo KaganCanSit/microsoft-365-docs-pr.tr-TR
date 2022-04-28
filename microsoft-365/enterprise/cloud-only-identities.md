@@ -1,8 +1,8 @@
 ---
-title: Microsoft 365 bulut kimliği
+title: Yalnızca bulut kimliğini Microsoft 365
 ms.author: kvice
 author: kelleyvice-msft
-manager: laurawi
+manager: scotv
 ms.date: 09/30/2020
 audience: Admin
 ms.topic: article
@@ -25,40 +25,40 @@ search.appverid:
 - MOE150
 - MBS150
 ms.assetid: 01920974-9e6f-4331-a370-13aea4e82b3e
-description: Yeni aboneliğiniz yalnızca bulut kimliğini kullanırken Microsoft 365 ve grup oluşturma hakkında bilgi sağlar.
-ms.openlocfilehash: 81c13a6b7e32883d4cb846ef5956102f08fecd6e
-ms.sourcegitcommit: 6c57f1e90339d5a95c9e7875599dac9d3e032c3a
+description: Microsoft 365 aboneliğiniz yalnızca bulut kimliği kullanırken kullanıcı ve grup oluşturmayı açıklar.
+ms.openlocfilehash: 7b2ad2cee32f075302ea591806214b697fa9b206
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2022
-ms.locfileid: "63016443"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65091379"
 ---
-# <a name="microsoft-365-cloud-only-identity"></a>Microsoft 365 bulut kimliği
+# <a name="microsoft-365-cloud-only-identity"></a>Yalnızca bulut kimliğini Microsoft 365
 
-*Bu makale hem son hem de Microsoft 365 Kurumsal hem de Office 365 Kurumsal.*
+*Bu makale hem Microsoft 365 Kurumsal hem de Office 365 Kurumsal için geçerlidir.*
 
-Yalnızca bulut kimlik modelini seçtiysanız, kullanıcılarınızı, gruplarınızı ve kişilerinizi Azure Active Directory depolamak için Microsoft 365 aboneliğiniz için zaten bir Azure Active Directory (Azure AD) kiracınız vardır. [2](protect-your-global-administrator-accounts.md). Adımda yönetici hesapları için korumayı ve bu çözümün [3](microsoft-365-secure-sign-in.md). Adım'daki kullanıcı hesaplarını ayardikten sonra, artık kuruma gereken yeni hesapları ve grupları oluşturmaya başlamaya hazırsınız.
+Yalnızca bulut kimlik modelini seçtiyseniz, tüm kullanıcılarınızı, gruplarınızı ve kişilerinizi depolamak için Microsoft 365 aboneliğiniz için zaten bir Azure Active Directory (Azure AD) kiracınız vardır. [Adım 2'de](protect-your-global-administrator-accounts.md) yönetici hesapları ve bu çözümün [3. Adımındaki](microsoft-365-secure-sign-in.md) kullanıcı hesapları için korumayı ayarladıktan sonra, artık kuruluşunuzun ihtiyaç duyduğu yeni hesapları ve grupları oluşturmaya başlayabilirsiniz.
 
-Burada, yalnızca bulut kimliğinin temel bileşenleri ve bilgileri ve bilgileri ve hizmetleri ve diğer bileşenleri ve daha sonralarını açıklarız.
+Burada yalnızca bulut kimliğinin temel bileşenleri yer alır.
  
 ![Yalnızca bulut kimliğinin temel bileşenleri.](../media/about-microsoft-365-identity/cloud-only-identity.png)
 
-Kuruluşlarda kullanıcılar ve onların kullanıcı hesapları çeşitli yollarla kategorilere ayırabilirsiniz. Örneğin, bazıları çalışandır ve kalıcı bir durumundadır. Bazı satıcılar, yükleniciler veya geçici durumu olan iş ortaklarıdır. Bazılarına kullanıcı hesabı yoktur, ancak etkileşim ve işbirliğini desteklemek için yine de belirli hizmetlere ve kaynaklara erişim verilmesi gerekir. Örneğin:
+Kuruluşlardaki kullanıcılar ve kullanıcı hesapları çeşitli yollarla kategorilere ayırılabilir. Örneğin, bazıları çalışanlardır ve kalıcı bir duruma sahiptir. Bazıları geçici durumu olan satıcılar, yükleniciler veya iş ortaklarıdır. Bazıları kullanıcı hesabı olmayan ancak etkileşim ve işbirliğini desteklemek için belirli hizmetlere ve kaynaklara erişim izni verilmesi gereken dış kullanıcılardır. Örneğin:
 
-- Kiracı hesapları, kuruluş içinde yer alan ve bulut hizmetleri için lisans lisansla
+- Kiracı hesapları, kuruluşunuzda bulut hizmetleri için lisansladığınız kullanıcıları temsil eden
 
-- İşletmeler Için (B2B) hesapları, iş birliğine katılmaya davet etmek için davet edilen kuruluş dışındaki kullanıcıları temsil ediyor
+- İşletmeler arası (B2B) hesapları, işbirliğine katılmaya davet ettiğiniz kuruluşunuzun dışındaki kullanıcıları temsil eder
 
-Kurumda kullanıcı türlerinin hisse senedini alın. Gruplamalar nedir? Örneğin, kullanıcıları üst düzey bir işleve veya amacına göre kuruluşa göre grupabilirsiniz.
+Kuruluşunuzdaki kullanıcı türlerinin stokunu alın. Gruplandırmalar nelerdir? Örneğin, kullanıcıları kuruluşunuz için üst düzey işleve veya amaca göre gruplandırabilirsiniz.
 
-Buna ek olarak, bazı bulut hizmetleri herhangi bir kullanıcı hesabı olmadan kuruluş dışındaki kullanıcılarla paylaşılır. Bu kullanıcı gruplarını da tanımlamanız gerekir.
+Ayrıca, bazı bulut hizmetleri herhangi bir kullanıcı hesabı olmadan kuruluşunuzun dışındaki kullanıcılarla paylaşılabilir. Bu kullanıcı gruplarını da tanımlamanız gerekir.
 
-Azure AD'de grupları, bulut ortamınızı yönetimini basitleştirmek için çeşitli amaçlarla kullanabilirsiniz. Örneğin, Azure AD gruplarında şunları kullanabilirsiniz:
+Bulut ortamınızın yönetimini basitleştiren çeşitli amaçlar için Azure AD'deki grupları kullanabilirsiniz. Örneğin, Azure AD gruplarıyla şunları yapabilirsiniz:
 
-- Grup tabanlı lisansları, üye olarak Microsoft 365 hesaplarınıza otomatik olarak lisans atamak için kullanın.
-- Kullanıcı hesaplarını, bölüm adı gibi kullanıcı hesabı özniteliklerine göre dinamik olarak belirli gruplara ekleyin.
-- Hizmet Olarak Yazılım (SaaS) uygulamaları için kullanıcıları otomatik olarak sağlama ve çok faktörlü kimlik doğrulaması (MFA) ve diğer Koşullu Erişim ilkeleriyle bu uygulamalara erişimi korumak için.
-- Ekipler ve çevrimiçi ekip siteleri için izinler SharePoint erişim düzeyleri.
+- Microsoft 365 lisanslarını üye olarak eklendikleri anda otomatik olarak kullanıcı hesaplarınıza atamak için grup tabanlı lisanslama kullanın.
+- Bölüm adı gibi kullanıcı hesabı özniteliklerine göre belirli gruplara kullanıcı hesaplarını dinamik olarak ekleyin.
+- Hizmet Olarak Yazılım (SaaS) uygulamaları için kullanıcıları otomatik olarak sağlayın ve bu uygulamalara erişimi çok faktörlü kimlik doğrulaması (MFA) ve diğer Koşullu Erişim ilkeleriyle koruyun.
+- Ekipler ve SharePoint Çevrimiçi ekip siteleri için izinler ve erişim düzeyleri sağlayın.
 
 ## <a name="next-steps-for-cloud-only-identity"></a>Yalnızca bulut kimliği için sonraki adımlar
 

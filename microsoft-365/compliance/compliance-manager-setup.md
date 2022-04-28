@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview Uyumluluk Yöneticisi kullanıcı izinlerini ve rollerini ayarlayın ve eylemlerin otomatik testini yapılandırın. Kullanıcı geçmişini yönetin ve pano görünümünüzü filtreleyin.
-ms.openlocfilehash: e691aefdeaf3c2e1c1398bf71b74006aff4d1f6f
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: c7920a9eac06128f3cf9bfb54645a83296ca7e53
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64973651"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65091037"
 ---
 # <a name="get-started-with-compliance-manager"></a>Uyumluluk Yöneticisini kullanmaya başlama
 
@@ -137,7 +137,7 @@ Kuruluşunuzun genel yöneticisi, otomatik test ayarlarını istediği zaman de�
 
 2. Ayarlar sayfasında **Uyumluluk Yöneticisi'ni** seçin.
 
-3. Sol gezinti **bölmesinden Otomatik test'i** seçin.
+3. Sol gezinti bölmesinden **Test kaynağı'nı** seçin.
 
 4. Tüm iyileştirme eylemleri için otomatik testi açmak, tüm eylemler için kapatmak veya tek tek eylemlere göre açmak için uygun düğmeyi seçin.
 

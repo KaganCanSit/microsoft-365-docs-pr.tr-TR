@@ -1,10 +1,10 @@
 ---
-title: '3. Adım: Microsoft 365 hesaplarınızı koruma'
+title: '3. Adım: Microsoft 365 kullanıcı hesaplarınızı koruma'
 f1.keywords:
 - NOCSH
 author: kelleyvice-msft
 ms.author: kvice
-manager: laurawi
+manager: scotv
 ms.date: 09/30/2020
 audience: ITPro
 ms.topic: article
@@ -15,143 +15,143 @@ ms.collection:
 - Strat_O365_Enterprise
 - m365initiative-coredeploy
 ms.custom: ''
-description: Kullanıcılarının çok faktörlü kimlik doğrulaması (MFA) ve diğer özelliklerle güvenli bir şekilde oturum açmasını gerekli hale geldi.
-ms.openlocfilehash: c144b374ecc49128e11635c034f3b4b76020eafd
-ms.sourcegitcommit: 6c57f1e90339d5a95c9e7875599dac9d3e032c3a
+description: Kullanıcılarınızın çok faktörlü kimlik doğrulaması (MFA) ve diğer özelliklerle güvenli bir şekilde oturum açmasını zorunlu kılar.
+ms.openlocfilehash: 4566b2c8c73ce258899e1de6ef621715092e50a5
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2022
-ms.locfileid: "63016475"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65090285"
 ---
-# <a name="step-3-protect-your-microsoft-365-user-accounts"></a>3. Adım: Microsoft 365 hesaplarınızı koruma
+# <a name="step-3-protect-your-microsoft-365-user-accounts"></a>3. Adım: Microsoft 365 kullanıcı hesaplarınızı koruma
 
-Kullanıcı oturum açmalarının güvenliğini artırmak için:
+Kullanıcı oturum açma bilgilerinin güvenliğini artırmak için:
 
-- Windows Hello Kurumsal'i kullanma
-- Parola Azure Active Directory (Azure AD) Parola Koruması kullanma
+- İş İçin Windows Hello kullanma
+- Azure Active Directory (Azure AD) Parola Koruması kullanma
 - Çok faktörlü kimlik doğrulamasını (MFA) kullanma
-- Kimlik ve cihaz erişimi yapılandırmalarını dağıtma
-- Azure AD Kimlik Koruması ile kimlik bilgilerinin tehlikeye atlarına karşı koruma
+- Kimlik ve cihaz erişim yapılandırmalarını dağıtma
+- Azure AD Kimlik Koruması ile kimlik bilgilerinin tehlikeye atılmasına karşı koruma
 
-## <a name="windows-hello-for-business"></a>Windows Hello Kurumsal
+## <a name="windows-hello-for-business"></a>İş İçin Windows Hello
 
-Windows Hello Kurumsal'da Windows 10 Enterprise, Windows cihazında oturum açmada, parolaları güçlü iki faktörlü kimlik Windows değiştirir. Bu iki etmen bir cihaza bağlı olan yeni bir kullanıcı kimlik bilgileri türü ve bir biyometrik veya PIN'tir.
+Windows 10 Enterprise'da İş İçin Windows Hello, Windows cihazda oturum açarken parolaları güçlü iki faktörlü kimlik doğrulamasıyla değiştirir. İki faktör, bir cihaza ve biyometrik veya PIN'e bağlı yeni bir kullanıcı kimlik bilgisi türüdür.
 
-Daha fazla bilgi için bkz[. Windows Hello Genel Bakış](/windows/security/identity-protection/hello-for-business/hello-overview).
+Daha fazla bilgi için bkz. [İş İçin Windows Hello Genel Bakış](/windows/security/identity-protection/hello-for-business/hello-overview).
 
 
 ## <a name="azure-ad-password-protection"></a>Azure AD Parola Koruması
 
-Azure AD Parola Koruması, bilinen zayıf parolaları ve değişkenlerini algılar ve engeller; ayrıca, organizasyonuma özgü ek zayıf terimleri de engelleyebilir. Varsayılan genel yasaklanmış parola listeleri, Bir Azure AD kiracısı'nın tüm kullanıcılarına otomatik olarak uygulanır. Özel bir yasaklanan parola listesinde ek girişler tanımlayabilirsiniz. Kullanıcılar parolalarını değiştirse veya sıfırlasa, güçlü parolaların kullanımını zorunlu yapmak için bu yasaklanmış parola listeleri denetlenir.
+Azure AD Parola Koruması bilinen zayıf parolaları ve bunların değişkenlerini algılar ve engeller ve ayrıca kuruluşunuza özgü ek zayıf terimleri engelleyebilir. Varsayılan genel yasaklanmış parola listeleri, Bir Azure AD kiracısında tüm kullanıcılara otomatik olarak uygulanır. Özel yasaklanmış parola listesinde ek girdiler tanımlayabilirsiniz. Kullanıcılar parolalarını değiştirdiğinde veya sıfırladığında, bu yasaklanmış parola listeleri güçlü parolaların kullanımını zorunlu kılmak için denetlenir.
 
-Daha fazla bilgi için bkz [. Azure AD parola korumasını yapılandırma](/azure/active-directory/authentication/concept-password-ban-bad).
+Daha fazla bilgi için bkz. [Azure AD parola korumasını yapılandırma](/azure/active-directory/authentication/concept-password-ban-bad).
 
 ## <a name="mfa"></a>MFA
 
-MFA, kullanıcı oturum açma hesaplarının kullanıcı hesabı parolasının ötesinde başka bir doğrulamaya tabi olması gerekir. Kötü niyetli bir kullanıcı bir kullanıcı hesabı parolası belirlerse bile, erişim izni verilmeden önce akıllı telefona gönderilen SMS gibi ek bir doğrulamayı yanıtlayabiliyor olması gerekir.
+MFA, kullanıcı oturum açma işlemleri için kullanıcı hesabı parolasının ötesinde ek bir doğrulamaya tabi olmasını gerektirir. Kötü amaçlı bir kullanıcı bir kullanıcı hesabı parolası belirlese bile, erişim verilmeden önce akıllı telefona gönderilen kısa mesaj gibi ek bir doğrulamaya yanıt verebilmelidir.
 
-![Doğru parolanın yanı sıra ek doğrulama da başarılı bir oturum açma işlemiyle sonuç verir.](../media/empower-people-to-work-remotely/remote-workers-mfa.png)
+![Doğru parolanın yanı sıra ek doğrulama başarılı bir oturum açma işlemiyle sonuçlanmıştır.](../media/empower-people-to-work-remotely/remote-workers-mfa.png)
 
-MFA kullanmanın ilk adımı, ayrıcalıklı [hesaplar](protect-your-global-administrator-accounts.md) olarak da bilinen tüm yönetici hesapları için bunu gerektirmektir. Microsoft, bu ilk adımın ötesinde tüm kullanıcılar için MFA'ya izinler de sağlar.
+MFA'yı kullanmanın ilk adımı, ayrıcalıklı hesaplar olarak da bilinen [tüm yönetici hesapları için gerekli olmasını sağlamaktır](protect-your-global-administrator-accounts.md). Microsoft, bu ilk adımın ötesinde tüm kullanıcılar için MFA'yı önerir.
 
-Kullanıcılarının kendi planlarınızı temel alarak MFA kullanmalarını gerektiren üç Microsoft 365 vardır.
+Kullanıcılarınızın Microsoft 365 planınıza göre MFA kullanmasını gerektirmenin üç yolu vardır.
 
 | Plan | Öneri |
 |---------|---------|
-|Tüm Microsoft 365 planları (Azure AD Premium P1 P2 lisansı olmadan)     |[Azure AD'de güvenlik varsayılanlarını etkinleştirin](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults). Azure AD'de güvenlik varsayılanları, kullanıcılar ve yöneticiler için MFA içerir.   |
-|Microsoft 365 E3 (Azure AD Premium P1 içerir)     | Aşağıdaki ilkeleri [yapılandırmak için yaygın Koşullu](/azure/active-directory/conditional-access/concept-conditional-access-policy-common) Erişim ilkelerini kullanın: <br>- [Yöneticiler için MFA gerektirme](/azure/active-directory/conditional-access/howto-conditional-access-policy-admin-mfa) <br>- [Tüm kullanıcılar için MFA gerektirme](/azure/active-directory/conditional-access/howto-conditional-access-policy-all-users-mfa) <br> - [Eski kimlik doğrulamayı engelle](/azure/active-directory/conditional-access/howto-conditional-access-policy-block-legacy)       |
-|Microsoft 365 E5 (Azure AD Premium P2 içerir)     | Azure AD Kimlik Koruması'ndan yararlanmak için, bu iki ilke oluşturarak Microsoft'un önerilen Koşullu Erişim ve ilgili ilkeler setlerini uygulamaya başlayabilirsiniz:<br> - [Oturum açma riski orta veya yüksek olduğunda MFA gerektirme](/azure/active-directory/conditional-access/howto-conditional-access-policy-risk) <br>- [Yüksek riskli kullanıcıların parolayı değiştirmesi gerekir](/azure/active-directory/conditional-access/howto-conditional-access-policy-risk-user)       |
+|Tüm Microsoft 365 planları (Azure AD Premium P1 veya P2 lisansları olmadan)     |[Azure AD'de güvenlik varsayılanlarını etkinleştirin](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults). Azure AD'deki güvenlik varsayılanları, kullanıcılar ve yöneticiler için MFA içerir.   |
+|Microsoft 365 E3 (Azure AD Premium P1 lisansları içerir)     | Aşağıdaki ilkeleri yapılandırmak için [yaygın Koşullu Erişim ilkelerini](/azure/active-directory/conditional-access/concept-conditional-access-policy-common) kullanın: <br>- [Yöneticiler için MFA gerektir](/azure/active-directory/conditional-access/howto-conditional-access-policy-admin-mfa) <br>- [Tüm kullanıcılar için MFA gerektir](/azure/active-directory/conditional-access/howto-conditional-access-policy-all-users-mfa) <br> - [Eski kimlik doğrulamasını engelle](/azure/active-directory/conditional-access/howto-conditional-access-policy-block-legacy)       |
+|Microsoft 365 E5 (Azure AD Premium P2 lisansları içerir)     | Azure AD Kimlik Koruması'nın avantajlarından yararlanarak, şu iki ilkeyi oluşturarak Microsoft'un önerilen Koşullu Erişim ve ilgili ilkeler kümesini uygulamaya başlayın:<br> - [Oturum açma riski orta veya yüksek olduğunda MFA gerektirme](/azure/active-directory/conditional-access/howto-conditional-access-policy-risk) <br>- [Yüksek riskli kullanıcıların parola değiştirmesi gerekir](/azure/active-directory/conditional-access/howto-conditional-access-policy-risk-user)       |
 | | |
 
 ### <a name="security-defaults"></a>Güvenlik varsayılanları
 
-Güvenlik varsayılanları, 21 Ekim 2019'dan Microsoft 365 sonra Office 365 veya deneme abonelikleri için yeni bir özelliktir. Bu aboneliklerin güvenlik varsayılanları açıktır ve bu da kullanıcılarının tüm kullanıcılarının ***Microsoft Authenticator gerektirir***.
+Güvenlik varsayılanları, 21 Ekim 2019'da oluşturulan Microsoft 365 ve Office 365 ücretli veya deneme abonelikleri için yeni bir özelliktir. Bu aboneliklerde güvenlik varsayılanları açıktır ve ***bu da tüm kullanıcılarınızın Microsoft Authenticator uygulamasıyla MFA kullanmasını gerektirir***.
  
-Kullanıcıların, güvenlik varsayılanları etkinleştirildikten sonra ilk kez oturum açmalarından başlanacak olan Microsoft Authenticator uygulamasıyla MFA'ya kaydolmaları için 14 günü vardır. 14 gün sonra, MFA kaydı tamamlanana kadar kullanıcı oturum açmaz.
+Kullanıcıların, güvenlik varsayılanları etkinleştirildikten sonra ilk kez oturum açtıktan sonra başlayan akıllı telefonlarından Microsoft Authenticator uygulamasına MFA'ya kaydolmaları için 14 günü vardır. 14 gün geçtikten sonra, MFA kaydı tamamlanana kadar kullanıcı oturum açamaz.
 
-Güvenlik varsayılanları, tüm kuruluşların, kullanıcı oturum açma için varsayılan olarak etkinleştiren temel güvenlik düzeyine sahip olmasını sağlar. Koşullu Erişim ilkeleri veya tek tek hesaplar için MFA'nın tercihi olarak güvenlik varsayılanlarını devre dışı abilirsiniz.
+Güvenlik varsayılanları, tüm kuruluşların kullanıcı oturum açma için varsayılan olarak etkin olan temel bir güvenlik düzeyine sahip olmasını sağlar. Koşullu Erişim ilkeleriyle veya tek tek hesaplar için MFA'nın lehine güvenlik varsayılanlarını devre dışı bırakabilirsiniz.
 
-Daha fazla bilgi için güvenlik [varsayılanlarına genel bakış bilgilerine bakın](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults).
+Daha fazla bilgi için bkz. [Güvenlik varsayılanlarına genel bakış](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults).
 
 ### <a name="conditional-access-policies"></a>Koşullu Erişim ilkeleri
 
-Koşullu Erişim ilkeleri, oturum açmaların değerlendirilmesini ve erişim verilmesini belirten koşulları belirten bir dizi kuraldır. Örneğin, şöyle bir Koşullu Erişim ilkesi oluşturabilirsiniz:
+Koşullu Erişim ilkeleri, oturum açmaların değerlendirildiği ve erişimin verildiği koşulları belirten bir dizi kuraldır. Örneğin, şunları belirten bir Koşullu Erişim ilkesi oluşturabilirsiniz:
 
-- Kullanıcı hesabı adı Exchange, kullanıcı, parola, güvenlik, SharePoint, Exchange yöneticisi, **SharePoint yöneticisi** veya Genel yönetici rollerine atanan kullanıcılar için **bir** grubun üyesiyseniz, erişime izin vermeden önce MFA gerektirir.
+- Kullanıcı hesabı adı Exchange, kullanıcı, parola, güvenlik, SharePoint, Exchange yöneticisi, **SharePoint yöneticisi** veya **Genel yönetici** rolleri atanmış kullanıcılar için bir grubun üyesiyse, erişime izin vermeden önce MFA'yı gerektirir.
 
-Bu ilke, bu yönetici rollerine atanan veya atanmamış durumdayken MFA için tek tek kullanıcı hesaplarını yapılandırmaya çalışma yerine, grup üyeliğini temel alarak MFA gerektirmenizi sağlar.
+Bu ilke, bu yönetici rollerinden atandığında veya atanmadığında MFA için tek tek kullanıcı hesaplarını yapılandırmaya çalışmak yerine grup üyeliğine göre MFA'yı zorunlu kılmasını sağlar.
 
-Ayrıca, oturum açmanın dizüstü bilgisayarınız gibi uyumlu bir cihazdan yapılması gerektirme gibi daha gelişmiş özellikler için Koşullu Erişim ilkelerini Windows 10.
+Oturum açma işleminin Windows 10 çalıştıran dizüstü bilgisayarınız gibi uyumlu bir cihazdan yapılmasını gerektirme gibi daha gelişmiş özellikler için Koşullu Erişim ilkelerini de kullanabilirsiniz.
 
-Koşullu Erişim için Azure AD Premium P1 ve E5 ile birlikte Microsoft 365 E3 lisansları gerekir.
+Koşullu Erişim, Microsoft 365 E3 ve E5 ile birlikte gelen Azure AD Premium P1 lisansları gerektirir.
 
-Daha fazla bilgi için Koşullu [Erişim'e genel bakış bilgilerine bakın](/azure/active-directory/conditional-access/overview).
+Daha fazla bilgi için bkz. [Koşullu Erişim'e genel bakış](/azure/active-directory/conditional-access/overview).
 
 ### <a name="using-these-methods-together"></a>Bu yöntemleri birlikte kullanma
 
-Şunları unutmayın:
+Aşağıdakileri unutmayın:
 
-- Hiçbir Koşullu Erişim ilkeniz etkinleştirilmişse, güvenlik varsayılanlarını etkinleştiresiniz.
-- Güvenlik varsayılanlarını etkinleştirdiyseniz hiçbir Koşullu Erişim ilkelerini etkinleştiresiniz.
+- Koşullu Erişim ilkeleri etkinse güvenlik varsayılanlarını etkinleştiremezsiniz.
+- Güvenlik varsayılanları etkinse koşullu erişim ilkelerini etkinleştiremezsiniz.
 
-Güvenlik varsayılanları etkinse, tüm yeni kullanıcılardan MFA kaydı ve Microsoft Authenticator istenir. 
+Güvenlik varsayılanları etkinse, tüm yeni kullanıcılardan MFA kaydı ve Microsoft Authenticator uygulamasının kullanımı istenir. 
 
-Bu tabloda, güvenlik varsayılanları ve Koşullu Erişim ilkeleriyle MFA'nın etkinleştirilmesi sonuçları gösterir.
+Bu tabloda, MFA'nın güvenlik varsayılanları ve Koşullu Erişim ilkeleriyle etkinleştirilmesinin sonuçları gösterilir.
 
 | Yöntem | Etkin | Devre dışı | Ek kimlik doğrulama yöntemi |
 |:-------|:-----|:-------|:-------|
-| **Güvenlik varsayılanları**  | Koşullu Erişim ilkeleri kullanama | Koşullu Erişim ilkelerini kullanabilir | Microsoft Authenticator uygulaması |
-| **Koşullu Erişim ilkeleri** | Etkinse, güvenlik varsayılanlarını etkinleştiresiniz | Tüm devre dışı bırakılmışsa güvenlik varsayılanlarını etkinleştir  | Kullanıcı MFA kaydı sırasında belirtir  |
+| **Güvenlik varsayılanları**  | Koşullu Erişim ilkeleri kullanılamaz | Koşullu Erişim ilkelerini kullanabilir | Microsoft Authenticator uygulaması |
+| **Koşullu Erişim ilkeleri** | Etkinse, güvenlik varsayılanlarını etkinleştiremezsiniz | Tümü devre dışı bırakılırsa, güvenlik varsayılanlarını etkinleştirebilirsiniz  | Kullanıcı MFA kaydı sırasında belirtir  |
 ||||
 
-## <a name="zero-trust-identity-and-device-access-configurations"></a>Sıfır Güven kimliği ve cihaz erişimi yapılandırmaları
+## <a name="zero-trust-identity-and-device-access-configurations"></a>Sıfır Güven kimlik ve cihaz erişimi yapılandırmaları
 
-Sıfır Güven kimliği ve cihaz erişimi ayarları ve ilkeleri, belirli bir erişim isteğinin verili olup olmadığını ve hangi koşullar altında ver verilmesi gerektiğini belirleyen Koşullu Erişim, Intune ve Azure AD Kimlik Koruması ilkeleriyle birleştirilmiş, önkoşul özellikleri ve ayarları önerilir. Bu belirleme, oturum açma kullanıcının hesabına, kullanılan cihaza, kullanıcının erişim için kullandığı uygulamaya, erişim isteğinin bulunduğu konuma ve isteğin risklerinin değerlendirmesine dayalıdır. Bu özellik, kritik kaynaklarınıza yalnızca onaylı kullanıcıların ve cihazların erişmelerini sağlamaya yardımcı olur.
+Sıfır Güven kimlik ve cihaz erişim ayarları ve ilkeleri, koşullu erişim, Intune ve Belirli bir erişim isteğinin verilip verilmeyeceğini ve hangi koşullar altında verilmesi gerektiğini belirleyen Azure AD Kimlik Koruması ilkeleriyle birlikte önkoşul özellikleri ve bunların ayarları önerilir. Bu belirleme, oturum açma işleminin kullanıcı hesabına, kullanılan cihaza, kullanıcının erişim için kullandığı uygulamaya, erişim isteğinin yapıldığı konuma ve istek riskinin değerlendirmesine dayanır. Bu özellik, kritik kaynaklarınıza yalnızca onaylı kullanıcıların ve cihazların erişebilmesini sağlamaya yardımcı olur.
 
 >[!Note]
->Azure AD Kimlik Koruması için Azure AD Premium P2 lisansları gerekir ve bu lisanslar Microsoft 365 E5.
+>Azure AD Kimlik Koruması, Microsoft 365 E5 dahil Azure AD Premium P2 lisansları gerektirir.
 >
 
 Kimlik ve cihaz erişim ilkeleri üç katmanda kullanılacak şekilde tanımlanır: 
 
-- Taban çizgisi koruması, uygulamalarınıza ve verilerinize erişen kimlikleriniz ve cihazlarınız için en düşük güvenlik düzeyidir.
-- Hassas koruma, belirli veriler için ek güvenlik sağlar. Kimlikler ve cihazlar daha yüksek güvenlik ve cihaz sistem durumu gereksinimlerine tabi olur.
-- Çok düzenlemeye tabi veya sınıflandırılmış verilerin olduğu ortamların koruması, genellikle üst düzeyde sınıflandırılmış, ticari sırlar içeren veya veri düzenlemelerine tabi olan az miktarda veriye yöneliktir. Kimlikler ve cihazlar çok daha yüksek düzeyde güvenlik ve cihaz sistem durumu gereksinimlerine tabi olur. 
+- Temel koruma, uygulamalarınıza ve verilerinize erişen kimlikleriniz ve cihazlarınız için en düşük güvenlik düzeyidir.
+- Hassas koruma, belirli veriler için ek güvenlik sağlar. Kimlikler ve cihazlar daha yüksek düzeyde güvenlik ve cihaz durumu gereksinimlerine tabidir.
+- Yüksek oranda düzenlenmiş veya sınıflandırılmış verilere sahip ortamlar için koruma, genellikle yüksek oranda sınıflandırılmış, ticari gizli diziler içeren veya veri düzenlemelerine tabi olan küçük miktarlardaki verilere yöneliktir. Kimlikler ve cihazlar çok daha yüksek güvenlik ve cihaz durumu gereksinimlerine tabidir. 
 
 Bu katmanlar ve bunlara karşılık gelen yapılandırmalar verileriniz, kimlikleriniz ve cihazlarınız arasında tutarlı koruma düzeyleri sağlar.
 
-Microsoft; güvenlik, güvenlik özellikleri ve güvenlik özellikleri için belirli ayarlar da dahil olmak üzere, kuruluşta Sıfır Güveni kimliği ve cihaz erişim ilkelerinin yapılandırılmasını Microsoft Teams Exchange Online SharePoint. Daha fazla bilgi için bkz. [Sıfır Güven kimliği ve cihaz erişimi yapılandırmaları](../security/office-365-security/microsoft-365-policies-configurations.md).
+Microsoft, Microsoft Teams, Exchange Online ve SharePoint için belirli ayarlar dahil olmak üzere kuruluşunuzda Sıfır Güven kimlik ve cihaz erişim ilkelerini yapılandırmanızı ve dağıtmanızı kesinlikle önerir. Daha fazla bilgi için bkz. [kimlik ve cihaz erişim yapılandırmalarını Sıfır Güven](../security/office-365-security/microsoft-365-policies-configurations.md).
 
-## <a name="azure-ad-identity-protection"></a>Azure AD Identity Protection
+## <a name="azure-ad-identity-protection"></a>Azure AD Kimlik Koruması
 
-Bu bölümde, kimlik bilgilerinin güvenliği tehlikeye atıldığında bir saldırganın, kuruluşun bulut hizmetlerine ve verilerine erişim elde etmek için kullanıcının hesap adını ve parolasını belirlemesi gereken ilkeler yapılandırmayı öğrenirsiniz. Azure AD Identity Protection, bir saldırganın kullanıcı hesabının kimlik bilgilerinden ödün vermesini önlemeye yardımcı olmak için çeşitli yollar sağlar.
+Bu bölümde, bir saldırganın bir kuruluşun bulut hizmetlerine ve verilerine erişim kazanmak için kullanıcının hesap adını ve parolasını belirlediği kimlik bilgileri güvenliğinin aşılmasına karşı koruma sağlayan ilkeleri yapılandırmayı öğreneceksiniz. Azure AD Kimlik Koruması, bir saldırganın kullanıcı hesabının kimlik bilgilerini tehlikeye atmasını önlemeye yardımcı olmak için çeşitli yollar sağlar.
 
-Azure AD Kimlik Koruması ile şunları kullanabilirsiniz:
+Azure AD Kimlik Koruması ile şunları yapabilirsiniz:
 
-|Özellik|Açıklama|
+|Yeteneği|Açıklama|
 |:---------|:---------|
-| Kuruluş kimlikleri olası güvenlik açıklarını belirleme ve bu güvenlik açıklarını belirleme | Azure AD, makine öğrenimi aracılığıyla oturum açma ve oturum açma sonrası etkinlikleri gibi şüpheli etkinlikleri algılar. Azure AD Kimlik Koruması, bu verileri kullanarak sorunları değerlendirmeye ve önlem almaya yardımcı olan raporlar ve uyarılar üretir.|
-|Kuruluş kimlikleriyle ilgili şüpheli eylemleri algılama ve bunları otomatik olarak yanıtlama|Belirli bir risk düzeyine ulaşıldığında algılanan sorunları otomatik olarak yanıtlayan risk tabanlı ilkeleri yapılandırabilirsiniz. Bu ilkeler, Azure AD ve Microsoft Intune tarafından sağlanan diğer Koşullu Erişim denetimlerine ek olarak, erişimi otomatik olarak engelleyebilir veya parola sıfırlamaları gibi düzeltme eylemleri gerçekleştirerek sonraki oturum açma işlemleri için Azure AD Multi-Factor Authentication'ın gerekli olduğunu gösterir. |
-| Şüpheli olayları araştırma ve bunları yönetim eylemleriyle çözme | Güvenlik olayıyla ilgili bilgileri kullanarak risk olaylarını araştırebilirsiniz. Temel iş akışları, soruşturmaları izlemek ve parola sıfırlaması gibi düzeltme eylemleri başlatmak için kullanılabilir. |
+| Kuruluşunuzun kimliklerindeki olası güvenlik açıklarını belirleme ve giderme | Azure AD, oturum açma işlemleri ve oturum açma sonrası etkinlikleri gibi anomalileri ve şüpheli etkinlikleri algılamak için makine öğrenmesini kullanır. Azure AD Identity Protection bu verileri kullanarak sorunları değerlendirmenize ve işlem yapmanıza yardımcı olacak raporlar ve uyarılar oluşturur.|
+|Kuruluşunuzun kimlikleri ile ilgili şüpheli eylemleri algılama ve bunları otomatik olarak yanıtlama|Belirtilen risk düzeyine ulaşıldığında algılanan sorunlara otomatik olarak yanıt veren risk tabanlı ilkeler yapılandırabilirsiniz. Bu ilkeler, Azure AD ve Microsoft Intune tarafından sağlanan diğer Koşullu Erişim denetimlerine ek olarak erişimi otomatik olarak engelleyebilir veya parola sıfırlamaları ve sonraki oturum açma işlemleri için Azure AD Multi-Factor Authentication gerektirme gibi düzeltici eylemler gerçekleştirebilir. |
+| Şüpheli olayları araştırma ve yönetim eylemleriyle çözme | Güvenlik olayı hakkındaki bilgileri kullanarak risk olaylarını araştırabilirsiniz. Araştırmaları izlemek ve parola sıfırlama gibi düzeltme eylemleri başlatmak için temel iş akışları kullanılabilir. |
 |||
 
-[Azure AD Kimlik Koruması hakkında daha fazla bilgi edinin](/azure/active-directory/identity-protection/overview-identity-protection).
+[Bkz. Azure AD Kimlik Koruması hakkında daha fazla bilgi](/azure/active-directory/identity-protection/overview-identity-protection).
 
-[Azure AD Identity Protection'i etkinleştirme adımlarına bakın](/azure/active-directory/identity-protection/howto-identity-protection-configure-risk-policies).
+[Azure AD Kimlik Koruması'nı etkinleştirme adımlarına](/azure/active-directory/identity-protection/howto-identity-protection-configure-risk-policies) bakın.
 
-## <a name="admin-technical-resources-for-mfa-and-secure-sign-ins"></a>MFA ve güvenli oturum açmalar için yönetici teknik kaynakları
+## <a name="admin-technical-resources-for-mfa-and-secure-sign-ins"></a>MFA ve güvenli oturum açma işlemleri için yönetici teknik kaynakları
 
 - [Microsoft 365 için MFA](../admin/security-and-compliance/multi-factor-authentication-microsoft-365.md)
-- [Dağıtım kimliği Microsoft 365](deploy-identity-solution-overview.md)
+- [Microsoft 365 için kimlik dağıtma](deploy-identity-solution-overview.md)
 - [Azure Academy Azure AD eğitim videoları](https://www.youtube.com/watch?v=pN8o0owHfI0&list=PL-V4YVm6AmwUFpC3rXr2i2piRQ708q_ia)
-- [Azure AD Multi-Factor Authentication kayıt ilkesi yapılandırma](/azure/active-directory/identity-protection/howto-identity-protection-configure-mfa-policy)
+- [Azure AD Multi-Factor Authentication kayıt ilkesini yapılandırma](/azure/active-directory/identity-protection/howto-identity-protection-configure-mfa-policy)
 - [Kimlik ve cihaz erişimi yapılandırmaları](../security/office-365-security/microsoft-365-policies-configurations.md)
 
 ## <a name="next-step"></a>Sonraki adım
 
 ![Kimlik modelinizi dağıtma](../media/deploy-identity-solution-overview/deploy-identity-solution-identity-infrastructure.png)
 
-4. Adım ile devam edin ve seçilen kimlik modelinize dayalı kimlik altyapısını dağıtın:
+Seçtiğiniz kimlik modeline göre kimlik altyapısını dağıtmak için 4. Adımla devam edin:
 
 - [Yalnızca bulut kimliği](cloud-only-identities.md)
 - [Karma kimlik](prepare-for-directory-synchronization.md)

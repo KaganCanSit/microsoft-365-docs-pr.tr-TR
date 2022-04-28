@@ -18,12 +18,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 1709597d10b140124501fd0dc7349e8fc4342bb6
-ms.sourcegitcommit: e13c8fc28c68422308c9d356109797cfcf6f77be
+ms.openlocfilehash: 14ec731eebe21f6b399e03d445fef248b8675026
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/14/2022
-ms.locfileid: "64841744"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098768"
 ---
 # <a name="onboard-windows-servers-to-the-microsoft-defender-for-endpoint-service"></a>Uç Nokta için Microsoft Defender hizmetine Windows sunucuları ekleme
 
@@ -174,6 +174,11 @@ Yükleyici paketi, aşağıdaki bileşenlerin bir güncelleştirme aracılığı
 **Windows Server 2012 R2 ve 2016'da Uç Nokta için Microsoft Defender için güncelleştirme paketi**
 
 EDR Algılayıcı bileşenine yönelik düzenli ürün iyileştirmeleri ve düzeltmeleri almak için [KB5005292](https://go.microsoft.com/fwlink/?linkid=2168277) Windows Update uygulandığından veya onay aldığından emin olun. Ayrıca koruma bileşenlerini güncel tutmak için bkz. [Microsoft Defender Virüsten Koruma güncelleştirmelerini yönetme ve temelleri uygulama](/microsoft-365/security/defender-endpoint/manage-updates-baselines-microsoft-defender-antivirus#monthly-platform-and-engine-versions).
+
+
+Windows Server Update Services (WSUS) ve/veya Microsoft Endpoint Configuration Manager kullanıyorsanız, bu yeni "EDR Algılayıcısı için Uç Nokta için Microsoft Defender güncelleştirmesi" kategorisi altında kullanılabilir" Uç Nokta için Microsoft Defender".
+
+
 
 ### <a name="onboarding-steps-summary"></a>Ekleme adımları özeti
 

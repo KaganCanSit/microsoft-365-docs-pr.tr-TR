@@ -2,8 +2,8 @@
 title: eBulma (Premium) olayına gözetimsiz veri kaynakları ekleme
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -15,12 +15,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Bir eBulma (Premium) olayına gözetimsiz veri kaynakları ekleyebilir ve veri kaynağına ayrı tutabilirsiniz. Gözaltı olmayan veri kaynakları yeniden dizinlenir, bu nedenle kısmen dizinlenmiş olarak işaretlenmiş tüm içerikler tamamen ve hızlı bir şekilde aranabilir hale getirmek için yeniden işlenir.
-ms.openlocfilehash: 2f5825f514dfc8f99fc7a6006d1fd30028515c7b
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 86011a0f19dcb8f46041f4c0aa7c91d89e4e2198
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64991896"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65097986"
 ---
 # <a name="add-non-custodial-data-sources-to-an-ediscovery-premium-case"></a>eBulma (Premium) olayına gözetimsiz veri kaynakları ekleme
 

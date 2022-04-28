@@ -1,14 +1,14 @@
 ---
-title: E-postada yönetici Microsoft 365 İş Ekstra
+title: Microsoft 365 İş Ekstra'de yönetici hesaplarınızı koruma
 f1.keywords:
 - NOCSH
-ms.author: sharik
-author: SKjerland
-manager: scotv
+ms.author: deniseb
+author: denisebmsft
+manager: dansimp
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection:
 - Adm_O365
 - M365-subscription-management
@@ -21,66 +21,72 @@ ms.custom:
 search.appverid:
 - BCS160
 - MET150
-description: Yeni bir kuruluşta yönetici hesaplarını ayarlamayı ve Microsoft 365 İş Ekstra.
-ms.openlocfilehash: ad8ef2dfe1cbffe6e22e320a47d0907d4f1182e7
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Microsoft 365 İş Ekstra'da yönetici hesaplarınızı ayarlamayı ve korumayı öğrenin.
+ms.openlocfilehash: b054267264b8440929559ad1a2e335449f3c0309
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63704772"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65091533"
 ---
-# <a name="protect-your-administrator-accounts-in-microsoft-365-business-premium"></a>E-postada yönetici Microsoft 365 İş Ekstra
+# <a name="protect-your-administrator-accounts-in-microsoft-365-business-premium"></a>Microsoft 365 İş Ekstra'de yönetici hesaplarınızı koruma
 
-Yönetici hesapları yükseltilmiş ayrıcalıklarla sahip olduğundan, bunlar korsanlar ve siber suçlular için değerli hedeftir. Bu makalede şu açıklanmıştır:
+Yönetici hesapları yükseltilmiş ayrıcalıklarla birlikte geldiğinden, bilgisayar korsanları ve siber suçlular için değerli hedeflerdir. Bu makalede şunlar açıklanmaktadır:
 
 - Acil durumlar için ek yönetici hesabı ayarlama.
-- Bu hesapların korunması.
+- Bu hesapları koruma.
 
-E-posta Microsoft 365 ve bilginizi girerseniz, otomatik olarak Genel yönetici olurnuz. Genel yönetici, Microsoft yönetim merkezinde kullanıcı hesaplarının ve tüm diğer ayarların tam denetimine sahip olur, ancak erişim dereceleri değişen birçok farklı yönetici hesabı vardır. Her [tür yönetici rolüne](/office365/admin/add-users/about-admin-roles) ilişkin farklı erişim düzeyleri hakkında bilgi için bkz. yönetici rolleri.
+Microsoft 365 kaydolup bilgilerinizi girdiğinizde otomatik olarak Genel Yönetici olursunuz (Genel yönetici olarak da adlandırılır). Genel yönetici, kullanıcı hesaplarının ve Microsoft yönetim merkezindeki diğer tüm ayarların ([https://admin.microsoft.com](https://admin.microsoft.com) ) nihai denetimine sahiptir, ancak farklı erişim derecelerine sahip birçok farklı türde yönetici hesabı vardır. Her [yönetici rolü](/office365/admin/add-users/about-admin-roles) türü için farklı erişim düzeyleri hakkında bilgi için yönetici rolleri hakkında bilgi için bkz.
 
 ## <a name="create-additional-admin-accounts"></a>Ek yönetici hesapları oluşturma
 
-Yönetici hesaplarını yalnızca yönetim için kullanın. Yöneticilerin, Office uygulamalarının düzenli kullanımı için ayrı bir kullanıcı hesabı olması ve yalnızca hesapları ve cihazları yönetmek için gerekli olduğu zaman ve diğer yönetici işlevleri üzerinde çalışırken yönetim hesaplarını kullanmaları gerekir. Ayrıca bu lisansları ödemeniz gerek Microsoft 365 yönetici hesaplarından kaldırmak da iyi bir fikirdir.
+Yalnızca yönetim için yönetici hesaplarını kullanın. Yöneticiler, Office uygulamalarının düzenli kullanımı için ayrı bir kullanıcı hesabına sahip olmalı ve yalnızca hesap ve cihazları yönetmek için gerektiğinde ve diğer yönetici işlevleri üzerinde çalışırken yönetim hesaplarını kullanmalıdır. Ayrıca, Microsoft 365 lisansını yönetici hesaplarından kaldırmak da iyi bir fikirdir, böylece bunlar için ödeme yapmak zorunda değilsiniz.
 
-Başka bir güvenilir çalışana yönetici erişimi vermek için en az bir Genel yönetici hesabı daha ayarlamak gerekir. Ayrıca, kullanıcı yönetimi için ayrı yönetici hesapları da oluşturabilirsiniz (bu rol, Kullanıcı yönetimi **yöneticisi olarak adlandırılan).** Daha fazla bilgi için bkz [. yönetici rolleri hakkında](/office365/admin/add-users/about-admin-roles).
+Yöneticiye başka bir güvenilir çalışana erişim vermek için en az bir ek Genel yönetici hesabı ayarlamak istersiniz. Kullanıcı yönetimi için ayrı yönetici hesapları da oluşturabilirsiniz (bu role **Kullanıcı yönetimi yöneticisi** adı verilir). Daha fazla bilgi için bkz. [yönetici rolleri hakkında](/office365/admin/add-users/about-admin-roles).
 
 Ek yönetici hesapları oluşturmak için:
 
- 1. Yönetim merkezine <a href="https://go.microsoft.com/fwlink/p/?linkid=837890" target="_blank">gidin ve sol</a> gezintide **Kullanıcılar** \> **Etkin Kullanıcılar'ı** seçin.
+ 1. <a href="https://go.microsoft.com/fwlink/p/?linkid=837890" target="_blank">Microsoft 365 yönetim merkezi</a> gidin ve sol gezinti bölmesinde **Kullanıcılar** \> **Etkin kullanıcılar'ı** seçin.
 
-    ![Sol gezintide Kullanıcılar'ı ve ardından Etkin kullanıcılar'ı seçin.](../media/Activeusers.png)
+    ![Sol gezinti bölmesinde Kullanıcılar'ı ve ardından Etkin kullanıcılar'ı seçin.](../media/Activeusers.png)
 
- 2. Etkin **kullanıcılar sayfasında** , sayfanın **en üstünde Kullanıcı** ekle'yi seçin ve Yeni **kullanıcı panelinde adı** ve diğer bilgileri girin.
- 3. Roller bölümünü **genişletin** ve bu kullanıcıya **genel yönetici erişimi** vermek için Genel yönetici'yi seçin. Ayrıca Özelleştirilmiş **yönetici'yi seçebilir** ve görüntülenen rollerden herhangi birini seçebilirsiniz.
+ 2. **Etkin kullanıcılar** sayfasında, sayfanın üst kısmındaki **Kullanıcı ekle'yi** seçin ve **Yeni kullanıcı** panelinde adı ve diğer bilgileri girin.
 
-    Alternatif e-posta adresi metin **kutusuna alternatif bir e-posta** girin. Kilitli olursanız parola bilgilerini kurtarmak için bu adresi kullanabilirsiniz. Genel yöneticiler için bu adrese bir fatura bildirimi de gönderilir.
+ 3. **Roller** bölümünü genişletin ve bu kullanıcıya genel yönetici erişimi vermek için **Genel yönetici** seçin. Ayrıca **Özelleştirilmiş yönetici'yi** ve görüntülenen rollerden herhangi birini seçebilirsiniz.
+
+    Alternatif e-posta adresi metin kutusuna alternatif **bir e-posta** girin. Kilitlenirseniz parola bilgilerinizi kurtarmak için bu adresi kullanabilirsiniz. Genel yöneticiler için bu adrese bir faturalama bildirimi de gönderilir.
 
     ![Yönetici rolünü seçin.](../media/adminroles.png)
 
- 4. Ürün **lisansları bölümünde**, Microsoft 365 İş için seçiciyi **Kapalı'ya** ve Ürün lisansı **olmayan kullanıcı oluştur seçeneğini De**' **tıklatın**.
+ 4. **Ürün lisansları** bölümünde, **Microsoft 365 İş** seçicisini **Kapalı** ve **Ürün lisansı olmayan kullanıcı oluştur** seçeneğini **Açık** olarak taşıyın.
 
     ![Ürün lisansını seçin.](../media/productlicense.png)
 
 ## <a name="create-an-emergency-admin-account"></a>Acil durum yönetici hesabı oluşturma
 
-Çok faktörlü kimlik doğrulaması (MFA) ile ayarlanmayacak bir yedek hesabı da oluşturmanız gerekir; böylece kendinizi yanlışlıkla kilitlemezsiniz (örneğin, ikinci doğrulama biçimi olarak kullanmakta olduğu telefonunuzu kaybedersiniz). Bu hesabın parolasının bir tümcecik veya en az 16 karakter uzunluğunda olduğundan emin olun. Bu çoğunlukla "break-glass hesabı" olarak adlandırılır.
+Ayrıca, yanlışlıkla kendinizi kilitlememek için çok faktörlü kimlik doğrulaması (MFA) ile ayarlanmamış bir yedekleme hesabı da oluşturmanız gerekir (örneğin, ikinci bir doğrulama biçimi olarak kullandığınız telefonunuzu kaybederseniz). Bu hesabın parolasının bir tümcecik veya en az 16 karakter uzunluğunda olduğundan emin olun. Bu genellikle "kırılan hesap" olarak adlandırılır.
 
-## <a name="create-a-user-account-for-yourself"></a>Kendiniz için bir kullanıcı hesabı oluşturun
+## <a name="create-a-user-account-for-yourself"></a>Kendiniz için bir kullanıcı hesabı oluşturma
 
-Postayı kontrol etmek de dahil olmak üzere, organizasyonla işbirliğine katılmak için kullanıcı hesabını kullanın. Bu, yönetici kimlik bilgilerinizin  *Hervez.Chavez <span></span>@Contoso.org'a* benzey olduğu ve normal kullanıcı hesabınız *Dayı <span></span>@Ali'ye benzer Contoso.com*.
+Posta denetimi de dahil olmak üzere kuruluşunuzla işbirliğine katılmak için kullanıcı hesabınızı kullanın. Bu, yönetici kimlik bilgilerinizin  *Alice.Chavez <span></span>@Contoso.org* ve normal kullanıcı hesabınızın *Alice <span></span>@Contoso.com* gibi olabileceği anlamına gelir.
 
-Yeni kullanıcı hesabı oluşturmak için:
+Yeni bir kullanıcı hesabı oluşturmak için:
 
-1. Yönetim merkezine <a href="https://go.microsoft.com/fwlink/p/?linkid=837890" target="_blank">gidin ve sol</a> gezintide **Kullanıcılar** \> **Etkin Kullanıcılar'ı** seçin.
-2. Etkin **kullanıcılar sayfasında** , sayfanın **en üstünde Kullanıcı** ekle'yi seçin ve Yeni **kullanıcı panelinde adı** ve diğer bilgileri girin.
-3. Roller bölümünü **genişletin** ve Kullanıcı (yönetim **erişimi yok) 'ı seçin**.
-4. Ürün **lisansları bölümünde**, İş için seçiciyi **Microsoft 365'a** **taşıma**.
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=837890" target="_blank">Microsoft 365 yönetim merkezi</a> gidin ve sol gezinti bölmesinde **Kullanıcılar** \> **Etkin kullanıcılar'ı** seçin.
 
-## <a name="turn-on-security-defaults"></a>Güvenlik varsayılanlarını açma
+2. **Etkin kullanıcılar** sayfasında, sayfanın üst kısmındaki **Kullanıcı ekle'yi** seçin ve **Yeni kullanıcı** panelinde adı ve diğer bilgileri girin.
 
-Güvenlik varsayılanları, Microsoft'un sizin organizasyonunız adına yönetmesi için önceden yapılandırılmış güvenlik ayarları sağlayarak kimliğinizin korunmasına yardımcı olur. Bu ayarlar arasında, tüm yöneticiler ve kullanıcı hesapları için Multi-Factor Authentication'ın (MFA) etkinleştirilmesi yer almaktadır. Güvenlik varsayılanları hakkında daha fazla bilgi edinmek ve bunları etkinleştirmeyi öğrenmek için bkz [. Güvenlik varsayılanlarını açma](m365bp-conditional-access.md).
+3. **Roller** bölümünü genişletin ve **Kullanıcı (yönetici erişimi yok)** seçeneğini belirleyin.
+
+4. **Ürün lisansları** bölümünde, **Microsoft 365 İş** seçicisini **Açık** olarak taşıyın.
 
 ## <a name="additional-recommendations"></a>Ek öneriler
 
-- Yönetici hesaplarını kullanmadan önce, kişisel e-posta hesapları da dahil olmak üzere tüm ilgili olmayan tarayıcı oturumlarını ve uygulamalarını kapatın. Özel veya gizli tarayıcı pencerelerini de kullanabilirsiniz.
-- Yönetici görevlerini tamamladıktan sonra, tarayıcı oturumunu oturumundan çıkmayı sağlar.
+- Yönetici hesaplarını kullanmadan önce, kişisel e-posta hesapları da dahil olmak üzere tüm ilgisiz tarayıcı oturumlarını ve uygulamalarını kapatın. Özel veya gizli tarayıcı pencerelerinde de kullanabilirsiniz.
+
+- Yönetici görevlerini tamamladıktan sonra tarayıcı oturumunu kapatmış olmanız gerekir.
+
+## <a name="next-objective"></a>Sonraki hedef
+
+[Güvenlik varsayılanlarını açma adımlarını](m365bp-conditional-access.md) izleyin.
+

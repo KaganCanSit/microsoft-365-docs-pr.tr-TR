@@ -2,8 +2,8 @@
 title: Facebook business sayfaları verilerini arşivleye bağlayıcı dağıtma
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -16,12 +16,12 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
 ROBOTS: NOINDEX, NOFOLLOW
 description: Yöneticiler, Facebook İş sayfalarını Microsoft 365 içeri aktarmak ve arşiv uygulamak için yerel bir bağlayıcı ayarlayabilir. Bu veriler Microsoft 365 aktarıldıktan sonra, kuruluşunuzun Facebook verilerinin idaresini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
-ms.openlocfilehash: b58b3f1707a8c3bb52aa7fc5ebc9c359ef9a8a97
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: b3f3770b4e3cf8415111ebdd1881905ae21f4739
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64998782"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098878"
 ---
 # <a name="deploy-a-connector-to-archive-facebook-business-pages-data"></a>Facebook business sayfaları verilerini arşivleye bağlayıcı dağıtma
 

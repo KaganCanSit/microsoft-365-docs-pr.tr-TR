@@ -2,8 +2,8 @@
 title: Microsoft 365'da Oracle verilerinin Cisco Jabber'ı arşivlemesini sağlamak için bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -12,12 +12,12 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Microsoft Purview uyumluluk portalında Oracle'daki Cisco Jabber'dan Microsoft 365 verileri içeri aktarmak ve arşivleme amacıyla bağlayıcıyı ayarlamayı ve kullanmayı öğrenin.
-ms.openlocfilehash: 33714412db56066b25a1bda03fb4a92c6c64f917
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: b006f30300c6f2af8e5da6386997a4259c2dc98c
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64992666"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65090593"
 ---
 # <a name="set-up-a-connector-to-archive-cisco-jabber-on-oracle-data"></a>Oracle verilerinde Cisco Jabber'ı arşivleme bağlayıcısı ayarlama
 

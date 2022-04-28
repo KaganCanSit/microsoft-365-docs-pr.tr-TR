@@ -2,8 +2,8 @@
 title: Office 365 için Microsoft Defender'da yeni uyarı ilkeleri
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 audience: Admin
 ms.topic: reference
@@ -19,12 +19,12 @@ ms.custom:
 - admindeeplinkDEFENDER
 ROBOTS: noindex,nofollow
 description: Office 365 için Microsoft Defender için yeni uyarı ilkeleri yayınlıyoruz. Ayrıca, yeni ilkelerle değiştirilen iki mevcut uyarı ilkesi de kullanımdan kaldırılmıştır.
-ms.openlocfilehash: 78f359e273054b7b103fc61bbee9b1555ad843da
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: c883a352bad5af918d605bd8fa95112a7df07bd3
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64991962"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65098008"
 ---
 # <a name="new-alert-policies-in-microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender'da yeni uyarı ilkeleri
 

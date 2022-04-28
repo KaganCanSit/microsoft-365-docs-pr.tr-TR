@@ -2,8 +2,8 @@
 title: eBulma'da belge meta veri alanları (Premium)
 f1.keywords:
 - NOCSH
-ms.author: markjjo
-author: markjjo
+ms.author: v-tophillips
+author: v-tophillips
 manager: laurawi
 ms.date: ''
 audience: Admin
@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 ms.assetid: ''
 description: Bu makale, Microsoft 365'de Microsoft Purview eKeşif (Premium) örneğinde bir inceleme kümesindeki belgelerin meta veri alanlarını tanımlar.
-ms.openlocfilehash: 4e1efbf48cf4313682095b69eb97f52d00b9ceaf
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: d0e188d227e3000ba6811204c74cf746b00bc0e2
+ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "65001114"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65097788"
 ---
 # <a name="document-metadata-fields-in-ediscovery-premium"></a>eBulma'da belge meta veri alanları (Premium)
 
