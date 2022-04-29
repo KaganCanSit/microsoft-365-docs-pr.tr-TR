@@ -1,5 +1,5 @@
 ---
-title: Kullanıcılara Güvenlik ve Uyumluluk Merkezi'& verme
+title: Kullanıcılara Güvenlik ve Uyumluluk Merkezi'ne erişim izni verme
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -16,55 +16,55 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 2cfce2c8-20c5-47f9-afc4-24b059c1bd76
-description: Kullanıcıların güvenlik ve uyumluluk özelliklerinden herhangi birini yönete Microsoft 365 için önce & Güvenlik ve Uyumluluk Merkezi'nde izinlerin atanları gerekir.
+description: Kullanıcılara güvenlik veya uyumluluk özelliklerinden herhangi birini yönetebilmeleri için önce Microsoft 365 Güvenlik & Uyumluluk Merkezi'nde izinlerin atanması gerekir.
 ms.custom: seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 5af3d045b174c4405dc2060fea1db22b3b4066ac
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 5bf2f6f99af13de0858b041807f01e25e3516da8
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63680697"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65130768"
 ---
-# <a name="give-users-access-to-the-security--compliance-center"></a>Kullanıcılara Güvenlik ve Uyumluluk Merkezi'& verme
+# <a name="give-users-access-to-the-security--compliance-center"></a>Kullanıcılara Güvenlik ve Uyumluluk Merkezi'ne erişim izni verme
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
-**Geçerli olduğu yer:**
+**Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Kullanıcıların güvenlik ve uyumluluk özelliklerinden herhangi birini yönetemeden & için Güvenlik ve Uyumluluk Merkezi'nde izinlerin atanları gerekir. Güvenlik ve Uyumluluk Merkezi'nde OrganizationManagement rol grubunun genel yöneticisi veya & olarak, kullanıcılara bu izinleri veebilirsiniz. Kullanıcılar yalnızca onlara erişim izni vermekte olduğunuz güvenlik ve uyumluluk özelliklerini yönetebilir.
+Kullanıcılara güvenlik veya uyumluluk özelliklerinden herhangi birini yönetebilmeleri için önce Güvenlik & Uyumluluk Merkezi'nde izinlerin atanması gerekir. Güvenlik & Uyumluluk Merkezi'ndeki OrganizationManagement rol grubunun genel yöneticisi veya üyesi olarak bu izinleri kullanıcılara verebilirsiniz. Kullanıcılar yalnızca erişim verdiğiniz güvenlik veya uyumluluk özelliklerini yönetebilir.
 
-Güvenlik ve Uyumluluk Merkezi'nde kullanıcılara verebilirsiniz farklı izinler hakkında daha fazla & için Güvenlik ve Uyumluluk Merkezi'nde [& bakın](permissions-in-the-security-and-compliance-center.md).
+Güvenlik & Uyumluluk Merkezi'nde kullanıcılara verebileceğiniz farklı izinler hakkında daha fazla bilgi için [Güvenlik & Uyumluluk Merkezi'nde İzinler'e](permissions-in-the-security-and-compliance-center.md) göz atın.
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Başlamadan önce bilmeniz gerekenler
 
-- Bu makaledeki adımları tamamlamak için Güvenlik ve Uyumluluk Merkezi'nde OrganizationManagement rol grubunun bir üyesi veya genel yönetici & gerekir.
+- Bu makaledeki adımları tamamlamak için genel yönetici veya Güvenlik & Uyumluluk Merkezi'nde OrganizationManagement rol grubunun üyesi olmanız gerekir.
 
-- Güvenlik Ve Uyumluluk & rol grupları, Uyumluluk Merkezi'nde yer alan rol gruplarına benzer adlara Exchange Online, ancak aynı değildir.
+- Güvenlik & Uyumluluk Merkezi rol gruplarının adları Exchange Online rol gruplarıyla benzer olabilir, ancak aynı değildir.
 
-- Rol grubu üyelikleri Güvenlik ve Uyumluluk Merkezi Exchange Online arasında & paylaşılmaz.
+- Rol grubu üyelikleri Exchange Online ile Güvenlik & Uyumluluk Merkezi arasında paylaşılamaz.
 
-- Temsilcili Erişim İzni (DAP) Adına Yönetme (AOBO) izinleriyle birlikte iş ortakları Güvenlik ve Uyumluluk Merkezi'& erişamaz.
+- Adına Yönetme (AOBO) izinlerine sahip Temsilci Erişim İzni (DAP) iş ortakları Güvenlik & Uyumluluk Merkezi'ne erişemez.
 
-## <a name="use-the-security--compliance-center-to-give-another-user-access-to-the-security--compliance-center"></a>Başka bir kullanıcıya & Güvenlik ve Uyumluluk Merkezi'ne erişim vermek için Güvenlik ve Uyumluluk & kullanma
+## <a name="use-the-security--compliance-center-to-give-another-user-access-to-the-security--compliance-center"></a>Başka bir kullanıcıya Güvenlik & Uyumluluk Merkezi'ne erişim vermek için Güvenlik & Uyumluluk Merkezi'ni kullanın
 
-1. Güvenlik ve Uyumluluk &'ne gidin <https://protection.office.com> ve ardından İzinler'e **gidin**. Doğrudan İzinler **sekmesine gitmek** için, 'i açın <https://protection.office.com/permissions>.
+1. Adresinde Güvenlik & Uyumluluk Merkezi'ni <https://protection.office.com> açın ve **İzinler'e** gidin. Doğrudan **İzinler** sekmesine gitmek için dosyasını açın <https://protection.office.com/permissions>.
 
-2. Rol grupları listesinden rol grubunu seçin ve düzenle **simgesine** ![tıklayın](../../media/O365-MDM-CreatePolicy-EditIcon.gif).
+2. Rol grupları listesinden rol grubunu seçin ve **Düzenle simgesine** tıklayın ![.](../../media/O365-MDM-CreatePolicy-EditIcon.gif).
 
-3. Rol grubunun özellikler sayfasında, Üyeler'in **altında** Ekle **Simgesi'ne**![ tıklayın.](../../media/ITPro-EAC-AddIcon.gif) ve eklemek istediğiniz kullanıcının (veya kullanıcıların) adını seçin.
+3. Rol grubunun özellikler sayfasında **Üyeler'in** altında **EkleEkle**![ Simgesi'ne tıklayın.](../../media/ITPro-EAC-AddIcon.gif) ve eklemek istediğiniz kullanıcının (veya kullanıcıların) adını seçin.
 
-4. Rol grubuna eklemek istediğiniz tüm kullanıcıları seçtikten sonra Ekle'ye ve **sonra Tamam'a\>** **tıklayın**.
+4. Rol grubuna eklemek istediğiniz tüm kullanıcıları seçtiğinizde **ekle'ye\>** ve ardından **Tamam'a** tıklayın.
 
 5. Bitirdiğinizde, **Kaydet**'i tıklatın.
 
-## <a name="use-security--compliance-center-powershell-to-give-another-user-access-to-the-security--compliance-center"></a>Başka bir & Güvenlik ve Uyumluluk Merkezi'ne erişmesi için PowerShell'i Güvenlik & kullanma
+## <a name="use-security--compliance-center-powershell-to-give-another-user-access-to-the-security--compliance-center"></a>Başka bir kullanıcıya Güvenlik & Uyumluluk Merkezi'ne erişim vermek için Güvenlik & Uyumluluk Merkezi PowerShell'i kullanma
 
-1. [Bağlan ve Uyumluluk & PowerShell'e.](/powershell/exchange/connect-to-scc-powershell)
+1. [Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
 
 2. Aşağıdaki sözdizimini kullanın:
 
@@ -80,18 +80,18 @@ Güvenlik ve Uyumluluk Merkezi'nde kullanıcılara verebilirsiniz farklı izinle
    Add-RoleGroupMember -Identity "Organization Management" -Member MatildaS
    ```
 
-Ayrıntılı söz dizimi ve parametre sorunları için [bkz. Add-RoleGroupMember](/powershell/module/exchange/add-rolegroupmember)
+Ayrıntılı söz dizimi ve parametre sorunları için bkz. [Add-RoleGroupMember](/powershell/module/exchange/add-rolegroupmember)
 
 ### <a name="how-do-you-know-this-worked"></a>Bunun çalıştığını nasıl anlarsınız?
 
-Güvenlik ve Uyumluluk Merkezi'ne başarıyla erişim & doğrulamak için, aşağıdaki adımlardan birini uygulayın:
+Güvenlik & Uyumluluk Merkezi'ne başarıyla erişim izni verdiğini doğrulamak için aşağıdaki adımlardan birini yapın:
 
-- Güvenlik ve Uyumluluk &'nde **İzinler'e gidin** ve rol grubunu seçin. Açılan ayrıntılar açılır grubunda, rol grubunun üyelerini doğrulayın.
+- Güvenlik & Uyumluluk Merkezi'nde **İzinler'e** gidin ve rol grubunu seçin. Açılan ayrıntılar açılır penceresinde rol grubunun üyelerini doğrulayın.
 
-- Güvenlik ve & Merkezi PowerShell'de \<RoleGroupName\> rol grubunun adını değiştirin ve aşağıdaki komutu çalıştırın:
+- Güvenlik & Uyumluluk Merkezi PowerShell'de öğesini rol grubunun adıyla değiştirin \<RoleGroupName\> ve aşağıdaki komutu çalıştırın:
 
   ```powershell
   Get-RoleGroupMember -Identity "<RoleGroupName>"
   ```
 
-  Ayrıntılı söz dizimi ve parametre bilgileri için bkz [. Get-RoleGroupMember](/powershell/module/exchange/Get-RoleGroupMember).
+  Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [Get-RoleGroupMember](/powershell/module/exchange/Get-RoleGroupMember).

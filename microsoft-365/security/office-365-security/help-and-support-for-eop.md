@@ -10,75 +10,75 @@ audience: ITPro
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.assetid: 64535a0a-1044-413f-8bc2-ed8e8a0bc54c
-description: Microsoft, kendi kendine destek ve yardım desteği de dahil olmak üzere EOP için çeşitli yerlerde ve yöntemlerde yardım sağlar.
+description: Microsoft, EOP için kendi kendine destek ve yardımlı destek de dahil olmak üzere çeşitli yer ve yöntemler için yardım sağlar.
 ms.technology: mdo
 ms.prod: m365-security
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 080a61b0ed20843d5962f1901b8d8fece73d8f4b
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 144e816a19f47960a70ef98de8f947d040348631
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63681050"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65131228"
 ---
 # <a name="help-and-support-for-eop"></a>EOP için yardım ve destek
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
-**Geçerli olduğu yer:**
+**Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Microsoft 365 posta kutusu olmayan Exchange Online veya tek başına Exchange Online Protection (EOP) kuruluşlarına posta kutusu olan Exchange Online kuruluşlarında, bu makalede listelenen teknik destek kaynakları, zorlukla ilgili zorluk çektiysanız yanıtları bulamanıza yardımcı olur EOP. Microsoft, kendi kendine destek ve yardım desteği de dahil olmak üzere EOP için çeşitli yerlerde ve yöntemlerde yardım sağlar.
+Exchange Online posta kutusu olmayan Exchange Online veya tek başına Exchange Online Protection (EOP) kuruluşlarında posta kutuları olan Microsoft 365 kuruluşlarda, bu makalede listelenen teknik destek kaynakları, sorun yaşıyorsanız yanıt bulmanıza yardımcı olur EOP. Microsoft, EOP için kendi kendine destek ve yardımlı destek de dahil olmak üzere çeşitli yer ve yöntemler için yardım sağlar.
 
 ## <a name="self-support-options"></a>Kendi kendine destek seçenekleri
 
-Oturum açtı sonra, Microsoft 365 yönetim merkezi hizmetlerinizin durumu hakkında bilgi sağlar. Ayrıca, hizmet durumu bölümü hizmetlerinizin geçerli durumunu, kesintiler ve kesintilere ilişkin ayrıntıları ve planlanan bakım zamanlarını listeler. Bu Microsoft 365 yönetim merkezi, bilinen sorunlar ve beklenen çözümlemeler hakkında da bilgi sağlar. Hizmet genelindeki bir olay sizi etkiliyorsa, bir iletişim uyarısı (genellikle çan simgesiyle birlikte) görüyor olun. Herhangi bir öğeye uygun şekilde okumanız ve bu öğeler üzerinde uygun eylemlerde çalışmanız önerilir. Hizmet durumu alanı hakkında daha fazla bilgi için bkz. [Hizmet durumu ve süreklilik](/office365/servicedescriptions/office-365-platform-service-description/service-health-and-continuity). Burada listelenen araçları, forumları ve topluluk sitelerini kullanarak kendi başına daha fazla yardım bulabilirsiniz.
+Microsoft 365 yönetim merkezi, oturum açtıklarından sonra kuruluşunuzun hizmetlerinin durumu hakkında bilgi sağlar. Ayrıca hizmet durumu bölümünde hizmetlerinizin geçerli durumu, kesintiler ve kesintiler hakkındaki ayrıntılar ve planlı bakım süreleri listelenir. Microsoft 365 yönetim merkezi bilinen sorunlar ve beklenen çözümler hakkında da bilgi sağlar. Hizmet genelindeki bir olaydan etkilendiyseniz bir iletişim uyarısı (genellikle zil simgesiyle birlikte) görmeniz gerekir. Herhangi bir öğeyi uygun şekilde okumanızı ve üzerinde işlem yapmanızı öneririz. Hizmet durumu alanı hakkında daha fazla bilgi için bkz. [Hizmet durumu ve süreklilik](/office365/servicedescriptions/office-365-platform-service-description/service-health-and-continuity). Burada listelenen araçları, forumları ve topluluk sitelerini kullanarak kendi başınıza daha fazla yardım bulabilirsiniz.
 
-[Ürünlere Genel Bakış Exchange Online Protection](https://products.office.com/exchange/exchange-email-security-spam-protection)
+[Exchange Online Protection için Ürüne Genel Bakış](https://products.office.com/exchange/exchange-email-security-spam-protection)
 
 [İş ürünleri için desteğe başvurun - Yönetici Yardımı](../../admin/get-help-support.md).
 
 [Microsoft 365 topluluğu](https://techcommunity.microsoft.com/t5/Office-365/ct-p/Office365)
 
-[Microsoft Destek ve Kurtarma Yardımcısı (SaRA)](https://support.microsoft.com/office/e90bb691-c2a7-4697-a94f-88836856c72f)
+[Microsoft Desteği ve Kurtarma Yardımcısı (SaRA)](https://support.microsoft.com/office/e90bb691-c2a7-4697-a94f-88836856c72f)
 
 [Posta akışı sorun gidericisi](https://aka.ms/FixEmail)
 
-## <a name="assisted-support-from-microsoft"></a>Microsoft yardımlı destek
+## <a name="assisted-support-from-microsoft"></a>Microsoft'tan yardımlı destek
 
-Telefonla arayarak veya gelen telefon numarasından yeni bir hizmet Microsoft 365 yönetim merkezi Microsoft'tan yardım alabilirsiniz. Premier Destek aboneleri ek destek seçeneklerine sahiptir.
+Microsoft 365 yönetim merkezi içinde yeni bir hizmet isteği başlatarak veya telefonla arayarak Microsoft'tan yardım alabilirsiniz. Premier Destek abonelerinin ek destek seçenekleri vardır.
 
 ### <a name="support-for-microsoft-premier-support-subscribers"></a>Microsoft Premier Destek Aboneleri için destek
 
-Bir EOP müşterisiysiniz ve aynı zamanda bir Microsoft Premier Destek sözleşmeniz varsa, normal Microsoft Premier Destek kanalları aracılığıyla destek alabilirsiniz. Bu, Premier Teknik Hesap Yöneticisi (TAM) ve büyük/küçük harf gönderimi gibi Premier Destek müşterilerinin tüm süreçlere ve kaynaklara erişmesine olanak sağlar. Microsoft Online Services için Premier Destek, Premier Destek çerçevesinin şirket içi ürünlerin ötesine geçarak size tüm ürün ve hizmetlerde birleşik bir destek deneyimi sunar. Bu hizmet müşterilerin sorunları hızla çözmesini sağlamaya yardımcı olur ve bir IT altyapısının farklı bileşenleri için destek yönetme görevini kolaylaştırır.
+EOP müşterisiyseniz ve aynı zamanda bir Microsoft Premier Destek sözleşmeniz varsa, normal Microsoft Premier Destek kanallarından destek alabilirsiniz. Bu, Premier Teknik Hesap Yöneticisi (TAM) ve servis talebi gönderimi gibi Premier Destek müşterilerinin kullanımına sunulan tüm işlemlere ve kaynaklara erişim elde etmenizi sağlar. Microsoft Online Services için Premier Destek, Premier Destek çerçevesini şirket içi ürünlerin ötesinde çevrimiçi hizmetler genişleterek size tüm ürün ve hizmetlerde birleşik bir destek deneyimi sağlar. Bu hizmet, müşterilerin sorunları hızla çözebilmesini sağlamaya yardımcı olur ve BT altyapısının farklı bileşenleri için desteği yönetme görevini basitleştirir.
 
-Premier Desteği'nin, organizasyona yapılan IT yatırımlarından en iyi şekilde değer katmalarına nasıl yardımcı olduğu hakkında daha fazla bilgi için İş Ortakları için [Premier Destek'e bakın](https://partner.microsoft.com/support/microsoft-services-premier-support).
+Premier Desteğin kuruluşunuzun BT yatırımlarınızdan en yüksek değeri elde etmesinde nasıl yardımcı olabileceği hakkında daha fazla bilgi için bkz. [İş Ortakları için Premier Destek](https://partner.microsoft.com/support/microsoft-services-premier-support).
 
-### <a name="ask-for-help-on-the-web"></a>Web'de yardım isteme
+### <a name="ask-for-help-on-the-web"></a>Web'de yardım isteyin
 
-1. Oturum açmak için Microsoft 365 yönetim merkezi.
+1. Microsoft 365 yönetim merkezi oturum açın.
 
-2. Müşteri Desteği **için** \> **Destek iste Yeni Hizmet** \> **İsteği'ne gidin**
+2. **Destek** \> **Müşteri Desteği** \> **İsteYeni Hizmet İsteği'ne** gidin
 
-3. Sorun hakkında bilgi eklemek, önceki sorunların çözümlerini aramak ya da günlükler veya ilgili dosyalar eklemek için formu kullanın.
+3. Sorununuz hakkında bilgi eklemek, önceki sorunların çözümlerini aramak veya günlükleri ya da ilgili dosyaları eklemek için formu kullanın.
 
-### <a name="ask-for-help-on-the-telephone"></a>Telefonda yardım isteme
+### <a name="ask-for-help-on-the-telephone"></a>Telefonda yardım isteyin
 
-1. Oturum açmak için Microsoft 365 yönetim merkezi.
+1. Microsoft 365 yönetim merkezi oturum açın.
 
-2. Genel ürün sorunları için Destek, Müşteri **Desteği** \> **Için Destek Iste Teknik Destek** \> **Arama'ya gidin**.
+2. Genel ürün sorunları **için Destek İste Müşteri Desteği** \> **Araması teknik desteği** **konusuna** \> gidin.
 
-   EOP satın almadan önce sorularınız veya fatura ve abonelik ile ilgili sorularınız için Müşteri  \>  \> Desteği Için Destek Iste Arama **faturalama ve abonelik desteği'ne gidin**.
+   EOP'yi satın almadan önce sorulan sorular veya faturalama ve aboneliklerle ilgili sorular **için Destek İste müşteri desteği** \> **araması faturalama ve abonelik desteği** bölümüne gidin  \>.
 
-3. Sanal Temsilci'ye en güncel uygun telefon numarasını aramak için kullanın.
+3. En güncel uygun telefon numarasını aramak için Sanal Temsilci'yi kullanın.
 
 ## <a name="support-telephone-numbers"></a>Destek telefon numaraları
 
-Microsoft, dünya geneli için ürün desteği için yerel veya ücretsiz telefon numaraları sağlar. Bu destek merkezlerinin birçoğu, iş saatlerinde veya günde 24 saat İngilizce olarak yerel dilinize yardım sağlar. Aşağıda listelenen konumu görmüyorsanız, yerel destek telefon numaranızı bulmak için yukarıda açıklandığı gibi Sanal Temsilci'ye tıklayın.
+Microsoft, dünyanın dört bir yanındaki ürün desteği için yerel veya ücretsiz telefon numaraları sağlar. Bu destek merkezlerinin çoğu, iş saatleri içinde veya her gün 24 saat İngilizce olarak yerel dilinizde yardım sağlar. Aşağıda listelenen konumunuzu görmüyorsanız, yerel destek telefon numaranızı bulmak için yukarıda açıklandığı gibi Sanal Temsilci'yi kullanın.
 
-|Ülke veya bölge|Satın alma öncesi ve faturayla ilgili sorular|Teknik Destek soruları|
+|Ülke veya bölge|Ön satın alma ve faturalama soruları|Teknik Destek soruları|
 |---|---|---|
 |Brezilya|Ücretsiz: 08007621146 <br> Yerel: 1147001999|Aynı|
 |Fransa|Ücretsiz: 0805 540 594 <br> Yerel: 01 57 32 42 97|Aynı|
@@ -91,4 +91,4 @@ Microsoft, dünya geneli için ürün desteği için yerel veya ücretsiz telefo
 
 ## <a name="for-more-information-about-eop-documentation"></a>EOP belgeleri hakkında daha fazla bilgi için
 
-[Erişilebilirlik Exchange Online](/Exchange/accessibility/accessibility)
+[Exchange Online'de erişilebilirlik](/Exchange/accessibility/accessibility)

@@ -1,5 +1,5 @@
 ---
-title: Kasa Ekleri Kaydetme
+title: Güvenli Ekleri Kaydetme
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -17,109 +17,109 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
 - seo-marvel-apr2020
-description: Yöneticiler, e-posta Kasa Microsoft Defender'daki Ekler özelliği hakkında bilgi Office 365.
+description: Yöneticiler, Office 365 için Microsoft Defender Kasa Ekleri özelliği hakkında bilgi edinebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 01721d36967413a7f939d3618340e5630c3d6007
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 9d069d92eb012211af8dd4e12109ebcae7eb221e
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63683811"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65128728"
 ---
-# <a name="safe-attachments-in-microsoft-defender-for-office-365"></a>Kasa için Microsoft Defender'daki Ekleri Office 365
+# <a name="safe-attachments-in-microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender'da Ekleri Kasa
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
-**Geçerli olduğu yer:**
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+**Uygulandığı öğe**
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Kasa için [Microsoft Defender'daki](defender-for-office-365.md) Office 365 Ekleri, [Exchange Online Protection(EOP)](anti-malware-protection.md) üzerinde kötü amaçlı yazılımdan koruma ile taranmış e-posta ekleri için ek bir koruma katmanı sağlar. Özellikle de Kasa, Ekler e-posta iletileri alıcılarına teslim edilmediklerine (detonation olarak bilinen bir işlem) önce ekleri kontrol etmek için sanal bir _ortam kullanır_.
+Kasa [Office 365 için Microsoft Defender'deki Ekler,](defender-for-office-365.md) [Exchange Online Protection'da (EOP) kötü amaçlı yazılımdan koruma](anti-malware-protection.md) tarafından zaten taranmış e-posta ekleri için ek bir koruma katmanı sağlar. Özellikle, Kasa Ekler, e-posta iletilerindeki ekleri alıcılara teslim etmeden önce denetlemek için bir sanal ortam kullanır (_patlama_ olarak bilinen bir işlem).
 
-Kasa-posta iletileri için Eklere Karşı Koruma, E-posta Kasa tarafından denetleniyor. Varsayılan Kasa Ekler ilkesi her ne kadar da olsa, yerleşik koruma önceden ayarlanmış güvenlik  ilkesi tüm alıcılara Kasa Ekler koruması sağlar (özel Kasa Ek ilkeleri içinde tanımlanmamış kullanıcılar). Daha fazla bilgi için bkz[. İlke için EOP'de ve Microsoft Defender'da önceden Office 365](preset-security-policies.md). Belirli kullanıcılar, Kasa etki alanları için geçerli olan ek ilkeleri de oluşturabilirsiniz. Yönergeler için bkz[. Kasa için Microsoft Defender'da Ekleri ayarlama Office 365](set-up-safe-attachments-policies.md).
+Kasa E-posta iletileri için Ekler koruması Kasa Ekler ilkeleri tarafından denetlenmektedir. Varsayılan Kasa Ekler ilkesi olmasa **da, Yerleşik koruma** önceden ayarlanmış güvenlik ilkesi tüm alıcılara Kasa Ekler koruması sağlar (özel Kasa Ekler ilkelerinde tanımlanmayan kullanıcılar). Daha fazla bilgi için bkz. [EOP'de önceden ayarlanmış güvenlik ilkeleri ve Office 365 için Microsoft Defender](preset-security-policies.md). Ayrıca, belirli kullanıcılar, gruplar veya etki alanları için geçerli Kasa Ekler ilkeleri de oluşturabilirsiniz. Yönergeler için bkz. [Office 365 için Microsoft Defender Kasa Ekler ilkelerini ayarlama](set-up-safe-attachments-policies.md).
 
-Aşağıdaki tabloda Microsoft 365'ta Kasa Ekleri için senaryolar ve Office 365 için Microsoft Defender içeren Office 365 (başka bir deyişle, örneklerde hiçbir zaman lisans olmaması sorunu değildir).
+Aşağıdaki tabloda, Microsoft 365 ve Office 365 kuruluşlarda Office 365 için Microsoft Defender içeren Kasa Ekleri senaryoları açıklanmaktadır (başka bir deyişle, lisans eksikliği örneklerde hiçbir zaman sorun değildir).
 
 |Senaryo|Sonuç|
 |---|---|
-|Pat'in Microsoft 365 E5 yapılandırılmış ek Kasa yok.|Pat, Kasa Ekler tarafından, Ekler ilkesinde başka türlü tanımlanmamış tüm alıcılara uygulanan yerleşik koruma önceden ayarlanmış güvenlik ilkesi nedeniyle Kasa korunur.|
-|Lee'nin kuruluşunda, yalnızca finans Kasa çalışanlara uygulanan Bir Ekler ilkesi vardır. Lee, satış departmanının bir üyesidir.|Lee ve satış departmanının kalan bölümü Kasa Ekleri tarafından, Kasa Ekleri ilkesinde başka türlü  tanımlanmamış tüm alıcılar için geçerli olan yerleşik koruma önceden ayarlanmış güvenlik ilkesi nedeniyle Kasa korunur.|
-|Dün, Zaman'ın kuruluşunda bir yönetici tüm Kasa için geçerli olan bir Ekler ilkesi oluşturdu. Bugün daha önce, İleti ek içeren bir e-posta iletisi aldı.|Her zaman, Kasa ek ilkesi nedeniyle Ekler Kasa korunur. <p> Genellikle, yeni bir ilkenin yürürlüğe girecekleri yaklaşık 30 dakika sürer.|
-|Chris'in kuruluşunda uzun süredir Kasa Ekler ilkeleri var. Chris, eki olan bir e-posta alır ve iletiyi dış alıcılara iletir.|Chis, E-Kasa tarafından korunur. <p> Bir kuruluşta dış alıcılar Microsoft 365, iletili iletiler de E-posta Ekleri Kasa korunur.|
+|Pat'in Microsoft 365 E5 kuruluşunda yapılandırılmış Kasa Ek ilkeleri yoktur.|Pat, Kasa Ekler ilkelerinde başka şekilde tanımlanmayan tüm alıcılar için geçerli olan **Yerleşik koruma** önayarlı güvenlik ilkesi nedeniyle Kasa Ekler tarafından korunur.|
+|Lee'nin kuruluşu, yalnızca finans çalışanları için geçerli olan bir Kasa Ekleri ilkesine sahiptir. Lee satış departmanının bir üyesi.|Lee ve satış departmanının geri kalanı, Kasa Ekler ilkelerinde başka şekilde tanımlanmayan tüm alıcılar için geçerli olan **Yerleşik koruma** ön ayarı güvenlik ilkesi nedeniyle Kasa Ekler tarafından korunur.|
+|Dün Jean'in kuruluşundaki bir yönetici, tüm çalışanlar için geçerli olan bir Kasa Eki ilkesi oluşturdu. Bugün erken saatlerde Jean ek içeren bir e-posta iletisi aldı.|Jean, özel Kasa Ekler ilkesi nedeniyle Kasa Ekler tarafından korunur. <br/><br/> Genellikle yeni bir ilkenin geçerlilik kazanması yaklaşık 30 dakika sürer.|
+|Chris'in kuruluşu, kuruluştaki herkes için uzun süredir Kasa Ekler ilkelerine sahiptir. Chris eki olan bir e-posta alır ve ardından iletiyi dış alıcılara iletir.|Chis, Kasa Ekleri tarafından korunur. <br/><br/> Microsoft 365 bir kuruluştaki dış alıcılar da Kasa Ekler tarafından korunur.|
 
-Kasa tarama işlemi, dosya verilerinizin bulunduğu bölgede Microsoft 365 yer alır. Veri merkezi coğrafyası hakkında daha fazla bilgi için bkz [. Verileriniz nerede bulunur?](https://products.office.com/where-is-your-data-located?geo=All)
+Kasa Ekler taraması, Microsoft 365 verilerinizin bulunduğu bölgede gerçekleşir. Veri merkezi coğrafyası hakkında daha fazla bilgi için bkz. [Verileriniz nerede bulunur?](https://products.office.com/where-is-your-data-located?geo=All)
 
 > [!NOTE]
-> Aşağıdaki özellikler, Kasa portalında Ekleri ilkelerinin genel Microsoft 365 Defender bulunur. Ancak, bu ayarlar genel olarak etkinleştirilir veya devre dışı bırakılır ve eklerin Kasa gerektirmez:
+> Aşağıdaki özellikler, Microsoft 365 Defender portalındaki Kasa Ekler ilkelerinin genel ayarlarında bulunur. Ancak bu ayarlar genel olarak etkinleştirilir veya devre dışı bırakılır ve Kasa Ekler ilkeleri gerekmez:
 >
-> - [Kasa, Posta SharePoint, OneDrive için Ekleri Microsoft Teams](mdo-for-spo-odb-and-teams.md).
+> - [SharePoint, OneDrive ve Microsoft Teams için ekleri Kasa](mdo-for-spo-odb-and-teams.md).
 > - [Microsoft 365 E5 aboneliğinde Güvenli Belgeler](safe-docs.md)
 
-## <a name="safe-attachments-policy-settings"></a>Kasa ler ilke ayarlarını değiştirme
+## <a name="safe-attachments-policy-settings"></a>Kasa Ekler ilke ayarları
 
-Bu bölümde, Eklerin İlkeleri Kasa ayarları açık almaktadır:
+Bu bölümde, Kasa Ekler ilkelerindeki ayarlar açıklanmaktadır:
 
-- **Kasa bilinmeyen kötü amaçlı yazılım yanıtı**: Bu ayar, e-posta iletisinde kötü amaçlı yazılım Kasa amaçlı yazılım taramasına karşı eylemi kontrol eder. Kullanılabilir seçenekler aşağıdaki tabloda açıklanmıştır:
+- **Kasa Ekler bilinmeyen kötü amaçlı yazılım yanıtı**: Bu ayar, e-posta iletilerinde Kasa Ekler kötü amaçlı yazılım taraması eylemini denetler. Kullanılabilir seçenekler aşağıdaki tabloda açıklanmıştır:
 
-  |Seçenek|Efekt|Şunları yapmak istediğiniz zaman kullanın:|
+  |Seçeneği|Etkisi|Şunu yapmak istediğinizde kullanın:|
   |---|---|---|
-  |**Kapalı**|Ekler, Ekleri Kullanarak Kötü Amaçlı Yazılım Kasa taranamaz. EOP'de, kötü amaçlı yazılımdan koruma [tarafından iletiler hâlâ kötü amaçlı yazılım için taranır](anti-malware-protection.md).|Seçili alıcılar için taramayı kapatın. <p> İç postayı yönlendirmede gereksiz gecikmeleri önle. <p> **Bu seçenek çoğu kullanıcı için önerilmez. Yalnızca güvenilen gönderenlerden ileti alan alıcıları Kasa Ekler taramayı kapatmak için bu seçeneği kullanabilirsiniz. EKLER kapalı ise ve kötü amaçlı yazılım sinyali Kasa ZAP iletileri karantinaya alanmaz. Ayrıntılar için bkz [. Sıfır saatlik otomatik temizleme](zero-hour-auto-purge.md)**|
-  |**Monitör**|Ekleri olan iletileri teslim edin ve ardından algılanan kötü amaçlı yazılımla ne olduğunu izler. <p> Ekler tarama özelliği nedeniyle güvenli iletilerin teslimi Kasa ertelenebilir.|Kötü amaçlı yazılım algılandığından kuruluşta nereye gittiğini bakın.|
-  |**Engelle**|Kötü amaçlı yazılım ekleri algılandığında iletilerin teslim edile engel olur. <p> İletiler karantinaya alınır. Varsayılan olarak iletileri yalnızca yöneticiler (kullanıcılar değil) gözden geçirebilirsiniz, yayımlar veya silebilir.<sup>\*</sup> <p> İletilerin ve eklerin gelecekteki örneklerini otomatik olarak engeller. <p> Ekler tarama özelliği nedeniyle güvenli iletilerin teslimi Kasa ertelenebilir.|Aynı kötü amaçlı yazılım eklerini kullanarak organizasyonlarınızı tekrarlanan saldırılardan korur. <p> Bu, varsayılan değerdir ve Standart ve Katı önceden tanımlı güvenlik ilkelerde [önerilen değerdir](preset-security-policies.md).|
-  |**Değiştir**|Algılanan kötü amaçlı yazılım eklerini kaldırır. <p> Alıcılara eklerin kaldırıldığıyla ilgili bilgi gönderilir. <p>  Kötü amaçlı ek içeren iletiler karantinaya alınır. Varsayılan olarak iletileri yalnızca yöneticiler (kullanıcılar değil) gözden geçirebilirsiniz, yayımlar veya silebilir.<sup>\*</sup> <p> Ekler tarama özelliği nedeniyle güvenli iletilerin teslimi Kasa ertelenebilir.|Algılandı kötü amaçlı yazılım nedeniyle eklerin kaldırıldığı alıcılara görünürlüğü yükseltin.|
-  |**Dinamik Teslim**|İletileri anında teslim edin, ancak ekler tarama işlemi tamamlandıktan sonra Kasa yer tutucularla değiştirir. <p> Kötü amaçlı ek içeren iletiler karantinaya alınır. Varsayılan olarak iletileri yalnızca yöneticiler (kullanıcılar değil) gözden geçirebilirsiniz, yayımlar veya silebilir.<sup>\*</sup> <p> Ayrıntılar için, bu [makalenin devam Kasa Ek İlkeleri'nin](#dynamic-delivery-in-safe-attachments-policies) Dinamik Teslimi bölümüne bakın.|Alıcıları kötü amaçlı dosyalardan korurken ileti gecikmelerinden kaçının.|
+  |**Kapalı**|Ekler, Kasa Ekler tarafından kötü amaçlı yazılım taramasına neden olmaz. EOP'de kötü amaçlı yazılımdan [koruma tarafından iletiler yine de kötü amaçlı yazılımlara](anti-malware-protection.md) karşı taranır.|Seçili alıcılar için taramayı kapatın. <br/><br/> İç posta yönlendirmede gereksiz gecikmeleri önleyin. <br/><br/> **Bu seçenek çoğu kullanıcı için önerilmez. Bu seçeneği yalnızca güvenilen gönderenlerden yalnızca ileti alan alıcılar için Kasa Ekler taramasını kapatmak için kullanmalısınız. KASA Ekler kapalıysa ve kötü amaçlı yazılım sinyali alınmazsa ZAP iletileri karantinaya almayacaktır. Ayrıntılar için bkz. [Sıfır saatlik otomatik temizleme](zero-hour-auto-purge.md)**|
+  |**Monitör**|Ekleri olan iletileri teslim eder ve ardından algılanan kötü amaçlı yazılımla ne olduğunu izler. <br/><br/> güvenli iletilerin teslimi Kasa Ekler tarama nedeniyle gecikebilir.|Algılanan kötü amaçlı yazılımların kuruluşunuzda nereye gittiğini görün.|
+  |**Engelle**|Algılanan kötü amaçlı yazılım eklerine sahip iletilerin teslim edilmesini engeller. <br/><br/> İletiler karantinaya alınır. Varsayılan olarak, iletileri yalnızca yöneticiler (kullanıcılar değil) gözden geçirebilir, yayımlayabilir veya silebilir.<sup>\*</sup> <br/><br/> İletilerin ve eklerin gelecekteki örneklerini otomatik olarak engeller. <br/><br/> güvenli iletilerin teslimi Kasa Ekler tarama nedeniyle gecikebilir.|Aynı kötü amaçlı yazılım eklerini kullanarak kuruluşunuzu tekrarlanan saldırılara karşı korur. <br/><br/> Bu varsayılan değerdir ve Standart ve Katı [önceden belirlenmiş güvenlik ilkeleri](preset-security-policies.md) için önerilen değerdir.|
+  |**Değiştirmek**|Algılanan kötü amaçlı yazılım eklerini kaldırır. <br/><br/> Alıcılara eklerin kaldırıldığını bildirir. <br/><br/>  Kötü amaçlı ekler içeren iletiler karantinaya alınır. Varsayılan olarak, iletileri yalnızca yöneticiler (kullanıcılar değil) gözden geçirebilir, yayımlayabilir veya silebilir.<sup>\*</sup> <br/><br/> güvenli iletilerin teslimi Kasa Ekler tarama nedeniyle gecikebilir.|Algılanan kötü amaçlı yazılım nedeniyle eklerin kaldırıldığı alıcılara görünürlük sağlayın.|
+  |**Dinamik Teslim**|İletileri hemen teslim eder, ancak Kasa Ekler taraması tamamlanana kadar ekleri yer tutucularla değiştirir. <br/><br/> Kötü amaçlı ekler içeren iletiler karantinaya alınır. Varsayılan olarak, iletileri yalnızca yöneticiler (kullanıcılar değil) gözden geçirebilir, yayımlayabilir veya silebilir.<sup>\*</sup> <br/><br/> Ayrıntılar için, bu makalenin [devamında yer alan Kasa Ekler ilkelerinde Dinamik Teslim](#dynamic-delivery-in-safe-attachments-policies) bölümüne bakın.|Alıcıları kötü amaçlı dosyalardan korurken ileti gecikmelerinden kaçının.|
 
-  <sup>\*</sup>Yöneticiler, karantinaya alınan iletiler _için ne_ yapmalarına izin Kasa Ek ilkeleri içinde karantina ilkeleri oluşturabilir ve atayabilirsiniz. Daha fazla bilgi için bkz. [Karantina ilkeleri](quarantine-policies.md).
+  <sup>\*</sup>Yöneticiler, kullanıcıların _karantinaya alınan iletilere_ ne yapmalarına izin verildiğini tanımlayan Kasa Ekler ilkelerinde karantina ilkeleri oluşturabilir ve atayabilir. Daha fazla bilgi için bkz [. Karantina ilkeleri](quarantine-policies.md).
 
-- Eki **algılamada** yeniden yönlendirme: Yeniden yönlendirmeyi etkinleştir ve Eki şu e-posta adresine **gönder: Engelleme****, İzleme** veya Değiştir eylemleri için, kötü amaçlı yazılım ekleri içeren iletileri çözümleme ve soruşturma için belirtilen iç veya dış e-posta adresine gönderin. 
+- **Algılama sırasında eki yeniden yönlendirme: Yeniden yönlendirmeyi etkinleştirin** ve **Eki şu e-posta adresine gönderin**: **Engelle**, **İzle** veya **Değiştir** eylemleri için, analiz ve araştırma için belirtilen iç veya dış e-posta adresine kötü amaçlı yazılım ekleri içeren iletiler gönderin.
 
-  Standart ve Katı ilke ayarları için öneri, yeniden yönlendirmeyi etkinleştirmektir. Daha fazla bilgi için Bkz[. Kasa ayarlarına bakın](recommended-settings-for-eop-and-office365.md#safe-attachments-settings).
+  Standart ve Katı ilke ayarları için öneri, yeniden yönlendirmeyi etkinleştirmektir. Daha fazla bilgi için bkz. [Kasa Ekler ayarları](recommended-settings-for-eop-and-office365.md#safe-attachments-settings).
 
-- Kötü amaçlı yazılım ekleri tarayın zaman dışında veya hata oluşursa yukarıdaki seçimi **uygula:** **Kasa** Ekler bilinmeyen kötü amaçlı yazılım yanıtı tarafından belirtilen eylem, Kasa Ekler tarama tamamlanamasa bile iletilere alınır. Yönlendirmeyi etkinleştir'i her zaman seçerek **bu seçeneği belirtin**. Aksi takdirde, iletiler kaybolabilir.
+- **Ekler için kötü amaçlı yazılım taraması zaman aşımına uğradıysa veya hata oluşursa yukarıdaki seçimi uygulayın**: **Kasa Ekler bilinmeyen kötü amaçlı yazılım yanıtı** tarafından belirtilen eylem, Kasa Ekler taraması tamamlanamadıklarında bile iletilerde gerçekleştirilir. **Yeniden yönlendirmeyi etkinleştir'i** seçerseniz her zaman bu seçeneği belirleyin. Aksi takdirde iletiler kaybolabilir.
 
-- **Alıcı filtreleri**: İlkenin kimlere geçerli olduğunu belirleyen alıcı koşullarını ve özel durumlarını belirtmeniz gerekir. Bu özellikleri koşullar ve özel durumlar için kullanabilirsiniz:
+- **Alıcı filtreleri**: İlkenin kime uygulanacağını belirleyen alıcı koşullarını ve özel durumlarını belirtmeniz gerekir. Koşullar ve özel durumlar için şu özellikleri kullanabilirsiniz:
   - **Alıcı**
-  - **Alıcı etki alanı:**
+  - **Alıcı etki alanı**
   - **Alıcı,**
 
-  Bir koşul veya özel durumu tek bir kez kullanabilirsiniz, ancak koşul veya özel durum birden çok değer içerebilir. Aynı koşul veya özel durum kullanımı VEYA mantığının birden çok değeri (örneğin, _\<recipient1\>_ veya _\<recipient2\>_). Farklı koşullar veya özel durumlar, AND mantığı kullanır (örneğin, _\<recipient1\>_ ve _\<member of group 1\>_).
+  Bir koşulu veya özel durumu yalnızca bir kez kullanabilirsiniz, ancak koşul veya özel durum birden çok değer içerebilir. Aynı koşula veya özel duruma ait birden çok değer OR mantığını kullanır (örneğin, _\<recipient1\>_ veya _\<recipient2\>_). Farklı koşullar veya özel durumlar AND mantığını kullanır (örneğin, _\<recipient1\>_ ve _\<member of group 1\>_).
 
-- **Öncelik**: Birden çok ilke sanız, uygulanma sıralarını belirtsiniz. İki ilke aynı önceliğe sahip olabilir ve ilk ilke uygulandıktan sonra ilke işleme durur.
+- **Öncelik**: Birden çok ilke oluşturursanız, bunların uygulanacağı sırayı belirtebilirsiniz. hiçbir iki ilke aynı önceliğe sahip olamaz ve ilke işleme ilk ilke uygulandıktan sonra durur.
 
-  Öncelik sırası, birden çok ilkenin nasıl değerlendirilip uygulandığı hakkında daha fazla bilgi için bkz. [E-posta korumasının sırası ve önceliği](how-policies-and-protections-are-combined.md).
+  Öncelik sırası ve birden çok ilkenin nasıl değerlendirilip uygulandığı hakkında daha fazla bilgi için bkz [. E-posta korumasının sırası ve önceliği](how-policies-and-protections-are-combined.md).
 
-### <a name="dynamic-delivery-in-safe-attachments-policies"></a>Eklerde Dinamik Kasa ilkeleri
+### <a name="dynamic-delivery-in-safe-attachments-policies"></a>Kasa Eklerinde Dinamik Teslim ilkeleri
 
 > [!NOTE]
-> Dinamik Teslim yalnızca bu posta Exchange Online çalışır.
+> Dinamik Teslim yalnızca Exchange Online posta kutuları için çalışır.
 
-Ekler'de Dinamik Teslim Kasa ilkeleri, Ekler tarama özelliği tarafından neden olabileceği e-posta teslim gecikmelerini Kasa arıyor. E-posta iletisi gövdesi, her ek için bir yer tutucu içeren alıcıya teslim edilir. Yer tutucu, ek güvenli bulunana kadar kalır ve sonra ek aç/indirilebilir duruma gelir.
+Kasa Ekler ilkelerindeki Dinamik Teslim eylemi, Kasa Ekler taramasının neden olabileceği e-posta teslim gecikmelerini ortadan kaldırmaya çalışır. E-posta iletisinin gövdesi, her ek için bir yer tutucu ile alıcıya teslim edilir. Yer tutucu, ek güvenli bulunana kadar kalır ve ek açılabilir veya indirilebilir hale gelir.
 
-Bir ek kötü amaçlı olarak bulunursa, ileti karantinaya alınır.
+Bir ekin kötü amaçlı olduğu tespit edilirse, ileti karantinaya alınır.
 
-Ekleri tarama Office devam ederken çoğu PDF ve Kasa belgeleri güvenli modda öniz olabilir. Bir ek Dinamik Teslim önizicisi ile uyumlu değilse, Ekler tarama tamamlandıktan sonra alıcılar ek için Kasa yer tutucusu görebilirler.
+Kasa Ekler taraması devam ederken çoğu PDF ve Office belge güvenli modda önizlenebilir. Bir ek Dinamik Teslim önİzleyicisi ile uyumlu değilse, Kasa Ekler taraması tamamlanana kadar alıcılar ek için bir yer tutucu görür.
 
-Mobil cihaz kullanıyorsanız ve PDF'ler mobil cihazınızın Dinamik Teslim önizizicisinde işleniğine sahip değilse, mobil tarayıcınızı kullanarak iletiyi Web üzerinde Outlook'de (eski adı Outlook Web App) kullanmayı deneyin.
+Mobil cihaz kullanıyorsanız ve PDF'ler mobil cihazınızda dinamik teslim önizleyicisinde işlenmiyorsa, mobil tarayıcınızı kullanarak iletiyi Web üzerinde Outlook (eski adıyla Outlook Web App) açmayı deneyin.
 
-Dinamik Teslim ve iletili iletilerde dikkat edilmesi gereken bazı noktalar:
+Dinamik Teslim ve iletilen iletiler için dikkat edilmesi gereken bazı noktalar şunlardır:
 
-- Forwarded recipient is protected by a Kasa Attachments policy that uses the Dynamic Delivery option, then alıcı sees the placeholder, with the ability to preview compatible files.
-- İletilen alıcı bir Kasa Ekleri ilkesi tarafından korunmazsa, ileti ve ekler herhangi bir ek Kasa tarama veya ek yer tutucuları olmadan teslim edilir.
+- İletilen alıcı, Dinamik Teslim seçeneğini kullanan Kasa Ekler ilkesiyle korunuyorsa, alıcı uyumlu dosyaların önizlemesini görüntüleme özelliğiyle yer tutucuyu görür.
+- İletilen alıcı Kasa Ekleri ilkesiyle korunmuyorsa, ileti ve ekler Kasa Ek tarama veya ek yer tutucuları olmadan teslim edilir.
 
-Dinamik Teslim'in iletilerde ekleri değiştiramadığı senaryolar vardır. Bu senaryolar şunlardır:
+Dinamik Teslim'in iletilerdeki ekleri değiştiremediği senaryolar vardır. Bu senaryolar şunlardır:
 
 - Ortak klasörlerdeki iletiler.
-- Özel kurallar kullanılarak kullanıcının posta kutusundan dışarı yönlendiren ve sonra geri yönlendiren iletiler.
-- Bulut posta kutularının dışından arşiv klasörleri de dahil olmak üzere başka konumlara taşınan iletiler (otomatik olarak veya el ile).
-- Gelen kutusu kuralları iletiyi Gelen Kutusu'dan farklı bir klasöre taşınır.
-- Silinmiş iletiler.
-- Kullanıcının posta kutusu arama klasörü hata durumda.
-- Exchange Online Alıntı özelliği etkin durumda olan kuruluşlarda çalışır. Bu sorunu çözmek için bkz [. KB4014438](https://support.microsoft.com/help/4014438).
-- [S/MIME)](/exchange/security-and-compliance/smime-exo/smime-exo) şifreli iletiler.
-- Dinamik Teslim eylemi Kasa Ekleri ilkesinde yapılandırdınız, ancak alıcı Dinamik Teslimi desteklemez (örneğin, alıcı şirket içi bir Exchange posta kutusudur). Ancak [Kasa için Microsoft Defender'daki](set-up-safe-links-policies.md) Bağlantılar Office 365 URL içeren Office ekleri tarayabilirsiniz (bağlantıların genel ayarlarına bağlı olarak [Kasa](configure-global-settings-for-safe-links.md) yapılandırıldığında).
+- Özel kurallar kullanılarak kullanıcının posta kutusundan dışarı ve sonra geri yönlendirilen iletiler.
+- Bulut posta kutularından arşiv klasörleri de dahil olmak üzere diğer konumlara taşınan (otomatik veya el ile) iletiler.
+- Gelen kutusu kuralları, iletiyi Gelen Kutusu'nun dışına farklı bir klasöre taşır.
+- İletiler silindi.
+- Kullanıcının posta kutusu arama klasörü hata durumunda.
+- Exclaimer'ın etkinleştirildiği kuruluşları Exchange Online. Bu sorunu çözmek için bkz [. KB4014438](https://support.microsoft.com/help/4014438).
+- [S/MIME)](/exchange/security-and-compliance/smime-exo/smime-exo) şifrelenmiş iletiler.
+- Dinamik Teslim eylemini Kasa Ekler ilkesinde yapılandırdıysanız, ancak alıcı Dinamik Teslim'i desteklemez (örneğin, alıcı şirket içi Exchange kuruluşundaki bir posta kutusudur). Ancak[, Office 365 için Microsoft Defender Kasa Bağlantıları](set-up-safe-links-policies.md) URL'ler içeren Office dosya eklerini tarar ([Kasa Bağlantıları için genel ayarların](configure-global-settings-for-safe-links.md) nasıl yapılandırıldığına bağlı olarak).
 
-## <a name="submitting-files-for-malware-analysis"></a>Kötü amaçlı yazılım çözümlemesi için dosya gönderme
+## <a name="submitting-files-for-malware-analysis"></a>Kötü amaçlı yazılım analizi için dosya gönderme
 
-- Çözümleme için Microsoft'a göndermek istediğiniz bir dosya alırsanız, çözümleme için Kötü amaçlı yazılım ve kötü amaçlı yazılım olmayan dosyaları [Microsoft'a gönderme makalesi'ne bakın](submitting-malware-and-non-malware-to-microsoft-for-analysis.md).
-- Çözümleme için Microsoft'a göndermek istediğiniz bir e-posta iletisi (ekli veya eksiz) alırsanız bkz. İletileri ve [dosyaları Microsoft'a bildirme](report-junk-email-messages-to-microsoft.md).
+- Analiz için Microsoft'a göndermek istediğiniz bir dosya alırsanız, bkz. [Analiz için Microsoft'a kötü amaçlı yazılım ve kötü amaçlı olmayan yazılım gönderme](submitting-malware-and-non-malware-to-microsoft-for-analysis.md).
+- Analiz için Microsoft'a göndermek istediğiniz bir e-posta iletisi (ekli veya eksiz) alırsanız bkz. [İletileri ve dosyaları Microsoft'a bildirme](report-junk-email-messages-to-microsoft.md).

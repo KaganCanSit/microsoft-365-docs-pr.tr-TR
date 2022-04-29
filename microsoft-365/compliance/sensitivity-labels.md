@@ -18,248 +18,250 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Hassas içeriği sınıflandırmak ve korumak Microsoft Bilgi Koruması(MIP) etiketlerini kullanın.
+description: Hassas içeriği sınıflandırmak ve korumak için Microsoft Purview Information Protection'ın duyarlılık etiketlerini kullanın.
 ms.custom:
 - seo-marvel-apr2020
 - seo-marvel-jun2020
-ms.openlocfilehash: 1c7ec0f9411d767e588e391eb7eb94ec95a219fb
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 7bac33f19b51e2a5c6d6f234ba5e692cedd62c2b
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63312215"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65128466"
 ---
 # <a name="learn-about-sensitivity-labels"></a>Duyarlılık etiketleri hakkında bilgi edinin
 
->*[Microsoft 365 uyumluluğu için lisans & kılavuzu.](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)*
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+>*[Güvenlik & uyumluluğu için Microsoft 365 lisanslama kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 > [!NOTE]
-> Office uygulamalarında gördüğünüz duyarlılık etiketleri hakkında bilgi arıyorsanız, bkz. Office'te dosyalarınıza ve [e-postanıza duyarlılık Office](https://support.microsoft.com/topic/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9).
+> Office uygulamalarınızda gördüğünüz duyarlılık etiketleri hakkında bilgi arıyorsanız bkz. [Office'te dosyalarınıza ve e-postalarınıza duyarlılık etiketleri uygulama](https://support.microsoft.com/topic/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9).
 >
-> Bu sayfada yer alan bilgiler, bu etiketleri oluşturan ve yapılandıran IT yöneticilerine göredir.
+> Bu sayfadaki bilgiler, bu etiketleri oluşturabilen ve yapılandırabilen BT yöneticilerine yöneliktir.
 
-İşlerini yapmak için, kuruluşların içindeki ve dışındaki diğer kişiler ile işbirliği yapın. Bu, içeriğin artık güvenlik duvarının arkasında kalma anlamına gelir; her yerde, cihazlar, uygulamalar ve hizmetler arasında dolaşabilirsiniz. E-ticaret ne zaman dolsa, bunu, kurumnizin iş ve uyumluluk ilkelerine uygun, güvenli ve korumalı bir şekilde yapmak istersiniz.
+Kuruluşunuzdaki kişiler işlerini yapmak için hem kuruluş içindeki hem de dışındaki kişilerle işbirliği yapabilir. Bu, içeriğin artık bir güvenlik duvarının arkasında kalmayabileceği anlamına gelir; cihazlar, uygulamalar ve hizmetler arasında her yerde gezinebilir. Dolaşımdayken, bunu kuruluşunuzun iş ve uyumluluk ilkelerine uygun güvenli ve korumalı bir şekilde gerçekleştirmesini istersiniz.
 
-Microsoft Bilgi Koruması çözümünün duyarlılık etiketleri, kullanıcı üretkenliğinin ve işbirliği yapma becerilerinin engelli olmadığından emin olmak için, kuruluş verilerinizi sınıflandırmanıza ve korumanıza olanak sağlar.
+Microsoft Purview Information Protection'ın duyarlılık etiketleri, kuruluşunuzun verilerini sınıflandırmanıza ve korumanıza olanak tanırken, kullanıcı üretkenliğinin ve işbirliği yapma becerilerinin engellenmediğinden emin olmanıza olanak tanır.
 
-Şeritteki Giriş sekmesinden Excel duyarlılık **etiketlerini** gösteren örnek. Bu örnekte, uygulanan etiket durum çubuğunda görüntülenir:
+Şeritteki **Giriş** sekmesinden Excel'deki kullanılabilir duyarlılık etiketlerini gösteren örnek. Bu örnekte, uygulanan etiket durum çubuğunda görüntülenir:
 
-![Şeritte ve durum Excel duyarlılık etiketi.](../media/Sensitivity-label-in-Excel.png)
+![Excel şeridinde ve durum çubuğunda duyarlılık etiketi.](../media/Sensitivity-label-in-Excel.png)
 
-Duyarlılık etiketleri uygulamak için, kullanıcıların iş veya okul hesaplarıyla Microsoft 365 oturumları olması gerekir.
+Duyarlılık etiketlerini uygulamak için kullanıcıların Microsoft 365 iş veya okul hesaplarıyla oturum açması gerekir.
 
 > [!NOTE]
-> ABD Kamu kiracıları için duyarlılık etiketleri tüm platformlar için desteklemektedir.
+> ABD Kamu kiracıları için duyarlılık etiketleri tüm platformlar için desteklenir.
 >
-> Azure Information Protection birleşik etiketleme istemcisini ve tarayıcısını kullanıyorsanız, [Bkz. Azure Information Protection Premium Açıklama](/enterprise-mobility-security/solutions/ems-aip-premium-govt-service-description).
+> Azure Information Protection birleşik etiketleme istemcisini ve tarayıcısını kullanıyorsanız bkz. [Azure Information Protection Premium Kamu Hizmeti Açıklaması](/enterprise-mobility-security/solutions/ems-aip-premium-govt-service-description).
 
 Duyarlılık etiketlerini şu amaçlarla kullanabilirsiniz:
   
-- **Şifreleme ve içerik işaretleri içeren koruma ayarları sağlar.** Örneğin, bir belgeye veya e-postaya "Gizli" etiketi ekleyin; bu etiket içeriği şifreler ve "Gizli" filigranı uygular. İçerik işaretlemeleri, filigranların yanı sıra üst bilgi ve alt bilgileri de içerir ve şifreleme, yetkili kişilerin içerik üzerinde gerçekleştir eylemlerine kısıtlama da neden olabilir.
+- **Şifreleme ve içerik işaretlerini içeren koruma ayarları sağlayın.** Örneğin, bir belgeye veya e-postaya "Gizli" etiketi uygulayın; bu etiket içeriği şifreler ve "Gizli" filigranı uygular. İçerik işaretleri üst bilgi ve alt bilgilerin yanı sıra filigranları da içerir ve şifreleme, yetkili kişilerin içerik üzerinde gerçekleştirebileceği eylemleri de kısıtlayabilir.
 
-- **Farklı platformlarda ve cihazlarda Office uygulamalarındaki içeriği korumak.** Word, Excel, PowerPoint ve Outlook masaüstü Office uygulamaları ve Web üzerinde Office. Windows, macOS, iOS ve Android'de de desteklenen.
+- **Farklı platformlarda ve cihazlarda Office uygulamalarındaki içeriği korumak.** Office masaüstü uygulamaları ve Web üzerinde Office üzerinde Word, Excel, PowerPoint ve Outlook tarafından desteklenir. Windows, macOS, iOS ve Android'de desteklenir.
 
-- **Bulut Uygulamaları için Microsoft Defender'ı kullanarak üçüncü** taraf uygulama ve hizmetlerde yer alan içeriği koruyun. Bulut Uygulamaları için Defender'la, üçüncü taraf uygulama veya hizmet duyarlılık etiketlerini okumasa veya desteklemese bile SalesForce, Box veya DropBox gibi üçüncü taraf uygulama ve hizmetlerde içeriği algılanabilir, sınıflandıramaz, etiketli ve koruyabilirsiniz.
+- Cloud Apps için Microsoft **Defender'ı kullanarak üçüncü taraf uygulama ve hizmetlerdeki içeriği koruyun**. Cloud Apps için Defender ile, üçüncü taraf uygulama veya hizmet duyarlılık etiketlerini okumasa veya desteklemese bile SalesForce, Box veya DropBox gibi üçüncü taraf uygulama ve hizmetlerdeki içeriği algılayabilir, sınıflandırabilir, etiketleyebilir ve koruyabilirsiniz.
 
-- **Özel gruplar**, gruplar Teams Microsoft 365 içeren kapsayıcıları SharePoint koruyun. Örneğin, gizlilik ayarlarını, dış kullanıcı erişimini ve dış paylaşımı ve unmanaged cihazlarından erişim ayarlarını yapın.
+- Teams, Microsoft 365 Grupları ve SharePoint sitelerini içeren **kapsayıcıları koruyun**. Örneğin, gizlilik ayarlarını, dış kullanıcı erişimini ve dış paylaşımı ve yönetilmeyen cihazlardan erişimi ayarlayın.
 
-- **Duyarlılık etiketlerini Power BI**: Bu özelliği açık durumdayken, Power BI'de etiket uygulayabilir ve bakabilirsiniz ve verileri hizmetin dışına kaydedilene kadar koruyabilirsiniz.
+- **Duyarlılık etiketlerini Power BI'a genişletme**: Bu özelliği açtığınızda Power BI'da etiketleri uygulayabilir ve görüntüleyebilir ve hizmetin dışına kaydedildiğinde verileri koruyabilirsiniz.
 
-- **Azure Purview'daki** varlıklara duyarlılık etiketlerini genişletme: Şu anda önizlemede olan bu özelliği etkin hale gelirken, Azure Purview'da dosyalara ve şemalı veri varlıklarına duyarlılık etiketlerinizi uygulayabilirsiniz. Şematize veri varlıkları arasında SQL, Azure SQL, Azure Synapse, Azure Cosoms ve AWS RDS yer alır.
+- **Duyarlılık etiketlerini Microsoft Purview Veri Haritası'ndaki varlıklara genişletme**: Şu anda önizleme aşamasında olan bu özelliği açtığınızda, duyarlılık etiketlerinizi Microsoft Purview Veri Eşlemesi'ndeki dosyalara ve şemalaştırılmış veri varlıklarına uygulayabilirsiniz. Şemaya ayrılmış veri varlıkları SQL, Azure SQL, Azure Synapse, Azure Cosmos ve AWS RDS'yi içerir.
 
-- **Duyarlılık etiketlerini üçüncü taraf uygulamalarında ve hizmetlerinde kullanıma sunmak.** Microsoft Bilgi Koruması SDK'yı kullanarak, üçüncü taraf uygulamalar duyarlılık etiketlerini okuyabilir ve koruma ayarları uygulayabilir.
+- **Duyarlılık etiketlerini üçüncü taraf uygulamalarında ve hizmetlerinde kullanıma sunmak.** Üçüncü taraf uygulamalar Microsoft Information Protection SDK'sını kullanarak duyarlılık etiketlerini okuyabilir ve koruma ayarlarını uygulayabilir.
 
-- **Herhangi bir koruma ayarı kullanmadan içeriği sınıflandırmak.** ayrıca, içeriği sınıflandırma sonucu yalnızca bir etiket de atabilirsiniz. Bu, kullanıcılara sınıflandırmanın kuruluş etiket adlarına görsel bir eşlemesini sağlar ve kullanım raporları oluşturmak ve hassas içeriğinizin etkinlik verilerini görmek için etiketleri kullanabilir. Bu bilgilere bağlı olarak, koruma ayarlarını daha sonra istediğiniz zaman uygulayabilirsiniz.
+- **Herhangi bir koruma ayarı kullanmadan içeriği sınıflandırmak.** Ayrıca, içeriği sınıflandırmanın bir sonucu olarak bir etiket atayabilirsiniz. Bu, kullanıcılara kuruluşunuzun etiket adlarıyla sınıflandırmanın görsel bir eşlemesini sağlar ve etiketleri kullanarak kullanım raporları oluşturabilir ve hassas içeriğiniz için etkinlik verilerini görebilir. Bu bilgilere bağlı olarak, koruma ayarlarını daha sonra uygulamayı istediğiniz zaman seçebilirsiniz.
 
-Tüm bu durumlarda, Microsoft 365'daki duyarlılık etiketleri doğru içerik üzerinde doğru eylemleri gerçekleştirebilirsiniz. Duyarlılık etiketleriyle, verileri kuruluş genelinde sınıflandırabilirsiniz ve koruma ayarlarını bu sınıflandırmaya göre zorunlu  edebilirsiniz.
+Tüm bu durumlarda, Microsoft 365'teki duyarlılık etiketleri doğru içerik üzerinde doğru eylemleri gerçekleştirmenize yardımcı olabilir. Duyarlılık etiketleriyle, kuruluşunuz genelinde verileri sınıflandırabilir ve bu sınıflandırmaya göre koruma ayarlarını zorunlu kılabilirsiniz.
 
-Duyarlılık etiketleri tarafından desteklenen bu senaryolar ve diğer senaryolar hakkında daha fazla bilgi için bkz [. Duyarlılık etiketleri için genel senaryolar](get-started-with-sensitivity-labels.md#common-scenarios-for-sensitivity-labels). Duyarlılık etiketlerini destekleyen yeni özellikler her zaman geliştiriliyor. Bu nedenle, yol haritasına başvurulması konusunda Microsoft 365 [bulabilirsiniz](https://aka.ms/MIPC/Roadmap).
+Bunlar ve duyarlılık etiketleri tarafından desteklenen diğer senaryolar hakkında daha fazla bilgi için bkz. [Duyarlılık etiketleri için yaygın senaryolar](get-started-with-sensitivity-labels.md#common-scenarios-for-sensitivity-labels). Duyarlılık etiketlerini destekleyen her zaman yeni özellikler geliştirilmektedir, bu nedenle [Microsoft 365 yol haritasına](https://aka.ms/MIPC/Roadmap) başvurmayı da yararlı bulabilirsiniz.
 
 ## <a name="what-a-sensitivity-label-is"></a>Duyarlılık etiketi nedir?
 
-Bir duyarlılık etiketini içeriğe atadığınız zaman, uygulanan bir damga gibi olur ve şu şekilde olur:
+İçeriğe duyarlılık etiketi atadığınızda, bu, uygulanmış ve şöyle bir damga gibidir:
 
-- **Özelleştirilebilir.** Kendi kuruluş ve iş ihtiyaçlarına özel olarak, kurumuz için farklı düzeyde hassas içerik kategorileri oluşturabilirsiniz. Örneğin, Kişisel, Genel, Genel, Gizli ve Çok Gizli.
+- **Özelleştirilebilir.** Kuruluşunuza ve iş gereksinimlerinize özel olarak, kuruluşunuzda farklı hassas içerik düzeyleri için kategoriler oluşturabilirsiniz. Örneğin, Kişisel, Genel, Genel, Gizli ve Çok Gizli.
 
-- **Metni temizleme.** Dosyalar ve e-postaların meta verilerinde bir etiket net metin olarak depolandığı için üçüncü taraf uygulamalar ve hizmetler bu etiketi okuyabilir ve gerekirse kendi koruyucu eylemlerini uygulayabilir.
+- **Metni temizleyin.** Bir etiket, dosyalar ve e-postalar için meta verilerde düz metinde depolandığından, üçüncü taraf uygulamalar ve hizmetler bunu okuyabilir ve gerekirse kendi koruyucu eylemlerini uygulayabilir.
 
-- **Kalıcı.** Etiket, dosyaların ve e-postaların meta verilerinde depolandığı için, nereye kaydedilir veya depolandığı fark etmez; etiket içerikle birlikte dolaştır. Benzersiz etiket kimliği, yapılandırılan ilkelerin uygulanması ve zorlanmaları için temel haline gelir.
+- **Kalıcı.** Etiket dosyalar ve e-postalar için meta verilerde depolandığından, etiket nerede kaydedilir veya depolanırsa depolansın içerikle birlikte dolaşır. Benzersiz etiket tanımlaması, yapılandırdığınız ilkeleri uygulamak ve zorunlu tutmanın temeli haline gelir.
 
-Kullanıcılar tarafından görüntülendiğinde, duyarlılık etiketi kullanıcıların uygulamalarına eklen bir etiket gibi görünür ve var olan iş akışlarıyla kolayca tümleşebilir.
+Kullanıcılar tarafından görüntülendiğinde duyarlılık etiketi, kullandıkları uygulamalardaki bir etiket gibi görünür ve mevcut iş akışlarıyla kolayca tümleştirilebilir.
 
-Duyarlılık etiketlerini destekleyen her öğeye tek bir duyarlılık etiketi uygulanabilir. Belgelere ve e-postalara hem duyarlılık etiketi hem [de bekletme](retention.md#retention-labels) etiketi uygulanmış olabilir.
+Duyarlılık etiketlerini destekleyen her öğeye tek bir duyarlılık etiketi uygulanabilir. Belgelerde ve e-postalarda hem duyarlılık etiketi hem de [bekletme etiketi](retention.md#retention-labels) uygulanabilir.
 
 > [!div class="mx-imgBorder"]
 > ![E-postaya uygulanan duyarlılık etiketi.](../media/Sensitivity-label-on-email.png)
 
-## <a name="what-sensitivity-labels-can-do"></a>Duyarlılık etiketlerinin neler yapabilirim?
+## <a name="what-sensitivity-labels-can-do"></a>Duyarlılık etiketlerinin yapabilecekleri
 
-Bir e-postaya veya belgeye duyarlılık etiketi uygulandıktan sonra, bu etiket için tüm yapılandırılmış koruma ayarları içerikte zorunlu kılındı. Duyarlılık etiketini şu şekilde yapılandırarak:
+Bir e-postaya veya belgeye duyarlılık etiketi uygulandıktan sonra, söz konusu etiket için yapılandırılmış tüm koruma ayarları içeriğe uygulanır. Duyarlılık etiketini şu şekilde yapılandırabilirsiniz:
 
-- **Yetkisiz** kişilerin bu verilere erişmesini önlemek için e-postaları ve belgeleri şifrele. Ayrıca, hangi kullanıcıların veya grubun hangi eylemleri ne kadar süreyle gerçekleştirme iznine sahip olduğunu da seçebilirsiniz. Örneğin, başka bir kuruluşta belirli bir grup belgeyi yalnızca görüntüley varken, kuruluşta yer alan tüm kullanıcıların bir belgeyi değiştirmesine izin vermeyi seçebilirsiniz. Alternatif olarak, yönetici tanımlı izinler yerine kullanıcılarınızı etikete uygulayabilecekleri içerik izinleri atamalarına izin veebilirsiniz. 
+- Yetkisiz kişilerin bu verilere erişmesini önlemek için e-postaları ve belgeleri **şifreleyin**. Ayrıca, hangi kullanıcıların veya grubun hangi eylemleri ve ne kadar süre boyunca gerçekleştirme izinlerine sahip olduğunu seçebilirsiniz. Örneğin, kuruluşunuzdaki tüm kullanıcıların belgeyi değiştirmesine izin vermeyi seçebilirsiniz ancak başka bir kuruluştaki belirli bir grup belgeyi yalnızca görüntüleyebilir. Alternatif olarak, yönetici tanımlı izinler yerine, kullanıcılarınızın etiketi uyguladığında içeriğe izin atamasına izin vekleyebilirsiniz. 
     
-    Duyarlılık etiketi **2007'yi** 2013'te 2007'yi kullanırken şifreleme ayarları hakkında daha fazla bilgi için bkz. Duyarlılık etiketlerini şifreleme kullanarak [içeriğe erişimi kısıtlama](encryption-sensitivity-labels.md).
+    Duyarlılık etiketi oluştururken veya düzenlerken **şifreleme** ayarları hakkında daha fazla bilgi için bkz. [Duyarlılık etiketlerinde şifreleme kullanarak içeriğe erişimi kısıtlama](encryption-sensitivity-labels.md).
 
-- **E-postaya** veya Office uygulanan belgelere filigran, üst bilgi veya alt bilgi ekleyerek, bu uygulamaları kullanarak içeriği işaretlerini alın. Filigranlar belgelere uygulanabilir, ancak e-posta uygulanmalıdır. Örnek üstbilgi ve filigran:
+- Office uygulamalarını kullanırken e-postaya veya etiket uygulanmış belgelere filigran, üst bilgi veya alt bilgi ekleyerek **içeriği işaretleyin**. Filigranlar belgelere uygulanabilir, ancak e-postaya uygulanamayabilir. Örnek üst bilgi ve filigran:
     
-    ![Belgeye uygulanan filigran ve üst bilgi.](../media/Sensitivity-label-watermark-header.png)
+    ![Belgeye filigran ve üst bilgi uygulandı.](../media/Sensitivity-label-watermark-header.png)
     
-    Dinamik işaretler, değişkenler kullanılarak da de kullanılabilir. Örneğin, üst bilgi, alt bilgi veya filigrana etiket adını veya belge adını ekleyin. Daha fazla bilgi için bkz [. Değişkenlerle dinamik işaretler](sensitivity-labels-office-apps.md#dynamic-markings-with-variables).
+    Dinamik işaretler, değişkenler kullanılarak da desteklenir. Örneğin, etiket adını veya belge adını üst bilgi, alt bilgi veya filigrana ekleyin. Daha fazla bilgi için bkz [. Değişkenlerle dinamik işaretler](sensitivity-labels-office-apps.md#dynamic-markings-with-variables).
     
-    İçerik işaretleri uygulandığında denetlemeniz mi gerekiyor? Bkz[. Office uygulamaları içerik işaretleme ve şifreleme uygulamaz](sensitivity-labels-office-apps.md#when-office-apps-apply-content-marking-and-encryption).
+    İçerik işaretlerinin ne zaman uygulandığını denetlemeye mi ihtiyacınız var? Bkz. [Office uygulamaları içerik işaretleme ve şifreleme uyguladığında](sensitivity-labels-office-apps.md#when-office-apps-apply-content-marking-and-encryption).
     
-    Belirli belgeleri temel alan şablonlarınız veya iş akışlarınız varsa, etiketi kullanıcılara açık hale gelmeden önce bu belgeleri seçtiğiniz içerik işaretleriyle test edin. Dikkat etmek gereken bazı dize uzunluğu kısıtlamaları:
+    Belirli belgeleri temel alan şablonlarınız veya iş akışlarınız varsa, etiketi kullanıcılar için kullanılabilir hale getirmeden önce bu belgeleri seçtiğiniz içerik işaretleriyle test edin. Dikkat edilmesi gereken bazı dize uzunluğu kısıtlamaları:
     
-    Filigranlar 255 karakterle sınırlıdır. Üstbilgi ve altbilgiler, üstbilgiler ve altbilgiler hariç 1024 Excel. Excel üst bilgi ve alt bilgiler için toplam 255 karakter sınırlaması vardır, ancak bu sınır, biçimlendirme kodları gibi görünür olmayan karakterleri içerir. Sınıra ulaşıldısa, bu sınıra girersiniz dizesi Excel.
+    Filigranlar 255 karakterle sınırlıdır. Üst bilgiler ve alt bilgiler, Excel dışında 1024 karakterle sınırlıdır. Excel'de üst bilgiler ve alt bilgiler için toplam 255 karakter sınırı vardır, ancak bu sınır biçimlendirme kodları gibi görünür olmayan karakterler içerir. Bu sınıra ulaşılırsa, girdiğiniz dize Excel'de görüntülenmez.
 
-- **Duyarlılık etiketlerini Microsoft Teams**, site grupları ve diğer sitelerle kullanma özelliğini etkinleştirirken, Microsoft 365 ve grup gibi [SharePoint koruyun](sensitivity-labels-teams-groups-sites.md).
+- [Microsoft Teams, Microsoft 365 grupları ve SharePoint siteleriyle duyarlılık etiketlerini kullanma](sensitivity-labels-teams-groups-sites.md) özelliğini etkinleştirdiğinizde siteler ve **gruplar gibi kapsayıcılardaki içeriği koruyun**.
     
-    Bu özelliği etkinleştirene kadar gruplar ve siteler için koruma ayarlarını yapılandırılamaz. Bu etiket yapılandırması belgelerin veya e-postaların otomatik olarak etiketlenirken sonuç olarak değil, bunun yerine etiket ayarları içeriğin depolanlandığı kapsayıcıya erişimi denetleyerek içeriği korur. Bu ayarlar gizlilik ayarlarını, dış kullanıcı erişimini ve dış paylaşımı ve unmanaged cihazlarından erişimleri içerir.
+    Bu özelliği etkinleştirene kadar gruplar ve siteler için koruma ayarlarını yapılandıramazsınız. Bu etiket yapılandırması, belgelerin veya e-postaların otomatik olarak etiketlenmesine neden olmaz, ancak bunun yerine etiket ayarları içeriğin depolanabileceği kapsayıcıya erişimi denetleyerek içeriği korur. Bu ayarlar gizlilik ayarlarını, dış kullanıcı erişimini ve dış paylaşımı ve yönetilmeyen cihazlardan erişimi içerir.
 
-- **Etiketi dosyalara ve e-postalara otomatik olarak uygulayabilir veya bir etiket önerebilirsiniz.** Etiket olmasını istediğiniz hassas bilgilerin nasıl tanım olacağını ve etiketin otomatik olarak nasıl uygulanabileceklerini seçin veya kullanıcılardan önerdiğiniz etiketi uygulamalarını istenebilirsiniz. Etiket önerin, bilgi isteminde seçtiğiniz metin görüntülenir. Örneğin:
+- **Etiketi dosyalara ve e-postalara otomatik olarak uygulayın veya bir etiket önerin.** Etiketlemesini istediğiniz hassas bilgilerin nasıl tanımlandığını seçin ve etiket otomatik olarak uygulanabilir veya kullanıcılardan önerdiğiniz etiketi uygulamalarını isteyebilirsiniz. Bir etiket önerirseniz, istem seçtiğiniz metni görüntüler. Örneğin:
     
-    ![Gerekli etiketin atanma istemi.](../media/Sensitivity-label-Prompt-for-required-label.png)
+    ![Gerekli bir etiket atama istemi.](../media/Sensitivity-label-Prompt-for-required-label.png)
     
-    Bir duyarlılık etiketi 2012 veya daha fazla duyarlılık etiketi 2012'yi düzenlerken dosya ve **e-posta** ayarlarını otomatik olarak etiketleme hakkında daha fazla bilgi için bkz. Office için içeriğe otomatik olarak duyarlılık etiketi uygulama ve [Azure Purview'da](/azure/purview/create-sensitivity-label) etiketleme.[](apply-sensitivity-label-automatically.md)
+    Duyarlılık etiketi oluştururken veya düzenlerken **dosyalar ve e-postalar için otomatik etiketleme** ayarları hakkında daha fazla bilgi için bkz. Office uygulamaları için [içeriğe otomatik olarak duyarlılık etiketi uygulama](apply-sensitivity-label-automatically.md) ve [Microsoft Purview Veri Eşlemesi'nde Etiketleme](/azure/purview/create-sensitivity-label).
 
-- **Site ve tek tek belgeler için** SharePoint bağlantı türünü ayarlayın. Kullanıcıların aşırı paylaşımını önlemeye yardımcı olmak için, [](sensitivity-labels-default-sharing-link.md) kullanıcılar belge paylaşımından veya belge paylaşımından veya belge paylaşımından SharePoint ve OneDrive.
+- SharePoint siteleri ve tek tek belgeler için **varsayılan paylaşım bağlantı türünü ayarlayın**. Kullanıcıların fazla paylaşımını önlemeye yardımcı olmak için, kullanıcıların SharePoint ve OneDrive'dan belge paylaşmasına yönelik [varsayılan kapsamı ve izinleri](sensitivity-labels-default-sharing-link.md) ayarlayın.
 
 ### <a name="label-scopes"></a>Etiket kapsamları
 
-Duyarlılık etiketi  oluşturmak için, etiketin kapsamını iki şeyi belirleyen yapılandırman istensin:
-- Bu etiket için yapılandırabilirsiniz etiket ayarları
-- Etiketin kullanıcılar tarafından görülebilecekleri yer
+Duyarlılık etiketi oluşturduğunuzda, iki şeyi belirleyen etiketin kapsamını yapılandırmanız istenir:
+- Bu etiket için yapılandırabileceğiniz etiket ayarları
+- Etiketin kullanıcılar tarafından görüleceği yer
 
-Bu kapsam yapılandırması, yalnızca belgeler ve e-postalar için olan ve kapsayıcılar için seçilenene kadar duyarlılık etiketlerine sahip olasınız. Ve benzer şekilde, yalnızca kapsayıcılar için olan ve belgeler ve e-postalar için seçileylene duyarlılık etiketleri. Azure Purview varlıklarının kapsamını da kullanabilirsiniz:
+Bu kapsam yapılandırması, yalnızca belgeler ve e-postalar için olan ve kapsayıcılar için seçilmeyecek duyarlılık etiketlerine sahip olmanıza olanak tanır. Benzer şekilde, yalnızca kapsayıcılara yönelik olan ve belgeler ve e-postalar için seçilebilen duyarlılık etiketleri. Microsoft Purview Veri Eşlemesi varlıklarının kapsamını da seçebilirsiniz:
 
 ![Duyarlılık etiketleri için kapsam seçenekleri.](../media/sensitivity-labels-scopes.png)
 
-Varsayılan olarak, Dosyalar **ve & kapsamı** her zaman seçilidir. Kiracınız için özellikler etkinleştirildiğinde diğer kapsamlar varsayılan olarak seçilir:
+Varsayılan olarak, **Dosyalar & e-posta** kapsamı her zaman seçilidir. Kiracınız için özellikler etkinleştirildiğinde diğer kapsamlar varsayılan olarak seçilir:
 
-- **Gruplar &:** [Kapsayıcılar için duyarlılık etiketlerini etkinleştirme ve etiketleri eşitleme](sensitivity-labels-teams-groups-sites.md#how-to-enable-sensitivity-labels-for-containers-and-synchronize-labels)
+- **Gruplar & siteleri**: [Kapsayıcılar için duyarlılık etiketlerini etkinleştirme ve etiketleri eşitleme](sensitivity-labels-teams-groups-sites.md#how-to-enable-sensitivity-labels-for-containers-and-synchronize-labels)
 
-- **Şemalı veri varlıkları**: [Azure Purview'da içeriğinizi otomatik olarak etiketleme](/azure/purview/create-sensitivity-label)
+- **Şema haline getirilmiş veri varlıkları**: [Microsoft Purview Veri Eşlemesi'nde içeriğinizi otomatik olarak etiketleme](/azure/purview/create-sensitivity-label)
 
-Varsayılanları değiştirir ve tüm kapsamlar seçilmezse, henüz seçilmemiş kapsamlar için yapılandırma ayarlarının ilk sayfasını görüntülersiniz, ancak ayarları yapılandıramazsanız. Örneğin, dosya ve e-posta kapsamı seçilmemişse, sonraki sayfada şu seçenekleri seçeyesiniz:
+Tüm kapsamların seçilmemesi için varsayılanları değiştirirseniz, seçmediğiniz kapsamlar için yapılandırma ayarlarının ilk sayfasını görürsünüz, ancak ayarları yapılandıramazsınız. Örneğin, dosyaların ve e-postaların kapsamı seçili değilse, sonraki sayfadaki seçenekleri belirleyemezsiniz:
 
-![Duyarlılık etiketleri için kullanılamaz seçenekler.](../media/sensitivity-labels-unavailable-settings.png)
+![Duyarlılık etiketleri için kullanılamayan seçenekler.](../media/sensitivity-labels-unavailable-settings.png)
 
-Kullanılamayan bu sayfalar için, devam etmek için **Sonraki'yi** seçin. Veya **Geri'yi** seçerek etiketin kapsamını değiştirebilirsiniz.
+Kullanılamayan seçeneklere sahip bu sayfalar için devam etmek için **İleri'yi** seçin. Ya da etiketin kapsamını değiştirmek için **Geri'yi** seçin.
 
 ### <a name="label-priority-order-matters"></a>Etiket önceliği (sıralamanın önemi)
 
-Yönetim merkezinize duyarlılık etiketlerinizi ekleyebilirsiniz, bu etiketler, Etiketler sayfasının **Duyarlılık** sekmesindeki bir **listede** görüntülenir. Bu listede, etiketlerin sırası önemlidir çünkü önceliklerini yansıtacaktır. Çok Gizli gibi en kısıtlayıcı duyarlılık etiketinizin listenin en altında ve en kısıtlayıcı duyarlılık etiketinizin  de (Genel gibi) en üstte görünmesini **istiyorsunuz**.
+Yönetim merkezinizde duyarlılık etiketlerinizi oluşturduğunuzda, bunlar **Etiketler** sayfasındaki **Duyarlılık** sekmesindeki bir listede görünür. Bu listede etiketlerin sırası, önceliklerini yansıttığı için önemlidir. Listenin **en altında** Çok Gizli gibi en kısıtlayıcı duyarlılık etiketinizin ve Genel gibi en az kısıtlayıcı duyarlılık etiketinizin **en üstte** görünmesini istiyorsunuz.
 
-Belge, e-posta veya kapsayıcı gibi bir öğeye yalnızca bir duyarlılık etiketi uygulayabilirsiniz. Kullanıcılarınızın bir etiketin sınıflandırmasını düşürürken bunun nedenini belirtmesini gerektiren bir seçenek ayarlarsanız bu listedeki sıra daha düşük sınıflandırmaları tanımlar. Bununla birlikte, bu seçenek üst etiketlerinin önceliğini paylaşan altbelbeller için geçerli değildir.
+Belge, e-posta veya kapsayıcı gibi bir öğeye yalnızca bir duyarlılık etiketi uygulayabilirsiniz. Kullanıcılarınızın bir etiketin sınıflandırmasını düşürürken bunun nedenini belirtmesini gerektiren bir seçenek ayarlarsanız bu listedeki sıra daha düşük sınıflandırmaları tanımlar. Ancak bu seçenek, üst etiketlerinin önceliğini paylaşan alt etiketler için geçerli değildir.
 
-Yine de alt etiketlerin sırası otomatik [etiketle](apply-sensitivity-label-automatically.md) birlikte kullanılır. Etiketleri otomatik olarak veya öneri olarak uygulanmak üzere yapılandırdığınızda birden fazla eşleşme birden fazla etiketle sonuçlanabilir. Uygulanacak veya önerilecek etiketi belirlemek için etiket sırası kullanılır: Son hassas etiket seçilir ve uygulanıyorsa son alt etiket olur.
+Ancak alt etiketlerin sırası [otomatik etiketleme](apply-sensitivity-label-automatically.md) ile birlikte kullanılır. Etiketleri otomatik olarak veya öneri olarak uygulanmak üzere yapılandırdığınızda birden fazla eşleşme birden fazla etiketle sonuçlanabilir. Uygulanacak veya önerilecek etiketi belirlemek için etiket sıralama kullanılır: Son hassas etiket seçilir ve varsa son alt etiket seçilir.
 
 ![Alt etiket oluşturma seçeneği.](../media/Sensitivity-label-sublabel-options.png)
 
 ### <a name="sublabels-grouping-labels"></a>Alt etiketler (gruplandırma etiketleri)
 
-Alt etiketleri kullanarak, bir veya daha fazla etiketi, kullanıcının bir Office uygulamasında gördüğü bir üst etiket altında gruplandırabilirsiniz. Örneğin, kuruluşunuz gizli sınıflandırmasının belirli türlerine uygun birkaç farklı etiketi Gizli üst etiketi altında kullanabilir. Bu örnekte Gizli üst etiketi, koruma ayarları eklemeden yalnızca bir metin etiketidir ve alt etiketleri olduğundan içeriğe uygulanamamaktadır. Bunun yerine, kullanıcıların altları görüntülemek için Gizli'yi seçmeleri gerekir ve bundan sonra içeriğe uygulamak için bir alt etiket seçebilirler.
+Alt etiketleri kullanarak, bir veya daha fazla etiketi, kullanıcının bir Office uygulamasında gördüğü bir üst etiket altında gruplandırabilirsiniz. Örneğin, kuruluşunuz gizli sınıflandırmasının belirli türlerine uygun birkaç farklı etiketi Gizli üst etiketi altında kullanabilir. Bu örnekte, Gizli üst etiketi yalnızca koruma ayarı olmayan bir metin etiketidir ve alt etiketleri olduğundan içeriğe uygulanamaz. Bunun yerine, kullanıcıların alt etiketlerini görüntülemek için Gizli'yi seçmesi gerekir ve ardından içeriğe uygulanacak bir alt etiket seçebilirler.
 
 Alt etiketler, etiketleri kullanıcılara mantıksal gruplar altında sunmanın basit bir yoludur. Alt etiketler bağlı oldukları üst etiketteki ayarları devralmaz. Bir kullanıcı için alt etiket yayımladığınızda, bu kullanıcı ilgili alt etiketi içeriğe uygulayabilir ancak yalnızca üst etikete uygulayamaz.
 
-Varsayılan etiket olarak üst etiket seçmenin yanı sıra, otomatik olarak uygulanacak (veya önerilen) bir üst etiket yapılandırabilirsiniz. Bunu yaparsanız, üst etiket içeriğe uygulanmaz.
+Varsayılan etiket olarak bir üst etiket seçmeyin veya bir üst etiketi otomatik olarak uygulanacak (veya önerilen) şekilde yapılandırmayın. Bunu yaparsanız, üst etiket içeriğe uygulanmaz.
 
-Altbelbellerin kullanıcılar için nasıl görüntüleniyor olduğunu örneği:
+Alt etiketlemelerin kullanıcılar için nasıl görüntülendiğine ilişkin örnek:
 
-![Şeritte gruplara bağlı altbelbeller.](../media/Sensitivity-label-grouped-labels2.png)
+![Şeritte gruplandırılmış alt etiket.](../media/Sensitivity-label-grouped-labels2.png)
 
 ### <a name="editing-or-deleting-a-sensitivity-label"></a>Duyarlılık etiketini düzenleme veya silme
 
-Yönetim merkeziniz'den bir duyarlılık etiketini silerseniz etiket otomatik olarak içerikten kaldırılamaz ve koruma ayarları bu etiketin uygulandığı içerikte uygulanmaya devam eder.
+Bir duyarlılık etiketini yönetim merkezinizden silerseniz, etiket içerikten otomatik olarak kaldırılmaz ve bu etiketin uygulandığı içerikte tüm koruma ayarları uygulanmaya devam eder.
 
-Duyarlılık etiketini düzenlersanız, bu içerikte uygulanan etiketin sürümü uygulanır.
+Duyarlılık etiketini düzenlerseniz, söz konusu içerikte uygulanan etiketin sürümüdür.
 
-## <a name="what-label-policies-can-do"></a>Etiket ilkeleri neleri yapar?
+## <a name="what-label-policies-can-do"></a>Etiket ilkelerinin yapabilecekleri
 
-Duyarlılık etiketlerinizi oluşturduktan sonra, bunları yayımlamanız ve bunları organizasyonlu kişiler ve hizmetler için kullanılabilir hale oluşturmanız gerekir. Daha sonra duyarlılık etiketleri belge ve Office ve duyarlılık etiketlerini destekleyen diğer öğelere de uygulanabilir. 
+Duyarlılık etiketlerinizi oluşturduktan sonra, kuruluşunuzdaki kişilerin ve hizmetlerin kullanımına açmak için bunları yayımlamanız gerekir. Duyarlılık etiketleri daha sonra Office belgelere ve e-postalara ve duyarlılık etiketlerini destekleyen diğer öğelere uygulanabilir. 
 
-Paylaşılan tüm posta kutuları gibi konumlarda yayımlanan bekletme Exchange, duyarlılık etiketleri kullanıcılara veya gruplara yayımlanır. Daha sonra duyarlılık etiketlerini destekleyen uygulamalar bu kullanıcılara ve gruplara, uygulanan etiketler veya uygulanabilecek etiketler olarak  gösterebilirsiniz.
+Tüm Exchange posta kutuları gibi konumlarda yayımlanan bekletme etiketlerinden farklı olarak, duyarlılık etiketleri kullanıcılara veya gruplara yayımlanır. Duyarlılık etiketlerini destekleyen uygulamalar daha sonra bunları bu kullanıcılara ve gruplara uygulanan etiketler veya uygulayabilecekleri etiketler olarak görüntüleyebilir.
 
-Bir etiket ilkesi yapılandırıldığında şunları da s yapılandırmaya devam etmiş sayılır:
+Bir etiket ilkesi yapılandırırken şunları yapabilirsiniz:
 
-- **Etiketleri hangi kullanıcıların ve grupların göreceğini seçin.** Etiketler, Azure AD'de belirli bir kullanıcıya veya e-posta özelliği etkin güvenlik grubuna, dağıtım grubuna Microsoft 365 grup (dinamik üyeliği [olabilir) için](/azure/active-directory/users-groups-roles/groups-create-rule) yayımlanır.
+- **Etiketleri hangi kullanıcıların ve grupların göreceğini seçin.** Etiketler, Azure AD belirli bir kullanıcı veya e-posta özellikli güvenlik grubuna, dağıtım grubuna veya Microsoft 365 grubuna ([dinamik üyeliğe](/azure/active-directory/users-groups-roles/groups-create-rule) sahip olabilir) yayımlanabilir.
 
-- **Etiketsiz belgeler** ve e-postalar, yeni kapsayıcılar ([Microsoft Teams, Microsoft 365](sensitivity-labels-teams-groups-sites.md) grupları ve SharePoint siteleri için duyarlılık etiketlerini etkinleştirdikten sonra, artık içerik için varsayılan Power BI [belirtin](/power-bi/admin/service-security-sensitivity-label-default-label-policy). Dört öğe türü için aynı etiketi veya farklı etiketleri belirtebilirsiniz. Kullanıcılar kendi içeriklerinin veya kapsayıcılarının duyarlılıklarıyla daha iyi eşleşmesi için, uygulanmış olan varsayılan duyarlılık etiketini değiştirebilir.
+- Etiketlenmemiş belgeler ve e-postalar, yeni kapsayıcılar ([Microsoft Teams, Microsoft 365 grupları ve SharePoint siteleri için duyarlılık etiketlerini etkinleştirdiğinizde](sensitivity-labels-teams-groups-sites.md) ve şimdi [de Power BI içerik](/power-bi/admin/service-security-sensitivity-label-default-label-policy) için varsayılan etiket olarak **belirtin**. Dört öğe türü için de aynı etiketi veya farklı etiketleri belirtebilirsiniz. Kullanıcılar, uygulanan varsayılan duyarlılık etiketini içeriklerinin veya kapsayıcılarının duyarlılığıyla daha iyi eşleşecek şekilde değiştirebilir.
     
     > [!NOTE]
-    > Yerleşik etiketlerin Office uygulamaların önizlemesinde: Bu ayar artık kullanıcılar tarafından açıldığında hem varolan belgeleri hem de yeni belgeleri destekler. Bu davranış değişikliği, Azure Information Protection birleşik etiketleme istemcisinde eşlik sağlar. Uygulama başına ve en düşük sürümler için uygulama başına uygulama sürümü hakkında daha fazla [](sensitivity-labels-office-apps.md#sensitivity-label-capabilities-in-word-excel-and-powerpoint) bilgi için Word, Excel özellikleri tablosuna PowerPoint.
+    > Yerleşik etiketler kullanan Office uygulamalar için önizlemede: Bu ayar artık kullanıcılar tarafından açıldığında var olan belgeleri ve yeni belgeleri destekliyor. Davranıştaki bu değişiklik, Azure Information Protection birleşik etiketleme istemcisiyle eşlik sağlar. Uygulama başına dağıtım ve en düşük sürümler hakkında daha fazla bilgi için Word, Excel ve PowerPoint [için yetenekler tablosuna](sensitivity-labels-office-apps.md#sensitivity-label-capabilities-in-word-excel-and-powerpoint) bakın.
     
-    Tüm içeriğinize uygulanmasını istediğiniz temel koruma ayarları düzeyini ayarlamak için varsayılan bir etiket kullanmayı göz önünde bulundurabilirsiniz. Bununla birlikte, kullanıcı eğitimi ve diğer denetimler olmadan bu ayar yanlış etiketlemeye neden olabilir. Belgelere varsayılan etiket olarak şifreleme uygulanan bir etiket seçmek genellikle iyi bir fikir değildir. Örneğin, birçok kuruluşun şifrelemeyi destekleyen uygulamaları olmayan veya yetkilendirilen bir hesap kullanmay isteyen dış kullanıcılara belge göndermesi ve bu kullanıcılarla belge paylaşması gerekir. Bu senaryo hakkında daha fazla bilgi için bkz [. Şifrelenmiş belgeleri dış kullanıcılarla paylaşma](sensitivity-labels-office-apps.md#sharing-encrypted-documents-with-external-users).
+    Tüm içeriğinize uygulanmasını istediğiniz temel koruma ayarlarını ayarlamak için varsayılan bir etiket kullanmayı göz önünde bulundurun. Ancak, kullanıcı eğitimi ve diğer denetimler olmadan bu ayar yanlış etiketlemeye de neden olabilir. Belgelere varsayılan etiket olarak şifreleme uygulayan bir etiket seçmek genellikle iyi bir fikir değildir. Örneğin, birçok kuruluşun şifrelemeyi destekleyen uygulamaları olmayan veya yetkilendirilebilen bir hesap kullanamayan dış kullanıcılarla belge göndermesi ve paylaşması gerekir. Bu senaryo hakkında daha fazla bilgi için bkz. [Şifrelenmiş belgeleri dış kullanıcılarla paylaşma](sensitivity-labels-office-apps.md#sharing-encrypted-documents-with-external-users).
     
     > [!IMPORTANT]
-    > Alt etiketleri [olduğunda, üst](#sublabels-grouping-labels) etiketi varsayılan etiket olarak yapılandırmama konusunda dikkatli olun.
+    > [Alt etiketleriniz](#sublabels-grouping-labels) olduğunda, üst etiketi varsayılan etiket olarak yapılandırmamaya dikkat edin.
 
-- **Etiketi değiştirmek için gerekçelendirme gerektirme.** Kullanıcı bir etiketi kaldırmayı veya daha düşük sipariş numarası olan bir etiketle değiştirirse, kullanıcının bu eylemi gerçekleştirmek için bir gerekçelendirmesi gerektirmeyiniz gerekir. Örneğin, bir kullanıcı Gizli (sipariş numarası 3) etiketli bir belge açar ve bu etiketi Genel adlı bir belgeyle (sipariş numarası 1) değiştirir. Tüm Office için, yerleşik etiketlemeyi ve Azure Information Protection birleşik etiketleme istemcisini kullanarak dosya başına bir kez uygulama oturumu başına bu gerekçelendirme istemini tetikler. Yöneticiler gerekçelendirme nedenini etkinlik gezgininde etiket değişikliğiyle birlikte [okuyabilir](data-classification-activity-explorer.md).
+- **Etiketi değiştirmek için gerekçe gerektir.** Bir kullanıcı etiketi kaldırmaya veya daha düşük sıralı bir numaraya sahip bir etiketle değiştirmeyi denerse, kullanıcının bu eylemi gerçekleştirmek için bir gerekçe sağlaması gerekebilir. Örneğin, kullanıcı Gizli (sipariş numarası 3) etiketli bir belge açar ve bu etiketi Ortak (sipariş numarası 1) adlı bir belgeyle değiştirir. Office uygulamalar için bu gerekçe istemi yerleşik etiketleme kullandığınızda uygulama oturumu başına bir kez ve Azure Information Protection birleşik etiketleme istemcisini kullandığınızda dosya başına tetiklenir. Yöneticiler gerekçe nedenini ve [etkinlik gezginindeki](data-classification-activity-explorer.md) etiket değişikliğini okuyabilir.
 
-    ![Kullanıcıların bir gerekçe girmelerini istemi.](../media/Sensitivity-label-justification-required.png)
+    ![Kullanıcıların gerekçe girmelerini iste.](../media/Sensitivity-label-justification-required.png)
 
-- **Kullanıcıların belgelere ve e-postalara**, yalnızca belgelere, kapsayıcılara ve diğer belgelere etiket Power BI gerektir. Zorunlu etiketleme olarak da bilinen bu seçenekler, kullanıcıların belgeleri kaydederek e-posta gönderemeden, yeni gruplar veya siteler oluşturmadan, bu gruplarda etiketsiz içerik kullanmadan önce bir etiket uygulanması Power BI.
+- Kullanıcıların belgeler ve e-postalar, yalnızca belgeler, kapsayıcılar ve Power BI içeriği için **etiket uygulamasını zorunlu kılar**. Zorunlu etiketleme olarak da bilinen bu seçenekler, kullanıcıların belgeleri kaydedip e-posta gönderebilmesi, yeni gruplar veya siteler oluşturabilmesi ve Power BI için etiketlenmemiş içerik kullandıklarında önce bir etiketin uygulanması gerektiğini güvence altına alır.
     
-    Belgeler ve e-postalar için, yapılandırılan bir koşul sonucunda kullanıcı tarafından el ile bir etiket atanabilir veya varsayılan olarak atanabilir (önceden tanımlanan varsayılan etiket seçeneği). Kullanıcının etiket ataması gerektiğinde örnek bir istem:
+    Belgeler ve e-postalar için, bir etiket kullanıcı tarafından el ile, yapılandırdığınız bir koşulun sonucu olarak otomatik olarak atanabilir veya varsayılan olarak atanabilir (daha önce açıklanan varsayılan etiket seçeneği). Bir kullanıcının etiket ataması gerektiğinde örnek bir istem:
 
-    ![Kullanıcıdan Outlook etiketini uygulamalarını isteme.](../media/sensitivity-labels-mandatory-prompt-outlook.png)
+    ![Outlook kullanıcıdan gerekli etiketi uygulamasını isteme istemi.](../media/sensitivity-labels-mandatory-prompt-outlook.png)
     
-    Belgeler ve e-postalar için zorunlu etiketleme hakkında daha fazla bilgi için bkz. Kullanıcıların e-postalarına ve belgelerine [etiket uygulamalarını gerektirme](sensitivity-labels-office-apps.md#require-users-to-apply-a-label-to-their-email-and-documents).
+    Belgeler ve e-postalar için zorunlu etiketleme hakkında daha fazla bilgi için bkz. [Kullanıcıların e-postalarına ve belgelerine etiket uygulamasını gerektirme](sensitivity-labels-office-apps.md#require-users-to-apply-a-label-to-their-email-and-documents).
     
-    Kapsayıcılar için, grup veya site oluşturulduğunda bu etikete bir etiket atanmalıdır.
+    Kapsayıcılar için, grup veya site oluşturulurken bir etiket atanmalıdır.
     
-    E-Power BI için zorunlu etiketleme hakkında daha fazla bilgi için bkz[.](/power-bi/admin/service-security-sensitivity-label-mandatory-label-policy) Power BI.
+    Power BI için zorunlu etiketleme hakkında daha fazla bilgi için bkz[. Power BI için zorunlu etiket ilkesi](/power-bi/admin/service-security-sensitivity-label-mandatory-label-policy).
     
-    Etiket kapsamınızı artırmaya yardımcı olmak için bu seçeneği kullanmayı düşünebilirsiniz. Bununla birlikte, kullanıcı eğitimi olmadan bu ayarlar yanlış etiketlemeye neden olabilir. Buna ek olarak, karşılık gelen bir varsayılan etiket ayarlamadıysanız, zorunlu etiketleme kullanıcılarınızı sık sorulan istemlere karşı hayal kırıklığına uğratabilirsiniz.
+    Etiketleme kapsamınızı artırmanıza yardımcı olması için bu seçeneği kullanmayı göz önünde bulundurun. Ancak, kullanıcı eğitimi olmadan bu ayarlar yanlış etiketlemeye neden olabilir. Ayrıca, karşılık gelen bir varsayılan etiket ayarlamadığınız sürece, zorunlu etiketleme sık sorulan istemlerle kullanıcılarınızı rahatsız edebilir.
 
-- **Özel yardım sayfasına yardım bağlantısı sağlama.** Kullanıcılarınız duyarlılık etiketlerinin ne anlama olduğundan veya nasıl kullanılmaları gerektiğine emin değilse, Office uygulamaları altındaki Duyarlılık etiketi menüsünün altında görünen daha fazla bilgi URL'si sebilirsiniz:
+- **Özel bir yardım sayfasına yardım bağlantısı sağlayın.** Kullanıcılarınız duyarlılık etiketlerinizin ne anlama geldiğini veya nasıl kullanılmaları gerektiğini bilmiyorsa, Office uygulamalarında **Duyarlılık etiketi** menüsünün en altında görünen Daha Fazla Bilgi URL'si sağlayabilirsiniz:
 
-    ![Şeritteki Duyarlılık düğmesi hakkında daha fazla bilgi bağlantısı.](../media/Sensitivity-label-learn-more.png)
+    ![Şeritteki Duyarlılık düğmesinde daha fazla bilgi edinin bağlantısı.](../media/Sensitivity-label-learn-more.png)
 
-Kullanıcılara ve gruplara yeni duyarlılık etiketleri ataan bir etiket ilkesi oluşturduktan sonra, kullanıcılar bu etiketleri kendi kullanıcılarının veya Office başlar. En son değişikliklerin tüm kuruluş genelinde çoğaltılması için 24 saate kadar izin verme.
+Kullanıcılara ve gruplara yeni duyarlılık etiketleri atayan bir etiket ilkesi oluşturduktan sonra, kullanıcılar bu etiketleri Office uygulamalarında görmeye başlar. En son değişikliklerin kuruluşunuz genelinde çoğaltılması için 24 saate kadar izin verin.
 
-Tek bir istisnayla, oluştur hem de yayımlayabilirsiniz duyarlılık etiketlerinin sayısında bir sınırlama yoktur: Etiket, kullanıcıları ve izinleri belirten şifrelemeyi uygularsa, bu yapılandırmada desteklenen en çok 500 etiket vardır. Bununla birlikte, yönetici yükünü azaltmak ve kullanıcılarınız için karmaşıklığı azaltmak için en iyi uygulama olarak, etiket sayısını en az düzeyde tutmaya çalışabilirsiniz. Gerçek dağıtımlar, kullanıcıların beşten fazla ana etiketi veya ana etiket başına beşten fazla alt etiketi olduğunda, bu dağıtımların fark edildiklerinden emin olunmalarını sağlar.
+Oluşturabileceğiniz ve yayımlayabileceğiniz duyarlılık etiketlerinin sayısıyla ilgili bir sınır yoktur. Tek bir istisna vardır: Etiket, kullanıcıları ve izinleri belirten bir şifreleme uygularsa, bu yapılandırmada desteklenen en fazla 500 etiket vardır. Ancak, kullanıcılarınız için yönetici ek yüklerini azaltmak ve karmaşıklığı azaltmak için en iyi yöntem olarak etiket sayısını en düşük düzeyde tutmaya çalışın. Gerçek dünya dağıtımları, kullanıcıların ana etiket başına beşten fazla ana etiketi veya beşten fazla alt etiketi olduğunda etkinliğin belirgin bir şekilde azaltıldığını kanıtlamıştır.
 
-### <a name="label-policy-priority-order-matters"></a>Etiket ilkesi önceliği (sipariş konuları)
+### <a name="label-policy-priority-order-matters"></a>Etiket ilkesi önceliği (sipariş önemlidir)
 
-Duyarlılık etiketlerinizi, Etiket ilkeleri sayfasının Duyarlılık ilkeleri sekmesindeki bir listede görüntülenen bir duyarlılık etiketi ilkesinde yayımarak kullanıcılarına **gösterebilirsiniz**. Duyarlılık etiketleri gibi (bkz [. Etiket önceliği (sipariş konuları)](#label-priority-order-matters)), duyarlılık etiketi ilkelerinin sırası önemlidir çünkü bu ilkelerin önceliğini yansıtması gerekir. En düşük önceliğe sahip etiket ilkesi en üstte **,** en yüksek önceliğe sahip etiket ilkesi ise en altta **gösterilir**.
+Duyarlılık etiketlerinizi, **Etiket** **ilkeleri sayfasındaki Duyarlılık ilkeleri** sekmesindeki bir listede görünen duyarlılık etiketi ilkesinde yayımlayarak kullanıcıların kullanımına sunabilirsiniz. Duyarlılık etiketleri gibi (bkz [. Etiket önceliği (sıra önemlidir)](#label-priority-order-matters)), duyarlılık etiketi ilkelerinin sırası da önceliklerini yansıttığı için önemlidir. En düşük önceliğe sahip etiket ilkesi **en üstte**, en yüksek önceliğe sahip etiket ilkesi ise **en altta** gösterilir.
 
-Etiket ilkesi şunları sağlar:
+Etiket ilkesi şunlardan oluşur:
 
 - Bir etiket kümesi.
-- Etiketlerle ilkeye atanacak kullanıcılar ve gruplar.
-- Bu kapsam için ilke ve ilke ayarlarının kapsamı (dosyalar ve e-postalar için varsayılan etiket gibi).
+- İlkeye etiketlerle atanacak kullanıcılar ve gruplar.
+- Bu kapsamın ilke ve ilke ayarlarının kapsamı (dosyalar ve e-postalar için varsayılan etiket gibi).
 
-Bir kullanıcıyı birden çok etiket ilkelerine  dahil edebilirsiniz ve kullanıcı bu ilkelerden tüm duyarlılık etiketlerini ve ayarlarını alır. Birden çok ilkenin ayarlarında çakışma olursa, en yüksek önceliğe (en düşük konum) sahip ilkeye yönelik ayarlar uygulanır. Başka bir deyişle, her ayar için en yüksek öncelik kazanır.
+Bir kullanıcıyı birden çok etiket ilkesine dahil edebilirsiniz ve kullanıcı bu ilkelerden tüm duyarlılık etiketlerini ve ayarlarını alır. Birden çok ilkenin ayarlarında çakışma varsa, ilkenin en yüksek öncelikli (en düşük konum) ayarları uygulanır. Başka bir deyişle, en yüksek öncelik her ayar için kazanır.
 
-Kullanıcı veya grup için beklediğiniz etiket veya etiket ilkesi ayar davranışını görmüyorsanız, duyarlılık etiketi ilkelerinin sırasına dikkat edin. İlkeyi aşağı taşımamız gerekiyor olabilir. Etiket ilkelerini yeniden sıralamak için, sağ üst köşedeki > veya Yukarı taşı'ya > duyarlılık etiketi **ilkesi seçin**.
+Bir kullanıcı veya grup için beklediğiniz etiket veya etiket ilkesi ayarı davranışını görmüyorsanız duyarlılık etiketi ilkelerinin sırasını denetleyin. İlkeyi aşağı taşımanız gerekebilir. Etiket ilkelerini yeniden sıralamak için bir duyarlılık etiketi ilkesi seçin > sağ taraftaki üç noktayı > **Aşağı taşı** veya **Yukarı taşı'yı** seçin.
 
-![Duyarlılık etiketi ilkeleri için sayfada Taşı seçeneği.](../media/sensitivity-label-policy-priority.png)
+![Duyarlılık etiketi ilkeleri için sayfadaki taşıma seçeneği.](../media/sensitivity-label-policy-priority.png)
 
 > [!NOTE]
-> Unutmayın: Birden çok ilke atanmış bir kullanıcının ayarları arasında çakışma olduğunda, en yüksek önceliğe (en düşük konum) sahip ilkeden gelen ayar uygulanır.
+> Unutmayın: Birden çok ilke atanmış bir kullanıcı için ayarlar çakışması olduğunda, ilkeden en yüksek önceliğe (en düşük konuma) sahip ayar uygulanır.
 
 ## <a name="sensitivity-labels-and-azure-information-protection"></a>Duyarlılık etiketleri ve Azure Information Protection
 
-Windows, macOS, iOS ve Android Microsoft 365 Uygulamaları'de yerleşik olarak yer alan duyarlılık etiketleri, kullanıcılara tutarlı bir etiketleme deneyimi sunmak için bu cihazlar arasında çok benzer bir görünümde çalışır. Bununla birlikte, Windows bilgisayarlarda Azure [Information Protection (AIP) istemcisini de kullanabilirsiniz](/azure/information-protection/rms-client/aip-clientv2). Bu istemci artık [bakım modundadır](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/announcing-aip-unified-labeling-client-maintenance-mode-and/ba-p/3043613).
+Windows, macOS, iOS ve Android'de Microsoft 365 Uygulamaları yerleşik olarak bulunan duyarlılık etiketleri, kullanıcılara tutarlı bir etiketleme deneyimi sağlamak için bu cihazlarda çok benzer şekilde görünür ve davranır. Ancak Windows bilgisayarlarda [Azure Information Protection (AIP) istemcisini](/azure/information-protection/rms-client/aip-clientv2) de kullanabilirsiniz. Bu istemci artık [bakım modunda](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/announcing-aip-unified-labeling-client-maintenance-mode-and/ba-p/3043613).
 
-AIP istemcisini kullanıyorsanız, Office uygulamaları için AIP eklentisinde neden [MIP](sensitivity-labels-aip.md) yerleşik etiketleme'yi seçerek Office bilgisayarlarına uygun etiket tercihlerinizi Windows öğrenin.
+AIP istemcisini kullanıyorsanız, Windows bilgisayarlar için etiketleme seçeneklerinizi anlamak ve yönetmek [üzere Office uygulamalar için AIP eklentisi yerine yerleşik etiketlemeyi seçme](sensitivity-labels-aip.md) nedenine bakın.
 
 ### <a name="azure-information-protection-labels"></a>Azure Information Protection etiketleri
 
 > [!NOTE]
-> Azure portalında Azure Information Protection etiketleri için etiket yönetimi **31 Mart 2021'de kullanım dışıdır**. Resmi kullanımdan kullanımdan [kullanımdan kullanımdandan daha fazla bilgi için:](https://techcommunity.microsoft.com/t5/azure-information-protection/announcing-timelines-for-sunsetting-label-management-in-the/ba-p/1226179)
+> Azure portal Azure Information Protection etiketleri için etiket yönetimi **31 Mart 2021'de** kullanım dışı bırakılmıştır. Resmi [kullanımdan kaldırma bildiriminden](https://techcommunity.microsoft.com/t5/azure-information-protection/announcing-timelines-for-sunsetting-label-management-in-the/ba-p/1226179) daha fazla bilgi edinin.
 
-Kiracınız henüz birleşik etiketleme platformunda [değilse, duyarlılık](/azure/information-protection/faqs#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform) etiketlerini kullanamadan önce birleşik etiketlemeyi etkinleştirmeniz gerekir. Yönergeler için bkz [. Azure Information Protection etiketlerini birleştirilmiş duyarlılık etiketlerine geçirme](/azure/information-protection/configure-policy-migrate-labels).
+Kiracınız henüz [birleşik etiketleme platformunda](/azure/information-protection/faqs#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform) değilse duyarlılık etiketlerini kullanabilmek için önce birleşik etiketlemeyi etkinleştirmeniz gerekir. Yönergeler için bkz. [Azure Information Protection etiketlerini birleşik duyarlılık etiketlerine geçirme](/azure/information-protection/configure-policy-migrate-labels).
 
-## <a name="sensitivity-labels-and-the-microsoft-information-protection-sdk"></a>Duyarlılık etiketleri ve Microsoft Bilgi Koruması SDK
+## <a name="sensitivity-labels-and-the-microsoft-information-protection-sdk"></a>Duyarlılık etiketleri ve Microsoft Bilgi Koruması SDK'sı
 
-Duyarlılık etiketi bir belgenin meta verilerinde depolandığı için, üçüncü taraf uygulamalar ve hizmetler etiket dağıtımınıza destek olarak bu etiket meta verilerini okuyabilir ve yazabilir. Buna ek olarak, yazılım geliştiricileri [Microsoft Bilgi Koruması ve şifreleme](/information-protection/develop/overview#microsoft-information-protection-sdk) özelliklerini birden çok platformda tam olarak desteklemek için MICROSOFT BILGI KORUMASı SDK'yı kullanabilir. Daha fazla bilgi edinmek için Teknik [Posta Gönderisi blog'sinde Genel Community bakın](https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/Microsoft-Information-Protection-SDK-Now-Generally-Available/ba-p/263144). 
+Bir duyarlılık etiketi belgenin meta verilerinde depolandığından, üçüncü taraf uygulamalar ve hizmetler etiketleme dağıtımınızı tamamlamak için bu etiketleme meta verilerini okuyabilir ve bunlara yazabilir. Buna ek olarak, yazılım geliştiricileri birden çok platformda etiketleme ve şifreleme özelliklerini tam olarak desteklemek için [Microsoft Bilgi Koruması SDK'sını](/information-protection/develop/overview#microsoft-information-protection-sdk) kullanabilir. Daha fazla bilgi edinmek için [Tech Community blogundaki Genel Kullanılabilirlik duyurusunu okuyun](https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/Microsoft-Information-Protection-SDK-Now-Generally-Available/ba-p/263144). 
 
-Ayrıca, iş ortağı [çözümleriyle tümleştirilmiş olan iş ortağı çözümleri hakkında Microsoft Bilgi Koruması](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Microsoft-Information-Protection-showcases-integrated-partner/ba-p/262657).
+[Microsoft Purview Information Protection ile tümleştirilmiş iş ortağı çözümleri](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Microsoft-Information-Protection-showcases-integrated-partner/ba-p/262657) hakkında da bilgi edinebilirsiniz.
 
 ## <a name="deployment-guidance"></a>Dağıtım kılavuzu
 
-Lisans bilgilerini, izinleri, dağıtım stratejisini, desteklenen senaryoların listesini ve son kullanıcı belgelerini içeren dağıtım planlama ve rehberlik için bkz. Duyarlılık [etiketleriyle çalışmaya başlama](get-started-with-sensitivity-labels.md).
+Lisans bilgilerini, izinleri, dağıtım stratejisini, desteklenen senaryoların listesini ve son kullanıcı belgelerini içeren dağıtım planlaması ve yönergeleri için bkz. [duyarlılık etiketleriyle Kullanmaya başlayın](get-started-with-sensitivity-labels.md).
 
-Duyarlılık etiketlerini veri gizliliği düzenlemelerine uygun şekilde nasıl kullanabileceğinizi öğrenmek için bkz. Gizlilikle ilgili veri gizliliği düzenlemelerine uygun bilgi [Microsoft 365](../solutions/information-protection-deploy.md) (aka.ms/m365dataprivacy).
+Veri gizliliği düzenlemelerine uymak için duyarlılık etiketlerini kullanmayı öğrenmek için bkz. [Microsoft 365 (aka.ms/m365dataprivacy) ile veri gizliliği düzenlemeleri için bilgi koruması dağıtma](../solutions/information-protection-deploy.md).

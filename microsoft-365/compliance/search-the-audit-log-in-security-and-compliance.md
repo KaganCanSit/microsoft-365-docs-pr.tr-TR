@@ -21,12 +21,12 @@ description: Kuruluşunuzdaki kullanıcı ve yönetici etkinliğini görüntüle
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
-ms.openlocfilehash: fa397ec1ce7dea253367dfb917166a9a43655896
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: e6754601aca5dda74ee59ed2c6c52b3f8b1eb2a3
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098482"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65128510"
 ---
 # <a name="search-the-audit-log-in-the-compliance-center"></a>Uyumluluk merkezinde denetim günlüğünde arama yapma
 
@@ -298,7 +298,7 @@ Belirli bir tabloya gitmek için aşağıdaki bağlantılardan birine tıklayın
 
 :::row:::
     :::column:::
-        [Azure AD grup yönetimi etkinlikleri](#azure-ad-group-administration-activities)
+        [Grup yönetimi etkinliklerini Azure AD](#azure-ad-group-administration-activities)
     :::column-end:::
     :::column:::
         [Uygulama yönetimi etkinlikleri](#application-administration-activities)
@@ -688,7 +688,7 @@ Aşağıdaki tabloda, yönetici [Microsoft 365 yönetim merkezi](https://go.micr
 |:-----|:-----|:-----|
 |Kullanıcı eklendi|Kullanıcı ekle'yi seçin.|Bir kullanıcı hesabı oluşturuldu.|
 |Kullanıcı lisansı değiştirildi|Kullanıcı lisansını değiştirin.|Kullanıcıya atanan lisans değişti. Hangi lisansların değişiklik olduğunu görmek için ilgili **Güncelleştirilmiş kullanıcı** etkinliğine bakın.|
-|Kullanıcı parolası değiştirildi|Kullanıcı parolasını değiştirin.|Kullanıcı parolasını değiştirir. Kullanıcıların parolalarını sıfırlamasına izin vermek için kuruluşunuzda self servis parola sıfırlamanın (tüm veya seçili kullanıcılar için) etkinleştirilmesi gerekir. Azure Active Directory'de self servis parola sıfırlama etkinliğini de izleyebilirsiniz. Daha fazla bilgi için bkz. [Azure AD parola yönetimi için raporlama seçenekleri](/azure/active-directory/authentication/howto-sspr-reporting).
+|Kullanıcı parolası değiştirildi|Kullanıcı parolasını değiştirin.|Kullanıcı parolasını değiştirir. Kullanıcıların parolalarını sıfırlamasına izin vermek için kuruluşunuzda self servis parola sıfırlamanın (tüm veya seçili kullanıcılar için) etkinleştirilmesi gerekir. Azure Active Directory'de self servis parola sıfırlama etkinliğini de izleyebilirsiniz. Daha fazla bilgi için bkz[. Azure AD parola yönetimi için raporlama seçenekleri](/azure/active-directory/authentication/howto-sspr-reporting).
 |Silinen kullanıcı|Kullanıcıyı silin.|Bir kullanıcı hesabı silindi.|
 |Kullanıcı parolasını sıfırlama|Kullanıcı parolasını sıfırlayın.|Yönetici, bir kullanıcının parolasını sıfırlar.|
 |Kullanıcıyı parolayı değiştirmeye zorlayan özelliği ayarlama|Zorla kullanıcı parolasını değiştir'i ayarlayın.|Yönetici, kullanıcının Microsoft 365 bir sonraki oturum açmasında kullanıcıyı parolasını değiştirmeye zorlayan özelliği ayarlar.|
@@ -696,7 +696,7 @@ Aşağıdaki tabloda, yönetici [Microsoft 365 yönetim merkezi](https://go.micr
 |Güncelleştirilmiş kullanıcı|Kullanıcıyı güncelleştirin.|Yönetici, bir kullanıcı hesabının bir veya daha fazla özelliğini değiştirir. Güncelleştirilebilecek kullanıcı özelliklerinin listesi için [Denetim Raporu Olaylarını Azure Active Directory](/azure/active-directory/reports-monitoring/concept-audit-logs) "Kullanıcı özniteliklerini güncelleştirme" bölümüne bakın.|
 ||||
 
-### <a name="azure-ad-group-administration-activities"></a>Azure AD grup yönetimi etkinlikleri
+### <a name="azure-ad-group-administration-activities"></a>Grup yönetimi etkinliklerini Azure AD
 
 Aşağıdaki tabloda, bir yönetici veya kullanıcı bir Microsoft 365 Grubu oluşturduğunda veya değiştirdiğinde ya da yönetici [Microsoft 365 yönetim merkezi veya Azure](https://go.microsoft.com/fwlink/p/?linkid=2024339) yönetim portalını kullanarak bir güvenlik grubu oluşturduğunda günlüğe kaydedilen grup yönetimi etkinlikleri listelenmektedir. Microsoft 365 grupları hakkında daha fazla bilgi için bkz. [Microsoft 365 yönetim merkezi Grupları görüntüleme, oluşturma ve silme](../admin/create-groups/create-groups.md).
 
@@ -714,25 +714,25 @@ Aşağıdaki tabloda, bir yönetici veya kullanıcı bir Microsoft 365 Grubu olu
 
 ### <a name="application-administration-activities"></a>Uygulama yönetimi etkinlikleri
 
-Aşağıdaki tabloda, bir yönetici Azure AD'de kayıtlı bir uygulamayı eklediğinde veya değiştirdiğinde günlüğe kaydedilen uygulama yöneticisi etkinlikleri listelenir. Kimlik doğrulaması için Azure AD'yi kullanan tüm uygulamalar dizine kaydedilmelidir.
+Aşağıdaki tabloda, bir yönetici Azure AD kayıtlı bir uygulamayı eklediğinde veya değiştirdiğinde günlüğe kaydedilen uygulama yöneticisi etkinlikleri listelenir. Kimlik doğrulaması için Azure AD kullanan tüm uygulamalar dizine kaydedilmelidir.
 
 > [!NOTE]
 > Aşağıdaki tablodaki **İşlem** sütununda listelenen işlem adları bir nokta ( `.` ) içerir. Denetim günlüğünde arama yaparken, denetim bekletme ilkeleri oluştururken, uyarı ilkeleri oluştururken veya etkinlik uyarıları oluştururken işlemi bir PowerShell komutunda belirtirseniz, işlemi adına nokta eklemeniz gerekir. İşlem adını içermek için çift tırnak işareti (`" "`) kullandığınızdan da emin olun.
 
 |Kolay ad|Işlem|Açıklama|
 |:-----|:-----|:-----|
-|Temsilci girdisi eklendi|Temsilci girdisi ekleyin.|Azure AD'de bir uygulamaya kimlik doğrulama izni oluşturuldu/verildi.|
+|Temsilci girdisi eklendi|Temsilci girdisi ekleyin.|Azure AD'da bir uygulamaya kimlik doğrulama izni oluşturuldu/verildi.|
 |Hizmet sorumlusu eklendi|Hizmet sorumlusu ekleyin.|Azure AD'de bir uygulama kaydedildi. Bir uygulama, dizindeki bir hizmet sorumlusu tarafından temsil edilir.|
-|Hizmet sorumlusuna kimlik bilgileri eklendi|Hizmet sorumlusu kimlik bilgileri ekleyin.|Kimlik bilgileri Azure AD'deki bir hizmet sorumlusuna eklendi. Hizmet ilkesi, dizindeki bir uygulamayı temsil eder.|
-|Temsilci girdisi kaldırıldı|Temsilci girdisini kaldırın.|Azure AD'deki bir uygulamadan kimlik doğrulama izni kaldırıldı.|
-|Dizinden hizmet sorumlusu kaldırıldı|Hizmet sorumlusunu kaldırın.|Azure AD'den bir uygulama silindi/kaydı silindi. Bir uygulama, dizindeki bir hizmet sorumlusu tarafından temsil edilir.|
-|Hizmet sorumlusundan kimlik bilgileri kaldırıldı|Hizmet sorumlusu kimlik bilgilerini kaldırın.|Kimlik bilgileri Azure AD'deki bir hizmet sorumlusundan kaldırıldı. Hizmet ilkesi, dizindeki bir uygulamayı temsil eder.|
-|Temsilci girişini ayarlama|Temsilci girişini ayarlayın.|Azure AD'deki bir uygulama için kimlik doğrulama izni güncelleştirildi.|
+|Hizmet sorumlusuna kimlik bilgileri eklendi|Hizmet sorumlusu kimlik bilgileri ekleyin.|Kimlik bilgileri Azure AD'daki bir hizmet sorumlusuna eklendi. Hizmet ilkesi, dizindeki bir uygulamayı temsil eder.|
+|Temsilci girdisi kaldırıldı|Temsilci girdisini kaldırın.|Azure AD'daki bir uygulamadan kimlik doğrulama izni kaldırıldı.|
+|Dizinden hizmet sorumlusu kaldırıldı|Hizmet sorumlusunu kaldırın.|Bir uygulama Azure AD silindi/kaydı silindi. Bir uygulama, dizindeki bir hizmet sorumlusu tarafından temsil edilir.|
+|Hizmet sorumlusundan kimlik bilgileri kaldırıldı|Hizmet sorumlusu kimlik bilgilerini kaldırın.|Kimlik bilgileri Azure AD bir hizmet sorumlusundan kaldırıldı. Hizmet ilkesi, dizindeki bir uygulamayı temsil eder.|
+|Temsilci girişini ayarlama|Temsilci girişini ayarlayın.|Azure AD'daki bir uygulama için kimlik doğrulama izni güncelleştirildi.|
 ||||
 
 ### <a name="role-administration-activities"></a>Rol yönetimi etkinlikleri
 
-Aşağıdaki tabloda, yönetici [Microsoft 365 yönetim merkezi](https://go.microsoft.com/fwlink/p/?linkid=2024339) veya Azure yönetim portalında yönetici rollerini yönettiğinde günlüğe kaydedilen Azure AD rol yönetimi etkinlikleri listelenmektedir.
+Aşağıdaki tabloda, yönetici Microsoft 365 yönetim merkezi veya Azure yönetim portalında yönetici rollerini yönettiğinde günlüğe kaydedilen [Azure AD](https://go.microsoft.com/fwlink/p/?linkid=2024339) rol yönetimi etkinlikleri listelenmektedir.
 
 > [!NOTE]
 > Aşağıdaki tablodaki **İşlem** sütununda listelenen işlem adları bir nokta ( `.` ) içerir. Denetim günlüğünde arama yaparken, denetim bekletme ilkeleri oluştururken, uyarı ilkeleri oluştururken veya etkinlik uyarıları oluştururken işlemi bir PowerShell komutunda belirtirseniz, işlemi adına nokta eklemeniz gerekir. İşlem adını içermek için çift tırnak işareti (`" "`) kullandığınızdan da emin olun.
@@ -746,7 +746,7 @@ Aşağıdaki tabloda, yönetici [Microsoft 365 yönetim merkezi](https://go.micr
 
 ### <a name="directory-administration-activities"></a>Dizin yönetimi etkinlikleri
 
-Aşağıdaki tabloda, bir yönetici kuruluşunu [Microsoft 365 yönetim merkezi](https://go.microsoft.com/fwlink/p/?linkid=2024339) veya Azure yönetim portalında yönettiğinde günlüğe kaydedilen Azure AD dizini ve etki alanıyla ilgili etkinlikler listelenmektedir.
+Aşağıdaki tabloda, bir yönetici kuruluşunu Microsoft 365 yönetim merkezi veya Azure yönetim portalında yönettiğinde günlüğe kaydedilen [Azure AD](https://go.microsoft.com/fwlink/p/?linkid=2024339) dizin ve etki alanıyla ilgili etkinlikler listelenmektedir.
 
 > [!NOTE]
 > Aşağıdaki tablodaki **İşlem** sütununda listelenen işlem adları bir nokta ( `.` ) içerir. Denetim günlüğünde arama yaparken, denetim bekletme ilkeleri oluştururken, uyarı ilkeleri oluştururken veya etkinlik uyarıları oluştururken işlemi bir PowerShell komutunda belirtirseniz, işlemi adına nokta eklemeniz gerekir. İşlem adını içermek için çift tırnak işareti (`" "`) kullandığınızdan da emin olun.
@@ -1107,6 +1107,21 @@ Denetim günlüğünde arama yaparken Exchange yönetici etkinliklerini aramak i
   - [Search-AdminAuditLog](/powershell/module/exchange/search-adminauditlog)
 
    Aynı Exchange yönetici etkinliklerinin hem Exchange yönetici denetim günlüğüne hem de denetim günlüğüne kaydedildiğini unutmayın.
+
+### <a name="encrypted-message-portal-activities"></a>Şifrelenmiş ileti portalı etkinlikleri
+
+Erişim günlükleri, kuruluşunuzun iletilerin ne zaman okunduğunu ve dış alıcılarınız tarafından iletileceğini belirlemesini sağlayan şifrelenmiş ileti portalı aracılığıyla şifrelenmiş iletiler için kullanılabilir. Şifrelenmiş ileti portalı etkinlik günlüklerini etkinleştirme ve kullanma hakkında daha fazla bilgi için bkz [. Şifrelenmiş ileti portalı etkinlik günlüğü](ome-message-access-logs.md).
+
+İzlenen ileti için her denetim girdisi aşağıdaki alanları içerir:
+
+- MessageID - İzlenen iletinin kimliğini içerir. Bu, sistem üzerinden bir iletiyi izlemek için kullanılan anahtar tanımlayıcıdır.
+- Alıcı - Tüm alıcı e-posta adreslerinin listesi.
+- Gönderen - Kaynak e-posta adresi.
+- AuthenticationMethod - İletiye erişmek için OTP, Yahoo, Gmail veya Microsoft gibi kimlik doğrulama yöntemini açıklar.
+- AuthenticationStatus - Kimlik doğrulamasının başarılı veya başarısız olduğunu belirten bir değer içerir.
+- OperationStatus - Belirtilen işlemin başarılı mı yoksa başarısız mı olduğunu gösterir.
+- AttachmentName - Ekin adı.
+- OperationProperties - gönderilen OTP geçiş kodu sayısı veya e-posta konusu gibi isteğe bağlı özelliklerin listesi.
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
 

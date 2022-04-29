@@ -17,96 +17,96 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MOE150
 - MET150
-description: 'Tüm çözüm ve Microsoft Bilgi Koruması gereksinimi: Duyarlılık etiketlerini oluşturun, yapılandırarak ve yayımlayın; bu etiketleri kullanarak kuruluş verilerinizi sınıflandırin ve koruyun.'
-ms.openlocfilehash: 5c80147c18cff8c27f8c205ab1ed600e892f7335
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+description: 'Tüm Microsoft Purview Information Protection çözümleri için bir gereksinim: Kuruluşunuzun verilerini sınıflandırmak ve korumak için duyarlılık etiketleri oluşturun, yapılandırın ve yayımlayın.'
+ms.openlocfilehash: 036835e77ca1e1d7c15435050d4577f5352f0ebd
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64499583"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65131284"
 ---
-# <a name="create-and-configure-sensitivity-labels-and-their-policies"></a>Duyarlılık etiketlerini ve onların ilkelerini oluşturma ve yapılandırma
+# <a name="create-and-configure-sensitivity-labels-and-their-policies"></a>Duyarlılık etiketleri ve ilkeleri oluşturma ve yapılandırma
 
->*[Microsoft 365 uyumluluğu için lisans & kılavuzu.](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)*
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Tüm Microsoft Bilgi Koruması çözümleri (bazen MIP ile kısaltılmış olabilir) duyarlılık etiketleri kullanılarak [uygulanır](sensitivity-labels.md). Bu etiketleri oluşturmak ve yayımlamak için, <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Etiketler'e Microsoft 365 uyumluluk merkezi</a>.
+>*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-İlk olarak, uygulamalar ve diğer hizmetler için kullanılabilir hale almak istediğiniz duyarlılık etiketlerini oluşturun ve yapılandırarak oluşturun. Örneğin, kullanıcıların bu uygulamalardan görmelerini ve uygulamalarını istediğiniz Office.
+Tüm Microsoft Purview Information Protection çözümleri [duyarlılık etiketleri](sensitivity-labels.md) kullanılarak uygulanır. Bu etiketleri oluşturmak ve yayımlamak için <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalına</a> gidin.
 
-Ardından, yapılandırılan etiketlerle ilke ayarlarını içeren bir veya birden çok etiket ilkesi oluşturun. Bu, seçilen kullanıcı ve konumların etiketlerini ve ayarlarını yayımlayan etiket ilkesidir.
+İlk olarak, uygulamalar ve diğer hizmetler için kullanılabilir hale getirmek istediğiniz duyarlılık etiketlerini oluşturun ve yapılandırın. Örneğin, kullanıcıların Office uygulamalardan görmesini ve uygulamasını istediğiniz etiketler.
+
+Ardından, yapılandırdığınız etiketleri ve ilke ayarlarını içeren bir veya daha fazla etiket ilkesi oluşturun. Seçtiğiniz kullanıcılar ve konumlar için etiketleri ve ayarları yayımlayan etiket ilkesidir.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Kuruluş genel yöneticisinin, duyarlılık etiketlerinin tüm yönlerini oluşturmak ve yönetmek için tam izinleri vardır. Genel yönetici olarak oturum açmadısanız, bkz. Duyarlılık [etiketlerini oluşturmak ve yönetmek için gereken izinler](get-started-with-sensitivity-labels.md#permissions-required-to-create-and-manage-sensitivity-labels).
+Kuruluşunuzun genel yöneticisi duyarlılık etiketlerinin tüm yönlerini oluşturmak ve yönetmek için tam izinlere sahiptir. Genel yönetici olarak oturum açmadıysanız bkz. [Duyarlılık etiketleri oluşturmak ve yönetmek için gereken izinler](get-started-with-sensitivity-labels.md#permissions-required-to-create-and-manage-sensitivity-labels).
 
-## <a name="create-and-configure-sensitivity-labels"></a>Duyarlılık etiketlerini oluşturma ve yapılandırma
+## <a name="create-and-configure-sensitivity-labels"></a>Duyarlılık etiketleri oluşturma ve yapılandırma
 
-1. Kayıttan [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com/) **SolutionsInformation** >  **protection'ı seçin**
+1. [Microsoft Purview uyumluluk portalından](https://compliance.microsoft.com/) **ÇözümlerFormasyon** >  **koruması'nı** seçin
     
-    Bu seçeneği hemen görmüyorsanız önce Hepsini **göster'i seçin**.
+    Bu seçeneği hemen görmüyorsanız önce **Tümünü göster'i** seçin.
 
-2. Etiketler **sayfasında,** Yeni duyarlılık **etiketi yapılandırmasını başlatmak için +** Etiket oluştur'a tıklayın. 
-
-    Örneğin, aşağıdaki Microsoft 365 uyumluluk merkezi:
-
+2. **Etiketler** sayfasında **+ Etiket oluştur'u** seçerek Yeni duyarlılık etiketi yapılandırmasını başlatın: 
+    
     ![Duyarlılık etiketi oluşturun.](../media/create-sensitivity-label-full.png)
 
     > [!NOTE]
-    > Varsayılan olarak, kiracıların hiçbir etiketi yok ve bunları oluşturmanız gerekir. Örnek resimdeki etiketler, Azure Posta'dan [geçirilen varsayılan etiketleri Information Protection](/azure/information-protection/configure-policy-migrate-labels).
+    > Varsayılan olarak, kiracılarda herhangi bir etiket yoktur ve bunları oluşturmanız gerekir. Örnek resimdeki etiketler[, Azure Information Protection'dan geçirilen](/azure/information-protection/configure-policy-migrate-labels) varsayılan etiketleri gösterir.
 
-3. Bu **etiket için kapsamı tanımla sayfasında** , yapılandırabilirsiniz ayarlar için etiketin kapsamını ve yayımlandıklarda nerede görünür olacaklarını belirleyen seçenekler belirler:
+3. **Bu etiket için kapsamı tanımla** sayfasında, seçilen seçenekler, yapılandırabileceğiniz ayarlar için etiketin kapsamını ve yayımlandıklarında nerede görünür olacaklarını belirler:
 
     ![Duyarlılık etiketlerinin kapsamları.](../media/sensitivity-labels-scopes.png)
 
-    - Dosyalar **& e-postaları** seçiliyse, Word ve Office e-postaları gibi duyarlılık etiketlerini destekleyen uygulamalara Outlook. Bu seçenek seçilmemişse, bu ayarların ilk sayfasını görüntülersiniz ancak bunları yapılandıramazsanız etiketler bu uygulamalarda kullanıcılar tarafından seçiile hazır olmayacaktır.
+    - **Dosyalar & e-postalar** seçiliyse, Word ve Office Outlook gibi duyarlılık etiketlerini destekleyen uygulamalara uygulanan ayarları yapılandırabilirsiniz. Bu seçenek belirlenmezse, bu ayarların ilk sayfasını görürsünüz, ancak bunları yapılandıramazsınız ve etiketler kullanıcıların bu uygulamalarda seçebileceği şekilde kullanılamaz.
 
-    - Gruplar **& seçilirse**, bu gruplara uygulanacak ayarları Microsoft 365 grupların ve site Teams site SharePoint. Bu seçenek seçilmemişse, bu ayarların ilk sayfasını görüntüler ancak bunları yapılandıramazsanız, kullanıcıların gruplar ve site için seçecekleri etiketler kullanılamaz.
+    - **Gruplar & siteleri** seçiliyse, Microsoft 365 gruplarına ve Teams ve SharePoint için sitelere uygulanan ayarları yapılandırabilirsiniz. Bu seçenek belirtilmemişse, bu ayarların ilk sayfasını görürsünüz, ancak bunları yapılandıramazsınız ve etiketler kullanıcıların gruplar ve site için seçmesi için kullanılamaz.
 
-    Şemalı veri **varlıklarının kapsamı hakkında bilgi için** bkz. [Azure Purview'da içeriğinizi otomatik olarak etiketleme](/azure/purview/create-sensitivity-label).
+    **Şemalaştırılmış veri varlıkları** kapsamı hakkında bilgi için bkz. [Microsoft Purview Veri Eşlemesi'nde içeriğinizi otomatik olarak etiketleme](/azure/purview/create-sensitivity-label).
 
 4. Etiket ayarları için yapılandırma istemlerini izleyin.
 
-    Etiket ayarları hakkında daha fazla bilgi için bkz. [](sensitivity-labels.md#what-sensitivity-labels-can-do) Genel bakış bilgilerinden hangi duyarlılık etiketlerini kullanabilir ve kullanıcı arabiriminde kişisel ayarlar için yardımı kullanabilirsiniz.
+    Etiket ayarları hakkında daha fazla bilgi için genel bakış bilgilerinden [duyarlılık etiketlerinin yapabilecekleri](sensitivity-labels.md#what-sensitivity-labels-can-do) bölümüne bakın ve tek tek ayarlar için kullanıcı arabirimindeki yardımı kullanın.
 
-5. Daha fazla etiket oluşturmak için bu adımları yinele. Bununla birlikte, bir alt etiket oluşturmak istemeden önce üst etiketi seçin ve Diğer eylemler için **...** seçeneğini, ardından Alt etiket **ekle'yi seçin**.
+5. Daha fazla etiket oluşturmak için bu adımları yineleyin. Ancak, bir alt etiket oluşturmak istiyorsanız, önce üst etiketi seçin ve **diğer eylemler** için **...** öğesini ve ardından **Alt etiket ekle'yi** seçin.
 
-6. Size gereken tüm etiketleri oluşturulduğunda, bunların siparişlerini gözden geçirin ve gerekirse, bunları yukarı veya aşağı hareket ettirin. Etiketin sıralamalarını değiştirmek için Diğer eylemler için **...** **seçeneğini** ve ardından Yukarı taşı veya Aşağı **taşı'ya** **seçin**. Daha fazla bilgi için genel [bakış bilgilerinden Etiket önceliği (sipariş konuları)](sensitivity-labels.md#label-priority-order-matters) belgesine bakın.
+6. İhtiyacınız olan tüm etiketleri oluşturduğunuzda, bunların sırasını gözden geçirin ve gerekirse bunları yukarı veya aşağı taşıyın. Etiketin sırasını değiştirmek için **Diğer eylemler** için **...** öğesini ve ardından **Yukarı taşı** veya **Aşağı taşı'yı** seçin. Daha fazla bilgi için genel bakış bilgilerindeki [Etiket önceliği (sipariş önemlidir)](sensitivity-labels.md#label-priority-order-matters) bölümüne bakın.
 
-Mevcut bir etiketi düzenlemek için etiketi seçin ve ardından Etiketi düzenle **düğmesini** seçin:
+Var olan bir etiketi düzenlemek için etiketi seçin ve ardından **Etiketi düzenle** düğmesini seçin:
 
-![Duyarlılık etiketini düzenlemek için Etiketi düzenle düğmesi.](../media/edit-sensitivity-label-full.png)
+![Duyarlılık etiketini düzenlemek için etiketi düzenle düğmesi.](../media/edit-sensitivity-label-full.png)
 
-Bu düğme, 4 **. adımda tüm** etiket ayarlarını değiştirmenizi sağlayan Duyarlılık etiketini düzenle yapılandırmasını başlatır.
+Bu düğme, 4. adımdaki tüm etiket ayarlarını değiştirmenize olanak tanıyan **Duyarlılık etiketi yapılandırmasını düzenle'yi** başlatır.
 
-Kullanıcılara etkisini anlamadıysanız etiketi silmeyin. Daha fazla bilgi için Etiketleri kaldırma [ve silme bölümüne](#removing-and-deleting-labels) bakın. 
+Kullanıcıların etkisini anlamadığınız sürece etiketi silmeyin. Daha fazla bilgi için [Etiketleri kaldırma ve silme](#removing-and-deleting-labels) bölümüne bakın. 
 
 > [!NOTE]
-> Zaten bir etiket ilkesi kullanarak yayımlanmış bir etiketi düzenlerseniz, yapılandırmayı tamamlarken fazladan adım gerekmez. Örneğin, değişikliklerin aynı kullanıcılar tarafından kullanılabilir olması için bunu yeni bir etiket ilkesine eklemenize gerek yok. Bununla birlikte, değişikliklerin tüm uygulamalara ve hizmetlere çoğaltılması için 24 saate kadar izin verin.
+> Zaten yayımlanmış bir etiketi bir etiket ilkesi kullanarak düzenlerseniz, yapılandırmayı tamamladığınızda ek adım gerekmez. Örneğin, değişikliklerin aynı kullanıcıların kullanımına sunulması için bunu yeni bir etiket ilkesine eklemeniz gerekmez. Ancak değişikliklerin tüm uygulama ve hizmetlere çoğaltılması için 24 saate kadar izin verin.
 
-Etiketlerinizi yayımlayana kadar, bunlar uygulamalarda veya hizmetlerde seç kullanılamaz. Etiketleri yayımlamak için, etiket [ilkesine eklenmiş olması gerekir](#publish-sensitivity-labels-by-creating-a-label-policy).
+Etiketlerinizi yayımlayana kadar, uygulamalarda veya hizmetlerde bu etiketleri seçemezsiniz. Etiketleri yayımlamak için bir [etiket ilkesine eklenmesi](#publish-sensitivity-labels-by-creating-a-label-policy) gerekir.
 
 > [!IMPORTANT]
-> Yeni **bir etiket** ilkesi oluşturmanız gerekmadıkça,  bu Etiketler sekmesinde Etiketleri yayımla  sekmesini (veya etiketi düzenlerken Etiketi yayımla düğmesini) seçmeyebilirsiniz. Birden çok etiket ilkesine sahip olmak için, kullanıcıların farklı etiketlere veya farklı ilke ayarlarına ihtiyacı vardır. Mümkün olduğunca az etiket ilkesine sahip olmak hedefle, kuruluş için tek bir etiket ilkesine sahip olmak seyrek görülen bir durum değildir.
+> Bu **Etiketler** sekmesinde, yeni bir etiket ilkesi oluşturmanız gerekmediği sürece **Etiketleri yayımla** sekmesini (veya etiketi düzenlerken etiketi **yayımla** düğmesini) seçmeyin. Birden çok etiket ilkesine yalnızca kullanıcıların farklı etiketlere veya farklı ilke ayarlarına ihtiyacı varsa ihtiyacınız vardır. Mümkün olduğunca az etiket ilkesine sahip olmayı hedefleyin; kuruluş için yalnızca bir etiket ilkesi olması yaygın değildir.
 
-### <a name="additional-label-settings-with-security--compliance-center-powershell"></a>Güvenlik ve Uyumluluk Merkezi PowerShell& ile ek etiket ayarları
+### <a name="additional-label-settings-with-security--compliance-center-powershell"></a>Güvenlik & Uyumluluk Merkezi PowerShell ile ek etiket ayarları
 
-Güvenlik ve Uyumluluk Merkezi [PowerShell'in Set-Label](/powershell/module/exchange/set-label) [cmdlet'iyle & ayarları kullanılabilir](/powershell/exchange/scc-powershell).
+Ek etiket ayarları[, Güvenlik & Uyumluluk Merkezi PowerShell'den](/powershell/exchange/scc-powershell) [Etiket Ayarla](/powershell/module/exchange/set-label) cmdlet'iyle kullanılabilir.
 
 Örneğin:
 
-- Çok *uluslu dağıtımlarda LocaleSettings* parametresini kullanın, böylece kullanıcılar etiket adını ve araç ipucunı yerel dillerinde görebilirler. Aşağıdaki [bölümde Fransızca](#example-configuration-to-configure-a-sensitivity-label-for-different-languages) , İtalyanca ve Almanca etiket adı ve araç ipucu metnini belirten örnek bir yapılandırma vardır.
+- Çok uluslu *dağıtımlar için LocaleSettings* parametresini kullanarak kullanıcıların etiket adını ve araç ipucunun yerel dillerinde görmesini sağlayın. [Aşağıdaki bölümde](#example-configuration-to-configure-a-sensitivity-label-for-different-languages) Fransızca, İtalyanca ve Almanca için etiket adını ve araç ipucu metnini belirten bir örnek yapılandırma vardır.
 
-- Azure Information Protection birleşik etiketleme istemcisi, etiket rengi ayarlamayı ve etiket uygulandığında özel [](/azure/information-protection/rms-client/clientv2-admin-guide-customizations) bir özellik uygulama gibi kapsamlı bir gelişmiş ayarlar listesini destekler. Tam liste için bkz. [Bu istemcinin yönetici kılavuzundan](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#available-advanced-settings-for-labels) etiketler için kullanılabilir gelişmiş ayarlar.
+- Azure Information Protection birleşik etiketleme istemcisi, etiket rengi ayarlamayı ve etiket uygulandığında özel bir özellik uygulamayı içeren [gelişmiş ayarların](/azure/information-protection/rms-client/clientv2-admin-guide-customizations) kapsamlı bir listesini destekler. Tam liste için bkz. Bu istemcinin yönetici kılavuzundaki [etiketler için kullanılabilir gelişmiş ayarlar](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#available-advanced-settings-for-labels) .
 
-#### <a name="example-configuration-to-configure-a-sensitivity-label-for-different-languages"></a>Farklı diller için duyarlılık etiketini yapılandırmak üzere örnek yapılandırma
+#### <a name="example-configuration-to-configure-a-sensitivity-label-for-different-languages"></a>Farklı diller için duyarlılık etiketi yapılandırmak için örnek yapılandırma
 
-Aşağıdaki örnekte, araç ipucu için yer tutucu metinle birlikte "Genel" adlı etiketin PowerShell yapılandırması görüntülenir. Bu örnekte, etiket adı ve araç ipucu metni Fransızca, İtalyanca ve Almanca için yapılandırılmıştır.
+Aşağıdaki örnekte, araç ipucu için yer tutucu metin içeren "Genel" adlı etiketin PowerShell yapılandırması gösterilmektedir. Bu örnekte etiket adı ve araç ipucu metni Fransızca, İtalyanca ve Almanca için yapılandırılmıştır.
 
-Bu yapılandırmanın sonucunda, bu görüntüleme dillerini kullanan Office uygulamaları olan kullanıcılar, aynı dilde etiket adlarını ve araç ipucunı görebilirler. Benzer şekilde, Dosya Gezgini'tan dosyaları etiketlemek için Azure Information Protection birleşik etiketleme istemcisi yüklüyse, Windows'in dil sürümlerine sahip kullanıcılar etiketlemek için sağ tıklama eylemlerini kullandıklarında kendi etiket adlarını ve araç ipucularını yerel dillerinde görebilirler.
+Bu yapılandırmanın sonucunda, bu görüntüleme dillerini kullanan Office uygulamaları olan kullanıcılar etiket adlarını ve araç ipuçlarını aynı dilde görür. Benzer şekilde, Dosya Gezgini dosyaları etiketlemek için Azure Information Protection birleşik etiketleme istemcisi yüklüyse, Windows'nin bu dil sürümlerine sahip kullanıcılar etiketleme için sağ tıklama eylemlerini kullandıklarında etiket adlarını ve araç ipuçlarını yerel dillerinde görürler.
 
-Desteklemeniz gereken diller için, Office tanımlayıcılarını [(dil](/deployoffice/office2016/language-identifiers-and-optionstate-id-values-in-office-2016#language-identifiers) etiketleri olarak da bilinir) kullanın ve etiket adı ve araç ipucu için kendi çevirinizi belirtin.
+Desteklemeniz gereken diller için Office [dil tanımlayıcılarını](/deployoffice/office2016/language-identifiers-and-optionstate-id-values-in-office-2016#language-identifiers) (dil etiketleri olarak da bilinir) kullanın ve etiket adı ve araç ipucu için kendi çevirinizi belirtin.
 
-PowerShell'de komutları çalıştırmadan önce, Güvenlik ve [Uyumluluk Merkezi PowerShell& bağlanın](/powershell/exchange/connect-to-scc-powershell).
+PowerShell'de komutları çalıştırmadan önce [Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanmanız](/powershell/exchange/connect-to-scc-powershell) gerekir.
 
 ```powershell
 $Languages = @("fr-fr","it-it","de-de")
@@ -128,96 +128,94 @@ Set-Label -Identity $Label -LocaleSettings (ConvertTo-Json $DisplayNameLocaleSet
 
 ## <a name="publish-sensitivity-labels-by-creating-a-label-policy"></a>Etiket ilkesi oluşturarak duyarlılık etiketlerini yayımlama
 
-1. Kayıttan [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com/) **SolutionsInformation** >  **protection'ı seçin**
+1. [Microsoft Purview uyumluluk portalından](https://compliance.microsoft.com/) **ÇözümlerFormasyon** >  **koruması'nı** seçin
     
-    Bu seçeneği hemen görmüyorsanız önce Hepsini **göster'i seçin**.
+    Bu seçeneği hemen görmüyorsanız önce **Tümünü göster'i** seçin.
 
-2. İlke **yapılandırmasını başlatmak** için Etiket ilkeleri **sekmesini ve** ardından Etiket **yayımla'yı** seçin:
-
-    Örneğin, aşağıdaki Microsoft 365 uyumluluk merkezi:
-
+2. İlke oluştur yapılandırmasını başlatmak için **Etiket ilkeleri** sekmesini ve ardından **Etiketi yayımla'yı** seçin:
+    
     ![Etiketleri yayımlama.](../media/publish-sensitivity-labels-full.png)
-
+    
     > [!NOTE]
-    > Varsayılan olarak, kiracıların etiket ilkeleri vardır ve bunları oluşturmanız gerekir. 
+    > Varsayılan olarak, kiracıların herhangi bir etiket ilkesi yoktur ve bunları oluşturmanız gerekir. 
 
-3. Yayım **verilecek duyarlılık etiketlerini seçin sayfasında** , Yayımlayacak **duyarlılık etiketlerini seç bağlantısını** seçin. Uygulamalar ve hizmetlerde kullanılabilir hale eklemek istediğiniz etiketleri seçin ve sonra Ekle'yi **seçin**.
+3. **Yayımlamak için duyarlılık etiketlerini seçin** sayfasında **Yayımlamak için duyarlılık etiketlerini seçin** bağlantısını seçin. Uygulamalarda ve hizmetlerde kullanılabilir hale getirmek istediğiniz etiketleri seçin ve ardından **Ekle'yi** seçin.
 
     > [!IMPORTANT]
-    > Bir alt etiket seçerek etiketin üst etiketini de seçmeye devam etmek gerekir.
+    > Bir alt etiket seçerseniz, üst etiketini de seçtiğinizden emin olun.
 
-4. Seçili etiketleri gözden geçirmek ve değişiklik yapmak için Düzenle'yi **seçin**. Aksi takdirde Sonraki'yi **seçin**.
+4. Seçili etiketleri gözden geçirin ve değişiklik yapmak için **Düzenle'yi** seçin. Aksi takdirde **İleri'yi** seçin.
 
 5. İlke ayarlarını yapılandırmak için istemleri izleyin.
 
-    Gördüğünüz ilke ayarları, seçtiğiniz etiketlerin kapsamıyla eşler. Örneğin, yalnızca Dosyalar **&** e-posta kapsamına sahip etiketleri seçtiyseniz, ilke ayarlarını Gruplara ve sitelere varsayılan olarak uygula ve  Kullanıcıların gruplarına ve sitelerine etiket uygulamalarını gerektir ayarlarını **görmüyorsunuz**.
+    Gördüğünüz ilke ayarları, seçtiğiniz etiketlerin kapsamıyla eşleşer. Örneğin, yalnızca **Dosyalar & e-posta** kapsamına sahip etiketleri seçtiyseniz, İlke ayarlarını Görmezsiniz **Bu etiketi varsayılan olarak gruplara ve sitelere uygula ve Kullanıcıların gruplarına ve sitelerine** **etiket uygulamasını gerektir**.
 
-    Bu ayarlar hakkında daha fazla bilgi için bkz [. Genel bakış](sensitivity-labels.md#what-label-policies-can-do) bilgilerinden hangi etiket ilkelerinin neler yapabilirsiniz ve kullanıcı arabiriminde kişisel ayarlar için yardımı kullanın.
+    Bu ayarlar hakkında daha fazla bilgi için genel bakış bilgilerinden [etiket ilkelerinin yapabilecekleri](sensitivity-labels.md#what-label-policies-can-do) bölümüne bakın ve tek tek ayarlar için kullanıcı arabirimindeki yardımı kullanın.
 
-    **Azure Purview varlıkları (önizleme) için yapılandırılmış** etiketler için: Bu etiketlerle ilişkilendirilmiş ilke ayarları yok.
+    **Microsoft Purview Veri Eşlemesi varlıkları (önizleme)** için yapılandırılmış etiketler için: Bu etiketlerin ilişkili ilke ayarları yoktur.
 
-6. Farklı kullanıcılar veya kapsamlar için farklı ilke ayarlarına ihtiyacınız varsa bu adımları yineler. Örneğin, bir kullanıcı grubu için ek etiketler veya kullanıcı alt kümesi için farklı bir varsayılan etiket istiyor olabilir. Veya etiketleri farklı kapsamlara sahip olacak şekilde yapılandırdıysanız.
+6. Farklı kullanıcılar veya kapsamlar için farklı ilke ayarlarına ihtiyacınız varsa bu adımları yineleyin. Örneğin, bir kullanıcı grubu için ek etiketler veya bir kullanıcı alt kümesi için farklı bir varsayılan etiket istiyorsunuz. Veya etiketleri farklı kapsamlara sahip olacak şekilde yapılandırdıysanız.
 
-7. Bir kullanıcı için çakışmaya neden olacak birden çok etiket ilkesi oluşturmanız gerekiyorsa, ilke siparişlerini gözden geçirin ve gerekirse bunları yukarı veya aşağı hareket ettirin. Etiket ilkesi sıralamalarını değiştirmek için Diğer eylemler için **...** öğesini ve **sonra da Yukarı** taşı veya Aşağı **taşı'ya** **seçin**. Daha fazla bilgi için genel [bakış bilgilerinden etiket ilkesi önceliği (sipariş konuları)](sensitivity-labels.md#label-policy-priority-order-matters) konularını okuyun.
+7. Bir kullanıcı için çakışmaya neden olabilecek birden fazla etiket ilkesi oluşturursanız, ilke sırasını gözden geçirin ve gerekirse bunları yukarı veya aşağı taşıyın. Etiket ilkesinin sırasını değiştirmek için **Diğer eylemler** için **...** öğesini ve ardından **Yukarı taşı** veya **Aşağı taşı'yı** seçin. Daha fazla bilgi için genel bakış bilgilerindeki [Etiket ilkesi önceliği (sipariş konuları)](sensitivity-labels.md#label-policy-priority-order-matters) bölümüne bakın.
 
-İlke oluşturma **yapılandırmasının** tamamlanması etiket İlkesini otomatik olarak yayımlar. Yayımlanan ilkede değişiklik yapmak için, ilkeyi düzenlemeniz gerekir. Seç başka bir yayımlama veya yeniden yayımlama eylemi yoktur.
+**İlke oluşturma** yapılandırmasının tamamlanması etiket ilkesini otomatik olarak yayımlar. Yayımlanan ilkede değişiklik yapmak için bunu düzenlemeniz yeterlidir. Seçmeniz için belirli bir yayımlama veya yeniden yayımlama eylemi yoktur.
 
-Var olan bir etiket politikasını düzenlemek için, ilkeyi seçin ve sonra da **İlkeyi Düzenle düğmesini** seçin: 
+Var olan bir etiket ilkesini düzenlemek için, ilkeyi seçin ve ardından **İlkeyi Düzenle** düğmesini seçin: 
 
 ![Duyarlılık etiketini düzenleyin.](../media/edit-sensitivity-label-policy-full.png)
 
-Bu düğme, hangi **etiketlerin ekli** olduğunu ve etiket ayarlarını düzenlemenizi sağlayan İlke yapılandırmasını başlatır. Yapılandırmayı tamamlarken, tüm değişiklikler seçili kullanıcılara ve hizmetlere otomatik olarak çoğaltılır.
+Bu düğme, hangi etiketlerin dahil olduğunu ve etiket ayarlarını düzenlemenizi sağlayan **İlke oluştur** yapılandırmasını başlatır. Yapılandırmayı tamamladığınızda, tüm değişiklikler otomatik olarak seçili kullanıcılara ve hizmetlere çoğaltılır.
 
-### <a name="additional-label-policy-settings-with-security--compliance-center-powershell"></a>Güvenlik ve Uyumluluk Merkezi PowerShell& ile ek etiket ilkesi ayarları
+### <a name="additional-label-policy-settings-with-security--compliance-center-powershell"></a>Güvenlik & Uyumluluk Merkezi PowerShell ile ek etiket ilkesi ayarları
 
-Güvenlik ve Uyumluluk Merkezi PowerShell'den [Set-LabelPolicy](/powershell/module/exchange/set-labelpolicy) [cmdlet'iyle & ilke ayarları kullanılabilir](/powershell/exchange/scc-powershell).
+[Güvenlik & Uyumluluk Merkezi PowerShell'den](/powershell/exchange/scc-powershell) [Set-LabelPolicy](/powershell/module/exchange/set-labelpolicy) cmdlet'i ile ek etiket ilkesi ayarları sağlanır.
 
-Azure Information Protection birleşik etiketleme istemcisi, diğer etiket çözümlerinden ve Outlook'ta gönderilen e-postaları uyaran, iki aya yas eden veya engellenen iletilerin de arasında olduğu birçok gelişmiş ayarı destekler.[](/azure/information-protection/rms-client/clientv2-admin-guide-customizations) Tam liste için, bu [istemcinin yönetici kılavuzunda bulunan etiket ilkeleri](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#available-advanced-settings-for-label-policies) için kullanılabilir gelişmiş ayarlar'a bakın.
+Azure Information Protection birleşik etiketleme istemcisi, diğer etiketleme çözümlerinden geçiş ve e-postaların gönderilmesini uyaran, gerekçelendiren veya engelleyen Outlook açılır iletileri içeren birçok [gelişmiş ayarı](/azure/information-protection/rms-client/clientv2-admin-guide-customizations) destekler. Tam liste için bu istemcinin yönetici kılavuzundaki [Etiket ilkeleri için kullanılabilir gelişmiş ayarlar](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#available-advanced-settings-for-label-policies) bölümüne bakın.
 
-## <a name="when-to-expect-new-labels-and-changes-to-take-effect"></a>Yeni etiketlerin ve değişikliklerin ne zaman etkili olmasını beklemeniz gerekir?
+## <a name="when-to-expect-new-labels-and-changes-to-take-effect"></a>Yeni etiketlerin ve değişikliklerin etkili olmasını bekleme
 
-Etiketler ve etiket ilkesi ayarları için, değişikliklerin hizmetler arasında yayılması 24 saat kadar sürebilir. Her biri kendi zamanlama döngülerine sahip olan birçok dış bağımlılık vardır, bu nedenle son değişiklikler için etiketleri ve etiket ilkelerini sorun gidermeye zaman harcamadan önce bu 24 saatlik zaman dönemini beklemek iyi bir fikirdir.
+Etiketler ve etiket ilkesi ayarları için değişikliklerin hizmetlere yayılması için 24 saat süre tanıyın. Her birinin kendi zamanlama döngüleri olan birçok dış bağımlılık vardır, bu nedenle son değişiklikler için etiketler ve etiket ilkeleriyle ilgili sorunları gidermek için zaman harcamadan önce bu 24 saatlik süreyi beklemek iyi bir fikirdir.
 
-Bununla birlikte, bazı senaryolarda etiket ve etiket ilkesi değişikliklerinin çok daha hızlı etkili olması veya 24 saate daha uzun olması gerekir. Örneğin, Word, Excel ve Web üzerinde PowerPoint için yeni ve silinmiş duyarlılık etiketleri için, bir saat içinde güncelleştirmelerin çoğaltılmış olduğunu görüyoruz. Ancak, yeni bir grup ve grup üyeliğinin nasıl değiştiğına veya ağ çoğaltması gecikme süresi ve bant genişliği kısıtlamalarına bağlı olan yapılandırmalarda, bu değişiklikler 24-48 saat sürebilir.
+Ancak, etiket ve etiket ilkesi değişikliklerinin çok daha hızlı veya 24 saatten uzun sürebileceği bazı senaryolar vardır. Örneğin, Word, Excel ve Web üzerinde PowerPoint için yeni ve silinmiş duyarlılık etiketleri için güncelleştirmelerin bir saat içinde çoğaltılmış olduğunu görebilirsiniz. Ancak yeni grup ve grup üyeliği değişikliklerinin doldurulması veya ağ çoğaltma gecikmesi ve bant genişliği kısıtlamalarına bağlı yapılandırmalar için bu değişiklikler 24-48 saat sürebilir.
 
 ## <a name="use-powershell-for-sensitivity-labels-and-their-policies"></a>Duyarlılık etiketleri ve ilkeleri için PowerShell kullanma
 
-Artık etiket yönetim [merkezi & ayarları oluşturmak](/powershell/exchange/scc-powershell) ve yapılandırmak için Güvenlik ve Uyumluluk Merkezi PowerShell'i kullanabilirsiniz. Başka bir ifadeyle, PowerShell'i etiket yönetim merkezlerinde mevcut olmayan ayarlar için kullanmanın yanı sıra, artık duyarlılık etiketleri ve duyarlılık etiket ilkelerinin oluşturulması ve bakımı için tam komut dosyası hazırları yapabilirsiniz. 
+Artık etiketleme yönetim merkezinizde gördüğünüz tüm ayarları oluşturmak ve yapılandırmak için [Güvenlik & Uyumluluk Merkezi PowerShell'i](/powershell/exchange/scc-powershell) kullanabilirsiniz. Bu, etiketleme yönetim merkezlerinde bulunmayan ayarlar için PowerShell'i kullanmaya ek olarak artık duyarlılık etiketlerinin ve duyarlılık etiketi ilkelerinin oluşturulması ve bakımı için tam betik yazabileceğiniz anlamına gelir. 
 
 Desteklenen parametreler ve değerler için aşağıdaki belgelere bakın:
 
-- [New-Label](/powershell/module/exchange/new-label)
+- [Yeni Etiket](/powershell/module/exchange/new-label)
 - [New-LabelPolicy](/powershell/module/exchange/new-labelpolicy)
-- [Set-Label](/powershell/module/exchange/set-label)
+- [Etiket Ayarla](/powershell/module/exchange/set-label)
 - [Set-LabelPolicy](/powershell/module/exchange/set-labelpolicy)
 
-Duyarlılık etiketlerini veya [duyarlılık etiket](/powershell/module/exchange/remove-label) ilkelerini silme işlemini betik olarak kullanmak zorundaysanız [Remove-Label ve Remove-LabelPolicy'i](/powershell/module/exchange/remove-labelpolicy) de kullanabilirsiniz. Bununla birlikte, duyarlılık etiketlerini smeden önce aşağıdaki bölümü okuduğundan emin olun.
+Duyarlılık etiketlerinin veya duyarlılık etiketi ilkelerinin silinmesini betik olarak yazmanız gerekiyorsa [Remove-Label](/powershell/module/exchange/remove-label) ve [Remove-LabelPolicy](/powershell/module/exchange/remove-labelpolicy) de kullanabilirsiniz. Ancak duyarlılık etiketlerini silmeden önce aşağıdaki bölümü okuduğunuzdan emin olun.
 
 ## <a name="removing-and-deleting-labels"></a>Etiketleri kaldırma ve silme
 
-Üretim ortamında, bir etiket ilkesinden duyarlılık etiketlerini kaldırmanız veya duyarlılık etiketlerini silmeniz olası değildir. Bir ilk test aşamasında bu eylemlerden birini veya ikisinde birini yapma olasılığı daha yüksek olabilir. Bu işlemlerden herhangi birini gerçekleştir gerçekleştirin ve ne olduğunu anlayın.
+Üretim ortamında duyarlılık etiketlerini bir etiket ilkesinden kaldırmanız veya duyarlılık etiketlerini silmeniz pek olası değildir. İlk test aşamasında bu eylemlerden birini veya birini yapmanız gerekebilir. Bu eylemlerden birini yaptığınızda ne olacağını anladığınızdan emin olun.
 
-Bir etiketi etiket ilkesinden kaldırmak, silmekten daha az risklidir ve daha sonra gerekirse etiket ilkesine yeniden  eklemeniz de gerekir:
+Etiket ilkesinden bir etiketi kaldırmak, etiketi silmekten daha az risklidir ve gerekirse etiketi daha sonra bir etiket ilkesine geri ekleyebilirsiniz:
 
-- Etiket ilkesinden bir etiket kaldırarak etiket artık belirtilen kullanıcılara yayımlanamaz. Etiket ilkesi bir sonraki yenilemesinde, kullanıcılar etiket ilkesinde seçim yapmak üzere bu etiketi Office uygulaması. Ancak, etiket belgelere veya e-postalara uygulanmışsa, etiket bu içerikten kaldırılamaz. Etiket tarafından uygulanmış olan her şifreleme kalır ve temel koruma şablonu yayımlanmış olarak kalır. 
+- Etiketin başlangıçta belirtilen kullanıcılara yayımlanmaması için etiket ilkesinden bir etiketi kaldırdığınızda, etiket ilkesi bir sonraki yenilendiğinde, kullanıcılar artık Office uygulaması seçmek üzere bu etiketi görmez. Ancak, etiket belgelere veya e-postalara uygulanmışsa, etiket bu içerikten kaldırılmaz. Etiket tarafından uygulanan tüm şifrelemeler kalır ve temel alınan koruma şablonu yayımlanır. 
 
-- Kaldırılan ancak daha önce içeriğe uygulanmış olan etiketler için Word, Excel ve PowerPoint'da yerleşik etiketleme kullanan kullanıcılar, durum çubuğunda uygulanan etiket adını yine görebilir. Benzer şekilde, sitelere uygulanan ve sitelere SharePoint etiketler yine Duyarlılık sütununda etiket **adını** görüntüler.
+- Kaldırılan ancak daha önce içeriğe uygulanmış etiketler için Word, Excel ve PowerPoint için yerleşik etiketleme kullanan kullanıcılar, durum çubuğunda uygulanan etiket adını görmeye devam etmektedir. Benzer şekilde, SharePoint sitelere uygulanan kaldırılan etiketler **duyarlılık** sütununda etiket adını görüntülemeye devam ediyor.
 
-Karşılaştırmada, bir etiketi silebilirsiniz:
+Buna karşılık, bir etiketi sildiğinizde:
 
-- Etiket uygulanan şifreleme ise, temel koruma şablonu daha önce korumalı olan içeriğin yine açılabilir şekilde arşivlenir. Bu arşivlenmiş koruma şablonu nedeniyle, aynı adı kullanarak yeni bir etiket oluşturabileceksiniz. [Koruma şablonunu PowerShell](/powershell/module/aipservice/remove-aipservicetemplate) kullanarak silmek mümkün olsa da, arşivlenmiş şablonla şifrelenmiş içeriği açmaya gerek olmadığınız sürece bunu yapma.
+- Etiket şifreleme uyguladıysa, önceden korunan içeriğin hala açılabilmesi için temel koruma şablonu arşivlenmiştir. Bu arşivlenmiş koruma şablonu nedeniyle, aynı ada sahip yeni bir etiket oluşturamazsınız. [PowerShell](/powershell/module/aipservice/remove-aipservicetemplate) kullanarak bir koruma şablonunu silmek mümkün olsa da, arşivlenmiş şablonla şifrelenmiş içeriği açmanız gerekmediğinden emin değilseniz bunu yapmayın.
 
-- Masaüstü uygulamaları için: Meta verilerde yer alan etiket bilgileri kalır, ancak artık ad eşleştirmesi için etiket kimliği artık mümkün olmadığı için kullanıcılar görüntülenen etiket adını (örneğin durum çubuğunda) görmemektedir ve bu nedenle kullanıcılar içeriğin etiket olmadığını varsayacaktır. Etiket uygulanan şifreleme ise, şifreleme kalır ve içerik açıldığında, kullanıcılar artık arşivlenmiş koruma şablonunun adını ve açıklamasını görmeye devam ediyor.
+- Masaüstü uygulamaları için: Meta verilerdeki etiket bilgileri kalır, ancak ad eşlemesi için etiket kimliği artık mümkün olmadığından, kullanıcılar uygulanan etiket adını (örneğin, durum çubuğunda) görmez, bu nedenle kullanıcılar içeriğin etiketlenmediğini varsayar. Etiket şifreleme uyguladıysa, şifreleme kalır ve içerik açıldığında kullanıcılar artık arşivlenen koruma şablonunun adını ve açıklamasını görmeye devam eder.
 
-- Daha Web üzerinde Office: Kullanıcılar etiket adını durum çubuğunda veya Duyarlılık sütununda **görmüyor**. Meta verilerde yer alan etiket bilgileri ancak etiket şifreleme uygulamadı ise kalır. Etiket uygulanan şifreleme ise ve SharePoint ve OneDrive için duyarlılık etiketlerini etkinleştirdiyseniz[, meta](sensitivity-labels-sharepoint-onedrive-files.md) verideki etiket bilgileri kaldırılır ve şifreleme kaldırılır. 
+- Web üzerinde Office için: Kullanıcılar etiket adını durum çubuğunda veya **Duyarlılık** sütununda görmez. Meta verilerdeki etiket bilgileri yalnızca etiket şifreleme uygulamadıysa kalır. Etiket şifreleme uyguladıysa ve [SharePoint ve OneDrive için duyarlılık etiketlerini](sensitivity-labels-sharepoint-onedrive-files.md) etkinleştirdiyseniz, meta verilerdeki etiket bilgileri kaldırılır ve şifreleme kaldırılır. 
 
-Bir etiket ilkesinden bir duyarlılık etiketini kaldırır veya bir duyarlılık etiketini silseniz, bu değişikliklerin tüm kullanıcılara ve hizmetlere çoğaltılması 24 saate kadar sürebilir.
+Bir etiket ilkesinden duyarlılık etiketini kaldırdığınızda veya duyarlılık etiketini sildiğinizde, bu değişikliklerin tüm kullanıcılara ve hizmetlere çoğaltılması 24 saat kadar sürebilir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Duyarlılık etiketlerinizi belirli senaryolarda yapılandırmak ve kullanmak için aşağıdaki makalelere bakın:
+Belirli senaryolarda duyarlılık etiketlerinizi yapılandırmak ve kullanmak için aşağıdaki makaleleri kullanın:
 
-- [Duyarlılık etiketlerini şifreleme kullanarak içeriğe erişimi kısıtlama](encryption-sensitivity-labels.md)
+- [Duyarlılık etiketlerinde şifreleme kullanarak içeriğe erişimi kısıtlama](encryption-sensitivity-labels.md)
 
 - [İçeriğe otomatik olarak bir hassasiyet etiketi uygulama](apply-sensitivity-label-automatically.md)
 
@@ -225,4 +223,4 @@ Duyarlılık etiketlerinizi belirli senaryolarda yapılandırmak ve kullanmak i�
 
 - [SharePoint ve OneDrive'daki Office dosyaları için hassasiyet etiketlerini etkinleştirme](sensitivity-labels-sharepoint-onedrive-files.md)
 
-Etiketlerinizin nasıl kullanılıyor olduğunu izlemek için bkz. [Veri Kullanmaya başlayın hakkında daha fazla bilgi.](data-classification-overview.md)
+Etiketlerinizin nasıl kullanıldığını izlemek için bkz. [Veri sınıflandırmasıyla Kullanmaya başlayın](data-classification-overview.md).

@@ -1,5 +1,5 @@
 ---
-title: Posta kutularına gereksiz e-Exchange Online yapılandırma
+title: Exchange Online posta kutularında gereksiz e-posta ayarlarını yapılandırma
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -14,160 +14,163 @@ search.appverid:
 - MET150
 ms.collection:
 - M365-security-compliance
-description: Yöneticiler, posta kutularında gereksiz e-posta ayarlarını yapılandırmayı Exchange Online öğrenebilir. Bu ayarların birçoğu aynı anda veya başka bir Outlook kullanıcıların Web üzerinde Outlook.
+description: Yöneticiler, Exchange Online posta kutularında gereksiz e-posta ayarlarını yapılandırmayı öğrenebilir. Bu ayarların çoğu Outlook veya Web üzerinde Outlook kullanıcıların kullanımına sunulmuştur.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 9e2db8fc6c88e3945081d3b2800aa5ea9cd57a11
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: ac7ac0f40c24c81cf916917b1b87626e032f8055
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63682471"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65130899"
 ---
-# <a name="configure-junk-email-settings-on-exchange-online-mailboxes"></a>Posta kutularına gereksiz e-Exchange Online yapılandırma
+# <a name="configure-junk-email-settings-on-exchange-online-mailboxes"></a>Exchange Online posta kutularında gereksiz e-posta ayarlarını yapılandırma
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
-**Geçerli olduğu yer:**
+**Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Aynı Microsoft 365 posta kutuları olan kuruluşlarda Exchange Online istenmeyen posta önleme ayarları Exchange Online Protection (EOP) tarafından denetlenmiştir. Daha fazla bilgi için bkz. [EOP'de istenmeyen posta önleme koruması](anti-spam-protection.md).
+posta kutuları Exchange Online olan Microsoft 365 kuruluşlarda, kuruluş istenmeyen posta önleme ayarları Exchange Online Protection (EOP) tarafından denetlenir. Daha fazla bilgi için bkz. [EOP'de istenmeyen posta koruması](anti-spam-protection.md).
 
-Ancak, yöneticilerin belirli posta kutularında yapılandırılan belirli istenmeyen posta önleme ayarları da Exchange Online:
-
-> [!NOTE]
-> EOP artık iletileri gereksiz e-posta kuralı yerine Gereksiz E-posta klasörüne yönlendirecek kendi posta akışı teslim aracısını kullanıyor. **Set-MailboxJokEmailConfiguration** cmdlet'inde _Enabled_ parametresi artık posta akışını hiçbir şekilde etkilemeyecektir. EOP, istenmeyen posta önleme ilkelerde ayarlanmış eylemlere dayalı olarak iletileri yönlendiriyor. Kullanıcının Posta Gönderen Kasa ve Engellenen Gönderenler listesi her zamanki gibi çalışmaya devam edecektir.
-
-- İstenmeyen posta önleme ilkelerine dayalı olarak iletileri Gereksiz E-posta klasörüne taşıma: İstenmeyen posta filtreleme kararını almak için  İletiyi Gereksiz E-posta klasörüne taşı eylemiyle yapılandırılmışsa, ileti posta kutusuna teslim edildikten sonra Gereksiz **E-posta** klasörüne taşınır. İstenmeyen posta filtreleme kararlarını istenmeyen posta önleme ilkeleri hakkında daha fazla bilgi için bkz. [EOP'de istenmeyen posta önleme ilkelerini yapılandırma](configure-your-spam-filter-policies.md). Benzer şekilde, sıfır saatlik otomatik temizleme (ZAP) teslim edilen bir iletinin istenmeyen posta veya kimlik avı iletisi olduğunu belirlerse, ileti İletiyi Gereksiz E-posta klasörüne taşıma istenmeyen posta filtresi karar eylemleri için Önemsiz E-posta klasörüne taşınır. ZAP hakkında daha fazla bilgi için bkz. Aynı saatte sıfır saatlik [otomatik temizleme (ZAP) Exchange Online](zero-hour-auto-purge.md).
-
-- **kullanıcıların Outlook veya Web üzerinde Outlook'te** kendileri için yapılandırılan gereksiz e-posta ayarları: Güvenilir liste koleksiyonu Kasa  Gönderenler listesi, Kasa Alıcıları listesi ve her posta kutusunda Engellenen Gönderenler listesidir. Bu listelerde yer alan girdiler, iletinin Gelen Kutusu'na mı yoksa Gereksiz E-posta klasörüne mi taşındığını belirler. Kullanıcılar liste veya posta kutusunda (eski adıyla Outlook Web üzerinde Outlook) kendi posta kutuları için güvenilir liste koleksiyonunu Outlook Web App. Yöneticiler herhangi bir kullanıcının posta kutusunda güvenilir liste koleksiyonunu yapılandırabilirsiniz.
-
-EOP, iletiyi gereksiz e-posta filtreleme karar eylemi olan Gereksiz E-posta klasörüne veya posta  kutusunda Engellenen Gönderenler listesine taşıma eylemine dayalı olarak iletileri Gereksiz E-posta klasörüne taşıyabiliyor ve iletilerin Gereksiz E-posta klasörüne (posta kutusunda Kasa Gönderenler listesi temel alınarak) teslim ekleyebilirsiniz.
-
-Yöneticiler Exchange Online kutuları (Kasa Gönderenler listesi, Kasa Alıcılar listesi ve Engellenen Gönderenler listesi) güvenilir liste koleksiyonunda yer alan girdileri yapılandırmak için Kasa PowerShell kullanabilir.
+Ancak, yöneticilerin Exchange Online'deki tek tek posta kutularında yapılandırabileceği belirli istenmeyen posta önleme ayarları da vardır:
 
 > [!NOTE]
-> Kullanıcıların kendi listelerine ekli olarak gönderenlerden gelen Kasa Gönderenler listeleri EOP'nin bir parçası olarak içerik filtrelemeyi atlar (SCL -1'tir). Kullanıcıların Outlook'ta Kasa Gönderenler listesine giriş eklemesini önlemek için, bu makalenin devam konusu olan Outlook Gereksiz [e-posta](#about-junk-email-settings-in-outlook) ayarları hakkında bölümünde belirtildiği gibi Grup İlkesi'ni kullanın. İlke filtreleme, İlke filtreleme, Office 365 için Defender denetimleri iletilere uygulanmaya devam ediyor.
+> EOP artık gereksiz e-posta kuralını kullanmak yerine iletileri Gereksiz E-posta klasörüne yönlendirmek için kendi posta akışı teslim aracısını kullanıyor. **Set-MailboxJunkEmailConfiguration** cmdlet'indeki _Enabled_ parametresinin artık posta akışı üzerinde hiçbir etkisi yoktur. EOP, iletileri istenmeyen posta önleme ilkelerinde ayarlanan eylemlere göre yönlendirir. Kullanıcının Kasa Gönderen listesi ve Engellenen Gönderenler listesi her zamanki gibi çalışmaya devam eder.
+
+- **İstenmeyen posta önleme ilkelerine göre iletileri Gereksiz E-posta klasörüne taşıma**: İstenmeyen posta filtreleme kararı için **İletiyi Gereksiz E-posta klasörüne taşı** eylemiyle bir istenmeyen posta önleme ilkesi yapılandırıldığında, ileti posta kutusuna teslim edildikten sonra Gereksiz E-posta klasörüne taşınır. İstenmeyen posta önleme ilkelerindeki istenmeyen posta filtreleme kararları hakkında daha fazla bilgi için bkz. [EOP'de istenmeyen posta önleme ilkelerini yapılandırma](configure-your-spam-filter-policies.md). Benzer şekilde, sıfır saatlik otomatik temizleme (ZAP) teslim edilen bir iletinin istenmeyen posta veya kimlik avı olduğunu belirlerse ileti, İletiyi **Gereksiz E-posta klasörüne taşı istenmeyen posta filtreleme karar eylemleri için Gereksiz E-posta klasörüne** taşınır. ZAP hakkında daha fazla bilgi için bkz. [Exchange Online'de Sıfır saat otomatik temizleme (ZAP).](zero-hour-auto-purge.md)
+
+- **Kullanıcıların kendileri için Outlook veya Web üzerinde Outlook yapılandırılan gereksiz e-posta ayarları**: _Güvenli liste koleksiyonu_, her posta kutusunda Kasa Gönderenler listesi, Kasa Alıcılar listesi ve Engellenen Gönderenler listesidir. Bu listelerdeki girdiler, iletinin Gelen Kutusu'na mı yoksa Gereksiz E-posta klasörüne mi taşındığını belirler. Kullanıcılar güvenli liste koleksiyonunu Outlook veya Web üzerinde Outlook (eski adıyla Outlook Web App) içinde kendi posta kutuları için yapılandırabilir. Yöneticiler, güvenli liste koleksiyonunu herhangi bir kullanıcının posta kutusunda yapılandırabilir.
+
+EOP, istenmeyen posta filtreleme kararı eylemine göre iletileri **Gereksiz E-posta klasörüne** veya posta kutusundaki Engellenen Gönderenler listesine taşıyabilir ve iletilerin Gereksiz E-posta klasörüne (posta kutusundaki Kasa Gönderenler listesine göre) teslim edilmesini önleyebilir.
+
+Yöneticiler, posta kutularındaki güvenli liste koleksiyonundaki girişleri yapılandırmak için Exchange Online PowerShell kullanabilir (Kasa Gönderenler listesi, Kasa Alıcılar listesi ve Engellenen Gönderenler listesi).
+
+> [!NOTE]
+> Kullanıcıların kendi Kasa Gönderenler listelerine ekledikleri gönderenlerden gelen iletiler, EOP'nin bir parçası olarak içerik filtrelemeyi atlar (SCL -1'dir). Kullanıcıların Outlook'da Kasa Gönderenler listesine girdi eklemesini önlemek için, bu makalenin devamında yer alan Outlook [gereksiz e-posta ayarları hakkında](#about-junk-email-settings-in-outlook) bölümünde belirtildiği gibi grup ilkesi kullanın. İletilere ilke filtreleme, İçerik filtreleme ve Office 365 için Defender denetimleri uygulanmaya devam eder.
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Başlamadan önce bilmeniz gerekenler
 
-- Exchange Online PowerShell'i yalnızca bu makaledeki yordamları yapmak için kullanabilirsiniz. Exchange Online PowerShell'e bağlanmak [için bkz. Bağlan PowerShell Exchange Online e bağlama](/powershell/exchange/connect-to-exchange-online-powershell).
+- Exchange Online PowerShell'i yalnızca bu makaledeki yordamları yapmak için kullanabilirsiniz. Exchange Online PowerShell'e bağlanmak için bkz. [PowerShell'Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
 
-- Bu makaledeki yordamları yerine Exchange Online önce Bu makalede izinlerin atanmamış olması gerekir. Özel olarak, Posta Alıcıları  rolüne (Varsayılan olarak Kuruluş **Yönetimi, Alıcı** Yönetimi ve Özel Posta Alıcıları rol gruplarına atanır) veya Kullanıcı Seçenekleri rolüne (varsayılan olarak Kuruluş Yönetimi  ve **Yardım** Masası rol gruplarına atanır) ihtiyacınız vardır. Bir yıl içinde rol gruplarına kullanıcı Exchange Online için [bkz. Exchange Online](/Exchange/permissions-exo/role-groups#modify-role-groups). Varsayılan izinlere sahip kullanıcılar, PowerShell'e erişimleri olduğu sürece bu yordamları kendi [posta kutularında Exchange Online unutmayın](/powershell/exchange/disable-access-to-exchange-online-powershell).
+- Bu makaledeki yordamları gerçekleştirebilmeniz için önce Exchange Online'de size izinler atanmalıdır. Özellikle, **Posta Alıcıları** rolüne (varsayılan olarak **Kuruluş Yönetimi**, **Alıcı Yönetimi** ve **Özel Posta Alıcıları** rol gruplarına atanır) veya **Kullanıcı Seçenekleri** rolüne (varsayılan olarak **Kuruluş Yönetimi** ve **Yardım Masası** rol gruplarına atanır) ihtiyacınız vardır. Exchange Online rol gruplarına kullanıcı eklemek için bkz. [Exchange Online rol gruplarını değiştirme](/Exchange/permissions-exo/role-groups#modify-role-groups). Exchange Online [PowerShell'e erişimleri](/powershell/exchange/disable-access-to-exchange-online-powershell) olduğu sürece, varsayılan izinlere sahip kullanıcıların bu yordamları kendi posta kutularında da gerçekleştirebileceklerini unutmayın.
 
-- EOP'nin şirket içi veya posta kutularını Exchange karma ortamlarda, şirket içi posta kutularında posta akış kurallarını (aktarım kuralları olarak da bilinir) yapılandırmanız Exchange. Bu posta akış kuralları EOP istenmeyen posta filtreleme kararını çevirerek, posta kutusunda gereksiz e-posta kuralının iletiyi Gereksiz E-posta klasörüne taşımasini sağlar. Ayrıntılar için bkz. [EOP'yi karma ortamlarda gereksiz E-posta klasörüne istenmeyen posta teslim edecek şekilde yapılandırma](/exchange/standalone-eop/configure-eop-spam-protection-hybrid).
+- EOP'nin şirket içi Exchange posta kutularını koruduğu karma ortamlarda, şirket içi Exchange posta akışı kurallarını (aktarım kuralları olarak da bilinir) yapılandırmanız gerekir. Bu posta akışı kuralları, posta kutusunda gereksiz e-posta kuralının iletiyi Gereksiz E-posta klasörüne taşıyabilmesi için EOP istenmeyen posta filtreleme kararını çevirir. Ayrıntılar için bkz. [Karma ortamlarda Gereksiz E-posta klasörüne istenmeyen posta göndermek için EOP'yi yapılandırma](/exchange/standalone-eop/configure-eop-spam-protection-hybrid).
 
-- Kasa posta kutularının gönderenleri, tasarım tarafından Azure AD ve EOP ile eşitlenmez.
+- Paylaşılan posta kutuları için Kasa gönderenler tasarım gereği Azure AD ve EOP ile eşitlenmez.
 
-## <a name="use-exchange-online-powershell-to-configure-the-safelist-collection-on-a-mailbox"></a>Posta Exchange Online güvenilir liste koleksiyonunu yapılandırmak için PowerShell'i kullanma
+## <a name="use-exchange-online-powershell-to-configure-the-safelist-collection-on-a-mailbox"></a>Exchange Online PowerShell kullanarak posta kutusunda güvenli liste koleksiyonunu yapılandırma
 
-Posta kutusu güvenilir liste koleksiyonunda Kasa Gönderenler listesi, Kasa Listesi ve Engellenen Gönderenler listesi yer almaktadır. Varsayılan olarak, kullanıcılar güvenli liste koleksiyonunu Kendi Posta Kutuları veya Posta Kutuları Outlook Web üzerinde Outlook. Yöneticiler, kullanıcının posta kutusunda güvenilir liste koleksiyonunu yapılandırmak için **Set-Mailbox BirEmailConfiguration** cmdlet'inde buna karşılık gelen parametreleri kullanabilir. Bu parametreler aşağıdaki tabloda açıklanmıştır.
+Posta kutusunda güvenli liste koleksiyonu Kasa Gönderenler listesini, Kasa Alıcılar listesini ve Engellenen Gönderenler listesini içerir. Varsayılan olarak, kullanıcılar güvenli liste koleksiyonunu Outlook veya Web üzerinde Outlook kendi posta kutularında yapılandırabilir. Yöneticiler, kullanıcının posta kutusunda güvenli liste koleksiyonunu yapılandırmak için **Set-MailboxJunkEmailConfiguration** cmdlet'indeki ilgili parametreleri kullanabilir. Bu parametreler aşağıdaki tabloda açıklanmıştır.
 
-|Parametre Set-MailboxJunkEmailConfiguration|Web üzerinde Outlook ayarı|
+|Set-MailboxJunkEmailConfiguration parametresi|Web üzerinde Outlook ayarı|
 |---|---|
-|_BlockedSendersAndDomains_|**Bu gönderenlerden veya etki alanlarından e-postaları Gereksiz E-posta klasörüme taşıma**|
-|_ContactsTrusted_|**Kişilerimin e-postaya güven**|
-|_TrustedListsOnly_|**Yalnızca sitemin gönderenleri ve etki alanları Kasa e-postalarına güven ve Kasa listelerine güven**|
+|_BlockedSendersAndDomains_|**Bu gönderenlerden veya etki alanlarından gelen e-postaları Gereksiz E-posta klasörüme taşıma**|
+|_Kişiler Güvenildi_|**Kişilerimden gelen e-postaya güven**|
+|_TrustedListsOnly_|**Yalnızca Kasa gönderenler ve etki alanları listemdeki adreslerden gelen e-postalara ve Kasa posta listelerine güven**|
 |_TrustedSendersAndDomains_<sup>\*</sup>|**Bu gönderenlerden gelen e-postaları Gereksiz E-posta klasörüme taşıma**|
 
 <sup>\*</sup>**Notlar**:
 
-- Bu **Exchange Online, Kasa** Senders listesinde veya _TrustedSendersAndDomains_ parametresinde yer alan etki alanı girdileri tanınmaz, dolayısıyla yalnızca e-posta adreslerini kullanın. Dizin eşitlemesi olan tek başına EOP'de etki alanı girdileri varsayılan olarak eşitlenmez, ancak etki alanları için eşitlemeyi etkinleştirebilirsiniz. Daha fazla bilgi için [bkz. KB3019657](https://support.microsoft.com/help/3019657).
-- **Set-MailboxJunkEmailConfiguration** cmdlet'ini kullanarak Kasa Alıcıları listesini doğrudan değiştiremezsiniz (_TrustedRecipientsAndDomains_ parametresi çalışmıyor). Varsayılan Gönderenler Kasa değiştirirsiniz ve bu değişiklikler en çok Kasa listesine eşitlenir.
+- Exchange Online'da, Kasa Gönderenler listesindeki veya _TrustedSendersAndDomains_ parametresindeki **etki alanı girişleri** tanınmaz, bu nedenle yalnızca e-posta adreslerini kullanın. Dizin eşitlemeli tek başına EOP'de etki alanı girişleri varsayılan olarak eşitlenmez, ancak etki alanları için eşitlemeyi etkinleştirebilirsiniz. Daha fazla bilgi için bkz. [KB3019657](https://support.microsoft.com/help/3019657).
+- **Set-MailboxJunkEmailConfiguration** cmdlet'ini kullanarak Kasa Alıcılar listesini doğrudan değiştiremezsiniz (_TrustedRecipientsAndDomains_ parametresi çalışmaz). Kasa Gönderenler listesini değiştirirsiniz ve bu değişiklikler Kasa Alıcılar listesiyle eşitlenir.
 
-Posta kutusunda güvenilir liste koleksiyonunu yapılandırmak için aşağıdaki söz dizimi kullanın:
+Bir posta kutusunda güvenli liste koleksiyonunu yapılandırmak için aşağıdaki söz dizimini kullanın:
 
 ```PowerShell
 Set-MailboxJunkEmailConfiguration <MailboxIdentity> -BlockedSendersAndDomains <EmailAddressesOrDomains | $null> -ContactsTrusted <$true | $false> -TrustedListsOnly <$true | $false> -TrustedSendersAndDomains  <EmailAddresses | $null>
 ```
 
-Birden çok değer girmek ve _BlockedSendersAndDomains_ ve _TrustedSendersAndDomains_ parametrelerinde var olan tüm girdilerin üzerine yazmak için aşağıdaki söz dizimi kullanın: `"<Value1>","<Value2>"...`. Var olan diğer girdileri etkilemeden bir veya daha fazla değer eklemek veya kaldırmak için, aşağıdaki söz dizimi kullanın: `@{Add="<Value1>","<Value2>"... ; Remove="<Value3>","<Value4>...}`
+Birden çok değer girmek ve _BlockedSendersAndDomains ve TrustedSendersAndDomains_ parametrelerinin varolan _girdilerinin_ üzerine yazmak için aşağıdaki söz dizimini kullanın: `"<Value1>","<Value2>"...`. Var olan diğer girdileri etkilemeden bir veya daha fazla değer eklemek veya kaldırmak için aşağıdaki söz dizimini kullanın: `@{Add="<Value1>","<Value2>"... ; Remove="<Value3>","<Value4>...}`
 
-Bu örnekte, Ori Epstein'ın posta kutusunda safelist collection için aşağıdaki ayarlar yapılandırılmıştır:
+Bu örnekte, Ori Epstein'in posta kutusunda güvenli liste koleksiyonu için aşağıdaki ayarlar yapılandırılır:
 
-- Engellenen Gönderenler shopping@fabrikam.com istediğiniz değeri ekleyin.
-- Yeni Gönderenler chris@fourthcoffee.com listesinden ve Kasa Alıcılar listesinden Kasa kaldırın.
-- Kişiler klasöründeki kişileri güvenilen gönderenler olarak kabul edilenler olarak yapılandırr.
+- shopping@fabrikam.com değerini Engellenen Gönderenler listesine ekleyin.
+- Kasa Gönderenler listesinden ve Kasa Alıcılar listesinden chris@fourthcoffee.com değeri kaldırın.
+- Kişiler klasöründeki kişileri güvenilir gönderen olarak ele alınacak şekilde yapılandırılır.
 
 ```PowerShell
 Set-MailboxJunkEmailConfiguration "Ori Epstein" -BlockedSendersAndDomains @{Add="shopping@fabrikam.com"} -TrustedSendersAndDomains @{Remove="chris@fourthcoffee.com"} -ContactsTrusted $true
 ```
 
-Bu örnekte, contoso.com tüm kullanıcı posta kutularında, etki alanı adları Engellenen Gönderenler listesinden kaldırır.
+Bu örnek, kuruluştaki tüm kullanıcı posta kutularındaki Engellenen Gönderenler listesinden etki alanı contoso.com kaldırır.
 
 ```PowerShell
 $All = Get-Mailbox -RecipientTypeDetails UserMailbox -ResultSize Unlimited; $All | foreach {Set-MailboxJunkEmailConfiguration $_.Name -BlockedSendersAndDomains @{Remove="contoso.com"}}
 ```
 
-Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [Set-MailboxJunkEmailConfiguration](/powershell/module/exchange/set-mailboxjunkemailconfiguration).
+Ayrıntılı söz dizimi ve parametre bilgileri için bkz [. Set-MailboxJunkEmailConfiguration](/powershell/module/exchange/set-mailboxjunkemailconfiguration).
 
 > [!NOTE]
 >
-> - Kullanıcı posta kutusunu hiç açmadı ise, önceki komutları çalıştırmanız sırasında hata alabilirsiniz. Toplu işlemlarda bu hatanın ılması için `-ErrorAction SilentlyContinue` **Set-Mailbox BirKmailConfiguration komutuna** ekleyin.
-> - En Outlook E-posta Filtresi'nin ek güvenilir liste koleksiyonu ayarları vardır (örneğin, E-posta gönderenler listesine e-Kasa **kişi ekleme**). Daha fazla bilgi için bkz [. Hangi iletileri göreceğinizi kontrol etmek için Gereksiz E-posta Filtrelerini Kullanma](https://support.microsoft.com/office/274ae301-5db2-4aad-be21-25413cede077).
+> - Kullanıcı posta kutusunu hiç açmadıysa, önceki komutları çalıştırdığınızda bir hata alabilirsiniz. Toplu işlemlerde bu hatayı engellemek için **Set-MailboxJunkEmailConfiguration** komutuna ekleyin`-ErrorAction SilentlyContinue`.
+> - Outlook Gereksiz E-posta Filtresi ek güvenli liste koleksiyonu ayarlarına sahiptir (örneğin, **E-posta gönderdiğim kişileri otomatik olarak Kasa Gönderenler listesine ekle**). Daha fazla bilgi için bkz [. Gördüğünüz iletileri denetlemek için Gereksiz E-posta Filtrelerini kullanma](https://support.microsoft.com/office/274ae301-5db2-4aad-be21-25413cede077).
 
 ### <a name="how-do-you-know-this-worked"></a>Bunun çalıştığını nasıl anlarsınız?
 
-Posta kutusunda güvenilir liste koleksiyonunu başarıyla yapılandırıldığından emin olmak için, aşağıdaki yordamlardan herhangi birini kullanın:
+Bir posta kutusunda güvenli liste koleksiyonunu başarıyla yapılandırdığınızdan emin olmak için aşağıdaki yordamlardan birini kullanın:
 
-- Posta _\<MailboxIdentity\>_ kutusunun adı, diğer adı veya e-posta adresiyle değiştirin ve özellik değerlerini doğrulamak için aşağıdaki komutu çalıştırın:
+- değerini posta kutusunun adı, diğer adı veya e-posta adresiyle değiştirin _\<MailboxIdentity\>_ ve özellik değerlerini doğrulamak için aşağıdaki komutu çalıştırın:
 
   ```PowerShell
   Get-MailboxJunkEmailConfiguration -Identity "<MailboxIdentity>" | Format-List trusted*,contacts*,blocked*
   ```
 
-  Değer listesi çok uzunsa, şu söz dizimi kullanın:
+  Değer listesi çok uzunsa şu söz dizimini kullanın:
 
   ```PowerShell
   (Get-MailboxJunkEmailConfiguration -Identity <MailboxIdentity>).BlockedSendersAndDomains
   ```
 
-## <a name="about-junk-email-settings-in-outlook"></a>E-posta'daki gereksiz e-posta Outlook
+## <a name="about-junk-email-settings-in-outlook"></a>Outlook'deki gereksiz e-posta ayarları hakkında
 
-Bu hizmette bulunan istemci tarafı Gereksiz E-posta Filtresi ayarlarını etkinleştirmek, devre dışı bırakmak ve Outlook için Grup İlkesi'ne tıklayın. Daha fazla bilgi için bkz. Yönetim Şablonu dosyaları [(ADMX/ADML) ve Kurumlar için Microsoft 365 Uygulamaları için Office Özelleştirme Aracı, Office 2019 ve Office 2016](https://www.microsoft.com/download/details.aspx?id=49030) ve Grup İlkesini kullanarak [Kasa](https://support.microsoft.com/help/2252421) Gönderenler listesi gibi gereksiz e-posta ayarlarını dağıtma.
+Outlook'de kullanılabilen istemci tarafı Gereksiz E-posta Filtresi ayarlarını etkinleştirmek, devre dışı bırakmak ve yapılandırmak için grup ilkesi kullanın. Daha fazla bilgi için bkz. [Kurumlar için Microsoft 365 Uygulamaları, Office 2019 ve Office 2016 için Yönetim Şablonu dosyaları (ADMX/ADML) ve Office Özelleştirme Aracı ve](https://www.microsoft.com/download/details.aspx?id=49030) [Kasa Gönderenler listesi gibi gereksiz e-posta ayarlarını kullanarak dağıtma grup ilkesi](https://support.microsoft.com/help/2252421).
 
-Outlook  \>  \> Gereksiz E-posta Filtresi varsayılan değerine ayarlanmışsa, Ev Gereksiz  **E-posta E-posta** \> Seçenekleri seçeneklerinde otomatik filtreleme yok değerine **ayarlanırsa,** Outlook iletileri istenmeyen posta olarak sınıflandırmayı denemez ancak güvenilir liste koleksiyonunu (Kasa Gönderenler listesi, Güvenilir Liste Kasa  İletileri teslimden sonra Gereksiz E-posta klasörüne taşımak için Alıcılar listesi ve Engellenen Gönderenler listesi). Bu ayarlar hakkında daha fazla bilgi için bkz. [Gereksiz E-posta Filtresine Genel Bakış](https://support.microsoft.com/office/5ae3ea8e-cf41-4fa0-b02a-3b96e21de089).
-
-Gereksiz Outlook E-posta Filtresi Düşük veya Yüksek olarak  ayarlanmışsa **, Outlook** Gereksiz E-posta Filtresi istenmeyen postaları tanımlamak ve Gereksiz E-posta klasörüne taşımak için kendi SmartScreen filtre teknolojisini kullanır. Bu istenmeyen posta sınıflandırması, EOP tarafından belirlenen istenmeyen posta güvenlik düzeyinden (SCL) ayrıdır. Aslında, Outlook SCL'i EOP'den yoksayar (EOP istenmeyen posta filtrelemeyi atlamak için iletiyi işaretlediği sürece) ve iletinin istenmeyen posta olup olmadığını belirlemek için kendi ölçütlerini kullanır. Şüphesiz, EOP ve istenmeyen posta kararının Outlook aynı olabilir. Bu ayarlar hakkında daha fazla bilgi için bkz [. Gereksiz E-posta Filtresi'nin koruma düzeyini değiştirme](https://support.microsoft.com/office/e89c12d8-9d61-4320-8c57-d982c8d52f6b).
+Outlook Gereksiz E-posta Filtresi varsayılan değere ayarlandığında **Ev** \> **Gereksiz Gereksiz** \> **E-posta E-posta Seçenekleri Seçenekleri'nde** \> **otomatik filtreleme yok** seçeneğine ayarlandığında, Outlook iletileri istenmeyen posta olarak sınıflandırmayı denemez, ancak yine de güvenli liste koleksiyonunu kullanır (Kasa Gönderenler listesi, Kasa   Teslimden sonra iletileri Gereksiz E-posta klasörüne taşımak için Alıcılar listesi ve Engellenen Gönderenler listesi). Bu ayarlar hakkında daha fazla bilgi için bkz [. Gereksiz E-posta Filtresine Genel Bakış](https://support.microsoft.com/office/5ae3ea8e-cf41-4fa0-b02a-3b96e21de089).
 
 > [!NOTE]
-> Kasım 2016'da Microsoft, Exchange ve Outlook'de SmartScreen filtreleri için istenmeyen posta tanım güncelleştirmelerini üretmeyi durdurdu. Mevcut SmartScreen istenmeyen posta tanımları olduğu gibi kaldı, ancak bunların etkisinin zaman içinde düşük olması olasıdır. Daha fazla bilgi için bkz[. SmartScreen'de smartscreen desteğini Outlook ve Exchange](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecating-support-for-smartscreen-in-outlook-and-exchange/ba-p/605332).
+> Microsoft 365 kuruluşlarda Gereksiz E-posta Filtresi'ni EOP'den gelen istenmeyen posta filtreleme kararlarıyla gereksiz çakışmaları (hem pozitif hem de negatif) önlemek için otomatik **filtreleme yok** olarak Outlook olarak bırakmanızı öneririz.
 
-Dolayısıyla, Outlook Gereksiz E-posta Filtresi, iletileri Gereksiz E-posta klasörüne taşımak için posta kutusunun güvenilir listesi koleksiyonunu ve kendi istenmeyen posta sınıflandırmasını kullanabilir.
+Outlook Gereksiz E-posta Filtresi **Düşük** veya **Yüksek** olarak ayarlandığında, gereksiz e-postayı tanımlamak ve Gereksiz E-posta klasörüne taşımak için Outlook Gereksiz E-posta Filtresi kendi SmartScreen filtre teknolojisini kullanır. Bu istenmeyen posta sınıflandırması, EOP tarafından belirlenen istenmeyen posta güvenilirlik düzeyinden (SCL) ayrıdır. Aslında, Outlook EOP'den SCL'yi yoksayar (EOP iletiyi istenmeyen posta filtrelemeyi atlamak için işaretlemediği sürece) ve iletinin istenmeyen posta olup olmadığını belirlemek için kendi ölçütlerini kullanır. Elbette, EOP ve Outlook istenmeyen posta kararının aynı olması mümkündür. Bu ayarlar hakkında daha fazla bilgi için bkz [. Gereksiz E-posta Filtresi'nde koruma düzeyini değiştirme](https://support.microsoft.com/office/e89c12d8-9d61-4320-8c57-d982c8d52f6b).
 
-Outlook ve Web üzerinde Outlook güvenilir liste koleksiyonunu destekler. Güvenilir liste koleksiyonu, Exchange Online kutusuna kaydedilir; dolayısıyla, Outlook'de güvenli liste koleksiyonunda yapılan değişiklikler Web üzerinde Outlook olarak görüntülenir.
+> [!NOTE]
+> Kasım 2016'da Microsoft, Exchange ve Outlook SmartScreen filtreleri için istenmeyen posta tanım güncelleştirmeleri üretmeyi durdurdu. Mevcut SmartScreen istenmeyen posta tanımları yerinde bırakıldı, ancak zaman içinde etkinliği büyük olasılıkla azalacaktır. Daha fazla bilgi için bkz. [Outlook ve Exchange SmartScreen desteğini kullanımdan kaldırma](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecating-support-for-smartscreen-in-outlook-and-exchange/ba-p/605332).
+
+Bu nedenle, Outlook Gereksiz E-posta Filtresi, iletileri Gereksiz E-posta klasörüne taşımak için posta kutusunun güvenli liste koleksiyonunu ve kendi istenmeyen posta sınıflandırmasını kullanabilir.
+
+hem Outlook hem de Web üzerinde Outlook güvenli liste koleksiyonunu destekler. Güvenli liste koleksiyonu Exchange Online posta kutusuna kaydedilir, bu nedenle Outlook içindeki güvenli liste koleksiyonunda yapılan değişiklikler Web üzerinde Outlook görünür ve tersi de geçerlidir.
 
 ## <a name="limits-for-junk-email-settings"></a>Gereksiz e-posta ayarları için sınırlar
 
-Kullanıcının posta kutusunda depolanan güvenilir liste koleksiyonu (Kasa Gönderenler listesi, Kasa Alıcıları listesi ve Engellenen Gönderenler listesi) de EOP ile eşitlenir. Dizin eşitlemeyle, güvenilir liste koleksiyonu Azure AD'ye eşitlenir.
+Kullanıcının posta kutusunda depolanan güvenli liste koleksiyonu (Kasa Gönderenler listesi, Kasa Alıcılar listesi ve Engellenen Gönderenler listesi) de EOP ile eşitlenir. Dizin eşitlemesi ile safelist koleksiyonu Azure AD ile eşitlenir.
 
-- Kullanıcının posta kutusu güvenilir liste koleksiyonunun 510 KB sınırlaması vardır. Bu sınır tüm listeleri ve ek gereksiz e-posta filtresi ayarlarını içerir. Kullanıcı bu sınırı aşarsa, aşağıdakine benzer bir Outlook hata alır:
+- Kullanıcının posta kutusunda güvenli liste koleksiyonu, tüm listeleri ve ek gereksiz e-posta filtresi ayarlarını içeren 510 KB sınırına sahiptir. Bir kullanıcı bu sınırı aşarsa şuna benzer bir Outlook hatası alır:
 
-  > Sunucu Gereksiz E-posta listelerine ekli değil/ekli değil. Sunucuda izin verilen boyutun üzerindesiniz. Gereksiz E-posta listeleriniz sunucu tarafından izin verilen boyuta indirilene kadar, sunucuya verilen Gereksiz E-posta filtresi devre dışı bırakılır.
+  > Sunucu Gereksiz E-posta listelerine eklenemiyor/eklenemiyor. Sunucuda izin verilen boyutun üzerindesiniz. Sunucudaki Gereksiz E-posta filtresi, Gereksiz E-posta listeleriniz sunucunun izin verdiği boyuta küçültülene kadar devre dışı bırakılır.
 
-  Bu sınır ve bu sınırı değiştirme hakkında daha fazla bilgi için bkz. [KB2669081](https://support.microsoft.com/help/2669081).
+  Bu sınır ve nasıl değiştireceği hakkında daha fazla bilgi için bkz. [KB2669081](https://support.microsoft.com/help/2669081).
 
-- EOP'de eşitlenmiş güvenilir liste koleksiyonu aşağıdaki eşitleme sınırlarına sahiptir:
-  - Kişilerimin e-postasına güven etkinleştirildiyse Kasa Gönderenler listesinde, Kasa Alıcılar listesinde ve dış kişilerde toplam 1024 **girdi**.
-  - Engellenen Gönderenler listesi ve Engellenen Etki Alanları listesinde toplam 500 girdi.
+- EOP'deki eşitlenmiş güvenli liste koleksiyonu aşağıdaki eşitleme sınırlarına sahiptir:
+  - **Kişilerimden gelen e-postaya güven** etkinleştirildiyse, Kasa Gönderenler listesindeki, Kasa Alıcılar listesindeki ve dış kişilerdeki toplam girdi sayısı 1024.
+  - Engellenen Gönderenler listesinde ve Engellenen Etki Alanları listesinde toplam 500 girdi.
 
-  1024 giriş sınırına ulaşıldı mı, şu şeyler olur:
+  1024 giriş sınırına ulaşıldığında aşağıdaki işlemler gerçekleşir:
 
-  - Liste, PowerShell ve Web üzerinde Outlook kabul edilmeyi durdurur, ancak hiçbir hata görüntülenmez.
+  - Liste, PowerShell ve Web üzerinde Outlook girdilerini kabul etme işlemini durdurur, ancak hiçbir hata görüntülenmez.
 
-    Outlook 510 KB'lık bir sınıra ulaşana kadar kullanıcılar 1024'Outlook eklemeye devam edecektir. Outlook EOP filtresi posta kutusuna teslimden önce iletiyi engellememişse (posta akış kuralları, adres mektup birleştirmeyi önleme vb.) bu ek girdileri kullanabilirsiniz.
+    Outlook kullanıcılar, 510 KB'lık Outlook sınırına ulaşana kadar 1024'ten fazla giriş eklemeye devam edebilir. EOP filtresi posta kutusuna teslim etmeden önce iletiyi engellemediği sürece (posta akışı kuralları, kimlik sahtekarlığı önleme vb.) Outlook bu ek girdileri kullanabilir.
 
-- Dizin eşitlemeyle, girdiler Azure AD'ye aşağıdaki sırayla eşitlenir:
-  1. Kişilerime gelen **e-postaya güven etkinleştirildiyse, posta** kişileri.
-  2. İlk Kasa ve Alıcı Kasa listesi, ilk 1024 girdilerinde değişiklik yapıldıklarında birleştirilmiş, yinelenen ve alfabetik olarak sıralanır.
+- Dizin eşitlemesi ile girişler aşağıdaki sırayla Azure AD eşitlenir:
+  1. **Kişilerimden gelen e-postaya güven etkinse, kişilere posta** gönderin.
+  2. Kasa Gönderen listesi ve Kasa Alıcı listesi, ilk 1024 girdileri için her değişiklik yapıldığında alfabetik olarak birleştirilir, çoğaltılır ve sıralanır.
 
-  İlk 1024 girdi kullanılır ve ilgili bilgiler ileti üst bilgilerine damgalanır.
+  İlk 1024 girdileri kullanılır ve ilgili bilgiler ileti üst bilgilerinde damgalanır.
 
-  Azure AD ile eşitlenmemiş 1024'ü geçen girdiler Outlook (Web üzerinde Outlook) tarafından işlenir ve ileti üst bilgilerinde hiçbir bilgi damgalanmaz.
+  1024'ün üzerinde Azure AD eşitlenmemiş girişler Outlook (Web üzerinde Outlook değil) tarafından işlenir ve ileti üst bilgilerinde hiçbir bilgi damgalanmaz.
 
-Gördüğünüz gibi, Kişilerim'den e-postaya güven ayarının etkinleştirilmesi, eşitlenebilir gönderen Kasa gönderen Kasa kişi sayısını azaltır. Bu önemli bir sorunsa bu özelliği kapatmak için Grup İlkesi'nin kullanılması önerilir:
+Gördüğünüz gibi, **Kişilerimden gelen e-postaya güven** ayarının etkinleştirilmesi, eşitlenebilen Kasa Gönderenlerin ve Kasa Alıcılarının sayısını azaltır. Sorun buysa, bu özelliği kapatmak için grup ilkesi kullanmanızı öneririz:
 
 - Dosya adı: outlk16.opax
-- İlke ayarı: **Kişilerden gelen e-postaya güvenme**
+- İlke ayarı: **Kişilerden gelen e-postaya güven**

@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için Kiracılar sayfası hakkında bilgi edinin.
-ms.openlocfilehash: 7b8e26ddbe68059a9c5ecf4d5e396fd11c49be71
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: 0f25f8bb02c6957598b2b328bc7832c429ca1e7a
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65023293"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65128384"
 ---
 # <a name="overview-of-the-tenants-page-in-microsoft-365-lighthouse"></a>Microsoft 365 Lighthouse'da Kiracılar sayfasına genel bakış
 
@@ -52,9 +52,11 @@ Kiracı listesi şunları yapmanızı sağlar:
 
 Kiracıyı devre dışı bırakmak veya etiketleri görüntülemek ve yönetmek için kiracı adının yanındaki üç noktayı (diğer eylemler) seçin. Kiracı adını seçerek veya kiracıya atanan etiketlerden birini seçerek tek tek kiracıları görüntüleyebilirsiniz.
 
+Kiracı ekleme hakkında bilgi için bkz. [İş Ortağı Merkezi hesabınızda birden çok kiracı ekleme ve yönetme](/partner-center/multi-tenant-account).
+
 ## <a name="tenant-status"></a>Kiracı durumu
 
-Aşağıdaki tabloda farklı durumlar ve anlamları gösterilmektedir.<br><br>
+Aşağıdaki tabloda farklı durumlar ve anlamları gösterilmektedir. Müşteri kiracısı durumlarını giderme hakkında bilgi için bkz. [Microsoft 365 Lighthouse: Müşteri kiracı eklemesinde hata iletilerini ve sorunları giderme](m365-lighthouse-troubleshoot.md#customer-tenant-onboarding).<br><br>
 
 | Durum                                   | Açıklama                                                                                             |
 |------------------------------------------|---------------------------------------------------------------------------------------------------------|

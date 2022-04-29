@@ -19,12 +19,12 @@ ms.custom:
 search.appverid:
 - MET150
 description: Temel Mobilite ve Güvenlik, kuruluşunuzun mobil cihazlarının güvenliğini sağlamanıza ve yönetmenize yardımcı olabilir.
-ms.openlocfilehash: f2da9a20c496d5229d62e477fcf4cc0024436788
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: cb724a4f7d5b4118bb50b0aeaf1138a4a1aebfb6
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64935247"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65129144"
 ---
 # <a name="manage-devices-enrolled-in-mobile-device-management-in-microsoft-365"></a>Microsoft 365'da Mobil Cihaz Yönetimi kayıtlı cihazları yönetme
 
@@ -36,7 +36,7 @@ Bunu ayarladıktan sonra, kuruluşunuzdaki kişilerin cihazlarını hizmete kayd
 
 Cihaz yönetimi paneline ulaşmak için şu adımları izleyin:
 
-1. [Microsoft 365 yönetim merkezi](../../admin/admin-overview/about-the-admin-center.md) gidin.
+1. [Microsoft 365 yönetim merkezi](../../admin/admin-overview/admin-center-overview.md) gidin.
 
 2. Arama alanına Mobile Cihaz Yönetimi yazın ve sonuç listesinden **Mobil Cihaz Yönetimi'ı** seçin.
 

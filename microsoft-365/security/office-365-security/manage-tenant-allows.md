@@ -16,12 +16,12 @@ ms.collection:
 description: Yöneticiler, güvenlik portalındaki Kiracı İzin Ver/Engelle Listesi'nde izin vermeleri yapılandırmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: ad2ef693848b664be6ec9b48cc4fc320a8b4b9c2
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 413209bdecef19c4d101162f0e23f24ff1a2903e
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090154"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65129254"
 ---
 # <a name="add-allows-in-the-tenant-allowblock-list"></a>Kiracı İzin Verilenler/Engellenenler Listesine izinler ekleme
 
@@ -57,6 +57,13 @@ Microsoft 365 Defender **Gönderiler sayfasında gönderenlere** (veya etki alan
 
 > ![Analiz örneği için Microsoft'a kötü amaçlı yazılım gönderin.](../../media/admin-submission-allow-messages.png)
 
+
+> [!NOTE]
+>
+> - Hangi filtrelerin postayı kötü amaçlı olarak belirlediği temelinde, posta akışı sırasında izinler eklenir. Örneğin, filtreler hem gönderen hem de URL'nin hatalı olduğunu bulduysa, her birine bir izin eklenir. 
+> - Bu varlık (gönderen, etki alanı, URL, dosya) yeniden karşılaştığında, bu varlıkla ilişkili tüm filtreler atlanır.
+> - Bu nedenle, bir e-posta (bu varlığı içeren) için, posta akışı sırasında filtrelerin geri kalanı e-postanın temiz olduğunu bulursa e-posta teslim edilecek.
+
 ## <a name="add-url-allows-using-the-submissions-portal"></a>URL ekleme, Gönderimler portalının kullanılmasına izin verir
 
 Microsoft 365 Defender'daki **Gönderimler sayfasında URL'lere** izin verin.
@@ -78,6 +85,13 @@ Microsoft 365 Defender'daki **Gönderimler sayfasında URL'lere** izin verin.
 > [!div class="mx-imgBorder"]
 > ![Analiz için URL'yi gönderin.](../../media/submit-url-for-analysis.png)
 
+
+> [!NOTE]
+>
+> -  URL ile yeniden karşılaşıldığında, URL patlama veya saygınlık denetimleri için gönderilmez ve diğer tüm URL tabanlı filtreler atlanır.
+> -  Bu nedenle, e-posta (bu URL'yi içeren) için, posta akışı sırasında, filtrelerin geri kalanı e-postanın temiz olduğunu bulursa e-posta teslim edilecek.
+
+
 ## <a name="add-file-allows-using-the-submissions-portal"></a>Dosya Ekle, Gönderimler portalının kullanılmasına izin verir
 
 Microsoft 365 Defender **Gönderiler** sayfasında Dosyalara İzin Ver.
@@ -98,6 +112,12 @@ Microsoft 365 Defender **Gönderiler** sayfasında Dosyalara İzin Ver.
 
 > [!div class="mx-imgBorder"]
 > ![Analiz için e-posta gönderin.](../../media/submit-email-for-analysis.png)
+
+
+> [!NOTE]
+>
+> - Dosyayla yeniden karşılaşıldığında, patlama veya itibar denetimleri için gönderilmez ve diğer tüm dosya tabanlı filtreler atlanır.
+> - Bu nedenle, bir e-posta (bu dosyayı içeren) için, posta akışı sırasında, filtrelerin geri kalanı e-postanın temiz olduğunu bulursa, e-posta teslim edilecek. 
 
 ## <a name="create-spoofed-sender-allow-entries-using-microsoft-365-defender"></a>Microsoft 365 Defender kullanarak sahte gönderen izin girdileri oluşturma
 

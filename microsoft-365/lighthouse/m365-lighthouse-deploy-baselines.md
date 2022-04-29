@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için Microsoft 365 Lighthouse temellerini dağıtmayı öğrenin.
-ms.openlocfilehash: 2649094f36903e5607fee28862fa0af683d0986e
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: 550ded1383cb402da0943bdfeb6707cbd12b02d1
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65022877"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65131140"
 ---
 # <a name="deploy-microsoft-365-lighthouse-baselines"></a>Microsoft 365 Lighthouse temellerini dağıtma
 
@@ -33,7 +33,7 @@ Sizin ve müşteri kiracılarınızın [Microsoft 365 Lighthouse](m365-lighthous
 
 ## <a name="view-a-deployment-plan"></a>Dağıtım planını görüntüleme
 
-1. Sol gezinti sayfasında **Kiracılar'ı** seçin.
+1. Lighthouse'un sol gezinti bölmesinde **Kiracılar'ı** seçin.
 
 2. Kiracı listesinden, görüntülemek istediğiniz kiracıyı seçin.
 
@@ -147,7 +147,7 @@ Mevcut bir ilkeden kiracıda eşit ayarlar bulunduğunda örneklerde dağıtım 
 
 Farkındalığınız için ek ayarlar sağlanır ancak işlem yapmanız gerekmez.
 
-İlke çakışması yönetimi hakkında daha fazla bilgi için [bkz. Azure AD Koşullu Erişim belgeleri](/azure/active-directory/conditional-access/).
+İlke çakışması yönetimi hakkında daha fazla bilgi [için Koşullu Erişim belgelerine Azure AD bakın](/azure/active-directory/conditional-access/).
 
 ## <a name="update-deployment-step-status"></a>Dağıtım adımı durumunu güncelleştirme
 

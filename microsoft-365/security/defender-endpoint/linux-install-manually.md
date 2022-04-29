@@ -16,12 +16,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: a0f499a08288735d5f0d75e7111ec0b6360908a8
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: b467d87f16900375ca2db2f8478bf001780c9059
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64664534"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65130351"
 ---
 # <a name="deploy-microsoft-defender-for-endpoint-on-linux-manually"></a>Linux'ta Uç Nokta için Microsoft Defender el ile dağıtma
 
@@ -323,12 +323,12 @@ Ekleme paketini Microsoft 365 Defender portalından indirin.
 
     ```Output
     Archive:  WindowsDefenderATPOnboardingPackage.zip
-    inflating: MicrosoftDefenderATPOnboardingLinuxServer.py
+    inflating: MicrosoftDefenderATPOnboardingLinuxServer.sh
     ```
 
 ## <a name="client-configuration"></a>İstemci yapılandırması
 
-1. MicrosoftDefenderATPOnboardingLinuxServer.py hedef cihaza kopyalayın.
+1. MicrosoftDefenderATPOnboardingLinuxServer.sh hedef cihaza kopyalayın.
 
     > [!NOTE]
     > Başlangıçta istemci cihazı bir kuruluşla ilişkilendirilmemiştir ve *orgId* özniteliği boş olur.
@@ -337,21 +337,10 @@ Ekleme paketini Microsoft 365 Defender portalından indirin.
     mdatp health --field org_id
     ```
 
-2. MicrosoftDefenderATPOnboardingLinuxServer.py çalıştırın.
-
-    > [!NOTE]
-    > Bu komutu çalıştırmak için, disto ve sürüme bağlı olarak cihaza sahip `python`  olmanız veya `python3` yüklemeniz gerekir. Gerekirse bkz. [Linux'ta Python Yükleme için Adım Adım Yönergeler](https://opensource.com/article/20/4/install-python-linux).
-    
-    RHEL 8.x veya Ubuntu 20.04 veya üzerini çalıştırıyorsanız kullanmanız `python3`gerekir.
+2. MicrosoftDefenderATPOnboardingLinuxServer.sh çalıştırın.
 
     ```bash
-    sudo python3 MicrosoftDefenderATPOnboardingLinuxServer.py
-    ```
-
-    Diğer dağıtımlar ve sürümler için kullanmanız `python`gerekir.
-    
-    ```bash
-    sudo python MicrosoftDefenderATPOnboardingLinuxServer.py
+    sudo bash MicrosoftDefenderATPOnboardingLinuxServer.sh
     ```
     
 3. Cihazın artık kuruluşunuzla ilişkilendirildiğini ve geçerli bir kuruluş tanımlayıcısı bildirdiğini doğrulayın:

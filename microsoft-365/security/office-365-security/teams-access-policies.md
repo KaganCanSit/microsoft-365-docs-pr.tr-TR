@@ -1,6 +1,6 @@
 ---
-title: Önerilen Teams ilkeleri - Microsoft 365 ilkeleri için | Microsoft Docs
-description: Microsoft'un iletişim ve dosya erişiminin güvenliğini sağlama hakkında Teams ilkelerini açıklar.
+title: Önerilen Teams ilkeleri - Kurumsal | için Microsoft 365 Microsoft Docs
+description: Teams iletişiminin ve dosya erişiminin güvenliğini sağlama hakkında Microsoft önerilerine yönelik ilkeleri açıklar.
 author: MicrosoftHeidi
 manager: serdars
 ms.prod: m365-security
@@ -20,38 +20,38 @@ ms.collection:
 - m365solution-identitydevice
 - m365solution-scenario
 ms.technology: mdo
-ms.openlocfilehash: b659853d9323b4a1503cd75cff66a83cbd06e85e
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 25f70d3ccdf11daa6a52d16b66d612c04ab8876a
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63682911"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65131184"
 ---
-# <a name="policy-recommendations-for-securing-teams-chats-groups-and-files"></a>Sohbet, grup ve Teams güvenliğini sağlamak için ilke önerileri
+# <a name="policy-recommendations-for-securing-teams-chats-groups-and-files"></a>Teams sohbetlerinin, gruplarının ve dosyalarının güvenliğini sağlamaya yönelik ilke önerileri
 
-Bu makalede, sohbetler, gruplar ve dosyalar ve takvimler gibi içerikleri korumak Microsoft Teams önerilen Sıfır Güven kimliği ve cihaz erişimi ilkelerinin nasıl uygulanıyor? Bu kılavuz, ortak kimlik [ve cihaz erişim ilkelerine](identity-access-policies.md) ve özel ek bilgilerle birlikte Teams bilgi içerir. Bu Teams diğer ürünlerimizle tümleştiri olduğundan, bu sitelerin ve [](sharepoint-file-access-policies.md) dosyaların güvenliğini SharePoint için ilke önerileri ve e-postanın güvenliğini sağlamak için İlke [önerilerine de bakın](secure-email-recommended-policies.md).
+Bu makalede, Microsoft Teams sohbetlerini, gruplarını ve dosyalar ve takvimler gibi içerikleri korumak için önerilen Sıfır Güven kimlik ve cihaz erişim ilkelerinin nasıl uygulandığı açıklanmaktadır. Bu kılavuz, Teams'e özgü ek bilgilerle [birlikte ortak kimlik ve cihaz erişim ilkelerine](identity-access-policies.md) dayalıdır. Teams diğer ürünlerimizle tümleştirdiğinden bkz. [SharePoint sitelerini ve dosyalarını güvenli hale getirmek için ilke önerileri ve](sharepoint-file-access-policies.md) [e-postanın güvenliğini sağlamaya yönelik ilke önerileri](secure-email-recommended-policies.md).
 
-Bu öneriler, şu üç farklı güvenlik ve koruma katmanına dayalıdır Teams, şu şekilde ihtiyaçlarına göre uygulanabilir: başlangıç noktası, kurumsal ve özel güvenlik. Kimlik ve cihaz erişimi yapılandırmalarında, bu güvenlik katmanları ve bu öneriler tarafından başvurulan önerilen ilkeler hakkında [daha fazla bilgi edinebilirsiniz](microsoft-365-policies-configurations.md).
+Bu öneriler, Teams için gereksinimlerinizin ayrıntı düzeyine göre uygulanabilen üç farklı güvenlik ve koruma katmanını temel alır: başlangıç noktası, kuruluş ve özel güvenlik. [Kimlik ve cihaz erişim yapılandırmalarında](microsoft-365-policies-configurations.md) bu güvenlik katmanları ve bu öneriler tarafından başvurulan önerilen ilkeler hakkında daha fazla bilgi edinebilirsiniz.
 
-Bu makalede, dağıtıma Teams öneriler, kuruluş dışındaki kullanıcılar dahil olmak üzere belirli kimlik doğrulama durumlarını kapsayacak şekilde yer almaktadır. Eksiksiz bir güvenlik deneyimi için bu yönergeleri takip edin.
+Kuruluşunuz dışındaki kullanıcılar da dahil olmak üzere belirli kimlik doğrulama koşullarını ele almak için bu makalede Teams dağıtımına özgü daha fazla öneri yer alır. Eksiksiz bir güvenlik deneyimi için bu kılavuzu izlemeniz gerekir.
 
-## <a name="getting-started-with-teams-before-other-dependent-services"></a>Diğer bağımlı Teams önce Diğer hizmetlerle çalışmaya başlama
+## <a name="getting-started-with-teams-before-other-dependent-services"></a>Diğer bağımlı hizmetlerden önce Teams'i kullanmaya başlama
 
-Hızlı bir şekilde çalışmaya baş etmek için bağımlı hizmetleri etkinleştirmeniz Microsoft Teams. Bu hizmetlerin hepsi "yalnızca iş" olarak çalışır. Bununla birlikte, hizmetle ilgili aşağıdaki öğeleri yönetmeye hazır olmak gerekir:
+Microsoft Teams'i kullanmaya başlamak için bağımlı hizmetleri etkinleştirmeniz gerekmez. Bu hizmetlerin tümü "yalnızca çalışır". Ancak, hizmetle ilgili aşağıdaki öğeleri yönetmeye hazırlıklı olmanız gerekir:
 
 - Microsoft 365 grupları
-- SharePoint sitelerini ziyaret edin
+- SharePoint ekip siteleri
 - OneDrive İş
-- Exchange kutularını geri alın
-- Videoları ve Planner planlarını akışla izleyin (bu hizmetler etkinleştirilmişse)
+- Exchange posta kutuları
+- Video akışı ve Planner planları (bu hizmetler etkinse)
 
-## <a name="updating-common-policies-to-include-teams"></a>Ortak ilkeleri, yenilerini de içerecek şekilde Teams
+## <a name="updating-common-policies-to-include-teams"></a>Sık kullanılan ilkeleri Teams'i içerecek şekilde güncelleştirme
 
-Bir çalışma diyagramında sohbeti, grupları ve Teams korumak için, aşağıdaki diyagramda ortak kimlik ve cihaz erişim ilkelerinden güncelleştirilen ilkeler gösteriliyor. Her ilkenin güncelleştirileceği ilke için, Teams ve bağımlı hizmetlerin bulut uygulamaları atamaya dahil olduğundan emin olun.
+Teams'de sohbeti, grupları ve içeriği korumak için, aşağıdaki diyagramda ortak kimlik ve cihaz erişim ilkelerinden hangi ilkelerin güncelleştirildiği gösterilmektedir. Her ilkenin güncelleştirilmesini sağlamak için Teams'in ve bağımlı hizmetlerin bulut uygulamalarının atamasına dahil olduğundan emin olun.
 
-:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-access-ruleset-teams.png" alt-text="E-posta ve bağımlı hizmetlere erişimi Teams ilke güncelleştirmelerinin özeti." lightbox="../../media/microsoft-365-policies-configurations/identity-access-ruleset-teams.png":::
+:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-access-ruleset-teams.png" alt-text="Teams'e ve bağlı hizmetlerine erişimin korunmasına yönelik ilke güncelleştirmelerinin özeti" lightbox="../../media/microsoft-365-policies-configurations/identity-access-ruleset-teams.png":::
 
-Bu hizmetler, aşağıdakiler için bulut uygulamalarının atamaya dahil gerçekleştirilen bağımlı Teams:
+Bu hizmetler, Teams için bulut uygulamalarının atamasına dahil etmek üzere bağımlı hizmetlerdir:
 
 - Microsoft Teams
 - SharePoint ve OneDrive İş
@@ -60,89 +60,89 @@ Bu hizmetler, aşağıdakiler için bulut uygulamalarının atamaya dahil gerçe
 - Microsoft Stream (toplantı kayıtları)
 - Microsoft Planner (Planner görevleri ve plan verileri)
 
-Bu tabloda, yeni geçirilmesi gereken ilkeler ve ortak kimlik ve cihaz erişimi ilkelerinde yer alan ve [](identity-access-policies.md)tüm Office uygulamaları için daha geniş bir ilke ayarlanmış olan ilkeler listelemektedir.
+Bu tabloda, yeniden ziyaret edilmesi gereken ilkeler listelenir ve tüm Office uygulamaları için daha geniş bir ilke kümesine sahip olan [ortak kimlik ve cihaz erişim ilkelerindeki](identity-access-policies.md) her ilkeye bağlantı sağlanır.
 
-|Koruma düzeyi|İlkeler|Uygulama hakkında daha Teams bilgi|
+|Koruma düzeyi|İlkeler|Teams uygulaması için daha fazla bilgi|
 |---|---|---|
-|**Başlangıç noktası**|[Oturum açma riski orta veya yüksek olduğunda MFA  *gerektirme*](identity-access-policies.md#require-mfa-based-on-sign-in-risk)|Her Teams ve bağımlı hizmetlerin uygulama listesine ek olduğundan emin olun. Teams göz önünde bulundurabilirsiniz. Konuk Erişimi ve Dış Erişim kurallarına da sahipse, bu makalenin devamlarında bu kurallar hakkında daha fazla bilgi bulabilirsiniz.|
-||[Modern kimlik doğrulamasını desteklemez istemcileri engelleme](identity-access-policies.md#block-clients-that-dont-support-multi-factor)|Bulut Teams diğer hizmetleri ve bağımlı hizmetleri de atamaya dahil edin.|
-||[Yüksek riskli kullanıcıların parolayı değiştirmesi gerekir](identity-access-policies.md#high-risk-users-must-change-password)|Yüksek Teams etkinlik algılandığında, oturum alıkan kullanıcıların parolalarını değiştirmelerini zorunda zorundalar. Her Teams ve bağımlı hizmetlerin uygulama listesine ek olduğundan emin olun.|
-||[UYGULAMA veri koruma ilkelerini uygulama](identity-access-policies.md#apply-app-data-protection-policies)|Her Teams ve bağımlı hizmetlerin uygulama listesine ek olduğundan emin olun. Her platform için ilkeyi güncelleştirin (iOS, Android, Windows).|
-|**Enterprise**|[Oturum açma riski düşük, orta veya *yüksek olduğunda* MFA  *gerektirme*](identity-access-policies.md#require-mfa-based-on-sign-in-risk)|Teams göz önünde bulundurabilirsiniz. Konuk Erişimi ve Dış Erişim kurallarına da sahipse, bu makalenin devamlarında bu kurallar hakkında daha fazla bilgi bulabilirsiniz. Bu Teams hizmetleri ve bağımlı hizmetleri dahil etmek.|
-||[Cihaz uyumluluk ilkelerini tanımlama](identity-access-policies.md#define-device-compliance-policies)|Bu Teams hizmetleri ve bağımlı hizmetleri dahil etmek.|
-||[Uyumlu bilgisayar ve *mobil cihaz* gerektirme](identity-access-policies.md#require-compliant-pcs-and-mobile-devices)|Bu Teams hizmetleri ve bağımlı hizmetleri dahil etmek.|
-|**Özel güvenlik**|[*Her* zaman MFA gerektir](identity-access-policies.md#require-mfa-based-on-sign-in-risk)|Kullanıcı kimliğine bakılmaksızın, MFA organizasyonu tarafından kullanılır. Bu Teams hizmetleri ve bağımlı hizmetleri dahil etmek. |
+|**Başlangıç noktası**|[Oturum açma riski *orta* veya *yüksek* olduğunda MFA gerektirme](identity-access-policies.md#require-mfa-based-on-sign-in-risk)|Teams ve bağımlı hizmetlerin uygulama listesine eklendiğinden emin olun. Teams'in de dikkate alınması gereken Konuk Erişimi ve Dış Erişim kuralları vardır. Bu kuralları daha sonra bu makalenin devamında öğreneceksiniz.|
+||[Modern kimlik doğrulamayı desteklemeyen istemcileri engelleme](identity-access-policies.md#block-clients-that-dont-support-multi-factor)|Bulut uygulamalarının atanma aşamasına Teams'i ve bağımlı hizmetleri dahil edin.|
+||[Yüksek riskli kullanıcıların parola değiştirmesi gerekir](identity-access-policies.md#high-risk-users-must-change-password)|Teams kullanıcılarını, hesapları için yüksek riskli etkinlik algılanırsa oturum açarken parolalarını değiştirmeye zorlar. Teams ve bağımlı hizmetlerin uygulama listesine eklendiğinden emin olun.|
+||[APP veri koruma ilkelerini uygulama](identity-access-policies.md#apply-app-data-protection-policies)|Teams ve bağımlı hizmetlerin uygulama listesine eklendiğinden emin olun. Her platform (iOS, Android, Windows) için ilkeyi güncelleştirin.|
+|**Enterprise**|[Oturum açma riski *düşük*, *orta* veya *yüksek* olduğunda MFA gerektirme](identity-access-policies.md#require-mfa-based-on-sign-in-risk)|Teams'in de dikkate alınması gereken Konuk Erişimi ve Dış Erişim kuralları vardır. Bu kuralları daha sonra bu makalenin devamında öğreneceksiniz. Teams'i ve bağımlı hizmetleri bu ilkeye dahil edin.|
+||[Cihaz uyumluluk ilkelerini tanımlama](identity-access-policies.md#define-device-compliance-policies)|Teams'i ve bağımlı hizmetleri bu ilkeye dahil edin.|
+||[Uyumlu bilgisayarlar *ve* mobil cihazlar gerektirme](identity-access-policies.md#require-compliant-pcs-and-mobile-devices)|Teams'i ve bağımlı hizmetleri bu ilkeye dahil edin.|
+|**Özel güvenlik**|[*Her zaman* MFA iste](identity-access-policies.md#require-mfa-based-on-sign-in-risk)|Kullanıcı kimliği ne olursa olsun, MFA kuruluşunuz tarafından kullanılır. Teams'i ve bağımlı hizmetleri bu ilkeye dahil edin. |
 
-## <a name="teams-dependent-services-architecture"></a>Teams bağlı hizmet mimarisi
+## <a name="teams-dependent-services-architecture"></a>Teams'e bağımlı hizmetler mimarisi
 
-Başvuru için, aşağıdaki diyagramda güven güven Teams gösterilen hizmetler yer almaktadır. Daha fazla bilgi ve çizim için bkz[. MICROSOFT TEAMS mimarlar için Microsoft 365 hizmetleriyle ilgili üretkenlik hizmetleri](../../solutions/productivity-illustrations.md).
+Başvuru için aşağıdaki diyagramda Teams'in bağlı olduğu hizmetler gösterilmektedir. Daha fazla bilgi ve çizim için bkz. [BT mimarları için Microsoft 365'te Microsoft Teams ve ilgili üretkenlik hizmetleri](../../solutions/productivity-illustrations.md).
 
-:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-access-logical-architecture-teams.png" alt-text="Diyagram ve Teams, SharePoint OneDrive İş bağımlılıkları gösteren Exchange." lightbox="../../media/microsoft-365-policies-configurations/identity-access-logical-architecture-teams.png":::
+:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-access-logical-architecture-teams.png" alt-text="SharePoint, OneDrive İş ve Exchange'de Teams bağımlılıklarını gösteren diyagram" lightbox="../../media/microsoft-365-policies-configurations/identity-access-logical-architecture-teams.png":::
 
-## <a name="guest-and-external-access-for-teams"></a>Konuk ve dış erişim Teams
+## <a name="guest-and-external-access-for-teams"></a>Teams için konuk ve dış erişim
 
-Microsoft Teams, aşağıdaki erişim türlerini tanımlar:
+Microsoft Teams aşağıdaki erişim türlerini tanımlar:
 
-- **Konuk erişimi** , bir ekibin üyesi olarak eklenilen ve ekibin iletişim ve kaynaklarına tüm izinlere sahip olan konuk veya dış kullanıcı için Azure AD B2B hesabı kullanır.
+- **Konuk erişimi** , bir ekibin üyesi olarak eklenebilen ve ekibin iletişimine ve kaynaklarına tüm izinlere sahip olan bir konuk veya dış kullanıcı için Azure AD B2B hesabı kullanır.
 
-- **Dış erişim** , Azure AD B2B hesabı olan bir dış kullanıcıya yöneliktir. Dış erişim davetleri ve aramalara, sohbetlere ve toplantılara katılımı içerebilir, ancak ekip üyeliğini ve ekibin kaynaklarına erişimi içermez.
+- **Dış erişim** , Azure AD B2B hesabı olmayan bir dış kullanıcıya yöneliktir. Dış erişim davetleri ve aramalara, sohbetlere ve toplantılara katılmayı içerebilir, ancak ekip üyeliğini ve ekibin kaynaklarına erişimi içermez.
 
-Koşullu Erişim ilkeleri yalnızca Teams Azure AD B2B hesabı olduğundan konuk erişimi için geçerlidir.
+Koşullu Erişim ilkeleri yalnızca Teams'deki konuk erişimi için geçerlidir çünkü buna karşılık gelen bir Azure AD B2B hesabı vardır.
 
 <!--
 In Azure AD, guest and external users are the same. The user type for both of these is Guest. Guest users are B2B users. Microsoft Teams differentiates between guest users and external users in the app. While it's important to understand how each of these are treated in Teams, both types of users are B2B users in Azure AD and the recommended policies for B2B users apply to both.
 
 -->
 
-Azure AD B2B hesabı olan konuk ve dış kullanıcılara erişim izni vermeyle ilgili önerilen ilkeler için bkz. Konuk ve dış [B2B](identity-access-policies-guest-access.md) hesabı erişimine izin verme ilkeleri.
+Azure AD B2B hesabı olan konuk ve dış kullanıcılara erişim izni vermek [için önerilen ilkeler için bkz. Konuk ve dış B2B hesabı erişimine izin verme ilkeleri](identity-access-policies-guest-access.md).
 
-### <a name="guest-access-in-teams"></a>Web'de konuk Teams
+### <a name="guest-access-in-teams"></a>Teams'de konuk erişimi
 
-yöneticiler, işletmeniz veya kuruluş içinde yer alan kullanıcılara yönelik ilkelere ek olarak, kullanıcı temelinde, işletmeniz veya kuruluş dışından kişilerin Teams kaynaklarına erişmesine ve grup konuşmaları, sohbet ve toplantılar gibi içerikler için şirket içi kişilerle etkileşim kurmasına izin vermesine olanak siliyor olabilir.
+İşletmenizin veya kuruluşunuzun içindeki kullanıcılara yönelik ilkelere ek olarak, yöneticiler, işletmenizin veya kuruluşunuzun dışındaki kişilerin Teams kaynaklarına erişmesine ve grup konuşmaları, sohbet ve toplantılar gibi konularda şirket içi kişilerle etkileşim kurmasına izin vermek için konuk erişimini etkinleştirebilir.
 
-Konuk erişimi ve bunu nasıl uygulayıla ilgili daha fazla bilgi için bkz[. Teams erişme.](/microsoftteams/guest-access)
+Konuk erişimi ve bunu uygulama hakkında daha fazla bilgi için bkz.  [Teams konuk erişimi](/microsoftteams/guest-access).
 
-### <a name="external-access-in-teams"></a>Dış erişim Teams
+### <a name="external-access-in-teams"></a>Teams'de dış erişim
 
-Dış erişim bazen konuk erişimiyle karıştırılır, bu nedenle bu iki iç erişim mekanizmasının farklı erişim türleri olduğu açıkça ifade etmek önemlidir.
+Dış erişim bazen konuk erişimiyle karıştırılır, bu nedenle bu iki iç olmayan erişim mekanizmasının farklı erişim türleri olduğunu net bir şekilde belirtmek önemlidir.
 
-Dış erişim, tüm dış Teams kullanan kullanıcıların aynı etki alanında kullanıcılarınıza özel olarak toplantı bulma, arama, sohbet ve toplantı ayarlama Teams. Teams dış erişimi kuruluş düzeyinde yapılandıran yöneticiler vardır. Daha fazla bilgi için bkz[. Dış erişimi Microsoft Teams](/microsoftteams/manage-external-access).
+Dış erişim, bir dış etki alanının tamamından Teams kullanıcılarının Teams'de kullanıcılarınızla toplantılar bulmasını, aramasını, sohbet etmesini ve ayarlamasını sağlamanın bir yoludur. Teams yöneticileri kuruluş düzeyinde dış erişimi yapılandırabilir. Daha fazla bilgi için bkz. [Microsoft Teams'de dış erişimi yönetme](/microsoftteams/manage-external-access).
 
-Dış erişim kullanıcıları, konuk erişimi yoluyla eklenen kişilerden daha az erişime ve işleve sahip olur. Örneğin, dış erişim kullanıcıları şirket içi kullanıcılarınız ile sohbet edip diğer Teams kanallarına, dosyalara ve diğer kaynaklara erişamaz.
+Dış erişim kullanıcıları, konuk erişimi aracılığıyla eklenen bir kişiye göre daha az erişime ve işlevselliğe sahiptir. Örneğin, dış erişim kullanıcıları Teams ile iç kullanıcılarınızla sohbet edebilir ancak ekip kanallarına, dosyalarına veya diğer kaynaklara erişemez.
 
-Dış erişim, Azure AD B2B kullanıcı hesaplarını kullanmaz ve dolayısıyla Koşullu Erişim ilkelerini kullanmaz.
+Dış erişim, Azure AD B2B kullanıcı hesaplarını kullanmaz ve bu nedenle Koşullu Erişim ilkelerini kullanmaz.
 
 ## <a name="teams-policies"></a>Teams ilkeleri
 
-Yukarıda listelenen ortak ilkelerin dışında, çeşitli Teams yönetmek üzere yapılandırılan ve özel ilkeler Teams vardır.
+Yukarıda listelenen yaygın ilkelerin dışında, çeşitli Teams işlevlerini yönetmek için yapılandırılabilir ve yapılandırılması gereken Teams'e özgü ilkeler vardır.
 
-### <a name="teams-and-channels-policies"></a>Teams ve kanal ilkeleri
+### <a name="teams-and-channels-policies"></a>Ekipler ve kanal ilkeleri
 
-Teams kanalları, Microsoft Teams'de yaygın olarak kullanılan iki öğedir ve ekipleri ve kanalları kullanırken kullanıcıların neler yapasa da neler yapa bir şeyi yapamalarını denetlemeye yönelik ilkeler koyabilirsiniz. Bir genel ekip oluştursanız da, kuruluşta 5000 veya daha az kullanıcı varsa, kurumsal gereklerle belirli amaçlarla daha küçük ekipler ve kanallara sahip olmak size yardımcı olabilir.
+Teams ve kanallar, Microsoft Teams'de yaygın olarak kullanılan iki öğedir ve ekipleri ve kanalları kullanırken kullanıcıların neler yapabileceğini ve yapamayacağını denetlemek için kullanabileceğiniz ilkeler vardır. Küresel bir ekip oluşturabilirsiniz ancak kuruluşunuzda 5000 veya daha az kullanıcı varsa, kuruluşunuzun ihtiyaçlarına uygun olarak belirli amaçlarla daha küçük ekiplere ve kanallara sahip olmak yararlı olabilir.
 
-Varsayılan ilkenin değiştirilmesi veya özel ilke oluşturulması önerilir. İlkelerinizi yönetme hakkında daha fazla bilgi edinmek için şu bağlantıdan edinebilirsiniz[: Microsoft Teams](/microsoftteams/teams-policies).
+Varsayılan ilkenin değiştirilmesi veya özel ilkeler oluşturulması önerilir ve ilkelerinizi yönetme hakkında daha fazla bilgiyi şu bağlantıdan öğrenebilirsiniz: [Microsoft Teams'de ekip ilkelerini yönetme](/microsoftteams/teams-policies).
 
 ### <a name="messaging-policies"></a>Mesajlaşma ilkeleri
 
-Mesajlaşma veya sohbet, varsayılan genel ilkeler veya özel ilkeler aracılığıyla da yönetilebilir ve bu da kullanıcılarının, birbirleriyle kuruma uygun şekilde iletişim kurmalarına yardımcı olabilir. Bu bilgiler, [Teams'de mesajlaşma ilkelerini yönetme altında Teams](/microsoftteams/messaging-policies-in-teams).
+Mesajlaşma veya sohbet, varsayılan genel ilke veya özel ilkeler aracılığıyla da yönetilebilir ve bu, kullanıcılarınızın kuruluşunuza uygun bir şekilde birbirleriyle iletişim kurmasını sağlayabilir. Bu bilgiler [Teams'de mesajlaşma ilkelerini yönetme](/microsoftteams/messaging-policies-in-teams) bölümünde gözden geçirilebilir.
 
 ### <a name="meeting-policies"></a>Toplantı ilkeleri
 
-Her toplantı Teams ilkeler planlamadan ve uygulanmadan hiçbir tartışma Teams tamamlanır. Toplantılar, kişilerin aynı anda birçok Teams resmi olarak to arayanı, sunarak, toplantıyla ilgili içeriği paylaşmasına olanak sağlayan temel bir bileşendir. Toplantıların çevresinde kurum için doğru ilkelerin ayarının olması çok önemlidir.
+Teams toplantıları çevresinde ilkeler planlamadan ve uygulamadan Teams hakkında hiçbir tartışma tamamlanamaz. Toplantılar, Teams'in temel bileşenlerinden biridir. Bu sayede kişiler aynı anda birçok kullanıcıyla resmi olarak tanışıp sunular ve toplantıyla ilgili içerikleri paylaşabilir. Toplantılar etrafında kuruluşunuz için doğru ilkelerin ayarlanması çok önemlidir.
 
-Daha fazla bilgi için, toplantı [ilkelerini tek bir Teams](/microsoftteams/meeting-policies-in-teams).
+Daha fazla bilgi için [Teams'de toplantı ilkelerini yönetme makalesini](/microsoftteams/meeting-policies-in-teams) gözden geçirin.
 
 ### <a name="app-permission-policies"></a>Uygulama izin ilkeleri
 
-Teams, uygulamaları kanal veya kişisel sohbet gibi çeşitli yerlerde kullanmanızı da sağlar. Hangi uygulamaların ek gerek kullanılay, hem de güvenli, içerik açısından zengin bir ortamı korumak için ilkelere sahip olmak temel öneme sahiptir.
+Teams ayrıca uygulamaları kanallar veya kişisel sohbetler gibi çeşitli yerlerde kullanmanıza olanak tanır. Hangi uygulamaların eklenip kullanılabileceğini ve nerede kullanılabileceğini belirten ilkelere sahip olmak, aynı zamanda güvenli içerik açısından zengin bir ortamın korunması için çok önemlidir.
 
-Uygulama İzin İlkeleri hakkında daha fazla bilgi için, [Microsoft Teams.](/microsoftteams/teams-app-permission-policies)
+Uygulama İzin İlkeleri hakkında daha fazla bilgi için [Bkz. Microsoft Teams'de uygulama izin ilkelerini yönetme](/microsoftteams/teams-app-permission-policies).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-![4. Adım: Bulut Microsoft 365 için ilkeler.](../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png)
+:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png" alt-text="4. Adım: Microsoft 365 bulut uygulamaları için ilkeler" lightbox="../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png":::
 
-Koşullu Erişim ilkelerini aşağıdakiler için yapılandırma:
+Koşullu Erişim ilkelerini yapılandırma:
 
 - [Exchange Online](secure-email-recommended-policies.md)
 - [SharePoint](sharepoint-file-access-policies.md)

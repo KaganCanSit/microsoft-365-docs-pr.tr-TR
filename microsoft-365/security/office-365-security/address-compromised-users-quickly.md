@@ -13,15 +13,15 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: ''
 ms.date: 06/10/2021
-description: Office 365 Plan 2 için Microsoft Defender'da otomatik araştırma ve yanıt özellikleriyle güvenliği aşılmış kullanıcı hesaplarını algılama ve ele alma sürecini nasıl hızlandıracağınızı öğrenin.
+description: Office 365 için Microsoft Defender Plan 2'de otomatik araştırma ve yanıt özellikleriyle güvenliği aşılmış kullanıcı hesaplarını algılama ve ele alma sürecini nasıl hızlandıracağınızı öğrenin.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 3fdbb88d38b94ac48b2bbd2a447c76ee7d79d24a
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: a8c78847e36d4a4887c4f7a3c54904cc26a012e5
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64974179"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65131162"
 ---
 # <a name="address-compromised-user-accounts-with-automated-investigation-and-response"></a>Güvenliği aşılmış kullanıcı hesaplarını otomatik araştırma ve yanıtla ele alın
 
@@ -30,7 +30,7 @@ ms.locfileid: "64974179"
 - [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-[Office 365 Için Microsoft Defender Plan 2](defender-for-office-365.md#microsoft-defender-for-office-365-plan-1-and-plan-2) güçlü [otomatik araştırma ve yanıt](office-365-air.md) (AIR) özellikleri içerir. Bu tür özellikler, güvenlik operasyonları ekibinize tehditlerle ilgili çok fazla zaman ve çaba tasarrufu sağlayabilir. Microsoft, güvenlik özelliklerini geliştirmeye devam ediyor. Kısa süre önce, AIR özellikleri güvenliği aşılmış bir kullanıcı güvenliği playbook'u (şu anda önizleme aşamasında) içerecek şekilde geliştirildi. Güvenliği aşılmış kullanıcı güvenliği playbook'u hakkında daha fazla bilgi edinmek için bu makaleyi okuyun. Ayrıca ek ayrıntılar için Office 365 [için Microsoft Defender ile kullanıcı güvenliğinin aşılması ve sınır ihlali kapsamını algılamak ve yanıtlamak için süreyi hızlandırma](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Speed-up-time-to-detect-and-respond-to-user-compromise-and-limit/ba-p/977053) blog gönderisine bakın.
+[Office 365 için Microsoft Defender Plan 2](defender-for-office-365.md#microsoft-defender-for-office-365-plan-1-and-plan-2) güçlü [otomatik araştırma ve yanıt](office-365-air.md) (AIR) özellikleri içerir. Bu tür özellikler, güvenlik operasyonları ekibinize tehditlerle ilgili çok fazla zaman ve çaba tasarrufu sağlayabilir. Microsoft, güvenlik özelliklerini geliştirmeye devam ediyor. Kısa süre önce, AIR özellikleri güvenliği aşılmış bir kullanıcı güvenliği playbook'u (şu anda önizleme aşamasında) içerecek şekilde geliştirildi. Güvenliği aşılmış kullanıcı güvenliği playbook'u hakkında daha fazla bilgi edinmek için bu makaleyi okuyun. Ayrıca ek ayrıntılar [için kullanıcı güvenliğinin aşılması ve ihlal kapsamını Office 365 için Microsoft Defender sınırlamak için süreyi algılama ve yanıtlama süresini hızlandırma](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Speed-up-time-to-detect-and-respond-to-user-compromise-and-limit/ba-p/977053) blog gönderisine bakın.
 
 ![Güvenliği aşılmış bir kullanıcı için otomatik araştırma.](/microsoft-365/media/office365atp-compduserinvestigation.jpg)
 

@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: v-tophillips
 author: v-tophillips
 manager: laurawi
-ms.date: ''
+ms.date: 04/27/2022
 audience: Admin
 ms.topic: how-to
 ms.service: O365-seccomp
@@ -21,12 +21,12 @@ description: eKeşif (Premium) olayınızla ilgili içeriği korumak için koruy
 ms.custom:
 - seo-marvel-mar2020
 - admindeeplinkMAC
-ms.openlocfilehash: c2213c34e111989f0de6fccf886f44dd0f45841b
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: bc69481c8d59408ce22c238fc80d8ceb67685cf9
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098504"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65128400"
 ---
 # <a name="manage-holds-in-ediscovery-premium"></a>eBulma'da ayrı tutmaları yönetme (Premium)
 
@@ -46,7 +46,7 @@ Koruyucu tutma ilkesini görüntülemek için:
 
 3. **Ayrı Tutmalar** sekmesine gidin ve **CustodianHold'a\<HoldId>** tıklayın.
 
-4. Açılır sayfada ilkenin tutma istatistiklerini görebilirsiniz. Ayrıca, koruyucu tabanlı saklamanıza sorgu uygulama gibi eylemler de gerçekleştirebilirsiniz. Ayrı tutma sorgusu oluşturma ve koşulları kullanma hakkında daha fazla bilgi için bkz [. İçerik Arama için anahtar sözcük sorguları ve arama koşulları](keyword-queries-and-search-conditions.md).
+4. Açılır sayfada, koruyucu tabanlı saklamanıza sorgu uygulama gibi eylemler gerçekleştirebilirsiniz. Ayrı tutma sorgusu oluşturma ve koşulları kullanma hakkında daha fazla bilgi için bkz [. İçerik Arama için anahtar sözcük sorguları ve arama koşulları](keyword-queries-and-search-conditions.md).
 
 ## <a name="manage-non-custodial-holds"></a>Gözetim altında olmayan ayrı tutmaları yönetme
 
@@ -105,24 +105,6 @@ eBulma (Premium) olayı için gözetimsiz bir saklama oluşturmak için:
 
 > [!NOTE]
 > Kullanıcının posta kutusunu beklemeye aldıktan sonra kullanıcının SMTP adresi değişirse, posta kutusu beklemede kalır. Yeni SMTP adresini ayrı tutmak üzere kullanmak için yeni bir ayrı tutma oluşturun.
-
-## <a name="view-hold-statistics"></a>Ayrı tutma istatistiklerini görüntüleme
-
-Bir süre sonra, yeni ayrı tutmayla ilgili bilgiler, seçili ayrı tutmanın **Ayrı Tutmalar** sekmesindeki ayrıntılar bölmesinde görüntülenir. Bu bilgiler, ayrı tutmadaki posta kutularının ve sitelerin sayısını ve ayrı tutmaya alınan içeriğin toplam sayısı ve boyutu ve ayrı tutma istatistiklerinin son hesaplanma zamanı gibi istatistikleri içerir. Bu saklama istatistikleri, eBulma olayıyla ilgili ne kadar içeriğin tutulduğunu belirlemenize yardımcı olur.
-
-Bekletme istatistikleri hakkında aşağıdaki şeyleri aklınızda bulundurun:
-
-- Ayrı tutmadaki öğelerin toplam sayısı, beklemeye alınan tüm içerik kaynaklarından gelen öğelerin sayısını gösterir. Sorgu tabanlı bir ayrı tutma oluşturduysanız, bu istatistik sorguyla eşleşen öğelerin sayısını gösterir.
-  
-- Ayrı tutmadaki öğelerin sayısı, içerik konumlarında bulunan dizine alınmamış öğeleri de içerir. Sorgu tabanlı ayrı tutma oluşturursanız, içerik konumlarındaki tüm dizinlenmemiş öğeler beklemeye alınır. Bu, sorgu tabanlı ayrı tutmanın arama ölçütlerine uymayan dizinlenmemiş öğeleri ve tarih aralığı koşulunun dışında kalan dizine alınmamış öğeleri içerir. Bu, arama sorgusuyla eşleşmeyen veya bir tarih aralığı koşulu tarafından dışlanan dizine alınmamış öğelerin arama sonuçlarına dahil edilmediği bir İçerik Araması çalıştırdığınızda gerçekleşenlerden farklıdır. Dizine alınmamış öğeler hakkında daha fazla bilgi için bkz. [Office 365'da İçerik Arama'da kısmen dizine alınmış öğeler](partially-indexed-items-in-content-search.md).
-
-- Beklemedeki geçerli öğe sayısını hesaplayan bir arama tahminini yeniden çalıştırmak için İstatistikleri güncelleştir'e tıklayarak en son saklama istatistiklerini alabilirsiniz.
-
-- Gerekirse, ayrıntılar bölmesinde ayrı tutma istatistiklerini güncelleştirmek için araç çubuğunda Yenile'ye tıklayın.
-
-- Posta kutusu veya sitesi beklemede olan kullanıcılar genellikle yeni e-posta iletisi gönderip aldığından ve yeni SharePoint ve OneDrive İş belgeleri oluşturduğundan, beklemedeki öğelerin sayısının zaman içinde artması normaldir.
-
-- bir SharePoint sitesi veya OneDrive hesabı çok coğrafi bir ortamda farklı bir bölgeye taşınırsa, söz konusu sitenin istatistikleri ayrı tutma istatistiklerine dahil edilmeyecektir. Ancak, sitedeki içerik hala beklemede olacaktır. Ayrıca, bir site farklı bir bölgeye taşınırsa, ayrı tutmada görüntülenen URL güncelleştirilmez. Bekletmeyi düzenlemeniz ve URL'yi güncelleştirmeniz gerekir.
 
 ## <a name="place-a-hold-on-microsoft-teams-and-office-365-groups"></a>Microsoft Teams ve Office 365 Gruplarına ayrı tutma
 

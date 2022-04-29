@@ -19,12 +19,12 @@ hideEdit: true
 feedback_system: None
 recommendations: false
 description: DLP ilkelerinizde kullanmaya hazır birçok hassas bilgi türü vardır. Bu makalede bu hassas bilgi türlerinin tümü listelenmiştir ve bir DLP ilkesinin her türü algıladığında ne arayacağını gösterir.
-ms.openlocfilehash: 6074082812853469e0513d67ec68519eb2a89563
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: af2cbd03de426aa34b9db82691a22684c4c1df0b
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64970669"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65130812"
 ---
 # <a name="sensitive-information-type-entity-definitions"></a>Hassas bilgi türü varlık tanımları
 
@@ -9588,9 +9588,9 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ### <a name="keywords"></a>Anahtar kelime -ler
 
-Uluslararası [Hastalık Sınıflandırması, Onuncu Düzeltme, Klinik Modifikasyon (ICD-10-CM)](https://go.microsoft.com/fwlink/?linkid=852604) temelinde Dictionary_icd_10_updated anahtar sözcük sözlüğünden herhangi bir terim. Bu tür yalnızca terimi arar, sigorta kodlarını aramaz.
+Uluslararası [Hastalık Sınıflandırması, Onuncu Düzeltme, Klinik Modifikasyon (ICD-10-CM)](https://icd10cmtool.cdc.gov/) temelinde Dictionary_icd_10_updated anahtar sözcük sözlüğünden herhangi bir terim. Bu tür yalnızca terimi arar, sigorta kodlarını aramaz.
 
-Uluslararası [Hastalık Sınıflandırması, Onuncu Düzeltme, Klinik Modifikasyon (ICD-10-CM)](https://go.microsoft.com/fwlink/?linkid=852604) temelinde Dictionary_icd_10_codes anahtar sözcük sözlüğünden herhangi bir terim. Bu tür yalnızca sigorta kodlarını arar, açıklamayı aramaz.
+Uluslararası [Hastalık Sınıflandırması, Onuncu Düzeltme, Klinik Modifikasyon (ICD-10-CM)](https://icd10cmtool.cdc.gov/) temelinde Dictionary_icd_10_codes anahtar sözcük sözlüğünden herhangi bir terim. Bu tür yalnızca sigorta kodlarını arar, açıklamayı aramaz.
 
 ## <a name="international-classification-of-diseases-icd-9-cm"></a>Uluslararası hastalık sınıflandırması (ICD-9-CM)
 

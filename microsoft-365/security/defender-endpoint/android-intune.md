@@ -15,12 +15,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 461664cc72486a49e5b7bd9be44235559409adff
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: e5f38f701c865ad337bd04cb731ba40e00bf6118
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64825296"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65130465"
 ---
 # <a name="deploy-microsoft-defender-for-endpoint-on-android-with-microsoft-intune"></a>Android’de Uç Nokta için Defender’ı Microsoft Intune ile dağıtın
 
@@ -261,6 +261,63 @@ Cihaz yapılandırma profili artık seçili kullanıcı grubuna atanır.
 4. Bu aşamada cihaz, Android'de Uç Nokta için Defender'a başarıyla eklenir. Bunu [Microsoft 365 Defender portalında](https://security.microsoft.com) **Cihaz Envanteri** sayfasına giderek doğrulayabilirsiniz.
 
     :::image type="content" source="images/9fe378a1dce0f143005c3aa53d8c4f51.png" alt-text="Uç Nokta için Microsoft Defender portalı" lightbox="images/9fe378a1dce0f143005c3aa53d8c4f51.png":::
+
+## <a name="set-up-microsoft-defender-in-personal-profile-on-android-enterprise-in-byod-mode"></a>KCG modunda Android Enterprise Kişisel Profilinde Microsoft Defender'ın ayarlanması
+
+>[!NOTE]
+>Kendi Cihazını Getir (KCG) modunda android Enterprise (AE) kişisel profilinde Microsoft Defender desteği artık genel önizleme aşamasındadır. Aşağıdaki bilgiler, ticari olarak piyasaya sürülmeden önce önemli ölçüde değiştirilebilen önceden yayımlanmış ürünle ilgilidir. Microsoft, burada sağlanan bilgilerle ilgili olarak açık veya zımni hiçbir garanti vermez.
+
+Android kişisel profillerinde Microsoft Defender desteğiyle, kullanıcı cihazları kişisel bir profildeki kimlik avı ve kötü amaçlı yazılım saldırılarına karşı korunabilir ve bu da iş profilindeki şirket kaynaklarının güvenliğini tehlikeye atabilir. 
+
+**Kişisel Profilde Microsoft Defender'ın ayarlanması**
+
+Yöneticiler, kişisel profillerde Microsoft Defender desteğini ayarlamak ve yapılandırmak için şu adımları izleyerek [Microsoft Endpoint Management yönetim merkezine](https://endpoint.microsoft.com) gidebilir:
+1. **Uygulamalar> Uygulama yapılandırma ilkeleri'ne** gidin ve **Ekle'ye** tıklayın. **Yönetilen Cihazlar'ı** seçin.
+
+    > [!div class="mx-imgBorder"]
+    > ![Uygulama yapılandırma ilkesi ekleme resmi.](images/addpolicy.png)
+
+1.  Yapılandırma ilkesini benzersiz olarak tanımlamak için **Ad** ve **Açıklama** girin. Platformu **'Android Enterprise'**, Profil türü **olarak 'Yalnızca kişisel iş profili'** ve Hedeflenen uygulama'yı **'Microsoft Defender'** olarak seçin.
+ 
+    > [!div class="mx-imgBorder"]
+    > ![Adlandırma yapılandırma ilkesinin görüntüsü.](images/selectapp.png)
+
+1. Ayarlar sayfasındaki **'Yapılandırma ayarları biçimi'** bölümünde **'Yapılandırma tasarımcısını kullan'ı** seçin ve **Ekle'ye** tıklayın. Görüntülenen yapılandırmalar listesinden **'Kişisel profilde Microsoft Defender'ı** seçin.
+
+    > [!div class="mx-imgBorder"]
+    > ![Kişisel profili yapılandırma resmi.](images/addconfiguration.png)
+
+1. Seçilen yapılandırma listelenir. Microsoft Defender'ın kişisel profilleri desteklemesini sağlamak için **yapılandırma değerini 1** olarak değiştirin. Yöneticiyi aynı konuda bilgilendiren bir bildirim görüntülenir. **İleri'ye** tıklayın.
+
+    > [!div class="mx-imgBorder"]
+    > ![Yapılandırma değerini değiştirme görüntüsü.](images/changeconfigvalue.png)
+
+1. Yapılandırma ilkesini bir kullanıcı grubuna **atayın**. İlkeyi **gözden geçirin ve oluşturun**.
+
+    > [!div class="mx-imgBorder"]
+    > ![İlkeyi gözden geçirme ve oluşturma görüntüsü.](images/savepolicy.png)
+
+Yöneticiler, Defender mobil istemcisi tarafından güvenlik portalına hangi verilerin gönderilebileceğini denetlemek için Microsoft Endpoint Manager yönetim merkezinden **gizlilik denetimleri** de ayarlayabilir. Daha fazla bilgi için bkz. [Gizlilik denetimlerini yapılandırma](android-configure.md).
+
+Kuruluşlar, kayıtlı KCG cihazlarında Microsoft Defender ile Kişisel profili korumak için kullanıcılarıyla iletişim kurabilir.
+- Ön koşul: Microsoft Defender'ın kişisel profillerde etkinleştirilmesi için Microsoft Defender'ın iş profilinde zaten yüklü ve etkin olması gerekir.
+
+**Cihaz ekleme işlemini tamamlamak için**
+1.  Microsoft Defender uygulamasını kişisel bir Google Play mağazası hesabıyla kişisel bir profile yükleyin.
+2.  Şirket portalı uygulamasını kişisel profile yükleyin. Oturum açma gerekmez.
+3.  Kullanıcı uygulamayı başlattığında oturum açma ekranını görür. **Yalnızca kurumsal hesabı kullanarak oturum açın**.
+4.  Başarılı bir oturum açmada kullanıcılar aşağıdaki ekranları görür:
+
+    a.  **EULA ekranı**: Yalnızca kullanıcı zaten İş profilinde onay vermemişse sunulur.
+
+    b.  **Bildirim ekranı**: Kullanıcıların uygulamayı eklemeye devam etmek için bu ekranda onay vermesi gerekir. Bu yalnızca uygulamanın ilk çalıştırması sırasında gereklidir.
+5.  Ekleme işlemini tamamlamak için gerekli izinleri sağlayın.
+
+>[!NOTE]
+>**Ön koşul:**
+ >1. Şirket portalının kişisel profilde etkinleştirilmesi gerekir.
+ >2. Microsoft Defender'ın zaten yüklü ve iş profilinde etkin olması gerekir.
+
 
 ## <a name="related-topics"></a>İlgili konular
 

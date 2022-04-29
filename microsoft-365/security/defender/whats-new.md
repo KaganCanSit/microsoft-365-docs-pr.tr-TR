@@ -17,12 +17,12 @@ ms.collection:
 - M365-security-compliance
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 56e22e0525324c59d2d62adaf2325edc3317ccd6
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 0cbcc198f31497996595a9f17df9cf689c435b58
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65096060"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65130549"
 ---
 # <a name="whats-new-in-microsoft-365-defender"></a>Microsoft 365 Defender'daki yenilikler
 
@@ -48,6 +48,7 @@ Ayrıca, ürün güncelleştirmelerini ve önemli bildirimleri [ileti merkezi](h
 
 ## <a name="april-2022"></a>Nisan 2022
 - (Önizleme) Artık doğrudan tehdit avcılığı sorgu sonuçlarından e-posta iletilerinde [eylemler](advanced-hunting-take-action.md) yapılabilir. E-postalar diğer klasörlere taşınabilir veya kalıcı olarak silinebilir. 
+- (Önizleme) Gelişmiş tehdit avcılığındaki yeni [`UrlClickEvents` tablo](advanced-hunting-urlclickevents-table.md), e-posta iletilerinde, Microsoft Teams ve Office 365 uygulamalarında Kasa Bağlantıları tıklamalarından gelen bilgilere göre kimlik avı kampanyaları ve şüpheli bağlantılar gibi tehditleri avlamak için kullanılabilir.
 
 ## <a name="march-2022"></a>Mart 2022
 

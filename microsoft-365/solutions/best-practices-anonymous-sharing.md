@@ -19,12 +19,12 @@ ms.localizationpriority: high
 f1.keywords: NOCSH
 recommendations: false
 description: Bu makalede, kimliği doğrulanmamış kullanıcılarla dosya ve klasör paylaşmaya yönelik en iyi yöntemler hakkında bilgi edineceksiniz.
-ms.openlocfilehash: 43db59e0380f99a2312fd803970a73013445504a
-ms.sourcegitcommit: 5b321693214e3859f5af8f1774d2a5ff685ab3b7
+ms.openlocfilehash: bd153d34e6e9ddc4a4b627a79df90286661353d3
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65015056"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65128598"
 ---
 # <a name="best-practices-for-sharing-files-and-folders-with-unauthenticated-users"></a>Kimliği doğrulanmamış kullanıcılarla dosya ve klasör paylaşmaya yönelik en iyi yöntemler
 
@@ -61,7 +61,11 @@ Belirli bir sitedeki Herkes bağlantıları için son kullanma tarihi ayarlamak 
 
 *Herkes* bağlantısının süresi dolduğunda, dosya veya klasörün yeni *bir Herkes* bağlantısıyla yeniden paylaşılabildiğini unutmayın.
 
-[Set-SPOSite](/powershell/module/sharepoint-online/set-sposite) kullanarak belirli bir OneDrive için *Herkes* bağlantısının süre sonunu ayarlayabilirsiniz.
+[Set-SPOSite](/powershell/module/sharepoint-online/set-sposite) kullanarak belirli bir site için *Herkes* bağlantısının süre sonunu ayarlayabilirsiniz. 
+
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/marketing -OverrideTenantAnonymousLinkExpirationPolicy $true -AnonymousLinkExpirationInDays 15
+```
 
 ## <a name="set-link-permissions"></a>Bağlantı izinlerini ayarlama
 

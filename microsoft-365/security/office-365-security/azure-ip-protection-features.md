@@ -1,5 +1,5 @@
 ---
-title: Azure Information Protection'daki koruma özellikleri var olan kiracılara sunuyor
+title: Azure Information Protection mevcut kiracılara sunulan koruma özellikleri
 f1.keywords:
 - NOCSH
 ms.author: krowley
@@ -16,85 +16,85 @@ ms.collection:
 - M365-security-compliance
 ms.custom:
 - seo-marvel-apr2020
-description: Bu makalede, Azure Güvenlik Hizmetleri'nin koruma özelliklerine Information Protection
+description: Bu makalede, Azure Information Protection koruma özelliklerinde kullanıma sunulan değişiklikler açıklanmaktadır
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 80256c3dc4ba8b460b1c5052081aa030a608a7d1
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: dbfc21b879745567c9273c79356ff60e498d95ff
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64471571"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65130834"
 ---
-# <a name="protection-features-in-azure-information-protection-rolling-out-to-existing-tenants"></a>Azure Information Protection'daki koruma özellikleri var olan kiracılara sunuyor
+# <a name="protection-features-in-azure-information-protection-rolling-out-to-existing-tenants"></a>Azure Information Protection mevcut kiracılara sunulan koruma özellikleri
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
-**Geçerli olduğu yer:**
+**Uygulandığı öğe**
 - [Office 365 için Microsoft Defender plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Temmuz 2018'den itibaren, bilgilerin korunmasına yardımcı olmak için tüm Azure Information Protection kiracılarında Azure Information Protection koruma özellikleri varsayılan olarak açıktır. Azure Information Protection'Office 365 koruma özellikleri önceden Hak Yönetimi veya Azure RMS Office 365 olarak biliniyor vardı. Kuruluşta bir Office E3 hizmet planı veya daha yüksek bir hizmet planı varsa, bu özellikleri ne zaman Information Protection Azure Information Protection bilgileri korumaya başlayabilirsiniz.
+Bilgilerinizi korumanın ilk adımına yardımcı olmak için, Temmuz 2018'den itibaren tüm Azure Information Protection uygun kiracılar azure Information Protection koruma özellikleri varsayılan olarak açıktır. Azure Information Protection koruma özellikleri daha önce Office 365 Rights Management veya Azure RMS olarak biliniyordu. Kuruluşunuzun Office bir E3 hizmet planı veya daha yüksek bir hizmet planı varsa artık bu özellikleri kullanıma sunduğumuzda Azure Information Protection aracılığıyla bilgileri korumaya başlarsınız.
 
-## <a name="changes-beginning-july-1-2018"></a>1 Temmuz 2018'den itibaren yapılan değişiklikler
+## <a name="changes-beginning-july-1-2018"></a>1 Temmuz 2018'de başlayan değişiklikler
 
-1 Temmuz 2018'den başlayarak, Microsoft, Azure Information Protection'da aşağıdaki abonelik planlarından birini kullanarak tüm kuruluşlar için koruma özelliğini etkinleştirecek:
+Microsoft, 1 Temmuz 2018'den itibaren aşağıdaki abonelik planlarından birine sahip tüm kuruluşlar için Azure Information Protection'da koruma özelliğini etkinleştirecektir:
 
-- Office 365 İleti Şifrelemesi Office 365 E3 E5, Microsoft E3 ve E5, Office 365 A1, A3 ve A5 ile G3 ve G5'Office 365 sunulur. Azure Destek Hizmetleri tarafından desteklenen yeni koruma özelliklerini almak için ek lisanslara Information Protection.
+- Office 365 İleti Şifrelemesi, Office 365 E3 ve E5, Microsoft E3 ve E5, Office 365 A1, A3 ve A5 ile Office 365 G3 ve G5'in bir parçası olarak sunulur. Azure Information Protection tarafından desteklenen yeni koruma özelliklerini almak için ek lisanslara ihtiyacınız yoktur.
 
-- Ayrıca, yeni Office 365 İleti Şifrelemesi özelliklerini almak için aşağıdaki planlara Azure Information Protection Plan 1'i de ebilirsiniz: Exchange Online Plan 1, Exchange Online Plan 2, Office 365 F1, Microsoft 365 İş Temel, Microsoft 365 İş Standart E1'i Office 365 Kurumsal.
+- Yeni Office 365 İleti Şifrelemesi özelliklerini almak için Azure Information Protection Plan 1'i aşağıdaki planlara da ekleyebilirsiniz: Exchange Online Plan 1, Exchange Online Plan 2, Office 365 F1, E1'i Microsoft 365 İş Temel, Microsoft 365 İş Standart veya Office 365 Kurumsal.
 
-- İleti Şifreleme özelliğinden yararlanan Office 365, bu özellik kapsamında lisans sahibi olması gerekir.
+- Office 365 İleti Şifrelemesinden yararlanan her kullanıcının özelliğin kapsamına alınması için lisanslanması gerekir.
 
-- Tam liste için, İleti [Şifrelemesi'Exchange Online hizmet](/office365/servicedescriptions/exchange-online-service-description/exchange-online-service-description) açıklamalarını Office 365 bakın.
+- Tam liste için, Office 365 İleti Şifrelemesi için Exchange Online [hizmet açıklamalarına](/office365/servicedescriptions/exchange-online-service-description/exchange-online-service-description) bakın.
 
-Kiracı yöneticileri, koruma durumunu yönetici portalında Office 365 kontrol edebilirsiniz.
+Kiracı yöneticileri, Office 365 yönetici portalında koruma durumunu denetleyebilir.
 
-:::image type="content" source="../../media/303453c8-e4a5-4875-b49f-e80c3eb7b91e.png" alt-text="Etkinleştirilmiş Office 365 hakları yönetimi" lightbox="../../media/303453c8-e4a5-4875-b49f-e80c3eb7b91e.png":::
+:::image type="content" source="../../media/303453c8-e4a5-4875-b49f-e80c3eb7b91e.png" alt-text="Etkinleştirilen Office 365'de hak yönetimi" lightbox="../../media/303453c8-e4a5-4875-b49f-e80c3eb7b91e.png":::
 
-## <a name="why-are-we-making-this-change"></a>Bu değişikliği neden yapıyoruz?
+## <a name="why-are-we-making-this-change"></a>Neden bu değişikliği yapıyoruz?
 
-Office 365 İleti Şifrelemesi, Azure Şifrelemesi'nin koruma Information Protection. Office 365 İleti Şifrelemesi'ne yapılan son geliştirmelerin ve Microsoft 365'te bilgi korumasına daha fazla yatırımlarımızın merkezinde, geçmişte şifreleme teknolojilerinin ayarlamakta zor olduğu için kuruluşların koruma yeteneklerimizi açmasını ve kullanmasını kolaylaştırıyoruz. Azure Information Protection'ta koruma özelliklerini varsayılan olarak ayarerek, hassas verilerinizi korumaya hızlı bir şekilde başlatabilirsiniz.
+Office 365 İleti Şifrelemesi, Azure Information Protection'daki koruma özelliklerinden yararlanıyor. Office 365 İleti Şifrelemesi'nde yapılan son geliştirmelerin ve Microsoft 365 bilgi korumasına yönelik daha geniş yatırımlarımızın merkezinde, kuruluşların koruma yeteneklerimizi açmasını ve kullanmasını kolaylaştırıyoruz. Geçmişte şifreleme teknolojilerinin ayarlanması zor olmuştur. Azure Information Protection'daki koruma özelliklerini varsayılan olarak açarak hassas verilerinizi korumaya hızlıca başlayabilirsiniz.
 
 ## <a name="does-this-impact-me"></a>Bu beni etkiliyor mu?
 
-Organizasyonunız uygun bir lisans Office 365 satın aldı ise, kiracınız bu değişiklikden etki edilir.
+Kuruluşunuz uygun bir Office 365 lisansı satın aldıysa, kiracınız bu değişiklikden etkilenir.
 
 > [!IMPORTANT]
-> Şirket içi ortamınıza Active Directory Rights Management Services (AD RMS) kullanıyorsanız, biz bu değişikliği sonraki 30 gün içinde yayımlamadan önce bu değişikliği hemen geri çevirmelisiniz veya Azure Information Protection'e geçirmelisiniz. Geri çıkma hakkında bilgi için bkz. "AD RMS'yi kullanmak istiyorum, nasıl iptal musunuz?" bu makalenin devamsında bulabilirsiniz. Geçirmeyi tercih ediyorsanız, bkz. [AD RMS'den Azure'a Information Protection.](/azure/information-protection/plan-design/migrate-from-ad-rms-to-azure-rms)
+> Şirket içi ortamınızda Active Directory Rights Management Services (AD RMS) kullanıyorsanız, bu değişikliği önümüzdeki 30 gün içinde kullanıma sunmadan önce bu değişikliği hemen geri çevirmeniz veya Azure Information Protection'a geçmeniz gerekir. Geri çevirme hakkında bilgi için bkz. "AD RMS kullanıyorum, nasıl geri çevirebilirim?" bölümüne bakın. Geçişi tercih ediyorsanız bkz[. AD RMS'den Azure'a geçiş Information Protection.](/azure/information-protection/plan-design/migrate-from-ad-rms-to-azure-rms).
 
-## <a name="can-i-use-azure-information-protection-with-active-directory-rights-management-services-ad-rms"></a>Azure Information Protection'i Active Directory Rights Management Services (AD RMS) ile kullanabilir miyim?
+## <a name="can-i-use-azure-information-protection-with-active-directory-rights-management-services-ad-rms"></a>Azure Information Protection'yi Active Directory Rights Management Services (AD RMS) ile kullanabilir miyim?
 
-Hayır. Bu desteklenen bir dağıtım senaryosu değildir. Ek geri bırakma adımlarını almadan, bazı bilgisayarlar otomatik olarak Azure Rights Management hizmetini kullanmaya başlayabilir ve ayrıca AD RMS kümenize bağlanabilirsiniz. Bu senaryo desteklenmiyor ve güvenilir olmayan sonuçlara sahip olduğu için, bu yeni özellikleri sunduğumuzda sonraki 30 gün içinde bu değişikliği geri bırakmanız önemlidir. Geri çıkma hakkında bilgi için bkz. "AD RMS'yi kullanmak istiyorum, nasıl iptal musunuz?" bu makalenin devamsında bulabilirsiniz. Geçirmeyi tercih ediyorsanız, bkz. [AD RMS'den Azure'a geçiş Information Protection.](/azure/information-protection/plan-design/migrate-from-ad-rms-to-azure-rms)
+Hayır. Bu desteklenen bir dağıtım senaryosu değildir. Ek geri çevirme adımlarını uygulamadan, bazı bilgisayarlar otomatik olarak Azure Rights Management hizmetini kullanmaya başlayabilir ve ayrıca AD RMS kümenize bağlanabilir. Bu senaryo desteklenmiyor ve güvenilir olmayan sonuçlara sahip olduğundan, bu yeni özellikleri kullanıma sunmadan önceki 30 gün içinde bu değişikliği geri çevirmeniz önemlidir. Geri çevirme hakkında bilgi için bkz. "AD RMS kullanıyorum, nasıl geri çevirebilirim?" bölümüne bakın. Geçişi tercih ediyorsanız bkz[. AD RMS'den Azure'a geçiş Information Protection.](/azure/information-protection/plan-design/migrate-from-ad-rms-to-azure-rms)
 
-## <a name="how-do-i-know-if-im-using-ad-rms"></a>Nasıl yaparım? RMS'yi kullanmakta olup olduğumu biliyor musunuz?
+## <a name="how-do-i-know-if-im-using-ad-rms"></a>AD RMS kullanıp kullanmadığım Nasıl yaparım??
 
-AD RMS'yi dağıtınca kontrol etmek için bu yönergeleri ( [AD RMS)](/azure/information-protection/deploy-use/prepare-environment-adrms) Active Directory Rights Management Services Azure Rights Management ortamını hazırlama konusunda verilen şu yönergeleri kullanın:
+AD [RMS'yi dağıtıp dağıtmadığınızdan denetlemek için Active Directory Rights Management Services (AD RMS) varsa Ortamı Azure Rights Management için hazırlama](/azure/information-protection/deploy-use/prepare-environment-adrms) başlığı altındaki bu yönergeleri kullanın:
 
-1. İsteğe bağlı olsa da, çoğu AD RMS dağıtımları etki alanı bilgisayarlarında AD RMS kümesini bulmaları için hizmet bağlantı noktasını (SCP) Active Directory'de yayımlar.
+1. İsteğe bağlı olsa da, çoğu AD RMS dağıtımı, etki alanı bilgisayarlarının AD RMS kümesini bulabilmesi için hizmet bağlantı noktasını (SCP) Active Directory'de yayımlar.
 
-   Active Directory'de yayımlanmış bir SCP'niz olup olmadığını görmek için ADSI Düzenleme'yi kullanın: CN=Configuration [sunucu adı], CN=Services, CN=RightsManagementServices, CN=SCP
+   Active Directory'de yayımlanmış bir SCP'niz olup olmadığını görmek için ADSI Düzenleme'yi kullanın: CN=Configuration [sunucu adı], CN=Hizmetler, CN=RightsManagementServices, CN=SCP
 
-2. SCP kullanmazsanız, Windows RMS kümesine bağlı olan bilgisayarların istemci tarafı hizmet bulma veya lisans yeniden yönlendirmesi için Windows defteri kullanılarak yapılandırılması gerekir: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation or HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC\ServiceLocation`.
+2. SCP kullanmıyorsanız, bir AD RMS kümesine bağlanan Windows bilgisayarlar, Windows kayıt defteri kullanılarak istemci tarafı hizmet bulma veya lisans yeniden yönlendirme için yapılandırılmalıdır: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation or HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC\ServiceLocation`.
 
-Bu kayıt defteri yapılandırmaları hakkında daha fazla bilgi için bkz. Windows defteri kullanarak istemci [tarafı](/azure/information-protection/rms-client/client-deployment-notes#enabling-client-side-service-discovery-by-using-the-windows-registry) hizmet bulma özelliğini etkinleştirme ve Lisans sunucusu trafiğini [yeniden yönlendirme](/azure/information-protection/rms-client/client-deployment-notes#redirecting-licensing-server-traffic).
+Bu kayıt defteri yapılandırmaları hakkında daha fazla bilgi için bkz[. Windows kayıt defterini kullanarak istemci tarafı hizmet bulmayı etkinleştirme](/azure/information-protection/rms-client/client-deployment-notes#enabling-client-side-service-discovery-by-using-the-windows-registry) ve [Lisans sunucusu trafiğini yeniden yönlendirme](/azure/information-protection/rms-client/client-deployment-notes#redirecting-licensing-server-traffic).
 
-## <a name="i-use-ad-rms-how-do-i-opt-out"></a>AD RMS'yi kullanıyor, nasıl gerilim?
+## <a name="i-use-ad-rms-how-do-i-opt-out"></a>AD RMS kullanıyorum, nasıl geri çevirebilirim?
 
-Yaklaşan değişiklikten vazgeçmek için şu adımları tamamlayın:
+Yaklaşan değişikliği geri çevirmek için şu adımları tamamlayın:
 
-1. Kuruluşta genel yönetici izinleri olan bir iş veya okul hesabı kullanarak yeni bir oturum Windows PowerShell bu hesaba bağlanarak Exchange Online. Yönergeler için bkz. [Bağlan PowerShell'Exchange Online yükleme](/powershell/exchange/connect-to-exchange-online-powershell).
+1. Kuruluşunuzda genel yönetici izinlerine sahip bir iş veya okul hesabı kullanarak bir Windows PowerShell oturumu başlatın ve Exchange Online bağlanın. Yönergeler için bkz. [Exchange Online PowerShell'e bağlanma](/powershell/exchange/connect-to-exchange-online-powershell).
 
-2. Aşağıdaki söz Set-IRMConfiguration kullanarak Set-IRMConfiguration cmdlet'ini çalıştırın:
+2. Aşağıdaki söz dizimini kullanarak Set-IRMConfiguration cmdlet'ini çalıştırın:
 
   ```powershell
   Set-IRMConfiguration -AutomaticServiceUpdateEnabled $false
   ```
 
-## <a name="what-can-i-expect-after-this-change-has-been-made"></a>Bu değişiklik yapıldıktan sonra neler beklim?
+## <a name="what-can-i-expect-after-this-change-has-been-made"></a>Bu değişiklik yapıldıktan sonra ne bekleyebilirim?
 
-Bu etkinleştirildikten sonra, devre dışı bırakmamanız şartıyla[, Microsoft Ignite 2017'de duyurulan ve Azure Ignite 2017'de](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801) duyurulan yeni Office 365 İleti Şifrelemesi'nin yeni sürümünü kullanmaya başlayabilir ve Azure Information Protection.
+Bu etkinleştirildikten sonra, geri çevirmediyseniz Microsoft [Ignite 2017'de](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801) duyurulan ve Azure Information Protection şifreleme ve koruma özelliklerinden yararlanan yeni Office 365 İleti Şifrelemesi sürümünü kullanmaya başlayabilirsiniz.
 
-:::image type="content" source="../../media/599ca9e7-c05a-429e-ae8d-359f1291a3d8.png" alt-text="E-postada OME korumalı Web üzerinde Outlook" lightbox="../../media/599ca9e7-c05a-429e-ae8d-359f1291a3d8.png":::
+:::image type="content" source="../../media/599ca9e7-c05a-429e-ae8d-359f1291a3d8.png" alt-text="Web üzerinde Outlook'da OME korumalı ileti" lightbox="../../media/599ca9e7-c05a-429e-ae8d-359f1291a3d8.png":::
 
-Yeni iyileştirmeler hakkında daha fazla bilgi için bkz. [İleti Office 365'ne bakın](../../compliance/ome.md).
+Yeni geliştirmeler hakkında daha fazla bilgi için bkz. [İleti Şifrelemesi Office 365](../../compliance/ome.md).

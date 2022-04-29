@@ -19,12 +19,12 @@ ms.collection:
 description: Exchange Online Protection (EOP) ve Office 365 için Defender güvenlik ayarları için en iyi yöntemler nelerdir? Standart koruma için geçerli öneriler neleri içerir? Daha katı olmak istiyorsanız ne kullanılmalıdır? Ayrıca Office 365 için Defender kullanıyorsanız ne kadar ekstra alırsınız?
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 1a5e18547a26d688238f5d4be94520d4e68c9ff4
-ms.sourcegitcommit: dc415d784226c77549ba246601f34324c4f94e73
+ms.openlocfilehash: 72d4f64ca00defe26ddaff7fe27d641cb65f13be
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64916347"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65130527"
 ---
 # <a name="recommended-settings-for-eop-and-microsoft-defender-for-office-365-security"></a>EOP ve Office 365 için Microsoft Defender güvenliği için önerilen ayarlar
 
@@ -43,10 +43,16 @@ Standart veya Katı ayarları kullanıcılara otomatik olarak uygulamak için bk
 
 Bu makalede varsayılan ayarlar ve kullanıcılarınızın korunmasına yardımcı olmak için önerilen Standart ve Katı ayarlar açıklanmaktadır. Tablolar, Microsoft 365 Defender portalındaki ve PowerShell'deki ayarları içerir (Exchange Online posta kutusu olmayan kuruluşlar için PowerShell veya tek başına Exchange Online Protection PowerShell Exchange Online).
 
-> [!TIP]
-> Microsoft 365 Defender portalında önerilen Standart ve Katı ayarları değiştiremezsiniz. **Kullanıcıların korumasını etkinleştir** gibi önerilen değerleri değiştirmek için [PowerShell'Exchange Online](/powershell/exchange/connect-to-exchange-online-powershell) kullanmanız gerekir.
->
+> [!NOTE]
 > PowerShell için Office 365 Gelişmiş Tehdit Koruması Önerilen Yapılandırma Çözümleyicisi (ORCA) modülü, (yöneticiler) bu ayarların geçerli değerlerini bulmanıza yardımcı olabilir. Özellikle **, Get-ORCAReport** cmdlet'i istenmeyen posta önleme, kimlik avı önleme ve diğer ileti hijyen ayarlarının bir değerlendirmesini oluşturur. ORCA modülünü adresinden <https://www.powershellgallery.com/packages/ORCA/>indirebilirsiniz.
+>
+> Microsoft 365 kuruluşlarda Gereksiz E-posta Filtresi'ni EOP'den gelen istenmeyen posta filtreleme kararlarıyla gereksiz çakışmaları (hem pozitif hem de negatif) önlemek için otomatik **filtreleme yok** olarak Outlook olarak bırakmanızı öneririz. Daha fazla bilgi için aşağıdaki makalelere bakın:
+>
+> - [Exchange Online posta kutularında gereksiz e-posta ayarlarını yapılandırma](configure-junk-email-settings-on-exo-mailboxes.md)
+> - [Outlook'deki gereksiz e-posta ayarları hakkında](configure-junk-email-settings-on-exo-mailboxes.md#about-junk-email-settings-in-outlook)
+> - [Gereksiz E-posta Filtresi'nde koruma düzeyini değiştirme](https://support.microsoft.com/en-us/office/e89c12d8-9d61-4320-8c57-d982c8d52f6b)
+> - [EOP'de güvenilir gönderen listeleri oluşturma](create-safe-sender-lists-in-office-365.md)
+> - [EOP'de engellenen gönderen listeleri oluşturma](create-block-sender-lists-in-office-365.md)
 
 ## <a name="anti-spam-anti-malware-and-anti-phishing-protection-in-eop"></a>EOP'de istenmeyen posta önleme, kötü amaçlı yazılımdan koruma ve kimlik avı koruması
 
@@ -65,7 +71,7 @@ Bu makalede varsayılan ayarlar ve kullanıcılarınızın korunmasına yardımc
 |**İstenmeyen posta ayarları olarak işaretle**|Kapalı|Kapalı|Kapalı|Bu ayarların çoğu ASF'nin bir parçasıdır. Daha fazla bilgi için bu makalenin [istenmeyen posta önleme ilkelerindeki ASF ayarları](#asf-settings-in-anti-spam-policies) bölümüne bakın.|
 |**Belirli dilleri içerir** <br/><br/> _EnableLanguageBlockList_ <br/><br/> _LanguageBlockList_|**Kapalı** <br/><br/> `$false` <br/><br/> Boş|**Kapalı** <br/><br/> `$false` <br/><br/> Boş|**Kapalı** <br/><br/> `$false` <br/><br/> Boş|Bu ayar için belirli bir önerimiz yok. İş gereksinimlerinize göre belirli dillerde iletileri engelleyebilirsiniz.|
 |**Bu ülkelerden** <br/><br/> _EnableRegionBlockList_ <br/><br/> _RegionBlockList_|**Kapalı** <br/><br/> `$false` <br/><br/> Boş|**Kapalı** <br/><br/> `$false` <br/><br/> Boş|**Kapalı** <br/><br/> `$false` <br/><br/> Boş|Bu ayar için belirli bir önerimiz yok. İş gereksinimlerinize göre belirli ülkelerden gelen iletileri engelleyebilirsiniz.|
-|**Test modu** (_TestModeAction_)|**Yok**|**Yok**|**Yok**|Bu ayar ASF'nin bir parçasıdır. Daha fazla bilgi için bu makalenin [istenmeyen posta önleme ilkelerindeki ASF ayarları](#asf-settings-in-anti-spam-policies) bölümüne bakın.|
+|**Test modu** (_TestModeAction_)|**Hiçbiri**|**Hiçbiri**|**Hiçbiri**|Bu ayar ASF'nin bir parçasıdır. Daha fazla bilgi için bu makalenin [istenmeyen posta önleme ilkelerindeki ASF ayarları](#asf-settings-in-anti-spam-policies) bölümüne bakın.|
 |**Eylem**||||**Karantina iletisini** seçtiğiniz her yerde **Karantina ilkesi** seçin kutusu kullanılabilir. Karantina ilkeleri, kullanıcıların karantinaya alınan iletilere ne yapmalarına izin verılacağını tanımlar. <br/><br/> Yeni bir istenmeyen posta önleme ilkesi oluşturduğunuzda, boş bir değer varsayılan karantina ilkesinin söz konusu karar tarafından karantinaya alınan iletilerin geçmiş özelliklerini tanımlamak için kullanıldığı anlamına gelir ( **Yüksek güvenilirlikli kimlik avı** için AdminOnlyAccessPolicy; Diğer her şey için DefaultFullAccessPolicy). <br/><br/> Yöneticiler, kullanıcılar için daha kısıtlayıcı veya daha az kısıtlayıcı özellikler tanımlayan özel karantina ilkeleri oluşturabilir ve seçebilir. Daha fazla bilgi için bkz [. Karantina ilkeleri](quarantine-policies.md).|
 |**İstenmeyen posta** algılama eylemi <br/><br/> _İstenmeyen Posta_|**İletiyi Gereksiz E-posta klasörüne taşıma** <br/><br/> `MoveToJmf`|**İletiyi Gereksiz E-posta klasörüne taşıma** <br/><br/> `MoveToJmf`|**Karantina iletisi** <br/><br/> `Quarantine`||
 |**Yüksek güvenilirlikli istenmeyen posta** algılama eylemi <br/><br/> _HighConfidenceSpamAction_|**Karantina iletisi** <br/><br/> `MoveToJmf`|**Karantina iletisi** <br/><br/> `Quarantine`|**Karantina iletisi** <br/><br/> `Quarantine`||
@@ -200,10 +206,10 @@ Bu ayarlar hakkında daha fazla bilgi için bkz[. Office 365 için Microsoft Def
 |Güvenlik özelliği adı|Varsayılan|Standard|Sıkı|Açıklama ekleme|
 |---|:---:|:---:|:---:|---|
 |**Kimlik avı eşiği & koruma**|||||
-|**Kullanıcıların korumasını sağlama** (kimliğine bürünülen kullanıcı koruması) <br/><br/> _EnableTargetedUserProtection_ <br/><br/> _TargetedUsersToProtect_|Seçili değil <br/><br/> `$false` <br/><br/> Hiçbiri|Seçili <br/><br/> `$true` <br/><br/> \<list of users\>|Seçili <br/><br/> `$true` <br/><br/> \<list of users\>|Önemli rollere kullanıcı (ileti gönderenler) eklemenizi öneririz. Dahili olarak, korunan gönderenler CEO'nuz, CFO'nuz ve diğer üst düzey liderler olabilir. Dışarıdan, korunan gönderenler konsey üyelerini veya yönetim kurulunuzu içerebilir. <br/><br/> Önceden ayarlanmış güvenlik ilkelerinde, korunacak kullanıcıları belirtemezsiniz. Önceden ayarlanmış güvenlik ilkelerini devre dışı bırakmanız ve kullanıcıları önerilen anahtar rollere eklemek için özel kimlik avı önleme ilkeleri kullanmanız gerekir.|
+|**Kullanıcıların korumasını sağlama** (kimliğine bürünülen kullanıcı koruması) <br/><br/> _EnableTargetedUserProtection_ <br/><br/> _TargetedUsersToProtect_|Seçili değil <br/><br/> `$false` <br/><br/> yok|Seçili <br/><br/> `$true` <br/><br/> \<list of users\>|Seçili <br/><br/> `$true` <br/><br/> \<list of users\>|Önemli rollere kullanıcı (ileti gönderenler) eklemenizi öneririz. Dahili olarak, korunan gönderenler CEO'nuz, CFO'nuz ve diğer üst düzey liderler olabilir. Dışarıdan, korunan gönderenler konsey üyelerini veya yönetim kurulunuzu içerebilir. <br/><br/> Önceden ayarlanmış güvenlik ilkelerinde, korunacak kullanıcıları belirtemezsiniz. Önceden ayarlanmış güvenlik ilkelerini devre dışı bırakmanız ve kullanıcıları önerilen anahtar rollere eklemek için özel kimlik avı önleme ilkeleri kullanmanız gerekir.|
 |**Etki alanlarının korunmasını etkinleştirme** (kimliğine bürünülen etki alanı koruması)|Seçili değil|Seçili|Seçili||
 |**Sahip olduğum etki alanlarını dahil et** <br/><br/> _EnableOrganizationDomainsProtection_|Kapalı <br/><br/> `$false`|Seçili <br/><br/> `$true`|Seçili <br/><br/> `$true`||
-|**Özel etki alanları ekleme** <br/><br/> _EnableTargetedDomainsProtection_ <br/><br/> _TargetedDomainsToProtect_|Kapalı <br/><br/> `$false` <br/><br/> Hiçbiri|Seçili <br/><br/> `$true` <br/><br/> \<list of domains\>|Seçili <br/><br/> `$true` <br/><br/> \<list of domains\>|Sahip olmadığınız ancak sık sık etkileşimde olduğunuz etki alanlarını (gönderen etki alanları) eklemenizi öneririz. <br/><br/> Önceden ayarlanmış güvenlik ilkelerinde, korunacak custm etki alanlarını belirtemezsiniz. Önceden ayarlanmış güvenlik ilkelerini devre dışı bırakmanız ve önerilen şekilde korumak üzere özel etki alanları eklemek için özel kimlik avı önleme ilkeleri kullanmanız gerekir.|
+|**Özel etki alanları ekleme** <br/><br/> _EnableTargetedDomainsProtection_ <br/><br/> _TargetedDomainsToProtect_|Kapalı <br/><br/> `$false` <br/><br/> yok|Seçili <br/><br/> `$true` <br/><br/> \<list of domains\>|Seçili <br/><br/> `$true` <br/><br/> \<list of domains\>|Sahip olmadığınız ancak sık sık etkileşimde olduğunuz etki alanlarını (gönderen etki alanları) eklemenizi öneririz. <br/><br/> Önceden ayarlanmış güvenlik ilkelerinde, korunacak custm etki alanlarını belirtemezsiniz. Önceden ayarlanmış güvenlik ilkelerini devre dışı bırakmanız ve önerilen şekilde korumak üzere özel etki alanları eklemek için özel kimlik avı önleme ilkeleri kullanmanız gerekir.|
 |**Güvenilir gönderenler ve etki alanları ekleme** <br/><br/> _ExcludedSenders_ <br/><br/> _ExcludedDomains_|Yok|Yok|Yok|Kuruluşunuza bağlı olarak, kimliğine bürünme girişimleri olarak yanlış tanımlanan gönderenler veya etki alanları eklemenizi öneririz.|
 |**Posta kutusu zekasını etkinleştirme** <br/><br/> _EnableMailboxIntelligence_|Seçili <br/><br/> `$true`|Seçili <br/><br/> `$true`|Seçili <br/><br/> `$true`||
 |**Kimliğe bürünme koruması için zekayı etkinleştirme** <br/><br/> _EnableMailboxIntelligenceProtection_|Kapalı <br/><br/> `$false`|Seçili <br/><br/> `$true`|Seçili <br/><br/> `$true`|Bu ayar, posta kutusu zekası tarafından kimliğe bürünme algılamaları için belirtilen eyleme izin verir.|

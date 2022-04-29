@@ -19,12 +19,12 @@ search.appverid:
 ms.assetid: 1b45c82f-26c8-44fb-9f3b-b45436fe2271
 description: eBulma yöneticisinin Microsoft 365'de arayabileceği kullanıcı içerik konumlarını denetleyebilen mantıksal sınırlar oluşturmak için uyumluluk sınırlarını kullanmayı öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 36a7f1e679f404a77b61c30b8efef7875558fee9
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 52f4a66ffbab37109e7503181548b1de4ffac87a
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65099201"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65128793"
 ---
 # <a name="set-up-compliance-boundaries-for-ediscovery-investigations"></a>eBulma araştırmaları için uyumluluk sınırlarını ayarlama
 
@@ -285,8 +285,6 @@ Uyumluluk sınırlarını kullanan eBulma olaylarını ve araştırmalarını y�
 - Arama oluştururken ve çalıştırırken, kuruluşunuzun dışındaki içerik konumlarını seçebilirsiniz. Ancak, arama izinleri filtresi nedeniyle bu konumlardaki içerik arama sonuçlarına dahil değildir.
 
 - Uyumluluk sınırları eBulma durumlarında tutmalar için geçerli değildir. Başka bir deyişle, bir ajanstaki eBulma yöneticisi bir kullanıcıyı farklı bir ajansa beklemeye alabilir. Ancak, eBulma yöneticisi beklemeye alınan kullanıcının içerik konumlarını ararsa uyumluluk sınırı zorlanır. Bu, eBulma yöneticisinin kullanıcıyı beklemeye alabilse bile kullanıcının içerik konumlarında arama yapamayacağı anlamına gelir.
-
-    Ayrıca, tutma istatistikleri yalnızca kuruluştaki içerik konumları için geçerlidir.
 
 - Size bir arama izinleri filtresi (posta kutusu veya site filtresi) atanırsa ve kuruluşunuzdaki tüm SharePoint siteleri içeren bir arama için dizine alınmamış öğeleri dışarı aktarmaya çalışırsanız, şu hata iletisini alırsınız: `Unable to execute the task. Reason: The scope options UnindexedItemsOnly or BothIndexedandUnindexedItems are not allowed when the executing user has a compliance security filter applied`. Size bir arama izinleri filtresi atanmışsa ve SharePoint'dan dizinlenmemiş öğeleri dışarı aktarmak istiyorsanız, aramayı yeniden çalıştırmanız ve arama yapmak için belirli SharePoint siteleri eklemeniz gerekir. Aksi takdirde, yalnızca tüm SharePoint siteleri içeren bir aramadan dizine alınan öğeleri dışarı aktarabilirsiniz. Arama sonuçlarını dışarı aktardığınız seçenekler hakkında daha fazla bilgi için bkz. [İçerik arama sonuçlarını dışarı aktarma](export-search-results.md#step-1-prepare-search-results-for-export).
 

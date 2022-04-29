@@ -1,5 +1,5 @@
 ---
-title: Office 365 için Microsoft Defender playbook'larını deneme
+title: Office 365 için Microsoft Defender deneme playbook'u
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -14,134 +14,135 @@ ms.prod: m365-security
 search.appverid:
 - MOE150
 - MET150
-description: Office 365 için Microsoft Defender deneme sürümü oynatma kitabı.
-ms.openlocfilehash: 1e943cc36d7a8787a41e16d61b15fe9e2eea129c
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+description: Office 365 için Microsoft Defender çözümleri deneme playbook'u.
+ms.openlocfilehash: f23c45d117735997c219278621be7f314602cd8f
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64474893"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65130702"
 ---
-# <a name="trial-playbook-microsoft-defender-for-office-365"></a>Deneme playbook'ları: Office 365 için Microsoft Defender
+# <a name="trial-playbook-microsoft-defender-for-office-365"></a>Deneme playbook'u: Office 365 için Microsoft Defender
 
-Office 365 için Microsoft Defender deneme sürümüne hoş geldiniz. Bu çalışma kitabı, her bir çalışma kitabıyla organizasyonlarınızı nasıl koruyacaklarını öğreterek 90 günlük ücretsiz denemenizi en iyi şekilde Office 365 için Defender. Microsoft önerilerini kullanarak, güvenlik ilkelerini tanımlamanıza Office 365 için Defender organizasyona yönelik tehditleri çözümlemenize ve saldırılara yanıt vermenize nasıl yardımcı olduğunu öğrenirsiniz.
+Office 365 için Microsoft Defender deneme playbook'una hoş geldiniz. Bu playbook, Office 365 için Defender ile kuruluşunuzu nasıl koruyacağınızı öğreterek 90 günlük ücretsiz denemenizden en iyi şekilde yararlanabilirsiniz. Microsoft önerilerini kullanarak Office 365 için Defender koruma ilkeleri tanımlamanıza, kuruluşunuza yönelik tehditleri analiz etmeye ve saldırılara yanıt vermenize nasıl yardımcı olabileceğini öğreneceksiniz.
 
-:::image type="content" source="../../media/mdo-trial-playbook-what-is-mdo.png" alt-text="Veri bileşenlerinin tüm bileşenlerinin grafik Office 365 için Microsoft Defender" lightbox="../../media/mdo-trial-playbook-what-is-mdo.png":::
+:::image type="content" source="../../media/mdo-trial-playbook-what-is-mdo.png" alt-text="Office 365 için Microsoft Defender tüm bileşenlerinin grafik gösterimi." lightbox="../../media/mdo-trial-playbook-what-is-mdo.png":::
 
-Bu eylemler, 90 günlük denemeniz boyunca deneyecek önemli özelliklerle ilgili Microsoft Defender ekibinin önerileridir.
+Bu eylemler, Microsoft Defender ekibinin 90 günlük denemenizde deneyebileceğiniz temel özelliklerle ilgili önerileridir.
 
 ## <a name="step-1-getting-started"></a>1. Adım: Başlarken
 
-### <a name="start-your-microsoft-defender-for-office-365-trial"></a>Office 365 için Microsoft Defender denemenizi başlatma
+### <a name="start-your-microsoft-defender-for-office-365-trial"></a>Office 365 için Microsoft Defender denemenizi başlatın
 
-Denemeyi başlattıktan ve kurulum işlemini tamamlandıktan sonra, değişikliklerin yürürlüğe girdikten sonra 2 saat kadar sürebilir.
+Denemeyi başlattıktan ve kurulum işlemini tamamladıktan sonra değişikliklerin geçerli olması 2 saat kadar sürebilir.
 
-Ortamınıza Önceden belirlenmiş güvenlik [ilkelerini otomatik](preset-security-policies.md) olarak yapılandırıldı. Bu ilkeler, çoğu kullanıcı için uygun olan bir taban çizgisi koruma profilini temsil ediyor. Standart koruma şunları içerir:
+Ortamınızda [Önceden Ayarlanmış güvenlik ilkelerini](preset-security-policies.md) otomatik olarak yapılandırdık. Bu ilkeler, çoğu kullanıcı için uygun bir temel koruma profilini temsil eder. Standart koruma şunları içerir:
 
-- Kasa kurulum Kasa kiracının tamamı veya kullanıcı alt kümesi kapsamındaki Ekleri ve Kimlik Avını Önleme ilkelerini içerir.
-- Uygulama, SharePoint, OneDrive Office ve güvenlik koruması Microsoft Teams.
+- Kasa Bağlantılar, Kasa Ekler ve kimlik avı önleme ilkeleri, deneme kurulum işlemi sırasında seçmiş olabileceğiniz tüm kiracı veya kullanıcı alt kümesi kapsamındadır.
+- Kasa SharePoint, OneDrive ve Microsoft Teams için Ekler koruması.
+- Kasa Desteklenen Office 365 uygulamaları için bağlantılar koruması.
 
-Daha fazla bilgi edinmek için bu videoyu izleyin: [Yeni - YouTube'daki Kasa bağlantılar ile Office 365 için Microsoft Defender bağlantılara karşı koruma.](https://www.youtube.com/watch?v=vhIJ1Veq36Y&list=PL3ZTgFEc7LystRja2GnDeUFqk44k7-KXf&index=9)
+Daha fazla bilgi edinmek için bu videoyu izleyin: [Office 365 için Microsoft Defender - YouTube'da Kasa Bağlantıları ile kötü amaçlı bağlantılara karşı koruma](https://www.youtube.com/watch?v=vhIJ1Veq36Y&list=PL3ZTgFEc7LystRja2GnDeUFqk44k7-KXf&index=9).
 
-### <a name="enable-users-to-report-suspicious-content"></a>Kullanıcıların şüpheli içeriği bildirmelerini etkinleştirme
+### <a name="enable-users-to-report-suspicious-content"></a>Kullanıcıların şüpheli içeriği bildirmesini sağlama
 
-Office 365 için Defender, kullanıcıların iletileri güvenlik ekiplerine bildirmesini ve yöneticilerin çözümleme için Microsoft'a ileti göndermesini sağlar.
+Office 365 için Defender, kullanıcıların güvenlik ekiplerine ileti bildirmesine olanak tanır ve yöneticilerin analiz için Microsoft'a ileti göndermesine olanak tanır.
 
-- Rapor [İletisi eklentisini veya Rapor Kimlik Avı eklentisini dağıtın](enable-the-report-message-add-in.md).
-- Hatalı pozitif ve yanlış [negatifleri rapor etmek için iş akışı oluşturma](report-false-positives-and-false-negatives.md).
-- Gönderiler [portalını kullanın](admin-submission.md).
+- [Rapor İletisi eklentisini veya Rapor Kimlik Avı eklentisini dağıtın](enable-the-report-message-add-in.md).
+- [Hatalı pozitifleri ve hatalı negatifleri raporlamak](report-false-positives-and-false-negatives.md) için bir iş akışı oluşturun.
+- [Gönderimler portalını](admin-submission.md) kullanın.
 
-Daha fazla bilgi edinmek için bu videoyu izleyin: Analiz için ileti göndermek üzere [Gönderiler portalını kullanmayı öğrenin - YouTube](https://www.youtube.com/watch?v=ta5S09Yz6Ks&ab_channel=MicrosoftSecurit).
+Daha fazla bilgi edinmek için bu videoyu izleyin: [Analiz için ileti göndermek için Gönderimler portalını kullanmayı öğrenin - YouTube](https://www.youtube.com/watch?v=ta5S09Yz6Ks&ab_channel=MicrosoftSecurit).
 
-### <a name="review-reports-to-understand-the-threat-landscape"></a>Tehdit ortamını anlamak için raporları gözden geçirme
+### <a name="review-reports-to-understand-the-threat-landscape"></a>Tehdit ortamını anlamak için raporları gözden geçirin
 
-Ortamınız hakkında daha fazla Office 365 için Defender için raporlama özelliklerini kullanabilirsiniz.
+Ortamınız hakkında daha fazla bilgi edinmek için Office 365 için Defender'deki raporlama özelliklerini kullanın.
 
-- Tehdit koruması durumu raporuyla e-postada ve işbirliği [araçlarında alınan tehditleri an edin](view-email-security-reports.md#threat-protection-status-report).
-- Posta Akışı durum raporuyla [tehditlerin nerede engellenmiş olduğunu bakın](view-email-security-reports.md#mailflow-status-report).
-- [Kullanıcılar tarafından](view-reports-for-mdo.md#url-protection-report) görüntülenen veya sistem tarafından engellenen bağlantıları gözden geçirebilirsiniz.
+- [Tehdit koruması durum raporuyla](view-email-security-reports.md#threat-protection-status-report) e-posta ve işbirliği araçlarına alınan tehditleri anlayın.
+- [Posta akışı durum raporuyla](view-email-security-reports.md#mailflow-status-report) tehditlerin nerede engellendiğini görün.
+- Kullanıcılar tarafından görüntülenen veya sistem tarafından engellenen [bağlantıları gözden geçirin](view-reports-for-mdo.md#url-protection-report).
 
-:::image type="content" source="../../media/mdo-trial-playbook-reporting.png" alt-text="E-& portalında işbirliği Microsoft 365 Defender gönderme" lightbox="../../media/mdo-trial-playbook-reporting.png":::
+:::image type="content" source="../../media/mdo-trial-playbook-reporting.png" alt-text="e-posta & işbirliği raporları Microsoft 365 Defender portalında." lightbox="../../media/mdo-trial-playbook-reporting.png":::
 
 ## <a name="step-2-intermediate-steps"></a>2. Adım: Ara adımlar
 
-### <a name="prioritize-focus-on-your-most-targeted-users"></a>En çok hedefli kullanıcılarınıza odaklanma önceliklerini belirleme
+### <a name="prioritize-focus-on-your-most-targeted-users"></a>Odağı en çok hedeflenen kullanıcılarınıza önceliklendirme
 
-Hedefli ve en görünür kullanıcılarınızı, bu kullanıcıların güvende olduğundan emin olmak için iş akışınızı önceliklendirmenize yardımcı olan Office 365 için Defender'te Öncelik Hesabı Koruması ile koruyun.
+Office 365 için Defender'da Öncelik Hesabı Koruması ile en çok hedeflenen ve en görünür kullanıcılarınızı koruyun. Bu, bu kullanıcıların güvende olduğundan emin olmak için iş akışınızı önceliklendirmenize yardımcı olur.
 
-- En çok hedefli veya en görünür kullanıcılarınızı belirleme.
-- [Bu kullanıcıları öncelik](../../admin/setup/priority-accounts.md#add-priority-accounts-from-the-setup-page) hesapları olarak etiketle.
-- Portal genelinde öncelik hesabına yönelik tehditleri takip edin.
+- En çok hedeflenen veya en görünür kullanıcılarınızı belirleyin.
+- [Bu kullanıcıları](../../admin/setup/priority-accounts.md#add-priority-accounts-from-the-setup-page) öncelik hesapları olarak etiketleyin.
+- Portal genelinde öncelik hesabına yönelik tehditleri izleyin.
 
-Daha fazla bilgi edinmek için bu videoyu izleyin: [Office 365 için Microsoft Defender - YouTube'da öncelik hesaplarını koruma](https://www.youtube.com/watch?v=tqnj0TlzQcI&list=PL3ZTgFEc7LystRja2GnDeUFqk44k7-KXf&index=11).
+Daha fazla bilgi edinmek için bu videoyu izleyin: [Office 365 için Microsoft Defender 'de öncelik hesaplarını koruma - YouTube](https://www.youtube.com/watch?v=tqnj0TlzQcI&list=PL3ZTgFEc7LystRja2GnDeUFqk44k7-KXf&index=11).
 
-:::image type="content" source="../../media/mdo-trial-playbook-alerts.png" alt-text="Microsoft 365 Defender portalında Uyarılar" lightbox="../../media/mdo-trial-playbook-alerts.png":::
+:::image type="content" source="../../media/mdo-trial-playbook-alerts.png" alt-text="Microsoft 365 Defender portalındaki Uyarılar." lightbox="../../media/mdo-trial-playbook-alerts.png":::
 
-### <a name="avoid-costly-breaches-by-preventing-user-compromise"></a>Kullanıcıların güvenliğini önleerek yüksek maliyetli ihlallerden kaçınma
+### <a name="avoid-costly-breaches-by-preventing-user-compromise"></a>Kullanıcı güvenliğinin aşılmasını önleyerek yüksek maliyetli ihlallerden kaçının
 
-Olası tehdit konusunda uyarı alma ve saldırganların ortamınıza daha fazla erişim kazanmasını önlemek için bu tehditlerin etkisini otomatik olarak sınırlandırma.
+Olası risklere karşı uyarı alın ve saldırganların ortamınıza daha derin erişim elde etmesini önlemek için bu tehditlerin etkisini otomatik olarak sınırlayın.
 
-- Güvenliği [tehlikeye atılmış kullanıcı uyarılarını gözden geçirme](address-compromised-users-quickly.md#compromised-user-alerts).
-- [Güvenliği ihlal edilmiş kullanıcıları](address-compromised-users-quickly.md) araştırarak ve yanıtlayın.
+- [Güvenliği aşılmış kullanıcı uyarılarını](address-compromised-users-quickly.md#compromised-user-alerts) gözden geçirin.
+- Güvenliği aşılmış kullanıcıları [araştırın ve yanıt verin](address-compromised-users-quickly.md).
 
-:::image type="content" source="../../media/mdo-trial-playbook-investigation.png" alt-text="Güvenliği ihlal edilmiş kullanıcıları araştırma" lightbox="../../media/mdo-trial-playbook-investigation.png":::
+:::image type="content" source="../../media/mdo-trial-playbook-investigation.png" alt-text="Güvenliği aşılmış kullanıcıları araştırma." lightbox="../../media/mdo-trial-playbook-investigation.png":::
 
-Daha fazla bilgi edinmek için bu videoyu izleyin: [YouTube ile güvenlik ödünlerini Office 365 için Microsoft Defender ve yanıt verin](https://www.youtube.com/watch?v=Pc7y3a-wdR0&list=PL3ZTgFEc7LystRja2GnDeUFqk44k7-KXf&index=5).
+Daha fazla bilgi edinmek için bu videoyu izleyin: [Office 365 için Microsoft Defender - YouTube'da güvenliği aşmayı algılama ve yanıtlama](https://www.youtube.com/watch?v=Pc7y3a-wdR0&list=PL3ZTgFEc7LystRja2GnDeUFqk44k7-KXf&index=5).
 
-### <a name="use-threat-explorer-to-investigate-malicious-email"></a>Kötü amaçlı e-postaları araştırmak için Threat Explorer'ı kullanma
+### <a name="use-threat-explorer-to-investigate-malicious-email"></a>Kötü amaçlı e-postayı araştırmak için Tehdit Gezgini'ni kullanma
 
-Office 365 için Defender, kuruluşta kişilerin risk altında yer almalarını sağlayan etkinlikleri araştırmanıza ve organizasyonlarınızı korumak için harekete çalışmanıza olanak sağlar. Tehdit Gezgini'ni veya [(gerçek zamanlı algılamaları) kullanarak bunuabilirsiniz](threat-explorer.md).
+Office 365 için Defender, kuruluşunuzdaki kişileri riske atacak etkinlikleri araştırmanıza ve kuruluşunuzu korumak için eylem gerçekleştirmenize olanak tanır. Bunu [Tehdit Gezgini'ne](threat-explorer.md) kullanarak yapabilirsiniz.
 
-- [Teslim edilen şüpheli e-postaları bulma](investigate-malicious-email-that-was-delivered.md#find-suspicious-email-that-was-delivered): İletileri bulun ve silin, kötü amaçlı e-posta gönderenin IP adresini bulun veya daha fazla araştırma için bir olay başlatabilirsiniz.
-- [Teslim eylemlerini ve konumlarını kontrol](investigate-malicious-email-that-was-delivered.md#check-the-delivery-action-and-location) edin: Bu denetim, sorun e-posta iletilerinin konumunu size haber sağlar.
-- [E-postanızı zaman çizelgenizi görüntüleme](investigate-malicious-email-that-was-delivered.md#view-the-timeline-of-your-email): Güvenlik işlemleri ekibiniz için kolayca arama yapmanız.
+- [Teslim edilen şüpheli e-postayı bulma](investigate-malicious-email-that-was-delivered.md#find-suspicious-email-that-was-delivered): İletileri bulun ve silin, kötü amaçlı e-posta gönderenin IP adresini tanımlayın veya daha fazla araştırma için bir olay başlatın.
+- [Teslim eylemini ve konumunu denetleyin](investigate-malicious-email-that-was-delivered.md#check-the-delivery-action-and-location): Bu denetim, sorunlu e-posta iletilerinin konumunu öğrenmenizi sağlar.
+- [E-postanızın zaman çizelgesini görüntüleyin](investigate-malicious-email-that-was-delivered.md#view-the-timeline-of-your-email): Yalnızca güvenlik operasyonları ekibiniz için avlanma.
 
-### <a name="see-campaigns-targeting-your-organization"></a>Organizasyonlarınızı hedef alan kampanyalara bakın
+### <a name="see-campaigns-targeting-your-organization"></a>Kuruluşunuzu hedefleyen kampanyaları görme
 
-Office 365 için Defender'ta Kampanya Görünümleri ile, organizasyonlarınızı hedef alan saldırı kampanyaları ve bu kampanyaların kullanıcılarınız üzerindeki etkisinin görünümünü sunan Kampanya Görünümleri ile daha büyük resme bakın.
+Kuruluşunuzu hedef alan saldırı kampanyalarının ve bunların kullanıcılarınız üzerindeki etkisinin bir görünümünü sunan Office 365 için Defender'de Kampanya Görünümleri ile daha büyük resme bakın.
 
-- [Kullanıcılarınızı](campaigns.md#what-is-a-campaign) hedef alan kampanyalar tanımlayabilirsiniz.
-- [Saldırının kapsamını](campaigns.md#campaign-views-in-the-microsoft-365-defender-portal) görselleştirin.
-- [Bu iletilerle kullanıcı](campaigns.md#campaign-details) etkileşimi izleme.
+- Kullanıcılarınızı hedefleyen [kampanyaları belirleyin](campaigns.md#what-is-a-campaign).
+- [Saldırının kapsamını görselleştirin](campaigns.md#campaign-views-in-the-microsoft-365-defender-portal) .
+- Bu iletilerle [kullanıcı etkileşimlerini izleyin](campaigns.md#campaign-details).
 
-  :::image type="content" source="../../media/mdo-trial-playbook-campaign-details.png" alt-text="Portalda Kampanya Microsoft 365 Defender." lightbox="../../media/mdo-trial-playbook-campaign-details.png":::
+  :::image type="content" source="../../media/mdo-trial-playbook-campaign-details.png" alt-text="Microsoft 365 Defender portalındaki Kampanya ayrıntıları." lightbox="../../media/mdo-trial-playbook-campaign-details.png":::
 
-Daha fazla bilgi edinmek için bu videoyu izleyin: kampanya [görünümleri Office 365 için Microsoft Defender YouTube](https://www.youtube.com/watch?v=DvqzzYKu7cQ&list=PL3ZTgFEc7LystRja2GnDeUFqk44k7-KXf&index=14).
+Daha fazla bilgi edinmek için bu videoyu izleyin: [Office 365 için Microsoft Defender Kampanya Görünümleri - YouTube](https://www.youtube.com/watch?v=DvqzzYKu7cQ&list=PL3ZTgFEc7LystRja2GnDeUFqk44k7-KXf&index=14).
 
-### <a name="use-automation-to-remediate-risks"></a>Riskleri düzeltmek için otomasyon kullanın
+### <a name="use-automation-to-remediate-risks"></a>Riskleri düzeltmek için otomasyonu kullanma
 
-Tehditleri gözden geçirmek, önceliklerini belirlemek ve tehditlere yanıt vermek için Otomatik araştırma ve yanıt (AIR) kullanarak verimli bir şekilde yanıt verin.
+Tehditleri gözden geçirmek, önceliklendirmek ve yanıtlamak için Otomatik araştırma ve yanıt (AIR) kullanarak verimli bir şekilde yanıt verin.
 
-- [Araştırma playbooks](automated-investigation-response-office.md) hakkında daha fazla bilgi edinmek için.
-- [Araştırmanın ayrıntılarını ve](email-analysis-investigations.md) sonuçlarını görüntüleme.
-- Düzeltme [eylemlerini onayarak tehditleri ortadan kaldırabilirsiniz](air-remediation-actions.md).
+- Araştırma playbook'ları hakkında [daha fazla bilgi edinin](automated-investigation-response-office.md).
+- [Araştırmanın ayrıntılarını ve sonuçlarını görüntüleyin](email-analysis-investigations.md) .
+- [Düzeltme eylemlerini onaylayarak](air-remediation-actions.md) tehditleri ortadan kaldırın.
 
-:::image type="content" source="../../media/mdo-trial-playbook-investigation-results.png" alt-text="İnceleme sonuçları" lightbox="../../media/mdo-trial-playbook-investigation-results.png":::
+:::image type="content" source="../../media/mdo-trial-playbook-investigation-results.png" alt-text="Araştırma sonuçları." lightbox="../../media/mdo-trial-playbook-investigation-results.png":::
 
 ## <a name="step-3-advanced-content"></a>3. Adım: Gelişmiş içerik
 
-### <a name="dive-deep-into-data-with-query-based-hunting"></a>Sorgu tabanlı dalın ile verilerin derinlerine dalın
+### <a name="dive-deep-into-data-with-query-based-hunting"></a>Sorgu tabanlı avcılık ile verileri derinlemesine inceleme
 
-Özel algılama kuralları yazmak, ortamınıza önceden olayları incelemek ve tehdit göstergeleri bulmak için Gelişmiş av kullanın. Ortamınıza ham verileri keşfedin.
+Özel algılama kuralları yazmak, ortamınızdaki olayları proaktif olarak incelemek ve tehdit göstergelerini bulmak için Gelişmiş tehdit avcılığı kullanın. Ortamınızdaki ham verileri keşfedin.
 
-- [Özel algılama kuralları oluşturma](../defender/advanced-hunting-overview.md#get-started-with-advanced-hunting).
-- [Başkaları tarafından oluşturulan paylaşılan](../defender/advanced-hunting-shared-queries.md) sorgulara erişin.
+- [Özel algılama kuralları oluşturun](../defender/advanced-hunting-overview.md#get-started-with-advanced-hunting).
+- Başkaları tarafından oluşturulan [paylaşılan sorgulara erişin](../defender/advanced-hunting-shared-queries.md).
 
-Daha fazla bilgi edinmek için bu videoyu izleyin: Microsoft 365 Defender [- YouTube ile tehdit avı](https://www.youtube.com/watch?v=l3OmH4U6XAs&list=PL3ZTgFEc7Lyt1O81TZol31YXve4e6lyQu&index=4).
+Daha fazla bilgi edinmek için bu videoyu izleyin: [Microsoft 365 Defender ile tehdit avcılığı - YouTube](https://www.youtube.com/watch?v=l3OmH4U6XAs&list=PL3ZTgFEc7Lyt1O81TZol31YXve4e6lyQu&index=4).
 
-### <a name="train-users-to-spot-threats-by-simulating-attacks"></a>Saldırılar ile tehditlerini tespit etmek için kullanıcıları eğitin
+### <a name="train-users-to-spot-threats-by-simulating-attacks"></a>Saldırıların benzetimlerini yaparak kullanıcıları tehditleri tespit etmeye eğitin
 
-Yeni bir yıl içinde Saldırı benzetimi eğitimi ile kullanıcılarınıza tehditleri belirlemeleri ve şüpheli iletileri bildirmeleri için doğru bilgi Office 365 için Defender.
+Office 365 için Defender'daki Saldırı simülasyonu eğitimiyle tehditleri tanımlamak ve şüpheli iletileri bildirmek için kullanıcılarınızı doğru bilgiyle donatın.
 
-- [Korumasız kullanıcıları tanımlamak](attack-simulation-training.md) için gerçekçi tehditleri taklit edebilir.
-- [Benzetim](attack-simulation-training.md#assign-training) sonuçlarına dayalı olarak kullanıcılara eğitim attayabilirsiniz.
-- [Benzetimler](attack-simulation-training-insights.md) ve eğitim tamamlamayla kuruluş ilerlemesini takip et.
+- Savunmasız kullanıcıları tanımlamak için [gerçekçi tehditlerin benzetimini](attack-simulation-training.md) yapmak.
+- Simülasyon sonuçlarına göre kullanıcılara [eğitim atayın](attack-simulation-training.md#assign-training).
+- Simülasyonlar ve eğitim tamamlama aşamasında kuruluşunuzun [ilerleme durumunu izleyin](attack-simulation-training-insights.md).
 
-  :::image type="content" source="../../media/mdo-trial-playbook-attack-simulation-training-results.png" alt-text="Microsoft 365 Defender portalında saldırı benzetimi eğitim öngörüleri" lightbox="../../media/mdo-trial-playbook-attack-simulation-training-results.png":::
+  :::image type="content" source="../../media/mdo-trial-playbook-attack-simulation-training-results.png" alt-text="Microsoft 365 Defender portalındaki saldırı simülasyonu eğitim içgörüleri." lightbox="../../media/mdo-trial-playbook-attack-simulation-training-results.png":::
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- **Etkileşimli kılavuz**: Nasıl olduğunu Office 365 için Defender? Nasıl [başla ilgili olduğunu](https://mslearn.cloudguides.com/guides/Safeguard%20your%20organization%20with%20Microsoft%20Defender%20for%20Office%20365) anlamak için etkileşimli kılavuzu gözden geçirin.
-- **Microsoft belgeleri**: Belgelerinizin nasıl çalıştığını ve Office 365 için Defender için en iyi nasıl uygulayacağı hakkında ayrıntılı bilgi edinebilirsiniz. [Belgeler'i ziyaret edin](overview.md).
-- **Neler dahildir: Ürün** katmanına göre listelenen Office 365-posta güvenlik özelliklerinin tam listesi için Özellik Matrisi'ne [tıklayın](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#feature-availability).
-- **Neden Office 365 için Defender**: Veri [Office 365 için Defender sayfasında](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4FCiy) müşterilerin Microsoft'u seçmesi için 10 neden vardır.
+- **Etkileşimli kılavuz**: Office 365 için Defender aşina değil misiniz? Nasıl başlayabileceğinizi anlamak için [etkileşimli kılavuzu](https://mslearn.cloudguides.com/guides/Safeguard%20your%20organization%20with%20Microsoft%20Defender%20for%20Office%20365) gözden geçirin.
+- **Microsoft belgeleri**: Office 365 için Defender nasıl çalıştığı ve kuruluşunuz için bunu en iyi şekilde nasıl uygulayacakları hakkında ayrıntılı bilgi edinin. [Docs'u](overview.md) ziyaret edin.
+- **Dahil olanlar**: Ürün katmanı tarafından listelenen Office 365 e-posta güvenlik özelliklerinin tam listesi için [Özellik Matrisi'ni](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#feature-availability) görüntüleyin.
+- **Neden Office 365 için Defender**: [Office 365 için Defender Veri Sayfası](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4FCiy), müşterilerin Microsoft'u seçmesinin en önemli 10 nedenini gösterir.

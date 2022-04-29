@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Bir soruşturma veya yasal davayla ilgili içeriği korumak için Microsoft 365 bir eBulma (Standart) olayıyla ilişkili bir ayrı tutma oluşturabilirsiniz.
-ms.openlocfilehash: e91e67b39a160de99856d73af8da6ab17d1d6fba
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: ddd1b2e62c2ec63dbd2303cadcef6a1d12f4dfc7
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095022"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65130921"
 ---
 # <a name="create-an-ediscovery-hold"></a>eBulma ayrı tutma oluşturma
 
@@ -66,7 +66,7 @@ eBulma (Standart) olayıyla ilişkili bir eBulma tutması oluşturmak için:
    3. **Ortak klasörleri Exchange**: Exchange Online kuruluşunuzdaki tüm ortak klasörleri beklemeye almak için iki durumlu düğmeyi **Açık** olarak ayarlayın. Beklemeye almak için belirli ortak klasörleri seçemezsiniz. Ortak klasörleri bekletmek istemiyorsanız iki durumlu düğmeyi kapalı bırakın.
 
    > [!IMPORTANT]
-   > Ayrı tutmaya Exchange posta kutuları veya SharePoint siteleri eklerken, ayrı tutmaya açıkça en az bir içerik konumu eklemeniz gerekir. Başka bir deyişle, posta kutuları veya siteler için iki durumlu düğmeyi **Açık** olarak ayarlarsanız, ayrı tutmaya eklemek üzere belirli posta kutularını veya siteleri seçmeniz gerekir. Aksi takdirde, eBulma ayrı tutması oluşturulur, ancak ayrı tutmaya hiçbir posta kutusu veya site eklenmez ve istatistikler hiçbir içerik konumunun veya öğenin ayrı tutmadığını gösterir.
+   > Ayrı tutmaya Exchange posta kutuları veya SharePoint siteleri eklerken, ayrı tutmaya açıkça en az bir içerik konumu eklemeniz gerekir. Başka bir deyişle, posta kutuları veya siteler için iki durumlu düğmeyi **Açık** olarak ayarlarsanız, ayrı tutmaya eklemek üzere belirli posta kutularını veya siteleri seçmeniz gerekir. Aksi takdirde, eBulma ayrı tutması oluşturulur, ancak ayrı tutmaya hiçbir posta kutusu veya site eklenmez.
 
 8. Ayrı tutmaya konum eklemeyi bitirdiğinizde **İleri'ye** tıklayın.
 
@@ -94,24 +94,6 @@ SharePoint sitelerde bulunan belgelere sorgu tabanlı eBulma ayrılığı yerle�
 - Sorgu tabanlı ayrı tutma başlangıçta sitedeki tüm belgeleri silindikten sonra kısa bir süre korur. Başka bir deyişle, bir belge silindiğinde sorgu tabanlı saklama ölçütlerine uymasa bile Koruma Bekletme kitaplığına taşınacaktır. Ancak, sorgu tabanlı ayrı tutmayla eşleşmeyen silinen belgeler, Koruma Bekletme kitaplığını işleyen bir zamanlayıcı işi tarafından kaldırılır. Zamanlayıcı işi düzenli aralıklarla çalışır ve Koruma Bekletme kitaplığındaki tüm belgeleri sorgu tabanlı eKeşif tutmalarınızla (ve diğer saklama ve saklama ilkeleri türleriyle) karşılaştırır. Zamanlayıcı işi, sorgu tabanlı ayrı tutmayla eşleşmeyen belgeleri siler ve eşleşen belgeleri korur.
 
 - Belirli bir klasör veya sitedeki belgeleri korumak veya diğer konum tabanlı saklama ölçütlerini kullanmak gibi hedeflenen korumayı gerçekleştirmek için sorgu tabanlı tutmalar kullanılmamalıdır. Bunun yapılması istenmeyen sonuçlara neden olabilir. Site belgelerini korumak için anahtar sözcükler, tarih aralıkları veya diğer belge özellikleri gibi konum tabanlı olmayan saklama ölçütleri kullanmanızı öneririz.
-
-## <a name="ediscovery-hold-statistics"></a>eBulma saklama istatistikleri
-
-Bir eBulma ayrı tutması oluşturduktan sonra, yeni ayrı tutma hakkındaki bilgiler seçili ayrı tutmanın açılır sayfasında görüntülenir. Bu bilgiler, ayrı tutmadaki posta kutularının ve sitelerin sayısını ve ayrı tutmaya alınan içeriğin toplam sayısı ve boyutu ve ayrı tutma istatistiklerinin son hesaplanma zamanı gibi istatistikleri içerir. Bu saklama istatistikleri, servis talebiyle ilgili olarak korunan içerik miktarını belirlemenize yardımcı olur.
-  
-![İstatistikleri tutun.](../media/eDiscoveryHoldStatistics.png)
-  
-eBulma saklama istatistikleri hakkında aşağıdaki şeyleri aklınızda bulundurun:
-  
-- Ayrı tutmadaki öğelerin toplam sayısı, beklemeye alınan tüm içerik kaynaklarından gelen öğelerin sayısını gösterir. Sorgu tabanlı bir ayrı tutma oluşturduysanız, bu istatistik sorguyla eşleşen öğelerin sayısını gösterir.
-
-- Ayrı tutmadaki öğelerin sayısı, içerik konumlarında bulunan dizine alınmamış öğeleri de içerir. Sorgu tabanlı ayrı tutma oluşturursanız, içerik konumlarındaki tüm dizinlenmemiş öğeler beklemeye alınır. Bu, sorgu tabanlı ayrı tutmanın arama ölçütlerine uymayan dizinlenmemiş öğeleri ve tarih aralığı koşulunun dışında kalan dizine alınmamış öğeleri içerir. Bu, arama sorgusuyla eşleşmeyen veya tarih aralığı koşulu tarafından dışlanan dizine alınmamış öğelerin arama sonuçlarına dahil edilmediği bir arama çalıştırdığınızda gerçekleşenlerden farklıdır. Dizinlenmemiş öğeler hakkında daha fazla bilgi için bkz. [Kısmen dizine alınmış öğeler](partially-indexed-items-in-content-search.md).
-
-- Beklemedeki geçerli öğe sayısını hesaplayan bir arama tahminini yeniden çalıştırmak için **İstatistikleri güncelleştir'e** tıklayarak en son saklama istatistiklerini alabilirsiniz.
-
-- Posta kutusu veya sitesi beklemede olan kullanıcılar genellikle yeni e-posta iletisi gönderip aldığından ve SharePoint ve OneDrive yeni belgeler oluşturduğundan, beklemedeki öğelerin sayısının zaman içinde artması normaldir.
-
-- Bir Exchange posta kutusu, SharePoint site veya OneDrive hesabı çok coğrafi bir ortamda farklı bir bölgeye taşınırsa, söz konusu sitenin istatistikleri ayrı tutma istatistiklerine dahil edilmeyecektir. Ancak bu konumlardaki içerik korunmaya devam eder. Ayrıca, bir posta kutusu veya site farklı bir bölgeye taşınırsa, ayrı tutmada görüntülenen SMTP adresi veya URL otomatik olarak güncelleştirilmez. İçerik konumlarının ayrı tutma istatistiklerine bir kez daha dahil olması için bekletmeyi düzenlemeniz ve URL'yi veya SMTP adresini güncelleştirmeniz gerekir
 
 ## <a name="search-locations-on-ediscovery-hold"></a>eBulma ayrı tutmada arama konumları
 

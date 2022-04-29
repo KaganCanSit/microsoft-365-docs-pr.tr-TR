@@ -1,5 +1,5 @@
 ---
-title: Başvuru İlkeleri, yöntemler ve yönergeler
+title: Başvuru İlkeleri, uygulamalar ve yönergeler
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -14,91 +14,91 @@ search.appverid:
 ms.assetid: ff3f140b-b005-445f-bfe0-7bc3f328aaf0
 ms.collection:
 - M365-security-compliance
-description: Microsoft, kullanıcılarımızı kötü amaçlı, istenmeyen veya kötü amaçlı e-postalara karşı korumaya yardımcı olmak için çeşitli ilkeler, yordamlar ve çeşitli endüstri en iyi yöntemleri benimsedi.
+description: Microsoft, kullanıcılarımızı kötü amaçlı, istenmeyen veya kötü amaçlı e-postalara karşı korumaya yardımcı olmak için çeşitli ilkeler, yordamlar geliştirmiş ve sektördeki en iyi yöntemleri benimsemiştir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 21b1918155755d7786f7b797ae7c705ca8c0ec39
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 815fea8981fdab8825a109dae69abaf8232997f9
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988765"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65130373"
 ---
-# <a name="reference-policies-practices-and-guidelines"></a>Başvuru: İlkeler, yöntemler ve yönergeler
+# <a name="reference-policies-practices-and-guidelines"></a>Başvuru: İlkeler, uygulamalar ve yönergeler
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
-**Geçerli olduğu yer:**
+**Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Microsoft, web'de en güvenilir kullanıcı deneyimini sağlama konusunda yardımcı olmak için ayrılmıştır. Bu nedenle, Microsoft kullanıcılarımızı kötü amaçlı, istenmeyen veya kötü amaçlı e-postalara karşı korumaya yardımcı olmak için çeşitli endüstri en iyi yöntemleri benimseyen çeşitli ilkeler, yordamlar ve benimsenmiş oldu. Kullanıcılara e-posta göndermeye çalışan gönderenler, bu çabaya yardımcı olmak ve olası teslim sorunlarını önlemeye yardımcı olmak için bu makaledeki rehberleri tam olarak anlarından ve takiplarından emin olmalı.
+Microsoft, web'de en güvenilir kullanıcı deneyimini sağlamaya yardımcı olmaya kendini adamıştır. Bu nedenle Microsoft, kullanıcılarımızı kötü amaçlı, istenmeyen veya kötü amaçlı e-postalara karşı korumaya yardımcı olmak için çeşitli ilkeler, yordamlar geliştirmiş ve çeşitli sektör en iyi uygulamalarını benimsemiştir. Kullanıcılara e-posta göndermeye çalışan gönderenler, bu çabaya yardımcı olmak ve olası teslim sorunlarını önlemeye yardımcı olmak için bu makaledeki yönergeleri tam olarak anlamalarını ve takip etmelerini sağlamalıdır.
 
-Bu ilke ve yönergelere uygun değilsanız, destek ekibimiz size yardımcı olabilir. Bu makalede sunulan yönergelere, uygulamalara ve ilkelere bağlı olarak kalıyorsanız ve gönderen IP adresinize bağlı olarak teslim sorunlarıyla hala yaşıyorsanız, lütfen kayıt isteği göndermek için adımları izleyin. Yönergeler için bkz [. Kendinizi engellenen gönderenler listesinden kaldırmak için liste portalını kullanma](use-the-delist-portal-to-remove-yourself-from-the-office-365-blocked-senders-lis.md).
+Bu ilkeler ve yönergelerle uyumlu değilseniz destek ekibimizin size yardımcı olması mümkün olmayabilir. Bu makalede sunulan yönergelere, uygulamalara ve ilkelere uyuyorsanız ve gönderme IP adresinize bağlı olarak hala teslim sorunlarıyla karşılaşıyorsanız, lütfen listeden çıkarma isteği göndermek için adımları izleyin. Yönergeler için bkz. [Liste kaldırma portalını kullanarak kendinizi engellenen gönderenler listesinden kaldırma](use-the-delist-portal-to-remove-yourself-from-the-office-365-blocked-senders-lis.md).
 
 ## <a name="general-microsoft-policies"></a>Genel Microsoft ilkeleri
 
-Kullanıcılara gönderilen Microsoft 365, e-posta iletimi ve kullanıcı e-postanın kullanımıyla ilgili tüm Microsoft ilkelerine uygun Microsoft 365.
+Microsoft 365 kullanıcılarına gönderilen e-postalar, e-posta iletimini ve Microsoft 365 kullanımını yöneten tüm Microsoft ilkeleriyle uyumlu olmalıdır.
 
-- Web sitelerine uygulanan Microsoft 365 Koşulları; özellikle de hizmeti istenmeyen posta olarak kullanmak veya kötü amaçlı yazılım dağıtmak için yasaklama.
+- Microsoft 365 için geçerli hizmet koşulları; özellikle de hizmeti istenmeyen posta veya kötü amaçlı yazılım dağıtmak için kullanma yasağı.
 
 - [Microsoft Hizmet Sözleşmesi](https://www.microsoft.com/servicesagreement/)
 
 ## <a name="governmental-regulations"></a>Resmi düzenlemeler
 
-Kullanıcılara gönderilen Microsoft 365 ilgili yargı yetkisine sahip e-posta iletişimlerini yöneten tüm geçerli yasalara ve yasal düzenlemelere uyması gerekir.
+Microsoft 365 kullanıcılarına gönderilen e-postalar, geçerli yargı yetkisindeki e-posta iletişimlerini yöneten tüm geçerli yasalara ve düzenlemelere uymalıdır.
 
-- [CAN-SPAM Act: A Compliance Guide for Business](https://www.ftc.gov/tips-advice/business-center/guidance/can-spam-act-compliance-guide-business)
+- [CAN-SPAM Yasası: İş İçin Uyumluluk Kılavuzu](https://www.ftc.gov/tips-advice/business-center/guidance/can-spam-act-compliance-guide-business)
 
-- ["Beni Kaldır" Yanıtları ve Sorumlulukları: E-posta Pazarlamacıları "Abonelikten Çıkma" İddialarını Yerine Getirmeli](https://www.lawpublish.com/ftc-emai-marketers-unsubscribe-claims.html)
+- ["Beni Kaldır" Yanıtları ve Sorumlulukları: E-posta Pazarlamacıları "Abonelikten Çıkma" Taleplerine Saygı Göstermelidir](https://www.lawpublish.com/ftc-emai-marketers-unsubscribe-claims.html)
 
 ## <a name="technical-guidelines"></a>Teknik yönergeler
 
-E-Microsoft 365 gönderilen e-postanın aşağıdaki belgelerde listelenen uygulanabilir önerilere uygun olması gerekir (bazı bağlantılar yalnızca İngilizce dilinde kullanılabilir).
+Microsoft 365'a gönderilen e-postalar, aşağıdaki belgelerde listelenen geçerli önerilerle uyumlu olmalıdır (bazı bağlantılar yalnızca İngilizce olarak sağlanır).
 
-- [RFC 2505: SMTP MTA'lar Öneriler İstenmeyen Posta Önleme bilgileri](https://www.ietf.org/rfc/rfc2505.txt)
+- [RFC 2505: SMTP MTA'ları için İstenmeyen Posta önleme Öneriler](https://www.ietf.org/rfc/rfc2505.txt)
 
-- [RFC 2920: Komut Aktarma için SMTP Hizmet Uzantısı](https://www.ietf.org/rfc/rfc2920.txt)
+- [RFC 2920: Komut Kanal Oluşturma için SMTP Hizmet Uzantısı](https://www.ietf.org/rfc/rfc2920.txt)
 
-Buna ek olarak, E-posta'ya Microsoft 365 e-posta sunucularının aşağıdaki gereksinimlere uyması gerekir:
+Ayrıca, Microsoft 365 bağlanan e-posta sunucuları aşağıdaki gereksinimlere uymalıdır:
 
-- Gönderenin, RFC 5321, RFC 5322 ve diğer İnternet Internet Mühendislik Görev Gücü'nde (IETF) yayımladığı üzere, İnternet e-postası iletimiyle ilgili tüm teknik standartlara uyması bekleniyor.
+- Rfc 5321, RFC 5322 ve diğerleri de dahil olmak üzere Internet Society'nin Internet Engineering Task Force (IETF) tarafından yayımlanan gönderenin İnternet e-posta iletimi için tüm teknik standartlara uyması beklenir.
 
-- 500 ile 599 arasında (kalıcı teslim edilemedi yanıtı veya NDR olarak da bilinir) sayısal SMTP hata yanıt kodu verilidikten sonra, gönderenin bu iletiyi o alıcıya yeniden aktarmayı denemesi gerekir.
+- 500 ile 599 (kalıcı teslim edilemez yanıt veya NDR olarak da bilinir) arasında sayısal bir SMTP hata yanıt kodu verildikten sonra, gönderenin bu iletiyi bu alıcıya yeniden aktarmayı denememesi gerekir.
 
-- Birden fazla teslim yanıtın ardından, gönderenin bu alıcıya e-posta gönderme denemelerini durdurması gerekir.
+- Birden çok teslim edilemez yanıt sonrasında, gönderenin bu alıcıya e-posta gönderme girişimlerini durdurması gerekir.
 
-- İletilerin güvenli olmayan e-posta geçişi veya ara sunucular aracılığıyla iletilenemleri.
+- İletiler güvenli olmayan e-posta geçişi veya proxy sunucuları aracılığıyla iletilmemelidir.
 
-- Tek tek listelerden veya gönderen tarafından barındırılan tüm listelerden abonelikten çıkma mekanizması, alıcıların kolayca belgelenmiş ve kolayca bulunsun ve kullansın.
+- Tek tek listelerden veya gönderen tarafından barındırılan tüm listelerden abonelikten çıkılma mekanizması açıkça belgelenmeli ve alıcıların bulması ve kullanması kolay olmalıdır.
 
-- Dinamik IP boşluğundan bağlantılar kabul edilemey.
+- Dinamik IP alanından bağlantılar kabul edilemeyebilir.
 
-- E-posta sunucularının geçerli geçerli ters DNS kayıtlarına sahip olması gerekir.
+- E-posta sunucularının geçerli ters DNS kayıtları olmalıdır.
 
-## <a name="reputation-management"></a>İtibaren yönetimi
+## <a name="reputation-management"></a>Saygınlık yönetimi
 
-Gönderenler, ISS'ler ve diğer hizmet sağlayıcıları, giden IP adreslerinin itibarını etkin bir şekilde yönetmeleri gerekir.
+Gönderenler, ISS'ler ve diğer hizmet sağlayıcıları, giden IP adreslerinizin itibarını etkin bir şekilde yönetmelidir.
 
 ## <a name="microsoft-365-limits"></a>Microsoft 365 sınırları
 
-Gönderenlerin, Sınırlarda Microsoft 365 sınırlara [Exchange Online Protection gerekir](/office365/servicedescriptions/exchange-online-protection-service-description/exchange-online-protection-limits).
+Gönderenler, Exchange Online Protection [Sınırları'nda listelenen Microsoft 365](/office365/servicedescriptions/exchange-online-protection-service-description/exchange-online-protection-limits) sınırlarına uymalıdır.
 
-## <a name="email-delivery-resources-and-organizations"></a>E-posta teslim kaynakları ve kuruluşlar
+## <a name="email-delivery-resources-and-organizations"></a>E-posta teslim kaynakları ve kuruluşları
 
-Microsoft, İnternet ve e-posta ekosistemini geliştirmek için sektör gövdeleri ve hizmet sağlayıcılarıyla etkin bir şekilde çalışır. Bu kuruluşlar, destekleyen ve gönderenlerin bağlı kalmalarını öneren en iyi uygulama belgelerini yayımlar. Bu, dünyanın her bir yerine gelen çeşitli e-posta servis sağlayıcıları arasında e-posta teslim etme olanağınızı geliştirmektedir.
+Microsoft, internet ve e-posta ekosistemini geliştirmek için sektör kuruluşları ve hizmet sağlayıcılarıyla etkin bir şekilde çalışır. Bu kuruluşlar, desteklediğimiz ve gönderenlerin bağlı kalmasını önerdiğimiz en iyi uygulama belgelerini yayımladı. Bu, dünyanın dört bir yanındaki çeşitli e-posta hizmeti sağlayıcıları arasında e-posta teslim etme becerinizi geliştirir.
 
-- [Malware Mobile Kötü Amaçlı Yazılımdan Korunma Çalışma Grubu](https://www.m3aawg.org/)
+- [Mesajlaşma Kötü Amaçlı Yazılım Mobil Kötü Amaçlı Yazılımdan Koruma Çalışma Grubu](https://www.m3aawg.org/)
 
 - [Online Trust Alliance](https://www.internetsociety.org/ota/)
 
-- [E-posta & Sağlayıcı Sağlayıcı Sağlayıcı](https://www.espcoalition.org/)
+- [E-posta Gönderen & Sağlayıcı Koalisyonu](https://www.espcoalition.org/)
 
-## <a name="abuse-and-spam-reporting"></a>Kötüye kullanım ve istenmeyen posta bildirimi
+## <a name="abuse-and-spam-reporting"></a>Kötüye kullanım ve istenmeyen posta raporlama
 
-Yasa dışı, kötü amaçlı, istenmeyen veya kötü amaçlı e-postaları rapor etmek için bkz [. İletileri ve dosyaları Microsoft'a bildirme](report-junk-email-messages-to-microsoft.md). Bu tür iletişimleri göndermek Microsoft'un ilkelerini ihlal etmiş olur ve onaylandı raporlarında uygun önlemleri alınır.
+Yasa dışı, kötü amaçlı, istenmeyen veya kötü amaçlı e-postaları bildirmek için bkz. [İletileri ve dosyaları Microsoft'a bildirme](report-junk-email-messages-to-microsoft.md). Bu tür iletişimlerin gönderilmesi Microsoft ilkesinin ihlalidir ve onaylanan raporlarda uygun işlemler yapılır.
 
-## <a name="law-enforcement"></a>Yasa yaptırımı
+## <a name="law-enforcement"></a>Kolluk
 
-Bir hukuk yaptırımı üyesiyseniz ve Office 365 ile ilgili yasal belgelerle Microsoft Corporation'a hizmet vermek isterseniz veya Microsoft'a gönderilen yasal belgelerle ilgili sorularınız varsa lütfen (1) (425) 722-1299'u arayın.
+Kolluk kuvvetlerinin bir üyesiyseniz ve Microsoft Corporation'a Office 365 ile ilgili yasal belgelerle hizmet vermek istiyorsanız veya Microsoft'a gönderdiğiniz yasal belgelerle ilgili sorularınız varsa lütfen (1) (425) 722-1299 numaralı telefonu arayın.

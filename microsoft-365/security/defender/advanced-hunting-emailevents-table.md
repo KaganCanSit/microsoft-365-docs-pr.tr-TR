@@ -18,12 +18,12 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: f4456dc29f4d62703041b9c386aa7c9fa132695a
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: b34ac5538a2c38261f7da0a0cd3a75452660ef6e
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64667372"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65128815"
 ---
 # <a name="emailevents"></a>EmailEvents
 
@@ -32,6 +32,7 @@ ms.locfileid: "64667372"
 **Şunlar için geçerlidir:**
 
 - Microsoft 365 Defender
+- Office 365 için Microsoft Defender
 
 [Gelişmiş tehdit avcılığı](advanced-hunting-overview.md) şemasındaki tablo, `EmailEvents` Office 365 için Microsoft Defender e-postaların işlenmesini içeren olaylar hakkında bilgi içerir. Bu tablodan bilgi döndüren sorgular oluşturmak için bu başvuruyu kullanın.
 
@@ -51,7 +52,7 @@ Gelişmiş tehdit avcılığı şemasındaki diğer tablolar hakkında bilgi iç
 | `SenderMailFromAddress` | `string` | POSTADAN üst bilgisindeki gönderen e-posta adresi; zarf göndereni veya Return-Path adresi olarak da bilinir |
 | `SenderFromAddress` | `string` | KIMDEN üst bilgisindeki gönderen e-posta adresi, e-posta istemcilerindeki e-posta alıcıları tarafından görülebilir |
 | `SenderDisplayName` | `string` | Adres defterinde görüntülenen gönderenin adı, genellikle verilen veya adın, ikinci bir adın ve soyadının veya soyadının birleşimidir |
-| `SenderObjectId` | `string` |Azure AD'de gönderenin hesabının benzersiz tanımlayıcısı |
+| `SenderObjectId` | `string` |Azure AD'da gönderenin hesabının benzersiz tanımlayıcısı |
 | `SenderMailFromDomain` | `string` | POSTADAN üst bilgisindeki gönderen etki alanı; zarf göndereni veya Return-Path adresi olarak da bilinir |
 | `SenderFromDomain` | `string` | GÖNDEREN üst bilgisindeki gönderen etki alanı, e-posta istemcilerindeki e-posta alıcıları tarafından görülebilir |
 | `SenderIPv4` | `string` | İletiyi aktaran son algılanan posta sunucusunun IPv4 adresi |

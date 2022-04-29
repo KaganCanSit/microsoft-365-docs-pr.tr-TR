@@ -1,5 +1,5 @@
 ---
-title: Microsoft Uyumluluk Yöneticisi uyarıları ve uyarı ilkeleri
+title: Microsoft Purview Uyumluluk Yöneticisi uyarıları ve uyarı ilkeleri
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -17,228 +17,230 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MOE150
 - MET150
-description: Microsoft Uyumluluk Yöneticisi'nde uyumluluk puanınızı etki etkileyene etkinlikler için nasıl uyarı oluştur oluğunu öğrenin.
-ms.openlocfilehash: bb81588be31b2c13113953c585112ee2f5a56875
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Microsoft Purview Uyumluluk Yöneticisi'nde uyumluluk puanınızı etkileyebilecek etkinlikler için uyarılar oluşturmayı öğrenin.
+ms.openlocfilehash: b1e5630e20ace4835f8651d1878e731e423f58b1
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63704692"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65129166"
 ---
-# <a name="microsoft-compliance-manager-alerts-and-alert-policies"></a>Microsoft Uyumluluk Yöneticisi uyarıları ve uyarı ilkeleri
+# <a name="microsoft-purview-compliance-manager-alerts-and-alert-policies"></a>Microsoft Purview Uyumluluk Yöneticisi uyarıları ve uyarı ilkeleri
 
-**Bu makalede:** Uyumluluk **Yöneticisi'nde belirli** etkinlikler için uyarı ayarlamayı, uyarıları yönetmeyi ve uyarı koşulları tanımlamak için **uyarı** ilkeleri oluşturmayı öğrenin.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+**Bu makalede:** Uyumluluk Yöneticisi'nde belirli etkinlikler için **uyarı ayarlamayı** , uyarıları yönetmeyi ve uyarı koşullarını tanımlamak için **uyarı ilkeleri oluşturmayı** öğrenin.
 
 ## <a name="overview"></a>Genel bakış
-Uyumluluk Yönetimi, değişiklik olur olmaz sizi uyararak uyumluluk hedeflerinize bağlı kalmanızı sağlar. Örneğin, kiracınız yapılandırma değişikliği nedeniyle bir geliştirme eyleminin puanının ne zaman artmış veya azaldığını ya da uygulama veya test çalışması yapmak üzere kullanıcıya bir geliştirme eylemi atandığı konusunda sizi bilgilendirmek için uyarılar kurabilirsiniz. Uyarı [oluşturabilirsiniz](#create-an-alert-policy) .
+Uyumluluk Manger, uyumluluk hedeflerinizi takip edebilmeniz için değişiklikler gerçekleşir gerçekleşmez sizi uyarabilir. Örneğin, kiracınızdaki bir yapılandırma değişikliği nedeniyle bir iyileştirme eyleminin puan değeri arttığında veya azaldığında ya da bir kullanıcıya uygulama veya test çalışması yapması için bir iyileştirme eylemi atandığında sizi bilgilendirecek uyarılar ayarlayabilirsiniz. Uyarı oluşturabileceğiniz [olay türlerini](#create-an-alert-policy) görüntüleyin.
 
-Uyarı oluşturmak için, önce bir uyarıyı tetikleyen koşulları ve bildirim sıklığını tetikleyen koşulların ana hatlarını oluşturmak için bir uyarı ilkesi ayarlaytısınız. İlke koşullarınıza uygun bir eşleşme algılarsanız, ayrıntıları içeren bir e-posta bildirimi alırsınız ve bu nedenle incelemeniz veya başka bir işlem yapmak isteyip istemeyebilirsiniz.
+Uyarı oluşturmak için, önce bir uyarıyı tetikleyen koşulları ve bildirimlerin sıklığını ana hatlarıyla belirlemek için bir uyarı ilkesi ayarlarsınız. İlke koşullarınızla bir eşleşme algıladığımızda ayrıntıları içeren bir e-posta bildirimi alırsınız; böylece araştırmanız veya başka işlemler yapmanız gerekip gerekmediğini belirleyebilirsiniz.
 
 
-Tüm uyarılar, Uyumluluk **Yönetimi'nin** Uyarılar sekmesinde ve tüm uyarı ilkeleri de Uyarı İlkeleri **sekmesinde listelenir**.
+Tüm uyarılar Uyumluluk Günlüğü'ndeki **Uyarılar** sekmesinde, tüm uyarı ilkeleri ise **Uyarı İlkeleri sekmesinde** listelenir.
 
 ## <a name="understanding-the-alerts-and-alert-policies-pages"></a>Uyarılar ve Uyarı ilkeleri sayfalarını anlama
 
 > [!IMPORTANT]
-> Uyumluluk   **Yöneticisi'nde Uyarılar** ve Uyarı ilkeleri sayfalarına Azure Active Directory için, kullanıcıların Uyumluluk Yönetimi'nde (AD) Güvenlik okuyucusu rolünü tutmaları gerekir. Uyarılarla ve uyarı ilkeleriyle çalışmak için ek güvenlik ve Uyumluluk Yöneticisi rolleri gereklidir. Aşağıda, Uyarı ilkesi [izinleri'nin ayrıntılarını bulabilirsiniz](#alert-policy-permissions).
+> Uyumluluk Yöneticisi'ndeki **Uyarılar** ve **Uyarı ilkeleri** sayfalarına erişmek için kullanıcıların Azure Active Directory(AD) içinde **Güvenlik okuyucusu** rolüne sahip olması gerekir. Uyarılar ve uyarı ilkeleriyle çalışmak için ek güvenlik ve Uyumluluk Yöneticisi rolleri gerekir. [Uyarı ilkesi izinleri](#alert-policy-permissions) bölümünde ayrıntıları aşağıda bulabilirsiniz.
 
 ### <a name="alert-policies-page"></a>Uyarı ilkeleri sayfası
 
-Uyarı **ilkelerinizi görüntülemek** ve yönetmek için Uyumluluk Yönetimi'nin Uyarı ilkeleri sekmesini seçin. Uyarı **ilkeleri sayfası** , kurum tarafından oluşturulan tüm ilkelerin liste listesini içeren bir tablo içerir. Bu sayfadan yeni ilkeler oluşturabilir, var olan ilkeleri düzenleyebilir, etkinleştirme durumunu değiştirebilir ve ilkeleri silebilirsiniz.
+**Uyarı ilkelerinizi** görüntülemek ve yönetmek için Uyumluluk Yöneticisi'nde Uyarı ilkeleri sekmesini seçin. **Uyarı ilkeleri** sayfası, kuruluşunuz tarafından oluşturulan tüm ilkeleri listeleyen bir tablo içerir. Bu sayfadan yeni ilkeler oluşturabilir, mevcut ilkeleri düzenleyebilir, etkinleştirme durumunu değiştirebilir ve ilkeleri silebilirsiniz.
 
-Durum sütununda **Etkin ayarı****,** ilkenin etkin olduğu ve koşullar karşılendiğinde uyarıları tetikley olduğu anlamına gelir. **Etkin değil** , ilkenin var olduğu ancak uyarı oluşturma olduğu anlamına gelir. İlkeler tablosu ayrıca, ilkenin önem derecesine ve ilkenin en son değiştirilma tarihini de gösterir.
+**Durum sütununda** **Etkin**, ilkenin etkin olduğu ve koşullar karşılandığında uyarıları tetiklediğinde olduğu anlamına gelir. **Etkin değil** , ilkenin var olduğu ancak uyarı oluşturmayolduğu anlamına gelir. İlkeler tablosu, ilkenin önem derecesini ve ilkenin son değiştirilme tarihini de gösterir.
 
-Tek tek ilkenin ayrıntılarını görüntülemek için, tabloda o ilkenin satırına tıklayın. Tüm ayrıntıları gösteren bir uçarak çıkış bölmesi görüntülenir. Bölmenin  en altındaki Eylem düğmesini seçin ve ilkeyi düzenleme, uyarılarını görüntüleme veya silme seçeneklerinden birini belirleyin. Ekleme, düzenleme, silme, etkinleştirme ve devre dışı bırakma komutları tablonun üst kısmında filtrelerin üzerinde de kullanılabilir.
+Tek bir ilkenin ayrıntılarını görüntülemek için tablodaki satırını seçin. Tüm ayrıntıları gösteren bir açılır pencere bölmesi görüntülenir. Bölmenin alt kısmındaki **Eylem** düğmesini seçin ve ilkeyi düzenlemek, uyarılarını görüntülemek veya silmek için seçenekler arasından seçim yapın. Ekleme, düzenleme, silme, etkinleştirme ve devre dışı bırakma komutları, filtrelerin üzerinde tablonun üst kısmında da kullanılabilir.
 
-Uyarı ilkesi oluşturmaya başlama için bkz. [Uyarı ilkesi oluşturma](#create-an-alert-policy).
+Uyarı ilkesi oluşturmaya başlamak için bkz. [Uyarı ilkesi oluşturma](#create-an-alert-policy).
 
 ### <a name="alerts-page"></a>Uyarılar sayfası
 
-Uyarılarınızı **görüntülemek** ve yönetmek için Uyumluluk Yöneticisi'nde Uyarılar sekmesini seçin. Uyarılar **sayfası** , bir uyarı ilkesi tarafından oluşturulan her uyarının önem derecesi ve tetikleyen olay (örneğin, bir eylemin puanı değişikliği) ve uyarının tarihini içeren bir tablo içerir.
+**Uyarılarınızı** görüntülemek ve yönetmek için Uyumluluk Yöneticisi'nde Uyarılar sekmesini seçin. **Uyarılar** sayfasında, bir uyarı ilkesi tarafından oluşturulan her uyarının yanı sıra önem derecesi ve tetikleme olayı (örneğin, bir eylemin puan değişikliği) ve uyarının tarihi listelendiği bir tablo bulunur.
 
-Tek bir uyarıyı görüntülemek için tabloda bu uyarıyı seçin. Bölmenin Genel Bakış sekmesinde tüm ayrıntıları gösteren bir **açılır** bölme görüntülenir. Olaylar **günlüğü sekmesi** , uyarıyı tetikleyen kullanıcıların dim eylemleri görüntüler.
+Tek bir uyarıyı görüntülemek için tablodaki satırını seçin. Bölmenin **Genel Bakış** sekmesinde tüm ayrıntıları gösteren bir açılır pencere görüntülenir. **Olaylar günlüğü** sekmesinde, uyarıyı tetikleyen kullanıcılar tarafından gerçekleştirilen eylemler görüntülenir.
 
-**Bölmenin** en altındaki Eylem düğmesi, bu uyarıyı izleme için bir kullanıcıya atama, eylemleri uyarıyı oluşturan kullanıcıya e-posta gönderme veya uyarıyı oluşturan ilkenin ayrıntılarını görüntüleme seçenekleri sağlar. Uyarı adının sol tarafından görüntülenen yuvarlak düğmeyi seçerek, satırın üzerine gelin ve tablonun üst kısmında, filtrelerin üstündeki düğmelerden birini seçerek de aynı işlemleri gerçekleştirebilirsiniz.
+Bölmenin altındaki **Eylem** düğmesi, uyarıyı izleme için kullanıcıya atama, eylemleri uyarıyı oluşturan kullanıcıya e-posta gönderme veya uyarıyı oluşturan ilkenin ayrıntılarını görüntüleme seçenekleri sağlar. Ayrıca, satırının üzerine geldiğinizde uyarı adının solunda görünen yuvarlak düğmeyi seçip filtrelerin üstündeki tablonun üst kısmındaki düğmelerden birini seçerek de aynı eylemleri gerçekleştirebilirsiniz.
 
-Uyarılarla çalışmaya başlamak için bkz [. Uyarıları görüntüleme ve yönetme](#viewing-and-managing-alerts).
+Uyarılarla çalışmaya başlamak için bkz. [Uyarıları görüntüleme ve yönetme](#viewing-and-managing-alerts).
 
-## <a name="alert-policy-permissions"></a>İlke izinlerini uyarın
+## <a name="alert-policy-permissions"></a>Uyarı ilkesi izinleri
 
-Aşağıdaki tabloda, kullanıcıların rol türüne göre uyarı ve uyarı ilkeleri oluştur ve düzenleyemezsiniz. Uyumluluk Yöneticisi rolünün yanı sıra, kullanıcıların aşağıdaki gibi bir Azure AD rolüne de ihtiyacı vardır:
+Aşağıdaki tabloda, hangi kullanıcıların rol türlerine göre uyarılar ve uyarı ilkeleri oluşturup düzenleyebileceği özetlenmiştir. Uyumluluk Yöneticisi rolüne ek olarak, kullanıcıların aşağıdaki gibi bir Azure AD rolüne de ihtiyacı vardır:
 
-- Uyarıları **ve uyarı** ilkelerini görüntülemek için Azure AD'de Güvenlik okuyucu rolü
-- Uyarı **ilkelerini oluşturmak** veya güncelleştirmek için Azure AD'de Güvenlik yöneticisi rolü
+- Uyarıları ve uyarı ilkelerini görüntülemek için Azure AD Güvenlik **okuyucusu** rolü
+- Uyarı ilkelerini oluşturmak veya güncelleştirmek için Azure AD'deki **Güvenlik yöneticisi** rolü
  
-Aşağıdaki ağdan [Azure rolleri hakkında daha fazla Microsoft 365 uyumluluk merkezi](microsoft-365-compliance-center-permissions.md#azure-roles-in-the-microsoft-365-compliance-center).
+[Microsoft Purview uyumluluk portalında Azure rolleri](microsoft-365-compliance-center-permissions.md#azure-roles-in-the-compliance-portal) hakkında daha fazla bilgi edinin.
 
 
-| Rol | İlkeleri oluşturabilir ve düzenleyebilir | Uyarıları düzenleyebilir | 
+| Rol | İlkeler oluşturabilir ve düzenleyebilir | Uyarıları düzenleyebilir | 
 | :------------- | :-------------: | :------------: |
 | **Uyumluluk Yöneticisi Yönetimi**| Evet  | Evet | 
-| **Uyumluluk Yöneticisi Değerlendiren**| Evet | Evet | 
-| **Uyumluluk Yöneticisi Katkı**| Evet | Evet | 
-| **Genel Yönetici**| Hayır | Hayır  | 
-| **Uyumluluk Yöneticisi Okuyucu**| Hayır | Hayır | 
+| **Uyumluluk Yöneticisi Değerlendiricisi**| Evet | Evet | 
+| **Uyumluluk Yöneticisi Katkısı**| Evet | Evet | 
+| **Genel Yönetici**| Evet | Evet  | 
+| **Uyumluluk Yöneticisi Okuyucusu**| Hayır | Hayır | 
 
-Uyumluluk Yöneticisi için [kullanıcı izinlerini ayarlamayı ve roller atamayı öğrenin](compliance-manager-setup.md#set-user-permissions-and-assign-roles).
+[Kullanıcı izinlerini ayarlamayı ve Uyumluluk Yöneticisi için roller atamayı](compliance-manager-setup.md#set-user-permissions-and-assign-roles) öğrenin.
 
 ## <a name="create-an-alert-policy"></a>Uyarı ilkesi oluşturma
 
-Geliştirme eylemleriyle ilgili bazı değişiklikler veya olaylar olduğunda sizi uyaran ilkeler oluşturabilirsiniz. Olay türleri aşağıda listelenmiştir.
+İyileştirme eylemleriyle ilgili bazı değişiklikler veya olaylar gerçekleştiğinde sizi uyarmak için ilkeler oluşturabilirsiniz. Olay türleri aşağıda listelenmiştir.
 
 ### <a name="alert-event-types"></a>Uyarı olay türleri
 
-- **Puan değişikliği**: Kuruluşta birinin yaptığı yapılandırma değişiklikleri nedeniyle geliştirme eylemi olarak verilen puan artışı veya düşüş. Örneğin, organizasyonunız bir Insider risk yönetimi ilkesi oluşturursa, bu ilke belirli bir işlem için puanlarınızı belirli bir miktarda artırabilir.
-- **Atama değişikliği**: Bir kullanıcıya geliştirme eylemi atanmış, farklı bir kullanıcıya yeniden atanmış veya kullanıcıdan atanmamış bir eylemdir.
+- **Puan değişikliği**: Kuruluşunuzdaki birinin yaptığı yapılandırma değişiklikleri nedeniyle iyileştirme eylemi için verilen puan artış veya düşüş. Örneğin, kuruluşunuz bir iç risk yönetimi ilkesi oluşturursa bu, belirli bir eylem için puanlarınızı belirli bir miktar artırabilir.
+- **Atama değişikliği**: Kullanıcıya bir iyileştirme eylemi atandı, farklı bir kullanıcıya yeniden atandı veya kullanıcıdan atanmadı.
 - **Uygulama durumu değişikliği**: Kullanıcı, geliştirme eyleminin uygulama durumunu değiştirdi.
-- **Test durumu değişikliği**: Kullanıcı bir geliştirme eyleminin test durumunu değiştirdi.
-- **Kanıt değişikliği**: Kullanıcı geliştirme eyleminin Belgeler sekmesinde bir kanıt **belgesi** yükledi veya sildi.
+- **Test durumu değişikliği**: Kullanıcı, geliştirme eyleminin test durumunu değiştirdi.
+- **Kanıt değişikliği**: Kullanıcı, geliştirme eyleminin **Belgeler** sekmesindeki bir kanıt belgesini karşıya yüklemiş veya silmiştir.
 
 ### <a name="policy-creation-steps"></a>İlke oluşturma adımları
 
-Bir veya birden çok olay temel alarak uyarı oluşturmak için, aşağıdaki adımları izleyin:
+Bir veya daha fazla olayı temel alan uyarılar oluşturmak üzere bir ilke oluşturmak için aşağıdaki adımları izleyin:
 
-1. Uyumluluk **Yöneticisi'nde**, Uyarı ilkeleri **sayfasına gidin** ve **+Ekle'yi seçerek** ilke oluşturma sihirbazını başlatın.
+1. **Uyumluluk Yöneticisi'nde** **Uyarı ilkeleri** sayfasına gidin ve **+Ekle'yi** seçerek ilke oluşturma sihirbazını başlatın.
 
-2. Ad ve **açıklama sayfasında** , ilke için bir ad ve isteğe bağlı olarak bir açıklama girin, sonra da Sonraki'yi **seçin**.
+2. **Ad ve açıklama** sayfasında, ilke için bir ad ve isteğe bağlı bir açıklama girin ve **ardından İleri'yi** seçin.
 
-3. Koşullar **sayfasında** , uyarıyı tetikleyen bir veya birden çok olay seçin. Geliştirme **eylemi etkinliği üst** bilgisinde Alt **koşul ekle'yi** seçin ve her koşul adının sol üzerine gelindiğinde görüntülenen kutuyu işaretleyin. Bir ilke için bir veya daha fazla koşullar seçebilirsiniz: atama değişikliği, kanıt değişikliği, uygulama durumu değişikliği, puan değişikliği, test durumu değişikliği. Bitirdikten sonra, Sonraki'yi **seçin**.
+3. **Koşullar** sayfasında, uyarı tetikleyecek bir veya daha fazla olayı seçin. **İyileştirme eylem etkinliği** üst bilgisi altında **Alt koşullar ekle'yi** seçin ve her koşul adının soluna geldiğinizde görüntülenen kutuyu işaretleyin. İlke için bir veya daha fazla koşul seçebilirsiniz: atama değişikliği, kanıt değişikliği, uygulama durumu değişikliği, puan değişikliği, test durumu değişikliği. İşiniz bittiğinde **İleri'yi** seçin.
 
-4. Sonuçlar **sayfasında** , bir ilke eşleşmesi algılandığında ne olacağını seçin:
-      - Bir eşleşme algılandığında uyarı için önem düzeyi seçin: düşük, orta veya yüksek.
-      - Bir eşleşme algılandığında e-postayla ne sıklıkta bildirileceklerini seçin. Her eşleşmeyle ilgili olarak bildirilecek değeri seçebilir veya üç eşleşmenin üzerindeki belirli bir eşleşme sayısının eşiğini seçebilirsiniz.
-      - Üç veya daha fazla eşleşmeden sonra size bildirilecekse, bu eşiğin ulaş olması gereken dakika sayısını (örneğin, 90 dakika içinde 4 eşleşme) siz seçersiniz.
+4. **Sonuçlar** sayfasında, bir ilke eşleşmesi algılandığında ne olacağını seçin:
+      - Eşleşme algılandığında uyarı için bir önem derecesi seçin: düşük, orta veya yüksek.
+      - Eşleşme algılandığında ne sıklıkta e-postayla bildirim almak istediğinizi seçin. Her eşleşmede bildirim almayı seçebilir veya üç eşleşmenin üzerindeki belirli sayıda eşleşmenin eşiğini seçebilirsiniz.
+      - Üç veya daha fazla eşleşmeden sonra bildirim almayı seçerseniz, bu eşiğe ulaşılması gereken dakika sayısını belirlersiniz (örneğin, 90 dakika içinde 4 eşleşme).
   
-    Bitirerek, Sonraki'yi **seçin**.
+    İşiniz bittiğinde **İleri'yi** seçin.
 
-5. Alıcıyı **uyarın** sayfasında, ilke koşulları karşı olduğunda e-posta almak için kuruluşta diğer kullanıcıları seçin. İlkeyi oluşturan kullanıcı varsayılan alıcıdır. **+Alıcıları seç'i** seçin ve e-posta bildirimini almak istediğiniz çıkış bölmesinde her kullanıcı adının yanındaki kutuları işaretleyin. Bitirerek Alıcı **ekle'yi ve ardından** Sonraki'yi **seçin**.
+5. **Uyarı alıcısı** sayfasında, ilke koşulları karşılandığında e-posta almak için kuruluşunuzdaki ek kullanıcıları seçin. İlkeyi oluşturan kullanıcı varsayılan alıcıdır. **+Alıcıları seç'i** seçin ve e-posta bildirimini almak istediğiniz açılır bölmede her kullanıcı adının yanındaki kutuları işaretleyin. İşiniz bittiğinde **Alıcı ekle'yi** ve ardından **İleri'yi** seçin.
 
-6. Tüm seçimleri gözden geçirerek ve öğesini seçerek her bölümde değişiklik yapın, ardından Sonraki'yi **seçin**. Gözden geçirmeyi bitirdikten sonra İlke **oluştur'a seçin**.
+6. Tüm seçimleri gözden geçirin ve öğesini seçip **İleri'yi** seçerek her bölümde değişiklik yapın. gözden geçirmeyi bitirdiğinizde **İlke oluştur'u** seçin.
 
-7. İlkeniz oluşturulduğunda Bitti'yi **seçin**. Uyarı ilkeleri sayfanıza **, yeni oluşturduğunuz** ilkenin açılır pencere bölmesiyle birlikte gelirsiniz.
+7. İlkeniz oluşturulduğunda **Bitti'yi** seçin. Az önce oluşturduğunuz ilkenin açılır pencere bölmesinin açık olduğu **Uyarı ilkeleri** sayfanıza ulaşırsınız.
 
-İlkeniz bir kez oluşturdukta etkin hale gelir, bu da eşleşmeleri algılamaya ve uyarılar oluşturmaya başlayacağı anlamına gelir. **İlkeleri devre dışı bırakma** veya silme için aşağıdaki İlkeleri yönetme bölümüne bakın.
+İlkenizi oluşturduktan sonra etkin hale gelir; bu da eşleşmeleri algılamaya ve uyarılar oluşturmaya başlayacağı anlamına gelir. **İlkeleri devre** dışı bırakma veya silme hakkında bilgi için aşağıdaki İlkeleri yönetme bölümüne bakın.
 
-İlke oluşturduk veya güncelleştirildikten sonra, bu ilkenin uyarıları oluşturması 24 saate kadar sürebilir. Olayları [tetikleme ve toplama](#view-alert-details) uyarısı hakkında bilgi edinmek için aşağıdaki Uyarı ayrıntılarını görüntüleme'ye bakın.
+İlke oluşturulduktan veya güncelleştirildikten sonra, uyarılar bu ilke tarafından oluşturulmadan önce 24 saat kadar sürebilir. Olayları tetikleme ve uyarı toplama hakkında bilgi edinmek için aşağıdaki Uyarı [ayrıntılarını görüntüleme](#view-alert-details) bölümüne bakın.
 
 ## <a name="managing-policies"></a>İlkeleri yönetme
 
-Uyarı **ilkeleri sayfası** , tüm ilkelerinizin bir tablo listesini içerir. Bu [sayfayı daha fazla anlamak](#alert-policies-page) için bkz. Uyarı ilkeleri sayfası. Bazı eylemler belirli rollerle kısıtlıdır; bkz [. Uyarı ilkesi izinleri](#alert-policy-permissions).
+Uyarı ilkeleri sayfası, tüm **ilkelerinizin** bir tablo listesini içerir. Bu sayfayı daha fazla anlamak için [Uyarı ilkeleri sayfasına](#alert-policies-page) bakın. Kuruluşunuzdaki herhangi bir kullanıcı ilkeleri görüntüleyebilir, ancak bazı eylemler belirli rollerle sınırlıdır; Bkz [. Uyarı ilkesi izinleri](#alert-policy-permissions).
 
 ### <a name="view-policy-details"></a>İlke ayrıntılarını görüntüleme
 
-Uyarı ilkeleri sayfasındaki satırdan bir ilke  seçerek, ilkenin eşleşme koşulları, uyarı bildirimlerinin gönderip gönderilmesi, kimin ve ne zaman ve önem düzeyi de içinde olmak üzere ilkenin ayrıntılarını gösteren bir çıkış paneli açın.
+**Uyarı ilkeleri** sayfasındaki satırından bir ilke seçerek eşleşme koşulları, uyarı bildirimlerinin gönderilip gönderilmediği ve kime gönderileceği ve önem derecesi düzeyi dahil olmak üzere ilkenin ayrıntılarını gösteren bir açılır panel açın.
 
-**Panelin** en altındaki Eylemler düğmesi size ilkeyi düzenleme, ilkeyi silme veya uyarıları görüntüleme seçenekleri sağlar.
+Panelin alt kısmındaki **Eylemler** düğmesi, ilkeyi düzenleme, ilkeyi silme veya uyarıları görüntüleme seçenekleri sunar.
 
 ### <a name="view-a-policys-alerts"></a>İlke uyarılarını görüntüleme
 
-İlkenin çıkış panelinde Eylemler'i ve **ardından** Uyarıları **görüntüle'yi seçin**. Doğrudan, bu ilke tarafından oluşturulan tüm uyarıların filtre uygulanmış görünümünün yer olduğu Uyarılar sayfasına gelirsiniz. Uyarılarla [nasıl çalış öğrenin](#viewing-and-managing-alerts).
+İlkenin açılır panelinde **Eylemler'i** ve ardından **Uyarıları görüntüle'yi** seçin. Bu ilke tarafından oluşturulan tüm uyarıların filtrelenmiş bir görünümüyle doğrudan Uyarılar sayfasına yönlendirilirsiniz. [Uyarılarla çalışmayı](#viewing-and-managing-alerts) öğrenin.
 
 ### <a name="edit-a-policy"></a>İlkeyi düzenleme
 
-İlkenin adı dışında herhangi bir yönünü düzenleyebilirsiniz. Adını değiştirmek için yeni bir adla yeni bir ilke oluşturmanız gerekir.
+İlkenin adı dışında herhangi bir yönünü düzenleyebilirsiniz. Adını değiştirmek istiyorsanız, yeni bir adla yeni bir ilke oluşturmanız gerekir.
 
-Bir ilkeyi düzenlemek için, Uyarı ilkeleri sayfasındaki satırın üzerine gelerek adının sol kısmında görünen yuvarlak düğmeyi seçin ve filtrelerin  üst kısmında bulunan Düzenle düğmesini seçin.
+İlkeyi düzenlemek için **Uyarı ilkeleri** sayfasında satırının üzerine geldiğinizde adının solunda görünen yuvarlak düğmeyi seçin ve filtrelerin üst kısmındaki **Düzenle** düğmesini seçin.
 
-İlke oluşturma sihirbazına alınırsınız ve burada ilkeniz üzerinde değişiklikler yapabilirsiniz ve değişiklikleri kaydedebilirsiniz.  Ayrıca, ayrıntıları paneline getirmek için ilkeyi ve Eylemler düğmesinden **İlkeyi** **düzenle'yi de seçin**. Sihirbazın üzerinde yeniden çalışmaya başladıktan sonra, seçimlerinizi gözden geçirin ve son adımda **Güncelleştir'i** seçerek değişikliklerinizi kaydedin.
+İlke oluşturma sihirbazına yönlendirilirsiniz. Burada ilkenizde değişiklik yapabilir ve değişiklikleri kaydedebilirsiniz.  Ayrıca, ayrıntılar panelini açmak için ilkeyi seçebilir ve **Eylemler** düğmesinden **İlkeyi düzenle'yi** seçebilirsiniz. Sihirbazda yeniden çalıştıktan sonra seçimlerinizi gözden geçirin ve son adımda **Güncelleştir'i** seçerek değişikliklerinizi kaydedin.
 
-Uyarıların güncelleştirilmiş ilke tarafından oluşturulmaları 24 saate kadar sürebilir.
+Uyarıların güncelleştirilmiş ilke tarafından oluşturulması 24 saat kadar sürebilir.
 
 ### <a name="activate-or-inactivate-a-policy"></a>İlkeyi etkinleştirme veya devre dışı bırakma
 
-İlkeler oluşturulduktan hemen sonra varsayılan olarak etkinleştirilir. Etkin olduğunda, koşullar karşı olduğunda bir ilke uyarı (Uyarılar sayfasında gösterilir) oluşturabilir ve belirlenen alıcılara bir bildirim e-postası gönderir.
+İlkeler oluşturulur oluşturulmaz varsayılan olarak etkinleştirilir. Etkin olduğunda, ilke koşullar karşılandığında bir uyarı oluşturur ( **Uyarılar** sayfasında gösterilir) ve belirlenen alıcılara bir bildirim e-postası gönderir.
 
-İlkeyi etkin olmayan durum  olarak değiştirmek (yani uyarı oluşturmaz) için, satırın üzerine geldiğinde ilke adının sol tarafından görüntülenen yuvarlak düğmeyi seçin. Sonra tablonun **üstündeki** Devre dışı bırak komutunu seçin. İlkenizin durumu artık Etkin Değil olarak okunacak. İlkeyi yeniden etkinleştirmek için, aynı işlemi izleyin **ve filtrelerin** üstündeki Etkinleştir düğmesini seçin.
+İlkeyi **etkin olmayan** bir duruma değiştirmek için ( yani uyarı oluşturmaz), satırının üzerine geldiğinizde ilke adının solunda görünen yuvarlak düğmeyi seçin. Ardından tablonun üst kısmındaki **Devre Dışı Bırak** komutunu seçin. İlkenizin durumu artık Etkin Değil olarak okunur. İlkeyi yeniden etkinleştirmek için aynı işlemi izleyin ve filtrelerin üstündeki **Etkinleştir** düğmesini seçin.
 
-### <a name="delete-a-policy"></a>İlkeyi silme
+### <a name="delete-a-policy"></a>İlke silme
 
-bir ilkeyi silmek için, Uyarı ilkeleri sayfasında ilke adının yanındaki **düğmeyi seçin** ve sayfanın üst **kısmında Sil'i** seçin. Ayrıca, ayrıntıları paneline getirmek için ilkeyi ve Eylemler düğmesinden **İlkeyi** **sil'i de seçin**.
+İlkeyi silmek için **Uyarı ilkeleri** sayfasında adının yanındaki düğmeyi ve sayfanın üst kısmındaki **Sil'i** seçebilirsiniz. Ayrıca ilkeyi seçerek ayrıntılar panelini açabilir ve **Eylemler** düğmesinden **İlkeyi sil'i** seçebilirsiniz.
 
-Silme işlemi kalıcıdır. Bir ilkeyi silseniz, artık uyarı veya e-posta bildirimi oluşturmaz. Silinmiş ilkelere bağlı [uyarılar hakkında daha fazla bilgi öğrenin](#when-policies-are-deleted).
+Silme kalıcıdır. Bir ilkeyi sildiğinizde, artık uyarılar veya e-posta bildirimleri oluşturmaz. [Silinen ilkelere bağlı uyarılar](#when-policies-are-deleted) hakkında daha fazla bilgi edinin.
 
 ## <a name="viewing-and-managing-alerts"></a>Uyarıları görüntüleme ve yönetme
 
-Uyarılar **sayfasında** , tüm ilkeleriniz tarafından oluşturulan tüm uyarıların yer olduğu bir tablo görüntülenir. İlkenin koşullarıyla eşleşen bir olay hemen sonra uyarı oluşturulur. Uyarı adı, uyarıyı oluşturan ilkeyle aynıdır.
+**Uyarılar** sayfasında, tüm ilkeleriniz tarafından oluşturulan tüm uyarıları içeren bir tablo gösterilir. Uyarılar, ilkenin koşullarıyla eşleşen bir olay gerçekleştikten hemen sonra oluşturulur. Uyarı adı, uyarıyı oluşturan ilkeyle aynı addır.
 
-Uyarı yalnızca etkin bir ilkeden uyarı oluşturularak oluşturul sağlar. Uyarı bir kez oluşturulsa da, ilkenin etkin olup olmadığı önemli  değildir ve Uyarılar sayfasında listelenir.
+Uyarı yalnızca etkin bir ilkeden oluşturulabilir. Bir uyarı oluşturulduktan sonra, ilkenin etkin veya etkin olmaması fark etmeksizin **Uyarılar** sayfasında listelenir.
 
-### <a name="filter-your-view-of-alerts"></a>Uyarı görünümlerinizi filtreleme
-Uyarılar sayfanız üzerinde yer alan tablonun üstündeki **Filtre komutunu** seçerek uyarıların görünümünü **filtreleyebilirsiniz** . Filtre **uç bölmesinde** , şu filtre seçeneklerinden birini belirleyin:
+### <a name="filter-your-view-of-alerts"></a>Uyarı görünümünüzü filtreleme
+**Uyarılar** sayfanızdaki tablonun üstündeki **Filtre** komutunu seçerek uyarı görünümünüzü filtreleyebilirsiniz. **Filtre** açılır listesinden şu filtre seçenekleri arasından seçim yapın:
 
 - Olay türü
-- Önem Derecesi
+- Önem
 - Durum
 - Atanan kullanıcı
 - Algılama tarihi
 - İlke adı
 
-Seçimlerinizi yaparak Uygula'ya **seçin**. Uçarak giriş bölmesi kapanır ve güncelleştirilmiş **Uyarılar sayfanız** filtrelenmiş görünümlerinizi gösterir. Filtreleriniz tablonun en üstünde görüntülenir, ancak tabloda tüm filtre sütunları görüntülenmez.
+Seçimlerinizi yaptıktan sonra **Uygula'yı** seçin. Açılır pencere bölmesi kapatılır ve güncelleştirilmiş **Uyarılar** sayfanız filtrelenmiş görünümünüzü gösterir. Filtreleriniz tablonun en üstünde görüntülenir, ancak tüm filtre sütunları tabloda gösterilmeyebilir.
 
 ### <a name="view-alert-details"></a>Uyarı ayrıntılarını görüntüleme
 
-Uyarıyı tetikleyen olaylar da dahil olmak üzere uyarıyla ilgili tüm ayrıntıları görüntülemek için, tabloda bu uyarıyı seçin. Açılır bölmede, bölmenin Genel Bakış sekmesinde **uyarının** ayrıntıları gösterilir.
+Uyarıyı tetikleyen olaylar da dahil olmak üzere uyarıyla ilgili tüm ayrıntıları görüntülemek için tablodaki satırını seçin. Açılır bölme, panelin **Genel Bakış** sekmesinde uyarının ayrıntılarını gösterir.
 
-**Açılır** panelin Olaylar günlüğü sekmesi, uyarıyı oluşturan etkinlikleri (not değişikliği veya ödev değişikliği gibi) ve her eylemle ilişkilendirilmiş kullanıcının adı ve algılanan tarihle birlikte listeler.
+Açılır bölmenin **Olaylar günlüğü** sekmesinde, uyarıyı oluşturan puan değişikliği veya atama değişikliği gibi etkinliklerin yanı sıra her eylemle ilişkili kullanıcının adı ve algılanan tarih listelenir.
 
-### <a name="alert-events"></a>Olayları uyarın
+### <a name="alert-events"></a>Uyarı olayları
 
-**Uyarılar** sayfasındaki **Olaylar sütunu** algılanan bir ilkenin koşullarını gösterir; başka bir deyişle, uyarıyı oluşturan etkinlik. **Uyarının** ayrıntılar panelindeki Olaylar günlüğü sekmesinde olayın her örneğinin, ilişkili kullanıcının ve algılanan tarihin listesi yerlanır. Olay değerleri aşağıda listelenmiştir:
+**Uyarılar** sayfasındaki **Olaylar** sütunu, algılanan bir ilkenin koşullarını gösterir; başka bir deyişle, uyarıyı oluşturan etkinlik. Uyarının ayrıntılar panelindeki **Olaylar günlüğü** sekmesi bir olayın her örneğini, ilişkili kullanıcıyı ve algılanan tarihi listeler. Olay değerleri aşağıda listelenmiştir:
 
-- **Puan değişikliği**: puan artış veya azaltma sayısını gösterir
-- **Atama değişikliği**: Bir kullanıcıya geliştirme eylemi atanmış, farklı bir kullanıcıya yeniden atanmış veya kullanıcıdan atanmamış bir eylem
+- **Puan değişikliği**: Puan artış veya düşüş sayısını gösterir
+- **Atama değişikliği**: Kullanıcıya bir iyileştirme eylemi atandı, farklı bir kullanıcıya yeniden atandı veya kullanıcıdan atanmadı
 - **Uygulama durumu değişikliği**: Kullanıcı geliştirme eyleminin uygulama durumunu değiştirdi
-- **Test durumu değişikliği**: Kullanıcı bir geliştirme eyleminin test durumunu değiştirdi.
-- **Kanıt değişikliği**: Kullanıcı geliştirme eyleminin Belgeler sekmesinde bir kanıt belgesi yükledi veya sildi
-- **Birden çok olay**: Aynı olay türünün birden çok örneği algılandı; örneğin, birden çok kez yeniden atanmış tek bir geliştirme eylemi
-- **Birden çok koşul**: Tek bir ilke içinde birden çok koşul algılandı
+- **Test durumu değişikliği**: Kullanıcı, geliştirme eyleminin test durumunu değiştirdi.
+- **Kanıt değişikliği**: Bir kullanıcı, geliştirme eyleminin Belgeler sekmesindeki bir kanıt belgesini karşıya yüklemiş veya silmiş
+- **Çok olaylı**: Aynı olay türünün birden çok örneği algılandı; örneğin, birden çok kez yeniden atanan tek bir iyileştirme eylemi
+- **Çok koşullu**: Tek bir ilke içinde birden çok koşul algılandı
 
-#### <a name="alert-aggregation-for-multiple-events-within-one-minute"></a>Bir dakika içinde birden çok olay için toplamayı uyarın
+#### <a name="alert-aggregation-for-multiple-events-within-one-minute"></a>Bir dakika içinde birden çok olay için uyarı toplama
 
-Bir dakikayla uyarı ilkesi koşullarına uygun birden çok olay gerçekleşirken, bunlar uyarı toplama adı verilen işlem tarafından var olan uyarıya eklenir.
+Bir uyarı ilkesinin koşullarıyla eşleşen birden çok olay bir dakika içinde gerçekleştiğinde, bunlar uyarı toplama adlı bir işlem tarafından var olan bir uyarıya eklenir.
 
-Örneğin, bir ilkeyle eşleşen bir olay olduğunda, Uyarılar sayfasında bir uyarı oluşturulur, görüntülenir ve bir bildirim gönderilir. Aynı ilkeyle eşleşen başka bir olay ilk olayın bir dakika içinde gerçekleşirse, Uyumluluk Yöneticisi yeni uyarıyı tetiklemek yerine var olan uyarının Olay  günlüğü sekmesine ek olayla ilgili ayrıntıları ekler. Uyarı toplamanın amacı, uyarıyı "yorgunluğu" azaltmaya yardımcı olmak ve daha az uyarıya odaklanmak ve önlem almaktır.
+Örneğin, bir ilkeyle eşleşen bir olay gerçekleştiğinde, **Uyarılar** sayfasında bir uyarı oluşturulur ve görüntülenir ve bir bildirim gönderilir. İlk olayın bir dakika içinde aynı ilkeyle eşleşen başka bir olay oluşursa, Uyumluluk Yöneticisi yeni bir uyarı tetikleme yerine mevcut uyarının **Olaylar günlüğü** sekmesinde ek olayla ilgili ayrıntıları ekler. Uyarı toplamanın amacı, uyarı "yorgunluğunu" azaltmaya yardımcı olmak ve daha az uyarıya odaklanmanızı ve eylem gerçekleştirmenizi sağlamaktır.
 
-### <a name="taking-action-on-alerts"></a>Uyarılar üzerinde eylemde bulundurma
+### <a name="taking-action-on-alerts"></a>Uyarılarda eylem gerçekleştirme
 
-İlkelerden biri uyarıyı  oluşturmazsa, uyarıya neden olan olayları sınar ve olayları doğrulamanız mı yoksa daha fazla araştırmanız mı gerekiyor?
+İlkelerinizden biri uyarı oluşturduğunda, uyarıya neden olan olayları görüntüleyebilir ve olayları doğrulamanız mı yoksa daha fazla araştırmanız mı gerektiğini belirleyebilirsiniz.
 
-Uyarı üzerinde eylem yapmak için, Uyarılar sayfasındaki satırı seçerek ayrıntılarıyla birlikte çıkış panelini açın, Eylemler düğmesini seçin ve aşağıda listelenen seçeneklerden birini  belirleyin. Ayrıca, satırın üzerine gelerek uyarı adının sol tarafından görüntülenen yuvarlak düğmeyi seçerek ve filtrelerin üstünde, sayfanın üst kısmında bulunan eylem düğmelerinden birini seçerek de işlem gerçekleştirebilirsiniz.
+Bir uyarı üzerinde işlem yapmak için **Uyarılar** sayfasındaki satırını seçerek açılır paneli ayrıntılarıyla birlikte getirin, **Eylemler** düğmesini seçin ve aşağıda listelenen seçenekler arasından seçim yapın. Ayrıca, satırının üzerine geldiğinizde uyarı adının solunda görünen yuvarlak düğmeyi seçerek ve filtrelerin üstündeki sayfanın üst kısmındaki eylem düğmelerinden birini seçerek de eylemler gerçekleştirebilirsiniz.
 
-**Uyarı ata**: Uyarıya neden olan olayları araştırması veya doğrulaması için bu uyarıyı bir kullanıcıya atamak istiyor olabilirsiniz. Bu seçeneği tercih ettiyseniz, kurumdan bir kullanıcı seçerek uyarıyı bu kullanıcıya atayabilirsiniz. Uyarılar sayfasında Filtreler'i seçerek ve Atanan alanına  kullanıcının adını girerek  uyarılar **görünümünüze filtreleyebilirsiniz**.
+**Uyarı atama**: Uyarıya neden olan olayları araştırmak veya doğrulamak için uyarıyı kullanıcıya atamak isteyebilirsiniz. Bu seçeneği belirlediğinizde, kuruluşunuzdaki bir kullanıcıyı seçebileceğiniz ve uyarıyı ona atayabileceğiniz bir panel açılır. Uyarılar sayfasında **Filtreler'i** seçip **Atanan** alanına kullanıcının adını girerek **uyarı** görünümünüzü filtreleyebilirsiniz.
 
-**E-posta** uyarısı: Eylemin olduğunu onaylamak için uyarının etkinliğiyle ilişkilendirilmiş kullanıcıya bir e-posta göndermek istiyor olabilir. Bu seçeneği tercih ettiyseniz, uyarı hakkında temel bilgileri içeren bir e-posta şablonu açılır. Bu şablonu diğer yönergelerle özelleştirilebilir ve kullanıcıya gönderebilirsiniz.
+**E-posta uyarısı**: Eylemin gerçekleştiğini onaylamak için uyarının etkinliğiyle ilişkili kullanıcıya bir e-posta göndermek isteyebilirsiniz. Bu seçeneği belirttiğinizde uyarıyla ilgili temel bilgileri içeren bir e-posta şablonu açar. Bu şablonu daha fazla yönergeyle özelleştirebilir ve kullanıcıya gönderebilirsiniz.
 
-**İlke ayrıntılarını** görüntüleme: Uyarıyı tetikleyen ilkenin ayarlarını gözden geçirmek gerekebilir. Bu seçeneği belirttiyseniz, ilke ayrıntıları paneli zaten açık durumdayken doğrudan Uyarı ilkeleri  sayfasına alınırsanız bunu unutmayın. Artık ilke ayrıntıları panelini **kapatan** Uyarılarınız sayfasında olmayacaktır.
+**İlke ayrıntılarını görüntüleme**: Uyarıyı tetikleyen ilkenin ayarlarını gözden geçirmek isteyebilirsiniz. Bu seçeneği belirlediğinizde, ilke ayrıntıları panelinin zaten açık olduğu **Uyarı ilkeleri** sayfasına doğrudan yönlendirilirsiniz. İlke ayrıntıları panelini kapattığınızda artık **Uyarılar** sayfanızda olmayacaksınız.
 
-**Durumu değiştirme**: Uyarının etkisini gözden geçirmenize ve incelemeniz gerekip gerekmiyorlarına bağlı olarak uyarının durumunu güncelleştirebilirsiniz. Sonraki bölümde uyarı durumları hakkında daha fazla bilgi edinebilirsiniz.
+**Değişiklik durumu**: Uyarınızın etkisini gözden geçirmenize ve araştırılması gerekip gerekmediğine bağlı olarak uyarınızın durumunu güncelleştirebilirsiniz. Sonraki bölümde uyarı durumları hakkında daha fazla bilgi edinin.
 
 ### <a name="alert-status"></a>Uyarı durumu
 
-Uyarı oluşturulduğunda, bu uyarının durumu **Etkin'tir**. Her uyarının ayrıntılarını gözden geçirebilirsiniz ve bunun durumunu aşağıda listelenen eyaletlerden herhangi biri ile güncelleştirebilirsiniz:
+Bir uyarı oluşturulduğunda, durumu **Etkin** olur. Her uyarının ayrıntılarını gözden geçirirken, uyarının durumunu aşağıda listelenen durumlardan herhangi birine güncelleştirebilirsiniz:
 
 - **Etkin**: Durumu değiştirilene kadar uyarının varsayılan durumu
-- **Araştırılıyor**: uyarı araştırılıyor
-- **Çözümlendi**: Uyarı için daha fazla araştırma veya takip gerekli değil
-- **Reddedildi**: Uyarı ilgili değil veya araştırmaya gerek yok
+- **Araştırma**: uyarı araştırılıyor
+- **Çözüldü**: Uyarı daha fazla araştırma veya takip gerektirmez
+- **Kapatıldı**: Uyarı ilgili değil veya araştırılma ihtiyacı yok
 
-Uyarının durumunu atamak veya değiştirmek için tablodaki satırından bir uyarı seçin, sayfanın üst kısmında, filtrelerin  üstündeki Durumu değiştir'i seçin. Uyarı durumunu güncelleştir açılır bölmesinde, açılan menüden bir durum seçin ve ardından Uyarıyı **güncelleştir'i seçin**.
+Uyarının durumunu atamak veya değiştirmek için, tablodaki satırından bir uyarı seçin, sayfanın üst kısmındaki filtrelerin üstündeki **Durumu değiştir'i** seçin. Uyarı durumunu güncelleştir açılır penceresinden açılan menüden bir durum seçin ve ardından **Uyarıyı güncelleştir'i** seçin.
 
-Uyarı bir kez  oluşturulana kadar, bu uyarının durumu uyarıyı oluşturan ilkenin durumundan bağımsız olur. Örneğin, etkin olmayan bir ilkeyle ilişkilendirilmiş etkin bir uyarının olması ve  daha sonra devre dışı bırakılıyor veya silinmiş bir ilke tarafından oluşturulan  uyarıda araştırılıyor durumlarının araştırılıyor olması mümkündür.
+Bir uyarı oluşturulduktan sonra, durumu uyarıyı oluşturan ilkenin durumundan bağımsızdır. Örneğin, **etkin olmayan** bir ilkeyle ilişkilendirilmiş **etkin** bir uyarı olabilir ve daha sonra devre dışı bırakılmış veya silinmiş bir ilke tarafından oluşturulan bir uyarıda **araştırma** durumu olması mümkündür.
 
 ### <a name="when-policies-are-deleted"></a>İlkeler silindiğinde
 
-İlke silindiğinde, bu ilke tarafından oluşturulan tüm uyarılar Uyarılar sayfasında kalır, ancak yeni uyarı oluşturulmaz.
+İlke silindiğinde, bu ilke tarafından oluşturulan tüm uyarılar **Uyarılar** sayfanızda kalır, ancak yeni uyarı oluşturulmaz.
 
 ## <a name="email-notifications-of-alerts"></a>Uyarıların e-posta bildirimleri
 
-İlke oluşturulduğunda, ilkeyi oluşturan kullanıcıya bir eşleşme algılandığından emin olmak için bir e-posta gönderilir. Bu e-posta bildirimlerini, organizasyon ek kullanıcılara göndermeyi seçebilirsiniz. Uyarılar yakın zamanda gerçek zamanlı olarak gerçekleşir ve bir uyarı oluşturulur oluşturulmaz e-posta bildirimleri gönderilir. E-posta olay adını, önem derecenizi, algılanan zamanı ve Uyumluluk Yöneticisi'nde uyarıyı görüntülemek için bir bağlantı içerir.
+İlke oluşturduğunuzda, ilkeyi oluşturan kullanıcıya bir eşleşme algılandığını belirten bir e-posta gönderilir. Bu e-posta bildirimlerini kuruluşunuzdaki diğer kullanıcılara göndermeyi seçebilirsiniz. Uyarılar neredeyse gerçek zamanlı olarak gerçekleşir ve bir uyarı oluşturulur oluşturulmaz e-posta bildirimleri gönderilir. E-posta olay adını, önem derecesini, algılanan zamanı ve uyarıyı Uyumluluk Yöneticisi'nde görüntüleme bağlantısını içerir.
 
-### <a name="remove-users-from-receiving-alerts"></a>Kullanıcıların uyarı almalarını kaldırma
+### <a name="remove-users-from-receiving-alerts"></a>Kullanıcıların uyarı almasını kaldırma
 
-Alıcıları uyarıyor ve sonra da kaldırmaya karar veriyorsanız, aşağıdaki adımları izleyin. İlke eşleşmeleri algılandığında ilkeyi oluşturanın yine de e-posta bildirimleri almayacaklarını unutmayın.
+Uyarı alıcılarını belirler ve daha sonra kaldırmaya karar verirseniz aşağıdaki adımları izleyin. İlke eşleşmeleri algılandığında ilkeyi oluşturanın e-posta bildirimleri almaya devam edeceğine dikkat edin.
 
-1. İlkenizi düzenleme [adımlarını izleyin](#edit-a-policy).
-2. Alıcıları uyar ekranına **ulaşabilirsiniz,** +Alıcıları **seç'i seçin**.
-3. Alıcıları seçin  uç noktası panelinde, bildirimlerden kaldırmak istediğiniz kullanıcıyı bulun ve adının sol ödül kutusunun işaretini kaldırın, ardından Alıcı ekle düğmesini seçin (seçiminizi kaydetme etkisi vardır).
-4. Sihirbazın üzerinden devam edin ve kullanıcının Gözden Geçir ve bitir sayfasında **Alıcılar'ın** altında görünme olmadığını onaylayın. Ayarlarınızı **kaydedip** bitirmek için Güncelleştir'i seçin.
+1. [İlkenizi düzenleme adımlarını](#edit-a-policy) başlatın.
+2. **Uyarı alıcıları** ekranına geldiğinizde **+Alıcıları seç'i** seçin.
+3. **Alıcıları seçin** açılır panelinde, bildirimlerden kaldırmak istediğiniz kullanıcıyı bulun ve adının solundaki kutunun işaretini kaldırın, ardından **Alıcı ekle** düğmesini seçin (seçiminizi kaydetme etkisi olur).
+4. Sihirbaz aracılığıyla devam edin ve kullanıcının Gözden Geçir ve bitir sayfasındaki **Alıcılar** altında görünmediğini onaylayın. Ayarlarınızı kaydetmek ve bitirmek için **Güncelleştir'i** seçin.

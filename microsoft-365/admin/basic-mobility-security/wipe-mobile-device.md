@@ -19,12 +19,12 @@ ms.custom:
 search.appverid:
 - MET150
 description: Kayıtlı cihazlardan bilgileri kaldırmak için yerleşik Basic Mobility ve Security'yi kullanın.
-ms.openlocfilehash: 932380b735e3fea2543832417e7911e9216f70fc
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 959e785958dd6d447713507ee9c48763b814db78
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64780809"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65129100"
 ---
 # <a name="wipe-a-mobile-device-in-basic-mobility-and-security"></a>Basic Mobility ve Security'de mobil cihazı silme
 
@@ -46,7 +46,7 @@ Mobil cihazlar hassas kuruluş bilgilerini depolayabilir ve kuruluşunuzun Micro
 
 ## <a name="wipe-a-mobile-device"></a>Mobil cihazı silme
 
-1. [Microsoft 365 yönetim merkezi](../../admin/admin-overview/about-the-admin-center.md) gidin.
+1. [Microsoft 365 yönetim merkezi](../../admin/admin-overview/admin-center-overview.md) gidin.
 
 2. Arama alanına Mobile Cihaz Yönetimi yazın ve sonuç listesinden **Mobil Cihaz Yönetimi'ı** seçin.
 

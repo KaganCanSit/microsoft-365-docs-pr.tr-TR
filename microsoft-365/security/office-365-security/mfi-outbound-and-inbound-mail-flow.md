@@ -1,5 +1,5 @@
 ---
-title: Posta akışı panosunda Giden ve gelen posta akışı içgörü
+title: Posta akışı panosunda giden ve gelen posta akışı içgörüleri
 f1.keywords:
 - NOCSH
 ms.author: dansimp
@@ -11,56 +11,56 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.localizationpriority: medium
 ms.assetid: f2738dec-41b0-43c4-b814-84c0a4e45c6d
-description: Yöneticiler, Güvenlik ve Uyumluluk Merkezi'nin Posta akışı panosunda Giden ve gelen posta akışı hakkında bilgi & bilgi edinebilirsiniz.
+description: Yöneticiler, Güvenlik & Uyumluluk Merkezi'ndeki Posta akışı panosunda Giden ve gelen posta akışı içgörüleri hakkında bilgi edinebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 3bc9d6c08dfc1c232018d79e988d741505079604
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: f856e2b9a4829531966802f2594f26c19e6ab7e5
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64475729"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65131206"
 ---
-# <a name="outbound-and-inbound-mail-flow-insight-in-the-security--compliance-center"></a>Güvenlik ve Uyumluluk Merkezi'nde Giden ve gelen posta & içgörü
+# <a name="outbound-and-inbound-mail-flow-insight-in-the-security--compliance-center"></a>Güvenlik & Uyumluluk Merkezi'nde giden ve gelen posta akışı içgörüleri
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
-**Geçerli olduğu yer:**
+**Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
 - [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Güvenlik **ve Uyumluluk Merkezi &'nin** Posta akışı panosunda [](mail-flow-insights-v2.md) Giden ve gelen posta akışı [](https://protection.office.com) içgörüsi, [Bağlayıcı](view-mail-flow-reports.md#connector-report) raporuyla eski **TLS** genel bakış raporuna ilişkin bilgileri tek bir yerde birleştirir.
+[Güvenlik & Uyumluluk Merkezi'ndeki](https://protection.office.com) [Posta akışı panosundaki](mail-flow-insights-v2.md) **Giden ve gelen posta akışı** içgörüleri [, Bağlayıcı raporuyla](view-mail-flow-reports.md#connector-report) eski **TLS genel bakış raporundaki** bilgileri tek bir yerde birleştirir.
 
-Pencere öğesi, iletiler kuruluşa teslim edilir ve buradan teslim edilirken bağlantı için kullanılan TLS şifrelemesi görüntüler. TLS her iki tarafın da sunduğunda, diğer e-posta hizmetleriyle kurulan bağlantılar TLS ile şifrelenir. Widget, posta akışının son haftası için bir anlık görüntü sunar.
+Pencere öğesi, kuruluşunuza ve kuruluşunuzdan iletiler teslim edildiğinde bağlantı için kullanılan TLS şifrelemesini görüntüler. Diğer e-posta hizmetleriyle kurulan bağlantılar, TLS her iki taraf tarafından sunulduğunda TLS tarafından şifrelenir. Pencere öğesi, posta akışının son haftasının anlık görüntüsünü sunar.
 
-:::image type="content" source="../../media/mfi-outbound-and-inbound-mail-flow-report-widget.png" alt-text="Güvenlik ve Uyumluluk Merkezi'nin Posta akışı panosunda Giden ve gelen posta & widget'ı" lightbox="../../media/mfi-outbound-and-inbound-mail-flow-report-widget.png":::
+:::image type="content" source="../../media/mfi-outbound-and-inbound-mail-flow-report-widget.png" alt-text="Güvenlik & Uyumluluk Merkezi'ndeki Posta akışı panosundaki Giden ve gelen posta akışı pencere öğesi" lightbox="../../media/mfi-outbound-and-inbound-mail-flow-report-widget.png":::
 
-Widget'daki bilgiler, çalışma sayfalarında bağlayıcılarla ve TLS ileti korumasıyla Microsoft 365. Daha fazla bilgi için bu konulara bakın:
+Pencere öğesindeki bilgiler, Microsoft 365'deki bağlayıcılar ve TLS ileti korumasıyla ilgilidir. Daha fazla bilgi için şu konulara bakın:
 
 - [Bağlayıcıları kullanarak posta akışını yapılandırma](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/use-connectors-to-configure-mail-flow)
-- [E Exchange Online bağlantılarının güvenliğini sağlamak için TLS'yi nasıl kullanır?](../../compliance/exchange-online-uses-tls-to-secure-email-connections.md)
-- [E-Microsoft 365'de şifreleme hakkında teknik başvuru Microsoft 365](../../compliance/technical-reference-details-about-encryption.md)
+- [Exchange Online, e-posta bağlantılarının güvenliğini sağlamak için TLS'yi nasıl kullanır?](../../compliance/exchange-online-uses-tls-to-secure-email-connections.md)
+- [Microsoft 365'de şifreleme hakkında teknik başvuru ayrıntıları](../../compliance/technical-reference-details-about-encryption.md)
 
-## <a name="message-protected-in-transit-by-tls"></a>İletim sırasında korunan ileti (TLS ile)
+## <a name="message-protected-in-transit-by-tls"></a>İleti aktarımda korunuyor (TLS tarafından)
 
-**Widget'ta Ayrıntıları Görüntüle'ye** tıklarsanız, İletim halinde korunan **(TLS ile)** ileti geçici öğesi, kuruluşa giriş ve çıkışta iletiler için TLS korumasını gösterir.
+Pencere öğesinde **Ayrıntıları Görüntüle'ye** tıkladığınızda **aktarımda korunan ileti (TLS tarafından)** açılır öğesi, kuruluşunuza giren ve ayrılan iletiler için TLS korumasını gösterir.
 
-:::image type="content" source="../../media/mfi-outbound-and-inbound-mail-flow-report-details.png" alt-text="Giden ve gelen e-posta widget'sinde Ayrıntıları görüntüle'ye tıklarsanız görüntülenen, İletim sırasında korunan iletiler (TLS ile) açılır öğesi" lightbox="../../media/mfi-outbound-and-inbound-mail-flow-report-details.png":::
+:::image type="content" source="../../media/mfi-outbound-and-inbound-mail-flow-report-details.png" alt-text="Giden ve gelen e-posta pencere öğesinde Ayrıntıları görüntüle'ye tıkladıktan sonra görüntülenen aktarımda korunan iletiler (TLS tarafından) açılır öğesi" lightbox="../../media/mfi-outbound-and-inbound-mail-flow-report-details.png":::
 
-Şu anda TLS 1.2, TLS'nin sunduğu en güvenli TLS sürümü Microsoft 365. Çoğunlukla, uyumluluk denetimi için kullanılan TLS şifrelemesi hakkında bilgili olmak gerekir. Büyük olasılıkla, kaynak ve hedef e-posta sunucularının çoğuyla (bu sunuculara ve Microsoft'a sahip değil) doğrudan ilişkiniz yok, dolayısıyla bu sunucular tarafından kullanılan TLS şifrelemeyi geliştirmek için pek fazla seçeneğiniz yok.
+Şu anda TLS 1.2, Microsoft 365 tarafından sunulan en güvenli TLS sürümüdür. Genellikle uyumluluk denetimleri için kullanılan TLS şifrelemesini bilmeniz gerekir. Büyük olasılıkla kaynak ve hedef e-posta sunucularının çoğuyla doğrudan bir ilişkiniz yoktur (bunların sahibi siz değilsiniz ve Microsoft'un da yoktur), bu nedenle bu sunucular tarafından kullanılan TLS şifrelemesini geliştirmek için çok fazla seçeneğiniz yoktur.
 
-Ancak, e-posta [sunucularınız](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/use-connectors-to-configure-mail-flow) ve posta sunucularınız arasında gönderilen iletiler için en uygun TLS korumasının sağlanması için bağlayıcıları Microsoft 365. Microsoft 365 iş ortaklarına ait e-posta sunucularınız veya sunucularınız arasında posta akışı genellikle normal iletilerden daha önemli ve hassastır; dolayısıyla bu iletilere daha fazla güvenlik ve temlik uygulamak istemeniz gerekir.
+Ancak, e-posta sunucularınız ile Microsoft 365 arasında gönderilen iletiler için kullanılabilir en iyi TLS korumasını sağlamak için [bağlayıcıları](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/use-connectors-to-configure-mail-flow) kullanabilirsiniz. Microsoft 365 ile kendi e-posta sunucularınız veya iş ortaklarınıza ait sunucular arasındaki posta akışı genellikle normal iletilerden daha önemli ve hassastır, bu nedenle bu iletilere ek güvenlik ve ihtiyat uygulamak istersiniz.
 
-Kullanılan TLS şifrelemesi geliştirmek için kendi e-posta sunucularınızı yükseltebilir veya düzeltebilir veya aynı işlemi yapmak için iş ortaklarına ulaşabilirsiniz. Bağlayıcı **Raporu,** kendi bağlayıcılarınızı kullanan iletiler için hem posta akışı hacmini hem de TLS Microsoft 365 görüntüler.
+Kullanılan TLS şifrelemesini geliştirmek için kendi e-posta sunucularınızı yükseltebilir veya düzeltebilir ya da aynı işlemi yapmak için iş ortaklarınıza ulaşabilirsiniz. **Bağlayıcı Raporu**, Microsoft 365 bağlayıcılarınızı kullanan iletiler için hem posta akışı hacmini hem de TLS şifrelemesini görüntüler.
 
-Bağlayıcı raporuna **gitmek için** Bağlayıcı raporu [bağlantısına tıkabilirsiniz](view-mail-flow-reports.md#connector-report). İlişkili koşul algılanırsa **, Bağlayıcı rapor** sayfasında aşağıdaki içgörüler kullanılabilir:
+**Bağlayıcı raporu** bağlantısına tıklayarak [Bağlayıcı raporuna](view-mail-flow-reports.md#connector-report) gidebilirsiniz. İlişkili koşul algılandıysa **Bağlayıcı rapor** sayfasında aşağıdaki içgörüler bulunabilir:
 
-- **Önemli TLS1.0 posta akışını gören Gelen İş Ortağı bağlayıcısı**
-- **Önemli TLS1.0 posta akışıyla ilgili gelen OnPremises bağlayıcısı**
+- **Gelen İş Ortağı bağlayıcısı önemli TLS1.0 posta akışı görüyor**
+- **Gelen OnPremises bağlayıcısı önemli TLS1.0 posta akışı görüyor**
 
-TLS 1.0 bağlantılarında, TLS 1.0 desteği bir süre sonra TLS 1.0 desteğinin herhangi bir sorundan kaçınmak için e-posta sunucusunu veya iş ortağının sunucusunu yükseltmeniz veya Microsoft 365.
+TLS 1.0 bağlantılarında, TLS 1.0 desteği sonunda Microsoft 365 kullanım dışı bırakıldığında herhangi bir sorun yaşanmaması için e-posta sunucunuzu veya iş ortağınızın sunucusunu yükseltmeniz veya düzeltmeniz gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-Posta akışı panosunda yer alan diğer içgörüler hakkında bilgi için, Güvenlik ve Uyumluluk Merkezi'nde [Posta & bakın](mail-flow-insights-v2.md).
+Posta akışı panosundaki diğer içgörüler hakkında bilgi için [Bkz. Güvenlik & Uyumluluk Merkezi'ndeki Posta akışı içgörüleri](mail-flow-insights-v2.md).

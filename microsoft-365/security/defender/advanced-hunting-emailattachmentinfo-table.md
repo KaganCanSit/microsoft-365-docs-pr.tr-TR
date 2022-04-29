@@ -18,12 +18,12 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: e787f79b5af90f45dd2823f53402830c7fc287db
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: b99daf9fa7597e44dc7ea20b517c2f7ed5aaa354
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64664050"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65130571"
 ---
 # <a name="emailattachmentinfo"></a>EmailAttachmentInfo
 
@@ -32,6 +32,7 @@ ms.locfileid: "64664050"
 **Şunlar için geçerlidir:**
 
 - Microsoft 365 Defender
+- Office 365 için Microsoft Defender
 
 `EmailAttachmentInfo` [Gelişmiş tehdit avcılığı](advanced-hunting-overview.md) şemasındaki tablo, Office 365 için Microsoft Defender tarafından işlenen e-postalardaki ekler hakkında bilgi içerir. Bu tablodan bilgi döndüren sorgular oluşturmak için bu başvuruyu kullanın.
 
@@ -46,7 +47,7 @@ Gelişmiş tehdit avcılığı şemasındaki diğer tablolar hakkında bilgi iç
 | `NetworkMessageId` | `string` | Microsoft 365 tarafından oluşturulan e-postanın benzersiz tanımlayıcısı |
 | `SenderFromAddress` | `string` | KIMDEN üst bilgisindeki gönderen e-posta adresi, e-posta istemcilerindeki e-posta alıcıları tarafından görülebilir |
 | `SenderDisplayName` | `string` | Adres defterinde görüntülenen gönderenin adı, genellikle verilen veya adın, ikinci bir adın ve soyadının veya soyadının birleşimidir |
-| `SenderObjectId` | `string` | Azure AD'de gönderenin hesabının benzersiz tanımlayıcısı |
+| `SenderObjectId` | `string` | Azure AD'da gönderenin hesabının benzersiz tanımlayıcısı |
 | `RecipientEmailAddress` | `string` | Dağıtım listesi genişletildikten sonra alıcının e-posta adresi veya alıcının e-posta adresi |
 | `RecipientObjectId` | `string` | Azure AD'de e-posta alıcısı için benzersiz tanımlayıcı |
 | `FileName` | `string` | Kaydedilen eylemin uygulandığı dosyanın adı |

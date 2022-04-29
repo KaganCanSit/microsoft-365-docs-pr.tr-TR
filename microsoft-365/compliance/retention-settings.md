@@ -17,14 +17,16 @@ search.appverid:
 - MOE150
 - MET150
 description: İstediğinizi korumak ve istemediğinizden kurtulmak için bekletme ilkesinde veya bekletme etiketi ilkesinde yapılandırabileceğiniz ayarları anlayın.
-ms.openlocfilehash: 729c31935ee3ded04a12f7822a17082ef1b52c26
-ms.sourcegitcommit: 1d972f15a45204e89e268c5ff257021aced5e775
+ms.openlocfilehash: c0214476494e024247b76911475df88bdfbfa4ff
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2022
-ms.locfileid: "64911522"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65129232"
 ---
 # <a name="common-settings-for-retention-policies-and-retention-label-policies"></a>Bekletme ilkeleri ve bekletme etiketi ilkeleri için yaygın ayarlar
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 >*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](https://aka.ms/ComplianceSD).*
 
@@ -66,7 +68,7 @@ Sitelerin özellik adları, site tarafından yönetilen SharePoint özellikleri 
 Kullanıcıların ve grupların öznitelik adları, Azure AD öznitelikleriyle [eşlenebilen filtrelenebilir alıcı özelliklerini](/powershell/exchange/recipientfilter-properties#filterable-recipient-properties) temel alır. Örneğin:
 
 - **Diğer ad**, Azure AD yönetim merkezinde **E-posta** olarak görüntülenen **mailNickname** LDAP adıyla eşler.
-- **E-posta adresleri**, Azure AD yönetim merkezinde **Ara Sunucu adresi** olarak görüntülenen **proxyAddresses** LDAP adıyla eşlenir.
+- **E-posta adresleri**, Azure AD yönetim merkezinde **Proxy adresi** olarak görüntülenen LDAP adı **proxyAddresses ile eşlenir**.
 
 Basit sorgu oluşturucusu kullanılarak uyarlamalı bir kapsam yapılandırdığınızda tabloda listelenen öznitelikler ve özellikler kolayca belirtilebilir. Aşağıdaki bölümde açıklandığı gibi gelişmiş sorgu oluşturucusu ile ek öznitelikler ve özellikler desteklenir.
 
@@ -83,13 +85,13 @@ Uyarlamalı kapsamınızı yapılandırmadan önce, oluşturulacak kapsam türü
 
 Özellikle SharePoint siteler için[, özel site özelliklerini](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/using-custom-sharepoint-site-properties-to-apply-microsoft-365/ba-p/3133970) kullanmayı planlıyorsanız ek SharePoint yapılandırması gerekebilir.
 
-1. [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com/) aşağıdaki konumlardan birine gidin:
+1. [Microsoft Purview uyumluluk portalında](https://compliance.microsoft.com/) aşağıdaki konumlardan birine gidin:
     
     - Kayıt yönetimi çözümünü kullanıyorsanız:
         - **Çözümleri** >  **Kayıt yönetimi** >  **Uyarlamalı kapsamlar** sekmesi > + **Kapsam oluştur**
         
-    - Bilgi idaresi çözümünü kullanıyorsanız:
-       - **Çözümleri** >  **Bilgi idaresi** >  **Uyarlamalı kapsamlar** sekmesi > + **Kapsam oluştur**
+    - Veri yaşam döngüsü yönetim çözümünü kullanıyorsanız:
+       - **Çözümleri** >  **Veri yaşam döngüsü yönetimi** >  **Uyarlamalı kapsamlar** sekmesi > + **Kapsam oluştur**
     
     Gezinti bölmesinde çözümünüzü hemen görmüyor musunuz? İlk olarak **Tümünü göster'i** seçin. 
 
@@ -99,7 +101,7 @@ Uyarlamalı kapsamınızı yapılandırmadan önce, oluşturulacak kapsam türü
     
     ![Örnek uyarlamalı kapsam yapılandırması.](../media/example-adaptive-scope.png)
     
-    Günde bir kez, bu sorgu Azure AD'de çalıştırılır ve **Ülke veya bölge** özniteliği için hesaplarında **Avrupa'nın** belirtilen değerine sahip olan tüm kullanıcıları tanımlar.
+    Günde bir kez, bu sorgu Azure AD karşı çalıştırılır ve **Ülke veya bölge** özniteliği için hesaplarında **Avrupa** için belirtilen değere sahip tüm kullanıcıları tanımlar.
     
     > [!IMPORTANT]
     > Sorgu hemen çalışmadığından, değere doğru yazdığınız bir doğrulama yoktur.
@@ -116,7 +118,7 @@ Uyarlamalı kapsamınızı yapılandırmadan önce, oluşturulacak kapsam türü
         
         Bu kapsamlar için gelişmiş sorgu oluşturucu kullanmanın avantajlarından biri, daha geniş bir sorgu işleçleri seçimidir:
         - **ve**
-        - **veya**
+        - **Veya**
         - **Değil**
         - **eq** (eşittir)
         - **ne** (eşit değildir)
@@ -368,7 +370,7 @@ Outlook'daki bir klasör olan **Konuşma Geçmişi'nin** Skype arşivlemeyle ilg
 
 ### <a name="retaining-content-for-a-specific-period-of-time"></a>İçeriği belirli bir süre boyunca saklama
 
-İçeriği korumak için bir bekletme etiketi veya ilkesi yapılandırdığınızda, öğeleri belirli sayıda gün, ay veya yıl boyunca saklamayı seçersiniz. Alternatif olarak, öğeleri sonsuza kadar tutun. Bekletme süresi, ilkenin atandığı zamandan değil, belirtilen saklama süresinin başlangıcına göre hesaplanır.
+İçeriği korumak için bir bekletme etiketi veya ilkesi yapılandırdığınızda, öğeleri belirli sayıda gün, ay (bir ay için 30 gün varsayılır) veya yıllar için saklamayı seçersiniz. Alternatif olarak, öğeleri sonsuza kadar tutun. Bekletme süresi, ilkenin atandığı zamandan değil, belirtilen saklama süresinin başlangıcına göre hesaplanır.
 
 Saklama süresinin başlangıcı için içeriğin ne zaman oluşturulduğunu veya yalnızca dosyalar ve SharePoint, OneDrive ve Microsoft 365 Grupları için desteklenip desteklenmediğini ve içeriğin en son ne zaman değiştirildiğini seçebilirsiniz. Bekletme etiketleri için, içerik etiketlendiğinden ve bir olay gerçekleştiğinde bekletme süresini başlatabilirsiniz.
 
@@ -426,7 +428,7 @@ Bekletme ilkesi oluşturulduktan ve kaydedildikten sonra bazı ayarlar değişti
 
 Bir bekletme ilkesini düzenlerseniz ve öğeler zaten bekletme ilkenizdeki özgün ayarlara tabiyse, güncelleştirilmiş ayarlarınız yeni tanımlanan öğelere ek olarak bu öğelere otomatik olarak uygulanır.
 
-Genellikle bu güncelleştirme oldukça hızlıdır ancak birkaç gün sürebilir. Microsoft 365 konumlarınız arasında ilke çoğaltması tamamlandığında, bekletme ilkesinin durumunu Açık **(Beklemede) yerine Açık (****Başarılı**) olarak Microsoft 365 uyumluluk merkezi görürsünüz.
+Genellikle bu güncelleştirme oldukça hızlıdır ancak birkaç gün sürebilir. Microsoft 365 konumlarınız arasında ilke çoğaltması tamamlandığında, Microsoft Purview uyumluluk portalında bekletme ilkesinin durumunu Açık **(Beklemede)** yerine **Açık (Başarılı)** olarak değiştirirsiniz.
 
 ## <a name="locking-the-policy-to-prevent-changes"></a>Değişiklikleri önlemek için ilkeyi kilitleme
 

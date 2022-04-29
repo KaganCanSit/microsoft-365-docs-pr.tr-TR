@@ -1,8 +1,8 @@
 ---
-title: Tehdit analizi ile ortaya çıkan tehditleri izleme Uç Nokta için Microsoft Defender yanıt verme
+title: Uç Nokta için Microsoft Defender tehdit analiziyle yeni ortaya çıkan tehditleri izleme ve yanıtlama
 ms.reviewer: ''
-description: Ortaya çıkan tehdit ve saldırı tekniklerini ve bunları nasıl durduracaklarını anlıyoruz. Organizasyon üzerindeki etkisini değerlendirin ve organizasyona karşı etkilerinızı değerlendirin.
-keywords: tehdit analizi, risk değerlendirme, işletim sistemi azaltma, mikro kod azaltma, risk azaltma durumu
+description: Yeni ortaya çıkan tehditleri ve saldırı tekniklerini ve bunların nasıl durdurulacağını anlayın. Kuruluşunuz üzerindeki etkilerini değerlendirin ve kuruluşunuzun dayanıklılığını değerlendirin.
+keywords: tehdit analizi, risk değerlendirmesi, işletim sistemi azaltma, mikro kod azaltma, azaltma durumu
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.prod: m365-security
@@ -19,116 +19,123 @@ ms.collection:
 - m365initiative-defender-endpoint
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 0ca4aea3281d6bb375e7b5ff5223cb40e9a980ac
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 455b80f590edf255362c7bb047c7aa1b23916666
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64471087"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65128576"
 ---
-# <a name="track-and-respond-to-emerging-threats-through-threat-analytics"></a>Tehdit analizleri aracılığıyla ortaya çıkan tehditleri takip edin ve yanıt verin
+# <a name="track-and-respond-to-emerging-threats-through-threat-analytics"></a>Tehdit analizi aracılığıyla yeni ortaya çıkan tehditleri izleme ve yanıtlama
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-Sık sık ve yaygın olarak ortaya çıkan daha gelişmiş rakipler ve yeni tehditlerle, hızla devam etmek kritik öneme sahip:
+Daha karmaşık saldırganlar ve yaygın olarak ortaya çıkan yeni tehditler sayesinde, hızlı bir şekilde şunları yapabilmek çok önemlidir:
 
 - Yeni tehditlerin etkisini değerlendirme
-- Tehditlere karşı olan belki de tehditlere karşı olan korumanızı gözden geçirme
-- Tehditleri durdurmak veya tehditlere karşı eylemlerini belirlemek
+- Tehditlere karşı dayanıklılığınızı veya tehditlere maruz kalma durumunuzu gözden geçirin
+- Tehditleri durdurmak veya içermek için gerçekleştirebileceğiniz eylemleri belirleyin
 
-Tehdit analizi, en ilgili tehditleri kapsayan, uzman Microsoft güvenlik araştırmacısı tarafından alınan, aşağıdakiler gibi bir dizi rapor içerir:
+Tehdit analizi, uzman Microsoft güvenlik araştırmacılarının aşağıdakiler dahil olmak üzere en ilgili tehditleri kapsayan bir dizi raporudur:
 
-- Etkin tehdit tehditlerini ve onların kampanyalarını tehdit ediyor
+- Etkin tehdit aktörleri ve kampanyaları
 - Popüler ve yeni saldırı teknikleri
 - Kritik güvenlik açıkları
 - Yaygın saldırı yüzeyleri
 - Yaygın kötü amaçlı yazılım
 
-Her rapor, bu tehdite karşı savunma konusunda kapsamlı bir tehdit ve kapsamlı bir yol gösterici analiz sağlar. Ayrıca, ağınıza gelen, tehdidin etkin olup olmadığını ve geçerli korumalara sahip olup olmadığınızı gösteren verileri de bir almaktadır.
+Her rapor, bir tehdidin ayrıntılı analizini ve bu tehdide karşı savunma konusunda kapsamlı rehberlik sağlar. Ayrıca ağınızdaki verileri de içerir ve tehdidin etkin olup olmadığını ve geçerli korumalarınız olup olmadığını belirtir.
 
-Tehdit analizinin en son tehditleri izleme ve bunları durdurma konusunda nasıl yardımcı olduğu hakkında daha fazla bilgi edinmek için bu kısa videoyu izleyin.
+Tehdit analizinin en son tehditleri izlemenize ve durdurmanıza nasıl yardımcı olabileceği hakkında daha fazla bilgi edinmek için bu kısa videoyu izleyin.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4bw1f]
 
-## <a name="view-the-threat-analytics-dashboard"></a>Tehdit analiz panosuyu görüntüleme
+## <a name="required-roles-and-permissions"></a>Gerekli roller ve izinler
+Aşağıdaki tabloda, Threat Analytics'e erişmek için gereken roller ve izinler özetlenmiştir. Aşağıdaki tabloda tanımlanan roller, tek tek portallardaki özel rollere başvurur ve benzer şekilde adlandırılmış olsa bile Azure AD'deki genel rollere bağlı değildir.
 
-Tehdit çözümlemesi panosu, organizasyonuyla en ilgili raporlara almak için mükemmel bir atlama noktasıdır. Aşağıdaki bölümlerdeki tehditleri özetler:
+| **Microsoft 365 Defender için aşağıdaki rollerden biri gereklidir**  | **Uç Nokta için Defender için aşağıdaki rollerden biri gereklidir**  | **Office 365 için Defender için aşağıdaki rollerden biri gereklidir** | **Bulut için Defender Uygulamaları için aşağıdaki rollerden biri gereklidir** | 
+|---------|---------|---------|---------|
+| Tehdit Analizi | Uyarılar ve olay verileri: <ul><li>Veri görüntüleme- güvenlik işlemleri</li></ul>TVM risk azaltmaları:<ul><li>Verileri görüntüleme - Tehdit ve güvenlik açığı yönetimi</li></ul> | Uyarılar ve olay verileri:<ul> <li>Uyarıları yalnızca görüntüleme yönetimi</li> <li>Uyarıları yönetin</li> <li>Kuruluş yapılandırması</li><li>Denetim günlükleri</li> <li>Yalnızca görüntüleme denetim günlükleri</li><li>Güvenlik gözetmeni</li> <li>Güvenlik yöneticisi</li><li>Yalnızca görüntüleme alıcıları</li> </ul> Engellenen e-posta girişimleri: <ul><li>Güvenlik gözetmeni</li> <li>Güvenlik yöneticisi</li><li>Yalnızca görüntüleme alıcıları</li> | Bulut için Defender Uygulamaları veya MDI kullanıcıları için kullanılamaz |
 
-- **En son** tehdit: En son yayımlanan tehdit raporlarının yanı sıra etkin ve çözümlenmiş uyarıları olan cihazların sayısını da listeler.
-- **Çok etkili tehdit:** Kuruluşta en çok etkiyi alan tehditleri listeler. Bu bölümde, etkin uyarılara sahip cihazların sayısına göre tehdit sıralarız.
-- **Tehdit özeti**: Etkin ve çözümlenmiş uyarılarla birlikte tehdit sayısını göstererek, izlenmiş tehditlerin genel etkisini gösterir.
+## <a name="view-the-threat-analytics-dashboard"></a>Tehdit analizi panosunu görüntüleme
+
+Tehdit analizi panosu, kuruluşunuzla en ilgili raporları almak için harika bir atlama noktasıdır. Aşağıdaki bölümlerde tehditleri özetler:
+
+- **En son tehditler**: En son yayımlanan tehdit raporlarının yanı sıra etkin ve çözümlenmiş uyarılara sahip cihaz sayısını listeler.
+- **Yüksek etkili tehditler**: Kuruluş üzerinde en yüksek etkiye sahip tehditleri listeler. Bu bölüm, tehditleri etkin uyarıları olan cihaz sayısına göre sıralar.
+- **Tehdit özeti**: Etkin ve çözümlenmiş uyarılarla tehdit sayısını göstererek izlenen tehditlerin genel etkisini gösterir.
 
 Bu tehdidin raporunu görüntülemek için panodan bir tehdit seçin.
 
-:::image type="content" source="images/ta_dashboard.png" alt-text="Tehdit analiz panosu" lightbox="images/ta_dashboard.png":::
+:::image type="content" source="images/ta_dashboard.png" alt-text="Tehdit analizi panosu" lightbox="images/ta_dashboard.png":::
 
 ## <a name="view-a-threat-analytics-report"></a>Tehdit analizi raporunu görüntüleme
 
 Her tehdit analizi raporu üç bölümde bilgi sağlar: **Genel Bakış**, **Analist raporu** ve **Risk Azaltmalar**.
 
-### <a name="overview-quickly-understand-the-threat-assess-its-impact-and-review-defenses"></a>Genel bakış: Tehdidi hızlı bir şekilde anlıyoruz, etkisini değerlendirin ve savunmayı gözden geçirme
+### <a name="overview-quickly-understand-the-threat-assess-its-impact-and-review-defenses"></a>Genel bakış: Tehdidi hızla anlayın, etkisini değerlendirin ve savunmaları gözden geçirin
 
-Genel **Bakış** bölümü, ayrıntılı analist raporunun bir önizlemesini sağlar. Ayrıca, hatalı ve eşleşmeyen cihazlar aracılığıyla organizasyonunız için tehdidin etkisini vurgulayan grafikler de sağlar.
+**Genel Bakış** bölümünde ayrıntılı analist raporunun önizlemesi sağlanır. Ayrıca, yanlış yapılandırılmış ve eşleşmeyen cihazlar aracılığıyla kuruluşunuza yönelik tehdidin etkisini ve açığa çıkarmanızı vurgulayan grafikler de sağlar.
 
 :::image type="content" source="images/ta-overview.png" alt-text="Tehdit analizi raporunun Genel Bakış bölümü" lightbox="images/ta-overview.png":::
 _Tehdit analizi raporunun genel bakış bölümü_
 
-#### <a name="assess-the-impact-to-your-organization"></a>Organizasyonun etkisini değerlendirme
+#### <a name="assess-the-impact-to-your-organization"></a>Kuruluşunuz üzerindeki etkiyi değerlendirme
 
 Her rapor, bir tehdidin kurumsal etkisi hakkında bilgi sağlamak için tasarlanmış grafikler içerir:
 
-- **Uyarılı cihazlar**: Tehdit tarafından etkisi olan farklı cihazların mevcut sayısını gösterir. Bir cihaz, bu **tehditle ilişkilendirilmiş** en az bir uyarı varsa Etkin olarak kategorilere ayrılmıştır; cihaza yönelik tehditle ilişkili tüm uyarılar çözümlenmişse Çözümlendi demektir.
-- **Zaman içinde uyarı alan cihazlar**: Etkin ve Zaman içinde Çözümlenmiş uyarılarının **olduğu** **farklı** cihazların sayısını gösterir. Çözülen uyarıların sayısı, kuruluşun bir tehditle ilişkilendirilmiş uyarılara ne kadar hızlı yanıt veremediklerine işaret ediyor. İdeal olan, grafiğin birkaç gün içinde çözülen uyarıları göstermesidir.
+- **Uyarı içeren cihazlar**: Tehdit tarafından etkilenen geçerli farklı cihaz sayısını gösterir. Bir cihaz, bu tehditle ilişkili en az bir uyarı varsa **Etkin** ve cihazdaki tehditle ilişkili *tüm* uyarılar çözümlendiyse **Çözümlendi** olarak kategorilere ayrılmıştır.
+- **Zaman içinde uyarı içeren cihazlar: Zaman içinde** **Etkin** ve **Çözümlenmiş** uyarılara sahip farklı cihazların sayısını gösterir. Çözümlenen uyarı sayısı, kuruluşunuzun bir tehditle ilişkili uyarılara ne kadar hızlı yanıt verdiğini gösterir. İdeal olan grafikte birkaç gün içinde çözümlenen uyarıların gösterilmesi gerekir.
 
-#### <a name="review-security-resilience-and-posture"></a>Güvenlik inalisini ve şuurlarını gözden geçirme
+#### <a name="review-security-resilience-and-posture"></a>Güvenlik dayanıklılığını ve duruşu gözden geçirme
 
-Her raporda, kuruma yönelik olarak verilen bir tehdite karşı ne kadar uygun olduğuyla ilgili genel bir bakış sağlayan grafikler yer almaktadır:
+Her rapor, kuruluşunuzun belirli bir tehdide karşı ne kadar dayanıklı olduğuna ilişkin bir genel bakış sağlayan grafikler içerir:
 
-- **Güvenlik yapılandırması durumu**: Tehdidi azaltmak için yardımcı olmak için önerilen güvenlik ayarlarının uygulandığı cihazların sayısını gösterir. Tüm izleme **ayarlarını uyguladıkları** cihazlar _Güvenli_ olarak kabul edilir.
-- **Güvenlik açığı düzeltme eki durumu**: Tehdit tarafından yararlanan güvenlik açıkları için güvenlik güncelleştirmeleri veya yamalar kullanan cihazların sayısını gösterir.
+- **Güvenlik yapılandırması durumu**: Tehdidin azaltılmasına yardımcı olabilecek önerilen güvenlik ayarlarını uygulayan cihaz sayısını gösterir. İzlenen _tüm_ ayarları uygulamış olan cihazlar **Güvenli** olarak kabul edilir.
+- **Güvenlik açığı düzeltme eki uygulama durumu**: Tehdit tarafından yararlanılan güvenlik açıklarını gideren güvenlik güncelleştirmeleri veya düzeltme ekleri uygulayan cihazların sayısını gösterir.
 
-### <a name="analyst-report-get-expert-insight-from-microsoft-security-researchers"></a>Analist raporu: Microsoft güvenlik araştırmacısı'nın uzman içgörülerini alın
+### <a name="analyst-report-get-expert-insight-from-microsoft-security-researchers"></a>Analist raporu: Microsoft güvenlik araştırmacılarından uzman içgörüleri alma
 
-Ayrıntılı uzman **yazılarını okumak** için Analist raporu bölümüne gidin. Raporların çoğu, MITRE ATT&CK çerçevesine eşlenen taktikler ve teknikler, çok kapsamlı öneri listeleri ve güçlü tehdit arama kılavuzu dahil olmak üzere saldırı zincirleri hakkında [ayrıntılı açıklamalar sağlar](advanced-hunting-overview.md) .
+Ayrıntılı uzman yazma işlemini okumak için **Analist raporu** bölümüne gidin. Çoğu rapor, MITRE ATT&CK çerçevesine eşlenen taktikler ve teknikler, kapsamlı öneri listeleri ve güçlü [tehdit avcılığı](advanced-hunting-overview.md) yönergeleri dahil olmak üzere saldırı zincirlerinin ayrıntılı açıklamalarını sağlar.
 
-[Analist raporu hakkında daha fazla bilgi](threat-analytics-analyst-reports.md)
+[Analist raporu hakkında daha fazla bilgi edinin](threat-analytics-analyst-reports.md)
 
-### <a name="mitigations-review-list-of-mitigations-and-the-status-of-your-devices"></a>Azaltmalar: Risk azaltma listesini ve cihazlarınızı durumunu gözden geçirme
+### <a name="mitigations-review-list-of-mitigations-and-the-status-of-your-devices"></a>Azaltmalar: Risk azaltmaların listesini ve cihazlarınızın durumunu gözden geçirin
 
-Azaltmalar **bölümünde** , tehditlere karşı kuruluşa karşı daha fazla özgü, eyleme geçirilebilir öneriler listesini gözden geçirebilirsiniz. İzli risk azaltmalar listesi şunları içerir:
+**Risk Azaltmalar** bölümünde, tehditlere karşı kurumsal dayanıklılığınızı artırmanıza yardımcı olabilecek belirli eyleme dönüştürülebilir önerilerin listesini gözden geçirin. İzlenen azaltmalar listesi şunları içerir:
 
-- **Güvenlik güncelleştirmeleri**: Güvenlik güncelleştirmelerinin veya güvenlik açıkları için yamaların dağıtımı
+- **Güvenlik güncelleştirmeleri: Güvenlik** açıkları için güvenlik güncelleştirmelerinin veya düzeltme eklerinin dağıtımı
 - **Microsoft Defender Virüsten Koruma ayarları**
   - Güvenlik zekası sürümü
-  - Bulut teslimi koruma
-  - İstenmeyen olabilecek uygulama (PUA) koruması
+  - Bulut tabanlı koruma
+  - İstenmeyebilecek uygulama (PUA) koruması
   - Gerçek zamanlı koruma
 
-Bu bölümdeki azaltma bilgileri, rapor Tehdit ve Güvenlik Açığı Yönetimi çeşitli bağlantılarından [](next-gen-threat-and-vuln-mgt.md)ayrıntılı detaya gitme bilgileri de sağlayan veri bağlantılarını içerir.
+Bu bölümdeki azaltma bilgileri[, rapordaki](next-gen-threat-and-vuln-mgt.md) çeşitli bağlantılardan ayrıntılı detaya gitme bilgileri de sağlayan Tehdit ve Güvenlik Açığı Yönetimi verilerini içerir.
 
-:::image type="content" source="images/ta-mitigations.png" alt-text="Tehdit analizi raporunun Azaltmalar bölümü" lightbox="images/ta-mitigations.png":::
+:::image type="content" source="images/ta-mitigations.png" alt-text="Tehdit analizi raporunun Risk Azaltmalar bölümü" lightbox="images/ta-mitigations.png":::
 
 
 _Tehdit analizi raporunun Azaltmalar bölümü_
 
 ## <a name="additional-report-details-and-limitations"></a>Ek rapor ayrıntıları ve sınırlamaları
 
-Raporları kullanırken şunları unutmayın:
+Raporları kullanırken aşağıdakileri göz önünde bulundurun:
 
-- Veriler, rol tabanlı erişim denetimi (RBAC) kapsamınıza göre ele alındı. Erişebilirsiniz gruplar halinde [cihazların durumunu gösterir](machine-groups.md).
-- Grafikler yalnızca izlenen risk azaltmalarını yansıttır. Grafiklerde gösterülen ek risk azaltmaları için rapora genel bakış bilgilerine bakın.
-- Azaltmalar tam bir teminat garanti etmez. Sağlanan azaltmalar, performansı geliştirmek için gereken en iyi olası eylemleri yansıttır.
-- Aygıtlar hizmete veri aktarmamışsa "kullanılamaz" olarak sayılır.
-- Virüsten korumayla ilgili istatistikler veri Microsoft Defender Virüsten Koruma temel Microsoft Defender Virüsten Koruma temel almaktadır. Üçüncü taraf virüsten koruma çözümlerine sahip cihazlar "açık" olarak görünebilir.
+- Verilerin kapsamı rol tabanlı erişim denetimi (RBAC) kapsamınıza göre belirlenmiştir. [Erişebileceğiniz gruplarda](machine-groups.md) cihazların durumunu görürsünüz.
+- Grafikler yalnızca izlenen azaltmaları yansıtır. Grafiklerde gösterilmeyen ek risk azaltmaları için rapora genel bakış'a bakın.
+- Risk azaltmalar tam dayanıklılığı garanti etmez. Sağlanan azaltmalar, dayanıklılığı artırmak için gereken mümkün olan en iyi eylemleri yansıtır.
+- Cihazlar hizmete veri iletmediyse "kullanılamaz" olarak sayılır.
+- Virüsten korumayla ilgili istatistikler Microsoft Defender Virüsten Koruma ayarlarına bağlıdır. Üçüncü taraf virüsten koruma çözümlerine sahip cihazlar "kullanıma sunuldu" olarak görünebilir.
 
 ## <a name="related-topics"></a>İlgili konular
 
-- [Gelişmiş avla tehditlere karşı önceden bulma](advanced-hunting-overview.md)
+- [Gelişmiş avcılık ile tehditleri proaktif olarak bulma](advanced-hunting-overview.md)
 - [Analist raporu bölümünü anlama](threat-analytics-analyst-reports.md)
-- [Güvenlik açıklarını ve pozlama durumlarını değerlendirin ve çözüm bulun](next-gen-threat-and-vuln-mgt.md)
+- [Güvenlik zayıflıklarını ve açığa çıkarmaları değerlendirme ve çözme](next-gen-threat-and-vuln-mgt.md)

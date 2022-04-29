@@ -24,12 +24,12 @@ search.appverid:
 - GEA150
 ms.assetid: 3b3adfa4-1777-4ff0-b606-fb8732101f47
 description: Microsoft 365 yönetim merkezi yeni ürün ve özellik güncelleştirmeleri için sürüm seçeneğini ayarlamayı öğrenin.
-ms.openlocfilehash: 67c6fe3f08549424c725589a50c647a876c151af
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: 176558448f31fadea0b0cf865bca5d1156e3eefe
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65022459"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65129430"
 ---
 # <a name="set-up-the-standard-or-targeted-release-options"></a>Standart veya Hedefli sürüm seçeneklerini ayarlama
 
@@ -47,7 +47,7 @@ Yeni sürümler önce özellik ekibi, ardından tüm Microsoft 365 özellik ekib
 Önemli güncelleştirmeler için, müşteriler başlangıçta [Microsoft 365 Yol Haritası](https://products.office.com/business/office-365-roadmap) tarafından bildirilir. Bir güncelleştirme kullanıma sunulmaya yaklaştıkça[, Microsoft 365 İleti merkeziniz](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/MessageCenter) üzerinden iletilir.
 
 > [!NOTE]
-> [yönetim](/office365/admin/admin-overview/about-the-admin-center) merkezi üzerinden İleti merkezinize erişmek için bir Microsoft 365 veya Azure AD hesabınız olmalıdır. Microsoft 365 ev planı kullanıcılarının yönetim merkezi yoktur.
+> [yönetim](/office365/admin/admin-overview/admin-center-overview) merkezi üzerinden İleti merkezinize erişmek için bir Microsoft 365 veya Azure AD hesabınız olmalıdır. Microsoft 365 ev planı kullanıcılarının yönetim merkezi yoktur.
 
 ## <a name="standard-release"></a>Standart sürüm
 

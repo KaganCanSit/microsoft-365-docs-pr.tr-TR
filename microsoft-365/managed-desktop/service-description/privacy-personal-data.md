@@ -1,7 +1,7 @@
 ---
 title: Gizlilik ve kişisel veriler
 description: Hizmet tarafından toplanan, depolanan ve kullanılan verilerin ayrıntıları
-keywords: GDPR, bekletme, silme, depolama, bekletme, işleme, güvenlik, denetim
+keywords: GDPR, saklama, silme, depolama, saklama, işleme, güvenlik, denetim
 ms.service: m365-md
 ms.sitesec: library
 author: tiaraquan
@@ -12,135 +12,135 @@ ms.author: tiaraquan
 ms.topic: article
 audience: Admin, ITPro
 ms.localizationpriority: medium
-ms.openlocfilehash: c70b15a3d35dc4b19c5961e9fbe0404780c12309
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: e7c9912e3890d9b13003c7f3264490f67c4fc305
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63330265"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65128356"
 ---
 # <a name="privacy"></a>Gizlilik
 
-Microsoft Yönetilen Masaüstü, çalışanların kendi cihazlarının dağıtılmalarını ve güncellenmelerini sağlamak için tasarlanmış kurumsal bulut müşterilerine bir Hizmet Olarak (ITaaS) Windows hizmetidir.
+Microsoft Managed Desktop, çalışanların Windows cihazlarının dağıtılıp güncelleştirilmelerini sağlamak üzere tasarlanmış kurumsal bulut müşterilerine yönelik bir Hizmet Olarak BT (ITaaS) hizmetidir.
 
-Ayrıca, IT hizmet yönetimi ve işlemleri sağlar, güvenlik ve olay yanıtlarını izler ve kullanıcı desteği sağlar. Bu makalede, Microsoft Yönetilen Masaüstü için veri platformu ve gizlilik uyumluluğu ile ilgili daha fazla ayrıntı bulabilirsiniz.
+Ayrıca BT hizmeti yönetimi ve işlemleri sağlar, güvenlik ve olay yanıtlarını izler ve kullanıcı desteği sağlar. Bu makalede, Microsoft Managed Desktop için veri platformu ve gizlilik uyumluluğu hakkında daha fazla ayrıntı sağlanır.
 
-## <a name="microsoft-managed-desktop-data-sources-and-purpose"></a>Microsoft Yönetilen Masaüstü veri kaynakları ve amacı
+## <a name="microsoft-managed-desktop-data-sources-and-purpose"></a>Veri kaynaklarını ve amacı Microsoft Managed Desktop
 
-Microsoft Yönetilen Masaüstü, hizmetini kurumsal müşterilere sunar ve çeşitli kaynaklardan veriler kullanarak müşterilerin kayıtlı cihazlarını düzgün bir şekilde yönetmektedir.
+Microsoft Managed Desktop, hizmetini kurumsal müşterilere sağlar ve çeşitli kaynaklardan alınan verileri kullanarak müşterilerin kayıtlı cihazlarını düzgün bir şekilde yönetir.
 
-Bu kaynaklar Azure Active Directory, Microsoft Intune, Microsoft Windows 10 ve Uç Nokta için Microsoft Defender'ı içerir. Microsoft Tarafından Yönetilen Masaüstü tarafından yönetilen cihazlara kapsamlı bir görünüm sağlar. Hizmet, Microsoft Yönetilen Masaüstü'Microsoft hizmetleri ITaaS özelliklerini sağlamak için aşağıdaki özellikleri de kullanır:
+Bu kaynaklar Azure Active Directory, Microsoft Intune, Microsoft Windows 10 ve Uç Nokta için Microsoft Defender içerir. Microsoft Managed Desktop yönettiği cihazların kapsamlı bir görünümünü sağlar. Hizmet, Microsoft Managed Desktop ITaaS özelliklerini sağlamasını sağlamak için de bu Microsoft hizmetleri kullanır:
 
 | Veri kaynağı | Amaç |
 | ------ | ------ |
-| [Microsoft Windows 10 Enterprise](/windows/windows-10/) | Cihaz kurulum deneyiminin yönetimi, diğer hizmetlere bağlantıların yönetilmesi ve IT profesyonelleri için işlem desteği. |
-| [Windows güncelleştirme](/windows/deployment/update/waas-manage-updates-wufb) | Güncelleştirme Windows 10 Enterprise fazla bilgi sağlamak için bu tanılama verilerini Windows 10 kullanır. |
-| [Microsoft Endpoint Manager](/mem/endpoint-manager-overview) | Cihaz yönetimi ve verilerinizi güvende tutma. Aşağıdaki veri kaynakları aşağıdaki veri kaynaklarının Microsoft Endpoint Manager:<br><ul><li>[Microsoft Azure Active Directory](/azure/active-directory/): Tüm kullanıcı hesaplarının kimlik doğrulaması ve kimliği.</li><li>[Microsoft Intune](/mem/intune/): Cihaz yapılandırmalarını, cihaz yönetimini ve uygulama yönetimini dağıtma.</li><li>[Uç Nokta Analizi](/mem/analytics/overview): Cihaz ve uygulama kullanımıyla ilgili analitik öngörüler.</li><li>[Windows Pilot](/microsoft-365/windows/windows-autopilot): Cihaz hazırlama ve dağıtım.</li><li>[Uç Nokta için Microsoft Defender](/microsoft-365/security/defender-endpoint/): Cihaz güvenliği izleme ve güvenlik zekası verileri gibi güvenlik hizmetleri sağlar.</li></ul>
-| [Microsoft Yönetilen Masaüstü](https://endpoint.microsoft.com/#home) | Müşteri tarafından sağlanan veya hizmeti çalıştırma sırasında hizmet tarafından oluşturulan veriler. |
-| [Microsoft 365 için uygulamalarınızı oluşturun](https://www.microsoft.com/en-us/microsoft-365/enterprise/compare-office-365-plans?rtc=1)| Yönetim Microsoft 365 Uygulamaları.
+| [Microsoft Windows 10 Enterprise](/windows/windows-10/) | Cihaz kurulum deneyiminin yönetimi, diğer hizmetlere bağlantıları yönetme ve BT uzmanları için operasyonel destek. |
+| [İş İçin Windows Update](/windows/deployment/update/waas-manage-updates-wufb) | Windows 10 güncelleştirme hakkında ek bilgi sağlamak için Windows 10 Enterprise tanılama verilerini kullanır. |
+| [Microsoft Endpoint Manager](/mem/endpoint-manager-overview) | Cihaz yönetimi ve verilerinizin güvenliğini sağlamak için. Aşağıdaki veri kaynakları Microsoft Endpoint Manager altındadır:<br><ul><li>[Microsoft Azure Active Directory](/azure/active-directory/): Tüm kullanıcı hesaplarının kimlik doğrulaması ve kimliği.</li><li>[Microsoft Intune](/mem/intune/): Cihaz yapılandırmalarını, cihaz yönetimini ve uygulama yönetimini dağıtma.</li><li>[Endpoint Analytics](/mem/analytics/overview): Cihaz ve uygulama kullanımı hakkında analitik içgörüler.</li><li>[Windows Autopilot](/microsoft-365/windows/windows-autopilot): Cihaz sağlama ve dağıtım.</li><li>[Uç Nokta için Microsoft Defender](/microsoft-365/security/defender-endpoint/): Cihaz güvenlik izleme ve güvenlik bilgileri verileri gibi güvenlik hizmetleri sağlar.</li></ul>
+| [Microsoft Yönetilen Masaüstü](https://endpoint.microsoft.com/#home) | Müşteri tarafından sağlanan veya hizmet çalıştırılırken hizmet tarafından oluşturulan veriler. |
+| [Kurumsal uygulamalar Microsoft 365](https://www.microsoft.com/en-us/microsoft-365/enterprise/compare-office-365-plans?rtc=1)| Microsoft 365 Uygulamaları yönetimi.
 
-## <a name="microsoft-managed-desktop-data-process-and-storage"></a>Microsoft Yönetilen Masaüstü veri işlemi ve depolama
+## <a name="microsoft-managed-desktop-data-process-and-storage"></a>veri işlemini ve depolamayı Microsoft Managed Desktop
 
-Microsoft Yönetilen Masaüstü, kurumsal müşterilere hizmet sunmak için birden çok Microsoft ürünü ve hizmetinin verilerine güvenmektedir.
+Microsoft Managed Desktop, hizmetini kurumsal müşterilere sunmak için birden çok Microsoft ürün ve hizmetindeki verilere dayanır.
 
-Kayıtlı cihazları korumak ve korumak için bu hizmetlerden verileri Microsoft Yönetilen Masaüstü'ne işlemeyi ve kopyalamayı sağlarız. Verileri işlemeyi sağlarken, Çevrimiçi Hizmetler Koşulları ve Microsoft Gizlilik Bildirimi'ne başvurularak, [belgelenmiş yönergeleri](https://www.microsoft.com/licensing/product-licensing/products) [takip ederiz](https://privacy.microsoft.com/privacystatement).
+Kayıtlı cihazları korumak ve bakımını yapmak için bu hizmetlerden verileri işleyip Microsoft Managed Desktop kopyalarız. Verileri işlediğimizde, [Çevrimiçi Hizmet Koşulları](https://www.microsoft.com/licensing/product-licensing/products) ve [Microsoft Gizlilik Bildirimi'nde](https://privacy.microsoft.com/privacystatement) belirtildiği gibi sağladığınız belgelenmiş yönergeleri izleriz.
 
-Microsoft Yönetilen Masaüstü'nin işlemci görevleri uygun gizlilik, güvenlik ve güvenden emin olmaktır. Microsoft Yönetilen Masaüstü, kişisel kişisel verilerin düzgün işlenmesini sağlamak için ek gizlilik ve güvenlik önlemleri almaktadır.
+Microsoft Managed Desktop'ın işlemci görevleri arasında uygun gizlilik, güvenlik ve dayanıklılığın sağlanması yer alır. Microsoft Managed Desktop, kişisel verilerin düzgün işlenmesini sağlamak için ek gizlilik ve güvenlik önlemlerini devreye alır.
 
-## <a name="microsoft-managed-desktop-data-storage-and-staff-location"></a>Microsoft Yönetilen Masaüstü veri depolaması ve personel konumu
+## <a name="microsoft-managed-desktop-data-storage-and-staff-location"></a>Veri depolama ve personel konumunu Microsoft Managed Desktop
 
-Microsoft Yönetilen Masaüstü verilerini ABD'nin Azure veri merkezlerinde depolar.
+Microsoft Managed Desktop verilerini Birleşik Devletler Azure veri merkezlerinde depolar.
 
-Microsoft Yönetilen Masaüstü ve diğer hizmetler tarafından alınan kişisel verilerin hizmetin çalışır durumda olması gerekir. Microsoft Yönetilen Masaüstü'nden bir cihaz kaldırılırsa, kişisel verileri en çok 30 gün süreyle tutariz. Bununla birlikte, Uç Nokta için Microsoft Defender tarafından toplanan uyarı verileri, güvenlik nedeniyle 180 gün süreyle depolanır. Veri bekletme hakkında daha fazla bilgi için bkz[. Veri bekletme, silme ve Microsoft 365](/compliance/assurance/assurance-data-retention-deletion-and-destruction-overview).
+Hizmetin çalışır durumda kalması için Microsoft Managed Desktop ve diğer hizmetler tarafından elde edilen kişisel veriler gereklidir. Bir cihaz Microsoft Managed Desktop kaldırılırsa, kişisel verileri en fazla 30 gün saklarız. Ancak, Uç Nokta için Microsoft Defender tarafından toplanan uyarı verileri güvenlik amacıyla 180 gün boyunca depolanır. Veri saklama hakkında daha fazla bilgi için bkz. [Microsoft 365 veri saklama, silme ve yok etme](/compliance/assurance/assurance-data-retention-deletion-and-destruction-overview).
 
-Microsoft Yönetilen Masaüstü Mühendislik İşlemleri ve Güvenlik İşlemleri ekipleri ABD ve Hindistan'da bulunur.
+Microsoft Managed Desktop Mühendislik Operasyon ve Güvenlik Operasyonları ekipleri Birleşik Devletler, Hindistan ve Romanya'da yer almaktadır.
 
-### <a name="microsoft-windows-10-diagnostic-data"></a>Microsoft Windows 10 verilerini güncelleştirme
+### <a name="microsoft-windows-10-diagnostic-data"></a>Microsoft Windows 10 tanılama verileri
 
-Microsoft Yönetilen Masaüstü, [Windows 10, güncel bir şekilde verilerinizi](/windows/privacy/windows-diagnostic-data) güvende Windows sorunları gidermek ve ürün geliştirmeleri yapmak için Gelişmiş Tanılama verilerini kullanır.
+Microsoft Managed Desktop, Windows güvenli, güncel tutmak, sorunları gidermek ve ürün geliştirmeleri yapmak için Windows 10 [Gelişmiş tanılama verilerini](/windows/privacy/windows-diagnostic-data) kullanır.
 
-Gelişmiş tanılama verileri ayarı, Microsoft Yönetilen Masaüstü'ne kaydolan cihazlar ve bunların ayarları, yetenekleri ve cihaz durumu hakkında daha ayrıntılı bilgi içerir. İyileştirilmiş tanılama verileri seçildiğinde, gerekli tanılama verileri de içinde olmak üzere veriler toplanır. Daha fazla bilgi için bkz[. Tanılama Windows ayarları](/windows/privacy/changes-to-windows-diagnostic-data-collection) ve veri toplama hakkında tanılama Windows 10 verileri toplama.
+Gelişmiş tanılama verileri ayarı, Microsoft Managed Desktop kaydedilen cihazlar ve bunların ayarları, özellikleri ve cihaz durumu hakkında daha ayrıntılı bilgiler içerir. Gelişmiş tanılama verileri seçildiğinde, gerekli tanılama verileri de dahil olmak üzere veriler toplanır. Daha fazla bilgi için bkz. [Windows 10 tanılama verileri ayarı ve veri toplama hakkında tanılama verileri toplama Windows değişiklikler](/windows/privacy/changes-to-windows-diagnostic-data-collection).
 
-Tanılama veri terminolojisi, verilerin gelecek sürümlerinde Windows. Microsoft Yönetilen Masaüstü, yalnızca hizmet için gereken verileri işlemeyi taahhüt ediyor. Bu, tanılama düzeyinin İsteğe Bağlı olarak değiş değişecek olmasıyla **birlikte, Microsoft** Yönetilen Masaüstü hizmet için gereken tanılama veri toplamaya yönelik sınırlı tanılama ilkelerini uygulayacak. Daha fazla bilgi için bkz[. Tanılama Windows veri toplamada yapılan değişiklikler](/windows/privacy/changes-to-windows-diagnostic-data-collection).
+Tanılama verisi terminolojisi, Windows gelecek sürümlerinde değişecektir. Microsoft Managed Desktop yalnızca hizmetin ihtiyaç duyduğu verileri işlemeye kararlıdır. Bu, tanılama düzeyinin **İsteğe bağlı** olarak değiştirileceği anlamına gelir, ancak Microsoft Managed Desktop hizmet için gerekli tanılama verileri toplamaya ince ayar yapmak için sınırlı tanılama ilkelerini uygular. Daha fazla bilgi için bkz. [Windows tanılama verilerini toplama değişiklikleri](/windows/privacy/changes-to-windows-diagnostic-data-collection).
 
-Microsoft Yönetilen Masaüstü yalnızca, uygulama ve cihaz güvenilirliği ve performans bilgileri gibi kayıtlı cihazlardan Windows 10 isteğe bağlı tanılama verilerini işler ve depolar. Microsoft Yönetilen Masaüstü, müşterilerin sohbet ve tarayıcı geçmişi, ses, metin veya konuşma verileri gibi kişisel verilerini işlemez ve depolamaz.
+Microsoft Managed Desktop yalnızca uygulama ve cihaz güvenilirliği ve performans bilgileri gibi kayıtlı cihazlardan kaynaklanan isteğe bağlı Windows 10 tanılama verilerini işler ve depolar. Microsoft Managed Desktop, müşterilerin sohbet ve tarayıcı geçmişi, ses, metin veya konuşma verileri gibi kişisel verilerini işlemez ve depolamaz.
 
-Microsoft Windows 10'un tanılama veri toplaması hakkında daha fazla bilgi için, Microsoft Gizlilik Bildirimi'nin Kişisel verileri nerede depoları ve işlemesi bölümüne bakın.[](https://privacy.microsoft.com/privacystatement#mainwherewestoreandprocessdatamodule)
+Microsoft Windows 10 tanılama verilerini toplama hakkında daha fazla bilgi için Microsoft Gizlilik Bildirimi'nin [Kişisel verileri depolama ve işleme yeri](https://privacy.microsoft.com/privacystatement#mainwherewestoreandprocessdatamodule) bölümüne bakın.
 
-### <a name="microsoft-windows-update-for-business"></a>İş Windows Microsoft Güncelleştirmesi
+### <a name="microsoft-windows-update-for-business"></a>İş İçin Microsoft Windows Update
 
-Microsoft Windows İş Güncelleştirmesi, güncelleştirme durumunu ve Windows tanılamada yer alan verileri kullanır. Microsoft Yönetilen Masaüstü bu verileri kullanır ve bu verileri azaltmak ve tüm kayıtlı cihazların önceden tanımlanmış bir güncelleştirme tempos nedeniyle güncel olmasını sağlamak için sorunları çözmek için kullanır.
+İş için Microsoft Windows Update, güncelleştirme durumunu ve hatalarını analiz etmek için Windows tanılama verilerini kullanır. Microsoft Managed Desktop bu verileri kullanır ve bunları kullanarak tüm kayıtlı cihazların önceden tanımlanmış bir güncelleştirme düzenine göre güncel olduğundan emin olmak için sorunları azaltır ve çözer.
 
 ### <a name="microsoft-azure-active-directory"></a>Microsoft Azure Active Directory
 
-Microsoft Yönetilen Masaüstü tarafından kullanılan veriler, Azure Active Directory (Azure AD) tarafından coğrafi bir konumda depolanır. Coğrafi konum, Microsoft Apps Enterprise ve Azure gibi Microsoft çevrimiçi hizmetlere abone olarak kuruluş tarafından sağlanan konuma dayalıdır. Azure AD verilerinizin nerede bulunduğu hakkında daha fazla bilgi için bkz. [Azure Active Directory - Verileriniz nerede?](https://msit.powerbi.com/view?r=eyJrIjoiODdjOWViZDctMWRhZS00ODUzLWI4MmQtNWM5NjBkZTBkNjFlIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9)
+Microsoft Managed Desktop tarafından kullanılan verilerin tanımlanması, coğrafi bir konumda Azure Active Directory (Azure AD) tarafından depolanır. Coğrafi konum, Enterprise ve Azure için Microsoft Apps gibi Microsoft çevrimiçi hizmetler abone olduğunda kuruluş tarafından sağlanan konumu temel alır. Azure AD verilerinizin bulunduğu yer hakkında daha fazla bilgi için bkz. [Azure Active Directory - Verileriniz nerede bulunur?](https://msit.powerbi.com/view?r=eyJrIjoiODdjOWViZDctMWRhZS00ODUzLWI4MmQtNWM5NjBkZTBkNjFlIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9)
 
 ### <a name="microsoft-intune"></a>Microsoft Intune
 
-Microsoft Intune işlemlerini ve hizmetlerini desteklemek için microsoft Yönetilen Masaüstü'ne veri toplar, işler ve paylaşımlar sağlar. Intune'da toplanan veriler hakkında daha fazla bilgi için bkz [. Intune'da veri toplama](/mem/intune/protect/privacy-data-collect)
+Microsoft Intune, iş operasyonlarını ve hizmetlerini desteklemek için verileri toplar, işler ve Microsoft Managed Desktop paylaşır. Intune'de toplanan veriler hakkında daha fazla bilgi için bkz. [Intune'de veri toplama](/mem/intune/protect/privacy-data-collect)
 
-Veri konumlarını daha Microsoft Intune için bkz. [Müşteri verilerinizin Microsoft 365 nerede depolanır](/microsoft-365/enterprise/o365-data-locations). Intune, müşteri verileri için yönetici tarafından yapılan depolama konumu seçimlerine saygılıdır.
+Microsoft Intune veri konumları hakkında daha fazla bilgi için bkz. [Microsoft 365 müşteri verilerinizin depolandığı yer](/microsoft-365/enterprise/o365-data-locations). Intune, yönetici tarafından müşteri verileri için yapılan depolama konumu seçimlerine saygı gösterir.
 
 ### <a name="microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender
 
-Uç Nokta için Microsoft Defender yönetim, izleme ve raporlama amacıyla Microsoft Yönetilen Masaüstü'ne kayıtlı cihazların bilgilerini toplar ve depolar. Toplanan bilgiler:
+Uç Nokta için Microsoft Defender yönetim, izleme ve raporlama amacıyla Microsoft Managed Desktop kayıtlı cihazlar için bilgileri toplar ve depolar. Toplanan bilgiler şunları içerir:
 
-- Dosya verileri (dosya adları, boyutu ve karmalar gibi)
-- Süreç verileri (çalışan süreçler, karmalar)
+- Dosya verileri (dosya adları, boyut ve karmalar gibi)
+- İşlem verileri (çalışan işlemler, karmalar)
 - Kayıt defteri verileri
 - Ağ bağlantısı verileri
 - Cihaz ayrıntıları (cihaz tanımlayıcıları, cihaz adları ve işletim sistemi sürümü gibi)
 
-Uç noktanın veri toplaması ve depolama konumları için Microsoft Defender hakkında daha fazla bilgi için bkz. Uç nokta veri depolaması ve gizliliği için [Microsoft Defender](/microsoft-365/security/defender-endpoint/data-storage-privacy#what-data-does-microsoft-defender-atp-collect).
+Uç Nokta için Microsoft Defender veri toplama ve depolama konumları hakkında daha fazla bilgi için bkz. [Uç Nokta için Microsoft Defender veri depolama ve gizlilik](/microsoft-365/security/defender-endpoint/data-storage-privacy#what-data-does-microsoft-defender-atp-collect).
 
-### <a name="microsoft-365-apps-for-enterprise"></a>Microsoft 365 Uygulamaları için Enterprise
+### <a name="microsoft-365-apps-for-enterprise"></a>Enterprise için Microsoft 365 Uygulamaları
 
-Microsoft 365 Uygulamaları için Enterprise, bu uygulamaların en son sürümle güncel olduğundan emin olmak için Microsoft Yönetilen Masaüstü ile veri toplar ve bilgi paylaşımı sağlar. Bu güncelleştirmeler, Microsoft Yönetilen Masaüstü tarafından yönetilen önceden tanımlanmış güncelleştirme kanallarını temel almaktadır. Verilerinizin veri toplama Microsoft 365 Uygulamaları depolama konumları hakkında daha fazla bilgi için bkz. Uç nokta veri [depolaması ve gizliliği için Microsoft Defender](/microsoft-365/security/defender-endpoint/data-storage-privacy#what-data-does-microsoft-defender-atp-collect).
+Enterprise için Microsoft 365 Uygulamaları, bu uygulamaların en son sürümle güncel olduğundan emin olmak için verileri Microsoft Managed Desktop ile toplar ve paylaşır. Bu güncelleştirmeler, Microsoft Managed Desktop tarafından yönetilen önceden tanımlanmış güncelleştirme kanallarını temel alır. Microsoft 365 Uygulamaları veri toplama ve depolama konumları hakkında daha fazla bilgi için bkz. [veri depolama ve gizlilik Uç Nokta için Microsoft Defender](/microsoft-365/security/defender-endpoint/data-storage-privacy#what-data-does-microsoft-defender-atp-collect).
 
 ## <a name="major-data-change-notification"></a>Önemli veri değişikliği bildirimi
 
-Microsoft Yönetilen Masaüstü, hizmet iletişim çerçevemizde ana hatlarıyla açıklanan değişiklik denetim sürecini izler.
+Microsoft Managed Desktop, hizmet iletişim çerçevemizde açıklandığı gibi bir değişiklik denetimi sürecini izler.
 
-Bu durumu, Microsoft 365 ve Microsoft Yönetilen Masaüstü Yönetim portalı üzerinden, hizmetle ilgili olarak hem güvenlik olayları hem de önemli değişiklikler hakkında müşterilere bildirim sunarsınız.
+Müşterilere Microsoft 365 İleti Merkezi aracılığıyla bildirim göndeririz ve hem güvenlik olaylarını hem de hizmette yapılan önemli değişiklikleri Yönetici portalı Microsoft Managed Desktop.
 
-Toplanmış veri türlerinde ve burada depolandığı yerde yapılan değişiklikler, malzeme değişikliği olarak kabul edilir. Standart uygulama olarak bu değişikliğin ürün ve hizmetleri için en az 30 gün içinde gelişmiş Microsoft 365 bildirimini sağlarız. Daha fazla bilgi için bkz [. Hizmet değişiklikleri ve iletişim](/microsoft-365/managed-desktop/service-description/servicechanges).
+Toplanan veri türlerinde ve depolandığı yerde yapılan değişiklikler önemli bir değişiklik olarak kabul edilir. Microsoft 365 ürün ve hizmetleri için standart uygulama olarak bu değişiklikle ilgili en az 30 gün ileri düzey bildirim sağlayacağız. Daha fazla bilgi için bkz [. Hizmet değişiklikleri ve iletişim](/microsoft-365/managed-desktop/service-description/servicechanges).
 
 ## <a name="compliance"></a>Uyumluluk
 
-Microsoft Yönetilen Masaüstü'ne dış denetimler yapıldı ve kapsamlı bir uyumluluk teklifi kümesi elde edildi. Daha fazla bilgiyi Uyumluluk altında [bulabilirsiniz](/microsoft-365/managed-desktop/intro/compliance). Denetim raporları, Microsoft Enterprise Online Services için merkezi [](https://aka.ms/stp)bir depo olarak hizmet veren Microsoft Hizmet Güveni Portalı'Enterprise kullanılabilir. Microsoft Yönetilen Masaüstü bu belgelerin içinde, "İzleme ve Yönetim" kategorisi altında listelenir.
+Microsoft Managed Desktop dış denetimlerden geçmiş ve kapsamlı bir uyumluluk teklifi kümesi edinmiştir. [Uyumluluk](/microsoft-365/managed-desktop/intro/compliance) bölümünde daha fazla bilgi bulabilirsiniz. Denetim raporları, Microsoft Enterprise Online Services için merkezi bir depo olarak hizmet veren Microsoft [Hizmet Güveni Portalı'nda](https://aka.ms/stp) indirilebilir. Microsoft Managed Desktop bu belgelerde "İzleme ve Yönetim" kategorisi altında listelenir.
 
-### <a name="data-subject-requests"></a>Veri konusu istekleri
+### <a name="data-subject-requests"></a>Veri sahibi istekleri
 
-Microsoft Yönetilen Masaüstü GDPR ve CCPA gizlilik düzenlemelerine uygundur ve bu düzenlemeler kişisel verileriyle ilgili belirli haklar verir.
+Microsoft Managed Desktop, veri sahiplerine kişisel verilerine özgü haklar veren GDPR ve CCPA gizlilik düzenlemelerini izler.
 
 Bu haklar şunlardır:
 
 - Kişisel verilerin kopyalarını alma
-- Düzeltme talep ediyor
-- İşlemeyi kısıtlama
-- Silindi
-- Elektronik biçimde alınarak başka bir denetleyiciye taşınabilirsiniz.
+- Düzeltme isteğinde bulunma
+- İşlenmeyi kısıtlama
+- Silme
+- Başka bir denetleyiciye taşınabilmesi için elektronik biçimde alma.
 
-Veri Konusu İstekleri (DSR) hakkında daha genel bilgiler için bkz. Veri Konusu İstekleri [ve GDPR ve CCPA](/compliance/regulatory/gdpr-data-subject-requests).
+Veri Sahibi İstekleri (DSR) hakkında daha genel bilgi için bkz. [Veri Sahibi İstekleri, GDPR ve CCPA](/compliance/regulatory/gdpr-data-subject-requests).
 
-Microsoft Yönetilen Masaüstü olay yönetim sistemi tarafından toplanan veriler üzerinde veri konusu isteklerini alıştırmak için, aşağıdaki veri konusu isteklerine bakın:
+Microsoft Managed Desktop servis talebi yönetim sistemi tarafından toplanan veriler üzerinde veri sahibi isteklerini alıştırmak için aşağıdaki veri sahibi isteklerine bakın:
 
-| Veri konusu istekleri | Açıklama |
+| Veri sahibi istekleri | Açıklama |
 | ------ | ------ |
-| Uç nokta uyarıları için Microsoft Defender'dan veriler | Güvenlik yöneticiniz, Yönetim Portalı'na bir rapor isteği göndererek Uç Nokta uyarıları için Microsoft Defender ile ilgili kişisel verilerin silinmesini veya [ayıklamasını ister](https://aka.ms/memadmin). <br><br> Aşağıdaki bilgileri sağlar: <br><ul><li>İstek türü: İsteği değiştir</li><li>Kategori: Güvenlik</li><li>Alt kategori: Diğer</li><li>Açıklama: İlgili cihaz adlarını girin.</li></ul> |
-| Microsoft Yönetilen Masaüstü destek isteklerinden veriler | YÖNETIM yöneticiniz, Yönetim Portalı'na bir rapor isteği göndererek kişisel verilerle ilgili destek isteklerinin silinmesini veya [ayıklamasını talep edebilirsiniz](https://aka.ms/memadmin). <br><br> Aşağıdaki bilgileri sağlar: <ul><li>İstek türü: İsteği değiştir</li><li>Kategori: Güvenlik</li><li>Alt kategori: Diğer</li><li>Açıklama: İlgili cihaz adlarını veya kullanıcı adlarını girin.</li></ul>
+| Uç Nokta için Microsoft Defender uyarılarından gelen veriler | Güvenlik yöneticiniz, [Yönetici Portalı'nda](https://aka.ms/memadmin) bir rapor isteği göndererek Uç Nokta için Microsoft Defender uyarılarıyla ilgili kişisel verilerin silinmesini veya ayık olmasını isteyebilir. <br><br> Aşağıdaki bilgileri sağlayın: <br><ul><li>İstek türü: değişiklik isteği</li><li>Kategori: Güvenlik</li><li>Alt kategori: Diğer</li><li>Açıklama: İlgili cihaz adlarını belirtin.</li></ul> |
+| Microsoft Managed Desktop destek isteklerindeki veriler | BT yöneticiniz, [Yönetim Portalı'nda](https://aka.ms/memadmin) bir rapor isteği göndererek kişisel verilerle ilgili destek isteklerinin silinmesini veya ayıksını isteyebilir. <br><br> Aşağıdaki bilgileri sağlayın: <ul><li>İstek türü: değişiklik isteği</li><li>Kategori: Güvenlik</li><li>Alt kategori: Diğer</li><li>Açıklama: İlgili cihaz adlarını veya kullanıcı adlarını belirtin.</li></ul>
 
-Hizmetle ilgili diğer ürünlerin DSR'leri için aşağıdaki makalelere bakın:
+Hizmetle ilgili diğer ürünlerden DSR'ler için aşağıdaki makalelere bakın:
 
-- Windows [verilerini toplama](/compliance/regulatory/gdpr-dsr-windows)
+- [Tanılama verilerini](/compliance/regulatory/gdpr-dsr-windows) Windows
 - Microsoft [Intune verileri](/compliance/regulatory/gdpr-dsr-intune)
 - Azure Active [Directory verileri](/compliance/regulatory/gdpr-dsr-azure)
 
 ## <a name="legal"></a>Yasal
 
-**Kurumsal müşteriler tarafından sağlanan ürünlerin son kullanıcılarına Microsoft'un gizlilik bildirimi**:
+**Microsoft'un kuruluş müşterileri tarafından sağlanan ürünlerin son kullanıcılarına gizlilik bildirimi**:
 
-[Microsoft Gizlilik Bildirimi son](https://privacy.microsoft.com/privacystatement) kullanıcılara, iş hesabıyla Microsoft ürünlerinde oturum a açınca:
+[Microsoft Gizlilik Bildirimi](https://privacy.microsoft.com/privacystatement), son kullanıcılara microsoft ürünlerinde bir iş hesabıyla oturum açtıklarında şu bilgileri bildirir:
 
-1. Kuruluşları, hesaplarını kontrol ve yönetme (gizlilikle ilgili ayarları denetleme dahil) ve verilerine erişim ve işleme işlemlerini tamamlar.
-1. Microsoft, kuruluşa ve son kullanıcılara hizmet sağlamak için verileri toplar ve işler.
+1. Kuruluş, hesabını denetleyebiliyor ve yönetebiliyor (gizlilikle ilgili ayarları denetleme dahil) ve verilerine erişip işleyebilir.
+1. Microsoft, hizmeti kuruluşa ve son kullanıcılara sağlamak için verileri toplayıp işleyebilirsiniz.

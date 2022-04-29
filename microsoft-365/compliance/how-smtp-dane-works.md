@@ -1,5 +1,5 @@
 ---
-title: Adlandırılmış Varlıkların SMTP DNS Tabanlı Kimlik Doğrulaması (DANE) e-posta iletişimlerinin güvenliğini sağlamak için nasıl çalışır?
+title: Adlandırılmış Varlıkların SMTP DNS Tabanlı Kimlik Doğrulaması (DANE) e-posta iletişimlerinin güvenliğini nasıl sağlar?
 f1.keywords:
 - NOCSH
 ms.author: v-mathavale
@@ -14,16 +14,20 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 description: Posta sunucuları arasındaki e-posta iletişiminin güvenliğini sağlamak için SMTP DNS Tabanlı Adlandırılmış Varlıkların Kimlik Doğrulamasının (DANE) nasıl çalıştığını öğrenin.
-ms.openlocfilehash: b5f9337457556dda53b5b2f982480a4c2501fcc9
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: fa982671aebb7c857c1c55af027d10437091e0dd
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64782863"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65131030"
 ---
 # <a name="how-smtp-dns-based-authentication-of-named-entities-dane-works"></a>Adlandırılmış Varlıkların SMTP DNS Tabanlı Kimlik Doğrulaması (DANE) nasıl çalışır?
 
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
 SMTP protokolü, iletileri posta sunucuları arasında aktarmak için kullanılan ana protokoldür ve varsayılan olarak güvenli değildir. İletilerin SMTP üzerinden şifrelenmiş iletimini desteklemek için Aktarım Katmanı Güvenliği (TLS) protokolü yıllar önce kullanıma sunulmuştur. Bu, bir gereksinim olarak değil, genellikle fırsatçı olarak kullanılır ve çok fazla e-posta trafiğinin net metin halinde bırakılması, kötü aktörlerin müdahalesine karşı savunmasız olmasıdır. Ayrıca SMTP, kimlik sahtekarlığına ve OrtaDaki Adam (MITM) saldırılarına duyarlı olan genel DNS altyapısı aracılığıyla hedef sunucuların IP adreslerini belirler. Bu, e-posta gönderme ve alma güvenliğini artırmak için birçok yeni standardın oluşturulmasına neden olmuştur. Bunlardan biri, Adlandırılmış Varlıkların DNS Tabanlı Kimlik Doğrulamasıdır (DANE).
+  
+SMTP [RFC 7672](https://tools.ietf.org/html/rfc7672) için DANE, etki alanının DNS kaydı kümesinde Aktarım Katmanı Güvenliği Kimlik Doğrulaması (TLSA) kaydının varlığını kullanarak bir etki alanına işaret eder ve posta sunucuları DANE'yi destekler. TLSA kaydı yoksa, posta akışı için DNS çözümlemesi, herhangi bir DANE denetimi denenmeden her zamanki gibi çalışır. TLSA kaydı TLS desteğine güvenli bir şekilde sinyal gönderir ve etki alanı için DANE ilkesini yayımlar. Bu nedenle, posta sunucularını göndermek, SMTP DANE kullanarak meşru alıcı posta sunucularının kimliğini başarıyla doğrulayabilir. Bu, eski sürüme düşürme ve MITM saldırılarına karşı dayanıklı olmasını sağlar. DANE' nin DNSSEC üzerinde doğrudan bağımlılıkları vardır. Bu, ortak anahtar şifrelemesi kullanarak DNS aramaları için kayıtları dijital olarak imzalayarak çalışır. DNSSEC denetimleri, istemciler için DNS sorguları oluşturan DNS sunucuları olan özyinelemeli DNS çözümleyicilerinde gerçekleşir. DNSSEC, DNS kayıtlarının değiştirilmemesini ve orijinal olmasını sağlar.  
 
 SMTP [RFC 7672](https://tools.ietf.org/html/rfc7672) için DANE, etki alanının DNS kaydı kümesinde Aktarım Katmanı Güvenliği Kimlik Doğrulaması (TLSA) kaydının varlığını kullanarak bir etki alanına işaret eder ve posta sunucuları DANE'yi destekler. TLSA kaydı yoksa, posta akışı için DNS çözümlemesi, herhangi bir DANE denetimi denenmeden her zamanki gibi çalışır. TLSA kaydı TLS desteğine güvenli bir şekilde sinyal gönderir ve etki alanı için DANE ilkesini yayımlar. Bu nedenle, posta sunucularını göndermek, SMTP DANE kullanarak meşru alıcı posta sunucularının kimliğini başarıyla doğrulayabilir. Bu, eski sürüme düşürme ve MITM saldırılarına karşı dayanıklı olmasını sağlar. DANE' nin DNSSEC üzerinde doğrudan bağımlılıkları vardır. Bu, ortak anahtar şifrelemesi kullanarak DNS aramaları için kayıtları dijital olarak imzalayarak çalışır. DNSSEC denetimleri, istemciler için DNS sorguları oluşturan DNS sunucuları olan özyinelemeli DNS çözümleyicilerinde gerçekleşir. DNSSEC, DNS kayıtlarının değiştirilmemesini ve orijinal olmasını sağlar.
 
@@ -127,6 +131,13 @@ SMTP DANE hatasının e-postanın engellenmesine neden olacağı yalnızca iki s
 |5.7.323|tlsa-invalid: Etki alanı DANE doğrulamasında başarısız oldu.|
 |5.7.324|dnssec-invalid: Hedef etki alanı geçersiz DNSSEC kayıtları döndürdü.|
 
+> [!NOTE]
+> Şu anda, bir etki alanı DNSSEC'i desteklediğini ancak DNSSEC denetimlerini başarısız olduğunu bildirirse, Exchange Online 4/5.7.324 dnssec-invalid hatasını oluşturmaz. Genel bir DNS hatası oluşturur:
+> 
+> `4/5.4.312 DNS query failed`
+> 
+> Bu bilinen sınırlamayı düzeltmek için etkin bir şekilde çalışıyoruz. Bu hata deyimini alırsanız Microsoft Uzak Bağlantı Çözümleyicisi'ne gidin ve 4/5.4.312 hatasını oluşturan etki alanında DANE doğrulama testi gerçekleştirin. Sonuçlar bunun bir DNSSEC sorunu mu yoksa farklı bir DNS sorunu mu olduğunu gösterir.
+
 ### <a name="troubleshooting-57321-starttls-not-supported"></a>5.7.321 starttls-desteklenmiyor sorunlarını giderme
 
 Bu genellikle hedef posta sunucusuyla ilgili bir sorunu gösterir. İletiyi aldıktan sonra:
@@ -188,6 +199,13 @@ Sorun giderme sırasında aşağıdaki hata kodları oluşturulabilir:
 |4/5.7.322|sertifikanın süresi doldu: Hedef posta sunucusunun sertifikasının süresi doldu.|
 |4/5.7.323|tlsa-invalid: Etki alanı DANE doğrulamasında başarısız oldu.|
 |4/5.7.324|dnssec-invalid: Hedef etki alanı geçersiz DNSSEC kayıtları döndürdü.|
+
+> [!NOTE]
+> Şu anda, bir etki alanı DNSSEC'i desteklediğini ancak DNSSEC denetimlerini başarısız olduğunu bildirirse, Exchange Online 4/5.7.324 dnssec-invalid hatasını oluşturmaz. Genel bir DNS hatası oluşturur:
+> 
+> `4/5.4.312 DNS query failed`
+> 
+> Bu bilinen sınırlamayı düzeltmek için etkin bir şekilde çalışıyoruz. Bu hata deyimini alırsanız Microsoft Uzak Bağlantı Çözümleyicisi'ne gidin ve 4/5.4.312 hatasını oluşturan etki alanında DANE doğrulama testi gerçekleştirin. Sonuçlar bunun bir DNSSEC sorunu mu yoksa farklı bir DNS sorunu mu olduğunu gösterir.
 
 ### <a name="troubleshooting-57321-starttls-not-supported"></a>5.7.321 starttls-desteklenmiyor sorunlarını giderme
 

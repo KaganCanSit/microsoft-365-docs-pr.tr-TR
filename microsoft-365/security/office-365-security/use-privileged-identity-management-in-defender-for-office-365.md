@@ -1,5 +1,5 @@
 ---
-title: Siber güvenlik Privileged Identity Management yönetici erişimini sınırlamak için Office 365 için Microsoft Defender'te Azure Privileged Identity Management (PIM) kullanın.
+title: Siber güvenlik araçlarına yönetici erişimini sınırlamak için Office 365 için Microsoft Defender'da Azure Privileged Identity Management (PIM) kullanın.
 f1.keywords:
 - NOCSH
 ms.author: tracyp
@@ -17,92 +17,92 @@ ms.collection:
 - m365initiative-defender-office365
 ms.custom:
 - seo-marvel-apr2020
-description: Office 365 için Microsoft Defender'da yükseltilmiş ayrıcalık görevleri gerçekleştirmek ve verilerinize riski düşürmek amacıyla kullanıcılara tam zamanlı ve sınırlı erişim vermek için Azure PIM'i tümleştirin.
+description: Azure PIM'i tümleştirerek kullanıcılara Office 365 için Microsoft Defender'da yükseltilmiş ayrıcalık görevleri gerçekleştirmeleri için tam zamanında ve sınırlı erişim vermek ve verilerinize yönelik riski azaltmayı öğrenin.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: c45edc7ab7f90c98baecd15565508bc9a49f39a8
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 6e043a671b2416ba1c856c74a53206b06c180f13
+ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64473419"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65130680"
 ---
 <!--A-->
-# <a name="privileged-identity-management-pim-and-why-to-use-it-with-microsoft-defender-for-office-365"></a>Privileged Identity Management (PIM) ve PIM'i neden Office 365 için Microsoft Defender
+# <a name="privileged-identity-management-pim-and-why-to-use-it-with-microsoft-defender-for-office-365"></a>Privileged Identity Management (PIM) ve neden Office 365 için Microsoft Defender
 
-Privileged Identity Management (PIM), ayarlamalar yapıldıktan sonra kullanıcıların belirli bir görevin yapılması için sınırlı bir süre (bazen zaman kutusu kullanım süresi olarak da adlandırılan) verilere erişmelerini sağlar. Bu erişim, gerekli olan eylemi yapmak için 'tam zamanında' verilir ve sonra iptal edilir. PIM, verilerin ve diğer ayarlara uzun süreli erişimi olan ayrıcalıklı yönetim hesaplarıyla karşılaştırıldığında, kullanıcının hassas verilere erişimini ve süresini sınırlar. Peki bu özelliği (PIM) BU ÖZELLIK ILE birlikte Office 365 için Microsoft Defender?
+Privileged Identity Management (PIM), ayarlandıktan sonra belirli bir görevin yapılabilmesi için kullanıcılara sınırlı bir süre boyunca (zaman kutulu zaman aralığı olarak da adlandırılır) verilere erişim sağlayan bir Azure özelliğidir. Bu erişim, gerekli eylemi gerçekleştirmek için "tam zamanında" verilir ve ardından iptal edilir. PIM, verilere ve diğer ayarlara uzun süreli erişimi olan ayrıcalıklı yönetim hesaplarıyla karşılaştırıldığında, kullanıcının hassas verilere erişimi ve süresini sınırlayarak açığa çıkarma riskini azaltır. Peki bu özelliği (PIM) Office 365 için Microsoft Defender ile birlikte nasıl kullanabiliriz?
 
 > [!TIP]
-> PIM erişimi, rol ve kimlik düzeyi kapsamındadır ve birden çok görevi tamamlamaya olanak sağlar. Bu, Görev düzeyinde kapsamı bulunan Ayrıcalıklı Erişim Yönetimi (PAM) ile karıştırılmamalıdır.
+> PIM erişiminin kapsamı rol ve kimlik düzeyine göre belirlenir ve birden çok görev tamamlanmasını sağlar. Görev düzeyinde kapsamı belirlenmiş Privileged Access Management (PAM) ile karıştırılmamalıdır.
 
-## <a name="steps-to-use-pim-to-grant-just-in-time-access-to-defender-for-office-365-related-tasks"></a>İlgili görevlere tam zamanlı erişim vermek üzere PIM Office 365 için Defender adımlar
+## <a name="steps-to-use-pim-to-grant-just-in-time-access-to-defender-for-office-365-related-tasks"></a>İlgili Office 365 için Defender görevlere tam zamanında erişim vermek için PIM kullanma adımları
 
-Yöneticiler, PIM'i kişisel Office 365 için Defender için ayarerek, bir kullanıcının ihtiyaçları olan eylemleri yapmak için erişim isteğide bulunduracakları bir süreç oluşturabilir. Kullanıcı, *ayrıcalıklarını yükseltme* ihtiyacını haklı çıkarmalı.
+Yöneticiler, PIM'i Office 365 için Defender ile çalışacak şekilde ayarlayarak kullanıcının ihtiyaç duyduğu eylemleri gerçekleştirmesi için erişim istemesi için bir işlem oluşturur. Kullanıcı ayrıcalıklarının yükseltilmesi gereksinimini *haklı çıkarmalıdır* .
 
-Bu örnekte, güvenlik ekibimizin bir üyesi olan ve Office 365'de ayakta duran erişimi sıfır olan ancak Tehdit Arama gibi günlük normal işlemler için gereken normal bir role yükseltebilecek olan bir üye olan "Alex"i yapılandıracak ve ardından kötü amaçlı teslim [](threat-hunting-in-threat-explorer.md) edilen e-postaları düzeltme gibi daha az sık ama hassas işlemler gerektiğinde daha yüksek bir ayrıcalık düzeyine yükseltebilecekiz.[](remediate-malicious-email-delivered-office-365.md)
-
-> [!NOTE]
-> Bu, Office 365 için Microsoft Defender'de Threat Explorer'ı kullanarak e-postaları temizlemeyi gerektiren Güvenlik Analisti'nin PIM'sini ayarlama adımlarında size yol sunar, ancak aynı adımlar Güvenlik ve Uyumluluk portalı içindeki diğer RBAC rolleri için de kullanılabilir. Örneğin bu işlem, eBulma'da arama ve vaka çalışması yapmak için günlük erişim gerektiren, ancak ara sıra kiracıdan verileri dışarı aktarma hakkı olan bir bilgi çalışanı için kullanılabilir.
-
-***1. Adım***. Aboneliğinizin Azure PIM konsolunda, azure güvenlik okuyucusu rolüne kullanıcı (Alex) ekleyin ve etkinleştirmeyle ilgili güvenlik ayarlarını yapılandırın.
-
-1. [Azure AD Yönetim Merkezi'nde oturum açın](https://aad.portal.azure.com/) ve **Azure Active Directory** >  **Ve yöneticiler'i seçin**.
-2. Roller **listesinde Güvenlik** Okuyucu'ya tıklayın ve sonra **Ayarlar** >  **Edit**
-3. Azure **MFA'nın gerekli olması için** 'Etkinleştirme süresi (saat)' normal bir iş günü olarak ve 'Etkinleştirme açık' **olarak ayarlayın**.
-4. Bu, Alex'in günlük işlemler için normal ayrıcalık düzeyi olduğu için Etkinleştirme için gerekçe gerektir'in Güncelleştirme'ye yönelik olarak > **işaretini kaldırmış oluruz**.
-5. Atama **Ekle Üye** **ekle'yi** >  > üyeyi aramak için bu adı seçin veya yazın.
-6. PIM  ayrıcalıkları için eklemeniz gereken üyeyi seçmek için Seç düğmesine tıklayın > Ekle'ye **tıklayın > Atama** Ekle sayfasında hiçbir değişiklik yapma (hem atama türü Uygun hem de süre *Kalıcı* Olarak Uygun  varsayılan olacaktır ) ve Ata'ya **tıklayın.**
-
-Kullanıcı adı (burada 'Alex') bir sonraki sayfada Uygun atamalar altında görünür, bu da daha önce yapılandırılan ayarlarla PIM rolüne PIM girebilecekleri anlamına gelir.
+Bu örnekte güvenlik ekibimizin bir üyesi olan ve Office 365 içinde sıfır erişime sahip olacak ancak [tehdit avcılığı](threat-hunting-in-threat-explorer.md) gibi normal günlük işlemler için gerekli olan bir role hem de [kötü amaçlı teslim edilen e-postayı düzeltme](remediate-malicious-email-delivered-office-365.md) gibi daha az sık ama hassas işlemler gerektiğinde daha yüksek bir ayrıcalık düzeyine yükseltebilen "Alex" öğesini yapılandıracağız.
 
 > [!NOTE]
-> Bu videonun hızlı bir Privileged Identity Management için [bu videoyu izleyin](https://www.youtube.com/watch?v=VQMAg0sa_lE).
+> Bu, Office 365 için Microsoft Defender'de Tehdit Gezgini'ni kullanarak e-postaları temizleme olanağı gerektiren bir Güvenlik Analisti için PIM'i ayarlamak için gereken adımlarda size yol gösterir, ancak aynı adımlar Güvenlik ve Uyumluluk portalındaki diğer RBAC rolleri için de kullanılabilir. Örneğin bu işlem, eBulma'da arama ve olay çalışması gerçekleştirmek için gündelik erişim gerektiren ancak kiracıdan verileri dışarı aktarmak için yalnızca zaman zaman yükseltilmiş haklara ihtiyaç duyan bir bilgi çalışanı için kullanılabilir.
+
+***1. Adım***. Aboneliğinizin Azure PIM konsolunda kullanıcıyı (Alex) Azure Güvenlik Okuyucusu rolüne ekleyin ve etkinleştirmeyle ilgili güvenlik ayarlarını yapılandırın.
+
+1. [Azure AD Yönetim Merkezi'de](https://aad.portal.azure.com/) oturum açın ve **Azure Active Directory** >  **Roller ve yöneticiler'i** seçin.
+2. Rol **listesinden Güvenlik Okuyucusu'na** tıklayın ve **ardından Ayarlar** >  **Düzenle'ye tıklayın**
+3. **Azure MFA** **gerektirmek için 'Etkinleştirme maksimum süresi (saat)**' değerini normal bir çalışma gününe ve 'Etkinleştirme açık' olarak ayarlayın.
+4. Bu Alex'in günlük işlemler için normal ayrıcalık düzeyi olduğundan Etkinleştirme için **gerekçe gerektir'in** > **Güncelleştirme** seçeneğini kaldıracağız.
+5. Doğru üyeyi aramak için **ödev** >  **ekleVeya üye seçilmemiş** > adı seçin veya yazın.
+6. PIM ayrıcalıkları için eklemeniz gereken üyeyi seçmek için **Seç** düğmesine tıklayın > Atama Ekle sayfasında değişiklik > **İleri'ye** tıklayın (hem atama türü *Uygun* hem de *Süre Kalıcı Olarak Uygun* varsayılanlar) ve **Ata'ya tıklayın**.
+
+Kullanıcınızın adı (burada 'Alex'), sonraki sayfada Uygun atamalar altında görünür; bu, daha önce yapılandırılan ayarlarla rolde PIM yapabilecekleri anlamına gelir.
+
+> [!NOTE]
+> Privileged Identity Management hızlı bir şekilde gözden geçirmek için [bu videoya](https://www.youtube.com/watch?v=VQMAg0sa_lE) bakın.
 
 :::image type="content" source="../../media/pim-mdo-role-setting-details-for-security-reader-show-8-hr-duration.png" alt-text="Rol ayarı ayrıntıları - Güvenlik Okuyucusu sayfası" lightbox="../../media/pim-mdo-role-setting-details-for-security-reader-show-8-hr-duration.png":::
 
-***2. Adım***. Ek görevler için gerekli ikinci (yükseltilmiş) izin grubunu oluşturun ve uygunluğu attayabilirsiniz.
+***2. Adım***. Ek görevler için gerekli ikinci (yükseltilmiş) izin grubunu oluşturun ve uygunluk atayın.
 
-Privileged [Access gruplarını kullanarak](/azure/active-directory/privileged-identity-management/groups-features) artık kendi özel gruplarımızı oluşturabilir ve izinlerini bir araya kullanabilir veya kurumsal uygulamalarınızı ve ihtiyaçlarını karşılamanız gerektiğinde ayrıntıyı artırabilirsiniz.
+[Privileged Access gruplarını](/azure/active-directory/privileged-identity-management/groups-features) kullanarak artık kendi özel gruplarımızı oluşturabilir, izinleri birleştirebilir veya kuruluş uygulamalarınızı ve gereksinimlerinizi karşılamak için gereken yerlerde ayrıntı düzeyini artırabiliriz.
 
-### <a name="create-a-role-group-requiring-the-permissions-we-need"></a>Gereken izinleri gerektiren bir rol grubu oluşturma
+### <a name="create-a-role-group-requiring-the-permissions-we-need"></a>İhtiyacımız olan izinleri gerektiren bir rol grubu oluşturma
 
-Microsoft 365 Defender portalında, istediğiniz izinleri içeren özel bir rol grubu oluşturun.
+Microsoft 365 Defender portalında, istediğimiz izinleri içeren özel bir rol grubu oluşturun.
 
-1. aşağıdaki Microsoft 365 Defender portalında İzinler Rollerine <https://security.microsoft.com>& **ve** ardından E-posta **ve İşbirliği'nin** altında **Roller'i seçin**. Doğrudan İzinler sayfasına **gitmek** için kullanın <https://security.microsoft.com/emailandcollabpermissions>.
-2. İzinler **sayfasında** Simge oluştur'a ![tıklayın.](../../media/m365-cc-sc-create-icon.png) **Oluştur'a iki tablo da oluşturabilirsiniz**
-3. Grubu, amacını yansıtacak şekilde 'PİMİ'de Ara ve Temizle' gibi bir ad girin.
-4. Üye eklemeden grubu kaydedin ve bir sonraki bölüme geçin!
+1. konumundaki Microsoft 365 Defender portalında <https://security.microsoft.com>**İzinler & Roller'e** gidin ve **E-posta ve İşbirliği'nin** altında **Roller'i** seçin. **doğrudan İzinler** sayfasına gitmek için kullanın<https://security.microsoft.com/emailandcollabpermissions>.
+2. **İzinler** sayfasında Oluştur simgesine tıklayın![.](../../media/m365-cc-sc-create-icon.png) **Oluştur'u seçin**.
+3. Grubunuzu amacını yansıtacak şekilde adlandırarak 'PIM'i Ara ve Temizle' gibi bir ad verin.
+4. Üye eklemeyin, grubu kaydedin ve bir sonraki bölüme geçin!
 
-### <a name="create-the-security-group-in-azure-ad-for-elevated-permissions"></a>Yükseltilmiş izinler için Azure AD'de güvenlik grubu oluşturma
+### <a name="create-the-security-group-in-azure-ad-for-elevated-permissions"></a>Yükseltilmiş izinler için Azure AD'de güvenlik grubunu oluşturma
 
-1. [Azure AD Yönetim Merkezi'ne geri gidin ve](https://aad.portal.azure.com/) **Azure** **ADGroupsNew** >  >  **Group'a gidin**.
-2. Azure AD grubunızı amacını yansıtacak şekilde ad kullanın; şu anda sahip **veya üye** gerekmez.
-3. **Azure AD rollerini gruba Evet olarak** **atanabilir**.
-4. Hiçbir rol, üye veya sahip eklemeden grubu oluşturun.
-5. Geri dön oluşturduğunuz gruba girdi ve Ayrıca ErişimeInilebilir **Ayrıcalıklı** >  **Erişim'i seçin**.
-6. Grup içinde Uygun **atamalar'ı** >  seçin **Ödevleri** ekle'yi > Arama özelliği & Üyesinin rolü olarak **Temizleme'yi seçin**.
-7. Grubun **Ayarlar** Erişimi bölmesinde yer alan gezinti bölmesini yapılandırabilirsiniz. Üyenin **rolüyle** ilgili ayarları Düzenle'yi **seçin**.
-8. Etkinleştirme sürenizi, organizasyonunıza uygun olarak değiştirebilirsiniz. Bu örnekte, *Güncelleştir'i seçmeden önce Azure MFA*, *gerekçelendirme ve* bilet bilgileri **gerekir**. 
+1. [Azure AD Yönetim Merkezi'ne](https://aad.portal.azure.com/) geri gidin ve **Azure AD** >  **GroupsYeni** >  **Grup'a** gidin.
+2. Azure AD grubunuzu amacını yansıtacak şekilde adlandır, şu anda **sahip veya üye gerekmez**.
+3. **Azure AD rolleri gruba** **Evet** olarak atayabilirsiniz.
+4. Hiçbir rol, üye veya sahip eklemeyin, grubu oluşturun.
+5. Yeni oluşturduğunuz gruba Geri dön ve **Privileged Access** **Ayrıcalıklı Erişim'i** >  Seç'i seçin.
+6. Grubun içinde **Uygun atamalarEkle'yi** >  seçin > Üye rolü olarak Arama & Temizleme'ye ihtiyacı olan kullanıcıyı **ekleyin.**
+7. Grubun Ayrıcalıklı Erişim **bölmesindeki Ayarlar** yapılandırın. **Üye** rolünün ayarlarını **düzenle'yi** seçin.
+8. Etkinleştirme süresini kuruluşunuza uyacak şekilde değiştirin. Bu örnekte **Güncelleştir'i** seçmeden önce *Azure MFA*, *gerekçe* ve *bilet bilgileri* gerekir.
 
 ### <a name="nest-the-newly-created-security-group-into-the-role-group"></a>Yeni oluşturulan güvenlik grubunu rol grubuna iç içe yerleştirme
 
-1. [Bağlan ve Uyumluluk & PowerShell'e doğru](/powershell/exchange/connect-to-scc-powershell) devam edin ve aşağıdaki komutu çalıştırın:
+1. [Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell) ve aşağıdaki komutu çalıştırın:
 
    ```powershell
    Add-RoleGroupMember "<<Role Group Name>>" -Member "<<Azure Security Group>>"`
    ```
 
-## <a name="test-your-configuration-of-pim-with-defender-for-office-365"></a>PIM yapılandırmanızı KIŞISEL OFFICE 365 IÇIN DEFENDER
+## <a name="test-your-configuration-of-pim-with-defender-for-office-365"></a>Office 365 için Defender ile PIM yapılandırmanızı test edin
 
-1. Bu noktada portalda yönetici erişimine sahip olması gereken test kullanıcısı [(Alex Microsoft 365 Defender](/microsoft-365/security/defender/overview-security-center) ile oturum açın.
-2. Kullanıcı günlük güvenlik okuyucu rolünü etkinleştiren PIM'e gidin.
-3. Threat Explorer'ı kullanarak e-postayı temizlemeye çalışırsanız, ek izinlere ihtiyacınız olduğunu belirten bir hata alırsınız.
-4. PIM'i ikinci kez daha yükseltilmiş role dönüştürebilirsiniz; kısa bir gecikmeden sonra artık e-postaları sorun olmadan temiz tutabilirsiniz.
+1. Bu noktada [Microsoft 365 Defender portalında](/microsoft-365/security/defender/overview-security-center) yönetici erişimi olmaması gereken test kullanıcısı (Alex) ile oturum açın.
+2. Kullanıcının günlük güvenlik okuyucusu rolünü etkinleştirebileceği PIM'e gidin.
+3. Tehdit Gezgini'yi kullanarak bir e-postayı temizlemeye çalışırsanız ek izinlere ihtiyacınız olduğunu belirten bir hata alırsınız.
+4. PIM, daha yükseltilmiş role ikinci kez girer ve kısa bir gecikmeden sonra artık e-postaları sorunsuz bir şekilde temizleyebilirsiniz.
 
    :::image type="content" source="../../media/pim-mdo-add-the-search-and-purge-role-assignment-to-this-pim-role.PNG" alt-text="E-posta sekmesinin altındaki Eylemler bölmesi" lightbox="../../media/pim-mdo-add-the-search-and-purge-role-assignment-to-this-pim-role.PNG":::
 
-Yönetim rollerinin ve Arama ve Temizleme Rolü gibi izinlerin kalıcı olarak temliki Sıfır Güven güvenlik girişimine bağlı değildir, ancak sizin de gördüğünüz gibi PIM, gerekli araçlara tam zamanında erişim vermek için kullanılabilir.
+Arama ve Temizleme Rolü gibi yönetim rollerinin ve izinlerinin kalıcı olarak atanması Sıfır Güven güvenlik girişiminde yer almaz, ancak gördüğünüz gibi PIM, gerekli araç kümesine tam zamanında erişim vermek için kullanılabilir.
 
-*Bu içerik için kullanılan blog gönderilerine ve kaynaklara erişim için Müşteri Mühendisi Ben Bire bir teşekkür ederiz.*
+*Bu içerik için kullanılan blog gönderisine ve kaynaklara erişim için Müşteri Mühendisi Ben Harris'e teşekkür ederiz.*
 
 <!--A-->
