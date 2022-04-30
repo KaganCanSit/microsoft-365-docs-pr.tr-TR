@@ -453,6 +453,8 @@
               href: ome-sensitive-info-types.md
             - name: İleti şifrelemeyi yönetme
               href: manage-office-365-message-encryption.md
+            - name: Şifrelenmiş ileti portalı etkinlik günlüğü
+              href: ome-message-access-logs.md
             - name: Gelişmiş ileti şifreleme
               href: ome-advanced-message-encryption.md
             - name: Microsoft Purview Gelişmiş İleti Şifreleme tarafından şifrelenen e-posta için bir son geçerlilik tarihi belirleme
@@ -467,6 +469,8 @@
               href: exchange-online-secures-email-secrets.md
             - name: 'Exchange Online, Office 365’de e-posta bağlantılarını güvence altına almak için TLS''yi nasıl kullanır?'
               href: exchange-online-uses-tls-to-secure-email-connections.md
+            - name: MTA-STS ile posta akışını iyileştirme
+              href: enhancing-mail-flow-with-mta-sts.md
             - name: SMTP DANE nasıl çalışır?
               href: how-smtp-dane-works.md
             - name: Şifreleme için BitLocker ve Dağıtılmış Anahtar Yöneticisi (DKM)
@@ -1001,6 +1005,8 @@
           href: detailed-properties-in-the-office-365-audit-log.md
         - name: Denetimi açma veya kapatma
           href: turn-audit-log-search-on-or-off.md
+        - name: Denetim kayıtlarını şifrelemek için Müşteri Anahtarı kullanma
+          href: auditing-cmk-encryption.md
         - name: Ortak sorunları araştırmak için denetim günlüğünü kullanma
           href: auditing-troubleshooting-scenarios.md
         - name: Denetim günlüğünde paylaşım denetimini kullanma
