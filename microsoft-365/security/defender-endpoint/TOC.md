@@ -251,7 +251,8 @@
 ##### [Etkinlik zaman çizelgesi](threat-and-vuln-mgt-event-timeline.md)
 ##### [Savunmasız cihazlar raporu](tvm-vulnerable-devices-report.md)
 ##### [Açığa çıkarılan cihazları tarayın](tvm-hunt-exposed-devices.md)
-
+#### [Etkin tehditler ve saldırı kampanyaları için rehber]()
+##### [Log4Shell güvenlik açığını yönetin](tvm-manage-log4shell-guidance.md)
 ### [cihaz keşfi]()
 #### [Cihaz keşfine genel bakış](device-discovery.md)
 #### [Cihaz keşif ayarlarını yapılandırın](configure-device-discovery.md)

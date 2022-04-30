@@ -29,6 +29,8 @@
               href: ../admin/setup/setup-business-standard.md
             - name: Kullanıcıları Microsoft 365 İş Standart'a davet etme
               href: ../admin/simplified-signup/admin-invite-business-standard.md
+            - name: Microsoft 365 İş nedir?
+              href: ../admin/admin-overview/what-is-microsoft-365-for-business.md
             - name: Microsoft 365 İş Standart için e-posta davetini kabul etme
               href: ../admin/simplified-signup/user-invite-business-standard.md
             - name: 'Outlook, Yahoo, Gmail veya başka bir hesap kullanarak Microsoft 365 İş Standart abonelik kuruluşuna e-posta davetini kabul etme'

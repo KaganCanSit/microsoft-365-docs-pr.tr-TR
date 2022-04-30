@@ -308,6 +308,14 @@
           href: remediate-malicious-email-delivered-office-365.md
         - name: Office 365'te Risk Altındaki Bir E-posta Hesabına Yanıt Verme
           href: responding-to-a-compromised-email-account.md
+        - name: Risk altındaki bağlayıcıyı yanıtlama
+          href: respond-compromised-connector.md
+        - name: Engellenen varlıkları kaldırma
+          items:
+            - name: Engellenen kullanıcıları kaldırma
+              href: removing-user-from-restricted-users-portal-after-spam.md
+            - name: Engellenen bağlayıcıları kaldırma
+              href: remove-blocked-connectors.md
         - name: Bekleyen eylemleri gözden geçirme ve onaylama (veya reddetme)
           href: air-review-approve-pending-completed-actions.md
         - name: Kimlik avından korumayı ayarlama
@@ -320,8 +328,6 @@
           href: quarantine-policies.md
         - name: Karantinaya alınan iletileri paylaşılan posta kutularından serbest bırakma
           href: view-and-release-quarantined-messages-from-shared-mailboxes.md
-        - name: Engellenen kullanıcıları Kısıtlı Kullanıcılar portalından kaldırma
-          href: removing-user-from-restricted-users-portal-after-spam.md
         - name: Engellenen gönderenler listesinden kendinizi kaldırmak için listeden kaldırma portalını kullanma
           href: use-the-delist-portal-to-remove-yourself-from-the-office-365-blocked-senders-lis.md
     - name: SSS
@@ -368,7 +374,7 @@
           href: high-risk-delivery-pool-for-outbound-messages.md
         - name: EOP'de posta akışı zekası
           href: mail-flow-intelligence-in-office-365.md
-        - name: 'Başvuru:İlkeler, uygulamalar ve yönergeler'
+        - name: 'Başvuru: İlkeler, uygulamalar ve yönergeler'
           href: reference-policies-practices-and-guidelines.md
         - name: Office 365'e posta gönderme
           href: sending-mail-to-office-365.md
