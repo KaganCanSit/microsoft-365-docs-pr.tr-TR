@@ -22,12 +22,12 @@ search.appverid:
 - GEA150
 ms.assetid: 0d6dfb17-8582-4172-a9a9-aed798150263
 description: Kuruluşunuzdaki kişilerin Microsoft 365 hizmetlerini nasıl kullandığını gösteren düzenli bir rapor alın ve daha fazla içgörü için her grafikte detaya gidin.
-ms.openlocfilehash: aa1cdf4b8fa6c1d558b005eb80031a20be4872af
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 4757cf72653ffad2caeba45c99d3aabe61517ee4
+ms.sourcegitcommit: 58ec09f1fd66af9717dc2743585d06d358ec7360
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65088856"
+ms.lasthandoff: 04/30/2022
+ms.locfileid: "65144651"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center"></a>Yönetim merkezinde raporları Microsoft 365
 
@@ -87,35 +87,35 @@ Aboneliğinize bağlı olarak, tüm ortamlardaki kullanılabilir raporlar aşağ
 
 |**Rapor**|**Kamu**|**GCC**|**GCC-Yüksek**|**Dod**|**21Vianet tarafından sağlanan Office 365**|
 |:-----|:-----|:-----|:-----|:-----|:-----|
-|[Microsoft tarayıcı kullanımı](browser-usage-report.md)|Evet|Hayır[^1]|Hayır[^1]|Hayır[^1]|Hayır[^1]|
+|[Microsoft tarayıcı kullanımı](browser-usage-report.md)|Evet|<sup>Hayır1</sup>|<sup>Hayır1</sup>|<sup>Hayır1</sup>|<sup>Hayır1</sup>|
 |[E-posta etkinliği](email-activity-ww.md)|Evet|Evet|Evet|Evet|Evet|
 |[E-posta uygulamaları kullanımı](email-apps-usage-ww.md)|Evet|Evet|Evet|Evet|Evet|
 |[Posta kutusu kullanımı](mailbox-usage.md)|Evet|Evet|Evet|Evet|Evet|
 |[Office etkinleştirmeleri](microsoft-office-activations-ww.md)|Evet|Evet|Evet|Evet|Evet|
 |[Etkin Kullanıcılar](active-users-ww.md)|Evet|Evet|Evet|Evet|Evet|
 |[grupları Microsoft 365](office-365-groups-ww.md)|Evet|Evet|Evet|Evet|Evet|
-|[Microsoft 365 Uygulamaları kullanımı](microsoft365-apps-usage-ww.md)|Evet|Evet|Hayır[^1]|Hayır[^1]|Evet
+|[Microsoft 365 Uygulamaları kullanımı](microsoft365-apps-usage-ww.md)|Evet|Evet|<sup>Hayır1</sup>|<sup>Hayır1</sup>|Evet
 |[OneDrive İş kullanıcı etkinliği](onedrive-for-business-activity-ww.md)|Evet|Evet|Evet|Evet|Evet|
 |[OneDrive İş kullanımı](onedrive-for-business-usage-ww.md)|Evet|Evet|Evet|Evet|Evet|
 |[SharePoint sitesi kullanımı](sharepoint-site-usage-ww.md)|Evet|Evet|Evet|Evet|Evet|
 |[SharePoint etkinliği](sharepoint-activity-ww.md)|Evet|Evet|Evet|Evet|Evet|
-|[Microsoft Teams kullanıcı etkinliği](microsoft-teams-user-activity-preview.md)|Evet|Evet|Evet|Evet|Yok[^2]|
-|[ Microsoft Teams cihaz kullanımı](microsoft-teams-device-usage-preview.md)|Evet|Evet|Evet|Evet|Yok[^2]|
-|[kullanım etkinliğini Microsoft Teams](microsoft-teams-usage-activity.md)|Evet|Evet|Yok|Yok|Yok|
-|[Yammer etkinliği](yammer-activity-report-ww.md)|Evet|Evet|Yok[^2]|Yok[^2]|Yok[^2]|
-|[Yammer cihaz kullanımı](yammer-device-usage-report-ww.md)|Evet|Evet|Yok[^2]|Yok[^2]|Yok[^2]|
-|[Yammer grupları etkinliği raporu](yammer-groups-activity-report-ww.md)|Evet|Evet|Yok[^2]|Yok[^2]|Yok[^2]|
-|[Form etkinliği](forms-activity-ww.md)|Evet|Evet|Hayır[^1]|Hayır[^1]|Hayır[^1]|
-|[Dynamics 365 Customer Voice etkinliği](forms-pro-activity-ww.md)|Evet|Evet|Yok[^2]|Yok[^2]|Yok[^2]|
-|[Skype Kurumsal Çevrimiçi Sürüm etkinliği](/SkypeForBusiness/skype-for-business-online-reporting/activity-report)|Evet|Evet|Hayır[^1]|Hayır[^1]|Evet|
-|[Skype Kurumsal Çevrimiçi Sürüm düzenlenen konferans etkinliği](/SkypeForBusiness/skype-for-business-online-reporting/conference-organizer-activity-report)|Evet|Evet|Hayır[^1]|Hayır[^1]|Evet|
-|[Skype Kurumsal Çevrimiçi Sürüm konferans katılımı etkinliği](/SkypeForBusiness/skype-for-business-online-reporting/conference-participant-activity-report)|Evet|Evet|Hayır[^1]|Hayır[^1]|Evet|
-|[Skype Kurumsal Çevrimiçi Sürüm eşler arası etkinlik](/SkypeForBusiness/skype-for-business-online-reporting/peer-to-peer-activity-report)|Evet|Evet|Hayır[^1]|Hayır[^1]|Evet|
+|[Microsoft Teams kullanıcı etkinliği](microsoft-teams-user-activity-preview.md)|Evet|Evet|Evet|Evet|<sup>Yok2</sup>|
+|[ Microsoft Teams cihaz kullanımı](microsoft-teams-device-usage-preview.md)|Evet|Evet|Evet|Evet|<sup>Yok2</sup>|
+|[kullanım etkinliğini Microsoft Teams](microsoft-teams-usage-activity.md)|Evet|Evet|Evet|Evet|<sup>Yok2</sup>|
+|[Yammer etkinliği](yammer-activity-report-ww.md)|Evet|Evet|<sup>Yok2</sup>|<sup>Yok2</sup>|<sup>Yok2</sup>|
+|[Yammer cihaz kullanımı](yammer-device-usage-report-ww.md)|Evet|Evet|<sup>Yok2</sup>|<sup>Yok2</sup>|<sup>Yok2</sup>|
+|[Yammer grupları etkinliği raporu](yammer-groups-activity-report-ww.md)|Evet|Evet|<sup>Yok2</sup>|<sup>Yok2</sup>|<sup>Yok2</sup>|
+|[Form etkinliği](forms-activity-ww.md)|Evet|Evet|<sup>Hayır1</sup>|<sup>Hayır1</sup>|<sup>Hayır1</sup>|
+|[Dynamics 365 Customer Voice etkinliği](forms-pro-activity-ww.md)|Evet|Evet|<sup>Yok2</sup>|<sup>Yok2</sup>|<sup>Yok2</sup>|
+|[Skype Kurumsal Çevrimiçi Sürüm etkinliği](/SkypeForBusiness/skype-for-business-online-reporting/activity-report)|Evet|Evet|<sup>Hayır1</sup>|<sup>Hayır1</sup>|Evet|
+|[Skype Kurumsal Çevrimiçi Sürüm düzenlenen konferans etkinliği](/SkypeForBusiness/skype-for-business-online-reporting/conference-organizer-activity-report)|Evet|Evet|<sup>Hayır1</sup>|<sup>Hayır1</sup>|Evet|
+|[Skype Kurumsal Çevrimiçi Sürüm konferans katılımı etkinliği](/SkypeForBusiness/skype-for-business-online-reporting/conference-participant-activity-report)|Evet|Evet|<sup>Hayır1</sup>|<sup>Hayır1</sup>|Evet|
+|[Skype Kurumsal Çevrimiçi Sürüm eşler arası etkinlik](/SkypeForBusiness/skype-for-business-online-reporting/peer-to-peer-activity-report)|Evet|Evet|<sup>Hayır1</sup>|<sup>Hayır1</sup>|Evet|
 |[Viva Öğrenme etkinliği](viva-learning-activity.md)|Evet|Yok|Yok|Yok|Yok|
 |[Viva Analizler etkinliği](viva-insights-activity.md)|Evet|Evet|Yok|Yok|Yok|
 
-[^1]: The report is in plan to be released in the future. The <a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=" target="_blank">Microsoft 365 Roadmap</a> will be updated before the release.
-[^2]: The service is not available in the environment so no plan to release the report.
+Yok <sup>1</sup>: Rapor gelecekte yayınlanacak şekilde planlanır. <a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=" target="_blank">Microsoft 365 Yol Haritası</a> yayından önce güncelleştirilecektir.
+Yok2:<sup></sup> Hizmet ortamda kullanılamaz, bu nedenle raporu yayınlamayı planlamaz.
 
 ## <a name="how-to-view-licensing-information"></a>Lisans bilgilerini görüntüleme
 

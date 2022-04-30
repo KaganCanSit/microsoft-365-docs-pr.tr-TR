@@ -17,12 +17,12 @@ ms.custom: ''
 description: Yöneticiler, Güvenlik portalındaki Kiracı İzin Ver/Engelle Listesi'nde izin ve blokları yönetmeyi öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 0ed23cf7bfe8db25ed216859c434e86f14710db8
-ms.sourcegitcommit: 363bdc517bd2564c6420cf21f352e97079f950e0
+ms.openlocfilehash: 62116022c14af67b4589e4ee8479d294755fcc80
+ms.sourcegitcommit: 58ec09f1fd66af9717dc2743585d06d358ec7360
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2022
-ms.locfileid: "65031851"
+ms.lasthandoff: 04/30/2022
+ms.locfileid: "65144719"
 ---
 # <a name="manage-the-tenant-allowblock-list"></a>Kiracı İzin Verilenler/Engellenenler Listesini Yönetme
 
@@ -32,12 +32,6 @@ ms.locfileid: "65031851"
 - [Exchange Online Protection](exchange-online-protection-overview.md)
 - [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
-
-> [!NOTE]
->
-> Bu makalede açıklanan özelliklerden bazıları Önizleme aşamasındadır, değiştirilebilir ve tüm kuruluşlarda kullanılamaz.
->
-> Kuruluşunuzda bu makalede açıklandığı gibi kimlik sahtekarı özellikleri yoksa, Kimlik sahtekarı [gönderenleri EOP'de kimlik sahtekarı zeka ilkesi ve sahte zeka içgörülerini kullanarak yönetme makalesindeki eski kimlik sahtekarı](walkthrough-spoof-intelligence-insight.md) yönetim deneyimine bakın.
 
 Exchange Online posta kutusu olmayan Exchange Online veya tek başına Exchange Online Protection (EOP) kuruluşlarında posta kutuları olan Microsoft 365 kuruluşlarda, EOP filtreleme kararına katılamayabilirsiniz. Örneğin, iyi bir ileti kötü (hatalı pozitif) olarak işaretlenebilir veya hatalı bir iletiye (hatalı negatif) izin verilir.
 
@@ -81,10 +75,10 @@ Bu makalede, Microsoft 365 Defender portalında veya PowerShell'de (Exchange Onl
 
 - Bu makaledeki yordamları gerçekleştirebilmeniz için önce Microsoft 365 Defender portalında size izinler atanmalıdır:
   - **Gönderenler, URL'ler ve dosyalar**:
-    - Kiracı İzin Ver/Engelle Listesinden değer eklemek ve kaldırmak için 
-      -   **Kuruluş Yönetimi** veya **Güvenlik Yöneticisi** rol grubu (**Güvenlik yöneticisi rolü**)
-      -    **Güvenlik İşleci** rol grubu (**Kiracı AllowBlockList Manager**).
-    - Kiracı İzin Ver/Engelle Listesi'ne salt okunur erişim için 
+    - Kiracı İzin Ver/Engelle Listesinden değer eklemek ve kaldırmak için
+      - **Kuruluş Yönetimi** veya **Güvenlik Yöneticisi** rol grubu (**Güvenlik yöneticisi rolü**)
+      - **Güvenlik İşleci** rol grubu (**Kiracı AllowBlockList Manager**).
+    - Kiracı İzin Ver/Engelle Listesi'ne salt okunur erişim için
       - **Genel Okuyucu**  rol grubu
       - **Güvenlik Okuyucusu** rol grubu
   - **Kimlik sahtekarlığına:** Aşağıdaki birleşimlerden biri:
@@ -95,7 +89,7 @@ Bu makalede, Microsoft 365 Defender portalında veya PowerShell'de (Exchange Onl
 
   > [!NOTE]
   >
-  > - kullanıcıları Microsoft 365 yönetim merkezi karşılık gelen Azure Active Directory rolüne eklemek, kullanıcılara Microsoft 365'deki diğer özellikler için gerekli izinleri _ve_ izinleri verir. Daha fazla bilgi için bkz. [Yönetici rolleri hakkında](../../admin/add-users/about-admin-roles.md).
+  > - kullanıcıları Microsoft 365 yönetim merkezi karşılık gelen Azure Active Directory rolüne eklemek, kullanıcılara Microsoft 365'deki diğer özellikler için gerekli izinleri *ve* izinleri verir. Daha fazla bilgi için bkz. [Yönetici rolleri hakkında](../../admin/add-users/about-admin-roles.md).
   >
   > - [Exchange Online'daki](/Exchange/permissions-exo/permissions-exo#role-groups) **Yalnızca Görüntüleme Kuruluş Yönetimi** rol grubu da özelliğe salt okunur erişim sağlar.
 
@@ -182,7 +176,7 @@ Tüm izin verme ve blokları yönetmek için bkz. [Kiracı İzin Ver/Engelle Lis
 
    İşiniz bittiğinde **Uygula'ya** tıklayın. Mevcut filtreleri temizlemek için **Filtre'ye** tıklayın ve görüntülenen **Filtre** açılır öğesinde **Filtreleri temizle'ye** tıklayın.
 
-4. İşiniz bittiğinde **Ekle'ye** tıklayın.
+3. İşiniz bittiğinde **Ekle'ye** tıklayın.
 
 ## <a name="view-sender-file-or-url-entries-in-the-tenant-allowblock-list"></a>Kiracı İzin Ver/Engelle Listesinde gönderen, dosya veya URL girdilerini görüntüleme
 
@@ -490,7 +484,7 @@ Sahte gönderenleri tanımlamak için geçerli etki alanı çiftlerinin bazı ö
 
 Sahte gönderen girdisi sayısı üst sınırı 1000'dir.
 
-Etki alanı çifti eklemek yalnızca kimlik sahtekarlığına sahip kullanıcının *ve* gönderen altyapının *birleşimine* izin verir veya engeller. Kimlik sahtekarı olan kullanıcının herhangi bir kaynaktan gelen e-postasına izin vermez veya sahte kullanıcı için gönderen altyapı kaynağından gelen e-postaya izin vermez. 
+Etki alanı çifti eklemek yalnızca kimlik sahtekarlığına sahip kullanıcının *ve* gönderen altyapının *birleşimine* izin verir veya engeller. Kimlik sahtekarı olan kullanıcının herhangi bir kaynaktan gelen e-postasına izin vermez veya sahte kullanıcı için gönderen altyapı kaynağından gelen e-postaya izin vermez.
 
 Örneğin, aşağıdaki etki alanı çifti için bir izin ver girdisi eklersiniz:
 

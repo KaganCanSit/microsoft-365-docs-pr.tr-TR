@@ -19,21 +19,21 @@ ms.custom:
 search.appverid: MET150
 description: Microsoft ürün ve hizmetlerini satın almanıza yardımcı olacak teklifler hakkında bilgi edinin.
 ROBOTS: NOINDEX
-ms.date: 03/17/2021
-ms.openlocfilehash: 6ba1f27901795a1e473165c0b6ac65d90ca1c0af
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.date: 04/28/2022
+ms.openlocfilehash: 8dc80bfaadcbee236f282796dcdb37f59360ebe4
+ms.sourcegitcommit: 58ec09f1fd66af9717dc2743585d06d358ec7360
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64824892"
+ms.lasthandoff: 04/30/2022
+ms.locfileid: "65144871"
 ---
 # <a name="understand-the-proposal-workflow"></a>Teklif iş akışını anlama
 
 Teklif, kuruluşunuzun Microsoft ürün ve hizmetlerini satın alması için Microsoft tarafından sunulan resmi bir tekliftir. Teklifinizin belirli ürünlerini, hizmetlerini ve koşullarını belirlemek için doğrudan bir Microsoft temsilcisiyle birlikte çalışırsınız.
 
-Microsoft temsilcisi, sizin ve temsilcinizin tartıştığı öğeleri içeren bir teklif taslağı hazırlar. Temsilci size teklif sitesinin bağlantısını içeren bir e-posta gönderir. Site, siz ve kuruluşunuz için özel olarak hazırlanmış teklifi içerir.
+Microsoft temsilcisi, sizin ve temsilcinizin tartıştığı öğeleri içeren bir teklif taslağı hazırlar. Temsilci, Azure market portalının bağlantısını içeren bir e-posta gönderir. Site, siz ve kuruluşunuz için özel olarak hazırlanmış teklifi içerir.
 
-Bildirim e-postasını aldıktan sonra teklif sitesinin bağlantısını izleyin. Sitede oturum açdıktan sonra teklif gözden geçirme işlemini başlatabilirsiniz.
+Bildirim e-postasını aldıktan sonra teklif sitesinin bağlantısını izleyin. Sitede oturum açtığınızda teklif gözden geçirme işlemini başlatabilirsiniz.
 
 ## <a name="prerequisites-for-buying-items-with-a-proposal"></a>Teklifle ürün satın almak için önkoşullar
 
@@ -53,7 +53,23 @@ Microsoft Müşteri Sözleşmesi (MCA), bir kuruluşun Microsoft ürün ve hizme
 
 ## <a name="permissions-needed-to-sign-an-agreement-or-pay-for-items"></a>Sözleşme imzalamak veya öğeler için ödeme yapmak için gereken izinler
 
-Ödeme hesabında atanmış bir rolünüz yoksa, teklifi görüntülediğinizde size temel okuyucu rolü atanır. Bu rol teklifi görüntülemenize olanak tanır, ancak herhangi bir işlem yapmanıza olanak tanır. Sözleşme imzalamadan veya ürün ve hizmet satın almadan önce ödeme hesabı sahibi veya ödeme hesabı katkıda bulunanı rolüne atanmış olmanız gerekir. Ödeme hesabı sahibiniz bu rolü size atayabilir.
+Bir sözleşmeyi başarıyla imzalamak veya ürün ve hizmet satın almak için ödeme hesabı sahibi veya ödeme hesabı katkıda bulunanı olmanız gerekir. Genel yöneticiyseniz ancak bu rollerden birine sahip değilseniz, rolleri kendinize atayabilirsiniz. Genel yönetici değilseniz, Genel yöneticinizden veya ödeme hesabı sahibinizden size rollerden birini atamasını isteyin.
+
+Ödeme hesabı sahibi ve ödeme hesabı katkıda bulunanı rolleri aşağıdaki yöntemlerden biri kullanılarak atanır.
+
+### <a name="assign-roles-in-the-microsoft-365-admin-center"></a>Microsoft 365 yönetim merkezi rol atama
+
+1. Microsoft 365 yönetim merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=2084771" target="_blank">FaturalamaBilling</a>  >  hesapları sayfasına gidin.
+2. **Faturalama hesapları** sayfasındaki **Ödeme hesabı rolleri** bölümünde **Rol ata'yı** seçin.
+3. **Rol ata** bölmesinde, rol atamak istediğiniz kişinin adını arayın.
+4. Kişinin sahip olmasını istediğiniz rol adının kutusunu seçin ve ardından **Ata'yı** seçin.
+
+### <a name="assign-roles-in-the-azure-portal"></a>Azure portal rol atama
+
+1. Azure portal <a href="https://portal.azure.com/#blade/Microsoft_Azure_GTM/ModernBillingMenuBlade/Overview" target="_blank">Erişim denetimi (IAM)</a> sayfasına gidin.
+2. **Erişim denetimi (IAM)** sayfasında **Ekle'yi** seçin.
+3. **İzin ekle** bölmesinde kullanıcıya atanacak **rolü** seçin.
+4. Kullanıcıyı ve ardından **Kaydet'i** seçin.
 
 Ödeme hesabı rolleri hakkında daha fazla bilgi için bkz. [Ödeme hesaplarına erişimi anlama](manage-billing-accounts.md#understand-access-to-billing-accounts).
 
@@ -154,6 +170,9 @@ Bu bölümde teklife dahil edilen tüm öğelerin listesi gösterilir. Liste aş
 - **Şimdi satın alın** Teklif kabul iş akışının sonundaki ödeme sırasında ödeme yaptığınız öğelerin listesi.
 - **İndirimler (gelecekteki ücretlere uygulanır)** Teklifin bir parçası olarak aldığınız indirimlerin listesi.
 - **Dahil** Teklif paketine ek ücret ödemeden dahil edilen öğelerin listesi. Bu öğelerden bazılarının gelecekte bunlarla ilişkili bir maliyeti olabilir.
+
+> [!NOTE]
+> Teklifiniz, gelecekteki başlangıç tarihine sahip abonelikleri içerebilir. Daha fazla bilgi için bkz. [Gelecekteki başlangıç tarihleri için faturalamayı anlama](billing-and-payments/future-start-date.md).
 
 ### <a name="summary"></a>Özet
 

@@ -18,12 +18,12 @@ ms.custom: ''
 description: Yöneticiler, kullanıcılar tarafından bildirilen istenmeyen posta ve kimlik avı e-postalarını toplamak için posta kutusunu yapılandırmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: a2e57c5dbfb8738eb9e554a3207679bfd48c6f60
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 8b73144b678140cd30917b4fd687663ff0a455a3
+ms.sourcegitcommit: 58ec09f1fd66af9717dc2743585d06d358ec7360
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64970935"
+ms.lasthandoff: 04/30/2022
+ms.locfileid: "65144805"
 ---
 # <a name="user-reported-message-settings"></a>Kullanıcı tarafından bildirilen ileti ayarları
 
@@ -55,7 +55,7 @@ Kullanıcı tarafından bildirilen iletilerin özel posta kutunuza gitmesi için
 
 - İstenmeyen posta için ZAP ve kimlik avı için ZAP'ın kapalı olduğu özel posta kutusunu içeren [bir istenmeyen posta önleme ilkesi oluşturun](configure-your-spam-filter-policies.md#use-the-microsoft-365-defender-portal-to-create-anti-spam-policies) (**Sıfır saatlik otomatik temizleme** bölümü \> **Sıfır saatlik otomatik temizlemeyi etkinleştirildi (ZAP)** seçilmez).
 
-Office 365 için Microsoft Defender'larınız varsa, gelişmiş filtrelememizin iletileri bildiren kullanıcıları etkilememesi için aşağıdaki ayarları da yapılandırmanız gerekir:
+Office 365 için Microsoft Defender varsa, gelişmiş filtrelememizin iletileri bildiren kullanıcıları etkilememesi için aşağıdaki ayarları da yapılandırmanız gerekir:
 
 - Kasa Bağlantıları taramasının kapalı olduğu özel posta kutusunu içeren [bir Kasa Bağlantıları ilkesi oluşturun](set-up-safe-links-policies.md) (**İletilerde bilinmeyen kötü amaçlı olabilecek URL'ler için eylemi seçin** **kapalı**\>).
 
@@ -95,7 +95,7 @@ Posta kutunuzu tüm geçerli önkoşulları karşıladığını doğruladıktan 
           > [!IMPORTANT]
           > ABD Kamu kuruluşları (GCC, GCC High ve DoD) yalnızca **Kuruluşumun posta kutusunu** yapılandırabilir. Diğer iki seçenek devre dışı bırakılır.
           >
-          > Kuruluşlar yalnızca özel posta kutusuna gönderecek şekilde yapılandırılmışsa, bildirilen iletiler yeniden tarama için gönderilmez ve Kullanıcı tarafından bildirilen iletiler portalındaki sonuçlar her zaman boş olur.
+          > Kuruluşlar, kullanıcı tarafından bildirilen iletileri yalnızca özel posta kutusuna gönderecek şekilde yapılandırılmışsa, bildirilen iletiler **Kullanıcı tarafından bildirilen iletiler'de** görünür ancak sonuçları her zaman boş olur (çünkü bunlar yeniden taramazlardı).
 
        **Bildirilen iletileri gönderme** için seçtiğiniz değerden bağımsız olarak aşağıdaki ayarlar kullanılabilir:
 

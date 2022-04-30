@@ -17,12 +17,12 @@ ms.custom: seo-marvel-apr2020
 description: Yöneticiler, Microsoft 365 Defender portalında Gönderiler portalını kullanarak şüpheli e-postalar, şüpheli kimlik avı postaları, istenmeyen postalar ve diğer zararlı olabilecek iletileri, URL'leri ve e-posta eklerini yeniden tarama amacıyla Microsoft'a göndermeyi öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: a21c9e6655c01e2d2229e957f79b2342895ac4e4
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 5d16cae309a90b8ffe10c90fea8ca3a359ece33b
+ms.sourcegitcommit: 58ec09f1fd66af9717dc2743585d06d358ec7360
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64971979"
+ms.lasthandoff: 04/30/2022
+ms.locfileid: "65144827"
 ---
 # <a name="use-the-submissions-portal-to-submit-suspected-spam-phish-urls-and-files-to-microsoft"></a>Şüpheli istenmeyen postaları, kimlik avı, URL'leri ve dosyaları Microsoft'a göndermek için Gönderimler portalını kullanın
 
@@ -197,7 +197,7 @@ Bildirilen ileti hatalı pozitif veya hatalı negatif olarak işaretlenir. Porta
      > :::image type="content" source="../../media/admin-submission-filters.png" alt-text="Yönetici gönderimleri için Yeni Filtre seçenekleri" lightbox="../../media/admin-submission-filters.png":::
 
    - Girişleri gruplandırmak için **Gruplandır'a** tıklayın ve açılan listeden aşağıdaki değerlerden birini seçin:
-     - **Yok**
+     - **Hiçbiri**
      - **Tür**
      - **Neden**
      - **Durum**
@@ -265,7 +265,7 @@ Geçersiz kılma bulunduysa, sonucun birkaç dakika içinde kullanılabilir olma
      > :::image type="content" source="../../media/admin-submission-reported-messages.png" alt-text="Kullanıcı gönderimleri için Yeni Filtre seçenekleri" lightbox="../../media/admin-submission-reported-messages.png":::
 
    - Girişleri gruplandırmak için **Gruplandır'a** tıklayın ve açılan listeden aşağıdaki değerlerden birini seçin:
-     - **Yok**
+     - **Hiçbiri**
      - **Neden**
      - **Gönderen**
      - **Rapor eden**
@@ -278,7 +278,7 @@ Geçersiz kılma bulunduysa, sonucun birkaç dakika içinde kullanılabilir olma
    - Girdileri dışarı aktarmak için **Dışarı Aktar'a** tıklayın. Görüntülenen iletişim kutusunda .csv dosyasını kaydedin.
 
 > [!NOTE]
-> Kuruluşlar kullanıcı tarafından bildirilen iletileri yalnızca özel posta kutusuna gönderecek şekilde yapılandırılmışsa, bildirilen iletiler yeniden tarama için gönderilmez ve **Kullanıcı tarafından bildirilen iletiler** içindeki sonuçlar her zaman boş olur.
+> Kuruluşlar, kullanıcı tarafından bildirilen iletileri yalnızca özel posta kutusuna gönderecek şekilde yapılandırılmışsa, bildirilen iletiler **Kullanıcı tarafından bildirilen iletiler'de** görünür ancak sonuçları her zaman boş olur (çünkü bunlar yeniden taramazlardı).
 
 ### <a name="undo-user-submissions"></a>Kullanıcı gönderimlerini geri alma
 

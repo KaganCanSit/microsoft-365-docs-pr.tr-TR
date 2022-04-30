@@ -20,12 +20,12 @@ ms.custom:
 description: Yöneticiler, Exchange Online Protection (EOP) içindeki kimlik sahtekarlığına ilişkin zeka içgörüleri hakkında bilgi edinebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 30a9a7a9714ed5e071c53a6b1641204fd8c4fafe
-ms.sourcegitcommit: 363bdc517bd2564c6420cf21f352e97079f950e0
+ms.openlocfilehash: c147396ff47f924d7dd4b2ebd3a0cac106de94b2
+ms.sourcegitcommit: 58ec09f1fd66af9717dc2743585d06d358ec7360
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2022
-ms.locfileid: "65031842"
+ms.lasthandoff: 04/30/2022
+ms.locfileid: "65144739"
 ---
 # <a name="spoof-intelligence-insight-in-eop"></a>EOP'de sahte zeka içgörüleri
 
@@ -35,9 +35,6 @@ ms.locfileid: "65031842"
 - [Exchange Online Protection](exchange-online-protection-overview.md)
 - [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
-
-> [!NOTE]
-> Bu makalede açıklanan özellikler Önizleme aşamasındadır, değiştirilebilir ve tüm kuruluşlarda kullanılamaz. Kuruluşunuz bu makalede açıklanan özelliklere sahip değilse, [EOP'de sahte zeka ilkesini ve sahte zeka içgörülerini kullanarak sahte gönderenleri yönetme makalesindeki eski kimlik sahtekarlık](walkthrough-spoof-intelligence-insight.md) yönetimi deneyimine bakın.
 
 Exchange Online veya tek başına Exchange Online Protection (EOP) kuruluşlarında posta kutuları Exchange Online olmayan Microsoft 365 kuruluşlarda, gelen e-posta iletileri kimlik sahtekarlığına karşı otomatik olarak korunur. EOP, kuruluşunuzun kimlik avına karşı genel savunmasının bir parçası olarak kimlik **sahtekarlığı zekasını** kullanır. Daha fazla bilgi için bkz. [EOP'de kimlik sahtekarlığı koruması](anti-spoofing-protection.md).
 
