@@ -1,5 +1,5 @@
 ---
-title: İçeriği korumak veya silmek için otomatik olarak bekletme etiketi uygulama
+title: Bekletme etiketini otomatik olarak uygulama
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -17,14 +17,16 @@ search.appverid:
 - MOE150
 - MET150
 description: İhtiyacınız olanı korumak ve istemediğinizleri silmek için etiketleri otomatik olarak uygulayabilmeniz için otomatik etiketleme bekletme ilkeleri oluşturun
-ms.openlocfilehash: 8c3df81eabb0d67993825d95e390d3e94c7a9bd7
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 2c1ea20f9b663ca8cee59043bbe6399f5bae66f1
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64762023"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "65145295"
 ---
 # <a name="automatically-apply-a-retention-label-to-retain-or-delete-content"></a>İçeriği korumak veya silmek için otomatik olarak bekletme etiketi uygulama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 >*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
@@ -63,7 +65,7 @@ Bu koşullara göre otomatik olarak bir bekletme etiketi uygulama işlemleri:
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Kuruluşunuzun genel yöneticisi, bekletme etiketleri ve ilkelerini oluşturmak ve düzenlemek için tam izinlere sahiptir. Genel yönetici olarak oturum açmadıysanız, kullandığınız çözüme bağlı olarak [kayıt yönetimi](get-started-with-records-management.md#permissions) veya [bilgi idaresi](get-started-with-information-governance.md#permissions-for-retention-policies-and-retention-labels) için izin bilgilerine bakın.
+Kuruluşunuzun genel yöneticisi, bekletme etiketleri ve ilkelerini oluşturmak ve düzenlemek için tam izinlere sahiptir. Genel yönetici olarak oturum açmıyorsanız, kullandığınız çözüme bağlı olarak [kayıt yönetimi](get-started-with-records-management.md#permissions) veya [veri yaşam alanı yönetimi](get-started-with-data-lifecycle-management.md#permissions-for-retention-policies-and-retention-labels) için izin bilgilerine bakın.
 
 Öğelere uygulamak istediğiniz [bekletme etiketlerini oluşturduğunuzdan](file-plan-manager.md#create-retention-labels) emin olun.
 
@@ -73,13 +75,13 @@ Bekletme etiketi ilkenizi oluşturmadan önce **bunun uyarlamalı** mı yoksa **
 
 Otomatik uygulama ilkesi oluşturduğunuzda, belirttiğiniz koşullara göre içeriğe otomatik olarak uygulanacak bir bekletme etiketi seçersiniz.
 
-1. [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com/) aşağıdaki konumlardan birine gidin:
+1. [Microsoft Purview uyumluluk portalında](https://compliance.microsoft.com/) aşağıdaki konumlardan birine gidin:
     
     - Kayıt yönetimi kullanıyorsanız:
         - **Çözümleri** >  **Kayıt yönetimi** > > **Etiket ilkeleri** sekmesi > **Otomatik etiket uygulama**
     
-    - Bilgi idaresi kullanıyorsanız:
-        - **Çözümleri** >  **Bilgi idaresi** >  **Etiket ilkeleri** sekmesi > **Etiketi otomatik uygulama**
+    - Data lifeycle yönetimi kullanıyorsanız:
+        - **Çözümleri** >  **Veri yaşamsal veri yönetimi** >  **Etiket ilkeleri** sekmesi > **Etiketi otomatik uygulama**
     
     Gezinti bölmesinde çözümünüzü hemen görmüyor musunuz? İlk olarak **Tümünü göster'i** seçin.
 
@@ -147,7 +149,7 @@ Ayrıca, taslakta yer alan veya hiç yayımlanmamış SharePoint öğeler bu sen
 > 
 > Grup posta kutuları genellikle **Microsoft 365 Grupları** konumu seçilerek dahil edilse de, bu ilke yapılandırması için grup konumu yalnızca Microsoft 365 grubuna bağlı SharePoint siteleri içerir.
 
-Hassas bilgiler için otomatik uygulama bekletme etiketi ilkeleri oluşturduğunuzda, veri kaybı önleme (DLP) ilkesi oluştururken kullandığınız ilke şablonlarının listesini görürsünüz. Her şablon, belirli türlerdeki hassas bilgileri aramak için önceden yapılandırılmıştır. Aşağıdaki örnekte, hassas bilgi türleri **Gizlilik** kategorisinden ve **ABD Kişisel Bilgiler (PII) Veri** şablonundan alınmaktadır:
+Hassas bilgiler için otomatik uygulama bekletme etiketi ilkeleri oluşturduğunuzda, bir Microsoft Purview Veri Kaybı Önleme (DLP) ilkesi oluşturduğunuzda kullandığınız ilke şablonlarının listesini görürsünüz. Her şablon, belirli türlerdeki hassas bilgileri aramak için önceden yapılandırılmıştır. Aşağıdaki örnekte, hassas bilgi türleri **Gizlilik** kategorisinden ve **ABD Kişisel Bilgiler (PII) Veri** şablonundan alınmaktadır:
 
 ![Hassas bilgi türlerine sahip ilke şablonları.](../media/sensitive-info-configuration.png)
 
@@ -341,7 +343,7 @@ Hassas bilgilere, anahtar sözcüklere veya aranabilir özelliklere ya da eğiti
   
 ![Otomatik uygulama etiketlerinin ne zaman etkin olduğunu açıklayan diyagram.](../media/retention-labels-autoapply-timings.png)
 
-Beklenen etiketler yedi gün sonra görünmüyorsa, uyumluluk merkezindeki **Etiket ilkeleri** sayfasından seçerek otomatik uygulama ilkesinin **Durumunu** denetleyin. **Kapalı (Hata)** durumunu görürseniz ve konumların ayrıntılarında ilkeyi dağıtmanın (SharePoint için) veya ilkeyi yeniden dağıtmayı (OneDrive için) denemenin beklenenden uzun sürdüğünü belirten bir ileti görürseniz, ilke dağıtımını yeniden denemek için [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) PowerShell komutunu çalıştırmayı deneyin:
+Beklenen etiketler yedi gün sonra görünmüyorsa, Microsoft Purview uyumluluk portalındaki **Etiket ilkeleri** sayfasından seçerek otomatik uygulama ilkesinin **durumunu** denetleyin. **Kapalı (Hata)** durumunu görürseniz ve konumların ayrıntılarında ilkeyi dağıtmanın (SharePoint için) veya ilkeyi yeniden dağıtmayı (OneDrive için) denemenin beklenenden uzun sürdüğünü belirten bir ileti görürseniz, ilke dağıtımını yeniden denemek için [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) PowerShell komutunu çalıştırmayı deneyin:
 
 1. [Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
 

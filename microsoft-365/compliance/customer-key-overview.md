@@ -1,5 +1,5 @@
 ---
-title: Müşteri Anahtarı ile hizmet şifrelemesi
+title: Microsoft Purview Müşteri Anahtarı ile hizmet şifreleme
 ms.author: krowley
 author: kccross
 manager: laurawi
@@ -14,15 +14,17 @@ ms.collection:
 - m365solution-mip
 - m365initiative-compliance
 ms.custom: seo-marvel-apr2020
-description: Bu makalede, hizmet şifrelemenin Microsoft 365'de Müşteri Anahtarı ile nasıl çalıştığı hakkında bilgi edineceğiz.
-ms.openlocfilehash: 65098994a6883fdadd3106b74b25a2251239fb3a
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+description: Bu makalede, hizmet şifrelemenin Microsoft Purview Müşteri Anahtarı ile nasıl çalıştığını öğreneceksiniz.
+ms.openlocfilehash: efb82a38c2f3a2e07d695425f36a17eebdbdf5ec
+ms.sourcegitcommit: e0f890f46ae0bde03cc9e1ce178a7c1b8fbe12db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64761097"
+ms.lasthandoff: 04/30/2022
+ms.locfileid: "65145222"
 ---
-# <a name="service-encryption-with-customer-key"></a>Müşteri Anahtarı ile hizmet şifrelemesi
+# <a name="service-encryption-with-microsoft-purview-customer-key"></a>Microsoft Purview Müşteri Anahtarı ile hizmet şifreleme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft 365, BitLocker ve Dağıtılmış Anahtar Yöneticisi (DKM) aracılığıyla etkinleştirilen temel, birim düzeyinde şifreleme sağlar. Microsoft 365, içeriğiniz için ek bir şifreleme katmanı sunar. Bu içerik Exchange Online, Skype Kurumsal, SharePoint Online, OneDrive İş ve Microsoft Teams verilerini içerir.
 
@@ -40,7 +42,7 @@ Müşteri Anahtarı yalnızca bulutta bekleyen verileri şifreler. Müşteri Ana
 
 ## <a name="about-data-encryption-policies"></a>Veri şifreleme ilkeleri hakkında
 
-Veri şifreleme ilkesi (DEP), şifreleme hiyerarşisini tanımlar. Bu hiyerarşi, yönettiğiniz anahtarların her birini ve Microsoft tarafından korunan kullanılabilirlik anahtarını kullanarak verileri şifrelemek için hizmet tarafından kullanılır. PowerShell cmdlet'lerini kullanarak DEP'ler oluşturur ve ardından uygulama verilerini şifrelemek için bu DEP'leri atarsınız. Microsoft 365 Müşteri Anahtarı tarafından desteklenen üç tür DEP vardır; her ilke türü farklı cmdlet'ler kullanır ve farklı bir veri türü için kapsam sağlar. Tanımlayabileceğiniz DEP'ler şunlardır:
+Veri şifreleme ilkesi (DEP), şifreleme hiyerarşisini tanımlar. Bu hiyerarşi, yönettiğiniz anahtarların her birini ve Microsoft tarafından korunan kullanılabilirlik anahtarını kullanarak verileri şifrelemek için hizmet tarafından kullanılır. PowerShell cmdlet'lerini kullanarak DEP'ler oluşturur ve ardından uygulama verilerini şifrelemek için bu DEP'leri atarsınız. Müşteri Anahtarı tarafından desteklenen üç tür DEP vardır ve her ilke türü farklı cmdlet'ler kullanır ve farklı bir veri türü için kapsam sağlar. Tanımlayabileceğiniz DEP'ler şunlardır:
 
 **Birden çok Microsoft 365 iş yükü için DEP** Bu DEP'ler, kiracıdaki tüm kullanıcılar için birden çok M365 iş yükünde verileri şifreler. Bu iş yükleri şunlardır:
 
@@ -52,7 +54,8 @@ Veri şifreleme ilkesi (DEP), şifreleme hiyerarşisini tanımlar. Bu hiyerarşi
 - durum iletilerini Teams
 - Exchange Online için kullanıcı ve sinyal bilgileri
 - Posta kutusu DEP'leri tarafından henüz şifrelenmemiş posta kutularını Exchange Online
-- Microsoft Bilgi Koruması:
+- Birleşik denetim günlüğü depolaması
+- Microsoft Purview Information Protection:
 
   - Veri dosyası şemaları, kural paketleri ve hassas verilerin karması için kullanılan tuzlar da dahil olmak üzere tam veri eşleşmesi (EDM) verileri. EDM ve Microsoft Teams için çok iş yükülü DEP, DEP'yi kiracıya atadığınız zamandan itibaren yeni verileri şifreler. Exchange Online için Müşteri Anahtarı tüm mevcut ve yeni verileri şifreler.
 

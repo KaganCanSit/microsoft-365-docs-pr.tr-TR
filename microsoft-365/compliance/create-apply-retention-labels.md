@@ -1,5 +1,5 @@
 ---
-title: Bekletme etiketlerini yayımlama ve içeriği korumak veya silmek için bunları uygulamalarda uygulama
+title: Bekletme etiketlerini yayımlama ve uygulama
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -17,102 +17,104 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MOE150
 - MET150
-description: Bekletme etiketlerini yayımlama yönergeleri, böylece ihtiyacınız olan etiketleri korumak ve sahip olmadığınız şekilde silmek için bunları uygulamalara uygulayabilirsiniz.
-ms.openlocfilehash: a1d8a32a9190ddb645160fc475fb72a9d1dcd72e
-ms.sourcegitcommit: 7aa2441c1f2cc5b4b5495d6fdb993e563f86647f
+description: Bekletme etiketlerini yayımlama yönergelerini kullanarak, ihtiyacınız olan şeyleri korumak ve olmayanları silmek için bunları uygulamalara uygulayabilirsiniz.
+ms.openlocfilehash: c2088afd895b47945bea056c940e564b4dd770fb
+ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "64638409"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "65145405"
 ---
 # <a name="publish-retention-labels-and-apply-them-in-apps"></a>Bekletme etiketlerini yayımlama ve uygulamalarda uygulama
 
->*[Microsoft 365 uyumluluğu için lisans & kılavuzu.](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)*
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+>*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 > [!NOTE]
-> Bu senaryo, mevzuat kayıtları da dahil olmak üzere tüm bekletme etiketi [yapılandırmalarında geçerlidir](records-management.md#records).
+> Bu senaryo, [mevzuat kayıtları](records-management.md#records) da dahil olmak üzere tüm bekletme etiketi yapılandırmaları için desteklenir.
 
-Bekletme etiketlerini yayımlamanıza ve sonra bunları belgelere [ve e-postalara](retention.md) uygulamanıza yardımcı olacak aşağıdaki bilgileri kullanın.
+[Bekletme etiketlerini](retention.md) yayımlamanıza ve bunları belgelere ve e-postalara uygulamanıza yardımcı olması için aşağıdaki bilgileri kullanın.
 
-Bekletme etiketleri, gerekenleri korumanıza ve sahip olmadığınız öğeyi (belge veya e-posta) silmenizi sağlar. Bunlar, verilerinizin kayıt yönetimi çözümünün parçası [olarak bir öğeyi](records-management.md) kayıt olarak Microsoft 365 için kullanılır.
+Bekletme etiketleri, ihtiyacınız olanları korumanıza ve öğe düzeyinde (belge veya e-posta) olmayan öğeleri silmenize yardımcı olur. Ayrıca, Microsoft 365 verileriniz için [kayıt yönetimi](records-management.md) çözümünün bir parçası olarak bir öğeyi kayıt olarak bildirmek için de kullanılırlar.
 
-İçeriği sınıflandıracak şekilde kuruluşta bulunan kişilerin bekletme etiketlerini kullanılabilir hale bunlar iki adımlı bir işlemdir: 
+Bekletme etiketlerini kuruluşunuzdaki kişilerin içeriği sınıflandırabilmeleri için kullanılabilir hale getirmek iki adımlı bir işlemdir: 
 
 1. Bekletme etiketlerini oluşturun.
 
-2. Bekletme etiketi ilkesi kullanarak bekletme etiketlerini yayımlayın.
+2. Bekletme etiketi ilkesini kullanarak bekletme etiketlerini yayımlayın.
   
-![Etiketler için roller ve görevler diyagramı.](../media/4082bc7d-c04c-4b9a-8a26-7f12565d3311.png)
+![Etiketler için rollerin ve görevlerin diyagramı.](../media/4082bc7d-c04c-4b9a-8a26-7f12565d3311.png)
 
 İki yönetici adımı için aşağıdaki yönergeleri kullanın.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Kuruluşun genel yöneticisinin bekletme etiketlerini ve ilkelerini oluşturma ve düzenlemeye yönelik tam izinleri vardır. Genel yönetici olarak oturum açmadısanız, kullandığınız çözüme bağlı olarak kayıt yönetimi veya bilgi [](get-started-with-records-management.md#permissions) yönetimi için izin [](get-started-with-information-governance.md#permissions-for-retention-policies-and-retention-labels)bilgilerine bakın.
+Kuruluşunuzun genel yöneticisi, bekletme etiketleri ve ilkelerini oluşturmak ve düzenlemek için tam izinlere sahiptir. Genel yönetici olarak oturum açmadıysanız, kullandığınız çözüme bağlı olarak [kayıt yönetimi](get-started-with-records-management.md#permissions) veya [veri yaşam döngüsü yönetimi](get-started-with-data-lifecycle-management.md#permissions-for-retention-policies-and-retention-labels) için izin bilgilerine bakın.
 
-Öğelere uygulamak [istediğiniz bekletme etiketlerini](file-plan-manager.md#create-retention-labels) oluşturduğunuzdan emin olun.
+Öğelere uygulamak istediğiniz [bekletme etiketlerini oluşturduğunuzdan](file-plan-manager.md#create-retention-labels) emin olun.
 
 ## <a name="how-to-publish-retention-labels"></a>Bekletme etiketlerini yayımlama
 
-Bekletme etiketi ilkenizi uyarlanabilir mi yoksa statik mi olacağını **oluşturmadan** önce karar **verin**. Daha fazla bilgi için bkz. [Bekletme için uyarlanabilir veya statik ilke kapsamları](retention.md#adaptive-or-static-policy-scopes-for-retention). Uyarlanabilir bir ilke kullanmaya karar verdiyseniz, bekletme etiketi ilkenizi oluşturmadan önce bir veya birden çok uyarlanabilir kapsam oluşturmanız ve ardından bekletme etiketi ilkesi oluşturma işlemi sırasında bu kapsamları seçmeniz gerekir. Yönergeler için bkz. [Uyarlanabilir kapsamlar için yapılandırma bilgileri](retention-settings.md#configuration-information-for-adaptive-scopes).
+Bekletme etiketi ilkenizi oluşturmadan önce **bunun uyarlamalı** mı yoksa **statik** mi olacağını belirleyin. Daha fazla bilgi için bkz. [Bekletme için uyarlamalı veya statik ilke kapsamları](retention.md#adaptive-or-static-policy-scopes-for-retention). Uyarlamalı bir ilke kullanmaya karar verirseniz, bekletme etiketi ilkenizi oluşturmadan önce bir veya daha fazla uyarlamalı kapsam oluşturmanız ve ardından bekletme etiketi oluşturma ilkesi işlemi sırasında bunları seçmeniz gerekir. Yönergeler için bkz [. Uyarlamalı kapsamlar için yapılandırma bilgileri](retention-settings.md#configuration-information-for-adaptive-scopes).
 
-1. Microsoft 365 uyumluluk merkezi<a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">, aşağıdaki</a> konumlardan birini seçin:
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalında</a> aşağıdaki konumlardan birine gidin:
     
-    - Kayıt yönetimini kullanıyorsanız:
-        - **Çözümler** >  **Etiket yayımlama** > > **için Kayıt** yönetimi > **ilkeleri sekmesi**
+    - Kayıt yönetimi kullanıyorsanız:
+        - **Çözümleri** >  **Kayıt yönetimi** > > **Etiket ilkeleri** sekmesi > **Etiketleri yayımla**
     
-    - Bilgi idaresi kullanıyorsanız:
-        - **Çözümler** >  **Bilgi yönetimi** >  **Etiket yayımlama >** **ilkeleri sekmesi**
+    - Veri yaşam döngüsü yönetimi kullanıyorsanız:
+        - **Çözümleri** >  **Veri yaşamsal veri yönetimi** >  **Etiket ilkeleri** sekmesi > **Etiketleri yayımla**
     
-    Çözümlerinizi gezinti bölmesinde hemen görmüyor musunuz? Önce, Hepsini **göster'i seçin**. 
+    Gezinti bölmesinde çözümünüzü hemen görmüyor musunuz? İlk olarak **Tümünü göster'i** seçin. 
 
-2. Bekletme etiketi ilkesi oluşturmak için istemleri izleyin. İlke için hangi adı seçtiğinize dikkat edin, çünkü ilke kaydedildikten sonra bu ad değiştirilemez.
+2. Bekletme etiketi ilkesini oluşturmak için istemleri izleyin. İlke kaydedildikten sonra değiştirilemediğinden, ilke için hangi adı seçtiğinize dikkat edin.
 
-3. Yayımlamak üzere bekletme etiketlerini seçmek için bağlantıyı kullanın ve ardından Sonraki'yi **seçin**.
+3. Yayımlamak üzere bekletme etiketlerini seçmek için bağlantıyı kullanın ve ardından **İleri'yi** seçin.
 
-4. Oluşturulecek **bekletme ilkesi türünü seçin sayfasında**, Başlamadan önce yönergelerinden seçime bağlı olarak Uyarlanabilir veya [Statik'i](#before-you-begin) seçin. Uyarlanabilir kapsamları daha önce oluşturmadıysanız Uyarlanabilir'i  seçebilirsiniz, ancak seçecek herhangi bir uyarlanabilir kapsam çalışmay olduğundan sihirbazı bu seçenekle bitiresiniz.
+4. **Oluşturulacak bekletme ilkesinin türünü seçin** sayfasında, [Başlamadan önce](#before-you-begin) yönergelerinden yaptığınız seçime bağlı olarak **Uyarlamalı** veya **Statik'i** seçin. Uyarlamalı kapsamlar oluşturmadıysanız **Uyarlamalı'yı** seçebilirsiniz, ancak seçilecek uyarlamalı kapsam olmayacağından, sihirbazı bu seçenekle tamamlayamazsınız.
 
 5. Seçtiğiniz kapsama bağlı olarak:
     
-    -  Uyarlanabilir'i seçtiyseniz: Uyarlanabilir ilke kapsamlarını ve konumlarını seçin sayfasında  Kapsam ekle'yi seçin ve oluşturulmuş bir veya birden çok uyarlanabilir kapsam seçin. Ardından bir veya daha fazla konum seçin. Seçebilirsiniz konumlar, eklenen kapsam [türlerine bağlıdır](retention-settings.md#configuration-information-for-adaptive-scopes) . Örneğin, yalnızca bir Kullanıcı kapsamı türü eklediysanız **,** e-postayla ilgili e-Exchange **seçebilirsiniz** ancak **SharePoint seçebilirsiniz**. 
+    - **Uyarlamalı**: **Uyarlamalı ilke kapsamlarını ve konumlarını seçin** sayfasında **Kapsam ekle'yi** seçin ve oluşturulmuş bir veya daha fazla uyarlamalı kapsam seçin. Ardından bir veya daha fazla konum seçin. Seçebileceğiniz konumlar eklenen [kapsam türlerine](retention-settings.md#configuration-information-for-adaptive-scopes) bağlıdır. Örneğin, yalnızca bir **Kullanıcı** kapsam türü eklediyseniz, **Exchange e-postayı** seçebilirsiniz, ancak **siteleri SharePoint seçemezsiniz**. 
     
-    - Statik: **Konum** seçin **sayfasında** konumların herhangi birini açıp kapatın. Her konum için, ilkeyi varsayılan olarak bırakarak ilkeyi [](retention-settings.md#a-policy-that-applies-to-entire-locations)konumun tamamına uygulayabilir ya da içerir ve [dışarıda bırakır](retention-settings.md#a-policy-with-specific-inclusions-or-exclusions)
+    - **Statik**' i seçtiyseniz: **Konumları seçin** sayfasında konumlardan herhangi birini açın veya kapatın. Her konum için, [ilkeyi konumun tamamına uygulamak için](retention-settings.md#a-policy-that-applies-to-entire-locations) varsayılan olarak bırakabilir veya [ekleme ve dışlamaları belirtebilirsiniz](retention-settings.md#a-policy-with-specific-inclusions-or-exclusions)
     
-    Konum seçenekleri hakkında daha fazla bilgi için bkz. [Konumlar](retention-settings.md#locations).
+    Konum seçenekleri hakkında bilgi için bkz [. Konumlar](retention-settings.md#locations).
 
-Var olan bir bekletme etiketi ilkesi düzenlemek için (ilke türü Yayımla'dır), ilkeyi seçin ve ardından  Düzenle seçeneğini seçerek Bekletme ilkesi **yapılandırmasını düzenleyin**.
+Var olan bir bekletme etiketi ilkesini düzenlemek için (ilke türü **Yayımla'dır**), ilkeyi seçin ve ardından **Düzenle** seçeneğini belirleyerek **Bekletme ilkesini düzenle** yapılandırmasını başlatın.
 
-## <a name="when-retention-labels-become-available-to-apply"></a>Bekletme etiketleri uygulanabilecek hale geldiğinde
+## <a name="when-retention-labels-become-available-to-apply"></a>Bekletme etiketleri uygulanabilecek duruma geldiğinde
 
-Bekletme etiketlerini belirli bir SharePoint OneDrive yayımlarsanız, bu etiketler normalde kullanıcıların bir gün içinde seçebilirsiniz. Ancak, yedi gün kadar izin ver. 
+Bekletme etiketlerini SharePoint veya OneDrive yayımlarsanız, bu etiketler genellikle kullanıcıların bir gün içinde seçmesi için görünür. Ancak yedi güne kadar izin verin. 
 
-Bekletme etiketlerini Exchange yayımlarsanız, bu bekletme etiketlerinin kullanıcılara görünmesi yedi gün kadar zaman alabiliyor ve posta kutusunda en az 10 MB veri olmalıdır.
+Bekletme etiketlerini Exchange yayımlarsanız, bu bekletme etiketlerinin kullanıcılar için görünmesi yedi güne kadar sürebilir ve posta kutusu en az 10 MB veri içermelidir.
 
-![Yayımlanan etiketlerin ne zaman etkili olduğunu gösterir.](../media/retention-labels-published-timings.png)
+![Yayımlanan etiketlerin ne zaman etkin olduğunu açıklayan diyagram.](../media/retention-labels-published-timings.png)
 
-Etiketler yedi gün sonra görünmezse, uyumluluk merkezinde Etiket ilkeleri sayfasından  etiket ilkesi durumunu kontrol edin. Durumu (Hata **)** ekli olarak ve konumlarla ilgili ayrıntılarda ilkenin dağıtılmasının beklenenden uzun zaman alıyor iletisini görüyorsanız veya ilkeyi yeniden dağıtmayı denemek için, ilke dağıtımını yeniden denemek için [Set-AppRetentionCompliancePolicy](/powershell/module/exchange/set-appretentioncompliancepolicy) veya [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) PowerShell komutunu çalıştırmayı deneyin:
+Etiketler yedi gün sonra görünmüyorsa, Microsoft Purview uyumluluk portalındaki **Etiket ilkeleri** sayfasından etiket ilkesini seçerek etiket ilkesinin **Durumunu** denetleyin. Duruma **(Hata)** eklendiğini ve konumların ayrıntılarında ilkenin dağıtılmasının beklenenden uzun sürdüğünü veya ilkeyi yeniden dağıtmayı denediğini belirten bir ileti görürseniz, ilke dağıtımını yeniden denemek için [Set-AppRetentionCompliancePolicy](/powershell/module/exchange/set-appretentioncompliancepolicy) veya [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) PowerShell komutunu çalıştırmayı deneyin:
 
-1. [Bağlan ve Uyumluluk & PowerShell'e.](/powershell/exchange/connect-to-scc-powershell)
+1. [Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
 
 2. Aşağıdaki komutlardan birini çalıştırın:
     
-    - Özel kanal iletilerinin Teams **ilke konumları için**, **Yammer iletilerini ve topluluk** **Yammer mesajlarını iletin**:
+    - özel **kanal iletileri Teams** ilke konumları için **kullanıcı iletilerini ve Yammer** **topluluk iletilerini Yammer**:
     
         ```PowerShell
         Set-AppRetentionCompliancePolicy -Identity <policy name> -RetryDistribution
         ```
     
-    - E-posta gönderme, site Exchange **, kanal** **SharePoint gibi** diğer tüm **ilke Teams için**:
+    - Exchange **e-posta, SharePoint** **siteleri**, **Teams kanal iletileri** gibi diğer tüm ilke konumları için:
     
         ```PowerShell
         Set-RetentionCompliancePolicy -Identity <policy name> -RetryDistribution
         ```
 
-### <a name="how-to-check-on-the-status-of-retention-labels-published-to-exchange"></a>Exchange'de yayımlanan bekletme etiketlerinin durumu nasıl Exchange
+### <a name="how-to-check-on-the-status-of-retention-labels-published-to-exchange"></a>Exchange'de yayımlanan bekletme etiketlerinin durumunu denetleme
 
-Bekletme Exchange Online, bekletme etiketleri her yedi günde bir çalışan bir işlem tarafından son kullanıcılarına sunulmaktadır. PowerShell kullanarak, bu işlemi en son ne zaman çalıştıracaklarını görebilir ve dolayısıyla ne zaman yeniden çalıştıracaklarını tanımlayabilirsiniz.
+Exchange Online'da bekletme etiketleri, yedi günde bir çalışan bir işlem tarafından son kullanıcıların kullanımına sunulur. PowerShell'i kullanarak bu işlemin en son ne zaman çalıştırılacağını görebilir ve bu nedenle ne zaman yeniden çalıştırılacağını belirleyebilirsiniz.
   
-1. [Bağlan PowerShell Exchange Online e geri tarak.](/powershell/exchange/connect-to-exchange-online-powershell)
+1. [PowerShell'i Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
     
 2. Bu komutları çalıştırın.
     
