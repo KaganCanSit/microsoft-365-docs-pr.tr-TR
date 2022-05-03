@@ -104,6 +104,8 @@
   items:
     - name: Terimler sözlüğü
       href: m365bp-glossary.md
+    - name: Microsoft 365 Business Premium SSS
+      href: microsoft-365-business-faqs.yml
     - name: Microsoft 365 yönetici içeriği
       href: /microsoft-365/admin/
     - name: İş için Microsoft Defender
