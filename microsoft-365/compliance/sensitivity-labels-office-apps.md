@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 description: BT yöneticilerinin masaüstü, mobil ve web için Office uygulamalarında duyarlılık etiketlerini yönetmesine yönelik bilgiler.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 0f24e707bef05b541f301a41596737c17b4ed587
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 792b87c8d045002ebec27dc5de38177cec0ae647
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098438"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65172322"
 ---
 # <a name="manage-sensitivity-labels-in-office-apps"></a>Office uygulamalarında duyarlılık etiketlerini yönetme
 
@@ -115,8 +115,7 @@ Kullanıcıların Windows bilgisayarlarında [Azure Information Protection (AIP)
 > [!NOTE]
 > Office güncelleştirme kanalınız için desteklenen en düşük sürümleri onaylamanıza rağmen Windows bilgisayarlarda beklediğiniz etiketleme özelliklerini görmüyorsanız, bunun nedeni [AIP eklentisini devre dışı bırakmanız](sensitivity-labels-aip.md#how-to-disable-the-aip-add-in-to-use-built-in-labeling-for-office-apps) gerekebilir.
 
-AIP istemcisiyle etiketleme desteği hakkında daha fazla bilgi edinmek için bkz. Office [uygulamalar için AIP eklentisi yerine neden yerleşik etiketlemeyi seçmelisiniz](sensitivity-labels-aip.md)?
-
+AIP istemcisiyle etiketleme desteği hakkında daha fazla bilgi edinmek ve bu istemciyi yalnızca Office uygulamalarda devre dışı bırakma hakkında daha fazla bilgi edinmek için bkz. [Office uygulamalar için AIP eklentisi yerine yerleşik etiketlemeyi seçme](sensitivity-labels-aip.md).
 
 ## <a name="if-you-need-to-turn-off-built-in-labeling-in-office-apps-on-windows"></a>Windows'daki Office uygulamalarında yerleşik etiketlemeyi kapatmanız gerekiyorsa
 
@@ -135,12 +134,6 @@ Daha sonra bu yapılandırmayı geri almanız gerekiyorsa, değeri **1** olarak 
 Bu ayarı grup ilkesi kullanarak veya [Office bulut ilkesi hizmetini](/DeployOffice/overview-office-cloud-policy-service) kullanarak dağıtın. Bu Office uygulamalar yeniden başlatıldığında bu ayar geçerlilik kazanır. 
 
 Bu ayar Windows Office uygulamalara özgü olduğundan, duyarlılık etiketlerini (Power BI gibi) veya diğer platformları (macOS, mobil cihazlar ve Web için Office) destekleyen Windows üzerindeki diğer uygulamaları etkilemez. Kullanıcıların bir kısmının veya tümünün tüm uygulamalarda ve tüm platformlarda duyarlılık etiketlerini görmesini ve kullanmasını istemiyorsanız, bu kullanıcılara duyarlılık etiketi ilkesi atamayın.
-
-### <a name="office-built-in-labeling-client-and-the-azure-information-protection-client"></a>yerleşik etiketleme istemcisini ve Azure Information Protection istemcisini Office
-
-Kullanıcıların Windows bilgisayarlarında [Azure Information Protection (AIP) istemcisi](/azure/information-protection/rms-client/aip-clientv2) yüklüyse, yerleşik etiketler varsayılan olarak [kendilerini destekleyen Windows Office uygulamalarda](#labeling-client-for-desktop-apps) kapatılır. Yerleşik etiketler, AIP istemcisi tarafından kullanılan bir Office Eklentisi kullanmadığından, daha fazla kararlılık ve daha iyi performans avantajına sahiptir. Ayrıca gelişmiş sınıflandırıcılar gibi en son özellikleri de destekler.
-
-AIP istemcisiyle etiketleme seçenekleri hakkında daha fazla bilgi edinmek için bkz. Office [uygulamalar için AIP eklentisi yerine neden yerleşik etiketlemeyi seçmelisiniz](sensitivity-labels-aip.md)?
 
 ## <a name="office-file-types-supported"></a>desteklenen Office dosya türleri
 
@@ -245,7 +238,7 @@ Dış kullanıcıların Azure Active Directory bir hesabı yoksa, kiracınızdak
     
     Bu seçeneğin avantajı, şifreleme ayarlarında e-posta adreslerini belirterek belirli kullanıcılara erişimi ve hakları kısıtlayabilirsiniz. Dezavantajı, hesap oluşturma ve etiket yapılandırmasıyla koordinasyon için yönetim ek yüküdür.
 
-- Diğer bir seçenek de kullanıcılarınız bağlantıları paylaştığında konuk hesaplarının otomatik olarak oluşturulması için [Azure AD B2B ile SharePoint ve OneDrive tümleştirmesini](/sharepoint/sharepoint-azureb2b-integration) kullanmaktır.
+- Diğer bir seçenek de SharePoint [ve OneDrive tümleştirmesini Azure AD B2B ile](/sharepoint/sharepoint-azureb2b-integration) kullanmaktır; böylece kullanıcılarınız bağlantıları paylaştığında konuk hesapları otomatik olarak oluşturulur.
     
     Hesaplar otomatik olarak oluşturulduğundan ve daha basit etiket yapılandırmasından dolayı bu seçeneğin avantajı en düşük yönetim yüküdür. Bu senaryo için, e-posta adreslerini önceden bilmediğiniz için [Kimliği doğrulanmış herhangi bir kullanıcı ekle](encryption-sensitivity-labels.md#requirements-and-limitations-for-add-any-authenticated-users) şifreleme seçeneğini belirlemeniz gerekir. Dezavantajı, bu ayarın erişim ve kullanım haklarını belirli kullanıcılarla kısıtlamanıza izin vermemesidir.
 
@@ -259,7 +252,7 @@ Microsoft hesabı olan bir kullanıcı şifreli bir belgeyi bu şekilde açtığ
 Ancak otomatik konuk hesabı, çoğaltma gecikme süresi nedeniyle bu senaryoda hemen oluşturulmaz. Etiket şifreleme ayarlarınızın bir parçası olarak kişisel e-posta adresleri belirtirseniz, Azure Active Directory'de ilgili konuk hesaplarını oluşturmanızı öneririz. Ardından bu kullanıcılara kuruluşunuzdan şifrelenmiş bir belge açmak için bu hesabı kullanmaları gerektiğini bildirin.
 
 > [!TIP]
-> Dış kullanıcıların desteklenen bir Office istemci uygulaması kullanacağından, konuk hesapları oluşturduktan sonra (belirli kullanıcılar için) SharePoint ve OneDrive bağlantılarını paylaşacağından veya [Azure AD B2B ile SharePoint ve OneDrive tümleştirmesi](/sharepoint/sharepoint-azureb2b-integration-preview) kullandığınızdan emin olamazsınız  (kimliği doğrulanmış herhangi bir kullanıcı için) dış kullanıcılarla güvenli işbirliğini desteklemek için daha güvenilir bir yöntemdir.
+> Dış kullanıcıların desteklenen bir Office istemci uygulaması kullanacağından, konuk hesapları oluşturduktan sonra (belirli kullanıcılar için) SharePoint ve OneDrive bağlantılarını paylaşacağından veya Azure AD [B2B ile SharePoint ve OneDrive tümleştirmesi](/sharepoint/sharepoint-azureb2b-integration-preview) kullandığınızdan emin olamazsınız  (kimliği doğrulanmış herhangi bir kullanıcı için) dış kullanıcılarla güvenli işbirliğini desteklemek için daha güvenilir bir yöntemdir.
 
 ### <a name="conditional-access-policies"></a>Koşullu Erişim ilkeleri
 

@@ -7,7 +7,6 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 04/20/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -17,24 +16,20 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 32d0c7d762dd142fcf6cf14faf3f739422c6a3f9
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 01abbfe2a6190da21836c9493868c5d1b136f104
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095498"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65173211"
 ---
 # <a name="microsoft-defender-for-business-requirements"></a>İş için Microsoft Defender gereksinimleri
-
-> [!NOTE]
-> İş için Microsoft Defender artık [Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil edilir. 
 
 Bu makalede İş için Microsoft Defender gereksinimleri açıklanmaktadır.
 
 ## <a name="what-to-do"></a>Yapılması gerekenler
 
 1. [Gereksinimleri gözden geçirin ve karşıladığınızdan emin olun](#review-the-requirements).
-
 2. [Sonraki adımlarınıza geçin](#next-steps).
 
 >
@@ -48,18 +43,18 @@ Aşağıdaki tabloda, İş için Microsoft Defender yapılandırmak ve kullanmak
 
 | Gereksinim | Açıklama |
 |:---|:---|
-| Abonelik | Microsoft 365 Business Premium <br/>--- veya ---<br/>İş için Microsoft Defender (tek başına; şu anda önizleme aşamasında). <br/><br/> Bkz[. İş için Microsoft Defender alma](get-defender-business.md).<br/><br/>Birden çok aboneliğiniz varsa en yüksek aboneliğin öncelikli olduğunu unutmayın. Örneğin, Uç Nokta için Microsoft Defender Plan 2 'niz (satın alınmış veya deneme aboneliği) varsa ve İş için Microsoft Defender alırsanız, Uç Nokta Için Defender Plan 2 önceliklidir. Bu durumda, İş için Defender deneyimini görmezsiniz.  |
+| Abonelik | Microsoft 365 İş Ekstra veya İş için Microsoft Defender (tek başına). Bkz[. İş için Microsoft Defender alma](get-defender-business.md).<br/><br/>Birden çok aboneliğiniz varsa en yüksek aboneliğin öncelikli olduğunu unutmayın. Örneğin, Uç Nokta için Microsoft Defender Plan 2 'niz (satın alınmış veya deneme aboneliği) varsa ve İş için Microsoft Defender alırsanız, Uç Nokta Için Defender Plan 2 önceliklidir. Bu durumda, İş için Defender deneyimini görmezsiniz.  |
 | Datacenter | Aşağıdaki veri merkezi konumlarından biri: <br/>- Avrupa Birliği <br/>- Birleşik Krallık <br/>- Birleşik Devletler |
-| Kullanıcı hesapları | Kullanıcı hesapları Microsoft 365 yönetim merkezi oluşturulur ([https://admin.microsoft.com](https://admin.microsoft.com))<br/><br/>İş için Microsoft Defender lisansları Microsoft 365 yönetim merkezi<br/><br/>Bu görevle ilgili yardım almak için bkz. [Kullanıcı ekleme ve lisans atama](mdb-add-users.md). |
-| İzinler  | İş için Microsoft Defender kaydolmak için Genel Yönetici olmanız gerekir.<br/><br/>Microsoft 365 Defender portalına erişmek için kullanıcıların [Azure AD'de aşağıdaki rollerden](mdb-roles-permissions.md) birine atanmış olması gerekir: <br/>- Güvenlik Okuyucusu<br/>- Güvenlik Yöneticisi<br/>- Genel Yönetici<br/><br/>Daha fazla bilgi için bkz. [İş için Microsoft Defender'de roller ve izinler](mdb-roles-permissions.md). |
+| Kullanıcı hesapları | - Kullanıcı hesapları Microsoft 365 yönetim merkezi oluşturulur ([https://admin.microsoft.com](https://admin.microsoft.com))<br/>- İş için Microsoft Defender lisansları Microsoft 365 yönetim merkezi<br/><br/>Bu görevle ilgili yardım almak için bkz. [Kullanıcı ekleme ve lisans atama](mdb-add-users.md). |
+| İzinler  | İş için Microsoft Defender kaydolmak için Genel Yönetici olmanız gerekir.<br/><br/>Microsoft 365 Defender portalına erişmek için kullanıcıların [Azure AD'da aşağıdaki rollerden](mdb-roles-permissions.md) birine atanmış olması gerekir: <br/>- Güvenlik Okuyucusu<br/>- Güvenlik Yöneticisi<br/>- Genel Yönetici<br/><br/>Daha fazla bilgi için bkz. [İş için Microsoft Defender'de roller ve izinler](mdb-roles-permissions.md). |
 | Tarayıcı gereksinimleri | Microsoft Edge veya Google Chrome |
-| İşletim sistemi | İş için Microsoft Defender cihazları yönetmek için, cihazlarınız aşağıdaki işletim sistemlerinden birini çalıştırıyor olmalıdır: <br/>- Windows 10 Business veya üzeri <br/>- Windows 10 Professional veya üzeri <br/>- Windows 10 Enterprise veya üzeri <br/>- macOS (en güncel üç sürüm desteklenir)<br/><br/>[KB5006738'in](https://support.microsoft.com/topic/october-26-2021-kb5006738-os-builds-19041-1320-19042-1320-and-19043-1320-preview-ccbce6bf-ae00-4e66-9789-ce8e7ea35541) yüklü olduğundan emin olun. <br/><br/>Cihazları zaten Microsoft Intune 'de (veya Microsoft Endpoint Manager) yönetiyorsanız, bu cihazları İş için Defender'a ekleyebilirsiniz. |
+| İşletim sistemi | Microsoft 365 Defender portalındaki cihazları yönetmek için cihazlarınız aşağıdaki işletim sistemlerinden birini çalıştırıyor olmalıdır: <br/>- Windows 10 Business veya üzeri <br/>- Windows 10 Professional veya üzeri <br/>- Windows 10 Enterprise veya üzeri <br/>- macOS (en güncel üç sürüm desteklenir)<br/><br/>[Windows cihazlarda KB5006738'in](https://support.microsoft.com/topic/october-26-2021-kb5006738-os-builds-19041-1320-19042-1320-and-19043-1320-preview-ccbce6bf-ae00-4e66-9789-ce8e7ea35541) yüklü olduğundan emin olun. <br/><br/>Cihazları zaten Microsoft Intune yönetiyorsanız, Microsoft Endpoint Manager yönetim merkezini kullanmaya devam edebilirsiniz. |
 
 > [!NOTE]
-> [Azure Active Directory (Azure AD),](/azure/active-directory/fundamentals/active-directory-whatis) kullanıcı izinlerini ve cihaz gruplarını yönetmek için kullanılır. Azure AD, İş için Defender aboneliğinize dahildir. 
-> - Denemenize başlamadan önce Microsoft 365 aboneliğiniz yoksa, etkinleştirme işlemi sırasında Azure AD sizin için sağlanır. 
-> - İş için Defender deneme sürümünüzü başlattığınızda başka bir Microsoft 365 aboneliğiniz varsa mevcut Azure AD hizmetinizi kullanabilirsiniz. 
-> - İş için Defender denemenizi başlattığınızda [Microsoft 365 İş Ekstra](../../business/index.yml) kullanıyorsanız, cihazları Microsoft Intune'de yönetme seçeneğiniz olur. 
+> [Azure Active Directory (Azure AD)](/azure/active-directory/fundamentals/active-directory-whatis) kullanıcı izinlerini ve cihaz gruplarını yönetmek için kullanılır. Azure AD, İş için Defender aboneliğinize dahildir. 
+> - Deneme sürümüne başlamadan önce Microsoft 365 aboneliğiniz yoksa etkinleştirme işlemi sırasında sizin için Azure AD sağlanır. 
+> - İş için Defender deneme sürümünüzü başlattığınızda başka bir Microsoft 365 aboneliğiniz varsa, mevcut Azure AD hizmetinizi kullanabilirsiniz. 
+> - İş için Defender deneme sürümünüzü başlattığınızda [Microsoft 365 İş Ekstra](../../business/index.yml) kullanıyorsanız cihazlarınızı Intune kullanarak yönetme seçeneğiniz olur. 
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

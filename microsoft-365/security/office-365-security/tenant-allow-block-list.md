@@ -17,12 +17,12 @@ ms.custom: ''
 description: Yöneticiler, Güvenlik portalındaki Kiracı İzin Ver/Engelle Listesi'nde izin ve blokları yönetmeyi öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 62116022c14af67b4589e4ee8479d294755fcc80
-ms.sourcegitcommit: 58ec09f1fd66af9717dc2743585d06d358ec7360
+ms.openlocfilehash: a067672a013f3e0ed7b9009604f8a4fe000ea47f
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2022
-ms.locfileid: "65144719"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65172817"
 ---
 # <a name="manage-the-tenant-allowblock-list"></a>Kiracı İzin Verilenler/Engellenenler Listesini Yönetme
 
@@ -73,7 +73,7 @@ Bu makalede, Microsoft 365 Defender portalında veya PowerShell'de (Exchange Onl
 
 - Exchange Online PowerShell'e bağlanmak için bkz. [PowerShell'Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell). Tek başına EOP PowerShell'e bağlanmak için bkz. [PowerShell'i Exchange Online Protection için Bağlan](/powershell/exchange/connect-to-exchange-online-protection-powershell).
 
-- Bu makaledeki yordamları gerçekleştirebilmeniz için önce Microsoft 365 Defender portalında size izinler atanmalıdır:
+- Bu makaledeki yordamları gerçekleştirmeden önce Exchange Online'de izinlerin atanmış olması gerekir:
   - **Gönderenler, URL'ler ve dosyalar**:
     - Kiracı İzin Ver/Engelle Listesinden değer eklemek ve kaldırmak için
       - **Kuruluş Yönetimi** veya **Güvenlik Yöneticisi** rol grubu (**Güvenlik yöneticisi rolü**)

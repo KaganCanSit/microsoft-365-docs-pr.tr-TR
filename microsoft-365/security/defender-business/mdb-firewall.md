@@ -1,32 +1,28 @@
 ---
 title: İş için Microsoft Defender'de güvenlik duvarı
-description: yapılandırma ayarları da dahil olmak üzere İş için Microsoft Defender Windows Defender Güvenlik Duvarı hakkında bilgi edinin
+description: İş için Defender Windows Defender Güvenlik Duvarı ayarları hakkında bilgi edinin. Güvenlik duvarı, istenmeyen ağ trafiğinin şirket cihazlarınıza akmasını önlemeye yardımcı olabilir.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
-ms.reviewer: inbadian, shlomiakirav
+ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: 77c2042ace89a133b9be8995ef817c1fe3766a07
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: 9a22af2e1ef047de0deaf98c6eea37cda15dcc5f
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64861419"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65172678"
 ---
 # <a name="firewall-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'de güvenlik duvarı
-
-> [!NOTE]
-> İş için Microsoft Defender artık [Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil edilir. 
 
 İş için Microsoft Defender, [Windows Defender Güvenlik Duvarı ile güvenlik duvarı](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security) özelliklerini içerir. Güvenlik duvarı koruması, hangi ağ trafiğinin cihazlara girmesine veya cihazlardan akmasını sağlayan kurallarla cihazların güvenliğinin korunmasına yardımcı olur. 
 

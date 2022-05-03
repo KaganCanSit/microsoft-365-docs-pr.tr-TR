@@ -20,12 +20,12 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: f6046576fcea2fe961e73e88168c6254a2d95a40
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 7b76fff060b46cbe13c11eb90f521af61e8900f5
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64665062"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65172938"
 ---
 # <a name="device-discovery-overview"></a>Cihaz keşfine genel bakış
 
@@ -114,21 +114,45 @@ Yönetilmeyen ve yönetilen cihazlarla ilgili SSH güvenlik açıklarını bulma
 :::image type="content" source="images/1156c82ffadd356ce329d1cf551e806c.png" alt-text="Güvenlik önerileri panosu" lightbox="images/1156c82ffadd356ce329d1cf551e806c.png":::
 
 
-## <a name="use-advanced-hunting-on-discovered-devices"></a>Bulunan cihazlarda Gelişmiş Avcılık kullanma
+## <a name="use-advanced-hunting-on-discovered-devices"></a>Bulunan cihazlarda gelişmiş avcılık kullanma
 
-Bulunan cihazlarda görünürlük kazanmak için Gelişmiş Tehdit Avcılığı sorgularını kullanabilirsiniz.
-Bulunan Uç Noktalar hakkındaki ayrıntıları DeviceInfo tablosunda veya Bu cihazlarla ilgili ağ ile ilgili bilgileri DeviceNetworkInfo tablosunda bulabilirsiniz.
+Bulunan cihazlarda görünürlük elde etmek için gelişmiş tehdit avcılığı sorgularını kullanabilirsiniz. Bulunan cihazlar hakkındaki ayrıntıları DeviceInfo tablosunda veya Bu cihazlarla ilgili ağ ile ilgili bilgileri DeviceNetworkInfo tablosunda bulabilirsiniz.
 
 :::image type="content" source="images/f48ba1779eddee9872f167453c24e5c9.png" alt-text="Sorguların kullanılabilmesi için Gelişmiş tehdit avcılığı sayfası" lightbox="images/f48ba1779eddee9872f167453c24e5c9.png":::
 
-Cihaz bulma, eklenen Uç Nokta için Microsoft Defender cihazları, eklememiş cihazlara etkinlikleri öznitelik etmek için ağ veri kaynağı olarak kullanır. Bu, eklenen Uç Nokta için Microsoft Defender bir cihazın eklenmemiş bir cihazla iletişim kurması durumunda, eklenmeyen cihazdaki etkinliklerin zaman çizelgesinde ve Gelişmiş avcılık DeviceNetworkEvents tablosu aracılığıyla görülebileceği anlamına gelir.
+### <a name="query-discovered-devices-details"></a>Bulunan cihazların ayrıntılarını sorgulama
 
-Yeni olaylar İletim Denetimi Protokolü (TCP) bağlantıları tabanlıdır ve geçerli DeviceNetworkEvents düzenine uyar. Uç Nokta için Microsoft Defender etkin olmayan bir cihazdan Uç Nokta için Microsoft Defender etkin cihaza TCP girişi.
+Bulunan tüm cihazların yanı sıra her cihaz için en fazla ayrıntıyı döndürmek için bu sorguyu DeviceInfo tablosunda çalıştırın:
 
-Aşağıdaki eylem türleri de eklenmiştir:
+```query
+DeviceInfo
+| summarize arg_max(Timestamp, *) by DeviceId  // Get latest known good per device Id
+| where isempty(MergedToDeviceId) // Remove invalidated/merged devices
+| where OnboardingStatus != "Onboarded" 
+```
+
+**SeenBy** işlevini çağırarak, gelişmiş tehdit avcılığı sorgunuzda bulunan bir cihazın hangi yerleşik cihazın görüldüğünü ayrıntılı olarak öğrenebilirsiniz.Bu bilgiler, bulunan her cihazın ağ konumunu belirlemeye yardımcı olabilir ve daha sonra bu cihazın ağda tanımlanmasına yardımcı olabilir.  
+
+```query
+DeviceInfo
+| where OnboardingStatus != "Onboarded" 
+| summarize arg_max(Timestamp, *) by DeviceId  
+| where isempty(MergedToDeviceId)  
+| limit 100 
+| invoke SeenBy() 
+| project DeviceId, DeviceName, DeviceType, SeenBy  
+```
+
+Daha fazla bilgi için [bkz. SeenBy()](/microsoft-365/security/defender/advanced-hunting-seenby-function) işlevi.
+
+### <a name="query-network-related-information"></a>Ağla ilgili bilgileri sorgulama
+
+Cihaz bulma, eklenen Uç Nokta için Microsoft Defender cihazları, eklememiş cihazlara etkinlikleri öznitelik etmek için ağ veri kaynağı olarak kullanır. Eklenen Uç Nokta için Microsoft Defender cihazdaki ağ algılayıcısı iki yeni bağlantı türü tanımlar:
 
 - ConnectionAttempt - TCP bağlantısı kurma girişimi (syn)
 - ConnectionAcknowledged - TCP bağlantısının kabul edildiğine ilişkin bir bildirim (syn\ack)
+
+Başka bir deyişle, eklenmemiş bir cihaz eklenen Uç Nokta için Microsoft Defender cihazıyla iletişim kurmaya çalıştığında, girişim bir DeviceNetworkEvent oluşturur ve eklenen cihaz zaman çizelgesinde ve Gelişmiş avcılık DeviceNetworkEvents tablosu aracılığıyla eklenmeyen cihaz etkinlikleri görülebilir.
 
 Bu örnek sorguyu deneyebilirsiniz:
 

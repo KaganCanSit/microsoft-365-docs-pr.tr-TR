@@ -1,13 +1,12 @@
 ---
 title: İş için Microsoft Defender raporları
-description: İş için Microsoft Defender'da bulunan raporlara genel bakış elde edin
+description: İş için Defender'da güvenlik raporlarına genel bir bakış elde edin. Raporlar algılanan tehditleri, uyarıları, güvenlik açıklarını ve cihaz durumunu gösterir.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 04/14/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -16,17 +15,14 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: 5b3a21a45e1b9e90cf5a8a7f666861502205552e
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: a4fbfc830c349df69180524305339582f444a609
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65093272"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65174833"
 ---
 # <a name="reports-in-microsoft-defender-for-business"></a>İş için Microsoft Defender raporları
-
-> [!NOTE]
-> İş için Microsoft Defender artık [Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil edilir. 
 
 Microsoft 365 Defender portalında ([https://security.microsoft.com](https://security.microsoft.com)) çeşitli raporlar mevcuttur. Bu makalede bu raporlar, bunları nasıl kullanabileceğiniz ve nasıl bulabileceğiniz açıklanmaktadır.
 

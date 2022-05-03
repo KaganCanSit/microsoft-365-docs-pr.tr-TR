@@ -1,34 +1,30 @@
 ---
-title: İş için Microsoft Defender'a Genel Bakış
-description: Kurulum, kullanmaya başlama ve hizmetleri kullanma dahil olmak üzere İş için Microsoft Defender hakkında bilgi edinin
+title: İş için Microsoft Defender nedir?
+description: İş için Microsoft Defender küçük ve orta ölçekli işletmeler için bir siber güvenlik çözümüdür. İş için Defender, cihazlarınız genelindeki tehditlere karşı koruma sağlar.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 04/14/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
-ms.reviewer: inbadian, shlomiakirav
+ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
 ms.custom: intro-overview
-ms.openlocfilehash: 8e382e8cf1c4863ffa67bc7687f549d6ae0a4f81
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 3589b6a0a0cc7af9e2bcfcb11541309042871591
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65101479"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65173288"
 ---
-# <a name="overview-of-microsoft-defender-for-business"></a>İş için Microsoft Defender'a Genel Bakış
-
-> [!NOTE]
-> İş için Microsoft Defender artık [Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil edilir. 
+# <a name="what-is-microsoft-defender-for-business"></a>İş için Microsoft Defender nedir?
 
 İş için Microsoft Defender, özellikle küçük ve orta ölçekli işletmeler (300 çalışana kadar) için tasarlanmış yeni bir uç nokta güvenlik çözümüdür. Bu uç nokta güvenlik çözümüyle, şirketinizin cihazları fidye yazılımlarına, kötü amaçlı yazılımlara, kimlik avına ve diğer tehditlere karşı daha iyi korunur. 
 
@@ -65,16 +61,17 @@ Bu makalede, bu özellikler ve özellikler hakkında daha fazla bilgi edinmek i�
    - [İş için Microsoft Defender almayı öğrenin](get-defender-business.md)
 
 - **Tehdit koruması özelliklerinizi ayarlama ve yapılandırma adımlarını gözden geçirme** 
+   - [Deneme playbook'unu kullanın: İş için Microsoft Defender](trial-playbook-defender-business.md)
+   - [Basitleştirilmiş yapılandırma işlemi hakkında bilgi edinin](mdb-simplified-configuration.md)
    - [İş için Defender'ı ayarlamayı ve yapılandırmayı öğrenin](mdb-setup-configuration.md)
 
 - Microsoft 365 Defender portalından başlayarak **İş için Defender'ı kullanmaya başlamanıza yardımcı** olun 
    - [Microsoft 365 Defender portalında gezinme](mdb-get-started.md)
-   - [Önizleme senaryolarını, öğreticileri ve simülasyonları deneyin](mdb-tutorials.md)
+   - [Senaryoları, öğreticileri ve simülasyonları deneyin](mdb-tutorials.md)
 
 - **Cihazları ve güvenlik ilkelerini yönetme konusunda rehberlik sağlama**
-   - [Cihazları yönetme](mdb-manage-devices.md)
+   - [Cihazları izleme veya yönetme](mdb-manage-devices.md)
    - [Güvenlik ilkelerini görüntüleme veya düzenleme](mdb-view-edit-policies.md)
-   - [Güvenlik duvarı ilkeleri için özel kuralları yönetme](mdb-custom-rules-firewall.md)  
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

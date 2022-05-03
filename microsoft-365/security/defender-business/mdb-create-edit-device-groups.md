@@ -1,33 +1,29 @@
 ---
 title: İş için Microsoft Defender'da cihaz grupları
-description: İş için Microsoft Defender'da cihaz grupları hakkında bilgi edinin
+description: Güvenlik ilkeleri, İş için Defender'daki cihaz grupları aracılığıyla cihazlara uygulanır.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: how-to
-ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
-ms.reviewer: inbadian, shlomiakirav
+ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 6c02a92132f7f5249f2ba67ca2841902b889d52b
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: abb1c694f98ace7595f1389e3270ca3479d0c745
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64861755"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65172212"
 ---
 # <a name="device-groups-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'da cihaz grupları
-
-> [!NOTE]
-> İş için Microsoft Defender artık [Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil edilir. 
 
 İş için Microsoft Defender ilkeler, cihaz grupları olarak adlandırılan belirli koleksiyonlar aracılığıyla cihazlara uygulanır. 
 
@@ -54,7 +50,7 @@ Belirli cihazlara belirli ayarlarla ilke atamak için yeni cihaz grupları da ol
 > [!NOTE]
 > İş için Defender'da ilkeler oluştururken bir öncelik sırası atanır. Belirli bir cihaz kümesine birden çok ilke uygularsanız, bu cihazlar yalnızca ilk uygulanan ilkeyi alır. Daha fazla bilgi için bkz. [İş için Microsoft Defender ilke sırasını anlama](mdb-policy-order.md).
 
-Varsayılan cihaz gruplarınız ve tanımladığınız tüm özel cihaz grupları dahil olmak üzere tüm cihaz grupları [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis)(Azure AD) içinde depolanır.
+Varsayılan cihaz gruplarınız ve tanımladığınız tüm özel cihaz grupları dahil olmak üzere tüm cihaz grupları [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis) (Azure AD) içinde depolanır.
 
 ## <a name="create-a-new-device-group"></a>Yeni cihaz grubu oluşturma
 
@@ -112,7 +108,7 @@ Varsayılan cihaz gruplarınız ve tanımladığınız tüm özel cihaz gruplar�
 
 :::image type="content" source="media/add-all-devices-option.png" alt-text="Tüm Cihazları Ekle seçeneğinin ekran görüntüsü.":::
 
-Bu seçeneği belirlerseniz, Microsoft Endpoint Manager kayıtlı tüm cihazlar (Microsoft Intune dahil) varsayılan olarak oluşturduğunuz veya düzenlediğiniz ilkeyi alır. 
+Bu seçeneği belirlerseniz, Microsoft Intune kayıtlı tüm cihazlar varsayılan olarak oluşturduğunuz veya düzenlediğiniz ilkeyi alır. 
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

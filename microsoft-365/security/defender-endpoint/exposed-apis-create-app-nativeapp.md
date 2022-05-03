@@ -1,8 +1,8 @@
 ---
-title: API'Uç Nokta için Microsoft Defender kullanma
+title: Uç Nokta için Microsoft Defender API'lerini kullanma
 ms.reviewer: ''
-description: Kullanıcı olmadan yerel Windows program erişimi elde etmek için yerel Uç Nokta için Microsoft Defender tasarlamayı öğrenin.
-keywords: api'ler, grafik api'si, desteklenen api'ler, Actor, alerts, device, kullanıcı, etki alanı, ip, dosya, gelişmiş av, sorgu
+description: Kullanıcı olmadan Uç Nokta için Microsoft Defender program aracılığıyla erişim elde etmek için yerel bir Windows uygulaması tasarlamayı öğrenin.
+keywords: apis, graph api, desteklenen API'ler, aktör, uyarılar, cihaz, kullanıcı, etki alanı, ip, dosya, gelişmiş avcılık, sorgu
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,123 +16,128 @@ ms.collection: M365-security-compliance
 ms.topic: article
 MS.technology: mde
 ms.custom: api
-ms.openlocfilehash: 752e08d3fddb28b7d30122281009e54fc235b129
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: aec4c7bdc0da76a6a52a8b8f19d89b8b54f3df9f
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64471219"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65173478"
 ---
-# <a name="use-microsoft-defender-for-endpoint-apis"></a>API'Uç Nokta için Microsoft Defender kullanma
+# <a name="use-microsoft-defender-for-endpoint-apis"></a>Uç Nokta için Microsoft Defender API'lerini kullanma
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [İş için Microsoft Defender](../defender-business/index.yml)
 
-> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> [!IMPORTANT]
+> Gelişmiş avcılık özellikleri İş için Defender'a dahil değildir. Bkz[. İş için Microsoft Defender Uç Nokta için Microsoft Defender Planları 1 ve 2 ile karşılaştırma](../defender-business/compare-mdb-m365-plans.md#compare-microsoft-defender-for-business-to-microsoft-defender-for-endpoint-plans-1-and-2).
+
+
+> Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
 [!include[Improve request performance](../../includes/improve-request-performance.md)]
 
-Bu sayfada, bir kullanıcı adına Uç Nokta için Defender'a programlı erişim elde etmek için nasıl uygulama oluşturularak oluşturul olduğu açıkmektedir.
+Bu sayfada, kullanıcı adına Uç Nokta için Defender'a programlı erişim elde etmek için bir uygulamanın nasıl oluşturulacağı açıklanır.
 
-Kullanıcı olmadan programlı erişime Uç Nokta için Microsoft Defender, Access'e başvuru Uç Nokta için Microsoft Defender [bağlamsal olarak bağlama bakın](exposed-apis-create-app-webapp.md).
+Kullanıcı olmadan Uç Nokta için Microsoft Defender programlı erişime ihtiyacınız varsa, [uygulama bağlamı ile Erişim Uç Nokta için Microsoft Defender'ne](exposed-apis-create-app-webapp.md) bakın.
 
-Hangi erişime ihtiyacınız olduğundan emin değilsanız, Giriş [sayfasını okuyun](apis-intro.md).
+Hangi erişime ihtiyacınız olduğundan emin değilseniz [Giriş sayfasını](apis-intro.md) okuyun.
 
-Uç Nokta için Microsoft Defender çok büyük bir veri ve eylemlerini bir dizi programlı API aracılığıyla ortaya çıkarır. Bu API'ler, çalışma akışlarını otomatik hale Uç Nokta için Microsoft Defender olanak sağlar. API erişimi için OAuth2.0 kimlik doğrulaması gerekir. Daha fazla bilgi için [bkz. OAuth 2.0 Yetkilendirme Kodu Flow](/azure/active-directory/develop/active-directory-v2-protocols-oauth-code).
+Uç Nokta için Microsoft Defender, bir dizi programlı API aracılığıyla verilerinin ve eylemlerinin büyük bir kısmını kullanıma sunar. Bu API'ler, iş akışlarını otomatikleştirmenize ve Uç Nokta için Microsoft Defender özelliklerine göre yenilik yapmanızı sağlar. API erişimi için OAuth2.0 kimlik doğrulaması gerekir. Daha fazla bilgi için bkz[. OAuth 2.0 Yetkilendirme Kodu Flow](/azure/active-directory/develop/active-directory-v2-protocols-oauth-code).
 
-Genelde API'leri kullanmak için aşağıdaki adımları atabilirsiniz:
+Genel olarak, API'leri kullanmak için aşağıdaki adımları uygulamanız gerekir:
 
-- AAD oluşturma
-- Bu uygulamayı kullanarak bir erişim belirteci alın
-- Belirteci, Uç Nokta API'si için Defender'a erişmek üzere kullanma
+- AAD uygulaması oluşturma
+- Bu uygulamayı kullanarak erişim belirteci alma
+- Uç Nokta için Defender API'sine erişmek için belirteci kullanma
 
-Bu sayfada, bir AAD uygulamanın nasıl oluşturularak, belirteci doğrulamak ve Uç Nokta için Microsoft Defender için bir erişim belirteci elde etmek nasıl açıklanır.
+Bu sayfada AAD uygulaması oluşturma, Uç Nokta için Microsoft Defender için erişim belirteci alma ve belirteci doğrulama açıklanmaktadır.
 
 > [!NOTE]
-> Kullanıcı adına Uç Nokta için Microsoft Defender API'sine erişirken doğru Uygulama iznine ve kullanıcı iznine ihtiyacınız vardır.
-> E-posta hesaplarıyla ilgili kullanıcı izinlerini Uç Nokta için Microsoft Defender, bkz[. Rol tabanlı erişim denetimi kullanarak portal erişimini yönetme](rbac.md).
+> Kullanıcı adına Uç Nokta için Microsoft Defender API'sine erişirken doğru Uygulama iznine ve kullanıcı iznine ihtiyacınız olacaktır.
+> Uç Nokta için Microsoft Defender kullanıcı izinlerini tanımıyorsanız bkz. [Rol tabanlı erişim denetimini kullanarak portal erişimini yönetme](rbac.md).
 
 > [!TIP]
-> Portalda bir eylemi gerçekleştirme izniniz varsa, API'de eylemi gerçekleştirme izniniz vardır.
+> Portalda eylem gerçekleştirme izniniz varsa, eylemi API'de gerçekleştirme izniniz vardır.
 
 ## <a name="create-an-app"></a>Uygulama oluşturma
 
-1. [Genel Yönetici rolüne](https://portal.azure.com) sahip bir kullanıcı hesabıyla **Azure'da oturum** açın.
+1. **Genel Yönetici** rolüne sahip bir kullanıcı hesabıyla [Azure'da](https://portal.azure.com) oturum açın.
 
-2. Yeni kayıt **Azure Active Directory** \> **Uygulama kayıtları** \> **gidin**.
+2. **yeni kayıt Uygulama kayıtları Azure Active Directory** \>  \> gidin.
 
-   :::image type="content" source="images/atp-azure-new-app2.png" alt-text="Uygulama kayıtları portalında Microsoft Azure sayfası" lightbox="images/atp-azure-new-app2.png":::
+   :::image type="content" source="images/atp-azure-new-app2.png" alt-text="Microsoft Azure portalındaki Uygulama kayıtları sayfası" lightbox="images/atp-azure-new-app2.png":::
 
-3. Uygulama **kaydettir sayfası** görüntülendiğinde, uygulamanın kayıt bilgilerini girin:
-   - **Ad** - Uygulama kullanıcıları için görüntülenecek anlamlı bir uygulama adı girin.
-   - **Desteklenen hesap türleri** - Uygulamanın desteklemesi istediğiniz hesapları seçin.
+3. **Uygulamayı kaydet** sayfası görüntülendiğinde, uygulamanızın kayıt bilgilerini girin:
+   - **Ad** - Uygulamanın kullanıcılarına görüntülenecek anlamlı bir uygulama adı girin.
+   - **Desteklenen hesap türleri** - Uygulamanızın hangi hesapları desteklemesini istediğinizi seçin.
 
      <br>
 
      |Desteklenen hesap türleri|Açıklama|
      |---|---|
-     |**Yalnızca bu kuruluş dizininde hesaplar**|İş hattı (LOB) uygulaması inşa bunlar için bu seçeneği belirtin. Uygulamayı dizine kaydetmezseniz, bu seçenek kullanılamaz. <p> Bu seçenek, Azure AD'ye yalnızca tek kiracılı olarak eşler. <p> Uygulamayı dizin dışında kaydetmedikçe bu varsayılan seçenektir. Uygulamanın dizin dışında kayıtlı olduğu durumlarda, varsayılan değer Azure AD çok kiracılı ve kişisel Microsoft hesaplarıdır.|
-     |**Herhangi bir kuruluş dizininde hesaplar**|Tüm iş ve eğitim müşterilerini hedeflemek için bu seçeneği belirleyin. <p> Bu seçenek, bir Azure AD'ye yalnızca birden çok kiracılı olarak eşler. <p> Uygulamayı yalnızca tek kiracılı Azure AD olarak kaydettiysanız, Azure AD çok kiracılı olacak şekilde güncelleştirip Kimlik Doğrulama blade'i aracılığıyla tek **kiracıya geri dönebilirsiniz** .|
-     |**Herhangi bir kuruluş dizininde ve kişisel Microsoft hesaplarında bulunan hesaplar**|En geniş müşteri kitlesi için bu seçeneği belirleyin. <p> Bu seçenek, Azure AD çok kiracılı ve kişisel Microsoft hesaplarıyla eşler. <p> Uygulamayı Azure AD çok kiracılı ve kişisel Microsoft hesapları olarak kaydettiyebilirsiniz, kullanıcı arabiriminde bunu değiştiremezsiniz. Bunun yerine, desteklenen hesap türlerini değiştirmek için uygulama bildirim düzenleyicisini kullanabilirsiniz.|
+     |**Yalnızca bu kuruluş dizinindeki hesaplar**|İş kolu (LOB) uygulaması oluşturuyorsanız bu seçeneği belirleyin. Uygulamayı bir dizine kaydetmiyorsanız bu seçenek kullanılamaz. <p> Bu seçenek yalnızca tek kiracılı Azure AD eşlenir. <p> Uygulamayı bir dizinin dışına kaydetmediğiniz sürece bu varsayılan seçenektir. Uygulamanın bir dizin dışında kayıtlı olduğu durumlarda, varsayılan olarak çok kiracılı ve kişisel Microsoft hesapları Azure AD.|
+     |**Herhangi bir kuruluş dizinindeki hesaplar**|Tüm iş ve eğitim müşterilerini hedeflemek istiyorsanız bu seçeneği belirleyin. <p> Bu seçenek yalnızca çok kiracılı Azure AD eşlenir. <p> Uygulamayı yalnızca tek kiracılı Azure AD olarak kaydettiyseniz, çok kiracılı Azure AD olacak şekilde güncelleştirebilir ve **Kimlik Doğrulama** dikey penceresi aracılığıyla tek kiracıya dönebilirsiniz.|
+     |**Herhangi bir kuruluş dizinindeki hesaplar ve kişisel Microsoft hesapları**|En geniş müşteri kümesini hedeflemek için bu seçeneği belirleyin. <p> Bu seçenek, çok kiracılı ve kişisel Azure AD Microsoft hesaplarıyla eşlenir. <p> Uygulamayı çok kiracılı ve kişisel Azure AD Microsoft hesapları olarak kaydettiyseniz, bunu kullanıcı arabiriminde değiştiremezsiniz. Bunun yerine, desteklenen hesap türlerini değiştirmek için uygulama bildirim düzenleyicisini kullanmanız gerekir.|
 
-   - **Yeniden yönlendirme URI'si (** isteğe bağlı) - Web veya Genel istemci (mobil  & masaüstü **)** ve sonra uygulamanın yeniden yönlendirme URL'sini (veya yanıt URL'sini) girin.
+   - **Yeniden yönlendirme URI'si (isteğe bağlı)** - Oluşturduğunuz uygulama türünü, **Web** veya **Genel istemciyi (mobil & masaüstü)** seçin ve ardından uygulamanız için yeniden yönlendirme URI'sini (veya yanıt URL'sini) girin.
 
-     - Web uygulamaları için, uygulamanın temel URL'sini girin. Örneğin, `http://localhost:31544` yerel makinede çalışan bir web uygulamasının URL'si olabilir. Kullanıcılar bu URL'yi kullanarak bir web istemci uygulamasında oturum adı.
+     - Web uygulamaları için uygulamanızın temel URL'sini sağlayın. Örneğin, `http://localhost:31544` yerel makinenizde çalışan bir web uygulamasının URL'si olabilir. Kullanıcılar bir web istemcisi uygulamasında oturum açmak için bu URL'yi kullanır.
 
-     - Genel istemci uygulamalarında, belirteç yanıtlarını geri almak için Azure AD tarafından kullanılan URI'yi sağlar. Uygulamanıza özgü bir değer girin, örneğin `myapp://auth`.
+     - Genel istemci uygulamaları için, belirteç yanıtlarını döndürmek için Azure AD tarafından kullanılan URI'yi sağlayın. Uygulamanıza `myapp://auth`özgü gibi bir değer girin.
 
-     Web uygulamalarına veya yerel uygulamalara yönelik belirli örnekler görmek için hızlı [başlangıçlarımızı kontrol edin](/azure/active-directory/develop/#quickstarts).
+     Web uygulamalarına veya yerel uygulamalara yönelik belirli örnekleri görmek için [hızlı başlangıçlarımıza](/azure/active-directory/develop/#quickstarts) göz atın.
 
-     Bitirdikten sonra **Kaydol'a tıklayın**.
+     İşiniz bittiğinde **Kaydet'i** seçin.
 
-4. Uygulamanıza erişim izni Uç Nokta için Microsoft Defender ve 'Okuma uyarıları' izni attayabilirsiniz:
+4. Uygulamanızın Uç Nokta için Microsoft Defender erişmesine izin verin ve 'Uyarıları okuma' izni atayın:
 
-   - Uygulama sayfanız üzerinde **API** \>  \> İzinleri Ekle İzin API'leri Kuruluşumda şu API'leri kullanır> **WindowsDefenderATP** yazın ve **WindowsDefenderATP'de öğesini seçin**.
+   - Uygulama sayfanızda **API İzinleri** **Kuruluşumun kullandığı** **izin** \> API'leri \> ekle'yi seçin > **WindowsDefenderATP** yazın ve **WindowsDefenderATP'yi** seçin.
 
      > [!NOTE]
-     > *WindowsDefenderATP* özgün listede görünmez. Görünmesini görmek için metin kutusuna adını yazmaya başlayabilirsiniz.
+     > *WindowsDefenderATP* özgün listede görünmez. Görünmesini görmek için metin kutusuna adını yazmaya başlayın.
 
      :::image type="content" alt-text="izin ekleyin." source="images/add-permission.png" lightbox="images/add-permission.png":::
 
-   - Temsilci **İzinleri Uyarı'ya** \> **tıklayın.İzin** **>'ı seçin**.
+   - **Temsilci izinleri** \> **Uyarısı'nı seçin.Okuma** > **İzin ekle'yi** seçin.
 
       :::image type="content" source="images/application-permissions-public-client.png" alt-text="Uygulama türü ve izin bölmeleri" lightbox="images/application-permissions-public-client.png":::
 
    > [!IMPORTANT]
-   > Uygun izinleri seçin. Okuma uyarıları yalnızca bir örnektir.
+   > İlgili izinleri seçin. Uyarıları okuma yalnızca bir örnektir.
 
      Örneğin:
 
-     - Gelişmiş [sorguları çalıştırmak için Gelişmiş](run-advanced-query-api.md) sorguları **çalıştırma iznini** seçin.
-     - Cihazı [yalıtmak için](isolate-machine.md) Makine **iznini yalıt öğesini** seçin.
-     - Hangi izinlere ihtiyacınız olduğunu belirlemek için **çağrı yapmakla** ilgilendiğiniz API'deki İzinler bölümünü görüntüebilirsiniz.
+     - [Gelişmiş sorgular çalıştırmak](run-advanced-query-api.md) için **Gelişmiş sorgu çalıştırma** izni'ne tıklayın.
+     - [Cihazı yalıtmak](isolate-machine.md) için **Makine iznini yalıt'ı** seçin.
+     - Hangi izne ihtiyacınız olduğunu belirlemek için çağırmak istediğiniz API'deki **İzinler** bölümünü görüntüleyin.
 
-   - İzin **ver'i seçin**.
+   - **İzin ver'i** seçin.
 
       > [!NOTE]
-      > Her izin ekley irden sonra **geçerlik için İzin** Ver'i seçmeniz gerekir.
+      > İzin eklediğinizde, yeni iznin geçerli olması için **İzin ver'i** seçmeniz gerekir.
 
-      :::image type="content" source="images/grant-consent.png" alt-text="Genel yönetici izin seçeneği" lightbox="images/grant-consent.png":::
+      :::image type="content" source="images/grant-consent.png" alt-text="Genel yönetici onayı seçeneği" lightbox="images/grant-consent.png":::
 
-5. Uygulama kimliğinizi ve kiracı kimliğinizi bir yere yazın.
+5. Uygulama kimliğinizi ve kiracı kimliğinizi not edin.
 
-    Uygulama sayfanız üzerinde Genel **Bakış'a** gidin ve aşağıdaki bilgileri kopyalayın:
+    Uygulama sayfanızda **Genel Bakış'a** gidin ve aşağıdaki bilgileri kopyalayın:
 
     :::image type="content" source="images/app-and-tenant-ids.png" alt-text="Oluşturulan uygulama kimliği"  lightbox="images/app-and-tenant-ids.png":::
 
-## <a name="get-an-access-token"></a>Erişim belirteci alın
+## <a name="get-an-access-token"></a>Erişim belirteci alma
 
-Bu belirteçleri kullanma hakkında AAD azure [ad öğreticisi'ne bakın](/azure/active-directory/develop/active-directory-v2-protocols-oauth-client-creds).
+AAD belirteçleri hakkında daha fazla bilgi için Azure AD [öğreticiye](/azure/active-directory/develop/active-directory-v2-protocols-oauth-client-creds) bakın.
 
-### <a name="using-c"></a>C'yi kullanma\#
+### <a name="using-c"></a>C kullanma\#
 
-- Uygulamanıza aşağıdaki sınıfı kopyalayıp yapıştırın.
-- Belirteç **almak için AcquireUserTokenAsync** yöntemini uygulama kimliğiniz, kiracı kimliğiniz, kullanıcı adınız ve parolanız ile kullanın.
+- Uygulamanızda aşağıdaki sınıfı kopyalayın/yapıştırın.
+- Belirteç almak için uygulama kimliğiniz, kiracı kimliğiniz, kullanıcı adınız ve parolanızla **AcquireUserTokenAsync** yöntemini kullanın.
 
     ```csharp
     namespace WindowsDefenderATP
@@ -174,21 +179,21 @@ Bu belirteçleri kullanma hakkında AAD azure [ad öğreticisi'ne bakın](/azure
 
 ## <a name="validate-the-token"></a>Belirteci doğrulama
 
-Doğru belirtece sahip olduğunu doğrulayın:
+Doğru belirteci kullandığınızdan emin olmak için doğrulayın:
 
-- Kodunu çözmek için [önceki adımda edinilen belirteci JWT'ye](https://jwt.ms) kopyalayıp yapıştırın.
-- İstenen uygulama izinleri ile bir 'scp' talebi alasınız.
-- Aşağıdaki ekran görüntüsünde, öğreticide, uygulamada alınan kod çözme belirteci görebilirsiniz:
+- Kodunu çözmek için önceki adımda aldığınız belirteci [JWT'ye](https://jwt.ms) kopyalayın/yapıştırın.
+- İstenen uygulama izinleriyle bir 'scp' talebi aldığınızdan doğrulayın.
+- Aşağıdaki ekran görüntüsünde, öğreticide uygulamadan alınan kodu çözülen bir belirteci görebilirsiniz:
 
   :::image type="content" source="images/nativeapp-decoded-token.png" alt-text="Belirteç doğrulama sayfası" lightbox="images/nativeapp-decoded-token.png":::
 
-## <a name="use-the-token-to-access-microsoft-defender-for-endpoint-api"></a>API'ye erişmek için Uç Nokta için Microsoft Defender kullanma
+## <a name="use-the-token-to-access-microsoft-defender-for-endpoint-api"></a>Uç Nokta için Microsoft Defender API'ye erişmek için belirteci kullanma
 
-- Kullanmak istediğiniz API'yi seçin - [Desteklenen API'Uç Nokta için Microsoft Defender seçin](exposed-apis-list.md).
-- "Taşıyıcı {token}" adresine göndermek istediğiniz HTTP isteğinde Yetkilendirme üst bilgisini ayarlayın (Taşıyıcı, Yetkilendirme düzenidir).
-- Belirtecin son kullanma süresi 1 saattir (aynı belirteçe sahip birden fazla istek gönderabilirsiniz).
+- Kullanmak istediğiniz API'yi seçin - [Desteklenen Uç Nokta için Microsoft Defender API'leri](exposed-apis-list.md).
+- Gönderdiğiniz HTTP isteğinde Yetkilendirme üst bilgisini "Taşıyıcı {token}" olarak ayarlayın (Taşıyıcı, Yetkilendirme şemasıdır).
+- Belirtecin Sona erme süresi 1 saattir (aynı belirteçle birden fazla istek gönderebilirsiniz).
 
-- C# kullanarak uyarıların listesini almak için istek **gönderme örneği**:
+- **C# kullanarak** uyarıların listesini almak için istek gönderme örneği:
 
     ```csharp
     var httpClient = new HttpClient();
@@ -204,5 +209,5 @@ Doğru belirtece sahip olduğunu doğrulayın:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Uç Nokta için Microsoft Defender API'leri](exposed-apis-list.md)
-- [Uygulama Uç Nokta için Microsoft Defender ile Access 2013](exposed-apis-create-app-webapp.md)
+- [api'leri Uç Nokta için Microsoft Defender](exposed-apis-list.md)
+- [Uygulama bağlamı ile Uç Nokta için Microsoft Defender erişme](exposed-apis-create-app-webapp.md)

@@ -1,13 +1,12 @@
 ---
 title: İş için Microsoft Defender'de ilkeleri görüntüleme veya düzenleme
-description: İş için Microsoft Defender'de yeni nesil koruma ilkelerini görüntülemeyi, düzenlemeyi, oluşturmayı ve silmeyi öğrenin
+description: İş için Defender'da siber güvenlik ilkelerini görüntülemeyi, düzenlemeyi, oluşturmayı ve silmeyi öğrenin. Cihazlarınızı güvenlik ilkeleriyle koruyun.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -17,17 +16,14 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: ba7f6846809009b8bb9df258b8ac18536a910b6d
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: 85845ec12b8ad43abe965e277f8ea3f6c67e1d7d
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64862136"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65174185"
 ---
 # <a name="view-or-edit-policies-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'de ilkeleri görüntüleme veya düzenleme
-
-> [!NOTE]
-> İş için Microsoft Defender artık [Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil edilir. 
 
 İş için Microsoft Defender'da, güvenlik ayarları cihazlara uygulanan ilkeler aracılığıyla yapılandırılır. İş için Defender, kurulum ve yapılandırma deneyiminizi basitleştirmeye yardımcı olmak için şirketinizin cihazlarının eklendikleri anda korunmasına yardımcı olmak için önceden yapılandırılmış ilkeler içerir. Varsayılan ilkeleri kullanabilir, ilkeleri düzenleyebilir veya kendi ilkelerinizi oluşturabilirsiniz.
 
@@ -115,7 +111,7 @@ ms.locfileid: "64862136"
    - Başlangıçta, yalnızca şirketinizdeki kişilerin şirket verilerine ve e-postasına erişmek için kullandığı cihazları içeren varsayılan cihaz grubunuz olabilir. Varsayılan cihaz grubunuzu tutabilir ve kullanabilirsiniz.
    - Varsayılan ilkeden farklı olan belirli ayarlara sahip bir ilke uygulamak için yeni bir cihaz grubu oluşturun. 
    - Cihaz grubunuzu ayarlarken işletim sistemi sürümü gibi belirli ölçütleri belirtirsiniz. Ölçütleri karşılayan cihazlar, siz hariç tutmadığınız sürece bu cihaz grubuna dahil edilir. 
-   - Tanımladığınız varsayılan ve özel cihaz grupları dahil olmak üzere tüm cihaz grupları Azure Active Directory(Azure AD) içinde depolanır.
+   - Tanımladığınız varsayılan ve özel cihaz grupları dahil olmak üzere tüm cihaz grupları Azure Active Directory (Azure AD) içinde depolanır.
 
    Cihaz grupları hakkında daha fazla bilgi edinmek için bkz. [İş için Defender'da cihaz grupları](mdb-create-edit-device-groups.md).
 

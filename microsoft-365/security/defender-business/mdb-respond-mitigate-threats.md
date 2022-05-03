@@ -1,13 +1,12 @@
 ---
 title: İş için Microsoft Defender'da tehditlere yanıt verme ve tehditleri azaltma
-description: Tehditler algılandıkçe, bu tehditlere yanıt vermek ve tehditleri azaltmak için eylemler gerçekleştirebilirsiniz.
+description: İş için Defender'da tehditler algılandığından, bu tehditlere yanıt vermek için eylemler gerçekleştirebilirsiniz. Cihaz envanteri görünümünü nasıl kullanacağınızı görün.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: how-to
-ms.date: 04/14/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -17,17 +16,14 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: b6d85d5032b9eb5837482649d4164e68b7c08275
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 0481ffdf51b60a40de854ec2e4eb9b9d38d4344a
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098790"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65174852"
 ---
 # <a name="respond-to-and-mitigate-threats-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'da tehditlere yanıt verme ve tehditleri azaltma
-
-> [!NOTE]
-> İş için Microsoft Defender artık [Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil edilir. 
 
 Microsoft 365 Defender portalı, güvenlik ekibinizin algılanan tehditlere yanıt vermesini ve tehditleri azaltmasını sağlar. Bu makalede, İş için Defender'ı nasıl kullanabileceğinize ilişkin bir örnek açıklanabilir.
 

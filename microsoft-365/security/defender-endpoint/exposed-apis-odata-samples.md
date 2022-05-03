@@ -1,8 +1,8 @@
 ---
 title: Uç Nokta için Microsoft Defender ile OData sorguları
 ms.reviewer: ''
-description: Uç Nokta için Microsoft Defender'daki veri erişim protokollerine yardımcı olmak için açık Veri Protokolü (OData) sorgularının bu örneklerini kullanın.
-keywords: api'ler, desteklenen api'ler, odata, sorgu
+description: Uç Nokta için Microsoft Defender veri erişim protokollerine yardımcı olması için bu Açık Veri Protokolü (OData) sorgu örneklerini kullanın.
+keywords: api'ler, desteklenen API'ler, odata, sorgu
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,41 +16,45 @@ ms.collection: M365-security-compliance
 ms.topic: article
 MS.technology: mde
 ms.custom: api
-ms.openlocfilehash: 6ee47a1c624020ffa40848910866738072044d27
-ms.sourcegitcommit: 348f3998a029a876a9dcc031f808e9e350804f22
+ms.openlocfilehash: 808ff3e6cc0dc69d748dabed102c478a27593790
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "62996536"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65172283"
 ---
 # <a name="odata-queries-with-microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender ile OData sorguları
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [İş için Microsoft Defender](../defender-business/index.yml)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> [!IMPORTANT]
+> Gelişmiş avcılık özellikleri İş için Defender'a dahil değildir. Bkz[. İş için Microsoft Defender Uç Nokta için Microsoft Defender Planları 1 ve 2 ile karşılaştırma](../defender-business/compare-mdb-m365-plans.md#compare-microsoft-defender-for-business-to-microsoft-defender-for-endpoint-plans-1-and-2).
+
+> Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
 [!include[Improve request performance](../../includes/improve-request-performance.md)]
 
-OData sorgularını biliyorsanız, bkz: [OData V4 sorguları](https://www.odata.org/documentation/)
+OData sorgularını bilmiyorsanız bkz. [OData V4 sorguları](https://www.odata.org/documentation/)
 
 Tüm özellikler filtrelenebilir değildir.
 
-## <a name="properties-that-support-filter"></a>Bu özelliği destekleyen $filter
+## <a name="properties-that-support-filter"></a>$filter destekleyen özellikler
 
 - [Uyarı](alerts.md): `alertCreationTime`, `lastUpdateTime`, `incidentId`,`InvestigationId`, `status`, `severity`ve `category`.
-- [Makine](machine.md): `ComputerDnsName`, `LastSeen`, `HealthStatus``OsPlatform`, `onboardingStatus`, ve `RiskScore``RbacGroupId`.
-- [MakineAction](machineaction.md): `Status`, `MachineId`, `Type`, `Requestor`ve `CreationDateTimeUtc`.
-- [Gösterge](ti-indicator.md): `indicatorValue`, `indicatorType`, `creationTimeDateTimeUtc``createdBy`, `severity`ve `action`.
+- [Makine](machine.md): `ComputerDnsName`, `LastSeen`, `HealthStatus`, `OsPlatform`, , `onboardingStatus`, `RiskScore`ve `RbacGroupId`.
+- [MachineAction](machineaction.md): `Status`, `MachineId`, `Type`, `Requestor`ve `CreationDateTimeUtc`.
+- [Gösterge](ti-indicator.md): `indicatorValue`, `indicatorType`, `creationTimeDateTimeUtc`, `createdBy`, , `severity`ve `action`.
 
 ### <a name="example-1"></a>Örnek 1
 
-İlgili Kanıtlara sahip en son 10 Uyarıyı al:
+İlgili Kanıt ile en son 10 Uyarı alın:
 
 ```http
 HTTP GET  https://api.securitycenter.microsoft.com/api/alerts?$top=10&$expand=evidence
@@ -195,7 +199,7 @@ HTTP GET  https://api.securitycenter.microsoft.com/api/alerts?$top=10&$expand=ev
 
 ### <a name="example-2"></a>Örnek 2
 
-2019-11-22 00:00:00'dan sonra son güncelleştirilen tüm uyarıları al:
+Son güncelleştirme tarihi 2019-11-22 00:00:00 olan tüm uyarıları alın:
 
 ```http
 HTTP GET  https://api.securitycenter.microsoft.com/api/alerts?$filter=lastUpdateTime+ge+2019-11-22T00:00:00Z
@@ -257,7 +261,7 @@ HTTP GET  https://api.securitycenter.microsoft.com/api/alerts?$filter=lastUpdate
 
 ### <a name="example-3"></a>Örnek 3
 
-'Yüksek' 'RiskScore' ile tüm cihazları elde edin:
+'Yüksek' 'RiskScore' ile tüm cihazları alın:
 
 ```http
 HTTP GET  https://api.securitycenter.microsoft.com/api/machines?$filter=riskScore+eq+'High'
@@ -310,7 +314,7 @@ HTTP GET  https://api.securitycenter.microsoft.com/api/machines?$filter=riskScor
 
 ### <a name="example-4"></a>Örnek 4
 
-'HealthStatus' ile 'Etkin' eşit değildir, en iyi 100 cihazı elde edin:
+'HealthStatus' değeri 'Etkin' ile eşit olmayan ilk 100 cihazı edinin:
 
 ```http
 HTTP GET  https://api.securitycenter.microsoft.com/api/machines?$filter=healthStatus+ne+'Active'&$top=100 
@@ -363,7 +367,7 @@ HTTP GET  https://api.securitycenter.microsoft.com/api/machines?$filter=healthSt
 
 ### <a name="example-5"></a>Örnek 5
 
-2018-10-20'dan sonra en son görülen tüm cihazları elde edin:
+En son 2018-10-20'de görülen tüm cihazları edinin:
 
 ```http
 HTTP GET  https://api.securitycenter.microsoft.com/api/machines?$filter=lastSeen gt 2018-08-01Z
@@ -416,7 +420,7 @@ HTTP GET  https://api.securitycenter.microsoft.com/api/machines?$filter=lastSeen
 
 ### <a name="example-6"></a>Örnek 6
 
-Kullanıcının Uç Nokta için Microsoft Defender'ı kullanarak oluşturduğu Analyst@examples.onmicrosoft.com Virüsten Koruma taramalarını al:
+Kullanıcının Uç Nokta için Microsoft Defender kullanarak oluşturduğu tüm Virüsten Koruma taramalarını Analyst@examples.onmicrosoft.com:
 
 ```http
 HTTP GET  https://api.securitycenter.microsoft.com/api/machineactions?$filter=requestor eq 'Analyst@contoso.com' and type eq 'RunAntiVirusScan'
@@ -448,7 +452,7 @@ json{
 
 ### <a name="example-7"></a>Örnek 7
 
-Belirli bir cihaz için açık uyarı sayısını elde edin:
+Belirli bir cihaz için açık uyarıların sayısını alın:
 
 ```http
 HTTP GET  https://api.securitycenter.microsoft.com/api/machines/123321d0c675eaa415b8e5f383c6388bff446c62/alerts/$count?$filter=status ne 'Resolved'
@@ -462,7 +466,7 @@ HTTP GET  https://api.securitycenter.microsoft.com/api/machines/123321d0c675eaa4
 
 ### <a name="example-8"></a>Örnek 8
 
-'mymachine' ile başlayan 'bilgisayarDnsName' olan tüm cihazları elde edin:
+'mymachine' ile başlayan 'computerDnsName' ile tüm cihazları alın:
 
 ```http
 HTTP GET  https://api.securitycenter.microsoft.com/api/machines?$filter=startswith(computerDnsName,'mymachine')
@@ -515,4 +519,4 @@ json{
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Uç Nokta API'leri için Microsoft Defender](apis-intro.md)
+[api'leri Uç Nokta için Microsoft Defender](apis-intro.md)

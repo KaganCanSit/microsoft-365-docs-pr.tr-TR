@@ -1,8 +1,8 @@
 ---
-title: PowerShell API Kılavuzu ile Gelişmiş Av
+title: PowerShell API'siyle Gelişmiş Avcılık Kılavuzu
 ms.reviewer: ''
-description: Uç Nokta API'leri için birkaç Microsoft Defender sorgularken bu kod örneklerini kullanın.
-keywords: api'ler, desteklenen api'ler, gelişmiş av, sorgu
+description: Çeşitli Uç Nokta için Microsoft Defender API'lerini sorgulayarak bu kod örneklerini kullanın.
+keywords: api'ler, desteklenen API'ler, gelişmiş avcılık, sorgu
 search.product: eADQiWindows 10XVcnh
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -15,57 +15,61 @@ manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
-ms.date: 09/24/2018
+ms.date: 04/27/2022
 ms.technology: mde
 ms.custom: api
-ms.openlocfilehash: 6b1f501b942512500c11c7f9fe1e9308d67706e9
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: c23bf15a188527b2b4c24270fbc1312537da4154
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "62998173"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65174887"
 ---
-# <a name="microsoft-defender-for-endpoint-apis-using-powershell"></a>PowerShell kullanan Uç Nokta API'leri için Microsoft Defender
+# <a name="microsoft-defender-for-endpoint-apis-using-powershell"></a>PowerShell kullanarak API'leri Uç Nokta için Microsoft Defender
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:** 
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+**Şunlar için geçerlidir:** 
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [İş için Microsoft Defender](../defender-business/index.yml)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> [!IMPORTANT]
+> Gelişmiş avcılık özellikleri İş için Defender'a dahil değildir. Bkz[. İş için Microsoft Defender Uç Nokta için Microsoft Defender Planları 1 ve 2 ile karşılaştırma](../defender-business/compare-mdb-m365-plans.md#compare-microsoft-defender-for-business-to-microsoft-defender-for-endpoint-plans-1-and-2).
+
+> Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
 [!include[Improve request performance](../../includes/improve-request-performance.md)]
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-enablesiem-abovefoldlink)
+> Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-enablesiem-abovefoldlink)
 
-Uç Nokta için Microsoft Defender'dan birden çok API kullanan tam senaryo.
+Uç Nokta için Microsoft Defender birden çok API'nin kullanıldığı tam senaryo.
 
-Bu bölümde, PowerShell örneklerini 
+Bu bölümde PowerShell örneklerini 
 - Belirteç alma 
-- Uç nokta için Microsoft Defender'daki en son uyarıları almak üzere belirteç kullanma
-- Her uyarı için, uyarının orta veya yüksek önceliğe sahip olması ve hala devam ediyor olması durumda cihazın kaç kez şüpheli URL'ye bağlı olduğunu kontrol edin.
+- Uç Nokta için Microsoft Defender'da en son uyarıları almak için belirteci kullanma
+- Her uyarı için, uyarı orta veya yüksek öncelikliyse ve hala devam ediyorsa cihazın şüpheli URL'ye kaç kez bağlandığını denetleyin.
 
-**Önkoşul**: Önce [bir uygulama oluşturmanız gerekir](apis-intro.md).
+**Önkoşul**: Önce [bir uygulama oluşturmanız](apis-intro.md) gerekir.
 
 ## <a name="preparation-instructions"></a>Hazırlık yönergeleri
 
-- PowerShell penceresini açın.
-- İlkeniz PowerShell komutlarını çalıştırmanıza izin vermiyorsa, aşağıdaki komutu çalıştırabilirsiniz:
+- Bir PowerShell penceresi açın.
+- İlkeniz PowerShell komutlarını çalıştırmanıza izin vermiyorsa aşağıdaki komutu çalıştırabilirsiniz:
   ```
   Set-ExecutionPolicy -ExecutionPolicy Bypass
   ```
 
 Daha fazla bilgi için bkz. [PowerShell belgeleri](/powershell/module/microsoft.powershell.security/set-executionpolicy)
 
-## <a name="get-token"></a>Belirteç al
+## <a name="get-token"></a>Belirteci alma
 
-Aşağıdakini çalıştırın:
+Aşağıdaki komutu çalıştırın:
 
-- $tenantId: Sorguyu çalıştırmak istediğiniz adına kiracının kimliği (sorgu bu kiracının verileri üzerinde çalıştır)
-- $appId: AAD App'inizin kimliği (uygulamanın Uç Nokta için Defender'da 'Gelişmiş sorguları çalıştırma' izni olmalıdır)
-- $appSecret: Azure AD uygulamanın sırrı
+- $tenantId: Sorguyu çalıştırmak istediğiniz kiracının adına kimliği (örneğin, sorgu bu kiracının verilerinde çalıştırılır)
+- $appId: AAD uygulamanızın kimliği (uygulamanın Uç Nokta için Defender'da 'Gelişmiş sorguları çalıştırma' izni olmalıdır)
+- $appSecret: Azure AD uygulamanızın gizli dizisi
 
 - $suspiciousUrl: URL
 
@@ -132,6 +136,6 @@ $response
 
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Uç Nokta API'leri için Microsoft Defender](apis-intro.md)
-- [Gelişmiş Av API'si](run-advanced-query-api.md)
-- [Python Kullanarak Gelişmiş Av](run-advanced-query-sample-python.md)
+- [api'leri Uç Nokta için Microsoft Defender](apis-intro.md)
+- [Gelişmiş Avcılık API'si](run-advanced-query-api.md)
+- [Python ile Gelişmiş Avcılık](run-advanced-query-sample-python.md)

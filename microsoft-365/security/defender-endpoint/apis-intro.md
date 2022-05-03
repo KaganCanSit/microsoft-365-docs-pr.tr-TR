@@ -1,8 +1,8 @@
 ---
-title: Uç Nokta API'leri için Microsoft Defender'a erişme
+title: Uç Nokta için Microsoft Defender API’lere erişin
 ms.reviewer: ''
-description: Uç nokta özellikleri için Microsoft Defender'a dayalı olarak iş akışlarını otomatikleştirmek ve yenilikler yapmak için API'leri nasıl kullanabileceğinizi öğrenin
-keywords: apis, api, wdatp, open api, uç nokta api için microsoft defender, microsoft defender atp, genel api, desteklenen api'ler, uyarılar, cihaz, kullanıcı, etki alanı, ip, dosya, gelişmiş av, sorgu
+description: api'leri kullanarak iş akışlarını otomatikleştirmeyi ve Uç Nokta için Microsoft Defender özelliklerine göre yenilik yapmayı öğrenin
+keywords: apis, api, wdatp, open API, uç nokta api için microsoft defender, microsoft defender atp, genel API, desteklenen API'ler, uyarılar, cihaz, kullanıcı, etki alanı, ip, dosya, gelişmiş tehdit avcılığı, sorgu
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,67 +16,71 @@ ms.collection: M365-security-compliance
 ms.topic: conceptual
 MS.technology: mde
 ms.custom: api
-ms.openlocfilehash: a73df39c6d26bdfd44a7f4f629e148e7f0afabb2
-ms.sourcegitcommit: c11d4a2b9cb891ba22e16a96cb9d6389f6482459
+ms.openlocfilehash: 3638357d2c1440604858fabfa42e5df32569aed3
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "62997155"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65172255"
 ---
-# <a name="access-the-microsoft-defender-for-endpoint-apis"></a>Uç Nokta API'leri için Microsoft Defender'a erişme
+# <a name="access-the-microsoft-defender-for-endpoint-apis"></a>Uç Nokta için Microsoft Defender API’lere erişin
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [İş için Microsoft Defender](../defender-business/index.yml)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> [!IMPORTANT]
+> Gelişmiş avcılık özellikleri İş için Defender'a dahil değildir. Bkz[. İş için Microsoft Defender Uç Nokta için Microsoft Defender Planları 1 ve 2 ile karşılaştırma](../defender-business/compare-mdb-m365-plans.md#compare-microsoft-defender-for-business-to-microsoft-defender-for-endpoint-plans-1-and-2).
 
-Uç Nokta için Defender, veri ve eylemlerinin büyük bir fazlasını bir dizi programlı API aracılığıyla ortaya çıkarır. Bu API'ler, iş akışlarını otomatikleştirmenize ve Uç nokta özellikleri için Defender'a dayalı yenilikler yapmaya olanak sağlar. API erişimi için OAuth2.0 kimlik doğrulaması gerekir. Daha fazla bilgi için [bkz. OAuth 2.0 Yetkilendirme Kodu Flow](/azure/active-directory/develop/active-directory-v2-protocols-oauth-code).
+> Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-Uç nokta API'leri için Defender'a hızlı bir genel bakış için bu videoyu izleyin.
+Uç Nokta için Defender, bir dizi programlı API aracılığıyla verilerinin ve eylemlerinin büyük bir kısmını kullanıma sunar. Bu API'ler iş akışlarını otomatikleştirmenize ve Uç Nokta için Defender özelliklerine göre yenilik yapmanızı sağlar. API erişimi için OAuth2.0 kimlik doğrulaması gerekir. Daha fazla bilgi için bkz[. OAuth 2.0 Yetkilendirme Kodu Flow](/azure/active-directory/develop/active-directory-v2-protocols-oauth-code).
+
+Uç Nokta için Defender API'lerine hızlı bir genel bakış için bu videoyu izleyin.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4d73M]
 
-Genelde API'leri kullanmak için aşağıdaki adımları atabilirsiniz:
+Genel olarak, API'leri kullanmak için aşağıdaki adımları uygulamanız gerekir:
 
-- AAD [oluşturma](/microsoft-365/security/defender-endpoint/exposed-apis-create-app-nativeapp)
-- Bu uygulamayı kullanarak bir erişim belirteci alın
-- Belirteci, Uç Nokta API'si için Defender'a erişmek üzere kullanma
+- [AAD uygulaması](/microsoft-365/security/defender-endpoint/exposed-apis-create-app-nativeapp) oluşturma
+- Bu uygulamayı kullanarak erişim belirteci alma
+- Uç Nokta için Defender API'sine erişmek için belirteci kullanma
 
-Uygulama Bağlamı veya Kullanıcı Bağlamı ile Uç Nokta API **için Defender'a** **erişebilirsiniz**.
+**Uygulama Bağlamı** veya **Kullanıcı Bağlamı** ile Uç Nokta için Defender API'lerine erişebilirsiniz.
 
 - **Uygulama Bağlamı: (Önerilen)**
 
-  Oturum alıkan bir kullanıcı sunuma gerek kalmadan çalıştıran uygulamalar tarafından kullanılır. örneğin, arka plan hizmetleri veya daemons olarak çalıştıran uygulamalar.
+  Oturum açmış bir kullanıcı olmadan çalışan uygulamalar tarafından kullanılır. örneğin, arka plan hizmetleri veya daemon'lar olarak çalışan uygulamalar.
 
-  Uygulama bağlamında Uç Nokta API için Defender'a erişmek için alınması gereken adımlar:
+  Uygulama bağlamıyla Uç Nokta için Defender API'sine erişmek için izlenmesi gereken adımlar:
 
-  1. Web Uygulaması AAD oluşturun.
-  2. İstenen izni uygulamaya attayabilirsiniz; örneğin, 'Okuma Uyarıları', 'Yalıtmak Makineleri'.
+  1. bir AAD Web Uygulaması oluşturun.
+  2. Uygulamaya istenen izni atayın, örneğin, 'Uyarıları Okuma', 'Makineleri Yalıtma'.
   3. Bu Uygulama için bir anahtar oluşturun.
-  4. Uygulamayı anahtarıyla kullanarak belirteç alın.
-  5. Belirteci, Uç Nokta API'si için Microsoft Defender'a erişmek için kullanma
+  4. Anahtarıyla uygulamayı kullanarak belirteç alın.
+  5. Uç Nokta için Microsoft Defender API'sine erişmek için belirteci kullanma
 
-     Daha fazla bilgi için bkz [. Uygulama bağlamıyla erişim elde edin](exposed-apis-create-app-webapp.md).
+     Daha fazla bilgi için bkz. [Uygulama bağlamıyla erişim alma](exposed-apis-create-app-webapp.md).
 
 - **Kullanıcı Bağlamı:**
 
-  Kullanıcı adına API'de eylemler gerçekleştirmek için kullanılır.
+  API'de kullanıcı adına eylemler gerçekleştirmek için kullanılır.
 
-  Kullanıcı bağlamında Uç Nokta API'si için Defender'a erişmek için atılması gereken adımlar:
+  Kullanıcı bağlamıyla Uç Nokta için Defender API'sine erişmek için atılması gereken adımlar:
 
-  1. Yerel AAD bir uygulama oluşturun.
-  2. Uygulamaya istediğiniz izni atayın; örneğin 'Okuma Uyarıları', 'Yalıtmak Makineleri' vb.
-  3. Uygulamayı kullanıcı kimlik bilgileriyle kullanarak belirteç alın.
-  4. Belirteci, Uç Nokta API'si için Microsoft Defender'a erişmek için kullanma
+  1. Yerel Uygulama AAD oluşturun.
+  2. İstenen izni uygulamaya atayın; örneğin 'Uyarıları Okuma', 'Makineleri Yalıtma' vb.
+  3. Kullanıcı kimlik bilgileriyle uygulamayı kullanarak belirteç alın.
+  4. Uç Nokta için Microsoft Defender API'sine erişmek için belirteci kullanma
 
-     Daha fazla bilgi için bkz [. Kullanıcı bağlamıyla erişim elde edin](exposed-apis-create-app-nativeapp.md).
+     Daha fazla bilgi için bkz. [Kullanıcı bağlamıyla erişim alma](exposed-apis-create-app-nativeapp.md).
 
 ## <a name="related-topics"></a>İlgili konular
 
-- [Uç Nokta API'leri için Microsoft Defender](exposed-apis-list.md)
-- [Uygulama bağlamında Uç Nokta için Access Microsoft Defender](exposed-apis-create-app-webapp.md)
-- [Kullanıcı bağlamında Uç Nokta için Access Microsoft Defender](exposed-apis-create-app-nativeapp.md)
+- [api'leri Uç Nokta için Microsoft Defender](exposed-apis-list.md)
+- [Uygulama bağlamı ile Uç Nokta için Microsoft Defender erişme](exposed-apis-create-app-webapp.md)
+- [Kullanıcı bağlamıyla Uç Nokta için Microsoft Defender erişme](exposed-apis-create-app-nativeapp.md)

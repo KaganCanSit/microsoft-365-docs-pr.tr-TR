@@ -16,12 +16,12 @@ ms.custom:
 - Ent_Office_Other
 ms.assetid: 5ebc0e21-b72d-46d8-96fa-00643b18eaec
 description: Microsoft 365 için PowerShell kullanarak Microsoft 365 kiracınıza Bağlan ve komut satırından yönetim merkezi görevlerini gerçekleştirin.
-ms.openlocfilehash: a7f493bd0073762d995a232918d732e999a85777
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: a69fa6885e254e0c15cd65833a4f8368ec239c4f
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65093931"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65174818"
 ---
 # <a name="connect-to-microsoft-365-with-powershell"></a>PowerShell ile Microsoft 365’e bağlanma
 
@@ -107,9 +107,9 @@ Yüklemeye devam etmek için **Evet** veya **Tümüne Evet** yanıtını verin.
     Import-Module  AzureAD
     ```
     
-### <a name="step-2-connect-to-azure-ad-for-your-microsoft-365-subscription"></a>2. Adım: Microsoft 365 aboneliğiniz için Azure AD'ye Bağlan
+### <a name="step-2-connect-to-azure-ad-for-your-microsoft-365-subscription"></a>2. Adım: Microsoft 365 aboneliğiniz için Azure AD Bağlan
 
-Microsoft 365 aboneliğinizin Azure Active Directory (Azure AD) öğesine hesap adı ve parolayla veya çok faktörlü kimlik doğrulamasıyla bağlanmak için, Windows PowerShell komut isteminden bu komutlardan birini çalıştırın. (Yükseltilmesi gerekmez.)
+Microsoft 365 aboneliğinizin Azure Active Directory (Azure AD) bir hesap adı ve parolayla veya çok faktörlü kimlik doğrulamasıyla bağlanmak için, Windows PowerShell komut isteminden bu komutlardan birini çalıştırın. (Yükseltilmesi gerekmez.)
 
 | Office 365 bulut | Komut |
 |:-------|:-----|
@@ -147,9 +147,9 @@ Bu adımlar bilgisayarınızda yalnızca bir kez gereklidir. Ancak büyük olas�
    1. NuGet sağlayıcısını yüklemeniz istenirse **Y** yazın ve Enter tuşuna basın.
    1. Modülü PSGallery'den yüklemeniz istenirse **Y** yazın ve Enter tuşuna basın.
     
-### <a name="step-2-connect-to-azure-ad-for-your-microsoft-365-subscription"></a>2. Adım: Microsoft 365 aboneliğiniz için Azure AD'ye Bağlan
+### <a name="step-2-connect-to-azure-ad-for-your-microsoft-365-subscription"></a>2. Adım: Microsoft 365 aboneliğiniz için Azure AD Bağlan
 
-Microsoft 365 aboneliğiniz için bir hesap adı ve parolayla veya çok faktörlü kimlik doğrulamasıyla Azure AD'ye bağlanmak için, Windows PowerShell komut isteminden bu komutlardan birini çalıştırın. (Yükseltilmesi gerekmez.)
+Microsoft 365 aboneliğinizin Azure AD bir hesap adı ve parolayla veya çok faktörlü kimlik doğrulamasıyla bağlanmak için, Windows PowerShell komut isteminden bu komutlardan birini çalıştırın. (Yükseltilmesi gerekmez.)
 
 | Office 365 bulut | Komut |
 |:-------|:-----|
@@ -204,6 +204,13 @@ Microsoft 365 yönetim merkezi azure Cloud Shell ile bağlantı kurmak ve kullan
 Kuruluşunuz için Microsoft 365 aboneliğinize bağlı etkin bir Azure aboneliğine ihtiyacınız olacaktır. Henüz bir hesabınız yoksa oluşturabilirsiniz. Azure aboneliğiniz olduktan sonra, PowerShell komutlarını ve betiklerini çalıştırabileceğiniz bir PowerShell penceresi açılır.
 
 Daha fazla bilgi için bkz. [Azure Cloud Shell](/azure/cloud-shell/overview).
+
+
+## <a name="get-started-with-the-microsoft-graph-powershell-sdk"></a>Microsoft Graph PowerShell SDK ile Kullanmaya başlayın
+
+Tüm Microsoft Graph API'lerine erişmek için Microsoft Graph PowerShell SDK'sını kullanabilirsiniz.
+
+Daha fazla bilgi için bkz. [Microsoft Graph PowerShell SDK ile Kullanmaya başlayın](/powershell/microsoftgraph/get-started?view=graph-powershell-beta)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,39 +1,33 @@
 ---
 title: Güvenlik ekibiniz için e-posta bildirimlerini ayarlama
-description: İş için Microsoft Defender ile kişilere uyarılar ve güvenlik açıkları hakkında bilgi vermek için e-posta bildirimleri ayarlama
+description: İş için Defender'da güvenlik ekibinize uyarıları ve güvenlik açıklarını bildirmek için e-posta bildirimleri ayarlayın.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
-ms.reviewer: inbadian, shlomiakirav
+ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection: M365-security-compliance
-ms.openlocfilehash: a65634a5827e60d710cec56ca10835c73053cb10
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: b6381f5bfa8ebe4f7c23a16d9a214cadb4e511e6
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64862862"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65174480"
 ---
 # <a name="set-up-email-notifications"></a>E-posta bildirimlerini ayarlama
-
-> [!NOTE]
-> İş için Microsoft Defender artık [Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil edilir. 
 
 Güvenlik ekibiniz için e-posta bildirimleri ayarlayabilirsiniz. Ardından uyarılar oluşturuldukçe veya yeni güvenlik açıkları keşfedildikçe güvenlik ekibinizdeki kişilere otomatik olarak bildirim gönderilir. 
 
 ## <a name="what-to-do"></a>Yapılması gerekenler
 
 1. [E-posta bildirimi türleri hakkında bilgi edinin](#types-of-email-notifications).
-
 2. [E-posta bildirim ayarlarını görüntüleyin ve düzenleyin](#view-and-edit-email-notifications).
-
 3. [Sonraki adımlarınıza geçin](#next-steps).
 
 

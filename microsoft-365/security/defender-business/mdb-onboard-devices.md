@@ -1,33 +1,29 @@
 ---
 title: Cihazları İş için Microsoft Defender ekleme
-description: İş için Microsoft Defender'da cihaz ekleme seçenekleri hakkında bilgi edinin
+description: Cihazlarınızı ilk günden korumak için İş için Defender'a cihazları ekleme hakkında bilgi edinin.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 04/18/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
-ms.reviewer: inbadian, shlomiakirav
+ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 77eb8c0aa4d0ebd78788e9701e4933788af2e46c
-ms.sourcegitcommit: dc415d784226c77549ba246601f34324c4f94e73
+ms.openlocfilehash: ce3c458013a96f845da528104997b63360879c56
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64915917"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65174048"
 ---
 # <a name="onboard-devices-to-microsoft-defender-for-business"></a>Cihazları İş için Microsoft Defender ekleme
-
-> [!NOTE]
-> İş için Microsoft Defender artık [Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil edilir. 
 
 İş için Microsoft Defender ile, şirketinizin cihazlarını eklemek için aralarından seçim yapabileceğiniz çeşitli seçenekler vardır. Bu makale, seçeneklerinizde size yol gösterir ve eklemenin nasıl çalıştığına ilişkin bir genel bakış içerir.
 
@@ -38,14 +34,8 @@ ms.locfileid: "64915917"
 
 ## <a name="what-to-do"></a>Yapılması gerekenler
 
-1. İşletim sisteminizin sekmesini seçin: 
-
-   - İstemcileri Windows
-   - macOS bilgisayarlar
-   - mobil cihazlar
-
+1. İşletim sisteminizin sekmesini seçin: **istemciler**, **macOS bilgisayarlar** veya **mobil cihazlar** Windows.
 2. Ekleme seçeneklerinizi görüntüleyin ve seçili sekmedeki yönergeleri izleyin.
-
 3. Sonraki adımlarınıza geçin.
 
 ## <a name="windows-clients"></a>[**İstemcileri Windows**](#tab/WindowsClientDevices)
@@ -55,13 +45,13 @@ ms.locfileid: "64915917"
 Windows istemci cihazlarını İş için Defender'a eklemek için aşağıdaki seçeneklerden birini belirleyin:
 
 - [Yerel betik](#local-script-for-windows-clients) (cihazları Microsoft 365 Defender portalında el ile ekleme için)
-- [Grup İlkesi](#group-policy-for-windows-clients)
-- [Microsoft Endpoint Manager](#endpoint-manager-for-windows-clients) ([Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil)
+- [grup ilkesi](#group-policy-for-windows-clients) (kuruluşunuzda zaten grup ilkesi kullanıyorsanız)
+- [Microsoft Intune](#microsoft-intune-for-windows-clients) ([Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil)
 
 
 ### <a name="local-script-for-windows-clients"></a>Windows istemcileri için yerel betik
 
-Windows istemci cihazlarını eklemek için yerel betik kullanabilirsiniz. Bir cihazda ekleme betiğini çalıştırdığınızda, Azure Active Directory ile bir güven oluşturur (bu güven yoksa), cihazı Microsoft Endpoint Manager kaydeder (henüz kaydedilmemişse) ve ardından cihazı İş için Defender'a ekler. Yerel betik yöntemi şu anda Endpoint Manager (veya Microsoft Intune) yoksa bile çalışır. Bu yöntemi kullanarak aynı anda en fazla 10 cihaz eklemenizi öneririz.
+Windows istemci cihazlarını eklemek için yerel betik kullanabilirsiniz. Bir cihazda ekleme betiğini çalıştırdığınızda, Azure Active Directory ile bir güven oluşturur (bu güven yoksa), cihazı Microsoft Intune kaydeder (henüz kaydedilmediyse) ve ardından cihazı İş için Defender'a ekler. Şu anda Intune olmasa bile yerel betik yöntemi çalışır. Bu yöntemi kullanarak aynı anda en fazla 10 cihaz eklemenizi öneririz.
 
 > [!TIP]
 > Yerel betik yöntemini kullandığınızda bir kerede en fazla 10 cihaz eklemenizi öneririz.
@@ -86,9 +76,9 @@ Windows istemci cihazlarını eklemek için yerel betik kullanabilirsiniz. Bir c
 
 Windows istemcilerini eklemek için grup ilkesi kullanmayı tercih ediyorsanız grup ilkesi [kullanarak cihazları ekleme Windows](../defender-endpoint/configure-endpoints-gp.md) yönergelerini izleyin. Bu makalede, Uç Nokta için Microsoft Defender ekleme adımları açıklanmaktadır; ancak İş için Defender'a ekleme adımları benzerdir.
 
-### <a name="endpoint-manager-for-windows-clients"></a>Windows istemcileri için Endpoint Manager
+### <a name="microsoft-intune-for-windows-clients"></a>Windows istemcileri için Microsoft Intune
 
-Aboneliğiniz [Microsoft Endpoint Manager](/mem/endpoint-manager-overview) içeriyorsa, Microsoft Endpoint Manager yönetim merkezine ([https://endpoint.microsoft.com](https://endpoint.microsoft.com) ) Windows istemciler ve diğer cihazları ekleyebilirsiniz. Örneğin, [Microsoft 365 İş Ekstra](../../business/index.yml) varsa aboneliğinizin bir parçası olarak Endpoint Manager. Endpoint Manager [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) ve [Mobil Cihaz Yönetimi özelliklerini içerir](/mem/intune/fundamentals/what-is-device-management). 
+Aboneliğinizde Intune varsa, Windows istemcilerini ve diğer cihazları Microsoft Endpoint Manager yönetim merkezine ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)) ekleyebilirsiniz. Örneğin, [Microsoft 365 İş Ekstra](../../business/index.yml) varsa aboneliğinizin bir parçası olarak Intune.  
 
 Cihazları Intune kaydetmek için kullanılabilecek çeşitli yöntemler vardır. Aşağıdaki yöntemlerden biriyle başlamanızı öneririz:
 
@@ -97,13 +87,13 @@ Cihazları Intune kaydetmek için kullanılabilecek çeşitli yöntemler vardır
 
 #### <a name="to-enable-automatic-enrollment-for-windows-devices"></a>Windows cihazlarda otomatik kaydı etkinleştirmek için
 
-Otomatik kaydı ayarladığınızda, kullanıcılar iş hesabını cihaza ekler. Arka planda cihaz Azure Active Directory (Azure AD) kaydedip birleştirir ve Intune kaydedilir.
+Otomatik kaydı ayarladığınızda, kullanıcılar iş hesabını cihaza ekler. Arka planda, cihaz Azure Active Directory (Azure AD) kaydeder ve birleştirir ve Intune kaydedilir.
 
 1. Azure portal ([https://portal.azure.com/](https://portal.azure.com/)) gidin ve oturum açın. 
 
 2. **Azure Active Directory** >  **Mobilite (MDM ve MAM)** > **Microsoft Intune** seçin.
 
-3. MDM Kullanıcı kapsamını ve MAM kullanıcı kapsamını yapılandırın.
+3. **MDM Kullanıcı kapsamını** ve **MAM kullanıcı kapsamını** yapılandırın.
 
    :::image type="content" source="media/mem-mam-scope-azure-ad.png" alt-text="Intune'da MDM kullanıcı kapsamını ve MAM kullanıcı kapsamını ayarlamanın ekran görüntüsü.":::
 
@@ -150,7 +140,7 @@ Komut çalıştırıldıktan sonra Komut İstemi penceresi otomatik olarak kapat
 
 ## <a name="view-a-list-of-onboarded-devices"></a>Eklenen cihazların listesini görüntüleme
 
-İş için Defender'a eklenen cihazların listesini görüntülemek için, Microsoft 365 Defender portalında ([https://security.microsoft.com](https://security.microsoft.com)), gezinti bölmesindeki **Uç Noktalar'ın** altında **Cihaz giriş'i** seçin.
+İş için Defender'a eklenen cihazların listesini görüntülemek için, Microsoft 365 Defender portalında ([https://security.microsoft.com](https://security.microsoft.com)), gezinti bölmesindeki **Uç Noktalar'ın** altında **Cihaz envanteri'ni** seçin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
@@ -168,11 +158,11 @@ Komut çalıştırıldıktan sonra Komut İstemi penceresi otomatik olarak kapat
 macOS cihazlarını eklemek için aşağıdaki seçeneklerden birini belirleyin:
 
 - [macOS için yerel betik](#local-script-for-macos) (*önerilir*)
-- [macOS için Endpoint Manager](#endpoint-manager-for-macos)
+- [macOS için Intune](#microsoft-intune-for-macos)
 
 ### <a name="local-script-for-macos"></a>macOS için yerel betik
 
-Yerel betiği bir macOS cihazında çalıştırdığınızda, Azure Active Directory ile bir güven oluşturur (bu güven yoksa), cihazı Microsoft Endpoint Manager kaydeder (henüz kayıtlı değilse) ve ardından cihazı İş için Defender'a ekler. Yerel betik yöntemi şu anda Endpoint Manager (veya Microsoft Intune) yoksa bile çalışır. Bu yöntemi kullanarak aynı anda en fazla 10 cihaz eklemenizi öneririz.
+Yerel betiği bir macOS cihazında çalıştırdığınızda, Azure Active Directory ile bir güven oluşturur (bu güven yoksa), cihazı Microsoft Intune'a kaydeder (henüz kayıtlı değilse) ve ardından cihazı İş için Defender'a ekler. Şu anda Intune olmasa bile yerel betik yöntemi çalışır. Bu yöntemi kullanarak aynı anda en fazla 10 cihaz eklemenizi öneririz.
 
 1. Microsoft 365 Defender portalına ()[https://security.microsoft.com](https://security.microsoft.com) gidin ve oturum açın.
 
@@ -196,9 +186,9 @@ Yerel betiği bir macOS cihazında çalıştırdığınızda, Azure Active Direc
 
 11. Bir cihaz Intune kaydedildikten sonra bir cihaz grubuna ekleyebilirsiniz. [İş için Microsoft Defender'da cihaz grupları hakkında daha fazla bilgi edinin](mdb-create-edit-device-groups.md).
 
-### <a name="endpoint-manager-for-macos"></a>macOS için Endpoint Manager
+### <a name="microsoft-intune-for-macos"></a>macOS için Microsoft Intune
 
-Aboneliğinizde [Microsoft Endpoint Manager](/mem/endpoint-manager-overview) varsa macOS cihazlarını Microsoft Endpoint Manager yönetim merkezine ([https://endpoint.microsoft.com](https://endpoint.microsoft.com) ) ekleyebilirsiniz. Örneğin, [Microsoft 365 İş Ekstra](../../business/index.yml) varsa aboneliğinizin bir parçası olarak Endpoint Manager. Endpoint Manager [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) ve [Mobil Cihaz Yönetimi özelliklerini içerir](/mem/intune/fundamentals/what-is-device-management). 
+Aboneliğinizde Microsoft Intune varsa macOS cihazlarını Microsoft Endpoint Manager yönetim merkezine ([https://endpoint.microsoft.com](https://endpoint.microsoft.com) ) ekleyebilirsiniz. Örneğin, [Microsoft 365 İş Ekstra](../../business/index.yml) varsa aboneliğinizin bir parçası olarak Intune.  
 
 Cihazları Intune kaydetmek için kullanılabilecek çeşitli yöntemler vardır. Aşağıdaki yöntemlerden biriyle başlamanızı öneririz:
 
@@ -249,7 +239,7 @@ Cihazları Intune kaydetmek için kullanılabilecek çeşitli yöntemler vardır
 
 ## <a name="mobile-devices"></a>Mobil cihazlar
 
-Android ve iOS/iPadOS cihazları gibi mobil cihazları eklemek için Microsoft Intune gerekir. [Microsoft 365 İş Ekstra](../../business/index.yml) varsa, aboneliğinizin bir parçası olarak Endpoint Manager sahip olursunuz. Endpoint Manager [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) ve [Mobil Cihaz Yönetimi özelliklerini içerir](/mem/intune/fundamentals/what-is-device-management). 
+Android ve iOS/iPadOS cihazları gibi mobil cihazları eklemek için Microsoft Intune gerekir. [Microsoft 365 İş Ekstra](../../business/index.yml) varsa, Intune. 
 
 Bu cihazları Intune kaydetme konusunda yardım almak için aşağıdaki kaynaklara bakın:
 

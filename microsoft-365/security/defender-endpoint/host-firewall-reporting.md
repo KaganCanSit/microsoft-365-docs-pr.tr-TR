@@ -1,6 +1,6 @@
 ---
-title: Güvenlik duvarı raporlaması Uç Nokta için Microsoft Defender
-description: Portalda güvenlik duvarı raporlamayı ana Microsoft 365 Defender görüntüleme.
+title: Uç Nokta için Microsoft Defender’da güvenlik duvarı raporlama oturumu düzenleyin
+description: Microsoft 365 Defender portalında güvenlik duvarı raporlamayı barındırın ve görüntüleyin.
 keywords: windows defender, güvenlik duvarı
 ms.prod: m365-security
 ms.mktglfcycl: manage
@@ -15,80 +15,76 @@ manager: dansimp
 ms.technology: mde
 ms.collection: m365-security-compliance
 ms.custom: admindeeplinkDEFENDER
-ms.openlocfilehash: e5bbdd77226f8649f2a781866fef614706e8a789
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 41fa5aece6f8c18ef16dbf624f90a1ead25b45f5
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64475289"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65174940"
 ---
-# <a name="host-firewall-reporting-in-microsoft-defender-for-endpoint"></a>Güvenlik duvarı raporlaması Uç Nokta için Microsoft Defender
+# <a name="host-firewall-reporting-in-microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender’da güvenlik duvarı raporlama oturumu düzenleyin
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-Yöneticiyseniz, artık güvenlik duvarı bildirimini portalında [Microsoft 365 Defender.](https://security.microsoft.com) Bu özellik merkezi bir konumdan Windows 10, Windows 11, Windows Server 2019 ve Windows Server 2022 güvenlik duvarı raporlamalarını görüntülemeye olanak sağlar.
+Genel yönetici veya güvenlik yöneticisiyseniz artık güvenlik duvarı raporlamasını [Microsoft 365 Defender portalında](https://security.microsoft.com) barındırabilirsiniz. Bu özellik, Windows 10, Windows 11, Windows Server 2019'u ve Windows Server 2022 güvenlik duvarı raporlamasını merkezi bir konumdan görüntülemenizi sağlar.
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Başlamadan önce bilmeniz gerekenler
 
-- Windows 10, Windows 11 ya da Windows Server 2019 veya Windows Server 2022'de çalışıyor olun.
-- Cihazları Servis Hizmetine Uç Nokta için Microsoft Defender için buraya [bakın](onboard-configure.md).
-- Daha <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalının</a> verileri almaya başlaması için, Gelişmiş Güvenlik Duvarı'nı **Windows Defender** Denetim Olayları'nı etkinleştirmeniz gerekir:
-  - [Denetim Filtreleme Platform Paketi Bırakma](/windows/security/threat-protection/auditing/audit-filtering-platform-packet-drop)
-  - [Denetim Filtreleme Platform Bağlantısı](/windows/security/threat-protection/auditing/audit-filtering-platform-connection)
-- Bu olayları Nesne Düzenleyicisi grup ilkesi, Yerel Güvenlik İlkesi veya İlke Komutları auditpol.exe etkinleştirin. Daha fazla bilgi için buraya [bakın](/windows/win32/fwp/auditing-and-logging).
-  - İki PowerShell komutu vardır:
-    - **auditpol /set /subcategory:"Platform PaketTeleni Filtreleme" /failure:enable**
-    - **auditpol /set /subcategory:"Platform Bağlantısına Filtre Uygulama" /failure:enable**
+- Windows 10 veya Windows 11 ya da Windows Server 2019 veya Windows Server 2022 çalıştırıyor olmanız gerekir.
+- Cihazları Uç Nokta için Microsoft Defender hizmetine eklemek için [buraya](onboard-configure.md) bakın.
+- <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalın</a> verileri almaya başlaması için Gelişmiş Güvenlik özellikli Windows Defender Güvenlik Duvarı için **Denetim Olaylarını** etkinleştirmeniz gerekir:
+  - [Denetim Filtreleme Platformu Paket Bırakma](/windows/security/threat-protection/auditing/audit-filtering-platform-packet-drop)
+  - [Filtre Platformu Bağlantısını Denetle](/windows/security/threat-protection/auditing/audit-filtering-platform-connection)
+- grup ilkesi Nesne Düzenleyicisi, Yerel Güvenlik İlkesi veya auditpol.exe komutlarını kullanarak bu olayları etkinleştirin. Daha fazla bilgi için [buraya](/windows/win32/fwp/auditing-and-logging) bakın.
+  - İki PowerShell komutu şunlardır:
+    - **auditpol /set /subcategory:"Platform Paket Bırakmasını Filtreleme" /failure:enable**
+    - **auditpol /set /subcategory:"Platform Bağlantısını Filtreleme" /failure:enable**
 
 ## <a name="the-process"></a>İşlem
 
 > [!NOTE]
-> Yukarıdaki bölümde verilen yönergeleri izlemiş ve ön izleme katılımı için cihazlarınızı düzgün şekilde yapılandırmış olun.
+> Yukarıdaki bölümde yer alan yönergeleri izlediğinizden ve cihazlarınızı erken önizleme katılımı için düzgün yapılandırdığından emin olun.
 
-- Olayları etkinleştirdikten sonra, Microsoft 365 Defender verileri izlemeye başlar.
-  - Uzak IP, Uzak Bağlantı Noktası, Yerel Bağlantı Noktası, Yerel IP, Bilgisayar Adı, Gelen ve giden bağlantılarla ilgili süreç.
-- Yöneticiler artık burada güvenlik Windows güvenlik duvarı etkinliğini [görebilir](https://security.microsoft.com/firewall).
-  - Daha fazla raporlama, Güvenlik Duvarı kullanılarak güvenlik duvarı etkinliklerini izlemek üzere Windows Defender Raporlama betiği indirerek Power BI.[](https://github.com/microsoft/MDATP-PowerBI-Templates/tree/master/Firewall)
-  - Verilerin yansıtması 12 saat kadar sürebilir.
+- Olayları etkinleştirdikten sonra Microsoft 365 Defender verileri izlemeye başlar.
+  - Uzak IP, Uzak Bağlantı Noktası, Yerel Bağlantı Noktası, Yerel IP, Bilgisayar Adı, Gelen ve giden bağlantılar arasında işlem.
+- Yöneticiler artık Windows ana bilgisayar güvenlik duvarı etkinliğini [burada](https://security.microsoft.com/firewall) görebilir.
+  - Power BI kullanarak Windows Defender Güvenlik Duvarı etkinliklerini izlemek için [Özel Raporlama betiğini](https://github.com/microsoft/MDATP-PowerBI-Templates/tree/master/Firewall) indirerek ek raporlama kolaylaştırılabilir.
+  - Verilerin yansıtılabilmesi 12 saat kadar sürebilir.
 
 ## <a name="supported-scenarios"></a>Desteklenen senaryolar
 
-Aşağıdaki senaryolar Ring0 Preview sırasında de desteklenen bir durumdadır.
+Ring0 Preview sırasında aşağıdaki senaryolar desteklenir.
 
-### <a name="firewall-reporting"></a>Güvenlik duvarı raporlaması
+### <a name="firewall-reporting"></a>Güvenlik duvarı raporlama
 
-Aşağıda güvenlik duvarı rapor sayfalarının birkaç örneği verilmiştir. Burada, gelen, giden ve uygulama etkinliğinin özetini bulabilirsiniz. Bu sayfaya doğrudan, 'a gidip erişebilirsiniz <https://security.microsoft.com/firewall>.
+Güvenlik duvarı rapor sayfalarının birkaç örneği aşağıda verilmiştir. Burada gelen, giden ve uygulama etkinliğinin özetini bulabilirsiniz. Bu sayfaya doğrudan adresine giderek <https://security.microsoft.com/firewall>erişebilirsiniz.
 
-> [!div class="mx-imgBorder"]
-> :::image type="content" source="\images\host-firewall-reporting-page.png" alt-text="Ana bilgisayar güvenlik duvarı raporlama sayfası" lightbox="\images\host-firewall-reporting-page.png":::
+:::image type="content" source="images/host-firewall-reporting-page.png" alt-text="Konak güvenlik duvarı raporlama sayfası" lightbox="\images\host-firewall-reporting-page.png":::
 
-Bu raporlara, Güvenlik Duvarı Engellenen Gelen Bağlantılar kartının alt kısmında bulunan **ReportsSecurity** >  **ReportDevices** >  (bölüm) **bağlantısına gidip** de erişilebilir.
+Bu raporlara Güvenlik **Duvarı Engellenen Gelen Bağlantılar** kartının en altında bulunan **RaporlarGüvenlik** >  **RaporuCihazlar** >  (bölüm) bölümüne giderek de erişilebilir.
 
-### <a name="from-computers-with-a-blocked-connection-to-device"></a>"Engellenen bağlantı olan bilgisayarlar" cihazdan
+### <a name="from-computers-with-a-blocked-connection-to-device"></a>"Bağlantısı engellenen bilgisayarlar"dan cihaza
 
-Kartlar etkileşimli nesneleri destekler. Yeni bir sekmede Microsoft 365 Defender portalını başlatan ve sizi doğrudan Cihaz Zaman Çizelgesi sekmesine götüren cihaz adına tıklayarak, cihazın etkinliğinde **detaya girebilirsiniz**.
+Kartlar etkileşimli nesneleri destekler. Yeni bir sekmede Microsoft 365 Defender portalını başlatacak ve sizi doğrudan **Cihaz Zaman Çizelgesi** sekmesine götürecek cihaz adına tıklayarak bir cihazın etkinliğinde detaya gidebilirsiniz.
 
-> [!div class="mx-imgBorder"]
-> :::image type="content" source="\images\firewall-reporting-blocked-connection.png" alt-text="Engellenmiş bağlantı olan bilgisayarlar sayfası" lightbox="\images\firewall-reporting-blocked-connection.png":::
+:::image type="content" source="images/firewall-reporting-blocked-connection.png" alt-text="Bağlantısı engellenen bilgisayarlar sayfası" lightbox="\images\firewall-reporting-blocked-connection.png":::
 
-Artık, size o **cihazla** ilişkili olayların listesini verecek Olan Zaman Çizelgesi sekmesini seçebilirsiniz.
+Artık **Zaman Çizelgesi** sekmesini seçebilirsiniz. Bu sekme, size bu cihazla ilişkili olayların listesini verir.
 
-Görüntüleme bölmesinin **sağ** üst köşesindeki Filtreler düğmesine tık olduktan sonra, istediğiniz etkinlik türünü seçin. Bu durumda, Güvenlik Duvarı **olayları'nı** seçin; bölme Güvenlik Duvarı olayları olarak filtrelenmiş olur.
+Görüntüleme bölmesinin sağ üst köşesindeki **Filtreler** düğmesine tıkladıktan sonra istediğiniz olay türünü seçin. Bu durumda **Güvenlik duvarı olayları'nı** seçtiğinizde bölme Güvenlik duvarı olayları olarak filtrelenir.
 
-> [!div class="mx-imgBorder"]
-> :::image type="content" source="\images\firewall-reporting-filters-button.png" alt-text="Filtreler düğmesi" lightbox="\images\firewall-reporting-filters-button.png":::
+:::image type="content" source="images/firewall-reporting-filters-button.png" alt-text="Filtreler düğmesi" lightbox="\images\firewall-reporting-filters-button.png":::
 
-### <a name="drill-into-advanced-hunting-preview-refresh"></a>Gelişmiş avda detaya gitme (önizleme yenileme)
+### <a name="drill-into-advanced-hunting-preview-refresh"></a>Gelişmiş avcılık (önizleme yenilemesi) detayına gitme
 
-Güvenlik duvarı raporları, Gelişmiş av düğmesini aç düğmesine tıklayarak **karttan doğrudan** Gelişmiş **Uzmlara açmayı** destekler. Sorgu önceden doldurulur.
+Güvenlik duvarı raporları, Gelişmiş **Avcılığı Aç** düğmesine tıklayarak doğrudan karttan **Gelişmiş Avcılık'a** detaya gitme desteği verir. Sorgu önceden doldurulur.
 
-> [!div class="mx-imgBorder"]
-> :::image type="content" source="\images\firewall-reporting-advanced-hunting.png" alt-text="Gelişmiş av düğmesini aç" lightbox="\images\firewall-reporting-advanced-hunting.png":::
+:::image type="content" source="images/firewall-reporting-advanced-hunting.png" alt-text="Gelişmiş avcılığı aç düğmesi" lightbox="\images\firewall-reporting-advanced-hunting.png":::
 
-Sorgu şimdi yürütülebilirsiniz ve son 30 gün içinde ilgili tüm Güvenlik Duvarı olayları araştırabilirsiniz.
+Sorgu artık yürütülebilir ve son 30 güne ait tüm ilgili Güvenlik Duvarı olayları incelenebilir.
 
-Ek raporlama veya özel değişiklikler için sorgu daha fazla çözümleme yapmak üzere Power BI başka bir Power BI aktarabilirsiniz. Özel raporlama, Güvenlik Duvarı kullanılarak güvenlik duvarı etkinliklerini [](https://github.com/microsoft/MDATP-PowerBI-Templates/tree/master/Firewall) izlemek üzere Windows Defender Raporlama betiği indirerek Power BI.
+Ek raporlama veya özel değişiklikler için sorgu daha fazla analiz için Power BI aktarılabilir. Özel raporlama, Power BI kullanarak Windows Defender Güvenlik Duvarı etkinliklerini izlemek için [Özel Raporlama betiğini](https://github.com/microsoft/MDATP-PowerBI-Templates/tree/master/Firewall) indirerek kolaylaştırılabilir.

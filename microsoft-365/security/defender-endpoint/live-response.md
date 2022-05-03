@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 5e5d2b2bd47ba30aaf152171605947bb9a627480
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 1f387696797d52805495777be0850ebe135fd38a
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64666360"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65173115"
 ---
 # <a name="investigate-entities-on-devices-using-live-response"></a>Canlı yanıt kullanarak cihazlardaki varlıkları araştırma
 
@@ -165,7 +165,7 @@ Aşağıdaki komutlar, **temel** canlı yanıt komutlarını çalıştırma öze
 | Bağlantı  | Tüm etkin bağlantıları gösterir.  | E  | N  | N  |
 | Dir  | Dizindeki dosyaların ve alt dizinlerin listesini gösterir.  | E  | E  | E  |
 | Sürücüler  | Cihazda yüklü olan tüm sürücüleri gösterir.  | E  | N  | N  |
-| Fg `<command ID>`  | Belirtilen işi ön planda ön plana yerleştirerek geçerli iş haline getirir.  NOT: fg, PID değil işlerden kullanılabilen bir 'komut kimliği' alır  | E  | E  | E  |
+| Fg `<command ID>`  | Belirtilen işi ön plana yerleştirerek geçerli iş haline getirir.  NOT: fg, PID değil işlerden kullanılabilen bir 'komut kimliği' alır  | E  | E  | E  |
 | Fileınfo  | Dosya hakkında bilgi edinin.  | E  | E  | E  |
 | Findfile  | Cihazdaki belirli bir ada göre dosyaları bulur.  | E  | E  | E  |
 | getfile <file_path>  | Bir dosya indirir.  | E  | E  | E  |
@@ -346,7 +346,7 @@ Oturum sırasında cihazda kullanılan komutları görmek için **Komut günlü�
 - Bir cihaz aynı anda yalnızca bir oturumda olabilir.
 - Aşağıdaki dosya boyutu sınırları geçerlidir:
   - `getfile` sınır: 3 GB
-  - `fileinfo` sınır: 10 GB
+  - `fileinfo` sınır: 30 GB
   - `library` sınır: 250 MB
 
 ## <a name="related-article"></a>İlgili makale

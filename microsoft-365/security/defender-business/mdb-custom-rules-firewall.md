@@ -1,33 +1,28 @@
 ---
 title: İş için Microsoft Defender'de güvenlik duvarı ilkeleri için özel kuralları yönetme
-description: Özel kurallar güvenlik duvarı ilkeleri için özel durumlar sağlar. İş için Microsoft Defender'de belirli bağlantıları engellemek veya izin vermek için özel kurallar kullanabilirsiniz
+description: Özel kurallar güvenlik duvarı ilkeleri için özel durumlar sağlar. İş için Defender'da belirli bağlantıları engellemek veya izin vermek için özel kurallar kullanabilirsiniz.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
-ms.reviewer: inbadian, shlomiakirav
+ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: ae409f1196b01b774d9e73d45d16868bff1c904b
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: acc183abcbae89cd952011cfc637161bb409a95f
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64861718"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65174509"
 ---
 # <a name="manage-your-custom-rules-for-firewall-policies-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'de güvenlik duvarı ilkeleri için özel kurallarınızı yönetme
-
-> [!NOTE]
-> İş için Microsoft Defender artık [Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil edilir. 
-
 
 İş için Microsoft Defender, cihazlarınızı istenmeyen ağ trafiğinden korumaya yardımcı olan güvenlik duvarı ilkeleri içerir. Güvenlik duvarı ilkelerinizin özel durumlarını tanımlamak için özel kurallar kullanabilirsiniz. Yani, belirli bağlantıları engellemek veya izin vermek için özel kurallar kullanabilirsiniz.
 

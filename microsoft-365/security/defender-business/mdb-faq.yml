@@ -1,30 +1,30 @@
 ### YamlMime:FAQ
 metadata:
   title: İş için Microsoft Defender sık sorulan sorular
-  description: İş için Microsoft Defender hakkındaki sorularınızın yanıtlarını alın
+  description: Küçük ve orta ölçekli işletmeler için bir siber güvenlik çözümü olan İş için Defender hakkındaki soruların yanıtlarını alın.
   search.appverid: MET150
   author: denisebmsft
   ms.author: deniseb
   manager: dansimp
   audience: Admin
   ms.topic: faq
-  ms.date: 04/12/2022
   ms.prod: m365-security
   ms.technology: mdb
   ms.localizationpriority: medium
-  ms.reviewer: inbadian, shlomiakirav
+  ms.reviewer: shlomiakirav
   f1.keywords: NOCSH
   ms.collection:
   - SMB
   - M365-security-compliance
-  ms.openlocfilehash: 482c2fa4d4ef0ee06c88ee85715c7a70eefc52c3
-  ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+  ms.openlocfilehash: 3fb8d76b702a66756d17d8464d68442a079be729
+  ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 04/15/2022
-  ms.locfileid: "64861366"
+  ms.lasthandoff: 05/03/2022
+  ms.locfileid: "65172697"
 title: İş için Microsoft Defender - Sık sorulan sorular ve yanıtlar
-summary: "İş için Microsoft Defender, 1 Mart 2022'de başlayarak Microsoft 365 İş Ekstra müşterilerine dağıtılıyor. Tek başına abonelik olarak İş için Defender önizleme aşamasındadır ve istekte bulunmak için [buraya kaydolan](https://aka.ms/mdb-preview) müşteriler ve BT İş Ortakları tarafından aşamalı olarak kullanıma sunulacaktır. Önizleme, [bir dizi ilk senaryo](mdb-tutorials.md#try-these-preview-scenarios) içerir ve düzenli olarak özellikler ekleyeceğiz.\n\nBu makaledeki bazı bilgiler, ticari olarak piyasaya sürülmeden önce önemli ölçüde değiştirilebilen önceden yayımlanmış ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. \n\nİş için Defender hakkında sorularınıza yanıt almak için bu makaleyi kullanın.\n"
+summary: >
+  İş için Defender hakkında sorularınıza yanıt almak için bu makaleyi kullanın.
 sections:
 - name: Genel
   questions:
@@ -38,57 +38,52 @@ sections:
 
       - Örnek 2: [Bulut için Microsoft Defender](/azure/defender-for-cloud/defender-for-cloud-introduction) (satın alınan veya deneme aboneliğiniz) varsa ve İş için Defender'ı alırsanız, Bulut için Defender önceliklidir. Bu durumda, İş için Defender deneyimini görmezsiniz.
   - question: İş için Defender ile Uç Nokta Planları 1 ve 2 için Defender arasındaki farklar nelerdir?
-    answer: "İş için Defender, küçük ve orta ölçekli işletmeler (en fazla 300 çalışan) için tasarlanmıştır. [Basitleştirilmiş bir yapılandırma işlemi](mdb-simplified-configuration.md) ve [cihaz ekleme seçenekleriyle](mdb-onboard-devices.md), İş için Defender, güvenlik geçmişine sahip olması gerekmeyen müşterilerin İş için Defender'ı ayarlamasına, yapılandırmasına ve kullanmasına olanak tanır.  \n\nHem İş için Defender hem de Uç Nokta için Defender, şirketinizin uç noktaları için güçlü tehdit koruması özellikleri sağlar. Farklılıklar hakkında daha fazla bilgi edinmek için bkz. [İş için Microsoft Defender Microsoft 365 İş Ekstra karşılaştırma](compare-mdb-m365-plans.md).\n"
-  - question: İş için Defender'ın önizlemesine kaydolmak Nasıl yaparım??
+    answer: "Hem İş için Defender hem de Uç Nokta için Defender, şirketinizin uç noktaları için güçlü tehdit koruması özellikleri sağlar. İş için Defender, küçük ve orta ölçekli işletmeler (en fazla 300 çalışan) için tasarlanmıştır. [Basitleştirilmiş bir yapılandırma işlemi](mdb-simplified-configuration.md) ve [cihaz ekleme seçenekleriyle](mdb-onboard-devices.md), İş için Defender, şirket cihazlarını korumak için güvenlik geçmişine sahip olması gerekmeyen müşterilerin İş için Defender'ı ayarlamasına, yapılandırmasına ve kullanmasına olanak tanır.  \n\nFarklılıklar hakkında daha fazla bilgi edinmek için bkz. [İş için Microsoft Defender Microsoft 365 İş Ekstra karşılaştırma](compare-mdb-m365-plans.md).\n"
+  - question: İş için Defender'Nasıl yaparım? deneyin veya satın alın?
     answer: >
-      İş için Defender, 1 Mart 2022'de başlayarak Microsoft 365 İş Ekstra kapsamında kullanıma sunulacaktır. Microsoft 365 İş Ekstra varsa, yakında İş için Defender özelliklerine otomatik olarak sahip olursunuz.
+      [İş için Microsoft Defender](https://www.microsoft.com/security/business/threat-protection/microsoft-defender-business) web sayfasına gidin ve İş için Defender'ı deneme veya satın alma seçeneğini belirleyin.
 
 
-      İş için Defender'ın tek başına sürümü hala önizleme aşamasındadır. Önizleme programına başvurmak için ziyaret edin [https://aka.ms/MDB-Preview](https://aka.ms/MDB-Preview) . Daha fazla bilgi edinmek için bkz. [İş için Microsoft Defender alma](get-defender-business.md).
-  - question: İş için Defender önizlemesi için herhangi bir önkoşul var mı?
+      Daha fazla bilgi için bkz. [İş için Microsoft Defender alma](get-defender-business.md).
+  - question: İş için Defender için kaç kullanıcının lisanslanabileceğinin bir sınırı var mı?
     answer: >
-      Şirketiniz aşağıdakilerden biri olmalıdır:
-
-
-      - Küçük ve orta ölçekli işletmelere BT hizmetleri sunan bir iş ortağı
-
-
-      - En fazla 300 çalışanı olan küçük veya orta ölçekli bir işletme
-
-
-      Başka bir Microsoft 365 aboneliğiniz olması gerekmez. Daha fazla bilgi edinmek için bkz. [İş için Microsoft Defender gereksinimleri](mdb-requirements.md).
-  - question: GA'da lisanslama modeli ne olacak?
+      İş için Defender, en fazla 300 kullanıcısı olan küçük ve orta ölçekli işletmeler için tasarlanmıştır. 300'den fazla kullanıcınız varsa [Uç Nokta için Defender'ı](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint) göz önünde bulundurun.
+  - question: İş için Defender ile kaç cihaz ekleyebilir ve bunların güvenliğini sağlayabilirim?
     answer: >
-      1 Mart 2022'de, İş için Defender Microsoft 365 İş Ekstra kapsamında kullanıma sunulacaktır. İş İçin Defender artık Microsoft 365 İş Ekstra müşterileri için genel kullanıma (GA) ulaşıyor.
-
-
-      Microsoft 365 İş Ekstra olmayan müşteriler için, İş için Defender tek başına plan olarak bir seçenektir. İş için Defender'ın tek başına sürümü hala önizleme aşamasındadır ve bu takvim yılının sonlarında GA'ya ulaşacaktır.
+      Kullanıcı lisansı başına en fazla 5 cihaz ekleyebilir ve bu cihazların güvenliğini sağlayabilirsiniz.
+  - question: İş için Defender sunucuları destekliyor mu?
+    answer: "Sunucu desteği yakında sunulacaktır. Bu yeni sunucu teklifi, Microsoft 365 İş Ekstra veya İş için Microsoft Defender (tek başına) lisans önkoşulu içerir.  \n"
+  - question: İş için Defender macOS, Android ve iOS/iPadOS istemci cihazlarını koruyor mu?
+    answer: "Evet. İş için Defender bugün macOS, Android ve iOS/iPadOS cihazları için korumayı destekler. \n\nmacOS cihazlarını Microsoft 365 Defender portalında yerel bir betik kullanarak ekleyebilirsiniz. Android ve iOS/iPadOS cihazlarının eklenmesi [için Microsoft Intune](/mem/intune/) lisansı gerekir. Bkz [. Cihazları ekleme](mdb-onboard-devices.md).\n\nIntune Microsoft 365 İş Ekstra dahildir ve İş için Defender (tek başına) için satın alınabilir.\n\nMacOS, iOS/iPadOS ve Android cihazlar için ek basitleştirme yol haritasındadır. \n"
+  - question: İş için Defender önizleme programı sona erdiyse, bunu genişletebilir miyim?
+    answer: >
+      İş için Defender önizlemeniz sona erdiğinde, İş için Defender'ı satın alabilirsiniz. Bkz. [İş için Microsoft Defender alma](get-defender-business.md).
   - question: Zaten Microsoft 365 İş Ekstra kullanıyorsam neden İş için Defender'a ihtiyacım var?
     answer: >
-      Microsoft 365 İş Ekstra şu anda Windows cihazlar için cihaz yönetimi özellikleri, Plan 1 Office 365 için Defender ve Microsoft Defender Virüsten Koruma yeni nesil koruma içerir. İş için Defender, şirketinizin cihazları için daha fazla güvenlik ekleyerek bu özellikleri genişletir. Daha fazla bilgi edinmek için aşağıdaki makalelere bakın:
+      Microsoft 365 İş Ekstra varsa, İş için Defender aboneliğinize dahil edilir. Daha fazla bilgi edinmek için aşağıdaki makalelere bakın:
 
 
       - [İş için Defender'a genel bakış](mdb-overview.md)
 
 
-      - [İş için Microsoft Defender Microsoft 365 İş Ekstra ile karşılaştır](compare-mdb-m365-plans.md
-  - question: İş için Defender genel kullanıma (GA) ulaşmadan önce önizleme deneme teklifinin süresi dolarsa İş için Defender önizlemesine ne olur?
-    answer: >
-      Microsoft iş ortakları önizleme deneme lisanslarını GA noktasına kadar genişletebilir. GA tamamlandıktan sonra önizleme deneme sürümü uzatılamaz.
+      - [İş için Microsoft Defender Microsoft 365 İş Ekstra ile karşılaştırma](compare-mdb-m365-plans.md)
+
+
+      İş için Defender, şirketinizin cihazları için uç nokta koruması ile Microsoft 365 İş Ekstra güvenlik özelliklerini genişletir.
   - question: Bir müşterinin abonelik karışımına sahip 20 kullanıcısı varsa ne olur? Örneğin, 10 kullanıcıya İş için Defender lisansı atadıklarını ve 10 kullanıcının Da Uç Nokta için Defender Plan 2 lisansı atadıklarını varsayalım.
-    answer: "Karma lisanslar şu anda desteklenmiyor, Şu anda karma lisansları desteklemiyoruz. En yüksek işlevsel lisans, kiracının deneyimini ayarlar. Örneğimizi kullanarak kiracı deneyimi Uç Nokta Planı 2 için Defender olur ve Uç Nokta Planı 2 için 20 Defender lisansı gerektirir. \n"
+    answer: "Karma lisanslar şu anda desteklenmiyor. En yüksek işlevsel lisans, kiracının deneyimini ayarlar. Örneğimizi kullanarak kiracı deneyimi Uç Nokta Planı 2 için Defender olur ve Uç Nokta Planı 2 için 20 Defender lisansı gerektirir. \n"
   - question: İş için Defender'da birden fazla web içeriği filtreleme ilkesi yapılandırabilir miyim?
     answer: "Şu anda, İş için Defender, İş için Defender kiracısı başına yalnızca bir tekdüzen web filtreleme ilkesini destekler. \n"
   - question: İş için Defender ile özel raporları nasıl çalıştırabilirim?
     answer: >
-      İş için Defender şu anda güçlü özel raporlamayı destekleyen bir dizi API ve bir Power BI bağlayıcısı içerir. HTML olarak biçimlendirilmiş yönetici özetleri oluşturmak ve bu özetleri e-postayla göndermek için bir PowerShell betiği zamanlayabilirsiniz.
+      İş için Defender şu anda güçlü özel raporlamayı destekleyen bir dizi API ve bir Power BI bağlayıcısı içerir. HTML olarak biçimlendirilmiş yönetici özetleri oluşturmak ve bu özetleri e-postayla göndermek için bir PowerShell betiği zamanlayabilirsiniz. Bkz. [API başvuru bilgileri](/microsoft-365/security/defender-endpoint/exposed-apis-create-app-partners).
   - question: Ben bir Microsoft iş ortağıyım. Bir denetim masasından birden çok kiracıyı yönetebilecek miyim yoksa her kiracıda ayrı ayrı oturum açmam gerekecek mi?
-    answer: >
-      İş için Defender, tek bir konsolda çok kiracılı destek için Microsoft 365 Lighthouse etkindir. Şu anda çok kiracılı bir olay kuyruğu, dikkat gerektiren olayların kiracılar arası görünümünü sağlar; ancak yapılandırma ve ekleme, iş ortağı kimlik bilgileriniz kullanılarak müşterinin kiracısında gerçekleştirilir. Daha fazla tümleştirme senaryosu planlanıyor.
+    answer: "İş için Defender, tek bir konsolda ([https://lighthouse.microsoft.com](https://lighthouse.microsoft.com)) çok kiracılı destek için Microsoft 365 Lighthouse'de etkinleştirilir. \n\nŞu anda çok kiracılı bir olay kuyruğu, dikkat gerektiren olayların kiracılar arası görünümünü sağlar; ancak yapılandırma ve ekleme, iş ortağı kimlik bilgileriniz kullanılarak müşterinin kiracısında gerçekleştirilir. Daha fazla tümleştirme senaryosu planlanıyor.\n\nDaha fazla bilgi için bkz. [Microsoft 365 Lighthouse genel bakış](/microsoft-365/lighthouse/m365-lighthouse-overview).\n"
   - question: İş için Defender'da saldırı yüzeyi azaltma kurallarını ve özelliklerini yapılandırmak Nasıl yaparım??
-    answer: "Microsoft 365 Defender portalında ([https://security.microsoft.com](https://security.microsoft.com)) İş için Defender aracılığıyla saldırı yüzeyi azaltma kuralları ve özellikleri için basitleştirilmiş yapılandırma henüz desteklenmemektedir. Microsoft Endpoint Manager varsa, saldırı yüzeyi azaltma ilkelerinizi yapılandırmak için Endpoint Manager kullanabilirsiniz. \n"
-  - question: Şu anda Microsoft Endpoint Manager yoksa, hem İş için Defender hem de Endpoint Manager dahil olan özellikleri kullanmak için ek lisansa ihtiyacım var mı?
-    answer: "Tek başına bir İş için Defender aboneliğiniz varsa ve Microsoft Intune (Endpoint Manager parçası) yoksa, Microsoft 365 Defender portalını ([https://security.microsoft.com](https://security.microsoft.com)) kullanarak İş için Defender'da Windows cihazları yönetebilirsiniz. Ayrıca, [basitleştirilmiş bir yapılandırma deneyimiyle](mdb-simplified-configuration.md) yeni nesil koruma ve güvenlik duvarı koruma ilkelerinizi Microsoft 365 Defender portalında yönetebilirsiniz. Saldırı yüzeyi azaltma ilkeleri gibi diğer ayarları yönetmek veya bazı cihazları (Android cihazları gibi) eklemek için Endpoint Manager gerekir.  \n"
+    answer: >
+      Microsoft 365 Defender portalında ([https://security.microsoft.com](https://security.microsoft.com)) İş için Defender aracılığıyla saldırı yüzeyi azaltma kuralları ve özellikleri için basitleştirilmiş yapılandırma henüz desteklenmemektedir. Microsoft Intune varsa, saldırı yüzeyi azaltma ilkelerinizi yapılandırmak için Microsoft Endpoint Manager yönetim merkezini kullanabilirsiniz. bkz[. Intune'da uç nokta güvenliği için saldırı yüzeyi azaltma ilkesi](/mem/intune/protect/endpoint-security-asr-policy).
+  - question: Şu anda Microsoft Intune yoksa, hem İş için Defender hem de Intune dahil olan özellikleri kullanmak için ek lisansa ihtiyacım var mı?
+    answer: "Tek başına bir iş için Defender aboneliğiniz varsa ve Intune yoksa, Microsoft 365 Defender portalında ([https://security.microsoft.com](https://security.microsoft.com) ) Windows ve macOS cihazlarını ekleyebilir ve güvenli bir şekilde kullanabilirsiniz. \n\nAyrıca, [basitleştirilmiş bir yapılandırma deneyimiyle](mdb-simplified-configuration.md) yeni nesil koruma ve güvenlik duvarı koruma ilkelerinizi Microsoft 365 Defender portalında yönetebilirsiniz. \n\nSaldırı yüzeyi azaltma ilkeleri gibi diğer ayarları yönetmek veya Android veya iOS/iPadOS cihazları gibi diğer cihazları eklemek için Intune gerekir. Intune Microsoft 365 İş Ekstra dahildir ve İş için Defender (tek başına) abonelikleri için satın alınabilir. \n"
 additionalContent: >-
   ## <a name="see-also"></a>Ayrıca bkz.
 

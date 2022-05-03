@@ -1,40 +1,35 @@
 ---
 title: Microsoft 365 Defender portalını ziyaret edin
-description: Microsoft 365 Defender portalını kullanmaya başlamayı öğrenin. Portalda gezinmeyi ve geçerli güvenlik durumunuzu ve önerilerinizi görüntülemeyi öğrenin
+description: İş için Defender'daki güvenlik merkeziniz Microsoft 365 Defender portalıdır. Portalda gezinmeyi öğrenin ve sonraki adımlarınıza bakın.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: article
-ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
-ms.reviewer: inbadian, shlomiakirav
+ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
 ms.custom: intro-get-started
-ms.openlocfilehash: 4af2986a3c1c726e9bf963752d53fe6ef098c19e
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: 7e4f22634756b931a6136f57b1938d12d36bc988
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64861476"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65172808"
 ---
 # <a name="visit-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalını ziyaret edin
-
-> [!NOTE]
-> İş için Microsoft Defender artık [Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil edilir. 
 
 Microsoft 365 Defender portalı ([https://security.microsoft.com](https://security.microsoft.com)) İş için Microsoft Defender kullanmak ve yönetmek için tek adresinizdir. Başlamanıza yardımcı olacak bir karşılama başlığı ve açıklama balonları, ilgili bilgileri ortaya çıkartan kartlar ve çeşitli özelliklere ve özelliklere kolayca erişmenizi sağlayan bir gezinti çubuğu içerir. 
 
 :::image type="content" source="../../media/defender-business/mdb-portal-home.png" alt-text="Microsoft 365 Defender portalı":::
 
- 
 >
 > **Bir dakikan var mı?**
 > Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">güvenlikle ilgili kısa anketimize</a> katılın. Sizden haber almak isteriz!

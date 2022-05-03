@@ -17,12 +17,12 @@ ms.collection:
 ms.custom: intro-overview
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 77766c153582f519aa0ba9853d18c216092747bc
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 9211597ec8a0e25130b010a6049832ac151840fc
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092315"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65173694"
 ---
 # <a name="microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender
 
@@ -37,7 +37,7 @@ ms.locfileid: "65092315"
 Uç Nokta için Microsoft Defender, kurumsal ağların gelişmiş tehditleri engellemesine, algılamasına, araştırmasına ve yanıtlamasına yardımcı olmak için tasarlanmış bir kurumsal uç nokta güvenlik platformudur.
 
 > [!TIP]
-> Yakında Uç Nokta için Microsoft Defender iki planda kullanıma sunulacaktır. Bu makalede, Uç Nokta için Microsoft Defender Plan 2'de yer alan özellikler ve özellikler açıklanmaktadır. [Uç Nokta için Microsoft Defender Plan 1 ve Plan 2 hakkında daha fazla bilgi edinin](defender-endpoint-plan-1-2.md).
+> Uç Nokta için Microsoft Defender iki planda kullanılabilir: Uç Nokta Için Defender Plan 1 ve Plan 2. Bu makalede, her plana dahil edilen özellikler ve özellikler açıklanmaktadır. [Uç Nokta için Microsoft Defender Plan 1 ve Plan 2 hakkında daha fazla bilgi edinin](defender-endpoint-plan-1-2.md).
 > 
 
 <p><p>

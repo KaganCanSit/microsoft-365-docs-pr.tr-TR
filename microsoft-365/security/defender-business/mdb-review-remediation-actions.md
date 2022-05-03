@@ -1,13 +1,12 @@
 ---
 title: İş için Microsoft Defender'de düzeltme eylemlerini gözden geçirme
-description: otomatik olarak alınan veya İşlem merkezinde onay bekleyen düzeltmeleri görüntüleme
+description: İş için Defender ile algılanan tehditlere karşı alınan düzeltmeleri görüntüleyin. eylemleri Microsoft 365 Defender portalındaki İşlem merkezinde görüntüleyebilirsiniz.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: how-to
-ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -17,17 +16,14 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 15a64491f6e97137d1e919aa126d4bf134c47999
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: 438d43548b4318499c44aea65399a7d5a3a5f43d
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64862224"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65174357"
 ---
 # <a name="review-remediation-actions-in-the-action-center"></a>İşlem merkezindeki düzeltme eylemlerini gözden geçirme
-
-> [!NOTE]
-> İş için Microsoft Defender artık [Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil edilir. 
 
 Tehditler algılandıkçe düzeltme eylemleri devreye girer. Belirli bir tehdide ve güvenlik ayarlarınızın nasıl yapılandırıldığına bağlı olarak, düzeltme eylemleri otomatik olarak veya yalnızca onaylandığında gerçekleştirilebilir. Karantinaya dosya gönderme, işlemin çalışmasını durdurma ve zamanlanmış görevi kaldırma gibi düzeltme eylemlerine örnek olarak verilebilir. Tüm düzeltme eylemleri İşlem merkezinde izlenir.
 

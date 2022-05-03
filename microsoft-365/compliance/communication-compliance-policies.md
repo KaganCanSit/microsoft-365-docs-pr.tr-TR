@@ -19,12 +19,12 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 47c7ddbc5ce935e8b9fedb7682daa6af468b66b4
-ms.sourcegitcommit: 5b321693214e3859f5af8f1774d2a5ff685ab3b7
+ms.openlocfilehash: 9be1c581edb1b9564349ae8c3a659d226d6ef312
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65015034"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65173787"
 ---
 # <a name="communication-compliance-policies"></a>İletişim uyumluluk ilkeleri
 
@@ -112,10 +112,10 @@ Yöneticiler, kuruluşunuza uygun şekilde bu ilkeye hemen özel gözden geçire
 4. **Kullanıcı tarafından bildirilen iletileri izleme** bölmesinde, ilke için gözden geçirenleri atayın. Gözden geçirenlerin Exchange Online üzerinde barındırılan posta kutuları olmalıdır. Gözden geçirenler bir ilkeye eklendiğinde, ilkeye atamayı bildiren ve gözden geçirme işlemiyle ilgili bilgilerin bağlantılarını sağlayan bir e-posta iletisini otomatik olarak alır.
 5. **Kaydet**'i seçin.
 
-*Kullanıcıların sorun bildir seçeneğiyle* Teams iletileri bildirmesini devre dışı bırakmak için [, Teams Yönetim Merkezi'nde](/microsoftteams/manage-teams-in-modern-portal) **Son kullanıcı raporlama** seçeneğini devre dışı bırakın. 
+*Sorun bildir* seçeneği varsayılan olarak etkindir ve [Teams Yönetim Merkezi'ndeki Teams](/microsoftteams/manage-teams-in-modern-portal) mesajlaşma ilkeleri aracılığıyla denetlenebilir. Özel ilke oluşturup atamadığınız sürece kuruluşunuzdaki kullanıcılar genel ilkeyi otomatik olarak alır. Genel ilkedeki ayarları düzenleyin veya Sorun bildir seçeneğini açmak veya kapatmak için *bir* veya daha fazla özel ilke oluşturup atayın. Daha fazla bilgi için bkz. [Teams'de mesajlaşma ilkelerini yönetme](/microsoftteams/messaging-policies-in-teams).  
 
 >[!IMPORTANT]
->Teams Yönetim Merkezi'nde **Son kullanıcı raporlama** seçeneğini devre dışı bırakmak için PowerShell kullanıyorsanız [, Microsoft Teams cmdlet'leri modülü sürüm 4.2.0](/MicrosoftTeams/teams-powershell-release-notes) veya üzerini kullanmanız gerekir.
+>Teams Yönetim Merkezi'nde **Son kullanıcı raporlama** seçeneğini açmak veya kapatmak için PowerShell kullanıyorsanız, [Microsoft Teams cmdlet'leri modülü sürüm 4.2.0](/MicrosoftTeams/teams-powershell-release-notes) veya üzerini kullanmanız gerekir.
 
 ## <a name="storage-limit-notification-preview"></a>Depolama sınırı bildirimi (önizleme)
 

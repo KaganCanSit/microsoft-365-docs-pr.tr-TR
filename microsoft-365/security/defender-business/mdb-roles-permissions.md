@@ -1,13 +1,12 @@
 ---
 title: İş için Microsoft Defender'de rol ve izin atama
-description: İş için Microsoft Defender'de rol ve izin atamayı öğrenin
+description: Siber güvenlik ekibinize roller atayın. İş için Defender'da bu roller ve izinler hakkında bilgi edinin.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -16,26 +15,21 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: e4a3be91ff46626654f0c0f7b027557958429b33
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: 03295989e1ee44ab43fe0cc53e4029a6c4307ea8
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64862686"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65172651"
 ---
 # <a name="assign-roles-and-permissions-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'de rol ve izin atama
-
-> [!NOTE]
-> İş için Microsoft Defender artık [Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil edilir. 
 
 Microsoft 365 Defender portalında İş için Microsoft Defender yapılandırma, raporları görüntüleme veya algılanan tehditlerle ilgili yanıt eylemleri gerçekleştirme gibi görevleri gerçekleştirmek için güvenlik ekibinize uygun izinlerin atanması gerekir. İzinler, Microsoft 365 Defender portalında ([https://security.microsoft.com](https://security.microsoft.com)) veya Azure Active Directory atanan roller aracılığıyla [verilir.](/azure/active-directory/roles/manage-roles-portal) 
 
 ## <a name="what-to-do"></a>Yapılması gerekenler
 
 1. [İş için Defender'daki roller hakkında bilgi edinin](#roles-in-defender-for-business).
-
 2. [Güvenlik ekibiniz için rol atamalarını görüntüleyin veya düzenleyin](#view-or-edit-role-assignments).
-
 3. [Sonraki adımlarınıza geçin](#next-steps).
 
 >
@@ -58,7 +52,7 @@ Aşağıdaki tabloda, İş için Defender'da atanabilecek üç rol açıklanmakt
 
 1. Microsoft 365 Defender portalına ([https://security.microsoft.com](https://security.microsoft.com)) gidin ve oturum açın.
 
-2. Gezinti bölmesinde **İzinler & roller'i** seçin ve ardından **Azure AD'nin** altında **Roller'i** seçin.
+2. Gezinti bölmesinde **İzinler & roller'i** seçin ve **Azure AD** altında **Roller'i** seçin.
 
 3. Yan bölmesini açmak için aşağıdaki rollerden birini seçin:
 
@@ -69,7 +63,7 @@ Aşağıdaki tabloda, İş için Defender'da atanabilecek üç rol açıklanmakt
    > [!IMPORTANT]
    > Microsoft, kişilere yalnızca görevlerini gerçekleştirmek için ihtiyaç duydukları şeylere erişim verilmesini önerir. Bu kavramı izinler için *en az ayrıcalık* olarak adlandırıyoruz. Daha fazla bilgi edinmek için bkz. [Uygulamalar için en az ayrıcalıklı erişim için en iyi yöntemler](/azure/active-directory/develop/secure-least-privileged-access). 
 
-4. Yan bölmede **Azure AD'de üyeleri yönet** bağlantısını seçin. Bu eylem sizi rol atamalarınızı görüntüleyip yönetebileceğiniz Azure Active Directory (Azure AD) konumuna götürür.
+4. Yan bölmede **üyeleri Azure AD yönet** bağlantısını seçin. Bu eylem sizi rol atamalarınızı görüntüleyip yönetebileceğiniz Azure Active Directory (Azure AD) götürür.
 
 5. Profilini açmak için bir kullanıcı seçin ve ardından **Atanan roller'i** seçin.
 

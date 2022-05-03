@@ -1,40 +1,36 @@
 ---
 title: İş için Microsoft Defender'da yeni nesil koruma yapılandırma ayarlarını anlama
-description: İş için Microsoft Defender'da yeni nesil koruma için yapılandırma ayarlarını anlama
+description: küçük ve orta ölçekli işletmeler için uç nokta güvenliği olan İş için Defender'daki virüsten koruma ve yeni nesil koruma ayarlarını anlayın.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
-ms.reviewer: inbadian, shlomiakirav
+ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: eee272798be5396ad9ad15177fcd29a0180bc448
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: 34cbd422cafe5c171f47e8e6470c4b12f9e1700d
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64862730"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65174458"
 ---
 # <a name="understand-next-generation-configuration-settings-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'da yeni nesil yapılandırma ayarlarını anlama
 
-> [!NOTE]
-> İş için Microsoft Defender artık [Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil edilir. 
-
-İş için Defender'daki yeni nesil koruma, güçlü virüsten koruma ve kötü amaçlı yazılımdan koruma içerir. Varsayılan ilkeleriniz, üretkenliği engellemeden cihazlarınızı ve kullanıcılarınızı korumak için tasarlanmıştır; ancak, ilkelerinizi iş gereksinimlerinize uyacak şekilde de özelleştirebilirsiniz. Microsoft Endpoint Manager kullanıyorsanız, güvenlik ilkelerinizi yönetmek için bunu kullanabilirsiniz.
+İş için Defender'daki yeni nesil koruma, güçlü virüsten koruma ve kötü amaçlı yazılımdan koruma içerir. Varsayılan ilkeleriniz, üretkenliği engellemeden cihazlarınızı ve kullanıcılarınızı korumak için tasarlanmıştır; ancak, ilkelerinizi iş gereksinimlerinize uyacak şekilde de özelleştirebilirsiniz. Microsoft Intune kullanıyorsanız güvenlik ilkelerinizi yönetmek için Microsoft Endpoint Manager yönetim merkezini kullanabilirsiniz.
 
 **Bu makalede şunlar açıklanmaktadır**:
 
 - [Yeni nesil koruma ayarları ve seçenekleri](#next-generation-protection-settings-and-options)
 - [İş için Defender'da önceden yapılandırılmış diğer ayarlar](#other-preconfigured-settings-in-defender-for-business) 
-- [İş için Defender varsayılan ayarları ve Microsoft Endpoint Manager](#defender-for-business-default-settings-and-microsoft-endpoint-manager)
+- [İş için Defender varsayılan ayarları ve Microsoft Intune](#defender-for-business-default-settings-and-microsoft-intune)
 
 ## <a name="next-generation-protection-settings-and-options"></a>Yeni nesil koruma ayarları ve seçenekleri
 
@@ -69,9 +65,9 @@ Aşağıdaki tabloda ayarlarınız ve seçenekleriniz listelenmiştir:
 - Güvenlik bilgileri güncelleştirmeleri virüsten koruma taraması çalışmadan önce [denetleniyor (CheckForSignaturesBeforeRunningScan](/windows/client-management/mdm/policy-csp-defender#defender-checkforsignaturesbeforerunningscan))
 - Güvenlik bilgileri denetimleri dört saatte bir gerçekleşir ([SignatureUpdateInterval](/windows/client-management/mdm/policy-csp-defender#defender-signatureupdateinterval))
 
-## <a name="defender-for-business-default-settings-and-microsoft-endpoint-manager"></a>İş için Defender varsayılan ayarları ve Microsoft Endpoint Manager
+## <a name="defender-for-business-default-settings-and-microsoft-intune"></a>İş için Defender varsayılan ayarları ve Microsoft Intune
 
-Aşağıdaki tabloda, İş için Defender için önceden yapılandırılmış ayarlar ve bu ayarların Microsoft Endpoint Manager (veya Microsoft Intune) içinde görebileceğiniz ayarlara nasıl karşılık geldiğini açıklar. [İş için Defender'da (önizleme) basitleştirilmiş yapılandırma işlemini](mdb-simplified-configuration.md) kullanıyorsanız, bu ayarları düzenlemeniz gerekmez.
+Aşağıdaki tabloda İş için Defender için önceden yapılandırılmış ayarlar ve bu ayarların Intune 'de görebileceğiniz ayarlara nasıl karşılık geldiğini (Microsoft Endpoint Manager yönetim merkezinde yönetilir) açıklar. [İş için Defender'da basitleştirilmiş yapılandırma işlemini](mdb-simplified-configuration.md) kullanıyorsanız, bu ayarları düzenlemeniz gerekmez.
 
 | Ayar  | Açıklama  |
 |---------|---------|

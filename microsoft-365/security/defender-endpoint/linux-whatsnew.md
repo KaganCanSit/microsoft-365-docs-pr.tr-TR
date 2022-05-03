@@ -1,7 +1,7 @@
 ---
-title: Linux'ta Uç Nokta için Microsoft Defender olan yeniler
-description: Linux'ta Uç Nokta için Microsoft Defender değişikliklerin listesi.
-keywords: microsoft, defender, Uç Nokta için Microsoft Defender, linux, whatsnew, sürüm
+title: Linux'ta Uç Nokta için Microsoft Defender'deki yenilikler
+description: Linux'ta Uç Nokta için Microsoft Defender için önemli değişikliklerin listesi.
+keywords: microsoft, defender, Uç Nokta için Microsoft Defender, linux, whatsnew, release
 ms.prod: m365-security
 ms.mktglfcycl: security
 ms.sitesec: library
@@ -15,42 +15,48 @@ ms.collection:
 - m365-security-compliance
 ms.topic: reference
 ms.technology: mde
-ms.openlocfilehash: 993820bace174d993ed81fafb7f1f3b1c7645d37
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 385b139390192d172b3bbbcbefd5efc2b793d4ab
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64500903"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65173498"
 ---
-# <a name="whats-new-in-microsoft-defender-for-endpoint-on-linux"></a>Linux'ta Uç Nokta için Microsoft Defender olan yeniler
+# <a name="whats-new-in-microsoft-defender-for-endpoint-on-linux"></a>Linux'ta Uç Nokta için Microsoft Defender'deki yenilikler
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+
+## <a name="1016577-30122032165770"></a>101.65.77 (30.122032.16577.0)
+
+- `conflicting_applications` içindeki alanı `mdatp health` yalnızca en son 10 işlemi gösterecek şekilde ve işlem adlarını içerecek şekilde geliştirildi. Bu, Linux için Uç Nokta için Microsoft Defender hangi işlemlerin çakışıyor olduğunu belirlemeyi kolaylaştırır.
+- Hata düzeltmeleri
 
 ## <a name="1016274-30122022162740"></a>101.62.74 (30.122022.16274.0)
 
-- Daha eski çekirdek sürümlerinde çalıştırlarda ürünün 2 GB'den büyük dosyalara erişimi yanlış şekilde engellemesi sorununa yönelik sorun giderildi
+- Ürünün eski çekirdek sürümlerinde çalışırken boyutu 2 GB'tan büyük dosyalara erişimi yanlış engellemesi sorunu giderildi
 - Hata düzeltmeleri
 
 ## <a name="1016093-30122012160930"></a>101.60.93 (30.122012.16093.0)
 
-- Bu sürüm, [PIE-2022-23278 için bir güvenlik güncelleştirmesi içerir](https://msrc-blog.microsoft.com/2022/03/08/guidance-for-cve-2022-23278-spoofing-in-microsoft-defender-for-endpoint/)
+- Bu sürüm [CVE-2022-23278](https://msrc-blog.microsoft.com/2022/03/08/guidance-for-cve-2022-23278-spoofing-in-microsoft-defender-for-endpoint/) için bir güvenlik güncelleştirmesi içerir
 
 ## <a name="1016005-30122012160050"></a>101.60.05 (30.122012.16005.0)
 
-- RHEL 6.10 için kernel sürüm 2.6.32-754.43.1.el6.x86_64 desteği eklendi
+- RHEL 6.10 için çekirdek sürümü 2.6.32-754.43.1.el6.x86_64 desteği eklendi
 - Hata düzeltmeleri
 
 ## <a name="1015880-30122012158800"></a>101.58.80 (30.122012.15880.0)
 
-- Komut satırı aracı artık karantinaya alınmış dosyaları, dosyanın başlangıçta algılandığından farklı bir konuma geri yüklemeyi destekler. Bu, aracılığıyla yapılabilir `mdatp threat quarantine restore --id [threat-id] --path [destination-folder]`.
+- Komut satırı aracı artık karantinaya alınan dosyaların dosyanın ilk algılandığı konumdan farklı bir konuma geri yüklenmesini destekliyor. Bu işlem aracılığıyla `mdatp threat quarantine restore --id [threat-id] --path [destination-folder]`yapılabilir.
+- Bu sürümden başlayarak Linux için ağ koruması isteğe bağlı olarak değerlendirilebilir
 - Hata düzeltmeleri
 
 ## <a name="1015662-30121122156620"></a>101.56.62 (30.121122.15662.0)
 
-- 101.53.02'de ortaya gelen ve birden çok müşteriyi etkileyen ürün kilitlenmesi düzeltildi
+- 101.53.02'de ortaya çıkan ve birden çok müşteriyi etkileyen bir ürün kilitlenmesi düzeltildi
 
 ## <a name="1015302-30121112153020"></a>101.53.02 (30.121112.15302.0)
 
@@ -58,27 +64,27 @@ ms.locfileid: "64500903"
 
 ## <a name="1015257-30121092152570"></a>101.52.57 (30.121092.15257.0)
 
-- Java uygulamaları tarafından kullanılırken korumasız log4j jarları algılama özelliği eklendi. Makine, yüklenen log4j kavanozları ile Java işlemlerini çalıştırarak düzenli olarak inceleniyor. Bilgiler kullanıcı arka Uç Nokta için Microsoft Defender ve portalın Güvenlik Açığı Yönetimi alanında açığa çıkar.
+- Java uygulamaları tarafından kullanılan güvenlik açığı olan log4j jar'larını algılama özelliği eklendi. Makine, yüklenen log4j jar'ları ile Java işlemlerini çalıştırmak için düzenli aralıklarla incelenir. Bilgiler Uç Nokta için Microsoft Defender arka ucuna bildirilir ve portalın Güvenlik Açığı Yönetimi alanında kullanıma sunulur.
 
 ## <a name="1014776-30121092147760"></a>101.47.76 (30.121092.14776.0)
 
-- isteğe bağlı taramalar sırasında arşivlerin taranıp taranmamasını kontrol etmek için komut satırı aracına yeni bir anahtar eklendi. Bu, aracılığıyla yalnarak yalnarak yalndırıldı `mdatp config scan-archives --value [enabled/disabled]`. Varsayılan olarak, bu ayar olarak ayarlanır `enabled`.
+- İsteğe bağlı taramalar sırasında arşivlerin taranıp taranmayacağını denetlemek için komut satırı aracına yeni bir anahtar eklendi. Bu, aracılığıyla `mdatp config scan-archives --value [enabled/disabled]`yapılandırılabilir. Bu, varsayılan olarak olarak `enabled`ayarlanır.
 - Hata düzeltmeleri
 
 ## <a name="1014513-30121082145130"></a>101.45.13 (30.121082.14513.0)
 
-- Bu sürümden itibaren, aşağıdaki Uç Nokta için Microsoft Defender destek getiriyoruz: 
+- Bu sürümden başlayarak, aşağıdaki dağıtımlara Uç Nokta için Microsoft Defender destek getiriyoruz: 
   - RHEL6.7-6.10 ve CentOS6.7-6.10 sürümleri.
   - Amazon Linux 2
-  - Fedora 33 veya daha yüksek
+  - Fedora 33 veya üzeri
 - Hata düzeltmeleri
 
 
 ## <a name="1014500-30121072145000"></a>101.45.00 (30.121072.14500.0)
 
 - Komut satırı aracına yeni anahtarlar eklendi:
-  - Isteğe bağlı taramalar için paralellik derecesini kontrol altında bulundur. Bu, aracılığıyla yalnarak yalnarak yalndırıldı `mdatp config maximum-on-demand-scan-threads --value [number-between-1-and-64]`. Varsayılan olarak, paralellik derecesi `2` kullanılır.
-  - Güvenlik zekası güncelleştirmeleri etkinleştirildikten veya devre dışı bırakıldıktan sonra taramaları denetleme. Bu, aracılığıyla yalnarak yalnarak yalndırıldı `mdatp config scan-after-definition-update --value [enabled/disabled]`. Varsayılan olarak, bu ayar olarak ayarlanır `enabled`.
+  - İsteğe bağlı taramalar için paralellik derecesini denetleme. Bu, aracılığıyla `mdatp config maximum-on-demand-scan-threads --value [number-between-1-and-64]`yapılandırılabilir. Varsayılan olarak, bir paralellik `2` derecesi kullanılır.
+  - Güvenlik bilgileri güncelleştirmelerinin etkinleştirilip etkinleştirilmediğini veya devre dışı bırakılıp bırakılmayacağını denetleyin. Bu, aracılığıyla `mdatp config scan-after-definition-update --value [enabled/disabled]`yapılandırılabilir. Bu, varsayılan olarak olarak `enabled`ayarlanır.
 - Ürün günlüğü düzeyini değiştirmek için artık yükseltme gerekiyor
 - Hata düzeltmeleri
 
@@ -92,17 +98,17 @@ ms.locfileid: "64500903"
 
 ## <a name="1012964-30121042129640"></a>101.29.64 (30.121042.12964.0)
 
-- Bu sürümden başlayarak, komut satırı istemcisi aracılığıyla tetiklenen isteğe bağlı virüsten koruma taramaları sırasında algılanan tehditler otomatik olarak düzeltilir. Kullanıcı arabirimi tarafından tetiklenen taramalar sırasında algılanan tehditlere yine el ile eylem gerekir.
-- `mdatp diagnostic real-time-protection-statistics` şimdi iki ek anahtarı desteklemelidir:
-  - `--sort`: çıktıyı taranan toplam dosya sayısına göre azalan düzende sıralar
-  - `--top N`: en yüksek N sonuçlarını görüntüler (yalnızca belirtilen sonuçlar `--sort` için işe yarar)
+- Bu sürümden başlayarak, komut satırı istemcisi aracılığıyla tetiklenen isteğe bağlı virüsten koruma taramaları sırasında algılanan tehditler otomatik olarak düzeltilir. Kullanıcı arabirimi aracılığıyla tetiklenen taramalar sırasında algılanan tehditler yine de el ile eylem gerektirir.
+- `mdatp diagnostic real-time-protection-statistics` şimdi iki ek anahtarı destekler:
+  - `--sort`: Taranan toplam dosya sayısına göre azalan çıktıyı sıralar
+  - `--top N`: en iyi N sonuçlarını görüntüler (yalnızca belirtilirse `--sort` çalışır)
 - Performans iyileştirmeleri & hata düzeltmeleri
 
 ## <a name="1012572-30121022125630"></a>101.25.72 (30.121022.12563.0)
 
-- Uç Nokta için Microsoft Defender Linux'ta yeni kullanıcılar, ABD Kamu müşterileri için önizlemede kullanılabilir. Daha fazla bilgi için abd [Uç Nokta için Microsoft Defender için bkz.](gov.md)
-- DİYANE dosya sistemi olan Uç Nokta için Microsoft Defender Linux'ta sistemlerde sistem kullanımının işletim sisteminin takılması sorunu düzeltildi
-- Performans iyileştirmeleri & hata düzeltmeleri
+- Linux'ta Uç Nokta için Microsoft Defender artık ABD Kamu müşterileri için önizleme aşamasında kullanıma sunulmuştur. Daha fazla bilgi için bkz. [US Government müşterileri için Uç Nokta için Microsoft Defender](gov.md).
+- FUSE dosya sistemlerine sahip sistemlerde Linux üzerinde Uç Nokta için Microsoft Defender kullanımının işletim sisteminin kilitlenmesine neden olduğu bir sorun düzeltildi
+- Performans iyileştirmeleri & diğer hata düzeltmeleri
 
 ## <a name="1012563-30121022125630"></a>101.25.63 (30.121022.12563.0)
 
@@ -110,15 +116,15 @@ ms.locfileid: "64500903"
 
 ## <a name="1012364-30121021123640"></a>101.23.64 (30.121021.12364.0)
 
-- Bütün bir bağlama noktasının virüsten koruma dışlama listesine ekli olduğu durum için performans iyileştirmesi. Bu sürümden önce, bağlama noktasından kaynaklanan dosya etkinliği yine ürün tarafından işleniyor. Bu sürümden başlayarak, dışarıda bırakılan bağlama noktaları için dosya etkinliği engel oluyor ve bu da daha iyi ürün performansına yol açıyor
-- Son isteğe bağlı tarama hakkında bilgileri görüntülemek için komut satırı aracına yeni bir seçenek eklendi. Son isteğe bağlı tarama hakkında bilgi görüntülemek için `mdatp health --details antivirus`
-- Diğer performans iyileştirmeleri & düzeltmeleri
+- Virüsten koruma dışlama listesine bağlama noktasının tamamının eklendiği durum için performans iyileştirmesi. Bu sürümden önce, bağlama noktasından kaynaklanan dosya etkinliği yine de ürün tarafından işlendi. Bu sürümden başlayarak, dışlanan bağlama noktaları için dosya etkinliği gizlenerek daha iyi ürün performansına yol açar
+- Son isteğe bağlı tarama hakkındaki bilgileri görüntülemek için komut satırı aracına yeni bir seçenek eklendi. Son isteğe bağlı tarama hakkındaki bilgileri görüntülemek için `mdatp health --details antivirus`
+- Hata düzeltmeleri & diğer performans iyileştirmeleri
 
 ## <a name="1011853"></a>101.18.53
 
-- EDR için Linux artık [genel kullanıma sunulmaktadır](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/edr-for-linux-is-now-is-generally-available/ba-p/2048539)
-- Özel taramalar () sırasında AV dışlamalarını`--ignore-exclusions` yoksaymak için yeni bir komut satırı anahtarı (`mdatp scan custom`) eklendi
-- Tanılama günlüklerinin `mdatp diagnostic create` farklı bir dizine kaydedilmiş olarak tutulmasını sağlayan yeni bir parametreyle (`--path [directory]`) genişletilmiş
+- Linux için EDR genel [kullanıma sunuldu](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/edr-for-linux-is-now-is-generally-available/ba-p/2048539)
+- Özel taramalar sırasında AV dışlamalarını yoksaymak için yeni bir komut satırı anahtarı`--ignore-exclusions` () eklendi (`mdatp scan custom`)
+- Tanılama günlüklerinin farklı bir dizine kaydedilmesini sağlayan yeni bir parametre (`--path [directory]`) ile genişletilmiş `mdatp diagnostic create`
 - Performans iyileştirmeleri & hata düzeltmeleri
 
 ## <a name="1011299"></a>101.12.99
@@ -135,21 +141,21 @@ ms.locfileid: "64500903"
 
 ## <a name="1010255"></a>101.02.55
 
-- Ürünün bazen bir yeniden başlatma / yükseltmeden sonra başlamama sorunu düzeltildi
-- Ürün yükseltmeleri genelinde ara sunucu ayarlarının kalıcılıklarını iyileştirmesi sorunu düzeltildi
+- Ürünün bazen yeniden başlatma / yükseltmeyi takip etmeye başlamaması sorunu düzeltildi
+- Ara sunucu ayarlarının ürün yükseltmelerinde kalıcı olmaması sorunu düzeltildi
 
 ## <a name="1010075"></a>101.00.75
 
-- Şu dosya sistem türleri için destek eklendi: `ecryptfs`, `fuse`, `fuseblk`, `jfs`, `nfs``overlay`, `ramfs`, `reiserfs`, `udf`ve`vfat`
-- Komut satırı aracı [için yeni söz dizimi](linux-resources.md#configure-from-the-command-line).
+- Aşağıdaki dosya sistemi türleri için destek eklendi: , , , , , `nfs`, , `overlay`, `reiserfs``ramfs``udf`ve `jfs``fuseblk``fuse``ecryptfs``vfat`
+- [Komut satırı aracı](linux-resources.md#configure-from-the-command-line) için yeni söz dizimi.
 - Performans iyileştirmeleri & hata düzeltmeleri
 
 ## <a name="1009070"></a>100.90.70
 
 > [!WARNING]
-> Yüklü paketi 100.90.70'den önceki bir ürün sürümünden yükseltirken, Red Hat tabanlı ve SLES dağıtımlarında güncelleştirme başarısız olabilir. Bunun nedeni, dosya yolunda yapılan önemli bir değişikliktir. Geçici bir çözüm, eski paketi kaldırmak ve sonra daha yeni olan paketi yüklemektir. Bu sorun daha yeni sürümlerde yoktur.
+> Yüklü paketi 100.90.70'ten önceki bir ürün sürümünden yükseltirken, güncelleştirme Red Hat tabanlı ve SLES dağıtımlarında başarısız olabilir. Bunun nedeni dosya yolundaki önemli bir değişikliktir. Geçici bir çözüm, eski paketi kaldırmak ve daha sonra yenisini yüklemektir. Bu sorun daha yeni sürümlerde mevcut değildir.
 
-- [Virüsten koruma dışlamaları artık joker karakterleri destekliyor](linux-exclusions.md#supported-exclusion-types)
-- Komut satırı aracı [aracılığıyla performans sorunlarını](linux-support-perf.md) giderme `mdatp` özelliği eklendi
-- Paket yüklemesini daha güçlü hale yapmaya yapılan iyileştirmeler
+- Virüsten [koruma dışlamaları artık joker karakterleri destekliyor](linux-exclusions.md#supported-exclusion-types)
+- Komut satırı aracı aracılığıyla `mdatp` [performans sorunlarını giderme](linux-support-perf.md) özelliği eklendi
+- Paket yüklemesini daha sağlam hale getirmek için geliştirmeler
 - Performans iyileştirmeleri & hata düzeltmeleri

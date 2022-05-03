@@ -1,32 +1,28 @@
 ---
 title: İlke sırasını İş için Microsoft Defender anlama
-description: İş için Microsoft Defender'da ilkelerle öncelik sırası hakkında bilgi edinin
+description: İş için Defender ile şirket cihazlarınızı korumaya yönelik siber güvenlik ilkeleriyle öncelik sırası hakkında bilgi edinin.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
-ms.reviewer: inbadian, shlomiakirav
+ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: 56b7bbcb95bc00c8647fb4cc39e0d1e0611596ab
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: 4003585c82c835c21218fd1200b3468140c8370b
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64862180"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65174097"
 ---
 # <a name="understand-policy-order-in-microsoft-defender-for-business"></a>İlke sırasını İş için Microsoft Defender anlama
-
-> [!NOTE]
-> İş için Microsoft Defender artık [Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil edilir. 
 
 ## <a name="policy-order-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'da ilke sırası
 

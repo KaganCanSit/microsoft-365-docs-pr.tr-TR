@@ -1,8 +1,8 @@
 ---
-title: Kullanıcı olmadan e-Uç Nokta için Microsoft Defender erişmek için Uygulama oluşturma
+title: Kullanıcı olmadan Uç Nokta için Microsoft Defender erişmek için uygulama oluşturma
 ms.reviewer: ''
-description: Kullanıcı olmadan web uygulamasına programlı erişim elde etmek için web Uç Nokta için Microsoft Defender tasarlamayı öğrenin.
-keywords: api'ler, grafik api'si, desteklenen api'ler, Actor, alerts, device, kullanıcı, etki alanı, ip, dosya, gelişmiş av, sorgu
+description: Kullanıcı olmadan Uç Nokta için Microsoft Defender program aracılığıyla erişim elde etmek için bir web uygulaması tasarlamayı öğrenin.
+keywords: apis, graph api, desteklenen API'ler, aktör, uyarılar, cihaz, kullanıcı, etki alanı, ip, dosya, gelişmiş avcılık, sorgu
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,128 +16,133 @@ ms.collection: M365-security-compliance
 ms.topic: article
 MS.technology: mde
 ms.custom: api
-ms.openlocfilehash: 454d385c66a0019ba6059a2b8038907dd630b443
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: fde2cc894fb989628f9e2e0d9d7297bdb3c9e9da
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64469877"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65172403"
 ---
-# <a name="partner-access-through-microsoft-defender-for-endpoint-apis"></a>API'ler aracılığıyla Uç Nokta için Microsoft Defender iş ortağı erişimi
+# <a name="partner-access-through-microsoft-defender-for-endpoint-apis"></a>Uç Nokta için Microsoft Defender API'leri aracılığıyla iş ortağı erişimi
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
-**Aşağıdakiler için geçerlidir:** 
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+**Şunlar için geçerlidir:** 
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [İş için Microsoft Defender](../defender-business/index.yml)
 
-> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> [!IMPORTANT]
+> Gelişmiş avcılık özellikleri İş için Defender'a dahil değildir. Bkz[. İş için Microsoft Defender Uç Nokta için Microsoft Defender Planları 1 ve 2 ile karşılaştırma](../defender-business/compare-mdb-m365-plans.md#compare-microsoft-defender-for-business-to-microsoft-defender-for-endpoint-plans-1-and-2).
+
+
+> Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
 [!include[Improve request performance](../../includes/improve-request-performance.md)]
 
-Bu sayfada, müşterileriniz adına Azure Active Directory programlı erişim elde etmek için Uç Nokta için Microsoft Defender (Azure AD) uygulaması oluşturma hakkında bilgi bulabilirsiniz.
+Bu sayfada, müşterileriniz adına Uç Nokta için Microsoft Defender program aracılığıyla erişim elde etmek için bir Azure Active Directory (Azure AD) uygulamasının nasıl oluşturulacağı açıklanır.
 
-Uç Nokta için Microsoft Defender çok büyük bir veri ve eylemlerini bir dizi programlı API aracılığıyla ortaya çıkarır. Bu API'ler, çalışma akışlarını otomatikleştirmenize ve farklı özelliklere Uç Nokta için Microsoft Defender yardımcı olur. API erişimi için OAuth2.0 kimlik doğrulaması gerekir. Daha fazla bilgi için [bkz. OAuth 2.0 Yetkilendirme Kodu Flow](/azure/active-directory/develop/active-directory-v2-protocols-oauth-code).
+Uç Nokta için Microsoft Defender, bir dizi programlı API aracılığıyla verilerinin ve eylemlerinin büyük bir kısmını kullanıma sunar. Bu API'ler, iş akışlarını otomatikleştirmenize ve Uç Nokta için Microsoft Defender özelliklerine göre yenilik oluşturmanıza yardımcı olur. API erişimi için OAuth2.0 kimlik doğrulaması gerekir. Daha fazla bilgi için bkz[. OAuth 2.0 Yetkilendirme Kodu Flow](/azure/active-directory/develop/active-directory-v2-protocols-oauth-code).
 
-Genelde API'leri kullanmak için aşağıdaki adımları atabilirsiniz:
+Genel olarak, API'leri kullanmak için aşağıdaki adımları uygulamanız gerekir:
 
-- Çok **kiracılı** bir Azure AD uygulaması oluşturun.
-- İhtiyaçları olan Uç nokta kaynakları için Defender'a erişmek için müşteri yöneticiniz tarafından yetki (izin) alın.
-- Bu uygulamayı kullanarak bir erişim belirteci alın.
-- API'ye erişmek için Uç Nokta için Microsoft Defender kullanın.
+- **Çok kiracılı** bir Azure AD uygulaması oluşturun.
+- Uygulamanızın ihtiyaç duyduğu Uç Nokta için Defender kaynaklarına erişmesi için müşteri yöneticinizden yetki (onay) alın.
+- Bu uygulamayı kullanarak erişim belirteci alın.
+- Uç Nokta için Microsoft Defender API'ye erişmek için belirteci kullanın.
 
-Aşağıdaki adımlar, Azure AD uygulaması oluşturma, belirteç oluşturmak ve belirteç doğrulamak için bir erişim belirteci Uç Nokta için Microsoft Defender için size yol sağlar.
+Aşağıdaki adımlar bir Azure AD uygulaması oluşturma, Uç Nokta için Microsoft Defender için erişim belirteci alma ve belirteci doğrulama konusunda size yol gösterir.
 
 ## <a name="create-the-multi-tenant-app"></a>Çok kiracılı uygulamayı oluşturma
 
-1. Genel Yönetici rolüne [sahip bir](https://portal.azure.com) kullanıcıyla Azure **kiracısında oturum** açın.
+1. **Genel Yönetici** rolüne sahip kullanıcıyla [Azure kiracınızda](https://portal.azure.com) oturum açın.
 
-2. Yeni kayıt **Azure Active Directory** \> **Uygulama kayıtları** \> **gidin**.
+2. **yeni kayıt Uygulama kayıtları Azure Active Directory** \>  \> gidin.
 
-   :::image type="content" source="images/atp-azure-new-app2.png" alt-text="Uygulama kayıt bölmesine gezinti" lightbox="images/atp-azure-new-app2.png":::
+   :::image type="content" source="images/atp-azure-new-app2.png" alt-text="Uygulama kaydı bölmesine gezinti" lightbox="images/atp-azure-new-app2.png":::
 
 3. Kayıt formunda:
 
    - Uygulamanız için bir ad seçin.
 
-   - Desteklenen hesap türleri - herhangi bir kuruluş dizininde yer alan hesaplar.
+   - Desteklenen hesap türleri - herhangi bir kuruluş dizinindeki hesaplar.
 
-   - Yeniden yönlendirme URI'sini - tür: Web, URI: https://portal.azure.com
+   - Yeniden yönlendirme URI'si - tür: Web, URI: https://portal.azure.com
 
-     :::image type="content" source="images/atp-api-new-app-partner.png" alt-text="İş Microsoft Azure başvuru kayıt sayfası" lightbox="images/atp-api-new-app-partner.png":::
+     :::image type="content" source="images/atp-api-new-app-partner.png" alt-text="Microsoft Azure iş ortağı uygulama kaydı sayfası" lightbox="images/atp-api-new-app-partner.png":::
 
-4. Uygulamanıza erişim izni Uç Nokta için Microsoft Defender ve tümleştirmeyi tamamlamak için gereken en düşük izin kümesiyle bunu attayabilirsiniz.
+4. Uygulamanızın Uç Nokta için Microsoft Defender erişmesine izin verin ve tümleştirmeyi tamamlamak için gereken en düşük izin kümesiyle uygulamayı atayın.
 
-   - Uygulama sayfanız üzerinde **API** \>  \> İzinleri Ekle İzin API'leri Kuruluşumda şu API'leri kullanır> **WindowsDefenderATP** yazın ve **WindowsDefenderATP'de öğesini seçin**.
+   - Uygulama sayfanızda **API İzinleri** **Kuruluşumun kullandığı** **izin** \> API'leri \> ekle'yi seçin > **WindowsDefenderATP** yazın ve **WindowsDefenderATP'yi** seçin.
 
-   - **Not**: *WindowsDefenderATP* özgün listede görünmüyor. Görünmesini görmek için metin kutusuna adını yazmaya başlayabilirsiniz.
+   - **Not**: *WindowsDefenderATP* özgün listede görünmez. Görünmesini görmek için metin kutusuna adını yazmaya başlayın.
 
      :::image type="content" source="images/add-permission.png" alt-text="İzin ekle seçeneği" lightbox="images/add-permission.png":::
 
-### <a name="request-api-permissions"></a>API izinleri isteği
+### <a name="request-api-permissions"></a>API izinleri isteme
 
-Hangi izinlere ihtiyacınız olduğunu belirlemek için **aramakla** ilgilendiğiniz API'deki İzinler bölümünü gözden geçirebilirsiniz. Örneğin:
+Hangi izne ihtiyacınız olduğunu belirlemek için çağırmak istediğiniz API'deki **İzinler** bölümünü gözden geçirin. Örneğin:
 
-- Gelişmiş [sorguları çalıştırmak için '](run-advanced-query-api.md)Gelişmiş sorguları çalıştırma' iznini seçin
-- Cihazı [yalıtmak](isolate-machine.md) için "Makine ayırma" iznini seçin
+- [Gelişmiş sorguları çalıştırmak](run-advanced-query-api.md) için 'Gelişmiş sorgu çalıştır' iznini seçin
+- [Cihazı yalıtmak](isolate-machine.md) için 'Makineyi yalıt' iznini seçin
 
-Aşağıdaki örnekte 'Tüm uyarıları **okuma' iznini kullanılacaktır** :
+Aşağıdaki örnekte **'Tüm uyarıları oku'** iznini kullanacağız:
 
-1. Uygulama **izinleri** **Alert.Read.All** \> > **Ekle'yi seçin**
+1. **Uygulama izinleri** \> **Alert.Read.All** > **İzin ekle'yi** seçin
 
    :::image type="content" source="images/application-permissions.png" alt-text="İzin eklemeye izin veren seçenek" lightbox="images/application-permissions.png":::
 
-2. İzin **ver'i seçin**
+2. **İzin ver'i** seçin
 
-   - **Not**: Her izin eklemeye devam etmek için yeni **izin** ver'i seçmeniz gerekir.
+   - **Not**: İzin eklediğinizde, yeni iznin geçerli olması için **Onay ver'i** seçmeniz gerekir.
 
-   :::image type="content" source="images/grant-consent.png" alt-text="İzin verilmesine izin veren seçenek" lightbox="images/grant-consent.png":::
+   :::image type="content" source="images/grant-consent.png" alt-text="Onay verilmesine izin veren seçenek" lightbox="images/grant-consent.png":::
 
-3. Uygulamaya bir gizli ekleyin.
+3. Uygulamaya gizli dizi ekleyin.
 
-   - **Sertifikalar gizli & seçin**, gizliye açıklama ekleyin ve Ekle'yi **seçin**.
+   - **Sertifikalar & gizli diziler'i** seçin, gizli diziye açıklama ekleyin ve **Ekle'yi** seçin.
 
-    **Önemli**: Ekle'ye **tıklayıp oluşturulan gizli değeri kopyalayın**. İşten ayrıldıktan sonra geri ala zaman kazanaaasiniz!
+    **Önemli**: Ekle'ye tıkladıktan sonra **oluşturulan gizli dizi değerini kopyalayın**. Gittikten sonra geri alamazsınız!
 
-     :::image type="content" source="images/webapp-create-key2.png" alt-text="Uygulama oluştur anahtarı" lightbox="images/webapp-create-key2.png":::
+     :::image type="content" source="images/webapp-create-key2.png" alt-text="Uygulama oluşturma anahtarı" lightbox="images/webapp-create-key2.png":::
 
-4. Uygulama kimliğinizi bir yere yazın:
+4. Uygulama kimliğinizi not edin:
 
-   - Uygulama sayfanız üzerinde Genel **Bakış'a** gidin ve aşağıdaki bilgileri kopyalayın:
+   - Uygulama sayfanızda **Genel Bakış'a** gidin ve aşağıdaki bilgileri kopyalayın:
 
-     :::image type="content" source="images/app-id.png" alt-text="Uygulamanın kimliğini oluşturma" lightbox="images/app-id.png":::
+     :::image type="content" source="images/app-id.png" alt-text="Oluşturma uygulamasının kimliği" lightbox="images/app-id.png":::
 
 5. Uygulamayı müşterinizin kiracısına ekleyin.
 
-   Başvurunun, kullanmayı uygun olduğu her müşteri kiracısı içinde onaylanması gerekir. Bunun nedeni, uygulamanın müşteri adına Uç Nokta için Microsoft Defender uygulamayla etkileşim kurmasıdır.
+   Uygulamanızı kullanmak istediğiniz her müşteri kiracısında onaylanması gerekir. Bunun nedeni uygulamanızın müşteriniz adına Uç Nokta için Microsoft Defender uygulamayla etkileşim kurmasıdır.
 
-   Müşterinizin **kiracısına Genel** Yönetici izni olan bir kullanıcının izin bağlantısını seçmesi ve başvurularınızı onaylaması gerekir.
+   Müşterinizin kiracısından **Genel Yöneticiye** sahip bir kullanıcının onay bağlantısını seçip uygulamanızı onaylaması gerekir.
 
-   İzin bağlantısı formun bir bağlantısıdır:
+   Onay bağlantısı şu biçimdedir:
 
    ```http
    https://login.microsoftonline.com/common/oauth2/authorize?prompt=consent&client_id=00000000-0000-0000-0000-000000000000&response_type=code&sso_reload=true
    ```
 
-   Burada 00000000-0000-0000-00000000000 Yerine Uygulama Kimliği'niz gerekir
+   Burada 000000000-0000-0000-0000-0000000000000000 yerine Uygulama Kimliğiniz kullanılmalıdır
 
-   İzin bağlantısına tık olduktan sonra, müşterinin kiracısı Genel Yöneticisi ile oturum açın ve uygulamayı kabul edin.
+   Onay bağlantısına tıkladıktan sonra müşterinin kiracısının Genel Yöneticisi ile oturum açın ve uygulamayı onaylayın.
 
    :::image type="content" source="images/app-consent-partner.png" alt-text="Kabul Et düğmesi" lightbox="images/app-consent-partner.png":::
 
-   Buna ek olarak, müşteriden kiracı kimliğini istemeniz ve belirteci alırken daha sonra kullanmak üzere kaydetmeniz gerekir.
+   Ayrıca, müşterinizden kiracı kimliğini istemeniz ve belirteci alırken gelecekte kullanmak üzere kaydetmeniz gerekir.
 
-6. **Bitti!** Bir uygulamayı başarıyla kaydettiysiniz! Belirteç edinme ve doğrulama için aşağıdaki örneklere bakın.
+6. **Bitti!** Bir uygulamayı başarıyla kaydettiniz! Belirteç alma ve doğrulama için aşağıdaki örneklere bakın.
 
-## <a name="get-an-access-token-example"></a>Erişim belirteci örneği alın
+## <a name="get-an-access-token-example"></a>Erişim belirteci örneği alma
 
-**Not:** Müşteriniz adına erişim belirteci almak için, müşterinin kiracı kimliğini aşağıdaki belirteç alımında kullanın.
+**Not:** Müşteriniz adına erişim belirteci almak için aşağıdaki belirteç alımlarında müşterinin kiracı kimliğini kullanın.
 
-Belirteç hakkında daha fazla AAD için [öğreticiye AAD bakın](/azure/active-directory/develop/active-directory-v2-protocols-oauth-client-creds)
+AAD belirteci hakkında daha fazla bilgi için bkz. [AAD öğreticisi](/azure/active-directory/develop/active-directory-v2-protocols-oauth-client-creds)
 
-### <a name="using-powershell"></a>PowerShell'i kullanma
+### <a name="using-powershell"></a>PowerShell kullanma
 
 ```powershell
 # That code gets the App Context Token and save it to a file named "Latest-token.txt" under the current directory
@@ -161,19 +166,19 @@ Out-File -FilePath "./Latest-token.txt" -InputObject $token
 return $token
 ```
 
-### <a name="using-c"></a>C'yi kullanma #
+### <a name="using-c"></a>C kullanma #
 
 > Aşağıdaki kod Nuget Microsoft.IdentityModel.Clients.ActiveDirectory ile test edilmiştir
 
-- Yeni bir Konsol Uygulaması oluşturma
-- [Microsoft.IdentityModel.Clients.ActiveDirectory'NuGet yükleme](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory/)
-- Aşağıdakini kullanarak ekleyin:
+- Yeni konsol uygulaması oluşturma
+- [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory/) NuGet yükleme
+- Kullanarak aşağıdakini ekleyin
 
     ```console
     using Microsoft.IdentityModel.Clients.ActiveDirectory;
     ```
 
-- Uygulamanıza aşağıdaki kodu kopyalayın/yapıştırın (üç değişkeni güncelleştirmeyi unutmayın: `tenantId`, ve `appId``appSecret`)
+- Uygulamanıza aşağıdaki kodu kopyalayın/yapıştırın (üç değişkeni güncelleştirmeyi unutmayın: `tenantId`, `appId`ve `appSecret`)
 
     ```console
     string tenantId = "00000000-0000-0000-0000-000000000000"; // Paste your own tenant ID here
@@ -189,26 +194,26 @@ return $token
     string token = authenticationResult.AccessToken;
     ```
 
-### <a name="using-python"></a>Python'ı kullanma
+### <a name="using-python"></a>Python kullanma
 
-Python kullanarak [belirteç al'a başvuru](run-advanced-query-sample-python.md#get-token)
+[Python kullanarak belirteç alma](run-advanced-query-sample-python.md#get-token) bölümüne bakın
 
-### <a name="using-curl"></a>Kıvrık'ı kullanma
+### <a name="using-curl"></a>Curl kullanma
 
 > [!NOTE]
-> Aşağıdaki yordam(Bilgisayarınızda Windows için Kıvrık'ın zaten yüklü olması gerekir)
+> Windows için Curl'in bilgisayarınızda zaten yüklü olduğu varsayılan aşağıdaki yordam
 
-- Komut penceresini açma
-- Azure CLIENT_ID kimliğine kimlik ayarlama
-- Azure CLIENT_SECRET sırrınızı ayarlama
-- Müşteri TENANT_ID erişmek için başvurularınızı kullanmak isteyen müşterinin Azure kiracı kimliğine Uç Nokta için Microsoft Defender ayarlayın
+- Komut penceresi açma
+- azure uygulama kimliğinize CLIENT_ID ayarlama
+- azure uygulama gizli dizinize CLIENT_SECRET ayarlama
+- TENANT_ID, uygulamanızı kullanarak Uç Nokta için Microsoft Defender uygulamasına erişmek isteyen müşterinin Azure kiracı kimliğine ayarlayın
 - Aşağıdaki komutu çalıştırın:
 
 ```curl
 curl -i -X POST -H "Content-Type:application/x-www-form-urlencoded" -d "grant_type=client_credentials" -d "client_id=%CLIENT_ID%" -d "scope=https://securitycenter.onmicrosoft.com/windowsatpservice/.default" -d "client_secret=%CLIENT_SECRET%" "https://login.microsoftonline.com/%TENANT_ID%/oauth2/v2.0/token" -k
 ```
 
-Formun yanıtını alırsiniz:
+Formun yanıtını alırsınız:
 
 ```console
 {"token_type":"Bearer","expires_in":3599,"ext_expires_in":0,"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIn <truncated> aWReH7P0s0tjTBX8wGWqJUdDA"}
@@ -216,22 +221,22 @@ Formun yanıtını alırsiniz:
 
 ## <a name="validate-the-token"></a>Belirteci doğrulama
 
-Doğru belirtece sahip olup olmadığınız emin olmak için Sanity check:
+Doğru belirteci kullandığınızdan emin olmak için akıl sağlığı denetimi:
 
-- Kodunu çözmek için önceki adımda edinilen belirteci [JWT'ye](https://jwt.ms) kopyalama/yapıştırma
-- İstenen izinlerle bir 'roller' talebi alasınız
-- Aşağıdaki ekran görüntüsünde, kod çözme izni birden çok izine sahip bir Uygulamadan alınan kod çözme belirteci Uç Nokta için Microsoft Defender:
-- "Kimlik" talebi, belirtecin ait olduğu kiracı kimliğidir.
+- Kodunu çözmek için önceki adımda aldığınız belirteci [JWT'ye](https://jwt.ms) kopyalayın/yapıştırın
+- İstenen izinlerle 'roller' talebi aldığınızdan doğrulama
+- Aşağıdaki ekran görüntüsünde, Uç Nokta için Microsoft Defender için birden çok izne sahip bir Uygulamadan alınan kodu çözülen belirteci görebilirsiniz:
+- "tid" talebi, belirtecin ait olduğu kiracı kimliğidir.
 
 :::image type="content" source="images/webapp-decoded-token.png" alt-text="Belirteç doğrulama sayfası" lightbox="images/webapp-decoded-token.png":::
 
-## <a name="use-the-token-to-access-microsoft-defender-for-endpoint-api"></a>API'ye erişmek için Uç Nokta için Microsoft Defender kullanma
+## <a name="use-the-token-to-access-microsoft-defender-for-endpoint-api"></a>Uç Nokta için Microsoft Defender API'ye erişmek için belirteci kullanma
 
-- Kullanmak istediğiniz API'yi seçin, daha fazla bilgi için desteklenen [API'ler Uç Nokta için Microsoft Defender bakın](exposed-apis-list.md)
-- "Taşıyıcı {token}" adresine göndermek istediğiniz Http isteğinde Yetkilendirme üst bilgilerini ayarlayın (Taşıyıcı, Yetkilendirme düzenidir)
-- Belirtecin son kullanma süresi 1 saattir (aynı belirteçe sahip birden fazla istek gönderabilirsiniz)
+- Kullanmak istediğiniz API'yi seçin. Daha fazla bilgi için bkz[. Desteklenen Uç Nokta için Microsoft Defender API'leri](exposed-apis-list.md)
+- "Taşıyıcı {token}" adresine gönderdiğiniz Http isteğinde Yetkilendirme üst bilgisini ayarlayın (Taşıyıcı, Yetkilendirme şemasıdır)
+- Belirtecin Süre sonu süresi 1 saattir (aynı belirteçle birden fazla istek gönderebilirsiniz)
 
-- C# kullanarak uyarı listesini almak için istek **gönderme örneği**
+- **C# kullanarak** uyarıların listesini almak için istek gönderme örneği
 
     ```csharp
     var httpClient = new HttpClient();
@@ -247,5 +252,5 @@ Doğru belirtece sahip olup olmadığınız emin olmak için Sanity check:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Desteklenen Uç Nokta için Microsoft Defender API'ler](exposed-apis-list.md)
-- [Kullanıcı Uç Nokta için Microsoft Defender adına erişim bilgilerine erişme](exposed-apis-create-app-nativeapp.md)
+- [Desteklenen Uç Nokta için Microsoft Defender API'leri](exposed-apis-list.md)
+- [Kullanıcı adına erişim Uç Nokta için Microsoft Defender](exposed-apis-create-app-nativeapp.md)

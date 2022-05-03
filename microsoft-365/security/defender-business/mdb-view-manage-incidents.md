@@ -1,13 +1,12 @@
 ---
 title: İş için Microsoft Defender'da olayları görüntüleme ve yönetme
-description: Uyarıları görüntülemeyi & yönetmeyi, tehditlere yanıt vermeyi, cihazları yönetmeyi ve düzeltme eylemlerini gözden geçirmeyi öğrenin
+description: İş için Defender'da uyarıları görüntüleyin ve yönetin, tehditlere yanıt verin, cihazları yönetin ve algılanan tehditlerle ilgili düzeltme eylemlerini gözden geçirin.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: how-to
-ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -17,17 +16,14 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: ec1d85b72cfbe17e182d3aed573476e4fadfdef6
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: 04c8d32c6bb016d4640094013d1f71eb248a8d6c
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64861454"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65172705"
 ---
 # <a name="view-and-manage-incidents-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'da olayları görüntüleme ve yönetme
-
-> [!NOTE]
-> İş için Microsoft Defender artık [Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil edilir. 
 
 Tehditler algılandığında ve uyarılar tetiklendiğinde olaylar oluşturulur. Şirketinizin güvenlik ekibi olayları Microsoft 365 Defender portalında görüntüleyebilir ve yönetebilir.
 

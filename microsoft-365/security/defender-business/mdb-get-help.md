@@ -13,26 +13,22 @@ ms.collection:
 - SMB
 - M365-security-compliance
 search.appverid: MET150
-ms.reviewer: inbadian, shlomiakirav
-description: İş için Microsoft Defender'da yardım almayı veya desteğe başvurmayı öğrenin
-ms.date: 02/24/2022
-ms.openlocfilehash: 5ebdca65d5a23474480ecf20c7189568cf4c3949
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.reviewer: shlomiakirav
+description: İş için Defender ile ilgili herhangi bir sorununuz varsa yardım alın veya desteğe başvurun.
+ms.openlocfilehash: 37e41f8e5d5f6421739fb98a38d99bb6aa0597c6
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64861432"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65173147"
 ---
 # <a name="get-help-and-support-for-microsoft-defender-for-business"></a>İş için Microsoft Defender için yardım ve destek alma
-
-> [!NOTE]
-> İş için Microsoft Defender artık [Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil edilir. 
 
 ## <a name="get-help-and-support"></a>Yardım ve destek alma
 
 İş için Microsoft Defender konusunda yardıma ihtiyacınız varsa ekranın sağ üst köşesindeki Yardım simgesini (?) seçin. Sorunuzu veya sorununuzu yazın. Hızlı yanıtlar veya yardım makaleleri gibi çeşitli seçenekler listelenir.
 
-Sorunuza yanıt bulamazsanız bir destek bileti açabilirsiniz.
+Sorunuza yanıt bulamazsanız bir destek bileti açabilirsiniz. Bkz. [Destek alma](../../admin/get-help-support.md)
 
 >
 > **Bir dakikan var mı?**
@@ -43,3 +39,4 @@ Sorunuza yanıt bulamazsanız bir destek bileti açabilirsiniz.
 
 - [İş için Microsoft Defender - Sık sorulan sorular ve yanıtlar](mdb-faq.yml)
 - [İş için Microsoft Defender sorun giderme](mdb-troubleshooting.yml) 
+- [Microsoft 365 İş Ekstra Genel Bakış](../../business-premium/index.md)

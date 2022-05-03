@@ -1,33 +1,29 @@
 ---
 title: İş için Microsoft Defender'de cihazları yönetme
-description: İş için Microsoft Defender'de cihazları yönetmeyi öğrenin
+description: küçük ve orta ölçekli işletmeler için uç nokta koruması olan İş için Defender'da cihaz eklemeyi, kaldırmayı ve yönetmeyi öğrenin.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: how-to
-ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
-ms.reviewer: inbadian, shlomiakirav
+ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 453cce2c52902116bc3eaa71f5e6c998ab4164a1
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: e08c53dd949858a1fcc9af9c8553c5d0eed07cef
+ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64862840"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65173089"
 ---
 # <a name="manage-devices-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'de cihazları yönetme
-
-> [!NOTE]
-> İş için Microsoft Defender artık [Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil edilir. 
 
 İş için Microsoft Defender cihazları aşağıdaki gibi yönetebilirsiniz:
 
