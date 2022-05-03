@@ -9,12 +9,12 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 03a9acc9-f29c-456b-9fb2-0f49474b2708
 description: Randevu oluşturmak ve Microsoft Bookings uygulaması aracılığıyla çalışan atamak için bu yönergeleri izleyin.
-ms.openlocfilehash: 0428c697def774a67384b14c4d9b2c48e2851794
-ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
+ms.openlocfilehash: 488b390c6446693ffa6bf63dce9c84920a629f0b
+ms.sourcegitcommit: 4d6a8e9d69a421d6c293b2485a8aa5e806b71616
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64747258"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65182683"
 ---
 # <a name="create-a-manual-booking"></a>El ile rezervasyon oluşturma
 
@@ -24,8 +24,6 @@ ms.locfileid: "64747258"
 Bookings zamanlanabilir ve iki farklı şekilde personel oluşturulabilir. İlk yol, müşteri tarafından tek başına bir rezervasyon sayfası veya web sitenize eklediğiniz ekli bir rezervasyon sayfası kullanmaktır. Diğer yol, sizin veya çalışanlarınızdan birinin rezervasyonları el ile girmesidir( örneğin, bir müşteri randevu için aradığında). Bu makale el ile senaryoyu kapsar.
 
 1. Microsoft 365'da Uygulama başlatıcıyı ve ardından **Bookings'ı** seçin.
-
-    :::image type="content" source="../media/bookings-applauncher.png" alt-text="Uygulama başlatıcıda Bookings.":::
 
 1. Gezinti bölmesinde **Takvim** \> **Yeni ayırma'yı** seçin.
 

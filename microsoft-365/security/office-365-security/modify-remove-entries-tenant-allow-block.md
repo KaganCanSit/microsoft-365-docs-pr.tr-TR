@@ -16,12 +16,12 @@ ms.collection:
 description: Yöneticiler, Güvenlik portalındaki Kiracı İzin Ver/Engelle Listesi'ndeki girdileri değiştirmeyi ve kaldırmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 7da986c42421c797f2d01b1e61d50c06933e373f
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: ac612b51cab9069e50c4eec05948b3aa840b9cc9
+ms.sourcegitcommit: 4d6a8e9d69a421d6c293b2485a8aa5e806b71616
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64970950"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65182705"
 ---
 # <a name="modify-and-remove-entries-in-the-tenant-allowblock-list"></a>Kiracı İzin Verilenler/Engellenenler Listesinde girdileri değiştirme ve kaldırma
 
@@ -38,7 +38,7 @@ Kiracı İzin Ver/Engelle Listesi'ndeki girdileri değiştirmek ve kaldırmak i�
 
 ### <a name="modify-entries-in-the-tenant-allowblock-list"></a>Kiracı İzin Ver/Engelle Listesindeki girdileri değiştirme
 
-1. Microsoft 365 Defender portalında **İlkeler & kuralları** \> **Tehdit İlkeleri** \> **Kuralları** bölümüne **Kiracı İzin Ver/Listeleri Engelle** bölümüne \> gidin.
+1. konumundaki Microsoft 365 Defender portalında <https://security.microsoft.com>**İlkeler & kuralları** \> **Tehdit İlkeleri** \> **Kuralları** bölümüne **Kiracı İzin Ver/Listeleri Engelle** bölümüne \> gidin. Ya da doğrudan **Kiracı İzin Ver/Engelle Listesi** sayfasına gitmek için kullanın <https://security.microsoft.com/tenantAllowBlockList>.
 
 2. Değiştirmek istediğiniz girdi türünü içeren sekmeyi seçin:
    - **Gönderenler**
@@ -66,7 +66,7 @@ Kiracı İzin Ver/Engelle Listesi'ndeki girdileri değiştirmek ve kaldırmak i�
 
 ### <a name="remove-entries-from-the-tenant-allowblock-list"></a>Kiracı İzin Ver/Engelle Listesinden girdileri kaldırma
 
-1. Microsoft 365 Defender portalında **İlkeler & kuralları** \> **Tehdit İlkeleri** \> **Kuralları** bölümüne **Kiracı İzin Ver/Listeleri Engelle** bölümüne \> gidin.
+1. konumundaki Microsoft 365 Defender portalında <https://security.microsoft.com>**İlkeler & kuralları** \> **Tehdit İlkeleri** \> **Kuralları** bölümüne **Kiracı İzin Ver/Listeleri Engelle** bölümüne \> gidin. Ya da doğrudan **Kiracı İzin Ver/Engelle Listesi** sayfasına gitmek için kullanın <https://security.microsoft.com/tenantAllowBlockList>.
 
 2. Kaldırmak istediğiniz girdi türünü içeren sekmeyi seçin:
    - **Gönderenler**

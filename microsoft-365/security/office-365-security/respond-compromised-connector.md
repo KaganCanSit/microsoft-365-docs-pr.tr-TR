@@ -16,14 +16,14 @@ ms.custom: ''
 description: Microsoft 365'de güvenliği aşılmış bağlayıcıyı tanımayı ve yanıtlamayı öğrenin.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: d3aadcd44fcf2c6ab6665546a6335dd15997e3d2
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 50caf98bec9d918dd3ff1bcb076a080b123a357a
+ms.sourcegitcommit: 4d6a8e9d69a421d6c293b2485a8aa5e806b71616
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65130282"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65182661"
 ---
-# <a name="respond-to-a-compromised-connector"></a>Güvenliği aşılmış bağlayıcıya yanıt verme
+# <a name="respond-to-a-compromised-connector"></a>Risk altındaki bağlayıcıyı yanıtlama
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
@@ -83,7 +83,7 @@ Bağlayıcınıza yeniden erişim kazanmak için aşağıdaki tüm adımları ta
 
     :::image type="content" source="../../media/connector-compromise-sender-ip.png" alt-text="Gönderen IP adresi ve kuruluşunuzun şirket içi IP adresi" lightbox="../../media/connector-compromise-sender-ip.png":::
 
-[Plan 1 veya Exchange Online Protection Office 365 için Microsoft Defender](defender-for-office-365.md) varsa adresine gidin.[](exchange-online-protection-overview.md)https://admin-sdf.exchange.microsoft.com/#/messagetrace 
+[Plan 1 veya Exchange Online Protection Office 365 için Microsoft Defender](defender-for-office-365.md) varsa adresine gidin.[](exchange-online-protection-overview.md)https://admin.exchange.microsoft.com/#/messagetrace 
 
 1. **şüpheli bağlayıcı etkinlik** uyarıyı içinde https://security.microsoft.com/alertsaçın.  
 
@@ -91,13 +91,13 @@ Bağlayıcınıza yeniden erişim kazanmak için aşağıdaki tüm adımları ta
 
     :::image type="content" source="../../media/connector-compromise-outbound-email-details.png" alt-text="Bağlayıcı güvenliği aşılmış giden e-posta ayrıntıları" lightbox="../../media/connector-compromise-outbound-email-details.png":::
     
-3. [**İleti izlemesinde**](https://admin-sdf.exchange.microsoft.com/#/messagetrace) **bağlayıcı etki alanını** ve **IP adresini** kullanarak arama yapın. 
+3. [**İleti izlemesinde**](https://admin.exchange.microsoft.com/#/messagetrace) **bağlayıcı etki alanını** ve **IP adresini** kullanarak arama yapın. 
 
     :::image type="content" source="../../media/connector-compromise-new-message-trace.png" alt-text="Yeni ileti izleme açılır öğesi" lightbox="../../media/connector-compromise-new-message-trace.png":::
     
 4. **İleti izleme** arama sonuçlarında şunları belirleyin: 
 
-    - Kısa süre önce önemli sayıda e-posta **FilteredAsSpam olarak işaretlendiyse**.  Bu, istenmeyen posta göndermek için güvenliği aşılmış bir bağlayıcının kullanıldığının iyi bir göstergesidir. 
+    - Kısa süre önce önemli sayıda e-posta **FilteredAsSpam olarak işaretlendiyse**. Bu, istenmeyen posta göndermek için güvenliği aşılmış bir bağlayıcının kullanıldığının iyi bir göstergesidir. 
 
     - Kuruluşunuzun genellikle iletişimde kaldığı alıcılar alıcılarsa. 
 

@@ -16,12 +16,12 @@ ms.collection:
 description: Yöneticiler, Güvenlik portalındaki Kiracı İzin Ver/Engelle Listesi'nde blokları yapılandırmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 60038a2b82ea452ed921d16042cb81d4f0e023a9
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 03c56e5e7e540766bb4a6048fba15b494c46d815
+ms.sourcegitcommit: 4d6a8e9d69a421d6c293b2485a8aa5e806b71616
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65100665"
+ms.lasthandoff: 05/03/2022
+ms.locfileid: "65182727"
 ---
 # <a name="add-blocks-in-the-tenant-allowblock-list"></a>Kiracı İzin Verilenler/Engellenenler Listesine engellemeler ekleme
 
@@ -32,11 +32,11 @@ ms.locfileid: "65100665"
 - [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-## <a name="use-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalını kullanma 
+## <a name="use-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalını kullanma
 
 ### <a name="create-block-sender-entries-in-the-tenant-allowblock-list"></a>Kiracı İzin Ver/Engelle Listesinde blok gönderen girdileri oluşturma
 
-1. Microsoft 365 Defender portalında **İlkeler & kuralları** \> **Tehdit İlkeleri** \> **Kuralları** bölümüne **Kiracı İzin Ver/Listeleri Engelle** bölümüne \> gidin.
+1. konumundaki Microsoft 365 Defender portalında <https://security.microsoft.com>**İlkeler & kuralları** \> **Tehdit İlkeleri** \> **Kuralları** bölümüne **Kiracı İzin Ver/Listeleri Engelle** bölümüne \> gidin. Ya da doğrudan **Kiracı İzin Ver/Engelle Listesi** sayfasına gitmek için kullanın <https://security.microsoft.com/tenantAllowBlockList>.
 
 2. **Kiracı İzin Ver/Engelle Listesi** sayfasında **, Gönderenler** sekmesinin seçili olduğunu doğrulayın ve ardından Engelle simgesine tıklayın![.](../../media/m365-cc-sc-create-icon.png) **Engelle'ye bakın**.
 
@@ -53,11 +53,11 @@ ms.locfileid: "65100665"
 4. İşiniz bittiğinde **Ekle'ye** tıklayın.
 
 > [!NOTE]
-> Bu gönderenlerden gelen e-postalar *yüksek güvenilirlikli istenmeyen posta (SCL = 9)* olarak engellenir. 
+> Bu gönderenlerden gelen e-postalar _yüksek güvenilirlikli istenmeyen posta_ olarak engellenir (SCL = 9).
 
 ### <a name="create-block-url-entries-in-the-tenant-allowblock-list"></a>Kiracı İzin Ver/Engelle Listesinde blok URL'si girdileri oluşturma
 
-1. Microsoft 365 Defender portalında **İlkeler & kuralları** \> **Tehdit İlkeleri** \> **Kuralları** bölümüne **Kiracı İzin Ver/Listeleri Engelle** bölümüne \> gidin.
+1. konumundaki Microsoft 365 Defender portalında <https://security.microsoft.com>**İlkeler & kuralları** \> **Tehdit İlkeleri** \> **Kuralları** bölümüne **Kiracı İzin Ver/Listeleri Engelle** bölümüne \> gidin. Ya da doğrudan **Kiracı İzin Ver/Engelle Listesi** sayfasına gitmek için kullanın <https://security.microsoft.com/tenantAllowBlockList>.
 
 2. **Kiracı İzin Ver/Engelle Listesi** sayfasında **URL'ler** sekmesinin seçili olduğunu doğrulayın ve ardından Engelle simgesine tıklayın![.](../../media/m365-cc-sc-create-icon.png) **Engelle'ye bakın**.
 
@@ -74,11 +74,11 @@ ms.locfileid: "65100665"
 4. İşiniz bittiğinde **Ekle'ye** tıklayın.
 
 > [!NOTE]
-> Bu URL'leri içeren e-postalar *kimlik avı* olarak engellenir. 
+> Bu URL'leri içeren e-postalar _kimlik avı_ olarak engellenir.
 
 ### <a name="create-block-file-entries-in-the-tenant-allowblock-list"></a>Kiracı İzin Ver/Engelle Listesinde blok dosyası girdileri oluşturma
 
-1. Microsoft 365 Defender portalında **İlkeler & kuralları** \> **Tehdit İlkeleri** \> **Kuralları** bölümüne **Kiracı İzin Ver/Listeleri Engelle** bölümüne \> gidin.
+1. konumundaki Microsoft 365 Defender portalında <https://security.microsoft.com>**İlkeler & kuralları** \> **Tehdit İlkeleri** \> **Kuralları** bölümüne **Kiracı İzin Ver/Listeleri Engelle** bölümüne \> gidin. Ya da doğrudan **Kiracı İzin Ver/Engelle Listesi** sayfasına gitmek için kullanın <https://security.microsoft.com/tenantAllowBlockList>.
 
 2. **Kiracı İzin Ver/Engelle Listesi** sayfasında **Dosyalar** sekmesini seçin ve ardından Engelle simgesine tıklayın![.](../../media/m365-cc-sc-create-icon.png) **Engelle'ye bakın**.
 
@@ -95,7 +95,7 @@ ms.locfileid: "65100665"
 4. İşiniz bittiğinde **Ekle'ye** tıklayın.
 
 > [!NOTE]
-> Bu dosyaları içeren e-postalar *kötü amaçlı yazılım* olarak engellenir. 
+> Bu dosyaları içeren e-postalar _kötü amaçlı yazılım_ olarak engellenir.
 
 ### <a name="create-spoofed-sender-block-entries"></a>Sahte gönderen bloğu girdileri oluşturma
 
@@ -118,8 +118,9 @@ ms.locfileid: "65100665"
    - **Eylem**: **Engelle'yi** seçin.
 
 4. İşiniz bittiğinde **Ekle'ye** tıklayın.
+
 > [!NOTE]
-> Bu gönderenlerden gelen e-postalar *kimlik avı* olarak engellenir. 
+> Bu gönderenlerden gelen e-postalar _kimlik avı_ olarak engellenir.
 
 ## <a name="use-powershell"></a>PowerShell kullanma
 
@@ -151,7 +152,7 @@ New-TenantAllowBlockListItems -ListType Url -Block -Entries ~contoso.com
 
 Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [New-TenantAllowBlockListItems](/powershell/module/exchange/new-tenantallowblocklistitems).
 
-### <a name="add-spoofed-sender-block-entries"></a>Sahte gönderen bloğu girdileri ekleme 
+### <a name="add-spoofed-sender-block-entries"></a>Sahte gönderen bloğu girdileri ekleme
 
 Kiracı İzin Ver/Engelle Listesi'ne sahte gönderen girdileri eklemek için aşağıdaki söz dizimini kullanın:
 

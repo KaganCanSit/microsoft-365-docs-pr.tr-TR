@@ -17,12 +17,12 @@ ms.custom: ''
 description: Yöneticiler, Güvenlik portalındaki Kiracı İzin Ver/Engelle Listesi'nde izin ve blokları yönetmeyi öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: a067672a013f3e0ed7b9009604f8a4fe000ea47f
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: 64b9c044a463e940b0d9862221ca854fe0eebfdc
+ms.sourcegitcommit: 4d6a8e9d69a421d6c293b2485a8aa5e806b71616
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2022
-ms.locfileid: "65172817"
+ms.locfileid: "65182660"
 ---
 # <a name="manage-the-tenant-allowblock-list"></a>Kiracı İzin Verilenler/Engellenenler Listesini Yönetme
 
@@ -90,7 +90,6 @@ Bu makalede, Microsoft 365 Defender portalında veya PowerShell'de (Exchange Onl
   > [!NOTE]
   >
   > - kullanıcıları Microsoft 365 yönetim merkezi karşılık gelen Azure Active Directory rolüne eklemek, kullanıcılara Microsoft 365'deki diğer özellikler için gerekli izinleri *ve* izinleri verir. Daha fazla bilgi için bkz. [Yönetici rolleri hakkında](../../admin/add-users/about-admin-roles.md).
-  >
   > - [Exchange Online'daki](/Exchange/permissions-exo/permissions-exo#role-groups) **Yalnızca Görüntüleme Kuruluş Yönetimi** rol grubu da özelliğe salt okunur erişim sağlar.
 
 ## <a name="configure-the-tenant-allowblock-list"></a>Kiracı İzin Ver/Engelle Listesini Yapılandırma
@@ -111,7 +110,7 @@ Tüm izin verme ve blokları yönetmek için bkz. [Kiracı İzin Ver/Engelle Lis
 
 ## <a name="view-entries-in-the-tenant-allowblock-list"></a>Kiracı İzin Ver/Engelle Listesindeki girdileri görüntüleme
 
-1. konumundaki Microsoft 365 Defender portalında<https://security.microsoft.com>, **Kurallar** bölümünde **İlkeler & kurallar** \> **Tehdit İlkeleri** \> **Kiracı İzin Ver/Engelle Listeleri'ne** gidin. **Doğrudan Kiracı İzin Ver/Listeleri Engelle** sayfasına gitmek için kullanın<https://security.microsoft.com/tenantAllowBlockList>.
+1. konumundaki Microsoft 365 Defender portalında<https://security.microsoft.com>, **Kurallar** bölümünde **İlkeler & kurallar** \> **Tehdit İlkeleri** \> **Kiracı İzin Ver/Engelle Listeleri'ne** gidin. İsterseniz, doğrudan **Kiracı İzin Ver/Listeleri Engelle** sayfasına gitmek için kullanın <https://security.microsoft.com/tenantAllowBlockList>.
 
 2. İstediğiniz sekmeyi seçin. Kullanılabilir sütunlar seçtiğiniz sekmeye bağlıdır:
 
@@ -122,6 +121,11 @@ Tüm izin verme ve blokları yönetmek için bkz. [Kiracı İzin Ver/Engelle Lis
      - **Son güncelleştirme**
      - **Kaldırılacak yer**
      - **Notlar**
+   - **Sızdırma**
+     - **Sahte kullanıcı**
+     - **Altyapı gönderme**
+     - **Kimlik sahtekarı türü**: **İç** veya **Dış** değeri.
+     - **Eylem**: **Engelle** veya **İzin Ver** değeri.
    - **URL'ler**:
      - **Değer**: URL.
      - **Eylem**: **İzin Ver** veya **Engelle** değeri.
@@ -136,20 +140,15 @@ Tüm izin verme ve blokları yönetmek için bkz. [Kiracı İzin Ver/Engelle Lis
      - **Son güncelleştirme**
      - **Kaldırılacak yer**
      - **Notlar**
-   - **Sızdırma**
-     - **Sahte kullanıcı**
-     - **Altyapı gönderme**
-     - **Kimlik sahtekarı türü**: **İç** veya **Dış** değeri.
-     - **Eylem**: **Engelle** veya **İzin Ver** değeri.
 
    Artan veya azalan düzende sıralamak için sütun başlığına tıklayabilirsiniz.
 
    Sonuçları gruplandırmak için **Gruplandır'a** tıklayabilirsiniz. Kullanılabilir değerler seçtiğiniz sekmeye bağlıdır:
 
    - **Gönderenler**: Sonuçları **Eyleme** göre gruplandırabilirsiniz.
+   - **Kimlik sahtekarlığına:** Sonuçları **Eylem** veya **Kimlik Sahtekarı türüne** göre gruplandırabilirsiniz.
    - **URL'ler**: Sonuçları **Eyleme** göre gruplandırabilirsiniz.
    - **Dosyalar**: Sonuçları **Eyleme** göre gruplandırabilirsiniz.
-   - **Kimlik sahtekarlığına:** Sonuçları **Eylem** veya **Kimlik Sahtekarı türüne** göre gruplandırabilirsiniz.
 
    **Ara'ya** tıklayın, bir değerin tamamını veya bir bölümünü girin ve belirli bir değeri bulmak için ENTER tuşuna basın. İşiniz bittiğinde Aramayı temizle simgesine tıklayın ![.](../../media/m365-cc-sc-close-icon.png) **Aramayı temizle'yi seçin**.
 
@@ -160,6 +159,9 @@ Tüm izin verme ve blokları yönetmek için bkz. [Kiracı İzin Ver/Engelle Lis
      - **Hiçbir zaman süresi dolmaz**
      - **Son güncelleştirme tarihi**
      - **Kaldırılacak yer**
+   - **Sızdırma**
+     - **Eylem**
+     - **Kimlik sahtekarı türü**
    - **Url 'leri**
      - **Eylem**
      - **Hiçbir zaman süresi dolmaz**
@@ -170,9 +172,6 @@ Tüm izin verme ve blokları yönetmek için bkz. [Kiracı İzin Ver/Engelle Lis
      - **Hiçbir zaman süresi dolmaz**
      - **Son güncelleştirme**
      - **Kaldırılacak yer**
-   - **Sızdırma**
-     - **Eylem**
-     - **Kimlik sahtekarı türü**
 
    İşiniz bittiğinde **Uygula'ya** tıklayın. Mevcut filtreleri temizlemek için **Filtre'ye** tıklayın ve görüntülenen **Filtre** açılır öğesinde **Filtreleri temizle'ye** tıklayın.
 
