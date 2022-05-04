@@ -5,8 +5,10 @@
       items:
         - name: İş için Microsoft Defender nedir?
           href: mdb-overview.md
-        - name: Basitleştirilmiş yapılandırma işlemi
+        - name: Basitleştirilmiş yapılandırma
           href: mdb-simplified-configuration.md
+        - name: Akış planı deneme - İş için Defender
+          href: trial-playbook-defender-business.md
         - name: Küçük ve orta ölçekli işletmeler için planları karşılaştırın
           href: compare-mdb-m365-plans.md
         - name: Microsoft 365 Lighthouse ile tümleştirme
@@ -49,7 +51,7 @@
           href: mdb-review-remediation-actions.md
         - name: Raporları görüntüleme ve kullanma
           href: mdb-reports.md
-    - name: Güvenlik ilkelerini yönetme
+    - name: Güvenlik ilkelerini görüntüleme ve düzenleme
       items:
         - name: 'İlkeleri görüntüleme, düzenleme ve oluşturma'
           href: mdb-view-edit-create-policies.md
@@ -61,7 +63,7 @@
           href: mdb-firewall.md
         - name: Güvenlik duvarı ilkeleri için kuralları yönetme
           href: mdb-custom-rules-firewall.md
-    - name: Cihazları yönetme
+    - name: Cihazları izleme veya yönetme
       items:
         - name: İlkeleri ve cihazları görüntüleme
           href: mdb-manage-devices.md
@@ -71,6 +73,8 @@
           href: mdb-offboard-devices.md
     - name: Başvuru bilgileri
       items:
+        - name: API başvuru bilgileri
+          href: /microsoft-365/security/defender-endpoint/exposed-apis-create-app-partners
         - name: Yardım almak veya de destek ile iletişim kurma
           href: mdb-get-help.md
         - name: Sık sorulan sorular
