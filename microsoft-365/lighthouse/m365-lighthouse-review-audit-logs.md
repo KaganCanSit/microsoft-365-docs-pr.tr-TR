@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için denetim günlüklerini gözden geçirmeyi öğrenin.
-ms.openlocfilehash: ca4d1e9941e0c15fee169def7be0c2d801f522c2
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: 59e45f33b1c6708b4743605bda6ac4c93499bf59
+ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65022855"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65188778"
 ---
 # <a name="review-audit-logs-in-microsoft-365-lighthouse"></a>Microsoft 365 Lighthouse'de denetim günlüklerini gözden geçirme
 
@@ -96,8 +96,9 @@ Aşağıdaki tabloda Lighthouse denetim günlüklerinde yakalanan etkinlikler li
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Daha fazla bilgiye ihtiyacınız varsa, daha fazla denetim olayına erişmek için Microsoft Graph API kullanın. Daha fazla bilgi için bkz. [Microsoft 365 Lighthouse API'sini kullanarak çok kiracılı yönetime genel bakış](/graph/managedtenants-concept-overview).
+Gerekirse daha fazla denetim olayına erişmek için Microsoft Graph API kullanın. Daha fazla bilgi için bkz. [Microsoft 365 Lighthouse API'sini kullanarak çok kiracılı yönetime genel bakış](/graph/managedtenants-concept-overview).
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Microsoft 365 Lighthouse SSS](m365-lighthouse-faq.yml) (makale)
+[Microsoft 365 Lighthouse SSS](m365-lighthouse-faq.yml) (makale)\
+[Microsoft 365 Lighthouse'de Azure Active Directory rollerinizi görüntüleme](m365-lighthouse-view-your-roles.md) (makale)

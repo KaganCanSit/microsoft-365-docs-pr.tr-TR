@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: 51d5814d718c1422d493f5227b311a58f99f7a82
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 7b7586a75c95202e2737bab857ab1ffebd04d6c4
+ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64783281"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65187744"
 ---
 # <a name="microsoft-virus-initiative"></a>Microsoft Virüs Girişimi
 
@@ -53,6 +53,7 @@ MVI programına hak kazanmak için kuruluşunuzun aşağıdaki tüm gereksinimle
 |SKD Laboratuvarları|Sertifikasyon Gereksinimleri Ürünü: Virüsten koruma veya kötü amaçlı yazılımdan koruma </br> <http://www.skdlabs.com/html/english/> </br> <http://www.skdlabs.com/cert/>|SKD Labs Yıldız Denetimi Sertifikasyon Gereksinimleri geçiş >= %98,5 İsteğe Bağlı, Erişimde ve Toplam Algılama testleriyle|
 |VB 100|VB100 Sertifika Testi V1.1 </br> <https://www.virusbulletin.com/testing/vb100/vb100-methodology/vb100-methodology-ver1-1/>|VB100 Sertifikası|
 |West Coast Labs|Onay İşareti Sertifikalı </br> <http://www.checkmarkcertified.com/sme/>|Ürün Güvenliği Performansında "A" Derecelendirmesi|
+|SE Labs|Koruma, Küçük İşletme veya Enterprise EP Koruma Testi  </br> <https://selabs.uk/en/reports/consumers/>|Koruma Derecelendirme veya Küçük İşletme EP A derecelendirmesi veya Enterprise EP Koruması A derecelendirmesi |
 
 ## <a name="apply-now"></a>Şimdi uygula
 

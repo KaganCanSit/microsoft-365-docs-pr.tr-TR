@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: İstediğinizi korumak ve istemediğinizden kurtulmak için bekletme ilkesinde veya bekletme etiketi ilkesinde yapılandırabileceğiniz ayarları anlayın.
-ms.openlocfilehash: c0214476494e024247b76911475df88bdfbfa4ff
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: ab3adee8275f6c64dd7ad3b21547e8205b00ff7d
+ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65129232"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65187788"
 ---
 # <a name="common-settings-for-retention-policies-and-retention-label-policies"></a>Bekletme ilkeleri ve bekletme etiketi ilkeleri için yaygın ayarlar
 
@@ -240,6 +240,8 @@ Bekletme ilkelerindeki konumlar, Exchange e-posta ve SharePoint siteleri gibi be
 
 ### <a name="configuration-information-for-exchange-email-and-exchange-public-folders"></a>Exchange e-posta ve Exchange ortak klasörler için yapılandırma bilgileri
 
+**Hem Exchange e-posta** konumu hem de **Exchange ortak klasörler** konumu, bekletme ayarları uygulanmadan önce posta kutularının en az 10 MB veriye sahip olmasını gerektirir.
+
 **Exchange e-posta** konumu, bir posta kutusu düzeyinde bekletme ayarları uygulayarak kullanıcıların e-posta, takvim ve diğer posta kutusu öğeleri için bekletmeyi destekler. Paylaşılan posta kutuları da desteklenir.
 
 Kaynak posta kutuları, kişiler ve Microsoft 365 grup posta kutuları Exchange e-posta için desteklenmez. Microsoft 365 grup posta kutuları için bunun yerine **Microsoft 365 Grupları** konumu seçin. Exchange konumu başlangıçta statik kapsam için bir grup posta kutusunun seçilmesine izin veriyor olsa da, bekletme ilkesini kaydetmeye çalıştığınızda "RemoteGroupMailbox" bu konum için geçerli bir seçim değil hatasını alırsınız.
@@ -294,6 +296,8 @@ Uyarlamalı ilke kapsamları kullanan bir ilkeyi bekletme için yapılandırdı�
 ### <a name="configuration-information-for-microsoft-365-groups"></a>Microsoft 365 Grupları için yapılandırma bilgileri
 
 bir Microsoft 365 grubunun (eski adıyla Office 365 grubu) içeriğini korumak veya silmek için **Microsoft 365 Grupları** konumunu kullanın. Bekletme ilkeleri için bu konum grup posta kutusunu ve SharePoint ekip sitesini içerir. Bekletme etiketleri için bu konum yalnızca SharePoint ekip sitesini içerir.
+
+Bu ilke konumuyla hedeflediğiniz posta kutularına bekletme ayarları uygulanmadan önce en az 10 MB veri gerekir.
 
 > [!NOTE]
 > bir Microsoft 365 grubunun Exchange posta kutusu olsa da, **Exchange e-posta** konumu için bekletme ilkesi Microsoft 365 grup posta kutularına içerik içermez.

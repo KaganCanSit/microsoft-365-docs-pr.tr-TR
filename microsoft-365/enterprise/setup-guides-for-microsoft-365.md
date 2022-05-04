@@ -21,12 +21,12 @@ search.appverid:
 - BCS160
 ms.assetid: 165f46e8-3533-4d76-be57-97f81ebd40f2
 description: Kiracınızın lisanslarındaki özellikleri planlamak, geçirmek ve uygulamak için adım adım araçlar edinin. Çalıştırmanız gereken bir hizmeti veya uygulamayı ayarlamaya yönelik bir kılavuz bulun.
-ms.openlocfilehash: 6018a490cf77498b1767e7e269b17937f11ae011
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 61eccec443a939591e563daa5135239bf0e23a74
+ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097370"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65188734"
 ---
 # <a name="setup-guides-for-microsoft-365-and-office-365-services"></a>Microsoft 365 ve Office 365 hizmetleri için kurulum kılavuzları
 
@@ -67,7 +67,7 @@ Gmail kullanıcılarının posta kutusunu Microsoft 365 geçirdiğinizde e-posta
 
 [Microsoft 365 kurulum kılavuzu](https://aka.ms/microsoft365setupguide), üretkenlik araçlarını, güvenlik ilkelerini ve cihaz yönetimi özelliklerini ayarlarken size rehberlik sağlar. Kurumsal abonelik için Microsoft 365 İş Ekstra veya Microsoft 365, kuruluşunuzun cihazlarını ayarlamak ve yapılandırmak için bu danışmanı kullanabilirsiniz.
 
-Bulut hizmetlerinizi etkinleştirmek, cihazları desteklenen en son Windows 10 sürümüne güncelleştirmek ve cihazları tek bir merkezi konumda Azure Active Directory (Azure AD) olarak birleştirmek için yönergeler ve kaynaklara erişim elde edersiniz.
+Bulut hizmetlerinizi etkinleştirmek, cihazları desteklenen en son Windows 10 sürümüne güncelleştirmek ve cihazları tek bir merkezi konumda Azure Active Directory (Azure AD) olarak birleştirmek için rehberlik ve kaynaklara erişim elde edersiniz.
 
 ### <a name="remote-work-setup-guide"></a>Uzaktan çalışma kurulum kılavuzu
 
@@ -103,11 +103,11 @@ Microsoft Arama, kuruluşunuzun üzerinde çalıştığı şeyi tamamlamak için
 
 ### <a name="add-or-sync-users-to-microsoft-365"></a>kullanıcıları Microsoft 365 ekleme veya eşitleme
 
-[Bu kılavuz](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/modernonboarding/identitywizard), kullanıcı hesaplarınızı **Microsoft 365** ayarlama sürecini kolaylaştırmaya yardımcı olur. Ortamınıza ve gereksinimlerinize göre kullanıcıları tek tek eklemeyi, şirket içi dizininizi Azure AD bulut eşitlemesi veya Azure AD Bağlan ile geçirmeyi veya gerektiğinde mevcut eşitleme sorunlarını gidermeyi seçebilirsiniz.
+[Bu kılavuz](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/modernonboarding/identitywizard), kullanıcı hesaplarınızı **Microsoft 365** ayarlama sürecini kolaylaştırmaya yardımcı olur. Ortamınıza ve gereksinimlerinize göre kullanıcıları tek tek eklemeyi, şirket içi dizininizi Azure AD bulut eşitleme veya Azure AD Bağlan ile geçirmeyi veya gerektiğinde mevcut eşitleme sorunlarını gidermeyi seçebilirsiniz.
 
-### <a name="azure-ad-setup-guide"></a>Azure AD kurulum kılavuzu
+### <a name="azure-ad-setup-guide"></a>kurulum kılavuzunu Azure AD
 
-[Azure AD kurulum kılavuzu](https://aka.ms/aadpguidance), kuruluşunuzun güçlü bir güvenlik temeline sahip olduğundan emin olmak için bilgiler sağlar. Bu kılavuzda yöneticiler için Azure Rol tabanlı erişim denetimi (Azure RBAC), şirket içi dizininiz için Azure AD Bağlan ve Azure AD Bağlan Health gibi ilk özellikleri ayarlayıp otomatik eşitlemeler sırasında karma kimliğinizin durumunu izleyeceksiniz.
+[Azure AD kurulum kılavuzu](https://aka.ms/aadpguidance), kuruluşunuzun güçlü bir güvenlik temeline sahip olduğundan emin olmak için bilgi sağlar. Bu kılavuzda, otomatik eşitlemeler sırasında karma kimliğinizin durumunu izleyebilebilmeniz için yöneticiler için Azure Rol tabanlı erişim denetimi (Azure RBAC), şirket içi dizininiz için Azure AD Bağlan ve Azure AD Bağlan Sistem Durumu gibi ilk özellikleri ayarlayacaksınız.
 
 Ayrıca self servis parola sıfırlamalarını etkinleştirme, koşullu erişim ve isteğe bağlı gelişmiş kimlik koruması ve kullanıcı sağlama otomasyonu da dahil olmak üzere tümleşik üçüncü taraf oturum açma ile ilgili temel bilgileri içerir.
 
@@ -181,13 +181,13 @@ Bu kılavuzdaki çözümler, kuruluşunuz genelinde yerel sinyaller ve zenginle�
 * İletişim uyumluluğu çözümüyle, iş yerinde şiddet, içeriden ticaret, taciz, davranış kuralları ve mevzuat uyumluluğu ihlalleri gibi öğeler için iletişim risklerini belirleyebilir ve bu riskler üzerinde işlem yapabilirsiniz.
 * Insider risk yönetimi çözümü fikri mülkiyet hırsızlığı, hassas veri sızıntıları, güvenlik ihlalleri, veri taşması ve gizlilik ihlalleri risklerini belirlemenize, araştırmanıza ve bu riskler üzerinde işlem yapmanıza yardımcı olur.
 
-### <a name="information-protection-setup-guide"></a>Bilgi koruma kurulum kılavuzu
+### <a name="microsoft-purview-information-protection-setup-guide"></a>Microsoft Purview Information Protection kurulum kılavuzu
 
-Hassas bilgilerinizin korunduğundan emin olmak için bilgi koruma stratejinize uygulayabileceğiniz özelliklere genel bir bakış elde edin. Hassas bilgileri keşfetme, sınıflandırma, koruma ve izleme işlemlerinden oluşan dört aşamalı bir yaşam döngüsü yaklaşımı kullanın. [Microsoft bilgi koruması kurulum kılavuzu](https://aka.ms/mipsetupguide), bu aşamalardan her birini tamamlamak için gereken yönergeleri sağlar.
+Hassas bilgilerinizin korunduğundan emin olmak için bilgi koruma stratejinize uygulayabileceğiniz özelliklere genel bir bakış elde edin. Hassas bilgileri keşfetme, sınıflandırma, koruma ve izleme işlemlerinden oluşan dört aşamalı bir yaşam döngüsü yaklaşımı kullanın. [Microsoft Purview Information Protection kurulum kılavuzu](https://aka.ms/microsoftpurviewinformationprotectionsetupguide), bu aşamaların her birini tamamlamak için rehberlik sağlar.
 
-### <a name="data-lifecycle-management-setup-guide"></a>Veri yaşam döngüsü yönetimi kurulum kılavuzu
+### <a name="microsoft-purview-data-lifecycle-management-setup-guide"></a>Microsoft Purview Veri Yaşam Döngüsü Yönetimi kurulum kılavuzu
 
-[Microsoft bilgi idaresi kurulum kılavuzu](https://aka.ms/migsetupguide), verilerinizin belirlediğiniz belirli yaşam döngüsü yönergelerine göre sınıflandırıldığından ve yönetildiğinden emin olmak için kuruluşunuzun idare stratejisini ayarlamak ve yönetmek için ihtiyacınız olan bilgileri sağlar. Bu kılavuzla, kuruluşunuzun yeniden kullanılabilir içerik ve uyumluluk kayıtlarına uygulanan etiketleri, etiket ilkelerini ve bekletme ilkelerini oluşturmayı, otomatik uygulamayı veya yayımlamayı öğreneceksiniz. Ayrıca toplu senaryolar için bir dosya planıyla CSV dosyalarını içeri aktarma veya bunları tek tek belgelere el ile uygulama hakkında da bilgi edineceksiniz.
+[Microsoft Purview Veri Yaşam Döngüsü Yönetimi kurulum kılavuzu](https://aka.ms/migsetupguide), verilerinizin belirlediğiniz belirli yaşam döngüsü yönergelerine göre sınıflandırıldığından ve yönetildiğinden emin olmak için kuruluşunuzun idare stratejisini ayarlamak ve yönetmek için ihtiyacınız olan bilgileri sağlar. Bu kılavuzla, kuruluşunuzun içerik ve uyumluluk kayıtlarına uygulanan bekletme etiketleri, bekletme etiketi ilkeleri ve bekletme ilkeleri oluşturmayı, otomatik uygulamayı veya yayımlamayı öğreneceksiniz. Ayrıca toplu senaryolar için bir dosya planıyla CSV dosyalarını içeri aktarma veya bunları tek tek belgelere el ile uygulama hakkında da bilgi edineceksiniz.
 
 ### <a name="microsoft-defender-for-cloud-apps-setup-guide"></a>kurulum kılavuzunu Microsoft Defender for Cloud Apps
 

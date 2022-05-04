@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Bekletme etiketlerini yayımlama yönergelerini kullanarak, ihtiyacınız olan şeyleri korumak ve olmayanları silmek için bunları uygulamalara uygulayabilirsiniz.
-ms.openlocfilehash: c2088afd895b47945bea056c940e564b4dd770fb
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: dd20de86b17460d5b150b5bb576ae811e40eed32
+ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "65145405"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65187810"
 ---
 # <a name="publish-retention-labels-and-apply-them-in-apps"></a>Bekletme etiketlerini yayımlama ve uygulamalarda uygulama
 
@@ -88,7 +88,7 @@ Var olan bir bekletme etiketi ilkesini düzenlemek için (ilke türü **Yayımla
 
 Bekletme etiketlerini SharePoint veya OneDrive yayımlarsanız, bu etiketler genellikle kullanıcıların bir gün içinde seçmesi için görünür. Ancak yedi güne kadar izin verin. 
 
-Bekletme etiketlerini Exchange yayımlarsanız, bu bekletme etiketlerinin kullanıcılar için görünmesi yedi güne kadar sürebilir ve posta kutusu en az 10 MB veri içermelidir.
+Bekletme etiketlerini Exchange yayımlarsanız, bu bekletme etiketlerinin kullanıcılar için görünmesi yedi güne kadar sürebilir. Exchange için tüm bekletme ayarlarında olduğu gibi, posta kutusu en az 10 MB veri içermelidir.
 
 ![Yayımlanan etiketlerin ne zaman etkin olduğunu açıklayan diyagram.](../media/retention-labels-published-timings.png)
 

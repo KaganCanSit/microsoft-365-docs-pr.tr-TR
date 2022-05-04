@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için portal güvenliğini yapılandırmayı öğrenin.
-ms.openlocfilehash: de93ebfff03241500bb1788fc282c4b2bb747ea2
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 60e0d2f1ba61e5def3979358f338da0846914543
+ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64823575"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65188690"
 ---
 # <a name="configure-microsoft-365-lighthouse-portal-security"></a>Microsoft 365 Lighthouse portal güvenliğini yapılandırma
 
@@ -45,12 +45,12 @@ MSP teknisyenleri, Yönetici Temsilcisi Ayrıcalıkları (DAP) aracılığıyla 
 
 Lighthouse'da müşteri kiracısı ile ilgili olmayan eylemler için (örneğin, ekleme, müşteri devre dışı bırakma/yeniden etkinleştirme, etiketleri yönetme, günlükleri gözden geçirme), MSP teknisyenlerinin iş ortağı kiracısında atanmış bir rolü olmalıdır. İş ortağı kiracı rolleri hakkında daha fazla bilgi için bkz. Microsoft 365 Lighthouse izinlere [genel bakış](m365-lighthouse-overview-of-permissions.md).
 
-## <a name="set-up-azure-ad-privileged-identity-management-pim"></a>Azure AD Privileged Identity Management (PIM) ayarlama
+## <a name="set-up-azure-ad-privileged-identity-management-pim"></a>Azure AD Privileged Identity Management ayarlama (PIM)
 
 MSP'ler, PIM kullanarak bilgileri veya kaynakları güvenli hale getirmek için yüksek ayrıcalıklı rol erişimine sahip kişi sayısını en aza indirebilirsiniz. PIM, kötü amaçlı bir kişinin kaynaklara veya yetkili kullanıcılara yanlışlıkla hassas bir kaynağı etkileme olasılığını azaltır. MSP'ler ayrıca kullanıcılara kaynaklara erişmek, geniş değişiklikler yapmak ve belirlenen kullanıcıların ayrıcalıklı erişimleriyle ne yaptığını izlemek için tam zamanında yüksek ayrıcalıklı roller verebilir.
 
 > [!NOTE]
-> Azure AD PIM'in kullanılması için iş ortağı kiracısında Azure AD Premium P2 lisansı gerekir.
+> Azure AD PIM kullanmak için iş ortağı kiracısında Azure AD Premium P2 lisansı gerekir.
 
 Aşağıdaki adımlar, PIM kullanarak iş ortağı kiracı kullanıcılarını zaman kapsamlı daha yüksek ayrıcalık rollerine yükseltin:
 
@@ -62,9 +62,9 @@ Aşağıdaki adımlar, PIM kullanarak iş ortağı kiracı kullanıcılarını z
 
 PIM hakkında daha fazla bilgi edinmek için bkz. [Privileged Identity Management nedir?](/azure/active-directory/privileged-identity-management/pim-configure)
 
-## <a name="set-up-risk-based-azure-ad-conditional-access"></a>Risk tabanlı Azure AD Koşullu Erişim'i ayarlama
+## <a name="set-up-risk-based-azure-ad-conditional-access"></a>Risk tabanlı Azure AD Koşullu Erişimi ayarlama
 
-MSP'ler, personel üyelerinin kimliklerini MFA kullanarak ve riskli bir kullanıcı olarak algılandığında parolalarını değiştirerek (sızdırılan kimlik bilgileriyle veya Azure AD tehdit bilgilerine göre) kimliklerini kanıtlamalarını sağlamak için risk tabanlı Koşullu Erişim kullanabilir. Kullanıcıların riskli bir oturum açma olarak algılandığında tanıdık bir konumdan veya kayıtlı cihazdan da oturum açması gerekir. Diğer riskli davranışlar arasında kötü amaçlı veya anonim bir IP adresinden ya da atipik veya imkansız bir seyahat konumundan oturum açma, anormal belirteç kullanma, parola spreyinden parola kullanma veya başka olağan dışı oturum açma davranışı sergileme sayılabilir. Bir kullanıcının risk düzeyine bağlı olarak, MSP'ler oturum açma sırasında erişimi engellemeyi de seçebilir. Riskler hakkında daha fazla bilgi edinmek için bkz. [Risk nedir?](/azure/active-directory/identity-protection/concept-identity-protection-risks)
+MSP'ler, personel üyelerinin kimliklerini MFA kullanarak ve riskli bir kullanıcı olarak algılandığında parolalarını değiştirerek (sızan kimlik bilgileriyle veya Azure AD tehdit bilgilerine göre) kimliklerini kanıtlamalarını sağlamak için risk tabanlı Koşullu Erişim kullanabilir. Kullanıcıların riskli bir oturum açma olarak algılandığında tanıdık bir konumdan veya kayıtlı cihazdan da oturum açması gerekir. Diğer riskli davranışlar arasında kötü amaçlı veya anonim bir IP adresinden ya da atipik veya imkansız bir seyahat konumundan oturum açma, anormal belirteç kullanma, parola spreyinden parola kullanma veya başka olağan dışı oturum açma davranışı sergileme sayılabilir. Bir kullanıcının risk düzeyine bağlı olarak, MSP'ler oturum açma sırasında erişimi engellemeyi de seçebilir. Riskler hakkında daha fazla bilgi edinmek için bkz. [Risk nedir?](/azure/active-directory/identity-protection/concept-identity-protection-risks)
 
 > [!NOTE]
 > Koşullu Erişim, iş ortağı kiracısında Azure AD Premium P2 lisansı gerektirir. Koşullu Erişim'i ayarlamak için bkz. [Koşullu Erişimi Yapılandırma Azure Active Directory](/appcenter/general/configuring-aad-conditional-access).
@@ -72,6 +72,8 @@ MSP'ler, personel üyelerinin kimliklerini MFA kullanarak ve riskli bir kullanı
 ## <a name="related-content"></a>İlgili içerik
 
 [Parola sıfırlama izinleri](/azure/active-directory/roles/permissions-reference#password-reset-permissions) (makale)\
+[Microsoft 365 Lighthouse izinlerine genel bakış](m365-lighthouse-overview-of-permissions.md) (makale)\
+[Microsoft 365 Lighthouse'de Azure Active Directory rollerinizi görüntüleme](m365-lighthouse-view-your-roles.md) (makale)\
 [Microsoft 365 Lighthouse gereksinimleri](m365-lighthouse-requirements.md) (makale)\
 [Microsoft 365 Lighthouse genel bakış](m365-lighthouse-overview.md) (makale)\
 [Microsoft 365 Lighthouse için kaydolun](m365-lighthouse-sign-up.md) (makale)\

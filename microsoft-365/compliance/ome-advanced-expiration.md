@@ -1,5 +1,5 @@
 ---
-title: Tarafından şifrelenen e-posta için son kullanma tarihi Office 365 Gelişmiş İleti Şifrelemesi
+title: Microsoft Purview Gelişmiş İleti Şifreleme tarafından şifrelenen e-posta için bir son geçerlilik tarihi belirleme
 f1.keywords:
 - NOCSH
 ms.author: krowley
@@ -15,32 +15,36 @@ search.appverid:
 ms.collection:
 - Strat_O365_IP
 - M365-security-compliance
-description: E Office 365 Gelişmiş İleti Şifrelemesi markalı bir şablon aracılığıyla e-postalarda son kullanma tarihi ayarerek e-posta güvenliğinizi genişletmek üzere Bu Şablonu kullanın.
+description: Özel markalı bir şablon aracılığıyla e-postalarda son kullanma tarihi ayarlayarak e-posta güvenliğinizi genişletmek için Microsoft Purview Gelişmiş İleti Şifrelemesi'ni kullanın.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 1213ecf48ee9bd2e04accdd13aaf3ecd74d3faba
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: e8689820adc3158ae2a36a4d52ebad0959097b49
+ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983228"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65188404"
 ---
-# <a name="set-an-expiration-date-for-email-encrypted-by-office-365-advanced-message-encryption"></a>Tarafından şifrelenen e-posta için son kullanma tarihi Office 365 Gelişmiş İleti Şifrelemesi
+# <a name="set-an-expiration-date-for-email-encrypted-by-microsoft-purview-advanced-message-encryption"></a>Microsoft Purview Gelişmiş İleti Şifreleme tarafından şifrelenen e-posta için bir son geçerlilik tarihi belirleme
 
-Office 365 Gelişmiş İleti Şifrelemesi [E5, Microsoft 365 Kurumsal, Office 365 E5](https://www.microsoft.com/microsoft-365/enterprise/home) Microsoft 365 E5 (Kar Amacı Gütmeyen Personel Fiyatları) ve diğer Office 365 Kurumsal  E5 (Kar Amacı Gütmeyen Personel Fiyatları) ve A5 Office 365 Eğitim. Organizasyonda herhangi bir aboneliği olmayan bir Office 365 Gelişmiş İleti Şifrelemesi, satın almak için Microsoft 365 E5 Uyumluluk için SKU Microsoft 365 E3, Microsoft 365 E3  (Kar Amacı Gütmeyen Personel Fiyatları) Office 365 Gelişmiş Uyumluluk veya Microsoft 365 E3, Microsoft 365 E3 (Kar Amacı Gütmeyen Personel Fiyatları) veya SKU için SKU Office 365.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Kullanıcılarının şifreli e-postalara erişmek için OME Portalını kullanan dış alıcılara göndertikleri e-postalarda ileti süre sonu kullanabilirsiniz. Alıcıları, son kullanma tarihini belirten özel bir markalı şablon kullanarak, kuruluş tarafından gönderilen şifrelenmiş e-postaları görüntülemek ve yanıtlamak için OME portalını kullanmaya Windows PowerShell.
+Microsoft Purview Gelişmiş İleti Şifrelemesi [Microsoft 365 Kurumsal E5, Office 365 E5](https://www.microsoft.com/microsoft-365/enterprise/home), Microsoft 365 E5 (Kar Amacı Gütmeyen Personel Fiyatlandırması), Office 365 Kurumsal E5 (Kar Amacı Gütmeyen Personel Fiyatlandırması) ve Office 365 Eğitim A5. Microsoft 365 E3, Microsoft 365 E3 (Kar Amacı Gütmeyen Personel Fiyatlandırması) için SKU eklentisini veya Microsoft 365 E3 için Office 365 Gelişmiş Uyumluluk SKU eklentisini Microsoft 365 E5 Uyumluluk , Microsoft 365 E3 (Kar Amacı Gütmeyen Personel Fiyatlandırması) veya SKU'ları Office 365.
 
-Bir Office 365 yöneticisi olarak, kuruluş e-posta iletilerinin görünümünü özelleştirmek için şirket markanızı uygulayan bir genel yönetici olarak, bu e-posta iletileri için bir süre sonu da belirtebilirsiniz. Bu Office 365 Gelişmiş İleti Şifrelemesi, kuruluştan gelen şifrelenmiş e-postalar için birden çok şablon oluşturabilirsiniz. Şablon kullanarak, alıcıların kullanıcılarınız tarafından gönderilen postalara ne kadar süreyle erişeni kontrol etmek için kullanabilirsiniz.
+Kuruluşunuzun Microsoft Purview Gelişmiş İleti Şifrelemesi içermeyen bir aboneliği varsa, Microsoft 365 E3, Microsoft 365 E3 (Kar Amacı Gütmeyen Personel Fiyatlandırması) için Microsoft 365 E5 Uyumluluk SKU eklentisiyle veya Microsoft 365 E3, Microsoft 365 E3 (Kar Amacı Gütmeyen Personel Fiyatlandırması) veya SKU'ları Office 365 için SKU eklentisini Office 365 Gelişmiş Uyumluluk.
 
-Son kullanıcı son kullanma tarihi ayarlanmış bir posta aldığında, kullanıcı kaydıran e-postada son kullanma tarihini görür. Kullanıcı süresi dolmuş bir postayı açmayı deniyorsa, OME portalında bir hata görüntülenir.
+Kullanıcılarınızın şifrelenmiş e-postalara erişmek için OME Portalını kullanan dış alıcılara gönderdiği e-postalarda ileti süre sonunu kullanabilirsiniz. Windows PowerShell'de son kullanma tarihini belirten özel markalı bir şablon kullanarak kuruluşunuz tarafından gönderilen şifrelenmiş e-postaları görüntülemek ve yanıtlamak için alıcıları OME portalını kullanmaya zorlarsınız.
 
-Yalnızca dış alıcılara gönderilen e-postalar için son kullanma tarihleri ayarlayabilirsiniz.
+Office 365 genel yöneticisi olarak, kuruluşunuzun e-posta iletilerinin görünümünü özelleştirmek için şirket markanızı uyguladığınızda, bu e-posta iletileri için bir süre sonu da belirtebilirsiniz. Microsoft Purview Gelişmiş İleti Şifrelemesi ile, kuruluşunuzdan kaynaklanan şifrelenmiş e-postalar için birden çok şablon oluşturabilirsiniz. Şablon kullanarak, alıcıların kullanıcılarınız tarafından gönderilen postalara ne kadar süreyle erişebileceğini denetleyebilirsiniz.
 
-Diğer Office 365 Gelişmiş İleti Şifrelemesi ile, özel markalama her uygulamanıza Office 365 şablonun uygulandığı posta akışı kuralına uyan e-postaya kaydırlayıcıyı uygular. Buna ek olarak, yalnızca özel markalama kullanıyorsanız sona ermeyi kullanabilirsiniz.
+Son kullanıcı, son kullanma tarihi ayarlanmış bir posta aldığında, sarmalayıcı e-postasında son kullanma tarihini görür. Kullanıcı süresi dolan bir postayı açmaya çalışırsa, OME portalında bir hata görüntülenir.
 
-## <a name="create-a-custom-branding-template-to-force-mail-expiration-by-using-powershell"></a>PowerShell kullanarak postanın süre dolmasını zorlamak için özel bir markalama şablonu oluşturma
+Yalnızca dış alıcılara e-postalar için son kullanma tarihleri ayarlayabilirsiniz.
 
-1. [Bağlan Exchange Online izinlerine](/powershell/exchange/connect-to-exchange-online-powershell) sahip bir hesap ile PowerShell'i ayarlamayı da sağlar.
+Microsoft Purview Gelişmiş İleti Şifrelemesi ile özel markalama uyguladığınızda, Office 365 sarmalayıcıyı şablonu uyguladığınız posta akışı kuralına uyan e-postaya uygular. Ayrıca, süre sonunu yalnızca özel markalama kullanıyorsanız kullanabilirsiniz.
+
+## <a name="create-a-custom-branding-template-to-force-mail-expiration-by-using-powershell"></a>PowerShell kullanarak posta süre sonunu zorlamak için özel bir marka şablonu oluşturma
+
+1. [PowerShell'i](/powershell/exchange/connect-to-exchange-online-powershell) kuruluşunuzda genel yönetici izinlerine sahip bir hesapla Exchange Online Bağlan.
 
 2. New-OMEConfiguration cmdlet'ini çalıştırın.
 
@@ -48,16 +52,16 @@ Diğer Office 365 Gelişmiş İleti Şifrelemesi ile, özel markalama her uygula
     New-OMEConfiguration -Identity "Expire in 7 days" -ExternalMailExpiryInDays 7
     ```
 
-Burada:
+Nerede:
 
 - `Identity` özel şablonun adıdır.
 
-- `ExternalMailExpiryInDays` alıcıların süresi dolmadan önce postayı saklayacakları gün sayısını tanımlar. 1-730 gün arasında herhangi bir değeri kullanabilirsiniz.
+- `ExternalMailExpiryInDays` , alıcıların süresi dolmadan önce postaları tutabilecekleri gün sayısını tanımlar. 1-730 gün arasındaki herhangi bir değeri kullanabilirsiniz.
 
-## <a name="more-information-about-office-365-advanced-message-encryption"></a>Daha fazla bilgi Office 365 Gelişmiş İleti Şifrelemesi
+## <a name="more-information-about-microsoft-purview-advanced-message-encryption"></a>Microsoft Purview Gelişmiş İleti Şifrelemesi hakkında daha fazla bilgi
 
-- [Office 365 Gelişmiş İleti Şifrelemesi](ome-advanced-message-encryption.md)
+- [Gelişmiş İleti Şifrelemesi](ome-advanced-message-encryption.md)
 
-- [Kullanıcı tarafından şifrelenen e-postaları iptal Office 365 Gelişmiş İleti Şifrelemesi](revoke-ome-encrypted-mail.md)
+- [Microsoft Purview Gelişmiş İleti Şifreleme tarafından şifrelenen e-postayı iptal etme](revoke-ome-encrypted-mail.md)
 
 - [İleti ilkesi ve uyumluluk hizmeti açıklaması](/office365/servicedescriptions/exchange-online-service-description/message-policy-and-compliance)

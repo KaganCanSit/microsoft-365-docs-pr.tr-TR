@@ -26,6 +26,8 @@
   items:
     - name: Kiracılar sayfasına genel bakış
       href: m365-lighthouse-tenants-page-overview.md
+    - name: Kiracılar genelinde Azure AD rollerinizi görüntüleme
+      href: m365-lighthouse-view-your-roles.md
     - name: Kiracı listenizi yönetme
       href: m365-lighthouse-manage-tenant-list.md
     - name: Hizmet durumu geçmişini görüntüleme

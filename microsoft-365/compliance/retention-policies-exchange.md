@@ -17,14 +17,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Bekletmenin Exchange için nasıl çalıştığını öğrenin.
-ms.openlocfilehash: 66b7ad888e62ff84b6a2de49714bbbdf96268312
-ms.sourcegitcommit: 1d972f15a45204e89e268c5ff257021aced5e775
+ms.openlocfilehash: d5c961c733dd757c1f2b8179793b43991e71b4d8
+ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2022
-ms.locfileid: "64911434"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65188756"
 ---
 # <a name="learn-about-retention-for-exchange"></a>Exchange için bekletme hakkında bilgi edinin
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bu makaledeki bilgiler, Exchange özgü bilgiler içerdiğinden [Saklama hakkında bilgi edinin](retention.md) ekini ekler.  Diğer iş yükleri için bkz:
 
@@ -41,6 +43,8 @@ Bitiş tarihi olan takvim öğeleri bekletme ilkeleri için desteklenir ancak be
 Kişiler ve bitiş tarihi olmayan görevler ve takvim öğeleri desteklenmez.
 
 Posta kutusunda depolanan Skype ve Teams iletileri gibi diğer öğeler, Exchange saklama ilkelerine veya etiketlerine dahil değildir. Bu öğelerin kendi bekletme ilkeleri vardır.
+
+Bekletme ayarları uygulanmadan önce posta kutuları en az 10 MB veriye sahip olmalıdır ve bekletme etiketleri bu verilere yayımlanabilir.
 
 ## <a name="how-retention-works-for-exchange"></a>Bekletme Exchange için nasıl çalışır?
 
@@ -97,7 +101,7 @@ Veriler kalıcı olarak silindiği veya saklama süresinin dolduğu için beklet
 
 ## <a name="configuration-guidance"></a>Yapılandırma kılavuzu
 
-Microsoft 365'da bekletmeyi yapılandırma konusunda yeniyseniz bkz. [bilgi idaresiyle Kullanmaya başlayın](get-started-with-information-governance.md).
+Microsoft 365'de saklamayı yapılandırma konusunda yeniyseniz bkz. [Veri yaşam döngüsü yönetimiyle Kullanmaya başlayın](get-started-with-data-lifecycle-management.md).
 
 Exchange için bir bekletme ilkesi veya bekletme etiketi yapılandırmaya hazırsanız aşağıdaki yönergelere bakın:
 - [Bekletme ilkeleri oluşturma ve yapılandırma](create-retention-policies.md)

@@ -14,12 +14,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview çözümleri deneme sürümü ve nasıl kaydolacağınızı öğrenin.
-ms.openlocfilehash: ed7848a12483062c2873f4735ecb2188cad373a1
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: 653c80e7c8b412ac1d9c14a021519ca80baab6e9
+ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65023689"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65188844"
 ---
 # <a name="about-the-microsoft-purview-solutions-trial"></a>Microsoft Purview çözümleri deneme sürümü hakkında
 
@@ -31,7 +31,7 @@ Microsoft Purview çözümleri deneme sürümü, Microsoft Purview çözümlerin
 
 ## <a name="terms-and-conditions"></a>Hüküm ve koşullar
 
-Microsoft Purview denemelerinin [hüküm ve koşullarına](terms-conditions.md) bakın.
+Microsoft 365 denemelerinin [hüküm ve koşullarına](/legal/microsoft-365/microsoft-365-trial) bakın.
 
 ## <a name="eligibility"></a>Uygunluk
 

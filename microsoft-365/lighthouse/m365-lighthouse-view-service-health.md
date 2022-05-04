@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için kiracı hizmet durumunu görüntülemeyi öğrenin.
-ms.openlocfilehash: c5cfed4449fbdbb6cb63bc80dfd8e23ca4d5c4bb
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: 8ad96c77f14148fefd6d00cd51af093cd081d857
+ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65023623"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65187832"
 ---
 # <a name="view-tenant-service-health-in-microsoft-365-lighthouse"></a>kiracı hizmetinin durumunu Microsoft 365 Lighthouse görüntüleme
 
@@ -31,7 +31,7 @@ Lighthouse'da oturum açamıyorsanız, iş ortağı kiracınızda oturum açman�
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Hizmet durumunu görüntülemek için iş ortağı kiracısında şu özellik kümesine sahip bir Azure AD rolüne sahip olmanız gerekir: **microsoft.office365.serviceHealth/allEntities/allTasks**. Azure AD rollerinin listesi için bkz. [Azure AD yerleşik rolleri](/azure/active-directory/roles/permissions-reference).
+Hizmet durumunu görüntülemek için, iş ortağı kiracısında şu özellik kümesine sahip bir Azure AD rolüne sahip olmanız gerekir: **microsoft.office365.serviceHealth/allEntities/allTasks**. Azure AD rollerin listesi için bkz. [yerleşik rolleri Azure AD](/azure/active-directory/roles/permissions-reference).
 
 ## <a name="view-service-health-status-for-all-tenants"></a>Tüm kiracılar için hizmet durumunu görüntüleme
 
@@ -62,4 +62,5 @@ Hizmet durumunu görüntülemek için iş ortağı kiracısında şu özellik k�
 ## <a name="related-content"></a>İlgili içerik
 
 [Microsoft 365 hizmet durumunu denetleme](/microsoft-365/enterprise/view-service-health) (makale)\
-[Microsoft 365 Lighthouse ile ilgili bilinen sorunlar](m365-lighthouse-known-issues.md) (makale)
+[Microsoft 365 Lighthouse ile ilgili bilinen sorunlar](m365-lighthouse-known-issues.md) (makale)\
+[Microsoft 365 Lighthouse'de Azure Active Directory rollerinizi görüntüleme](m365-lighthouse-view-your-roles.md) (makale)

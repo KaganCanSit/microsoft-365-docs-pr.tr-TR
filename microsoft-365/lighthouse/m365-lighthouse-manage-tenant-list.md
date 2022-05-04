@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için kiracı listenizi yönetmeyi öğrenin.
-ms.openlocfilehash: b4bffcfd5b8962253e68938a956949ca8470f818
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: bdd92f066f0b94c545b102b96eedb7e08c10ed96
+ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65022437"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65188338"
 ---
 # <a name="manage-your-tenant-list-in-microsoft-365-lighthouse"></a>Microsoft 365 Lighthouse'de kiracı listenizi yönetme
 
@@ -106,4 +106,6 @@ Etiketleri oluşturup atadıktan sonra, kiracılarınızı filtrelemek için bun
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Microsoft 365 Lighthouse için kaydolma](m365-lighthouse-sign-up.md) (makale) [Microsoft 365 Lighthouse Cihaz uyumluluğu sayfasına genel bakış](m365-lighthouse-device-compliance-page-overview.md) (makale) [Microsoft 365 Lighthouse SSS](m365-lighthouse-faq.yml) (makale)
+[Microsoft 365 Lighthouse için kaydolun](m365-lighthouse-sign-up.md) (makale)\
+[Microsoft 365 Lighthouse'de Cihaz uyumluluğu sayfasına genel bakış](m365-lighthouse-device-compliance-page-overview.md) (makale)\
+[Microsoft 365 Lighthouse SSS](m365-lighthouse-faq.yml) (makale)

@@ -17,12 +17,12 @@ ms.collection:
 description: Yöneticiler, iyi ve kötü iletileri ve dosyaları analiz için Microsoft'a bildirmenin farklı yolları hakkında bilgi edinebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: d2ddd9c0d96355af1ccdbb40cdd5c7542d9852c1
-ms.sourcegitcommit: 58ec09f1fd66af9717dc2743585d06d358ec7360
+ms.openlocfilehash: 56ef5cd5a376f4d10af1ad8c592dad02dbc8ef0a
+ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2022
-ms.locfileid: "65144729"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65188448"
 ---
 # <a name="report-messages-and-files-to-microsoft"></a>İletileri ve dosyaları Microsoft'a bildirme
 
@@ -46,4 +46,4 @@ Exchange Online posta kutusu olmayan Exchange Online veya tek başına Exchange 
 > [!NOTE]
 > Bir e-posta varlığını Microsoft'a bildirdiğinizde, sürekli algoritma incelemelerimize dahil etmek için e-postayla ilişkili her şeyin bir kopyasını oluştururuz. Bu kopya e-posta içeriğini, e-posta üst bilgilerini ve e-posta yönlendirmeyle ilgili verileri içerir. İletideki ekler de eklenir.
 >
-> Microsoft, geri bildiriminizi kuruluşunuzun daha önce açıklanan tüm bilgileri analiz etmemize ve ileti hijyen algoritmalarına ince ayar yapmak için çalışmamıza izni olarak değerlendirmektedir. Gönderinizi bize sağladıktan en fazla 30 gün sonra silene kadar mesajınızı ABD'deki güvenli denetimli veri merkezlerimizde tutarız. Microsoft'taki personel gönderdiğiniz iletiyi ve ekleri okuyabilir ve bu, normalde Office 365 e-posta için izin verilmez. Ancak, e-postanız sizinle Microsoft arasında gizli olarak kabul edilir ve bu inceleme işlemi için e-postayı veya eklerini okuması için gönderiminizi başka bir tarafa sağlarız.
+> Microsoft, geri bildiriminizi kuruluşunuzun daha önce açıklanan tüm bilgileri analiz etmemize ve ileti hijyen algoritmalarına ince ayar yapmak için çalışmamıza izni olarak değerlendirmektedir. Gönderinizi bize sağladıktan en fazla 30 gün sonra silene kadar mesajınızı ABD'deki güvenli denetimli veri merkezlerimizde tutarız. Microsoft'taki personel gönderdiğiniz iletiyi ve ekleri okuyabilir ve bu, normalde Office 365 e-posta için izin verilmez. Ancak, e-postanız sizinle Microsoft arasında gizli olarak kabul edilmeye devam eder ve bu inceleme işlemi için e-postayı veya eklerini okuması için gönderiminizi başka bir tarafa sağlamayacağız.

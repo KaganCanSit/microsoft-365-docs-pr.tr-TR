@@ -1,5 +1,5 @@
 ---
-title: Microsoft Uyumluluk Yöneticisi premium değerlendirme denemesi hakkında
+title: Microsoft Purview Compliance Manager premium değerlendirme deneme sürümü hakkında
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -13,57 +13,59 @@ ms.localizationpriority: high
 search.appverid:
 - MOE150
 - MET150
-description: Microsoft Uyumluluk Yöneticisi premium değerlendirme denemeleri hakkında.
-ms.openlocfilehash: b7eaa963a3978a38db8511f30aa663670e7168c7
-ms.sourcegitcommit: 4c207a9bdbb6c8ba372ae37907ccefca031a49f8
+description: Microsoft Purview Uyumluluk Yöneticisi premium değerlendirme denemeleri hakkında.
+ms.openlocfilehash: b5d653626eadbfcc6e58d2be36a7ed8899c02eeb
+ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "63027509"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65187766"
 ---
-# <a name="about-the-free-trial-for-microsoft-compliance-manager-premium-assessments"></a>Microsoft Uyumluluk Yöneticisi premium değerlendirmeleri için ücretsiz deneme hakkında
+# <a name="about-the-free-trial-for-microsoft-purview-compliance-manager-premium-assessments"></a>Microsoft Purview Uyumluluk Yöneticisi premium değerlendirmeleri için ücretsiz deneme hakkında
 
-Uyumluluk Yöneticisi, kuruluşun uyumluluk gereksinimlerini yönetmenize, uyumluluk puanınızı değerlendirmenize ve geliştirmenize yardımcı olur. Sizin derlediği değerlendirmeler, dünya üzerinde resmi düzenlemelere ve endüstri standartlarıyla ilgili şablonlara dayalıdır.  
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Uyumluluk Yöneticisi'ni kullanmak için lisans sözleşmeniz, değerlendirme oluşturmak üzere bir veya birden çok yerleşik şablon içerebilir. Kapsamlı bir premium değerlendirme şablonları kitaplığı, kurum kurum gereklerine özel değerlendirmeler oluşturmak için de kullanılabilir. Bu şablonları lisans satın almadan önce denemek için ücretsiz Uyumluluk Yöneticisi premium değerlendirme deneme sürümüne kaydolabilirsiniz.
+Uyumluluk Yöneticisi, kuruluşunuzun uyumluluk gereksinimlerini yönetmenize ve uyumluluk puanınızı değerlendirmenize ve geliştirmenize yardımcı olur. Oluşturduğunuz değerlendirmeler, dünyanın dört bir yanındaki kamu düzenlemelerine ve endüstri standartlarına karşılık gelen şablonları temel alır.  
+
+Uyumluluk Yöneticisi'ni kullanmak için lisans sözleşmeniz değerlendirme oluşturmak için bir veya daha fazla yerleşik şablon içerebilir. Kuruluşunuzun ihtiyaçlarına özgü değerlendirmeler oluşturmak için kapsamlı bir premium değerlendirme şablonları kitaplığı da mevcuttur. Lisans satın almadan önce bu şablonları denemek için ücretsiz Uyumluluk Yöneticisi premium değerlendirme deneme sürümüne kaydolun.
 
 ## <a name="terms-and-conditions"></a>Hüküm ve koşullar
 
-Uyumluluk [denemeleri için hüküm](terms-conditions.md) ve Microsoft 365 bakın.
+Microsoft 365 denemelerinin [hüküm ve koşullarına](/legal/microsoft-365/microsoft-365-trial) bakın.
 
 ## <a name="set-up-a-premium-assessment-trial"></a>Premium değerlendirme denemesi ayarlama
 
-Sol gezinti bölmesindeki Denemeler bağlantısını Microsoft 365 uyumluluk merkezi **deneme** sürümüne kaydolabilirsiniz. Premium değerlendirme **şablonları için deneme başlatmak için** Uyumluluk Yöneticisi premium değerlendirme denemesini seçin.
+Sol gezinti bölmesindeki **Denemeler** bağlantısını kullanarak Microsoft Purview uyumluluk portalında deneme sürümüne kaydolabilirsiniz. Premium değerlendirme şablonları için bir deneme başlatmak için **Uyumluluk Yöneticisi premium** değerlendirme deneme sürümünü seçin.
 
-Bu premium değerlendirme denemesi, Uyumluluk Yöneticisi'ni ticari lisans kapsamında kullanan kuruluşlar tarafından kullanılabilir. Daha GCC DOD bilgileri ve deneme seçenekleri için bkz[. Uyumluluk Yöneticisi şablonlarıyla çalışma](compliance-manager-templates.md).
+Bu premium değerlendirme deneme sürümü, ticari lisans kapsamında Uyumluluk Yöneticisi kullanan kuruluşlar tarafından kullanılabilir. GCC ve DOD bilgileri ve deneme seçenekleri için bkz. [Uyumluluk Yöneticisi şablonlarıyla çalışma](compliance-manager-templates.md).
 
-Uyumluluk Yöneticisi özelliklerine tam erişim, Uyumluluk Yöneticisi lisans sözleşmenize bağlı olabilir. Uyumluluk Yöneticisi'ni içeren ücretsiz uyumluluk denemesi hakkında daha fazla bilgi edinmek için bkz[. Uyumluluk Yöneticisinin ücretsiz denemesi Microsoft 365.](compliance-easy-trials.md)
+Uyumluluk Yöneticisi özelliklerine tam erişim, Uyumluluk Yöneticisi lisans sözleşmenize bağlı olabilir. Uyumluluk Yöneticisi'ni içeren ücretsiz uyumluluk deneme sürümü hakkında daha fazla bilgi edinmek için bkz. [Microsoft Purview için ücretsiz deneme sürümü hakkında](compliance-easy-trials.md).
 
 > [!NOTE]
-> Deneme Microsoft 365 yönetim merkezi kaydı kolaylaştırmak için güvenlik ayarlarınızı kontrol edin. Kuruluş Microsoft 365 yönetim merkezi, Hizmetler Ayarlar > **Kuruluş ayarları'>** ve Kullanıcıya ait **uygulamalar ve hizmetler'i seçin**. Ardından, kullanıcıların kuruluş adına denemeler başlatmasına izin ver kutusunu işaretleyin. Yaklaşık iki dakika içinde kurulum tamam olduğunda, geri dönüp bu ayarı devre dışı bırakmak için kutunun işaretini kaldırabilirsiniz. Ayrıca Faturalama ve Hizmet satın alma sayfasına gidip Uyumluluk Yöneticisi premium değerlendirme denemesini **arayarak** > ayarlarınızı ayarlamadan denemeyi başlatabilirsiniz.
+> Deneme sürümüne kaydolmayı kolaylaştırmak için Microsoft 365 yönetim merkezi ayarlarınızı denetleyin. Microsoft 365 yönetim merkezi **Ayarlar > Kuruluş ayarları > Hizmetler** sayfasına gidin ve **Kullanıcıya ait uygulamalar ve hizmetler'i** seçin. Ardından kullanıcıların kuruluşunuz adına denemeler başlatmasına izin vermek için kutuyu işaretleyin. Kurulum yaklaşık iki dakika içinde tamamlandığında, bu ayarı devre dışı bırakmak için geri dönüp kutunun işaretini kaldırabilirsiniz. **Ayrıca Faturalama > Satın alma hizmetleri** sayfasına gidip Compliance Manager premium değerlendirme deneme sürümünü arayarak kuruluş ayarlarınızı değiştirmeden denemeyi başlatabilirsiniz.
 
-## <a name="template-licensing"></a>Şablon lisansı
+## <a name="template-licensing"></a>Şablon lisanslama
 
-Premium değerlendirmeler için tek kullanımlık denemenizi başlatarak, 90 gün boyunca istediğiniz 25 premium şablonu ücretsiz kullanma hakkı verir. 25 şablondan istediğiniz kadar değerlendirme oluşturabilirsiniz.
+Premium değerlendirmeler için tek seferlik denemenizi başlatmak, seçtiğiniz 25 premium şablonu 90 gün boyunca ücretsiz olarak kullanma hakkı verir. 25 şablondan istediğiniz kadar değerlendirme oluşturabilirsiniz.
 
-Denemenizi başlatıldıktan sonra Uyumluluk Yöneticisi'nde  Değerlendirmeler sekmenize gidin ve kaç şablonun kullanılabilir ve kullanılabilir durumda olduğunu görmek için Etkin **/** Lisanslı şablonlar sayaçını görüntüleyin. Bu sayaçta 25 lisanslı şablonunuz gösterir. Bu şablonları kullanarak değerlendirmeler güncelleştirmesi için etkinleştirilen numaranız güncelleştirmesi gerekir. Şablon kullanımı temel alınan sertifikaya göre sayılır; yani, aynı şablona veya aynı şablonun farklı ürünleri destekleyen farklı sürümlerine dayalı birden çok değerlendirme, tek bir şablon kullanımı olarak sayılır.
+Deneme sürümünüzü başlattıktan sonra Uyumluluk Yöneticisi'ndeki **Değerlendirmeler** sekmesine gidin ve **Etkinleştirilmiş/Lisanslı şablonlar** sayacını görüntüleyip kaç şablonun kullanılabilir ve kullanımda olduğunu görün. Bu sayaç, 25 lisanslı şablonunuzu gösterir. Bu şablonları kullanarak değerlendirmeler oluştururken, etkinleştirilmiş numaranız güncelleştirilir. Şablon kullanımı, temel alınan sertifikasyona göre sayılır; başka bir deyişle, aynı şablonu temel alan birden çok değerlendirmenin veya aynı şablonun farklı ürünleri destekleyen farklı sürümlerinin tek bir şablon kullanımı olarak sayılacağı anlamına gelir.
 
-Uyumluluk Yöneticisi şablonlarını kullanma ve yönetme hakkında daha fazla bilgi için bkz [. Değerlendirme şablonlarıyla çalışma](compliance-manager-templates.md).
+Uyumluluk Yöneticisi şablonlarını kullanma ve yönetme hakkında daha fazla bilgi için bkz. [Değerlendirme şablonlarıyla çalışma](compliance-manager-templates.md).
 
 ## <a name="permissions"></a>İzinler
 
-Uyumluluk Yöneticisi'ne erişim izni olan tüm kullanıcılar premium değerlendirme deneme sürümüne kaydolabilirsiniz. Uyumluluk Yöneticisi için gereken [izinler ve roller hakkında daha fazla bilgi edinebilirsiniz](compliance-manager-setup.md#set-user-permissions-and-assign-roles).
+Kuruluşunuzda Uyumluluk Yöneticisi'ne erişim izinleri olan tüm kullanıcılar premium değerlendirme denemesine kaydolabilir. [Uyumluluk Yöneticisi için gereken izinler ve roller](compliance-manager-setup.md#set-user-permissions-and-assign-roles) hakkında daha fazla bilgi edinin.
 
 ## <a name="during-your-trial"></a>Denemeniz sırasında
 
-Deneme süreniz boyunca, oluşturduğunuz değerlendirmeleri, gerçekleştirilen iyileştirme eylemlerini, uyumluluk puanınıza bunun nasıl katkıda olduğunu ve deneme sürenizin ne kadar süreyle kalan bölümünü görmek için Uyumluluk Yöneticisi'nde Genel Bakış sayfasının Deneme özeti bölümünü gözden geçirebilirsiniz. Buradan, kullanılabilir şablonlar listesini gözden geçirebilirsiniz ve devam eden kullanım için bunları satın alma hakkında daha fazla bilgi de kullanabilirsiniz.
+Deneme sürümünüz boyunca, Uyumluluk Yöneticisi'ndeki **Genel Bakış** sayfasının **Deneme özeti** bölümünü gözden geçirerek kaç değerlendirme oluşturduğunuzu, kaç geliştirme eylemi gerçekleştirdiğinizi, uyumluluk puanınıza nasıl katkıda bulunduğunu ve deneme sürenizin ne kadar kaldığını görebilirsiniz. Buradan, kullanılabilir şablonların listesini gözden geçirebilir ve bunları sürekli kullanım için satın alma hakkında daha fazla bilgi edinebilirsiniz.
 
-## <a name="after-the-trial"></a>Denemeden sonra
+## <a name="after-the-trial"></a>Deneme sürümünden sonra
 
-Deneme süreniz sona erdikten sonra, kullanılan şablonlar otomatik güncelleştirmeleri almaz ve mevzuat değişiklikleriyle güncel değildir. Satın almak olmadığınız şablonlardan yerleşik olarak gelen değerlendirmeleri silmenizi öneririz.
+Deneme sürümünüz sona erdikten sonra, kullandığınız şablonlar otomatik güncelleştirmeleri almaz ve herhangi bir mevzuat değişikliğiyle güncelliğini yitirebilir. Satın almayı amaçlamadığınız şablonlardan oluşturulan değerlendirmeleri silmenizi öneririz.
 
-## <a name="learn-more-about-compliance"></a>Uyumluluk hakkında daha fazla bilgi
+## <a name="learn-more-about-compliance"></a>Uyumluluk hakkında daha fazla bilgi edinin
 
-Uyumluluk Yöneticisi'nin özellikleri ve bu özelliğin organizasyona uyumluluk ve mevzuat gereksinimlerini karşılama konusunda nasıl yardımcı olduğu hakkında daha fazla bilgi edinmek için bkz [. Microsoft Uyumluluk Yöneticisi](compliance-manager.md).  
+Uyumluluk Yöneticisi'nin özellikleri ve kuruluşunuzun uyumluluk ve mevzuat gereksinimlerini karşılamasına nasıl yardımcı olabileceği hakkında daha fazla bilgi edinmek için bkz. [Microsoft Purview Uyumluluk Yöneticisi](compliance-manager.md).  
 
-Ayrıca diğer Microsoft uyumluluk çözümleri hakkında bilgi edinmek ve denemeleri başlatmak için bkz[. Uyumluluk için ücretsiz Microsoft 365.](compliance-easy-trials.md)
+Diğer Microsoft uyumluluk çözümleri ve denemeleri başlatma hakkında bilgi edinmek [için Microsoft Purview için ücretsiz deneme sürümü hakkında makalesini](compliance-easy-trials.md) de öğrenebilirsiniz.

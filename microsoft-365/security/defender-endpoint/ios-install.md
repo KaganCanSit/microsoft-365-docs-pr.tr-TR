@@ -1,7 +1,7 @@
 ---
-title: iOS'ta Uç Nokta için Microsoft Defender tabanlı dağıtım
+title: iOS'ta Uç Nokta için Microsoft Defender için uygulama tabanlı dağıtım
 ms.reviewer: ''
-description: Uygulama kullanarak iOS Uç Nokta için Microsoft Defender dağıtımı açık
+description: Bir uygulama kullanarak iOS'ta Uç Nokta için Microsoft Defender dağıtmayı açıklar
 keywords: microsoft, defender, Uç Nokta için Microsoft Defender, ios, uygulama, yükleme, dağıtma, kaldırma, intune
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -16,241 +16,240 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 239d16bdbdb3fd7770061a91d77a3f190cfb8f4a
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: ed4b69aae3a29478a2b8bfb98d8ab605e5af28a8
+ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64476191"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65188668"
 ---
-# <a name="deploy-microsoft-defender-for-endpoint-on-ios"></a>iOS Uç Nokta için Microsoft Defender da uygulama dağıtma
+# <a name="deploy-microsoft-defender-for-endpoint-on-ios"></a>iOS'ta Uç Nokta için Microsoft Defender dağıtma
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 - [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
+> Uç Nokta için Defender'ı deneyimlemek mi istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
-Bu konuda, kayıtlı cihazlarda iOS üzerinde Uç Nokta için Defender Intune Şirket Portalı dağıtma açıklanmıştır. Cihaz kaydı hakkında daha Intune için bkz[. Cihaz kaydı için iOS/iPadOS cihazlarını](/mem/intune/enrollment/ios-enroll) Intune.
+Bu konuda, kayıtlı Intune Şirket Portalı cihazlarda iOS'ta Uç Nokta için Defender'ın dağıtılması açıklanmaktadır. Intune cihaz kaydı hakkında daha fazla bilgi için bkz[. Intune iOS/iPadOS cihazlarını kaydetme](/mem/intune/enrollment/ios-enroll).
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-- Microsoft Uç Nokta Yöneticisi yönetim [merkezine erişiminiz olduğundan emin olun](https://go.microsoft.com/fwlink/?linkid=2109431).
+- [Microsoft Endpoint Manager yönetim merkezine](https://go.microsoft.com/fwlink/?linkid=2109431) erişiminiz olduğundan emin olun.
 
-- Kullanıcılarınız için iOS kaydının tamam olduğundan emin olur. iOS'ta Uç Nokta için Defender'ı kullanmak için kullanıcıların uç nokta için Defender lisansı atanmış olmalıdır. Lisans [atama yönergeleri için Kullanıcılara](/azure/active-directory/users-groups-roles/licensing-groups-assign) lisans atama'ya bakın.
+- Kullanıcılarınız için iOS kaydının yapıldığından emin olun. Kullanıcıların iOS'ta Uç Nokta için Defender'ı kullanabilmesi için atanmış bir Uç Nokta için Defender lisansına sahip olması gerekir. [Lisans atama yönergeleri için Bkz. Kullanıcılara](/azure/active-directory/users-groups-roles/licensing-groups-assign) lisans atama.
 
 > [!NOTE]
-> Uç Nokta için Microsoft Defender iOS üzerinde kullanılabilir Apple [App Store](https://aka.ms/mdatpiosappstore).
+> iOS'taki Uç Nokta için Microsoft Defender [Apple App Store'nde](https://aka.ms/mdatpiosappstore) kullanılabilir.
 
 ## <a name="deployment-steps"></a>Dağıtım adımları
 
-iOS üzerinde Uç Nokta için Deploy Defender'ı Intune Şirket Portalı.
+Intune Şirket Portalı aracılığıyla iOS'ta Uç Nokta için Defender'ı dağıtın.
 
-### <a name="add-ios-store-app"></a>iOS mağaza uygulamasını ekleme
+### <a name="add-ios-store-app"></a>iOS mağaza uygulaması ekleme
 
-1. [Microsoft Endpoint manager yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) **AppsiOS** -> **/iPadOSAddiOS** ->  ->  mağazası uygulamasına gidin **ve Seç'e** **tıklayın**.
+1. [Microsoft Endpoint Manager yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) **UygulamalariOS** -> **/iPadOSAddiOS** ->  ->  **mağaza uygulaması'na** gidin ve **Seç'e** tıklayın.
 
     > [!div class="mx-imgBorder"]
-    > :::image type="content" source="images/ios-deploy-1.png" alt-text="Microsoft Endpoint Manager Yönetim Merkezi'nde uygulama ekle sekmesi" lightbox="images/ios-deploy-1.png":::
+    > :::image type="content" source="images/ios-deploy-1.png" alt-text="Microsoft Endpoint Manager Yönetim Merkezi'ndeki Uygulama ekle sekmesi" lightbox="images/ios-deploy-1.png":::
 
-1. Uygulama ekle **sayfasında Arama** çubuğu'App Store tıklayın **ve** **Uç Nokta için Microsoft Defender** arama çubuğuna aramanızı yazın. Arama sonuçları bölümünde, *Seçenekler'e Uç Nokta için Microsoft Defender* Seç'e **tıklayın**.
+1. **Uygulama ekle** sayfasında App Store **ara'ya** tıklayın ve arama çubuğuna **Uç Nokta için Microsoft Defender** yazın. Arama sonuçları bölümünde *Uç Nokta için Microsoft Defender* ve **Seç'e** tıklayın.
 
-1. Minimum **işletim sistemi olarak iOS 11.0'ı** seçin. Uygulamayla ilgili diğer bilgileri gözden geçirin ve Sonraki'ye **tıklayın**.
+1. En düşük işletim sistemi olarak **iOS 11.0'ı** seçin. Uygulama hakkındaki diğer bilgileri gözden geçirin ve **İleri'ye** tıklayın.
 
-1. Ödevler **bölümünde** Gerekli bölümüne gidin **ve Grup** **ekle'yi seçin**. Ardından, iOS uygulamasında Uç Nokta için Defender'ı hedeflemek istediğiniz kullanıcı grubunu seçebilirsiniz. **Seç'e ve** ardından **Sonraki'ne tıklayın**.
+1. **Atamalar** bölümünde **Gerekli** bölümüne gidin ve **Grup ekle'yi** seçin. Ardından iOS uygulamasında Uç Nokta için Defender'ı hedeflemek istediğiniz kullanıcı gruplarını seçebilirsiniz. **Seç'e** ve ardından **İleri'ye** tıklayın.
 
     > [!NOTE]
-    > Seçilen kullanıcı grubu, kayıtlı Intune şekilde çalışmalı.
+    > Seçilen kullanıcı grubu kayıtlı Intune kullanıcıdan oluşmalıdır.
 
     > [!div class="mx-imgBorder"]
-    > :::image type="content" source="images/ios-deploy-2.png" alt-text="Yönetim Merkezi'nde Grup Microsoft Endpoint Manager sekmesi" lightbox="images/ios-deploy-2.png":::
+    > :::image type="content" source="images/ios-deploy-2.png" alt-text="Microsoft Endpoint Manager Yönetim Merkezi'ndeki Grup ekle sekmesi" lightbox="images/ios-deploy-2.png":::
 
-1. Gözden Geçir *+ Oluştur bölümünde* , girilen tüm bilgilerin doğru olduğunu doğrulayın ve ardından Oluştur'a **tıklayın**. Birkaç dakika içinde, Uç Nokta için Defender uygulaması başarıyla oluşturulacak ve sayfanın sağ üst köşesinde bir bildirim gösterilmesi gerekir.
+1. *Gözden Geçir + Oluştur* bölümünde, girilen tüm bilgilerin doğru olduğunu doğrulayın ve **Oluştur'u** seçin. Birkaç dakika içinde Uç Nokta için Defender uygulaması başarıyla oluşturulmalıdır ve sayfanın sağ üst köşesinde bir bildirim gösterilmelidir.
 
-1. Görüntülenen uygulama bilgileri sayfasında, Monitör bölümünde Cihaz yükleme durumunu seçerek cihaz yükleme işleminin başarıyla tamamlanmıştır. 
+1. Görüntülenen uygulama bilgileri sayfasındaki **İzleyici** bölümünde **Cihaz yükleme durumu'nu** seçerek cihaz yüklemesinin başarıyla tamamlandığını doğrulayın.
 
     > [!div class="mx-imgBorder"]
     > :::image type="content" source="images/ios-deploy-3.png" alt-text="Cihaz yükleme durumu sayfası" lightbox="images/ios-deploy-3.png":::
 
-## <a name="complete-deployment-for-supervised-devices"></a>Denetlenen cihazlar için tam dağıtım
+## <a name="complete-deployment-for-supervised-devices"></a>Denetimli cihazlar için dağıtımı tamamlama
 
-iOS Uç Nokta için Microsoft Defender, bu tür cihazlarda platform tarafından sağlanan artırılmış yönetim yeteneklerine sahip ve denetimli iOS/iPadOS cihazları üzerinde özelleştirilmiş bir beceriye sahip. Ayrıca cihazda yerel bir **VPN ayarlamadan Da Web Korumasını sağlar**. Bu, son kullanıcılara kimlik avı ve diğer web tabanlı saldırılardan korunmaya devam ederken sorunsuz bir deneyim sunar.
+iOS uygulamasındaki Uç Nokta için Microsoft Defender, platform tarafından bu tür cihazlarda sağlanan artan yönetim özellikleri göz önünde bulundurulduğunda denetimli iOS/iPadOS cihazlarında özel yeteneklere sahiptir. Ayrıca **cihazda yerel BIR VPN ayarlamadan** Web Koruması sağlayabilir. Bu, son kullanıcılara kimlik avı ve diğer web tabanlı saldırılardan korunmaya devam ederken sorunsuz bir deneyim sunar.
 
-### <a name="configure-supervised-mode-via-intune"></a>Denetimli Modu Denetleme Yoluyla Intune
+### <a name="configure-supervised-mode-via-intune"></a>denetimli modu Intune aracılığıyla yapılandırma
 
-Ardından, bir güvenlik ilkesi aracılığıyla Uç Nokta için Defender uygulaması için denetlenen Uygulama Yapılandırması yapılandırabilirsiniz.
+Ardından, bir Uygulama Yapılandırması ilkesi aracılığıyla Uç Nokta için Defender uygulamasının denetimli modunu yapılandırın.
 
    > [!NOTE]
-   > Denetlenen cihazlar için bu uygulama yapılandırma ilkesi yalnızca yönetilen cihazlar için geçerlidir ve en iyi uygulama olarak TÜM yönetilen iOS cihazları için hedef kitleye yöneliktir.
+   > Denetimli cihazlar için bu uygulama yapılandırma ilkesi yalnızca yönetilen cihazlar için geçerlidir ve en iyi uygulama olarak TÜM yönetilen iOS cihazları için hedeflenmelidir.
 
-1. Yönetim merkezinde oturum [Microsoft Endpoint Manager ve Uygulamalar](https://go.microsoft.com/fwlink/?linkid=2109431) Uygulaması yapılandırma ilkeleri **Ekle'ye** \>  \> **gidin**. Yönetilen **cihazlar'ı seçin**.
+1. [Microsoft Endpoint Manager yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) oturum açın ve **Uygulama** \> **Uygulaması yapılandırma ilkeleri** \> **Ekle'ye** gidin. **Yönetilen cihazlar'ı** seçin.
 
     > [!div class="mx-imgBorder"]
-    > ![Yönetim Merkezi Microsoft Endpoint Manager 4 resmi.](images/ios-deploy-4.png)
+    > ![Microsoft Endpoint Manager Yönetim Merkezi4'ün resmi.](images/ios-deploy-4.png)
 
-1. Uygulama *yapılandırma ilkesi oluştur sayfasında* , aşağıdaki bilgileri sağlar:
+1. *Uygulama yapılandırma ilkesi oluştur* sayfasında aşağıdaki bilgileri sağlayın:
     - İlke Adı
-    - Platform: iOS/iPadOS'u seçin
-    - Hedefli uygulama: **Uç Nokta için Microsoft Defender** seçin
+    - Platform: iOS/iPadOS'i seçin
+    - Hedeflenen uygulama: Listeden **Uç Nokta için Microsoft Defender** seçin
 
     > [!div class="mx-imgBorder"]
-    > ![Yönetim Merkezi5 Microsoft Endpoint Manager resmi.](images/ios-deploy-5.png)
+    > ![Microsoft Endpoint Manager Yönetim Merkezi5'in resmi.](images/ios-deploy-5.png)
 
-1. Sonraki ekranda, Yapılandırma tasarımcısını **biçim olarak kullan'ı** seçin. Aşağıdaki özelliği belirtin:
-    - Yapılandırma Anahtarı: issupervised
+1. Sonraki ekranda **Yapılandırma tasarımcısını** biçim olarak kullan'ı seçin. Aşağıdaki özelliği belirtin:
+    - Yapılandırma Anahtarı: denetimli
     - Değer türü: Dize
     - Yapılandırma Değeri: {{issupervised}}
 
     > [!div class="mx-imgBorder"]
-    > ![Yönetim Merkezi6 Microsoft Endpoint Manager görüntüsü.](images/ios-deploy-6.png)
+    > ![Microsoft Endpoint Manager Yönetim Merkezi6'nın görüntüsü.](images/ios-deploy-6.png)
 
-1. Kapsam **etiketleri** sayfasını açmak için **Sonraki'yi** seçin. Kapsam etiketleri isteğe bağlıdır. Devam etmek **için Sonraki'yi** seçin.
+1. **Kapsam etiketleri** sayfasını açmak için **İleri'yi** seçin. Kapsam etiketleri isteğe bağlıdır. Devam etmek için **İleri'yi** seçin.
 
-1. Ödevler **sayfasında** , bu profili alacak grupları seçin. Bu senaryo için, en iyi yöntem Tüm Cihazları **hedeflemektir**. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](/mem/intune/configuration/device-profile-assign).
+1. **Atamalar** sayfasında, bu profili alacak grupları seçin. Bu senaryoda **, Tüm Cihazları** hedeflemek en iyi yöntemdir. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](/mem/intune/configuration/device-profile-assign).
 
-   Kullanıcı gruplarına dağıtımda, kullanıcının ilkenin geçerli olması için önce bir cihazda oturum açması gerekir.
+   Kullanıcı gruplarına dağıtım yaparken, ilkenin geçerli olması için bir kullanıcının cihazda oturum açması gerekir.
 
    **İleri**'ye tıklayın.
 
-1. **Gözden Geçir + oluştur** sayfasında, işiniz bittiğinde, **Oluştur**'u seçin. Yeni profil yapılandırma profilleri listesinde görüntülenir.
+1. **Gözden Geçir + oluştur** sayfasında, işiniz bittiğinde, **Oluştur**'u seçin. Yeni profil, yapılandırma profilleri listesinde görüntülenir.
 
-1. Bundan sonra, denetleme yapılan iOS cihazlarda özel bir profili dağıtmanız gerekir. Bu, geliştirilmiş Kimlik avı önleme özelliklerine yöneliktir. Aşağıdaki adımları izleyin:
+1. Ardından denetimli iOS cihazlarında özel bir profil dağıtmanız gerekir. Bu, gelişmiş kimlik avı önleme özellikleri içindir. Aşağıdaki adımları izleyin:
 
-    - Yapılandırma profilini [https://aka.ms/mdeiosprofilesupervised](https://aka.ms/mdeiosprofilesupervised)
-    - **DevicesiOS** -> **/iPadOSConfiguration** ->  **profillerine gidin Profile** ->  **Oluşturma**
+    - Yapılandırma profilini şu kaynaktan indirin: [https://aka.ms/mdeiosprofilesupervised](https://aka.ms/mdeiosprofilesupervised)
+    - **DevicesiOS** -> **/iPadOSConfiguration** ->  **profilleriProfil** ->  **Oluştur'a** gidin
 
     > [!div class="mx-imgBorder"]
-    > ![Yönetim Merkezi7 Microsoft Endpoint Manager görüntüsü.](images/ios-deploy-7.png)
+    > ![Microsoft Endpoint Manager Yönetim Merkezi7'nin görüntüsü.](images/ios-deploy-7.png)
     
-    - Profilin adını girin. Bir Yapılandırma profil dosyasını içeri aktarmanız istendiğinde, önceki adımdan indirileni seçin.
-    - Ödev **bölümünde** , bu profili uygulamak istediğiniz cihaz grubunu seçin. En iyi uygulama olarak, bu tüm yönetilen iOS cihazlarına uygulanmalıdır. **İleri**'yi seçin.
-    - **Gözden Geçir + oluştur** sayfasında, işiniz bittiğinde, **Oluştur**'u seçin. Yeni profil yapılandırma profilleri listesinde görüntülenir.
+    - Profilin adını belirtin. Yapılandırma profili dosyasını içeri aktarmanız istendiğinde, önceki adımdan indirilen dosyayı seçin.
+    - **Atama** bölümünde, bu profili uygulamak istediğiniz cihaz grubunu seçin. En iyi uygulama olarak, bu tüm yönetilen iOS cihazlarına uygulanmalıdır. **İleri**'yi seçin.
+    - **Gözden Geçir + oluştur** sayfasında, işiniz bittiğinde, **Oluştur**'u seçin. Yeni profil, yapılandırma profilleri listesinde görüntülenir.
 
 
-## <a name="auto-onboarding-of-vpn-profile-simplified-onboarding"></a>VPN profilinde Otomatik Ekleme (Basitleştirilmiş Ekleme)
+## <a name="auto-onboarding-of-vpn-profile-simplified-onboarding"></a>VPN profilini otomatik olarak ekleme (Basitleştirilmiş Ekleme)
 
-Web Koruması özelliğini sağlamak amacıyla, güvenli olmayan cihazlar için VPN kullanılır. Bu normal bir VPN değildir ve trafiği cihazın dışına almayan yerel/kendi kendine döngülü bir VPN'tir.
+Denetimsiz cihazlar için, Web Koruması özelliğini sağlamak için bir VPN kullanılır. Bu normal bir VPN değildir ve cihazın dışına trafiği almayan yerel/kendi kendini döngüye alan bir VPN'dir.
 
 >[!NOTE]
->Denetlenen cihazlar için Web Koruması özelliği için VPN gerekmez ve yöneticilerin denetleme yapılan cihazlara yapılandırma profili ayarlamasını gerektirir. Denetlenen cihazları yapılandırmak için, Denetlenen cihazlar için [dağıtımı tamamlama bölümündeki adımları](#complete-deployment-for-supervised-devices) izleyin.
+>Denetimli cihazlar için Web Koruması özelliği için VPN gerekmez ve yöneticilerin denetimli cihazlarda bir yapılandırma profili ayarlamasını gerektirir. Denetimli cihazlar için yapılandırmak için Denetimli [cihazlar için dağıtımı tamamlama](#complete-deployment-for-supervised-devices) bölümündeki adımları izleyin.
 
-Yöneticiler VPN profilinin otomatik kurulumunu yapılandırabilirsiniz. Bu, kullanıcının ekleme sırasında bunu yapmak zorunda kalmadan Uç Nokta VPN profili için Defender'ı otomatik olarak ayarlar. 
+Yöneticiler VPN profilinin otomatik kurulumunu yapılandırabilir. Bu, ekleme sırasında kullanıcının bunu yapması gerekmeden Uç Nokta için Defender VPN profilini otomatik olarak ayarlar. 
 
-Bu adım VPN profilini ayarerek ekleme işlemini basitler. Sıfır dokunmatik veya sessiz ekleme deneyimi için sonraki bölüme bakın: [Sıfır dokunmatik ekleme](#zero-touch-onboarding-of-microsoft-defender-for-endpoint-preview).
+Bu adım, VPN profilini ayarlayarak ekleme işlemini basitleştirir. Sıfır dokunma veya sessiz ekleme deneyimi için sonraki bölüme bakın: [Sıfır dokunmayla ekleme](#zero-touch-onboarding-of-microsoft-defender-for-endpoint).
 
-1. [Microsoft Endpoint manager yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) **DevicesConfiguration** ->  **ProfilesCreate** ->  Profile gidin.
-1. **iOS/iPadOS olarak Platform'u** ve VPN **olarak profil türünü** **seçin**. **Oluştur'a tıklayın**.
-1. Profil için bir ad yazın ve Sonraki'ye **tıklayın**.
-1. Bağlantı **Türü için** Özel VPN'yi **seçin ve Temel VPN** bölümünde şunları girin:
+1. [Microsoft Endpoint Manager yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) **CihazlarYapılandırma** ->  ProfilleriProfil  -> **Oluştur'a** gidin.
+1. **iOS/iPadOS** olarak **Platform** ve **VPN** olarak **Profil türü'nü** seçin. **Oluştur'a** tıklayın.
+1. Profil için bir ad yazın ve **İleri'ye** tıklayın.
+1. Bağlantı Türü için **Özel VPN'yi** seçin ve **Temel VPN** bölümüne aşağıdakileri girin:
     - Bağlantı Adı = Uç Nokta için Microsoft Defender
-    - VPN sunucu adresi = 127.0.0.1
-    - Kimlik doğrulama yöntemi = "Kullanıcı adı ve parola"
-    - Bölünmüş Bölme = Devre Dışı Bırak
+    - VPN sunucusu adresi = 127.0.0.1
+    - Auth yöntemi = "Kullanıcı adı ve parola"
+    - Bölünmüş Tünel = Devre Dışı Bırak
     - VPN tanımlayıcısı = com.microsoft.scmx
-    - Anahtar değeri çiftleri içinde **AutoOnboard** tuşuna basın ve değeri **True olarak ayarlayın**.
-    - Otomatik VPN türü = isteğe bağlı VPN
-    - **İsteğe** Bağlı **Kurallar Ekle'ye** tıklayın ve Şu yapmak istiyorum **= VPN** Kur, kısıtlamak istiyorum **= Tüm etki alanları seçeneğini seçin**.
+    - Anahtar-değer çiftlerinde **AutoOnboard** anahtarını girin ve değeri **True** olarak ayarlayın.
+    - Otomatik VPN türü = İsteğe bağlı VPN
+    - **İsteğe Bağlı Kurallar** için **Ekle'ye** tıklayın ve **aşağıdakileri yapmak istiyorum = VPN Oluştur**, **kısıtlamak istiyorum = Tüm etki alanları'nı** seçin.
 
     :::image type="content" source="images/ios-deploy-8.png" alt-text="VPN profili Yapılandırma ayarları sekmesi" lightbox="images/ios-deploy-8.png":::
 
-1. Sonraki'ne tıklayın ve profili hedefli kullanıcılara attaynın.
-1. Gözden Geçir *+ Oluştur bölümünde* , girilen tüm bilgilerin doğru olduğunu doğrulayın ve ardından Oluştur'a **tıklayın**.
+1. İleri'ye tıklayın ve profili hedeflenen kullanıcılara atayın.
+1. *Gözden Geçir + Oluştur* bölümünde, girilen tüm bilgilerin doğru olduğunu doğrulayın ve **Oluştur'u** seçin.
 
-## <a name="zero-touch-onboarding-of-microsoft-defender-for-endpoint-preview"></a>Yeni sürümün sıfır dokunuşla Uç Nokta için Microsoft Defender (Önizleme)
+## <a name="zero-touch-onboarding-of-microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender sıfır dokunmayla ekleme
 
-> [!IMPORTANT]
-> Bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabilir, önceden satın alınan ürünle ilgilidir. Microsoft, burada sağlanan bilgilerle ilgili olarak açık veya zımni hiçbir garanti vermez.
+
 
 > [!NOTE]
-> Sıfır dokunma, kullanıcıya yakınlık (kullanıcısız cihazlar veya paylaşılan cihazlar) olmadan kayıtlı iOS cihazlarda yapılandırılamaz.
+> Sıfır dokunma, kullanıcı benşimi olmadan kaydedilen iOS cihazlarda (kullanıcısız cihazlar veya paylaşılan cihazlar) yapılandırılamaz.
 
-Yöneticiler, Uç Nokta için Microsoft Defender dağıtmak ve etkinleştirmek için e-postayı yapılandırmış olabilir. Bu akışta, yönetici bir dağıtım profili oluşturur ve kullanıcıya yalnızca yüklemeyle ilgili bir bilgi olur. Kullanıcının uygulamayı açması gerekmeden Uç Nokta için Defender otomatik olarak yüklenir. Kayıtlı iOS cihazlarda Uç Nokta için Defender'ın sıfır dokunmatik veya sessiz dağıtımının kurulumu için aşağıdaki adımları izleyin:
+Yöneticiler Uç Nokta için Microsoft Defender sessizce dağıtacak ve etkinleştirecek şekilde yapılandırabilir. Bu akışta yönetici bir dağıtım profili oluşturur ve kullanıcıya yüklemeyle ilgili bildirim gönderilir. Uç Nokta için Defender, kullanıcının uygulamayı açmasına gerek kalmadan otomatik olarak yüklenir. Kayıtlı iOS cihazlarında Uç Nokta için Defender'ın sıfır dokunma veya sessiz dağıtımını ayarlamak için aşağıdaki adımları izleyin:
 
-1. [Microsoft Endpoint manager yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) **DevicesConfiguration** >  **ProfilesCreate** >  Profile gidin.
-1. **iOS/iPadOS olarak Platform'u** ve VPN **olarak profil türünü** **seçin**. **Oluştur**’u seçin.
-1. Profil için bir ad yazın ve Sonraki'yi **seçin**.
-1. Bağlantı **Türü için** Özel VPN'yi **seçin ve Temel VPN** bölümünde şunları girin:
+1. [Microsoft Endpoint Manager yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) **CihazlarYapılandırma** >  ProfilleriProfil  > **Oluştur'a** gidin.
+1. **iOS/iPadOS** olarak **Platform** ve **VPN** olarak **Profil türü'nü** seçin. **Oluştur**’u seçin.
+1. Profil için bir ad yazın ve **İleri'yi** seçin.
+1. Bağlantı Türü için **Özel VPN'yi** seçin ve **Temel VPN** bölümüne aşağıdakileri girin:
     - Bağlantı Adı = Uç Nokta için Microsoft Defender
-    - VPN sunucu adresi = 127.0.0.1
-    - Kimlik doğrulama yöntemi = "Kullanıcı adı ve parola"
-    - Bölünmüş Bölme = Devre Dışı Bırak
+    - VPN sunucusu adresi = 127.0.0.1
+    - Auth yöntemi = "Kullanıcı adı ve parola"
+    - Bölünmüş Tünel = Devre Dışı Bırak
     - VPN tanımlayıcısı = com.microsoft.scmx
-    - Anahtar değeri çiftlerinin içine **SilentOnboard anahtarını girin ve** değeri **True olarak ayarlayın**.
-    - Otomatik VPN türü = isteğe bağlı VPN
-    - **İsteğe** Bağlı **Kurallar Ekle'yi seçin** ve şu adımları yapmak istiyorum **= VPN** Kur, kısıtlamak istiyorum **= Tüm etki alanları seçeneğini seçin**.
+    - Anahtar-değer çiftlerinde **SilentOnboard** anahtarını girin ve değeri **True** olarak ayarlayın.
+    - Otomatik VPN türü = İsteğe bağlı VPN
+    - **İsteğe Bağlı Kurallar** için **Ekle'yi** seçin ve **aşağıdakileri yapmak istiyorum = VPN oluştur**, **kısıtlamak istiyorum = Tüm etki alanları'nı** seçin.
 
-    :::image type="content" source="images/ios-deploy-9.png" alt-text="VPN profili Yapılandırması sayfası" lightbox="images/ios-deploy-9.png":::
+    :::image type="content" source="images/ios-deploy-9.png" alt-text="VPN profili Yapılandırma sayfası" lightbox="images/ios-deploy-9.png":::
 
-1. **Sonraki'yi** seçin ve profili hedefli kullanıcılara attaynın.
-1. Gözden Geçir *+ Oluştur bölümünde* , girilen tüm bilgilerin doğru olduğunu doğrulayın ve ardından Oluştur'a **tıklayın**.
+1. **İleri'yi** seçin ve profili hedeflenen kullanıcılara atayın.
+1. *Gözden Geçir + Oluştur* bölümünde, girilen tüm bilgilerin doğru olduğunu doğrulayın ve **Oluştur'u** seçin.
 
-Yukarıdaki yapılandırma tamamlanın ve cihazla eşitlenen aşağıdaki eylemler hedef iOS cihaz veya cihaz üzerinde  yapılır:
-    - Uç Nokta için Microsoft Defender dağıtılacak ve sessizce yerleşik olarak gönderilir ve cihaz Uç Nokta için Defender portalında görülür.
-    - Kullanıcı cihazına bir geçici bildirim gönderilir.
+Yukarıdaki yapılandırma tamamlandıktan ve cihazla eşitlendikten sonra, hedeflenen iOS cihazlarında aşağıdaki eylemler gerçekleştirilir:
+    - Uç Nokta için Microsoft Defender dağıtılır ve sessizce eklenir ve cihaz Uç Nokta için Defender portalında görünür.
+    - Kullanıcı cihazına geçici bir bildirim gönderilir.
     - Web Koruması ve diğer özellikler etkinleştirilir.
 
    > [!NOTE]
-   > Denetlenen cihazlar için VPN profili gerekli değildir ama yöneticiler yine de VPN profili aracılığıyla Uç Nokta VPN profili için Defender'ı yapılandırarak Sıfır dokunmalı ekleme Intune. VPN profili cihazda dağıtılır, ancak cihazda yalnızca geçiş profili olarak mevcut olur ve ilk eklemeden sonra silinebilir.
+   > Denetimli cihazlar için VPN profili gerekli olmasa da, yöneticiler Intune aracılığıyla Uç Nokta için Defender VPN profilini yapılandırarak Sıfır dokunma eklemeyi ayarlamaya devam edebilir. VPN profili cihaza dağıtılır, ancak cihazda yalnızca geçiş profili olarak bulunur ve ilk eklemeden sonra silinebilir.
 
-## <a name="complete-onboarding-and-check-status"></a>Ekleme işlemini tamamlama ve durumu denetleme
+## <a name="complete-onboarding-and-check-status"></a>Eklemeyi tamamlama ve durumu denetleme
 
-1. Cihaza iOS'ta Uç Nokta için Defender yüklendikten sonra uygulama simgesini görüntülersiniz.
+1. iOS'ta Uç Nokta için Defender cihaza yüklendikten sonra uygulama simgesini görürsünüz.
 
-    :::image type="content" source="images/41627a709700c324849bf7e13510c516.png" alt-text="Otomatik olarak akıllı telefon açıklaması oluşturulur" lightbox="images/41627a709700c324849bf7e13510c516.png":::
+    :::image type="content" source="images/41627a709700c324849bf7e13510c516.png" alt-text="Otomatik olarak oluşturulan akıllı telefon açıklaması" lightbox="images/41627a709700c324849bf7e13510c516.png":::
 
-2. Uç nokta için Defender uygulama simgesine (MSDefender) dokunun ve ekleme adımlarını tamamlamak için ekrandaki yönergeleri izleyin. Ayrıntılar, iOS'ta Uç Nokta için Defender tarafından gereken iOS izinlerinin son kullanıcı kabulünü içerir.
+2. Uç Nokta için Defender uygulaması simgesine (MSDefender) dokunun ve ekleme adımlarını tamamlamak için ekrandaki yönergeleri izleyin. Ayrıntılar, iOS üzerinde Uç Nokta için Defender tarafından gereken iOS izinlerinin son kullanıcı tarafından kabul edilmesini içerir.
 
-3. Başarılı bir şekilde işe alım sırasında cihaz, portalda bulunan Cihazlar listesinde Microsoft 365 Defender başlar.
+3. Ekleme başarılı olursa cihaz, Microsoft 365 Defender portalındaki Cihazlar listesinde gösterilmeye başlar.
 
     > [!div class="mx-imgBorder"]
-    > :::image type="content" source="images/device-inventory-screen.png" alt-text="Cihaz stoku sayfası" lightbox="images/device-inventory-screen.png":::
+    > :::image type="content" source="images/device-inventory-screen.png" alt-text="Cihaz envanteri sayfası" lightbox="images/device-inventory-screen.png":::
 
-## <a name="configure-microsoft-defender-for-endpoint-for-supervised-mode"></a>Denetimli Uç Nokta için Microsoft Defender için Denetimi Yapılandırma
+## <a name="configure-microsoft-defender-for-endpoint-for-supervised-mode"></a>Denetimli Mod için Uç Nokta için Microsoft Defender yapılandırma
 
-iOS Uç Nokta için Microsoft Defender, bu tür cihazlarda platform tarafından sağlanan artırılmış yönetim yeteneklerine sahip ve denetimli iOS/iPadOS cihazları üzerinde özelleştirilmiş bir beceriye sahip. Bu özelliklerden yararlanabilmek için, Uç Nokta için Defender uygulamasının bir cihazın Denetim Modunda olup olduğunu bilmek gerekir.
+iOS uygulamasındaki Uç Nokta için Microsoft Defender, platform tarafından bu tür cihazlarda sağlanan artan yönetim özellikleri göz önünde bulundurulduğunda denetimli iOS/iPadOS cihazlarında özel yeteneklere sahiptir. Bu özelliklerden yararlanmak için Uç Nokta için Defender uygulamasının bir cihazın Denetimli Modda olup olmadığını bilmesi gerekir.
 
-### <a name="configure-supervised-mode-via-intune"></a>Denetimli Modu Denetleme Yoluyla Intune
+### <a name="configure-supervised-mode-via-intune"></a>denetimli modu Intune aracılığıyla yapılandırma
 
-Intune, iOS için Defender uygulamasını bir güvenlik ilkesi aracılığıyla Uygulama Yapılandırması sağlar.
+Intune, bir Uygulama Yapılandırması ilkesi aracılığıyla iOS için Defender uygulamasını yapılandırmanıza olanak tanır.
 
    > [!NOTE]
-   > Denetlenen cihazlar için bu uygulama yapılandırma ilkesi yalnızca yönetilen cihazlar için geçerlidir ve en iyi uygulama olarak tüm yönetilen iOS cihazları için hedef kitleye yöneliktir.
+   > Denetimli cihazlar için bu uygulama yapılandırma ilkesi yalnızca yönetilen cihazlar için geçerlidir ve en iyi uygulama olarak tüm yönetilen iOS cihazları için hedeflenmelidir.
 
-1. Yönetim merkezinde oturum [Microsoft Endpoint Manager ve Uygulamalar](https://go.microsoft.com/fwlink/?linkid=2109431) Uygulaması yapılandırma ilkeleri **Ekle'ye** \>  \> **gidin**. Yönetilen **cihazlar'a tıklayın**.
+1. [Microsoft Endpoint Manager yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) oturum açın ve **Uygulama** \> **Uygulaması yapılandırma ilkeleri** \> **Ekle'ye** gidin. **Yönetilen cihazlar'a** tıklayın.
 
     > [!div class="mx-imgBorder"]
     > :::image type="content" source="images/ios-deploy-4.png" alt-text="Yönetilen cihazlar seçeneği" lightbox="images/ios-deploy-4.png":::
 
-1. Uygulama *yapılandırma ilkesi oluştur sayfasında* , aşağıdaki bilgileri sağlar:
+1. *Uygulama yapılandırma ilkesi oluştur* sayfasında aşağıdaki bilgileri sağlayın:
     - İlke Adı
-    - Platform: iOS/iPadOS'u seçin
-    - Hedefli uygulama: **Uç Nokta için Microsoft Defender** seçin
+    - Platform: iOS/iPadOS'i seçin
+    - Hedeflenen uygulama: Listeden **Uç Nokta için Microsoft Defender** seçin
 
     > [!div class="mx-imgBorder"]
     > :::image type="content" source="images/ios-deploy-5.png" alt-text="Uygulamanın yapılandırma ilkesi için temel alanlar" lightbox="images/ios-deploy-5.png":::
 
-1. Sonraki ekranda, Yapılandırma tasarımcısını **biçim olarak kullan'ı** seçin. Aşağıdaki özelliği belirtin:
-    - Yapılandırma Anahtarı: issupervised
+1. Sonraki ekranda **Yapılandırma tasarımcısını** biçim olarak kullan'ı seçin. Aşağıdaki özelliği belirtin:
+    - Yapılandırma Anahtarı: denetimli
     - Değer türü: Dize
     - Yapılandırma Değeri: {{issupervised}}
 
     > [!div class="mx-imgBorder"]
-    > :::image type="content" source="images/ios-deploy-6.png" alt-text="İlke yapılandırmasının ayarlarının biçiminin seçkisi için ilgili sayfa" lightbox="images/ios-deploy-6.png":::
+    > :::image type="content" source="images/ios-deploy-6.png" alt-text="İlke yapılandırması ayarlarının biçiminin seçileceği sayfa" lightbox="images/ios-deploy-6.png":::
 
-1. Kapsam **etiketleri** sayfasını açmak için **Sonraki'ne** tıklayın. Kapsam etiketleri isteğe bağlıdır. Devam etmek **için Sonraki'ne** tıklayın.
+1. **Kapsam etiketleri** sayfasını açmak için **İleri'ye** tıklayın. Kapsam etiketleri isteğe bağlıdır. Devam etmek için **İleri'ye** tıklayın.
 
-1. Ödevler **sayfasında** , bu profili alacak grupları seçin. Bu senaryo için, en iyi yöntem Tüm Cihazları **hedeflemektir**. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](/mem/intune/configuration/device-profile-assign).
+1. **Atamalar** sayfasında, bu profili alacak grupları seçin. Bu senaryoda **, Tüm Cihazları** hedeflemek en iyi yöntemdir. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](/mem/intune/configuration/device-profile-assign).
 
-   Kullanıcı gruplarına dağıtımda, kullanıcının ilkenin geçerli olması için önce bir cihazda oturum açması gerekir.
+   Kullanıcı gruplarına dağıtım yaparken, ilkenin geçerli olması için bir kullanıcının cihazda oturum açması gerekir.
 
    **İleri**'ye tıklayın.
 
-1. **Gözden Geçir + oluştur** sayfasında, işiniz bittiğinde, **Oluştur**'u seçin. Yeni profil yapılandırma profilleri listesinde görüntülenir.
+1. **Gözden Geçir + oluştur** sayfasında, işiniz bittiğinde, **Oluştur**'u seçin. Yeni profil, yapılandırma profilleri listesinde görüntülenir.
 
 ## <a name="next-steps"></a>Sonraki Adımlar
 
-- [Uç nokta risk işaretleri (MAM) için Defender'ı içerecek şekilde uygulama koruma ilkesi yapılandırma](ios-install-unmanaged.md)
-- [iOS'ta Uç Nokta için Defender'ı Yapılandırma](ios-configure-features.md)
+- [Uygulama koruma ilkesini Uç Nokta için Defender risk sinyallerini (MAM) içerecek şekilde yapılandırma](ios-install-unmanaged.md)
+- [iOS özelliklerinde Uç Nokta için Defender'ı yapılandırma](ios-configure-features.md)

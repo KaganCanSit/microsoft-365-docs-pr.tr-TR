@@ -9,27 +9,31 @@ audience: Admin
 ms.topic: conceptual
 ms.service: O365-seccomp
 ms.localizationpriority: medium
-ms.date: 03/04/2022
+ms.date: 05/02/2022
 ms.collection:
 - Strat_O365_IP
 - M365-security-compliance
 search.appverid:
 - MET150
-description: Yönetici olarak ve ileti gönderen olarak, Office 365 Gelişmiş İleti Şifrelemesi ile şifrelenen bazı e-postaları iptal edebilirsiniz.
-ms.openlocfilehash: 313cbe990e322285fc81465329fa5e19b52e2701
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+description: Yönetici olarak ve ileti gönderen olarak, Microsoft Purview Gelişmiş İleti Şifrelemesi ile şifrelenen bazı e-postaları iptal edebilirsiniz.
+ms.openlocfilehash: 79d09c13755c0c73e4d68598e83ac41344b9281a
+ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64759401"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65187953"
 ---
 # <a name="revoke-email-encrypted-by-advanced-message-encryption"></a>Gelişmiş İleti Şifrelemesi ile şifrelenen e-postayı iptal etme
 
-E-posta iptali Office 365 Gelişmiş İleti Şifrelemesi bir parçası olarak sunulur. Office 365 Gelişmiş İleti Şifrelemesi [Microsoft 365 Kurumsal E5, Office 365 E5](https://www.microsoft.com/microsoft-365/enterprise/home), Microsoft 365 E5 (Kar Amacı Gütmeyen Personel Fiyatlandırması) Office 365 Kurumsal  E5 (Kar Amacı Gütmeyen Personel Fiyatlandırması) ve Office 365 Eğitim A5. Kuruluşunuzun Office 365 Gelişmiş İleti Şifrelemesi içermeyen bir aboneliği varsa, Microsoft 365 E3 için Microsoft 365 E5 Uyumluluk SKU eklentisiyle satın alabilirsiniz Microsoft 365 E3  (Kar Amacı Gütmeyen Personel Fiyatlandırması) veya Microsoft 365 E3, Microsoft 365 E3 (Kar Amacı Gütmeyen Personel Fiyatlandırması) veya Office 365 SKU'ları için Office 365 Gelişmiş Uyumluluk SKU eklentisi.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+E-posta iptali, Microsoft Purview Gelişmiş İleti Şifrelemesi'nin bir parçası olarak sunulur. Microsoft Purview Gelişmiş İleti Şifrelemesi [Microsoft 365 Kurumsal E5, Office 365 E5](https://www.microsoft.com/microsoft-365/enterprise/home), Microsoft 365 E5 (Kar Amacı Gütmeyen Personel Fiyatlandırması), Office 365 Kurumsal E5 (Kar Amacı Gütmeyen Personel Fiyatlandırması) ve Office 365 Eğitim A5. Gelişmiş İleti Şifrelemesi iptali ve süre sonu işlevlerini kullanmak için E5 lisansınızda **Premium Şifreleme Office 365** seçeneğini etkinleştirin.
+
+Kuruluşunuzun Microsoft Purview Gelişmiş İleti Şifrelemesi içermeyen bir aboneliği varsa, Microsoft 365 E3, Microsoft 365 E3 (Kar Amacı Gütmeyen Personel Fiyatlandırması) için Microsoft 365 E5 Uyumluluk SKU eklentisiyle veya Microsoft 365 E3, Microsoft 365 E3 (Kar Amacı Gütmeyen Personel Fiyatlandırması) veya SKU'ları Office 365 için SKU eklentisini Office 365 Gelişmiş Uyumluluk.
 
 Bu makale, [Office 365 İleti Şifrelemesi](ome.md) hakkında daha büyük bir makale serisinin bir parçasıdır.
 
-bir ileti Office 365 Gelişmiş İleti Şifrelemesi kullanılarak şifrelendiyse ve Microsoft 365 yöneticisiyseniz veya iletiyi gönderen sizseniz, iletiyi belirli koşullar altında iptal edebilirsiniz. Yöneticiler PowerShell kullanarak iletileri iptal eder. Gönderen olarak, doğrudan Web üzerinde Outlook gönderdiğiniz bir iletiyi iptal edebilirsiniz. Bu makalede iptalin mümkün olduğu koşullar ve bunun nasıl gerçekleştirildiği açıklanmaktadır.
+Bir ileti Microsoft Purview Gelişmiş İleti Şifrelemesi kullanılarak şifrelendiyse ve Microsoft 365 yöneticisiyseniz veya iletiyi gönderen sizseniz, iletiyi belirli koşullar altında iptal edebilirsiniz. Yöneticiler PowerShell kullanarak iletileri iptal eder. Gönderen olarak, doğrudan Web üzerinde Outlook gönderdiğiniz bir iletiyi iptal edebilirsiniz. Bu makalede iptalin mümkün olduğu koşullar ve bunun nasıl gerçekleştirildiği açıklanmaktadır.
 
 > [!NOTE]
 > OME iletilerini izleme ve iptal etme özelliğinin kullanılabildiğini garanti etmek için özel bir markalama şablonu eklemeniz gerekir. Bkz. [Şifrelenmiş iletilerinize kuruluşunuzun markasını ekleme](add-your-organization-brand-to-encrypted-messages.md)
@@ -92,7 +96,7 @@ Microsoft 365 yöneticileri, uygun bir şifrelenmiş e-postayı iptal etmek içi
 
 2. E-postayı bulduktan sonra **, İleti izleme ayrıntıları** bölmesini açmak için e-postayı seçin. İleti Kimliğini bulmak için **Daha Fazla Bilgi'yi** genişletin.
 
-#### <a name="to-identify-the-message-id-of-the-email-you-want-to-revoke-by-using-office-message-encryption-reports-in-the-security-amp-compliance-center"></a>Güvenlik &amp; Uyumluluk Merkezi'ndeki Office İleti Şifrelemesi raporlarını kullanarak iptal etmek istediğiniz e-postanın İleti Kimliğini belirlemek için
+#### <a name="to-identify-the-message-id-of-the-email-you-want-to-revoke-by-using-message-encryption-reports-in-the-security-amp-compliance-center"></a>Güvenlik &amp; Uyumluluk Merkezi'nde İleti Şifreleme raporlarını kullanarak iptal etmek istediğiniz e-postanın İleti Kimliğini belirlemek için
 
 1. Güvenlik &amp; Uyumluluk Merkezi'nde **İleti şifreleme raporuna** gidin. Bu rapor hakkında bilgi için bkz. [Güvenlik &amp; Uyumluluk Merkezi'nde e-posta güvenlik raporlarını görüntüleme](../security/office-365-security/view-email-security-reports.md).
 
@@ -154,10 +158,10 @@ Windows PowerShell kullanarak e-postayı iptal etmek için Set-OMEMessageRevocat
      Revoked: True
      ```
 
-## <a name="more-information-about-office-365-advanced-message-encryption"></a>Office 365 Gelişmiş İleti Şifrelemesi hakkında daha fazla bilgi
+## <a name="more-information-about-microsoft-purview-advanced-message-encryption"></a>Microsoft Purview Gelişmiş İleti Şifrelemesi hakkında daha fazla bilgi
 
-- [Office 365 Gelişmiş İleti Şifrelemesi](ome-advanced-message-encryption.md)
+- [Microsoft Purview Gelişmiş İleti Şifrelemesi](ome-advanced-message-encryption.md)
 
-- [Office 365 Gelişmiş İleti Şifrelemesi - e-posta süre sonu](ome-advanced-expiration.md)
+- [Microsoft Purview Gelişmiş İleti Şifrelemesi - e-posta süre sonu](ome-advanced-expiration.md)
 
 - [İleti ilkesi ve uyumluluk hizmeti açıklaması](/office365/servicedescriptions/exchange-online-service-description/message-policy-and-compliance)

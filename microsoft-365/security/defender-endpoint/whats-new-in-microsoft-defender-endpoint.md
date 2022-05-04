@@ -17,12 +17,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 6fb2b8c3e1466c52d707538f46643580c72a6fbf
-ms.sourcegitcommit: e13c8fc28c68422308c9d356109797cfcf6f77be
+ms.openlocfilehash: 351a403923df8e12d63051e30518b5c254abccb8
+ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/14/2022
-ms.locfileid: "64841879"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65188822"
 ---
 # <a name="whats-new-in-microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender’daki yenilikler
 
@@ -62,6 +62,7 @@ Diğer işletim sistemleriyle ilgili Uç Nokta için Microsoft Defender hakkınd
 
 ## <a name="april-2022"></a>Nisan 2022
 - [Windows Server 2012 R2 ve Windows Server 2016) için ekleme ve özellik eşlikleri güncelleştirildi](configure-server-endpoints.md)<br/> Yeni birleşik çözüm paketi genel kullanıma sunuldu ve bağımlılıkları ve yükleme adımlarını kaldırarak sunucuları eklemeyi kolaylaştırıyor. Ayrıca, bu birleşik çözüm paketi birçok yeni özellik geliştirmesi ile birlikte gelir.
+- Tunnel ile tümleştirme. iOS'taki Uç Nokta için Microsoft Defender artık tek bir uygulamada güvenliği ve bağlantıyı etkinleştirmek için bir VPN ağ geçidi çözümü olan Microsoft Tunnel ile tümleştirilebilir. Bu özellik daha önce yalnızca Android'de kullanılabilirdi. [Daha fazla bilgi edinin](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/what-s-new-in-microsoft-endpoint-manager-2204-april-edition/ba-p/3297995)
 
 ## <a name="january-2022"></a>Ocak 2022
 

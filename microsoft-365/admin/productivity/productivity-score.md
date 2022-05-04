@@ -20,42 +20,42 @@ ms.custom:
 search.appverid:
 - MET150
 - MOE150
-description: Microsoft Üretkenlik Puanı'nın kişiler ve teknoloji deneyimi ölçülerini nasıl yansıtdığını ve benzer boyuttaki kuruluşlarla nasıl karşılaştırdığını öğrenin.
-ms.openlocfilehash: 24a84c3780ec3787b76f78acbe9c0c109a27c639
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Microsoft Üretkenlik Puanı'nın insanları ve teknoloji deneyimi ölçümlerini nasıl yansıtıp benzer boyuttaki kuruluşlarla karşılaştırdığını öğrenin.
+ms.openlocfilehash: 094d5de77db6bffb4a2d5981268b364a6f9e690f
+ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63327077"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65188360"
 ---
 # <a name="microsoft-productivity-score"></a>Microsoft Üretkenlik Puanı 
 
-Üretkenlik Puanı, dijital dönüşüm yolculuğunu, kurumunun dijital dönüşümleri nasıl kullandığına ve Microsoft 365 teknoloji deneyimleriyle destekler. Kuruluş puanınız kişiler ve teknoloji deneyimi ölçülerini yansıtıyor ve boyutu sizinkiyle benzer olan kuruluşların karşılaştırmaları ile karşılaştırabilirsiniz.
+Üretkenlik Puanı, kuruluşunuzun Microsoft 365 nasıl kullandığı ve onu destekleyen teknoloji deneyimleri hakkındaki içgörülerle dijital dönüşüm yolculuğunu destekler. Kuruluşunuzun puanı, insan ve teknoloji deneyimi ölçümlerini yansıtır ve sizinkine benzer kuruluşların karşılaştırmalarıyla karşılaştırılabilir.
 
 Şunları sağlar:
 
-- **Dijital dönüştürme** yolculuğun hangi yerde olduğunu görmenizi yardım edecek ölçümler.
-- **Analizler** üretkenliği ve memnuniyeti artırma fırsatlarını tanımlamanıza yardımcı olacak veriler hakkında daha fazla bilgi edinebilirsiniz.
-- **Bu ürünleri verimli** bir şekilde kullanmalarını sağlamak için, Microsoft 365 işlemler önerilir.
+- Dijital dönüşüm yolculuğunuzda nerede olduğunuzu görmenize yardımcı olacak **ölçümler**.
+- Kuruluşunuzda üretkenliği ve memnuniyeti artırma fırsatlarını belirlemenize yardımcı olmak için veriler hakkında **Analizler**.
+- Kuruluşunuzun Microsoft 365 ürünleri verimli bir şekilde kullanmasına yardımcı olmak için gerçekleştirebileceğiniz **önerilen eylemler**.
 
-İki alanda ölçümler, içgörüler ve öneriler sağlaruz: 
+İki alanda ölçümler, içgörüler ve öneriler sağlıyoruz: 
 
-- **Kişiler deneyimleri:** Kuruluşun içerik işbirliği, hareketlilik, iletişim Microsoft 365 toplantılar ve ekip çalışması gibi içerik kategorileri kullanarak nasıl çalıştığını nicelik gösterir.  
+- **Kişi deneyimleri:** İçerik işbirliği, mobilite, iletişim, toplantılar ve ekip çalışması gibi Microsoft 365 kategorileri kullanarak kuruluşun nasıl çalıştığını tanımlar.  
 
-    Bahsedilen kategorilerin her biri için, kurumsal etkililik biçimine yönelik bazı en iyi uygulamaları ve ilişkili avantajları belirlemek için genel araştırmayı ele atıf. Örneğin, Açıkhaz'ın yaptığı araştırma, kişilerin bulutta işbirliği yaptığı ve içerik paylaştığında (ekleri e-postayla göndermek yerine) haftanın 100 dakikasında kaydederek ulaşabilirsiniz. Buna ek olarak, dijital dönüştürme yolculuğunuz sırasında nerede olduğunu görmenize yardımcı olmak için bu en iyi uygulamaların kullanımının nicelik ölçülerini belirteceğiz. 
+    Bahsedilen kategorilerin her biri için, kurumsal etkinlik biçimindeki bazı en iyi yöntemleri ve ilişkili avantajları belirlemek için genel araştırmalara bakıyoruz. Örneğin Forrester araştırması, kişilerin bulutta işbirliği yapıp içerik paylaştığında (ekleri e-postayla göndermek yerine) haftada 100 dakikaya kadar tasarruf yapabileceklerini göstermiştir. Ayrıca, dijital dönüşüm yolculuğunuzda nerede olduğunuzu görmenize yardımcı olmak için kuruluşunuzda bu en iyi yöntemlerin kullanımını da ölçüyoruz. 
 
-- **Teknoloji deneyimleri:** Organizasyonunız, güvenilir ve iyi performans gösteren bir teknolojiye ve aynı zamanda iyi performans gösteren teknolojilerin etkili kullanımına Microsoft 365. [Uç nokta](https://aka.ms/endpointanalytics) analizi, donanım ve yazılımınız ile ilgili performans ve sistem durumu sorunlarında kuruma nasıl etkilendirebilirler anlamanıza yardımcı olur. Microsoft 365 uygulamalarının durumu, organizasyon cihazlarınız önerilen kanallarda daha fazla Microsoft 365 çalıştırıp çalıştırmadıylarınızı anlamanıza yardımcı olur.
+- **Teknoloji deneyimleri:** Kuruluşunuz hem güvenilir ve iyi performans gösteren teknolojiye hem de Microsoft 365 verimli kullanımına bağlıdır. [Uç nokta analizi](https://aka.ms/endpointanalytics) , kuruluşunuzun donanım ve yazılımınızla ilgili performans ve sistem durumu sorunlarından nasıl etkilenebileceğini anlamanıza yardımcı olur. Microsoft 365 uygulama durumu, kuruluşunuzdaki cihazların önerilen kanallarda Microsoft 365 uygulamaları çalıştırıp çalıştırmadığını anlamanıza yardımcı olur.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Genel [bakış ve önkoşul ayrıntıları](/mem/analytics/overview) için bkz. Uç Nokta Analizi nedir? Ağ bağlantısı içgörüleri hakkında Microsoft 365 fazla bilgi edinmek için, ağ [bağlantısına genel bakış makalelerini okuyun](../../enterprise/microsoft-365-networking-overview.md).
+Genel bakış ve önkoşul ayrıntıları için bkz [. Endpoint Analytics nedir](/mem/analytics/overview) ? Microsoft 365 ağ bağlantısı içgörüleri hakkında daha fazla bilgi edinmek için [ağ bağlantısına genel bakış'ı](../../enterprise/microsoft-365-networking-overview.md) okuyun.
 
-Kişiler deneyim verileri için, kurumsal abonelik Microsoft 365 bilgilerine veya Office 365 bilgilerine ihtiyacınız vardır. Kiracınıza ilgili uç nokta analizi verileri için, aboneliğinize Microsoft Intune veri eklemeniz gerekir. Intune, cihazları ve uygulamaları yöneterek kuruluş verilerinizi korumaya yardımcı olur. Intune'a sahip olduktan sonra, Intune deneyiminde uç nokta çözümlemelerini açabilirsiniz. Belgeler hakkında daha fazla Microsoft Intune için aşağıdaki [belgelere Microsoft Intune bakın](/mem/intune/). 
+Kişilerin veri deneyimi yaşamaları için, kurumsal abonelik için bir Microsoft 365 veya Office 365 gerekir. Kiracınızın uç nokta analizi verileri için aboneliğinize Microsoft Intune eklemeniz gerekir. Intune, cihazları ve uygulamaları yöneterek kuruluşunuzun verilerini korumaya yardımcı olur. Intune aldıktan sonra, Intune deneyiminde uç nokta analizini açabilirsiniz. Microsoft Intune hakkında daha fazla bilgi edinmek için [Microsoft Intune belgelerine bakın](/mem/intune/). 
 
 > [!NOTE]
 > Üretkenlik Puanı özelliklerini almak için Workplace Analytics lisansı gerekmez.
 
-Üretkenlik Puanı yalnızca Microsoft 365 yönetim merkezi mevcuttur ve yalnızca aşağıdaki rollerden biri olan BT uzmanları tarafından erişilebilir:  
+Üretkenlik Puanı yalnızca Microsoft 365 yönetim merkezi kullanılabilir ve yalnızca aşağıdaki rollerden birine sahip BT uzmanları tarafından erişilebilir:  
 
 - Genel yönetici
 - Exchange yöneticileri
@@ -67,100 +67,100 @@ Kişiler deneyim verileri için, kurumsal abonelik Microsoft 365 bilgilerine vey
 - Kullanım Özeti Raporları Okuyucusu
 
 > [!NOTE]
-> Yalnızca Genel Yönetici rolüne sahip bir IT uzmanı kaydolarak veya bir kiracıda Üretkenlik Puanı için tercihte olabilir.
+> Yalnızca Genel Yönetici rolüne sahip bir BT uzmanı bir kiracıya kaydolabilir veya Üretkenlik Puanı'nı kabul edebilir.
 
-Üretkenlik Puanı için rol tabanlı erişim denetim modeli, kuruluşlara kuruluş içindeki BT uzmanlarına rol atama esnekliği sağlayarak Microsoft 365 birlikte dijital dönüşüm çabalarını daha da fazla dönüştürmeye yardımcı olur.
+Üretkenlik Puanı için rol tabanlı erişim denetimi modeli, kuruluşların bir kuruluştaki BT uzmanlarına rol atama esnekliği sağlayarak Microsoft 365 ile dijital dönüşüm çalışmalarını daha da artırmalarına yardımcı olur.
 
-Microsoft, bireysel gizliliği koruma konusunda kararlıdır. Bu [gizlilik belgesinde](privacy.md)  , bilgilerinizin Microsoft'a olan güvenden ödün vermeden işlemde kullanılabilir olduğundan emin olmak için, kuruluş yöneticisi olarak size sağlarmız denetimler açıklar.
+Microsoft bireysel gizliliği korumaya kararlıdır. Bu [gizlilik belgesinde](privacy.md)  , microsoft'a sağladığınız güveni tehlikeye atamazken bilgilerin eyleme dönüştürülebilir olduğundan emin olmak için kuruluşunuzun BT yöneticisi olarak size sağladığımız denetimler açıklanmaktadır.
 
-RaporlarÜrünleri Puanı altında Microsoft 365 Yönetici ana buradan **deneyime** >  **erişabilirsiniz**.
+**Deneyime** **RaporlarÜrünlük** >  Puanı altında Microsoft 365 Yönetici girişten erişebilirsiniz.
   
 ## <a name="how-the-score-is-calculated"></a>Puan nasıl hesaplanır?
 
-Üretkenlik Puanınız, kişi ve teknoloji deneyimi kategorilerinin birleştirilmiş puanlarına dayalıdır. Her kategori eşit olarak ağırlıktadır ve toplam 100 puandır. Mümkün olan en yüksek Üretkenlik Puanı 800'tir.
+Üretkenlik Puanınız, kişilerinizin ve teknoloji deneyimlerinizin birleştirilmiş puanlarını temel alır. Her kategori eşit ağırlıktadır ve toplam 100 puandır. Mümkün olan en yüksek Üretkenlik Puanı 800'dür.
 
-### <a name="score-categories"></a>Puan kategorileri 
+### <a name="score-categories"></a>Kategorileri puanla 
 
-- İletişim (100 puan)
+- İletişim (100 nokta)
 - Toplantılar (100 puan)
 - İçerik işbirliği (100 puan)
 - Ekip çalışması (100 puan)
-- Mobil (100 puan)
-- Uç nokta analizi (100 puan)
+- Mobility (100 puan)
+- Uç nokta analizi (100 nokta)
 - Ağ bağlantısı (100 nokta)
 - Microsoft 365 Uygulamaları Durumu (100 puan)
 - **Toplam olası = 800 puan**
  
-Her puan kategorisinde, dijital dönüşüme doğru yolculuğunda kuruluş kuruluşlarının Microsoft 365 açısından temel göstergelerin niceliklerini belirteceğiz. Önemli etkinliklerin 28 gün ve 180 günlük görünümleri sağlaruz. Ayrıca, puan hesaplaması kapsamında yer alan, ancak ele alamayabilirsiniz temel kullanım istatistiklerini ve yapılandırmaları tanımlamanıza yardımcı olmak için de desteklenen ölçümler sağlaruz.
+Her puan kategorisinde, kuruluşunuzun dijital dönüşüm yolculuğunda Microsoft 365 nasıl kullandığına ilişkin temel göstergeleri ölçeceğiz. Önemli etkinliklerin 28 gün ve 180 günlük görünümlerini sağlıyoruz. Ayrıca puan hesaplamasının parçası olmayan ancak temel kullanım istatistiklerini ve ele alınabilecek yapılandırmaları belirlemenize yardımcı olması açısından önemli olan destekleyici ölçümler de sağlıyoruz.
 
-### <a name="products-included-in-productivity-score"></a>Üretkenlik Puanına dahil edilen ürünler 
+### <a name="products-included-in-productivity-score"></a>Üretkenlik Puanı'nda yer alan ürünler 
 
-Üretkenlik Puanı;Exchange, SharePoint, OneDrive, Teams, Word, Excel, PowerPoint, OneNote, Outlook, Yammer ve Skype.
+Üretkenlik Puanı; Exchange, SharePoint, OneDrive, Teams, Word, Excel, PowerPoint, OneNote, Outlook, Yammer ve Skype verilerini içerir.
 
-Kuruluş puanı günlük olarak güncelleştirilir ve son 28'de (geçerli gün dahil) tamamlanmış kullanıcı eylemlerini yansıtmaktadır.
+Kuruluşunuzun puanı günlük olarak güncelleştirilir ve son 28 içinde (geçerli gün dahil) tamamlanan kullanıcı eylemlerini yansıtır.
 
-## <a name="interpreting-your-organizations-productivity-score"></a>Kuruluş Üretkenlik Puanı'nın yorumlanması 
+## <a name="interpreting-your-organizations-productivity-score"></a>Kuruluşunuzun Üretkenlik Puanını Yorumlama 
 
-Üretkenlik Puanı giriş sayfasında, kuruma ait toplam puan ve puan geçmişi ve her kategoriyle ilgili birincil içgörü görüntülenir.
+Üretkenlik Puanı giriş sayfası, kuruluşunuzun toplam puan ve puan geçmişini ve her kategori için birincil içgörüleri gösterir.
 
 :::image type="content" source="../../media/prodscore-landing.png" alt-text="Raporlar'daki Üretkenlik Puanı sayfası.":::
 
-**Kuruluş puanı bir yüzde** değeri ve puan olarak gösterilir. Paydada kendi puanlarınızı ve payda en fazla olası noktalarınız olduğunu görüyoruz.
+**Kuruluşunuzun puanı** yüzde değeri ve puan olarak gösterilir. Puanlarınızı paydada ve paydada mümkün olan en yüksek noktaları görebilirsiniz.
 
-**Eşler arası** karşılaştırmalar, kuruluş puanınızı sizinki gibi kuruluşlarla karşılaştırmanıza olanak sağlar. Kişi deneyimi kategorileri için eşler karşılaştırması, benzer kuruluşlar kümesi içindeki ölçülerin ortalaması olarak hesaplanır. Kuruluşlar kümesi bölgenizin lisanslı kullanıcı sayısı, lisans türleri, endüstri ve iş azmli kuruluşlarının sayısına sahip kuruluşlardan Microsoft 365.
+**Eş karşılaştırmaları** , kuruluşunuzun puanını sizinki gibi kuruluşlarla karşılaştırmanıza olanak sağlar. Kişilerin deneyim kategorileri için eş karşılaştırması, benzer kuruluşlardaki ölçülerin ortalaması olarak hesaplanır. Kuruluş kümesi, bölgenizdeki benzer sayıda lisanslı kullanıcıya, lisans türüne, sektöre ve Microsoft 365 ile çalışma süresine sahip kuruluşlardan oluşur.
 
 > [!NOTE]
-> Microsoft, bir kuruluşun eşleni olduğu sektörü belirlemek için iç verileri kullanır. Üst kuruluşun altındaki kiracılar, üst kuruluşla aynı endüstriyle eşleniyor. Kuruluşlar sektör eşlemelerini görüntüde veya değiştiremez.
+> Microsoft, bir kuruluşun eşlenmesi gereken sektörü belirlemek için iç verileri kullanır. Üst kuruluş altındaki kiracılar, üst kuruluşla aynı sektöre eşlenir. Kuruluşlar sektör eşlemelerini görüntüleyemez veya değiştiremez.
 
-Uç nokta analizi eşler arası karşılaştırma, cihaz başlangıç performansı hedeflerini ve tüm kiracılarda toplanan orta değerlerden temel alan önerilen yazılım yapılandırmasını içerir.
+Uç nokta analizi eş karşılaştırması, cihaz başlatma performansına yönelik hedefleri ve tüm kiracılarda toplanan ortanca değerleri temel alan önerilen yazılım yapılandırmasını içerir.
 
 Ağ bağlantısı için önerilen karşılaştırma 80 puandır.
 
-Puan **çözümleme bölümü** , kişiler ve teknoloji deneyimi alanlarına göre karşılaştırmalarla Üretkenlik Puanınızı çözümlemenizi sağlar.
+**Puan dökümü** bölümü, kişilere ve teknoloji deneyimi alanlarına göre kıyaslamalarla Üretkenlik Puanınızın dökümünü sağlar.
 
-Puan geçmişi, son altı ayda her kategorideki puanının nasıl değiştiğini gösterir.
+Puan geçmişi, her kategorideki puanınızın son altı ay içinde nasıl değiştiğini gösterir.
 
-Kişiler **deneyimleri ve** **Teknoloji deneyimleri alanları** , bu alanlardaki kategoriler için birincil içgörüleri içerir. Daha derin içgörüleri görmek için her kategoriyi seçin.
+**Kişiler deneyimleri** ve **Teknoloji deneyimleri** alanları, bu alanlardaki kategoriler için birincil içgörüleri içerir. Daha ayrıntılı içgörüler görmek için her kategoriyi seçebilirsiniz.
 
 ## <a name="category-details-pages"></a>Kategori ayrıntıları sayfaları
 
-Her kategori ayrıntıları sayfasında, temel içgörü ve destekleyen ölçümlerin yanı sıra, kurumda değişikliği desteklemek için gerçekleştirebilirsiniz ilgili araştırma ve işlemler de görüntülenir. Araştırma, her kategori için birincil içgörülerin önemini ve mantıklı bir biçimde destekler. Daha fazla bilgi için [, Yalçın raporunu okuyun](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE2PBrb).
+Her kategori ayrıntıları sayfası, birincil içgörüleri ve destekleyici ölçümlerin yanı sıra kuruluşunuzda değişiklik sağlamak için gerçekleştirebileceğiniz ilgili araştırma ve eylemleri gösterir. Araştırma, her kategori için birincil içgörülerin ardındaki önemi ve mantığı destekler. Daha fazla bilgi için [Forrester raporunu okuyun](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE2PBrb).
 
-Ayrıntılar sayfaları:
+Ayrıntılar sayfaları şunlardır:
 - [İçerik işbirliği – kişi deneyimleri](content-collaboration.md)
 - [İletişim – kişi deneyimleri](communication.md)
 - [Toplantılar – kişi deneyimleri](meetings.md)
-- [Hareketlilik – kişi deneyimleri](mobility.md)
+- [Mobility – insan deneyimleri](mobility.md)
 - [Ekip çalışması – kişi deneyimleri](teamwork.md)
-- [Microsoft 365 Uygulamaları durumu – teknoloji deneyimleri](apps-health.md)
-- [Endpoint Analytics](/mem/analytics/productivity-score)
+- [Microsoft 365 Uygulamaları sağlık – teknoloji deneyimleri](apps-health.md)
+- [Uç Nokta Analizi](/mem/analytics/productivity-score)
 
-## <a name="business-continuity-special-report"></a>İş sürekliliği özel raporu
+## <a name="business-resilience-special-report"></a>İş dayanıklılığı özel raporu
 
-İş sürekliliği raporu, bu zorlu süre boyunca kuruluşlarını yönlendiren tüm Microsoft 365 tüm müşteriler tarafından kullanılabilen sınırlı zamanlı bir çalışma Alanı Zekası raporudur.  
+İş dayanıklılığı raporu, tüm Microsoft 365 müşterilerinin bu zorlu dönemde kuruluşlarına rehberlik etmelerine yardımcı olmak için kullanabileceği sınırlı süreli bir Çalışma Alanı Yönetim Bilgileri raporudur.  
 
-Bu rapor kuruluşlara şunları anlamada yardımcı olur: 
+Bu rapor kuruluşların şunları anlamasına yardımcı olur: 
 
-- Uzaktan çalışmaya geçişten işbirliği ve iletişim nasıl etkilenir. 
+- İşbirliği ve iletişimin uzaktan çalışmaya geçişten nasıl etkilendiği. 
 
-- Kişiler evden çalışmaya ayarlansın diye iş yaşam dengesi üzerindeki etkisi. 
+- İnsanlar evden çalışmaya alıştıkça iş-yaşam dengesi üzerindeki etkisi. 
 
-- Uzak toplantıların etkili bir karar verme destek isteyip desteklemesi.
+- Uzaktan toplantıların etkili karar alma sürecini destekleyip desteklemediği.
 
-[İş sürekliliği raporu hakkında daha fazla bilgi](/Workplace-Analytics/tutorials/bcrps)
+[İş dayanıklılığı raporu hakkında daha fazla bilgi edinin](/Workplace-Analytics/tutorials/bcrps)
 
-[Microsoft Graph hakkında daha fazla bilgi Graph](/graph/)
+[Microsoft Graph hakkında daha fazla bilgi edinin](/graph/)
 
 > [!NOTE]
-> Kullanıcılar, [MyAnalytics panosundan üretkenlik öngörüleri alma seçeneğine de sahip olur](/workplace-analytics/myanalytics/use/dashboard-2).
+> Kullanıcılar ayrıca [MyAnalytics panosundan](/workplace-analytics/myanalytics/use/dashboard-2) üretkenlik içgörüleri alma seçeneğine de sahiptir.
 
 
-## <a name="we-want-to-hear-from-you"></a>Bize haber almak için
+## <a name="we-want-to-hear-from-you"></a>Sizden haber almak istiyoruz
 
-Üretkenlik Puanı hakkındaki düşüncelerinizi ve bunu nasıl geliştir fikirlerinizi paylaşın. Ürün içindeki **Geri** Bildirim bölümlerini kullanın ve/veya aşağıdaki ekipte Üretkenlik Puanı ekibine prodscorefeedback@microsoft.com.
+Üretkenlik Puanı hakkındaki düşüncelerinizi ve bunu nasıl geliştireceklerinizi paylaşın. Ürün içindeki **Geri Bildirim** bölümlerini kullanın ve/veya prodscorefeedback@microsoft.com'da Üretkenlik Puanı ekibine ulaşın.
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Raporları Microsoft 365 kullanarak etkinlik etkinliklerini izleme](../../admin/activity-reports/activity-reports.md) (makale)\
+[Raporları kullanarak Microsoft 365 etkinliğini izleme](../../admin/activity-reports/activity-reports.md) (makale)\
 [Microsoft 365 kullanım analizini etkinleştirme](../../admin/usage-analytics/enable-usage-analytics.md) (makale)\
-[İlke genel Microsoft 365 yönetim merkezi](İlk Microsoft 365 yönetim merkezi](.. /admin-overview/admin-center-overview.md) (video)
+[Microsoft 365 yönetim merkezi genel bakış](Microsoft 365 yönetim merkezi genel bakış](.. /admin-overview/admin-center-overview.md) (video)
