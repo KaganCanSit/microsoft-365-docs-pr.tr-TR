@@ -21,14 +21,14 @@ description: Kuruluşunuzdaki kullanıcı ve yönetici etkinliğini görüntüle
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
-ms.openlocfilehash: e6754601aca5dda74ee59ed2c6c52b3f8b1eb2a3
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: b3ad71878f6d0c766cbcf5ba435bc61396f45ed6
+ms.sourcegitcommit: b16520d8bfe04b29274f7a129d90ef116bb77f69
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65128510"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "65231783"
 ---
-# <a name="search-the-audit-log-in-the-compliance-center"></a>Uyumluluk merkezinde denetim günlüğünde arama yapma
+# <a name="search-the-audit-log-in-the-compliance-portal"></a>Uyumluluk portalında denetim günlüğünde arama yapma
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
@@ -93,7 +93,6 @@ Denetim günlüğünde arama yapmaya başlamadan önce aşağıdaki öğeleri ok
 
 - Denetim günlüğünde arama yapmak için Exchange Online'da View-Only Denetim Günlükleri veya Denetim Günlükleri rolüne atanmış olmanız gerekir. Varsayılan olarak, bu roller Exchange yönetim merkezindeki **İzinler** sayfasındaki Uyumluluk Yönetimi ve Kuruluş Yönetimi rol gruplarına atanır. Office 365 ve Microsoft 365'deki genel yöneticiler otomatik olarak Exchange Online'da Kuruluş Yönetimi rol grubunun üyeleri olarak eklenir. Kullanıcıya en düşük ayrıcalık düzeyiyle denetim günlüğünde arama yapma olanağı vermek için, Exchange Online'da özel bir rol grubu oluşturabilir, View-Only Denetim Günlükleri veya Denetim Günlükleri rolünü ekleyebilir ve kullanıcıyı yeni rol grubunun bir üyesi olarak ekleyebilirsiniz. Daha fazla bilgi için bkz. [Exchange Online rol gruplarını yönetme](/Exchange/permissions-exo/role-groups).
 
-  > [!IMPORTANT]
   > Kullanıcıya uyumluluk portalındaki İzinler sayfasında View-Only Denetim **Günlükleri veya Denetim Günlükleri** rolü atarsanız, denetim günlüğünde arama yapamaz. İzinleri Exchange Online atamanız gerekir. Bunun nedeni, denetim günlüğünde arama yapmak için kullanılan temel cmdlet'in Exchange Online bir cmdlet olmasıdır.
 
 - Bir kullanıcı veya yönetici tarafından denetlenen bir etkinlik gerçekleştirildiğinde, bir denetim kaydı oluşturulur ve kuruluşunuz için denetim günlüğünde depolanır. Denetim kaydının tutulacak süresi (ve denetim günlüğünde aranabilir) Office 365 veya Microsoft 365 Kurumsal aboneliğinize ve özellikle belirli kullanıcılara atanan lisansın türüne bağlıdır.
@@ -103,7 +102,7 @@ Denetim günlüğünde arama yapmaya başlamadan önce aşağıdaki öğeleri ok
     > [!NOTE]
     > Kuruluşunuz denetim kayıtlarının bir yıllık saklaması için özel önizleme programına katıldıysa, genel kullanılabilirlik dağıtım tarihinden önce oluşturulan denetim kayıtlarının saklama süresi sıfırlanmaz.
 
-  - Başka herhangi bir (E5 olmayan) Office 365 veya Microsoft 365 lisansı atanmış kullanıcılar için denetim kayıtları 90 gün boyunca saklanır. Birleşik denetim günlüğünü destekleyen Office 365 ve Microsoft 365 aboneliklerinin listesi için [güvenlik ve uyumluluk merkezi hizmet açıklamasına](/office365/servicedescriptions/office-365-platform-service-description/office-365-securitycompliance-center) bakın.
+  - Başka herhangi bir (E5 olmayan) Office 365 veya Microsoft 365 lisansı atanmış kullanıcılar için denetim kayıtları 90 gün boyunca saklanır. Birleşik denetim günlüğünü destekleyen Office 365 ve Microsoft 365 aboneliklerinin listesi için [güvenlik ve uyumluluk portalı hizmet açıklamasına](/office365/servicedescriptions/office-365-platform-service-description/office-365-securitycompliance-center) bakın.
 
     > [!NOTE]
     > Posta kutusu denetimi varsayılan olarak açık olsa bile, uyumluluk portalında veya Office 365 Yönetim Etkinliği API'sinde bazı kullanıcılar için posta kutusu denetim olaylarının denetim günlüğü aramalarında bulunmadığını fark edebilirsiniz. Daha fazla bilgi için bkz. [Posta kutusu denetim günlüğü hakkında daha fazla bilgi](enable-mailbox-auditing.md#more-information).
@@ -244,7 +243,7 @@ Denetim günlüğü aramasının sonuçlarını yerel bilgisayarınızdaki virg�
 
 #### <a name="more-information-about-exporting-and-viewing-audit-log-search-results"></a>Denetim günlüğü arama sonuçlarını dışarı aktarma ve görüntüleme hakkında daha fazla bilgi
 
-- Tüm arama sonuçlarını indirdiğinizde CSV dosyası **CreationDate**, **UserIds**, **Operations** ve **AuditData** sütunlarını içerir. **AuditData** sütunu her olay hakkında ek bilgiler içerir (uyumluluk merkezinde arama sonuçlarını görüntülediğinizde açılır sayfada görüntülenen ayrıntılı bilgilere benzer). Bu sütundaki veriler, denetim günlüğü kaydından birden çok özellik içeren bir JSON nesnesinden oluşur. JSON nesnesindeki her *özellik:değer* çifti virgülle ayrılır. **AuditData** sütununu birden çok sütuna bölerek JSON nesnesindeki her özelliğin kendi sütununa sahip olması için Excel'daki Power Query Düzenleyicisi JSON dönüştürme aracını kullanabilirsiniz. Bu, bu özelliklerden birini veya daha fazlasını sıralamanıza ve filtrelemenize olanak tanır. JSON nesnesini dönüştürmek için Power Query Düzenleyicisi kullanarak adım adım yönergeler için bkz. [Denetim günlüğü kayıtlarını dışarı aktarma, yapılandırma ve görüntüleme](export-view-audit-log-records.md).
+- Tüm arama sonuçlarını indirdiğinizde CSV dosyası **CreationDate**, **UserIds**, **Operations** ve **AuditData** sütunlarını içerir. **AuditData** sütunu her olay hakkında ek bilgiler içerir (uyumluluk portalında arama sonuçlarını görüntülediğinizde açılır sayfada görüntülenen ayrıntılı bilgilere benzer). Bu sütundaki veriler, denetim günlüğü kaydından birden çok özellik içeren bir JSON nesnesinden oluşur. JSON nesnesindeki her *özellik:değer* çifti virgülle ayrılır. **AuditData** sütununu birden çok sütuna bölerek JSON nesnesindeki her özelliğin kendi sütununa sahip olması için Excel'daki Power Query Düzenleyicisi JSON dönüştürme aracını kullanabilirsiniz. Bu, bu özelliklerden birini veya daha fazlasını sıralamanıza ve filtrelemenize olanak tanır. JSON nesnesini dönüştürmek için Power Query Düzenleyicisi kullanarak adım adım yönergeler için bkz. [Denetim günlüğü kayıtlarını dışarı aktarma, yapılandırma ve görüntüleme](export-view-audit-log-records.md).
 
   **AuditData** sütununu böldükten sonra, belirli bir etkinlik türünün ayrıntılı özelliklerini görüntülemek için **İşlemler** sütununu filtreleyebilirsiniz.
 
@@ -254,7 +253,7 @@ Denetim günlüğü aramasının sonuçlarını yerel bilgisayarınızdaki virg�
 
 ## <a name="audited-activities"></a>Denetlenen etkinlikler
 
-Bu bölümdeki tablolarda, Microsoft 365 denetlenen etkinlikler açıklanmaktadır. Güvenlik ve uyumluluk merkezindeki denetim günlüğünde arama yaparak bu olayları arayabilirsiniz.
+Bu bölümdeki tablolarda, Microsoft 365 denetlenen etkinlikler açıklanmaktadır. Güvenlik ve uyumluluk portalındaki denetim günlüğünde arama yaparak bu olayları arayabilirsiniz.
 
 Bu tablolar ilgili etkinlikleri veya belirli bir hizmetten gelen etkinlikleri gruplandırır. Tablolar, **Etkinlikler** açılan listesinde görüntülenen kolay adı ve bir denetim kaydının ayrıntılı bilgilerinde ve arama sonuçlarını dışarı aktardığınızda CSV dosyasında görünen ilgili işlemin adını içerir. Ayrıntılı bilgilerin açıklamaları için [denetim günlüğündeki Ayrıntılı özellikler bölümüne](detailed-properties-in-the-office-365-audit-log.md) bakın.
 
@@ -401,6 +400,18 @@ Belirli bir tabloya gitmek için aşağıdaki bağlantılardan birine tıklayın
     :::column-end:::
     :::column:::
         [yönetici etkinliklerini Exchange](#exchange-admin-audit-log)
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column:::
+        [Şifrelenmiş ileti portalı etkinlikleri](#encrypted-message-portal-activities)
+    :::column-end:::
+    :::column:::
+        
+    :::column-end:::
+    :::column:::
+        
     :::column-end:::
 :::row-end:::
 
@@ -769,7 +780,7 @@ Aşağıdaki tabloda, bir yönetici kuruluşunu Microsoft 365 yönetim merkezi v
 
 ### <a name="ediscovery-activities"></a>eBulma etkinlikleri
 
-Güvenlik ve uyumluluk merkezinde veya ilgili PowerShell cmdlet'leri çalıştırılarak gerçekleştirilen İçerik Arama ve eBulma ile ilgili etkinlikler denetim günlüğüne kaydedilir. Bu, aşağıdaki etkinlikleri içerir:
+Güvenlik ve uyumluluk portalında veya ilgili PowerShell cmdlet'leri çalıştırılarak gerçekleştirilen İçerik Arama ve eBulma ile ilgili etkinlikler denetim günlüğüne kaydedilir. Bu, aşağıdaki etkinlikleri içerir:
 
 - eBulma servis taleplerini oluşturma ve yönetme
 
@@ -1145,7 +1156,7 @@ Daha önce açıklandığı gibi, Office 365 E5 veya Microsoft E5 lisansına (ve
 
 Evet. Office 365 Yönetim Etkinliği API'si, denetim günlüklerini program aracılığıyla getirmek için kullanılır.  Başlamak için bkz. [Office 365 Yönetim API'leriyle Kullanmaya başlayın](/office/office-365-management-api/get-started-with-office-365-management-apis).
 
-**Güvenlik ve uyumluluk merkezini veya Office 365 Yönetim Etkinliği API'sini kullanmak dışında denetim günlüklerini almanın başka yolları var mı?**
+**Güvenlik ve uyumluluk portalını veya Office 365 Yönetim Etkinliği API'sini kullanmak dışında denetim günlüklerini almanın başka yolları var mı?**
 
 Hayır. Denetim hizmetinden veri almanın tek iki yolu bunlardır.
 

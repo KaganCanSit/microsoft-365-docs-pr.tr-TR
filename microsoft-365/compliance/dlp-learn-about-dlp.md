@@ -15,12 +15,12 @@ ms.collection:
 search.appverid:
 - MET150
 description: Microsoft Purview veri kaybı önleme ilkelerini ve araçlarını kullanarak hassas bilgilerinizi korumayı öğrenin ve DLP yaşam döngüsünde bir tura katılın.
-ms.openlocfilehash: 755593830b489b268c81e722bd35a5984f2d1d93
-ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+ms.openlocfilehash: aa32eba1111f4a119652ba88b59062581bb6cc4b
+ms.sourcegitcommit: b16520d8bfe04b29274f7a129d90ef116bb77f69
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64953415"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "65231802"
 ---
 # <a name="learn-about-data-loss-prevention"></a>Veri kaybı önleme hakkında daha fazla bilgi edinme
 
@@ -183,7 +183,7 @@ Uyumluluk Merkezi'nde bir DLP ilkesi oluşturduktan sonra, bu ilke merkezi bir i
 
 ## <a name="viewing-policy-application-results"></a>İlke uygulaması sonuçlarını görüntüleme
 
-DLP, Microsoft Purview'da izleme, ilke eşleşmeleri ve eylemleri ile kullanıcı etkinliklerine kadar çok miktarda bilgi bildirir. İlkelerinizi ayarlamak ve hassas öğeler üzerinde gerçekleştirilen eylemleri önceliklendirmek için bu bilgileri kullanmanız ve üzerinde işlem yapmanız gerekir. Telemetri önce [Microsoft Purview uyumluluk portalı Denetim Günlükleri'ne](search-the-audit-log-in-security-and-compliance.md#search-the-audit-log-in-the-compliance-center) gider, işlenir ve farklı raporlama araçlarına gider. Her raporlama aracının farklı bir amacı vardır.
+DLP, Microsoft Purview'da izleme, ilke eşleşmeleri ve eylemleri ile kullanıcı etkinliklerine kadar çok miktarda bilgi bildirir. İlkelerinizi ayarlamak ve hassas öğeler üzerinde gerçekleştirilen eylemleri önceliklendirmek için bu bilgileri kullanmanız ve üzerinde işlem yapmanız gerekir. Telemetri önce [Microsoft Purview uyumluluk portalı Denetim Günlükleri'ne](search-the-audit-log-in-security-and-compliance.md#search-the-audit-log-in-the-compliance-portal) gider, işlenir ve farklı raporlama araçlarına gider. Her raporlama aracının farklı bir amacı vardır.
 
 ### <a name="dlp-alerts-dashboard"></a>DLP Uyarıları Panosu
 
@@ -217,7 +217,7 @@ Microsoft Purview DLP hakkında daha fazla bilgi edinmek için bkz:
 
 - [Uç nokta veri kaybı önleme hakkında daha fazla bilgi edinme](endpoint-dlp-learn-about.md)
 - [Microsoft Teams'teki varsayılan veri kaybı önleme ilkesi hakkında daha fazla bilgi edinme (önizleme)](dlp-teams-default-policy.md)
-- [Şirket içi tarayıcıda veri kaybını önleme hakkında bilgi edinin](dlp-on-premises-scanner-learn.md)
+- [Şirket içi tarayıcıda veri kaybını önleme hakkında bilgi edinme](dlp-on-premises-scanner-learn.md)
 - [Microsoft Uyumluluk Uzantısı hakkında daha fazla bilgi edinme](dlp-chrome-learn-about.md)
 - [Veri kaybı önleme Uyarılar panosu hakkında daha fazla bilgi edinme](dlp-alerts-dashboard-learn.md)
 

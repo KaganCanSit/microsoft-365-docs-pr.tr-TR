@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: İstediğinizi korumak ve istemediğinizden kurtulmak için bekletme ilkesinde veya bekletme etiketi ilkesinde yapılandırabileceğiniz ayarları anlayın.
-ms.openlocfilehash: ab3adee8275f6c64dd7ad3b21547e8205b00ff7d
-ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
+ms.openlocfilehash: ddfa921c8dae22bbe091e2c0f66fc9ae42aeea41
+ms.sourcegitcommit: b16520d8bfe04b29274f7a129d90ef116bb77f69
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65187788"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "65231813"
 ---
 # <a name="common-settings-for-retention-policies-and-retention-label-policies"></a>Bekletme ilkeleri ve bekletme etiketi ilkeleri için yaygın ayarlar
 
@@ -73,7 +73,7 @@ Kullanıcıların ve grupların öznitelik adları, Azure AD öznitelikleriyle [
 Basit sorgu oluşturucusu kullanılarak uyarlamalı bir kapsam yapılandırdığınızda tabloda listelenen öznitelikler ve özellikler kolayca belirtilebilir. Aşağıdaki bölümde açıklandığı gibi gelişmiş sorgu oluşturucusu ile ek öznitelikler ve özellikler desteklenir.
 
 > [!TIP]
-> Gelişmiş sorgu oluşturucusunu kullanma hakkında ek bilgi için aşağıdaki web seminerlerine bakın: 
+> Gelişmiş sorgu oluşturucusunu kullanma hakkında daha fazla bilgi için aşağıdaki web seminerlerine bakın: 
 > - [Uyarlamalı İlke Kapsamları ile Kullanıcılar ve Gruplar için Gelişmiş Sorgular Oluşturma](https://mipc.eventbuilder.com/event/52683/occurrence/49452/recording?rauth=853.3181650.1f2b6e8b4a05b4441f19b890dfeadcec24c4325e90ac492b7a58eb3045c546ea)
 > - [Uyarlamalı İlke Kapsamlarıyla SharePoint Siteleri için Gelişmiş Sorgular Oluşturma](https://aka.ms/AdaptivePolicyScopes-AdvancedSharePoint)
 
@@ -130,11 +130,11 @@ Uyarlamalı kapsamınızı yapılandırmadan önce, oluşturulacak kapsam türü
     - **SharePoint site** kapsamları için Anahtar Sözcük Sorgu Dili (KQL) kullanın. Dizine alınmış site özelliklerini kullanarak SharePoint aramak için KQL kullanmayı zaten biliyor olabilirsiniz. Bu KQL sorgularını belirtmenize yardımcı olmak için bkz[. Anahtar Sözcük Sorgu Dili (KQL) söz dizimi başvurusu](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference).
         
         Örneğin, SharePoint site kapsamları, grup bağlantılı ve OneDrive siteleri içeren tüm Microsoft 365 SharePoint site türlerini otomatik olarak içerdiğinden, belirli site türlerini dahil etmek veya hariç tutmak için **SiteTemplate** dizinli site özelliğini kullanabilirsiniz. Belirtebileceğiniz şablonlar:
-        - Modern iletişim siteleri için SITEPAGEPUBLISHING
-        - Gruba bağlı Microsoft 365 siteler için GROUP
-        - Microsoft Teams özel kanal siteleri için TEAMCHANNEL
-        - Klasik bir SharePoint ekip sitesi için STS
-        - OneDrive siteler için SPSPERS
+        - `SITEPAGEPUBLISHING` modern iletişim siteleri için
+        - `GROUP`gruba bağlı Microsoft 365 siteler için
+        - `TEAMCHANNEL`Microsoft Teams özel kanal siteleri için
+        - `STS`klasik bir SharePoint ekip sitesi için
+        - `SPSPERS`OneDrive siteler için
         
         Bu nedenle, yalnızca modern iletişim sitelerini içeren ve Microsoft 365 bağlı ve OneDrive siteleri dışlayan uyarlamalı bir kapsam oluşturmak için aşağıdaki KQL sorguyu belirtin:
         ````console
@@ -175,19 +175,19 @@ PowerShell kullanarak sorgu çalıştırmak için:
 
 1. Uygun [Exchange Online Yönetici izinlerine](/powershell/exchange/connect-to-exchange-online-powershell) sahip bir hesap kullanarak [PowerShell'i Exchange Online Bağlan](/powershell/exchange/find-exchange-cmdlet-permissions#use-powershell-to-find-the-permissions-required-to-run-a-cmdlet).
 
-2. Küme ayraçları (`{`,`}`) içine alınmış uyarlamalı kapsam için *-Filter* parametresi ve [OPATH sorgunuzla](/powershell/exchange/filter-properties) [Get-Recipient](/powershell/module/exchange/get-recipient) veya [Get-Mailbox](/powershell/module/exchange/get-mailbox) kullanın. Öznitelik değerleriniz dizeyse, bu değerleri çift veya tek tırnak içine alın.  
+2. Küme ayraçları (`{`,`}`) içine alınmış uyarlamalı kapsam için *-Filter* parametresi ve [OPATH sorgunuzla](/powershell/exchange/filter-properties) [Get-Recipient](/powershell/module/exchange/get-recipient), [Get-Mailbox](/powershell/module/exchange/get-mailbox) veya [Get-User](/powershell/module/exchange/get-user) kullanın. Öznitelik değerleriniz dizeyse, bu değerleri çift veya tek tırnak içine alın.
 
-    Sorgunuz için seçtiğiniz [OPATH özelliği](/powershell/exchange/filter-properties) tarafından hangi cmdlet'in desteklendiğini belirleyerek doğrulama için mi `Get-Recipient` kullanılacağını `Get-Mailbox` belirleyebilirsiniz.
+    Sorgunuz için seçtiğiniz [OPATH özelliği](/powershell/exchange/filter-properties) tarafından hangi cmdlet'in desteklendiğini belirleyerek doğrulama için Get-Mailbox, Get-Recipient veya Get-User kullanılıp kullanılmayacağını belirleyebilirsiniz.
 
     > [!IMPORTANT]
-    > `Get-Mailbox`*MailUser* alıcı türünü desteklemez, bu nedenle `Get-Recipient` karma bir ortamda şirket içi posta kutularını içeren sorguları doğrulamak için kullanılmalıdır.
+    > Get-Mailbox *MailUser* alıcı türünü desteklemez, bu nedenle karma bir ortamda şirket içi posta kutuları içeren sorguları doğrulamak için Get-Recipient veya Get-User kullanılmalıdır.
 
-    **Kullanıcı** kapsamını doğrulamak için aşağıdakilerden birini kullanın:
-    - `Get-Mailbox`veya ile `-RecipientTypeDetails UserMailbox`
-    - `Get-Recipient` Ile `-RecipientTypeDetails UserMailbox,MailUser`
+    **Kullanıcı** kapsamını doğrulamak için uygun komutu kullanın:
+    - `Get-Mailbox`*with -RecipientTypeDetails UserMailbox,SharedMailbox,RoomMailbox,EquipmentMailbox*
+    - `Get-Recipient` with *-RecipientTypeDetails UserMailbox,MailUser,SharedMailbox,RoomMailbox,EquipmentMailbox*
     
     **Microsoft 365 Grubu** kapsamını doğrulamak için şunu kullanın:
-    - `Get-Mailbox`veya `Get-Recipient``-RecipientTypeDetails GroupMailbox`
+    - `Get-Mailbox`*-GroupMailbox* veya `Get-Recipient` *-RecipientTypeDetails GroupMailbox* ile
 
     Örneğin, **bir Kullanıcı** kapsamını doğrulamak için şunları kullanabilirsiniz:
     
@@ -200,6 +200,11 @@ PowerShell kullanarak sorgu çalıştırmak için:
     ```PowerShell
     Get-Mailbox -RecipientTypeDetails GroupMailbox -Filter {CustomAttribute15 -eq "Marketing"} -ResultSize Unlimited
     ```
+    
+    > [!TIP]
+    > Kullanıcı kapsamını doğrulamak için bu komutları kullandığınızda, döndürülen alıcı sayısı beklenenden yüksekse, bunun nedeni uyarlamalı kapsamlar için geçerli lisansı olmayan kullanıcıları içermesi olabilir. Bu kullanıcılara bekletme ayarları uygulanmaz.
+    > 
+    > Örneğin, karma bir ortamda, şirket içinde veya Exchange Online Exchange posta kutusu olmayan lisanssız eşitlenmiş kullanıcı hesaplarınız olabilir. Aşağıdaki komutu çalıştırarak bu kullanıcıları tanımlayabilirsiniz: `Get-User -RecipientTypeDetails User`
 
 3. Çıkışın uyarlamalı kapsamınız için beklenen kullanıcı veya gruplara eşleştiğinden emin olun. Aksi takdirde sorgunuzu ve değerleri Azure AD veya Exchange için ilgili yöneticiye danışın.
  
@@ -217,7 +222,7 @@ Statik kapsamları kullanmayı seçtiğinizde, ilkenin seçili konum (konumun ta
 
 #### <a name="a-policy-that-applies-to-entire-locations"></a>Konumların tamamı için geçerli olan ilke
 
-Skype Kurumsal dışında, varsayılan ayar, seçili konumların tüm örneklerinin ilkeye otomatik olarak dahil edilmeleridir ve bunları dahil etmek zorunda kalmadan ilkeye eklenir.
+Skype Kurumsal dışında, varsayılan ayar seçili konumların tüm örneklerinin ilkeye otomatik olarak dahil edilmeleridir ve bunları dahil olarak belirtmeniz gerekmez.
 
 Örneğin, **Exchange e-posta** konumu için **tüm alıcılar**. Bu varsayılan ayarda, ilkeye tüm mevcut kullanıcı posta kutuları eklenir ve ilke uygulandıktan sonra oluşturulan tüm yeni posta kutuları ilkeyi otomatik olarak devralır.
 
@@ -242,9 +247,9 @@ Bekletme ilkelerindeki konumlar, Exchange e-posta ve SharePoint siteleri gibi be
 
 **Hem Exchange e-posta** konumu hem de **Exchange ortak klasörler** konumu, bekletme ayarları uygulanmadan önce posta kutularının en az 10 MB veriye sahip olmasını gerektirir.
 
-**Exchange e-posta** konumu, bir posta kutusu düzeyinde bekletme ayarları uygulayarak kullanıcıların e-posta, takvim ve diğer posta kutusu öğeleri için bekletmeyi destekler. Paylaşılan posta kutuları da desteklenir.
+**Exchange e-posta** konumu, bir posta kutusu düzeyinde bekletme ayarları uygulayarak kullanıcıların e-posta, takvim ve diğer posta kutusu öğeleri için bekletmeyi destekler. Donanım ve odalar için paylaşılan posta kutuları ve kaynak posta kutuları da desteklenir.
 
-Kaynak posta kutuları, kişiler ve Microsoft 365 grup posta kutuları Exchange e-posta için desteklenmez. Microsoft 365 grup posta kutuları için bunun yerine **Microsoft 365 Grupları** konumu seçin. Exchange konumu başlangıçta statik kapsam için bir grup posta kutusunun seçilmesine izin veriyor olsa da, bekletme ilkesini kaydetmeye çalıştığınızda "RemoteGroupMailbox" bu konum için geçerli bir seçim değil hatasını alırsınız.
+E-posta kişileri ve Microsoft 365 grup posta kutuları Exchange e-posta için desteklenmez. Microsoft 365 grup posta kutuları için bunun yerine **Microsoft 365 Grupları** konumu seçin. Exchange konumu başlangıçta statik kapsam için bir grup posta kutusunun seçilmesine izin veriyor olsa da, bekletme ilkesini kaydetmeye çalıştığınızda "RemoteGroupMailbox" bu konum için geçerli bir seçim değil hatasını alıyorsunuz.
 
 İlke yapılandırmanıza bağlı olarak [, etkin olmayan posta kutuları](inactive-mailboxes-in-office-365.md) dahil edilebilir veya eklenmeyebilir:
 
@@ -302,11 +307,11 @@ Bu ilke konumuyla hedeflediğiniz posta kutularına bekletme ayarları uygulanma
 > [!NOTE]
 > bir Microsoft 365 grubunun Exchange posta kutusu olsa da, **Exchange e-posta** konumu için bekletme ilkesi Microsoft 365 grup posta kutularına içerik içermez.
 
-Statik kapsamlar kullanıyorsanız: Statik kapsamın **Exchange e-posta** konumu başlangıçta dahil edilecek veya hariç tutulacak bir grup posta kutusu belirtmenize izin veriyor olsa da, bekletme ilkesini kaydetmeye çalıştığınızda "RemoteGroupMailbox" öğesinin Exchange konumu için geçerli bir seçim olmadığını belirten bir hata görürsünüz.
+Statik kapsamlar kullanıyorsanız: Statik kapsamın **Exchange e-posta** konumu başlangıçta dahil edilecek veya hariç tutulacak bir grup posta kutusu belirtmenize olanak tanısa da, bekletme ilkesini kaydetmeye çalıştığınızda "RemoteGroupMailbox" öğesinin Exchange konumu için geçerli bir seçim olmadığını belirten bir hata görürsünüz.
 
 Varsayılan olarak, bir Microsoft 365 grubuna uygulanan bekletme ilkesi grup posta kutusunu ve SharePoint ekip sitesini içerir. SharePoint ekipler sitesinde depolanan dosyalar bu konumla kapsanmaktadır ancak kendi bekletme ilkesi konumlarına sahip Teams sohbetleri veya Teams kanal iletilerini kapsamaz.
 
-Bekletme ilkesinin yalnızca Microsoft 365 posta kutularına veya yalnızca bağlı SharePoint teams sitelerine uygulanmasını istediğiniz için varsayılanı değiştirmek için, Aşağıdaki değerlerden biriyle *Uygulamalar* parametresiyle [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) PowerShell cmdlet'ini kullanın:
+Bekletme ilkesinin yalnızca Microsoft 365 posta kutularına veya yalnızca bağlı SharePoint ekip sitelerine uygulanmasını istediğiniz için varsayılanı değiştirmek için [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) PowerShell cmdlet'ini ve *Uygulamalar* parametresini aşağıdaki değerlerden biriyle kullanın:
 
 - `Group:Exchange`yalnızca gruba bağlı Microsoft 365 posta kutuları için.
 - `Group:SharePoint`yalnızca gruba bağlı SharePoint siteler için.
@@ -325,7 +330,7 @@ Bekletme ilkesi (statik ilke kapsamı veya uyarlamalı) bir Microsoft 365 grubun
 
 - Grup bağlantılı SharePoint sitesi korunur ve **Microsoft 365 Grupları** konumuyla bekletme ilkesi tarafından yönetilmeye devam eder. Site, grup silinmeden önce siteye erişimi olan kişiler tarafından hala erişilebilir durumdadır ve yeni izinler artık SharePoint aracılığıyla yönetilmelidir.
     
-    Bu noktada, silinen grubu belirtemediğinizden siteyi Microsoft 365 Grupları konumundan dışlayamazsınız. Bekletme ilkesini bu siteden serbest bırakmanız gerekiyorsa Microsoft Desteği başvurun. Örneğin, [Microsoft 365 Yönetici Merkezi'nde bir hizmet isteği](https://admin.microsoft.com/Adminportal/Home#/support) açın.
+    Bu noktada, silinen grubu belirtemediğinizden siteyi Microsoft 365 Grupları konumundan dışlayamazsınız. Bekletme ilkesini bu siteden serbest bırakmanız gerekiyorsa Microsoft Desteği başvurun. Örneğin, [Microsoft 365 Yönetici Merkezi'nde bir destek isteği açın](/microsoft-365/admin/get-help-support#online-support).
 
 - Silinen grubun posta kutusu etkin değil olur ve SharePoint site gibi saklama ayarlarına tabidir. Daha fazla bilgi için bkz. [Exchange Online'da etkin olmayan posta kutuları](inactive-mailboxes-in-office-365.md).
 
@@ -400,13 +405,13 @@ Bekletmeyi yapılandırmadan önce, önce ilgili iş yükleri için kapasite ve 
 
 Bekletme ayarları öğeleri koruyup silebilir veya eski öğeleri saklamadan silebilir.
 
-Her iki durumda da bekletme ayarlarınız öğeleri silerse, belirttiğiniz zaman aralığının ilkenin atandığı zamandan değil, belirtilen saklama süresinin başlangıcına göre hesaplandığını anlamanız önemlidir. Örneğin, öğenin oluşturulduğu, değiştirildiği veya etiketlendiği zamandan itibaren.
+Her iki durumda da bekletme ayarlarınız öğeleri silerse, belirttiğiniz zaman aralığının ilkenin atandığı zamandan değil, belirtilen saklama süresinin başlangıcına göre hesaplanmadığını anlamanız önemlidir. Örneğin, öğenin oluşturulduğu, değiştirildiği veya etiketlendiği zamandan itibaren.
 
 Bu nedenle, önce mevcut içeriğin yaşını ve ayarların bu içeriği nasıl etkileyebileceklerini göz önünde bulundurun. Ayarlar içeriğe uygulanmadan önce, seçtiğiniz ayarları kullanıcılarınıza ve yardım masasına iletmeyi göz önünde bulundurun ve bu da onlara olası etkiyi değerlendirmek için zaman verir.
 
 ### <a name="a-policy-that-applies-to-entire-locations"></a>Konumların tamamı için geçerli olan ilke
 
-Konumları seçtiğinizde, Skype Kurumsal dışında, konumun durumu **Açık** olduğunda varsayılan ayar **Tümü'dür**.
+Konumları seçtiğinizde( Skype Kurumsal hariç), konumun durumu **Açık** olduğunda varsayılan ayar **Tümü'dür**.
 
 Bekletme ilkesi tüm konumların herhangi bir birleşimine uygulandığında, ilkenin içerebileceği alıcı, site, hesap, grup vb. sayısıyla ilgili bir sınır yoktur.
 

@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview Uyumluluk Yöneticisi'nde uyumluluk puanınızı etkileyebilecek etkinlikler için uyarılar oluşturmayı öğrenin.
-ms.openlocfilehash: b1e5630e20ace4835f8651d1878e731e423f58b1
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 32ab22f47d35d64fa72dcc4898f5fff06d20c13c
+ms.sourcegitcommit: b16520d8bfe04b29274f7a129d90ef116bb77f69
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65129166"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "65231747"
 ---
 # <a name="microsoft-purview-compliance-manager-alerts-and-alert-policies"></a>Microsoft Purview Uyumluluk Yöneticisi uyarıları ve uyarı ilkeleri
 
@@ -36,8 +36,7 @@ Uyumluluk Manger, uyumluluk hedeflerinizi takip edebilmeniz için değişiklikle
 
 Uyarı oluşturmak için, önce bir uyarıyı tetikleyen koşulları ve bildirimlerin sıklığını ana hatlarıyla belirlemek için bir uyarı ilkesi ayarlarsınız. İlke koşullarınızla bir eşleşme algıladığımızda ayrıntıları içeren bir e-posta bildirimi alırsınız; böylece araştırmanız veya başka işlemler yapmanız gerekip gerekmediğini belirleyebilirsiniz.
 
-
-Tüm uyarılar Uyumluluk Günlüğü'ndeki **Uyarılar** sekmesinde, tüm uyarı ilkeleri ise **Uyarı İlkeleri sekmesinde** listelenir.
+Tüm uyarılar Uyumluluk Günlüğü'ndeki **Uyarılar** sekmesinde, tüm uyarı ilkeleri ise **Uyarı İlkeleri sekmesinde** listelenir.  Tüm kuruluşlar için [önceden ayarlanmış bir varsayılan puan değiştirme ilkesi](#default-score-change-policy) vardır.
 
 ## <a name="understanding-the-alerts-and-alert-policies-pages"></a>Uyarılar ve Uyarı ilkeleri sayfalarını anlama
 
@@ -95,6 +94,28 @@ Aşağıdaki tabloda, hangi kullanıcıların rol türlerine göre uyarılar ve 
 - **Uygulama durumu değişikliği**: Kullanıcı, geliştirme eyleminin uygulama durumunu değiştirdi.
 - **Test durumu değişikliği**: Kullanıcı, geliştirme eyleminin test durumunu değiştirdi.
 - **Kanıt değişikliği**: Kullanıcı, geliştirme eyleminin **Belgeler** sekmesindeki bir kanıt belgesini karşıya yüklemiş veya silmiştir.
+
+#### <a name="default-score-change-policy"></a>Varsayılan puan değiştirme ilkesi
+
+Uyumluluk Yöneticisi, iyileştirme eylemlerindeki puan değişikliklerini izlemek için varsayılan bir uyarı ilkesi ayarlar. Bir iyileştirme eyleminin puanı değiştiğinde varsayılan ilke bir uyarı oluşturur. Varsayılan ilke ayarlarının çoğu düzenlenemez, ancak bildirimler için ek alıcılar ekleyebilirsiniz.
+
+Varsayılan ilkenin ayarları şunlardır:
+
+- 60 dakikalık bir süre içinde algılanan tüm eşleşmeler, aşırı bildirimleri azaltmak için tek bir uyarıda gruplandırılır. Örneğin, beş geliştirme eylemi bir saat içinde bir puan değişikliğiyle karşılaşırsa, bir uyarı oluşturulur.
+
+- Bu uyarıların önem düzeyi **orta** düzeydedir.
+
+- Kuruluşunuzun Genel Yöneticisi, uyarı bildirimlerinin varsayılan alıcısıdır.
+
+- Aşağıdaki adımları izleyerek daha fazla uyarı alıcısı ekleyebilirsiniz:
+    - **Uyarı ilkeleri** sayfasında **, Uyumluluk Yöneticisi varsayılan uyarı ilkesini** bulun.
+    - Adının sol tarafındaki kutuyu işaretleyin ve filtrelerin üst kısmındaki **Düzenle** düğmesini seçin.
+    - **Uyarı alıcıları** sayfasına gelene kadar **İleri** düğmesini seçin.
+    - **+Alıcıları seç'i** seçin ve e-posta bildirimini almak istediğiniz açılır bölmede her kullanıcı adının yanındaki kutuları işaretleyin. İşiniz bittiğinde **Alıcı ekle'yi** ve ardından **İleri'yi** seçin.
+    - **Değişikliklerinizi kaydetmek için Gözden geçir ve bitir** sayfasında **Güncelleştir'i** seçin.
+
+- Varsayılan ilke silinemez, ancak [aşağıda açıklanan adımları izleyerek ilkeyi](#activate-or-inactivate-a-policy) devre dışı bırakabilirsiniz.
+
 
 ### <a name="policy-creation-steps"></a>İlke oluşturma adımları
 
