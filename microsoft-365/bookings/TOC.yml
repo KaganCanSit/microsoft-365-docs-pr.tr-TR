@@ -27,6 +27,8 @@
           href: add-questions.md
         - name: Tampon süre ayarlama
           href: set-buffer-time.md
+        - name: Bookings'de grup katılımcılarını yönetme
+          href: manage-attendees-bookings.md
         - name: Ölçümler ve etkinlik izleme
           href: metrics-and-activity-tracking.md
         - name: Dil ve saat dilimi ayarlama
