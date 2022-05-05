@@ -15,12 +15,12 @@ ms.technology: mde
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.date: ''
-ms.openlocfilehash: 5b941cf40a220f2d9298a4918d334349f784dd13
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: ba9102f96ea08bf33f72a260779b4b37d6a6f0f4
+ms.sourcegitcommit: b3f5fe84a319741583954ef8ff2ec9ec6da69bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64789898"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "65217386"
 ---
 # <a name="customize-controlled-folder-access"></a>Denetimli klasör erişimini özelleştirin
 
@@ -77,7 +77,7 @@ Korumalı klasörleri eklemek ve kaldırmak için Windows Güvenliği uygulamas�
 
 3. **grup ilkesi Yönetim Düzenleyicinizde** **Bilgisayar yapılandırma** \> **İlkeleri** \> **Yönetim şablonları'na** gidin.
 
-4. **Exploit Guard** \> **Denetimli klasör erişimi** **Windows Defender Microsoft Defender Virüsten Koruma** \> **bileşenleri** \> Windows için ağacı genişletin. <br/>**NOT**: Windows'ın eski sürümlerinde **, Microsoft Defender Virüsten Koruma** yerine **Windows Defenderin virustentorjunta** görebilirsiniz.
+4. **Exploit Guard** \> **Denetimli klasör erişimi** **Windows Defender Microsoft Defender Virüsten Koruma** \> **bileşenleri** \> Windows için ağacı genişletin. <br/>**NOT**: Windows'ın eski sürümlerinde **Microsoft Defender Virüsten Koruma** yerine **Windows Defender Virüsten Koruma** görebilirsiniz.
 
 5. **Yapılandırılmış korumalı klasörler'e** çift tıklayın ve seçeneği **Etkin** olarak ayarlayın. **Göster'i** seçin ve korumak istediğiniz her klasörü belirtin.
 
@@ -160,18 +160,18 @@ Bir uygulama eklediğinizde, uygulamanın konumunu belirtmeniz gerekir. Korumal�
 
 ### <a name="use-mdm-csps-to-allow-specific-apps"></a>Belirli uygulamalara izin vermek için MDM CSP'lerini kullanma
 
-Uygulamaların korumalı klasörlerde değişiklik yapmasına izin vermek için [./Vendor/MSFT/Policy/Config/Defender/GuardedFoldersAllowedApplications](/windows/client-management/mdm/policy-csp-defender#defender-guardedfoldersallowedapplications) yapılandırma hizmeti sağlayıcısını (CSP) kullanın.
+Uygulamaların korumalı klasörlerde değişiklik yapmasına izin vermek için [./Vendor/MSFT/Policy/Config/Defender/ControlledFolderAccessAllowedApplications](/windows/client-management/mdm/policy-csp-defender#defender-guardedfoldersallowedapplications) yapılandırma hizmeti sağlayıcısını (CSP) kullanın.
 
 ## <a name="allow-signed-executable-files-to-access-protected-folders"></a>İmzalı yürütülebilir dosyaların korumalı klasörlere erişmesine izin ver
 
-Pertahanan Microsoft untuk Titik Akhir sertifika ve dosya göstergeleri, imzalı yürütülebilir dosyaların korumalı klasörlere erişmesine izin verebilir. Uygulama ayrıntıları için bkz. [Sertifikaları temel alan göstergeler oluşturma](indicator-certificates.md).
+Uç Nokta için Microsoft Defender sertifika ve dosya göstergeleri, imzalı yürütülebilir dosyaların korumalı klasörlere erişmesine izin verebilir. Uygulama ayrıntıları için bkz. [Sertifikaları temel alan göstergeler oluşturma](indicator-certificates.md).
 
 > [!Note]
 > Bu, PowerShell dahil olmak üzere betik altyapıları için geçerli değildir
 
 ## <a name="customize-the-notification"></a>Bildirimi özelleştirme
 
-Bir kural tetiklendiğinde ve bir uygulama veya dosyayı engellediğinde bildirimi özelleştirme hakkında daha fazla bilgi için bkz[. Pertahanan Microsoft untuk Titik Akhir uyarı bildirimlerini yapılandırma](configure-email-notifications.md).
+Bir kural tetiklendiğinde ve bir uygulama veya dosyayı engellediğinde bildirimi özelleştirme hakkında daha fazla bilgi için bkz[. Uç Nokta için Microsoft Defender'de uyarı bildirimlerini yapılandırma](configure-email-notifications.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

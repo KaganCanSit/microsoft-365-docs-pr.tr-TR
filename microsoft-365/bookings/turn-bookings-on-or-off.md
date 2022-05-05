@@ -10,12 +10,12 @@ ms.custom: admindeeplinkMAC
 ms.localizationpriority: medium
 ms.assetid: 5382dc07-aaa5-45c9-8767-502333b214ce
 description: Microsoft 365'da Microsoft Bookings erişmeyi öğrenin.
-ms.openlocfilehash: 28398faba7c21b6d3cce84063934268dad11fd64
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: e088250a24078d735b6751ff8cbcc55e2fdceaaa
+ms.sourcegitcommit: b3f5fe84a319741583954ef8ff2ec9ec6da69bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64823090"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "65217474"
 ---
 # <a name="turn-microsoft-bookings-on-or-off"></a>Microsoft Bookings’i açma veya kapatma
 
@@ -123,7 +123,7 @@ PowerShell Exchange Online kullanarak aşağıdaki komutları çalıştırmanız
    Set-OwaMailboxPolicy "OwaMailboxPolicy-Default" -BookingsMailboxCreationEnabled:$false
    ```
 
-   Daha fazla bilgi için bkz [. Set-OwaMailboxPolicy](/powershell/module/exchange/set-owamailboxpolicy).
+Daha fazla bilgi için bkz [. Set-OwaMailboxPolicy](/powershell/module/exchange/set-owamailboxpolicy).
 
 OWA posta kutusu ilkeleri hakkında daha fazla bilgi için aşağıdaki konulara göz atın:
 

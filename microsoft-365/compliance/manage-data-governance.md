@@ -15,12 +15,12 @@ search.appverid:
 - MET150
 recommendations: false
 description: Microsoft Purview Veri Yaşam Döngüsü Yönetimi & Microsoft Purview Kayıt Yönetimi'nden gelen özellikleri uygulayarak verilerinizi uyumluluk veya mevzuat gereksinimlerine göre idare edin.
-ms.openlocfilehash: d79396b9489bc21f899eaa6ab1ef89b175831095
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 0b507fad6b4455755a3a0036bff15a7973b906ee
+ms.sourcegitcommit: b3f5fe84a319741583954ef8ff2ec9ec6da69bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64973356"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "65217640"
 ---
 # <a name="govern-your-data-with-microsoft-purview"></a>Microsoft Purview ile verilerinizi yönetme
 
@@ -29,6 +29,9 @@ ms.locfileid: "64973356"
 >*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 Verilerinizi uyumluluk veya mevzuat gereksinimlerine göre yönetmek için **Microsoft Purview Veri Yaşam Döngüsü Yönetimi** (eski adıyla Microsoft Information Governance) ve **Microsoft Purview Kayıt Yönetimi** özelliklerini kullanın.
+
+> [!TIP]
+> Çoklu bulut ve hizmet olarak yazılım (SaaS) dahil olmak üzere verilerinizi tüm veri varlığınızda eşlemek ve yönetmek mi istiyorsunuz? [Microsoft Purview Veri Haritası, Microsoft Purview Veri Kataloğu ve Microsoft Purview Data Estate Analizler](/azure/purview/overview) kullanın.
 
 [Lisanslama açısından](#licensing-requirements) bakıldığında, veri yaşam döngüsü yönetimi ile kayıt yönetimi arasında önemli bir çakışma olabilir. Her iki çözüm de Microsoft 365 uygulamalar ve hizmetler için verilerin saklanmasını ve silinmesini destekler.
 

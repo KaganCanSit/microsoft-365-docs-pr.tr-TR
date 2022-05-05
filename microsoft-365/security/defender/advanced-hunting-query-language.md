@@ -20,12 +20,12 @@ ms.collection:
 - m365initiative-m365-defender
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: 5e474505eecca0c42aa919b42364a1ad54c27e17
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: b9bca10cf946a7e812064f07cc3be6fa658edf39
+ms.sourcegitcommit: b3f5fe84a319741583954ef8ff2ec9ec6da69bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65094767"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "65217408"
 ---
 # <a name="learn-the-advanced-hunting-query-language"></a>Gelişmiş tehdit avcılığı sorgu dilini öğrenme
 
@@ -175,14 +175,14 @@ Birden çok sorguyla deneme yapmak için sorgu düzenleyicisini kullanabilirsini
 
 Daha verimli bir çalışma alanı için aynı avlanma sayfasında birden çok sekme de kullanabilirsiniz. **Yeni sorgunuz** için bir sekme açmak için Yeni sorgu'yu seçin.
 
-:::image type="content" source="../../media/multitab.png" alt-text="Microsoft 365 Defender portalındaki **Yeni sorgu** sayfasında birden çok sorgu yürütme örneği" lightbox="../../media/multitab.png":::
+:::image type="content" source="../../media/multitab.png" alt-text="Microsoft 365 Defender portalında Gelişmiş avcılıkta yeni oluştur'u seçerek yeni bir sekme açma" lightbox="../../media/multitab.png":::
 
 Daha sonra yeni bir tarayıcı sekmesi açmadan farklı sorgular çalıştırabilirsiniz. 
 
-:::image type="content" source="../../media/multitab-examples.png" alt-text="Microsoft 365 Defender portalındaki **Yeni sorgu** sayfasında birden çok sorgu yürütme örneği" lightbox="../../media/multitab-examples.png":::
+:::image type="content" source="../../media/multitab-examples.png" alt-text="Microsoft 365 Defender portalındaki gelişmiş tehdit avcılığı sayfasından çıkmadan farklı sorgular çalıştırma" lightbox="../../media/multitab-examples.png":::
 
 >[!NOTE] 
-> Yeni bir sorgu için yeni bir tarayıcı sekmesi açarsanız kaydedilmemiş sorguları kaybetme riskiniz vardır.
+> Gelişmiş avcılık ile birden çok tarayıcı sekmesi kullanmak kaydedilmemiş sorgularınızı kaybetmenize neden olabilir. Bunun olmasını önlemek için, ayrı tarayıcı sekmeleri yerine gelişmiş avcılık içindeki sekme özelliğini kullanın.
 
 ## <a name="use-sample-queries"></a>Örnek sorguları kullanma
 

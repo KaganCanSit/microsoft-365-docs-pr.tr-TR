@@ -1,5 +1,5 @@
 ---
-title: Microsoft ürün NPS geri bildirimleri ve kuruluşları için içgörüler
+title: Kuruluşunuz için Microsoft ürünü NPS geri bildirimi ve içgörüleri
 f1.keywords:
 - NOCSH
 ms.author: Kwekua
@@ -16,150 +16,153 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Microsoft ürünleri ve hizmetleriyle ilgili olarak nasıl olduklarını görmek için son kullanıcılarından Net promoter scores (NPS) kullanın.
-ms.openlocfilehash: 230225edf924a418a65055a2527f9f7ded28ba61
-ms.sourcegitcommit: 4c207a9bdbb6c8ba372ae37907ccefca031a49f8
+description: Microsoft ürünleri ve hizmetleri hakkında ne hissettiklerini görmek için son kullanıcılarınızın Net promoter puanlarını (NPS) kullanın.
+ms.openlocfilehash: ec261553a5713d9e12205cbf4c88611a128bc48b
+ms.sourcegitcommit: b3f5fe84a319741583954ef8ff2ec9ec6da69bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "63016668"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "65217364"
 ---
-# <a name="microsoft-product-nps-feedback-and-insights-for-your-organization"></a>Microsoft ürün NPS geri bildirimleri ve kuruluşları için içgörüler
+# <a name="microsoft-product-nps-feedback-and-insights-for-your-organization"></a>Kuruluşunuz için Microsoft ürünü NPS geri bildirimi ve içgörüleri
 
-Bir kuruluşta yönetici olarak Microsoft 365 Microsoft tarafından gönderilen NPS ürün anketlerine erişerek içgörüler elde edinebilirsiniz.  
+Microsoft 365 kuruluşun yöneticisi olarak, Microsoft tarafından gönderilen NPS ürün anketlerine erişebilir ve bu anketlerden içgörü elde edebilirsiniz.  
 
-Net Promoter Score (NPS) anketleri kullanıcı geri bildirimlerini toplar ve kullanıcıların ne kadar büyük bir olasılıkla ürün ve hizmetleri arkadaşlara ve iş arkadaşlarınıza öner aldıklarını ölçün. Bu veriler, ürün ve hizmetlerinizin benimsenmesi ve yaygınlıkını belirlemede Microsoft 365 için kullanılabilir.
+Net Promoter Score (NPS) anketleri, kullanıcı geri bildirimlerini toplar ve kullanıcıların arkadaşlarınıza ve iş arkadaşlarınıza ürün ve hizmet önerme olasılıklarını ölçer. Bu veriler kuruluşunuzda Microsoft 365 ürün ve hizmetlerini benimseme ve dağıtma stratejilerini belirlemek için kullanılabilir.
 
-Microsoft ürünleri ve hizmetleriyle ilgili öngörüler sunmak için NPS anketlerini ve son kullanıcılarından gelen geri bildirimleri kullanırız. Bu bilgiler, kurumunuzu son kullanan ürün ve hizmetleri bulmanızı ve sorunları tanımlamanıza ve hızlı bir şekilde çözmenize yardımcı olabilir. Bu bilgilerle şunları sebilirsiniz:
+Size Microsoft ürünleri ve hizmetleri hakkında içgörüler sağlamak için son kullanıcılarınızdan gelen NPS anketlerini ve geri bildirimlerini kullanırız. Bu bilgiler, kuruluşunuzdaki son kullanıcıların hangi ürün ve hizmetleri kullandığını bulmanıza ve sorunları belirlemenize ve bunları hızlı bir şekilde çözmenize yardımcı olabilir. Bu bilgilerle:
 
-- Kullanıcıların tartıştığı en önemli temalara erişin.
-- Mutlu kullanıcıları belirleme.
-- Memnun olan kullanıcıların şikayetlerini ele alın.
-- İşletim sisteminin veya platform kullananların hangileri olduğunu görme.
-- Ürüne, platforma, kanala göre filtre uygulama veya anahtar sözcükler kullanarak arama.
-- En çok karşılaşılan ürünler ve sorunlar hakkında son kullanıcı açıklamalarını görmek.
-- Geri bildirimi ve anket bilgilerini CSV dosyasına aktarın.
+- Kullanıcıların tartıştığı en önemli temalara erişim.
+- Mutlu kullanıcıları belirleyin.
+- Mutsuz kullanıcıların şikayetlerini ele alın.
+- kullanıcıların hangi işletim sistemini veya platformları kullandığını görün.
+- Anahtar sözcükleri kullanarak ürüne, platforma, kanala veya aramaya göre filtreleyin.
+- En çok karşılaşılan ürünler ve sorunlar hakkında son kullanıcı yorumlarına bakın.
+- Geri bildirim ve anket bilgilerini CSV dosyasına aktarın.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Anket raporlarını görüntülemek ve [okumak](../add-users/about-admin-roles.md) için yönetici olmak gerekir. Kuruluşta, anket raporlarını görüntülemek ve okumak için geri bildirim anketlerin açık olması gerekir. Daha fazla [bilgi edinmek için, Microsoft geri bildirimlerini kurum için](manage-feedback-ms-org.md) yönetme makalelerini ziyaret edin.
+Anket raporlarını görüntülemek ve okumak için [yönetici](../add-users/about-admin-roles.md) olmanız gerekir. Anket raporlarını görüntülemek ve okumak için kuruluşunuzun geri bildirim anketlerinin açık olması gerekir. Daha fazla bilgi edinmek [için Bkz. Kuruluşunuz için Microsoft geri bildirimlerini yönetme](manage-feedback-ms-org.md) .
 
-## <a name="nps-survey-insights"></a>NPS anketi içgörüleri
+> [!IMPORTANT]
+> NPS anket içgörülerini görebilmeniz için son kullanıcılarınızdan en az 30 NPS anket gönderimi gerekir.
 
-1. Yönetim merkezinde HealthProduct  > **feedbackNPS anket öngörüleri'ne** >  gidin.
-2. **NPS anket öngörüleri sayfasında**, sayfada gezinebilirsiniz ve kuruluşun NPS ile ilgili anket öngörülerini görebilirsiniz.
+## <a name="nps-survey-insights"></a>NPS anket içgörüleri
+
+1. Yönetim merkezinde **HealthProduct** >  feedbackNPS  > **anket içgörüleri'ne** gidin.
+2. **NPS anket içgörüleri** sayfasından, kuruluşunuz için NPS ile ilgili anket içgörülerini görmek için sayfaya gidin.
 
 :::image type="content" source="../../media/product-feedback-main-page.png" alt-text="Ekran görüntüsü: Net Promoter Score (NPS) ana grafiği":::
 
 ### <a name="top-topic-filters"></a>En önemli konu filtreleri
 
-Kullanıcı geri bildirimlerinden yaygın temaları belirledik. Daha sonra veri kümelerini eğiten ve geri bildirimleri En İyi Konular olarak otomatik olarak düzenleyen makine öğrenme **modellerini kullandık**. Bundan sonra, en yüksek verbatim geri bildirimi hacmine sahip en iyi beş konu tanımlayabilirsiniz.  
+Kullanıcı geri bildirimlerinden ortak temaları belirledik. Ardından veri kümelerini eğiten ve geri bildirimi otomatik olarak **En Önemli Konular'a** düzenleyen makine öğrenmesi modellerini kullandık. Daha sonra en çok ayrıntılı geri bildirim içeren ilk beş konuyu belirleyebilirsiniz.  
 
-:::image type="content" source="../../media/top-topics-filter.png" alt-text="Ekran görüntüsü: En çok tartışılan geri bildirime sahip ilk beş konu":::
+:::image type="content" source="../../media/top-topics-filter.png" alt-text="Ekran görüntüsü: En ayrıntılı geri bildirim içeren ilk beş konu":::
 
 > [!NOTE]
-> Akıllı bir konuyu, yalnızca konuyla ilgili uzmanlarla ortaklık içinde minimum kalite çıtası bir araya getirmeden yayımlarız. Duyarlık ve geri çekme ölçümleri aynıyı belirlemek için kullanılır.
+> Akıllı bir konuyu yalnızca konu uzmanlarıyla ortaklaşa ayarlanmış minimum kalite çıtası karşıladıktan sonra yayımlarız. Duyarlık ve geri çağırma ölçümleri aynı değeri belirlemek için kullanılır.
 
-**Verbatim duyarlılığı** , bu konuda sınıflandırılmış bir verbatim'in doğru olma olasılığıdır.
+**Ayrıntılı duyarlık** , bu konuda sınıflandırılan bir ayrıntının doğru olma olasılığıdır.
 
-**Verbatim Recall** , bu konuyla ilgili bir indirimin bu konuda sınıflandırılma olasılığıdır.
+**Tam Geri Çağırma** , bu konuyla ilgili bir ifadenin bu konuda sınıflandırılma olasılığıdır.
 
-Şu anda kullanılabilir olan konular şunlardır:
+Şu anda sağlanan konular şunlardır:
 
-**Değişiklik Yönetimi** ; güncelleştirme işlemi, sık kullanılan uygulamaların nasıl kullanımı ve tasarım değişiklikleri gibi güncelleştirilmiş deneyimlerle ilgili müşteri açıklamalarını ifade eder.
+**Değişiklik Yönetimi** , güncelleştirme işlemi, sık kullanılan uygulamaların nasıl kullanılacağı ve tasarım değişiklikleri dahil olmak üzere güncelleştirilmiş deneyimlerle ilgili müşteri açıklamalarını ifade eder.
 
-- Verbatim Precision- %82
-- Verbatim Geri Çekme- %81
+- Ayrıntılı Duyarlık- %82
+- Tam Geri Çağırma- %81
 
-**İşbirliği** , kullanıcıların Microsoft uygulamalarını kullanarak işbirliğini ne kadar kolay bulmaları anlamına gelir.
+**İşbirliği** , kullanıcıların Microsoft uygulamalarını kullanarak işbirliği yapmayı ne kadar kolay bulduklarını ifade eder.
 
-- Verbatim Precision- %92
-- Verbatim Recall-91%
+- Ayrıntılı Duyarlık- %92
+- Tam Geri Çağırma%91
 
-**Karmaşıklık** , uygulamaların karmaşık mı yoksa kullanımı kolay mı olduğunu hissetmeleri konusunda müşteri geri bildirimlerine başvurur.
+**Karmaşıklık** , müşterilerin uygulamaların karmaşık mı yoksa kullanımı kolay mı olduğuyla ilgili geri bildirimlerini ifade eder.
 
-- Verbatim Precision- %92
-- Verbatim Recall- 89%
+- Ayrıntılı Duyarlık- %92
+- Tam Geri Çağırma- %89
 
-**Genel Takdir** açıklaması, pozitif bir duyguları olan ve diğer konuya uyması olmayan müşterilerin açıklamalarını ifade eder.
+**Genel Takdir**, olumlu bir yaklaşıma sahip olan ve başka bir konuya sığmayan müşteri açıklamalarını ifade eder.
 
-- Verbatim Precision- %93
-- Verbatim Recall- 98%
+- Ayrıntılı Duyarlık- %93
+- Tam Geri Çağırma- %98
 
-**Güvenilirlik,** uygulama ve sistem davranışı ile ilgili olarak beklenmeyen sonlandırmaya neden olan müşteri yorumlarını içerir.
+**Güvenilirlik** , beklenmeyen bir sonlandırmaya neden olan uygulama ve sistem davranışı hakkındaki müşteri yorumlarını içerir.
 
-- Verbatim Precision- %97
-- Verbatim Recall- 94%
+- Ayrıntılı Duyarlık- %97
+- Tam Geri Çağırma- %94
 
-**Gezinti** , uygulama gezintisi ve kullanılabilirlik hakkında müşteri yorumlarını içerir.  
+**Gezinti** , uygulama gezintisi ve kullanılabilirlik hakkındaki müşteri yorumlarını içerir.  
 
-- Verbatim Precision- %93
-- Verbatim Recall- 98%
+- Ayrıntılı Duyarlık- %93
+- Tam Geri Çağırma- %98
 
-**Performans** , bir Microsoft ürünü kullanırken bir kullanıcının deneyimleladığı işlemlerin algılanma hızıyla ilgili sorunları ele alan müşteri açıklamalarını ifade eder. Bu konu, kilitlenme alanlarını veya daha geniş güvenilirlik sorunlarını kapsamıyor.
+**Performans** , kullanıcının Microsoft ürünü kullanırken yaşadığı algılanan işlem hızıyla ilgili sorunları gideren müşteri yorumlarını ifade eder. Bu konu, kilitlenmeler veya daha geniş güvenilirlik sorunları alanlarını kapsamaz.
 
-- Verbatim Precision- %92
-- Verbatim Recall- 98%
+- Ayrıntılı Duyarlık- %92
+- Tam Geri Çağırma- %98
 
-**Güvenilirlik,** müşteri yorumlarını uygulama ve sistem davranışı hakkında beklenmeyen sonlandırma ile sonuçlandırarak ifade eder.  
+**Güvenilirlik** , beklenmeyen bir sonlandırmaya neden olan uygulama ve sistem davranışı hakkındaki müşteri yorumlarını ifade eder.  
 
-Verbatim Precision- 97% Verbatim Geri Çekme- %94
+Ayrıntılı Duyarlık- %97 Tam Geri Çağırma- %94
 
-**Kullanıcı Eğitimi** , yardım belgeleri, öğreticiler, kılavuzlar ve diğer ürün içi veya çevrimiçi öğrenme içeriğiyle ilgili müşteri yorumlardan oluşur.
+**Kullanıcı Eğitimi** , yardım belgeleri, öğreticiler, kılavuzlar ve diğer ürün içi veya çevrimiçi öğrenme içeriğiyle ilgili müşteri yorumlarından oluşur.
 
-- Verbatim Precision- %83
-- Verbatim Recall- 87%
+- Ayrıntılı Duyarlık- %83
+- Tam Geri Çağırma- %87
 
-**Değer** , fiyatlandırma ve ödeme tercihleri gibi konularla ilgili müşteri tercihlerine başvurur.  
+**Değer** , fiyatlandırma ve ödeme tercihleri dahil olmak üzere konularla ilgili müşteri algılarını ifade eder.  
 
-- Verbatim Precision- %86
-- Verbatim Geri Çekme- %100
+- Tam Duyarlık- %86
+- Tam Geri Çağırma- %100
 
 ### <a name="chart-information"></a>Grafik bilgileri
 
-**Toplam geri** bildirim, son kullanıcılar tarafından gönderilen toplam NPS geri bildirim yanıtı sayısını gösterir, yorumlara NPS geri bildirimi eksner ve yorum olmadan da gösterir.
+**Toplam geri bildirim** , son kullanıcılar tarafından gönderilen NPS geri bildirim yanıtlarının toplam sayısını gösterir; NPS geri bildirimini yorumlarla ve yorumsuz olarak içerir.
 
-**Açıklamalar** , son kullanıcı tarafından gönderilen ve açıklama içeren toplam NPS geri bildirim yanıtı sayısını gösterir.
+**Açıklamalar** , son kullanıcı tarafından gönderilen ve açıklama içeren NPS geri bildirim yanıtlarının toplam sayısını gösterir.
 
-**Uygulamaya göre yanıt hacmi** uygulamaya göre TOPLAM NPS geri bildirim yanıtı ses düzeyini gösterir.
+**Uygulamaya göre yanıt hacmi, uygulamaya** göre NPS geri bildirim yanıt hacminin toplam sayısını gösterir.
 
-**Platforma göre yanıt hacmi** , platforma göre NPS geri bildirim yanıtının toplam sayısını gösterir.
+**Platforma göre yanıt hacmi, platforma** göre toplam NPS geri bildirim yanıt hacmi sayısını gösterir.
 
-**Aya göre geri bildirim hacmi** , son on iki ayın toplam NPS geri bildirim yanıtı ses düzeyini gösterir.
+**Aya göre geri bildirim hacmi** , son on iki aya göre toplam NPS geri bildirim yanıt hacmi sayısını gösterir.
 
-:::image type="content" source="../../media/response-details.png" alt-text="Ekran görüntüsü: Yanıt hacmi ve aya göre yanıt hacmi":::
+:::image type="content" source="../../media/response-details.png" alt-text="Ekran görüntüsü: Aya göre yanıt hacmi ve yanıt hacmi":::
 
-Grafikler aşağıdaki gibi NPS derecelendirmesi ile filtrelenebilir:
+Grafikler aşağıdaki gibi NPS derecelendirmesine göre filtrelenir:
 
-- Yükleniciler, sizin ürün veya hizmetinizi öneren memnun değilim müşterilerdir.
-- Pasifler hizmetten memnun olan, ancak ürün veya hizmetinizi öneren müşterilerdir.
-- Yükseltenler- Sadık, sadık ve sadık olan ve ürün veya hizmetinizi öneren mutlu müşteriler.
+- Detractor'lar, ürününüzü veya hizmetinizi önerme olasılığı düşük olan mutsuz müşterilerdir.
+- Pasifler, hizmetlerden memnun olan ancak ürününüzü veya hizmetinizi önermek için yeterli olmayan müşterilerdir.
+- Yükseltenler- Sadık, hevesli ve ürününüzü veya hizmetinizi önerme olasılığı yüksek olan mutlu müşteriler.
 
-:::image type="content" source="../../media/how-likely-recommend.png" alt-text="Ekran görüntüsü: Bir uygulamayı bir arkadaşınıza veya meslektaşına önerilme olasılığınız ile ilgili grafik":::
+:::image type="content" source="../../media/how-likely-recommend.png" alt-text="Ekran görüntüsü: Bir uygulamayı bir arkadaşınıza veya meslektaşınıza önerme olasılığını gösteren grafik":::
 
-### <a name="export-to-csv-and-search"></a>CSV ve Arama'ya aktarma
+### <a name="export-to-csv-and-search"></a>CSV'ye aktar ve Ara
 
-CSV'ye Aktar işlevini kullanarak ham verileri daha fazla çözümlemek için dışarı aktarabilirsiniz. Geri bildirim alanına karşılık gelen açıklama bölümünde anahtar sözcükler için arama yapabilirsiniz.
+CSV'ye Aktar işlevini kullanarak ham verileri daha fazla analiz için dışarı aktarabilirsiniz. Geri bildirim alanına karşılık gelen açıklama bölümünde anahtar sözcükleri arayabilirsiniz.
 
-:::image type="content" source="../../media/export-to-csv.png" alt-text="Ekran görüntüsü: CSV'ye dışarı aktar için seçin":::
+:::image type="content" source="../../media/export-to-csv.png" alt-text="Ekran görüntüsü: CSV'ye dışarı aktarmak için seçin":::
 
 > [!NOTE]
-> Ham veriler, NPS geri bildirimleri de içinde olmak üzere tüm geri bildirim türlerini içerir.
+> Ham veriler, NPS olmayan geri bildirimler de dahil olmak üzere tüm geri bildirim türlerini içerir.
 
-### <a name="filters"></a>Filtreler
+### <a name="filters"></a>Filtre
 
-Kanallar, Ürünler, **Platformlar** **ve Geri** Bildirim **Türlerine** göre **filtre uygulama.**
+**Kanallara**, **Ürünlere**, **Platformlara** ve **Geri Bildirim Türlerine** göre filtreleyebilirsiniz.
 
-**Kanallar**, kuruluşların belirli bir süre için özellik güncelleştirmelerini ne sıklıkta edin olduklarını seçmeleri için Office. Daha fazla bilgi için [bkz. Yayın için güncelleştirme kanallarına Microsoft 365 Uygulamaları](/deployoffice/overview-update-channels). Bu filtre, belirli bir kanalda kullanıcıdan gönderilen geri bildirime kadar filtrelemenizi sağlar.
+**Kanallar**, kuruluşların Office için özellik güncelleştirmelerini ne sıklıkta aldıklarını seçmelerinin bir yoludur. daha fazla bilgi için bkz. [Microsoft 365 Uygulamaları için güncelleştirme kanallarına genel bakış](/deployoffice/overview-update-channels). Bu filtre, belirli bir kanaldaki bir kullanıcıdan gönderilen geri bildirimlere göre filtrelemenizi sağlar.
 
-Geri bildirim Android, iOS, **Mac ve Diğer** Platformlar'a Windows. Bu filtre, geri bildirimi gönderildikten sonra gönderilen platforma göre filtrelemenizi sağlar.
+Android, iOS, Mac ve Windows gibi çeşitli **Platformlarda** geri bildirim gönderilebilir. Bu filtre, geri bildirimleri gönderildiği platforma göre filtrelemenize olanak tanır.
 
-İş ürünleri **Microsoft 365 çoğunluğu bu** filtre altında bulunabilir. Geri bildirim gönderilen ürünleri seçmek için bu filtreyi kullanın.
+İş **ürünleri** için Microsoft 365 çoğunluğu bu filtrenin altında bulunabilir. Geri bildirim gönderilen ürünleri seçmek için bu filtreyi kullanın.
 
-Topladığımız **geri bildirimleri filtrelemek** için Geri Bildirim Türlerini (yalnızca NPS geri bildirim türlerine ayarlanmış) kullanın.
+Topladığımız geri bildirimleri filtrelemek için **Geri Bildirim Türlerini** (yalnızca NPS geri bildirim türleri olarak ayarlayın) kullanın.
 
 :::image type="content" source="../../media/feedback-filters.png" alt-text="Ekran görüntüsü: Geri bildirim türlerini gösteren grafik":::
 
-### <a name="we-want-to-hear-from-you"></a>Bize haber almak için
+### <a name="we-want-to-hear-from-you"></a>Sizden haber almak istiyoruz
 
-NPS anketi içgörü panosu hakkındaki düşüncelerinizi ve bu panoyu nasıl geliştir fikirlerinizi paylaşabilirsiniz. Ürünler ve hizmetlerde Geri Bildirim bölümlerini kullanın. Bize e-postayla da e-posta prosight@microsoft.com
+NPS anketi içgörü panosu hakkındaki düşüncelerinizi ve nasıl geliştirilmeye yönelik fikirlerinizi paylaşın. Ürün ve hizmetlerdeki Geri Bildirim bölümlerini kullanın. Ayrıca prosight@microsoft.com adresinden bize e-posta gönderebilirsiniz

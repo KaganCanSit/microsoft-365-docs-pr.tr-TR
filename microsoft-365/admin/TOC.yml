@@ -353,7 +353,7 @@
         - name: Office 2013 için Modern Kimlik Doğrulamasını Etkinleştirme
           href: security-and-compliance/enable-modern-authentication.md
         - name: Veri koruması için önkoşullar
-          href: /microsoft-365/business-premium/m365bp-pre-requisites-for-data-protection.md
+          href: /microsoft-365/business-premium/m365bp-pre-requisites-for-data-protection
         - name: Tehdit korumasını artırma
           href: security-and-compliance/increase-threat-protection.md
         - name: Microsoft Defender Virüsten Koruma tarafından algılanan tehditler
@@ -373,13 +373,13 @@
         - name: Microsoft Intune belgeleri
           href: /mem/intune/
         - name: İlkeleri ve cihazları görüntüleme ve düzenleme
-          href: /microsoft-365/business-premium/view-policies-and-devices.md
+          href: /microsoft-365/business-premium/m365bp-view-policies-and-devices
         - name: Şirket verilerini kaldırma
-          href: /microsoft-365/business-premium/m365bp-remove-company-data.md
+          href: /microsoft-365/business-premium/m365bp-remove-company-data
         - name: Cihazları fabrika ayarlarına sıfırlama
           href: devices/reset-devices-to-factory-settings.md
         - name: Koruma özelliklerini Intune ayarlarına eşleme
-          href: /microsoft-365/business-premium/m365bp-map-protection-features-to-intune-settings.md
+          href: /microsoft-365/business-premium/m365bp-map-protection-features-to-intune-settings
         - name: Cihaz durumları
           href: devices/device-states.md
         - name: Windows 10 bilgisayarlar için uygulama koruma ayarları
@@ -391,7 +391,7 @@
         - name: Autopilot
           items:
             - name: AutoPilot profillerini oluşturma ve düzenleme
-              href: /microsoft-365/business-premium/m365bp-create-and-edit-autopilot-profiles.md
+              href: /microsoft-365/business-premium/m365bp-create-and-edit-autopilot-profiles
             - name: AutoPilot cihazlarını oluşturma ve düzenleme
               href: devices/create-and-edit-autopilot-devices.md
         - name: Kurumsal belgeler için Microsoft 365

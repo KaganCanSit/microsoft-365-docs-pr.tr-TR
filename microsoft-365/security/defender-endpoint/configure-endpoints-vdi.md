@@ -18,12 +18,12 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.date: 04/15/2022
 ms.technology: mde
-ms.openlocfilehash: 78d22772ccc9713b968347de5dee4c3a9699fe26
-ms.sourcegitcommit: dba1a846ae78ea14240d28efa8d4934fe303f308
+ms.openlocfilehash: b3f27f0fc5b4b6d0a8d23c7fac112597fed381ad
+ms.sourcegitcommit: b3f5fe84a319741583954ef8ff2ec9ec6da69bcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2022
-ms.locfileid: "64891876"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "65217452"
 ---
 # <a name="onboard-non-persistent-virtual-desktop-infrastructure-vdi-devices-in-microsoft-365-defender"></a>Microsoft 365 Defender kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarını ekleme
 
@@ -148,6 +148,21 @@ Güncelleştirmeleri VDI'lerde çalışan VM'lere kolayca dağıtabilme özelli�
 
 Daha fazla bilgi [için Sanal Masaüstü Altyapısı (VDI) ortamında Microsoft Defender Virüsten Koruma için dağıtım kılavuzundaki yönergeleri](/microsoft-365/security/defender-endpoint/deployment-vdi-microsoft-defender-antivirus) izleyin.
 
+   > [!NOTE]
+   > Kalıcı Olmayan VDI ortamınızın ana görüntüsünü (SENSE hizmeti çalışıyor) eklerseniz, görüntüyü üretime geri döndürmeden önce bazı verileri çıkarmanız ve temizlemeniz gerekir.
+   > 1. Aşağıdaki komutu bir CMD penceresinde çalıştırarak algılayıcının durdurulduğunu doğrulayın:
+   >  ```console
+   >  sc query sense
+   >  ```
+   > 2. PsExec.exe kullanarak aşağıdaki komutları çalıştırın (buradan indirilebilir) https://download.sysinternals.com/files/PSTools.zip)
+   >
+   >  ```console
+   >  PsExec.exe -s cmd.exe
+   >  cd "C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Cyber"
+   >  del *.* /f /s /q
+   >  REG DELETE "HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection" /v senseGuid /f
+   >  exit
+   >  ```
 
 ## <a name="related-topics"></a>İlgili konular
 - [Windows araçlarını Grup İlkesi kullanarak ekleyin](configure-endpoints-gp.md)

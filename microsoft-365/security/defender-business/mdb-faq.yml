@@ -16,12 +16,12 @@ metadata:
   ms.collection:
   - SMB
   - M365-security-compliance
-  ms.openlocfilehash: 8f544cfb15c03e78219fcb31bdae1e09cb7c628f
-  ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
+  ms.openlocfilehash: 6819cfe99b118298ec1d319d42dc2246d8194943
+  ms.sourcegitcommit: b3f5fe84a319741583954ef8ff2ec9ec6da69bcf
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/04/2022
-  ms.locfileid: "65188382"
+  ms.lasthandoff: 05/05/2022
+  ms.locfileid: "65217596"
 title: İş için Microsoft Defender - Sık sorulan sorular ve yanıtlar
 summary: >
   İş için Defender hakkında sorularınıza yanıt almak için bu makaleyi kullanın.
@@ -63,8 +63,7 @@ sections:
   - question: İş için Defender ile Uç Nokta Planları 1 ve 2 için Defender arasındaki farklar nelerdir?
     answer: "Hem İş için Defender hem de Uç Nokta için Defender, şirketinizin uç noktaları için güçlü tehdit koruması özellikleri sağlar. İş için Defender, küçük ve orta ölçekli işletmeler (en fazla 300 çalışan) için tasarlanmıştır. [Basitleştirilmiş bir yapılandırma işlemi](mdb-simplified-configuration.md) ve [cihaz ekleme seçenekleriyle](mdb-onboard-devices.md), İş için Defender, şirket cihazlarını korumak için güvenlik geçmişine sahip olması gerekmeyen müşterilerin İş için Defender'ı ayarlamasına, yapılandırmasına ve kullanmasına olanak tanır.  \n\nFarklılıklar hakkında daha fazla bilgi edinmek için bkz. [İş için Microsoft Defender Microsoft 365 İş Ekstra karşılaştırma](compare-mdb-m365-plans.md).\n"
   - question: Aboneliklerin bir karışımına sahipsem ne olur? Örneğin, 10 kullanıcıya İş için Defender lisansı atadım ve 10 kullanıcıya da aynı kiracıda Uç Nokta için Defender Plan 2 lisansı atadım mı?
-    answer: >
-      Karma lisanslar desteklenmez. En yüksek işlevsel lisans, kiracının deneyimini ayarlar. Örneğimizi kullanarak kiracı deneyimi [Uç Nokta Planı 2 için Defender olur ve Uç Nokta Planı 2](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint) için 20 Defender lisansı gerektirir. [İş için Defender'ın](mdb-overview.md) ve [Microsoft 365 İş Ekstra](/microsoft-365/business-premium/) en fazla 300 kullanıcısı olan müşterilere yönelik olduğunu unutmayın. 300'den fazla lisansa ihtiyacı olan müşteriler için Microsoft 365 E3 veya E5 ya da Plan 1 veya Plan 2'yi Uç Nokta için Microsoft Defender öneririz.
+    answer: "Karma lisanslar desteklenmez. En yüksek işlevsel Defender lisansı, kiracı için deneyimi ayarlar. \n\nÖrneğimizi kullanarak kiracı deneyimi, [20 kullanıcının tümü için Uç Nokta Planı 2 için Defender](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint) olacaktır. \n\n[İş için Defender'ın](mdb-overview.md) ve [Microsoft 365 İş Ekstra](/microsoft-365/business-premium/) en fazla 300 kullanıcısı olan müşterilere yönelik olduğunu unutmayın. 300'den fazla kullanıcı lisansına ihtiyacı olan müşteriler için, plan 1 veya Plan 2'Uç Nokta için Microsoft Defender içeren bir kurumsal abonelik edinmenizi öneririz.\n\nLisanslar hakkında ayrıntılı bilgi için bkz[. Microsoft 365 abonelikler için lisanslama ve ürün koşulları](https://www.microsoft.com/licensing/terms/productoffering/Microsoft365/MCA).\n"
   - question: Başka bir Microsoft Bulut aboneliğim var. Portalımda neden İş için Microsoft Defender göremiyorum?
     answer: "Şu anda, bir müşterinin birden çok aboneliği olduğunda en yüksek abonelik önceliklidir. İşte birkaç örnek:\n\n- Örnek 1: [Uç Nokta için Microsoft Defender Plan 2](/microsoft-365/security/defender-endpoint/defender-endpoint-plan-1-2) 'niz (satın alınmış veya deneme aboneliği) varsa ve İş için Microsoft Defender alırsanız, Uç Nokta Için Defender Plan 2 önceliklidir. Bu durumda, İş için Defender deneyimini görmezsiniz.\n- Örnek 2: [Bulut için Microsoft Defender](/azure/defender-for-cloud/defender-for-cloud-introduction) (satın alınan veya deneme aboneliğiniz) varsa ve İş için Defender'ı alırsanız, Bulut için Defender önceliklidir. Bu durumda, İş için Defender deneyimini görmezsiniz.\n\n\n\n \n \n"
 additionalContent: >-
