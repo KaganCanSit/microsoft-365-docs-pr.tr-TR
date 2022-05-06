@@ -14,55 +14,50 @@ ms.collection: TestBase-M365
 ms.custom: ''
 ms.reviewer: mapatel
 f1.keywords: NOCSH
-ms.openlocfilehash: 8d7539dfeecf1e34a639bc506f312c35a4243323
-ms.sourcegitcommit: a9266e4e7470e8c1e8afd31fef8d266f7849d781
+ms.openlocfilehash: 13eaea1e62dd030f86e08d885ad743d673d6142c
+ms.sourcegitcommit: b16520d8bfe04b29274f7a129d90ef116bb77f69
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63405931"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "65231703"
 ---
 # <a name="what-is-test-base-for-microsoft-365"></a>Microsoft 365 için Test Base nedir?
 
-Microsoft 365 için Test Base (Test Base), Microsoft'un güvenli Azure ortamına dayalı doğrulama hizmetidir.
-Test Base ile Yazılım Satıcıları (SV'ler) ve Sistem Tümleştiricileri (SI'ler), uygulamalarının önceden yayınlanmış Windows güvenliği ve özellik yapılarına karşı doğrulanmasını hızlandırabilir. Bu, SV iş ortakları ile Microsoft arasında ortak test, doğrulama ve düzeltme sağlayan yüksek düzeyde etkileşimli bir işbirliğidir.
+Test Base, dünyanın her yerinden akıllı testlere kullanıcı erişimi sağlarken veri odaklı uygulama testine olanak tanıyan bir Azure hizmetidir.
 
-Test Base, müşterilerin ve iş ortaklarının uygulamalarının iş yüklerini önceden yayınlanmış güvenlik güncelleştirmelerimize göre hazırlayıp test edebilecekleri Azure üzerinde güvenli bir doğrulama hizmeti oluşturmak ve sürdürmek için harika bir fırsat sağlar.
+Aşağıdaki varlıkların uygulamalarını, ikili dosyalarını ve test betiklerini Microsoft 365 için Test Base hizmetine eklemeleri önerilir: Uygulamalarını doğrulamak için Bağımsız Yazılım Satıcıları (ISV'ler), Sistem Tümleştiricileri (SI'ler) ve Microsoft Intune ile tümleştirme yoluyla iş kolu (LOB) uygulamalarını doğrulamak isteyen BT Uzmanları.
 
-Test Base’le SV'lere Microsoft güncelleştirmeyi piyasaya sürmeden önce, uygulamalarının yeni işletim sistemi sürümünde en iyi şekilde çalışmasını engelleyebilecek olası sorunlar hakkında daha fazla görünürlük sağlanır.
+## <a name="why-test-your-application-with-test-base"></a>Uygulamanızı neden Test Base ile test etmelisiniz?
 
-Bu yeni hizmet, SV'lerin test çalışmalarını daha basit ve daha verimli hale getirir. Kurumsal müşteriler, işbirliğine dayalı bir ortamda SV ve Microsoft testlerinden faydalanabilir ve uygulamalarının beklendiği gibi çalışacağı konusunda daha fazla güven kazanır.
+Microsoft 365 için Test Base hizmeti, uygulamalarınızın bütünlüğüne, uyumluluğuna ve kullanılabilirliğine güvenmeniz için test matrisinizin gerektiği şekilde genişletilmesini sağlayabilir.
 
-**Kuruluşlar ve SV iş ortaklarına sunulan Test Base Avantajları şunları içerir:**:
+Test Base, platform bağımlılıkları değişse ve Windows güncelleştirme hizmeti tarafından yeni güncelleştirmeler uygulansa bile uygulamanızın beklendiği gibi çalışmaya devam etmesini sağlar. Test Base ile uygulamalarınızı test etmek için karmaşık bir laboratuvar ortamı kurma ve sürdürme maliyetini, uzun süre taahhütlerini ve harcamalarını önleyebilirsiniz.
 
-- Cihazlarınızın güvenliğini sağlamak için güvenlik güncelleştirmelerinin daha hızlı kullanıma sunulması;
-- İşletim sistemi değişikliklerini ve uygulamasını aynı ortamda barındırarak güncelleştirme doğrulama maliyetlerini düşürdü;
-- Microsoft'tan uygulamalarınız hakkında birinci sınıf güvenlik analizi raporu (kod kapsamı, API etki analizi vb.);
-- Microsoft'un test içeriğini ve donanımlarını Azure'a geçirişi konusundaki uzmanlığı.
+Ayrıca, güvenli sanal makineler (VM'ler) kullanarak Windows için güvenlik ve özellik güncelleştirmelerine karşı uyumluluğu otomatik olarak test edebilir ve aynı zamanda uygulamalarınızı test etmek için birinci sınıf zekaya erişim elde edebilirsiniz. Erişim almak için bir istek göndererek uygulamalarınızın yayın öncesi Windows güvenlik güncelleştirmelerine karşı uyumluluk açısından test edilmesini de sağlayabilirsiniz.
 
-## <a name="guide-to-navigating-the-test-base-portal"></a>Test Base portalında gezinme kılavuzu
+## <a name="how-does-test-base-work"></a>Test Base nasıl çalışır?
 
-Bu kılavuz, hizmetimizi kullanırken sorunsuz bir deneyim sağlamak için dört (4) bölüme ayrılmıştır:
+Test Base hizmetine kaydolmak için bkz. [Yeni bir Test Tabanı hesabı oluşturma](createAccount.md).
 
-1. Başvurunuzu self servis işe katılım portalımız aracılığıyla nasıl yükleyeceğiniz konusunda ayrıntılı, adım adım yönergeler sağlayan **Genel Bakış**.
+Bir müşteri Test Base hizmetine kaydolduktan sonra, test için uygulama paketlerini karşıya yüklemeye başlamak basit bir işlemdir.
 
-2. Sıkıştırılmış klasör yapısının biçimi ve test betiklerinizi hazırlarken bilmeniz gerekenler hakkında bilgi sağlayan **Hızlı Başlangıçlar** bölümü.
+Başarılı bir karşıya yüklemenin ardından paketler, Windows yayın öncesi güncelleştirmelerine karşı test edilir.
 
-3. Test sonuçlarını çıkarmak için Test Base’in nasıl kullanılacağı hakkında ayrıntılı anahatları sağlayan **Nasıl Yapılır kılavuzu**.
+İlk testler başarıyla tamamlandıktan sonra müşteri, yayın öncesi içerik güncelleştirmelerinin uygulama performansını herhangi bir şekilde düşürüp düşürmediğini tespit etmek için performans ve regresyon analizine yönelik içgörülerle derin bir dalış yapabilir.
 
-4. Müşterilerimizden aldığımız tipik soruların yanıtlarını sağlayan **Referans** bölümü.
+Ancak, paket herhangi bir testte başarısız olursa, müşteri, hatayı gidermek ve paketi gerektiği gibi güncelleştirmek için bellek veya CPU regresyonlarından İçgörüler’den de yararlanabilir.
 
-## <a name="test-base-has-reached-general-availability"></a>Test Base genel kullanılabilirlik durumuna ulaştı
+Test Base ile müşteri, test edilmekte olan tüm paketleri yönetmek için tek bir konum kullanabilir; bu, gerektiğinde yeni uygulama sürümleri oluşturmak için paketlerin karşıya yüklenmesini ve güncelleştirilmesini de kolaylaştırabilir.
 
-Test Base, Kasım 2021'deki Microsoft Ignite konferansı sırasında resmi olarak Genel Kullanılabilir olarak ilan edildi. 
+> [!NOTE]
+> **Müşterilerin yayın öncesi güncelleştirme içeriğinden yararlanabilmeleri için, özel olarak bu içeriğe erişim istemeleri gerekir. Yayın öncesi güncelleştirmelere erişim isteğiniz onaylandıktan sonra, karşıya yüklediğiniz paketleriniz, katılım sırasında seçilen işletim sistemi sürümleri için yayın öncesi Windows güncelleştirmelerine karşı test edilmek üzere otomatik olarak programlanır**.
 
-Bu, geçerli bir kurumsal Azure hesabına sahip herkesin test yardımcılarını ekleyebileceğini ve uygulamalarını hizmette hızla test etmeye başlayabileceği anlamına gelir.
+Ardından, yeni Windows yayın öncesi güncelleştirmeleri kullanıma sunulduğunda, uygulama paketleri yeni yayın öncesi içerikle otomatik olarak test edilir. Bundan sonra ek bir içgörü turu gerekebilir. Müşteriler özel olarak erişim isteğinde bulunmazsa, uygulama paketleri yalnızca Windows'un geçerli yayınlanmış sürümüne karşı test edilecek.
 
-## <a name="who-should-onboard"></a>Kim katılmalı?
-
-Tüm Yazılım Satıcılarını (SV'ler), Sistem Tümleştiricilerini (SI'ler) uygulamalarını, ikili dosyalarını ve test betiklerini hizmete eklemeye teşvik ediyoruz.
+Paketler başarıyla test edildikten sonra müşteriler bunları yazılım müşterilerine ve son kullanıcılara Test Base'in işini yaptığına dair güven ve güvence ile teslim edebilir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 Başlamak için bağlantıyı izleyin
 > [!div class="nextstepaction"]
-> [Sonraki adım](createaccount.md)
+> [Yeni Test Base hesabı oluşturma | Microsoft Docs](createaccount.md)
