@@ -19,12 +19,12 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 9be1c581edb1b9564349ae8c3a659d226d6ef312
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: 8418683577ffe3bf63fe7fe3bf4aff2ef55007f5
+ms.sourcegitcommit: c33af120921d3c4fb5c362dac3e74f0ab3d1e58d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65173787"
+ms.lasthandoff: 05/06/2022
+ms.locfileid: "65249641"
 ---
 # <a name="communication-compliance-policies"></a>İletişim uyumluluk ilkeleri
 
@@ -166,11 +166,15 @@ Kuruluşunuza veya sektörünüze özgü anahtar sözcüklerin basit yönetimini
 
 Yerleşik eğitilebilir ve genel sınıflandırıcılar, farklı uyumluluk sorunları için kuruluşunuzdaki tüm iletişim kanallarında gönderilen veya alınan iletileri tarar. Sınıflandırıcılar, tehdit önleme ilkelerini ihlal etme olasılığı olan iletilerdeki dili tanımlamak için yapay zeka ve anahtar sözcüklerin bir bileşimini kullanır. Yerleşik sınıflandırıcılar şu anda çeşitli dillerde ileti anahtar sözcüğü tanımlamayı desteklemektedir:
 
+- Arapça
 - Çince (Basitleştirilmiş)
+- Çince (Geleneksel)
+- Dutch
 - English
 - French
 - German
 - Italian
+- Korean
 - Japanese
 - Portekizce
 - Spanish
