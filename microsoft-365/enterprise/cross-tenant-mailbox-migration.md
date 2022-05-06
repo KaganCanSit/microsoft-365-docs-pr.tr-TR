@@ -8,7 +8,7 @@ ms.prod: microsoft-365-enterprise
 ms.topic: article
 f1.keywords:
 - NOCSH
-ms.date: 09/21/2020
+ms.date: 05/05/2022
 ms.reviewer: georgiah
 ms.custom:
 - it-pro
@@ -16,12 +16,12 @@ ms.custom:
 - admindeeplinkEXCHANGE
 ms.collection:
 - M365-subscription-management
-ms.openlocfilehash: 8cbaee1e4f0cd3bae519c939f2f619343bf996bd
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 984df48edf4ba75569286618086d8be9ab684b60
+ms.sourcegitcommit: 292de1a7e5ecc2e9e6187126aebba6d3b9416dff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65101083"
+ms.lasthandoff: 05/06/2022
+ms.locfileid: "65243062"
 ---
 # <a name="cross-tenant-mailbox-migration-preview"></a>Kiracılar arası posta kutusu geçişi (önizleme)
 
@@ -73,7 +73,7 @@ Aboneliğin kiracı kimliğini almak için [Microsoft 365 yönetim merkezi](http
 
    ![Yeni Uygulama](../media/tenant-to-tenant-mailbox-move/b36698df128e705eacff4bff7231056a.png)
 
-5. Uygulama kaydetme sayfasında, Desteklenen hesap türleri'nin altında Herhangi bir kuruluş dizinindeki hesaplar 'ı (Herhangi bir Azure AD dizini - Çok Kiracılı) seçin. Ardından, Yeniden Yönlendirme URI'si (isteğe bağlı) altında Web'i seçin ve girin <https://office.com>. Son olarak Kaydet'i seçin.
+5. Uygulama kaydetme sayfasında, Desteklenen hesap türleri'nin altında Herhangi bir kuruluş dizinindeki hesaplar 'ı seçin (Herhangi bir Azure AD dizini - Çok Kiracılı). Ardından, Yeniden Yönlendirme URI'si (isteğe bağlı) altında Web'i seçin ve girin <https://office.com>. Son olarak Kaydet'i seçin.
 
    ![Uygulama Kaydı](../media/tenant-to-tenant-mailbox-move/edcdf18b9f504c47284fe4afb982c433.png)
 
@@ -246,7 +246,7 @@ Hedef kuruluşta aşağıdaki nesnelerin ve özniteliklerin ayarlandığından e
       - UserPrincipalName: UPN, kullanıcının NEW kimliğine veya hedef şirketine hizalanır (örneğin, user@northwindtraders.onmicrosoft.com).
       - Birincil SMTPAddress: Birincil SMTP adresi kullanıcının YENİ şirketiyle (örneğin, user@northwind.com) hizalanır.
       - TargetAddress/ExternalEmailAddress: MailUser, kullanıcının kaynak kiracıda barındırılan geçerli posta kutusuna (örneğin user@contoso.onmicrosoft.com) başvurur. Bu değeri atarken, PrimarySMTPAddress'i atadığınızdan/atadığınızdan emin olun; aksi takdirde bu değer PrimarySMTPAddress değerini ayarlar ve bu da taşıma hatalarına neden olur.
-      - MailUser'ı hedeflemek için kaynak posta kutusundan eski smtp proxy adresleri ekleyemezsiniz. Örneğin, fabrikam.onmicrosoft.com kiracı nesnelerinde MEU'da contoso.com koruyamazsınız). Etki alanları yalnızca bir Azure AD veya Exchange Online kiracısıyla ilişkilendirilir.
+      - MailUser'ı hedeflemek için kaynak posta kutusundan eski smtp proxy adresleri ekleyemezsiniz. Örneğin, fabrikam.onmicrosoft.com kiracı nesnelerinde MEU'da contoso.com koruyamazsınız). Etki alanları yalnızca bir Azure AD veya Exchange Online kiracıyla ilişkilendirilir.
 
      Örnek **hedef** MailUser nesnesi:
 
@@ -434,7 +434,7 @@ Get-MoveRequest -Flags "CrossTenant"
    ```powershell
    # Now sync the changes from On-Premises to Azure and Exchange Online in the Target tenant
    # This action should create the target mail enabled users (MEUs) in the Target tenant
-   Start-ADSyncCycle
+   Start-ADSyncSyncCycle
    ```
 
 **Kullanım posta kutusu taşındıktan sonra 1. Günde Outlook nasıl erişebiliriz?**
@@ -558,7 +558,7 @@ Hayır, kiracılar arası posta kutusu geçişinin ardından, geçirilen kullan�
 
 - **Sorun: Sahip olunmayan smtp proxy'si olan Cloud MailUsersAddress block MRS arka planı taşır.** Hedef kiracı MailUser nesneleri oluştururken, tüm SMTP proxy adreslerinin hedef kiracı kuruluşuna ait olduğundan emin olmanız gerekir. Hedef posta kullanıcısı üzerinde yerel kiracıya ait olmayan bir SMTP proxyAddress varsa, MailUser'ın Posta Kutusu'na dönüştürülmesi engellenir. Bunun nedeni, posta kutusu nesnelerinin yalnızca kiracının yetkili olduğu etki alanlarından (kiracı tarafından talep edilen etki alanları) posta gönderebileceği güvencemizden kaynaklanır:
 
-  - Azure AD Bağlan kullanarak şirket içindeki kullanıcıları eşitlerken, şirket içi MailUser nesnelerini ExternalEmailAddress ile posta kutusunun bulunduğu (LaraN@contoso.onmicrosoft.com) kaynak kiracıya işaret eden ve PrimarySMTPAddress'i hedef kiracıda (Lara.Newton@northwind.com) bulunan bir etki alanı olarak damgalarsınız. Bu değerler kiracıyla eşitlenir ve uygun bir posta kullanıcısı sağlanır ve geçiş için hazır olur. Burada örnek bir nesne gösterilmiştir.
+  - Azure AD Bağlan kullanarak şirket içindeki kullanıcıları eşitlerken, şirket içi MailUser nesnelerini ExternalEmailAddress ile posta kutusunun bulunduğu kaynak kiracıya işaret eden (LaraN@contoso.onmicrosoft.com) sağlar ve PrimarySMTPAddress'i hedef kiracıda (Lara.Newton@northwind.com) bulunan bir etki alanı olarak damgalarsınız. Bu değerler kiracıyla eşitlenir ve uygun bir posta kullanıcısı sağlanır ve geçiş için hazır olur. Burada örnek bir nesne gösterilmiştir.
 
     ```powershell
     Get-MailUser LaraN | select ExternalEmailAddress, EmailAddresses
@@ -575,7 +575,7 @@ Hayır, kiracılar arası posta kutusu geçişinin ardından, geçirilen kullan�
 
   MailUser nesneleri, yerel olmayan posta kutularının işaretçileridir. Kiracılar arası posta kutusu geçişleri söz konusu olduğunda, kaynak posta kutusunu (hedef kuruluşun perspektifinden) veya hedef posta kutusunu (kaynak kuruluşun perspektifinden) temsil etmek için MailUser nesnelerini kullanırız. MailUsers, gerçek posta kutusunun smtp adresine (ProxyTest@fabrikam.onmicrosoft.com) ve dizinde posta kutusu kullanıcısının görüntülenen SMTP adresini temsil eden primarySMTP adresine işaret eden bir ExternalEmailAddress (targetAddress) içerir. Bazı kuruluşlar, birincil SMTP adresini yerel kiracının sahip olduğu/doğruladığı bir adres olarak değil dış SMTP adresi olarak (contoso.com yerine fabrikam.com gibi) görüntülemeyi tercih eder.  Ancak, lisanslama işlemleri aracılığıyla MailUser'a bir Exchange hizmet planı nesnesi uygulandıktan sonra, birincil SMTP adresi yerel kuruluş (contoso.com) tarafından doğrulanmış bir etki alanı olarak gösterilecek şekilde değiştirilir. İki olası neden vardır:
 
-  - MailUser'a herhangi bir Exchange hizmet planı uygulandığında Azure AD işlemi, yerel kuruluşun başka bir kiracıdan posta gönderemediğinden, sahtekarlık veya posta gönderemediğinden emin olmak için ara sunucu temizlemeyi zorlamaya başlar. Bu hizmet planlarına sahip bir alıcı nesnesi üzerindeki tüm SMTP adresleri, adres yerel kuruluş tarafından doğrulanmazsa kaldırılır. Örnekte olduğu gibi, Fabikam.com etki alanı contoso.onmicrosoft.com kiracı tarafından doğrulanmaz, bu nedenle temizleme işlemi bu fabrikam.com etki alanını kaldırır. Geçiş öncesinde veya geçiş sonrasında bu dış etki alanlarını MailUser'da kalıcı hale getirmek istiyorsanız, geçiş işlemlerinizi taşıma tamamlandıktan sonra veya taşımadan önce kullanıcıların beklenen dış markanın uygulandığından emin olmak için lisansları kaldıracak şekilde değiştirmeniz gerekir. Posta kutusu nesnesinin posta hizmetini etkilemeyecek şekilde düzgün lisanslandığından emin olmanız gerekir.
+  - MailUser'a herhangi bir Exchange hizmet planı uygulandığında, Azure AD işlemi yerel kuruluşun başka bir kiracıdan posta gönderemediğinden, kimlik sahtekarlığına veya posta gönderemediğinden emin olmak için ara sunucu temizlemeyi zorlamaya başlar. Bu hizmet planlarına sahip bir alıcı nesnesi üzerindeki tüm SMTP adresleri, adres yerel kuruluş tarafından doğrulanmazsa kaldırılır. Örnekte olduğu gibi, Fabikam.com etki alanı contoso.onmicrosoft.com kiracı tarafından doğrulanmaz, bu nedenle temizleme işlemi bu fabrikam.com etki alanını kaldırır. Geçiş öncesinde veya geçiş sonrasında bu dış etki alanlarını MailUser'da kalıcı hale getirmek istiyorsanız, geçiş işlemlerinizi taşıma tamamlandıktan sonra veya taşımadan önce kullanıcıların beklenen dış markanın uygulandığından emin olmak için lisansları kaldıracak şekilde değiştirmeniz gerekir. Posta kutusu nesnesinin posta hizmetini etkilemeyecek şekilde düzgün lisanslandığından emin olmanız gerekir.
   - contoso.onmicrosoft.com kiracısında MailUser'daki hizmet planlarını kaldırmaya yönelik örnek betik burada gösterilmiştir.
 
     ```powershell

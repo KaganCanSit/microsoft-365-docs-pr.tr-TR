@@ -17,12 +17,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: ea1c551c216dffe8d9ac4e0cedd5679146483e5e
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 51f4915da08920018526ac7eb17372247e28de6d
+ms.sourcegitcommit: 292de1a7e5ecc2e9e6187126aebba6d3b9416dff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64666250"
+ms.lasthandoff: 05/06/2022
+ms.locfileid: "65243106"
 ---
 # <a name="microsoft-defender-for-endpoint-on-android"></a>Android'de Uç Nokta için Microsoft Defender
 
@@ -45,7 +45,8 @@ Bu konuda, Android'de Uç Nokta için Defender'ın nasıl yükleneceği, yapıla
 ### <a name="prerequisites"></a>Önkoşullar
 
 - **Son kullanıcılar için**:
-  - Uygulamanın son kullanıcılarına atanmış Uç Nokta için Microsoft Defender lisans. [Lisanslama gereksinimleri Uç Nokta için Microsoft Defender](/microsoft-365/security/defender-endpoint/minimum-requirements#licensing-requirements) bakın
+  - Uygulamanın son kullanıcılarına atanmış Uç Nokta için Microsoft Defender lisans. Bkz. [lisanslama gereksinimleri Uç Nokta için Microsoft Defender](/microsoft-365/security/defender-endpoint/minimum-requirements#licensing-requirements).
+  - android cihazları eklemeden önce Intune lisansı gereklidir.
   - Intune Şirket Portalı uygulama [Google Play'den](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) indirilebilir ve Android cihazda kullanılabilir.
   - Ayrıca cihazlar, Intune cihaz uyumluluk ilkelerini zorunlu kılmak için Intune Şirket Portalı uygulaması aracılığıyla [kaydedilebilir](/mem/intune/user-help/enroll-device-android-company-portal). Bunun için son kullanıcıya bir Microsoft Intune lisansı atanmalıdır.
   - Lisans atama hakkında daha fazla bilgi için bkz. [Kullanıcılara lisans atama](/azure/active-directory/users-groups-roles/licensing-groups-assign).
