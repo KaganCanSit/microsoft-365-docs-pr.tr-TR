@@ -16,12 +16,12 @@ ms.collection: M365-security-compliance
 ms.topic: article
 MS.technology: mde
 ms.custom: api
-ms.openlocfilehash: fde2cc894fb989628f9e2e0d9d7297bdb3c9e9da
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: 5f17f29f083df6e567218363027e7677c87ee154
+ms.sourcegitcommit: 265a4fb38258e9428a1ecdd162dbf9afe93eb11b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65172403"
+ms.lasthandoff: 05/07/2022
+ms.locfileid: "65268889"
 ---
 # <a name="partner-access-through-microsoft-defender-for-endpoint-apis"></a>Uç Nokta için Microsoft Defender API'leri aracılığıyla iş ortağı erişimi
 
@@ -169,6 +169,9 @@ return $token
 ### <a name="using-c"></a>C kullanma #
 
 > Aşağıdaki kod Nuget Microsoft.IdentityModel.Clients.ActiveDirectory ile test edilmiştir
+
+> [!IMPORTANT]
+> [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) NuGet paketi ve Azure AD Kimlik Doğrulama Kitaplığı (ADAL) kullanım dışı bırakıldı. 30 Haziran 2020'den bu yana yeni özellik eklenmemiş.   Yükseltmenizi kesinlikle öneririz. Diğer ayrıntılar için [geçiş kılavuzuna](/azure/active-directory/develop/msal-migration) bakın.
 
 - Yeni konsol uygulaması oluşturma
 - [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory/) NuGet yükleme

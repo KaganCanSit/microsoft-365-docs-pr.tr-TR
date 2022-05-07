@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Yasal, iş veya mevzuat yükümlülükleri için yüksek değerli içeriği yöneten ancak nereden başlayacağınıza emin olmayan Microsoft 365 için kayıt yönetimi çözümüne mi ihtiyacınız var? Başlamak için bazı pratik kılavuzları okuyun.
-ms.openlocfilehash: e73cb1a118235082978ee93efcdb77f5e5135f8c
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: bbba24a2627c6040873da8d01185e4e6bdfdbfc8
+ms.sourcegitcommit: 265a4fb38258e9428a1ecdd162dbf9afe93eb11b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64971483"
+ms.lasthandoff: 05/07/2022
+ms.locfileid: "65268759"
 ---
 # <a name="get-started-with-records-management"></a>Kayıt yönetimini kullanmaya başlama
 
@@ -81,6 +81,7 @@ Bu izinler yalnızca kayıtları bildiren ve değerlendirmeyi yöneten bekletme 
 |Bir olay gerçekleştiğinde bekletme süresini başlatın, örneğin:  <br />- Çalışanlar kuruluştan ayrılır <br />- Sözleşmelerin süresi doluyor <br />- Ürün ömrünün sonu| [Bir olay meydana geldiğinde saklamayı başlatma](event-driven-retention.md)|
 |Mevzuat gereksinimlerini karşılamaya veya dolandırıcı yöneticilere karşı koruma sağlamaya yardımcı olmak için ilkelerdeki değişiklikleri kısıtlama| [Saklama ilkeleri ve bekletme etiketi ilkelerindeki değişiklikleri kısıtlamak için Koruma Kilidi'ni kullanma](retention-preservation-lock.md)
 |SharePoint'da farklı belge türlerinin yaşam döngüsünü yönetme| [SharePoint'de depolanan belgelerin yaşam döngüsünü yönetmek için bekletme etiketlerini kullanma](auto-apply-retention-labels-scenario.md)|
+|Kişisel verileri içeren içeriğin depolandığına veya çok uzun süre dokunulmadığını belirten bir uyarı alırsam dosyaya bekletme etiketi uygulama| [Gizlilik Risk Yönetimi'nde uyarıları araştırma ve düzeltme](/privacy/priva/risk-management-alerts)|
 |Saklama süresinin sonunda içerik silinmeden önce birinin gözden geçirmesini ve onaylamasını sağlama|[Değerlendirme değerlendirmeleri](disposition.md#disposition-reviews) |
 |Saklama süresinin sonunda kalıcı olarak silinen içerik için edat kanıtına sahip olmak|[Kayıtların konumu](disposition.md#disposition-of-records) |
 | Öğeleri saklama ve silme ayarlarının nasıl ve nerede uygulandığını izleme | [Bekletme etiketlerini izleme](retention.md#monitoring-retention-labels) |

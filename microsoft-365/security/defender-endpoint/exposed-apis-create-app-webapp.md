@@ -16,12 +16,12 @@ ms.collection: M365-security-compliance
 ms.topic: article
 MS.technology: mde
 ms.custom: api
-ms.openlocfilehash: 6b9ad54a881ae5e14767e55da8dfc23b2fb237eb
-ms.sourcegitcommit: 292de1a7e5ecc2e9e6187126aebba6d3b9416dff
+ms.openlocfilehash: 5bce1fc2e9aa149da2bb3ddc28e56fc826ad1768
+ms.sourcegitcommit: 265a4fb38258e9428a1ecdd162dbf9afe93eb11b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2022
-ms.locfileid: "65243128"
+ms.lasthandoff: 05/07/2022
+ms.locfileid: "65268891"
 ---
 # <a name="create-an-app-to-access-microsoft-defender-for-endpoint-without-a-user"></a>Kullanıcı olmadan Uç Nokta için Microsoft Defender erişmek için uygulama oluşturma
 
@@ -149,6 +149,9 @@ $token
 ### <a name="use-c"></a>C# kullanın:
 
 Aşağıdaki kod NuGet Microsoft.IdentityModel.Clients.ActiveDirectory 3.19.8 ile test edilmiştir.
+
+> [!IMPORTANT]
+> [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) NuGet paketi ve Azure AD Kimlik Doğrulama Kitaplığı (ADAL) kullanım dışı bırakıldı. 30 Haziran 2020'den bu yana yeni özellik eklenmemiş.   Yükseltmenizi kesinlikle öneririz. Diğer ayrıntılar için [geçiş kılavuzuna](/azure/active-directory/develop/msal-migration) bakın.
 
 1. Yeni bir konsol uygulaması oluşturun.
 1. [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory/) NuGet yükleyin.

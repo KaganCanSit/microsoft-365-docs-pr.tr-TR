@@ -19,12 +19,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Kuruluşunuzun verilerini korumaya yardımcı olmak için duyarlılık etiketlerini dağıtmaya hazırsınız, ancak nereden başlayacağınızdan emin değil misiniz? Etiketleme yolculuğunuza başlamanıza yardımcı olacak bazı pratik kılavuzları okuyun.
-ms.openlocfilehash: 3f163c19cfd6e627887f0e34b81bc99d2e86cb6c
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: b0fcf435d7805440e93f0d1248723f4b5599d4a9
+ms.sourcegitcommit: 265a4fb38258e9428a1ecdd162dbf9afe93eb11b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64971054"
+ms.lasthandoff: 05/07/2022
+ms.locfileid: "65268781"
 ---
 # <a name="get-started-with-sensitivity-labels"></a>Hassasiyet etiketlerini kullanmaya başlama
 
@@ -102,6 +102,7 @@ Tüm senaryolarda [duyarlılık etiketleri ve ilkeleri oluşturup yapılandırma
 |SharePoint ve OneDrive'da siteler ve tek tek belgeler için varsayılan paylaşım bağlantı türünü yapılandırmak için duyarlılık etiketlerini kullanın |[SharePoint ve OneDrive'de siteler ve belgeler için varsayılan paylaşım bağlantısını ayarlamak için duyarlılık etiketlerini kullanma](sensitivity-labels-default-sharing-link.md)|
 |SharePoint kitaplığındaki tanımlanan belgelerin otomatik olarak sınıflandırılması ve korunması için belge anlama modeline duyarlılık etiketi uygulama |[Microsoft SharePoint Syntex'da modele duyarlılık etiketi uygulama](/microsoft-365/contentunderstanding/apply-a-sensitivity-label-to-a-model)|
 |Belirli bir duyarlılık etiketine sahip dosya veya e-posta paylaşımını engelleme veya kullanıcıları uyarma |[DLP ilkelerinde duyarlılık etiketlerini koşul olarak kullanma](dlp-sensitivity-label-as-condition.md) |
+|Kişisel verileri içeren içeriğin paylaşıldığını ve korunması gerektiğini belirten bir uyarı alırsam dosyaya duyarlılık etiketi uygulama| [Gizlilik Risk Yönetimi'nde uyarıları araştırma ve düzeltme](/privacy/priva/risk-management-alerts)|
 |Belirli bir duyarlılık etiketine sahip dosyaları veya e-postaları korumak veya silmek için bekletme etiketi uygulama|[İçeriği korumak veya silmek için otomatik olarak bekletme etiketi uygulama](apply-retention-labels-automatically.md) |
 |Şirket içindeki veri depolarında depolanan dosyaları bulma, etiketleme ve koruma |[Dosyaları otomatik olarak sınıflandırmak ve korumak için Azure Information Protection tarayıcısını dağıtma](/azure/information-protection/deploy-aip-scanner)|
 |Bulutta bulunan veri depolarında depolanan dosyaları bulma, etiketleme ve koruma|[Bulutta depolanan düzenlenmiş ve hassas verileri bulma, sınıflandırma, etiketleme ve koruma](/cloud-app-security/best-practices#discover-classify-label-and-protect-regulated-and-sensitive-data-stored-in-the-cloud)|

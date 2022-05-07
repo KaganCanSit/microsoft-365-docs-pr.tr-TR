@@ -21,12 +21,12 @@ search.appverid:
 - MET150
 ms.technology: m365d
 ms.custom: api
-ms.openlocfilehash: ccd92b38937bcb64fdcf738b803160119c0a025a
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 612cbb4005285f46594bc900cbbc14497b72ffec
+ms.sourcegitcommit: 265a4fb38258e9428a1ecdd162dbf9afe93eb11b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64665590"
+ms.lasthandoff: 05/07/2022
+ms.locfileid: "65268841"
 ---
 # <a name="create-an-app-with-partner-access-to-microsoft-365-defender-apis"></a>Microsoft 365 Defender API'lerine iş ortağı erişimi olan bir uygulama oluşturma
 
@@ -69,7 +69,7 @@ Genel olarak, API'leri kullanmak için aşağıdaki adımları uygulamanız gere
 - Bu uygulamayı kullanarak erişim belirteci alın.
 - Microsoft 365 Defender API'sine erişmek için belirteci kullanın.
 
-Çok kiracılı bir Azure AD uygulaması oluşturma, Microsoft 365 Defender için erişim belirteci alma ve belirteci doğrulama kılavuzunu içeren aşağıdaki adımlar.
+Çok kiracılı bir Azure AD uygulaması oluşturma, Microsoft 365 Defender için erişim belirteci alma ve belirteci doğrulama adımlarını içeren aşağıdaki adımlar.
 
 ## <a name="create-the-multi-tenant-app"></a>Çok kiracılı uygulamayı oluşturma
 
@@ -145,7 +145,7 @@ Genel olarak, API'leri kullanmak için aşağıdaki adımları uygulamanız gere
 
 ## <a name="get-an-access-token"></a>Erişim belirteci alma
 
-Azure AD belirteçleri hakkında daha fazla bilgi için [Bkz. Azure AD öğreticisi](/azure/active-directory/develop/active-directory-v2-protocols-oauth-client-creds).
+Azure AD belirteçleri hakkında daha fazla bilgi için [Azure AD öğreticisine](/azure/active-directory/develop/active-directory-v2-protocols-oauth-client-creds) bakın.
 
 > [!IMPORTANT]
 > Bu bölümdeki örnekler gizli dizi değerlerini test amacıyla yapıştırmanızı teşvik etse de, üretimde çalışan bir uygulamaya **gizli dizileri hiçbir zaman sabit kodlamamalısınız** . Üçüncü bir taraf, kaynaklara erişmek için gizli dizinizi kullanabilir. [Azure Key Vault](/azure/key-vault/general/about-keys-secrets-certificates) kullanarak uygulamanızın gizli dizilerini güvende tutmaya yardımcı olabilirsiniz. Uygulamanızı nasıl koruyabileceğinize ilişkin pratik bir örnek için bkz. [Azure Key Vault ile sunucu uygulamalarınızda gizli dizileri yönetme](/learn/modules/manage-secrets-with-azure-key-vault/).
@@ -184,6 +184,9 @@ return $token
 
 > [!NOTE]
 > Aşağıdaki kod Nuget Microsoft.IdentityModel.Clients.ActiveDirectory 3.19.8 ile test edilmiştir.
+
+> [!IMPORTANT]
+> [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) NuGet paketi ve Azure AD Kimlik Doğrulama Kitaplığı (ADAL) kullanım dışı bırakıldı. 30 Haziran 2020'den bu yana yeni özellik eklenmemiş.   Yükseltmenizi kesinlikle öneririz. Diğer ayrıntılar için [geçiş kılavuzuna](/azure/active-directory/develop/msal-migration) bakın.
 
 1. Yeni bir konsol uygulaması oluşturun.
 1. [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory/) NuGet yükleyin.

@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: İstediğinizi korumak ve istemediğinizden kurtulmak için bekletme ilkesinde veya bekletme etiketi ilkesinde yapılandırabileceğiniz ayarları anlayın.
-ms.openlocfilehash: ddfa921c8dae22bbe091e2c0f66fc9ae42aeea41
-ms.sourcegitcommit: b16520d8bfe04b29274f7a129d90ef116bb77f69
+ms.openlocfilehash: 90a048cf96bb2414a42d803bcd2f15deab4e711b
+ms.sourcegitcommit: 265a4fb38258e9428a1ecdd162dbf9afe93eb11b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "65231813"
+ms.lasthandoff: 05/07/2022
+ms.locfileid: "65268803"
 ---
 # <a name="common-settings-for-retention-policies-and-retention-label-policies"></a>Bekletme ilkeleri ve bekletme etiketi ilkeleri için yaygın ayarlar
 
@@ -278,6 +278,9 @@ Hassas bilgi türlerini kullanan bir otomatik uygulama ilkesi yapılandırdığ�
 ### <a name="configuration-information-for-sharepoint-sites-and-onedrive-accounts"></a>SharePoint siteleri ve OneDrive hesapları için yapılandırma bilgileri
 
 **SharePoint sitelerin** konumunu seçtiğinizde, bekletme ilkesi SharePoint iletişim sitelerindeki, Microsoft 365 grupları tarafından bağlı olmayan ekip sitelerindeki ve klasik sitelerdeki belgeleri koruyabilir ve silebilir. [Uyarlamalı ilke kapsamları](#exceptions-for-adaptive-policy-scopes) kullanmıyorsanız, Microsoft 365 grupları tarafından bağlanan ekip siteleri bu seçenekte desteklenmez ve bunun yerine grubun posta kutusu, sitesi ve dosyalarındaki içerik için geçerli **olan Microsoft 365 Grupları** konumunu kullanın.
+
+> [!TIP]
+> Bir sitenin gruba bağlı olup olmadığını onaylamak için [SharePoint yönetim merkezinde bir filtre](/sharepoint/customize-admin-center-site-list) veya [SharePoint PowerShell komutu](/powershell/module/sharepoint-online/get-sposite#example-10) kullanabilirsiniz. Statik kapsamlar için bu siteler **Microsoft 365 Grupları** konumuyla desteklenir.
 
 SharePoint ve OneDrive için bekletme ayarlarını yapılandırırken dahil edilen ve dışlananlar hakkında ayrıntılı bilgi için bkz. [Bekletme ve silme için eklenenler](retention-policies-sharepoint.md#whats-included-for-retention-and-deletion).
 

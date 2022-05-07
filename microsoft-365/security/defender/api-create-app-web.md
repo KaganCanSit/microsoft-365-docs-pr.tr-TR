@@ -1,6 +1,6 @@
 ---
-title: Kullanıcı olmadan e-Microsoft 365 Defender için uygulama oluşturma
-description: Kullanıcı olmadan e-postanıza erişmek Microsoft 365 Defender uygulama oluşturma hakkında bilgi edinebilirsiniz.
+title: Kullanıcı olmadan Microsoft 365 Defender erişmek için uygulama oluşturma
+description: Kullanıcı olmadan Microsoft 365 Defender erişmek için uygulama oluşturmayı öğrenin.
 keywords: uygulama, erişim, api, oluşturma
 search.product: eADQiWindows 10XVcnh
 ms.prod: m365-security
@@ -21,111 +21,111 @@ search.appverid:
 - MET150
 ms.technology: m365d
 ms.custom: api
-ms.openlocfilehash: 01d6a00bba5bd286e6c741dce6ec6ba3fa3625a1
-ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
+ms.openlocfilehash: 1fb5e5087d03842832e89a3982826df1e94b857c
+ms.sourcegitcommit: 265a4fb38258e9428a1ecdd162dbf9afe93eb11b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63755618"
+ms.lasthandoff: 05/07/2022
+ms.locfileid: "65268847"
 ---
-# <a name="create-an-app-to-access-microsoft-365-defender-without-a-user"></a>Kullanıcı olmadan e-Microsoft 365 Defender için uygulama oluşturma
+# <a name="create-an-app-to-access-microsoft-365-defender-without-a-user"></a>Kullanıcı olmadan Microsoft 365 Defender erişmek için uygulama oluşturma
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 
 - Microsoft 365 Defender
 
 > [!IMPORTANT]
-> Bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabilir, önceden satın alınan ürünle ilgilidir. Microsoft, burada sağlanan bilgilerle ilgili olarak açık veya zımni hiçbir garanti vermez.
+> Bazı bilgiler, ticari olarak piyasaya sürülmeden önce önemli ölçüde değiştirilebilen önceden yayımlanmış ürünle ilgilidir. Microsoft, burada sağlanan bilgilerle ilgili olarak açık veya zımni hiçbir garanti vermez.
 
-Bu sayfada, örneğin arka plan hizmeti oluşturuyorsanız, tanımlı bir kullanıcı olmadan Microsoft 365 Defender programlı erişim elde etmek için uygulamanın nasıl oluşturullandığı açıklandı.
+Bu sayfada, tanımlı bir kullanıcı olmadan Microsoft 365 Defender programlı erişim elde etmek için bir uygulamanın nasıl oluşturulacağı açıklanır( örneğin, bir daemon veya arka plan hizmeti oluşturuyorsanız).
 
-Microsoft 365 Defender'e bir veya daha fazla kullanıcı adına programlı erişime ihtiyacınız varsa, bkz. Kullanıcı adına [Microsoft 365 Defender API'lerine](api-create-app-user-context.md) erişmek için uygulama oluşturma ve API'lere iş ortağı erişimi olan [Microsoft 365 Defender](api-partner-access.md) oluşturma. Ne tür erişime ihtiyacınız olduğundan emin değilsanız, bkz. [Başlama](api-access.md).
+Bir veya daha fazla kullanıcı adına Microsoft 365 Defender program aracılığıyla erişmeniz gerekiyorsa bkz. [Kullanıcı adına Microsoft 365 Defender API'lere erişmek için uygulama oluşturma](api-create-app-user-context.md) ve [Microsoft 365 Defender API'lere iş ortağı erişimiyle uygulama oluşturma](api-partner-access.md). Hangi tür erişime ihtiyacınız olduğundan emin değilseniz bkz. [Kullanmaya başlayın](api-access.md).
 
-Microsoft 365 Defender çok büyük bir veri ve eylemlerini bir dizi programlı API aracılığıyla ortaya çıkarır. Bu API'ler iş akışlarını otomatikleştirmenize ve Microsoft 365 Defender özelliklerini kullanmanıza yardımcı olur. Bu API erişimi için OAuth2.0 kimlik doğrulaması gerekir. Daha fazla bilgi için [bkz. OAuth 2.0 Yetkilendirme Kodu Flow](/azure/active-directory/develop/active-directory-v2-protocols-oauth-code).
+Microsoft 365 Defender, bir dizi programlı API aracılığıyla verilerinin ve eylemlerinin büyük bir kısmını kullanıma sunar. Bu API'ler iş akışlarını otomatikleştirmenize ve Microsoft 365 Defender özelliklerinden yararlanmanıza yardımcı olur. Bu API erişimi için OAuth2.0 kimlik doğrulaması gerekir. Daha fazla bilgi için bkz[. OAuth 2.0 Yetkilendirme Kodu Flow](/azure/active-directory/develop/active-directory-v2-protocols-oauth-code).
 
-Genel olarak, şu API'leri kullanmak için aşağıdaki adımları benimsersiniz:
+Genel olarak, bu API'leri kullanmak için aşağıdaki adımları uygulamanız gerekir:
 
-- Bir Azure Active Directory (Azure AD) uygulaması oluşturun.
-- Bu uygulamayı kullanarak bir erişim belirteci alın.
-- API'ye erişmek için Microsoft 365 Defender kullanın.
+- bir Azure Active Directory (Azure AD) uygulaması oluşturun.
+- Bu uygulamayı kullanarak erişim belirteci alın.
+- Microsoft 365 Defender API'sine erişmek için belirteci kullanın.
 
-Bu makalede şunların nasıl olduğu açıklanmıştır:
+Bu makalede şunların nasıl yapılacağını açıklar:
 
 - Azure AD uygulaması oluşturma
-- Erişmek için bir erişim belirteci Microsoft 365 Defender
-- Belirteci doğrula.
+- Microsoft 365 Defender erişim belirteci alma
+- Belirteci doğrulayın.
 
 ## <a name="create-an-app"></a>Uygulama oluşturma
 
-1. Genel Yönetici [rolüne](https://portal.azure.com) sahip bir kullanıcı olarak **Azure'da oturum** açın.
+1. **Azure'da Genel Yönetici** rolüyle kullanıcı olarak oturum açın.[](https://portal.azure.com)
 
-2. **Azure Active Directory** >  **App kayıtlarıne** **gidinYeni** >  kayıt.
+2. **Azure Active Directory** >  **Uygulama kayıtları** >  **Yeni kayıt'a** gidin.
 
-   :::image type="content" source="../../media/atp-azure-new-app2.png" alt-text="Microsoft 365 Defender portalında Yeni Microsoft 365 Defender sekmesi" lightbox="../../media/atp-azure-new-app2.png":::
+   :::image type="content" source="../../media/atp-azure-new-app2.png" alt-text="Microsoft 365 Defender portalındaki Yeni kayıt sekmesi" lightbox="../../media/atp-azure-new-app2.png":::
 
-3. Formda, uygulamanız için bir ad seçin ve sonra da Kaydol'a **tıklayın**.
+3. Formda, uygulamanız için bir ad seçin ve ardından **Kaydet'i** seçin.
 
-4. Uygulama sayfanız üzerinde **API permissionsAdd** >  **permissionAPIs my organization** >  uses >, **Microsoft Threat Protection yazın** ve **Microsoft Threat Protection'ı seçin**. Artık uygulama erişim izni Microsoft 365 Defender.
+4. Uygulama sayfanızda **API İzinleri** **EkleGerekli** **izinlerGereklilikler** >  >  kuruluşum > kullanıyor'u seçin, **Microsoft Tehdit Koruması** yazın ve **Microsoft Tehdit Koruması'yı** seçin. Uygulamanız artık Microsoft 365 Defender erişebilir.
 
    > [!TIP]
-   > *Microsoft Tehdit* Koruması bu güncelleştirmelerin eski Microsoft 365 Defender, özgün listede görünmez. Görünmesini görmek için metin kutusuna adını yazmaya başlamalı.
+   > *Microsoft Tehdit Koruması*, Microsoft 365 Defender için eski bir addır ve özgün listede görünmez. Görünmesini sağlamak için metin kutusuna adını yazmaya başlamanız gerekir.
 
    :::image type="content" source="../../media/apis-in-my-org-tab.PNG" alt-text="Microsoft 365 Defender portalında kuruluşun API'leri kullanım sekmesi" lightbox="../../media/apis-in-my-org-tab.PNG":::
 
-5. Uygulama **izinleri'ne tıklayın**. Senaryonuz için uygun izinleri seçin (örneğin, **Olay.Okuma.All**) ve ardından İzin **ekle'yi seçin**.
+5. **Uygulama izinleri'ne tıklayın**. Senaryonuz için ilgili izinleri seçin (örneğin, **Incident.Read.All**) ve ardından **İzin ekle'yi** seçin.
 
-   :::image type="content" source="../../media/request-api-permissions.PNG" alt-text="Microsoft 365 Defender portalında uygulama Microsoft 365 Defender bölmesi" lightbox="../../media/request-api-permissions.PNG":::
+   :::image type="content" source="../../media/request-api-permissions.PNG" alt-text="Microsoft 365 Defender portalındaki uygulama izin bölmesi" lightbox="../../media/request-api-permissions.PNG":::
 
     > [!NOTE]
-    > Senaryo için uygun izinleri seçmeniz gerekir. *Tüm olayları okuma,* yalnızca bir örnektir. Hangi izinlere ihtiyacınız olduğunu belirlemek için lütfen çağrı **yapmak istediğiniz** API'deki İzinler bölümüne bakın.
+    > Senaryonuz için ilgili izinleri seçmeniz gerekir. *Tüm olayları okuma* yalnızca bir örnektir. Hangi izne ihtiyacınız olduğunu belirlemek için lütfen çağırmak istediğiniz API'nin **İzinler** bölümüne bakın.
     >
-    > Örneğin, gelişmiş [sorguları çalıştırmak için](api-advanced-hunting.md) 'Gelişmiş sorguları çalıştır' iznini seçin; bir [cihazı yalıtmak](/windows/security/threat-protection/microsoft-defender-atp/isolate-machine) için "Makine ayırma" iznini seçin.
+    > Örneğin, [gelişmiş sorgular çalıştırmak](api-advanced-hunting.md) için 'Gelişmiş sorguları çalıştırma' iznini seçin; [cihazı yalıtmak](/windows/security/threat-protection/microsoft-defender-atp/isolate-machine) için 'Makineyi yalıt' iznini seçin.
 
-6. Yönetici **izni ver'i seçin**. Her izin ekleyseniz, geçerlik için **Yönetici izni ver'i** seçmeniz gerekir.
+6. **Yönetici onayı ver'i** seçin. Her izin eklediğinizde, geçerli olması için **Yönetici onayı ver'i** seçmeniz gerekir.
 
-    :::image type="content" source="../../media/grant-consent.PNG" alt-text="Microsoft 365 Defender portalında izin Microsoft 365 Defender bölmesi" lightbox="../../media/grant-consent.PNG":::
+    :::image type="content" source="../../media/grant-consent.PNG" alt-text="Microsoft 365 Defender portalında onay vermeyle ilgili bölme" lightbox="../../media/grant-consent.PNG":::
 
-7. Uygulamaya bir sır eklemek için Sertifikalar gizli **& seçin**, gizli için bir açıklama ekleyin ve Ekle'yi **seçin**.
+7. Uygulamaya gizli dizi eklemek için **Sertifikalar & gizli dizileri** seçin, gizli diziye bir açıklama ekleyin ve **ardından Ekle'yi** seçin.
 
     > [!TIP]
-    > Ekle'yi **seçin** ve **oluşturulan gizli değeri kopyalayın**. Siz ayrılarak gizli değeri geri ala zamanlarız.
+    > **Ekle'yi** seçtikten sonra **oluşturulan gizli dizi değerini kopyala'yı** seçin. Ayrıldıktan sonra gizli dizi değerini alamazsınız.
 
-    :::image type="content" source="../../media/defender-endpoint/webapp-create-key2.png" alt-text="Microsoft 365 Defender portalında uygulama oluştur bölmesi" lightbox="../../media/defender-endpoint/webapp-create-key2.png":::
+    :::image type="content" source="../../media/defender-endpoint/webapp-create-key2.png" alt-text="Microsoft 365 Defender portalındaki uygulama oluştur bölmesi" lightbox="../../media/defender-endpoint/webapp-create-key2.png":::
 
-8. Uygulama kimliğinizi ve kiracı kimliğini güvenli bir yere kaydedin. Bunlar, uygulama sayfanıza **genel bakış** altında listelenir.
+8. Uygulama kimliğinizi ve kiracı kimliğinizi güvenli bir yere kaydedin. Bunlar uygulama sayfanızda **Genel Bakış** altında listelenir.
 
-   :::image type="content" source="../../media/app-and-tenant-ids.png" alt-text="Yeni portalda Genel Microsoft 365 Defender bölmesi" lightbox="../../media/app-and-tenant-ids.png":::
+   :::image type="content" source="../../media/app-and-tenant-ids.png" alt-text="Microsoft 365 Defender portalındaki Genel Bakış bölmesi" lightbox="../../media/app-and-tenant-ids.png":::
 
-9. **Yalnızca Microsoft 365 Defender** İş Ortakları [için: Microsoft 365 Defender](./api-partner-access.md) API'leri aracılığıyla iş ortağı erişimi için bu yönergeleri izleyin, uygulamanızı çok kiracılı olarak ayarlayın, böylece yönetici iznini alırsanız tüm kiracılarda kullanılabilir. Üçüncü taraf **uygulamalarda** iş ortağı erişimi gerekir; örneğin, birden çok müşteri kiracılarında çalıştıracak şekilde tasarlanmış bir uygulama sanız. Yalnızca **kiracıda** çalıştırmak istediğiniz bir hizmet (örneğin, yalnızca kendi verilerinizle etkileşimde bulunacak kendi kullanımınız için bir uygulama) oluşturmanız gerekmez. Uygulamalarınızı çok kiracılı olacak şekilde ayarlamak için:
+9. **Yalnızca Microsoft 365 Defender İş Ortakları** için: Microsoft 365 Defender API'leri aracılığıyla iş ortağı erişimi için [bu yönergeleri izleyin](./api-partner-access.md), uygulamanızı çok kiracılı olarak ayarlayın; böylece yönetici onayı aldıktan sonra tüm kiracılarda kullanılabilir. Üçüncü taraf uygulamalar için iş ortağı erişimi **gereklidir** ; örneğin, birden çok müşterinin kiracısında çalıştırılması amaçlanan bir uygulama oluşturursanız. Yalnızca kendi kullanımınız için yalnızca kendi verilerinizle etkileşime geçebilecek bir uygulama gibi, yalnızca kiracınızda çalıştırmak istediğiniz bir hizmet oluşturursanız **gerekli değildir** . Uygulamanızı çok kiracılı olarak ayarlamak için:
 
-    - Kimlik **Doğrulaması'ne** gidin ve Yeniden https://portal.azure.com Yönlendirme **URI'si olarak ekleyin**.
+    - **Kimlik Doğrulaması'na** gidin ve **Yeniden Yönlendirme URI'sini** ekleyinhttps://portal.azure.com.
 
-    - Sayfanın en altında, Desteklenen hesap türleri **altında**, Çok kiracılı uygulamanız için herhangi bir kuruluş **dizininde** bulunan hesaplar'ı seçin.
+    - Sayfanın alt kısmındaki **Desteklenen hesap türleri'nin** altında, çok kiracılı uygulamanız için **herhangi bir kuruluş dizini uygulamasındaki hesaplar** onayını seçin.
 
-    Uygulamanız kullanıcılarınız adına Microsoft 365 Defender kiracılarla etkileşime sahip olduğu için, uygulamayı kullanmayı uygun olan her kiracı için onaylanması gerekir.
+    Uygulamanız kullanıcılarınız adına Microsoft 365 Defender ile etkileşime geçtiğinden, kullanmak istediğiniz her kiracı için onaylanması gerekir.
 
-    Her kiracının Active Directory genel yöneticisinin izin bağlantısını seçmesi ve uygulamayı onaylaması gerekir.
+    Her kiracının Active Directory genel yöneticisinin onay bağlantısını seçip uygulamanızı onaylaması gerekir.
 
-    İzin bağlantısı aşağıdaki yapıya sahiptir:
+    Onay bağlantısı aşağıdaki yapıya sahiptir:
 
     ```http
     https://login.microsoftonline.com/common/oauth2/authorize?prompt=consent&client_id=<00000000-0000-0000-0000-000000000000>&response_type=code&sso_reload=true
     ```
 
-    Basamaklar `00000000-0000-0000-0000-000000000000` , Uygulama Kimliği'niz ile değiştir değiştir değiştir olmalıdır.  
+    Basamaklar `00000000-0000-0000-0000-000000000000` Uygulama Kimliğiniz ile değiştirilmelidir.  
 
-**Bitti!** Bir uygulamayı başarıyla kaydettiysiniz! Belirteç edinme ve doğrulama için aşağıdaki örneklere bakın.
+**Bitti!** Bir uygulamayı başarıyla kaydettiniz! Belirteç alma ve doğrulama için aşağıdaki örneklere bakın.
 
-## <a name="get-an-access-token"></a>Erişim belirteci alın
+## <a name="get-an-access-token"></a>Erişim belirteci alma
 
-Belirteçleri kullanma hakkında Azure Active Directory için [Azure AD öğreticisi'ne bakın](/azure/active-directory/develop/active-directory-v2-protocols-oauth-client-creds).
+Azure Active Directory belirteçleri hakkında daha fazla bilgi için [Azure AD öğreticisine](/azure/active-directory/develop/active-directory-v2-protocols-oauth-client-creds) bakın.
 
 > [!IMPORTANT]
-> Bu bölümdeki örnekler, test amacıyla gizli değerler yapıştırmayı teşvik etmese de, üretimde çalışan bir  uygulamada asla gizli kodların yapıştırımama gerekir. Üçüncü bir taraf kaynaklara erişmek için sizin sırrınızı kullanabilir. Azure Anahtar Kasasını kullanarak uygulamanın sırlarını güvende [tutmanıza yardımcı olabilirsiniz](/azure/key-vault/general/about-keys-secrets-certificates). Uygulamanızı nasıl koruyabilirsiniz gibi pratik bir örnek için bkz. Azure Anahtar Kasası [ile sunucu uygulamalarınız için gizli uygulamaları yönetme](/learn/modules/manage-secrets-with-azure-key-vault/).
+> Bu bölümdeki örnekler gizli dizi değerlerini test amacıyla yapıştırmanızı teşvik etse de, üretimde çalışan bir uygulamaya **gizli dizileri hiçbir zaman sabit kodlamamalısınız** . Üçüncü bir taraf, kaynaklara erişmek için gizli dizinizi kullanabilir. [Azure Key Vault](/azure/key-vault/general/about-keys-secrets-certificates) kullanarak uygulamanızın gizli dizilerini güvende tutmaya yardımcı olabilirsiniz. Uygulamanızı nasıl koruyabileceğinize ilişkin pratik bir örnek için bkz. [Azure Key Vault ile sunucu uygulamalarınızda gizli dizileri yönetme](/learn/modules/manage-secrets-with-azure-key-vault/).
 
-### <a name="get-an-access-token-using-powershell"></a>PowerShell kullanarak erişim belirteci alın
+### <a name="get-an-access-token-using-powershell"></a>PowerShell kullanarak erişim belirteci alma
 
 ```PowerShell
 # This code gets the application context token and saves it to a file named "Latest-token.txt" under the current directory.
@@ -152,14 +152,17 @@ Out-File -FilePath "./Latest-token.txt" -InputObject $token
 return $token
 ```
 
-### <a name="get-an-access-token-using-c"></a>C kullanarak bir erişim belirteci alın\#
+### <a name="get-an-access-token-using-c"></a>C kullanarak erişim belirteci alma\#
 
 > [!NOTE]
 > Aşağıdaki kod Nuget Microsoft.IdentityModel.Clients.ActiveDirectory 3.19.8 ile test edilmiştir.
 
+> [!IMPORTANT]
+> [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) NuGet paketi ve Azure AD Kimlik Doğrulama Kitaplığı (ADAL) kullanım dışı bırakıldı. 30 Haziran 2020'den bu yana yeni özellik eklenmemiş.   Yükseltmenizi kesinlikle öneririz. Diğer ayrıntılar için [geçiş kılavuzuna](/azure/active-directory/develop/msal-migration) bakın.
+
 1. Yeni bir konsol uygulaması oluşturun.
 
-1. [Microsoft.IdentityModel NuGet Clients.ActiveDirectory'i yükleyin](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory/).
+1. [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory/) NuGet yükleyin.
 
 1. Aşağıdaki satırı ekleyin:
 
@@ -183,7 +186,7 @@ return $token
     string token = authenticationResult.AccessToken;
     ```
 
-### <a name="get-an-access-token-using-python"></a>Python kullanarak bir erişim belirteci alın
+### <a name="get-an-access-token-using-python"></a>Python kullanarak erişim belirteci alma
 
 ```Python
 import json
@@ -213,16 +216,16 @@ jsonResponse = json.loads(response.read())
 aadToken = jsonResponse["access_token"]
 ```
 
-### <a name="get-an-access-token-using-curl"></a>Kıvrık kullanarak bir erişim belirteci alın
+### <a name="get-an-access-token-using-curl"></a>Curl kullanarak erişim belirteci alma
 
 > [!NOTE]
-> Kıvrık, 1803 Windows 10 ve sonraki sürümlere önceden yüklenmiş olarak gelecektir. Uygulamanın diğer sürümleri Windows resmi kıvrık web sitesinden [aracı indirip yükleyin](https://curl.haxx.se/windows/).
+> Curl, Windows 10, sürüm 1803 ve sonraki sürümlerde önceden yüklenmiştir. Windows diğer sürümleri için aracı doğrudan [resmi curl web sitesinden](https://curl.haxx.se/windows/) indirin ve yükleyin.
 
-1. Bir komut istemi açın ve CLIENT_ID Azure uygulama kimliğinize ayarlayın.
+1. Bir komut istemi açın ve CLIENT_ID Azure uygulama kimliğiniz olarak ayarlayın.
 
-1. Azure CLIENT_SECRET sırrınızı ayarlayın.
+1. CLIENT_SECRET Azure uygulama gizli dizinize ayarlayın.
 
-1. Kiracı TENANT_ID için uygulamanızı kullanmak isteyen müşterinin Azure kiracı kimliğine varsayılan Microsoft 365 Defender.
+1. Microsoft 365 Defender erişmek için uygulamanızı kullanmak isteyen müşterinin Azure kiracı kimliğine TENANT_ID ayarlayın.
 
 1. Aşağıdaki komutu çalıştırın:
 
@@ -230,7 +233,7 @@ aadToken = jsonResponse["access_token"]
    curl -i -X POST -H "Content-Type:application/x-www-form-urlencoded" -d "grant_type=client_credentials" -d "client_id=%CLIENT_ID%" -d "scope=https://api.security.microsoft.com/.default" -d "client_secret=%CLIENT_SECRET%" "https://login.microsoftonline.com/%TENANT_ID%/oauth2/v2.0/token" -k
    ```
 
-   Başarılı bir yanıt şöyle olacaktır:
+   Başarılı bir yanıt şöyle görünür:
 
    ```bash
    {"token_type":"Bearer","expires_in":3599,"ext_expires_in":0,"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIn <truncated> aWReH7P0s0tjTBX8wGWqJUdDA"}
@@ -238,23 +241,23 @@ aadToken = jsonResponse["access_token"]
 
 ## <a name="validate-the-token"></a>Belirteci doğrulama
 
-1. Belirteci kopyalayıp çözmek için [JSON web belirteci geçerli web sitesi JWT'ye](https://jwt.ms) yapıştırın.
+1. Kodu çözmek için belirteci kopyalayıp [JSON web belirteci doğrulayıcı web sitesine (JWT)](https://jwt.ms) yapıştırın.
 
-1. Kod çözme *belirteci* içinde talep ettiği rollerin istenen izinleri içerdiğindan emin olun.
+1. Kodu çözülen belirteç içindeki *rol* talebi için istenen izinlerin bulunduğundan emin olun.
 
-   Aşağıdaki resimde, ile ve izinleri olan bir uygulamada alınan kod çözme belirteci `Incidents.Read.All``Incidents.ReadWrite.All``AdvancedHunting.Read.All` gösterebilirsiniz:
+   Aşağıdaki görüntüde, , `Incidents.ReadWrite.All`ve `AdvancedHunting.Read.All` izinleriyle `Incidents.Read.All`bir uygulamadan alınan kodu çözülen belirteci görebilirsiniz:
 
-   :::image type="content" source="../../media/defender-endpoint/webapp-decoded-token.png" alt-text="Kod çözme portalında Kod Çözme Microsoft 365 Defender bölmesi" lightbox="../../media/defender-endpoint/webapp-decoded-token.png":::
+   :::image type="content" source="../../media/defender-endpoint/webapp-decoded-token.png" alt-text="Microsoft 365 Defender portalındaki Kod Çözme belirteci bölmesi" lightbox="../../media/defender-endpoint/webapp-decoded-token.png":::
 
-## <a name="use-the-token-to-access-the-microsoft-365-defender-api"></a>Microsoft 365 Defender API'sinde erişmek için belirteci kullanın
+## <a name="use-the-token-to-access-the-microsoft-365-defender-api"></a>Microsoft 365 Defender API'sine erişmek için belirteci kullanma
 
-1. Kullanmak istediğiniz API'yi (olaylar veya gelişmiş avlar) seçin. Daha fazla bilgi için bkz[. Desteklenen Microsoft 365 Defender API'ler](api-supported.md).
+1. Kullanmak istediğiniz API'yi (olaylar veya gelişmiş avcılık) seçin. Daha fazla bilgi için bkz[. Desteklenen Microsoft 365 Defender API'leri](api-supported.md).
 
-2. Göndermekte olduğunuz http isteğinde, `"Bearer" <token>`yetkilendirme üst bilginizi *, yetkilendirme* düzeninin taşıyıcı ve doğrulanmış belirtecin olduğu  belirteci ayarlayın.
+2. Göndermek üzere olduğunuz http isteğinde, yetkilendirme üst bilgisini `"Bearer" <token>`olarak ayarlayın, *taşıyıcı* yetkilendirme şeması ve *belirteç* doğrulanmış belirtecinizdir.
 
-3. Belirteç, bir saat içinde sona erer. Bu süre boyunca aynı belirteçle birden çok istek gönderabilirsiniz.
+3. Belirtecin süresi bir saat içinde dolar. Bu süre boyunca aynı belirteçle birden fazla istek gönderebilirsiniz.
 
-Aşağıdaki örnekte, C# kullanan olayları listesi almak için istek **göndermenin nasıl olduğu görüntülenir**.
+Aşağıdaki örnekte **, C# kullanarak** olayların listesini almak için istek gönderme işlemleri gösterilmektedir.
 
 ```C#
     var httpClient = new HttpClient();
@@ -268,11 +271,11 @@ Aşağıdaki örnekte, C# kullanan olayları listesi almak için istek **gönder
 ## <a name="related-articles"></a>İlgili makaleler
 
 - [Microsoft 365 Defender API'lere genel bakış](api-overview.md)
-- [Api'lere Microsoft 365 Defender erişme](api-access.md)
-- ['Merhaba dünya' uygulaması oluşturma](api-hello-world.md)
-- [Kullanıcı adına API Microsoft 365 Defender erişmek için uygulama oluşturma](api-create-app-user-context.md)
-- [Api'lere çok kiracılı iş ortağı erişimi Microsoft 365 Defender oluşturma](api-partner-access.md)
+- [Microsoft 365 Defender API'lerine erişme](api-access.md)
+- ['Hello world' uygulaması oluşturma](api-hello-world.md)
+- [Kullanıcı adına Microsoft 365 Defender API'lere erişmek için uygulama oluşturma](api-create-app-user-context.md)
+- [Microsoft 365 Defender API'lere çok kiracılı iş ortağı erişimine sahip bir uygulama oluşturma](api-partner-access.md)
 - [API sınırları ve lisanslama hakkında bilgi edinin](api-terms.md)
 - [Hata kodlarını anlama](api-error-codes.md)
-- [Azure Anahtar Kasası ile sunucu uygulamalarınıza olan sırlarınızı yönetin](/learn/modules/manage-secrets-with-azure-key-vault/)
-- [Kullanıcı oturum açma ve API erişimi için OAuth 2.0 yetkilendirme](/azure/active-directory/develop/active-directory-v2-protocols-oauth-code)
+- [Azure Key Vault ile sunucu uygulamalarınızdaki gizli dizileri yönetme](/learn/modules/manage-secrets-with-azure-key-vault/)
+- [Kullanıcı oturum açma ve API erişimi için OAuth 2.0 yetkilendirmesi](/azure/active-directory/develop/active-directory-v2-protocols-oauth-code)
