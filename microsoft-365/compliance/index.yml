@@ -14,25 +14,25 @@ metadata:
   ms.author: robmazz
   ms.date: 04/22/2022
   ms.localizationpriority: high
-  ms.openlocfilehash: 5581cb78600a36fd1b942bb8a86b2ed38f6a7db9
-  ms.sourcegitcommit: 292de1a7e5ecc2e9e6187126aebba6d3b9416dff
+  ms.openlocfilehash: b848abdb739d09595e9be91b8217acf09b01dbd2
+  ms.sourcegitcommit: c33af120921d3c4fb5c362dac3e74f0ab3d1e58d
   ms.translationtype: HT
   ms.contentlocale: tr-TR
   ms.lasthandoff: 05/06/2022
-  ms.locfileid: "65242996"
+  ms.locfileid: "65249607"
 landingContent:
 - title: Bulutlar, uygulamalar ve cihazlar arasında hassas verileri koruma
   linkLists:
   - linkListType: overview
     links:
     - text: Verileriniz hakkında bilgi edinme
-      url: /microsoft-365/compliance/sensitivity-labels
+      url: /microsoft-365/compliance/information-protection#know-your-data
     - text: Verilerinizi koruma
-      url: /microsoft-365/compliance/information-protection-solution
+      url: /microsoft-365/compliance/information-protection#protect-your-data
     - text: Veri kaybını önleme
-      url: /microsoft-365/compliance/dlp-learn-about-dlp
+      url: /microsoft-365/compliance/information-protection#prevent-data-loss
     - text: Veri yaşam döngünüzü yönetme
-      url: /microsoft-365/compliance/data-lifecycle-management
+      url: /microsoft-365/compliance/manage-data-governance#microsoft-purview-data-lifecycle-management
     - text: Verilerinizi şifreleme ve şifreleme anahtarlarınızı kontrol etme
       url: /microsoft-365/compliance/encryption
     - text: Microsoft dışı verileri içeri aktarma ve arşivleme
@@ -47,8 +47,8 @@ landingContent:
       url: /microsoft-365/compliance/communication-compliance
     - text: Kullanıcılar arasındaki iletişimi ve işbirliğini kısıtlama
       url: /microsoft-365/compliance/information-barriers
-    - text: İş, yasal veya mevzuat kaydı tutma gereksinimlerini yönetin.
-      url: /microsoft-365/compliance/records-management
+    - text: İş, yasal veya mevzuat kaydı tutma gereksinimlerini yönetme
+      url: /microsoft-365/compliance/manage-data-governance#microsoft-purview-records-management
     - text: SharePoint ve OneDrive'da denetlenen etkinlikleri günlüğe kaydetme ve arama
       url: /microsoft-365/compliance/auditing-solutions-overview
     - text: Yasal davalar için verileri tanımlama ve yönetme
@@ -73,5 +73,5 @@ landingContent:
       url: /microsoft-365/compliance/information-protection-solution
     - text: Veri gizliliği düzenlemeleri için bilgi korumasını dağıtın
       url: /microsoft-365/solutions/information-protection-deploy
-    - text: Bilgi koruma ve uyumluluk ilüstrasyonlarını keşfetme
+    - text: Bilgi koruma ve uyumluluk çizimlerini keşfetme
       url: /microsoft-365/solutions/productivity-illustrations
