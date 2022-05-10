@@ -15,18 +15,18 @@ search.appverid:
 - MET150
 recommendations: false
 description: Microsoft Purview Veri Yaşam Döngüsü Yönetimi & Microsoft Purview Kayıt Yönetimi'nden gelen özellikleri uygulayarak verilerinizi uyumluluk veya mevzuat gereksinimlerine göre idare edin.
-ms.openlocfilehash: 0b507fad6b4455755a3a0036bff15a7973b906ee
-ms.sourcegitcommit: b3f5fe84a319741583954ef8ff2ec9ec6da69bcf
+ms.openlocfilehash: c807d2359c9a8c9cb17955b1ad4bf121cab57918
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "65217640"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65286978"
 ---
 # <a name="govern-your-data-with-microsoft-purview"></a>Microsoft Purview ile verilerinizi yönetme
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
 >*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Verilerinizi uyumluluk veya mevzuat gereksinimlerine göre yönetmek için **Microsoft Purview Veri Yaşam Döngüsü Yönetimi** (eski adıyla Microsoft Information Governance) ve **Microsoft Purview Kayıt Yönetimi** özelliklerini kullanın.
 

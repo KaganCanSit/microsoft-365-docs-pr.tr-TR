@@ -13,12 +13,12 @@ ms.collection:
 - M365-security-compliance
 ms.custom: ''
 f1.keywords: NOCSH
-ms.openlocfilehash: 0aee30dff19f6d1127e63d14fa69e5d72232e305
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 8319cd07fb1a648e4aa20bc3a29535a2f4916f6b
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64972543"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65286394"
 ---
 # <a name="microsoft-365-productivity-illustrations"></a>Microsoft 365 üretkenlik çizimleri
 
@@ -38,14 +38,14 @@ Hangi yöntemin (veya yöntem bileşimlerinin) ve bunların ne zaman kullanılac
 
 | Öğe | Açıklama |
 |:-----|:-----|
-|[![Contoso kurumsal iletişim senaryosu posteri.](../media/solutions-architecture-center/contoso-corporate-communication-thumb.png)](https://download.microsoft.com/download/0/3/4/034fbee5-ecf4-4559-86d3-815e898f21ea/contoso-corporate-communication-poster.pdf) <br/> [PDF](https://download.microsoft.com/download/0/3/4/034fbee5-ecf4-4559-86d3-815e898f21ea/contoso-corporate-communication-poster.pdf) \| [Visio](https://download.microsoft.com/download/0/3/4/034fbee5-ecf4-4559-86d3-815e898f21ea/contoso-corporate-communication-poster.vsdx)  <br>Ocak 2022'de güncelleştirildi   |Bu posterde Contoso'nun popüler iletişim senaryolarında çalışanları nasıl bilgilendirip etkileşimde tuttuğu gösterilmektedir. Contoso, Viva Connections adlı yeni bir teklif de dahil olmak üzere çeşitli M365 uygulamaları kullanır.<br/><br/>**İlgili çözüm kılavuzları** <br/> <ul><li>[Kurumsal iletişimler: Rehberlik, yöntemler ve ürünler](/sharepoint/corporate-communications-overview)|
+|[![Contoso kurumsal iletişim senaryosu posteri.](../media/solutions-architecture-center/contoso-corporate-communication-thumb.png)](https://download.microsoft.com/download/0/3/4/034fbee5-ecf4-4559-86d3-815e898f21ea/contoso-corporate-communication-poster.pdf) <br/> [PDF](https://download.microsoft.com/download/0/3/4/034fbee5-ecf4-4559-86d3-815e898f21ea/contoso-corporate-communication-poster.pdf) \| [Visio](https://download.microsoft.com/download/0/3/4/034fbee5-ecf4-4559-86d3-815e898f21ea/contoso-corporate-communication-poster.vsdx)  <br>Ocak 2022'de güncelleştirildi   |Bu posterde Contoso'nun popüler iletişim senaryolarında çalışanları nasıl bilgilendirip etkileşimde tuttuğu gösterilmektedir. Contoso, yeni bir teklif de dahil olmak üzere çeşitli Microsoft 365 uygulamaları Viva Bağlantılar kullanır.<br/><br/>**İlgili çözüm kılavuzları** <br/> <ul><li>[Kurumsal iletişimler: Rehberlik, yöntemler ve ürünler](/sharepoint/corporate-communications-overview)|
 
 ## <a name="groups-in-microsoft-365-for-it-architects"></a>BT Mimarları için Microsoft 365 grupları
 Bu çizim, BT mimarlarına Microsoft 365 Grupları hakkında bilgi içerir. Kuruluşunuzda işbirliği için Microsoft 365 Grupları ve ekipleri yapılandırma ve yönetme hakkında bilgi edinmek için bkz. [Microsoft 365 ile güvenli işbirliği ayarlama](/microsoft-365/solutions/setup-secure-collaboration-with-teams) ve [İşbirliği idaresi nedir?](/microsoft-365/solutions/collaboration-governance-overview).
 
 | Öğe | Açıklama |
 |:-----|:-----|
-|[![Gruplar için başparmak görüntüsü bilgi grafiği.](../downloads/msft-m365-groups-architecture-thumb.png)](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-groups.pdf) <br/> [PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-groups.pdf) \| [Visio](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/downloads/msft-m365-groups.vsdx) <br> Mayıs 2020'de güncelleştirildi|Bu çizimler, farklı grup türlerini, bunların nasıl oluşturulup yönetildiğini ve birkaç idare önerisini ayrıntılarıyla açıklar.
+|[![Gruplar için başparmak görüntüsü bilgi grafiği.](../downloads/msft-m365-groups-architecture-thumb.png)](https://download.microsoft.com/download/6/3/0/6309218f-a169-4f2d-af4c-2fe49e30ba17/msft-m365-groups.pdf) <br/> [PDF](https://download.microsoft.com/download/6/3/0/6309218f-a169-4f2d-af4c-2fe49e30ba17/msft-m365-groups.pdf) \| [Visio](https://download.microsoft.com/download/6/3/0/6309218f-a169-4f2d-af4c-2fe49e30ba17/msft-m365-groups.vsdx) <br> Mayıs 2022'de güncelleştirildi|Bu çizimler, farklı grup türlerini, bunların nasıl oluşturulup yönetildiğini ve birkaç idare önerisini ayrıntılarıyla açıklar.
 
 ## <a name="migrate-to-microsoft-365"></a>Microsoft 365'e geçiş
 
@@ -64,7 +64,7 @@ Bu çizim kümesi, bu özelliklerin yaygın mevzuat gereksinimlerini karşılama
 
 | Öğe | Açıklama |
 |:-----|:-----|
-|[![Model posteri: bilgi koruma ve uyumluluk özelliklerini Microsoft 365.](../media/solutions-architecture-center/m365-compliance-illustrations-thumb.png)](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf) <br/> İngilizce: [pdf](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf)\| olarak [indirme Visio olarak indirme](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.vsdx)   <br/> Japonca: [pdf](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.pdf)\| olarak [indirme Visio olarak indirme](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.vsdx)   <br/> Kasım 2020'de güncelleştirildi|Içerir: <ul><li>  Microsoft Purview Information Protection ve Microsoft Purview veri kaybı önleme</li><li>Bekletme ilkeleri ve bekletme etiketleri </li><li>Bilgi engelleri</li><li>İletişim uyumluluğu</li><li>Insider riski</li><li>Üçüncü taraf veri alımı</li>|
+|[![Model posteri: bilgi koruma ve uyumluluk özelliklerini Microsoft 365.](../media/solutions-architecture-center/m365-compliance-illustrations-thumb.png)](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf) <br/> İngilizce: [pdf](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf)\| olarak [indirme Visio olarak indirme](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.vsdx)   <br/> Japonca: [pdf](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.pdf)\| olarak [indirme Visio olarak indirme](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.vsdx)   <br/> Kasım 2020'de güncelleştirildi|Içerir: <ul><li>  Microsoft Purview Information Protection ve Microsoft Purview Veri Kaybı Önleme</li><li>Bekletme ilkeleri ve bekletme etiketleri </li><li>Bilgi engelleri</li><li>İletişim uyumluluğu</li><li>Insider riski</li><li>Üçüncü taraf veri alımı</li>|
 
 
 ## <a name="security-and-information-protection-for-multi-region-organizations"></a>Çok Bölgeli Kuruluşlar için Güvenlik ve Information Protection

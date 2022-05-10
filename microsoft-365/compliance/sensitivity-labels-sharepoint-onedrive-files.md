@@ -1,5 +1,5 @@
 ---
-title: SharePoint ve OneDrive'daki Office dosyaları için hassasiyet etiketlerini etkinleştirme
+title: Office dosyaları için duyarlılık etiketlerini etkinleştirme
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -16,235 +16,237 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Yöneticiler Word, Excel ve PowerPoint dosyaları için Word, SharePoint duyarlılık OneDrive.
-ms.openlocfilehash: 12180dcc748764b1d73f6ad8a5c0ef7c77cd2b27
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+description: Yöneticiler, SharePoint ve OneDrive'da Word, Excel ve PowerPoint dosyaları için duyarlılık etiketi desteğini etkinleştirebilir.
+ms.openlocfilehash: 4e3a3898f437325a28a4deda83ba8804324fe215
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64499979"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65285444"
 ---
 # <a name="enable-sensitivity-labels-for-office-files-in-sharepoint-and-onedrive"></a>SharePoint ve OneDrive'daki Office dosyaları için hassasiyet etiketlerini etkinleştirme
 
->*[Microsoft 365 uyumluluğu için lisans & kılavuzu.](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)*
+>*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-Kullanıcıların duyarlılık etiketlerinizi [SharePoint'da Office için](sensitivity-labels-office-apps.md#office-file-types-supported) SharePoint dosyaları OneDrive yerleşik etiketlemeyi Web için Office.[](sensitivity-labels.md) Bu özellik etkinleştirildiğinde, kullanıcılar şeritte Duyarlılık düğmesini  görebilirler; böylelikle etiket uygulayabilirler ve durum çubuğunda uygulanan etiket adını görebilirler.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Bu özelliğin etkinleştirilmesi, SharePoint ve OneDrive bir duyarlılık etiketi kullanılarak şifrelenmiş Office dosyalarının içeriğinin işlenmelerine de neden olur. Etiket, Web için Office'Web için Office veya Office masaüstü uygulamalarına uygulanabilir ve SharePoint OneDrive. Bu özelliği etkinleştirene kadar, bu hizmetler şifrelenmiş dosyaları işleyemeksizin bu dosyalar için birlikte yazar, eKbulma, Veri Kaybı Önleme, arama ve diğer işbirliği özelliklerini işlemez.
+Kullanıcıların [duyarlılık etiketlerinizi](sensitivity-labels.md) Web için Office uygulayabilmesi için SharePoint ve OneDrive'da [desteklenen Office dosyaları](sensitivity-labels-office-apps.md#office-file-types-supported) için yerleşik etiketlemeyi etkinleştirin. Bu özellik etkinleştirildiğinde, kullanıcılar şeritte **Duyarlılık** düğmesini görür ve böylece etiketleri uygulayabilir ve durum çubuğunda uygulanan etiket adlarını görebilir.
 
-SharePoint ve OneDrive'te Office dosyaları için duyarlılık etiketlerini etkinleştirdikten sonra bulut tabanlı bir anahtarla şifrelemesi uygulanan (ve Çift Anahtar Şifrelemesi kullanmayan[) bir](double-key-encryption.md) duyarlılık etiketine sahip olan yeni ve değiştirilmiş dosyalar için:
+Bu özelliğin etkinleştirilmesi, SharePoint ve OneDrive duyarlılık etiketi kullanılarak şifrelenmiş Office dosyaların içeriğini işleyebilmesine de neden olur. Etiket Web için Office veya Office masaüstü uygulamalarına uygulanabilir ve SharePoint ve OneDrive yüklenebilir veya kaydedilebilir. Bu özelliği etkinleştirene kadar bu hizmetler şifrelenmiş dosyaları işleyemez; başka bir deyişle birlikte yazma, eBulma, Microsoft Purview veri kaybını önleme, arama ve diğer işbirliğine dayalı özellikler bu dosyalar için çalışmaz.
 
-- Word, Excel ve PowerPoint dosyalarında, SharePoint OneDrive etiketi tanır ve artık şifreli dosyanın içeriğini işler.
+SharePoint ve OneDrive Office dosyaları için duyarlılık etiketlerini etkinleştirdikten sonra, bulut tabanlı bir anahtarla şifreleme uygulayan (ve [Çift Anahtarlı Şifreleme](double-key-encryption.md) kullanmayan) duyarlılık etiketine sahip yeni ve değiştirilmiş dosyalar için:
 
-- Kullanıcılar dosya veya klasörleri kullanarak bu SharePoint veya OneDrive, duyarlılık etiketi ve etiketten alınan tüm şifreleme ayarları zorunlu kılınır ve depolandığı her yerde dosyada kalır. Yalnızca belgeleri korumak için etiketleri kullanmak üzere kullanıcı kılavuzu sağlarken emin olmak. Daha fazla bilgi için bkz [. Bilgi Hakları Yönetimi (IRM) seçenekleri ve duyarlılık etiketleri](sensitivity-labels-office-apps.md#information-rights-management-irm-options-and-sensitivity-labels).
+- Word, Excel ve PowerPoint dosyaları için SharePoint ve OneDrive etiketi tanır ve artık şifrelenmiş dosyanın içeriğini işleyebilir.
 
-- Kullanıcılar etiketli ve şifrelenmiş dosyaları e-posta SharePoint OneDrive, bu dosyalar için en azından görüntüleme hakları olması gerekir. Örneğin, dosyaların dış tarafından açılmasını SharePoint. Bu minimum kullanım hakkı yoksa, karşıya yükleme başarılı olur ancak hizmet etiketi tanımaz ve dosya içeriğini işleyer.
+- Kullanıcılar bu dosyaları SharePoint veya OneDrive indirdiğinde veya bu dosyalara eriştiğinde duyarlılık etiketi ve etiketten tüm şifreleme ayarları zorunlu tutulur ve depolandığı her yerde dosyada kalır. Belgeleri korumak için yalnızca etiketleri kullanmak için kullanıcı kılavuzu sağladığınızı doğrulayın. Daha fazla bilgi için bkz. [Bilgi Hakları Yönetimi (IRM) seçenekleri ve duyarlılık etiketleri](sensitivity-labels-office-apps.md#information-rights-management-irm-options-and-sensitivity-labels).
 
-- Şifreleme Web için Office duyarlılık etiketleri olan Office dosyaları açmak ve düzenlemek için Word (Word, Excel, PowerPoint) kullanın. Şifrelemeyle atanmış olan izinler zorunlu kılındı. Bu belgeler için [otomatik etiketleme de](apply-sensitivity-label-automatically.md) kullanabilirsiniz.
+- Kullanıcılar etiketli ve şifrelenmiş dosyaları SharePoint veya OneDrive karşıya yüklediğinde, en azından bu dosyalar üzerinde görüntüleme haklarına sahip olmaları gerekir. Örneğin, dosyaları SharePoint dışında açabilirler. Bu minimum kullanım haklarına sahip değilse karşıya yükleme başarılı olur ancak hizmet etiketi tanımaz ve dosya içeriğini işleyemez.
 
-- Dış kullanıcılar, konuk hesaplarını kullanarak şifreleme ile etiketlenmiş belgelere erişim sağlar. Daha fazla bilgi için bkz [. Dış kullanıcılar ve etiketli içerik desteği](sensitivity-labels-office-apps.md#support-for-external-users-and-labeled-content).
+- Şifreleme uygulayan duyarlılık etiketlerine sahip Office dosyalarını açmak ve düzenlemek için Web için Office (Word, Excel, PowerPoint) kullanın. Şifreleme ile atanan izinler zorlanır. Bu belgeler için [otomatik etiketlemeyi](apply-sensitivity-label-automatically.md) de kullanabilirsiniz.
 
-- Office 365 eBulma, bu dosyalar için tam metin araması ve Veri Kaybı Önleme (DLP) ilkelerinin bu dosyalarda içeriği desteklemesini destekler.
+- Dış kullanıcılar, konuk hesaplarını kullanarak şifreleme ile etiketlenmiş belgelere erişebilir. Daha fazla bilgi için bkz. [Dış kullanıcılar ve etiketli içerik desteği](sensitivity-labels-office-apps.md#support-for-external-users-and-labeled-content).
+
+- Office 365 eBulma, bu dosyalar için tam metin aramayı destekler ve veri kaybı önleme (DLP) ilkeleri bu dosyalardaki içeriği destekler.
 
 > [!NOTE]
-> Şifreleme bir şirket içi anahtarla (çoğunlukla "kendi anahtarınızı tutma" veya HYOK) olarak adlandırılan bir anahtar yönetim topolojisi) ile veya Çift Anahtar Şifrelemesi kullanılarak uygulanmışsa [, dosya](double-key-encryption.md) içeriğini işlemeye yönelik hizmet davranışı değişmez. Dolayısıyla, bu dosyalar için birlikte yazarlık, eBulma, Veri Kaybını Önleme, arama ve diğer işbirliği özellikleri işe yaramadı.
+> Şifreleme bir şirket içi anahtarla (genellikle "kendi anahtarını tutma" veya HYOK olarak adlandırılan bir anahtar yönetimi topolojisi) veya [Çift Anahtar Şifrelemesi](double-key-encryption.md) kullanılarak uygulanmışsa, dosya içeriğini işlemeye yönelik hizmet davranışı değişmez. Bu nedenle bu dosyalar için birlikte yazma, eBulma, veri kaybı önleme, arama ve diğer işbirliğine dayalı özellikler çalışmaz.
 >
-> Bu SharePoint OneDrive tek Azure tabanlı anahtar kullanılarak şifreleme ile etiketlenmiş bu konumlarda var olan dosyalar için de değişiklik değildir. Bu dosyaların SharePoint ve OneDrive'ta Office dosyaları için duyarlılık etiketlerini etkinleştirdikten sonra yeni özelliklerden yararlanabilmek için dosyaların indirildikten ve karşıya yükleniyor olması ya da düzenleniyor olması gerekir.
+> SharePoint ve OneDrive davranışı, bu konumlarda tek bir Azure tabanlı anahtar kullanılarak şifrelemeyle etiketlenen mevcut dosyalar için de değişmez. bu dosyaların SharePoint ve OneDrive Office dosyalar için duyarlılık etiketlerini etkinleştirdikten sonra yeni özelliklerden yararlanması için dosyaların yeniden indirilip karşıya yüklenmesi veya düzenlenmesi gerekir.
 
-SharePoint ve OneDrive'Office dosyalarında duyarlılık etiketlerini etkinleştirdikten sonra, SharePoint ve OneDrive'ta belgelere uygulanan duyarlılık etiketlerini [](search-the-audit-log-in-security-and-compliance.md#sensitivity-label-activities) izlemek için SharePoint üç yeni denetim OneDrive:
+SharePoint ve OneDrive Office dosyaları için duyarlılık etiketlerini etkinleştirdikten sonra, SharePoint ve OneDrive belgelere uygulanan duyarlılık etiketlerini izlemek için üç yeni [denetim olayı](search-the-audit-log-in-security-and-compliance.md#sensitivity-label-activities) sağlanır:
 
 - **Dosyaya duyarlılık etiketi uygulandı**
 - **Dosyaya uygulanan duyarlılık etiketi değiştirildi**
-- **Duyarlılık etiketi dosyadan kaldırıldı**
+- **Dosyadan duyarlılık etiketi kaldırıldı**
 
-Yeni özellikleri iş akışında görmek için aşağıdaki videoyu (ses yok) izleyin:
+Yeni özelliklerin nasıl çalıştığını görmek için aşağıdaki videoyu izleyin (ses yok):
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed//RE4ornZ]
 
-SharePoint ve OneDrive dosyalarında Office için duyarlılık etiketlerini devre dışı bırakma seçeneğine her zaman sahip oluruz.[](#how-to-disable-sensitivity-labels-for-sharepoint-and-onedrive-opt-out)
+her zaman SharePoint ve OneDrive Office dosyalar için duyarlılık etiketlerini istediğiniz zaman devre dışı bırakma seçeneğiniz vardır.[](#how-to-disable-sensitivity-labels-for-sharepoint-and-onedrive-opt-out)
 
-Şu anda SharePoint'de SharePoint Bilgi Hakları Yönetimi'ni (IRM) kullanarak belgeleri koruyorsanız, bu sayfada SharePoint Bilgi Hakları Yönetimi [(IRM)](#sharepoint-information-rights-management-irm-and-sensitivity-labels) ve duyarlılık etiketleri bölümünü kontrol edin.
+SharePoint Bilgi Hakları Yönetimi 'ni (IRM) kullanarak SharePoint belgeleri koruyorsanız, bu sayfadaki [bilgi hakları yönetimi (IRM) ve duyarlılık etiketleri SharePoint](#sharepoint-information-rights-management-irm-and-sensitivity-labels) bölümünü denetlediğinizden emin olun.
 
 ## <a name="requirements"></a>Gereksinimler
 
-Bu yeni özellikler yalnızca duyarlılık [etiketleriyle](sensitivity-labels.md) çalışır. Şu anda Azure Information Protection varsa, önce bunları duyarlılık etiketlerine geçirin; böylelikle karşıya yüklediğiniz yeni dosyalar için bu özellikleri etkinleştirebilirsiniz. Yönergeler için Bkz[. Azure Information Protection birleştirilmiş duyarlılık etiketlerine geçirme](/azure/information-protection/configure-policy-migrate-labels).
+Bu yeni özellikler yalnızca [duyarlılık etiketleriyle](sensitivity-labels.md) çalışır. Şu anda Azure Information Protection etiketleriniz varsa, karşıya yüklediğiniz yeni dosyalar için bu özellikleri etkinleştirebilmek için önce bunları duyarlılık etiketlerine geçirin. Yönergeler için bkz. [Azure Information Protection etiketlerini birleşik duyarlılık etiketlerine geçirme](/azure/information-protection/configure-policy-migrate-labels).
 
-Windows'ta OneDrive eşitleme uygulamasının 19.002.0121.0008 veya sonraki sürümünü ve Mac'te 19.002.0107.0008 veya sonraki bir sürümünü kullanın. Bu sürümlerin her ikisi de 28 Ocak 2019'da yayınlanacak ve tüm halkalarda yayımlanacak. Daha fazla bilgi için sürüm [OneDrive bakın](https://support.office.com/article/845dcf18-f921-435e-bf28-4e24b95e5fc0). Office ve SharePoint OneDrive dosyaları için duyarlılık etiketlerini etkinleştirdikten sonra, eşitleme uygulamasının daha eski bir sürümünü çalıştıran kullanıcılardan bu dosyaları güncelleştirmeleri istenir.
+Windows'da OneDrive eşitleme uygulama sürümü 19.002.0121.0008 veya üzerini ve Mac'te 19.002.0107.0008 veya sonraki bir sürümü kullanın. Bu sürümlerin her ikisi de 28 Ocak 2019'da yayımlandı ve şu anda tüm halkalarda yayınlanıyor. Daha fazla bilgi için [OneDrive sürüm notları](https://support.office.com/article/845dcf18-f921-435e-bf28-4e24b95e5fc0) bölümüne bakın. SharePoint ve OneDrive'da Office dosyaları için duyarlılık etiketlerini etkinleştirdikten sonra, eşitleme uygulamasının eski bir sürümünü çalıştıran kullanıcılardan bunu güncelleştirmeleri istenir.
 
 ## <a name="limitations"></a>Sınırlamalar
 
-- SharePoint ve OneDrive, bu dosyalar PowerQuery verileri, özel eklentiler tarafından depolanan veriler ya da Kapak Sayfası Özellikleri, içerik türü şemaları, özel Belge Bilgileri Paneli ve Özel XSN gibi özel XML bölümleri içeriyorsa, Office masaüstü uygulamaları tarafından etiketlenen ve şifrelenmiş bazı dosyaları işleyebilirsiniz. Bu sınırlama, kaynakça içeren [dosyalar ve](https://support.microsoft.com/en-us/office/create-a-bibliography-citations-and-references-17686589-4824-4940-9c69-342c289fa2a5) karşıya yüklendiklerinde Belge Kimliği eklenmiş olan dosyalara da uygulanır.[](https://support.microsoft.com/office/enable-and-configure-unique-document-ids-ea7fee86-bd6f-4cc8-9365-8086e794c984)
+- SharePoint ve OneDrive, bu dosyalar PowerQuery verileri, özel eklentiler tarafından depolanan veriler veya Kapak Sayfası Özellikleri, içerik türü şemaları, özel Belge Bilgileri Paneli ve Özel XSN gibi özel XML bölümleri içerdiğinde Office masaüstü uygulamalarından etiketlenen ve şifrelenen bazı dosyaları işleyemez. Bu sınırlama, [kaynakça](https://support.microsoft.com/en-us/office/create-a-bibliography-citations-and-references-17686589-4824-4940-9c69-342c289fa2a5) içeren dosyalar ve karşıya yüklendiklerinde [Belge Kimliği](https://support.microsoft.com/office/enable-and-configure-unique-document-ids-ea7fee86-bd6f-4cc8-9365-8086e794c984) eklenmiş dosyalar için de geçerlidir.
 
-    Bu dosyalar için, daha sonra dosyalarda açılmaları için şifreleme olmadan bir etiket Web üzerinde Office veya kullanıcılardan dosyaları kendi masaüstü uygulamaları içinde açmalarını talimat edin. Yalnızca iş dosyalarında etiketlenen ve Web üzerinde Office dosyalar etkilenmez.
+    Bu dosyalar için, daha sonra Web üzerinde Office açılabilmesi için şifreleme olmadan bir etiket uygulayın veya kullanıcılara dosyaları kendi masaüstü uygulamalarında açmalarını sağlayın. Yalnızca Web üzerinde Office etiketlenmiş ve şifrelenmiş dosyalar etkilenmez.
 
-- SharePoint ve OneDrive, Azure Information Protection etiketlerini kullanarak zaten şifrelenmiş olan mevcut dosyalara otomatik olarak duyarlılık Information Protection uygulamaz. Bunun yerine, SharePoint ve Office dosyaları için duyarlılık etiketlerini etkinleştirdikten sonra OneDrive için şu görevleri gerçekleştirin:
+- SharePoint ve OneDrive, Azure Information Protection etiketlerini kullanarak zaten şifrelediğiniz mevcut dosyalara otomatik olarak duyarlılık etiketleri uygulamaz. Bunun yerine, SharePoint ve OneDrive Office dosyaları için duyarlılık etiketlerini etkinleştirdikten sonra özelliklerin çalışması için şu görevleri tamamlayın:
 
-    1. [Azure Veri Etiketleri'Information Protection duyarlılık etiketlerine](/azure/information-protection/configure-policy-migrate-labels) geçirmeyi ve bunları [etiketten](create-sensitivity-labels.md#publish-sensitivity-labels-by-creating-a-label-policy) Microsoft 365 uyumluluk merkezi.
-    2. Etiketli dosyaları indirin ve etiketli dosyaları Dosya veya Klasör'de SharePoint OneDrive.
+    1. [Azure Information Protection etiketlerini duyarlılık etiketlerine geçirdiğinizden](/azure/information-protection/configure-policy-migrate-labels) ve bunları Microsoft Purview uyumluluk portalından [yayımladığınızdan](create-sensitivity-labels.md#publish-sensitivity-labels-by-creating-a-label-policy) emin olun.
+    2. Etiketli dosyaları indirin ve SharePoint veya OneDrive özgün konumlarına yükleyin.
 
-- SharePoint uygulanan OneDrive şifreleme için aşağıdaki yapılandırmalardan herhangi biri olduğunda, e-posta ve güvenlik dosyalarınız şifrelenmiş [dosyaları işleyenene kadar geçerlidir](encryption-sensitivity-labels.md#configure-encryption-settings):
-  - **Word,** PowerPoint ve Excel'da etiket ve onay kutusunu uygulayan kullanıcıların izin atamasına izin verin. PowerPoint onay **kutusunun seçili olduğunu** belirtin. Bu ayar bazen "kullanıcı tanımlı izinler" olarak da adlandırılır.
-  - **kullanıcının içeriğe erişiminin süresi hiçbir** zaman'dan farklı bir değere **ayarlanır**.
-  - **Çift Anahtar Şifrelemesi** seçilidir.
+- SharePoint ve OneDrive, şifrelemeyi uygulayan etiket şifreleme [için aşağıdaki yapılandırmalardan](encryption-sensitivity-labels.md#configure-encryption-settings) herhangi birine sahip olduğunda şifrelenmiş dosyaları işleyemiyor:
+  - **Word, PowerPoint ve Excel'da etiket ve** onay kutusunu **uygularken kullanıcıların izinleri atamasına izin verin**. Bu ayar bazen "kullanıcı tanımlı izinler" olarak adlandırılır.
+  - **İçeriğe kullanıcı erişiminin süresi doluyor** , **Hiçbir Zaman** dışında bir değere ayarlanır.
+  - **Çift Anahtar Şifrelemesi** seçildi.
 
-    Bu şifreleme yapılandırmalarının herhangi birini içeren etiketler, başka bir şifreleme Web için Office. Buna ek olarak, yeni özellikler zaten bu şifreleme ayarlarına sahip etiketli belgelerle kullanılamaz. Örneğin, bu belgeler güncelleştirilse bile arama sonuçlarında döndürülmez.
+    Bu şifreleme yapılandırmalarından herhangi birine sahip etiketler için, etiketler Web için Office kullanıcılara gösterilmez. Ayrıca, yeni özellikler bu şifreleme ayarlarına sahip etiketli belgelerle kullanılamaz. Örneğin, bu belgeler güncelleştirilse bile arama sonuçlarında döndürülmeyecektir.
 
-- Performans nedenleriyle, bir belgeyi SharePoint'a yüklediğiniz veya kaydedtiyebilirsiniz ancak dosyanın etiketi şifreleme uygulamazsa, belge kitaplığında Duyarlılık  sütununu etiket adını görüntülemek biraz zaman alabiliyor. Bu sütunda etiket adına bağlı olan betikler veya otomasyonlar kullanırsanız, bu gecikmede faktör.
+- Performans nedenleriyle, belgeyi SharePoint karşıya yüklediğinizde veya kaydettiğinizde ve dosyanın etiketi şifreleme uygulamadığında, belge kitaplığındaki **Duyarlılık** sütununun etiket adını görüntülemesi biraz zaman alabilir. Bu sütundaki etiket adına bağlı betikler veya otomasyon kullanıyorsanız bu gecikmeyi dikkate alın.
 
-- Belge SharePoint'de kullanıma alınmışken etiketleniyorsa[, belge](https://support.microsoft.com/office/check-out-check-in-or-discard-changes-to-files-in-a-library-7e2c12a9-a874-4393-9511-1378a700f6de) iade ve bir sonraki belge başka bir  dosyada açılana kadar belge kitaplığının Duyarlılık sütunu etiket adını SharePoint.
+- Belge SharePoint kullanıma alınmışken etiketlenmişse, belge iade edilene ve [SharePoint'da](https://support.microsoft.com/office/check-out-check-in-or-discard-changes-to-files-in-a-library-7e2c12a9-a874-4393-9511-1378a700f6de) açılana kadar belge kitaplığındaki **Duyarlılık** sütunu etiket adını görüntülemez.
 
-- Etiketli ve şifrelenmiş bir belge, SharePoint veya OneDrive hizmet asıl adını kullanan bir uygulama veya hizmet tarafından indirilir ve farklı şifreleme ayarlarının uygulandığı etiketle yeniden karşıya yüklenirse, karşıya yükleme başarısız olur. Bir dosyanın duyarlılık Microsoft Defender for Cloud Apps Gizli'den Çok Gizli'ye veya Gizli'den  Genel'e doğru bir **örnek** senaryo **olabilir**.
+- Etiketli ve şifrelenmiş bir belge, hizmet sorumlusu adı kullanan bir uygulama veya hizmet tarafından SharePoint veya OneDrive indirilirse ve ardından farklı şifreleme ayarları uygulayan bir etiketle yeniden karşıya yüklenirse, karşıya yükleme başarısız olur. Örnek bir senaryo, Microsoft Defender for Cloud Apps dosyadaki duyarlılık etiketini Gizli **olandan Çok Gizli'ye** veya **Gizli'den** **Genel'e** değiştirir.
     
-    Etiketli belge için şifrelemeyi kaldırma bölümünde anlatıldı gibi, uygulama veya hizmet [önce Unlock-SPOSensitivityLabelEncryptedFile](/powershell/module/sharepoint-online/unlock-sposensitivitylabelencryptedFile) cmdlet'ini çalıştırırsa, karşıya yükleme [başarısız olmaz.](#remove-encryption-for-a-labeled-document) Ya da karşıya yüklemeden önce, özgün dosya silinir veya dosya adı değiştirilir.
+    Uygulama veya hizmet [etiketli belge için şifrelemeyi kaldırma](#remove-encryption-for-a-labeled-document) bölümünde açıklandığı gibi [Unlock-SPOSensitivityLabelEncryptedFile](/powershell/module/sharepoint-online/unlock-sposensitivitylabelencryptedFile) cmdlet'ini çalıştırırsa karşıya yükleme başarısız olmaz. Alternatif olarak, karşıya yüklemeden önce özgün dosya silinir veya dosya adı değiştirilir.
 
-- Kullanıcılar, şu Farklı Kaydet senaryosunda şifrelenmiş belgeleri açmada gecikmeler yaşanıyor olabilir: kullanıcı Office'in masaüstü sürümünü kullanırken, kullanıcı şifrelemeyi uygulanan duyarlılık etiketine sahip bir belge için Farklı Kaydet'i seçer. Kullanıcı konum SharePoint veya OneDrive öğesini seçer ve hemen bu belgeyi kendi kitaplığında açmayı Web için Office. Hizmet hala şifrelemeyi işleme devam ediyorsa, kullanıcı belgenin masaüstü uygulamasında açılması gerektiğinin bir iletisi görür. Birkaç dakika içinde yeniden denerse, belge başarılı bir şekilde Web için Office.
+- Kullanıcılar, aşağıdaki Farklı Kaydet senaryosunda şifrelenmiş belgeleri açabilmekte gecikmeler yaşayabilir: Office masaüstü sürümünü kullanan kullanıcı, şifreleme uygulayan duyarlılık etiketine sahip bir belge için Farklı Kaydet'i seçer. Kullanıcı konum için SharePoint veya OneDrive seçer ve sonra bu belgeyi hemen Web için Office'da açmaya çalışır. Hizmet şifrelemeyi işlemeye devam ediyorsa, kullanıcı belgenin masaüstü uygulamasında açılması gerektiğini belirten bir ileti görür. Birkaç dakika içinde yeniden denerlerse, belge Web için Office'da başarıyla açılır.
 
-- Şifreli belgelerde, yazdırma bu dosyalarda Web için Office.
+- Şifrelenmiş belgeler için yazdırma Web için Office desteklenmez.
 
-- E-posta Web için Office şifrelenmiş belgeler için panoya kopyalama ve ekran yakalamaları engellenmez. Daha fazla bilgi için bkz [. Hak Yönetimi ekran yakalamalarını önler mi?](/azure/information-protection/faqs-rms#can-rights-management-prevent-screen-captures)
+- Web için Office'daki şifrelenmiş belgeler için panoya ve ekran yakalamalarına kopyalama engellenmez. Daha fazla bilgi için bkz [. Rights Management ekran yakalamalarını engelleyebilir mi?](/azure/information-protection/faqs-rms#can-rights-management-prevent-screen-captures)
 
-- Varsayılan olarak Office uygulamaları ve mobil uygulamalar şifreleme ile etiketlenmiş dosyalar için birlikte yazma özelliği desteklemez. Bu uygulamalar etiketli ve şifrelenmiş dosyaları özel kullanım modunda açmaya devam eder.
+- Varsayılan olarak, Office masaüstü uygulamaları ve mobil uygulamalar, şifreleme ile etiketlenmiş dosyalar için birlikte yazmayı desteklemez. Bu uygulamalar etiketli ve şifrelenmiş dosyaları özel düzenleme modunda açmaya devam ediyor.
     
     > [!NOTE]
-    > Birlikte yazma artık hem macOS hem de Windows için de destek gerektir. Daha fazla bilgi için bkz [. Duyarlılık etiketleriyle şifrelenmiş dosyalar için birlikte yazma özelliği etkinleştirme](sensitivity-labels-coauthoring.md).
+    > Birlikte yazma artık Windows ve macOS için desteklenmektedir. Daha fazla bilgi için bkz. [Duyarlılık etiketleriyle şifrelenmiş dosyalar için birlikte yazmayı etkinleştirme](sensitivity-labels-coauthoring.md).
 
-- Yönetici, kullanıcıların eşitleme istemcisine indirilen dosyalara zaten uygulanmış olan yayımlanmış etiketin ayarlarını değiştirirse, kullanıcılar dosyada yaptıkları değişiklikleri OneDrive Eşitle klasörüne kaydede kadar. Bu senaryo, şifreleme ile etiketlenmiş olan dosyalara ve aynı zamanda etiket değişikliğinin şifreleme uygulanan bir etikete şifreleme uygulaymayacak bir etiketten geldiğinde de geçerlidir. Kullanıcılar beyaz [çarpı simgesi hatası olan kırmızı bir daire görüyor](https://support.office.com/article/what-do-the-onedrive-icons-mean-11143026-8000-44f8-aaa9-67c985aa49b3) ve yeni değişiklikleri ayrı bir kopya olarak kaydetmeleri isten ediyor. Bunun yerine, dosyayı kapatıp yeniden açabilirsiniz veya dosyayı Web için Office.
+- Yönetici, kullanıcıların eşitleme istemcisine indirilen dosyalara zaten uygulanmış yayımlanmış bir etiketin ayarlarını değiştirirse, kullanıcılar dosyada yaptıkları değişiklikleri OneDrive Eşitleme klasörüne kaydedemeyebilir. Bu senaryo, şifreleme ile etiketlenen dosyalara ve ayrıca etiket değişikliği şifreleme uygulayan bir etikete şifreleme uygulanmayan bir etiketten geldiğinde geçerlidir. Kullanıcılar [beyaz çapraz simge hatası içeren kırmızı bir daire](https://support.office.com/article/what-do-the-onedrive-icons-mean-11143026-8000-44f8-aaa9-67c985aa49b3) görür ve yeni değişiklikleri ayrı bir kopya olarak kaydetmeleri istenir. Bunun yerine dosyayı kapatıp yeniden açabilir veya Web için Office kullanabilirler.
 
-- Kullanıcılar, Web için Office kullanmak yerine Word, Excel veya PowerPoint için masaüstü ve mobil uygulamaları kullanırken, çevrimdışı veya uyku moduna PowerPoint. Bu kullanıcılar Office uygulaması oturumlarına devam edebilir ve değişiklikleri kaydetmeyi denerse, karşıya yükleme hatası iletisiyle birlikte özgün dosyayı kaydetmek yerine bir kopyasını kaydetme seçeneğiyle karşıdan yükleme hatası alırlar.
+- Kullanıcılar, Web için Office kullanmak yerine Word, Excel veya PowerPoint için masaüstü ve mobil uygulamaları kullandıklarında çevrimdışı veya uyku moduna geçtikten sonra kaydetme sorunlarıyla karşılaşabilir. Bu kullanıcılar, Office uygulaması oturumlarını sürdürürken ve değişiklikleri kaydetmeye çalıştıklarında, özgün dosyayı kaydetmek yerine bir kopyasını kaydetme seçeneği içeren bir karşıya yükleme hatası iletisi görürler.
 
-- Aşağıdaki yollarla şifrelenmiş belgeler e-posta iletisinde Web için Office:
-  - Şirket içi anahtar kullanan şifreleme ("kendi anahtarınızı tutma" veya HYOK)
-  - Çift Anahtar Şifrelemesi kullanılarak [uygulanan şifreleme](double-key-encryption.md)
-  - Örneğin, bir etiketten bağımsız olarak, doğrudan bir Hak Yönetimi koruma şablonu uygulayarak uygulanan şifreleme.
+- Aşağıdaki yollarla şifrelenmiş belgeler Web için Office açılamaz:
+  - Şirket içi anahtar kullanan şifreleme ("kendi anahtarını tut" veya HYOK)
+  - [Çift AnahtarLı Şifreleme](double-key-encryption.md) kullanılarak uygulanan şifreleme
+  - Bir etiketten bağımsız olarak uygulanan şifreleme, örneğin, doğrudan bir Rights Management koruma şablonu uygulanarak.
 
-- Diğer diller için [yapılandırılmış etiketler](create-sensitivity-labels.md#additional-label-settings-with-security--compliance-center-powershell) desteklenmiyor ve yalnızca özgün dili görüntüleniyor.
+- [Diğer diller](create-sensitivity-labels.md#additional-label-settings-with-security--compliance-center-powershell) için yapılandırılmış etiketler desteklenmez ve yalnızca özgün dili görüntüler.
 
-- geçerli etiket ilkesinden etiketi kaldırmak yerine SharePoint veya OneDrive'de belgeye uygulanmış olan etiketi silerseniz, indirdiğiniz belge etiketlenmez veya şifrelenmez. Buna karşılık, etiketli belge şirket dışında SharePoint OneDrive, etiket silinirse belge şifrelenmiş olarak kalır. Bir test aşamasında etiketleri silebilirsiniz, ancak üretim ortamında bir etiketi silmek çok seyrek görülen bir durumdur.
+- SharePoint veya OneDrive'da bir belgeye uygulanmış olan bir etiketi, ilgili etiket ilkesinden kaldırmak yerine silerseniz, indirildiğinde belge etiketlenmez veya şifrelenmez. Buna karşılık, etiketlenen belge SharePoint veya OneDrive dışında depolanıyorsa, etiket silinirse belge şifrelenmiş olarak kalır. Bir test aşamasında etiketleri silebilirsiniz ancak üretim ortamında etiket silmenin çok nadir olduğunu unutmayın.
 
-## <a name="how-to-enable-sensitivity-labels-for-sharepoint-and-onedrive-opt-in"></a>E-posta ve posta SharePoint duyarlılık OneDrive etkinleştirme (kabul et)
+## <a name="how-to-enable-sensitivity-labels-for-sharepoint-and-onedrive-opt-in"></a>SharePoint ve OneDrive için duyarlılık etiketlerini etkinleştirme (kabul etme)
 
-Dosya veya PowerShell kullanarak yeni Microsoft 365 uyumluluk merkezi etkinleştirabilirsiniz. Kiracı ve kiracı düzeyindeki tüm yapılandırma SharePoint OneDrive olduğu gibi, değişikliğin etkili olacak şekilde yaklaşık 15 dakika sürer.
+Microsoft Purview uyumluluk portalını veya PowerShell'i kullanarak yeni özellikleri etkinleştirebilirsiniz. SharePoint ve OneDrive için tüm kiracı düzeyindeki yapılandırma değişikliklerinde olduğu gibi, değişikliğin geçerli olması yaklaşık 15 dakika sürer.
 
-### <a name="use-the-compliance-center-to-enable-support-for-sensitivity-labels"></a>Duyarlılık etiketlerinin desteğini etkinleştirmek için uyumluluk merkezini kullanma
+### <a name="use-the-microsoft-purview-compliance-portal-to-enable-support-for-sensitivity-labels"></a>Duyarlılık etiketleri desteğini etkinleştirmek için Microsoft Purview uyumluluk portalını kullanma
 
-Bu seçenek, SharePoint ve OneDrive duyarlılık etiketlerini etkinleştirmenin en kolay yolu OneDrive, ancak kiracınız için genel yönetici olarak oturum açmanız gerekir.
+Bu seçenek, SharePoint ve OneDrive için duyarlılık etiketlerini etkinleştirmenin en kolay yoludur, ancak kiracınız için genel yönetici olarak oturum açmanız gerekir.
 
-1. Genel yönetici olarak [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com/) oturum açın ve **SolutionsInformation** >  **protection'a gidin**
+1. [Microsoft Purview uyumluluk portalında](https://compliance.microsoft.com/) genel yönetici olarak oturum açın ve **ÇözümlerFormasyon**  >  koruması'na gidin
 
-    Bu seçeneği hemen görmüyorsanız önce Hepsini **göster'i seçin**.
+    Bu seçeneği hemen görmüyorsanız önce **Tümünü göster'i** seçin.
 
-2. Çevrimiçi dosyalarda içeriği işleme olanağını açmak için bir ileti Office Şimdi **aç'ı seçin**:
+2. Office çevrimiçi dosyalarda içerik işleme özelliğini açmak için bir ileti görürseniz **Şimdi aç'ı** seçin:
 
-    ![Office Online için duyarlılık etiketlerini etkinleştirmek Office aç düğmesi.](../media/sensitivity-labels-turn-on-banner.png)
+    ![Office Online için duyarlılık etiketlerini etkinleştirmek için şimdi aç düğmesi.](../media/sensitivity-labels-turn-on-banner.png)
 
-    Komut hemen çalışır ve sayfa bir sonraki yenilendiğinde iletiyi veya düğmeyi göremeyeceksiniz.
+    Komut hemen çalışır ve sayfa bir sonraki yenilendiğinde artık iletiyi veya düğmeyi görmezsiniz.
 
 > [!NOTE]
-> Multi-Geo Microsoft 365 varsa, tüm coğrafi konumlarda bu özellikleri etkinleştirmek için PowerShell kullan gerekir. Ayrıntılar için sonraki bölüme bakın.
+> Microsoft 365 Multi-Geo kullanıyorsanız, tüm coğrafi konumlarınızda bu özellikleri etkinleştirmek için PowerShell'i kullanmanız gerekir. Ayrıntılar için sonraki bölüme bakın.
 
-### <a name="use-powershell-to-enable-support-for-sensitivity-labels"></a>Duyarlılık etiketlerinin desteğini etkinleştirmek için PowerShell kullanma
+### <a name="use-powershell-to-enable-support-for-sensitivity-labels"></a>Duyarlılık etiketleri desteğini etkinleştirmek için PowerShell kullanma
 
-Uyumluluk merkezini kullanmaya alternatif olarak, SharePoint Online PowerShell'in [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant) cmdlet'ini kullanarak duyarlılık etiketleri desteğini etkinleştirebilirsiniz.
+Microsoft Purview uyumluluk portalını kullanmaya alternatif olarak, SharePoint Online [PowerShell'in Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant) cmdlet'ini kullanarak duyarlılık etiketleri desteğini etkinleştirebilirsiniz.
 
-Multi-Geo Microsoft 365 varsa, tüm coğrafi konumlarda bu desteği etkinleştirmek için PowerShell kullan gerekir.
+Microsoft 365 Multi-Geo kullanıyorsanız, tüm coğrafi konumlarınızda bu desteği etkinleştirmek için PowerShell'i kullanmanız gerekir.
 
-#### <a name="prepare-the-sharepoint-online-management-shell"></a>Çevrimiçi Yönetim SharePoint Kabuğu'nu hazırlama
+#### <a name="prepare-the-sharepoint-online-management-shell"></a>SharePoint Online Management Shell'i hazırlama
 
-SharePoint ve OneDrive'ta Office dosyalarının duyarlılık etiketlerini etkinleştirmek için PowerShell komutunu çalıştırmadan önce, SharePoint Çevrimiçi Yönetim Kabuğu sürüm 16.0.19418.12000 veya sonraki bir sürümü çalıştırarak bu dosyaları çalıştırabilirsiniz. En son sürüme zaten sahipsinizse, PowerShell komutunu [çalıştırmak](#run-the-powershell-command-to-enable-support-for-sensitivity-labels) için sonraki yordama geçebilirsiniz.
+SharePoint ve OneDrive'da Office dosyalar için duyarlılık etiketlerini etkinleştirmek üzere PowerShell komutunu çalıştırmadan önce, Çevrimiçi Yönetim Kabuğu sürüm 16.0.19418.12000 veya üzerini SharePoint çalıştırdığınızdan emin olun. En son sürüme zaten sahipseniz, PowerShell komutunu çalıştırmak için [sonraki yordama](#run-the-powershell-command-to-enable-support-for-sensitivity-labels) atlayabilirsiniz.
 
-1. SharePoint Online Yönetim Kabuğu'nın PowerShell galerisinden önceki bir sürümünü yüklemişsanız, aşağıdaki cmdlet'i çalıştırarak modülü güncelleştirebilirsiniz.
+1. PowerShell galerisinden SharePoint Online Management Shell'in önceki bir sürümünü yüklediyseniz, aşağıdaki cmdlet'i çalıştırarak modülü güncelleştirebilirsiniz.
 
     ```PowerShell
     Update-Module -Name Microsoft.Online.SharePoint.PowerShell
     ```
 
-2. Alternatif olarak, Microsoft İndirme Merkezi'nden SharePoint Çevrimiçi Yönetim Kabuğu'un önceki bir sürümünü yüklemişsanız, Program ekleme veya kaldırma'ya gidebilir ve SharePoint  Yönetim Kabuğu'SharePoint kaldırabilirsiniz.
+2. Alternatif olarak, Microsoft İndirme Merkezi'nden SharePoint Online Management Shell'in önceki bir sürümünü yüklediyseniz, **Program ekleme veya kaldırma'ya** gidebilir ve SharePoint Online Management Shell'i kaldırabilirsiniz.
 
-3. Web tarayıcısında İndirme Merkezi sayfasına gidin ve Çevrimiçi Yönetim [Kabuğu'SharePoint en son sürümü indirin](https://go.microsoft.com/fwlink/p/?LinkId=255251).
+3. Web tarayıcısında İndirme Merkezi sayfasına gidin ve [En son SharePoint Online Management Shell'i indirin](https://go.microsoft.com/fwlink/p/?LinkId=255251).
 
-4. Dilinizi seçin ve ardından İndir'e **tıklayın**.
+4. Dilinizi seçin ve ardından **İndir'e** tıklayın.
 
-5. x64 ile x86 dosya arasında .msi seçin. Windows'un 64 bit sürümünü veya 32 bit sürümü çalıştırdıysanız x86 dosyasını çalıştırdıysanız x64 dosyasını indirin. Bilmiyorsanız, bkz. [Hangi Windows işletim sistemini çalıştır çalıştıryım?](https://support.microsoft.com/help/13443/windows-which-operating-system)
+5. x64 ve x86 .msi dosyası arasında seçim yapın. Windows 64 bit sürümünü çalıştırıyorsanız x64 dosyasını veya 32 bit sürümü çalıştırıyorsanız x86 dosyasını indirin. Bilmiyorsanız bkz[. Windows işletim sisteminin hangi sürümünü kullanıyorum?](https://support.microsoft.com/help/13443/windows-which-operating-system)
 
-6. Dosyayı indirdikten sonra, dosyayı çalıştırın ve Kurulum Sihirbazı'nın adımlarını izleyin.
+6. Dosyayı indirdikten sonra, dosyayı çalıştırın ve Kurulum Sihirbazı'ndaki adımları izleyin.
 
-#### <a name="run-the-powershell-command-to-enable-support-for-sensitivity-labels"></a>Duyarlılık etiketleri desteğini etkinleştirmek için PowerShell komutunu çalıştırma
+#### <a name="run-the-powershell-command-to-enable-support-for-sensitivity-labels"></a>Duyarlılık etiketleri desteğini etkinleştirmek için PowerShell komutunu çalıştırın
 
-Yeni özellikleri etkinleştirmek için [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant) cmdlet'ini *EnableAIPIntegration parametresiyle* kullanın:
+Yeni özellikleri etkinleştirmek için *EnableAIPIntegration* parametresiyle [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant) cmdlet'ini kullanın:
 
-1. Microsoft 365'ta genel yönetici veya yönetici ayrıcalıklarına SharePoint iş veya okul hesabı Microsoft 365, SharePoint. Nasıl olduğunu öğrenmek için bkz[. Çevrimiçi Yönetim Kabuğu SharePoint başlama](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
+1. Microsoft 365'da genel yönetici veya SharePoint yönetici ayrıcalıklarına sahip bir iş veya okul hesabı kullanarak SharePoint bağlanın. Nasıl yapılacağını öğrenmek için bkz[. SharePoint Online Management Shell'i kullanmaya başlama](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
 
     > [!NOTE]
-    > Microsoft 365 Multi-Geo kullanıyorsanız, [Bağlan-SPOService](/powershell/module/sharepoint-online/connect-sposervice) ile -Url parametresini kullanın ve coğrafi konumlardan biri için SharePoint Online Administration Center site URL'sini belirtin.
+    > Microsoft 365 Multi-Geo kullanıyorsanız [Bağlan-SPOService](/powershell/module/sharepoint-online/connect-sposervice) ile -Url parametresini kullanın ve coğrafi konumlarınızdan biri için SharePoint Çevrimiçi Yönetim Merkezi site URL'sini belirtin.
 
 2. Aşağıdaki komutu çalıştırın ve onaylamak için **Y tuşuna** basın:
 
     ```PowerShell
     Set-SPOTenant -EnableAIPIntegration $true
     ```
-3. Örneğin Microsoft 365 Multi-Geo: Kalan coğrafi konumların her biri için 1. ve 2. adımları yinele.
+3. Microsoft 365 Multi-Geo için: Kalan coğrafi konumlarınızın her biri için 1. ve 2. adımları yineleyin.
 
 ## <a name="publishing-and-changing-sensitivity-labels"></a>Duyarlılık etiketlerini yayımlama ve değiştirme
 
-SharePoint ve OneDrive ile duyarlılık etiketlerini kullanıyorsanız, yeni duyarlılık etiketleri yayımlarken veya var olan duyarlılık etiketlerini güncellerken çoğaltma süresine izin vermeniz gerekmektedir. Bu, özellikle şifreleme uygulayan yeni etiketler için önemlidir.
+duyarlılık etiketlerini SharePoint ve OneDrive kullanırken, yeni duyarlılık etiketleri yayımlarken veya mevcut duyarlılık etiketlerini güncelleştirirken çoğaltma süresine izin vermeniz gerektiğini unutmayın. Bu özellikle şifreleme uygulayan yeni etiketler için önemlidir.
 
-Örneğin: Şifreleme uygulanan yeni bir duyarlılık etiketi oluşturabilir ve yayımlarsanız, bu etiket kullanıcının masaüstü uygulamasında çok hızlı bir şekilde görüntülenir. Kullanıcı bu etiketi belgeye uygular ve belgeyi başka bir SharePoint OneDrive. Hizmet için etiket çoğaltması tamamlanmamışsa, karşıya yükleme sırasında bu belgeye yeni özellikler uygulanmaz. Sonuç olarak, belge aramada veya eBulma'da iade Web için Office.
+Örneğin: Şifreleme uygulayan yeni bir duyarlılık etiketi oluşturup yayımlarsınız ve bu etiket kullanıcının masaüstü uygulamasında çok hızlı bir şekilde görünür. Kullanıcı bu etiketi bir belgeye uygular ve ardından SharePoint veya OneDrive yükler. Hizmet için etiket çoğaltması tamamlanmadıysa, yeni özellikler karşıya yüklemede bu belgeye uygulanmaz. Sonuç olarak, belge arama veya eBulma için döndürülmeyecek ve belge Web için Office açılamaz.
 
-Etiketlerin zamanlaması hakkında daha fazla bilgi için bkz. [Yeni etiketlerin ne zaman yürürlüğe girecekleri ve değişiklikler ne zaman etkili olacak](create-sensitivity-labels.md#when-to-expect-new-labels-and-changes-to-take-effect)?
+Etiketlerin zamanlaması hakkında daha fazla bilgi için bkz. [Yeni etiketlerin ve değişikliklerin etkin hale gelmesini bekleme](create-sensitivity-labels.md#when-to-expect-new-labels-and-changes-to-take-effect) zamanı.
 
-Koruma olarak, öncelikle yalnızca birkaç test kullanıcısına yeni etiketler yayımlamanız, en az bir saat beklemeniz ve ardından etiket davranışını SharePoint test OneDrive. Var olan etiket ilkesine daha fazla kullanıcı ekleyerek veya standart kullanıcılarınız için var olan bir etiket ilkesine etiket ekleyerek etiketi daha fazla kullanıcının kullanabilir hale getiremeden önce en az bir gün bekleyin. Standart kullanıcılarınız etiketi görene kadar, zaten standart kullanıcılarla eşitlenmiş ve SharePoint OneDrive.
+Güvenlik önlemi olarak, önce yalnızca birkaç test kullanıcısına yeni etiketler yayımlamanızı, en az bir saat beklemenizi ve ardından SharePoint ve OneDrive etiket davranışını doğrulamanızı öneririz. Mevcut etiket ilkesine daha fazla kullanıcı ekleyerek veya etiketi standart kullanıcılarınız için mevcut bir etiket ilkesine ekleyerek etiketi daha fazla kullanıcının kullanımına sunabilmek için en az bir gün bekleyin. Standart kullanıcılarınız etiketi gördüğünde, etiket zaten SharePoint ve OneDrive ile eşitlenmiş durumdadır.
 
-## <a name="sharepoint-information-rights-management-irm-and-sensitivity-labels"></a>SharePoint Hakları Yönetimi (IRM) ve duyarlılık etiketlerini ekleme
+## <a name="sharepoint-information-rights-management-irm-and-sensitivity-labels"></a>SharePoint Bilgi Hakları Yönetimi (IRM) ve duyarlılık etiketleri
 
-[SharePoint Hakları Yönetimi (IRM),](set-up-irm-in-sp-admin-center.md) dosyalar indirilirken şifreleme ve kısıtlamalar uygulayarak liste ve kitaplık düzeyinde dosyaları koruyan eski bir teknolojidir. Bu eski koruma teknolojisi yetkisiz kullanıcıların dosyanın dışındayken açmasını engellemek için SharePoint.
+[SharePoint Bilgi Hakları Yönetimi (IRM),](set-up-irm-in-sp-admin-center.md) dosyalar indirildiğinde şifreleme ve kısıtlamalar uygulayarak liste ve kitaplık düzeyindeki dosyaları korumaya yönelik eski bir teknolojidir. Bu eski koruma teknolojisi, yetkisiz kullanıcıların SharePoint dışındayken dosyayı açmasını önlemek için tasarlanmıştır.
 
-Buna karşılık, duyarlılık etiketleri şifrelemenin yanı sıra görsel işaretlere (üst bilgiler, alt bilgiler, filigranlar) koruma ayarlarını da sağlar. Şifreleme ayarları, kullanıcıların içerikle neler yaplarını kısıtlamak için tüm kullanım hakları yelpazesini destekler ve aynı duyarlılık etiketleri birçok senaryoda [desteklenir](get-started-with-sensitivity-labels.md#common-scenarios-for-sensitivity-labels).[](/azure/information-protection/configure-usage-rights) Aynı koruma yöntemini iş yükleri ve uygulamalar genelinde tutarlı ayarlarla kullanmak tutarlı bir koruma stratejisine neden olur.
+Buna karşılık, duyarlılık etiketleri şifrelemeye ek olarak görsel işaretlerin (üst bilgiler, alt bilgiler, filigranlar) koruma ayarlarını sağlar. Şifreleme ayarları, kullanıcıların içerikle yapabileceklerini kısıtlamak için tüm [kullanım haklarını](/azure/information-protection/configure-usage-rights) destekler ve [birçok senaryoda](get-started-with-sensitivity-labels.md#common-scenarios-for-sensitivity-labels) aynı duyarlılık etiketleri desteklenir. İş yükleri ve uygulamalar arasında tutarlı ayarlarla aynı koruma yönteminin kullanılması, tutarlı bir koruma stratejisine neden olur.
 
-Bununla birlikte, hem koruma çözümlerini birlikte kullanabilirsiniz hem de davranış şöyledir:
+Ancak, hem koruma çözümlerini birlikte kullanabilirsiniz hem de davranış aşağıdaki gibidir:
 
-- Şifrelemesi uygulanan bir duyarlılık etiketine sahip bir dosya yüklersiniz SharePoint birlikte yazın, eKbulma, DLP ve arama bu dosyalar için desteklensin diye bu dosyaların içeriğini işleyemz.
+- Şifreleme uygulayan duyarlılık etiketine sahip bir dosyayı karşıya yüklerseniz, SharePoint bu dosyaların içeriğini işleyemiyorsanız bu dosyalar için birlikte yazma, eBulma, DLP ve arama desteklenmez.
 
-- Dosyayı E-posta Web için Office, etiketten gelen tüm şifreleme ayarları uygulanır. Bu dosyalar için birlikte kimlik doğrulaması, eKbulma, DLP ve arama de desteklene.
+- Bir dosyayı Web için Office kullanarak etiketlerseniz, etiketten tüm şifreleme ayarları zorlanır. Bu dosyalar için birlikte yazma, eBulma, DLP ve arama desteklenir.
 
-- WEB IÇIN OFFICE kullanılarak etiketlenmiş bir dosyayı indirirsanız, etiket korunur ve IRM kısıtlama ayarları yerine etiketten gelen tüm şifreleme ayarları uygulanır.
+- Web için Office kullanarak etiketlenmiş bir dosyayı indirirseniz, etiket korunur ve IRM kısıtlama ayarları yerine etiketten tüm şifreleme ayarları uygulanır.
 
-- Duyarlılık Office ile şifrelenmiş bir PDF veya PDF dosyası indirirken IRM ayarları uygulanır.
+- Duyarlılık etiketiyle şifrelenmemiş bir Office veya PDF dosyası indirirseniz IRM ayarları uygulanır.
 
-- Kullanıcıların IRM desteği olan belgeleri karşıya yüklemelerini önlemeyi de içeren ek IRM kitaplığı ayarlarından herhangi birini etkinleştirdiyseniz, bu ayarlar zorunlu kılındı.
+- Kullanıcıların IRM'yi desteklemeyen belgeleri karşıya yüklemesini engelleme de dahil olmak üzere ek IRM kitaplık ayarlarından herhangi birini etkinleştirdiyseniz, bu ayarlar uygulanır.
 
-Bu davranışla, tüm PDF Office dosyalar etiketli değil olsalar bile indirilirse yetkisiz erişimden korunacaklarından emin olabilirsiniz. Ancak, karşıya yüklenen etiketli dosyalar yeni özelliklerden yararlanz.
+Bu davranışla, etiketlenmemiş olsalar bile tüm Office ve PDF dosyalarının indirilirse yetkisiz erişime karşı korunduğundan emin olabilirsiniz. Ancak, karşıya yüklenen etiketli dosyalar yeni özelliklerden yararlanamaz.
 
-## <a name="search-for-documents-by-sensitivity-label"></a>Duyarlılık etiketine göre belgeleri arama
+## <a name="search-for-documents-by-sensitivity-label"></a>Belgeleri duyarlılık etiketine göre arama
 
-Belirli bir duyarlılık etiketine sahip bir belge veya belge üzerinde SharePoint tüm OneDrive bulmak için **InformationProtectionLabelId** yönetilen özelliğini kullanın. Aşağıdaki söz dizimlerini kullanın: `InformationProtectionLabelId:<GUID>`
+SharePoint veya OneDrive belirli bir duyarlılık etiketine sahip tüm belgeleri bulmak için **InformationProtectionLabelId** yönetilen özelliğini kullanın. Aşağıdaki söz dizimini kullanın: `InformationProtectionLabelId:<GUID>`
 
-Örneğin, "Gizli" olarak etiketlenmiş tüm belgeleri aramak ve bu etiketin GUID'si "8faca7b8-8d20-48a3-8ea2-0f96310a848e" olan tüm belgeleri aramak için, arama kutusuna şunları yazın:
+Örneğin, "Gizli" olarak etiketlenmiş ve bu etiketin GUID'i "8faca7b8-8d20-48a3-8ea2-0f96310a848e" olan tüm belgeleri aramak için, arama kutusuna şunu yazın:
 
 ```
 InformationProtectionLabelId:8faca7b8-8d20-48a3-8ea2-0f96310a848e
 ```
 
-Arama, sıkıştırılmış bir dosyada etiketli belgeleri (.zip bulamaz.
+Arama, .zip dosyası gibi sıkıştırılmış bir dosyada etiketlenmiş belgeleri bulamaz.
 
-Duyarlılık etiketlerinizin GUID'lerini almak için [, Get-Label cmdlet'ini](/powershell/module/exchange/get-label) kullanın:
+Duyarlılık etiketlerinizin GUID'lerini almak için [Get-Label](/powershell/module/exchange/get-label) cmdlet'ini kullanın:
 
-1. İlk olarak, [Office 365 Güvenlik ve Uyumluluk & PowerShell'e bağlanın](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
+1. İlk olarak [Office 365 Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanın](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
 
-    Örneğin, yönetici olarak çalıştırdınız bir PowerShell oturumunda genel yönetici hesabıyla oturum açın.
+    Örneğin, yönetici olarak çalıştırdığınız bir PowerShell oturumunda genel yönetici hesabıyla oturum açın.
 
-2. Sonra aşağıdaki komutu çalıştırın:
+2. Ardından aşağıdaki komutu çalıştırın:
 
     ```powershell
     Get-Label |ft Name, Guid
     ```
 
-Yönetilen özellikleri kullanma hakkında daha fazla bilgi için bkz[.](/sharepoint/manage-search-schema) SharePoint.
+Yönetilen özellikleri kullanma hakkında daha fazla bilgi için bkz. [SharePoint arama şemasını yönetme](/sharepoint/manage-search-schema).
 
 ## <a name="remove-encryption-for-a-labeled-document"></a>Etiketli belge için şifrelemeyi kaldırma
 
-Sık görülen bazı durumlarda, yöneticinin SharePoint bir dosyada depolanan belgeden şifrelemeyi kaldırması SharePoint. Bu belge için O belgeye Atanan Dışarı Aktarma veya Tam Denetim'in Hak Yönetimi kullanım hakkı olan tüm kullanıcılar, Azure Hak Yönetimi hizmeti tarafından uygulanan şifrelemeyi Azure Information Protection.[](/azure/information-protection/configure-usage-rights#usage-rights-and-descriptions) Örneğin, bu kullanım haklarından herhangi birini kullanan kullanıcılar, şifrelemesi uygulanan etiketin yerine şifreleme olmayan bir etiket kullanabilir. Süper [bir kullanıcı](/azure/information-protection/configure-super-users) da dosyayı indirebilir ve şifreleme olmadan yerel bir kopyasını kaydedebilir.
+bir SharePoint yöneticisinin SharePoint'da depolanan bir belgeden şifrelemeyi kaldırması gereken nadir durumlar olabilir. Bu belge için kendisine Atanan Dışarı Aktarma veya Tam Denetim [Hak Yönetimi kullanım hakkı](/azure/information-protection/configure-usage-rights#usage-rights-and-descriptions) olan tüm kullanıcılar, Azure Rights Management hizmeti tarafından uygulanan şifrelemeyi Azure Information Protection'den kaldırabilir. Örneğin, bu kullanım haklarından herhangi birini kullanan kullanıcılar şifreleme uygulayan bir etiketi şifreleme olmadan bir etiketle değiştirebilir. [Bir süper kullanıcı](/azure/information-protection/configure-super-users) da dosyayı indirebilir ve şifreleme olmadan yerel bir kopya kaydedebilir.
 
-Alternatif olarak, genel yönetici veya [SharePoint](/sharepoint/sharepoint-admin-role) [Unlock-SPOSensitivityLabelEncryptedFile](/powershell/module/sharepoint-online/unlock-sposensitivitylabelencryptedFile) cmdlet'ini çalıştırarak hem duyarlılık etiketini hem de şifrelemeyi kaldırır. Yöneticinin site veya dosyaya erişim izinleri yoksa veya Azure Hak Yönetimi hizmeti kullanılamıyorsa bile bu cmdlet çalışır.
+Alternatif olarak, genel yönetici veya [SharePoint yöneticisi](/sharepoint/sharepoint-admin-role) [Unlock-SPOSensitivityLabelEncryptedFile](/powershell/module/sharepoint-online/unlock-sposensitivitylabelencryptedFile) cmdlet'ini çalıştırarak hem duyarlılık etiketini hem de şifrelemeyi kaldırabilir. Yöneticinin site veya dosyaya erişim izinleri olmasa veya Azure Rights Management hizmeti kullanılamıyor olsa bile bu cmdlet çalışır.
 
 Örneğin:
 
@@ -254,26 +256,26 @@ Unlock-SPOSensitivityLabelEncryptedFile -FileUrl "https://contoso.com/sites/Mark
 
 Gereksinimler:
 
-- SharePoint 16.0.20616.12000 veya sonraki bir sürümüne sahip olabilir.
+- SharePoint Online Management Shell sürüm 16.0.20616.12000 veya üzeri.
 
-- Şifreleme yönetici tanımlı şifreleme ayarlarına sahip bir duyarlılık etiketi tarafından uygulanmıştır ( [İzinleri şimdi ata etiket](encryption-sensitivity-labels.md#assign-permissions-now) ayarları). [Bu](encryption-sensitivity-labels.md#double-key-encryption) cmdlet için Çift Anahtar Şifrelemesi desteklenmiyor.
+- Şifreleme, yönetici tanımlı şifreleme ayarlarına sahip bir duyarlılık etiketi tarafından uygulandı ( [şimdi izin ata](encryption-sensitivity-labels.md#assign-permissions-now) etiket ayarları). Bu cmdlet için [Çift Anahtar Şifrelemesi](encryption-sensitivity-labels.md#double-key-encryption) desteklenmiyor.
 
-Gerekçe metni Dosyadan duyarlılık etiketi kaldırıldı denetim [](search-the-audit-log-in-security-and-compliance.md#sensitivity-label-activities) olayına eklenir ve şifre çözme eylemi de Azure Güvenlik Etiketleri için koruma kullanım [günlüğüne Information Protection](/azure/information-protection/log-analyze-usage).
+Gerekçe metni **dosyadan duyarlılık etiketi kaldırıldı** [denetim olayına](search-the-audit-log-in-security-and-compliance.md#sensitivity-label-activities) eklenir ve şifre çözme eylemi azure [Information Protection için koruma kullanımı günlüğüne](/azure/information-protection/log-analyze-usage) de kaydedilir.
 
-## <a name="how-to-disable-sensitivity-labels-for-sharepoint-and-onedrive-opt-out"></a>Daha fazla ve daha fazla SharePoint (geri OneDrive) için duyarlılık etiketlerini devre dışı bırakma
+## <a name="how-to-disable-sensitivity-labels-for-sharepoint-and-onedrive-opt-out"></a>SharePoint ve OneDrive için duyarlılık etiketlerini devre dışı bırakma (geri çevirme)
 
-Bu yeni özellikleri devre dışı bıraksanız bile, SharePoint ve OneDrive için duyarlılık etiketlerini etkinleştirdikten sonra yüklediğiniz dosyalar etiket tarafından korunmaya devam eder çünkü etiket ayarları zorunlu kılınmaya devam eder. Bu yeni özellikleri devre dışı bırakarak yeni dosyalara duyarlılık etiketleri uygulayabilirsiniz; tam metin araması, eBulma ve birlikte yazarlık özellikleri artık çalışmaz.
+Bu yeni özellikleri devre dışı bırakırsanız, SharePoint ve OneDrive için duyarlılık etiketlerini etkinleştirdikten sonra karşıya yüklediğiniz dosyalar etiket tarafından korunmaya devam eder çünkü etiket ayarları uygulanmaya devam eder. Bu yeni özellikleri devre dışı bırakdıktan sonra yeni dosyalara duyarlılık etiketleri uyguladığınızda, tam metin araması, eBulma ve birlikte yazma artık çalışmaz.
 
-Bu yeni özellikleri devre dışı bırakmak için PowerShell kullanabilirsiniz. SharePoint Online Yönetim Kabuğu'nun ve [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant) cmdlet'ini kullanarak, Duyarlılık etiketleri desteğini etkinleştirmek için [PowerShell](#use-powershell-to-enable-support-for-sensitivity-labels) kullanma bölümünde açıklanan *EnableAIPIntegration* parametresinin aynısını belirtin. Ancak bu kez, parametre değerini yanlış olarak ayarlayın ve onaylamak için **Y tuşuna** basın:
+Bu yeni özellikleri devre dışı bırakmak için PowerShell'i kullanmanız gerekir. SharePoint Online Management Shell ve [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant) cmdlet'ini kullanarak [, Duyarlılık etiketleri desteğini etkinleştirmek için PowerShell kullanma](#use-powershell-to-enable-support-for-sensitivity-labels) bölümünde açıklandığı gibi aynı *EnableAIPIntegration* parametresini belirtin. Ancak bu kez parametre değerini false olarak ayarlayın ve onaylamak için **Y tuşuna** basın:
 
 ```PowerShell
 Set-SPOTenant -EnableAIPIntegration $false
 ```
 
-Multi-Geo Microsoft 365, coğrafi konumların her biri için bu komutu çalıştırmanız gerekir.
+Microsoft 365 Multi-Geo'nuz varsa, coğrafi konumlarınızın her biri için bu komutu çalıştırmanız gerekir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-SharePoint ve OneDrive'da Office dosyaları için duyarlılık etiketlerini etkinleştirdikten sonra, otomatik etiketleme ilkelerini kullanarak bu dosyaları otomatik olarak etiketlemeyi göz önünde bulundurabilirsiniz. Daha fazla bilgi için bkz [. içeriğe otomatik olarak duyarlılık etiketi uygulama](apply-sensitivity-label-automatically.md).
+SharePoint ve OneDrive Office dosyaları için duyarlılık etiketlerini etkinleştirdikten sonra, otomatik etiketleme ilkelerini kullanarak bu dosyaları otomatik olarak etiketlemeyi göz önünde bulundurun. Daha fazla bilgi için bkz. [İçeriğe otomatik olarak duyarlılık etiketi uygulama](apply-sensitivity-label-automatically.md).
 
-Etiketli ve şifrelenmiş belgelerinizi kuruluş dışındaki kişiler ile paylaşmanız mı gerekiyor?  Bkz [. Şifrelenmiş belgeleri dış kullanıcılarla paylaşma](sensitivity-labels-office-apps.md#sharing-encrypted-documents-with-external-users).
+Etiketli ve şifrelenmiş belgelerinizi kuruluşunuzun dışındaki kişilerle paylaşmanız mı gerekiyor?  Bkz. [Şifrelenmiş belgeleri dış kullanıcılarla paylaşma](sensitivity-labels-office-apps.md#sharing-encrypted-documents-with-external-users).

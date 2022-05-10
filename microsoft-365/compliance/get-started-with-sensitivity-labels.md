@@ -19,18 +19,18 @@ search.appverid:
 - MOE150
 - MET150
 description: Kuruluşunuzun verilerini korumaya yardımcı olmak için duyarlılık etiketlerini dağıtmaya hazırsınız, ancak nereden başlayacağınızdan emin değil misiniz? Etiketleme yolculuğunuza başlamanıza yardımcı olacak bazı pratik kılavuzları okuyun.
-ms.openlocfilehash: b0fcf435d7805440e93f0d1248723f4b5599d4a9
-ms.sourcegitcommit: 265a4fb38258e9428a1ecdd162dbf9afe93eb11b
+ms.openlocfilehash: f27f1a475f5880058db40894015dabdec9038be1
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2022
-ms.locfileid: "65268781"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65286044"
 ---
 # <a name="get-started-with-sensitivity-labels"></a>Hassasiyet etiketlerini kullanmaya başlama
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
 >*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Duyarlılık etiketlerinin ne olduğu ve kuruluşunuzun verilerini korumanıza nasıl yardımcı olabileceği hakkında bilgi için bkz. [Duyarlılık etiketleri hakkında bilgi edinin](sensitivity-labels.md).
 
@@ -106,6 +106,7 @@ Tüm senaryolarda [duyarlılık etiketleri ve ilkeleri oluşturup yapılandırma
 |Belirli bir duyarlılık etiketine sahip dosyaları veya e-postaları korumak veya silmek için bekletme etiketi uygulama|[İçeriği korumak veya silmek için otomatik olarak bekletme etiketi uygulama](apply-retention-labels-automatically.md) |
 |Şirket içindeki veri depolarında depolanan dosyaları bulma, etiketleme ve koruma |[Dosyaları otomatik olarak sınıflandırmak ve korumak için Azure Information Protection tarayıcısını dağıtma](/azure/information-protection/deploy-aip-scanner)|
 |Bulutta bulunan veri depolarında depolanan dosyaları bulma, etiketleme ve koruma|[Bulutta depolanan düzenlenmiş ve hassas verileri bulma, sınıflandırma, etiketleme ve koruma](/cloud-app-security/best-practices#discover-classify-label-and-protect-regulated-and-sensitive-data-stored-in-the-cloud)|
+|SQL veritabanı sütunlarını, dosya ve e-postalar için kullanılan duyarlılık etiketlerini kullanarak etiketleyin; böylece kuruluş, dışarı aktarıldığında bu yapılandırılmış verileri korumaya devam eden birleşik bir etiketleme çözümüne sahip olur |[Azure SQL Veritabanı, Azure SQL Yönetilen Örneği ve Azure Synapse Analytics için Veri Bulma & Sınıflandırması](/azure/azure-sql/database/data-discovery-and-classification-overview) <br /><br /> [şirket içi SQL Server için Veri Bulma ve Sınıflandırma SQL](/sql/relational-databases/security/sql-data-discovery-and-classification)|
 |Power BI etiketleri uygulama ve görüntüleme ve hizmet dışında kaydedildiğinde verileri koruma|[Power BI duyarlılık etiketleri](/power-bi/admin/service-security-sensitivity-label-overview)|
 |Kuruluşumda duyarlılık etiketlerinin nasıl kullanıldığını izleme ve anlama|[Veri sınıflandırması hakkında daha fazla bilgi edinme](data-classification-overview.md)|
 |Duyarlılık etiketlerini üçüncü taraf uygulamalara ve hizmetlere genişletme|[Microsoft Bilgi Koruması SDK](/information-protection/develop/overview#microsoft-information-protection-sdk)|

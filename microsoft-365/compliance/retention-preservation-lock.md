@@ -1,5 +1,5 @@
 ---
-title: Saklama ilkeleri ve bekletme etiketi ilkelerindeki değişiklikleri kısıtlamak için Koruma Kilidi'ni kullanma
+title: Saklama ilkelerindeki değişiklikleri kısıtlamak için Koruma Kilidi'ni kullanma
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -15,16 +15,18 @@ search.appverid:
 - MOE150
 - MET150
 description: Yasal düzenleme gereksinimlerini karşılamanıza ve dolandırıcı yöneticilere karşı korumanıza yardımcı olması için saklama ilkeleri ve bekletme etiketi ilkeleriyle Koruma Kilidi'ni kullanın.
-ms.openlocfilehash: ac957475474e1d99dff541ac9a208ae5dc681217
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: cf72f0b2eed6328244bf78c9e365447c9f38edeb
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64761737"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65286022"
 ---
 # <a name="use-preservation-lock-to-restrict-changes-to-retention-policies-and-retention-label-policies"></a>Saklama ilkeleri ve bekletme etiketi ilkelerindeki değişiklikleri kısıtlamak için Koruma Kilidi'ni kullanma
 
 >*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 > [!IMPORTANT]
 > Şu anda [uyarlamalı ilke kapsamları](retention.md#adaptive-or-static-policy-scopes-for-retention) Koruma Kilidi'ni desteklememektedir.
@@ -91,4 +93,4 @@ Get-RetentionCompliancePolicy -Identity "<Name of Policy>" |Fl
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Bilgi idaresi ve kayıt yönetimi için mevzuat gereksinimlerini karşılamanıza yardımcı olacak kaynaklar](retention-regulatory-requirements.md)
+[Veri yaşam döngüsü yönetimi ve kayıt yönetimi için mevzuat gereksinimlerini karşılamanıza yardımcı olacak kaynaklar](retention-regulatory-requirements.md)

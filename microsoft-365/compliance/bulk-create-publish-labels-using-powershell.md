@@ -18,52 +18,54 @@ search.appverid:
 - MET150
 ms.custom:
 - seo-marvel-apr2020
-description: Güvenlik bilgilerinden bağımsız olarak, komut satırına bekletme etiketleri oluşturmak ve yayımlamak için PowerShell kullanmayı Microsoft 365 uyumluluk merkezi.
-ms.openlocfilehash: 3f64fc7aede06e512d735908b8f06b7a8cb3e032
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Microsoft Purview uyumluluk portalından bağımsız olarak komut satırından bekletme etiketleri oluşturmak ve yayımlamak için PowerShell'i kullanmayı öğrenin.
+ms.openlocfilehash: 7d650c87aad92cdb65ed9a40c98c8fc3c94e01fb
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985707"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65287166"
 ---
 # <a name="create-and-publish-retention-labels-by-using-powershell"></a>PowerShell kullanarak bekletme etiketleri oluşturma ve yayımlama
 
->*[Microsoft 365 uyumluluğu için lisans & kılavuzu.](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)*
+>*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-Microsoft 365'ta belgelerinizi ve e-postaları saklamanıza veya silmenize yardımcı olması için bekletme etiketlerini kullanmaya karar verdikten sonra, oluşturmak ve yayımlamak üzere birçok ve büyük olasılıkla yüzlerce bekletme etiketiniz olduğunu fark vermişsiniz olabilir.[](retention.md) Bekletme etiketleri oluşturmak için önerilen yöntem, etiket dosyasından [dosya](file-plan-manager.md) Microsoft 365 uyumluluk merkezi. Bununla birlikte, [PowerShell'i de kullanabilirsiniz](retention.md#powershell-cmdlets-for-retention-policies-and-retention-labels).
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Microsoft 365'da belgeleri ve e-postaları saklamanıza veya silmenize yardımcı olması için [bekletme etiketlerini](retention.md) kullanmaya karar verdikten sonra, oluşturup yayımlamak için birçok ve muhtemelen yüzlerce bekletme etiketine sahip olduğunuzu fark etmiş olabilirsiniz. Büyük ölçekte bekletme etiketleri oluşturmak için önerilen yöntem, Microsoft Purview uyumluluk portalından [dosya planını](file-plan-manager.md) kullanmaktır. Ancak [PowerShell'i](retention.md#powershell-cmdlets-for-retention-policies-and-retention-labels) de kullanabilirsiniz.
   
-Bekletme etiketlerini toplu olarak oluşturmanıza ve bekletme etiketi ilkeleri içinde yayımlamanıza yardımcı olmak için bu makaledeki bilgileri, şablon dosyalarını ve örneklerini ve betiklerini kullanın. Ardından, bekletme etiketleri yöneticiler [ve kullanıcılar tarafından uygulanabilir](create-apply-retention-labels.md#how-to-apply-published-retention-labels).
+Bekletme etiketlerini toplu olarak oluşturmanıza ve bekletme etiketi ilkelerinde yayımlamanıza yardımcı olması için bu makaledeki bilgileri, şablon dosyalarını ve örnekleri ve betiği kullanın. Ardından bekletme etiketleri [yöneticiler ve kullanıcılar tarafından uygulanabilir](create-apply-retention-labels.md#how-to-apply-published-retention-labels).
 
-Sağlanan yönergeler otomatik olarak uygulanan bekletme etiketlerini desteklemez.
+Sağlanan yönergeler, otomatik olarak uygulanan bekletme etiketlerini desteklemez.
 
-Genel Bakış: 
+Genel bakış: 
 
-1. Daha Excel, bekletme etiketlerinizin listesini ve bekletme etiketi ilkelerinin listesini oluşturun.
+1. Excel'da bekletme etiketlerinizin listesini ve bekletme etiketi ilkelerinin listesini oluşturun.
 
-2. Bu listelerde bekletme etiketlerini ve bekletme etiketi ilkelerini oluşturmak için PowerShell kullanın.
+2. Bu listelerde bekletme etiketleri ve bekletme etiketi ilkeleri oluşturmak için PowerShell'i kullanın.
   
-## <a name="disclaimer"></a>Yasal Uyarı
+## <a name="disclaimer"></a>Reddi
 
-Bu makalede sağlanan örnek betikler, hiçbir Microsoft standart destek programı veya hizmeti kapsamında destek desteklemez. Örnek betikler hiçbir garanti olmaksızın OLDUĞU GIBI verilmektedir. Microsoft, ticarete uygunluk veya belirli bir amaca uygunluk ile ilgili zımni garantiler dahil ancak bununla sınırlı olmaksızın her türlü zımni garantiyi bundan sonra feragat ediyor. Örnek betiklerin ve belgelerin kullanımından veya performansından doğan tüm riskler size aittir. Hiçbir durumda Microsoft, yazarları veya betiklerin oluşturulması, üretimi veya dağıtımında yer alan diğer herhangi bir kişi, örnek betiklerin veya belgelerin kullanımından ya da kullanılamazlığından kaynaklanan hiçbir zarardan (ticari kar kaybı, iş kesintisi, iş bilgisi kaybı veya diğer maddi kayıplar dahil ancak ancak bu zararlar dahil ancak ancak hiçbir zarardan sorumlu olmayacaktır),  Microsoft bu tür zarar olasılığı hakkında bilgilansa bile.
+Bu makalede sağlanan örnek betikler herhangi bir Microsoft standart destek programı veya hizmeti altında desteklenmez. Örnek betikler, herhangi bir garanti olmadan OLDUĞU GIBI sağlanır. Microsoft, satılabilirlik veya belirli bir amaca uygunlukla ilgili zımni garantiler dahil ancak bunlarla sınırlı olmaksızın tüm zımni garantileri de reddeder. Örnek betiklerin ve belgelerin kullanımından veya performansından kaynaklanan tüm risk sizinle kalır. Hiçbir durumda Microsoft, yazarları veya betiklerin oluşturulması, üretimi veya teslimi ile ilgili herhangi bir kişi, örnek betiklerin veya belgelerin kullanımından veya kullanılamama durumundan kaynaklanan herhangi bir zarardan (bunlarla sınırlı olmaksızın, iş kârı kaybı, iş kesintisi, iş bilgisi kaybı veya diğer maddi kayıplar dahil) sorumlu tutulamaz,  Microsoft'a bu tür hasarlar olabileceği bildirilmiş olsa bile.
   
-## <a name="step-1-create-a-csv-file-for-the-retention-labels"></a>1. Adım: Bekletme .csv için bir dosya oluşturma
+## <a name="step-1-create-a-csv-file-for-the-retention-labels"></a>1. Adım: Bekletme etiketleri için .csv dosyası oluşturma
 
-1. Şablon için aşağıdaki örnek .csv ve dört farklı bekletme etiketine ait örnek girdileri kopyalayın ve bunları başka bir Excel. 
+1. Bir şablon için aşağıdaki örnek .csv dosyasını ve dört farklı bekletme etiketi için örnek girdileri kopyalayıp Excel yapıştırın. 
 
-2. Metni sütunlara dönüştürme: **Veri sekmesi** \> **Metin ile Sınırlandırılmış** \> **Virgül** \> **Genel** \> 
+2. Metni sütunlara dönüştürme: **Veri** sekmesi \> Metni **Sınırlandırılmış** \> **Sütunlara** \> **VirgülLe** \> **Genel**
 
-2. Örnekleri kendi bekletme etiketleriniz ve ayarlarınız için girdilerle değiştirin. Parametre değerleri hakkında daha fazla bilgi için bkz [. New-ComplianceTag](/powershell/module/exchange/new-compliancetag).
+2. Örnekleri kendi bekletme etiketlerinizin ve ayarlarınızın girdileriyle değiştirin. Parametre değerleri hakkında daha fazla bilgi için bkz. [New-ComplianceTag](/powershell/module/exchange/new-compliancetag).
 
-3. Daha sonraki bir .csv kolay bir konuma çalışma sayfasını bir dosya olarak kaydedin. Örneğin: C:\>Scripts\Labels.csv
+3. Çalışma sayfasını .csv dosyası olarak daha sonraki bir adımda kolayca bulunabilecek bir konuma kaydedin. Örneğin: C:\>Scripts\Labels.csv
 
   
 Notlar:
 
-- Dosya .csv zaten mevcut olan adla aynı adı içeren bir bekletme etiketi içeriyorsa, betik bu bekletme etiketini oluşturma adımı atlar. Yinelenen bekletme etiketi oluşturulmaz.
+- .csv dosyası zaten var olan dosyayla aynı ada sahip bir bekletme etiketi içeriyorsa, betik bu bekletme etiketini oluşturmayı atlar. Yinelenen bekletme etiketleri oluşturulmaz.
     
-- Sağlanan örnek dosyadaki sütun başlıklarını değiştirme veya yeniden .csv yoksa betik başarısız olur.
+- Sağlanan örnek .csv dosyasından sütun üst bilgilerini değiştirmeyin veya yeniden adlandırmayın; aksi takdirde betik başarısız olur.
     
-### <a name="sample-csv-file-for-retention-labels"></a>Bekletme .csv için örnek dosya
+### <a name="sample-csv-file-for-retention-labels"></a>Bekletme etiketleri için örnek .csv dosyası
 
 ```
 Name (Required),Comment (Optional),IsRecordLabel (Required),RetentionAction (Optional),RetentionDuration (Optional),RetentionType (Optional),ReviewerEmail (Optional)
@@ -73,24 +75,24 @@ LabelName_t_3,5 year delete,$false,Delete,1825,TaggedAgeInDays,
 LabelName_t_4,Record label tag - financial,$true,Keep,730,CreationAgeInDays,
 ```
 
-## <a name="step-2-create-a-csv-file-for-the-retention-label-policies"></a>2. Adım: Bekletme .csv ilkeleri için bir dosya oluşturma
+## <a name="step-2-create-a-csv-file-for-the-retention-label-policies"></a>2. Adım: Bekletme etiketi ilkeleri için .csv dosyası oluşturma
 
-1. Şablon için aşağıdaki örnek .csv ve üç farklı bekletme etiketi ilkesine yönelik örnek girdileri kopyalayın ve bunları başka bir Excel. 
+1. Bir şablon için aşağıdaki örnek .csv dosyasını ve üç farklı bekletme etiketi ilkesi için örnek girdileri kopyalayıp Excel yapıştırın. 
 
-2. Metni sütunlara dönüştürme: **Veri sekmesi** \> **Metin ile Sınırlandırılmış** \> **Virgül** \> **Genel** \> 
+2. Metni sütunlara dönüştürme: **Veri** sekmesi \> Metni **Sınırlandırılmış** \> **Sütunlara** \> **VirgülLe** \> **Genel**
 
-2. Örnekleri, kendi bekletme etiketi ilkeleriniz ve kendi ayarlarınız için girdilerle değiştirin. Bu cmdlet'in parametre değerleri hakkında daha fazla bilgi için bkz. [New-RetentionCompliancePolicy](/powershell/module/exchange/new-retentioncompliancepolicy).
+2. Örnekleri kendi bekletme etiketi ilkeleriniz ve bunların ayarları için girişlerle değiştirin. Bu cmdlet'in parametre değerleri hakkında daha fazla bilgi için bkz. [New-RetentionCompliancePolicy](/powershell/module/exchange/new-retentioncompliancepolicy).
 
-3. Daha sonraki bir .csv kolay bir konuma çalışma sayfasını bir dosya olarak kaydedin. Örneğin: `<path>Policies.csv`
+3. Çalışma sayfasını .csv dosyası olarak daha sonraki bir adımda kolayca bulunabilecek bir konuma kaydedin. Örneğin: `<path>Policies.csv`
 
 
 Notlar:
   
-- Yeni .csv, zaten var olan adla aynı adı içeren bir bekletme etiketi ilkesi içeriyorsa, betik bu bekletme etiketi ilkesi oluşturmayı atlar. Hiçbir yinelenen bekletme etiketi ilkesi oluşturulmaz.
+- .csv dosyası zaten mevcut olanla aynı ada sahip bir bekletme etiketi ilkesi içeriyorsa, betik bu bekletme etiketi ilkesini oluşturmayı atlar. Yinelenen bekletme etiketi ilkesi oluşturulmaz.
     
-- Sağlanan örnek dosyadaki sütun başlıklarını değiştirme veya yeniden .csv yoksa betik başarısız olur.
+- Sağlanan örnek .csv dosyasından sütun üst bilgilerini değiştirmeyin veya yeniden adlandırmayın; aksi takdirde betik başarısız olur.
     
-### <a name="sample-csv-file-for-retention-policies"></a>Bekletme .csv için örnek dosya
+### <a name="sample-csv-file-for-retention-policies"></a>Bekletme ilkeleri için örnek .csv dosyası
 
 ```
 Policy Name (Required),PublishComplianceTag (Required),Comment (Optional),Enabled (Required),ExchangeLocation (Optional),ExchangeLocationException (Optional),ModernGroupLocation (Optional),ModernGroupLocationException (Optional),OneDriveLocation (Optional),OneDriveLocationException (Optional),PublicFolderLocation (Optional),SharePointLocation (Optional),SharePointLocationException (Optional),SkypeLocation (Optional),SkypeLocationException (Optional)
@@ -99,19 +101,19 @@ Publishing Policy Orange1,"LabelName_t_1, LabelName_t_2",N/A,$true,All,,,,,,,,,,
 Publishing Policy Yellow1,"LabelName_t_3, LabelName_t_4",N/A,$false,All,,,,,,,,,,
 ```
 
-## <a name="step-3-create-the-powershell-script"></a>3. Adım: PowerShell betiği oluşturma
+## <a name="step-3-create-the-powershell-script"></a>3. Adım: PowerShell betiğini oluşturma
 
-1. Aşağıdaki PowerShell betiği kopyalayıp Not Defteri.
+1. Aşağıdaki PowerShell betiğini kopyalayıp Not Defteri yapıştırın.
 
-2. Dosyanın dosya adı uzantısını kullanarak **.ps1** kolay bir konuma kaydedin. Örneğin: `<path>CreateRetentionSchedule.ps1`
+2. .ps1dosya adı **uzantısını kullanarak** dosyayı kolayca bulunabilecek bir konuma kaydedin. Örneğin: `<path>CreateRetentionSchedule.ps1`
 
 Notlar:
 
-- Betik, önceki iki adımda oluşturduğunuz iki kaynak dosyanın sağ tarafından girmenizi sağlar:
-    - Bekletme etiketlerini oluşturmak için kaynak dosyayı belirtmezseniz, betikler bekletme etiketi ilkelerini oluşturmak için devam eder. 
+- Betik, önceki iki adımda oluşturduğunuz iki kaynak dosyayı sağlamanızı ister:
+    - Bekletme etiketlerini oluşturmak için kaynak dosyayı belirtmezseniz, betik bekletme etiketi ilkelerini oluşturmak için devam eder. 
     - Bekletme etiketi ilkelerini oluşturmak için kaynak dosyayı belirtmezseniz, betik yalnızca bekletme etiketlerini oluşturur.
 
-- Betik,  yapılan her eylemi ve eylemin başarılı mı yoksa başarısız mı olduğunu kaydeden bir günlük dosyası üretir. Bu günlük dosyasının yerini belirleme yönergeleri için son adıma bakın.
+- Betik, gerçekleştirilen her eylemi ve eylemin başarılı veya başarısız olup olmadığını kaydeden bir günlük dosyası oluşturur. Bu günlük dosyasını bulma yönergeleri için son adıma bakın.
 
 ### <a name="powershell-script"></a>PowerShell betiği
 
@@ -735,29 +737,29 @@ if ($ResultCSV)
 
 ```
 
-## <a name="step-4-run-the-powershell-script"></a>4. Adım: PowerShell betiği çalıştırma
+## <a name="step-4-run-the-powershell-script"></a>4. Adım: PowerShell betiğini çalıştırma
 
-İlk olarak[, Bağlan ve Uyumluluk & PowerShell'e inin](/powershell/exchange/connect-to-scc-powershell).
+İlk olarak[, Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
 
-Ardından, bekletme etiketlerini oluşturan ve yayımlayan betiği çalıştırın:
+Ardından bekletme etiketlerini oluşturan ve yayımlayan betiği çalıştırın:
   
-1. Güvenlik & Merkezi PowerShell oturumda, yolu girin, `.\` ardından betiğin karakterlerini ve dosya adını girin, ardından betiği çalıştırmak için ENTER tuşuna basın. Örneğin:
+1. Güvenlik & Uyumluluk Merkezi PowerShell oturumunuzda yolu, ardından betiğin karakterlerini `.\` ve dosya adını girin ve ardından enter tuşuna basarak betiği çalıştırın. Örneğin:
     
     ```powershell
     <path>.\CreateRetentionSchedule.ps1
     ```
 
-2. Betik, önceki adımlarda oluşturduğunuz .csv konumlarını girmenizi sağlar. Yolu, ardından dosyanın karakterlerini `.\` ve dosya adını .csv ve ENTER tuşuna basın. Örneğin, ilk istem için:
+2. Betik, önceki adımlarda oluşturduğunuz .csv dosyalarının konumlarını ister. Yolu girin, ardından .csv dosyasının karakterlerini `.\` ve dosya adını girin ve ENTER tuşuna basın. Örneğin, ilk istem için:
     
     ```powershell
     <path>.\Labels.csv
     ```
 
-## <a name="step-5-view-the-log-file-with-the-results"></a>5. Adım: Sonuçlarla birlikte günlük dosyasını görüntüleme
+## <a name="step-5-view-the-log-file-with-the-results"></a>5. Adım: Sonuçları içeren günlük dosyasını görüntüleme
 
-Betiğin oluşturduğu günlük dosyasını kullanarak sonuçları kontrol edin ve çözümü gereken hataları bulun.
+Sonuçları denetlemek ve çözülmesi gereken hataları belirlemek için betiğin oluşturduğu günlük dosyasını kullanın.
 
-Günlük dosyasını aşağıdaki konumda bulabilirsiniz, ancak örnek dosya adı altında basamaklar farklılık gösterir.
+Örnek dosya adındaki basamaklar farklılık gösterse de günlük dosyasını aşağıdaki konumda bulabilirsiniz.
   
 ```
 <path>.\Log_Publish_Compliance_Tag_01112018_151239.txt

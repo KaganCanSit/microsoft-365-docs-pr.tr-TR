@@ -13,14 +13,18 @@ ms.collection: M365-modern-desktop
 ms.localizationpriority: medium
 ROBOTS: NOINDEX, NOFOLLOW
 description: Tuval için yeni Microsoft OneDrive Learning Araçları Birlikte Çalışabilirlik Uygulaması ile ödevler oluşturun ve notlayın, kurs içeriğini derleyin ve dosyalar üzerinde gerçek zamanlı olarak işbirliği yapın.
-ms.openlocfilehash: 5de027c9d7606ebe546a8dc8e087b91da7f0400e
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 8a4e3a1fc1b1d19bed093d5e72bf66e1afb2f591
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64824574"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65285576"
 ---
 # <a name="integrate-microsoft-onedrive-lti-with-canvas"></a>Microsoft OneDrive LTI'yi Tuval ile tümleştirme
+
+Bu makale, Tuval için Microsoft OneDrive LTI'yi ayarlaması gereken eğitim BT yöneticilerine yöneliktir.
+
+Tuvalde OneDrive LTI'yi kullanma yönergeleri için bkz. [LMS'nizle Microsoft OneDrive kullanma](https://support.microsoft.com/topic/use-microsoft-onedrive-with-your-lms-c2ddeb48-f695-4267-94f2-14f7ff1b7bdd).
 
 Microsoft OneDrive LTI'yi Tuval ile tümleştirmek iki adımlı bir işlemdir. İlk adım Canvas'da Microsoft OneDrive etkinleştirir ve ikinci adım Microsoft OneDrive LTI'yi Tuval kurslarında kullanılabilir hale getirir.
 
@@ -76,7 +80,10 @@ Microsoft OneDrive LTI'yi Tuval ile tümleştirmek iki adımlı bir işlemdir. �
    :::image type="content" source="media/OneDrive-LTI-20.png" alt-text="Anahtarın kopyalanması gereken JSON metnini ve metin kutusunu gösteren LTI kiracı kaydı sayfası.":::
 
 9. Değişikliklerinizi gözden geçirin ve kaydedin. Başarılı kayıtta bir ileti görüntülenir.
+
 10. Kayıt ayrıntılarınız, giriş sayfasındaki **LTI Kiracılarını Görüntüle** düğmesi seçilerek de gözden geçirilebilir.
+
+Gelecekteki sürümler ek yönetici onayı gerektirebilir. Bu gibi durumlarda yalnızca 1. ve 2. adımları yinelemeniz gerekir.
 
 ## <a name="enable-microsoft-onedrive-lti-in-canvas-courses"></a>Tuval Kurslarında Microsoft OneDrive LTI'yi etkinleştirme
 

@@ -18,16 +18,18 @@ search.appverid:
 - MET150
 hideEdit: true
 description: Bekletme ilkeleri ve bekletme etiketi ilkeleri için ilke başına en fazla ilke ve öğe sayısını anlama
-ms.openlocfilehash: 260b99a4519937f962cc1c779a9beb9c6810e7e1
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: bb94043f68d46f98f005853cde03da048495e10f
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64782819"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65285368"
 ---
 # <a name="limits-for-retention-policies-and-retention-label-policies"></a>Bekletme ilkeleri ve bekletme etiketi ilkeleri için sınırlar
 
 >*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Kuruluşunuzda verileri otomatik olarak saklamak veya silmek için [bekletme ilkeleri ve bekletme etiketi ilkeleri](retention.md#retention-policies-and-retention-labels) kullandığınızda, dikkat etmeniz gereken bazı maksimum sayılar vardır.
 
@@ -76,7 +78,7 @@ Belirli kullanıcıları, belirli Microsoft 365 gruplarını veya belirli sitele
 Statik kapsamlar için bekletme için ilke başına en fazla öğe sayısı:
 
 - Exchange posta kutuları: 1.000
-- Microsoft 365 组: 1.000
+- Microsoft 365 Grupları: 1.000
 - Teams kanal iletileri: 1.000
 - Teams sohbetleri: 1.000
 - Yammer topluluk iletileri: 1.000
@@ -84,7 +86,7 @@ Statik kapsamlar için bekletme için ilke başına en fazla öğe sayısı:
 - SharePoint siteleri: 100
 - OneDrive hesapları: 100
 
-Skype for Business kapsamı belirli kullanıcılara göre belirlenmiştir ve ilke başına desteklenen en fazla sayı 1.000'dir.
+Skype Kurumsal kapsamı belirli kullanıcılara göre belirlenmiştir ve ilke başına desteklenen en fazla sayı 1.000'dir.
 
 Bu sınırlamalar ilkeye göre olduğundan, bu sayıların üzerinden geçilirken ortaya çıkan belirli eklemeleri veya dışlamaları kullanmanız gerekiyorsa, aynı bekletme ayarlarına sahip ek ilkeler oluşturabilirsiniz. Bu nedenle birden çok bekletme ilkesi kullanan bazı [örnek senaryolar ve çözümler](#examples-of-using-multiple-policies-to-avoid-exceeding-maximum-numbers) için sonraki bölüme bakın.
 

@@ -8,12 +8,12 @@ ms.topic: article
 ms.service: bookings
 ms.localizationpriority: medium
 description: Bu sayfayı, personel listenizi oluşturmak ve ad, telefon numarası ve e-posta adresi gibi personel üyesi ayrıntılarını yönetmek için kullanın.
-ms.openlocfilehash: ca938acf4bfb567d366c7ffd684e8bce8c9eea74
-ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
+ms.openlocfilehash: b6ceee7c4464daf050f6e6626628c9cb3d94960f
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64746807"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65285466"
 ---
 # <a name="add-staff-to-bookings"></a>Bookings’e personel ekleme
 
@@ -45,9 +45,10 @@ Bookings bir Microsoft 365 özelliği olsa da, tüm personelinizin Microsoft 365
     > [!NOTE]
     > Kiracınızın dışındaki personel serbest/meşgul bilgilerini Bookings ile paylaşamaz.
 
-5. Her personel üyesi için bir rol seçin: Yönetici, Görüntüleyici veya Konuk.
-    - **Yöneticiler** tüm ayarları düzenleyebilir, personel ekleyip kaldırabilir ve rezervasyon oluşturabilir, düzenleyebilir veya silebilir.
-    - **İzleyiciler** takvimdeki tüm rezervasyonları görebilir, ancak değiştiremez veya silemez. Ayarlara salt okunur erişimleri vardır.
+5. Her personel üyesi için bir rol seçin: Ekip üyesi, Zamanlayıcı, Görüntüleyici veya Konuk.
+    - **Ekip üyesi** rezervasyonları kendi takviminde ve rezervasyon posta kutusunda uygunluk durumunu yönetebilir. Takvimlerine bir rezervasyon ekler veya düzenlerken personel olarak atanırlar.
+    - **Zamanlayıcı** , takvimdeki rezervasyonları ve müşteri ayrıntılarını yönetebilir. Ayarlara, personele ve hizmetlere salt okunur erişime sahiptir.
+    - **Görüntüleyici** takvimdeki tüm rezervasyonları görebilir, ancak bunları değiştiremez veya silemez. Ayarlara salt okunur erişimleri vardır.
     - **Konuklar** rezervasyonlara atanabilir ancak rezervasyon posta kutusunu açamaz.
 
 6. Personel **e-postalarını etkinleştirmek için kendisine atanan bir rezervasyon oluşturulduğunda veya değiştirildiğinde Tüm personele e-posta yoluyla bildir'i** seçin. Aşağıda örnek bir e-posta verilmiştir:

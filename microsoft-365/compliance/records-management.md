@@ -21,21 +21,21 @@ ms.custom:
 - seo-marvel-apr2020
 - seo-marvel-jun2020
 description: Microsoft Purview Kayıt Yönetimi'nin iş, yasal veya mevzuat kaydı tutma gereksinimleri için yüksek değerli öğeleri nasıl desteklediğini öğrenin.
-ms.openlocfilehash: dd554b4369a1f721d306bc301519ce3ef59e4569
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: b14c622d1468cdb91ad1ac8e58c184e650ebbe6c
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64998540"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65284874"
 ---
 # <a name="learn-about-records-management"></a>Kayıt yönetimi hakkında daha fazla bilgi edinme
+
+>*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 > [!TIP]
 > *Dokuz Microsoft Purview çözümlerinin tamamının premium sürümlerini ücretsiz olarak deneyebileceğinizi biliyor muydunuz?* Sağlam Purview özelliklerinin kuruluşunuzun uyumluluk gereksinimlerini karşılamasına nasıl yardımcı olabileceğini keşfetmek için 90 günlük Purview çözümleri deneme sürümünü kullanın. Microsoft 365 E3 ve Office 365 E3 müşterileri artık [Microsoft Purview uyumluluk portalı deneme hub'ında](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef) başlayabilir. [Kaydolabilecek kişiler ve deneme koşulları](compliance-easy-trials.md) hakkında ayrıntılı bilgi edinin.
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
->*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 Her türden kuruluş, kurumsal verileri genelinde yasal, yasal ve iş açısından kritik kayıtları yönetmek için bir kayıt yönetimi çözümüne ihtiyaç duyar. Microsoft Purview için kayıt yönetimi, bir kuruluşun yasal yükümlülüklerini yönetmesine yardımcı olur, düzenlemelere uyumluluğu gösterme olanağı sağlar ve artık saklanması gerekmeyen, artık değerli olmayan veya iş amaçları için artık gerekli olmayan öğelerin düzenli olarak elden bırakılmasıyla verimliliği artırır.
 

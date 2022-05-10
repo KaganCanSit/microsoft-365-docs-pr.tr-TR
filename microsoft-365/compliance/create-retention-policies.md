@@ -18,18 +18,18 @@ search.appverid:
 - MOE150
 - MET150
 description: Kullanıcıların e-posta, belgeler ve konuşmalarla oluşturduğu içeriğin denetimini verimli bir şekilde korumak için bekletme ilkesi kullanın. İstediğinizi koruyun ve istemediğinizden kurtulun.
-ms.openlocfilehash: 22373fddf6a4ccac718f9fede9d1bbc40b92681d
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: abb18142517ceb6c5442ccd372c4f392db706bc1
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "65145339"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65284962"
 ---
 # <a name="create-and-configure-retention-policies"></a>Bekletme ilkeleri oluşturma ve yapılandırma
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
 >*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 İçeriği saklamaya, içeriği silmeye veya saklamaya ve sonra silmeye proaktif olarak karar vererek kuruluşunuzun verilerini yönetmek için bir bekletme ilkesi kullanın.
 

@@ -1,5 +1,5 @@
 ---
-title: Konukların belirli bir gruba eklenmesini önleme
+title: Konukların belirli bir gruba eklenmesini engelleme
 ms.reviewer: arvaradh
 ms.author: mikeplum
 author: MikePlumleyMSFT
@@ -15,36 +15,36 @@ ms.custom:
 - M365solutions
 f1.keywords: NOCSH
 recommendations: false
-description: Konukların belirli bir gruba eklenmesini engellemeyi öğrenin
-ms.openlocfilehash: 4b9ebc6366934db52c30d51091ac9991ff82d8c3
-ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
+description: Konukların belirli bir gruba eklenmesini nasıl önleyeceğinizi öğrenin
+ms.openlocfilehash: f050011427ceeeff8347c2acd5b6d3fbbcf11bec
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64570073"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65285324"
 ---
-# <a name="prevent-guests-from-being-added-to-a-specific-microsoft-365-group-or-microsoft-teams-team"></a>Konukların belirli bir ekip üyesine veya bir Microsoft 365 grubuna Microsoft Teams engelleme
+# <a name="prevent-guests-from-being-added-to-a-specific-microsoft-365-group-or-microsoft-teams-team"></a>Konukların belirli bir Microsoft 365 grubuna veya Microsoft Teams ekibine eklenmesini engelleme
 
-Çoğu grup ve ekipte konuk erişimine izin vermek, ancak bazı durumlarda konuk erişimini engellemek istiyorsanız, tek tek gruplarda ve ekiplerde konuk erişimini engelleyebilirsiniz. (Bir ekipte konuk erişimini engellemek, ilişkili gruba konuk erişimini engelleyerek yapılır.) Bu, yeni konukların eklenmesini önler, ancak zaten grupta veya ekipte yer alan konukları kaldırmaz.
+Çoğu gruba ve takıma konuk erişimine izin vermek istiyorsanız ancak konuk erişimini engellemek istediğiniz bir yere sahipseniz, tek tek gruplar ve ekipler için konuk erişimini engelleyebilirsiniz. (Takıma konuk erişimini engelleme işlemi, ilişkili gruba konuk erişimini engelleyerek yapılır.) Bu, yeni konukların eklenmesini engeller ancak zaten grupta veya ekipte olan konukları kaldırmaz.
 
-Kuruluşta duyarlılık etiketleri kullanıyorsanız, konuk erişimini grup temelinde kontrol etmek için bu etiketleri kullanmanızı öneririz. Bunun nasıl olduğu hakkında bilgi için, sitelerine, gruplara ve [sitelere Microsoft Teams için Microsoft 365 duyarlılık SharePoint kullanın](../compliance/sensitivity-labels-teams-groups-sites.md). Önerilen yaklaşım bu.
+Kuruluşunuzda duyarlılık etiketleri kullanıyorsanız, grup başına konuk erişimini denetlemek için bunları kullanmanızı öneririz. Bunun nasıl yapılacağını öğrenmek için Microsoft Teams[, Microsoft 365 grupları ve SharePoint sitelerindeki içeriği korumak için duyarlılık etiketlerini kullanın](../compliance/sensitivity-labels-teams-groups-sites.md). Önerilen yaklaşım budur.
 
 ## <a name="change-group-settings-using-microsoft-powershell"></a>Microsoft PowerShell kullanarak grup ayarlarını değiştirme
 
-Ayrıca, PowerShell kullanarak yeni konukların tek tek gruplara eksini önabilirsiniz. (Ekibin ilişkili web sitesinde ayrı SharePoint denetimleri [olduğunu unutmayın](/sharepoint/change-external-sharing-site).)
+Ayrıca PowerShell'i kullanarak tek tek gruplara yeni konuklar eklenmesini engelleyebilirsiniz. (Ekibin ilişkili SharePoint sitesinde [ayrı konuk paylaşım denetimleri](/sharepoint/change-external-sharing-site) olduğunu unutmayın.)
 
-Grup düzeyi konuk erişimi ayarını [değiştirmek Azure Active Directory PowerShell Graph](/powershell/azure/active-directory/install-adv2) (**modül adı AzureADPreview**) önizleme sürümünü kullansanız gerekir:
+Grup düzeyinde konuk erişimi ayarını değiştirmek [için Graph için Azure Active Directory PowerShell'in](/powershell/azure/active-directory/install-adv2) önizleme sürümünü (modül adı **AzureADPreview**) kullanmanız gerekir:
 
-- Daha önce Azure AD PowerShell modülünün herhangi bir sürümünü yüklemedıysanız, [Bkz. Azure AD](/powershell/azure/active-directory/install-adv2?preserve-view=true&view=azureadps-2.0-preview) Modülü'ne yükleme ve genel önizleme sürümünü yükleme yönergelerini izleyin.
+- Azure AD PowerShell modülünün herhangi bir sürümünü daha önce yüklemediyseniz bkz[. Azure AD Modülünü Yükleme](/powershell/azure/active-directory/install-adv2?preserve-view=true&view=azureadps-2.0-preview) ve genel önizleme sürümünü yüklemek için yönergeleri izleyin.
 
-- Azure AD PowerShell modülünün (AzureAD) 2.0 genel kullanılabilirlik sürümü yüklüyse, `Uninstall-Module AzureAD` PowerShell oturumda çalıştırarak bu modülü kaldırmanız ve sonra önizleme sürümünü çalıştırarak yüklemeniz gerekir `Install-Module AzureADPreview`.
+- Azure AD PowerShell modülünün (AzureAD) 2.0 genel kullanılabilirlik sürümü yüklüyse, PowerShell oturumunuzda çalıştırarak `Uninstall-Module AzureAD` kaldırmanız ve ardından çalıştırarak `Install-Module AzureADPreview`önizleme sürümünü yüklemeniz gerekir.
 
-- Önizleme sürümünü zaten yüklemişsanız, bu modülün `Install-Module AzureADPreview` en son sürümü olduğundan emin olmak için çalıştırın.
+- Önizleme sürümünü zaten yüklediyseniz, bu modülün en son sürümü olduğundan emin olmak için komutunu çalıştırın `Install-Module AzureADPreview` .
 
 > [!NOTE]
-> Bu komutları çalıştırmak için genel yönetici haklarına sahip olmak gerekir. 
+> Bu komutları çalıştırmak için genel yönetici haklarına sahip olmanız gerekir. 
 
-Konuk erişimini engellemek istediğiniz *\<GroupName\>* grubun adını değiştirerek aşağıdaki betiği çalıştırın.
+Konuk erişimini engellemek istediğiniz grubun adına değiştirerek *\<GroupName\>* aşağıdaki betiği çalıştırın.
 
 ```PowerShell
 $GroupName = "<GroupName>"
@@ -58,17 +58,17 @@ $groupID= (Get-AzureADGroup -SearchString $GroupName).ObjectId
 New-AzureADObjectSetting -TargetType Groups -TargetObjectId $groupID -DirectorySetting $settingsCopy
 ```
 
-Ayarlarınızı doğrulamak için bu komutu çalıştırın:
+Ayarlarınızı doğrulamak için şu komutu çalıştırın:
 
 ```PowerShell
 Get-AzureADObjectSetting -TargetObjectId $groupID -TargetType Groups | fl Values
 ```
 
-Doğrulama şöyle görünüyor:
+Doğrulama şu şekilde görünür:
     
-![Konuk grubu erişiminin yanlış olarak ayar olduğunu gösteren PowerShell penceresinin ekran görüntüsü.](../media/09ebfb4f-859f-44c3-a29e-63a59fd6ef87.png)
+![Konuk grup erişiminin false olarak ayarlandığını gösteren PowerShell penceresinin ekran görüntüsü.](../media/09ebfb4f-859f-44c3-a29e-63a59fd6ef87.png)
 
-Konukların belirli bir gruba erişimine izin vermek için bu ayarı yeniden değiştirmek isterseniz, ```<GroupName>``` konuk erişimine izin vermek istediğiniz grubun adını değiştirerek aşağıdaki betiği çalıştırın.
+Belirli bir gruba konuk erişimine izin vermek için ayarı yeniden değiştirmek isterseniz, aşağıdaki betiği çalıştırarak konuk erişimine izin vermek istediğiniz grubun adına geçin ```<GroupName>``` .
 
 ```PowerShell
 $GroupName = "<GroupName>"
@@ -83,23 +83,23 @@ $id = (get-AzureADObjectSetting -TargetType groups -TargetObjectId $groupID).id
 Set-AzureADObjectSetting -TargetType Groups -TargetObjectId $groupID -DirectorySetting $settingsCopy -id $id
 ```
 
-## <a name="allow-or-block-guest-access-based-on-their-domain"></a>Konuk kullanıcıların etki alanına göre erişime izin verme veya erişimini engelleme
+## <a name="allow-or-block-guest-access-based-on-their-domain"></a>Etki alanına göre konuk erişimine izin verme veya erişimi engelleme
 
-Belirli bir etki alanını kullanan konuklara izin ve engelleyebilirsiniz. Örneğin, işletmeniz (Contoso) ile başka bir işletme (Fabrikam) arasında bir ortaklık varsa, fabrikam'a izin vermek için kullanıcılarınız bu işletmeden konukları gruplarına ekleyebilir.
+Belirli bir etki alanı kullanan konuklara izin verebilir veya bunları engelleyebilirsiniz. Örneğin, işletmenizin (Contoso) başka bir işletmeyle (Fabrikam) ortaklığı varsa, kullanıcılarınızın bu konukları gruplarına ekleyebilmesi için fabrikam'ı izin verilenler listenize ekleyebilirsiniz.
 
-Daha fazla bilgi için bkz [. Belirli kuruluşlardan B2B kullanıcılarına davetlere izin verme veya davetleri engelleme](/azure/active-directory/b2b/allow-deny-list).
+Daha fazla bilgi için bkz. [Belirli kuruluşların B2B kullanıcılarına yönelik davetlere izin verme veya davetleri engelleme](/azure/active-directory/b2b/allow-deny-list).
 
 ## <a name="add-guests-to-the-global-address-list"></a>Genel adres listesine konuk ekleme
 
-Varsayılan olarak konuklar Genel Adres Listesi'Exchange görünmez. Bir konuğun genel adres listesinde görünür olması için aşağıda listelenen adımları kullanın.
+Varsayılan olarak, konuklar Exchange Genel Adres Listesi'nde görünmez. Bir konuğun genel adres listesinde görünür olmasını sağlamak için aşağıda listelenen adımları kullanın.
 
-Aşağıdakini çalıştırarak konuğun ObjectID'lerini bulun:
+Çalıştırarak konuğun ObjectID değerini bulun:
 
 ```PowerShell
-Get-AzureADUser -Filter "userType eq 'Guest'"
+get-AzureADUser -all $true | ?{$_.CreationType -eq "Invitation"}
 ```
 
-Ardından ObjectID, GivenName, Surname, DisplayName ve TelephoneNumber için uygun değerleri kullanarak aşağıdakini çalıştırın.
+Ardından ObjectID, GivenName, Soyad, DisplayName ve TelephoneNumber için uygun değerleri kullanarak aşağıdakileri çalıştırın.
 
 ```PowerShell
 Set-AzureADUser -ObjectId cfcbd1a0-ed18-4210-9b9d-cf0ba93cf6b2 -ShowInAddressList $true -GivenName 'Megan' -Surname 'Bowen' -DisplayName 'Megan Bowen' -TelephoneNumber '555-555-5555'
@@ -107,12 +107,12 @@ Set-AzureADUser -ObjectId cfcbd1a0-ed18-4210-9b9d-cf0ba93cf6b2 -ShowInAddressLis
 
 ## <a name="related-topics"></a>İlgili konular
 
-[İşbirliği yönetim planlaması önerileri](collaboration-governance-overview.md#collaboration-governance-planning-recommendations)
+[İşbirliği idaresi planlama önerileri](collaboration-governance-overview.md#collaboration-governance-planning-recommendations)
 
-[İşbirliği yönetim planınızı oluşturma](collaboration-governance-first.md)
+[İşbirliği idare planınızı oluşturma](collaboration-governance-first.md)
 
-[Grupta Grup üyeliğini Microsoft 365 yönetim merkezi](../admin/create-groups/add-or-remove-members-from-groups.md)
+[Microsoft 365 yönetim merkezi Grup üyeliğini yönetme](../admin/create-groups/add-or-remove-members-from-groups.md)
   
-[Azure Active Directory incelemeleri](/azure/active-directory/active-directory-azure-ad-controls-perform-access-review)
+[erişim gözden geçirmelerini Azure Active Directory](/azure/active-directory/active-directory-azure-ad-controls-perform-access-review)
 
 [Set-AzureADUser](/powershell/module/azuread/set-azureaduser)

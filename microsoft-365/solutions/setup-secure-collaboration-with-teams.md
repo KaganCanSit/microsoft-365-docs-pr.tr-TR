@@ -17,12 +17,12 @@ ms.custom:
 f1.keywords: NOCSH
 recommendations: false
 description: Verilerinizi duyarlılığına göre korumak için Teams'da güvenli dosya işbirliği ve paylaşımı ayarlamak için en iyi yöntemleri öğrenin.
-ms.openlocfilehash: aadc2bf092713ffde68cd8fb9824d837c2f14acf
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 54bfe4bce20687474526916fe7b11ca0e5bb1b72
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64935423"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65286548"
 ---
 # <a name="set-up-secure-file-sharing-and-collaboration-with-microsoft-teams"></a>Microsoft Teams ile güvenli dosya paylaşımı ve işbirliği ayarlama
 
@@ -189,7 +189,7 @@ BT mimarlarının Microsoft 365'deki gruplar hakkında bilmesi gerekenler
 
 |**Öğe**|**Açıklama**|
 |---|---|
-|[![Gruplar için başparmak görüntüsü bilgi grafiği.](../downloads/msft-m365-groups-architecture-thumb.png)](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-groups.pdf) <br/> [PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-groups.pdf) \| [Visio](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/downloads/msft-m365-groups.vsdx) <br> Haziran 2019'da güncelleştirildi|Bu çizimler, farklı grup türlerini, bunların nasıl oluşturulup yönetildiğini ve birkaç idare önerisini ayrıntılarıyla açıklar.|
+|[![Gruplar için başparmak görüntüsü bilgi grafiği.](../downloads/msft-m365-groups-architecture-thumb.png)](https://download.microsoft.com/download/6/3/0/6309218f-a169-4f2d-af4c-2fe49e30ba17/msft-m365-groups.pdf) <br/> [PDF](https://download.microsoft.com/download/6/3/0/6309218f-a169-4f2d-af4c-2fe49e30ba17/msft-m365-groups.pdf) \| [Visio](https://download.microsoft.com/download/6/3/0/6309218f-a169-4f2d-af4c-2fe49e30ba17/msft-m365-groups.vsdx) <br> Mayıs 2022'de güncelleştirildi|Bu çizimler, farklı grup türlerini, bunların nasıl oluşturulup yönetildiğini ve birkaç idare önerisini ayrıntılarıyla açıklar.|
 
 ### <a name="microsoft-teams-and-related-productivity-services-in-microsoft-365-for-it-architects"></a>BT mimarları için Microsoft 365'da Microsoft Teams ve ilgili üretkenlik hizmetleri
 

@@ -19,12 +19,12 @@ ms.custom: ''
 description: Google Postini, Barracuda İstenmeyen Posta ve Virüs Güvenlik Duvarı veya Cisco IronPort gibi üçüncü taraf koruma hizmetlerinden veya cihazlardan Office 365 için Microsoft Defender korumaya geçiş yapmak için doğru yolu öğrenin.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 2f67135e2b8a3700a2fb6a6e24fc4f66696db2e3
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 87100c2faa071075b9658591dad821d240b60b84
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098724"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65284984"
 ---
 # <a name="migrate-from-a-third-party-protection-service-or-device-to-microsoft-defender-for-office-365"></a>Üçüncü taraf koruma hizmetinden veya cihazından Office 365 için Microsoft Defender geçiş
 
@@ -32,6 +32,9 @@ ms.locfileid: "65098724"
 - [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 
 zaten Microsoft 365 önünde duran bir üçüncü taraf koruma hizmetiniz veya cihazınız varsa, birleştirilmiş bir yönetim deneyiminin avantajlarından, potansiyel olarak düşük maliyetlerden (zaten ödeme yaptığınız ürünleri kullanarak) ve tümleşik güvenlikle olgun bir üründen yararlanmak için korumanızı Office 365 için Microsoft Defender geçirmek için bu kılavuzu kullanabilirsiniz  Koruma. Daha fazla bilgi için bkz. [Office 365 için Microsoft Defender](https://www.microsoft.com/security/business/threat-protection/office-365-defender).
+
+Office 365 için Defender geçiş hakkında daha fazla bilgi edinmek için bu kısa videoyu izleyin.
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRwfH]
 
 Bu kılavuz, geçişiniz için belirli ve eyleme dönüştürülebilir adımlar sağlar ve aşağıdaki olguları varsayar:
 

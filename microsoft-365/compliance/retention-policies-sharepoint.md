@@ -17,16 +17,18 @@ search.appverid:
 - MOE150
 - MET150
 description: Bekletmenin SharePoint ve OneDrive için nasıl çalıştığını öğrenin.
-ms.openlocfilehash: ed9cc45218dde112baec8fbca997abc6e82b4d72
-ms.sourcegitcommit: 1d972f15a45204e89e268c5ff257021aced5e775
+ms.openlocfilehash: cbcc8015b8b24309c882e5b8ca7a9c56fb6e344d
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2022
-ms.locfileid: "64911500"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65286000"
 ---
 # <a name="learn-about-retention-for-sharepoint-and-onedrive"></a>SharePoint ve OneDrive için bekletme hakkında bilgi edinin
 
 >*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bu makaledeki bilgiler, SharePoint ve OneDrive özgü bilgiler içerdiğinden [Elde tutma hakkında bilgi edinin](retention.md) ekini ekler.
 
@@ -78,7 +80,7 @@ Kullanıcılar aşağıdaki koşullardan herhangi birinde etiketli bir öğeyi s
 
 - Kullanıcıların etiketlenmiş öğeleri silmesine olanak tanıyan kayıt yönetimi ayarı kapalıdır.
     
-    Bu ayarı denetlemek veya değiştirmek için Kayıt **yönetimiKayıt yönetimi** ayarlarıKayıtlar yönetim **ayarlarıDeletion** >  **labelsDeletion** >  of items(**Kayıt yönetimi** > ) Microsoft 365 uyumluluk merkezi > Kayıtlar yönetimi **çözümüne** gidin. SharePoint ve OneDrive için ayrı ayarlar vardır.
+    Bu ayarı denetlemek veya değiştirmek için, Microsoft Purview uyumluluk portalında **Kayıt yönetimi** > **Kayıt yönetimi** >  **ayarlarıKayıt** >  **etiketleriDeletion** >  **öğeleri** işleme bölümüne gidin. SharePoint ve OneDrive için ayrı ayarlar vardır.
     
     Alternatif olarak, **Kayıt yönetimi** çözümüne erişiminiz yoksa [Get-PnPTenant ve Set-PnPTenant'tan](/powershell/module/sharepoint-pnp/get-pnptenant) *AllowFilesWithKeepLabelToBeDeletedSPO* ve *AllowFilesWithKeepLabelToBeDeletedODB* kullanabilirsiniz [](/powershell/module/sharepoint-pnp/set-pnptenant).
 
@@ -170,7 +172,7 @@ Saklama süresi dolduğunda ve bekletme ayarları bir silme eylemi içerdiğinde
 
 ## <a name="configuration-guidance"></a>Yapılandırma kılavuzu
 
-Microsoft 365'da bekletmeyi yapılandırma konusunda yeniyseniz bkz. [bilgi idaresiyle Kullanmaya başlayın](get-started-with-information-governance.md).
+Microsoft 365'de saklamayı yapılandırma konusunda yeniyseniz bkz. [Veri yaşam döngüsü yönetimiyle Kullanmaya başlayın](get-started-with-data-lifecycle-management.md).
 
 Exchange için bir bekletme ilkesi veya bekletme etiketi yapılandırmaya hazırsanız aşağıdaki yönergelere bakın:
 - [Bekletme ilkeleri oluşturma ve yapılandırma](create-retention-policies.md)

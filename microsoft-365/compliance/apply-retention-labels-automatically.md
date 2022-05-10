@@ -17,18 +17,18 @@ search.appverid:
 - MOE150
 - MET150
 description: İhtiyacınız olanı korumak ve istemediğinizleri silmek için etiketleri otomatik olarak uygulayabilmeniz için otomatik etiketleme bekletme ilkeleri oluşturun
-ms.openlocfilehash: 1895669c20d06bdae13ed2d25183dff92862d44f
-ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
+ms.openlocfilehash: 54db8d8c72266e1fc7a9fa6c3fe4829c62ba4357
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65188866"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65285510"
 ---
 # <a name="automatically-apply-a-retention-label-to-retain-or-delete-content"></a>İçeriği korumak veya silmek için otomatik olarak bekletme etiketi uygulama
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
 >*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 > [!NOTE]
 > Bu senaryo, SharePoint belge kümesi veya kitaplığı ya da Exchange bir klasör gibi düzenleme yapısı için [düzenleme kayıtları](records-management.md#records) veya varsayılan etiketler için desteklenmez. Bu senaryolar [için yayımlanmış bir bekletme etiketi ilkesi](create-apply-retention-labels.md) gerekir.

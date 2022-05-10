@@ -14,224 +14,224 @@ ms.assetid: ''
 ms.collection:
 - M365-security-compliance
 ms.custom: ''
-description: Yöneticiler, kullanıcıların karantinaya alınmış iletilerde neler yapasını denetlemek için karantina ilkelerini kullanmayı öğrenebilir.
+description: Yöneticiler, karantinaya alınan iletilere kullanıcıların yapabileceklerini denetlemek için karantina ilkelerini kullanmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 0e5f1ea75a24d84f0b6d6b9e003a0123928ac49a
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 2f24592460daa4f476e969069d0c1b7636f6a23e
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63682845"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65285554"
 ---
 # <a name="quarantine-policies"></a>Karantina ilkeleri
 
-Exchange Online Protection (EOP _) ve_ Office 365 için Microsoft Defender'daki karantina ilkeleri (daha önce karantina etiketleri olarak bilinirdi) yöneticilerin, iletinin neden karantinaya alındığına bağlı olarak kullanıcıların karantinaya alınmış iletilerde neler yapacılarını denetlemesine olanak sağlar.
+Exchange Online Protection(EOP) ve Office 365 için Microsoft Defender'de karantina ilkeleri (eski _adıyla karantina etiketleri_) yöneticilerin, iletilerin neden karantinaya alındığına bağlı olarak kullanıcıların karantinaya alınan iletileri ne yapabileceklerini denetlemesine olanak tanır.
 
-Geleneksel olarak, ileti neden karantinaya alındığına bağlı olarak kullanıcılara karantina iletileri için etkileşim düzeylerine izin verilmiş veya reddedilmiştir. Örneğin, kullanıcılar istenmeyen posta önleme filtresiyle istenmeyen posta veya toplu olarak karantinaya alınmış iletileri  görüntüp serbest bıraksa da, yüksek güveni olan kimlik avı veya kötü amaçlı yazılım olarak karantinaya alınmış iletileri görüntüden veya serbest bırakarak görüntüde bırak yayımlanan iletiler görüntüde değildir.
+Geleneksel olarak, iletinin neden karantinaya alındığına bağlı olarak, kullanıcılara karantina iletileri için etkileşim düzeyleri izin verilir veya reddedilir. Örneğin, kullanıcılar istenmeyen posta önleme filtrelemesi tarafından karantinaya alınan iletileri istenmeyen posta veya toplu olarak görüntüleyebilir ve yayımlayabilir, ancak yüksek güvenilirlikli kimlik avı veya kötü amaçlı yazılım olarak karantinaya alınan iletileri görüntüleyemez veya yayımlayamaz.
 
-Desteklenen [koruma özellikleri için](#step-2-assign-a-quarantine-policy-to-supported-features) karantina ilkeleri, kullanıcıların karantinada ve karantina bildirimleri içinde kendi iletileri (alıcıları olan iletiler) için neler yapmalarına izin verilmiyor _?_ [Karantina bildirimleri,](use-spam-notifications-to-release-and-report-quarantined-messages.md) son kullanıcı istenmeyen posta bildirimlerinin yerine gelen bildirimdir. Bu bildirimler artık karantina ilkeleriyle denetlenmektedir ve tüm desteklenen koruma özellikleri için karantinaya alınmış iletiler hakkında bilgi içerir (yalnızca istenmeyen posta önleme ilkesi ve kimlik avı koruma ilkesi kararları değil).
+[Desteklenen koruma özellikleri](#step-2-assign-a-quarantine-policy-to-supported-features) için karantina ilkeleri, kullanıcıların karantinada ve karantina _bildirimlerinde_ kendi iletilerine (alıcı oldukları iletiler) ne yapmalarına izin verileceğini belirtir. [Karantina bildirimleri](use-spam-notifications-to-release-and-report-quarantined-messages.md) , son kullanıcı istenmeyen posta bildirimlerinin yerini alır. Bu bildirimler artık karantina ilkeleri tarafından denetlenmektedir ve tüm desteklenen koruma özellikleri (yalnızca istenmeyen posta önleme ilkesi ve kimlik avı önleme ilkesi kararları) için karantinaya alınan iletiler hakkında bilgi içerir.
 
-Geçmiş kullanıcı özelliklerini zorunlu alan varsayılan karantina ilkeleri, iletileri karantinaya alan desteklenen koruma özelliklerinde eylemlere otomatik olarak atanır. Öte ya da, özel karantina ilkeleri oluşturabilir ve bunları desteklenen koruma özelliklerine atayarak kullanıcıların bu tür karantinaya alınmış ileti türlerinde belirli eylemler gerçekleştirmesine izin ve ardından bunları atabilirsiniz.
+Geçmiş kullanıcı özelliklerini zorunlu kılan varsayılan karantina ilkeleri, iletileri karantinaya alan desteklenen koruma özelliklerindeki eylemlere otomatik olarak atanır. Ya da özel karantina ilkeleri oluşturabilir ve kullanıcıların bu tür karantinaya alınmış iletilerde belirli eylemler gerçekleştirmesine izin vermek veya bunu engellemek için bunları desteklenen koruma özelliklerine atayabilirsiniz.
 
-Tek tek karantina ilkesi izinleri, aşağıdaki önceden ayarlanmış izin gruplarında bir araya alınır:
+Tek tek karantina ilkesi izinleri aşağıdaki önceden ayarlanmış izin gruplarında birleştirilir:
 
 - Erişim yok
 - Sınırlı erişim
 - Tam erişim
 
-Önceden ayarlanmış izin gruplarında bulunan tek tek karantina ilkesi izinleri aşağıdaki tabloda açıklanmıştır:
+Önceden ayarlanmış izin gruplarında yer alan tek tek karantina ilkesi izinleri aşağıdaki tabloda açıklanmıştır:
 
-|İzin|Erişim yok|Sınırlı erişim|Tam erişim|
+|Izni|Erişim yok|Sınırlı erişim|Tam erişim|
 |---|:---:|:---:|:---:|
-|**Göndereni engelleme** (_PermissionToBlockSender_)||![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|
+|**Göndereni engelle** (_PermissionToBlockSender_)||![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|
 |**Delete** (_PermissionToDelete_)||![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|
 |**Önizleme** (_PermissionToPreview_)||![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|
-|**Alıcıların iletiyi karantinadan bırakmasına izin verme** (_PermissionToRelease_)|||![Onay işareti.](../../media/checkmark.png)|
-|**Alıcıların bir iletinin karantinadan çıkarılmaz** için istekte olmasına izin verme (_PermissionToRequestRelease_)||![Onay işareti](../../media/checkmark.png)||
+|**Alıcıların karantinadan bir iletiyi serbest bırakmasına izin ver** (_PermissionToRelease_)|||![Onay işareti.](../../media/checkmark.png)|
+|**Alıcıların karantinadan çıkarılma isteğinde bulunmalarına izin ver** (_PermissionToRequestRelease_)||![Onay işareti](../../media/checkmark.png)||
 
-Varsayılan karantina ilkeleri, ilişkili izin grupları ve karantina bildirimlerinin etkin olup olmadığı aşağıdaki tabloda açıklanmıştır:
+Varsayılan karantina ilkeleri, ilişkili izin grupları ve karantina bildirimlerinin etkinleştirilip etkinleştirilmediği aşağıdaki tabloda açıklanmıştır:
 
-|Varsayılan karantina ilkesi|İzin grubu kullanıldı|Karantina bildirimleri etkinleştirilsin mi?|
+|Varsayılan karantina ilkesi|Kullanılan izin grubu|Karantina bildirimleri etkinleştirildi mi?|
 |---|---|---|
 |AdminOnlyAccessPolicy|Erişim yok|Hayır|
 |DefaultFullAccessPolicy|Tam erişim|Hayır|
 |NotificationEnabledPolicy<sup>\*</sup>|Tam erişim|Evet|
 
-Önceden ayarlanmış izin gruplarında varsayılan izinleri istemiyorsanız veya karantina bildirimlerini etkinleştirmek için özel karantina ilkeleri oluşturun ve kullanın. Her iznin ne yaptığı hakkında daha fazla bilgi için, bu [makalenin devam](#quarantine-policy-permission-details) bölümündeki Karantina ilkesi izin ayrıntıları bölümüne bakın.
+Önceden ayarlanmış izin gruplarındaki varsayılan izinleri beğenmezseniz veya karantina bildirimlerini etkinleştirmek istiyorsanız, özel karantina ilkeleri oluşturun ve kullanın. Her iznin ne yaptığı hakkında daha fazla bilgi için bu makalenin devamındaki [Karantina ilkesi izin ayrıntıları](#quarantine-policy-permission-details) bölümüne bakın.
 
-Microsoft 365 Defender portalında veya PowerShell'de (Exchange Online posta kutuları olan Microsoft 365 PowerShell için Exchange Online, EOP kuruluşlarında tek başına EOP PowerShell oluşturma ve atama Exchange Online kutularını da) kullanın.
+karantina ilkelerini Microsoft 365 Defender portalında veya PowerShell'de (Exchange Online Exchange Online posta kutularına sahip Microsoft 365 kuruluşlar için PowerShell'de; EOP kuruluşlarında tek başına EOP PowerShell'i olmadan oluşturur ve atarsınız Exchange Online posta kutuları).
 
 > [!NOTE]
-> İletilerin kullanım süresi ne kadar süre dolsa da, istenmeyen posta önleme ilkelerde İstenmeyen postayı bu kadar süre karantinada **tutma (**_KarantinaRetentionPeriod_) tarafından denetlenmeden önce karantinada tutulacak. Daha fazla bilgi için bkz. [EOP'de istenmeyen posta önleme ilkelerini yapılandırma](configure-your-spam-filter-policies.md).
+> Karantinaya alınan iletilerin süresi dolmadan önce karantinada ne kadar süre tutulduğunda, **istenmeyen postaları bu kadar gün boyunca karantinada tut** (_QuarantineRetentionPeriod_) istenmeyen posta önleme ilkeleri tarafından denetleniyor. Daha fazla bilgi için bkz. [EOP'de istenmeyen posta önleme ilkelerini yapılandırma](configure-your-spam-filter-policies.md).
 >
-> Desteklenen bir koruma özelliğine atanmış karantina ilkesi değiştirdikten sonra bu değişiklik, değişikliği yapıldıktan sonra karantinaya alınan iletileri etkiler. Daha önce bu koruma özelliği tarafından karantinaya alınmış olan iletiler yeni karantina ilkesi ataması ayarlarından etkilenmez.
+> Desteklenen bir koruma özelliğine atanan karantina ilkesini değiştirirseniz, değişiklik siz değişikliği yaptıktan _sonra_ karantinaya alınan iletileri etkiler. Daha önce bu koruma özelliği tarafından karantinaya alınan iletiler, yeni karantina ilkesi atamasının ayarlarından etkilenmez.
 
 ## <a name="full-access-permissions-and-quarantine-notifications"></a>Tam erişim izinleri ve karantina bildirimleri
 
-<sup>\*</sup> NotificationEnabledPolicy adlı karantina ilkesi her ortamda yok. Organizasyonunız aşağıdaki gereksinimlerin ikisini de karşılamıyorsa NotificationEnabledPolicy karantina ilkesine sahip olursunuz:
+<sup>\*</sup> NotificationEnabledPolicy adlı karantina ilkesi tüm ortamlarda mevcut değildir. Kuruluşunuz aşağıdaki gereksinimlerin ikisini de karşılıyorsa NotificationEnabledPolicy karantina ilkesine sahip olursunuz:
 
-- Karantina ilkesi özelliği önceden (Temmuz sonunda/Ağustos 2021'in başlarında) açıktı.
-- Son kullanıcı istenmeyen posta bildirimlerini etkinleştir ayarının açık olduğu bir veya birden çok istenmeyen posta önleme ilkesi (varsayılan istenmeyen posta önleme ilkesi  veya özel istenmeyen posta önleme ilkeleri) vardı.[](configure-your-spam-filter-policies.md)
+- Karantina ilkesi özelliği açılmadan önce kuruluşunuz mevcuttu (Temmuz sonu/Ağustos 2021'in başı).
+- Son kullanıcı [istenmeyen posta bildirimlerini](configure-your-spam-filter-policies.md) etkinleştir ayarının açık olduğu bir veya daha fazla istenmeyen posta önleme ilkeniz (varsayılan istenmeyen posta önleme ilkesi veya özel **istenmeyen posta önleme** ilkeleri) vardı.
 
-Daha önce açıklandığı gibi, istenmeyen posta önleme ilkelerini açmak veya kapatmak için kullanılan son kullanıcı istenmeyen posta bildirimlerini karantina ilkeleri içinde karantinaya alın. DefaultFullAccessPolicy adlı yerleşik karantina ilkesi, karantinaya alınmış iletiler için geçmiş  izinlerini yineler, ancak karantina  ilkesinde karantina bildirimleri açık değildir. Yerleşik ilkede değişiklik de yapılaamayacağınız için, DefaultFullAccessPolicy'de karantina bildirimlerini açasınız.
+Daha önce açıklandığı gibi, karantina ilkelerindeki karantina bildirimleri, istenmeyen posta önleme ilkelerini açmak veya kapatmak için kullandığınız son kullanıcı istenmeyen posta bildirimlerinin yerini alır. DefaultFullAccessPolicy adlı yerleşik karantina ilkesi, karantinaya alınan iletiler için geçmiş _izinleri_ yineler, ancak _karantina ilkesinde karantina bildirimleri_ açılmaz. Yerleşik ilkeyi değiştiremediğiniz için, DefaultFullAccessPolicy'de karantina bildirimlerini açamazsınız.
 
-DefaultFullAccessPolicy izinlerini sağlamak, ancak karantina bildirimleri açık durumda olmak için, buna ihtiyacı olan kuruluşlarda (son kullanıcı istenmeyen posta bildirimlerinin açık olduğu kuruluşlar) DefaultFullAccessPolicy yerine Kullanmak üzere NotificationEnabledPolicy adlı ilkeyi oluşturduk.
+DefaultFullAccessPolicy izinlerini sağlamak ancak karantina bildirimleri açık durumdayken, gerekli olan kuruluşlar (son kullanıcı istenmeyen posta bildirimlerinin açık olduğu kuruluşlar) için DefaultFullAccessPolicy yerine kullanmak üzere NotificationEnabledPolicy adlı ilkeyi oluşturduk.
 
-İstenmeyen posta önleme ilkelerde son kullanıcı istenmeyen posta bildirimlerinin hiç etkinleştirilmemiş olduğu yeni kuruluşlarda veya daha eski kuruluşlarda, NotificationEnabledPolicy adlı karantina ilkesi olmayacaktır. Karantina bildirimlerini açmanın yolu, karantina bildirimlerinin açık olduğu özel karantina ilkeleri oluşturmak ve kullanmaktır.
+İstenmeyen posta önleme ilkelerinde son kullanıcı istenmeyen posta bildirimleri etkinleştirilmemiş olan yeni kuruluşlar veya eski kuruluşlar için NotificationEnabledPolicy adlı karantina ilkesine sahip olmazsınız. Karantina bildirimlerini açmanın yolu, karantina bildirimlerinin açık olduğu özel karantina ilkeleri oluşturmak ve kullanmaktır.
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Başlamadan önce bilmeniz gerekenler
 
-- Microsoft 365 Defender portalını açın<https://security.microsoft.com>. Doğrudan Karantina ilkeleri **sayfasına gitmek için** , kullanın <https://security.microsoft.com/quarantinePolicies>.
+- Microsoft 365 Defender portalını adresinde <https://security.microsoft.com>açarsınız. **Doğrudan Karantina ilkeleri** sayfasına gitmek için kullanın<https://security.microsoft.com/quarantinePolicies>.
 
-- Exchange Online PowerShell'e bağlanmak [için bkz. Bağlan PowerShell Exchange Online e bağlama](/powershell/exchange/connect-to-exchange-online-powershell). Tek başına EOP PowerShell'e bağlanmak [için bkz. Bağlan PowerShell Exchange Online Protection e bağlama](/powershell/exchange/connect-to-exchange-online-protection-powershell).
+- Exchange Online PowerShell'e bağlanmak için bkz. [PowerShell'Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell). Tek başına EOP PowerShell'e bağlanmak için bkz. [PowerShell'i Exchange Online Protection için Bağlan](/powershell/exchange/connect-to-exchange-online-protection-powershell).
 
-- Karantina ilkelerini görüntülemek, oluşturmak, değiştirmek veya kaldırmak için, Microsoft 365 Defender portalında Kuruluş **Yönetimi, Güvenlik** Yöneticisi veya Karantina Yöneticisi rollerinin üyesi Microsoft 365 Defender gerekir.  Daha fazla bilgi için bkz[. Microsoft 365 Defender portalına.](permissions-microsoft-365-security-center.md)
+- Karantina ilkelerini görüntülemek, oluşturmak, değiştirmek veya kaldırmak için, Microsoft 365 Defender portalında **Kuruluş Yönetimi**, **Güvenlik Yöneticisi** veya **Karantina Yöneticisi** rollerinin üyesi olmanız gerekir. Daha fazla bilgi için bkz. [Microsoft 365 Defender portalında İzinler](permissions-microsoft-365-security-center.md).
 
-## <a name="step-1-create-quarantine-policies-in-the-microsoft-365-defender-portal"></a>1. Adım: İlke portalında karantina Microsoft 365 Defender oluşturma
+## <a name="step-1-create-quarantine-policies-in-the-microsoft-365-defender-portal"></a>1. Adım: Microsoft 365 Defender portalında karantina ilkeleri oluşturma
 
-1. Microsoft 365 Defender [portalında, Kurallar](https://security.microsoft.com) bölümündeki **&-posta** \> ve işbirliği **& Kuralları** \> **Tehdit** \> ilkeleri **Karantina** **ilkeleri'ne** gidin.
+1. [Microsoft 365 Defender portalında](https://security.microsoft.com), **Kurallar** bölümündeki **E-posta & işbirliği** \> **İlkeleri & Kurallar** \> **Tehdit ilkeleri** **Karantina ilkeleri'ne** \> gidin. Veya doğrudan **Karantina ilkeleri** sayfasına gitmek için kullanın <https://security.microsoft.com/quarantinePolicies>.
 
-2. Karantina ilkesi **sayfasında Özel** ilke ekle simgesine ![tıklayın.](../../media/m365-cc-sc-create-icon.png) **Özel ilke ekleyin**.
+2. **Karantina ilkeleri** sayfasında Özel ilke ekle simgesine tıklayın![.](../../media/m365-cc-sc-create-icon.png) **Özel ilke ekleyin**.
 
-3. Yeni **ilke sihirbazı** açılır. İlke **adı sayfasında** , İlke adı kutusuna kısa ama benzersiz **bir ad** girin. Önümüzdeki adımlarda, karantina ilkesi tanımlamanız ve adla seçmeniz gerekir. Bitirdikten sonra, Sonraki'ne **tıklayın**.
+3. **Yeni ilke** sihirbazı açılır. **İlke adı** sayfasında, **İlke** adı kutusuna kısa ama benzersiz bir ad girin. Önümüzdeki adımlarda karantina ilkesini ada göre tanımlamanız ve seçmeniz gerekir. İşiniz bittiğinde **İleri'ye** tıklayın.
 
-4. Alıcı **iletisi erişimi sayfasında** , aşağıdaki değerlerden birini seçin:
-   - **Sınırlı erişim**: Bu izin grubuna tek tek izinler bu makalenin önceki sayfalarında açıklanmıştır.
-   - **Özel erişim ayarlama (Gelişmiş)**: Özel izinler belirtmek için bu değeri kullanın. Aşağıdaki ayarları yapılandırarak görünür:
-     - **Sürüm eylemi tercihini** seçin: Aşağıdaki değerlerden birini seçin:
-       - Boş: Bu, varsayılan değerdir.
-       - **Alıcıların iletiyi karantinadan bırakmasına izin ver**
-       - **Alıcıların bir iletinin karantinadan çıkarılım için istekte olmasına izin ver**
-     - **Alıcıların karantinaya alınmış iletilere ek eylemleri seçme**: Aşağıdaki değerlerden birini, hiçbirini veya hiçbirini seçme:
+4. **Alıcı iletisi erişimi** sayfasında aşağıdaki değerlerden birini seçin:
+   - **Sınırlı erişim**: Bu izin grubuna dahil edilen tek tek izinler bu makalenin başlarında açıklanmıştır.
+   - **Belirli erişimi ayarlama (Gelişmiş)**: Özel izinleri belirtmek için bu değeri kullanın. Görüntülenen aşağıdaki ayarları yapılandırın:
+     - **Yayın eylemi tercihini seçin**: Aşağıdaki değerlerden birini seçin:
+       - Boş: Bu varsayılan değerdir.
+       - **Alıcıların karantinadan bir iletiyi serbest bırakmasına izin verme**
+       - **Alıcıların karantinadan çıkarılma isteğinde bulunmalarına izin ver**
+     - **Alıcıların karantinaya alınan iletilerde gerçekleştirebileceği ek eylemleri seçin**: Aşağıdaki değerlerden bazılarını, tümünü veya hiçbirini seçin:
        - **Silme**
        - **Önizleme**
        - **Göndereni engelle**
 
-   Bu izinler ve karantinaya alınmış iletiler üzerindeki etkisi ve karantina bildirimlerinin içinde, bu makalenin sonraki [kısımlarında Karantina ilkesi](#quarantine-policy-permission-details) izin ayrıntıları bölümünde açıklanmıştır.
+   Bu izinler ve bunların karantinaya alınan iletiler ve karantina bildirimleri üzerindeki etkisi, bu makalenin devamındaki [Karantina ilkesi izin ayrıntıları](#quarantine-policy-permission-details) bölümünde açıklanmaktadır.
 
-   Bitirdikten sonra, Sonraki'ne **tıklayın**.
+   İşiniz bittiğinde **İleri'ye** tıklayın.
 
-5. Son kullanıcı **istenmeyen posta bildirimi sayfasında**, karantina bildirimlerini  (eski adı son kullanıcı istenmeyen posta bildirimleri) etkinleştirmek için Etkinleştir'i seçin. Bitirdikten sonra, Sonraki'ne **tıklayın**.
+5. **Son kullanıcı istenmeyen posta bildirimi** sayfasında, karantina bildirimlerini (eski adıyla son kullanıcı istenmeyen posta bildirimleri) etkinleştirmek için **Etkinleştir'i** seçin. İşiniz bittiğinde **İleri'ye** tıklayın.
 
    > [!NOTE]
-   > Daha önce de belirtildiği gibi, yerleşik ilkeler (AdminOnlyAccessPolicy veya DefaultFullAccessPolicy) karantinaya alınmış bildirimler açık değildir ve ilkeleri değiştiremezsiniz.
+   > Daha önce açıklandığı gibi, yerleşik ilkelerde (AdminOnlyAccessPolicy veya DefaultFullAccessPolicy) karantinaya alınmış bildirimler açık değildir ve ilkeleri değiştiremezsiniz.
 
-6. **İlkeyi gözden geçir** sayfasında ayarlarınızı gözden geçirebilirsiniz. Bölümün içindeki **ayarları değiştirmek** için her bölümde Düzenle'yi seçebilirsiniz. Geri'ye **tıklar** veya sihirbazda belirli bir sayfayı seçersiniz.
+6. **İlkeyi gözden geçir** sayfasında ayarlarınızı gözden geçirin. Bölümün içindeki ayarları değiştirmek için her bölümde **Düzenle'yi** seçebilirsiniz. Ya da **Geri'ye** tıklayabilir veya sihirbazdaki belirli bir sayfayı seçebilirsiniz.
 
-   Bitirdikten sonra Gönder'e **tıklayın**.
+   İşiniz bittiğinde **Gönder'e** tıklayın.
 
-7. Görüntülenen onay sayfasında Bitti'ye **tıklayın**.
+7. Görüntülenen onay sayfasında **Bitti'ye** tıklayın.
 
-Artık, Adım 2 bölümünde açıklandığı gibi karantina ilkesine karantina özelliği [atamaya hazırsınız](#step-2-assign-a-quarantine-policy-to-supported-features) .
+Artık [2. Adım](#step-2-assign-a-quarantine-policy-to-supported-features) bölümünde açıklandığı gibi karantina ilkesini bir karantina özelliğine atamaya hazırsınız.
 
 ### <a name="create-quarantine-policies-in-powershell"></a>PowerShell'de karantina ilkeleri oluşturma
 
-Karantina ilkeleri oluşturmak için PowerShell kullanmayı tercih ediyorsanız, PowerShell'Exchange Online veya PowerShell Exchange Online Protection e bağlanın ve **New-QuarantinePolicy** cmdlet'ini kullanın.
+Karantina ilkeleri oluşturmak için PowerShell'i kullanmayı tercih ederseniz, Exchange Online PowerShell'e bağlanın veya PowerShell'i Exchange Online Protection ve **New-QuarantinePolicy cmdlet'ini** kullanın.
 
 > [!NOTE]
-> _ESNEnabled_ parametresini ve değerini kullansanız bile`$true`, karantina bildirimleri kapalıdır.
+> _ESNEnabled_ parametresini ve değerini `$true`kullanmıyorsanız karantina bildirimleri kapatılır.
 
 #### <a name="use-the-enduserquarantinepermissionsvalue-parameter"></a>EndUserQuarantinePermissionsValue parametresini kullanma
 
-_EndUserQuarantinePermissionsValue parametresini_ kullanarak bir karantina ilkesi oluşturmak için, aşağıdaki söz dizimi kullanın:
+_EndUserQuarantinePermissionsValue_ parametresini kullanarak karantina ilkesi oluşturmak için aşağıdaki söz dizimini kullanın:
 
 ```powershell
 New-QuarantinePolicy -Name "<UniqueName>" -EndUserQuarantinePermissionsValue <0 to 236> [-EsnEnabled $true]
 ```
 
-_EndUserQuarantinePermissionsValue_ parametresi, ikili değerden dönüştürülen bir ondalık değer kullanır. İkili değer, kullanılabilir son kullanıcı karantina izinlerine belirli bir sırada karşılık gelen değerdir. Her izin için 1 değeri Doğru'ya ve 0 değeri de Yanlış'a eşittir.
+_EndUserQuarantinePermissionsValue_ parametresi, ikili değerden dönüştürülen bir ondalık değer kullanır. İkili değer, belirli bir sırada kullanılabilir son kullanıcı karantina izinlerine karşılık gelir. Her izin için 1 değeri True, 0 değeri ise False değerine eşittir.
 
-Tek tek her izin için gereken sıra ve değerler aşağıdaki tabloda açıklanmıştır:
+Her bir izin için gerekli sıra ve değerler aşağıdaki tabloda açıklanmıştır:
 
-|İzin|Ondalık değer|İkili değer|
+|Izni|Ondalık değer|İkili değer|
 |---|:---:|:---:|
 |PermissionToViewHeader<sup>\*</sup>|128|10000000|
 |PermissionToDownload<sup>\*\*</sup>|64|01000000|
 |PermissionToAllowSender<sup>\*\*</sup>|32|00100000|
-|PermissionToBlocksender|16|00010000|
+|PermissionToBlockSender|16|00010000|
 |PermissionToRequestRelease<sup>\*\*\*</sup>|8|00001000|
 |PermissionToRelease<sup>\*\*\*</sup>|4|00000100|
 |PermissionToPreview|2|00000010|
 |PermissionToDelete|1|00000001|
 
-<sup>\*</sup>0 değeri, karantinaya alınmış iletinin ayrıntılarında İleti üstbilgilerini görüntüle düğmesini gizlemez (düğme her zaman kullanılabilir).
+<sup>\*</sup> 0 değeri, karantinaya alınan **iletinin ayrıntılarında İleti üst bilgisini görüntüle** düğmesini gizlemez (düğme her zaman kullanılabilir).
 
-<sup>\*\*</sup> Bu ayar kullanılmaz (0 veya 1 değeri hiçbir şey yapar).
+<sup>\*\*</sup> Bu ayar kullanılmaz (0 veya 1 değeri hiçbir şey yapmaz).
 
-<sup>\*\*\*</sup> Bu değerlerin ikisini de 1 olarak ayarlayın. Birini 1,0 olarak ayarlayın veya her ikisini de 0 olarak ayarlayın.
+<sup>\*\*\*</sup> Bu değerlerin ikisini de 1 olarak ayarlamayın. Birini 1, diğerini 0 olarak veya her ikisini de 0 olarak ayarlayın.
 
-Sınırlı erişim izinleri için gerekli değerler:
+Sınırlı erişim izinleri için gerekli değerler şunlardır:
 
-|İzin|Sınırlı erişim|
+|Izni|Sınırlı erişim|
 |---|:--:|
 |PermissionToViewHeader|0|
 |PermissionToDownload|0|
 |PermissionToAllowSender|0|
-|PermissionToBlocksender|1|
+|PermissionToBlockSender|1|
 |PermissionToRequestRelease|1|
 |PermissionToRelease|0|
 |PermissionToPreview|1|
 |PermissionToDelete|1|
 |İkili değer|00011011|
-|Ondalık değer|27|
+|Kullanılacak ondalık değer|27|
 
-Bu örnek, önceki tabloda açıklandığı gibi Sınırlı erişim izinlerini ataan karantina bildirimleri açık olarak Sınırlı Erişim adlı yeni bir karantina ilkesi oluşturur.
+Bu örnek, önceki tabloda açıklandığı gibi Sınırlı erişim izinlerini atayan karantina bildirimlerinin açık olduğu LimitedAccess adlı yeni bir karantina ilkesi oluşturur.
 
 ```powershell
 New-QuarantinePolicy -Name LimitedAccess -EndUserQuarantinePermissionsValue 27 -EsnEnabled $true
 ```
 
-Özel izinler için, istediğiniz izinlere karşılık gelen ikili değeri almak için önceki tabloyu kullanın. İkili değeri ondalık değere dönüştürin ve _EndUserQuarantinePermissionsValue parametresi için ondalık değeri_ kullanın. Parametre değeri için ikili değeri kullanmayın.
+Özel izinler için, istediğiniz izinlere karşılık gelen ikili değeri almak için önceki tabloyu kullanın. İkili değeri ondalık değere dönüştürün ve _EndUserQuarantinePermissionsValue_ parametresi için ondalık değeri kullanın. Parametre değeri için ikili değeri kullanmayın.
 
-Ayrıntılı söz dizimi ve parametre bilgileri için bkz [. New-QuarantinePolicy](/powershell/module/exchange/new-quarantinepolicy).
+Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [New-QuarantinePolicy](/powershell/module/exchange/new-quarantinepolicy).
 
 ## <a name="step-2-assign-a-quarantine-policy-to-supported-features"></a>2. Adım: Desteklenen özelliklere karantina ilkesi atama
 
-_E-posta iletilerini_ karantinaya alan desteklenen koruma özelliklerinde, kullanılabilir karantina eylemlerine karantina ilkesi atabilirsiniz. İletileri karantinaya alan özellikler ve karantina ilkelerinin kullanılabilirliği aşağıdaki tabloda açıklanmıştır:
+E-posta iletilerini karantinaya alan _desteklenen_ koruma özelliklerinde, kullanılabilir karantina eylemlerine bir karantina ilkesi atayabilirsiniz. İletileri karantinaya alan özellikler ve karantina ilkelerinin kullanılabilirliği aşağıdaki tabloda açıklanmıştır:
 
-|Özellik|Karantina ilkeleri destekli mi?|Kullanılan varsayılan karantina ilkeleri|
+|Özellik|Karantina ilkeleri destekleniyor mu?|Kullanılan varsayılan karantina ilkeleri|
 |---|:---:|---|
-|[İstenmeyen posta önleme ilkeleri](configure-your-spam-filter-policies.md): <ul><li>**İstenmeyen** Posta (_spamAction_)</li><li>**Yüksek güven istenmeyen** posta (_HighConfidenceSpamAction_)</li><li>**Kimlik Avı** (_PhishSpamAction_)</li><li>**Yüksek güven kimlik avı** (_HighConfidencePhishAction_)</li><li>**Toplu** (_BulkSpamAction_)</li></ul>|Evet|<ul><li>DefaultFullAccessPolicy<sup>\*</sup> (Tam erişim)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (Tam erişim)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (Tam erişim)</li><li>AdminOnlyAccessPolicy (erişim yok)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (Tam erişim)</li></ul>|
-|Kimlik avı önleme ilkeleri: <ul><li>[Kimliksiz zeka koruması](set-up-anti-phishing-policies.md#spoof-settings) (_AuthenticationFailAction_)</li><li>[Office 365 için Defender'da kimliğe bürünme koruması](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365):<ul><li>**İleti kimliğine bürünülen bir kullanıcı olarak algılanırsa** (_TargetedUserProtectionAction_)</li><li>**İleti kimliğine bürünülen bir etki alanı** olarak algılanırsa (_TargetedDomainProtectionAction_)</li><li>**Posta kutusu zekası kimliğine bürünülen kullanıcı algılarsa** (_MailboxIntelligenceProtectionAction_)</li></ul></li></ul>|Evet|<ul><li>DefaultFullAccessPolicy<sup>\*</sup> (Tam erişim)</li><li>Kimliğe bürünme koruması:<ul><li>DefaultFullAccessPolicy<sup>\*</sup> (Tam erişim)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (Tam erişim)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (Tam erişim)</li></ul></li></ul>|
-|[Kötü amaçlı yazılımdan koruma](configure-anti-malware-policies.md) ilkeleri: Tüm algılanan iletiler her zaman karantinaya alınır.|Evet|AdminOnlyAccessPolicy (erişim yok)|
-|[Kasa Korumasını Koruma](safe-attachments.md): <ul><li>Ekleri olan ve Ek ilkeleri (Etkinleştir ve Eylem) tarafından kötü amaçlı yazılım Kasa _e-posta_ _iletileri_</li><li>E-posta, OneDrive ve [Kasa Ekleri SharePoint tarafından kötü amaçlı yazılım olarak karantinaya Microsoft Teams](mdo-for-spo-odb-and-teams.md)</li></ul>|<ul><li>Evet</li><li>Hayır</li></ul>|<ul><li>AdminOnlyAccessPolicy (erişim yok)</li><li>yok</li></ul>|
-|[Eylemle birlikte](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) posta akışı kuralları (aktarım kuralları olarak da bilinir): **İletiyi** barındırılan karantinaya (Karantina) _teslim._|Hayır|yok|
+|[İstenmeyen posta önleme ilkeleri](configure-your-spam-filter-policies.md): <ul><li>**İstenmeyen Posta** (_İstenmeyen Posta)_</li><li>**Yüksek güvenilirlikli istenmeyen posta** (_HighConfidenceSpamAction_)</li><li>**Kimlik Avı** (_PhishSpamAction_)</li><li>**Yüksek güvenilirlikli kimlik avı** (_HighConfidencePhishAction_)</li><li>**Toplu** (_BulkSpamAction_)</li></ul>|Evet|<ul><li>DefaultFullAccessPolicy<sup>\*</sup> (Tam erişim)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (Tam erişim)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (Tam erişim)</li><li>AdminOnlyAccessPolicy (Erişim yok)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (Tam erişim)</li></ul>|
+|Kimlik avı önleme ilkeleri: <ul><li>[Kimlik sahtekarlığına karşı koruma](set-up-anti-phishing-policies.md#spoof-settings) (_AuthenticationFailAction_)</li><li>[Office 365 için Defender kimliğe bürünme koruması](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365):<ul><li>**İleti kimliğine bürünülmüş bir kullanıcı olarak algılanırsa** (_TargetedUserProtectionAction_)</li><li>**İleti kimliğine bürünülen bir etki alanı olarak algılanırsa** (_TargetedDomainProtectionAction_)</li><li>**Posta kutusu zekası kullanıcı algılarsa ve kimliğine bürünüldüyse** (_MailboxIntelligenceProtectionAction_)</li></ul></li></ul>|Evet|<ul><li>DefaultFullAccessPolicy<sup>\*</sup> (Tam erişim)</li><li>Kimliğe bürünme koruması:<ul><li>DefaultFullAccessPolicy<sup>\*</sup> (Tam erişim)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (Tam erişim)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (Tam erişim)</li></ul></li></ul>|
+|[Kötü amaçlı yazılımdan koruma ilkeleri](configure-anti-malware-policies.md): Algılanan tüm iletiler her zaman karantinaya alınır.|Evet|AdminOnlyAccessPolicy (Erişim yok)|
+|[Kasa Ekler koruması](safe-attachments.md): <ul><li>Kasa Ekler ilkeleri (_Etkinleştir_ ve _Eylem_) tarafından kötü amaçlı yazılım olarak karantinaya alınan ekleri içeren e-posta iletileri</li><li>[SharePoint, OneDrive ve Microsoft Teams için Kasa Ekleri](mdo-for-spo-odb-and-teams.md) tarafından kötü amaçlı yazılım olarak karantinaya alınan dosyalar</li></ul>|<ul><li>Evet</li><li>Hayır</li></ul>|<ul><li>AdminOnlyAccessPolicy (Erişim yok)</li><li>yok</li></ul>|
+|[Posta akışı kuralları](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) (taşıma kuralları olarak da bilinir) eylemiyle birlikte: **İletiyi barındırılan karantinaya (** Karantina) teslim _edin_.|Hayır|yok|
 
-<sup>\*</sup> Bu [makalede daha önce açıklandığı gibi](#full-access-permissions-and-quarantine-notifications), kuruluşta DefaultFullAccessPolicy yerine NotificationEnabledPolicy kullanılabilir. Bu iki karantina ilkeleri arasındaki tek fark, NotificationEnabledPolicy'de karantina bildirimlerinin açılabilir ve DefaultFullAccessPolicy'de kapatılabilir.
+<sup>\*</sup>[Bu makalede daha önce açıklandığı](#full-access-permissions-and-quarantine-notifications) gibi, kuruluşunuz DefaultFullAccessPolicy yerine NotificationEnabledPolicy kullanabilir. Bu iki karantina ilkesi arasındaki tek fark, karantina bildirimlerinin NotificationEnabledPolicy'de açılması ve DefaultFullAccessPolicy'de kapatılmasıdır.
 
-Varsayılan karantina ilkeleri, önceden ayarlanmış izin grupları ve izinler bu makalenin başında ve sonraki [makalesinde açıklanmıştır](#preset-permissions-groups).[](#quarantine-policies)
+Varsayılan karantina ilkeleri, önceden ayarlanmış izin grupları ve izinler [bu makalenin başında](#quarantine-policies) ve [bu makalenin sonraki bölümlerinde](#preset-permissions-groups) açıklanmıştır.
 
 > [!NOTE]
-> Varsayılan karantina ilkeleri tarafından sağlanan (veya sağlanmaz) varsayılan son kullanıcı izinlerini ve karantina bildirimlerini memnunsanız, bir şey yapmaya gerek yok. Kullanıcı karantinaya alınmış iletiler için son kullanıcı özellikleri (kullanılabilir düğmeler) eklemek veya kaldırmak ya da karantina bildirimlerini etkinleştirmek ve karantina bildirimlerine aynı özellikleri eklemek veya kaldırmak için, karantina eylemine farklı bir karantina ilkesi atabilirsiniz.
+> Varsayılan karantina ilkeleri tarafından sağlanan (veya sağlanmayan) varsayılan son kullanıcı izinlerinden ve karantina bildirimlerinden memnunsanız, hiçbir şey yapmanız gerekmez. Kullanıcının karantinaya alınan iletileri için son kullanıcı özelliklerini (kullanılabilir düğmeler) eklemek veya kaldırmak ya da karantina bildirimlerini etkinleştirmek ve karantina bildirimlerinde aynı özellikleri eklemek veya kaldırmak istiyorsanız, karantina eylemine farklı bir karantina ilkesi atayabilirsiniz.
 
 ## <a name="assign-quarantine-policies-in-supported-policies-in-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalında desteklenen ilkelerde karantina ilkeleri atama
 
 ### <a name="anti-spam-policies"></a>İstenmeyen posta önleme ilkeleri
 
-1. Microsoft 365 Defender [portalında](https://security.microsoft.com), İlkeler **bölümünde** \> E-& işbirliği **& kuralları** \> \> Tehdit ilkeleri **İstenmeyen** postayla mücadele **bölümüne** gidin.
+1. [Microsoft 365 Defender portalında](https://security.microsoft.com), **İlkeler** bölümünde **e-posta & işbirliği** \> **İlkeleri & kuralları** \> **Tehdit ilkeleri** \> **İstenmeyen posta önleme** bölümüne gidin.
 
-   Veya doğrudan **ant-spam ilkeleri sayfasına gitmek için** , kullanın <https://security.microsoft.com/antispam>.
+   Veya doğrudan **Ant-istenmeyen posta ilkeleri** sayfasına gitmek için kullanın <https://security.microsoft.com/antispam>.
 
-2. **İstenmeyen posta önleme ilkeleri** sayfasında, aşağıdaki adımlardan birini uygulayın:
-   - Var olan bir istenmeyen posta **önleme ilkesi bulun** ve seçin.
-   - Yeni bir istenmeyen **posta önleme** ilkesi oluşturun.
+2. **İstenmeyen posta önleme ilkeleri** sayfasında aşağıdaki adımlardan birini yapın:
+   - Mevcut **bir gelen** istenmeyen posta önleme ilkesini bulun ve seçin.
+   - Yeni bir **gelen** istenmeyen posta önleme ilkesi oluşturun.
 
 3. Aşağıdaki adımlardan birini yapın:
-   - **Var olanı** düzenle: İlkenin adına tıklayarak ilkeyi seçin. İlke ayrıntıları uç bilgisinde Eylemler bölümüne **gidin ve Eylemleri** **düzenle'ye tıklayın**.
-   - **Yeni oluştur**: Yeni ilke sihirbazında Eylemler **sayfasına** gidin.
+   - **Var olanı düzenle**: İlkenin adına tıklayarak ilkeyi seçin. İlke ayrıntıları açılır öğesinde Eylemler bölümüne gidin ve **Eylemleri** **düzenle'ye** tıklayın.
+   - **Yeni oluştur**: Yeni ilke sihirbazında **Eylemler** sayfasına gidin.
 
-4. Eylemler **sayfasında**, Karantina ileti eylemine sahip olan her  kararda, ilgili karantina ilkesi seçmeniz  için Karantinayı seç ilke kutusu da olur.
+4. **Eylemler** sayfasında, **Karantina iletisi** eylemine sahip olan her kararda, karşılık gelen **bir karantina ilkesini seçmeniz için Karantina ilkesi seç** kutusu da bulunur.
 
-   **Not**: Yeni bir ilke seniz, boş bir Karantina ilkesi  seçin değeri, bu karar için varsayılan karantina ilkesi olduğunu gösterir. İlkeyi daha sonra düzenleyseniz, boş değerlerin yerini önceki tabloda açıklandığı gibi asıl varsayılan karantina ilkesi adları alır.
+   **Not**: Yeni bir ilke oluşturduğunuzda, boş bir **Karantina ilkesi seçin** değeri, bu karar için varsayılan karantina ilkesinin kullanıldığını gösterir. İlkeyi daha sonra düzenlediğinizde, boş değerler önceki tabloda açıklandığı gibi gerçek varsayılan karantina ilkesi adlarıyla değiştirilir.
 
-   ![İstenmeyen posta önleme ilkesinde ilke seçimlerini karantinaya alın.](../../media/quarantine-tags-in-anti-spam-policies.png)
+   :::image type="content" source="../../media/quarantine-tags-in-anti-spam-policies.png" alt-text="İstenmeyen posta önleme ilkesindeki Karantina ilkesi seçimleri" lightbox="../../media/quarantine-tags-in-anti-spam-policies.png":::
 
-İstenmeyen posta önleme ilkelerini oluşturma ve değiştirme yönergelerinin tam yönergeleri [EOP'de istenmeyen posta önleme ilkelerini yapılandırma konusunda açıklanmıştır](configure-your-spam-filter-policies.md).
+İstenmeyen posta önleme ilkelerini oluşturmaya ve değiştirmeye yönelik tüm yönergeler [EOP'de istenmeyen posta önleme ilkelerini yapılandırma başlığı altında](configure-your-spam-filter-policies.md) açıklanmıştır.
 
 #### <a name="anti-spam-policies-in-powershell"></a>PowerShell'de istenmeyen posta önleme ilkeleri
 
-İstenmeyen posta önleme ilkelerde karantina ilkeleri atamak için PowerShell kullanmayı tercih ediyorsanız, Exchange Online PowerShell'e veya PowerShell'Exchange Online Protection aşağıdaki söz dizimlerini kullanın:
+İstenmeyen posta önleme ilkelerine karantina ilkeleri atamak için PowerShell'i kullanmayı tercih ediyorsanız, Exchange Online PowerShell'e bağlanın veya PowerShell'i Exchange Online Protection ve aşağıdaki söz dizimini kullanın:
 
 ```powershell
 <New-HostedContentFilterPolicy -Name "<Unique name>" | Set-HostedContentFilterPolicy -Identity "<Policy name>"> [-SpamAction Quarantine] [-SpamQuarantineTag <QuarantineTagName>] [-HighConfidenceSpamAction Quarantine] [-HighConfidenceSpamQuarantineTag <QuarantineTagName>] [-PhishSpamAction Quarantine] [-PhishQuarantineTag <QuarantineTagName>] [-HighConfidencePhishQuarantineTag <QuarantineTagName>] [-BulkSpamAction Quarantine] [-BulkQuarantineTag <QuarantineTagName>] ...
@@ -239,26 +239,26 @@ Varsayılan karantina ilkeleri, önceden ayarlanmış izin grupları ve izinler 
 
 **Notlar**:
 
-- _PhishSpamAction_ ve _HighConfidencePhishAction_ parametrelerinin varsayılan değeri Karantina'dır, dolayısıyla PowerShell'de yeni istenmeyen posta filtresi ilkeleri irken bu parametreleri kullanmak zorunda değildir. Yeni veya var olan istenmeyen posta önleme ilkeleri içinde _SpamAction_, _HighConfidenceSpamAction_ ve _BulkSpamAction_ parametrelerinde, karantina ilkesi ancak değer Karantina ise geçerli olur.
+- _PhishSpamAction_ ve _HighConfidencePhishAction parametrelerinin_ varsayılan değeri Karantina'dır, bu nedenle PowerShell'de yeni istenmeyen posta filtresi ilkeleri oluştururken bu parametreleri kullanmanız gerekmez. Yeni veya mevcut istenmeyen posta önleme ilkelerinde _SpamAction_, _HighConfidenceSpamAction_ ve _BulkSpamAction_ parametreleri için, karantina ilkesi yalnızca değer Karantina olduğunda geçerlidir.
 
-  Var olan istenmeyen posta önleme ilkelerde önemli parametre değerlerini görmek için, aşağıdaki komutu çalıştırın:
+  Mevcut istenmeyen posta önleme ilkelerindeki önemli parametre değerlerini görmek için aşağıdaki komutu çalıştırın:
 
   ```powershell
   Get-HostedContentFilterPolicy | Format-List Name,*SpamAction,HighConfidencePhishAction,*QuarantineTag
   ```
 
-  Varsayılan eylem değerleri ve Standart ve Katı için önerilen eylem değerleri hakkında bilgi için bkz. [EOP istenmeyen posta önleme ilkesi ayarları](recommended-settings-for-eop-and-office365.md#eop-anti-spam-policy-settings).
+  Standart ve Katı için varsayılan eylem değerleri ve önerilen eylem değerleri hakkında bilgi için bkz. [EOP istenmeyen posta önleme ilkesi ayarları](recommended-settings-for-eop-and-office365.md#eop-anti-spam-policy-settings).
 
-- Yeni istenmeyen posta önleme ilkeleri musunuz? İstenmeyen posta filtreleme kararını ilgili karantina ilkesi parametresi olmadan almak, bu karar [](#step-2-assign-a-quarantine-policy-to-supported-features) için varsayılan karantina ilkesi anlamına gelir.
+- Yeni istenmeyen posta önleme ilkeleri oluşturduğunuzda, buna karşılık gelen karantina ilkesi parametresi olmayan bir istenmeyen posta filtreleme kararı, bu karar için [varsayılan karantina ilkesinin](#step-2-assign-a-quarantine-policy-to-supported-features) kullanıldığı anlamına gelir.
 
-  Yalnızca, belirli istenmeyen posta filtreleme kararının karantinaya alınmış iletilerde varsayılan son kullanıcı özelliklerini değiştirmek istemeniz gerekir.
+  Varsayılan karantina ilkesini özel bir karantina ilkesiyle değiştirmeniz gerekir, ancak belirli bir istenmeyen posta filtreleme kararı için karantinaya alınan iletilerde varsayılan son kullanıcı özelliklerini değiştirmek istersiniz.
 
-- PowerShell'de yeni istenmeyen posta önleme ilkesi **, New-HostedContentFilterPolicy cmdlet'ini ve New-HostedContentFilterRule** cmdlet'ini kullanan bir istenmeyen posta filtresi ilkesi (ayarlar) ve **new-HostedContentFilterRule** cmdlet'ini kullanarak özel kullanım istenmeyen posta filtresi kuralı (alıcı filtreleri) gerektirir. Yönergeler için bkz [. PowerShell kullanarak istenmeyen posta önleme ilkeleri oluşturma](configure-your-spam-filter-policies.md#use-powershell-to-create-anti-spam-policies).
+- PowerShell'de yeni bir istenmeyen posta önleme ilkesi, **New-HostedContentFilterPolicy** cmdlet'ini kullanan bir istenmeyen posta filtresi ilkesi (ayarlar) ve **New-HostedContentFilterRule** cmdlet'ini kullanan özel istenmeyen posta filtresi kuralı (alıcı filtreleri) gerektirir. Yönergeler için bkz. [İstenmeyen posta önleme ilkeleri oluşturmak için PowerShell kullanma](configure-your-spam-filter-policies.md#use-powershell-to-create-anti-spam-policies).
 
-Bu örnekte, Research Department adlı yeni bir istenmeyen posta filtresi ilkesi aşağıdaki ayarlarla oluşturur:
+Bu örnek, aşağıdaki ayarlarla Araştırma Bölümü adlı yeni bir istenmeyen posta filtresi ilkesi oluşturur:
 
-- Tüm istenmeyen posta filtreleme kararlarını içeren eylem Karantina'ya ayarlanır.
-- Hiçbir erişim izni atamamış olan NoAccess adlı özel  karantina ilkesi, varsayılan olarak Erişim izni yok atamayacağınız tüm varsayılan **karantina ilkelerinin** yerini almaktadır.
+- Tüm istenmeyen posta filtreleme kararlarının eylemi Karantina olarak ayarlanır.
+- **Erişim izni yok** atayan NoAccess adlı özel karantina ilkesi, varsayılan olarak Erişim izni **yok** atamayan varsayılan karantina ilkelerinin yerini alır.
 
 ```powershell
 New-HostedContentFilterPolicy -Name "Research Department" -SpamAction Quarantine -SpamQuarantineTag NoAccess -HighConfidenceSpamAction Quarantine -HighConfidenceSpamQuarantineTag NoAction -PhishSpamAction Quarantine -PhishQuarantineTag NoAction -BulkSpamAction Quarantine -BulkQuarantineTag NoAccess
@@ -266,7 +266,7 @@ New-HostedContentFilterPolicy -Name "Research Department" -SpamAction Quarantine
 
 Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [New-HostedContentFilterPolicy](/powershell/module/exchange/new-hostedcontentfilterpolicy).
 
-Bu örnekte, İnsan Kaynakları adlı mevcut istenmeyen posta filtresi ilkesinde değişiklik yapılan bir değişiklik vardır. İstenmeyen posta karantina kararının eylemi Karantina olarak ayarlanır ve NoAccess adlı özel karantina ilkesi atanır.
+Bu örnek, İnsan Kaynakları adlı mevcut istenmeyen posta filtresi ilkesini değiştirir. İstenmeyen posta karantina kararı için eylem Karantina olarak ayarlanır ve NoAccess adlı özel karantina ilkesi atanır.
 
 ```powershell
 Set-HostedContentFilterPolicy -Identity "Human Resources" -SpamAction Quarantine -SpamQuarantineTag NoAccess
@@ -274,47 +274,47 @@ Set-HostedContentFilterPolicy -Identity "Human Resources" -SpamAction Quarantine
 
 Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [Set-HostedContentFilterPolicy](/powershell/module/exchange/set-hostedcontentfilterpolicy).
 
-### <a name="anti-phishing-policies"></a>Kimlik avı önleme ilkeleri
+### <a name="anti-phishing-policies"></a>Kimlik avından koruma ilkeleri
 
-Spoof Intelligence, EOP ve Defender'da akıllı Office 365. Kullanıcı kimliğe bürünme koruması, etki alanı kimliğe bürünme koruması ve posta kutusu zekası özellikleri yalnızca Office 365. Daha fazla bilgi için bkz[. Kimlik avıyla mücadele ilkeleri Microsoft 365](set-up-anti-phishing-policies.md).
+Kimlik sahtekarlık zekası EOP ve Office 365 için Defender kullanılabilir. Kullanıcı kimliğe bürünme koruması, etki alanı kimliğe bürünme koruması ve posta kutusu zekası yalnızca Office 365 için Defender kullanılabilir. Daha fazla bilgi için bkz. [Microsoft 365'da kimlik avı önleme ilkeleri](set-up-anti-phishing-policies.md).
 
-1. Microsoft 365 Defender [portalında, İlkeler](https://security.microsoft.com) bölümünde **E-&** \> işbirliği **& kuralları** \>  \> Tehdit ilkeleri **Kimlik** avıyla **mücadele bölümüne** gidin.
+1. [Microsoft 365 Defender portalında](https://security.microsoft.com), İlkeler **bölümünde** **e-posta & işbirliği** \> **İlkeleri & kuralları** \> **Tehdit ilkeleri** \> **Kimlik avı önleme** bölümüne gidin.
 
-   Veya doğrudan **ant-spam ilkeleri sayfasına gitmek için** , kullanın <https://security.microsoft.com/antiphishing>.
+   Veya doğrudan **Ant-istenmeyen posta ilkeleri** sayfasına gitmek için kullanın <https://security.microsoft.com/antiphishing>.
 
-2. Kimlik **avı önleme sayfasında** , aşağıdaki adımlardan birini uygulayın:
-   - Var olan kimlik avı önleme ilkesi bulun ve seçin.
+2. **Kimlik avı önleme** sayfasında aşağıdaki adımlardan birini yapın:
+   - Mevcut kimlik avı önleme ilkesini bulun ve seçin.
    - Yeni bir kimlik avı önleme ilkesi oluşturun.
 
 3. Aşağıdaki adımlardan birini yapın:
-   - **Var olanı** düzenle: İlkenin adına tıklayarak ilkeyi seçin. İlke ayrıntıları sayfasında Koruma ayarları bölümüne **gidin ve Koruma** ayarlarını **düzenle'ye tıklayın**.
-   - **Yeni oluştur**: Yeni ilke sihirbazında Eylemler **sayfasına** gidin.
+   - **Var olanı düzenle**: İlkenin adına tıklayarak ilkeyi seçin. İlke ayrıntıları açılır öğesinde **Koruma ayarları** bölümüne gidin ve **koruma ayarlarını düzenle'ye** tıklayın.
+   - **Yeni oluştur**: Yeni ilke sihirbazında **Eylemler** sayfasına gidin.
 
-4. Koruma **ayarları sayfasında** , aşağıdaki ayarların gerekli şekilde açık ve yapılandırılmış olduğunu doğrulayın:
-   - **Kullanıcıların korunması etkinleştirildi**: Kullanıcıları belirtin.
-   - **Korumak için etki alanları etkinleştirildi**: Sahibim olan etki **alanlarını dahil edin ve** /veya Özel etki **alanlarını dahil** edin'i seçin ve etki alanlarını belirtin.
-   - **Posta kutusu zekası etkinleştirme**
+4. **Koruma ayarları** sayfasında, aşağıdaki ayarların açık olduğunu ve gerektiği gibi yapılandırıldığını doğrulayın:
+   - **Korunacak kullanıcılar etkinleştirildi**: Kullanıcıları belirtin.
+   - **Korunacak etkin etki alanları**: **Sahibi olduğum etki alanlarını dahil et** ve/veya **Özel etki alanları ekle'yi** seçin ve etki alanlarını belirtin.
+   - **Posta kutusu zekasını etkinleştirme**
    - **Kimliğe bürünme koruması için zekayı etkinleştirme**
-   - **Akıllı ifadeyi etkinleştirme**
+   - **Kimlik sahtekarı zekasını etkinleştirme**
 
 5. Aşağıdaki adımlardan birini yapın:
-   - **Var olanı** düzenle: İlke ayrıntılarında, Eylemler bölümüne **gidin ve eylemleri** **düzenle'ye tıklayın**.
-   - **Yeni oluştur**: Yeni ilke sihirbazında Eylemler **sayfasına** gidin.
+   - **Var olanı düzenle**: İlke ayrıntıları açılır öğesinde **Eylemler** bölümüne gidin ve **Eylemleri düzenle'ye** tıklayın.
+   - **Yeni oluştur**: Yeni ilke sihirbazında **Eylemler** sayfasına gidin.
 
-6. Eylemler **sayfasında**, İletiyi karantinaya alın eylemine  sahip olan her kararda, ilgili karantina  ilkesi seçmeniz için Karantinaya uygula ilkesi kutusu da olur.
+6. **Eylemler** sayfasında, **İletiyi karantinaya al** eylemine sahip her kararda, karşılık gelen **bir karantina ilkesini seçmeniz için Karantina ilkesi uygula** kutusu da bulunur.
 
-   **Not**: Yeni bir ilke seniz, boş bir Karantina **ilkesi** uygula değeri, bu eylemin varsayılan karantina ilkesi kullanılır olduğunu gösterir. İlkeyi daha sonra düzenleyseniz, boş değerlerin yerini önceki tabloda açıklandığı gibi asıl varsayılan karantina ilkesi adları alır.
+   **Not**: Yeni bir ilke oluşturduğunuzda, boş bir **Karantina ilkesi uygula** değeri, bu eylem için varsayılan karantina ilkesinin kullanıldığını gösterir. İlkeyi daha sonra düzenlediğinizde, boş değerler önceki tabloda açıklandığı gibi gerçek varsayılan karantina ilkesi adlarıyla değiştirilir.
 
-   ![Kimlik avı önleme ilkesinde ilke seçimlerini karantinaya alın.](../../media/quarantine-tags-in-anti-phishing-policies.png)
+   :::image type="content" source="../../media/quarantine-tags-in-anti-phishing-policies.png" alt-text="Kimlik avı önleme ilkesinde Karantina ilkesi seçimleri" lightbox="../../media/quarantine-tags-in-anti-phishing-policies.png":::
 
-Kimlik avı önleme ilkelerini oluşturmaya ve değiştirmeye yönelik tüm yönergeler aşağıdaki konulardan edinebilirsiniz:
+Kimlik avı önleme ilkelerini oluşturmaya ve değiştirmeye yönelik tam yönergeler aşağıdaki konularda sağlanır:
 
 - [EOP'de kimlik avı önleme ilkelerini yapılandırma](configure-anti-phishing-policies-eop.md)
-- [Kimlik avıyla mücadele ilkelerini Microsoft Defender'da Office 365](configure-mdo-anti-phishing-policies.md)
+- [Office 365 için Microsoft Defender'de kimlik avı önleme ilkelerini yapılandırma](configure-mdo-anti-phishing-policies.md)
 
 #### <a name="anti-phishing-policies-in-powershell"></a>PowerShell'de kimlik avı önleme ilkeleri
 
-Kimlik avı koruma ilkeleri içinde karantina ilkeleri atamak için PowerShell kullanmayı tercih ediyorsanız, powershell veya Exchange Online PowerShell'Exchange Online Protection aşağıdaki söz dizimlerini kullanın:
+Kimlik avı önleme ilkelerine karantina ilkeleri atamak için PowerShell'i kullanmayı tercih ediyorsanız, Exchange Online PowerShell'e bağlanın veya PowerShell'i Exchange Online Protection ve aşağıdaki söz dizimini kullanın:
 
 ```powershell
 <New-AntiPhishPolicy -Name "<Unique name>" | Set-AntiPhishPolicy -Identity "<Policy name>"> [-EnableSpoofIntelligence $true] [-AuthenticationFailAction Quarantine] [-SpoofQuarantineTag <QuarantineTagName>] [-EnableMailboxIntelligence $true] [-EnableMailboxIntelligenceProtection $true] [-MailboxIntelligenceProtectionAction Quarantine] [-MailboxIntelligenceQuarantineTag <QuarantineTagName>] [-EnableOrganizationDomainsProtection $true] [-EnableTargetedDomainsProtection $true] [-TargetedDomainProtectionAction Quarantine] [-TargetedDomainQuarantineTag <QuarantineTagName>] [-EnableTargetedUserProtection $true] [-TargetedUserProtectionAction Quarantine] [-TargetedUserQuarantineTag <QuarantineTagName>] ...
@@ -322,64 +322,64 @@ Kimlik avı koruma ilkeleri içinde karantina ilkeleri atamak için PowerShell k
 
 **Notlar**:
 
-- Belirli _koruma\*_ özelliklerini açmak için Etkinleştir parametreleri gereklidir. _EnableMailboxIntelligence_ ve _EnableSpoofIntelligence_ parametreleri için varsayılan değer $true'dir, dolayısıyla PowerShell'de yeni kimlik avı ilkeleri irken bu parametreleri kullanmak zorunda değildir. Diğer tüm _Etkinleştir\*_ parametrelerinde, karantina ilkesi $true _\*_ için ilgili Eylem parametrelerinde Karantina değerini ayarlay seçeneği etkin olmalıdır. _*\Action parametrelerinin hiçbirinin_ varsayılan değeri Karantina'dır.
+- Belirli koruma özelliklerini açmak için _Enable\*_ parametreleri gereklidir. _EnableMailboxIntelligence_ ve _EnableSpoofIntelligence_ parametrelerinin varsayılan değeri $true olduğundan PowerShell'de yeni kimlik avı önleme ilkeleri oluştururken bu parametreleri kullanmanız gerekmez. Diğer tüm _Enable\*_ parametrelerinde değerin $true olması gerekir, böylece ilgili _\*Eylem_ parametrelerindeki Karantina değerini bir karantina ilkesi atamak üzere ayarlayabilirsiniz. _*\Action_ parametrelerinin hiçbiri Varsayılan Karantina değerine sahip değil.
 
-  Var olan kimlik avı önleme ilkelerde önemli parametre değerlerini görmek için aşağıdaki komutu çalıştırın:
+  Mevcut kimlik avı önleme ilkelerindeki önemli parametre değerlerini görmek için aşağıdaki komutu çalıştırın:
 
   ```powershell
   Get-AntiPhishPolicy | Format-List Name,Enable*Intelligence,Enable*Protection,*Action,*QuarantineTag
   ```
 
-  Varsayılan eylem değerleri ve Standart ve Katı için önerilen eylem değerleri hakkında bilgi için, Office 365 için [Microsoft Defender'da](recommended-settings-for-eop-and-office365.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365), kimlik avı önleme ilkelerinde [EOP](recommended-settings-for-eop-and-office365.md#eop-anti-phishing-policy-settings) kimlik avı koruma ilkesi ayarları ve Kimlik avı önleme ilkelerine kimliğe bürünme ayarları Office 365.
+  Standart ve Katı için varsayılan eylem değerleri ve önerilen eylem değerleri hakkında bilgi için bkz. [Office 365 için Microsoft Defender'de kimlik avı önleme ilkelerindeki EOP](recommended-settings-for-eop-and-office365.md#eop-anti-phishing-policy-settings) [kimlik avı önleme ilkesi ayarları ve Kimliğe bürünme ayarları](recommended-settings-for-eop-and-office365.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
 
-- Kimlik avı önleme ilkeleri seniz, ilgili karantina ilkesi parametresine sahip olmayan kimlik avı önleme eylemi, karar için varsayılan karantina ilkesi [](#step-2-assign-a-quarantine-policy-to-supported-features) anlamına gelir.
+- Kimlik avı önleme ilkeleri oluşturduğunuzda, buna karşılık gelen karantina ilkesi parametresi olmayan bir kimlik avı önleme eylemi, bu karar için [varsayılan karantina ilkesinin](#step-2-assign-a-quarantine-policy-to-supported-features) kullanıldığı anlamına gelir.
 
-  Yalnızca, belirli bir karara göre karantinaya alınmış iletilerde varsayılan son kullanıcı özelliklerini değiştirmek istemeniz gerekirse, varsayılan karantina ilkesiyle değiştirmeniz gerekir.
+  Varsayılan karantina ilkesini özel bir karantina ilkesiyle değiştirmeniz gerekir, ancak söz konusu karar için karantinaya alınan iletilerde varsayılan son kullanıcı özelliklerini değiştirmek istiyorsanız.
 
-- PowerShell'de yeni kimlik avı önleme ilkesi, **New-AntiPhishPolicy** cmdlet'ini ve **New-AntiPhishRule** cmdlet'ini kullanan özel bir kimlik avı önleme kuralı (alıcı filtreleri) gerektirir. Yönergeler için aşağıdaki konulara bakın:
+- PowerShell'de yeni bir kimlik avı önleme ilkesi, **New-AntiPhishPolicy** cmdlet'ini kullanan bir kimlik avı önleme ilkesi (ayarlar) ve **New-AntiPhishRule** cmdlet'ini kullanan özel bir kimlik avı önleme kuralı (alıcı filtreleri) gerektirir. Yönergeler için aşağıdaki konulara bakın:
   - [EOP'de kimlik avı önleme ilkelerini yapılandırmak için PowerShell kullanma](configure-anti-phishing-policies-eop.md#use-exchange-online-powershell-to-configure-anti-phishing-policies)
-  - [Kimlik Exchange Online ilkelerini yapılandırmak için PowerShell'i kullanma](configure-mdo-anti-phishing-policies.md#use-exchange-online-powershell-to-configure-anti-phishing-policies)
+  - [Kimlik avı önleme ilkelerini yapılandırmak için Exchange Online PowerShell kullanma](configure-mdo-anti-phishing-policies.md#use-exchange-online-powershell-to-configure-anti-phishing-policies)
 
-Bu örnek, aşağıdaki ayarların yer alan Araştırma Bölümü adlı yeni bir kimlik avı önleme ilkesi oluşturur:
+Bu örnek, aşağıdaki ayarlarla Araştırma Bölümü adlı yeni bir kimlik avı önleme ilkesi oluşturur:
 
-- Tüm istenmeyen posta filtreleme kararlarını içeren eylem Karantina'ya ayarlanır.
-- Hiçbir erişim izni atamamış olan NoAccess adlı özel  karantina ilkesi, varsayılan olarak Erişim izni yok atamayacağınız tüm varsayılan **karantina ilkelerinin** yerini almaktadır.
+- Tüm istenmeyen posta filtreleme kararlarının eylemi Karantina olarak ayarlanır.
+- **Erişim izni yok** atayan NoAccess adlı özel karantina ilkesi, varsayılan olarak Erişim izni **yok** atamayan varsayılan karantina ilkelerinin yerini alır.
 
 ```powershell
 New-AntiPhishPolicy -Name "Research Department" -AuthenticationFailAction Quarantine -SpoofQuarantineTag NoAccess -EnableMailboxIntelligenceProtection $true -MailboxIntelligenceProtectionAction Quarantine -MailboxIntelligenceQuarantineTag NoAccess -EnableOrganizationDomainsProtection $true -EnableTargetedDomainsProtection $true -TargetedDomainProtectionAction Quarantine -TargetedDomainQuarantineTag NoAccess -EnableTargetedUserProtection $true -TargetedUserProtectionAction Quarantine -TargetedUserQuarantineTag NoAccess
 ```
 
-Ayrıntılı söz dizimi ve parametre bilgileri için [bkz. New-AntiPhishPolicy](/powershell/module/exchange/new-antiphishpolicy).
+Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [New-AntiPhishPolicy](/powershell/module/exchange/new-antiphishpolicy).
 
-Bu örnekte, İnsan Kaynakları adlı mevcut kimlik avı koruma ilkesinde değişiklik yapılan bir durumla karşıtlık vardır. Kullanıcı kimliğe bürünme ve etki alanı kimliğine bürünme tarafından algılanan iletiler için eylem Karantina olarak ayarlanır ve NoAccess adlı özel karantina ilkesi atanır.
+Bu örnek, İnsan Kaynakları adlı mevcut kimlik avı önleme ilkesini değiştirir. Kullanıcı kimliğe bürünme ve etki alanı kimliğe bürünme tarafından algılanan iletiler için eylem Karantina olarak ayarlanır ve NoAccess adlı özel karantina ilkesi atanır.
 
 ```powershell
 Set-AntiPhishPolicy -Identity "Human Resources" -EnableTargetedDomainsProtection $true -TargetedDomainProtectionAction Quarantine -TargetedDomainQuarantineTag NoAccess -EnableTargetedUserProtection $true -TargetedUserProtectionAction Quarantine -TargetedUserQuarantineTag NoAccess
 ```
 
-Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [AntiPhishPolicy Ayarlama](/powershell/module/exchange/set-antiphishpolicy).
+Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [Set-AntiPhishPolicy](/powershell/module/exchange/set-antiphishpolicy).
 
 ### <a name="anti-malware-policies"></a>Kötü amaçlı yazılımdan koruma ilkeleri
 
-1.  Microsoft 365 Defender [portalında](https://security.microsoft.com), İlkeler bölümünde **E-posta &** \> işbirliği **& kuralları** \> \> İlkeler bölümünde Tehdit ilkeleri **Kötü** amaçlı yazılımdan koruma **ilkeleri'ne** gidin.
+1. [Microsoft 365 Defender portalında](https://security.microsoft.com), **İlkeler** bölümünde **e-posta & işbirliği** \> **İlkeleri & kurallar** \> **Tehdit ilkeleri** \> **Kötü amaçlı yazılımdan koruma** bölümüne gidin.
 
-   Ya da doğrudan Kötü amaçlı yazılımdan **koruma sayfasına** gitmek için kullanın <https://security.microsoft.com/antimalwarev2>.
+   Ya da doğrudan **Kötü amaçlı yazılımdan koruma** sayfasına gitmek için kullanın <https://security.microsoft.com/antimalwarev2>.
 
-2. Kötü **amaçlı yazılımdan koruma** sayfasında, aşağıdaki adımlardan birini uygulayın:
-   - Var olan kötü amaçlı yazılımdan koruma ilkesi bulun ve seçin.
-   - Yeni kötü amaçlı yazılımdan koruma ilkesi oluşturun.
+2. **Kötü amaçlı yazılımdan koruma** sayfasında aşağıdaki adımlardan birini yapın:
+   - Mevcut kötü amaçlı yazılımdan koruma ilkesini bulun ve seçin.
+   - Yeni bir kötü amaçlı yazılımdan koruma ilkesi oluşturun.
 
 3. Aşağıdaki adımlardan birini yapın:
-   - **Var olanı** düzenle: İlkenin adına tıklayarak ilkeyi seçin. İlke ayrıntıları sayfasında Koruma ayarları bölümüne **gidin ve Koruma** ayarlarını **düzenle'ye tıklayın**.
-   - **Yeni oluştur**: Yeni ilke sihirbazında Eylemler **sayfasına** gidin.
+   - **Var olanı düzenle**: İlkenin adına tıklayarak ilkeyi seçin. İlke ayrıntıları açılır öğesinde **Koruma ayarları** bölümüne gidin ve **koruma ayarlarını düzenle'ye** tıklayın.
+   - **Yeni oluştur**: Yeni ilke sihirbazında **Eylemler** sayfasına gidin.
 
-4. Koruma ayarları **sayfasında** , Karantina ilkesi kutusunda bir karantina **ilkesi** seçin.
+4. **Koruma ayarları** sayfasında, Karantina ilkesi kutusunda bir karantina **ilkesi** seçin.
 
-   **Not**: Yeni bir ilke oluşturmada, boş bir **Karantina ilkesi** değeri, kullanılan varsayılan karantina ilkesine işaret verir. İlkeyi daha sonra düzenleyseniz, boş değerin yerini, önceki tabloda açıklandığı gibi asıl varsayılan karantina ilkesi adı alır.
+   **Not**: Yeni bir ilke oluşturduğunuzda, boş bir **Karantina ilkesi** değeri bunun için kullanılan varsayılan karantina ilkesini gösterir. İlkeyi daha sonra düzenlediğinizde, boş değer önceki tabloda açıklandığı gibi gerçek varsayılan karantina ilkesi adıyla değiştirilir.
 
 #### <a name="anti-malware-policies-in-powershell"></a>PowerShell'de kötü amaçlı yazılımdan koruma ilkeleri
 
-Kötü amaçlı yazılımdan koruma ilkeleri atamak için PowerShell kullanmayı tercih ediyorsanız, powershell veya Exchange Online PowerShell'e bağlanın Exchange Online Protection söz dizimi kullanın:
+Kötü amaçlı yazılımdan koruma ilkelerine karantina ilkeleri atamak için PowerShell'i kullanmayı tercih ediyorsanız, Exchange Online PowerShell'e bağlanın veya PowerShell'i Exchange Online Protection ve aşağıdaki söz dizimini kullanın:
 
 ```powershell
 <New-AntiMalwarePolicy -Name "<Unique name>" | Set-AntiMalwarePolicy -Identity "<Policy name>"> [-QuarantineTag <QuarantineTagName>]
@@ -387,19 +387,19 @@ Kötü amaçlı yazılımdan koruma ilkeleri atamak için PowerShell kullanmayı
 
 **Notlar**:
 
-- Yeni bir kötü amaçlı yazılımdan koruma ilkesi  oluştururken KarantinaTag parametresini kullanmadan yeni kötü amaçlı yazılımdan koruma ilkeleri  oluşturursanız, kötü amaçlı yazılım algılamaları için varsayılan karantina ilkesi kullanılır (AdminOnlyAccessPolicy).
+- Yeni bir kötü amaçlı yazılımdan koruma ilkesi oluştururken QuarantineTag parametresini kullanmadan yeni kötü amaçlı yazılımdan koruma ilkeleri oluşturduğunuzda, kötü amaçlı yazılım algılamaları için varsayılan karantina ilkesi kullanılır (AdminOnlyAccessPolicy).
 
-  Yalnızca kötü amaçlı yazılım olarak karantinaya alınmış iletilerde varsayılan son kullanıcı özelliklerini değiştirmek istiyorsanız, varsayılan karantina ilkesiyle özel karantina ilkesiyle değiştirmeniz gerekir.
+  Varsayılan karantina ilkesini, yalnızca kötü amaçlı yazılım olarak karantinaya alınan iletilerde varsayılan son kullanıcı özelliklerini değiştirmek istiyorsanız özel bir karantina ilkesiyle değiştirmeniz gerekir.
 
-  Var olan kimlik avı önleme ilkelerde önemli parametre değerlerini görmek için aşağıdaki komutu çalıştırın:
+  Mevcut kimlik avı önleme ilkelerindeki önemli parametre değerlerini görmek için aşağıdaki komutu çalıştırın:
 
   ```powershell
   Get-MalwareFilterPolicy | Format-Table Name,QuarantineTag
   ```
 
-- PowerShell'de yeni kötü amaçlı yazılımdan koruma ilkesi, **New-MalwareFilterPolicy** cmdlet'ini ve **New-MalwareFilterRule** cmdlet'ini kullanarak özel amaçlı yazılım filtresi kuralı (alıcı filtreleri) kullanan bir kötü amaçlı yazılım filtresi ilkesi (ayarlar) gerektirir. Yönergeler için bkz. [Kötü amaçlı Exchange Online koruma ilkelerini yapılandırmak için PowerShell veya tek başına EOP PowerShell kullanma](configure-anti-malware-policies.md#use-exchange-online-powershell-or-standalone-eop-powershell-to-configure-anti-malware-policies).
+- PowerShell'de yeni bir kötü amaçlı yazılımdan koruma ilkesi, **New-MalwareFilterPolicy** cmdlet'ini kullanan bir kötü amaçlı yazılım filtresi ilkesi (ayarlar) ve **New-MalwareFilterRule** cmdlet'ini kullanan özel amaçlı yazılım filtresi kuralı (alıcı filtreleri) gerektirir. Yönergeler için bkz. [Kötü amaçlı yazılımdan koruma ilkelerini yapılandırmak için PowerShell veya tek başına EOP PowerShell Exchange Online kullanma](configure-anti-malware-policies.md#use-exchange-online-powershell-or-standalone-eop-powershell-to-configure-anti-malware-policies).
 
-Bu örnek, Karantinaya alınan iletilere Erişim izni yok ataan NoAccess adlı özel karantina ilkesi kullanan Araştırma Bölümü  adlı bir kötü amaçlı yazılım filtresi ilkesi oluşturur.
+Bu örnek, karantinaya alınan iletilere **Erişim** yok izni atayan NoAccess adlı özel karantina ilkesini kullanan Araştırma Bölümü adlı bir kötü amaçlı yazılım filtresi ilkesi oluşturur.
 
 ```powershell
 New-MalwareFilterPolicy -Name "Research Department" -QuarantineTag NoAccess
@@ -407,7 +407,7 @@ New-MalwareFilterPolicy -Name "Research Department" -QuarantineTag NoAccess
 
 Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [New-MalwareFilterPolicy](/powershell/module/exchange/new-malwarefilterpolicy).
 
-Bu örnekte, karantinaya alınan iletilere Erişim izni yok ataan NoAccess adlı özel karantina ilkesi atanarak İnsan Kaynakları adlı var olan  kötü amaçlı yazılım filtresi ilkesinde değişiklik olur.
+Bu örnek, karantinaya alınan iletilere **Erişim** yok izni atayan NoAccess adlı özel karantina ilkesini atayarak İnsan Kaynakları adlı mevcut kötü amaçlı yazılım filtresi ilkesini değiştirir.
 
 ```powershell
 New-MalwareFilterPolicy -Identity "Human Resources" -QuarantineTag NoAccess
@@ -415,31 +415,31 @@ New-MalwareFilterPolicy -Identity "Human Resources" -QuarantineTag NoAccess
 
 Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [Set-MalwareFilterPolicy](/powershell/module/exchange/set-malwarefilterpolicy).
 
-### <a name="safe-attachments-policies-in-defender-for-office-365"></a>Kasa için Defender'da Ekleri Office 365
+### <a name="safe-attachments-policies-in-defender-for-office-365"></a>Office 365 için Defender'da ek ilkelerini Kasa
 
-1. Microsoft 365 Defender [portalında](https://security.microsoft.com), İlkeler bölümünde **E-posta &** \> işbirliği **& kuralları** \>  \> Tehdit **Kasa ekleri** **gönderme bölümüne** gidin.
+1. [Microsoft 365 Defender portalında](https://security.microsoft.com), İlkeler **bölümündeki** **E-posta & işbirliği** \> **İlkeleri & kuralları** \> **Tehdit ilkeleri** \> **Kasa Ekler** bölümüne gidin.
 
-   Ya da doğrudan Ekler Kasa **gitmek** için kullanın<https://security.microsoft.com/safeattachmentv2>.
+   Veya doğrudan **Kasa Ekler** sayfasına gitmek için kullanın<https://security.microsoft.com/safeattachmentv2>.
 
-2. Ekleri **Kasa** sayfasında, aşağıdaki adımlardan birini uygulayın:
-   - Mevcut E-posta Ekleri Kasa bulun ve seçin.
-   - Ekler ilkesi Kasa oluşturun.
+2. **Kasa Ekler** sayfasında aşağıdaki adımlardan birini yapın:
+   - Var olan bir Kasa Ekler ilkesini bulun ve seçin.
+   - Yeni bir Kasa Ekler ilkesi oluşturun.
 
 3. Aşağıdaki adımlardan birini yapın:
-   - **Var olanı** düzenle: İlkenin adına tıklayarak ilkeyi seçin. İlke ayrıntıları uç sayfasında, Ayrıntılar bölümüne **Ayarlar** Ayarları **düzenle'ye tıklayın**.
-   - **Yeni oluştur**: Yeni ilke sihirbazında, İlke ve **Ayarlar** gidin.
+   - **Var olanı düzenle**: İlkenin adına tıklayarak ilkeyi seçin. İlke ayrıntıları açılır öğesinde **Ayarlar** bölümüne gidin ve **Ayarları düzenle'ye** tıklayın.
+   - **Yeni oluştur**: Yeni ilke sihirbazında **Ayarlar** sayfasına gidin.
 
-4. Sayfa **Ayarlar** aşağıdaki adımları uygulayın:
-   1. **Kasa bilinmeyen kötü amaçlı yazılım yanıtı**: Engelle, Değiştir **veya** **Dinamik Teslim'i** **seçin**.
-   2. Karantina ilkesi kutusunda bir karantina **ilkesi** seçin.
+4. **Ayarlar** sayfasında aşağıdaki adımları uygulayın:
+   1. **Kasa Ekler bilinmeyen kötü amaçlı yazılım yanıtı**: **Engelle**, **Değiştir** veya **Dinamik Teslim'i** seçin.
+   2. Karantina ilkesi kutusunda bir **karantina ilkesi** seçin.
 
-   **Not**: Yeni bir ilke seniz, boş bir **Karantina ilkesi değeri** varsayılan karantina ilkesi kullanılır. İlkeyi daha sonra düzenleyseniz, boş değerin yerini, önceki tabloda açıklandığı gibi asıl varsayılan karantina ilkesi adı alır.
+   **Not**: Yeni bir ilke oluşturduğunuzda, boş bir **Karantina ilkesi** değeri varsayılan karantina ilkesinin kullanıldığını gösterir. İlkeyi daha sonra düzenlediğinizde, boş değer önceki tabloda açıklandığı gibi gerçek varsayılan karantina ilkesi adıyla değiştirilir.
 
-Ekleri oluşturma ve değiştirme Kasa tam yönergeler, Kasa için Microsoft Defender'da Ekler ilkelerini [ayarlama makalesinde Office 365](set-up-safe-attachments-policies.md).
+Kasa Ek ilkelerini oluşturma ve değiştirmeyle ilgili tam yönergeler, [Office 365 için Microsoft Defender'da Ek ilkelerini ayarlama Kasa başlığı altında](set-up-safe-attachments-policies.md) açıklanmıştır.
 
-#### <a name="safe-attachments-policies-in-powershell"></a>Kasa PowerShell'de Ekleri Kaydetme
+#### <a name="safe-attachments-policies-in-powershell"></a>PowerShell'de ek ilkelerini Kasa
 
-Kasa Ekler ilkeleri içinde karantina ilkeleri atamak için PowerShell kullanmayı tercih ediyorsanız, Exchange Online PowerShell veya Exchange Online Protection PowerShell'e bağlanın ve aşağıdaki söz dizimlerini kullanın:
+Kasa Ekler ilkelerine karantina ilkeleri atamak için PowerShell'i kullanmayı tercih ederseniz, Exchange Online PowerShell'e bağlanın veya PowerShell'i Exchange Online Protection ve aşağıdaki söz dizimini kullanın:
 
 ```powershell
 <New-SafeAttachmentPolicy -Name "<Unique name>" | Set-SafeAttachmentPolicy -Identity "<Policy name>"> -Enable $true -Action <Block | Replace | DynamicDelivery> [-QuarantineTag <QuarantineTagName>]
@@ -447,11 +447,11 @@ Kasa Ekler ilkeleri içinde karantina ilkeleri atamak için PowerShell kullanmay
 
 **Notlar**:
 
-- Action _parametresi_ değerleri Engelle, Değiştir veya DinamikDelivery karantinaya alınmış iletilere neden olabilir (İzin Ver değeri iletileri karantinaya vermez). Action parametresinin _anlamlı_ olan değeri yalnızca _Enable parametresinin değeri_ şu olduğunda `$true`: .
+- _Eylem_ parametre değerleri Engelle, Değiştir veya DynamicDelivery karantinaya alınmış iletilere neden olabilir (İzin Ver değeri iletileri karantinaya almaz). _Eylem_ parametresinin değeri yalnızca _Enable_ parametresinin değeri olduğunda anlamlı olur`$true`.
 
-- QuarantineTag parametresini kullanmadan Kasa Attachments ilkeleri seniz, e-postada Kasa Ekleri algılamaları için varsayılan karantina ilkesi kullanılır (AdminOnlyAccessPolicy).
+- QuarantineTag parametresini kullanmadan yeni Kasa Ekler ilkeleri oluşturduğunuzda, e-postadaki Kasa Ekler algılamaları için varsayılan karantina ilkesi kullanılır (AdminOnlyAccessPolicy).
 
-  Yalnızca, Ek ilkeleri tarafından karantinaya alınmış e-posta iletilerde varsayılan son kullanıcı özelliklerini değiştirmek için, varsayılan karantina Kasa değiştirmelisiniz.
+  Varsayılan karantina ilkesini özel bir karantina ilkesiyle değiştirmeniz gerekir, ancak Kasa Ekler ilkeleri tarafından karantinaya alınan e-posta iletilerindeki varsayılan son kullanıcı özelliklerini değiştirmek istiyorsanız.
 
   Önemli parametre değerlerini görmek için aşağıdaki komutu çalıştırın:
 
@@ -459,9 +459,9 @@ Kasa Ekler ilkeleri içinde karantina ilkeleri atamak için PowerShell kullanmay
   Get-SafeAttachmentPolicy | Format-List Name,Enable,Action,QuarantineTag
   ```
 
-- Yeni bir Kasa PowerShell Ekleri ilkesi için **New-SafeAttachmentPolicy** cmdlet'ini ve **New-SafeAttachmentRule** cmdlet'ini kullanarak özel bir güvenli ek kuralı (alıcı filtreleri) gerekir. Yönergeler için bkz. Exchange Online ek ilkelerini yapılandırmak [için PowerShell veya tek başına EOP PowerShell Kasa kullanma](set-up-safe-attachments-policies.md#use-exchange-online-powershell-or-standalone-eop-powershell-to-configure-safe-attachments-policies).
+- PowerShell'de yeni bir Kasa Ekler ilkesi, **New-SafeAttachmentPolicy** cmdlet'ini kullanan güvenli bir ek ilkesi (ayarlar) ve **New-SafeAttachmentRule** cmdlet'ini kullanan özel bir güvenli ek kuralı (alıcı filtreleri) gerektirir. Yönergeler için bkz. [Kasa Ekler ilkelerini yapılandırmak için PowerShell Exchange Online veya tek başına EOP PowerShell kullanma](set-up-safe-attachments-policies.md#use-exchange-online-powershell-or-standalone-eop-powershell-to-configure-safe-attachments-policies).
 
-Bu örnek, algılanan iletileri engelleyen ve karantinaya alınan iletilere Erişim yok izinleri ataan NoAccess adlı özel karantina ilkesi kullanan Araştırma Bölümü adlı  güvenli bir ek ilkesi oluşturur.
+Bu örnek, algılanan iletileri engelleyen Ve karantinaya alınan iletilere **Erişim** yok izni atayan NoAccess adlı özel karantina ilkesini kullanan Araştırma Bölümü adlı güvenli bir ek ilkesi oluşturur.
 
 ```powershell
 New-SafeAttachmentPolicy -Name "Research Department" -Enable $true -Action Block -QuarantineTag NoAccess
@@ -469,7 +469,7 @@ New-SafeAttachmentPolicy -Name "Research Department" -Enable $true -Action Block
 
 Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [New-MalwareFilterPolicy](/powershell/module/exchange/new-malwarefilterpolicy).
 
-Bu örnekte, Erişim izni yok ataan NoAccess adlı özel karantina ilkesi atanarak, İnsan Kaynakları adlı mevcut güvenli ek **ilkesinde değişiklik** olur.
+Bu örnek, **Erişim** yok izinleri atayan NoAccess adlı özel karantina ilkesini atayarak İnsan Kaynakları adlı mevcut güvenli ek ilkesini değiştirir.
 
 ```powershell
 Set-SafeAttachmentPolicy -Identity "Human Resources" -QuarantineTag NoAccess
@@ -477,67 +477,70 @@ Set-SafeAttachmentPolicy -Identity "Human Resources" -QuarantineTag NoAccess
 
 Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [Set-MalwareFilterPolicy](/powershell/module/exchange/set-malwarefilterpolicy).
 
-## <a name="configure-global-quarantine-notification-settings-in-the-microsoft-365-defender-portal"></a>E-posta portalında genel karantina Microsoft 365 Defender yapılandırma
+## <a name="configure-global-quarantine-notification-settings-in-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalında genel karantina bildirim ayarlarını yapılandırma
 
-Karantina ilkelerinin genel ayarları, karantina ilkesinde karantina bildirimleri açıksa, karantina iletileri alıcılarına gönderilen karantina bildirimlerini özelleştirmenize olanak sağlar. Bu bildirimler hakkında daha fazla bilgi için bkz. [Bildirimleri karantinaya alındı.](use-spam-notifications-to-release-and-report-quarantined-messages.md)
+Karantina ilkeleri için genel ayarlar, karantinaya alınan iletilerin alıcılarına gönderilen karantina bildirimlerini, karantina ilkesinde karantina bildirimleri açıksa özelleştirmenize olanak sağlar. Bu bildirimler hakkında daha fazla bilgi için bkz [. Karantina bildirimleri](use-spam-notifications-to-release-and-report-quarantined-messages.md).
 
-1. Microsoft 365 Defender portalında, Kurallar bölümündeki **&-posta** \> ve **& ilkeleri** \>  \> Karantina  **ilkeleri'ne** gidin.
+1. Microsoft 365 Defender portalında **Kurallar bölümündeki** **E-posta & işbirliği** \> **İlkeleri & kurallar** \> **Tehdit ilkeleri** **Karantina ilkeleri'ne** \> gidin. Veya doğrudan **Karantina ilkeleri** sayfasına gitmek için kullanın <https://security.microsoft.com/quarantinePolicies>.
 
-2. Karantina ilkesi **sayfasında Genel** **ayarlar'ı seçin**.
+2. **Karantina ilkeleri** sayfasında **Genel ayarlar'ı** seçin.
 
-3. Açılan **Karantina bildirim ayarları** açılır sayfasında, aşağıdaki ayarların bir birini veya hepsini yapılandırabilirsiniz:
+3. Açılan **Karantina bildirim ayarları** açılır öğesinde aşağıdaki ayarları yapılandırın:
 
-   - **Görünen ad**: Gönderenin karantina bildirimlerde kullanılan görünen adını özelleştirin.
+   - Karantina bildirimlerini alıcının diline göre özelleştirin:
 
-     Ekley istediğiniz her dil için, ikinci dil kutusunda dili seçin (X'e tıklayın) ve Görünen ad kutusuna istediğiniz **metin değerini** girin.
+     - Aşağıdaki ekran görüntüsünde gösterildiği gibi karantina bildirimlerinde kullanılan gönderenin **görünen adı** .
 
-     Aşağıdaki ekran görüntüsünde, karantina bildiriminde özelleştirilmiş görünen ad gösterilir:
+       :::image type="content" source="../../media/quarantine-tags-esn-customization-display-name.png" alt-text="Karantina bildiriminde özelleştirilmiş bir gönderen görünen adı." lightbox="../../media/quarantine-tags-esn-customization-display-name.png":::
 
-     ![Karantina bildiriminde özelleştirilmiş bir gönderen görünen adı.](../../media/quarantine-tags-esn-customization-display-name.png)
+     - Karantina bildirimlerinin altına eklenen **Yasal Uyarı** metni. Yerelleştirilmiş metin( **Kuruluşunuzdan bir bildirim:** her zaman önce dahil edilir ve ardından aşağıdaki ekran görüntüsünde gösterildiği gibi belirttiğiniz metin gösterilir:
 
-   - **Bildirim:** Karantina bildirimlerinin en altına özel bir bildirim ekleyin. Yerelleştirilmiş metin **(Bir kuruluştan uyarı:** her zaman önce yer alan ve sizin belirttiğiniz metinden sonra gelen uyarıdır).
+       :::image type="content" source="../../media/quarantine-tags-esn-customization-disclaimer.png" alt-text="Karantina bildiriminin alt kısmındaki özel bir bildirim." lightbox="../../media/quarantine-tags-esn-customization-disclaimer.png":::
 
-     Ekley istediğiniz her dil için, ikinci dil kutusunda dili seçin (X'e tıklayın) ve Yasal Uyarı kutusuna **istediğiniz metin değerini** girin.
+     - **Görünen ad** ve **Yasal Uyarı** değerlerinin dil tanımlayıcısı. Karantina bildirimleri, alıcının dil ayarlarına göre zaten yerelleştirilmiştir. **Görünen ad** ve **Yasal Uyarı** değerleri, alıcının diline uygulanan karantina bildirimlerinde kullanılır.
 
-     Aşağıdaki ekran görüntüsü, karantina bildiriminde özelleştirilmiş bildirimi gösterir:
+       **Görünen ad** ve **Yasal Uyarı** kutularına değer girmeden _önce_ **Dil seç kutusunda dili** seçin. **Dili seç** kutusundaki değeri değiştirdiğinizde Görünen **ad** ve **Uyarı** kutularındaki değerler boşaltılır.
 
-     ![Karantina bildiriminin en altında özel bir bildirim.](../../media/quarantine-tags-esn-customization-disclaimer.png)
+     Karantina bildirimlerini alıcının diline göre özelleştirmek için şu adımları izleyin:
 
-   - **Dili seçin**: Karantina bildirimleri, alıcının dil ayarlarına göre yerelleştirilmiştir. Görünen ad ve Yasal Uyarı değerleri için farklı dillerde **özelleştirilmiş** **metinler belirtebilirsiniz** .
+     1. **Dil seç kutusundan dili seçin**. Varsayılan değer **Varsayılan'dır** ve İngilizce anlamına gelir.
+     2. **Görünen ad** ve **Yasal Uyarı** değerlerini girin. Değerler her dil için benzersiz olmalıdır. **Bir Görünen adı** veya **Yasal Uyarı** değerini birden çok dil için yeniden kullanmayı denerseniz **Kaydet'e** tıkladığınızda bir hata alırsınız.
+     3. **Ekle** düğmesine tıklayın.
+     4. Alıcının diline göre en fazla üç özelleştirilmiş karantina bildirimi oluşturmak için önceki adımları yineleyin. Etiketsiz kutu yapılandırdığınız dilleri gösterir:
 
-     İlk dil kutusundan en az bir dil seçin ve Ekle'ye **tıklayın**. Her dilin ardından Ekle'ye tıklayarak **birden çok** dil seçin. Bölüm dili kutusunda seçtiğiniz tüm diller görüntülenir:
+        :::image type="content" source="../../media/quarantine-tags-esn-customization-selected-languages.png" alt-text="Karantina ilkelerinin genel karantina bildirimi ayarlarında seçilen diller." lightbox="../../media/quarantine-tags-esn-customization-selected-languages.png":::
 
-     ![Karantina ilkelerinin genel karantina bildirimi ayarlarında ikinci dil kutusunda seçilen diller.](../../media/quarantine-tags-esn-customization-selected-languages.png)
+   - **Şirket logomu kullan**: Karantina bildirimlerinin en üstünde kullanılan varsayılan Microsoft logosunu değiştirmek için bu seçeneği belirleyin. Bu adımı gerçekleştirmeden önce, özel logonuzu karşıya yüklemek [için kuruluşunuzun Microsoft 365 temasını özelleştirme başlığı altında yer alan](../../admin/setup/customize-your-organization-theme.md) yönergeleri izlemeniz gerekir.
 
-   - **Şirket logosunu kullan**: Karantina bildirimlerinin en üstünde kullanılan varsayılan Microsoft logosunu değiştirmek için bu seçeneği belirtin. Bunu yapmak için, Özel logonuzu yüklemek üzere Microsoft 365 için Özel [tema'da](../../admin/setup/customize-your-organization-theme.md) verilen yönergeleri izleyebilirsiniz.
+     Aşağıdaki ekran görüntüsünde karantina bildiriminde özel bir logo gösterilmektedir:
 
-     Aşağıdaki ekran görüntüsünde karantina bildiriminde özel bir logo yer alır:
+     :::image type="content" source="../../media/quarantine-tags-esn-customization-logo.png" alt-text="Karantina bildiriminde özel logo" lightbox="../../media/quarantine-tags-esn-customization-logo.png":::
 
-     ![Karantina bildiriminde özel bir logo.](../../media/quarantine-tags-esn-customization-logo.png)
+   - **Her (gün) son kullanıcı istenmeyen posta bildirimi gönder**: Karantina bildirimlerinin sıklığını seçin. Varsayılan değer 3 gündür, ancak 1 ile 15 gün arasını seçebilirsiniz.
 
-   - **Son kullanıcı istenmeyen posta bildirimi gönderme sıklığı (gün)**: Karantina bildirimleri için sıklığı seçin.
+4. Bitirdiğinizde, **Kaydet**'i tıklatın.
 
-## <a name="view-quarantine-policies-in-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalında karantina Microsoft 365 Defender görüntüleme
+## <a name="view-quarantine-policies-in-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalında karantina ilkelerini görüntüleme
 
-1. Microsoft 365 Defender portalında, Kurallar bölümündeki **&-posta** \> ve **& ilkeleri** \>  \> Karantina  **ilkeleri'ne** gidin.
+1. Microsoft 365 Defender portalında **Kurallar bölümündeki** **E-posta & işbirliği** \> **İlkeleri & kurallar** \> **Tehdit ilkeleri** **Karantina ilkeleri'ne** \> gidin. Veya doğrudan **Karantina ilkeleri** sayfasına gitmek için kullanın <https://security.microsoft.com/quarantinePolicies>.
 
-2. Karantina **ilkesi sayfasında** , Ad ve Son güncelleştirme **tarihine göre** **ilkeler listesi** görüntülenir.
+2. **Karantina ilkeleri** sayfası, **ad** ve **son güncelleştirme** tarihine göre ilkelerin listesini gösterir.
 
-3. Yerleşik veya özel karantina ilkelerinin ayarlarını görüntülemek için, adı tıklatarak listeden karantina ilkesi seçin.
+3. Yerleşik veya özel karantina ilkelerinin ayarlarını görüntülemek için, ada tıklayarak listeden karantina ilkesini seçin.
 
-4. Genel ayarları görüntülemek için Genel **ayarlar'a tıklayın**.
+4. Genel ayarları görüntülemek için **Genel ayarlar'a** tıklayın
 
 ### <a name="view-quarantine-policies-in-powershell"></a>PowerShell'de karantina ilkelerini görüntüleme
 
-Karantina ilkelerini görüntülemek için PowerShell kullanmayı tercih ediyorsanız, aşağıdaki adımlardan birini uygulayın:
+Karantina ilkelerini görüntülemek için PowerShell'i kullanmak isterseniz aşağıdaki adımlardan birini uygulayın:
 
-- Tüm yerleşik veya özel ilkelerin özet listesini görüntülemek için, aşağıdaki komutu çalıştırın:
+- Tüm yerleşik veya özel ilkelerin özet listesini görüntülemek için aşağıdaki komutu çalıştırın:
 
   ```powershell
   Get-QuarantinePolicy | Format-Table Name
   ```
 
-- Yerleşik veya özel karantina ilkelerinin ayarlarını görüntülemek için, \<QuarantinePolicyName\> karantina ilkesi adıyla değiştirin ve aşağıdaki komutu çalıştırın:
+- Yerleşik veya özel karantina ilkelerinin ayarlarını görüntülemek için öğesini karantina ilkesinin adıyla değiştirin \<QuarantinePolicyName\> ve aşağıdaki komutu çalıştırın:
 
   ```powershell
   Get-QuarantinePolicy -Identity "<QuarantinePolicyName>"
@@ -551,188 +554,188 @@ Karantina ilkelerini görüntülemek için PowerShell kullanmayı tercih ediyors
 
 Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [Get-HostedContentFilterPolicy](/powershell/module/exchange/get-hostedcontentfilterpolicy).
 
-## <a name="modify-quarantine-policies-in-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalında karantina Microsoft 365 Defender değiştirme
+## <a name="modify-quarantine-policies-in-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalında karantina ilkelerini değiştirme
 
-AdminOnlyAccessPolicy veya DefaultFullAccessPolicy adlı yerleşik karantina ilkelerini değiştiremezsiniz. NotificationEnabledPolicy (varsa) adlı yerleşik [ilkeyi ve özel](#full-access-permissions-and-quarantine-notifications) karantina ilkelerini değiştirebilirsiniz.
+AdminOnlyAccessPolicy veya DefaultFullAccessPolicy adlı yerleşik karantina ilkelerini değiştiremezsiniz. NotificationEnabledPolicy adlı yerleşik ilkeyi (varsa) ve özel karantina ilkelerini [değiştirebilirsiniz](#full-access-permissions-and-quarantine-notifications).
 
-1. Microsoft 365 Defender portalında, Kurallar bölümündeki **&-posta** \> ve **& ilkeleri** \>  \> Karantina  **ilkeleri'ne** gidin.
+1. Microsoft 365 Defender portalında **Kurallar bölümündeki** **E-posta & işbirliği** \> **İlkeleri & kurallar** \> **Tehdit ilkeleri** **Karantina ilkeleri'ne** \> gidin. Veya doğrudan **Karantina ilkeleri** sayfasına gitmek için kullanın <https://security.microsoft.com/quarantinePolicies>.
 
-2. Karantina **ilkeleri sayfasında** , adına tıklayarak ilkeyi seçin.
+2. **Karantina ilkeleri** sayfasında, ada tıklayarak ilkeyi seçin.
 
-3. İlkeyi seçdikten sonra İlkeyi düzenle ![simgesine tıklayın.](../../media/m365-cc-sc-edit-icon.png) **Görüntülenen İlkeyi** düzenle simgesi.
+3. İlkeyi seçtikten sonra İlkeyi düzenle simgesine ![tıklayın.](../../media/m365-cc-sc-edit-icon.png) Görüntülenen **ilkeyi düzenle** simgesi.
 
-4. Açılan **İlkeyi** düzenle sihirbazı, bu makalenin önceki  kısımlarında yer alan Microsoft 365 Defender [portalında](#step-1-create-quarantine-policies-in-the-microsoft-365-defender-portal) karantina ilkeleri oluşturma bölümünde açıklanan Yeni ilke sihirbazıyla hemen hemen aynıdır.
+4. Açılan **İlkeyi düzenle** sihirbazı, bu makalenin önceki bölümlerinde yer alan [Microsoft 365 Defender portalında karantina ilkeleri oluşturma](#step-1-create-quarantine-policies-in-the-microsoft-365-defender-portal) bölümünde açıklandığı gibi **Yeni ilke** sihirbazıyla neredeyse aynıdır.
 
-   En önemli fark, mevcut bir ilkeyi yeniden adlandırılamaz.
+   Temel fark şudur: Mevcut bir ilkeyi yeniden adlandıramazsınız.
 
-5. İlkeyi değiştirmeyi bitirdikten sonra, Özet sayfasına gidin **ve** Gönder'e **tıklayın**.
+5. İlkeyi değiştirmeyi bitirdiğinizde **Özet** sayfasına gidin ve **Gönder'e** tıklayın.
 
 ### <a name="modify-quarantine-policies-in-powershell"></a>PowerShell'de karantina ilkelerini değiştirme
 
-Özel karantina ilkesinde değişiklik yapmak için PowerShell kullanmayı tercih ediyorsanız, \<QuarantinePolicyName\> karantina ilkesi adıyla değiştirin ve aşağıdaki söz dizimlerini kullanın:
+Özel bir karantina ilkesini değiştirmek için PowerShell'i kullanmayı tercih ederseniz, öğesini karantina ilkesinin adıyla değiştirin \<QuarantinePolicyName\> ve aşağıdaki söz dizimini kullanın:
 
 ```powershell
 Set-QuarantinePolicy -Identity "<QuarantinePolicyName>" [Settings]
 ```
 
-Kullanılabilir ayarlar, bu makalenin önceki sayfalarında açıklanan karantina ilkelerini oluşturmada açıklananla aynıdır.
+Kullanılabilir ayarlar, bu makalenin önceki bölümlerinde karantina ilkeleri oluşturmak için açıklanan ayarlarla aynıdır.
 
-Ayrıntılı söz dizimi ve parametre bilgileri için bkz [. Set-QuarantinePolicy](/powershell/module/exchange/set-quarantinepolicy).
+Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [Set-QuarantinePolicy](/powershell/module/exchange/set-quarantinepolicy).
 
-## <a name="remove-quarantine-policies-in-the-microsoft-365-defender-portal"></a>E-Microsoft 365 Defender portalında karantina Microsoft 365 Defender kaldırma
+## <a name="remove-quarantine-policies-in-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalında karantina ilkelerini kaldırma
 
 **Notlar**:
 
-- AdminOnlyAccessPolicy veya DefaultFullAccessPolicy adlı yerleşik karantina ilkelerini kaldırasınız. NotificationEnabledPolicy (varsa) adlı yerleşik ilkeyi [ve özel karantina](#full-access-permissions-and-quarantine-notifications) ilkelerini kaldıramazsınız.
-- Karantina ilkesi kaldırmadan önce, kullan olmadığını doğrulayın. Örneğin, PowerShell'de aşağıdaki komutu çalıştırın:
+- AdminOnlyAccessPolicy veya DefaultFullAccessPolicy adlı yerleşik karantina ilkelerini kaldıramazsınız. NotificationEnabledPolicy adlı yerleşik ilkeyi ([varsa](#full-access-permissions-and-quarantine-notifications)) ve özel karantina ilkelerini kaldırabilirsiniz.
+- Karantina ilkesini kaldırmadan önce kullanılmadığını doğrulayın. Örneğin, PowerShell'de aşağıdaki komutu çalıştırın:
 
   ```powershell
   Write-Output -InputObject "Anti-spam policies","----------------------";Get-HostedContentFilterPolicy | Format-List Name,*QuarantineTag; Write-Output -InputObject "Anti-phishing policies","----------------------";Get-AntiPhishPolicy | Format-List Name,*QuarantineTag; Write-Output -InputObject "Anti-malware policies","----------------------";Get-MalwareFilterPolicy | Format-List Name,QuarantineTag; Write-Output -InputObject "Safe Attachments policies","---------------------------";Get-SafeAttachmentPolicy | Format-List Name,QuarantineTag
   ```
 
-  Karantina ilkesi kullanılıyorsa, [kaldırmadan önce atanmış karantina](#step-2-assign-a-quarantine-policy-to-supported-features) ilkesiyle değiştirin.
+  Karantina ilkesi kullanılıyorsa, kaldırmadan önce [atanan karantina ilkesini değiştirin](#step-2-assign-a-quarantine-policy-to-supported-features) .
 
-1. Microsoft 365 Defender portalında, Kurallar bölümündeki **&-posta** \> ve **& ilkeleri** \>  \> Karantina  **ilkeleri'ne** gidin.
+1. Microsoft 365 Defender portalında **Kurallar bölümündeki** **E-posta & işbirliği** \> **İlkeleri & kurallar** \> **Tehdit ilkeleri** **Karantina ilkeleri'ne** \> gidin. Veya doğrudan **Karantina ilkeleri** sayfasına gitmek için kullanın <https://security.microsoft.com/quarantinePolicies>.
 
-2. Karantina **ilkesi sayfasında** , adına tıklayarak kaldırmak istediğiniz özel karantina ilkesine tıklayın.
+2. **Karantina ilkeleri** sayfasında, ada tıklayarak kaldırmak istediğiniz özel karantina ilkesini seçin.
 
-3. İlkeyi seçin ve ardından İlkeyi sil ![simgesine tıklayın.](../../media/m365-cc-sc-delete-icon.png) **Görüntülenen İlkeyi** sil simgesi.
+3. İlkeyi seçtikten sonra İlkeyi sil simgesine ![tıklayın.](../../media/m365-cc-sc-delete-icon.png) Görüntülenen **ilkeyi sil** simgesi.
 
-4. Görüntülenen **onay iletişim kutusunda** İlkeyi kaldır'a tıklayın.
+4. Görüntülenen onay iletişim kutusunda **İlkeyi kaldır'a** tıklayın.
 
 ### <a name="remove-quarantine-policies-in-powershell"></a>PowerShell'de karantina ilkelerini kaldırma
 
-Özel karantina ilkesi kaldırmak için PowerShell kullanmayı tercih ediyorsanız, \<QuarantinePolicyName\> karantina ilkesi adıyla değiştirin ve aşağıdaki komutu çalıştırın:
+Özel bir karantina ilkesini kaldırmak için PowerShell'i kullanmayı tercih ederseniz, öğesini karantina ilkesinin adıyla değiştirin \<QuarantinePolicyName\> ve aşağıdaki komutu çalıştırın:
 
 ```powershell
 Remove-QuarantinePolicy -Identity "<QuarantinePolicyName>"
 ```
 
-Ayrıntılı söz dizimi ve parametre bilgileri için bkz [. Remove-QuarantinePolicy](/powershell/module/exchange/remove-quarantinepolicy).
+Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [Remove-QuarantinePolicy](/powershell/module/exchange/remove-quarantinepolicy).
 
-## <a name="system-alerts-for-quarantine-release-requests"></a>Karantina sürüm istekleri için sistem uyarıları
+## <a name="system-alerts-for-quarantine-release-requests"></a>Karantina yayın istekleri için sistem uyarıları
 
-Varsayılan olarak, Kullanıcı karantinaya alınmış iletiyi  serbest bırakmak için istekte bulundu varsayılan uyarı ilkesi, otomatik olarak bir bilgilendirme uyarısı üretir ve kullanıcı karantinaya alınmış iletinin serbest bırak alınmasını her isteğinde olduğunda aşağıdaki rol gruplarının üyelerine bildirim iletileri gönderir:
+Varsayılan olarak, **Kullanıcı karantinaya alınmış bir iletiyi serbest bırakmak istedi** adlı varsayılan uyarı ilkesi otomatik olarak bilgilendirici bir uyarı oluşturur ve bir kullanıcı karantinaya alınmış bir iletinin yayımlanmasını istediğinde aşağıdaki rol gruplarının üyelerine bildirim iletileri gönderir:
 
 - Karantina Yöneticisi
 - Güvenlik Yöneticisi
 - Kuruluş Yönetimi (genel yönetici)
 
-Yöneticiler e-posta bildirimi alıcılarını özelleştirilebilir veya daha fazla seçenek için özel bir uyarı ilkesi oluşturabilir.
+Yöneticiler e-posta bildirimi alıcılarını özelleştirebilir veya daha fazla seçenek için özel bir uyarı ilkesi oluşturabilir.
 
-Uyarı ilkeleri hakkında daha fazla bilgi için bkz[. İlke ve Microsoft 365](../../compliance/alert-policies.md).
+Uyarı ilkeleri hakkında daha fazla bilgi için bkz[. Microsoft 365 uyarı ilkeleri](../../compliance/alert-policies.md).
 
 ## <a name="quarantine-policy-permission-details"></a>Karantina ilkesi izin ayrıntıları
 
-Aşağıdaki bölümlerde, önceden ayarlanmış izin gruplarının ve karantinaya alınmış iletilerin ayrıntılarında ve karantina bildirimlerinin tek tek izinleri açıklanmaktadır.
+Aşağıdaki bölümlerde, karantinaya alınan iletilerin ayrıntılarında ve karantina bildirimlerinde önceden ayarlanmış izin gruplarının ve tek tek izinlerin etkileri açıklanmaktadır.
 
 ### <a name="preset-permissions-groups"></a>Önceden ayarlanmış izin grupları
 
-Önceden ayarlanmış izin gruplarına dahil edilen tek tek izinler, bu makalenin başındaki tabloda listelenir.
+Önceden ayarlanmış izin gruplarına dahil edilen tek tek izinler, bu makalenin başındaki tabloda listelenmiştir.
 
 #### <a name="no-access"></a>Erişim yok
 
-Karantina ilkesi Erişim izni yok ( **yalnızca** yönetici erişimi) ataıyorsa, kullanıcılar karantinaya alınmış olan iletileri göremz:
+Karantina ilkesi **Erişim** yok izni atarsa (yalnızca yönetici erişimi), kullanıcılar karantinaya alınan iletileri göremez:
 
-- **Karantinaya alınmış ileti** ayrıntıları: Son kullanıcı görünümünde hiçbir ileti göster olmaz.
-- **Bildirimleri karantinaya** alın: Bu iletiler için bildirim gönderilmez.
+- **Karantinaya alınan ileti ayrıntıları**: Son kullanıcı görünümünde hiçbir ileti gösterilmez.
+- **Karantina bildirimleri**: Bu iletiler için hiçbir bildirim gönderilmez.
 
 #### <a name="limited-access"></a>Sınırlı erişim
 
-Karantina ilkesi Sınırlı erişim izinleri **atarsa** , kullanıcılar aşağıdaki özelliklere sahip olur:
+Karantina ilkesi **Sınırlı erişim** izinleri atarsa, kullanıcılar aşağıdaki özellikleri alır:
 
-- **Karantinaya alınmış ileti** ayrıntıları: Aşağıdaki düğmeler kullanılabilir:
-  - **Sürüm isteği**
+- **Karantinaya alınan ileti ayrıntıları**: Aşağıdaki düğmeler kullanılabilir:
+  - **Yayın isteği**
   - **İleti üst bilgilerini görüntüleme**
-  - **İletiyi önizleme**
-  - **Karantinadan kaldırma**
+  - **önizleme iletisi**
+  - **Karantinadan kaldır**
   - **Göndereni engelle**
 
-  ![Karantina ilkesi kullanıcıya Sınırlı erişim izinleri veriyorsa, karantinaya alınan ileti ayrıntılarında kullanılabilir düğmeler.](../../media/quarantine-tags-quarantined-message-details-limited-access.png)
+  :::image type="content" source="../../media/quarantine-tags-quarantined-message-details-limited-access.png" alt-text="Karantinaya alınan iletideki kullanılabilir düğmeler, karantina ilkesi kullanıcıya sınırlı erişim izinleri verirse ayrıntıları verir" lightbox="../../media/quarantine-tags-quarantined-message-details-limited-access.png":::
 
 - **Karantina bildirimleri**: Aşağıdaki düğmeler kullanılabilir:
   - **Göndereni engelle**
-  - **Sürüm isteği**
-  - **Gözden Geçir**
+  - **Yayın isteği**
+  - **Gözden geçirin**
 
-  ![Karantina ilkesi kullanıcıya Sınırlı erişim izinleri veriyorsa, karantina bildiriminde kullanılabilir düğmeler.](../../media/quarantine-tags-esn-limited-access.png)
+  :::image type="content" source="../../media/quarantine-tags-esn-limited-access.png" alt-text="Karantina ilkesi kullanıcıya sınırlı erişim izinleri verirse karantina bildirimindeki kullanılabilir düğmeler" lightbox="../../media/quarantine-tags-esn-limited-access.png":::
 
 #### <a name="full-access"></a>Tam erişim
 
-Karantina ilkesi Tam erişim izinleri ( **tüm kullanılabilir** izinler) atarsa, kullanıcılar aşağıdaki özelliklere sahip olur:
+Karantina ilkesi **Tam erişim** izinleri atarsa (tüm kullanılabilir izinler), kullanıcılar aşağıdaki özellikleri alır:
 
-- **Karantinaya alınmış ileti** ayrıntıları: Aşağıdaki düğmeler kullanılabilir:
-  - **Sürüm iletisi**
+- **Karantinaya alınan ileti ayrıntıları**: Aşağıdaki düğmeler kullanılabilir:
+  - **Yayın iletisi**
   - **İleti üst bilgilerini görüntüleme**
-  - **İletiyi önizleme**
-  - **Karantinadan kaldırma**
+  - **önizleme iletisi**
+  - **Karantinadan kaldır**
   - **Göndereni engelle**
 
-  ![Karantina ilkesi kullanıcıya Tam erişim izinleri veriyorsa, karantinaya alınan ileti ayrıntılarında kullanılabilir düğmeler.](../../media/quarantine-tags-quarantined-message-details-full-access.png)
+  :::image type="content" source="../../media/quarantine-tags-quarantined-message-details-full-access.png" alt-text="Karantinaya alınan iletideki kullanılabilir düğmeler, karantina ilkesi kullanıcıya tam erişim izinleri verirse ayrıntıları verir" lightbox="../../media/quarantine-tags-quarantined-message-details-full-access.png":::
 
 - **Karantina bildirimleri**: Aşağıdaki düğmeler kullanılabilir:
   - **Göndereni engelle**
   - **Sürüm**
-  - **Gözden Geçir**
+  - **Gözden geçirin**
 
-  ![Karantina ilkesi kullanıcıya Tam erişim izinleri veriyorsa, karantina bildiriminde kullanılabilir düğmeler.](../../media/quarantine-tags-esn-full-access.png)
+  :::image type="content" source="../../media/quarantine-tags-esn-full-access.png" alt-text="Karantina ilkesi kullanıcıya tam erişim izinleri verirse karantina bildirimindeki kullanılabilir düğmeler" lightbox="../../media/quarantine-tags-esn-full-access.png":::
 
-### <a name="individual-permissions"></a>Tek tek izinler
+### <a name="individual-permissions"></a>Bireysel izinler
 
-#### <a name="block-sender-permission"></a>Gönderen iznini engelleme
+#### <a name="block-sender-permission"></a>Gönderen iznini engelle
 
-Gönderen **iznini** engelle (_PermissionToBlockSender_) kullanıcıların karantinaya alınmış ileti gönderenini Engellenen Gönderenler listesine rahatça eklemelerine olanak sağlayan düğmeye erişimi denetimler.
+**Göndereni engelle** izni (_PermissionToBlockSender_), kullanıcıların karantinaya alınan iletiyi göndereni Engellenen Gönderenler listesine kolayca eklemesine olanak tanıyan düğmeye erişimi denetler.
 
-- **Karantinaya alınmış ileti ayrıntıları**:
-  - **Gönderen iznini** engelleme etkin: **Göndereni engelle** düğmesi kullanılabilir.
-  - **Gönderen iznini** engelleme devre dışı **bırakıldı: Göndereni engelle** düğmesi kullanılamaz.
+- **Karantinaya alınan ileti ayrıntıları**:
+  - **Gönderen iznini engelle** etkinleştirildi: **Göndereni engelle** düğmesi kullanılabilir.
+  - **Gönderen iznini engelle** devre dışı: **Göndereni engelle** düğmesi kullanılamıyor.
 
 - **Karantina bildirimleri**:
-  - **Gönderen iznini** engelleme etkin: **Göndereni engelle** düğmesi kullanılabilir.
-  - **Gönderen iznini** engelleme devre dışı **bırakıldı: Göndereni engelle** düğmesi kullanılamaz.
+  - **Gönderen iznini engelle** etkinleştirildi: **Göndereni engelle** düğmesi kullanılabilir.
+  - **Gönderen iznini engelle** devre dışı: **Göndereni engelle** düğmesi kullanılamıyor.
 
-Engellenen Gönderenler listesi hakkında daha fazla bilgi için bkz. Birilerinden gelen iletileri engelleme ve posta Exchange Online güvenilir liste koleksiyonunu yapılandırmak için [Exchange Online PowerShell kullanma](configure-junk-email-settings-on-exo-mailboxes.md#use-exchange-online-powershell-to-configure-the-safelist-collection-on-a-mailbox).[](https://support.microsoft.com/office/274ae301-5db2-4aad-be21-25413cede077#__toc304379667)
+Engellenen Gönderenler listesi hakkında daha fazla bilgi için bkz. [Birinden gelen iletileri engelleme](https://support.microsoft.com/office/274ae301-5db2-4aad-be21-25413cede077#__toc304379667) ve [Exchange Online PowerShell kullanarak posta kutusunda güvenli liste koleksiyonunu yapılandırma](configure-junk-email-settings-on-exo-mailboxes.md#use-exchange-online-powershell-to-configure-the-safelist-collection-on-a-mailbox).
 
 #### <a name="delete-permission"></a>Silme izni
 
-Delete **izni** (_PermissionToDelete_) kullanıcıların iletilerini (kullanıcının alıcı olduğu iletileri) karantinadan silebilir.
+**Silme** izni (_PermissionToDelete_), kullanıcıların iletilerini (kullanıcının alıcı olduğu iletiler) karantinadan silme yeteneğini denetler.
 
-- **Karantinaya alınmış ileti ayrıntıları**:
-  - **silme** izni etkin: **Karantinadan kaldır** düğmesi kullanılabilir.
-  - **silme** izni devre dışı: **Karantinadan kaldır** düğmesi kullanılamaz.
+- **Karantinaya alınan ileti ayrıntıları**:
+  - **Silme** izni etkin: **Karantinadan kaldır** düğmesi kullanılabilir.
+  - **Silme** izni devre dışı: **Karantinadan kaldır** düğmesi kullanılamıyor.
 
-- **Bildirimleri karantinaya alın**: Efekt yok.
+- **Karantina bildirimleri**: Hiçbir etkisi yoktur.
 
 #### <a name="preview-permission"></a>Önizleme izni
 
-Önizleme **izni** (_PermissionToPreview_), kullanıcıların iletilerini karantinada önizleme olanağını kontrol eder.
+**Önizleme** izni (_PermissionToPreview_), kullanıcıların karantinadaki iletilerini önizleme olanağını denetler.
 
-- **Karantinaya alınmış ileti ayrıntıları**:
+- **Karantinaya alınan ileti ayrıntıları**:
   - **Önizleme** izni etkin: **Önizleme iletisi** düğmesi kullanılabilir.
-  - **Önizleme** izni devre dışı: **İletiyi önizleme** düğmesi kullanılamıyor.
+  - **Önizleme** izni devre dışı: **Önizleme iletisi** düğmesi kullanılamıyor.
 
-- **Bildirimleri karantinaya alın**: Efekt yok.
+- **Karantina bildirimleri**: Hiçbir etkisi yoktur.
 
-#### <a name="allow-recipients-to-release-a-message-from-quarantine-permission"></a>Alıcıların iletiyi karantina izninden çıkartırmalarına izin verme
+#### <a name="allow-recipients-to-release-a-message-from-quarantine-permission"></a>Alıcıların karantina izinlerinden bir iletiyi serbest bırakmasına izin ver
 
-**Alıcıların iletiyi** karantina izninden (_PermissionToRelease_) çıkarabilmeleri, kullanıcıların karantinaya alınmış iletilerini doğrudan ve yöneticinin onayı olmadan serbest bırakmasını sağlar.
+**Alıcıların karantina izninden bir iletiyi serbest bırakmasına izin ver** (_PermissionToRelease_), kullanıcıların karantinaya alınan iletilerini doğrudan ve yönetici onayı olmadan serbest bırakma yeteneğini denetler.
 
-- **Karantinaya alınmış ileti ayrıntıları**:
-  - İzin etkinleştirildi: **İletiyi** bırak düğmesi kullanılabilir.
-  - İzin devre dışı bırakıldı: **İletiyi** bırak düğmesi kullanılamıyor.
-
-- **Karantina bildirimleri**:
-  - İzin etkinleştirildi: **Sürüm** düğmesi kullanılabilir.
-  - İzin devre dışı bırakıldı: **Sürüm** düğmesi kullanılamıyor.
-
-#### <a name="allow-recipients-to-request-a-message-to-be-released-from-quarantine-permission"></a>Alıcıların bir iletiyi karantina izninden çıkarıılın isteğine izin ver
-
-**Alıcıların karantina** izninden çıkarılmazken bir ileti talep etmelerine izin ver (_PermissionToRequestRelease_), kullanıcıların karantinaya alınmış iletilerinin  serbest bırakılmaz isteği göndermesini sağlar. İleti ancak yönetici isteği onaylar sonra serbest olur.
-
-- **Karantinaya alınmış ileti ayrıntıları**:
-  - İzin etkinleştirildi: **Sürüm isteği** düğmesi kullanılabilir.
-  - İzin devre dışı bırakıldı: **Sürüm isteği** düğmesi kullanılamıyor.
+- **Karantinaya alınan ileti ayrıntıları**:
+  - İzin etkinleştirildi: **Yayın iletisi** düğmesi kullanılabilir.
+  - İzin devre dışı: **Yayın iletisi** düğmesi kullanılamıyor.
 
 - **Karantina bildirimleri**:
-  - İzin etkinleştirildi: **Sürüm isteği** düğmesi kullanılabilir.
-  - İzin devre dışı bırakıldı: **Sürüm isteği** düğmesi kullanılamıyor.
+  - İzin etkinleştirildi: **Yayın** düğmesi kullanılabilir.
+  - İzin devre dışı: **Serbest Bırak** düğmesi kullanılamıyor.
+
+#### <a name="allow-recipients-to-request-a-message-to-be-released-from-quarantine-permission"></a>Alıcıların karantina izninden serbest bırakılacak bir ileti istemesine izin ver
+
+**Alıcıların karantina izninden serbest bırakılmak üzere bir ileti istemesine izin ver** (_PermissionToRequestRelease_), kullanıcıların karantinaya alınan iletilerinin yayımlanmasını _isteme_ becerisini denetler. İleti yalnızca bir yönetici isteği onayladıktan sonra serbest bırakılır.
+
+- **Karantinaya alınan ileti ayrıntıları**:
+  - İzin etkinleştirildi: **Yayın isteği** düğmesi kullanılabilir.
+  - İzin devre dışı: **Yayın isteği** düğmesi kullanılamıyor.
+
+- **Karantina bildirimleri**:
+  - İzin etkinleştirildi: **Yayın isteği** düğmesi kullanılabilir.
+  - İzin devre dışı: **Yayın isteği** düğmesi kullanılamıyor.

@@ -1,5 +1,5 @@
 ---
-title: Veri yaşam döngüsü yönetimiyle Kullanmaya başlayın
+title: Veri yaşam döngüsü yönetimini kullanmaya başlama
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -19,18 +19,18 @@ search.appverid:
 - MOE150
 - MET150
 description: Kuruluşunuzun verilerini yönetmeye başlamaya hazırsınız, ancak nereden başlayacağınızdan emin değil misiniz? Başlamak için bazı açıklayıcı yönergeleri okuyun.
-ms.openlocfilehash: c5b9e931e2ab822a4d888b775de9fb8fa2acb13b
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 0d9545a04b94b75ee1b9429d7db75b39e90b06ef
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64972375"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65286869"
 ---
-# <a name="get-started-with-data-lifecycle-management"></a>Veri yaşam döngüsü yönetimiyle Kullanmaya başlayın
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+# <a name="get-started-with-data-lifecycle-management"></a>Veri yaşam döngüsü yönetimini kullanmaya başlama
 
 >*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Tutmanız gereken içeriği koruyarak ve tutmadığınız içeriği silerek kuruluşunuzun verilerini yönetmeye başlamaya hazır mısınız? Başlamak için Microsoft Purview Veri Yaşam Döngüsü Yönetimi (eski adıyla Microsoft Information Governance) için aşağıdaki kılavuzu kullanın:
 

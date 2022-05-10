@@ -18,21 +18,21 @@ ms.collection:
 - m365initiative-compliance
 recommendations: false
 description: Microsoft Purview Information Protection özelliklerini uygulayarak hassas bilgileri nerede olursa olsun korumanıza yardımcı olun.
-ms.openlocfilehash: ac6627d620169aca962f85f30c98d830b4a34a9f
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 97f5172479d889ec1914cfc46102a58a83165269
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64999882"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65285488"
 ---
 # <a name="protect-your-sensitive-data-with-microsoft-purview"></a>Microsoft Purview ile hassas verilerinizi koruma
+
+>*[Microsoft 365 Güvenlik & Uyumluluğu için Lisanslama](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)*
 
 > [!TIP]
 > *Dokuz Microsoft Purview çözümlerinin tamamının premium sürümlerini ücretsiz olarak deneyebileceğinizi biliyor muydunuz?* Sağlam Purview özelliklerinin kuruluşunuzun uyumluluk gereksinimlerini karşılamasına nasıl yardımcı olabileceğini keşfetmek için 90 günlük Purview çözümleri deneme sürümünü kullanın. Microsoft 365 E3 ve Office 365 E3 müşterileri artık [Microsoft Purview uyumluluk portalı deneme hub'ında](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef) başlayabilir. [Kaydolabilecek kişiler ve deneme koşulları](compliance-easy-trials.md) hakkında ayrıntılı bilgi edinin.
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
->*[Microsoft 365 Güvenlik & Uyumluluğu için Lisanslama](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)*
 
 **Microsoft Purview Information Protection (eski adıyla** Microsoft Bilgi Koruması) özelliklerini uygulayarak hassas bilgileri nerede yaşarsa yaşasın veya seyahat etseler keşfetmenize, sınıflandırmanıza ve korumanıza yardımcı olur.
 

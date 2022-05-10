@@ -17,12 +17,12 @@ ms.collection:
 - M365-security-compliance
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 0cbcc198f31497996595a9f17df9cf689c435b58
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 3c11e531e8b4706128e1519b790046f800827d67
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65130549"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65285028"
 ---
 # <a name="whats-new-in-microsoft-365-defender"></a>Microsoft 365 Defender'daki yenilikler
 
@@ -45,6 +45,8 @@ Diğer Microsoft Defender güvenlik ürünleriyle ilgili yenilikler hakkında da
 
 Ayrıca, ürün güncelleştirmelerini ve önemli bildirimleri [ileti merkezi](https://admin.microsoft.com/Adminportal/Home#/MessageCenter) üzerinden de alabilirsiniz. 
 
+## <a name="may-2022"></a>Mayıs 2022
+- (Önizleme) Yakın zamanda duyurulan [Microsoft Güvenlik Uzmanları](https://aka.ms/MicrosoftSecurityExperts) adlı yeni bir hizmet kategorisine genişletilmesine uygun olarak, genel önizleme [için Microsoft Defender Experts for Hunting (Avcılık](defenderexpertsforhuntingprev.md) için Defender Uzmanları) kullanıma sunulmuştur. Tehdit Avcılığı için Defender Uzmanları, güçlü bir güvenlik operasyonları merkezine sahip olan ancak Microsoft'un uç noktalar, Office 365, bulut uygulamaları ve kimlik gibi Microsoft Defender verilerinde tehditleri proaktif olarak avlamalarına yardımcı olmasını isteyen müşterilere yöneliktir. 
 
 ## <a name="april-2022"></a>Nisan 2022
 - (Önizleme) Artık doğrudan tehdit avcılığı sorgu sonuçlarından e-posta iletilerinde [eylemler](advanced-hunting-take-action.md) yapılabilir. E-postalar diğer klasörlere taşınabilir veya kalıcı olarak silinebilir. 

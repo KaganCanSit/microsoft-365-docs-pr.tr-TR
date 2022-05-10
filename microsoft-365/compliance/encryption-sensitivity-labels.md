@@ -1,5 +1,5 @@
 ---
-title: Şifreleme uygulamak için duyarlılık etiketlerini kullanarak içeriğe erişimi kısıtlama
+title: Duyarlılık etiketlerini kullanarak şifreleme uygulama
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -16,16 +16,18 @@ search.appverid:
 - MET150
 description: Erişimi ve kullanımı kısıtlayarak verilerinizi koruyan şifreleme için duyarlılık etiketlerini yapılandırın.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 0ec60e573d5c05c4a30e74f235ffae5983de03dc
-ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
+ms.openlocfilehash: 7355ef75eb455ad7442052daf1df814eb9b3bf26
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64705418"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65285094"
 ---
 # <a name="restrict-access-to-content-by-using-sensitivity-labels-to-apply-encryption"></a>Şifreleme uygulamak için hassasiyet etiketleri kullanarak içeriğe erişimi kısıtlama
 
 >*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Duyarlılık etiketi oluşturduğunuzda, etiketin uygulanacağı içeriğe erişimi kısıtlayabilirsiniz. Örneğin, bir duyarlılık etiketinin şifreleme ayarlarıyla içeriği koruyarak şunları yapabilirsiniz:
 
@@ -45,7 +47,7 @@ Son olarak, bir yönetici olarak, şifreleme uygulamak için bir duyarlılık et
 - **İzinleri şimdi atayın**, böylece hangi kullanıcıların bu etikete sahip içerik için hangi izinleri tam olarak aldığını belirleyebilirsiniz.
 - Etiketi içeriğe uygulayan **kullanıcıların izin atamasına izin verin**. Bu şekilde, kuruluşunuzdaki kişilere işbirliği yapmak ve işlerini yapmak için ihtiyaç duyabilecekleri esneklik sağlayabilirsiniz.
 
-Şifreleme ayarları, Microsoft 365 uyumluluk merkezi [bir duyarlılık etiketi oluşturduğunuzda](create-sensitivity-labels.md) kullanılabilir. Ayrıca eski portal olan Güvenlik & Uyumluluk Merkezi'ni de kullanabilirsiniz.
+Şifreleme ayarları, Microsoft Purview uyumluluk portalında [duyarlılık etiketi oluşturduğunuzda](create-sensitivity-labels.md) kullanılabilir.
 
 ## <a name="understand-how-the-encryption-works"></a>Şifrelemenin nasıl çalıştığını anlama
 
@@ -192,11 +194,11 @@ Belirli kişilere yalnızca etiketlenmiş içerikle etkileşim kurabilmeleri iç
 
 - Kimliği doğrulanmış kullanıcılar. Seçmeden önce bu ayarın [gereksinimlerini ve sınırlamalarını](#requirements-and-limitations-for-add-any-authenticated-users) anladığınızdan emin olun.
 
-- Azure AD'de belirli bir kullanıcı veya e-posta özellikli güvenlik grubu, dağıtım grubu veya Microsoft 365 [grubu (eski adıyla Office 365 grup](https://techcommunity.microsoft.com/t5/microsoft-365-blog/office-365-groups-will-become-microsoft-365-groups/ba-p/1303601)). Microsoft 365 grubunun statik veya [dinamik üyeliği](/azure/active-directory/users-groups-roles/groups-create-rule) olabilir. Bu grup türü Azure AD ile eşitlenmediğinden ve e-posta etkin olmayan bir güvenlik grubu kullanamadığınızdan [Exchange dinamik dağıtım](/Exchange/recipients/dynamic-distribution-groups/dynamic-distribution-groups) grubunu kullanamadığınızı unutmayın.
+- Azure AD belirli bir kullanıcı veya e-posta özellikli güvenlik grubu, dağıtım grubu veya [Microsoft 365 grubu (eski adıyla Office 365 grubu](https://techcommunity.microsoft.com/t5/microsoft-365-blog/office-365-groups-will-become-microsoft-365-groups/ba-p/1303601)). Microsoft 365 grubunun statik veya [dinamik üyeliği](/azure/active-directory/users-groups-roles/groups-create-rule) olabilir. Bu grup türü Azure AD eşitlenmediğinden ve e-posta etkin olmayan bir güvenlik grubu kullanamadığınızdan Exchange [dinamik dağıtım](/Exchange/recipients/dynamic-distribution-groups/dynamic-distribution-groups) grubunu kullanamadığınızı unutmayın.
     
     Posta kişilerini içeren grupları kuruluşunuzun dışındaki birden çok kişiye erişim vermek için kullanışlı bir yöntem olarak belirtebilirsiniz ancak şu anda bu yapılandırmayla ilgili bilinen bir sorun vardır. Daha fazla bilgi için bkz [. Gruplardaki posta kişilerinin şifrelenmiş içeriğe aralıklı erişimi vardır](/office365/troubleshoot/sensitivity-labels/mail-contacts-lose-access-encrypted-content).
 
-- Herhangi bir e-posta adresi veya etki alanı. Bu seçeneği, başka bir kuruluştaki Azure AD kullanan tüm kullanıcıları belirtmek için bu kuruluştan herhangi bir etki alanı adı girerek kullanın. Bu seçeneği sosyal sağlayıcılar için **gmail.com, hotmail.com** **veya** **outlook.com** gibi etki alanı adlarını girerek de kullanabilirsiniz.
+- Herhangi bir e-posta adresi veya etki alanı. Başka bir kuruluştaki Azure AD kullanan tüm kullanıcıları, söz konusu kuruluştan herhangi bir etki alanı adı girerek belirtmek için bu seçeneği kullanın. Bu seçeneği sosyal sağlayıcılar için **gmail.com, hotmail.com** **veya** **outlook.com** gibi etki alanı adlarını girerek de kullanabilirsiniz.
 
     > [!NOTE]
     > Azure AD kullanan bir kuruluştan etki alanı belirtirseniz, ilgili etki alanına erişimi kısıtlayamazsınız. Bunun yerine, Azure AD'deki tüm doğrulanmış etki alanları, belirttiğiniz etki alanı adının sahibi olan kiracıya otomatik olarak eklenir.
@@ -210,7 +212,7 @@ En iyi uygulama olarak, kullanıcılar yerine grupları kullanın. Bu strateji y
 Bu ayar, etiketin şifrelediği içeriğe kimlerin erişebileceğini kısıtlamaz, içeriği şifrelemeye devam eder ve içeriğin nasıl kullanılabileceğini (izinler) ve erişilebileceğini (süre sonu ve çevrimdışı erişim) kısıtlama seçenekleri sunar. Ancak şifrelenmiş içeriği açan uygulamanın kullanılan kimlik doğrulamasını destekleyebilmesi gerekir. Bu nedenle, Google gibi federasyon sosyal sağlayıcıları ve tek seferlik geçiş kodu kimlik doğrulaması yalnızca e-posta için ve yalnızca Exchange Online kullandığınızda çalışır. Microsoft hesapları Office 365 uygulamaları ve [Azure Information Protection görüntüleyicisi](https://portal.azurerms.com/#/download) ile kullanılabilir.
 
 > [!NOTE]
-> Duyarlılık etiketleri SharePoint ve OneDrive Office [dosyaları için etkinleştirildiğinde bu ayarı SharePoint ve Azure](sensitivity-labels-sharepoint-onedrive-files.md) [AD B2B ile OneDrive tümleştirmesi ile](/sharepoint/sharepoint-azureb2b-integration-preview) kullanmayı göz önünde bulundurun.
+> SharePoint ve OneDrive Office [dosyaları için duyarlılık etiketleri etkinleştirildiğinde](sensitivity-labels-sharepoint-onedrive-files.md) bu ayarı SharePoint [ve Azure AD B2B ile OneDrive tümleştirmesi ile](/sharepoint/sharepoint-azureb2b-integration-preview) kullanmayı göz önünde bulundurun.
 
 Kimliği doğrulanmış kullanıcılar ayarı için bazı tipik senaryolar:
 

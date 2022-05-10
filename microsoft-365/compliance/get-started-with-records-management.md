@@ -18,18 +18,18 @@ search.appverid:
 - MOE150
 - MET150
 description: Yasal, iş veya mevzuat yükümlülükleri için yüksek değerli içeriği yöneten ancak nereden başlayacağınıza emin olmayan Microsoft 365 için kayıt yönetimi çözümüne mi ihtiyacınız var? Başlamak için bazı pratik kılavuzları okuyun.
-ms.openlocfilehash: bbba24a2627c6040873da8d01185e4e6bdfdbfc8
-ms.sourcegitcommit: 265a4fb38258e9428a1ecdd162dbf9afe93eb11b
+ms.openlocfilehash: 86d6f21963b33fde59cb498868b8ecec315e1ad8
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2022
-ms.locfileid: "65268759"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65286790"
 ---
 # <a name="get-started-with-records-management"></a>Kayıt yönetimini kullanmaya başlama
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
 >*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft 365'de kayıt yönetimi çözümünü kullanarak kuruluşunuzun yasal, iş veya mevzuat yükümlülükleri için yüksek değerli içeriğini yönetmeye başlamaya hazır mısınız? Başlamak için aşağıdaki kılavuzu kullanın:
 

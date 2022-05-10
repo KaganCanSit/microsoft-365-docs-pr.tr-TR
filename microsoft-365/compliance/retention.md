@@ -18,18 +18,19 @@ search.appverid:
 - MOE150
 - MET150
 description: İhtiyaç duyduklarınızı korumanıza ve saklamadığınız şeyleri silmenize yardımcı olan bekletme ilkeleri ve bekletme etiketleri hakkında bilgi edinin.
-ms.openlocfilehash: 5c9a88b27814b89077a013b03d25b4d53ef3f125
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 6fd2f56d6876b6a3832e869767880890486551db
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64972080"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65286934"
 ---
 # <a name="learn-about-retention-policies-and-retention-labels"></a>Bekletme ilkeleri ve bekletme etiketleri hakkında bilgi edinin
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
 >*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 > [!NOTE]
 > Teams bekletme ilkeleriyle ilgili iletiler görüyorsanız veya uygulamalarınızdaki bekletme etiketleri hakkında sorularınız varsa, bunların sizin için nasıl yapılandırıldığı hakkında bilgi için BT departmanınıza başvurun. Bu arada, aşağıdaki makaleleri yararlı bulabilirsiniz:
@@ -335,7 +336,7 @@ Uyarlamalı kapsamları kullanmanın avantajları:
 
 - [İlke başına öğe sayısıyla](retention-limits.md#maximum-number-of-items-per-policy) ilgili sınır yoktur. Uyarlamalı ilkeler kiracı [başına en fazla ilke sayısına](retention-limits.md#maximum-number-of-policies-per-tenant) tabi olsa da, daha esnek yapılandırma büyük olasılıkla çok daha az ilkeyle sonuçlanır.
 
-- Bekletme gereksinimleriniz için daha güçlü hedefleme. Örneğin, mevcut Azure AD özniteliklerini kullanarak bu amaca yönelik grup oluşturma ve bakımını yönetme ek yükü olmadan kullanıcılara coğrafi konumlarına göre farklı bekletme ayarları atayabilirsiniz.
+- Bekletme gereksinimleriniz için daha güçlü hedefleme. Örneğin, var olan Azure AD özniteliklerini kullanarak, bu amaç için grup oluşturma ve bakımını yönetme ek yükü olmadan kullanıcılara coğrafi konumlarına göre farklı bekletme ayarları atayabilirsiniz.
 
 - Sorgu tabanlı üyelik, grup üyeliğine veya departmanlar arası iletişime dayanan dış süreçlere güvenilir bir şekilde yansıtılmayan iş değişikliklerine karşı dayanıklılık sağlar.
 

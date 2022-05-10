@@ -1,6 +1,7 @@
 ---
-title: Bu konuda bilgi engellerini Microsoft 365
-description: Kuruluş içinde iletişim uyumluluğunu sağlamak için bilgi engellerini Microsoft Teams iletişim engellerini kullanın.
+title: Bilgi engelleri hakkında daha fazla bilgi edinme
+description: Microsoft Purview'daki bilgi engelleri hakkında bilgi edinin.
+keywords: Microsoft 365, Microsoft Purview, uyumluluk, bilgi engelleri
 ms.author: robmazz
 author: robmazz
 manager: laurawi
@@ -16,96 +17,98 @@ ms.localizationpriority: ''
 f1.keywords:
 - NOCSH
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: fc3d961b8707ba07febd95022580091618086d7f
-ms.sourcegitcommit: 7e59802f251da96ec639fb09534aa96acf5d6ce7
+ms.openlocfilehash: 72a53580222b315f86fd397e391b026937b8035b
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2021
-ms.locfileid: "63005437"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65287188"
 ---
-# <a name="learn-about-information-barriers-in-microsoft-365"></a>Bu konuda bilgi engellerini Microsoft 365
+# <a name="learn-about-information-barriers"></a>Bilgi engelleri hakkında daha fazla bilgi edinme
 
-Microsoft bulut hizmetleri güçlü iletişim ve işbirliği özellikleri içerir. Ancak, ilgi çakışması önlemek için iki grup arasındaki iletişimi ve işbirliğini kısıtlamak istediğinizi varsayalım. Ya da iç bilgileri korumak için, kuruluş içindeki belirli kişiler arasındaki iletişimi ve işbirliğini kısıtlamak istiyor da olabilir. Microsoft 365 gruplar ve kuruluşlar arasında iletişimi ve işbirliğini sağlar, bu nedenle gerektiğinde belirli kullanıcı grupları arasında iletişimi ve işbirliğini kısıtlamanın bir yolu var mı? Bilgi engelleriyle, bunu!
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Microsoft Teams, SharePoint Online'a OneDrive İş engellerini ortadan kaldırabilirsiniz. Aboneliğinizin bilgi [engellerini](#required-licenses-and-permissions), uyumluluk yöneticisini veya bilgi engellerini olduğunu varsayarak, ilgili kullanıcı grupları arasında iletişime izin verecek veya bu iletişimleri önleyen ilkeler Microsoft Teams. Bilgi engeli ilkeleri, şu gibi durumlarda kullanılabilir:
+Microsoft bulut hizmetleri güçlü iletişim ve işbirliği özellikleri içerir. Ancak, kuruluşunuzda çıkar çatışmasının oluşmasını önlemek için iki grup arasındaki iletişimi ve işbirliğini kısıtlamak istediğinizi varsayalım. Ya da iç bilgileri korumak için kuruluşunuzdaki belirli kişiler arasındaki iletişimi ve işbirliğini kısıtlamak isteyebilirsiniz. Microsoft 365 gruplar ve kuruluşlar arasında iletişim ve işbirliği sağlar, bu nedenle gerektiğinde belirli kullanıcı grupları arasındaki iletişimi ve işbirliğini kısıtlamanın bir yolu var mı? Microsoft Purview Bilgi Engelleri (IB) ile şunları yapabilirsiniz!
 
-- Gün içinde trader grubunda yer alan kullanıcı pazarlama ekibiyle dosya iletişim kurması veya paylaşması gerekir
-- Gizli şirket bilgileri üzerinde çalışan finans personeli, kuruluşların içindeki belirli gruplarla iletişim kurmalı veya dosya paylaşmaz
-- Ticari gizli malzemelere sahip bir iç ekip, kuruluş içindeki belirli gruplarda yer alan kişilerin aramasını veya çevrimiçi sohbete sahip olması gerekir.
-- Araştırma ekibi, ürün geliştirme ekibini yalnızca çevrimiçi aramalı veya çevrimiçi olarak sohbete sahip olmalı
-- Gün trader grubu sitesi, gün trader grubu dışından hiç kimse tarafından paylaşılmaz veya erişilemez
+Microsoft Teams, çevrimiçi SharePoint ve OneDrive İş bilgi engellerini destekler. [Aboneliğinizin](#required-licenses-and-permissions) bilgi engelleri içerdiğini varsayarsak, uyumluluk yöneticisi veya bilgi engelleri yöneticisi, Microsoft Teams'da kullanıcı grupları arasında iletişime izin veren veya bunları engelleyen ilkeler tanımlayabilir. Bilgi engeli ilkeleri aşağıdaki gibi durumlarda kullanılabilir:
+
+- Günlük tüccar grubundaki kullanıcı pazarlama ekibiyle iletişim kurmamalı veya dosya paylaşmamalıdır
+- Gizli şirket bilgileri üzerinde çalışan finans personeli, kuruluş içindeki belirli gruplarla iletişim kurmamalı veya dosya paylaşmamalıdır
+- Ticari gizli malzeme içeren bir şirket içi ekip, kendi kuruluşundaki belirli gruplardaki kişileri aramamalı veya çevrimiçi sohbet etmemelidir
+- Araştırma ekibi yalnızca bir ürün geliştirme ekibiyle çevrimiçi aramalı veya sohbet etmelidir
+- Günlük tüccar grubu için bir site, gün tüccar grubu dışındaki herkes tarafından paylaşılmamalı veya erişilmemelidir
 
 > [!IMPORTANT]
-> Bilgi engelleri ***yalnızca** _ iki yol kısıtlamalarını destekler. Pazarlama gibi bir yol, gün trader'larıyla iletişim kurabilir ve işbirliği kurabilir, ancak gün trader'ları pazarlama _*ile iletişim kuramaz ve işbirliği _kuramaz_** desteği yoktur.
+> Bilgi engelleri ***yalnızca destekler** _ iki yönlü kısıtlamalar. Pazarlama gibi tek yönlü kısıtlamalar günlük tüccarlarla iletişim kurabilir ve işbirliği yapabilir, ancak günlük tüccarlar pazarlama ile iletişim kuramaz ve işbirliği yapamazlar _*_desteklenmez_**.
 
-Bu örnek senaryoların (ve daha fazlası) tüm bu örnek senaryolar için Microsoft Teams, SharePoint Online ve OneDrive'te iletişimleri ve işbirliğini engellemek veya bunlara izin vermek için bilgi engeli OneDrive. Bu tür ilkeler kişilerin, arama yapmaları gerekenleri aramalarını veya sohbet etmelerini ya da yalnızca Microsoft Teams.'de belirli gruplarla iletişim kurmalarını sağlar. Bilgi engeli ilkelerinin etkili olduğu bu ilkelerin kapsamında olan kullanıcılar Microsoft Teams'te başkalarıyla iletişim kurmaya ve işbirliği yapmaya çalışsa, SharePoint Online veya OneDrive denetimleri, iletişim ve işbirliğini (bilgi engeli ilkeleri tarafından tanımlandığı şekilde) engellemek (veya buna izin vermek) için  yapılır.
+Bu örnek senaryoların tümü (ve daha fazlası) için, Microsoft Teams, SharePoint Online ve OneDrive iletişim ve işbirliğine izin vermek için bilgi engeli ilkeleri tanımlanabilir. Bu tür ilkeler, kişilerin aramalarını veya konuşmamaları gereken kişilerle sohbet etmelerini engelleyebilir veya kişilerin yalnızca Microsoft Teams'deki belirli gruplarla iletişim kurmasını sağlayabilir. Bilgi engeli ilkeleri etkin olduğunda, bu ilkelerin kapsamına giren kullanıcılar Microsoft Teams, SharePoint Çevrimiçi veya OneDrive denetimlerinde başkalarıyla iletişim kurmaya ve işbirliği yapmaya çalıştığında iletişim ve işbirliğini (bilgi engeli ilkeleriyle tanımlandığı şekilde) önlemek (veya izin vermek) için yapılır.
 
-Bilgi engelleriyle kullanıcı deneyimi hakkında daha fazla bilgi edinmek için bkz:
+Bilgi engelleriyle ilgili kullanıcı deneyimi hakkında daha fazla bilgi edinmek için bkz:
 
-- [Web'de bilgi Microsoft Teams](/MicrosoftTeams/information-barriers-in-teams)
+- [Microsoft Teams'da bilgi engelleri](/MicrosoftTeams/information-barriers-in-teams)
 - [SharePoint Online'da bilgi engelleri](/sharepoint/information-barriers)
-- [Web'de bilgi OneDrive](/onedrive/information-barriers)
+- [OneDrive'da bilgi engelleri](/onedrive/information-barriers)
 
 > [!IMPORTANT]
-> Şu anda, bilgi engelleri e-posta iletişimleri için geçerli değildir. Ayrıca, bilgi engelleri uyumluluk sınırlarından [bağımsızdır](set-up-compliance-boundaries.md).<p> Bilgi engeli ilkelerini tanımlamadan ve uygulamadan önce, kurumda adres defteri [ilkelerinin Exchange emin](/exchange/address-books/address-book-policies/address-book-policies) olun. (Bilgi engelleri adres defteri ilkelerine dayalıdır.)
+> Şu anda, bilgi engelleri e-posta iletişimleri için geçerli değildir. Ayrıca, bilgi engelleri [uyumluluk sınırlarından](set-up-compliance-boundaries.md) bağımsızdır.<p> Bilgi engeli ilkelerini tanımlamadan ve uygulamadan önce, kuruluşunuzun [Exchange adres defteri ilkelerinin](/exchange/address-books/address-book-policies/address-book-policies) etkin olmadığından emin olun. (Bilgi engelleri adres defteri ilkelerini temel alır.)
 
-## <a name="what-happens-with-information-barriers"></a>Bilgi engelleriyle neler olur?
+## <a name="what-happens-with-information-barriers"></a>Bilgi engelleri ile ne olur?
 
-Bilgi engeli ilkeleri kullanılırken, belirli kullanıcılarla iletişim kurması veya dosya paylaşması gereken kişiler bu kullanıcıları bulamaz, seçerek, sohbet edip arayamz. Bilgi engelleriyle, yetkisiz iletişimi ve işbirliğini önlemek için denetimler tamamlanmamıştır.
+Bilgi engeli ilkeleri söz konusu olduğunda, diğer belirli kullanıcılarla iletişim kurmaması veya dosya paylaşmaması gereken kişiler bu kullanıcıları bulamaz, seçemez, sohbet etmez veya arayamazsınız. Bilgi engelleriyle, yetkisiz iletişimi ve işbirliğini önlemek için denetimler yapılır.
 
-Bilgi engelleri Microsoft Teams Online ve Microsoft Teams için SharePoint engeller OneDrive. Bilgi Microsoft Teams, bilgi engeli ilkeleri aşağıdaki yetkisiz iletişim tiplerini belirler ve engeller:
+Bilgi engelleri Microsoft Teams (sohbetler ve kanallar), SharePoint Online ve OneDrive için geçerlidir. Microsoft Teams'de, bilgi engeli ilkeleri aşağıdaki yetkisiz iletişim türlerini belirler ve önler:
 
 - Kullanıcı arama
-- Ek ekiplere üye ekleme
+- Ekibİye üye ekleme
 - Biriyle sohbet oturumu başlatma
 - Grup sohbeti başlatma
-- Birini toplantıya katılmaya davet etme
+- Bir kişiyi toplantıya katılmaya davet etme
 - Ekran paylaşma
-- Arama yerleştirilmesi
+- Arama oluşturma
 - Dosyayı başka bir kullanıcıyla paylaşma
 - Paylaşım bağlantısı aracılığıyla dosyaya erişim
 
-Söz konusu kişiler etkinliği engellemeye yönelik bir bilgi engeli ilkesine dahil edilirse devam edemiyorlar. Ayrıca, potansiyel olarak, bir bilgi engeli ilkesine dahil olan herkes diğerleriyle iletişim kurması engellenmiş Microsoft Teams. Bilgi engeli ilkelerinden etkilenen kişiler aynı ekip veya grup sohbetine parçası olduğunda, bu sohbet oturumlarından kaldırılabilir ve grupla daha fazla iletişime izin verilmiyor olabilir.
+İlgili kişiler etkinliği önlemek için bir bilgi engeli ilkesine dahil edilirse devam edemeyecektir. Ayrıca, bir bilgi engeli ilkesine dahil edilen herkesin Microsoft Teams'daki diğer kişilerle iletişim kurması engellenebilir. Bilgi engeli ilkelerinden etkilenen kişiler aynı ekip veya grup sohbetinin parçası olduğunda, bu sohbet oturumlarından kaldırılabilir ve grupla daha fazla iletişime izin verilmeyebilir.
 
-Bilgi engelleriyle ilgili kullanıcı deneyimi hakkında daha fazla bilgi edinmek [için bkz.](/MicrosoftTeams/information-barriers-in-teams) Microsoft Teams.
+Bilgi engelleri ile kullanıcı deneyimi hakkında daha fazla bilgi edinmek için bkz. [Microsoft Teams bilgi engelleri](/MicrosoftTeams/information-barriers-in-teams).
 
-SharePoint Online ve OneDrive'de, bilgi engeli ilkeleri aşağıdaki yetkisiz işbirliğini belirler ve engeller:
+SharePoint Online ve OneDrive'da, bilgi engeli ilkeleri aşağıdaki yetkisiz işbirliği türlerini belirler ve önler:
 
 - Siteye üye ekleme
-- Kullanıcı tarafından siteye veya içeriğe erişme
-- Site veya içeriği başka bir kullanıcıyla paylaşma
-- Bir sitede arama
+- Bir kullanıcı tarafından siteye veya içeriğe erişme
+- Siteyi veya içeriği başka bir kullanıcıyla paylaşma
+- Sitede arama
 
-Bilgi engelleriyle kullanıcı deneyimi hakkında daha fazla bilgi edinmek için bkz. [SharePoint Online](/sharepoint/information-barriers)
+Bilgi engelleriyle kullanıcı deneyimi hakkında daha fazla bilgi edinmek için bkz. [SharePoint Online'da bilgi engelleri](/sharepoint/information-barriers)
 
 ## <a name="required-licenses-and-permissions"></a>Gerekli lisanslar ve izinler
 
-Insider risk yönetimine başlamadan önce, yeni aboneliğinizi [Microsoft 365](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans) eklentileri doğrulamanız gerekir. Bilgi engellerine erişmek ve bunu kullanmak için, organizasyon aşağıdaki aboneliklerden veya eklentilerden biri olabilir:
+IB'yi kullanmaya başlamadan önce [Microsoft 365 aboneliğinizi](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans) ve tüm eklentileri onaylamanız gerekir. IB'ye erişmek ve bunları kullanmak için kuruluşunuzun aşağıdaki aboneliklerden veya eklentilerden birine sahip olması gerekir:
 
 - Microsoft 365 E5/A5 aboneliği (ücretli veya deneme sürümü)
 - Office 365 E5/A5/A3/A1 aboneliği (ücretli veya deneme sürümü)
-- Office 365 Gelişmiş Uyumluluk eklenti (artık yeni abonelikler için kullanılamaz)
+- Office 365 Gelişmiş Uyumluluk eklentisi (artık yeni aboneliklerde kullanılamaz)
 - Microsoft 365 E3/A3/A1 aboneliği + Microsoft 365 E5/A5 Uyumluluk eklentisi
-- Microsoft 365 E3/A3/A1 aboneliği + Microsoft 365 E5/A5 Insider Risk Yönetimi eklentisi
+- Microsoft 365 E3/A3/A1 aboneliği + Microsoft 365 E5/A5 Insider Risk Management eklentisi
 
-Daha fazla bilgi için güvenlik [Microsoft 365 uyumluluğu için lisanslama & bakın](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection).
+Daha fazla bilgi için bkz[. güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection).
 
-Bilgi [engeli ilkelerini tanımlamak veya](information-barriers-policies.md) düzenlemek için, aşağıdaki rollerden biri size atanmış olmalıdır:
+[Bilgi engeli ilkelerini tanımlamak veya düzenlemek](information-barriers-policies.md) için aşağıdaki rollerden birine atanmış olmanız gerekir:
 
-- Microsoft 365 yönetici
-- Office 365 yönetici
+- Genel yönetici Microsoft 365
+- Genel yönetici Office 365
 - Uyumluluk yöneticisi
 - IB Uyumluluk Yönetimi
 
-(Roller ve izinler hakkında daha fazla bilgi edinmek için, Office 365 [ve Uyumluluk &'nde İzinler'e bakın](../security/office-365-security/permissions-in-the-security-and-compliance-center.md).)
+(Roller ve izinler hakkında daha fazla bilgi edinmek için bkz. [Office 365 Güvenlik & Uyumluluk Merkezi'ndeki İzinler](../security/office-365-security/permissions-in-the-security-and-compliance-center.md).)
 
-Bilgi engeli ilkelerini tanımlamak, doğrulamak veya düzenlemek için PowerShell cmdlet'lerini biliyor olun. Nasıl kullanıldığı makalesinde PowerShell cmdlet'lerinin birkaç örneği sağlamızsa [da,](information-barriers-policies.md) kuruma ilişkin parametreler gibi diğer ayrıntıları da bilmek gerekir.
+Bilgi engeli ilkelerini tanımlamak, doğrulamak veya düzenlemek için PowerShell cmdlet'lerini biliyor olmanız gerekir. [Nasıl yapılır makalesinde](information-barriers-policies.md) PowerShell cmdlet'lerinin birkaç örneğini sağlasak da, kuruluşunuz için parametreler gibi diğer ayrıntıları bilmeniz gerekir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Bu konuda bilgi engelleri hakkında daha fazla Microsoft Teams](/MicrosoftTeams/information-barriers-in-teams)
-- [SharePoint Online'daki bilgi engelleri hakkında daha fazla bilgi](/sharepoint/information-barriers)
-- [Bu konuda bilgi engelleri hakkında daha fazla OneDrive](/onedrive/information-barriers)
-- [Bilgi engeli ilkeleri için kullanılmaktadır.](information-barriers-attributes.md)
-- [Bilgi engellerine yönelik ilkeleri tanımlama](information-barriers-policies.md)
+- [Microsoft Teams bilgi engelleri hakkında daha fazla bilgi edinin](/MicrosoftTeams/information-barriers-in-teams)
+- [SharePoint Online'da bilgi engelleri hakkında daha fazla bilgi edinin](/sharepoint/information-barriers)
+- [OneDrive bilgi engelleri hakkında daha fazla bilgi edinin](/onedrive/information-barriers)
+- [Bilgi engeli ilkeleri için kullanılabilecek özniteliklere bakın](information-barriers-attributes.md)
+- [Bilgi engelleri için ilke tanımlama](information-barriers-policies.md)
 - [Bilgi engeli ilkelerini düzenleme (veya kaldırma)](information-barriers-edit-segments-policies.md)

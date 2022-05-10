@@ -16,38 +16,38 @@ ms.custom:
 f1.keywords: NOCSH
 recommendations: false
 description: Grup hizmetleri etkileşimleri
-ms.openlocfilehash: 3f5433671e4407e25669498824817db0b43ff329
-ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
+ms.openlocfilehash: 64de83690edb96e3bf7a889309c262a92f8e8193
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63712828"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65286351"
 ---
 # <a name="groups-services-interactions"></a>Grup hizmetleri etkileşimleri
 
-Microsoft 365 Grupları, son kullanıcılara bağlı bir deneyim sunmak için Microsoft 365 platformu içindeki çeşitli hizmetler ve iş yükleri için ortak bir doku sağlar. Temel olarak, şunları Microsoft 365 bir grup vardır:
+Microsoft 365 Grupları, son kullanıcılara bağlı bir deneyim sunmak üzere Microsoft 365 platformundaki çeşitli hizmetler ve iş yükleri için ortak bir doku sağlar. Temel olarak, aşağıdakileri sağlamak için bir Microsoft 365 grubu vardır:
 
-- Üyeliği yönetmek için bir yol (Azure AD)
-- Mesajlaşma ve konuşmalar için bir yer (posta kutusu, Exchange kutusu, Microsoft Teams veya Yammer)
-- Dosyaların depolandığı yer (SharePoint)
+- Üyeliği yönetmenin bir yolu (Azure AD)
+- Mesajlaşma ve konuşmalar için bir yer (posta kutusu, Microsoft Teams Yammer Exchange)
+- Dosyaların depolandığı bir yer (SharePoint)
 - Zamanlama için bir takvim (Exchange)
-- Notları yakalamak için not defteri (OneNote)
+- Notları yakalamak için bir not defteri (OneNote)
 
-Grup oluşturma noktasında birkaç başka kaynak da sağlanmaz, ancak hizmetten ilk kez erişilene kadar görünmezler:
+Grup oluşturma noktasında, diğer birkaç kaynak da sağlanır, ancak hizmetten ilk kez erişilene kadar bunlar görünmez:
 
-- Grup görevlerini yönetmek için bir alan (Planner)
+- Grup görevlerini yönetmek için bir pano (Planner)
 - Raporlama için çalışma alanı (Power BI)
 - Paylaşılan videolar için bir alan (Microsoft Stream)
 - Paylaşılan formlar için bir alan (Formlar)
 
-Farklı Microsoft 365, diğer hizmetler grup üyelerine ek işlevsellik ve Microsoft 365 sağlamak için grup üyeleriyle etkileşim kurabilirsiniz.
-Bunun örnekleri şunlardır:
+Microsoft 365 genelinde, diğer hizmetler grup üyelerine ek işlevler ve yetenekler sunmak için Microsoft 365 gruplarla etkileşim kurabiliyor.
+Buna örnek olarak şunlar verilebilir:
 
-- Power Apps için uygulamanın sonları
-- Power Automate için iş akışları oluşturma
-- Project tabanlı proje yönetimi için Web'de Yol Haritası ve
-- Teams tabanlı konuşmalar için video
-- Yammer toplulukları için topluluklar
+- Uygulamalar için Power Apps
+- İş akışları için Power Automate
+- Şelale tabanlı proje yönetimi için web'de Project ve Yol Haritası
+- Kanal tabanlı konuşmalar için Teams
+- İlgi alanları için Yammer
 
 ## <a name="user-interactions-with-groups"></a>Gruplarla kullanıcı etkileşimleri
 
@@ -55,31 +55,31 @@ Microsoft 365 Grupları hem yöneticiler hem de son kullanıcılar tarafından �
 
 ### <a name="administrative-experiences"></a>Yönetim deneyimleri
 
-Yöneticiler, komut dosyası desteği olan komut satırı arabirimlerinin yanı sıra Microsoft 365 API'si ile etkileşim halindeki özel yerleşik uygulamalar gibi iş yükü yönetim merkezlerinden Graph yönetebilir. Bunun tek istisnası, Yammer web arabiriminin içinde oluşturulacak grup Yammer olmasıdır.
+Yöneticiler çeşitli iş yükü yönetim merkezlerinden Microsoft 365 grupları, betiği destekleyen komut satırı arabirimlerinin yanı sıra Graph API ile etkileşim kuran özel olarak oluşturulmuş uygulamalar oluşturabilir ve yönetebilir. Bunun tek istisnası, Yammer web arabiriminden oluşturulması gereken Yammer gruplarıdır.
 
 **İlgili ayarlar**
 
-Grup ayarlarını yöneten çeşitli yönetim arabirimleri arasında farkında olmak istediğiniz bazı çakışmalar vardır.
+Grup ayarlarını yönetebilen çeşitli yönetim arabirimleri arasında, bilmeniz gereken birkaç çakışma vardır.
 
 **Microsoft 365 yönetici merkezi**
 
-Grup Microsoft 365 yönetim merkezi, sahiplerin konuk eklemesine izin verme özelliği gibi Gruplara konuk erişimi varsayılan olarak etkindir. Bu yönetim merkezinden Gruplar için başka kuruluş düzeyi denetimi yoktur.
+Microsoft 365 yönetim merkezi, sahiplerin konuk eklemesine izin verme özelliği de varsayılan olarak Gruplar'a konuk erişimi etkindir. Bu yönetim merkezinden Gruplar için başka kuruluş düzeyinde denetim yoktur.
 
 **Azure AD yönetim merkezi**
 
-Azure AD yönetim merkezi, kullanıcıların Azure portallarında grup oluştur hem de sahip ata hem de süre sonu ve adlandırma ilkesi ayarlarıyla ilgili denetimler sunar.
+Azure AD yönetim merkezi, kullanıcıların Azure portallarında Grup oluşturup oluşturamayacağı veya sahip atayabileceğine ilişkin denetimlerin yanı sıra süre sonu ve adlandırma ilkesi ayarları sunar.
 
-Yönetim merkezi, toplantının ötesine geçecek çeşitli konuk daveti denetimi önlemleri de sağlar. Örneğin, Microsoft 365 yönetim merkezi olmayanların da konukları davet edip etmeyebilmelerini sınırlayabilirler
+Yönetim merkezi ayrıca, sahip olmayanların da konuk davet edip edemeyeceğini sınırlama gibi Microsoft 365 yönetim merkezi ötesinde birkaç konuk daveti denetimi önlemi sağlar
 
 **SharePoint**
 
-SharePoint site, Sahip, Üye ve Ziyaretçi güvenlik gruplarıyla oluşturulur ve ilk iki grup eşleri Sahip Microsoft 365 eşleşmesi olur. SharePoint Online siteleri için üyelik genel olarak ilişkili grup Microsoft 365 yönetiliyorsa, bu iki yönlü bir ilişki değildir. Microsoft 365 grup düzeyinde üyelikte yapılan tüm değişiklikler SharePoint'e yansır; bununla birlikte, SharePoint grubunda üyelik değiştirilirse bu Microsoft 365 yansıtlanmaz.
+SharePoint siteler Sahip, Üye ve Ziyaretçi güvenlik gruplarıyla oluşturulur ve ilk ikisi Microsoft 365 grup karşılıklarıyla eşleşmektedir. SharePoint Online sitelerinin üyeliği genellikle ilişkili Microsoft 365 grubu tarafından yönetilse de, çift yönlü bir ilişki değildir. Microsoft 365 grup düzeyindeki üyelik değişiklikleri SharePoint yansıtılır, ancak üyelik SharePoint grubunda değiştirilirse, bu Microsoft 365 grubuna yansıtılmaz.
 
 ### <a name="user-experiences"></a>Kullanıcı deneyimleri
 
-Son kullanıcılar grup içindeki bazı hizmetlerden gruplar Microsoft 365, diğerlerinde yalnızca bir grupla paylaşabilirler.
+Son kullanıcılar Microsoft 365 içindeki çeşitli hizmetlerden gruplar oluşturabilir ve bazılarında yalnızca bir grupla paylaşabilir.
 
-Aşağıdaki hizmetler son kullanıcılar tarafından grup oluşturulmasına olanak sağlar:
+Aşağıdaki hizmetler, son kullanıcılar tarafından grup oluşturulmasına olanak sağlar:
 
 - Outlook
 - Planner
@@ -91,55 +91,55 @@ Aşağıdaki hizmetler son kullanıcılar tarafından grup oluşturulmasına ola
 
 #### <a name="restriction-of-group-creation"></a>Grup oluşturma kısıtlaması
 
-Ekiplerin tek bir ekibi kontrol etmek için en yaygın yaklaşım, hangi kullanıcıların ekip oluştur sınırlaması yapmaktır. Bu yalnızca grup oluşturma işlemi sınırlandırarak yapılabilir. Bunu yapmak, diğer hizmetlerden son kullanıcı için gerekli olacak grupları oluşturabilme becerisini etkiler. Microsoft 365 Grupları, bazı uygulama veya hizmetlerden grup oluşturulmasını kısıtlama becerisini desteklerken, diğer kullanıcılardan da grup oluşturulmasına izin vermemektedir.
+Ekiplerin yayılmasını denetlemenin yaygın bir yaklaşımı, hangi kullanıcıların bunları oluşturabileceğini sınırlamaktır. Bu yalnızca grupların oluşturulmasını sınırlayarak yapılabilir. Bunu yapmak, son kullanıcı için gerekli olabilecek diğer hizmetlerden grup oluşturma özelliğini etkiler. Microsoft 365 Grupları, bazı uygulamalardan veya hizmetlerden grup oluşturmayı kısıtlamayı ve diğer uygulamalardan izin verme özelliğini desteklemez.
 
-Grup oluşturma kısıtlaması deneyimi, uygulamalar ve hizmetler arasında değişir:
+Grup oluşturma kısıtlaması deneyimi uygulamalar ve hizmetler arasında farklılık gösterir:
 
 |Uygulama veya hizmet|Deneyim|
 |---|---|
-|Outlook|**Yeni grup** seçeneği Kişiler sayfasındaki Yeni menüsünden kaldırılmıştır|
-|Planner|**Yeni plan** , grup oluşturmanın kapatılma olduğunu açıklar ve planı var olan bir gruba ekleme teklifi sunar|
-|Project için Web'de Yol Haritası|**Grup oluştur** menüsü, grup oluşturmanın kısıtlanmış olduğunu açıklar ve varolan bir grubu kullanmayı önerir.|
-|SharePoint|Yine de bir gruba bağlı değilken ekip sitesi oluşturabilirsiniz.|
-|Stream|**Oluştur** menüsü altında Grup seçeneği **görünmüyor**.|
-|Teams|Kullanıcı yeni bir grupla ekip oluşturamaz, ancak mevcut bir grubu kullanan bir ekip oluşturabilir.<br><br>**Ekip oluştur düğmesi** , Gruptan ekip **oluştur ile değiştirilir**.|
-|Yammer|**Grup oluştur seçeneği** ana Gruplar/Topluluklar gezintilerinden kaldırılır.|
+|Outlook|**Yeni grup** seçeneği Kişiler sayfasındaki Yeni menüden kaldırıldı|
+|Planner|**Yeni plan** , grup oluşturmanın kapatıldığını ve planı mevcut bir gruba eklemeyi teklif ettiğini açıklar|
+|Web ve Yol Haritası için Project|**Grup oluştur menüsü,** grup oluşturmanın kısıtlandığını açıklar ve mevcut bir grubu kullanmayı önerir.|
+|SharePoint|Yine de bir gruba bağlı olmayan bir ekip sitesi oluşturabiliyor.|
+|Stream|**Grup** seçeneği **Oluştur menüsünün** altında görünmez.|
+|Teams|Kullanıcı yeni bir grupla ekip oluşturamaz, ancak yine de mevcut bir grubu kullanan bir ekip oluşturabilir.<br><br>**Ekip oluştur** düğmesi, **Gruptan ekip oluştur** ile değiştirilir.|
+|Yammer|**Grup oluştur** seçeneği ana Gruplar/Topluluklar gezintisinden kaldırılır.|
 
 ## <a name="services-interactions-with-groups"></a>Gruplarla hizmet etkileşimleri
 
-Farklı grup türleri, bunların Microsoft 365 yönetilişi ve nasıl yönetilleri hakkında bilgi ve birkaç yönetim önerisi için Microsoft 365 Grupları posteri'ne bakın.
+Farklı grup türleri, bunların nasıl oluşturulduğu ve yönetilme şekli ve birkaç idare önerisi hakkında bilgi için Microsoft 365'deki Gruplar posterini inceleyin.
 
-[![Gruplar bilgi grafiği için başparmak resmi.](../downloads/msft-m365-groups-architecture-thumb.png)](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-groups.pdf)
+[![Gruplar için başparmak görüntüsü bilgi grafiği.](../downloads/msft-m365-groups-architecture-thumb.png)](https://download.microsoft.com/download/6/3/0/6309218f-a169-4f2d-af4c-2fe49e30ba17/msft-m365-groups.pdf)
 
-[PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-groups.pdf) \| [Visio](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/downloads/msft-m365-groups.vsdx)
+[PDF](https://download.microsoft.com/download/6/3/0/6309218f-a169-4f2d-af4c-2fe49e30ba17/msft-m365-groups.pdf) \| [Visio](https://download.microsoft.com/download/6/3/0/6309218f-a169-4f2d-af4c-2fe49e30ba17/msft-m365-groups.vsdx)
 
-Aşağıdaki tablo, çeşitli hizmetlerle Microsoft 365 Grupları etkileşimlerine genel bir bakış sağlar:
+Aşağıdaki tabloda çeşitli hizmetlerle Microsoft 365 Grupları etkileşimlerine genel bir bakış sağlanır:
 
-|Ürün|Özellikler|Hizmet bir grup olmadan var mı?|Hizmet bir grup oluşturabilir mi?|Örneği silmek grubu siler mi?|
+|Ürün|Özellik|Hizmet bir grup olmadan mı var?|Hizmet bir grup oluşturabilir mi?|Örnek silindiğinde grup silinir mi?|
 |---|---|---|---|---|
 |Azure AD|Üyelik, Grup denetimleri, Konuklar|Evet|Evet|Evet|
 |Exchange|Takvim, posta kutusu|Evet|Evet|Evet|
-|Formlar|Form|Evet|Hayır|Hayır|
-|OneNote|Not Defteri|Evet|Hayır|Hayır|
+|Forms|Form|Evet|Hayır|Hayır|
+|OneNote|Dizüstü|Evet|Hayır|Hayır|
 |Planner|Görev panosu|Hayır|Evet|Evet|
 |Power Apps uygulaması|Uygulama|Evet|Hayır|Hayır|
-|Power Automate|İş Akışı|Evet|Hayır|Hayır|
+|Power Automate|Iş akışı|Evet|Hayır|Hayır|
 |Power BI (klasik)|Workspace|Hayır|Evet|Evet|
 |Power BI (yeni)|Workspace|Evet|Hayır|Evet|
 |Web için Project|Project planı|Evet|Evet|Hayır|
 |Yol Haritası|Yol Haritası|Evet|Evet|Hayır|
 |SharePoint|Site|Evet|Evet|Evet|
 |Stream|Kanal, video|Evet|Evet|Evet|
-|Teams|Ekip|Hayır|Evet|Evet|
+|Teams|Takım|Hayır|Evet|Evet|
 |Yammer|Grup|Evet|Evet|Evet|
 
-Yukarıdaki tablo Microsoft 365 hizmetleriyle grup etkileşimleri hakkında üst düzey bir genel bakış sağlarken, anlamalısınız bazı nüanslar ve matrisler vardır. Aşağıdaki bölümlerde, belirli iş yüklerine ve gruplarla etkileşimlerine daha ayrıntılı bir bakış yer almaktadır.
+Yukarıdaki tabloda Microsoft 365 hizmetleriyle grup etkileşimlerine üst düzey bir genel bakış sağlansa da, anlamanız gereken çeşitli nüanslar ve incelik vardır. Aşağıdaki bölümlerde belirli iş yüklerine ve gruplarla etkileşimlerine daha ayrıntılı bir bakış sağlanır.
 
 ## <a name="azure-ad"></a>Azure AD
 
-Azure AD, tüm kullanıcılar genelinde temel kimlik yönetimi Microsoft 365.
+Azure AD, Microsoft 365 genelinde temel alınan kimlik yönetimi özelliklerini sağlar.
 
-**Gruplara sağlanan önemli özellikler**
+**Gruplara sağlanan temel özellikler**
 
 - Grup üyeliği
 - Adlandırma ilkesi
@@ -147,507 +147,507 @@ Azure AD, tüm kullanıcılar genelinde temel kimlik yönetimi Microsoft 365.
 - Konuklar
 - Grup oluşturma kısıtlaması
 
-**Azure AD bir Grup oluşturabilir mi?**
+**Grup oluşturabilir Azure AD?**
 
-Evet Microsoft 365 Gruplar Azure AD'den yönetim web portalı, PowerShell veya Graph API aracılığıyla oluşturulabilir.
+Evet, Microsoft 365 Grupları yönetim web portalı, PowerShell veya Graph API aracılığıyla Azure AD oluşturulabilir.
 
-**Azure AD'de grup olmadan var mı?**
+**Grup olmadan Azure AD var mı?**
 
-Evet, Azure AD, Gruplarla ilişkisiz çok sayıda Microsoft 365 gerçekleştirir. Her Microsoft 365 grubu Azure AD'de bir nesne olarak temsil eder.
+Evet, Azure AD Microsoft 365 Grupları ilişkisi olmayan çok sayıda hizmet gerçekleştirir. Her Microsoft 365 grubu, Azure AD bir nesne olarak temsil edilir.
 
 **Grup başına birden çok Azure AD örneği olabilir mi?**
 
-Hayır, Azure AD'nin yalnızca bir örneği vardır.
+Hayır, Azure AD yalnızca bir örneği vardır.
 
-**Azure AD birden çok Grupla ilişkilendiril markalı olabilir mi?**
+**Azure AD birden çok Grupla ilişkilendirilebilir mi?**
 
-Evet, çünkü Azure AD grup üyeliği hizmetini sağlayan temel platformdur.
+Evet, çünkü grup üyeliği hizmetini sağlayan temel platform Azure AD.
 
-**Azure AD'nin bir grup değişikliğiyle ilişkilendirmesi olabilir mi?**
+**Azure AD'nin grupla ilişkisi değişebilir mi?**
 
 Hayır, Azure AD grupların bulunduğu temel platformdur.
 
-**Örneği silmek Grubu siler mi?**
+**Örnek silindiğinde Grup silinir mi?**
 
-Azure AD'de grubun silinmesi, grupla ilişkili ilgili hizmetleri ve içeriği siler.
+Azure AD'da grubun silinmesi, grupla ilişkili ilgili hizmetleri ve içeriği siler.
 
 ## <a name="teams"></a>Teams
 
-Teams, çeşitli Microsoft ve üçüncü taraf hizmetleriyle etkileşim kurmak için tek bir arabirim sağlayarak işbirliğini geliştirme amaçlı, sohbet ortalı bir çalışma alanıdır.
+Teams, çeşitli Microsoft ve üçüncü taraf hizmetleriyle etkileşime geçmek için tekil bir arabirim sağlayarak işbirliğini geliştirmeyi amaçlayan sohbet merkezli bir çalışma alanıdır.
 
-Ekip oluşturulduğunda varsayılan olarak, Microsoft 365 grubuyla ilişkilendirilmiş posta kutusu ve takvim hem Exchange'daki Genel Adres Listesi'ne hem de Başka bir Outlook. Kullanıcı aynı grup üzerinde hem kullanıcı adını hem de son kullanıcı adını Outlook Teams bu Microsoft 365 geçersiz kılabilir.
+Varsayılan olarak, bir ekip oluşturulduğunda, Microsoft 365 grubuyla ilişkilendirilmiş posta kutusu ve takvim hem Exchange'deki Genel Adres Listesi'nden hem de Outlook gizlenir. Bu, kullanıcı aynı Microsoft 365 grubunda hem Outlook hem de Teams kullanmak isterse yönetici tarafından el ile geçersiz kılınabilir.
 
-**Gruplara sağlanan önemli özellikler**
+**Gruplara sağlanan temel özellikler**
 
-- Konuşmalar
+- Konuşma
 - Kanallar & sekmeler
 - Toplantılar
 
-**Grup Teams oluştursun mu?**
+**Teams grup oluşturabilir misiniz?**
 
-Evet, yeni ekip oluşturmak yeni bir ekip grubu Microsoft 365 olur. Ayrıca, henüz bir grubu yok olan bir grup için de ekip oluşturabilirsiniz.
+Evet, yeni bir ekip oluşturmak yeni bir Microsoft 365 grubu oluşturur. Şu anda bir grubu olmayan mevcut bir grup için ekip oluşturmak da mümkündür.
 
-**Ekipler grupsuz var mı?**
+**Ekipler grup olmadan var mı?**
 
-Hayır, bir ekibin Grup olmadan var olamaz.
+Hayır, bir ekibin Grup olmadan var olması mümkün değildir.
 
 **Grup başına birden çok ekip olabilir mi?**
 
-Hayır, ekiple grup arasındaki ilişki 1:1'dir.
+Hayır, bir ekiple grup arasındaki ilişki 1:1'dir.
 
-**Bir ekip birden çok grupla ilişkilendirilsin mi?**
+**Bir ekip birden çok grupla ilişkilendirilebilir mi?**
 
-Hayır, ekibin kendisi yalnızca tek bir grupla ilişkilendiriliyor.
+Hayır, takımın kendisi yalnızca tek bir grupla ilişkilendirilebilir.
 
-**Ekibin bir grup değişikliğiyle bir ilişkilendirmesi olabilir mi?**
+**Bir ekibin grupla ilişkisi değişebilir mi?**
 
-Hayır, ekip yalnızca başlangıçta ilişkilendirilen grupla ilişkilendiril olabilir.
+Hayır, ekip yalnızca ilk ilişkilendirildiği grupla ilişkilendirilebilir.
 
-**Ekip silin silinecek mi?**
+**Ekip silindiğinde grup silinir mi?**
 
-Evet, ekip sitesi Microsoft Teams grubu, grupla ilişkili hizmetleri ve içeriği siler.
+Evet, ekibin Microsoft Teams silinmesi grubu, grupla ilişkili hizmetleri ve içeriği siler.
 
 ## <a name="exchange"></a>Exchange
 
-Exchange Online, takvim, kişi ve ilişkili işlevler sağlar. Grup bağlamında, hizmet örneğinin tamamı yerine yalnızca tek bir kaynak ilişkilendirildi.
+Exchange Online mesajlaşma, takvim, kişi ve ilişkili işlevler sağlar. Bir Grup bağlamında, tüm hizmet örneğinin aksine yalnızca tek bir kaynak ilişkilendirilir.
 
-**Gruplara sağlanan önemli özellikler**
+**Gruplara sağlanan temel özellikler**
 
 - Posta kutusu ve takvim
 - Tüm Grup üyelerine e-posta gönderebilme
-- Depolama Bulma Teams ilgili kanal konuşmalarının bir açıklaması, Planner yorumları
+- eBulma amacıyla Teams kanal konuşmalarının Depolama, Planner açıklamaları
 
-**Grup Exchange neden olabilir?**
+**Exchange grup oluşturabilir misiniz?**
 
-Evet, hem genel yönetim merkezinden hem de Exchange Online bir grup Outlook. Ayrıca, tüm dağıtım Exchange kendi gruplarına Microsoft 365.
+Evet, Exchange Online yönetim merkezinden ve Outlook bir grup oluşturmak mümkündür. Ayrıca Exchange dağıtım listelerini Microsoft 365 gruplara dönüştürebilirsiniz.
 
-**Grup Exchange var mı?**
+**Grup olmadan Exchange var mı?**
 
-Evet, Exchange Online posta kutuları ve takvimler dahil herhangi bir grup ilişkilendirmesi olmadan çeşitli hizmetler sağlar.
+Evet, Exchange Online paylaşılan posta kutuları ve takvimler dahil olmak üzere grup ilişkilendirmesi olmadan çeşitli hizmetler sağlar.
 
-**Her grup için birden çok Exchange kutusu veya takvim örneği olabilir mi?**
+**Grup başına birden çok Exchange posta kutusu veya takvim örneği olabilir mi?**
 
-Hayır, bir grup için yalnızca tek Exchange Online posta kutusu ve takvim olabilir.
+Hayır, bir grup için yalnızca tek bir Exchange Online posta kutusu ve takvim olabilir.
 
-**Posta Exchange ve takvimlerin birden çok grupla ilişkilendiril mi?**
+**Exchange posta kutuları ve takvimler birden çok grupla ilişkilendirilebilir mi?**
 
-Hayır, posta kutusu ve takvimin grupla bire bir ilişkisi vardır. Posta kutusunu başka kullanıcılarla veya gruplarla paylaşmak mümkündür, ancak bu herhangi bir hizmet ilişkilendirmesi oluşturmaz.
+Hayır, posta kutusu ve takvim grupla 1:1 ilişkisine sahiptir. Posta kutusunu diğer kullanıcılar veya gruplarla paylaşmak mümkündür, ancak bu herhangi bir hizmet ilişkisi biçimi oluşturmaz.
 
-**Posta Exchange veya takvimin bir grup değişikliğiyle ilişkilendirmesini sağlandı mı?**
+**Exchange posta kutusunun veya takvimin grupla ilişkisi değişebilir mi?**
 
-Hayır, posta kutusu ve takvim farklı bir grupla değiştirilemez. Bununla birlikte, içerik bir posta kutusundan diğerine Outlook bir üçüncü taraf aracı kullanılarak da kullanılabilir.
+Hayır, posta kutusu ve takvim farklı bir gruba değiştirilemez. Ancak içerik, Outlook içinde veya üçüncü taraf bir araç kullanılarak bir posta kutusundan diğerine taşınabilir.
 
-**Posta kutusu silin silinecek mi?**
+**Posta kutusu silindiğinde grup silinir mi?**
 
-Evet, Posta Kutusu'nda Exchange kutusunun silinmesi, hem grubu hem de grupla ilişkili hizmetleri ve içeriği siler.
+Evet, Exchange'deki posta kutusu silindiğinde grupla ilişkili hizmetlerin ve içeriğin yanı sıra grup silinir.
 
-## <a name="forms"></a>Formlar
+## <a name="forms"></a>Forms
 
-Forms, web tabanlı anketler ve testler sağlar.
+Formlar web tabanlı anketler ve testler sağlar.
 
-**Gruplara sağlanan önemli özellikler**
+**Gruplara sağlanan temel özellikler**
 
-- Formlara sahiplik
+- Formların sahipliği
 
-**Forms grup oluşturabilir mi?**
+**Formlar grup oluşturabilir mi?**
 
-Hayır, Forms grup oluşturamaz.
+Hayır, Formlar grup oluşturamaz.
 
 **Formlar grup olmadan var mı?**
 
 Evet, anketler ve testler doğrudan son kullanıcının hesabında oluşturulabilir.
 
-**Her grup için birden çok form olabilir mi?**
+**Grup başına birden çok form olabilir mi?**
 
 Evet, bir grupla ilişkilendirilmiş birden çok form olabilir.
 
-**Formlar birden çok grupla ilişkilendirilsin mi?**
+**Formlar birden çok grupla ilişkilendirilebilir mi?**
 
-Hayır, form yalnızca tek bir grupla ilişkilendirilebilirsiniz.
+Hayır, form yalnızca tek bir grupla ilişkilendirilebilir.
 
-**Formun bir grup değişikliğiyle ilişkilendirmesi olabilir mi?**
+**Formun grupla ilişkisi değişebilir mi?**
 
-Hayır, bir grupla ilişkilendirilmiş bir form (doğrudan içinde oluşturulduktan veya bireyden aktarılan sahiplik) başka bir gruba taşınamaz.
+Hayır, bir form bir grupla ilişkilendirildikten (doğrudan içinde oluşturulduktan veya bir bireyden aktarılan sahiplik) başka bir gruba taşınamaz.
 
-**Formu silmek grubu silebilir mi?**
+**Form silindiğinde grup silinir mi?**
 
-Hayır, bir grubu Forms arabiriminden silmek mümkün değildir; yalnızca tek tek formlar vardır.
+Hayır, Bir grubu Formlar arabiriminden silmek mümkün değildir, yalnızca tek tek formlar.
 
 ## <a name="onenote"></a>OneNote
 
-OneNote, dijital bir not defteri uygulamasıdır. Grupla OneNote not defteri, grup bağlantılı bir hizmet SharePoint ilgili sitenin dosyasında yer alan bir dosyadır.
+OneNote dijital bir not defteri uygulamasıdır. Grupla oluşturulan OneNote not defteri, grup bağlantılı hizmet yerine ilişkili SharePoint sitesinde bulunan bir dosyadır.
 
-**Gruplara sağlanan önemli özellikler**
+**Gruplara sağlanan temel özellikler**
 
-- Paylaşılan not defteri (Grupla ilişkilendirilmiş dosya SharePoint depolanır)
+- Paylaşılan not defteri (Grupla ilişkili SharePoint kitaplığında depolanır)
 
-**Grup OneNote neden olabilir?**
+**OneNote grup oluşturabilir misiniz?**
 
 Hayır, OneNote uygulaması grup oluşturamaz.
 
-**Not OneNote grup olmadan var mı?**
+**OneNote not defterleri grup olmadan var mı?**
 
-Evet, not defterleri doğrudan aynı konumda OneDrive paylaşılan konumlarda oluşturulabilir.
+Evet, not defterleri doğrudan OneDrive veya diğer paylaşılan konumlarda oluşturulabilir.
 
-**Her grup için birden OneNote not defteri olabilir mi?**
+**Grup başına birden çok OneNote not defteri olabilir mi?**
 
-Evet, not defteri varsayılan olarak oluşturulur ve başkalarını da eklenebilir; bununla birlikte, grupla OneNote hizmetlerden not defteri bağlantısı her zaman varsayılan not defterine gider.
+Evet, varsayılan olarak bir not defteri oluşturulur ve diğerleri eklenebilir, ancak grupla ilişkili hizmetlerden OneNote bağlantısı her zaman varsayılan not defterine gider.
 
-**Not OneNote birden çok grupla ilişkilendirilsin mi?**
+**OneNote not defteri birden çok grupla ilişkilendirilebilir mi?**
 
-Hayır, not defteri grupla ilişkilendirilmiş site kitaplığında SharePoint çeşitli arabirimlerden bağlantılıdır. Bununla birlikte, aynı tek tek bireylerle paylaşılır gibi diğer Gruplarla da paylaşılamaz.
+Hayır, not defteri grupla ilişkili SharePoint site kitaplığında depolanır ve çeşitli arabirimlerden bağlanır. Öte yandan diğer Gruplarla da aynı şekilde paylaşılabilir.
 
-**Not defterinin bir grup değişikliğiyle ilişkilendirmesi var mı?**
+**Not defterinin grupla ilişkisi değişebilir mi?**
 
-Hayır, not defterinin kendisi grupla ilişkilendirililir ve diğer grup bağlantılı hizmetlerden doğrudan erişilebilir, ancak içerik bir not defterinde bir not defterinden diğerine OneNote.
+Hayır, not defterinin kendisi grupla ilişkilendirilir ve gruba bağlı diğer hizmetlerden doğrudan erişilebilir, ancak içerik OneNote uygulamasında bir not defterinden diğerine taşınabilir.
 
-**Not defteri silinecek mi?**
+**Not defteri silindiğinde grup silinir mi?**
 
-Hayır, ancak OneNote defteri silinirse grupla ilişkilendirilmiş hizmetlerin bazılarında bozuk bağlantılar olabilir.
+Hayır, ancak OneNote not defteri silinirse grupla ilişkili bazı hizmetlerde bozuk bağlantılar olabilir.
 
 ## <a name="planner"></a>Planner
 
-Planner basit bir grup görevi yönetim hizmetidir.
+Planner basit bir grup görev yönetimi hizmetidir.
 
-**Gruplara sağlanan önemli özellikler**
+**Gruplara sağlanan temel özellikler**
 
-- Grup görevlerini yönetmek için yönetim panosu
+- Grup görevlerini yönetmek için pano
 
 **Planner bir grup oluşturabilir mi?**
 
-Evet, plan oluşturma işlemi yeni bir grup oluşturacak.
+Evet, plan oluşturmak yeni bir grup oluşturur.
 
-**Planner panosunda grup yok mu?**
+**Planner panosu bir grup olmadan var mı?**
 
-Hayır, bir plan bir grupla ilişkilendirilmiş olmalı.
+Hayır, bir plan bir grupla ilişkilendirilmelidir.
 
 **Grup başına birden çok plan olabilir mi?**
 
 Evet, grup başına birden çok plan olabilir.
 
-**Bir plan birden çok grupla ilişkilendirilsin mi?**
+**Bir plan birden çok grupla ilişkilendirilebilir mi?**
 
-Hayır, bir plan yalnızca erişimin belirlenmesi için grup üyeliğine dayandır.
+Hayır, bir plan erişimi belirlemek için yalnızca grup üyeliğine dayanır.
 
-**Bir planın grup değişikliğiyle bir ilişkilendirmesi olabilir mi?**
+**Bir planın grupla ilişkisi değişebilir mi?**
 
-Hayır, ancak planı kopyalama yeni bir grup oluşturur.
+Hayır, ancak planı kopyalamak yeni bir grup oluşturur.
 
 > [!NOTE]
-> Başka herhangi bir uygulama tarafından oluşturulan bir Grup, Planner'da kullanıcıya otomatik olarak gösterlanmaz. Başlangıçta board'a erişmek için onu Grup tabanlı başka bir arabirimden (örneğin, Grup) Outlook.
+> Başka bir uygulama tarafından oluşturulan bir Grup, Planner'da bir kullanıcı için otomatik olarak gösterilmez. Panoya başlangıçta erişmek için panoyu Outlook gibi başka bir Grup tabanlı arabirimden açmaları gerekir.
 
-**Planı silmek grubu siler mi?**
+**Plan silindiğinde grup silinir mi?**
 
-Evet, planın silinmesi grupla ve grupla ilişkilendirilmiş hizmetleri ve içeriği siler.
+Evet, planı sildiğinizde grup ve grupla ilişkili hizmetler ve içerik silinir.
 
 ## <a name="power-apps"></a>Power Apps
 
-Power Apps kodu olmayan bir uygulama geliştirme tuvali sağlar.
+Power Apps, kod olmadan uygulama geliştirme için bir tuval sağlar.
 
-**Gruplara sağlanan önemli özellikler**
+**Gruplara sağlanan temel özellikler**
 
-- Uygulamalar çalıştırılacak ve değiştirilecek bir grupla paylaşılıyor olabilir
+- Uygulamalar çalıştırılacak ve değiştirilecek bir grupla paylaşılabilir
 
-**Grup Power Apps neden olabilir?**
+**Power Apps grup oluşturabilir misiniz?**
 
-Hayır, Power Apps grup Microsoft 365 oluşturamaz.
+Hayır, Power Apps Microsoft 365 grubu oluşturamaz.
 
-**Grup Power Apps var mı?**
+**Grup olmadan Power Apps var mı?**
 
-Evet, uygulamalar Power Apps içinde oluşturulabilir ve paylaşılana veya yayımlanana kadar creators hesabı içinde yer alır.
+Evet, uygulamalar Power Apps içinde oluşturulabilir ve paylaşılana veya yayımlanana kadar oluşturucu hesabında bulunabilir.
 
 **Grup başına birden çok uygulama olabilir mi?**
 
 Evet, bir grupla paylaşılan birden çok uygulama olabilir.
 
-**Uygulamalar birden çok grupla ilişkilendirilsin mi?**
+**Uygulamalar birden çok grupla ilişkilendirilebilir mi?**
 
-Evet, bir uygulama birden çok grupla paylaşabilirsiniz.
+Evet, bir uygulama birden çok grupla paylaşılabilir.
 
-**Bir uygulamanın grup değişikliğiyle bir ilişkilendirmesi olabilir mi?**
+**Bir uygulamanın grupla ilişkisi değişebilir mi?**
 
-Evet, Power Apps grupla Microsoft 365 ilişki olarak uygulama hala oluşturucuyla paylaştır.
+Evet, Power Apps ile bir Microsoft 365 grubu arasındaki ilişki yalnızca paylaşımda olduğundan uygulama yine de oluşturucuda yer alır.
 
 > [!IMPORTANT]
-> [Uygulamaların onlarla paylaşılamadan önce grupların güvenliğin etkinleştirilmesi gerekir](/powerapps/maker/canvas-apps/share-app#share-an-app-with-office-365-groups).
+> [Uygulamaların onlarla paylaşılabilmesi için önce grupların güvenlik etkin olması gerekir](/powerapps/maker/canvas-apps/share-app#share-an-app-with-office-365-groups).
 
-**Uygulama silinecek mi?**
+**Uygulama silindiğinde grup silinir mi?**
 
-Hayır, uygulamalar grupla paylaşılma dışında bir gruba bağlı değildir.
+Hayır, uygulamalar onlarla paylaşılmak dışında gruba bağlı değildir.
 
 ## <a name="power-automate"></a>Power Automate
 
-Power Automate (eski adı Microsoft Flow) iş akışları ve otomasyon hizmetleri sağlar.
+Power Automate (eski adıyla Microsoft Flow) iş akışları ve otomasyon hizmetleri sağlar.
 
-**Gruplara sağlanan önemli özellikler**
+**Gruplara sağlanan temel özellikler**
 
-- İş akışları çalıştırılacak ve değiştirilecek bir grupla paylaşılır.
+- İş akışları, çalıştırılacak ve değiştirilecek bir grupla paylaşılabilir.
 
-**Grup Power Automate oluştursun mu?**
+**Grup oluşturabilir Power Automate?**
 
-Hayır, Power Automate bir Microsoft 365 ilişkilendirilen bir grup oluşturamaz.
+Hayır, Power Automate bir grupla ilişkilendirilen bağlamda bir Microsoft 365 grubu oluşturamaz.
 
-Bununla birlikte, Azure AD güvenlik grubu oluşturma veya bir Güvenlik Grubu üyeliğini güncelleştirme gibi çeşitli işlemler gerçekleştiren bir akış Microsoft 365 mümkündür.
+Ancak, Azure AD güvenlik grubu oluşturma veya bir Microsoft 365 grubunun üyeliğini güncelleştirme gibi çeşitli işlemler gerçekleştiren bir akış oluşturmak mümkündür.
 
 **Akışlar grup olmadan var mı?**
 
-Evet, akışlar Power Automate oluşturulabilir ve paylaşılana veya yayımlanana kadar Creators hesabında yer alır.
+Evet, akışlar Power Automate içinde oluşturulabilir ve paylaşılana veya yayımlanana kadar oluşturucu hesabında bulunabilir.
 
 **Grup başına birden çok akış olabilir mi?**
 
 Evet, bir grupla paylaşılan birden çok akış olabilir.
 
-**Bir akış birden çok grupla ilişkilendiril mi?**
+**Bir akış birden çok grupla ilişkilendirilebilir mi?**
 
-Evet, akış birden çok grupla paylaşılamaz.
+Evet, bir akış birden çok grupla paylaşılabilir.
 
-**Bir akışın grup değişikliğiyle bir ilişkilendirmesi olabilir mi?**
+**Bir akışın grupla ilişkisi değişebilir mi?**
 
-Evet, akış Power Automate bir Microsoft 365 grubu yalnızca paylaştır; akış yine oluşturucuyla birlikte yer alır.
+Evet, Power Automate ve Microsoft 365 grubu arasındaki ilişki yalnızca paylaşımda olduğundan akış yine de oluşturucuyla birlikte kalır.
 
-**Bir akışı silmek grubu siler mi?**
+**Akış silindiğinde grup silinir mi?**
 
-Hayır, Power Apps gibi, akışlar grupla paylaşılma dışında bir gruba bağlı değildir.
+Hayır, Power Apps gibi akışlar da onlarla paylaşılmak dışında gruba bağlı değildir.
 
 ## <a name="power-bi-classic"></a>Power BI (klasik)
 
-Power BI veri odaklı panolar ve raporlar sağlar.
+Power BI, etkileşimli veri temelli panolar ve raporlar sağlar.
 
-**Gruplara sağlanan önemli özellikler**
+**Gruplara sağlanan temel özellikler**
 
 - Veri raporlama
 
-**Grup Power BI oluştursun mu?**
+**Power BI grup oluşturabilir misiniz?**
 
-Evet, klasik çalışma alanı oluşturmak yeni bir çalışma Microsoft 365 oluşturmanızı sağlar.
+Evet, klasik çalışma alanı oluşturmak bir Microsoft 365 grubu oluşturur.
 
-**Klasik Power BI alanı bir grup olmadan var mı?**
+**Power BI klasik çalışma alanı grup olmadan mı var?**
 
-Hayır, [Çalışma Alanı'Power BI klasik çalışma alanı bir grupla ilişkilendirilmiş olması gerekir](/power-bi/collaborate-share/service-collaborate-power-bi-workspace).
+Hayır, [Power BI'deki klasik bir çalışma alanı bir grupla ilişkilendirilmelidir](/power-bi/collaborate-share/service-collaborate-power-bi-workspace).
 
-**Her grup için birden Power BI çalışma alanı olabilir mi?**
+**Grup başına birden çok Power BI çalışma alanı olabilir mi?**
 
-Hayır, klasik çalışma alanıyla grup arasındaki ilişki 1:1'tir.
+Hayır, klasik çalışma alanıyla grup arasındaki ilişki 1:1'dir.
 
-**Çalışma alanı birden çok grupla ilişkilendirilsin mi?**
+**Çalışma alanı birden çok grupla ilişkilendirilebilir mi?**
 
-Teknik olarak hayır, klasik çalışma alanı grupla birlikte oluşturulurken, içerik Grup dışında kullanıcılar ve güvenlik gruplarıyla paylaşılır.
+Teknik olarak hayır, klasik çalışma alanı grupla birlikte oluşturulurken, içerik kullanıcılar ve güvenlik gruplarıyla Grubun dışında paylaşılabilir.
 
-**Çalışma alanı bir grup değişikliğiyle ilişkilendirmeyi var mı?**
+**Çalışma alanının grupla ilişkisi değişebilir mi?**
 
-Hayır, klasik çalışma alanının kendisi Grup'la ilişkilendirildi, ancak içerik Power BI arabirimi içinde bir çalışma alanından diğerine veya içeriği yerel olarak dışarı aktararak taşınır.
+Hayır, klasik çalışma alanının kendisi Grupla ilişkilendirilir, ancak içerik Power BI arabiriminde veya içeriği yerel olarak dışarı aktarılarak bir çalışma alanından diğerine taşınabilir.
 
-**Çalışma alanı silinecek mi?**
+**Çalışma alanı silindiğinde grup silinir mi?**
 
-Evet, Çalışma Alanı alanı Power BI ve grupla ilişkilendirilmiş hizmetleri ve içeriği siler.
+Evet, Power BI'deki çalışma alanı silindiğinde grup ve grupla ilişkili hizmetler ve içerik silinir.
 
 ## <a name="power-bi-new"></a>Power BI (yeni)
 
-Power BI veri odaklı panolar ve raporlar sağlar.
+Power BI, etkileşimli veri temelli panolar ve raporlar sağlar.
 
-Power BI'ta yeni çalışma alanı oluşturulurken Microsoft 365 grubu oluşturmaz, ancak başka bir şekilde grup oluşturmak, çalışma alanında yeni (klasik değil) bir çalışma Power BI.
+Power BI'da yeni bir çalışma alanı oluşturmak Microsoft 365 grubu oluşturmazken, başka herhangi bir yolla grup oluşturmak Power BI'da yeni (klasik olmayan) bir çalışma alanı oluşturur.
 
-**Gruplara sağlanan önemli özellikler**
+**Gruplara sağlanan temel özellikler**
 
 - Veri raporlama
 
-**Grup Power BI oluştursun mu?**
+**Power BI grup oluşturabilir misiniz?**
 
-Hayır, yeni Power BI arabiriminden Microsoft 365 grup oluşturmak Power BI değildir.
+Hayır, yeni Power BI arabiriminden bir Microsoft 365 grubu oluşturmak mümkün değildir.
 
-**Yeni Power BI alanı bir grup olmadan var mı?**
+**Yeni Power BI çalışma alanı bir grup olmadan var mı?**
 
-Evet, farklı gruplarla ilişkili Power BI içinde raporların ve çalışma alanlarının Microsoft 365 olabilir.
+Evet, Microsoft 365 gruplarla ilişkilendirilmemiş raporların ve çalışma alanlarının Power BI oluşturulması mümkündür.
 
-**Her grup için birden çok çalışma alanı olabilir mi?**
+**Grup başına birden çok çalışma alanı olabilir mi?**
 
-Evet, [çalışma alanı tarafından oluşturulan Power BI çalışma alanları tek bir grupla paylaşılamaz](/power-bi/collaborate-share/service-create-the-new-workspaces#give-access-to-your-workspace).
+Evet, [Power BI tarafından oluşturulan birden çok çalışma alanı tek bir grupla paylaşılabilir](/power-bi/collaborate-share/service-create-the-new-workspaces#give-access-to-your-workspace).
 
-**Çalışma alanı birden çok grupla ilişkilendirilsin mi?**
+**Çalışma alanı birden çok grupla ilişkilendirilebilir mi?**
 
-Hayır, Çalışma Alanı Power BI tek bir grupla ilişkilendiril kullanılabilir.
+Hayır, Power BI tarafından oluşturulan bir çalışma alanı yalnızca tek bir grupla ilişkilendirilebilir.
 
-**Çalışma alanı bir grup değişikliğiyle ilişkilendirmeyi sağlar mı?**
+**Bir çalışma alanının grupla ilişkisi değişebilir mi?**
 
-Evet ve hayır. Çalışma alanı Power BI bir defada tek bir grupla ilişkilendiril olabilir, ancak ilişkilendirmeyi istediğiniz zaman değiştirebilir. Bir grup tarafından Power BI çalışma alanı bu grupla kalıcı olarak ilişkilendirildi.
+Evet ve hayır. Power BI tarafından oluşturulan bir çalışma alanı aynı anda yalnızca tek bir grupla ilişkilendirilebilir, ancak herhangi bir zamanda ilişkilendirmeyi değiştirebilir. Bir grup tarafından Power BI oluşturulan çalışma alanı, bu grupla kalıcı olarak ilişkilendirilir.
 
-**Çalışma alanı silinecek mi?**
+**Çalışma alanı silindiğinde grup silinir mi?**
 
-Evet, Çalışma Alanı alanı Power BI grubu ve grupla ilişkilendirilmiş hizmetleri ve içeriği siler.
+Evet, Power BI'deki çalışma alanı silindiğinde grup ve grupla ilişkili hizmetler ve içerik silinir.
 
 ## <a name="project-for-the-web"></a>Web için Project
 
-Project web için özellik, proje planları, Gantt grafikleri ve yol haritaları oluşturma olanağı sunar.
-Gruplara sağlanan önemli özellikler.
+Web için Project proje planları, Gantt grafikleri ve yol haritaları oluşturma olanağı sunar.
+Gruplara sağlanan temel özellikler.
 
-- Project planları
+- planları Project
 
-**Web Project grup oluştursun mu?**
+**Web için Project grup oluşturabilir mi?**
 
-Evet, doğrudan Web için Web için Microsoft 365 bir Project grubu oluşturmak mümkündür.
+Evet, doğrudan web için Project yeni bir Microsoft 365 grubu oluşturmak mümkündür.
 
-**Projeler bir grup olmadan var mı?**
+**Projeler grup olmadan var mı?**
 
-Evet, projeler tek bir grupla ilişkilendirilmeden Microsoft 365, ancak görevlerin ataması grup ilişkilendirmesi gerektirir.
+Evet, projeler bir Microsoft 365 grubuyla ilişkilendirilmeden var olabilir, ancak görevlerin atanması için grup ilişkilendirmesi gerekir.
 
-**Her grup için birden çok proje olabilir mi?**
+**Grup başına birden çok proje olabilir mi?**
 
 Evet, tek bir grupta birden çok proje bağlamak mümkündür.
 
-**Proje birden çok grupla ilişkilendirilsin mi?**
+**Proje birden çok grupla ilişkilendirilebilir mi?**
 
-Hayır, bir proje yalnızca tek bir grupla ilişkilendiril olabilir.
+Hayır, bir proje yalnızca tek bir grupla ilişkilendirilebilir.
 
-**Projenin bir grup değişikliğiyle ilişkilendirmesi var mı?**
+**Bir projenin grupla ilişkisi değişebilir mi?**
 
-Hayır, bir grupla ilişki kurulduktan sonra bu ilişki değiştiremez.
+Hayır, bir grupla ilişki kurulduktan sonra değiştirilemez.
 
-**Proje silin silinecek mi?**
+**Proje silindiğinde grup silinir mi?**
 
-Hayır, web için Project'de projeyi silmek grubu silemez.
+Hayır, web için Project proje silindiğinde grup silinmez.
 
 ## <a name="roadmap"></a>Yol Haritası
 
-Yol Haritası, web ve diğer web için yol Project yol haritaları oluşturabilme Project Online.
+Yol haritası, web ve Project Online için Project ile proje yol haritaları oluşturma olanağı sağlar.
 
-**Gruplara sağlanan önemli özellikler**
+**Gruplara sağlanan temel özellikler**
 
 - Project yol haritaları
 
-**Yol Haritası grup oluşturabilir mi?**
+**Yol Haritası bir grup oluşturabilir mi?**
 
-Evet, doğrudan yol haritasından yeni bir Microsoft 365 grup oluşturmak mümkündür.
+Evet, doğrudan yol haritasından yeni bir Microsoft 365 grubu oluşturmak mümkündür.
 
-**Yol Haritası bir grup olmadan var mı?**
+**Yol haritası bir grup olmadan var mı?**
 
-Evet, yol haritaları bir grupla ilişkilendirilmeden Microsoft 365, yol haritasının paylaşımı grup ilişkilendirmesi gerektirir.
+Evet, yol haritaları bir Microsoft 365 grubuyla ilişkilendirilmeden mevcut olabilir, ancak yol haritasının paylaşılması için grup ilişkilendirmesi gerekir.
 
 **Grup başına birden çok yol haritası olabilir mi?**
 
 Evet, birden çok yol haritasını tek bir gruba bağlamak mümkündür.
 
-**Yol haritası birden çok grupla ilişkilendirilsin mi?**
+**Yol haritası birden çok grupla ilişkilendirilebilir mi?**
 
-Hayır, yol haritası yalnızca tek bir grupla ilişkilendiril olabilir.
+Hayır, yol haritası yalnızca tek bir grupla ilişkilendirilebilir.
 
-**Yol haritası bir grup değişikliğiyle ilişkilendirmeyi mümkün mü?**
+**Yol haritasının grupla ilişkisi değişebilir mi?**
 
-Hayır, bir grupla ilişki kurulduktan sonra bu ilişki değiştiremez.
+Hayır, bir grupla ilişki kurulduktan sonra değiştirilemez.
 
-**Yol haritası silinecek mi?**
+**Yol haritası silindiğinde grup silinir mi?**
 
-Hayır, yol haritasını silmek grubu silemez.
+Hayır, yol haritası silindiğinde grup silinmez.
 
 ## <a name="sharepoint"></a>SharePoint
 
-SharePoint, başka şeylerin arasında, çeşitli posta hizmetleri için depolama hizmetleri sağlayan web tabanlı bir Microsoft 365 platformudur.
+SharePoint, çeşitli Microsoft 365 hizmetleri için depolama hizmetleri gibi diğer özellikleri de sağlayan web tabanlı bir içerik yönetimi platformudur.
 
-**Gruplara sağlanan önemli özellikler**
+**Gruplara sağlanan temel özellikler**
 
 - Belge kitaplığı
-- Not defteri depolama OneNote kitaplığı
-- Depolama wiki Teams içeriği
+- OneNote not defterini depolama kitaplığı
+- Teams wiki dosyalarının Depolama
 
-**Grup SharePoint neden olabilir?**
+**SharePoint grup oluşturabilir misiniz?**
 
-Evet, ekip sitesinde ekip sitesi SharePoint varsayılan olarak Microsoft 365 bir ekip grubu oluşturulur. Grup ve isteğe bağlı olarak mevcut bir site için ekip oluşturmak da mümkündür.
+Evet, SharePoint'da ekip sitesi oluşturmak varsayılan olarak bir Microsoft 365 grubu oluşturur. Ayrıca, mevcut bir site için bir grup ve isteğe bağlı olarak bir ekip oluşturmak da mümkündür.
 
-**Sitelerin SharePoint grup olmadan var mı?**
+**Grup olmadan SharePoint site var mı?**
 
-Evet, SharePoint grupla ilişkilendirilmiş olmayan çeşitli hizmetler ve iletişim ve merkez siteleri gibi siteler sunar. 
+Evet, SharePoint iletişim ve merkez siteleri gibi grupla ilişkili olmayan birkaç hizmet ve site sunar. 
 
 **Grup başına birden çok site olabilir mi?**
 
-Hayır, grup başına yalnızca tek bir site olabilir. Grupla bağlantılı Teams olan özel ve paylaşılan kanallar, gruba bağlı olan diğer siteleri kullanır.
+Hayır, grup başına yalnızca tek bir site olabilir. Teams'daki özel ve paylaşılan kanallar, gruba bağlı olmayan ek siteler kullanır.
 
-**Siteler birden çok grupla ilişkilendirilsin mi?**
+**Siteler birden çok grupla ilişkilendirilebilir mi?**
 
-Teknik olarak hayır, ancak site bir grupla oluşturulsa da, içerik diğer gruplarla paylaşılır.
+Teknik olarak hayır, ancak site bir grupla oluşturulurken içerik diğer gruplarla paylaşılabilir.
 
-**Sitenin grup değişikliğiyle bir ilişkilendirmesi olabilir mi?**
+**Bir sitenin grupla ilişkisi değişebilir mi?**
 
-Hayır, sitenin kendisi grupla ilişkilendirildi, ancak içerik SharePoint arabirimi içinde bir siteden diğerine, yerel olarak dışarı aktararak veya bir üçüncü taraf aracı kullanılarak taşınabiliyor.
+Hayır, sitenin kendisi grupla ilişkilendirilir, ancak içerik, içeriği yerel olarak dışarı aktararak veya üçüncü taraf bir araç kullanarak SharePoint arabiriminde bir siteden diğerine taşınabilir.
 
-**Site silinecek mi?**
+**Site silindiğinde grup silinir mi?**
 
-Evet, site sitenin SharePoint ve grupla ilişkilendirilmiş hizmetleri ve içeriği siler.
+Evet, site SharePoint silindiğinde grup ve grupla ilişkili hizmetler ve içerik silinir.
 
 ## <a name="stream"></a>Stream
 
-Microsoft Stream, bir video barındırma ve paylaşma platformudur.
+Microsoft Stream bir video barındırma ve paylaşma platformudur.
 
-**Gruplara sağlanan önemli özellikler**
+**Gruplara sağlanan temel özellikler**
 
 - Video depolama
-- Teams kaydını kaydetme
+- Toplantı kaydını Teams
 - Video kanalları
 
-**Akış bir grup oluşturabilir mi?**
+**Stream grup oluşturabilir mi?**
 
-Evet, doğrudan Stream'den yeni bir Microsoft 365 grup oluşturmak mümkündür.
+Evet, doğrudan Stream'den yeni bir Microsoft 365 grubu oluşturmak mümkündür.
 
 **Stream bir grup olmadan var mı?**
 
-Evet, video kanalları ve videolar bir grupla ilişkilendirilmeden Stream'de yer almaktadır.
+Evet, video kanalları ve videolar bir grupla ilişkilendirilmeden Stream'de bulunabilir.
 
 **Grup başına birden çok video ve kanal olabilir mi?**
 
 Evet, her grupta birden çok video ve kanal olabilir.
 
-**Bir video veya kanal birden çok grupla ilişkilendirilsin mi?**
+**Bir video veya kanal birden çok grupla ilişkilendirilebilir mi?**
 
-Evet, bir grupla video veya kanal oluşturulduğunda, bu video veya kanal diğer gruplarla paylaşılır.
+Evet, bir grupla bir video veya kanal oluşturulurken, diğer gruplarla paylaşılabilir.
 
-**Bir Grup değişikliğiyle ilişkilendirmeyi var mı?**
+**Grupla ilişkisi değişebilir mi?**
 
-Evet ve hayır; Stream'daki videolar orijinal karşıya yükleyiciye veya toplantı kaydediciye aittir ve bu nedenle herhangi bir grupla ilişkilendirilebilirsiniz, ancak video kanalları yalnızca başlangıçta oluşturulduları grupla ilişkilendirilebilirsiniz.
+Evet ve hayır; Stream'deki videolar özgün yükleyiciye veya toplantı kaydedicisine aittir ve bu nedenle herhangi bir grupla ilişkilendirilebilir, ancak video kanalları yalnızca başlangıçta oluşturuldukları grupla ilişkilendirilebilir.
 
 **Videoları veya kanalları silmek grubu siler mi?**
 
-Hayır, videoları veya kanalları silmek grubu silemez. Bununla birlikte, grubun kendisini Stream'de silmek, gerçek videolar dışında grupla ilişkilendirilmiş hizmetleri ve içeriği siler.
+Hayır, videoları veya kanalları silmek grubu silmez. Ancak Stream'de grubun kendisini silmek, gerçek videolar dışında grupla ilişkili hizmetleri ve içeriği siler.
 
 ## <a name="yammer"></a>Yammer
 
-Yammer, kuruluşlar arasında ve içinde topluluk katılımını teşvik etmek için tasarlanmış kurumsal bir sosyal platformdur.
+Yammer, kuruluşlar içinde ve arasında topluluk katılımını teşvik etmek için tasarlanmış kurumsal bir sosyal platformdur.
 
-Bir topluluk (daha önce "grup" olarak bilinirdi) Yammer bir posta kutusu oluşturur, ancak şu anda bu kutu kullanılamaz.
+Yammer'da bir topluluk (eski adıyla "grup") oluşturmak bir posta kutusu oluşturur, ancak şu anda bu kullanılmaz.
 
-Microsoft 365 ekibiyle ilişkilendirilmiş Yammer grup, başka bir ekiple Microsoft Teams.
+Yammer ile ilişkilendirilmiş bir Microsoft 365 grubu Microsoft Teams bir ekiple kullanılamaz.
 
-**Gruplara sağlanan önemli özellikler**
+**Gruplara sağlanan temel özellikler**
 
 - Konuşma alanı
 
-**Grup Yammer oluştur Microsoft 365 var mı?**
+**Microsoft 365 grubu Yammer oluşturabilir misiniz?**
 
-Evet, platformlar bağlı Yammer kullanıcının grup oluşturma özelliği varsa Microsoft 365 yeni bir Grup Oluştur grubu oluşturulur.
+Evet, Yammer'de yeni bir grup oluşturmak, platformlar bağlıysa ve kullanıcının grup oluşturma yeteneğine sahipse yeni bir Microsoft 365 grubu oluşturur.
 
-İlişkili Yammer grupla Microsoft 365, kendisinde değil, hiçbir arabirim veya hizmette Yammer oluşturulamaz.
+İlişkili Microsoft 365 grubuna sahip bir Yammer grubu, Yammer dışında hiçbir arabirimde veya hizmette oluşturulamaz.
 
-**Yammer grubu olmayan bir Microsoft 365 var mı?**
+**Microsoft 365 grubu olmayan bir Yammer grubu var mı?**
 
-Evet, grup oluşturmadan Yammer grup Microsoft 365 mümkündür.
+Evet, Microsoft 365 grubu olmayan bir Yammer grubu oluşturmak mümkündür.
 
-Yammer platformu Microsoft 365 gruplarına bağlı değilse veya kullanıcıların Microsoft 365 grubu oluşturma özelliği yoksa, Yammer grupları Microsoft 365 ilişki olmadan oluşturulur.
+Yammer platformu Microsoft 365 gruplarına bağlı değilse veya kullanıcılar Microsoft 365 grubu oluşturma yeteneğine sahip değilse, Microsoft 365 grup ilişkilendirmesi olmadan Yammer gruplar oluşturulur.
 
-**Her grup için Yammer grup Microsoft 365 olabilir mi?**
+**Microsoft 365 grubu başına birden çok Yammer grubu olabilir mi?**
 
-Hayır, grup ve Yammer arasındaki ilişki Microsoft 365:1'tir.
+Hayır, bir Yammer grubu ile Microsoft 365 grubu arasındaki ilişki 1:1'dir.
 
-**Bir Yammer birden fazla grupla ilişkilendirilen bir Microsoft 365 olabilir mi?**
+**Bir Yammer grubu birden çok Microsoft 365 grubuyla ilişkilendirilebilir mi?**
 
-Hayır, Yammer grubu yalnızca tek bir grupla Microsoft 365 olabilir. Gönderilerin diğer gruplarla paylaşılıyor veya diğer gruplarla Yammer mümkündür.
+Hayır, Yammer grubu yalnızca tek bir Microsoft 365 grubuyla ilişkilendirilebilir. Gönderilerin diğer Yammer gruplarıyla paylaşılması veya bu gruplara taşınması mümkündür.
 
-**Bir grup Yammer bir grup değişikliğiyle Microsoft 365 olabilir mi?**
+**bir Yammer grubunun bir Microsoft 365 grubuyla ilişkisi değişebilir mi?**
 
-Hayır, Yammer grubu ancak başlangıçta ilişkilendirilmiş Microsoft 365 grupla ilişkilendiril olabilir.
+Hayır, Yammer grubu yalnızca ilk ilişkilendirildiği Microsoft 365 grubuyla ilişkilendirilebilir.
 
-**Bu grup Yammer, ilk grubu Microsoft 365 siler mi?**
+**Yammer grubu silindiğinde Microsoft 365 grubu silinir mi?**
 
-Evet, Microsoft'ta grup Yammer ilgili Microsoft grubu ve grupla ilişkili hizmetler ve içeriği siler.
+Evet, Yammer'da grubu silmek ilgili Microsoft grubunu ve grupla ilişkili hizmetleri ve içeriği siler.
 
 ## <a name="related-topics"></a>İlgili konular
 
-[İşbirliği yönetim planlaması önerileri](collaboration-governance-overview.md#collaboration-governance-planning-recommendations)
+[İşbirliği idaresi planlama önerileri](collaboration-governance-overview.md#collaboration-governance-planning-recommendations)
 
-[İşbirliği yönetim planınızı oluşturma](collaboration-governance-first.md)
+[İşbirliği idare planınızı oluşturma](collaboration-governance-first.md)

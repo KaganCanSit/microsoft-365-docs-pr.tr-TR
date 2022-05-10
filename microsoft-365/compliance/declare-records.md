@@ -17,16 +17,18 @@ search.appverid:
 - MOE150
 - MET150
 description: Bekletme etiketlerini kullanarak kayıtları bildirin.
-ms.openlocfilehash: 23dd6c61d9da787eecd2e1fa825fe338d961d1d1
-ms.sourcegitcommit: 1d972f15a45204e89e268c5ff257021aced5e775
+ms.openlocfilehash: 75445d1cd61bd86dd41d6325efc6e71fac20ddc0
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2022
-ms.locfileid: "64911465"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65286066"
 ---
 # <a name="declare-records-by-using-retention-labels"></a>Saklama etiketleri kullanarak kayıtları beyan etme
 
 >*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Belgeleri ve e-postaları [kayıt](records-management.md#records) olarak bildirmek için, içeriği **kayıt** veya **mevzuat kaydı** olarak işaretleyen [bekletme etiketlerini](retention.md#retention-labels) kullanırsınız.
 
@@ -55,11 +57,7 @@ Bekletme etiketi sihirbazında bu seçeneği görme konusunda fikrinizi değişt
 
 ## <a name="configuring-retention-labels-to-declare-records"></a>Kayıtları bildirmek için bekletme etiketlerini yapılandırma
 
-Microsoft 365 uyumluluk merkezi **Kayıt Yönetimi** çözümünden bir bekletme etiketi oluşturduğunuzda, **Öğeleri kayıt olarak işaretle** seçeneğini belirleyebilirsiniz. Ardından, şu anda önizleme aşamasında kullanıma sunulan ek bir seçenek olarak, SharePoint ve OneDrive için kaydın kilidini varsayılan olarak açın.
-
-**Varsayılan olarak bu kaydın kilidini aç** seçeneğinin ek seçeneği, kullanıcıların içeriği düzenlemeyi bitirdiklerinde kaydı kilitlediklerinden kayıtları kendilerinin bildirmesine olanak tanır. Bu desteklenen senaryo hakkında daha fazla bilgi için bkz. [SharePoint veya OneDrive depolanan kayıtları güncelleştirmek için kayıt sürümü oluşturma](record-versioning.md) kullanma.
-
-Önceki bölümden PowerShell komutunu çalıştırdıysanız, alternatif olarak öğeleri mevzuat kaydı olarak işaretleyebilirsiniz.
+Microsoft Purview uyumluluk portalında **Kayıt Yönetimi** çözümünden bir bekletme etiketi oluşturduğunuzda, öğeleri kayıt olarak işaretleme seçeneğiniz vardır. Önceki bölümden PowerShell komutunu çalıştırdıysanız, alternatif olarak öğeleri mevzuat kaydı olarak işaretleyebilirsiniz.
 
 Örneğin:
 
@@ -77,7 +75,7 @@ Tam yönergeler için:
 
 SharePoint ve OneDrive öğeleri kayıt olarak bildirmek için bekletme etiketlerini kullanacaksanız, dosyalar 0 bayttan büyük olduğunda kullanıcıların [kilitli kaydın](record-versioning.md) özelliklerini düzenlemesine olanak tanıyan varsayılan kiracı ayarını değiştirmeniz gerekip gerekmediğini göz önünde bulundurun.
 
-Bu varsayılanı değiştirmek için [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com/) >  **Kayıt** **yönetimiKayıt yönetimi** >  **ayarlarıKayıt** >  etiketleriKayıt  > **özelliklerinin düzenlenmesine izin** ver'e gidin ve **ardından Kullanıcıların kayıt özelliklerini düzenlemesine izin ver** ayarını kapatın.
+Bu varsayılanı değiştirmek için [Microsoft Purview uyumluluk portalıKayıt](https://compliance.microsoft.com/) >  **yönetimiKayıt yönetimi** >  **ayarlarıKayıt** >  **etiketleriKayıt** >  **özelliklerinin düzenlenmesine izin** ver'e gidin ve **ardından Kullanıcıların kayıt özelliklerini düzenlemesine izin ver** ayarını kapatın.
 
 ## <a name="applying-the-configured-retention-label-to-content"></a>Yapılandırılan bekletme etiketini içeriğe uygulama
 

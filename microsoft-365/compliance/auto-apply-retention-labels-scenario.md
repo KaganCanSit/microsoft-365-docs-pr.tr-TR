@@ -1,5 +1,5 @@
 ---
-title: Başka bir veritabanında depolanan belgelerin yaşam döngüsünü yönetmek için bekletme SharePoint
+title: SharePoint belge yaşam döngüsünü yönetmek için bekletme etiketlerini kullanma
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -18,277 +18,279 @@ ms.custom:
 search.appverid:
 - MOE150
 - MET150
-description: SharePoint'ta belgelerin yaşam döngüsünü yönetmek için içeriği sınıflandırmak, etiketleri otomatik olarak uygulamak ve bekletme dönemini başlatmak için olay tabanlı bekletmeyi kullanmak üzere meta verileri kullanarak bekletme etiketlerini nasıl kullanabilirsiniz?
-ms.openlocfilehash: 35c43a96e07fe52d9e5e0cc0a72195353b6f5da6
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: İçeriği sınıflandırmak, etiketleri otomatik olarak uygulamak ve bekletme süresini başlatmak için olay tabanlı saklamayı kullanmak üzere meta verileri kullanarak SharePoint'daki belgelerin yaşam döngüsünü yönetmek için bekletme etiketlerini nasıl kullanabilirsiniz?
+ms.openlocfilehash: ad8d4f48aa104db18256d62fc5034d1fb38b2817
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63327175"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65286526"
 ---
-# <a name="use-retention-labels-to-manage-the-lifecycle-of-documents-stored-in-sharepoint"></a>Başka bir veritabanında depolanan belgelerin yaşam döngüsünü yönetmek için bekletme SharePoint
+# <a name="use-retention-labels-to-manage-the-lifecycle-of-documents-stored-in-sharepoint"></a>SharePoint'de depolanan belgelerin yaşam döngüsünü yönetmek için bekletme etiketlerini kullanma
 
->*[Microsoft 365 uyumluluğu için lisans & kılavuzu.](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)*
+>*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-Bu makalede, otomatik olarak uygulanan bekletme etiketlerini ve olay tabanlı bekletmeyi kullanarak SharePoint belgelerin yaşam döngüsünü nasıl yönetebilirsiniz?
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Otomatik uygulama işlevselliği, belge sınıflandırması SharePoint meta verilerini kullanır. Bu makaledeki örnek ürünle ilgili belgelere yöneliktir, ancak diğer senaryolarda da aynı kavramlar kullanılabilir. Örneğin, yağ ve yakıt sektörü içinde, yağ platformları, iyi günlükler veya üretim lisansları gibi fiziksel varlıklarla ilgili belgelerin yaşam döngüsünü yönetmek için onu kullanabilirsiniz. Finansal hizmetler sektöründe, banka hesabı, konut kredisi veya sigorta sözleşme belgelerini yönetebilirsiniz. Kamu sektöründe, inşaat izinlerini veya vergi formlarını yönetesiniz.
+Bu makalede, otomatik olarak uygulanan bekletme etiketlerini ve olay tabanlı saklamayı kullanarak SharePoint depolanan belgelerin yaşam döngüsünü nasıl yönetebileceğiniz açıklanmaktadır.
 
-Bu makalede, bilgi mimarisine ve bekletme etiketlerinin tanımına bakabilirsiniz. Ardından, etiketleri otomatik olarak uygulayarak belgeleri sınıflandırın. Son olarak da bekletme dönemini başlatan olayları oluşturuz.
+Otomatik uygulama işlevi, belge sınıflandırması için SharePoint meta verilerini kullanır. Bu makaledeki örnek, ürünle ilgili belgelere yöneliktir, ancak aynı kavramlar diğer senaryolar için de kullanılabilir. Örneğin, petrol ve gaz sektöründe, petrol platformları, kuyu günlükleri veya üretim lisansları gibi fiziksel varlıklarla ilgili belgelerin yaşam döngüsünü yönetmek için kullanabilirsiniz. Finansal hizmetler sektöründe, banka hesabı, ipotek veya sigorta sözleşmesi belgelerini yönetebilirsiniz. Kamu sektöründe inşaat izinlerini veya vergi formlarını yönetebilirsiniz.
+
+Bu makalede bilgi mimarisine ve bekletme etiketlerinin tanımına göz atacağız. Ardından etiketleri otomatik olarak uygulayarak belgeleri sınıflandıracağız. Son olarak bekletme süresini başlatan olayları oluşturacağız.
 
 ## <a name="information-architecture"></a>Bilgi mimarisi
 
-Bizim senaryomuz, şirket tarafından SharePoint ürünlerle ilgili tüm belgeleri depolamak için Yeni Depolama alanı kullanan bir üretim şirketidir. Bu belgeler ürün belirtimlerini, sağlayıcılarla yapılan sözleşmeleri ve kullanıcı el kitaplarını içerir. Bu belgeler İçerik Yönetimi ilkeleri SharePoint Enterprise depolanıyorsa, bunları sınıflandırmak için kullanılan belge meta verileri tanımlanır. Her belgede aşağıdaki meta veri özellikleri vardır:
+Senaryomuz, şirketin geliştirdiği ürünlerle ilgili tüm belgeleri depolamak için SharePoint kullanan bir üretim şirketidir. Bu belgeler ürün belirtimlerini, tedarikçilerle yapılan sözleşmeleri ve kullanıcı kılavuzlarını içerir. Bu belgeler Enterprise İçerik Yönetimi ilkeleri aracılığıyla SharePoint depolandığında, belge meta verileri tanımlanır ve bunları sınıflandırmak için kullanılır. Her belge aşağıdaki meta veri özelliklerine sahiptir:
 
-- **Belge Türü** (ürün belirtimi, sözleşme veya kullanıcı el kitabı gibi)
+- **Belge Türü** (ürün belirtimi, sözleşme veya kullanım kılavuzu gibi)
 
 - **Ürün Adı**
 
 - **Durum** (taslak veya son)
 
-Bu meta veri, tüm belgeler için Üretim Belgesi *adlı temel* bir içerik türü oluşturur.
+Bu meta veriler, tüm belgeler için *Üretim Belgesi* adlı bir temel içerik türü oluşturur.
 
 ![Ürün belgeleri meta verileri tablosu.](../media/SPRetention1.png)
 
 > [!NOTE]
-> Belge **Türü ve** Durum **özellikleri** , bu senaryonun ilerleyen sayfalarında bekletme etiketlerini sınıflandırmak ve otomatik olarak uygulamak için bekletme ilkeleri tarafından kullanılır.
+> **Belge Türü** ve **Durum** özellikleri, bekletme etiketlerini sınıflandırmak ve otomatik olarak uygulamak için bu senaryonun devamında bekletme ilkeleri tarafından kullanılır.
 
-Farklı türde belgeleri temsil eden birkaç içerik türümiz olabilir, ancak şimdi ürün belgelerine odaklanın.
+Farklı belge türlerini temsil eden çeşitli içerik türlerimiz olabilir, ancak şimdi ürün belgelerine odaklanalım.
 
-Bu senaryoda, Yönetilen Meta Veri hizmetini ve Terim Deposu'bulundurarak Belge Türü için bir terim kümesi  ve Ürün Adı için başka bir terim *kümesi oluşturacağız*. Her terim kümesi için her değer için bir terim oluşturuz. Büyük bir kuruluş için Terim Deposu'SharePoint benzer:
+Bu senaryoda, *Belge Türü* için bir terim kümesi ve *Ürün Adı* için bir terim kümesi oluşturmak için Yönetilen Meta Veri hizmetini ve Terim Deposu'nı kullanırız. Her terim kümesi için her değer için bir terim oluştururuz. SharePoint kuruluşunuz için Term Store'da şuna benzer olacaktır:
 
-![Terim Deposu'daki ürün belgeleri için örnek terim kümesi.](../media/SPRetention2.png)
+![Terim Deposu'ndaki ürün belgeleri için örnek terim kümesi.](../media/SPRetention2.png)
 
-*İçerik Türü* , İçerik Türü Merkezi kullanılarak oluşturulabilir [ve yayımlanamaz](https://support.office.com/article/manage-content-type-publishing-06f39ac0-5576-4b68-abbc-82b68334889b). Ayrıca, [PnP](/sharepoint/dev/solution-guidance/pnp-provisioning-framework) sağlama çerçevesi veya site tasarımı JSON şeması gibi site sağlama araçlarını kullanarak da içerik türü [oluşturabilir ve yayım edebilirsiniz](/sharepoint/dev/declarative-customization/site-design-json-schema#define-a-new-content-type).
+*İçerik Türü* , [İçerik Türü Hub'ı](https://support.office.com/article/manage-content-type-publishing-06f39ac0-5576-4b68-abbc-82b68334889b) kullanılarak oluşturulabilir ve yayımlanabilir. Ayrıca [, PnP sağlama çerçevesi](/sharepoint/dev/solution-guidance/pnp-provisioning-framework) veya site [tasarımı JSON şeması](/sharepoint/dev/declarative-customization/site-design-json-schema#define-a-new-content-type) gibi site sağlama araçlarını kullanarak içerik türü oluşturabilir ve yayımlayabilirsiniz.
 
-Her ürünün, SharePoint türleri etkinleştirilmiş tek bir belge kitaplığı içeren ayrılmış bir site vardır. Tüm belgeler bu belge kitaplığında depolanır.
+Her ürünün, doğru içerik türlerinin etkinleştirildiği bir belge kitaplığı içeren ayrılmış bir SharePoint sitesi vardır. Tüm belgeler bu belge kitaplığında depolanır.
 
 [![Ürün belgeleri için belge kitaplığı.](../media/SPRetention3.png) ](../media/SPRetention3.png#lightbox)
 
 > [!NOTE]
-> Bu senaryoda üretim şirketi ürün başına bir SharePoint sitesine sahip olmak yerine, kalıcı sohbet aracılığıyla ekibin üyeleri arasında işbirliğini desteklemek için ürün başına microsoft ekibi kullanabilir ve belge yönetimi için Teams'de Dosyalar sekmesini kullanabilir. Bu makalede yalnızca belgelere odaklanan bir site, yani yalnızca bir site kullanıyoruz.
+> Bu senaryoda üretim şirketi, ürün başına SharePoint site kullanmak yerine, kalıcı sohbet gibi ekip üyeleri arasında işbirliğini desteklemek için ürün başına Bir Microsoft Ekibi kullanabilir ve belge yönetimi için Teams **dosyalar sekmesini kullanabilir**. Bu makalede yalnızca belgelere odaklanacağız, bu nedenle yalnızca bir site kullanacağız.
 
-Dönen Widget ürünü için belge kitaplığının görünümü şöyledir:
+Dönen Pencere Öğesi ürününün belge kitaplığının bir görünümü aşağıdadır:
 
 [![Dönen Pencere Öğesi belge kitaplığı.](../media/SPRetention4.png) ](../media/SPRetention4.png#lightbox)
 
-Artık belge yönetimi için temel bilgi mimarisine sahip olduğunu göre, meta verileri kullanan belgeler ve bu belgeleri nasıl sınıflandıracağız?
+Belge yönetimi için temel bilgi mimarisini hazırladığımıza göre, meta verileri kullanan belgelerin saklama ve elden çıkarma stratejisine ve bu belgeleri nasıl sınıflandırdığımıza bakalım.
 
-## <a name="retention-and-disposition"></a>Bekletme ve yokuzma
+## <a name="retention-and-disposition"></a>Bekletme ve elden çıkarma
 
-Üretim şirketinin uyumluluk ve veri yönetimi ilkeleri, verilerin nasıl korunarak atılması gerektiğinine dikte ediyor. Ürün üretimi ve belirli bir ek dönem boyunca ürünle ilgili belgeler tutulmalıdır. Ek süre ürün belirtimleri, sözleşmeler ve kullanıcı el kitabına göre farklılık gösterir. Aşağıdaki tablo, bekletme ve yok durumu gereksinimlerini gösterir:
+Üretim şirketinin uyumluluk ve veri idare ilkeleri, verilerin nasıl korunup atıldığını belirler. Ürünle ilgili belgeler, ürün üretildiği sürece ve belirli bir ek süre boyunca saklanmalıdır. Ek süre ürün belirtimleri, sözleşmeler ve kullanım kılavuzları için farklılık gösterir. Aşağıdaki tabloda saklama ve bırakma gereksinimleri gösterilir:
 
-|   Belge türü            |   Bekletme                            |   Disposition                                |
+|   Belge türü            |   Saklama                            |   Disposition                                |
 | -------------------------- | -------------------------------------- | -------------------------------------------- |
-| Ürün belirtimleri      | Üretim duraklarını 5 yıl sonra  | Silme                                       |
-| Ürün sözleşmeleri          | Üretim duraklarını 10 yıl sonra | Gözden Geçir                                       |
-| Kullanıcı el kılavuzları                | Üretim duraklarını 5 yıl sonra  | Silme                                       |
-| Diğer tüm belge türleri | Etkin olarak korumayın  | Belge 3 yıllıktan eski olduğunda silme <br /><br /> Son 3 yıl içinde değiştirilmemiş olan bir belge, 3 yıl önce kabul edilir. |
+| Ürün belirtimleri      | Üretim durduktan 5 yıl sonra  | Silme                                       |
+| Ürün sözleşmeleri          | Üretim durduktan 10 yıl sonra | Gözden geçirin                                       |
+| Kullanıcı kılavuzları                | Üretim durduktan 5 yıl sonra  | Silme                                       |
+| Diğer tüm belge türleri | Etkin bir şekilde saklama  | Belge 3 yıldan eskiyse sil <br /><br /> Belge son 3 yıl içinde değiştirilmediyse 3 yıldan eski kabul edilir. |
 |||
 
-Aşağıdaki bekletme Microsoft 365 uyumluluk merkezi oluşturmak için aşağıdaki adımları [kullanıruz](retention.md#retention-labels):
+Aşağıdaki [bekletme etiketlerini](retention.md#retention-labels) oluşturmak için Microsoft Purview uyumluluk portalını kullanırız:
 
   - Ürün Belirtimi
 
   - Ürün Sözleşmesi
 
-  - Kullanıcı El Kitabı
+  - Kullanıcı Kılavuzu
 
-Bu makalede yalnızca Ürün Belirtimi bekletme etiketinin nasıl oluşturulacak ve otomatik olarak nasıl uygulanacakları açıklanmıştır. Tam senaryoyu uygulamak için, diğer iki belge türü için de bekletme etiketleri oluşturabilir ve otomatik olarak uygulayabilirsiniz.
+Bu makalede yalnızca Ürün Belirtimi saklama etiketinin nasıl oluşturulacağını ve otomatik olarak uygulanacağını göstereceğiz. Senaryonun tamamını uygulamak için diğer iki belge türü için bekletme etiketleri oluşturup otomatik olarak uygulayabilirsiniz.
 
-### <a name="settings-for-the-product-specification-retention-label"></a>Ayarlar Belirtimi bekletme etiketi için veri etiketi
+### <a name="settings-for-the-product-specification-retention-label"></a>Ürün Belirtimi bekletme etiketi için Ayarlar
 
-Ürün Belirtimi [bekletme etiketi](file-plan-manager.md) için dosya planı şöyledir:
+Ürün Belirtimi bekletme etiketi için [dosya planı](file-plan-manager.md) aşağıdadır:
 
-- **Ad:** Ürün Belirtimi
+- **Adı:** Ürün Belirtimi
 
-- **Kullanıcılar için açıklama:** Üretim durakları 5 yıl boyunca korunur.
+- **Kullanıcılar için açıklama:** Üretim durduktan sonra 5 yıl boyunca bekletin.
 
-- **Yöneticiler için açıklama:** Üretim durakları, otomatik silme, olay tabanlı bekletme ve olay türü Ürün *Cessation olmak 5 yıl boyunca korunur*.
+- **Yöneticiler için açıklama:** Üretim durduktan sonra 5 yıl boyunca tutun, otomatik silme, olay tabanlı saklama, olay türü *Ürün Durdurma'dır*.
 
-- **Bekletme eylemi:** Koruma ve silme.
+- **Bekletme eylemi:** Saklama ve silme.
 
 - **Bekletme süresi:** 5 yıl (1.825 gün).
 
-- **Kayıt etiketi**: Bekletme etiketini öğeleri kayıt olarak işaretle olacak şekilde [yapılandırarak etiketli](records-management.md#records) belgeler bundan sonra kullanıcılar tarafından değiştirilemez veya silinemez.
+- **Kayıt etiketi**: Bekletme etiketini öğeleri [kayıt](records-management.md#records) olarak işaretlenecek şekilde yapılandırın; bu da etiketlenen belgelerin kullanıcılar tarafından değiştirilebileceği veya silinemeyecek olduğu anlamına gelir.
 
-- **Dosya planı tanımlayıcıları:** Senaryoyu basitleştirmek için, isteğe bağlı dosya tanımlayıcıları sağ verilmez.
+- **Dosya planı tanımlayıcıları:** Senaryoyu basitleştirmek için isteğe bağlı dosya tanımlayıcıları sağlanmamaktadır.
 
-Aşağıdaki ekran görüntüsünde, Ürün Belirtimi bekletme etiketini ilk oluşturma sayfasında Microsoft 365 uyumluluk merkezi. Bekletme etiketini *oluşturma sırasında Ürün Cessation* olay türünü oluşturabilirsiniz. Aşağıdaki bölümde yer alan yordama bakın.
+Aşağıdaki ekran görüntüsünde, Microsoft Purview uyumluluk portalında Ürün Belirtimi bekletme etiketini oluşturduğunuzda ayarlar gösterilmektedir. Bekletme etiketini oluştururken *Product Cessation* olay türünü oluşturabilirsiniz. Aşağıdaki bölümdeki yordama bakın.
 
 ![Ürün Belirtimi etiketi için bekletme ayarları.](../media/SPRetention5.png)
 
 > [!NOTE]
-> Belge silme işleminin 5 yıllık bekleme süresini önlemek için, test ortamında bu senaryoyu yeniden ediyorsanız bekletme süresini ***1*** gün olarak ayarlayın.
+> Belgenin silinmesi için 5 yıllık beklemeyi önlemek için, bu senaryoyu bir test ortamında yeniden oluşturacaksanız bekletme süresini ***1 gün*** olarak ayarlayın.
 
-### <a name="create-an-event-type-when-you-create-a-retention-label"></a>Bekletme etiketi 2010'da bir olay türü oluşturma
+### <a name="create-an-event-type-when-you-create-a-retention-label"></a>Bekletme etiketi oluşturduğunuzda olay türü oluşturma
 
-1. Bekletme etiketi **oluştur sihirbazının** Bekletme ayarlarını tanımla sayfasında, Bekletme dönemini temel alan başlatma'nın **ardından Yeni olay** **türü oluştur'a tıklayın**:
+1. Bekletme etiketi oluşturma sihirbazının **Bekletme ayarlarını tanımla** sayfasında, **Bekletme süresini temel alarak başlat'ın** ardından **Yeni olay türü oluştur'u** seçin:
 
     ![Ürün Belirtimi etiketi iletişim kutusu için yeni bir olay türü oluşturun.](../media/SPRetention6.png)
 
-3. Etkinlik **türlerinizi yazın sayfasında** Ürün **Cessation girin ve isteğe** bağlı olarak bir açıklama girin. Sonra Sonraki **, Gönder** **ve Bitti'yi** **seçin**.
+3. **Olay türünüzü adlandırın** sayfasında **Ürün Bırakma** ve isteğe bağlı bir açıklama girin. Ardından **İleri**, Gönder ve **Bitti'yi** seçin. 
 
-4. Bekletme ayarlarını **tanımla sayfasına geri** dönüp Bekletme dönemini temel alan başlatma **için, açılan** kutuyu kullanarak oluşturduğunuz Ürün **Cessation** olay türünü seçin.
+4. **Bekletme ayarlarını tanımla** sayfasına dönün ve **Bekletme süresini şunu temel alarak başlatın** için açılan kutuyu kullanarak oluşturduğunuz **Ürün Bırakma** olay türünü seçin.
 
-    Ürün Belirtimi bekletme etiketi için ayarlar şöyle olur:
+    Ürün Belirtimi bekletme etiketi için ayarlar şöyle görünür:
 
-   ![Ayarlar Belirtimi etiketi için bir başlık.](../media/SPRetention7.png)
+   ![Yeni Ürün Belirtimi etiketi için Ayarlar.](../media/SPRetention7.png)
 
-6. Etiket **oluştur'a** tıklayın ve etiketi yayımlama seçeneklerini gördüğünüzde bir sonraki sayfada etiketi otomatik olarak uygulama veya yalnızca etiketi kaydetme: Yalnızca şimdilik kaydet'i ve sonra Bitti'yi **seçin**.
+6. **Etiket oluştur'u** seçin ve sonraki sayfada etiketi yayımlama, etiketi otomatik uygulama veya yalnızca etiketi kaydetme seçeneklerini gördüğünüzde: **Şimdilik etiketi kaydet'i** ve ardından **Bitti'yi** seçin.
 
     > [!TIP]
-    > Daha ayrıntılı adımlar için bkz [. Bekletme süresi bir olayı temel alan bir etiket oluşturma](event-driven-retention.md#step-1-create-a-label-whose-retention-period-is-based-on-an-event).
+    > Daha ayrıntılı adımlar için bkz. [Saklama süresi bir olayı temel alan bir etiket oluşturma](event-driven-retention.md#step-1-create-a-label-whose-retention-period-is-based-on-an-event).
 
-Şimdi de bekletme etiketini ürün belirtimi içeriğine otomatik olarak nasıl uygulayacaklarına bakalım.
+Şimdi bekletme etiketini ürün belirtimi içeriğine otomatik olarak nasıl uygulayacağımıza bakalım.
 
-## <a name="auto-apply-retention-labels-to-documents"></a>Belgelere bekletme etiketlerini otomatik olarak uygulama
+## <a name="auto-apply-retention-labels-to-documents"></a>Belgelere bekletme etiketlerini otomatik uygulama
 
-Oluşturduğumız bekletme etiketlerini otomatik olarak uygulamak [için Anahtar Sözcük](apply-retention-labels-automatically.md) Sorgu Dili'ne (KQL) kullan kullan aynı olacak. KQL, arama sorguları oluşturmak için kullanılan dildir. KQL'de, anahtar sözcükleri veya yönetilen özellikleri kullanarak arama yapabilirsiniz. Daha fazla bilgi için bkz [. Anahtar Sözcük Sorgu Dili (KQL) söz dizimi başvurusu](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference).
+Oluşturduğumuz bekletme etiketlerini [otomatik olarak uygulamak](apply-retention-labels-automatically.md) için Anahtar Sözcük Sorgu Dili 'ni (KQL) kullanacağız. KQL, arama sorguları oluşturmak için kullanılan dildir. KQL anahtar sözcükleri veya yönetilen özellikleri kullanarak arama yapabilirsiniz. Daha fazla bilgi için bkz[. Anahtar Sözcük Sorgu Dili (KQL) söz dizimi başvurusu](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference).
 
-Temel olarak, "son Microsoft 365 Durumu ve Belge Türü Ürün Belirtimi olan  tüm belgelere Ürün Belirtimi bekletme etiketini uygulamamız  **gerekir**." Durum ve **Belge** **Türü'nin,** Bilgi mimarisi bölümündeki Ürün Belgeleri içerik türü için tanımlanmamış site [sütunları olduğunu anımsatabilirsiniz](#information-architecture) . Bunu yapmak için, arama şemasını yapılandırmamız gerekir.
+Temel olarak, Microsoft 365 "Son **Durumu** **ve** Belge **Türü** **Ürün Belirtimi** olan tüm belgelere **Ürün Belirtimi** bekletme etiketini uygulayın" demek istiyoruz. **Durum** ve **Belge Türü'nü**, [Bilgi mimarisi](#information-architecture) bölümünde Ürün Belgeleri içerik türü için tanımladığımız site sütunları olduğunu hatırlayın. Bunu yapmak için arama şemasını yapılandırmamız gerekir.
 
-İçerik SharePoint olduğunda, her site sütunu için otomatik olarak gezinilen özellikler üretir. Bu senaryo için, Belge Türü ve **Durum özellikleriyle** **ilgileniyoruz** . Kitaplıkta doğru içerik türüne sahip belgelere ve gezinilen özellikleri oluşturmak için site sütunlarının arama için doldurulması gerekiyor.
+SharePoint içeriği dizine eklediğinde, her site sütunu için gezinilen özellikleri otomatik olarak oluşturur. Bu senaryo için **Belge Türü** ve **Durum** özellikleriyle ilgileniyoruz. Kitaplıkta doğru içerik türü olan ve gezinilen özellikleri oluşturmak için arama için site sütunlarının doldurulduğu belgelere ihtiyacımız var.
 
-SharePoint <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">merkezinde Arama yapılandırmasını</a> açın ve gezinilen özellikleri görüntülemek ve **yapılandırmak için Arama** Şemasını Yönet'i seçin.
+<a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">SharePoint yönetim merkezinde</a> Arama yapılandırmasını açın ve gezinilen özellikleri görüntülemek ve yapılandırmak için **Arama Şemasını Yönet'i** seçin.
 
 ![Arama şemasında gezinilen özellikler.](../media/SPRetention8.png)
 
-_ **Gezinilen özellikler*** kutusuna **status* _ yazın ve yeşil oku seçeriz, aşağıdakine benzer bir sonuçla görmemiz gerekir:
+_ *Gezinilen özellikler** kutusuna ***status** _ yazıp yeşil oku seçersek şuna benzer bir sonuçla karşılaşırız:
 
-![Gezinilen ows_Status özelliktir.](../media/SPRetention9.png)
+![gezinilen ows_Status özelliği.](../media/SPRetention9.png)
 
-**owsStatus\_\_** özelliği (çift alt çizgi), ilgimizi alan özelliktir. Üretim Belgesi içerik **türünün** Durum özelliğiyle eşler.
+**owsStatus\_\_** özelliği (çift alt çizgiye dikkat edin) ilgimizi çeken özelliktir. Üretim Belgesi içerik türünün **Status** özelliğine eşler.
 
-Şimdi, ***owsdoc\_ yazın*** ve yeşil oku seçerek aşağıdakine benzer bir şey görüyoruz:
+Şimdi ***owsdoc\_*** yazıp yeşil oku seçersek şuna benzer bir şey görmemiz gerekir:
 
-![Gezinilen ows_Doc_Type özelliktir.](../media/SPRetention10.png)
+![gezinilen ows_Doc_Type özelliği.](../media/SPRetention10.png)
 
-**owsDocx0020Type\_\_\_** özelliği, ilgimizi alan ikinci özelliktir. Üretim Belgesi içerik **türünün Belge Türü** özelliğiyle eşler.
+**owsDocx0020Type\_\_\_** özelliği bizi ilgilendiren ikinci özelliktir. Üretim Belgesi içerik türünün **Belge Türü** özelliğine eşler.
 
 > [!TIP]
-> Bu senaryoya ait gezinilen özelliğin adını tanımlamak için, üretim belgelerini içeren belge kitaplığına gidin. Sonra da kitaplık ayarlarına gidin. Sütunlar **için**, site sütun sayfasını açmak için sütunun **adını** (**örneğin, Durum** veya Belge Türü) seçin. Bu *sayfanın* URL'sinde Field parametresi alanın adını içerir. "Alan adı" ile ön ekli ows_, gezinilen özelliğin adıdır. Örneğin, URL `https://tenantname.sharepoint.com/sites/SpinningWidget/_layouts/15/FldEdit.aspx?List=%7BC38C2F45-3BD6-4C3B-AA3B-EF5DF6B3D172%7D&Field=_Status` *owsStatus\_\_ gezinilen özeline* karşılık gelir.
+> Bu senaryo için gezinilen özelliğin adını belirlemek için üretim belgelerini içeren belge kitaplığına gidin. Ardından kitaplık ayarlarına gidin. **Sütunlar** için, site sütunu sayfasını açmak için sütunun adını (örneğin, **Durum** veya **Belge Türü**) seçin. Bu sayfanın URL'sindeki *Field* parametresi alanın adını içerir. "ows_" ön ekli bu alan adı, gezinilen özelliğin adıdır. Örneğin, URL `https://tenantname.sharepoint.com/sites/SpinningWidget/_layouts/15/FldEdit.aspx?List=%7BC38C2F45-3BD6-4C3B-AA3B-EF5DF6B3D172%7D&Field=_Status` *owsStatus\_\_* gezinilen özelliğine karşılık gelir.
 
-Bulmak istediğiniz gezinilen özellikler, yönetim merkezinin Arama Şemasını Yönet bölümünde SharePoint:
+Aradığınız gezinilen özellikler SharePoint yönetim merkezindeki Arama Şemasını Yönet bölümünde görünmüyorsa:
 
-- Belgeler dizine henüz oluşturmamış olabilir. Belge kitaplığı **ayarlarıAdvanced** Kitaplığı ayarlarına gidip **kitaplığın yeniden** >  Ayarlar.
+- Belki belgeler dizine eklenemedi. Belge kitaplığı **ayarlarıGelen** >  Ayarlar'ne giderek **kitaplığın** yeniden dizine alınmasını zorlayabilirsiniz.
 
-- Belge kitaplığı modern bir sitede yer alıyorsa, site yöneticisinin aynı SharePoint koleksiyonu yöneticisi olduğundan emin olun.
+- Belge kitaplığı modern bir sitedeyse, SharePoint yöneticisinin de site koleksiyonu yöneticisi olduğundan emin olun.
 
-Gezinilen ve yönetilen özellikler hakkında daha fazla bilgi için bkz. [SharePoint Server'da yönetilen özellikler.](/sharepoint/technical-reference/automatically-created-managed-properties-in-sharepoint)
+Gezinilen ve yönetilen özellikler hakkında daha fazla bilgi için bkz. [SharePoint Server'da otomatik olarak oluşturulan yönetilen özellikler](/sharepoint/technical-reference/automatically-created-managed-properties-in-sharepoint).
 
 ### <a name="map-crawled-properties-to-pre-defined-managed-properties"></a>Gezinilen özellikleri önceden tanımlanmış yönetilen özelliklerle eşleme
 
-KQL, arama sorgularında gezinilen özellikleri kullanmaz. Yönetilen özelliği kullanmaktadır. Normal bir arama senaryosunda, bir yönetilen özellik oluşturduk ve bu özelliği ihtiyacımız olan gezinilen özellik ile eşleriz. Bununla birlikte, bekletme etiketlerini otomatik uygularken, özel yönetilen özellikler değil, yalnızca KQL'de önceden tanımlanmış yönetilen özellikler belirtebilirsiniz. Kullanabileceğiniz *RefinableString00* - *RefinableString199* dizesi için sistemde önceden tanımlanmış bir dizi yönetilen özellik vardır. Tam liste için varsayılan [kullanılmamış yönetilen özellikler'e bakın](/sharepoint/manage-search-schema#default-unused-managed-properties). Bu varsayılan yönetilen özellikler genellikle arama iyileştiricileri tanımlamak için kullanılır.
+KQL arama sorgularında gezinilen özellikleri kullanamazsınız. Yönetilen bir özellik kullanması gerekir. Tipik bir arama senaryosunda yönetilen bir özellik oluşturur ve bunu ihtiyacımız olan gezinilen özelliğe eşleriz. Ancak, bekletme etiketlerini otomatik olarak uygulamak için özel yönetilen özellikleri değil, yalnızca KQL önceden tanımlanmış yönetilen özellikleri belirtebilirsiniz. Sistemde, kullanabileceğiniz *RefinableString00* ile *RefinableString199* dizesi için önceden tanımlanmış bir dizi yönetilen özellik vardır. Tam liste için bkz. [Varsayılan kullanılmayan yönetilen özellikler](/sharepoint/manage-search-schema#default-unused-managed-properties). Bu varsayılan yönetilen özellikler genellikle arama iyileştiricilerini tanımlamak için kullanılır.
 
-KQL sorgusunun ürün belgesi içeriğine otomatik olarak doğru bekletme etiketini uygulaması için, **gezinilen özellikleri owsDocx0020Type\_\_\_* ve *owsStatus\_\_** ile iki iyileştirilebilir yönetilen özellikle eşleyiz. Bu senaryoya uygun test ortamımızda **RefinableString00** ve **RefinableString01** kullanılamaz. Bunu, genel yönetim merkezinde **Arama Şemasını** **Yönetme'de** Yönetilen <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">SharePoint bakarak belirledik</a>.
+KQL sorgusunun ürün belgesi içeriğine doğru bekletme etiketini otomatik olarak uygulaması için **, gezinilen owsDocx0020Type\_\_\_* ve *owsStatus\_\_** özelliklerini iki iyileştirilebilir yönetilen özelliğe eşleriz. Bu senaryo için test ortamımızda **RefinableString00** ve **RefinableString01** kullanılmıyor. Bunu <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">, SharePoint yönetim merkezindeki</a> **Arama Şemasını Yönet'teki** **Yönetilen Özellikler'e** bakarak belirledik.
 
-[![Arama şemasında yönetilen özellikler.](../media/SPRetention12.png) ](../media/SPRetention12.png#lightbox)
+[![Arama şemasındaki yönetilen özellikler.](../media/SPRetention12.png) ](../media/SPRetention12.png#lightbox)
 
-Önceki ekran **görüntüsünde Eşlenen Gezinilen Özellikler** sütununu boş olduğunu görebilirsiniz.
+Önceki ekran görüntüsündeki **Eşlenmiş Gezinilen Özellikler** sütununun boş olduğuna dikkat edin.
 
 **owsDocx0020Type\_\_\_** gezinilen özelliğini eşlemek için şu adımları izleyin:
 
-1. Yönetilen özellik **filtresi** kutusuna **_RefinableString00 yazın_** ve yeşil oku seçin.
+1. **Yönetilen özellik** filtresi kutusuna **_RefinableString00_** yazın ve yeşil oku seçin.
 
-2. Sonuç listesinde **RefinableString00** bağlantısını seçin ve ardından Gezinilen özelliklere **eşlemeler bölümüne kadar aşağı kaydırın** .
+2. Sonuçlar listesinde **RefinableString00** bağlantısını seçin ve **gezinilen özelliklere eşlemeler** bölümüne kadar aşağı kaydırın.
 
-3. Eşleme **Ekle'yi** seçin ve ardından Gezinilen özellik seçimi penceresindeki _Search arama kutusuna **_owsDocx0020Type\_\_\__*_*** **yazın.** **Bul'a seçin**.
+3. **Eşleme Ekle'yi** seçin ve **gezinilen özellik seçimi *penceresindeki _* Gezinilen özellik adı ara kutusuna _owsDocx0020Type\_\_\__ _** yazın. **Bul'u** seçin.
 
-4. Sonuç listesinde **owsDocx0020Type\_\_\_ öğesini seçin ve** sonra da Tamam'ı **seçin**.
+4. Sonuçlar listesinde **owsDocx0020Type'ı\_\_\_** ve ardından **Tamam'ı** seçin.
 
-   Eşlenen **Gezinilen Özellikler bölümünde** , şu ekran görüntüsüne benzer bir şey görüyor gerekir:
+   **Eşlenen Gezinilen Özellikler** bölümünde bu ekran görüntüsüne benzer bir şey görmeniz gerekir:
 
    [![Eşlenen gezinilen özellikler bölümünde Eşleme ekle'yi seçin.](../media/SPRetention13.png) ](../media/SPRetention13.png#lightbox)
 
 
-5. Sayfayı en altına kadar kaydırın ve eşlemeyi **kaydetmek için** Tamam'ı seçin.
+5. Sayfanın en altına kaydırın ve eşlemeyi kaydetmek için **Tamam'ı** seçin.
 
-**RefinableString01 ve** **owsStatus'u\_\_ eşlemek için bu adımları yinelayın**.
+**RefinableString01** ve **owsStatus'ı\_\_** eşlemek için bu adımları yineleyin.
 
-Şimdi, iki gezinilen özellikle eşlenmiş iki yönetilen özelliğin olması gerekir:
+Şimdi gezinilen iki özelliğe eşlenmiş iki yönetilen özelliğiniz olmalıdır:
 
 [![Gezinilen özelliklerle eşlenmiş olarak gösterilen yönetilen özellikler.](../media/SPRetention14.png) ](../media/SPRetention14.png#lightbox)
 
-Kurumsal bir arama çalıştırarak kurulumlarımızın doğru olduğunu doğrularız. Tarayıcıda https://*\<your_tenant>.sharepoint.com/search*. Arama kutusuna ***RefinableString00:"Ürün** Belirtimi"_ yazın ve Enter tuşuna basın. Bu arama, _Ürün Belirtimi* olan *ve Belge Türü değeri olan* tüm **_belgeleri geri dönecektir_**.
+Şimdi kurumsal bir arama çalıştırarak kurulumumuzun doğru olduğunu doğrulayalım. Tarayıcıda *https://\<your_tenant>.sharepoint.com/search* gidin. Arama kutusuna ***RefinableString00:"Product Specification"** _ yazın ve Enter tuşuna basın. Bu arama, _ *Ürün Belirtimi** **_belge türüne_** sahip tüm belgeleri döndürmelidir.
 
-Şimdi arama kutusuna **RefinableString00:"Ürün Belirtimi" AND RefinableString01:Final yazın ve** Enter tuşuna basın. Bu, Ürün Belirtimi Doc **_Type_ _ ve _Status of Final *olan tüm* belgeleri** **_geri dönecektir_**.
+Şimdi arama kutusuna **RefinableString00:"Product Specification" AND RefinableString01:Final** yazın ve Enter tuşuna basın. Bu, **_Belge Türü_*_*** **Ürün Belirtimi** ve _ **_Son_** Durumu olan tüm belgeleri döndürmelidir.
 
 ### <a name="create-auto-apply-label-policies"></a>Etiket ilkelerini otomatik uygulama oluşturma
 
-Artık KQL sorgusunun çalıştığını doğruladıktan sonra, uygun belgelere Ürün Belirtimi bekletme etiketini otomatik olarak uygulamak için KQL sorgusu kullanan bir otomatik uygulama etiket ilkesi oluştursun.
+KQL sorgusunun çalıştığını doğruladığımıza göre, ürün belirtimi bekletme etiketini uygun belgelere otomatik olarak uygulamak için KQL bir sorgu kullanan bir otomatik uygulama etiketi ilkesi oluşturalım.
 
-1. Kayıt <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 uyumluluk merkezi</a> Records **managementLabel** >  **policiesAuto-apply** >  a label (Etiket uygulamak için) gidin.
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalında</a> **Kayıt yönetimiBel** >  **ilkeleriAyrı** >  etiket uygulama'ya gidin.
 
-   [![Etiketler sayfasında "Otomatik olarak etiket uygula" öğesini seçin](../media/SPRetention16.png) ](../media/SPRetention16.png#lightbox)
+   [![Etiketler sayfasında "Etiketi otomatik uygulama" seçeneğini belirleyin](../media/SPRetention16.png) ](../media/SPRetention16.png#lightbox)
 
-2. Otomatik etiket ilkesi oluştur sihirbazının Otomatik etiketleme ilkenizi adla  sayfasında, Otomatik Olarak Uygula Ürün Belirtimi etiketi gibi bir ad ve isteğe bağlı bir açıklama girin. Sonra Da **Sonraki'yi seçin**.
+2. Otomatik etiketleme ilkesi oluşturma sihirbazının **Otomatik etiketleme ilkenizi adlandırın** sayfasında, **Ürün Belirtimini Otomatik Uygula etiketi** gibi bir ad ve isteğe bağlı bir açıklama girin. Ardından **İleri'yi** seçin.
 
-3. Bu **etiketi uygulamak istediğiniz** içerik türünü seçin sayfasında Belirli sözcükleri veya tümcecikleri veya özellikleri içeren içeriğe etiket uygula'ya tıklayın ve sonra da Sonraki'yi **seçin**.
+3. **Bu etiketi uygulamak istediğiniz içerik türünü seçin** sayfasında, **Belirli sözcükler veya tümcecikler veya özellikler içeren içeriğe etiket uygula'yı** ve ardından **İleri'yi** seçin.
 
-   [![Belirli sözcükleri veya tümcecikleri veya özellikleri içeren içeriğe etiket uygula'ya tıklayın.](../media/SPRetention17.png) ](../media/SPRetention17.png#lightbox)
+   [![Belirli sözcükler, tümcecikler veya özellikler içeren içeriğe etiket uygula'yı seçin.](../media/SPRetention17.png) ](../media/SPRetention17.png#lightbox)
 
-   Bu seçenek, önceki bölümde test edilen KQL arama sorgusunu bize de sağlar. Sorgu, Son durumuna sahip tüm Ürün Belirtimi belgelerini *döndürür*. Aynı sorguyu otomatik uygulama etiketi ilkesinde de kullanır kullanıruz; Ürün Belirtimi bekletme etiketi, bu etiketle eşleşmeye neden olan tüm belgelere otomatik olarak uygulanır.
+   Bu seçenek, önceki bölümde test ettiğimiz KQL arama sorgusunu sağlamamıza olanak tanır. Sorgu, *durumu Son* olan tüm Ürün Belirtimi belgelerini döndürür. Otomatik uygulama etiketi ilkesinde aynı sorguyu kullandığımızda, Ürün Belirtimi bekletme etiketi, bu sorguyla eşleşen tüm belgelere otomatik olarak uygulanır.
 
-4. Bu **sorguyla** eşleşen içeriğe etiket uygula sayfasında **RefinableString00:"Ürün Belirtimi" AND RefinableString01:Final** yazın ve ardından Sonraki'yi **seçin**.
+4. **Bu sorguyla eşleşen içeriğe etiket uygula** sayfasında **, RefinableString00:"Product Specification" AND RefinableString01:Final** yazın ve **İleri'yi** seçin.
 
-   ![Sorguyu Anahtar sözcük sorgusu düzenleyicisi kutusunda belirtin.](../media/SPRetention19.png)
+   ![Anahtar sözcük sorgu düzenleyicisi kutusunda sorguyu belirtin.](../media/SPRetention19.png)
 
-5. **İlkenin uygulanacak konumları** seçin sayfasında, ilkeyi uygulamak istediğiniz içerik konumlarını seçin. Bu senaryoda, ilkeyi yalnızca bu konumlara SharePoint, çünkü tüm üretim belgeleri SharePoint depolanıyor. E-posta, hesap **Exchange durumunu** **OneDrive Grupları** Kapalı **Microsoft 365 geçiş****.** Sonraki seçeneğini seçmeden önce SharePoint sitelerinin durumunun **On** olarak ayar olduğundan emin **olun**:
+5. **İlkenin uygulanacağı konumları seçin sayfasında, ilkeyi** uygulamak istediğiniz içerik konumlarını seçersiniz. Bu senaryoda, tüm üretim belgeleri SharePoint belge kitaplıklarında depolandığından ilkeyi yalnızca SharePoint konumlara uygularız. **Exchange e-posta**, **OneDrive hesapları** ve **Microsoft 365 Grupları** durumunu **Kapalı olarak değiştirin**. **İleri'yi** seçmeden önce SharePoint sitelerin durumunun **Açık** olarak ayarlandığından emin olun:
 
-    ![Etiketleri otomatik olarak uygulamak için belirli siteleri seçin.](../media/SPRetentionSPlocations.png)
+    ![Etiketlerin otomatik olarak uygulanacağı belirli siteleri seçin.](../media/SPRetentionSPlocations.png)
 
    > [!TIP]
-   > İlkeyi tüm sitelere uygulamak SharePoint, **Site** seç'i seçebilir ve belirli site sitelerinin URL'lerini SharePoint ebilirsiniz.
+   > İlkeyi tüm SharePoint sitelerine uygulamak yerine **Site seç'i** seçip belirli SharePoint sitelerin URL'lerini ekleyebilirsiniz.
 
-6. Otomatik **uygulanacak etiket seçin sayfasında Etiket ekle'yi** **seçin**.
+6. **Otomatik uygulanacak etiket seçin** sayfasında **Etiket ekle'yi** seçin.
 
-7. Bekletme etiketleri listesinden Ürün **Belirtimi'ne tıklayın**. Ardından Ekle ve **Sonraki'yi** **seçin**.
+7. Bekletme etiketleri listesinden **Ürün Belirtimi'ni** seçin. Ardından **Ekle ve** **İleri'yi** seçin.
 
-8. Ayarlarınızı gözden geçirme:
+8. Ayarlarınızı gözden geçirin:
 
-    ![Ayarlar otomatik olarak uygulamak için tıklatın.](../media/SPRetention18.png)
+    ![Etiketi otomatik olarak uygulamak için Ayarlar.](../media/SPRetention18.png)
 
-9. Otomatik **uygulama** etiket ilkesi oluşturmak için Gönder'i seçin.
+9. Etiket ilkesini otomatik olarak uygulamak için **Gönder'i** seçin.
 
    > [!NOTE]
-   > Ürün Belirtimi etiketinin KQL arama sorgusuyla eşleşmesi için tüm belgelere otomatik olarak uygulama 7 gün kadar sürer.
+   > Ürün Belirtimi etiketinin KQL arama sorgusuyla eşleşen tüm belgelere otomatik olarak uygulanması 7 güne kadar sürer.
 
-### <a name="verify-that-the-retention-label-was-automatically-applied"></a>Bekletme etiketinin otomatik olarak uygulandığını doğrulama
+### <a name="verify-that-the-retention-label-was-automatically-applied"></a>Bekletme etiketinin otomatik olarak uygulandığını doğrulayın
 
-7 gün sonra, oluşturduğumız [](data-classification-activity-explorer.md) otomatik uygula etiket politikasının bekletme etiketlerini ürün belgelerine otomatik olarak uygulay yaptığını doğrulamak için uyumluluk merkezinde etkinlik gezginini kullanın.
+7 gün sonra, microsoft Purview uyumluluk portalındaki [etkinlik gezginini](data-classification-activity-explorer.md) kullanarak oluşturduğumuz otomatik uygulama etiketi ilkesinin ürün belgelerine bekletme etiketlerini otomatik olarak uyguladığını doğrulayın.
 
-Ayrıca, Belge Kitaplığı'nda belgelerin özelliklerine de bakın. Bilgi panelinde, bekletme etiketinin seçilen belgeye uygulandığını görebilirler.
+Belge Kitaplığı'ndaki belgelerin özelliklerine de bakın. Bilgi panelinde, bekletme etiketinin seçili belgeye uygulandığını görebilirsiniz.
 
-[![Belge Kitaplığı'nda belge özelliklerine bakarak etiketin uygulandığını doğrulayın.](../media/SPRetention21.png) ](../media/SPRetention21.png#lightbox)
+[![Belge Kitaplığı'ndaki belge özelliklerine bakarak etiketin uygulandığını doğrulayın.](../media/SPRetention21.png) ](../media/SPRetention21.png#lightbox)
 
-Bekletme etiketleri belgelere otomatik olarak uygulandığından, bekletme etiketi belgeleri kayıt olarak bildirecek şekilde yapılandırıldığından bu belgeler silinmeye karşı *korunur*. Bu koruma örneği olarak, bu belgelerden birini silmeyi denemizde aşağıdaki hata iletisini alıruz:
+Bekletme etiketleri belgelere otomatik olarak uygulandığından, bekletme etiketi belgeleri *kayıt* olarak bildirmek üzere yapılandırıldığından bu belgeler silinmeye karşı korunur. Bu korumanın bir örneği olarak, bu belgelerden birini silmeye çalışırken aşağıdaki hata iletisini alacağız:
 
-[![Etiket belgelerin kayıt olduğunu bildirdikten sonra belgelerin siline olmadığını gösteren bir hata iletisi.](../media/SPRetention22.png) ](../media/SPRetention22.png#lightbox)
+[![Etiket belgelerin kayıt olduğunu bildirdiğinden belgelerin silineebileceğini gösteren bir hata iletisi.](../media/SPRetention22.png) ](../media/SPRetention22.png#lightbox)
 
-## <a name="generate-the-event-that-triggers-the-retention-period"></a>Bekletme dönemini tetikleyen olayı oluşturma
+## <a name="generate-the-event-that-triggers-the-retention-period"></a>Bekletme süresini tetikleyen olayı oluşturma
 
-Artık bekletme etiketleri uygulandığına göre, belirli bir ürün için üretimin sona erer olduğunu belirten etkinliğe odaklanın. Bu olay, bekletme etiketlarında tanımlanan bekletme döneminin başlangıcını tetikler. Örneğin, ürün belirtimi belgeleri için 5 yıllık bekletme süresi "üretim sonu" olayı tetiklendiğinde başlar.
+Artık bekletme etiketleri uygulandığına göre, belirli bir ürün için üretim sonunu gösteren olaya odaklanalım. Bu olay, bekletme etiketlerinde tanımlanan bekletme süresinin başlangıcını tetikler. Örneğin, ürün belirtimi belgeleri için 5 yıllık saklama süresi "üretim sonu" olayının tetiklenmesiyle başlar.
 
-Kayıt Yönetimi Olayları'Microsoft 365 uyumluluk merkezi etkinlik etkinliklerini **el ile oluşturabilirsiniz** > . Olay türünü seçer, doğru varlık kimliklerini seçer ve olay için bir tarih girersiniz. Daha fazla bilgi için bkz [. Olay oluştuğunda bekletmeyi başlatma](event-driven-retention.md).
+**Olayı, Kayıt YönetimleriEvents'e** >  giderek Microsoft Purview uyumluluk portalında el ile oluşturabilirsiniz. Olay türünü seçer, doğru varlık kimliklerini ayarlar ve olay için bir tarih girersiniz. Daha fazla bilgi için bkz. [Olay gerçekleştiğinde bekletmeyi başlatma](event-driven-retention.md).
 
-Ancak bu senaryo için, etkinliği dış üretim sisteminden otomatik olarak oluşturacaktır. Sistem, SharePoint üretimde olup olmadığını gösteren basit bir veri kaynağı listesidir. [Listeyle Power Automate](/power-automate/getting-started) bir veri akışı olayı tetikler. Gerçek bir senaryoda, İk veya CRM sistemi gibi etkinliği oluşturmak için çeşitli sistemleri kullanabilirsiniz. Power Automate Microsoft Exchange, SharePoint, Teams ve Dynamics 365 gibi Microsoft 365 iş yükleri için kullanıma hazır birçok etkileşim ve yapı taşının yanı sıra Twitter, Box, Salesforce ve İş Günleri gibi üçüncü taraf uygulamalarını içerir. Bu özellik, kimlikleri çeşitli sistemlerle Power Automate kolay bir şekilde tümleştirin. Daha fazla bilgi için bkz [. Olay tarafından yönlendirilen bekletmeyi otomatikleştirme](./event-driven-retention.md#automate-events-by-using-a-rest-api).
+Ancak bu senaryo için olayı otomatik olarak bir dış üretim sisteminden oluşturacağız. Sistem, bir ürünün üretimde olup olmadığını gösteren basit bir SharePoint listesidir. Listeyle ilişkili [bir Power Automate](/power-automate/getting-started) akışı olayı tetikler. Gerçek dünya senaryosunda olayı oluşturmak için İk veya CRM sistemi gibi çeşitli sistemleri kullanabilirsiniz. Power Automate Microsoft Exchange, SharePoint, Teams ve Dynamics 365 gibi Microsoft 365 iş yükleri için kullanıma hazır etkileşimler ve yapı taşının yanı sıra Twitter, Box, Salesforce ve Workdays gibi üçüncü taraf uygulamaları içerir. Bu özellik, Power Automate çeşitli sistemlerle tümleştirmeyi kolaylaştırır. Daha fazla bilgi için bkz. [Olay temelli saklamayı otomatikleştirme](./event-driven-retention.md#automate-events-by-using-a-rest-api).
 
-Aşağıdaki ekran görüntüsünde SharePoint tetikte kullanılacak olan tablo listesi görüntülenir:
+Aşağıdaki ekran görüntüsünde, olayı tetikleyen kullanılacak SharePoint listesi gösterilmektedir:
 
-[![Bekletme olaylarını tetikleyen liste.](../media/SPRetention23.png) ](../media/SPRetention23.png#lightbox)
+[![Bekletme olayını tetikleyecek liste.](../media/SPRetention23.png) ](../media/SPRetention23.png#lightbox)
 
-Üretimde şu anda _In Production* sütunundaki ***Evet** _ tarafından belirtilen iki *ürün* vardır. Bu sütundaki değer bir ürün için **_Hayır_** olarak ayarlanmışsa, listeyle ilişkili akış olayı otomatik olarak üretir. Olay, ilgili ürün belgelerine otomatik olarak uygulanan bekletme etiketi için bekletme döneminin başlangıcını tetikler.
+Şu anda üretimde olan ve _ *In Production** sütunundaki ***Yes** _ ile belirtilen iki ürün vardır. Bu sütundaki değer bir ürün için **_Hayır_** olarak ayarlandığında, listeyle ilişkili akış olayı otomatik olarak oluşturur. Olay, ilgili ürün belgelerine otomatik olarak uygulanan bekletme etiketi için bekletme süresinin başlangıcını tetikler.
 
-Bu senaryo için, olayı tetiklemek için aşağıdaki akışı kullanıruz:
+Bu senaryoda, olayı tetikleme amacıyla aşağıdaki akışı kullanırız:
 
-[![Olayı tetikleyen akışı yapılandırma.](../media/SPRetention24.png) ](../media/SPRetention24.png#lightbox)
+[![Olayı tetikleyecek akışı yapılandırma.](../media/SPRetention24.png) ](../media/SPRetention24.png#lightbox)
 
-Bu akışı oluşturmak için, bir bağlayıcıdan SharePoint ve **Öğe oluşturulduğunda veya değiştirildiğinde tetikleyiciyi** seçin. Site adresini ve liste adını belirtin. Ardından, Üretimde liste sütunundaki değerin koşul kartında **_Hayır_* _ (veya bu değere eşit _false* olarak) durumuna dayalı bir koşul ekleyin. Ardından, yerleşik HTTP şablonunu temel alan bir eylem ekleyin. HTTP eylemlerini yapılandırmak için aşağıdaki bölümde yer alan değerleri kullanın. URI ve Gövde **özellikleriyle** ilgili **değerleri aşağıdaki** bölümden kopyalayıp şablona yapıştırabilirsiniz.
+Bu akışı oluşturmak için bir SharePoint bağlayıcısından başlayın ve **Öğe oluşturulduğunda veya değiştirildiğinde tetikleyicisini** seçin. Site adresini ve liste adını belirtin. Ardından **Üretimde** liste sütun değerinin **_Hayır_* _ (veya koşul kartındaki _false* değerine eşit) olarak ayarlanmasına bağlı olarak bir koşul ekleyin. Ardından yerleşik HTTP şablonunu temel alan bir eylem ekleyin. HTTP eylemini yapılandırmak için aşağıdaki bölümdeki değerleri kullanın. Aşağıdaki bölümden **URI** ve **Gövde** özellikleri için değerleri kopyalayıp şablona yapıştırabilirsiniz.
 
 - **Yöntem**: POST
 - **URI**: `https://ps.compliance.protection.outlook.com/psws/service.svc/ComplianceRetentionEvent`
-- **Üst Bilgiler**: Key = Content-Type, Value = application/atom+xml
+- **Üst Bilgiler**: Key = content-Type, Value = application/atom+xml
 - **Gövde**:
 
     ```xml
@@ -307,44 +309,44 @@ Bu akışı oluşturmak için, bir bağlayıcıdan SharePoint ve **Öğe oluştu
     </entry>
     ```
 
-Bu listede, bu senaryo için **yapılandırılması** gereken eylemin Gövde özelliğinde yer alan parametreler açıklandı:
+Bu listede, bu senaryo için yapılandırılması gereken eylemin **Body** özelliğindeki parametreler açıklanmaktadır:
 
-- **Ad**: Bu parametre, dosyada oluşturulacak olayın adını Microsoft 365 uyumluluk merkezi. Bu senaryoda ad "Cessation Production xxx" olur; *burada xxx*, daha  önce oluşturduğumız **ProductName** yönetilen özelliğinin değeridir.
-- **EventType**: Bu parametrenin değeri, oluşturulan olayın geçerli olduğu olay türüne karşılık gelen değerdir. Bu olay türü, bekletme etiketini oluşturulduğunda tanımlanmıştır. Bu senaryo için olay türü "Ürün Cessation"tır.
-- **SharePointAssetIdQuery**: Bu parametre, olayın varlık kimliğini tanımlar. Olay tabanlı bekletme, belge için benzersiz bir tanımlayıcıya sahip olmalıdır. Varlık Kimliklerini, belirli bir olayın geçerli olduğu belgeleri tanımlamak veya bu senaryoda olduğu gibi, Meta Veri Sütunu Ürün **Adı'na kullanabiliriz**. Bunu yapmak için, KQL sorgusunda kullanılmaktadır ve yeni bir **ProductName** yönetilen özelliği oluşturmamız gerekir. (Alternatif olarak, yeni bir yönetilen özellik **oluşturmak yerine RefinableString00'i** kullanabiliriz). Ayrıca, bu yeni yönetilen özelliği de gezinilen **ows_Product_x0020_Name** eşlememiz gerekir. Bu yönetilen özelliğin ekran görüntüsü:
+- **Ad**: Bu parametre, Microsoft Purview uyumluluk portalında oluşturulacak olayın adını belirtir. Bu senaryo için ad "Cessation Production *xxx*" şeklindedir; burada *xxx* , daha önce oluşturduğumuz **ProductName** yönetilen özelliğinin değeridir.
+- **EventType**: Bu parametrenin değeri, oluşturulan olayın uygulanacağı olay türüne karşılık gelir. Bu olay türü, bekletme etiketini oluşturduğunuzda tanımlanmıştır. Bu senaryo için olay türü "Ürün Bırakma" olur.
+- **SharePointAssetIdQuery**: Bu parametre olayın varlık kimliğini tanımlar. Olay tabanlı saklama için belge için benzersiz bir tanımlayıcı gerekir. Belirli bir olayın uygulandığı belgeleri veya bu senaryoda olduğu gibi meta veri sütununun **Ürün Adı'nı** tanımlamak için varlık kimliklerini kullanabiliriz. Bunu yapmak için KQL sorgusunda kullanılabilecek yeni bir **ProductName** yönetilen özelliği oluşturmamız gerekir. (Alternatif olarak, yeni bir yönetilen özellik oluşturmak yerine **RefinableString00** kullanabiliriz). Ayrıca bu yeni yönetilen özelliği **gezinilen ows_Product_x0020_Name** özelliğiyle eşlememiz gerekir. Bu yönetilen özelliğin ekran görüntüsü aşağıdadır.
 
-    [![Rentention yönetilen özelliği.](../media/SPRetention25.png) ](../media/SPRetention25.png#lightbox)
+    [![Rentention tarafından yönetilen tesis.](../media/SPRetention25.png) ](../media/SPRetention25.png#lightbox)
 
-- **EventDateTime**: Bu parametre, olayın oluştuğu tarihi tanımlar. Geçerli tarih biçimini kullanma:<br/><br/>*formatDateTime(utcNow(),'yyyy-MM-dd'*)
+- **EventDateTime**: Bu parametre, olayın gerçekleştiği tarihi tanımlar. Geçerli tarih biçimini kullanın:<br/><br/>*formatDateTime(utcNow(),'yyyy-MM-dd'*)
 
-### <a name="putting-it-all-together"></a>Hepsini bir araya
+### <a name="putting-it-all-together"></a>Hepsini bir araya getiriyoruz
 
-Artık bekletme etiketi oluşturulur, otomatik uygulanır; akış yapılandırılır ve oluşturulur. Ürünler listesinde Dönen Widget ürünü  için Üretimde sütunundaki değer **_Evet_*_ ile _*_No_ _arasında değiştirlendiğinde, olayı oluşturmak için akış *tetiklenir. Bu olayı uyumluluk merkezinde görmek için_* Records managementEvents sayfasına** >  **gidin**.
+Şimdi bekletme etiketi oluşturulur ve otomatik olarak uygulanır ve akış yapılandırılır ve oluşturulur. Ürünler listesindeki Dönen Pencere Öğesi ürününün **Üretimde** sütunundaki değer **_Evet_*_ yerine _*_No_ _ olarak değiştirildiğinde *, akış olayı oluşturmak için tetikler. Bu olayı Microsoft Purview uyumluluk portalında görmek için _* Records** **managementEvents** >  bölümüne gidin.
 
-[![Akış tarafından tetiklenen olay, uyumluluk merkezinin Olaylar sayfasında görüntülenir.](../media/SPRetention28.png) ](../media/SPRetention28.png#lightbox)
+[![Akış tarafından tetiklenen olay, Microsoft Purview uyumluluk portalındaki Olaylar sayfasında görüntülenir.](../media/SPRetention28.png) ](../media/SPRetention28.png#lightbox)
 
-Uçarak çıkış sayfasında ayrıntıları görüntülemek için etkinliği seçin. Olay oluşturulsa bile, olay durumunda herhangi bir sitenin veya SharePoint işlenmedi ifadesinin yer olmadığını fark edin.
+Açılır sayfada ayrıntıları görüntülemek için olayı seçin. Olay oluşturulduğunda bile olay durumunun SharePoint sitelerin veya belgelerin işlenmediğini gösterdiğine dikkat edin.
 
 ![Olay ayrıntıları.](../media/SPRetention29.png)
 
-Ancak bir gecikmeden sonra, olay durumu SharePoint sitesi ve SharePoint işlenmiş olduğunu gösterir.
+Ancak bir gecikmeden sonra olay durumu, bir SharePoint sitesinin ve SharePoint belgesinin işlendiğini gösterir.
 
-![Olay ayrıntıları belgelerin işlenmiş olduğunu gösterir.](../media/SPRetention31.png)
+![Olay ayrıntıları belgelerin işlendiğini gösterir.](../media/SPRetention31.png)
 
-Bu, Dönen Widget ürün belgesine uygulanan etiket için bekletme döneminin, *Cessation Production Spinning Widget* olay tarihine bağlı olarak başlatıldığını gösterir. Bir günlük bekletme süresi yapılandırarak test ortamınıza senaryoyu uygulamanızı varsayarak, etkinlik oluşturulduktan birkaç gün sonra ürün belgeleriniz için belge kitaplığına gidebilir ve belgenin silindikten sonra (SharePoint'te silme işi çalıştırıldıktan sonra) belge kitaplığına gidebilirsiniz.
+Bu, Dönen Pencere Öğesi ürün belgesine uygulanan etiketin saklama süresinin *, Bırakma Üretim Dönen Pencere Öğesi* olayının olay tarihine göre başlatıldığını gösterir. Senaryoyu test ortamınızda bir günlük saklama süresi yapılandırarak uyguladığınızı varsayarsak, olay oluşturulduktan birkaç gün sonra ürün belgelerinizin belge kitaplığına gidebilir ve belgenin silindiğini doğrulayabilirsiniz (SharePoint silme işi çalıştırıldıktan sonra).
 
 ### <a name="more-about-asset-ids"></a>Varlık kimlikleri hakkında daha fazla bilgi
 
-Olay [oluştuğunda bekletmeyi](event-driven-retention.md) başlat makalesi şöyledir: Olay türleri, bekletme etiketleri, olaylar ve varlık kimlikleri arasındaki ilişkiyi anlamanız önemlidir. Varlık kimliği yalnızca SharePoint ve OneDrive. Bekletme süresi olay tarafından tetiklenen belgeleri tanımlamanıza yardımcı olur. Varsayılan olarak, SharePoint odaklı **bekletme için** kullanabileceğiniz bir Varlık Kimliği özelliği vardır:
+[Olay gerçekleştiğinde bekletmeyi başlatma](event-driven-retention.md) makalesinde açıklandığı gibi, olay türleri, bekletme etiketleri, olaylar ve varlık kimlikleri arasındaki ilişkiyi anlamak önemlidir. Varlık kimliği yalnızca SharePoint ve OneDrive belge özelliğidir. Saklama süresi olay tarafından tetiklenecek belgeleri belirlemenize yardımcı olur. Varsayılan olarak, SharePoint olay temelli saklama için kullanabileceğiniz bir **Varlık Kimliği** özelliğine sahiptir:
 
-![Varlık Kimliği özelliği, belge özellikleri ayrıntı sayfasında görüntülenir.](../media/SPRetention26.png)
+![Varlık Kimliği özelliği belge özellikleri ayrıntı sayfasında görüntülenir.](../media/SPRetention26.png)
 
-Aşağıdaki ekran görüntüsünde de olduğu gibi, varlık kimliği yönetilen özelliği **ComplianceAssetId olarak adlandırılan özelliktir**.
+Aşağıdaki ekran görüntüsünde gösterildiği gibi varlık kimliği yönetilen **özelliğiNe ComplianceAssetId** adı verilir.
 
 [![ComplianceAssetId yönetilen özelliği.](../media/SPRetention27.png) ](../media/SPRetention27.png#lightbox)
 
-Bu senaryoda olduğu gibi **varsayılan** Varlık Kimliği özelliğini kullanmak yerine, diğer herhangi bir özelliği kullanabilirsiniz. Ancak, bir olay için bir varlık kimliği veya anahtar sözcükler belirtmezseniz, bu olay türü etiketinin yer alan tüm içerikte bekletme süresi olayın tetiklenir.
+Bu senaryoda yaptığımız gibi varsayılan **Varlık Kimliği** özelliğini kullanmak yerine başka herhangi bir özelliği kullanabilirsiniz. Ancak bir olay için varlık kimliği veya anahtar sözcükler belirtmezseniz, söz konusu olay türü etiketine sahip tüm içeriğin, olay tarafından tetiklenen saklama süresine sahip olacağını anlamanız önemlidir.
 
-### <a name="using-advanced-search-in-sharepoint"></a>Gelişmiş Arama'da SharePoint
+### <a name="using-advanced-search-in-sharepoint"></a>SharePoint'de gelişmiş arama kullanma
 
-Önceki ekran görüntüsünde, bir gezinilen özelle eşlenen **Bekletme** Etiketleri adlı bekletme etiketleriyle ilgili başka bir yönetilen özellik olduğunu görebilirsiniz. **ComplianceAssetId** yönetilen özelliği de gezinilen özelle eşlenmiştir. Başka bir ifadeyle, gelişmiş aramada bu yönetilen özellikleri kullanarak bir bekletme etiketiyle etiketlenmiş tüm belgeleri bulabilirsiniz.
+Önceki ekran görüntüsünde, gezinilen bir özelliğe eşlenmiş **ComplianceTag** adlı bekletme etiketleriyle ilgili başka bir yönetilen özellik olduğunu görebilirsiniz. **ComplianceAssetId** yönetilen özelliği de gezinilen bir özelliğe eşlenir. Bu, bekletme etiketiyle etiketlenmiş tüm belgeleri almak için gelişmiş aramada bu yönetilen özellikleri kullanabileceğiniz anlamına gelir.

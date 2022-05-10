@@ -16,12 +16,12 @@ ms.custom: ''
 description: Microsoft 365'de güvenliği aşılmış bağlayıcıyı tanımayı ve yanıtlamayı öğrenin.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 50caf98bec9d918dd3ff1bcb076a080b123a357a
-ms.sourcegitcommit: 4d6a8e9d69a421d6c293b2485a8aa5e806b71616
+ms.openlocfilehash: fd4c5f22de51081f5b848c367bf79a8c7033f3d3
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65182661"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65285400"
 ---
 # <a name="respond-to-a-compromised-connector"></a>Risk altındaki bağlayıcıyı yanıtlama
 
@@ -35,7 +35,7 @@ ms.locfileid: "65182661"
 
 Bağlayıcılar, şirket içi ortamınızdaki Microsoft 365 veya Office 365 ile e-posta sunucuları arasında posta akışını etkinleştirmek için kullanılır. Daha fazla bilgi için bkz[. Exchange Online'da bağlayıcıları kullanarak posta akışını yapılandırma](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/use-connectors-to-configure-mail-flow).
 
-Güvenliği aşılmış bir gelen bağlayıcı, yetkisiz bir kişinin mevcut gelen bağlayıcıya değişiklik uygulaması veya Microsoft 365 bir kiracıda istenmeyen posta veya kimlik avı e-postaları göndermek amacıyla yeni bir gelen bağlayıcı oluşturması olarak tanımlanır.  
+Güvenliği aşılmış bir gelen bağlayıcı, yetkisiz bir kişinin mevcut gelen bağlayıcıya değişiklik uygulaması veya Microsoft 365 bir kiracıda istenmeyen posta veya kimlik avı e-postaları göndermek amacıyla yeni bir gelen bağlayıcı oluşturması olarak tanımlanır. Bunun yalnızca OnPremises türündeki gelen bağlayıcılar için geçerli olduğunu unutmayın. 
 
 ## <a name="detect-a-compromised-connector"></a>Güvenliği aşılmış bağlayıcıyı algılama
 

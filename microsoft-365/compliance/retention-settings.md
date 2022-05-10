@@ -17,18 +17,18 @@ search.appverid:
 - MOE150
 - MET150
 description: İstediğinizi korumak ve istemediğinizden kurtulmak için bekletme ilkesinde veya bekletme etiketi ilkesinde yapılandırabileceğiniz ayarları anlayın.
-ms.openlocfilehash: 90a048cf96bb2414a42d803bcd2f15deab4e711b
-ms.sourcegitcommit: 265a4fb38258e9428a1ecdd162dbf9afe93eb11b
+ms.openlocfilehash: 39c0258cb4b471e05bae24d0d35c708a42252219
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2022
-ms.locfileid: "65268803"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65285390"
 ---
 # <a name="common-settings-for-retention-policies-and-retention-label-policies"></a>Bekletme ilkeleri ve bekletme etiketi ilkeleri için yaygın ayarlar
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
 >*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](https://aka.ms/ComplianceSD).*
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bekletme için birçok ayar hem bekletme ilkeleri hem de bekletme etiketi ilkeleri için ortaktır. Bu ayarları içeriği proaktif olarak korumak, içeriği silmek veya her ikisini birden korumak ve sonra silmek üzere yapılandırmanıza yardımcı olması için aşağıdaki bilgileri kullanın.
 

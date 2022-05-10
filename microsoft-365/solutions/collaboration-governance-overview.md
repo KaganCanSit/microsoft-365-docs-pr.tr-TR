@@ -17,12 +17,12 @@ ms.custom:
 f1.keywords: NOCSH
 recommendations: false
 description: Microsoft 365 Grupları, Teams, SharePoint ve Yammer gibi Microsoft 365 işbirliği araçları için en iyi idare yöntemlerini öğrenin.
-ms.openlocfilehash: 130342725e8c43b4aeaac116b94704db3046e059
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: f4afed27fa6d40f7f6967583bcfd3f43c69c7963
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64941401"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65285006"
 ---
 # <a name="what-is-collaboration-governance"></a>İşbirliği idaresi nedir?
 
@@ -182,7 +182,7 @@ Microsoft Learn'deki bu eğitim modülleri, Microsoft 365'daki idare özellikler
 
 |Eğitim:|Kurumsal bilgileri Microsoft 365 ile koruma|
 |:---|:---|
-|![Teams eğitim simgesi.](../media/protect-enterprise-information-microsoft-365.svg)|Kuruluşunuzun bilgilerini korumak ve güvenliğini sağlamak her zamankinden daha zordur. Kurumsal bilgileri Microsoft 365 ile koruma öğrenme yolu, hassas bilgilerinizi yanlışlıkla aşırı paylaşıma veya kötüye kullanmaya karşı korumayı, verileri bulmayı ve sınıflandırmayı, duyarlılık etiketleriyle korumayı ve kaybına karşı koruma sağlamak için hassas bilgilerinizi hem izleme hem de analiz etme konularını açıklar. Bu öğrenme yolu, Microsoft 365 Sertifikalı: Güvenlik Yöneticisi İş Ortağı ve Microsoft 365 Sertifikalı: Enterprise Yönetim Uzmanı sertifikaları için hazırlanmanıza yardımcı olabilir.<br><br>1 sa - Learning Yolu - 5 Modül|
+|![Teams eğitim simgesi.](../media/protect-enterprise-information-microsoft-365.svg)|Kuruluşunuzun bilgilerini korumak ve güvenliğini sağlamak her zamankinden daha zordur. Kurumsal bilgileri Microsoft 365 ile koruma öğrenme yolu, hassas bilgilerinizi yanlışlıkla aşırı paylaşıma veya kötüye kullanmaya karşı korumayı, verileri bulmayı ve sınıflandırmayı, duyarlılık etiketleriyle korumayı ve kaybına karşı koruma sağlamak için hassas bilgilerinizi hem izleme hem de analiz etme konularını açıklar. Bu öğrenme yolu, Microsoft 365 Sertifikalı: Güvenlik Yöneticisi İş Ortağı ve Microsoft 365 Sertifikalı: Enterprise Yönetim Uzmanı sertifikalarına hazırlanmanıza yardımcı olabilir.<br><br>1 sa - Learning Yolu - 5 Modül|
 
 > [!div class="nextstepaction"]
 > [Başlangıç >](/learn/modules/m365-security-info-overview/introduction/)
@@ -205,7 +205,7 @@ BT mimarlarının Microsoft 365'deki gruplar hakkında bilmesi gerekenler
 
 |**Öğe**|**Açıklama**|
 |:-----|:-----|
-|[![Gruplar için başparmak görüntüsü bilgi grafiği.](../downloads/msft-m365-groups-architecture-thumb.png)](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-groups.pdf) <br/> [PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-groups.pdf) \| [Visio](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/downloads/msft-m365-groups.vsdx) <br> Haziran 2019'da güncelleştirildi|Bu çizimler, farklı grup türlerini, bunların nasıl oluşturulup yönetildiğini ve birkaç idare önerisini ayrıntılarıyla açıklar.|
+|[![Gruplar için başparmak görüntüsü bilgi grafiği.](../downloads/msft-m365-groups-architecture-thumb.png)](https://download.microsoft.com/download/6/3/0/6309218f-a169-4f2d-af4c-2fe49e30ba17/msft-m365-groups.pdf) <br/> [PDF](https://download.microsoft.com/download/6/3/0/6309218f-a169-4f2d-af4c-2fe49e30ba17/msft-m365-groups.pdf) \| [Visio](https://download.microsoft.com/download/6/3/0/6309218f-a169-4f2d-af4c-2fe49e30ba17/msft-m365-groups.vsdx) <br> Mayıs 2022'de güncelleştirildi|Bu çizimler, farklı grup türlerini, bunların nasıl oluşturulup yönetildiğini ve birkaç idare önerisini ayrıntılarıyla açıklar.|
 
 ### <a name="microsoft-teams-and-related-productivity-services-in-microsoft-365-for-it-architects"></a>BT mimarları için Microsoft 365'da Microsoft Teams ve ilgili üretkenlik hizmetleri
 Microsoft 365'daki üretkenlik hizmetlerinin mantıksal mimarisi, Microsoft Teams ile önderlik eder.
@@ -223,7 +223,7 @@ Bu çizim kümesi, bu özelliklerin yaygın mevzuat gereksinimlerini karşılama
 
 | Öğe | Açıklama |
 |:-----|:-----|
-|[![Model posteri: Microsoft Purview bilgi koruma ve uyumluluk özellikleri.](../media/solutions-architecture-center/m365-compliance-illustrations-thumb.png)](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf) <br/> İngilizce: [pdf](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf)\| olarak [indirme Visio olarak indirme](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.vsdx)   <br/> Japonca: [pdf](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.pdf)\| olarak [indirme Visio olarak indirme](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.vsdx)   <br/> Kasım 2020'de güncelleştirildi|Içerir: <ul><li>  Microsoft Purview Information Protection ve Microsoft Purview veri kaybı önleme</li><li>Bekletme ilkeleri ve bekletme etiketleri </li><li>Bilgi engelleri</li><li>İletişim uyumluluğu</li><li>Insider riski</li><li>Üçüncü taraf veri alımı</li>|
+|[![Model posteri: Microsoft Purview bilgi koruma ve uyumluluk özellikleri.](../media/solutions-architecture-center/m365-compliance-illustrations-thumb.png)](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf) <br/> İngilizce: [pdf](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf)\| olarak [indirme Visio olarak indirme](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.vsdx)   <br/> Japonca: [pdf](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.pdf)\| olarak [indirme Visio olarak indirme](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.vsdx)   <br/> Kasım 2020'de güncelleştirildi|Içerir: <ul><li>  Microsoft Purview Information Protection ve Microsoft Purview Veri Kaybı Önleme</li><li>Bekletme ilkeleri ve bekletme etiketleri </li><li>Bilgi engelleri</li><li>İletişim uyumluluğu</li><li>Insider riski</li><li>Üçüncü taraf veri alımı</li>|
 
 ## <a name="conference-sessions"></a>Konferans oturumları
 
@@ -239,13 +239,13 @@ Büyük ölçekte yönetim ve idare, kullanımı ve benimsemeyi yönlendirmeye y
 
 Gruplarınızın süre sonu yaşam döngüsünü, adlandırma ilkelerini, sınıflandırma etiketlerini, dış konuklarla işbirliğini ayarlamayı ve grup oluşturma izinlerini yönetmeyi öğrenin.
 
-- [İşbirliğini dönüştürme ve Office 365 gruplarla gölge BT ile mücadele](https://www.youtube.com/watch?v=Bhf_bKx3lAg)
+- [Office 365 Grupları ile işbirliğini dönüştürme ve gölge BT ile mücadele](https://www.youtube.com/watch?v=Bhf_bKx3lAg)
 
 **Müşteri örneği**
 
 Microsoft 365 Grupları, SharePoint, Teams ve Yammer küresel bir işbirliği platformu sağlamak için birlikte nasıl çalıştığına ilişkin sahne arkası örneğine bakın.
 
-- [Office 365 Grupları, SharePoint, Teams ve Yammer ile işbirliğinizi bulma](https://www.youtube.com/watch?v=Rx9eVwqXeQk)
+- [Microsoft 365 Grupları, SharePoint, Teams ve Yammer ile işbirliğinizi bulma](https://www.youtube.com/watch?v=Rx9eVwqXeQk)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

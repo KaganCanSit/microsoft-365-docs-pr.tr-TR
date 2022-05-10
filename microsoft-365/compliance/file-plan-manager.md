@@ -1,5 +1,5 @@
 ---
-title: İçerik yaşam döngüsü boyunca bekletme etiketlerini yönetmek için dosya planını kullanma
+title: Bekletme etiketlerini yönetmek için dosya planını kullanma
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -17,18 +17,20 @@ search.appverid:
 ms.assetid: af398293-c69d-465e-a249-d74561552d30
 description: Dosya planı bekletme etiketleri için gelişmiş yönetim özellikleri sağlar.
 ms.custom: seo-marvel-may2020
-ms.openlocfilehash: 40c395d609a9a02637b937cafae988578dc6e14f
-ms.sourcegitcommit: 5eff41a350a01e18d9cdd572c9d8ff99d6c9563a
+ms.openlocfilehash: 5ed2ccfa1c26efc8e55f048e24de005701417576
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64836182"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65286088"
 ---
 # <a name="use-file-plan-to-create-and-manage-retention-labels"></a>Bekletme etiketleri oluşturmak ve yönetmek için dosya planını kullanma
 
 >*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-Microsoft 365 uyumluluk merkezi **Bilgi idaresinden** bekletme etiketleri oluşturup yönetebilirsiniz, ancak **Kayıtlar yönetiminden** dosya planı ek yönetim özelliklerine sahiptir:
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Microsoft Purview uyumluluk portalında **Veri yaşam döngüsü yönetiminden** bekletme etiketleri oluşturup yönetebilirsiniz ancak **Kayıtlar yönetiminin** dosya planı ek yönetim özelliklerine sahiptir:
 
 - İlgili bilgileri bir elektronik tablodan içeri aktararak bekletme etiketlerini toplu olarak oluşturabilirsiniz.
 
@@ -50,7 +52,7 @@ Dosya planına erişmek için aşağıdaki yönetici rollerinden birine sahip ol
 
 - Yalnızca görüntüleme bekletme yöneticisi
 
-Microsoft 365 uyumluluk merkezi **ÇözümlerKayıt** >  **yönetimiDosya** >  **planı'na** gidin:
+Microsoft Purview uyumluluk portalında **ÇözümlerKayıt** >  **yönetimiDosya** >  **planı'na** gidin:
 
 ![Dosya planı sayfası](../media/compliance-file-plan.png). 
 
@@ -58,9 +60,9 @@ Microsoft 365 uyumluluk merkezi **ÇözümlerKayıt** >  **yönetimiDosya** >  *
 
 ## <a name="navigating-your-file-plan"></a>Dosya planınızda gezinme
 
-Microsoft 365 uyumluluk merkezi **Bilgi idaresinden** bekletme etiketleri oluşturduysanız, bu etiketler dosya planınızda otomatik olarak görüntülenir. 
+Microsoft Purview uyumluluk portalında **Veri yaşam döngüsü yönetiminden** bekletme etiketleri oluşturduysanız, bu etiketler dosya planınızda otomatik olarak görüntülenir. 
 
-Benzer şekilde, artık dosya planında bekletme etiketleri oluşturursanız, etiketler içeriği kayıt olarak işaretlemek üzere yapılandırılmadıysa **Bilgi idaresi'nden** de kullanılabilir.
+Benzer şekilde, artık dosya planında bekletme etiketleri oluşturursanız, etiketler içeriği kayıt olarak işaretlemek üzere yapılandırılmadıysa **Veri yaşam döngüsü yönetiminden** de kullanılabilir.
 
 **Dosya planı** sayfasında, durum ve ayarlarıyla birlikte tüm etiketlerinizi, isteğe bağlı dosya planı tanımlayıcılarını, etiketlerinizin çevrimdışı gözden geçirmelerini analiz etmek veya etkinleştirmek için bir dışarı aktarma seçeneği ve bekletme etiketleri oluşturmak için içeri aktarma seçeneğini görürsünüz. 
 
@@ -199,7 +201,7 @@ yeni bekletme etiketlerini içeri aktarmak için indirilen şablonu doldurmanız
 |Özellik|Tür|Gerekli|Geçerli değerler|
 |:-----|:-----|:-----|:-----|
 |LabelName|Dize|Evet|Bu özellik, bekletme etiketinin adını belirtir ve kiracınızda benzersiz olmalıdır. İçeri aktarma için desteklenen karakterler: a-z, A-Z, 0-9, kısa çizgi (-) ve boşluk karakteri.|
-|Açıklama ekleme|Dize|Hayır|Yöneticiler için bekletme etiketi hakkında bir açıklama eklemek için bu özelliği kullanın. Bu açıklama yalnızca uyumluluk merkezinde bekletme etiketini yöneten yöneticilere görünür.|
+|Açıklama ekleme|Dize|Hayır|Yöneticiler için bekletme etiketi hakkında bir açıklama eklemek için bu özelliği kullanın. Bu açıklama yalnızca Microsoft Purview uyumluluk portalında bekletme etiketini yöneten yöneticilere görünür.|
 |Notlar|Dize|Hayır|Kullanıcılar için bekletme etiketi hakkında bir açıklama eklemek için bu özelliği kullanın. Kullanıcılar Outlook, SharePoint ve OneDrive gibi uygulamalarda etiketin üzerine geldiğinde bu açıklama görüntülenir. Bu özelliği boş bırakırsanız, etiketin bekletme ayarlarını açıklayan varsayılan bir açıklama görüntülenir. |
 |IsRecordLabel|Dize|**Hayır, Mevzuat** **DOĞRU** değilse|Bu özellik, etiketin içeriği kayıt olarak işaretleyip işaretlemediğini belirtir. Geçerli değerler şunlardır: </br>**DOĞRU**: Etiket öğeyi kayıt olarak işaretler ve sonuç olarak öğe silinemez. </br>**YANLIŞ**: Etiket içeriği kayıt olarak işaretlemez. Bu, varsayılan değerdir. </br> </br> Grup bağımlılıkları: Bu özellik belirtildiğinde RetentionAction, RetentionDuration ve RetentionType da belirtilmelidir.|
 |RetentionAction|Dize|Hayır, **RetentionDuration**, **RetentionType** veya **ReviewerEmail** belirtilmediği sürece|Bu özellik, RetentionDuration özelliği (belirtildiyse) tarafından belirtilen değerin süresi dolduktan sonra hangi eylemin gerçekleştireceğini belirtir. Geçerli değerler şunlardır: </br>**Sil**: RetentionDuration özelliği tarafından belirtilen değerden eski öğeler silinir.</br>**Koru**: Öğeleri RetentionDuration özelliği tarafından belirtilen süre boyunca tutun ve süre dolduğunda hiçbir şey yapma. </br>**KeepAndDelete**: Öğeleri RetentionDuration özelliği tarafından belirtilen süre boyunca tutun ve süre dolduğunda silin. </br> </br> Grup bağımlılıkları: Bu özellik belirtildiğinde, RetentionDuration ve RetentionType da belirtilmelidir. |

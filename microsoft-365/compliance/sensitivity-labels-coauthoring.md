@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365'da duyarlılık etiketleriyle şifrelenen belgeler için birlikte yazmayı etkinleştirme
+title: Şifrelenmiş belgeler için birlikte yazmayı etkinleştirme
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -13,16 +13,18 @@ ms.collection:
 - M365-security-compliance
 ms.topic: article
 description: SharePoint ve OneDrive etiketlenmiş ve şifrelenmiş belgeler için masaüstü uygulamalarında birlikte yazma ve Otomatik Kaydetme'yi etkinleştiren bir ayarı açın.
-ms.openlocfilehash: 0fee934af5e2dfb01c681c9b2e415ef538312367
-ms.sourcegitcommit: 5eff41a350a01e18d9cdd572c9d8ff99d6c9563a
+ms.openlocfilehash: 72935a58931c1458466f145c17a9e423e6b6d31c
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64836116"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65287000"
 ---
 # <a name="enable-co-authoring-for-files-encrypted-with-sensitivity-labels"></a>Duyarlılık etiketleriyle şifrelenmiş dosyalar için birlikte yazmayı etkinleştirme
 
 >*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Belgeler [duyarlılık etiketleriyle](sensitivity-labels.md) etiketlendiğinde ve şifrelendiğinde birden çok kullanıcının aynı anda bu belgeleri düzenleyebilmesi için Office masaüstü uygulamaları için [birlikte yazmayı](https://support.office.com/article/ee1509b4-1f6e-401e-b04a-782d26f564a4) desteklemek üzere ayarı etkinleştirin.
 
@@ -136,7 +138,7 @@ Duyarlılık etiketleriyle şifrelenmiş dosyalar için birlikte yazma için kir
 
 Önizleme döneminde bu ayarı zaten açtıysanız başka bir eylem gerekmez ve bu yordamı atlayabilirsiniz.
 
-1. [kiracınız için genel](https://compliance.microsoft.com) yönetici olarak Microsoft 365 uyumluluk merkezi oturum açın.
+1. [Microsoft Purview uyumluluk portalında](https://compliance.microsoft.com) kiracınız için genel yönetici olarak oturum açın.
 
 2. Gezinti bölmesinde duyarlılık **dosyalarına sahip dosyalar için** **Ayarlar** >  Co-authoring öğesini seçin.
 

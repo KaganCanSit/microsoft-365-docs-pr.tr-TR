@@ -1,5 +1,5 @@
 ---
-title: İçeriğin içeriğine otomatik olarak duyarlılık Microsoft 365
+title: Microsoft 365'da otomatik olarak duyarlılık etiketi uygulama
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -16,383 +16,385 @@ ms.custom: admindeeplinkMAC
 search.appverid:
 - MOE150
 - MET150
-description: Duyarlılık etiketi  oluşturduktan sonra, dosyalara ve e-postalara otomatik olarak bir etiket atayabilirsiniz veya kullanıcılardan önerdiğiniz etiketi seçmelerini istenebilirsiniz.
-ms.openlocfilehash: 21ee443ba9bab0ac7071377befee5d6e6143a398
-ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
+description: Duyarlılık etiketi oluşturduğunuzda, dosyalara ve e-postalara otomatik olarak bir etiket atayabilir veya kullanıcılardan önerdiğiniz etiketi seçmelerini isteyebilirsiniz.
+ms.openlocfilehash: 69a36789e4143e3e8852976eb5e41c12ab6872f8
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "64634635"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65287232"
 ---
 # <a name="apply-a-sensitivity-label-to-content-automatically"></a>İçeriğe otomatik olarak bir hassasiyet etiketi uygulama
 
->*[Microsoft 365 uyumluluğu için lisans & kılavuzu.](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)*
+>*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-> [!NOTE]
-> Azure Purview'da otomatik olarak duyarlılık etiketi uygulama hakkında bilgi için bkz. [Azure Purview'da etiketleme](/azure/purview/create-sensitivity-label).
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Duyarlılık etiketi  oluşturduktan sonra, belirttiğiniz koşullarla eşleşen dosyalara ve e-postalara otomatik olarak bu etiketi atabilirsiniz.
+> [!TIP]
+> Veri eşlemesine otomatik olarak duyarlılık etiketi uygulama hakkında bilgi için bkz. [Microsoft Purview Veri Haritası'nda etiketleme](/azure/purview/create-sensitivity-label).
 
-İçeriklere otomatik olarak duyarlılık etiketleri uygulayabilme özelliği önemlidir çünkü:
+Duyarlılık etiketi oluşturduğunuzda, belirttiğiniz koşullarla eşleştiğinde bu etiketi dosyalara ve e-postalara otomatik olarak atayabilirsiniz.
 
-- Sınıflandırmalardan her biri için kullanıcılarınızı ne zaman kullanılamayacaklarını eğitmek zorunda değilsiniz.
+İçeriklere duyarlılık etiketlerini otomatik olarak uygulayabilme özelliği önemlidir çünkü:
 
-- Tüm içeriği doğru şekilde sınıflandırmak için kullanıcılara güvenmeniz gerek değildir.
+- Sınıflandırmalarınızın her birini kullanmak için kullanıcılarınızı eğitmek zorunda değilsiniz.
 
-- Kullanıcıların artık ilkelerinizi malıdır; onlar da çalışmalarına odaklanabilirsiniz.
+- Tüm içeriği doğru sınıflandırmak için kullanıcılara güvenmeniz gerekmez.
 
-İçerik içeriklerine otomatik olarak duyarlılık etiketi uygulamak için iki farklı yöntem Microsoft 365:
+- Kullanıcıların artık ilkeleriniz hakkında bilgi sahibi olması gerekmez; bunun yerine çalışmalarına odaklanabilir.
 
-- Kullanıcılar belgeleri düzenlerken veya e-postaları düzenlerken (ayrıca yanıtla veya ilet) istemci tarafı etiketleme: Dosyalar ve e-postalar için (Word, Excel, PowerPoint ve diğer **e-postalar dahil)** otomatik etiketleme için yapılandırılmış bir Outlook.
+Microsoft 365 içeriğine otomatik olarak duyarlılık etiketi uygulamak için iki farklı yöntem vardır:
 
-    Bu yöntem, kullanıcılara etiket önerilerini ve otomatik olarak etiket uygulamayı destekler. Ancak her iki durumda da, içeriği doğru etiketlemeye yardımcı olmak için kullanıcı etiketi kabul etmeye veya reddetmeye karar verir. Belge kaydedmeden önce bile etiketin uygulanama süresi nedeniyle, istemci tarafı etiketlemesi belgelerde çok az gecikmeye neden olur. Bununla birlikte, tüm istemci uygulamaları otomatik etiketlemeyi desteklemez. Bu özellik, bazı Office sürümleriyle yerleşik etiketleme ve aynı zamanda Azure [](sensitivity-labels-office-apps.md#support-for-sensitivity-label-capabilities-in-apps)birleşik Information Protection istemcisi tarafından da destekler.
+- **Kullanıcılar belgeleri düzenlerken veya e-posta oluştururken (aynı zamanda yanıtlarken veya iletirken) istemci tarafı etiketleme: Dosyalar ve e-postalar** için otomatik etiketleme için yapılandırılmış bir etiket kullanın (Word, Excel, PowerPoint ve Outlook içerir).
 
-    Yapılandırma yönergeleri için, [bu sayfada yer alan uygulamaların otomatik Office yapılandırma](#how-to-configure-auto-labeling-for-office-apps) sayfasına bakın.
+    Bu yöntem, kullanıcılara etiket önermeyi ve otomatik olarak etiket uygulamayı destekler. Ancak her iki durumda da kullanıcı, içeriğin doğru etiketlenmesine yardımcı olmak için etiketi kabul etmeye veya reddetmeye karar verir. Belge kaydedilmeden önce bile etiket uygulanabileceğinden, bu istemci tarafı etiketlemesi belgeler için çok az gecikmeye neden olur. Ancak tüm istemci uygulamaları otomatik etiketlemeyi desteklemez. Bu özellik, [Office bazı sürümleriyle](sensitivity-labels-office-apps.md#support-for-sensitivity-label-capabilities-in-apps) yerleşik etiketleme ve ayrıca Azure Information Protection birleşik etiketleme istemcisi tarafından desteklenir.
 
-- **İçerik önceden kaydedildikten (SharePoint veya OneDrive) veya e-postayla (Exchange Online tarafından işlendiğinde** hizmet tarafı etiketleme: Otomatik etiketleme ilkesi kullanın.
+    Yapılandırma yönergeleri için bkz. Bu sayfadaki [Office uygulamaları için otomatik etiketlemeyi yapılandırma](#how-to-configure-auto-labeling-for-office-apps).
+
+- **İçerik zaten kaydedildiğinde (SharePoint veya OneDrive) veya e-postayla gönderildiğinde (Exchange Online tarafından işlendiğinde) hizmet tarafı etiketleme**: Otomatik etiketleme ilkesi kullanın.
     
-    Ayrıca, bu yöntem size gönderilen veriler için otomatik etiketleme (SharePoint ve OneDrive'daki belgeler) ve geçişteki veriler (e-posta, posta ile gönderilen veya alınan) olarak Exchange. Örneğin Exchange e-postaları (posta kutuları) içermez.
+    Bekleyen veriler (SharePoint ve OneDrive belgeler) ve aktarımdaki veriler (Exchange tarafından gönderilen veya alınan e-posta) için otomatik etiketleme olarak adlandırılan bu yöntemi de duyabilirsiniz. Exchange için bekleyen e-postaları (posta kutuları) içermez.
     
-    Bu etiketleme uygulamalar yerine hizmetlere göre uygulandığından, kullanıcıların hangi uygulamalara sahip olduğu ve hangi sürüme sahip olduğu konusunda endişelenmeniz gerek yok. Sonuç olarak bu özellik, kurum genelinde hemen kullanılabilir ve ölçekte etiketlemeye uygundur. Otomatik etiket ilkeleri etiketlemeyi desteklemez, çünkü kullanıcı etiket işlemiyle etkileşimde bulunmakla etkileşimde bulunmakla ilgili bilgi desteklemez. Bunun yerine, yönetici, etiketi gerçekten uygulamadan önce içeriğin doğru etikete sahip olduğundan emin olmak için ilkeleri benzetim olarak çalıştırır.
+    Bu etiketleme uygulamalar yerine hizmetler tarafından uygulandığından, kullanıcıların hangi uygulamalara sahip olduğu ve hangi sürüme sahip olduğu konusunda endişelenmeniz gerekmez. Sonuç olarak, bu özellik kuruluşunuz genelinde hemen kullanılabilir ve büyük ölçekte etiketleme için uygundur. Kullanıcı etiketleme işlemiyle etkileşim kurmadığından otomatik etiketleme ilkeleri önerilen etiketlemeyi desteklemez. Bunun yerine yönetici, etiketi uygulamadan önce içeriğin doğru etiketlenmesine yardımcı olmak için ilkeleri simülasyonda çalıştırır.
 
-    Yapılandırma yönergeleri için, Bu sayfada yer alan SharePoint, OneDrive ve Exchange için [otomatik etiket ilkelerini](#how-to-configure-auto-labeling-policies-for-sharepoint-onedrive-and-exchange) yapılandırma sayfasına bakın.
+    Yapılandırma yönergeleri için bu sayfadaki [SharePoint, OneDrive ve Exchange için otomatik etiketleme ilkelerini yapılandırma](#how-to-configure-auto-labeling-policies-for-sharepoint-onedrive-and-exchange) konusuna bakın.
     
-    Etiket ve etiketlerin otomatik olarak SharePoint için OneDrive:
+    SharePoint ve OneDrive için otomatik etiketlemeye özgü:
     
-    - Office word (.docx), PowerPoint (.pptx) ve Excel (.xlsx) için dosyalar de desteklene.
-        - Bu dosyalar, otomatik etiket ilkeleri oluşturulmadan önce veya oluşturulduktan sonra otomatik olarak etiketleniyor olabilir. Dosyalar açık bir oturumun parçası ise (dosya açıksa) otomatik olarak etiketz.
-        - Şu anda, liste öğelerine yapılan ekler destek desteklemez ve otomatik olarak etiket olmayacaktır.
-    - Kiracınıza günde en fazla 25.000 otomatik etiket eklenir.
-    - Kiracı başına 100 adede kadar siteyi (kiracı veya kiracı) tek tek belirtilmiş olarak hedef alan (SharePoint veya OneDrive) başına en çok 100 otomatik etiket ilkeleri. Ayrıca tüm siteleri belirtebilirsiniz ve bu yapılandırma en fazla 100 siteden muaftır.
-    - Hem benzetim moduna hem de etiketler uygulandığında, otomatik etiketleme ilkeleri sonucunda değiştirilmiş, değiştiren ve tarihe yönelik mevcut değerler değişmez.
-    - Etiket şifrelemeyi uygularken, [Hak Yönetimi verici ve Hak Yönetimi](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) sahibi dosyayı en son değiştiren hesaptır. Bu hesap artık Azure Active Directory, bu değerler ayarlanamaya nedeniyle etiket uygulanmaz.
+    - Word (.docx), PowerPoint (.pptx) ve Excel (.xlsx) için Office dosyaları desteklenir.
+        - Bu dosyalar, otomatik etiketleme ilkeleri oluşturulmadan önce veya oluşturulduktan sonra bekleyen konumda otomatik olarak etiketlenebilir. Dosyalar açık bir oturumun parçasıysa (dosya açıksa) otomatik olarak etiketlenemez.
+        - Şu anda liste öğelerine yönelik ekler desteklenmez ve otomatik olarak etiketlenmez.
+    - Kiracınızda günde en fazla 25.000 otomatik olarak etiketlenmiş dosya.
+    - Her biri ayrı ayrı belirtildiğinde en fazla 100 siteyi (SharePoint veya OneDrive) hedefleyen kiracı başına en fazla 100 otomatik etiketleme ilkesi. Tüm siteleri de belirtebilirsiniz ve bu yapılandırma en fazla 100 siteden muaf tutulur.
+    - Hem simülasyon modu hem de etiketlerin uygulandığı durumlarda, değiştirme, değiştirme ve tarih için mevcut değerler otomatik etiketleme ilkelerinin bir sonucu olarak değiştirilmez.
+    - Etiket şifreleme uyguladığında [, Rights Management veren ve Rights Management sahibi](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) dosyayı en son değiştiren hesaptır. Bu hesap artık Azure Active Directory içinde değilse, bu değerler ayarlanamadığından etiket uygulanmaz.
 
-    Belirli bir etiket için otomatik Exchange:
+    Exchange için otomatik etiketlemeye özgü:
     
-    - OFFICE uygulamalarıyla el ile etiketlemeden veya otomatik etiketlemeden farklı olarak, PDF ekleri Office ekleri de otomatik etiketleme ilkesinde belirttiğiniz koşullar için taranır. Eşleşme olduğunda, e-posta eki etiketli ancak etiketli değildir.
-        - PDF dosyaları için, etiket şifreleme uygularsa, kiracınız PDF ekleri için [etkinleştirildiğinde bu dosyalar Office 365 İleti Şifrelemesi (OME)](ome.md) kullanılarak [şifrelenir](ome-faq.yml#are-pdf-file-attachments-supported-).
-        - Bu Office için Word, PowerPoint ve Excel dosyaları desteklene. Etiket şifreleme uygularsa, bu etiket İleti Şifrelemesi [(OME) Office 365 kullanılarak şifrelenir](ome.md).
-    - IRM şifrelemesi Exchange posta akışı kuralları veya veri kaybı önleme (DLP) ilkeleriniz varsa: İçerik bu kurallar veya ilkeler ve otomatik etiket ilkesiyle tanımsızsız olduğunda, etiket uygulanır. Bu etiket şifreleme uygularsa, ilgili posta akış kuralları veya DLP Exchange IRM ayarları yoksayılır. Ancak bu etiket şifreleme uygulamayacaksa, posta akış kuralları veya DLP ilkelerine yönelik IRM ayarları etikete ek olarak uygulanır.
-    - IRM şifrelemesi olmayan e-postaların yerini, otomatik etiketleme kullanılarak bir eşleşme olduğunda ise bir şifreleme ayarlarıyla değiştirirsiniz.
-    - Gelen e-posta, otomatik etiketleme koşullarınız ile bir eşleşme olduğunda etiketlenmiş olur. Bu etiket şifreleme için [yapılandırılmışsa](encryption-sensitivity-labels.md), gönderen her zaman kuruluşundan geldiğinde bu şifreleme uygulanır. Varsayılan olarak, gönderen kuruluş dışından olduğunda bu şifreleme uygulanmaz, ancak e-posta için ek ayarlar yapılandırarak ve  Hak Yönetimi sahibi belirterek uygulanabilir.
-    - Etiket şifrelemeyi uygularken, [Hak Yönetimi veren ve Hak](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) Yönetimi sahibi, gönderen kendi kuruluşundan geldiğinde e-postayı gönderen kişidir. Gönderen, kurum dışında olduğunda, ilkeniz tarafından etiketlenen ve şifrelenen gelen e-posta için bir Hak Yönetimi sahibi belirtebilirsiniz.
-    - Etiket dinamik işaretlemeler uygulamak üzere yapılandırılmışsa [, gelen](sensitivity-labels-office-apps.md#dynamic-markings-with-variables) e-posta için bu yapılandırmanın kurum dışındaki kişilerin adlarını görüntülemeye neden olyabilecektir.
+    - Office uygulamalarıyla el ile etiketleme veya otomatik etiketlemeden farklı olarak, PDF eklerinin yanı sıra Office ekleri de otomatik etiketleme ilkenizde belirttiğiniz koşullar için taranır. Eşleşme olduğunda, e-posta etiketli olur ancak ek etiketlenmez.
+        - PDF dosyaları için, etiket şifreleme uygularsa, kiracınız [PDF ekleri için etkinleştirildiğinde](ome-faq.yml#are-pdf-file-attachments-supported-) bu dosyalar [İleti şifrelemesi](ome.md) kullanılarak şifrelenir.
+        - Bu Office dosyaları için Word, PowerPoint ve Excel desteklenir. Etiket şifreleme uygularsa, [bunlar İleti şifrelemesi](ome.md) kullanılarak şifrelenir.
+    - IRM şifrelemesi uygulayan Exchange posta akışı kurallarınız veya Microsoft Purview Veri Kaybı Önleme (DLP) ilkeleriniz varsa: İçerik bu kurallar veya ilkeler ve otomatik etiketleme ilkesi tarafından tanımlandığında etiket uygulanır. Bu etiket şifreleme uygularsa, Exchange posta akışı kuralları veya DLP ilkelerindeki IRM ayarları yoksayılır. Ancak bu etiket şifreleme uygulamazsa, etikete ek olarak posta akışı kurallarından veya DLP ilkelerinden gelen IRM ayarları da uygulanır.
+    - Etiketi olmayan IRM şifrelemesi olan e-posta, otomatik etiketleme kullanılarak eşleşme olduğunda herhangi bir şifreleme ayarına sahip bir etiketle değiştirilir.
+    - Otomatik etiketleme koşullarınızla eşleşme olduğunda gelen e-posta etiketlenmiştir. Bu etiket [şifreleme](encryption-sensitivity-labels.md) için yapılandırılmışsa, gönderen kuruluşunuzdan geldiğinde bu şifreleme her zaman uygulanır. Varsayılan olarak, gönderen kuruluşunuzun dışındayken bu şifreleme uygulanmaz, ancak **e-posta için Ek ayarlar** yapılandırılarak ve bir Rights Management sahibi belirtilerek uygulanabilir.
+    - Etiket şifreleme uyguladığında, gönderen kendi kuruluşunuzdan olduğunda e-postayı gönderen kişi [Rights Management veren ve Rights Management sahibidir](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) . Gönderen kuruluşunuzun dışındayken, ilkeniz tarafından etiketlenen ve şifrelenen gelen e-posta için bir Rights Management sahibi belirtebilirsiniz.
+    - Etiket [dinamik işaretler](sensitivity-labels-office-apps.md#dynamic-markings-with-variables) uygulamak üzere yapılandırılmışsa, gelen e-posta için bu yapılandırmanın kuruluşunuz dışındaki kişilerin adlarının görüntülenmesine neden olabileceğini unutmayın.
 
-## <a name="compare-auto-labeling-for-office-apps-with-auto-labeling-policies"></a>E-posta uygulamalarının otomatik Office ve otomatik etiket ilkelerini karşılaştırma
+## <a name="compare-auto-labeling-for-office-apps-with-auto-labeling-policies"></a>otomatik etiketleme ilkeleriyle Office uygulamaları için otomatik etiketlemeyi karşılaştırma
 
-Tamamlayıcı iki otomatik etiket yönteminin davranışı farklılıklarını tanımlamanıza yardımcı olması için aşağıdaki tabloyu kullanın:
+İki tamamlayıcı otomatik etiketleme yönteminin davranış farklarını belirlemenize yardımcı olması için aşağıdaki tabloyu kullanın:
 
 |Özellik veya davranış|Etiket ayarı: Dosyalar ve e-postalar için otomatik etiketleme  |İlke: Otomatik etiketleme|
 |:-----|:-----|:-----|
-|Uygulama bağımlılığı|Evet ([en düşük sürümler](sensitivity-labels-office-apps.md#support-for-sensitivity-label-capabilities-in-apps)) |Hayır \* |
+|Uygulama bağımlılığı|Evet ([en düşük sürümler](sensitivity-labels-office-apps.md#support-for-sensitivity-label-capabilities-in-apps)) |No \* |
 |Konuma göre kısıtla|Hayır |Evet |
-|Koşullar: Eğitilebilir sınıflayıcılar|Evet |Hayır |
-|Koşullar: Paylaşım seçenekleri ve e-posta için ek seçenekler|Hayır |Evet |
+|Koşullar: Eğitilebilir sınıflandırıcılar|Evet |Hayır |
+|Koşullar: E-posta için paylaşım seçenekleri ve ek seçenekler|Hayır |Evet |
 |Koşullar: Özel Durumlar|Hayır |Evet (yalnızca e-posta) |
 |Öneriler, ilke araç ipucu ve kullanıcı geçersiz kılmaları|Evet |Hayır |
-|Benzetim modu|Hayır |Evet |
-|Exchange koşulların denetlenir|Hayır | Evet|
+|Simülasyon modu|Hayır |Evet |
+|Koşullar için denetlenen ekleri Exchange|Hayır | Evet|
 |Görsel işaretler uygulama |Evet |Evet (yalnızca e-posta) |
-|IRM şifrelemesi etiket olmadan uygulanırken geçersiz kılma|Kullanıcı Dışarı Aktar minimum kullanım hakkına sahipse Evet |Evet (yalnızca e-posta) |
-|Gelen e-postayı etiketleme|Hayır |Evet|
-|Başka bir kuruluştan gönderilen e-postalar için Hak Yönetimi sahibi atama |Hayır |Evet|
+|Etiket olmadan uygulanan IRM şifrelemeyi geçersiz kılma|Evet, kullanıcının dışarı aktarma en düşük kullanım hakkı varsa |Evet (yalnızca e-posta) |
+|Gelen e-postayı etiketle|Hayır |Evet|
+|Başka bir kuruluştan gönderilen e-postalar için Rights Management sahibi atama |Hayır |Evet|
 |E-postalar için, aynı veya daha düşük önceliğe sahip mevcut etiketi değiştirin |Hayır |Evet (yapılandırılabilir)|
 
-\* Arka uç Azure bağımlılığı nedeniyle otomatik etiketleme şu anda tüm bölgelerde kullanılamaz. Kiracınız bu işlevselliği destekleyemeyebilir, Otomatik etiketle  ilgili sekme uyumluluk merkezinde görünmez. Daha fazla bilgi için bkz. [Ülkeye göre Azure bağımlılığı kullanılabilirliği](/troubleshoot/azure/general/dependency-availability-by-country).
+\* Arka uç Azure bağımlılığı nedeniyle otomatik etiketleme şu anda tüm bölgelerde kullanılamamaktadır. Kiracınız bu işlevselliği destekleyemiyorsa, **Otomatik etiketleme** sekmesi Microsoft Purview uyumluluk portalında görünmez. Daha fazla bilgi için bkz. [Ülkeye göre Azure bağımlılığı kullanılabilirliği](/troubleshoot/azure/general/dependency-availability-by-country).
 
-## <a name="how-multiple-conditions-are-evaluated-when-they-apply-to-more-than-one-label"></a>Birden fazla etiket için birden fazla etiket geçerli olduğunda birden çok koşullar nasıl değerlendirilir?
+## <a name="how-multiple-conditions-are-evaluated-when-they-apply-to-more-than-one-label"></a>Birden çok etikete uygulandığında birden çok koşul nasıl değerlendirilir?
 
-Etiketler, ilkede belirttiğiniz konumlarına göre değerlendirme için sıralandı: İlk konum bilgisinde en altta yer alan etiket (en küçük duyarlı) ve en son konum konumundaki etiket en yüksek konuma (en duyarlı) sahip. Öncelik hakkında daha fazla bilgi için bkz. [Etiket önceliği (sipariş konuları)](sensitivity-labels.md#label-priority-order-matters).
+Etiketler, ilkede belirttiğiniz konumlarına göre değerlendirme için sıralanır: önce konumlandırılan etiket en düşük konuma (en az duyarlı) ve en son konumlandırılan etiket en yüksek konuma (en hassas) sahiptir. Öncelik hakkında daha fazla bilgi için bkz. [Etiket önceliği (sipariş konuları)](sensitivity-labels.md#label-priority-order-matters).
 
-## <a name="dont-configure-a-parent-label-to-be-applied-automatically-or-recommended"></a>Üst etiketi otomatik olarak uygulanacak veya önerilen bir etiket olacak şekilde yapılandırma
+## <a name="dont-configure-a-parent-label-to-be-applied-automatically-or-recommended"></a>Bir üst etiketi otomatik olarak uygulanacak veya önerilecek şekilde yapılandırma
 
-İçeriğine üst etiket (alt etiketleri olan bir etiket) uygulayamayabileceksiniz. Office uygulamalarına otomatik olarak uygulanacak veya önerilen bir üst etiket yapılandırmama veya bir otomatik etiket ilkesi için üst etiket seçmediğinizden emin olun. Bunu yaparsanız, üst etiket içeriğe uygulanmaz.
+İçeriğe üst etiket (alt etiketli bir etiket) uygulayamazsınız. Bir üst etiketi Office uygulamalarda otomatik olarak uygulanacak veya önerilecek şekilde yapılandırmadığınızdan emin olun ve otomatik etiketleme ilkesi için üst etiket seçmeyin. Bunu yaparsanız, üst etiket içeriğe uygulanmaz.
 
-Alt etiketle otomatik etiketleme kullanmak için, hem üst etiketi hem de alt etiketi yayımlayın.
+Alt etiketli otomatik etiketlemeyi kullanmak için hem üst etiketi hem de alt etiketi yayımladığınızdan emin olun.
 
-Üst etiketler ve alt etiketler hakkında daha fazla bilgi için bkz. [Alt etiketler (gruplama etiketleri)](sensitivity-labels.md#sublabels-grouping-labels).
+Üst etiketler ve alt etiketler hakkında daha fazla bilgi için bkz. [Alt etiketler (etiketleri gruplandırma).](sensitivity-labels.md#sublabels-grouping-labels)..
 
 ## <a name="will-an-existing-label-be-overridden"></a>Mevcut bir etiket geçersiz kılınacak mı?
 
 > [!NOTE]
-> E-posta otomatik etiketle ilgili ilkeler için eklenen yeni bir ayar, eşleşen bir duyarlılık etiketinin her zaman var olan bir etiketi geçersiz kmayacaklarını belirtmenize izin verir.
+> E-posta otomatik etiketleme ilkeleri için yeni eklenen bir ayar, eşleşen duyarlılık etiketinin her zaman mevcut etiketi geçersiz kılacağını belirtmenize olanak sağlar.
 
-Otomatik etiketlemenin varolan bir etiketi geçersiz kıp geçersiz kmayacaklarını varsayılan davranış:
+Otomatik etiketlemenin var olan bir etiketi geçersiz kılıp geçersiz kılmayacağı varsayılan davranış:
 
-- İçerik el ile etiketlenmiş olduğunda, bu etiket otomatik etiketle değiştirilir.
+- İçerik el ile etiketlendiğinde, bu etiket otomatik etiketleme ile değiştirilmez.
 
-- Otomatik etiketleme, otomatik olarak [uygulanan daha düşük öncelikli duyarlılık](sensitivity-labels.md#label-priority-order-matters) etiketinin yerini aacaktır, ancak daha yüksek öncelikli bir etiket yerine daha yüksek öncelikli bir etiketle değiştirilir.
+- Otomatik etiketleme, otomatik olarak uygulanan [düşük öncelikli duyarlılık etiketinin](sensitivity-labels.md#label-priority-order-matters) yerini alır, ancak daha yüksek öncelikli bir etiketi değiştirmez.
     
     > [!TIP]
-    > Örneğin, uyumluluk merkezi'nde listenin en üstünde yer alan duyarlılık etiketi Genel olarak 0 sipariş numarası (öncelik) ile ve listenin en altındaki duyarlılık etiketi de sipariş numarasıyla (4 öncelik) Yüksek Gizli olarak adlandırılmıştır. Çok **Gizli etiketi** Ortak etiketi **geçersiz k** ancak bunun başka bir yolu değildir.
+    > Örneğin, Microsoft Purview uyumluluk portalında listenin en üstündeki duyarlılık etiketi 0 sipariş numarasıyla (öncelik) **Genel** olarak, listenin en altındaki duyarlılık etiketi ise sipariş numarası (öncelik 4) ile **Çok Gizli** olarak adlandırılır. **Çok Gizli** etiketi **Genel** etiketi geçersiz kılabilir, ancak tersine geçersiz kılabilir.
 
-Yalnızca e-posta otomatik etiketleme ilkeleri için, nasıl uygulandığına bakılmaksızın, var olan bir duyarlılık etiketini her zaman geçersiz kacak bir ayar seçin.
+Yalnızca e-posta otomatik etiketleme ilkeleri için, nasıl uygulandığından bağımsız olarak mevcut duyarlılık etiketini her zaman geçersiz kılmak için bir ayar seçebilirsiniz.
 
-|Mevcut etiket |Etiket ayarıyla geçersiz kılma: Dosyalar ve e-postalar için otomatik etiketleme  |İlkeyle geçersiz kılma: Otomatik etiketleme|
+|Mevcut etiket |Etiket ayarıyla geçersiz kıl: Dosyalar ve e-postalar için otomatik etiketleme  |İlkeyle geçersiz kılma: Otomatik etiketleme|
 |:-----|:-----|:-----|
-|El ile uygulanır, herhangi bir öncelik|Word, Excel, PowerPoint: Hayır <br /><br> Outlook: Hayır  |SharePoint ve OneDrive: Hayır <br /><br> Exchange: Varsayılan olarak hayır, ancak yapılandırılabilir |
+|El ile uygulanan, herhangi bir öncelik|Word, Excel, PowerPoint: Hayır <br /><br> Outlook: Hayır  |SharePoint ve OneDrive: Hayır <br /><br> Exchange: Varsayılan olarak hayır, ancak yapılandırılabilir |
 |İlkeden otomatik olarak uygulanan veya varsayılan etiket, düşük öncelikli |Word, Excel, PowerPoint: Evet <br /><br> Outlook: Evet | SharePoint ve OneDrive: Evet <br /><br> Exchange: Evet |
-|İlkeden otomatik olarak uygulanan veya varsayılan etiket, yüksek öncelikli |Word, Excel, PowerPoint: Hayır <br /><br> Outlook: Hayır |SharePoint ve OneDrive: Hayır <br /><br> Exchange: Varsayılan olarak hayır, ancak yapılandırılabilir |
+|İlkeden otomatik olarak uygulanan veya varsayılan etiket, daha yüksek öncelik |Word, Excel, PowerPoint: Hayır <br /><br> Outlook: Hayır |SharePoint ve OneDrive: Hayır <br /><br> Exchange: Varsayılan olarak hayır, ancak yapılandırılabilir |
 
-E-posta otomatik etiketleme ilkeleri için yapılandırılabilir ayar, E-posta **için ek ayarlar sayfasındadır** . Bu sayfa, duyarlılık konumunu içeren bir otomatik etiket ilkesi için duyarlılık Exchange görüntülenir.
+E-posta otomatik etiketleme ilkeleri için yapılandırılabilir ayar, **E-posta için ek ayarlar** sayfasındadır. Bu sayfa, Exchange konumunu içeren otomatik etiketleme ilkesi için duyarlılık etiketi seçtikten sonra görüntülenir.
 
-## <a name="how-to-configure-auto-labeling-for-office-apps"></a>Office uygulamaları için otomatik Office yapılandırma
+## <a name="how-to-configure-auto-labeling-for-office-apps"></a>Office uygulamaları için otomatik etiketlemeyi yapılandırma
 
-Bir uygulamanın yerleşik etiketlemesi Office için, Office uygulamalarda otomatik etiketleme için gereken [](sensitivity-labels-office-apps.md#support-for-sensitivity-label-capabilities-in-apps) en düşük Office kontrol edin.
+Office uygulamalarında yerleşik etiketleme için Office uygulamalarda otomatik etiketleme için [gereken en düşük sürümleri](sensitivity-labels-office-apps.md#support-for-sensitivity-label-capabilities-in-apps) denetleyin.
 
-Azure Information Protection birleşik etiketleme istemcisi yalnızca yerleşik ve özel hassas bilgi türlerinde otomatik etiketlemeyi destekler ve Tam Veri Eşleşmesi (EDM) veya adlandırılmış varlıklar kullanan, eğitilebilir sınıflayıcıları veya hassas bilgi türlerini desteklemez.
+Azure Information Protection birleşik etiketleme istemcisi yalnızca yerleşik ve özel hassas bilgi türleri için otomatik etiketlemeyi destekler ve Tam Veri Eşleştirme (EDM) veya adlandırılmış varlıkları kullanan eğitilebilir sınıflandırıcıları veya hassas bilgi türlerini desteklemez.
 
-Bir duyarlılık Office için [otomatik etiket ayarları](create-sensitivity-labels.md) kullanılabilir. Etiketin **kapsamı için &-posta** dosyalarının seçili olduğundan emin olun:
+Duyarlılık [etiketi oluşturduğunuzda veya düzenlediğinizde](create-sensitivity-labels.md) Office uygulamalar için otomatik etiketleme ayarları kullanılabilir. Etiketin kapsamı için **Dosyalar & e-postalarının** seçildiğinden emin olun:
 
-![Dosyalar ve e-postalar için duyarlılık etiketi kapsamı seçenekleri.](../media/filesandemails-scope-options-sensitivity-label.png)
+![Dosyalar ve e-postalar için duyarlılık etiketi kapsam seçenekleri.](../media/filesandemails-scope-options-sensitivity-label.png)
 
-Yapılandırmada ilerlerken, hassas bilgi türleri veya eğitilebilir sınıflayıcılar listesinden seçimnizi tek tek dosyalar ve **e-postalar** için otomatik etiketleme sayfasını görüyorsunuz:
+Yapılandırmada ilerlerken, hassas bilgi türleri veya eğitilebilir sınıflandırıcılar listesinden seçim yapabileceğiniz **Dosyalar ve e-postalar için otomatik etiketleme** sayfasını görürsünüz:
 
-![Office uygulamalarda otomatik etiketleme için Office koşulları.](../media/sensitivity-labels-conditions.png)
+![Office uygulamalarında otomatik etiketleme için etiket koşulları.](../media/sensitivity-labels-conditions.png)
 
-Bu duyarlılık etiketi otomatik olarak uygulandığında, kullanıcı kendisinde bir bildirim Office uygulaması. Örneğin:
+Bu duyarlılık etiketi otomatik olarak uygulandığında, kullanıcı Office uygulaması bir bildirim görür. Örneğin:
 
-![Bir belgeye otomatik olarak bir etiket uygulandığını haber verilmesini sağlar.](../media/sensitivity-labels-msg-doc-was-auto-labeled.PNG)
+![Belgenin otomatik olarak bir etiket uygulandığına ilişkin bildirim.](../media/sensitivity-labels-msg-doc-was-auto-labeled.PNG)
 
-### <a name="configuring-sensitive-info-types-for-a-label"></a>Bir etiket için hassas bilgi türlerini yapılandırma
+### <a name="configuring-sensitive-info-types-for-a-label"></a>Etiket için hassas bilgi türlerini yapılandırma
 
-Hassas bilgi türleri **seçeneğini gördüğünüzde** , veri kaybı önleme (DLP) ilkesi oluşturmayla aynı hassas bilgi türleri listesini görüyorsunuz. Dolayısıyla, örneğin, müşterilerin kredi kartı numaraları, sosyal güvenlik numaraları veya pasaport numaraları gibi kişisel bilgilerini içeren her türlü içeriğe otomatik olarak Çok Gizli etiket uygulayabilirsiniz:
+**Hassas bilgi türleri** seçeneğini belirlediğinizde, veri kaybı önleme (DLP) ilkesi oluştururken kullandığınız hassas bilgi türlerinin listesini görürsünüz. Bu nedenle, örneğin, kredi kartı numaraları, sosyal güvenlik numaraları veya pasaport numaraları gibi müşterilerin kişisel bilgilerini içeren içeriklere otomatik olarak Çok Gizli etiketi uygulayabilirsiniz:
 
-![Office uygulamalarda otomatik etiketleme için Office türleri.](../media/sensitivity-labels-sensitive-info-types.png)
+![Office uygulamalarında otomatik etiketleme için hassas bilgi türleri.](../media/sensitivity-labels-sensitive-info-types.png)
 
-Daha sonra DLP ilkelerini yapılandırmış olacağınız gibi, örnek sayısını ve doğruluğunu değiştirerek koşul bilginizi geliştirebilirsiniz. Örneğin:
+DLP ilkelerini yapılandırdığınıza benzer şekilde, örnek sayısını değiştirip doğruluğu eşleştirerek koşulunuzu iyileştirebilirsiniz. Örneğin:
 
-![Doğruluk ve örnek sayısı eşleşme seçenekleri.](../media/sit-confidence-level.png)
+![Eşleşme doğruluğu ve örnek sayısı seçenekleri.](../media/sit-confidence-level.png)
 
-Bu yapılandırma seçenekleri hakkında daha fazla bilgi edinmek için DLP belgelerine bakın: [Kuralların eşleşmelerini kolaylaştıracak veya zorlaştıracak şekilde ayarlama](data-loss-prevention-policies.md#tuning-rules-to-make-them-easier-or-harder-to-match).
+DLP belgelerinden bu yapılandırma seçenekleri hakkında daha fazla bilgi edinebilirsiniz: [Eşleştirmeyi kolaylaştırmak veya zorlaştırmak için kuralları ayarlama](data-loss-prevention-policies.md#tuning-rules-to-make-them-easier-or-harder-to-match).
 
 > [!IMPORTANT]
 > Hassas bilgi türlerinin en fazla benzersiz örnek sayısı parametresini tanımlamanın iki farklı yolu vardır. Daha fazla bilgi edinmek için bkz [. SIT için örnek sayısı desteklenen değerler](create-a-custom-sensitive-information-type.md#instance-count-supported-values-for-sit).
 
-Ayrıca, DLP ilke yapılandırmasına benzer şekilde, bir koşulun tüm hassas bilgi türlerini mi yoksa yalnızca birini mi algılaması gerektiğini de seçebilirsiniz. Ayrıca, koşullarınızı daha esnek veya karmaşık bir hale getirirken, gruplar ekleyebilir [ve gruplar arasında mantıksal işleçler kullanabilirsiniz](data-loss-prevention-policies.md).
+DLP ilkesi yapılandırmasına benzer şekilde, bir koşulun tüm hassas bilgi türlerini mi yoksa yalnızca birini mi algılaması gerektiğini seçebilirsiniz. Koşullarınızı daha esnek veya karmaşık hale getirmek için [gruplar ekleyebilir ve gruplar arasında mantıksal işleçler kullanabilirsiniz](data-loss-prevention-policies.md).
 
 > [!NOTE]
-> Özel duyarlı bilgi türlerine dayalı otomatik etiketleme yalnızca OneDrive ve SharePoint'de yeni oluşturulan veya değiştirilen içerik için geçerlidir; var olan içerik için geçerli değildir. Bu sınırlama otomatik etiket ilkeler için de geçerlidir.
+> Özel hassas bilgi türlerini temel alan otomatik etiketleme yalnızca OneDrive ve SharePoint yeni oluşturulan veya değiştirilen içerik için geçerlidir; mevcut içeriğe uygulanmıyor. Bu sınırlama otomatik etiketleme ilkeleri için de geçerlidir.
 
-#### <a name="custom-sensitive-information-types-with-exact-data-match"></a>Tam Veri Eşleşmesi olan özel hassas bilgi türleri
+#### <a name="custom-sensitive-information-types-with-exact-data-match"></a>Tam Veri Eşleşmesi ile özel hassas bilgi türleri
 
-Özel hassas bilgi türleri için hassas bilgi türlerine göre [tam veri eşleşmesi tabanlı bilgi türlerini kullanmak üzere bir](sit-learn-about-exact-data-match-based-sits.md#learn-about-exact-data-match-based-sensitive-information-types) duyarlılık etiketi yapılandırabilirsiniz. Bununla birlikte, şu anda EDM kullanmayan en az bir hassas bilgi türü de belirtebilirsiniz. Örneğin, Kredi kartı numarası gibi yerleşik hassas bilgi **türlerinden biri olabilir**.
+Özel hassas [bilgi türleri için tam veri eşleştirme tabanlı hassas bilgi türlerini](sit-learn-about-exact-data-match-based-sits.md#learn-about-exact-data-match-based-sensitive-information-types) kullanmak üzere bir duyarlılık etiketi yapılandırabilirsiniz. Ancak, şu anda EDM kullanmayan en az bir hassas bilgi türü de belirtmeniz gerekir. Örneğin, **Kredi kartı numarası** gibi yerleşik hassas bilgi türlerinden biri.
 
-Hassas bilgi türü koşullarınız için yalnızca EDM olan bir duyarlılık etiketi yapılandırıyorsanız, etiket için otomatik etiketleme ayarı otomatik olarak kapalıdır.
+Hassas bilgi türü koşullarınız için yalnızca EDM ile bir duyarlılık etiketi yapılandırıyorsanız, etiket için otomatik etiketleme ayarı otomatik olarak kapatılır.
 
-### <a name="configuring-trainable-classifiers-for-a-label"></a>Bir etiket için eğitilebilir sınıflayıcıları yapılandırma
+### <a name="configuring-trainable-classifiers-for-a-label"></a>Etiket için eğitilebilir sınıflandırıcıları yapılandırma
 
-Windows için Microsoft 365 Uygulamaları sürüm 2106 veya daha düşük ya da Mac için Microsoft 365 Uygulamaları sürüm 16.50 veya daha düşük sürümlerde bu seçeneği kullanırsanız, kiracınıza otomatik etiketleme için yapılandırılmış en az bir duyarlılık etiketi ve hassas bilgi türleri seçeneği daha yayımlamış olduğundan emin [olun.](#configuring-sensitive-info-types-for-a-label) Bu platformlarda daha sonraki sürümleri kullanıyorken bu gereksinim gerekmez.
+Bu seçeneği Windows sürüm 2106 veya üzeri için Microsoft 365 Uygulamaları ya da Mac sürüm 16.50 veya üzeri için Microsoft 365 Uygulamaları kullanıyorsanız, kiracınızda otomatik etiketleme ve [hassas bilgi türleri seçeneği](#configuring-sensitive-info-types-for-a-label) için yapılandırılmış en az bir duyarlılık etiketi daha yayımladığınızdan emin olun. Bu platformlarda sonraki sürümleri kullandığınızda bu gereksinim gerekli değildir.
 
-Eğitilebilir **sınıflandırıcılar seçeneğini belirtin** ; önceden eğitilebilir veya özel eğitime uygun sınıflayıcılardan birini veya daha fazlasını seçin:
+**Eğitilebilir sınıflandırıcılar** seçeneğini belirlediğinizde, önceden eğitilmiş veya özel eğitilebilir sınıflandırıcılardan birini veya daha fazlasını seçin:
 
-![Eğitilebilir sınıflayıcılar ve duyarlılık etiketleri için seçenekler.](../media/sensitivity-labels-classifers.png)
+![Eğitilebilir sınıflandırıcılar ve duyarlılık etiketleri için seçenekler.](../media/sensitivity-labels-classifers.png)
 
 > [!CAUTION]
-> Rahatsız Edici Dil ön eğitimcisini, yüksek sayıda yanlış pozitif sonuç üretmiş olduğu için kullanımdandan alıkıyoruz. Bu sınıflandırıcıyı kullanma; şu anda kullanıyorsanız iş işlemlerinizi devre dışı taşımanızı ve bunun yerine Hedefli **Taciz, Küfür** ve **Tehdit** ön eğitimcilerini kullanmanızı öneririz.
+> Çok sayıda hatalı pozitif sonuç ürettiğinden **, Rahatsız Edici Dil** önceden eğitilmiş sınıflandırıcıyı kullanım dışı bırakıyoruz. Bu sınıflandırıcıyı kullanmayın ve şu anda kullanıyorsanız iş süreçlerinizi bundan çıkarmanızı ve bunun yerine **Hedeflenen Taciz**, **Küfür** ve **Tehdit** önceden eğitilmiş sınıflandırıcıları kullanmanızı öneririz.
 
-Bu sınıflandırıcılar hakkında daha fazla bilgi için bkz[. Eğitilebilir sınıflandırıcılar hakkında bilgi.](classifier-learn-about.md)
+Bu sınıflandırıcılar hakkında daha fazla bilgi için bkz. [Eğitilebilir sınıflandırıcılar hakkında bilgi edinin](classifier-learn-about.md).
 
-### <a name="recommend-that-the-user-applies-a-sensitivity-label"></a>Kullanıcının bir duyarlılık etiketi uygulamalarını önerin
+### <a name="recommend-that-the-user-applies-a-sensitivity-label"></a>Kullanıcının bir duyarlılık etiketi uygulamasını önerme
 
-Tercih ederseniz, kullanıcılarınıza etiketi uygulamalarını önerebilirsiniz. Bu seçenekle, kullanıcılarınız sınıflandırmayı ve ilişkili korumayı kabul edilebilir ya da etiketin içeriğine uygun değilse öneriyi reddedebilirsiniz.
+İsterseniz, kullanıcılarınıza etiketi uygulamalarını önerebilirsiniz. Bu seçenekle, kullanıcılarınız sınıflandırmayı ve ilişkili korumayı kabul edebilir veya etiket içeriği için uygun değilse öneriyi kapatabilir.
 
-![Kullanıcılara duyarlılık etiketi öneri seçeneği.](../media/Sensitivity-labels-Recommended-label-option.png)
+![Kullanıcılara duyarlılık etiketi önerme seçeneği.](../media/Sensitivity-labels-Recommended-label-option.png)
 
-Burada, bir etiketi önerilen eylem olarak uygulamak için özel bir ilke ipucuyla bir koşul yapılandırıldığında Azure Information Protection birleşik etiketleme istemcisinde yer alan bir istem örneği ve göstermektedir. İlke ipucunda görüntülenecek metni seçebilirsiniz.
+Aşağıda azure Information Protection birleşik etiketleme istemcisinden, özel bir ilke ipucuyla bir etiketi önerilen eylem olarak uygulayacak bir koşul yapılandırdığınızda oluşan bir istem örneği verilmiştir. İlke ipucunda hangi metnin görüntüleneceğini seçebilirsiniz.
 
-![Önerilen bir etiketi uygulama istemi.](../media/Sensitivity-label-prompt-for-required-label.png)
+![Önerilen etiketi uygulama istemi.](../media/Sensitivity-label-prompt-for-required-label.png)
 
 ### <a name="when-automatic-or-recommended-labels-are-applied"></a>Otomatik veya önerilen etiketler uygulandığında
 
-Office uygulamalarına otomatik ve önerilen etiketlemenin uygulanması, Office'de yerleşik olarak yer alan etiketlemeyi mi yoksa Azure Information Protection birleşik etiketleme istemcisini mi kullandığınıza bağlıdır. Bununla birlikte, her iki durumda da:
+Office uygulamalarında otomatik ve önerilen etiketlemenin uygulanması, Office yerleşik etiketlemeyi mi yoksa Azure Information Protection birleşik etiketleme istemcisini mi kullandığınıza bağlıdır. Ancak her iki durumda da:
 
-- Daha önce el ile veya daha önce daha önce daha yüksek bir duyarlılıkla etiketlenmiş belgeler ve e-postalar için otomatik etiketlemeyi kullanasınız. Bir belgeye veya e-postaya (tek bir bekletme etiketine ek olarak) yalnızca tek bir duyarlılık etiketi uygulayabileceksiniz.
+- Daha önce el ile etiketlenmiş veya daha önce daha yüksek bir duyarlılıkla otomatik olarak etiketlenmiş belgeler ve e-postalar için otomatik etiketlemeyi kullanamazsınız. Unutmayın, bir belgeye veya e-postaya yalnızca tek bir duyarlılık etiketi uygulayabilirsiniz (tek bir bekletme etiketine ek olarak).
 
-- Daha önce daha yüksek bir duyarlılıkla etiketlenmiş belgeler veya e-postalar için önerilen etiketlemeyi kullanasınız. İçerik zaten daha yüksek bir duyarlılıkla etiketlenmiş olduğunda, kullanıcı öneriyi ve ilke ipucunda istemi görmez.
+- Daha önce daha yüksek duyarlılıkla etiketlenmiş belgeler veya e-postalar için önerilen etiketlemeyi kullanamazsınız. İçerik daha yüksek bir duyarlılıkla etiketlendiğinde, kullanıcı öneri ve ilke ipucunu içeren istemi görmez.
 
 Yerleşik etiketlemeye özgü:
 
-- Diğer tüm Office uygulamaları otomatik (ve önerilen) etiketlemeyi desteklemez. Daha fazla bilgi için bkz [. Uygulamalarda duyarlılık etiketi özellikleri desteği](sensitivity-labels-office-apps.md#support-for-sensitivity-label-capabilities-in-apps).
+- Tüm Office uygulamaları otomatik (ve önerilen) etiketlemeyi desteklemez. Daha fazla bilgi için bkz. [Uygulamalarda duyarlılık etiketi özellikleri desteği](sensitivity-labels-office-apps.md#support-for-sensitivity-label-capabilities-in-apps).
 
-- Word'in masaüstü sürümlerinde önerilen etiketler için, öneriyi tetikleyen hassas içerik bayrakla işaretlenir; böylelikle kullanıcılar önerilen duyarlılık etiketini uygulamak yerine hassas içeriği gözden geçirebilirsiniz ve kaldırabilirler.
+- Word'ün masaüstü sürümlerinde önerilen etiketler için, öneriyi tetikleyen hassas içerik, kullanıcıların önerilen duyarlılık etiketini uygulamak yerine hassas içeriği gözden geçirip kaldırabilmesi için işaretlenir.
 
-- Bu etiketlerin Office uygulamalarına nasıl uygulandığı, örnek ekran görüntüleri ve ne kadar hassas bilgilerin algılandığından ilgili ayrıntılar için bkz. Office'te dosyalarınıza ve e-postanıza duyarlılık etiketlerinin otomatik olarak [uygulanması veya önerin](https://support.microsoft.com/office/automatically-apply-or-recommend-sensitivity-labels-to-your-files-and-emails-in-office-622e0d9c-f38c-470a-bcdb-9e90b24d71a1).
+- Bu etiketlerin Office uygulamalarına nasıl uygulandığı, örnek ekran görüntüleri ve hassas bilgilerin nasıl algılandıklarına ilişkin ayrıntılar için bkz. [Office'da dosyalarınıza ve e-postalarınıza duyarlılık etiketlerini otomatik olarak uygulama veya önerme](https://support.microsoft.com/office/automatically-apply-or-recommend-sensitivity-labels-to-your-files-and-emails-in-office-622e0d9c-f38c-470a-bcdb-9e90b24d71a1).
 
 Azure Information Protection birleşik etiketleme istemcisine özgü:
 
-- Otomatik ve önerilen etiketleme, belgeyi kaydederek Word, Excel ve PowerPoint e-posta gönderirken Outlook için geçerlidir.
+- Otomatik ve önerilen etiketleme, belgeyi kaydettiğinizde Word, Excel ve PowerPoint için ve e-posta gönderdiğinizde Outlook için geçerlidir.
 
-- Önerilen Outlook için, önce gelişmiş bir ilke ayarı [yapılandırmalısiniz](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#enable-recommended-classification-in-outlook).
+- Outlook önerilen etiketlemeyi desteklemesi için önce [gelişmiş bir ilke ayarı](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#enable-recommended-classification-in-outlook) yapılandırmanız gerekir.
 
-- Belgelerde ve e-postalarda gövde metninde, üst bilgi ve alt bilgilerde hassas bilgiler algılanır, ancak konu satırı veya e-posta ekleri içinde algılanmaz.
+- Belgelerde ve e-postalarda gövde metninde ve üst bilgi ve alt bilgilerde hassas bilgiler algılanabilir, ancak konu satırında veya e-posta eklerinde algılanamaz.
 
-## <a name="how-to-configure-auto-labeling-policies-for-sharepoint-onedrive-and-exchange"></a>SharePoint, ONEDRIVE ve Exchange için otomatik etiketleme ilkeleri Exchange
+## <a name="how-to-configure-auto-labeling-policies-for-sharepoint-onedrive-and-exchange"></a>SharePoint, OneDrive ve Exchange için otomatik etiketleme ilkelerini yapılandırma
 
-Otomatik etiket ilkelerini yapılandırmadan önce önkoşulları farkında olun.
+Otomatik etiketleme ilkelerini yapılandırmadan önce önkoşulların farkında olduğunuzdan emin olun.
 
-### <a name="prerequisites-for-auto-labeling-policies"></a>Otomatik etiket ilkeleri için önkoşullar
+### <a name="prerequisites-for-auto-labeling-policies"></a>Otomatik etiketleme ilkeleri için önkoşullar
 
-- Benzetim modu:
-  - Denetim Microsoft 365 açık olması gerekir. Denetimi açmanız gerekirse veya denetimin zaten aç olup olmadığı konusunda emin değilsanız, bkz. [Denetim günlüğü aramalarını açma veya kapatma](turn-audit-log-search-on-or-off.md).
-  - Dosya veya e-posta içeriğini kaynak görünümde görüntülemek için, İçerik Gezgini İçerik  Görüntüleyicisi rol grubunda bulunan Veri Sınıflandırma İçerik Görüntüleyicisi rolüne ya da **Information Protection ve Information Protection** **Süreler rol gruplarına** (şu anda önizlemede) sahip olmak gerekir. Gerekli rol olmadan, Eşleşmeli Öğeler sekmesinden bir öğe seçerek önizleme **bölmesini görmeyebilirsiniz** . Genel yöneticiler varsayılan olarak bu role sahip değildir.
+- Simülasyon modu:
+  - Microsoft 365 denetimi açık olmalıdır. Denetimi açmanız gerekiyorsa veya denetimin zaten açık olup olmadığından emin değilseniz bkz. [Denetim günlüğü aramasını açma veya kapatma](turn-audit-log-search-on-or-off.md).
+  - Kaynak görünümde dosya veya e-posta içeriğini görüntülemek için, **İçerik Gezgini İçerik Görüntüleyicisi** rol grubuna dahil edilen **Veri Sınıflandırma İçerik Görüntüleyicisi** rolüne veya **Information Protection** ve **Information Protection Araştırmacı rol** gruplarına (şu anda önizleme aşamasındadır) sahip olmanız gerekir. Gerekli rol olmadan, **Eşleşen Öğeler** sekmesinden bir öğe seçtiğinizde önizleme bölmesini görmezsiniz. Genel yöneticiler varsayılan olarak bu role sahip değildir.
 
-- Dosyaları tek tek SharePoint otomatik olarak OneDrive:
-  - SharePoint [ve OneDrive'de Office dosyaları için duyarlılık SharePoint etkinleştirmişsiniz](sensitivity-labels-sharepoint-onedrive-files.md).
-  - Otomatik etiket ilkesi şu anda çalışıyorken, dosya başka bir işlem veya kullanıcı tarafından açık değil. Düzenleme için kullanıma alınmış bir dosya bu kategoriye girer.
+- SharePoint ve OneDrive dosyaları otomatik olarak etiketlemek için:
+  - [SharePoint ve OneDrive Office dosyaları için duyarlılık etiketlerini etkinleştirdiniz](sensitivity-labels-sharepoint-onedrive-files.md).
+  - Otomatik etiketleme ilkesi çalıştırıldığında, dosya başka bir işlem veya kullanıcı tarafından açık olmamalıdır. Düzenleme için kullanıma alınmış bir dosya bu kategoriye girer.
 
-- Yerleşik duyarlılık türleri [yerine özel hassas](sensitive-information-type-learn-about.md) bilgi türlerini kullanmayı planlıyorsanız:
+- Yerleşik [duyarlılık türleri yerine özel hassas bilgi türleri](sensitive-information-type-learn-about.md) kullanmayı planlıyorsanız:
   - Özel duyarlılık bilgi türleri yalnızca özel duyarlılık bilgi türleri oluşturulduktan sonra SharePoint veya OneDrive eklenen veya değiştirilen içeriğe uygulanır.
-  - Yeni özel hassas bilgi türlerini test etmek için, otomatik etiketleme ilkenizi oluşturmadan önce bunları oluşturun ve ardından test etmek üzere örnek veriler de olan yeni belgeler oluşturun.
+  - Yeni özel hassas bilgi türlerini test etmek için, otomatik etiketleme ilkenizi oluşturmadan önce bunları oluşturun ve ardından test için örnek verilerle yeni belgeler oluşturun.
 
-- Otomatik etiket ilkeleriniz için [seçerek yayımladığı](create-sensitivity-labels.md) ve yayımladığı bir veya birden çok duyarlılık etiketi (en az bir kullanıcıya). Bu etiketler için:
-  - Girişte anlatıldı gibi söz konusu etiket ayarının Office uygulamaları etiket ayarının açık veya kapalı olması fark etmez, çünkü söz konusu etiket ayarı, otomatik etiket ilkelerini tamamlar.
-  - Otomatik etiketleme için kullanmak istediğiniz etiketler görsel işaretler (üst bilgiler, alt bilgiler, filigranlar) kullanmak üzere yapılandırılmışsa, bunların belgelere uygulanmamış olduğunu unutmayın.
-  - Etiketler şifreleme [uygulamazsa](encryption-sensitivity-labels.md):
-    - Otomatik etiket ilkesi posta veya posta SharePoint OneDrive olduğunda, Şimdi izin ata ayarı için etiketin **yapılandırılması** gerekir.
-    - Otomatik etiket ilkesi yalnızca E-posta için Exchange olduğunda, etiket Şimdi izin ata veya Kullanıcıların izin atamasına izin **ver (İ** iletme veya devre dışı bırak seçenekleri için) Encrypt-Only ya da yapılandırabilirsiniz.
+- Otomatik etiketleme ilkeleriniz için seçebileceğiniz bir veya daha fazla duyarlılık etiketi [oluşturulur ve yayımlanır](create-sensitivity-labels.md) (en az bir kullanıcıya). Bu etiketler için:
+  - Office uygulamalar etiket ayarında otomatik etiketlemenin açık veya kapalı olması önemli değildir çünkü bu etiket ayarı, girişte açıklandığı gibi otomatik etiketleme ilkelerini tamamlar.
+  - Otomatik etiketleme için kullanmak istediğiniz etiketler görsel işaretler (üst bilgiler, alt bilgiler, filigranlar) kullanacak şekilde yapılandırılmışsa, bunların belgelere uygulanmadığını unutmayın.
+  - Etiketler [şifreleme](encryption-sensitivity-labels.md) uyguluyorsa:
+    - Otomatik etiketleme ilkesi SharePoint veya OneDrive konumları içerdiğinde, etiketin **İzinleri şimdi ata** ayarı için yapılandırılması gerekir.
+    - Otomatik etiketleme ilkesi yalnızca Exchange için olduğunda, etiket **şimdi izinleri ata** veya **Kullanıcıların izin atamasına izin ver** (İletme veya Encrypt-Only seçenekleri için) için yapılandırılabilir.
 
-### <a name="learn-about-simulation-mode"></a>Benzetim modu hakkında bilgi
+### <a name="learn-about-simulation-mode"></a>Simülasyon modu hakkında bilgi edinin
 
-Benzetim modu, otomatik etiketleme ilkelerine ve iş akışında yer alan deneyime özgü bir moddur. İlkeniz en az bir benzetim çalıştırana kadar belgeleri ve e-postaları otomatik olarak etiketleyemez.
+Simülasyon modu, otomatik etiketleme ilkelerine özgüdür ve iş akışına dokunmunu sağlar. İlkeniz en az bir benzetimi çalıştırmadan belgeleri ve e-postaları otomatik olarak etiketleyemezsiniz.
 
-Benzetim modu 1.000.000'e kadar eşleşmeli dosya destekler. Otomatik etiket ilkesinden bu sayıdan fazla dosya eşlenmişse, etiketleri uygulamak için ilkeyi açabilirsiniz. Bu durumda, daha az dosyanın eşleşmesi için otomatik etiketleme politikasını yeniden yapılandırmanız ve benzetimi yeniden çalıştırmanız gerekir. Bu 1.000.000 eşleşmeli dosya sayısı yalnızca benzetim moduna uygulanır, duyarlılık etiketleri uygulamak için önceden açık olan otomatik etiket ilkesi için geçerli değildir.
+Simülasyon modu en fazla 1.000.000 eşleşen dosyayı destekler. Otomatik etiketleme ilkesinden bu sayıdan fazla dosya eşleşiyorsa, etiketleri uygulamak için ilkeyi açamazsınız. Bu durumda, otomatik etiketleme ilkesini daha az dosyanın eşleştirilmesi için yeniden yapılandırmanız ve simülasyonu yeniden çalıştırmanız gerekir. Bu en fazla 1.000.000 eşleşen dosya, duyarlılık etiketlerini uygulamak için zaten açık olan bir otomatik etiketleme ilkesi için değil, yalnızca simülasyon modu için geçerlidir.
 
 Otomatik etiketleme ilkesi için iş akışı:
 
 1. Otomatik etiketleme ilkesi oluşturma ve yapılandırma.
 
-2. Benzetim modunda ilkeyi çalıştırın; bu 12 saat sürebilir. Tamamlanan benzetim, etkinlik uyarılarını alacak şekilde yapılandırılan kullanıcıya gönderilen bir e-posta [bildirimini tetikler](alert-policies.md).
+2. İlkeyi simülasyon modunda çalıştırın. Bu işlemin tamamlanması 12 saat sürebilir. Tamamlanan simülasyon, [etkinlik uyarılarını](alert-policies.md) almak üzere yapılandırılan kullanıcıya gönderilen bir e-posta bildirimini tetikler.
 
-3. Sonuçları gözden geçirme ve gerekirse ilkenizi geliştirme. Örneğin, hatalı pozitif sonuç sayısını azaltmak için ilke kurallarını düzenlemeniz veya bazı siteleri kaldırarak eşleşmeli dosyaların sayısının 1.000.000'i aşmasını azaltmanız gerekiyor olabilir. Benzetim modunu yeniden çalıştırma ve yeniden tamamlamayı bekleyin.
+3. Sonuçları gözden geçirin ve gerekirse ilkenizi geliştirin. Örneğin, hatalı pozitif sonuçları azaltmak için ilke kurallarını düzenlemeniz veya eşleşen dosya sayısının 1.000.000'i aşmaması için bazı siteleri kaldırmanız gerekebilir. Simülasyon modunu yeniden çalıştırın ve tekrar tamamlanmasını bekleyin.
 
-4. 3. adımı gereken şekilde yinelayın.
+4. 3. adımı gerektiği gibi yineleyin.
 
-5. Üretimde dağıtım.
+5. Üretimde dağıtın.
 
-Sanal dağıtım, PowerShell için WhatIf parametresi gibi çalışır. Otomatik etiket ilkesi tanımlandığı kuralları kullanarak seçili etiketinizi uygulama sonuçları olduğunu görüyorsunuz. Daha sonra gerekirse doğruluğu için kurallarınızı geliştirebilir ve benzetimi yeniden çalıştırebilirsiniz. Bununla birlikte, Exchange için otomatik etiketleme posta kutularında depolanan e-postalar yerine gönderilen ve alınan e-postalar için geçerli olduğundan, aynı e-posta iletilerini göndererek alamadıkça benzetimle ilgili sonuçların tutarlı olmasını beklemezsiniz.
+Sanal dağıtım, PowerShell için WhatIf parametresi gibi çalışır. Otomatik etiketleme ilkesi, tanımladığınız kuralları kullanarak seçtiğiniz etiketi uygulamış gibi raporlanan sonuçlar görürsünüz. Daha sonra gerekirse kurallarınızı doğruluk açısından daraltabilir ve simülasyonu yeniden çalıştırabilirsiniz. Ancak, Exchange için otomatik etiketleme posta kutularında depolanan e-postalar yerine gönderilen ve alınan e-postalar için geçerli olduğundan, aynı e-posta iletilerini gönderip alamadığınız sürece simülasyondaki e-posta sonuçlarının tutarlı olmasını beklemeyin.
 
-Benzetim modu ayrıca dağıtımdan önce otomatik etiketleme ilkenizin kapsamını aşamalı olarak artırmanıza olanak sağlar. Örneğin, tek bir konumla, örneğin tek bir SharePoint kitaplığıyla başlayabilirsiniz. Daha sonra, yinelene değişikliklerle, kapsamı birden çok site için artırarak, sonra da site kapsamını başka bir OneDrive.
+Simülasyon modu, dağıtımdan önce otomatik etiketleme ilkenizin kapsamını aşamalı olarak artırmanıza da olanak tanır. Örneğin, tek bir belge kitaplığıyla SharePoint site gibi tek bir konumla başlayabilirsiniz. Ardından yinelemeli değişikliklerle kapsamı birden çok siteye ve ardından OneDrive gibi başka bir konuma yükseltin.
 
-Son olarak, benzetim modunu, benzetim modu olmadan ne zaman çalıştıracaklarını planlamanıza ve zamanlamanıza yardımcı olmak üzere otomatik etiketleme ilkenizi çalıştırmak için gereken süre hakkında yaklaşık olarak bilgi sağlamak üzere kullanabilirsiniz.
+Son olarak, simülasyon modunu kullanarak otomatik etiketleme ilkenizi çalıştırmak için gereken süreyi yaklaşık olarak belirleyerek simülasyon modu olmadan ne zaman çalıştırabileceğinizi planlayabilir ve zamanlayabilirsiniz.
 
 ### <a name="creating-an-auto-labeling-policy"></a>Otomatik etiketleme ilkesi oluşturma
 
-1. İçerik <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 uyumluluk merkezi</a> duyarlılık etiketlerine gidin:
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalında</a> duyarlılık etiketlerine gidin:
 
-    - **Çözümler** >  **Bilgi koruması**
+    - **Çözümleri** >  **Bilgi koruması**
 
-    Bu seçeneği hemen görmüyorsanız önce Hepsini **göster'i seçin**.
+    Bu seçeneği hemen görmüyorsanız önce **Tümünü göster'i** seçin.
 
-2. Otomatik **etiket sekmesini** seçin:
+2. **Otomatik etiketleme** sekmesini seçin:
 
-    ![Otomatik etiket sekmesi.](../media/auto-labeling-tab.png)
+    ![Otomatik etiketleme sekmesi.](../media/auto-labeling-tab.png)
 
     > [!NOTE]
-    > Otomatik etiketleme sekmesini görmüyorsanız, arka  uç Azure bağımlılığı nedeniyle bu işlevsellik şu anda bölgenize uygun değildir. Daha fazla bilgi için bkz. [Ülkeye göre Azure bağımlılığı kullanılabilirliği](/troubleshoot/azure/general/dependency-availability-by-country).
+    > **Otomatik etiketleme** sekmesini görmüyorsanız, arka uç Azure bağımlılığı nedeniyle bu işlev bölgenizde şu anda kullanılamaz. Daha fazla bilgi için bkz. [Ülkeye göre Azure bağımlılığı kullanılabilirliği](/troubleshoot/azure/general/dependency-availability-by-country).
 
-3. **+ Otomatik etiketleme ilkesi oluştur'a seçin**. Bu, Yeni ilke yapılandırmasını başlatır:
+3. **+ Otomatik etiketleme ilkesi oluştur'u** seçin. Bu, Yeni ilke yapılandırmasını başlatır:
 
     ![Otomatik etiketleme için yeni ilke yapılandırması.](../media/auto-labeling-wizard.png)
 
-4. Bu **etiketin uygulanmak istediğiniz bilgileri seçin** sayfası için: Finansal veya Gizlilik gibi **şablonlardan** birini **seçin**. Seçenekleri göster açılan listesinden **aramanızı daraltabilirsiniz** . Şablonlar **gereksinimlerinizi karşılamıyorsa** Özel ilke'yi de seçin. **İleri**'yi seçin.
+4. Bu **etiketin uygulanmasını istediğiniz bilgileri seçin sayfası için**: **Finansal** veya **Gizlilik** gibi şablonlardan birini seçin. Açılan menü **için seçenekleri göster'i** kullanarak aramanızı daraltabilirsiniz. İsterseniz şablonlar gereksinimlerinizi karşılamıyorsa **Özel ilke'yi** de seçebilirsiniz. **İleri**'yi seçin.
 
-5. Otomatik etiketleme ilkenizi adla **: Otomatik** olarak uygulanan etiketi, konumları ve koşulları tanımlamak için benzersiz bir ad ve isteğe bağlı olarak bir açıklama girin.
+5. Otomatik **etiketleme ilkenizi adlandırın** sayfası için: Otomatik olarak uygulanan etiketi, konumları ve etiket içeriğini tanımlayan koşulları tanımlamaya yardımcı olmak için benzersiz bir ad ve isteğe bağlı olarak bir açıklama sağlayın.
 
-6. Etiketin **uygulanıyor olduğu** konumları seçin sayfası için: Konum, Konum, Konum ve Konum Exchange SharePoint'OneDrive. Seçtiğiniz konumlarda varsayılan olarak Hepsi dahil edilen seçeneğini kullanmak istemiyorsanız, dahil edilecek belirli örnekleri seçmek için bağlantıyı seçin veya hariç tutulacak belirli örnekleri seçmek için bağlantıyı seçin. Sonra Da **Sonraki'yi seçin**.
+6. Etiketi **uygulamak istediğiniz konumları seçin** sayfası için: Exchange, SharePoint ve OneDrive için konumları seçin ve belirtin. Seçtiğiniz konumlar için **tüm** dahil edilenler varsayılanını korumak istemiyorsanız, eklenecek belirli örnekleri seçmek için bağlantıyı seçin veya hariç tutulacak belirli örnekleri seçmek için bağlantıyı seçin. Ardından **İleri'yi** seçin.
 
-    ![Otomatik etiketleme yapılandırması için konumlar sayfasını seçin.](../media/locations-auto-labeling-wizard.png)
+    ![Otomatik etiketleme yapılandırması için konumları seçin sayfası.](../media/locations-auto-labeling-wizard.png)
     
-    Varsayılan ayarları, Dahil Edilen veya Dışarıda **Bırakıldı'ya** **göre değiştirirsiniz**:
+    **Dahil** edilen veya **Dışlanan'ı** kullanarak varsayılan ayarları değiştirirseniz:
     
-    - Adres **Exchange** ilke, belirtilen alıcıların gönderen adresine göre uygulanır. Çoğu zaman, Hariç Yok ayarında bulunan Tüm **varsayılanı** **tutmanız** gerekir. Bu yapılandırma, kullanıcıların bir alt kümesini test ediyor bile olsa uygundur. Buradaki kullanıcı alt kümenizi belirtmek yerine, bir sonraki adımda gelişmiş kuralları kullanarak organizasyonda alıcıları dahil etmek veya dışarıda tutmak için koşulları yapılandırabilirsiniz. Aksi takdirde, varsayılan ayarları burada değiştirirsiniz:
-        -  Varsayılan olarak Tüm dahil'i **değiştirir** ve bunun yerine belirli kullanıcıları veya grupları seçerseniz, kuruluş dışından gönderilen e-posta ilkeden muaf olur. 
-        -  Varsayılan olarak **All included (** Dahil edilenler) varsayılanı geçerli olup hariç tutulacak kullanıcıları veya grupları belirtirseniz, bu dışarıda bırakılan kullanıcıların göndermesi gereken e-posta ilkeden muaf olur, ancak almayacakları e-postadan muaf olmaz.
+    - **Exchange** konumu için ilke, belirtilen alıcıların gönderen adresine göre uygulanır. Çoğu zaman **Hiçbiri** hariç tutulduğunda **Tümü** dahil seçeneğinin varsayılanını tutmak istersiniz. Bu yapılandırma, kullanıcıların bir alt kümesini test ediyorsanız bile uygundur. Burada kullanıcı alt kümenizi belirtmek yerine, kuruluşunuzdaki alıcıları dahil etmek veya dışlamak üzere koşulları yapılandırmak için sonraki adımda yer alan gelişmiş kuralları kullanın. Aksi takdirde, varsayılan ayarları burada değiştirdiğinizde:
+        -  **Tüm** dahil edilenler'in varsayılanını değiştirirseniz ve bunun yerine belirli kullanıcıları veya grupları seçerseniz, kuruluşunuzun dışından gönderilen e-posta ilkeden muaf tutulur. 
+        -  **Tüm** dahil edilenler varsayılanını tutar ancak dışlanacak kullanıcıları veya grupları belirtirseniz, dışlanan bu kullanıcıların gönderdiği e-posta ilkeden muaf tutulur, ancak aldıkları e-postalar hariç tutulur.
     
-    - Daha OneDrive için bkz. Dahil veya dışarıda bırakılacak tek [OneDrive](/onedrive/list-onedrive-urls) hesapları belirtmenize yardımcı olması için, OneDrive kullanıcı url'lerinin listesini elde edin.
+    - OneDrive hesapları için, dahil etmek veya dışlamak üzere tek tek OneDrive hesapları belirtmenize yardımcı olmak için [bkz. Kuruluşunuzdaki tüm kullanıcı OneDrive URL'lerinin listesini alma](/onedrive/list-onedrive-urls).
 
-7. Ortak veya **gelişmiş kuralları ayarlama** sayfası için: Tüm seçtiğiniz konumlarda etiketilecek  içeriği tanımlayan kurallar tanımlamak için Ortak kurallar'ın varsayılanını kullanın. Konum başına farklı kurallara, örneğin konum başına farklı kurallara ihtiyacınız varsa, Exchange **kurallar'ı seçin**. Sonra Da **Sonraki'yi seçin**.
+7. **Ortak veya gelişmiş kuralları ayarlama** sayfası için: Tüm seçtiğiniz konumlarda etiketlenmek üzere içeriği tanımlayan kuralları tanımlamak için **Ortak** kurallar varsayılanını koruyun. Exchange için daha fazla seçenek de dahil olmak üzere konum başına farklı kurallara ihtiyacınız varsa **Gelişmiş kurallar'ı** seçin. Ardından **İleri'yi** seçin.
 
     Kurallar hassas bilgi türlerini ve paylaşım seçeneklerini içeren koşulları kullanır:
-    - Hassas bilgi türleri için, hem yerleşik hem de özel hassas bilgi türlerini seçin.
-    - Paylaşılan seçenekler için yalnızca kuruluşum içindeki **veya kuruluşum dışındaki** kişiler **için tercih yapabilirsiniz**.
+    - Hassas bilgi türleri için hem yerleşik hem de özel hassas bilgi türlerini seçebilirsiniz.
+    - Paylaşılan seçenekler için **yalnızca kuruluşumdaki kişilerle veya kuruluşum** **dışındaki kişilerle** seçim yapabilirsiniz.
 
-    Konumunuz Seçili **Exchange** kuralları **seçtiysanız**, seçerek seçerek başka koşullar da ebilirsiniz:
-    - Gönderen IP adresi:
-    - Alıcı etki alanı:
+    Konumunuz **Exchange** ve **Gelişmiş kurallar'ı** seçtiyseniz seçebileceğiniz başka koşullar da vardır:
+    - Gönderen IP adresi
+    - Alıcı etki alanı
     - Alıcı
     - Ekin dosya uzantısı
-    - Ek parola korumalıdır
+    - Ek parola korumalı
     - E-posta eklerinin içeriği taranamadı
-    - Herhangi bir e-posta ekin içeriğinin tarama işlemi tamamlanmadı
-    - Üst bilgi eşleşme düzenleri
-    - Konu eşleşmeleri desenlerini
+    - E-posta eklerinin içeriği taramayı tamamlamadı
+    - Üst bilgi desenleri eşleştirir
+    - Konu desenleri eşleştirir
     - Alıcı adresi sözcükler içeriyor
-    - Alıcı adresi desenlere eşler
-    - Gönderen adresi desenlere eşler
-    - Gönderen etki alanı:
+    - Alıcı adresi desenleri eşleştirir
+    - Gönderen adresi desenleri eşleştirir
+    - Gönderen etki alanı
     - Alıcı,
-    - Gönderen:
+    - Gönderen
 
-    Bu koşulların her biri için özel durumlar belirtsiniz.
+    Bu koşulların her biri için özel durumlar belirtebilirsiniz.
 
-8. Önceki seçimlerinize bağlı olarak, koşulları ve özel durumları kullanarak yeni kurallar oluşturma fırsatınız olacak.
+8. Önceki seçimlerinize bağlı olarak, artık koşulları ve özel durumları kullanarak yeni kurallar oluşturma fırsatına sahip olacaksınız.
 
-    Hassas bilgi türlerinin yapılandırma seçenekleri, belirli uygulamaların otomatik etiketlerini seçmek için Office aynıdır. Daha fazla bilgi için bkz. [Etiket için hassas bilgi türlerini yapılandırma](#configuring-sensitive-info-types-for-a-label).
+    Hassas bilgi türleri için yapılandırma seçenekleri, Office uygulamalar için otomatik etiketleme için seçtiğiniz seçeneklerle aynıdır. Daha fazla bilgiye ihtiyacınız varsa bkz [. Etiket için hassas bilgi türlerini yapılandırma](#configuring-sensitive-info-types-for-a-label).
 
-    Gereken tüm kuralları tanımlandıktan ve bunların durumunun açık olduğunu onaylarken, otomatik uygulanacak etiketi seçmeye geç için Sonraki'yi seçin.
+    İhtiyacınız olan tüm kuralları tanımlayıp durumlarının açık olduğunu onayladıktan sonra, otomatik uygulanacak etiketi seçmeye devam etmek için **İleri'yi** seçin.
 
-9. Otomatik **olarak uygulanacak** etiketi seçin sayfası için: **+** Etiket seç'i seçin, Duyarlılık etiketi seçin bölmesinden bir etiket  seçin ve sonra da Sonraki'yi **seçin**.
+9. **Otomatik uygulanacak bir etiket seçin sayfası için**: **+ Etiket seç'i** seçin, **Duyarlılık etiketi seçin bölmesinden bir etiket seçin** ve ardından **İleri'yi** seçin.
 
-10. İlkeniz posta konumunu Exchange: E-posta için ek ayarlar sayfasında **isteğe bağlı yapılandırmalar** belirtin:
+10. İlkeniz Exchange konumu içeriyorsa: **E-posta için ek ayarlar** sayfasında isteğe bağlı yapılandırmaları belirtin:
     
-    - **Aynı veya daha düşük önceliğe** sahip mevcut etiketleri otomatik olarak değiştir: Hem gelen hem de giden e-postalarda uygulanabilir, bu ayarı seçerek eşleşen bir duyarlılık etiketinin her zaman uygulanır. Bu ayarı seçmazsanız, daha yüksek önceliğe sahip veya el ile etiketlenmiş mevcut duyarlılık etiketine sahip e-postalara eşleşen bir duyarlılık etiketi uygulanmaz[](sensitivity-labels.md#label-priority-order-matters).
+    - **Aynı veya daha düşük önceliğe sahip mevcut etiketleri otomatik olarak değiştirin**: Hem gelen hem de giden e-postalar için geçerlidir, bu ayarı seçtiğinizde her zaman eşleşen bir duyarlılık etiketinin uygulanmasını sağlar. Bu ayarı seçmezseniz, [daha yüksek öncelikli](sensitivity-labels.md#label-priority-order-matters) mevcut duyarlılık etiketine sahip olan veya el ile etiketlenmiş e-postalara eşleşen bir duyarlılık etiketi uygulanmaz.
     
-    - Şifrelemeyi, kurum dışından alınan e-postalara **uygula: Bu** seçeneği tercih ettiyseniz, [](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) kurum dışından gönderilen e-postalar ve şifreleme içeren ilke etiketleriniz için, [](/azure/information-protection/configure-usage-rights#usage-rights-and-descriptions) kuruluş dışındaki yetkili bir kişinin Tam Denetim kullanım haklarına sahip olduğundan emin olmak için, bir Hak Yönetimi sahibi atamanız gerekir. Daha sonra şifrelemeyi kaldırmak veya organizasyonu kullanan kullanıcılara farklı kullanım hakları atamak için bu rol gerekli olabilir.
+    - **Kuruluşunuzun dışından alınan e-postalara şifreleme uygulama**: Bu seçeneği belirlediğinizde, kuruluşunuzdaki yetkili bir kişinin kuruluşunuzun dışından ve ilke etiketlerinizden şifrelemeyle gönderilen e-postalar için Tam Denetim [kullanım haklarına](/azure/information-protection/configure-usage-rights#usage-rights-and-descriptions) sahip olduğundan emin olmak için bir [Rights Management sahibi](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) atamanız gerekir. Bu rol daha sonra şifrelemeyi kaldırmak veya kuruluşunuzdaki kullanıcılar için farklı kullanım hakları atamak için gerekebilir.
         
-        Hak **Yönetimi sahibi atama için**, kuruluşa ait bir e-posta adresiyle tek bir kullanıcı belirtin. Bir posta kişisi, paylaşılan posta kutusu veya herhangi bir grup türü belirtmeyebilirsiniz, çünkü bunlar bu rolde desteklenmiyor.
+        **Rights Management sahibi atama** için, kuruluşunuza ait bir e-posta adresine göre tek bir kullanıcı belirtin. Bu rol için desteklenmediğinden posta kişisi, paylaşılan posta kutusu veya herhangi bir grup türü belirtmeyin.
 
-10. **İlkeyi** şimdi veya daha sonraki bir sayfada test etmek istediğinize karar verin: Otomatik  etiketleme politikasını benzetim modunda çalıştırmaya hazırsanız benzetim modunda ilkeyi çalıştır'ı seçin. Aksi takdirde **İlkeyi kapalı bırak'ı seçin**. **Sonraki'yi seçin**:
+10. **İlkeyi şimdi mi yoksa sonraki sürümlerde mi test etmek istediğinize karar verin** sayfası için: Otomatik etiketleme ilkesini şimdi simülasyon modunda çalıştırmaya hazırsanız İlkeyi **simülasyon modunda çalıştır'ı** seçin. Aksi takdirde **İlkeyi kapalı bırak'ı** seçin. **İleri'yi** seçin:
 
-    ![Yapılandırılmış otomatik etiket ilkesi testini kullanın.](../media/simulation-mode-auto-labeling-wizard.png)
+    ![Yapılandırılmış otomatik etiketleme ilkesini test edin.](../media/simulation-mode-auto-labeling-wizard.png)
 
-11. Özet **sayfası** için: Otomatik etiketleme ilkenizin yapılandırmasını gözden geçirerek gerekli değişiklikleri yapın ve yapılandırmayı tamamlayın.
+11. **Özet** sayfası için: Otomatik etiketleme ilkenizin yapılandırmasını gözden geçirin, gerekli değişiklikleri yapın ve yapılandırmayı tamamlayın.
 
-Bilgi  **korumasıAuto**  >  etiketleme sayfasında, benzetim modunda çalıştırmayı seçip seçmemenize bağlı olarak, benzetim bölümünde otomatik etiketleme ilkenizi görebilirsiniz. Yapılandırma ve durum ayrıntılarını görmek için ilkenizi seçin (örneğin, İlke **benzetimi hala çalışıyor**). Benzetim modundaki ilkeler için, **Hangi e-posta** veya belgelerin belirttiğiniz kurallarla eş olduğunu görmek için Eşlene öğeler sekmesini seçin.
+**Şimdi Information** **protectionAuto** >  etiketleme sayfasında, otomatik etiketleme ilkenizi simülasyon modunda çalıştırmayı seçip seçmediğinize bağlı olarak **Simülasyon** veya **Kapalı** bölümünde görürsünüz. Yapılandırmanın ve durumun ayrıntılarını görmek için ilkenizi seçin (örneğin, **İlke benzetimi hala çalışıyor**). Simülasyon modundaki ilkeler için, hangi e-postaların veya belgelerin belirttiğiniz kurallarla eşleşdiğini görmek için **Eşleşen öğeler** sekmesini seçin.
 
 İlkenizi doğrudan bu arabirimden değiştirebilirsiniz:
 
-- Kapalı bölümündeki bir ilke **için** İlkeyi düzenle **düğmesini** seçin.
+- **Kapalı** bölümündeki bir ilke için **İlkeyi düzenle** düğmesini seçin.
 
-- Benzetim bölümündeki **ilke** için, sayfanın **üst kısmında yer alan** İlkeyi düzenle seçeneğini iki sekmeden birini seçin:
+- **Simülasyon** bölümündeki ilke için, sayfanın üst kısmındaki **İlkeyi düzenle** seçeneğini her iki sekmeden de seçin:
 
     ![Otomatik etiketleme ilkesi seçeneğini düzenleyin.](../media/auto-labeling-edit.png)
 
-    Benzetim olmadan ilkeyi çalıştırmaya hazırsanız, **İlkeyi aç seçeneğini** belirleyin.
+    İlkeyi simülasyon olmadan çalıştırmaya hazır olduğunuzda İlkeyi **aç** seçeneğini belirleyin.
 
-Otomatik etiketleme ilkeleri, silinene kadar sürekli olarak çalıştırın. Örneğin, yeni ve değiştirilmiş dosyalar geçerli ilke ayarlarına dahil edilir.
+Otomatik etiketleme ilkeleri silinene kadar sürekli olarak çalışır. Örneğin, yeni ve değiştirilmiş dosyalar geçerli ilke ayarlarına eklenir.
 
 ### <a name="monitoring-your-auto-labeling-policy"></a>Otomatik etiketleme ilkenizi izleme
 
-Otomatik etiketleme ilkeniz açık olduktan sonra, seçtiğiniz dosya ve klasörlerin etiket ilerleme SharePoint OneDrive görüntüebilirsiniz. E-postalar otomatik olarak gönderildikçe etiketlenirler ve bu e-postalar etiket ilerleme durumuna dahil değildir.
+Otomatik etiketleme ilkeniz açıldıktan sonra, seçtiğiniz SharePoint ve OneDrive konumlarındaki dosyaların etiketleme ilerleme durumunu görüntüleyebilirsiniz. E-postalar otomatik olarak gönderildikçe etiketlendiğinden etiketleme ilerlemesine dahil değildir.
 
-Etiketleme ilerleme durumu, ilkeyle etiketlanacak dosyaları, son yedi gün içinde etiketlenmiş dosyaları ve etiketlenmiş toplam dosyaları içerir. Günde 25.000 dosya etiket en fazla olduğundan, bu bilgiler ilkeniz için geçerli etiketleme ilerleme durumu ve yine de etiketlenmiş olacak dosyaların sayısıyla ilgili görünürlük sağlar.
+Etiketleme ilerleme durumu, ilke tarafından etiketlenecek dosyaları, son yedi gün içinde etiketlenen dosyaları ve etiketlenen toplam dosyaları içerir. Günde en fazla 25.000 dosya etiketleme sayısı nedeniyle bu bilgiler, ilkenizin geçerli etiketleme ilerleme durumunu ve etiketlenecek dosya sayısını gösterir.
 
-İlkenizi ilk kez etkinleştirirken, en son veriler alınana kadar dosyaların etiketli olması için başlangıçta 0 değerinin olduğunu görüyorsunuz. Bu ilerleme durumu bilgileri her 48 saatte bir  dolar, böylece her gün hakkında en güncel verileri görmeyi beklersiniz. Otomatik etiketleme ilkesi seçince, bir çıkış bölmesinde ilke hakkında daha fazla ayrıntı görebilirsiniz; bu bölmede en çok 10 sitenin etiket ilerleme durumu da yer almaktadır. Bu çıkış bölmesindeki bilgiler, Otomatik etiket ana sayfasında görüntülenen toplanan ilke **bilgilerinden daha güncel** olabilir.
+İlkenizi ilk kez açtığınızda, en son veriler alınana kadar dosyaların etiketlenecekleri 0 değerini görürsünüz. Bu ilerleme bilgileri her 48 saatte bir güncelleştirilir, böylece diğer günlerle ilgili en güncel verileri görmeyi bekleyebilirsiniz. Otomatik etiketleme ilkesini seçtiğinizde, ilk 10 sitenin etiketleme ilerleme durumunu içeren bir açılır pencere bölmesinde ilke hakkında daha fazla ayrıntı görebilirsiniz. Bu açılır bölmedeki bilgiler **, Otomatik etiketleme** ana sayfasında görüntülenen toplu ilke bilgilerinden daha güncel olabilir.
 
-Ayrıca, uygun izinlere sahipken içerik gezginini kullanarak otomatik etiketleme [ilkenizin](data-classification-content-explorer.md) sonuçlarını [daabilirsiniz](data-classification-content-explorer.md#permissions):
+Ayrıca, uygun [izinlere](data-classification-content-explorer.md#permissions) sahip olduğunuzda [içerik gezginini](data-classification-content-explorer.md) kullanarak otomatik etiketleme ilkenizin sonuçlarını da görebilirsiniz:
 
-- **İçerik Gezgini Liste Görüntüleyicisi** rol grubu bir dosyanın etiketini görmenizi sağlar, ancak dosyanın içeriğini görmenizi engeller.
-- **İçerik Gezgini İçerik Görüntüleyicisi** rol **grubu, Information Protection** **ve Information Protection** Biraları rol grupları (şu anda önizlemede olan) dosyanın içeriğini görmenizi sağlar.
+- **İçerik Gezgini Liste Görüntüleyicisi** rol grubu, dosyanın içeriğini değil, dosyanın etiketini görmenize olanak tanır.
+- **İçerik Gezgini İçerik Görüntüleyicisi** rol grubu ve **Information Protection** ve **Information Protection Araştırmacı rol** grupları (şu anda önizleme aşamasındadır) dosyanın içeriğini görmenizi sağlar.
 
 > [!TIP]
-> Hassas bilgilerle birlikte belgeleri olan ancak etiketsiz konumları tanımlamak için içerik gezginini de kullanabilirsiniz. Bu bilgileri kullanarak, bu konumları otomatik etiketleme ilkenize eklemeyi ve tanımlanan hassas bilgi türlerini kurallar olarak eklemeyi düşünebilirsiniz.
+> İçerik gezginini, hassas bilgilere sahip belgeleri olan ancak etiketsiz olan konumları belirlemek için de kullanabilirsiniz. Bu bilgileri kullanarak otomatik etiketleme ilkenize bu konumları eklemeyi ve tanımlanan hassas bilgi türlerini kural olarak eklemeyi göz önünde bulundurun.
 
-### <a name="use-powershell-for-auto-labeling-policies"></a>Otomatik etiket ilkeleri için PowerShell kullanma
+### <a name="use-powershell-for-auto-labeling-policies"></a>Otomatik etiketleme ilkeleri için PowerShell kullanma
 
-Otomatik etiketleme ilkeleri [oluşturmak & için PowerShell](/powershell/exchange/scc-powershell) Güvenlik ve Uyumluluk Merkezi PowerShell'i kullanabilirsiniz. Başka bir ifadeyle, otomatik etiketleme ilkelerinizin oluşturulması ve bakımı tamamıyla komut dosyası olarak  yazabilirsiniz. Bu, aynı zamanda grup ve konumlar için birden çok URL OneDrive daha verimli bir SharePoint sağlar.
+Otomatik etiketleme ilkeleri oluşturmak ve yapılandırmak için [Güvenlik & Uyumluluk Merkezi PowerShell'i](/powershell/exchange/scc-powershell) kullanabilirsiniz. Bu, otomatik etiketleme ilkelerinizin oluşturulmasını ve bakımını tam olarak oluşturabileceğiniz anlamına gelir ve bu da OneDrive ve SharePoint konumlar için birden çok URL belirtmek için daha verimli bir yöntem sağlar.
 
-PowerShell'de komutları çalıştırmadan önce, Güvenlik ve [Uyumluluk Merkezi PowerShell& bağlanın](/powershell/exchange/connect-to-scc-powershell).
+PowerShell'de komutları çalıştırmadan önce [Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanmanız](/powershell/exchange/connect-to-scc-powershell) gerekir.
 
 Yeni bir otomatik etiketleme ilkesi oluşturmak için:
 
@@ -400,16 +402,16 @@ Yeni bir otomatik etiketleme ilkesi oluşturmak için:
 New-AutoSensitivityLabelPolicy -Name <AutoLabelingPolicyName> -SharePointLocation "<SharePointSiteLocation>" -ApplySensitivityLabel <Label> -Mode TestWithoutNotifications
 ```
 
-Bu komut, belirttiğiniz bir site için SharePoint etiketleme ilkesi oluşturur. Daha fazla OneDrive için bunun yerine *OneDriveLocation* parametresini kullanın.
+Bu komut, belirttiğiniz bir SharePoint sitesi için otomatik etiketleme ilkesi oluşturur. OneDrive bir konum için bunun yerine *OneDriveLocation* parametresini kullanın.
 
-Var olan otomatik etiketleme ilkesine daha fazla site eklemek için:
+Mevcut otomatik etiketleme ilkesine daha fazla site eklemek için:
 
 ```powershell
 $spoLocations = @("<SharePointSiteLocation1>","<SharePointSiteLocation2>")
 Set-AutoSensitivityLabelPolicy -Identity <AutoLabelingPolicyName> -AddSharePointLocation $spoLocations -ApplySensitivityLabel <Label> -Mode TestWithoutNotifications
 ```
 
-Bu komut, değişkende yeni SharePoint ve ardından var olan otomatik etiket ilkesine eklenen YENI URL'leri belirtir. Bunun OneDrive konum eklemek için *AddOneDriveLocation* parametresini Farklı bir değişkenle, örneğin *$OneDriveLocations.*
+Bu komut, var olan otomatik etiketleme ilkesine eklenen bir değişkendeki yeni SharePoint URL'lerini belirtir. Bunun yerine OneDrive konum eklemek için *AddOneDriveLocation* parametresini *$OneDriveLocations* gibi farklı bir değişkenle kullanın.
 
 Yeni bir otomatik etiketleme ilkesi kuralı oluşturmak için:
 
@@ -417,9 +419,9 @@ Yeni bir otomatik etiketleme ilkesi kuralı oluşturmak için:
 New-AutoSensitivityLabelRule -Policy <AutoLabelingPolicyName> -Name <AutoLabelingRuleName> -ContentContainsSensitiveInformation @{"name"= "a44669fe-0d48-453d-a9b1-2cc83f2cba77"; "mincount" = "2"} -Workload SharePoint
 ```
 
-Var olan bir otomatik etiketleme ilkesi için bu komut, A44669fe-0d48-453d-a9b1-2cc83f2cba77 varlık kimliğine sahip olan ABD sosyal güvenlik numarasının **(SSN)** hassas bilgi türünü algılayan yeni bir ilke kuralı oluşturur. Diğer hassas bilgi türlerinin varlık kimliklerini bulmak için, Hassas bilgi türü varlık [tanımları'ne bakın](sensitive-information-type-entity-definitions.md).
+Mevcut bir otomatik etiketleme ilkesi için bu komut, a44669fe-0d48-453d-a9b1-2cc83f2cba77 varlık kimliğine sahip olan **ABD sosyal güvenlik numarasının (SSN)** hassas bilgi türünü algılamak için yeni bir ilke kuralı oluşturur. Diğer hassas bilgi türlerinin varlık kimliklerini bulmak için [Bkz. Hassas bilgi türü varlık tanımları](sensitive-information-type-entity-definitions.md).
 
-Otomatik etiket ilkelerini destekleyen PowerShell cmdlet'leri, bunların kullanılabilir parametreleri ve bazı örnekleri hakkında daha fazla bilgi için, aşağıdaki cmdlet yardımı bakın:
+Otomatik etiketleme ilkelerini destekleyen PowerShell cmdlet'leri, bunların kullanılabilir parametreleri ve bazı örnekler hakkında daha fazla bilgi için aşağıdaki cmdlet yardımına bakın:
 
 - [Get-AutoSensitivityLabelPolicy](/powershell/module/exchange/get-autosensitivitylabelpolicy)
 - [New-AutoSensitivityLabelPolicy](/powershell/module/exchange/new-autosensitivitylabelpolicy)
@@ -429,18 +431,18 @@ Otomatik etiket ilkelerini destekleyen PowerShell cmdlet'leri, bunların kullan�
 - [Set-AutoSensitivityLabelPolicy](/powershell/module/exchange/set-autosensitivitylabelpolicy)
 - [Set-AutoSensitivityLabelRule](/powershell/module/exchange/set-autosensitivitylabelrule)
 
-## <a name="tips-to-increase-labeling-reach"></a>İpuçları ulaşmak için etiketi artırma
+## <a name="tips-to-increase-labeling-reach"></a>Etiketleme erişim oranını artırmak için İpuçları
 
-Otomatik etiketleme, sahip olduğu Office dosyalarını sınıflandırmanın, etiketlemenin ve korumanın en etkili yollarından biri olsa da, etikete ulaşmanızı artırmak için aşağıdaki yöntemlerden herhangi birini kullanarak bu dosyaları destekleyip destek alamayıp tamamlamayabilirsiniz:
+Otomatik etiketleme, kuruluşunuzun sahip olduğu Office dosyaları sınıflandırmanın, etiketlemenin ve korumanın en verimli yollarından biri olsa da, etiketleme erişiminizi artırmak için aşağıdaki yöntemlerden herhangi biriyle tamamlayıp tamamlayamadığını denetleyin:
 
-- Daha SharePoint Syntex ile bir belge anlama modeline duyarlılık etiketi [uygulayabilir, böylece](/microsoft-365/contentunderstanding/apply-a-sensitivity-label-to-a-model) bir kitaplıkta tanımlanan belgeler SharePoint otomatik olarak etiketlenir.
+- SharePoint Syntex ile belge [anlama modeline duyarlılık etiketi uygulayarak](/microsoft-365/contentunderstanding/apply-a-sensitivity-label-to-a-model) SharePoint kitaplığındaki tanımlanan belgelerin otomatik olarak etiketlenmiş olmasını sağlayabilirsiniz.
 
-- [Azure Information Protection birleşik etiketleme istemcisini kullanırken](/azure/information-protection/rms-client/aip-clientv2):
+- [Azure Information Protection birleşik etiketleme istemcisini](/azure/information-protection/rms-client/aip-clientv2) kullandığınızda:
 
-  - Ağ paylaşımları ve SharePoint Server kitaplıkları gibi şirket içi veri depolarında bulunan dosyalar için: Bu dosyalarda hassas bilgileri bulmak [](/azure/information-protection/deploy-aip-scanner) ve bunları doğru şekilde etiketlemek için tarayıcıyı kullanın. Bu dosyaları başka bir klasöre geçirmeyi veya SharePoint Microsoft 365, buluta taşımadan önce dosyaları etiketlemek için tarayıcıyı kullanın.
+  - Ağ paylaşımları ve SharePoint Sunucu kitaplıkları gibi şirket içi veri depolarındaki dosyalar için: Bu dosyalardaki hassas bilgileri bulmak ve uygun şekilde etiketlemek için [tarayıcıyı](/azure/information-protection/deploy-aip-scanner) kullanın. Bu dosyaları Microsoft 365'daki SharePoint geçirmeyi veya karşıya yüklemeyi planlıyorsanız, dosyaları buluta taşımadan önce etiketlemek için tarayıcıyı kullanın.
 
-  - Duyarlılık etiketlerini daha önce başka bir etiketleme çözümü kullandıysanız: PowerShell'i ve bu çözümlerden etiketleri yeniden kullanmak için [gelişmiş](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#migrate-labels-from-secure-islands-and-other-labeling-solutions) bir ayarı kullanın.
+  - Duyarlılık etiketlerini kullanmadan önce başka bir etiketleme çözümü kullandıysanız: Bu çözümlerden [etiketleri yeniden kullanmak için PowerShell ve gelişmiş bir ayar](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#migrate-labels-from-secure-islands-and-other-labeling-solutions) kullanın.
 
-- [Kullanıcılara hangi duyarlılık etiketlerini](https://support.microsoft.com/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) uygulayacaklarını eğitim verdikten sonra el ile etiketlemeyi teşvik edin. Kullanıcıların hangi etiketi uygulayacaklarını an güvenerek, varsayılan bir etiket ve zorunlu etiketlemeyi ilke ayarları olarak [yapılandırmayı göz önünde bulundurabilirsiniz](sensitivity-labels.md#what-label-policies-can-do).
+- Kullanıcılara hangi duyarlılık etiketlerinin uygulanacağı konusunda eğitim verdikten sonra [el ile](https://support.microsoft.com/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) etiketlemeyi teşvik edin. Kullanıcıların hangi etiketin uygulanacağını anlayacağından emin olduğunuzda, [ilke ayarları](sensitivity-labels.md#what-label-policies-can-do) olarak varsayılan bir etiket ve zorunlu etiketleme yapılandırmayı göz önünde bulundurun.
 
-Buna ek olarak, [konukların](/sharepoint/sensitive-by-default) dosyanın içeriğini en az bir DLP ilkesi tarayana kadar SharePoint'te yeni eklenen dosyalara erişmesini önlemek için varsayılan olarak yeni dosyaları hassas olarak işaretlemeyi göz önünde bulundurabilirsiniz.
+Ayrıca, en az bir DLP ilkesi dosyanın içeriğini tarayana kadar konukların yeni eklenen dosyalara erişmesini önlemek için SharePoint'de yeni dosyaları [varsayılan olarak hassas olarak işaretlemeyi](/sharepoint/sensitive-by-default) göz önünde bulundurun.

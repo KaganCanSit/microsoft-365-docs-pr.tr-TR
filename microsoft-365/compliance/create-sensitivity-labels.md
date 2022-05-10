@@ -18,18 +18,18 @@ search.appverid:
 - MOE150
 - MET150
 description: 'Tüm Microsoft Purview Information Protection çözümleri için bir gereksinim: Kuruluşunuzun verilerini sınıflandırmak ve korumak için duyarlılık etiketleri oluşturun, yapılandırın ve yayımlayın.'
-ms.openlocfilehash: 036835e77ca1e1d7c15435050d4577f5352f0ebd
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 7dc8cfc095167021df2cec093734ab9c1b101868
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65131284"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65286956"
 ---
 # <a name="create-and-configure-sensitivity-labels-and-their-policies"></a>Duyarlılık etiketleri ve ilkeleri oluşturma ve yapılandırma
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
 >*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Tüm Microsoft Purview Information Protection çözümleri [duyarlılık etiketleri](sensitivity-labels.md) kullanılarak uygulanır. Bu etiketleri oluşturmak ve yayımlamak için <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalına</a> gidin.
 

@@ -1,5 +1,5 @@
 ---
-title: Bilgi idaresi ve kayıt yönetimi için mevzuat gereksinimlerini karşılamanıza yardımcı olacak kaynaklar
+title: Veri yaşam döngüsü yönetimi ve kayıt yönetimi için mevzuat gereksinimlerini karşılamanıza yardımcı olacak kaynaklar
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -14,19 +14,21 @@ ms.localizationpriority: high
 search.appverid:
 - MOE150
 - MET150
-description: Bilgi idaresi ve kayıt yönetimi için mevzuat gereksinimlerini karşılamanıza yardımcı olacak kaynaklar.
-ms.openlocfilehash: d5f0c2d405d35147a7868635520521134d0ee8f0
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+description: Veri yaşam döngüsü yönetimi ve kayıt yönetimi için mevzuat gereksinimlerini karşılamanıza yardımcı olacak kaynaklar.
+ms.openlocfilehash: 2d66aa6ac7eee3fab0718e2850f62730d0bd66f1
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64759830"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65286438"
 ---
-# <a name="regulatory-requirements-for-information-governance-and-records-management"></a>Bilgi idaresi ve kayıt yönetimi için mevzuat gereksinimleri
+# <a name="regulatory-requirements-for-data-lifecycle-management-and-records-management"></a>Veri yaşam döngüsü yönetimi ve kayıt yönetimi için mevzuat gereksinimleri
 
 >*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-Microsoft 365'de bilgi idaresi ve kayıt yönetimiyle ilgili belirli mevzuat gereksinimlerini karşılamanıza yardımcı olması için bu sayfadaki kaynakları kullanın. Bu belgenin her bölümü bir veya daha fazla ilgili düzenlemeye odaklanır ve belirtilen gereksinimlere yardımcı olmak için Microsoft 365 nasıl yapılandırıldığına ilişkin mevcut kılavuzları veya üçüncü taraf değerlendirmelerini içerir.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Microsoft 365'de veri yaşam döngüsü yönetimi ve kayıt yönetimi için belirli yasal gereksinimleri karşılamanıza yardımcı olması için bu sayfadaki kaynakları kullanın. Bu belgenin her bölümü bir veya daha fazla ilgili düzenlemeye odaklanır ve belirtilen gereksinimlere yardımcı olmak için Microsoft 365 nasıl yapılandırıldığına ilişkin mevcut kılavuzları veya üçüncü taraf değerlendirmelerini içerir.
 
 Bu kaynaklar, Hizmet Güveni Portalı'nın [Veri Koruma Kaynakları, SSS ve Teknik İncelemeler](https://servicetrust.microsoft.com/ViewPage/TrustDocuments) sayfasından indirilebilir.
 

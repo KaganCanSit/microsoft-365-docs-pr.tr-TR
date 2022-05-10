@@ -18,18 +18,18 @@ search.appverid:
 - MOE150
 - MET150
 description: Bekletme etiketlerini yayımlama yönergelerini kullanarak, ihtiyacınız olan şeyleri korumak ve olmayanları silmek için bunları uygulamalara uygulayabilirsiniz.
-ms.openlocfilehash: dd20de86b17460d5b150b5bb576ae811e40eed32
-ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
+ms.openlocfilehash: 110115cad46e819ac32d482ab6ecd1eba2129201
+ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65187810"
+ms.lasthandoff: 05/09/2022
+ms.locfileid: "65285532"
 ---
 # <a name="publish-retention-labels-and-apply-them-in-apps"></a>Bekletme etiketlerini yayımlama ve uygulamalarda uygulama
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
 >*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 > [!NOTE]
 > Bu senaryo, [mevzuat kayıtları](records-management.md#records) da dahil olmak üzere tüm bekletme etiketi yapılandırmaları için desteklenir.
