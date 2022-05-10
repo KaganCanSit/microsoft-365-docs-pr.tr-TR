@@ -16,12 +16,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: bf3095b9178b4ff2e71d4ee5f652d9316f233746
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: a3d7548dc71c3a9d588d2a77fae5c4ed71f139f4
+ms.sourcegitcommit: 4cd8be7c22d29100478dce225dce3bcdce52644d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64664600"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65302341"
 ---
 # <a name="enable-corelight-data-integration"></a>Corelight veri tümleştirmesini etkinleştirin
 
@@ -67,52 +67,41 @@ Corelight tümleştirmesini etkinleştirmek için aşağıdaki adımları uygula
 ### <a name="step-3-configure-your-corelight-appliance-to-send-data-to-microsoft-365-defender"></a>3. Adım: Corelight gerecinizi Microsoft 365 Defender'a veri gönderecek şekilde yapılandırma
 
 > [!NOTE]
->  Tümleştirme Corelight Sensor yazılımı v24 ve sonraki sürümlerde genel kullanıma sunulacaktır. 
-
-v23 veya v22.1'de önizleme yapmak için GUI'deki yapılandırma bölümünü etkinleştirmek için yürütmeniz `corelight-client configuration update --enable.adfiot 1` gerekir.
-
-Buna ek olarak, GUI doğrulaması tüm v23 sürümlerinde yapılandırma bölümünde bir aracının yapılandırılmasını gerektirir.  Sağladığınız aracı gereklidir ancak aslında kullanılmaz. Microsoft 365 Defender'a veri göndermeyi etkinleştirmek için aşağıdaki adımları uygulamadan önce doğrulamanın başarılı olduğundan emin olmak için _kafka aracısı_ alanına girin`127.0.0.1:1234`.
-
-> [!NOTE]
+> Tümleştirme Corelight Sensor yazılımı v24 ve sonraki sürümlerde kullanılabilir.
+> 
 > Çözümün çalışması için algılayıcınızın hem Defender hem de Corelight bulut hizmetlerine ulaşması için İnternet bağlantısına ihtiyacınız olacaktır.
 
-#### <a name="enabling-in-the-corelight-sensor-gui"></a>Corelight Algılayıcı GUI'sinde etkinleştirme
+#### <a name="enable-the-integration-in-the-corelight-web-interface"></a>Corelight web arabiriminde tümleştirmeyi etkinleştirme
 
-1. Corelight Algılayıcı GUI yapılandırması bölümünde **Algılayıcı** \> **Dışarı Aktarma'yı** seçin.
-2. Listeden **KAFKA'YA AKTAR'a** gidin ve açmak için anahtarı seçin.
+1. Corelight web arabiriminde **Algılayıcı** \> **Dışarı Aktarma'ya** gidin.
 
-   :::image type="content" source="images/exporttokafka.png" alt-text="Kafka dışarı aktarma" lightbox="images/exporttokafka.png":::
+   :::image type="content" source="images/exporttodefender.png" alt-text="Kafka dışarı aktarma" lightbox="images/exporttodefender.png":::
 
-3. Ardından, **IOT için AZURE DEFENDER'A AKTAR'ı** açın ve 1. Adım'da belirtilen kiracı kimliğinizi KIRACı Kimliği alanına girin.
+2. **Microsoft Defender'a Dışarı Aktarma'yı** etkinleştirin.
+3. Microsoft 356 Defender Kiracı Kimliğinizi girin.
+4. İsteğe bağlı olarak şunları yapabilirsiniz:
+    - **Zeek Günlükleri'ni Dışla olarak** ayarlayın. Eklemeniz gereken en az günlük kümesi şunlardır: dns, conn, files, http, ssl, ssh, x509, snmp, smtp, ftp, sip, dhcp ve notice.
+    - **Microsoft Defender Günlük Filtresi** oluşturmayı seçin.
+5. **Değişiklikleri Uygula'yı** seçin.
 
-   :::image type="content" source="images/exporttodiot.png" alt-text="Iot dışarı aktarma" lightbox="images/exporttodiot.png":::
+#### <a name="enable-the-integration-in-the-corelight-client"></a>corelight-client'da tümleştirmeyi etkinleştirme
 
-4. **Değişiklikleri Uygula'yı** seçin.
+1. corelight-client'da aşağıdaki komutu kullanarak **Microsoft Defender'a Aktar'ı** etkinleştirin:
 
-   :::image type="content" source="images/corelightapply.png" alt-text="Değişiklikleri uygula simgesi" lightbox="images/corelightapply.png":::
+    ``` command
+    corelight-client configuration update \
+    --bro.export.defender.enable True
+    ```
 
-> [!NOTE]
-> Kafka'daki yapılandırma seçenekleri (Günlük Dışlama ve Filtreler hariç) değiştirilmemelidir. Yapılan değişiklikler yoksayılır.
+2. Kiracı kimliğinizi ayarlama
 
-#### <a name="enabling-in-the-corelight-client"></a>corelight-client'da etkinleştirme
+3. İsteğe bağlı olarak, belirli günlükleri dışlamak veya bir Microsoft Defender günlük filtresi oluşturmak için aşağıdaki komutu kullanabilirsiniz. Eklemeniz gereken en az günlük kümesi şunlardır: dns, conn, files, http, ssl, ssh, x509, snmp, smtp, ftp, sip, dhcp ve notice.
 
-corelight-client içindeki aşağıdaki komutu kullanarak **KAFKA'YA AKTAR** ve **IOT için AZURE DEFENDER'A AKTAR'ı** açabilirsiniz:
-
-`corelight-client configuration update --bro.export.kafka.defender.enable true --bro.export.kafka.defender.tenant\_id <your tenant>`.
-
-> [!IMPORTANT]
-> Kafka dışarı aktarmayı zaten kullanıyorsanız alternatif bir yapılandırma için Corelight Desteği'ne başvurun.
-
-Yalnızca en az günlük kümesinin gönderilmesini yapılandırmak için:
-
-1. Corelight Algılayıcı GUI'sinde Kafka bölümüne gidin
-2. **Dışlamak için Zeek günlüklerine** gidin
-3. **Tümünü** Seç
-4. Ardından, Microsoft'a akmaya devam ettiğinden emin olmak için aşağıdaki günlüklerin yanındaki **x** işaretini seçin:  
-    `dns  conn  files  http  ssl  ssh  x509  snmp  smtp  ftp  sip  dhcp  notice`
-5. **Değişiklikleri Uygula'yı** seçin
-
-Microsoft'a akan günlüklerin listesi zaman içinde genişleyebilir.
+   ``` command
+     corelight-client configuration update \
+    --bro.export.defender.exclude=<logs_to_exclude> \
+    --bro.export.defender.filter=<logs_to_filter>
+   ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

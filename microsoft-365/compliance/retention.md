@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: İhtiyaç duyduklarınızı korumanıza ve saklamadığınız şeyleri silmenize yardımcı olan bekletme ilkeleri ve bekletme etiketleri hakkında bilgi edinin.
-ms.openlocfilehash: 6fd2f56d6876b6a3832e869767880890486551db
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: c8ac850c77c97cbcc313108ffc74e05aa1735fde
+ms.sourcegitcommit: 4cd8be7c22d29100478dce225dce3bcdce52644d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65286934"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65302234"
 ---
 # <a name="learn-about-retention-policies-and-retention-labels"></a>Bekletme ilkeleri ve bekletme etiketleri hakkında bilgi edinin
 
@@ -101,9 +101,11 @@ Bekletme ilkelerinden farklı olarak, bekletme etiketlerinin bekletme ayarları,
 
 - Etikete dönüştürülecek içeriği tanımlamak için [eğitilebilir sınıflandırıcıları](classifier-learn-about.md) kullanın.
 
-- SharePoint belgeler için varsayılan bir etiket uygulayın.
+- SharePoint öğeleri veya Exchange iletileri için varsayılan bir etiket uygulayın.
 
-- İçeriği kalıcı olarak silinmeden önce gözden geçirmek için [değerlendirmeyi](./disposition.md) destekleyin.
+- Saklama süresi sonunda desteklenen eylemler:
+    - [Değerlendirmeyi bırakma](./disposition.md)  kalıcı olarak silinmeden önce içeriği gözden geçirin.
+    - Başka bir bekletme etiketini otomatik olarak uygulama
 
 - İçeriği etiket ayarlarının bir parçası olarak [bir kayıt](records-management.md#records) olarak işaretleyin ve saklama süresinin sonunda içerik silindiğinde her zaman [kullanımdan kaldırılma kanıtına](disposition.md#disposition-of-records) sahip olun.
 
@@ -219,14 +221,18 @@ Standart saklama etiketleri için (öğeleri [kayıt veya mevzuat kaydı](record
 
 - İçerikte zaten bir bekletme etiketi uygulandığında, mevcut etiket otomatik olarak kaldırılmaz veya olası bir özel durumla başka bir bekletme etiketiyle değiştirilmez: Mevcut etiket varsayılan etiket olarak uygulandı. Varsayılan bir etiket kullandığınızda, başka bir varsayılan etiketle değiştirilebileceği veya otomatik olarak kaldırılabildiği bazı senaryolar vardır.
 
-  Varsayılan etiket kullanılarak uygulandığında etiket davranışı hakkında daha fazla bilgi için:
-
-  - SharePoint için varsayılan etiket: [SharePoint için varsayılan etiket kullandığınızda etiket davranışı](create-apply-retention-labels.md#label-behavior-when-you-use-a-default-label-for-sharepoint)
-  - Outlook için varsayılan etiket: [Outlook klasörüne varsayılan bekletme etiketi uygulama](create-apply-retention-labels.md#applying-a-default-retention-label-to-an-outlook-folder)
+- İçerikte zaten bir bekletme etiketi uygulandığında, mevcut etiket otomatik olarak kaldırılmaz veya iki olası özel durumla başka bir bekletme etiketiyle değiştirilmez: 
+    
+    - Mevcut etiket, bekletme süresinin sonunda otomatik olarak farklı bir bekletme etiketi uygulayacak şekilde yapılandırılır.
+    - Mevcut etiket varsayılan etiket olarak uygulandı. Varsayılan bir etiket kullandığınızda, başka bir varsayılan etiketle değiştirilebileceği veya otomatik olarak kaldırılabildiği bazı senaryolar vardır. 
+        
+        Varsayılan etiket kullanılarak uygulandığında etiket davranışı hakkında daha fazla bilgi için:
+        - SharePoint için varsayılan etiket: [SharePoint için varsayılan etiket kullandığınızda etiket davranışı](create-apply-retention-labels.md#label-behavior-when-you-use-a-default-label-for-sharepoint)
+        - Outlook için varsayılan etiket: [Outlook klasörüne varsayılan bekletme etiketi uygulama](create-apply-retention-labels.md#applying-a-default-retention-label-to-an-outlook-folder)
 
 - Bekletme etiketi uygulayabilecek birden çok otomatik uygulama etiketi ilkesi varsa ve içerik birden çok ilkenin koşullarını karşılıyorsa, en eski otomatik uygulama etiket ilkesinin bekletme etiketi (oluşturulma tarihine göre) uygulanır.
 
-Bekletme etiketleri öğeleri kayıt veya mevzuat kaydı olarak işaretlediğinde, bu etiketler hiçbir zaman otomatik olarak değiştirilmez. Yalnızca kapsayıcının yöneticileri öğeleri kayıt olarak işaretleyen bekletme etiketlerini el ile değiştirebilir veya kaldırabilir, ancak mevzuat kayıtlarını değiştiremez. Daha fazla bilgi için bkz. [İzin verilen veya engellenen eylemlerle ilgili kısıtlamaları karşılaştırma](records-management.md#compare-restrictions-for-what-actions-are-allowed-or-blocked).
+Bekletme etiketleri öğeleri kayıt veya mevzuat kaydı olarak işaretlediğinde, bu etiketler yapılandırılmış saklama süreleri boyunca hiçbir zaman otomatik olarak değiştirilmez. Yalnızca kapsayıcının yöneticileri öğeleri kayıt olarak işaretleyen bekletme etiketlerini el ile değiştirebilir veya kaldırabilir, ancak mevzuat kayıtlarını değiştiremez. Daha fazla bilgi için bkz. [İzin verilen veya engellenen eylemlerle ilgili kısıtlamaları karşılaştırma](records-management.md#compare-restrictions-for-what-actions-are-allowed-or-blocked).
 
 #### <a name="monitoring-retention-labels"></a>Bekletme etiketlerini izleme
 
@@ -254,6 +260,7 @@ Kullanıcılar tarafından veya otomatik olarak uygulanan bekletme etiketleri i�
 |Saklama ayarlarını koruyup silebilen, yalnızca tutabilen veya yalnızca silebilen bekletme ayarları |Evet |Evet |
 |Desteklenen iş yükleri: <br />- Exchange <br />- SharePoint <br />- OneDrive <br />- Microsoft 365 grupları <br />- Skype Kurumsal <br />- Teams<br />- Yammer|<br /> Evet <br /> Evet <br /> Evet <br /> Evet <br /> Evet <br /> Evet <br /> Evet | <br /> Evet, ortak klasörler dışında <br /> Evet <br /> Evet <br /> Evet <br /> Hayır <br /> Hayır <br /> Hayır |
 |Bekletme otomatik olarak uygulanır | Evet | Evet |
+|Saklama süresinin sonunda farklı bekletme ayarlarını otomatik olarak uygulama | Hayır | Evet |
 |Koşullara göre uygulanan bekletme <br /> - hassas bilgi türleri, KQL sorgular ve anahtar sözcükler, eğitilebilir sınıflandırıcılar, bulut ekleri| Hayır | Evet |
 |Bekletme el ile uygulandı | Hayır | Evet |
 |Son kullanıcı etkileşimi | Hayır | Evet |

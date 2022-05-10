@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: 'Tüm Microsoft Purview Information Protection çözümleri için bir gereksinim: Kuruluşunuzun verilerini sınıflandırmak ve korumak için duyarlılık etiketleri oluşturun, yapılandırın ve yayımlayın.'
-ms.openlocfilehash: 7dc8cfc095167021df2cec093734ab9c1b101868
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: e35d6e317abc3fb32bb11a6bdf937f303212fc23
+ms.sourcegitcommit: 4cd8be7c22d29100478dce225dce3bcdce52644d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65286956"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65302364"
 ---
 # <a name="create-and-configure-sensitivity-labels-and-their-policies"></a>Duyarlılık etiketleri ve ilkeleri oluşturma ve yapılandırma
 
@@ -47,14 +47,14 @@ Kuruluşunuzun genel yöneticisi duyarlılık etiketlerinin tüm yönlerini olu�
     
     Bu seçeneği hemen görmüyorsanız önce **Tümünü göster'i** seçin.
 
-2. **Etiketler** sayfasında **+ Etiket oluştur'u** seçerek Yeni duyarlılık etiketi yapılandırmasını başlatın: 
+2. **Etiketler** sayfasında **+ Etiket oluştur'u** seçerek yeni duyarlılık etiketi yapılandırmasını başlatın: 
     
     ![Duyarlılık etiketi oluşturun.](../media/create-sensitivity-label-full.png)
 
     > [!NOTE]
     > Varsayılan olarak, kiracılarda herhangi bir etiket yoktur ve bunları oluşturmanız gerekir. Örnek resimdeki etiketler[, Azure Information Protection'dan geçirilen](/azure/information-protection/configure-policy-migrate-labels) varsayılan etiketleri gösterir.
 
-3. **Bu etiket için kapsamı tanımla** sayfasında, seçilen seçenekler, yapılandırabileceğiniz ayarlar için etiketin kapsamını ve yayımlandıklarında nerede görünür olacaklarını belirler:
+3. **Bu etiket için kapsamı tanımla** sayfasında, seçilen seçenekler yapılandırabileceğiniz ayarlar için etiketin kapsamını ve yayımlandıklarında nerede görünür olacağını belirler:
 
     ![Duyarlılık etiketlerinin kapsamları.](../media/sensitivity-labels-scopes.png)
 
@@ -70,7 +70,7 @@ Kuruluşunuzun genel yöneticisi duyarlılık etiketlerinin tüm yönlerini olu�
 
 5. Daha fazla etiket oluşturmak için bu adımları yineleyin. Ancak, bir alt etiket oluşturmak istiyorsanız, önce üst etiketi seçin ve **diğer eylemler** için **...** öğesini ve ardından **Alt etiket ekle'yi** seçin.
 
-6. İhtiyacınız olan tüm etiketleri oluşturduğunuzda, bunların sırasını gözden geçirin ve gerekirse bunları yukarı veya aşağı taşıyın. Etiketin sırasını değiştirmek için **Diğer eylemler** için **...** öğesini ve ardından **Yukarı taşı** veya **Aşağı taşı'yı** seçin. Daha fazla bilgi için genel bakış bilgilerindeki [Etiket önceliği (sipariş önemlidir)](sensitivity-labels.md#label-priority-order-matters) bölümüne bakın.
+6. İhtiyacınız olan tüm etiketleri oluşturduğunuzda, etiketlerin sırasını gözden geçirin ve gerekirse bunları yukarı veya aşağı taşıyın. Etiketin sırasını değiştirmek için **Diğer eylemler** için **...** öğesini ve ardından **Yukarı taşı** veya **Aşağı taşı'yı** seçin. Daha fazla bilgi için genel bakış bilgilerindeki [Etiket önceliği (sipariş önemlidir)](sensitivity-labels.md#label-priority-order-matters) bölümüne bakın.
 
 Var olan bir etiketi düzenlemek için etiketi seçin ve ardından **Etiketi düzenle** düğmesini seçin:
 
@@ -195,21 +195,21 @@ Duyarlılık etiketlerinin veya duyarlılık etiketi ilkelerinin silinmesini bet
 
 Üretim ortamında duyarlılık etiketlerini bir etiket ilkesinden kaldırmanız veya duyarlılık etiketlerini silmeniz pek olası değildir. İlk test aşamasında bu eylemlerden birini veya birini yapmanız gerekebilir. Bu eylemlerden birini yaptığınızda ne olacağını anladığınızdan emin olun.
 
-Etiket ilkesinden bir etiketi kaldırmak, etiketi silmekten daha az risklidir ve gerekirse etiketi daha sonra bir etiket ilkesine geri ekleyebilirsiniz:
+Etiket ilkesinden etiket kaldırmak, etiketi silmekten daha az risklidir ve gerekirse daha sonra her zaman geri eklenebilir. Etiket ilkesindeyse etiketi silemezsiniz.
 
-- Etiketin başlangıçta belirtilen kullanıcılara yayımlanmaması için etiket ilkesinden bir etiketi kaldırdığınızda, etiket ilkesi bir sonraki yenilendiğinde, kullanıcılar artık Office uygulaması seçmek üzere bu etiketi görmez. Ancak, etiket belgelere veya e-postalara uygulanmışsa, etiket bu içerikten kaldırılmaz. Etiket tarafından uygulanan tüm şifrelemeler kalır ve temel alınan koruma şablonu yayımlanır. 
-
-- Kaldırılan ancak daha önce içeriğe uygulanmış etiketler için Word, Excel ve PowerPoint için yerleşik etiketleme kullanan kullanıcılar, durum çubuğunda uygulanan etiket adını görmeye devam etmektedir. Benzer şekilde, SharePoint sitelere uygulanan kaldırılan etiketler **duyarlılık** sütununda etiket adını görüntülemeye devam ediyor.
+Etiketin başlangıçta belirtilen kullanıcılara yayımlanmaması için etiket ilkesinden bir etiketi kaldırdığınızda, etiket ilkesi bir sonraki yenilendiğinde, kullanıcılar artık Office uygulamalarında seçmek üzere bu etiketi görmez. Bu etiket zaten uygulanmışsa, etiket içerikten veya kapsayıcıdan kaldırılmaz. Örneğin, Word, Excel ve PowerPoint için masaüstü uygulamalarında yerleşik etiketleme kullanan kullanıcılar yine de durum çubuğunda uygulanan etiket adını görür. Uygulanan kapsayıcı etiketi, Teams veya SharePoint sitesini korumaya devam eder.
 
 Buna karşılık, bir etiketi sildiğinizde:
 
 - Etiket şifreleme uyguladıysa, önceden korunan içeriğin hala açılabilmesi için temel koruma şablonu arşivlenmiştir. Bu arşivlenmiş koruma şablonu nedeniyle, aynı ada sahip yeni bir etiket oluşturamazsınız. [PowerShell](/powershell/module/aipservice/remove-aipservicetemplate) kullanarak bir koruma şablonunu silmek mümkün olsa da, arşivlenmiş şablonla şifrelenmiş içeriği açmanız gerekmediğinden emin değilseniz bunu yapmayın.
 
-- Masaüstü uygulamaları için: Meta verilerdeki etiket bilgileri kalır, ancak ad eşlemesi için etiket kimliği artık mümkün olmadığından, kullanıcılar uygulanan etiket adını (örneğin, durum çubuğunda) görmez, bu nedenle kullanıcılar içeriğin etiketlenmediğini varsayar. Etiket şifreleme uyguladıysa, şifreleme kalır ve içerik açıldığında kullanıcılar artık arşivlenen koruma şablonunun adını ve açıklamasını görmeye devam eder.
+- SharePoint veya OneDrive depolanan belgeler [için ve Office dosyaları için duyarlılık etiketlerini etkinleştirdiniz](sensitivity-labels-sharepoint-onedrive-files.md): Belgeyi Web için Office açtığınızda, uygulamada etiketin uygulandığını görmezsiniz ve etiket adı artık SharePoint **duyarlılık** sütununda gösterilmez. Silinen etiket şifreleme uyguladıysa ve hizmetler şifrelenmiş içeriği işleyebilirse, şifreleme kaldırılır. Bu hizmetlerden Egress eylemler aynı sonucu verir. Örneğin, bir Office masaüstü veya mobil uygulamayla indirme, kopyalama, taşıma ve açma. Etiket bilgileri dosyanın meta verilerinde kalsa da, uygulamalar artık etiket kimliğini bir görünen adla eşleyemez, bu nedenle kullanıcılar bir dosyanın etiketlenmemiş olduğunu varsayar.
 
-- Web üzerinde Office için: Kullanıcılar etiket adını durum çubuğunda veya **Duyarlılık** sütununda görmez. Meta verilerdeki etiket bilgileri yalnızca etiket şifreleme uygulamadıysa kalır. Etiket şifreleme uyguladıysa ve [SharePoint ve OneDrive için duyarlılık etiketlerini](sensitivity-labels-sharepoint-onedrive-files.md) etkinleştirdiyseniz, meta verilerdeki etiket bilgileri kaldırılır ve şifreleme kaldırılır. 
+- SharePoint ve OneDrive dışında depolanan belgeler için veya Office dosyalar ve e-postalar için duyarlılık etiketlerini etkinleştirmediyseniz: İçeriği açtığınızda, meta verilerdeki etiket bilgileri kalır, ancak ad eşlemesi için etiket kimliği olmadan kullanıcılar uygulanan etiket adını (örneğin, masaüstü uygulamalarının durum çubuğunda) görmez. Silinen etiket şifreleme uyguladıysa, şifreleme kalır ve kullanıcılar artık arşivlenen koruma şablonunun adını ve açıklamasını görmeye devam eder.
 
-Bir etiket ilkesinden duyarlılık etiketini kaldırdığınızda veya duyarlılık etiketini sildiğinizde, bu değişikliklerin tüm kullanıcılara ve hizmetlere çoğaltılması 24 saat kadar sürebilir.
+- SharePoint ve Teams siteleri gibi kapsayıcılar için: Etiket kaldırılır ve bu etiketle yapılandırılan tüm ayarlar artık zorunlu tutulmaz. Bu eylem genellikle SharePoint siteler için 48-72 saat sürer ve Teams ve Microsoft 365 Grupları için daha hızlı olabilir.
+
+Tüm etiket değişikliklerinde olduğu gibi, bir etiket ilkesinden duyarlılık etiketinin kaldırılması veya duyarlılık etiketinin silinmesi tüm kullanıcılara ve hizmetlere çoğaltılması zaman alır.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

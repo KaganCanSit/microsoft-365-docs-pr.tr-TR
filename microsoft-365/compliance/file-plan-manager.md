@@ -17,12 +17,12 @@ search.appverid:
 ms.assetid: af398293-c69d-465e-a249-d74561552d30
 description: Dosya planı bekletme etiketleri için gelişmiş yönetim özellikleri sağlar.
 ms.custom: seo-marvel-may2020
-ms.openlocfilehash: 5ed2ccfa1c26efc8e55f048e24de005701417576
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: d025dc7637b9c7b494a5bff3447fe4429ba24701
+ms.sourcegitcommit: 4cd8be7c22d29100478dce225dce3bcdce52644d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65286088"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65302211"
 ---
 # <a name="use-file-plan-to-create-and-manage-retention-labels"></a>Bekletme etiketleri oluşturmak ve yönetmek için dosya planını kullanma
 
@@ -221,9 +221,11 @@ yeni bekletme etiketlerini içeri aktarmak için indirilen şablonu doldurmanız
 
 Şu anda içeri aktarma için desteklenmeyen etiket ayarları:
 
-- Çok aşamalı değerlendirme: Bekletme etiketlerini bir şablonla içeri aktardığınızda tek bir değerlendirme gözden geçirme aşamasının ayarlarını yapılandırabilirsiniz ancak ek gözden geçirme aşamaları belirtemezsiniz. Bunun yerine, içeri aktarma başarılı olduktan sonra bunları uyumluluk merkezinde yapılandırın.
+- Çok aşamalı değerlendirme: Bekletme etiketlerini bir şablonla içeri aktardığınızda tek bir değerlendirme gözden geçirme aşamasının ayarlarını yapılandırabilirsiniz ancak ek gözden geçirme aşamaları belirtemezsiniz. Bunun yerine, içeri aktarma başarılı olduktan sonra bunları uyumluluk portalında yapılandırın.
 
-- Bu kaydın kilidini varsayılan olarak açın (şu anda önizleme aşamasında): Bu ayar şablonda içeri aktarılamaz ve içeri aktarma işlemi başarılı olduktan sonra uyumluluk merkezinde bu ayarı seçemezsiniz.
+- Bu kaydın kilidini varsayılan olarak açın (şu anda önizleme aşamasında): Bu ayar şablonda içeri aktarılamaz ve içeri aktarma işlemi başarılı olduktan sonra uyumluluk portalında bu ayarı seçemezsiniz.
+
+- Değiştirme etiketi (şu anda önizleme aşamasında): Bu ayar şablonda içeri aktarılamaz, ancak içeri aktarma işlemi başarılı olduktan sonra uyumluluk portalında bu ayarı seçebilirsiniz.
 
 
 ## <a name="next-steps"></a>Sonraki adımlar

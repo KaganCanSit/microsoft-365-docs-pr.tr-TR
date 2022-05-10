@@ -19,12 +19,12 @@ ms.collection:
 description: Exchange Online Protection (EOP) ve Office 365 için Defender güvenlik ayarları için en iyi yöntemler nelerdir? Standart koruma için geçerli öneriler neleri içerir? Daha katı olmak istiyorsanız ne kullanılmalıdır? Ayrıca Office 365 için Defender kullanıyorsanız ne kadar ekstra alırsınız?
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 72d4f64ca00defe26ddaff7fe27d641cb65f13be
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: c6e2b52c9dbde60dfb554dd92c8a0cae2ba05ced
+ms.sourcegitcommit: 4cd8be7c22d29100478dce225dce3bcdce52644d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65130527"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65302298"
 ---
 # <a name="recommended-settings-for-eop-and-microsoft-defender-for-office-365-security"></a>EOP ve Office 365 için Microsoft Defender güvenliği için önerilen ayarlar
 
@@ -71,11 +71,11 @@ Bu makalede varsayılan ayarlar ve kullanıcılarınızın korunmasına yardımc
 |**İstenmeyen posta ayarları olarak işaretle**|Kapalı|Kapalı|Kapalı|Bu ayarların çoğu ASF'nin bir parçasıdır. Daha fazla bilgi için bu makalenin [istenmeyen posta önleme ilkelerindeki ASF ayarları](#asf-settings-in-anti-spam-policies) bölümüne bakın.|
 |**Belirli dilleri içerir** <br/><br/> _EnableLanguageBlockList_ <br/><br/> _LanguageBlockList_|**Kapalı** <br/><br/> `$false` <br/><br/> Boş|**Kapalı** <br/><br/> `$false` <br/><br/> Boş|**Kapalı** <br/><br/> `$false` <br/><br/> Boş|Bu ayar için belirli bir önerimiz yok. İş gereksinimlerinize göre belirli dillerde iletileri engelleyebilirsiniz.|
 |**Bu ülkelerden** <br/><br/> _EnableRegionBlockList_ <br/><br/> _RegionBlockList_|**Kapalı** <br/><br/> `$false` <br/><br/> Boş|**Kapalı** <br/><br/> `$false` <br/><br/> Boş|**Kapalı** <br/><br/> `$false` <br/><br/> Boş|Bu ayar için belirli bir önerimiz yok. İş gereksinimlerinize göre belirli ülkelerden gelen iletileri engelleyebilirsiniz.|
-|**Test modu** (_TestModeAction_)|**Hiçbiri**|**Hiçbiri**|**Hiçbiri**|Bu ayar ASF'nin bir parçasıdır. Daha fazla bilgi için bu makalenin [istenmeyen posta önleme ilkelerindeki ASF ayarları](#asf-settings-in-anti-spam-policies) bölümüne bakın.|
+|**Test modu** (_TestModeAction_)|**Yok**|**Yok**|**Yok**|Bu ayar ASF'nin bir parçasıdır. Daha fazla bilgi için bu makalenin [istenmeyen posta önleme ilkelerindeki ASF ayarları](#asf-settings-in-anti-spam-policies) bölümüne bakın.|
 |**Eylem**||||**Karantina iletisini** seçtiğiniz her yerde **Karantina ilkesi** seçin kutusu kullanılabilir. Karantina ilkeleri, kullanıcıların karantinaya alınan iletilere ne yapmalarına izin verılacağını tanımlar. <br/><br/> Yeni bir istenmeyen posta önleme ilkesi oluşturduğunuzda, boş bir değer varsayılan karantina ilkesinin söz konusu karar tarafından karantinaya alınan iletilerin geçmiş özelliklerini tanımlamak için kullanıldığı anlamına gelir ( **Yüksek güvenilirlikli kimlik avı** için AdminOnlyAccessPolicy; Diğer her şey için DefaultFullAccessPolicy). <br/><br/> Yöneticiler, kullanıcılar için daha kısıtlayıcı veya daha az kısıtlayıcı özellikler tanımlayan özel karantina ilkeleri oluşturabilir ve seçebilir. Daha fazla bilgi için bkz [. Karantina ilkeleri](quarantine-policies.md).|
 |**İstenmeyen posta** algılama eylemi <br/><br/> _İstenmeyen Posta_|**İletiyi Gereksiz E-posta klasörüne taşıma** <br/><br/> `MoveToJmf`|**İletiyi Gereksiz E-posta klasörüne taşıma** <br/><br/> `MoveToJmf`|**Karantina iletisi** <br/><br/> `Quarantine`||
-|**Yüksek güvenilirlikli istenmeyen posta** algılama eylemi <br/><br/> _HighConfidenceSpamAction_|**Karantina iletisi** <br/><br/> `MoveToJmf`|**Karantina iletisi** <br/><br/> `Quarantine`|**Karantina iletisi** <br/><br/> `Quarantine`||
-|**Kimlik avı** algılama eylemi <br/><br/> _PhishSpamAction_|**Karantina iletisi** <br/><br/> `MoveToJmf`|**Karantina iletisi** <br/><br/> `Quarantine`|**Karantina iletisi** <br/><br/> `Quarantine`||
+|**Yüksek güvenilirlikli istenmeyen posta** algılama eylemi <br/><br/> _HighConfidenceSpamAction_|**İletiyi Gereksiz E-posta klasörüne taşıma** <br/><br/> `MoveToJmf`|**Karantina iletisi** <br/><br/> `Quarantine`|**Karantina iletisi** <br/><br/> `Quarantine`||
+|**Kimlik avı** algılama eylemi <br/><br/> _PhishSpamAction_|**İletiyi Gereksiz E-posta klasörüne taşıma**<sup>\*</sup> <br/><br/> `MoveToJmf`|**Karantina iletisi** <br/><br/> `Quarantine`|**Karantina iletisi** <br/><br/> `Quarantine`|<sup>\*</sup> Varsayılan değer, Varsayılan istenmeyen posta önleme ilkesinde ve PowerShell'de oluşturduğunuz yeni istenmeyen posta önleme ilkelerinde **iletiyi Gereksiz E-posta klasörüne taşı'dır** . Varsayılan değer, Microsoft 365 Defender portalında oluşturduğunuz yeni istenmeyen posta önleme ilkelerinde **karantina iletisidir**.|
 |**Yüksek güvenilirlikli kimlik avı** algılama eylemi <br/><br/> _HighConfidencePhishAction_|**Karantina iletisi** <br/><br/> `Quarantine`|**Karantina iletisi** <br/><br/> `Quarantine`|**Karantina iletisi** <br/><br/> `Quarantine`||
 |**Toplu** algılama eylemi <br/><br/> _BulkSpamAction_|**İletiyi Gereksiz E-posta klasörüne taşıma** <br/><br/> `MoveToJmf`|**İletiyi Gereksiz E-posta klasörüne taşıma** <br/><br/> `MoveToJmf`|**Karantina iletisi** <br/><br/> `Quarantine`||
 |**İstenmeyen postaları bu kadar gün boyunca karantinada tutma** <br/><br/> _QuarantineRetentionPeriod_|15 gün<sup>\*</sup>|30 gün|30 gün|<sup>\*</sup> Varsayılan değer, varsayılan istenmeyen posta önleme ilkesinde ve PowerShell'de oluşturduğunuz yeni istenmeyen posta önleme ilkelerinde 15 gündür. varsayılan değer, Microsoft 365 Defender portalında oluşturduğunuz yeni istenmeyen posta önleme ilkelerinde 30 gündür. <br/><br/> Bu değer, kimlik avı önleme ilkeleri tarafından karantinaya alınan iletileri de etkiler. Daha fazla bilgi için bkz. [EOP'de karantinaya alınan e-posta iletileri](quarantine-email-messages.md).|
@@ -163,6 +163,8 @@ Kötü amaçlı yazılımdan koruma ilkeleri oluşturmak ve yapılandırmak içi
 
 Bu ayarlar hakkında daha fazla bilgi için bkz. [Kimlik sahtekarlık ayarları](set-up-anti-phishing-policies.md#spoof-settings). Bu ayarları yapılandırmak için bkz. [EOP'de kimlik avı önleme ilkelerini yapılandırma](configure-anti-phishing-policies-eop.md).
 
+Kimlik sahtekarlığı ayarları birbiriyle ilişkilidir, ancak **İlk kişiyi göster güvenlik ipucu** ayarının kimlik sahtekarlığı ayarlarına bağımlılığı yoktur.
+
 |Güvenlik özelliği adı|Varsayılan|Standard|Sıkı|Açıklama ekleme|
 |---|:---:|:---:|:---:|---|
 |**Kimlik avı eşiği & koruma**|||||
@@ -224,18 +226,6 @@ Bu ayarlar hakkında daha fazla bilgi için bkz[. Office 365 için Microsoft Def
 #### <a name="eop-anti-phishing-policy-settings-in-microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender'da EOP kimlik avı önleme ilkesi ayarları
 
 Bunlar [, EOP'deki istenmeyen posta önleme ilkesi ayarlarında kullanılabilen ayarlarla](#eop-anti-spam-policy-settings) aynıdır.
-
-Kimlik sahtekarlığı ayarları birbiriyle ilişkilidir, ancak **İlk kişiyi göster güvenlik ipucu** ayarının kimlik sahtekarlığı ayarlarına bağımlılığı yoktur.
-
-|Güvenlik özelliği adı|Varsayılan|Standard|Sıkı|Açıklama ekleme|
-|---|:---:|:---:|:---:|---|
-|**Kimlik avı eşiği & koruma**|||||
-|**Kimlik sahtekarı zekasını etkinleştirme** <br/><br/> _EnableSpoofIntelligence_|Seçili <br/><br/> `$true`|Seçili <br/><br/> `$true`|Seçili <br/><br/> `$true`||
-|**Eylem**|||||
-|**İletinin yanıltma olarak algılanırsa** <br/><br/> _AuthenticationFailAction_|**İletiyi alıcıların Gereksiz E-posta klasörlerine taşıma** <br/><br/> `MoveToJmf`|**İletiyi alıcıların Gereksiz E-posta klasörlerine taşıma** <br/><br/> `MoveToJmf`|**İletiyi karantinaya al** <br/><br/> `Quarantine`|Bu ayar, kimlik sahtekarlığı [bilgileri içgörülerinde](learn-about-spoof-intelligence.md) gösterildiği gibi otomatik olarak engellenen veya [Kiracı İzin Ver/Engelle Listesi'nde](tenant-allow-block-list.md) el ile engellenen sahte gönderenler için geçerlidir. <br/><br/> **İletiyi karantinaya al'ı** seçerseniz, **kullanıcıların karantinaya** alınan iletilere ne yapmalarına izin verildiğini tanımlayan karantina ilkesini seçmek için bir Karantina ilkesi uygula kutusu kullanılabilir. Yeni bir kimlik avı önleme ilkesi oluşturduğunuzda boş bir değer, karantinaya alınan iletilerin kimlik sahtekarlığına yönelik geçmiş özelliklerini tanımlamak için varsayılan karantina ilkesinin kullanıldığı anlamına gelir (DefaultFullAccessPolicy). <br/><br/> Yöneticiler, karantinadaki bu iletilere hangi alıcıların izin verebileceğini tanımlayan özel bir karantina ilkesi oluşturabilir ve seçebilir. Daha fazla bilgi için bkz [. Karantina ilkeleri](quarantine-policies.md).|
-|**İlk kişi güvenlik ipucu göster** <br/><br/> _EnableFirstContactSafetyTips_|Seçili değil <br/><br/> `$false`|Seçili <br/><br/> `$true`|Seçili <br/><br/> `$true`|Daha fazla bilgi için bkz. [İlk kişi güvenlik ipucu](set-up-anti-phishing-policies.md#first-contact-safety-tip).|
-|**Kimlik sahtekarlığına yönelik kimliği doğrulanmamış gönderenler için göster (?)** <br/><br/> _EnableUnauthenticatedSender_|Seçili <br/><br/> `$true`|Seçili <br/><br/> `$true`|Seçili <br/><br/> `$true`|Kimliği belirsiz gönderenler için Outlook'da gönderenin fotoğrafına soru işareti (?) ekler. Daha fazla bilgi için bkz. [Kimliği doğrulanmamış gönderen](set-up-anti-phishing-policies.md#unauthenticated-sender).|
-|**"via" etiketini göster** <br/><br/> _EnableViaTag_|Seçili <br/><br/> `$true`|Seçili <br/><br/> `$true`|Seçili <br/><br/> `$true`|DKIM imzasında etki alanından veya **MAIL FROM** adresinden farklıysa Kimden adresine bir via etiketi (fabrikam.com aracılığıyla chris@contoso.com) ekler. <br/><br/> Daha fazla bilgi için bkz. [Kimliği doğrulanmamış gönderen](set-up-anti-phishing-policies.md#unauthenticated-sender).|
 
 ### <a name="safe-attachments-settings"></a>ek ayarlarını Kasa
 

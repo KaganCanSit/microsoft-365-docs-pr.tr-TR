@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: İstediğinizi korumak ve istemediğinizden kurtulmak için bekletme ilkesinde veya bekletme etiketi ilkesinde yapılandırabileceğiniz ayarları anlayın.
-ms.openlocfilehash: 39c0258cb4b471e05bae24d0d35c708a42252219
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: ec7743c2e72016c606decb1346bdd558e40ae412
+ms.sourcegitcommit: 4cd8be7c22d29100478dce225dce3bcdce52644d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65285390"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65302144"
 ---
 # <a name="common-settings-for-retention-policies-and-retention-label-policies"></a>Bekletme ilkeleri ve bekletme etiketi ilkeleri için yaygın ayarlar
 
@@ -396,6 +396,8 @@ Saklama süresinin sonunda, içeriğin kalıcı olarak silinmesini isteyip istem
 
 ![Bekletme ayarları sayfası.](../media/b05f84e5-fc71-4717-8f7b-d06a29dc4f29.png)
 
+Sonraki bölümde açıklandığı gibi bekletme etiketlerinin başka bir seçeneği vardır; kendi saklama süresine sahip başka bir bekletme etiketi uygulamak için.
+
 Bekletmeyi yapılandırmadan önce, önce ilgili iş yükleri için kapasite ve depolama sınırları hakkında bilgi edinin:
 
 - SharePoint ve OneDrive için, korunan öğeler sitenin depolama kotasında yer alan Koruma Saklama kitaplığında depolanır. Daha fazla bilgi için SharePoint belgelerinde [site depolama sınırlarını yönetme](/sharepoint/manage-site-collection-storage-limits) bölümüne bakın.
@@ -403,6 +405,55 @@ Bekletmeyi yapılandırmadan önce, önce ilgili iş yükleri için kapasite ve 
 - Tutulan iletilerin posta kutularında depolandığı Exchange, Teams ve Yammer için bkz. [Exchange Online sınırları](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits) ve [otomatik genişletme arşivlemeyi](autoexpanding-archiving.md) etkinleştirme.
     
     Kullanıcılar tarafından veya ilke ayarlarından otomatik olarak kısa bir süre içinde yüksek miktarda e-postanın silindiği aşırı durumlarda, Exchange kullanıcının birincil posta kutusunda bulunan Kurtarılabilir Öğeler klasöründeki öğeleri arşiv posta kutusunda kurtarılabilir öğeler klasörüne daha sık taşımak için de yapılandırmanız gerekebilir. Adım adım yönergeler için bkz. [Bekleyen posta kutuları için Kurtarılabilir Öğeler kotasını artırma](increase-the-recoverable-quota-for-mailboxes-on-hold.md).
+
+#### <a name="relabeling-at-the-end-of-the-retention-period"></a>Saklama süresinin sonunda yeniden etiketleme
+
+> [!NOTE]
+> Bu seçenek şu anda önizleme aşamasında kullanıma sunulmuştur ve değiştirilebilir.
+
+Bekletme süresinin sonunda otomatik olarak farklı bir bekletme etiketi uygulayacak şekilde bir bekletme etiketi yapılandırdığınızda, öğe yeni seçilen bekletme etiketinin bekletme ayarlarına tabi olur. Bu seçenek, öğenin bekletme ayarlarını otomatik olarak değiştirmenize olanak tanır.
+
+Birincil bekletme etiketini oluşturup kaydettikten sonra değiştirme etiketini değiştirebilirsiniz. Birincil bekletme etiketi uygulanmış olan ve yapılandırılmış saklama süresi içinde olan öğeler için, değiştirme etiketi değişikliği bu öğelerle eşitlenir. Diğer etiket değişikliklerinde olduğu gibi, bu eşitleme dönemi için 7 güne kadar izin verin.
+
+Değiştirme etiketi için genellikle birincil saklama etiketinden daha uzun saklama süresine sahip bir etiket seçersiniz. Ancak, saklama süresinin ne zaman başlatıldığını belirten etiket ayarı nedeniyle bu durum geçerli olmayabilir. Örneğin, birincil bekletme etiketi, öğe oluşturulduğunda bekletme süresini başlatacak şekilde yapılandırılır ve değiştirme etiketi etiketlendiğinde veya bir olay gerçekleştiğinde bekletme süresini başlatır.
+
+Etiketin [öğeyi kayıt olarak mı yoksa düzenli kayıt olarak mı işaretlediği](declare-records.md) konusunda da bir değişiklik varsa, değiştirme bekletme etiketi söz konusu öğe [için hangi eyleme izin verilen veya engellenen eylemlerin kısıtlamalarını](records-management.md#records) da değiştirebilir.
+
+##### <a name="relabeling-example-configuration"></a>Örnek yapılandırmayı yeniden etiketleme
+
+İçerik oluşturulduktan sonra üç yıl boyunca saklanması için sektör uyumluluğu gereksinimi için bir bekletme etiketi oluşturup yapılandırıp öğeyi kayıt olarak işaretlersiniz. Bu etiket uygulandığında, bir kaydın kısıtlamalarından biri olduğundan kullanıcılar öğeyi kendi uygulamalarından silemez.
+
+Üç yılın sonunda, iç uyumluluk ilkeleri nedeniyle içeriği otomatik olarak iki yıl daha saklamak istiyorsunuz, ancak bu yapılandırmanın geçerli olduğu kısıtlamalarla bir kayıt olarak işaretlemeniz gerekmez.
+
+Yapılandırmayı tamamlamak için, bekletme süresinin sonunda etiketi değiştirmek için etiket ayarını seçersiniz ve içerik oluşturulduktan sonra beş yıl boyunca içeriği saklayan ve öğeyi kayıt olarak işaretlemeyen bir etiket seçersiniz. 
+
+Bu birleştirilmiş ayarlarla, kullanıcılar üç yıl sonra öğeyi kendi uygulamalarından silebilir ancak beş yıl boyunca eBulma aramaları için erişilebilir olmaya devam eder.
+
+##### <a name="considerations-for-the-relabeling-option"></a>Yeniden etiketleme seçeneğiyle ilgili dikkat edilmesi gerekenler
+
+- Bir mevzuat kaydını yeniden etiketleyemezsiniz, ancak değiştirme etiketi içeriği yasal kayıt olarak işaretlenecek şekilde yapılandırılabilir.
+
+- Değiştirme etiketi olarak seçilen bir bekletme etiketini silemezsiniz.
+
+- Başka bir değiştirme etiketi uygulamak üzere yapılandırılmış bir değiştirme etiketi seçebilirsiniz. Bir öğenin sahip olabileceği değiştirme etiketlerinin sayısıyla ilgili bir sınır yoktur.
+
+- Değiştirme etiketi öğeyi bir kayıt veya düzenleme kaydı olarak işaretlerse ancak dosya şu anda kullanıma alınmış olduğundan uygulanamıyorsa, dosya yeniden iade edildiğinde veya kullanıma alma işlemi atıldığında yeniden etiketleme işlemi yeniden denenecektir.
+
+- Bu önizleme için bilinen bir sorun olarak, değiştirme etiketi kullanıcılara Outlook yalnızca aynı konum için yayımlanmış bir etiket ilkesine eklendiğinde veya yalnızca silme için yapılandırıldığında görünür.
+
+##### <a name="configuration-paths-for-relabeling"></a>Yeniden etiketleme için yapılandırma yolları
+
+Bekletme süresinin sonunda yeniden etiketleme seçeneği, bir bekletme etiketi oluşturduğunuzda iki yapılandırma yoluna sahiptir:
+
+- başlangıçta birincil etikete sahip içeriği saklamanız gerekiyorsa (en tipik): **Etiket ayarlarını tanımla** sayfasında **Öğeleri süresiz olarak veya belirli bir süre boyunca koru'ya** tıklayın ve bekletme süresini belirtin. Ardından **Bekletme süresinden sonra ne olacağını seçin** sayfasında **Etiketi** >  değiştir Etiket **seçin'i** seçin.
+
+- İlk olarak birincil etikete sahip içeriği saklamanız gerekmiyorsa: **Etiket ayarlarını tanımla** sayfasında Belirli **bir süreden sonra eylemleri zorunlu tut'u** seçin, bekletme süresini belirtin ve etiketi **değiştir Etiketi değiştir'i** >  **seçin.**
+
+Her iki durumda da, değiştirme etiketinin zaten oluşturulması gerekir, ancak mevcut bir etiket ilkesine dahil edilmesi gerekmez.
+
+![Bekletme süresinden sonra etiket seçeneğini değiştirin.](../media/change-label-option.png)
+
+Alternatif olarak, bu **Bekletme süresinden sonra ne olacağını** seçin sayfasında Değerlendirme [gözden geçirmesi](disposition.md#disposition-reviews) başlat etiket ayarı seçiliyse, değerlendirme **gözden geçirenler** değiştirme etiketini el ile seçebilir.
 
 ### <a name="deleting-content-thats-older-than-a-specific-age"></a>Belirli bir yaştan eski içeriği silme
 
