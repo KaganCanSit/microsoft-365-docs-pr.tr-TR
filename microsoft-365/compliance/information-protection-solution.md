@@ -18,12 +18,12 @@ ms.collection:
 - m365solution-mip
 - m365initiative-compliance
 description: Kuruluşunuz için Microsoft Purview Information Protection dağıtmak için açıklayıcı kılavuz.
-ms.openlocfilehash: 28d0af5bba237a9f2d120f67eb1e79dd74a69f2a
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: d672e113e4f1bdaca155881afba6262878d0ecb3
+ms.sourcegitcommit: f723ebbc56db8013598a88b0d7f13214d9d3eb10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65284940"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65294766"
 ---
 # <a name="deploy-an-information-protection-solution-with-microsoft-purview"></a>Microsoft Purview ile bilgi koruma çözümü dağıtma
 
@@ -43,7 +43,7 @@ Microsoft Purview Information Protection kullanarak hassas bilgileri nerede yaş
 
 Bu özelliklerin birbirini nasıl desteklediğini ve birbirleri üzerinde nasıl derlediğini görmek için aşağıdaki Ignite oturumunu izleyin: [verilerinizi bilin, verilerinizi koruyun ve Microsoft Bilgi Koruması ile veri kaybını önleyin](https://myignite.microsoft.com/archives/IG20-OD273).
 
-Verilerinizi yönetme hakkında bilgi için bkz. [Microsoft Purview ile verilerinizi yönetme](manage-Information-governance.md).
+Veri idaresi için bkz. [Microsoft Purview ile veri idaresi çözümü dağıtma](data-governance-solution.md).
 
 ## <a name="licensing"></a>Lisanslama
 

@@ -16,12 +16,12 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 description: Microsoft 365'da eBulma (Premium) çözümü için geçerli olan durum sınırları, dizin oluşturma sınırları ve arama sınırları hakkında bilgi edinin.
-ms.openlocfilehash: 3d0204eb452b669937d30fe5519e5af073b64d6d
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 7aa9dcd65cb047914a8b1b68de3340bb9d7b728f
+ms.sourcegitcommit: f723ebbc56db8013598a88b0d7f13214d9d3eb10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65099223"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65294635"
 ---
 # <a name="limits-in-ediscovery-premium"></a>eBulma sınırları (Premium)
 
@@ -64,7 +64,8 @@ Aşağıdaki tabloda, eBulma (Premium) içindeki dizin oluşturma sınırları l
 |Tek bir dosyadan ayıklanan en fazla karakter sayısı.|10 <sup>milyon4</sup>|
 |Tek bir dosyanın en büyük boyutu.|150 <sup>MB4</sup>|
 |Belgedeki katıştırılmış öğe derinliği üst sınırı.|<sup>254</sup>|
-|Optik Karakter Tanıma (OCR) tarafından işlenen dosyaların maksimum boyutu.|24 <sup>MB4</sup> <br/>  
+|Optik Karakter Tanıma (OCR) tarafından işlenen dosyaların maksimum boyutu.|24 <sup>MB4</sup> <br/> |
+|En yüksek gelişmiş dizin oluşturma aktarım hızı | Saatte 2 GB |
 
 ## <a name="search-limits"></a>Arama sınırları
 

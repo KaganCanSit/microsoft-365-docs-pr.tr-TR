@@ -18,12 +18,12 @@ ms.collection:
 - m365initiative-compliance
 recommendations: false
 description: Microsoft Purview Information Protection özelliklerini uygulayarak hassas bilgileri nerede olursa olsun korumanıza yardımcı olun.
-ms.openlocfilehash: 97f5172479d889ec1914cfc46102a58a83165269
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: b055e71ee6c22cc9804b82a36f339a73675ce914
+ms.sourcegitcommit: f723ebbc56db8013598a88b0d7f13214d9d3eb10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65285488"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65294657"
 ---
 # <a name="protect-your-sensitive-data-with-microsoft-purview"></a>Microsoft Purview ile hassas verilerinizi koruma
 
@@ -40,9 +40,9 @@ Bu bilgi koruma özellikleri verilerinizi [tanımanızı, verilerinizi korumanı
 
 ![Microsoft Purview Information Protection hassas verileri keşfetmenize, sınıflandırmanıza ve korumanıza nasıl yardımcı olduğunu gösteren görüntü.](../media/powered-by-intelligent-platform.png)
 
-Kuruluşunuz için bir Microsoft Purview Information Protection çözümü dağıtmaya yönelik açıklayıcı yönergeler için bkz. [Microsoft Purview ile bilgi koruma çözümü dağıtma](information-protection-solution.md).
+Kullanılabilir özellikler ve her birini kullanmaya başlama hakkında daha fazla bilgi edinmek için aşağıdaki bölümleri kullanın. Ancak, kılavuzlu dağıtım arıyorsanız bkz. [Microsoft Purview ile bilgi koruma çözümü dağıtma](information-protection-solution.md).
 
-Verilerinizi yönetme hakkında bilgi için bkz. [Microsoft Purview ile verilerinizi yönetme](manage-Information-governance.md).
+Verilerinizi uyumluluk veya mevzuat gereksinimleri için yönetme hakkında bilgi için bkz. [Verilerinizi Microsoft Purview ile yönetme](manage-data-governance.md).
 
 ## <a name="know-your-data"></a>Verileriniz hakkında bilgi edinme
 
@@ -60,7 +60,7 @@ Veri ortamınızı anlamak ve karma ortamınızda hassas verileri tanımlamak i�
 
 |Yeteneği|Hangi sorunları çözer?|Kullanmaya başlayın|
 |:------|:------------|---------------------|
-|[Duyarlılık etiketleri](sensitivity-labels.md)| Kuruluşunuzun içinde ve dışında hareket eden verilerinizi etiketlemek ve korumak için uygulamalar, hizmetler ve cihazlar arasında tek bir çözüm. <br /><br /> Örnek senaryolar: <br />- [Office uygulamaları için duyarlılık etiketlerini yönetme](sensitivity-labels-office-apps.md) <br />- [Belgeleri ve e-postaları şifreleme](encryption-sensitivity-labels.md) <br />-  [etiketleri Power BI uygulama ve görüntüleme](/power-bi/admin/service-security-apply-data-sensitivity-labels) <br /><br /> Duyarlılık etiketlerine yönelik senaryoların kapsamlı bir listesi için Kullanmaya başlayın belgelerine bakın.|[Hassasiyet etiketlerini kullanmaya başlama](get-started-with-sensitivity-labels.md) |
+|[Duyarlılık etiketleri](sensitivity-labels.md)| Kuruluşunuzun içinde ve dışında gezinen verilerinizi korumak için uygulamalar, hizmetler ve cihazlar arasında tek bir etiketleme çözümü. <br /><br /> Örnek senaryolar: <br />- [Office uygulamaları için duyarlılık etiketlerini yönetme](sensitivity-labels-office-apps.md) <br />- [Belgeleri ve e-postaları şifreleme](encryption-sensitivity-labels.md) <br />-  [etiketleri Power BI uygulama ve görüntüleme](/power-bi/admin/service-security-apply-data-sensitivity-labels) <br /><br /> Duyarlılık etiketleri için desteklenen senaryoların kapsamlı listesi için Kullanmaya başlayın belgelerine bakın.|[Hassasiyet etiketlerini kullanmaya başlama](get-started-with-sensitivity-labels.md) |
 |[Azure Information Protection birleşik etiketleme istemcisi](/azure/information-protection/rms-client/aip-clientv2)| Windows bilgisayarlar için etiketlemeyi Dosya Gezgini ve PowerShell'e genişletir ve gerekirse Office uygulamalarına yönelik ek özellikler sunar| [Azure Information Protection birleşik etiketleme istemcisi yönetici kılavuzu](/azure/information-protection/rms-client/clientv2-admin-guide)|
 |[Çift Anahtarlı Şifreleme](double-key-encryption.md)| Her koşulda, yalnızca kuruluşunuz korumalı içeriğin şifresini çözebilir veya yasal gereksinimler için şifreleme anahtarlarını coğrafi sınır içinde tutmanız gerekir. | [Çift Anahtar Şifrelemesi Dağıtma](double-key-encryption.md#deploy-dke)|
 |[Office 365 İleti Şifrelemesi (OME)](ome.md)| Herhangi bir cihazdaki herhangi bir kullanıcıya gönderilen e-posta iletilerini ve ekli belgeleri şifreler, böylece yalnızca yetkili alıcılar e-postayla gönderilen bilgileri okuyabilir. <br /><br />  Örnek senaryo: [Gelişmiş İleti Şifrelemesi ile şifrelenen e-postayı iptal etme](revoke-ome-encrypted-mail.md) | [Yeni İleti Şifrelemesi özelliklerini ayarlama](set-up-new-message-encryption-capabilities.md)|

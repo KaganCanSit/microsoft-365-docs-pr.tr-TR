@@ -1,7 +1,7 @@
 ---
 title: Saldırı yüzeyi azaltma kuralları başvurusu
 description: Saldırı yüzeyi azaltma kurallarıyla ilgili ayrıntıları kural temelinde listeler.
-keywords: Saldırı yüzeyi azaltma kuralları, ASR, asr kuralları, kalçalar, konak izinsiz giriş önleme sistemi, koruma kuralları, kötüye kullanıma karşı koruma kuralları, antiexploit, exploit kuralları, bulaşma önleme kuralları, Pertahanan Microsoft untuk Titik Akhir, ASR kurallarını yapılandırma, ASR kuralı açıklaması
+keywords: Saldırı yüzeyi azaltma kuralları, ASR, asr kuralları, kalçalar, konak izinsiz giriş önleme sistemi, koruma kuralları, kötüye kullanıma karşı koruma kuralları, antiexploit, exploit kuralları, bulaşma önleme kuralları, Uç Nokta için Microsoft Defender, ASR kurallarını yapılandırma, ASR kuralı açıklaması
 ms.prod: m365-security
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -17,23 +17,24 @@ ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.date: 02/04/2022
-ms.openlocfilehash: 64162b83376facddbdeffd1c3079baa49f9d8924
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: 2f76a8ec53d6f7c809ed9f6612f2c8abf7388d1b
+ms.sourcegitcommit: f723ebbc56db8013598a88b0d7f13214d9d3eb10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64788028"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65294788"
 ---
 # <a name="attack-surface-reduction-rules-reference"></a>Saldırı yüzeyi azaltma kuralları başvurusu
 
 **Şunlar için geçerlidir:**
 
-- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 - Microsoft Defender Virüsten Koruma
 
-**Platform**
+**Platform:**
+
 - Windows
 
 Bu makalede saldırı azaltma kuralları hakkında bilgi sağlanır:
@@ -57,7 +58,7 @@ Aşağıdaki tabloda, şu anda genel kullanıma sunulan kurallar için desteklen
 >
 > Windows&nbsp; Server2012R2&nbsp;&nbsp; ve Windows&nbsp; Server2016'daki&nbsp; saldırı yüzeyi azaltma kuralları, modern birleşik çözüm paketi kullanılarak eklenen cihazlar için kullanılabilir. Daha fazla bilgi için bkz. [Windows Server 2012 R2 ve 2016 Önizlemesi için modern birleşik çözümde yeni işlevler](/microsoft-365/security/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview).
 
-| Kural adı|Windows 10 | Windows Server 2019 | &nbsp;Windows Server | <sup>Windows Server 2016 [[1, 2](#fn1)]<sup></sup> | &nbsp;Windows Server 2012 R2 <sup>[[1, 2](#fn1)]<sup></sup> |
+| Kural adı| &nbsp;Windows 11 <br>ve<br> &nbsp;Windows 10 | &nbsp;Windows Server <br> 2022 <br>ve<br>  &nbsp;Windows Server <br> 2019 | Windows Server | &nbsp;Windows Server <br> 2016 <br> <sup>[[1, 2](#fn1)]<sup></sup> | &nbsp;Windows Server <br> 2012R2&nbsp; <br> <sup>[[1, 2](#fn1)]<sup></sup> |
 |:---|:---:|:---:|:---:|:---:|:---:|
 | [Güvenlik açığı bulunan imzalı sürücülerin kötüye kullanılması engellendi](#block-abuse-of-exploited-vulnerable-signed-drivers) | E | E | E <br> sürüm 1803 (Altı Aylık Kanal) veya üzeri | E | E |
 | [Adobe Reader'ın alt işlemler oluşturmalarını engelleme](#block-adobe-reader-from-creating-child-processes) | Y sürüm 1809 veya üzeri | E | E | E | E |
@@ -102,7 +103,6 @@ Bu tabloda başvurulan yapılandırma yönetim sistemi sürümleri hakkındaki b
 |[USB'den çalıştırılan güvenilmeyen ve imzalanmamış işlemleri engelleme](#block-untrusted-and-unsigned-processes-that-run-from-usb) | E |   |E <br><br> CB 1802  | E  | E  |
 |[Office makrolardan Win32 API çağrılarını engelleme](#block-win32-api-calls-from-office-macros) | E |   | E <br><br> CB 1710  | E  |  E |
 |[Fidye yazılımına karşı gelişmiş koruma kullanma](#use-advanced-protection-against-ransomware) | E |   | E <br><br> CB 1802 | E  | E  |
-|  |  |  |  |  |  |
 
   (<a id="fn1">1</a>) Herhangi bir kuralın GUID'sini kullanarak saldırı yüzeyi azaltma kurallarını kural temelinde yapılandırabilirsiniz.
 
@@ -117,7 +117,7 @@ Blok modundaki tüm kurallar için bildirim bildirimleri oluşturulur. Diğer mo
 
 "Kural Durumu" belirtilen kurallar için:
 
-- Birleşimleri olan \<ASR Rule, Rule State\> ASR kuralları, uyarıları (bildirim bildirimleri) Pertahanan Microsoft untuk Titik Akhir yalnızca yüksek bulut blok düzeyindeki cihazlar için görüntülemek için kullanılır. Yüksek bulut bloğu düzeyinde olmayan cihazlar herhangi bir <ASR Kuralı, Kural Durumu> birleşimleri için uyarı oluşturmaz
+- Birleşimleri olan \<ASR Rule, Rule State\> ASR kuralları, uyarıları (bildirim bildirimleri) yalnızca yüksek bulut bloğu düzeyindeki cihazlar için Uç Nokta için Microsoft Defender ortaya koyabilmek için kullanılır. Yüksek bulut bloğu düzeyinde olmayan cihazlar herhangi bir <ASR Kuralı, Kural Durumu> birleşimleri için uyarı oluşturmaz
 - EDR uyarıları belirtilen durumlarda ASR kuralları için oluşturulur, ancak yalnızca yüksek bulut bloğu düzeyindeki cihazlar için oluşturulur.
 
 | Kural adı: | Kural durumu: | EDR'de uyarı oluştursun mu? <br> (Evet&nbsp;\|&nbsp;Hayır) | Bildirim oluştursun mu? <br> (Evet&nbsp;\|&nbsp;Hayır) |
@@ -139,7 +139,6 @@ Blok modundaki tüm kurallar için bildirim bildirimleri oluşturulur. Diğer mo
 |[USB'den çalıştırılan güvenilmeyen ve imzalanmamış işlemleri engelleme](#block-untrusted-and-unsigned-processes-that-run-from-usb) | AuditBlock&nbsp;\|&nbsp; | Y \| Y <br> Yüksek bulut blok düzeyinde cihaz gerektirir  | N \| Y <br> Yüksek bulut blok düzeyinde cihaz gerektirir |
 |[Office makrolardan Win32 API çağrılarını engelleme](#block-win32-api-calls-from-office-macros) |   | N | E |
 |[Fidye yazılımına karşı gelişmiş koruma kullanma](#use-advanced-protection-against-ransomware) | AuditBlock&nbsp;\|&nbsp; | Y \| Y <br> Yüksek bulut blok düzeyinde cihaz gerektirir  | N \| Y <br> Yüksek bulut blok düzeyinde cihaz gerektirir |
-|   |   |   |   |
   
 ## <a name="asr-rules-and-guids-matrix"></a>ASR kuralları ve GUID matrisi
 
