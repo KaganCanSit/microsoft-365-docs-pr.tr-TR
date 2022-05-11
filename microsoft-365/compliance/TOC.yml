@@ -577,6 +577,8 @@
   items:
     - name: Bilgilerinizi yönetme
       href: manage-data-governance.md
+    - name: Veri yönetimi çözümü dağıtma
+      href: data-governance-solution.md
     - name: Verileri saklamayı ve silmeyi anlama
       items:
         - name: Saklama ilkeleri ve saklama etiketleri hakkında daha fazla bilgi edinme
