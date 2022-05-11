@@ -25,12 +25,12 @@ search.appverid:
 - MET150
 ms.assetid: 5abfef7b-5957-484a-b06b-a7c55e013e44
 description: Microsoft 365 İş Ekstra ile küçük veya orta ölçekli işletmeler için siber güvenliği nasıl uygulayacağınızı öğrenin. Siber güvenlik işlevleri ve özellikleri, siber saldırıları ve güvenlik ihlallerini önlemek ve üst düzey siber savunmalarla verileri, cihazları ve bilgileri korumaya yardımcı olmak için iyileştirilmiştir.
-ms.openlocfilehash: ac152ca67e7bdf62931b64e008669ca60b0a8031
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 2d6ffd452e04c755fd60fcf7cad0d228005c5510
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65100087"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65320104"
 ---
 # <a name="microsoft-365-business-premium-mdash-cybersecurity-for-small-business"></a>Microsoft 365 İş Ekstra &mdash; küçük işletmeler için siber güvenlik
 
@@ -46,13 +46,13 @@ Bu ilk görevlerde oturum açın ve hesap erişim korumalarından başlayarak il
 
 [**Ortamınızı ayarlama**](m365bp-setup-overview.md). Bu görev, sistemdeki tüm hesaplarda güvenlik ayarlamanızı ve uygulamanızı gerektirir.
 
-[**Siber güvenlik korumalarını artırma**](m365bp-security-overview.md). Siber saldırıları önlemek için kritik ön saf güvenlik önlemleri ayarlayın.
+[**Siber güvenlik korumalarını güçlendirme**](m365bp-security-overview.md). Siber saldırıları önlemek için kritik ön saf güvenlik önlemleri ayarlayın.
 
 [:::image type="content" source="media/m365bp-fortify-environment.jpg" alt-text="Microsoft 365 İş Ekstra uygulamalarınızı, dosya depolama alanınızı, e-postanızı, cihazlarınızı ve kimliklerinizi korur,.":::](m365bp-setup-overview.md)
 
 ## <a name="cybersecurity-playbook"></a>Siber güvenlik taktik defteri
 
-Bu görevlerdeki rehberlik, işletmenizin Harvard Kennedy School  [Cybersecurity Campaign Playbook](https://go.microsoft.com/fwlink/p/?linkid=2015598)'unda açıklanan hedeflere ulaşmasına yardımcı olur. İndirmeniz için bir özet sağlanır.
+Bu görevlerdeki rehberlik, sıfır güven metodolojisini temel alır ve işletmenizin Harvard Kennedy School  [Cybersecurity Campaign Playbook](https://go.microsoft.com/fwlink/p/?linkid=2015598)'ta açıklanan hedeflere ulaşmasına yardımcı olur. İndirmeniz için bir özet sağlanır.
 
 Daha büyük bir versiyonunu görmek için bilgi grafiğine tıklayın veya [Siber Güvenlik taktik defteri posteri](https://download.microsoft.com/download/9/c/1/9c167271-8209-492e-acc2-38a39d1834c2/m365bp-cybersecurity-playbook.pdf)’nin bir kopyasını indirin!
 
@@ -75,17 +75,17 @@ Daha büyük bir versiyonunu görmek için bilgi grafiğine tıklayın veya [Sib
 
 Ekibiniz tarafından tamamlanması gereken bazı hedefleri içeren bir dizi görevi buraya dahil ettik. Ekibin cihazlarının korunduğundan ve ekibin e-posta ve dosya paylaşımını güvenli bir şekilde kullanmak ve tehditleri tanımak ve bildirmek için eğitildiğinden emin olmanız gerekir.
 
-[**KCG cihazlarını ayarlama**](m365bp-protect-pcs-macs.md). Bu görevde, tüm yönetilmeyen (KCG) cihazları güvenli bir şekilde ekosistemin bir parçası olacak şekilde ayarlarsınız.
+[**KCG cihazlarını ayarlama**](m365bp-protect-pcs-macs.md). Bu görevde, tüm yönetilmeyen (KCG) cihazlarını güvenli bir şekilde ekosistemin bir parçası olacak şekilde ayarlarsınız.
 
 [**E-postayı koruma**](m365bp-protect-email-overview.md). E-posta sistemlerini saldırılara karşı korumak için gerekli adımları uygulayın.
 
-[**Güvenli bir şekilde işbirliği yapma ve paylaşma**](m365bp-collaborate-share-securely.md). Bu görevin hedefleri, kuruluşun tüm üyeleri için güvenli dosya paylaşımı ayarlamanızı gerektirir.
+[**Güvenli bir şekilde işbirliği yapma ve paylaşma**](m365bp-collaborate-share-securely.md). Bu görevin hedefleri, kuruluşun tüm üyeleri için güvenli dosya paylaşımını ayarlamanızı gerektirir.
 
 [:::image type="content" source="media/m365bp-train-team.jpg" alt-text="Microsoft 365 İş Ekstra uygulamalarınızı, dosya depolama alanınızı, e-postanızı, cihazlarınızı ve kimliklerinizi korur.":::](m365bp-devices-overview.md)
 
 ## <a name="cybersecurity-playbook"></a>Siber güvenlik taktik defteri
 
-Bu görevlerdeki rehberlik, işletmenizin Harvard Kennedy School  [Cybersecurity Campaign Playbook](https://go.microsoft.com/fwlink/p/?linkid=2015598)'unda açıklanan hedeflere ulaşmasına yardımcı olur. İndirmeniz için bir özet sağlanır.
+Bu görevlerdeki rehberlik, sıfır güven metodolojisini temel alır ve işletmenizin Harvard Kennedy School  [Cybersecurity Campaign Playbook](https://go.microsoft.com/fwlink/p/?linkid=2015598)'ta açıklanan hedeflere ulaşmasına yardımcı olur. İndirmeniz için bir özet sağlanır.
 
 Daha büyük bir versiyonunu görmek için bilgi grafiğine tıklayın veya [Siber Güvenlik taktik defteri posteri](https://download.microsoft.com/download/9/c/1/9c167271-8209-492e-acc2-38a39d1834c2/m365bp-cybersecurity-playbook.pdf)’nin bir kopyasını indirin!
 
@@ -108,13 +108,13 @@ Daha büyük bir versiyonunu görmek için bilgi grafiğine tıklayın veya [Sib
 
 Güvenli cihaz, kuruluş tarafından izlenen bir cihazdır. Bu son kritik görevde, cihazları İş için Microsoft Defender’a ekleyip kaydederek kullanılabilecek en iyi araçlarla güvenli hale gelmelerini ve korunmalarını sağlarsınız.
 
-[**Yönetilen cihazları ayarlama ve güvenliğini sağlama**](m365bp-protect-devices.md). Kuruluş tarafından izlenmeleri ve korunmaları için bu cihazları güvence altına almak adına gerekli adımları atın!
+[**Yönetilen cihazları ayarlama ve bunların güvenliğini sağlama**](m365bp-protect-devices.md). Kuruluş tarafından izlenmeleri ve korunmaları için bu cihazları güvence altına almak üzere gerekli adımları atın!
 
 [:::image type="content" source="media/m365bp-safeguard-managed-devices.jpg" alt-text="Microsoft 365 İş Ekstra uygulamalarınızı, dosya depolama alanınızı, e-postanızı, cihazlarınızı ve kimliklerinizi korur.":::](m365bp-protect-devices.md)
 
 ## <a name="cybersecurity-playbook"></a>Siber güvenlik taktik defteri
 
-Bu görevlerdeki rehberlik, işletmenizin Harvard Kennedy School  [Cybersecurity Campaign Playbook](https://go.microsoft.com/fwlink/p/?linkid=2015598)'unda açıklanan hedeflere ulaşmasına yardımcı olur. İndirmeniz için bir özet sağlanır.
+Bu görevlerdeki rehberlik, sıfır güven metodolojisini temel alır ve işletmenizin Harvard Kennedy School  [Cybersecurity Campaign Playbook](https://go.microsoft.com/fwlink/p/?linkid=2015598)'ta açıklanan hedeflere ulaşmasına yardımcı olur. İndirmeniz için bir özet sağlanır.
 
 Daha büyük bir versiyonunu görmek için bilgi grafiğine tıklayın veya [Siber Güvenlik taktik defteri posteri](https://download.microsoft.com/download/9/c/1/9c167271-8209-492e-acc2-38a39d1834c2/m365bp-cybersecurity-playbook.pdf)’nin bir kopyasını indirin!
 

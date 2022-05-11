@@ -14,12 +14,12 @@ ms.collection:
 ms.custom: admindeeplinkSPO
 ms.localizationpriority: medium
 description: SharePoint Syntex'de form işleme modeli oluşturmayı öğrenin.
-ms.openlocfilehash: 3eb14a76bd597f1f382b87813c7e4bd2a4518e19
-ms.sourcegitcommit: 23e186b46b27a6a4863f507a52a11105afae9726
+ms.openlocfilehash: bf0a15894e7b9bbc4905a0372d557e1880650e84
+ms.sourcegitcommit: 2d870e06e87b10d9e8ec7a7a8381353bc3bc59c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64882362"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65349827"
 ---
 # <a name="create-a-form-processing-model-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'de form işleme modeli oluşturma
 
@@ -43,7 +43,7 @@ Form işleme modeli oluşturmak aşağıdaki adımları içerir:
 
 Form işleme modelini yalnızca etkin olduğu SharePoint belge kitaplıklarında oluşturabilirsiniz. Form işleme etkinleştirildiyse, belge kitaplığınızda **AutomateAI** >  **Builder** >  **Form işlemek için model oluştur** menüsünü görebilirsiniz. Belge kitaplığınızda işlemenin etkinleştirilmesi gerekiyorsa, SharePoint yöneticinize başvurmanız gerekir.
 
- ![AI Builder modelini gösteren ekran görüntüsü.](../media/content-understanding/create-ai-builder-model2.png)
+![AI Builder modelini gösteren ekran görüntüsü.](../media/content-understanding/create-ai-builder-model2.png)
 
 ## <a name="step-1-create-a-form-processing-model"></a>1. Adım: Form işleme modeli oluşturma
 
@@ -114,11 +114,9 @@ Modele ayıklamak istediğiniz alanları ve tablo verilerini anlamasını öğre
 
 2. Model yayımlandıktan sonra **Modeli kullan'ı** ve ardından **Akış oluştur'u** seçin. Bu, SharePoint belge kitaplığınızda çalıştırabilen ve modelde tanımlanan alanları ayıklayan bir Power Automate akışı oluşturur.
 
-    ![AI Builder'da Akış oluştur panelini gösteren ekran görüntüsü.](../media/content-understanding/ai-builder-create-a-flow.png)
+    ![AI Builder'da Akış oluştur panelini gösteren ekran görüntüsü.](../media/content-understanding/ai-builder-create-a-flow-1.png)
  
 3. Tamamlandığında şu iletiyi görürsünüz: *Akışınız başarıyla oluşturuldu*.
-
-    ![AI Builder'da akışın başarıyla oluşturulduğunu gösteren ekran görüntüsü.](../media/content-understanding/ai-builder-flow-created.png)
 
 4. Belge kitaplığının modelinizle güncelleştirildiğini görmek için **SharePoint git** düğmesini seçin.
 

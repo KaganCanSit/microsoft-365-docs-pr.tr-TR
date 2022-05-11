@@ -13,12 +13,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: SharePoint Syntex'da bir modele bekletme etiketi uygulamayı öğrenin.
-ms.openlocfilehash: 281ff940377f033690f1ed1e7146c8aefe645bf1
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 362b370fa34193e66802e9b0d2c5788785ea92c5
+ms.sourcegitcommit: 2d870e06e87b10d9e8ec7a7a8381353bc3bc59c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64941819"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65349796"
 ---
 # <a name="apply-a-retention-label-to-a-model-in-sharepoint-syntex"></a>SharePoint Syntex'da modele bekletme etiketi uygulama
 
@@ -28,7 +28,6 @@ ms.locfileid: "64941819"
 
 </br>
 
-
 Microsoft SharePoint Syntex'da modele kolayca [bekletme etiketi](../compliance/retention.md) uygulayabilirsiniz. Bunu hem belge anlama hem de form işleme modelleri için yapabilirsiniz.
 
 Bekletme etiketleri, modellerinizin tanımladığınız belgelere bekletme ayarları uygulamanıza olanak tanır.  Örneğin, modelinizin yalnızca belge kitaplığınıza yüklenen *Sigorta bildirimi* belgelerini tanımlamasını değil, aynı zamanda bu belgelerin belirtilen süre boyunca belge kitaplığından silinememesi için (örneğin, sonraki beş ay) onlara bir *İş* saklama etiketi uygulamasını istiyorsunuz.
@@ -36,7 +35,7 @@ Bekletme etiketleri, modellerinizin tanımladığınız belgelere bekletme ayarl
 Modelinizin giriş sayfasındaki model ayarlarınızdan modelinize önceden var olan bir bekletme etiketi uygulayabilirsiniz. 
 
 > [!Important]
-> Bekletme etiketlerinin belge anlama modellerinize uygulanabilmek için microsoft Purview uyumluluk portalında [oluşturulması](../compliance/file-plan-manager.md#create-retention-labels) ve [yayımlanması](../compliance/create-apply-retention-labels.md#how-to-publish-retention-labels) gerekir.
+> Bekletme etiketlerinin belge anlama modellerinize uygulanabilmek için Microsoft Purview uyumluluk portalı [oluşturulması](../compliance/file-plan-manager.md#create-retention-labels) ve [yayımlanması](../compliance/create-apply-retention-labels.md#how-to-publish-retention-labels) gerekir.
 
 ## <a name="to-add-a-retention-label-to-a-document-understanding-model"></a>Belge anlama modeline bekletme etiketi eklemek için
 
@@ -74,7 +73,7 @@ Belge kitaplığınızdaki modelinizin görünüm sayfasında yeni bir **Bekletm
 ## <a name="to-add-a-retention-label-to-a-form-processing-model"></a>Form işleme modeline bekletme etiketi eklemek için
 
 > [!Important]
-> Bekletme etiketlerinin form işleme modelinize uygulanabilmek için microsoft Purview uyumluluk portalında [oluşturulması](../compliance/file-plan-manager.md#create-retention-labels) ve [yayımlanması](../compliance/create-apply-retention-labels.md#how-to-publish-retention-labels) gerekir.
+> Bekletme etiketlerinin form işleme modelinize uygulanabilmek için Microsoft Purview uyumluluk portalı [oluşturulması](../compliance/file-plan-manager.md#create-retention-labels) ve [yayımlanması](../compliance/create-apply-retention-labels.md#how-to-publish-retention-labels) gerekir.
 
 Bir model oluştururken form işleme modeline bekletme etiketi uygulayabilir veya var olan bir modele uygulayabilirsiniz.
 
