@@ -17,18 +17,18 @@ search.appverid:
 - MOE150
 - MET150
 description: eBulma (Standart) olayıyla ilgili olabilecek içeriği arayın.
-ms.openlocfilehash: 372f8beba2567c24e8af75acf4d11e3fe6220f2c
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: d0c565e46860329c4dc6dac741fb0312ddccfd2c
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090417"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65318934"
 ---
 # <a name="search-for-content-in-a-ediscovery-standard-case"></a>eBulma (Standart) durumunda içerik arama
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Bir Microsoft Purview eKeşif (Standart) servis talebi oluşturulduktan ve servis talebiyle ilgili kişiler beklemeye alındıktan sonra, servis talebiyle ilgili içerik için bir veya daha fazla arama oluşturabilir ve çalıştırabilirsiniz. eBulma (Standart) olayıyla ilişkili aramalar, Microsoft Purview uyumluluk portalındaki **İçerik arama** sayfasında listelenmez. Bu aramalar, **aramaların ilişkili** olduğu Core eDiscover servis talebinin Aramalar sayfasında listelenir. Bu aynı zamanda bir servis talebiyle ilişkili aramalara yalnızca servis talebi üyeleri tarafından erişilebileceği anlamına gelir.
+Microsoft Purview eBulma (Standart) servis talebi oluşturulduktan ve servis talebiyle ilgilendiğiniz kişiler beklemeye alındıktan sonra, servis talebiyle ilgili içerik için bir veya daha fazla arama oluşturabilir ve çalıştırabilirsiniz. eBulma (Standart) servis talebiyle ilişkili aramalar, Microsoft Purview uyumluluk portalı **İçerik arama** sayfasında listelenmez. Bu aramalar, aramaların ilişkili olduğu eBulma (Standart) servis talebinin Aramalar **sayfasında listelenir** . Bu aynı zamanda bir servis talebiyle ilişkili aramalara yalnızca servis talebi üyeleri tarafından erişilebileceği anlamına gelir.
 
 eBulma (Standart) araması oluşturmak için:
   

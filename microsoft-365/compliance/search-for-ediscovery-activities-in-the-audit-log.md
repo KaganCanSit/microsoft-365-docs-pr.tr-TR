@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: v-tophillips
 author: v-tophillips
 manager: laurawi
-ms.date: ''
+ms.date: 05/10/2022
 audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
@@ -15,22 +15,22 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 67cc7f42-a53d-4751-b929-6005c80798f7
-description: Kullanıcılara eBulma izinleri atanan kullanıcılar Microsoft Purview uyumluluk portalında İçerik arama, eBulma (Standart) ve eBulma (Premium) görevlerini gerçekleştirdiğinde hangi olayların günlüğe kaydedileceklerini öğrenin.
+description: Kullanıcılara eBulma izinleri atanan kullanıcılar Microsoft Purview uyumluluk portalı İçerik arama, eBulma (Standart) ve eBulma (Premium) görevlerini gerçekleştirdiğinde günlüğe kaydedilen olayları öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 6a11c8a939954b7319b88b45ea8f0d43b1b72442
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 0b94c53d497b5e300cdb0a08dbb5f02daec28c19
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090871"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65317526"
 ---
 # <a name="search-for-ediscovery-activities-in-the-audit-log"></a>Denetim günlüğünde eKeşif etkinliklerini ara
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Microsoft Purview uyumluluk portalında veya ilgili PowerShell cmdlet'leri çalıştırılarak gerçekleştirilen İçerik Arama ve eBulma ile ilgili etkinlikler (Microsoft Purview eKeşif (Standart) ve Microsoft Purview eKeşif (Premium)) için denetim günlüğüne kaydedilir. Yöneticiler veya eBulma yöneticileri (veya eBulma izinleri atanmış herhangi bir kullanıcı) uyumluluk portalında aşağıdaki İçerik Arama ve eBulma (Standart) görevlerini gerçekleştirdiğinde olaylar günlüğe kaydedilir:
+Microsoft Purview uyumluluk portalı veya karşılık gelen PowerShell cmdlet'leri çalıştırılarak gerçekleştirilen İçerik Arama ve eBulma ile ilgili etkinlikler (Microsoft Purview eBulma (Standart) ve Microsoft Purview eBulma (Premium)) için denetim günlüğüne kaydedilir. Yöneticiler veya eBulma yöneticileri (veya eBulma izinleri atanmış herhangi bir kullanıcı) uyumluluk portalında aşağıdaki İçerik Arama ve eBulma (Standart) görevlerini gerçekleştirdiğinde olaylar günlüğe kaydedilir:
   
-- Çekirdek ve eBulma (Premium) servis taleplerini oluşturma ve yönetme
+- eBulma (Standart) ve eBulma (Premium) servis taleplerini oluşturma ve yönetme
 
 - İçerik aramalarını oluşturma, başlatma ve düzenleme
 

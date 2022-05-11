@@ -12,12 +12,12 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: BlackBerry verilerini Microsoft 365 içeri aktarmak ve arşivlemek için 17a-4 BlackBerry DataParser bağlayıcısı ayarlamayı ve kullanmayı öğrenin.
-ms.openlocfilehash: 93b876a8091007d99584269c7d9b3114b72d18fe
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: c6dff24ecea12309363dce8469a148a2183493af
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098074"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65317194"
 ---
 # <a name="set-up-a-connector-to-archive-blackberry-data"></a>BlackBerry verilerini arşivleye bağlayıcı ayarlama
 
@@ -25,7 +25,7 @@ ms.locfileid: "65098074"
 
 BlackBerry kurumsal verilerini Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarmak ve arşivlemek için 17a-4 LLC'deki BlackBerry [DataParser'ı](https://www.17a-4.com/BlackBerry-dataparser/) kullanın. DataParser, üçüncü taraf veri kaynağındaki öğeleri yakalamak ve bu öğeleri Microsoft 365 aktarmak için yapılandırılmış bir BlackBerry bağlayıcısı içerir. BlackBerry DataParser bağlayıcısı, BlackBerry verilerini e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'deki kullanıcı posta kutularına aktarır.
 
-BlackBerry verileri kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, eBulma, bekletme ilkeleri ve bekletme etiketleri ve iletişim uyumluluğu gibi Microsoft Purview özelliklerini uygulayabilirsiniz. Microsoft 365'da verileri içeri aktarmak ve arşivlemek için BlackBerry bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
+BlackBerry verileri kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, eBulma, bekletme ilkeleri ve bekletme etiketleri ve iletişim uyumluluğu gibi Microsoft Purview özellikleri uygulayabilirsiniz. Microsoft 365'da verileri içeri aktarmak ve arşivlemek için BlackBerry bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 
 ## <a name="overview-of-archiving-blackberry-data"></a>BlackBerry verilerini arşivleme genel bakış
 
@@ -37,7 +37,7 @@ Aşağıdaki genel bakış, Microsoft 365'de BlackBerry verilerini arşivlemek i
 
 2. Düzenli olarak, BlackBerry öğeleri DataParser tarafından toplanır. DataParser ayrıca iletinin içeriğini e-posta iletisi biçimine dönüştürür.
 
-3. Microsoft Purview uyumluluk portalında oluşturduğunuz BlackBerry DataParser bağlayıcısı DataParser'a bağlanır ve iletileri Microsoft bulutunda güvenli bir Azure Depolama konumuna aktarır.
+3. Microsoft Purview uyumluluk portalı oluşturduğunuz BlackBerry DataParser bağlayıcısı DataParser'a bağlanır ve iletileri Microsoft bulutunda güvenli bir Azure Depolama konumuna aktarır.
 
 4. Kullanıcı posta kutularında **BlackBerry DataParser** adlı Gelen Kutusu klasöründe bir alt klasör oluşturulur ve BlackBerry öğeleri bu klasöre aktarılır. Bağlayıcı, *E-posta* özelliğinin değerini kullanarak öğelerin hangi posta kutusuna aktarılacağını belirler. Her BlackBerry öğesi, her katılımcının e-posta adresiyle doldurulmuş olan bu özelliği içerir.
 
@@ -79,7 +79,7 @@ BlackBerry DataParser bağlayıcısı oluşturduktan sonra bağlayıcının duru
 
 2. **Bağlayıcılar** sekmesine tıklayın ve ardından bağlayıcı hakkındaki özellikleri ve bilgileri içeren açılır sayfayı görüntülemek için oluşturduğunuz BlackBerry DataParser bağlayıcısını seçin.
 
-3. Bağlayıcının durum günlüğünü açmak (veya kaydetmek) için **Kaynakla bağlayıcı durumu** altında **Günlüğü indir** bağlantısına tıklayın. Bu günlük, Microsoft buluta aktarılan verileri içerir.
+3. Bağlayıcının durum günlüğünü açmak (veya kaydetmek) için **Kaynakla bağlayıcı durumu** altında **Günlüğü indir** bağlantısına tıklayın. Bu günlük, Microsoft buluta aktarılan veriler hakkında bilgi içerir.
 
 ## <a name="known-issues"></a>Bilinen sorunlar
 

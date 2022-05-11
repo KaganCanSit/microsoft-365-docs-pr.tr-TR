@@ -12,20 +12,20 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Yöneticiler Microsoft 365'da Veritas'ın Webex Teams bağlayıcısından verileri içeri aktarmak ve arşivlemek için bir bağlayıcı ayarlayabilir. Bu bağlayıcı, kuruluşunuzun üçüncü taraf verilerini yönetmek için yasal saklama, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilmeniz için üçüncü taraf veri kaynaklarından verileri Microsoft 365 arşivleyebilmenizi sağlar.
-ms.openlocfilehash: 9b2882860f8ca3c414fe8ad9eaed6c99b2abeca4
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 775c09b1c2526367d9794ce41fe4f90f010f1bde
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097832"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65320684"
 ---
 # <a name="set-up-a-connector-to-archive-webex-teams-data"></a>Webex Teams verilerini arşivleye bağlayıcı ayarlama
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına Webex Teams verilerini içeri aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında bir Veritas bağlayıcısı kullanın. Veritas, [Webex Teams](https://globanet.com/webex-teams/) iletişim öğelerini yakalamak ve bunları Microsoft 365'a aktarmak için yapılandırılmış bir Webex Teams bağlayıcısı sağlar. Bağlayıcı, Webex Teams 1:1 sohbetleri, grup konuşmaları, kanal konuşmaları ve kuruluşunuzun Webex Teams hesabındaki ekler gibi içerikleri e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365 kullanıcının posta kutusuna aktarır.
+Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına Webex Teams verilerini içeri aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalı bir Veritas bağlayıcısı kullanın. Veritas, [Webex Teams](https://globanet.com/webex-teams/) iletişim öğelerini yakalamak ve bunları Microsoft 365'a aktarmak için yapılandırılmış bir Webex Teams bağlayıcısı sağlar. Bağlayıcı, Webex Teams 1:1 sohbetleri, grup konuşmaları, kanal konuşmaları ve kuruluşunuzun Webex Teams hesabındaki ekler gibi içerikleri e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365 kullanıcının posta kutusuna aktarır.
 
-Webex Teams verileri kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, eBulma, bekletme ilkeleri ve bekletme etiketleri ve iletişim uyumluluğu gibi Microsoft Purview özelliklerini uygulayabilirsiniz. Microsoft 365'da verileri içeri aktarmak ve arşivlerken Webex Teams bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
+Webex Teams verileri kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, eBulma, bekletme ilkeleri ve bekletme etiketleri ve iletişim uyumluluğu gibi Microsoft Purview özellikleri uygulayabilirsiniz. Microsoft 365'da verileri içeri aktarmak ve arşivlerken Webex Teams bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 
 ## <a name="overview-of-archiving-webex-teams-data"></a>Webex Teams verilerini arşivleme işlemine genel bakış
 
@@ -49,7 +49,7 @@ Aşağıdaki genel bakış, Microsoft 365'da Webex Teams verilerini arşiv etmek
 
    Bu uygulamayı oluşturduğunuzda Webex platformu bir dizi benzersiz kimlik bilgisi oluşturur. Bu kimlik bilgileri, Genel Birleştirme1 sitesinde Webex Teams bağlayıcısını yapılandırırken 2. Adımda kullanılır.
 
-- 1. Adımda Webex Teams bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için [Microsoft Purview uyumluluk portalındaki İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
+- 1. Adımda Webex Teams bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için, [Microsoft Purview uyumluluk portalı İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
 - Bu Veritas veri bağlayıcısı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda genel önizleme aşamasındadır. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerinin Microsoft 365 altyapısı dışında olan ve bu nedenle Microsoft Purview ve veri koruma taahhütleri kapsamında olmayan üçüncü taraf sistemlerde depolanmasını, iletilmesini ve işlenmesini içerebilir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
 
@@ -89,7 +89,7 @@ Webex Teams bağlayıcısını oluşturduktan sonra uyumluluk portalında bağla
 
 2. **Bağlayıcılar** sekmesine tıklayın ve açılır sayfayı görüntülemek için **Webex Teams** bağlayıcısını seçin. Bu sayfa, bağlayıcı hakkındaki özellikleri ve bilgileri içerir.
 
-3. Bağlayıcının durum günlüğünü açmak (veya kaydetmek) için **Kaynakla bağlayıcı durumu** altında **Günlüğü indir** bağlantısına tıklayın. Bu günlük, Microsoft buluta aktarılan veriler hakkında bilgi içerir.
+3. Bağlayıcının durum günlüğünü açmak (veya kaydetmek) için **Kaynakla bağlayıcı durumu** altında **Günlüğü indir** bağlantısına tıklayın. Bu günlük, Microsoft buluta aktarılan veriler hakkında bilgi içerir. Daha fazla bilgi için bkz. [Veri bağlayıcıları için yönetici günlüklerini görüntüleme](data-connector-admin-logs.md).
 
 ## <a name="known-issues"></a>Bilinen sorunlar
 

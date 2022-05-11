@@ -19,12 +19,12 @@ description: Yöneticiler, kimlik avının önlenmesine yardımcı olmak için E
 ms.custom: seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 92b7072e3127da71f423648c83fc94c17bed7caa
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: c8b9fb5c9e2b67a656948684838b61b4a9c33a8d
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65131074"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65319560"
 ---
 # <a name="how-eop-validates-the-from-address-to-prevent-phishing"></a>EOP kimlik avının önlenmesi için Kimden adresini nasıl doğrular?
 
@@ -136,4 +136,4 @@ Microsoft 365 gönderdiğiniz giden e-posta için Kimden adresi gereksinimlerini
 
 ## <a name="other-ways-to-prevent-and-protect-against-cybercrimes-in-microsoft-365"></a>Microsoft 365'da siber suçlardan korunmanın ve korunmanın diğer yolları
 
-Kuruluşunuzu kimlik avına, istenmeyen postalara, veri ihlallerine ve diğer tehditlere karşı nasıl güçlendirebileceğiniz hakkında daha fazla bilgi için bkz. [İş planları için Microsoft 365 güvenliğini sağlamanın en iyi 10 yolu](../../admin/security-and-compliance/secure-your-business-data.md).
+Kuruluşunuzu kimlik avına, istenmeyen postalara, veri ihlallerine ve diğer tehditlere karşı nasıl güçlendirebileceğiniz hakkında daha fazla bilgi için bkz. [İş planları için Microsoft 365 güvenliğini sağlamaya yönelik en iyi yöntemler](../../admin/security-and-compliance/secure-your-business-data.md).

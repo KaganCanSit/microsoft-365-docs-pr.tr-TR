@@ -12,18 +12,18 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Microsoft tarafından sağlanan Slack eKeşif veri bağlayıcısını ayarlamayı ve kullanarak anlık ileti verilerini içeri aktarmayı ve arşivlemeyi öğrenin.
-ms.openlocfilehash: dc63673ae51d4ea47931a8a27acd7ef2191397d7
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 65d7b666390c132995882ca4e8d027064482df13
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65093097"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65320694"
 ---
 # <a name="set-up-a-connector-to-archive-slack-ediscovery-data-preview"></a>Slack eKeşif verilerini arşivleme (önizleme) için bağlayıcı ayarlama
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Microsoft tarafından sağlanan Slack eKeşif veri bağlayıcısı, kuruluşunuzun Slack çalışma alanlarından Microsoft 365 anlık ileti verilerini (iletiler, ekler, bağlantılar ve düzeltmeler gibi) içeri aktarmanıza ve arşivlenize yardımcı olur. Veri bağlayıcısı Slack API'sinden verileri çeker, e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'deki kullanıcı posta kutularına aktarır. Slack verileri içeri aktarıldıktan sonra, Slack içeriğine Dava tutma, Microsoft Purview eKeşif (Premium), İletişim uyumluluğu ve bekletme ayarları gibi uyumluluk çözümleri uygulayabilirsiniz. Microsoft 365'de verileri içeri aktarmak ve arşivlemek için Slack eKeşif veri bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
+Microsoft tarafından sağlanan Slack eKeşif veri bağlayıcısı, kuruluşunuzun Slack çalışma alanlarından Microsoft 365 anlık ileti verilerini (iletiler, ekler, bağlantılar ve düzeltmeler gibi) içeri aktarmanıza ve arşivlenize yardımcı olur. Veri bağlayıcısı Slack API'sinden verileri çeker, e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'deki kullanıcı posta kutularına aktarır. Slack verileri içeri aktarıldıktan sonra, Slack içeriğine Dava tutma, Microsoft Purview eBulma (Premium), İletişim uyumluluğu ve bekletme ayarları gibi uyumluluk çözümleri uygulayabilirsiniz. Microsoft 365'de verileri içeri aktarmak ve arşivlemek için Slack eKeşif veri bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 
 ## <a name="overview-of-archiving-slack-ediscovery-data"></a>Slack eKeşif verilerini arşivleme işlemine genel bakış
 
@@ -45,7 +45,7 @@ Aşağıdaki genel bakış, Slack verilerini Microsoft 365'da arşivlerken Micro
 
 - Kuruluşunuzun Slack kurumsal hesabının kullanıcı adını ve parolasını alın. Veri bağlayıcısını oluştururken bu hesapta oturum açmak için bu kimlik bilgilerini kullanırsınız. Slack kuruluşunuzda otomatik kullanıcı sağlama özelliğinin çoklu oturum açma (SSO) kullanacak şekilde yapılandırılmış olması da önerilir. [Güvenlik & Uyumluluk Merkezi'ndeki roller](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center)
 
-- Slack eKeşif bağlayıcısını oluşturan kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, Microsoft Purview uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için [Microsoft Purview uyumluluk portalındaki İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
+- Slack eKeşif bağlayıcısını oluşturan kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, Microsoft Purview uyumluluk portalı **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için, [Microsoft Purview uyumluluk portalı İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
 ## <a name="step-1-create-a-slack-ediscovery-connector"></a>1. Adım: Slack eKeşif bağlayıcısı oluşturma
 
@@ -121,7 +121,7 @@ Slack eKeşif bağlayıcısını oluşturduktan sonra bağlayıcının durumunu 
 
 2. **Bağlayıcılar** sekmesine tıklayın ve ardından **Slack eKeşif** bağlayıcısını seçerek bağlayıcının özelliklerini ve bilgilerini içeren açılır sayfayı görüntüleyin.
 
-3. Bağlayıcının durum günlüğünü açmak (veya kaydetmek) için **Kaynakla bağlayıcı durumu** altında **Günlüğü indir** bağlantısına tıklayın. Bu günlük, Microsoft buluta aktarılan verileri içerir.
+3. Bağlayıcının durum günlüğünü açmak (veya kaydetmek) için **Kaynakla bağlayıcı durumu** altında **Günlüğü indir** bağlantısına tıklayın. Bu günlük, Microsoft buluta aktarılan veriler hakkında bilgi içerir. Daha fazla bilgi için bkz. [Veri bağlayıcıları için yönetici günlüklerini görüntüleme](data-connector-admin-logs.md).
 
 ## <a name="known-issues"></a>Bilinen sorunlar
 

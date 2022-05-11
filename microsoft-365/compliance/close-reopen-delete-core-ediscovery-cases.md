@@ -17,18 +17,18 @@ search.appverid:
 - MOE150
 - MET150
 description: Bu makalede, eBulma (Standart) servis taleplerinin nasıl yönetileceğini açıklanmaktadır. Bu, bir servis talebini kapatmayı, kapalı bir servis talebini yeniden açmayı ve bir servis talebini silmeyi içerir.
-ms.openlocfilehash: 27dc46fcfe65b6a39c3a217fd72fcc97037ccb99
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: f527d206e7112534db557928daf6ab8942c60d1c
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65094019"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65318326"
 ---
 # <a name="close-reopen-and-delete-a-ediscovery-standard-case"></a>eBulma (Standart) servis talebini kapatma, yeniden açma ve silme
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Bu makalede, Microsoft 365'de Microsoft Purview eKeşif (Standart) servis taleplerinin nasıl kapatıldığı, yeniden açıldığı ve silineceği açıklanır.
+Bu makalede, Microsoft 365 Microsoft Purview eKeşif (Standart) servis taleplerinin nasıl kapatıldığı, yeniden açıldığı ve silineceği açıklanır.
 
 ## <a name="close-a-case"></a>Servis talebini kapatma
 
@@ -38,13 +38,13 @@ Bir eBulma (Standart) olayı tarafından desteklenen yasal dava veya araştırma
 
 - Servis talebi kapatıldığında yalnızca bu servis talebiyle ilişkili ayrı tutmalar kapatılır. Diğer ayrı tutmalar bir içerik konumuna (Dava Ayrı Tutma, saklama ilkesi veya farklı bir eBulma (Standart) durumundan ayrı tutma gibi) yerleştirilirse, bu ayrı tutmalar yine korunur.
 
-- Servis talebi, Microsoft Purview uyumluluk portalındaki eBulma (Standart) sayfasında listelenmeye devam etmektedir. Kapalı bir servis talebinin ayrıntıları, saklamaları, aramaları ve üyeleri korunur.
+- Servis talebi, Microsoft Purview uyumluluk portalı eBulma (Standart) sayfasında listelenmeye devam etmektedir. Kapalı bir servis talebinin ayrıntıları, saklamaları, aramaları ve üyeleri korunur.
 
 - Servis talebi kapandıktan sonra düzenleyebilirsiniz. Örneğin, üye ekleyebilir veya kaldırabilir, arama oluşturabilir ve arama sonuçlarını dışarı aktarabilirsiniz. Etkin ve kapalı servis talepleri arasındaki temel fark, servis talebi kapatıldığında eBulma tutmalarının kapalı olmasıdır.
 
 Bir servis talebini kapatmak için:
   
-1. Uyumluluk portalında, kuruluşunuzdaki **eBulma** >  (Standart) servis taleplerinin listesini görüntülemek için eBulma **Çekirdeği'ne** tıklayın.
+1. Uyumluluk portalında, kuruluşunuzdaki **eBulma** >  **(Standart)** servis taleplerinin listesini görüntülemek için eBulma (Standart) seçeneğine tıklayın.
 
 2. Kapatmak istediğiniz servis talebinin adına tıklayın.
 
@@ -104,7 +104,7 @@ eBulma ayrı tutmasını silmek için:
 
 Bir servis talebini silmek için:
 
-1. Uyumluluk portalında, kuruluşunuzdaki **eBulma** >  (Standart) servis taleplerinin listesini görüntülemek için eBulma **Çekirdeği'ne** tıklayın.
+1. Uyumluluk portalında, kuruluşunuzdaki **eBulma** >  **(Standart)** servis taleplerinin listesini görüntülemek için eBulma (Standart) seçeneğine tıklayın.
 
 2. Silmek istediğiniz servis talebinin adına tıklayın.
 

@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: v-tophillips
 author: v-tophillips
 manager: laurawi
-ms.date: 9/11/2017
+ms.date: 05/10/2022
 audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
@@ -20,18 +20,18 @@ ms.assetid: cca08d26-6fbf-4b2c-b102-b226e4cd7381
 ms.custom:
 - seo-marvel-apr2020
 description: eBulma servis talepleri ile ilişkili tüm ayrı tutmalar hakkında bilgi içeren bir rapor oluşturmayı öğrenin.
-ms.openlocfilehash: 1b36b134b8de490e5ca7d9e61044a3c7cac4904f
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 25e201e1b8bef0a4ccc3724a6adab6c095f34d54
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097040"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65318038"
 ---
 # <a name="use-a-script-to-create-a-report-on-holds-in-ediscovery-cases"></a>eBulma durumlarında ayrı tutmalar hakkında rapor oluşturmak için betik kullanma
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Bu makaledeki betik, eBulma yöneticilerinin ve eBulma yöneticilerinin Microsoft Purview uyumluluk portalında Core ve eBulma (Premium) durumlarıyla ilişkili tüm ayrı tutmalar hakkında bilgi içeren bir rapor oluşturmasına olanak tanır. Rapor, ayrı tutmanın ilişkilendirildiği servis talebinin adı, ayrı tutmaya yerleştirilen içerik konumları ve ayrı tutmanın sorgu tabanlı olup olmadığı gibi bilgileri içerir. Ayrı tutması olmayan durumlar varsa betik, ayrı tutma olmayan servis taleplerinin listesini içeren ek bir rapor oluşturur.
+Bu makaledeki betik, eBulma yöneticilerinin ve eBulma yöneticilerinin Microsoft Purview uyumluluk portalı eBulma (Standart) ve eBulma (Premium) durumlarıyla ilişkili tüm tutmalar hakkında bilgi içeren bir rapor oluşturmasına olanak tanır. Rapor, ayrı tutmanın ilişkilendirildiği servis talebinin adı, ayrı tutmaya yerleştirilen içerik konumları ve ayrı tutmanın sorgu tabanlı olup olmadığı gibi bilgileri içerir. Ayrı tutması olmayan durumlar varsa betik, ayrı tutma olmayan servis taleplerinin listesini içeren ek bir rapor oluşturur.
 
 Rapora dahil edilen bilgilerin ayrıntılı açıklaması için [Daha fazla bilgi](#more-information) bölümüne bakın.
 
@@ -203,7 +203,7 @@ Servis talebi, bu makaledeki betiği çalıştırdığınızda oluşturulan rapo
 
 - Ayrı tutmanın adı ve ayrı tutmanın ilişkili olduğu eBulma servis talebinin adı.
 
-- Ayrı tutmanın bir Core veya eBulma (Premium) olayıyla ilişkilendirilip ilişkilendirilmediği.
+- Ayrı tutmanın bir eBulma (Standart) veya eBulma (Premium) büyük/küçük harfle ilişkili olup olmadığı.
 
 - eBulma servis talebinin etkin veya kapalı olup olmadığı.
 

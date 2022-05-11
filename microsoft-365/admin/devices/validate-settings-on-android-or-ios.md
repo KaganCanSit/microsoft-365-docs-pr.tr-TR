@@ -24,12 +24,12 @@ search.appverid:
 - MET150
 ms.assetid: f3433b6b-02f7-447f-9d62-306bf03638b0
 description: Android veya iOS cihazlarınızda Microsoft 365 İş Ekstra uygulama koruma ayarlarını doğrulamayı öğrenin.
-ms.openlocfilehash: 98b3110516d074fe945e1bb68652b40e93fa7fb7
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 7e1355f71e9757e1055999e1951b4f093b0d21a0
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090695"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65317926"
 ---
 # <a name="validate-app-protection-settings-on-android-or-ios-devices"></a>Android veya iOS cihazlarda uygulama koruma ayarlarını doğrulama
 
@@ -42,7 +42,7 @@ Android veya iOS cihazlarda uygulama koruma ayarlarını doğrulamak için aşa�
   
 ### <a name="check-that-the-app-protection-settings-are-working-on-user-devices"></a>Uygulama koruma ayarlarının kullanıcı cihazlarında çalışıp çalışmadığını denetleyin
 
-Uygulamaları korumak [için Android veya iOS cihazları için uygulama koruma ayarlarını yaptıktan](../../business-premium/m365bp-app-protection-settings-for-android-and-ios.md) sonra, seçtiğiniz ayarların çalıştığını doğrulamak için bu adımları izleyebilirsiniz. 
+Uygulamaları korumak [için Android veya iOS cihazlar için uygulama koruma ayarlarını ayarladıktan](../../business-premium/m365bp-app-protection-settings-for-android-and-ios.md) sonra, seçtiğiniz ayarların çalıştığını doğrulamak için bu adımları izleyebilirsiniz. 
   
 İlk olarak, ilkenin doğruladığınız uygulamaya uygulandığından emin olun.
   
@@ -189,7 +189,7 @@ Uygulamaları korumak amacıyla [iOS cihazları için uygulama yapılandırmalar
     
 2. Şimdi Outlook gelen kutusunu görüyor olmanız gerekir. iOS cihazına en az 30 dakika (veya ilkede belirttiğinizden daha uzun bir süre) boyunca dokunmayın. Cihaz büyük olasılıkla kararır.
     
-3. iOS cihazında Outlook yeniden erişin.
+3. iOS cihazda yeniden erişim Outlook.
     
 4. Outlook yeniden erişebilmeniz için pin kodunuzu girmeniz istenir.
     
@@ -208,4 +208,4 @@ Uygulamaları korumak amacıyla [iOS cihazları için uygulama yapılandırmalar
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[İş planları için Microsoft 365 güvenliğini sağlamanın en iyi 10 yolu](../security-and-compliance/secure-your-business-data.md)
+[İş planları için Microsoft 365 güvenliğini sağlamaya yönelik en iyi yöntemler](../security-and-compliance/secure-your-business-data.md)

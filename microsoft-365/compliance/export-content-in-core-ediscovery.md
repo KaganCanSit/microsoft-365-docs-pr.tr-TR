@@ -18,24 +18,24 @@ search.appverid:
 - MET150
 ms.custom: admindeeplinkCOMPLIANCE
 description: Microsoft 365'da eBulma (Standart) durumundan içerik dışarı aktarmayı ve indirmeyi açıklar.
-ms.openlocfilehash: fb142a735d30a59735bd4f9a6370543a92f3d926
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 550bdda2c8b2f8afb0e7b4934f5337d7ee323d3a
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095850"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65318668"
 ---
 # <a name="export-content-from-a-ediscovery-standard-case"></a>eBulma (Standart) durumundan içeriği dışarı aktarma
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Microsoft Purview eKeşif (Standart) olayıyla ilişkilendirilmiş bir arama başarıyla çalıştırıldıktan sonra, arama sonuçlarını dışarı aktarabilirsiniz. Arama sonuçlarını dışarı aktardığınızda, posta kutusu öğeleri PST dosyalarına veya tek tek iletiler olarak indirilir. SharePoint ve OneDrive İş sitelerdeki içeriği dışarı aktardığınızda, yerel Office belgelerin ve diğer belgelerin kopyaları dışarı aktarılır. Dışarı aktarılan her öğe hakkında bilgi içeren bir Results.csv dosyası ve her arama sonucu hakkında bilgi içeren bir bildirim dosyası (XML biçiminde) de dışarı aktarılır.
+Microsoft Purview eBulma (Standart) olayıyla ilişkilendirilmiş bir arama başarıyla çalıştırıldıktan sonra, arama sonuçlarını dışarı aktarabilirsiniz. Arama sonuçlarını dışarı aktardığınızda, posta kutusu öğeleri PST dosyalarına veya tek tek iletiler olarak indirilir. SharePoint ve OneDrive İş sitelerdeki içeriği dışarı aktardığınızda, yerel Office belgelerin ve diğer belgelerin kopyaları dışarı aktarılır. Dışarı aktarılan her öğe hakkında bilgi içeren bir Results.csv dosyası ve her arama sonucu hakkında bilgi içeren bir bildirim dosyası (XML biçiminde) de dışarı aktarılır.
   
 ## <a name="export-search-results"></a>Arama sonuçlarını dışarı aktarma
 
-1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalına</a> gidin ve uygun eBulma izinlerine atanmış kullanıcı hesabının kimlik bilgilerini kullanarak oturum açın.
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalı</a> gidin ve uygun eBulma izinlerine atanmış kullanıcı hesabının kimlik bilgilerini kullanarak oturum açın.
 
-2. Uyumluluk portalının sol gezinti bölmesinde **Tümünü göster'i** ve ardından **eBulma Çekirdeği'ni** >  seçin.<a href="https://go.microsoft.com/fwlink/p/?linkid=2174007" target="_blank"></a>
+2. Uyumluluk portalının sol gezinti bölmesinde **Tümünü göster'i** ve ardından **eBulma** >  <a href="https://go.microsoft.com/fwlink/p/?linkid=2174007" target="_blank">**(Standart)'**</a>ı seçin.
 
 3. **eBulma (Standart)** sayfasında, ayrı tutmayı oluşturmak istediğiniz servis talebinin adına tıklayın.
 

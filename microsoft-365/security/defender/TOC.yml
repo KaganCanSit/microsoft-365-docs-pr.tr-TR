@@ -328,6 +328,10 @@
               href: microsoft-threat-experts.md
             - name: Microsoft Tehdit Uzmanları özelliklerini yapılandırın ve yönetin
               href: configure-microsoft-threat-experts.md
+        - name: Avlanma için Microsoft Defender Uzmanları ile işbirliği yapma
+          items:
+            - name: Genel Bakış
+              href: defenderexpertsforhuntingprev.md
     - name: Güvenlik işlemleri kılavuzu
       items:
         - name: Genel bakış

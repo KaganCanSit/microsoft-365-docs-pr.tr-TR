@@ -22,12 +22,12 @@ search.appverid:
 - BCS160
 - MET150
 description: Microsoft 365 İş Ekstra'da yönetici hesaplarınızı ayarlamayı ve korumayı öğrenin.
-ms.openlocfilehash: b054267264b8440929559ad1a2e335449f3c0309
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 1428ee6b447f3f841e7e8e9b77cfd82c2f7a6444
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65091533"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65320035"
 ---
 # <a name="protect-your-administrator-accounts-in-microsoft-365-business-premium"></a>Microsoft 365 İş Ekstra'de yönetici hesaplarınızı koruma
 
@@ -50,17 +50,17 @@ Ek yönetici hesapları oluşturmak için:
 
     ![Sol gezinti bölmesinde Kullanıcılar'ı ve ardından Etkin kullanıcılar'ı seçin.](../media/Activeusers.png)
 
- 2. **Etkin kullanıcılar** sayfasında, sayfanın üst kısmındaki **Kullanıcı ekle'yi** seçin ve **Yeni kullanıcı** panelinde adı ve diğer bilgileri girin.
+ 1. **Etkin kullanıcılar** sayfasında, sayfanın üst kısmındaki **Kullanıcı ekle'yi** seçin. 
 
- 3. **Roller** bölümünü genişletin ve bu kullanıcıya genel yönetici erişimi vermek için **Genel yönetici** seçin. Ayrıca **Özelleştirilmiş yönetici'yi** ve görüntülenen rollerden herhangi birini seçebilirsiniz.
+ 1. **Kullanıcı ekle** panelinde ad ve kullanıcı adı bilgileri gibi temel bilgileri girin.
 
-    Alternatif e-posta adresi metin kutusuna alternatif **bir e-posta** girin. Kilitlenirseniz parola bilgilerinizi kurtarmak için bu adresi kullanabilirsiniz. Genel yöneticiler için bu adrese bir faturalama bildirimi de gönderilir.
+ 1. **Ürün lisansları** bilgilerini girin ve ayarlayın.
 
-    ![Yönetici rolünü seçin.](../media/adminroles.png)
+ 1. **İsteğe bağlı ayarlar** bölümünde, uygunsa Yönetim merkezi erişimi ekleme de dahil olmak üzere kullanıcının rolünü tanımlayın.
 
- 4. **Ürün lisansları** bölümünde, **Microsoft 365 İş** seçicisini **Kapalı** ve **Ürün lisansı olmayan kullanıcı oluştur** seçeneğini **Açık** olarak taşıyın.
+    :::image type="content" source="media/m365bp-global-admin.png" alt-text="Yeni kullanıcı rollerini tanımlayın.":::
 
-    ![Ürün lisansını seçin.](../media/productlicense.png)
+ 1. Ayarlarınızı tamamlayın ve gözden geçirin ve ayrıntıları onaylamak için **Eklemeyi bitir'i** seçin.
 
 ## <a name="create-an-emergency-admin-account"></a>Acil durum yönetici hesabı oluşturma
 
@@ -68,17 +68,19 @@ Ayrıca, yanlışlıkla kendinizi kilitlememek için çok faktörlü kimlik doğ
 
 ## <a name="create-a-user-account-for-yourself"></a>Kendiniz için bir kullanıcı hesabı oluşturma
 
-Posta denetimi de dahil olmak üzere kuruluşunuzla işbirliğine katılmak için kullanıcı hesabınızı kullanın. Bu, yönetici kimlik bilgilerinizin  *Alice.Chavez <span></span>@Contoso.org* ve normal kullanıcı hesabınızın *Alice <span></span>@Contoso.com* gibi olabileceği anlamına gelir.
+Posta denetimi de dahil olmak üzere kuruluşunuzla işbirliğine katılmak için kullanıcı hesabınızı kullanın. Bu, yönetici kimlik bilgilerinizin  *Alice.Chavez <span></span>@Contoso.org* gibi olabileceği ve normal kullanıcı hesabınızın *Alice <span></span>@Contoso.com* gibi olabileceği anlamına gelir.
 
 Yeni bir kullanıcı hesabı oluşturmak için:
 
 1. <a href="https://go.microsoft.com/fwlink/p/?linkid=837890" target="_blank">Microsoft 365 yönetim merkezi</a> gidin ve sol gezinti bölmesinde **Kullanıcılar** \> **Etkin kullanıcılar'ı** seçin.
 
-2. **Etkin kullanıcılar** sayfasında, sayfanın üst kısmındaki **Kullanıcı ekle'yi** seçin ve **Yeni kullanıcı** panelinde adı ve diğer bilgileri girin.
+1. **Etkin kullanıcılar** sayfasında, sayfanın üst kısmındaki **Kullanıcı ekle'yi** seçin ve **Kullanıcı ekle** panelinde adı ve diğer bilgileri girin.
 
-3. **Roller** bölümünü genişletin ve **Kullanıcı (yönetici erişimi yok)** seçeneğini belirleyin.
+1. **Ürün Lisansları** bölümünde, **Microsoft 365 İş Ekstra (yönetici erişimi yok)** onay kutusunu seçin.
 
-4. **Ürün lisansları** bölümünde, **Microsoft 365 İş** seçicisini **Açık** olarak taşıyın.
+1. **İsteğe bağlı ayarlar** bölümünde, **Kullanıcı (yönetim merkezi erişimi yok)** için varsayılan radyo düğmesini seçili bırakın.
+
+1. Ayarlarınızı tamamlayın ve gözden geçirin ve ayrıntıları onaylamak için **Eklemeyi bitir'i** seçin.
 
 ## <a name="additional-recommendations"></a>Ek öneriler
 

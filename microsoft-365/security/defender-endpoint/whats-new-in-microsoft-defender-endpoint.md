@@ -17,12 +17,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 351a403923df8e12d63051e30518b5c254abccb8
-ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
+ms.openlocfilehash: 8a3d8caa02aa04412925b4d0648d166194df0548
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65188822"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65319209"
 ---
 # <a name="whats-new-in-microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender’daki yenilikler
 
@@ -56,13 +56,17 @@ Diğer Microsoft Defender güvenlik ürünleriyle ilgili yenilikler hakkında da
 
 Diğer işletim sistemleriyle ilgili Uç Nokta için Microsoft Defender hakkında daha fazla bilgi için:
 
-- [macOS'ta Uç Nokta için Defender'daki yenilikler](mac-whatsnew.md)
-- [iOS'ta Uç Nokta için Defender'daki yenilikler](ios-whatsnew.md)
+- [macOS'da Uç Nokta için Defender'daki yenilikler](mac-whatsnew.md)
+- [iOS'de Uç Nokta için Defender'daki yenilikler](ios-whatsnew.md)
 - [Linux'ta Uç Nokta için Defender'daki yenilikler](linux-whatsnew.md)
+
+## <a name="may-2022"></a>Mayıs 2022
+- [macOS için kurcalama koruması (önizleme)](tamperprotection-macos.md)<br>Kurcalama koruması, macOS Uç Nokta için Microsoft Defender yetkisiz olarak kaldırılmasını önlemeye yardımcı olur.
+
 
 ## <a name="april-2022"></a>Nisan 2022
 - [Windows Server 2012 R2 ve Windows Server 2016) için ekleme ve özellik eşlikleri güncelleştirildi](configure-server-endpoints.md)<br/> Yeni birleşik çözüm paketi genel kullanıma sunuldu ve bağımlılıkları ve yükleme adımlarını kaldırarak sunucuları eklemeyi kolaylaştırıyor. Ayrıca, bu birleşik çözüm paketi birçok yeni özellik geliştirmesi ile birlikte gelir.
-- Tunnel ile tümleştirme. iOS'taki Uç Nokta için Microsoft Defender artık tek bir uygulamada güvenliği ve bağlantıyı etkinleştirmek için bir VPN ağ geçidi çözümü olan Microsoft Tunnel ile tümleştirilebilir. Bu özellik daha önce yalnızca Android'de kullanılabilirdi. [Daha fazla bilgi edinin](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/what-s-new-in-microsoft-endpoint-manager-2204-april-edition/ba-p/3297995)
+- Tunnel ile tümleştirme. iOS Uç Nokta için Microsoft Defender artık tek bir uygulamada güvenliği ve bağlantıyı etkinleştirmek için vpn ağ geçidi çözümü Microsoft Tunnel ile tümleştirilebilir. Bu özellik daha önce yalnızca Android kullanılabilirdi. [Daha fazla bilgi edinin](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/what-s-new-in-microsoft-endpoint-manager-2204-april-edition/ba-p/3297995)
 
 ## <a name="january-2022"></a>Ocak 2022
 
@@ -125,7 +129,7 @@ Diğer işletim sistemleriyle ilgili Uç Nokta için Microsoft Defender hakkınd
 
 - [VPN tümleştirmesi Microsoft Tunnel](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-new-capabilities-on-android-and-ios/ba-p/2442730) <br> Microsoft Tunnel VPN özellikleri artık Android için Uç Nokta için Microsoft Defender uygulamasıyla tümleştirilmiştir. Bu birleştirme, kuruluşların tek bir güvenlik uygulamasıyla basitleştirilmiş bir son kullanıcı deneyimi sunabilmesini sağlar. Bu sayede hem mobil tehdit savunması hem de mobil cihazlarından şirket içi kaynaklara erişim olanağı sunarken, güvenlik ve BT ekipleri de tanıdıkları yönetici deneyimlerini sürdürebiliyor.
 
-- [iOS'ta jailbreak algılama](/microsoft-365/security/defender-endpoint/ios-configure-features#conditional-access-with-defender-for-endpoint-on-ios) <br> iOS'ta Uç Nokta için Microsoft Defender jailbreak algılama özelliği genel kullanıma sunuldu. Bu, zaten var olan kimlik avı korumasına eklenir.  Daha fazla bilgi için bkz. [Cihaz risk sinyallerine göre Koşullu Erişim İlkesi'ni ayarlama](/microsoft-365/security/defender-endpoint/ios-configure-features).
+- [iOS'de jailbreak algılama](/microsoft-365/security/defender-endpoint/ios-configure-features#conditional-access-with-defender-for-endpoint-on-ios) <br> iOS'da Uç Nokta için Microsoft Defender jailbreak algılama özelliği genel kullanıma sunuldu. Bu, zaten var olan kimlik avı korumasına eklenir.  Daha fazla bilgi için bkz. [Cihaz risk sinyallerine göre Koşullu Erişim İlkesi'ni ayarlama](/microsoft-365/security/defender-endpoint/ios-configure-features).
 
 
 ## <a name="march-2021"></a>Mart 2021

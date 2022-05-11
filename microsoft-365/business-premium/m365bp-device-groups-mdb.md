@@ -16,12 +16,12 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: ee73b5a83a669653087bf787061e8ad59b23ed18
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 2c218cd2b0f04201f46155a72a916cc7676aaddb
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095222"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65320828"
 ---
 # <a name="device-groups-in-microsoft-365-business-premium"></a>Microsoft 365 İş Ekstra'da cihaz grupları
 
@@ -38,7 +38,7 @@ Cihaz grubu, işletim sistemi sürümü gibi belirli ölçütler nedeniyle birli
 
 Aboneliğinizle, kullanabileceğiniz varsayılan cihaz gruplarınız vardır. Varsayılan cihaz grupları, İş için Defender'a eklenen tüm cihazları içerir. Ancak, belirli cihazlara belirli ayarlarla cihaz koruma ilkeleri atamak için yeni cihaz grupları da oluşturabilirsiniz. 
 
-Varsayılan cihaz gruplarınız ve tanımladığınız tüm özel cihaz grupları dahil olmak üzere tüm cihaz grupları [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis)(Azure AD) içinde depolanır.
+Varsayılan cihaz gruplarınız ve tanımladığınız tüm özel cihaz grupları dahil olmak üzere tüm cihaz grupları [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis) (Azure AD) içinde depolanır.
 
 ## <a name="how-do-i-create-a-new-device-group"></a>Nasıl yaparım? yeni bir cihaz grubu oluşturacak mısınız?
 
@@ -70,6 +70,8 @@ Cihaz koruma ilkesi oluşturma veya düzenleme sürecindeyken yeni bir cihaz gru
 9. **Yapılandırma ayarları** sayfasında, ayarları gerektiği gibi gözden geçirin ve düzenleyin ve **ardından İleri'yi** seçin. Bu ayarlar hakkında daha fazla bilgi için bkz. [İş için Microsoft Defender'deki yeni nesil yapılandırma ayarlarını anlama](../security/defender-business/mdb-next-gen-configuration-settings.md).
 
 10. **İlkenizi gözden geçirin** adımında tüm ayarları gözden geçirin, gerekli düzenlemeleri yapın ve ardından **İlke oluştur veya İlkeyi** **güncelleştir'i** seçin.
+
+## <a name="next-steps"></a>Sonraki adımlar
 
 Birincil görevlerinizi tamamladığınıza göre [, yanıt ekiplerinizi](m365bp-security-incident-management.md) ayarlayın ve [ortamınızı koruyun](m365bp-maintain-environment.md).
 

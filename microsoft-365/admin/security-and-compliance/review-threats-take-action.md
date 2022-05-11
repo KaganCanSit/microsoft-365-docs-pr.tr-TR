@@ -1,5 +1,5 @@
 ---
-title: Algılanan tehditleri gözden geçirme ve önlem alma
+title: Algılanan tehditleri inceleme ve harekete geçme
 f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
@@ -14,109 +14,109 @@ ms.collection:
 - Adm_TOC
 ms.custom: AdminSurgePortfolio
 search.appverid: MET150
-description: Mobil cihazlarınıza güvenlik tarafından algılanan tehditleri Microsoft Defender Virüsten Koruma ve yönetmeyi Windows 10 öğrenin.
-ms.openlocfilehash: c836554445f56a9a915885d55a4490c6bb5bd1a9
-ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
+description: Windows 10 cihazlarınızda Microsoft Defender Virüsten Koruma tarafından algılanan tehditleri gözden geçirmeyi ve yönetmeyi öğrenin.
+ms.openlocfilehash: 9b819edc21d6cfcac663c54e15b1a060b2b16fa2
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "64633227"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65319319"
 ---
-# <a name="review-detected-threats-and-take-action"></a>Algılanan tehditleri gözden geçirme ve önlem alma
+# <a name="review-detected-threats-and-take-action"></a>Algılanan tehditleri inceleme ve harekete geçme
 
-Kötü amaçlı bir dosya veya yazılım algılandığında, Microsoft Defender Virüsten Koruma bu dosyayı engeller ve çalıştırmasını engeller. Bulut teslimi koruması açıksa, virüsten koruma ve kötü amaçlı yazılımdan koruma altyapısına yeni algılanan tehditler eklenir ve böylelikle diğer cihazlarınız ve kullanıcılarınız da korunur.
+Kötü amaçlı bir dosya veya yazılım algılanır algılanmaz Microsoft Defender Virüsten Koruma bunu engeller ve çalışmasını engeller. Bulut tabanlı koruma açıkken, diğer cihazlarınızın ve kullanıcılarınızın da korunması için virüsten koruma ve kötü amaçlı yazılımdan koruma altyapısına yeni algılanan tehditler eklenir.
 
-Microsoft Defender Virüsten Koruma tehditlere karşı şunları algılar ve korur:
+Microsoft Defender Virüsten Koruma aşağıdaki tehdit türlerini algılar ve bu tehditlere karşı korur:
 
-- Virüsler, kötü amaçlı yazılımlar ve cihazlara yönelik web tabanlı tehditler
+- Cihazlarda virüsler, kötü amaçlı yazılımlar ve web tabanlı tehditler
 - Kimlik avı girişimleri
 - Veri hırsızlığı girişimleri
 
-Bir IT uzmanı/yöneticisi olarak, aynı kullanıcıya Windows 10 cihazlarında tehdit algılamaları [](/mem/intune/enrollment/device-enrollment) Intune bilgileri Microsoft 365 yönetim merkezi. Aşağıdakiler gibi özet bilgileri burada görüyorsunuz:
+BT uzmanı/yöneticisi olarak, [Microsoft 365 yönetim merkezi Intune kayıtlı Windows 10 cihazlarda](/mem/intune/enrollment/device-enrollment) tehdit algılamaları hakkındaki bilgileri görüntüleyebilirsiniz. Özet bilgileri görürsünüz, örneğin:
 
-- Virüsten koruma yazılımına ihtiyaç kaç cihaz gerekiyor?
-- Kaç cihaz güvenlik ilkeleriyle uyumlu değil
-- Şu anda etkin, risk azaltmaya yönelik veya çözümlenmiş durumda kaç tehdit var
+- Kaç cihaz virüsten koruma gerekiyor?
+- Kaç cihazın güvenlik ilkeleriyle uyumlu olmadığı
+- Şu anda etkin, azaltılmış veya çözümlenmiş kaç tehdit var?
 
-Tehdit algılamaları ve cihazlar hakkında belirli bilgileri görüntülemek için çeşitli seçenekleriniz vardır:
+Tehdit algılamaları ve cihazları hakkında belirli bilgileri görüntülemek için çeşitli seçenekleriniz vardır:
 
-- Sayfanın **Etkin** cihazlar <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a>. Bu [makalenin Etkin cihazlarda tehdit algılamalarını yönetme](#manage-threat-detections-on-the-active-devices-page) sayfasına bakın.
-- Sayfanın **Etkin tehdit** <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a>. Bu [makalenin Etkin tehdit algılamalarını yönetme sayfasındaki Tehdit algılamalarını](#manage-threat-detections-on-the-active-threats-page) yönetme makalesine bakın.
-- **Virüsten Koruma** sayfası <a href="https://go.microsoft.com/fwlink/p/?linkid=2150463" target="_blank">Microsoft Endpoint Manager</a>. Bu [makaledeki Yeni E-posta Microsoft Endpoint Manager](#manage-threat-detections-in-microsoft-endpoint-manager) algılamalarını yönetme makalesine bakın.
+- <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> **Etkin cihazlar** sayfası. Bu [makalenin Etkin cihazlar sayfasındaki Tehdit algılamalarını yönetme bölümüne](#manage-threat-detections-on-the-active-devices-page) bakın.
+- <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> **Etkin tehditler** sayfası. Bu [makalenin Etkin tehditler sayfasındaki Tehdit algılamalarını yönetme bölümüne](#manage-threat-detections-on-the-active-threats-page) bakın.
+- <a href="https://go.microsoft.com/fwlink/p/?linkid=2150463" target="_blank">Microsoft Endpoint Manager'deki</a> **Virüsten Koruma** sayfası. Bu [makaledeki Microsoft Endpoint Manager tehdit algılamalarını yönetme](#manage-threat-detections-in-microsoft-endpoint-manager) bölümüne bakın.
 
-Daha fazla bilgi için bkz. [Güvenlik tarafından algılanan Microsoft Defender Virüsten Koruma](threats-detected-defender-av.md).
+Daha fazla bilgi edinmek için bkz. [Microsoft Defender Virüsten Koruma tarafından algılanan tehditler](threats-detected-defender-av.md).
 
-## <a name="manage-threat-detections-on-the-active-devices-page"></a>Etkin cihazlar sayfasında tehdit **algılamalarını** yönetme
+## <a name="manage-threat-detections-on-the-active-devices-page"></a>**Etkin cihazlar** sayfasında tehdit algılamalarını yönetme
 
-Aşağıdaki yordam, bu yordama sahip olan Microsoft 365 İş Ekstra.
+Aşağıdaki yordam, Microsoft 365 İş Ekstra sahip müşteriler için geçerlidir.
 
-1. Oturum Microsoft 365 yönetim merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">https://admin.microsoft.com</a> gidin.
+1. konumundaki Microsoft 365 yönetim merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">https://admin.microsoft.com</a> gidin ve oturum açın.
 
-2. Gezinti sayfasında Cihazlar Etkin **Cihazlar'ı** >  **seçin**. Koruma durumu, virüsten koruma (AV) koruma durumu ve algılanan etkin tehdit sayısı gibi etkin cihazların ve ayrıntıların listesini görüntülenir.
+2. Gezinti sayfasında **CihazlarAkaktif** >  cihazlar'ı seçin. Koruma durumu, virüsten koruma (AV) koruma durumu ve algılanan etkin tehdit sayısı gibi etkin cihazların ve ayrıntıların listesini görürsünüz.
 
-3. Bir cihaz ve kullanılabilir eylemler hakkında daha fazla ayrıntı görüntülemek için o cihazı seçin. Önerilerin ve İlkeyi güncelleştir, Virüsten korumayı **güncelleştir, Hızlı** tarama çalıştır, Tam tarama çalıştır ve daha fazlası gibi eylemlerin yer **olduğu bir açılır** pencere açılır.
+3. Bu cihaz ve kullanılabilir eylemler hakkında daha fazla ayrıntı görüntülemek için bir cihaz seçin. **Güncelleştirme ilkesi, Güncelleştirme** **virüsten koruma**, **Hızlı tarama çalıştır**, **Tam tarama çalıştır** ve daha fazlası gibi öneriler ve kullanılabilir eylemler içeren bir açılır öğe açılır.
 
-## <a name="manage-threat-detections-on-the-active-threats-page"></a>Etkin tehdit sayfasında tehdit **algılamalarını** yönetme
+## <a name="manage-threat-detections-on-the-active-threats-page"></a>Etkin tehditler sayfasında tehdit **algılamalarını** yönetme
 
-Aşağıdaki yordam, bu yordama sahip olan Microsoft 365 İş Ekstra. [Windows 10 cihazları güvenlik altına alınarak](../setup/secure-win-10-pcs.md) [başka bir cihaza Intune](/mem/intune/enrollment/windows-enrollment-methods).
+Aşağıdaki yordam, Microsoft 365 İş Ekstra sahip müşteriler için geçerlidir. [Windows 10 cihazların güvenli hale getirilmesi](../setup/secure-win-10-pcs.md) ve [Intune kaydedilmesi](/mem/intune/enrollment/windows-enrollment-methods) gerekir.
 
 > [!NOTE]
-> Yeni **Microsoft Defender Virüsten Koruma** ve Etkin tehdit sayfası aşamalar içinde yuvarlanıyor, dolayısıyla bu karta hemen erişiminiz yok olabilir.
+> **Microsoft Defender Virüsten Koruma** kartı ve **Etkin tehditler** sayfası aşamalar halinde dağıtılıyor, bu nedenle bunlara hemen erişiminiz olmayabilir.
 
-1. Oturum Microsoft 365 yönetim merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">https://admin.microsoft.com</a> gidin.
+1. konumundaki Microsoft 365 yönetim merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">https://admin.microsoft.com</a> gidin ve oturum açın.
 
-2. Güvenlik **Microsoft Defender Virüsten Koruma Tehditleri** **görüntüle'yi seçin**. (Alternatif olarak, gezinti bölmesinde Durum'ı **seçin** >  **Tehdit & virüsten koruma**.)
+2. **Microsoft Defender Virüsten Koruma** kartında **Etkin tehditleri görüntüle'yi** seçin. (Alternatif olarak, gezinti bölmesinde **Sistem Durumu'na** >  tıklayın **Tehditler & virüsten koruma**.)
 
-3. Etkin **tehditler sayfasında** , bu tehdit hakkında daha fazla bilgi edinmek için algılanan bir tehdit seçin. Hangi cihazların etkilendiği de dahil olmak üzere bu tehditle ilgili ayrıntıları içeren bir açılır pencere açılır.
+3. **Etkin tehditler** sayfasında algılanan bir tehdit seçerek bu tehdit hakkında daha fazla bilgi edinin. Etkilenen cihazlar da dahil olmak üzere bu tehditle ilgili ayrıntıları içeren bir açılır öğe açılır.
 
-4. Çıkışta, İlkeyi güncelleştir, Virüsten koruma güncelleştirme, Hızlı tarama çalıştır ve daha fazlası gibi kullanılabilir eylemleri görüntülemek **için bir** cihaz seçin.
+4. Açılır öğede, **Güncelleştirme ilkesi, Güncelleştirme** **virüsten koruma**, **Hızlı tarama çalıştır** ve daha fazlası gibi kullanılabilir eylemleri görüntülemek için bir cihaz seçin.
 
-## <a name="actions-you-can-take"></a>Gerçekleştir işlemler
+## <a name="actions-you-can-take"></a>Gerçekleştirebileceğiniz eylemler
 
-Belirli tehditlere veya cihazlara ilişkin ayrıntıları görüntüde, önerileri ve gerçekleştirebilirsiniz. Aşağıdaki tabloda, gördüğünüz eylemler açık almaktadır.<br><br>
-
-| Eylem | Açıklama |
-|--|--|
-| Korumayı yapılandırma | Tehdit koruması ilkelerinizin yapılandırılması gerekir. İlke yapılandırma sayfanıza gitmek için bağlantıyı seçin.<br><br>Yardıma mı ihtiyacınız var? Daha [fazla bilgi için bkz. Cihaz güvenliğini uç nokta güvenlik ilkeleriyle Microsoft Intune](/mem/intune/protect/endpoint-security-policy). |
-| İlkeyi güncelleştirme | Virüsten koruma ve gerçek zamanlı koruma ilkelerinizin güncelleştirilmiş veya yapılandırılmış olması gerekir. İlke yapılandırma sayfasına gitmek için bağlantıyı seçin.<br><br>Yardıma mı ihtiyacınız var? Daha [fazla bilgi için bkz. Cihaz güvenliğini uç nokta güvenlik ilkeleriyle Microsoft Intune](/mem/intune/protect/endpoint-security-policy). |
-| Hızlı taramayı çalıştırma | Cihazda hızlı bir virüsten koruma taraması başlatır, kayıt defteri anahtarları ve bilinen veya başlangıç klasörleri gibi kötü amaçlı yazılım kaydedileme Windows olur. |
-| Tam taramayı çalıştır | Cihazda tam virüsten koruma taraması başlatır, kötü amaçlı yazılımların kaydedil olduğu yaygın konumlara odaklanarak ve cihaza her dosya ve klasörü dahil edin. Sonuçlar [diğer Microsoft Endpoint Manager.](/mem/intune/fundamentals/tutorial-walkthrough-endpoint-manager) |
-| Virüsten koruma yazılımını güncelleştirme | Virüsten koruma ve kötü [amaçlı yazılımlardan koruma için](https://go.microsoft.com/fwlink/?linkid=2149926) güvenlik zekası güncelleştirmelerini almak için cihazı gerektirir. |
-| Cihazı yeniden başlat | Bir Windows 10 dakika içinde yeniden başlatılmasını gerektirir.<br><br>**ÖNEMLİ:** Cihaz sahibine veya kullanıcıya yeniden başlatma işlemi otomatik olarak bildirilir ve bu, çalışmanızı kaybetmeye neden olabilir. |
-
-## <a name="manage-threat-detections-in-microsoft-endpoint-manager"></a>Yeni bir e-postada tehdit algılamalarını Microsoft Endpoint Manager
-
-Tehdit algılamalarını Microsoft Endpoint Manager için bu özelliği kullanabilirsiniz. Windows 10 [cihazlarının Intune](/mem/intune/enrollment/windows-enrollment-methods) (Microsoft Endpoint Manager.
-
-1. Şu anda Microsoft Endpoint Manager merkezine gidin <a href="https://go.microsoft.com/fwlink/p/?linkid=2150463" target="_blank">https://endpoint.microsoft.com</a> ve oturum açma.
-
-2. Gezinti bölmesinde Uç nokta **güvenliği'ni seçin**.
-
-3. **Yönet'in altında** Virüsten **Koruma'ya seçin**. Özet, sağlıksız uç noktaları **düzenleme ve kötü** **amaçlı yazılım** Windows 10 gibi **Windows 10 sekmeler vardır**.
-
-4. Kullanılabilir sekmelerde yer alan bilgileri gözden geçirin ve sonra gerekli eylemi yapın.
-
-Örneğin, cihazların kötü amaçlı yazılım algılandı **sekmesinde Windows 10 olduğunu varsayalım**. Bir cihaz seçin; Yeniden Başlat, Hızlı Tarama, Tam **Tarama, Eşitleme** veya İmzaları güncelleştir **gibi bazı eylemleri** **gerçekleştirebilirsiniz**.  Bu cihaz için bir eylem seçin.
-
-Aşağıdaki tabloda, bu tabloda sizin 2013'te Microsoft Endpoint Manager.<br><br>
+Belirli tehditler veya cihazlar hakkındaki ayrıntıları görüntülediğinizde önerileri ve gerçekleştirebileceğiniz bir veya daha fazla eylemi görürsünüz. Aşağıdaki tabloda, görebileceğiniz eylemler açıklanmaktadır.<br><br>
 
 | Eylem | Açıklama |
 |--|--|
-| Yeniden başlatma | Bir Windows 10 dakika içinde yeniden başlatılmasını gerektirir.<br><br>**ÖNEMLİ:** Cihaz sahibine veya kullanıcıya yeniden başlatma işlemi otomatik olarak bildirilir ve bu, çalışmanızı kaybetmeye neden olabilir. |
-| Hızlı Tarama | Cihazda hızlı bir virüsten koruma taraması başlatır, kayıt defteri anahtarları ve bilinen veya başlangıç klasörleri gibi kötü amaçlı yazılım kaydedileme Windows olur. Sonuçlar [diğer Microsoft Endpoint Manager.](/mem/intune/fundamentals/tutorial-walkthrough-endpoint-manager) |
-| Tam Tarama | Cihazda tam virüsten koruma taraması başlatır, kötü amaçlı yazılımların kaydedil olduğu yaygın konumlara odaklanarak ve cihaza her dosya ve klasörü dahil edin. Sonuçlar [diğer Microsoft Endpoint Manager.](/mem/intune/fundamentals/tutorial-walkthrough-endpoint-manager) |
-| Eşitleme | Posta kutusuyla (uygulamanın bir Intune) iade etmek için bir cihaz Microsoft Endpoint Manager. Cihaz iade geldiğinde, cihaza atanmış bekleyen eylemleri veya ilkeleri alır. |
-| İmzaları güncelleştirme | Virüsten koruma ve kötü [amaçlı yazılımlardan koruma için](https://go.microsoft.com/fwlink/?linkid=2149926) güvenlik zekası güncelleştirmelerini almak için cihazı gerektirir. |
+| Korumayı yapılandırma | Tehdit koruma ilkelerinizin yapılandırılması gerekir. İlke yapılandırma sayfanıza gitmek için bağlantıyı seçin.<br><br>Yardıma mı ihtiyacınız var? Bkz. [Microsoft Intune uç nokta güvenlik ilkeleriyle cihaz güvenliğini yönetme](/mem/intune/protect/endpoint-security-policy). |
+| İlkeyi güncelleştirme | Virüsten koruma ve gerçek zamanlı koruma ilkelerinizin güncelleştirilmiş veya yapılandırılmış olması gerekir. İlke yapılandırma sayfasına gitmek için bağlantıyı seçin.<br><br>Yardıma mı ihtiyacınız var? Bkz. [Microsoft Intune uç nokta güvenlik ilkeleriyle cihaz güvenliğini yönetme](/mem/intune/protect/endpoint-security-policy). |
+| Hızlı tarama çalıştırma | Kayıt defteri anahtarları ve bilinen Windows başlangıç klasörleri gibi kötü amaçlı yazılımların kaydedilebileceği yaygın konumlara odaklanarak cihazda hızlı bir virüsten koruma taraması başlatır. |
+| Tam tarama çalıştırma | Cihazda tam virüsten koruma taraması başlatır ve kötü amaçlı yazılımların kaydedilebileceği yaygın konumlara ve cihazdaki her dosya ve klasöre odaklanır. Sonuçlar [Microsoft Endpoint Manager](/mem/intune/fundamentals/tutorial-walkthrough-endpoint-manager) gönderilir. |
+| Virüsten korumayı güncelleştirme | Cihazın virüsten koruma ve kötü amaçlı yazılımdan koruma için [güvenlik bilgileri güncelleştirmelerini](https://go.microsoft.com/fwlink/?linkid=2149926) alması gerekir. |
+| Cihazı yeniden başlatma | Windows 10 cihazı beş dakika içinde yeniden başlatmaya zorlar.<br><br>**ÖNEMLİ:** Cihaz sahibine veya kullanıcıya yeniden başlatma bildirimi otomatik olarak bildirilmez ve kaydedilmemiş çalışmayı kaybedebilir. |
+
+## <a name="manage-threat-detections-in-microsoft-endpoint-manager"></a>Microsoft Endpoint Manager'de tehdit algılamalarını yönetme
+
+Tehdit algılamalarını yönetmek için Microsoft Endpoint Manager kullanabilirsiniz. Windows 10 cihazların Intune (Microsoft Endpoint Manager parçası) [olarak kaydedilmesi](/mem/intune/enrollment/windows-enrollment-methods) gerekir.
+
+1. konumundaki Microsoft Endpoint Manager yönetim merkezine <a href="https://go.microsoft.com/fwlink/p/?linkid=2150463" target="_blank">https://endpoint.microsoft.com</a> gidin ve oturum açın.
+
+2. Gezinti bölmesinde **Uç nokta güvenliği'ni** seçin.
+
+3. **Yönet'in** altında **Virüsten Koruma'yı** seçin. **Özet**, **Windows 10 iyi durumda olmayan uç noktalar** ve **algılanan kötü amaçlı yazılım Windows 10** gibi çeşitli sekmeler görürsünüz.
+
+4. Kullanılabilir sekmelerdeki bilgileri gözden geçirin ve gerekli eylemleri gerçekleştirin.
+
+Örneğin, cihazların **algılanan Windows 10 kötü amaçlı yazılım** sekmesinde listelendiğini varsayalım. Bir cihaz seçtiğinizde **, Yeniden Başlatma**, **Hızlı Tarama**, **Tam Tarama**, **Eşitleme** veya **İmzaları güncelleştirme** gibi bazı eylemleriniz olur. Bu cihaz için bir eylem seçin.
+
+Aşağıdaki tabloda, Microsoft Endpoint Manager'da görebileceğiniz eylemler açıklanmaktadır.<br><br>
+
+| Eylem | Açıklama |
+|--|--|
+| Yeniden başlatma | Windows 10 cihazı beş dakika içinde yeniden başlatmaya zorlar.<br><br>**ÖNEMLİ:** Cihaz sahibine veya kullanıcıya yeniden başlatma bildirimi otomatik olarak bildirilmez ve kaydedilmemiş çalışmayı kaybedebilir. |
+| Hızlı Tarama | Kayıt defteri anahtarları ve bilinen Windows başlangıç klasörleri gibi kötü amaçlı yazılımların kaydedilebileceği yaygın konumlara odaklanarak cihazda hızlı bir virüsten koruma taraması başlatır. Sonuçlar [Microsoft Endpoint Manager](/mem/intune/fundamentals/tutorial-walkthrough-endpoint-manager) gönderilir. |
+| Tam Tarama | Cihazda tam virüsten koruma taraması başlatır ve kötü amaçlı yazılımların kaydedilebileceği yaygın konumlara ve cihazdaki her dosya ve klasöre odaklanır. Sonuçlar [Microsoft Endpoint Manager](/mem/intune/fundamentals/tutorial-walkthrough-endpoint-manager) gönderilir. |
+| Eşitleme | Intune (Microsoft Endpoint Manager bir parçası) ile giriş yapmak için bir cihaz gerektirir. Cihaz iade ettiğinde, cihaza atanan bekleyen eylemleri veya ilkeleri alır. |
+| İmzaları güncelleştirme | Cihazın virüsten koruma ve kötü amaçlı yazılımdan koruma için [güvenlik bilgileri güncelleştirmelerini](https://go.microsoft.com/fwlink/?linkid=2149926) alması gerekir. |
 
 > [!TIP]
-> Daha fazla bilgi için bkz [. Cihazlar için uzaktan eylemler](/mem/intune/protect/endpoint-security-manage-devices#remote-actions-for-devices).
+> Daha fazla bilgi için bkz. [Cihazlar için uzak eylemler](/mem/intune/protect/endpoint-security-manage-devices#remote-actions-for-devices).
 
-## <a name="how-to-submit-a-file-for-malware-analysis"></a>Kötü amaçlı yazılım çözümlemesi için dosya gönderme
+## <a name="how-to-submit-a-file-for-malware-analysis"></a>Kötü amaçlı yazılım analizi için dosya gönderme
 
-Kaçırılmış olduğunu ya da yanlış olarak kötü amaçlı yazılım olarak sınıflandırılmış olduğunu bildiğiniz bir dosyanız varsa, kötü amaçlı yazılım çözümlemesi yapmak için bu dosyayı Microsoft'a gönderebilirsiniz. Kullanıcılar ve IT yöneticileri çözümleme için dosya gönderebilirsiniz. 'ı ziyaret edin [https://www.microsoft.com/wdsi/filesubmission](https://www.microsoft.com/wdsi/filesubmission).
+Kaçırıldığını veya yanlış şekilde kötü amaçlı yazılım olarak sınıflandırıldığını düşündüğünüz bir dosyanız varsa, bu dosyayı kötü amaçlı yazılım analizi için Microsoft'a gönderebilirsiniz. Kullanıcılar ve BT yöneticileri analiz için bir dosya gönderebilir. adresini ziyaret edin [https://www.microsoft.com/wdsi/filesubmission](https://www.microsoft.com/wdsi/filesubmission).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[kurumsal planların güvenliğini sağlamanın en Microsoft 365 10 yolu](../../admin/security-and-compliance/secure-your-business-data.md)
+[İş planları için Microsoft 365 güvenliğini sağlamaya yönelik en iyi yöntemler](../../admin/security-and-compliance/secure-your-business-data.md)
 
-[Yeni müşterilere İş için Microsoft Defender](../../security/defender-business/mdb-overview.md) (Defender for Business, 1 Mart 2022 Microsoft 365 İş Ekstra den itibaren müşterilere sunulmaktadır)
+[İş için Microsoft Defender genel bakış](../../security/defender-business/mdb-overview.md) (Defender for Business, 1 Mart 2022'de başlayarak Microsoft 365 İş Ekstra müşterilerine dağıtılıyor)

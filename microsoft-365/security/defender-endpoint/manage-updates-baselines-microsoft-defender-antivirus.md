@@ -18,12 +18,12 @@ ms.technology: mde
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: 6822f736cae73d7d4654f8b4310e0e397cffa677
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: f427bcfbc5f8b6538c72cebea4adf6edc80a42ba
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65077486"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65320529"
 ---
 # <a name="manage-microsoft-defender-antivirus-updates-and-apply-baselines"></a>Microsoft Defender Virüsten Koruma güncelleştirmelerini yönetme ve temelleri uygulama
 
@@ -721,6 +721,21 @@ Windows 10 (Enterprise, Pro ve Home sürümleri), Windows Server 2019, Windows S
 Daha fazla bilgi için bkz. [Windows işletim sistemi yükleme görüntüleri için Microsoft Defender güncelleştirmesi](https://support.microsoft.com/help/4568292/defender-update-for-windows-operating-system-installation-images).
 
 <details>
+<summary>20220506.6</summary>
+
+&ensp;Paket sürümü: **20220506.6**<br/>
+&ensp;Platform sürümü: **4.18.2203.5**<br/>
+&ensp;Altyapı sürümü: **1.1.19200.5**<br/>
+&ensp;İmza sürümü: **1.363.1436.0**<br/>
+
+### <a name="fixes"></a>Giderir
+- Yok
+
+### <a name="additional-information"></a>Ek bilgiler
+- Yok
+
+<br/>
+</details><details>
 <summary>20220321.1</summary>
 
 &ensp;Paket sürümü: **20220321.1**<br/>

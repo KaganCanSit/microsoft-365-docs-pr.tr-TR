@@ -30,12 +30,12 @@ search.appverid:
 - MET150
 ms.assetid: 2d7ff45e-0da0-4caa-89a9-48cabf41f193
 description: Microsoft 365 İş Ekstra kullanıcılar için Windows 10 Pro çalıştıran Windows cihazları ayarlayarak merkezi yönetim ve güvenlik denetimlerini etkinleştirme.
-ms.openlocfilehash: 57db37f73d2b9145f7c4fb9c1ee1005318c629d7
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: b9c8a5eb724a74959983e86dcdcb8f2f8f96b540
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65096236"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65318590"
 ---
 # <a name="set-up-windows-devices-for-microsoft-365-business-premium-users"></a>Microsoft 365 İş Ekstra kullanıcılar için Windows cihazları ayarlama
 
@@ -56,9 +56,9 @@ Windows cihazları yükseltme hakkında daha fazla bilgi için aşağıdaki maka
 - [giriş Windows Windows Pro yükseltme](https://support.microsoft.com/windows/upgrade-windows-home-to-windows-pro-ef34d520-e73f-3198-c525-d1a218cc2818)
 - [Windows 10 Pro'ye yükseltme](https://support.microsoft.com/windows/upgrade-to-windows-10-pro-71ecc746-0f81-a4c0-bd4b-0db8559e0796)
   
-Yükselttikten sonra, [yükseltmeye sahip olduğunuzu doğrulamak veya yükseltmenin çalıştığından emin olmak için bkz. Cihazın Azure AD'ye bağlı olduğunu](#verify-the-device-is-connected-to-azure-ad) doğrulama.
+Yükselttikten sonra, [yükseltmeye sahip olduğunuzu doğrulamak veya yükseltmenin çalıştığından emin olmak için cihazın Azure AD bağlı olduğunu](#verify-the-device-is-connected-to-azure-ad) doğrulama konusuna bakın.
 
-## <a name="join-windows-devices-to-your-organizations-azure-ad"></a>Windows cihazları kuruluşunuzun Azure AD'sine ekleme
+## <a name="join-windows-devices-to-your-organizations-azure-ad"></a>Windows cihazları kuruluşunuzun Azure AD katılma
 
 Şirketinizin tüm Windows cihazları Windows 10 Pro veya Windows 11 Pro çalıştırıyorsa, bu cihazları kuruluşunuzun Azure Active Directory (Azure AD) ile birleştirebilirsiniz. 
 
@@ -80,6 +80,6 @@ Eşitleme durumunuzu doğrulamak için, **Ayarlar'daki İşe veya okula erişim*
 
 Mobil cihazlarınızı ayarlamak için bkz[. Microsoft 365 İş Ekstra kullanıcılar için mobil cihazları ayarlama](set-up-mobile-devices.md), 
 
-Korumayı artırmak için bkz. [İş planları için Microsoft 365 güvenliğini sağlamanın en iyi 10 yolu](../security-and-compliance/secure-your-business-data.md).
+Korumayı artırmak için bkz. [İş planlarına yönelik Microsoft 365 güvenliğini sağlamaya yönelik en iyi yöntemler](../security-and-compliance/secure-your-business-data.md).
   
 

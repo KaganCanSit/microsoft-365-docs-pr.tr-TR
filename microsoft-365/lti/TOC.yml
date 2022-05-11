@@ -2,6 +2,8 @@
   href: index.md
 - name: Microsoft OneLTI yönetimi
   href: manage-microsoft-one-lti.md
+- name: LMS URL'leri için tarayıcı tanımlama bilgilerine izin ver
+  href: browser-cookies.md
 - name: Canvas tümleştirmeleri
   items:
     - name: Canvas ile Microsoft OneDrive LTI kullanma

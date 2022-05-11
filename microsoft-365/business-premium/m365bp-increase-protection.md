@@ -25,12 +25,12 @@ search.appverid:
 - BCS160
 - MET150
 description: Microsoft 365 İş Ekstra'de koruma düzeyini artırma konusunda yardım alın
-ms.openlocfilehash: c653e4f84ad3f4dd537ab82382e8a57da7d2876e
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 2bd00329f160c187325fc696114f0fac4e503656
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65099933"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65319143"
 ---
 # <a name="increase-threat-protection-for-microsoft-365-business-premium"></a>Microsoft 365 İş Ekstra için tehdit korumasını artırma
 
@@ -212,4 +212,6 @@ Kuruluşunuzdaki kişilerin takvimlerini paylaşmasını engelleyebilirsiniz. Pa
 
 Kullanıcılarınızın takvimlerini paylaşmasına izin veriliyorsa, Web üzerinde Outlook'dan nasıl paylaşacaklarına [ilişkin bu yönergelere](https://support.office.com/article/7ecef8ae-139c-40d9-bae2-a23977ee58d5) bakın.
 
-Tamam, şimdi [**KCG cihazları kurma**](m365bp-devices-overview.md) görevine başlamanın zamanı geldi.
+## <a name="next-steps"></a>Sonraki adımlar
+
+Şimdi [**KCG cihazlarını ayarlama görevine başlayalım**](m365bp-devices-overview.md).

@@ -24,12 +24,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Microsoft 365 ile kampanyanız veya işletmeniz için neden ve nasıl SharePoint iletişim sitesi oluşturacağınızı öğrenin ve yanlış dosya paylaşımı nedeniyle ekibi siber saldırılara ve kötü amaçlı yazılımlara ve diğer tehditlere karşı koruyun.
-ms.openlocfilehash: 1e1e2792e4a667737118974b95ae5f77cb6ae224
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 72794c9aac0f1409675af0e3fa40c8cd1881f73a
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65100191"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65319538"
 ---
 # <a name="create-a-communications-site-in-sharepoint"></a>SharePoint'de iletişim sitesi oluşturma
 
@@ -72,5 +72,7 @@ PowerPoint ve PDF için aşağıdaki bağlantılar tabloid biçiminde (kayıt de
 ## <a name="admin-settings"></a>Yönetici ayarları
 
 **+ Site oluştur** bağlantısını görmüyorsanız, self servis site oluşturma özelliği Microsoft 365'da kullanılamayabilir. Ekip sitesi oluşturmak için kuruluşunuzda Microsoft 365 yöneten kişiye başvurun. Microsoft 365 yöneticisiyseniz, kuruluşunuzda self servis site oluşturmayı etkinleştirmek için [bkz. SharePoint Online'da site oluşturmayı yönetme](/sharepoint/manage-site-creation) veya SharePoint <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">yönetim merkezinden</a> site oluşturmak için [yeni SharePoint yönetim merkezinde siteleri yönetme](/sharepoint/manage-sites-in-new-admin-center).
+
+## <a name="next-mission"></a>Sonraki görev
 
 &mdash; Görevi tamamladığınız için tebrikler! Şimdi, [kuruluşunuzun tamamı için yönetilen cihazları korumaya](m365bp-protect-devices.md) hemen odaklanın!

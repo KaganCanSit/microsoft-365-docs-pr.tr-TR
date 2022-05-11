@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: troubleshooting
 ms.technology: mde
-ms.openlocfilehash: e7b9e757f15663338f2e12c645cc3cb0b63ef34b
-ms.sourcegitcommit: 4cd8be7c22d29100478dce225dce3bcdce52644d
+ms.openlocfilehash: 958c58fab875ce86b0a3290450e2cf17c4b75a44
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65302255"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65320507"
 ---
 # <a name="troubleshoot-onboarding-issues-related-to-security-management-for-microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender için Güvenlik Yönetimi ile ilgili ekleme sorunlarını giderme
 
@@ -120,14 +120,14 @@ Aşağıdaki tabloda, hatayı gidermek için nelerin denenmesi/iade edilmesi ger
 
 |Hata Kodu|Kayıt Durumu|Yönetici Eylemleri|
 |---|---|---|
-|`5-9`,`11-12`, `26-33`|Genel hata|Cihaz başarıyla Uç Nokta için Microsoft Defender eklendi. Ancak, güvenlik yapılandırması yönetim akışında bir hata oluştu. Bunun nedeni cihazın [Uç Nokta için Microsoft Defender yönetim kanalı önkoşullarını](security-config-management.md) karşılamaması olabilir. [İstemci Çözümleyicisi'nin](https://aka.ms/BetaMDEAnalyzer) cihazda çalıştırılması sorunun kök nedenini belirlemeye yardımcı olabilir. Bu işe yaramazsa lütfen desteğe başvurun.|
+|`5-7`, `9`, `11-12`, `26-33`|Genel hata|Cihaz başarıyla Uç Nokta için Microsoft Defender eklendi. Ancak, güvenlik yapılandırması yönetim akışında bir hata oluştu. Bunun nedeni cihazın [Uç Nokta için Microsoft Defender yönetim kanalı önkoşullarını](security-config-management.md) karşılamaması olabilir. [İstemci Çözümleyicisi'nin](https://aka.ms/BetaMDEAnalyzer) cihazda çalıştırılması sorunun kök nedenini belirlemeye yardımcı olabilir. Bu işe yaramazsa lütfen desteğe başvurun.|
+| `8`, `44` | Microsoft Endpoint Manager Yapılandırması sorunu | Cihaz başarıyla Uç Nokta için Microsoft Defender eklendi. Ancak Microsoft Endpoint Manager yönetim merkezi aracılığıyla Uç Nokta için Microsoft Defender Güvenlik Yapılandırmasına izin verecek şekilde yapılandırılmamıştır. [Microsoft Endpoint Manager kiracısının yapılandırıldığından ve özelliğin açık olduğundan](/mem/intune/protect/mde-security-integration#configure-your-tenant-to-support-microsoft-defender-for-endpoint-security-configuration-management) emin olun.|
 |`13-14`,`20`,`24`,`25`|Bağlantı sorunu|Cihaz başarıyla Uç Nokta için Microsoft Defender eklendi. Ancak, güvenlik yapılandırması yönetim akışında bir bağlantı sorunundan kaynaklanabilecek bir hata oluştu. [Azure Active Directory ve Microsoft Endpoint Manager uç noktalarının](security-config-management.md#connectivity-requirements) güvenlik duvarınızda açıldığını doğrulayın.|
 |`10`,`42`|Genel Karma birleştirme hatası|Cihaz başarıyla Uç Nokta için Microsoft Defender eklendi. Ancak, güvenlik yapılandırma yönetimi akışında bir hata oluştu ve işletim sistemi karma birleştirme gerçekleştiremedi. İşletim sistemi düzeyinde karma birleştirme hatalarını gidermek için [karma Azure Active Directory katılmış cihazlarda](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current) sorun giderme'yi kullanın.|
 |`15`|Kiracı uyuşmazlığı|Cihaz başarıyla Uç Nokta için Microsoft Defender eklendi. Ancak, Uç Nokta için Microsoft Defender kiracı kimliğiniz Azure Active Directory kiracı kimliğiniz ile eşleşmediğinden güvenlik yapılandırma yönetimi akışında bir hata oluştu. Uç Nokta için Defender kiracınızdaki Azure Active Directory kiracı kimliğinin, etki alanınızın SCP girişindeki kiracı kimliğiyle eşleştiğinden emin olun. Daha fazla ayrıntı için Uç Nokta için Microsoft Defender [için Güvenlik Yönetimi ile ilgili ekleme sorunlarını giderin](troubleshoot-security-config-mgt.md).|
-|`16`,`17`|Karma hata - Hizmet Bağlantı Noktası|Cihaz başarıyla Uç Nokta için Microsoft Defender eklendi. Ancak Hizmet Bağlantı Noktası (SCP) kaydı doğru yapılandırılmadı ve cihaz Azure AD birleştirilemedi. Bunun nedeni SCP'nin Enterprise DRS'ye katılmak üzere yapılandırılması olabilir. SCP kaydında AAD ve SCP'nin en iyi yöntemlere göre yapılandırıldığından emin olun. Daha fazla bilgi için bkz. [Hizmet bağlantı noktası yapılandırma](/azure/active-directory/devices/hybrid-azuread-join-manual#configure-a-service-connection-point).|
+|`16`,`17`|Karma hata - Hizmet Bağlantı Noktası|Cihaz başarıyla Uç Nokta için Microsoft Defender eklendi. Ancak Hizmet Bağlantı Noktası (SCP) kaydı doğru yapılandırılmadı ve cihaz Azure AD birleştirilemedi. Bunun nedeni SCP'nin Enterprise DRS'ye katılmak üzere yapılandırılması olabilir. SCP kaydının AAD ve SCP'ye işaret etmelerinin en iyi yöntemlere göre yapılandırıldığından emin olun. Daha fazla bilgi için bkz. [Hizmet bağlantı noktası yapılandırma](/azure/active-directory/devices/hybrid-azuread-join-manual#configure-a-service-connection-point).|
 |`18`|Sertifika hatası|Cihaz başarıyla Uç Nokta için Microsoft Defender eklendi. Ancak, bir cihaz sertifikası hatası nedeniyle güvenlik yapılandırma yönetimi akışında bir hata oluştu. Cihaz sertifikası farklı bir kiracıya ait. [Güvenilen sertifika profilleri](/mem/intune/protect/certificates-trusted-root#create-trusted-certificate-profiles) oluşturulurken en iyi yöntemlerin izlendiğini doğrulayın.|
-|`36`|LDAP API hatası|Cihaz başarıyla Uç Nokta için Microsoft Defender eklendi. Ancak, AAD Bağlan yanlış yapılandırma nedeniyle güvenlik yapılandırma yönetimi akışında bir hata oluştu. Cihazın AAD kaydedilmesini engelleyen şeyleri belirlemek için [Cihaz Kaydı Sorun Giderici Aracı'nı](/samples/azure-samples/dsregtool/dsregtool) çalıştırmayı göz önünde bulundurun. Windows Server 2012 R2 için [özel sorun giderme yönergelerini](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-legacy) çalıştırın.  |
-|`37`|Şirket içi eşitleme sorunu|Cihaz başarıyla Uç Nokta için Microsoft Defender eklendi. Ancak, AAD Bağlan yanlış yapılandırma nedeniyle güvenlik yapılandırma yönetimi akışında bir hata oluştu. Cihazın AAD kaydedilmesini engelleyen şeyleri belirlemek için [Cihaz Kaydı Sorun Giderici Aracı'nı](/samples/azure-samples/dsregtool/dsregtool) çalıştırmayı göz önünde bulundurun. Windows Server 2012 R2 için [özel sorun giderme yönergelerini](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-legacy) çalıştırın. |
+|`36` , `37`| AAD Bağlan yanlış yapılandırma |Cihaz başarıyla Uç Nokta için Microsoft Defender eklendi. Ancak, AAD Bağlan yanlış yapılandırma nedeniyle güvenlik yapılandırma yönetimi akışında bir hata oluştu. Cihazın AAD'ye kaydolmasını engelleyen şeyi belirlemek için [Cihaz Kaydı Sorun Giderici Aracı'nı](/samples/azure-samples/dsregtool/dsregtool) çalıştırmayı göz önünde bulundurun. Windows Server 2012 R2 için [özel sorun giderme yönergelerini](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-legacy) çalıştırın.  |
 |`38`,`41`|DNS hatası|Cihaz başarıyla Uç Nokta için Microsoft Defender eklendi. Ancak, bir DNS hatası nedeniyle güvenlik yapılandırması yönetim akışında bir hata oluştu. Cihazdaki İnternet bağlantısını ve/veya DNS ayarlarını denetleyin. Geçersiz DNS ayarları iş istasyonu tarafında olabilir. Active Directory, düzgün çalışmak için (yönlendiricinin adresini değil) etki alanı DNS'sini kullanmanızı gerektirir. Daha fazla bilgi için bkz[. Uç Nokta için Microsoft Defender için Güvenlik Yönetimi ile ilgili ekleme sorunlarını giderme](troubleshoot-security-config-mgt.md).|
 |`40`|Saat eşitleme sorunu|Cihaz başarıyla Uç Nokta için Microsoft Defender eklendi. Ancak, güvenlik yapılandırması yönetim akışında bir hata oluştu. Saatin doğru ayarlandığını ve hatanın oluştuğu cihazda eşitlendiğini doğrulayın.|
 
@@ -143,7 +143,7 @@ AADRT günlüğünde tipik bir hata ve nasıl okunduğu için aşağıya bakın:
 
 İletideki bilgilerden, çoğu durumda hangi hatayla karşılaşıldığını, hangi Win32 API'sinin hatayı döndürdiğini (varsa), hangi URL'nin (varsa) kullanıldığını ve hangi AAD Çalışma Zamanı API'si hatasıyla karşılaşıldığını anlamak mümkündür.
 
-## <a name="instructions-for-applying-computer-join-rule-in-aad-connect"></a>AAD Bağlan'da Bilgisayar Birleştirme kuralı uygulama yönergeleri
+## <a name="instructions-for-applying-computer-join-rule-in-aad-connect"></a>AAD Bağlan'de Bilgisayar Birleştirme kuralı uygulama yönergeleri
 
 R2 etki alanına katılmış Windows Server 2012 bilgisayarlarda Uç Nokta için Microsoft Defender için Güvenlik Yönetimi için , "AD-Computer Katılmadan Gelen" Azure AD Bağlan eşitleme kuralına yönelik bir güncelleştirme gerekir. Bu, özgün "AD'den Gelen - Bilgisayara Katılma" kuralını devre dışı bırakacak şekilde kuralı kopyalayıp değiştirerek gerçekleştirilebilir. Azure AD Bağlan, yerleşik kurallarda değişiklik yapmak için varsayılan olarak bu deneyimi sunar.
 

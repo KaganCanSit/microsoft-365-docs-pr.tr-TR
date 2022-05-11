@@ -22,12 +22,12 @@ search.appverid:
 - MOE150
 ms.assetid: eb926624-018b-4486-bf11-5fba6ee4d645
 description: İş için Microsoft 365 taşıma gereksinimleri ve dikkat edilmesi gerekenler hakkında bilgi edinin.
-ms.openlocfilehash: 9a8ca80a9559d4ecdb988c515c20add4676e602d
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: a5f777a411f82de30c1d7dc69f07f92eadbbedce
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65128902"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65317482"
 ---
 # <a name="plan-your-setup-of-microsoft-365-for-business"></a>İş için Microsoft 365 kurulumunuzu planlama
 
@@ -149,4 +149,4 @@ Daha büyük kuruluşlar için veya Skype Kurumsal, şirket içi veya karma dağ
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[İş planları için Microsoft 365 güvenliğini sağlamanın en iyi 10 yolu](../security-and-compliance/secure-your-business-data.md)
+[İş planları için Microsoft 365 güvenliğini sağlamaya yönelik en iyi yöntemler](../security-and-compliance/secure-your-business-data.md)

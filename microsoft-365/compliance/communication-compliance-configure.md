@@ -22,12 +22,12 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: b5752d0ebeb0095defe47f52529392e4b9c01212
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: c4e28c91cc7e7fe441d000553e9099ad39420991
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64973739"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65317084"
 ---
 # <a name="get-started-with-communication-compliance"></a>İletişim uyumluluğunu kullanmaya başlama
 
@@ -71,12 +71,12 @@ Uygunsuz içerik içeren iletilerdeki etkinlik, uygunsuz içerik şablonunu veya
 > [!IMPORTANT]
 > Rol gruplarınızı yapılandırdıktan sonra, rol grubu izinlerinin kuruluşunuz genelinde atanan kullanıcılara uygulanması 30 dakika kadar sürebilir.
 
-İletişim uyumluluk özelliklerini yönetmek için ilk izinleri yapılandırmak için kullanılan altı rol grubu vardır. **İletişim uyumluluğunu** Microsoft Purview uyumluluk portalında menü seçeneği olarak kullanılabilir hale getirmek ve bu yapılandırma adımlarına devam etmek için aşağıdaki rol veya rol gruplarından birine atanmalısınız:
+İletişim uyumluluk özelliklerini yönetmek için ilk izinleri yapılandırmak için kullanılan altı rol grubu vardır. **İletişim uyumluluğunu** Microsoft Purview uyumluluk portalı menü seçeneği olarak kullanılabilir hale getirmek ve bu yapılandırma adımlarına devam etmek için aşağıdaki rol veya rol gruplarından birine atanmalısınız:
 
 - Genel [*Yönetici*](/azure/active-directory/roles/permissions-reference#global-administrator) rolünü Azure Active Directory
 - [*uyumluluk yöneticisi*](/azure/active-directory/roles/permissions-reference#compliance-administrator) rolünü Azure Active Directory
-- Microsoft Purview uyumluluk portalı [*Kuruluş Yönetimi*](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center) rol grubu
-- Microsoft Purview uyumluluk portalı [*Uyumluluk Yöneticisi*](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center) rol grubu
+- [*kuruluş yönetimi*](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center) rol grubunu Microsoft Purview uyumluluk portalı
+- [*uyumluluk yöneticisi*](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center) rol grubunu Microsoft Purview uyumluluk portalı
 - *İletişim Uyumluluğu* rol grubu
 - *İletişim Uyumluluğu Yöneticisi* rol grubu
 
@@ -85,7 +85,7 @@ Aşağıdaki rollerin üyeleri *, İletişim Uyumluluğu Yöneticisi* rol grubun
 - Azure Active Directory *Genel Yöneticisi*
 - *Azure Active Directory Uyumluluk Yöneticisi*
 - Microsoft Purview uyumluluk portalı *Kuruluş Yönetimi*
-- Microsoft Purview uyumluluk portalı *Uyumluluk Yöneticisi*
+- *Microsoft Purview uyumluluk portalı Uyumluluk Yöneticisi*
 
 > [!IMPORTANT]
 > İletişim *uyumluluk* yapılandırmanızın kuruluşunuzdan ayrılması durumunda iletişim uyumluluk yapılandırmanızın 'sıfır yönetici' senaryosunda yer almaması için İletişim *Uyumluluğu veya İletişim Uyumluluğu Yöneticisi* rol gruplarında her zaman en az bir kullanıcınız olduğundan emin olun (belirlediğiniz seçeneğe bağlı olarak).
@@ -122,7 +122,7 @@ Aşağıdaki rollerin üyeleri *, İletişim Uyumluluğu Yöneticisi* rol grubun
 
 Kuruluşunuzdaki farklı kullanıcılar arasında iletişim uyumluluğu erişimini ve sorumluluklarını segmentlere ayırmak için kullanıcıları belirli rol gruplarına atamak için bu seçeneği kullanın.
 
-1. Microsoft 365 kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak [Microsoft Purview uyumluluk portalında](https://compliance.microsoft.com) oturum açın ve **İzinler'e**</a> gidin.
+1. [Microsoft 365](https://compliance.microsoft.com) kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak Microsoft Purview uyumluluk portalı oturum açın ve **İzinler'e**</a> gidin.
 
 2. Office 365 rolleri görüntülemek ve yönetmek için bağlantıyı seçin.
 
@@ -201,7 +201,7 @@ Grupları ayarlama hakkında daha fazla bilgi için bkz:
 
 ## <a name="step-4-optional-verify-your-yammer-tenant-is-in-native-mode"></a>4. Adım (isteğe bağlı): Yammer kiracınızın Yerel Modda olduğunu doğrulayın
 
-Yerel Modda, tüm Yammer kullanıcılar Azure Active Directory (Azure AD), tüm gruplar Office 365 Grupları ve tüm dosyalar SharePoint Online'da depolanır. Yammer kiracınızın, özel iletilerdeki riskli konuşmaları ve Yammer'daki topluluk konuşmalarını taramak ve tanımlamak için iletişim uyumluluk ilkelerinin Yerel Modda olması gerekir.
+Yerel Modda, tüm Yammer kullanıcılar Azure Active Directory (Azure AD), tüm gruplar Office 365 Gruplar'dır ve tüm dosyalar SharePoint Online'da depolanır. Yammer kiracınızın, özel iletilerdeki riskli konuşmaları ve Yammer'daki topluluk konuşmalarını taramak ve tanımlamak için iletişim uyumluluk ilkelerinin Yerel Modda olması gerekir.
 
 yerel modda Yammer yapılandırma hakkında daha fazla bilgi için bkz:
 
@@ -216,9 +216,9 @@ yerel modda Yammer yapılandırma hakkında daha fazla bilgi için bkz:
 >[!TIP]  
 >Yeni bir iletişim uyumluluk ilkesi ayarlama ve uyarıyı düzeltme konusunda ayrıntılı bir izlenecek yol görmek ister misiniz? İletişim uyumluluk ilkelerinin uygunsuz iletileri algılamanıza, olası ihlalleri araştırmanıza ve uyumluluk sorunlarını düzeltmenize nasıl yardımcı olabileceğini gösteren bir tanıtım görmek için [bu 15 dakikalık videoya](communication-compliance-plan.md#creating-a-communication-compliance-policy-walkthrough) göz atın.
 
-1. Microsoft 365 kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak [Microsoft Purview uyumluluk portalında](https://compliance.microsoft.com) oturum açın.
+1. [Microsoft 365](https://compliance.microsoft.com) kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak Microsoft Purview uyumluluk portalı oturum açın.
 
-2. Microsoft Purview uyumluluk portalında **İletişim uyumluluğu'na** tıklayın.
+2. Microsoft Purview uyumluluk portalı **İletişim uyumluluğu'na** tıklayın.
 
 3. **İlkeler** sekmesini seçin.
 
@@ -288,9 +288,9 @@ Cmdlet söz dizimi hakkında daha fazla bilgi için bkz. [New-ComplianceSecurity
 
 İlke eşleşmelerini araştırırken ve iletilerde işlem yaparken görüntülenen kullanıcı adları için anonimleştirmeyi etkinleştirmeyi de seçebilirsiniz.
 
-1. Microsoft 365 kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak [Microsoft Purview uyumluluk portalında](https://compliance.microsoft.com) oturum açın.
+1. [Microsoft 365](https://compliance.microsoft.com) kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak Microsoft Purview uyumluluk portalı oturum açın.
 
-2. Microsoft Purview uyumluluk portalında **İletişim uyumluluğu'na** gidin.
+2. Microsoft Purview uyumluluk portalı **İletişim uyumluluğu'na** gidin.
 
 3. Kullanıcı adları için anonimleştirmeyi yapılandırmak için **Gizlilik** sekmesini seçin.
 
@@ -312,7 +312,7 @@ Cmdlet söz dizimi hakkında daha fazla bilgi için bkz. [New-ComplianceSecurity
 
 ## <a name="step-8-optional-test-your-communication-compliance-policy"></a>8. Adım (isteğe bağlı): İletişim uyumluluk ilkenizi test edin
 
-İletişim uyumluluk ilkesi oluşturduktan sonra, tanımladığınız koşulların ilke tarafından düzgün bir şekilde uygulandığından emin olmak için bunu test etmek iyi bir fikirdir. İletişim uyumluluk ilkeleriniz hassas bilgi türleri içeriyorsa [Microsoft Purview Veri Kaybı Önleme (DLP)](create-test-tune-dlp-policy.md) ilkelerinizi de test etmek isteyebilirsiniz. Test etmek istediğiniz iletişimlerin yakalanması için ilkelerinize etkinleştirilmesi için zaman verdiğinizden emin olun.
+İletişim uyumluluk ilkesi oluşturduktan sonra, tanımladığınız koşulların ilke tarafından düzgün bir şekilde uygulandığından emin olmak için bunu test etmek iyi bir fikirdir. İletişim uyumluluk ilkeleriniz hassas bilgi türleri içeriyorsa [Microsoft Purview Veri Kaybı Önleme (DLP) ilkelerinizi de test](create-test-tune-dlp-policy.md) etmek isteyebilirsiniz. Test etmek istediğiniz iletişimlerin yakalanması için ilkelerinize etkinleştirilmesi için zaman verdiğinizden emin olun.
 
 İletişim uyumluluk ilkenizi test etmek için şu adımları izleyin:
 
@@ -321,7 +321,7 @@ Cmdlet söz dizimi hakkında daha fazla bilgi için bkz. [New-ComplianceSecurity
 2. İletişim uyumluluk ilkesinde tanımladığınız ölçütleri karşılayan bir e-posta, Microsoft Teams sohbet veya Yammer iletisi gönderin. Bu test anahtar sözcük, ek boyutu, etki alanı vb. olabilir. İlkedeki yapılandırdığınız koşullu ayarların çok kısıtlayıcı mı yoksa çok mu yumuşak olduğunu saptadığınızdan emin olun.
 
     > [!NOTE]
-    > E-posta iletilerinin bir ilkede tam olarak işlenmesi 24 saat kadar sürebilir. Microsoft Teams, Yammer ve üçüncü taraf platformlardaki iletişimlerin bir ilkede tam olarak işlenmesi 48 saate kadar sürebilir.
+    > E-posta iletilerinin bir ilkede tam olarak işlenmesi yaklaşık 24 saat sürebilir. Microsoft Teams, Yammer ve üçüncü taraf platformlarındaki iletişimlerin bir ilkede tam olarak işlenmesi yaklaşık 48 saat sürebilir.
 
 3. İletişim uyumluluk ilkesinde belirlenen gözden geçiren olarak Microsoft 365 oturum açın. İlkelerinizin uyarılarını görüntülemek için **İletişim** **uyumluluğuAlerts** >  bölümüne gidin.
 

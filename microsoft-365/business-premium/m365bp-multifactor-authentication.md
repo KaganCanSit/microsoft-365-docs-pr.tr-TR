@@ -24,16 +24,16 @@ search.appverid:
 - MET150
 - MOE150
 description: Mobil cihazlar için çok faktörlü kimlik doğrulamasını ayarlayın.
-ms.openlocfilehash: 16f160eb3d489837cdd3588c3e8a68267da9ffc0
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 63f5538882496ed67dacdb3428a6dd02696d21e7
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097502"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65320284"
 ---
-# <a name="set-up-multi-factor-authentication-with-your-mobile-device"></a>Mobil cihazınızla çok faktörlü kimlik doğrulamasını ayarlama
+# <a name="set-up-multifactor-authentication-with-your-mobile-device"></a>Mobil cihazınızla çok faktörlü kimlik doğrulamasını ayarlama
 
-Çok faktörlü kimlik doğrulaması daha fazla güvenlik sağlar çünkü erişimi doğrulamak için yalnızca parola veya metin aracılığıyla kod kullanmak yerine telefonunuzdaki ayrı bir uygulama kullanılır. Bu, hacklemesini zorlaştırıyor. MFA gerektiğinde, kuruluş üyeleri cihazlarında güvenli bir şekilde oturum açmak için Microsoft Authenticator uygulamasını kullanabilir. <br/><br/>
+Çok faktörlü kimlik doğrulaması (MFA), erişimi doğrulamak için yalnızca parola veya metin aracılığıyla kod kullanmak yerine telefonunuzdaki ayrı bir uygulama kullanıldığından daha fazla güvenlik sağlar. Bu, hacklemesini zorlaştırıyor. MFA gerektiğinde, kuruluş üyeleri cihazlarında güvenli bir şekilde oturum açmak için Microsoft Authenticator uygulamasını kullanabilir. <br/><br/>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE2MmQR]
 
@@ -41,9 +41,10 @@ daha fazla bilgi için bkz. [Microsoft 365'de çok faktörlü kimlik doğrulamas
 
 ## <a name="use-the-outlook-app-on-your-devices"></a>Cihazlarınızda Outlook uygulamasını kullanma
 
-Bir yönetici ön saf kullanıcıların MFA kullanmasını zorunlu kıldıktan sonra, kimlik doğrulayıcı uygulaması ikinci bir kimlik doğrulama biçimi olarak hizmet eder. Microsoft 365 e-postalarına erişmek için Outlook uygulamasını yüklemelerini ve kullanmalarını öneririz. Outlook dahil olmak üzere Office uygulamalarını telefona yükleme hakkında bilgi için bkz. [Mobil cihazları ayarlama](../business/set-up-mobile-devices.md).
+Bir yönetici ön saf kullanıcıların MFA kullanmasını zorunlu kıldıktan sonra, kimlik doğrulayıcı uygulaması ikinci bir kimlik doğrulama biçimi olarak hizmet eder. Microsoft 365 e-postalarına erişmek için Outlook uygulamasını yüklemelerini ve kullanmalarını öneririz. Outlook dahil olmak üzere Office uygulamalarını telefona yükleme hakkında bilgi için bkz. [Mobil cihazları ayarlama](../admin/setup/set-up-mobile-devices.md).
 
 ## <a name="next-objective"></a>Sonraki hedef
 
 [Office uygulamaları yükleme](m365bp-install-office-apps.md) yönergelerini izleyin.
 
+ 

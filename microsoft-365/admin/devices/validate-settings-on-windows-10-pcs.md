@@ -27,12 +27,12 @@ search.appverid:
 - MET150
 ms.assetid: fae8819d-7235-495f-9f07-d016f545887f
 description: İş için Microsoft 365 uygulama koruma ayarlarının kullanıcılarınızın Windows 10 cihazları üzerinde etkili olduğunu doğrulamayı öğrenin.
-ms.openlocfilehash: c107741d87c63472310352b58872ec0b6ecc1d4d
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: cbb26461da9fcc73f57d219c36ef04d97e7fc209
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090673"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65317563"
 ---
 # <a name="validate-device-protection-settings-for-windows-10-pcs"></a>Windows 10 bilgisayarlar için cihaz koruma ayarlarını doğrulama
 
@@ -67,5 +67,5 @@ ms.locfileid: "65090673"
 
 [İş belgeleri ve kaynakları için Microsoft 365](/admin)
 
-[Windows 10 bilgisayarlar için cihaz yapılandırmalarını ayarlamaİstem planları için](../../business-premium/m365bp-protection-settings-for-windows-10-devices.md) [Microsoft 365 güvenliğini sağlamanın 10 yolu](../../admin/security-and-compliance/secure-your-business-data.md)
-
+[Windows 10 pc'ler](../../business-premium/m365bp-protection-settings-for-windows-10-devices.md)
+ için cihaz yapılandırmalarını ayarlama İş [planları için Microsoft 365 güvenliğini sağlamaya yönelik en iyi yöntemler](../../admin/security-and-compliance/secure-your-business-data.md)

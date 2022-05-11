@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: v-tophillips
 author: v-tophillips
 manager: laurawi
-ms.date: ''
+ms.date: 05/10/2022
 audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
@@ -14,20 +14,20 @@ ms.localizationpriority: medium
 search.appverid:
 - MOE150
 - MET150
-description: Microsoft Purview uyumluluk portalında eBulma (Standart) olayıyla ilişkili İçerik aramalarının ve aramalarının istatistiklerini görüntülemek için arama istatistikleri özelliğini kullanmayı öğrenin.
+description: Microsoft Purview uyumluluk portalı bir eBulma (Standart) olayıyla ilişkili İçerik aramalarının ve aramalarının istatistiklerini görüntülemek için arama istatistikleri özelliğini kullanmayı öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: d96ad67a638ab3917743e64462debd9f2c94ef4d
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: cc8e249f62b0dbfbeaa6bcf32e7873ca2ff5b36d
+ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092215"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65318082"
 ---
 # <a name="view-statistics-for-ediscovery-search-results"></a>eBulma arama sonuçlarının istatistiklerini görüntüleme
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Bir İçerik araması veya Microsoft Purview eKeşif (Standart) olayıyla ilişkili bir arama oluşturup çalıştırdıktan sonra, tahmini arama sonuçlarıyla ilgili istatistikleri görüntüleyebilirsiniz. Bu, arama sonuçlarının özetini (arama açılır öğesi sayfasında görüntülenen tahmini arama sonuçlarının özetine benzer), arama sorgusuyla eşleşen öğelerin bulunduğu içerik konumlarının sayısı ve en çok eşleşen öğelere sahip içerik konumlarının kimliği gibi sorgu istatistiklerini içerir.
+bir İçerik araması veya Microsoft Purview eBulma (Standart) olayıyla ilişkilendirilmiş bir arama oluşturup çalıştırdıktan sonra, tahmini arama sonuçlarıyla ilgili istatistikleri görüntüleyebilirsiniz. Bu, arama sonuçlarının özetini (arama açılır öğesi sayfasında görüntülenen tahmini arama sonuçlarının özetine benzer), arama sorgusuyla eşleşen öğelerin bulunduğu içerik konumlarının sayısı ve en çok eşleşen öğelere sahip içerik konumlarının kimliği gibi sorgu istatistiklerini içerir.
   
 Ayrıca, arama sorgusundaki her anahtar sözcüğün istatistiklerini döndürmek üzere arama yapılandırmak için anahtar sözcükler listesini kullanabilirsiniz. Bu, sorgudaki her anahtar sözcük tarafından döndürülen sonuç sayısını karşılaştırmanıza olanak tanır.
   
@@ -37,13 +37,13 @@ Arama istatistiklerini bir CSV dosyasına da indirebilirsiniz. Bu, sonuçları k
 
 İçerik araması veya eBulma (Standart) servis talebiyle ilişkilendirilmiş bir aramanın istatistiklerini görüntülemek için:
   
-1. Microsoft Purview uyumluluk portalında **Tümünü göster'e** tıklayın ve aşağıdakilerden birini yapın:
+1. Microsoft Purview uyumluluk portalı **Tümünü göster'e** tıklayın ve aşağıdakilerden birini yapın:
 
    - **İçerik araması'na** tıklayın ve açılır sayfayı görüntülemek için bir arama seçin.
 
      VEYA
 
-   - Açılan sayfayı görüntülemek için **eBulma Çekirdeği'ne** >  tıklayın, bir servis talebi seçin ve **aramalar** sekmesinde bir arama seçin.
+   - **eKeşifBulma** >  **(Standart) seçeneğine** tıklayın, bir servis talebi seçin ve sonra açılır sayfayı görüntülemek için **Aramalar** sekmesinde bir arama seçin.
 
 2. Seçili aramanın açılır sayfasında, **Arama istatistikleri** sekmesine tıklayın.
   
