@@ -1,9 +1,9 @@
 ### YamlMime:Landing
 title: Microsoft Kayıtları
-summary: Microsoft Bookings ile randevuları plan edin ve yönetin. Otomatik ve otomatik Outlook tümleştirme içerir.
+summary: Microsoft Bookings ile randevuları zamanlama ve yönetme. Outlook ve otomatik bildirimlerle tümleştirmeyi içerir.
 metadata:
   title: Microsoft Kayıtları
-  description: Microsoft Bookings ile randevuları plan edin ve yönetin. Otomatik ve otomatik Outlook tümleştirme içerir.
+  description: Microsoft Bookings ile randevuları zamanlama ve yönetme. Outlook ve otomatik bildirimlerle tümleştirmeyi içerir.
   ms.service: bookings
   ms.topic: landing-page
   author: dmaguire
@@ -26,25 +26,25 @@ landingContent:
       url: bookings-overview.md
   - linkListType: download
     links:
-    - text: Bookings uygulamasını edin
+    - text: Bookings uygulamasını edinin
       url: get-bookings-app.md
-- title: Microsoft Bookings'i ayarlama
+- title: Microsoft Bookings ayarlama
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: İş bilginizi girin
+    - text: İş bilginizi girme
       url: enter-business-information.md
     - text: Zamanlama ilkelerinizi ayarlama
       url: set-scheduling-policies.md
-    - text: Hizmet tekliflerinizi tanımlayın
+    - text: Hizmet tekliflerinizi tanımlama
       url: define-service-offerings.md
     - text: Çalışan çalışma saatlerini ayarlama
       url: employee-hours.md
     - text: Rezervasyon sayfanızı özelleştirme ve yayımlama
       url: customize-booking-page.md
-    - text: Rezervasyonlarınızı oluşturun ve oluşturun
+    - text: Rezervasyonlarınızı oluşturma ve personel oluşturma
       url: create-a-manual-booking.md
-- title: Kişileri randevu randevuları için davet etme
+- title: Randevu almak için kişileri davet etme
   linkLists:
   - linkListType: how-to-guide
     links:
