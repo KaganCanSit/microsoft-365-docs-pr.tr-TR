@@ -214,6 +214,8 @@
       href: work-with-partner-to-archive-third-party-data.md
     - name: Üçüncü taraf verilerini arama
       href: use-content-search-to-search-third-party-data-that-was-imported.md
+    - name: Veri bağlayıcıları için yönetici günlüklerini görüntüleme
+      href: data-connector-admin-logs.md
 - name: İçeriden riskleri yönetme
   items:
     - name: Microsoft Purview içeriden risk çözümleri

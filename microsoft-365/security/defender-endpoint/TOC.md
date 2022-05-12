@@ -101,6 +101,7 @@
 ###### [Dışlamaları yapılandırın ve doğrulayın](mac-exclusions.md)
 ###### [Tercihleri ayarlayın](mac-preferences.md)
 ###### [Olası İstenmeyen Uygulamaları tespit edin ve engelleyin](mac-pua.md)
+###### [Kurcalama koruması aracılığıyla macOS güvenlik ayarlarını güvenceye alın](tamperprotection-macos.md)
 ###### [Cihaz denetimi]()
 ####### [Cihaz denetimine genel bakış](mac-device-control-overview.md)
 ####### [JAMF örnekleri](mac-device-control-jamf.md)
