@@ -1,5 +1,5 @@
 ---
-title: Adım 1. Sözleşme SharePoint Syntex tanımlamak ve veri ayıklamak için veri ayıklamayı kullanma
+title: Adım 1. Sözleşme dosyalarını tanımlamak ve verileri ayıklamak için SharePoint Syntex kullanma
 ms.author: chucked
 author: chuckedmonson
 manager: pamgreen
@@ -11,203 +11,203 @@ ms.prod: microsoft-365-enterprise
 search.appverid: ''
 ms.localizationpriority: medium
 ROBOTS: ''
-description: Sözleşme dosyalarını tanımlamak SharePoint Syntex bir çözüm kullanarak verileri ayıklamak için Microsoft 365 öğrenin.
-ms.openlocfilehash: c654c72ef36bf86337b7564efc68e4523516f4f9
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Microsoft 365 çözümü kullanarak sözleşme dosyalarını tanımlamak ve verileri ayıklamak için SharePoint Syntex kullanmayı öğrenin.
+ms.openlocfilehash: 7d2874260ce7a307aa42c67ba571104ed4c4da87
+ms.sourcegitcommit: 344a254ca268a2f65cf199d9158a47e08861ffa5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985584"
+ms.lasthandoff: 05/12/2022
+ms.locfileid: "65368099"
 ---
-# <a name="step-1-use-sharepoint-syntex-to-identify-contract-files-and-extract-data"></a>Adım 1. Sözleşme SharePoint Syntex tanımlamak ve veri ayıklamak için veri ayıklamayı kullanma
+# <a name="step-1-use-sharepoint-syntex-to-identify-contract-files-and-extract-data"></a>Adım 1. Sözleşme dosyalarını tanımlamak ve verileri ayıklamak için SharePoint Syntex kullanma
 
-Kurumuz, tüm sözleşme belgelerini, size gelen birçok dosyadan belirleyecek ve sınıflandıracak bir yol bu şekilde sınıflandırmak için bir yol sunar. Ayrıca, tanımlanan sözleşme dosyalarının her biri (örneğin *İstemci, Yüklenici* ve Ücret tutarı) ile bazı önemli *öğeleri hızla* *görüntüleyebiliyor olmak da istiyor olun*. Bunu, Belge Anlama [modeli SharePoint Syntex](index.md) bir belge kitaplığına uygulamak için Belge Kitaplığı'SharePoint Syntex kullanarak, bunuabilirsiniz.
+Kuruluşunuzun, aldığınız birçok dosyadaki tüm sözleşme belgelerini tanımlamak ve sınıflandırmak için bir yönteme ihtiyacı vardır. Ayrıca, tanımlanan sözleşme dosyalarının her birinde (örneğin, *İstemci*, *Yüklenici* ve *Ücret tutarı*) birkaç önemli öğeyi hızla görüntüleyebilmek istiyorsunuz. Bunu [yapmak için SharePoint Syntex](index.md) kullanarak belge anlama modeli oluşturabilir ve belge kitaplığına uygulayabilirsiniz.
 
-## <a name="overview-of-the-process"></a>Işleme genel bakış
+## <a name="overview-of-the-process"></a>İşleme genel bakış
 
-[Belge kullanımı](document-understanding-overview.md) yapay zeka (AI) modellerini, dosyaların sınıflandırması ve bilgi ayıklamayı otomatikleştirmek için kullanır. Belge anlama modelleri, ihtiyacınız olan bilgilerin sözleşmeler gibi tablo veya formlarda yer alamaması gereken yapılandırılmamış ve yarı yapılandırılmış belgelerden bilgileri ayıklamak için de en uygun durumdadır. 
+[Belge anlama](document-understanding-overview.md) , dosya sınıflandırmasını ve bilgilerin ayıklamasını otomatikleştirmek için yapay zeka (AI) modellerini kullanır. Belge anlama modelleri, ihtiyacınız olan bilgilerin sözleşmeler gibi tablo veya formlarda yer almadığı yapılandırılmamış ve yarı yapılandırılmış belgelerden bilgi ayıklamada da idealdir. 
 
-Modelleri anlama belgelerinde, hem örnek dosyalar olan bir modeli eğitme hem de modeli belge kitaplığında dosyalar için çalıştırmanız gerekir; PDF'leri, resimleri ve TIFF dosyalarını taramak için Optik Karakter Tanıma (OCR) teknolojisi kullanılır.
+Belge anlama modelleri, hem örnek dosyalar içeren bir model eğittiğinizde hem de modeli belge kitaplığındaki dosyalara karşı çalıştırdığınızda PDF'leri, görüntüleri ve TIFF dosyalarını taramak için Optik Karakter Tanıma (OCR) teknolojisini kullanır.
 
-1. İlk olarak, tanımlamak istediğiniz içerik türüne (sözleşme) özgü özellikleri aramak üzere modeli "eğitmek" için kullanabileceğiniz en az beş örnek dosya bulun. 
+1. İlk olarak, modeli tanımlamaya çalıştığınız içerik türüne (sözleşme) özgü özellikleri aramak için "eğitmek" için kullanabileceğiniz en az beş örnek dosya bulmanız gerekir. 
 
-2. Belge SharePoint Syntex kullanarak yeni bir belge anlama modeli oluşturun. Örnek dosyalarınızı kullanarak bir [sınıflandırıcı oluşturmanız gerekir](create-a-classifier.md). Örnek dosyalarınız ile sınıflandırıcıyı eğiterek, ona şirketinizin sözleşmelerde göreceğiniz özelliklere özgü özellikleri aramalarını öğretebilirsiniz. Örneğin, Hizmet [Sözleşmesi, Sözleşme](create-a-classifier.md#create-an-explanation) Koşulları ve Telafi gibi sözleşmeler kapsamındaki belirli dizeleri aramaları *için* bir "açıklama" *oluşturun*. Hatta açıklamanızı, belgenin belirli bölümlerinde veya diğer dizelerin yanında yer alan dizeleri araması için eğitebilirsiniz. Sınıflandırıcınızı gereken bilgilerle eğitmiş olduğunuz zaman, ne kadar verimli olduğunu görmek için modelinizi örnek bir dosya kümesi üzerinde test edin. Test sonrasında, gerekirse açıklamaları daha verimli hale getirirken açıklamalarda değişiklik yapabilirsiniz. 
+2. SharePoint Syntex kullanarak yeni bir belge anlama modeli oluşturun. Örnek dosyalarınızı kullanarak [bir sınıflandırıcı oluşturmanız](create-a-classifier.md) gerekir. Sınıflandırıcıyı örnek dosyalarınızla eğiterek, şirketinizin sözleşmelerinde göreceğiniz özelliklere özgü özellikleri aramayı öğretirsiniz. Örneğin, sözleşmelerinizdeki *Hizmet Sözleşmesi*, *Sözleşme Koşulları* ve *Tazminat* gibi belirli dizeleri arayan [bir "açıklama" oluşturun](create-a-classifier.md#create-an-explanation). Hatta belgenin belirli bölümlerinde veya diğer dizelerin yanında bulunan bu dizeleri aramak için açıklamanızı eğitebilirsiniz. Sınıflandırıcınızı ihtiyaç duyduğu bilgilerle eğittiğinizi düşündüğünüzde, modelinizin ne kadar verimli olduğunu görmek için örnek bir örnek dosya kümesi üzerinde test edebilirsiniz. Test ettikten sonra, gerekirse açıklamalarınızı daha verimli hale getirmek için açıklamalarınızda değişiklik yapmayı seçebilirsiniz. 
 
-3. Modelinize göre, her [sözleşmeden belirli veri](create-an-extractor.md) parçalarını çıkarmak için bir ayıklaıcı oluşturabilirsiniz. Örneğin, her sözleşme için en çok kaygılandıkiniz bilgiler müşterinin kim olduğu, yüklenicinin adı ve toplam maliyetidir.
+3. Modelinizde, her sözleşmeden belirli veri parçalarını çekmek için [bir ayıklayıcı oluşturabilirsiniz](create-an-extractor.md) . Örneğin, her sözleşme için en çok endişelendiğiniz bilgiler müşterinin kim olduğu, yüklenicinin adı ve toplam maliyettir.
 
-4. Modelinizi başarıyla oluşturdukktan sonra, [modeli SharePoint kitaplığına uygulayabilirsiniz](apply-a-model.md). Belgeleri belge kitaplığına yükledikten sonra, belge anlama modeliniz de kullanılır ve modeliniz içinde tanımlandığı sözleşme içerik türüyle aynı olan tüm dosyaları tanımlayabilir ve sınıflandıracak. Sözleşme olarak sınıflandırılmış tüm dosyalar özel bir kitaplık görünümünde görüntülenir. Dosyalar, ayıklaıcıda tanımlandığı her sözleşmeden değerleri de görüntüler.
+4. Modelinizi başarıyla oluşturduktan sonra [SharePoint belge kitaplığına uygulayın](apply-a-model.md). Belgeleri belge kitaplığına yüklerken, belge anlama modeliniz çalışır ve modelinizde tanımladığınız sözleşme içerik türüyle eşleşen tüm dosyaları tanımlar ve sınıflandırır. Sözleşme olarak sınıflandırılan tüm dosyalar özel kitaplık görünümünde görüntülenir. Dosyalar, ayıklayıcınızda tanımladığınız her sözleşmedeki değerleri de görüntüler.
 
-   ![Belge kitaplığında sözleşmeler.](../media/content-understanding/doc-lib-solution.png)
+   ![Belge kitaplığındaki sözleşmeler.](../media/content-understanding/doc-lib-solution.png)
 
-5. Sözleşmelerinizi tutma ya da güvenlik gereksinimleriniz varsa, modelinizi kullanarak belirli bir süre için sözleşmelerinizi silmenizi önleyen bir [](apply-a-sensitivity-label-to-a-model.md) bekletme etiketi veya duyarlılık etiketi uygulayabilir ya da sözleşmelere kimlerin eriş erişeni kısıtlayabilirsiniz.[](apply-a-retention-label-to-a-model.md)
+5. Sözleşmeleriniz için bekletme veya güvenlik gereksinimleriniz varsa, modelinizi kullanarak belirli bir süre boyunca sözleşmelerinizin silinmesini engelleyecek bir [bekletme etiketi](apply-a-retention-label-to-a-model.md) veya [duyarlılık etiketi](apply-a-sensitivity-label-to-a-model.md) uygulayabilir veya sözleşmelere kimlerin erişebileceğini kısıtlayabilirsiniz.
 
-## <a name="steps-to-create-and-train-your-model"></a>Modelinizi oluşturma ve eğitma adımları
+## <a name="steps-to-create-and-train-your-model"></a>Modelinizi oluşturma ve eğitmeye yönelik adımlar
 
 > [!NOTE]
-> Bu adımlar için Sözleşme Yönetimi Çözümü Varlıkları deposundaki [örnek dosyaları kullanabilirsiniz](https://github.com/pnp/syntex-samples/tree/main/scenario%20assets/Contracts%20Management). Bu deponun örnekleri, hem belge anlama modeli dosyalarını hem de modeli eğitmek için kullanılan dosyaları içerir.
+> Bu adımlar için [, Sözleşme Yönetimi Çözümü Varlıkları deposundaki](https://github.com/pnp/syntex-samples/tree/main/scenario%20samples/Contracts%20Management) örnek dosyaları kullanabilirsiniz. Bu depodaki örnekler hem belge anlama modeli dosyalarını hem de modeli eğitmek için kullanılan dosyaları içerir.
 
 ### <a name="create-a-contract-model"></a>Sözleşme modeli oluşturma
 
-İlk adım Sözleşme modelinizi oluşturmaktır.
+İlk adım, Sözleşme modelinizi oluşturmaktır.
 
-1. İçerik merkezinde Yeni'yi **ve ardından** Model **oluştur'a seçin**.
+1. İçerik **merkezinden Yeni'yi** ve ardından **Model oluştur'u** seçin.
 
-2. Yeni **belge anlama modeli bölmesindeki** **Ad alanına** modelin adını yazın. Bu sözleşme yönetim çözümü için, modeli Sözleşme olarak *adlayır.*
+2. **Yeni belge anlama modeli** bölmesindeki **Ad** alanına modelin adını yazın. Bu sözleşme yönetimi çözümü için modeli *Sözleşme* olarak adlandırabilirsiniz.
 
-4. **Oluştur**'u seçin. Bu işlem model için bir giriş sayfası oluşturur.</br>
+4. **Oluştur**'u seçin. Bu, model için bir giriş sayfası oluşturur.</br>
 
     ![Sözleşme giriş sayfasının ekran görüntüsü.](../media/content-understanding/models-contract-home-page.png)
 
 
-### <a name="train-your-model-to-classify-a-type-of-file"></a>Modelinizi bir dosya türünü sınıflandırmak için eğitin
+### <a name="train-your-model-to-classify-a-type-of-file"></a>Bir dosya türünü sınıflandırmak için modelinizi eğitin
 
 #### <a name="add-example-files-for-your-model"></a>Modeliniz için örnek dosyalar ekleme
 
-Sözleşme belgesi olan en az beş örnek dosya ve bir sözleşme belgesi (örneğin, iş bildirimi) olmadığınız bir örnek dosya eklemeniz gerekir. 
+Sözleşme belgesi olan en az beş örnek dosya ve sözleşme belgesi olmayan bir örnek dosya (örneğin, çalışma bildirimi) eklemeniz gerekir. 
 
-1. Modeller ve **Sözleşme >,** Anahtar **eylemleriHizli** >  **dosyalar ekle'nin altında Dosya** **ekle'yi seçin**.
+1. **Modeller > Sözleşme** sayfasında **, Anahtar eylemleriEkle** >  **örnek dosyalar'ın** altında **Dosya ekle'yi** seçin.
 
-   ![Örnek dosya ekle seçeneğinin vurgulu olduğu Sözleşmeler sayfasını gösteren ekran görüntüsü.](../media/content-understanding/key-actions-add-example-files.png)
+   ![Örnek dosya ekle seçeneğinin vurgulandığı Sözleşmeler sayfasını gösteren ekran görüntüsü.](../media/content-understanding/key-actions-add-example-files.png)
 
-2. **Modeliniz için örnek dosyaları seçin sayfasında**, Sözleşme klasörünü açın, kullanmak istediğiniz dosyaları seçin ve ardından Ekle'yi **seçin**. Burada örnek dosyalarınız yoksa, eklemek **için Upload** Seç'i seçin.
+2. **Modelinizin örnek dosyalarını seçin** sayfasında Sözleşme klasörünü açın, kullanmak istediğiniz dosyaları seçin ve ardından **Ekle'yi** seçin. Orada örnek dosyalarınız yoksa, eklemek **için Upload'ı** seçin.
 
 #### <a name="label-the-files-as-positive-or-negative-examples"></a>Dosyaları pozitif veya negatif örnekler olarak etiketleme
 
-1. Modeller Ve **Sözleşme >,** Tuş  >  eylemleri **Altında Dosyaları sınıflandır ve eğitimi çalıştır,** **Sınıflandırıcıyı eğit'i seçin**.
+1. **Modeller > Sözleşme** sayfasında **, Anahtar eylemleri** >  **Dosyaları sınıflandırma ve eğitimi çalıştırma** altında **Sınıflandırıcıyı eğit'i** seçin.
 
-   ![Dosyaları Sınıflandır ve eğitim seçeneğinin vurgulu olduğu Sözleşmeler sayfasını gösteren ekran görüntüsü.](../media/content-understanding/key-actions-classify-files.png)
+   ![Dosyaları sınıflandır ve eğitim çalıştır seçeneğinin vurgulandığı Sözleşmeler sayfasını gösteren ekran görüntüsü.](../media/content-understanding/key-actions-classify-files.png)
 
-2. Modeller **> Sözleşme >** Sözleşme sınıflandırıcısı sayfasında, ilk örnek dosyanın en üstünde yer alan görüntüleyicide, dosyanın oluşturduğunuz Sözleşme modeline bir örnek olup olduğunu soran metin görebilirsiniz. Bu pozitif bir örnekse Evet'i **seçin**. Bu negatif bir örnekse Hayır'ı **seçin**.
+2. **Models > Contract > Contract sınıflandırıcısı** sayfasında, ilk örnek dosyanın üst kısmındaki görüntüleyicide, dosyanın oluşturduğunuz Sözleşme modelinin bir örneği olup olmadığını soran bir metin görürsünüz. Olumlu bir örnekse **Evet'i** seçin. Negatif bir örnekse **Hayır'ı** seçin.
 
-3. Sol **tarafta etiketli** örnekler listesinde, örnek olarak kullanmak istediğiniz diğer dosyaları seçin ve bunları etiketlenin. 
+3. Soldaki **Etiketli örnekler** listesinden örnek olarak kullanmak istediğiniz diğer dosyaları seçin ve bunları etiketleyin. 
 
     ![Sınıflandırıcı giriş sayfası.](../media/content-understanding/models-contract-classifier.png) 
 
-#### <a name="add-at-least-one-explanation-to-train-the-classifier"></a>Sınıflandırıcıyı eğitmek için en az bir açıklama ekleme 
+#### <a name="add-at-least-one-explanation-to-train-the-classifier"></a>Sınıflandırıcıyı eğitmek için en az bir açıklama ekleyin 
 
-1. Model > **Sözleşme > sınıflandırıcısı** sayfasında, Eğitim **sekmesini** seçin.
+1. **Modeller > Sözleşme > Sözleşme sınıflandırıcısı** sayfasında **Eğit** sekmesini seçin.
 
-2. Eğitim **dosyaları bölümünde** , daha önce etiketlemiş olduğunuz örnek dosyaların listesini bulabilirsiniz. Listeden pozitif dosyalardan birini seçerek bu dosyaları görüntüleyicide görüntüleyebilirsiniz.
+2. **Eğitilen dosyalar** bölümünde, daha önce etiketlediğiniz örnek dosyaların listesini görürsünüz. Görüntüleyicide görüntülemek için listeden pozitif dosyalardan birini seçin.
 
-3. Açıklamalar bölümünde **Yeni'yi** ve **sonra Boş'a** **tıklayın**.
+3. **Açıklamalar** bölümünde **Yeni'yi** ve ardından **Boş'ı** seçin.
 
-4. Açıklama **oluştur sayfasında** :
+4. **Açıklama oluştur** sayfasında:
 
-    a. Ad **alanına** açıklamanın adını ("Sözleşme" gibi) yazın.
+    a. **Ad** alanına açıklamanın adını ("Anlaşma" gibi) yazın.
 
-    b. Açıklama türü **alanında** Tümcecik **listesi'ne tıklayın** çünkü bir metin dizesi ekleyin.
+    b. **Açıklama türü** alanında, metin dizesi eklediğiniz için **Tümcecik listesi'ni** seçin.
 
-    c. **Tümcecik liste** kutusuna dizeyi ("SÖZLEŞME" gibi) yazın. Dizenin büyük **/büyük/harfe** duyarlı olması gerekirse Büyük/harfe duyarlı'ı seçin.
+    c. **Tümcecik liste** kutusuna dizeyi ("SÖZLEŞME" gibi) yazın. Dizenin büyük **/küçük harfe duyarlı olması gerekiyorsa Büyük/** küçük harfe duyarlı seçeneğini belirleyebilirsiniz.
 
-    d. Kaydet ve **eğit'i seçin**.
+    d. **Kaydet ve eğit'i** seçin.
 
     ![Açıklama oluştur panelinin ekran görüntüsü.](../media/content-understanding/contract-classifier-create-explanation.png) 
 
-#### <a name="test-your-model"></a>Modelinizi test etmek
+#### <a name="test-your-model"></a>Modelinizi test etme
 
-Sözleşme modelinizi daha önce hiç görülmemiş örnek dosyalar üzerinde testebilirsiniz. Bu isteğe bağlıdır, ancak yararlı bir uygulama olabilir.
+Sözleşme modelinizi daha önce görmediği örnek dosyalarda test edebilirsiniz. Bu isteğe bağlıdır, ancak yararlı bir en iyi uygulama olabilir.
 
-1. Model > **Sözleşme > Sınıflandırıcısı sayfasında** Test **sekmesini** seçin. Bu, modeli etiketsiz örnek dosyalarında çalıştırır.
+1. **Modeller > Sözleşme > Sözleşme sınıflandırıcısı** sayfasında **Test** sekmesini seçin. Bu, modeli etiketlenmemiş örnek dosyalarınızda çalıştırır.
 
-2. Dosyaları **Sına listesinde** , örnek dosyalarınız görüntülenir ve modelin bunları pozitif veya negatif olarak tahmin verip öngördüğü gösterilir. Belgelerinizi belirlemede sınıflandırıcının ne kadar etkili olduğunu belirlemenize yardımcı olması için bu bilgileri kullanın.
+2. **Test Dosyaları** listesinde, örnek dosyalarınız görüntülenir ve modelin bunların pozitif mi yoksa negatif mi olacağını tahmin edip etmediğini gösterir. Sınıflandırıcınızın belgelerinizi tanımlamadaki etkinliğini saptamaya yardımcı olması için bu bilgileri kullanın.
 
-    ![Metin Dosyaları listesinde etiketsiz dosyaların ekran görüntüsü.](../media/content-understanding/test-on-files.png) 
+    ![Metin Dosyaları listesindeki etiketsiz dosyaların ekran görüntüsü.](../media/content-understanding/test-on-files.png) 
 
-3. Bitirin ve Eğitimden **Çık'ı seçin**.
+3. İşiniz bittiğinde **Eğitimden Çık'ı** seçin.
 
-### <a name="create-and-train-an-extractor"></a>Ayıklaıcı oluşturma ve eğitin
+### <a name="create-and-train-an-extractor"></a>Ayıklayıcı oluşturma ve eğitma
 
-1. Modeller Ve **Sözleşme > Tuş**  > **eylemleriSorları oluşturma ve eğitin seçeneğinin** altında Ayıklaıcı **oluştur'a tıklayın**.
+1. **Modeller > Sözleşme** sayfasında **, Önemli eylemler** >  **Ayıklayıcı oluştur ve eğit'in** altında **Ayıklayıcı oluştur'u** seçin.
 
-   ![Ayıkla ve eğit seçeneğinin vurgulu olduğu Sözleşmeler sayfasını gösteren ekran görüntüsü.](../media/content-understanding/key-actions-create-extractors.png)
+   ![Ayıklayıcı oluştur ve eğit seçeneğinin vurgulandığı Sözleşmeler sayfasını gösteren ekran görüntüsü.](../media/content-understanding/key-actions-create-extractors.png)
 
-2. Yeni **varlık ayıkla panelinde** , Yeni **ad alanına** ayıklaıcının adını yazın. Örneğin, her *sözleşmeden* müşteri adını ayıklamak için İstemci olarak ad girin.
+2. **Yeni varlık ayıklayıcısı** panelindeki **Yeni ad** alanına ayıklayıcınızın adını yazın. Örneğin, her sözleşmeden *istemcinin* adını ayıklamak istiyorsanız İstemci olarak adlandırın.
 
-3. Bitirerek Oluştur'a **seçin**.
+3. İşiniz bittiğinde **Oluştur'u** seçin.
 
-#### <a name="label-the-entity-you-want-to-extract"></a>Ayıklamak istediğiniz varlığı etiketle
+#### <a name="label-the-entity-you-want-to-extract"></a>Ayıklamak istediğiniz varlığı etiketleme
 
-Ayıklaıcıyı  oluşturduktan sonra, ayıkla sayfası açılır. Burada, örnek dosyalarınızın listesini ve listede ilk dosyanın görüntüleyicide görüntülendiğinden emin olun.
+Ayıklayıcıyı oluşturduğunuzda ayıklayıcı sayfası açılır. Burada, listedeki ilk dosyanın görüntüleyicide görüntülendiği örnek dosyalarınızın listesini görürsünüz.
 
-![İstemci ayıkla veya Etiketli örnekler sayfasının ekran görüntüsü.](../media/content-understanding/client-extractor-labeled-examples.png) 
+![İstemci ayıklayıcısı Etiketli örnekler sayfasının ekran görüntüsü.](../media/content-understanding/client-extractor-labeled-examples.png) 
 
 Varlığı etiketlemek için:
 
-1. Görüntüleyiciden, dosyalardan ayıklamak istediğiniz verileri seçin. Örneğin, İstemci'yi ayıklamak *için ilk* dosyada istemci değerini vurgularsanız (bu *örnekte, Organik* Ürünleriniz için En İyi) ve ardından Kaydet'i **seçin**. Etiketli örnekler listesinde, Etiket sütununu altında **dosyadan** gelen **değerin görüntüleniyor.**
+1. Görüntüleyiciden, dosyalardan ayıklamak istediğiniz verileri seçin. Örneğin, *İstemci'yi* ayıklamak istiyorsanız, ilk dosyadaki istemci değerini vurgularsınız (bu örnekte, *Best For You Organics*) ve ardından **Kaydet'i** seçersiniz. **Etiketlenmiş örnekler** listesinde, **Etiket** sütununun altında dosyasındaki değerin görüntülendiğini görürsünüz.
 
-2. Otomatik **kaydetme için** Sonraki dosya'ya tıklayın ve görüntüleyicide listede bir sonraki dosyayı açın. Ya da **Kaydet'i** seçin ve etiketli örnekler **listesinden başka bir dosya** seçin.
+2. Otomatik kaydetmek için **sonraki dosya'ya** tıklayın ve görüntüleyicideki listede bir sonraki dosyayı açın. Ya da **Kaydet'i** ve ardından **Etiketli örnekler** listesinden başka bir dosya seçin.
 
-3. Görüntüleyicide, 1. ve 2. adımları yinelayın, ardından etiketi tüm dosyalara kaydedene kadar tekrar edin.
+3. Görüntüleyicide, 1. ve 2. adımları yineleyin, ardından etiketi tüm dosyalara kaydedene kadar yineleyin.
 
-Dosyaları etiketledikten sonra, eğitime devam etme konusunda sizi bilgilendiren bir bildirim başlığı görüntülenir. Daha fazla belge etiketlemeyi veya eğitime ilerlemeyi seçebilirsiniz.
+Dosyaları etiketledikten sonra eğitime geçmenizi bildiren bir bildirim başlığı görüntülenir. Daha fazla belgeyi etiketlemeyi veya eğitime ilerlemeyi seçebilirsiniz.
 
 #### <a name="add-an-explanation"></a>Açıklama ekleme
 
-Varlık biçiminin kendisini ve örnek dosyalarda sahip olabileceği değişimleri hakkında ipucu veren bir açıklama oluşturabilirsiniz. Örneğin, tarih değeri aşağıdakiler gibi birçok farklı biçimde olabilir:
+Varlık biçiminin kendisi ve örnek dosyalarda sahip olabileceği çeşitlemeler hakkında ipucu sağlayan bir açıklama oluşturabilirsiniz. Örneğin, tarih değeri aşağıdakiler gibi birçok farklı biçimde olabilir:
 
 - 10/14/2019
-- 14 Ekim 2019
+- 14 Ekim 2019, Cumartesi
 - 14 Ekim 2019 Pazartesi
 
-Sözleşme Başlangıç Tarihini *belirlemeye yardımcı olmak* için bir desen açıklaması oluşturabilirsiniz.
+*Sözleşme Başlangıç Tarihi'ni* tanımlamaya yardımcı olmak için bir desen açıklaması oluşturabilirsiniz.
 
-1. Açıklamalar bölümünde **Yeni'yi** ve **sonra Boş'a** **tıklayın**.
+1. **Açıklamalar** bölümünde **Yeni'yi** ve ardından **Boş'ı** seçin.
 
-2. Açıklama **oluştur sayfasında** :
+2. **Açıklama oluştur** sayfasında:
 
-    a. Ad **alanına** açıklamanın adını (örneğin Tarih) *yazın*.
+    a. **Ad** alanına açıklamanın adını yazın (*Tarih* gibi).
 
-    b. Açıklama türü **alanında Desen** **listesi'ne tıklayın**.
+    b. **Açıklama türü** alanında **Desen listesi'ni** seçin.
 
-    c. Değer **alanında** , örnek dosyalarda görünecekleri tarih çeşitleleni girin. Örneğin, 00.00.0000 olarak görünen tarih biçimleriniz varsa, belgelerinize görünen çeşitlemeleri girin; örneğin:
+    c. **Değer** alanında, örnek dosyalarda göründükleri şekilde tarih çeşitlemesi sağlayın. Örneğin, 00.00.0000 olarak görünen tarih biçimleriniz varsa, belgelerinizde görünen çeşitlemeleri girersiniz, örneğin:
 
     - 0/0/0000
     - 0/00/0000
     - 00/0/0000
     - 00/00/0000
 
-4. Kaydet ve **eğit'i seçin**.
+4. **Kaydet ve eğit'i** seçin.
 
-#### <a name="test-your-model-again"></a>Modelinizi yeniden test etmek
+#### <a name="test-your-model-again"></a>Modelinizi yeniden test etme
 
-Sözleşme modelinizi daha önce hiç görülmemiş örnek dosyalar üzerinde testebilirsiniz. Bu isteğe bağlıdır, ancak yararlı bir uygulama olabilir.
+Sözleşme modelinizi daha önce görmediği örnek dosyalarda test edebilirsiniz. Bu isteğe bağlıdır, ancak yararlı bir en iyi uygulama olabilir.
 
-1. Model > **Sözleşme > Sınıflandırıcısı sayfasında** Test **sekmesini** seçin. Bu, modeli etiketsiz örnek dosyalarında çalıştırır.
+1. **Modeller > Sözleşme > Sözleşme sınıflandırıcısı** sayfasında **Test** sekmesini seçin. Bu, modeli etiketlenmemiş örnek dosyalarınızda çalıştırır.
 
-2. Dosyaları **test edin** listesinde, örnek dosyalarınız görüntülenir ve modelin ihtiyacınız olan bilgileri ayıklayalıp ayıklayamayali olduğunu gösterir. Belgelerinizi belirlemede sınıflandırıcının ne kadar etkili olduğunu belirlemenize yardımcı olması için bu bilgileri kullanın.
+2. **Test dosyaları** listesinde örnek dosyalarınız görüntülenir ve modelin ihtiyacınız olan bilgileri ayıklayıp ayıklayamadığı gösterilir. Sınıflandırıcınızın belgelerinizi tanımlamadaki etkinliğini saptamaya yardımcı olması için bu bilgileri kullanın.
 
-3. Bitirin ve Eğitimden **Çık'ı seçin**.
+3. İşiniz bittiğinde **Eğitimden Çık'ı** seçin.
 
 ### <a name="apply-your-model-to-a-document-library"></a>Modelinizi belge kitaplığına uygulama
 
-Modelinizi belge kitaplığına SharePoint için:
+Modelinizi bir SharePoint belge kitaplığına uygulamak için:
 
-1. Modeller Ve **Sözleşme >,** Anahtar **eylemleriSerkilere** >  **model uygulama'nın altında** Modeli **uygula'ya tıklayın**.
+1. **Modeller > Sözleşme** sayfasında **, Anahtar** **eylemleriUygulamalara** >  model **uygulama'nın altında Modeli uygula'yı** seçin.
 
-   ![Model kitaplıklara uygula seçeneğinin vurgulu olduğu Sözleşmeler sayfasını gösteren ekran görüntüsü.](../media/content-understanding/key-actions-apply-model.png)
+   ![Modeli kitaplıklara uygula seçeneğinin vurgulandığı Sözleşmeler sayfasını gösteren ekran görüntüsü.](../media/content-understanding/key-actions-apply-model.png)
 
-2. Sözleşme **Ekle panelinde**, SharePoint uygulamak istediğiniz belge kitaplığını içeren belge kitaplığını içeren belge kitaplığını seçin. Site listede göster yoksa, bulmak için arama kutusunu kullanın. **Ekle**'yi seçin.
+2. **Sözleşme Ekle** panelinde, modeli uygulamak istediğiniz belge kitaplığını içeren SharePoint sitesini seçin. Site listede gösterilmiyorsa, bulmak için arama kutusunu kullanın. **Ekle**'yi seçin.
 
     > [!NOTE]
-    > Modeli *uygulamakta olduğu belge* *kitaplığında* Liste Yönetme izinlerine veya Düzenleme haklarına sahip olmak gerekir.
+    > Modeli uyguladığınız belge kitaplığında *Listeyi Yönet* izinlerine veya *Düzenleme* haklarına sahip olmanız gerekir.
 
-3. Siteyi seçin ve modeli uygulamak istediğiniz belge kitaplığını seçin.
+3. Siteyi seçtikten sonra modeli uygulamak istediğiniz belge kitaplığını seçin.
 
-4. Model bir içerik türüyle ilişkili olduğundan, bunu kitaplı kitaplı kitaplara uygulayan içerik türü ve görünümünü, sütun olarak göstererek ayıklamış olduğunuz etiketlerle birlikte ekler. Bu görünüm varsayılan olarak kitaplığın varsayılan görünümü olur, ancak isteğe bağlı olarak Gelişmiş ayarlar'ı seçerek ve Bu yeni görünümü varsayılan olarak ayarla onay  kutusunu temizerek bunun varsayılan görünüm  olmadığını seçebilirsiniz.
+4. Model bir içerik türüyle ilişkilendirildiğinden, kitaplığa uyguladığınızda, ayıkladığınız etiketlerin sütun olarak gösterildiği içerik türünü ve görünümünü ekler. Bu görünüm kitaplığın varsayılan görünümüdür, ancak isteğe bağlı olarak **Gelişmiş ayarlar'ı** seçip **Bu yeni görünümü varsayılan olarak ayarla** onay kutusunu temizleyerek varsayılan görünüm olmamasını seçebilirsiniz.
 
-5. Modeli **kitaplı** kitaplıya uygulamak için Ekle'yi seçin.
+5. Modeli kitaplığa uygulamak için **Ekle'yi** seçin.
 
-6. Modeller **> Sözleşme sayfasında**, Bu **modele** sahip kitaplıklar bölümünde, listelenen sitenin URL'sini SharePoint görebilirsiniz.
+6. **Modeller > Sözleşmesi** sayfasının **Bu modele sahip kitaplıklar** bölümünde, listelenen SharePoint sitesinin URL'sini görürsünüz.
 
     ![Bu modele sahip Kitaplıklar bölümünü gösteren Sözleşme giriş sayfasının ekran görüntüsü.](../media/content-understanding/contract-libraries-with-this-model.png)
 
-7.  >  Ayarlar **Library ayarları altında**:
+7. **Ayarlar** >  **Library ayarları** altında:
 
-   - Durum adlı bir sütun **ekleyin** ve sütun **türü olarak** Seçim'i seçin.
-   - In **gözden geçirme**, **Onaylandı** ve **Reddedildi değerlerini** uygulama.
+   - **Durum** adlı bir sütun ekleyin ve sütun türü olarak **Seçim'i** seçin.
+   - **Gözden geçirme**, **Onaylandı** ve **Reddedildi** değerlerini uygulayın.
 
-Modeli belge kitaplığına uyguladikten sonra, belgeleri siteye yüklemeye başlayabilir ve sonuçları görüntüebilirsiniz.
+Modeli belge kitaplığına uyguladıktan sonra, belgeleri siteye yüklemeye başlayabilir ve sonuçları görebilirsiniz.
 
 ## <a name="next-step"></a>Sonraki adım
 
-[2. Adım. Sözleşme Microsoft Teams kanalınızı oluşturmak için Sözleşmeler'i kullanma](solution-manage-contracts-step2.md)
+[2. Adım. Sözleşme yönetimi kanalınızı oluşturmak için Microsoft Teams kullanma](solution-manage-contracts-step2.md)

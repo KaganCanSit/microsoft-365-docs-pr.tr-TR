@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 631a141ca6c898c6394bfd34839fd65d351fe8fc
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: e5bf4e09224961d9a6cb0f0dc076b672fd20aabc
+ms.sourcegitcommit: 344a254ca268a2f65cf199d9158a47e08861ffa5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64665546"
+ms.lasthandoff: 05/12/2022
+ms.locfileid: "65368187"
 ---
 # <a name="device-inventory"></a>Cihaz envanteri
 
@@ -30,13 +30,17 @@ ms.locfileid: "64665546"
 
 - [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender Güvenlik Açığı Yönetimi](../defender-vulnerability-management/index.yml)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Uç Nokta için Defender'ı deneyimlemek mi istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-machinesview-abovefoldlink)
 
-**Cihazlar listesi**, ağınızdaki uyarıların oluşturulduğu cihazların listesini gösterir. Kuyruk varsayılan olarak son 30 gün içinde görülen cihazları görüntüler.
+**Cihaz envanteri**, ağınızdaki uyarıların oluşturulduğu cihazların listesini gösterir. Kuyruk varsayılan olarak son 30 gün içinde görülen cihazları görüntüler.
 
 Bir bakışta etki alanı, risk düzeyi, işletim sistemi platformu gibi bilgileri ve risk altındaki cihazların kolay tanımlanmasına yönelik diğer ayrıntıları göreceksiniz.
+
+> [!NOTE]
+> Cihaz envanteri farklı Microsoft 365 Defender hizmetlerde kullanılabilir. Kullanabileceğiniz bilgiler lisansınıza bağlı olarak farklılık gösterir. [Uç Nokta için Microsoft Defender Plan 2'yi](https://go.microsoft.com/fwlink/p/?linkid=2154037) kullanırken en eksiksiz özellikler kümesini elde edersiniz.
 
 Cihaz listesi görünümünü özelleştirmek için aralarından seçim yapabileceğiniz çeşitli seçenekler vardır. Üst gezintide aşağıdakileri yapabilirsiniz:
 

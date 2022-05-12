@@ -1,6 +1,6 @@
 ---
-title: Uç Nokta Plan 1 için Microsoft Defender'ı Plan 2 ile karşılaştırma
-description: Uç Nokta Plan 1 için Defender'ı Plan 2 ile karşılaştırın. Planlar arasındaki farkları öğrenin ve kuruluşun ihtiyaçlarına uygun planı seçin.
+title: Uç Nokta için Microsoft Defender planlarını karşılaştırma
+description: Uç Nokta Planı 1 için Defender'ı Plan 2 ile karşılaştırın. Planlar arasındaki farklar hakkında bilgi edinin ve kuruluşunuzun gereksinimlerine uygun planı seçin.
 keywords: Uç Nokta için Defender, gelişmiş tehdit koruması, uç nokta koruması
 search.appverid: MET150
 author: denisebmsft
@@ -17,37 +17,32 @@ f1.keywords: NOCSH
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: d1ed6f5b45bc488c998c99efa1c35d5af869194e
-ms.sourcegitcommit: 4c207a9bdbb6c8ba372ae37907ccefca031a49f8
+ms.openlocfilehash: 3fb31e985e0f6d2191e45c9e4350399e4bb7eb40
+ms.sourcegitcommit: 344a254ca268a2f65cf199d9158a47e08861ffa5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "63016694"
+ms.lasthandoff: 05/12/2022
+ms.locfileid: "65368275"
 ---
-# <a name="microsoft-defender-for-endpoint-plan-1-and-plan-2"></a>Uç Nokta Plan 1 ve Plan 2 için Microsoft Defender
+# <a name="compare-microsoft-defender-for-endpoint-plans"></a>Uç Nokta için Microsoft Defender planlarını karşılaştırma
 
-**Geçerli olduğu yer:**
+Uç Nokta için Microsoft Defender, kurumsal ağların gelişmiş tehditleri engellemesine, algılamasına, araştırmasına ve yanıtlamasına yardımcı olmak için tasarlanmış bir kurumsal uç nokta güvenlik platformudur. Uç Nokta için Defender, merkezi yönetim ve raporlama ile birlikte virüsten koruma, kötü amaçlı yazılımdan koruma, fidye yazılımı risk azaltma ve daha fazlasını içeren gelişmiş tehdit koruması sağlar. Uç Nokta için Microsoft Defender için aşağıdaki seçenekler arasından seçim yapabilirsiniz:
 
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender Güvenlik Açığı Yönetimi](../defender-vulnerability-management/index.yml)
+- [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-Uç Nokta için Microsoft Defender, kurumsal ağların gelişmiş tehditleri engellemesini, algılamasını, araştırmasını ve yanıtlamasını önlemeye yardımcı olmak için tasarlanmış bir kurumsal uç nokta güvenlik platformudur. Uç Nokta için Defender, merkezi yönetim ve raporlamanın yanında virüsten koruma, kötü amaçlı yazılımlardan koruma, fidye yazılımı azaltma ve daha fazlasını içeren gelişmiş tehdit koruması sağlar. İki plan vardır:   
- 
-- [Uç Nokta Planı 1 için Microsoft Defender](defender-endpoint-plan-1.md); ve 
-- [Uç Nokta için Microsoft Defender Önceden](microsoft-defender-endpoint.md) Uç Nokta için [Microsoft Defender](microsoft-defender-endpoint.md) olarak bilinen Uç Nokta Plan 2 için.
+Uç Nokta Planı 1 için Defender, Uç Nokta Plan 2 için Defender ve Defender Güvenlik Açığı Yönetimi eklentisinde bulunan farklı özellikler tarafından sağlanan korumayı netleştirmeye yardımcı olması için bu makaleyi kullanabilirsiniz.
 
-## <a name="compare-defender-for-endpoint-plans"></a>Uç nokta planları için Defender'ı karşılaştırma
-
-Aşağıdaki tabloda, her plana üst düzeyde nelerin dahil olduğu açıkmektedir. <br/><br/>
-
-| [Uç Nokta Plan 1 için Defender](defender-endpoint-plan-1.md) | [Uç Nokta Plan 2 için Defender](microsoft-defender-endpoint.md) |
-|:---|:---|
-| [Yeni nesil koruma](defender-endpoint-plan-1.md#next-generation-protection) <br/>(kötü amaçlı yazılımlardan ve virüsten koruma yazılımı da dahil) <p> [Saldırı yüzeyini azaltma](defender-endpoint-plan-1.md#attack-surface-reduction) <p> [El ile yanıt eylemleri](defender-endpoint-plan-1.md#manual-response-actions) <p> [Merkezi yönetim](defender-endpoint-plan-1.md#centralized-management) <p>[Güvenlik raporları](defender-endpoint-plan-1.md#reporting) <p>[API'ler](defender-endpoint-plan-1.md#apis)  | [Uç Nokta Plan 1 için Defender](defender-endpoint-plan-1.md) ve: <p> [Cihaz bulma](device-discovery.md) <p> [Tehdit ve güvenlik açığı yönetimi](next-gen-threat-and-vuln-mgt.md) <p> [Threat Analytics](threat-analytics.md) <p> [Otomatik araştırma ve yanıt](automated-investigations.md) <p> [Gelişmiş av](advanced-hunting-overview.md) <p> [Uç nokta algılama ve yanıt](overview-endpoint-detection-response.md) <p> [Microsoft Tehdit Uzmanları](microsoft-threat-experts.md)  |
-| [Android Windows 10, iOS, Android OS ve macOS cihazları için destek](defender-endpoint-plan-1.md#cross-platform-support) | Platformlar Windows (istemci ve sunucu) ve Windows olmayan platformlar için destek<br/> (macOS, iOS, Android ve Linux) |
-| Uç Nokta Planı 1 için Defender'ı denemek için şu adresi ziyaret edin [https://aka.ms/mdep1trial](https://aka.ms/mdep1trial): . | Uç Nokta Planı 2 için Defender'ı denemek için şu adresi ziyaret edin [https://aka.ms/MDEp2OpenTrial](https://aka.ms/MDEp2OpenTrial): . |
+| [Uç Nokta için Defender Plan 1](defender-endpoint-plan-1.md) | [Uç Nokta için Defender Plan 2](microsoft-defender-endpoint.md) | [Defender Güvenlik Açığı Yönetimi eklentisi](../defender-vulnerability-management/defender-vulnerability-management-capabilities.md)|
+|:---|:---|:---|
+| [Yeni nesil koruma](defender-endpoint-plan-1.md#next-generation-protection) <br/>(kötü amaçlı yazılımdan koruma ve virüsten koruma içerir) <p> [Saldırı yüzeyini azaltma](defender-endpoint-plan-1.md#attack-surface-reduction) <p> [El ile yanıt eylemleri](defender-endpoint-plan-1.md#manual-response-actions) <p> [Merkezi yönetim](defender-endpoint-plan-1.md#centralized-management) <p>[Güvenlik raporları](defender-endpoint-plan-1.md#reporting) <p>[Apı 'leri](defender-endpoint-plan-1.md#apis) | Uç Nokta Planı 1 için Defender özelliklerine ek olarak: <p> <p> [cihaz keşfi](device-discovery.md) <p> [Cihaz envanteri](machines-view-overview.md) <p> [Core Defender Güvenlik Açığı Yönetimi özellikleri](../defender-vulnerability-management/defender-vulnerability-management-capabilities.md) <p> [Tehdit Analizi](threat-analytics.md) <p> [Otomatik araştırma ve yanıt](automated-investigations.md) <p> [Gelişmiş avcılık örneği](advanced-hunting-overview.md) <p> [Uç nokta algılama ve yanıt](overview-endpoint-detection-response.md) <p> [Microsoft Tehdit Uzmanları](microsoft-threat-experts.md) | Uç Nokta Için Defender Plan 2 için Ek Defender Güvenlik Açığı Yönetimi: <p> [Güvenlik temelleri değerlendirmesi](../defender-vulnerability-management/tvm-security-baselines.md) <p> [Güvenlik açığı olan uygulamaları engelleme](../defender-vulnerability-management/tvm-block-vuln-apps.md) <p> [Tarayıcı uzantıları](../defender-vulnerability-management/tvm-browser-extensions.md) <p> [Dijital sertifika değerlendirmesi](../defender-vulnerability-management/tvm-certificate-inventory.md) <p> [Ağ paylaşımı analizi](../defender-vulnerability-management/tvm-network-share-assessment.md)|
+| [Windows 10, iOS, Android işletim sistemi ve macOS cihazları için destek](defender-endpoint-plan-1.md#cross-platform-support) | Windows (istemci ve sunucu) ve Windows olmayan platformlar için destek<br/> (macOS, iOS, Android ve Linux) | Windows (istemci ve sunucu) ve Windows olmayan platformlar için destek<br/> (macOS, iOS, Android ve Linux) |
+| Uç Nokta Için Defender Plan 1'i denemek için bkz. [https://aka.ms/mdep1trial](https://aka.ms/mdep1trial) | Uç Nokta Için Defender Plan 2'yi denemek için bkz. [https://aka.ms/MDEp2OpenTrial](https://aka.ms/MDEp2OpenTrial) | Eklentiyi Microsoft Defender Güvenlik Açığı Yönetimi denemek için adresini ziyaret edin[https://aka.ms/AddonPreviewTrial](https://aka.ms/AddonPreviewTrial). Daha fazla bilgi için bkz. [Defender Güvenlik Açığı Yönetimini Alma](../defender-vulnerability-management/get-defender-vulnerability-management.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Uç Nokta Planı 1 için Microsoft Defender'a genel bakış](defender-endpoint-plan-1.md)
-- [Uç Nokta Planı 1 için Defender'ı ayarlama ve yapılandırma](mde-p1-setup-configuration.md)
-- [Uç Nokta Planı 1 için Defender'ı kullanmaya başlama](mde-plan1-getting-started.md)
+- [Uç Nokta için Microsoft Defender Plan 1'e genel bakış elde edin](defender-endpoint-plan-1.md)
+- [Uç Nokta için Defender Planı 1’i ayarlama ve yapılandırın](mde-p1-setup-configuration.md)
+- [Uç Nokta Için Defender Plan 1'i kullanarak Kullanmaya başlayın](mde-plan1-getting-started.md)

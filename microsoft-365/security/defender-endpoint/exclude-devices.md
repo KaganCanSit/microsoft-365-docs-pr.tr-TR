@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: cbfc82f56cc1922a663c31defe30dc61c2d3dd9b
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: d97e8db205d066671b7c0d430e3dbf79f0dd6ebd
+ms.sourcegitcommit: 344a254ca268a2f65cf199d9158a47e08861ffa5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64664160"
+ms.lasthandoff: 05/12/2022
+ms.locfileid: "65368121"
 ---
 # <a name="exclude-devices"></a>Cihazları dışlayın
 
@@ -33,11 +33,11 @@ ms.locfileid: "64664160"
 
 > Uç Nokta için Defender'ı deneyimlemek mi istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-respondmachine-abovefoldlink)
 
-## <a name="exclude-devices-from-threat-and-vulnerability-management"></a>Cihazları Tehdit ve Güvenlik Açığı Yönetimi dışında tutma
+## <a name="exclude-devices-from-vulnerability-management"></a>Cihazları güvenlik açığı yönetimi dışında tutma
 
-Etkin olmayan, yinelenen veya kapsamı dışında olan cihazları dışlamak, etkin cihazlarınızdaki riskleri keşfetmeye ve önceliklendirmeye odaklanmanıza olanak tanır. Dışlanan cihazlar Tehdit ve Güvenlik Açığı Yönetimi raporlarınızda görünmeyebileceği için bu eylem daha doğru bir Tehdit ve Güvenlik Açığı Yönetimi maruz kalma puanını yansıtmaya da yardımcı olabilir.
+Etkin olmayan, yinelenen veya kapsamı dışında olan cihazları dışlamak, etkin cihazlarınızdaki riskleri keşfetmeye ve önceliklendirmeye odaklanmanıza olanak tanır. Dışlanan cihazlar güvenlik açığı yönetimi raporlarınızda görünmeyebileceği için bu eylem daha doğru güvenlik açığı yönetimi maruz kalma puanını yansıtmaya da yardımcı olabilir.
 
-Cihazlar dışlandıktan sonra, bu cihazlarda güvenlik açıkları ve yüklü yazılımlar hakkında güncelleştirilmiş veya ilgili bilgileri görüntüleyemezsiniz. Gelişmiş avcılıkta tüm Tehdit ve Güvenlik Açığı Yönetimi sayfaları, raporları ve ilgili tabloları etkiler.
+Cihazlar dışlandıktan sonra, bu cihazlarda güvenlik açıkları ve yüklü yazılımlar hakkında güncelleştirilmiş veya ilgili bilgileri görüntüleyemezsiniz. Gelişmiş avcılıkta tüm güvenlik açığı yönetimi sayfaları, raporları ve ilgili tabloları etkiler.
 
 Cihaz dışlama özelliği cihaz verilerini güvenlik açığı yönetimi sayfalardan ve raporlardan kaldırsa da, cihazlar ağa bağlı kalır ve kuruluş için bir risk olmaya devam edebilir. İstediğiniz zaman cihaz dışlama işlemini iptal edebilirsiniz.
 

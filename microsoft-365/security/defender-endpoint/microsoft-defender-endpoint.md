@@ -17,19 +17,21 @@ ms.collection:
 ms.custom: intro-overview
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 9211597ec8a0e25130b010a6049832ac151840fc
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: c9fe313994e7468004e17df05b1ec4d7c3cf7a6b
+ms.sourcegitcommit: 344a254ca268a2f65cf199d9158a47e08861ffa5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65173694"
+ms.lasthandoff: 05/12/2022
+ms.locfileid: "65367968"
 ---
 # <a name="microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Şunlar için geçerlidir:**
+
 - [Uç Nokta için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender Güvenlik Açığı Yönetimi](../defender-vulnerability-management/index.yml)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
@@ -37,10 +39,13 @@ ms.locfileid: "65173694"
 Uç Nokta için Microsoft Defender, kurumsal ağların gelişmiş tehditleri engellemesine, algılamasına, araştırmasına ve yanıtlamasına yardımcı olmak için tasarlanmış bir kurumsal uç nokta güvenlik platformudur.
 
 > [!TIP]
-> Uç Nokta için Microsoft Defender iki planda kullanılabilir: Uç Nokta Için Defender Plan 1 ve Plan 2. Bu makalede, her plana dahil edilen özellikler ve özellikler açıklanmaktadır. [Uç Nokta için Microsoft Defender Plan 1 ve Plan 2 hakkında daha fazla bilgi edinin](defender-endpoint-plan-1-2.md).
-> 
+> Uç Nokta için Microsoft Defender, Uç Nokta için Defender Plan 1 ve Plan 2 şeklinde iki planda kullanılabilir. Plan 2 için yeni bir Microsoft Defender Güvenlik Açığı Yönetimi eklentisi kullanıma sunuldu.
+>
+> Yeni Defender Güvenlik Açığı Yönetimi eklentisi de dahil olmak üzere her planda bulunan özellikler ve özellikler hakkında daha fazla bilgi için bkz. [Uç Nokta için Microsoft Defender planlarını karşılaştırma](defender-endpoint-plan-1-2.md).
 
 <p><p>
+
+Uç Nokta için Defender hakkında daha fazla bilgi edinmek için aşağıdaki videoyu izleyin:
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4wDob]
 
@@ -55,7 +60,7 @@ Uç Nokta için Defender, Windows 10 ve Microsoft'un sağlam bulut hizmetinde ye
 <center><h2>Uç Nokta için Microsoft Defender</center></h2>
 <table>
 <tr>
-<td><a href="#tvm"><center><img src="images/TVM_icon.png" alt="Threat & Vulnerability Management"> <br><b>Tehdit & Güvenlik Açığı Yönetimi</b></center></a></td>
+<td><a href="#tvm"><center><img src="images/logo-mdvm.png" alt="Vulnerability Management"> <br><b> Core Defender Güvenlik Açığı Yönetimi</b></center></a></td>
 <td><a href="#asr"><center><img src="images/asr-icon.png" alt="Attack surface reduction"><br><b>Saldırı yüzeyini azaltma</b></center></a></td>
 <td><center><a href="#ngp"><img src="images/ngp-icon.png" alt="Next-generation protection"><br> <b>Yeni nesil koruma</b></a></center></td>
 <td><center><a href="#edr"><img src="images/edr-icon.png" alt="Endpoint detection and response"><br> <b>Uç nokta algılama ve yanıt</b></a></center></td>
@@ -86,9 +91,11 @@ Uç Nokta için Defender, Windows 10 ve Microsoft'un sağlam bulut hizmetinde ye
 
 <a name="tvm"></a>
 
-**[Tehdit & Güvenlik Açığı Yönetimi](next-gen-threat-and-vuln-mgt.md)**
+**[Core Defender Güvenlik Açığı Yönetimi](../defender-vulnerability-management/defender-vulnerability-management.md)**
 
-Bu yerleşik özellik, uç nokta güvenlik açıklarının ve yanlış yapılandırmalarının keşfi, önceliklendirilmesi ve düzeltilmesi için oyun değiştiren risk tabanlı bir yaklaşım kullanır.
+Yerleşik temel güvenlik açığı yönetimi özellikleri uç nokta güvenlik açıklarının ve yanlış yapılandırmalarının keşfi, değerlendirmesi, önceliklendirilmesi ve düzeltilmesi için modern bir risk tabanlı yaklaşım kullanır. Güvenlik duruşunuzu değerlendirme ve riski azaltma becerinizi daha da geliştirmek amacıyla Plan 2 için yeni bir Defender Güvenlik Açığı Yönetimi eklentisi kullanıma sunulmuştur.
+
+Kullanabileceğiniz farklı güvenlik açığı yönetimi özellikleri hakkında daha fazla bilgi için bkz. [Microsoft Defender Güvenlik Açığı Yönetimi tekliflerini karşılaştırma](../defender-vulnerability-management/defender-vulnerability-management-capabilities.md).
 
 <a name="asr"></a>
 
@@ -162,7 +169,7 @@ Microsoft Learn'ün bu öğrenme yolu ile Uç Nokta için Defender'ı ve kurulu�
 
 |Eğitim:|Microsoft 365 Defender ile siber saldırıları algılama ve yanıtlama|
 |---|---|
-|![Microsoft 365 Defender eğitim simgesi.](../../media/microsoft-365-defender/m365-defender-secure-organization.svg)|Uç Nokta için Defender, tek, birleşik bir platformda güvenlik açığı yönetimi, uç nokta koruması, uç noktada algılama ve yanıtlama, mobil tehdit savunması ve yönetilen hizmetler sunan bir uç nokta güvenlik çözümüdür.<p> 2 sa 25 dk - Learning Yolu - 9 Modül|
+|![Microsoft 365 Defender eğitim simgesi.](../../media/microsoft-365-defender/m365-defender-secure-organization.svg)|Uç Nokta için Defender, tek, birleşik bir platformda güvenlik açığı yönetimi, uç nokta koruması, uç noktada algılama ve yanıtlama, mobil tehdit savunması ve yönetilen hizmetler sunan bir uç nokta güvenlik çözümüdür.<p> 2 sa 25 dk - Öğrenme Yolu - 9 Modül|
 
 > [!div class="nextstepaction"]
 > [Başlangıç >](/learn/paths/defender-endpoint-fundamentals/)

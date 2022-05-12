@@ -1,5 +1,5 @@
 ---
-title: Adım 2. Sözleşme Microsoft Teams kanalınızı oluşturmak için Sözleşmeler'i kullanma
+title: Adım 2. Sözleşme yönetimi kanalınızı oluşturmak için Microsoft Teams kullanma
 ms.author: chucked
 author: chuckedmonson
 manager: pamgreen
@@ -11,55 +11,55 @@ ms.prod: microsoft-365-enterprise
 search.appverid: ''
 ms.localizationpriority: medium
 ROBOTS: ''
-description: Microsoft Teams çözüm Microsoft Teams sözleşme yönetim kanalınızı oluşturmak için nasıl Microsoft 365 öğrenin.
-ms.openlocfilehash: a5a42bedcb6acba4caf8f6f114812c63869ee92e
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Microsoft 365 çözümü kullanarak sözleşme yönetimi kanalınızı oluşturmak için Microsoft Teams kullanmayı öğrenin.
+ms.openlocfilehash: 6020b6e57af285e96c7998454dc46e5eb19bc5f9
+ms.sourcegitcommit: 344a254ca268a2f65cf199d9158a47e08861ffa5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985558"
+ms.lasthandoff: 05/12/2022
+ms.locfileid: "65368055"
 ---
-# <a name="step-2-use-microsoft-teams-to-create-your-contract-management-channel"></a>Adım 2. Sözleşme Microsoft Teams kanalınızı oluşturmak için Sözleşmeler'i kullanma
+# <a name="step-2-use-microsoft-teams-to-create-your-contract-management-channel"></a>Adım 2. Sözleşme yönetimi kanalınızı oluşturmak için Microsoft Teams kullanma
 
-Organizasyonunız sözleşme yönetim çözümünü ayarlarken, proje katılımcılarının sözleşmeleri gözden geçirtecek ve yönetecekleri merkezi bir konuma ihtiyacınız vardır. Bu amaçla, Microsoft Teams [kanalını](/microsoftteams/) ayarlamak ve Teams özellikleri kullanmak için Teams:
+Kuruluşunuz bir sözleşme yönetimi çözümü ayarlarken paydaşların sözleşmeleri gözden geçirebileceği ve yönetebileceği merkezi bir konuma ihtiyacınız vardır. Bu amaçla[, Microsoft Teams](/microsoftteams/) kullanarak bir Teams kanalı ayarlayabilir ve Teams özelliklerini kullanarak şunları yapabilirsiniz:
 
-- **Eylem gerektiren tüm sözleşmeleri kolayca görmek için proje katılımcıları için bir konum oluşturun.** Örneğin, Teams Sözleşme Yönetimi kanalında bir Sözleşmeler sekmesi oluşturabilirsiniz ve bu sekmede üyelerin onay gereken tüm sözleşmelerin yararlı kutucuk görünümlerini görebilirler. Görünümü, her "kart" sizin için önemli olan önemli verileri (*İstemci, Yüklenici* ve Ücret tutarı gibi) listeleyecek şekilde *de yapılandırabilirsiniz*.
+- **Eylem gerektiren tüm sözleşmeleri kolayca görmek için paydaşlar için bir konum oluşturun.** Örneğin, Teams Sözleşme Yönetimi kanalında üyelerin onay gerektiren tüm **sözleşmelerin** yararlı bir kutucuk görünümünü görebileceği bir Sözleşmeler sekmesi oluşturabilirsiniz. Ayrıca görünümü, her bir "kart"ın ilgilendiğiniz önemli verileri ( *İstemci*, *Yüklenici* ve *Ücret tutarı* gibi) listelemesi için yapılandırabilirsiniz.
 
      ![Sözleşmeler sekmesi.](../media/content-understanding/tile-view.png)
 
-- **Üyelerin birbiriyle etkileşim kurarak önemli olayları görmeleri için bir konum bulundurabilirsiniz.** Örneğin, Teams'de Gönderiler sekmesi konuşmalar  yapmak, güncelleştirmeleri almak ve eylemleri görmek için kullanılabilir (bir üyenin sözleşmeyi reddetmesi gibi). Bir şey olduğunda (örneğin, onay için gönderilen yeni bir sözleşme), Gönderiler sekmesi  yalnızca bunu duyurmak için değil, aynı zamanda kaydını tutmak için de kullanılabilir. Üyeler bildirimlere abone olursa, güncelleştirme olduğunda bildirim alırlar.
+- **Üyelerin birbirleriyle etkileşim kuracakları ve önemli olayları görebilecekleri bir konum elde edin.** Örneğin, Teams'da **Gönderiler** sekmesi konuşma yapmak, güncelleştirmeleri almak ve eylemleri görmek (bir sözleşmeyi reddeden üye gibi) için kullanılabilir. Bir şey olduğunda (onay için gönderilen yeni bir sözleşme gibi), **Gönderiler** sekmesi yalnızca bunu duyurmak için değil, aynı zamanda kaydı tutmak için de kullanılabilir. Üyeler bildirimlere abone olursa, bir güncelleştirme olduğunda bildirim alır.
 
      ![Gönderiler sekmesi.](../media/content-understanding/posts.png)
 
-- **Üyelerin ne zaman ödeme için gönderabileceklerini bilmek üzere onaylanmış sözleşmeleri göreceği bir konum seçin.** Daha SharePoint'de, Ödeme için bir liste oluşturmanız ve Sütun türü  olarak Tek metin satırı'nın seçerek **İstemci, Yüklenici** ve Ücret tutarı sütunlarını içermeniz  gerekir.  Sözleşmeler sekmesindeki gibi, Ödeme  için Teams sekmesini Sözleşme Yönetimi kanalına eklemeniz [gerekir](solution-manage-contracts-step2.md#attach-your-sharepoint-document-library-to-the-contracts-tab). Ödeme **için sekmesi**, ödeme için gönderilmeniz gereken tüm sözleşmeleri listelemektedir. Bunun yerine bu bilgileri doğrudan üçüncü taraf bir mali uygulamaya (örneğin, Dynamics CRM) yazmak için bu çözümü kolayca genişletebilirsiniz. 
+- **Üyelerin ödeme için ne zaman gönderilebileceğini bilmesi için onaylanmış sözleşmeleri görmeleri için bir konum belirleyin.** SharePoint bir **Ödeme için** listesi oluşturmanız ve sütun türü olarak **Tek satır metni** seçerek **İstemci**, **Yüklenici** ve **Ücret tutarı** sütunlarını eklemeniz gerekir. Sözleşmeler sekmesinde [yaptığınıza](solution-manage-contracts-step2.md#attach-your-sharepoint-document-library-to-the-contracts-tab)benzer şekilde, **Ödeme İçin** listesini Sözleşme Yönetimi kanalında Teams sekmesi olarak eklemeniz gerekir. **Ödeme İçin** sekmesi, ödeme için gönderilmesi gereken tüm sözleşmeleri listeler. Bu çözümü kolayca genişleterek bu bilgileri doğrudan üçüncü taraf bir finansal uygulamaya (örneğin Dynamics CRM) yazabilirsiniz. 
 
 
-## <a name="attach-your-sharepoint-document-library-to-the-contracts-tab"></a>Sözleşmeler SharePoint kitaplığınızı Sözleşmeler sekmesine ekleme
+## <a name="attach-your-sharepoint-document-library-to-the-contracts-tab"></a>SharePoint belge kitaplığınızı Sözleşmeler sekmesine ekleme
 
-Sözleşme Yönetimi **kanalınıza bir** Sözleşmeler sekmesi oluşturduktaktan sonra, Sözleşmeler SharePoint [kitaplığınızı bu sekmeye ekleyebilirsiniz](https://support.microsoft.com/office/add-a-sharepoint-page-list-or-document-library-as-a-tab-in-teams-131edef1-455f-4c67-a8ce-efa2ebf25f0b). Eklemek SharePoint belge kitaplığı, belge anlama modelinizi önceki bölümde SharePoint Syntex belge anlama modelinize uyguladık olan belge kitaplığıdır.
+Sözleşme Yönetimi kanalınızda bir **Sözleşmeler** sekmesi oluşturduktan sonra [, SharePoint belge kitaplığınızı buna eklemeniz](https://support.microsoft.com/office/add-a-sharepoint-page-list-or-document-library-as-a-tab-in-teams-131edef1-455f-4c67-a8ce-efa2ebf25f0b) gerekir. Eklemek istediğiniz SharePoint belge kitaplığı, önceki bölümde SharePoint Syntex belge anlama modelinizi uyguladığınız kitaplıktır.
 
-Belge kitaplığını SharePoint sonra, varsayılan liste görünümü aracılığıyla sınıflandırılmış tüm sözleşmeleri görüntüebilirsiniz.
+SharePoint belge kitaplığını ekledikten sonra, tüm sınıflandırılmış sözleşmeleri varsayılan liste görünümü aracılığıyla görüntüleyebilirsiniz.
 
-   ![Liste görünümü SharePoint.](../media/content-understanding/list-view.png)
+   ![SharePoint kitaplığının liste görünümü.](../media/content-understanding/list-view.png)
 
-## <a name="customize-your-contracts-tab-tile-view"></a>Sözleşmeler sekme kutucuğunu görünümünü özelleştirme
+## <a name="customize-your-contracts-tab-tile-view"></a>Sözleşmeler sekmesi kutucuk görünümünüzü özelleştirme
 
 > [!NOTE]
-> Bu bölümde, Sözleşmeler Yönetimi Çözümü Varlıkları deposuna dahil edilen [ContractTileFormatting.json](https://github.com/pnp/syntex-samples/blob/main/scenario%20assets/Contracts%20Management/View%20Formatter/ContractTileFormatting.json) dosyasında yer alan kod [örnekleri referans olarak verilmiştir](https://github.com/pnp/syntex-samples/tree/main/scenario%20assets/Contracts%20Management).
+> Bu bölümde, [Sözleşme Yönetimi Çözümü Varlıkları deposuna](https://github.com/pnp/syntex-samples/tree/main/scenario%20samples/Contracts%20Management) dahil edilen [ContractTileFormatting.json](https://github.com/pnp/syntex-samples/blob/main/scenario%20samples/Contracts%20Management/View%20Formatter/ContractTileFormatting.json) dosyasında yer alan kod örneklerine başvuruda bulunulmaktadır.
 
-Sözleşmeler Teams sözleşmelerinizi kutucuk görünümünde görüntülemenize olanak sağlarken, sözleşme kartında görünür yapmak istediğiniz sözleşme verilerini görüntülemek için sözleşmeyi özelleştirebilirsiniz. Örneğin, Sözleşmeler **sekmesi** için üyelerin sözleşme kartında müşteri, yüklenici ve ücret tutarını görmeleri önemlidir. Bu alanların hepsi, belge kitaplığınıza uygulanmış olan SharePoint Syntex modeliniz aracılığıyla her sözleşmeden ayıklanır. Üyelerin sözleşmenin onay sürecinin hangi iş üzerinde olduğunu kolayca görmeleri için kutucuk üst bilgisi çubuğunu her durum için farklı renklerle değiştirmek de istiyor oluruz. Örneğin, onaylanan tüm sözleşmelerde mavi bir üst bilgi çubuğu olur.
+Teams, sözleşmelerinizi kutucuk görünümünde görüntülemenize olanak tanırken, sözleşme kartında görünür hale getirmek istediğiniz sözleşme verilerini görüntülemek için özelleştirmek isteyebilirsiniz. Örneğin, **Sözleşmeler** sekmesinde, üyelerin sözleşme kartında müşteriyi, yükleniciyi ve ücret tutarını görmesi önemlidir. Bu alanların tümü, belge kitaplığınıza uygulanan SharePoint Syntex modeliniz aracılığıyla her sözleşmeden ayıklandı. Ayrıca, üyelerin sözleşmenin onay sürecinde nerede olduğunu kolayca görebilmesi için kutucuk üst bilgi çubuğunu her durum için farklı renklerle değiştirebilmek istiyorsunuz. Örneğin, onaylanan tüm sözleşmelerin mavi üst bilgi çubuğu olacaktır.
 
-   ![Kutucuk kitaplığının SharePoint görünümü.](../media/content-understanding/tile.png)
+   ![SharePoint kitaplığının kutucuk görünümü.](../media/content-understanding/tile.png)
 
-Kullanmakta olan özel kutucuk görünümü, geçerli kutucuk görünümünü biçimlendirmek için kullanılan JSON dosyasında değişiklik yapmanızı gerektirir. [ContractTileFormatting.json](https://github.com/pnp/syntex-samples/blob/main/scenario%20assets/Contracts%20Management/View%20Formatter/ContractTileFormatting.json) dosyasına bakarak, kart görünümünü oluşturmak için kullanılan JSON dosyasına başvurabilirsiniz. Aşağıdaki bölümlerde, sözleşme kartlarında yer alan özellikler için kodun belirli bölümlerini görüyorsunuz.
+Kullandığınız özel kutucuk görünümü, geçerli kutucuk görünümünü biçimlendirmek için kullanılan JSON dosyasında değişiklik yapmanızı gerektirir. [ContractTileFormatting.json](https://github.com/pnp/syntex-samples/blob/main/scenario%20samples/Contracts%20Management/View%20Formatter/ContractTileFormatting.json) dosyasına bakarak kart görünümünü oluşturmak için kullanılan JSON dosyasına başvurabilirsiniz. Aşağıdaki bölümlerde, sözleşme kartlarındaki özellikler için kodun belirli bölümlerini görürsünüz.
 
-Teams kanalında görünümünüz için JSON kodunu görmek veya bu kod üzerinde değişiklik yapmak için Teams kanalında görünüm açılan menüsünü ve sonra Geçerli görünümü **biçimlendir'i seçin**.
+Teams kanalınızda görünümünüz için JSON kodunu görmek veya değiştirmek istiyorsanız, Teams kanalında görünüm açılan menüsünü ve ardından **Geçerli görünümü biçimlendir'i** seçin.
 
-   ![Kanalda json biçiminin Teams görüntüsü.](../media/content-understanding/jason-format.png)
+   ![Teams kanaldaki json biçiminin ekran görüntüsü.](../media/content-understanding/jason-format.png)
 
 ## <a name="card-size-and-shape"></a>Kart boyutu ve şekli
 
-[ContractTileFormatting.json](https://github.com/pnp/syntex-samples/blob/main/scenario%20assets/Contracts%20Management/View%20Formatter/ContractTileFormatting.json) dosyasında, kartın boyutunun ve şeklinin nasıl biçimlendirildi kodunu görmek için aşağıdaki bölüme bakın.
+[ContractTileFormatting.json](https://github.com/pnp/syntex-samples/blob/main/scenario%20samples/Contracts%20Management/View%20Formatter/ContractTileFormatting.json) dosyasında, kartın boyutunun ve şeklinin nasıl biçimlendirildiğini gösteren kodu görmek için aşağıdaki bölüme bakın.
 
 ```JSON
                   {
@@ -84,7 +84,7 @@ Teams kanalında görünümünüz için JSON kodunu görmek veya bu kod üzerind
 
 ## <a name="contract-status"></a>Sözleşme durumu
 
-Aşağıdaki kod, her başlık kartının durumunu tanımlamanız için olanak sağlar. Her durum değerinin (*Yeni*, Gözden *Geçirmede*, *Onaylandı* ve *Reddedildi) her* biri için farklı bir renk kodu görüntüleyecektir. [ContractTileFormatting.json](https://github.com/pnp/syntex-samples/blob/main/scenario%20assets/Contracts%20Management/View%20Formatter/ContractTileFormatting.json) dosyasında, durumu tanımlayan bölüme bakın.
+Aşağıdaki kod, her başlık kartının durumunu tanımlamanızı sağlar. Her durum değerinin (*Yeni*, *Gözden Geçirildi*, *Onaylandı* ve *Reddedildi*) her bir değer için farklı bir renk kodu görüntüleneceğini unutmayın. [ContractTileFormatting.json](https://github.com/pnp/syntex-samples/blob/main/scenario%20samples/Contracts%20Management/View%20Formatter/ContractTileFormatting.json) dosyasında, durumu tanımlayan bölüme bakın.
 
 ```JSON
           {
@@ -106,13 +106,13 @@ Aşağıdaki kod, her başlık kartının durumunu tanımlamanız için olanak s
 
 ## <a name="extracted-fields"></a>Ayıklanan alanlar
 
-Her sözleşme kartında, her sözleşme için ayıklanan üç *alan (İstemci**, Yüklenici* ve Ücret Tutarı *) görüntülenir*. Ayrıca, dosyayı tanımlamak için kullanılan veri modeline göre sınıflandırılmış olduğu SharePoint Syntex/tarihi de görüntülemek istiyorsanız.
+Her sözleşme kartında her sözleşme için ayıklanmış üç alan görüntülenir (*İstemci*, *Yüklenici* ve *Ücret Tutarı*). Ayrıca, dosyanın tanımlamak için kullanılan SharePoint Syntex modeli tarafından sınıflandırıldığı saati/tarihi de görüntülemek istiyorsunuz.
 
-[ContractTileFormatting.json](https://github.com/pnp/syntex-samples/blob/main/scenario%20assets/Contracts%20Management/View%20Formatter/ContractTileFormatting.json) dosyasında, aşağıdaki bölümler bunların her birini tanımlar.
+[ContractTileFormatting.json](https://github.com/pnp/syntex-samples/blob/main/scenario%20samples/Contracts%20Management/View%20Formatter/ContractTileFormatting.json) dosyasında aşağıdaki bölümler bunların her birini tanımlar.
 
 ### <a name="client"></a>İstemci
 
-Bu bölümde, "İstemci" kartta nasıl görüntüleniyor ve ilgili sözleşmenin değeri nasıl kullandığı tanımlandı.
+Bu bölüm, "İstemci"nin kartta nasıl görüntüleneceğini tanımlar ve belirli bir sözleşmenin değerini kullanır.
 
 ```JSON
                       {
@@ -136,7 +136,7 @@ Bu bölümde, "İstemci" kartta nasıl görüntüleniyor ve ilgili sözleşmenin
 
 ### <a name="contractor"></a>Yüklenici
 
-Bu bölümde, "Yüklenici" kartta nasıl görüntüleniyor ve ilgili sözleşmenin değeri gösterilir.
+Bu bölüm, "Yüklenicinin" kartta nasıl görüntüleneceğini tanımlar ve belirli bir sözleşmenin değerini kullanır.
 
 ```JSON
                         {
@@ -160,7 +160,7 @@ Bu bölümde, "Yüklenici" kartta nasıl görüntüleniyor ve ilgili sözleşmen
 
 ### <a name="fee-amount"></a>Ücret tutarı
 
-Bu bölümde, "Ücret Tutarı" kartta nasıl görüntüleniyor ve ilgili sözleşmenin değeri gösterilir.
+Bu bölüm kartta "Ücret Tutarı"nın nasıl görüntüleneceğini tanımlar ve belirli bir sözleşmenin değerini kullanır.
 
 ```JSON
                       {
@@ -184,7 +184,7 @@ Bu bölümde, "Ücret Tutarı" kartta nasıl görüntüleniyor ve ilgili sözle�
 
 ### <a name="classification-date"></a>Sınıflandırma tarihi
 
-Bu bölümde, "Sınıflandırma" özelliği kartta nasıl görüntüleniyor ve ilgili sözleşmenin değeri nasıl kullandığı tanımlandı.
+Bu bölüm, "Sınıflandırma"nın kartta nasıl görüntüleneceğini tanımlar ve belirli bir sözleşmenin değerini kullanır.
 
 ```JSON
                       {
@@ -208,4 +208,4 @@ Bu bölümde, "Sınıflandırma" özelliği kartta nasıl görüntüleniyor ve i
 
 ## <a name="next-step"></a>Sonraki adım
 
-[3. Adım. Sözleşmelerinizi Power Automate akışı oluşturmak için Sözleşmelerinizi kullanma](solution-manage-contracts-step3.md)
+[3. Adım. Sözleşmelerinizi işlemek üzere akış oluşturmak için Power Automate kullanma](solution-manage-contracts-step3.md)

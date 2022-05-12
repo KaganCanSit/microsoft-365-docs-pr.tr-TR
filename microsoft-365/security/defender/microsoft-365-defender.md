@@ -26,12 +26,12 @@ ms.custom:
 - intro-overview
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 99549ba8077d966c4d5649e144fa0259f9178629
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 45e63c489093c147895c467c3471f16a8bb99918
+ms.sourcegitcommit: 344a254ca268a2f65cf199d9158a47e08861ffa5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64944359"
+ms.lasthandoff: 05/12/2022
+ms.locfileid: "65368341"
 ---
 # <a name="microsoft-365-defender"></a>Microsoft 365 Defender
 
@@ -47,6 +47,7 @@ Tümleşik Microsoft 365 Defender çözümüyle, güvenlik uzmanları bu ürünl
 
 <center><h2>Microsoft 365 Defender hizmetleri</center></h2>
 <table><tr><td><center><b><a href="/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint"><b>Uç Nokta için Microsoft Defender</b></center></a></td>
+<td><center><b><a href="/microsoft-365/security/defender-vulnerability-management/defender-vulnerability-management"><b>Microsoft Defender Güvenlik Açığı Yönetimi</b></center></a></td>
 <td><center><b><a href="/microsoft-365/security/office-365-security/overview"><b>Office 365 için Microsoft Defender</b></center></a></td>
 <td><center><b><a href="/defender-for-identity/"><b>Kimlik için Microsoft Defender</b></a></center></td>
 <td><center><b><a href="/cloud-app-security/"><b>Microsoft Defender for Cloud Apps</b></a></center></td>
@@ -65,8 +66,9 @@ Bu etkileşimli kılavuzda, kuruluşunuzu Microsoft 365 Defender ile korumayı �
 Microsoft 365 Defender hizmetleri koruma:
 
 - **Uç Nokta için Defender ile uç noktalar** - Uç Nokta için Defender, önleyici koruma, ihlal sonrası algılama, otomatik araştırma ve yanıt için birleşik bir uç nokta platformudur.
+- **Defender Güvenlik Açığı Yönetimi ile varlıklar** - Microsoft Defender Güvenlik Açığı Yönetimi, güvenlik ve BT ekiplerinizin kuruluşunuzdaki kritik güvenlik açıklarını ve yanlış yapılandırmaları önceliklendirmesine ve gidermesine yardımcı olmak için sürekli varlık görünürlüğü, akıllı risk tabanlı değerlendirmeler ve yerleşik düzeltme araçları sunar.
 - **Office 365 için Defender ile e-posta ve işbirliği** - Office 365 için Defender kuruluşunuzu e-posta iletileri, bağlantılar (URL' ler) ve işbirliği araçları tarafından ortaya konan kötü amaçlı tehditlere karşı korur.
-- **Kimlik için Defender ve Azure Active Directory (Azure AD) Kimlik Koruması ile kimlikler** - Kimlik için Defender, şirket içi Active Directory Etki Alanı Hizmetleri (AD DS) sinyallerinizi kullanarak gelişmiş tehditleri, güvenliği aşılmış kimlikleri ve kuruluşunuza yönelik kötü amaçlı insider eylemlerini tanımlar, algılar ve araştırır. Azure AD Kimlik Koruması, bulut tabanlı Azure AD'nizdeki kimlik tabanlı riskleri algılamayı ve düzeltmeyi otomatikleştirir.
+- **Kimlik için Defender ve Azure Active Directory (Azure AD) Kimlik Koruması ile** Kimlikler - Kimlik için Defender, şirket içi Active Directory Etki Alanı Hizmetleri (AD DS) sinyallerinizi kullanarak gelişmiş tehditleri, güvenliği aşılmış kimlikleri ve yönlendirilen kötü amaçlı insider eylemlerini tanımlar, algılar ve araştırır öğesini seçin. Azure AD Kimlik Koruması, bulut tabanlı Azure AD kimlik tabanlı risklerin algılanması ve düzeltilmesi için otomatik hale getirir.
 - **Microsoft Defender for Cloud Apps uygulamaları** - Microsoft Defender for Cloud Apps, bulut uygulamalarınıza derin görünürlük, güçlü veri denetimleri ve gelişmiş tehdit koruması getiren kapsamlı bir SaaS çözümüdür.
 
 >[!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4Bzww]
@@ -176,7 +178,7 @@ Ortak denetimler ve içerik aynı yerde görünür veya tek bir veri akışında
 
 :::image type="content" source="../../media/converged-roles-5.png" alt-text="İzinler & rolleri sayfasında görüntülenen Uç noktalar rolleri & grupları" lightbox="../../media/converged-roles-5.png":::
 
-Microsoft 365 Defender erişimi, Azure AD genel rolleri ile veya özel roller kullanılarak yapılandırılır. Uç Nokta için Defender için bkz. [Microsoft 365 Defender portalına kullanıcı erişimi atama](/microsoft-365/security/defender-endpoint/assign-portal-access). Office 365 için Defender için bkz. [Microsoft Purview uyumluluk portalındaki izinler ve Microsoft 365 Defender](../office-365-security/permissions-microsoft-365-compliance-security.md).
+Microsoft 365 Defender erişimi, Azure AD genel rollerle veya özel roller kullanılarak yapılandırılır. Uç Nokta için Defender için bkz. [Microsoft 365 Defender portalına kullanıcı erişimi atama](/microsoft-365/security/defender-endpoint/assign-portal-access). Office 365 için Defender için bkz. [Microsoft Purview uyumluluk portalı ve Microsoft 365 Defender İzinler](../office-365-security/permissions-microsoft-365-compliance-security.md).
 
 - [Microsoft 365 Defender erişimi yönetme](m365d-permissions.md) hakkında daha fazla bilgi edinin
 - [Microsoft 365 Defender'de özel roller oluşturma](custom-roles.md) hakkında daha fazla bilgi edinin
@@ -288,7 +290,7 @@ Microsoft Learn'den gelen bu öğrenme yolu ile Microsoft 365 Defender ve güven
 
 |Eğitim:|Microsoft 365 Defender ile siber saldırıları algılama ve yanıtlama|
 |---|---|
-|![Microsoft 365 Defender eğitim simgesi.](../../media/microsoft-365-defender/m365-defender-secure-organization.svg)|Microsoft 365 Defender gelişmiş siber saldırılara karşı tümleşik koruma sağlamak için uç noktalar, kimlikler, e-postalar ve uygulamalar arasında tehdit sinyallerini birleştirilir. Microsoft 365 Defender, olayları araştırmak ve yanıtlamak ve devam eden kötü amaçlı siber güvenlik etkinliklerini proaktif olarak aramak için merkezi bir deneyimdir.<p> 1 sa 38 dk - Learning Yolu - 5 Modül|
+|![Microsoft 365 Defender eğitim simgesi.](../../media/microsoft-365-defender/m365-defender-secure-organization.svg)|Microsoft 365 Defender gelişmiş siber saldırılara karşı tümleşik koruma sağlamak için uç noktalar, kimlikler, e-postalar ve uygulamalar arasında tehdit sinyallerini birleştirilir. Microsoft 365 Defender, olayları araştırmak ve yanıtlamak ve devam eden kötü amaçlı siber güvenlik etkinliklerini proaktif olarak aramak için merkezi bir deneyimdir.<p> 1 sa 38 dk - Öğrenme Yolu - 5 Modül|
 
 > [!div class="nextstepaction"]
 > [Başlangıç >](/learn/paths/defender-detect-respond/)
