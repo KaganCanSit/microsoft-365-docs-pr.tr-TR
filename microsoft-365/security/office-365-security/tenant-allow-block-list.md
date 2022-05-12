@@ -17,12 +17,12 @@ ms.custom: ''
 description: Yöneticiler, Güvenlik portalındaki Kiracı İzin Ver/Engelle Listesi'nde izin ve blokları yönetmeyi öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 64b9c044a463e940b0d9862221ca854fe0eebfdc
-ms.sourcegitcommit: 4d6a8e9d69a421d6c293b2485a8aa5e806b71616
+ms.openlocfilehash: 6e112b6b386e0a2961119478aae7d4cb53138ccf
+ms.sourcegitcommit: 570c3be37b6ab1d59a4988f7de9c9fb5ca38028f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65182660"
+ms.lasthandoff: 05/12/2022
+ms.locfileid: "65363324"
 ---
 # <a name="manage-the-tenant-allowblock-list"></a>Kiracı İzin Verilenler/Engellenenler Listesini Yönetme
 
@@ -248,7 +248,7 @@ Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [Get-TenantAllowBlock
 
 - Aşağıdaki senaryolarda joker karakterlere (*) izin verilir:
 
-  - Alt etki alanı belirtmek için sol joker karakterden sonra nokta gelmelidir.
+  - Alt etki alanı belirtmek için sol joker karakterden sonra nokta gelmelidir. (yalnızca bloklar için geçerlidir)
 
     Örneğin, `*.contoso.com` izin verilir; `*contoso.com` izin verilmez.
 
@@ -265,8 +265,6 @@ Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [Get-TenantAllowBlock
   - Sol tilde bir etki alanı ve tüm alt etki alanları anlamına gelir.
 
     Örneğin `~contoso.com` ve `*.contoso.com`içerir`contoso.com`.
-
-- URL girişleri tüm protokoller için geçerli olduğundan, protokoller içeren URL girişleri (örneğin, `http://`, `https://`veya `ftp://`) başarısız olur.
 
 - Kullanıcı adı veya parola desteklenmez veya gerekli değildir.
 
@@ -285,7 +283,6 @@ Geçerli URL girişleri ve sonuçları aşağıdaki bölümlerde açıklanmışt
 - **Eşleşmeye izin ver**: contoso.com
 
 - **Eşleşmemiş izin ver**:
-
   - abc-contoso.com
   - contoso.com/a
   - payroll.contoso.com
@@ -295,7 +292,6 @@ Geçerli URL girişleri ve sonuçları aşağıdaki bölümlerde açıklanmışt
   - www.contoso.com/q=a@contoso.com
 
 - **Blok eşleşmesi**:
-
   - contoso.com
   - contoso.com/a
   - payroll.contoso.com
@@ -308,15 +304,16 @@ Geçerli URL girişleri ve sonuçları aşağıdaki bölümlerde açıklanmışt
 
 #### <a name="scenario-left-wildcard-subdomain"></a>Senaryo: Sol joker karakter (alt etki alanı)
 
+> [!NOTE]
+> Bu senaryo yalnızca bloklar için geçerlidir.
+
 **Giriş**: `*.contoso.com`
 
-- **Eşleşmeye izin ver** ve **Eşleşmeyi engelle**:
-
+- **Blok eşleşmesi**:
   - www.contoso.com
   - xyz.abc.contoso.com
 
-- **Eşleşmedi** ve **Engelle eşleşmedi**:
-
+- **Blok eşleşmiyor**:
   - 123contoso.com
   - contoso.com
   - test.com/contoso.com
@@ -327,13 +324,11 @@ Geçerli URL girişleri ve sonuçları aşağıdaki bölümlerde açıklanmışt
 **Giriş**: `contoso.com/a/*`
 
 - **Eşleşmeye izin ver** ve **Eşleşmeyi engelle**:
-
   - contoso.com/a/b
   - contoso.com/a/b/c
   - contoso.com/a/?q=joe@t.com
 
 - **Eşleşmedi** ve **Engelle eşleşmedi**:
-
   - contoso.com
   - contoso.com/a
   - www.contoso.com
@@ -344,13 +339,11 @@ Geçerli URL girişleri ve sonuçları aşağıdaki bölümlerde açıklanmışt
 **Giriş**: `~contoso.com`
 
 - **Eşleşmeye izin ver** ve **Eşleşmeyi engelle**:
-
   - contoso.com
   - www.contoso.com
   - xyz.abc.contoso.com
 
 - **Eşleşmedi** ve **Engelle eşleşmedi**:
-
   - 123contoso.com
   - contoso.com/abc
   - www.contoso.com/abc
@@ -360,7 +353,6 @@ Geçerli URL girişleri ve sonuçları aşağıdaki bölümlerde açıklanmışt
 **Giriş**: `contoso.com/*`
 
 - **Eşleşmeye izin ver** ve **Eşleşmeyi engelle**:
-
   - contoso.com/?q=whatever@fabrikam.com
   - contoso.com/a
   - contoso.com/a/b/c
@@ -373,17 +365,19 @@ Geçerli URL girişleri ve sonuçları aşağıdaki bölümlerde açıklanmışt
 
 #### <a name="scenario-left-wildcard-subdomain-and-right-wildcard-suffix"></a>Senaryo: Sol joker karakter alt etki alanı ve sağ joker karakter soneki
 
+> [!NOTE]
+> Bu senaryo yalnızca bloklar için geçerlidir.
+
 **Giriş**: `*.contoso.com/*`
 
-- **Eşleşmeye izin ver** ve **Eşleşmeyi engelle**:
-
+- **Blok eşleşmesi**:
   - abc.contoso.com/ab
   - abc.xyz.contoso.com/a/b/c
   - www.contoso.com/a
   - www.contoso.com/b/a/c
   - xyz.contoso.com/ba
 
-- **Eşleşmedi** ve **Engelle eşleşmedi**: contoso.com/b
+- **Blok eşleşmiyor**: contoso.com/b
 
 #### <a name="scenario-left-and-right-tilde"></a>Senaryo: Sol ve sağ tilde
 

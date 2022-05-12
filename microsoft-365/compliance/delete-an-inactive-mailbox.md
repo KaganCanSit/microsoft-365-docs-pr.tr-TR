@@ -17,44 +17,46 @@ search.appverid:
 ms.assetid: f5caf497-5e8d-4b7a-bfff-d02942f38150
 ms.custom:
 - seo-marvel-apr2020
-description: Etkin olmayan posta kutusunun içeriğini artık korumanız Microsoft 365, etkin olmayan posta kutusunu kalıcı olarak silebilirsiniz.
-ms.openlocfilehash: 71223c0b5f53e03d51797e32f249f24146e96dee
-ms.sourcegitcommit: 400ef9ac34247978e3de7ecc0b376c4abb6c99d8
+description: Artık etkin olmayan Microsoft 365 posta kutusunun içeriğini korumanız gerekmediğinde, etkin olmayan posta kutusunu kalıcı olarak silebilirsiniz.
+ms.openlocfilehash: 1e518bda3d11ff17c4ce5aa1ebb6997f8bc09c4d
+ms.sourcegitcommit: 570c3be37b6ab1d59a4988f7de9c9fb5ca38028f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "63009984"
+ms.lasthandoff: 05/12/2022
+ms.locfileid: "65363143"
 ---
 # <a name="delete-an-inactive-mailbox"></a>Etkin olmayan posta kutusunu silme
 
-Etkin olmayan posta kutusu, kuruluşdan ayrıldıktan sonra eski çalışanın e-postasını korumak için kullanılır. Artık etkin olmayan bir posta kutusunun içeriğini korumanız gerekmeyecektir, tutmayı kaldırarak etkin olmayan posta kutusunu kalıcı olarak silebilirsiniz. Aynı zamanda, etkin olmayan bir posta kutusuna birden çok 100 000 000 100 2013 yerleştirilebilirsiniz. Örneğin, etkin olmayan bir posta kutusu Mahkeme Tutma'ya ve bir veya birden çok Mahkeme 1 Veya Daha Fazla In-Place olabilir. Buna ek olarak, etkin olmayan posta kutusuna bir bekletme ilkesi (Office 365 veya Microsoft 365' güvenlik ve uyumluluk merkezinde oluşturulmuş olabilir). Etkin olmayan bir posta kutusunu silmek için, tüm bekletme ve bekletme ilkelerini kaldırmanız gerekir. Bekletme ve bekletme ilkelerini kaldırdikten sonra, etkin olmayan posta kutusu silinmek üzere işaretlenir ve işlendikten sonra kalıcı olarak silinir.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Etkin olmayan posta kutusu, kuruluşunuzdan ayrılan eski bir çalışanın e-postasını korumak için kullanılır. Artık etkin olmayan posta kutusunun içeriğini korumanız gerekmediğinde, saklamayı kaldırarak etkin olmayan posta kutusunu kalıcı olarak silebilirsiniz. Ayrıca, etkin olmayan bir posta kutusuna birden çok ayrı tutma yerleştirilebilir. Örneğin, etkin olmayan bir posta kutusu Dava Tutma'ya ve bir veya daha fazla In-Place Ayrı Tutma'ya yerleştirilebilir. Ayrıca, etkin olmayan posta kutusuna Microsoft 365 saklama uygulanabilir. Silmek için etkin olmayan bir posta kutusundan tüm saklama ve saklama ilkelerini kaldırmanız gerekir. Saklama ve saklama ilkelerini kaldırdıktan sonra, etkin olmayan posta kutusu silinmek üzere işaretlenir ve işlendikten sonra kalıcı olarak silinir.
   
 > [!IMPORTANT]
-> Posta kutusu içeriğinin korunması için farklı yollar çalışmaya devam ettiyseniz In-Place, Exchange yönetim merkezinde Esnas'ın Esnad'ın da Exchange bulunmaktadır. Bu, etkin olmayan bir posta kutusu oluşturmak için Mahkeme Bekletmeleri ve bekletme ilkelerini kullanabileceğiniz anlamına gelir. 1 Temmuz 2020'den başlayarak, aynı In-Place 12 Exchange Online. Ancak etkin olmayan bir posta kutusuna yerleştirilen bir posta kutusunun In-Place tutma süresini değiştirebilirsiniz. Ancak, 1 Ekim 2020'den başlayarak, uzma süresini değiştiremezsiniz. Etkin olmayan posta kutusunu silmek için Yalnızca Etkin Değil olarak Tutma'ya In-Place gerekir. Tutmada olan ve etkin olmayan In-Place, tutma kaldırılana kadar korunur. Eski eBulma araçlarının eski In-Place [hakkında daha fazla bilgi için bkz. Eski eKbulma araçlarının emeklilik](legacy-ediscovery-retirement.md).
+> Posta kutusu içeriğini korumak için farklı yöntemlerle yatırım yapmaya devam ettikçe, Exchange yönetim merkezinde In-Place Tutmaların kullanımdan kaldırılıp kaldırılamını duyuruyoruz. Bu, etkin olmayan bir posta kutusu oluşturmak için Dava Tutmaları ve bekletme ilkelerini kullanmanız gerektiği anlamına gelir. 1 Temmuz 2020'den itibaren Exchange Online'da yeni In-Place Tutmaları oluşturamayacaksınız. Ancak, etkin olmayan bir posta kutusuna yerleştirilen In-Place Ayrı Tutmanın bekleme süresini de değiştirebilirsiniz. Ancak 1 Ekim 2020'den itibaren saklama süresini değiştiremezsiniz. Etkin olmayan bir posta kutusunu yalnızca In-Place Ayrı Tut'unu kaldırarak silebilirsiniz. In-Place Ayrı Tutma'da bulunan etkin olmayan posta kutuları, ayrı tutma kaldırılana kadar korunur. In-Place Tutmaların kullanımdan kaldırılması hakkında daha fazla bilgi için bkz. [Eski eKeşif araçlarının kullanımdan kaldırılması](legacy-ediscovery-retirement.md).
   
-Etkin olmayan [bir posta](#more-information) kutusundan 1.000.000 ABD posta kutusu kaldırıldıktan sonra neler olduğunu açıklama için Daha fazla bilgi bölümüne bakın.
+Etkin olmayan posta kutusundan ayrı tutmalar kaldırıldıktan sonra ne olacağının açıklaması için [Daha fazla bilgi](#more-information) bölümüne bakın.
   
-## <a name="before-you-delete-an-inactive-mailbox"></a>Etkin olmayan posta kutusunu smeden önce
+## <a name="before-you-delete-an-inactive-mailbox"></a>Etkin olmayan posta kutusunu silmeden önce
 
-- Etkin olmayan bir posta Exchange Online Mahkeme Tutma'ya kaldırmak için PowerShell'i kullanabilirsiniz. Exchange yönetim merkezini (EAC) kullanasınız. Adım adım yönergeler için bkz. [PowerShell'Bağlan Exchange Online kullanma](/powershell/exchange/connect-to-exchange-online-powershell).
+- Exchange Online PowerShell kullanarak etkin olmayan bir posta kutusundan Bir Dava Tutma özelliğini kaldırmanız gerekir. Exchange yönetim merkezini (EAC) kullanamazsınız. Adım adım yönergeler için bkz. [PowerShell'i Exchange Online için Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
 
-- Etkin olmayan posta kutusunun içeriğini, tutmayı kaldırmadan ve etkin olmayan posta kutusunu smeden önce başka bir posta kutusuna kopyaabilirsiniz. Ayrıntılar için bkz. [Etkin olmayan posta kutusunu Şu posta kutusunda Office 365](restore-an-inactive-mailbox.md).
+- Etkin olmayan bir posta kutusunun içeriğini başka bir posta kutusuna kopyalayarak saklamayı kaldırabilir ve etkin olmayan bir posta kutusunu silebilirsiniz. Ayrıntılar için bkz. [Office 365'da etkin olmayan posta kutusunu geri yükleme](restore-an-inactive-mailbox.md).
 
-- Etkin olmayan bir posta kutusundan bekletme veya bekletme ilkesi kaldırırsanız ve posta kutusunun geçici olarak silinen posta kutusu bekletme süresi dolsa bile, 183 günlük geçici silinmiş posta kutusu bekletme süresi sona erdikten sonra posta kutusu kalıcı olarak silinir. Yumuşak silinmiş posta kutusu bekletme süresi hakkında daha fazla bilgi için, bu [makalenin Daha fazla](#more-information) bilgi bölümüne bakın. Etkin olmayan posta kutusu kalıcı olarak silindikten sonra, kurtarılamaz. Tutmayı kaldırmadan önce, posta kutusunun içeriğine artık ihtiyacınız kalmay olduğundan emin olun. Etkin olmayan bir posta kutusunu yeniden etkinleştirmek için, posta kutusunu kurtarabilirsiniz. Ayrıntılar için bkz. [Etkin olmayan posta kutusunu posta kutusunda Office 365](recover-an-inactive-mailbox.md).
+- Etkin olmayan bir posta kutusundan saklama veya saklama ilkesini kaldırırsanız ve posta kutusunun geçici olarak silinen posta kutusu saklama süresi dolduysa, 183 günlük geçici olarak silinen posta kutusu saklama süresi dolduktan sonra posta kutusu kalıcı olarak silinir. Geçici olarak silinen posta kutusu saklama süresi hakkında daha fazla bilgi için bu makalenin [Daha fazla bilgi](#more-information) bölümüne bakın. Etkin olmayan posta kutusu kalıcı olarak silindikten sonra kurtarılamaz. Ayrı tutmayı kaldırmadan önce, posta kutusunda artık içeriğine ihtiyacınız olmadığından emin olun. Etkin olmayan bir posta kutusunu yeniden etkinleştirmek istiyorsanız, posta kutusunu kurtarabilirsiniz. Ayrıntılar için bkz. [Office 365'da etkin olmayan posta kutusunu kurtarma](recover-an-inactive-mailbox.md).
 
-- Etkin olmayan posta kutuları hakkında daha fazla bilgi için bkz[. Etkin olmayan posta kutuları hakkında bilgi.](inactive-mailboxes-in-office-365.md)
+- Etkin olmayan posta kutuları hakkında daha fazla bilgi için bkz. [Etkin olmayan posta kutuları hakkında bilgi edinin](inactive-mailboxes-in-office-365.md).
 
-## <a name="step-1-identify-the-holds-on-an-inactive-mailbox"></a>1. Adım: Etkin olmayan bir posta kutusunda 1. Adım: Etkin olmayan posta kutusunda 1.
+## <a name="step-1-identify-the-holds-on-an-inactive-mailbox"></a>1. Adım: Etkin olmayan posta kutusunda ayrı tutmaları belirleme
 
-Daha önce de belirtildiği gibi, etkin olmayan bir In-Place posta kutusuna Mahkeme Tutma, Bekletme veya bekletme ilkesi yer alan bir ilke olabilir. İlk adım, etkin olmayan bir posta kutusunda 1.
+Daha önce belirtildiği gibi, etkin olmayan bir posta kutusuna Bir Dava Tutma, In-Place Saklama veya saklama ilkesi yerleştirilebilir. İlk adım, etkin olmayan bir posta kutusunda tutmaları belirlemektir.
   
-Aşağıdaki komutu çalıştırarak, kurumda etkin olmayan tüm posta kutularının hold bilgilerini görüntülemeniz gerekir.
+Kuruluşunuzdaki tüm etkin olmayan posta kutularının saklama bilgilerini görüntülemek için aşağıdaki komutu çalıştırın.
   
 ```powershell
 Get-Mailbox -InactiveMailboxOnly | FL DisplayName,Name,IsInactiveMailbox,LitigationHoldEnabled,InPlaceHolds
 ```
 
-**LitigationHoldEnabled** özelliği için **True** değeri, etkin olmayan posta kutusunun Mahkeme Tutmada olduğunu gösterir. Etkin In-Place olmayan bir posta kutusuna Yer Tutucu yerleştirilse, tutma GUID değeri **InPlaceHolds özelliğinin değeri olarak** görüntülenir. Örneğin, etkin olmayan iki posta kutusu için aşağıdaki sonuçlar, Ann Beebe'de Mahkeme Tutma ve Pilar Pinilla'ya In-Place bekletme ilkesi olduğunu gösterir.
+**LitigationHoldEnabled** özelliği için **True** değeri, etkin olmayan posta kutusunun Dava Tutma'da olduğunu gösterir. Etkin olmayan bir posta kutusuna bir In-Place Ayrı Tutma yerleştirilirse, bekletmenin GUID değeri **InPlaceHolds** özelliğinin değeri olarak görüntülenir. Örneğin, etkin olmayan iki posta kutusu için aşağıdaki sonuçlar, Ann Beebe'ye bir Dava Tutma'nın yerleştirildiğini ve Pilar Pinilla'ya bir In-Place Saklama ve saklama ilkesi yerleştirildiğini gösterir.
   
 ```text
 DisplayName           : Ann Beebe
@@ -71,42 +73,42 @@ InPlaceHolds          : {c0ba3ce811b6432a8751430937152491, mbxba6f4ba25b62490aaa
 ```
 
 > [!TIP]
-> Çok fazla In-Place Bekletme veya bekletme ilkeleri etkin olmayan bir posta kutusuna yerleştirilirse, GUID Bekletme In-Place tutma ilkelerinin hepsi görüntülenmez. InPlaceHolds özelliğinde tüm GUID'leri görüntülemek için aşağıdaki komutu çalıştırabilirsiniz:  `Get-Mailbox -InactiveMailboxOnly -Identity <identity of inactive mailbox> | Select-Object -ExpandProperty InPlaceHolds`
+> Çok fazla In-Place Tutma veya saklama ilkesi etkin olmayan bir posta kutusuna yerleştirilirse, In-Place Tutma GUID'lerinin tümü görüntülenmez. InPlaceHolds özelliğindeki tüm GUID'leri görüntülemek için aşağıdaki komutu çalıştırabilirsiniz:  `Get-Mailbox -InactiveMailboxOnly -Identity <identity of inactive mailbox> | Select-Object -ExpandProperty InPlaceHolds`
   
-Tutmaları tanımlama hakkında daha fazla bilgi için bkz [. Posta kutusuna yerleştirilen tutma türünü belirleme](identify-a-hold-on-an-exchange-online-mailbox.md).
+Ayrı tutmaları tanımlama hakkında daha fazla bilgi için bkz. [Posta kutusuna yerleştirilen saklama türünü tanımlama](identify-a-hold-on-an-exchange-online-mailbox.md).
 
-## <a name="step-2-remove-a-hold-from-an-inactive-mailbox"></a>2. Adım: Etkin olmayan posta kutusundan  tutmayı kaldırma
+## <a name="step-2-remove-a-hold-from-an-inactive-mailbox"></a>2. Adım: Etkin olmayan posta kutusundan ayrı tutmayı kaldırma
 
-Etkin olmayan posta kutusuna ne tür bir hold (ve birden çok 10 0 veya birden çok 100 01/16/ varsa) yerleştirildikten sonra, bir sonraki adım posta kutusunda 1. Daha önce de belirtildiği gibi, etkin olmayan bir posta kutusunu kalıcı olarak silmek için tüm 10.
+Etkin olmayan posta kutusuna hangi tür ayrı tutmanın yerleştirildiğini (ve birden çok ayrı tutma olup olmadığını) belirledikten sonra, bir sonraki adım posta kutusu üzerindeki ayrı tutmaları kaldırmaktır. Daha önce belirtildiği gibi, etkin olmayan posta kutusunu kalıcı olarak silmek için tüm ayrı tutmaları kaldırmanız gerekir.
   
-### <a name="remove-a-litigation-hold"></a>Mahkeme Tutma kaldırma
+### <a name="remove-a-litigation-hold"></a>Dava Ayrı Tutmasını Kaldırma
 
-Daha önce de belirtildiği gibi, etkin Windows PowerShell posta kutusundan Mahkeme Windows PowerShell'ı kaldırmanız gerekir. EAC'i kullanaasiniz. Mahkeme Tutma'ı kaldırmak için aşağıdaki komutu çalıştırın.
+Daha önce belirtildiği gibi, etkin olmayan bir posta kutusundan Dava Tutma'yı kaldırmak için Windows PowerShell kullanmanız gerekir. EAC'yi kullanamazsınız. Bir Dava Tutmasını kaldırmak için aşağıdaki komutu çalıştırın.
   
 ```powershell
 Set-Mailbox -InactiveMailbox -Identity <identity of inactive mailbox> -LitigationHoldEnabled $false
 ```
 
 > [!TIP]
-> Etkin olmayan posta kutusunu belirlemenin en iyi yolu, Ayırt Edici Adını veya GUID değerini Exchange kullanmaktır. Bu değerlerden birini kullanmak, yanlışlıkla yanlış posta kutusunu belirtmeyi önlemeye yardımcı olur. 
+> Etkin olmayan posta kutusunu tanımlamanın en iyi yolu, Ayırt Edici Adı veya Exchange GUID değerini kullanmaktır. Bu değerlerden birinin kullanılması yanlışlıkla yanlış posta kutusunun belirtilmesini önlemeye yardımcı olur. 
   
-### <a name="remove-an-inactive-mailbox-from-a-retention-policy"></a>Etkin olmayan posta kutusunu bekletme ilkesinden kaldırma
+### <a name="remove-an-inactive-mailbox-from-a-retention-policy"></a>Bekletme ilkesinden etkin olmayan posta kutusunu kaldırma
 
-Etkin olmayan posta kutusunu bekletme ilkesinden kaldırma yordamı Microsoft 365 posta kutusuna atanan bekletme ilkesi kuruluş genelinde mi yoksa açık mı olduğuna bağlıdır. etkin olmayan posta kutusuna atanan bekletme ilkesi türünü seçin.
+Etkin olmayan posta kutusunu Microsoft 365 bekletme ilkesinden kaldırma yordamı, etkin olmayan posta kutusuna atanan bekletme ilkesinin kuruluş genelinde mi yoksa açık mı olduğuna bağlıdır. etkin olmayan posta kutusuna atanan bekletme ilkesi türüne göre.
 
-- Kuruluş genelinde, kuruluş genelinde tüm posta kutularına atanmış bekletme ilkeleri. Kuruluş **genelindeki bekletme ilkeleri hakkında** bilgi almak için Exchange Online PowerShell'de Get-OrganizationConfig cmdlet'ini kullanın.
+- Kuruluştaki tüm posta kutularına atanan kuruluş genelinde saklama ilkeleri. Kuruluş genelinde saklama ilkeleri hakkında bilgi almak için Exchange Online PowerShell'de **Get-OrganizationConfig** cmdlet'ini kullanın.
 
-- Belirli posta kutularına atanmış belirli konum bekletme ilkeleri. Bunlar, belirli kullanıcıların içerik konumlara atanan ilkelerdir. Belirli etkin olmayan posta kutularına atanmış bekletme ilkeleri hakkında bilgi almak için, Exchange Online PowerShell'de **Get-Mailbox -IncludeInactiveMailbox** cmdlet'ini kullanın.
+- Belirli posta kutularına atanan belirli konum saklama ilkeleri. Bunlar, belirli kullanıcıların içerik konumlarına atanan ilkelerdir. Belirli etkin olmayan posta kutularına atanan bekletme ilkeleri hakkında bilgi almak için Exchange Online PowerShell'de **Get-Mailbox -IncludeInactiveMailbox** cmdlet'ini kullanın.
 
-#### <a name="remove-an-inactive-mailbox-from-an-organization-wide-retention-policy"></a>Kuruluş genelindeki bir bekletme ilkesinden etkin olmayan posta kutusunu kaldırma
+#### <a name="remove-an-inactive-mailbox-from-an-organization-wide-retention-policy"></a>Kuruluş genelinde saklama ilkesinden etkin olmayan posta kutusunu kaldırma
 
-Kuruluş genelindeki bir bekletme Exchange Online dışında tutmak için PowerShell'de aşağıdaki komutu çalıştırın.
+Exchange Online PowerShell'de aşağıdaki komutu çalıştırarak etkin olmayan bir posta kutusunu kuruluş genelinde saklama ilkesinden hariç tutun.
 
 ```powershell
 Set-Mailbox <identity of inactive mailbox> -ExcludeFromOrgHolds <retention policy GUID without prefix or suffix>
 ```
 
-Etkin olmayan bir posta kutusuna uygulanan kuruluş genelinde bekletme ilkelerini tanımlama ve bekletme ilkesi IÇIN GUID alma hakkında daha fazla bilgi için Posta kutusuna yerleştirilen saklama türünü belirleme bölümündeki "Get-OrganizationConfig" bölümüne [bakın](identify-a-hold-on-an-exchange-online-mailbox.md#get-organizationconfig).
+Etkin olmayan bir posta kutusuna uygulanan kuruluş genelinde bekletme ilkelerini tanımlama ve bekletme ilkesinin GUID değerini alma hakkında daha fazla bilgi için, Posta kutusuna [yerleştirilen saklama türünü belirleme](identify-a-hold-on-an-exchange-online-mailbox.md#get-organizationconfig) bölümündeki "Get-OrganizationConfig" bölümüne bakın.
 
 Alternatif olarak, etkin olmayan posta kutusunu kuruluş genelindeki tüm ilkelerden kaldırmak için aşağıdaki komutu çalıştırabilirsiniz:
 
@@ -114,67 +116,67 @@ Alternatif olarak, etkin olmayan posta kutusunu kuruluş genelindeki tüm ilkele
 Set-Mailbox <identity of inactive mailbox> -ExcludeFromAllOrgHolds
 ```
 
-#### <a name="remove-an-inactive-mailbox-from-a-specific-location-retention-policy"></a>Etkin olmayan posta kutusunu belirli bir konum bekletme ilkesinden kaldırma
+#### <a name="remove-an-inactive-mailbox-from-a-specific-location-retention-policy"></a>Etkin olmayan posta kutusunu belirli bir konum saklama ilkesinden kaldırma
 
-Etkin olmayan posta kutusunu [açık bir bekletme & kaldırmak](/powershell/exchange/connect-to-scc-powershell) için Güvenlik ve Uyumluluk Merkezi PowerShell'de aşağıdaki komutu çalıştırın.
+Etkin olmayan posta kutusunu açık bir bekletme ilkesinden kaldırmak için [Güvenlik & Uyumluluk Merkezi PowerShell'de](/powershell/exchange/connect-to-scc-powershell) aşağıdaki komutu çalıştırın.
 
 ```powershell
-Set-RetentionCompliancePolicy -Identity <retention policy GUID without prefix or suffix> -AddExchangeLocationException <identity of inactive mailbox>
+Set-RetentionCompliancePolicy -Identity <retention policy GUID without prefix or suffix> -RemoveExchangeLocation <identity of inactive mailbox>
 ```
 
-Etkin olmayan bir posta kutusuna uygulanan belirli konum bekletme ilkelerini tanımlama ve bekletme ilkesi IÇIN GUID alma hakkında daha fazla bilgi için, Posta kutusuna yerleştirilen saklama türünü belirleme bölümündeki "Posta Kutusunu Al" bölümüne [bakın](identify-a-hold-on-an-exchange-online-mailbox.md#get-mailbox).
+Etkin olmayan bir posta kutusuna uygulanan belirli konum saklama ilkelerini tanımlama ve bekletme ilkesi için GUID alma hakkında daha fazla bilgi için, Posta kutusuna [yerleştirilmiş saklama türünü belirleme](identify-a-hold-on-an-exchange-online-mailbox.md#get-mailbox) bölümündeki "Get-Mailbox" bölümüne bakın.
 
-### <a name="remove-in-place-holds"></a>Geçerli In-Place kaldırma
+### <a name="remove-in-place-holds"></a>In-Place Ayrı Tutmalarını Kaldır
 
- Etkin olmayan posta kutusundan bir In-Place kaldırmanın iki yolu vardır:
+ Etkin olmayan bir posta kutusundan In-Place Ayrı Tutmayı kaldırmanın iki yolu vardır:
   
-- **Seçili In-Place silme**. Kalıcı olarak silmek istediğiniz etkin olmayan posta kutusu, Geçici Tutma için tek kaynak posta In-Place ise, Yalnızca Tutma In-Place silebilirsiniz. 
+- **In-Place Tutma nesnesini silin**. Kalıcı olarak silmek istediğiniz etkin olmayan posta kutusu bir In-Place Ayrı Tutma için tek kaynak posta kutusuysa, In-Place Ayrı Tutma nesnesini silebilirsiniz. 
 
     > [!NOTE]
-    > Önceden basılı tutma nesnesini silemezsiniz ve In-Place devre dışı bırakabilirsiniz. Tutmanın etkin olduğu In-Place Bir Tutma nesnesini silmeyi denersanız, bir hata iletisi alırsınız. 
+    > bir In-Place Ayrı Tutma nesnesini silmeden önce ayrı tutmayı devre dışı bırakmanız gerekir. Ayrı tutma etkin olan bir In-Place Ayrı Tutma nesnesini silmeye çalışırsanız bir hata iletisi alırsınız. 
   
-- **Etkin olmayan posta kutusunu, Etkin Tutma'nın kaynak posta In-Place kaldırın**. Bir ay süreyle diğer kaynak posta kutularını In-Place, etkin olmayan posta kutusunu kaynak posta kutuları listesinden kaldırabilir ve Etkin Değil In-Place tutabilirsiniz.
+- **Etkin olmayan posta kutusunu bir In-Place Ayrı Tutma'nın kaynak posta kutusu olarak kaldırın**. In-Place Ayrı Tutma için diğer kaynak posta kutularını korumak istiyorsanız, etkin olmayan posta kutusunu kaynak posta kutuları listesinden kaldırabilir ve In-Place Ayrı Tutma nesnesini tutabilirsiniz.
 
-#### <a name="delete-an-in-place-hold"></a>Silme veya In-Place silme
+#### <a name="delete-an-in-place-hold"></a>In-Place Ayrı Tutma'sını silme
 
-1. Silmek istediğiniz  Tutma In-Place özelliklerini içeren bir değişken oluşturun. 1. In-Place: Etkin olmayan bir posta kutusunda 1. Adım: 1. Adım [:](#step-1-identify-the-holds-on-an-inactive-mailbox) Etkin olmayan posta kutusunda 1.
+1. Silmek istediğiniz In-Place Ayrı Tutma özelliklerini içeren bir değişken oluşturun. [1. Adım: Etkin olmayan posta kutusunda tutmaları tanımlama](#step-1-identify-the-holds-on-an-inactive-mailbox) bölümünde elde ettiğiniz In-Place Tutma GUID'sini kullanın.
 
    ```powershell
    $InPlaceHold = Get-MailboxSearch -InPlaceHoldIdentity <In-Place Hold GUID>
    ```
 
-2. Aynı Tutma sırasında tutma özelliğini In-Place.
+2. In-Place Ayrı Tutma'da bekletmeyi devre dışı bırakın.
 
    ```powershell
    Set-MailboxSearch $InPlaceHold.Name -InPlaceHoldEnabled $false
    ```
 
-3. Onay In-Place silin.
+3. In-Place Ayrı Tutmayı silin.
 
    ```powershell
    Remove-MailboxSearch $InPlaceHold.Name
    ```
 
-#### <a name="remove-an-inactive-mailbox-from-an-in-place-hold"></a>Etkin olmayan posta kutusunu 12 gün In-Place kaldırma
+#### <a name="remove-an-inactive-mailbox-from-an-in-place-hold"></a>Etkin olmayan posta kutusunu In-Place Ayrı Tutma'dan kaldırma
 
-Bekleme In-Place çok fazla sayıda kaynak posta kutusu içeriyorsa, etkin olmayan posta kutusunun EAC'nin Kaynaklar sayfasında listelenmiyor olması mümkündür. Kaynaklar sayfasında bir 3.000'e kadar posta kutusu, bir  3.000 posta kutusunu In-Place görüntülenir. Kaynaklar sayfasında etkin olmayan bir posta kutusu listelenmiyorsa,  Exchange Online PowerShell kullanarak posta kutusunu Tutma In-Place kaldırabilirsiniz. 
+In-Place Ayrı Tutma çok sayıda kaynak posta kutusu içeriyorsa, etkin olmayan posta kutusu EAC'nin **Kaynaklar** sayfasında listelenmez. Bir In-Place Ayrı Tutma'yı düzenlediğinizde **Kaynaklar** sayfasında en fazla 3.000 posta kutusu görüntülenir. Etkin olmayan bir posta kutusu **Kaynaklar** sayfasında listelenmiyorsa, Exchange Online PowerShell'i kullanarak In-Place Ayrı Tutma'dan kaldırabilirsiniz. 
   
-1. Etkin olmayan posta kutusuna yerleştirilen  Hold In-Place özelliklerini içeren bir değişken oluşturun. 1. In-Place: Etkin olmayan bir posta kutusunda 1. Adım: 1. Adım [:](#step-1-identify-the-holds-on-an-inactive-mailbox) Etkin olmayan posta kutusunda 1.
+1. Etkin olmayan posta kutusuna yerleştirilen In-Place Ayrı Tutma özelliğini içeren bir değişken oluşturun. [1. Adım: Etkin olmayan posta kutusunda tutmaları tanımlama](#step-1-identify-the-holds-on-an-inactive-mailbox) bölümünde elde ettiğiniz In-Place Tutma GUID'sini kullanın.
 
     ```powershell
     $InPlaceHold = Get-MailboxSearch -InPlaceHoldIdentity <In-Place Hold GUID>
     ```
 
-2. Etkin olmayan posta kutusunun, Etkin Olmayan Posta Kutusu için kaynak posta kutusu olarak liste In-Place doğrulayın. 
+2. Etkin olmayan posta kutusunun In-Place Ayrı Tutma için kaynak posta kutusu olarak listelendiğini doğrulayın. 
 
    ```powershell
    $InPlaceHold.Sources
    ```
 
    > [!NOTE]
-   > Posta *Kutusu* 'In-Place Sources özelliği, kaynak posta kutularını *LegacyExchangeDN özellikleriyle* tanımlar. Bu özellik etkin olmayan posta kutularını benzersiz olarak tanım olduğundan, Hold özelliğinin *Kaynaklar* özelliğini kullanmak yanlış posta In-Place posta kutusunun kaldırılmasını engellemeye yardımcı olur. Bu, iki posta kutusunun aynı diğer adı veya SMTP adresine sahip olduğu sorunları önlemeye de yardımcı olur. 
+   > In-Place Ayrı Tutma özelliğinin *Sources* özelliği, kaynak posta kutularını *LegacyExchangeDN* özelliklerine göre tanımlar. Bu özellik etkin olmayan posta kutularını benzersiz olarak tanımladığından, In-Place Ayrı Tutma'dan *Sources* özelliğinin kullanılması yanlış posta kutusunun kaldırılmasını önlemeye yardımcı olur. Bu, iki posta kutusunun diğer adı veya SMTP adresi aynıysa sorunlardan kaçınmaya da yardımcı olur. 
 
-3. Etkin olmayan posta kutusunu değişkende kaynak posta kutuları listesinden kaldırın. Önceki adımda komut tarafından döndürülen etkin olmayan posta kutusunun **LegacyExchangeDN'ini** kullanmaya dikkat edin. 
+3. Etkin olmayan posta kutusunu değişkendeki kaynak posta kutuları listesinden kaldırın. Önceki adımda komutu tarafından döndürülen etkin olmayan posta kutusunun **LegacyExchangeDN** değerini kullandığınızdan emin olun. 
 
     ```powershell
     $InPlaceHold.Sources.Remove("<LegacyExchangeDN of the inactive mailbox>")
@@ -186,19 +188,19 @@ Bekleme In-Place çok fazla sayıda kaynak posta kutusu içeriyorsa, etkin olmay
     $InPlaceHold.Sources.Remove("/o=contoso/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/ cn=9c8dfff651ec4908950f5df60cbbda06-pilarp")
     ```
 
-4. Etkin olmayan posta kutusunun değişkende kaynak posta kutuları listesinden kaldırılmış olduğunu doğrulayın.
+4. Etkin olmayan posta kutusunun değişkendeki kaynak posta kutuları listesinden kaldırıldığını doğrulayın.
 
    ```powershell
    $InPlaceHold.Sources
    ```
 
-5. Etkin In-Place olmayan kaynak posta kutularının güncelleştirilmiş listesiyle, Yer Tutma'da değişiklik.
+5. Etkin olmayan posta kutusunu içermeyen kaynak posta kutularının güncelleştirilmiş listesiyle In-Place Ayrı Tutma'yı değiştirin.
 
    ```powershell
    Set-MailboxSearch $InPlaceHold.Name -SourceMailboxes $InPlaceHold.Sources
    ```
 
-6. Etkin olmayan posta kutusunun, Etkin Olmayan Posta Kutusu için kaynak posta kutuları listesinden kaldır In-Place doğrulayın.
+6. Etkin olmayan posta kutusunun In-Place Ayrı Tutma için kaynak posta kutuları listesinden kaldırıldığını doğrulayın.
 
    ```powershell
    Get-MailboxSearch $InPlaceHold.Name | FL Sources
@@ -206,13 +208,13 @@ Bekleme In-Place çok fazla sayıda kaynak posta kutusu içeriyorsa, etkin olmay
 
 ## <a name="more-information"></a>Daha fazla bilgi
 
-- **Etkin olmayan posta kutusu, bir tür yumuşak silinmiş posta kutusudur.** Otomatik Exchange Online kutusu, silinmiş olan bir posta kutusudur ve bu posta kutusu silinmiştir, ancak belirli bir bekletme süresi içinde kurtarılabilir. Posta kutusu 30 gün içinde kurtarılabilir ve kalıcı olarak silinmiş olan posta kutuları için kullanılabilir. Etkin olmayan bir posta kutusu (posta kutusu silinmeden önce basılı durumda kalır), tutma kaldırılana kadar yumuşak silinmiş durumda kalır. Etkin olmayan bir posta kutusundan tutma kaldırıldıktan sonra, posta kutusu artık devre dışı durumda olmaz. Bunun yerine yazılım yazılıma göre silinir ve Exchange Online kaldırıldığı günden itibaren 183 gün boyunca orada kalır ve bu süre içinde kurtarılabilir. 183 gün sonra, geçici silinmiş bir posta kutusu kalıcı olarak silinmek üzere işaretlenir ve kurtarılamaz.
+- **Etkin olmayan posta kutusu, geçici olarak silinen bir posta kutusu türüdür.** Exchange Online'de, geçici olarak silinen posta kutusu silinmiş ancak belirli bir saklama süresi içinde kurtarılabilen bir posta kutusudur. Beklemede olmayan geçici olarak silinen posta kutuları için, posta kutusu 30 gün içinde kurtarılabilir. Etkin olmayan bir posta kutusu (silinmeden önce beklemede olan bir posta kutusu), bekletme kaldırılana kadar geçici olarak silinmiş durumda kalır. Etkin olmayan bir posta kutusundan ayrı tutma kaldırıldıktan sonra, posta kutusu artık etkin değil durumda olmaz. Bunun yerine geçici olarak silinir ve saklamanın kaldırıldığı günden itibaren 183 gün boyunca Exchange Online kalır ve bu süre boyunca kurtarılabilir. 183 gün sonra geçici olarak silinen bir posta kutusu kalıcı silme için işaretlenir ve kurtarılamaz.
 
-- **Etkin olmayan bir posta kutusunda  hold'i kaldırdikten sonra ne olur?** Posta kutusu diğer geçici silinmiş posta kutuları gibi kabul edilir ve 183 günlük geçici silinmiş posta kutusu bekletme süresinin sona erdikten sonra kalıcı olarak silinmek üzere işaretlenir. Bu bekletme süresi, etkin olmayan posta kutusundan saklamanın kaldırıldığı tarihte başlar. *InactiveMailboxRetireTime* özelliği, posta kutusu etkin değil durumdan (geçici silinmiş durumdayken) artık etkin olmadığı zaman (tutmadan geçici olarak silindiğinde) ayarlanır. Bu noktada, *InactiveMailboxRetireTime* özelliği geçişin meydana geldiği geçerli tarihe ayarlanır. *InactiveMailboxRetireTime* özellik kümesi olan posta kutularını arayabilecek bir yardımcı çalışır (*MailboxLifeCycle* assistant olarak adlandırılan). "InactiveMailboxRetireTime + 183 gün" geçerli tarihten küçükse, posta kutusunu temizler.
+- **Etkin olmayan bir posta kutusunda bekletmeyi kaldırdıktan sonra ne olur?** Posta kutusu, geçici olarak silinen diğer posta kutuları gibi değerlendirilir ve 183 günlük geçici olarak silinen posta kutusu saklama süresi dolduktan sonra kalıcı silme için işaretlenir. Bu saklama süresi, saklamanın etkin olmayan posta kutusundan kaldırıldığı tarihte başlar. *InactiveMailboxRetireTime* özelliği, posta kutusu etkin olmayan (beklemede geçici olarak silinmiş) olmaktan çıkarak artık etkin olmayan (ayrı tutma olmadan geçici olarak silinen) durumuna geçtiğinde ayarlanır. Bu noktada *, InactiveMailboxRetireTime* özelliği geçişin gerçekleştiği geçerli tarihe ayarlanır. *InactiveMailboxRetireTime* özelliği ayarlanmış posta kutularını arayan çalışan (*MailboxLifeCycle* yardımcısı olarak adlandırılır) bir yardımcı vardır. "InactiveMailboxRetireTime + 183 gün" geçerli tarihten küçükse, posta kutusunu temizler.
 
-- **Etkin olmayan posta kutusu, tutma kaldırıldıktan hemen sonra kalıcı olarak silinir mi?** Önceden etkin olmayan bir posta kutusu 183 gün süreyle yumuşak silinmiş durumda kullanılabilir durumda olur. 183 gün sonra, posta kutusu kalıcı olarak silinmek üzere işaretlenir.
+- **Etkin olmayan bir posta kutusu saklama kaldırıldıktan hemen sonra kalıcı olarak silinir mi?** Önceden etkin olmayan bir posta kutusu 183 gün boyunca geçici olarak silinmiş durumda kullanılabilir. 183 gün sonra posta kutusu kalıcı silme için işaretlenir.
 
-- **Tutma kaldırıldıktan sonra etkin olmayan posta kutusu hakkında bilgileri nasıl görüntülersiniz?** Tutma kaldırıldıktan ve etkin olmayan posta kutusu artık silinmiş bir posta kutusuna geri döndürüldikten sonra, **Get-Mailbox** cmdlet'iyle *InactiveMailboxOnly* parametresi kullanılarak döndürülemez. Ancak, **Get-Mailbox -SoftDeletedMailbox komutunu kullanarak posta kutusuyla ilgili bilgileri görüntüebilirsiniz** . Örneğin:
+- **Ayrı tutma kaldırıldıktan sonra etkin olmayan posta kutusu hakkındaki bilgileri nasıl görüntülersiniz?** Bekletme kaldırıldıktan ve etkin olmayan posta kutusu geçici olarak silinen bir posta kutusuna geri döndürüldükten sonra, **Get-Mailbox** *cmdlet'i ile InactiveMailboxOnly* parametresi kullanılarak döndürülemez. Ancak **, Get-Mailbox -SoftDeletedMailbox** komutunu kullanarak posta kutusu hakkındaki bilgileri görüntüleyebilirsiniz. Örneğin:
 
   ```text
   Get-Mailbox -SoftDeletedMailbox -Identity pilarp | FL Name,Identity,LitigationHoldEnabled,In
@@ -227,4 +229,4 @@ Bekleme In-Place çok fazla sayıda kaynak posta kutusu içeriyorsa, etkin olmay
   InactiveMailboxRetireTime : 9/30/2020 11:16:23 PM
   ```
 
-  Yukarıdaki örnekte, *WhenSoftDeleted* özelliği otomatik olarak silinen tarihi tanımlar ve bu örnekte bu tarih 16 Haziran 2020'dir. *WasInactiveMailbox özelliği* daha önce etkin olmayan `True` bir posta kutusu olduğu için listelenir. Posta kutusu, 30 Eylül 2020'den 183 gün sonra kalıcı olarak silinecek.
+  Yukarıdaki örnekte *WhenSoftDeleted* özelliği geçici silme tarihini tanımlar ve bu örnekte 16 Haziran 2020'dir. *WasInactiveMailbox* özelliği, daha önce etkin olmayan bir posta kutusu olduğundan olarak `True` listelenir. Posta kutusu 30 Eylül 2020 tarihinden 183 gün sonra kalıcı olarak silinir.

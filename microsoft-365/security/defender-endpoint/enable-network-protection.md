@@ -15,19 +15,19 @@ manager: dansimp
 ms.technology: mde
 ms.collection: m365-security-compliance
 ms.date: ''
-ms.openlocfilehash: d37723e45c5c4049e913422b2500b74d36c701eb
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: e53cda0ac61bdc546e972d663bf0063b02b21ad3
+ms.sourcegitcommit: 570c3be37b6ab1d59a4988f7de9c9fb5ca38028f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64789722"
+ms.lasthandoff: 05/12/2022
+ms.locfileid: "65363280"
 ---
 # <a name="turn-on-network-protection"></a>Ağ korumasını açın
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Şunlar için geçerlidir:**
-- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 - Microsoft Defender Virüsten Koruma
@@ -38,7 +38,7 @@ ms.locfileid: "64789722"
 > [!TIP]
 > Uç Nokta için Defender'ı deneyimlemek mi istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
 
-[Ağ koruması](network-protection.md) , çalışanların internet üzerinde kimlik avı dolandırıcılığı, açıklardan yararlanma ve diğer kötü amaçlı içeriğe ev sahipliği yapabilen tehlikeli etki alanlarına erişmek için herhangi bir uygulama kullanmasını önlemeye yardımcı olur. Etkinleştirmeden önce engellenecek uygulamaları görüntülemek için bir test ortamında [ağ korumasını denetleyebilirsiniz](evaluate-network-protection.md) .
+[Ağ koruması](network-protection.md) , çalışanların internet üzerinde kimlik avı dolandırıcılığı, açıklardan yararlanma ve diğer kötü amaçlı içeriğe ev sahipliği yapabilen tehlikeli etki alanlarına erişmek için herhangi bir uygulama kullanmasını önlemeye yardımcı olur. [Ağ korumasını](evaluate-network-protection.md) etkinleştirmeden önce hangi uygulamaların engellendiğini görüntülemek için bir test ortamında ağ korumasını denetleyebilirsiniz.
 
 [Ağ filtreleme yapılandırma seçenekleri hakkında daha fazla bilgi edinin.](/mem/intune/protect/endpoint-protection-windows-10#network-filtering)
 
@@ -130,7 +130,7 @@ Etki alanına katılmış bilgisayarlarda veya tek başına bir bilgisayarda ağ
 3. **Exploit Guard** \> **Ağ koruması** **Windows Defender Microsoft Defender Virüsten Koruma bileşenleri** \> **Windows** \> için ağacı genişletin.
 
    > [!NOTE]
-   > Windows'ın eski sürümlerinde, grup ilkesi yolu "Microsoft Defender Virüsten Koruma" yerine "Windows Defenderin virustentorjunta" diyebilir.
+   > Windows'ın eski sürümlerinde, grup ilkesi yolu "Microsoft Defender Virüsten Koruma" yerine "Windows Defender Virüsten Koruma" diyebilir.
 
 4. **Kullanıcıların ve uygulamaların tehlikeli web sitelerine erişmesini engelle** ayarına çift tıklayın ve seçeneği **Etkin** olarak ayarlayın. Seçenekler bölümünde aşağıdaki seçeneklerden birini belirtmeniz gerekir:
     - **Engelle** - Kullanıcılar kötü amaçlı IP adreslerine ve etki alanlarına erişemez.
@@ -140,27 +140,19 @@ Etki alanına katılmış bilgisayarlarda veya tek başına bir bilgisayarda ağ
    > [!IMPORTANT]
    > Ağ korumasını tam olarak etkinleştirmek için, grup ilkesi seçeneğini **Etkin** olarak ayarlamanız ve ayrıca seçenekler açılan menüsünde **Engelle'yi** seçmeniz gerekir.
 
-Kayıt defteri düzenleyicisini kullanarak yerel bir bilgisayarda ağ korumasının etkinleştirildiğini onaylayın:
-
-1. **Kayıt Defteri Düzenleyicisi'ni** açmak için **Başlat'ı** seçin ve **regedit** yazın.
-
-2. **HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\Network Protection\EnableNetworkProtection'a** gidin
-
-3. **EnableNetworkProtection'ı** seçin ve değeri onaylayın:
-   - 0=Kapalı
-   - 1=Açık
-   - 2=Denetim
+   > [!NOTE]
+   > İsteğe bağlı: grup ilkesi ayarlarınızın doğru olduğunu doğrulamak için [Ağ korumasının etkinleştirilip etkinleştirilmediğini denetleme'deki](#check-if-network-protection-is-enabled) adımları izleyin.
 
 ### <a name="microsoft-endpoint-configuration-manager"></a>Microsoft Uç Noktası Yapılandırma Yöneticisi
 
 1. Configuration Manager konsolunu açın.
 
-2. **Varlıklar ve Uyumluluk** >  **Endpoint Protection Windows Defender** >  **Exploit Guard'a** gidin. 
+2. **Varlıklar ve Uyumluluk** >  **Endpoint Protection Windows Defender** >  **Exploit Guard'a** gidin.
 
 3. Yeni bir ilke oluşturmak için şeritten **Exploit Guard İlkesi Oluştur'u** seçin.
    - Var olan bir ilkeyi düzenlemek için ilkeyi seçin, ardından şeritten veya sağ tıklama menüsünden **Özellikler'i** seçin. **Ağ Koruması sekmesinden Ağ korumasını yapılandır** seçeneğini düzenleyin.  
 
-4. **Genel** sayfasında, yeni ilke için bir ad belirtin ve **Ağ koruması** seçeneğinin etkinleştirildiğini doğrulayın. 
+4. **Genel** sayfasında, yeni ilke için bir ad belirtin ve **Ağ koruması** seçeneğinin etkinleştirildiğini doğrulayın.
 
 5. **Ağ koruması** sayfasında Ağ **korumasını yapılandır** seçeneği için aşağıdaki ayarlardan birini seçin:
    - **Engelle**

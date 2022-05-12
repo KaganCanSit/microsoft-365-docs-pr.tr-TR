@@ -18,16 +18,22 @@ ms.collection:
 - m365solution-zerotrust
 - m365solution-overview
 - M365-security-compliance
-ms.openlocfilehash: 3b943569485ffaa96b33208c1c4bf0a491c23a95
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: bb452c74763e31be11a6431cc260667319d2582f
+ms.sourcegitcommit: 570c3be37b6ab1d59a4988f7de9c9fb5ca38028f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64939487"
+ms.lasthandoff: 05/12/2022
+ms.locfileid: "65363202"
 ---
 # <a name="microsoft-365-zero-trust-deployment-plan"></a>Microsoft 365 Sıfır Güven dağıtım planı
 
 Bu makalede, **Microsoft 365 ile Sıfır Güven** güvenliği oluşturmaya yönelik bir dağıtım planı sağlanır. Sıfır Güven, ihlal olduğunu varsayan ve her isteği kontrolsüz bir ağdan geliyormuş gibi doğrulayan yeni bir güvenlik modelidir. İsteğin nereden kaynaklandığına veya hangi kaynağa eriştiğine bakılmaksızın, Sıfır Güven modeli bize "hiçbir zaman güvenme, her zaman doğrulama" öğretir.
+
+Bu makaleyi bu posterle birlikte kullanın.
+
+| Öğe | Açıklama |
+|:-----|:-----|
+|[![Microsoft 365 Sıfır Güven dağıtım planının çizimi.](../media/solutions-architecture-center/m365-zero-trust-deployment-plan-thumb.png) ](https://download.microsoft.com/download/f/d/b/fdb6ab0c-34bb-4cb8-84e6-5de8f13298da/m365-zero-trust-deployment-plan.pdf) <br/> [PDF](https://download.microsoft.com/download/f/d/b/fdb6ab0c-34bb-4cb8-84e6-5de8f13298da/m365-zero-trust-deployment-plan.pdf) \| [Visio](https://download.microsoft.com/download/f/d/b/fdb6ab0c-34bb-4cb8-84e6-5de8f13298da/m365-zero-trust-deployment-plan.vsdx) <br/> Mart 2022'de güncelleştirildi | **İlgili çözüm kılavuzları** <br/> <ul><li>[kimlik altyapınızı Microsoft 365 için dağıtma](/microsoft-365/enterprise/deploy-identity-solution-overview)</li><li>[Önerilen kimlik ve cihaz erişim yapılandırmaları](../security/office-365-security/microsoft-365-policies-configurations.md)</li><li>[cihazları Intune ile yönetme](../solutions/manage-devices-with-intune-overview.md)</li><li>[Microsoft 365 Defender'ı değerlendirme ve pilot](../security/defender/eval-overview.md)</li><li>[Microsoft Bilgi Koruması çözümü dağıtma](../compliance/information-protection-solution.md)</li><li>[Microsoft 365 ile veri gizliliği düzenlemeleri için bilgi koruma dağıtma](../solutions/information-protection-deploy.md)</li></ul>
 
 ## <a name="zero-trust-security-architecture"></a>Sıfır Güven güvenlik mimarisi
 
@@ -69,7 +75,7 @@ Bu çizimde:
 
 :::image type="content" source="../media/zero-trust/m365-zero-trust-architecture-step-1b.png" alt-text="Sıfır Güven kimliği ve cihaz erişim korumasını yapılandırma işlemi" lightbox="../media/zero-trust/m365-zero-trust-architecture-step-1b.png":::
 
-Bunu gerçekleştirmek için Sıfır Güven [**_kimlik ve cihaz erişim korumasına_**](office-365-security/microsoft-365-policies-configurations.md) gidin. Bu makale serisinde bir dizi kimlik ve cihaz erişimi önkoşul yapılandırması ve Azure Active Directory (Azure AD) Koşullu Erişim, Microsoft Intune ve Microsoft 365 erişiminin güvenliğini sağlamak için diğer ilkeler açıklanmaktadır  Azure AD Uygulama Ara Sunucusu ile yayımlanan kurumsal bulut uygulamaları ve hizmetleri, diğer SaaS hizmetleri ve şirket içi uygulamalar için.
+Bunu gerçekleştirmek için Sıfır Güven [**_kimlik ve cihaz erişim korumasına_**](office-365-security/microsoft-365-policies-configurations.md) gidin. Bu makale serisinde, Microsoft 365 erişimin güvenliğini sağlamak için bir dizi kimlik ve cihaz erişimi önkoşul yapılandırması ve Azure Active Directory (Azure AD) Koşullu Erişim, Microsoft Intune ve diğer ilkeler açıklanmaktadır  Azure AD Uygulama Ara Sunucusu ile yayımlanan kurumsal bulut uygulamaları ve hizmetleri, diğer SaaS hizmetleri ve şirket içi uygulamalar için.
 
 |Içerir|Önkoşullar|Şunları içermez:|
 |---------|---------|---------|
@@ -89,7 +95,7 @@ Bunu gerçekleştirmek için açıklayıcı yönergeler için [**_Cihazları Int
 
 |Içerir|Önkoşullar|Şunları içermez:|
 |---------|---------|---------|
-|Cihazları Intune ile kaydetme: <ul><li>Şirkete ait cihazlar</li><li>Otomatik pilot/otomatik</li><li>Kayıt</li></ul> <br> İlkeleri yapılandırma: <ul><li>Uygulama Koruma ilkeleri</li><li>Uyumluluk ilkeleri</li><li>Cihaz profili ilkeleri</li></ul>|Uç noktaları Azure AD'ye kaydetme|Aşağıdakiler dahil olmak üzere bilgi koruma özelliklerini yapılandırma: <ul><li>Hassas bilgi türleri</li><li>Etiket</li><li>DLP ilkeleri</li></ul> <br> Bu özellikler için bkz [. 5. Adım. Hassas verileri koruma ve yönetme](#step-5-protect-and-govern-sensitive-data) (bu makalenin ilerleyen bölümlerinde).|
+|Cihazları Intune ile kaydetme: <ul><li>Şirkete ait cihazlar</li><li>Otomatik pilot/otomatik</li><li>Kayıt</li></ul> <br> İlkeleri yapılandırma: <ul><li>Uygulama Koruma ilkeleri</li><li>Uyumluluk ilkeleri</li><li>Cihaz profili ilkeleri</li></ul>|Uç noktaları Azure AD ile kaydetme|Aşağıdakiler dahil olmak üzere bilgi koruma özelliklerini yapılandırma: <ul><li>Hassas bilgi türleri</li><li>Etiket</li><li>DLP ilkeleri</li></ul> <br> Bu özellikler için bkz [. 5. Adım. Hassas verileri koruma ve yönetme](#step-5-protect-and-govern-sensitive-data) (bu makalenin ilerleyen bölümlerinde).|
 
 ## <a name="step-3-add-zero-trust-identity-and-device-access-protection--enterprise-policies"></a>Adım 3. Sıfır Güven kimlik ve cihaz erişim koruması ekleme — Enterprise ilkeleri
 
@@ -115,18 +121,18 @@ Microsoft 365 Defender bileşenleri pilot oluşturma ve dağıtmaya yönelik yö
 
 ## <a name="step-5-protect-and-govern-sensitive-data"></a>Adım 5. Hassas verileri koruma ve yönetme
 
-Microsoft Purview Information Protection uygulayarak hassas bilgileri nerede yaşarsa yaşasın veya seyahat etseler keşfetmenize, sınıflandırmanıza ve korumanıza yardımcı olun.
+Hassas bilgileri nerede olursa olsun keşfetmenize, sınıflandırmanıza ve korumanıza yardımcı olmak için Microsoft Purview Bilgi Koruması uygulayın.
 
-Microsoft Purview Information Protection özellikleri Microsoft Purview'a dahil edilir ve verilerinizi bilmeniz, verilerinizi korumanız ve veri kaybını önlemeniz için size araçlar sağlar.
+Microsoft Purview Bilgi Koruması özellikleri Microsoft Purview dahil edilir ve verilerinizi bilmeniz, verilerinizi korumanız ve veri kaybını önlemeniz için araçlar sunar.
 
 :::image type="content" source="../media/zero-trust/m365-zero-trust-architecture-info-protect.png" alt-text="Bilgi koruma özellikleri, ilke uygulama yoluyla verileri koruma" lightbox="../media/zero-trust/m365-zero-trust-architecture-info-protect.png":::
 
 Bu çalışma, bu makalenin önceki bölümlerinde gösterilen dağıtım yığınının en üstünde gösteriliyor olsa da, bu çalışmaya istediğiniz zaman başlayabilirsiniz.
 
-Microsoft Purview Information Protection, belirli iş hedeflerinizi gerçekleştirmek için kullanabileceğiniz bir çerçeve, süreç ve özellikler sağlar.
+Microsoft Purview Bilgi Koruması, belirli iş hedeflerinizi gerçekleştirmek için kullanabileceğiniz bir çerçeve, süreç ve özellikler sağlar.
 
-![Microsoft Purview Information Protection](../media/zero-trust/mip-solution-overview.png)
+![Microsoft Purview Bilgi Koruması](../media/zero-trust/mip-solution-overview.png)
 
-Bilgi korumasını planlama ve dağıtma hakkında daha fazla bilgi için bkz. [**_Microsoft Purview Information Protection çözümü dağıtma_**](../compliance/information-protection-solution.md). 
+Bilgi korumasını planlama ve dağıtma hakkında daha fazla bilgi için bkz. [**_Microsoft Purview Bilgi Koruması çözümü dağıtma_**](../compliance/information-protection-solution.md). 
 
 Veri gizliliği düzenlemeleri için bilgi koruması dağıtıyorsanız, bu çözüm kılavuzu sürecin tamamı için önerilen bir çerçeve sağlar: [**_Microsoft 365 ile veri gizliliği düzenlemeleri için bilgi koruması dağıtma_**](../solutions/information-protection-deploy.md).

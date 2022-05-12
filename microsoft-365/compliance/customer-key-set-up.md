@@ -11,19 +11,21 @@ search.appverid:
 - MET150
 ms.collection:
 - M365-security-compliance
-description: Microsoft 365 için Müşteri Anahtarını ayarlamayı öğrenin.
-ms.openlocfilehash: 38b8a73a1c4654e1922f4f8e4600727a978af431
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+description: Müşteri Anahtarını ayarlamayı öğrenin.
+ms.openlocfilehash: 42c89c23f823f5f4297f31308516888633a1c06c
+ms.sourcegitcommit: 570c3be37b6ab1d59a4988f7de9c9fb5ca38028f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64759976"
+ms.lasthandoff: 05/12/2022
+ms.locfileid: "65363180"
 ---
 # <a name="set-up-customer-key"></a>Müşteri Anahtarını Ayarlama
 
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
 Müşteri Anahtarı ile kuruluşunuzun şifreleme anahtarlarını denetler ve ardından Microsoft 365 Microsoft'un veri merkezlerinde bekleyen verilerinizi şifrelemek için bunları kullanacak şekilde yapılandırabilirsiniz. Başka bir deyişle Müşteri Anahtarı, müşterilerin anahtarlarıyla kendilerine ait bir şifreleme katmanı eklemesine olanak tanır.
 
-Office 365 için Müşteri Anahtarı'nın kullanılabilmesi için Önce Azure'i ayarlayın. Bu makalede, gerekli Azure kaynaklarını oluşturmak ve yapılandırmak için izlemeniz gereken adımlar açıklanır ve ardından Office 365'da Müşteri Anahtarı'nı ayarlama adımları sağlanır. Azure'ı ayarladıktan sonra, kuruluşunuzdaki çeşitli Microsoft 365 iş yüklerinde verileri şifrelemek için hangi ilkeyi ve dolayısıyla hangi anahtarların atandığını belirlersiniz. Müşteri Anahtarı hakkında daha fazla bilgi edinmek veya genel bir genel bakış için bkz. [Office 365'de Müşteri Anahtarı ile hizmet şifrelemesi](customer-key-overview.md).
+Müşteri Anahtarını kullanmadan önce Azure'ın kurulumunu yapma. Bu makalede, gerekli Azure kaynaklarını oluşturmak ve yapılandırmak için izlemeniz gereken adımlar açıklanır ve ardından Müşteri Anahtarını ayarlama adımları sağlanır. Azure'ı ayarladıktan sonra, kuruluşunuzdaki çeşitli Microsoft 365 iş yüklerinde verileri şifrelemek için hangi ilkeyi ve dolayısıyla hangi anahtarların atandığını belirlersiniz. Müşteri Anahtarı hakkında daha fazla bilgi edinmek veya genel bir genel bakış için bkz. [Microsoft Purview Müşteri Anahtarı ile hizmet şifrelemesi](customer-key-overview.md).
   
 > [!IMPORTANT]
 > Bu makaledeki en iyi yöntemleri izlemenizi kesinlikle öneririz. Bunlar **TIP** ve **ÖNEMLİ** olarak adlandırılır. Müşteri Anahtarı, kapsamı kuruluşunuzun tamamı kadar büyük olabilecek kök şifreleme anahtarları üzerinde denetim sağlar. Bu, bu anahtarlarla yapılan hataların geniş bir etkiye sahip olabileceği ve hizmet kesintilerine veya verilerinizin geri alınamaz bir şekilde kaybolmasına neden olabileceği anlamına gelir.
@@ -43,7 +45,7 @@ Başlamadan önce, kuruluşunuz için uygun Azure aboneliklerine ve M365/O365 li
 
 Mevcut Office 365 Gelişmiş Uyumluluk lisansları desteklenmeye devam edecektir.
 
-Bu makaledeki kavramları ve yordamları anlamak için [Azure Key Vault](/azure/key-vault/) belgelerini gözden geçirin. Ayrıca Azure [AD kiracısı](/previous-versions/azure/azure-services/jj573650(v=azure.100)#what-is-an-azure-ad-tenant) gibi Azure'da kullanılan terimleri de tanıyın.
+Bu makaledeki kavramları ve yordamları anlamak için [Azure Key Vault](/azure/key-vault/) belgelerini gözden geçirin. Ayrıca Azure'da kullanılan terimleri (örneğin, [Azure AD kiracı](/previous-versions/azure/azure-services/jj573650(v=azure.100)#what-is-an-azure-ad-tenant)) tanıyın.
   
 Belgelerin ötesinde daha fazla desteğe ihtiyacınız varsa yardım için Microsoft Danışmanlık Hizmetleri (MCS), Premier Alan Mühendisliği (PFE) veya bir Microsoft iş ortağı ile iletişime geçin. Belgeler de dahil olmak üzere Müşteri Anahtarı hakkında geri bildirim sağlamak için fikirlerinizi, önerilerinizi ve perspektiflerinizi customerkeyfeedback@microsoft.com gönderin.
   
@@ -144,7 +146,7 @@ Kök şifreleme anahtarlarının geçici veya kalıcı olarak kaybedilmesi hizme
 
 - Tüm kiracı kullanıcıları için çevrimiçi SharePoint ve OneDrive İş içeriği (Teams dosyaları dahil) şifrelemek üzere DEP'ler atamak üzere Müşteri Anahtarı'nın etkinleştirilmesi için [spock@microsoft.com](mailto:spock@microsoft.com) başvurun.
 
-- Tüm kiracı kullanıcıları için birden çok Microsoft 365 iş yükünde (Exchange Online, Teams, MIP EDM) içeriği şifrelemek üzere DEP'ler atamak üzere Müşteri Anahtarı'nın etkinleştirilmesi için [m365-ck@service.microsoft.com](mailto:m365-ck@service.microsoft.com) başvurun.
+- Tüm kiracı kullanıcıları için birden çok Microsoft 365 iş yükünde (Exchange Online, Teams, Microsoft Purview Bilgi Koruması) içeriği şifrelemek üzere DEP'ler atamak üzere Müşteri Anahtarı'nın etkinleştirilmesi için [m365-ck@service.microsoft.com](mailto:m365-ck@service.microsoft.com) başvurun.
 
 - E-postanıza aşağıdaki bilgileri ekleyin:
 
@@ -232,7 +234,7 @@ Uygulamanıza bağlı olarak her anahtar kasası için üç ayrı izin kümesi t
    - *kasa adı* , oluşturduğunuz anahtar kasasının adıdır.
    - Exchange Online ve Skype Kurumsal için *Office 365 appID* değerini şununla değiştirin:`00000002-0000-0ff1-ce00-000000000000`
    - SharePoint Online, OneDrive İş ve Teams dosyaları için *Office 365 appID* değerini şununla değiştirin:`00000003-0000-0ff1-ce00-000000000000`
-   - Tüm kiracı kullanıcıları için geçerli olan çok iş yükü ilkesi (Exchange, Teams, Microsoft Bilgi Koruması) için *Office 365 appID* değerini şununla değiştirin:`c066d759-24ae-40e7-a56f-027002b5d3e4`
+   - Tüm kiracı kullanıcıları için geçerli olan çok iş yükü ilkesi (Exchange, Teams, Microsoft Purview Bilgi Koruması) için *Office 365 appID* değerini şununla değiştirin:`c066d759-24ae-40e7-a56f-027002b5d3e4`
 
   Örnek: Exchange Online ve Skype Kurumsal için izinleri ayarlama:
 

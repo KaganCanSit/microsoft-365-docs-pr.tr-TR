@@ -17,12 +17,12 @@ ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.date: 02/04/2022
-ms.openlocfilehash: 2f76a8ec53d6f7c809ed9f6612f2c8abf7388d1b
-ms.sourcegitcommit: f723ebbc56db8013598a88b0d7f13214d9d3eb10
+ms.openlocfilehash: 48fbef36720d295dabbf640944e64900633f1fe2
+ms.sourcegitcommit: 570c3be37b6ab1d59a4988f7de9c9fb5ca38028f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65294788"
+ms.lasthandoff: 05/12/2022
+ms.locfileid: "65363070"
 ---
 # <a name="attack-surface-reduction-rules-reference"></a>Saldırı yüzeyi azaltma kuralları başvurusu
 
@@ -58,28 +58,30 @@ Aşağıdaki tabloda, şu anda genel kullanıma sunulan kurallar için desteklen
 >
 > Windows&nbsp; Server2012R2&nbsp;&nbsp; ve Windows&nbsp; Server2016'daki&nbsp; saldırı yüzeyi azaltma kuralları, modern birleşik çözüm paketi kullanılarak eklenen cihazlar için kullanılabilir. Daha fazla bilgi için bkz. [Windows Server 2012 R2 ve 2016 Önizlemesi için modern birleşik çözümde yeni işlevler](/microsoft-365/security/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview).
 
-| Kural adı| &nbsp;Windows 11 <br>ve<br> &nbsp;Windows 10 | &nbsp;Windows Server <br> 2022 <br>ve<br>  &nbsp;Windows Server <br> 2019 | Windows Server | &nbsp;Windows Server <br> 2016 <br> <sup>[[1, 2](#fn1)]<sup></sup> | &nbsp;Windows Server <br> 2012R2&nbsp; <br> <sup>[[1, 2](#fn1)]<sup></sup> |
+| Kural adı| &nbsp;Windows 11 <br>ve<br> &nbsp;Windows 10 | &nbsp;Windows Server <br> 2022 <br>ve<br>  &nbsp;Windows Server <br> 2019 | Windows Server | &nbsp;Windows Server <br> 2016 <sup>[[1, 2](#fn1)]<sup></sup> | &nbsp;Windows Server <br> 2012R2&nbsp;<sup> [[1, 2](#fn1)]<sup></sup> |
 |:---|:---:|:---:|:---:|:---:|:---:|
 | [Güvenlik açığı bulunan imzalı sürücülerin kötüye kullanılması engellendi](#block-abuse-of-exploited-vulnerable-signed-drivers) | E | E | E <br> sürüm 1803 (Altı Aylık Kanal) veya üzeri | E | E |
-| [Adobe Reader'ın alt işlemler oluşturmalarını engelleme](#block-adobe-reader-from-creating-child-processes) | Y sürüm 1809 veya üzeri | E | E | E | E |
+| [Adobe Reader'ın alt işlemler oluşturmalarını engelleme](#block-adobe-reader-from-creating-child-processes) | E <br> sürüm 1809 veya üzeri <sup>[[3](#fn1)]<sup></sup> | E | E | E | E |
 | [Tüm Office uygulamalarının alt işlemler oluşturmalarını engelleme](#block-all-office-applications-from-creating-child-processes) | E | E | E | E | E |
-| [Windows yerel güvenlik yetkilisi alt sisteminden (lsass.exe) kimlik bilgilerinin çalınmalarını engelleme](#block-credential-stealing-from-the-windows-local-security-authority-subsystem) | E <br> sürüm 1803 veya üzeri | E | E | E | E |
+| [Windows yerel güvenlik yetkilisi alt sisteminden (lsass.exe) kimlik bilgilerinin çalınmalarını engelleme](#block-credential-stealing-from-the-windows-local-security-authority-subsystem) | E <br> sürüm 1803 veya üzeri <sup>[[3](#fn1)]<sup></sup> | E | E | E | E |
 | [E-posta istemcisinden ve web postasından yürütülebilir içeriği engelleme](#block-executable-content-from-email-client-and-webmail) | E | E | E | E | E |
-| [Bir yaygınlık, yaş veya güvenilir liste ölçütüne uymadığı sürece yürütülebilir dosyaların çalışmasını engelleyin](#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion) | E <br> sürüm 1803 veya üzeri | E | E | E | E |
+| [Bir yaygınlık, yaş veya güvenilir liste ölçütüne uymadığı sürece yürütülebilir dosyaların çalışmasını engelleyin](#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion) | E <br> sürüm 1803 veya üzeri <sup>[[3](#fn1)]<sup></sup> | E | E | E | E |
 | [Karartılmış olabilecek betiklerin yürütülmesini engelleme](#block-execution-of-potentially-obfuscated-scripts) | E | E | E | E | E |
 | [JavaScript veya VBScript'in indirilen yürütülebilir içeriği başlatmasını engelleme](#block-javascript-or-vbscript-from-launching-downloaded-executable-content) | E | E | E | N | N |
 | [Office uygulamalarının yürütülebilir içerik oluşturmalarını engelleme](#block-office-applications-from-creating-executable-content) | E | E | E | E | E |
 | [Office uygulamalarının diğer işlemlere kod eklemesini engelleme](#block-office-applications-from-injecting-code-into-other-processes)  | E | E | E | E | E |
 | [Office iletişim uygulamasının alt işlemler oluşturmalarını engelleme](#block-office-communication-application-from-creating-child-processes) | E | E | E | E | E |
-| [WMI olay aboneliği aracılığıyla kalıcılığı engelleme](#block-persistence-through-wmi-event-subscription) <br> \*_Dosya ve klasör dışlamaları desteklenmiyor._ | E <br> sürüm 1903 (derleme 18362) veya üzeri | E | E <br> sürüm 1903 (derleme 18362) veya üzeri | N | N |
-| [PSExec ve WMI komutlarından kaynaklanan işlem oluşturma işlemlerini engelleme](#block-process-creations-originating-from-psexec-and-wmi-commands) | E <br> sürüm 1803 veya üzeri | E | E | E | E |
+| [WMI olay aboneliği aracılığıyla kalıcılığı engelleme](#block-persistence-through-wmi-event-subscription) <br> \*_Dosya ve klasör dışlamaları desteklenmiyor._ | E <br> sürüm 1903 (derleme 18362) veya üzeri <sup>[[3](#fn1)]<sup></sup> | E | E <br> sürüm 1903 (derleme 18362) veya üzeri | N | N |
+| [PSExec ve WMI komutlarından kaynaklanan işlem oluşturma işlemlerini engelleme](#block-process-creations-originating-from-psexec-and-wmi-commands) | E <br> sürüm 1803 veya üzeri <sup>[[3](#fn1)]<sup></sup> | E | E | E | E |
 | [USB'den çalıştırılan güvenilmeyen ve imzalanmamış işlemleri engelleme](#block-untrusted-and-unsigned-processes-that-run-from-usb) | E | E | E | E | E |
 | [Office makrolardan Win32 API çağrılarını engelleme](#block-win32-api-calls-from-office-macros) | E | E | E | N | N |
-| [Fidye yazılımına karşı gelişmiş koruma kullanma](#use-advanced-protection-against-ransomware) | E <br> sürüm 1803 veya üzeri | E | E | E | E |
+| [Fidye yazılımına karşı gelişmiş koruma kullanma](#use-advanced-protection-against-ransomware) | E <br> sürüm 1803 veya üzeri <sup>[[3](#fn1)]<sup></sup> | E | E | E | E |
 
 (<a id="fn1">1</a>) Windows Server 2012 ve 2016 için modern birleşik çözümü ifade eder. Daha fazla bilgi için bkz. [Uç Nokta için Defender hizmetine Windows Sunucuları ekleme](configure-server-endpoints.md).
 
 (<a id="fn1">2</a>) Windows&nbsp; Server 2016 ve Windows&nbsp; Server 2012R2&nbsp; için gereken en düşük Microsoft Endpoint Configuration Manager sürümü 2111 sürümüdür.
+
+(<a id="fn1">3</a>) Sürüm ve derleme numarası yalnızca Windows&nbsp; 10 için geçerlidir.
 
 ## <a name="supported-configuration-management-systems"></a>Desteklenen yapılandırma yönetim sistemleri
 
