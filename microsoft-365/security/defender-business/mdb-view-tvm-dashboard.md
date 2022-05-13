@@ -16,12 +16,12 @@ ms.collection:
 - SMB
 - M365-security-compliance
 ms.custom: intro-get-started
-ms.openlocfilehash: 25085dc22fd2f939e10833c98bc4fb599dd5a11f
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: a4df65d0364aff71c3d3bbfb261952859d6d8ecf
+ms.sourcegitcommit: 54bc063818779e351ca24f04ba571f762d85751d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65172623"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65393098"
 ---
 # <a name="use-your-threat--vulnerability-management-dashboard-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'da Tehdit & Güvenlik Açığı Yönetimi panonuzu kullanma
 
@@ -31,11 +31,11 @@ ms.locfileid: "65172623"
 - Cihazlarla ilgili bozuk iletişimleri ele alma, güvenlik duvarı korumasını açma veya Microsoft Defender Virüsten Koruma tanımlarını güncelleştirme gibi en önemli güvenlik önerilerinizi görüntüleyin
 - Karantinaya gönderilen dosyalar veya cihazlarda bulunan güvenlik açıkları gibi düzeltme etkinliklerini görüntüleme
 
-Nasıl çalıştığını görmek ister misiniz? [Uç Nokta için Microsoft Defender'da Tehdit](../defender-endpoint/microsoft-defender-endpoint.md) & Güvenlik Açığı Yönetimi'ni açıklayan bu videoyu izleyin.
+Nasıl çalıştığını görmek ister misiniz? [Microsoft Defender Güvenlik Açığı Yönetimi](../defender-vulnerability-management/defender-vulnerability-management.md) açıklayan bu videoyu izleyin.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4r1nv]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4Y1FX]
 
-Tehdit & Güvenlik Açığı Yönetimi hakkında daha fazla bilgi edinmek için bkz. [Uç Nokta için Microsoft Defender'de Tehdit ve güvenlik açığı yönetimi](../defender-endpoint/next-gen-threat-and-vuln-mgt.md).
+[Microsoft Defender Güvenlik Açığı Yönetimi hakkında daha fazla bilgi edinin](../defender-vulnerability-management/defender-vulnerability-management.md).
 
 >
 > **Bir dakikan var mı?**

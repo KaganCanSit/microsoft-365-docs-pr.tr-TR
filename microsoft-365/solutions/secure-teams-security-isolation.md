@@ -1,5 +1,5 @@
 ---
-title: Güvenlik yalıtımıyla bir ekibi yapılandırın
+title: Benzersiz bir duyarlılık etiketi kullanarak ekibi güvenlik yalıtımıyla yapılandırma
 f1.keywords: NOCSH
 ms.author: mikeplum
 author: MikePlumleyMSFT
@@ -18,14 +18,14 @@ ms.custom:
 - admindeeplinkSPO
 recommendations: false
 description: Güvenlik için benzersiz duyarlılık etiketine sahip bir ekip oluşturmayı öğrenin.
-ms.openlocfilehash: cfea35dccd09e0eea361e56f1914700660b7fdd4
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 15f155255518df38921288f68dcc9365703e4f2a
+ms.sourcegitcommit: 54bc063818779e351ca24f04ba571f762d85751d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64943139"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65393120"
 ---
-# <a name="configure-a-team-with-security-isolation"></a>Güvenlik yalıtımıyla bir ekibi yapılandırın
+# <a name="configure-a-team-with-security-isolation-by-using-a-unique-sensitivity-label"></a>Benzersiz bir duyarlılık etiketi kullanarak ekibi güvenlik yalıtımıyla yapılandırma
 
 Bu makalede, Microsoft Teams'da özel bir ekip yapılandırma ve dosyaları yalnızca ekip üyelerinin şifresini çözebilmesi için benzersiz bir duyarlılık etiketi kullanma önerileri ve adımları sağlanır.
 
@@ -111,7 +111,7 @@ Ekibi güvenlik yalıtımı için yapılandırmak için bu ekip için özel olar
 
 Duyarlılık etiketi oluşturmak için
 
-1. Microsoft Purview uyumluluk portalını açın ve **Çözümler'in** altında <a href="https://go.microsoft.com/fwlink/p/?linkid=2174015" target="_blank">**Bilgi koruması'nı**</a> seçin.
+1. Microsoft Purview uyumluluk portalı açın ve **Çözümler'in** altında <a href="https://go.microsoft.com/fwlink/p/?linkid=2174015" target="_blank">**Bilgi koruması'nı**</a> seçin.
 1. **Etiket oluştur'a** tıklayın.
 1. Etikete bir ad verin. Bunu birlikte kullandığınız ekipten sonra adlandırmanızı öneririz.
 1. Bir görünen ad ve açıklama ekleyin ve **ardından İleri'ye** tıklayın.
@@ -143,7 +143,7 @@ Etiketi oluşturduktan sonra, etiketi kullanacak kullanıcılara yayımlamanız 
 
 Duyarlılık etiketi yayımlamak için:
 
-1. Microsoft Purview uyumluluk portalının <a href="https://go.microsoft.com/fwlink/p/?linkid=2174015" target="_blank">**Bilgi koruma** sayfasında</a> **Etiket ilkeleri** sekmesini seçin.
+1. Microsoft Purview uyumluluk portalı <a href="https://go.microsoft.com/fwlink/p/?linkid=2174015" target="_blank">**, Bilgi koruma** sayfasında</a> **Etiket ilkeleri** sekmesini seçin.
 2. **Etiketleri yayımla'ya** tıklayın.
 3. **Yayımlamak için duyarlılık etiketlerini seçin sayfasında, Yayımlamak** **için duyarlılık etiketlerini seçin'e** tıklayın.
 4. Oluşturduğunuz etiketi seçin ve **ekle'ye** tıklayın.
@@ -261,7 +261,7 @@ Bu eğitim, ekip üyelerinizin bu özellikleri ve sonuçlarını deneyimleyebilm
 
 Eğitimden sonraki haftalarda:
 
-- Ekip üyesi geri bildirimlerini hızla ele alın ve ilkeleri ve yapılandırmaları ince ayar yapın.
+- Ekip üyesi geri bildirimlerini hızla ele alın ve ilkeler ile yapılandırmalar için ince ayar yapın.
 - Ekip için kullanımı analiz edin ve kullanım beklentileriyle karşılaştırın.
 - Yüksek oranda düzenlenmiş dosyaların duyarlılık etiketiyle düzgün şekilde etiketlendiğini doğrulayın. (SharePoint'da bir klasörü görüntüleyerek ve **Sütun** **ekle'nin** **Sütunları göster/gizle** seçeneği aracılığıyla Duyarlılık sütununu ekleyerek hangi dosyaların atanmış olduğunu görebilirsiniz.
 

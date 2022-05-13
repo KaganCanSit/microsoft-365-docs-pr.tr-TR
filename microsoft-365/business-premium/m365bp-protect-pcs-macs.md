@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 İş Ekstra'da yönetilmeyen Windows 10 bilgisayarları ve Mac'leri koruma
+title: Microsoft 365 İş Ekstra'da yönetilmeyen Windows bilgisayarları ve Mac'leri koruma
 f1.keywords:
 - NOCSH
 ms.author: deniseb
@@ -24,14 +24,14 @@ search.appverid:
 - MET150
 - MOE150
 description: yönetilmeyen veya kendi cihazını getir (KCG) Microsoft 365 İş Ekstra ile siber saldırılara karşı koruyun. Windows bilgisayarlar ve Mac'ler için siber güvenliği ayarlama.
-ms.openlocfilehash: 0b13c208fd2cdd0fcadf7f5bc820d41b3621eebd
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: 2c2c94e79e7f694e75ab6aeb6ed38005dbd1f2f4
+ms.sourcegitcommit: 54bc063818779e351ca24f04ba571f762d85751d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65318844"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65393252"
 ---
-# <a name="protect-unmanaged-windows-10-pcs-and-macs-in-microsoft-365-business-premium"></a>Microsoft 365 İş Ekstra'da yönetilmeyen Windows 10 bilgisayarları ve Mac'leri koruma
+# <a name="protect-unmanaged-windows-pcs-and-macs-in-microsoft-365-business-premium"></a>Microsoft 365 İş Ekstra'da yönetilmeyen Windows bilgisayarları ve Mac'leri koruma
 
 Bu amaç, Microsoft Intune kayıtlı olmayan yönetilmeyen Windows 10 bilgisayarlar ve Mac'ler için koruma oluşturmaya odaklanmıştır. Büyük olasılıkla küçük işletmeniz veya kampanyanızda kendi cihazlarını (BYOD) getiren personel olabilir ve bu cihazlar yönetilmiyor olabilir. KCG'ler kişisel telefonları, tabletleri ve bilgisayarları içerir. 
 

@@ -9,42 +9,44 @@ audience: Admin
 ms.topic: conceptual
 ms.service: O365-seccomp
 ms.localizationpriority: medium
-ms.date: 04/01/2022
+ms.date: 05/12/2022
 ms.collection:
 - Strat_O365_IP
 - M365-security-compliance
 search.appverid:
 - MET150
-description: Gelişmiş İleti Şifrelemesi, yöneticilerin korumalı iletilerde daha fazlasını yapmalarına olanak sağlayarak kuruluşların uyumluluk yükümlülüklerini karşılamalarına yardımcı olur.
-ms.openlocfilehash: 74d94bdb837531fdbbb819c86f9dbb7dd80272e8
-ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
+description: Gelişmiş İleti Şifrelemesi, yöneticilerin korumalı iletilerle daha da fazlasını yapmalarını sağlayarak kuruluşların uyumluluk yükümlülüklerini karşılamasına yardımcı olur.
+ms.openlocfilehash: 077a17921c456ddff30e7490611dd4e78aaa5232
+ms.sourcegitcommit: 54bc063818779e351ca24f04ba571f762d85751d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "64634349"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65393296"
 ---
 # <a name="advanced-message-encryption"></a>Gelişmiş İleti Şifrelemesi
 
-Office 365 Gelişmiş İleti Şifrelemesi [E5, Microsoft 365 Kurumsal, Office 365 E5](https://www.microsoft.com/microsoft-365/enterprise/home) Microsoft 365 E5 (Kar Amacı Gütmeyen Personel Fiyatları) ve diğer Office 365 Kurumsal  E5 (Kar Amacı Gütmeyen Personel Fiyatları) ve A5 Office 365 Eğitim. Gelişmiş İleti Şifrelemesi iptal ve süre sonu işlevlerini kullanmak için, E5 **lisansınıza Premium Şifreleme Office 365** seçeneğini etkinleştirin.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Organizasyonda herhangi bir aboneliği olmayan bir Office 365 Gelişmiş İleti Şifrelemesi, satın almak için Microsoft 365 E5 Uyumluluk için SKU Microsoft 365 E3, Microsoft 365 E3  (Kar Amacı Gütmeyen Personel Fiyatları) veya Office 365 Gelişmiş Uyumluluk Microsoft 365 E3, Microsoft 365 E3 (Kar Amacı Gütmeyen Personel Fiyatlandırması), Office 365 SKU'ları veya SKU'lar için Microsoft 365 E5/A5 Information Protection/E3 için Yönetim SKU Microsoft 365 A3.
+Microsoft Purview Gelişmiş İleti Şifrelemesi [Microsoft 365 Kurumsal E5, Office 365 E5](https://www.microsoft.com/microsoft-365/enterprise/home), Microsoft 365 E5 (Kar Amacı Gütmeyen Personel Fiyatlandırması), Office 365 Kurumsal E5 (Kar Amacı Gütmeyen Personel Fiyatlandırması), ve A5 Office 365 Eğitim. Kuruluşunuzun Microsoft Purview Gelişmiş İleti Şifrelemesi içermeyen bir aboneliği varsa, Microsoft 365 E3, Microsoft 365 E3 (Kar Amacı Gütmeyen Personel Fiyatlandırması) için Microsoft 365 E5 Uyumluluk SKU eklentisiyle veya Microsoft 365 E3, Microsoft 365 E3 (Kar Amacı Gütmeyen Personel Fiyatlandırması), Office 365 SKU'ları veya Microsoft 365 E5/A5 Information Protection için Office 365 Gelişmiş Uyumluluk SKU eklentisi  ve Microsoft 365 A3/E3 için İdare SKU eklentisi.
 
-Gelişmiş İleti Şifrelemesi, müşterilerin dış alıcılar üzerinde daha esnek denetimler gerektiren uyumluluk yükümlülüklerini karşılamasına ve şifreli e-postalara erişimine yardımcı olur. Gelişmiş İleti Şifrelemesi'Office 365, otomatik ilkelerle kuruluş dışında paylaşılan hassas e-postaları denetim altına alabilirsiniz. Bu ilkeleri, PII, Finansal veya Durum Kimlikleri gibi hassas bilgi türlerini tanımlamak için yapılandırmış veya korumayı geliştirmek için anahtar sözcükler kullanabilirsiniz. İlkeleri yapılandırdıktan sonra, ilkeleri özel markalı e-posta şablonlarıyla eşleştirin ve sonra ilkeye uygun e-postalar üzerinde daha fazla denetim için son kullanma tarihi ekleyin. Ayrıca yöneticiler, güvenli bir web portalı aracılığıyla dış erişime sahip şifrelenmiş e-postaları herhangi bir zamanda postaya erişimi iptal etmek yoluyla daha fazla denetime sahip olabilir.
+Gelişmiş İleti Şifrelemesi, müşterilerin dış alıcılar ve şifrelenmiş e-postalara erişimleri üzerinde daha esnek denetimler gerektiren uyumluluk yükümlülüklerini karşılamasına yardımcı olur. Office 365 Gelişmiş İleti Şifrelemesi ile, otomatik ilkelerle kuruluş dışında paylaşılan hassas e-postaları denetleyebilir ve şifrelenmiş ileti portalı erişim günlükleri aracılığıyla bu etkinlikleri izleyebilirsiniz. Bu ilkeleri PII, Finansal veya Sistem Durumu Kimlikleri gibi hassas bilgi türlerini tanımlamak için yapılandırabilir veya korumayı geliştirmek için anahtar sözcükleri kullanabilirsiniz. İlkeleri yapılandırdıktan sonra, ilkeleri özel markalı e-posta şablonlarıyla eşleştirip ilkeye uyan e-postaların ek denetimi için bir sona erme tarihi eklersiniz. Ayrıca yöneticiler, istedikleri zaman posta erişimini iptal ederek güvenli bir web portalı aracılığıyla dışarıdan erişilen şifrelenmiş e-postaları daha fazla denetleyebiliyor.
 
-Dış alıcılara gönderilen e-postalar için yalnızca iptal edilebilir ve bir son kullanma tarihi ayarlayabilirsiniz.
+Yalnızca dış alıcılara gönderilen e-postaları iptal edebilir ve son kullanma tarihi ayarlayabilirsiniz.
 
-## <a name="get-started-with-office-365-advanced-message-encryption"></a>Kullanmaya başlayın ile Office 365 Gelişmiş İleti Şifrelemesi
+## <a name="get-started-with-microsoft-purview-advanced-message-encryption"></a>Microsoft Purview Gelişmiş İleti Şifrelemesi ile Kullanmaya başlayın
 
-Aşağıdaki makalelerde, Gelişmiş İleti Şifrelemesi'nin nasıl ayar kümesi ve kullanımı açık bulunmaktadır.
+Aşağıdaki makalelerde Gelişmiş İleti Şifrelemesi'ni nasıl ayarlayıp kullandığınız açıklanmaktadır.
 
-Organizasyonda, iş yerlerini içeren bir Office 365 Gelişmiş İleti Şifrelemesi. Desteklenen abonelikler hakkında ayrıntılı bilgi için İleti ilkesi [ve uyumluluk hizmet açıklamasına bakın](/office365/servicedescriptions/exchange-online-service-description/message-policy-and-compliance).
+Kuruluşunuzun Microsoft Purview Gelişmiş İleti Şifrelemesi içeren bir aboneliği olmalıdır. Desteklenen abonelikler hakkında ayrıntılı bilgi için [İleti ilkesi ve uyumluluk hizmeti açıklamasına](/office365/servicedescriptions/exchange-online-service-description/message-policy-and-compliance) bakın.
 
-Henüz İleti Şifrelemesi'Office 365 yoksa bkz. [yeni İleti Şifrelemesi Office 365 ayarlama](set-up-new-message-encryption-capabilities.md).
+henüz Office 365 İleti Şifrelemesi'ni ayarlamadıysanız bkz. [Yeni Office 365 İleti Şifrelemesi özelliklerini ayarlama](set-up-new-message-encryption-capabilities.md).
 
-Gelişmiş İleti Şifrelemesi ile tek bir markalama şablonuyla sınırlı olmazsınız. Bunun yerine, birden çok markalama şablonu oluşturabilir ve kullanabilirsiniz. Özel markalama eklemek, şifreli iletilerin iptali izlemesini etkinleştirmenizi de sağlar. Bilgi için bkz [. Şifrelenmiş iletilerinize kuruluş markasını ekleme](add-your-organization-brand-to-encrypted-messages.md). Özel markalama kullanıyorsanız, dış alıcılar OME portalına bağlantı içeren bir bildirim e-postası alırlar. Posta akış kuralı, bildirim e-postası ve OME Portalı'nın hangi markalama şablonunu kullanabileceğini belirler. Bu şekilde, güvenli içeriğiniz kuruluş dışından gönderilmez.
+Gelişmiş İleti Şifrelemesi ile tek bir marka şablonuyla sınırlı değilsiniz. Bunun yerine, birden çok marka şablonu oluşturabilir ve kullanabilirsiniz. Özel marka ekleme, şifrelenmiş iletilerin iptalini izlemeyi etkinleştirmenize de olanak tanır. Bilgi için bkz. [Şifrelenmiş iletilerinize kuruluşunuzun markasını ekleme](add-your-organization-brand-to-encrypted-messages.md). Özel markalama kullandığınızda, dış alıcılar OME portalının bağlantısını içeren bir bildirim e-postası alır. Posta akışı kuralı, bildirim e-postasının ve OME Portalı'nın hangi marka şablonunu kullandığını belirler. Bu şekilde, güvenli içeriğiniz kuruluşunuzun dışına gönderilmez.
 
-Yalnızca iletileri iptal edebilirsiniz ve son kullanma tarihlerini kullanıcıların portal aracılığıyla almaları için iletilere uygulayabilirsiniz. Başka bir deyişle, özel bir markalama şablonu uygulanmış e-posta. Daha fazla bilgi ve örnek için, Tüm dış alıcıların şifreli postaları okumak için [OME Portalını kullanmasına emin olun makalesinde yer alan kılavuza bakın](manage-office-365-message-encryption.md#ensure-all-external-recipients-use-the-ome-portal-to-read-encrypted-mail).
+İletileri iptal edebilir ve kullanıcıların portaldan aldığı iletilere son kullanma tarihleri uygulayabilirsiniz. Başka bir deyişle, özel markalama şablonu uygulanmış e-posta. Daha fazla bilgi ve örnek için [, Tüm dış alıcıların şifrelenmiş postaları okumak için OME Portalını kullanmasını sağlama altındaki yönergelere](manage-office-365-message-encryption.md#ensure-all-external-recipients-use-the-ome-portal-to-read-encrypted-mail) bakın.
 
-[Tarafından şifrelenen e-posta için son kullanma Office 365 Gelişmiş İleti Şifrelemesi](ome-advanced-expiration.md). Güvenli bir web portalı üzerinden şifrelenen e-postalara erişimin süresi dolarak korumayı geliştiren otomatik ilkelerle kuruluş dışında paylaşılan hassas e-postaları kontrol edin.
+[Microsoft Purview Gelişmiş İleti Şifrelemesi ile şifrelenen e-posta için bir sona erme tarihi ayarlayın](ome-advanced-expiration.md). Güvenli bir web portalından şifrelenmiş e-postalara erişimin süresi dolarak korumayı geliştiren otomatik ilkelerle kuruluş dışında paylaşılan hassas e-postaları denetleyin.
 
-[E-postanın şifrelenme Office 365 Gelişmiş İleti Şifrelemesi](revoke-ome-encrypted-mail.md). Kuruluş dışında paylaşılan hassas e-postaları kontrol edin ve güvenli bir web portalı aracılığıyla şifreli e-postalara erişimi iptal edin ve korumayı geliştirin.  
+[Gelişmiş İleti Şifrelemesi Microsoft Purview tarafından şifrelenen e-postayı iptal edin](revoke-ome-encrypted-mail.md). Kuruluş dışında paylaşılan hassas e-postaları denetleyin ve güvenli bir web portalı üzerinden şifrelenmiş e-postalara erişimi iptal ederek korumayı geliştirin.
+
+[Gelişmiş İleti Şifrelemesi Microsoft Purview tarafından şifrelenmiş ileti portalı etkinlik günlüğü](ome-message-access-logs.md). Şifrelenmiş ileti portalında kuruluş dışında paylaşılan hassas e-postaları izleyin.

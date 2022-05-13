@@ -455,10 +455,10 @@
               href: ome-sensitive-info-types.md
             - name: İleti şifrelemeyi yönetme
               href: manage-office-365-message-encryption.md
-            - name: Şifrelenmiş ileti portalı etkinlik günlüğü
-              href: ome-message-access-logs.md
             - name: Gelişmiş ileti şifreleme
               href: ome-advanced-message-encryption.md
+            - name: Şifrelenmiş ileti portalı etkinlik günlüğü
+              href: ome-message-access-logs.md
             - name: Microsoft Purview Gelişmiş İleti Şifreleme tarafından şifrelenen e-posta için bir son geçerlilik tarihi belirleme
               href: ome-advanced-expiration.md
             - name: Microsoft Purview Gelişmiş İleti Şifreleme tarafından şifrelenen e-postayı iptal etme

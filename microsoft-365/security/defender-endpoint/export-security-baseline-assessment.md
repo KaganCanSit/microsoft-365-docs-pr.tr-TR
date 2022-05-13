@@ -15,12 +15,12 @@ ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
 ms.custom: api
-ms.openlocfilehash: 1cf677ccf4716ede6182db48bb1e1a2622fd9abe
-ms.sourcegitcommit: 344a254ca268a2f65cf199d9158a47e08861ffa5
+ms.openlocfilehash: 730eb90202acff9efad1cc2f01fd60431366e997
+ms.sourcegitcommit: 54bc063818779e351ca24f04ba571f762d85751d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "65369554"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65393444"
 ---
 # <a name="export-security-baselines-assessment-per-device"></a>Cihaz başına güvenlik temelleri değerlendirmesini dışarı aktarma
 
@@ -53,23 +53,32 @@ Farklı veri türlerini almak için farklı API çağrıları vardır. Genel ola
 
 Cihaz başına tüm cihazlar için tüm güvenlik temeli değerlendirmelerini döndürür. DeviceId, ProfileId, ConfigurationId'nin her benzersiz bileşimi için ayrı bir giriş içeren bir tablo döndürür.
 
-#### <a name="12-limitations"></a>1.2 Sınırlamaları
+### <a name="12-permissions"></a>1.2 İzinler
+
+Bu API'yi çağırmak için aşağıdaki izinlerden biri gereklidir. İzinlerin nasıl seçileceği de dahil olmak üzere daha fazla bilgi edinmek için ayrıntılar için bkz. [Uç Nokta için Microsoft Defender API'lerini kullanma](apis-intro.md).
+
+İzin türü|Izni|İzin görünen adı
+:---|:---|:---
+Uygulama|SecurityBaselinesAssessment.Read.All |'Tüm güvenlik temelleri değerlendirme bilgilerini oku'
+Temsilci (iş veya okul hesabı)|SecurityBaselinesAssessment.Read|'Güvenlik temelleri değerlendirme bilgilerini oku'
+
+### <a name="13-limitations"></a>1.3 Sınırlamalar
 
 - En büyük sayfa boyutu 200.000'dir.
 - Bu API için hız sınırlamaları dakikada 30 çağrı ve saatte 1000 çağrıdır.
 
-### <a name="13-parameters"></a>1.3 Parametreler
+### <a name="14-parameters"></a>1.4 Parametreler
 
 - pageSize (varsayılan = 50.000): Yanıt olarak sonuç sayısı.
 - $top: Döndürülecek sonuç sayısı (@odata.nextLink döndürmez ve bu nedenle tüm verileri çekmez).
 
-### <a name="14-http-request"></a>1.4 HTTP isteği
+### <a name="15-http-request"></a>1.5 HTTP isteği
 
 ```http
 GET /api/machines/baselineComplianceAssessmentByMachine
 ```
 
-### <a name="15-properties-json-response"></a>1.5 Özellikleri (JSON yanıtı)
+### <a name="16-properties-json-response"></a>1.6 Özellikleri (JSON yanıtı)
 
 > [!NOTE]
 > Her kayıt yaklaşık 1 KB veridir. Doğru pageSize parametresini seçerken bunu dikkate almanız gerekir.
@@ -97,15 +106,15 @@ GET /api/machines/baselineComplianceAssessmentByMachine
 |Currentvalue|Dize|Cihazda bulunan algılanan değerler kümesi.
 |Kaynak|Dize|Geçerli cihaz ayarını belirlemek için kullanılan kayıt defteri yolu veya başka bir konum.
 
-## <a name="16-example"></a>1.6 Örnek
+## <a name="17-example"></a>1.7 Örneği
 
-### <a name="161-request-example"></a>1.6.1 İstek örneği
+### <a name="171-request-example"></a>1.7.1 İstek örneği
 
 ```http
 GET https://api.securitycenter.microsoft.com/api/machines/BaselineComplianceAssessmentByMachine
 ```
 
-### <a name="162-response-example"></a>1.6.2 Yanıt örneği
+### <a name="172-response-example"></a>1.7.2 Yanıt örneği
 
 ```json
 { 
