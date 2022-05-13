@@ -17,12 +17,12 @@ search.appverid:
 - MET150
 ms.assetid: af398293-c69d-465e-a249-d74561552d30
 description: Dosya planı bekletme etiketleri için gelişmiş yönetim özellikleri sağlar.
-ms.openlocfilehash: d509d878b244054138e4e95329d00759719e131d
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: 7cb963106551951fb6ae1e2455d21fa44d47a77c
+ms.sourcegitcommit: 99494a5530ad64802f341573ad42796134190296
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65319058"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65396386"
 ---
 # <a name="use-file-plan-to-create-and-manage-retention-labels"></a>Bekletme etiketleri oluşturmak ve yönetmek için dosya planını kullanma
 
@@ -49,10 +49,11 @@ Bekletme etiketlerinin ne olduğu ve nasıl kullanılacağı hakkında bilgi iç
 Dosya planına erişmek için aşağıdaki yönetici rollerinden birine sahip olmanız gerekir:
     
 - Bekletme Yöneticisi
-
 - Yalnızca görüntüleme bekletme yöneticisi
 
-[Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com/) **ÇözümlerKayıt** >  **yönetimiDosya** >  **planı'na** gidin.
+[Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com/) **ÇözümlerKayıt** >  **yönetimiDosya** >  **planı'na** gidin:
+
+![Dosya planı sayfası](../media/compliance-file-plan.png). 
 
 **Kayıt yönetimi** gezinti bölmesinde görüntülenmiyorsa, önce aşağı kaydırın ve **Tümünü göster'i** seçin.
 
@@ -154,7 +155,9 @@ Ancak, içerik gezgininin etiketlenmiş öğeleri göstermesi iki gün kadar sü
 
 Dosya planınızdan, kuruluşunuzdaki veri idaresi paydaşlarıyla düzenli uyumluluk gözden geçirmelerini kolaylaştırmanıza yardımcı olmak için tüm bekletme etiketlerinin ayrıntılarını bir .csv dosyasına aktarabilirsiniz.
 
-Tüm bekletme etiketlerini dışarı aktarmak için: **Dosya planı** sayfasında **Dışarı Aktar'a** tıklayın.
+Tüm bekletme etiketlerini dışarı aktarmak için: **Dosya planı** sayfasında **Dışarı Aktar'ı** seçin:
+
+![Dosya planını dışarı aktarma seçeneği.](../media/compliance-file-plan-export-labels.png)
 
 Tüm mevcut bekletme etiketlerini içeren bir *.csv dosyası açılır. Örneğin:
 
@@ -164,7 +167,7 @@ Tüm mevcut bekletme etiketlerini içeren bir *.csv dosyası açılır. Örneği
 
 Dosya planında, belirli bir biçime sahip bir .csv dosyası kullanarak yeni bekletme etiketlerini toplu olarak içeri aktarabilirsiniz: 
 
-1. **Dosya planı** sayfasında **İçeri Aktar**: ![Dosya planını içeri aktarma seçeneğine tıklayın](../media/compliance-file-plan-import-labels.png)
+1. **Dosya planı** sayfasında **İçeri Aktar**: ![Dosya planını içeri aktarma seçeneği'ni seçin](../media/compliance-file-plan-import-labels.png)
 
 2. **Dosya planınızı doldur ve içeri aktar** bölmesinde **Boş şablon indir'i** seçin:
 

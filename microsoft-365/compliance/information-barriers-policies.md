@@ -16,20 +16,20 @@ ms.localizationpriority: ''
 f1.keywords:
 - NOCSH
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: ef2c8c5c4dfdbb1598c8f6edc5344da9351b6ad7
-ms.sourcegitcommit: 570c3be37b6ab1d59a4988f7de9c9fb5ca38028f
+ms.openlocfilehash: 74da3ee1c2b3339a66ff205989dd978fdd00a530
+ms.sourcegitcommit: 99494a5530ad64802f341573ad42796134190296
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "65363302"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65396255"
 ---
 # <a name="get-started-with-information-barriers"></a>Bilgi engellerini kullanmaya başlama
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Bu makalede, kuruluşunuzda bilgi engeli (IB) ilkelerinin nasıl yapılandırıldığı açıklanır. Birkaç adım söz konusu olduğundan, IB ilkelerini yapılandırmaya başlamadan önce sürecin tamamını gözden geçirmeyi unutmayın.
+Bu makalede, kuruluşunuzda bilgi engelleri (IB) ilkelerinin nasıl yapılandırıldığı açıklanır. Birkaç adım söz konusu olduğundan, IB ilkelerini yapılandırmaya başlamadan önce sürecin tamamını gözden geçirmeyi unutmayın.
 
-IB ilkelerini tanımlamak, doğrulamak veya düzenlemek için [PowerShell cmdlet'lerini](/powershell/exchange/scc-powershell) biliyor olmanız gerekir. Bu makalede Çeşitli PowerShell cmdlet'leri örnekleri sağlasak da, kuruluşunuz için diğer ayrıntıları (parametre değerleri gibi) bilmeniz gerekir.
+Kuruluşunuzda IB'yi [Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com) veya [Office 365 Güvenlik ve Uyumluluk PowerShell](/powershell/exchange/scc-powershell) kullanarak yapılandıracaksınız. IB'yi ilk kez yapılandıran kuruluşlar için uyumluluk portalında **Bilgi engelleri** çözümünü kullanmanızı öneririz. Mevcut bir IB yapılandırmasını yönetiyorsanız ve PowerShell'i rahatça kullanıyorsanız, yine de bu seçeneğiniz vardır.
 
 IB senaryoları ve özellikleri hakkında daha fazla bilgi için bkz. [Bilgi engelleri hakkında bilgi edinin](information-barriers.md).
 
@@ -59,30 +59,30 @@ Roller ve izinler hakkında daha fazla bilgi edinmek için bkz. [Office 365 Güv
 
 ## <a name="configuration-concepts"></a>Yapılandırma kavramları
 
-IB için ilkeler tanımladığınızda, çeşitli nesneler ve kavramlarla çalışacaksınız.
+IB'yi yapılandırırken çeşitli nesneler ve kavramlarla çalışacaksınız.
 
-- **Kullanıcı hesabı öznitelikleri** Azure Active Directory (veya Exchange Online) içinde tanımlanır. Bu öznitelikler departman, iş unvanı, konum, ekip adı ve diğer iş profili ayrıntılarını içerebilir.
-- **Segmentler**, seçilen **kullanıcı hesabı özniteliği kullanılarak Microsoft Purview uyumluluk portalı tanımlanan kullanıcı kümeleridir**. Ayrıntılar için [IB tarafından desteklenen özniteliklerin](information-barriers-attributes.md) listesine bakın.
-- **IB olmayan kullanıcıların ve grupların görünürlüğü**. IB dışı kullanıcılar ve gruplar, IB segmentlerinin ve ilkelerinin dışında tutulan kullanıcılar ve gruplardır. IB ilkelerinin türüne bağlı olarak (engelle veya izin ver), bu kullanıcıların ve grubun davranışı Microsoft Teams, SharePoint, OneDrive ve genel adres listenizde farklılık gösterir. *İzin verme* ilkelerinde tanımlanan kullanıcılar için, IB dışı gruplar ve kullanıcılar IB segmentlerine ve ilkelerine dahil olan kullanıcılara görünmez. *Blok* ilkelerinde tanımlanan kullanıcılar için, IB dışı gruplar ve kullanıcılar IB segmentlerine ve ilkelerine dahil olan kullanıcılar tarafından görülebilir.
-- **Grup desteği**. Şu anda IB'de yalnızca Modern Gruplar desteklenmektedir ve Dağıtım Listeleri/Güvenlik Grupları IB dışı gruplar olarak değerlendirilir.
-- **Gizli/devre dışı bırakılmış kullanıcı hesapları**. Kuruluşunuzdaki gizli/devre dışı bırakılmış hesaplar için, kullanıcı hesapları gizlendiğinde veya devre dışı bırakıldığında *HiddenFromAddressListEnabled* parametresi otomatik olarak *True* olarak ayarlanır. IB özellikli kuruluşlarda bu hesapların diğer tüm kullanıcı hesaplarıyla iletişim kurması engellenir. Microsoft Teams'de, bu hesaplar dahil tüm sohbetler kilitlenir veya kullanıcılar konuşmalardan otomatik olarak kaldırılır.
-- **IB ilkeleri** , iletişim sınırlarını veya kısıtlamalarını belirler. Bilgi engeli ilkeleri tanımladığınızda, iki tür ilke arasından seçim yapabilirsiniz:
+- **Kullanıcı hesabı öznitelikleri** Azure Active Directory (veya Exchange Online) içinde tanımlanır. Bu öznitelikler departman, iş unvanı, konum, ekip adı ve diğer iş profili ayrıntılarını içerebilir. Bu özniteliklere sahip segmentlere kullanıcı veya grup atayacaksınız.
+- **Segmentler** , uyumluluk portalında veya seçilen grup veya kullanıcı hesabı özniteliklerini kullanan PowerShell kullanılarak tanımlanan grup veya kullanıcı kümeleridir. Ayrıntılar için [IB tarafından desteklenen özniteliklerin](information-barriers-attributes.md) listesine bakın.
+- **IB ilkeleri** , iletişim sınırlarını veya kısıtlamalarını belirler. IB ilkelerini tanımlarken iki tür ilke arasından seçim yapabilirsiniz:
   - *İlkeleri engelleme* , bir kesimin başka bir kesimle iletişim kurmasını engeller.
   - *İlkelere izin ver* , bir segmentin yalnızca belirli diğer segmentlerle iletişim kurmasına izin verir.
 
     > [!NOTE]
-    > **İzin verme** ilkeleri için, IB dışı gruplar ve kullanıcılar IB segmentlerine ve ilkelerine dahil edilen kullanıcılara görünmez. IB dışı grupların ve kullanıcıların IB segmentlerine ve ilkelerine dahil edilen kullanıcılara görünür olması gerekiyorsa **, engelleme** ilkelerini kullanmanız gerekir.
+    > *İzin verme* ilkeleri için, IB dışı gruplar ve kullanıcılar IB segmentlerine ve ilkelerine dahil edilen kullanıcılara görünmez. IB dışı grupların ve kullanıcıların IB segmentlerine ve ilkelerine dahil edilen kullanıcılara görünür olması gerekiyorsa *, engelleme* ilkelerini kullanmanız gerekir.
 
-- *İlke uygulaması* tüm IB ilkeleri tanımlandıktan sonra yapılır ve bunları kuruluşunuzda uygulamaya hazır olursunuz.
+- **İlke uygulaması** tüm IB ilkeleri tanımlandıktan sonra yapılır ve bunları kuruluşunuzda uygulamaya hazır olursunuz.
+- **IB olmayan kullanıcıların ve grupların görünürlüğü**. IB dışı kullanıcılar ve gruplar, IB segmentlerinin ve ilkelerinin dışında tutulan kullanıcılar ve gruplardır. IB ilkelerinin türüne bağlı olarak (engelle veya izin ver), bu kullanıcıların ve grubun davranışı Microsoft Teams, SharePoint, OneDrive ve genel adres listenizde farklılık gösterir. *İzin verme* ilkelerinde tanımlanan kullanıcılar için, IB dışı gruplar ve kullanıcılar IB segmentlerine ve ilkelerine dahil olan kullanıcılara görünmez. *Blok* ilkelerinde tanımlanan kullanıcılar için, IB dışı gruplar ve kullanıcılar IB segmentlerine ve ilkelerine dahil olan kullanıcılar tarafından görülebilir.
+- **Grup desteği**. Şu anda IB'de yalnızca Modern Gruplar desteklenmektedir ve Dağıtım Listeleri/Güvenlik Grupları IB dışı gruplar olarak değerlendirilir.
+- **Gizli/devre dışı bırakılmış kullanıcı hesapları**. Kuruluşunuzdaki gizli/devre dışı bırakılmış hesaplar için, kullanıcı hesapları gizlendiğinde veya devre dışı bırakıldığında *HiddenFromAddressListEnabled* parametresi otomatik olarak *True* olarak ayarlanır. IB özellikli kuruluşlarda bu hesapların diğer tüm kullanıcı hesaplarıyla iletişim kurması engellenir. Microsoft Teams'de, bu hesaplar dahil tüm sohbetler kilitlenir veya kullanıcılar konuşmalardan otomatik olarak kaldırılır.
 
-## <a name="configuration-at-a-glance"></a>Bir bakışta yapılandırma
+## <a name="configuration-overview"></a>Yapılandırmaya genel bakış
 
 | **Adımlar** | **Nelerin dahil olduğu** |
 |:------|:----------------|
-| **1. Adım**: [Önkoşulların karşılandığından emin olun](#step-1-make-sure-prerequisites-are-met) | - Gerekli aboneliklere ve izinlere sahip olduğunuzu doğrulayın <br/>- Dizininizin kullanıcıları segmentlere ayırmaya yönelik veriler içerdiğini doğrulayın<br/>- [Microsoft Teams için ada göre aramayı](/microsoftteams/teams-scoped-directory-search) etkinleştirme<br/>- Denetim günlüğünün açık olduğundan emin olun<br/>- Exchange adres defteri ilkelerinin uygulanmadığından emin olun<br/>- PowerShell kullanma (örnekler sağlanır)<br/>- Microsoft Teams için yönetici onayı sağlayın (adımlar dahildir) |
+| **1. Adım**: [Önkoşulların karşılandığından emin olun](#step-1-make-sure-prerequisites-are-met) | - Gerekli aboneliklere ve izinlere sahip olduğunuzu doğrulayın <br/>- Dizininizin kullanıcıları segmentlere ayırmaya yönelik veriler içerdiğini doğrulayın<br/>- [Microsoft Teams için ada göre aramayı](/microsoftteams/teams-scoped-directory-search) etkinleştirme<br/>- Denetim günlüğünün açık olduğundan emin olun<br/>- Exchange adres defteri ilkelerinin uygulanmadığından emin olun <br/>- Microsoft Teams için yönetici onayı sağlayın (adımlar dahildir) |
 | **2. Adım**: [Kuruluşunuzdaki kullanıcıları segmentlere ayırma](#step-2-segment-users-in-your-organization) | - Hangi ilkelerin gerekli olduğunu belirleme<br/>- Tanımlayacak segmentlerin listesini oluşturma<br/>- Hangi özniteliklerin kullanılacağını belirleme<br/>- İlke filtreleri açısından segmentleri tanımlama |
-| **3. Adım**: [Bilgi engeli ilkelerini tanımlama](#step-3-define-information-barrier-policies) | - İlkelerinizi tanımlayın (henüz geçerli değildir)<br/>- İki tür arasından seçim yapın (engelle veya izin ver) |
-| **4. Adım**: [Bilgi engeli ilkelerini uygulama](#step-4-apply-information-barrier-policies) | - İlkeleri etkin duruma ayarlama<br/>- İlke uygulamasını çalıştırma<br/>- İlke durumunu görüntüleme |
+| **3. Adım**: [Bilgi engeli ilkeleri oluşturma](#step-3-create-ib-policies) | - İlkelerinizi oluşturma (henüz geçerli değildir)<br/>- İki tür arasından seçim yapın (engelle veya izin ver) |
+| **4. Adım**: [Bilgi engeli ilkelerini uygulama](#step-4-apply-ib-policies) | - İlkeleri etkin duruma ayarlama<br/>- İlke uygulamasını çalıştırma<br/>- İlke durumunu görüntüleme |
 | **5. Adım**: [SharePoint ve OneDrive ile ilgili bilgi engelleri için yapılandırma (isteğe bağlı)](#step-5-configuration-for-information-barriers-on-sharepoint-and-onedrive) | - IB'yi SharePoint ve OneDrive için yapılandırma |
 | **6. Adım**: [Bilgi engelleri modları (isteğe bağlı)](#step-6-information-barriers-modes) | - Varsa IB modlarını güncelleştirme |
 
@@ -91,7 +91,7 @@ IB için ilkeler tanımladığınızda, çeşitli nesneler ve kavramlarla çalı
 Gerekli aboneliklere ve izinlere ek olarak, IB'yi yapılandırmadan önce aşağıdaki gereksinimlerin karşılandığından emin olun:
 
 - **Dizin verileri**: Kuruluşunuzun yapısının dizin verilerine yansıtıldığından emin olun. Bu eylemi gerçekleştirmek için kullanıcı hesabı özniteliklerinin (grup üyeliği, departman adı vb.) Azure Active Directory (veya Exchange Online) içinde doğru dolduruldığından emin olun. Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:
-  - [Bilgi engeli ilkeleri öznitelikleri](information-barriers-attributes.md)
+  - [Bilgi engeli ilkeleri için öznitelikler](information-barriers-attributes.md)
   - [Azure Active Directory kullanarak kullanıcının profil bilgilerini ekleme veya güncelleştirme](/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal)
   - [Office 365 PowerShell ile kullanıcı hesabı özelliklerini yapılandırma](../enterprise/configure-user-account-properties-with-microsoft-365-powershell.md)
 
@@ -101,15 +101,15 @@ Gerekli aboneliklere ve izinlere ek olarak, IB'yi yapılandırmadan önce aşağ
 
 - **Mevcut Exchange Online adres defteri ilkelerini kaldırma**: IB ilkelerini tanımlayıp uygulamadan önce, kuruluşunuzdaki tüm Exchange Online adres defteri ilkelerini kaldırmanız gerekir. IB ilkeleri adres defteri ilkelerini temel alır ve mevcut ABP ilkeleri IB tarafından oluşturulan ABP'lerle uyumlu değildir. Mevcut adres defteri ilkelerinizi kaldırmak için bkz. [Exchange Online'da adres defteri ilkesini kaldırma](/exchange/address-books/address-book-policies/remove-an-address-book-policy). IB ilkeleri ve Exchange Online hakkında daha fazla bilgi için bkz. [Bilgi engelleri ve Exchange Online](information-barriers.md#information-barriers-and-exchange-online).
 
-- **PowerShell kullanarak yönetme**: Şu anda IB ilkeleri Güvenlik & Uyumluluk Merkezi PowerShell'de tanımlanmış ve yönetilmektedir. Bu makalede çeşitli örnekler sağlansa da PowerShell cmdlet'leri ve parametreleri hakkında bilgi sahibi olmanız gerekir. Azure Active Directory PowerShell modülüne de ihtiyacınız olacaktır.
-  - [Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell)
+- **PowerShell kullanarak yönetme (isteğe bağlı):** IB kesimleri ve ilkeleri Office 365 Güvenlik & Uyumluluğu PowerShell'de tanımlanabilir ve yönetilebilir. Bu makalede çeşitli örnekler sağlansa da, IB segmentlerini ve ilkelerini yapılandırmak ve yönetmek için PowerShell'i kullanmayı seçerseniz PowerShell cmdlet'lerini ve parametrelerini bilmeniz gerekir. Bu yapılandırma seçeneğini belirlerseniz Azure Active Directory PowerShell modülüne de ihtiyacınız olacaktır.
+  - [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell)
   - [Graph için Azure Active Directory PowerShell'i yükleme](/powershell/azure/active-directory/install-adv2)
 
 - **Microsoft Teams'de IB için yönetici onayı**: IB ilkeleriniz geçerli olduğunda, IB uyumsuz uyumluluk kullanıcılarını Gruplar'dan kaldırabilirler (örneğin, grupları temel alan Teams kanalları). Bu yapılandırma, kuruluşunuzun ilkeler ve düzenlemeler ile uyumlu kalmasını sağlamaya yardımcı olur. IB ilkelerinin Microsoft Teams beklendiği gibi çalışmasını sağlamak için aşağıdaki yordamı kullanın.
 
    1. Önkoşul: [Graph için Azure Active Directory PowerShell'i yükleyin](/powershell/azure/active-directory/install-adv2).
 
-   1. Aşağıdaki PowerShell cmdlet'lerini çalıştırın:
+   2. Aşağıdaki PowerShell cmdlet'lerini çalıştırın:
 
       ```powershell
       Connect-AzureAD -Tenant "<yourtenantdomain.com>"  //for example: Connect-AzureAD -Tenant "Contoso.onmicrosoft.com"
@@ -119,18 +119,15 @@ Gerekli aboneliklere ve izinlere ek olarak, IB'yi yapılandırmadan önce aşağ
       Start-Process  "https://login.microsoftonline.com/common/adminconsent?client_id=$appId"
       ```
 
-   1. İstendiğinde, Office 365 için iş veya okul hesabınızı kullanarak oturum açın.
+   3. İstendiğinde, Office 365 için iş veya okul hesabınızı kullanarak oturum açın.
 
-   1. **İstenen izinler** iletişim kutusunda bilgileri gözden geçirin ve **kabul et'i** seçin. Uygulama tarafından istenen izinler aşağıda verilmiştir.
-
-      > [!div class="mx-imgBorder"]
-      > ![Görüntü.](https://user-images.githubusercontent.com/8932063/107690955-b1772300-6c5f-11eb-9527-4235de860b27.png)
+   4. **İstenen izinler** iletişim kutusunda bilgileri gözden geçirin ve **kabul et'i** seçin.
 
 Tüm önkoşullar karşılandığında sonraki adıma geçin.
 
 ## <a name="step-2-segment-users-in-your-organization"></a>2. Adım: Kuruluşunuzdaki kullanıcıları segmentlere ayırma
 
-Bu adım sırasında hangi IB ilkelerinin gerekli olduğunu belirler, tanımlayacak segmentlerin listesini oluşturur ve ardından segmentlerinizi tanımlarsınız.
+Bu adımda, hangi IB ilkelerinin gerekli olduğunu belirleyecek, tanımlayacak segmentlerin listesini oluşturacak ve segmentlerinizi tanımlayacaksınız. Segmentleri tanımlamak kullanıcıları etkilemez, yalnızca IB ilkelerinin tanımlanıp uygulanacağı aşamayı ayarlar.
 
 ### <a name="determine-what-policies-are-needed"></a>Hangi ilkelerin gerekli olduğunu belirleme
 
@@ -159,15 +156,32 @@ Kuruluşunuzun dizin verilerinde segmentleri tanımlamak için hangi öznitelikl
 > [!IMPORTANT]
 > **Sonraki bölüme geçmeden önce dizin verilerinizin, segmentleri tanımlamak için kullanabileceğiniz öznitelik değerlerine sahip olduğundan emin olun**. Dizin verilerinizin kullanmak istediğiniz öznitelikler için değerleri yoksa, IB'yi yapılandırmaya devam etmeden önce kullanıcı hesaplarının bu bilgileri içerecek şekilde güncelleştirilmesi gerekir. Bu konuda yardım almak için aşağıdaki kaynaklara bakın:<br/>- [Office 365 PowerShell ile kullanıcı hesabı özelliklerini yapılandırma](../enterprise/configure-user-account-properties-with-microsoft-365-powershell.md)<br/>- [Azure Active Directory kullanarak kullanıcının profil bilgilerini ekleme veya güncelleştirme](/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal)
 
+### <a name="define-segments-using-the-compliance-portal"></a>Uyumluluk portalını kullanarak segmentleri tanımlama
+
+Uyumluluk portalında segmentleri tanımlamak için aşağıdaki adımları tamamlayın:
+
+1. Kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak [uyumluluk portalında](https://compliance.microsoft.com) oturum açın.
+2. Uyumluluk portalında **Bilgi engelleriEgments'i** >  seçin.
+3. **Segmentler** sayfasında **Yeni segment'i** seçerek yeni bir segment oluşturun ve yapılandırın.
+4. **Ad** sayfasında, segment için bir ad girin. Bir segment oluşturulduktan sonra yeniden adlandıramazsınız.
+5. **İleri**'yi seçin.
+6. **Kullanıcı grubu filtresi** sayfasında **Ekle'yi** seçerek segmentin grup ve kullanıcı özniteliklerini yapılandırın. Kullanılabilir öznitelikler listesinden segment için bir öznitelik seçin.
+7. Seçili öznitelik için *Eşit* veya *Eşit değil'i* seçin ve özniteliğin değerini girin. Örneğin, öznitelik olarak *Departman'ı* ve *Eşittir'i* seçtiyseniz, bu segment koşulu için tanımlanan *Bölüm* olarak *Pazarlama* girebilirsiniz. **Koşul ekle'yi** seçerek bir öznitelik için ek koşullar ekleyebilirsiniz. Bir özniteliği veya öznitelik koşulunu silmeniz gerekiyorsa, öznitelik veya koşul için sil simgesini seçin.
+8. **Kullanıcı grubu filtresi** sayfasında gerektiğinde ek öznitelikler ekleyin ve **İleri'yi** seçin.
+9. **Ayarlarınızı gözden geçirin** sayfasında, segment için seçtiğiniz ayarları ve seçimleriniz için önerileri veya uyarıları gözden geçirin. Segment özniteliklerini ve koşullarını değiştirmek için **Düzenle'yi** seçin veya segmenti oluşturmak için **Gönder'i** seçin.
+
+    > [!IMPORTANT]
+    > **Segmentlerinizin çakışmadığından emin olun**. IB ilkelerinden etkilenecek her kullanıcı bir (ve yalnızca bir) kesime ait olmalıdır. Hiçbir kullanıcı iki veya daha fazla kesime ait olmamalıdır. Örnek senaryo için bu makaledeki [Örnek: Contoso'nun tanımlı kesimleri](#contosos-defined-segments) konusuna bakın.
+
 ### <a name="define-segments-using-powershell"></a>PowerShell kullanarak segmentleri tanımlama
 
-Sonraki görev, kuruluşunuz için segmentleri tanımlamaktır. Segmentleri tanımlamak kullanıcıları etkilemez, yalnızca IB ilkelerinin tanımlanıp uygulanacağı aşamayı ayarlar.
+PowerShell ile segmentleri tanımlamak için aşağıdaki adımları tamamlayın:
 
 1. Kullanmak istediğiniz [özniteliğe](information-barriers-attributes.md) karşılık gelen **UserGroupFilter** parametresiyle **New-OrganizationSegment** cmdlet'ini kullanın.
 
     | Sözdizimi | Örnek |
     |:---------|:----------|
-    | `New-OrganizationSegment -Name "segmentname" -UserGroupFilter "attribute -eq 'attributevalue'"` |`New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"` <p>Bu örnekte, *departman* özniteliğindeki bir değer olan *İk* kullanılarak *İk* adlı bir kesim tanımlanmıştır. Cmdlet'in **-eq** bölümü "eşittir" anlamına gelir. (Alternatif olarak, "eşit değil" anlamına gelen **-ne** kullanabilirsiniz. Bkz [. Segment tanımlarında "eşittir" ve "eşit değil" kullanma](#using-equals-and-not-equals-in-segment-definitions).) |
+    | `New-OrganizationSegment -Name "segmentname" -UserGroupFilter "attribute -eq 'attributevalue'"` |`New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"` <p>Bu örnekte, *departman* özniteliğindeki bir değer olan *İk* kullanılarak *İk* adlı bir kesim tanımlanmıştır. Cmdlet'in **-eq** bölümü "eşittir" anlamına gelir. (Alternatif olarak, "eşit değil" anlamına gelen **-ne** kullanabilirsiniz. Bkz [. Segment tanımlarında "eşittir" ve "eşit değil" kullanma](#using-equals-and-not-equals-in-powershell-segment-definitions).) |
 
     Her cmdlet'i çalıştırdıktan sonra yeni segmentle ilgili ayrıntıların listesini görmeniz gerekir. Ayrıntılar arasında segmentin türü, kimin oluşturduğu veya en son değiştirildiği vb. yer alır. 
 
@@ -176,11 +190,11 @@ Sonraki görev, kuruluşunuz için segmentleri tanımlamaktır. Segmentleri tan�
     > [!IMPORTANT]
     > **Segmentlerinizin çakışmadığından emin olun**. IB ilkelerinden etkilenecek her kullanıcı bir (ve yalnızca bir) kesime ait olmalıdır. Hiçbir kullanıcı iki veya daha fazla kesime ait olmamalıdır. Örnek senaryo için bu makaledeki [Örnek: Contoso'nun tanımlı kesimleri](#contosos-defined-segments) konusuna bakın.
 
-Segmentlerinizi tanımladıktan sonra [3. Adım: Bilgi engeli ilkelerini tanımlama](#step-3-define-information-barrier-policies) bölümüne geçin.
+Segmentlerinizi tanımladıktan sonra [3. Adım: IB ilkeleri oluşturma](#step-3-create-ib-policies) bölümüne geçin.
 
-### <a name="using-equals-and-not-equals-in-segment-definitions"></a>Segment tanımlarında "equals" ve "not equals" kullanma
+### <a name="using-equals-and-not-equals-in-powershell-segment-definitions"></a>PowerShell segment tanımlarında "equals" ve "not equals" kullanma
 
-Aşağıdaki örnekte, "Departman İk'ya eşittir" şeklinde bir segment tanımlıyoruz. 
+Aşağıdaki örnekte, PowerShell kullanarak IB segmentlerini yapılandırıyoruz ve 'Departman İk'ya eşit' gibi bir kesim tanımlıyoruz.
 
 | Örnek | Not |
 |:----------|:-------|
@@ -204,9 +218,9 @@ Segmentleri, aşağıdaki tabloda gösterildiği gibi **-ne** olarak belirtilen 
 > [!TIP]
 > Mümkünse, "-eq" veya "-ne" içeren segment tanımlarını kullanın. Karmaşık segment tanımları tanımlamamaya çalışın.
 
-## <a name="step-3-define-information-barrier-policies"></a>3. Adım: Bilgi engeli ilkelerini tanımlama
+## <a name="step-3-create-ib-policies"></a>3. Adım: IB ilkeleri oluşturma
 
-Belirli segmentler arasındaki iletişimi engellemeniz mi yoksa iletişimleri belirli segmentlerle sınırlamanız mı gerektiğini belirleyin. İdeal olarak, kuruluşunuzun iç, yasal ve sektör gereksinimleriyle uyumlu olduğundan emin olmak için en az IB ilkesi sayısını kullanırsınız.
+IB ilkelerinizi oluştururken, belirli segmentler arasındaki iletişimi engellemeniz mi yoksa iletişimleri belirli segmentlerle sınırlamanız mı gerektiğini belirlersiniz. İdeal olarak, kuruluşunuzun iç, yasal ve sektör gereksinimleriyle uyumlu olduğundan emin olmak için en az IB ilkesi sayısını kullanırsınız. IB ilkeleri oluşturmak ve uygulamak için uyumluluk portalını veya PowerShell'i kullanabilirsiniz.
 
 > [!TIP]
 > Kullanıcı deneyimi tutarlılığı için mümkünse çoğu senaryo için Engelleme ilkelerini kullanmanızı öneririz.
@@ -217,13 +231,42 @@ Kullanıcı segmentleri listeniz ve tanımlamak istediğiniz IB ilkeleriyle bir 
 - [Senaryo 2: Bir segmentin yalnızca bir diğer segmentle iletişim kurmasına izin verme](#scenario-2-allow-a-segment-to-communicate-only-with-one-other-segment)
 
 > [!IMPORTANT]
-> **İlkeleri tanımlarken bir segmente birden fazla ilke atamadığınızdan emin olun**. Örneğin, *Satış* adlı bir segment için bir ilke tanımlarsanız, *Sales* için ek bir ilke tanımlamayın.<p> Ayrıca, IB ilkelerini tanımlarken, uygulamaya hazır olana kadar bu ilkeleri devre dışı durumuna ayarladığınızdan emin olun. İlkelerin tanımlanması (veya düzenlenmesi) bu ilkeler etkin duruma ayarlanıp sonra uygulanana kadar kullanıcıları etkilemez.
+> **İlkeleri tanımlarken bir segmente birden fazla ilke atamadığınızdan emin olun**. Örneğin, *Satış* adlı bir segment için bir ilke tanımlarsanız, *Satış* segmenti için ek bir ilke tanımlamayın.<br> Ayrıca, IB ilkelerini tanımlarken, uygulamaya hazır olana kadar bu ilkeleri devre dışı durumuna ayarladığınızdan emin olun. İlkelerin tanımlanması (veya düzenlenmesi) bu ilkeler etkin duruma ayarlanıp sonra uygulanana kadar kullanıcıları etkilemez.
 
 ### <a name="scenario-1-block-communications-between-segments"></a>Senaryo 1: Segmentler arasındaki iletişimi engelleme
 
 Segmentlerin birbiriyle iletişim kurmasını engellemek istediğinizde iki ilke tanımlarsınız: her yön için bir ilke. Her ilke iletişimi yalnızca bir yönde engeller.
 
-Örneğin, Segment A ile Segment B arasındaki iletişimi engellemek istediğinizi varsayalım. Bu durumda, Segment A'nın Segment B ile iletişim kurmasını engelleyen bir ilke tanımlarsınız ve ardından B Segmenti'nin A Segmenti ile iletişim kurmasını önlemek için ikinci bir ilke tanımlarsınız.
+Örneğin, Segment A ile Segment B arasındaki iletişimi engellemek istediğinizi varsayalım. Bu durumda iki ilke tanımlarsınız:
+
+- Segment A'nın Segment B ile iletişim kurmasını engelleyen bir ilke
+- Segment B'nin Segment A ile iletişim kurmasını engelleyen ikinci ilke
+
+#### <a name="create-policies-using-the-compliance-portal-for-scenario-1"></a>Senaryo 1 için uyumluluk portalını kullanarak ilke oluşturma
+
+Uyumluluk portalında ilkeleri tanımlamak için aşağıdaki adımları tamamlayın:
+
+1. Kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak [uyumluluk portalında](https://compliance.microsoft.com) oturum açın.
+2. Uyumluluk portalında **Bilgi engelleriİlkeler'i** >  seçin.
+3. **İlkeler** sayfasında İlke **oluştur'u** seçerek yeni bir IB ilkesi oluşturun ve yapılandırın.
+4. **Ad** sayfasında ilke için bir ad girin ve **İleri'yi** seçin.
+5. **Atanan segment** sayfasında **Segment seç'i** seçin. Bir segmenti ada göre aramak için arama kutusunu kullanın veya görüntülenen listeden segmenti seçmek için kaydırın. Seçili segmenti ilkeye eklemek için **Ekle'yi** seçin. Yalnızca bir segment seçebilirsiniz.
+6. **İleri**'yi seçin.
+7. **İletişim ve işbirliği** sayfasında İletişim **ve işbirliği** alanında ilke türünü seçin. İlke seçenekleri *İzin Verildi* veya *Engellendi şeklindedir*. Bu örnek senaryoda, ilk ilke için *Engellendi* seçilir.
+
+    >[!IMPORTANT]
+    >İlke oluşturulduktan sonra segmentler için İzin Verilen ve Engellenen durumu değiştirilemez. İlke oluşturduktan sonra durumu değiştirmek için ilkeyi silmeniz ve yeni bir ilke oluşturmanız gerekir.
+
+8. Hedef **segmente** yönelik eylemleri tanımlamak için Segment seç'i seçin. Bu adımda birden fazla segment atayabilirsiniz. Örneğin, *Satış* adlı bir segmentteki kullanıcıların *Araştırma* adlı segmentteki kullanıcılarla iletişim kurmasını engellemek istiyorsanız, 5. Adımda *Satış* segmentini tanımlar ve bu adımda **Segment seç** seçeneğinde *Araştırma'yı* atarsınız.
+9. **İleri**'yi seçin.
+10. **İlke durumu** sayfasında etkin ilke durumunu **Açık** olarak değiştirin. Devam etmek için **İleri'yi** seçin.
+11. **Ayarlarınızı gözden geçirin** sayfasında, ilke için seçtiğiniz ayarları ve seçimleriniz için önerileri veya uyarıları gözden geçirin. İlke segmentlerinden herhangi birini ve durumunu değiştirmek için **Düzenle'yi** veya ilkeyi oluşturmak için **Gönder'i** seçin.
+
+Bu örnekte, Önceki adımları tekrarlayarak *Research* adlı segmentteki kullanıcıların *Satış* adlı segmentteki kullanıcılarla iletişim kurmasını engelleyecek ikinci bir *Engelle* ilkesi oluşturursunuz. 5. Adımda *Araştırma* segmentini tanımlamış ve Segment **seç** seçeneğinde *Satışlar* (veya birden çok segment) atayabilirsiniz.
+
+#### <a name="create-policies-using-powershell-for-scenario-1"></a>Senaryo 1 için PowerShell kullanarak ilke oluşturma
+
+PowerShell ile ilke tanımlamak için aşağıdaki adımları tamamlayın:
 
 1. İlk engelleme ilkenizi tanımlamak için **SegmentsBlocked** parametresiyle **New-InformationBarrierPolicy** cmdlet'ini kullanın.
 
@@ -240,11 +283,35 @@ Segmentlerin birbiriyle iletişim kurmasını engellemek istediğinizde iki ilke
 3. Aşağıdaki eylemlerden birine geçin:
 
    - (Gerekirse) [Bir segmentin yalnızca bir diğer segmentle iletişim kurmasına izin veren bir ilke tanımlama](#scenario-2-allow-a-segment-to-communicate-only-with-one-other-segment) 
-   - (Tüm ilkeleriniz tanımlandıktan sonra) [Bilgi engeli ilkelerini uygulama](#step-4-apply-information-barrier-policies)
+   - (Tüm ilkeleriniz tanımlandıktan sonra) [IB ilkelerini uygulama](#step-4-apply-ib-policies)
 
 ### <a name="scenario-2-allow-a-segment-to-communicate-only-with-one-other-segment"></a>Senaryo 2: Bir segmentin yalnızca bir diğer segmentle iletişim kurmasına izin verme
 
 Bir segmentin yalnızca bir diğer segmentle iletişim kurmasına izin vermek istediğinizde, bu segment için yalnızca bir ilke tanımlarsınız. İletişimde olan segment için benzer bir yönlü ilke gerekmez (çünkü varsayılan olarak herkesle iletişim kurabilir ve işbirliği yapabilir).
+
+#### <a name="create-a-policy-using-the-compliance-portal-for-scenario-2"></a>Senaryo 2 için uyumluluk portalını kullanarak ilke oluşturma
+
+Uyumluluk portalında ilkeleri tanımlamak için aşağıdaki adımları tamamlayın:
+
+1. Kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak [uyumluluk portalında](https://compliance.microsoft.com) oturum açın.
+2. Uyumluluk portalında **Bilgi engelleriİlkeler'i** >  seçin.
+3. **İlkeler** sayfasında İlke **oluştur'u** seçerek yeni bir IB ilkesi oluşturun ve yapılandırın.
+4. **Ad** sayfasında ilke için bir ad girin ve **İleri'yi** seçin.
+5. **Atanan segment** sayfasında **Segment seç'i** seçin. Bir segmenti ada göre aramak için arama kutusunu kullanın veya görüntülenen listeden segmenti seçmek için kaydırın. Seçili segmenti ilkeye eklemek için **Ekle'yi** seçin. Yalnızca bir segment seçebilirsiniz.
+6. **İleri**'yi seçin.
+7. **İletişim ve işbirliği** sayfasında İletişim **ve işbirliği** alanında ilke türünü seçin. İlke seçenekleri *İzin Verildi* veya *Engellendi şeklindedir*. Bu örnek senaryoda, ilke için *İzin verildi* seçilir.
+
+    >[!IMPORTANT]
+    >İlke oluşturulduktan sonra segmentler için İzin Verilen ve Engellenen durumu değiştirilemez. İlke oluşturduktan sonra durumu değiştirmek için ilkeyi silmeniz ve yeni bir ilke oluşturmanız gerekir.
+
+8. Hedef **segmente** yönelik eylemleri tanımlamak için Segment seç'i seçin. Bu adımda birden fazla segment atayabilirsiniz. Örneğin, *Üretim* adlı bir segmentteki kullanıcıların *İk* adlı segmentteki kullanıcılarla iletişim kurmasına izin vermek istiyorsanız, 5. Adımda *Üretim* segmentini tanımlar ve bu adımın **Segment seç** seçeneğinde *İk'yı* atarsınız.
+9. **İleri**'yi seçin.
+10. **İlke durumu** sayfasında etkin ilke durumunu **Açık** olarak değiştirin. Devam etmek için **İleri'yi** seçin.
+11. **Ayarlarınızı gözden geçirin** sayfasında, ilke için seçtiğiniz ayarları ve seçimleriniz için önerileri veya uyarıları gözden geçirin. İlke segmentlerinden herhangi birini ve durumunu değiştirmek için **Düzenle'yi** veya ilkeyi oluşturmak için **Gönder'i** seçin.
+
+#### <a name="create-a-policy-using-powershell-for-scenario-2"></a>Senaryo 2 için PowerShell kullanarak ilke oluşturma
+
+PowerShell ile ilke tanımlamak için aşağıdaki adımları tamamlayın:
 
 1. Bir segmentin yalnızca bir diğer segmentle iletişim kurmasına izin vermek için, **SegmentlerAllowed** parametresiyle **New-InformationBarrierPolicy** cmdlet'ini kullanın.
 
@@ -263,11 +330,26 @@ Bir segmentin yalnızca bir diğer segmentle iletişim kurmasına izin vermek is
 2. Aşağıdaki eylemlerden birine geçin:
 
    - (Gerekirse) [Segmentler arasındaki iletişimi engellemek için bir ilke tanımlama](#scenario-1-block-communications-between-segments) 
-   - (Tüm ilkeleriniz tanımlandıktan sonra) [Bilgi engeli ilkelerini uygulama](#step-4-apply-information-barrier-policies)
+   - (Tüm ilkeleriniz tanımlandıktan sonra) [IB ilkelerini uygulama](#step-4-apply-ib-policies)
 
-## <a name="step-4-apply-information-barrier-policies"></a>4. Adım: Bilgi engeli ilkelerini uygulama
+## <a name="step-4-apply-ib-policies"></a>4. Adım: IB ilkelerini uygulama
 
 IB ilkeleri etkin duruma ayarlayıp ilkeleri uygulayana kadar geçerli olmaz.
+
+### <a name="apply-policies-using-the-compliance-portal"></a>Uyumluluk portalını kullanarak ilkeleri uygulama
+
+Uyumluluk portalında ilkeleri uygulamak için aşağıdaki adımları tamamlayın:
+
+1. Kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak [uyumluluk portalında](https://compliance.microsoft.com) oturum açın.
+2. Uyumluluk portalında **Bilgi engelleriİlke** >  **uygulaması'nı** seçin.
+3. **İlkeler uygulaması** sayfasında, Kuruluşunuzdaki tüm IB ilkelerini uygulamak için **Tüm ilkeleri uygula'yı** seçin.
+
+    >[!NOTE]
+    >Sistemin ilkeleri uygulamaya başlaması için 30 dakika bekleyin. Sistem, ilkeler kullanıcı tarafından kullanıcı tarafından uygulanır. Sistem saatte yaklaşık 5.000 kullanıcı hesabını işler.
+
+### <a name="apply-policies-using-powershell"></a>PowerShell kullanarak ilke uygulama
+
+PowerShell kullanarak ilke uygulamak için aşağıdaki adımları tamamlayın:
 
 1. Tanımlanmış ilkelerin listesini görmek için **Get-InformationBarrierPolicy** cmdlet'ini kullanın. Her ilkenin durumunu ve kimliğini (GUID) not edin.
 
@@ -281,7 +363,7 @@ IB ilkeleri etkin duruma ayarlayıp ilkeleri uygulayana kadar geçerli olmaz.
 
     Bu adımı her ilke için uygun şekilde yineleyin.
 
-3. IB ilkelerinizi etkin duruma ayarlamayı bitirdiğinizde, Güvenlik & Uyumluluk Merkezi PowerShell'de **Start-InformationBarrierPoliciesApplication** cmdlet'ini kullanın.
+3. IB ilkelerinizi etkin duruma ayarlamayı bitirdiğinizde, Güvenlik & Uyumluluk PowerShell'deki **Start-InformationBarrierPoliciesApplication** cmdlet'ini kullanın.
 
     Sözdizimi: `Start-InformationBarrierPoliciesApplication`
 
@@ -293,11 +375,11 @@ PowerShell ile aşağıdaki tabloda listelendiği gibi kullanıcı hesaplarını
 
 | Bu bilgileri görüntülemek için | Bu eylemi gerçekleştirin |
 |:---------------|:----------|
-| Kullanıcı hesapları | Kimlik parametreleriyle **Get-InformationBarrierRecipientStatus** cmdlet'ini kullanın. <p> Sözdizimi: `Get-InformationBarrierRecipientStatus -Identity <value> -Identity2 <value>` <p> Ad, diğer ad, ayırt edici ad, kurallı etki alanı adı, e-posta adresi veya GUID gibi her kullanıcıyı benzersiz olarak tanımlayan herhangi bir değeri kullanabilirsiniz. <p> Örnek: `Get-InformationBarrierRecipientStatus -Identity meganb -Identity2 alexw` <p> Bu örnekte, Office 365'de iki kullanıcı hesabına başvuracağız: *Megan* için *meganb* ve *Alex* için *alexw*. <p> (Bu cmdlet'i tek bir kullanıcı için de kullanabilirsiniz: `Get-InformationBarrierRecipientStatus -Identity <value>`) <p> Bu cmdlet, kullanıcılar hakkında öznitelik değerleri ve uygulanan tüm bilgi engeli ilkeleri gibi bilgileri döndürür.|
+| Kullanıcı hesapları | Kimlik parametreleriyle **Get-InformationBarrierRecipientStatus** cmdlet'ini kullanın. <p> Sözdizimi: `Get-InformationBarrierRecipientStatus -Identity <value> -Identity2 <value>` <p> Ad, diğer ad, ayırt edici ad, kurallı etki alanı adı, e-posta adresi veya GUID gibi her kullanıcıyı benzersiz olarak tanımlayan herhangi bir değeri kullanabilirsiniz. <p> Örnek: `Get-InformationBarrierRecipientStatus -Identity meganb -Identity2 alexw` <p> Bu örnekte, Office 365'de iki kullanıcı hesabına başvuracağız: *Megan* için *meganb* ve *Alex* için *alexw*. <p> (Bu cmdlet'i tek bir kullanıcı için de kullanabilirsiniz: `Get-InformationBarrierRecipientStatus -Identity <value>`) <p> Bu cmdlet, kullanıcılar hakkında öznitelik değerleri ve uygulanan IB ilkeleri gibi bilgileri döndürür.|
 | Segment | **Get-OrganizationSegment** cmdlet'ini kullanın.<p> Sözdizimi: `Get-OrganizationSegment` <p> Bu cmdlet, kuruluşunuz için tanımlanan tüm segmentlerin listesini görüntüler. |
-| Bilgi engeli ilkeleri | **Get-InformationBarrierPolicy** cmdlet'ini kullanın. <p> Sözdizimi: `Get-InformationBarrierPolicy` <p> Bu cmdlet, tanımlanan bilgi engeli ilkelerinin listesini ve bunların durumunu görüntüler. |
-| En son bilgi engeli ilkesi uygulaması | **Get-InformationBarrierPoliciesApplicationStatus** cmdlet'ini kullanın. <p> Sözdizimi: `Get-InformationBarrierPoliciesApplicationStatus`<p> Bu cmdlet, ilke uygulamasının tamamlanıp tamamlanmadığı, başarısız olup olmadığı veya devam edip etmediğiyle ilgili bilgileri görüntüler. |
-| Tüm bilgi engeli ilkesi uygulamaları|Kullanın `Get-InformationBarrierPoliciesApplicationStatus -All`<p> Bu cmdlet, ilke uygulamasının tamamlanıp tamamlanmadığı, başarısız olup olmadığı veya devam edip etmediğiyle ilgili bilgileri görüntüler.|
+| IB ilkeleri | **Get-InformationBarrierPolicy** cmdlet'ini kullanın. <p> Sözdizimi: `Get-InformationBarrierPolicy` <p> Bu cmdlet tanımlanmış IB ilkelerinin listesini ve bunların durumunu görüntüler. |
+| En son IB ilke uygulaması | **Get-InformationBarrierPoliciesApplicationStatus** cmdlet'ini kullanın. <p> Sözdizimi: `Get-InformationBarrierPoliciesApplicationStatus`<p> Bu cmdlet, ilke uygulamasının tamamlanıp tamamlanmadığı, başarısız olup olmadığı veya devam edip etmediğiyle ilgili bilgileri görüntüler. |
+| Tüm IB ilke uygulamaları|Kullanın `Get-InformationBarrierPoliciesApplicationStatus -All`<p> Bu cmdlet, ilke uygulamasının tamamlanıp tamamlanmadığı, başarısız olup olmadığı veya devam edip etmediğiyle ilgili bilgileri görüntüler.|
 
 ### <a name="what-if-i-need-to-remove-or-change-policies"></a>İlkeleri kaldırmam veya değiştirmem gerekirse ne olur?
 
@@ -322,7 +404,7 @@ Aşağıdaki IB modları Microsoft 365 kaynaklarda desteklenir:
 |:-----|:------------|:--------|
 | **Açık** | Microsoft 365 kaynağıyla ilişkilendirilmiş IB ilkeleri veya kesimleri yoktur. Herkes kaynağın üyesi olmaya davet edilebilir. | Kuruluşunuz için piknik etkinliği için oluşturulmuş bir ekip sitesi. |
 | **Sahip Denetimli (önizleme)** | Microsoft 365 kaynağının IB ilkesi, kaynak sahibinin IB ilkesinden belirlenir. Kaynak sahipleri, IB ilkelerine göre herhangi bir kullanıcıyı kaynağa davet edebilir. Şirketiniz, sahibi tarafından denetlenen uyumsuz segment kullanıcıları arasında işbirliğine izin vermek istediğinde bu mod kullanışlıdır. IB ilkesine göre yalnızca kaynak sahibi yeni üyeler ekleyebilir. | İk Başkan Yardımcısı, Satış ve Araştırma VM'leri ile işbirliği yapmak istiyor. Hem Satış hem de Araştırma segmenti kullanıcılarını aynı siteye eklemek için IB modu *Sahip Moded* ile ayarlanan yeni bir SharePoint sitesi. Kaynağa uygun üyelerin eklendiğinden emin olmak sahibin sorumluluğundadır. |
-| **Örtülü** | Microsoft 365 kaynağının IB ilkesi veya kesimleri, kaynak üyeleri IB ilkesinden devralınır. Sahibi, kaynağın mevcut üyeleriyle uyumlu olduğu sürece üye ekleyebilir. Bu, Microsoft Teams için varsayılan IB modudur. | Satış segmenti kullanıcısı, kuruluştaki diğer uyumlu segmentlerle işbirliği yapmak için bir Microsoft Teams ekibi oluşturur. |
+| **Örtülü** | Microsoft 365 kaynağının IB ilkesi veya kesimleri, kaynak üyeleri IB ilkesinden devralınır. Sahibi, kaynağın mevcut üyeleriyle uyumlu olduğu sürece üye ekleyebilir. Bu mod, Microsoft Teams için varsayılan IB modudur. | Satış segmenti kullanıcısı, kuruluştaki diğer uyumlu segmentlerle işbirliği yapmak için bir Microsoft Teams ekibi oluşturur. |
 | **Açık** | Microsoft 365 kaynağının IB ilkesi, kaynakla ilişkili segmentlere göredir. Kaynak sahibi veya SharePoint yöneticisi, kaynak üzerindeki segmentleri yönetebilir.  | Yalnızca Satış segmenti üyelerinin, Satış segmentini siteyle ilişkilendirerek işbirliği yapmaları için oluşturulmuş bir site.   |
 
 IB modları ve hizmetler arasında nasıl yapılandırıldıkları hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
@@ -369,14 +451,14 @@ Contoso, segmentleri tanımlamak için Azure Active Directory'deki Department ö
 
 Segmentler tanımlandığında Contoso, IB ilkelerini tanımlamaya devam eder.
 
-### <a name="contosos-information-barrier-policies"></a>Contoso'nun bilgi engeli ilkeleri
+### <a name="contosos-ib-policies"></a>Contoso'nun IB ilkeleri
 
 Contoso, aşağıdaki tabloda açıklandığı gibi üç IB ilkesi tanımlar:
 
 | Ilkesi | İlke Tanımı |
 |:---------|:--------------------|
-| **İlke 1: Satışların Araştırma ile iletişim kurmasını engelleme** | `New-InformationBarrierPolicy -Name "Sales-Research" -AssignedSegment "Sales" -SegmentsBlocked "Research" -State Inactive` <p> Bu örnekte, bilgi engeli ilkesi *Sales-Research* olarak adlandırılır. Bu ilke etkin ve uygulandığında, Satış segmentindeki kullanıcıların Araştırma segmentindeki kullanıcılarla iletişim kurmasını önlemeye yardımcı olur. Bu ilke tek yönlü bir ilkedir; Araştırma'nın Satış ile iletişim kurmasını engellemez. Bunun için İlke 2 gereklidir. |
-| **İlke 2: Araştırmanın Satış ile iletişim kurmasını engelleme** | `New-InformationBarrierPolicy -Name "Research-Sales" -AssignedSegment "Research" -SegmentsBlocked "Sales" -State Inactive` <p> Bu örnekte, bilgi engeli ilkesi *Research-Sales* olarak adlandırılır. Bu ilke etkin ve uygulandığında, Araştırma segmentindeki kullanıcıların Satış segmentindeki kullanıcılarla iletişim kurmasını önlemeye yardımcı olur. |
+| **İlke 1: Satışların Araştırma ile iletişim kurmasını engelleme** | `New-InformationBarrierPolicy -Name "Sales-Research" -AssignedSegment "Sales" -SegmentsBlocked "Research" -State Inactive` <p> Bu örnekte, IB ilkesi *Sales-Research* olarak adlandırılır. Bu ilke etkin ve uygulandığında, Satış segmentindeki kullanıcıların Araştırma segmentindeki kullanıcılarla iletişim kurmasını önlemeye yardımcı olur. Bu ilke tek yönlü bir ilkedir; Araştırma'nın Satış ile iletişim kurmasını engellemez. Bunun için İlke 2 gereklidir. |
+| **İlke 2: Araştırmanın Satış ile iletişim kurmasını engelleme** | `New-InformationBarrierPolicy -Name "Research-Sales" -AssignedSegment "Research" -SegmentsBlocked "Sales" -State Inactive` <p> Bu örnekte, IB ilkesi *Research-Sales* olarak adlandırılır. Bu ilke etkin ve uygulandığında, Araştırma segmentindeki kullanıcıların Satış segmentindeki kullanıcılarla iletişim kurmasını önlemeye yardımcı olur. |
 | **İlke 3: Üretimin yalnızca İk ve Pazarlama ile iletişim kurmasına izin ver** | `New-InformationBarrierPolicy -Name "Manufacturing-HRMarketing" -AssignedSegment "Manufacturing" -SegmentsAllowed "HR","Marketing","Manufacturing" -State Inactive` <p> Bu durumda, IB ilkesi *Manufacturing-HRMarketing* olarak adlandırılır. Bu ilke etkin ve uygulandığında, Üretim yalnızca İk ve Pazarlama ile iletişim kurabilir. İk ve Pazarlama'nın diğer segmentlerle iletişim kurması kısıtlanmaz. |
 
 Segmentler ve ilkeler tanımlandığında Contoso, **Start-InformationBarrierPoliciesApplication** cmdlet'ini çalıştırarak ilkeleri uygular.

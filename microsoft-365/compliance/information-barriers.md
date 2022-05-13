@@ -17,12 +17,12 @@ ms.localizationpriority: ''
 f1.keywords:
 - NOCSH
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 214a2614b6ca7381bbded39ff5f5143236f6c001
-ms.sourcegitcommit: 570c3be37b6ab1d59a4988f7de9c9fb5ca38028f
+ms.openlocfilehash: f5db5fbe81913666f052cbd664e8a7f813da6a7c
+ms.sourcegitcommit: 99494a5530ad64802f341573ad42796134190296
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "65363128"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65396211"
 ---
 # <a name="learn-about-information-barriers"></a>Bilgi engelleri hakkında daha fazla bilgi edinme
 
@@ -83,5 +83,5 @@ IB ilkelerini tanımlamadan ve uygulamadan önce, kuruluşunuzdaki tüm mevcut E
 ## <a name="ready-to-get-started"></a>Başlamaya hazır mısınız?
 
 - [Bilgi engellerini kullanmaya başlama](information-barriers-policies.md)
-- [Bilgi engeli ilkelerini yönetme](information-barriers-edit-segments-policies.md)
-- [Bilgi engeli ilkeleri için kullanılabilecek özniteliklere bakın](information-barriers-attributes.md)
+- [IB ilkelerini yönetme](information-barriers-edit-segments-policies.md)
+- [IB ilkeleri için kullanılabilecek özniteliklere bakın](information-barriers-attributes.md)

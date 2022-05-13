@@ -1,6 +1,7 @@
 ---
 title: Bilgi engelleri öznitelikleri
-description: Bu makale, bilgi engeli Azure Active Directory kullanabileceğiniz kullanıcı hesabı özniteliklerine başvuru sağlar.
+description: Bu makale, bilgi engelleri segmentlerini tanımlamak için kullanabileceğiniz Azure Active Directory kullanıcı hesabı özniteliklerine yönelik bir başvurudur.
+keywords: Microsoft 365, Microsoft Purview, uyumluluk, bilgi engelleri
 ms.author: robmazz
 author: robmazz
 manager: laurawi
@@ -13,51 +14,53 @@ ms.localizationpriority: ''
 f1.keywords:
 - NOCSH
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 33143e85bf17a707ade6dd0d6d0c66886fd85373
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: e09331fb819d2b00764cd6dacd1687ade8ee116c
+ms.sourcegitcommit: 99494a5530ad64802f341573ad42796134190296
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985323"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65396277"
 ---
 # <a name="information-barriers-attributes"></a>Bilgi engelleri öznitelikleri
 
-Azure Active Directory'daki bazı öznitelikler, kullanıcıları segmentlere alıt etmek için kullanılabilir. Kesimler tanımlandığı zaman, bu kesimler bilgi engeli ilkeleri için filtre olarak kullanılabilir. Örneğin, Department'i kullanarak  kullanıcıların kurum içindeki bölümlere göre kesimlerini tanımlayabilirsiniz (tek bir çalışanın aynı anda iki departmanda çalışma olduğu varsayıldı).
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Bu makalede, bilgi engelleriyle birlikte özniteliklerin nasıl kullanımı açıklanmıştır ve kullanılmaktadır. Bilgi engelleri hakkında daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:
+Azure Active Directory'deki belirli öznitelikler, kullanıcıları bilgi engellerinde (IB) segmentlere ayırmak için kullanılabilir. Segmentler tanımlandıktan sonra, bu segmentler IB ilkeleri için filtre olarak kullanılabilir. Örneğin, kuruluşunuzdaki departmanlara göre kullanıcı segmentlerini tanımlamak için **Departman'ı** kullanabilirsiniz (tek bir çalışanın aynı anda iki departmanda çalışmadığı varsayılır).
+
+Bu makalede, bilgi engelleri olan özniteliklerin nasıl kullanılacağı açıklanır ve kullanılabilecek özniteliklerin listesi sağlanır. Bilgi engelleri hakkında daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:
 
 - [Bilgi engelleri](information-barriers.md)
-- [Proje içinde bilgi engellerine yönelik ilkeler Microsoft Teams](information-barriers-policies.md)
-- [Bilgi engeli ilkelerini düzenleme (veya kaldırma)](information-barriers-edit-segments-policies.md)
+- [Microsoft Teams'da bilgi engelleri için ilke tanımlama](information-barriers-policies.md)
+- [IB ilkelerini düzenleme (veya kaldırma)](information-barriers-edit-segments-policies.md)
 
-## <a name="how-to-use-attributes-in-information-barrier-policies"></a>Bilgi engeli ilkelerde öznitelikleri kullanma
+## <a name="how-to-use-attributes-in-ib-policies"></a>IB ilkelerinde öznitelikleri kullanma
 
-Bu makalede listelenen öznitelikler, kullanıcıların kesimlerini tanımlamak veya düzenlemek için kullanılabilir. Tanımlı kesimleriniz, bilgi engeli ilkelerinde parametre ( *UserGroupFilter* değerleri olarak adlandırılan) [işlevi karşılar](information-barriers-policies.md).
+Bu makalede listelenen öznitelikler, kullanıcı segmentlerini tanımlamak veya düzenlemek için kullanılabilir. Tanımlanan segmentleriniz [, IB ilkelerinde](information-barriers-policies.md) parametre (*UserGroupFilter* değerleri olarak adlandırılır) olarak görev alır.
 
-1. Kesimleri tanımlamak için hangi özniteliği kullanmak istediğinize karar kullanın. (Bu [makalenin](#reference) Başvuru bölümüne bakın.)
+1. Segmentleri tanımlamak için hangi özniteliği kullanmak istediğinizi belirleyin. (Bu makalenin [Başvuru](#reference) bölümüne bakın.)
 
-2. 1. Adım'da seçtiğiniz öznitelikler için kullanıcı hesaplarında değerlerin doldurulmuş olduğundan emin olun. Kullanıcı hesabı ayrıntılarını görüntüleme ve gerekirse kullanıcı hesaplarını öznitelik değerlerini içerecek şekilde düzenleme. 
+2. 1. Adım'da seçtiğiniz öznitelikler için kullanıcı hesaplarının değerlerinin doldurulduğundan emin olun. Kullanıcı hesabı ayrıntılarını görüntüleyin ve gerekirse kullanıcı hesaplarını öznitelik değerlerini içerecek şekilde düzenleyin. 
 
-    - Birden çok hesabı düzenlemek için (veya tek bir hesabı düzenlemek için PowerShell kullanarak), bkz. [PowerShell'i kullanarak kullanıcı Office 365 yapılandırma](../enterprise/configure-user-account-properties-with-microsoft-365-powershell.md).
+    - Birden çok hesabı düzenlemek (veya tek bir hesabı düzenlemek için PowerShell'i kullanmak) için bkz[. Office 365 PowerShell ile kullanıcı hesabı özelliklerini yapılandırma](../enterprise/configure-user-account-properties-with-microsoft-365-powershell.md).
 
-    - Tek bir hesabı düzenlemek için bkz. Hesap bilgilerini kullanarak [kullanıcının profil bilgilerini ekleme Azure Active Directory](/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal).
+    - Tek bir hesabı düzenlemek için bkz. [Azure Active Directory kullanarak kullanıcının profil bilgilerini ekleme veya güncelleştirme](/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal).
 
-3. [Aşağıdaki örneklere benzer şekilde, PowerShell](information-barriers-policies.md#define-segments-using-powershell) kullanarak kesimleri tanımlayın:
+3. Aşağıdaki örneklere benzer şekilde [PowerShell kullanarak segmentleri tanımlayın](information-barriers-policies.md#define-segments-using-powershell):
 
     |**Örnek**|**Cmdlet**|
     |:----------|:---------|
     | Department özniteliğini kullanarak Segment1 adlı bir segment tanımlama | `New-OrganizationSegment -Name "Segment1" -UserGroupFilter "Department -eq 'Department1'"` |
-    | MemberOf özniteliğini kullanarak SegmentA adlı bir segment tanımlayın (bu özniteliğin grup adlarını içerdiğini, örneğin "BlueGroup") olduğunu varsayalım | `New-OrganizationSegment -Name "SegmentA" -UserGroupFilter "MemberOf -eq 'BlueGroup'"` |
-    | ExtensionAttribute1 kullanarak Day Varsayılanlar adlı bir segment tanımlama (bu özniteliğin "Day Bira" gibi iş unvanları içerdiğini varsayalım) | `New-OrganizationSegment -Name "DayTraders" -UserGroupFilter "ExtensionAttribute1 -eq 'DayTrader'"` |
+    | MemberOf özniteliğini kullanarak SegmentA adlı bir segment tanımlayın (bu özniteliğin "BlueGroup" gibi grup adları içerdiğini varsayalım) | `New-OrganizationSegment -Name "SegmentA" -UserGroupFilter "MemberOf -eq 'BlueGroup'"` |
+    | ExtensionAttribute1 kullanarak DayTraders adlı bir kesim tanımlayın (bu özniteliğin "DayTrader" gibi iş başlıkları içerdiğini varsayalım") | `New-OrganizationSegment -Name "DayTraders" -UserGroupFilter "ExtensionAttribute1 -eq 'DayTrader'"` |
 
     > [!TIP]
-    > Kesimler tanımlarken, tüm kesimler için aynı özniteliği kullanın. Örneğin, Bölüm'i kullanarak bazı kesimler *tanımlarsanız, Department'ı* kullanarak tüm kesimleri *tanımlayın*. Departman ve diğerlerini MemberOf kullanarak *bazı* kesimler *tanımlamayın*. Kesimlerin çakışmay olduğundan emin olun; her kullanıcıya tam olarak tek bir segmente atanabilir.
+    > Segmentleri tanımlarken, tüm segmentleriniz için aynı özniteliği kullanın. Örneğin, *Departman* kullanarak bazı segmentler tanımlarsanız, *Bölüm* kullanarak tüm segmentleri tanımlayın. Bazı segmentleri *Department* ve diğerlerini *MemberOf kullanarak tanımlamayın*. Segmentlerinizin çakışmadığından emin olun; her kullanıcı tam olarak bir segmente atanmalıdır.
 
 ## <a name="reference"></a>Başvuru
 
-Aşağıdaki tabloda, bilgi engelleriyle kullanabileceğiniz öznitelikler liste almaktadır.
+Aşağıdaki tabloda, bilgi engelleriyle kullanabileceğiniz öznitelikler listelemektedir.
 
-|**Azure Active Directory adı<br/>(LDAP görünen adı)**|**Exchange adı**|
+|**Azure Active Directory özellik adı<br/> (LDAP görünen adı)**|**Exchange özellik adı**|
 |:---------------------------------------------------------------|:-------------------------|
 | Co | Co |
 | Şirket | Şirket |
@@ -82,20 +85,20 @@ Aşağıdaki tabloda, bilgi engelleriyle kullanabileceğiniz öznitelikler liste
 | MSExchExtensionCustomAttribute3 | ExtensionCustomAttribute3 |
 | MSExchExtensionCustomAttribute4 | ExtensionCustomAttribute4 |
 | MSExchExtensionCustomAttribute5 | ExtensionCustomAttribute5 |
-| MailNickname | Diğer Ad |
+| Mailnickname | Diğer ad |
 | PhysicalDeliveryOfficeName | Office |
-| PostalCode | PostalCode |
-| ProxyAddresses | EmailAddresses |
-| StreetAddress | StreetAddress |
-| TargetAddress | ExternalEmailAddress |
+| Postakodu | Postakodu |
+| Proxyaddresses | EmailAddresses |
+| Streetaddress | Streetaddress |
+| Targetaddress | ExternalEmailAddress |
 | UsageLocation | UsageLocation |
-| UserPrincipalName | UserPrincipalName |
+| Userprincipalname | Userprincipalname |
 | Posta | WindowsEmailAddress |
 | Açıklama | Açıklama |
-| MemberOf | MemberOfGroup |
+| Memberof | MemberOfGroup |
 
 ## <a name="resources"></a>Kaynaklar
 
-- [Proje içinde bilgi engellerine yönelik ilkeler Microsoft Teams](information-barriers-policies.md)
-- [Bilgi engellerini giderme](/office365/troubleshoot/information-barriers/information-barriers-troubleshooting)
+- [Microsoft Teams'da bilgi engelleri için ilke tanımlama](information-barriers-policies.md)
+- [Sorun giderme bilgileri engelleri](/office365/troubleshoot/information-barriers/information-barriers-troubleshooting)
 - [Bilgi engelleri](information-barriers.md)

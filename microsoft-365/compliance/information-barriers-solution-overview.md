@@ -1,7 +1,7 @@
 ---
-title: Web'de bilgi Microsoft 365
-description: Engeli ortadan kaldıran bilgi engellerini Microsoft 365.
-keywords: Microsoft 365, insider riski, uyumluluk
+title: Bilgi engelleri
+description: Microsoft Purview'de bilgi engellerini yapılandırmayı öğrenin.
+keywords: Microsoft 365, Microsoft Purview, uyumluluk, bilgi engelleri
 ms.localizationpriority: medium
 ms.service: O365-seccomp
 ms.topic: article
@@ -16,37 +16,39 @@ ms.collection:
 - m365solution-insiderrisk
 - m365initiative-compliance
 - m365solution-scenario
-ms.openlocfilehash: e4116550336756fe9248a4a28dfa0f809c4012bb
-ms.sourcegitcommit: be074f57e33c811bb3857043152825209bc8af07
+ms.openlocfilehash: aaba1c642d4615d3eb5163736450f3f8f3c27062
+ms.sourcegitcommit: 99494a5530ad64802f341573ad42796134190296
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "62988803"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65396189"
 ---
-# <a name="information-barriers-in-microsoft-365"></a>Web'de bilgi Microsoft 365
+# <a name="information-barriers"></a>Bilgi engelleri
 
-Microsoft 365 grupları ve kuruluşlar arasında iletişimi ve işbirliğini sağlar ve gerektiğinde belirli kullanıcı grupları arasında iletişimi ve işbirliğini kısıtlama yollarını destekler. Bu, kuruluşta ilgi çakışması yaşanarak ortaya çıkan bir çakışmayı önlemek için iki grup arasındaki iletişimi ve işbirliğini kısıtlamak istediğiniz durumlar veya senaryolar içerebilir. Bu, iç bilgileri korumak için kuruluş içindeki belirli kişiler arasındaki iletişimi ve işbirliğini kısıtlamanız gereken durumlar da olabilir.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Microsoft Teams, SharePoint Online ve diğer OneDrive İş. Uyumluluk yöneticisi veya bilgi engeli yöneticisi, aynı gruptaki kullanıcı grupları arasında iletişime izin verecek veya bu iletişimleri engelleyen ilkeler Microsoft Teams. Bilgi engeli ilkeleri, şu gibi durumlarda kullanılabilir:
+Microsoft 365, gruplar ve kuruluşlar arasında iletişim ve işbirliği sağlar ve gerektiğinde belirli kullanıcı grupları arasındaki iletişimi ve işbirliğini kısıtlama yollarını destekler. Bu durum, kuruluşunuzda çıkar çakışmasını önlemek için iki grup arasındaki iletişimi ve işbirliğini kısıtlamak istediğiniz durumları veya senaryoları içerebilir. Bu durum, iç bilgileri korumak için kuruluşunuz içindeki belirli kişiler arasındaki iletişimi ve işbirliğini kısıtlamanız gereken durumları da içerebilir.
 
-- Gün içinde trader grubunda yer alan kullanıcı pazarlama ekibiyle dosya iletişim kurması veya paylaşması gerekir
-- Gizli şirket bilgileri üzerinde çalışan finans personeli, kuruluşların içindeki belirli gruplarla iletişim kurmalı veya dosya paylaşmaz
-- Ticari gizli malzemelere sahip bir iç ekip, kuruluş içindeki belirli gruplarda yer alan kişilerin aramasını veya çevrimiçi sohbete sahip olması gerekir.
-- Araştırma ekibi, ürün geliştirme ekibini yalnızca çevrimiçi aramalı veya çevrimiçi olarak sohbete sahip olmalı
+Microsoft Purview Bilgi Engelleri (IB), Microsoft Teams, SharePoint Online ve OneDrive İş desteklenir. Uyumluluk yöneticisi veya IB yöneticisi, Microsoft Teams kullanıcı grupları arasındaki iletişimlere izin veren veya bunları engelleyen ilkeler tanımlayabilir. IB ilkeleri aşağıdaki gibi durumlarda kullanılabilir:
 
-## <a name="configure-information-barriers-for-microsoft-365"></a>İletişim için bilgi engellerini Microsoft 365
+- Günlük tüccar grubundaki kullanıcı pazarlama ekibiyle iletişim kurmamalı veya dosya paylaşmamalıdır
+- Gizli şirket bilgileri üzerinde çalışan finans personeli, kuruluş içindeki belirli gruplarla iletişim kurmamalı veya dosya paylaşmamalıdır
+- Ticari gizli malzeme içeren bir şirket içi ekip, kendi kuruluşundaki belirli gruplardaki kişileri aramamalı veya çevrimiçi sohbet etmemelidir
+- Araştırma ekibi yalnızca bir ürün geliştirme ekibiyle çevrimiçi aramalı veya sohbet etmelidir
 
-Aşağıdaki adımları kullanarak, kuruma ilişkin bilgi engellerini yapılandırabilirsiniz:
+## <a name="configure-information-barriers"></a>Bilgi engellerini yapılandırma
+
+Kuruluşunuzda IB'yi yapılandırmak için aşağıdaki adımları kullanın:
 
 ![Insider risk çözümü bilgi engelleri adımları.](../media/ir-solution-ib-steps.png)
 
-1. Bu konuda [bilgi engellerini](information-barriers.md) Microsoft 365
-2. [Önkoşulları ve izinleri yapılandırma](information-barriers-policies.md#step-1-make-sure-prerequisites-are-met)
-3. [Organizasyonda kullanıcıları kesimlere segmentlere göre bölümleme](information-barriers-policies.md#step-2-segment-users-in-your-organization)
-4. Bilgi engeli [ilkeleri oluşturma ve yapılandırma](information-barriers-policies.md#step-3-define-information-barrier-policies)
-5. Bilgi [engeli ilkelerini uygulama](information-barriers-policies.md#step-4-apply-information-barrier-policies)
+1. [Bilgi engelleri](information-barriers.md) hakkında bilgi edinin
+2. [Önkoşulları ve izinleri](information-barriers-policies.md#step-1-make-sure-prerequisites-are-met) yapılandırma
+3. [Kuruluşunuzdaki kullanıcıları segmentlere ayırma](information-barriers-policies.md#step-2-segment-users-in-your-organization)
+4. [IB ilkeleri](information-barriers-policies.md#step-3-create-ib-policies) oluşturma ve yapılandırma
+5. [IB ilkelerini](information-barriers-policies.md#step-4-apply-ib-policies) uygulama
 
 ## <a name="more-information-about-information-barriers"></a>Bilgi engelleri hakkında daha fazla bilgi
 
-- [Bilgi engeli ilkeleri için öznitelikler](information-barriers-attributes.md)
-- [Bilgi engeli ilkelerini düzenleme veya kaldırma](information-barriers-edit-segments-policies.md)
+- [IB ilkeleri için öznitelikler](information-barriers-attributes.md)
+- [IB ilkelerini düzenleme veya kaldırma](information-barriers-edit-segments-policies.md)
