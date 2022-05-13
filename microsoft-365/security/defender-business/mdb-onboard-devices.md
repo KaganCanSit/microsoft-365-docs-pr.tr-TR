@@ -16,12 +16,12 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: ce3c458013a96f845da528104997b63360879c56
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: ebe8f623842716ab53b4eae64d24ef85b9598099
+ms.sourcegitcommit: 99494a5530ad64802f341573ad42796134190296
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65174048"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65396167"
 ---
 # <a name="onboard-devices-to-microsoft-defender-for-business"></a>Cihazları İş için Microsoft Defender ekleme
 
@@ -34,7 +34,7 @@ ms.locfileid: "65174048"
 
 ## <a name="what-to-do"></a>Yapılması gerekenler
 
-1. İşletim sisteminizin sekmesini seçin: **istemciler**, **macOS bilgisayarlar** veya **mobil cihazlar** Windows.
+1. İşletim sisteminizin sekmesini seçin: istemcileri, **macOS bilgisayarları** veya **mobil cihazları** **Windows**.
 2. Ekleme seçeneklerinizi görüntüleyin ve seçili sekmedeki yönergeleri izleyin.
 3. Sonraki adımlarınıza geçin.
 
@@ -78,7 +78,7 @@ Windows istemcilerini eklemek için grup ilkesi kullanmayı tercih ediyorsanız 
 
 ### <a name="microsoft-intune-for-windows-clients"></a>Windows istemcileri için Microsoft Intune
 
-Aboneliğinizde Intune varsa, Windows istemcilerini ve diğer cihazları Microsoft Endpoint Manager yönetim merkezine ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)) ekleyebilirsiniz. Örneğin, [Microsoft 365 İş Ekstra](../../business/index.yml) varsa aboneliğinizin bir parçası olarak Intune.  
+Aboneliğinizde Intune varsa, Windows istemcilerini ve diğer cihazları Microsoft Endpoint Manager yönetim merkezine ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)) ekleyebilirsiniz. Örneğin[, Microsoft 365 İş Ekstra](../../business/index.yml) varsa aboneliğinizin bir parçası olarak Intune.  
 
 Cihazları Intune kaydetmek için kullanılabilecek çeşitli yöntemler vardır. Aşağıdaki yöntemlerden biriyle başlamanızı öneririz:
 
@@ -144,35 +144,35 @@ Komut çalıştırıldıktan sonra Komut İstemi penceresi otomatik olarak kapat
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- Eklenecek başka cihazlarınız varsa, cihazlardaki işletim sistemine karşılık gelen sekmeyi [seçin (Windows istemciler, Windows Server, macOS veya mobil cihazlar](#what-to-do)) ve bu sekmedeki yönergeleri izleyin.
+- Eklenecek başka cihazlarınız varsa, cihazlardaki işletim sistemine karşılık gelen sekmeyi [seçin (Windows istemciler, Windows Sunucu, macOS veya mobil cihazlar](#what-to-do)) ve bu sekmedeki yönergeleri izleyin.
 - Cihazları eklemeyi bitirdiyseniz [5. Adım: İş için Microsoft Defender'de güvenlik ayarlarınızı ve ilkelerinizi yapılandırma](mdb-configure-security-settings.md) bölümüne geçin
 - Bkz. [İş için Microsoft Defender kullanarak Kullanmaya başlayın](mdb-get-started.md).
 
 ## <a name="macos"></a>[**macOS**](#tab/macOSdevices)
 
-## <a name="macos-computers"></a>macOS bilgisayarlar
+## <a name="macos-computers"></a>bilgisayarları macOS
 
 > [!NOTE]
-> - [macOS cihazlarını eklemek için yerel bir betik](#local-script-for-macos) kullanmanızı öneririz. [macOS cihazları için kaydı Intune'de ayarlayabilmenize](/mem/intune/enrollment/macos-enroll) rağmen, macOS cihazlarını İş için Defender'a eklemek için en basit yöntem yerel betiktir. 
+> - [macOS cihazları eklemek için yerel bir betik](#local-script-for-macos) kullanmanızı öneririz. [Intune'da macOS cihazlar için kayıt ayarlayabilirsiniz](/mem/intune/enrollment/macos-enroll) ancak yerel betik, macOS cihazları İş için Defender'a eklemek için en basit yöntemdir. 
 
-macOS cihazlarını eklemek için aşağıdaki seçeneklerden birini belirleyin:
+macOS cihazları eklemek için aşağıdaki seçeneklerden birini belirleyin:
 
 - [macOS için yerel betik](#local-script-for-macos) (*önerilir*)
 - [macOS için Intune](#microsoft-intune-for-macos)
 
 ### <a name="local-script-for-macos"></a>macOS için yerel betik
 
-Yerel betiği bir macOS cihazında çalıştırdığınızda, Azure Active Directory ile bir güven oluşturur (bu güven yoksa), cihazı Microsoft Intune'a kaydeder (henüz kayıtlı değilse) ve ardından cihazı İş için Defender'a ekler. Şu anda Intune olmasa bile yerel betik yöntemi çalışır. Bu yöntemi kullanarak aynı anda en fazla 10 cihaz eklemenizi öneririz.
+Yerel betiği macOS bir cihazda çalıştırdığınızda, Azure Active Directory ile bir güven oluşturur (bu güven yoksa), cihazı Microsoft Intune kaydeder (henüz kaydedilmemişse) ve ardından cihazı İş için Defender'a ekler. Şu anda Intune olmasa bile yerel betik yöntemi çalışır. Bu yöntemi kullanarak aynı anda en fazla 10 cihaz eklemenizi öneririz.
 
 1. Microsoft 365 Defender portalına ()[https://security.microsoft.com](https://security.microsoft.com) gidin ve oturum açın.
 
 2. Gezinti bölmesinde **Ayarlar** >  **Endpoints'i** seçin ve ardından **Cihaz yönetimi'nin** altında **Ekleme'yi** seçin.
 
-3. **macOS'u** seçin ve ardından **Dağıtım yöntemi** bölümünde **Yerel betik'i** seçin. 
+3. **macOS'ı** seçin ve ardından **Dağıtım yöntemi** bölümünde **Yerel betik'i** seçin. 
 
 4. **Ekleme paketini indir'i** seçin ve çıkarılabilir bir sürücüye kaydedin. Ayrıca **Yükleme paketini indir'i** seçin ve çıkarılabilir cihazınıza kaydedin.
 
-5. Bir macOS cihazında, yükleme paketini yerel bir dizine olarak `wdav.pkg` kaydedin.
+5. macOS bir cihazda, yükleme paketini yerel bir dizine olarak `wdav.pkg` kaydedin.
 
 6. Ekleme paketini, yükleme paketi için kullandığınız dizine kaydedin `WindowsDefenderATPOnboardingPackage.zip` .
 
@@ -188,22 +188,22 @@ Yerel betiği bir macOS cihazında çalıştırdığınızda, Azure Active Direc
 
 ### <a name="microsoft-intune-for-macos"></a>macOS için Microsoft Intune
 
-Aboneliğinizde Microsoft Intune varsa macOS cihazlarını Microsoft Endpoint Manager yönetim merkezine ([https://endpoint.microsoft.com](https://endpoint.microsoft.com) ) ekleyebilirsiniz. Örneğin, [Microsoft 365 İş Ekstra](../../business/index.yml) varsa aboneliğinizin bir parçası olarak Intune.  
+Aboneliğiniz Microsoft Intune içeriyorsa, Microsoft Endpoint Manager yönetim merkezine ([https://endpoint.microsoft.com](https://endpoint.microsoft.com) ) macOS cihazları ekleyebilirsiniz. Örneğin[, Microsoft 365 İş Ekstra](../../business/index.yml) varsa aboneliğinizin bir parçası olarak Intune.  
 
 Cihazları Intune kaydetmek için kullanılabilecek çeşitli yöntemler vardır. Aşağıdaki yöntemlerden biriyle başlamanızı öneririz:
 
-- [Şirkete ait macOS cihazları için bir seçenek belirleyin](#options-for-company-owned-macos-devices)
+- [Şirkete ait macOS cihazlar için bir seçenek belirleyin](#options-for-company-owned-macos-devices)
 - [Kullanıcılardan kendi macOS cihazlarını Intune kaydetmelerini isteyin](#ask-users-to-enroll-their-own-macos-devices-in-intune)
 
-#### <a name="options-for-company-owned-macos-devices"></a>Şirkete ait macOS cihazları için seçenekler
+#### <a name="options-for-company-owned-macos-devices"></a>Şirkete ait macOS cihazlar için seçenekler
 
 Şirket tarafından yönetilen macOS cihazlarını Intune kaydetmek için aşağıdaki tabloda yer alan seçeneklerden birini belirleyin:
 
 | Seçeneği  | Açıklama  |
 |---------|---------|
-| Apple Otomatik Cihaz Kaydı |  Apple Business Manager veya Apple School Manager aracılığıyla satın alınan cihazlarda kayıt deneyimini otomatikleştirmek için bu yöntemi kullanın. Otomatik cihaz kaydı kayıt profilini havadan dağıtır, bu nedenle cihazlara fiziksel erişiminiz olması gerekmez. <br/><br/>Bkz. [MacOS cihazlarını Apple Business Manager veya Apple School Manager ile otomatik olarak kaydetme](/mem/intune/enrollment/device-enrollment-program-enroll-macos). |
+| Apple Otomatik Cihaz Kaydı |  Apple Business Manager veya Apple School Manager aracılığıyla satın alınan cihazlarda kayıt deneyimini otomatikleştirmek için bu yöntemi kullanın. Otomatik cihaz kaydı kayıt profilini havadan dağıtır, bu nedenle cihazlara fiziksel erişiminiz olması gerekmez. <br/><br/>Bkz. [Apple Business Manager veya Apple School Manager ile macOS cihazları otomatik olarak kaydetme](/mem/intune/enrollment/device-enrollment-program-enroll-macos). |
 | Cihaz kayıt yöneticisi (DEM)  |  Büyük ölçekli dağıtımlar ve kuruluşunuzda kayıt kurulumuna yardımcı olabilecek birden çok kişi olduğunda bu yöntemi kullanın. Cihaz kayıt yöneticisi (DEM) izinleri olan biri, tek bir Azure Active Directory hesabıyla en fazla 1.000 cihaz kaydedebilir. Bu yöntem, cihazları kaydetmek için Şirket Portalı uygulamasını veya Microsoft Intune uygulamasını kullanır. Otomatik Cihaz Kaydı aracılığıyla cihazları kaydetmek için BIR DEM hesabı kullanamazsınız.<br/><br/> Bkz[. Cihaz kayıt yöneticisi hesabı kullanarak cihazları Intune kaydetme](/mem/intune/enrollment/device-enrollment-manager-enroll).  |
-| Doğrudan kayıt  | Doğrudan kayıt, kullanıcı benzitesi olmayan cihazları kaydeder, bu nedenle bu yöntem tek bir kullanıcıyla ilişkilendirilmeyen cihazlar için en iyisidir. Bu yöntem, kaydettiğiniz Mac'lere fiziksel erişiminiz olmasını gerektirir. <br/><br/>Bkz. [macOS cihazları için Doğrudan Kayıt'ı kullanma](/mem/intune/enrollment/device-enrollment-direct-enroll-macos).      |
+| Doğrudan kayıt  | Doğrudan kayıt, kullanıcı benzitesi olmayan cihazları kaydeder, bu nedenle bu yöntem tek bir kullanıcıyla ilişkilendirilmeyen cihazlar için en iyisidir. Bu yöntem, kaydettiğiniz Mac'lere fiziksel erişiminiz olmasını gerektirir. <br/><br/>Bkz[. macOS cihazlar için Doğrudan Kayıt kullanma](/mem/intune/enrollment/device-enrollment-direct-enroll-macos).      |
 
 #### <a name="ask-users-to-enroll-their-own-macos-devices-in-intune"></a>Kullanıcılardan kendi macOS cihazlarını Intune kaydetmelerini isteyin
 
@@ -215,7 +215,7 @@ Cihazları Intune kaydetmek için kullanılabilecek çeşitli yöntemler vardır
 
 3. konumundaki Şirket Portalı uygulamasını [https://aka.ms/EnrollMyMac](https://aka.ms/EnrollMyMac)yükleyin ve uygulamadaki yönergeleri izleyin.
 
-### <a name="confirm-that-a-macos-device-is-onboarded"></a>MacOS cihazının eklendiğini onaylayın
+### <a name="confirm-that-a-macos-device-is-onboarded"></a>bir macOS cihazının eklendiğini onaylayın
 
 1. Cihazın şirketinizle ilişkili olduğunu onaylamak için Bash'te aşağıdaki Python komutunu kullanın: `mdatp health --field org_id`.
 
@@ -231,7 +231,7 @@ Cihazları Intune kaydetmek için kullanılabilecek çeşitli yöntemler vardır
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- Eklenecek başka cihazlarınız varsa, cihazlardaki işletim sistemine karşılık gelen sekmeyi seçin ([Windows istemciler, Windows Server, macOS veya mobil cihazlar](#what-to-do)) ve bu sekmedeki yönergeleri izleyin.
+- Eklenecek başka cihazlarınız varsa, cihazlardaki işletim sistemine karşılık gelen sekmeyi seçin ([Windows istemciler, Windows Sunucu, macOS veya mobil cihazlar](#what-to-do)) ve bu sekmedeki yönergeleri izleyin.
 - Cihazları eklemeyi bitirdiyseniz [5. Adım: İş için Microsoft Defender'de güvenlik ayarlarınızı ve ilkelerinizi yapılandırma](mdb-configure-security-settings.md) bölümüne geçin
 - Bkz. [İş için Microsoft Defender kullanarak Kullanmaya başlayın](mdb-get-started.md).
 
@@ -250,6 +250,6 @@ Bir cihaz Intune kaydedildikten sonra bir cihaz grubuna ekleyebilirsiniz. [İş 
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- Eklenecek başka cihazlarınız varsa, cihazlardaki işletim sistemine karşılık gelen sekmeyi seçin ([Windows istemciler, Windows Server, macOS veya mobil cihazlar](#what-to-do)) ve bu sekmedeki yönergeleri izleyin.
+- Eklenecek başka cihazlarınız varsa, cihazlardaki işletim sistemine karşılık gelen sekmeyi seçin ([Windows istemciler, Windows Sunucu, macOS veya mobil cihazlar](#what-to-do)) ve bu sekmedeki yönergeleri izleyin.
 - Cihazları eklemeyi bitirdiyseniz [5. Adım: İş için Microsoft Defender'de güvenlik ayarlarınızı ve ilkelerinizi yapılandırma](mdb-configure-security-settings.md) bölümüne geçin
 - Bkz. [İş için Microsoft Defender kullanarak Kullanmaya başlayın](mdb-get-started.md).

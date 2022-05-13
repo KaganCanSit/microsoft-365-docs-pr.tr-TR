@@ -2,7 +2,7 @@
 
 ## [Genel Bakış]()
 ### [Uç Nokta için Microsoft Defender nedir?](microsoft-defender-endpoint.md)
-### [Uç Nokta için Defender Plan 1’i Plan 2 ile karşılaştırın](defender-endpoint-plan-1-2.md)
+### [Uç Nokta için Defender planlarını karşılaştırın](defender-endpoint-plan-1-2.md)
 ### [Minimum gereksinimler](minimum-requirements.md)
 ### [Uç nokta için Microsoft Defender’daki yenilikler](whats-new-in-microsoft-defender-endpoint.md)
 ### [Özellikleri önizleyin](preview.md)
@@ -54,7 +54,6 @@
 
 ##### [Windows'un önceki sürümlerini ekleyin](onboard-downlevel.md)
 
-
 ##### [Windows Sunucularını ve Windows cihazlarını ekleyin ]()
 ###### [Windows Server 2012 R2, 2016, Yarı Yıllık Kanal, 2019 ve 2022'yi ekleyin](configure-server-endpoints.md)
 ###### [Windows araçlarını yerel betik kullanarak ekleyin](configure-endpoints-script.md)
@@ -64,9 +63,6 @@
 ###### [Kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarının katılımı](configure-endpoints-vdi.md)
 ###### [Sanal Windows masaüstüne çok oturumlu Windows 10 cihazlarını ekleyin](onboard-windows-multi-session-device.md)
 
-
-
-
 #### [Bulut için Microsoft Defender ile tümleştirme](azure-server-integration.md)
 
 #### [İnternet erişimi olmayan cihazları ekleyin](onboard-offline-machines.md)
@@ -74,8 +70,6 @@
 #### [Cihazlarda simülasyon saldırılar çalıştırın](attack-simulations.md)
 #### [Ara sunucu ve internet bağlantısı ayarlarını yapılandırın](configure-proxy-internet.md)
 #### [Katılım veya çıkarma bildirim kuralı oluşturun](onboarding-notification.md)
-
-
 
 ### [Diğer işletim sistemlerinde Uç Nokta için Microsoft Defender]()
 #### [Windows dışı diğer cihazları ekleyin](configure-endpoints-non-windows.md)
@@ -118,7 +112,6 @@
 ##### [Gizlilik](mac-privacy.md)
 ##### [Kaynaklar](mac-resources.md)
 
-
 #### [Linux'ta Uç Nokta için Microsoft Defender]()
 ##### [Uç Nokta için Microsoft Defender’a Linux üzerinde genel bakış](microsoft-defender-endpoint-linux.md)
 ##### [Yenilikler](linux-whatsnew.md)
@@ -137,7 +130,6 @@
 ###### [Olası İstenmeyen Uygulamaları tespit edin ve engelleyin](linux-pua.md)
 ###### [Linux'ta Uç Nokta için Microsoft Defender ile taramaları zamanlayın](linux-schedule-scan-mde.md)
 ###### [Uç Nokta için Microsoft Defender (Linux) güncelleştirmelerini zamanlayın](linux-update-MDE-Linux.md)
-
 
 ##### [Sorun giderme]()
 ###### [Yükleme sorunlarını giderin](linux-support-install.md)
@@ -184,17 +176,12 @@
 
 ###### [Gizlilik](ios-privacy.md)
 
-
 ### [Uç Nokta için Microsoft Defender yapılandırma ayarlarını farklı bir Microsoft Endpoint Manager cihazı ile yönetin](security-config-management.md)
 
 ### [Katılım sorunlarını giderin]()
 #### [Katılım esnasında sorunları giderin](troubleshoot-onboarding.md)
 #### [Abonelik ve portal erişimi sorunlarını giderin](troubleshoot-onboarding-error-messages.md)
 #### [Güvenlik yapılandırma yönetimi katılım sorunlarını giderin](troubleshoot-security-config-mgt.md)
-
-
-
-
 
 ### [Portal ayarlarını yapılandırın]()
 #### [Uç nokta için Defender genel ayarlarını yapılandırın](preferences-setup.md)
@@ -230,30 +217,7 @@
 #### [Microsoft Defender Güvenlik Merkezi saat dilimi ayarlarını yapılandırın](time-settings.md)
 
 ## [Tehditleri tespit edin ve uç noktaları koruyun]()
-### [Tehdit ve Güvenlik Açığı Yönetimi]()
-#### [Genel Bakış](next-gen-threat-and-vuln-mgt.md)
-#### [Başlarken]()
-##### [İzinler ve önkoşullar](tvm-prerequisites.md)
-##### [Desteklenen işletim sistemleri platformlar ve yetenekler](tvm-supported-os.md)
-##### [Cihaz değeri atayın](tvm-assign-device-value.md)
-#### [Güvenlik duruşlarınızı değerlendirin]()
-##### [Pano analizleri](tvm-dashboard-insights.md)
-##### [Hassaslık puanı](tvm-exposure-score.md)
-##### [Cihazlar için Microsoft Güvenlik Puanı](tvm-microsoft-secure-score-devices.md)
-#### [Güvenlik duruşunuzu geliştirin ve riskleri azaltın]()
-##### [Adres güvenliği önerileri](tvm-security-recommendation.md)
-##### [Güvenlik açıklarını düzeltin](tvm-remediation.md)
-##### [Güvenlik önerileri için özel durumlar](tvm-exception.md)
-##### [Destek sonu yazılımları için plan yapın](tvm-end-of-support-software.md)
-##### [Sıfır gün güvenlik açıklarını azaltın](tvm-zero-day-vulnerabilities.md)
-#### [Cihazlarınızdaki güvenlik açıklarını anlayın]()
-##### [Yazılım envanteri](tvm-software-inventory.md)
-##### [Kuruluşumdaki güvenlik açıkları](tvm-weaknesses.md)
-##### [Etkinlik zaman çizelgesi](threat-and-vuln-mgt-event-timeline.md)
-##### [Savunmasız cihazlar raporu](tvm-vulnerable-devices-report.md)
-##### [Açığa çıkarılan cihazları tarayın](tvm-hunt-exposed-devices.md)
-#### [Etkin tehditler ve saldırı kampanyaları için rehber]()
-##### [Log4Shell güvenlik açığını yönetin](tvm-manage-log4shell-guidance.md)
+### [Microsoft Defender Güvenlik Açığı Yönetimi](../defender-vulnerability-management/index.yml)
 ### [cihaz keşfi]()
 #### [Cihaz keşfine genel bakış](device-discovery.md)
 #### [Cihaz keşif ayarlarını yapılandırın](configure-device-discovery.md)
@@ -395,14 +359,15 @@
 ##### [İstemci davranışsal engelleme](client-behavioral-blocking.md)
 ##### [Geri bildirim döngüsü engelleme](feedback-loop-blocking.md)
 
-
 ### [Uç Nokta için Microsoft Defender'da yanlış pozitifleri/negatifleri ele alın](defender-endpoint-false-positives-negatives.md)
-
 
 ### [Cihaz yapılandırmasını yönetin]()
 
 #### [Güvenlik temel hattına uyumluluğu artırın](configure-machines-security-baseline.md)
 #### [Saldırı yüzeyini azaltma kuralı dağıtımını ve algılamalarını en iyi duruma getirin](configure-machines-asr.md)
+
+## [Etkin tehditler ve saldırı kampanyaları için rehber]()
+### [Log4Shell güvenlik açığını yönetin](tvm-manage-log4shell-guidance.md)
 
 ## [Tehditleri araştırın ve karşı yanıt verin]()
 ### [Uç nokta algılama ve yanıt]()
@@ -520,7 +485,6 @@
 ####### [Uyarı ile ilgili cihaz bilgilerini al](get-alert-related-machine-info.md)
 ####### [Uyarı ile ilgili kullanıcı bilgilerini al](get-alert-related-user-info.md)
 
-
 ###### [Güvenlik açıkları ve güvenli yapılandırma değerlendirmeleri]()
 ####### [Değerlendirme yöntemlerini ve özelliklerini dışarı aktar](get-assessment-methods-properties.md)
 ####### [Güvenli yapılandırma değerlendirmesini dışarı aktar](get-assessment-secure-config.md)
@@ -532,6 +496,9 @@
 ####### [Araştırmaları Listele](get-investigation-collection.md)
 ####### [Araştırma Al](get-investigation-object.md)
 ####### [Araştırmayı Başlat](initiate-autoir-investigation.md)
+
+###### [Sertifika envanteri]()
+####### [Sertifika envanteri değerlendirmesini dışarı aktar](export-certificate-inventory-assessment.md)
 
 ###### [Etki alanı]()
 ####### [Etki alanıyla ilgili uyarıları al](get-domain-related-alerts.md)
@@ -562,7 +529,6 @@
 ####### [Canlı yanıt kitaplığına yükle](upload-library.md)
 ####### [Kitaplıktan sil](delete-library.md)
 
-
 ###### [Makine]()
 ####### [Makine yöntemleri ve özellikleri](machine.md)
 ####### [Makineleri listele](get-machines.md)
@@ -578,8 +544,6 @@
 ####### [Eksik KB'leri al](get-missing-kbs-machine.md)
 ####### [Cihaz değerini ayarla](set-device-value.md)
 ####### [Makineyi güncelleştir](update-machine-method.md)
-
-
 
 ###### [Makine Eylemi]()
 ####### [Makine Eylemi yöntemleri ve özellikleri](machineaction.md)
@@ -617,6 +581,11 @@
 ####### [Makine grubuna göre hassaslık puanını listele](get-machine-group-exposure-score.md)
 ####### [Hassaslık puanı al](get-exposure-score.md)
 ####### [Cihaz güvenlik puanı al](get-device-secure-score.md)
+
+###### [Güvenlik temelleri]()
+####### [Güvenlik temelleri değerlendirmesini dışarı aktar](export-security-baseline-assessment.md)
+####### [Güvenlik temelleri değerlendirme profillerini listele](get-security-baselines-assessment-profiles.md)
+####### [Güvenlik temelleri değerlendirme yapılandırmalarını listele](get-security-baselines-assessment-configurations.md)
 
 ###### [Yazılım]()
 ####### [Yazılım yöntemleri ve özellikleri](software.md)
