@@ -61,7 +61,7 @@
               href: configure-teams-sensitive-protection.md
             - name: Son derece hassas korumayı yapılandırın
               href: configure-teams-highly-sensitive-protection.md
-            - name: Güvenlik yalıtımıyla bir ekibi yapılandırın
+            - name: Ekibi benzersiz bir duyarlılık etiketiyle yapılandırın
               href: secure-teams-security-isolation.md
         - name: Dış paylaşımı yapılandırın
           items:
