@@ -17,12 +17,12 @@ ms.custom: seo-marvel-apr2020
 description: Yöneticiler, Microsoft 365 Defender portalında Gönderiler portalını kullanarak şüpheli e-postalar, şüpheli kimlik avı postaları, istenmeyen postalar ve diğer zararlı olabilecek iletileri, URL'leri ve e-posta eklerini yeniden tarama amacıyla Microsoft'a göndermeyi öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 5d16cae309a90b8ffe10c90fea8ca3a359ece33b
-ms.sourcegitcommit: 58ec09f1fd66af9717dc2743585d06d358ec7360
+ms.openlocfilehash: 8e9faf6114551725dc1fc3b8b6af173bbe1e21b4
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2022
-ms.locfileid: "65144827"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65417962"
 ---
 # <a name="use-the-submissions-portal-to-submit-suspected-spam-phish-urls-and-files-to-microsoft"></a>Şüpheli istenmeyen postaları, kimlik avı, URL'leri ve dosyaları Microsoft'a göndermek için Gönderimler portalını kullanın
 
@@ -45,6 +45,9 @@ Analiz için bir e-posta iletisi gönderdiğinizde şunları alırsınız:
 > Payload reputation/detonation ve grader analizi tüm kiracılarda yapılmaz. Verilerin uyumluluk amacıyla kiracı sınırından ayrılması gerekmediğinde bilgilerin kuruluş dışına çıkışı engellenir.
 
 E-posta iletilerini, URL'leri ve ekleri Microsoft'a göndermenin diğer yolları için bkz. [İletileri ve dosyaları Microsoft'a bildirme](report-junk-email-messages-to-microsoft.md).
+
+Değerlendirme için Microsoft'a ileti göndermek üzere Office 365 için Microsoft Defender'daki yönetici gönderimlerini kullanmayı öğrenmek için bu kısa videoyu izleyin. 
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWBLPn]
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Başlamadan önce bilmeniz gerekenler
 
@@ -197,7 +200,7 @@ Bildirilen ileti hatalı pozitif veya hatalı negatif olarak işaretlenir. Porta
      > :::image type="content" source="../../media/admin-submission-filters.png" alt-text="Yönetici gönderimleri için Yeni Filtre seçenekleri" lightbox="../../media/admin-submission-filters.png":::
 
    - Girişleri gruplandırmak için **Gruplandır'a** tıklayın ve açılan listeden aşağıdaki değerlerden birini seçin:
-     - **Hiçbiri**
+     - **Yok**
      - **Tür**
      - **Neden**
      - **Durum**
@@ -265,7 +268,7 @@ Geçersiz kılma bulunduysa, sonucun birkaç dakika içinde kullanılabilir olma
      > :::image type="content" source="../../media/admin-submission-reported-messages.png" alt-text="Kullanıcı gönderimleri için Yeni Filtre seçenekleri" lightbox="../../media/admin-submission-reported-messages.png":::
 
    - Girişleri gruplandırmak için **Gruplandır'a** tıklayın ve açılan listeden aşağıdaki değerlerden birini seçin:
-     - **Hiçbiri**
+     - **Yok**
      - **Neden**
      - **Gönderen**
      - **Rapor eden**

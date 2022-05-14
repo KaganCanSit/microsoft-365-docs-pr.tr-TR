@@ -15,12 +15,12 @@ ms.reviewer: ''
 manager: dansimp
 ms.technology: mde
 ms.collection: m365-security-compliance
-ms.openlocfilehash: 8059668e5ac13b506f91a91a7088ffc6ffc0e63d
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: bf65bb13ab45d127bf2302464f1948437e1fe02d
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64787566"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65417984"
 ---
 # <a name="troubleshoot-microsoft-defender-antivirus-reporting-in-update-compliance"></a>Güncelleştirme Uyumluluğunda Microsoft Defender Virüsten Koruma raporlama sorunlarını giderin
 
@@ -28,7 +28,7 @@ ms.locfileid: "64787566"
 
 
 **Şunlar için geçerlidir:**
-- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Virüsten Koruma
 
@@ -38,7 +38,7 @@ ms.locfileid: "64787566"
 > [!IMPORTANT]
 > 31 Mart 2020'de Güncelleştirme Uyumluluğu'nun Microsoft Defender Virüsten Koruma raporlama özelliği kaldırılacaktır. Güvenlik özellikleri ve güncelleştirmeleri üzerinde daha ayrıntılı denetime olanak tanıyan [Microsoft Endpoint Manager](https://www.microsoft.com/microsoft-365/microsoft-endpoint-manager) kullanarak güvenlik uyumluluk ilkelerini tanımlamaya ve gözden geçirmeye devam edebilirsiniz.
 
-güncelleştirme uyumluluğu ile Microsoft Defender Virüsten Koruma kullanabilirsiniz. E3, B, F1, VL ve Pro lisanslarının durumunu görürsünüz. Ancak E5 lisansları için [Pertahanan Microsoft untuk Titik Akhir portalını](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints) kullanmanız gerekir. Lisanslama seçenekleri hakkında daha fazla bilgi edinmek için bkz. [Windows 10 ürün lisanslama seçenekleri](https://www.microsoft.com/licensing/product-licensing/windows10.aspx).
+güncelleştirme uyumluluğu ile Microsoft Defender Virüsten Koruma kullanabilirsiniz. E3, B, F1, VL ve Pro lisanslarının durumunu görürsünüz. Ancak E5 lisansları için [Uç Nokta için Microsoft Defender portalını](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints) kullanmanız gerekir. Lisanslama seçenekleri hakkında daha fazla bilgi edinmek için bkz. [Windows 10 ürün lisanslama seçenekleri](https://www.microsoft.com/licensing/product-licensing/windows10.aspx).
 
 [ağınızda Microsoft Defender Virüsten Koruma kullanan cihazların veya uç noktaların koruma durumuna raporlama almak için Windows Analytics Güncelleştirme Uyumluluğu'nu](/windows/deployment/update/update-compliance-using#wdav-assessment) kullandığınızda, sorunlarla veya sorunlarla karşılaşabilirsiniz.
 
@@ -71,7 +71,7 @@ Cihazların Güncelleştirme Uyumluluğu'nda düzgün bir şekilde görünmesi i
 > - Uç nokta 1607 veya önceki bir Windows 10 çalıştırıyorsa, [Windows 10 tanılama verileri Gelişmiş düzeyine ayarlanmalıdır](/windows/configuration/configure-windows-diagnostic-data-in-your-organization#enhanced-level).
 > - Tüm gereksinimlerin karşılanmasından bu yana 3 gün geçti
 
-"güncelleştirme uyumluluğu ile Microsoft Defender Virüsten Koruma kullanabilirsiniz. E3, B, F1, VL ve Pro lisanslarının durumunu görürsünüz. Ancak E5 lisansları için Pertahanan Microsoft untuk Titik Akhir portalını (/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints) kullanmanız gerekir. Lisanslama seçenekleri hakkında daha fazla bilgi edinmek için bkz. Windows 10 ürün lisanslama seçenekleri"
+"güncelleştirme uyumluluğu ile Microsoft Defender Virüsten Koruma kullanabilirsiniz. E3, B, F1, VL ve Pro lisanslarının durumunu görürsünüz. Ancak E5 lisansları için Uç Nokta için Microsoft Defender portalını (/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints) kullanmanız gerekir. Lisanslama seçenekleri hakkında daha fazla bilgi edinmek için bkz. Windows 10 ürün lisanslama seçenekleri"
 
 Yukarıdaki önkoşulların tümü karşılandıysa, tanılama bilgilerini toplamak ve bize göndermek için sonraki adıma geçmeniz gerekebilir.
 
@@ -80,13 +80,13 @@ Yukarıdaki önkoşulların tümü karşılandıysa, tanılama bilgilerini topla
 
 > [!TIP]
 > Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
-> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
-> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
-> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](linux-preferences.md)
 > - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
-> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
-> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
+> - [Android özelliklerinde Uç Nokta için Defender’ı yapılandırın](android-configure.md)
+> - [iOS özelliklerinde Uç Nokta için Microsoft Defender’ı yapılandırın](ios-configure-features.md)
 
 ## <a name="related-topics"></a>İlgili konular
 

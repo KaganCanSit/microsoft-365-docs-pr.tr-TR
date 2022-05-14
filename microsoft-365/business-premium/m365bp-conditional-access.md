@@ -24,12 +24,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Güvenlik varsayılanlarının, Microsoft 365 İş Ekstra için önceden yapılandırılmış güvenlik ayarları sağlayarak kuruluşunuzun kimlikle ilgili saldırılara karşı korunmasına nasıl yardımcı olabileceğini öğrenin.
-ms.openlocfilehash: af9b19dcf33f1b79d4057662cf759ace27aec38f
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: c1a63efc29154768a7d54d31f51c25a3c84fa30a
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095278"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65417852"
 ---
 # <a name="security-defaults-and-multi-factor-authentication"></a>Güvenlik varsayılanları ve çok faktörlü kimlik doğrulaması
 
@@ -97,7 +97,7 @@ Güvenlik varsayılanları tüm müşteriler tarafından kullanılabilirken Koş
 - [Azure yönetimi için MFA gerektirme](/azure/active-directory/conditional-access/howto-conditional-access-policy-azure-management)
 - [Eski kimlik doğrulamasını engelle](/azure/active-directory/conditional-access/howto-conditional-access-policy-block-legacy)
 - [Tüm kullanıcılar için MFA gerektir](/azure/active-directory/conditional-access/howto-conditional-access-policy-all-users-mfa)
-- [Azure AD MFA kaydını gerektir](/azure/active-directory/identity-protection/howto-identity-protection-configure-mfa-policy) - Azure Active Directory Premium P2 parçası olan Azure AD Kimlik Koruması gerektirir
+- [Azure AD MFA kaydı gerektir](/azure/active-directory/identity-protection/howto-identity-protection-configure-mfa-policy) - Azure Active Directory Premium P2 parçası olan Azure AD Kimlik Koruması gerektirir
 
 Koşullu Erişim hakkında daha fazla bilgi edinmek için bkz. [Koşullu Erişim nedir?](/azure/active-directory/conditional-access/overview) Koşullu Erişim ilkeleri oluşturma hakkında daha fazla bilgi için bkz. [Koşullu Erişim ilkesi oluşturma](/azure/active-directory/authentication/tutorial-enable-azure-mfa#create-a-conditional-access-policy).
 
@@ -107,4 +107,3 @@ Koşullu Erişim hakkında daha fazla bilgi edinmek için bkz. [Koşullu Erişim
 ## <a name="next-objective"></a>Sonraki hedef
 
 [Kötü amaçlı yazılımlara ve diğer tehditlere karşı korumanın](m365bp-increase-protection.md) yollarını ayarlayın.
-

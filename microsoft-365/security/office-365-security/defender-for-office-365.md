@@ -20,12 +20,12 @@ ms.custom:
 description: Office 365 için Microsoft Defender Kasa Ekleri, Kasa Bağlantıları, gelişmiş kimlik avı önleme araçları, raporlama araçları ve tehdit bilgileri özelliklerini içerir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: a181f8ef6bb7ca018fb9ddf0f0adc4fe565b73e1
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 9be72102f9813394cb2d9eab1e4d163c6d87bd4b
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64941555"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65417830"
 ---
 # <a name="microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender
 
@@ -91,7 +91,11 @@ Aşağıdaki tabloda her plana neler dahil olduğu özetlenmiştir.
 
 - Mevcut aboneliğiniz Office 365 için Microsoft Defender'ı içermiyorsa ve bunu istiyorsanız, [bir deneme başlatmak için satış ekibiyle iletişime geçin](https://info.microsoft.com/ww-landing-M365SMB-web-contact.html) ve Office 365 için Microsoft Defender'ın kuruluşunuzda nasıl çalışabileceğini öğrenin.
 
-- Office 365 için Microsoft Defender P2 müşterileri, olayları ve uyarıları verimli bir şekilde algılamak, gözden geçirmek ve yanıtlamak için **Microsoft 365 Defender tümleştirmesine** erişebilir.
+- Office 365 için Microsoft Defender P2 müşterileri, olayları ve uyarıları verimli bir şekilde algılamak, gözden geçirmek ve yanıtlamak için **Microsoft 365 Defender tümleştirmesine** erişebilir. 
+
+Microsoft 365 Defender portalına taşınan Office 365 için Microsoft Defender P2 özellikleri hakkında daha fazla bilgi edinmek için bu kısa videoyu izleyin.
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRwfx]
+
 
 ## <a name="configure-microsoft-defender-for-office-365-policies"></a>Office 365 için Microsoft Defender ilkelerini yapılandırma
 
@@ -147,7 +151,7 @@ Office 365 için Microsoft Defender özelliklere erişmek için size uygun bir r
 |genel yönetici (Kuruluş Yönetimi)|Bu rolü Azure Active Directory veya Microsoft 365 Defender portalında atayabilirsiniz. Daha fazla bilgi için bkz. [Microsoft 365 Defender portalında İzinler](permissions-microsoft-365-security-center.md).|
 |Güvenlik Yöneticisi|Bu rolü Azure Active Directory veya Microsoft 365 Defender portalında atayabilirsiniz. Daha fazla bilgi için bkz. [Microsoft 365 Defender portalında İzinler](permissions-microsoft-365-security-center.md).|
 |Exchange Online'da Kuruluş Yönetimi|[Exchange Online'de izinler](/exchange/permissions-exo/permissions-exo) <p> [PowerShell'i Exchange Online](/powershell/exchange/exchange-online-powershell)|
-|Arama ve Temizleme|Bu rol yalnızca Microsoft 365 Defender portalında veya Microsoft Purview uyumluluk portalında kullanılabilir. Daha fazla bilgi için bkz. [Microsoft 365 Defender portalındaki](permissions-microsoft-365-security-center.md) [İzinler ve Microsoft Purview uyumluluk portalındaki İzinler](../../compliance/microsoft-365-compliance-center-permissions.md).|
+|Arama ve Temizleme|Bu rol yalnızca Microsoft 365 Defender portalında veya Microsoft Purview uyumluluk portalı kullanılabilir. Daha fazla bilgi için bkz[. Microsoft 365 Defender portalındaki İzinler](permissions-microsoft-365-security-center.md) ve [Microsoft Purview uyumluluk portalı İzinler](../../compliance/microsoft-365-compliance-center-permissions.md).|
 |||
 
 ## <a name="get-microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender alma
