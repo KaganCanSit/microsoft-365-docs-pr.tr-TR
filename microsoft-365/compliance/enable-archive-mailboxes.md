@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 Uyumluluğu için arşiv posta kutularını etkinleştirme
+title: Microsoft 365 için arşiv posta kutularını etkinleştirme
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -23,78 +23,56 @@ ms.custom:
 - admindeeplinkCOMPLIANCE
 - admindeeplinkEXCHANGE
 description: Kuruluşunuzun ileti saklama, eKeşif ve saklama gereksinimlerini desteklemek için arşiv posta kutularını etkinleştirmeyi veya devre dışı bırakmayı öğrenin.
-ms.openlocfilehash: 9e30178dcab731ae61a9db5374218a608e4e47af
-ms.sourcegitcommit: 46e796c6b76a01516c48977335bbf5076ca74a06
+ms.openlocfilehash: fac57f8b352edc62db344ec600d3063e960f5a6f
+ms.sourcegitcommit: 54bc063818779e351ca24f04ba571f762d85751d
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64738391"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65393330"
 ---
-# <a name="enable-archive-mailboxes-in-the-compliance-center"></a>Uyumluluk merkezinde posta kutularını arşivlemeyi etkinleştirme
+# <a name="enable-archive-mailboxes-in-the-microsoft-purview-compliance-portal"></a>Microsoft Purview uyumluluk portalındaki arşiv posta kutularını etkinleştirme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft 365’te arşivleme ( *Yerinde Arşivleme* olarak da adlandırılır) kullanıcılara ek posta kutusu depolama alanı sağlar. Daha fazla bilgi için bkz. [Arşiv posta kutuları hakkında bilgi](archive-mailboxes.md).
 
-Microsoft 365 uyumluluk merkezinde bir arşiv posta kutusunu etkinleştirmek veya devre dışı bırakmak için bu makaledeki bilgileri veya PowerShell’i kullanın. Ayrıca, herhangi bir sorunu ve önerilen çözümü belirlemek için bir kullanıcının arşiv posta kutusunda otomatik tanılama denetiminin nasıl çalıştırıldığını da öğrenin.
+Microsoft Purview uyumluluk portalında veya PowerShell kullanarak arşiv posta kutusunu etkinleştirmek veya devre dışı bırakmak için bu makaledeki bilgileri kullanın. Ayrıca, herhangi bir sorunu ve önerilen çözümü belirlemek için bir kullanıcının arşiv posta kutusunda otomatik tanılama denetiminin nasıl çalıştırıldığını da öğrenin.
 
 ## <a name="get-the-necessary-permissions"></a>Gerekli izinleri alma
 
 Arşiv posta kutularını etkinleştirmek veya devre dışı bırakmak için Exchange Online'da Posta Alıcıları rolüne atanmış olmanız gerekir. Varsayılan olarak bu rol, <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange yönetim merkezi</a>’nde **İzinler** sayfasındaki Alıcı Yönetimi ve Kuruluş Yönetimi rol gruplarına atanır. 
 
-Microsoft 365 uyumluluk merkezinde **Arşiv** sayfasını görmüyorsanız, yöneticinizden size gerekli izinleri atamasını isteyin.
+Microsoft Purview uyumluluk portalında **Arşiv** sayfasını görmüyorsanız, yöneticinizden size gerekli izinleri atamasını isteyin.
 
 ## <a name="enable-an-archive-mailbox"></a>Arşiv posta kutusu etkinleştirme
 
-1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 uyumluluk merkezi</a>’ne gidin ve oturum açın.
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalı’na</a> gidin ve oturum açın.
 
-2. Microsoft 365 uyumluluk merkezinin sol bölmesinde, **Bilgi yönetişimi**’ne ve ardından **Arşiv** sekmesine tıklayın.
+2. Uyumluluk portalının sol bölmesinde **Veri yaşam döngüsü yönetimi** > **Arşiv**’i seçin.
 
-   **Arşiv** sayfası görüntülenir. **Arşiv posta kutusu** sütunu, her kullanıcı için bir arşiv posta kutusunun etkinleştirilmiş olup olmadığını gösterir.
+   **Arşiv** sayfasında  **Arşiv posta kutusu** sütunu, her kullanıcı için bir arşiv posta kutusunun etkinleştirilmiş olup olmadığını gösterir.
 
    > [!NOTE]
-   > **Arşiv** sayfası en fazla 500 kullanıcı gösterir.
+   > **Arşiv** sayfası en fazla 500 kullanıcı gösterir. İstediğiniz kullanıcının adını hemen göremiyorsanız arama kutusunu kullanın.
 
-3. Posta kutuları listesinde, arşiv posta kutusunu etkinleştirmek istediğiniz kullanıcıyı seçin ve **Arşivi Etkinleştir**'i seçin.
+3. Posta kutuları listesinde, arşiv posta kutusunu etkinleştirmek istediğiniz kullanıcıyı seçin ve ardından **Arşivi Etkinleştir** seçeneğini seçin:
 
-   ![Arşiv posta kutusunu etkinleştirmek için seçili kullanıcının ayrıntılar bölmesinde Etkinleştir'e tıklayın.](../media/8b53cdec-d5c9-4c28-af11-611f95c37b34.png)
+   ![Seçili bir kullanıcı için arşiv seçeneğini etkinleştirin.](../media/enable-archive-option.png)
 
 
-   Arşiv posta kutusunu etkinleştirirseniz, kullanıcının posta kutusundaki posta kutusuna atanan arşivleme ilkesinden daha eski olan öğelerin yeni arşiv posta kutusuna taşınacağını söyleyen bir uyarı görüntülenir. Exchange Online posta kutularına atanan bekletme ilkesinin bir parçası olan varsayılan arşiv ilkesi, öğeleri, öğenin posta kutusuna teslim edildiği veya kullanıcı tarafından oluşturulduğu tarihten iki yıl sonra arşiv posta kutusuna taşır. Daha fazla bilgi için bu makalenin **Daha fazla bilgi** bölümüne bakın.
+   Arşiv posta kutusunu etkinleştirirseniz, kullanıcının posta kutusundaki posta kutusuna atanan arşivleme ilkesinden daha eski olan öğelerin yeni arşiv posta kutusuna taşınacağını söyleyen bir uyarı görüntülenir. Exchange Online posta kutularına atanan bekletme ilkesinin bir parçası olan varsayılan arşiv ilkesi, öğeleri, öğenin posta kutusuna teslim edildiği veya kullanıcı tarafından oluşturulduğu tarihten iki yıl sonra arşiv posta kutusuna taşır. Daha fazla bilgi için bkz. [Arşiv posta kutuları hakkında bilgi](archive-mailboxes.md).
 
-5. Arşiv posta kutusunu etkinleştirmek için **Etkinleştir**'i seçin.
+5. Onaylamak için **Etkinleştir**’i seçin.
 
-   Arşiv posta kutusunu oluşturmak birkaç dakika sürebilir. Oluşturulduğunda, seçili kullanıcı için ayrıntılar bölmesinde **Arşiv posta kutusu: etkin** olarak görüntülenir. **Yenile** ![Yenile simgesine](../media/O365-MDM-Policy-RefreshIcon.gif) tıklamanız gerekebilir. ayrıntılar bölmesindeki bilgileri güncelleştirmek için.
-
-> [!TIP]
-> Arşiv posta kutuları devre dışı bırakılmış birden çok kullanıcı seçerek de arşiv posta kutularını toplu olarak etkinleştirebilirsiniz (Shift veya Ctrl tuşlarını kullanın). Birden çok posta kutusu seçtikten sonra, ayrıntılar bölmesinde **Etkinleştir**'e tıklayın.
+   Arşiv posta kutusunu oluşturmak birkaç dakika sürebilir. Oluşturulduğunda, Seçili kullanıcının **Arşiv posta kutusu** sütununda **Etkin** görüntülenir, ancak durum değişikliğini görmek için sayfayı yenilemeniz gerekebilir.
 
 ## <a name="disable-an-archive-mailbox"></a>Arşiv posta kutusunu devre dışı bırakma
 
-Bir kullanıcının arşiv posta kutusunu devre dışı bırakmak için de Microsoft 365 uyumluluk merkezi **Arşiv** sayfasını kullanabilirsiniz. Bir arşiv posta kutusunu devre dışı bıraktıktan sonra, devre dışı bırakmadan sonraki 30 gün içinde onu kullanıcının birincil posta kutusuna yeniden bağlayabilirsiniz. Bu durumda, arşiv posta kutusunun özgün içeriği geri yüklenir. 30 gün sonra, özgün arşiv posta kutusunun içeriği kalıcı olarak silinir ve kurtarılamaz. Bu nedenle, arşivi devre dışı bıraktıktan 30 gün sonra yeniden etkinleştirirseniz yeni bir arşiv posta kutusu oluşturulur.
+Arşiv posta kutusunu etkinleştirmenize benzer şekilde, bir kullanıcının arşiv posta kutusunu devre dışı bırakmak için Microsoft Purview uyumluluk portalı **Arşiv** sayfasını kullanabilirsiniz. Bu kez, kullanıcıyı seçtikten sonra **Arşivi devre dışı bırak** seçeneğini seçin.
 
-Kullanıcıların posta kutularına atanan varsayılan arşiv ilkesi, öğelerin teslim edildikten iki yıl sonra arşiv posta kutusuna taşımasını sağlar. Bir kullanıcının arşiv posta kutusunu devre dışı bırakırsanız, posta kutusu öğeleri üzerinde herhangi bir işlem yapılmaz ve bunlar kullanıcının birincil posta kutusunda kalır.
+Bir arşiv posta kutusunu devre dışı bıraktıktan sonra, devre dışı bırakmadan sonraki 30 gün içinde onu kullanıcının birincil posta kutusuna yeniden bağlayabilirsiniz. Bu durumda, arşiv posta kutusunun özgün içeriği geri yüklenir. 30 gün sonra, özgün arşiv posta kutusunun içeriği kalıcı olarak silinir ve kurtarılamaz. Bu nedenle, arşivi devre dışı bıraktıktan 30 gün sonra yeniden etkinleştirirseniz yeni bir arşiv posta kutusu oluşturulur.
 
-Arşiv posta kutusunu devre dışı bırakmak için:
-
-1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 uyumluluk merkezi</a>’ne gidin ve oturum açın.
-
-2. Microsoft 365 uyumluluk merkezinin sol bölmesinde, **Bilgi yönetişimi**’ne ve ardından **Arşiv** sekmesine tıklayın.
-
-   **Arşiv** sayfası görüntülenir. **Arşiv posta kutusu** sütunu, her kullanıcı için bir arşiv posta kutusunun etkinleştirilmiş olup olmadığını gösterir.
-
-   > [!NOTE]
-   > **Arşiv** sayfası en fazla 500 kullanıcı gösterir.
-
-3. Posta kutuları listesinde, arşiv posta kutusunu devre dışı bırakmak istediğiniz kullanıcıyı seçin ve **Arşivi Devre Dışı Bırak**'ı seçin.
-
-
-   Arşiv posta kutusunu yeniden etkinleştirmek için 30 gününüz olduğunu ve 30 gün sonra arşivdeki tüm bilgilerin kalıcı olarak silineceğini söyleyen bir uyarı iletisi görüntülenir.
-
-5. Arşiv posta kutusunu devre dışı bırakmak için **Devre Dışı Bırak**'ı seçin.
-
-   Arşiv posta kutusunu devre dışı bırakmak birkaç dakika sürebilir. Devre dışı bırakıldığında, seçili kullanıcı için ayrıntılar bölmesinde **Arşiv posta kutusu: devre dışı** olarak görüntülenir. **Yenile** ![Yenile simgesine](../media/O365-MDM-Policy-RefreshIcon.gif) tıklamanız gerekebilir. ayrıntılar bölmesindeki bilgileri güncelleştirmek için.
-
-> [!TIP]
-> Arşiv posta kutuları etkinleştirilmiş birden çok kullanıcı seçerek de arşiv posta kutularını toplu olarak devre dışı bırakabilirsiniz (Shift veya Ctrl tuşlarını kullanın). Birden çok posta kutusu seçtikten sonra, ayrıntılar bölmesinde **Devre dışı bırak**'a tıklayın.
+Kullanıcıların posta kutularına atanan varsayılan arşiv ilkesi, öğelerin teslim edildikten iki yıl sonra arşiv posta kutusuna taşımasını sağlar. Bir kullanıcının arşiv posta kutusunu devre dışı bıraktığınızda, posta kutusu öğeleri üzerinde herhangi bir işlem yapılmaz ve bunlar kullanıcının birincil posta kutusunda kalır.
 
 ## <a name="use-exchange-online-powershell-to-enable-or-disable-archive-mailboxes"></a>Arşiv posta kutularını etkinleştirmek veya devre dışı bırakmak için Exchange Online PowerShell'i kullanın
 

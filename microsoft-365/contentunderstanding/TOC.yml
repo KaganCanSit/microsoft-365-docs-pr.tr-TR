@@ -2,43 +2,43 @@
   href: index.md
 - name: Özel modeller
   items:
-    - name: Belgeyi anlama
+    - name: Belge anlama
       items:
         - name: Genel bakış
           href: document-understanding-overview.md
         - name: Modeller arasındaki farklar
           href: difference-between-document-understanding-and-form-processing-model.md
-        - name: Örnek modeli içeri aktarma
+        - name: Örnek modeli içeri aktar
           href: learn-about-document-understanding-models-through-the-sample-model.md
-        - name: İçerik merkezi oluşturma
+        - name: İçerik merkezi oluştur
           href: create-a-content-center.md
-        - name: Sınıflandırıcı oluşturma
+        - name: Sınıflandırıcı oluştur
           href: create-a-classifier.md
-        - name: Modeli çoğaltma
+        - name: Modeli çoğalt
           href: duplicate-a-model.md
-        - name: Modeli yeniden adlandırma
+        - name: Modeli yeniden adlandır
           href: rename-a-model.md
-        - name: Ayıklaıcı oluşturma
+        - name: Ayıklayıcı oluştur
           href: create-an-extractor.md
-        - name: Ayıklayı yeniden adlandırma
+        - name: Ayıklayıcıyı yeniden adlandır
           href: rename-an-extractor.md
         - name: Açıklama türleri
           href: explanation-types-overview.md
-        - name: Açıklama şablonlarını kullanma
+        - name: Açıklama şablonlarını kullanın
           href: explanation-templates.md
-        - name: Belge anlama modeli uygulama
+        - name: Bir belge anlama modeli uygulayın
           href: apply-a-model.md
-        - name: Modeli yayımlama ve keşfetme
+        - name: Modeli yayımlayın ve keşfedin
           href: model-discovery.md
-        - name: Bekletme etiketi uygulama
+        - name: Bekletme etiketi uygula
           href: apply-a-retention-label-to-a-model.md
-        - name: Duyarlılık etiketi uygulama
+        - name: Duyarlılık etiketi uygula
           href: apply-a-sensitivity-label-to-a-model.md
-        - name: Yerel model oluşturma
+        - name: Yerel model oluştur
           href: create-local-model.md
         - name: Model kullanım analizi
           href: model-usage-analytics.md
-        - name: Ayıklaıcı oluştururken terim deposu taksonomilerinden faydalanma
+        - name: Ayıklayıcı oluştururken terim deposu taksonomisini kullan
           href: leverage-term-store-taxonomy.md
         - name: Erişilebilirlik modu
           href: accessibility-mode.md
@@ -48,9 +48,9 @@
           href: form-processing-overview.md
         - name: Modeller arasındaki farklar
           href: difference-between-document-understanding-and-form-processing-model.md
-        - name: Form işleme modeli oluşturma
+        - name: Form işleme modeli oluştur
           href: create-a-form-processing-model.md
-        - name: Bekletme etiketi uygulama
+        - name: Bekletme etiketi uygula
           href: apply-a-retention-label-to-a-model.md
         - name: Model kullanım analizi
           href: model-usage-analytics.md
@@ -60,19 +60,19 @@
       href: prebuilt-overview.md
     - name: Önceden oluşturulmuş fatura ve makbuz modelleri
       href: prebuilt-models.md
-    - name: Bekletme etiketi uygulama
+    - name: Bekletme etiketi uygula
       href: apply-a-retention-label-to-a-model.md
-    - name: Yerel model oluşturma
+    - name: Yerel model oluştur
       href: create-local-model.md
     - name: Model kullanım analizi
       href: model-usage-analytics.md
 - name: İçerik derlemesi
   items:
-    - name: İçerik derlemesi kullanarak belge oluşturma
+    - name: İçerik derlemesi kullanarak belge oluştur
       href: content-assembly.md
-- name: Meta veri araması
+- name: Meta veri arama
   items:
-    - name: Belge kitaplıklarında meta veri arama
+    - name: Belge kitaplıklarında meta verileri arama
       href: metadata-search.md
 - name: Taksonomi
   items:
@@ -80,19 +80,19 @@
       href: import-term-set-skos.md
     - name: SKOS biçimlendirme başvurusu
       href: skos-format-reference.md
-    - name: İçerik türünü hub'a it
+    - name: İçerik türünü hub'a gönder
       href: push-content-type-to-hub.md
     - name: Terim deposu raporları
       href: term-store-analytics.md
 - name: Kurulum ve yönetim
   items:
-    - name: Lisanslama SharePoint Syntex
+    - name: SharePoint Syntex lisansı
       href: syntex-licensing.md
-    - name: Ayarlama SharePoint Syntex
+    - name: SharePoint Syntex ayarlama
       href: set-up-content-understanding.md
-    - name: İçerik merkezi oluşturma
+    - name: İçerik merkezi oluştur
       href: create-a-content-center.md
-    - name: PowerShell SharePoint Syntex yönetme
+    - name: PowerShell ile SharePoint Syntex yönetme
       items:
         - name: Genel bakış
           href: powershell-syntex-intro.md
@@ -102,25 +102,27 @@
           href: powershell-syntex-publishing.md
         - name: Model tarafından işleme isteği
           href: powershell-syntex-processing.md
-        - name: Model açıklamalarla çalışma
+        - name: Model açıklamalarıyla çalışma
           href: powershell-syntex-explanations.md
 - name: Benimseme
   items:
-    - name: Benimsemeye başlama
+    - name: Benimseme ile Kullanmaya başlayın
       href: adoption-getstarted.md
     - name: Senaryolar ve kullanım örnekleri
       href: adoption-scenarios.md
-    - name: Deneme sürümü çalıştırma
+    - name: Ortamınızı değerlendirin
+      href: adoption-assessment-tool.md
+    - name: Deneme sürümü çalıştırın
       href: trial-syntex.md
-    - name: Sözleşmeleri iş Microsoft 365
+    - name: Microsoft 365'de sözleşmeleri yönet
       items:
         - name: Genel bakış
           href: solution-manage-contracts-in-microsoft-365.md
-        - name: Adım 1. E-SharePoint Syntex
+        - name: Adım 1. SharePoint Syntex'i kullanın
           href: solution-manage-contracts-step1.md
-        - name: Adım 2. E-Microsoft Teams
+        - name: Adım 2. Microsoft Teams'i kullanın
           href: solution-manage-contracts-step2.md
-        - name: Adım 3. Power Automate'i Power Automate
+        - name: Adım 3. Power Automate kullan
           href: solution-manage-contracts-step3.md
     - name: Sözleşme Yönetimi site şablonu
       href: use-contracts-management-site.md
