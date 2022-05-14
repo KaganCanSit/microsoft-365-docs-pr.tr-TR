@@ -1,7 +1,7 @@
 ---
 title: İstemci davranışsal engelleme
-description: İstemci davranış engellemesi, Pertahanan Microsoft untuk Titik Akhir davranış engelleme ve kapsama özelliklerinin bir parçasıdır
-keywords: davranış engelleme, hızlı koruma, istemci davranışı, Pertahanan Microsoft untuk Titik Akhir
+description: İstemci davranış engellemesi, Uç Nokta için Microsoft Defender davranış engelleme ve kapsama özelliklerinin bir parçasıdır
+keywords: davranış engelleme, hızlı koruma, istemci davranışı, Uç Nokta için Microsoft Defender
 ms.pagetype: security
 author: denisebmsft
 ms.author: deniseb
@@ -16,12 +16,12 @@ ms.custom:
 - edr
 ms.collection: m365-security-compliance
 ms.technology: mde
-ms.openlocfilehash: f19e354a23af03abd905591993197ff8f484ceff
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: 95c138b6613d610520a4e6870ae7a59b46159f5d
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64788402"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65418750"
 ---
 # <a name="client-behavioral-blocking"></a>İstemci davranışsal engelleme
 
@@ -86,10 +86,10 @@ Kuruluşunuz Uç Nokta için Defender kullanıyorsa istemci davranış engelleme
 
 > [!TIP]
 > Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
-> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
-> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
-> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](linux-preferences.md)
 > - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
-> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
-> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
+> - [Android özelliklerinde Uç Nokta için Defender’ı yapılandırın](android-configure.md)
+> - [iOS özelliklerinde Uç Nokta için Microsoft Defender’ı yapılandırın](ios-configure-features.md)

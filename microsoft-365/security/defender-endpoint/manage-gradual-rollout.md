@@ -18,12 +18,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: d8a500babf581cd70b92a39b32a3be0bb5d4acd3
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: 8f1f2add8196afef6e8bd738586957d7fea15c84
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64789392"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65416342"
 ---
 # <a name="manage-the-gradual-rollout-process-for-microsoft-defender-updates"></a>Microsoft Defender güncelleştirmeleri için aşamalı dağıtım işlemini yönetme
 
@@ -67,7 +67,7 @@ Makineleriniz Windows Update Defender güncelleştirmelerini alıyorsa aşamalı
 > [!NOTE]
 > Kendi aşamalı sürümünüzü planlarken, lütfen her zaman önizlemeye ve hazırlanmış kanallara abone olan cihazların bir seçimine sahip olduğunuzdan emin olun. Bu, hem kuruluşunuza hem de Microsoft'a ortamınıza özgü sorunları engelleme veya bulma ve düzeltme fırsatı sağlar.
 
-Windows Sunucu Güncelleştirme Hizmetleri (WSUS) veya Microsoft Endpoint Configuration Manager (MECM) gibi güncelleştirmeleri alan makineler için, tüm Windows güncelleştirmeleri için seçenekler de dahil olmak üzere daha fazla seçenek sağlanır Pertahanan Microsoft untuk Titik Akhir.
+Windows Sunucu Güncelleştirme Hizmetleri (WSUS) veya Microsoft Endpoint Configuration Manager (MECM) gibi güncelleştirmeleri alan makineler için, tüm Windows güncelleştirmeleri için seçenekler de dahil olmak üzere daha fazla seçenek sağlanır Uç Nokta için Microsoft Defender.
 
 - Güncelleştirmelerin dağıtımını ve uygulamasını yönetmek için WSUS, MECM gibi bir çözümün nasıl kullanılacağı hakkında daha fazla bilgi için [bkz. Microsoft Defender Virüsten Koruma güncelleştirmeleri yönetme ve temelleri uygulama - Windows güvenlik](manage-updates-baselines-microsoft-defender-antivirus.md#product-updates).
 
@@ -85,7 +85,7 @@ Aşağıdaki güncelleştirme kanalları kullanılabilir:
 
 |Kanal adı|Açıklama|Uygulama|
 |---|---|---|
-|Beta Kanalı - Yayın Öncesi|Güncelleştirmeleri diğerlerinden önce test etme|Yeni aylık güncelleştirmeleri ilk alan cihazlar bu kanala ayarlanır. Sorunları tanımlama ve Microsoft'a raporlamaya katılmak için Beta Kanalı'na tıklayın. Windows Insider Programı'ndaki cihazlar varsayılan olarak bu kanala abonedir. Yalnızca test ortamlarında kullanım için.|
+|Beta Kanalı - Yayın Öncesi|Güncelleştirmeleri diğerlerinden önce test etme|Yeni aylık güncelleştirmeleri ilk alan cihazlar bu kanala ayarlanır. Sorunları tanımlama ve Microsoft'a raporlamaya katılmak için Beta Kanalı'na tıklayın. Windows Insider Programı cihazlar varsayılan olarak bu kanala abonedir. Yalnızca test ortamlarında kullanım için.|
 |Geçerli Kanal (Önizleme)|Geçerli Kanal güncelleştirmelerini aşamalı sürüm sırasında **daha önce** alın|Bu kanala ayarlanan cihazlara, aşamalı sürüm döngüsü boyunca en erken güncelleştirmeler sunulacaktır. Ön üretim/doğrulama ortamları için önerilir.|
 |Geçerli Kanal (Aşamalı)|Aşamalı sürüm sırasında Güncel Kanal güncelleştirmelerini daha sonra alın|Cihazlara daha sonra aşamalı sürüm döngüsü sırasında güncelleştirmeler sunulacaktır. Cihaz popülasyonunuzun küçük, temsili bir bölümüne (%10) başvurmanız önerilir.|
 |Geçerli Kanal (Geniş)|Aşamalı sürümün sonunda güncelleştirmeleri alma|Cihazlara yalnızca aşamalı sürüm döngüsü tamamlandıktan sonra güncelleştirmeler sunulacaktır. Üretim popülasyonunuzda (~%10-100) geniş bir cihaz kümesine uygulanması önerilir.|
@@ -141,10 +141,10 @@ Bu araçların nasıl kullanılacağı hakkında ayrıntılı bilgi için bkz. [
 
 > [!TIP]
 > Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
-> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
-> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
-> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](linux-preferences.md)
 > - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
-> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
-> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
+> - [Android özelliklerinde Uç Nokta için Defender’ı yapılandırın](android-configure.md)
+> - [iOS özelliklerinde Uç Nokta için Microsoft Defender’ı yapılandırın](ios-configure-features.md)

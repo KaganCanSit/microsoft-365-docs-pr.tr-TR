@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
 description: silinen posta kutularının içeriğini Microsoft 365 koruyan etkin olmayan posta kutuları oluşturun ve yönetin.
-ms.openlocfilehash: 485352f292321ccfa56e59451cf017c01f3d7fdd
-ms.sourcegitcommit: 54bc063818779e351ca24f04ba571f762d85751d
+ms.openlocfilehash: b7a33101135b43357b095af6864b54c618abd84d
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65393373"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65417412"
 ---
 # <a name="create-and-manage-inactive-mailboxes"></a>Etkin olmayan posta kutuları oluşturma ve yönetme
 
@@ -72,9 +72,11 @@ Kuruluşunuzdaki etkin olmayan posta kutularının listesini görüntülemek iç
 
    ![Veri yaşam döngüsü yönetiminin Bekletme ilkeleri sayfasındaki Etkin Olmayan Posta Kutusu seçeneği.](../media/inactive-mailbox-option.png)
 
-4. **Etkin olmayan posta kutuları sayfasında etkin** olmayan posta kutularının listesi görüntülenir. Etkin olmayan posta kutusuyla ilgili ayrıntıları görmek için birini seçin. Ayrıntılar arasında ne kadar süredir etkin olmadığı, Exchange tanımlayıcısı, ne zaman beklemeye alındığı yer alır.
+4. **Etkin olmayan posta kutuları sayfasında etkin** olmayan posta kutularının listesi görüntülenir. Etkin olmayan posta kutusuyla ilgili ayrıntıları görmek için birini seçin. Ayrıntılar, posta kutusunun Exchange tanımlayıcısını ve [Dava Tutma'da](create-a-litigation-hold.md) olup olmadığını içerir.
+    
+    Ayrıntılar bölmesinde Microsoft 365 bekletme ilkesi veya eBulma saklama gibi başka tür ayrı tutmalar görmezsiniz. Bu bilgileri bulmak için bkz. [Exchange Online posta kutusuna yerleştirilmiş saklama türünü tanımlama](identify-a-hold-on-an-exchange-online-mailbox.md).
 
-**Etkin olmayan posta kutuları** sayfasında Arama sonuçlarını dışarı aktar simgesi'ni seçin![.](../media/47205c65-babd-4b3a-bd7b-98dfd92883ba.png) Kuruluşunuzdaki etkin olmayan posta kutuları hakkında ek bilgi içeren bir CSV dosyasını görüntülemek veya indirmek için dışarı **aktarın**.
+Etkin olmayan çok sayıda posta kutunuz varsa, listede gördüğünüz ayrıntılar için csv dosyasında arama yapmak ve sıralamak daha kolay olabilir: **Etkin olmayan posta kutuları** sayfasında **Dışarı Aktar'ı** seçin:::image type="icon" source="../media/47205c65-babd-4b3a-bd7b-98dfd92883ba.png":::.
 
 Alternatif olarak, etkin olmayan posta kutularının listesini görüntülemek için Exchange Online PowerShell'de aşağıdaki komutu çalıştırabilirsiniz:
 

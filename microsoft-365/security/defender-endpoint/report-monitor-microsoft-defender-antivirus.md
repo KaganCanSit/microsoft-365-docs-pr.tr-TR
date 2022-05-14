@@ -16,24 +16,24 @@ manager: dansimp
 ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
-ms.openlocfilehash: b6593784b0df1109eb7729b3df91ef467d30c4bb
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: c36902d6c636c726a42292d7a6e4f0cdec60edb7
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64788424"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65415117"
 ---
 # <a name="report-on-microsoft-defender-antivirus"></a>Defender Virüsten Koruma’yı raporlayın
 
 **Şunlar için geçerlidir:**
-- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Virüsten Koruma
 
 **Platform**
 - Windows
 
-Microsoft Defender Virüsten Koruma Windows 10, Windows 11, Windows Server 2019, Windows Server 2022 ve Windows Server 2016 yerleşik olarak bulunur. Microsoft Defender Virüsten Koruma, Pertahanan Microsoft untuk Titik Akhir'da yeni nesil korumanızdır. Yeni nesil koruma, cihazlarınızı e-posta, uygulamalar, bulut ve web'de virüs, kötü amaçlı yazılım ve casus yazılım gibi yazılım tehditlerinden korumaya yardımcı olur.
+Microsoft Defender Virüsten Koruma Windows 10, Windows 11, Windows Server 2019, Windows Server 2022 ve Windows Server 2016 yerleşik olarak bulunur. Microsoft Defender Virüsten Koruma, Uç Nokta için Microsoft Defender'da yeni nesil korumanızdır. Yeni nesil koruma, cihazlarınızı e-posta, uygulamalar, bulut ve web'de virüs, kötü amaçlı yazılım ve casus yazılım gibi yazılım tehditlerinden korumaya yardımcı olur.
 
 Microsoft Defender Virüsten Koruma ile koruma durumunu ve uyarılarını gözden geçirmek için çeşitli seçenekleriniz vardır. Microsoft Defender Virüsten Koruma izlemek veya [e-posta uyarıları oluşturmak](/configmgr/protect/deploy-use/endpoint-configure-alerts) için [Microsoft Endpoint Manager](/configmgr/protect/deploy-use/monitor-endpoint-protection) kullanabilirsiniz. Ya da [Microsoft Intune](/intune/introduction-intune) kullanarak korumayı izleyebilirsiniz.
 
@@ -49,13 +49,13 @@ PowerShell, WMI veya Microsoft Azure durumunu izlemek veya belirlemek için [bkz
 
 > [!TIP]
 > Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
-> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
-> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
-> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](linux-preferences.md)
 > - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
-> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
-> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
+> - [Android özelliklerinde Uç Nokta için Defender’ı yapılandırın](android-configure.md)
+> - [iOS özelliklerinde Uç Nokta için Microsoft Defender’ı yapılandırın](ios-configure-features.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

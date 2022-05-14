@@ -1,6 +1,6 @@
 ---
 title: Microsoft Defender Virüsten Koruma için bulut korumasının neden etkinleştirilmesi gerekir?
-description: Microsoft Defender Virüsten Koruma için bulut korumasının neden açık olması gerektiğini görün. Pertahanan Microsoft untuk Titik Akhir çalışmasında birçok güvenlik özelliğine yardımcı olur
+description: Microsoft Defender Virüsten Koruma için bulut korumasının neden açık olması gerektiğini görün. Uç Nokta için Microsoft Defender çalışmasında birçok güvenlik özelliğine yardımcı olur
 keywords: Microsoft Defender Virüsten Koruma, bulut koruması, güvenlik özellikleri, örnek gönderim
 search.product: ''
 ms.prod: m365-security
@@ -18,25 +18,25 @@ ms.date: 10/22/2021
 ms.collection:
 - m365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: 6a0667e52474fe5e04f547d12b1f53ca47c6ea6e
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: 195e929c0de1be9ab05f2685ba60e56c13dd3629
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64787588"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65415238"
 ---
 # <a name="why-cloud-protection-should-be-enabled-for-microsoft-defender-antivirus"></a>Microsoft Defender Virüsten Koruma için bulut korumasının neden etkinleştirilmesi gerekir?
 
 **Şunlar için geçerlidir:**
 
 - Microsoft Defender Virüsten Koruma
-- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 **Platform**
 - Windows
 
-Microsoft Defender Virüsten Koruma bulut koruması, uç noktalarınızdaki ve ağınızdaki kötü amaçlı yazılımlara karşı korumaya yardımcı olur. Pertahanan Microsoft untuk Titik Akhir'deki bazı güvenlik özellikleri ve özellikleri yalnızca bulut koruması etkinleştirildiğinde çalıştığından bulut korumasını açık tutmanızı öneririz. 
+Microsoft Defender Virüsten Koruma bulut koruması, uç noktalarınızdaki ve ağınızdaki kötü amaçlı yazılımlara karşı korumaya yardımcı olur. Uç Nokta için Microsoft Defender'daki bazı güvenlik özellikleri ve özellikleri yalnızca bulut koruması etkinleştirildiğinde çalıştığından bulut korumasını açık tutmanızı öneririz. 
 
 [![alt-text="Bulut korumasına bağlı öğeleri gösteren diyagram](images/mde-cloud-protection.png#lightbox)](enable-cloud-protection-microsoft-defender-antivirus.md)
 
@@ -44,17 +44,17 @@ Aşağıdaki tabloda, bulut korumasına bağlı olan özellikler ve özellikler 
 
 | Özellik/Yetenek  | Abonelik gereksinimi |  Açıklama  |
 |---------|---------|--------|
-| Buluttaki meta verileri denetleme  | Pertahanan Microsoft untuk Titik Akhir Plan 1 veya Plan 2 (Tek başına veya Microsoft 365 E3 veya E5 gibi bir plana dahil) | Microsoft Defender Virüsten Koruma bulut hizmeti, ek bir savunma katmanı olarak makine öğrenmesi modellerini kullanır. Bu makine öğrenmesi modelleri meta verileri içerir, bu nedenle şüpheli veya kötü amaçlı bir dosya algılandığında meta verileri denetlenir. <br/><br/>Daha fazla bilgi edinmek için bkz[. Blog: Yeni nesil korumanın Pertahanan Microsoft untuk Titik Akhir temelindeki gelişmiş teknolojileri tanıma](https://www.microsoft.com/security/blog/2019/06/24/inside-out-get-to-know-the-advanced-technologies-at-the-core-of-microsoft-defender-atp-next-generation-protection/)  |
-| Bulut koruması ve örnek gönderimi | Pertahanan Microsoft untuk Titik Akhir Plan 1 veya Plan 2 (Tek başına veya Microsoft 365 E3 veya E5 gibi bir plana dahil) | Dosyalar ve yürütülebilir dosyalar, patlama ve analiz için Microsoft Defender Virüsten Koruma bulut hizmetine gönderilebilir. <br/><br/>Daha fazla bilgi için bkz. [Microsoft Defender Virüsten Koruma'de bulut koruması ve örnek gönderme](cloud-protection-microsoft-antivirus-sample-submission.md).<br/><br/>**NOT**: Otomatik örnek gönderimi bulut korumasına dayanır ancak tek başına bir ayar olarak da yapılandırılabilir.         |
-| Kurcalama koruması | Pertahanan Microsoft untuk Titik Akhir Plan 2 (Tek başına veya Microsoft 365 E5 gibi bir plana dahil) | Kurcalama koruması, kuruluşunuzun güvenlik ayarlarında istenmeyen değişikliklere karşı korumaya yardımcı olur. Microsoft 365 Defender portalında kurcalama korumasını zorunlu kılmak için bulut korumasının etkinleştirilmesi gerekir. <br/><br/>Daha fazla bilgi için bkz [. Kurcalama koruması ile güvenlik ayarlarını koruma](prevent-changes-to-security-settings-with-tamper-protection.md).        |
-| İlk görüşte engelle | Pertahanan Microsoft untuk Titik Akhir Plan 1 veya Plan 2 (Tek başına veya Microsoft 365 E3 veya E5 gibi bir plana dahil) | İlk bakışta engelle yeni kötü amaçlı yazılımları algılar ve saniyeler içinde engeller. Şüpheli veya kötü amaçlı bir dosya algılandığında, ilk bakışta engelleme özellikleri bulut koruma arka ucu sorgular ve dosyanın bir tehdit olup olmadığını belirlemek için buluşsal yöntemler, makine öğrenmesi ve otomatik analiz uygular.<br/><br/>Daha fazla bilgi edinmek için bkz. ["İlk bakışta engelle" nedir?](configure-block-at-first-sight-microsoft-defender-antivirus.md#what-is-block-at-first-sight)   |
-| Acil durum imza güncelleştirmeleri | Pertahanan Microsoft untuk Titik Akhir Plan 2 (Tek başına veya Microsoft 365 E5 gibi bir plana dahil) | Kötü amaçlı içerik algılandığında, acil durum imza güncelleştirmeleri ve düzeltmeleri dağıtılır. Bir sonraki normal güncelleştirmeyi beklemek yerine, bu düzeltmeleri ve güncelleştirmeleri dakikalar içinde alabilirsiniz.   |
-| Blok modunda uç nokta algılama ve yanıt (EDR) | Pertahanan Microsoft untuk Titik Akhir Plan 2 (Tek başına veya Microsoft 365 E5 gibi bir plana dahil) | Blok modundaki EDR, Microsoft Defender Virüsten Koruma bir cihazdaki birincil virüsten koruma ürünü olmadığında ek koruma sağlar. Blok modunda EDR, Microsoft olmayan birincil virüsten koruma çözümünün atlamış olabileceği EDR tarafından oluşturulan taramalar sırasında bulunan yapıtları düzeltiyor. Birincil virüsten koruma çözümü olarak Microsoft Defender Virüsten Koruma olan cihazlar için etkinleştirildiğinde, blok modundaki EDR, EDR tarafından oluşturulan taramalar sırasında tanımlanan yapıtları otomatik olarak düzeltmenin ek avantajını sağlar. <br/><br/>Daha fazla bilgi için bkz. [blok modunda EDR](edr-in-block-mode.md).|
-| Saldırı yüzeyini azaltma kuralları | Pertahanan Microsoft untuk Titik Akhir Plan 1 veya Plan 2 (Tek başına veya Microsoft 365 E3 veya E5 gibi bir plana dahil) | Saldırı yüzeyinin azaltılması, kuruluşunuzun uç noktalarının siber saldırılara karşı savunmasız olduğu yerleri ve yolları azaltmakla alakalıdır. Saldırı yüzeyi azaltma kuralları, kötü amaçlı yazılımları durdurmaya yardımcı olmak için yapılandırabileceğiniz akıllı kurallardır. Belirli kuralların tam olarak çalışması için bulut korumasının açık olması gerekir. Bu kurallar şunlardır: <br/>- Yaygınlık, yaş veya güvenilen liste ölçütlerini karşılamadığı sürece yürütülebilir dosyaların çalışmasını engelleyin <br/>- Fidye yazılımlara karşı gelişmiş koruma kullanın <br/>- Güvenilmeyen programların çıkarılabilir sürücülerden çalıştırılmasını engelle <br/><br/>Daha fazla bilgi edinmek için bkz. [Kötü amaçlı yazılım bulaşmasını önlemek için saldırı yüzeyi azaltma kurallarını kullanma](attack-surface-reduction.md).  |
-| Güvenliğin aşılmasına ilişkin göstergeler (ICS) | Pertahanan Microsoft untuk Titik Akhir Plan 2 (Tek başına veya Microsoft 365 E5 gibi bir plana dahil) | Uç Nokta için Defender'daki IoC'ler varlıkların algılanmasını, önlenmesini ve dışlanmasını tanımlayacak şekilde yapılandırılabilir. Örneğin, Uç Nokta için Defender'da taramaları ve düzeltme eylemlerini Microsoft Defender Virüsten Koruma özel durumları tanımlamak için "izin ver" göstergeleri kullanılabilir. Başka bir örnek olarak, dosyaların veya işlemlerin yürütülmesini önlemek ve bu etkinlikleri Microsoft 365 Defender portalında görüntülenebilen uyarılarla izlemek için "uyarı ve engelleme" göstergeleri kullanılabilir. <br/><br/>Daha fazla bilgi için bkz. [Gösterge oluşturma](manage-indicators.md).    |
+| Buluttaki meta verileri denetleme  | Uç Nokta için Microsoft Defender Plan 1 veya Plan 2 (Tek başına veya Microsoft 365 E3 veya E5 gibi bir plana dahil) | Microsoft Defender Virüsten Koruma bulut hizmeti, ek bir savunma katmanı olarak makine öğrenmesi modellerini kullanır. Bu makine öğrenmesi modelleri meta verileri içerir, bu nedenle şüpheli veya kötü amaçlı bir dosya algılandığında meta verileri denetlenir. <br/><br/>Daha fazla bilgi edinmek için bkz[. Blog: Yeni nesil korumanın Uç Nokta için Microsoft Defender temelindeki gelişmiş teknolojileri tanıma](https://www.microsoft.com/security/blog/2019/06/24/inside-out-get-to-know-the-advanced-technologies-at-the-core-of-microsoft-defender-atp-next-generation-protection/)  |
+| Bulut koruması ve örnek gönderimi | Uç Nokta için Microsoft Defender Plan 1 veya Plan 2 (Tek başına veya Microsoft 365 E3 veya E5 gibi bir plana dahil) | Dosyalar ve yürütülebilir dosyalar, patlama ve analiz için Microsoft Defender Virüsten Koruma bulut hizmetine gönderilebilir. <br/><br/>Daha fazla bilgi için bkz. [Microsoft Defender Virüsten Koruma'de bulut koruması ve örnek gönderme](cloud-protection-microsoft-antivirus-sample-submission.md).<br/><br/>**NOT**: Otomatik örnek gönderimi bulut korumasına dayanır ancak tek başına bir ayar olarak da yapılandırılabilir.         |
+| Kurcalama koruması | Uç Nokta için Microsoft Defender Plan 2 (Tek başına veya Microsoft 365 E5 gibi bir plana dahil) | Kurcalama koruması, kuruluşunuzun güvenlik ayarlarında istenmeyen değişikliklere karşı korumaya yardımcı olur. Microsoft 365 Defender portalında kurcalama korumasını zorunlu kılmak için bulut korumasının etkinleştirilmesi gerekir. <br/><br/>Daha fazla bilgi için bkz [. Kurcalama koruması ile güvenlik ayarlarını koruma](prevent-changes-to-security-settings-with-tamper-protection.md).        |
+| İlk görüşte engelle | Uç Nokta için Microsoft Defender Plan 1 veya Plan 2 (Tek başına veya Microsoft 365 E3 veya E5 gibi bir plana dahil) | İlk bakışta engelle yeni kötü amaçlı yazılımları algılar ve saniyeler içinde engeller. Şüpheli veya kötü amaçlı bir dosya algılandığında, ilk bakışta engelleme özellikleri bulut koruma arka ucu sorgular ve dosyanın bir tehdit olup olmadığını belirlemek için buluşsal yöntemler, makine öğrenmesi ve otomatik analiz uygular.<br/><br/>Daha fazla bilgi edinmek için bkz. ["İlk bakışta engelle" nedir?](configure-block-at-first-sight-microsoft-defender-antivirus.md#what-is-block-at-first-sight)   |
+| Acil durum imza güncelleştirmeleri | Uç Nokta için Microsoft Defender Plan 2 (Tek başına veya Microsoft 365 E5 gibi bir plana dahil) | Kötü amaçlı içerik algılandığında, acil durum imza güncelleştirmeleri ve düzeltmeleri dağıtılır. Bir sonraki normal güncelleştirmeyi beklemek yerine, bu düzeltmeleri ve güncelleştirmeleri dakikalar içinde alabilirsiniz.   |
+| Blok modunda uç nokta algılama ve yanıt (EDR) | Uç Nokta için Microsoft Defender Plan 2 (Tek başına veya Microsoft 365 E5 gibi bir plana dahil) | Blok modundaki EDR, Microsoft Defender Virüsten Koruma bir cihazdaki birincil virüsten koruma ürünü olmadığında ek koruma sağlar. Blok modunda EDR, Microsoft olmayan birincil virüsten koruma çözümünün atlamış olabileceği EDR tarafından oluşturulan taramalar sırasında bulunan yapıtları düzeltiyor. Birincil virüsten koruma çözümü olarak Microsoft Defender Virüsten Koruma olan cihazlar için etkinleştirildiğinde, blok modundaki EDR, EDR tarafından oluşturulan taramalar sırasında tanımlanan yapıtları otomatik olarak düzeltmenin ek avantajını sağlar. <br/><br/>Daha fazla bilgi için bkz. [blok modunda EDR](edr-in-block-mode.md).|
+| Saldırı yüzeyini azaltma kuralları | Uç Nokta için Microsoft Defender Plan 1 veya Plan 2 (Tek başına veya Microsoft 365 E3 veya E5 gibi bir plana dahil) | Saldırı yüzeyinin azaltılması, kuruluşunuzun uç noktalarının siber saldırılara karşı savunmasız olduğu yerleri ve yolları azaltmakla alakalıdır. Saldırı yüzeyi azaltma kuralları, kötü amaçlı yazılımları durdurmaya yardımcı olmak için yapılandırabileceğiniz akıllı kurallardır. Belirli kuralların tam olarak çalışması için bulut korumasının açık olması gerekir. Bu kurallar şunlardır: <br/>- Yaygınlık, yaş veya güvenilen liste ölçütlerini karşılamadığı sürece yürütülebilir dosyaların çalışmasını engelleyin <br/>- Fidye yazılımlara karşı gelişmiş koruma kullanın <br/>- Güvenilmeyen programların çıkarılabilir sürücülerden çalıştırılmasını engelle <br/><br/>Daha fazla bilgi edinmek için bkz. [Kötü amaçlı yazılım bulaşmasını önlemek için saldırı yüzeyi azaltma kurallarını kullanma](attack-surface-reduction.md).  |
+| Güvenliğin aşılmasına ilişkin göstergeler (ICS) | Uç Nokta için Microsoft Defender Plan 2 (Tek başına veya Microsoft 365 E5 gibi bir plana dahil) | Uç Nokta için Defender'daki IoC'ler varlıkların algılanmasını, önlenmesini ve dışlanmasını tanımlayacak şekilde yapılandırılabilir. Örneğin, Uç Nokta için Defender'da taramaları ve düzeltme eylemlerini Microsoft Defender Virüsten Koruma özel durumları tanımlamak için "izin ver" göstergeleri kullanılabilir. Başka bir örnek olarak, dosyaların veya işlemlerin yürütülmesini önlemek ve bu etkinlikleri Microsoft 365 Defender portalında görüntülenebilen uyarılarla izlemek için "uyarı ve engelleme" göstergeleri kullanılabilir. <br/><br/>Daha fazla bilgi için bkz. [Gösterge oluşturma](manage-indicators.md).    |
 
 > [!TIP]
-> Uç Nokta için Defender planları hakkında daha fazla bilgi edinmek için bkz. [Plan 1 ve Plan 2 Pertahanan Microsoft untuk Titik Akhir](defender-endpoint-plan-1-2.md).
+> Uç Nokta için Defender planları hakkında daha fazla bilgi edinmek için bkz. [Plan 1 ve Plan 2 Uç Nokta için Microsoft Defender](defender-endpoint-plan-1-2.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
@@ -72,10 +72,10 @@ Bulut korumasına ve Microsoft Defender Virüsten Koruma'deki rolüne genel bir 
 
 > [!TIP]
 > Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
-> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
-> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
-> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](linux-preferences.md)
 > - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
-> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
-> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
+> - [Android özelliklerinde Uç Nokta için Defender’ı yapılandırın](android-configure.md)
+> - [iOS özelliklerinde Uç Nokta için Microsoft Defender’ı yapılandırın](ios-configure-features.md)

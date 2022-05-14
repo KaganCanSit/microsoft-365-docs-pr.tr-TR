@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: c83213278c7f9bc3b63c141e4d964475d64599d1
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: dcc04b1c06e5ca2900cca9f0a66fe5b041af734e
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65286636"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65417182"
 ---
 # <a name="view-email-security-reports-in-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalında e-posta güvenlik raporlarını görüntüleme
 
@@ -43,6 +43,9 @@ Microsoft 365 Defender portalında<https://security.microsoft.com>, Microsoft 36
 > **E-posta & işbirliği raporları sayfasındaki raporlardan** bazıları Office 365 için Microsoft Defender gerektirir. Bu raporlar hakkında bilgi için bkz. [Microsoft 365 Defender portalında Office 365 için Defender raporları görüntüleme](view-reports-for-mdo.md).
 >
 > Posta akışıyla ilgili raporlar artık Exchange yönetim merkezindedir. Bu raporlar hakkında daha fazla bilgi için [bkz. Yeni Exchange yönetim merkezinde posta akışı raporları](/exchange/monitoring/mail-flow-reports/mail-flow-reports).
+
+Kuruluşunuzdaki Office 365 için Defender etkinliğini anlamak için raporları nasıl kullanabileceğinizi öğrenmek için bu kısa videoyu izleyin.
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWBkxB]
 
 ## <a name="email-security-report-changes-in-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalında e-posta güvenlik raporu değişiklikleri
 

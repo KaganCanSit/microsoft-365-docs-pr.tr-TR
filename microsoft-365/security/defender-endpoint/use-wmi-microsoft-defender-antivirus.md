@@ -1,6 +1,6 @@
 ---
 title: WMI ile Microsoft Defender Virüsten Koruma yapılandırma
-description: Pertahanan Microsoft untuk Titik Akhir'da ayarları almak, değiştirmek ve güncelleştirmek için WMI betiklerini kullanarak Microsoft Defender Virüsten Koruma yapılandırmayı ve yönetmeyi öğrenin.
+description: Uç Nokta için Microsoft Defender'da ayarları almak, değiştirmek ve güncelleştirmek için WMI betiklerini kullanarak Microsoft Defender Virüsten Koruma yapılandırmayı ve yönetmeyi öğrenin.
 keywords: wmi, betikler, windows yönetim araçları, yapılandırma
 ms.prod: m365-security
 ms.mktglfcycl: manage
@@ -17,12 +17,12 @@ ms.technology: mde
 audience: ITPro
 ms.topic: how-to
 ms.collection: m365-security-compliance
-ms.openlocfilehash: a525deb526f61f8500f42cc918380fdfa9c52861
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: 8ef8355afe3019c2a179f59d83faddac4aa5792a
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64787654"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65419012"
 ---
 # <a name="use-windows-management-instrumentation-wmi-to-configure-and-manage-microsoft-defender-antivirus"></a>Microsoft Defender Virüsten Koruma yapılandırmak ve yönetmek için Windows Yönetim Araçları'nın (WMI) kullanılması
 
@@ -30,7 +30,7 @@ ms.locfileid: "64787654"
 
 
 **Şunlar için geçerlidir:**
-- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - Microsoft Defender Virüsten Koruma
 
@@ -51,13 +51,13 @@ WMI ile yapılan değişiklikler, değişikliklerin dağıtıldığı veya yapı
 
 > [!TIP]
 > Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
-> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
-> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
-> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](linux-preferences.md)
 > - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
-> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
-> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
+> - [Android özelliklerinde Uç Nokta için Defender’ı yapılandırın](android-configure.md)
+> - [iOS özelliklerinde Uç Nokta için Microsoft Defender’ı yapılandırın](ios-configure-features.md)
 
 ## <a name="related-topics"></a>İlgili konular
 

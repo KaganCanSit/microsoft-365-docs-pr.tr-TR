@@ -17,14 +17,16 @@ search.appverid:
 - MET150
 description: Tam veri eşleşmesi tabanlı hassas bilgi türleri hakkında bilgi edinin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 7f883d2509961ee07045949530f8fbb50629212f
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 0574c11751898b31b22da4642f2d5dd415991732
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64759777"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65415936"
 ---
 # <a name="learn-about-exact-data-match-based-sensitive-information-types"></a>Tam veri eşleşmesine dayalı hassas bilgi türleri hakkında daha fazla bilgi edinme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 [Hassas bilgi türleri](sensitive-information-type-learn-about.md) , hassas öğelerin yanlışlıkla veya uygunsuz bir şekilde paylaşılmasını önlemek, eBulma'da ilgili verilerin bulunmasına yardımcı olmak ve belirli bilgi türlerine idare eylemleri uygulamak için kullanılır. Aşağıdakilere göre özel bir hassas bilgi türü (SIT) tanımlarsınız:
 
@@ -44,10 +46,10 @@ Peki ya genel desenleri temel alan eşleşmeler bulmak yerine tam veya neredeyse
 
 ![EDM tabanlı sınıflandırma.](../media/EDMClassification.png)
 
-EDM tabanlı sınıflandırma, hassas bilgi veritabanındaki tam değerlere başvuran özel hassas bilgi türleri oluşturmanıza olanak tanır. Veritabanı günlük olarak yenilenebilir ve 100 milyon satıra kadar veri içerebilir. Çalışanlar, hastalar veya müşteriler gelip gittikçe ve kayıtlar değiştikçe, özel hassas bilgi türleriniz güncel ve geçerli kalır. Ayrıca, [veri kaybı önleme](dlp-learn-about-dlp.md) ilkeleri veya [Microsoft Cloud App Security dosya](/cloud-app-security/data-protection-policies) ilkeleri gibi ilkelerle EDM tabanlı sınıflandırmayı kullanabilirsiniz.
+EDM tabanlı sınıflandırma, hassas bilgi veritabanındaki tam değerlere başvuran özel hassas bilgi türleri oluşturmanıza olanak tanır. Veritabanı günlük olarak yenilenebilir ve 100 milyon satıra kadar veri içerebilir. Çalışanlar, hastalar veya müşteriler gelip gittikçe ve kayıtlar değiştikçe, özel hassas bilgi türleriniz güncel ve geçerli kalır. Ayrıca, [Microsoft Purview veri kaybı önleme ilkeleri veya Microsoft Cloud App Security dosya ilkeleri gibi ilkelerle](dlp-learn-about-dlp.md) EDM tabanlı sınıflandırma kullanabilirsiniz.[](/cloud-app-security/data-protection-policies)
 
 > [!NOTE]
-> Microsoft 365 Information Protection için çift bayt karakter kümesi dillerini destekler:
+> Microsoft Purview Bilgi Koruması için çift bayt karakter kümesi dillerini destekler:
 >
 > - Çince (basitleştirilmiş)
 > - Çince (geleneksel)
@@ -93,7 +95,7 @@ Yakınlık - Birincil ve destekleyici öğe arasındaki karakter sayısı
 
 ### <a name="you-supply-your-own-schema-and-data"></a>Kendi şemanızı ve verilerinizi sağlayın
 
-Microsoft 365 önceden tanımlanmış şemalar, regex desenleri, anahtar sözcükler ve güvenilirlik düzeyleri ile [200'den fazla SITS ile birlikte gelir](sensitive-information-type-entity-definitions.md). EDM SID'leri ile, şemanın yanı sıra hassas öğeleri tanımlayan birincil ve ikincil alanları tanımlamak sizin sorumluluğundadır. Şema ve birincil ve ikincil veri değerleri son derece hassas olduğundan, bunları rastgele oluşturulan veya kendi kendine sağlanan [bir tuz](https://en.wikipedia.org/wiki/Salt_(cryptography)#:~:text=The%20salt%20value%20is%20generated%20at%20random%20and,the%20salt%20value%20and%20hashed%20value%20are%20stored.) değeri içeren bir [karma](/dotnet/standard/security/ensuring-data-integrity-with-hash-codes) işlevi aracılığıyla şifrelersiniz. Bu karma değerler daha sonra hizmete yüklenir, dolayısıyla hassas verileriniz hiçbir zaman açık olmaz.
+Microsoft Purview önceden tanımlanmış şemalar, regex desenleri, anahtar sözcükler ve güvenilirlik düzeylerine sahip [200'den fazla SITS ile birlikte gelir](sensitive-information-type-entity-definitions.md). EDM SID'leri ile, şemanın yanı sıra hassas öğeleri tanımlayan birincil ve ikincil alanları tanımlamak sizin sorumluluğundadır. Şema ve birincil ve ikincil veri değerleri son derece hassas olduğundan, bunları rastgele oluşturulan veya kendi kendine sağlanan [bir tuz](https://en.wikipedia.org/wiki/Salt_(cryptography)#:~:text=The%20salt%20value%20is%20generated%20at%20random%20and,the%20salt%20value%20and%20hashed%20value%20are%20stored.) değeri içeren bir [karma](/dotnet/standard/security/ensuring-data-integrity-with-hash-codes) işlevi aracılığıyla şifrelersiniz. Bu karma değerler daha sonra hizmete yüklenir, dolayısıyla hassas verileriniz hiçbir zaman açık olmaz.
 
 ### <a name="primary-and-secondary-support-elements"></a>Birincil ve ikincil destek öğeleri
 
@@ -110,4 +112,3 @@ EDM, bulduğu içeriği sizin tanımladığınız hassas veri tablosuyla karşı
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Tam veri eşleşmesine dayalı hassas bilgi türlerini kullanmaya başlama](sit-get-started-exact-data-match-based-sits-overview.md#get-started-with-exact-data-match-based-sensitive-information-types)
-   

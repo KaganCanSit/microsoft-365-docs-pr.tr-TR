@@ -20,12 +20,12 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 7b76fff060b46cbe13c11eb90f521af61e8900f5
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: 53a23751fd53b05b51bf1125dcca98c23f4ba73c
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65172938"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65418258"
 ---
 # <a name="device-discovery-overview"></a>Cihaz keşfine genel bakış
 
@@ -113,7 +113,6 @@ Yönetilmeyen ve yönetilen cihazlarla ilgili SSH güvenlik açıklarını bulma
 
 :::image type="content" source="images/1156c82ffadd356ce329d1cf551e806c.png" alt-text="Güvenlik önerileri panosu" lightbox="images/1156c82ffadd356ce329d1cf551e806c.png":::
 
-
 ## <a name="use-advanced-hunting-on-discovered-devices"></a>Bulunan cihazlarda gelişmiş avcılık kullanma
 
 Bulunan cihazlarda görünürlük elde etmek için gelişmiş tehdit avcılığı sorgularını kullanabilirsiniz. Bulunan cihazlar hakkındaki ayrıntıları DeviceInfo tablosunda veya Bu cihazlarla ilgili ağ ile ilgili bilgileri DeviceNetworkInfo tablosunda bulabilirsiniz.
@@ -128,19 +127,19 @@ Bulunan tüm cihazların yanı sıra her cihaz için en fazla ayrıntıyı dönd
 DeviceInfo
 | summarize arg_max(Timestamp, *) by DeviceId  // Get latest known good per device Id
 | where isempty(MergedToDeviceId) // Remove invalidated/merged devices
-| where OnboardingStatus != "Onboarded" 
+| where OnboardingStatus != "Onboarded"
 ```
 
-**SeenBy** işlevini çağırarak, gelişmiş tehdit avcılığı sorgunuzda bulunan bir cihazın hangi yerleşik cihazın görüldüğünü ayrıntılı olarak öğrenebilirsiniz.Bu bilgiler, bulunan her cihazın ağ konumunu belirlemeye yardımcı olabilir ve daha sonra bu cihazın ağda tanımlanmasına yardımcı olabilir.  
+**SeenBy** işlevini çağırarak, gelişmiş tehdit avcılığı sorgunuzda bulunan bir cihazın hangi yerleşik cihazın görüldüğünü ayrıntılı olarak öğrenebilirsiniz. Bu bilgiler, bulunan her cihazın ağ konumunu belirlemeye yardımcı olabilir ve daha sonra bu cihazın ağda tanımlanmasına yardımcı olabilir.
 
 ```query
 DeviceInfo
-| where OnboardingStatus != "Onboarded" 
-| summarize arg_max(Timestamp, *) by DeviceId  
-| where isempty(MergedToDeviceId)  
-| limit 100 
-| invoke SeenBy() 
-| project DeviceId, DeviceName, DeviceType, SeenBy  
+| where OnboardingStatus != "Onboarded"
+| summarize arg_max(Timestamp, *) by DeviceId 
+| where isempty(MergedToDeviceId) 
+| limit 100
+| invoke SeenBy()
+| project DeviceId, DeviceName, DeviceType, SeenBy
 ```
 
 Daha fazla bilgi için [bkz. SeenBy()](/microsoft-365/security/defender/advanced-hunting-seenby-function) işlevi.

@@ -15,12 +15,12 @@ manager: dansimp
 ms.custom: nextgen
 ms.technology: mde
 ms.collection: m365-security-compliance
-ms.openlocfilehash: 95269837e4ad26b4928a2ff82df65a259c707290
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: 38bd804d40c3d5f84e80585f86d906c6a645a668
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64790668"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65416704"
 ---
 # <a name="turn-on-cloud-protection-in-microsoft-defender-antivirus"></a>Microsoft Defender Virüsten Koruma'de bulut korumasını açma
 
@@ -112,7 +112,7 @@ Microsoft Endpoint Configuration Manager yapılandırma hakkında daha fazla bil
 
    >[!NOTE]
    > **Güvenli örnekler gönder** (1) seçeneği, çoğu örneğin otomatik olarak gönderileceği anlamına gelir. Kişisel bilgiler içerme olasılığı olan dosyalar yine de sorulacaktır ve ek onay gerektirir.
-   > **Seçeneğin Her Zaman İste** (0) olarak ayarlanması, cihazın koruma durumunu düşürür. **Bunu Hiçbir zaman gönderme** (2) olarak ayarlamak, Pertahanan Microsoft untuk Titik Akhir [İlk Bakışta Engelle](configure-block-at-first-sight-microsoft-defender-antivirus.md) özelliğinin çalışmaymayacağı anlamına gelir.
+   > **Seçeneğin Her Zaman İste** (0) olarak ayarlanması, cihazın koruma durumunu düşürür. **Bunu Hiçbir zaman gönderme** (2) olarak ayarlamak, Uç Nokta için Microsoft Defender [İlk Bakışta Engelle](configure-block-at-first-sight-microsoft-defender-antivirus.md) özelliğinin çalışmayacağını gösterir.
 
 7. **Tamam**'ı seçin.
 
@@ -129,7 +129,7 @@ PowerShell'i Microsoft Defender Virüsten Koruma ile kullanma hakkında daha faz
 
 > [!IMPORTANT]
 > **-SubmitSamplesConsent** `SendSafeSamples` değerini (varsayılan, önerilen ayar) `NeverSend`veya `AlwaysPrompt`olarak ayarlayabilirsiniz. Bu `SendSafeSamples` ayar, çoğu örneğin otomatik olarak gönderileceği anlamına gelir. Kişisel bilgiler içerme olasılığı olan dosyalar devam etmek için bir istemle sonuçlanır ve onay gerektirir.
-> `NeverSend` ve `AlwaysPrompt` ayarları cihazın koruma düzeyini düşürür. Ayrıca ayar, `NeverSend` Pertahanan Microsoft untuk Titik Akhir [İlk Bakışta Engelle](configure-block-at-first-sight-microsoft-defender-antivirus.md) özelliğinin çalışmaymayacağı anlamına gelir.
+> `NeverSend` ve `AlwaysPrompt` ayarları cihazın koruma düzeyini düşürür. Ayrıca ayar, `NeverSend` Uç Nokta için Microsoft Defender [İlk Bakışta Engelle](configure-block-at-first-sight-microsoft-defender-antivirus.md) özelliğinin çalışmaymayacağı anlamına gelir.
 
 ## <a name="use-windows-management-instruction-wmi-to-turn-on-cloud-protection"></a>Bulut korumasını açmak için Windows Yönetim Yönergesi'ni (WMI) kullanma
 
@@ -160,13 +160,13 @@ SubmitSamplesConsent
 
 > [!TIP]
 > Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
-> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
-> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
-> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](linux-preferences.md)
 > - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
-> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
-> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
+> - [Android özelliklerinde Uç Nokta için Defender’ı yapılandırın](android-configure.md)
+> - [iOS özelliklerinde Uç Nokta için Microsoft Defender’ı yapılandırın](ios-configure-features.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

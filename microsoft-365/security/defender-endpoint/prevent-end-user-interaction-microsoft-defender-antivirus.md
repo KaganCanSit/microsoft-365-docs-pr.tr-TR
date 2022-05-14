@@ -16,12 +16,12 @@ manager: dansimp
 ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
-ms.openlocfilehash: fdd212efd50d55bbcdae80275f5d2ca8a97cdeb3
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: b00465fdeecddc803b52d98081689fd56fba7812
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64787676"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65419824"
 ---
 # <a name="prevent-users-from-seeing-or-interacting-with-the-microsoft-defender-antivirus-user-interface"></a>Kullanıcıların Microsoft Defender Virüsten Koruma kullanıcı arabirimini görmesini veya bu arabirimle etkileşim kurmasını engelleme
 
@@ -29,7 +29,7 @@ ms.locfileid: "64787676"
 
 
 **Şunlar için geçerlidir:**
-- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Virüsten Koruma
 
@@ -51,7 +51,7 @@ Ayar **Devre dışı** veya yapılandırılmamış olarak ayarlandığında:
 :::image type="content" source="../../media/wdav-headless-mode-1703.png" alt-text="Kalkan simgesi ve tehdit koruması bölümleri içeren Windows Güvenliği" lightbox="../../media/wdav-headless-mode-1703.png":::
 
 > [!NOTE]
-> Arabirimi gizlemek, Microsoft Defender Virüsten Koruma bildirimlerinin uç noktada görünmesini de engeller. Pertahanan Microsoft untuk Titik Akhir bildirimler görünmeye devam eder. [Ayrıca uç noktalarda görünen bildirimleri tek tek yapılandırabilirsiniz](configure-notifications-microsoft-defender-antivirus.md)
+> Arabirimi gizlemek, Microsoft Defender Virüsten Koruma bildirimlerinin uç noktada görünmesini de engeller. Uç Nokta için Microsoft Defender bildirimleri görünmeye devam eder. [Ayrıca uç noktalarda görünen bildirimleri tek tek yapılandırabilirsiniz](configure-notifications-microsoft-defender-antivirus.md)
 
 Windows 10 önceki sürümlerinde, ayar Windows Defender istemci arabirimini gizler. Kullanıcı uygulamayı açmayı denerse, "Sistem yöneticiniz bu uygulamaya erişimi kısıtlamıştır" şeklinde bir uyarı alır.
 
@@ -92,13 +92,13 @@ Kullanıcıların taramaları duraklatmasını engelleyebilirsiniz. Bu, zamanlan
 
 > [!TIP]
 > Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
-> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
-> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
-> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](linux-preferences.md)
 > - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
-> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
-> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
+> - [Android özelliklerinde Uç Nokta için Defender’ı yapılandırın](android-configure.md)
+> - [iOS özelliklerinde Uç Nokta için Microsoft Defender’ı yapılandırın](ios-configure-features.md)
 
 ## <a name="related-articles"></a>İlgili makaleler
 

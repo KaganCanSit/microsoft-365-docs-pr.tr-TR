@@ -15,12 +15,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Bu playbook ile İş için Defender denemenizden en iyi şekilde geçin. Hızlı bir şekilde ayarlayın ve yeni güvenlik özelliklerinizi kullanmaya başlayın.
-ms.openlocfilehash: 8a676d7c412746e4f941e11d91e44faddc7237a7
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: 4f239a08e46e8c8bede5c2e972c3daed2af8b550
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65175025"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65418990"
 ---
 # <a name="trial-playbook-microsoft-defender-for-business"></a>Deneme playbook'u: İş için Microsoft Defender
 
@@ -109,7 +109,7 @@ Kurulum sihirbazını kullandıysanız ancak Windows olmayan cihazlar gibi daha 
    | Aygıtları | Ekleme yöntemleri |
    |:---|:---|
    | [İstemcileri Windows](mdb-onboard-devices.md) | Windows istemci cihazlarını İş için Defender'a eklemek için aşağıdaki seçeneklerden birini belirleyin:<br/>- Yerel betik (cihazları Microsoft 365 Defender portalında el ile ekleme için)<br/>- grup ilkesi (zaten grup ilkesi kullanıyorsanız ve bu yöntemi tercih ediyorsanız)<br/>- Microsoft Intune (*önerilen*; [Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil) |
-   | [macOS bilgisayarlar](mdb-onboard-devices.md) | macOS cihazlarını eklemek için aşağıdaki seçeneklerden birini belirleyin:<br/>- macOS için yerel betik (*önerilir*) <br/>- macOS için Microsoft Intune (Intune [Microsoft 365 İş Ekstra](../../business-premium/index.md) dahildir)<br/><br/>macOS cihazlarını eklemek için yerel bir betik kullanmanızı öneririz. [macOS cihazları için kaydı Intune'de ayarlayabilmenize](/mem/intune/enrollment/macos-enroll) rağmen, macOS cihazlarını İş için Defender'a eklemek için en basit yöntem yerel betiktir. |
+   | [bilgisayarları macOS](mdb-onboard-devices.md) | macOS cihazları eklemek için aşağıdaki seçeneklerden birini belirleyin:<br/>- macOS için yerel betik (*önerilir*) <br/>- macOS için Microsoft Intune (Intune [Microsoft 365 İş Ekstra](../../business-premium/index.md) dahildir)<br/><br/>macOS cihazları eklemek için yerel bir betik kullanmanızı öneririz. [Intune'da macOS cihazlar için kayıt ayarlayabilirsiniz](/mem/intune/enrollment/macos-enroll) ancak yerel betik, macOS cihazları İş için Defender'a eklemek için en basit yöntemdir. |
    | Windows Sunucusu ve Linux sunucuları | *Windows Server ve Linux sunucuları şu anda desteklenmiyor. Sunucu ekleme ve güvenlik özellikleri yakında İş için Defender'a sunulacaktır*. |
    | [Mobil cihazlar](mdb-onboard-devices.md) | Android ve iOS/iPadOS cihazları gibi mobil cihazları eklemek için Microsoft Intune gerekir. [Microsoft 365 İş Ekstra](../../business-premium/index.md) varsa aboneliğinizin bir parçası olarak Intune. Intune ayrıca satın alınabilir. Bu cihazları Intune kaydetme konusunda yardım almak için aşağıdaki kaynaklara bakın:<br/>- [Android cihazları kaydetme](/mem/intune/enrollment/android-enroll)<br/>- [iOS veya iPadOS cihazlarını kaydetme](/mem/intune/enrollment/ios-enroll) |
 

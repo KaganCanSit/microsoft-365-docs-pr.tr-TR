@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 3c517d9adcdc2181b43c430a92be3de9ac889dd6
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 43b39cac260f5bda773af6a428304dc898444771
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65101127"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65419604"
 ---
 # <a name="performance-analyzer-for-microsoft-defender-antivirus"></a>Microsoft Defender Virüsten Koruma için performans çözümleyicisi
 
@@ -72,7 +72,7 @@ Sistem olaylarını kaydetmeye başlamak için PowerShell'i yönetim modunda aç
 Komut satırı parametreleri ve seçenekleri hakkında daha fazla bilgi için bkz. [New-MpPerformanceRecording](#new-mpperformancerecording) ve [Get-MpPerformanceReport](#get-mpperformancereport).
 
 > [!NOTE]
-> Kayıt çalıştırırken "Performans Kaydedicisi Windows zaten kayıt olduğundan performans kaydı başlatılamıyor" hatasını alırsanız, yeni komutla var olan izlemeyi durdurmak için aşağıdaki komutu çalıştırın: **wpr -cancel -instancename MSFT_MpPerformanceRecording**
+> Kayıt çalıştırırken "Windows Performans Kaydedicisi zaten kayıtta olduğundan performans kaydı başlatılamıyor" hatasını alırsanız, yeni komutla var olan izlemeyi durdurmak için aşağıdaki komutu çalıştırın: **wpr -cancel -instancename MSFT_MpPerformanceRecording**
 
 ## <a name="performance-tuning-data-and-information"></a>Performans ayarlama verileri ve bilgileri
 
@@ -537,4 +537,4 @@ Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz
 - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
 - [Linux'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](linux-preferences.md)
 - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
-- [Android'de Uç Nokta için Defender özelliklerini](android-configure.md)-  yapılandırma [iOS özelliklerinde Uç Nokta için Microsoft Defender yapılandırma](ios-configure-features.md)
+- [uç nokta için Defender'ı Android özelliklerinde yapılandırma IOS özelliklerinde](android-configure.md)-  [Uç Nokta için Microsoft Defender yapılandırma](ios-configure-features.md)

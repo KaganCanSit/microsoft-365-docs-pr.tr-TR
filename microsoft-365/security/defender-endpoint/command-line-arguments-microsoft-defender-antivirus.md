@@ -15,12 +15,12 @@ ms.date: 05/24/2021
 ms.technology: mde
 ms.topic: how-to
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 97f818469f9da2616ca5ca2839ddf29ea227b85f
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: d459c87f7d996d70d37e84f4e21bc261c720b443
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64789744"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65418686"
 ---
 # <a name="configure-and-manage-microsoft-defender-antivirus-with-the-mpcmdrunexe-command-line-tool"></a>mpcmdrun.exe komut satırı aracıyla Microsoft Defender Virüsten Koruma yapılandırma ve yönetme
 
@@ -55,7 +55,7 @@ MpCmdRun.exe -Scan -ScanType 2
 
 |Komut|Açıklama|
 |---|---|
-|`-?` **veya** `-h`|MpCmdRun aracı için tüm kullanılabilir seçenekleri görüntüler|
+|`-?`**Veya** `-h`|MpCmdRun aracı için tüm kullanılabilir seçenekleri görüntüler|
 |`-Scan [-ScanType [<value>]] [-File <path> [-DisableRemediation] [-BootSectorScan] [-CpuThrottling]] [-Timeout <days>] [-Cancel]`|Kötü amaçlı yazılımları tarar. **ScanType** değerleri şunlardır:<p>**0** Yapılandırmanıza göre varsayılan<p>**1** Hızlı tarama<p>**2** Tam tarama<p>**3** Dosya ve dizin özel taraması.<p>CpuThrottling, ilke yapılandırmalarına göre çalışır|
 |`-Trace [-Grouping #] [-Level #]`|Tanılama izlemeyi başlatır|
 |`-GetFiles [-SupportLogLocation <path>]`|Destek bilgilerini toplar. Bkz. "[Tanılama verileri toplama](collect-diagnostic-data.md)"|
@@ -77,7 +77,7 @@ Aşağıdaki tabloda, MpCmdRun aracı kullanılırken oluşabilecek yaygın hata
 
 |Hata iletisi|Olası neden|
 |---|---|
-|**ValidateMapsConnection başarısız oldu (800106BA)** veya **0x800106BA**|Microsoft Defender Virüsten Koruma hizmeti devre dışı bırakıldı. Hizmeti etkinleştirin ve yeniden deneyin. Microsoft Defender Virüsten Koruma yeniden etkinleştirme konusunda yardıma ihtiyacınız varsa bkz. [Uç noktalarınızda Microsoft Defender Virüsten Koruma yeniden yükleme/etkinleştirme](switch-to-mde-phase-2.md#reinstallenable-microsoft-defender-antivirus-on-your-endpoints).<p> **İpucu**: Windows 10 1909 veya daha eski ve Windows Server 2019 veya daha eski sürümlerinde, hizmet daha önce *Windows Defenderin virustentorjunta* olarak adlandırılıyordu.|
+|**ValidateMapsConnection başarısız oldu (800106BA)** veya **0x800106BA**|Microsoft Defender Virüsten Koruma hizmeti devre dışı bırakıldı. Hizmeti etkinleştirin ve yeniden deneyin. Microsoft Defender Virüsten Koruma yeniden etkinleştirme konusunda yardıma ihtiyacınız varsa bkz. [Uç noktalarınızda Microsoft Defender Virüsten Koruma yeniden yükleme/etkinleştirme](switch-to-mde-phase-2.md#reinstallenable-microsoft-defender-antivirus-on-your-endpoints).<p> **İpucu**: Windows 10 1909 veya daha eski ve Windows Server 2019 veya daha eski sürümlerinde, hizmet eski *adıyla Windows Defender Virüsten Koruma*.|
 |**0x80070667**|Komutunu 1607 veya daha eski Windows 10 ya da Windows Server 2016 veya daha eski bir bilgisayardan çalıştırıyorsunuz`-ValidateMapsConnection`. Komutunu 1703 veya daha yeni bir sürüm Windows 10 ya da Server 2019 veya daha yeni Windows bir makineden çalıştırın.|
 |**MpCmdRun iç veya dış komut, çalıştırılabilir program veya toplu iş dosyası olarak tanınmaz.**|Araç veya `%ProgramFiles%\Windows Defender` `C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.2012.4-0` konumundan çalıştırılmalıdır ( `2012.4-0` Platform güncelleştirmeleri Mart ayı dışında aylık olduğundan farklı olabilir)|
 |**ValidateMapsConnection MAPS ile bağlantı kuramadı (hr=80070005 httpcode=450)**|Komut yetersiz ayrıcalıklar kullanılarak denendi. Yönetici olarak komut istemini (cmd.exe) kullanın.|
@@ -89,13 +89,13 @@ Aşağıdaki tabloda, MpCmdRun aracı kullanılırken oluşabilecek yaygın hata
 
 > [!TIP]
 > Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
-> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
-> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
-> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](linux-preferences.md)
 > - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
-> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
-> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
+> - [Android özelliklerinde Uç Nokta için Defender’ı yapılandırın](android-configure.md)
+> - [iOS özelliklerinde Uç Nokta için Microsoft Defender’ı yapılandırın](ios-configure-features.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

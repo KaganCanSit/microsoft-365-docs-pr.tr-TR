@@ -15,12 +15,12 @@ ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
 ms.custom: api
-ms.openlocfilehash: ca110cfba43b95790114928f1c0d3adcae46f087
-ms.sourcegitcommit: 344a254ca268a2f65cf199d9158a47e08861ffa5
+ms.openlocfilehash: 301b586249268148ba005b193438937a1c55e46f
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "65369625"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65417632"
 ---
 # <a name="list-all-security-baselines-assessment-profiles"></a>Tüm güvenlik temelleri değerlendirme profillerini listeleme
 
@@ -36,14 +36,14 @@ ms.locfileid: "65369625"
 
 ## <a name="1-get-security-baselines-assessment-profiles"></a>1. Güvenlik temelleri değerlendirme profillerini alma
 
-Bu API, kuruluş tarafından oluşturulan tüm güvenlik temelleri değerlendirme profillerinin listesini alır.  
+Bu API, kuruluş tarafından oluşturulan tüm güvenlik temelleri değerlendirme profillerinin listesini alır.
 
 ### <a name="11-parameters"></a>1.1 Parametreler
 
-- OData V4 sorgularını destekler.  
-- OData tarafından desteklenen işleçler:  
-  - üzerinde $filter: id,name, operatingSystem, operatingSystemVersion, status, settingsNumber, passedDevices, totalDevices  
-  - maksimum değeri 10.000 olan $top.  
+- OData V4 sorgularını destekler.
+- OData tarafından desteklenen işleçler:
+  - üzerinde $filter: id,name, operatingSystem, operatingSystemVersion, status, settingsNumber, passedDevices, totalDevices
+  - maksimum değeri 10.000 olan $top.
   - $skip.
 
 ### <a name="12-http-request"></a>1.2 HTTP isteği
@@ -84,39 +84,39 @@ Yetkilendirme|Dize|Taşıyıcı {token}. **Gerekli**.
 ### <a name="151-request-example"></a>1.5.1 İstek örneği
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/baselineProfiles 
+GET https://api.securitycenter.microsoft.com/api/baselineProfiles
 ```
 
 ### <a name="162-response-example"></a>1.6.2 Yanıt örneği
 
 ```json
-{  
-    "@odata.context": "https:// api.securitycenter.microsoft.com/api/$metadata#Collection(microsoft.windowsDefenderATP.api.PublicBaselineProfileDto)",  
-    "value": 
-    [  
-        {  
-            "id": "02bcbb9d-d197-479e-811e-1cd5a6f9f8fa",  
-            "name": "Windows 10 build 1909 CIS profile",  
-            "description": "important",  
-            "benchmark": "CIS",  
-            "version": "1.0.0",  
-            "operatingSystem": "Windows 10",  
-            "operatingSystemVersion": "1909",  
-            "status": true,  
-            "complianceLevel": "Level 1 (L1) - Corporate/Enterprise Environment (general use)",  
-            "settingsNumber": 51,  
-            "createdBy": "user@org.net",  
-            "lastUpdatedBy": null,  
-            "createdOnTimestampUTC": "0001-01-01T00:00:00Z",  
-            "lastUpdateTimestampUTC": "0001-01-01T00:00:00Z",  
-            "passedDevices": 0,  
-            "totalDevices": 10  
-        }  
-     ]  
-}  
+{
+    "@odata.context": "https:// api.securitycenter.microsoft.com/api/$metadata#Collection(microsoft.windowsDefenderATP.api.PublicBaselineProfileDto)",
+    "value":
+    [
+        {
+            "id": "02bcbb9d-d197-479e-811e-1cd5a6f9f8fa",
+            "name": "Windows 10 build 1909 CIS profile",
+            "description": "important",
+            "benchmark": "CIS",
+            "version": "1.0.0",
+            "operatingSystem": "Windows 10",
+            "operatingSystemVersion": "1909",
+            "status": true,
+            "complianceLevel": "Level 1 (L1) - Corporate/Enterprise Environment (general use)",
+            "settingsNumber": 51,
+            "createdBy": "user@org.net",
+            "lastUpdatedBy": null,
+            "createdOnTimestampUTC": "0001-01-01T00:00:00Z",
+            "lastUpdateTimestampUTC": "0001-01-01T00:00:00Z",
+            "passedDevices": 0,
+            "totalDevices": 10
+        }
+     ]
+}
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Güvenlik temellerini dışarı aktarma değerlendirmesi](export-security-baseline-assessment.md)
+- [Güvenlik temelleri değerlendirmesini dışarı aktar](export-security-baseline-assessment.md)
 - [Güvenlik temelleri değerlendirme yapılandırmalarını alma](get-security-baselines-assessment-configurations.md)

@@ -12,12 +12,12 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Skype Kurumsal'dan Microsoft 365 verileri içeri aktarmak ve arşivlerken Microsoft Purview uyumluluk portalı bağlayıcıyı ayarlamayı ve kullanmayı öğrenin.
-ms.openlocfilehash: ceca2068f819d4b7bec32ab65e673b055775c217
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: 8b824a8ac0db74d639c402bdec9e0894078b2dea
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65318362"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65415958"
 ---
 # <a name="set-up-a-connector-to-archive-skype-for-business-data"></a>Skype Kurumsal verilerini arşivleye bir bağlayıcı ayarlama
 

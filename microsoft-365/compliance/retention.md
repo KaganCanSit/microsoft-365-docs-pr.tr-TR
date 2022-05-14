@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: İhtiyaç duyduklarınızı korumanıza ve saklamadığınız şeyleri silmenize yardımcı olan bekletme ilkeleri ve bekletme etiketleri hakkında bilgi edinin.
-ms.openlocfilehash: c8ac850c77c97cbcc313108ffc74e05aa1735fde
-ms.sourcegitcommit: 4cd8be7c22d29100478dce225dce3bcdce52644d
+ms.openlocfilehash: 95d79bd95aa816b82e69399b9bde99500fcc8b6b
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65302234"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65419538"
 ---
 # <a name="learn-about-retention-policies-and-retention-labels"></a>Bekletme ilkeleri ve bekletme etiketleri hakkında bilgi edinin
 
@@ -104,8 +104,8 @@ Bekletme ilkelerinden farklı olarak, bekletme etiketlerinin bekletme ayarları,
 - SharePoint öğeleri veya Exchange iletileri için varsayılan bir etiket uygulayın.
 
 - Saklama süresi sonunda desteklenen eylemler:
-    - [Değerlendirmeyi bırakma](./disposition.md)  kalıcı olarak silinmeden önce içeriği gözden geçirin.
-    - Başka bir bekletme etiketini otomatik olarak uygulama
+  - [İçeriği](./disposition.md) kalıcı olarak silinmeden önce gözden geçirmek için değerlendirmeyi gözden geçirin.
+  - Başka bir bekletme etiketini otomatik olarak uygulama
 
 - İçeriği etiket ayarlarının bir parçası olarak [bir kayıt](records-management.md#records) olarak işaretleyin ve saklama süresinin sonunda içerik silindiğinde her zaman [kullanımdan kaldırılma kanıtına](disposition.md#disposition-of-records) sahip olun.
 
@@ -177,7 +177,7 @@ Bekletme etiketlerinin ana amacı içeriği saklamak veya silmek olsa da, beklet
 
 #### <a name="using-a-retention-label-as-a-condition-in-a-dlp-policy"></a>DLP ilkesinde koşul olarak bekletme etiketi kullanma
 
-SharePoint'deki belgeler için Microsoft Purview Veri Kaybı Önleme (DLP) ilkesinde koşul olarak bir bekletme etiketi belirtebilirsiniz. Örneğin, belgelere belirtilen bir bekletme etiketi uygulanmışsa, belgelerin kuruluş dışında paylaşılmasını önlemek için bir DLP ilkesi yapılandırın.
+SharePoint belgeler için Microsoft Purview Veri Kaybı Önleme (DLP) ilkesinde koşul olarak bir bekletme etiketi belirtebilirsiniz. Örneğin, belgelere belirtilen bir bekletme etiketi uygulanmışsa, belgelerin kuruluş dışında paylaşılmasını önlemek için bir DLP ilkesi yapılandırın.
 
 Daha fazla bilgi için bkz. [DLP ilkesinde koşul olarak bekletme etiketi kullanma](data-loss-prevention-policies.md#using-a-retention-label-as-a-condition-in-a-dlp-policy).
 
@@ -221,14 +221,15 @@ Standart saklama etiketleri için (öğeleri [kayıt veya mevzuat kaydı](record
 
 - İçerikte zaten bir bekletme etiketi uygulandığında, mevcut etiket otomatik olarak kaldırılmaz veya olası bir özel durumla başka bir bekletme etiketiyle değiştirilmez: Mevcut etiket varsayılan etiket olarak uygulandı. Varsayılan bir etiket kullandığınızda, başka bir varsayılan etiketle değiştirilebileceği veya otomatik olarak kaldırılabildiği bazı senaryolar vardır.
 
-- İçerikte zaten bir bekletme etiketi uygulandığında, mevcut etiket otomatik olarak kaldırılmaz veya iki olası özel durumla başka bir bekletme etiketiyle değiştirilmez: 
-    
-    - Mevcut etiket, bekletme süresinin sonunda otomatik olarak farklı bir bekletme etiketi uygulayacak şekilde yapılandırılır.
-    - Mevcut etiket varsayılan etiket olarak uygulandı. Varsayılan bir etiket kullandığınızda, başka bir varsayılan etiketle değiştirilebileceği veya otomatik olarak kaldırılabildiği bazı senaryolar vardır. 
-        
-        Varsayılan etiket kullanılarak uygulandığında etiket davranışı hakkında daha fazla bilgi için:
-        - SharePoint için varsayılan etiket: [SharePoint için varsayılan etiket kullandığınızda etiket davranışı](create-apply-retention-labels.md#label-behavior-when-you-use-a-default-label-for-sharepoint)
-        - Outlook için varsayılan etiket: [Outlook klasörüne varsayılan bekletme etiketi uygulama](create-apply-retention-labels.md#applying-a-default-retention-label-to-an-outlook-folder)
+- İçerikte zaten bir bekletme etiketi uygulandığında, mevcut etiket otomatik olarak kaldırılmaz veya iki olası özel durumla başka bir bekletme etiketiyle değiştirilmez:
+
+  - Mevcut etiket, bekletme süresinin sonunda otomatik olarak farklı bir bekletme etiketi uygulayacak şekilde yapılandırılır.
+  - Mevcut etiket varsayılan etiket olarak uygulandı. Varsayılan bir etiket kullandığınızda, başka bir varsayılan etiketle değiştirilebileceği veya otomatik olarak kaldırılabildiği bazı senaryolar vardır.
+
+  Varsayılan etiket kullanılarak uygulandığında etiket davranışı hakkında daha fazla bilgi için:
+
+  - SharePoint için varsayılan etiket: [SharePoint için varsayılan etiket kullandığınızda etiket davranışı](create-apply-retention-labels.md#label-behavior-when-you-use-a-default-label-for-sharepoint)
+  - Outlook için varsayılan etiket: [Outlook klasörüne varsayılan bekletme etiketi uygulama](create-apply-retention-labels.md#applying-a-default-retention-label-to-an-outlook-folder)
 
 - Bekletme etiketi uygulayabilecek birden çok otomatik uygulama etiketi ilkesi varsa ve içerik birden çok ilkenin koşullarını karşılıyorsa, en eski otomatik uygulama etiket ilkesinin bekletme etiketi (oluşturulma tarihine göre) uygulanır.
 
@@ -236,7 +237,7 @@ Bekletme etiketleri öğeleri kayıt veya mevzuat kaydı olarak işaretlediğind
 
 #### <a name="monitoring-retention-labels"></a>Bekletme etiketlerini izleme
 
-Microsoft Purview uyumluluk portalından **Veri sınıflandırması'nı** ve **Genel Bakış** sayfasını seçerek bekletme etiketlerinizin kiracınızda nasıl kullanıldığını izleyin ve etiketli öğelerinizin nerede bulunduğunu belirleyin. Önemli önkoşullar da dahil olmak üzere daha fazla bilgi için bkz. [Veri sınıflandırması hakkında bilgi edinin](data-classification-overview.md).
+Microsoft Purview uyumluluk portalı **Veri sınıflandırması'nı** ve **Genel Bakış** sayfasını seçerek bekletme etiketlerinizin kiracınızda nasıl kullanıldığını izleyin ve etiketlenen öğelerinizin nerede bulunduğunu belirleyin. Önemli önkoşullar da dahil olmak üzere daha fazla bilgi için bkz. [Veri sınıflandırması hakkında bilgi edinin](data-classification-overview.md).
 
 Ardından [içerik gezginini](data-classification-content-explorer.md) ve [etkinlik gezginini](data-classification-activity-explorer.md) kullanarak ayrıntılara gidebilirsiniz.
 
@@ -285,7 +286,7 @@ Aşağıdaki örnekler, bekletme ilkelerini ve bekletme etiketlerini aynı konum
 
 Bekletme ilkeleri ve bekletme etiketlerinin birlikte nasıl çalıştığı ve bunların birleştirilmiş sonuçlarının nasıl belirleneceği hakkında daha fazla bilgi için, bu sayfadaki [bekletme ilkelerini ve önceliklerini](#the-principles-of-retention-or-what-takes-precedence) açıklayan bölüme bakın.
 
-**Kullanıcıların otomatik silmeyi geçersiz kılabilir örneği**
+#### <a name="example-for-users-to-override-automatic-deletion"></a>Kullanıcıların otomatik silmeyi geçersiz kılabilir örneği
 
 Senaryo: Varsayılan olarak, kullanıcıların OneDrive hesaplarındaki içerik beş yıl sonra otomatik olarak silinir, ancak kullanıcıların belirli belgeler için bunu geçersiz kılma seçeneğine sahip olması gerekir.
 
@@ -293,7 +294,7 @@ Senaryo: Varsayılan olarak, kullanıcıların OneDrive hesaplarındaki içerik 
 
 2. İçeriği sonsuza kadar saklayan bir bekletme etiketi oluşturup yapılandırıp bunu tüm OneDrive hesaplarında yayımladığınız bir etiket ilkesine eklersiniz. Kullanıcılara bu etiketin beş yıl sonra değiştirilmemesi durumunda otomatik silmenin dışında tutulması gereken belirli belgelere nasıl el ile uygulanacağını açıklarsınız.
 
-**Öğeleri daha uzun süre saklama örneği**
+Öğeleri daha uzun süre saklama örneği**
 
 Senaryo: Varsayılan olarak, SharePoint öğeler beş yıl sonra otomatik olarak korunur ve silinir, ancak belirli kitaplıklardaki belgeler on yıl boyunca saklanmalıdır.
 
@@ -301,7 +302,7 @@ Senaryo: Varsayılan olarak, SharePoint öğeler beş yıl sonra otomatik olarak
 
 2. İçeriği otomatik olarak on yıl boyunca saklayan bir bekletme etiketi oluşturup yapılandırabilirsiniz. Bu etiketi, belirli belge kitaplıklarındaki tüm öğeler tarafından devralınacak varsayılan bir etiket olarak uygulayabilmeleri için SharePoint site yöneticilerine yayımlarsınız.
 
-**Daha kısa bir zaman aralığındaki öğeleri silme örneği**
+#### <a name="example-to-delete-items-in-a-shorter-time-period"></a>Daha kısa bir zaman aralığındaki öğeleri silme örneği
 
 Senaryo: Varsayılan olarak, e-postalar korunmaz ancak on yıl sonra otomatik olarak silinir. Ancak, yayın öncesi kod adına sahip belirli bir projeyle ilgili e-postaların bir yıl sonra otomatik olarak silinmesi gerekir.
 
@@ -368,7 +369,7 @@ Kaydedilmiş bir web seminerini izlemek için (kayıt gerektirir), [Uyarlamalı 
 
 ## <a name="policy-lookup"></a>İlke araması
 
-Microsoft 365 konumlar için birden çok bekletme ilkesi ve yayımladığınız veya otomatik uyguladığınız birden çok bekletme etiketi ilkesi yapılandırabilirsiniz. Belirli kullanıcılara, sitelere ve Microsoft 365 gruplarına atanan bekletme ilkelerini bulmak için, Microsoft Purview uyumluluk portalındaki **Veri yaşam döngüsü yönetimi** veya **Kayıt yönetimi** çözümlerinden **İlke araması'nı** kullanın.
+Microsoft 365 konumlar için birden çok bekletme ilkesi ve yayımladığınız veya otomatik uyguladığınız birden çok bekletme etiketi ilkesi yapılandırabilirsiniz. Belirli kullanıcılara, sitelere ve Microsoft 365 gruplarına atanan bekletme ilkelerini bulmak için, Microsoft Purview uyumluluk portalı **Veri yaşam döngüsü yönetimi** veya **Kayıt yönetimi** çözümlerinden **İlke araması'nı** kullanın.
 
 Örneğin:
 

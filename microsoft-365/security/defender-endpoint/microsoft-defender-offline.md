@@ -1,6 +1,6 @@
 ---
 title: Windows'da Microsoft Defender Çevrimdışı
-description: doğrudan Windows Defenderin virustentorjunta uygulamasından Microsoft Defender Çevrimdışı kullanabilirsiniz. Ayrıca ağınızda nasıl dağıtılacağı da yönetilebilir.
+description: doğrudan Windows Defender Virüsten Koruma uygulamasından Microsoft Defender Çevrimdışı kullanabilirsiniz. Ayrıca ağınızda nasıl dağıtılacağı da yönetilebilir.
 keywords: tarama, defender, çevrimdışı
 ms.prod: m365-security
 ms.mktglfcycl: manage
@@ -15,12 +15,12 @@ manager: dansimp
 ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
-ms.openlocfilehash: ea7d316a7fc31724466dcd459ed72792cea817fd
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: 690437de177ce1f6c466166970a8b7143d230916
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64787698"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65415650"
 ---
 # <a name="run-and-review-the-results-of-a-microsoft-defender-offline-scan"></a>Microsoft Defender çevrimdışı tarama sonuçlarını gözden geçirin ve çalıştırın
 
@@ -28,7 +28,7 @@ ms.locfileid: "64787698"
 
 
 **Şunlar için geçerlidir:**
-- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Virüsten Koruma
 
@@ -58,7 +58,7 @@ Uç noktadan Microsoft Defender Çevrimdışı çalıştırmak için kullanıcı
 
 ## <a name="microsoft-defender-offline-updates"></a>güncelleştirmeleri Microsoft Defender Çevrimdışı
 
-Microsoft Defender Çevrimdışı uç noktada kullanılabilen en son koruma güncelleştirmelerini kullanır; Windows Defenderin virustentorjunta her güncelleştirildiğinde güncelleştirilir.
+Microsoft Defender Çevrimdışı uç noktada kullanılabilen en son koruma güncelleştirmelerini kullanır; Windows Defender Virüsten Koruma her güncelleştirildiğinde güncelleştirilir.
 
 > [!NOTE]
 > Çevrimdışı taramayı çalıştırmadan önce Microsoft Defender AV korumasını güncelleştirmeye çalışmanız gerekir. bir güncelleştirmeyi grup ilkesi ile zorlayabilirsiniz veya normalde uç noktalara güncelleştirme dağıtabilirsiniz ya da [Microsoft Kötü Amaçlı Yazılımdan Koruma Merkezi'nden](https://www.microsoft.com/security/portal/definitions/adl.aspx) en son koruma güncelleştirmelerini el ile indirip yükleyebilirsiniz.
@@ -143,13 +143,13 @@ Microsoft Defender Çevrimdışı tarama sonuçları[, Windows Güvenliği uygul
 
 > [!TIP]
 > Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
-> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
-> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
-> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](linux-preferences.md)
 > - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
-> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
-> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
+> - [Android özelliklerinde Uç Nokta için Defender’ı yapılandırın](android-configure.md)
+> - [iOS özelliklerinde Uç Nokta için Microsoft Defender’ı yapılandırın](ios-configure-features.md)
 
 ## <a name="related-articles"></a>İlgili makaleler
 

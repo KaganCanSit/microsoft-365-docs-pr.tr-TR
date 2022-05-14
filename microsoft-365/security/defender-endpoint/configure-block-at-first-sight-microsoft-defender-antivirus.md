@@ -15,18 +15,18 @@ ms.date: 10/18/2021
 ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 071bd6fe59a7200e1d16cf94633b0d7b3cb688c5
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: fb65e1ad898427c3f0a2fc1ba9a13685c1617bc1
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64788116"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65416288"
 ---
 # <a name="turn-on-block-at-first-sight"></a>İlk görüşte engellemeyi etkinleştirin
 
 **Şunlar için geçerlidir:**
 
-- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Virüsten Koruma 
 
@@ -57,7 +57,7 @@ Microsoft Defender Virüsten Koruma doğru, akıllı ve gerçek zamanlı koruma 
 :::image type="content" source="images/microsoft-defender-atp-next-generation-protection-engines.png" alt-text="Microsoft Defender AV altyapılarının listesi" lightbox="images/microsoft-defender-atp-next-generation-protection-engines.png":::
 
 > [!TIP]
-> Daha fazla bilgi edinmek için bkz. [(Blog) yeni nesil korumanın Pertahanan Microsoft untuk Titik Akhir temelindeki gelişmiş teknolojileri tanıma](https://www.microsoft.com/security/blog/2019/06/24/inside-out-get-to-know-the-advanced-technologies-at-the-core-of-microsoft-defender-atp-next-generation-protection/).
+> Daha fazla bilgi edinmek için bkz. [(Blog) yeni nesil korumanın Uç Nokta için Microsoft Defender temelindeki gelişmiş teknolojileri tanıma](https://www.microsoft.com/security/blog/2019/06/24/inside-out-get-to-know-the-advanced-technologies-at-the-core-of-microsoft-defender-atp-next-generation-protection/).
 
 ## <a name="a-few-things-to-know-about-block-at-first-sight"></a>İlk bakışta blok hakkında bilmeniz gereken birkaç şey
 
@@ -153,7 +153,7 @@ Windows Güvenliği uygulamasını kullanarak ilk bakışta bloğun tek tek iste
 
 ## <a name="validate-block-at-first-sight-is-working"></a>İlk bakışta bloğun çalıştığını doğrulama
 
-Özelliğin çalıştığını doğrulamak için [ilk bakışta engelle örnek dosyasını](https://demo.wd.microsoft.com/Page/BAFS) indirin. Dosyayı indirmek için Azure AD'de Güvenlik Yöneticisi veya Genel Yönetici rolü atanmış bir hesaba ihtiyacınız olacaktır.
+Özelliğin çalıştığını doğrulamak için [ilk bakışta engelle örnek dosyasını](https://demo.wd.microsoft.com/Page/BAFS) indirin. Dosyayı indirmek için Azure AD'da Güvenlik Yöneticisi veya Genel Yönetici rolü atanmış bir hesaba ihtiyacınız olacaktır.
 
 Bulut özellikli korumanın çalıştığını doğrulamak için [Ağınızla bulut arasındaki bağlantıları doğrulama bölümünde yer alan](configure-network-connections-microsoft-defender-antivirus.md#validate-connections-between-your-network-and-the-cloud) yönergeleri izleyin.
 
@@ -223,13 +223,13 @@ Bir kuruluş tarafından yönetilmeyen kişisel bir cihazınız varsa, ilk gör�
 
 > [!TIP]
 > Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
-> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
-> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
-> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](linux-preferences.md)
 > - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
-> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
-> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
+> - [Android özelliklerinde Uç Nokta için Defender’ı yapılandırın](android-configure.md)
+> - [iOS özelliklerinde Uç Nokta için Microsoft Defender’ı yapılandırın](ios-configure-features.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

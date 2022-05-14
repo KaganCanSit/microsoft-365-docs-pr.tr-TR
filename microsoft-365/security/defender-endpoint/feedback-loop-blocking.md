@@ -1,7 +1,7 @@
 ---
 title: Geri bildirim döngüsü engelleme
-description: Hızlı koruma olarak da adlandırılan geri bildirim döngüsü engelleme, Pertahanan Microsoft untuk Titik Akhir
-keywords: davranış engelleme, hızlı koruma, geri bildirim engelleme, Pertahanan Microsoft untuk Titik Akhir
+description: Hızlı koruma olarak da adlandırılan geri bildirim döngüsü engelleme, Uç Nokta için Microsoft Defender
+keywords: davranış engelleme, hızlı koruma, geri bildirim engelleme, Uç Nokta için Microsoft Defender
 ms.pagetype: security
 author: denisebmsft
 ms.author: deniseb
@@ -16,12 +16,12 @@ ms.custom:
 - edr
 ms.technology: mde
 ms.collection: m365-security-compliance
-ms.openlocfilehash: f68345b97d49adce2f55cffd837ca17e5b028953
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: da3f16837b8715fe791fbd8abf48acb657fd4963
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64788006"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65416782"
 ---
 # <a name="feedback-loop-blocking"></a>Geri bildirim döngüsü engelleme
 
@@ -37,7 +37,7 @@ ms.locfileid: "64788006"
 
 ## <a name="overview"></a>Genel bakış
 
-Hızlı koruma olarak da adlandırılan geri bildirim döngüsü engelleme, [Pertahanan Microsoft untuk Titik Akhir](/windows/security/threat-protection/) [davranış engelleme ve kapsama özelliklerinin](/microsoft-365/security/defender-endpoint/behavioral-blocking-containment) bir bileşenidir. Geri bildirim döngüsü engelleme sayesinde kuruluşunuz genelindeki cihazlar saldırılara karşı daha iyi korunur. 
+Hızlı koruma olarak da adlandırılan geri bildirim döngüsü engelleme, [Uç Nokta için Microsoft Defender](/windows/security/threat-protection/) [davranış engelleme ve kapsama özelliklerinin](/microsoft-365/security/defender-endpoint/behavioral-blocking-containment) bir bileşenidir. Geri bildirim döngüsü engelleme sayesinde kuruluşunuz genelindeki cihazlar saldırılara karşı daha iyi korunur. 
 
 ## <a name="how-feedback-loop-blocking-works"></a>Geri bildirim döngüsü engelleme nasıl çalışır?
 
@@ -50,9 +50,9 @@ Hızlı koruma uygulandığında saldırı, bir cihazda, kuruluştaki diğer cih
 
 Kuruluşunuz Uç Nokta için Defender kullanıyorsa, geri bildirim döngüsü engellemesi varsayılan olarak etkindir. Ancak hızlı koruma, Uç Nokta için Defender özellikleri, makine öğrenmesi koruma özellikleri ve Microsoft güvenlik hizmetleri arasında sinyal paylaşımının bir birleşimiyle gerçekleşir. Uç Nokta için Defender'ın aşağıdaki özelliklerinin etkinleştirildiğinden ve yapılandırıldığından emin olun:
 
-- [temelleri Pertahanan Microsoft untuk Titik Akhir](/microsoft-365/security/defender-endpoint/configure-machines-security-baseline)
+- [temelleri Uç Nokta için Microsoft Defender](/microsoft-365/security/defender-endpoint/configure-machines-security-baseline)
 
-- [Pertahanan Microsoft untuk Titik Akhir eklenen cihazlar](/microsoft-365/security/defender-endpoint/onboard-configure)
+- [Uç Nokta için Microsoft Defender eklenen cihazlar](/microsoft-365/security/defender-endpoint/onboard-configure)
 
 - [Engelleme modunda EDR ](/microsoft-365/security/defender-endpoint/edr-in-block-mode)
 
@@ -62,13 +62,13 @@ Kuruluşunuz Uç Nokta için Defender kullanıyorsa, geri bildirim döngüsü en
 
 > [!TIP]
 > Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
-> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
-> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
-> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](linux-preferences.md)
 > - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
-> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
-> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
+> - [Android özelliklerinde Uç Nokta için Defender’ı yapılandırın](android-configure.md)
+> - [iOS özelliklerinde Uç Nokta için Microsoft Defender’ı yapılandırın](ios-configure-features.md)
 
 ## <a name="related-articles"></a>İlgili makaleler
 
@@ -76,4 +76,4 @@ Kuruluşunuz Uç Nokta için Defender kullanıyorsa, geri bildirim döngüsü en
 
 - [(Blog) Davranışsal engelleme ve kapsama: Optikleri korumaya dönüştürme](https://www.microsoft.com/security/blog/2020/03/09/behavioral-blocking-and-containment-transforming-optics-into-protection/)
 
-- [Yararlı Pertahanan Microsoft untuk Titik Akhir kaynakları](/microsoft-365/security/defender-endpoint/helpful-resources)
+- [Yararlı Uç Nokta için Microsoft Defender kaynakları](/microsoft-365/security/defender-endpoint/helpful-resources)

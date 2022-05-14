@@ -19,12 +19,12 @@ metadata:
   search.appverid: MET150
   description: Microsoft Evde Kullanım Programı hakkında sık sorulan sorular (SSS).
   ms.date: 05/01/2021
-  ms.openlocfilehash: 8f9b3bb1e6bba0bb9b473962bbaf50653f733760
-  ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+  ms.openlocfilehash: 58ebd94bad0e68cd6bfdf231c920a8170430d968
+  ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 04/13/2022
-  ms.locfileid: "64823926"
+  ms.lasthandoff: 05/14/2022
+  ms.locfileid: "65415482"
 title: Microsoft Evde Kullanım Programı sık sorulan sorular (SSS)
 summary: >
   Toplu Lisanslama müşterileri İş İçin Microsoft Store [web sitesindeki Microsoft Evde Kullanım Programı](https://go.microsoft.com/fwlink/?linkid=2139192) (HUP) kullanır.
@@ -46,11 +46,11 @@ sections:
     answer: "Microsoft 365 Aile ve Kişisel aboneliklerdeki indirimler, şu istisnalar dışında dünya çapında uygun şirketlere sunulur:\n\n- Lübnan, Makao, Rusya ve Venezuela: Bu teklif bu pazarlarda mevcut değildir.\n- Çin ve Hong Kong: Bu pazarlarda bir yıllık abonelik mevcuttur. Çin için, [Çin'deki Microsoft 365](https://www.microsoftstore.com.cn/home-use-program/invite) ziyaret edin. Hong Kong için [Microsoft 365 indirimli fiyatla satın alın](https://www.microsoftestore.com.hk/partner/hup?locale=en_HK) sayfasını ziyaret edin.\n- Japonya: Microsoft 365 Aile kullanılamıyor.\n- Belirli Surface cihaz ve aksesuarlarındaki indirimler, belirli pazarlardaki uygun şirketlere sunulur. \n"
   - question: >
       Bir kuruluş HUP indirimlerini nasıl hak eder?
-    answer: "Çalışanların Microsoft Evde Kullanım Programı indirimden yararlanması için geçerli bir kurumsal e-posta adresi ve etkin bir Microsoft Hesabı gerekir ve kuruluşunuzun aşağıdaki ölçütlerden birini karşılaması gerekir:\n\n- Uygun Office uygulamaları için etkin Yazılım Güvencesi'ne sahip müşteriler\n- Yazılım Güvencesinden Microsoft 365/Microsoft 365 E3/E5'e sahip müşteriler\n- Microsoft 365 E3/E5 ≥ 2.000 lisans satın alan ticari ve kamu müşterileri\n- Eğitim ve kar amacı gütmeyen müşteriler\n- Son 12 ay içinde uygun Power BI, Office, Surface cihazları & aksesuarları, Windows ve Enterprise Mobility için 250.000 ABD doları veya daha fazla harcama yapan ticari ve kamu müşterileri \n"
+    answer: "Çalışanların Microsoft Evde Kullanım Programı indirimden yararlanması için geçerli bir kurumsal e-posta adresi ve etkin bir Microsoft Hesabı gerekir ve kuruluşunuzun aşağıdaki ölçütlerden birini karşılaması gerekir:\n\n- Uygun Office uygulamaları için etkin Yazılım Güvencesi'ne sahip müşteriler\n- Yazılım Güvencesinden Microsoft 365/Microsoft 365 E3/E5'e sahip müşteriler\n- Microsoft 365 E3/E5'in bir veya bir karışımından 2.000 veya daha fazla lisans satın alan ticari ve kamu müşterileri\n- Eğitim ve kar amacı gütmeyen müşteriler\n- Son 12 ay içinde uygun Power BI, Office, Surface cihazları & aksesuarları, Windows ve Enterprise Mobility için 250.000 ABD doları veya daha fazla harcama yapan ticari ve kamu müşterileri \n"
   - question: >
       Evde Kullanım Programı/ İş İçin Microsoft Store kullanmak için neden bir Azure Active Directory (AAD) hesabı oluşturmam gerekiyor?
     answer: >
-      Evde Kullanım Programı'nı daha geniş bir lisans ve ürün avantajı yelpazesine güncelleştirmek ve modernleştirmek için HUP'yi yerine getirme şeklimizi değiştirmemiz gerekiyordu. İş İçin Microsoft Store uygunluk doğrulaması ve HUP avantajları atamak için kullanılır ve bunun için VLSC'den bilgi bağlamak ve kuruluşunuzun çalışanlarının üzerinde olduğu e-posta etki alanlarını doğrulamak için AAD dayanır. Daha fazla bilgi için bkz. [İş için Office 365 aracılığıyla Azure AD hesaplarına kaydolma](/microsoft-store/sign-up-microsoft-store-for-business#o365-welcome).
+      Evde Kullanım Programı'nı daha geniş bir lisans ve ürün avantajı yelpazesine güncelleştirmek ve modernleştirmek için HUP'yi yerine getirme şeklimizi değiştirmemiz gerekiyordu. İş İçin Microsoft Store uygunluk doğrulaması ve HUP avantajları atamak için kullanılır ve bunun için VLSC'den bilgileri bağlamak ve kuruluşunuzun çalışanlarının üzerinde olduğu e-posta etki alanlarını doğrulamak için AAD'ye dayanır. Daha fazla bilgi için bkz. [İş için Office 365 aracılığıyla Azure AD hesaplarına kaydolma](/microsoft-store/sign-up-microsoft-store-for-business#o365-welcome).
   - question: >
       yönetilen bir kiracının atanmış BT Yöneticisi Nasıl yaparım??
     answer: >

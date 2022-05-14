@@ -25,16 +25,16 @@ search.appverid:
 - MET150
 - MOE150
 description: Microsoft Teams ile çevrimiçi toplantılar ayarlayın.
-ms.openlocfilehash: 9ed624d8fe607f460d36eb391d801066b69f7141
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 367d344aac8d85a68875f7f51685f59310277c27
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095154"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65417742"
 ---
-# <a name="set-up-meetings"></a>Toplantıları ayarlama
+# <a name="set-up-meetings"></a>Toplantı ayarlama
 
-Kuruluş üyelerinin tüm toplantılar için Microsoft Teams kullandığından emin olun. Teams toplantı dosyaları ses, video ve paylaşım içerir ve çevrimiçi oldukları için her zaman bir toplantı alanı vardır ve projektör içeren bir odaya gerek yoktur! Microsoft Teams toplantıları, kuruluşunuzun içinde ve dışında personelinizle bir araya gelmek için harika bir yoldur. 
+Kuruluş üyelerinin tüm toplantılar için Microsoft Teams kullandığından emin olun. Teams toplantı dosyaları ses, video ve paylaşım içerir ve çevrimiçi oldukları için her zaman bir toplantı alanı vardır ve projektör içeren bir odaya gerek yoktur! Microsoft Teams toplantıları, kuruluşunuzun içinde ve dışında personelinizle bir araya gelmek için harika bir yoldur.
 
 Teams kullanarak, bir toplantıya katılmak için kuruluşun üyesi olmanıza ve hatta bir hesabınız olmasına gerek yoktur. Ekranınızı paylaşabileceğiniz, dosya paylaşabileceğiniz, görev atayabileceğiniz ve daha fazlasını yapabileceğiniz çevrimiçi toplantılar zamanlayabilir ve çalıştırabilirsiniz. Siyasi kampanyalar personel, gönüllüler veya kuruluşunuzun dışındaki konukları içerebilir. Microsoft Teams üzerinden ve güvenli ve endişesiz bir ortamda müşteriler, personel veya iş ortaklarıyla kolayca toplantı yapabilirsiniz.
 
@@ -64,5 +64,3 @@ Microsoft Teams'de toplantı hakkında daha fazla bilgi edinin:
 ## <a name="next-objective"></a>Sonraki hedef
 
 Bu görev hedefi tamamlandıktan sonra [dosyaları ve videoları](share-files-and-videos.md) güvenli bir şekilde paylaşmayı öğrenin
-
-

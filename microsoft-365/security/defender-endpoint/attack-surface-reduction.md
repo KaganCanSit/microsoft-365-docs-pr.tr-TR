@@ -1,7 +1,7 @@
 ---
 title: Kötü amaçlı yazılım bulaşmasını önlemek için saldırı yüzeyi azaltma kurallarını kullanma
 description: Saldırı yüzeyi azaltma kuralları, uygulamalara ve betiklere kötü amaçlı yazılım bulaştırmak için açıklardan yararlanmanın önlenmesine yardımcı olabilir.
-keywords: Saldırı yüzeyi azaltma kuralları, asr, kalçalar, konak izinsiz giriş önleme sistemi, koruma kuralları, anti-exploit, antiexploit, exploit, enfeksiyon önleme, Pertahanan Microsoft untuk Titik Akhir
+keywords: Saldırı yüzeyi azaltma kuralları, asr, kalçalar, konak izinsiz giriş önleme sistemi, koruma kuralları, anti-exploit, antiexploit, exploit, enfeksiyon önleme, Uç Nokta için Microsoft Defender
 ms.prod: m365-security
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -21,12 +21,12 @@ ms.collection:
 - m365initiative-m365-defender
 - M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: a93563b3758db8346af12978440c16d91f28bed5
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: a1ae7d53ac69b4756417704b4938ff4fb41f9e41
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64788072"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65418816"
 ---
 # <a name="attack-surface-reduction-rules-overview"></a>Saldırı yüzeyi azaltma kurallarına genel bakış
 
@@ -41,7 +41,7 @@ ms.locfileid: "64788072"
 
 ## <a name="why-attack-surface-reduction-rules-are-important"></a>Saldırı yüzeyi azaltma kuralları neden önemlidir?
 
-Kuruluşunuzun saldırı yüzeyi, bir saldırganın kuruluşunuzun cihazlarını veya ağlarını tehlikeye atabileceği tüm yerleri içerir. Saldırı yüzeyinizi azaltmak, kuruluşunuzun cihazlarını ve ağını korumak anlamına gelir ve bu da saldırganlara saldırı gerçekleştirmenin daha az yolunu bırakır. Pertahanan Microsoft untuk Titik Akhir'de saldırı yüzeyi azaltma kurallarının yapılandırılması yardımcı olabilir!
+Kuruluşunuzun saldırı yüzeyi, bir saldırganın kuruluşunuzun cihazlarını veya ağlarını tehlikeye atabileceği tüm yerleri içerir. Saldırı yüzeyinizi azaltmak, kuruluşunuzun cihazlarını ve ağını korumak anlamına gelir ve bu da saldırganlara saldırı gerçekleştirmenin daha az yolunu bırakır. Uç Nokta için Microsoft Defender'de saldırı yüzeyi azaltma kurallarının yapılandırılması yardımcı olabilir!
 
 Saldırı yüzeyi azaltma kuralları aşağıdakiler gibi belirli yazılım davranışlarını hedefler:
 
@@ -178,10 +178,10 @@ Olay günlüğünde saldırı yüzeyi azaltma olayları için listelenen "altyap
 
 > [!TIP]
 > Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
-> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
-> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
-> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](linux-preferences.md)
 > - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
-> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
-> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
+> - [Android özelliklerinde Uç Nokta için Defender’ı yapılandırın](android-configure.md)
+> - [iOS özelliklerinde Uç Nokta için Microsoft Defender’ı yapılandırın](ios-configure-features.md)

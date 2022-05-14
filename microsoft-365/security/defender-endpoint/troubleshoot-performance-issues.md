@@ -1,6 +1,6 @@
 ---
 title: Performans sorunlarını giderin
-description: Pertahanan Microsoft untuk Titik Akhir'daki gerçek zamanlı koruma hizmetiyle ilgili yüksek CPU kullanımı sorunlarını giderin.
+description: Uç Nokta için Microsoft Defender'daki gerçek zamanlı koruma hizmetiyle ilgili yüksek CPU kullanımı sorunlarını giderme.
 keywords: sorun giderme, performans, yüksek CPU kullanımı, yüksek CPU kullanımı, hata, düzeltme, güncelleştirme uyumluluğu, oms, izleme, rapor, Microsoft Defender Virüsten Koruma
 search.appverid: met150
 ms.prod: m365-security
@@ -16,12 +16,12 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.technology: mde
 ms.collection: m365-security-compliance
-ms.openlocfilehash: dd89a2cf6d6a8cd355258376b93ca12c37ad501f
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: 01db84f3ddd4eae79cae2fa97400f4d3d78ba8da
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64788688"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65419758"
 ---
 # <a name="troubleshoot-performance-issues-related-to-real-time-protection"></a>Gerçek zamanlı korumayla ilgili performans sorunlarını giderin
 
@@ -36,7 +36,7 @@ ms.locfileid: "64788688"
 **Platform**
 - Windows
 
-Sisteminizde Pertahanan Microsoft untuk Titik Akhir'daki gerçek zamanlı koruma hizmetiyle ilgili yüksek CPU kullanımı veya performans sorunları varsa Microsoft desteğine bir bilet gönderebilirsiniz. [tanılama verilerini Microsoft Defender Virüsten Koruma toplama](collect-diagnostic-data.md) başlığındaki adımları izleyin.
+Sisteminizde Uç Nokta için Microsoft Defender'da gerçek zamanlı koruma hizmetiyle ilgili yüksek CPU kullanımı veya performans sorunları varsa Microsoft desteğine bir bilet gönderebilirsiniz. [tanılama verilerini Microsoft Defender Virüsten Koruma toplama](collect-diagnostic-data.md) başlığındaki adımları izleyin.
 
 Yönetici olarak, bu sorunları kendi başınıza da giderebilirsiniz.
 
@@ -47,7 +47,7 @@ Aksi takdirde, [Microsoft Koruma Günlüğünü Analiz](#analyze-the-microsoft-p
 Ayrıca, aşağıdaki adımları izleyerek Microsoft desteğine gönderiminize ek günlükler de sağlayabilirsiniz:
 
 - [İşlem İzleyicisi'yi kullanarak işlem günlüklerini yakalama](#capture-process-logs-using-process-monitor)
-- [Windows Performans Kaydedicisi kullanarak performans günlüklerini yakalama](#capture-performance-logs-using-windows-performance-recorder)
+- [Windows Performans Kaydedicisi'yi kullanarak performans günlüklerini yakalama](#capture-performance-logs-using-windows-performance-recorder)
 
 ## <a name="check-with-vendor-for-antivirus-exclusions"></a>Virüsten koruma dışlamaları için satıcıya başvurun
 
@@ -156,9 +156,9 @@ Performans etkisi yüksekse, Microsoft Defender Virüsten Koruma [taramaları i�
 
 13. .pml dosyasını sıkıştırın ve Microsoft desteğine gönderin.
 
-## <a name="capture-performance-logs-using-windows-performance-recorder"></a>Windows Performans Kaydedicisi kullanarak performans günlüklerini yakalama
+## <a name="capture-performance-logs-using-windows-performance-recorder"></a>Windows Performans Kaydedicisi'yi kullanarak performans günlüklerini yakalama
 
-Windows Performans Kaydedicisi'ni (WPR) kullanarak Microsoft desteğine göndermenize ek bilgiler ekleyebilirsiniz. WPR, Windows kayıtlar için Olay İzleme oluşturan güçlü bir kayıt aracıdır.
+Microsoft desteğine göndermenize ek bilgiler eklemek için Windows Performans Kaydedicisi'ni (WPR) kullanabilirsiniz. WPR, Windows kayıtlar için Olay İzleme oluşturan güçlü bir kayıt aracıdır.
 
 WPR, Windows Değerlendirme ve Dağıtım Seti'nin (Windows ADK) bir parçasıdır ve [Windows ADK'yi indirip yükleyebilir](/windows-hardware/get-started/adk-install). Ayrıca Windows 10 [SDK'da](https://developer.microsoft.com/windows/downloads/windows-10-sdk/) Windows 10 Yazılım Geliştirme Seti'nin bir parçası olarak indirebilirsiniz.
 
@@ -173,7 +173,7 @@ Alternatif olarak, [WPR CLI kullanarak performans günlüklerini yakalama](#capt
 
 1. WPR'yi indirip yükleyin.
 
-2. *Windows Setleri'nin* altında **Performans Kaydedicisi'Windows** sağ tıklayın.
+2. *Windows Setleri'nin* altında **Windows Performans Kaydedicisi'ne** sağ tıklayın.
 
    :::image type="content" source="images/wpr-01.png" alt-text="Başlat menüsü" lightbox="images/wpr-01.png":::
 
@@ -183,7 +183,7 @@ Alternatif olarak, [WPR CLI kullanarak performans günlüklerini yakalama](#capt
 
    :::image type="content" source="images/wpt-yes.png" alt-text="UAC sayfası" lightbox="images/wpt-yes.png":::
 
-4. Ardından [Pertahanan Microsoft untuk Titik Akhir çözümleme](https://github.com/YongRhee-MDE/Scripts/blob/master/MDAV.wprp) profilini indirin ve gibi `C:\temp`bir klasöre kaydedin`MDAV.wprp`.
+4. Ardından[, Uç Nokta için Microsoft Defender çözümleme](https://github.com/YongRhee-MDE/Scripts/blob/master/MDAV.wprp) profilini indirin ve gibi `C:\temp`bir klasöre kaydedin`MDAV.wprp`.
 
 5. WPR iletişim kutusunda **Diğer seçenekler'i** seçin.
 
@@ -192,7 +192,7 @@ Alternatif olarak, [WPR CLI kullanarak performans günlüklerini yakalama](#capt
 
 6. **Profil Ekle...** öğesini seçin ve dosyanın yoluna `MDAV.wprp` gidin.
 
-7. Bundan sonra, *Özel ölçümler'in* altında *Pertahanan Microsoft untuk Titik Akhir analizi* adlı yeni bir profil kümesi görmeniz gerekir.
+7. Bundan sonra, *Özel ölçümler* altında altında *Uç Nokta için Microsoft Defender analizi* adlı yeni bir profil kümesi görmeniz gerekir.
 
    :::image type="content" source="images/wpr-infile.png" alt-text="Dosya içi" lightbox="images/wpr-infile.png":::
 
@@ -200,11 +200,11 @@ Alternatif olarak, [WPR CLI kullanarak performans günlüklerini yakalama](#capt
     > Windows Sunucunuzda 64 GB veya daha fazla RAM varsa yerine özel ölçümü `Microsoft Defender for Endpoint analysis for large servers` `Microsoft Defender for Endpoint analysis`kullanın. Aksi takdirde, sisteminiz yüksek miktarda disk belleği olmayan havuz belleği veya arabellek tüketebilir ve bu da sistem kararlılığının oluşmasına neden olabilir. **Kaynak Analizi'ni** genişleterek hangi profillerin ekleneceğini seçebilirsiniz.
     Bu özel profil, ayrıntılı performans analizi için gerekli bağlamı sağlar.
 
-8. WPR kullanıcı arabiriminde özel ölçüm Pertahanan Microsoft untuk Titik Akhir ayrıntılı analiz profilini kullanmak için:
+8. WPR kullanıcı arabiriminde özel ölçüm Uç Nokta için Microsoft Defender ayrıntılı analiz profilini kullanmak için:
 
     1. *İlk düzey önceliklendirme*, *Kaynak Analizi* ve *Senaryo Analizi* grupları altında hiçbir profilin seçilmediğinden emin olun.
     2. **Özel ölçümler'i** seçin.
-    3. **analiz Pertahanan Microsoft untuk Titik Akhir'ı** seçin.
+    3. **analiz Uç Nokta için Microsoft Defender'ı** seçin.
     4. *Ayrıntı* düzeyi'nin altında **Ayrıntılı'ya** tıklayın.
     5. Günlük modu altında **Dosya** veya **Bellek'i** seçin.
 
@@ -254,13 +254,13 @@ Alternatif olarak, [WPR CLI kullanarak performans günlüklerini yakalama](#capt
 
 komut satırı aracı *wpr.exe*, Windows 8 ile başlayan işletim sisteminin bir parçasıdır. Komut satırı aracını kullanarak WPR izlemesini toplamak için wpr.exe:
 
-1. gibi `C:\traces`yerel bir dizinde adlı `MDAV.wprp` bir dosyaya performans izlemeleri için **[Pertahanan Microsoft untuk Titik Akhir analiz](https://github.com/YongRhee-MDE/Scripts/blob/master/MDAV.wprp)** profilini indirin.
+1. gibi `C:\traces`bir yerel dizinde adlı `MDAV.wprp` dosyaya performans izlemeleri için **[Uç Nokta için Microsoft Defender analiz](https://github.com/YongRhee-MDE/Scripts/blob/master/MDAV.wprp)** profilini indirin.
 
 2. **Başlat Menüsü** simgesine sağ tıklayın ve yönetici komut istemi penceresini açmak için **Windows PowerShell (Yönetici)** veya **Komut İstemi 'ni (Yönetici)** seçin.
 
 3. Kullanıcı Hesabı Denetimi iletişim kutusu görüntülendiğinde **Evet'i** seçin.
 
-4. Yükseltilmiş komut isteminde aşağıdaki komutu çalıştırarak Pertahanan Microsoft untuk Titik Akhir performans izlemesini başlatın:
+4. Yükseltilmiş komut isteminde aşağıdaki komutu çalıştırarak Uç Nokta için Microsoft Defender performans izlemesini başlatın:
 
     ```console
     wpr.exe -start C:\traces\MDAV.wprp!WD.Verbose -filemode
@@ -286,13 +286,13 @@ komut satırı aracı *wpr.exe*, Windows 8 ile başlayan işletim sisteminin bir
 
 > [!TIP]
 > Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
-> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
-> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
-> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](linux-preferences.md)
 > - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
-> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
-> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
+> - [Android özelliklerinde Uç Nokta için Defender’ı yapılandırın](android-configure.md)
+> - [iOS özelliklerinde Uç Nokta için Microsoft Defender’ı yapılandırın](ios-configure-features.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

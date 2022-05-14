@@ -16,12 +16,12 @@ ms.technology: mde
 ms.topic: article
 ms.date: 10/18/2021
 ms.collection: m365-security-compliance
-ms.openlocfilehash: 67f23d31f50dc20e385f36d4ee4a941db14af7ef
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: c7307e7c690e9664f6a848fcd93ed27f1062455a
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64790690"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65418368"
 ---
 # <a name="detect-and-block-potentially-unwanted-applications"></a>İstenmeyen olası uygulamaları tespit edin ve engelleyin
 
@@ -34,7 +34,7 @@ ms.locfileid: "64790690"
 **Platform**
 - Windows
 
-İstenmeyebilecek uygulamalar (PUA), makinenizin yavaş çalışmasına, beklenmeyen reklamlar görüntülemesine veya en kötü ihtimalle beklenmeyen veya istenmeyen olabilecek diğer yazılımları yüklemesine neden olabilecek bir yazılım kategorisidir. PUA bir virüs, kötü amaçlı yazılım veya başka bir tehdit türü olarak kabul edilmez, ancak uç nokta performansını veya kullanımını olumsuz etkileyen uç noktalarda eylemler gerçekleştirebilir. *PUA* terimi, bazı istenmeyen davranış türleri nedeniyle Pertahanan Microsoft untuk Titik Akhir tarafından değerlendirildiği gibi kötü bir üne sahip bir uygulamaya da başvurabilir.
+İstenmeyebilecek uygulamalar (PUA), makinenizin yavaş çalışmasına, beklenmeyen reklamlar görüntülemesine veya en kötü ihtimalle beklenmeyen veya istenmeyen olabilecek diğer yazılımları yüklemesine neden olabilecek bir yazılım kategorisidir. PUA bir virüs, kötü amaçlı yazılım veya başka bir tehdit türü olarak kabul edilmez, ancak uç nokta performansını veya kullanımını olumsuz etkileyen uç noktalarda eylemler gerçekleştirebilir. *PUA* terimi, bazı istenmeyen davranış türleri nedeniyle Uç Nokta için Microsoft Defender tarafından değerlendirildiği gibi kötü bir üne sahip bir uygulamaya da başvurabilir.
 
 İşte birkaç örnek:
 
@@ -70,7 +70,7 @@ PUA koruması açık Chromium tabanlı Edge'de Microsoft Defender SmartScreen si
 
 Güvenlik yöneticileri, kullanıcı gruplarını PUA ile ilişkili URL'lerden korumak için Microsoft Edge ve Microsoft Defender SmartScreen birlikte nasıl çalışabileceğini [yapılandırabilir](/DeployEdge/configure-microsoft-edge). [PuA'yı engelleme](/DeployEdge/microsoft-edge-policies#smartscreenpuaenabled) de dahil olmak üzere Microsoft Defender SmartScreen için açıkça çeşitli [grup ilkesi ayarları](/DeployEdge/microsoft-edge-policies#smartscreen-settings) vardır. Ayrıca, yöneticiler Microsoft Defender SmartScreen açmak veya kapatmak için grup ilkesi ayarlarını kullanarak Microsoft Defender SmartScreen bir bütün olarak [yapılandırabilir](/microsoft-edge/deploy/available-policies?source=docs#configure-windows-defender-smartscreen).
 
-Pertahanan Microsoft untuk Titik Akhir, Microsoft tarafından yönetilen bir veri kümesini temel alan kendi engelleme listesine sahip olsa da, bu listeyi kendi tehdit bilgilerinize göre özelleştirebilirsiniz. Pertahanan Microsoft untuk Titik Akhir portalında [göstergeler oluşturup yönetiyorsanız](manage-indicators.md) Microsoft Defender SmartScreen yeni ayarlara saygı gösterir.
+Uç Nokta için Microsoft Defender, Microsoft tarafından yönetilen bir veri kümesini temel alan kendi blok listesine sahip olsa da, bu listeyi kendi tehdit bilgilerinize göre özelleştirebilirsiniz. Uç Nokta için Microsoft Defender portalında [göstergeler oluşturup yönetiyorsanız](manage-indicators.md) Microsoft Defender SmartScreen yeni ayarlara saygı gösterir.
 
 ## <a name="microsoft-defender-antivirus-and-pua-protection"></a>Microsoft Defender Virüsten Koruma ve PUA koruması
 
@@ -90,7 +90,7 @@ PUA korumasını [Microsoft Intune](/mem/intune/protect/device-protect), [Micros
 İstenmeyebilecek uygulamaları engellemeden algılamak için pua korumasını denetim modunda da kullanabilirsiniz. Algılamalar Windows olay günlüğünde yakalanır.
 
 > [!TIP]
-> Özelliğin çalıştığını onaylamak ve çalışır durumda görmek için [demo.wd.microsoft.com](https://demo.wd.microsoft.com/Page/UrlRep) Pertahanan Microsoft untuk Titik Akhir tanıtım web sitesini ziyaret edin.
+> özelliğin çalıştığını onaylamak ve çalışır durumda görmek için [demo.wd.microsoft.com](https://demo.wd.microsoft.com/Page/UrlRep) Uç Nokta için Microsoft Defender tanıtım web sitesini ziyaret edin.
 
 > [!NOTE]
 > demo.wd.microsoft.com'daki Uç Nokta için Defender tanıtım sitesi kullanım dışıdır ve gelecekte kaldırılacaktır.
@@ -189,7 +189,7 @@ Microsoft Defender Virüsten Koruma olaylarını görüntülemeyle ilgili ayrın
 
 ## <a name="view-pua-events-using-advanced-hunting"></a>Gelişmiş avcılığı kullanarak PUA olaylarını görüntüleme
 
-[Pertahanan Microsoft untuk Titik Akhir](microsoft-defender-endpoint.md) kullanıyorsanız PUA olaylarını görüntülemek için gelişmiş bir tehdit avcılığı sorgusu kullanabilirsiniz. Aşağıda örnek bir sorgu verilmişti:
+[Uç Nokta için Microsoft Defender](microsoft-defender-endpoint.md) kullanıyorsanız PUA olaylarını görüntülemek için gelişmiş bir avcılık sorgusu kullanabilirsiniz. Aşağıda örnek bir sorgu verilmişti:
 
 ```console
 DeviceEvents
@@ -209,13 +209,13 @@ Daha fazla bilgi için bkz. [Dosya uzantısına ve klasör konumuna göre dışl
 
 > [!TIP]
 > Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
-> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
-> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
-> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](linux-preferences.md)
 > - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
-> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
-> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
+> - [Android özelliklerinde Uç Nokta için Defender’ı yapılandırın](android-configure.md)
+> - [iOS özelliklerinde Uç Nokta için Microsoft Defender’ı yapılandırın](ios-configure-features.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

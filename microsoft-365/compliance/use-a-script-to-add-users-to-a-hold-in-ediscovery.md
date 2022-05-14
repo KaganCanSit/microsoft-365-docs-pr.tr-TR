@@ -21,19 +21,19 @@ ms.assetid: bad352ff-d5d2-45d8-ac2a-6cb832f10e73
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkSPO
-description: Microsoft Purview uyumluluk portalında eBulma olayıyla ilişkili yeni bir ayrı tutmaya posta kutuları & OneDrive İş siteleri eklemek için bir betik çalıştırmayı öğrenin.
-ms.openlocfilehash: c652cd7d553faa5a7f85c59127e4aa2acfd7df4b
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Microsoft Purview uyumluluk portalı bir eBulma olayıyla ilişkili yeni bir ayrı tutmaya posta kutuları & OneDrive İş siteleri eklemek için bir betik çalıştırmayı öğrenin.
+ms.openlocfilehash: b828c9c1e6494ad4d0da4ca471feb7ace563d152
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097920"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65416024"
 ---
 # <a name="use-a-script-to-add-users-to-a-hold-in-a-ediscovery-standard-case"></a>eBulma (Standart) durumunda bir ayrı tutmaya kullanıcı eklemek için betik kullanma
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Güvenlik & Uyumluluk Merkezi PowerShell, eBulma servis taleplerini oluşturma ve yönetmeyle ilgili zaman alan görevleri otomatikleştirmenize olanak sağlayan cmdlet'ler sağlar. Şu anda, Çok sayıda koruyucu içerik konumunu beklemeye almak için Microsoft Purview uyumluluk portalında Microsoft Purview eKeşif (Standart) durumunu kullanmak zaman ve hazırlık gerektirir. Örneğin, ayrı tutma oluşturmadan önce, ayrı tutmaya yerleştirmek istediğiniz her OneDrive İş sitesinin URL'sini toplamanız gerekir. Ardından, beklemeye almak istediğiniz her kullanıcı için posta kutusunu ve OneDrive İş sitesini ayrı tutmaya eklemeniz gerekir. Bu işlemi otomatikleştirmek için bu makaledeki betiği kullanabilirsiniz.
+Güvenlik & Uyumluluk Merkezi PowerShell, eBulma servis taleplerini oluşturma ve yönetmeyle ilgili zaman alan görevleri otomatikleştirmenize olanak sağlayan cmdlet'ler sağlar. Şu anda, çok sayıda koruyucu içerik konumunu beklemeye almak için Microsoft Purview uyumluluk portalı Microsoft Purview eBulma (Standart) durumunu kullanmak zaman ve hazırlık gerektirir. Örneğin, ayrı tutma oluşturmadan önce, ayrı tutmaya yerleştirmek istediğiniz her OneDrive İş sitesinin URL'sini toplamanız gerekir. Ardından, beklemeye almak istediğiniz her kullanıcı için posta kutusunu ve OneDrive İş sitesini ayrı tutmaya eklemeniz gerekir. Bu işlemi otomatikleştirmek için bu makaledeki betiği kullanabilirsiniz.
   
 Betik, kuruluşunuzun Sitem etki alanının adını ister (örneğin, URL'dehttps://contoso-my.sharepoint.com), `contoso` var olan bir eBulma servis talebinin adı, servis talebiyle ilişkili yeni ayrı tutmanın adı, beklemeye almak istediğiniz kullanıcıların e-posta adreslerinin listesi ve sorgu tabanlı ayrı tutma oluşturmak istiyorsanız kullanmak üzere bir arama sorgusu. Betik daha sonra listedeki her kullanıcı için OneDrive İş sitesinin URL'sini alır, yeni ayrı tutmayı oluşturur ve ardından listedeki her kullanıcı için posta kutusunu ve OneDrive İş sitesini ayrı tutmaya ekler. Betik ayrıca yeni ayrı tutma hakkında bilgi içeren günlük dosyaları da oluşturur.
   
@@ -47,7 +47,7 @@ Bunun gerçekleşmesi için adımlar şunlardır:
   
 ## <a name="before-you-add-users-to-a-hold"></a>Ayrı tutmaya kullanıcı eklemeden önce
 
-- 3. Adımda betiği çalıştırmak için uyumluluk portalında eBulma Yöneticisi rol grubunun üyesi ve SharePoint Online yöneticisi olmanız gerekir. Daha fazla bilgi için bkz. [Office 365 Güvenlik & Uyumluluk Merkezi'nde eBulma izinleri atama](assign-ediscovery-permissions.md).
+- 3. Adımda betiği çalıştırmak için uyumluluk portalında eBulma Yöneticisi rol grubunun üyesi ve SharePoint Online yöneticisi olmanız gerekir. Daha fazla bilgi için bkz[. Office 365 Güvenlik & Uyumluluk Merkezi'nde eBulma izinleri atama](assign-ediscovery-permissions.md).
 
 - Uyumluluk portalındaki bir eBulma olayıyla ilişkili bir ayrı tutmaya en fazla 1.000 posta kutusu ve 100 site eklenebilir. Beklemeye almak istediğiniz her kullanıcının bir OneDrive İş sitesi olduğunu varsayarsak, bu makaledeki betiği kullanarak ayrı tutmaya en fazla 100 kullanıcı ekleyebilirsiniz.
 

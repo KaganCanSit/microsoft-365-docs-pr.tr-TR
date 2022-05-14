@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: v-tophillips
 author: v-tophillips
 manager: laurawi
-ms.date: ''
+ms.date: 05/13/2022
 audience: Admin
 ms.topic: article
 f1_keywords:
@@ -20,23 +20,23 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: d1691de4-ca0d-446f-a0d0-373a4fc8487b
-description: Microsoft Purview uyumluluk portalında çalıştırdığınız bir eBulma aramasında ekleyebileceğiniz Exchange ve SharePoint dizine alınmamış öğeler hakkında bilgi edinin.
-ms.openlocfilehash: 27f59ac9bf6a580fa0a3193ee91f66a4ac58ab1e
-ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
+description: Microsoft Purview uyumluluk portalı çalıştırdığınız bir eBulma aramasında ekleyebileceğiniz Exchange ve SharePoint eklenmemiş öğeler hakkında bilgi edinin.
+ms.openlocfilehash: 0efb96f8d36868f182476a0eb7b0087beb3134f9
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65188800"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65417050"
 ---
 # <a name="partially-indexed-items-in-ediscovery"></a>eBulma'da kısmen dizine alınan öğeler
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Microsoft Purview uyumluluk portalından çalıştırdığınız Bir Microsoft Purview eKeşif araması, bir arama çalıştırdığınızda tahmini arama sonuçlarında otomatik olarak kısmen dizine alınmış öğeler içerir. Kısmen dizine alınan öğeler, SharePoint ve OneDrive İş sitelerindeki posta kutusu öğeleri ve belgeleri Exchange ve herhangi bir nedenle arama için tamamen dizine eklenmedi. Exchange'da, kısmen dizine alınan bir öğe genellikle bir e-posta iletisine eklenmiş bir dosya (dizine alınamaz dosya türünde) içerir. eBulma araması çalıştırdığınızda öğelerin arama için dizine alınamamalarının ve kısmen dizine alınan öğeler olarak döndürüllerinin diğer nedenlerinden bazıları şunlardır:
+Microsoft Purview uyumluluk portalı çalıştırdığınız Microsoft Purview eBulma araması, arama çalıştırdığınızda tahmini arama sonuçlarına otomatik olarak kısmen dizinlenmiş öğeler ekler. Kısmen dizine alınan öğeler, SharePoint ve OneDrive İş sitelerindeki posta kutusu öğeleri ve belgeleri Exchange ve herhangi bir nedenle arama için tamamen dizine eklenmedi. Exchange'da, kısmen dizine alınan bir öğe genellikle bir e-posta iletisine eklenmiş bir dosya (dizine alınamaz dosya türünde) içerir. eBulma araması çalıştırdığınızda öğelerin arama için dizine alınamamalarının ve kısmen dizine alınan öğeler olarak döndürüllerinin diğer nedenlerinden bazıları şunlardır:
   
 - Dosya türü tanınmadı veya dizin oluşturma için desteklenmiyor.
 
-- İletilerde görüntü dosyaları gibi açılabilen ekli bir dosya vardır; Bu, kısmen dizine alınan e-posta öğelerinin en yaygın nedenidir.
+- İletilerde açılabilen ekli bir dosya vardır; Bu, kısmen dizine alınan e-posta öğelerinin en yaygın nedenidir.
 
 - Dosya türü dizin oluşturma için desteklenir, ancak belirli bir dosya için dizin oluşturma hatası oluştu.
 

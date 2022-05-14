@@ -1,5 +1,5 @@
 ---
-title: Microsoft Purview uyumluluk portalında eBulma izinleri atama
+title: Microsoft Purview uyumluluk portalı eBulma izinleri atama
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -16,26 +16,29 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 5b9a067b-9d2e-4aa5-bb33-99d8c0d0b5d7
-description: Microsoft Purview uyumluluk portalını kullanarak eBulma ile ilgili görevleri gerçekleştirmek için gereken izinleri atayın.
+description: Microsoft Purview uyumluluk portalı kullanarak eBulma ile ilgili görevleri gerçekleştirmek için gereken izinleri atayın.
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
-ms.openlocfilehash: e764aae4313a8e5d4dfc402e4c1f87eb8c1a5bbb
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 112109d50f0f7e1f11687a325f8756cf2b355e5c
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090527"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65419450"
 ---
 # <a name="assign-ediscovery-permissions-in-the-compliance-portal"></a>Uyumluluk portalında eBulma izinleri atama
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Kişilerin Microsoft Purview uyumluluk portalındaki [eBulma ile ilgili araçlardan](ediscovery.md) herhangi birini kullanmasını istiyorsanız, onlara uygun izinleri atamanız gerekir. Bunu yapmanın en kolay yolu, kişiyi uyumluluk merkezindeki **İzinler** sayfasında uygun rol grubuna eklemektir. Bu konuda, eBulma görevlerini gerçekleştirmek için gereken izinler açıklanmaktadır.
-  
+Kişilerin Microsoft Purview uyumluluk portalı [eBulma ile ilgili araçlardan](ediscovery.md) herhangi birini kullanmasını istiyorsanız, onlara uygun izinleri atamanız gerekir. Bunu yapmanın en kolay yolu, kişiyi uyumluluk portalındaki **İzinler** sayfasında uygun rol grubuna eklemektir. Bu konuda, eBulma görevlerini gerçekleştirmek için gereken izinler açıklanmaktadır.
+
+> [!TIP]
+> Uyumluluk portalındaki eBulma (Premium) genel bakış sayfasında kendi izinlerinizi görüntüleyebilirsiniz. İzinlerinizin görüntülenmesi için en az bir rol atanmış olmanız gerekir.
+
 Uyumluluk portalındaki birincil eBulma ile ilgili rol grubu **eBulma Yöneticisi** olarak adlandırılır. Bu rol grubu içinde iki alt grup vardır.
   
-- **eBulma Yöneticisi** - eBulma Yöneticisi, kuruluştaki içerik konumlarında arama yapmak ve arama sonuçlarını önizleme ve dışarı aktarma gibi aramayla ilgili çeşitli eylemleri gerçekleştirmek için eBulma arama araçlarını kullanabilir. Üyeler ayrıca Microsoft Purview eKeşif (Standart) ve Microsoft Purview eKeşif (Premium) içinde servis talepleri oluşturabilir ve yönetebilir, servis talebine üye ekleyip kaldırabilir, servis talebi tutmaları oluşturabilir, servis talebiyle ilişkili aramaları çalıştırabilir ve servis talebi verilerine erişebilir. eBulma Yöneticileri yalnızca oluşturdukları servis taleplerine erişebilir ve bu servis taleplerini yönetebilir. Diğer eBulma Yöneticileri tarafından oluşturulan servis taleplerini erişemez veya yönetemezler.
+- **eBulma Yöneticisi** - eBulma Yöneticisi, kuruluştaki içerik konumlarında arama yapmak ve arama sonuçlarını önizleme ve dışarı aktarma gibi aramayla ilgili çeşitli eylemleri gerçekleştirmek için eBulma arama araçlarını kullanabilir. Üyeler ayrıca Microsoft Purview eBulma (Standart) ve Microsoft Purview eBulma (Premium) içinde servis talepleri oluşturabilir ve yönetebilir, servis talebine üye ekleyip kaldırabilir, servis talebi tutmaları oluşturabilir, servis talebiyle ilişkili aramaları çalıştırabilir ve servis talebi verilerine erişebilir. eBulma Yöneticileri yalnızca oluşturdukları servis taleplerine erişebilir ve bu servis taleplerini yönetebilir. Diğer eBulma Yöneticileri tarafından oluşturulan servis taleplerini erişemez veya yönetemezler.
   
 - **eBulma Yöneticisi** - eBulma Yöneticisi, eBulma Yöneticisi rol grubunun bir üyesidir ve eBulma Yöneticisi'nin gerçekleştirebileceği içerik arama ve servis talebi yönetimiyle ilgili görevleri gerçekleştirebilir. Ayrıca, eBulma Yöneticisi şunları yapabilir:
   
@@ -135,7 +138,7 @@ Daha fazla bilgi için bkz. [eBulma'da (Premium) koruyucularla çalışma](manag
 
 Rol, kullanıcıların İçerik Aramasının sonuçlarını yerel bir bilgisayara dışarı aktarmasına olanak tanır. Ayrıca eBulma(Premium) içinde analiz için arama sonuçlarını hazırlamalarına da olanak tanır.
 
-Arama sonuçlarını dışarı aktarma hakkında daha fazla bilgi için bkz. [Arama sonuçlarını Microsoft Purview uyumluluk portalından dışarı aktarma](export-search-results.md).
+Arama sonuçlarını dışarı aktarma hakkında daha fazla bilgi için bkz. [Arama sonuçlarını Microsoft Purview uyumluluk portalı dışarı aktarma](export-search-results.md).
 
 ### <a name="hold"></a>Tutun
 

@@ -1,7 +1,7 @@
 ---
 title: Uç Nokta için Microsoft Defender'da yanlış pozitifleri/negatifleri ele alın
-description: Pertahanan Microsoft untuk Titik Akhir'da hatalı pozitifleri veya hatalı negatifleri işlemeyi öğrenin.
-keywords: virüsten koruma, özel durum, dışlama, Pertahanan Microsoft untuk Titik Akhir, hatalı pozitif, yanlış negatif, engellenen dosya, engellenen URL
+description: Uç Nokta için Microsoft Defender'da hatalı pozitifleri veya hatalı negatifleri işlemeyi öğrenin.
+keywords: virüsten koruma, özel durum, dışlama, Uç Nokta için Microsoft Defender, hatalı pozitif, yanlış negatif, engellenen dosya, engellenen URL
 ms.prod: m365-security
 ms.technology: mde
 ms.mktglfcycl: deploy
@@ -23,12 +23,12 @@ ms.reviewer: ramarom, evaldm, isco, mabraitm, chriggs, yonghree, jcedola
 ms.custom:
 - FPFN
 - admindeeplinkDEFENDER
-ms.openlocfilehash: d7477c2006acd04008e6cb56cb22261a4db4a92b
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: 81c41abffc6ec01c127b901ac63b3a5d3b6c5732
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64789935"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65418466"
 ---
 # <a name="address-false-positivesnegatives-in-microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender'da yanlış pozitifleri/negatifleri ele alın
 
@@ -42,9 +42,9 @@ ms.locfileid: "64789935"
 **Platform**
 - Windows
 
-Uç nokta koruma çözümlerinde hatalı pozitif, varlık aslında bir tehdit olmasa da algılanan ve kötü amaçlı olarak tanımlanan bir dosya veya işlem gibi bir varlıktır. Hatalı negatif, aslında kötü amaçlı olsa da tehdit olarak algılanmayan bir varlıktır. [Pertahanan Microsoft untuk Titik Akhir](microsoft-defender-endpoint.md) dahil olmak üzere herhangi bir tehdit koruması çözümünde hatalı pozitif/negatifler oluşabilir.
+Uç nokta koruma çözümlerinde hatalı pozitif, varlık aslında bir tehdit olmasa da algılanan ve kötü amaçlı olarak tanımlanan bir dosya veya işlem gibi bir varlıktır. Hatalı negatif, aslında kötü amaçlı olsa da tehdit olarak algılanmayan bir varlıktır. [Uç Nokta için Microsoft Defender](microsoft-defender-endpoint.md) dahil olmak üzere herhangi bir tehdit koruması çözümünde hatalı pozitif/negatifler oluşabilir.
 
-:::image type="content" source="images/false-positives-overview.png" alt-text="Pertahanan Microsoft untuk Titik Akhir portalında hatalı pozitif ve negatiflerin tanımı" lightbox="images/false-positives-overview.png":::
+:::image type="content" source="images/false-positives-overview.png" alt-text="Uç Nokta için Microsoft Defender portalında hatalı pozitif ve negatiflerin tanımı" lightbox="images/false-positives-overview.png":::
 
 Neyse ki bu tür sorunları çözmek ve azaltmak için adımlar atılabilir. [Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-defender) hatalı pozitif/negatifler görüyorsanız, güvenlik işlemleriniz aşağıdaki işlemi kullanarak bunları ele almak için adımlar atabilir:
 
@@ -59,7 +59,7 @@ Bu makalede açıklanan görevleri gerçekleştirdikten sonra hatalı pozitif/ne
 :::image type="content" source="images/false-positives-step-diagram.png" alt-text="Hatalı pozitif ve negatifleri giderme adımları" lightbox="images/false-positives-step-diagram.png":::
 
 > [!NOTE]
-> Bu makale, [Pertahanan Microsoft untuk Titik Akhir](microsoft-defender-endpoint.md) kullanan güvenlik operatörleri ve güvenlik yöneticileri için rehberlik olarak tasarlanmıştır.
+> Bu makale, [Uç Nokta için Microsoft Defender](microsoft-defender-endpoint.md) kullanan güvenlik operatörleri ve güvenlik yöneticileri için rehberlik olarak tasarlanmıştır.
 
 ## <a name="part-1-review-and-classify-alerts"></a>1. Bölüm: Uyarıları gözden geçirme ve sınıflandırma
 
@@ -75,19 +75,19 @@ Bir uyarıyı sınıflandırmadan veya gizlemeden önce, uyarının doğru mu, h
 
 2. Gezinti bölmesinde **Uyarılar kuyruğu'na** tıklayın.
 
-3. Uyarı hakkında daha fazla ayrıntı için bir uyarı seçin. (Bkz[. Pertahanan Microsoft untuk Titik Akhir uyarıları gözden geçirme](review-alerts.md).)
+3. Uyarı hakkında daha fazla ayrıntı için bir uyarı seçin. (Bkz[. Uç Nokta için Microsoft Defender uyarıları gözden geçirme](review-alerts.md).)
 
 4. Uyarı durumuna bağlı olarak, aşağıdaki tabloda açıklanan adımları izleyin:
 
    |Uyarı durumu|Yapılması gerekenler|
    |---|---|
    |Uyarı doğru|Uyarıyı atayın ve daha fazla [araştırın](investigate-alerts.md) .|
-   |Uyarı hatalı pozitif|1. Uyarıyı hatalı pozitif olarak [sınıflandırın](#classify-an-alert) .<br/><br/>2. [Uyarıyı bastırın](#suppress-an-alert).<br/><br/>3. Pertahanan Microsoft untuk Titik Akhir için [bir gösterge oluşturun](#indicators-for-microsoft-defender-for-endpoint).<br/><br/>4. [Analiz için Microsoft'a bir dosya gönderin](#part-4-submit-a-file-for-analysis).|
+   |Uyarı hatalı pozitif|1. Uyarıyı hatalı pozitif olarak [sınıflandırın](#classify-an-alert) .<br/><br/>2. [Uyarıyı bastırın](#suppress-an-alert).<br/><br/>3. Uç Nokta için Microsoft Defender için [bir gösterge oluşturun](#indicators-for-microsoft-defender-for-endpoint).<br/><br/>4. [Analiz için Microsoft'a bir dosya gönderin](#part-4-submit-a-file-for-analysis).|
    |Uyarı doğru, ancak zararsız (önemsiz)|Uyarıyı gerçek pozitif olarak [sınıflandırın](#classify-an-alert) ve ardından [uyarıyı bastırın](#suppress-an-alert).|
 
 ### <a name="classify-an-alert"></a>Uyarıyı sınıflandırma
 
-Uyarılar, Microsoft 365 Defender hatalı pozitifler veya gerçek pozitifler olarak sınıflandırılabilir. Uyarıları sınıflandırmak Pertahanan Microsoft untuk Titik Akhir eğitilmesine yardımcı olur. Böylece zaman içinde daha doğru uyarılar ve daha az yanlış uyarı görürsünüz.
+Uyarılar, Microsoft 365 Defender hatalı pozitifler veya gerçek pozitifler olarak sınıflandırılabilir. Uyarıları sınıflandırmak, Uç Nokta için Microsoft Defender eğitilmesine yardımcı olur ve böylece zaman içinde daha doğru uyarılar ve daha az yanlış uyarı görürsünüz.
 
 1. Microsoft 365 Defender portalına ([https://security.microsoft.com](https://security.microsoft.com)) gidin ve oturum açın.
 
@@ -98,7 +98,7 @@ Uyarılar, Microsoft 365 Defender hatalı pozitifler veya gerçek pozitifler ola
 4. **Uyarıyı yönet** bölümünde **Doğru uyarı** veya **Yanlış uyarı'yı** seçin. ( **Hatalı pozitifi** sınıflandırmak için Yanlış uyarı kullanın.)
 
 > [!TIP]
-> Uyarıları gizleme hakkında daha fazla bilgi için bkz. [Pertahanan Microsoft untuk Titik Akhir uyarılarını yönetme](/microsoft-365/security/defender-endpoint/manage-alerts). Kuruluşunuz bir güvenlik bilgileri ve olay yönetimi (SIEM) sunucusu kullanıyorsa, orada da bir engelleme kuralı tanımladığınızdan emin olun.
+> Uyarıları gizleme hakkında daha fazla bilgi için bkz. [Uç Nokta için Microsoft Defender uyarılarını yönetme](/microsoft-365/security/defender-endpoint/manage-alerts). Kuruluşunuz bir güvenlik bilgileri ve olay yönetimi (SIEM) sunucusu kullanıyorsa, orada da bir engelleme kuralı tanımladığınızdan emin olun.
 
 ### <a name="suppress-an-alert"></a>Uyarıyı gizleme
 
@@ -198,21 +198,21 @@ Bir araştırmadan sonra temiz olduğunu belirlediyseniz dosyayı geri alabilir 
 
 ## <a name="part-3-review-or-define-exclusions"></a>3. Bölüm: Dışlamaları gözden geçirme veya tanımlama
 
-Dışlama, düzeltme eylemleri için özel durum olarak belirttiğiniz dosya veya URL gibi bir varlıktır. Dışlanan varlık yine algılanabilir, ancak bu varlık üzerinde hiçbir düzeltme eylemi yapılmaz. Yani, algılanan dosya veya işlem durdurulamaz, karantinaya gönderilmez, kaldırılmaz veya Pertahanan Microsoft untuk Titik Akhir tarafından başka bir şekilde değiştirilmez.
+Dışlama, düzeltme eylemleri için özel durum olarak belirttiğiniz dosya veya URL gibi bir varlıktır. Dışlanan varlık yine algılanabilir, ancak bu varlık üzerinde hiçbir düzeltme eylemi yapılmaz. Başka bir ifadeyle, algılanan dosya veya işlem durdurulamaz, karantinaya gönderilmez, kaldırılmaz veya Uç Nokta için Microsoft Defender tarafından başka bir şekilde değiştirilmez.
 
-Pertahanan Microsoft untuk Titik Akhir genelinde dışlamaları tanımlamak için aşağıdaki görevleri gerçekleştirin:
+Uç Nokta için Microsoft Defender genelinde dışlamaları tanımlamak için aşağıdaki görevleri gerçekleştirin:
 
 - [Microsoft Defender Virüsten Koruma için dışlamaları tanımlama](#exclusions-for-microsoft-defender-antivirus)
-- [Pertahanan Microsoft untuk Titik Akhir için "izin ver" göstergeleri oluşturma](#indicators-for-microsoft-defender-for-endpoint)
+- [Uç Nokta için Microsoft Defender için "izin ver" göstergeleri oluşturma](#indicators-for-microsoft-defender-for-endpoint)
 
 > [!NOTE]
-> Microsoft Defender Virüsten Koruma dışlamalar diğer Pertahanan Microsoft untuk Titik Akhir özelliklerinde değil yalnızca virüsten koruma için geçerlidir. Dosyaları genel olarak dışlamak için Microsoft Defender Virüsten Koruma için dışlamaları ve Pertahanan Microsoft untuk Titik Akhir [için özel göstergeleri](/microsoft-365/security/defender-endpoint/manage-indicators) kullanın.
+> Microsoft Defender Virüsten Koruma dışlamalar yalnızca virüsten koruma için geçerlidir, diğer Uç Nokta için Microsoft Defender özellikleri için geçerli değildir. Dosyaları genel olarak dışlamak için Microsoft Defender Virüsten Koruma için dışlamaları ve Uç Nokta için Microsoft Defender [için özel göstergeleri](/microsoft-365/security/defender-endpoint/manage-indicators) kullanın.
 
 Bu bölümdeki yordamlarda dışlamaların ve göstergelerin nasıl tanımlanacağı açıklanmaktadır.
 
 ### <a name="exclusions-for-microsoft-defender-antivirus"></a>Microsoft Defender Virüsten Koruma için dışlamalar
 
-Genel olarak, Microsoft Defender Virüsten Koruma için dışlamalar tanımlamanız gerekmez. Dışlamaları düzenli olarak tanımladığınızdan ve yalnızca hatalı pozitif sonuçlara neden olan dosyaları, klasörleri, işlemleri ve işlem tarafından açılan dosyaları eklediğinizden emin olun. Ayrıca, tanımlı dışlamalarınızı düzenli olarak gözden geçirmeyi unutmayın. Virüsten koruma dışlamalarınızı tanımlamak veya düzenlemek için [Microsoft Endpoint Manager](/mem/endpoint-manager-overview) kullanmanızı öneririz; ancak [grup ilkesi](/azure/active-directory-domain-services/manage-group-policy) gibi diğer yöntemleri kullanabilirsiniz (bkz. [Pertahanan Microsoft untuk Titik Akhir yönetme](manage-mde-post-migration.md).
+Genel olarak, Microsoft Defender Virüsten Koruma için dışlamalar tanımlamanız gerekmez. Dışlamaları düzenli olarak tanımladığınızdan ve yalnızca hatalı pozitif sonuçlara neden olan dosyaları, klasörleri, işlemleri ve işlem tarafından açılan dosyaları eklediğinizden emin olun. Ayrıca, tanımlı dışlamalarınızı düzenli olarak gözden geçirmeyi unutmayın. Virüsten koruma dışlamalarınızı tanımlamak veya düzenlemek için [Microsoft Endpoint Manager](/mem/endpoint-manager-overview) kullanmanızı öneririz; ancak [grup ilkesi](/azure/active-directory-domain-services/manage-group-policy) gibi diğer yöntemleri kullanabilirsiniz (bkz. [Uç Nokta için Microsoft Defender yönetme](manage-mde-post-migration.md).
 
 > [!TIP]
 > Virüsten koruma dışlamalarıyla ilgili yardıma mı ihtiyacınız var? Bkz[. Microsoft Defender Virüsten Koruma taramaları için dışlamaları yapılandırma ve doğrulama](configure-exclusions-microsoft-defender-antivirus.md).
@@ -235,7 +235,7 @@ Genel olarak, Microsoft Defender Virüsten Koruma için dışlamalar tanımlaman
 
 2. **Uç nokta güvenliği** \> **Virüsten Koruma** \> **+ İlke Oluştur'u** seçin.
 
-3. Bir platform seçin (**Windows 10 ve üzeri**, **macOS** veya **Windows 10 ve Windows Server** gibi).
+3. Bir platform seçin (**Windows 10 ve üzeri**, **macOS** veya **Windows 10 ve Windows Sunucusu** gibi).
 
 4. **Profil** için **Microsoft Defender Virüsten Koruma dışlamalar'ı** ve ardından **Oluştur'u** seçin.
 
@@ -249,11 +249,11 @@ Genel olarak, Microsoft Defender Virüsten Koruma için dışlamalar tanımlaman
 
 9. **Gözden Geçir + oluştur** sekmesinde ayarları gözden geçirin ve **oluştur'u** seçin.
 
-### <a name="indicators-for-microsoft-defender-for-endpoint"></a>Pertahanan Microsoft untuk Titik Akhir göstergeleri
+### <a name="indicators-for-microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender göstergeleri
 
-[Göstergeler](/microsoft-365/security/defender-endpoint/manage-indicators) (özellikle, güvenliği ihlal göstergeleri veya IC'ler), güvenlik operasyonları ekibinizin varlıkların algılanmasını, önlenmesini ve dışlanmasını tanımlamasını sağlar. Örneğin, Pertahanan Microsoft untuk Titik Akhir'deki taramalardan ve düzeltme eylemlerinden atlanacak belirli dosyaları belirtebilirsiniz. Ya da göstergeler belirli dosyalar, IP adresleri veya URL'ler için uyarı oluşturmak için kullanılabilir.
+[Göstergeler](/microsoft-365/security/defender-endpoint/manage-indicators) (özellikle, güvenliği ihlal göstergeleri veya IC'ler), güvenlik operasyonları ekibinizin varlıkların algılanmasını, önlenmesini ve dışlanmasını tanımlamasını sağlar. Örneğin, Uç Nokta için Microsoft Defender'deki taramalardan ve düzeltme eylemlerinden atlanacak belirli dosyaları belirtebilirsiniz. Ya da göstergeler belirli dosyalar, IP adresleri veya URL'ler için uyarı oluşturmak için kullanılabilir.
 
-Varlıkları Pertahanan Microsoft untuk Titik Akhir için dışlama olarak belirtmek için, bu varlıklar için "izin ver" göstergeleri oluşturun. bu tür "izin ver" göstergeleri Pertahanan Microsoft untuk Titik Akhir [yeni nesil koruma](microsoft-defender-antivirus-in-windows-10.md), [uç noktada algılama ve yanıtlama](overview-endpoint-detection-response.md) ve [otomatik araştırma & düzeltme](/microsoft-365/security/defender-endpoint/automated-investigations) için geçerlidir.
+Varlıkları Uç Nokta için Microsoft Defender için dışlamalar olarak belirtmek için, bu varlıklar için "izin ver" göstergeleri oluşturun. Uç Nokta için Microsoft Defender bu tür "izin ver" göstergeleri [yeni nesil koruma](microsoft-defender-antivirus-in-windows-10.md), [uç noktada algılama ve yanıtlama](overview-endpoint-detection-response.md) ve [otomatik araştırma & düzeltme](/microsoft-365/security/defender-endpoint/automated-investigations) için geçerlidir.
 
 "İzin ver" göstergeleri şu için oluşturulabilir:
 
@@ -302,7 +302,7 @@ Uygulama sertifikaları için göstergeler oluşturmadan önce aşağıdaki gere
 
 ## <a name="part-4-submit-a-file-for-analysis"></a>Bölüm 4: Analiz için bir dosya gönderme
 
-Dosyalar ve dosyasız algılamalar gibi varlıkları analiz için Microsoft'a gönderebilirsiniz. Microsoft güvenlik araştırmacıları tüm gönderileri analiz eder ve sonuçları Pertahanan Microsoft untuk Titik Akhir tehdit koruma özelliklerini bilgilendirmeye yardımcı olur. Gönderim sitesinde oturum açtığınızda, gönderimlerinizi izleyebilirsiniz.
+Dosyalar ve dosyasız algılamalar gibi varlıkları analiz için Microsoft'a gönderebilirsiniz. Microsoft güvenlik araştırmacıları tüm gönderileri analiz eder ve sonuçları Uç Nokta için Microsoft Defender tehdit koruma özelliklerini bilgilendirmeye yardımcı olur. Gönderim sitesinde oturum açtığınızda, gönderimlerinizi izleyebilirsiniz.
 
 ### <a name="submit-a-file-for-analysis"></a>Analiz için dosya gönderme
 
@@ -343,7 +343,7 @@ Gönderiminizle ilgili güncelleştirmeleri denetlemek için [Microsoft Güvenli
 
 ## <a name="part-5-review-and-adjust-your-threat-protection-settings"></a>5. Bölüm: Tehdit koruması ayarlarınızı gözden geçirin ve ayarlayın
 
-Pertahanan Microsoft untuk Titik Akhir, çeşitli özellikler ve özellikler için ayarlara ince ayar yapma da dahil olmak üzere çok çeşitli seçenekler sunar. Çok sayıda hatalı pozitif sonuç alıyorsanız kuruluşunuzun tehdit koruması ayarlarını gözden geçirmeyi unutmayın. Aşağıdakiler için bazı ayarlamalar yapmanız gerekebilir:
+Uç Nokta için Microsoft Defender, çeşitli özellikler ve özellikler için ayarlara ince ayar yapma da dahil olmak üzere çok çeşitli seçenekler sunar. Çok sayıda hatalı pozitif sonuç alıyorsanız kuruluşunuzun tehdit koruması ayarlarını gözden geçirmeyi unutmayın. Aşağıdakiler için bazı ayarlamalar yapmanız gerekebilir:
 
 - [Bulut tabanlı koruma](#cloud-delivered-protection)
 - [İstenmeyebilecek uygulamalar için düzeltme](#remediation-for-potentially-unwanted-applications)
@@ -356,7 +356,7 @@ Microsoft Defender Virüsten Koruma için bulut tabanlı koruma düzeyinizi dene
 > [!TIP]
 > Bulut tabanlı korumanızı yapılandırma hakkında daha fazla bilgi edinmek için bkz. [Bulut tabanlı koruma düzeyini belirtme](/windows/security/threat-protection/microsoft-defender-antivirus/specify-cloud-protection-level-microsoft-defender-antivirus).
 
-Bulut tabanlı koruma ayarlarınızı düzenlemek veya ayarlamak için [Microsoft Endpoint Manager](/mem/endpoint-manager-overview) kullanmanızı öneririz; ancak [grup ilkesi](/azure/active-directory-domain-services/manage-group-policy) gibi diğer yöntemleri kullanabilirsiniz (bkz. [Pertahanan Microsoft untuk Titik Akhir yönetme](manage-mde-post-migration.md).
+Bulut tabanlı koruma ayarlarınızı düzenlemek veya ayarlamak için [Microsoft Endpoint Manager](/mem/endpoint-manager-overview) kullanmanızı öneririz; ancak [grup ilkesi](/azure/active-directory-domain-services/manage-group-policy) gibi diğer yöntemleri kullanabilirsiniz (bkz. [Uç Nokta için Microsoft Defender yönetme](manage-mde-post-migration.md).
 
 #### <a name="use-microsoft-endpoint-manager-to-review-and-edit-cloud-delivered-protection-settings-for-existing-policies"></a>Bulut tabanlı koruma ayarlarını gözden geçirmek ve düzenlemek için Microsoft Endpoint Manager kullanın (mevcut ilkeler için)
 
@@ -400,7 +400,7 @@ Bulut tabanlı koruma ayarlarınızı düzenlemek veya ayarlamak için [Microsof
 
 Kuruluşunuzun kullandığı uygulamalara bağlı olarak, PUA koruma ayarlarınızın bir sonucu olarak hatalı pozitif sonuçlar alıyor olabilirsiniz. Gerekirse, PUA korumasını bir süre denetim modunda çalıştırmayı veya kuruluşunuzdaki cihazların bir alt kümesine PUA koruması uygulamayı göz önünde bulundurun. PUA koruması, Microsoft Edge tarayıcı ve Microsoft Defender Virüsten Koruma için yapılandırılabilir.
 
-PUA koruma ayarlarını düzenlemek veya ayarlamak için [Microsoft Endpoint Manager](/mem/endpoint-manager-overview) kullanmanızı öneririz; ancak [grup ilkesi](/azure/active-directory-domain-services/manage-group-policy) gibi diğer yöntemleri kullanabilirsiniz (bkz. [Pertahanan Microsoft untuk Titik Akhir yönetme](manage-mde-post-migration.md).
+PUA koruma ayarlarını düzenlemek veya ayarlamak için [Microsoft Endpoint Manager](/mem/endpoint-manager-overview) kullanmanızı öneririz; ancak [grup ilkesi](/azure/active-directory-domain-services/manage-group-policy) gibi diğer yöntemleri kullanabilirsiniz (bkz. [Uç Nokta için Microsoft Defender yönetme](manage-mde-post-migration.md).
 
 #### <a name="use-microsoft-endpoint-manager-to-edit-pua-protection-for-existing-configuration-profiles"></a>PUA korumasını düzenlemek için Microsoft Endpoint Manager kullanma (mevcut yapılandırma profilleri için)
 
@@ -460,16 +460,16 @@ Bu makaledeki tüm adımlarda çalıştıysanız ve hala yardıma ihtiyacınız 
 
 > [!TIP]
 > Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
-> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
-> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
-> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](linux-preferences.md)
 > - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
-> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
-> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md) 
+> - [Android özelliklerinde Uç Nokta için Defender’ı yapılandırın](android-configure.md)
+> - [iOS özelliklerinde Uç Nokta için Microsoft Defender’ı yapılandırın](ios-configure-features.md) 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Pertahanan Microsoft untuk Titik Akhir yönetme](manage-mde-post-migration.md)
+[Uç Nokta için Microsoft Defender yönetme](manage-mde-post-migration.md)
 
 [Microsoft 365 Defender portalına genel bakış](/microsoft-365/security/defender-endpoint/use)

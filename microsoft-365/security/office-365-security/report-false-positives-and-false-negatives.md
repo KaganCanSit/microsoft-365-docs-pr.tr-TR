@@ -13,12 +13,12 @@ ms.collection:
 description: Rapor İletisi özelliğini kullanarak Outlook hatalı pozitifleri ve hatalı negatifleri bildirmeyi öğrenin.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 8f52b4d085c13f2e1e1a48c2a8a12e6782f13960
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 762f16916e03940f4d0f95c48f13751d3cbd63c7
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64974113"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65416982"
 ---
 # <a name="report-false-positives-and-false-negatives-in-outlook"></a>Outlook'ta yanlış pozitifleri ve yanlış negatifleri bildirme
 
@@ -47,6 +47,9 @@ Karma modern kimlik doğrulaması kullanan Exchange Online veya şirket içi pos
 - Rapor İletisi veya Rapor Kimlik Avı eklentilerini alma ve etkinleştirme hakkında daha fazla bilgi için bkz. [Rapor İletisini veya Rapor Kimlik Avı eklentilerini etkinleştirme](enable-the-report-message-add-in.md).
 
 - İletileri Microsoft'a bildirme hakkında daha fazla bilgi için bkz. [İletileri ve dosyaları Microsoft'a bildirme](report-junk-email-messages-to-microsoft.md).
+
+bir iletinin içeriğini belirlemek için kullanıcı gönderimlerini kolayca araştırmak ve uygun düzeltme eylemini uygulayarak gönderime yanıt vermek için Office 365 için Microsoft Defender nasıl kullanabileceğinizi öğrenmek için bu kısa videoyu izleyin. 
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWBHof]
 
 ### <a name="turn-off-the-built-in-reporting-experience"></a>Yerleşik raporlama deneyimini kapatma
 

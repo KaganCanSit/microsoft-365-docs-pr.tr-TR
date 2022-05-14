@@ -16,12 +16,12 @@ ms.reviewer: ''
 manager: dansimp
 ms.technology: mde
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 4e0d249f7805c47be55ec42f3362ca1952c20ca3
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: 049c7a772c4c8dcf986efd310e4613423f33dcc9
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64788512"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65419142"
 ---
 # <a name="deploy-manage-and-report-on-microsoft-defender-antivirus"></a>Microsoft Defender Virüsten Koruma dağıtma, yönetme ve raporlama
 
@@ -30,7 +30,7 @@ ms.locfileid: "64788512"
 
 **Şunlar için geçerlidir:**
 
-- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Virüsten Koruma 
 
@@ -58,7 +58,7 @@ Microsoft Endpoint Manager ([1](#fn1))|[Endpoint Protection noktası site sistem
 grup ilkesi ve Active Directory (etki alanına katılmış)|Yapılandırma değişikliklerini dağıtmak ve Microsoft Defender Virüsten Koruma etkinleştirildiğinden emin olmak için grup ilkesi Nesnesi kullanın.|[Microsoft Defender Virüsten Koruma için güncelleştirme seçeneklerini yapılandırma][] ve [Windows Defender özelliklerini yapılandırma][] için grup ilkesi Nesnelerini (GPO' lar) kullanın|Uç nokta raporlaması grup ilkesi ile kullanılamaz. Herhangi bir ayar veya ilkenin uygulanmadığını belirlemek için [Grup İlkeleri] listesini oluşturabilirsiniz][]
 PowerShell|tek tek uç noktalarda grup ilkesi, Microsoft Endpoint Configuration Manager veya el ile dağıtın.|Defender modülünde bulunan [Set-MpPreference] ve [Update-MpSignature] cmdlet'lerini kullanın.|Uygun [Defender modülünde kullanılabilen Get- cmdlet'lerini kullanın][]
 Windows Yönetim Araçları|tek tek uç noktalarda grup ilkesi, Microsoft Endpoint Configuration Manager veya el ile dağıtın.|[MSFT_MpPreference sınıfının set yöntemini][] ve [MSFT_MpSignature sınıfının güncelleştirme yöntemini][] kullanın|[MSFT_MpComputerStatus][] sınıfını ve [Windows Defender WMIv2 Sağlayıcısında ilişkili sınıfların get yöntemini kullanın][]
-Microsoft Azure|Azure portal [Visual Studio sanal makine yapılandırmasını veya Azure PowerShell cmdlet'lerini kullanarak Azure için Microsoft Antimalware dağıtın](/azure/security/azure-security-antimalware#antimalware-deployment-scenarios). [Uç nokta korumasını Bulut için Microsoft Defender* içinde de yükleyebilirsiniz](/azure/security-center/security-center-install-endpoint-protection)|[Azure PowerShell cmdlet'lerle Sanal Makineler ve Cloud Services için Microsoft Antimalware](/azure/security/azure-security-antimalware#enable-and-configure-antimalware-using-powershell-cmdlets) yapılandırma veya [kod örnekleri kullanma](https://gallery.technet.microsoft.com/Antimalware-For-Azure-5ce70efe)|İzlemeyi etkinleştirmek [için Sanal Makineler ve Azure PowerShell cmdlet'lerle Cloud Services için Microsoft Antimalware](/azure/security/azure-security-antimalware#enable-and-configure-antimalware-using-powershell-cmdlets) kullanın. Ayrıca Azure Active Directory'daki kullanım raporlarını gözden geçirerek [Olası virüslü cihazlar][] raporu da dahil olmak üzere şüpheli etkinlikleri belirleyebilir ve [Microsoft Defender Virüsten Koruma olayları][] hakkında rapor vermek üzere bir SIEM aracı yapılandırabilir ve bu aracı AAD'da bir uygulama olarak ekleyebilirsiniz.
+Microsoft Azure|Azure portal [Visual Studio sanal makine yapılandırmasını veya Azure PowerShell cmdlet'lerini kullanarak Azure için Microsoft Antimalware dağıtın](/azure/security/azure-security-antimalware#antimalware-deployment-scenarios). [Uç nokta korumasını Bulut için Microsoft Defender* içinde de yükleyebilirsiniz](/azure/security-center/security-center-install-endpoint-protection)|[Azure PowerShell cmdlet'leri ile Sanal Makineler ve Cloud Services için Microsoft Antimalware](/azure/security/azure-security-antimalware#enable-and-configure-antimalware-using-powershell-cmdlets) yapılandırma veya [kod örnekleri kullanma](https://gallery.technet.microsoft.com/Antimalware-For-Azure-5ce70efe)|İzlemeyi etkinleştirmek [için Sanal Makineler için Microsoft Antimalware ve Azure PowerShell cmdlet'leri olan Bulut Hizmetleri'ni](/azure/security/azure-security-antimalware#enable-and-configure-antimalware-using-powershell-cmdlets) kullanın. Ayrıca Azure Active Directory'daki kullanım raporlarını gözden geçirerek [Muhtemelen bulaşmış cihazlar][] raporu da dahil olmak üzere şüpheli etkinlikleri belirleyebilir ve bir SIEM aracını [Microsoft Defender Virüsten Koruma olayları][] hakkında rapor vermek üzere yapılandırabilir ve bu aracı AAD'ye uygulama olarak ekleyebilirsiniz.
 
 1. <span id="fn1" />Özellikle bulut tabanlı korumayla ilgili bazı işlevlerin ve özelliklerin kullanılabilirliği, Microsoft Endpoint Manager (Geçerli Dal) ile System Center 2012 Configuration Manager arasında farklılık gösterir. Bu kitaplıkta Windows 10, Windows 11, Windows Server 2016 ve Microsoft Endpoint Manager (Geçerli Dal) üzerine odaklandık. Önemli farklılıkları açıklayan bir tablo için bkz. [Microsoft Defender Virüsten Koruma'de Microsoft bulut tarafından sağlanan korumayı kullanma](cloud-protection-microsoft-defender-antivirus.md). [(Tabloya dön)](#ref2)
 
@@ -76,11 +76,11 @@ Konu | Açıklama
 
 > [!TIP]
 > Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
-> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
-> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
-> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](linux-preferences.md)
 > - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
-> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
-> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
+> - [Android özelliklerinde Uç Nokta için Defender’ı yapılandırın](android-configure.md)
+> - [iOS özelliklerinde Uç Nokta için Microsoft Defender’ı yapılandırın](ios-configure-features.md)
     

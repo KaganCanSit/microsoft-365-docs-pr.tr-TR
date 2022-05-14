@@ -15,12 +15,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview çözümleri deneme playbook'u.
-ms.openlocfilehash: 3ff103a2e6ebc260f5f00964ae09c6b6bbc1fd69
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 10dd4ac9447c920112fd85075c3bf6ae3093ee9c
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098900"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65415270"
 ---
 # <a name="trial-playbook-microsoft-purview-solutions"></a>Deneme playbook'u: Microsoft Purview çözümleri
 
@@ -45,7 +45,7 @@ Her çözümü denemek, kuruluşunuzun uyumluluk gereksinimlerini karşılamak i
 İsteğe bağlı eklentiler:
 
 - [Uyumluluk Yöneticisi premium değerlendirmeleri](#compliance-manager-premium-assessments)
-- [Microsoft Priva Gizlilik Risk Yönetimi ve Microsoft Priva Konu Hakları İstekleri](#microsoft-priva-privacy-risk-management-and-microsoft-priva-subject-rights-requests)
+- [Microsoft Priva Gizlilik Risk Yönetimi ve Microsoft Priva Konu Hakkı Talepleri](#microsoft-priva-privacy-risk-management-and-microsoft-priva-subject-rights-requests)
 
 ## <a name="compliance-actions-with-microsoft-purview"></a>Microsoft Purview ile Uyumluluk Eylemleri
 
@@ -55,9 +55,9 @@ Kuruluşunuzun meta verilerini değiştirmeden Microsoft'un uyumluluk çözümle
 
 ## <a name="audit-premium"></a>Denetim (Premium)
 
-**Araştırma yapma**
+**Araştırma yapma**:
 
-Microsoft Purview Audit (Premium), kuruluşların bir araştırma yürütmek için gereken denetim günlüğü saklama süresini artırarak, risk kapsamını belirlemeye yardımcı olan önemli olaylara erişim sağlayarak ve Office 365 Yönetim Etkinliği API'sine daha hızlı erişim sağlayarak, kuruluşların adli ve uyumluluk araştırmaları gerçekleştirmesine yardımcı olur.
+Microsoft Purview Denetimi (Premium), bir araştırma yürütmek için gereken denetim günlüğü saklama süresini artırarak, risk kapsamını belirlemeye yardımcı olan önemli olaylara erişim sağlayarak ve Office 365 Yönetim Etkinliği API'sine daha hızlı erişim sağlayarak kuruluşların adli ve uyumluluk araştırmaları gerçekleştirmesine yardımcı olur.
 
 ### <a name="step-1-apply-the-e5-license-to-each-user-for-which-youd-like-to-generate-e5-events"></a>1. Adım: [E5 olaylarını oluşturmak istediğiniz her kullanıcıya E5 lisansını uygulama](set-up-advanced-audit.md#step-1-set-up-audit-premium-for-users)
 
@@ -81,14 +81,14 @@ Denetim günlüğü saklama ilkeleri, Microsoft 365'deki yeni Denetim (Premium) 
 
 1. Bir denetim günlüğü saklama ilkesi oluşturmadan önce, ilkenizi oluşturmadan önce [bilmeniz gereken önemli şeyler](audit-log-retention-policies.md#before-you-create-an-audit-log-retention-policy) .
 1. [Denetim günlüğü saklama ilkesi oluşturma](audit-log-retention-policies.md#create-an-audit-log-retention-policy)
-1. [Microsoft Purview uyumluluk portalında denetim günlüğü saklama ilkelerini yönetme](audit-log-retention-policies.md#manage-audit-log-retention-policies-in-the-compliance-portal) - Denetim günlüğü saklama ilkeleri, Denetim bekletme ilkeleri sekmesinde (pano olarak da adlandırılır) listelenir. Denetim bekletme ilkelerini görüntülemek, düzenlemek ve silmek için panoyu kullanabilirsiniz.
+1. [denetim günlüğü saklama ilkelerini Microsoft Purview uyumluluk portalı](audit-log-retention-policies.md#manage-audit-log-retention-policies-in-the-compliance-portal) - Denetim günlüğü saklama ilkeleri Denetim bekletme ilkeleri sekmesinde (pano olarak da adlandırılır) listelenir. Denetim bekletme ilkelerini görüntülemek, düzenlemek ve silmek için panoyu kullanabilirsiniz.
 1. PowerShell'de denetim günlüğü saklama ilkeleri oluşturma ve yönetme - Güvenlik & Uyumluluk Merkezi PowerShell'i kullanarak [denetim günlüğü saklama ilkeleri oluşturabilir ve yönetebilirsiniz](audit-log-retention-policies.md#create-and-manage-audit-log-retention-policies-in-powershell). PowerShell'i kullanmanın bir nedeni, kullanıcı arabiriminde bulunmayan bir kayıt türü veya etkinliği için ilke oluşturmaktır.
 
 ## <a name="communication-compliance"></a>İletişim Uyumluluğu
 
-**Davranış kuralları ilke ihlallerini belirleme ve buna göre işlem yapma**
+**Davranış kuralları ilkesi ihlallerini belirleme ve buna göre hareket etme**:
 
-Microsoft Purview İletişim Uyumluluğu, uygunsuz iletileri algılamanıza, olası ilke ihlallerini araştırmanıza ve düzeltmeye yönelik adımlar atmanıza yardımcı olarak uyumlu ve sağlıklı bir çalışma ortamını desteklemek için iletişim ihlallerini akıllı bir şekilde belirlemenize yardımcı olur.
+Microsoft Purview İletişim Uyumluluğu uygunsuz iletileri algılamanıza, olası ilke ihlallerini araştırmanıza ve düzeltmeye yönelik adımlar atmanıza yardımcı olarak uyumlu ve sağlıklı bir çalışma ortamını desteklemek için iletişim ihlallerini akıllı bir şekilde belirlemenize yardımcı olur.
 
 ### <a name="step-1-enable-permissions-for-communication-compliance"></a>1. Adım: [İletişim uyumluluğu için izinleri etkinleştirme](communication-compliance-configure.md#step-1-required-enable-permissions-for-communication-compliance)
 
@@ -114,7 +114,7 @@ Bu özelliği kullanmak için, kuruluşunuzun kuruluşunuzda kullanıcı ve yön
 
 ## <a name="compliance-manager"></a>Uyumluluk Yöneticisi
 
-**Kuruluş uyumluluğunuzu kolayca yönetin**
+**Kuruluş uyumluluğunuzu kolayca yönetin**:
 
 Microsoft Purview Uyumluluk Yöneticisi, veri koruma risklerinizin envanterini almaktan denetimleri uygulama, düzenlemeler ve sertifikalarla güncel kalma ve denetçilere raporlama gibi karmaşıklıkları yönetmeye kadar uyumluluk yolculuğunuz boyunca size yardımcı olabilir.
 
@@ -172,11 +172,12 @@ Değerlendirmelerle çalışmaya başlayın ve denetimleri uygulamak ve uyumlulu
 
 ## <a name="data-lifecycle-management"></a>Veri Yaşam Döngüsü Yönetimi
 
-**Otomasyon ile büyük ölçekte idare**
+**Otomasyon ile büyük ölçekte idare**:
 
 Otomatik olarak güncelleştirilen ilke kapsamları ile kuruluşunuzdaki değişikliklere uyum sağlama becerinizi geliştirin. El ile yapılan çabaları azaltmak ve uyumluluk duruşunu geliştirmek için içeriğin etiketlenmesinde otomatikleştirme.
 
 ### <a name="step-1-dynamically-target-retention-policies-with-adaptive-policy-scopes"></a>1. Adım: Uyarlamalı İlke Kapsamları ile bekletme ilkelerini dinamik olarak hedefleme
+
 > [!TIP]
 > Deneme için en iyi uygulama: 1. Gün
 
@@ -197,9 +198,9 @@ Varsayılan etiketler, SharePoint'da belirtilen kitaplık, klasör veya belge k�
 
 ## <a name="data-loss-prevention"></a>Veri Kaybı Önleme
 
-**Hassas verileri koruma**
+**Hassas verileri koruma**:
 
-kuruluşların iş standartlarına ve sektör düzenlemelerine uyum sağlamak için hassas bilgileri yanlışlıkla açığa çıkmasını önlemek için koruması gerekir. Microsoft 365 genelinde hassas bilgileri tanımlamak, izlemek ve otomatik olarak korumak için Microsoft Purview Veri Kaybı Önleme ilkelerini ayarlayın.
+kuruluşların iş standartlarına ve sektör düzenlemelerine uyum sağlamak için hassas bilgileri yanlışlıkla açığa çıkmasını önlemek için koruması gerekir. Microsoft 365 hassas bilgileri tanımlamak, izlemek ve otomatik olarak korumak için Microsoft Purview Veri Kaybı Önleme ilkeleri ayarlayın.
 
 ### <a name="step-1-protect-data-loss-on-teams-locations"></a>1. Adım: [Teams konumlarda veri kaybını koruma](dlp-microsoft-teams.md#dlp-licensing-for-microsoft-teams)
 
@@ -217,10 +218,10 @@ Kuruluşunuzda veri kaybı önleme (DLP) varsa, kişilerin bir Microsoft Teams k
 > [!TIP]
 > Deneme için en iyi uygulama: İlk 30 gün içinde kurulum
 
-Microsoft Endpoint DLP, Windows 10 cihazları izlemenize ve hassas öğelerin ne zaman kullanıldığını ve paylaşılmasını algılamanıza olanak tanır.
+Microsoft Uç Nokta DLP'si, Windows 10 cihazları izlemenize ve hassas öğelerin ne zaman kullanıldığını ve paylaşılmasını algılamanıza olanak tanır.
 
-1. Uç noktalarınızı hazırlama - [Bu gereksinimleri karşılamak](endpoint-dlp-getting-started.md) için Uç Nokta DLP'sini dağıtmayı planladığınız Windows 10 ve macOS cihazlarının
-1. [Cihazları cihaz yönetimine ekleme](endpoint-dlp-getting-started.md)  - Cihazdaki hassas öğeleri izleyip koruyabilmeniz için önce cihaz izlemeyi etkinleştirmeniz ve uç noktalarınızı eklemeniz gerekir. Bu eylemlerin her ikisi de Microsoft Purview uyumluluk portalında gerçekleştirilir.
+1. Uç noktalarınızı hazırlama - [Bu gereksinimleri karşılamak](endpoint-dlp-getting-started.md) için Uç Nokta DLP'sini dağıtmayı planladığınız Windows 10 ve macOS cihazlarından emin olun
+1. [Cihazları cihaz yönetimine ekleme](endpoint-dlp-getting-started.md)  - Cihazdaki hassas öğeleri izleyip koruyabilmeniz için önce cihaz izlemeyi etkinleştirmeniz ve uç noktalarınızı eklemeniz gerekir. Bu eylemlerin ikisi de Microsoft Purview uyumluluk portalı yapılır.
    - Senaryo 1 – [Henüz eklenmemiş cihazları](endpoint-dlp-getting-started.md) ekleme.
    - Senaryo 2 - [Uç Nokta için Microsoft Defender zaten dağıtıldı ve içinde raporlama yapılan uç noktalar var](endpoint-dlp-getting-started.md). Tüm bu uç noktalar yönetilen cihazlar listesinde görünür.
 1. [Cihazlar için varsayılan DLP ilkemizi yapılandırın veya Cihazlar için](mip-easy-trials.md#dlp-for-devices) [yeni bir DLP ilkesi tanımlayın](endpoint-dlp-learn-about.md).
@@ -242,7 +243,7 @@ DLP ilkelerinizi yapılandırma konusunda esnekliğe sahipsiniz. Teams ve cihazl
 
 ## <a name="ediscovery"></a>Ediscovery
 
-**Uçtan uca iş akışıyla daha fazlasını keşfedin**
+**Uçtan uca iş akışıyla daha fazlasını keşfedin**:
 
 Kuruluşunuzun iç ve dış araştırmalarına yanıt veren içeriği korumak, toplamak, analiz etmek ve dışarı aktarmak için uçtan uca iş akışından yararlanın. Yasal ekipler, bir davaya dahil olan koruyucularla iletişim kurarak yasal tutma bildirim sürecinin tamamını da yönetebilir.
 
@@ -290,22 +291,22 @@ eBulma araştırmaları için uyumluluk sınırlarını ayarlayın:
 
 ### <a name="step-5-optional-learn-about-content-search-tool"></a>5. Adım (isteğe bağlı): [İçerik arama aracı hakkında bilgi edinin](search-for-content.md)
 
-Exchange posta kutularında e-postayı, SharePoint sitelerdeki ve OneDrive konumlardaki belgeleri ve Skype Kurumsal anlık ileti konuşmalarını hızla bulmak için Microsoft Purview uyumluluk portalındaki İçerik arama aracını kullanın. Microsoft Teams ve Microsoft 365 Grupları gibi işbirliği araçlarında e-posta, belge ve anlık ileti konuşmalarını aramak için içerik arama aracını kullanabilirsiniz.
+Exchange posta kutularında e-postayı, SharePoint sitelerdeki ve OneDrive konumlardaki belgeleri ve Skype Kurumsal anlık ileti konuşmalarını hızla bulmak için Microsoft Purview uyumluluk portalı İçerik arama aracını kullanın. Microsoft Teams ve Microsoft 365 Grupları gibi işbirliği araçlarında e-posta, belge ve anlık ileti konuşmalarını aramak için içerik arama aracını kullanabilirsiniz.
 
 - [eBulma (Premium) araması hakkında daha fazla bilgi edinin](search-for-content.md#search-for-content)
 
 ## <a name="information-protection"></a>Information Protection
 
-**Hassas bilgilerinizi keşfetme, sınıflandırma ve koruma**
+**Hassas bilgilerinizi keşfedin, sınıflandırıp koruyun**:
 
-Hassas içeriğinizi yaşadığınız veya seyahat ettiğiniz her yerde keşfetmenize, sınıflandırmanıza ve korumanıza yardımcı olmak için Microsoft Purview Information Protection ve duyarlılık etiketlerini uygulayın.
+Hassas içeriğinizi yaşadığınız veya seyahat ettiğiniz her yerde keşfetmenize, sınıflandırmanıza ve korumanıza yardımcı olmak için Microsoft Purview Bilgi Koruması ve duyarlılık etiketleri uygulayın.
 
 ### <a name="step-1-start-your-information-protection-trial"></a>1. Adım: [Bilgi koruma denemenizi başlatma](mip-easy-trials.md)
 
 > [!TIP]
 > Deneme için en iyi uygulama: 1. Gün
 
-Uygun müşteriler, Microsoft Purview Information Protection için varsayılan etiketleri ve ilkeleri etkinleştirebilir. Deneme sürümünde varsayılan yapılandırmayı etkinleştirdiğinizde, kiracınız için tüm ilkelerin yapılandırılması yaklaşık 2 dakika ve bu varsayılan ilkelerin sonuçlarını görmek 24 saate kadar sürer.
+Uygun müşteriler, Microsoft Purview Bilgi Koruması için varsayılan etiketleri ve ilkeleri etkinleştirebilir. Deneme sürümünde varsayılan yapılandırmayı etkinleştirdiğinizde, kiracınız için tüm ilkelerin yapılandırılması yaklaşık 2 dakika ve bu varsayılan ilkelerin sonuçlarını görmek 24 saate kadar sürer.
 
 Varsayılan yapılandırmayı seçerek, 1 tıklamayla aşağıdakiler otomatik olarak yapılandırılır:
 
@@ -343,7 +344,7 @@ Yapılandırmanın ve durumun ayrıntılarını görmek için ilkenizi seçin. S
 
 ## <a name="insider-risk-management"></a>Insider Risk Management
 
-**Insider risklerini algılama ve düzeltme**
+**Insider risklerini algılama ve düzeltme**:
 
 İç riskleri hızla belirlemenize, önceliklendirmenize ve düzeltmenize yardımcı olmak için yapay zekadan yararlanın. Microsoft 365 ve Azure hizmetlerindeki günlükleri kullanarak, içeriden risk sinyallerini izleyen ilkeler tanımlayabilir, ardından kullanıcı eğitimini yükseltme veya araştırma başlatma gibi düzeltme eylemleri gerçekleştirebilirsiniz.
 
@@ -382,7 +383,7 @@ Insider risk Analizi'ni etkinleştirmek için Insider Risk Management veya Insid
 
 ## <a name="records-management"></a>Kayıt Yönetimi
 
-**İş, yasal veya mevzuat kaydı tutma gereksinimleri için yüksek değerli öğeleri yönetme**
+**İş, yasal veya mevzuat kaydı tutma gereksinimleri için yüksek değerli öğeleri yönetin**:
 
 Kuruluş düzenleme, yasal ve iş açısından kritik kayıtların bekletme zamanlamasını otomatikleştirmek için Microsoft Purview Kayıt Yönetimi özelliklerini kullanın. Kayıtları bildirmek, içeriği saklamak ve bunları en sonda atmak için işbirliği aracılığıyla oluşturmadan otomasyon özelliklerinden yararlanın.
 
@@ -419,7 +420,7 @@ Etiketlerin otomatik uygulanması, kullanıcıların etiketleme etkinliklerini e
 
 ### <a name="compliance-manager-premium-assessments"></a>Uyumluluk Yöneticisi premium değerlendirmeleri
 
-**Riskleri değerlendirme ve verimli yanıt verme**
+**Riskleri değerlendirin ve verimli bir şekilde yanıt verin**:
 
 Kuruluşunuzun riskleri değerlendirmesine ve verilerin toplanması ve kullanımını yöneten ülkelere, bölgesel ve sektör gereksinimlerine verimli bir şekilde yanıt vermesine yardımcı olun.
 
@@ -427,9 +428,9 @@ Kuruluşunuzun riskleri değerlendirmesine ve verilerin toplanması ve kullanım
 
 [Deneme playbook'u: Microsoft Purview Compliance Manager premium değerlendirmeleri](compliance-easy-trials-compliance-manager-assessment-playbook.md)
 
-### <a name="microsoft-priva-privacy-risk-management-and-microsoft-priva-subject-rights-requests"></a>Microsoft Priva Gizlilik Risk Yönetimi ve Microsoft Priva Konu Hakları İstekleri
+### <a name="microsoft-priva-privacy-risk-management-and-microsoft-priva-subject-rights-requests"></a>Microsoft Priva Gizlilik Risk Yönetimi ve Microsoft Priva Konu Hakkı Talepleri
 
-**Gizlilik risklerini & önlemeyi belirleme**
+**Gizlilik risklerini & önlemeyi belirleyin**:
 
 Veri depolama, veri aktarımları ve fazla paylaşım gibi gizlilik risklerini proaktif olarak belirleyin ve koruyun ve kuruluşunuzun büyük ölçekte konu isteklerini otomatikleştirmeye ve yönetmeye yardımcı olun.
 
@@ -439,7 +440,7 @@ Veri depolama, veri aktarımları ve fazla paylaşım gibi gizlilik risklerini p
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-**Dahil olanlar**: Ürün katmanı tarafından listelenen Microsoft Purview çözümlerinin ve özelliklerinin tam listesi için [Özellik Matrisi'ni](https://go.microsoft.com/fwlink/?linkid=2139145) görüntüleyin.
+**Dahil olanlar**: Ürün katmanına göre listelenen Microsoft Purview çözümlerin ve özelliklerin tam listesi için [Özellik Matrisi'ni](https://go.microsoft.com/fwlink/?linkid=2139145) görüntüleyin.
 
 **Microsoft Güvenlik Teknik İçerik Kitaplığı**: Etkileşimli kılavuzları ve gereksinimlerinizle ilgili diğer öğrenme içeriğini bulmak için bu kitaplığı keşfedin. [Kitaplığı ziyaret edin](/security).
 

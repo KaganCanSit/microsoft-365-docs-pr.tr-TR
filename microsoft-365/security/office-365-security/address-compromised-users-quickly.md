@@ -16,12 +16,12 @@ ms.date: 06/10/2021
 description: Office 365 için Microsoft Defender Plan 2'de otomatik araştırma ve yanıt özellikleriyle güvenliği aşılmış kullanıcı hesaplarını algılama ve ele alma sürecini nasıl hızlandıracağınızı öğrenin.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: a8c78847e36d4a4887c4f7a3c54904cc26a012e5
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 97466622a138a6604b9be51333148b472f7cd519
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65131162"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65418280"
 ---
 # <a name="address-compromised-user-accounts-with-automated-investigation-and-response"></a>Güvenliği aşılmış kullanıcı hesaplarını otomatik araştırma ve yanıtla ele alın
 
@@ -62,6 +62,9 @@ Bir kullanıcı hesabının güvenliği aşıldığında uyarılar tetiklenir. B
 
 > [!IMPORTANT]
 > Aşağıdaki görevleri gerçekleştirmek için uygun izinlere sahip olmanız gerekir. Bkz [. AIR özelliklerini kullanmak için gerekli izinler](office-365-air.md#required-permissions-to-use-air-capabilities).
+
+Otomatik Araştırma ve Yanıt (AIR) ve güvenliği aşılmış kullanıcı uyarılarını kullanarak Office 365 için Microsoft Defender kullanıcı güvenliğinin aşıldığını nasıl algılayıp yanıtlayabileceğinizi öğrenmek için bu kısa videoyu izleyin.
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWAl83]
 
 ### <a name="view-and-investigate-restricted-users"></a>Kısıtlanmış kullanıcıları görüntüleme ve araştırma
 

@@ -1,5 +1,5 @@
 ---
-title: Resim etiketleme SharePoint Syntex
+title: SharePoint Syntex resim etiketleme
 ms.author: mikeplum
 author: MikePlumleyMSFT
 manager: serdars
@@ -13,46 +13,45 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 ROBOTS: NOINDEX, NOFOLLOW
-description: E-SharePoint Syntex'de resim etiketleme hakkında bilgi SharePoint Syntex
-ms.openlocfilehash: 79df10f80dd02930dc49f56274b00664c6f1d3d2
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: SharePoint Syntex'de resim etiketleme hakkında bilgi edinin
+ms.openlocfilehash: e0b9b1669efb069942b81aaad7fb5e7e3aa57c1c
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988591"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65415892"
 ---
-# <a name="image-tagging-in-sharepoint-syntex"></a>Resim etiketleme SharePoint Syntex
+# <a name="image-tagging-in-sharepoint-syntex"></a>SharePoint Syntex resim etiketleme
 
 (Çok yakında)
 
-Kullanıcılar, resim etiketleriyle SharePoint Syntex etiketlerini arayarak resimleri bulabilir ve resim etiketlerine dayalı iş akışları oluşturabilir. Varsayılan olarak, basit resim etiketleme SharePoint OneDrive. Her iki konuma da yüklenen resimler otomatik olarak taranır ve varsa, 37 temel etiket listesinden uygulanabilir etiketler uygulanır. Kullanıcılar, resim etiketlerini arayarak arama yoluyla resimleri bulabilir.
+SharePoint Syntex'da resim etiketleme sayesinde kullanıcılar, resim etiketlerinde arama yaparak görüntüleri bulabilir ve görüntü etiketlerini temel alan iş akışları oluşturabilir. Varsayılan olarak, SharePoint ve OneDrive için temel görüntü etiketleme açıktır. Her iki konuma yüklenen görüntüler otomatik olarak taranır ve varsa, 37 temel etiket listesinden geçerli etiketler uygulanır. Kullanıcılar, resim etiketlerini arayarak resimleri bulabilir.
 
-Kullanıcı bir resim karşıya yükledikten sonra etiketleme işlemi otomatik olarak çalışır. Bir resim düzenlenmişse, etiketleri güncelleştirmek için etiketleme işlemi yeniden çalışır.
+Kullanıcı bir görüntüyü karşıya yüklediğinde, etiketleme işlemi otomatik olarak çalıştırılır. Bir görüntü düzenlenirse etiketleme işlemi etiketleri güncelleştirmek için yeniden çalışır.
 
-Resim dosyası izinleri olan kullanıcılar, dosya bilgileri panelinde veya arama sonuçları sayfasında etiketleri görebilir ve düzenleyebilir. Kullanıcı bir resmin etiketlerini düzenlese bile sistem bu resmi otomatik olarak etiketlemeyecektir.
+Resim dosyası izinleri olan kullanıcılar, dosya bilgileri panelinde veya arama sonuçları sayfasında etiketleri görebilir ve düzenleyebilir. Kullanıcı bir görüntünün etiketlerini düzenledikten sonra, düzenlenmiş olsa bile sistem artık bu görüntüyü otomatik olarak etiketler.
 
-Etiketlemeyi kapatsanız bile resimler artık otomatik olarak etiketlenir. Var olan etiketler kaldırılamaz.
+Etiketlemeyi kapatırsanız resimler artık otomatik olarak etiketlenmez. Mevcut etiketler kaldırılmaz.
 
 > [!NOTE]
-> Sistem tarafından oluşturulan etiketler, görüntüye veya etiket teknolojimize yönelik güncelleştirmelerle değişebilir.
+> Sistem tarafından oluşturulan etiketler, görüntüdeki veya etiket teknolojimizdeki güncelleştirmelerle değişebilir.
 
+## <a name="configure-image-tagging"></a>Görüntü etiketlemeyi yapılandırma
 
-## <a name="configure-image-tagging"></a>Resim etiketlemeyi yapılandırma
-
-Resim [etiketlerini SharePoint Syntex](set-up-content-understanding.md), resim etiketlemeyi Microsoft 365 yönetim merkezi.  
+[SharePoint Syntex ayarladıktan](set-up-content-understanding.md) sonra, Microsoft 365 yönetim merkezi görüntü etiketlemeyi yapılandırabilirsiniz.
 
 Resim etiketlemeyi açmak veya kapatmak için
 
-1. Seçenekler'Microsoft 365 yönetim merkezi Kurulum'u <a href="https://go.microsoft.com/fwlink/p/?linkid=2171997" target="_blank">**seçin**</a>.
+1. Microsoft 365 yönetim merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=2171997" target="_blank">**Kurulum'u**</a> seçin.
 
-2. Kuruluş **bilgileri'nin altında** İçeriğin **anlaşılmasını otomatikleştir'e tıklayın**.
+2. **Kurumsal bilgi'nin** altında **İçerik anlamayı otomatikleştir'e** tıklayın.
 
-3. **Yönet'e tıklayın**.
+3. **Yönet'e** tıklayın.
 
-4. Resim etiketleme **sekmesinde Düzenle'ye** **tıklayın**.
+4. **Resim etiketleme** sekmesinde **Düzenle'ye** tıklayın.
 
-5. Temel etiketlemeye **izin ver veya** etiketlemeyi Kapat'ı **seçin**.
+5. **Temel etiketlemeye** izin vermeyi veya etiketlemeyi **Kapatmayı** seçin.
 
 6. **Kaydet**'e tıklayın.
 
-    ![Resim etiketleme denetimi ekran görüntüsü.](../media/content-understanding/sharepoint-syntex-image-tagging-control.png)
+    ![Resim etiketleme denetiminin ekran görüntüsü.](../media/content-understanding/sharepoint-syntex-image-tagging-control.png)

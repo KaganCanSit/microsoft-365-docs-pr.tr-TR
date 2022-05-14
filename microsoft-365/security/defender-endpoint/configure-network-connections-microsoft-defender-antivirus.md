@@ -16,18 +16,18 @@ ms.date: 02/03/2022
 ms.reviewer: mkaminska; pahuijbr
 manager: dansimp
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 70360ac3b9ade0e6039239fe257d83c7ba3a2db0
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: 8da099332ffbe2cc3d860faef504e4c5d9663614
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64787614"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65418642"
 ---
 # <a name="configure-and-validate-microsoft-defender-antivirus-network-connections"></a>Microsoft Defender Virüsten Koruma ağ bağlantılarını yapılandırın ve doğrulayın
 
 **Şunlar için geçerlidir:**
 
-- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Virüsten Koruma
 
@@ -37,7 +37,7 @@ ms.locfileid: "64787614"
 Microsoft Defender Virüsten Koruma bulut tabanlı korumanın düzgün çalıştığından emin olmak için güvenlik ekibinizin ağınızı uç noktalarınızla belirli Microsoft sunucuları arasında bağlantılara izin verecek şekilde yapılandırması gerekir. Bu makalede, güvenlik duvarı kurallarını kullanmak için izin verilmesi gereken bağlantılar listelenir. Ayrıca bağlantınızı doğrulamaya yönelik yönergeler de sağlar. Korumanızı doğru şekilde yapılandırmak, bulut tabanlı koruma hizmetlerinizden en iyi değeri almanızı sağlar.
 
 > [!IMPORTANT]
-> Bu makale yalnızca Microsoft Defender Virüsten Koruma için ağ bağlantılarını yapılandırma hakkında bilgi içerir. Pertahanan Microsoft untuk Titik Akhir kullanıyorsanız (Microsoft Defender Virüsten Koruma içerir), bkz. [Uç Nokta için Defender için cihaz ara sunucusu ve İnternet bağlantısı ayarlarını yapılandırma](configure-proxy-internet.md).
+> Bu makale yalnızca Microsoft Defender Virüsten Koruma için ağ bağlantılarını yapılandırma hakkında bilgi içerir. Uç Nokta için Microsoft Defender (Microsoft Defender Virüsten Koruma içerir) kullanıyorsanız bkz. [Uç Nokta için Defender için cihaz ara sunucusu ve İnternet bağlantısı ayarlarını yapılandırma](configure-proxy-internet.md).
 
 
 > [!NOTE]
@@ -120,17 +120,17 @@ Internet Explorer kullanıyorsanız benzer bir ileti oluşur:
 
     > [!TIP]
     > Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
-    > - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+    > - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
     > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
-    > - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
-    > - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+    > - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+    > - [Linux'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](linux-preferences.md)
     > - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
-    > - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
-    > - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
+    > - [Android özelliklerinde Uç Nokta için Defender’ı yapılandırın](android-configure.md)
+    > - [iOS özelliklerinde Uç Nokta için Microsoft Defender’ı yapılandırın](ios-configure-features.md)
 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Pertahanan Microsoft untuk Titik Akhir için cihaz ara sunucusu ve İnternet bağlantı ayarlarını yapılandırma](configure-proxy-internet.md)
+- [Uç Nokta için Microsoft Defender için cihaz ara sunucusu ve İnternet bağlantısı ayarlarını yapılandırma](configure-proxy-internet.md)
 - [Microsoft Defender Virüsten Koruma yapılandırmak ve yönetmek için grup ilkesi ayarlarını kullanma](use-group-policy-microsoft-defender-antivirus.md)
 - [Microsoft Active Protection Services uç noktasında önemli değişiklikler](https://techcommunity.microsoft.com/t5/Configuration-Manager-Archive/Important-changes-to-Microsoft-Active-Protection-Service-MAPS/ba-p/274006) 
