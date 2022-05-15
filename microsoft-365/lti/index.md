@@ -13,12 +13,12 @@ ms.collection:
 - M365-modern-desktop
 ms.localizationpriority: ''
 description: Öğrenme Araçları Birlikte Çalışabilirliği (LTI) Microsoft uygulamaları hakkında bilgi edinin ve Microsoft uygulamalarını Öğrenme Yönetim Sistemine (LMS) ile tümleştirirken eğitimcilere nasıl yardımcı olacaklarını öğrenin.
-ms.openlocfilehash: 8140b89b4bfeb26f64e8949f6d7835ca59645cbe
-ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
+ms.openlocfilehash: 99ae862890989b0422cb819f65781a0a99340135
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64746777"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65414776"
 ---
 # <a name="integrating-microsoft-products-with-your-learning-management-system-lms"></a>Microsoft ürünlerini Öğrenme Yönetim Sisteminizle (LMS) tümleştirme
 
@@ -32,7 +32,7 @@ Bu araçlar şunlardır:
 - [Teams Toplantıları LTI](#teams-meetings-lti)
 - [Teams Sınıflar LTI](#teams-classes-lti)
 
-Microsoft OneLTI araçlarını yönetme hakkında genel bilgi için bkz. [Herhangi bir LMS için Microsoft OneLTI'yi yönetme](manage-microsoft-one-lti.md).
+Microsoft LTI uygulamalarını yönetme hakkında genel bilgi için bkz. [Herhangi bir LMS için Microsoft LTI uygulamalarını yönetme](manage-microsoft-one-lti.md).
 
 ## <a name="onedrive-lti-apps"></a>Onedrive LTI uygulamaları
 
@@ -75,7 +75,7 @@ Yapılandırma adımları için bkz:
 
 ### <a name="teams-meetings-lti"></a>Teams toplantıları LTI
 
-Microsoft Teams toplantıları LTI uygulaması, Teams toplantılarını LMS kurslarıyla bir araya getirir. Eğitimciler ve öğrenciler, LMS'leri üzerinden geçmiş ve yaklaşan toplantıları görüntüleyebilir, tek veya yinelenen toplantılar programlayabilir ve kursla ilgili ekip toplantılarına katılabilir.
+Microsoft Teams toplantıları LTI uygulaması, Teams toplantılarını LMS kurslarına dahil eder. Eğitimciler ve öğrenciler, geçmiş ve gelecek toplantıları görüntüleyebilir, bireysel veya yinelenen toplantıları planlayabilir ve kursla ilgili ekip toplantılarına tamamen kendi LMS'lerinden katılabilir.
 
 Yapılandırma adımları için bkz:
 

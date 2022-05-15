@@ -329,6 +329,10 @@
 ##### [Windows sunucusu için dışlamalar](configure-server-exclusions-microsoft-defender-antivirus.md)
 ##### [Kaçınılması gereken yaygın hatalar](common-exclusion-mistakes-microsoft-defender-antivirus.md)
 
+#### Uç Nokta için Defender’da sorun giderme modu
+##### [Sorun giderme modunu kullanmaya başlayın](enable-troubleshooting-mode.md)
+##### [Sorun giderme modu senaryoları](troubleshooting-mode-scenarios.md)
+
 #### Microsoft Defender Virüsten Koruma için tanılama ve performans
 ##### [Cihaz durumu ve uyumluluk raporları](machine-reports.md)
 ##### [Gerçek zamanlı korumayla ilgili performans sorunlarını giderin](troubleshoot-performance-issues.md) 

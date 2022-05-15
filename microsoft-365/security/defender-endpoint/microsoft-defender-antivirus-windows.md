@@ -17,12 +17,12 @@ ms.technology: mde
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: 352b60caa3af581a5d1162b1896b255bfcea873c
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: adc6b447f7f29cde344ab0b90f9388154025f587
+ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64790250"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "65418324"
 ---
 # <a name="microsoft-defender-antivirus-in-windows"></a>Windows’da Microsoft Defender Virüsten Koruma
 
@@ -94,7 +94,7 @@ Ayarlar sayfasında virüsten koruma/kötü amaçlı yazılımdan koruma çözü
 Microsoft Defender Virüsten Koruma programını ve tüm virüsten koruma/kötü amaçlı yazılımdan koruma çözümlerini güncel tutmanız önemlidir. Microsoft, cihazlarınızın kötü amaçlı yeni yazılımlara ve saldırı tekniklerine karşı korunması için en son teknolojiye sahip olmalarını sağlamak amacıyla düzenli güncelleştirmeler yayımlar. Daha fazla bilgi için [Microsoft Defender Virüsten Koruma güncelleştirmelerine bakın ve temelleri uygulayın](manage-updates-baselines-microsoft-defender-antivirus.md).
 
 > [!TIP]
-> Diğer platformlar için Virüsten Koruma ile ilgili bilgi edinmek isterseniz, bkz:
+> Diğer platformlar için Antivirüs ile ilgili bilgi arıyorsanız bkz:
 > - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
 > - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
