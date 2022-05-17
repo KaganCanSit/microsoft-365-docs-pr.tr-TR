@@ -19,14 +19,14 @@ search.appverid:
 - MET150
 description: Microsoft 365 kuruluşunuzdaki kullanıcıların ve yöneticilerin etkinliklerini denetlemeyi öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 4dd26229e5ca29344524238903dd2e972ac09ad7
-ms.sourcegitcommit: e0f890f46ae0bde03cc9e1ce178a7c1b8fbe12db
+ms.openlocfilehash: d7c6ba3e63e50370579f6db89a919ec8a2dafd8f
+ms.sourcegitcommit: f645e0e9db74b25663cd9ddec7e3824d6ffc57f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2022
-ms.locfileid: "65145365"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65444255"
 ---
-# <a name="auditing-solutions-in-microsoft-purview"></a>Microsoft Purview'da denetim çözümleri
+# <a name="auditing-solutions-in-microsoft-purview"></a>Microsoft Purview'de çözümleri denetleme
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
@@ -40,11 +40,11 @@ Microsoft Purview iki denetim çözümü sağlar: Denetim (Standart) ve Denetim 
 
 ### <a name="audit-standard"></a>Denetim (Standart)
 
-Microsoft Purview Audit (Standart), denetimli etkinlikleri günlüğe kaydedip aramanızı ve adli, BT, uyumluluk ve yasal araştırmalarınızı güçlendirebilmenizi sağlar.
+Microsoft Purview Denetimi (Standart), denetimli etkinlikleri günlüğe kaydetme ve arama olanağı sağlar ve adli, BT, uyumluluk ve yasal araştırmalarınızı güçlendirir.
 
-- **Varsayılan olarak etkindir**. Uygun aboneliğe sahip tüm kuruluşlar için denetim (Standart) varsayılan olarak açıktır. Bu, denetlenen etkinliklerin kayıtlarının yakalanacağı ve aranabilir olacağı anlamına gelir. Gereken tek kurulum, denetim günlüğü arama aracına (ve ilgili cmdlet'e) erişmek için gerekli izinleri atamak ve kullanıcıya Microsoft Purview Audit (Premium) özellikleri için doğru lisans atandığından emin olmaktır.
+- **Varsayılan olarak etkindir**. Uygun aboneliğe sahip tüm kuruluşlar için denetim (Standart) varsayılan olarak açıktır. Bu, denetlenen etkinliklerin kayıtlarının yakalanacağı ve aranabilir olacağı anlamına gelir. Gereken tek kurulum, denetim günlüğü arama aracına (ve ilgili cmdlet'e) erişmek için gerekli izinleri atamak ve kullanıcıya Microsoft Purview Denetim (Premium) özellikleri için doğru lisans atandığından emin olmaktır.
 - **Binlerce aranabilir denetim olayı**. Kuruluşunuzdaki Microsoft 365 hizmetlerinin çoğu gerçekleşen çok çeşitli denetimli etkinlikleri arayabilirsiniz. Arayabileceğiniz etkinliklerin kısmi listesi için bkz [. Denetlenen etkinlikler](search-the-audit-log-in-security-and-compliance.md#audited-activities). Denetlenen etkinlikleri destekleyen hizmetlerin ve özelliklerin listesi için bkz. [Denetim günlüğü kayıt türü](/office/office-365-management-api/office-365-management-activity-api-schema#auditlogrecordtype).
-- **Microsoft Purview uyumluluk portalında arama aracını denetleme**. Denetim kayıtlarını aramak için uyumluluk portalındaki Denetim günlüğü arama aracını kullanın. Belirli kullanıcılar tarafından gerçekleştirilen etkinlikler ve tarih aralığıyla gerçekleşen etkinlikler için belirli etkinlikleri arayabilirsiniz. Uyumluluk merkezindeki Denetim arama aracının ekran görüntüsü aşağıdadır.
+- **Microsoft Purview uyumluluk portalı denetim arama aracı**. Denetim kayıtlarını aramak için uyumluluk portalındaki Denetim günlüğü arama aracını kullanın. Belirli kullanıcılar tarafından gerçekleştirilen etkinlikler ve tarih aralığıyla gerçekleşen etkinlikler için belirli etkinlikleri arayabilirsiniz. Uyumluluk merkezindeki Denetim arama aracının ekran görüntüsü aşağıdadır.
 
    ![Uyumluluk portalında denetim günlüğü arama aracı.](../media/AuditLogSearchToolMCC.png)
 
@@ -101,13 +101,13 @@ Aşağıdaki bölümlerde Denetim (Standart) ve Denetim (Premium) için lisansla
 ### <a name="audit-standard"></a>Denetim (Standart)
 
 - Microsoft Purview Business Basic aboneliği
-- Microsoft Purview Apps for Business aboneliği
-- Microsoft Purview Enterprise E3 aboneliği
-- Microsoft Purview Business Premium
+- İş için Uygulamalar aboneliğini Microsoft Purview
+- E3 aboneliğini Microsoft Purview Enterprise
+- Microsoft Purview İş Premium
 - Microsoft Purview Education A3 aboneliği
-- Microsoft Purview Government G3 aboneliği
+- Microsoft Purview Kamu G3 aboneliği
 - Microsoft Purview Government G1 aboneliği
-- Microsoft Purview Frontline F1 veya F3 aboneliği ya da F5 Güvenlik eklentisi
+- Ön Hat F1 veya F3 aboneliğini veya F5 Güvenlik eklentisini Microsoft Purview
 - E3 aboneliğini Office 365 Kurumsal
 - E1 aboneliğini Office 365 Kurumsal
 - A1 aboneliğini Office 365 Eğitim
@@ -168,15 +168,17 @@ Kuruluşunuzun Denetimi (Premium) destekleyen bir aboneliği varsa, Denetim (Pre
 
 Daha ayrıntılı yönergeler için bkz. [Denetimi Ayarlama (Premium)](set-up-advanced-audit.md).
 
-## <a name="encrypt-audit-records-using-customer-key"></a>Müşteri Anahtarını kullanarak denetim kayıtlarını şifreleme
+<!--
+## Encrypt audit records using Customer Key
 
-Denetim kayıtları için Müşteri Anahtarı şifrelemesini etkinleştirebilirsiniz. Denetim, kuruluşunuzun denetim verilerindeki hassas bilgileri şifrelemek için [Müşteri Anahtarı ile Hizmet şifrelemesini](customer-key-overview.md) temel alır. Müşteri Anahtarının uygulanması, yetkisiz sistemlerin veya Microsoft veri merkezi personelinin denetim işlem hattında ve beklemede denetim verilerinizi görüntülemesini engelleyerek ek koruma sağlar. Denetim verilerinizi şifrelemek için Müşteri Anahtarı'nı kullanmak, kuruluşunuz şifreleme anahtarlarını sağladığından ve denetlediğinden mevzuat veya uyumluluk yükümlülüklerini karşılamanıza da yardımcı olur.
+You can enable Customer Key encryption for audit records. Auditing builds on the [Service encryption with Customer Key](customer-key-overview.md) to encrypt sensitive information in your organization's auditing data. Implementing Customer Key provides extra protection by preventing unauthorized systems or Microsoft data center personnel from viewing your auditing data in the auditing pipeline and at rest. Using Customer Key to encrypt your auditing data also helps you meet regulatory or compliance obligations because your organization provides and controls the encryption keys.
 
-Denetim için Müşteri Anahtarını uygulamak için şifreleme hiyerarşisini tanımlayan çok iş yükülü bir Veri Şifreleme İlkesi (DEP) oluşturmanız gerekir. Ayrıntılı adım adım yönergeler için bkz. [Müşteri Anahtarını Ayarlama](customer-key-set-up.md).
+To implement Customer Key for auditing, you have to create a multi-workload Data Encryption Policy (DEP), which defines the encryption hierarchy. For detailed step-by-step instructions, see [Set up Customer Key](customer-key-set-up.md).
 
 > [!NOTE]
-> Kuruluşunuzdaki tüm denetim kayıtları şifrelenmez. Bu hizmetteki etkinlik için belirli denetim kayıtları oluşturan Microsoft Purview hizmeti, denetim kaydının şifrelenip şifrelenmediğini tanımlar.
+> Not all audit records in your organization are encrypted. The Microsoft Purview service that generates specific audit records for activity in that service defines whether the audit record is encrypted or not.
+-->
 
 ## <a name="training"></a>Eğitim
 
-Güvenlik operasyonları ekibinize, BT yöneticilerine ve uyumluluk araştırmacıları ekibinize Denetim (Standart) ve Denetim (Premium) ile ilgili temel bilgiler konusunda eğitim vermek, kuruluşunuzun araştırmalarınıza yardımcı olmak için denetimi daha hızlı kullanmaya başlamasına yardımcı olabilir. Microsoft Purview, kuruluşunuzdaki bu kullanıcıların denetime başlamalarına yardımcı olmak için aşağıdaki kaynağı sağlar: [Microsoft Purview'un eKeşif ve denetim özelliklerini açıklama](/learn/modules/describe-ediscovery-capabilities-of-microsoft-365).
+Güvenlik operasyonları ekibinize, BT yöneticilerine ve uyumluluk araştırmacıları ekibinize Denetim (Standart) ve Denetim (Premium) ile ilgili temel bilgiler konusunda eğitim vermek, kuruluşunuzun araştırmalarınıza yardımcı olmak için denetimi daha hızlı kullanmaya başlamasına yardımcı olabilir. Microsoft Purview, kuruluşunuzdaki bu kullanıcıların denetime başlamalarına yardımcı olmak için aşağıdaki kaynağı sağlar: [Microsoft Purview eBulma ve denetim özelliklerini açıklama](/learn/modules/describe-ediscovery-capabilities-of-microsoft-365).

@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
-ms.date: 11/14/2019
+ms.date: 05/17/2022
 audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -19,12 +19,12 @@ ms.custom:
 - admindeeplinkMAC
 ms.assetid: 6f916a77-301c-4be2-b407-6cec4d80df76
 description: Kuruluş için test Microsoft 365 için basit bir test ortamı oluşturmak için bu Test Laboratuvarı Kılavuzu'nu kullanın.
-ms.openlocfilehash: 0da4a38ad951d30a536e653336571e7bad04a889
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: fcfa3f67ec790244fc44f3539af8da1df7a09432
+ms.sourcegitcommit: f645e0e9db74b25663cd9ddec7e3824d6ffc57f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/17/2022
-ms.locfileid: "65435313"
+ms.locfileid: "65444212"
 ---
 # <a name="the-lightweight-base-configuration"></a>Basit temel yapılandırma
 
@@ -35,6 +35,7 @@ Bu makalede, Microsoft 365 E5 aboneliği ve Windows 10 Enterprise çalıştıran
 ![Basit Microsoft 3656 Enterprise test ortamı.](../media/lightweight-base-configuration-microsoft-365-enterprise/Phase4.png)
 
 Basit bir test ortamı oluşturmak beş aşamayı içerir:
+
 - [1. Aşama: Microsoft 365 E5 aboneliğinizi oluşturma](#phase-1-create-your-microsoft-365-e5-subscription)
 - [2. Aşama: Office 365 deneme aboneliğinizi yapılandırma](#phase-2-configure-your-office-365-trial-subscription)
 - [3. Aşama: Microsoft 365 E5 deneme aboneliği ekleme](#phase-3-add-a-microsoft-365-e5-trial-subscription)
@@ -86,10 +87,10 @@ Microsoft 365 yönetim merkezi görmeniz gerekir.
 
 ## <a name="phase-2-configure-your-office-365-trial-subscription"></a>2. Aşama: Office 365 deneme aboneliğinizi yapılandırma
 
-Bu aşamada, aboneliğinizi diğer kullanıcılarla yapılandırıp onlara Office 365 E5 lisans atarsınız.
+Bu aşamada, aboneliğinizi ek kullanıcılarla yapılandırıp bu kullanıcılara Office 365 E5 lisans atarsınız.
   
 Bilgisayarınızdan Graph için Azure Active Directory PowerShell modülüyle aboneliğinize bağlanmak için[, powershell ile Microsoft 365 için Bağlan yönergelerini](connect-to-microsoft-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module) kullanın.
-    
+
 **Windows PowerShell Kimlik Bilgisi İsteği** iletişim kutusunda genel yönetici adını (örneğin, *jdoe@contosotoycompany.onmicrosoft.com*) ve parolayı girin.
   
 Kuruluşunuzun adını (örneğin *, contosotoycompany*), konumunuz için iki karakterli ülke kodunu, ortak bir hesap parolasını girin ve ardından PowerShell isteminden aşağıdaki komutları çalıştırın:
@@ -115,7 +116,7 @@ for($i=2;$i -le 4; $i++) {
 ```
 
 > [!NOTE]
-> Burada yaygın bir parolanın kullanımı, bir test ortamı için otomasyon ve yapılandırma kolaylığına yöneliktir. Açıkçası, üretim abonelikleri için bu kesinlikle önerilmez. 
+> Burada yaygın bir parolanın kullanımı, bir test ortamı için otomasyon ve yapılandırma kolaylığına yöneliktir. Açıkçası, üretim abonelikleri için bu kesinlikle önerilmez.
 
 ### <a name="record-key-information-for-future-reference"></a>Gelecekte başvurmak için önemli bilgileri kaydedin
 
@@ -127,7 +128,7 @@ Bu değerleri henüz kaydetmediyseniz, şimdi kaydedin:
 
 - Deneme aboneliği kuruluşunuzun adı: ![Satır.](../media/Common-Images/TableLine.png) (1. Aşama'nın 4. adımından itibaren)
 
-- Kullanıcı 2, Kullanıcı 3, Kullanıcı 4 ve Kullanıcı 5 hesaplarını listelemek için Windows PowerShell istemi için Azure Active Directory Modülü'nden aşağıdaki komutu çalıştırın:
+- Kullanıcı 2, Kullanıcı 3, Kullanıcı 4 ve Kullanıcı 5 hesaplarını listelemek için, Windows PowerShell istemi için Windows Azure Active Directory Modülü'nden aşağıdaki komutu çalıştırın:
 
   ```powershell
   Get-AzureADUser | Sort UserPrincipalName | Select UserPrincipalName
@@ -149,7 +150,7 @@ Bu değerleri henüz kaydetmediyseniz, şimdi kaydedin:
 
 Yalnızca bir Office 365 test ortamına ihtiyacınız varsa, bu makalenin geri kalanını okumanız gerekmez.
 
-Hem Office 365 hem de Microsoft 365 için geçerli olan diğer [Test Laboratuvarı Kılavuzları için bkz. Kurumsal Test Laboratuvarı Kılavuzları için Microsoft 365](m365-enterprise-test-lab-guides.md).
+Hem Office 365 hem de Microsoft 365 için geçerli olan ek [Test Laboratuvarı Kılavuzları için bkz. Kurumsal Test Laboratuvarı Kılavuzları için Microsoft 365](m365-enterprise-test-lab-guides.md).
   
 ## <a name="phase-3-add-a-microsoft-365-e5-trial-subscription"></a>3. Aşama: Microsoft 365 E5 deneme aboneliği ekleme
 
@@ -158,9 +159,9 @@ Bu aşamada, Microsoft 365 E5 deneme aboneliğine kaydolup Office 365 E5 deneme 
 İlk olarak, Microsoft 365 E5 deneme aboneliğini ekleyin ve yeni Microsoft 365 lisansını genel yönetici hesabınıza atayın.
   
 1. İnternet tarayıcısı özel penceresinde, konumundaki Microsoft 365 yönetim merkezi [https://admin.microsoft.com](https://admin.microsoft.com)oturum açmak için genel yönetici hesabı kimlik bilgilerinizi kullanın.
-    
+
 2. **Microsoft 365 yönetim merkezi** sayfasındaki sol gezinti bölmesinde <a href="https://go.microsoft.com/fwlink/p/?linkid=868433" target="_blank">**FaturalamaHizmetler'i**</a> >  seçin.
-    
+
 3. **Hizmetleri satın al** sayfasında **Microsoft 365 E5'ı** ve ardından **Ücretsiz deneme sürümünü al'ı** seçin.
 
 4. **Microsoft 365 E5 Deneme** sayfasında, kısa mesaj veya telefon araması almaya karar verin, telefon numaranızı girin ve ardından **Bana mesaj at** veya **Beni ara'yı** seçin. Doğrulamayı gerçekleştirin.
@@ -188,7 +189,7 @@ Test ortamınızda artık aşağıdakiler vardır:
   
 - Microsoft 365 E5 deneme aboneliği.
 - Tüm uygun kullanıcı hesaplarınız (yalnızca genel yönetici veya beş kullanıcı hesabının tümü) Microsoft 365 E5 kullanmak üzere etkinleştirilir.
-    
+
 Microsoft 365 E5 ekleyen sonuçta elde edilen yapılandırmanız şöyle görünür:
   
 ![Microsoft 3656 Enterprise test ortamının 3. aşaması.](../media/lightweight-base-configuration-microsoft-365-enterprise/Phase2.png)
@@ -199,18 +200,12 @@ Bu aşamada, fiziksel bilgisayar, sanal makine veya Azure sanal makinesi olarak 
   
 ### <a name="physical-computer"></a>Fiziksel bilgisayar
 
-Kişisel bir bilgisayara Windows 10 Enterprise yükleyin. Windows 10 Enterprise değerlendirme sürümünü indirebilirsiniz.
-
-> [!NOTE]
-> Microsoft Değerlendirme Merkezi geçici olarak kullanılamıyor. Bu indirmeye erişmek için bkz[. Windows için denemelere ve kitlere erişme (Eval Center geçici çözümü)](https://techcommunity.microsoft.com/t5/windows-11/accessing-trials-and-kits-for-windows-eval-center-workaround/m-p/3361125).<!-- 6049663 -->
-
+Kişisel bir bilgisayara Windows 10 Enterprise yükleyin. Windows 10 Enterprise deneme sürümünü [buradan](https://www.microsoft.com/software-download/windows10) indirebilirsiniz.
+  
 ### <a name="virtual-machine"></a>Sanal makine
 
-Sanal makine oluşturmak için seçtiğiniz hiper yöneticiyi kullanın ve ardından Windows 10 Enterprise yükleyin. Windows 10 Enterprise değerlendirme sürümünü indirebilirsiniz.
-
-> [!NOTE]
-> Microsoft Değerlendirme Merkezi geçici olarak kullanılamıyor. Bu indirmeye erişmek için bkz[. Windows için denemelere ve kitlere erişme (Eval Center geçici çözümü)](https://techcommunity.microsoft.com/t5/windows-11/accessing-trials-and-kits-for-windows-eval-center-workaround/m-p/3361125).<!-- 6049663 -->
-
+Sanal makine oluşturmak için seçtiğiniz hiper yöneticiyi kullanın ve ardından Windows 10 Enterprise yükleyin. Windows 10 Enterprise deneme sürümünü [buradan](https://www.microsoft.com/software-download/windows10) indirebilirsiniz.
+  
 ### <a name="virtual-machine-in-azure"></a>Azure'da sanal makine
 
 Microsoft Azure'da Windows 10 bir sanal makine oluşturmak için, Windows 10 Enterprise için görüntüye erişimi olan ***Visual Studio tabanlı bir aboneliğiniz olmalıdır***. Deneme ve ücretli abonelikler gibi diğer Azure abonelik türlerinin bu görüntüye erişimi yoktur. En son bilgiler için bkz. [Geliştirme ve test senaryoları için Azure'da Windows istemcisini kullanma](/azure/virtual-machines/windows/client-images).
@@ -253,7 +248,7 @@ $locName="<location name, such as West US>"
 New-AzResourceGroup -Name $rgName -Location $locName
 ```
 
-Ardından, bu komutlarla yeni bir sanal ağ ve WIN10 sanal makinesi oluşturun. İstendiğinde, WIN10 için yerel yönetici hesabının adını ve parolasını girin ve bu bilgileri güvenli bir konumda depolayın.
+Ardından, bu komutlarla yeni bir sanal ağ ve WIN10 sanal makinesi oluşturun. İstendiğinde, WIN10 için yerel yönetici hesabının adını ve parolasını girin ve bunları güvenli bir konumda depolayın.
   
 ```powershell
 $corpnetSubnet=New-AzVirtualNetworkSubnetConfig -Name Corpnet -AddressPrefix 10.0.0.0/24
@@ -292,7 +287,7 @@ Ardından WIN10 bilgisayarını Microsoft 365 E5 aboneliğinizin Azure AD kirac�
 
 4. **Parola girin** alanına genel yönetici hesabınızın parolasını girin ve oturum **aç'ı** seçin.
 
-5. Bu kuruluşun size uygun olduğundan emin olmak isteyip istemediğiniz sorulduğunda **Katıl'ı** ve ardından **Bitti'yi** seçin.
+5. Bunun kuruluşunuz olduğundan emin olmak isteyip istemediğiniz sorulduğunda **Katıl'ı** ve ardından **Bitti'yi** seçin.
 
 6. Ayarlar penceresini kapatın.
 
@@ -310,17 +305,17 @@ Sonuçta elde edilen ortamınız şöyle görünür:
 
 ![Microsoft 3656 Enterprise test ortamının 5. aşaması.](../media/lightweight-base-configuration-microsoft-365-enterprise/Phase4.png)
 
-Bu ortam, aşağıdakilere sahip WIN10 bilgisayarı içerir:
+Bu, aşağıdakilere sahip WIN10 bilgisayarı içerir:
 
 - Microsoft 365 E5 aboneliğinizin Azure AD kiracıya katıldı.
 - Microsoft Intune'da (EMS) Azure AD cihaz olarak kaydedilir.
 - Kurumlar için Microsoft 365 Uygulamaları yüklü.
   
-Artık [kurumsal Microsoft 365](https://www.microsoft.com/microsoft-365/enterprise) daha fazla özelliğiyle denemeler yapmaya hazırsınız.
+Artık [kurumsal Microsoft 365](https://www.microsoft.com/microsoft-365/enterprise) ek özellikleriyle deneme yapmaya hazırsınız.
   
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Test Laboratuvarı Kılavuzlarının diğer kümelerini keşfedin:
+Bu ek Test Laboratuvarı Kılavuzları kümelerini keşfedin:
   
 - [Kimlik](m365-enterprise-test-lab-guides.md#identity)
 - [Mobil cihaz yönetimi](m365-enterprise-test-lab-guides.md#mobile-device-management)

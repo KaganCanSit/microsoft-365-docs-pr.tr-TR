@@ -10,13 +10,13 @@ audience: Admin
 ms.topic: conceptual
 ms.service: O365-seccomp
 ms.localizationpriority: high
-description: Hassas içeriği sınıflandırmak ve korumak için Microsoft Purview Information Protection için varsayılan etiketler ve ilkeler hakkında bilgi edinin.
-ms.openlocfilehash: 486286780eaa3a2deedb2c3df837a93814280f39
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+description: Hassas içeriği sınıflandırmak ve korumak için Microsoft Purview Bilgi Koruması için varsayılan etiketler ve ilkeler hakkında bilgi edinin.
+ms.openlocfilehash: a17ba3e87e219d19d8f88f413bf446664aa094a2
+ms.sourcegitcommit: f645e0e9db74b25663cd9ddec7e3824d6ffc57f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65286460"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65444190"
 ---
 # <a name="default-labels-and-policies-to-protect-your-data"></a>Verilerinizi korumak için varsayılan etiketler ve politikalar
 
@@ -24,20 +24,20 @@ ms.locfileid: "65286460"
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Uygun müşteriler Microsoft Purview Information Protection için varsayılan etiketleri ve ilkeleri etkinleştirebilir: 
+Uygun müşteriler Microsoft Purview Bilgi Koruması için varsayılan etiketleri ve ilkeleri etkinleştirebilir: 
 
 - Duyarlılık etiketleri ve duyarlılık etiketi ilkesi
 - İstemci tarafı otomatik etiketleme
 - Hizmet tarafı otomatik etiketleme
 - Teams ve cihazlar için veri kaybı önleme (DLP) ilkeleri
 
-Bu varsayılan yapılandırmalar, Microsoft 365 için Microsoft Purview Information Protection ile hızlı bir şekilde çalışmaya başlamanıza yardımcı olur. Bunları olduğu gibi kullanabilir, yalnızca birkaç değişiklik yapabilir veya iş gereksinimlerinize daha iyi uyacak şekilde tamamen özelleştirebilirsiniz. 
+Bu varsayılan yapılandırmalar, Microsoft 365 için Microsoft Purview Bilgi Koruması ile hızla çalışmaya başlamanıza yardımcı olur. Bunları olduğu gibi kullanabilir, yalnızca birkaç değişiklik yapabilir veya iş gereksinimlerinize daha iyi uyacak şekilde tamamen özelleştirebilirsiniz. 
 
 Uygunluk, [Microsoft Purview için ücretsiz deneme sürümü](compliance-easy-trials.md) olan müşterileri ve zaten bir Microsoft 365 E5 planı olan bazı müşterileri içerir:
 
-- **Yeni müşteriler**: 30 günden daha kısa bir süredir Microsoft Purview'unuz varsa, kiracınız listelenen tüm varsayılan yapılandırmaları etkinleştirebilir. Bunları istediğiniz zaman devre dışı bırakabilir, kaldırabilir veya düzenleyebilirsiniz.
+- **Yeni müşteriler**: 30 günden daha kısa bir süredir Microsoft Purview aldıysanız, kiracınız listelenen tüm varsayılan yapılandırmaları etkinleştirebilir. Bunları istediğiniz zaman devre dışı bırakabilir, kaldırabilir veya düzenleyebilirsiniz.
 
-- **Mevcut müşteriler**: 30 günden uzun süredir Microsoft Purview'a sahipseniz, henüz eşdeğer bir yapılandırma yapmadıysanız varsayılan yapılandırmaları etkinleştirebilirsiniz:
+- **Mevcut müşteriler**: 30 günden uzun süredir Microsoft Purview aldıysanız, henüz eşdeğer bir yapılandırma yapmadıysanız varsayılan yapılandırmaları etkinleştirebilirsiniz:
 
     | Varsayılan yapılandırma| Eşdeğer |
     |:-----|:-----|
@@ -51,13 +51,13 @@ Uygunluk, [Microsoft Purview için ücretsiz deneme sürümü](compliance-easy-t
 
 Önceden yapılandırılmış bu etiketleri ve ilkeleri almak için: 
 
-1. [Microsoft Purview uyumluluk portalından](https://compliance.microsoft.com/) **ÇözümlerFormasyon** >  **koruması'nı** seçin
+1. [Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com/) **ÇözümlerFormasyon** >  **koruması'nı** seçin
     
     Bu seçeneği hemen görmüyorsanız, önce gezinti **bölmesinden Tümünü göster'i** seçin. 
     
-2. Microsoft Purview Information Protection varsayılan etiketler ve ilkeler için uygunsanız, varsayılan etiketleri ve ilkeleri etkinleştirebileceğiniz aşağıdaki bilgileri görürsünüz. Örneğin:
+2. Microsoft Purview Bilgi Koruması varsayılan etiketler ve ilkeler için uygunsanız, varsayılan etiketleri ve ilkeleri etkinleştirebileceğiniz aşağıdaki bilgileri görürsünüz. Örneğin:
     
-    :::image type="content" alt-text="Microsoft Purview Information Protection önceden yapılandırılmış etiketler ve ilkeler için etkinleştirme." source="../media/mip-preconfigured.png" lightbox="../media/mip-preconfigured.png":::
+    :::image type="content" alt-text="Önceden yapılandırılmış etiketler ve ilkeler için etkinleştirmeyi Microsoft Purview Bilgi Koruması." source="../media/mip-preconfigured.png" lightbox="../media/mip-preconfigured.png":::
     
     Etkinleştirme seçeneğiyle birlikte bu bilgilerin görüntülendiğini görmüyorsanız, şu anda duyarlılık etiketlerinin ve ilkelerinin otomatik olarak oluşturulması için uygun değilsiniz demektir. Bu durumun değişip değişmediğini görmek için daha sonra yeniden denetlemeyi deneyebilir veya aynı etiketleri ve ilkeleri el ile oluşturmak için aşağıdaki ayarlar bilgilerini kullanabilirsiniz.
 
@@ -110,7 +110,7 @@ Bu ilke ayarları ve kullanılabilen diğer ilke ayarları hakkında daha fazla 
 
 Bu varsayılan ilke ayarlarını düzenlemeniz gerekiyorsa bkz. Etiket [ilkesi oluşturarak duyarlılık etiketlerini yayımlama](create-sensitivity-labels.md#publish-sensitivity-labels-by-creating-a-label-policy).
 
-Bu etiketleri Windows, macOS, iOS ve Android'deki Office uygulamalarında kullandığınızda, kullanıcılar yeni etiketleri dört saat içinde ve tarayıcıyı yenilediğinizde Word, Excel ve Web üzerinde PowerPoint için de bir saat içinde görür. Ancak değişikliklerin tüm uygulama ve hizmetlere çoğaltılması için 24 saate kadar izin vermeniz gerekebilir.
+Bu etiketleri Windows, macOS, iOS ve Android uygulamalarındaki Office kullandığınızda, kullanıcılar yeni etiketleri dört saat içinde ve tarayıcıyı yenilediğinizde Word, Excel ve Web üzerinde PowerPoint için de bir saat içinde görür. Ancak değişikliklerin tüm uygulama ve hizmetlere çoğaltılması için 24 saate kadar izin vermeniz gerekebilir.
 
 ## <a name="client-side-auto-labeling"></a>İstemci tarafı otomatik etiketleme
 
@@ -135,9 +135,9 @@ Hizmet tarafı otomatik etiketleme, bekleyen hassas belgelerin ve aktarım sıra
 
 Varsayılan hizmet tarafı otomatik etiketleme aşağıdaki yapılandırmaya sahiptir: 
 
-- Belgede 1-9 tane kredi kartı numarası bulunuyorsa **, ConfidentialAnyone** \  duyarlılık etiketini **(sınırsız)** uygulayın
+- Bir belgede veya e-postada 1-9 tane kredi kartı numarası bulunuyorsa **, ConfidentialAnyone** \  duyarlılık etiketini **(sınırsız)** uygulayın
 
-- Bir belgede veya e-postada 10 veya daha fazla kredi kartı numarası örneği bulunuyorsa, kullanıcının **GizliTüm**  \  Çalışanlar duyarlılık etiketini uygulamasını öneririz 
+- Bir belgede veya e-postada 10 veya daha fazla kredi kartı numarası örneği bulunuyorsa **,** **GizliTüm** \  Çalışanlar duyarlılık etiketini uygulayın 
 
 > [!NOTE]
 > Kendi duyarlılık etiketlerinizin yayımlandığını algıladıysak, otomatik etiketleme ilkeniz için kendi etiketlerinizden birini seçmenizi isteriz.
@@ -160,7 +160,7 @@ DLP ilkesini düzenlemek istiyorsanız bkz. [DLP ilkesi oluşturma, test etme ve
 
 ## <a name="dlp-for-devices"></a>Cihazlar için DLP
 
-Cihazlar için varsayılan DLP ilkesi, Microsoft Purview'a eklenmiş Windows 10 cihazlarda kredi kartı numaralarının bulunduğunu algılar. Ardından aşağıdaki eylemleri denetler (engellemez): 
+Cihazlar için varsayılan DLP ilkesi, Microsoft Purview eklenmiş Windows 10 cihazlarda kredi kartı numaralarının bulunduğunu algılar. Ardından aşağıdaki eylemleri denetler (engellemez): 
 
 - Bulut hizmeti etki alanlarına Upload veya izin verilmeyen tarayıcılar tarafından erişim
 
@@ -184,8 +184,8 @@ DLP ilkesini düzenlemek istiyorsanız bkz. [DLP ilkesi oluşturma, test etme ve
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-Duyarlılık etiketleri, veri kaybı önleme ve Microsoft Purview Information Protection ile sağlanan tüm özellikler hakkında daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:
+Duyarlılık etiketleri, veri kaybı önleme ve Microsoft Purview Bilgi Koruması ile sağlanan tüm özellikler hakkında daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:
 
 - [Duyarlılık etiketleri hakkında bilgi edinin](sensitivity-labels.md)
 - [Veri kaybı önleme hakkında daha fazla bilgi edinme](dlp-learn-about-dlp.md)
-- [Microsoft Purview ile verilerinizi koruma](information-protection.md)
+- [verilerinizi Microsoft Purview ile koruma](information-protection.md)
