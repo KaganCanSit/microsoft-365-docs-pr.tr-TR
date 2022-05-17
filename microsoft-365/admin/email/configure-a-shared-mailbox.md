@@ -21,51 +21,51 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Paylaşılan bir posta kutusu oluşturun ve kullanıcıları için e-posta iletme ve otomatik yanıtlar gibi bazı ayarları yapılandırabilirsiniz.
-ms.openlocfilehash: 201291adddf588bde955cbba7e2c0075e5ca7c88
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Paylaşılan bir posta kutusu oluşturun ve kullanıcıları için e-posta iletme ve otomatik yanıtlar gibi bazı ayarları yapılandırın.
+ms.openlocfilehash: b3de51a8407c8f9786d6a1677137f2a564744ac0
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62973612"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65437161"
 ---
-# <a name="configure-shared-mailbox-settings"></a>Paylaşılan posta kutusu ayarlarını yapılandırma
+# <a name="configure-microsoft-365-shared-mailbox-settings"></a>Paylaşılan Microsoft 365 posta kutusu ayarlarını yapılandırma
 
-Paylaşılan posta [kutusunu oluşturduktan sonra](create-a-shared-mailbox.md), posta kutusu kullanıcıları için e-posta iletme ve otomatik yanıtlar gibi bazı ayarları yapılandırmanız gerekir. Daha sonra, posta kutusu adı, üyeler veya üye izinleri gibi diğer ayarları değiştirmek gerekebilir. 
+[Paylaşılan bir posta kutusu oluşturduktan](create-a-shared-mailbox.md) sonra, posta kutusu kullanıcıları için e-posta iletme ve otomatik yanıtlar gibi bazı ayarları yapılandırmak istersiniz. Daha sonra, posta kutusu adı, üyeler veya üye izinleri gibi diğer ayarları değiştirmek isteyebilirsiniz. 
 
 ## <a name="change-the-name-or-email-alias-of-a-shared-mailbox-or-change-the-primary-email-address"></a>Paylaşılan posta kutusunun adını veya e-posta diğer adını veya birincil e-posta adresini değiştirme
 
-1. Yönetim merkezinde Gruplar Paylaşılan posta **kutuları** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2066847" target="_blank">sayfasına</a> gidin.
+1. Yönetim merkezinde **, Gruplar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2066847" target="_blank">Paylaşılan posta kutuları</a> sayfasına gidin.
 
-2. Düzenlemek istediğiniz paylaşılan posta kutusunu seçin ve ardından Ad, E-posta, **E-posta** diğer **adları'nın yanında Düzenle'yi seçin**.
+2. Düzenlemek istediğiniz paylaşılan posta kutusunu seçin ve ardından **Ad, E-posta, E-posta diğer adları'nın** yanındaki **Düzenle'yi** seçin.
 
-3. Yeni bir ad girin veya başka bir diğer ad ekleyin. Birincil e-posta adresini değiştirmek için, posta kutunuzda birden fazla e-posta diğer adı olması gerekir.
+3. Yeni bir ad girin veya başka bir diğer ad ekleyin. Birincil e-posta adresini değiştirmek istiyorsanız, posta kutunuzda birden fazla e-posta diğer adı olmalıdır.
 
 4. **Kaydet**'i seçin.
 
 ## <a name="forward-emails-that-are-sent-to-a-shared-mailbox"></a>Paylaşılan posta kutusuna gönderilen e-postaları iletme
 
-Gönderilen e-postayı iletmeniz için paylaşılan posta kutusuna lisans atamanız gerek yoktur. İletileri geçerli herhangi bir e-posta adresine veya dağıtım listesine iletebilirsiniz.
+Paylaşılan posta kutusuna gönderilen e-postayı iletmek için bir lisans atamanız gerekmez. İletileri geçerli herhangi bir e-posta adresine veya dağıtım listesine iletebilirsiniz.
 
-1. Yönetim merkezinde Gruplar Paylaşılan posta **kutuları** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2066847" target="_blank">sayfasına</a> gidin.
+1. Yönetim merkezinde **, Gruplar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2066847" target="_blank">Paylaşılan posta kutuları</a> sayfasına gidin.
 
-2. Düzenlemek istediğiniz paylaşılan posta kutusunu seçin ve ardından E-posta iletme **Düzenleme'yi** \> **seçin**.
+2. Düzenlemek istediğiniz paylaşılan posta kutusunu ve ardından **E-posta iletme** \> **Düzenleme'yi** seçin.
     
-3. Düğmeyi Açık olarak **ayarlayın ve** iletilerin ilet takım için bir e-posta adresi girin. Geçerli herhangi bir e-posta adresi olabilir. Birden çok adrese iletin, [adresler için bir dağıtım](/office365/admin/setup/create-distribution-lists) grubu oluşturmanız ve sonra bu kutuya grubun adını girmeniz gerekir.
+3. İki durumlu düğmeyi **Açık** olarak ayarlayın ve iletileri iletmek için bir e-posta adresi girin. Geçerli herhangi bir e-posta adresi olabilir. Birden çok adrese iletmek için, adresler için [bir dağıtım grubu oluşturmanız](/office365/admin/setup/create-distribution-lists) ve sonra bu kutuya grubun adını girmeniz gerekir.
     
 4. **Kaydet**'i seçin.
 
 ## <a name="send-automatic-replies-from-a-shared-mailbox"></a>Paylaşılan posta kutusundan otomatik yanıt gönderme
 
-1. Yönetim merkezinde Gruplar Paylaşılan posta **kutuları** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2066847" target="_blank">sayfasına</a> gidin.
+1. Yönetim merkezinde **, Gruplar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2066847" target="_blank">Paylaşılan posta kutuları</a> sayfasına gidin.
 
-2. Düzenlemek istediğiniz paylaşılan posta kutusunu seçin ve ardından Otomatik yanıtlar **Düzenle'yi** \> **seçin**.
+2. Düzenlemek istediğiniz paylaşılan posta kutusunu seçin ve ardından **Otomatik yanıtlar** \> **Düzenle'yi** seçin.
     
 3. Ayarı **Açık** olarak belirleyin ve yanıtın kuruluşunuzun içindeki veya dışındaki kişilere gönderileceğini seçin.
 
 4. Kuruluşunuzun içindeki kişilere göndermek istediğiniz yanıtı girin. Yalnızca metin eklenebilir, resim eklenemez.
 
-5. Ayrıca, kuruluş *dışındaki* kişiler için de yanıt göndermek için onay kutusunu işaretleyin, yanıtı almak istediğiniz kişiyi seçin ve metni yazın. Kuruluşunuzun içindeki kişilere yanıt göndermeden yalnızca dışındaki kişilere yanıt göndermenin bir yolu yoktur.
+5. Kuruluşunuzun dışındaki kişilere *de* yanıt göndermek istiyorsanız, onay kutusunu seçin, yanıtı almak istediğiniz kişiyi seçin ve metni yazın. Kuruluşunuzun içindeki kişilere yanıt göndermeden yalnızca dışındaki kişilere yanıt göndermenin bir yolu yoktur.
 
 6. **Kaydet**'i seçin.
 
@@ -73,75 +73,75 @@ Gönderilen e-postayı iletmeniz için paylaşılan posta kutusuna lisans ataman
 
 Varsayılan olarak, paylaşılan posta kutusundan gönderilen iletiler paylaşılan posta kutusunun Gönderilmiş Öğeler klasörüne kaydedilmez. Bunun yerine, iletiyi gönderen kişinin Gönderilmiş Öğeler klasörüne kaydedilir.
 
-Gönderilen e-postayı herkesin görmelerine izin vermek için yönetim merkezinde paylaşılan posta kutusu ayarlarını düzenleyin ve Gönderilmiş Öğeler **Düzenle'yi** \> **seçin**.
+Herkesin Gönderilmiş e-postayı görmesine izin vermek istiyorsanız, yönetim merkezinde paylaşılan posta kutusu ayarlarını düzenleyin ve **Gönderilmiş öğeler** \> **Düzenle'yi** seçin.
 
 
-## <a name="choose-the-apps-that-a-shared-mailbox-can-use-to-access-microsoft-email"></a>Paylaşılan posta kutusunun Microsoft e-postalarına erişmek için kullanabileceği uygulamaları seçme
+## <a name="choose-the-apps-that-a-shared-mailbox-can-use-to-access-microsoft-email"></a>Paylaşılan posta kutusunun Microsoft e-postasına erişmek için kullanabileceği uygulamaları seçin
 
-1. Yönetim merkezinde Gruplar Paylaşılan posta **kutuları** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2066847" target="_blank">sayfasına</a> gidin.
+1. Yönetim merkezinde **, Gruplar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2066847" target="_blank">Paylaşılan posta kutuları</a> sayfasına gidin.
 
-2. Düzenlemek istediğiniz paylaşılan posta kutusunu seçin ve ardından E-posta uygulamaları **Düzenle'yi** \> **seçin**.
+2. Düzenlemek istediğiniz paylaşılan posta kutusunu ve ardından **E-posta uygulamaları** \> **Düzenle'yi** seçin.
 
-3. Üyelerin paylaşılan posta **kutusuna** erişmek için kullanmalarını istediğiniz tüm uygulamalar için iki durumlu düğmeyi Açık olarak ayarlayın. Kullanmalarını istediğiniz **tüm** uygulamalar için iki durumlu düğmeyi Kapalı olarak ayarlayın. 
+3. Üyelerin paylaşılan posta kutusuna erişmek için kullanabilmesini istediğiniz tüm uygulamalar için iki durumlu düğmeyi **Açık** olarak ayarlayın. Kullanmalarını istemediğiniz uygulamalar için iki durumlu düğmeyi **Kapalı** olarak ayarlayın. 
 
 4. **Kaydet**'i seçin.
 
 
-## <a name="put-a-shared-mailbox-on-litigation-hold"></a>Paylaşılan posta kutusunu mahkemeler için tutma
+## <a name="put-a-shared-mailbox-on-litigation-hold"></a>Paylaşılan posta kutusunu dava beklemeye alma
 
-Mahkeme tutma hakkında daha fazla bilgi edinmek için bkz [. Mahkeme Tutma Oluşturma](../../compliance/create-a-litigation-hold.md).
+Dava tutma hakkında daha fazla bilgi edinmek için bkz. [Dava Tutma oluşturma](../../compliance/create-a-litigation-hold.md).
 
-1. Yönetim merkezinde Gruplar Paylaşılan posta **kutuları** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2066847" target="_blank">sayfasına</a> gidin.
+1. Yönetim merkezinde **, Gruplar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2066847" target="_blank">Paylaşılan posta kutuları</a> sayfasına gidin.
 
-2. Düzenlemek istediğiniz paylaşılan posta kutusunu seçin ve ardından Mahkeme tutma **Düzenle'yi** \> **seçin**.
+2. Düzenlemek istediğiniz paylaşılan posta kutusunu seçin ve ardından **Düzenlemeyi tut'a tıklayın** \> **.**
 
-3. Düğmeyi Açık olarak **ayarlayın**. 
+3. İki durumlu düğmeyi **Açık** olarak ayarlayın. 
 
-4. İsteğe bağlı olarak, süre, tutmayla ilgili not ve daha fazla bilgi için bir URL girin.  
+4. İsteğe bağlı olarak bir süre, ayrı tutmayla ilgili not ve daha fazla bilgi içeren bir URL girin.  
 
 5. **Kaydet**'i seçin.
 
 
 ## <a name="add-or-remove-members"></a>Üye ekleme veya kaldırma
 
-1. Yönetim merkezinde Gruplar Paylaşılan posta **kutuları** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2066847" target="_blank">sayfasına</a> gidin.
+1. Yönetim merkezinde **, Gruplar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2066847" target="_blank">Paylaşılan posta kutuları</a> sayfasına gidin.
 
-2. Düzenlemek istediğiniz paylaşılan posta kutusunu seçin ve ardından Üyeleri **Düzenle'yi** \> **seçin**.
+2. Düzenlemek istediğiniz paylaşılan posta kutusunu seçin ve ardından **Üyeler Düzenle'yi** \> seçin.
 
 3. Şunlardan birini yapın:
-   - Üye eklemek için Üye **ekle'yi seçin**, eklemek istediğiniz üyeyi arayın veya seçin ve ardından Kaydet'i **seçin**.
-   - Üyeleri kaldırmak için, gerekirse üyeyi aramak için Arama kutusunu kullanın, üyenin adının yanındaki **X'i** seçin ve sonra da Kaydet'i **seçin**. 
+   - Üye eklemek için **Üye ekle'yi** seçin, eklenecek üyeyi arayın veya seçin ve ardından **Kaydet'i** seçin.
+   - Üyeleri kaldırmak için, Gerekirse üyeyi aramak için Ara kutusunu kullanın, üyenin adının yanındaki **X** işaretini seçin ve ardından **Kaydet'i** seçin. 
 
-4. Yeniden **Kaydet'i** seçin.
+4. **Kaydet'i** yeniden seçin.
 
 ## <a name="add-or-remove-permissions-of-members"></a>Üyelerin izinlerini ekleme veya kaldırma
 
-1. Yönetim merkezinde Gruplar Paylaşılan posta **kutuları** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2066847" target="_blank">sayfasına</a> gidin.
+1. Yönetim merkezinde **, Gruplar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2066847" target="_blank">Paylaşılan posta kutuları</a> sayfasına gidin.
 
-2. Düzenlemek istediğiniz paylaşılan posta kutusunu seçin ve ardından Üyeleri Özelleştirme **izinleri'ne** \> **tıklayın**.
+2. Düzenlemek istediğiniz paylaşılan posta kutusunu seçin ve ardından **Üyeler** \> **İzinleri Özelleştir'i** seçin.
 
-3. Bir **üye** için değiştirmek istediğiniz iznin yanındaki Düzenle'yi seçin. 
+3. Üye için değiştirmek istediğiniz iznin yanındaki **Düzenle'yi** seçin. 
 
 4. Şunlardan birini yapın:
-   - Bu izni ek bir üyeye vermek için **İzin ekle'yi** seçin, eklemek istediğiniz üyeyi arayın veya seçin ve ardından Kaydet'i **seçin**.
-   - Bir üyeden izni kaldırmak için, gerekirse üyeyi aramak için Ara kutusunu kullanın, üyenin adının yanındaki **X'i** seçin ve sonra da Kaydet'i **seçin**. 
+   - Bu izni ek bir üyeye vermek için **İzin ekle'yi** seçin, eklenecek üyeyi arayın veya seçin ve ardından **Kaydet'i** seçin.
+   - Üyeden izni kaldırmak için, Gerekirse üyeyi aramak için Ara kutusunu kullanın, üyenin adının yanındaki **X** işaretini seçin ve ardından **Kaydet'i** seçin. 
 
-4. Yeniden **Kaydet'i** seçin.
+4. **Kaydet'i** yeniden seçin.
 
-## <a name="show-or-hide-a-shared-mailbox-in-the-global-address-list"></a>Genel adres listesinde paylaşılan posta kutusunu gösterme veya gizleme
+## <a name="show-or-hide-a-shared-mailbox-in-the-global-address-list"></a>Paylaşılan posta kutusunu genel adres listesinde gösterme veya gizleme
 
-Paylaşılan posta kutusunu genel adres listesinde göstermeyi seçerseniz, posta kutusu kuruluş adres listesinde görünmez, ancak bu posta kutusuna gönderilen e-postayı almaya devam etmek için bu posta kutusunu alır. 
+Paylaşılan posta kutusunu genel adres listesinde göstermemeyi seçerseniz, posta kutusu kuruluşunuzun adres listesinde görünmez, ancak yine de bu posta kutusuna gönderilen e-postayı alır. 
 
-1. Yönetim merkezinde Gruplar Paylaşılan posta **kutuları** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2066847" target="_blank">sayfasına</a> gidin.
+1. Yönetim merkezinde **, Gruplar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2066847" target="_blank">Paylaşılan posta kutuları</a> sayfasına gidin.
 
-2. Düzenlemek istediğiniz paylaşılan posta kutusunu seçin ve ardından Genel adres listesinde **göster Düzenle'yi** \> **seçin**.
+2. Düzenlemek istediğiniz paylaşılan posta kutusunu seçin ve ardından **Genel adres listesinde** \> göster **Düzenle'yi** seçin.
 
-3. Düğmeyi Açık veya **Kapalı olarak** **ayarlayın**. 
+3. İki durumlu düğmeyi **Açık**  veya **Kapalı** olarak ayarlayın. 
 
 4. **Kaydet**'i seçin.
 
 > [!NOTE]
-> Paylaşılan posta kutusunun adres listesinde gizlensi, yeni paylaşılan posta kutusu üyelerinin paylaşılan posta kutusu yeniden adres listesinde gösterilene kadar gizli posta kutusunu Outlook profillerine eklemelerini imkansız hale gelir. 
+> Paylaşılan posta kutusunu adres listesinden gizlemek, paylaşılan posta kutusu yeniden adres listesinde gösterilene kadar yeni paylaşılan posta kutusu üyelerinin gizli posta kutusunu Outlook profillerine eklemelerini imkansız hale getirir. 
 
 ## <a name="related-content"></a>İlgili içerik
 

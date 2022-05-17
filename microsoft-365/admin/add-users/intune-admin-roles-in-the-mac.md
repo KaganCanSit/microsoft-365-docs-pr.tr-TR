@@ -16,13 +16,13 @@ ms.custom:
 - AdminSurgePortfolio
 - AdminTemplateSet
 - admindeeplinkMAC
-description: Yönetici rolleri, işletme işlevlerine eşlenir ve Yönetim merkezinde belirli görevleri yerine getirmek için izinler verir. Örneğin, Hizmet yöneticisi Microsoft’a destek bileti açar.
-ms.openlocfilehash: 6ee5c8410b64bffe66ee69e5c4468a9eda601cd8
-ms.sourcegitcommit: 23e186b46b27a6a4863f507a52a11105afae9726
+description: Microsoft 365 yönetim merkezi, iş işlevlerine eşlenen ve belirli görevleri gerçekleştirme izinleri veren bazı Microsoft Intune rolleri yönetmenize olanak tanır.
+ms.openlocfilehash: efff2d426d40103369126c082fcb8d7be44e031c
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64882208"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65436768"
 ---
 # <a name="intune-admin-roles-in-the-microsoft-365-admin-center"></a>Microsoft 365 yönetim merkezi yönetici rollerini Intune
 
@@ -43,7 +43,7 @@ Microsoft 365 yönetim merkezi **Roller'e** gidip herhangi bir rolü seçerek ay
 |Intune rol yöneticisi    |   Intune rol yöneticisini, diğer yöneticilere Intune izinleri atayabilen ve özel ve yerleşik Intune rollerini yönetebilen kullanıcılara atayın.   |
 |İlke ve profil yöneticisi     |   Uyumluluk ilkesini, yapılandırma profillerini ve Apple kaydını yöneten kullanıcılara ilke ve profil yöneticisi rolünü atayın.   |
 |Salt okunur işleç     |   Salt okunur işleç rolünü yalnızca kullanıcıları, cihazları, kayıt ayrıntılarını ve yapılandırmaları görüntüleyebilen kullanıcılara atayın.   |
-|Okul yöneticisi     |   Eğitim için Intune'da Windows 10 ve iOS cihazlarını, uygulamalarını ve yapılandırmalarını yönetmek için kullanıcılara tam erişim için okul yöneticisi rolünü atayın.   |
+|Okul yöneticisi     |   Eğitim için Intune'da Windows 10 ve iOS cihazları, uygulamaları ve yapılandırmaları yönetmek için kullanıcılara tam erişim için okul yöneticisi rolünü atayın.   |
 
 ## <a name="delegated-administration-for-microsoft-partners"></a>Microsoft İş ortakları için temsilci yönetim
 
@@ -55,7 +55,7 @@ Bir iş ortağı şu rolleri atayabilir:
 
 - Yardım masası yöneticisiyle eşdeğer ayrıcalıklara sahip sınırlı yönetim.
 
-İş ortağı bu rolleri kullanıcılara atamadan önce, iş ortağını hesabınıza temsili yönetici olarak eklemeniz gerekir. Bu işlem, yetkili bir iş ortağı tarafından başlatılır. İş ortağı size bir e-posta göndererek size yönetici temsilcisi olarak görev yapma izni vermek isteyip istemediğinizi sorar. Yönergeler için, bkz. [İş ortağı ilişkilerini yetkilendirme veya kaldırma](../misc/add-partner.md).
+İş ortağının kullanıcılara bu rolleri atamadan önce, iş ortağını hesabınıza yönetici temsilcisi olarak eklemeniz gerekir. Bu süreç yetkili bir iş ortağı tarafından başlatılır. İş ortağı, kendisine yönetici temsilcisi olarak hareket etme izni vermek isteyip istemediğinizi sormak için size bir e-posta gönderir. Yönergeler için bkz. [İş ortağı ilişkilerini yetkilendirme veya kaldırma](../misc/add-partner.md).
   
 ## <a name="related-content"></a>İlgili içerik
 

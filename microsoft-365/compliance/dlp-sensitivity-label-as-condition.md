@@ -1,5 +1,5 @@
 ---
-title: DLP ilkelerde duyarlılık etiketlerini koşullar olarak kullanma
+title: DLP ilkelerinde duyarlılık etiketlerini koşul olarak kullanma
 f1.keywords:
 - CSH
 ms.author: chrfox
@@ -19,76 +19,78 @@ search.appverid:
 - MET150
 ms.custom:
 - seo-marvel-apr2020
-description: DLP ilkelerinde duyarlılık etiketlerini koşullar olarak kullanabileceğiniz hizmetler ve öğe türleri hakkında bilgi
-ms.openlocfilehash: 1117471e38b430f1d7289c6aae76994ac5acd494
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+description: DLP ilkelerinde koşul olarak duyarlılık etiketlerini kullanabileceğiniz hizmetler ve öğe türleri hakkında bilgi edinin
+ms.openlocfilehash: bf0fcb327b2869e21a54de22822d0d51c72e25b8
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63015173"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65438476"
 ---
-# <a name="use-sensitivity-labels-as-conditions-in-dlp-policies"></a>DLP ilkelerde duyarlılık etiketlerini koşullar olarak kullanma
+# <a name="use-sensitivity-labels-as-conditions-in-dlp-policies"></a>DLP ilkelerinde duyarlılık etiketlerini koşul olarak kullanma
 
-Duyarlılık [etiketlerini bu konumlar](sensitivity-labels.md) için DLP ilkeleri içinde bir koşul olarak kullanabilirsiniz:
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-- Exchange Online-posta iletilerini gönderme
+[Duyarlılık etiketlerini](sensitivity-labels.md) şu konumlar için DLP ilkelerinde koşul olarak kullanabilirsiniz:
+
+- E-posta iletilerini Exchange Online
 - SharePoint Online
-- OneDrive İş siteleri
-- Windows 10 cihazları
+- siteleri OneDrive İş
+- cihazları Windows 10
 
-Duyarlılık etiketleri İçerik içeriği listesinde bir **seçenek olarak** görünür.
+Duyarlılık etiketleri **İçerik içerir** listesinde bir seçenek olarak görünür.
 
 > [!div class="mx-imgBorder"]
-> ![duyarlılık etiketini bir koşul olarak kullanın.](../media/dlp-sensitivity-label-as-a-condition.png)
+> ![duyarlılık etiketi bir koşul olarak.](../media/dlp-sensitivity-label-as-a-condition.png)
 
 > [!IMPORTANT]
-> **Bir koşul olarak** Duyarlılık Etiketleri, DLP İlkesi'nin Teams üzere sohbet  ve kanal iletilerini bir konum olarak seçtiyseniz kullanılamaz.
+> DLP ilkesini uygulamak için bir konum olarak **Teams sohbet ve kanal iletilerini** seçtiyseniz, koşul olarak **Duyarlılık Etiketleri** kullanılamaz.
 
 
 ## <a name="supported-items-scenarios-and-policy-tips"></a>Desteklenen öğeler, senaryolar ve ilke ipuçları
 
-Duyarlılık etiketlerini bu öğelerde ve bu senaryolarda koşullar olarak kullanabilirsiniz.
+Duyarlılık etiketlerini bu öğelerde ve bu senaryolarda koşul olarak kullanabilirsiniz.
 
 ### <a name="supported-items"></a>Desteklenen öğeler
 
-|Hizmet  |Öğe türü  |İlke ipucu için kullanılabilir  |Zorunlu  |
+|Hizmet  |Öğe türü  |İlke ipucu için kullanılabilir  |Uygulanabilir  |
 |---------|---------|---------|---------|
-|Exchange    |e-posta iletisi         |evet         |evet         |
-|Exchange    |e-posta eki         |hayır         |evet *         |
-|SharePoint Online     |SharePoint Online'da öğeler         |evet         |evet         |
-|OneDrive İş     |öğeler         |evet         |evet         |
-|Teams     |Teams ve kanal iletileri gönderme         |uygulanamaz         |uygulanamaz         |
-|Teams     |ekler         |evet **         |evet **         |
-|Windows 10 cihazları     |öğeler         |evet         |evet         |
-|MCAS (önizleme) |öğeler         |evet         |evet         |
+|Exchange    |e-posta iletisi         |Evet         |Evet         |
+|Exchange    |e-posta eki         |No         |Evet , *         |
+|SharePoint Online     |SharePoint Online'daki öğeler         |Evet         |Evet         |
+|OneDrive İş     |Bileşen         |Evet         |Evet         |
+|Teams     |Teams ve kanal iletileri         |geçerli değil         |geçerli değil         |
+|Teams     |Ekleri         |Evet **         |Evet **         |
+|cihazları Windows 10     |Bileşen         |Evet         |Evet         |
+|MCAS (önizleme) |Bileşen         |Evet         |Evet         |
 
-\*DLP ile etiketli e-posta eklerinin duyarlılık algılanması yalnızca Office dosya türlerinde kullanılabilir.
+\*Duyarlılık etiketli e-posta eklerinin DLP algılaması yalnızca Open XML tabanlı Office dosya türleri için desteklenir.
 
-\** Bire bir sohbet Teams kanallarında gönderilen ekler otomatik olarak bire bir sohbet veya kanallarda OneDrive İş SharePoint. Dolayısıyla SharePoint Online veya OneDrive İş DLP ilkenize konum olarak eklenirse, Teams'de gönderilen etiketli ekler otomatik olarak bu koşulun kapsamına dahil edilir. Teams olarak seçilenlerin DLP ilkesinde seçilmiş olması gerekir.
+\** 1:1 sohbet veya kanallar üzerinden Teams gönderilen ekler otomatik olarak OneDrive İş ve SharePoint yüklenir. Dolayısıyla SharePoint Online veya OneDrive İş DLP ilkenize konum olarak dahil edilirse, Teams gönderilen etiketli ekler bu koşulun kapsamına otomatik olarak eklenir. konum olarak Teams DLP ilkesinde seçilmesi gerekmez.
 
 > [!NOTE]
-> DLP'nin kurumsal ve kurumsal ağ etiketlerini SharePoint OneDrive duyarlılık etiketlerini algılama özelliği sınırlıdır. Daha fazla bilgi için bkz[. Dosya ve klasörlerin Office için duyarlılık SharePoint OneDrive](sensitivity-labels-sharepoint-onedrive-files.md#limitations).
+> DLP'nin SharePoint ve iş için OneDrive duyarlılık etiketlerini algılama özelliği sınırlıdır. Daha fazla bilgi için bkz[. SharePoint ve OneDrive Office dosyaları için duyarlılık etiketlerini etkinleştirme](sensitivity-labels-sharepoint-onedrive-files.md#limitations).
 
 ### <a name="supported-scenarios"></a>Desteklenen senaryolar
 
-- DLP Yöneticisi, bir veya daha fazla duyarlılık etiketine koşul olarak eklemeyi seçtiklerinden kiracının tüm duyarlılık etiketlerinin listesini görebilir.
+- DLP Yöneticisi, koşul olarak bir veya daha fazla duyarlılık etiketi eklemeyi seçtiğinde kiracıdaki tüm duyarlılık etiketlerinin listesini görebilir.
 
-- Duyarlılık etiketlerinin koşul olarak kullanımı, yukarıdaki destek matrisinde belirtildiği gibi tüm iş yükleri genelinde de desteklemektedir.
+- Duyarlılık etiketlerini koşul olarak kullanmak, yukarıdaki destek matrisinde belirtildiği gibi tüm iş yüklerinde desteklenir.
 
-- DLP ilkesi ipuçları, duyarlılık etiketi içeren DLP ilkeleri için iş yükleri genelinde (Outlook Win32 hariç) gösterilmeye devam eder.
+- DLP ilkesi ipuçları, koşul olarak duyarlılık etiketi içeren DLP ilkeleri için iş yüklerinde (Win32 Outlook hariç) gösterilmeye devam eder.
 
-- Duyarlılık etiketleri, bir koşul olarak duyarlılık etiketine sahip bir DLP ilkesi eşlenmişse olay raporu e-postasında da görünür.
+- Duyarlılık etiketleri, bir koşul olarak duyarlılık etiketine sahip bir DLP ilkesi eşleştirilirse olay raporu e-postasının bir parçası olarak da görünür.
 
-- Duyarlılık etiketi ayrıntıları, duyarlılık etiketi içeren bir DLP ilkesi eşleşmesi için DLP kuralı denetim günlüğünde de bir koşul olarak gösterilecektir.
+- Duyarlılık etiketi ayrıntıları, bir koşul olarak duyarlılık etiketi içeren bir DLP ilkesi eşleşmesi için DLP kuralı eşleştirme denetim günlüğünde de gösterilir.
 
 
 ### <a name="support-policy-tips"></a>Destek ilkesi ipuçları
 
 
-|workload  |Desteklenen/desteklenmiyor ilke ipuçları  |
+|Iş yük -ünü  |desteklenen/desteklenmeyen ilke ipuçları  |
 |---------|---------|
-|OWA |    destek     |
+|OWA |    Desteklenen     |
 |Outlook Win 32    |  desteklenmiyor       |
-|SharePoint   |   destek      |
-|OneDrive İş    |    destek     |
+|SharePoint   |   Desteklenen      |
+|OneDrive İş    |    Desteklenen     |
 |uç nokta cihazları   |  desteklenmiyor       |

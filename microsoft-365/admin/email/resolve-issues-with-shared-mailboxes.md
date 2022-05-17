@@ -22,34 +22,33 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Paylaşılan posta kutularını ayar yanlışlıklara neden olabilir. Paylaşılan posta kutularda sorun yaşanıyorsa bu çözümleri deneyin.
-ms.openlocfilehash: 2be12810e6651da5b062afbd0a3437913b9a4d60
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Paylaşılan posta kutularını ayarlarken hata alabilirsiniz. Paylaşılan posta kutularıyla ilgili sorun yaşıyorsanız bu çözümleri deneyin.
+ms.openlocfilehash: cf121504b53951e0aaaf248d43d045cfa937f4ed
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62973603"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65437117"
 ---
 # <a name="resolve-issues-with-shared-mailboxes"></a>Paylaşılan posta kutularında sorunları çözme
 
-Paylaşılan posta kutusu oluştururken veya kullanırken hata iletileri görüyorsanız, şu olası çözümleri deneyin. 
+Paylaşılan posta kutusu oluştururken veya kullanırken hata iletileri görürseniz bu olası çözümleri deneyin. 
 
 ## <a name="error-when-creating-shared-mailboxes"></a>Paylaşılan posta kutuları oluşturulurken hata oluştu
-<a name="bkmk_Fix"> </a>
 
-Hata iletisini görüyorsanız proxy adresleri **veya LegacyExchangeDN of "\<name>" proxy adresi "smtp:<\> paylaşılan posta kutusu adı" zaten kullanılıyordur. Lütfen başka bir ara sunucu** adresi seçin; bu, paylaşılan posta kutusuna zaten kullanmakta olan bir ad vermeye çalıştığınız anlamına gelir. Örneğin, paylaşılan posta kutularını info@domain1 ve info@domain2 olarak adlandırmak istediğinizi varsayalım. Bunu yapmanın iki yolu vardır:
+Hata iletisini görürseniz, **"smtp:<paylaşılan posta kutusu adı\>" proxy adresi veya "\<name>" LegacyExchangeDN'si tarafından zaten kullanılıyordur. Lütfen başka bir ara sunucu adresi seçin**; bu, paylaşılan posta kutusuna zaten kullanımda olan bir ad vermeye çalıştığınız anlamına gelir. Örneğin, paylaşılan posta kutularını info@domain1 ve info@domain2 olarak adlandırmak istediğinizi varsayalım. Bunu yapmanın iki yolu vardır:
 
-  - Windows PowerShell'i kullanın. Yönergeler için bu blog gönderisi'ne bakın: [Farklı Etki Alanlarında Aynı Diğer Adlarla Paylaşılan Posta Kutuları Oluşturma](https://www.cogmotive.com/blog/office-365-tips/create-shared-mailboxes-with-same-alias-at-different-domains-in-office-365)
+  - Windows PowerShell'i kullanın. Yönergeler için bu blog gönderisini izleyin: [Farklı Etki Alanlarında Aynı Diğer Adla Paylaşılan Posta Kutuları Oluşturma](https://www.cogmotive.com/blog/office-365-tips/create-shared-mailboxes-with-same-alias-at-different-domains-in-office-365)
     
-  - Hatadan kurtularak ikinci paylaşılan posta kutusuna en baştan farklı bir ad ve girin. Ardından yönetim merkezinde, paylaşılan posta kutusunu olması istediğiniz şekilde yeniden adlandırabilirsiniz.
+  - İkinci paylaşılan posta kutusuna hatayla ilgili olarak başlangıçtan farklı bir ad verin. Ardından yönetim merkezinde paylaşılan posta kutusunu istediğiniz gibi yeniden adlandırın.
 
-## <a name="error-about-not-having-send-permissions-when-using-a-shared-mailbox"></a>Paylaşılan posta kutusu kullanırken izin gönderme hatası
+## <a name="error-about-not-having-send-permissions-when-using-a-shared-mailbox"></a>Paylaşılan posta kutusu kullanırken gönderme izinlerine sahip olmama hatası
 
-Paylaşılan bir posta kutusu oluşturduysanız ve bu posta kutusundan ileti göndermeyi denerse, bunu alabilirsiniz:
+Paylaşılan bir posta kutusu oluşturduysanız ve ardından bu posta kutusundan bir ileti göndermeye çalışıyorsanız şunu alabilirsiniz:
 
-**Bu ileti gönderilemdi. Belirtilen kullanıcı adına ileti gönderme izniniz yok.**
+**Bu ileti gönderilemedi. İletiyi belirtilen kullanıcı adına gönderme izniniz yok.**
 
-Bu ileti, Microsoft 365 bir yineleme gecikme sorunu yaşıyor olduğunda görüntülenir. Yeni paylaşılan posta kutunuz (veya kullanıcınız) ile ilgili bilgiler tüm veri merkezlerimizde çoğaltılırsa, bu bilgi bir saat içinde yok olur. Bir saat bekleyin ve sonra ileti göndermeyi yeniden deneyin.
+Microsoft 365 çoğaltma gecikmesi sorunu yaşadığında bu ileti görüntülenir. Yeni paylaşılan posta kutunuz (veya eklenen kullanıcı) hakkındaki bilgiler tüm veri merkezlerimizde çoğaltıldığında, bir saat veya daha fazla bir zaman içinde ortadan kaldırılmalıdır. Bir saat bekleyin ve sonra ileti göndermeyi yeniden deneyin.
 
 ## <a name="related-content"></a>İlgili içerik
 
@@ -58,7 +57,3 @@ Bu ileti, Microsoft 365 bir yineleme gecikme sorunu yaşıyor olduğunda görün
 [Paylaşılan posta kutusunu yapılandırma](configure-a-shared-mailbox.md) (makale)\
 [Kullanıcı posta kutusunu paylaşılan posta kutusuna dönüştürme](convert-user-mailbox-to-shared-mailbox.md) (makale)\
 [Paylaşılan posta kutusundan lisans kaldırma](remove-license-from-shared-mailbox.md) (makale)
-
-
-    
-

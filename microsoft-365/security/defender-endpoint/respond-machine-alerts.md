@@ -14,22 +14,20 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 30b2d2a7190ab8d79b4e80db389198026595cdd4
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: f290af2808db1aa56f39593ec4f9fac68c0f76d8
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64862488"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65438827"
 ---
 # <a name="take-response-actions-on-a-device"></a>Cihazda yanıt eylemleri gerçekleştirin
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Şunlar için geçerlidir:**
-- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planları 1 ve 2](defender-endpoint-plan-1-2.md)
 - [İş için Microsoft Defender](/microsoft-365/security/defender-business/mdb-overview)
-
-> Uç Nokta için Defender'ı deneyimlemek mi istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-respondmachine-abovefoldlink)
 
 Cihazları yalıtarak veya bir araştırma paketi toplayarak algılanan saldırılara hızla yanıt verin. Cihazlarda işlem yaptıktan sonra İşlem merkezinde etkinlik ayrıntılarını de kontrol edebilirsiniz.
 
@@ -48,13 +46,11 @@ Yanıt eylemleri belirli bir cihaz sayfasının üst kısmında çalışır ve �
 [![Yanıt eylemlerinin görüntüsü.](images/response-actions.png)](images/response-actions.png#lightbox)
 
 > [!IMPORTANT]
-> [İş için Microsoft Defender](../defender-business/mdb-overview.md) aşağıdaki el ile yanıt eylemlerini içerir:
+> [Uç Nokta Planı 1](defender-endpoint-plan-1.md) ve [İş için Microsoft Defender](../defender-business/mdb-overview.md) için Defender yalnızca aşağıdaki el ile yanıt eylemlerini içerir:
 > - Antivirüs taraması başlat
 > - Cihazı yalıtma
 > - Dosyayı durdurma ve karantinaya al
-> - Bir dosyayı engellemek veya dosyaya izin vermek için gösterge ekleme
-
-> Bu makalede açıklanan tüm yanıt eylemlerine sahip olmak için aboneliğinizin Uç Nokta Için Defender Plan 2'yi içermesi gerekir.
+> - Bir dosyayı engellemek veya dosyaya izin vermek için bir gösterge ekleyin Aboneliğinizin bu makalede açıklanan tüm yanıt eylemlerine sahip olması için Uç Nokta için Defender Plan 2'yi içermesi gerekir.
 
  Cihaz sayfalarını aşağıdaki görünümlerden herhangi birinden bulabilirsiniz:
 
@@ -64,7 +60,6 @@ Yanıt eylemleri belirli bir cihaz sayfasının üst kısmında çalışır ve �
 - **Arama kutusu** - Açılan menüden Cihaz'ı seçin ve cihaz adını girin.
 
 > [!IMPORTANT]
->
 > - Bu yanıt eylemleri yalnızca Windows 10, sürüm 1703 veya üzeri, Windows 11, Windows Server 2019 ve Windows Server 2022'de bulunan cihazlarda kullanılabilir.
 > - Windows olmayan platformlar için yanıt özellikleri (Cihaz yalıtımı gibi) üçüncü taraf özelliklerine bağlıdır.
 > - Microsoft birinci taraf aracıları için, en düşük işletim sistemi gereksinimleri için her bir özelliğin altındaki "daha fazla bilgi" bağlantısına bakın.
@@ -95,12 +90,14 @@ Araştırma veya yanıt sürecinin bir parçası olarak bir cihazdan araştırma
 
 > [!IMPORTANT]
 >
->Bu eylemler şu anda macOS ve Linux için desteklenmiyor. Eylemi çalıştırmak için canlı yanıtı kullanın. Canlı yanıt hakkında daha fazla bilgi için bkz [. Canlı yanıt kullanarak cihazlarda varlıkları araştırma](live-response.md)
+>Bu eylemler şu anda macOS ve Linux için desteklenmemaktadır. Eylemi çalıştırmak için canlı yanıtı kullanın. Canlı yanıt hakkında daha fazla bilgi için bkz [. Canlı yanıt kullanarak cihazlarda varlıkları araştırma](live-response.md)
 
 Paketi indirmek (Zip dosyası) ve bir cihazda gerçekleşen olayları araştırmak için
 
 1. Cihaz sayfasının üst kısmındaki yanıt eylemleri satırından **Araştırma paketini topla'ya** tıklayın.
+
 2. Metin kutusunda bu eylemi neden gerçekleştirmek istediğinizi belirtin. **Onayla'yı** seçin.
+
 3. Zip dosyası indirilecek
 
 Alternatif yol:
@@ -115,15 +112,11 @@ Alternatif yol:
 
 Paket aşağıdaki klasörleri içerir:
 
-<br>
-
-****
-
 |Klasör|Açıklama|
 |---|---|
 |Autoruns|Her biri, saldırganın cihazdaki kalıcılığını belirlemeye yardımcı olmak için bilinen bir otomatik başlatma giriş noktasının (ASEP) kayıt defterinin içeriğini temsil eden bir dosya kümesi içerir. <p> <div class="alert"><b>NOT:</b> Kayıt defteri anahtarı bulunmazsa, dosya şu iletiyi içerir: "HATA: Sistem belirtilen kayıt defteri anahtarını veya değerini bulamadı."<div>|
 |Yüklü programlar|Bu .CSV dosyası, cihazda şu anda yüklü olanları tanımlamaya yardımcı olabilecek yüklü programların listesini içerir. Daha fazla bilgi için bkz. [Win32_Product sınıfı](https://go.microsoft.com/fwlink/?linkid=841509).|
-|Ağ bağlantıları|Bu klasör şüpheli URL'lere bağlantıyı, saldırganın komut ve denetimi (C&C) altyapısını, yanal hareketleri veya uzak bağlantıları tanımlamaya yardımcı olabilecek bağlantı bilgileriyle ilgili bir dizi veri noktası içerir. <ul><li>ActiveNetConnections.txt: Protokol istatistiklerini ve geçerli TCP/IP ağ bağlantılarını görüntüler. Bir işlem tarafından yapılan şüpheli bağlantıyı arama olanağı sağlar.</li><li>Arp.txt: Tüm arabirimler için geçerli adres çözümleme protokolü (ARP) önbellek tablolarını görüntüler. ARP önbelleği, ağdaki güvenliği aşılmış veya ağdaki bir iç saldırı çalıştırmak için kullanılmış olabilecek şüpheli sistemlere sahip diğer konakları gösterebilir.</il><li>DnsCache.txt: Yerel Hosts dosyasından önceden yüklenmiş girişleri ve bilgisayar tarafından çözümlenen ad sorguları için yakın zamanda alınan kaynak kayıtlarını içeren DNS istemci çözümleyici önbelleğinin içeriğini görüntüler. Bu, şüpheli bağlantıları tanımlamaya yardımcı olabilir.</li><li>IpConfig.txt: Tüm bağdaştırıcılar için tam TCP/IP yapılandırmasını görüntüler. Bağdaştırıcılar, yüklü ağ bağdaştırıcıları gibi fiziksel arabirimleri veya çevirmeli bağlantılar gibi mantıksal arabirimleri temsil edebilir.</li><li>FirewallExecutionLog.txt ve pfirewall.log</li></ul><p><div class="alert"><b>NOT:</b> pfirewall.log dosyası %windir%\system32\logfiles\firewall\pfirewall.log içinde bulunmalıdır, bu nedenle araştırma paketine eklenecektir. Güvenlik duvarı günlük dosyasını oluşturma hakkında daha fazla bilgi için bkz[. Gelişmiş Güvenlik Günlüğü ile Windows Defender Güvenlik Duvarını Yapılandırma](/windows/security/threat-protection/windows-firewall/configure-the-windows-firewall-log)<div>|
+|Ağ bağlantıları|Bu klasör şüpheli URL'lere bağlantıyı, saldırganın komut ve denetimi (C&C) altyapısını, yanal hareketleri veya uzak bağlantıları tanımlamaya yardımcı olabilecek bağlantı bilgileriyle ilgili bir dizi veri noktası içerir. <ul><li>ActiveNetConnections.txt: Protokol istatistiklerini ve geçerli TCP/IP ağ bağlantılarını görüntüler. Bir işlem tarafından yapılan şüpheli bağlantıyı arama olanağı sağlar.</li><li>Arp.txt: Tüm arabirimler için geçerli adres çözümleme protokolü (ARP) önbellek tablolarını görüntüler. ARP önbelleği, ağdaki güvenliği aşılmış veya ağdaki bir iç saldırı çalıştırmak için kullanılmış olabilecek şüpheli sistemlere sahip diğer konakları gösterebilir.</il><li>DnsCache.txt: Yerel Hosts dosyasından önceden yüklenmiş girişleri ve bilgisayar tarafından çözümlenen ad sorguları için yakın zamanda alınan kaynak kayıtlarını içeren DNS istemci çözümleyici önbelleğinin içeriğini görüntüler. Bu, şüpheli bağlantıları tanımlamaya yardımcı olabilir.</li><li>IpConfig.txt: Tüm bağdaştırıcılar için tam TCP/IP yapılandırmasını görüntüler. Bağdaştırıcılar, yüklü ağ bağdaştırıcıları gibi fiziksel arabirimleri veya çevirmeli bağlantılar gibi mantıksal arabirimleri temsil edebilir.</li><li>FirewallExecutionLog.txt ve pfirewall.log</li></ul><p><div class="alert"><b>NOT:</b> pfirewall.log dosyası %windir%\system32\logfiles\firewall\pfirewall.log içinde bulunmalıdır, bu nedenle araştırma paketine eklenecektir. Güvenlik duvarı günlük dosyasını oluşturma hakkında daha fazla bilgi için bkz[. Gelişmiş Güvenlik Günlüğü ile Windows Defender Güvenlik Duvarı yapılandırma](/windows/security/threat-protection/windows-firewall/configure-the-windows-firewall-log)<div>|
 |Dosyaları önceden yükleme|Windows Prefetch dosyaları, uygulama başlatma işlemini hızlandırmak için tasarlanmıştır. Bu, sistemde son kullanılan tüm dosyaları izlemek ve silinmiş olsa da önceden dosya listesinde bulunabilen uygulamaların izlemelerini bulmak için kullanılabilir. <ul><li>Prefetch klasörü: dosyasından `%SystemRoot%\Prefetch`ön yükleme dosyalarının bir kopyasını içerir. NOT: Prefetch dosyalarını görüntülemek için bir prefetch dosya görüntüleyicisi indirmeniz önerilir.</li><li>PrefetchFilesList.txt: Prefetch klasöründe kopyalama hatası olup olmadığını izlemek için kullanılabilecek tüm kopyalanan dosyaların listesini içerir.</li></ul>|
 |Süreç|Çalışan işlemleri listeleyen bir .CSV dosyası içerir ve cihazda çalışan geçerli işlemleri tanımlama olanağı sağlar. Bu, şüpheli bir işlemi ve durumunu tanımlarken yararlı olabilir.|
 |Zamanlanmış görevler|Otomatik olarak çalışacak şekilde ayarlanmış şüpheli kodu aramak üzere seçilen bir cihazda otomatik olarak gerçekleştirilen yordamları tanımlamak için kullanılabilen zamanlanmış görevlerin listelendiği .CSV bir dosya içerir.|
@@ -141,9 +134,9 @@ Paket aşağıdaki klasörleri içerir:
 
 Araştırma veya yanıt sürecinin bir parçası olarak, güvenliği aşılmış bir cihazda bulunabilecek kötü amaçlı yazılımları tanımlamaya ve düzeltmeye yardımcı olmak için uzaktan bir virüsten koruma taraması başlatabilirsiniz.
 
->[!IMPORTANT]
->- Bu eylem şu anda macOS ve Linux için desteklenmiyor. Eylemi çalıştırmak için canlı yanıtı kullanın. Canlı yanıt hakkında daha fazla bilgi için bkz [. Canlı yanıt kullanarak cihazlarda varlıkları araştırma](live-response.md)
->- Microsoft Defender Virüsten Koruma (Microsoft Defender AV) taraması, Microsoft Defender AV'nin etkin virüsten koruma çözümü olup olmadığı fark etmeksizin diğer virüsten koruma çözümleriyle birlikte çalıştırılabilir. Microsoft Defender AV Pasif modda olabilir. Daha fazla bilgi için bkz. [uyumluluk Microsoft Defender Virüsten Koruma](/microsoft-365/security/defender-endpoint/microsoft-defender-antivirus-compatibility).
+> [!IMPORTANT]
+> - Bu eylem şu anda macOS ve Linux için desteklenmiyor. Eylemi çalıştırmak için canlı yanıtı kullanın. Canlı yanıt hakkında daha fazla bilgi için bkz [. Canlı yanıt kullanarak cihazlarda varlıkları araştırma](live-response.md)
+> - Microsoft Defender Virüsten Koruma (Microsoft Defender AV) taraması, Microsoft Defender AV'nin etkin virüsten koruma çözümü olup olmadığı fark etmeksizin diğer virüsten koruma çözümleriyle birlikte çalıştırılabilir. Microsoft Defender AV Pasif modda olabilir. Daha fazla bilgi için bkz. [uyumluluk Microsoft Defender Virüsten Koruma](/microsoft-365/security/defender-endpoint/microsoft-defender-antivirus-compatibility).
 
 **Virüsten koruma taraması çalıştır'ı** seçtikten sonra, çalıştırmak istediğiniz tarama türünü seçin (hızlı veya tam) ve taramayı onaylamadan önce bir açıklama ekleyin.
 
@@ -153,9 +146,7 @@ Araştırma veya yanıt sürecinin bir parçası olarak, güvenliği aşılmış
 
 > [!NOTE]
 > Uç Nokta için Defender yanıt eylemini kullanarak tarama tetiklerken, Microsoft Defender virüsten koruma 'ScanAvgCPULoadFactor' değeri yine de geçerli olur ve taramanın CPU etkisini sınırlar.
->
 > ScanAvgCPULoadFactor yapılandırılmamışsa, varsayılan değer tarama sırasında %50 maksimum CPU yükü sınırıdır.
->
 > Daha fazla bilgi için bkz. [configure-advanced-scan-types-microsoft-defender-antivirus](/windows/security/threat-protection/microsoft-defender-antivirus/configure-advanced-scan-types-microsoft-defender-antivirus).
 
 ## <a name="restrict-app-execution"></a>Uygulama yürütmeyi kısıtlayın
@@ -189,11 +180,11 @@ Bir uygulama kısıtlandığında, kullanıcıya bir uygulamanın çalışmasın
 
 Saldırının önem derecesine ve cihazın duyarlılığına bağlı olarak, cihazı ağdan yalıtmak isteyebilirsiniz. Bu eylem, saldırganın güvenliği aşılmış cihazı denetlemesini ve veri sızdırma ve yanal hareket gibi başka etkinlikler gerçekleştirmesini önlemeye yardımcı olabilir.
 
->[!IMPORTANT]
->- Bu eylem şu anda macOS ve Linux için desteklenmiyor. Eylemi çalıştırmak için canlı yanıtı kullanın. Canlı yanıt hakkında daha fazla bilgi için bkz [. Canlı yanıt kullanarak cihazlarda varlıkları araştırma](live-response.md)
->- Windows 10, sürüm 1703, Windows 11, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 ve Windows Server 2022'de cihazlar için tam yalıtım kullanılabilir.
->- Seçmeli yalıtım, Windows 10, sürüm 1709 veya üzeri ve Windows 11 cihazlarda kullanılabilir.
->- Bir cihazı yalıtırken yalnızca belirli işlemlere ve hedeflere izin verilir. Bu nedenle, tam VPN tünelinin arkasındaki cihazlar, cihaz yalıtıldıktan sonra Uç Nokta için Microsoft Defender bulut hizmetine erişemez. bulut tabanlı korumayla ilgili trafiği Uç Nokta için Microsoft Defender ve Microsoft Defender Virüsten Koruma için bölünmüş tünel VPN kullanmanızı öneririz.
+> [!IMPORTANT]
+> - Cihazları ağdan yalıtma şu anda macOS ve Linux için desteklenmiyor. Eylemi çalıştırmak için canlı yanıtı kullanın. Canlı yanıt hakkında daha fazla bilgi için bkz [. Canlı yanıt kullanarak cihazlarda varlıkları araştırma](live-response.md).
+> - Windows 10, sürüm 1703, Windows 11, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 ve Windows Server 2022'de cihazlar için tam yalıtım kullanılabilir.
+> - Seçmeli yalıtım, Windows 10, sürüm 1709 veya üzeri ve Windows 11 cihazlarda kullanılabilir.
+> - Bir cihazı yalıtırken yalnızca belirli işlemlere ve hedeflere izin verilir. Bu nedenle, tam VPN tünelinin arkasındaki cihazlar, cihaz yalıtıldıktan sonra Uç Nokta için Microsoft Defender bulut hizmetine erişemez. bulut tabanlı korumayla ilgili trafiği Uç Nokta için Microsoft Defender ve Microsoft Defender Virüsten Koruma için bölünmüş tünel VPN kullanmanızı öneririz.
 
 Bu cihaz yalıtımı özelliği, cihazı izlemeye devam eden Uç Nokta için Defender hizmetine bağlantıyı korurken güvenliği aşılmış cihazın ağ bağlantısını keser.
 

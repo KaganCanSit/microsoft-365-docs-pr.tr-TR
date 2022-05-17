@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Duyarlılık etiketi oluşturduğunuzda, dosyalara ve e-postalara otomatik olarak bir etiket atayabilir veya kullanıcılardan önerdiğiniz etiketi seçmelerini isteyebilirsiniz.
-ms.openlocfilehash: 69a36789e4143e3e8852976eb5e41c12ab6872f8
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: b1a364fc6053483a05d0ea055000b863b31a94cf
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65287232"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65438037"
 ---
 # <a name="apply-a-sensitivity-label-to-content-automatically"></a>İçeriğe otomatik olarak bir hassasiyet etiketi uygulama
 
@@ -31,7 +31,7 @@ ms.locfileid: "65287232"
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 > [!TIP]
-> Veri eşlemesine otomatik olarak duyarlılık etiketi uygulama hakkında bilgi için bkz. [Microsoft Purview Veri Haritası'nda etiketleme](/azure/purview/create-sensitivity-label).
+> Veri eşlemesine otomatik olarak duyarlılık etiketi uygulama hakkında bilgi için bkz. [Microsoft Purview Veri Eşlemesi'nde etiketleme](/azure/purview/create-sensitivity-label).
 
 Duyarlılık etiketi oluşturduğunuzda, belirttiğiniz koşullarla eşleştiğinde bu etiketi dosyalara ve e-postalara otomatik olarak atayabilirsiniz.
 
@@ -67,7 +67,7 @@ Microsoft 365 içeriğine otomatik olarak duyarlılık etiketi uygulamak için i
     - Kiracınızda günde en fazla 25.000 otomatik olarak etiketlenmiş dosya.
     - Her biri ayrı ayrı belirtildiğinde en fazla 100 siteyi (SharePoint veya OneDrive) hedefleyen kiracı başına en fazla 100 otomatik etiketleme ilkesi. Tüm siteleri de belirtebilirsiniz ve bu yapılandırma en fazla 100 siteden muaf tutulur.
     - Hem simülasyon modu hem de etiketlerin uygulandığı durumlarda, değiştirme, değiştirme ve tarih için mevcut değerler otomatik etiketleme ilkelerinin bir sonucu olarak değiştirilmez.
-    - Etiket şifreleme uyguladığında [, Rights Management veren ve Rights Management sahibi](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) dosyayı en son değiştiren hesaptır. Bu hesap artık Azure Active Directory içinde değilse, bu değerler ayarlanamadığından etiket uygulanmaz.
+    - Etiket şifreleme uyguladığında[, Rights Management veren ve Rights Management sahibi](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) dosyayı son değiştiren hesaptır. Bu hesap artık Azure Active Directory içinde değilse, bu değerler ayarlanamadığından etiket uygulanmaz.
 
     Exchange için otomatik etiketlemeye özgü:
     
@@ -77,7 +77,7 @@ Microsoft 365 içeriğine otomatik olarak duyarlılık etiketi uygulamak için i
     - IRM şifrelemesi uygulayan Exchange posta akışı kurallarınız veya Microsoft Purview Veri Kaybı Önleme (DLP) ilkeleriniz varsa: İçerik bu kurallar veya ilkeler ve otomatik etiketleme ilkesi tarafından tanımlandığında etiket uygulanır. Bu etiket şifreleme uygularsa, Exchange posta akışı kuralları veya DLP ilkelerindeki IRM ayarları yoksayılır. Ancak bu etiket şifreleme uygulamazsa, etikete ek olarak posta akışı kurallarından veya DLP ilkelerinden gelen IRM ayarları da uygulanır.
     - Etiketi olmayan IRM şifrelemesi olan e-posta, otomatik etiketleme kullanılarak eşleşme olduğunda herhangi bir şifreleme ayarına sahip bir etiketle değiştirilir.
     - Otomatik etiketleme koşullarınızla eşleşme olduğunda gelen e-posta etiketlenmiştir. Bu etiket [şifreleme](encryption-sensitivity-labels.md) için yapılandırılmışsa, gönderen kuruluşunuzdan geldiğinde bu şifreleme her zaman uygulanır. Varsayılan olarak, gönderen kuruluşunuzun dışındayken bu şifreleme uygulanmaz, ancak **e-posta için Ek ayarlar** yapılandırılarak ve bir Rights Management sahibi belirtilerek uygulanabilir.
-    - Etiket şifreleme uyguladığında, gönderen kendi kuruluşunuzdan olduğunda e-postayı gönderen kişi [Rights Management veren ve Rights Management sahibidir](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) . Gönderen kuruluşunuzun dışındayken, ilkeniz tarafından etiketlenen ve şifrelenen gelen e-posta için bir Rights Management sahibi belirtebilirsiniz.
+    - Etiket şifreleme uyguladığında, gönderen kendi kuruluşunuzdan olduğunda e-postayı gönderen kişi Rights Management [veren ve Rights Management sahibidir](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner). Gönderen kuruluşunuzun dışındayken, gelen e-posta için ilkeniz tarafından etiketlenen ve şifrelenen bir Rights Management sahibi belirtebilirsiniz.
     - Etiket [dinamik işaretler](sensitivity-labels-office-apps.md#dynamic-markings-with-variables) uygulamak üzere yapılandırılmışsa, gelen e-posta için bu yapılandırmanın kuruluşunuz dışındaki kişilerin adlarının görüntülenmesine neden olabileceğini unutmayın.
 
 ## <a name="compare-auto-labeling-for-office-apps-with-auto-labeling-policies"></a>otomatik etiketleme ilkeleriyle Office uygulamaları için otomatik etiketlemeyi karşılaştırma
@@ -100,7 +100,7 @@ Microsoft 365 içeriğine otomatik olarak duyarlılık etiketi uygulamak için i
 |Başka bir kuruluştan gönderilen e-postalar için Rights Management sahibi atama |Hayır |Evet|
 |E-postalar için, aynı veya daha düşük önceliğe sahip mevcut etiketi değiştirin |Hayır |Evet (yapılandırılabilir)|
 
-\* Arka uç Azure bağımlılığı nedeniyle otomatik etiketleme şu anda tüm bölgelerde kullanılamamaktadır. Kiracınız bu işlevselliği destekleyemiyorsa, **Otomatik etiketleme** sekmesi Microsoft Purview uyumluluk portalında görünmez. Daha fazla bilgi için bkz. [Ülkeye göre Azure bağımlılığı kullanılabilirliği](/troubleshoot/azure/general/dependency-availability-by-country).
+\* Arka uç Azure bağımlılığı nedeniyle otomatik etiketleme şu anda tüm bölgelerde kullanılamamaktadır. Kiracınız bu işlevi destekleyemiyorsa **Otomatik etiketleme** sekmesi Microsoft Purview uyumluluk portalı görünmez. Daha fazla bilgi için bkz. [Ülkeye göre Azure bağımlılığı kullanılabilirliği](/troubleshoot/azure/general/dependency-availability-by-country).
 
 ## <a name="how-multiple-conditions-are-evaluated-when-they-apply-to-more-than-one-label"></a>Birden çok etikete uygulandığında birden çok koşul nasıl değerlendirilir?
 
@@ -126,7 +126,7 @@ Otomatik etiketlemenin var olan bir etiketi geçersiz kılıp geçersiz kılmaya
 - Otomatik etiketleme, otomatik olarak uygulanan [düşük öncelikli duyarlılık etiketinin](sensitivity-labels.md#label-priority-order-matters) yerini alır, ancak daha yüksek öncelikli bir etiketi değiştirmez.
     
     > [!TIP]
-    > Örneğin, Microsoft Purview uyumluluk portalında listenin en üstündeki duyarlılık etiketi 0 sipariş numarasıyla (öncelik) **Genel** olarak, listenin en altındaki duyarlılık etiketi ise sipariş numarası (öncelik 4) ile **Çok Gizli** olarak adlandırılır. **Çok Gizli** etiketi **Genel** etiketi geçersiz kılabilir, ancak tersine geçersiz kılabilir.
+    > Örneğin, Microsoft Purview uyumluluk portalı listenin en üstündeki duyarlılık etiketi 0 sipariş numarasıyla (öncelik) **Genel** olarak, listenin en altındaki duyarlılık etiketi ise sipariş numarası (öncelik 4) ile **Çok Gizli** olarak adlandırılır. **Çok Gizli** etiketi **Genel** etiketi geçersiz kılabilir, ancak tersine geçersiz kılabilir.
 
 Yalnızca e-posta otomatik etiketleme ilkeleri için, nasıl uygulandığından bağımsız olarak mevcut duyarlılık etiketini her zaman geçersiz kılmak için bir ayar seçebilirsiniz.
 
@@ -229,6 +229,23 @@ Azure Information Protection birleşik etiketleme istemcisine özgü:
 
 - Belgelerde ve e-postalarda gövde metninde ve üst bilgi ve alt bilgilerde hassas bilgiler algılanabilir, ancak konu satırında veya e-posta eklerinde algılanamaz.
 
+### <a name="convert-your-label-settings-into-an-auto-labeling-policy"></a>Etiket ayarlarınızı otomatik etiketleme ilkesine dönüştürme
+
+> [!NOTE]
+> Bu seçenek aşamalı olarak kullanıma sunulacaktır.
+
+Etiket, yapılandırılan koşullar için hassas bilgi türleri içeriyorsa, etiket oluşturma veya düzenleme işleminin sonunda aynı otomatik etiketleme ayarlarını temel alan bir otomatik etiketleme ilkesini otomatik olarak oluşturma seçeneğini görürsünüz.
+
+Otomatik etiketleme ilkeleri eğitilebilir sınıflandırıcıları desteklemediğinden:
+
+- Etiket koşulları yalnızca eğitilebilir sınıflandırıcılar içeriyorsa otomatik olarak bir otomatik etiketleme ilkesi oluşturma seçeneğini görmezsiniz.
+
+- Etiket koşulları eğitilebilir sınıflandırıcılar ve duyarlılık bilgisi türleri içeriyorsa, yalnızca hassas bilgi türleri için bir otomatik etiketleme ilkesi oluşturulur. 
+
+İlkeyi sıfırdan oluşturduysanız el ile seçmeniz gereken değerleri otomatik olarak doldurarak sizin için otomatik olarak bir otomatik etiketleme ilkesi oluşturulsa da, kaydedilmeden önce değerleri görüntülemeye ve düzenlemeye devam edebilirsiniz.
+
+Varsayılan olarak, SharePoint, OneDrive ve Exchange için tüm konumlar otomatik etiket ilkesine dahil edilir ve ilke kaydedildiğinde [simülasyon modunda](#learn-about-simulation-mode) çalışır. otomatik etiketlemenin SharePoint ve OneDrive içindeki içeriğe uygulanması için önkoşullardan biri olan [SharePoint ve OneDrive Office dosyaları için duyarlılık etiketlerini etkinleştirdiğinizden](sensitivity-labels-sharepoint-onedrive-files.md) hiçbir denetim yoktur.
+
 ## <a name="how-to-configure-auto-labeling-policies-for-sharepoint-onedrive-and-exchange"></a>SharePoint, OneDrive ve Exchange için otomatik etiketleme ilkelerini yapılandırma
 
 Otomatik etiketleme ilkelerini yapılandırmadan önce önkoşulların farkında olduğunuzdan emin olun.
@@ -280,7 +297,7 @@ Son olarak, simülasyon modunu kullanarak otomatik etiketleme ilkenizi çalışt
 
 ### <a name="creating-an-auto-labeling-policy"></a>Otomatik etiketleme ilkesi oluşturma
 
-1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalında</a> duyarlılık etiketlerine gidin:
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalı</a> duyarlılık etiketlerine gidin:
 
     - **Çözümleri** >  **Bilgi koruması**
 

@@ -21,12 +21,12 @@ search.appverid:
 description: BT bölümünü sizin için halleden bir abonelik hizmeti olan Microsoft 365 İş Ekstra hakkında bilgi edinin.
 feedback_system: None
 ms.date: 10/20/2021
-ms.openlocfilehash: 48644f2b823c441ce6db8b10eac6213699792b9c
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 00763cd0438a28adbf98b60afed4a463086a2625
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64934191"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65435821"
 ---
 # <a name="microsoft-365-business-premium"></a>Microsoft 365 Business Premium
 
@@ -46,7 +46,7 @@ Microsoft 365 İş Ekstra kaydolduğunda, Microsoft 365 İş Standart ile elde e
 | Tehditlere karşı korunun | Microsoft 365 İş Ekstra, gelişmiş tehdit koruma özellikleriyle tehditlere karşı korunmanıza yardımcı olur. Bu özellikler güvenli ekleri ve güvenli bağlantı korumasını içerir. <br/><br/>Ek güvenlik ve tehdit koruması özellikleri için [İş için Microsoft Defender genel bakış](../../security/defender-business/mdb-overview.md) (önizleme!) konusunu gözden geçirin. |
 | İş verilerinin güvenliğini sağlama | Kişisel verileriniz, PIN erişimi ve kısıtlı kopyalama ve kaydetme ile kişisel cihazlarda korunur. Hassas bilgilere yalnızca yetkili kişilerin erişebildiğinden emin olmak için bilgi koruması da ekleyebilirsiniz. |
 | Cihazlarınızın güvenliğini sağlama | Kopyalama ve yapıştırma gibi mobil erişimi kısıtlayarak cihazlardaki iş dosyalarınızı koruyabilirsiniz. Ayrıca, kayıtlı mobil cihazlardan iş verilerini kaybolur veya çalınırsa seçerek de silebilirsiniz. |
-| Ek güvenlik özellikleri | Microsoft 365 İş Ekstra'deki gelişmiş özellikler, işletmenizi siber tehditlere karşı korumanıza ve hassas bilgileri korumanıza yardımcı olur. Bu özellikler arasında Office 365 için Microsoft Defender Plan 1, Microsoft Purview Veri Kaybı Önleme ilkeleri (DLP), Exchange Online arşivleme, Azure Information Protection ve Intune yer alır. |
+| Ek güvenlik özellikleri | Microsoft 365 İş Ekstra'deki gelişmiş özellikler, işletmenizi siber tehditlere karşı korumanıza ve hassas bilgileri korumanıza yardımcı olur. Özellikler arasında Office 365 için Microsoft Defender Plan 1, Microsoft Purview Veri Kaybı Önleme ilkeleri (DLP), Exchange Online arşivleme, Azure Information Protection ve Intune. |
 
 Microsoft Business Premium'niz varsa, güvenliği ayarlamanın ve güvenli bir şekilde işbirliği yapmaya başlamanın en hızlı yolu şu kitaplıktaki yönergeleri izlemektir: [küçük işletmeler ve kampanyalar için Microsoft 365](../../business-premium/index.md). Bu kılavuz, tüm küçük işletme müşterilerini gelişmiş bilgisayar korsanları tarafından başlatılan siber tehditlere karşı korumak için Microsoft Savunma Demokrasisi ekibiyle ortaklaşa geliştirilmiştir. 
 

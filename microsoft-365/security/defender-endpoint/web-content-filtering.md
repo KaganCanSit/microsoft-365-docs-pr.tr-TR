@@ -1,13 +1,13 @@
 ---
 title: Web içeriği filtreleme
-description: web sitelerine erişimi içerik kategorilerine göre izlemek ve düzenlemek için Pertahanan Microsoft untuk Titik Akhir'de web içeriği filtrelemeyi kullanın.
+description: web sitelerine erişimi içerik kategorilerine göre izlemek ve düzenlemek için Uç Nokta için Microsoft Defender'de web içeriği filtrelemeyi kullanın.
 keywords: web koruması, web tehdit koruması, web'e göz atma, izleme, raporlar, kartlar, etki alanı listesi, güvenlik, kimlik avı, kötü amaçlı yazılım, yararlanma, web siteleri, ağ koruması, Edge, Internet Explorer, Chrome, Firefox, web tarayıcısı
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
-ms.author: dansimp
-author: dansimp
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -15,58 +15,65 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 01000e08153e96042e6873dc45fcb0627ea82e47
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: caee6f216ad5006eb31750d2c5cbd0d9e47f21ce
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64782995"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65438937"
 ---
 # <a name="web-content-filtering"></a>Web içeriği filtreleme
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Şunlar için geçerlidir:**
-- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [İş için Microsoft Defender](../defender-business/mdb-overview.md)
 
 > [!TIP]
-> Pertahanan Microsoft untuk Titik Akhir mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-main-abovefoldlink&rtc=1)
+> Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-main-abovefoldlink&rtc=1)
 
-Web içeriği filtreleme, [Pertahanan Microsoft untuk Titik Akhir'daki Web koruma](web-protection-overview.md) özelliklerinin bir parçasıdır. Kuruluşunuzun web sitelerine erişimi içerik kategorilerine göre izlemesine ve düzenlemesine olanak tanır. Bu web sitelerinin çoğu kötü amaçlı olmasa da uyumluluk düzenlemeleri, bant genişliği kullanımı veya diğer endişeler nedeniyle sorunlu olabilir.
+## <a name="what-is-web-content-filtering"></a>Web içeriği filtreleme nedir?
+
+Web içeriği filtreleme, Uç Nokta için Microsoft Defender ve [İş için Microsoft Defender'daki Web koruma](web-protection-overview.md) özelliklerinin bir parçasıdır. Web içeriği filtreleme, kuruluşunuzun web sitelerine erişimi içerik kategorilerine göre izlemesine ve düzenlemesine olanak tanır. Bu web sitelerinin çoğu (kötü amaçlı olmasalar bile) uyumluluk düzenlemeleri, bant genişliği kullanımı veya diğer endişeler nedeniyle sorunlu olabilir.
 
 Belirli kategorileri engellemek için cihaz gruplarınız genelinde ilkeleri yapılandırın. Kategorinin engellenmesi, belirtilen cihaz grupları içindeki kullanıcıların kategoriyle ilişkili URL'lere erişmesini engeller. Engellenmeyen tüm kategoriler için URL'ler otomatik olarak denetlenür. Kullanıcılarınız URL'lere kesinti olmadan erişebilir ve daha özel bir ilke kararı oluşturmaya yardımcı olmak için erişim istatistiklerini toplarsınız. Görüntüledikleri sayfadaki bir öğe engellenen bir kaynağa çağrı yapıyorsa kullanıcılarınız bir engelleme bildirimi görür.
 
-Web içeriği filtreleme, Windows Defender SmartScreen (Microsoft Edge) ve Ağ Koruması (Chrome, Firefox, Brave ve Opera) tarafından gerçekleştirilen bloklarla büyük web tarayıcılarında kullanılabilir. Tarayıcı desteği hakkında daha fazla bilgi için önkoşullar bölümüne bakın.
+Web içeriği filtreleme, Windows Defender SmartScreen (Microsoft Edge) ve Ağ Koruması (Chrome, Firefox, Brave ve Opera) tarafından gerçekleştirilen bloklarla büyük web tarayıcılarında kullanılabilir. Tarayıcı desteği hakkında daha fazla bilgi için [önkoşullar](#prerequisites) bölümüne bakın.
 
 ## <a name="benefits-of-web-content-filtering"></a>Web içeriği filtrelemenin avantajları
 
 - Kullanıcıların, ister şirket içinde ister dışarıda gezinirken engellenen kategorilerdeki web sitelerine erişmesi engellenir.
-
-- Güvenlik ekibiniz, [Pertahanan Microsoft untuk Titik Akhir rol tabanlı erişim denetimi ayarlarında](/microsoft-365/security/defender-endpoint/rbac) tanımlanan cihaz gruplarını kullanarak kullanıcı gruplarına kolayca ilke dağıtabilir.
-
 - Güvenlik ekibiniz, gerçek bloklar ve web kullanımı üzerinde görünürlük ile web raporlarına aynı merkezi konumda erişebilir.
+- Uç Nokta için Defender kullanıyorsanız, güvenlik ekibiniz [Uç Nokta için Microsoft Defender rol tabanlı erişim denetimi ayarlarında](/microsoft-365/security/defender-endpoint/rbac) tanımlanan cihaz gruplarını kullanarak kullanıcı gruplarına kolayca ilke dağıtabilir.
+- İş için Defender kullanıyorsanız, tüm kullanıcılara uygulanacak bir web içeriği filtreleme ilkesi tanımlayabilirsiniz. 
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Bu özelliği denemeden önce aşağıdaki gereksinimleri karşıladığınızdan emin olun:
+Bu özelliği denemeden önce aşağıdaki tabloda açıklanan gereksinimleri karşıladığınızdan emin olun:
 
-- Aboneliğiniz aşağıdakilerden birini içerir: Windows 10 Enterprise E5, Microsoft 365 E5, Microsoft 365 E5 Güvenlik, Microsoft 365 E3 veya Tek başına lisans Pertahanan Microsoft untuk Titik Akhir. 
-
-- <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalına</a> erişiminiz vardır.
-
-- Kuruluşunuzun cihazları Windows 10 Yıldönümü Güncelleştirmesi (sürüm 1607) veya üzerini çalıştırıyor veya [en son virüsten koruma/kötü amaçlı yazılımdan koruma güncelleştirmeleriyle](manage-updates-baselines-microsoft-defender-antivirus.md) Windows 11.
-
-- Windows Defender SmartScreen ve Ağ Koruması kuruluşunuzun cihazlarında etkinleştirilir.
+| Gereksinim | Açıklama |
+|:---|:---|
+| Abonelik | Aboneliğiniz aşağıdakilerden birini içermelidir:<br/>- [Windows 10/11 Enterprise E5](/windows/deployment/deploy-enterprise-licenses)<br/>- [Microsoft 365 E5](https://www.microsoft.com/microsoft-365/enterprise/e5?activetab=pivot%3aoverviewtab)<br/>- Microsoft 365 E5 Güvenlik<br/>- [Microsoft 365 E3](https://www.microsoft.com/microsoft-365/enterprise/e3?activetab=pivot%3aoverviewtab)<br/>- [Uç Nokta için Microsoft Defender Plan 1 veya Plan 2](../defender/eval-defender-endpoint-overview.md)<br/>- [İş için Microsoft Defender](../defender-business/mdb-overview.md) |
+| Portal erişimi | <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalına</a> erişiminiz olmalıdır. |
+| İşletim sistemi | Kuruluşunuzun cihazları [en son virüsten koruma/kötü amaçlı yazılımdan koruma güncelleştirmeleriyle](manage-updates-baselines-microsoft-defender-antivirus.md) aşağıdaki işletim sistemlerinden birini çalıştırıyor olmalıdır: <br/>- Windows 11<br/>- Windows 10 Yıldönümü Güncelleştirmesi (sürüm 1607) veya üzeri |
+| İlgili koruma | [Windows Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) ve [ağ koruması](network-protection.md) kuruluşunuzun cihazlarında etkinleştirilmelidir. |
 
 ## <a name="data-handling"></a>Veri işleme
 
-Veriler, [Pertahanan Microsoft untuk Titik Akhir veri işleme ayarlarınızın](data-storage-privacy.md) bir parçası olarak seçilen bölgede depolanır. Verileriniz o bölgedeki veri merkezinden ayrılmaz. Ayrıca verileriniz, veri sağlayıcılarımız da dahil olmak üzere hiçbir üçüncü tarafla paylaşılmaz.
+Veriler, [Uç Nokta için Microsoft Defender veri işleme ayarlarınızın](data-storage-privacy.md) bir parçası olarak seçilen bölgede depolanır. Verileriniz o bölgedeki veri merkezinden ayrılmaz. Ayrıca verileriniz, veri sağlayıcılarımız da dahil olmak üzere hiçbir üçüncü tarafla paylaşılmaz.
 
 ## <a name="turn-on-web-content-filtering"></a>Web içeriği filtrelemeyi açma
 
-<a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalında</a> sol taraftaki gezinti bölmesinde **Uç Noktalar** \> **Genel** \> **Gelişmiş** **Özellikler'i Ayarlar** \> seçin. **Web içeriği filtreleme** girdisini görene kadar aşağı kaydırın. İki durumlu düğmeyi **Açık** ve **Kaydet tercihleri** olarak değiştirin.
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalına</a> gidin ve oturum açın.
+
+2. Gezinti bölmesinde **Uç Noktalar** \> **Genel** \> **Gelişmiş** **Özellikler'i Ayarlar** \> seçin. 
+
+3. **Web içeriği filtrelemeyi görene** kadar aşağı kaydırın. 
+
+4. İki durumlu düğmeyi **Açık** konuma getirin ve ardından **Tercihleri kaydet'i** seçin.
 
 ### <a name="configure-web-content-filtering-policies"></a>Web içeriği filtreleme ilkelerini yapılandırma
 
@@ -169,10 +176,12 @@ Yeni ilke eklemek için şu adımları izleyin:
 
 4. İlke kapsamını belirtin. İlkenin nereye uygulanacağını belirtmek için cihaz gruplarını seçin. Yalnızca seçili cihaz gruplarındaki cihazların seçilen kategorilerdeki web sitelerine erişmesi engellenir.
 
+   > [!IMPORTANT]
+   > İş için Defender kullanıyorsanız kapsam belirleme geçerli değildir. Bu adımı atlayın ve 5. adıma geçin.
+
 5. Özeti gözden geçirin ve ilkeyi kaydedin. İlke yenilemesinin seçili cihazlarınıza uygulanması 2 saat kadar sürebilir.
 
 > [!NOTE]
->
 > - Bir cihaz grubunda herhangi bir kategori seçmeden bir ilke dağıtabilirsiniz. Bu eylem, engelleme ilkesi oluşturmadan önce kullanıcı davranışını anlamanıza yardımcı olmak için yalnızca denetim ilkesi oluşturur.
 > - Bir ilkeyi kaldırıyorsanız veya cihaz gruplarını aynı anda değiştiriyorsanız, bu durum ilke dağıtımında gecikmeye neden olabilir.
 > - "Kategorilere Ayrılmamış" kategorisinin engellenmesi beklenmeyen ve istenmeyen sonuçlara yol açabilir.
@@ -245,7 +254,7 @@ Yalnızca cihazınızın işletim sistemi yapılandırması Sunucu (**cmd** \> *
 
 Azure Sanal Masaüstü çok oturumlu konaklarında yalnızca Microsoft Edge desteklenir ve Ağ Koruması Windows 10 desteklenmez.
 
-Ağ Koruması şu anda SSL incelemesini desteklememektedir ve bu da normalde engellenecek bazı sitelerin Web İçeriği Filtrelemesi tarafından izin vermesine neden olabilir. TLS el sıkışması gerçekleştikten ve belirli yeniden yönlendirmelerin ayrıştırılamamasından sonra şifrelenmiş trafiğin görünür olmaması nedeniyle sitelere izin verilir.  Bu, bazı web tabanlı posta oturum açma sayfalarından posta kutusu sayfasına yeniden yönlendirmeleri içerir. Kabul edilen bir geçici çözüm olarak, hiçbir kullanıcının siteye erişemediğinden emin olmak için oturum açma sayfası için özel bir blok göstergesi oluşturabilirsiniz. Bunun aynı web sitesiyle ilişkili diğer hizmetlere erişimini engelleyebileceğini unutmayın. 
+Ağ Koruması şu anda SSL incelemesini desteklememektedir ve bu da normalde engellenecek bazı sitelerin Web İçerik Filtrelemesi tarafından izin vermesine neden olabilir. TLS el sıkışması gerçekleştikten ve belirli yeniden yönlendirmelerin ayrıştırılamamasından sonra şifrelenmiş trafiğin görünür olmaması nedeniyle sitelere izin verilir.  Bu, bazı web tabanlı posta oturum açma sayfalarından posta kutusu sayfasına yeniden yönlendirmeleri içerir. Kabul edilen bir geçici çözüm olarak, hiçbir kullanıcının siteye erişemediğinden emin olmak için oturum açma sayfası için özel bir blok göstergesi oluşturabilirsiniz. Bunun aynı web sitesiyle ilişkili diğer hizmetlere erişimini engelleyebileceğini unutmayın. 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -24,22 +24,22 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: 1dbcf12f-a9de-4d1d-b0b3-a227f8a736d8
-description: Kullanıcıya, başka bir kullanıcının posta kutusuna erişme hakkı verir ve bu da kullanıcının diğer kullanıcının posta kutusundan e-posta okuma ve gönderme izni verir.
-ms.openlocfilehash: 82a254081eba2e9b6f4ef83f952b07c743dee2c1
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+description: Microsoft 365 kullanıcıya başka bir kullanıcının posta kutusuna erişme hakkı verin. Bu, kullanıcının diğer kullanıcının posta kutusundan e-posta okumasına ve göndermesine olanak tanır.
+ms.openlocfilehash: 80c316f0615c13d5f46410582abe2ec3516c8a8a
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63011840"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65436723"
 ---
-# <a name="give-mailbox-permissions-to-another-user---admin-help"></a>Başka bir kullanıcıya posta kutusu izinleri verme - Yönetici Yardımı
+# <a name="give-mailbox-permissions-to-another-microsoft-365-user---admin-help"></a>Başka bir Microsoft 365 kullanıcıya posta kutusu izinleri verme - Yönetici yardımı
 
 Yönetici olarak, bir kullanıcıya başka bir kullanıcının posta kutusuna erişim hakkı sağlanması için şirket gereksinimleriniz olabilir. Örneğin, bir asistanın müdürünün posta kutusundan e-posta göndermesini ve okumasını sağlamak ya da kullanıcılarınızdan birine başka bir kullanıcı adına e-posta gönderme olanağı vermek isteyebilirsiniz. Bu konu başlığı altında bunu nasıl yapacağınız gösterilir.
   
 Paylaşılan posta kutularını oluşturma ve yönetme hakkında bilgi arıyorsanız, [Paylaşılan posta kutusu oluşturma](../email/create-a-shared-mailbox.md) konusunu gözden geçirin.
 
 > [!TIP]
-> Bu konudaki adımlarda yardıma ihtiyacınız varsa, [Microsoft küçük işletme uzmanıyla çalışmayı göz önünde bulundurabilirsiniz](https://go.microsoft.com/fwlink/?linkid=2186871). İş Yardımı ile, işe alımtan günlük kullanıma kadar işlerinizi büyüttükçe siz ve çalışanlarınız küçük işletme uzmanlarına 24 saat erişim elde ediyor.
+> Bu konuda verilen adımlarla ilgili yardıma ihtiyacınız varsa[bir Microsoft küçük işletme uzmanıyla çalışmayı](https://go.microsoft.com/fwlink/?linkid=2186871) göz önünde bulundurun. İşletme Yardımı ile, işletmenizi büyütürken işe alımdan gündelik kullanıma kadar her aşamada siz ve çalışanlarınız günün 24 saati küçük işletme uzmanlarına erişebilirsiniz.
     
 ## <a name="looking-to-set-up-mailbox-permissions"></a>Posta kutusu izinlerini ayarlamak mı istiyorsunuz?
 
@@ -64,7 +64,7 @@ Siz izinleri ayarladıktan sonra, değişiklikleri sisteme yayılması ve geçer
 Size erişim verildikten sonra, posta kutusuna erişmenizin birkaç farklı yolu vardır. Bu konuda yardım için şu makaleye bakın: [Başka bir kişinin posta kutusuna erişme](https://support.microsoft.com/office/A909AD30-E413-40B5-A487-0EA70B763081).
 
 > [!NOTE]
-> İzinler yalnızca geçerli kuruluş kiracısı içinde ayarlanır. Kiracı kullanıcılarının dışında, posta kutusu izinlerini ayarlamak mümkün değildir.
+> İzinler yalnızca geçerli kuruluş kiracısı içinde ayarlanabilir. Kiracı kullanıcılarının dışında posta kutusu izinleri ayarlamak mümkün değildir.
   
 ## <a name="send-email-from-another-users-mailbox"></a>Başka bir kullanıcının posta kutusundan e-posta gönderme
 
@@ -116,7 +116,7 @@ Size erişim verildikten sonra, posta kutusuna erişmenizin birkaç farklı yolu
 
 
 > [!NOTE]
-> **Okuma** ve **Yönetme** izinleri, yönetim **merkezinde** verilen Tam Erişim <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange olarak adlandırılan bir izindir</a>. Bu izin, atanan kullanıcı posta kutusunun okunma ve izin atanan kullanıcı posta kutusunda e-postaları yönetme izni verir. Tam Erişim izni, Adına **gönderme** veya **Gönderme izinleri verilmesine neden**  olmaz.
+> **okuma** ve **yönetme** izinleri <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">, Exchange yönetim merkezinde</a> verildiğinde **Tam Erişim** izni olarak adlandırılır. Bu izin, atanan kullanıcı posta kutusunun okunmasını ve iznin atandığı kullanıcı posta kutusunda e-postaları yönetmesini sağlar. Tam Erişim izni, **Farklı Gönder** veya **Adına gönder**  izinleri vermez.
 
 ::: moniker-end
 

@@ -1,5 +1,5 @@
 ---
-title: 6. Adım - Eski bir Microsoft 365 lisansını kaldırma ve silme
+title: 6. Adım - Eski bir çalışandan Microsoft 365 lisansını kaldırma ve silme
 f1.keywords:
 - NOCSH
 ms.author: kwekua
@@ -24,37 +24,37 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Eski bir çalışanın lisansını Microsoft 365 için bu adımları izleyin.
-ms.openlocfilehash: b724e8d65c990396ad376544de86d4ffd0cb5fdc
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Eski bir çalışanın Microsoft 365 lisansını kaldırabilir ve aboneliğinizden silebilir veya lisansı başka bir kullanıcıya atayabilirsiniz.
+ms.openlocfilehash: 95f95403a316e176f91c7f120ce5a26487a7a59f
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63315169"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65436239"
 ---
-# <a name="step-6---remove-and-delete-the-microsoft-365-license-from-a-former-employee"></a>6. Adım - Eski bir Microsoft 365 lisansını kaldırma ve silme
+# <a name="step-6---remove-and-delete-the-microsoft-365-license-from-a-former-employee"></a>6. Adım - Eski bir çalışandan Microsoft 365 lisansını kaldırma ve silme
 
-Birisi organizasyondan ayrıldığında lisans için ödeme yapmak istemiyorsanız bu kişinin Microsoft 365 lisansını kaldırmanız ve sonra aboneliğiniz üzerinden silmeniz gerekir. Silmedığınız bir lisansı başka bir kullanıcıya attebilirsiniz.
+Birisi kuruluşunuzdan ayrıldıktan sonra lisans için ödeme yapmak istemiyorsanız, Microsoft 365 lisansını kaldırmanız ve ardından aboneliğinizden silmeniz gerekir. Silmezseniz başka bir kullanıcıya lisans atayabilirsiniz.
 
-Posta kutusuna uyumluluk veya yasal nedenlerle eBulma izinleri verilmiş yetkili kişiler tarafından erişilebilir olması gerekirse, posta kutusuna bir Exchange Online Plan 2 lisansı (veya başka bir kullanıcıyla birlikte Exchange Online Plan 1 lisansı) atan Exchange Online Arşivleme  eklenti lisansını kullanabilirsiniz. Böylelikle, posta kutusu silinmeden önce posta kutusuna tutma uygulanabilir. Kullanıcı hesabı silindikten sonra, Exchange Online hesabıyla ilişkilendirilmiş tüm lisanslar yeni bir kullanıcıya atanacak.
+Posta kutusuna uyumluluk veya yasal nedenlerle eBulma izinleri verilmiş yetkili kişiler tarafından erişilmesi gerekiyorsa, Exchange Online Plan 2 lisansına (veya Exchange Online Arşivleme sahip Exchange Online Plan 1 lisansına) atanması gerekir  eklenti lisansı) seçerek saklamanın silinmeden önce posta kutusuna uygulanabilmesini sağlar. Kullanıcı hesabı silindikten sonra, kullanıcı hesabıyla ilişkili tüm Exchange Online lisansları yeni bir kullanıcıya atanabilecektir.
   
-Lisansı kaldırdığınızda, bu kullanıcının tüm verileri 30 gün süreyle tutulur. Verilere [erişebilir](get-access-to-and-back-up-a-former-user-s-data.md) veya kullanıcı geri dönerse hesabı [geri yükleyebilirsiniz](restore-user.md). 30 gün sonra, kullanıcının tüm verileri (SharePoint Online'da depolanan belgeler dışında) Microsoft 365 kalıcı olarak silinir ve kurtarılamaz.
+Lisansı kaldırdığınızda, bu kullanıcının tüm verileri 30 gün süreyle tutulur. Verilere [erişebilir](get-access-to-and-back-up-a-former-user-s-data.md) veya kullanıcı geri dönerse hesabı [geri yükleyebilirsiniz](restore-user.md). 30 gün sonra, kullanıcının tüm verileri (SharePoint Online'da depolanan belgeler hariç) Microsoft 365 kalıcı olarak silinir ve kurtarılamaz.
 
 1. Yönetici merkezinde, **Kullanıcılar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">Etkin kullanıcılar</a> sayfasına gidin.
-2. Engellemek istediğiniz çalışanın adını seçin ve sonra Lisanslar ve **Uygulamalar sekmesini** seçin.
-3. Kaldırmak istediğiniz lisansların onay kutularını temizleyin ve ardından Değişiklikleri **kaydet'i seçin**.
+2. Engellemek istediğiniz çalışanın adını seçin ve ardından **Lisanslar ve Uygulamalar** sekmesini seçin.
+3. Kaldırmak istediğiniz lisansların onay kutularını temizleyin ve değişiklikleri **kaydet'i** seçin.
 
-**Başka birini işe alıncaya kadar ödeme yaptığınız lisans** sayısını azaltmak için aşağıdaki adımları izleyin:
+Başka bir kişiyi işe **alana kadar ödediğiniz lisans sayısını azaltmak için** aşağıdaki adımları uygulayın:
 
-1. Yönetim merkezinde Ürünlerinizi Faturalama **sayfasına** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">gidin</a> ve **Ürünler sekmesini seçin** .
+1. Yönetim merkezinde <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">Ürünlerinizi</a> **Faturalama** \> sayfasına gidin ve **Ürünler** sekmesini seçin.
 2. Lisansları kaldırmak istediğiniz aboneliği seçin.
-3. Ayrıntılar sayfasında Lisansları **kaldır'ı seçin**.
-4. Lisansları **kaldır** bölmesindeki Yeni miktar'ın altında, Toplam lisanslar  kutusuna bu abonelik için istediğiniz toplam lisans sayısını girin. Örneğin, 25 lisansınız varsa ve bunlardan birini kaldırmak için 24 girin.
+3. Ayrıntılar sayfasında **Lisansları kaldır'ı** seçin.
+4. **Lisansları kaldır** bölmesindeki Yeni miktar'ın altında, **Toplam lisanslar** kutusuna bu abonelik için istediğiniz toplam lisans sayısını girin. Örneğin, 25 lisansınız varsa ve bunlardan birini kaldırmak istiyorsanız 24 girin.
 5. **Kaydet**'i seçin.
 
-İşletmenize [başka bir](add-users.md) kişi eklerken, aynı anda yalnızca bir adımla lisans satın almak istenir!
+İşletmenize [başka bir kişi eklediğinizde](add-users.md) , tek bir adımla aynı anda lisans satın almanız istenir!
 
-Microsoft 365 İş için kullanıcı lisanslarını yönetme hakkında daha fazla bilgi için bkz. [Microsoft 365](../manage/assign-licenses-to-users.md) İş'te kullanıcılara lisans atama ve Microsoft 365 İş'te kullanıcılardan lisans [atamalarını iptal.](../manage/remove-licenses-from-users.md)
+İşletmeler için Microsoft 365 kullanıcı lisanslarını yönetme hakkında daha fazla bilgi için bkz. [İşletmeler için Microsoft 365'de kullanıcılara lisans atama ve İş için Microsoft 365](../manage/assign-licenses-to-users.md) [kullanıcıların lisanslarını kaldırma](../manage/remove-licenses-from-users.md).
   
 ## <a name="how-the-deleted-employee-account-affects-skype-for-business"></a>Silinen çalışan hesabının Skype Kurumsal üzerindeki etkisi
 
@@ -62,6 +62,6 @@ Kullanıcının lisansını Office 365'ten kaldırdığınızda, kullanıcıyla 
   
 Kullanıcı bir kuyruk grubunda yer alıyorsa, artık çağrı kuyruğu aracıları için uygun bir hedef olmaktan çıkar. Bu nedenle, kullanıcının çağrı kuyruğuyla ilişkilendirilmiş gruplardan da çıkarılmasını öneririz.
 
-## <a name="set-up-call-forwarding-to-people-in-your-organization"></a>Kuruluşta kişi arama iletmeyi ayarlama
+## <a name="set-up-call-forwarding-to-people-in-your-organization"></a>Kuruluşunuzdaki kişilere arama iletmeyi ayarlama
 
-Sonlandırılan çalışanın telefon numarası için arama iletmeyi ayarlamanız gerekirse, arama ilkelerinin altındaki arama iletme ayarı, gelen aramaların diğer kullanıcılara iletilmelerinin bulunduğu iletmeyi veya aynı anda başka bir kişiyi çaldırma ayarını da yapılandırabilirsiniz. Daha fazla bilgi için bkz[. Microsoft Teams](/microsoftteams/teams-calling-policy).
+Sonlandırılan çalışanın telefon numarası için arama iletmeyi ayarlamanız gerekiyorsa, arama ilkeleri altındaki arama iletme ayarı, gelen aramaların diğer kullanıcılara iletilebileceği veya aynı anda başka bir kişiyi çaldırabileceği iletmeyi ayarlayabilir. Daha fazla bilgi için bkz[. Microsoft Teams'de ilkeleri çağırma](/microsoftteams/teams-calling-policy).

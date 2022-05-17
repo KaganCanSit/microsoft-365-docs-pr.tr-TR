@@ -17,13 +17,13 @@ ms.custom:
 - AdminSurgePortfolio
 search.appverid:
 - MET150
-description: Basic Mobility ve Security, mobil cihazların güvenliğini sağlamanıza ve yönetmenize yardımcı olabilir.
-ms.openlocfilehash: 96deda323c6dedcae860811a1e538aaa0bffa25d
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+description: Basic Mobility ve Security ile yönetemezseniz, Microsoft 365 e-postaya Exchange ActiveSync uygulama erişimini engellemeniz gerekir.
+ms.openlocfilehash: 450d694e83b5044efb25adb918f38a124181481f
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65414854"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65435843"
 ---
 # <a name="manage-device-access-settings-in-basic-mobility-and-security"></a>Temel Mobilite ve Güvenlik'te cihaz erişim ayarlarını yönetme
 

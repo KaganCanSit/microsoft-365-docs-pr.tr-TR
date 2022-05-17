@@ -17,12 +17,12 @@ search.appverid:
 - MET150
 description: Hassas bilgi türleriyle tam olarak eşleşen veriler için hassas bilgi kaynağı tablosunu karma olarak ekleyin ve karşıya yükleyin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 0277a53b74359bdcac1de8fa6013082b991247f4
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: d3c45c618caad24084ee9c85410be886863dd733
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65417534"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65437645"
 ---
 # <a name="hash-and-upload-the-sensitive-information-source-table-for-exact-data-match-sensitive-information-types"></a>Tam veri eşleşmeli hassas bilgi türleri için hassas bilgi kaynak tablosu karması oluşturma ve karşıya yükleme
 
@@ -231,6 +231,9 @@ EdmUploadAgent.exe /SaveSchema /DataStoreName <schema name> /OutputDir <path to 
    ```dos
    EdmUploadAgent.exe /GetSession /DataStoreName <DataStoreName>
    ```
+
+> [!NOTE]
+> Karma ve karşıya yükleme işlemini ilk kez oluşturduktan sonra otomatikleştirmek için bkz. [Hassas bilgi kaynağı tablo dosyasıyla tam olarak eşleşen verilerinizi yenileme](sit-use-exact-data-refresh-data.md).
 
 ## <a name="next-step"></a>Sonraki Adım
 

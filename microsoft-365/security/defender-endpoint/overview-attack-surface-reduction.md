@@ -1,8 +1,8 @@
 ---
 title: Saldırı yüzeyini azaltmayı (ASR) anlama ve kullanma
 ms.reviewer: ''
-description: Pertahanan Microsoft untuk Titik Akhir saldırı yüzeyi azaltma özellikleri hakkında bilgi edinin.
-keywords: asr, saldırı yüzeyi azaltma, saldırı yüzeyi azaltma kuralları, Pertahanan Microsoft untuk Titik Akhir, microsoft defender, virüsten koruma, av, windows defender
+description: Uç Nokta için Microsoft Defender saldırı yüzeyi azaltma özellikleri hakkında bilgi edinin.
+keywords: asr, saldırı yüzeyi azaltma, saldırı yüzeyi azaltma kuralları, Uç Nokta için Microsoft Defender, microsoft defender, virüsten koruma, av, windows defender
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -18,13 +18,13 @@ ms.technology: mde
 ms.collection:
 - m365initiative-m365-defender
 - M365-security-compliance
-ms.date: 1/18/2022
-ms.openlocfilehash: 5c3724989db1bd8e6389b8a70ba591ce4e109390
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.date: 05/16/2022
+ms.openlocfilehash: ec39e02b48471857932a63ba19547ff2ad1b3390
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64787720"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65438109"
 ---
 # <a name="understand-and-use-attack-surface-reduction-capabilities"></a>Saldırı yüzeyi azaltma özelliklerini anlama ve kullanma
 
@@ -32,16 +32,16 @@ ms.locfileid: "64787720"
 
 **Şunlar için geçerlidir:**
 
-- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Virüsten Koruma
 
 **Platform**
 - Windows
 
 > [!TIP]
-> Pertahanan Microsoft untuk Titik Akhir mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 Saldırı yüzeyleri, kuruluşunuzun siber tehditlere ve saldırılara karşı savunmasız olduğu tüm yerlerdir. Uç Nokta için Defender, saldırı yüzeylerinizi azaltmaya yardımcı olacak çeşitli özellikler içerir. Saldırı yüzeyini azaltma hakkında daha fazla bilgi edinmek için aşağıdaki videoyu izleyin.
 
@@ -69,9 +69,9 @@ Ortamınızda saldırı yüzeyi azaltmayı yapılandırmak için şu adımları 
 
 7. Ağ güvenlik duvarınızı ayarlayın.
 
-   1. [Gelişmiş güvenlik özelliklerine sahip Windows Defender Güvenlik Duvarı'na](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security) genel bir bakış edinin.
-   2. Güvenlik duvarı ilkelerinizi nasıl tasarlamak istediğinize karar vermek için Windows Defender Güvenlik Duvarı [tasarım kılavuzunu](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-design-guide) kullanın.
-   3. Kuruluşunuzun [güvenlik duvarını](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-deployment-guide) gelişmiş güvenlikle ayarlamak için Windows Defender Güvenlik Duvarı dağıtım kılavuzunu kullanın.
+   1. [Gelişmiş güvenlikle Windows Defender Güvenlik Duvarı](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security) genel bakış elde edin.
+   2. Güvenlik duvarı ilkelerinizi nasıl tasarlamak istediğinize karar vermek için [Windows Defender Güvenlik Duvarı tasarım kılavuzunu](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-design-guide) kullanın.
+   3. Kuruluşunuzun güvenlik duvarını gelişmiş güvenlikle ayarlamak için [Windows Defender Güvenlik Duvarı dağıtım kılavuzunu](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-deployment-guide) kullanın.
 
 > [!TIP]
 > Çoğu durumda, saldırı yüzeyi azaltma özelliklerini yapılandırırken çeşitli yöntemler arasından seçim yapabilirsiniz:
@@ -80,7 +80,7 @@ Ortamınızda saldırı yüzeyi azaltmayı yapılandırmak için şu adımları 
 > - Grup İlkesi
 > - PowerShell cmdlet'leri
 
-## <a name="test-attack-surface-reduction-in-microsoft-defender-for-endpoint"></a>Pertahanan Microsoft untuk Titik Akhir'de saldırı yüzeyini azaltmayı test edin
+## <a name="test-attack-surface-reduction-in-microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender'de saldırı yüzeyini azaltmayı test edin
 
 Kuruluşunuzun güvenlik ekibinin bir parçası olarak, nasıl çalışacaklarını görmek için saldırı yüzeyi azaltma özelliklerini denetim modunda çalışacak şekilde yapılandırabilirsiniz. Denetim modunda aşağıdaki ASR güvenlik özelliklerini etkinleştirebilirsiniz:
 
@@ -132,7 +132,7 @@ Hangi kuralların veya ayarların çalıştığını izlemek için Olay Görünt
 
 Bu bölümde tüm olaylar, ilişkili özellikleri veya ayarları listelenir ve belirli olaylara filtre uygulamak için özel görünümlerin nasıl oluşturulacağı açıklanır.
 
-E5 aboneliğiniz varsa ve [Pertahanan Microsoft untuk Titik Akhir kullanıyorsanız](microsoft-defender-endpoint.md) Windows Güvenliği parçası olarak olaylar, bloklar ve uyarılar hakkında ayrıntılı raporlama alın.
+E5 aboneliğiniz varsa ve [Uç Nokta için Microsoft Defender kullanıyorsanız](microsoft-defender-endpoint.md) Windows Güvenliği bir parçası olarak olaylar, bloklar ve uyarılar hakkında ayrıntılı raporlama alın.
 
 ### <a name="use-custom-views-to-review-attack-surface-reduction-capabilities"></a>Saldırı yüzeyi azaltma özelliklerini gözden geçirmek için özel görünümleri kullanma
 

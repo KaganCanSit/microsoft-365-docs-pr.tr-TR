@@ -18,13 +18,13 @@ ms.custom:
 - AdminTemplateSet
 search.appverid:
 - MET150
-description: Basic Mobility ve Security, mobil cihazlarınızı güvenli bir şekilde yönetmenize yardımcı olabilir.
-ms.openlocfilehash: b0e303af27d731cf3dba3af13019b3b993e52bfe
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+description: Temel Mobilite ve Güvenlik, e-posta ve belgeler Microsoft 365 kuruluşa erişimi denetleen ilkelerle mobil cihazların güvenliğini sağlamanıza ve yönetmenize yardımcı olur.
+ms.openlocfilehash: e63f052e0beebe93f9faa27b54725dbac2a9443f
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64937773"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65435865"
 ---
 # <a name="capabilities-of-basic-mobility-and-security"></a>Temel Hareketlilik ve Güvenlik Özellikleri
 
@@ -40,7 +40,7 @@ Aşağıdaki cihazların güvenliğini sağlamak ve yönetmek için Basic Mobili
 - Android (Samsung Knox dahil)<sup>1</sup>
 - Windows <sup>2, 3</sup>
 
-<sup>1</sup> Haziran 2020'den sonra, 9'dan sonraki Android sürümleri Samsung Knox cihazları dışında parola ayarlarını yönetemez.
+<sup>1</sup> Haziran 2020'den sonra, 9'dan sonraki Android sürümler Samsung Knox cihazları dışında parola ayarlarını yönetemez.
 
 <sup>2</sup> Windows 8.1 RT cihazları için erişim denetimi Exchange ActiveSync ile sınırlıdır.
 
@@ -63,7 +63,7 @@ Aşağıdaki tabloda yer alan farklı mobil cihaz türleri için desteklenen uyg
 > [!NOTE]
 >
 > - iOS 10.0 ve üzeri sürümler için destek, iPhone ve iPad cihazları içerir.
-> - BlackBerry işletim sistemi cihazlarının yönetimi Basic Security ve Mobility tarafından desteklenmez. BlackBerry işletim sistemi cihazlarını yönetmek için BlackBerry'den BlackBerry Business Cloud Services (BBCS) kullanın. Android işletim sistemi çalıştıran Blackberry cihazları standart Android cihazlar olarak desteklenir
+> - BlackBerry işletim sistemi cihazlarının yönetimi Basic Security ve Mobility tarafından desteklenmez. BlackBerry işletim sistemi cihazlarını yönetmek için BlackBerry'den BlackBerry Business Cloud Services'ı (BBCS) kullanın. Android işletim sistemi çalıştıran Blackberry cihazları standart Android cihazlar olarak desteklenir
 > - Kullanıcılardan kaydolmaları istenmez ve mobil tarayıcıyı kullanarak Microsoft 365 SharePoint sitelere, Office Online'daki belgelere veya Outlook Web App'daki e-postalara erişim sağlamaları durumunda ilke ihlali nedeniyle engellenmez veya bildirilmez.
 
 Aşağıdaki diyagramda, yeni cihazı olan bir kullanıcı Temel Mobilite ve Güvenlik ile erişim denetimini destekleyen bir uygulamada oturum açtığında ne olacağı gösterilmektedir. Kullanıcının cihazını kaydedene kadar uygulamadaki Microsoft 365 kaynaklarına erişmesi engellenir.
@@ -122,7 +122,7 @@ Aşağıdaki bölümlerde, Microsoft 365 kuruluş kaynaklarınıza bağlanan mob
 
 ## <a name="managed-email-profile-option"></a>Yönetilen e-posta profili seçeneği
 
-Aşağıdaki seçenek, el ile oluşturulmuş bir e-posta profili kullanan kullanıcıların Microsoft 365 e-postalarına erişmesini engelleyebilir. iOS cihazlarındaki kullanıcıların e-postalarına erişebilmeleri için önce el ile oluşturulan e-posta profillerini silmeleri gerekir. Profil silindikten sonra cihazda otomatik olarak yeni bir profil oluşturulur. Son kullanıcıların nasıl uyumlu olabileceğine ilişkin yönergeler için bkz. [Mevcut bir e-posta hesabı bulundu](/intune-user-help/existing-company-email-account-found).
+Aşağıdaki seçenek, el ile oluşturulmuş bir e-posta profili kullanan kullanıcıların Microsoft 365 e-postalarına erişmesini engelleyebilir. iOS cihazlardaki kullanıcıların e-postalarına erişebilmeleri için önce el ile oluşturulan e-posta profillerini silmeleri gerekir. Profil silindikten sonra cihazda otomatik olarak yeni bir profil oluşturulur. Son kullanıcıların nasıl uyumlu olabileceğine ilişkin yönergeler için bkz. [Mevcut bir e-posta hesabı bulundu](/intune-user-help/existing-company-email-account-found).
 
 |Ayar adı|iOS|Android|Samsung Knox|
 |---|---|---|---|
@@ -183,7 +183,7 @@ Güvenlik & Uyumluluk Merkezi PowerShell cmdlet'lerini kullanarak aşağıdaki e
 
 ## <a name="settings-supported-by-windows"></a>Windows tarafından desteklenen Ayarlar
 
-Windows 10 cihazları mobil cihaz olarak kaydederek yönetebilirsiniz. Geçerli bir ilke dağıtıldıktan sonra, Windows 10 cihazları olan kullanıcıların Microsoft 365 e-postalarına erişmek için yerleşik e-posta uygulamasını ilk kez kullandıklarında Basic Mobility ve Security'ye kaydolmaları gerekir (Azure AD premium aboneliği gerektirir).
+Windows 10 cihazları mobil cihaz olarak kaydederek yönetebilirsiniz. Geçerli bir ilke dağıtıldıktan sonra, Windows 10 cihazları olan kullanıcıların Microsoft 365 e-postalarına erişmek için yerleşik e-posta uygulamasını ilk kez kullandıklarında Basic Mobility ve Security'ye kaydolmaları gerekir (Azure AD premium abonelik gerektirir).
 
 Mobil cihaz olarak kaydedilen Windows 10 cihazlar için aşağıdaki ayarlar desteklenir. Bu ayar kullanıcıların Microsoft 365 kaynaklarına erişmesini engellemez.
 
@@ -230,7 +230,7 @@ PowerShell cmdlet'lerini kullanarak bu ek ilke ayarlarını yapabilirsiniz:
 
 ## <a name="remotely-wipe-a-mobile-device"></a>Mobil cihazı uzaktan silme
 
-Bir cihaz kaybolur veya çalınırsa, **Microsoft Purview uyumluluk portalıVeri** >  **kaybı önlemeCihaz** >  yönetimi'nden temizleme yaparak hassas kuruluş verilerini kaldırabilir ve Microsoft 365 kuruluş kaynaklarınıza erişimi **engellemeye** yardımcı olabilirsiniz. Bir cihazdan tüm bilgileri silip fabrika ayarlarına geri yüklemek için yalnızca kuruluş verilerini kaldırmak için seçmeli silme veya tam silme işlemi yapabilirsiniz.
+Bir cihaz kaybolur veya çalınırsa, hassas kuruluş verilerini kaldırabilir ve Microsoft Purview uyumluluk portalı **Veri kaybı önlemeCihaz** >  yönetiminden temizleme yaparak **Microsoft 365** >  kuruluş kaynaklarınıza erişimi **engellemeye** yardımcı olabilirsiniz. Bir cihazdan tüm bilgileri silip fabrika ayarlarına geri yüklemek için yalnızca kuruluş verilerini kaldırmak için seçmeli silme veya tam silme işlemi yapabilirsiniz.
 
 Daha fazla bilgi için bkz [. Basic Mobility and Security'de mobil cihazı temizleme](wipe-mobile-device.md).
 

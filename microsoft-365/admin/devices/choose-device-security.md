@@ -18,14 +18,14 @@ ms.custom:
 search.appverid:
 - MET150
 description: Farklı MDM ve MAM yöntemleri arasında seçim yapın.
-ms.openlocfilehash: 49c8fe8e61026e56b1698d7da2fdbac07896c858
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: cc2eef0fde261ed8ee6eace288d70c53235fc88e
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65317504"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65435423"
 ---
-# <a name="options-for-protecting-your-devices-and-app-data"></a>Cihazlarınızı ve uygulama verilerinizi korumaya yönelik seçenekler
+# <a name="options-for-protecting-your-devices-and-app-data-with-microsoft-365"></a>cihazlarınızı ve uygulama verilerinizi Microsoft 365 ile koruma seçenekleri
 
 İşletmeler ve kuruluşlar için Microsoft 365 ile kuruluşunuzun cihaz ve verilerinin güvenliğini sağlamanın çeşitli yolları vardır. Aşağıdaki tek başına planları kullanabilirsiniz:
 

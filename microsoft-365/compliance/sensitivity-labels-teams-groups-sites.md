@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: SharePoint, Microsoft Teams sitelerdeki ve Microsoft 365 gruplarındaki içeriği korumak için duyarlılık etiketlerini kullanın.
-ms.openlocfilehash: 9b9427fc736dfee3ea326b8c523d3f872ad98c70
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: 56b6d53d56c8f9fb16e900271b8d6a4c152f6440
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65286110"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65438015"
 ---
 # <a name="use-sensitivity-labels-to-protect-content-in-microsoft-teams-microsoft-365-groups-and-sharepoint-sites"></a>Microsoft Teams, Microsoft 365 grupları ve SharePoint sitelerindeki içeriği korumak için duyarlılık etiketlerini kullanma
 
@@ -47,9 +47,6 @@ Belgeleri ve e-postaları sınıflandırmak ve korumak için [duyarlılık etike
 Bu duyarlılık etiketini desteklenen bir kapsayıcıya uyguladığınızda, etiket otomatik olarak site veya gruba sınıflandırma ve yapılandırılmış koruma ayarlarını uygular.
 
 Ancak bu kapsayıcılardaki içerik, görsel işaretler ve şifreleme gibi dosya ve e-postalar için sınıflandırma veya ayarların etiketlerini devralmaz. Kullanıcıların belgelerini SharePoint sitelerde veya ekip sitelerinde etiketleyebilmesi için, SharePoint [ve OneDrive Office dosyalar için duyarlılık etiketlerini etkinleştirdiğinizden](sensitivity-labels-sharepoint-onedrive-files.md) emin olun.
-
-> [!NOTE]
-> Kapsayıcılar için duyarlılık etiketleri Office 365 content delivery networks (CDN) ile desteklenmez.
 
 ## <a name="using-sensitivity-labels-for-microsoft-teams-microsoft-365-groups-and-sharepoint-sites"></a>Microsoft Teams, Microsoft 365 grupları ve SharePoint siteleri için duyarlılık etiketlerini kullanma
 
@@ -183,7 +180,7 @@ Bu önizleme için bilinen sınırlamalar:
 
 ### <a name="configure-settings-for-the-default-sharing-link-type-for-a-site-by-using-powershell-advanced-settings"></a>PowerShell gelişmiş ayarlarını kullanarak site için varsayılan paylaşım bağlantı türü ayarlarını yapılandırma
 
-Microsoft Purview uyumluluk portalından yapılandırabileceğiniz sitelerin ve grupların etiket ayarlarına ek olarak, site için varsayılan paylaşım bağlantı türünü de yapılandırabilirsiniz. Belgeler için duyarlılık etiketleri, varsayılan paylaşım bağlantı türü için de yapılandırılabilir. Kullanıcılar Office uygulamalarında **Paylaş** düğmesini seçtiğinde, aşırı paylaşımı önlemeye yardımcı olan bu ayarlar otomatik olarak seçilir. 
+Microsoft Purview uyumluluk portalı yapılandırabileceğiniz sitelerin ve grupların etiket ayarlarına ek olarak, site için varsayılan paylaşım bağlantı türünü de yapılandırabilirsiniz. Belgeler için duyarlılık etiketleri, varsayılan paylaşım bağlantı türü için de yapılandırılabilir. Kullanıcılar Office uygulamalarında **Paylaş** düğmesini seçtiğinde, aşırı paylaşımı önlemeye yardımcı olan bu ayarlar otomatik olarak seçilir. 
 
 Daha fazla bilgi ve yönergeler için bkz. [SharePoint ve OneDrive'da siteler ve belgeler için varsayılan paylaşım bağlantı türünü yapılandırmak için duyarlılık etiketlerini kullanma](sensitivity-labels-default-sharing-link.md).
 
@@ -375,7 +372,7 @@ Aşağıdaki uygulamalar ve hizmetler, siteler ve grup ayarları için yapıland
 
   - SharePoint
   - Teams
-  - Web üzerinde Outlook ve Windows, macOS, iOS ve Android için
+  - Windows, macOS, iOS ve Android için Web üzerinde Outlook ve
   - Forms
   - Stream
   - Planner 

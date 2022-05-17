@@ -1,5 +1,5 @@
 ---
-title: Anti-spoing protection
+title: Kimlik sahtekarlığına karşı koruma
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -19,163 +19,163 @@ ms.custom:
 - TopSMBIssues
 - seo-marvel-apr2020
 ms.localizationpriority: high
-description: Yöneticiler, Exchange Online Protection'de (EOP) bulunan kimlik avı saldırılarını ve kimlik avı saldırılarını önlemeye yardımcı olan kimlik sahteciliği önleme özellikleri hakkında bilgi edinebilirsiniz.
+description: Yöneticiler, kimlik sahtekarlığı yapan gönderenlerden ve etki alanlarından gelen kimlik avı saldırılarına karşı azaltmaya yardımcı olabilecek Exchange Online Protection (EOP) içinde bulunan kimlik sahtekarlığı önleme özellikleri hakkında bilgi edinebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 140ed15b793b5d6b74b39a35b854b7432a658bc3
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 446b82d668041a476d748956008002c42a92a7f3
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64475179"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65435467"
 ---
-# <a name="anti-spoofing-protection-in-eop"></a>EOP'de anti-poing protection
+# <a name="anti-spoofing-protection-in-eop"></a>EOP'de kimlik sahtekarlığına karşı koruma
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
-**Geçerli olduğu yer:**
+**Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
 - [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Microsoft 365 kutusu olmayan Exchange Online ya da tek başına Exchange Online Protection (EOP) kuruluşlarında posta kutusu olan Exchange Online kuruluşlarında, EOP, kurumlarınızı sahte (sahte) gönderenlerden korumaya yardımcı olan özellikler içerir.
+Exchange Online posta kutusu olmayan Exchange Online veya tek başına Exchange Online Protection (EOP) kuruluşlarında posta kutuları olan Microsoft 365 kuruluşlarda EOP, kuruluşunuzun sahte (sahte) gönderenlerden korunmasına yardımcı olacak özellikler içerir.
 
-Microsoft, kullanıcılarını koruma konusunda kimlik avı tehdidini ciddiye alır. Poofing, saldırganlar tarafından kullanılan yaygın bir tekniktir. **Kodlu iletiler gerçek kaynaktan başka bir yerden veya bir yerden geliyor gibi görünür**. Bu teknik, çoğunlukla kullanıcı kimlik bilgilerini almak için tasarlanmış kimlik avı kampanyalarında kullanılır. EOP'de sahtecilik önleme teknolojisi, özellikle ileti gövdesinde Gönderen üstbilgisi sahtesi inceler (e-posta istemcilerde iletiyi göndereni görüntülemek için kullanılır). EOP'nin, From üstbilgilerinin sahtesi için yüksek bir güveni olduğunda, ileti sahte olarak tanımlanır.
+Söz konusu kullanıcılarını korumak olduğunda Microsoft, kimlik avı tehdidini ciddiye alır. Kimlik sahtekarlığına, saldırganlar tarafından kullanılan yaygın bir tekniktir. **Sahte iletiler, gerçek kaynaktan başka bir yerden veya birinden geliyor gibi görünür**. Bu teknik genellikle kullanıcı kimlik bilgilerini almak için tasarlanmış kimlik avı kampanyalarında kullanılır. EOP'deki kimlik sahtekarlığı önleme teknolojisi özellikle ileti gövdesindeki Kimden üst bilgisinin sahteliğini inceler (e-posta istemcilerinde ileti göndereni görüntülemek için kullanılır). EOP, Kimden üst bilgisinin sahte olduğuna yüksek güvene sahip olduğunda, ileti sahte olarak tanımlanır.
 
-EOP'de şu ifadeyi koruma teknolojileri kullanılabilir:
+Aşağıdaki kimlik sahtekarlığı önleme teknolojileri EOP'de kullanılabilir:
 
-- **E-posta** kimlik doğrulaması: Kimlik kimlik doğrulaması e-posta kimlik doğrulamasının (e-posta doğrulaması olarak da bilinir) DNS'de SPF, DKIM ve DMARC kayıtları tarafından kullanımı e-posta kimlik doğrulamasının ayrılmaz bir parçasıdır. Etki alanlarınız için bu kayıtları yapılandırarak, hedef e-posta sistemlerinin etki alanlarınız içinde yer alan gönderenlerden olduğunu iddia eden iletilerin geçerliliğini denetlemesi için bunu yapılandırabilirsiniz. Gelen iletiler için, gönderen Microsoft 365 için e-posta kimlik doğrulaması gerekir. Daha fazla bilgi için bkz. [E-posta kimlik doğrulaması Microsoft 365](email-validation-and-authentication.md).
+- **E-posta kimlik doğrulaması**: Kimlik sahtekarlığı önleme çalışmalarının ayrılmaz bir parçası, DNS'de SPF, DKIM ve DMARC kayıtları tarafından e-posta kimlik doğrulamasının (e-posta doğrulaması olarak da bilinir) kullanılmasıdır. Hedef e-posta sistemlerinin etki alanlarınızdaki gönderenlerden geldiğini iddia eden iletilerin geçerliliğini denetleyebilmesi için etki alanlarınız için bu kayıtları yapılandırabilirsiniz. Gelen iletiler için Microsoft 365 gönderen etki alanları için e-posta kimlik doğrulaması gerektirir. Daha fazla bilgi için bkz. [Microsoft 365'de e-posta kimlik doğrulaması](email-validation-and-authentication.md).
 
-  EOP, standart e-posta kimlik doğrulama yöntemlerini ve gönderen itibarı tekniklerini birlikte kullanarak kimlik doğrulaması yapılamayacak iletileri analiz eder ve engeller.
+  EOP, standart e-posta kimlik doğrulama yöntemleri ve gönderen saygınlığı tekniklerinin birleşimiyle kimliği doğrulanamadı iletileri analiz eder ve engeller.
 
-  :::image type="content" source="../../media/eop-anti-spoofing-protection.png" alt-text="EOP kimlik kimliklerini önleme denetimleri" lightbox="../../media/eop-anti-spoofing-protection.png":::
+  :::image type="content" source="../../media/eop-anti-spoofing-protection.png" alt-text="EOP kimlik sahtekarlığı önleme denetimleri" lightbox="../../media/eop-anti-spoofing-protection.png":::
 
-- **Akıllı ifade içgörü**: Son 7 gün içinde dahili ve dış etki alanlarındaki gönderenlerden gelen kimliği doğrun gönderilen iletileri gözden geçirme ve bu gönderenlere izin verme veya engelleme. Daha fazla bilgi için bkz [. EOP'de Spoof Intelligence içgörü](learn-about-spoof-intelligence.md).
+- **Sahte zeka içgörüleri**: Son 7 gün içinde iç ve dış etki alanlarındaki gönderenlerden gelen sahte iletileri gözden geçirin ve bu gönderenlere izin verin veya bunları engelleyin. Daha fazla bilgi için bkz [. EOP'de sahte zeka içgörüleri](learn-about-spoof-intelligence.md).
 
-- Kiracı İzin Ver/Engelleme Listesi'ne yer alan kimliği doğruya sahip gönderenlere izin verme veya engelleme: Bilgi bloğu içgörüsinde kararı geçersiz kıl kılıca, kimliği doğruya sahip gönderen, yalnızca Kiracı İzin Ver **/** Engelleme Listesi'nin Gizli Bilgi sekmesinde görüntülenen bir el ile izin verilen veya engellenen giriş haline gelir. Ayrıca, e-posta gönderenlere yönelik girişlere izin verme veya engellemeyi ayrıca, bu kişi kimliğin kimliği doğrulandığından önce el ile oluşturabilir veya engelleyebilirsiniz. Daha fazla bilgi için bkz [. EOP'de Kiracı İzin Ver/Engelleme Listesini Yönetme](tenant-allow-block-list.md).
+- **Kiracı İzin Ver/Engelle Listesi'nde sahte gönderenlere izin ver veya engelle**: Sahte zeka içgörülerinde kararı geçersiz kıldığınızda, sahtekar gönderen yalnızca Kiracı İzin Ver/Engelle Listesi'ndeki Kimlik **Sahtekarı** sekmesinde görünen el ile izin verme veya engelleme girdisine dönüşür. Ayrıca kimlik sahtekarı gönderenler için kimlik sahtekarı zekası tarafından algılanana kadar el ile izin verme veya engelleme girdileri oluşturabilirsiniz. Daha fazla bilgi için bkz. [EOP'de Kiracı İzin Verme/Engelleme Listesini Yönetme](tenant-allow-block-list.md).
 
-- **Kimlik avı önleme ilkeleri**: EOP ve Office 365 için Microsoft Defender'de, kimlik avı önleme ilkeleri aşağıdaki kimlik sahtesi önleme ayarlarını içerir:
-  - Akıllı ifadeyi açma veya kapatma.
-  - Kimliği doğrulanmamış gönderen kimliğini Outlook veya kapatın.
-  - Kimliği doğrun engellenen gönderenler eylemlerini belirtin.
+- **Kimlik avı önleme ilkeleri**: EOP ve Office 365 için Microsoft Defender kimlik avı önleme ilkeleri aşağıdaki kimlik sahtekarlığı önleme ayarlarını içerir:
+  - Kimlik sahtekarı zekasını açın veya kapatın.
+  - Outlook kimliği doğrulanmamış gönderen göstergelerini açın veya kapatın.
+  - Engellenen sahte gönderenler için eylemi belirtin.
 
-  Daha fazla bilgi için bkz [. Kimlik avı önleme ilkelerde kimlik avı ayarları](set-up-anti-phishing-policies.md#spoof-settings).
+  Daha fazla bilgi için bkz. [Kimlik avı önleme ilkelerindeki kimlik sahtekarlığı ayarları](set-up-anti-phishing-policies.md#spoof-settings).
 
-  **Not**: Kimlik avıyla mücadele ilkeleri Office 365 için Defender kimliğe bürünme koruması da dahil olmak üzere ek **korumalar** içerir. Daha fazla bilgi için bkz[. Kimlik avı önleme ilkelerine özel Office 365 için Microsoft Defender](set-up-anti-phishing-policies.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
+  **Not**: Office 365 için Defender kimlik avı önleme ilkeleri, **kimliğe bürünme** koruması dahil olmak üzere ek korumalar içerir. Daha fazla bilgi için bkz[. Office 365 için Microsoft Defender'da kimlik avı önleme ilkelerindeki özel kullanım ayarları](set-up-anti-phishing-policies.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
 
-- **Spoof algılamaları raporu**: Daha fazla bilgi için bkz. [Spoof Algılamaları raporu](view-email-security-reports.md#spoof-detections-report).
+- **Kimlik sahtekarlık algılamaları raporu**: Daha fazla bilgi için bkz. [Kimlik Sahtekarı Algılamaları raporu](view-email-security-reports.md#spoof-detections-report).
 
-  **Not**: Office 365 için Defender kimlik avı girişimleriyle ilgili bilgileri görüntülemek için gerçek zamanlı algılamaları (Plan 1) veya Tehdit Gezgini (Plan 2) kullanabilir. Daha fazla bilgi için tehdit [Microsoft 365 yanıtını incelemeye bakın](office-365-ti.md).
+  **Not**: Office 365 için Defender kuruluşlar kimlik avı girişimleri hakkındaki bilgileri görüntülemek için Gerçek zamanlı algılamaları (Plan 1) veya Tehdit Gezgini'ni (Plan 2) de kullanabilir. Daha fazla bilgi için bkz. [tehdit araştırması ve yanıtı Microsoft 365](office-365-ti.md).
 
-## <a name="how-spoofing-is-used-in-phishing-attacks"></a>Kimlik avı saldırılarında kimlik sahtesi nasıl kullanılır
+## <a name="how-spoofing-is-used-in-phishing-attacks"></a>Kimlik avı saldırılarında kimlik sahtekarlığı nasıl kullanılır?
 
-E-postalarda, kullanıcıları aşağıdaki negatif sonuçlar doğuran iletiler yer almaktadır:
+Kimlik sahtekarlığına neden olan iletiler kullanıcılar için aşağıdaki olumsuz etkilere sahiptir:
 
-- **Kandırılan** iletiler kullanıcıları kandırıyor: Kandırılan bir ileti alıcının bir bağlantıya tıklaması ve kimlik bilgilerini vermesi, kötü amaçlı yazılım indirmesi veya hassas içeriği olan bir iletiyi yanıtlaması için sizi aldatmasına neden olabilir (iş e-postası güvenliğinin tehlikeye atması veya BEC olarak bilinir).
+- **Sahte iletiler kullanıcıları kandırır**: Sahte bir ileti, alıcıyı bir bağlantıya tıklayıp kimlik bilgilerini vermesi, kötü amaçlı yazılım indirmesi veya hassas içerikli bir iletiyi yanıtlaması (iş e-posta güvenliğinin aşılması veya BEC olarak bilinir) konusunda kandırabilir.
 
-  Aşağıdaki ileti, kimlik sahte olan gönderenin kimlik avını kullanan bir kimlik msoutlook94@service.outlook.com:
+  Aşağıdaki ileti, kimlik sahtekarlığı gönderen msoutlook94@service.outlook.com kullanan bir kimlik avı örneğidir:
 
-  ![Kimlik avı iletisi kimliğine bürünen service.outlook.com.](../../media/1a441f21-8ef7-41c7-90c0-847272dc5350.jpg)
+  ![service.outlook.com kimliğine bürünen kimlik avı iletisi.](../../media/1a441f21-8ef7-41c7-90c0-847272dc5350.jpg)
 
-  Bu ileti başka bir iletiden service.outlook.com, ancak saldırgan From üst bilgi alanını benzer şekilde yapmak için kopyalanmıştır. Bu, parola değiştirme bağlantısını tıklatması ve kimlik **bilgilerini vermesi için** alıcıyı kandırmaya çalışııydı.
+  Bu ileti service.outlook.com'den gelmedi, ancak saldırgan bunu yapmış gibi görünmesi için **Kimden** üst bilgi alanını yanıltmış. Bu, alıcıyı **parola değiştir** bağlantısına tıklayıp kimlik bilgilerini vermesi için kandırma girişimiydi.
 
-  Aşağıdaki ileti, e-posta etki alanı e-posta adresinin kodlu olduğu e-posta adresini kullanan BEC contoso.com:
+  Aşağıdaki ileti, sahte e-posta etki alanı contoso.com kullanan bir BEC örneğidir:
 
-  ![Kimlik avı iletisi- iş e-postası tehlikeye at.](../../media/da15adaa-708b-4e73-8165-482fc9182090.jpg)
+  ![Kimlik avı iletisi - iş e-posta güvenliğinin aşılması.](../../media/da15adaa-708b-4e73-8165-482fc9182090.jpg)
 
-  İleti geçerli gibi görünüyor, ancak gönderen kimliği doğru değil.
+  İleti yasal görünüyor, ancak gönderen sahte.
 
-- **Kullanıcılar gerçek iletileri sahte iletilerle karıştırır**: Kimlik avı hakkında bilgi alan kullanıcılar bile gerçek iletiler ile sahte iletiler arasındaki farkları görmekte zor olabilir.
+- **Kullanıcılar gerçek iletileri sahte iletilerle karıştırır**: Kimlik avı hakkında bilgi sahibi olan kullanıcılar bile gerçek iletiler ile sahte iletiler arasındaki farkları görmekte zorlanabilir.
 
-  Aşağıdaki ileti, Microsoft Güvenlik hesabından gelen gerçek parola sıfırlama iletisi örneğidir:
+  Aşağıdaki ileti, Microsoft Güvenlik hesabından gerçek bir parola sıfırlama iletisi örneğidir:
 
-  ![Microsoft'un geçerli parola sıfırlaması.](../../media/58a3154f-e83d-4f86-bcfe-ae9e8c87bd37.jpg)
+  ![Microsoft yasal parola sıfırlama.](../../media/58a3154f-e83d-4f86-bcfe-ae9e8c87bd37.jpg)
 
-  bu ileti aslında Microsoft'tan geldi, ancak kullanıcılar şüpheli olarak koşullandı. Gerçek parola sıfırlama iletisiyle sahte ileti arasındaki farkın zor olduğundan, kullanıcılar iletiyi yoksayma, istenmeyen posta olarak bildirme veya gereksiz yere iletiyi kimlik avı olarak Microsoft'a bildirmeyi neden olabilir.
+  İleti gerçekten Microsoft'tan geldi, ancak kullanıcılar şüpheli olmaya şartlandı. Gerçek parola sıfırlama iletisiyle sahte bir ileti arasındaki fark zor olduğundan, kullanıcılar iletiyi yoksayabilir, istenmeyen posta olarak bildirebilir veya iletiyi gereksiz yere kimlik avı olarak Microsoft'a bildirebilir.
 
-## <a name="different-types-of-spoofing"></a>Farklı türlerdepoylama
+## <a name="different-types-of-spoofing"></a>Farklı kimlik sahtekarlık türleri
 
-Microsoft, iki farklı türki ifadeli e-postayı birbirinden ayırteder:
+Microsoft, iki farklı kimlik sahtekarı iletisi türünü birbirinden ayırt eder:
 
-- **Intra-org'da yapılan bir ifade**: Kendi kendine yapılan _bulamama_ olarak da bilinir. Örneğin:
+- **Kuruluş içi kimlik sahtekarlık**: _Kendinden kendine_ sahtekarlık olarak da bilinir. Örneğin:
 
   - Gönderen ve alıcı aynı etki alanındadır:
-    > Buradan: chris@contoso.com <br> Bunu yapmak için: michelle@contoso.com
+    > Kimden: chris@contoso.com <br> Son: michelle@contoso.com
 
-  - Gönderen ve alıcı aynı etki alanının alt etki alanında yer almaktadır:
-    > Buradan: laura@marketing.fabrikam.com <br> Bunu yapmak için: julia@engineering.fabrikam.com
+  - Gönderen ve alıcı aynı etki alanının alt etki alanındadır:
+    > Kimden: laura@marketing.fabrikam.com <br> Son: julia@engineering.fabrikam.com
 
-  - Gönderen ve alıcı aynı kuruluşa ait olan farklı etki alanlarında yer alan (yani, her iki etki alanı da aynı kuruluşta [kabul](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) edilen etki alanları olarak yapılandırılır):
-    > Gönderen: gönderen @ microsoft.com <br> To: recipient @ bing.com
+  - Gönderen ve alıcı aynı kuruluşa ait farklı etki alanlarındadır (diğer bir ifadeyle, her iki etki alanı da aynı kuruluşta [kabul edilen etki alanları](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) olarak yapılandırılır):
+    > Kimden: gönderen @ microsoft.com <br> To: alıcı @ bing.com
 
-    E-posta adreslerinde boşluklar, istenmeyen posta toplamasını önlemek için kullanılır.
+    İstenmeyen posta botunun toplanmasını önlemek için e-posta adreslerinde boşluklar kullanılır.
 
-  Kuruluş içi [kimlik doğrulaması nedeniyle](email-validation-and-authentication.md#composite-authentication) bileşik kimlik doğrulaması başarısız olan iletiler aşağıdaki üst bilgi değerlerini içerir:
+  Kuruluş içi kimlik sahtekarlığına bağlı [olarak bileşik kimlik doğrulaması](email-validation-and-authentication.md#composite-authentication) başarısız olan iletiler aşağıdaki üst bilgi değerlerini içerir:
 
   `Authentication-Results: ... compauth=fail reason=6xx`
 
   `X-Forefront-Antispam-Report: ...CAT:SPOOF;...SFTY:9.11`
 
-  - `reason=6xx` , şirket içi yapılan e-postalarda yapılan bire bir ifadedir.
+  - `reason=6xx` kuruluş içi kimlik sahtekarlığına işaret eder.
 
-  - SFTY, iletinin güvenlik düzeyidir. 9 kimlik avını, 0,11 değeri de kuruluş içi kimlik sahte işaretlerini gösterir.
+  - SFTY, iletinin güvenlik düzeyidir. 9 kimlik avı, .11 ise kuruluş içi kimlik sahtekarlığı gösterir.
 
-- **Etki alanları arasında yapılan kimliğin** kimliği: Gönderen ve alıcı etki alanları farklıdır ve bu etki alanlarıyla hiçbir ilişkisi yoktur (dış etki alanları olarak da bilinir). Örneğin:
-    > Buradan: chris@contoso.com <br> Bunu yapmak için: michelle@tailspintoys.com
+- **Etki alanları arası kimlik sahtekarlık**: Gönderen ve alıcı etki alanları farklıdır ve birbirleriyle (dış etki alanları olarak da bilinir) hiçbir ilişkisi yoktur. Örneğin:
+    > Kimden: chris@contoso.com <br> Son: michelle@tailspintoys.com
 
-  Etki alanı [kimlik doğrulamasından](email-validation-and-authentication.md#composite-authentication) dolayı bileşik kimlik doğrulaması başarısız olan iletiler aşağıdaki üst bilgi değerlerini içerir:
+  Etki alanları arası kimlik sahtekarlığına bağlı [olarak bileşik kimlik doğrulaması](email-validation-and-authentication.md#composite-authentication) başarısız olan iletiler aşağıdaki üst bilgi değerlerini içerir:
 
   `Authentication-Results: ... compauth=fail reason=000/001`
 
   `X-Forefront-Antispam-Report: ...CAT:SPOOF;...SFTY:9.22`
 
-  - `reason=000` ileti açık e-posta kimlik doğrulamasında başarısız olduğunu gösterir. `reason=001` ileti, örtülü e-posta kimlik doğrulamasının başarısız olduğunu gösterir.
+  - `reason=000` , iletinin açık e-posta kimlik doğrulamasının başarısız olduğunu gösterir. `reason=001` , iletinin örtük e-posta kimlik doğrulamasının başarısız olduğunu gösterir.
 
-  - `SFTY` iletinin güvenlik düzeyidir. 9 kimlik avını, .22 çapraz etki alanı kimlik avını gösterir.
+  - `SFTY` iletinin güvenlik düzeyidir. 9 kimlik avı, .22 ise etki alanları arası kimlik sahtekarlığı gösterir.
 
 > [!NOTE]
-> ***compauth=fail reason=###** _ gibi bir ileti aldıysanız ve bileşik kimlik doğrulama (compauth) hakkında bilginiz olması ve kimlik doğrulamasıyla ilgili değerler hakkında bilginiz olması gerekirse, [Microsoft 365* üzerinde _Anti-spam](anti-spam-message-headers.md) ileti üstbilgileri konusuna bakın. Doğrudan neden kodlarına [*da gidebilirsiniz*](anti-spam-message-headers.md) .
+> ***compauth=fail reason=###** _ gibi bir ileti aldıysanız ve bileşik kimlik doğrulaması (compauth) ve kimlik sahtekarlığına ilişkin değerleri bilmeniz gerekiyorsa, bkz. [Microsoft 365* içinde _Anti istenmeyen posta iletisi üst bilgileri](anti-spam-message-headers.md). Ya da doğrudan [*neden*](anti-spam-message-headers.md) kodlarına gidin.
 
-DMARC hakkında daha fazla bilgi için bkz[. DMARC kullanarak e-postayı doğrulamak için Microsoft 365](use-dmarc-to-validate-email.md).
+DMARC hakkında daha fazla bilgi için bkz. [Microsoft 365'de e-postayı doğrulamak için DMARC kullanma](use-dmarc-to-validate-email.md).
 
-## <a name="problems-with-anti-spoofing-protection"></a>Poing anti-spoing protection ile ilgili sorunlar
+## <a name="problems-with-anti-spoofing-protection"></a>Kimlik sahtekarlığı önleme korumasıyla ilgili sorunlar
 
-Posta listeleri (tartışma listeleri olarak da bilinir), iletileri iletme ve değiştirme yollarına bağlı olarak, parolayı korumayla ilgili sorunlar olduğu bilinmektedir.
+Posta listelerinin (tartışma listeleri olarak da bilinir) iletileri iletme ve değiştirme şekli nedeniyle kimlik sahtekarlığı önleme ile ilgili sorunları olduğu bilinmektedir.
 
-Örneğin, Sila Laureano (glaureano@contoso.com) kuş izleme ile ilgileniyor, birdwatchers@fabrikam.com listesine katılır ve aşağıdaki iletiyi listeye gönderir:
+Örneğin, Gabriela Laureano (glaureano@contoso.com) kuş izlemekle ilgileniyor, birdwatchers@fabrikam.com posta listesine katılıyor ve listeye aşağıdaki iletiyi gönderiyor:
 
-> **Kaynak:** "Gabriela Laureano" \<glaureano@contoso.com\> <br> **Hedef:** Birdwatcher'ın Tartışma Listesi \<birdwatchers@fabrikam.com\> <br> **Konu:** Mt'nin en üstünde mavi koyu koyulardan harika görüntü. Bu hafta Rainier <p> Bu haftayı Mt'den görüntülemek isteyen herkes. Rainier?
+> **Kaynak:** "Gabriela Laureano" \<glaureano@contoso.com\> <br> **Hedef:** Birdwatcher Tartışma Listesi \<birdwatchers@fabrikam.com\> <br> **Konu:** Mt'nin en üstünde mavi jay'lerin harika bir şekilde görüntülenmesi. Bu hafta daha yağmurlu <p> Bu hafta Mt.'den görüntülemeye göz atmak isteyen herkes Rainier?
 
-Posta listesi sunucusu iletiyi alır, içeriğini değiştiren ve liste üyelerine yeniden gösterir. Yeniden oynatilen iletide Aynı From adresi (glaureano@contoso.com) vardır, ancak konu satırına etiket eklenir ve iletinin en altına bir alt bilgi eklenir. Bu tür değişiklikler posta listelerinde yaygındır ve kimlik sahtesi için hatalı pozitif sonuçlarla sonuçlandırabilirsiniz.
+Posta listesi sunucusu iletiyi alır, içeriğini değiştirir ve listenin üyelerine yeniden yürüter. Yeniden oynatılan ileti aynı Kimden adresine (glaureano@contoso.com) sahiptir, ancak konu satırına bir etiket eklenir ve iletinin altına bir alt bilgi eklenir. Bu tür değişiklikler posta listelerinde yaygındır ve kimlik sahtekarlığına yönelik hatalı pozitif sonuçlara neden olabilir.
 
-> **Kaynak:** "Gabriela Laureano" \<glaureano@contoso.com\> <br> **Hedef:** Birdwatcher'ın Tartışma Listesi \<birdwatchers@fabrikam.com\> <br> **Konu:** [BIRDWATCHERS] Mt'ın en üstünde mavi mavi koyulardan harika görüntü. Bu hafta Rainier <p> Bu haftayı Mt'den görüntülemek isteyen herkes. Rainier? <p> Bu ileti Birdwatchers Tartışma Listesi'ne gönderildi. Aboneliğinizi her zaman kaldırabilirsiniz.
+> **Kaynak:** "Gabriela Laureano" \<glaureano@contoso.com\> <br> **Hedef:** Birdwatcher Tartışma Listesi \<birdwatchers@fabrikam.com\> <br> **Konu:** [BIRDWATCHERS] Mt.'nin üst kısmındaki mavi jaylerin harika bir şekilde görüntülenmesi. Bu hafta daha yağmurlu <p> Bu hafta Mt.'den görüntülemeye göz atmak isteyen herkes Rainier? <p> Bu ileti Birdwatchers Tartışma Listesi'ne gönderildi. İstediğiniz zaman abonelikten çıkabilirsiniz.
 
-Posta listesi iletilerinin kimlik kimlik bilgileri denetimlerini geçmesine yardımcı olmak için, posta listesinin denetim altına alındı olup olmadığını temel alarak aşağıdaki adımları uygulayın:
+Posta listesi iletilerinin kimlik sahtekarlığı önleme denetimlerini geçirmesine yardımcı olmak için, posta listesini denetleyıp denetlemediğinize bağlı olarak aşağıdaki adımları uygulayın:
 
-- Posta listesinin sahibi, şu şekildedir:
+- Posta listesinin sahibi kuruluşunuzdır:
 
-  - DMARC ile birlikte DMARC.org: Bir posta listesi işletmek ve DMARC ile birlikte olmak istiyorum [, ne yapabilirim?](https://dmarc.org/wiki/FAQ#I_operate_a_mailing_list_and_I_want_to_interoperate_with_DMARC.2C_what_should_I_do.3F) bağlantısında SSS bölümünü inceleyin.
+  - DMARC.org:[Posta listesini çalıştırıyorum ve DMARC ile birlikte çalışmak istiyorum, ne yapmalıyım?](https://dmarc.org/wiki/FAQ#I_operate_a_mailing_list_and_I_want_to_interoperate_with_DMARC.2C_what_should_I_do.3F)
 
-  - Bu blog gönderisi'nde verilen yönergeleri okuyun: Hatalardan kaçınmak için posta listesi işleçleriyle [DMARC'nin birlikte çalışabilmesi için bir ipucu](/archive/blogs/tzink/a-tip-for-mailing-list-operators-to-interoperate-with-dmarc-to-avoid-failures).
+  - Bu blog gönderisinde yer alan yönergeleri okuyun: [Hatalardan kaçınmak için posta listesi işleçlerinin DMARC ile birlikte çalışabilmesi için bir ipucu](/archive/blogs/tzink/a-tip-for-mailing-list-operators-to-interoperate-with-dmarc-to-avoid-failures).
 
-  - ARC'i desteklemek için posta listesi sunucunuza güncelleştirmeleri yüklemeyi göz önünde bulundurabilirsiniz, bkz <http://arc-spec.org>.
+  - ARC'ı desteklemek için posta listesi sunucunuza güncelleştirmeleri yüklemeyi göz önünde bulundurun, bkz <http://arc-spec.org>. .
 
-- Posta listesi, kuruma ait değil:
+- Kuruluşunuzun posta listesi yok:
 
-  - Posta listesinin yöneticisinden, posta listesinin geçiş yapılan etki alanı için e-posta kimlik doğrulamasını yapılandırmasını sorun.
+  - Posta listesinin bakımcısından, posta listesinin geçiş yaptığı etki alanı için e-posta kimlik doğrulamasını yapılandırmasını isteyin.
 
-    Yeterli gönderen etki alanı sahiplerine yanıt verdiklerinden, e-posta kimlik doğrulama kayıtlarını ayarlamaları gerekir. Bu, onları önlem almaya teşvik ediyor. Microsoft gerekli kayıtları yayımlamak için etki alanı sahipleriyle birlikte çalışıyor olsa da, tek tek kullanıcılar istekte olduğunda daha da fazla yardımcı olur.
+    Yeterli gönderen etki alanı sahiplerine e-posta kimlik doğrulama kayıtlarını ayarlamaları gerektiğini yanıtladığında, eyleme geçmelerini sağlar. Microsoft, gerekli kayıtları yayımlamak için etki alanı sahipleriyle birlikte de çalışsa da, tek tek kullanıcılar istediğinde daha da fazla yardımcı olur.
 
-  - İletileri Gelen Kutusu'na taşımak için e-posta istemcisinde gelen kutusu kuralları oluşturun. Ayrıca, yöneticilerinizin [EOP'de Kimlik](learn-about-spoof-intelligence.md) Hesabı bilgisinde ve Kiracı İzin Ver/Engelleme Listesini Yönetme konusunda açıklandığı gibi geçersiz kılmaları [yapılandırmalarını da sebilirsiniz](tenant-allow-block-list.md).
+  - İletileri Gelen Kutusu'na taşımak için e-posta istemcinizde gelen kutusu kuralları oluşturun. Ayrıca, yöneticilerinizden [EOP'deki kimlik bilgileri sahtekarlık içgörüleri](learn-about-spoof-intelligence.md) ve [Kiracı İzin Verme/Engelleme Listesini Yönetme](tenant-allow-block-list.md) bölümünde açıklandığı gibi geçersiz kılmaları yapılandırmalarını isteyebilirsiniz.
 
-  - Posta listesinin bunu geçerli olarak kabul etmek üzere geçersiz k olmasına neden olacak bir geçersiz kılma oluşturmak için Kiracı İzin Ver/Engelle Listesini kullanın. Daha fazla bilgi için bkz [. Kiracı İzin Ver/Engelleme Listesi'ne izin ekleme](manage-tenant-allows.md).
+  - Posta listesinin meşru olarak davranması için geçersiz kılma oluşturmak için Kiracı İzin Ver/Engelle Listesi'ni kullanın. Daha fazla bilgi için bkz. [Kiracı İzin Ver/Engelle Listesi'nde Ekleme izin verir](manage-tenant-allows.md).
 
-Diğer her şey başarısız olursa, iletiyi Microsoft'a hatalı bir pozitif sonuç olarak bildirebilirsiniz. Daha fazla bilgi için bkz [. İletileri ve dosyaları Microsoft'a bildirme](report-junk-email-messages-to-microsoft.md).
+Diğer her şey başarısız olursa, iletiyi Microsoft'a hatalı pozitif olarak bildirebilirsiniz. Daha fazla bilgi için bkz. [İletileri ve dosyaları Microsoft'a bildirme](report-junk-email-messages-to-microsoft.md).
 
-## <a name="considerations-for-anti-spoofing-protection"></a>Poing protection ile ilgili dikkat edilmesi gereken noktalar
+## <a name="considerations-for-anti-spoofing-protection"></a>Kimlik sahtekarlığına karşı koruma ile ilgili dikkat edilmesi gerekenler
 
-Şu anda e-posta iletileri gönderen bir yöneticiyseniz Microsoft 365 e-posta adresinizin doğru olduğundan emin olun. Aksi takdirde, istenmeyen posta veya kimlik avı olarak işaretlenir. Daha fazla bilgi için bkz [. Kimliği doğrulanmamış e-posta gönderen geçerli gönderenler için çözümler](email-validation-and-authentication.md#solutions-for-legitimate-senders-who-are-sending-unauthenticated-email).
+Şu anda Microsoft 365'a ileti gönderen bir yöneticiyseniz, e-postanızın doğru şekilde doğrulandığından emin olmanız gerekir. Aksi takdirde, istenmeyen posta veya kimlik avı olarak işaretlenebilir. Daha fazla bilgi için bkz. [Kimliği doğrulanmamış e-posta gönderen geçerli gönderenler için çözümler](email-validation-and-authentication.md#solutions-for-legitimate-senders-who-are-sending-unauthenticated-email).
 
-Tek bir kullanıcının (veya yöneticinin) veya yöneticisinin Kasa Gönderenler listesi, kimliksüz koruma da içinde olmak üzere filtreleme yığınının bölümlerini atlar. Daha fazla bilgi için bkz[. Outlook Kasa Gönderenler'e bakın](create-safe-sender-lists-in-office-365.md#use-outlook-safe-senders).
+Tek bir kullanıcının (veya yöneticinin) Kasa Gönderenler listesindeki gönderenler, kimlik sahtekarlığına karşı koruma da dahil olmak üzere filtreleme yığınının bölümlerini atlar. Daha fazla bilgi için bkz. [Outlook Kasa Gönderenler](create-safe-sender-lists-in-office-365.md#use-outlook-safe-senders).
 
-Yöneticiler izin verilen gönderenler listelerini veya izin verilen etki alanı listelerini kullanmaktan kaçınılmalıdır (mümkün olduğunda). Bu gönderenler tüm istenmeyen posta, kimlik sahteciliği ve kimlik avı korumasının yanı sıra gönderen kimlik doğrulamasını (SPF, DKIM, DMARC) atlar. Daha fazla bilgi için bkz [. İzin verilen gönderenler listelerini veya izin verilen etki alanı listelerini kullanma](create-safe-sender-lists-in-office-365.md#use-allowed-sender-lists-or-allowed-domain-lists).
+Yöneticiler izin verilen gönderen listelerini veya izin verilen etki alanı listelerini kullanmaktan kaçınmalıdır (mümkün olduğunda). Bu gönderenler tüm istenmeyen posta, kimlik sahtekarlığı ve kimlik avı korumasını ve ayrıca gönderen kimlik doğrulamasını (SPF, DKIM, DMARC) atlar. Daha fazla bilgi için bkz. [İzin verilen gönderen listelerini veya izin verilen etki alanı listelerini kullanma](create-safe-sender-lists-in-office-365.md#use-allowed-sender-lists-or-allowed-domain-lists).

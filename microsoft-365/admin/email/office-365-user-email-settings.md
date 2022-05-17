@@ -16,32 +16,32 @@ ms.localizationpriority: high
 search.appverid:
 - MET150
 ms.assetid: 03083fdf-bc52-409a-b2ac-2a5f5c308fa0
-description: Bu makalede, kullanıcılarınıza ilişkin ayarları yönetme hakkında bilgi vetir.
-ms.openlocfilehash: 681396d0389b78222afbaeaa2941b11f5e292b81
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Bu makalede, kullanıcılarınız için ayarları yönetme hakkında bilgi verilmektedir.
+ms.openlocfilehash: 291d6a0207c8ed0f94bcfa224accc217dfc1d78f
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62973606"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65437139"
 ---
-# <a name="user-email-settings"></a>Kullanıcı e-posta ayarları
+# <a name="user-email-settings-in-microsoft-365"></a>Microsoft 365 kullanıcı e-posta ayarları
 
-Bir kuruluşun yöneticisi olarak, kullanıcılarınız için yönetebilirsiniz e-posta ayarları vardır. Bu makale size bu ayarları yönetme hakkında bilgi verir.
+Bir kuruluşun yöneticisi olarak kullanıcılarınızda yönetebileceğiniz e-posta ayarları vardır. Bu makale, bu ayarları yönetme hakkında bilgi verir.
 
 ## <a name="summary-of-email-settings"></a>E-posta ayarlarının özeti
 
-Bu tabloda, aynı adreste bir kullanıcı için değiştirebilirsiniz çeşitli e-posta Microsoft 365.
+Bu tabloda, Microsoft 365 bir kullanıcı için değiştirebileceğiniz çeşitli e-posta ayarları açıklanmaktadır.
 
 
 |Posta ayarı|Açıklama  |
 |---------|---------|
-|Posta kutusu izinleri| **Okuma ve yönetme** , kişilerin diğer kişilerin posta kutularını okuyabilecek ve yöneteceklerini ayarlamanızı sağlar. Bir kişi için **Farklı gönder ve** **Adına gönder izinlerini** de ayarlayabilirsiniz. Diğer ayrıntılar [için Posta kutusu izinlerini başka bir kullanıcıya verme Microsoft 365 - Yönetici](../add-users/give-mailbox-permissions-to-another-user.md) Yardımı'nın göz atabilirsiniz. |
-|E-posta uygulamaları| E-posta uygulamaları, kullanıcının Microsoft e-postalarına erişmek için kullanabileceği uygulamaları seçmenize olanak sağlar. |
-|Genel adres listesinde göster| Genel adres listesinde göster seçeneği, kullanıcının posta kutusunun kuruluş adres listesinde görünürlüğünü etkinleştirmeniz veya devre dışı bırakmanızı sağlar. |
-|E-posta iletme|E-posta iletme, bir kullanıcıya iletme e-posta adresi eklemenize olanak sağlar. Kişinin birden çok e-posta adresi varsa ve bu kişi tüm e-posta adreslerine e-posta almak istiyorsa, bunu yapmak istiyor olun. Diğer ayrıntılar [için E-posta iletmeyi Microsoft 365](configure-email-forwarding.md) e-posta iletmeyi yapılandırma.|
-|Otomatik yanıtlar|Otomatik yanıtlar, birisi o kişinin e-posta adresine e-posta gönderdiği zaman otomatik yanıt ayarlamanızı sağlar. Bir çalışan şirketten ayrılırsa ve bunu e-posta gönderene haber verebilirsiniz.|
-|Diğer eylemler| **Paylaşılan posta kutusuna dönüştür** kullanıcının posta kutusunu paylaşılan posta kutusuna dönüştürmeye olanak sağlar. Kişi sizin kuruluşundan ayrıldığında ve posta kutusu verilerini bir süre tutmak istediğiniz zaman bunu yapmakabilirsiniz. Kullanıcı posta [kutusunu paylaşılan posta kutusuna dönüştürme ve Paylaşılan posta kutusunu](convert-user-mailbox-to-shared-mailbox.md) [açma ve kullanma'ya göz atabilirsiniz](https://support.microsoft.com/office/d94a8e9e-21f1-4240-808b-de9c9c088afd).</br>**Düzenleme Exchange özellikleri**, yönetim merkezini kullanarak Exchange Online görevler için ek Exchange olanak sağlar. [E-posta kutularında kullanıcı posta kutularını yönetme Exchange Online](/exchange/recipients-in-exchange-online/manage-user-mailboxes/manage-user-mailboxes).|
+|Posta kutusu izinleri| **Okuma ve yönetme** , kişilerin diğer kişilerin posta kutularını okuyup okuyamayacağını ve yönetebileceğini ayarlamanıza olanak tanır. Ayrıca, bir kişi için **Farklı Gönder** ve **Adına Gönder** izinlerini de ayarlayabilirsiniz. Diğer ayrıntılar [için Microsoft 365 - Yönetici Yardımı'nda başka bir kullanıcıya posta kutusu izinleri verme](../add-users/give-mailbox-permissions-to-another-user.md) bölümüne bakın. |
+|E-posta uygulamaları| E-posta uygulamaları, kullanıcının Microsoft e-postasına erişmek için kullanabileceği uygulamaları seçmenize olanak tanır. |
+|Genel adres listesinde göster| Genel adres listesinde göster seçeneği, kuruluşun adres listesinde kullanıcının posta kutusunun görünürlüğünü etkinleştirmenize veya devre dışı bırakmanıza olanak tanır. |
+|E-posta iletme|E-posta iletme, kullanıcıya iletme e-posta adresi eklemenize olanak tanır. Kişinin birden çok e-posta adresi varsa ve tüm e-posta adreslerine e-posta almak istiyorsa bunu yapmak isteyebilirsiniz. Daha fazla ayrıntı için [bkz. Microsoft 365'de e-posta iletmeyi yapılandırma](configure-email-forwarding.md).|
+|Otomatik yanıtlar|Otomatik yanıtlar, birisi kişinin e-posta adresine e-posta gönderdiğinde otomatik yanıt ayarlamanıza olanak tanır. Bir çalışan şirketinizden ayrılırsa ve e-posta gönderene haber vermek istiyorsanız bunu yapmak isteyebilirsiniz.|
+|Diğer eylemler| **Paylaşılan posta kutusuna dönüştür** , kullanıcının posta kutusunu paylaşılan posta kutusuna dönüştürmenizi sağlar. Kişi kuruluşunuzdan ayrılırsa ve posta kutusu verilerini bir süre buralarda tutmak istiyorsanız bunu yapabilirsiniz. [Kullanıcı posta kutusunu paylaşılan posta kutusuna dönüştürme ve Paylaşılan posta kutusunu](convert-user-mailbox-to-shared-mailbox.md) [açma ve kullanma'ya](https://support.microsoft.com/office/d94a8e9e-21f1-4240-808b-de9c9c088afd) göz atın.</br>**düzenleme Exchange özellikleri**, Exchange yönetim merkezini kullanarak ek Exchange Online görevleri yönetmenize olanak tanır. [Exchange Online'da kullanıcı posta kutularını yönetme](/exchange/recipients-in-exchange-online/manage-user-mailboxes/manage-user-mailboxes) hakkında bilgi edinin.|
 
 > [!NOTE]
 >
-> <sup>1</sup> Yalnızca posta kutularında tümüyle barındırılan posta kutuları için e-posta uygulamalarını Microsoft 365. Bu özelliği, şirket içinde barındırılan posta kutularının e-posta uygulamalarını yönetmek için kullanılamaz.
+> <sup>1</sup> Yalnızca Microsoft 365'de tamamen barındırılan posta kutuları için e-posta uygulamalarını yönetebilirsiniz. Şirket içinde barındırılan posta kutuları için e-posta uygulamalarını yönetmek için bu özelliği kullanamazsınız.

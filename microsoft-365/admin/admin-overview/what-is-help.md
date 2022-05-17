@@ -1,5 +1,5 @@
 ---
-title: E-Microsoft 365 yönetim merkezi
+title: Microsoft 365 yönetim merkezi yardım alma
 f1.keywords:
 - NOCSH
 ms.author: cmcatee
@@ -22,42 +22,42 @@ search.appverid:
 - BEA160
 - GEA150
 ROBOTS: NOINDEX
-description: Bu e-postayı kullanırken yardım almak için tüm Microsoft 365 yönetim merkezi.
-ms.openlocfilehash: 0de98eab68dd848fd54ef60f7eb04ae18c517d82
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Microsoft 365 tümleştirilmiş yardımını kullanarak Microsoft 365 aboneliğinizden en iyi şekilde yararlanabilirsiniz.
+ms.openlocfilehash: f5aca14ed8e397be58045d5599dbfc602f633fb9
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983357"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65435887"
 ---
 <!-- The following is just placeholder text from Madhura's mail. We need to add images/examples of each -->
 
-# <a name="how-to-get-help-in-the-microsoft-365-admin-center"></a>E-Microsoft 365 yönetim merkezi
+# <a name="how-to-get-help-in-the-microsoft-365-admin-center"></a>Microsoft 365 yönetim merkezi yardım alma
 
-Yöneticiyseniz, <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">https://admin.microsoft.com</a> en iyi şekilde yönetilebilir ve en iyi şekilde Microsoft 365. Bazen doğru görevi bulamayabilirsiniz, bir görev akışına başlamadan önce daha fazla bağlama ihtiyacınız olabilir veya bir yönetici olarak eylemlerinizi kapsamdan ve etkiden emin olamayabilirsiniz. Bu gibi durumlarla ilgili olarak genel olarak modern yardım ve akıllı <a href="https://go.microsoft.com/fwlink/p/?linkid=2166757" target="_blank">Microsoft 365 yönetim merkezi</a> şu yollarla sağlaruz:
+Yöneticiyseniz, <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">https://admin.microsoft.com</a> Microsoft 365 aboneliğinizi yönetmek ve en iyi şekilde kullanmak için gideceğiniz yerdir. Bazen doğru görevi bulamayabilirsiniz, görev akışına başlamadan önce daha fazla bağlama ihtiyacınız olabilir veya yönetici olarak eylemlerinizin kapsamı ve etkisinden emin olmayabilirsiniz. Bu durumları ele almak için, <a href="https://go.microsoft.com/fwlink/p/?linkid=2166757" target="_blank">Microsoft 365 yönetim merkezi</a> boyunca şu yollarla modern yardım ve akıllı yardım sağlarız:
 
 * **Tümleşik yardım** - yönetim merkezinde yardım
 
-* **Akıllı yardım** - AI tarafından desteklenen kendi kendine yardım
+* **Akıllı yardım** - yapay zeka tarafından desteklenen kendi kendine yardım
 
-* **Kılavuzlar ve** makaleler - Web'de kapsamlı içerik
+* **Kılavuzlar ve makaleler** - web'de kapsamlı içerik
 
 ## <a name="integrated-help"></a>Tümleşik yardım
 
-Yardım, yönetim merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=2166757" target="_blank">genelinde tümleşiktir</a>, bu nedenle ihtiyaç olduğunda hemen oradadır. Birçok sayfanın en üstünde, aynı anda göreve ilişkin bilgilendirme içeren bir genel bakış sağlayan satır içi yardım metnini, ayrıca daha ayrıntılı öğrenmeniz için resmi belgeleri hızla bulumanıza izin veren makalelerin bağlantılarını bulabilirsiniz.
+Yardım, <a href="https://go.microsoft.com/fwlink/p/?linkid=2166757" target="_blank">yönetim merkezi</a> genelinde tümleştirildiğinden, ihtiyaç duyduğunuzda hemen oradadır. Birçok sayfanın en üstünde, elinizdeki göreve yönelik bilgilendirici bir genel bakış sağlayan satır içi yardım metninin yanı sıra daha ayrıntılı öğrenme için resmi belgeleri hızlı bir şekilde bulmanıza olanak sağlayan makalelerin bağlantılarını bulabilirsiniz.
 
 ![Satır içi yardımı ve makalelerin bağlantılarını gösteren Gruplar sayfası.](../../media/integrated-help.png)
 
-## <a name="modern-self-help-powered-by-ai"></a>AI tarafından desteklenen modern kendi kendine yardım
+## <a name="modern-self-help-powered-by-ai"></a>Yapay zeka ile desteklenen modern kendi kendine yardım
 
-Yapay zeka tarafından desteklenen modern kendi kendine yardım deneyimimizi açmak için aşağıdaki listeden **Yardıma** Ihtiyacınız Var düğmesini <a href="https://go.microsoft.com/fwlink/p/?linkid=2166757" target="_blank">Microsoft 365 yönetim merkezi</a>. Örneğin, "etki alanımı doğrula" ifadesini aratırsanız, size yardımcı olduğunu düşünüyoruz adımların yanı sıra birkaç makale de elde edersiniz. Makine öğrenimi'ni, benzer sorguları giren diğer yöneticilere yardımcı olan en yakın çözümü ortaya çıkartır.
+Yapay zeka ile desteklenen modern kendi kendine yardım deneyimimizi açmak için <a href="https://go.microsoft.com/fwlink/p/?linkid=2166757" target="_blank">Microsoft 365 yönetim merkezi</a> **Yardım Gerekiyor** düğmesini seçin. Örneğin, "etki alanımı doğrula" araması yaparsanız, adımların yanı sıra size yardımcı olacağını düşündüğümüz birkaç makale alırsınız. Benzer sorgular giren diğer yöneticilere yardımcı olan en yakın çözümü ortaya getirmek için makine öğrenmesini kullanırız.
 
-Ya da kendi durumunuzla ilgili bir işi nasıl bu şekilde tamamlayca bilginiz olmadığınız zamanlarda Destek Yardımcısı'nın kullanımına devam etmektir. Şu anda, bu deneyim yalnızca İngilizce olarak kullanılabilir. Destek Yardımcısı'ni açmak için, Yardım Gerekiyor bölmesinin üst kısmında yer alan iki **durumlu düğmeyi kullanın** . Destek Yardımcısı size yardımcı olmak için bir konuşma arabirimi sağlar. Siz sorgunuza girdikten sonra, sohbet robotu sizi durumunuz için doğru yanıta getirmek için netleştirme soruları sorar. Çözüm bulmak ve görevleri tamamlamak için bunu sanal yardımcınız olarak düşünebilirsiniz.
+Alternatif olarak, belirli bir durumda bir işi nasıl tamamlayabileceğinizi tam olarak bilmediğiniz zamanlarda Destek Yardımcısı'nı kullanın. Şu anda bu deneyim yalnızca İngilizce olarak kullanılabilir. Destek Yardımcısı'nı açmak için Yardım Gerekiyor bölmesinin üst kısmındaki iki durumlu düğmeyi kullanmanız **yeterlidir** . Destek Yardımcısı size yardımcı olacak bir konuşma arabirimi sağlar. Sorgunuzu girdikten sonra sohbet botu, özel durumunuz için doğru yanıta ulaşmak için net sorular sorar. Çözümleri keşfetmek ve görevleri tamamlamak için bunu sanal yardımcınız olarak düşünün.
 
 ![Modern kendi kendine yardım.](../../media/help-options.png)
 
-Kuşkusuz, bazen sorular insanlar tarafından en iyi yanıt verir. Modern kendi kendine yardım bizim için yanıt vermiyorsa, her zaman destek temsilcilerimize başvurun.
+Elbette, bazen sorular insanlar tarafından en iyi şekilde yanıtlanıyor. Modern kendi kendine yardımımızın yanıtı yoksa her zaman destek temsilcilerimizle iletişime geçme seçeneğiniz vardır.
 
 ## <a name="guides-and-articles"></a>Kılavuzlar ve makaleler
 
-Ayrıca, kapsamlı dağıtım kılavuzlarını, hızlı adım adım yordamları veya PowerShell cmdlet'lerini arıyorsanız, web'de bizi aramalısınız. İçeriği sık sık güncelleştirmektedir ve size en son bilgileri sağlamayı deneriz. Bu belgeler sitesinde yer alan makalelerimize [ve Microsoft 365 göz](../../index.yml) atabilirsiniz.
+Ayrıca kapsamlı dağıtım kılavuzları, adım adım hızlı yordamlar veya PowerShell cmdlet'leri arıyorsanız web'de bizi arayın. İçeriği sık sık güncelleştiriyoruz ve size en son bilgileri sağlamaya çalışıyoruz. [Microsoft 365 Belgeleri](../../index.yml) sitesindeki makalelerimize ve kılavuzlarımıza göz atın.

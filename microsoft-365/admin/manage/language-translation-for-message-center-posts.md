@@ -21,28 +21,28 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: 9f7c2ff2-af65-4557-8840-0b84ce96d9bc
-description: İleti merkezi gönderileri yalnızca İngilizcedir, ancak bu gönderiler sizin belirttiğiniz dilde otomatik olarak Microsoft 365.
-ms.openlocfilehash: d622118b63b5fdfdab4fea4f62362e1df468e6aa
-ms.sourcegitcommit: 6dcc3b039e0f0b9bae17c386f14ed2b577b453a6
+description: İleti merkezi gönderileri yalnızca İngilizcedir ancak Microsoft 365 için belirttiğiniz dilde otomatik olarak görüntülenebilir.
+ms.openlocfilehash: 23f94654e01697c3ebbc74df4f2409411ca14b9a
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "63018892"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65437601"
 ---
-# <a name="language-translation-for-message-center-posts"></a>İleti merkezi gönderileri için dil çevirisi
+# <a name="language-translation-for-microsoft-365-message-center-posts"></a>Microsoft 365 İleti merkezi gönderileri için dil çevirisi
 
-İleti merkezi gönderileri, gönderdiğiniz bilgilerin zaman çizelgeleri nedeniyle yalnızca İngilizce yazılır, ancak kişisel dil ayarlarınız tarafından belirtilen dilde otomatik olarak Microsoft 365. Tercih ettiğiniz dili İngilizce dışında bir dile ayarsanız, İleti merkezinde gönderileri otomatik olarak çevirme seçeneğiniz vardır. İletiler makine tarafından tercih edilen dile çevrilir; bu, çevirinin bilgisayar tarafından yapılan olduğu anlamına gelir. Bu seçenek varsayılan görünümü kontrol eder, ancak çeviri desteği olan dillerden herhangi birsinde gönderileri çevirmek ve görüntülemek için de açılan menüyü kullanabilirsiniz. İngilizce'yi seçerseniz iletiyi özgün İngilizce sürümüne geri döndür ayarlarız.
+İleti merkezi gönderileri, gönderdiğimiz bilgilerin zamanından dolayı yalnızca İngilizce yazılmıştır, ancak Microsoft 365 için kişisel dil ayarlarınız tarafından belirtilen dilde otomatik olarak görüntülenebilir. Tercih ettiğiniz dili İngilizce dışında bir dil olarak ayarlarsanız, İleti merkezi'nde gönderileri otomatik olarak çevirme seçeneğini görürsünüz. İletiler makinede tercih ettiğiniz dile çevrilir; başka bir deyişle çeviriyi bir bilgisayar yapmıştır. Bu seçenek varsayılan görünümü denetler, ancak gönderileri çeviri için desteklediğimiz dillerden herhangi birinde çevirmek ve görüntülemek için açılan menüyü de kullanabilirsiniz. İngilizce'yi seçerseniz, iletiyi özgün İngilizce sürümüne geri döndüreceğiz.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
   
 > [!IMPORTANT]
-> İleti merkezi için dil ayarlarınızı seçmeden önce tercih ettiğiniz dili ayarlayabilirsiniz. Diliniz İngilizce olarak ayarlandığında hiçbir çeviri seçeneği gösterilmez. Başkalarının tercih edilen dilini belirtemezsiniz; herkesin bu ayarı kendisinin değiştirmesi gerekir. 
+> İleti merkezi için dil ayarlarınızı seçebilmeniz için tercih ettiğiniz dili ayarlamanız gerekir. Diliniz İngilizce olarak ayarlandığında hiçbir çeviri seçeneği gösterilmez. Başkalarının tercih edilen dilini belirtemezsiniz; herkesin bu ayarı kendisinin değiştirmesi gerekir. 
   
 ## <a name="set-your-preferred-language"></a>Tercih ettiğiniz dili ayarlama
 
-1. Sayfa <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> giriş sayfasında, pencerenin sağ üst köşesinde ayarlar simgesini seçin.
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> veya giriş sayfasında, pencerenin sağ üst köşesindeki ayarlar simgesini seçin.
   
-2. Dil **ve saat dilimi'nin** altında, **kullanılabilir seçenekleri göstermek için** Hepsini görüntüle'yi seçin. Açılan menüden istediğiniz dili seçin ve ardından Kaydet'i **seçin**. Microsoft 365 yenilemeyi ve yeni dili görüntülemeyi dener. Bu hemen gerçekleşmezse veya bu işlem fazla uzun sürüyor gibi görünürse, tarayıcınızı yenileyebilir veya oturumunuzu kapatabilir ve ardından yeniden oturum açabilirsiniz.
+2. Kullanılabilir seçenekleri göstermek için **Dil ve saat dilimi** altında **Tümünü görüntüle'yi** seçin. Açılan menüden istediğiniz dili seçin ve ardından **Kaydet'i** seçin. Microsoft 365 yeni dili yenilemeyi ve görüntülemeyi dener. Bu hemen gerçekleşmezse veya bu işlem fazla uzun sürüyor gibi görünürse, tarayıcınızı yenileyebilir veya oturumunuzu kapatabilir ve ardından yeniden oturum açabilirsiniz.
   
 ## <a name="machine-translation-in-message-center"></a>İleti merkezinde makine çevirisi
 
@@ -52,9 +52,9 @@ Tercih edilen diliniz İngilizce olarak ayarlanmamışsa, İleti merkezinde çev
 
 ## <a name="related-content"></a>İlgili içerik
 
-[İlke genel Microsoft 365 yönetim merkezi](İlk Microsoft 365 yönetim merkezi](.. /admin-overview/admin-center-overview.md) (video)\
-[Hangi aboneliğe sahibim?](../admin-overview/what-subscription-do-i-have.md) (article)\
-[Değişiklikleri hakkında bilgi (makale](../manage/stay-on-top-of-updates.md) )
+[Microsoft 365 yönetim merkezi genel bakış](Microsoft 365 yönetim merkezi genel bakış](.. /admin-overview/admin-center-overview.md) (video)\
+[Hangi aboneliğe sahibim?](../admin-overview/what-subscription-do-i-have.md) (makale)\
+[Değişikliklerden haberdar olun](../manage/stay-on-top-of-updates.md) (makale)
 
 
 

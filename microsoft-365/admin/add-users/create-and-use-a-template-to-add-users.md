@@ -19,77 +19,77 @@ ms.custom:
 search.appverid:
 - MET150
 - MOE150
-description: Birden çok kullanıcı eklerken zaman kazanmak ve ayarları standart hale yapmak için bir şablon oluşturabilir ve kullanabilirsiniz.
-ms.openlocfilehash: cacb3fc6ef2a145cbfe4c4131b2e5e38eca2c257
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Zaman kazanmak ve Microsoft 365 yönetim merkezi birden çok kullanıcı eklediğinizde ayarları standartlaştırmak için şablon oluşturup kullanabilirsiniz.
+ms.openlocfilehash: 0f0d737bcf600acb4084c5e2b85e5595c6387fee
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983734"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65437001"
 ---
 # <a name="create-and-use-a-template-to-add-users"></a>Kullanıcıları eklemek için şablon oluşturma ve kullanma
 
-Birden çok kullanıcı eklerken zaman kazanmak ve ayarları standartleştirmek için bir şablon oluşturabilir ve kullanabilirsiniz. Şablonlar, aynı role sahip olan ve aynı konumda çalışan kullanıcılar ve aynı yazılım gerektirenler gibi birçok ortak özelliği paylaşan kullanıcılarınız varsa özellikle kullanışlıdır. Örneğin, aynı ofiste çalışan bir destek mühendisleri ekibine sahipsiniz olabilir.  
+Birden çok kullanıcı eklerken zaman kazanmak ve ayarları standartlaştırmak için şablon oluşturup kullanabilirsiniz. Şablonlar özellikle aynı role sahip olan ve aynı konumda çalışan ve aynı yazılıma ihtiyaç duyan kullanıcılar gibi birçok ortak özelliği paylaşan kullanıcılarınız varsa kullanışlıdır. Örneğin, aynı ofiste çalışan bir destek mühendisleri ekibiniz olabilir.  
 
 ## <a name="create-a-template"></a>Şablon oluşturma
 
- >  > &mdash;Şablonlar kolayca oluşturabilirsinizKullanıcılarıKullanıcı kullanıcılar'ı seçebilirsiniz ve sonra açılan listeden Şablon ekle'yi seçebilirsiniz veya yeni kullanıcı ekleyebilirsiniz ve bitirdikten sonra girdiyi şablon olarak kaydetme seçeneğiniz olur.
+Şablonlar kolayca oluşturulabilir&mdash; **KullanıcılarAkullanıcılarKullanıcılarKullanıcılar'ı** >  >  seçip açılan listeden **Şablon ekle'yi** seçebilir veya yeni bir kullanıcı ekleyebilirsiniz ve işiniz bittiğinde girişi şablon olarak kaydetme seçeneğiniz olur.
 
-Kullanıcı ekledikten sonra bir şablon sanız, aşağıdaki ayarlar için seçtiğiniz değerler şablona kaydedilir:
+Kullanıcı ekledikten sonra şablon oluşturduğunuzda, aşağıdaki ayarlar için seçtiğiniz değerler şablona kaydedilir:
 
 - Etki alanı adı
-- Parola ayarları seçimi: Parolaları oluşturmayı veya bunları otomatik olarak oluşturmalarını sebilirsiniz
-- Tek seferlik parola seçimi: İlk oturum açmadan sonra kullanıcının yeni parola oluşturmasını gerektirmeniz gerekir
+- Parola ayarları seçimi: Parola oluşturmayı veya otomatik olarak oluşturulmasını seçebilirsiniz
+- Tek seferlik parola seçimi: kullanıcının ilk oturum açma işleminden sonra yeni parola oluşturmasını zorunlu kılabilir
 - Lisans konumu
 - Lisans seçenekleri
 - Uygulama seçenekleri
 - Rol
-- İş profili, Bölüm, **posta adresi**, **telefon** **Office** **adresi Office profil** **bilgileri** 
+- **İş profili**, **Departman**, **Office, Office** **telefon** ve **Sokak adresi** gibi profil bilgilerinin çoğu 
 
-Aşağıdaki bilgiler kullanıcıya özeldir ve şablona kayıtlı değil:
+Aşağıdaki bilgiler kullanıcıya özgüdür ve şablona kaydedilmez:
 
 - Ad ve soyadı
 - Görünen ad
 - Kullanıcı adı
-- Parolayı e-postayla gönderme seçimi ve parola e-postanın kime gönderildiği
+- Parolayı e-postayla gönderme ve parola e-postasının kime gönderildiğini seçme
 - Cep telefonu numarası
 
-Bir bölümün içindeki bir ayar için bilgi girmeyseniz, bu değer boş olur ve bu ayar şablonda görüntülenmez. Örneğin, İş unvanını **boş** bırakırsanız, şablonu gözden geçirebilirsiniz ve şablon kullanınca **, İş** unvanı hiç görünmez. Tüm Profil bölümü ayarlarını **boş** bırakırsanız, **Profil bölümünde** son şablonunda **Sağ yok** görüntülenir.
+Bir bölümdeki bir ayarın bilgilerini girmemeyi seçerseniz, bu değer boş olur ve bu ayar şablonda görüntülenmez. Örneğin, **İş başlığını** boş bırakırsanız, şablonunuzu gözden geçirirken ve şablonunuzu kullanırken **İş başlığı** hiç görünmez. Tüm **Profil** bölümü ayarlarını boş bırakırsanız, **Profil** bölümü son şablonunuzda **Sağlanmadı** ifadesini görüntüler.
 
-Şablon ekle seçeneğini seçerek **bir şablon oluşturursanız** , hangi değerlerin tamamlandırıcanı seçebilirsiniz. Boş olarak kalan her şey, **şablonda Yok olarak** görünür.
+Şablon **ekle** seçeneğini belirleyerek şablon oluşturduğunuzda, hangi değerlerin tamamlanacağını seçebilirsiniz. Boş bırakılan her şey şablonda **Hiçbiri sağlandı** olarak görünür.
 
 ## <a name="use-a-template-to-add-a-user"></a>Kullanıcı eklemek için şablon kullanma
 
 Var olan bir şablonu kullanarak kullanıcı eklemek için:
 
-1. Yönetim merkezinde **UsersActive** >  **users öğesini seçin**.
+1. Yönetim merkezinde **KullanıcılarEtkin** >  kullanıcılar'ı seçin.
 
-2. Kullanıcı **şablonları'ı** seçin ve ardından açılan listeden bir şablon seçin. (Liste, diğer yöneticilerin oluşturduğu şablonları değil yalnızca sizin oluşturduğunuz şablonları içerir.)
+2. **Kullanıcı şablonları'nı** seçin ve ardından açılan listeden bir şablon seçin. (Liste, diğer yöneticiler tarafından oluşturulan şablonları değil, yalnızca sizin oluşturduğunuz şablonları içerir.)
 
    > [!NOTE]
-   > Ayrıca, Kullanıcı şablonları'ı  >  seçerek şablon eklemek için de şablon kullanabilirsinizSesk şablonlarınylarını seçin, bir şablon seçin ve ardından Şablonu **kullan'ı seçin**.
+   > Ayrıca, **Kullanıcı şablonları** >  Şablon yönet'i seçip bir şablon seçip Şablonu kullan'ı seçerek de **bir şablon** kullanabilirsiniz.
 
 3. Seçtiğiniz şablondan kullanıcı oluşturmak için adımları izleyin.
 
    > [!NOTE]
-   > Ekleyilen kullanıcı için yeterli lisansınız yoksa ve ödeme bilginiz varsa, mevcut ödeme bilgilerinizi kullanarak başka bir lisans satın almak için çalışmamız gerekir. Ödeme bilgileri kullanılamıyorsa kullanıcı lisanssız kullanıcı olarak oluşturulur.
+   > Eklediğiniz bir kullanıcı için kullanılabilir lisanslarınız yetersizse ve ödeme bilgileriniz kullanılabilir durumdaysa, mevcut ödeme bilgilerinizi kullanarak başka bir lisans satın alma girişiminde bulunacağız. Ödeme bilgileriniz kullanılamıyorsa, kullanıcı lisanssız kullanıcı olarak oluşturulur.
 
 ## <a name="manage-templates"></a>Şablonları yönetme
 
-Yalnızca artık ihtiyacınız olmadığınız şablonları silebilir ve yenilerini  eklersiniz. Şablonu silmek için:
+Yalnızca artık ihtiyacınız olmayan şablonları silebilir ve yenilerini ekleyebilirsiniz. Şablonu silmek için:
 
-1. Yönetim merkezinde **UsersActive** >  **users öğesini seçin**.
+1. Yönetim merkezinde **KullanıcılarEtkin** >  kullanıcılar'ı seçin.
 
-2. **Şablonlar'ı** seçin ve ardından **açılan listeden** Şablonları yönet'i seçin.
+2. **Şablonlar'ı** ve ardından açılan listeden **Şablonları yönet'i** seçin.
 
-3. Şablonların listesi görüntülenir. Şablon silmek için şunları yapabilirsiniz:
-    - Bir veya daha fazla şablon seçin ve sonra da Sil'i **seçin**. 
-    - Şablon adının sağ üç noktayı seçin ve sonra da Sil'i **seçin**.
-    - Şablon adını seçin. Şablon ayrıntıları ekrannizin sağ tarafında görüntü olduğunda Şablonu **sil'i seçin**.
+3. Şablonların listesi görüntülenir. Aşağıdakilerden birini yaparak şablonu silebilirsiniz:
+    - Bir veya daha fazla şablon seçin ve ardından **Sil'i** seçin. 
+    - Şablon adının sağındaki üç noktayı ve ardından **Sil'i** seçin.
+    - Şablon adını seçin. Şablon ayrıntıları ekranınızın sağ tarafında göründüğünde **Şablonu sil'i** seçin.
 
 ## <a name="related-articles"></a>İlgili makaleler
 
-[Kullanıcıları ekleme ve lisansları aynı anda atama](add-users.md)
+[Aynı anda kullanıcı ekleme ve lisans atama](add-users.md)
 
-[Eski bir çalışanı iş yerlerinden Microsoft 365](remove-former-employee.md)
+[eski çalışanı Microsoft 365 kaldırma](remove-former-employee.md)
   

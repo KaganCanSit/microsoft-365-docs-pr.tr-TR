@@ -13,23 +13,23 @@ ms.collection:
 - Adm_O365
 - Adm_TOC
 ms.custom: AdminSurgePortfolio
-description: Basic Mobility ve Security'de iOS cihazlarını yönetin.
-ms.openlocfilehash: 99aa909bf9adab1464ad3858cfac4a04cc541609
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+description: Basic Mobility ve Security'de iPad ve iPhone gibi iOS cihazları yönetmek için bir APNs sertifikası oluşturarak başlayın.
+ms.openlocfilehash: 8bcbcdeac9f1cadd945c3f7c44e9192d57db7c82
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64781171"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65435799"
 ---
 # <a name="create-an-apns-certificate-for-ios-devices"></a>iOS cihazları için APN sertifikası oluşturma
 
-Basic Mobility ve Security'de iPad ve iPhone gibi iOS cihazlarını yönetmek için bir APNs sertifikası oluşturun.
+Basic Mobility ve Security'de iPad ve iPhone gibi iOS cihazları yönetmek için bir APNs sertifikası oluşturun.
 
 1. Genel yönetici hesabınızla Microsoft 365 oturum açın.
 
 2. Tarayıcınızda yazın <https://protection.office.com/>.
 
-3. **Veri kaybı önleme** \> **Cihaz yönetimi'ni** ve **ardından iOS cihazları için APNs Sertifikası'nı** seçin.
+3. **Veri kaybı önleme** \> **Cihaz yönetimi'ni** ve **iOS cihazlar için APNs Sertifikası'nı** seçin.
 
 4. Apple Anında İletme Bildirimi Sertifikası Ayarlar sayfasında **İleri'yi** seçin.
 

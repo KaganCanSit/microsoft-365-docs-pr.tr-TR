@@ -1,5 +1,5 @@
 ---
-title: Yönetici rollerini atama Microsoft 365 yönetim merkezi
+title: Yönetici rollerini Microsoft 365 yönetim merkezi atama
 f1.keywords:
 - NOCSH
 ms.author: kwekua
@@ -28,53 +28,53 @@ search.appverid:
 - BEA160
 - GEA150
 ms.assetid: eac4d046-1afd-4f1a-85fc-8219c79e1504
-description: Yönetici merkezinde belirli görevleri gerçekleştirecek bir kullanıcıya veya işletmedeki birden çok kullanıcıya yönetici rolleri atamayı öğrenin.
-ms.openlocfilehash: fd38bb9ed378e6b3ffc20a79ca71eb2943599dcc
-ms.sourcegitcommit: 0ee2dabe402d44fecb6856af98a2ef7720d25189
+description: Yönetici merkezinde belirli görevleri gerçekleştirebilmeleri için işletmenizdeki bir kullanıcıya veya birden çok kullanıcıya yönetici rolleri atamayı öğrenin.
+ms.openlocfilehash: 663a5fb60fa815eab079f4ab96e53e8b168105b7
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "62996106"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65437030"
 ---
-# <a name="assign-admin-roles"></a>Yönetici rollerini atama
+# <a name="assign-admin-roles-in-the-microsoft-365-admin-center"></a>Microsoft 365 yönetim merkezi yönetici rolleri atama
 
-Microsoft iş aboneliğinizi satın alan kişi sizseniz, genel yöneticisiniz. Bu, abonelikleriniz içinde ürünler üzerinde sınırsız denetime sahip olduğunu ve çoğu veriye erişebilirsiniz.
+Microsoft iş aboneliğinizi satın alan kişi sizseniz genel yönetici olursunuz. Bu, aboneliklerinizdeki ürünler üzerinde sınırsız denetime sahip olduğunuz ve çoğu veriye erişebileceğiniz anlamına gelir.
 
 Daha fazla bilgi için bkz. [Yönetici rolleri hakkında](about-admin-roles.md).
 
-Yeni kullanıcıları eklerken, bu kullanıcılara yönetici rolü atamazsanız bu kullanıcılar kullanıcı rolünde olur ve Microsoft  yönetim merkezlerinden herhangi biri için yönetici ayrıcalıklarına sahip değildir. Ancak, işleri yapmak için yardıma gerek varsa, kullanıcıya bir yönetici rolü attaysanız. Örneğin, parolaları sıfırlamaya yardımcı olması için birine ihtiyacınız varsa, bu kullanıcıya genel yönetici rolü atamanız gerekmektedir, bu kullanıcıya parola yöneticisi rolü atamanız gerekir. Verilerinize ve çevrimiçi işletmenize sınırsız erişimi olan çok fazla genel yönetici olması bir güvenlik riski sağlar.
+Yeni kullanıcılar eklediğinizde, onlara bir yönetici rolü atamazsanız, bu *kullanıcılar kullanıcı rolündedir* ve Microsoft yönetim merkezlerinin hiçbirinde yönetici ayrıcalıklarına sahip değildir. Ancak işleri halletmek için yardıma ihtiyacınız varsa kullanıcıya yönetici rolü atayabilirsiniz. Örneğin, parolaları sıfırlamaya yardımcı olması için birine ihtiyacınız varsa, bu kişiye genel yönetici rolünü atamamanız, parola yöneticisi rolünü atamanız gerekir. Verilerinize ve çevrimiçi işletmenize sınırsız erişimi olan çok fazla genel yöneticiye sahip olmak bir güvenlik riskidir.
 
-## <a name="watch-add-an-admin"></a>İzle: Yönetici ekleme
+## <a name="watch-add-an-admin"></a>İzleyin: Yönetici ekleme
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE1FOfO] 
 
-1. Microsoft 365 Business'a kaydolarak otomatik olarak genel yönetici oluruz. İşletmenin yönetimine yardımcı olmak için diğer kişiler de yönetici olabilir. 
-1. Etkin Microsoft 365 yönetim merkezi **Kullanıcılar'ı** >  <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">**seçin**</a>.
-1. Yönetici yapmak istediğiniz kullanıcıyı seçin ve sonra da Rolleri **Yönet'i seçin**.
+1. Microsoft 365 business'a kaydolduğunda otomatik olarak genel yönetici olursunuz. İşletmeyi yönetmeye yardımcı olmak için diğer kişileri de yönetici yapabilirsiniz. 
+1. Microsoft 365 yönetim merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">**KullanıcılarEtkin**</a> >  kullanıcılar'ı seçin.
+1. Yönetici yapmak istediğiniz kullanıcıyı seçin ve ardından **Rolleri yönet'i** seçin.
 
 Bu videoyu faydalı bulduysanız, [küçük işletmelere ve Microsoft 365’i ilk kez kullananlara yönelik eğitim serisinin tamamına göz atın](../../business-video/index.yml).
 
 ## <a name="assign-admin-roles"></a>Yönetici rollerini atama 
 
-Kullanıcıları 2 farklı şekilde bir role atabilirsiniz:
+Kullanıcıları bir role 2 farklı yolla atayabilirsiniz:
 
-- Kullanıcıya rol atamak için kullanıcının ayrıntılarına **ve** Rolleri yönet'e gidebilirsiniz.
-- Ya da **Roller'e gidip** rolü seçin ve sonra birden çok kullanıcı ekleyin.
+- Kullanıcıya rol atamak için kullanıcının ayrıntılarına ve **Rolleri yönet'e** gidebilirsiniz.
+- İsterseniz **Roller'e** gidip rolü seçip birden çok kullanıcı ekleyebilirsiniz.
 
-### <a name="assign-admin-roles-to-users-using-roles"></a>Roller'i kullanan kullanıcılara yönetici rolleri atama
+### <a name="assign-admin-roles-to-users-using-roles"></a>Rolleri kullanarak kullanıcılara yönetici rolleri atama
 
-1. Yönetim merkezinde Rol <a href="https://go.microsoft.com/fwlink/p/?linkid=2097861" target="_blank">**atamaları'ne gidin**</a>. Organizasyon için **kullanılabilir yönetici** **rollerini görüntülemek için Azure AD veya Intune** sekmelerini seçin.
-2. Kullanıcıya atamak istediğiniz yönetici rolünü seçin.
-3. Atanan **yöneticilerAdresi'ni** >  **seçin**.
-4. Kullanıcının görünen adını veya **kullanıcı** adını **yazın** ve ardından öneri listesinden bir kullanıcı seçin.
-5. Bitirene kadar birden çok kullanıcı ekleyin.
-6. **Kaydet'i** seçin; ardından kullanıcı atanan yöneticiler listesine eklenir.
+1. Yönetim merkezinde <a href="https://go.microsoft.com/fwlink/p/?linkid=2097861" target="_blank">**Rol atamaları'na**</a> gidin. Kuruluşunuzda kullanılabilen yönetici rollerini görüntülemek için **Azure AD** veya **Intune** sekmelerini seçin.
+2. Kullanıcıyı atamak istediğiniz yönetici rolünü seçin.
+3. **Atanan** **yöneticilerEkle'yi** >  seçin.
+4. Kullanıcının **görünen adını** veya **kullanıcı adını** yazın ve ardından öneri listesinden kullanıcıyı seçin.
+5. İşiniz bitene kadar birden çok kullanıcı ekleyin.
+6. **Kaydet'i** seçtiğinizde kullanıcı atanan yöneticiler listesine eklenir.
 
-### <a name="assign-a-user-to-an-admin-role-from-active-users"></a>Etkin kullanıcılardan bir kullanıcıya yönetici rolü atama
+### <a name="assign-a-user-to-an-admin-role-from-active-users"></a>Etkin kullanıcılardan yönetici rolüne kullanıcı atama
 
 ::: moniker range="o365-worldwide"
 
-1. Yönetim merkezinde Kullanıcılar Etkin kullanıcılar **sayfasına** > gidin.[](https://go.microsoft.com/fwlink/p/?linkid=834822)
+1. Yönetim merkezinde **Kullanıcılar** > [Etkin kullanıcılar](https://go.microsoft.com/fwlink/p/?linkid=834822) sayfasına gidin.
 
 ::: moniker-end
 
@@ -84,28 +84,28 @@ Kullanıcıları 2 farklı şekilde bir role atabilirsiniz:
 
 ::: moniker-end
 
-2. Etkin **kullanıcılar sayfasında** , yönetici rolünü değiştirmek istediğiniz kullanıcıyı seçin. Uç uç bölmesindeki Roller'in **altında** Rolleri **Yönet'i seçin**.
+2. **Etkin kullanıcılar** sayfasında, yönetici rolünü değiştirmek istediğiniz kullanıcıyı seçin. Açılır bölmedeki **Roller'in** altında **Rolleri yönet'i** seçin.
 
-3. Kullanıcıya atamak istediğiniz yönetici rolünü seçin. İstediğiniz rolü görmüyorsanız, listenin **en altındaki Tüm** göster'i seçin.
+3. Kullanıcıya atamak istediğiniz yönetici rolünü seçin. Aradığınız rolü görmüyorsanız listenin en altındaki **Tümünü göster'i** seçin.
 
 ## <a name="assign-admin-roles-to-multiple-users"></a>Birden çok kullanıcıya yönetici rolü atama
 
-PowerShell'i biliyorsanız bkz. [PowerShell ile kullanıcı hesaplarına rol atama](../../enterprise/assign-roles-to-user-accounts-with-microsoft-365-powershell.md). Bu, yüzlerce kullanıcıya rol atamak için idealdir.
+PowerShell'i biliyorsanız bkz. [PowerShell ile kullanıcı hesaplarına rol atama](../../enterprise/assign-roles-to-user-accounts-with-microsoft-365-powershell.md). Yüzlerce kullanıcıya rol atamak için idealdir.
   
 On veya daha fazla kullanıcıya rol atamak için aşağıdaki yönergeleri kullanın.
 
-## <a name="check-admin-roles-in-your-organization"></a>Kuruluşta yönetici rollerini denetleme
+## <a name="check-admin-roles-in-your-organization"></a>Kuruluşunuzdaki yönetici rollerini denetleme
 
-Diğer kullanıcılara yönetici rolleri atamak için doğru izinlere sahip olamayabilirsiniz. Doğru izinlere sahip olup olmadığını kontrol edin veya başka bir yöneticiden rolleri sizin için atamasını sorun.
+Diğer kullanıcılara yönetici rolleri atamak için doğru izinlere sahip olmayabilirsiniz. Doğru izinlere sahip olduğunuzdan emin olun veya başka bir yöneticiden size rol atamasını isteyin.
 
-Yönetici rolü izinlerini 2 farklı şekilde kontrol edin:
+Yönetici rolü izinlerini 2 farklı şekilde de kontrol edebilirsiniz:
 
-- Kullanıcının ayrıntılarına gidip Hesap sayfasında **Roller'in altına** **bakabilirsiniz** .
-- Ayrıca, **Roller'e gidip** yönetici rolünü ve atanmış yöneticileri seçerek hangi kullanıcıların atandığı hakkında bilgi edinebilirsiniz.
+- Kullanıcının ayrıntılarına gidebilir ve **Hesap** sayfasında **Roller'in** altına bakabilirsiniz.
+- Ya da **Roller'e** gidip yönetici rolünü seçebilir ve atanmış yöneticileri seçerek hangi kullanıcıların atandığı görebilirsiniz.
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Yönetici Microsoft 365 hakkında](about-admin-roles.md) (makale)\
-[Azure AD yerleşik rolleri](/azure/active-directory/roles/permissions-reference) (makale)\
+[Microsoft 365 yönetici rolleri hakkında](about-admin-roles.md) (makale)\
+[yerleşik rolleri Azure AD](/azure/active-directory/roles/permissions-reference) (makale)\
 [PowerShell ile kullanıcı hesaplarına rol atama](../../enterprise/assign-roles-to-user-accounts-with-microsoft-365-powershell.md) (makale)\
 [İş ortağı ilişkilerini yetkilendirme veya kaldırma](../misc/add-partner.md) (makale)

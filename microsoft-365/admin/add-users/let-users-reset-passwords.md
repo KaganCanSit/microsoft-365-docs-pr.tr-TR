@@ -27,62 +27,62 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: 5bc3f460-13cc-48c0-abd6-b80bae72d04a
-description: Self servis parola sıfırlama aracını kullanarak kullanıcıların kendi parolalarını sıfırlamasına olanak verecek bir ilke ayarlamayı öğrenin.
-ms.openlocfilehash: e72d4815be5486f8f7df362b5b93cae988b7df63
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+description: Kullanıcıların self servis parola sıfırlama aracını kullanarak kendi parolalarını sıfırlamasına izin vermek için Microsoft 365 yönetim merkezi bir ilke ayarlamayı öğrenin.
+ms.openlocfilehash: 2ade056638db03a0a38b7fe2bdacfe3d6d2e4530
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63011814"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65436701"
 ---
 # <a name="let-users-reset-their-own-passwords"></a>Kullanıcıların kendi parolalarını sıfırlamasına izin verme
 
-Yönetici Microsoft 365 olarak, kişilerin self servis parola sıfırlama aracını kullanmasına izin ve [](https://go.microsoft.com/fwlink/p/?LinkId=522677) böylelikle onların parolalarını sıfırlamak zorunda olmadığınız zaman izin veebilirsiniz. İşiniz azalır!
+Microsoft 365 yöneticisi olarak, kullanıcıların [self servis parola sıfırlama aracını](https://go.microsoft.com/fwlink/p/?LinkId=522677) kullanmasına izin vekleyebilirsiniz, böylece onlar için parola sıfırlamak zorunda kalmayın. İşiniz azalır!
 
 > [!TIP]
-> Bu konudaki adımlarda yardıma ihtiyacınız varsa, [Microsoft küçük işletme uzmanıyla çalışmayı göz önünde bulundurabilirsiniz](https://go.microsoft.com/fwlink/?linkid=2186871). İş Yardımı ile, işe alımtan günlük kullanıma kadar işlerinizi büyüttükçe siz ve çalışanlarınız küçük işletme uzmanlarına 24 saat erişim elde ediyor.
+> Bu konuda verilen adımlarla ilgili yardıma ihtiyacınız varsa[bir Microsoft küçük işletme uzmanıyla çalışmayı](https://go.microsoft.com/fwlink/?linkid=2186871) göz önünde bulundurun. İşletme Yardımı ile, işletmenizi büyütürken işe alımdan gündelik kullanıma kadar her aşamada siz ve çalışanlarınız günün 24 saati küçük işletme uzmanlarına erişebilirsiniz.
  
-## <a name="watch-let-users-reset-their-own-passwords"></a>İzle: Kullanıcıların kendi parolalarını sıfırlamasına izin verme
+## <a name="watch-let-users-reset-their-own-passwords"></a>İzleyin: Kullanıcıların kendi parolalarını sıfırlamasına izin verme
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE3AY8S]
 
-1. Gezinti Microsoft 365 yönetim merkezi, sol gezinti bölmesinde  >  Ayarlar'ı Ayarlar **Ve** güvenlik ayarları'& <a href="https://go.microsoft.com/fwlink/p/?linkid=2072756" target="_blank">**seçin**</a>.
-1. **Kişilerinin kendi parolalarını sıfırlamasına izin ver'in** **altındaAzure AD yönetim merkezi'ni seçin**.
-1. Sol gezinti bölmesinde Kullanıcılar'ı **seçin** ve ardından Kullanıcılar **- tüm kullanıcılar sayfasında** Parola sıfırlama'yı **seçin**.
-1. Kendi **kendine parola** sıfırlamayı etkinleştirmek için Herkes'i seçin ve ardından Kaydet'i **seçin**.
+1. Microsoft 365 yönetim merkezi sol gezinti bölmesinde **Ayarlar** >  **Org ayarları'nı** ve ardından <a href="https://go.microsoft.com/fwlink/p/?linkid=2072756" target="_blank">**Güvenlik & gizlilik'i**</a> seçin.
+1. **Kişilerinizin kendi parolalarını sıfırlamasına izin ver'in** altında **Azure AD yönetim merkezi'ni** seçin.
+1. Sol gezinti bölmesinde **Kullanıcılar'ı** seçin ve ardından **Kullanıcılar - tüm kullanıcılar** sayfasında **Parola sıfırlama'yı** seçin.
+1. Self servis parola sıfırlamayı etkinleştirmek için **Tümü'ne** ve ardından **Kaydet'e** tıklayın.
 
 Bu videoyu faydalı bulduysanız, [küçük işletmelere ve Microsoft 365’i ilk kez kullananlara yönelik eğitim serisinin tamamına göz atın](../../business-video/index.yml).
  
 ## <a name="before-you-begin"></a>Başlamadan önce
   
-- Herhangi bir iş, eğitim veya ücretli kar amacı gütmeyen kuruluş planıyla bulut kullanıcıları için self servis parola sıfırlamayı ücretsiz olarak Microsoft 365 edinebilirsiniz. Deneme sürümüyle Microsoft 365.
+- Tüm Microsoft 365 iş, eğitim veya kar amacı gütmeyen ücretli planlarla bulut kullanıcıları için **ücretsiz** self servis parola sıfırlaması alırsınız. Microsoft 365 deneme sürümünde çalışmaz.
 
 - Azure kullanır. Bu adımları izlediğinizde, Azure'da bu özelliği otomatik olarak **ücretsiz** alırsınız. Diğer Azure özelliklerini kullanmazsanız, self servis parola sıfırlama özelliğini açmanın sizin için hiçbir maliyeti yoktur.
 
 - **Şirket içi Active Directory'yi kullanıyorsanız** yukarıdaki iki nokta sizin için geçerli değildir. Onun yerine, bu özelliği ayarlayabilirsiniz ancak **bunun için ücretli bir Azure AD Premium aboneliği gerekir**.
 
-Bu makale, bir işletme, okul veya kar amacı gütmeyen kuruluş için parola süre sonu ilkesi belirleyen kişilere yöneliktir. Bu adımları tamamlamak için yönetici hesabınızla oturum Microsoft 365 gerekir. [Yönetici hesabı nedir?] (genel bakış Microsoft 365 yönetim merkezi](.. /admin-overview/admin-center-overview.md)
+Bu makale, bir işletme, okul veya kar amacı gütmeyen kuruluş için parola süre sonu ilkesi belirleyen kişilere yöneliktir. Bu adımları tamamlamak için Microsoft 365 yönetici hesabınızla oturum açmanız gerekir. [Yönetici hesabı nedir?] (Microsoft 365 yönetim merkezi Genel Bakış](.. /admin-overview/admin-center-overview.md)
 
-Bu adımları gerçekleştirmek [için genel yönetici veya parola](about-admin-roles.md) yöneticisi olun.
+Bu adımları gerçekleştirmek için [genel yönetici veya parola yöneticisi](about-admin-roles.md) olmanız gerekir.
 
-## <a name="steps-let-people-reset-their-own-passwords"></a>Adımlar: Kişilerin kendi parolalarını sıfırlamasına izin verme
+## <a name="steps-let-people-reset-their-own-passwords"></a>Adımlar: kişilerin kendi parolalarını sıfırlamasına izin verme
 
 Bu adımlar, işletmenizdeki herkes için self servis parola sıfırlamayı açar.
 
-1. Yönetim <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">merkezinde Ayarlar'a</a> **Ayarlar** >  **gidin**.
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Yönetim merkezinde</a> **Ayarlar** >  **Org ayarları** sayfasına gidin.
 
-2. Kuruluş ayarları sayfasının **üst kısmında** Güvenlik ve Gizlilik **&** seçin.
+2. **Kuruluş ayarları** sayfasının üst kısmında **Güvenlik & Gizlilik** sekmesini seçin.
   
-3. Self **Servis Parola Sıfırlama'yı seçin**.
+3. **Self servis Parola Sıfırlama'yı** seçin.
 
-4. Self **servis parola sıfırlama'nın altında** Azure **portalına git'i seçerek self servis parola sıfırlamayı açın**.
+4. **Self servis parola sıfırlama'nın** altında **, self servis parola sıfırlamayı açmak için Azure portal git'i** seçin.
 
-5. Özellikler sayfasında **,** işletmeniz için **herkes** için etkinleştirmek için Tüm'e tıklayın ve sonra Kaydet'e **tıklayın**.
+5. **Özellikler** sayfasında **Tümü'ne** tıklayarak işletmenizdeki herkes için etkinleştirin ve ardından **Kaydet'i** seçin.
   
-6. Kullanıcılarınız oturum adiğinde, gelecekte parolalarını sıfırlamalarına yardımcı olacak ek kişi bilgilerini girmeleri istenir.
+6. Kullanıcılarınız oturum açtıklarında, gelecekte parolalarını sıfırlamalarına yardımcı olacak ek kişi bilgilerini girmeleri istenir.
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Kurum için parola süre sonu ilkesi ayarlama](../manage/set-password-expiration-policy.md) (makale)\
-[Tek bir kullanıcının parolasını süresi hiç dolma olacak şekilde ayarlama](set-password-to-never-expire.md) (makale)\
+[Kuruluşunuz için parola süre sonu ilkesini ayarlama](../manage/set-password-expiration-policy.md) (makale)\
+[Tek bir kullanıcının parolasını hiçbir zaman sona ermeyecek şekilde ayarlama](set-password-to-never-expire.md) (makale)\
 [Microsoft 365 İş eğitim videoları](../../business-video/index.yml) (bağlantı sayfası)

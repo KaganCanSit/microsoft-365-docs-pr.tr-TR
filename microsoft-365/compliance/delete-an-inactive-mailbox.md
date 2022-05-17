@@ -18,12 +18,12 @@ ms.assetid: f5caf497-5e8d-4b7a-bfff-d02942f38150
 ms.custom:
 - seo-marvel-apr2020
 description: Artık etkin olmayan Microsoft 365 posta kutusunun içeriğini korumanız gerekmediğinde, etkin olmayan posta kutusunu kalıcı olarak silebilirsiniz.
-ms.openlocfilehash: 1e518bda3d11ff17c4ce5aa1ebb6997f8bc09c4d
-ms.sourcegitcommit: 570c3be37b6ab1d59a4988f7de9c9fb5ca38028f
+ms.openlocfilehash: b1a828b2248be7eed583141e13a3badef948b32e
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "65363143"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65438468"
 ---
 # <a name="delete-an-inactive-mailbox"></a>Etkin olmayan posta kutusunu silme
 
@@ -38,7 +38,7 @@ Etkin olmayan posta kutusundan ayrı tutmalar kaldırıldıktan sonra ne olacağ
   
 ## <a name="before-you-delete-an-inactive-mailbox"></a>Etkin olmayan posta kutusunu silmeden önce
 
-- Exchange Online PowerShell kullanarak etkin olmayan bir posta kutusundan Bir Dava Tutma özelliğini kaldırmanız gerekir. Exchange yönetim merkezini (EAC) kullanamazsınız. Adım adım yönergeler için bkz. [PowerShell'i Exchange Online için Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
+- Etkin olmayan posta kutusundan ayrı tutmaları kaldırmak için powershell Exchange Online kullanmanız gerekir. Bu yordamlar için Exchange yönetim merkezini (EAC) veya Microsoft Purview uyumluluk portalı kullanamazsınız. Exchange Online PowerShell'i kullanmaya yönelik adım adım yönergeler için bkz. [PowerShell'i Exchange Online için Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
 
 - Etkin olmayan bir posta kutusunun içeriğini başka bir posta kutusuna kopyalayarak saklamayı kaldırabilir ve etkin olmayan bir posta kutusunu silebilirsiniz. Ayrıntılar için bkz. [Office 365'da etkin olmayan posta kutusunu geri yükleme](restore-an-inactive-mailbox.md).
 
@@ -50,7 +50,7 @@ Etkin olmayan posta kutusundan ayrı tutmalar kaldırıldıktan sonra ne olacağ
 
 Daha önce belirtildiği gibi, etkin olmayan bir posta kutusuna Bir Dava Tutma, In-Place Saklama veya saklama ilkesi yerleştirilebilir. İlk adım, etkin olmayan bir posta kutusunda tutmaları belirlemektir.
   
-Kuruluşunuzdaki tüm etkin olmayan posta kutularının saklama bilgilerini görüntülemek için aşağıdaki komutu çalıştırın.
+[PowerShell'i Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell) ve ardından kuruluşunuzdaki tüm etkin olmayan posta kutularının saklama bilgilerini görüntülemek için aşağıdaki komutu çalıştırın.
   
 ```powershell
 Get-Mailbox -InactiveMailboxOnly | FL DisplayName,Name,IsInactiveMailbox,LitigationHoldEnabled,InPlaceHolds
@@ -83,7 +83,7 @@ Etkin olmayan posta kutusuna hangi tür ayrı tutmanın yerleştirildiğini (ve 
   
 ### <a name="remove-a-litigation-hold"></a>Dava Ayrı Tutmasını Kaldırma
 
-Daha önce belirtildiği gibi, etkin olmayan bir posta kutusundan Dava Tutma'yı kaldırmak için Windows PowerShell kullanmanız gerekir. EAC'yi kullanamazsınız. Bir Dava Tutmasını kaldırmak için aşağıdaki komutu çalıştırın.
+Bir Dava Bekletmesini kaldırmak için aşağıdaki PowerShell komutunu çalıştırın.
   
 ```powershell
 Set-Mailbox -InactiveMailbox -Identity <identity of inactive mailbox> -LitigationHoldEnabled $false
@@ -102,7 +102,7 @@ Etkin olmayan posta kutusunu Microsoft 365 bekletme ilkesinden kaldırma yordam�
 
 #### <a name="remove-an-inactive-mailbox-from-an-organization-wide-retention-policy"></a>Kuruluş genelinde saklama ilkesinden etkin olmayan posta kutusunu kaldırma
 
-Exchange Online PowerShell'de aşağıdaki komutu çalıştırarak etkin olmayan bir posta kutusunu kuruluş genelinde saklama ilkesinden hariç tutun.
+Etkin olmayan bir posta kutusunu kuruluş genelinde saklama ilkesinden dışlamak için aşağıdaki PowerShell komutunu çalıştırın.
 
 ```powershell
 Set-Mailbox <identity of inactive mailbox> -ExcludeFromOrgHolds <retention policy GUID without prefix or suffix>
@@ -110,7 +110,7 @@ Set-Mailbox <identity of inactive mailbox> -ExcludeFromOrgHolds <retention polic
 
 Etkin olmayan bir posta kutusuna uygulanan kuruluş genelinde bekletme ilkelerini tanımlama ve bekletme ilkesinin GUID değerini alma hakkında daha fazla bilgi için, Posta kutusuna [yerleştirilen saklama türünü belirleme](identify-a-hold-on-an-exchange-online-mailbox.md#get-organizationconfig) bölümündeki "Get-OrganizationConfig" bölümüne bakın.
 
-Alternatif olarak, etkin olmayan posta kutusunu kuruluş genelindeki tüm ilkelerden kaldırmak için aşağıdaki komutu çalıştırabilirsiniz:
+Alternatif olarak, etkin olmayan posta kutusunu kuruluş genelindeki tüm ilkelerden kaldırmak için aşağıdaki PowerShell komutunu çalıştırabilirsiniz:
 
 ```powershell
 Set-Mailbox <identity of inactive mailbox> -ExcludeFromAllOrgHolds
@@ -118,13 +118,13 @@ Set-Mailbox <identity of inactive mailbox> -ExcludeFromAllOrgHolds
 
 #### <a name="remove-an-inactive-mailbox-from-a-specific-location-retention-policy"></a>Etkin olmayan posta kutusunu belirli bir konum saklama ilkesinden kaldırma
 
-Etkin olmayan posta kutusunu açık bir bekletme ilkesinden kaldırmak için [Güvenlik & Uyumluluk Merkezi PowerShell'de](/powershell/exchange/connect-to-scc-powershell) aşağıdaki komutu çalıştırın.
+Açık saklama ilkesinden etkin olmayan posta kutusunu kaldırmak için [Güvenlik & Uyumluluk Merkezi PowerShell'i](/powershell/exchange/connect-to-scc-powershell) kullanın:
 
 ```powershell
 Set-RetentionCompliancePolicy -Identity <retention policy GUID without prefix or suffix> -RemoveExchangeLocation <identity of inactive mailbox>
 ```
 
-Etkin olmayan bir posta kutusuna uygulanan belirli konum saklama ilkelerini tanımlama ve bekletme ilkesi için GUID alma hakkında daha fazla bilgi için, Posta kutusuna [yerleştirilmiş saklama türünü belirleme](identify-a-hold-on-an-exchange-online-mailbox.md#get-mailbox) bölümündeki "Get-Mailbox" bölümüne bakın.
+Etkin olmayan bir posta kutusuna uygulanan belirli konum bekletme ilkelerini tanımlama ve bekletme ilkesi için GUID alma hakkında daha fazla bilgi için, Posta kutusuna [yerleştirilen saklama türünü belirleme](identify-a-hold-on-an-exchange-online-mailbox.md#get-mailbox) konusundaki "Get-Mailbox" bölümüne bakın.
 
 ### <a name="remove-in-place-holds"></a>In-Place Ayrı Tutmalarını Kaldır
 

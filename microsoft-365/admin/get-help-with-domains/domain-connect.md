@@ -1,5 +1,5 @@
 ---
-title: Domain Connect kullanma
+title: Etki Alanı Bağlan kullanma
 f1.keywords:
 - NOCSH
 ms.author: efrene
@@ -20,39 +20,39 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: ec6f4bd8-5996-4505-ba68-afaf8a141fb9
-description: Domain Connect etkin kayıt kayıtlarla nasıl çalışıla çalışıla öğrenin ve etki alanınızı Microsoft 365'e ekleyin.
-ms.openlocfilehash: 1691d86ebd459ee69faca8d3a21d99b0caa89fca
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Etki alanı Bağlan etkin kayıt şirketleri ile çalışmayı ve etki alanınızı Microsoft 365 eklemeyi öğrenin.
+ms.openlocfilehash: e20588181a5e9ca55d11844e2f31c3504a2bbfa0
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63316919"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65437623"
 ---
-# <a name="using-domain-connect"></a>Domain Connect kullanma
+# <a name="using-domain-connect-to-add-your-domain-to-microsoft-365"></a>Etki alanınızı Microsoft 365 eklemek için Etki Alanı Bağlan kullanma
 
  Aradığınızı bulamazsanız, **[Etki Alanları SSS sayfasını inceleyin](../setup/domains-faq.yml)**.
 
-[Domain Connect](https://www.domainconnect.org/) etkinleştirilmiş kayıtcılar, dakikalar alan üç adımlık bir işlemle etki alanınızı Microsoft 365'e eklemenize izin sağlar.
+[Etki alanı Bağlan](https://www.domainconnect.org/) etkin kayıt şirketleri, dakikalar süren üç adımlı bir işlemle etki alanınızı Microsoft 365 eklemenize olanak sağlar.
 
-Sihirbazda, etki alanının sahibi olduğunu doğrular ve sonra e-postanın Microsoft 365'e ve Teams gibi diğer Microsoft 365 hizmetleriyle etki alanınız üzerinde çalışması için etki alanı kayıtlarınız otomatik olarak ayarlanır.
+Sihirbazda yalnızca etki alanının sahibi olduğunuzu onaylayacak ve ardından etki alanınızın kayıtlarını otomatik olarak ayarlayacağız, bu nedenle e-posta Microsoft 365 ve Teams gibi diğer Microsoft 365 hizmetlerine gelir ve etki alanınızla çalışır.
 
 > [!NOTE]
 > Kurulum sihirbazını başlatmadan önce tarayıcınızda tüm açılır pencere engelleyicilerini devre dışı bırakın.
 
-## <a name="domain-connect-registrars-integrating-with-microsoft-365"></a>Domain Connect kayıt şirketlerini Microsoft 365 ile tümleştirin
+## <a name="domain-connect-registrars-integrating-with-microsoft-365"></a>Microsoft 365 ile tümleştiren etki alanı Bağlan kayıt şirketleri
 
 - [11&amp; IONOS](https://www.1and1.com/)
-- [123Reg](https://www.123-reg.co.uk/)
-- [GoDaddy](https://www.godaddy.com/)
-- [WordPress](https://wordpress.com/)
-- [Tiryak](https://www.plesk.com/)
+- [123Bölge](https://www.123-reg.co.uk/)
+- [Godaddy](https://www.godaddy.com/)
+- [Wordpress](https://wordpress.com/)
+- [Plesk](https://www.plesk.com/)
 - [MediaTemple](https://mediatemple.net/)
-- SecureServer veya WildWestDomains (SecureServer DNS barındırmayı kullanan GoDaddy satıcıları)
-  - [MadDog Web Hosting](https://maddogwebhosting.com/domains/)
+- SecureServer veya WildWestDomains (SecureServer DNS barındırma kullanan GoDaddy kurumsal bayileri)
+  - [MadDog Web Barındırma](https://maddogwebhosting.com/domains/)
   - [CheapNames](https://www.cheapnames.com)
 
 ## <a name="what-happens-to-my-email-and-website"></a>E-postama ve web siteme ne olur?
 
-Kurulumu bitirdikten sonra, etki alanınıza göre MX kaydı Microsoft 365'e işaret etmek üzere güncelleştirilir ve etki alanınıza gelen tüm e-postaların Microsoft 365'e gelmeye başlar. Kullanıcıları ekleyenin ve etki alanınıza e-postası olan herkes için Microsoft 365'te posta kutularını ayarlayın!
+Kurulumu tamamladıktan sonra, etki alanınızın MX kaydı Microsoft 365 işaret edecek şekilde güncelleştirilir ve etki alanınızın tüm e-postaları Microsoft 365 gelmeye başlar. Etki alanınızda e-posta alan herkes için kullanıcıları eklediğinizden ve posta kutularını Microsoft 365 ayarladığınızdan emin olun!
 
-İş için kullandığınız bir web siteniz varsa, bu site bulunduğu yerde çalışmaya devam eder. Domain Connect kurulum adımları web sitenizi etkilemez.
+İş için kullandığınız bir web siteniz varsa, bu site bulunduğu yerde çalışmaya devam eder. Etki alanı Bağlan kurulum adımları web sitenizi etkilemez.

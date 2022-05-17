@@ -17,29 +17,34 @@ ms.collection:
 - M365-security-compliance
 - m365-initiative-defender-business
 ms.custom: intro-overview
-ms.openlocfilehash: 3589b6a0a0cc7af9e2bcfcb11541309042871591
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: b247bf7d4fdc1935a0b971f4d4687afd10eb0787
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65173288"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65437667"
 ---
 # <a name="what-is-microsoft-defender-for-business"></a>İş için Microsoft Defender nedir?
 
 İş için Microsoft Defender, özellikle küçük ve orta ölçekli işletmeler (300 çalışana kadar) için tasarlanmış yeni bir uç nokta güvenlik çözümüdür. Bu uç nokta güvenlik çözümüyle, şirketinizin cihazları fidye yazılımlarına, kötü amaçlı yazılımlara, kimlik avına ve diğer tehditlere karşı daha iyi korunur. 
 
-İş için Defender hakkında daha fazla bilgi edinmek için aşağıdaki videoyu izleyin: <br/><br/>
-
-> [!VIDEO https://www.youtube.com/embed/umhUNzMqZto]
-
 Bu makalede, bu özellikler ve özellikler hakkında daha fazla bilgi edinmek için bağlantılar içeren İş için Defender'a nelerin dahil olduğu açıklanır.
-
-:::image type="content" source="media/mdb-offering-overview.png" alt-text="özellikleri ve özellikleri İş için Microsoft Defender.":::
 
 >
 > **Bir dakikan var mı?**
 > Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">güvenlikle ilgili kısa anketimize</a> katılın. Sizden haber almak isteriz!
 >
+
+## <a name="video-enterprise-grade-protection-for-small-and-medium-sized-businesses"></a>Video: Küçük ve orta ölçekli işletmeler için Enterprise sınıfı koruma
+
+İş için Defender hakkında daha fazla bilgi edinmek için aşağıdaki videoyu izleyin: <br/><br/>
+
+> [!VIDEO https://www.youtube.com/embed/umhUNzMqZto]
+
+
+:::image type="content" source="media/mdb-offering-overview.png" alt-text="özellikleri ve özellikleri İş için Microsoft Defender.":::
+
+## <a name="whats-included-with-defender-for-business"></a>İş için Defender'a dahil olanlar
 
 İş için Defender ile, işletmenizin kullandığı cihazları ve verileri korumaya yardımcı olabilirsiniz:
 
@@ -47,7 +52,7 @@ Bu makalede, bu özellikler ve özellikler hakkında daha fazla bilgi edinmek i�
 
 - **Kullanımı kolay bir güvenlik çözümü**. İş için Defender, uç noktalarınızın güvenliğiyle ilgili öneriler ve içgörüler ile eyleme geçmenize yardımcı olan kolaylaştırılmış deneyimler sunar. İş için Defender, şirketinizin cihazlarını ilk günden korumaya yardımcı olmak için tasarlanmış sihirbaz temelli yapılandırma ve varsayılan güvenlik ilkeleri sunduğundan özel bir bilgi gerekmez.
 
-- **Ortamınız için esneklik**. İş için Defender, ister Microsoft Intune kullanıyor olun ister Microsoft Bulut'ta yepyeni olun iş ortamınızla çalışabilir. İş için Defender, Windows yerleşik bileşenleriyle ve macOS, iOS ve Android cihazlar için uygulamalarla çalışır.
+- **Ortamınız için esneklik**. İş için Defender, ister Microsoft Intune kullanıyor olun ister Microsoft Bulut'ta yepyeni olun iş ortamınızla çalışabilir. İş için Defender, Windows yerleşik bileşenleriyle ve macOS, iOS ve Android cihazlara yönelik uygulamalarla çalışır.
 
 - **Microsoft 365 Lighthouse ile tümleştirme**. [Microsoft 365 Lighthouse](../../lighthouse/m365-lighthouse-overview.md) kullanan bir Yönetilen Hizmet Sağlayıcısı (MSP) iseniz, daha fazla özellik kullanılabilir. Müşterileriniz Microsoft 365 İş Ekstra İş için Defender ile birlikte kullanıyorsa, Microsoft 365 Lighthouse eklenen müşteri kiracıları genelinde güvenlik olaylarını ve uyarılarını görüntüleyebilirsiniz.
 
@@ -71,9 +76,10 @@ Bu makalede, bu özellikler ve özellikler hakkında daha fazla bilgi edinmek i�
 
 - **Cihazları ve güvenlik ilkelerini yönetme konusunda rehberlik sağlama**
    - [Cihazları izleme veya yönetme](mdb-manage-devices.md)
-   - [Güvenlik ilkelerini görüntüleme veya düzenleme](mdb-view-edit-policies.md)
+   - [Güvenlik ilkelerini görüntüleme ve düzenleme](mdb-view-edit-policies.md)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
+- [Etkileşimli kılavuzu deneyin: İş için Defender ile Kullanmaya başlayın](https://aka.ms/MDB-GetStartedGuide)
 - [İş için Microsoft Defender'de basitleştirilmiş yapılandırma işlemi hakkında daha fazla bilgi edinin](mdb-simplified-configuration.md)
 - [İş için Microsoft Defender almayı öğrenin](get-defender-business.md)

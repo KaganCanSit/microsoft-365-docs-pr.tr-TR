@@ -19,13 +19,13 @@ ms.custom:
 search.appverid:
 - MET150
 ms.assetid: d5155593-3bac-4d8d-9d8b-f4513a81479e
-description: Kullanıcı hesabını silmeyi, kullanıcının e-postası ve OneDrive içeriğiyle ne yapacağınızı ve ürün lisansını koruyup korumayacağınızı öğrenin.
-ms.openlocfilehash: 894bcef6cc273c067b3d9b622f244d361ed24d96
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Microsoft 365 kullanıcı hesabını silmeyi, kullanıcının e-postası ve OneDrive içeriğiyle ne yapacağınızı ve ürün lisansını koruyup korumayacağınızı öğrenin.
+ms.openlocfilehash: faa971fa8419f6bcc80855fd9dcd559a542e00a8
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090717"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65436789"
 ---
 # <a name="delete-a-user-from-your-organization"></a>Kuruluşunuzdan kullanıcı silme
   

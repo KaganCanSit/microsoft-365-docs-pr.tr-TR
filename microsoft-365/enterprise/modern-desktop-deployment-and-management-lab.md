@@ -16,12 +16,12 @@ ms.collection:
 - Strat_O365_Enterprise
 ms.custom: ''
 description: Windows ve Office Dağıtım Laboratuvar Seti'ne nereden erişeceğiniz hakkında bilgi edinin.
-ms.openlocfilehash: bfa8d52776e93f4a9c33f484f7d56696fdab31fe
-ms.sourcegitcommit: 35d0c891f3d927f3346044be61ab9f348e8da2b4
+ms.openlocfilehash: 5ce9ebcdd3a36b62f74292e2b8e261928ef12043
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "65364307"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65435357"
 ---
 # <a name="windows-and-office-365-deployment-lab-kit"></a>Windows ve Office 365 dağıtım laboratuvarı seti
 
@@ -32,7 +32,7 @@ Laboratuvarın iki sürümü ücretsiz olarak indirilebilir:
 |Windows 10 Laboratuvarı|Windows 11 Laboratuvarı|
 |---|---|
 |[Win 10 laboratuvar ortamı](https://download.microsoft.com/download/3/3/a/33a3c7d7-b393-4f78-9b90-2d5eb7fd98e8/Win10_21H1_lab.zip)|[Win 11 laboratuvar ortamı](https://download.microsoft.com/download/9/d/9/9d9e278e-a1ea-4704-85e1-cb24f3806f45/Win11_Lab_05.09.zip)|
-|[Win 10 laboratuvar kılavuzları](https://download.microsoft.com/download/3/3/a/33a3c7d7-b393-4f78-9b90-2d5eb7fd98e8/Win10_21H1_lab_guides.zip)|[Win 11 laboratuvar kılavuzları](https://download.microsoft.com/download/9/d/9/9d9e278e-a1ea-4704-85e1-cb24f3806f45/Win11_Lab_Guides_05.09.zip)|
+|[Win 10 laboratuvar kılavuzları](https://download.microsoft.com/download/2/9/9/29952cdb-b98d-4f9b-9d6e-9fb49644b0a0/Win10_21H1_Lab_05.12.zip)|[Win 11 laboratuvar kılavuzları](https://download.microsoft.com/download/9/d/9/9d9e278e-a1ea-4704-85e1-cb24f3806f45/Win11_Lab_Guides_05.09.zip)|
 
 ## <a name="a-complete-lab-environment"></a>Eksiksiz bir laboratuvar ortamı
 
@@ -99,7 +99,7 @@ Ayrıntılı laboratuvar kılavuzları, birden çok dağıtım ve yönetim senar
 - İş İçin Windows Hello
 
 > [!NOTE]
-> Lütfen bu içeriği indirmek için geniş bant İnternet bağlantısı kullanın ve otomatik sağlama için yaklaşık 30 dakika bekleyin. Laboratuvar ortamı için en az 16 GB kullanılabilir bellek ve 150 GB boş disk alanı gerekir. En iyi performans için 32 GB kullanılabilir bellek ve 300 GB boş alan önerilir. Windows 10 laboratuvarının süresi 16 Mayıs 2022'de doluyor. Windows 11 laboratuvarının süresi 7 Ağustos 2022'de sona eriyor. Yeni sürümler sona ermeden önce yayımlanacaktır.
+> Lütfen bu içeriği indirmek için geniş bant İnternet bağlantısı kullanın ve otomatik sağlama için yaklaşık 30 dakika bekleyin. Laboratuvar ortamı için en az 16 GB kullanılabilir bellek ve 150 GB boş disk alanı gerekir. En iyi performans için 32 GB kullanılabilir bellek ve 300 GB boş alan önerilir. Windows 10 laboratuvarının süresi 11 Ağustos 2022'de sona eriyor. Windows 11 laboratuvarının süresi 7 Ağustos 2022'de sona eriyor. Yeni sürümler sona ermeden önce yayımlanacaktır.
 
 ## <a name="additional-guidance"></a>Ek yönergeler
 

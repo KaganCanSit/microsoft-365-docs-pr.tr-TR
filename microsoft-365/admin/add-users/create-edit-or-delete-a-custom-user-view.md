@@ -18,109 +18,109 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: 4fe7f6ac-be8e-4b57-9e13-24ff889a4b28
-description: Aynı görünümde özel kullanıcı görünümü oluşturmak, düzenlemek veya silmek için filtreleri Microsoft 365.
-ms.openlocfilehash: cf3e286a7d8f0e9b5f9741541974b2125df505ad
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+description: İş için Microsoft 365 aboneliğinin genel veya kullanıcı yönetimi yöneticisiyseniz, özel kullanıcı görünümü oluşturmak, düzenlemek veya silmek için filtreleri kullanabilirsiniz.
+ms.openlocfilehash: d90d324690d153fa708dbe7c36a9f41d349f8588
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64499605"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65436745"
 ---
 # <a name="create-edit-or-delete-a-custom-user-view"></a>Özel kullanıcı görünümü oluşturma, düzenleme veya silme
 
-Microsoft 365 İş aboneliğinde genel yönetici veya kullanıcı yönetimi yöneticisiyseniz, belirli bir kullanıcı alt kümesini görüntülemek için özel kullanıcı görünümleri oluşturabilirsiniz. Bu görünümler, standart görünüm kümesine ek olarak bulunmaktadır. Özel kullanıcı görünümlerini oluşturabilir, düzenleyebilir veya silebilirsiniz ve kendi özel görünümlerini tüm yöneticiler kullanabilir.
+İş için Microsoft 365 aboneliğinin genel veya kullanıcı yönetimi yöneticisiyseniz, belirli bir kullanıcı alt kümesini görüntülemek için özel kullanıcı görünümleri oluşturabilirsiniz. Bu görünümler, standart görünüm kümesine ek olarak sağlanır. Özel kullanıcı görünümleri oluşturabilir, düzenleyebilir veya silebilirsiniz ve oluşturduğunuz özel görünümler tüm yöneticiler tarafından kullanılabilir.
   
 ## <a name="custom-user-views-in-the-admin-center"></a>Yönetim merkezinde özel kullanıcı görünümleri
 
-Özel bir kullanıcı görünümü ekleyebilirsiniz, bu görünümü düzenleyebilir veya silebilirsiniz; değişiklikler Filtre listesinde gösterilir. Bu değişiklikler, şirketinizin tüm yöneticilerinin Kullanıcılar sayfasına **gidecekleri zaman göreceği şekilde** görüntülenir. En çok 50 özel görünüm oluşturabilirsiniz. 
+Özel bir kullanıcı görünümü oluşturduğunuzda, düzenlediğinizde veya sildiğinizde, değişiklikler Şirketinizdeki tüm yöneticilerin **Kullanıcılar** sayfasına gittiği zaman göreceği **Filtre** listesinde gösterilir. En fazla 50 özel görünüm oluşturabilirsiniz. 
 
 > [!TIP]
->  Standart kullanıcı görünümleri, Filtreler açılan **listesinde varsayılan** olarak görüntülenir. Standart **filtreler şunlardır**: Tüm **kullanıcılar, Lisanslı** **kullanıcılar, Konuk**  **kullanıcılar, Oturum** açma izni **verildi, Oturum** açma **engellendi,** Lisanssız **kullanıcılar, Hatalı** **kullanıcılar, Faturalama** **yöneticileri, Genel** **yöneticiler, Yardım** masası **yöneticileri, Hizmet** yöneticileri ve Kullanıcı yönetimi **yöneticileri**. Standart görünümleri düzenleyemez veya silemezsiniz. 
+>  Standart kullanıcı görünümleri **varsayılan olarak Filtreler** açılan listesinde görüntülenir. Standart filtreler **Tüm kullanıcılar**, **Lisanslı kullanıcılar**, **Konuk kullanıcılar**,  **Oturum açmaya izin verilenler**, **Oturum açma engellenenler**, **Lisanssız kullanıcılar**, **Hatalı** kullanıcılar, **Faturalama yöneticileri**, **Genel yöneticiler**, **Yardım masası yöneticileri**, **Hizmet yöneticileri** ve **Kullanıcı yönetimi yöneticileridir**. Standart görünümleri düzenleyemez veya silemezsiniz. 
 
-Standart görünümler hakkında dikkat gereken birkaç şey: 
+Standart görünümler hakkında dikkate almak gereken birkaç nokta: 
 
-- Listede 2.000'den fazla kullanıcı varsa, bazı standart görünümlerde sıralanmamış bir liste görüntülenir. Bu listede belirli kullanıcıları bulmak için arama kutusunu kullanın. 
-- Microsoft'tan fatura Microsoft 365, **Fatura** yöneticileri standart görünümler listesinde görünmez. Daha fazla bilgi için bkz [. Yönetici rolleri atama](assign-admin-roles.md). 
+- Listede 2.000'den fazla kullanıcı varsa bazı standart görünümler sıralanmamış bir liste görüntüler. Bu listedeki belirli kullanıcıları bulmak için arama kutusunu kullanın. 
+- Microsoft'tan Microsoft 365 satın almadıysanız **Faturalama yöneticileri standart görünümler** listesinde görünmez. Daha fazla bilgi için bkz. [Yönetici rolleri atama](assign-admin-roles.md). 
   
 ## <a name="choose-the-filters-for-your-custom-user-view"></a>Özel kullanıcı görünümünüz için filtreleri seçme
 
-Özel görünümlerinizi Özel filtre bölmesinde oluşturabilir ve **düzenleyebilirsiniz** . Birden çok filtre seçeneğiniz varsa, tüm seçili ölçütlere uyan kullanıcıları içeren sonuçlar elde olur. Aşağıdaki örnekte, Kanada'da olan belirli bir etki alanındaki tüm kullanıcıları gösteren"Kanada kullanıcıları" adında özel bir görünümün nasıl oluşturul adımlarıyla oluşturlları gerekir. 
+**Özel görünümlerinizi Özel filtre** bölmesinde oluşturabilir ve düzenleyebilirsiniz. Birden çok filtre seçeneği seçerseniz, seçilen tüm ölçütlere uyan kullanıcıları içeren sonuçlar elde edersiniz. Aşağıdaki örnekte, Kanada'da bulunan belirli bir etki alanındaki tüm kullanıcıları gösteren "Kanada kullanıcıları" adlı özel bir görünümün nasıl oluşturulacağı gösterilmektedir. 
 
   
- **A - Etki Alanı** Kurum için birden çok etki alanınız varsa, kullanılabilir etki alanları açılır listesinden seçim kullanabilirsiniz. 
+ **A - Etki Alanı** Kuruluşunuz için birden çok etki alanınız varsa, kullanılabilir etki alanlarının açılan listesinden seçim yapabilirsiniz. 
   
  **B - Oturum açma durumu** İzin verilen veya engellenen kullanıcıları seçin. 
   
- **C - Konum** Ülke açılan listesinden bir konum seçin. 
+ **C - Konum** Ülkelerin açılan listesinden bir konum seçin. 
   
- **D - Atanan ürün lisansı** Açılan lisans listesinden, kurumda kullanılabilen lisanslar seçin. Seçtiğiniz lisansa sahip kullanıcıları göstermek için bu filtreyi kullanın. Kullanıcıların da ek lisansları olabilir. 
+ **D - Atanan ürün lisansı** Kuruluşunuzda kullanılabilen lisansların açılan listesinden seçim yapın. Seçtiğiniz lisansın atandığı kullanıcıları göstermek için bu filtreyi kullanın. Kullanıcıların ek lisansları da olabilir. 
   
-Ayrıca bölüm, şehir, il, ülke veya bölge veya iş unvanı gibi organizasyonda kullanılan ek kullanıcı profili ayrıntılarına göre de filtreyi kaldırabilirsiniz.
+Ayrıca kuruluşunuzda kullanılan departman, şehir, eyalet veya il, ülke veya bölge ya da iş unvanı gibi ek kullanıcı profili ayrıntılarına göre filtreleyebilirsiniz.
   
  **Diğer koşullar:**
   
-- **Yalnızca eşitlenmiş kullanıcılar** Kullanıcıların etkinleştirilmiş olup olmadığı önemli değildir; yerel Active Directory ile eşitlenen tüm kullanıcıları göstermek için bu kutuyu seçin. 
+- **Yalnızca eşitlenen kullanıcılar** Kullanıcıların etkinleştirilip etkinleştirilmediğine bakılmaksızın, yerel Active Directory ile eşitlenmiş olan tüm kullanıcıları göstermek için bu kutuyu seçin. 
     
-- **Hatalı kullanıcılar** Sağlama hatası olan kullanıcılara göstermek için bu kutuyu seçin. 
+- **Hataları olan kullanıcılar** Sağlama hataları olabilecek kullanıcıları göstermek için bu kutuyu seçin. 
     
-- **Lisanssız kullanıcılar** Lisans atanmamış tüm kullanıcıları bulmak için bu kutuyu seçin. Bu görünümün sonuçları, posta kutusu kullanıcısı olan ancak Exchange lisansına sahip olan kullanıcıları da içerebilir. Bu kullanıcıları özellikle izlemek için, Lisanssız kullanıcılar **filtresini kullanarak posta kutuları Exchange arşivleri kullanın**. Bu görünümün sonuçları, arşivinde lisans Exchange olan kullanıcıları da içerebilir.
+- **Lisanssız kullanıcılar** Lisans atanmamış tüm kullanıcıları bulmak için bu kutuyu seçin. Bu görünümün sonuçları, Exchange posta kutusu olan ancak lisansı olmayan kullanıcıları da içerebilir. Bu kullanıcıları özellikle izlemek için, **Exchange posta kutuları veya arşivleri olan Lisanssız kullanıcılar** filtresini kullanın. Bu görünümün sonuçları, Exchange arşivi olan ancak lisansı olmayan kullanıcıları da içerebilir.
     
-- **Exchange** posta kutuları veya arşivleri olan lisanssız kullanıcılar Exchange Online'de oluşturulmuş, Exchange posta kutusu olan ancak Microsoft 365 lisansı atanmamış kullanıcı hesaplarını göstermek için bu kutuyu seçin. Bu filtrenin sonuçları, arşive bir arşive atanmış veya bu filtreye Exchange içerir. 
+- **posta kutuları veya arşivleri Exchange lisanssız kullanıcılar Exchange Online** oluşturulan ve Exchange posta kutusuna sahip olan ancak Microsoft 365 lisansı atanmamış kullanıcı hesaplarını göstermek için bu kutuyu seçin. Bu filtrenin sonuçları, Exchange arşivi olan veya atanmış olan kullanıcıları içerir. 
 
 > [!NOTE]
-> Şu **olduğunda posta kutuları filtresini Exchange Lisanssız** kullanıcılar çalışır:
-1. Posta kutusu yakın zamanda paylaşılan **kullanıcıya dönüştürülen** **ve** lisansı yok.
-2. Posta kutusu yakın zamanda Başka bir Microsoft 365 ancak bir lisans atanmamış.
-3. Posta kutusu PowerShell kullanılarak oluşturulmuş ve bir lisans atanmamış.
-4. Şirket içinde oluşturulmuş yeni bir posta kutusu ve kullanıcıya New-RemoteMailbox cmdlet'i sağlandı.
+> **Exchange posta kutularına sahip Lisanssız kullanıcılar** filtresi şu durumlarda çalışır:
+1. Posta kutusu yakın zamanda **paylaşılan** posta kutusundan **kullanıcıya** dönüştürüldü ve lisansı yok.
+2. Posta kutusu yakın zamanda Microsoft 365 geçirildi ancak lisans atanmadı.
+3. Posta kutusu PowerShell kullanılarak oluşturulmuş ve lisans atanmamış.
+4. Kullanıcı için bir New-RemoteMailbox cmdlet'i ile şirket içinde oluşturulan yeni bir posta kutusu sağlanır.
     
 > [!TIP]
-> 2.000'den fazla kullanıcı döndüren özel bir görünüm ekleyebilirsiniz, sonuçta elde edilen kullanıcı listesi sıralanmayacaktır. Bu durumda, arama kutusunu kullanarak kullanıcıları bulun veya aramanızı iyileştirmek üzere özel görünümlerinizi düzenleyin. 
+> 2.000'den fazla kullanıcı döndüren özel bir görünüm oluşturursanız, sonuçta elde edilen kullanıcı listesi sıralanmaz. Bu durumda, kullanıcıları bulmak için arama kutusunu kullanın veya aramanızı daraltmak için özel görünümünüzü düzenleyin. 
   
 ## <a name="create-a-custom-user-view"></a>Özel kullanıcı görünümü oluşturma
 
 ::: moniker range="o365-worldwide"
 
-1. Yönetim merkezinde Kullanıcılar Etkin **kullanıcılar'a** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">gidin</a>.
+1. Yönetim merkezinde **Kullanıcılar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">Etkin kullanıcılar'a</a> gidin.
   
 ::: moniker-end
 
 ::: moniker range="o365-21vianet"
 
-1. Yönetim merkezinde Kullanıcılar Etkin **kullanıcılar'a** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=850628" target="_blank">gidin</a>.  
+1. Yönetim merkezinde **Kullanıcılar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=850628" target="_blank">Etkin kullanıcılar'a</a> gidin.  
 
 ::: moniker-end
     
-2. Etkin kullanıcılar **sayfasında Filtreler'i** ve **ardından Yeni** **filtre'yi seçin**.
+2. **Etkin kullanıcılar** sayfasında **Filtreler'i** ve **ardından Yeni filtre'yi** seçin.
   
-3. Özel **filtre sayfasında** , filtrenizin adını girin, özel filtrenizin koşullarını seçin ve sonra da Ekle'yi **seçin**. Özel görünümünüz artık filtre açılan listesine eklidir.
+3. **Özel filtre** sayfasında, filtrenizin adını girin, özel filtrenizin koşullarını seçin ve ardından **Ekle'yi** seçin. Özel görünümünüz artık filtrelerin açılan listesinde yer alır.
 
 ## <a name="edit-or-delete-a-custom-user-view"></a>Özel kullanıcı görünümünü düzenleme veya silme
 
 ::: moniker range="o365-worldwide"
 
-1. Yönetim merkezinde Kullanıcılar Etkin **kullanıcılar'a** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">gidin</a>.
+1. Yönetim merkezinde **Kullanıcılar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">Etkin kullanıcılar'a</a> gidin.
 
 ::: moniker-end
 
 ::: moniker range="o365-21vianet"
 
-1. Yönetim merkezinde Kullanıcılar Etkin **kullanıcılar'a** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=850628" target="_blank">gidin</a>. 
+1. Yönetim merkezinde **Kullanıcılar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=850628" target="_blank">Etkin kullanıcılar'a</a> gidin. 
 
 ::: moniker-end 
     
-2. Etkin **kullanıcılar sayfasında Filtre'yi** **seçin**, değiştirmek istediğiniz filtreyi seçin ve sonra da Filtreyi **düzenle'yi seçin**. 
+2. **Etkin kullanıcılar** sayfasında **Filtre'yi** seçin, değiştirmek istediğiniz filtreyi seçin ve ardından **Filtreyi düzenle'yi** seçin. 
     
     > [!TIP]
     > Yalnızca özel görünümleri düzenleyebilirsiniz. 
   
-3. Özel **filtre sayfasında** , bilgileri gereken şekilde düzenleyin ve ardından Kaydet'i **seçin**. Filtreyi silmek için sayfanın alt kısmında Sil'i **de seçin**. 
+3. **Özel filtre** sayfasında, bilgileri gerektiği gibi düzenleyin ve **kaydet'i** seçin. Ya da filtreyi silmek için sayfanın alt kısmında **Sil'i** seçin. 
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Videoya genel Microsoft 365 yönetim merkezi](../admin-overview/admin-center-overview.md) (video)\
+[Microsoft 365 yönetim merkezi genel bakış](../admin-overview/admin-center-overview.md) (video)\
 [Yönetici rolleri hakkında](../add-users/about-admin-roles.md) (video)\
-[Kuruluş için Microsoft 365 temasını özelleştirme](../setup/customize-your-organization-theme.md) (makale)
+[Kuruluşunuz için Microsoft 365 temasını özelleştirme](../setup/customize-your-organization-theme.md) (makale)
 
 
      

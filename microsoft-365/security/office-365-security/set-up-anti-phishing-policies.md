@@ -17,12 +17,12 @@ ms.custom:
 description: Yöneticiler, Exchange Online Protection (EOP) ve Office 365 için Microsoft Defender'de kullanılabilen kimlik avı önleme ilkeleri hakkında bilgi edinebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 8b8d75bbb520a2f31ff1d1b55d97e445748a110c
-ms.sourcegitcommit: 2d870e06e87b10d9e8ec7a7a8381353bc3bc59c7
+ms.openlocfilehash: 786a71e37e9602be2c8de4637ffd5f83a70e7e59
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65349863"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65438893"
 ---
 # <a name="anti-phishing-policies-in-microsoft-365"></a>Microsoft 365'de kimlik avı önleme ilkeleri
 
@@ -106,7 +106,7 @@ Aşağıdaki kimlik sahtekarlığı ayarları EOP ve Office 365 için Defender k
   > - MX kaydınız Microsoft 365 işaret etmiyorsa kimlik sahtekarlığı önleme korumasını devre dışı bırakmanız gerekmez; bunun yerine Bağlayıcılar için Gelişmiş Filtreleme'yi etkinleştirirsiniz. Yönergeler için bkz. [Exchange Online'da Bağlayıcılar için Gelişmiş Filtreleme](/Exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors).
   > - Kimlik sahtekarlığı önleme korumasını devre dışı bırakmak yalnızca [bileşik kimlik doğrulama](email-validation-and-authentication.md#composite-authentication) denetimlerinden _örtük_ kimlik sahtekarlığı korumasını devre dışı bırakır. Gönderen _açık_ [DMARC](use-dmarc-to-validate-email.md) başarısız olursa ilkenin karantinaya alınacağı veya reddedileceği yeri denetler, ileti yine de karantinaya alınır veya reddedilir.
 
-- **Kimliği doğrulanmamış gönderen bildirimleri**: Bu bildirimler yalnızca kimlik sahtekarı zekası açık olduğunda kullanılabilir. Sonraki bölümde yer alan bilgilere bakın.
+- **Kimliği doğrulanmamış gönderen göstergeleri**: **Güvenlik ipuçları & göstergeler** bölümünde yalnızca kimlik sahtekarı zekası açıkken kullanılabilir. Sonraki bölümdeki ayrıntılara bakın.
 - **Eylemler**: Engellenen kimlik sahtekarlığı gönderenlerden gelen iletiler için (kimlik sahtekarlığı zekası tarafından otomatik olarak engellenir veya Kiracı İzin Ver/Engelle listesinde el ile engellenir), iletiler üzerinde gerçekleştireceğiniz eylemi de belirtebilirsiniz:
   - **İletileri alıcıların Gereksiz E-posta klasörlerine taşıma**: Bu varsayılan değerdir. İleti posta kutusuna teslim edilir ve Gereksiz E-posta klasörüne taşınır. Daha fazla bilgi için bkz[. Microsoft 365'da Exchange Online posta kutularında gereksiz e-posta ayarlarını yapılandırma](configure-junk-email-settings-on-exo-mailboxes.md).
   - **İletiyi karantinaya** al: İletiyi hedeflenen alıcılar yerine karantinaya gönderir. Karantina hakkında bilgi için aşağıdaki makalelere bakın:
@@ -116,17 +116,17 @@ Aşağıdaki kimlik sahtekarlığı ayarları EOP ve Office 365 için Defender k
 
     **İletiyi karantinaya al'ı** seçerseniz, kimlik sahtekarlığına karşı koruma tarafından karantinaya alınan iletilere uygulanan karantina ilkesini de seçebilirsiniz. Karantina ilkeleri, kullanıcıların karantinaya alınan iletilere neler yapabileceğini ve kullanıcıların karantina bildirimleri alıp almayacağını tanımlar. Daha fazla bilgi için bkz [. Karantina ilkeleri](quarantine-policies.md).
 
-### <a name="unauthenticated-sender"></a>Kimliği doğrulanmamış gönderen
+### <a name="unauthenticated-sender-indicators"></a>Kimliği doğrulanmamış gönderen göstergeleri
 
-Kimliği doğrulanmamış gönderen bildirimleri, önceki bölümde açıklandığı gibi EOP ve Office 365 için Defender kimlik avı önleme ilkelerinde kullanılabilen Kimlik Sahtekarlığı [ayarlarının](#spoof-settings) bir parçasıdır. Aşağıdaki ayarlar yalnızca kimlik sahtekarı zekası açık olduğunda kullanılabilir:
+Kimliği doğrulanmamış gönderen göstergeleri, hem EOP hem de Office 365 için Defender kimlik avı önleme ilkelerinin **Güvenlik ipuçları & göstergeleri** bölümünde bulunan Kimlik Sahtekarlığı [ayarlarının](#spoof-settings) bir parçasıdır. Aşağıdaki ayarlar yalnızca kimlik sahtekarı zekası açık olduğunda kullanılabilir:
 
-- Kimlik **sahtekarlığına yönelik kimliği doğrulanmamış gönderenler için göster (?):** bu bildirim, ileti SPF veya DKIM denetimlerini geçmezse **ve** ileti DMARC veya [bileşik kimlik doğrulamasını](email-validation-and-authentication.md#composite-authentication) geçmezse Kimden kutusunda gönderenin fotoğrafına bir soru işareti ekler. Bu ayar kapatıldığında, soru işareti gönderenin fotoğrafına eklenmez.
+- Kimlik **sahtekarlığına yönelik kimliği doğrulanmamış gönderenler için göster (?):** İleti SPF veya DKIM denetimlerini geçmezse **ve** ileti DMARC veya [bileşik kimlik doğrulamasını](email-validation-and-authentication.md#composite-authentication) geçmezse Kimden kutusuna gönderenin fotoğrafına bir soru işareti ekler. Bu ayar kapatıldığında, soru işareti gönderenin fotoğrafına eklenmez.
 
-- **"Via" etiketi gösteriliyor mu?**: Kimden adresi'ndeki etki alanı (e-posta istemcilerinde görüntülenen ileti göndereni) DKIM imzasında veya **MAIL FROM** adresinden farklıysa, bu bildirim Kimden kutusuna via etiketini (fabrikam.com <u>yoluyla</u> chris@contoso.com) ekler. Bu adresler hakkında daha fazla bilgi için bkz. [E-posta iletisi standartlarına genel bakış](how-office-365-validates-the-from-address.md#an-overview-of-email-message-standards).
+- **"via" etiketini göster**: Kimden adresindeki etki alanı (e-posta istemcilerinde görüntülenen ileti gönderen) DKIM imzasında veya **MAIL FROM** adresinden farklıysa, Kimden kutusuna via etiketini (fabrikam.com <u>yoluyla</u> chris@contoso.com) ekler. Bu adresler hakkında daha fazla bilgi için bkz. [E-posta iletisi standartlarına genel bakış](how-office-365-validates-the-from-address.md#an-overview-of-email-message-standards).
 
 Soru işaretinin veya etiketin belirli gönderenlerden gelen iletilere eklenmesini önlemek için aşağıdaki seçeneklere sahipsiniz:
 
-- Kimlik sahtekarlığına sahip gönderene [kimlik bilgileri içgörüsüsünde](learn-about-spoof-intelligence.md) veya [Kiracı İzin Ver/Engelle Listesi'nde](tenant-allow-block-list.md) el ile izin verin. Kimlik sahtekarlığına izin vermek, kimliği doğrulanmamış gönderen kimliği devre dışı bırakıldığında gönderenden gelen iletilerde via etiketinin görünmesini engeller.
+- Kimlik sahtekarlığına sahip gönderene [kimlik bilgileri içgörüsüsünde](learn-about-spoof-intelligence.md) veya [Kiracı İzin Ver/Engelle Listesi'nde](tenant-allow-block-list.md) el ile izin verin. sahte gönderene izin vermek, ilkede **"via" etiketini göster** ayarı açık olsa bile, gönderenden gelen iletilerde via etiketinin görünmesini engeller.
 - Gönderen etki alanı için [e-posta kimlik doğrulamasını yapılandırın](email-validation-and-authentication.md#configure-email-authentication-for-domains-you-own).
   - Gönderenin fotoğrafındaki soru işareti için SPF veya DKIM en önemlileridir.
   - via etiketi için DKIM imzasında etki alanını onaylayın veya **MAIL FROM** adresi, Kimden adresindeki etki alanıyla eşleşir (veya bir alt etki alanıdır).

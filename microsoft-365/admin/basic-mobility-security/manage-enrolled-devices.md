@@ -18,13 +18,13 @@ ms.custom:
 - admindeeplinkMAC
 search.appverid:
 - MET150
-description: Temel Mobilite ve Güvenlik, kuruluşunuzun mobil cihazlarının güvenliğini sağlamanıza ve yönetmenize yardımcı olabilir.
-ms.openlocfilehash: 74d2a2d6034b1e893987e2ede47a96bc00658f47
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+description: Microsoft 365 oturum açın ve kullanıcılarınızın mobil cihazlarının güvenliğini sağlamak ve yönetmek için yerleşik mobil cihaz yönetimini kullanmak için Basic Mobility ve Security'yi ayarlayın.
+ms.openlocfilehash: c24d36b1151b22fee228d1a85368bf26a381e4d2
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65415161"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65435733"
 ---
 # <a name="manage-devices-enrolled-in-mobile-device-management-in-microsoft-365"></a>Microsoft 365'da Mobil Cihaz Yönetimi kayıtlı cihazları yönetme
 

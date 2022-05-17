@@ -25,13 +25,13 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Başka bir çalışana eski çalışanın OneDrive ve Outlook verilerine erişim vermek için bu makaledeki adımları izleyin.
-ms.openlocfilehash: c710826d0403c6935127f14dade3dfe30a8b5c13
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+description: Eski çalışanın OneDrive ve Outlook verilerine erişmek, verileri yedeklemek ve başka bir çalışana erişim verilip verilmeyeceğini seçmek için bu makaledeki adımları izleyin.
+ms.openlocfilehash: 2ec2b2418fd5ca287c51950c23e403168d09f48f
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65129210"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65436569"
 ---
 # <a name="step-5---give-another-employee-access-to-onedrive-and-outlook-data"></a>5. Adım - Başka bir çalışana OneDrive ve Outlook verilerine erişim verme
 
@@ -77,7 +77,7 @@ Ayrıca, eski bir çalışanın OneDrive erişmek için başka bir kullanıcıya
 
 9. **Kullanıcıyı Site koleksiyonu yöneticilerine** ekleyin ve **Tamam'ı** seçin.
 
-10. Kullanıcı artık OneDrive URL'sini kullanarak eski çalışanın OneDrive erişebilir. Daha fazla bilgi için bkz. [OneDrive URL'leri hakkında](/onedrive/list-onedrive-urls#about-onedrive-urls).
+10. Kullanıcı artık OneDrive URL'sini kullanarak eski çalışanın OneDrive erişebilir. 
 
 ### <a name="revoke-admin-access-to-a-users-onedrive"></a>Kullanıcının OneDrive yönetici erişimini iptal etme
 

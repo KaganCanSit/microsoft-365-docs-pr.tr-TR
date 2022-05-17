@@ -20,29 +20,29 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Parolayı kullanarak kullanıcılarınız için güçlü parola gereksinimleri ayarlamayı Windows PowerShell.
-ms.openlocfilehash: 5932f01c2f17a72f4f6a20a6457d263bed7dd85e
-ms.sourcegitcommit: 6dcc3b039e0f0b9bae17c386f14ed2b577b453a6
+description: bir işletme, okul veya kar amacı gütmeyen kuruluş için parola ilkesini yöneten bir yöneticiyseniz, Windows PowerShell kullanarak güçlü parola gereksinimleri ayarlayabilirsiniz.
+ms.openlocfilehash: 20bea953207a85b589bf1ae821f988a3cfe8e22c
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "63018885"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65436195"
 ---
 # <a name="turn-off-strong-password-requirements-for-users"></a>Kullanıcılar için güçlü parola gereksinimlerini kapatma
 
-Bu makalede, kullanıcılarınız için güçlü parola gereksinimlerini nasıl kapatabilirsiniz? Kurumsal kuruluş e-posta ağ ağ gereksinimleriniz Microsoft 365 açıktır. Kuruluşta güçlü parolaları devre dışı bırakma gereksinimleri olabilir. Güçlü parola gereksinimlerini kapatmak için aşağıdaki adımları izleyin. Bu adımları PowerShell kullanarak tamamlamanız gerekir.
+Bu makalede, kullanıcılarınız için güçlü parola gereksinimlerini nasıl kapattığınız açıklanmaktadır. İş için Microsoft 365 kuruluşunuzda güçlü parola gereksinimleri varsayılan olarak açıktır. Kuruluşunuzun güçlü parolaları devre dışı bırakma gereksinimleri olabilir. Güçlü parola gereksinimlerini kapatmak için aşağıdaki adımları izleyin. PowerShell kullanarak bu adımları tamamlamanız gerekir.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Bu makale bir işletme, okul veya kar amacı gütmeyen kuruluş için parola ilkesi yöneten kişiler için hazırlanmıştır. Bu adımları tamamlamak için yönetici hesabınızla oturum Microsoft 365 gerekir. [Yönetici hesabı nedir?] (genel bakış Microsoft 365 yönetim merkezi](.. /admin-overview/admin-center-overview.md) Bu adımları gerçekleştirmek için genel yönetici veya [parola](about-admin-roles.md) yöneticisi olun.
+Bu makale, bir işletme, okul veya kar amacı gütmeyen kuruluş için parola ilkesini yöneten kişilere yöneliktir. Bu adımları tamamlamak için Microsoft 365 yönetici hesabınızla oturum açmanız gerekir. [Yönetici hesabı nedir?] (Microsoft 365 yönetim merkezi Genel Bakış](.. /admin-overview/admin-center-overview.md) Bu adımları gerçekleştirmek için [genel yönetici veya parola yöneticisi](about-admin-roles.md) olmanız gerekir.
 
-Microsoft 365'a PowerShell'Microsoft 365 bağlanmanız gerekir.
+Ayrıca PowerShell ile Microsoft 365 bağlanmalısınız.
 
 ## <a name="set-strong-passwords"></a>Güçlü parolalar ayarlama
 
-1. [Bağlan PowerShell Microsoft 365'e çok zaman var](/office365/enterprise/powershell/connect-to-office-365-powershell#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell).
+1. [PowerShell ile Microsoft 365 Bağlan](/office365/enterprise/powershell/connect-to-office-365-powershell#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell).
 
-2. PowerShell kullanarak, şu komutu kullanarak tüm kullanıcılar için güçlü parola gereksinimlerini kapatabilirsiniz:
+2. PowerShell'i kullanarak, aşağıdaki komutu kullanarak tüm kullanıcılar için güçlü parola gereksinimlerini kapatabilirsiniz:
 
     ```powershell
     Get-MsolUser | Set-MsolUser -StrongPasswordRequired $false
@@ -54,11 +54,11 @@ Microsoft 365'a PowerShell'Microsoft 365 bağlanmanız gerekir.
     ```
 
 > [!NOTE]
-> userPrincipalName, kullanıcı adının ardından @ işareti ve etki alanı adının bulunduğu İnternet stili oturum açma biçiminde olmalıdır. Örneğin: user@contoso.com.
+> userPrincipalName, kullanıcı adının ardından at işareti (@) ve bir etki alanı adının geldiği İnternet stilinde oturum açma biçiminde olmalıdır. Örneğin: user@contoso.com.
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Microsoft 365'a PowerShell ile bağlanma](/office365/enterprise/powershell/connect-to-office-365-powershell#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)
+[PowerShell ile Microsoft 365 bağlanma](/office365/enterprise/powershell/connect-to-office-365-powershell#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)
 
 [PowerShell MsolUser komutları hakkında daha fazla bilgi](/powershell/azure/active-directory/install-adv2)
 

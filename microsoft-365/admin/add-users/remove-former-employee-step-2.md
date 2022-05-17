@@ -24,36 +24,36 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Eski bir çalışanın posta kutusunun içeriğinin nasıl kayded olduğunu öğrenin.
-ms.openlocfilehash: 67664bfe7cdb62b772a441bf205d3e47b9986a58
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Bir kullanıcının kuruluşunuzda oturum açabilmesini engelledikten sonra, eski çalışanın posta kutusunun içeriğini kaydetmenin iki yolunu öğrenin.
+ms.openlocfilehash: 05d3ba3a4a6cc25758d3572af330231c41a24394
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983731"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65436635"
 ---
 # <a name="step-2---save-the-contents-of-a-former-employees-mailbox"></a>2. Adım - Eski çalışanın posta kutusunun içeriğini kaydetme
 
-Bu adımda, kullanıcıya Mahkeme Tutma veya Yerinde Tutma yer açın ya da Outlook verilerini .pst dosyasına aktarın.
+Bu adımda, kullanıcıya bir Dava Tutma veya Yerinde Saklama yerleştirin ya da Outlook verilerini bir .pst dosyasına aktarın.
 
-## <a name="place-hold-or-export-users-data-to-a-pst-file"></a>Kullanıcının verilerini .pst dosyasına yerinde tutma veya dışarı aktarma
+## <a name="place-hold-or-export-users-data-to-a-pst-file"></a>Kullanıcının verilerini bir .pst dosyasına yerleştirme veya dışarı aktarma
 
-Kullanıcının kuruluşta oturum açamalarını engelleytıktan sonra, posta kutusunun içeriğini kaydedebilirsiniz. Eski çalışanın posta kutusunun içeriğini kaydetmenin iki yolu vardır.
+Bir kullanıcının kuruluşunuzda oturum açabilmesini engelledikten sonra, posta kutusunun içeriğini kaydedebilirsiniz. Eski çalışanın posta kutusunun içeriğini kaydetmenin iki yolu vardır.
   
-1. Kullanıcı hesabını silmeden önce posta kutusu üzerinde Mahkeme Nedeniyle Tutma veya Yerinde Saklama belirleyebilirsiniz. Bu ikinci seçenekten çok daha karmaşıktır ama Enterprise planınız arşivleme ve yasal saklamayı içerirse, mahkeme nedeniyle tutma olanağınız varsa ve teknik açıdan güçlü bir IT departmanınız varsa, buna değer.
+1. Kullanıcı hesabını silmeden önce posta kutusu üzerinde Mahkeme Nedeniyle Tutma veya Yerinde Saklama belirleyebilirsiniz. Bu, ikinci seçenekten çok daha karmaşıktır ancak Enterprise planınız arşivleme ve yasal saklamayı içerir, dava açma bir olasılıktır ve teknik olarak güçlü bir BT departmanınız vardır.
 
-    Posta kutusunu "etkin olmayan posta kutusuna" dönüştürdikten sonra yöneticiler, uyumluluk görevlileri veya kayıt yöneticileri içeriklere erişmek ve içerikte arama yapmak için In-Place'Exchange Online eBulma araçlarını kullanabilir.
+    Posta kutusunu "etkin olmayan posta kutusuna" dönüştürdükten sonra, yöneticiler, uyumluluk görevlileri veya kayıt yöneticileri Exchange Online'daki In-Place eBulma araçlarını kullanarak içeriklere erişebilir ve içeriklerde arama yapabilir.
 
     Devre dışı bırakılmış posta kutuları e-posta alamaz ve kuruluşunuzun paylaşılan adres defterinde veya başka listelerinde görüntülenmez.
 
-    Bir posta kutusunu yerinde yerinde tutmak için bkz. Posta kutusunda [etkin olmayan posta kutularını Exchange Online](../../compliance/create-and-manage-inactive-mailboxes.md).
+    Posta kutusuna ayrı tutma hakkında bilgi edinmek için bkz. [Exchange Online'da etkin olmayan posta kutularını yönetme](../../compliance/create-and-manage-inactive-mailboxes.md).
 
     **VEYA**
 
-2. Eski çalışanın e-posta adresini Masaüstü'ne Outlook sürümünüze ekleyin ve ardından verileri .pst dosyasına aktarın. Gerektiğinde verileri başka bir e-posta hesabına aktarabilirsiniz. [4. Adım - Başka bir çalışana kişisel veriler için erişim OneDrive verileri Outlook göz atabilirsiniz](remove-former-employee-step-4.md).
+2. Eski çalışanın e-posta adresini Masaüstündeki Outlook sürümünüze ekleyin ve ardından verileri bir .pst dosyasına aktarın. Gerektiğinde verileri başka bir e-posta hesabına aktarabilirsiniz. [4. Adım : Başka bir çalışanın OneDrive ve Outlook verilerine erişmesini sağlayın](remove-former-employee-step-4.md).
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Exchange yönetim merkezini Exchange Online](/exchange/exchange-admin-center)
+[Exchange Online'da yönetim merkezi Exchange](/exchange/exchange-admin-center)
 
 [Kullanıcıyı geri yükleme](restore-user.md)

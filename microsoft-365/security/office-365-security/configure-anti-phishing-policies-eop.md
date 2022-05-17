@@ -16,12 +16,12 @@ ms.custom: ''
 description: Yöneticiler, Exchange Online posta kutuları olan veya olmayan Exchange Online Protection (EOP) kuruluşlarında kullanılabilen kimlik avı önleme ilkelerini oluşturmayı, değiştirmeyi ve silmeyi öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: f199cb3dbaddc47416c24a82b3066a2631641706
-ms.sourcegitcommit: a7e1d155939e862337271fbe38bf26f62bd49bdd
+ms.openlocfilehash: 08523e98577f208858fb615911ef24aacf7bedc6
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/14/2022
-ms.locfileid: "64847409"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65438915"
 ---
 # <a name="configure-anti-phishing-policies-in-eop"></a>EOP'de kimlik avı önleme ilkelerini yapılandırma
 
@@ -138,7 +138,7 @@ Microsoft 365 Defender portalında özel kimlik avı önleme ilkesi oluşturmak,
 
      Bir ayarı açmak için onay kutusunu seçin. Kapatmak için onay kutusunu temizleyin.
 
-     <sup>\*</sup> Bu ayar yalnızca önceki sayfada **Kimlik sahtekarı zekasını etkinleştir'i** seçtiğinizde kullanılabilir. Daha fazla bilgi için bkz. [Kimliği doğrulanmamış gönderen](set-up-anti-phishing-policies.md#unauthenticated-sender).
+     <sup>\*</sup> Bu ayar yalnızca önceki sayfada **Kimlik sahtekarı zekasını etkinleştir'i** seçtiğinizde kullanılabilir. Daha fazla bilgi için bkz. [Kimliği doğrulanmamış gönderen göstergeleri](set-up-anti-phishing-policies.md#unauthenticated-sender-indicators).
 
    İşiniz bittiğinde **İleri'ye** tıklayın.
 

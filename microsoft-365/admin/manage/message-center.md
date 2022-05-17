@@ -22,14 +22,14 @@ search.appverid:
 - MOE150
 ms.assetid: 38fb3333-bfcc-4340-a37b-deda509c2093
 description: Microsoft 365 İleti merkezi ve yeni ve değiştirilmiş özellikleri ve diğer önemli duyuruları izlemedeki rolüne genel bakış edinin.
-ms.openlocfilehash: 2d2f76d401e68fb7494cd74b169bcfe6cd6e6758
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: 687da2d7dec0ea913e629a4cf41740d4b664b346
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65022921"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65437711"
 ---
-# <a name="message-center"></a>İleti merkezi
+# <a name="track-new-and-changed-features-in-the-microsoft-365-message-center"></a>Microsoft 365 İleti merkezinde yeni ve değiştirilmiş özellikleri izleme
 
 Yeni ve değiştirilmiş özellikler, planlı bakım veya diğer önemli duyurular da dahil olmak üzere yaklaşan değişiklikleri izlemek için <a href="https://go.microsoft.com/fwlink/p/?linkid=2070717" target="_blank">İleti merkezi'ne</a> gidin.
   

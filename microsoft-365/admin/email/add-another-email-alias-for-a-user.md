@@ -24,14 +24,14 @@ search.appverid:
 - MOE150
 ms.assetid: 0b0bd900-68b1-4bf5-808b-5d240a7739f4
 description: 'İşletmeler için Microsoft 365 hesabınızla ilişkilendirilmiş, e-posta diğer adı olarak adlandırılan birden fazla e-posta adresine nasıl sahip olabileceğinizi öğrenin. '
-ms.openlocfilehash: 19303cb2c60455713595dbe23a23bae7e57efb71
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 2951b5eef21748ace22bee50afb24f86123fa46a
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64780225"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65437469"
 ---
-# <a name="add-another-email-alias-for-a-user"></a>Bir kullanıcı için başka bir e-posta diğer adı ekleme
+# <a name="add-another-email-alias-for-a-microsoft-365-business-subscription-user"></a>Microsoft 365 iş aboneliği kullanıcısı için başka bir e-posta diğer adı ekleme
   
 Bu makale, iş abonelikleri olan Microsoft 365 yöneticilere yöneliktir. Ev kullanıcılarına yönelik değildir.
   
@@ -45,7 +45,7 @@ Bir kullanıcı için 400 adede kadar diğer ad oluşturabilirsiniz. Bunun için
 > Birden çok kişinin info@NodPublishers.com veya sales@NodPublishers.com gibi tek bir e-posta adresine gönderilen e-postaları yönetmesini istiyorsanız, paylaşılan bir posta kutusu oluşturun. Daha fazla bilgi için bkz. [Paylaşılan posta kutusu oluşturma](create-a-shared-mailbox.md).
 
 > [!TIP]
-> Bu konuda verilen adımlarla ilgili yardıma ihtiyacınız varsa, [bir Microsoft küçük işletme uzmanıyla çalışmayı](https://go.microsoft.com/fwlink/?linkid=2186871) göz önünde bulundurun. İşletme Yardımı ile, işletmenizi büyütürken katılımdan gündelik kullanıma kadar her aşamada siz ve çalışanlarınız günün 24 saati küçük işletme uzmanlarına erişebilirsiniz.
+> Bu konuda verilen adımlarla ilgili yardıma ihtiyacınız varsa[bir Microsoft küçük işletme uzmanıyla çalışmayı](https://go.microsoft.com/fwlink/?linkid=2186871) göz önünde bulundurun. İşletme Yardımı ile, işletmenizi büyütürken işe alımdan gündelik kullanıma kadar her aşamada siz ve çalışanlarınız günün 24 saati küçük işletme uzmanlarına erişebilirsiniz.
   
 ## <a name="add-email-aliases-to-a-user"></a>Bir kullanıcıya e-posta diğer adı ekleme
 
@@ -79,7 +79,7 @@ Kullanıcıya e-posta diğer adları eklemek için Genel Yönetici haklarına sa
     Artık kullanıcının birincil adresi ve diğer adı olacaktır. Örneğin, Eliza Hoffman'ın birincil adresi olan Eliza@NodPublishers.com ve diğer adı Sales@NodPublishers.com gönderilen tüm postalar Eliza'nın Gelen Kutusu'na gider.
     
   
-7. **Kullanıcı yanıtladığında *Kimden adresi,* Outlook istemcisine bağlıdır. Outlook na Web, e-postanın alındığı diğer adı kullanır (buna ping-pong ilkesi adını vereceğiz). Outlook masaüstü birincil e-posta diğer adını kullanır.** Örneğin, bir iletinin Sales@NodPublishers.com gönderildiğini ve Eliza'nın gelen kutusuna ulaştığını varsayalım. Eliza, Outlook masaüstü kullanarak iletiyi yanıtladığında birincil e-posta adresi Sales@NodPublishers.com değil Eliza@NodPublishers.com olarak görünür.
+7. **Kullanıcı yanıtladığında *Kimden adresi,* Outlook istemcisine bağlıdır. Web üzerinde Outlook, e-postanın alındığı diğer adı kullanır (buna ping-pong ilkesi adını vereceğiz). Outlook masaüstü birincil e-posta diğer adını kullanır.** Örneğin, bir iletinin Sales@NodPublishers.com gönderildiğini ve Eliza'nın gelen kutusuna ulaştığını varsayalım. Eliza, Outlook masaüstü kullanarak iletiyi yanıtladığında birincil e-posta adresi Sales@NodPublishers.com değil Eliza@NodPublishers.com olarak görünür.
     
 ## <a name="did-you-get-a-parameter-cannot-be-found-that-matches-parameter-name-emailaddresses"></a>"EmailAddresses parametre adıyla eşleşen bir parametre bulunamadı" ifadesini aldınız mı?
 
@@ -92,7 +92,7 @@ Aboneliğinizi GoDaddy'den veya başka bir iş ortağından satın aldıysanız,
 
 ## <a name="sending-email-from-the-proxy-address-easily"></a>Proxy adresinden kolayca e-posta gönderme
 
-Temmuz 2021'de kullanıcıların Outlook na Web kullanırken diğer adlarından kolayca göndermelerini sağlayan yeni bir özellik kullanıma sunulacaktır. Özellik kiracı yöneticisinin cmdlet'ini `Set-OrganizationConfig -SendFromAliasEnabled $true` kullandığı bir kiracıya dağıtıldığında, kiracı içindeki kullanıcılar her girişin Outlook ayarlarındaki diğer adlara karşılık geldiği onay kutuları listesine erişebilir. Diğer ad seçildiğinde, Oluştur formundaki Kimden açılan listesinde görünür.
+Temmuz 2021'de kullanıcıların Web üzerinde Outlook kullanırken diğer adlarından kolayca göndermelerini sağlayan yeni bir özellik kullanıma sunulacaktır. Özellik kiracı yöneticisinin cmdlet'ini `Set-OrganizationConfig -SendFromAliasEnabled $true` kullandığı bir kiracıya dağıtıldığında, kiracı içindeki kullanıcılar her girişin Outlook ayarlarındaki diğer adlara karşılık geldiği onay kutuları listesine erişebilir. Diğer ad seçildiğinde, Oluştur formundaki Kimden açılan listesinde görünür.
   
 ## <a name="related-content"></a>İlgili içerik
 

@@ -1,5 +1,5 @@
 ---
-title: 4. Adım - Eski bir çalışanın e-posta adresini başka bir çalışana iletme veya paylaşılan posta kutusuna dönüştürme
+title: 4. Adım - Eski çalışanın e-postasını başka bir çalışana iletme veya paylaşılan posta kutusuna dönüştürme
 f1.keywords:
 - NOCSH
 ms.author: kwekua
@@ -24,45 +24,45 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Eski çalışanın e-posta adresini başka bir çalışana iletin veya paylaşılan posta kutusuna dönüştürmek için bu adımları izleyin.
-ms.openlocfilehash: 910fb8c30982cc02c4d71f1236fd54095eda96c7
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+description: Eski bir çalışanın e-postasını başka bir çalışana iletin veya bir kişi yerine birkaç kişinin erişebileceği paylaşılan bir posta kutusuna dönüştürün.
+ms.openlocfilehash: 302517ae44d9f263b293a6aa629a7bc58f8594ec
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63011869"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65436591"
 ---
-# <a name="step-4---forward-a-former-employees-email-to-another-employee-or-convert-to-a-shared-mailbox"></a>4. Adım - Eski bir çalışanın e-posta adresini başka bir çalışana iletme veya paylaşılan posta kutusuna dönüştürme
+# <a name="step-4---forward-a-former-employees-email-to-another-employee-or-convert-to-a-shared-mailbox"></a>4. Adım - Eski çalışanın e-postasını başka bir çalışana iletme veya paylaşılan posta kutusuna dönüştürme
 
-Bu adımda, eski çalışanın e-posta adresini başka bir çalışana atarsınız veya kullanıcının posta kutusunu paylaşılan posta kutusuna dönüştürürsiniz.
+Bu adımda, eski çalışanın e-posta adresini başka bir çalışana atarsınız veya kullanıcının posta kutusunu paylaşılan posta kutusuna dönüştürürsunuz.
 
 ## <a name="convert-former-employees-mailbox-to-a-shared-mailbox"></a>Eski çalışanın posta kutusunu paylaşılan posta kutusuna dönüştürme
 
-Kullanıcının posta kutusunu paylaşılan posta kutusuna dönüştürürken, var olan tüm e-posta ve takvim korunur. Yalnızca şu anda paylaşılan posta kutusunda, bir kişi yerine birkaç kişi bu posta kutusuna erişebilirsiniz. Daha sonra, istediğiniz zaman paylaşılan posta kutusunu yeniden kullanıcı (özel) posta kutusuna dönüştürebilirsiniz.
+Kullanıcının posta kutusunu paylaşılan posta kutusuna dönüştürdüğünüzde, var olan tüm e-posta ve takvim korunur. Yalnızca şimdi paylaşılan posta kutusunda bir kişi yerine birkaç kişinin erişebileceği bir posta kutusu var. İsterseniz, paylaşılan posta kutusunu daha sonraki bir tarihte bir kullanıcı (özel) posta kutusuna geri dönüştürebilirsiniz.
 
-- Paylaşılan posta kutusu oluşturmanın ucuz yoludur, çünkü posta kutusu **50 GB'den** küçük olduğu sürece lisans için ödeme yapmak zorunda değildir. 50 GB'den büyükse buna lisans atamanız gerekir.
+- Paylaşılan posta kutusu oluşturmak daha ucuz bir yoldur çünkü **posta kutusu 50 GB'tan küçük olduğu sürece** lisans için ödeme yapmak zorunda kalmazsınız. 50 GB'ın üzerindeyse lisans atamanız gerekir.
 - Posta kutusunu bir paylaşılan posta kutusuna dönüştürürseniz, eski e-postalar da kullanılabilir. Bu çok fazla yer kaplayabilir.
-- E-posta iletmeyi ayarsanız *, yalnızca eski* çalışana gönderilen yeni e-postalar geçerli çalışana gönderilir.
+- E-posta iletmeyi ayarlarsanız, geçerli çalışana yalnızca eski çalışana gönderilen *yeni* e-postalar gönderilir.
 
-Kullanıcının posta kutusunu [paylaşılan posta kutusuna dönüştürmek için bu adımları izleyin](../email/convert-user-mailbox-to-shared-mailbox.md).
+[Kullanıcının posta kutusunu paylaşılan posta kutusuna dönüştürmek için](../email/convert-user-mailbox-to-shared-mailbox.md) bu adımları izleyin.
 
-## <a name="forward-a-former-employees-email-to-another-employee"></a>Eski çalışanın e-posta adresini başka bir çalışana iletme
+## <a name="forward-a-former-employees-email-to-another-employee"></a>Eski çalışanın e-postasını başka bir çalışana iletme
 
  > [!IMPORTANT]
- > E-posta iletmeyi veya paylaşılan posta kutusunu ayarıyorsanız, sonunda eski çalışanın hesabını silmeyin. E-posta iletme özelliğinin veya paylaşılan posta kutusunun dayanak noktası olarak hesabın orada bulunması gerekir.
+ > E-posta iletme veya paylaşılan posta kutusu ayarlanıyorsa, sonunda eski çalışanın hesabını silmeyin. E-posta iletme özelliğinin veya paylaşılan posta kutusunun dayanak noktası olarak hesabın orada bulunması gerekir.
 
 1. Yönetici merkezinde, **Kullanıcılar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">Etkin kullanıcılar</a> sayfasına gidin.
-2. Engellemek istediğiniz çalışanın adını ve ardından **Posta sekmesini seçin** .
-3. **E-posta Yönlendirme'nin altında** **E-posta iletmeyi yönet'i seçin**.
-4. **Bu posta kutusuna gönderilmiş tüm e-postaları ilet** seçeneğini açın. Yönlendirme **adresi kutusuna** , e-postayı alacak olan geçerli çalışanın e-posta adresini yazın.
+2. Engellemek istediğiniz çalışanın adını ve ardından **Posta** sekmesini seçin.
+3. **E-posta İletme'nin** altında **E-posta iletmeyi yönet'i** seçin.
+4. **Bu posta kutusuna gönderilmiş tüm e-postaları ilet** seçeneğini açın. **İletme adresi** kutusuna, e-postayı alacak geçerli çalışanın e-posta adresini yazın.
 5. **Kaydet**'i seçin.
 6. Eski çalışanın hesabını silmemeniz gerektiğini unutmayın.
 
-### <a name="cancel-outlook-meetings"></a>Toplantı Outlook iptal etme
+### <a name="cancel-outlook-meetings"></a>Outlook toplantılarını iptal etme
 
-Eski kullanıcının takviminde yer alan tüm toplantıları iptal etmek istediğinizden emin olun. Bu, kişilerin eski kullanıcı tarafından oluşturulan toplantıları kaldırmalarına olanak sağlar.
+Eski kullanıcının takviminde yaptığı tüm toplantıları iptal etmeye özen gösterin. Bu, kişilerin eski kullanıcı tarafından oluşturulan toplantıları kaldırmasına olanak tanır.
 
-Kişinin donanım veya oda rezerve eden toplantıları varsa, bu toplantılar iptal edilene kadar rezervasyon için uygun değildir. Adımlar [için Randevu veya toplantıyı silme](https://support.microsoft.com/office/delete-an-appointment-or-a-meeting-2703bfdb-9a07-4396-be3b-a9f79438455b) makalelerini okuyun.
+Kişi ekipman veya oda rezervasyonu yapan toplantılar yaptıysa, bu toplantılar iptal edilene kadar rezervasyon yaptırılamaz. Adımlar için [Randevuyu veya toplantıyı silme](https://support.microsoft.com/office/delete-an-appointment-or-a-meeting-2703bfdb-9a07-4396-be3b-a9f79438455b) makalesini okuyun.
 
 ## <a name="related-content"></a>İlgili içerik
 
@@ -70,6 +70,6 @@ Kişinin donanım veya oda rezerve eden toplantıları varsa, bu toplantılar ip
 
 [Başka bir kişinin posta kutusuna erişme](https://support.microsoft.com/office/access-another-person-s-mailbox-a909ad30-e413-40b5-a487-0ea70b763081)
 
-[Exchange yönetim merkezini Exchange Online](/exchange/exchange-admin-center)
+[Exchange Online'da yönetim merkezi Exchange](/exchange/exchange-admin-center)
 
-[Başka bir kişinin posta ve takvim öğelerini yönetici olarak ekleme](https://support.microsoft.com/office/manage-another-person-s-mail-and-calendar-items-afb79d6b-2967-43b9-a944-a6b953190af5)
+[Başka bir kişinin posta ve takvim öğelerini yönetme](https://support.microsoft.com/office/manage-another-person-s-mail-and-calendar-items-afb79d6b-2967-43b9-a944-a6b953190af5)

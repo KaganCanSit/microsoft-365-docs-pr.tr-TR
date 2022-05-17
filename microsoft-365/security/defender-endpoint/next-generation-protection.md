@@ -15,12 +15,12 @@ manager: dansimp
 ms.custom: nextgen
 ms.technology: mde
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 00f0471e32147f7171f60887d28386d6b7df204d
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 99790921d51bf6d7b5a7268c541b4f754e7b99c9
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65414733"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65438871"
 ---
 # <a name="next-generation-protection-overview"></a>Yeni nesil korumaya genel bakış
 
@@ -29,6 +29,7 @@ ms.locfileid: "65414733"
 - Microsoft Defender Virüsten Koruma
 - [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [İş için Microsoft Defender](../defender-business/index.yml)
 
 **Platform**
 - Windows
@@ -40,7 +41,7 @@ Uç Nokta için Microsoft Defender, ağınızın güvenlik çevresini güçlendi
 - Microsoft Defender Virüsten Koruma güncel tutmayla ilgili güncelleştirmeleri içeren [ayrılmış koruma ve ürün](manage-updates-baselines-microsoft-defender-antivirus.md) güncelleştirmeleri.
 
 > [!TIP]
-> Yeni nesil koruma hem Uç Nokta için Microsoft Defender Plan 1'e hem de Plan 2'ye dahildir. [Uç Nokta için Defender Plan 1 ve Plan 2 hakkında daha fazla bilgi edinin](defender-endpoint-plan-1-2.md)
+> Yeni nesil koruma hem Uç Nokta için Microsoft Defender Plan 1'e hem de Plan 2'ye dahildir. [Uç Nokta için Defender Plan 1 ve Plan 2 hakkında daha fazla bilgi edinin](defender-endpoint-plan-1-2.md) Yeni nesil koruma, İş için Microsoft Defender ve Microsoft 365 İş Ekstra da dahildir. [Küçük ve orta ölçekli işletmeler için Microsoft 365 planlarındaki güvenlik özelliklerini karşılaştırın](../defender-business/compare-mdb-m365-plans.md).
 
 ## <a name="try-a-demo"></a>Bir tanıtım deneyin!
 
@@ -61,7 +62,7 @@ Yeni nesil koruma hizmetlerini yapılandırma hakkında bilgi için bkz[. Micros
 > Yapılandırma ve yönetim, Windows istemcilerinde olduğu gibi Windows Sunucusu'nda da büyük ölçüde aynıdır. Ancak bazı farklılıklar vardır. 
 
 > [!TIP]
-> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> Diğer platformlar için Antivirüs ile ilgili bilgi arıyorsanız bkz:
 > - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
 > - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)

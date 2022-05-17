@@ -26,14 +26,14 @@ ms.custom:
 search.appverid: MET150
 description: Belirli kullanıcılara ürün lisansları atamak veya belirli bir ürüne kullanıcı lisansları atamak isteyip istemediğinize bağlı olarak lisans atayın.
 ms.date: 04/22/2022
-ms.openlocfilehash: 32c91c82388cdb87b0dd6b980b51b888d1cec521
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 71b6886ed8248f05339e135f96b24f2af2282e0b
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092635"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65437579"
 ---
-# <a name="assign-licenses-to-users"></a>Kullanıcılara lisans atama
+# <a name="assign-microsoft-365-licenses-to-users"></a>Kullanıcılara Microsoft 365 lisansları atama
 
 **Kullanıcılara, Etkin kullanıcılar** sayfasında veya **Lisanslar sayfasında lisans** atayabilirsiniz. Kullandığınız yöntem, belirli kullanıcılara ürün lisansları atamak mı yoksa belirli bir ürüne kullanıcı lisansları atamak mı istediğinize bağlıdır.
 

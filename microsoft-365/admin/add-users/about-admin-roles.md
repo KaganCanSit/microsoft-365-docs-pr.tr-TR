@@ -26,14 +26,14 @@ search.appverid:
 - MOE150
 ms.assetid: da585eea-f576-4f55-a1e0-87090b6aaa9d
 description: Hizmet yöneticisi gibi yönetici rolleri, işletme işlevlerine eşlenir ve Yönetim merkezinde belirli görevleri yerine getirmek için izinler verir.
-ms.openlocfilehash: 8a1df118b5dfe1ad484f3a8048cce9cf748ab54b
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 01659905becdbd599c9d597e4a7dac3533d1eeb9
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64937685"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65435335"
 ---
-# <a name="about-admin-roles"></a>Yönetici rolleri hakkında
+# <a name="about-admin-roles-in-the-microsoft-365-admin-center"></a>Microsoft 365 yönetim merkezinde, yönetici rolleri
 
 Microsoft 365 veya Office 365 aboneliği, <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezini</a> kullanarak kuruluşunuzdaki kullanıcılara atayabileceğiniz bir dizi yönetici rolü ile birlikte gelir. Her bir yönetici rolü, işletme ile ilgili genel işlevlere yöneliktir ve kuruluşunuzdaki kişilere, yönetim merkezlerinde belirli görevler yapma izni verir.
 
