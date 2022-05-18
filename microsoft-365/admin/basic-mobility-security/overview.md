@@ -18,13 +18,13 @@ ms.custom:
 - AdminTemplateSet
 search.appverid:
 - MET150
-description: Cihaz güvenlik ilkelerini ve erişim kurallarını ayarlamak için Temel Hareketlilik ve Güvenlik'i kullanın.
-ms.openlocfilehash: b4752a6f1b71c453b3d1b89adeb25f337a65c255
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+description: Temel Hareketlilik ve Güvenlik’i ayarlayıp kullanarak Microsoft 365 kuruluşunuza bağlı mobil cihazları yönetin ve güvenliklerini sağlayın.
+ms.openlocfilehash: ca2f5f18dc67517fd9af3bf4f1d1a05e17010c35
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64780863"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65435711"
 ---
 # <a name="overview-of-basic-mobility-and-security-for-microsoft-365"></a>Microsoft 365 için Temel Hareketlilik ve Güvenlik'e genel bakış
 

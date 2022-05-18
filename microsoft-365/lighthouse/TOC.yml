@@ -56,6 +56,8 @@
       href: m365-lighthouse-compare-compliance-policies.md
     - name: Windows 365 (Bulut PC’ler) sayfasına genel bakış
       href: m365-lighthouse-win365-page-overview.md
+    - name: Windows 365 Bulut PC yeniden sağlama
+      href: m365-lighthouse-reprovision-cloudpc.md
 - name: Tehditleri yönetme
   items:
     - name: Tehdit yönetimi sayfasına genel bakış
