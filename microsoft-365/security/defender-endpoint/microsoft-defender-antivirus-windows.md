@@ -17,18 +17,19 @@ ms.technology: mde
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: adc6b447f7f29cde344ab0b90f9388154025f587
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: e344c98fd136569015a032bcc83569bc38e06621
+ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65418324"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65438805"
 ---
 # <a name="microsoft-defender-antivirus-in-windows"></a>Windows’da Microsoft Defender Virüsten Koruma
 
 **Şunlar için geçerlidir:**
 
-- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- Uç Nokta için Microsoft Defender Plan 1 ve 2
+- İş için Microsoft Defender
 - Microsoft Defender Virüsten Koruma
 
 **Platform**

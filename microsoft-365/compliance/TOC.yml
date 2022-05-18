@@ -362,7 +362,7 @@
               href: sit-modify-keyword-dictionary.md
             - name: Tam veri eşleşme şemanızı yönetme
               href: sit-use-exact-data-manage-schema.md
-            - name: Hassas bilgi kaynak tablosu dosyanızı yenileme
+            - name: EDM hassas bilgi kaynak tablosu dosyanızı yenileme
               href: sit-use-exact-data-refresh-data.md
             - name: Veri kaybını önleme ilkelerinizde adlandırılmış varlıkları kullanma
               href: named-entities-use.md
