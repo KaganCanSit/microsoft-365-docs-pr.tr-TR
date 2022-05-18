@@ -21,13 +21,13 @@ search.appverid:
 - MOE150
 - GEA150
 ms.assetid: fc1cf1d0-cd84-43fd-adb7-a4c4dfa8112d
-description: Microsoft 365 yönetim merkezi Microsoft 365 Raporları panosunu kullanarak Bir Etkin Kullanıcılar raporu almayı ve kaç ürün lisansının kullanıldığını öğrenin.
-ms.openlocfilehash: 65ea3f3624bda4f33a8c5680a53749595dc7aa15
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+description: Yönetim merkezindeki Microsoft 365 Raporları panosunu kullanarak Bir Etkin Kullanıcılar raporu almayı ve kaç ürün lisansının kullanıldığını öğrenin.
+ms.openlocfilehash: 88041c5821c95271723320fb2b4474a369723fbb
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64782005"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65467986"
 ---
 # <a name="assess-the-microsoft-365-active-users-report"></a>Microsoft 365 Etkin Kullanıcılar raporunu değerlendirme
 

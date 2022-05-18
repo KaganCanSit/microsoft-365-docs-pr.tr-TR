@@ -16,12 +16,12 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 757545231a7bbe544bfbacf082fc03d88fb2df2f
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: 9d401c5be4fc0454ce1d895fe5ea49267e5c5f70
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65174170"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65469183"
 ---
 # <a name="view-and-edit-your-security-policies-and-settings-in-microsoft-defender-for-business"></a>güvenlik ilkelerinizi ve ayarlarınızı İş için Microsoft Defender görüntüleme ve düzenleme
 
@@ -181,6 +181,4 @@ Aşağıdaki görevlerden birine veya daha fazlasına geçin:
 - [İş için Microsoft Defender kullanarak Kullanmaya başlayın](mdb-get-started.md)
 - [İş için Microsoft Defender'de cihazları yönetme](mdb-manage-devices.md)
 - [İş için Microsoft Defender'da olayları görüntüleme ve yönetme](mdb-view-manage-incidents.md)
-- [İş için Microsoft Defender'de ilkeleri görüntüleme veya düzenleme](mdb-view-edit-policies.md)
-
 - [İş için Microsoft Defender'de ilkeleri görüntüleme veya düzenleme](mdb-view-edit-policies.md)

@@ -26,12 +26,12 @@ search.appverid:
 - GEA150
 ms.assetid: 0f54736f-eb22-414c-8273-498a0918678f
 description: Bir yöneticinin Microsoft 365 yönetim merkezi'da işletmeniz, okuluniz veya kar amacı gütmeyen kuruluşunuz için parola süre sonu ilkesi ayarlamayı öğrenin.
-ms.openlocfilehash: ed94cb8bc3bdcc1c1f30c6cb9bf56907c83de41e
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: b7f7691d0c1c0e6177d5414bc7802b62bb07a3b3
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65022349"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65468788"
 ---
 # <a name="set-the-password-expiration-policy-for-your-organization"></a>Kuruluşunuzun parola süre sonu ilkesini belirleyin
 
@@ -54,18 +54,16 @@ Kullanıcıysanız, parolanızı süresi hiç dolmayacak şekilde ayarlamak içi
 
 Belirli bir süre sonra kullanıcı parolalarının süresinin dolmasını ayarlamak istiyorsanız aşağıdaki adımları izleyin.
 
-1. Microsoft 365 yönetim merkezi Kuruluş <a href="https://go.microsoft.com/fwlink/p/?linkid=2072756" target="_blank">**Ayarlar altındaki Güvenlik & gizlilik** sekmesine</a> gidin.
+1. Microsoft 365 yönetim merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=2072756" target="_blank">**Güvenlik & gizlilik** sekmesine</a> gidin.
 
-    Genel yönetici veya güvenlik yöneticisi değilseniz Güvenlik ve gizlilik seçeneğini görmezsiniz.
+    Genel yönetici veya güvenlik yöneticisi değilseniz Güvenlik & gizlilik seçeneğini görmezsiniz.
   
 1. **Parola süre sonu ilkesini** seçin.
   
-1. Kullanıcıların parolaları değiştirmesini istemiyorsanız, **Kullanıcı parolalarını birkaç gün sonra sona erecek şekilde ayarla'nın** yanındaki kutunun işaretini kaldırın.
+1. Kullanıcıların parolaları değiştirmesini istemiyorsanız Parolaları **hiçbir zaman sona ermeyecek şekilde ayarla'nın** yanındaki kutunun işaretini kaldırın.
 
 1. Parolaların ne sıklıkla süre sonunun geleceğini tuşlayın. 14 ile 730 arasında bir gün sayısı seçin.
-  
-1. İkinci kutuya, kullanıcılara parola süresinin dolacağının ne zaman bildirileceğini yazın ve sonra **Kaydet**’e tıklayın. 1 ile 30 arasında bir gün sayısı seçin.
-
+ 
 > [!IMPORTANT]
 > Parola süre sonu bildirimleri artık Office web uygulamalarında veya [yönetim merkezinde desteklenmemektedir](https://portal.office.com).
   
@@ -77,9 +75,9 @@ Yalnızca Outlook uygulamasını kullanan kişiler, önbellekte süresi dolana k
 
 Kullanıcılarınızın eski parolaları geri dönüştürmesini engellemek istiyorsanız, şirket içi Active Directory (AD) içinde parola geçmişini zorunlu kılarak bunu yapabilirsiniz. Bkz. [Özel parola ilkesi oluşturma](/azure/active-directory-domain-services/password-policy#create-a-custom-password-policy).
 
-Azure AD'de, kullanıcı parolayı değiştirdiğinde son parola yeniden kullanılamaz. Parola ilkesi, doğrudan Azure AD'de oluşturulan ve yönetilen tüm kullanıcı hesaplarına uygulanır. Bu parola ilkesi değiştirilemez. Bkz. [Azure AD parola ilkeleri](/azure/active-directory/authentication/concept-sspr-policy#password-policies-that-only-apply-to-cloud-user-accounts).
+Azure AD'da, kullanıcı parolayı değiştirdiğinde son parola yeniden kullanılamaz. Parola ilkesi, doğrudan Azure AD'da oluşturulan ve yönetilen tüm kullanıcı hesaplarına uygulanır. Bu parola ilkesi değiştirilemez. Bkz. [parola ilkelerini Azure AD](/azure/active-directory/authentication/concept-sspr-policy#password-policies-that-only-apply-to-cloud-user-accounts).
 
-## <a name="synchronize-user-passwords-hashes-from-an-on-premises-active-directory-to-azure-ad-microsoft-365"></a>Kullanıcı parola karmalarını bir şirket içi Active Directory Azure AD(Microsoft 365) ile eşitleme
+## <a name="synchronize-user-passwords-hashes-from-an-on-premises-active-directory-to-azure-ad-microsoft-365"></a>Şirket içi Active Directory kullanıcı parola karmalarını Azure AD (Microsoft 365) ile eşitleme
 
 Bu makale, yalnızca bulut kullanan kullanıcıların (Azure AD) süre sonu ilkesini ayarlamaya yöneliktir. Parola karması eşitleme, doğrudan kimlik doğrulaması veya ADFS gibi şirket içi federasyon kullanan karma kimlik kullanıcıları için geçerli değildir.
   

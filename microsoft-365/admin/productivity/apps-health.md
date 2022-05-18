@@ -1,5 +1,5 @@
 ---
-title: Microsoft Üretkenlik Puanı - uygulamaların sistem durumunu Microsoft 365
+title: Üretkenlik Puanı ve Microsoft 365 uygulamalarınızın sistem durumu
 f1.keywords:
 - NOCSH
 ms.author: efrene
@@ -18,15 +18,15 @@ monikerRange: o365-worldwide
 search.appverid:
 - MET150
 - MOE150
-description: Microsoft 365 应用版 sistem durumu - teknolojinin üretkenlik puanıyla ilgili ayrıntılar.
-ms.openlocfilehash: 2e8e44c954d8d1d6bacca766bd528c3897b7686b
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+description: Microsoft 365 Uygulamaları sistem durumu - teknoloji deneyimlerinin ayrıntıları Üretkenlik puanı.
+ms.openlocfilehash: a87bd49ace301eeb6f48edc31fba5a02d0386de6
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64782159"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65466382"
 ---
-# <a name="microsoft-365-apps-health--technology-experiences"></a>Microsoft 365 应用版 sağlık – teknoloji deneyimleri
+# <a name="microsoft-365-apps-health--technology-experiences"></a>Microsoft 365 Uygulamaları sağlık – teknoloji deneyimleri
 
 Üretkenlik Puanı, kuruluşunuzun Microsoft 365 kullanımı ve onu destekleyen teknoloji deneyimleri aracılığıyla dijital dönüşüm yolculuğuna ilişkin içgörüler sağlar. Kuruluşunuzun puanı, kişi ve teknoloji deneyimi ölçümlerini yansıtır ve sizinkine benzer kuruluşların karşılaştırmalarıyla karşılaştırılabilir. Uygulama durumu kategorisi, teknoloji deneyimleri kapsamındaki ölçümlerin bir parçasıdır. Daha fazla bilgi edinmek için [Üretkenlik Puanına genel bakış](productivity-score.md) sayfasına göz atın ve [Microsoft'un Gizlilik Bildirimi'ni](https://privacy.microsoft.com/privacystatement) okuyun.
 
@@ -42,7 +42,7 @@ Bu kategorinin temel ölçümlerini içeren deneyimle ilgili birincil bir içgö
 
 ### <a name="primary-insight"></a>Birincil içgörü
 
-Birincil içgörü, önerilen güncelleştirilmiş kanalda Microsoft 365 应用版 çalıştıran cihazlardan hesaplanır.
+Birincil içgörü, önerilen güncelleştirilmiş kanalda Microsoft 365 Uygulamaları çalıştıran cihazlardan hesaplanır.
 
 :::image type="content" source="../../media/appshealth-primary.png" alt-text="Microsoft 365 uygulamaları için birincil görünür görselleştirme.":::
 
@@ -73,7 +73,7 @@ Ayrıca, kuruluşunuzdaki hangi kanalların ve sürüm cihazlarının şu anda �
 
 :::image type="content" source="../../media/devices-current-suppported-channel.png" alt-text="Geçerli, desteklenen kanaldaki cihaz sayısını gösteren grafik.":::
 
-1. **Üstbilgi:**  Geçerli Kanal'da desteklenen Microsoft 365 应用版 sürümlerini çalıştıran cihazların yüzdesini vurgular
+1. **Üstbilgi:**  Geçerli Kanal'da desteklenen Microsoft 365 Uygulamaları sürümlerini çalıştıran cihazların yüzdesini vurgular
 1. **Vücut:**  Önerilen kanalda Microsoft 365 uygulamaları çalıştıran cihazların değeri hakkında bilgi sağlar.
 1. **Görsel -leştirme:**  Görselleştirmedeki döküm, farklı kanallardaki Microsoft 365 uygulamalarının en son ve desteklenen sürümlerindeki cihazların yüzdesinin kapsamını aşağıda gösterildiği gibi temsil eder:
     - **Desteklenen sürümler:** Mavi çubuk, Microsoft 365 uygulamalarının desteklenen sürümünde çalışan cihazların yüzdesini temsil eder.

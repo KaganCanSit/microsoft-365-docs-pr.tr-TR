@@ -1,5 +1,5 @@
 ---
-title: Kullanıcılara lisans atama
+title: Microsoft 365 yönetim merkezi kullanıcılara lisans atama
 f1.keywords:
 - CSH
 author: cmcatee-MSFT
@@ -26,12 +26,12 @@ ms.custom:
 search.appverid: MET150
 description: Belirli kullanıcılara ürün lisansları atamak veya belirli bir ürüne kullanıcı lisansları atamak isteyip istemediğinize bağlı olarak lisans atayın.
 ms.date: 04/22/2022
-ms.openlocfilehash: 71b6886ed8248f05339e135f96b24f2af2282e0b
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 5402a3f2b1f1e702b0d8f3e8b021206c9131710d
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65437579"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65465832"
 ---
 # <a name="assign-microsoft-365-licenses-to-users"></a>Kullanıcılara Microsoft 365 lisansları atama
 

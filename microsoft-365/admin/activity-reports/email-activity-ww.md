@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 yönetim merkezi-posta etkinliği raporlarını gönderme
+title: E-posta etkinlik raporlarını Microsoft 365 yönetim merkezi
 ms.author: kwekua
 author: kwekua
 manager: scotv
@@ -18,44 +18,44 @@ search.appverid:
 - MOE150
 - GEA150
 ms.assetid: 1cbe2c00-ca65-4fb9-9663-1bbfa58ebe44
-description: Bir e-posta etkinlik raporunu, rapor Microsoft 365 Raporlar panosu kullanarak nasıl Microsoft 365 yönetim merkezi.
-ms.openlocfilehash: e7441bc24661f279a43a655d17ef23047ed48a43
-ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
+description: Microsoft 365 yönetim merkezi Microsoft 365 Raporlar panosunu kullanarak e-posta etkinlik raporu almayı ve kullanıcı e-posta eğilimlerini anlama hakkında bilgi edinin.
+ms.openlocfilehash: b84d8c3e6e85ab64b1ec70379e7c016374f28e78
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63400958"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65467690"
 ---
-# <a name="microsoft-365-reports-in-the-admin-center---email-activity"></a>Microsoft 365 Merkezinde Raporlar - E-posta etkinliği
+# <a name="microsoft-365-reports-in-the-admin-center---email-activity"></a>Yönetim merkezinde raporları Microsoft 365 - E-posta etkinliği
 
-Rapor Microsoft 365 panosu, kurum kurum genelindeki ürünlerde etkinliğin genel görünümünü gösterir. Bu pano sayesinde her bir üründeki etkinliklerle ilgili daha ayrıntılı bilgi edinmek için ürün düzeyinde raporları ayrıntılı olarak inceleyebilirsiniz. [Raporlara genel bakış konusuna](activity-reports.md) göz atın.
+Microsoft 365 Raporları panosu, kuruluşunuzdaki ürünler genelindeki etkinliğe genel bakışı gösterir. Bu pano sayesinde her bir üründeki etkinliklerle ilgili daha ayrıntılı bilgi edinmek için ürün düzeyinde raporları ayrıntılı olarak inceleyebilirsiniz. [Raporlara genel bakış konusuna](activity-reports.md) göz atın.
   
 Örneğin, Raporlar sayfasında kuruluşunuzun içindeki e-posta trafiğinin üst düzey bir görünümünü elde edebilir ve ardından, kuruluşunuzdaki e-posta etkinliğinin eğilimlerini ve tek tek kullanıcılar düzeyindeki ayrıntılarını anlamak için E-posta etkinliği widget'inde detaya gidebilirsiniz.
 
 ## <a name="how-to-get-to-the-email-activity-report"></a>E-posta etkinlik raporuna ulaşma
 
 1. Yönetim merkezinde, **Raporlar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2074756" target="_blank">Kullanımı</a> sayfasına gidin.
-2. **E-posta etkinliği'nin altında** Daha **Fazlasını Görüntüle'yi seçin**. 
-3. **E-posta etkinliği açılan** listesinde E-posta etkinliğini **Exchange** \> **seçin**.
+2. **E-posta etkinliği** altında **Daha Fazla Görüntüle'yi** seçin. 
+3. **E-posta etkinliği** açılan listesinde **e-posta etkinliğini** **Exchange** \> seçin.
   
 ## <a name="interpret-the-email-activity-report"></a>E-posta etkinlik raporunu yorumlama
 
 Kullanıcınızın e-posta etkinliğini görmek için, **Etkinlik** ve **Kullanıcılar** grafiklerine bakabilirsiniz. 
   
-![E-posta etkinliği raporu.](../../media/5eb1d9e9-8106-4843-acb7-c0238c0da816.png)
+![E-posta etkinlik raporu.](../../media/5eb1d9e9-8106-4843-acb7-c0238c0da816.png)
   
 |Öğe|Açıklama|
 |:-----|:-----|
-|1.  <br/> |**E-posta etkinlik** raporu son 7 gün, 30 gün, 90 gün veya 180 günlük eğilimler için görüntülenebilir. Ancak rapordaki belirli bir günü seçersiniz, tablo geçerli tarihten (raporun oluşturulma tarihine değil) itibaren 28 güne kadar olan verileri gösterir.  <br/> |
-|2.  <br/> |Her raporda yer alan veriler genellikle son 24 - 48 saati kapsar.  <br/> |
-|3.  <br/> |**Etkinlik** grafiği, kuruluşunuzda devam eden e-posta etkinliğinin miktarına ilişkin eğilimi anlamasına olanak tanır. E-posta gönderme, e-posta okuma, alınan e-posta, toplantı oluşturma veya toplantı etkileşimleri gibi etkinliklerin bölüşüştüşterlerini anlıyoruz.  <br/> |
-|4.  <br/> |**Kullanıcı** grafiği, e-posta etkinliklerini gerçekleştiren benzersiz kullanıcı sayısına ilişkin eğilimi anlamanıza olanak tanır. E-posta gönderme, e-posta okuma, e-posta alma, toplantı oluşturma veya toplantı etkileşimleri gerçekleştirme eğilimine bakabilirsiniz.  <br/> |
-|5.  <br/> | Etkinlik **grafiğinde** , Y ekseni gönderilen e-posta türü, alınan e-posta, okunan e-posta, toplantı oluşturma ve etkileşim toplantıyı içeren etkinliğin sayısıdır.  <br/>  Kullanıcılar etkinlik **grafiğinde** , Y ekseni gönderilen e-posta, alınan e-posta, alınan e-posta, okunan e-posta, toplantı oluşturma veya etkileşim toplantıyı içeren etkinlik gerçekleştiren kullanıcı sayısıdır.  <br/>  Her iki grafikte bulunan X ekseni, söz konusu rapora ait seçilen tarih aralığıdır.  <br/> |
-|6.  <br/> |Göstergede bir öğe seçerek grafikte gördüğünüz seriyi filtrenin ekleyebilirsiniz.  <br/> |
-|7.  <br/> | Tabloda, kullanıcı düzeyine göre e-posta etkinliklerinin dökümü gösterilir. Bu, kendisine Exchange ürünü atanmış olan kullanıcıları ve onların e-posta etkinliklerini gösterir. <br/> <br/> **Kullanıcı adı**, kullanıcının e-posta adresidir.  <br/> **Görünen ad** , kullanıcıya tam addır.  <br/> **Silinmiş**, geçerli durumu silinmiş olan ancak raporun raporlama döneminin bir bölümünde etkin olan kullanıcıya karşılık gelir.  <br/> **Silinme tarihi**, kullanıcının silindiği tarihtir.  <br/> **Son etkinlik tarihi**, kullanıcının e-posta okuma veya gönderme etkinliği gerçekleştirdiği en son tarihe karşılık gelir.  <br/> **Gönderme eylemi**, kullanıcı için kaydedilen e-posta gönderme eyleminin sayısını gösterir.  <br/> **Alma eylemi**, kullanıcı için kaydedilen e-posta alma eyleminin sayısını gösterir.  <br/> **Okuma eylemi**, kullanıcı için kaydedilen e-posta okuma eyleminin sayısını gösterir.  <br/> **Toplantı oluşturma eylemleri** , kullanıcı için kaydedilen toplantı isteği gönderme eyleminin sayısıdır.  <br/> **Toplantı etkileşim eylemleri,** kullanıcı için kaydedilen toplantı isteğinin kabul etme, belirsiz, reddetme veya iptal eyleminin sayısını ifade eder.  <br/> **Atanan ürün** , bu kullanıcıya atanan ürünlerdir.  <br/>  Kuruluşunuzun ilkeleri nedeniyle kişisel kullanıcı bilgilerinin bulunduğu raporları görüntüleyemiyorsanız bu raporların gizlilik ayarını değiştirebilirsiniz. Aşağıdaki çalışma **sayfalarındaki Etkinlik Raporları'nın** kullanıcı düzeyi ayrıntılarını [nasıl gizleyim? Microsoft 365 yönetim merkezi](activity-reports.md).  <br/> |
-|8.  <br/> |Raporda **sütun eklemek** veya kaldırmak için Sütunları seç'i seçin.  <br/> ![E-posta etkinliği raporu - Sütunları seçin.](../../media/80ffa0ad-61c5-4a6f-8a1d-5f6730ff7da9.png)|
-|9.  <br/> |Ayrıca, Dışarı Aktar bağlantısını seçerek rapor Excel .csv bir çalışma dosyasına da **aktarabilirsiniz**. Bu işlem tüm kullanıcıların verilerini dışarı aktarır ve daha fazla çözümleme yapmak için basit sıralama ve filtreleme işlemlerini kullanmanıza olanak tanır. 2000'den az kullanıcınız varsa, raporun kendi içindeki tabloda sıralama ve filtreleme yapabilirsiniz. 2000'den çok kullanıcınız varsa, filtrelemek ve sıralamak için verileri dışarı aktarmanız gerekir.  <br/> |
+|1.  <br/> |**E-posta etkinlik** raporu son 7 gün, 30 gün, 90 gün veya 180 günlük eğilimler için görüntülenebilir. Ancak raporda belirli bir gün seçerseniz, tablo geçerli tarihten itibaren (raporun oluşturulduğu tarihten değil) 28 güne kadar olan verileri gösterir.  <br/> |
+|2.  <br/> |Her rapordaki veriler genellikle son 24-48 saati kapsar.  <br/> |
+|3.  <br/> |**Etkinlik** grafiği, kuruluşunuzda devam eden e-posta etkinliğinin miktarına ilişkin eğilimi anlamasına olanak tanır. E-posta gönderme, e-posta okuma, alınan e-posta, toplantı oluşturma veya toplantı etkileşim etkinliklerinin bölünmesini anlayabilirsiniz.  <br/> |
+|4.  <br/> |**Kullanıcı** grafiği, e-posta etkinliklerini gerçekleştiren benzersiz kullanıcı sayısına ilişkin eğilimi anlamanıza olanak tanır. E-posta gönderme, e-posta okuma, e-posta alma, toplantı oluşturma veya toplantı etkileşim etkinlikleri gerçekleştiren kullanıcıların eğilimine bakabilirsiniz.  <br/> |
+|5.  <br/> | **Etkinlik** grafiğinde, Y ekseni gönderilen, alınan e-posta, okunan e-posta, oluşturulan toplantı ve etkileşimde bulunan toplantı türündeki etkinlik sayısıdır.  <br/>  **Kullanıcılar** etkinlik grafiğinde, Y ekseni, kullanıcının gönderilen, alınan e-posta, e-posta okuma, toplantı oluşturma veya etkileşimde bulunan toplantı türündeki etkinliğidir.  <br/>  Her iki grafikte bulunan X ekseni, söz konusu rapora ait seçilen tarih aralığıdır.  <br/> |
+|6.  <br/> |Göstergede bir öğe seçerek grafikte gördüğünüz seriyi filtreleyebilirsiniz.  <br/> |
+|7.  <br/> | Tabloda, kullanıcı düzeyine göre e-posta etkinliklerinin dökümü gösterilir. Bu, kendisine Exchange ürünü atanmış olan kullanıcıları ve onların e-posta etkinliklerini gösterir. <br/> <br/> **Kullanıcı adı**, kullanıcının e-posta adresidir.  <br/> **Görünen ad** , kullanıcıysa tam addır.  <br/> **Silinmiş**, geçerli durumu silinmiş olan ancak raporun raporlama döneminin bir bölümünde etkin olan kullanıcıya karşılık gelir.  <br/> **Silinme tarihi**, kullanıcının silindiği tarihtir.  <br/> **Son etkinlik tarihi**, kullanıcının e-posta okuma veya gönderme etkinliği gerçekleştirdiği en son tarihe karşılık gelir.  <br/> **Gönderme eylemi**, kullanıcı için kaydedilen e-posta gönderme eyleminin sayısını gösterir.  <br/> **Alma eylemi**, kullanıcı için kaydedilen e-posta alma eyleminin sayısını gösterir.  <br/> **Okuma eylemi**, kullanıcı için kaydedilen e-posta okuma eyleminin sayısını gösterir.  <br/> **Toplantı tarafından oluşturulan eylemler** , kullanıcı için toplantı isteği gönderme eyleminin kaç kez kaydedildiğini gösterir.  <br/> **Toplantıyla etkileşimli eylemler** , bir toplantı isteğinin kullanıcı için kabul etme, belirsiz, reddetme veya iptal eyleminin kaç kez kaydedildiğini gösterir.  <br/> **Atanan ürün** , bu kullanıcıya atanan ürünlerdir.  <br/>  Kuruluşunuzun ilkeleri nedeniyle kişisel kullanıcı bilgilerinin bulunduğu raporları görüntüleyemiyorsanız bu raporların gizlilik ayarını değiştirebilirsiniz. Microsoft 365 yönetim merkezi Etkinlik Raporları'nın **kullanıcı düzeyi ayrıntılarını Nasıl yaparım?** [gizlensin mi](activity-reports.md)? bölümüne göz atın.  <br/> |
+|8.  <br/> |Rapora sütun eklemek veya rapordan sütun kaldırmak için Sütunları **seç'i** seçin.  <br/> ![E-posta etkinliği raporu - sütunları seçin.](../../media/80ffa0ad-61c5-4a6f-8a1d-5f6730ff7da9.png)|
+|9.  <br/> |Dışarı **Aktar bağlantısını** seçerek rapor verilerini bir Excel .csv dosyasına da aktarabilirsiniz. Bu işlem tüm kullanıcıların verilerini dışarı aktarır ve daha fazla çözümleme yapmak için basit sıralama ve filtreleme işlemlerini kullanmanıza olanak tanır. 2000'den az kullanıcınız varsa, raporun kendi içindeki tabloda sıralama ve filtreleme yapabilirsiniz. 2000'den çok kullanıcınız varsa, filtrelemek ve sıralamak için verileri dışarı aktarmanız gerekir.  <br/> |
 |||
    
 > [!NOTE]
-> E-posta etkinliği raporu yalnızca lisansı olan kullanıcılarla ilişkilendirilmiş posta kutuları için kullanılabilir.
+> E-posta etkinlik raporu yalnızca lisansları olan kullanıcılarla ilişkilendirilmiş posta kutuları için kullanılabilir.

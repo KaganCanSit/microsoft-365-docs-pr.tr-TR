@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 description: Erişimi ve kullanımı kısıtlayarak verilerinizi koruyan şifreleme için duyarlılık etiketlerini yapılandırın.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 7355ef75eb455ad7442052daf1df814eb9b3bf26
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: 14be99abd0a31a8141f5f66a205a9cd0e17391af
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65285094"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65469458"
 ---
 # <a name="restrict-access-to-content-by-using-sensitivity-labels-to-apply-encryption"></a>Şifreleme uygulamak için hassasiyet etiketleri kullanarak içeriğe erişimi kısıtlama
 
@@ -47,11 +47,11 @@ Son olarak, bir yönetici olarak, şifreleme uygulamak için bir duyarlılık et
 - **İzinleri şimdi atayın**, böylece hangi kullanıcıların bu etikete sahip içerik için hangi izinleri tam olarak aldığını belirleyebilirsiniz.
 - Etiketi içeriğe uygulayan **kullanıcıların izin atamasına izin verin**. Bu şekilde, kuruluşunuzdaki kişilere işbirliği yapmak ve işlerini yapmak için ihtiyaç duyabilecekleri esneklik sağlayabilirsiniz.
 
-Şifreleme ayarları, Microsoft Purview uyumluluk portalında [duyarlılık etiketi oluşturduğunuzda](create-sensitivity-labels.md) kullanılabilir.
+Şifreleme ayarları, Microsoft Purview uyumluluk portalı [bir duyarlılık etiketi oluşturduğunuzda](create-sensitivity-labels.md) kullanılabilir.
 
 ## <a name="understand-how-the-encryption-works"></a>Şifrelemenin nasıl çalıştığını anlama
 
-Şifreleme, Azure Information Protection Azure Rights Management hizmetini (Azure RMS) kullanır. Bu koruma çözümü şifreleme, kimlik ve yetkilendirme ilkelerini kullanır. Daha fazla bilgi edinmek için Azure Information Protection belgelerinden Azure [Rights Management nedir?](/azure/information-protection/what-is-azure-rms) konusuna bakın. 
+Şifreleme, Azure Information Protection Azure Rights Management hizmetini (Azure RMS) kullanır. Bu koruma çözümü şifreleme, kimlik ve yetkilendirme ilkelerini kullanır. Daha fazla bilgi edinmek için [Azure Information Protection](/azure/information-protection/what-is-azure-rms) belgelerinden Azure Rights Management nedir? konusuna bakın. 
 
 Bu şifreleme çözümünü kullandığınızda **süper kullanıcı** özelliği, yetkili kişilerin ve hizmetlerin kuruluşunuz için şifrelenmiş verileri her zaman okuyup inceleyebilmesini sağlar. Gerekirse şifreleme kaldırılabilir veya değiştirilebilir. Daha fazla bilgi için bkz[. Azure Information Protection ve bulma hizmetleri veya veri kurtarma için süper kullanıcıları yapılandırma](/azure/information-protection/configure-super-users).
 
@@ -61,7 +61,7 @@ Bu şifreleme çözümünü kullandığınızda **süper kullanıcı** özelliğ
 
 - Azure Information Protection korumasını etkinleştirme
     
-    Duyarlılık etiketlerinin şifreleme uygulaması için Azure Information Protection'den koruma hizmetinin (Azure Rights Management) kiracınız için etkinleştirilmesi gerekir. Daha yeni kiracılarda bu varsayılan ayardır, ancak hizmeti el ile etkinleştirmeniz gerekebilir. Daha fazla bilgi için bkz. [Azure Information Protection'den koruma hizmetini etkinleştirme](/azure/information-protection/activate-service).
+    Duyarlılık etiketlerinin şifreleme uygulaması için, kiracınız için Azure Information Protection'den koruma hizmetinin (Azure Rights Management) etkinleştirilmesi gerekir. Daha yeni kiracılarda bu varsayılan ayardır, ancak hizmeti el ile etkinleştirmeniz gerekebilir. Daha fazla bilgi için bkz. [Azure Information Protection'den koruma hizmetini etkinleştirme](/azure/information-protection/activate-service).
 
 - Ağ gereksinimlerini denetleme
     
@@ -69,9 +69,9 @@ Bu şifreleme çözümünü kullandığınızda **süper kullanıcı** özelliğ
 
 - Azure Information Protection için Exchange yapılandırma
     
-    kullanıcıların e-postalarını şifrelemek için Outlook etiket uygulayabilmesi için Exchange Azure Information Protection için yapılandırılması gerekmez. Ancak Exchange Azure Information Protection için yapılandırılana kadar azure rights management korumasını Exchange ile kullanma işlevinin tamamını elde edersiniz.
+    kullanıcıların e-postalarını şifrelemek için Outlook etiket uygulayabilmesi için Exchange Azure Information Protection için yapılandırılması gerekmez. Ancak Exchange Azure Information Protection için yapılandırılana kadar, azure Rights Management korumasını Exchange ile kullanma işlevinin tamamını elde edersiniz.
     
-    Örneğin, kullanıcılar cep telefonlarında veya Web üzerinde Outlook ile şifrelenmiş e-postaları görüntüleyemez, şifrelenmiş e-postalar arama için dizine eklenemez ve Rights Management koruması için Exchange Online DLP'yi yapılandıramazsınız. 
+    Örneğin, kullanıcılar cep telefonlarında veya Web üzerinde Outlook ile şifrelenmiş e-postaları görüntüleyemez, şifrelenmiş e-postalar arama için dizine alınamaz ve Rights Management koruması için Exchange Online DLP'yi yapılandıramazsınız. 
     
     Exchange bu ek senaryoları desteklediğinden emin olmak için aşağıdakilere bakın:
     
@@ -125,11 +125,11 @@ Aşağıdaki tabloda, söz konusu içeriğe duyarlılık etiketi uygulandığın
 Yeni etiket şifrelemesinin uygulandığı veya özgün şifrelemenin kaldırıldığı durumlarda, bu durum yalnızca etiketi uygulayan kullanıcının bu eylemi destekleyen bir kullanım hakkı veya rolü varsa gerçekleşir:
 
 - [Kullanım hakkı](/azure/information-protection/configure-usage-rights#usage-rights-and-descriptions) Dışarı Aktarma veya Tam Denetim.
-- [Rights Management verenin veya Rights Management sahibinin](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) veya [süper kullanıcının](/azure/information-protection/configure-super-users) rolü.
+- [Rights Management verenin, Rights Management sahibinin](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) veya [süper kullanıcının](/azure/information-protection/configure-super-users) rolü.
 
 Kullanıcı bu haklardan veya rollerden birine sahip değilse etiket uygulanamaz ve bu nedenle özgün şifreleme korunur. Kullanıcı şu iletiyi görür: **Duyarlılık etiketinde bu değişikliği yapma izniniz yok. Lütfen içerik sahibine başvurun.**
 
-Örneğin, bir e-posta iletisine İletme'yi uygulayan kişi, e-postanın Rights Management sahibi olduğundan, iş parçacığını şifrelemeyi değiştirmek veya kaldırmak için yeniden etiketleyebilir. Ancak süper kullanıcılar dışında, bu e-postanın alıcıları gerekli kullanım haklarına sahip olmadıkları için e-postayı yeniden etiketleyemez.
+Örneğin, bir e-posta iletisine İletme'yi uygulayan kişi, e-postanın Rights Management sahibi olduğundan şifrelemeyi değiştirmek veya kaldırmak için iş parçacığını yeniden etiketleyebilir. Ancak süper kullanıcılar dışında, bu e-postanın alıcıları gerekli kullanım haklarına sahip olmadıkları için e-postayı yeniden etiketleyemez.
 
 #### <a name="email-attachments-for-encrypted-email-messages"></a>Şifrelenmiş e-posta iletileri için e-posta ekleri
 
@@ -158,21 +158,24 @@ Bu etiketin uygulandığı e-postaya veya belgelere kimlerin erişebileceğini d
 
 - **Etiketli içeriğe erişimin süresinin belirli** bir tarihte veya etiket uygulandıktan sonraki belirli bir gün sayısından sonra dolmasına izin verin. Bu süreden sonra kullanıcılar etiketli öğeyi açamayacak. Bir tarih belirtirseniz, geçerli saat diliminizdeki bu tarihte gece yarısı geçerli olur. (Bazı e-posta istemcilerinin önbelleğe alma mekanizmaları nedeniyle sona erme tarihini geçen e-postaları göstermeyebileceğini unutmayın.)
 
-- Etiket uygulandıktan sonra hiçbir zaman, her zaman veya belirli bir sayıda gün boyunca **çevrimdışı erişime izin verme**. Çevrimdışı erişimi hiçbir zaman veya birkaç günle kısıtlarsanız, bu eşiğe ulaşıldığında kullanıcıların yeniden kimlik doğrulaması yapılması ve erişimlerinin günlüğe kaydedilmesi gerekir. Daha fazla bilgi için Rights Management kullanım lisansının sonraki bölümüne bakın.
+- Etiket uygulandıktan sonra hiçbir zaman, her zaman veya belirli bir sayıda gün boyunca **çevrimdışı erişime izin verme**. Çevrimdışı erişimi hiçbir zaman veya birkaç günle kısıtlarsanız, bu eşiğe ulaşıldığında kullanıcıların yeniden kimlik doğrulaması yapılması ve erişimlerinin günlüğe kaydedilmesi gerekir. Daha fazla bilgi için lisansı kullanma Rights Management sonraki bölüme bakın.
 
 Şifrelenmiş içerik için erişim denetimi için Ayarlar:
 
 ![Yönetici tanımlı izinler için Ayarlar.](../media/sensitivity-encryption-settings-for-admin-defined-permissions.png)
 
-### <a name="rights-management-use-license-for-offline-access"></a>Rights Management çevrimdışı erişim için lisans kullanma
+### <a name="rights-management-use-license-for-offline-access"></a>çevrimdışı erişim için lisans Rights Management kullanma
 
-Kullanıcı, Azure Rights Management hizmetinden şifrelemeyle korunan bir belgeyi veya e-postayı açtığında, kullanıcıya söz konusu içerik için bir Azure Rights Management kullanım lisansı verilir. Bu kullanım lisansı, kullanıcının belge veya e-posta için kullanım haklarını ve içeriği şifrelemek için kullanılan şifreleme anahtarını içeren bir sertifikadır. Kullanım lisansı, bu ayarlıysa ve kullanım lisansının ne kadar süreyle geçerli olduğunu içeren bir sona erme tarihi de içerir.
+> [!NOTE]
+> Şifreleme ayarını çevrimdışı erişime izin verecek şekilde yapılandırabilirsiniz ancak bazı uygulamalar şifrelenmiş içerik için çevrimdışı erişimi desteklemeyebilir. Örneğin, Power BI Desktop etiketli ve şifrelenmiş dosyalar çevrimdışı olduğunuzda [açılmaz.](/power-bi/admin/service-security-sensitivity-label-overview)
+
+Kullanıcı, Azure Rights Management hizmetinden şifrelemeyle korunan bir belgeyi veya e-postayı açtığında, kullanıcıya bu içerik için bir Azure Rights Management kullanım lisansı verilir. Bu kullanım lisansı, kullanıcının belge veya e-posta için kullanım haklarını ve içeriği şifrelemek için kullanılan şifreleme anahtarını içeren bir sertifikadır. Kullanım lisansı, bu ayarlıysa ve kullanım lisansının ne kadar süreyle geçerli olduğunu içeren bir sona erme tarihi de içerir.
 
 Son kullanma tarihi ayarlanmamışsa, kiracı için varsayılan kullanım lisansı geçerlilik süresi 30 gündür. Kullanım lisansı süresi boyunca, kullanıcı içerik için yeniden kimlik doğrulaması veya yeniden kimlik doğrulaması yapılmaz. Bu işlem, kullanıcının korumalı belgeyi veya e-postayı internet bağlantısı olmadan açmaya devam etmesine olanak tanır. Kullanım lisansı geçerlilik süresi dolduğunda, kullanıcı korumalı belgeye veya e-postaya bir sonraki eriştiğinde, kullanıcının yeniden kimlik doğrulaması ve yeniden yetkilendirmesi gerekir.
 
 Yeniden kimlik doğrulamasına ek olarak, şifreleme ayarları ve kullanıcı grubu üyeliği yeniden değerlendirilir. Başka bir deyişle, şifreleme ayarlarında veya grup üyeliğinde içeriğe son erişimlerinden itibaren değişiklikler varsa, kullanıcılar aynı belge veya e-posta için farklı erişim sonuçlarıyla karşılaşabilir.
 
-Varsayılan 30 günlük ayarı değiştirmeyi öğrenmek için bkz. [Rights Management kullanım lisansı](/azure/information-protection/configure-usage-rights#rights-management-use-license).
+Varsayılan 30 günlük ayarı değiştirmeyi öğrenmek için bkz. [lisansı kullanma Rights Management](/azure/information-protection/configure-usage-rights#rights-management-use-license).
 
 ### <a name="assign-permissions-to-specific-users-or-groups"></a>Belirli kullanıcılara veya gruplara izin atama
 
@@ -239,13 +242,13 @@ Bunu yapmak için kullanıcıları veya grupları ekleyin, izinler atayın ve bu
 
 #### <a name="rights-management-issuer-user-applying-the-sensitivity-label-always-has-full-control"></a>Rights Management veren (duyarlılık etiketini uygulayan kullanıcı) her zaman Tam Denetime sahiptir
 
-Duyarlılık etiketi için şifreleme, Azure Information Protection Azure Rights Management hizmetini kullanır. Kullanıcı şifreleme kullanarak bir belgeyi veya e-postayı korumak için duyarlılık etiketi uyguladığında, bu kullanıcı söz konusu içerik için Rights Management vereni olur.
+Duyarlılık etiketi için şifreleme, Azure Information Protection Azure Rights Management hizmetini kullanır. Kullanıcı şifreleme kullanarak bir belgeyi veya e-postayı korumak için duyarlılık etiketi uyguladığında, bu kullanıcı söz konusu içerik için Rights Management veren olur.
 
 Rights Management verene her zaman belge veya e-posta için Tam Denetim izinleri verilir ve buna ek olarak:
 
 - Şifreleme ayarları bir sona erme tarihi içerirse, Rights Management veren belgeyi veya e-postayı bu tarihten sonra da açabilir ve düzenleyebilir.
 - Rights Management veren her zaman çevrimdışı olarak belgeye veya e-postaya erişebilir.
-- Rights Management veren, iptal edilen bir belgeyi açmaya devam edebilir.
+- Rights Management veren, iptal edilen bir belgeyi yine de açabilir.
 
 Daha fazla bilgi için bkz. [Rights Management veren ve Rights Management sahibi](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
 
@@ -318,7 +321,7 @@ Word'de, PowerPoint ve Excel, bir kullanıcı belgeye izin atamasına olanak tan
 
 - Görüntüleyici (Yalnızca Görüntüleme izni atayan) veya Co-Author (Görünüm, Düzenleme, Kopyalama ve Yazdırma izinleri atayan) gibi bir izin düzeyi seçin.
 - Kullanıcıları, grupları veya kuruluşları seçin. Bu, kuruluşunuzun içindeki veya dışındaki kişileri içerebilir.
-- Seçili kullanıcıların içeriğe erişemeyeceği bir sona erme tarihi ayarlayın. Daha fazla bilgi için, yukarıdaki [Rights Management çevrimdışı erişim için lisans kullanma](#rights-management-use-license-for-offline-access) bölümüne bakın.
+- Seçili kullanıcıların içeriğe erişemeyeceği bir sona erme tarihi ayarlayın. Daha fazla bilgi [için, çevrimdışı erişim için lisans kullanma Rights Management](#rights-management-use-license-for-offline-access) yukarıdaki bölüme bakın.
 
 ![Kullanıcının özel izinlerle koruma seçenekleri.](../media/sensitivity-aip-custom-permissions-dialog.png)
 
@@ -444,7 +447,7 @@ En hassas belgelerinizi ve e-postalarınızı şifrelemek, bu verilere yalnızca
 
 - Belge SharePoint kullanıma alındığında bir Office uygulaması kullanılarak şifreleme uygulayan bir etiket eklenirse ve kullanıcı kullanıma almayı atarsa, belge etiketli ve şifrelenmiş olarak kalır.[](https://support.microsoft.com/office/check-out-check-in-or-discard-changes-to-files-in-a-library-7e2c12a9-a874-4393-9511-1378a700f6de)
 
-- [Duyarlılık etiketleriyle şifrelenmiş dosyalar için birlikte yazmayı etkinleştirmediğiniz](sensitivity-labels-coauthoring.md) sürece, şifrelenmiş dosyalar için aşağıdaki eylemler Office uygulamalarda (Windows, Mac, Android ve iOS) desteklenmez ve kullanıcılar bir sorun oluştuğuna ilişkin bir hata iletisi görür. Ancak SharePoint işlevselliği alternatif olarak kullanılabilir:
+- [Duyarlılık etiketleriyle şifrelenmiş dosyalar için birlikte yazmayı etkinleştirmediğiniz](sensitivity-labels-coauthoring.md) sürece, şifrelenmiş dosyalar için aşağıdaki eylemler Office uygulamalarından (Windows, Mac, Android ve iOS) desteklenmez ve kullanıcılar bir sorun oluştuğuna ilişkin bir hata iletisi görür. Ancak SharePoint işlevselliği alternatif olarak kullanılabilir:
 
   - Önceki sürümlerin kopyalarını görüntüleyin, geri yükleyin ve kaydedin. Alternatif olarak, kullanıcılar bir [liste veya kitaplık için sürüm oluşturmayı etkinleştirip yapılandırdığınızda](https://support.office.com/article/enable-and-configure-versioning-for-a-list-or-library-1555d642-23ee-446a-990a-bcab618c7a37) Web üzerinde Office kullanarak bu eylemleri gerçekleştirebilir.
   - Dosyaların adını veya konumunu değiştirin. Alternatif olarak, kullanıcılar SharePoint [belge kitaplığındaki bir dosyayı, klasörü veya bağlantıyı yeniden adlandırabilir](https://support.microsoft.com/office/rename-a-file-folder-or-link-in-a-document-library-bc493c1a-921f-4bc1-a7f6-985ce11bb185).

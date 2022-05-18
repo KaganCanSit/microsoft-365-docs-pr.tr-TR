@@ -24,19 +24,19 @@ search.appverid:
 - MOE150
 ms.assetid: 2e122487-e1f5-4f26-ba41-5689249d93ba
 description: 'Özel posta kutusunu yalnızca bir kişi yerine birkaç kişi tarafından erişilebilen paylaşılan posta kutusuna dönüştürmeyi öğrenin. '
-ms.openlocfilehash: 4838dc7bd4856c89448cb501fdd20066d1c97aa2
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: 07b36e5c8b2cb7b2e88dfedd80b31353cb8f7e32
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64861950"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65466228"
 ---
 # <a name="convert-a-user-mailbox-to-a-shared-mailbox"></a>Kullanıcı posta kutusunu paylaşılan posta kutusuna dönüştürme
 
 Kullanıcının posta kutusunu paylaşılan posta kutusuna dönüştürdüğünüzde, var olan tüm e-posta ve takvim korunur. Yalnızca şimdi paylaşılan posta kutusunda bir kişi yerine birkaç kişinin erişebileceği bir posta kutusu var. Daha sonraki bir tarihte, paylaşılan posta kutusunu bir kullanıcı (özel) posta kutusuna geri dönüştürebilirsiniz.
 
 > [!TIP]
-> Bu konuda verilen adımlarla ilgili yardıma ihtiyacınız varsa, [bir Microsoft küçük işletme uzmanıyla çalışmayı](https://go.microsoft.com/fwlink/?linkid=2186871) göz önünde bulundurun. İşletme Yardımı ile, işletmenizi büyütürken katılımdan gündelik kullanıma kadar her aşamada siz ve çalışanlarınız günün 24 saati küçük işletme uzmanlarına erişebilirsiniz.
+> Bu konuda verilen adımlarla ilgili yardıma ihtiyacınız varsa[bir Microsoft küçük işletme uzmanıyla çalışmayı](https://go.microsoft.com/fwlink/?linkid=2186871) göz önünde bulundurun. İşletme Yardımı ile, işletmenizi büyütürken katılımdan gündelik kullanıma kadar her aşamada siz ve çalışanlarınız günün 24 saati küçük işletme uzmanlarına erişebilirsiniz.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
@@ -76,7 +76,7 @@ Paylaşılan posta kutuları hakkında bilmeniz gereken diğer her şey için bk
 
 2. Alıcılar **Posta Kutuları'nı** \> seçin.
 
-3. Kullanıcı posta kutusunu seçin. **Posta Kutusu** sekmesindeki **Diğer Eylemler'in** altında **Paylaşılan posta kutusuna dönüştür'ü** seçin.
+3. Kullanıcı posta kutusunu seçin. **Diğerleri** sekmesinde **Paylaşılan posta kutusuna dönüştür'ü** seçin.
 
 4. Posta kutusu 50 GB'tan küçükse, [kullanıcıdan lisansı](../manage/remove-licenses-from-users.md) kaldırabilir ve bunun için ödeme yapmayı durdurabilirsiniz. Kullanıcının hesabını silmeyin. Paylaşılan posta kutusunun yer işareti olarak orada olması gerekir. Kuruluşunuzdan ayrılan bir çalışanın posta kutusunu dönüştürüyorsanız, artık oturum açamayacağından emin olmak için ek adımlar uygulamanız gerekir. Lütfen bkz. [Eski çalışanı Microsoft 365 kaldırma](../add-users/remove-former-employee.md).
 

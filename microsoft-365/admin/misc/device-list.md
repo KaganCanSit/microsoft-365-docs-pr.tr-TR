@@ -22,21 +22,21 @@ search.appverid:
 - MOE150
 ms.assetid: 932e3676-2491-49f0-9177-d893d2f5276e
 ROBOTS: NOINDEX
-description: Microsoft 365 İş'te AutoPilot için CSV dosyası yapmayı öğrenin.
-ms.openlocfilehash: 62dbcddbdab1a08ab3b19c6616b814c421a57c04
-ms.sourcegitcommit: 2a4dddf7c655b44b17d4fd7f5e1e5d8a6e2b7aef
+description: İş için Microsoft 365'da AutoPilot için CSV dosyası oluşturmayı öğrenin.
+ms.openlocfilehash: af695448e31ea93d36b36a8831702acb84a92410
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/06/2021
-ms.locfileid: "62996603"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65469568"
 ---
-# <a name="device-list-csv-file"></a>Cihaz listesi CSV dosyası
+# <a name="windows-autopilot-device-list-csv-file"></a>Windows Autopilot cihaz listesi CSV dosyası
 
-## <a name="device-list-csv-file-format"></a>Cihaz listesi .csv biçimi
+## <a name="device-list-csv-file-format"></a>Cihaz listesi .csv dosya biçimi
 
-AutoPilot'a Windows cihazları yönetmek ve dağıtmak için, cihazlar hakkında belirli .csv içeren bir .csv dosyası gerekir.
+Windows Autopilot aracılığıyla cihazları yönetmek ve dağıtmak için cihazlar hakkında belirli bilgileri içeren bir .csv dosyası gerekir.
   
-Cihaz listesi dosyasındaki sütunlar, belirtilen sırada aşağıdaki başlıklara sahip olması gerekir:
+Cihaz listesi dosyasındaki sütunların belirtilen sırada aşağıdaki üst bilgileri olması gerekir:
   
 - A sütunu: Cihaz Seri Numarası
 
@@ -46,10 +46,10 @@ Cihaz listesi dosyasındaki sütunlar, belirtilen sırada aşağıdaki başlıkl
 
 Bu bilgileri donanım satıcınızdan edinebilir veya CSV dosyasını oluşturmak için [Get-WindowsAutoPilotInfo PowerShell betiğini](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo) kullanabilirsiniz. 
 
-Cihaz eklerken, bunları bir Profile de eklemeniz gerekir. Bir cihaza veya cihaz grubuna AutoPilot dağıtım profillerini uygulamak için bir profil kullanılır.
+Cihazları eklerken, bunları bir Profile da eklemeniz gerekir. Bir cihaza veya bir cihaz grubuna AutoPilot dağıtım profilleri uygulamak için bir profil kullanılır.
   
 ## <a name="related-content"></a>İlgili içerik
 
-[Microsoft 365 belgeleri ve kaynakları için belgeler](../../index.yml)
+[İş belgeleri ve kaynakları için Microsoft 365](../../index.yml)
   
-[Microsoft 365 kurumsal ile çalışmaya başlama](../../admin/admin-overview/what-is-microsoft-365.md)
+[İş için Microsoft 365 ile Kullanmaya başlayın](../../admin/admin-overview/what-is-microsoft-365.md)

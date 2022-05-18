@@ -9,14 +9,14 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 828a17db-956a-401e-bb62-d153b6dffd53
 description: Microsoft Bookings'da iş adı, adres, telefon numarası, web sitesi URL'si, logo ve iş saatleri dahil olmak üzere Hakkımızda sayfanızı oluşturmak için bu yönergeleri izleyin.
-ms.openlocfilehash: 5dc8fa157d6ce53231ece9d8d70eb772218ac5dd
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: e15379a414182672bd7a0372ea5c55ffbc482b62
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65022525"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65469613"
 ---
-# <a name="enter-your-business-information"></a>İş bilginizi girme
+# <a name="enter-your-business-information-in-microsoft-bookings"></a>İş bilgilerinizi Microsoft Bookings girin
 
 > [!NOTE]
 > Bu makale, Microsoft Bookings en son sürümüyle etkileşim kurmanıza yardımcı olur. Önceki sürümler önümüzdeki aylarda kullanımdan kaldırılacak.

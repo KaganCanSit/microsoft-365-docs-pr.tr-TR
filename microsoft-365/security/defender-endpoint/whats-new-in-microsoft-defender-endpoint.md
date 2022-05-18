@@ -17,12 +17,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 8a3d8caa02aa04412925b4d0648d166194df0548
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: 615a68d7725e180e512674909f490e27d3da6771
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65319209"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65468810"
 ---
 # <a name="whats-new-in-microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender’daki yenilikler
 
@@ -30,11 +30,11 @@ ms.locfileid: "65319209"
 
 **Şunlar için geçerlidir:**
 
-- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Defender'ı deneyimlemek mi istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-pullalerts-abovefoldlink)
+> Uç nokta için Defender'i deneyimlemek ister misiniz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-pullalerts-abovefoldlink)
 
 Aşağıdaki özellikler önizleme aşamasındadır veya Uç Nokta için Microsoft Defender en son sürümünde genel kullanıma sunulmuştur (GA).
 
@@ -125,7 +125,7 @@ Diğer işletim sistemleriyle ilgili Uç Nokta için Microsoft Defender hakkınd
 
 - [Cihaz grubu tanımları](/microsoft-365/security/defender-endpoint/machine-groups) artık her koşul için birden çok değer içerebilir. Tek bir cihaz grubunun tanımına birden çok etiket, cihaz adı ve etki alanı ayarlayabilirsiniz.
 
-- [Mobil Uygulama yönetimi desteği](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-new-capabilities-on-android-and-ios/ba-p/2442730) <br> Bu geliştirme, mobil uygulamaları yönetmek için Intune kullanılırken bir kuruluşun yönetilen uygulama içindeki verilerinin Uç Nokta için Microsoft Defender korunmasını sağlar. Mobil uygulama yönetimi hakkında daha fazla bilgi için [bu belgelere bakın](/microsoft-365/mem/intune/apps/mam-faq).
+- [Mobil Uygulama yönetimi desteği](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-new-capabilities-on-android-and-ios/ba-p/2442730) <br> Bu geliştirme, mobil uygulamaları yönetmek için Intune kullanılırken bir kuruluşun yönetilen uygulama içindeki verilerinin Uç Nokta için Microsoft Defender korunmasını sağlar. Mobil uygulama yönetimi hakkında daha fazla bilgi için [bu belgelere bakın](/mem/intune/apps/mam-faq).
 
 - [VPN tümleştirmesi Microsoft Tunnel](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-new-capabilities-on-android-and-ios/ba-p/2442730) <br> Microsoft Tunnel VPN özellikleri artık Android için Uç Nokta için Microsoft Defender uygulamasıyla tümleştirilmiştir. Bu birleştirme, kuruluşların tek bir güvenlik uygulamasıyla basitleştirilmiş bir son kullanıcı deneyimi sunabilmesini sağlar. Bu sayede hem mobil tehdit savunması hem de mobil cihazlarından şirket içi kaynaklara erişim olanağı sunarken, güvenlik ve BT ekipleri de tanıdıkları yönetici deneyimlerini sürdürebiliyor.
 

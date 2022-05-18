@@ -22,14 +22,14 @@ search.appverid:
 - MET150
 - MOE150
 description: Kiracı değiştiricisini ve kiracıları tek bir konumdan yönetme olanağı sağlayan çok kiracılı görünümleri kullanmayı öğrenin.
-ms.openlocfilehash: 0058bdb45b42e2c67b96ff3e30ce1cd04e5658b2
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: 4a1168b1c2676bf25f0bb4ad7f3353a5e65f8caa
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64713965"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65468096"
 ---
-# <a name="multi-tenant-management"></a>Çok kiracılı yönetim
+# <a name="multi-tenant-management-for-microsoft-365-partner-admins"></a>Microsoft 365 iş ortağı yöneticileri için çok kiracılı yönetim
 
 Çok kiracılı yönetim, Microsoft 365 iş ortağı yöneticilerinin tek bir konumdan yönetdikleri tüm kiracıları yönetmesine olanak tanıyan birleşik bir yönetim biçimi sunar. Yönetici temsilcisi rolüne sahip ve birden çok kiracıyı yöneten bir iş ortağıysanız şunları yapabilirsiniz:
 

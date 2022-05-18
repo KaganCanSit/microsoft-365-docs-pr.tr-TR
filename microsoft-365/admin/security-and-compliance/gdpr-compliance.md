@@ -1,5 +1,5 @@
 ---
-title: GDPR basitleştirilmiş Küçük işletmeniz için bir kılavuz
+title: 'GDPR basitleştirilmiş: Küçük işletmeniz için bir kılavuz'
 f1.keywords:
 - NOCSH
 ms.author: efrene
@@ -19,12 +19,12 @@ search.appverid:
 - MET150
 ms.assetid: 211c5c90-9719-4d73-9ad9-1925bb80f5f6
 description: İşletmeler için Microsoft 365 Genel Veri Koruma Yönetmeliği (GDPR) sürecinde size nasıl yardımcı olabileceğini öğrenin.
-ms.openlocfilehash: 4f900b8694acb97be3449072a2ccf5ac7d89ff1f
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 28f39b8aaf715c9f95f89fe30ae0cfc077327eda
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64934147"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65469524"
 ---
 # <a name="gdpr-simplified-a-guide-for-your-small-business"></a>GDPR basitleştirilmiş: Küçük işletmeniz için bir kılavuz
 
@@ -101,7 +101,7 @@ Küçük bir işletme olarak, izlemeniz gereken ilk adımlardan biri, işletmeni
 Başka bir örnek olarak, özel teklifler hakkında bildirim göndermek için tek tek müşterilerin listelerini yönetebilirsiniz.
 
 #### <a name="microsoft-365-features-that-can-help"></a>Yardımcı olabilecek Microsoft 365 özellikleri
-[Microsoft Purview Information Protection](/microsoft-365/compliance/information-protection), şirketinizdeki hassas bilgileri keşfetmenize, sınıflandırmanıza ve korumanıza yardımcı olabilir. Kişisel veriler içeren belge türlerini tanımlamanıza ve etiketlemenize yardımcı olması için eğitilebilir sınıflandırıcıları kullanabilirsiniz. 
+[Microsoft Purview Bilgi Koruması](/microsoft-365/compliance/information-protection) şirketinizdeki hassas bilgileri keşfetmenize, sınıflandırmanıza ve korumanıza yardımcı olabilir. Kişisel veriler içeren belge türlerini tanımlamanıza ve etiketlemenize yardımcı olması için eğitilebilir sınıflandırıcıları kullanabilirsiniz. 
 
 ### <a name="step-2-inform-your-customers-employees-and-other-individuals-when-you-need-to-collect-their-personal-data"></a>2. Adım: Kişisel verilerini toplamanız gerektiğinde müşterilerinizi, çalışanlarınızı ve diğer bireyleri bilgilendirin
 

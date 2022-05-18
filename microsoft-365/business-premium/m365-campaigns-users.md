@@ -24,18 +24,18 @@ search.appverid:
 - MET150
 - MOE150
 description: Microsoft 365 İş Ekstra için bu güvenlik önerilerinin kullanıcılarınızı nasıl etkilediğini ve verilerinizi nasıl koruyacağınızı öğrenin.
-ms.openlocfilehash: 202df778e74fb0f14a92b572df977088f8319595
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: ffd25f52c0f230506a43a3f611ce933f59d26802
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65099971"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65469239"
 ---
-# <a name="how-these-security-recommendations-affect-your-users"></a>Bu güvenlik önerileri kullanıcılarınızı nasıl etkiler?
+# <a name="how-these-security-recommendations-affect-your-microsoft-365-users"></a>Bu güvenlik önerileri Microsoft 365 kullanıcılarınızı nasıl etkiler?
 
 Bu çözümdeki Microsoft 365 için güvenlik önerileri, bilgisayar korsanlarının ortamınıza erişmesini çok daha zor hale getirir. Bunun dezavantajı, kullanıcılarınızın bu daha güvenli ortamda nasıl çalışılacağının farkında olması gerekir. Biraz daha sabır gerektiğinin farkındayız, ancak kuruluşunuzun korunmasına değer.
 
-![iPhone'lar, Android cihazlar, Mac'ler, Windows 10, paylaşım ve önemli personel için aşağıdan önemli noktaları toplayan çizim.](../media/M365-democracy-Users_900px.png)
+![iPhone'lar, Android cihazlar, Mac'ler, Windows 10, paylaşım ve anahtar personel için aşağıdan önemli noktaları toplayan çizim.](../media/M365-democracy-Users_900px.png)
 
 ## <a name="use-secure-email-practices"></a>Güvenli e-posta uygulamalarını kullanma
 
@@ -51,9 +51,9 @@ Tüm kullanıcılar, e-postalarının güvenli kalmasına yardımcı olmak için
 
 Siz ve ekibinizin üyeleri için ipuçları içeren bir [bilgi grafiği](m365-campaigns-protect-campaign-infographic.md) indirin.
 
-## <a name="set-up-iphones-and-android-devices"></a>iPhone ve Android cihazları ayarlama
+## <a name="set-up-iphones-and-android-devices"></a>iPhone'ları ve Android cihazları ayarlama
 
-Ortamınıza eklediğiniz tüm kullanıcıların güvenli bir şekilde çalışması için [iPhone'ları ve Android cihazları ayarlamaları](../business/set-up-mobile-devices.md) birkaç dakika sürer:
+Ortamınıza eklediğiniz tüm kullanıcıların güvenli bir şekilde çalışması için [iPhone'ları ve Android cihazlarını ayarlamaları](../business/set-up-mobile-devices.md) birkaç dakika sürer:
 
 - Cihazları kimlik doğrulayıcı uygulamasıyla çok faktörlü kimlik doğrulamasını kullanacak şekilde ayarlayın.
 

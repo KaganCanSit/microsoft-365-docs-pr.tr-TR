@@ -19,13 +19,13 @@ search.appverid:
 - MST160
 - MET150
 - MOE150
-description: Microsoft 365 yönetim merkezi Microsoft 365 Raporları panosunu kullanarak Microsoft Dynamics 365 Customer Voice etkinlik raporu almayı öğrenin.
-ms.openlocfilehash: 19e2a0d0514b9d5722ec9649c08a4d6a97025873
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+description: Raporlar panosunu kullanarak Microsoft Dynamics 365 Customer Voice etkinlik raporu almayı öğrenin ve lisanslı kullanıcıların nasıl işbirliğine sahip olduğunu öğrenin.
+ms.openlocfilehash: c8c7678991635139f2bdfb97a8baf7ccc2c667aa
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64781961"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65467612"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---dynamics-365-customer-voice-activity"></a>Yönetim merkezinde raporları Microsoft 365 - Dynamics 365 Customer Voice etkinliği
 

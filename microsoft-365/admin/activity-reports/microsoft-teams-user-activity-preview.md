@@ -19,12 +19,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Microsoft Teams kullanıcı etkinliği raporunu almayı ve kuruluşunuzdaki Teams etkinliğiyle ilgili içgörüler elde etmeyi öğrenin.
-ms.openlocfilehash: a2bfa434d5a564307498f621cb5105f411daff4d
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 691c6999e97350184fbe72e28f2b380dcf7b41d9
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65087227"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65467558"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---microsoft-teams-user-activity"></a>Yönetim merkezinde raporları Microsoft 365 - Microsoft Teams kullanıcı etkinliği
 
@@ -84,8 +84,8 @@ Teams kullanıcı etkinlik raporundaki verileri anonim hale getirmek için genel
 
 3. **Değişiklikleri kaydet'i** seçin.
 
+## <a name="related-content"></a>İlgili içerik
 
-## <a name="see-also"></a>Ayrıca bkz.
 [cihaz kullanım raporunu Microsoft Teams](../activity-reports/microsoft-teams-device-usage-preview.md)
 
 [kullanım etkinliği raporunu Microsoft Teams](../activity-reports/microsoft-teams-usage-activity.md) 

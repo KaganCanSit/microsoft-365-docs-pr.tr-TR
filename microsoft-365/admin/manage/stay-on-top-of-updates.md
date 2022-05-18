@@ -20,14 +20,14 @@ search.appverid:
 - MOE150
 ms.assetid: 719f4904-cbdd-4889-a0cf-fbd7837dfecd
 description: İleti merkezi, Hedefli Sürüm, Yol Haritası ve Bloglar ile Community kullanarak Microsoft 365 güncelleştirmelerinden haberdar olmayı öğrenin.
-ms.openlocfilehash: f38805b3c09c3b40198930014a3083a3ebc03cf9
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: cf4adf2e603517dfb4db57811e291195a1536488
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65129320"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65468536"
 ---
-# <a name="stay-on-top-of-changes"></a>Değişiklikleri yakından takip etme
+# <a name="stay-on-top-of-microsoft-365-product-and-feature-changes"></a>Microsoft 365 ürün ve özellik değişikliklerinden haberdar olun
 
 Microsoft 365 ile, aylar veya yıllar arasındaki zamanlanmış güncelleştirmeler yerine yeni ürün güncelleştirmelerini ve özellikleri kullanıma sunulduklarında alırsınız. Bunun sonucunda, siz ve kullanıcılarınız şirket çapındaki maliyetli ve zaman alan bir yükseltme yerine işinizi yapmak için düzenli olarak yeni ve gelişmiş yöntemler kullanırsınız. Böyle bir modelin yol açtığı tek zorluk, değişiklikleri ve güncelleştirmeleri takip edebilmektir. Kuruluşunuzdaki Microsoft 365 güncelleştirmelerini aşağıda bulabilirsiniz.
 

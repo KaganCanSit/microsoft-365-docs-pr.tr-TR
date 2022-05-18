@@ -21,12 +21,12 @@ description: Kuruluşunuzdaki kullanıcı ve yönetici etkinliğini görüntüle
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
-ms.openlocfilehash: 585b3be2149b1e94dc27633bac20707a6b193c0f
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: 70bb6383b67392da1766d3ca8d1ef0806d105bb1
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65320616"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65465986"
 ---
 # <a name="search-the-audit-log-in-the-compliance-portal"></a>Uyumluluk portalında denetim günlüğünde arama yapma
 
@@ -532,7 +532,6 @@ Aşağıdaki tabloda, kullanıcıların SharePoint Online'daki liste ve liste ö
 |Güncelleştirilmiş liste öğesi|ListItemUpdated|Bir kullanıcı, bir veya daha fazla özelliği değiştirerek bir SharePoint liste öğesini güncelleştirdi.|
 |Site sütunu güncelleştirildi|SiteColumnUpdated|Kullanıcı bir veya daha fazla özelliği değiştirerek bir SharePoint site sütununu güncelleştirdi.|
 |Güncelleştirilmiş site içerik türü|SiteContentTypeUpdated|Kullanıcı, bir veya daha fazla özelliği değiştirerek site içerik türünü güncelleştirdi.|
-|Görüntülenen liste öğesi|ListItemViewed|Kullanıcı bir SharePoint liste öğesini görüntüledi. Bir kullanıcı liste öğesini görüntüledikten sonra, ListItemViewed olayı aynı kullanıcı için sonraki beş dakika boyunca aynı liste öğesi için yeniden günlüğe kaydedilmez.|
 
 ### <a name="sharing-and-access-request-activities"></a>Paylaşım ve erişim isteği etkinlikleri
 

@@ -1,5 +1,5 @@
 ---
-title: En Exchange Online rolü hakkında
+title: Exchange Online yönetici rolü hakkında
 f1.keywords:
 - NOCSH
 ms.author: efrene
@@ -21,48 +21,48 @@ search.appverid:
 - MOE150
 - GEA150
 ms.assetid: 097ae285-c4af-4319-9770-e2559d66e4c8
-description: Exchange-posta kutularını çevrimiçi yöneticiler yönetir. Örneğin, kullanıcının posta kutusunda silinmiş öğeleri kurtarabilirsiniz.
-ms.openlocfilehash: f046d9d85c677d0793d2b991736185b49f4174e9
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Exchange Online yöneticileri kuruluşunuzun e-posta ve posta kutularını yönetir ve örneğin kullanıcının posta kutusunda silinen öğeleri kurtarır.
+ms.openlocfilehash: 048a435a515c4f88eb688a2cfaf13006e859741c
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63315337"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65467108"
 ---
-# <a name="about-the-exchange-online-admin-role"></a>En Exchange Online rolü hakkında
+# <a name="about-the-exchange-online-admin-role"></a>Exchange Online yönetici rolü hakkında
 
-E-posta Microsoft 365 yardımcı olmak için kullanıcılara, yönetim [](assign-admin-roles.md) merkezinden kurum e-postalarını ve posta kutularını <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">yönetme Exchange atabilirsiniz</a>. Bunu, kullanıcıya en son yönetici rolü Exchange gerekir.
+Microsoft 365 yönetmenize yardımcı olmak için, Exchange <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">yönetim merkezinden</a> kuruluşunuzun e-posta ve posta kutularını yönetmek için kullanıcılara [izinler atayabilirsiniz](assign-admin-roles.md). Bunu, bunları Exchange yönetici rolüne atayarak yaparsınız.
   
- **İpucu**: Birisini yönetici rolüne Exchange, hizmet yöneticisi rolüne de attayabilirsiniz. Bu şekilde, web hizmet Microsoft 365 yönetim merkezi durumu, değişiklik Exchange Online sürüm bildirimleri gibi önemli bilgileri görebilirler.
+ **İpucu**: Birini Exchange yönetici rolüne atadığınızda, bu kişiyi Hizmet yöneticisi rolüne de atayın. Bu şekilde, Exchange Online hizmetinin durumu ve değişiklik ve yayın bildirimleri gibi önemli bilgileri Microsoft 365 yönetim merkezi görebilirler.
 
-Kullanıcıların bir yönetici rolüne atanmalarının bazı önemli görevleri Exchange vardır:
+Kullanıcıların Exchange yönetici rolüne atandığında gerçekleştirebilecekleri temel görevlerden bazıları şunlardır:
   
 - [Recover deleted items in a user mailbox - Admin Help](/Exchange/recipients-in-exchange-online/manage-user-mailboxes/recover-deleted-messages)
 
-- [Kuruluşta posta kutuları için bir arşivleme ve silme ilkesi ayarlayın](../../compliance/set-up-an-archive-and-deletion-policy-for-mailboxes.md).
+- [Kuruluşunuzdaki posta kutuları için bir arşiv ve silme ilkesi ayarlayın](../../compliance/set-up-an-archive-and-deletion-policy-for-mailboxes.md).
 
-- Posta kutusu paylaşım ilkesi gibi posta kutusu özelliklerini ayarlayın: kullanıcıların takvim ve kişi bilgilerini kuruluş dışındaki diğer kullanıcılarla nasıl paylaşacaklarını.
+- Posta kutusu paylaşım ilkesi gibi posta kutusu özelliklerini ayarlayın: Kullanıcıların kuruluşunuzun dışındaki diğer kişilerle takvim ve kişi bilgilerini nasıl paylaşabileceği.
 
-- Birisinin posta [kutusu için](give-mailbox-permissions-to-another-user.md#send-email-from-another-users-mailbox) "Farklı gönder" [ve "Adına](give-mailbox-permissions-to-another-user.md#send-email-on-behalf-of-another-user) gönder" temsilcilerini ayarlayın. Örneğin, bir yönetici, yardımcısının kendi adına posta gönderebilme özelliğine sahip olabilir.
+- Birinin posta kutusu için "[Farklı gönder](give-mailbox-permissions-to-another-user.md#send-email-from-another-users-mailbox)" ve "[Adına gönder](give-mailbox-permissions-to-another-user.md#send-email-on-behalf-of-another-user)" temsilcilerini ayarlayın. Örneğin, bir yönetici yardımcısının kendi adına posta gönderebilmesini isteyebilir.
 
-- [Bir grup kişinin ortak bir](../email/create-a-shared-mailbox.md) e-posta adresiyle e-posta izlemesi ve gönderey postaları izlemesi için paylaşılan posta kutusu oluşturun.
+- Bir grup kişinin ortak [bir e-posta](../email/create-a-shared-mailbox.md) adresinden e-posta izleyebilmesi ve gönderebilmesi için paylaşılan bir posta kutusu oluşturun.
 
-- [Kuruluş için e-posta istenmeyen](../../security/office-365-security/anti-spam-protection.md) posta koruması ve kötü amaçlı yazılım filtreleri.
+- [E-posta istenmeyen posta önleme koruması](../../security/office-365-security/anti-spam-protection.md) ve kuruluş için kötü amaçlı yazılım filtreleri.
 
 - Grup Microsoft 365 yönetme
 
-## <a name="exchange-online-role-groups"></a>Exchange Online gruplarının sonları
+## <a name="exchange-online-role-groups"></a>rol gruplarını Exchange Online
 
-Büyük bir organizasyonuz varsa, Exchange yöneticisi kullanıcı atamayı ve bu rol Exchange olabilir. Yönetici bir rol grubuna kullanıcı eklese, kullanıcıya belirli iş işlevlerini gerçekleştirme izinleri olur; yalnızca bu grubun üyeleri bunu yapar.
+Büyük bir kuruluşunuz varsa, Exchange yöneticisi kullanıcıları Exchange rol gruplarına atamak isteyebilir. Yönetici bir rol grubuna kullanıcı eklediğinde, kullanıcı belirli iş işlevlerini yalnızca o grubun üyelerinin gerçekleştirebileceği izinleri alır.
   
- Örneğin, Exchange yöneticisi, belirli ölçütlere uyan veriler için posta kutularında arama gerçekleştirecek olan birisini Bulma Yönetimi rol grubuna ata olabilir. Daha fazla bilgi edinmek için Rol [Gruplarını Yönetme Exchange Online](/exchange/permissions-exo/permissions-exo) [ve İzinler'e bakın](/exchange/manage-role-groups-exchange-2013-help).
+ Örneğin, Exchange yöneticisi belirli ölçütlere uyan veriler için posta kutuları üzerinde arama yapabilmesi için birini Bulma Yönetimi rol grubuna atayabilir. Daha fazla bilgi edinmek için bkz. [Exchange Online İzinler](/exchange/permissions-exo/permissions-exo) ve [Rol Gruplarını Yönetme](/exchange/manage-role-groups-exchange-2013-help).
   
-## <a name="learn-about-other-admin-roles"></a>Diğer yönetici rolleri hakkında bilgi
+## <a name="learn-about-other-admin-roles"></a>Diğer yönetici rolleri hakkında bilgi edinin
 
-- [Yönetici Microsoft 365 hakkında](about-admin-roles.md)
+- [Microsoft 365 yönetici rolleri hakkında](about-admin-roles.md)
 
 - [SharePoint Online yönetici rolü hakkında](/sharepoint/sharepoint-admin-role)
 
-- [En Skype Kurumsal rolü hakkında](/skypeforbusiness/skype-for-business-online)
+- [Skype Kurumsal yönetici rolü hakkında](/skypeforbusiness/skype-for-business-online)
 
-- [Yönetici Microsoft Teams kullanma](/MicrosoftTeams/using-admin-roles)
+- [Microsoft Teams yönetici rolünü kullanma](/MicrosoftTeams/using-admin-roles)

@@ -15,14 +15,14 @@ ms.collection:
 ms.custom: AdminSurgePortfolio
 search.appverid: MET150
 description: Windows 10 cihazlarınızda Microsoft Defender Virüsten Koruma tarafından algılanan tehditleri gözden geçirmeyi ve yönetmeyi öğrenin.
-ms.openlocfilehash: 9b819edc21d6cfcac663c54e15b1a060b2b16fa2
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: 2d75149f8bcb4ea13e1e474acbb1dedfccb4ec50
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65319319"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65469480"
 ---
-# <a name="review-detected-threats-and-take-action"></a>Algılanan tehditleri inceleme ve harekete geçme
+# <a name="review-threats-detected-by-microsoft-defender-antivirus-and-take-action"></a>Microsoft Defender Virüsten Koruma tarafından algılanan tehditleri gözden geçirin ve işlem yapın
 
 Kötü amaçlı bir dosya veya yazılım algılanır algılanmaz Microsoft Defender Virüsten Koruma bunu engeller ve çalışmasını engeller. Bulut tabanlı koruma açıkken, diğer cihazlarınızın ve kullanıcılarınızın da korunması için virüsten koruma ve kötü amaçlı yazılımdan koruma altyapısına yeni algılanan tehditler eklenir.
 

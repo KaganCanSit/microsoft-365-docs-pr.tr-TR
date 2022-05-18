@@ -1,5 +1,5 @@
 ---
-title: Microsoft Üretkenlik Puanı - İçerik işbirliği
+title: Microsoft Üretkenlik Puanı içerik işbirliği içgörüleri
 f1.keywords:
 - NOCSH
 ms.author: efrene
@@ -18,21 +18,21 @@ monikerRange: o365-worldwide
 search.appverid:
 - MET150
 - MOE150
-description: İçerik işbirliği - kişiler Üretkenlik Puanı'nın ayrıntıları.
-ms.openlocfilehash: 12ef0d1f56e8aa122942394e9214b501c85ababd
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: İçerik işbirliğinin ayrıntıları - kişiler Üretkenlik Puanı'nı deneyimler.
+ms.openlocfilehash: db747819b4c6a6599d1d7919c2a36f34204779a1
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63324935"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65466448"
 ---
-# <a name="content-collaboration--people-experiences"></a>İçerik işbirliği – Kişiler deneyimleri
+# <a name="content-collaboration--people-experiences"></a>İçerik işbirliği – Kişi deneyimleri
 
-Üretkenlik Puanı, kullanım deneyimi ve bunu destekleyen teknoloji deneyimleri aracılığıyla, Microsoft 365 dijital dönüşüm yolculuğuna içgörüler sağlar. Kuruluş puanı kişi ve teknoloji deneyimi ölçülerini yansıtarak sizinkilere benzer kuruluşların kıyaslamalarına göre karşılaştırabilirsiniz. İçerik işbirliği kategorisi, kişi deneyimleri ölçülerinin bir bölümüdür. Daha fazla bilgi edinmek için Üretkenlik [Puanına genel bakış makalesinde](productivity-score.md) [Microsoft Gizlilik Bildirimi'ne bakın](https://privacy.microsoft.com/privacystatement).
+Üretkenlik Puanı, kuruluşunuzun Microsoft 365 kullanımı ve onu destekleyen teknoloji deneyimleri aracılığıyla dijital dönüşüm yolculuğuna ilişkin içgörüler sağlar. Kuruluşunuzun puanı, kişi ve teknoloji deneyimi ölçümlerini yansıtır ve sizinkine benzer kuruluşların karşılaştırmalarıyla karşılaştırılabilir. İçerik işbirliği kategorisi, kişilerin ölçüm deneyimlerinin bir parçasıdır. Daha fazla bilgi edinmek için [Üretkenlik Puanına genel bakış](productivity-score.md) sayfasına göz atın ve [Microsoft'un Gizlilik Bildirimi'ni](https://privacy.microsoft.com/privacystatement) okuyun.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-İçerik işbirliği içgörüleri ile çalışmaya baş olmak için, kurumuzuz olan kişilerin lisansının şu kişilerde lisans sahibi olması gerekir:
+İçerik işbirliği içgörülerini kullanmaya başlamak için kuruluşunuzdaki kişilerin şu lisanslara sahip olması gerekir:
 
 - OneDrive İş
 - SharePoint
@@ -40,162 +40,162 @@ ms.locfileid: "63324935"
 
 Daha fazla bilgi için bkz. [kullanıcılara lisans atama](../manage/assign-licenses-to-users.md).
 
- Son 28 günde kişiler yukarıdaki ürünlerde en az bir kez etkin olduktan sonra içgörüleri görmeye başlarsiniz.
+ Son 28 gün içinde kişiler yukarıdaki ürünlerde en az bir kez etkin olduktan sonra içgörüleri görmeye başlayacaksınız.
 
-## <a name="why-your-organization39s-content-collaboration-score-matters"></a>Kuruluş içerik&#39;puanının önemli olduğu iş birliği
+## <a name="why-your-organization39s-content-collaboration-score-matters"></a>Kuruluşunuzun içerik işbirliği puanı&#39;neden önemlidir?
 
-Dijital dönüşümün temel yönleri, kişilerin dosyalarda işbirliği yapmalarıdır. İçeriklerinizi Diğer kişiler Microsoft 365, herhangi bir konumdan başkalarıyla içeriklere erişin, içerik oluşturun, değişiklik yapın ve bu içerik üzerinde işbirliği yapın. Araştırma, kişilerin çevrimiçi dosyalarla birlikte çalışmasında, her kişinin haftada ortalama 100 dakika tasarruf tasarrufu yaptığına bakarak ortaya çıkacak.
+Dijital dönüşümün önemli bir yönü, kişilerin dosyalarda işbirliği yapma şeklidir. İçeriğiniz Microsoft 365, kişiler herhangi bir konumdan diğer kişilerle içeriğe erişin, içerik oluşturun, değiştirin ve üzerinde işbirliği yapın. Araştırma, kişiler çevrimiçi dosyalarla işbirliği yaparken her bir kişinin haftada ortalama 100 dakika tasarruf ettiğini gösteriyor.
 
-## <a name="how-we-calculate-the-content-collaboration-score"></a>İçerik işbirliği puanını nasıl hesaplarız?
+## <a name="how-we-calculate-the-content-collaboration-score"></a>İçerik işbirliği puanını hesaplama şeklimiz
 
-Kurum içinde içerik işbirliğine yönelik temel ölçümleri içeren bir birincil içgörü sağlaruz. Daha sonra, aşağıdaki ölçümlerde ayrıntılı olarak verilen bir puanlama çerçevesi, kurum puanınızı hesaplamak için kullanılır.
+Kuruluşunuzda içerik işbirliğine yönelik temel ölçümleri içeren birincil bir içgörü sağlıyoruz. Ardından, kuruluşunuzun puanını hesaplamak için bu ölçümler için aşağıda ayrıntılı bir puanlama çerçevesi kullanılır.
 
 > [!NOTE]
-> 22 Nisan 2021'de, işbirliği yapanların metriği hesaplanma biçimi değiştirildi. Bu, birincil [içgörü](#primary-insight), [dosya işbirliği içgörü](#number-of-files-collaborated-on) ve içerik işbirliği puanının ölçülünü etkiler. Bu değişiklik, microsoft'un ve diğer üçüncü taraf uygulamalarının insan olmayan aracılarından (veya robotlardan) gelen verilerde gürültüyü azaltmaya yardımcı olarak daha doğru ve işlem gerçekleştirilebilir puanlar elde kullanılmaktadır.
+> 22 Nisan 2021'de ortak çalışanlar ölçümünü değiştirdik. Bu, [birincil içgörüleri](#primary-insight), [dosya işbirliği içgörülerini](#number-of-files-collaborated-on) ve içerik işbirliği puanının ölçülmüş şeklini etkiler. Bu değişiklik, Microsoft'tan ve diğer üçüncü taraf uygulamalardan gelen insan olmayan aracılardan (veya botlardan) gelen verilerdeki gürültüyü azaltmaya yardımcı olarak daha doğru ve eyleme dönüştürülebilir bir puan elde eder.
 
 ### <a name="primary-insight"></a>Birincil içgörü
 
-Microsoft OneDrive kurumsal içerikler ve SharePoint, farklı cihazlardan ve uygulamalardan kişilerin kendi kişisel ve paylaşılan içeriklerini Microsoft 365, okumalarına ve keşfetmelerine yardımcı olur. Ayrıca, insanların içeriği güvenli bir şekilde paylaşmasına ve içerik üzerinde işbirliği yapmalarına olanak sağlar. Birincil içgörü, ana belgeyi veya ana belgeyi OneDrive İş bilgileri SharePoint. Buna ek olarak, çalışma kitabı veya belge üzerinde depolanan içeriği kaç kişinin okuduğu, oluşturması ve bunlar üzerinde işbirliği OneDrive İş SharePoint.
+Microsoft OneDrive İş ve SharePoint, kullanıcıların farklı cihazlardan ve uygulamalardan Microsoft 365 bireysel ve paylaşılan içeriklerini kolayca oluşturmasına, okumasına ve keşfetmesine yardımcı olur. Ayrıca, kişilerin güvenli bir şekilde içerik paylaşmasına ve içerik üzerinde işbirliği yapmasına da olanak sağlar. Birincil içgörü, OneDrive İş ve SharePoint kullanabilen herkesin bilgilerini içerir. Buna ek olarak, OneDrive İş ve SharePoint depolanan içeriği kaç kişinin okuduğu, oluşturduğu ve üzerinde işbirliği yaptığını gösteren ayrıntıları da ayırır.
 
 :::image type="content" source="../../media/collabscore_primary.jpg" alt-text="İletişim işbirliği puanından birincil içgörüler.":::
 
 
 Bu bilgiler için düşünülen türler Word, Excel, PowerPoint, OneNote ve PDF dosyalarını içerir.
 
-1. **Üst bilgi:** Kuruluşta içerik üzerinde işbirliği yapan kişilerin OneDrive veya SharePoint yüzdesini gösterir.
-2. **Gövde:** Dosyaları çevrimiçi okuma ve oluşturma davranışlarının dosyalar üzerinde işbirliği yapmakla nasıl bağlantılı olduğu hakkında daha fazla bilgi sağlar.
-3. **Görsel öğe (geçerli durum):**
-    - Mavi renkli bölümlerin son 28 gün içinde çevrimiçi dosyaları okuyucu, oluşturucu veya işbirliği yapan OneDrive veya SharePoint aracılığıyla dosya işbirliği için etkinleştiren kişi yüzdesini temsil ettiği  yatay çubuklar.
+1. **Üstbilgi:** Kuruluşunuzda içerik üzerinde işbirliği yapan OneDrive veya SharePoint erişimi olan kişilerin yüzdesini gösterir.
+2. **Vücut:** Çevrimiçi olarak dosya okuma ve oluşturma davranışlarının dosyalar üzerinde işbirliği yapmaya nasıl bağlı olduğu hakkında daha fazla bilgi sağlar.
+3. **Görselleştirme (geçerli durum):**
+    - Mavi renkli bölümlerin, son 28 gün içinde çevrimiçi dosyalarda **okuyucu, oluşturucu** veya **ortak** çalışan olan OneDrive veya SharePoint aracılığıyla dosya işbirliği için etkinleştirilen kişilerin yüzdesini temsil ettiği yatay çubuklar.
 
         Bunlar aşağıdaki gibi tanımlanır:</br>
-        **Okuyucular:** Dosya veya posta ile çevrimiçi dosyalara erişen OneDrive SharePoint.</br>
-        **Oluşturucular:** Dosya oluşturmak, değiştirmek, karşıya yüklemek, eşitlemek, iade etmek, kopyalamak veya çevrimiçi dosyaları oluşturmak OneDrive SharePoint.</br>
-        **İşbirliği yapanlar:** Dosyaları kullanarak çevrimiçi dosyalarla işbirliği yapan kişiler OneDrive veya SharePoint. Bu kişilerden biri 28 günlük bir pencere içinde belgeyi veya PDF'yi Office uygulaması veya PDF'yi okuduğunda veya düzenledikten sonra, iki kişi işbirliği yapmak için kullanılabilir.
+        **Okuyucu:** OneDrive veya SharePoint çevrimiçi dosyalara erişen veya bu dosyaları indiren kişiler.</br>
+        **Yaratıcı:** Çevrimiçi OneDrive veya SharePoint dosyaları oluşturan, değiştiren, karşıya yükleyen, eşitleyen, iade eden, kopyalayan veya taşınan kişiler.</br>
+        **Işbirlikçi:** OneDrive veya SharePoint kullanarak çevrimiçi dosyalarla işbirliği yapan kişiler. İki kişi, 28 günlük bir pencerede diğer kişi oluşturduktan veya değiştirdikten sonra çevrimiçi bir Office uygulaması veya PDF'yi okur veya düzenlerse ortak çalışandır.
 
         > [!NOTE]
-        > Görsel öğede düşünülen dosyalar, çevrimiçi Excel, PowerPoint, OneNote veya PDF dosyalarıdır ve OneDrive veya SharePoint. 
+        > Görselleştirmede göz önünde bulundurulan dosyalar, çevrimiçi olan ve OneDrive veya SharePoint kaydedilen Word, Excel, PowerPoint, OneNote veya PDF dosyalarıdır. 
 
-    - Kesirin vurgusu (payda/payda), yatay çubukların her birsinde ifade edilen yüzdeyi hesaplamak için kullanılır.
+    - Kesirin vurgulanması (payda/payda) yatay çubukların her birinde ifade edilen yüzdeyi hesaplamak için kullanılır.
     
-      - **Okuyucular:**</br>
-          - Pay: Son 28 gün içinde çevrimiçi dosyalara OneDrive veya SharePoint kişi sayısı</br>
-          - Payda: Son 28 gün içinde OneDrive veya SharePoint erişim izni olan kişi sayısı</br>
-      - **Oluşturucular:**</br>
-        - Pay: Son 28 günde çevrimiçi dosya oluşturma, değiştirme, karşıya yükleme, eşitleme, iade etme, kopyalama veya taşıma OneDrive SharePoint sayısı</br>
-        - Payda: Son 28 gün içinde OneDrive veya SharePoint erişim izni olan kişi sayısı. </br> 
-      - **İşbirliği yapanlar:**</br>
-        - Pay: Son 28 gün içinde bir veya daha fazla OneDrive SharePoint dosyalar üzerinde işbirliği yapan kişi sayısı</br>
-        - Payda: Son 28 gün içinde en az 1 OneDrive veya SharePoint erişim izni olan kişi sayısı
+      - **Okuyucu:**</br>
+          - Pay: Son 28 gün içinde OneDrive veya SharePoint çevrimiçi dosyalara erişen veya bu dosyaları indiren kişi sayısı</br>
+          - Payda: Son 28 günün en az 1'inde OneDrive veya SharePoint erişimi olan kişi sayısı</br>
+      - **Yaratıcı:**</br>
+        - Pay: Son 28 gün içinde OneDrive veya SharePoint çevrimiçi dosyaları oluşturan, değiştiren, karşıya yükleyen, eşitleyen, iade eden, kopyalayan veya taşıyan kişi sayısı</br>
+        - Payda: Son 28 günün en az 1'inde OneDrive veya SharePoint erişimi olan kişi sayısı. </br> 
+      - **Işbirlikçi:**</br>
+        - Pay: Son 28 gün içinde OneDrive veya SharePoint çevrimiçi dosyalar üzerinde işbirliği yapan kişi sayısı</br>
+        - Payda: Son 28 günün en az 1'inde OneDrive veya SharePoint erişimi olan kişi sayısı
 
-    - Her okuyucu, oluşturucu ve işbirliği yapan için eşler arası karşılaştırma değeri de yüzde olarak gösterilir. Başka bir deyişle, oluşturucu sayısının değeri, içerik oluşturucularına veya sitelerine erişimi olan kişilerin sayısının yüzdesi OneDrive SharePoint.
+    - Okuyucuların, oluşturucuların ve ortak çalışanların her biri için eş karşılaştırma değeri de yüzde olarak gösterilir. Başka bir deyişle, oluşturucu sayısının değeri, OneDrive veya SharePoint erişimi olan kişi sayısının yüzdesi olarak gösterilir.
     
-1. **Kaynaklara bağlantı:** Harmanlenmiş videoları ve diğer ilgili yardım içeriğini görüntülemek için bu bağlantıyı seçin.
+1. **Kaynaklara bağlantı:** Harmanlanmış videoları ve diğer ilgili yardım içeriğini görüntülemek için bu bağlantıyı seçin.
 
 
-#### <a name="trend-visualization-of-primary-insight"></a>Birincil içgörü eğilim görselleştirmesi
+#### <a name="trend-visualization-of-primary-insight"></a>Birincil içgörülerin eğilim görselleştirmesi
 
-Eğilim görselleştirmeleri grafiği, son 180 günde okuyucular, oluşturucular ve işbirliği yapanlar için birincil içgörü anahtarı ölçümlerinin eğilim çizgisinin gösterir. Grafikte yer alan her veri noktası, son 28 günlük etkinliğin toplam değeridir. Her oluşturucu veri noktası, x ekseninde yer alan her tarih için son 28 gün içinde oluşturucu olarak etiketlenen tüm kişilerin sayısını sağlar.
+Eğilim görselleştirmeleri grafiği, son 180 gün içindeki okuyucular, oluşturucular ve ortak çalışanlar için birincil içgörü anahtarı ölçümlerinin eğilim çizgisini gösterir. Grafikteki her veri noktası, son 28 güne ait bir etkinlik toplamıdır. Her oluşturucu veri noktası, x eksenindeki her tarih için son 28 gün içinde oluşturucu olarak etiketlenen tüm kişilerin sayısını sağlar.
 
-:::image type="content" source="../../media/trendvisualization.jpg" alt-text="İşbirliğiyle ilgili birincil içgörü için eğilimlerin grafiğini oluşturma.":::
+:::image type="content" source="../../media/trendvisualization.jpg" alt-text="İşbirliği için eğilimleri içeren grafik birincil içgörü.":::
 
 ### <a name="scoring-framework"></a>Puanlama çerçevesi
 
-Kişilerin Word, Excel, PowerPoint, OneNote, PDF veya PDF gibi çevrimiçi Office dosyalarını tutarlı bir şekilde okuması, oluşturması veya bu dosyalar üzerinde işbirliği içinde olup olmadığını, kurum için içerik işbirliği puanı OneDrive veya SharePoint.
+Kuruluşunuz için içerik işbirliği puanı, kişilerin Word, Excel, PowerPoint, OneNote veya PDF'ler gibi çevrimiçi Office dosyalarını tutarlı bir şekilde okuyup okumadığını, oluşturup oluşturmadığını veya bu dosyalar üzerinde işbirliği yapıp yapmadığını ya da OneDrive ya da SharePoint düzeyinde bir toplama (kuruluş) düzeyinde ölçür.
 
-Puanlar tek tek kullanıcı düzeyinde sağlanmaz.
+Puanlar bireysel kullanıcı düzeyinde sağlanmaz.
 
-## <a name="explore-how-your-organization-collaborates"></a>Kuruluş işbirliğini keşfedin
+## <a name="explore-how-your-organization-collaborates"></a>Kuruluşunuzun nasıl işbirliği yaptığını keşfetme
 
-Ayrıca, kuruluşlarının içerik üzerinde iş birliği içinde nasıl görünür olduğunu görünürlüğünize yardımcı olacak bilgiler de sağlaruz. Bu ek ölçümler Üretkenlik Puanınıza doğrudan katkıda bulunmakla birlikte, kişilerin çalışma yolunu en iyi duruma getirmek için dijital dönüştürmenizin bir parçası olarak bir eylem planı oluşturmanıza yardımcı olur.
+Ayrıca, kuruluşunuzun içerik üzerinde nasıl işbirliği yaptığı konusunda görünürlük kazanmanıza yardımcı olacak bilgiler de sağlıyoruz. Bu ek ölçümler, Üretkenlik Puanınıza doğrudan katkıda bulunmaz, ancak dijital dönüşümünüzün bir parçası olarak insanların çalışma biçimini iyileştirmeye yardımcı olacak bir eylem planı oluşturmanıza yardımcı olur.
 
-### <a name="creating-files-in-onedrive-or-sharepoint"></a>Birden çok OneDrive veya farklı SharePoint
+### <a name="creating-files-in-onedrive-or-sharepoint"></a>OneDrive veya SharePoint dosyaları oluşturma
 
-:::image type="content" source="../../media/sharepointonedrivefiles.jpg" alt-text="Aynı dosya veya dosyada dosya OneDrive kişi SharePoint.":::
+:::image type="content" source="../../media/sharepointonedrivefiles.jpg" alt-text="OneDrive veya SharePoint dosya oluşturan kişi sayısını gösteren grafik.":::
 
-1. **Üst bilgi:** Birden çok veya birden çok Microsoft 365 Office üzerinde dosya oluşturan OneDrive yüzdesini SharePoint.
-2. **Gövde:** İçerik oluşturmanın değeri hakkında Bilgi sağlar OneDrive SharePoint.
-3. **Görsel Öğe:** Görsel öğenin çözümlemesi, Microsoft Office ve OneDrive'te dosya oluşturmak için SharePoint aşağıdakilerin kapsamını gösterir:
-      - **OneDrive:** Çubuğun mavi (renkli) bölümü ve çubukta bulunan kesir, Office uygulamalarında etkin olan kişilerin yüzdesini OneDrive aşağıdaki gibi:
-        - Pay: Son 28 gün içinde dosya oluşturmak, değiştirmek, karşıya yüklemek, eşitlemek, iade etmek, kopyalamak veya Office dosyaları OneDrive sayısı.</br>
-        - Payda: Son 28 gün içinde iş dosyalarına OneDrive veya SharePoint erişip bu dosyalara erişen kişilerin sayısı.
-      - **SharePoint:** Çubuğun mavi (renkli) kısmı ve çubukta bulunan kesir, Office uygulamalarında etkin olan ve şu şekilde içerik SharePoint:</br>
-         - Pay: Son 28 gün içinde SharePoint'da çevrimiçi Office dosyalarını (Microsoft Word, Excel, PowerPoint veya OneNote dosyaları) oluşturma, değiştirme, karşıya yükleme, eşitleme, iade etme, kopyalama veya taşıma kişi sayısı.</br>
-        - Payda: Son 28 gün içinde OneDrive veya SharePoint dosyalarına erişen Office sayısı.
+1. **Üstbilgi:** OneDrive veya SharePoint üzerinde dosya oluşturan Microsoft 365 Office uygulamalarda etkin kişilerin yüzdesini vurgular.
+2. **Vücut:** OneDrive ve SharePoint içerik oluşturma değeri hakkında bilgi sağlar.
+3. **Görsel -leştirme:** Görselleştirmedeki döküm, OneDrive ve SharePoint dosyaları oluşturmak için Microsoft Office uygulamaları kullanan kişilerin kapsamını aşağıdaki gibi temsil eder:
+      - **OneDrive:** Çubuğun mavi (renkli) kısmı ve çubuk üzerindeki kesir, OneDrive içerik oluşturan Office uygulamalarında etkin olan kişilerin yüzdesini aşağıdaki gibi gösterir:
+        - Pay: Son 28 gün içinde OneDrive'da çevrimiçi Office dosyaları oluşturan, değiştiren, karşıya yükleyen, eşitleyen, iade eden, kopyalayan veya taşınan kişi sayısı.</br>
+        - Payda: Son 28 gün içinde OneDrive veya SharePoint ve ofis dosyalarına erişen kişi sayısı.
+      - **SharePoint:** Çubuğun mavi (renkli) kısmı ve çubuk üzerindeki kesir, Office uygulamalarda etkin olan ve SharePoint içerik oluşturan kişilerin yüzdesini temsil eden:</br>
+         - Pay: Son 28 gün içinde SharePoint üzerinde çevrimiçi Office dosyaları (Microsoft Word, Excel, PowerPoint veya OneNote dosyaları) oluşturan, değiştiren, karşıya yükleyen, eşitleyen, iade eden, kopyalayan veya taşınan kişi sayısı.</br>
+        - Payda: son 28 gün içinde OneDrive veya SharePoint erişimi olan ve Office dosyalarına erişen kişi sayısı.
 
 4. **Kaynaklara bağlantı:** Yardım içeriğini görüntülemek için bu bağlantıyı seçin.
 
 ### <a name="use-of-attachments-in-email"></a>E-postada eklerin kullanımı
 
-**E-postada eklerin kullanımı** E-postaya, buluttaki içeriğe bağlantılar yerine kaç kullanıcının fiziksel dosya ekley olduğunu an edin ve zaman içinde bu saydın azaltılmasını takip edin.
+**E-postada eklerin kullanımı** Kaç kullanıcının buluttaki içeriğe bağlantı vermek yerine e-postaya fiziksel dosya ekleyişini anlayın ve zaman içinde bu sayının azalmasını izleyin.
 
 :::image type="content" source="../../media/emailattachments.png" alt-text="E-posta eklerinin kullanımı.":::
 
-1. **Üst bilgi:** Çevrimiçi dosyalara kaydedilmiş e-postalarda ekleri kullanan kişilerin yüzdesini vurgular.
-2. **Gövde:** Çevrimiçi dosyalara bağlantıları paylaşmanın değeri hakkında, işbirliği ve güvenlik açısından bilgi sağlar.
-3. **Görsel Öğe:** Görsel öğenin çözümlemesi, e-postalara içerik ek iliştiren kişilerin farklı modlar (çevrimiçi dosyalara kaydedilen dosyalar, çevrimiçi dosyaların bağlantıları) kullanıyor olduğu kapsamı temsil edecek şekilde olması anlamına gelir:
-      - **Dosya ekleme:** Çubuğun mavi (renkli) kısmı ve çubukta bulunan kesir (pay/payda) e-posta eklerini kullanan kişilerin yüzdesini temsil eder.
-        - Pay: Son 28 gün içinde çevrimiçi dosyaya kaydedilmiş olmayan e-postaya dosya ek eden kişilerin sayısı.
-        - Payda: Son 28 gün içinde Exchange ve OneDrive SharePoint veya her ikisinde de erişim izni olan kişi sayısı.
-      - **Çevrimiçi dosyalara bağlantılar:** Çubuğun mavi (renkli) kısmı ve çubukta bulunan kesir (pay/payda) ekleri kullanan ve e-postalarda dosyalara bağlantı ek eden kişilerin yüzdesini temsil ediyor.
-        - Pay: Son 28 gün içinde e-postalara çevrimiçi dosyaların bağlantılarını ek kişi sayısı.
-        - Payda: Son 28 gün içinde Exchange ve OneDrive veya SharePoint kişi sayısı.
+1. **Üstbilgi:** Çevrimiçi dosyalara kaydedilmemiş e-postalarda ekleri kullanan kişilerin yüzdesini vurgular.
+2. **Vücut:** İşbirliği ve güvenlik açısından çevrimiçi dosyalara bağlantıları paylaşmanın değeri hakkında bilgi sağlar.
+3. **Görsel -leştirme:** Görselleştirmedeki döküm, e-postalara içerik ekleyen kişilerin farklı modları (çevrimiçi dosyalara kaydedilmeyen dosyalar, çevrimiçi dosyalara bağlantılar) ne ölçüde kullandığını göstermek için tasarlanır:
+      - **Dosya ekle:** Çubuğun mavi (renkli) kısmı ve çubuktaki kesir (pay/payda) e-postalarda ek kullanan kişilerin yüzdesini temsil eder.
+        - Pay: Son 28 gün içinde çevrimiçi dosyaya kaydedilmemiş e-postaya dosya ekleyen kişi sayısı.
+        - Payda: Son 28 gün içinde Exchange ve OneDrive, SharePoint veya her ikisine de erişimi olan kişilerin sayısı.
+      - **Çevrimiçi dosyaların bağlantıları:** Çubuğun mavi (renkli) kısmı ve çubuktaki kesir (payda/payda) ekleri kullanan ve e-postalardaki dosyalara bağlantı ekleyerek kişilerin yüzdesini temsil eder.
+        - Pay: Son 28 gün içinde e-postalara çevrimiçi dosyalara bağlantı ekliyen kişi sayısı.
+        - Payda: Son 28 gün içinde Exchange ve OneDrive, SharePoint veya her ikisine de erişimi olan kişilerin sayısı.
 4. **Kaynaklara bağlantı:** Yardım içeriğini görüntülemek için bu bağlantıyı seçin.
 
 ### <a name="sharing-of-online-files"></a>Çevrimiçi dosyaların paylaşımı
 
 :::image type="content" source="../../media/sharingonlinefiles.png" alt-text="Çevrimiçi dosya paylaşan kişi sayısını gösteren grafik.":::
 
-1. **Üst bilgi:** Dış dosyaları paylaşan kişilerin veya diğer kişilerin OneDrive SharePoint yüzdesini vurgular.
-2. **Gövde:** Yöneticiler hakkında bilgi sağlar&#39; için en uygun işbirliği düzeyini etkinleştirmek için kuruluşta dosya paylaşımı ayarlarını değiştirme olanağı sağlar.
-3. **Görsel Öğe:** E-posta veya posta dosyalarına erişim OneDrive SharePoint dosyaların şirket içinde veya dışında paylaştığı kapsamı temsil eder:
-      - **Harici:** Çubuğun mavi (renkli) kısmı ve çubukta kesir (pay/payda) bölümü, OneDrive veya SharePoint erişimi olan ve dış dosyaları paylaşan kişilerin yüzdesini temsil ediyor.
-        -  Pay: Son 28 gün içinde dosyaların dış ile paylaşılıyor olduğu kişi sayısı
-        - Payda: Son 28 gün içinde en az 1 OneDrive veya SharePoint erişim izni olan toplam kişi sayısı.
-      - **Yalnızca şirket içi:** Çubuğun mavi (renkli) bölümü ve çubukta kesir (pay/payda) bölümü, OneDrive veya SharePoint erişimi olan ve yalnızca şirket içinde dosya paylaşan kişilerin yüzdesini temsil ediyor.
-        - Pay: Yalnızca son 28 gün içinde şirket içinde dosya paylaşan kişi sayısı
-        - Payda: Son 28 gün içinde en az 1 OneDrive veya SharePoint erişim izni olan toplam kişi sayısı.
+1. **Üstbilgi:** OneDrive veya SharePoint için erişimi olan ve harici olarak dosya paylaşan kişilerin yüzdesini vurgular.
+2. **Vücut:** Kuruluşunuza en uygun işbirliği düzeyini etkinleştirmek için yöneticiler&#39; kuruluştaki dosya paylaşım ayarlarını değiştirme özelliği hakkında bilgi sağlar.
+3. **Görsel -leştirme:** OneDrive veya SharePoint erişimi olan kişilerin dosyaları şirket içinde veya dışında paylaştığı kapsamı temsil eder:
+      - **Harici:** Çubuğun mavi (renkli) kısmı ve çubuk üzerindeki kesir (payda/payda) OneDrive veya SharePoint erişimi olan ve dosyaları harici olarak paylaşan kişilerin yüzdesini temsil edilir.
+        -  Pay: Son 28 gün içinde dosyaları harici olarak paylaşan kişi sayısı
+        - Payda: Son 28 günün en az 1'inde OneDrive veya SharePoint erişimi olan toplam kişi sayısı.
+      - **Yalnızca dahili olarak:** Çubuğun mavi (renkli) kısmı ve çubuk üzerindeki kesir (payda/payda) OneDrive veya SharePoint erişimi olan ve yalnızca dahili olarak dosya paylaşan kişilerin yüzdesini gösterir.
+        - Pay: Yalnızca son 28 gün içinde dahili olarak dosya paylaşan kişi sayısı
+        - Payda: Son 28 günün en az 1'inde OneDrive veya SharePoint erişimi olan toplam kişi sayısı.
 4. **Kaynaklara bağlantı:** Yardım içeriğini görüntülemek için bu bağlantıyı seçin.
 
-### <a name="number-of-files-collaborated-on"></a>Üzerinde işbirliği yapılan dosya sayısı
+### <a name="number-of-files-collaborated-on"></a>üzerinde işbirliği yapılan dosya sayısı
 
-:::image type="content" source="../../media/intensityofcollab.png" alt-text="En çok kaç dosya üzerinde işbirliği yapldı grafiğini gösteren grafik.":::
+:::image type="content" source="../../media/intensityofcollab.png" alt-text="En çok işbirliği yapılan dosya sayısını gösteren grafik.":::
 
-1. **Üst bilgi:** 4 veya daha çok dosya üzerinde işbirliği yapan OneDrive veya SharePoint kişilerden yüzdesini vurgular.
-2. **Gövde:** Kişilerin daha iyi bir işbirliği için çevrimiçi dosyadan nasıl yararlan yararlan bilgileri sağlar.
-3. **Görsel Öğe:** İş birliği içinde yer alan dosyaların sayısına göre OneDrive veya SharePoint kişilerin dağılımını gösterir. Bu, aşağıdaki 4 kategoriyle gösterilir (her biri için, çubuğun mavi bölümü ve kesir, o kategoriye gelen OneDrive veya SharePoint kişilerin yüzdesini gösterir):
+1. **Üstbilgi:** 4 veya daha fazla dosya üzerinde işbirliği yapan OneDrive veya SharePoint erişimi olan kişilerin yüzdesini vurgular.
+2. **Vücut:** kişilerin daha iyi işbirliği için çevrimiçi dosyalardan nasıl yararlanabileceği hakkında bilgi sağlar.
+3. **Görsel -leştirme:** OneDrive veya SharePoint erişimi olan kişilerin, üzerinde işbirliği yaptıkları dosya sayısına göre dağılımını gösterir. Bu, aşağıdaki 4 kategoride gösterilir (her biri için çubuğun mavi kısmı ve kesir, söz konusu kategoriye giren OneDrive veya SharePoint erişimi olan kişilerin yüzdesini temsil ediyor):
       - **İşbirliği yok:**
-        - Pay: Son 28 gün içinde hiçbir dosya üzerinde işbirliği yapan kişi sayısı.
-        - Payda: Son 28 gün içinde en az 1 OneDrive veya SharePoint erişim iznine sahip toplam kişi sayısı.
-      - **1-3 dosyalar üzerinde işbirliği:**
-        - Pay: Son 28 gün içinde 1-3 dosya üzerinde işbirliği yapan kişi sayısı.
-        - Payda: Son 28 gün içinde en az 1 OneDrive veya SharePoint erişim izni olan toplam kişi sayısı.
-      - **4-10 dosyada işbirliği:**
-        - Pay: Son 28 gün içinde 4-10 dosya üzerinde işbirliği yapan kişi sayısı.
-        - Payda: Son 28 gün içinde en az 1 OneDrive veya SharePoint erişim izni olan toplam kişi sayısı.
-      - **11 veya daha fazla dosyada işbirliği:**
-        - Pay: Son 28 gün içinde 11 veya daha fazla dosya üzerinde işbirliği yapan kişi sayısı.
-        - Payda: Son 28 gün içinde en az 1 OneDrive veya SharePoint erişim izni olan toplam kişi sayısı.
+        - Pay: Son 28 gün içinde hiçbir dosya üzerinde işbirliği olmayan kişi sayısı.
+        - Payda: Son 28 günün en az 1'inde OneDrive veya SharePoint erişimi olan toplam kişi sayısı.
+      - **1-3 dosya üzerinde işbirliği:**
+        - Pay: Son 28 gün içinde 1-3 dosya üzerinde işbirliği yapılan kişi sayısı.
+        - Payda: Son 28 günün en az 1'inde OneDrive veya SharePoint erişimi olan toplam kişi sayısı.
+      - **4-10 dosyaları üzerinde işbirliği:**
+        - Pay: Son 28 gün içinde 4-10 dosya üzerinde işbirliği yapılan kişi sayısı.
+        - Payda: Son 28 günün en az 1'inde OneDrive veya SharePoint erişimi olan toplam kişi sayısı.
+      - **11 veya daha fazla dosya üzerinde işbirliği:**
+        - Pay: Son 28 gün içinde 11 veya daha fazla dosya üzerinde işbirliği yapılan kişi sayısı.
+        - Payda: Son 28 günün en az 1'inde OneDrive veya SharePoint erişimi olan toplam kişi sayısı.
         
 4. **Kaynaklara bağlantı:** Yardım içeriğini görüntülemek için bu bağlantıyı seçin.
 
-### <a name="network-performance-strength-for-onedrive-and-sharepoint"></a>Performans ve performans performansı OneDrive performans SharePoint
+### <a name="network-performance-strength-for-onedrive-and-sharepoint"></a>OneDrive ve SharePoint için ağ performansı gücü
 
-:::image type="content" source="../../media/networkperfstrength.png" alt-text="Performans ve performans performanslarını gösteren OneDrive grafik SharePoint.":::
+:::image type="content" source="../../media/networkperfstrength.png" alt-text="OneDrive ve SharePoint için ağ performansını gösteren grafik.":::
 
-1. **Üst bilgi:** Test edilen ve iş cihazlarına ağ bağlantısı düşük olan cihazların yüzdesini OneDrive SharePoint. 
-2. **Gövde:** Ağ bağlantısı performansının işbirliği için neden önemli olduğu hakkında bilgi sağlar. 
-3. **Görsel Öğe:** Bağlantı ve bağlantı özellikleriyle ilgili farklı ağ bağlantısı performansı düzeyine sahip cihazların OneDrive SharePoint:
-      - **81-100 (en iyi)**: Çubuğun koyu yeşil (renkli) bölümü en iyi performansı gösteren cihazların yüzdesini temsil eder.
-      - **61-80**: Çubuğun yeşil (renkli) bölümü, ağ performans puanı 60-80 arasında olan cihazların yüzdesini temsil eder. 
-      - **41-60**: Çubuğun turuncu (renkli) bölümü, ağ performans puanı 40-60 arasında olan cihazların yüzdesini temsil eder. 
-      - **21-40**: Çubuğun kırmızı (renkli) bölümü, ağ performans puanı 20-40 arasında olan cihazların yüzdesini temsil eder. 
-      - **0-20**: Çubuğun koyu kırmızı (renkli) bölümü, 0-20 arasında en kötü ağ performansı puanına sahip cihazların yüzdesini temsil eder. 
+1. **Üstbilgi:** test edilen ve OneDrive ve SharePoint ile zayıf ağ bağlantısı olan cihazların yüzdesini vurgular. 
+2. **Vücut:** Ağ bağlantısı performansının işbirliği açısından neden önemli olduğu hakkında bilgi sağlar. 
+3. **Görsel -leştirme:** OneDrive ve SharePoint ile ilgili farklı ağ bağlantısı performansı düzeylerine sahip cihazların yüzdesini gösterir:
+      - **81-100 (en iyi)**: Çubuğun koyu yeşil (renkli) kısmı, en iyi performansa sahip cihazların yüzdesini temsil eder.
+      - **61-80**: Çubuğun yeşil (renkli) kısmı, ağ performans puanı 60-80 arasında olan cihazların yüzdesini temsil eder. 
+      - **41-60**: Çubuğun turuncu (renkli) kısmı, ağ performans puanı 40-60 arasında olan cihazların yüzdesini temsil eder. 
+      - **21-40**: Çubuğun kırmızı (renkli) kısmı, ağ performans puanı 20-40 arasında olan cihazların yüzdesini temsil eder. 
+      - **0-20**: Çubuğun koyu kırmızı (renkli) kısmı, en kötü ağ performansı puanı 0-20 arasında olan cihazların yüzdesini temsil eder. 
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Microsoft 365 durumu – Teknoloji deneyimleri](apps-health.md) (makale)\
-[İletişim – Kişiler deneyimleri](communication.md) (makale)\
+[Microsoft 365 uygulamaları sistem durumu – Teknoloji deneyimleri](apps-health.md) (makale)\
+[İletişim – Kişi deneyimleri](communication.md) (makale)\
 [Toplantılar – Kişi deneyimleri](meetings.md) (makale)\
-[Hareketlilik – Kişiler deneyimleri](mobility.md) (makale)\
+[Mobility – Kişi deneyimleri](mobility.md) (makale)\
 [Üretkenlik Puanı için gizlilik denetimleri](privacy.md) (makale)\
-[Ekip çalışması – Kişiler deneyimleri](teamwork.md) (makale)
+[Ekip çalışması – Kişi deneyimleri](teamwork.md) (makale)

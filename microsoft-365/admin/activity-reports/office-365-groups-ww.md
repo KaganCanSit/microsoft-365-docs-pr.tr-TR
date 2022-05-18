@@ -20,13 +20,13 @@ search.appverid:
 - MOE150
 - GEA150
 ms.assetid: a27f1a99-3557-4f85-9560-a28e3d822a40
-description: Gruplar ve etkinlikleri hakkında bilgi edinmek için bir Microsoft 365 grupları raporu alın.
-ms.openlocfilehash: d4130d577341bbc8c4516234964ea9e805be81ee
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+description: Kuruluşunuzdaki grupların etkinliği hakkında içgörüler elde etmek ve kaç grubun oluşturulup kullanıldığını görmek için bir Microsoft 365 Grupları raporu alın.
+ms.openlocfilehash: 1c51ddf997fb0c1c3e2416d979b83b339c414d93
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64781687"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65467382"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---microsoft-365-groups"></a>Yönetim merkezinde raporları Microsoft 365 - Microsoft 365 grupları
 
@@ -36,7 +36,7 @@ Microsoft 365 Raporları panosu, kuruluşunuzdaki ürünler genelindeki etkinli�
 
 1. Yönetim merkezinde, **Raporlar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2074756" target="_blank">Kullanımı</a> sayfasına gidin.
 
-2. Pano giriş sayfasında, Office 365 rapor sayfasına ulaşmak için Etkin kullanıcılar - Microsoft 365 应用版 veya Etkin kullanıcılar - Microsoft 365 Hizmetleri kartındaki Daha **fazla** görüntüle düğmesine tıklayın.
+2. Pano giriş sayfasında, Office 365 rapor sayfasına ulaşmak için Etkin kullanıcılar - Microsoft 365 Uygulamaları veya Etkin kullanıcılar - Microsoft 365 Hizmetleri kartındaki Daha **fazla** görüntüle düğmesine tıklayın.
   
 ## <a name="interpret-the-groups-report"></a>Gruplar raporunu yorumlama
 

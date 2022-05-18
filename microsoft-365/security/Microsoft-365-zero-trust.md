@@ -18,12 +18,12 @@ ms.collection:
 - m365solution-zerotrust
 - m365solution-overview
 - M365-security-compliance
-ms.openlocfilehash: bb452c74763e31be11a6431cc260667319d2582f
-ms.sourcegitcommit: 570c3be37b6ab1d59a4988f7de9c9fb5ca38028f
+ms.openlocfilehash: 2f8fe053d0ffb6d453029ab3f7fee17846661b6d
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "65363202"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65469283"
 ---
 # <a name="microsoft-365-zero-trust-deployment-plan"></a>Microsoft 365 Sıfır Güven dağıtım planı
 
@@ -49,11 +49,13 @@ Bu çizim, Sıfır Güven katkıda bulunan birincil öğelerin bir gösterimini 
 - Kimlikler, cihazlar, veriler, uygulamalar, ağ ve diğer altyapı bileşenlerinin tümü uygun güvenlikle yapılandırılır. Bu bileşenlerin her biri için yapılandırılan ilkeler, genel Sıfır Güven stratejinizle koordine edilir. Örneğin, cihaz ilkeleri iyi durumdaki cihazlar için ölçütleri belirler ve koşullu erişim ilkeleri belirli uygulamalara ve verilere erişmek için iyi durumdaki cihazlar gerektirir.
 - Tehdit koruması ve zeka ortamı izler, mevcut riskleri ortaya çıkarır ve saldırıları düzeltmek için otomatik eylem gerçekleştirir.
 
+Sıfır Güven hakkında daha fazla bilgi için bkz. Microsoft'un [_**Sıfır Güven Rehberlik Merkezi**_](/security/zero-trust).
+
 <!---
 For more information about this architecture, including deployment objectives for your entire digital estate, see [Zero Trust Rapid Modernization Plan (RaMP)](https://review.docs.microsoft.com/security/zero-trust/zero-trust-ramp-overview?branch=zt-content-prototype).
 -->
 
-Sıfır Güven hakkında daha fazla bilgi için bkz. Microsoft'un [_**Sıfır Güven Rehberlik Merkezi**_](/security/zero-trust).
+
 
 ## <a name="deploying-zero-trust-for-microsoft-365"></a>Microsoft 365 için Sıfır Güven dağıtma
 
@@ -68,6 +70,9 @@ Bu çizimde:
 - Sıfır Güven, kimlik ve cihaz korumasının temeli ile başlar.
 - Tehdit koruma özellikleri, güvenlik tehditlerinin gerçek zamanlı izlenmesini ve düzeltilmesi için bu temelin üzerine kurulmuştur.
 - Bilgi koruma ve idare, en değerli bilgilerinizi korumak ve kişisel bilgileri korumak da dahil olmak üzere uyumluluk standartlarına uymanıza yardımcı olmak için belirli veri türlerini hedefleyen gelişmiş denetimler sağlar.
+
+
+Bu makalede, bulut kimliğini zaten yapılandırdığınız varsayılır. Bu amaç için yardıma ihtiyacınız varsa bkz [**. Microsoft 365 için kimlik altyapınızı dağıtma**](/microsoft-365/enterprise/deploy-identity-solution-overview).
 
 ## <a name="step-1-configure-zero-trust-identity-and-device-access-protection--starting-point-policies"></a>Adım 1. Sıfır Güven kimliği ve cihaz erişim korumasını yapılandırma — başlangıç noktası ilkeleri
 

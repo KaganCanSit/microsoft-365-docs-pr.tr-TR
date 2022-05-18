@@ -19,13 +19,13 @@ search.appverid:
 - MST160
 - MET150
 - MOE150
-description: Microsoft 365 yönetim merkezi Microsoft 365 Raporları panosunu kullanarak Microsoft Forms etkinlik raporu almayı öğrenin.
-ms.openlocfilehash: c00c9e91d4b8e37021a30798088f46b786b3b4fc
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+description: Microsoft 365 Raporları panosunu kullanarak Microsoft Forms etkinlik raporu almayı öğrenin ve lisanslı kullanıcıların formlarla nasıl etkileşime geçtiğini öğrenin.
+ms.openlocfilehash: ccfacbfb7450aef7c1880e7022b374799ac8307b
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64781939"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65467656"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---forms-activity"></a>Yönetim merkezinde raporları Microsoft 365 - Formlar etkinliği
 

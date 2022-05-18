@@ -19,13 +19,13 @@ search.appverid:
 - MST160
 - MET150
 - MOE150
-description: Kuruluşunuzda oluşturulan ve kullanılan Yammer gruplarının sayısını ve etkinliklerini öğrenmek için Yammer grupları etkinlik raporunu alın.
-ms.openlocfilehash: 443129beaf39a2e46bd5fbcb18bdb9cd9b4770c3
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+description: Kuruluşunuzda oluşturulan ve kullanılan Yammer gruplarının sayısı ve etkinlikleri hakkında daha fazla bilgi edinmek için Yammer grupları etkinlik raporunu alın.
+ms.openlocfilehash: 27e2057bb743c7d25d3ebb848151f7a32e3de52a
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64781276"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65467152"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---yammer-groups-activity-report"></a>Yönetim merkezinde raporları Microsoft 365 - Yammer grupları etkinlik raporu
 

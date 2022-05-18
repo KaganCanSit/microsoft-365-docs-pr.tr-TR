@@ -1,5 +1,5 @@
 ---
-title: etkinlik raporlarını Microsoft 365 OneDrive Entreprise
+title: etkinlik raporlarını Microsoft 365 OneDrive İş
 f1.keywords:
 - NOCSH
 ms.author: kwekua
@@ -19,15 +19,15 @@ search.appverid:
 - MST160
 - MET150
 - MOE150
-description: Kuruluşunuz için OneDrive kullanım raporunu alın ve her OneDrive kullanıcının etkinliğini, paylaşılan dosya sayısını ve depolama kullanımını bilin.
-ms.openlocfilehash: 48edb30eae60f6e7dcac5bc63dc9676dc27e0a90
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+description: Kuruluşunuz için OneDrive kullanım raporunu alın ve her OneDrive kullanıcının etkinliğini, paylaşılan dosya sayısını ve depolama kullanımını öğrenin.
+ms.openlocfilehash: 65046154e17cdb79ee671ec14aa45d089730ca97
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64781599"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65467262"
 ---
-# <a name="microsoft-365-reports-in-the-admin-center---onedrive-for-business-activity"></a>Yönetim merkezinde raporları Microsoft 365 - OneDrive Entreprise etkinliği
+# <a name="microsoft-365-reports-in-the-admin-center---onedrive-for-business-activity"></a>Yönetim merkezinde raporları Microsoft 365 - OneDrive İş etkinliği
 
 Microsoft 365 Raporları panosu, kuruluşunuzdaki ürünler genelindeki etkinliğe genel bakışı gösterir. Bu pano sayesinde ürünlerin her birindeki etkinliklerle ilgili daha ayrıntılı bilgi edinmek için ürün düzeyinde raporları ayrıntılı olarak inceleyebilirsiniz. [Raporlara genel bakış konusuna](activity-reports.md) göz atın.
   

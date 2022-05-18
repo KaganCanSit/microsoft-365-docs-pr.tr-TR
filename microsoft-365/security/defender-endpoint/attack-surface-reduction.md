@@ -20,13 +20,12 @@ ms.topic: article
 ms.collection:
 - m365initiative-m365-defender
 - M365-security-compliance
-ms.date: 1/18/2022
-ms.openlocfilehash: a1ae7d53ac69b4756417704b4938ff4fb41f9e41
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: a5ca2613028e892229da1888c6176cb729e0cf1b
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65418816"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65469590"
 ---
 # <a name="attack-surface-reduction-rules-overview"></a>Saldırı yüzeyi azaltma kurallarına genel bakış
 
@@ -127,7 +126,7 @@ aşağıdaki Windows sürümlerinden herhangi birini çalıştıran cihazlar iç
 - Windows Sunucusu, [sürüm 1803 (Altı Aylık Kanal)](/windows-server/get-started/whats-new-in-windows-server-1803) veya üzeri
 - [Windows Server 2019](/windows-server/get-started-19/whats-new-19)
 - [Windows Server 2016](/windows-server/get-started/whats-new-in-windows-server-2016)
-- [Windows Server 2012 R2](/win32/srvnodes/what-s-new-for-windows-server-2012-r2)
+- [Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh801901(v=ws.11))
 
   >[!NOTE]
   >Windows Server 2016 ve Windows Server 2012 R2'nin bu özelliğin çalışması için [Windows sunucularında ekleme](configure-server-endpoints.md#windows-server-2012-r2-and-windows-server-2016) yönergeleri kullanılarak eklenmelidir.
@@ -177,7 +176,7 @@ Olayları yalnızca denetimli klasör erişimiyle ilgili olan aşağıdaki olayl
 Olay günlüğünde saldırı yüzeyi azaltma olayları için listelenen "altyapı sürümü", işletim sistemi tarafından değil Uç Nokta için Defender tarafından oluşturulur. Uç Nokta için Defender Windows 10 ve Windows 11 ile tümleşiktir, bu nedenle bu özellik Windows 10 veya Windows 11 yüklü tüm cihazlarda çalışır.
 
 > [!TIP]
-> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> Diğer platformlar için Antivirüs ile ilgili bilgi arıyorsanız bkz:
 > - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
 > - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)

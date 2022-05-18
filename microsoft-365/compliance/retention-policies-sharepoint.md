@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Bekletmenin SharePoint ve OneDrive için nasıl çalıştığını öğrenin.
-ms.openlocfilehash: cbcc8015b8b24309c882e5b8ca7a9c56fb6e344d
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: 8515b84f21677644be821ca129ab02083121ab84
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65286000"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65468864"
 ---
 # <a name="learn-about-retention-for-sharepoint-and-onedrive"></a>SharePoint ve OneDrive için bekletme hakkında bilgi edinin
 
@@ -80,9 +80,9 @@ Kullanıcılar aşağıdaki koşullardan herhangi birinde etiketli bir öğeyi s
 
 - Kullanıcıların etiketlenmiş öğeleri silmesine olanak tanıyan kayıt yönetimi ayarı kapalıdır.
     
-    Bu ayarı denetlemek veya değiştirmek için, Microsoft Purview uyumluluk portalında **Kayıt yönetimi** > **Kayıt yönetimi** >  **ayarlarıKayıt** >  **etiketleriDeletion** >  **öğeleri** işleme bölümüne gidin. SharePoint ve OneDrive için ayrı ayarlar vardır.
+    Bu ayarı denetlemek veya değiştirmek için, **kayıt yönetimiKayıtlar** >  **yönetim** **ayarlarıKayıt** >  **etiketleriDeletion** >  of items Microsoft Purview uyumluluk portalı > Kayıt yönetimi **çözümüne** gidin. SharePoint ve OneDrive için ayrı ayarlar vardır.
     
-    Alternatif olarak, **Kayıt yönetimi** çözümüne erişiminiz yoksa [Get-PnPTenant ve Set-PnPTenant'tan](/powershell/module/sharepoint-pnp/get-pnptenant) *AllowFilesWithKeepLabelToBeDeletedSPO* ve *AllowFilesWithKeepLabelToBeDeletedODB* kullanabilirsiniz [](/powershell/module/sharepoint-pnp/set-pnptenant).
+    Alternatif olarak, **Kayıt yönetimi** çözümüne erişiminiz yoksa [Get-PnPTenant ve Set-PnPTenant'tan](https://pnp.github.io/powershell/cmdlets/Get-PnPTenant.html) *AllowFilesWithKeepLabelToBeDeletedSPO* ve *AllowFilesWithKeepLabelToBeDeletedODB* kullanabilirsiniz [](https://pnp.github.io/powershell/cmdlets/Set-PnPTenant.html).
 
 - Bekletme etiketi öğeleri kayıt olarak işaretler ve [kilitlenir](record-versioning.md).
     

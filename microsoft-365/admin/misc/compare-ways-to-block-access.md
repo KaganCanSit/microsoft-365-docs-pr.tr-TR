@@ -19,32 +19,32 @@ search.appverid:
 - MOE150
 ms.assetid: 5785d21d-1abd-4571-a04a-8cc5a65ca9b5
 ROBOTS: NOINDEX
-description: Bir çalışan organizasyondan ayrıldığında Microsoft 365 erişimi nasıl engelley ola öğrenin.
-ms.openlocfilehash: f883ed1a11b52b58b1a329c261e724e1d31008d7
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Bir çalışan kuruluşunuzdan ayrıldığında Microsoft 365 erişimini engellemeyi öğrenin.
+ms.openlocfilehash: 75e824a73e6a7778952d4ab27f82c0b41251af32
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985335"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65467898"
 ---
-# <a name="compare-ways-to-block-access"></a>Erişimi engelleme yollarını karşılaştırma
+# <a name="compare-ways-to-block-access-to-microsoft-365"></a>Microsoft 365 erişimini engelleme yollarını karşılaştırma
 
-Bir çalışan, iyi ya da kötü bir şekilde organizasyondan ayrıldığında, bu kuruluşa erişimini Microsoft 365. Bunu birkaç şekilde yapabilirsiniz.
+Bir çalışan iyi veya kötü bir şekilde kuruluşunuzdan ayrıldığında, Microsoft 365 erişimini engellemeniz gerekir. Bunu yapmanın birkaç yolu aşağıdadır.
   
 |Erişimi engellemenin yolu|Tanım|En iyi yöntem|
 |:-----|:-----|:-----|
-|Oturum açma engelleme  <br/> |Kullanıcının oturum açma durumuna erişimini engellemenin Microsoft 365, oturum açma durumunu Oturum açma engellendi **olarak değiştirmektir**. Bu, daha önce indirilmiş veya eşitlenen e-Microsoft 365 belgelerini görüntülemelerine rağmen bilgisayarlarından ve mobil cihazlarından e-postalarında oturum açmalarını engellemektedir. Blackberry Enterprise Service kullanıyorsanız, bu hizmetin erişimini de devre dışı abilirsiniz.  <br/> |Bir çalışan kuruluştan ayrılmayı planlıyorken veya uzun süre izin yapmayı planlıyorken kullanın.  <br/> |
-|Kullanıcı parolasını sıfırlama  <br/> |Kullanıcının e-posta hesaplarına erişmesini Microsoft 365 bir diğer yolu da parolasını sıfırlamaktır. Bu, kullanıcıların daha önce indirilmiş veya eşitlenen e-postayı ve belgeleri görüntülemeye devam etmek için kendi hesaplarını kullanmalarını engellemeye devam ediyor. Daha sonra bu kullanıcı olarak oturum ve parolayı kendi seçtiğiniz bir parolayla değiştirebilirsiniz.  <br/> |Bir çalışan aniden ve kalıcı olarak ayrıldığında ve siz iş verileri için bir endişe olduğunu hissederken kullanın.  <br/> |
-|Atanmış tüm lisansları kaldırma  <br/> |Bir diğer seçenek de Microsoft 365 lisansları kaldırmaktır. Bu, web için Office paketi, Office uygulamaları, Yammer ve SharePoint Online gibi uygulamaları ve hizmetleri SharePoint. Hala oturum açabilirsiniz ancak bu hizmetleri kullanılamaz.  <br/> |Bu kullanıcının artık çalışma sayfalarındaki belirli özelliklere erişmesi gerektir olmadığını Microsoft 365.  <br/> <br> **Önemli:** Lisansı kaldırabilirsiniz, kullanıcının posta kutusu 30 gün içinde silinir.
+|Oturum açmayı engelle  <br/> |Kullanıcının Microsoft 365 erişimini engellemenin bir yolu, oturum açma durumunu **Oturum açma engellendi** olarak değiştirmektir. Bu, bilgisayarlarından ve mobil cihazlarından Microsoft 365 oturum açmalarını engeller, ancak daha önce indirilen veya eşitlenen e-postaları ve belgeleri görüntüleyebilirler. Blackberry Enterprise Hizmeti kullanıyorsanız, bu hizmetin erişimini de devre dışı bırakabilirsiniz.  <br/> |Bir çalışanın kuruluşa ayrılmayı planladığında veya uzun süreli izin almayı planladığında kullanın.  <br/> |
+|Kullanıcı parolasını sıfırlama  <br/> |Kullanıcının Microsoft 365 erişmesini engellemenin bir diğer yolu da parolasını sıfırlamaktır. Bu, daha önce indirilmiş veya eşitlenmiş e-postaları ve belgeleri görüntülemeye devam etmelerine rağmen hesabını kullanmalarını engeller. Daha sonra onlar olarak oturum açabilir ve parolayı seçtiğiniz bir parolayla değiştirebilirsiniz.  <br/> |Bir çalışan aniden ve kalıcı olarak ayrıldığında ve iş verileriyle ilgili endişeler olduğunu hissettiğinde kullanın.  <br/> |
+|Atanan tüm lisansları kaldırma  <br/> |Bir diğer seçenek de kullanıcıya atanan Microsoft 365 lisanslarını kaldırmaktır. Bu, Office paketi, Office web uygulamaları, Yammer ve SharePoint Online gibi uygulamaları ve hizmetleri kullanmalarını önler. Yine de oturum açabilirler ancak bu hizmetleri kullanamazlar.  <br/> |Bu kullanıcının artık Microsoft 365'deki belirli özelliklere erişmesi gerekmediğini düşünüyorsanız kullanın.  <br/> <br> **Önemli:** Lisansı kaldırdığınızda, kullanıcının posta kutusu 30 gün içinde silinir.
    
 ## <a name="related-articles"></a>İlgili makaleler
 
-[Bir kullanıcı postayla çıkar Microsoft 365](../add-users/remove-former-employee.md)
+[Kullanıcıyı Microsoft 365'dan çıkarma](../add-users/remove-former-employee.md)
     
-[E-postada kullanıcının parolasını Microsoft 365](../add-users/reset-passwords.md)
+[Microsoft 365'de kullanıcının parolasını sıfırlama](../add-users/reset-passwords.md)
     
-[Microsoft 365 İş'te kullanıcılara lisans atama](../manage/assign-licenses-to-users.md)
+[İş için Microsoft 365'de kullanıcılara lisans atama](../manage/assign-licenses-to-users.md)
     
-[Microsoft 365 İş'te kullanıcılardan lisans kaldırma](../manage/remove-licenses-from-users.md)
+[İş için Microsoft 365'da kullanıcılardan lisansları kaldırma](../manage/remove-licenses-from-users.md)
     
 

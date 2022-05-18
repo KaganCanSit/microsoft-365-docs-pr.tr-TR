@@ -1,5 +1,5 @@
 ---
-title: Yönetici rolleri hakkında
+title: Microsoft 365'deki yönetici rolleri sayfası hakkında
 f1.keywords:
 - NOCSH
 ms.author: kwekua
@@ -20,13 +20,13 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Yönetici rolleri iş işlevleriyle eşler ve yönetim merkezinde belirli görevleri gerçekleştirmek için izinler sağlar. Örneğin, Hizmet yöneticisi Microsoft’a destek bileti açar.
-ms.openlocfilehash: 07a46d7dfa23838715364ab1ab36ced992265b29
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+description: Destek biletlerini açan Hizmet yöneticisi gibi, iş işlevleriyle eşlenen ve yönetim merkezinde görevler için izinlere sahip olan yönetici rolleri hakkında bilgi edinin.
+ms.openlocfilehash: 58bbc4b15f3fd477b72c8dac3f0f624b1e152a2a
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65437095"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65466778"
 ---
 # <a name="get-started-with-the-microsoft-365-admin-roles-page"></a>Microsoft 365 yönetici rolleri sayfasıyla Kullanmaya başlayın
 

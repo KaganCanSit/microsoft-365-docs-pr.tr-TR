@@ -21,31 +21,31 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: 9fa2539a-2211-41fd-85a0-bc37b9619ca4
-description: Parolanızı saldırılara karşı daha güvenli hale getirin, ortak parolaları yasaklar ve risk tabanlı çok faktörlü kimlik doğrulamasını etkinleştirin.
-ms.openlocfilehash: 46e6c4ba163df0693630896b8db17b4eefe9828a
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Kuruluşunuzu parola saldırılarına karşı daha güvenli hale getirin ve yaygın parolaları yasaklayın ve risk tabanlı çok faktörlü kimlik doğrulamasını etkinleştirin.
+ms.openlocfilehash: 006e537c2e2d77a19b27f1c2d537269d69d07c1e
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63312584"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65469018"
 ---
-# <a name="password-policy-recommendations"></a>Parola ilkesi önerileri
+# <a name="password-policy-recommendations-for-microsoft-365-passwords"></a>Microsoft 365 parolalar için parola ilkesi önerileri
 
-Kuruluşun yöneticisi olarak, kuruluşta kullanıcılar için parola ilkesi ayarlama sizin sorumluluğundadır. Parola ilkesi ayarlama karmaşık ve kafa karıştırıcı olabilir ve bu makalede, parola saldırılarına karşı organizasyonlarınızı daha güvenli hale yapmaya yönelik öneriler sağlar.
+Bir kuruluşun yöneticisi olarak, kuruluşunuzdaki kullanıcılar için parola ilkesini ayarlamak sizin sorumluluğunuzdadır. Parola ilkesini ayarlamak karmaşık ve kafa karıştırıcı olabilir ve bu makalede kuruluşunuzun parola saldırılarına karşı daha güvenli olmasını sağlamak için öneriler sağlanır.
 
-Microsoft bulut tabanlı hesaplarda değiştirilene kadar önceden tanımlanmış bir parola ilkesi vardır. Sadece parolanın süresi dolana ve parolaların süresinin bitip dolmayıncaya kadar olan günlerin sayısıdır. 
+Yalnızca buluta özel Microsoft hesapları, değiştirilemeyen önceden tanımlanmış bir parola ilkesine sahiptir. Değiştirebileceğiniz tek öğeler, parolanın süresinin dolmasına kadar olan gün sayısı ve parolaların süresinin dolup dolmayacağıdır. 
   
-Bu parolaların kullanım Microsoft 365 belirlemek için bkz. Parola süre sonu ilkesi [ayarlama Microsoft 365](../manage/set-password-expiration-policy.md).
+Kuruluşunuzda Microsoft 365 parolaların süresinin ne sıklıkta doldığını belirlemek için bkz. [Microsoft 365 için parola süre sonu ilkesini ayarlama](../manage/set-password-expiration-policy.md).
 
-Parolaları değiştirme hakkında Microsoft 365 için bkz:
+Microsoft 365 parolaları hakkında daha fazla bilgi için bkz:
 
 [Parolaları sıfırlama](../add-users/reset-passwords.md) (makale)
 
-[Tek bir kullanıcının parolasını süresi hiç dolmay olacak şekilde ayarlama](../add-users/set-password-to-never-expire.md) (makale)
+[Tek bir kullanıcının parolasını hiçbir zaman sona ermeyecek şekilde ayarlama](../add-users/set-password-to-never-expire.md) (makale)
 
 [Kullanıcıların kendi parolalarını sıfırlamasına izin verme](../add-users/let-users-reset-passwords.md) (makale)
 
-[Bir kullanıcının parolasını yeniden posta iletir - Yönetici Yardımı](../add-users/resend-user-password.md) (makale)
+[Kullanıcının parolasını yeniden gönderme - Yönetici Yardımı](../add-users/resend-user-password.md) (makale)
   
 ## <a name="understanding-password-recommendations"></a>Parola önerilerini anlama
 
@@ -61,7 +61,7 @@ Parolaları değiştirme hakkında Microsoft 365 için bkz:
 
 Daha güvenli bir parola sisteminin birincil hedefi, parola çeşitliliğidir. Parola ilkenizin birçok farklı ve tahmin etmesi zor parolalar içermesi gerekir. Aşağıda, kuruluşunuzun mümkün olduğunca güvenli tutulması için bazı öneriler bulabilirsiniz.
   
-- Minimum 8 karakter uzunluğunda bir uzunluk gereksinimini koruma
+- 8 karakterlik minimum uzunluk gereksinimini koruma
 
 - Karakter derlemesi gerektirmeyin. Örneğin, \*&amp;(^%$ gibi
 
@@ -69,7 +69,7 @@ Daha güvenli bir parola sisteminin birincil hedefi, parola çeşitliliğidir. P
 
 - Çoğu savunmasız parolayı sisteminizin dışında tutmak için, yaygın kullanılan parolaları yasaklayın.
 
-- Kullanıcılarınızı, çalışmayla ilgili olmayan amaçlarla kuruluş parolalarını yeniden kullanmama konusunda eğitin
+- Kullanıcılarınızı, işle ilgili olmayan amaçlarla kuruluş parolalarını yeniden kullanmamaları için eğitme
 
 - [çok faktörlü kimlik doğrulaması](../security-and-compliance/set-up-multi-factor-authentication.md) için kaydolmayı zorunlu tutun.
 
@@ -81,7 +81,7 @@ Daha güvenli bir parola sisteminin birincil hedefi, parola çeşitliliğidir. P
   
 - Aynı veya diğer web sitelerinde kullandığınız bir parolayı kullanmayın.
 
-- Tek bir sözcük, örneğin **parola veya** **Iloveyou gibi sık kullanılan bir tümcecik kullanma**
+- Parola gibi tek bir sözcük veya **Iloveyou** gibi yaygın olarak kullanılan bir tümceciği kullanmayın
 
 - Arkadaşlarınız ve ailenizdekilerin isimleri ve doğum günleri, en sevdiğiniz müzik grupları ve kullanmayı sevdiğiniz ifadeler gibi sizin hakkınızda çok fazla şey bilenler için bile, parolalarınızı tahmin etmesi zor kılın
 
@@ -91,11 +91,11 @@ Bunlar en sık kullanılan parola yönetimi uygulamalarından bazılardır, anca
   
 ### <a name="password-expiration-requirements-for-users"></a>Kullanıcılar için parola zamanı geçmesi gereksinimleri
 
-Parola süre sonu gereksinimleri iyiden çok zarar verir, çünkü bu gereksinimler kullanıcıların birbirini yakın olan sıralı sözcükler ve sayılardan oluşan öngörülebilir parolalar seçmelerini sağlar. Bu gibi durumlarda yeni parola, önceki parolaya bakılarak tahmin edilebilir. Parola süre sonu gereksinimleri, siber suçluların güvenliği tehlikeye attır hemen hemen her zaman kimlik bilgilerini kullanmaları nedeniyle bir sonuç vermezler. Daha fazla [bilgi için Zorunlu parola değişikliklerini yeniden gözden geçirme](https://go.microsoft.com/fwlink/p/?linkid=861018) zamanı'ne göz atabilirsiniz.
+Parola süre sonu gereksinimleri, kullanıcıların birbiriyle yakından ilişkili sıralı sözcükler ve sayılardan oluşan öngörülebilir parolalar seçmesine neden olduğundan, parola süre sonu gereksinimleri faydadan daha fazla zarara neden olur. Bu gibi durumlarda yeni parola, önceki parolaya bakılarak tahmin edilebilir. Parola süre sonu gereksinimleri hiçbir kapsama avantajı sunmaz çünkü siber suçlular neredeyse her zaman kimlik bilgilerini tehlikeye girer girmez kullanırlar. Daha fazla bilgi [için Zorunlu parola değişikliklerini yeniden düşünme zamanı'na](https://go.microsoft.com/fwlink/p/?linkid=861018) göz atın.
   
 ### <a name="requiring-long-passwords"></a>Uzun parolalar gerektirme
 
-Parola uzunluğu gereksinimleri (10 karakterden uzun), tahmin edilebilir ve istenmeyen kullanıcı davranışına neden olabilir. Örneğin, 16 karakterlik parola belirlemesi istenen kullanıcılar, **dörtdörtdörtdört** veya **parolaparola** karakter uzunluğu gereksinimini karşılayan ama tahmin edilmesi zor olmayan, tekrar eden kalıplar seçebilir. Buna ek olarak, uzunluk gereksinimleri kullanıcıların parolalarını yazmak, bunları yeniden depolamak veya belgelerinde şifrelenmemiş olarak depolamak gibi diğer güvenli olmayan yöntemleri benimseme şansınızı da artırmaktadır. Kullanıcıları benzersiz bir parola kullanmaya teşvik etmek için, en az 8 karakterlik makul bir en az uzunluk gereksinimi benimsenmesini öneririz.
+Parola uzunluğu gereksinimleri (10 karakterden uzun), tahmin edilebilir ve istenmeyen kullanıcı davranışına neden olabilir. Örneğin, 16 karakterlik parola belirlemesi istenen kullanıcılar, **dörtdörtdörtdört** veya **parolaparola** karakter uzunluğu gereksinimini karşılayan ama tahmin edilmesi zor olmayan, tekrar eden kalıplar seçebilir. Ayrıca, uzunluk gereksinimleri kullanıcıların parolalarını yazma, yeniden kullanılma veya belgelerinde şifrelenmemiş olarak depolama gibi diğer güvenli olmayan uygulamaları benimseme olasılığını artırır. Kullanıcıları benzersiz bir parola kullanmaya teşvik etmek için, en az 8 karakterlik makul bir en az uzunluk gereksinimi benimsenmesini öneririz.
   
 ### <a name="requiring-the-use-of-multiple-character-sets"></a>Birden çok karakter kümesinin kullanılmasını gerektirme
 
@@ -107,7 +107,7 @@ Parola karmaşıklığı gereksinimleri fayda sağlamaktan çok zarara yol açar
 
 - Alfasayısal olmayan karakterler
 
-Birçok insan benzer bir dizilim kullanır, örneğin, ilk konumda büyük bir harf, sonuncuda bir sembol ve son 2’de bir numara. Siber suçlular bunu biliyor, bu yüzden en yaygın ikameleri, "s", "@" için "a", "l" için "1" ve "l" için "$" sözlük saldırılarını çalıştırıyor. Kullanıcılarınızı büyük harf, küçük harf, rakam ve özel karakter gerektiren bir kombinasyon seçmeye zorlamanın olumsuz bir etkisi vardır. Bazı karmaşıklık gereksinimleri kullanıcıların güvenli ve akılda kalıcı parolalar kullanmasını bile engelleyebilir, daha az güvenli ve kolay hatırlanamayan parolalar kullanmaya zorlayabilir.
+Birçok insan benzer bir dizilim kullanır, örneğin, ilk konumda büyük bir harf, sonuncuda bir sembol ve son 2’de bir numara. Siber suçlular bunu bilir, bu nedenle sözlük saldırılarını en yaygın değiştirmeleri kullanarak çalıştırırlar, "s" için "$", "a" için "@", "l" için "1". Kullanıcılarınızı büyük harf, küçük harf, rakam ve özel karakter gerektiren bir kombinasyon seçmeye zorlamanın olumsuz bir etkisi vardır. Bazı karmaşıklık gereksinimleri kullanıcıların güvenli ve akılda kalıcı parolalar kullanmasını bile engelleyebilir, daha az güvenli ve kolay hatırlanamayan parolalar kullanmaya zorlayabilir.
   
 ## <a name="successful-patterns"></a>Başarılı Dizilimler
 
@@ -115,11 +115,11 @@ Aksine, parola çeşitliliğini teşvik etmek için işte size birkaç öneri.
   
 ### <a name="ban-common-passwords"></a>Yaygın parolaları yasaklayın
 
-Kullanıcılarınıza parola oluştururken uygulamanız gereken en önemli gereksinim, kuruluşunuzun brute force parola saldırılarına olan hassasiyetini azaltmak için, yaygın kullanılan parolaların kullanımını yasaklamaktır. Yaygın kullanıcı parolaları şunlardır: **abcdefg**, **password**, **monkey**.
+Kullanıcılarınıza parola oluştururken uygulamanız gereken en önemli gereksinim, kuruluşunuzun brute force parola saldırılarına olan hassasiyetini azaltmak için, yaygın kullanılan parolaların kullanımını yasaklamaktır. Yaygın kullanıcı parolaları şunlardır: **abcdefg**, **parola**, **maymun**.
   
-### <a name="educate-users-to-not-reuse-organization-passwords-anywhere-else"></a>Kullanıcıları kuruluş parolalarını başka herhangi bir yerde yeniden kullanmama konusunda eğitin
+### <a name="educate-users-to-not-reuse-organization-passwords-anywhere-else"></a>Kullanıcıları kuruluş parolalarını başka bir yerde yeniden kullanmamaya eğitme
 
-İletilerin en önemlilerinden biri, organizasyon parolalarını başka bir yerde kullanmamanızı sağlar. Dış web sitelerinde kuruluş parolalarının kullanımı, siber suçluların bu parolaları tehlikeye atma olasılığını büyük ölçüde artırır.
+Kuruluşunuzdaki kullanıcılara ulaşmak için en önemli iletilerden biri, kuruluş parolalarını başka hiçbir yerde yeniden kullanmamaktır. Kuruluş parolalarının dış web sitelerinde kullanılması, siber suçluların bu parolaları tehlikeye atma olasılığını büyük ölçüde artırır.
   
 ### <a name="enforce-multi-factor-authentication-registration"></a>Çok Faktörlü Kimlik Doğrulaması’na kaydolmayı zorunlu tutun
 
@@ -133,7 +133,7 @@ Riske dayalı çok faktörlü kimlik doğrulaması, sistemimiz şüpheli etkinli
   
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Parolaları yönetme hakkında daha fazla bilgi almak ister misiniz? İşte okumanın bazı önerilenleri:
+Parolaları yönetme hakkında daha fazla bilgi edinmek ister misiniz? Önerilen bazı okumalar şunlardır:
 
 - [Parolaları unutun, parolasız gidin](https://www.microsoft.com/security/business/identity-access-management/passwordless-authentication)
 
@@ -154,6 +154,6 @@ Parolaları yönetme hakkında daha fazla bilgi almak ister misiniz? İşte okum
 ## <a name="related-content"></a>İlgili içerik
 
 [Parolaları sıfırlama](../add-users/reset-passwords.md) (makale)\
-[Tek bir kullanıcının parolasını süresi hiç dolma olacak şekilde ayarlama](../add-users/set-password-to-never-expire.md) (makale)\
-[Kullanıcıların kendi parolalarını sıfırlamasına izin verme](../add-users/let-users-reset-passwords.md) (makale)\
-[Bir kullanıcının parolasını yeniden posta iletir - Yönetici Yardımı](../add-users/resend-user-password.md) (makale)
+[Tek bir kullanıcının parolasını hiçbir zaman sona ermeyecek şekilde ayarlama](../add-users/set-password-to-never-expire.md) (makale)\
+[Kullanıcıların kendi parolalarını sıfırlamasına izin ver](../add-users/let-users-reset-passwords.md) (makale)\
+[Kullanıcının parolasını yeniden gönderme - Yönetici Yardımı](../add-users/resend-user-password.md) (makale)

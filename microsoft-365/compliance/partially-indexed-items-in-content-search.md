@@ -21,12 +21,12 @@ search.appverid:
 - MET150
 ms.assetid: d1691de4-ca0d-446f-a0d0-373a4fc8487b
 description: Microsoft Purview uyumluluk portalı çalıştırdığınız bir eBulma aramasında ekleyebileceğiniz Exchange ve SharePoint eklenmemiş öğeler hakkında bilgi edinin.
-ms.openlocfilehash: 0efb96f8d36868f182476a0eb7b0087beb3134f9
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 0f3d7d4b2e2a7d4c3c23d89ad6c2b8ba20fd6afb
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65417050"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65468842"
 ---
 # <a name="partially-indexed-items-in-ediscovery"></a>eBulma'da kısmen dizine alınan öğeler
 
@@ -163,9 +163,6 @@ SharePoint belgeler için dizin oluşturma sınırlarının listesi için bkz[. 
 - Dizin oluşturma için bir dosya türü desteklense ve dizine alınsa da, bir dosyanın kısmen dizinlenmiş bir öğe olarak döndürülmesine neden olacak dizin oluşturma veya arama hataları olabilir. Örneğin, büyük bir Excel dosyasında arama kısmen başarılı olabilir (ilk 4 MB dizine eklendiğinden), ancak dosya boyutu sınırı aşıldığından başarısız olabilir. Bu durumda, arama sonuçlarıyla birlikte ve kısmen dizinlenmiş bir öğe olarak aynı dosya döndürülür.
 
 - [Microsoft şifreleme teknolojileriyle](encryption.md) şifrelenen ve arama ölçütleriyle eşleşen bir e-posta iletisine eklenen dosyalar önizlemeye eklenebilir ve dışarı aktarıldığında şifresi çözülür. Şu anda, Microsoft şifreleme teknolojileriyle şifrelenmiş (ve SharePoint veya OneDrive İş içinde depolanan) dosyalar kısmen dizine alınır. 
-
-   > [!NOTE]
-   > Duyarlılık etiketleri kullanılarak şifrelenen dosyaların şifresi çözülmez.
 
 - S/MIME ile şifrelenen e-posta iletileri kısmen dizine eklenir. Bu, dosya ekleri olan veya olmayan şifrelenmiş iletileri içerir.
 

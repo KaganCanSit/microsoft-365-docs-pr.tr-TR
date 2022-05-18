@@ -19,13 +19,13 @@ search.appverid:
 - MST160
 - MET150
 - MOE150
-description: Her SharePoint kullanıcının etkinliği, paylaşılan dosya sayısı ve depolama kullanımı hakkında bilgi edinmek için SharePoint etkinlik kullanım raporunu alın.
-ms.openlocfilehash: 939dcf5c81d68a7a399c725d44687423670ed65a
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+description: lisanslı SharePoint kullanıcı dosyası etkileşimleri, paylaşılan dosya sayısı ve depolama kullanımı hakkında bilgi edinmek için SharePoint etkinlik kullanım raporunu alın.
+ms.openlocfilehash: ecd44aad4e2bc1236ade623ad2723945e6422e7b
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64781570"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65467240"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---sharepoint-activity"></a>Yönetim merkezinde raporları Microsoft 365 - SharePoint etkinliği
 

@@ -21,14 +21,14 @@ ms.custom:
 - admindeeplinkMAC
 description: Bulut Çözümü Sağlayıcısı (CSP) programı aracılığıyla satın alınan kalıcı yazılımlar için yazılım ve ürün lisans anahtarlarını indirmeyi öğrenin.
 ms.date: 01/27/2021
-ms.openlocfilehash: bef05f3377bcac46e7f40e60b149dbf6a227a294
-ms.sourcegitcommit: e13c8fc28c68422308c9d356109797cfcf6f77be
+ms.openlocfilehash: 212aaac02772e5b695cf7ee6f3f256a9fd596c1b
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/14/2022
-ms.locfileid: "64841654"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65468908"
 ---
-# <a name="download-perpetual-software-and-product-license-keys"></a>Kalıcı yazılım ve ürün lisans anahtarlarını indirme
+# <a name="download-perpetual-software-and-product-license-keys-in-microsoft-365"></a>Microsoft 365'da kalıcı yazılım ve ürün lisans anahtarlarını indirme
 
 Bu makalede, Bulut Çözümü Sağlayıcısı (CSP) programı aracılığıyla satın alınan kalıcı yazılımlar için yazılım ve ürün lisans anahtarlarını indirme işlemi açıklanmaktadır.
 

@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 Yönetici mobil uygulaması hakkında
+title: Microsoft 365 yönetici mobil uygulaması hakkında
 f1.keywords:
 - NOCSH
 ms.author: kwekua
@@ -25,12 +25,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Çevrimiçi kuruluşunuzu telefonunuzdan veya tabletinizde yönetmek için web tabanlı Microsoft 365 yönetim merkezi eşlikçiniz olan Microsoft 365 Yönetici uygulamasını edinin.
-ms.openlocfilehash: b4d3759002b7ad175a98a6619fc5cbcade16f7a7
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 1a6e267a06ea902638d9c5ef5a9c0c7aee44823d
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65436173"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65466756"
 ---
 # <a name="about-the-microsoft-365-admin-mobile-app"></a>Microsoft 365 Yönetici mobil uygulaması hakkında
 

@@ -18,13 +18,13 @@ search.appverid:
 - MST160
 - MET150
 - MOE150
-description: Microsoft Teams kullanım etkinliği raporunu almayı ve kuruluşunuzdaki Teams etkinliği hakkında içgörüler elde etmeyi öğrenin.
-ms.openlocfilehash: 93bcb5d1e6c8d0e3bbb96671333bff1c6b7b429f
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+description: Teams kullanım raporu, etkin kullanıcı, kanal ve ileti sayısı dahil olmak üzere kullanıcıların Teams nasıl iletişim kurup işbirliği yaptığı gösterilir.
+ms.openlocfilehash: fc720f9e164e2c9d20fb8b03e78b520102a0c021
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64781697"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65467568"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---microsoft-teams-usage-activity"></a>Yönetim merkezinde raporları Microsoft 365 - kullanım etkinliği Microsoft Teams
 

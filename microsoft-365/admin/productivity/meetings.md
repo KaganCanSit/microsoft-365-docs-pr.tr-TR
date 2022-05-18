@@ -1,5 +1,5 @@
 ---
-title: Microsoft Üretkenlik Puanı - Toplantılar
+title: Microsoft Üretkenlik Puanı ve toplantı içgörüleri
 f1.keywords:
 - NOCSH
 ms.author: efrene
@@ -18,133 +18,133 @@ monikerRange: o365-worldwide
 search.appverid:
 - MET150
 - MOE150
-description: Toplantılar - kişiler deneyimi Üretkenlik puanı ayrıntıları.
-ms.openlocfilehash: 88aae1ac85e9e8f91592bdd17b6a14bb897d9051
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Toplantı ayrıntıları - kişiler Üretkenlik puanı yaşar.
+ms.openlocfilehash: c680a54c2da2b1d49ecb7af234d85741f384fddc
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63328575"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65466426"
 ---
-# <a name="meetings--people-experiences"></a>Toplantılar – Kişiler deneyimleri
+# <a name="meetings-insights-score--people-experiences"></a>Toplantı içgörüleri puanı – Kişi deneyimleri
 
-Üretkenlik Puanı, kullanım deneyimi ve bunu destekleyen teknoloji deneyimleri aracılığıyla, Microsoft 365 dijital dönüşüm yolculuğuna içgörüler sağlar. Kuruluş puanı kişi ve teknoloji deneyimi ölçülerini yansıtarak sizinkilere benzer kuruluşların kıyaslamalarına göre karşılaştırabilirsiniz. Toplantılar kategorisi, kişi deneyimi ölçülerinin bir bölümü olarak yer almaktadır. Daha fazla bilgi edinmek için Üretkenlik [Puanına genel bakış makalesinde](productivity-score.md) [Microsoft Gizlilik Bildirimi'ne bakın](https://privacy.microsoft.com/privacystatement).
+Üretkenlik Puanı, kuruluşunuzun Microsoft 365 kullanımı ve onu destekleyen teknoloji deneyimleri aracılığıyla dijital dönüşüm yolculuğuna ilişkin içgörüler sağlar. Kuruluşunuzun puanı, kişi ve teknoloji deneyimi ölçümlerini yansıtır ve sizinkine benzer kuruluşların karşılaştırmalarıyla karşılaştırılabilir. Toplantılar kategorisi, kişilerin deneyim ölçülerinin bir parçasıdır. Daha fazla bilgi edinmek için [Üretkenlik Puanına genel bakış](productivity-score.md) sayfasına göz atın ve [Microsoft'un Gizlilik Bildirimi'ni](https://privacy.microsoft.com/privacystatement) okuyun.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Toplantılar ile ilgili içgörüleri ile çalışmaya baş etmek için, organizasyon kuruluşlarıyla ilgili lisansa sahip olması gerekir:
+Toplantı içgörülerini kullanmaya başlamak için kuruluşunuzdaki kişilerin şu lisanslara sahip olması gerekir:
 
 - Microsoft Teams
 
 Daha fazla bilgi için bkz. [kullanıcılara lisans atama](../manage/assign-licenses-to-users.md).
 
-Son 28 gün içinde Teams bir kez etkin olduktan sonra içgörüleri görmeye başlarsiniz.
+son 28 gün içinde Teams en az bir kez etkin olan kişiler içgörüleri görmeye başlarsınız.
 
-## <a name="why-your-organizations-meetings-score-matters"></a>Kuruluş toplantı puanının önemli olması
+## <a name="why-your-organizations-meetings-score-matters"></a>Kuruluşunuzun toplantı puanı neden önemlidir?
 
-kişilerin fikirleri keşfetmesi, sorunları planlaması, sorunları çözmesi ve kararlar almaları, kurumsal verimlilik için temel bir sütun haline geliyor. Araştırma, kişilerin çevrimiçi toplantı araçlarını etkili bir şekilde kullanma eğiliminde olduğunu, haftada 104 dakikaya kadar kaydetme eğiliminde olduklarını gösterir.
+İnsanların fikirleri keşfettikleri, plan yaptığı, sorunları çözdüğü ve kararlar aldığı toplantılar, kurumsal üretkenlik için temel bir yapı taşıdır. Araştırma, kişilerin çevrimiçi toplantı araçlarını etkili bir şekilde kullandığında haftada 104 dakikaya kadar tasarruf etme eğiliminde olduklarını gösterir.
 
-## <a name="how-we-calculate-the-meetings-score"></a>Toplantı puanı hesaplama
+## <a name="how-we-calculate-the-meetings-score"></a>Toplantı puanını hesaplama
 
-Deneyimde, bu kategorinin önemli ölçümlerini içeren birincil bir içgörü sağlaruz. Daha sonra, aşağıda ayrıntılı olarak verilen bir puanlama çerçevesi, bu ölçümlerin kurum puanı hesaplaması için kullanılır.
+Bu kategorinin temel ölçümlerini içeren deneyimle ilgili birincil bir içgörü sağlıyoruz. Ardından, kuruluşunuzun puanını hesaplamak için bu ölçümler için aşağıda ayrıntılı olarak yer alan bir puanlama çerçevesi kullanılır.
 
 ### <a name="primary-insight"></a>Birincil içgörü
 
-Microsoft Teams takvim Outlook tümleştirin ve toplantılarınızı daha ilgi çekici ve etkili hale getirir. Birincil içgörü, Microsoft Teams yapılan tüm çevrimiçi toplantılara bakarak yardımcı olabilir. Birincil içgörü, aynı zamanda kaç toplantının iz olduğunu ve bu toplantılarda en iyi Teams izler.
+Microsoft Teams Outlook takvimle tümleştirin ve toplantılarınızı daha ilgi çekici ve etkili hale getirmek için bir çok özellik sağlar. Birincil içgörü, kuruluşunuzda gerçekleştirilen tüm Microsoft Teams çevrimiçi toplantılara bakar. Birincil içgörü, Teams toplantılar için en iyi uygulamalardan en az birini izleyen toplantı sayısını da izler.
 
-:::image type="content" source="../../media/primaryinsights-meetings.png" alt-text="En iyi yöntemlerle toplantılar için PRimary içgörüler.":::
+:::image type="content" source="../../media/primaryinsights-meetings.png" alt-text="En iyi yöntemlere sahip toplantılar için ayrıntılı içgörüler.":::
 
-1. **Üst bilgi:** Son 28 gün içinde Microsoft Teams yapılan ve toplantı sırasında video veya ekran paylaşımı yapılan çevrimiçi toplantı yüzdesini gösterir.
-2. **Gövde:** Görüntülü görüşme veya ekran paylaşımı kullanımı gibi, toplantı sırasında katılım için aşağıdaki en iyi uygulamaların nasıl daha etkili halell kullanabileceği hakkında daha fazla bilgi sağlar.
-3. **Görsel öğe (geçerli durum):**
+1. **Üstbilgi:** Son 28 gün içinde yapılan ve toplantı sırasında video veya ekran paylaşımı olan Microsoft Teams çevrimiçi toplantıların yüzdesini gösterir.
+2. **Vücut:** Video veya ekran paylaşımı kullanımı gibi bir toplantı sırasında etkileşim için en iyi yöntemleri izlemenin toplantıları nasıl daha etkili hale getirebileceği hakkında daha fazla bilgi sağlar.
+3. **Görselleştirme (geçerli durum):**
 
-      - Bu yatay çubuk grafikte mavi (renkli) bölüm üstbilgide gösterilen yüzdeyi temsil eder
+      - Bu yatay çubuk grafikte, mavi (renkli) bölüm üst bilgide gösterilen yüzdeyi temsil eder
       - Kesir (payda/payda) üst bilgide gösterilen yüzdeyi hesaplamak için kullanılır
-         - Pay: Video veya ekran Microsoft Teams kullanılan kişiler dahil, çevrimiçi veya çevrimiçi toplantıların sayısı.
-         - Payda: Son 28 Microsoft Teams yapılan kişiler de dahil olmak üzere, çevrimiçi veya çevrimiçi toplantıların sayısı.
-      - Anahtar ölçümün eşler arası karşılaştırma değeri de yüzde olarak gösterilir.
+         - Pay: Kuruluşunuzdan video veya ekran paylaşımı kullanan kişiler de dahil olmak üzere çevrimiçi Microsoft Teams toplantıların sayısı.
+         - Payda: Kuruluşunuzdan son 28 gün içinde gerçekleştirilen kişilerin de dahil olduğu çevrimiçi Microsoft Teams toplantılarının sayısı.
+      - Anahtar ölçümün eş karşılaştırma değeri de yüzde olarak gösterilir.
 1. **Kaynaklara bağlantı:** Yardım içeriğini görüntülemek için bu bağlantıyı seçin.
 
-#### <a name="trend-visualization-of-the-primary-insight"></a>Birincil içgörü eğilim görselleştirmesi
+#### <a name="trend-visualization-of-the-primary-insight"></a>Birincil içgörülerin eğilim görselleştirmesi
 
-Aşağıdaki grafikte, birincil içgörüde yer alan anahtar ölçüme göre hem paydanın hem de paydanın eğilim çizgileri görüntülenir. Başka bir deyişle, video veya ekran paylaşımı Microsoft Teams en iyi uygulamalara sahip çevrimiçi Microsoft Teams toplantılarının sayısını ve son 180 gün içinde yapılan çevrimiçi Microsoft Teams toplantı sayısını gösterir. Çizgi grafikte yer alan her veri noktası, son 28 günlük etkinliğin toplam değeridir.
+Aşağıdaki grafik, birincil içgörüden alınan anahtar ölçümün hem paydasının hem de paydasının eğilim çizgilerini gösterir. Başka bir deyişle, video veya ekran paylaşımı gibi en iyi yöntemlere sahip çevrimiçi Microsoft Teams toplantılarının sayısını ve son 180 gün içinde gerçekleştirilen çevrimiçi Microsoft Teams toplantılarının toplam sayısını gösterir. Çizgi grafikteki her veri noktası, son 28 güne ait bir etkinlik toplamıdır.
 
-:::image type="content" source="../../media/number-meeting-over-time.png" alt-text="Son 28 gün Teams çevrimiçi toplantı sayısını gösteren grafik.":::
+:::image type="content" source="../../media/number-meeting-over-time.png" alt-text="Son 28 gün içindeki çevrimiçi Teams toplantı sayısını gösteren grafik.":::
 
 ### <a name="scoring-framework"></a>Puanlama çerçevesi
 
-Organizasyonun toplantı puanı, son 28 gün içinde Microsoft Teams en iyi yöntemleri takip eden çevrimiçi toplantı derecesini ölçür. Bu ağırlık, toplantılara katılan kişi sayısına ve toplantıların süresine göredir.
+Kuruluşunuzun toplantı puanı, kuruluşunuzdaki çevrimiçi Microsoft Teams toplantıların son 28 gün içindeki en iyi yöntemleri izlediği dereceyi ölçer. Kuruluşunuzdaki toplantılara katılan kişi sayısına ve toplantıların süresine göre ağırlıklıdır.
 
-## <a name="explore-more-about-meetings-in-your-organization"></a>Organizasyon'daki toplantılar hakkında daha fazla bilgi keşfedin
+## <a name="explore-more-about-meetings-in-your-organization"></a>Kuruluşunuzdaki toplantılar hakkında daha fazla bilgi edinin
 
-Ayrıca size, bir toplama olarak, kuruluşta yer alan kişilerin toplantıları nasıl yöneteceklerini anlamanıza yardımcı olacak destek bilgileri de sağlarsınız. Bu ek ölçümler Üretkenlik Puanınıza doğrudan katkıda bulunmakla birlikte, dijital dönüştürmenizin bir parçası olarak bir eylem planı oluşturmanıza yardımcı olabilir.
+Ayrıca, kuruluşunuzdaki kişilerin toplu olarak toplantıları nasıl yürüttüğünü anlamanıza yardımcı olacak destekleyici bilgiler de sağlıyoruz. Bu ek ölçümler Üretkenlik Puanınıza doğrudan katkıda bulunmaz, ancak dijital dönüşümünüzün bir parçası olarak bir eylem planı oluşturmanıza yardımcı olabilir.
 
-### <a name="breakdown-of-how-many-meetings-follow-best-practices"></a>En iyi yöntemlerden kaç toplantının takip olduğunu çözümleme
+### <a name="breakdown-of-how-many-meetings-follow-best-practices"></a>En iyi yöntemleri izleyen toplantı sayısı dökümü
 
-:::image type="content" source="../../media/videouse-meetings.png" alt-text="Toplantılar - kişi deneyimleri için birincil içgörüleri gösteren grafik.":::
+:::image type="content" source="../../media/videouse-meetings.png" alt-text="Toplantılar için birincil içgörüleri gösteren grafik - kişi deneyimleri.":::
 
-1. **Üst bilgi:**  Birincil içgörü ve puanlama Microsoft Teams video en iyi yöntemleri kullanan çevrimiçi çevrimiçi toplantı yüzdesini vurgular.
-2. **Gövde:** Toplantılarda bu uygulamaların daha cazip hale bunların kullanımına ilişkin bilgiler. 
-3. **Görsel Öğe:** Görsel öğenin çözümlemesi, çevrimiçi veya çevrimiçi toplantılarda aşağıdaki en Microsoft Teams uygulamaların ne ölçüde takip edilen kapsamı temsil edecek şekilde yöneliktir: 
-    - **Video**: Renkli bölüm ve kesir, videonun açık olduğu Microsoft Teams çevrimiçi toplantı yüzdesini temsil ediyor. Kesir oluşturulur: 
-        - Pay: Son Microsoft Teams yapılan ve en az bir katılımcının videolarının açık olduğu çevrimiçi toplantılarda. 
-        - Payda: Son 28 Microsoft Teams içinde kuruluşta gerçekleştirilen çevrimiçi veya çevrimiçi toplantıların toplam sayısı 
-    - **Ekran paylaşımı**: Renkli bölüm ve kesir, kişilerin ekran paylaşımı özelliğini kullandığı çevrimiçi Microsoft Teams yüzdesiyle gösterilir. Kesir şunları içerir: 
-        - Pay: Son 28 Microsoft Teams ekranlarını paylaşan en az bir katılımcısı olan çevrimiçi toplantılardır.
-        - Payda: Son 28 Microsoft Teams içinde gerçekleştirilen çevrimiçi veya çevrimiçi toplantıların toplam sayısı
+1. **Üstbilgi:**  Birincil içgörü ve puanlamada dikkate alındığında video en iyi yöntemlerini kullanan çevrimiçi Microsoft Teams toplantılarının yüzdesini vurgular.
+2. **Vücut:** Bu uygulamaları daha ilgi çekici hale getirmek için toplantılar sırasında kullanmanın değeriyle ilgili bilgileri kısıtlar. 
+3. **Görsel -leştirme:** Görselleştirmedeki döküm, çevrimiçi Microsoft Teams toplantılarının aşağıdaki en iyi yöntemlerden her birini ne ölçüde izlediğini göstermek için tasarlanır: 
+    - **Video**: Renkli bölüm ve kesir, videonun açık olduğu çevrimiçi Microsoft Teams toplantılarının yüzdesini gösterir. Kesir şu kaynaktan oluşturulur: 
+        - Pay: Son 28 gün içinde yapılan ve en az bir katılımcının videosu açık olan çevrimiçi Microsoft Teams toplantıları. 
+        - Payda: Kuruluşunuzda son 28 gün içinde gerçekleştirilen çevrimiçi Microsoft Teams toplantılarının toplam sayısı 
+    - **Ekran paylaşımı**: Renkli bölüm ve kesir, kişilerin ekran paylaşımı özelliğini kullandığı çevrimiçi Microsoft Teams toplantılarının yüzdesini temsil edilir. Kesir şunları içerir: 
+        - Pay: Son 28 gün içinde gerçekleştirilen ve en az bir katılımcının ekranını paylaştığı çevrimiçi Microsoft Teams toplantıları.
+        - Payda: Kuruluşunuzda son 28 gün içinde gerçekleştirilen çevrimiçi Microsoft Teams toplantılarının toplam sayısı
 
 
-### <a name="distribution-of-time-spent-by-people-in-meetings"></a>Toplantılarda kişiler tarafından harcanan zaman dağılımı
+### <a name="distribution-of-time-spent-by-people-in-meetings"></a>Toplantılarda kişilerin harcadığı zamanın dağılımı
 
-:::image type="content" source="../../media/percentageofpeopleusingteams.png" alt-text="Haftanın 20 saati boyunca toplantılara Teams yüzdesini gösteren grafik.":::
+:::image type="content" source="../../media/percentageofpeopleusingteams.png" alt-text="Haftanın 20 saati boyunca Teams toplantılara katılan kişilerin yüzdesini gösteren grafik.":::
 
-1. **Üst bilgi:** Son 28 gün içinde yaptıkları etkinliklere bağlı olarak, Microsoft Teams veya toplantılara haftada 20 saati daha uzun süreyle çevrimiçi veya çevrimiçi olarak katılan kişilerin yüzdesini gösterir.
-2. **Gövde:** Toplantıların meşgul ve üretken olması için toplantı en iyi yöntemleri kullanmanın değerinin ayrıntılarını sağlar
-3. **Görsel Öğe:** Son 28 gün içindeki toplantılarda hafta başına harcanan ortalama süreye bağlı olarak, organizasyon'daki kişilerin görünümünü sağlar. Her kategori için aşağıdaki bilgiler sağlanır:
-      - **Toplam toplantı katılımcısı:** Son 28 gün içinde, ortalama toplantı süresi aralığına bağlı olarak, kuruluşta toplantılara katılan kişi sayısını gösterir. Örneğin, 6-10 saat kategorisi, son 28 günde haftada ortalama o kadar saat toplantılara katılan kişi sayısını gösterir.
-      - **Görüntülü toplantılarda katılımcılar:** Her kategori için bu, son 28 gün içinde kurumda video olan bir toplantıda kaç kişi olduğunu gösterir.
-      - **Ekran paylaşımının olduğu toplantılarda katılımcılar:** Her kategori için, son 28 gün içinde ekran paylaşımı yapılan bir toplantıda kaç kişi olduğunu gösterir.
+1. **Üstbilgi:** Kuruluşunuzdaki çevrimiçi Microsoft Teams toplantılarına son 28 gün içindeki etkinliklerine bağlı olarak haftada ortalama 20 saatten fazla katılan kişilerin yüzdesini gösterir.
+2. **Vücut:** Toplantıların etkin ve üretken olmasını sağlamak için toplantı en iyi yöntemlerini kullanmanın değeri hakkında ayrıntılı bilgi sağlar
+3. **Görsel -leştirme:** Kuruluşunuzdaki kişilerin son 28 gün içindeki toplantılarda haftada harcanan ortalama sürelerine göre bir görünüm sağlar. Her kategori için aşağıdaki bilgiler sağlanır:
+      - **Toplam toplantı katılımcıları:** Kuruluşunuzda son 28 gün içindeki ortalama toplantı süresi aralığına göre toplantılara katılan kişi sayısını gösterir. Örneğin, 6-10 saat kategorisi, son 28 gün içinde haftada bu kadar saat boyunca toplantılara katılan kişi sayısını gösterir.
+      - **Görüntülü toplantılara katılanlar:** Her kategori için, kuruluşunuzda son 28 gün içinde video içeren toplantılarda kaç kişinin olduğunu gösterir.
+      - **Ekran paylaşımı olan toplantılardaki katılımcılar:** Her kategori için, son 28 gün içinde ekran paylaşımı içeren bir toplantıda kaç kişinin bulunduğunu gösterir.
 
-### <a name="distribution-of-meeting-length-by-type"></a>Toplantı uzunluğu türüne göre dağılımı
+### <a name="distribution-of-meeting-length-by-type"></a>Toplantı uzunluğunun türe göre dağılımı
 
 :::image type="content" source="../../media/distribution-meetinglength.png" alt-text="Toplantı uzunluklarının dağılımını gösteren grafik.":::
 
-1. **Üst bilgi:** Son 28 gün içinde 30 dakika uzunluğundaki anlık (daha önce zamanlanmış) çevrimiçi Microsoft Teams toplantı yüzdesini gösterir.
-2. **Gövde:** Sorunları hızla çözmek için anlık toplantıları kullanmanın değeri hakkında bilgi sağlar.
-3. **Görsel Öğe:** Son 28 gün içinde kurumda yapılan anlık ve zamanlanmış toplantıların süresinin dağılımını (dakika olarak) sağlar. Dağıtım her toplantıyı 1-15 dakika, 16-30 dakika, 31-60 dakika ve 60 dakikadan büyük olarak kategorilere ayırıyor.
+1. **Üstbilgi:** Son 28 gün içinde 30 dakikadan daha uzun olan anlık (önceden zamanlanmış olmayan) çevrimiçi Microsoft Teams toplantılarının yüzdesini gösterir.
+2. **Vücut:** Sorunları hızla çözmek için anlık toplantıları kullanmanın değeri hakkında bilgi sağlar.
+3. **Görsel -leştirme:** Kuruluşunuzda son 28 gün içinde gerçekleşen anlık ve zamanlanmış toplantıların uzunluğunun (dakika cinsinden) dağılımını sağlar. Dağıtım, her toplantıyı 1-15 dakika, 16-30 dakika, 31-60 dakika ve 60 dakikadan daha uzun kategorilere ayırır.
 
     > [!NOTE]
-    > zamanlanan toplantılar, kişilerin takviminde görünen tüm toplantıları içerir. Anlık toplantılar, hem 1:1 &quot;&quot; hem de grup çağrıları ile birlikte kanallarda Şimdi toplantı başlatan toplantılar Microsoft Teams içerir.
+    > zamanlanan toplantılar, kişilerin takvimlerinde görünen tüm toplantıları içerir. Anlık toplantılar, hem 1:1 hem de grup aramaları dahil olmak üzere aramaları ve Microsoft Teams kanallarda Şimdi&quot; toplantı yap özelliğini kullanmaya &quot;başlayan toplantıları içerir.
 
 
 ### <a name="use-of-different-meeting-types"></a>Farklı toplantı türlerinin kullanımı
 
-:::image type="content" source="../../media/percentparticipation-meetingtypes.jpg" alt-text="Farklı toplantı türlerine yüzde katılımı gösteren grafik.":::
+:::image type="content" source="../../media/percentparticipation-meetingtypes.jpg" alt-text="Farklı toplantı türlerine katılım yüzdesini gösteren grafik.":::
 
-1. **Üst bilgi:** Önceki 28 gün boyunca Microsoft Teams veya 30 dakikadan kısa olan anlık çevrimiçi toplantı yüzdesini vurgular.
-2. **Gövde:** Hızlı bir kanal özelliğinde Şimdi Microsoft Teams &quot;&quot; kullanmanın değeri hakkında bilgi sağlar.
-3. **Görsel Öğe:** Herhangi bir çevrimiçi toplantıya katılan kişilerin ne tür toplantılara katıldığını Microsoft Teams gösterir. Her toplantı türü, renkli kısmın ve kesirin aşağıdakileri temsil eden yatay bir çubuk olarak temsil edilmektedir:
-    - **Anında 1:1 aramalar**:
-        - Pay: Son 28 gün içinde bire bir aramalara katılan kişi sayısı
-        - Payda: Son 28 gün içinde Microsoft Teams çevrimiçi toplantıya katılan kişi sayısı
+1. **Üstbilgi:** Önceki 28 gün içinde 30 dakikadan kısa süren anlık çevrimiçi Microsoft Teams toplantılarının yüzdesini vurgular.
+2. **Vücut:** Microsoft Teams kanalı özelliğinde Şimdi&quot; toplantı yap özelliğini kullanmanın &quot;değeri hakkında bilgi sağlar.
+3. **Görsel -leştirme:** Herhangi bir çevrimiçi Microsoft Teams toplantısına katılan kişilerin ne tür toplantılara katıldığını gösterir. Her toplantı türü, renkli bölümün ve kesirin aşağıdakileri temsil ettiği yatay bir çubuk olarak temsil edilir:
+    - **Anlık 1:1 çağrıları**:
+        - Pay: Son 28 gün içinde 1:1 aramalarına katılan kişi sayısı
+        - Payda: Son 28 gün içinde herhangi bir çevrimiçi Microsoft Teams toplantısına katılan kişi sayısı
    - **Anlık grup çağrıları**:
-        - Pay: Son 28 günde grup aramalarına katılan kişi sayısı
-        - Payda: Son 28 gün içinde Microsoft Teams çevrimiçi toplantıya katılan kişi sayısı
-   - **Kanalda Anında Anında Meet**:
-        - Pay: Son &quot;&quot; 28 gün içinde Kanal kanallarında (Microsoft Teams toplantılarda) Şimdi toplantı özelliğini kullanan kişi sayısı
-        - Payda: Son 28 gün içinde Microsoft Teams çevrimiçi toplantıya katılan kişi sayısı
-    - **Tek izinli zamanlanmış toplantılar:**
-        - Pay: Son 28 gün içinde takvimlerinde Microsoft Teams veya bire bir çevrimiçi veya toplantılara katılan kişi sayısı
-        - Payda: Son 28 gün içinde Microsoft Teams çevrimiçi toplantıya katılan kişi sayısı
+        - Pay: Son 28 gün içinde grup aramalarına katılan kişi sayısı
+        - Payda: Son 28 gün içinde herhangi bir çevrimiçi Microsoft Teams toplantısına katılan kişi sayısı
+   - **Şimdi kanalda Anında Toplantı yap**:
+        - Pay: Son 28 gün içinde Microsoft Teams kanallarda (anlık toplantılar için) Şimdi&quot; toplantı yap özelliğini kullanan &quot;kişi sayısı
+        - Payda: Son 28 gün içinde herhangi bir çevrimiçi Microsoft Teams toplantısına katılan kişi sayısı
+    - **Zamanlanmış tek seferlik toplantılar:**
+        - Pay: Son 28 gün içinde takvimlerinde tek seferlik çevrimiçi Microsoft Teams toplantılarına katılan kişi sayısı (zamanlanmış)
+        - Payda: Son 28 gün içinde herhangi bir çevrimiçi Microsoft Teams toplantısına katılan kişi sayısı
     - **Zamanlanan yinelenen toplantılar:**
-        - Pay: Takvimlerinde son 28 günde (zamanlanan) yinelenen toplantı örneklerine katılan kişi sayısı
-        - Payda: Son 28 gün içinde Microsoft Teams çevrimiçi toplantıya katılan kişi sayısı
+        - Pay: Son 28 gün içinde takvimlerinde yinelenen toplantı örneklerine katılan kişi sayısı (zamanlanmış)
+        - Payda: Son 28 gün içinde herhangi bir çevrimiçi Microsoft Teams toplantısına katılan kişi sayısı
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Microsoft 365 durumu – Teknoloji deneyimleri](apps-health.md) (makale)\
-[İletişim – Kişiler deneyimleri](communication.md) (makale)\
-[İçerik işbirliği – Kişiler deneyimleri](content-collaboration.md) (makale)\
-[Hareketlilik – Kişiler deneyimleri](mobility.md) (makale)\
+[Microsoft 365 uygulamaları sistem durumu – Teknoloji deneyimleri](apps-health.md) (makale)\
+[İletişim – Kişi deneyimleri](communication.md) (makale)\
+[İçerik işbirliği – Kişi deneyimleri](content-collaboration.md) (makale)\
+[Mobility – Kişi deneyimleri](mobility.md) (makale)\
 [Üretkenlik Puanı için gizlilik denetimleri](privacy.md) (makale)\
-[Ekip çalışması – Kişiler deneyimleri](teamwork.md) (makale)
+[Ekip çalışması – Kişi deneyimleri](teamwork.md) (makale)

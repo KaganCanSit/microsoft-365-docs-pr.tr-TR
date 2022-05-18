@@ -15,12 +15,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview çözümleri deneme playbook'u.
-ms.openlocfilehash: 10dd4ac9447c920112fd85075c3bf6ae3093ee9c
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: cf054a27fb56589c42552bb1b79ae837a666d81f
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65415270"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65466294"
 ---
 # <a name="trial-playbook-microsoft-purview-solutions"></a>Deneme playbook'u: Microsoft Purview çözümleri
 
@@ -444,4 +444,4 @@ Veri depolama, veri aktarımları ve fazla paylaşım gibi gizlilik risklerini p
 
 **Microsoft Güvenlik Teknik İçerik Kitaplığı**: Etkileşimli kılavuzları ve gereksinimlerinizle ilgili diğer öğrenme içeriğini bulmak için bu kitaplığı keşfedin. [Kitaplığı ziyaret edin](/security).
 
-**Microsoft Güvenlik Kaynakları**: Kötü amaçlı yazılımdan korumadan Sıfır Güven kuruluşunuzun güvenlik gereksinimlerine uygun tüm kaynakları alın. [Kaynaklar'a bakın](/security/business/resources).
+**Microsoft Güvenlik Kaynakları**: Kötü amaçlı yazılımdan korumadan Sıfır Güven kuruluşunuzun güvenlik gereksinimlerine uygun tüm kaynakları alın.

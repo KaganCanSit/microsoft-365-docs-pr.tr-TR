@@ -19,13 +19,13 @@ search.appverid:
 - MST160
 - MET150
 - MOE150
-description: Kullanıcılarınızın hangi cihazlarda Yammer kullandığını öğrenmek için Yammer cihaz kullanım raporunu alın.
-ms.openlocfilehash: 265cef494349daba8b7e526ad6b7c6abd61adcf7
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+description: Kullanıcılarınızın hangi cihazlarda Yammer kullandığı, cihaz türüne göre günlük kullanıcı sayısı ve kullanıcı başına ayrıntılar hakkında daha fazla bilgi edinmek için Yammer cihaz kullanım raporunu alın.
+ms.openlocfilehash: faf5b364090fe4ed88e0a6dd977238e65f3e6c68
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64781284"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65467196"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---yammer-device-usage-report"></a>Yönetim merkezinde Microsoft 365 Raporları - cihaz kullanım raporunu Yammer
 
@@ -58,7 +58,7 @@ Dışarı **Aktar bağlantısını** seçerek rapor verilerini bir Excel .csv do
 |Son etkinlik tarihi (UTC)  <br/> |Kullanıcının bir Yammer etkinliğine katıldığı son tarih (UTC).  <br/> |
 |Web  <br/> |Kullanıcının web üzerinde Yammer kullanıp kullanmadığını gösterir.  <br/> |
 |Windows telefon  <br/> | Kullanıcının Windows telefonda Yammer kullanıp kullanmadığını gösterir.  <br/> |
-|Android telefon  <br/> |Kullanıcının android telefonda Yammer kullanıp kullanmadığını gösterir. <br/>|
+|Android telefon  <br/> |Kullanıcının Android telefonda Yammer kullanıp kullanmadığını gösterir. <br/>|
 |Iphone <br/> | Kullanıcının bir iPhone Yammer kullanıp kullanmadığını gösterir.  <br/> |
 |Ipad  <br/> |Kullanıcının bir iPad Yammer kullanıp kullanmadığını gösterir. <br/>|
 |Diğer  <br/> |Kullanıcının daha önce listelenmeyen başka bir cihazda Yammer kullanıp kullanmadığını gösterir. <br/>|

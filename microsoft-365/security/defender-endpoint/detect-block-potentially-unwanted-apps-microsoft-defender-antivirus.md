@@ -14,14 +14,13 @@ ms.reviewer: mimilone, julih
 manager: dansimp
 ms.technology: mde
 ms.topic: article
-ms.date: 10/18/2021
 ms.collection: m365-security-compliance
-ms.openlocfilehash: c7307e7c690e9664f6a848fcd93ed27f1062455a
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: d93587867a2fea0921a1ac9711eed0f8c1b1beec
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65418368"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65468316"
 ---
 # <a name="detect-and-block-potentially-unwanted-applications"></a>İstenmeyen olası uygulamaları tespit edin ve engelleyin
 
@@ -114,7 +113,7 @@ System Center 2012 Configuration Manager için bkz. [Configuration Manager'da En
 
 ### <a name="use-group-policy-to-configure-pua-protection"></a>PUA korumasını yapılandırmak için grup ilkesi kullanma
 
-1. [Windows 10 Ekim 2020 Güncelleştirmesi (20H2) için Yönetim Şablonlarını (.admx)](https://www.microsoft.com/download/details.aspx?id=102157) indirme ve yükleme
+1. [Windows 11 Ekim 2021 Güncelleştirmesi (21H2) için Yönetim Şablonlarını (.admx)](https://www.microsoft.com/download/details.aspx?id=103507) indirme ve yükleme
 
 2. grup ilkesi yönetim bilgisayarınızda [grup ilkesi Yönetim Konsolu'nu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)) açın.
 
@@ -208,7 +207,7 @@ Bazen bir dosya PUA koruması tarafından yanlışlıkla engellenir veya görevi
 Daha fazla bilgi için bkz. [Dosya uzantısına ve klasör konumuna göre dışlamaları yapılandırma ve doğrulama](configure-extension-file-exclusions-microsoft-defender-antivirus.md).
 
 > [!TIP]
-> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> Diğer platformlar için Antivirüs ile ilgili bilgi arıyorsanız bkz:
 > - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
 > - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)

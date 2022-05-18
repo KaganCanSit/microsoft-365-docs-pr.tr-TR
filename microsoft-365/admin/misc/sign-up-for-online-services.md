@@ -1,5 +1,5 @@
 ---
-title: Kuruluşunuzdaki başka biri etki alanınıza kaydolduysa, etki alanınız kullanımda olabilir
+title: Başka biri kaydolmuşsa etki alanınız kullanımda olabilir
 f1.keywords:
 - NOCSH
 ms.author: efrene
@@ -19,15 +19,15 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: 4f374dc7-b96c-49c7-80ed-554716ba0138
-description: 'İş veya okul e-postasını, kendi IT bölümü olmadan Microsoft çevrimiçi hizmetlerinde kaydolmak için kullanmayı öğrenin. '
-ms.openlocfilehash: adcbad88e098a06d5220e10a0c6d365b47bd2303
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: 'BT departmanını dahil etmeden Microsoft çevrimiçi hizmetler kaydolmak için iş veya okul e-postasını kullanmayı öğrenin. '
+ms.openlocfilehash: db31c62099d07d27ac0ffe4529b34db9fa5d6d19
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63319819"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65466668"
 ---
-# <a name="your-domain-may-be-in-use-if-someone-else-signed-up-with-it"></a>Başka biri etki alanıyla kayıt ettiyse etki alanınız kullanımda olabilir
+# <a name="your-domain-may-be-in-use-if-someone-else-signed-up-with-it"></a>Başka biri kaydolmuşsa etki alanınız kullanımda olabilir
 
 İş veya okul hesabı olan kullanıcılar, BT bölümleriyle görüşmeden [bazı Microsoft çevrimiçi hizmetlerinde oturum açabilir](self-service-sign-up.md). Örneğin, Office 365, Power BI ve Hak Yönetimi Hizmetleri gibi hizmetler olabilir. İş veya okul e-posta adresini sağlayarak self servis kaydı tamamladıklarında, hizmetin işlevlerine erişebilir ancak hizmette yönetim işlemleri (kullanıcı ekleme, lisans ekleme, etki alanını yönetme, vb.) yapamazlar. 
   

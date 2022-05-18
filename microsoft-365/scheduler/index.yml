@@ -12,24 +12,30 @@ metadata:
   manager: serdars
   audience: Admin
   ms.date: 04/23/2021
+  ms.openlocfilehash: 1a0bacdaf7630c6385b1dbbf37fd5a4eb50d77aa
+  ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+  ms.translationtype: HT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 05/18/2022
+  ms.locfileid: "65468360"
 additionalContent:
   sections:
-    - items:
-        - title: Microsoft 365 için Zamanlayıcı nedir?
-          summary: 'Microsoft 365 için Zamanlayıcı ve özelliklerinin, kime ve nasıl fayda sağlayacağı hakkında bilgi edinin.'
-          url: scheduler-overview.md
-        - title: Güven ve gizlilik
-          summary: Microsoft 365 için Zamanlayıcı'nın Güven ve Gizliliğinizin korunmasını nasıl sağladığı hakkında bilgi edinin.
-          url: scheduler-trust-privacy.md
-        - title: Microsoft 365 için Zamanlayıcı'yı Ayarlama
-          summary: Microsoft 365 için Zamanlayıcı'yı ayarlamak üzere nelerin gerekli olduğunu öğrenin.
-          url: scheduler-setup.md
-        - title: Microsoft 365 için Zamanlayıcı'yı kullanın
-          summary: Microsoft 365 için Zamanlayıcı'yı nasıl kullanacağınızı öğrenin.
-          url: scheduler-using.md
-        - title: Dinamik olarak yinelenen toplantılar planlayın
-          summary: Dinamik olarak yinelenen toplantılar planlama hakkında daha fazla bilgi edinin.
-          url: scheduler-recurring-meetings.md
-        - title: Zamanlayıcı hakkında SSS
-          summary: Microsoft 365 için Zamanlayıcı'da sık sorulan sorular ve yanıtları.
-          url: scheduler-faqs.md
+  - items:
+    - title: Microsoft 365 için Zamanlayıcı nedir?
+      summary: Microsoft 365 için Zamanlayıcı ve özelliklerinin, kime ve nasıl fayda sağlayacağı hakkında bilgi edinin.
+      url: scheduler-overview.md
+    - title: Güven ve gizlilik
+      summary: Microsoft 365 için Zamanlayıcı'nın Güven ve Gizliliğinizin korunmasını nasıl sağladığı hakkında bilgi edinin.
+      url: scheduler-trust-privacy.md
+    - title: Microsoft 365 için Zamanlayıcı'yı Ayarlama
+      summary: Microsoft 365 için Zamanlayıcı'yı ayarlamak üzere nelerin gerekli olduğunu öğrenin.
+      url: scheduler-setup.md
+    - title: Microsoft 365 için Zamanlayıcı'yı kullanın
+      summary: Microsoft 365 için Zamanlayıcı'yı nasıl kullanacağınızı öğrenin.
+      url: scheduler-using.md
+    - title: Dinamik olarak yinelenen toplantılar planlayın
+      summary: Dinamik olarak yinelenen toplantılar planlama hakkında daha fazla bilgi edinin.
+      url: scheduler-recurring-meetings.md
+    - title: Zamanlayıcı hakkında SSS
+      summary: Microsoft 365 için Zamanlayıcı'da sık sorulan sorular ve yanıtları.
+      url: scheduler-faqs.md

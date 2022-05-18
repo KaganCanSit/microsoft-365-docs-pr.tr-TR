@@ -1,5 +1,5 @@
 ---
-title: Microsoft Üretkenlik Puanı - Gizlilik
+title: Microsoft Üretkenlik Puanı ve gizlilik içgörüleri
 f1.keywords:
 - NOCSH
 ms.author: efrene
@@ -17,29 +17,29 @@ ms.custom: AdminSurgePortfolio
 search.appverid:
 - MET150
 - MOE150
-description: Üretkenlik Puanı ile gizlilik nasıl korunur.
-ms.openlocfilehash: 94e0e1fb3190bc45fb0ad580cd823cb121fb60cf
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Gizlilik, Üretkenlik Puanı ile nasıl korunur?
+ms.openlocfilehash: 823e2cc087d3f0e9c486d8c0c4eca92ba42aee21
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63320739"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65467942"
 ---
 # <a name="privacy-controls-for-productivity-score"></a>Üretkenlik Puanı için gizlilik denetimleri
 
-Üretkenlik Puanı, kullanım deneyimi ve bunu destekleyen teknoloji deneyimleri aracılığıyla, Microsoft 365 dijital dönüşüm yolculuğuna içgörüler sağlar.  Kuruluş puanı kişi ve teknoloji deneyimi ölçülerini yansıtarak sizinkilere benzer kuruluşların kıyaslamalarına göre karşılaştırabilirsiniz. Daha fazla ayrıntı için Üretkenlik [Puanına genel bakış bilgilerini gözden geçin](productivity-score.md).
+Üretkenlik Puanı, kuruluşunuzun Microsoft 365 kullanımı ve onu destekleyen teknoloji deneyimleri aracılığıyla dijital dönüşüm yolculuğuna ilişkin içgörüler sağlar.  Kuruluşunuzun puanı, kişi ve teknoloji deneyimi ölçümlerini yansıtır ve sizinkine benzer kuruluşların karşılaştırmalarıyla karşılaştırılabilir. Diğer ayrıntılar için [Üretkenlik Puanına genel bakış](productivity-score.md) bölümünü görüntüleyin.
 
-Gizliliğiniz Microsoft için önemlidir. Gizliliğinizi nasıl korumamız olduğunu öğrenmek için [Microsoft'un gizlilik bildirimine bakın](https://privacy.microsoft.com/privacystatement). Üretkenlik Puanı, kuruluş yöneticisi olarak size, görüntüleyilen Üretkenlik Puanı bilgisinin işlemde kullanılabilir olduğundan emin olmak için gizlilik ayarlarına erişmenizi sağlar ve aynı zamanda microsoft'ta organizasyon güveninden ödün vermeden.
+Gizliliğiniz Microsoft için önemlidir. Gizliliğinizi nasıl koruduğumuz hakkında bilgi edinmek için [Microsoft'un gizlilik bildirimine](https://privacy.microsoft.com/privacystatement) bakın. Üretkenlik Puanı, kuruluşunuzun BT yöneticisi olarak, görüntülediğiniz Üretkenlik Puanı bilgilerinin eyleme dönüştürülebilir olduğundan emin olmanıza yardımcı olmak için gizlilik ayarlarına erişim sağlar ve kuruluşunuzun Microsoft'ta yer aldığı güveni tehlikeye atamaz.
 
-Kişiler deneyimi alanında, ölçümler yalnızca kuruluş düzeyinde kullanılabilir. Bu alanda, içerik işbirliği, Microsoft 365, toplantılar, ekip çalışması ve iletişim kategorilerine bakarak kişilerin çalışma ve çalışma saatlerini nasıl kullanıyor olduğu yer almaktadır. İç gizlilik ilkesi ihtiyaçlarınızı karşılamanıza yardımcı olmak için size çeşitli denetim düzeyleri sağlaruz.
-Denetimler size şunları sağlar:
+Kişiler deneyimleri alanında ölçümler yalnızca kuruluş düzeyinde kullanılabilir. Bu alan, içerik işbirliği, hareketlilik, toplantılar, ekip çalışması ve iletişim kategorilerine bakarak kişilerin Microsoft 365 nasıl kullandıklarını inceler. İç gizlilik ilkesi gereksinimlerinizi karşılamanıza yardımcı olmak için çeşitli denetim düzeyleriyle size olanak sağlarız.
+Denetimler size şu bilgileri verir:
 
-- Üretkenlik Puanı'daki bilgileri kimlerin göreceğini kontrol etmek için esnek yönetici rolleri.
-- Kişiler deneyimi alanında bu özelliği devre dışı bırakma özelliği.
+- Üretkenlik Puanı'nda bilgileri kimlerin görebileceğini denetlemek için esnek yönetici rolleri.
+- kişi deneyimleri alanından çıkma özelliği.
 
-## <a name="flexible-admin-roles-to-control-who-can-see-the-information-in-productivity-score"></a>Üretkenlik Puanı'daki bilgileri kimlerin göreceğini kontrol etmek için esnek yönetici rolleri
+## <a name="flexible-admin-roles-to-control-who-can-see-the-information-in-productivity-score"></a>Üretkenlik Puanı'nda bilgileri kimlerin görebileceğini denetlemek için esnek yönetici rolleri
 
-Üretkenlik Puanı'nın tamamını görüntülemek için aşağıdaki yönetici rollerinden biri olmak gerekir:
+Üretkenlik Puanı'nın tamamını görüntülemek için aşağıdaki yönetici rollerinden biri olmanız gerekir:
 
 - Genel yönetici
 - Exchange yöneticileri
@@ -50,11 +50,11 @@ Denetimler size şunları sağlar:
 - Rapor Okuyucusu
 - Kullanım Özeti Raporları Okuyucusu
 
-Değişiklik yönetiminden ve benimsemeden sorumlu olan ancak mutlaka bir IT yöneticisi olması gerekmemesi için, Rapor Okuyucusu'nun veya Kullanım Özeti Rapor Okuyucusu'nun rolünü atama. Bu rol, ilgili yönetim merkezinde üretkenlik puanı deneyiminin Microsoft 365 verir.
+Rapor Okuyucusu veya Kullanım Özeti Raporları Okuyucusu rolünü, değişiklik yönetimi ve benimsemeden sorumlu olan, ancak bt yöneticisi olması gerekmeyen herkese atayın. Bu rol, Microsoft 365 yönetim merkezinde üretkenlik puanı deneyiminin tamamına erişmelerini sağlar.
 
-Kullanım Özeti Rapor Okuyucusu rolü, 2020'nin sonlarında Kaynaktan atanıncaya kadar, PowerShell cmdlet'leri aracılığıyla atanacak Microsoft 365 yönetim merkezi gerekir.
+Kullanım Özeti Raporları Okuyucusu rolünün, 2020'nin sonraki Microsoft 365 yönetim merkezi atanabilene kadar PowerShell cmdlet'leri aracılığıyla atanmalıdır.
 
-PowerShell ile Kullanım Özeti Rapor Okuyucusu rolünü atamak için:
+PowerShell ile Kullanım Özeti Raporları Okuyucusu rolünü atamak için:
 
 - Aşağıdaki PowerShell'i çalıştırın:
 
@@ -70,14 +70,14 @@ Add-AzureADDirectoryRoleMember -ObjectId $role.ObjectId -RefObjectId $u.ObjectId
 </br>
 
 
-## <a name="capability-to-opt-out-of-people-experiences"></a>Kişi deneyimlerini devre dışı bırakma özelliği
+## <a name="capability-to-opt-out-of-people-experiences"></a>Kişi deneyimlerini geri çevirme özelliği
 
-Ayrıca, Üretkenlik Puanı alanında kişiler deneyimini devre dışı abilirsiniz. Bu seçeneği devre dışı tercih etmek için, organizasyondan hiç kimse bu ölçümleri görüntülemez ve organizasyonunız iletişim, toplantılar, ekip çalışması, içerik işbirliği ve mobil kullanımla ilgili tüm hesaplamalardan kaldırılır. Organizasyon organizasyonunun kişi deneyimi raporlarında yer almaktan vazgeçmek için Genel yönetici olmak gerekir.
+Ayrıca Üretkenlik Puanı'nın kişi deneyimleri alanından da çıkabilirsiniz. Devre dışı bırakmanız durumunda kuruluşunuzdan hiç kimse bu ölçümleri görüntüleyemez ve kuruluşunuz iletişim, toplantılar, ekip çalışması, içerik işbirliği ve mobilite içeren hesaplamalardan kaldırılacaktır. Kuruluşunuzun kişi deneyim raporları dışında bırakılabilmesi için Genel yönetici olmanız gerekir.
 
-Devre dışı bırakma:
+Geri çevirmek için:
 
-1. Yönetim merkezinde ÜrünÜrünleri **Puanı Ayarlar**  >   **Org Ayarlar** >  **gidin**.
-2. Kişiler deneyimi öngörüleri için kullanılacak **kullanım Microsoft 365 ve veri kullanımına izin ver onay kutusunun işaretini kaldırın**. Intune yapılandırma yöneticisinde Uç Nokta Analizi için veri paylaşımı ayarlarını değiştirme hakkında bilgi edinmek için Daha fazla **bilgi'yi seçin**.
-3. **Kaydet'i seçin**.
+1. Yönetim merkezinde **Ayarlar** **Org Ayarlar** >   >   **Ürünlük Puanı'na** gidin.
+2. **kişiler içgörüler yaşarken Microsoft 365 kullanım verilerinin kullanılmasına izin ver** kutusunun işaretini kaldırın. Intune yapılandırma yöneticisinde Endpoint Analytics için veri paylaşımı ayarlarının nasıl değiştirileceği hakkında bilgi edinmek için **Daha fazla bilgi'yi** seçin.
+3. **Kaydet'i** seçin.
 
-:::image type="content" source="../../media/orgsettingspageoptout.png" alt-text="Kişi deneyimlerinden vazgeçmeyi tercih edebilirsiniz kuruluş ayarları sayfası.":::
+:::image type="content" source="../../media/orgsettingspageoptout.png" alt-text="Kişi deneyimlerini geri çevirebileceğiniz kuruluş ayarları sayfası.":::

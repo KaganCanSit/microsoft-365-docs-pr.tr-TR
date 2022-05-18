@@ -23,14 +23,14 @@ ms.custom:
 search.appverid: MET150
 description: Ürün lisanslarının atamasını kaldırmak için kullandığınız yöntem, lisansları belirli kullanıcılardan mı yoksa belirli bir üründen mi kaldırdığınıza bağlıdır.
 ms.date: 04/22/2022
-ms.openlocfilehash: b5294bd6234c36e6040ff8cc7433c3e66b7d34b6
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 29d46ac745487328ecfe49bf658fdaa79fa346d9
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65093712"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65465810"
 ---
-# <a name="unassign-licenses-from-users"></a>Kullanıcıların lisans atamalarını kaldırma
+# <a name="unassign-microsoft-365-licenses-from-users"></a>Kullanıcılardan Microsoft 365 lisanslarının atamasını kaldırma
 
 Kullanıcılardan lisans atamalarını **Etkin kullanıcılar** sayfasından veya **Lisanslar** sayfasından kaldırabilirsiniz. Kullandığınız yöntem, belirli kullanıcıların ürün lisanslarını kaldırmak mı yoksa belirli bir üründen kullanıcı lisanslarının atamasını kaldırmak mı istediğinize bağlıdır.
 

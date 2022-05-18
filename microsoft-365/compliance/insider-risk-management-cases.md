@@ -1,7 +1,7 @@
 ---
 title: Insider risk yönetimi durumları
-description: Microsoft Purview'da insider risk yönetimi durumları hakkında bilgi edinin
-keywords: Microsoft 365, Microsoft Purview, insider riski, risk yönetimi, uyumluluk
+description: Microsoft Purview'de insider risk yönetimi durumları hakkında bilgi edinin
+keywords: Microsoft 365, Microsoft Purview, iç risk, risk yönetimi, uyumluluk
 ms.localizationpriority: medium
 ms.service: O365-seccomp
 ms.topic: article
@@ -13,12 +13,12 @@ manager: laurawi
 audience: itpro
 ms.collection: m365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: 687eb92693d3343fb0ef5b2392d4622d9af4bb9d
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 916fb67d8fb2376a1a59d3d2aa61a8e7d041f194
+ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64971957"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65469392"
 ---
 # <a name="insider-risk-management-cases"></a>Insider risk yönetimi durumları
 
@@ -145,7 +145,7 @@ Servis talebi notları panosu, notu oluşturan kullanıcının notlarını ve no
 
 Bir servis talebine not eklemek için:
 
-1. [Microsoft Purview uyumluluk portalında](https://compliance.microsoft.com) **Insider risk yönetimi'ne** gidin ve **Servis Talepleri** sekmesini seçin.
+1. [Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com) **Insider risk yönetimi'ne** gidin ve **Servis Talepleri** sekmesini seçin.
 2. Bir servis talebi seçin ve ardından **Servis Talebi notları** sekmesini seçin.
 3. **Büyük/küçük harf notu ekle'yi** seçin.
 4. **Servis talebi notu ekle** iletişim kutusunda, servis talebi için notunuzu yazın. Notu servis talebine eklemek için **Kaydet'i** veya notu servis talebine kaydetmeden Kapatmayı **iptal et'i** seçin.
@@ -162,7 +162,7 @@ Bir kullanıcıyı katkıda bulunan olarak ekleyerek bir servis talebine geçici
 
 Bir servis talebine katkıda bulunan eklemek için:
 
-1. [Microsoft Purview uyumluluk portalında](https://compliance.microsoft.com) **Insider risk yönetimi'ne** gidin ve **Servis Talepleri** sekmesini seçin.
+1. [Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com) **Insider risk yönetimi'ne** gidin ve **Servis Talepleri** sekmesini seçin.
 2. Bir servis talebi seçin ve katkıda **bulunanlar** sekmesini seçin.
 3. **Katkıda bulunan ekle'yi** seçin.
 4. **Katkıda bulunan ekle** iletişim kutusunda, eklemek istediğiniz kullanıcının adını yazmaya başlayın ve ardından önerilen kullanıcı listesinden kullanıcıyı seçin. Bu liste, kiracı aboneliğinizin Azure Active Directory oluşturulur.
@@ -180,7 +180,7 @@ Bir kullanıcıya e-posta bildirimi göndermenin * sorunu _Closed* olarak **çö
 
 Servis talebine atanan kullanıcıya bildirim göndermek için:
 
-1. [Microsoft Purview uyumluluk portalında](https://compliance.microsoft.com) **Insider risk yönetimi'ne** gidin ve **Servis Talepleri** sekmesini seçin.
+1. [Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com) **Insider risk yönetimi'ne** gidin ve **Servis Talepleri** sekmesini seçin.
 2. Bir servis talebi seçin ve servis talebi eylem araç çubuğunda **e-posta bildirimi gönder** düğmesini seçin.
 3. **E-posta bildirimi gönder** iletişim kutusunda Bildirim **şablonu seçin** açılan denetimini seçerek bildirimin bildirim şablonunu seçin. Bu seçim, bildirimdeki diğer alanları önceden doldurur.
 4. Bildirim alanlarını gözden geçirin ve uygun şekilde güncelleştirin. Buraya girilen değerler şablondaki değerleri geçersiz kılar.
@@ -188,17 +188,17 @@ Servis talebine atanan kullanıcıya bildirim göndermek için:
 
 ### <a name="escalate-for-investigation"></a>Araştırma için yükseltme
 
-Kullanıcının risk etkinliği için ek yasal inceleme gerektiren durumlarda kullanıcı araştırması için olayı yükseltin. Bu yükseltme, Microsoft 365 kuruluşunuzda yeni bir Microsoft Purview eKeşif (Premium) olayı açar. eBulma (Premium), kuruluşunuzun iç ve dış yasal araştırmalarına yanıt veren içeriği korumak, toplamak, gözden geçirmek, analiz etmek ve dışarı aktarmak için uçtan uca bir iş akışı sağlar. Ayrıca, yasal ekibinizin bir olaya dahil olan koruyucularla iletişim kurmak için yasal tutma bildirimi iş akışının tamamını yönetmesine olanak tanır. Bir iç risk yönetimi olayından oluşturulan bir eBulma (Premium) olayında bir gözden geçireni koruyucu olarak atamak, hukuk ekibinizin uygun eylemi gerçekleştirmesine ve içerik korumayı yönetmesine yardımcı olur. eBulma (Premium) durumları hakkında daha fazla bilgi edinmek için bkz. [Microsoft Purview eKeşif'e Genel Bakış (Premium)](overview-ediscovery-20.md).
+Kullanıcının risk etkinliği için ek yasal inceleme gerektiren durumlarda kullanıcı araştırması için olayı yükseltin. Bu yükseltme, Microsoft 365 kuruluşunuzda yeni bir Microsoft Purview eBulma (Premium) olayı açar. eBulma (Premium), kuruluşunuzun iç ve dış yasal araştırmalarına yanıt veren içeriği korumak, toplamak, gözden geçirmek, analiz etmek ve dışarı aktarmak için uçtan uca bir iş akışı sağlar. Ayrıca, yasal ekibinizin bir olaya dahil olan koruyucularla iletişim kurmak için yasal tutma bildirimi iş akışının tamamını yönetmesine olanak tanır. Bir şirket içi risk yönetimi olayından bir eBulma (Premium) olayına geçiş yapmak, yasal ekibinizin uygun eylemleri gerçekleştirmesine ve içerik korumasını yönetmesine yardımcı olur. eBulma (Premium) durumları hakkında daha fazla bilgi edinmek için bkz. [Microsoft Purview eKeşif'e (Premium) genel bakış](overview-ediscovery-20.md).
 
 Bir olayı kullanıcı araştırmasına ilerletmek için:
 
-1. [Microsoft Purview uyumluluk portalında](https://compliance.microsoft.com) **Insider risk yönetimi'ne** gidin ve **Servis Talepleri** sekmesini seçin.
+1. [Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com) **Insider risk yönetimi'ne** gidin ve **Servis Talepleri** sekmesini seçin.
 2. Bir servis talebi seçin ve ardından servis talebi eylem araç çubuğunda **araştırma için yükselt** düğmesini seçin.
 3. **Araştırma için yükselt** iletişim kutusunda, yeni kullanıcı araştırması için bir ad girin. Gerekirse servis talebiyle ilgili notlar girin ve **Yükselt'i** seçin.
 4. Bildirim alanlarını gözden geçirin ve uygun şekilde güncelleştirin. Buraya girilen değerler şablondaki değerleri geçersiz kılar.
 5. Kullanıcı araştırma olayı oluşturmak için **Onayla'yı** seçin veya yeni bir kullanıcı araştırma olayı oluşturmadan iletişim kutusunu kapatmak için **İptal'i** seçin.
 
-Insider risk yönetimi olayı yeni bir kullanıcı araştırma olayına yükseltildikten sonra, yeni olayı Microsoft Purview uyumluluk portalındaki **eKeşifGelişmiş** >  alanında gözden geçirebilirsiniz.
+Insider risk yönetimi olayı yeni bir kullanıcı araştırma olayına yükseltildikten sonra, yeni olayı Microsoft Purview uyumluluk portalı **eKeşifGelişmiş** >  alanında gözden geçirebilirsiniz.
 
 ### <a name="run-automated-tasks-with-power-automate-flows-for-the-case"></a>Servis talebi için Power Automate akışlarıyla otomatik görevleri çalıştırma
 
@@ -236,7 +236,7 @@ Risk analistleri ve araştırmacılar incelemelerini ve araştırmalarını tama
 
 Bir sorunu çözmek için:
 
-1. [Microsoft Purview uyumluluk portalında](https://compliance.microsoft.com) **Insider risk yönetimi'ne** gidin ve **Servis Talepleri** sekmesini seçin.
+1. [Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com) **Insider risk yönetimi'ne** gidin ve **Servis Talepleri** sekmesini seçin.
 2. Bir servis talebi seçin, ardından servis talebi eylem araç çubuğunda servis **talebini çöz** düğmesini seçin.
 3. **Servis talebini çözümle** iletişim kutusunda, servis talebi için çözüm sınıflandırmasını seçmek üzere **Farklı çözümle** açılan denetimini seçin. Seçenekler **Zararsız** veya **Onaylanan ilke ihlalidir**.
 4. **Servis talebini çöz** iletişim kutusunda, **Eylem gerçekleştirilen** metin alanına çözüm sınıflandırmasının nedenlerini girin.
