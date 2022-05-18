@@ -15,12 +15,12 @@ ms.custom:
 search.appverid: MET150
 ms.localizationpriority: high
 description: SharePoint Syntex ayarlama
-ms.openlocfilehash: 0d7cbe0f99747629bcac581bd080d88af27e8a06
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 97d12527667de1583f787844da11a4ad875f34ba
+ms.sourcegitcommit: 37111bc0c5a6cc4690f7144a019bbff11d44858f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64935379"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65463153"
 ---
 # <a name="set-up-sharepoint-syntex"></a>SharePoint Syntex ayarlama
 
@@ -45,7 +45,13 @@ Kurulumdan önce ortamınızda içerik anlama özelliğini ayarlamanın ve yapı
 
 Yönetici olarak, kurulumdan sonra istediğiniz zaman ve <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> içerik anlama yönetimi ayarları boyunca seçtiğiniz ayarlarda değişiklik yapabilirsiniz.
 
-Özel bir Power Platform ortamı kullanmayı planlıyorsanız, form işleme modelleri oluşturabilmeniz [için önce bu ortamda *Cortex Projesi için* AI Builder uygulamasını yüklemeniz](/power-platform/admin/manage-apps#install-an-app-in-the-environment-view) ve [buna AI Builder kredileri ayırmanız](/power-platform/admin/capacity-add-on) gerekir. Özel bir ortam kullanırken, model oluşturuculara Ortam Oluşturucu güvenlik rolü atanmalı ve model kullanıcılarına Temel Kullanıcı güvenlik rolü atanmalıdır. Daha fazla bilgi için bkz. [Kullanıcıya güvenlik rolü atama](/power-platform/admin/assign-security-roles) .
+### <a name="custom-power-platform-environments"></a>Özel Power Platform ortamları
+
+Özel bir Power Platform ortamı kullanmayı planlıyorsanız, bu ortamda *Cortex Projesi için AI Builder* uygulamasını yüklemeniz gerekir. Ayrıntılar için [bkz. Dynamics 365 uygulamalarını yönetme](/power-platform/admin/manage-apps#install-an-app-in-the-environment-view) ve Dynamics 365 uygulamaları listesinde *Cortex Projesi için AI Builder* uygulamasını arama.
+
+Form işleme modelleri oluşturabilmeniz için önce özel ortama [AI Builder kredileri ayırmanız](/power-platform/admin/capacity-add-on) da gerekir. 
+
+Özel bir ortam kullanırken, model oluşturuculara Ortam Oluşturucu güvenlik rolü atanmalı ve model kullanıcılarına Temel Kullanıcı güvenlik rolü atanmalıdır. Daha fazla bilgi için bkz. [Kullanıcıya güvenlik rolü atama](/power-platform/admin/assign-security-roles) .
 
 [İçerik merkezi sitesinde](/microsoft-365/contentunderstanding/create-a-content-center) model oluşturan kullanıcıların site üyesi olması gerekir. İçerik merkezi dışında yerel olarak model oluşturan kullanıcıların bu sitelerin site sahipleri olması gerekir.
 

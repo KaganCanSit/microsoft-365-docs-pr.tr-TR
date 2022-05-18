@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Bir değerlendirme gözden geçirmesi kullandığınızda veya kayıt olarak işaretlenen öğeler yapılandırdığınız ayarlara göre otomatik olarak silinirken içerik elden çıkarma işlemini izleyin ve yönetin.
-ms.openlocfilehash: c8a9db05367dd7007ad164bbfe95e4a190253f85
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: 34ac1a9d3b62cd0806318582f7baef76947d7670
+ms.sourcegitcommit: 37111bc0c5a6cc4690f7144a019bbff11d44858f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65285138"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "65463274"
 ---
 # <a name="disposition-of-content"></a>İçeriğin konumu
 
@@ -30,7 +30,7 @@ ms.locfileid: "65285138"
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Değerlendirme incelemelerini yönetmek ve saklama döneminin sonunda otomatik olarak silinen [kayıtların](records-management.md#records) meta verilerini görüntülemek için Microsoft Purview uyumluluk portalındaki **Kayıt Yönetimi'ndeki** Ayrıştırma **sayfasını kullanın**.
+Microsoft Purview uyumluluk portalı **Kayıt Yönetimi'ndeki** **Ayrıştırma** sayfasını kullanarak değerlendirme gözden geçirmelerini yönetin ve saklama döneminin sonunda otomatik olarak silinen [kayıtların](records-management.md#records) meta verilerini görüntüleyin.
 
 ## <a name="prerequisites-for-viewing-content-dispositions"></a>İçerik eğilimlerini görüntüleme önkoşulları
 
@@ -38,31 +38,31 @@ Değerlendirme gözden geçirmelerini yönetmek ve kayıtların silindiğini ona
 
 ### <a name="permissions-for-disposition"></a>Değerlendirme izinleri
 
-Microsoft Purview uyumluluk portalında **Disposition** sekmesine başarıyla erişmek için kullanıcıların **Disposition Management** rolüne sahip olması gerekir. Aralık 2020'den itibaren bu rol artık **Kayıt Yönetimi** varsayılan rol grubuna dahil edilir.
+Microsoft Purview uyumluluk portalı'daki **Disposition** sekmesine başarıyla erişmek için kullanıcıların **Disposition Management** rolüne sahip olması gerekir. Aralık 2020'den itibaren bu rol artık **Kayıt Yönetimi** varsayılan rol grubuna dahil edilir.
 
 > [!NOTE]
 > Varsayılan olarak genel yöneticiye **Disposition Management** rolü verilmez. 
 
 Kullanıcılara, bekletme ve kayıt yönetimi için diğer özellikleri görüntüleme ve yapılandırma izinleri vermeden yalnızca ayrıştırma gözden geçirmeleri için gereken izinleri vermek için, özel bir rol grubu oluşturun (örneğin, "Değerlendirmeyi Gözden Geçirenler" olarak adlandırılır) ve bu gruba **Disposition Management** rolünü verin.
 
-Varsayılan rollere kullanıcı ekleme veya kendi rol gruplarınızı oluşturma yönergeleri için bkz. [Microsoft Purview uyumluluk portalında İzinler](microsoft-365-compliance-center-permissions.md).
+Varsayılan rollere kullanıcı ekleme veya kendi rol gruplarınızı oluşturma yönergeleri için bkz. [Microsoft Purview uyumluluk portalı izinler](microsoft-365-compliance-center-permissions.md).
 
 Ayrıca:
 
-- Değerlendirme işlemi sırasında öğelerin içeriğini görüntülemek için, kullanıcıları **İçerik Gezgini İçerik Görüntüleyicisi** rol grubuna ekleyin. Kullanıcılar bu rol grubundan izinlere sahip değilse, değerlendirme gözden geçirmesini tamamlamak için yine de bir değerlendirme gözden geçirme eylemi seçebilirler, ancak bunu Microsoft Purview uyumluluk portalındaki mini önizleme bölmesinden öğenin içeriğini görüntüleyemeden yapmalıdır.
+- Değerlendirme işlemi sırasında öğelerin içeriğini görüntülemek için, kullanıcıları **İçerik Gezgini İçerik Görüntüleyicisi** rol grubuna ekleyin. Kullanıcılar bu rol grubundan izinlere sahip değilse, değerlendirme gözden geçirmesini tamamlamak için yine de bir değerlendirme gözden geçirme eylemi seçebilirler, ancak bunu Microsoft Purview uyumluluk portalı mini önizleme bölmesinden öğenin içeriğini görüntüleyemeden yapmalıdır.
 
-- Varsayılan olarak, **Disposition** sayfasına erişen her kişi yalnızca gözden geçirmek üzere atandığı öğeleri görür. Kayıt yönetimi yöneticisinin tüm kullanıcılara atanan tüm öğeleri ve edat için yapılandırılmış tüm bekletme etiketlerini görebilmesi için gözden geçirme: **Kayıt yönetimi ayarlarıEşit'e** >  **gidip** yönetici hesaplarını içeren posta özellikli bir güvenlik grubu seçin ve etkinleştirin.
+- Varsayılan olarak, **Disposition** sayfasına erişen her kişi yalnızca gözden geçirmek üzere atanan öğeleri görür. Kayıt yönetimi yöneticisinin tüm kullanıcılara atanan tüm öğeleri ve edat için yapılandırılmış tüm bekletme etiketlerini görebilmesi için gözden geçirme: **Kayıt yönetimi ayarlarıEşit'e** >  **gidip** yönetici hesaplarını içeren posta özellikli bir güvenlik grubu seçin ve etkinleştirin.
     
     posta etkin olmayan Microsoft 365 grupları ve güvenlik grupları bu özelliği desteklemez ve seçmek için listede görüntülenmez. Posta özellikli yeni bir güvenlik grubu oluşturmanız gerekiyorsa, yeni grubu oluşturmak için <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> bağlantısını kullanın. 
     
     > [!IMPORTANT]
-    > Grubu etkinleştirdikten sonra Microsoft Purview uyumluluk portalında değiştiremezsiniz. PowerShell kullanarak farklı bir grubu etkinleştirme hakkında bilgi için sonraki bölüme bakın.
+    > Grubu etkinleştirdikten sonra Microsoft Purview uyumluluk portalı değiştiremezsiniz. PowerShell kullanarak farklı bir grubu etkinleştirme hakkında bilgi için sonraki bölüme bakın.
 
 - **Kayıt yönetimi ayarları** seçeneği yalnızca kayıt yönetimi yöneticileri tarafından görülebilir. 
 
 #### <a name="enabling-another-security-group-for-disposition"></a>Başka bir güvenlik grubunu ayrıştırma için etkinleştirme
 
-Microsoft Purview uyumluluk portalındaki **Kayıt yönetimi ayarlarından** bir güvenlik grubunu kullanıma almak üzere etkinleştirdikten sonra, grup için bu izni devre dışı bırakamaz veya Microsoft Purview uyumluluk portalında seçili grubu değiştiremezsiniz. Ancak [Enable-ComplianceTagStorage](/powershell/module/exchange/enable-compliancetagstorage) cmdlet'ini kullanarak başka bir posta özellikli güvenlik grubunu etkinleştirebilirsiniz.
+Microsoft Purview uyumluluk portalı **Kayıt yönetimi ayarlarından** bir güvenlik grubunu kullanıma açmak üzere etkinleştirdikten sonra, grup için bu izni devre dışı bırakamaz veya Microsoft Purview uyumluluk portalı seçili grubu değiştiremezsiniz. Ancak [Enable-ComplianceTagStorage](/powershell/module/exchange/enable-compliancetagstorage) cmdlet'ini kullanarak başka bir posta özellikli güvenlik grubunu etkinleştirebilirsiniz.
 
 Örneğin: 
 
@@ -72,7 +72,7 @@ Enable-ComplianceTagStorage -RecordsManagementSecurityGroupEmail dispositionrevi
 
 ### <a name="enable-auditing"></a>Denetimi etkinleştirme
 
-İlk değerlendirme eyleminden en az bir gün önce denetimin etkinleştirildiğinden emin olun. Daha fazla bilgi için bkz [. Microsoft Purview uyumluluk portalında denetim günlüğünde arama](search-the-audit-log-in-security-and-compliance.md) yapma. 
+İlk değerlendirme eyleminden en az bir gün önce denetimin etkinleştirildiğinden emin olun. Daha fazla bilgi için bkz[. Microsoft Purview uyumluluk portalı denetim günlüğünde arama](search-the-audit-log-in-security-and-compliance.md) yapma. 
 
 ## <a name="disposition-reviews"></a>Değerlendirme değerlendirmeleri
 
@@ -88,7 +88,7 @@ Bekletme süresinin sonunda bir değerlendirme gözden geçirmesi tetiklendiğin
 
 Gözden geçirenlerin aldığı bildirim e-postasını, farklı dillerde yönergeler de dahil olmak üzere özelleştirebilirsiniz. Çok dilli destek için çevirileri kendiniz belirtmeniz gerekir ve bu özel metin yerel ayarlarına bakılmadan tüm gözden geçirenlere görüntülenir.
 
-Kullanıcılar, öğenin saklama süresinin sonunda etiket başına bir ilk e-posta bildirimi alır ve etiket başına haftada bir kez kendilerine atanan tüm değerlendirme gözden geçirmelerinin anımsatıcısını alır. İçeriği gözden geçirmek ve eyleme geçmek için doğrudan Microsoft Purview uyumluluk portalındaki **Records** **managementDisposition** >  sayfasına gitmek için bildirim ve anımsatıcı e-postalarındaki bağlantıya tıklayabilir. Alternatif olarak, gözden geçirenler Microsoft Purview uyumluluk portalında bu **Değerlendirme** sayfasına gidebilir. Sonra:
+Kullanıcılar, öğenin saklama süresinin sonunda etiket başına bir ilk e-posta bildirimi alır ve bunların atandığı tüm değerlendirmelerin haftada bir etiket başına anımsatıcısı olur. İçeriği gözden geçirmek ve eyleme geçmek için bildirim ve anımsatıcı e-postalarındaki bağlantıya tıklayarak doğrudan Microsoft Purview uyumluluk portalı **Kayıtlar yönetimiDisposition** >  sayfasına gidebilirler. Alternatif olarak, gözden geçirenler Microsoft Purview uyumluluk portalı bu **Değerlendirme** sayfasına gidebilir. Sonra:
 
 - Gözden geçirenler yalnızca kendilerine atanan değerlendirme gözden geçirmelerini görürken, kayıt yöneticisi için seçilen güvenlik grubuna eklenen yöneticiler tüm değerlendirme gözden geçirmelerini görür.
 
@@ -109,7 +109,7 @@ Yöneticiler, **Genel Bakış** sekmesinde bekleyen tüm eğilimlere genel bir b
 
 **Bekleyen tüm değerlendirmeleri görüntüle'yi** seçtiğinizde, **Değerlendirme** sayfasına yönlendirilirsiniz. Örneğin:
 
-![Microsoft Purview uyumluluk portalındaki Dispositions sayfası.](../media/disposition-tab.png)
+![Microsoft Purview uyumluluk portalı'daki Dispositions sayfası.](../media/disposition-tab.png)
 
 
 ### <a name="workflow-for-a-disposition-review"></a>Değerlendirme gözden geçirmesi için iş akışı
@@ -122,30 +122,30 @@ Aşağıdaki diyagramda, bekletme etiketi yayımlandığında ve ardından kulla
 
 Bekletme süresinin sonunda bir değerlendirme gözden geçirmesinin tetiklenmesi, yalnızca bekletme etiketiyle kullanılabilen bir yapılandırma seçeneğidir. Bekletme ilkesi için değerlendirme gözden geçirmesi kullanılamaz. Bu iki bekletme çözümü hakkında daha fazla bilgi için bkz. [Bekletme ilkeleri ve bekletme etiketleri hakkında bilgi edinin](retention.md).
 
-Bekletme etiketi için **Bekletme ayarlarını tanımla** sayfasından:
+Bekletme etiketi için **bekletme süresinden sonra ne olacağını seçin** sayfasından:
 
 ![Etiket için bekletme ayarları.](../media/disposition-review-option.png)
  
-Bu **Değerlendirme gözden geçirmesini tetikle** seçeneğini belirttikten sonra, yapılandırmanın sonraki sayfasında, kaç ardışık değerlendirme aşaması istediğinizi ve her aşama için değerlendirme gözden geçirenlerini belirtirsiniz:
+**Değerlendirme gözden geçirmesi başlat** seçeneğini seçtikten sonra **+ Aşama oluştur'u seçin ve gözden geçirenleri atayın**. Yapılandırmanın sonraki sayfasında, kaç ardışık değerlendirme aşaması istediğinizi ve her aşama için değerlendirme gözden geçirenlerini belirteceksiniz:
 
 ![Değerlendirme gözden geçirenlerini belirtme.](../media/disposition-reviewers.png) 
 
-**Aşama ekle'yi** seçin ve aşamanıza tanımlama amacıyla ad verin. Ardından bu aşama için gözden geçirenleri belirtin.
+**+ Aşama ekle'yi** seçin ve aşamanızı tanımlama amacıyla adlandırınız. Ardından bu aşama için gözden geçirenleri belirtin.
 
-Gözden geçirenler için bir kullanıcı veya posta özellikli bir güvenlik grubu belirtin. Microsoft 365 grupları ([eski adıyla Office 365 grupları](https://techcommunity.microsoft.com/t5/microsoft-365-blog/office-365-groups-will-become-microsoft-365-groups/ba-p/1303601)) bu seçenek için desteklenmez.
+Gözden geçirenler için en fazla 10 bireysel kullanıcı veya posta etkin güvenlik grubu belirtin. Microsoft 365 grupları ([eski adıyla Office 365 grupları](https://techcommunity.microsoft.com/t5/microsoft-365-blog/office-365-groups-will-become-microsoft-365-groups/ba-p/1303601)) bu seçenek için desteklenmez.
 
-Saklama süresinin sonunda bir öğeyi gözden geçirmek için birden fazla kişiye ihtiyacınız varsa **, Aşama ekle'yi** yeniden seçin ve yapılandırma işlemini ihtiyacınız olan aşama sayısı için en fazla beş aşamayla yineleyin. 
+Saklama süresinin sonunda bir öğeyi gözden geçirmek için birden fazla kişiye ihtiyacınız varsa **, Başka bir aşama ekle'yi** seçin ve yapılandırma işlemini ihtiyacınız olan aşama sayısı için en fazla beş aşama olacak şekilde yineleyin. 
 
 Ayrı ayrı her bir değerlendirme aşamasında, bu aşama için belirttiğiniz kullanıcılardan herhangi biri, saklama süresinin sonunda öğe için bir sonraki eylemi gerçekleştirme yetkisine sahiptir. Bu kullanıcılar, başka kullanıcıları da değerlendirme aşamalarına ekleyebilir.
 
 > [!NOTE]
-> Çok aşamalı değerlendirme kullanıma sunulmadan önce bekletme etiketlerini yapılandırdıysanız, etiketlerinizi bu özelliği destekleyecek şekilde yükseltebilirsiniz: Etiket sihirbazında **Aşama ekle'yi** seçin veya mevcut gözden geçirenleri düzenleyin ya da yeni gözden geçirenler ekleyin.
+> Çok aşamalı değerlendirme kullanılabilir olmadan önce bekletme etiketlerini yapılandırdıysanız, etiketlerinizi şu özelliği destekleyecek şekilde yükseltebilirsiniz: Etiketi düzenleyin ve **Bekletme döneminden sonra ne olacağını seçin** sayfasında **Aşamaları ve gözden geçirenleri düzenle'yi** seçin.
 
-Yapılandırma aşamasında, belirtilen her aşama için yeniden adlandırabilir, yeniden sıralayabilir veya Aşama eylemleri seçeneğini (**...**) seçerek kaldırabilirsiniz: 
+Yapılandırma aşaması sırasında, belirtilen her aşama için yeniden adlandırabilir, yeniden sıralayabilir veya Şimdi bir **değerlendirme gözden geçirmesi başlat** seçeneği için görüntülenen **Aşamaları ve gözden geçirenleri düzenle'yi** seçerek kaldırabilirsiniz. Ardından her aşama için Aşama eylemleri seçeneğini (**...**) belirleyebilirsiniz: 
 
 ![Değerlendirme gözden geçirmeleri için eylemleri hazırlama.](../media/stage-actions-disposition-review.png)
 
-Ancak, bekletme etiketini oluşturduktan sonra aşamayı yeniden sıralayamaz veya kaldıramazsınız.
+Ancak bekletme etiketini oluşturduktan sonra aşamayı yeniden sıralayamaz veya kaldıramazsınız. Yalnızca **Aşama ekle ve Aşamayı** **yeniden adlandır** seçeneklerini görürsünüz. Gözden geçirenleri düzenlemeye devam edebilirsiniz.
 
 Gözden geçirenlerinizi belirttikten sonra, onlara **Disposition Management** rol iznini vermeyi unutmayın. Daha fazla bilgi için bu sayfadaki [Disposition izinleri](#permissions-for-disposition) bölümüne bakın.
 
@@ -157,7 +157,7 @@ Gözden geçirene gönderilen örnek varsayılan e-posta bildirimi:
 
 İlk bildirim ve ardından anımsatıcılar için değerlendirme gözden geçirenlere gönderilen e-posta iletilerini özelleştirebilirsiniz.
 
-Microsoft Purview uyumluluk portalındaki Kayıt yönetimi sayfalarından **herhangi birinden Kayıt yönetimi ayarları'nı** seçin:  
+Microsoft Purview uyumluluk portalı kayıt yönetimi sayfalarından herhangi birinden **Kayıt yönetimi ayarları'nı** seçin:  
 
 ![Kayıt yönetimi ayarları.](../media/record-management-settings.png)
 
@@ -175,7 +175,7 @@ Değişiklikleri kaydetmek için **Kaydet'i** seçin.
 
 ### <a name="viewing-and-disposing-of-content"></a>İçeriği görüntüleme ve yok etme
 
-Bir gözden geçirene içeriğin gözden geçirilmeye hazır olduğu e-postayla bildirildiğinde, e-postadaki bir bağlantıya tıklayarak doğrudan Microsoft Purview uyumluluk portalındaki **Kayıt yönetimi'nin** **Disposition** sayfasına gidebilir. Burada gözden geçirenler, **Tür'de** **Bekleyen değerlendirme** görüntülendiğinde her bekletme etiketi için kaç öğenin değerlendirmeyi beklediğini görebilir. Ardından bir bekletme etiketi seçer ve bu etikete sahip tüm içeriği görmek için **Yeni pencerede aç'ı** seçer:
+Bir gözden geçirene içeriğin gözden geçirilmeye hazır olduğu e-postayla bildirildiğinde, e-postadaki bir bağlantıya tıklayarak doğrudan Microsoft Purview uyumluluk portalı **Kayıt yönetimi'ndeki** **Disposition** sayfasına gidebilir. Burada gözden geçirenler, **Tür'de** **Bekleyen değerlendirme** görüntülendiğinde her bekletme etiketi için kaç öğenin değerlendirmeyi beklediğini görebilir. Ardından bir bekletme etiketi seçer ve bu etikete sahip tüm içeriği görmek için **Yeni pencerede aç'ı** seçer:
 
 ![Değerlendirme gözden geçirmesi için yeni pencerede açın.](../media/open-in-new-window.png)
 
@@ -188,8 +188,8 @@ Yatay kaydırma çubuğunu kullanırsanız veya min-review bölmesini kapatırsa
 Gösterilen örnekte görebileceğiniz gibi desteklenen eylemler şunlardır: 
   
 - **Elden çıkarmayı onayla**:
-    - Bu eylem, değerlendirme gözden geçirmesinin geçici aşaması için seçildiğinde (birden çok aşama yapılandırmışsınız): Öğe bir sonraki değerlendirme aşamasına geçer.
-    - Bu eylem, değerlendirme gözden geçirmesinin son aşaması için seçildiğinde veya yalnızca bir değerlendirme aşaması olduğunda: Öğe kalıcı silme için uygun olarak işaretlenir ve bu süreölçer işi 7 gün içinde gerçekleştirilen eylemlerdir. Öğenin kalıcı olarak silinecek tam zamanlaması iş yüküne bağlıdır. Daha fazla bilgi için bkz[. SharePoint ve OneDrive için bekletme nasıl çalışır](retention-policies-sharepoint.md#how-retention-works-for-sharepoint-and-onedrive) ve [Exchange için bekletme nasıl çalışır](retention-policies-exchange.md#how-retention-works-for-exchange)?
+    - Bu eylem, bir değerlendirme gözden geçirmesinin geçici aşaması için seçildiğinde (birden çok aşama yapılandırdıysanız): Öğe bir sonraki değerlendirme aşamasına geçer.
+    - Bu eylem, değerlendirme gözden geçirmesinin son aşaması için seçildiğinde veya yalnızca bir değerlendirme aşaması varsa: Öğe kalıcı silme için uygun olarak işaretlenir ve bu süreölçer işi 7 gün içinde gerçekleştirilen eylemlerdir. Öğenin kalıcı olarak silinecek tam zamanlaması iş yüküne bağlıdır. Daha fazla bilgi için bkz[. SharePoint ve OneDrive için bekletme nasıl çalışır](retention-policies-sharepoint.md#how-retention-works-for-sharepoint-and-onedrive) ve [Exchange için bekletme nasıl çalışır](retention-policies-exchange.md#how-retention-works-for-exchange)?
 
 - **Yeniden etiketleme**:
     - Bu eylem seçildiğinde, öğe özgün etiket için değerlendirme gözden geçirme işleminden çıkar. Daha sonra öğe, yeni seçilen bekletme etiketinin bekletme ayarlarına tabidir.
