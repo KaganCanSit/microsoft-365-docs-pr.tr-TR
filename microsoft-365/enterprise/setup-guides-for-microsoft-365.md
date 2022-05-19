@@ -21,12 +21,12 @@ search.appverid:
 - BCS160
 ms.assetid: 165f46e8-3533-4d76-be57-97f81ebd40f2
 description: Kiracınızın lisanslarındaki özellikleri planlamak, geçirmek ve uygulamak için adım adım araçlar edinin. Çalıştırmanız gereken bir hizmeti veya uygulamayı ayarlamaya yönelik bir kılavuz bulun.
-ms.openlocfilehash: 61eccec443a939591e563daa5135239bf0e23a74
-ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
+ms.openlocfilehash: 5ffb0652b145bba6ae4e834815c5cb51b7ad2b94
+ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65188734"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "65535934"
 ---
 # <a name="setup-guides-for-microsoft-365-and-office-365-services"></a>Microsoft 365 ve Office 365 hizmetleri için kurulum kılavuzları
 
@@ -181,11 +181,11 @@ Bu kılavuzdaki çözümler, kuruluşunuz genelinde yerel sinyaller ve zenginle�
 * İletişim uyumluluğu çözümüyle, iş yerinde şiddet, içeriden ticaret, taciz, davranış kuralları ve mevzuat uyumluluğu ihlalleri gibi öğeler için iletişim risklerini belirleyebilir ve bu riskler üzerinde işlem yapabilirsiniz.
 * Insider risk yönetimi çözümü fikri mülkiyet hırsızlığı, hassas veri sızıntıları, güvenlik ihlalleri, veri taşması ve gizlilik ihlalleri risklerini belirlemenize, araştırmanıza ve bu riskler üzerinde işlem yapmanıza yardımcı olur.
 
-### <a name="microsoft-purview-information-protection-setup-guide"></a>Microsoft Purview Information Protection kurulum kılavuzu
+### <a name="microsoft-purview-information-protection-setup-guide"></a>kurulum kılavuzunu Microsoft Purview Bilgi Koruması
 
-Hassas bilgilerinizin korunduğundan emin olmak için bilgi koruma stratejinize uygulayabileceğiniz özelliklere genel bir bakış elde edin. Hassas bilgileri keşfetme, sınıflandırma, koruma ve izleme işlemlerinden oluşan dört aşamalı bir yaşam döngüsü yaklaşımı kullanın. [Microsoft Purview Information Protection kurulum kılavuzu](https://aka.ms/microsoftpurviewinformationprotectionsetupguide), bu aşamaların her birini tamamlamak için rehberlik sağlar.
+Hassas bilgilerinizin korunduğundan emin olmak için bilgi koruma stratejinize uygulayabileceğiniz özelliklere genel bir bakış elde edin. Hassas bilgileri keşfetme, sınıflandırma, koruma ve izleme işlemlerinden oluşan dört aşamalı bir yaşam döngüsü yaklaşımı kullanın. [Microsoft Purview Bilgi Koruması kurulum kılavuzu](https://aka.ms/microsoftpurviewinformationprotectionsetupguide), bu aşamaların her birini tamamlamak için rehberlik sağlar.
 
-### <a name="microsoft-purview-data-lifecycle-management-setup-guide"></a>Microsoft Purview Veri Yaşam Döngüsü Yönetimi kurulum kılavuzu
+### <a name="microsoft-purview-data-lifecycle-management-setup-guide"></a>kurulum kılavuzu Microsoft Purview Veri Yaşam Döngüsü Yönetimi
 
 [Microsoft Purview Veri Yaşam Döngüsü Yönetimi kurulum kılavuzu](https://aka.ms/migsetupguide), verilerinizin belirlediğiniz belirli yaşam döngüsü yönergelerine göre sınıflandırıldığından ve yönetildiğinden emin olmak için kuruluşunuzun idare stratejisini ayarlamak ve yönetmek için ihtiyacınız olan bilgileri sağlar. Bu kılavuzla, kuruluşunuzun içerik ve uyumluluk kayıtlarına uygulanan bekletme etiketleri, bekletme etiketi ilkeleri ve bekletme ilkeleri oluşturmayı, otomatik uygulamayı veya yayımlamayı öğreneceksiniz. Ayrıca toplu senaryolar için bir dosya planıyla CSV dosyalarını içeri aktarma veya bunları tek tek belgelere el ile uygulama hakkında da bilgi edineceksiniz.
 
@@ -205,11 +205,15 @@ Hassas bilgilerinizin korunduğundan emin olmak için bilgi koruma stratejinize 
 
 ### <a name="mobile-apps-setup-guide"></a>Mobil uygulamalar kurulum kılavuzu
 
-[Mobil uygulamalar kurulum kılavuzu](https://aka.ms/officeappguidance), Windows, iOS ve Android mobil cihazlarınıza Office uygulamalarını indirme ve yükleme yönergeleri sağlar. Bu kılavuz, telefon ve tablet cihazlarınıza Microsoft 365 ve Office 365 uygulamaları indirip yüklemek için size adım adım bilgiler sağlar.
+[Mobil uygulamalar kurulum kılavuzu](https://aka.ms/officeappguidance), Windows, iOS ve Android mobil cihazlarınıza Office uygulamaları indirme ve yükleme yönergeleri sağlar. Bu kılavuz, telefon ve tablet cihazlarınıza Microsoft 365 ve Office 365 uygulamaları indirip yüklemek için size adım adım bilgiler sağlar.
 
 ### <a name="microsoft-teams-setup-guide"></a>kurulum kılavuzunu Microsoft Teams
 
 [Microsoft Teams kurulum kılavuzu](https://aka.ms/teamsguidance), kuruluşunuza hem ekip hem de özel iletişim için mesajlaşma, aramalar, sesli veya görüntülü toplantılar aracılığıyla gerçek zamanlı konuşmalar barındıran ekip çalışma alanlarını ayarlama konusunda rehberlik sağlar. Konuk erişimini yapılandırmak, kimlerin ekip oluşturabileceğini ayarlamak ve bir .csv dosyasından ekip üyeleri eklemek için bu kılavuzdaki araçları kullanın. Bunların hepsi powershell oturumu açmaya gerek kalmadan. Ayrıca kuruluşunuzun ağ gereksinimlerini belirlemek ve başarılı bir Teams dağıtımı sağlamak için en iyi yöntemleri de edineceksiniz.
+
+### <a name="teams-phone-setup-guide"></a>kurulum kılavuzu Teams Telefon
+
+[Teams Telefon kurulum kılavuzu](https://aka.ms/teamsphonesetupguide), modern arama çözümlerinin kullanımıyla bağlantıda kalmanıza yardımcı olur. Teams için telefon iş yükünü destekleyen bulut tabanlı çağrı denetim sistemiyle temel özellikleri uygulayın. Kullanılabilir genel anahtarlı telefon ağı (PSTN) bağlantı seçeneklerinden özellikleri seçebilir ve dağıtabilirsiniz. Ayrıca otomatik santral, çağrı kuyrukları, Sesli Konferans, arayan kimliği ve canlı etkinlikler gibi diğer özellikler için de yardım bulabilirsiniz.
 
 ### <a name="sharepoint-setup-guide"></a>kurulum kılavuzunu SharePoint
 

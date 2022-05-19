@@ -1,7 +1,7 @@
 ---
 title: Tehditleri araştırmak ve düzeltmek için otomatik araştırma kullanma
-description: Pertahanan Microsoft untuk Titik Akhir'daki otomatik araştırma akışını anlama.
-keywords: otomatik, araştırma, algılama, Pertahanan Microsoft untuk Titik Akhir
+description: Uç Nokta için Microsoft Defender'daki otomatik araştırma akışını anlama.
+keywords: otomatik, araştırma, algılama, Uç Nokta için Microsoft Defender
 ms.prod: m365-security
 ms.technology: mde
 ms.mktglfcycl: deploy
@@ -9,7 +9,6 @@ ms.sitesec: library
 ms.pagetype: security
 author: dansimp
 ms.author: dansimp
-ms.date: 11/24/2021
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -19,21 +18,21 @@ ms.collection:
 ms.topic: how-to
 ms.reviewer: ramarom, evaldm, isco, mabraitm, chriggs
 ms.custom: AIR
-ms.openlocfilehash: eadf9fe7f6112d1219f085662686b2a930b3ff28
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: cfc3ebb1a32487bf2b32074059091c0d4d3517ec
+ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64789810"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "65535790"
 ---
 # <a name="overview-of-automated-investigations"></a>Otomatik araştırmalara genel bakış
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Şunlar için geçerlidir:**
-- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
-- Microsoft Defender Virüsten Koruma
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [İş için Microsoft Defender](../defender-business/mdb-overview.md)
 
 **Platform**
 - Windows
@@ -47,21 +46,16 @@ Otomatik araştırmadaki teknoloji çeşitli inceleme algoritmalarını kullanı
 Bu makale AIR'e genel bir bakış sağlar ve sonraki adımlara ve ek kaynaklara bağlantılar içerir.
 
 > [!TIP]
-> Pertahanan Microsoft untuk Titik Akhir mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-automated-investigations-abovefoldlink)
+> Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-automated-investigations-abovefoldlink)
 
 ## <a name="how-the-automated-investigation-starts"></a>Otomatik araştırma nasıl başlar?
 
 Otomatik araştırma, bir uyarı tetiklendiğinde veya bir güvenlik operatörü araştırmayı başlattığında başlayabilir.
 
-<br>
-
-****
-
 |Durum|Neler olur?|
 |---|---|
 |Bir uyarı tetikleniyor|Genel olarak, bir [uyarı](review-alerts.md) tetiklendiğinde ve bir [olay](view-incidents-queue.md) oluşturulduğunda otomatik bir araştırma başlatılır. Örneğin, kötü amaçlı bir dosyanın bir cihazda yer aldığını varsayalım. Bu dosya algılandığında bir uyarı tetikler ve olay oluşturulur. Cihazda otomatik bir araştırma işlemi başlar. Diğer cihazlarda aynı dosya nedeniyle diğer uyarılar oluşturulduğundan, bunlar ilişkili olaya ve otomatik araştırmaya eklenir.|
 |El ile bir araştırma başlatılır|Otomatik araştırma, güvenlik operasyonları ekibiniz tarafından el ile başlatılabilir. Örneğin, bir güvenlik operatörünün cihazların listesini gözden geçirdiğini ve bir cihazın yüksek risk düzeyine sahip olduğunu fark ettiğini varsayalım. Güvenlik operatörü listeden cihazı seçerek açılır öğesini açabilir ve ardından **Otomatik Araştırma Başlat'ı** seçebilir.|
-|
 
 ## <a name="how-an-automated-investigation-expands-its-scope"></a>Otomatik araştırma kapsamını nasıl genişletir?
 
@@ -84,11 +78,11 @@ Kuruluşunuz için ayarlanan [otomasyon düzeyine](automation-levels.md) ve diğ
 Bekleyen veya tamamlanan tüm düzeltme eylemleri [İşlem merkezinde](auto-investigation-action-center.md) izlenir. Gerekirse, güvenlik operasyonları ekibiniz bir düzeltme eylemini geri alabilir. Daha fazla bilgi edinmek için bkz. [Otomatik araştırmanın ardından düzeltme eylemlerini gözden geçirme ve onaylama](/microsoft-365/security/defender-endpoint/manage-auto-investigation).
 
 > [!TIP]
-> Microsoft 365 Defender portalındaki yeni, birleşik araştırma sayfasına göz atın. Daha fazla bilgi edinmek için bkz. [(YENİ!) Birleşik araştırma sayfası](/microsoft-365/security/defender/m365d-autoir-results#new-unified-investigation-page).
+> Microsoft 365 Defender portalındaki yeni, birleşik araştırma sayfasına göz atın. Daha fazla bilgi edinmek için bkz. [Birleşik araştırma sayfası](/microsoft-365/security/defender/m365d-autoir-results#new-unified-investigation-page).
 
 ## <a name="requirements-for-air"></a>AIR gereksinimleri
 
-Kuruluşunuzda Uç Nokta için Defender olmalıdır (bkz. [Pertahanan Microsoft untuk Titik Akhir için en düşük gereksinimler](minimum-requirements.md)).
+Aboneliğiniz [Uç Nokta için Defender](microsoft-defender-endpoint.md) veya [İş için Defender](../defender-business/mdb-overview.md) içermelidir.
 
 > [!NOTE]
 > Otomatik araştırma ve yanıt, pasif modda veya etkin modda çalışmak için Microsoft Defender Virüsten Koruma gerektirir. Microsoft Defender Virüsten Koruma devre dışı bırakılırsa veya kaldırılırsa, Otomatik Araştırma ve Yanıt düzgün çalışmaz.
@@ -107,11 +101,11 @@ Kuruluşunuzda Uç Nokta için Defender olmalıdır (bkz. [Pertahanan Microsoft 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 - [Otomasyon düzeyleri hakkında daha fazla bilgi edinin](automation-levels.md)
-- [Etkileşimli kılavuza bakın: Pertahanan Microsoft untuk Titik Akhir ile tehditleri araştırma ve düzeltme](https://aka.ms/MDATP-IR-Interactive-Guide)
-- [Pertahanan Microsoft untuk Titik Akhir'de otomatik araştırma ve düzeltme özelliklerini yapılandırma](configure-automated-investigations-remediation.md)
+- [Etkileşimli kılavuza bakın: Uç Nokta için Microsoft Defender ile tehditleri araştırma ve düzeltme](https://aka.ms/MDATP-IR-Interactive-Guide)
+- [Uç Nokta için Microsoft Defender'de otomatik araştırma ve düzeltme özelliklerini yapılandırma](configure-automated-investigations-remediation.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [PUA koruması](/windows/security/threat-protection/microsoft-defender-antivirus/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus)
-- [Pertahanan Microsoft untuk Office 365'de otomatik araştırma ve yanıt](/microsoft-365/security/office-365-security/office-365-air)
+- [Office 365 için Microsoft Defender'de otomatik araştırma ve yanıt](/microsoft-365/security/office-365-security/office-365-air)
 - [Microsoft 365 Defender'de otomatik araştırma ve yanıt](/microsoft-365/security/defender/m365d-autoir)

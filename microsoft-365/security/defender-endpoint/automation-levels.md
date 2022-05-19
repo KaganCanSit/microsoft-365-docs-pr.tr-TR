@@ -1,6 +1,6 @@
 ---
-title: Otomatik araştırma ve düzeltme için otomasyon düzeyleri
-description: Otomasyon düzeylerine ve bunların Uç Nokta için Microsoft Defender'da nasıl çalışmalarına genel bir bakış elde olun
+title: Otomatik araştırma ve düzeltmede otomasyon düzeyleri
+description: Otomasyon düzeylerine ve Uç Nokta için Microsoft Defender nasıl çalıştıklarına genel bakış elde edin
 keywords: otomatik, araştırma, düzey, Uç Nokta için Microsoft Defender
 ms.prod: m365-security
 ms.technology: mde
@@ -9,7 +9,6 @@ ms.sitesec: library
 ms.pagetype: security
 author: dansimp
 ms.author: dansimp
-ms.date: 10/22/2020
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -19,57 +18,53 @@ ms.collection:
 ms.topic: conceptual
 ms.reviewer: ramarom, evaldm, isco, mabraitm, chriggs
 ms.custom: AIR
-ms.openlocfilehash: e440675a46a4340e2f659b23a31b19dbab33d2c0
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: e36bcdd5851b64ec035eaf8e4e3961c14df5c535
+ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63328169"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "65535834"
 ---
-# <a name="automation-levels-in-automated-investigation-and-remediation-capabilities"></a>Otomatik araştırma ve düzeltme özelliklerinde otomasyon düzeyleri
+# <a name="automation-levels-in-automated-investigation-and-remediation-capabilities"></a>Otomatik araştırma ve düzeltme özelliklerindeki otomasyon düzeyleri
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [İş için Microsoft Defender](../defender-business/mdb-overview.md)
 
-Uç Nokta için Microsoft Defender'daki otomatik araştırma ve düzeltme (AIR) özellikleri, çeşitli otomasyon düzeylerinden biri için yaslayabilir. Otomasyon düzeyiniz, AIR soruşturmalarını takip eden düzeltme eylemlerinin otomatik olarak mı yoksa yalnızca onay üzerine mi alınıp alınmayacaklarını etkiler.
+İş için Microsoft Defender otomatik araştırma ve düzeltme (AIR) özellikleri önceden yapılandırılmıştır ve yapılandırılamaz. Uç Nokta için Microsoft Defender'de AIR'i çeşitli otomasyon düzeylerinden birine yapılandırabilirsiniz. Otomasyon düzeyiniz, AIR araştırmalarından sonraki düzeltme eylemlerinin otomatik olarak mı yoksa yalnızca onay üzerine mi gerçekleştirildiğini etkiler.
 
-- *Tam otomasyon* (önerilir), kötü amaçlı olduğu belirlenen yapıtlarda düzeltme eylemlerinin otomatik olarak gerçekleştirilmez.
-- *Yarı otomasyon,* bazı düzeltme eylemlerinin otomatik olarak gerçekleştirilir, ancak diğer düzeltme eylemleri işlemlerden önce onayı bekler. (Otomasyon düzeyleri tablosunda [tabloya bakın](#levels-of-automation).)
-- Bekleyen veya tamamlanan tüm düzeltme eylemleri İşlem Merkezi'nde () izlanır[https://security.microsoft.com](https://security.microsoft.com).
+- *Tam otomasyon* (önerilen), kötü amaçlı olduğu belirlenen yapıtlarda düzeltme eylemlerinin otomatik olarak gerçekleştirildiği anlamına gelir. (*İş için Defender'da tam otomasyon varsayılan olarak ayarlanır*.)
+- *Yarı otomasyon* , bazı düzeltme eylemlerinin otomatik olarak gerçekleştirildiği, ancak diğer düzeltme eylemlerinin gerçekleştirilmeden önce onay beklediği anlamına gelir. (Otomasyon [düzeyleri'ndeki tabloya](#levels-of-automation) bakın.)
+- Bekleyen veya tamamlanan tüm düzeltme eylemleri İşlem Merkezi'nde ([https://security.microsoft.com](https://security.microsoft.com) ) izlenir.
 
 > [!TIP]
-> En iyi sonuçları elde etmek için AIR'yi yapılandırken tam [otomasyonu kullanmalarını öneririz](configure-automated-investigations-remediation.md). Geçen yıl boyunca toplanan ve çözüm alınan veriler, tam otomasyon kullanan müşterilerin, düşük otomasyon düzeyleri kullanan müşterilere göre %40 daha yüksek güven düzeyi kötü amaçlı yazılım örnekleri kaldırılmış olduğunu gösterir. Tam otomasyon, güvenlik işlemleri kaynaklarınızı serbest bırakarak stratejik girişimlerinize daha fazla odaklanmanıza yardımcı olabilir.
+> En iyi sonuçlar için [, AIR'i yapılandırırken](configure-automated-investigations-remediation.md) tam otomasyon kullanmanızı öneririz. Geçen yıl toplanan ve analiz edilen veriler, tam otomasyon kullanan müşterilerin daha düşük otomasyon düzeylerini kullanan müşterilere kıyasla %40 daha yüksek güvenilirlikli kötü amaçlı yazılım örneklerinin kaldırıldığını gösteriyor. Tam otomasyon, stratejik girişimlerinize daha fazla odaklanmak için güvenlik operasyonları kaynaklarınızın serbestleştirilmesine yardımcı olabilir.
 
 ## <a name="levels-of-automation"></a>Otomasyon düzeyleri
 
-Aşağıdaki tabloda her otomasyon düzeyi ve bunların nasıl çalıştığını açıkmektedir.
-
-<br>
-
-****
-
 |Otomasyon düzeyi|Açıklama|
 |---|---|
-|**Tam - tehditleri otomatik olarak düzeltme** <br> (tam otomasyon olarak *da adlandırılır*)|Tam otomasyonla, düzeltme eylemleri otomatik olarak gerçekleştirilir. Yapılan tüm düzeltme eylemleri, Geçmiş [sekmesindeki İşlem Merkezi'nde](auto-investigation-action-center.md) **görüntülenir** . Gerekirse, bir düzeltme eylemi geri alın alabilir. <p> *16 *_Ağustos_* 2020 veya sonrasında uç nokta için Microsoft Defender ile oluşturulan ve henüz cihaz grubu tanımlanmamış kiracılar için, tam otomasyon önerilir ve varsayılan olarak seçilir.*|
-|**Yarı - herhangi bir düzeltme için onay gerektir** <br> (yarı otomasyon *olarak da adlandırılır*)|Bu yarı otomasyon düzeyiyle, her düzeltme işlemi *için* onay gereklidir. Bu beklemedeki eylemler, İşlem Merkezi'nin [Beklemede sekmesinde](auto-investigation-action-center.md) 2013'te **karşılanmaz ve onaylandıktan sonra da** onaylanır. <p> *Bu yarı otomasyon düzeyi, hiçbir cihaz grubu tanımlanmamış, Uç Nokta için Microsoft Defender ile 16 Ağustos 2020'den önce oluşturulan kiracılar için varsayılan olarak seçilir.*|
-|**Yarı - temel klasörlerin düzeltmesi için onay gerektir** <br> (ayrıca bir yarı *otomasyon türü)*|Bu yarı otomasyon düzeyiyle, temel klasörlerdeki dosyalar veya yürütülebilir dosyalar için gereken tüm düzeltme eylemleri için onay gereklidir. Temel klasörler, dizin dosyaları () gibi işletim sistemi **Windows**.`\windows\*` <p> Düzeltme eylemleri, başka (çekirdek olmayan) klasörlerdeki dosyalar veya yürütülebilir dosyalar üzerinde otomatik olarak çalıştırılabilir. <p> Çekirdek klasörlerdeki dosya veya yürütülebilir dosyalar için bekleyen eylemler, İşlem Merkezi'nin Beklemede [](auto-investigation-action-center.md)sekmesinde çalıştırılabilir ve **onaylanır**. <p> Diğer klasörlerdeki dosyalar veya yürütülebilir dosyalar üzerinde alınan eylemler, [İşlem Merkezi'nin Geçmiş](auto-investigation-action-center.md) **sekmesinde çalıştırılabilir.**|
-|**Yarı - geçici olmayan klasörlerin düzeltmesi için onay gerekiyor** <br> (ayrıca bir yarı *otomasyon türü)*|Bu düzeyde yarı otomasyonla, geçici klasörlerde olmayan dosyalar veya yürütülebilir dosyalar için gereken tüm düzeltme eylemleri için onay gereklidir. <p> Geçici klasörler aşağıdaki örnekleri içerebilir: <ul><li>`\users\*\appdata\local\temp\*`</li><li>`\documents and settings\*\local settings\temp\*`</li><li>`\documents and settings\*\local settings\temporary\*`</li><li>`\windows\temp\*`</li><li>`\users\*\downloads\*`</li><li>`\program files\`</li><li>`\program files (x86)\*`</li><li>`\documents and settings\*\users\*`</li></ul> <p> Düzeltme eylemleri, geçici klasörlerdeki dosyalar veya yürütülebilir dosyalar üzerinde otomatik olarak çalıştırılabilir. <p> Geçici klasörlerde yer alan dosyalar veya yürütülebilir dosyalar için bekleyen eylemler İşlem Merkezi'nde [Bekleyen sekmesinde](auto-investigation-action-center.md) çalıştırılabilir ve **onaylanır** . <p> Geçici klasörlerdeki dosyalar veya yürütülebilir dosyalar üzerinde alınan eylemler, İşlem Merkezi'nin [Geçmiş](auto-investigation-action-center.md) sekmesinde çalıştırılabilir ve **onaylanır** .|
-|**Otomatik yanıt yok** <br> (Otomasyon yok olarak *da adlandırılır*)|Otomasyon yoksa, otomatik soruşturmalar kuruluşun cihazlarında çalıştırlanmaz. Sonuç olarak, otomatik soruşturma sonucunda hiçbir düzeltme eylemi gerçekleştir alınmaz veya beklemede olmaz. Ancak, virüsten koruma ve yeni nesil koruma özelliklerinin nasıl yapılandırıldıklarından bağlı [olarak, istenmeyen](/windows/security/threat-protection/microsoft-defender-antivirus/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus) olabilecek uygulamalardan koruma gibi diğer tehdit koruması özellikleri etkili olabilir. <p> ***Otomasyon *yok seçeneğinin* kullanılması önerilmez**, çünkü bu seçenek, kuruluş cihazlarında güvenlik riskini azaltır. [Tam otomasyon (veya en azından yarı otomasyon) için otomasyon düzeyinizi ayarlamayı göz önünde bulundurabilirsiniz](/microsoft-365/security/defender-endpoint/machine-groups).|
-|
+|**Tam - tehditleri otomatik olarak düzeltme** <br> ( *tam otomasyon* olarak da adlandırılır)|Tam otomasyon ile düzeltme eylemleri otomatik olarak gerçekleştirilir. Gerçekleştirilen tüm düzeltme eylemleri **Geçmiş** sekmesindeki [İşlem Merkezi'nde](auto-investigation-action-center.md) görüntülenebilir. Gerekirse, bir düzeltme eylemi geri alınabilir. <p> **_Tam otomasyon önerilir_* ve 16 Ağustos 2020 tarihinde veya sonrasında oluşturulan uç nokta için Defender'a sahip kiracılar için varsayılan olarak seçilidir ve henüz cihaz grubu tanımlanmamıştır.*<p>*İş için Defender'da tam otomasyon varsayılan olarak ayarlanır.*|
+|**Yarı - herhangi bir düzeltme için onay gerektir** <br> ( *yarı otomasyon* olarak da adlandırılır)|Bu yarı otomasyon düzeyiyle, *herhangi bir* düzeltme eylemi için onay gerekir. Bu tür bekleyen eylemler [İşlem Merkezi'nde](auto-investigation-action-center.md)**, Beklemede** sekmesinde görüntülenebilir ve onaylanabilir. <p> *Bu yarı otomasyon düzeyi, 16 Ağustos 2020'den önce Uç Nokta için Microsoft Defender ile oluşturulan ve hiçbir cihaz grubu tanımlanmamış kiracılar için varsayılan olarak seçilir.*|
+|**Yarı - çekirdek klasörlerin düzeltilmesi için onay gerektir** <br> (aynı zamanda bir *tür yarı otomasyon*)|Bu yarı otomasyon düzeyiyle, çekirdek klasörlerdeki dosyalarda veya yürütülebilir dosyalarda gereken düzeltme eylemleri için onay gerekir. Çekirdek klasörler, **Windows** (`\windows\*` gibi) işletim sistemi dizinlerini içerir. <p> Düzeltme eylemleri, diğer (çekirdek olmayan) klasörlerdeki dosyalarda veya yürütülebilir dosyalarda otomatik olarak yapılabilir. <p> Çekirdek klasörlerdeki dosyalar veya yürütülebilir dosyalar için bekleyen eylemler [İşlem Merkezi'nde](auto-investigation-action-center.md) **Beklemede** sekmesinde görüntülenebilir ve onaylanabilir. <p> Diğer klasörlerdeki dosyalarda veya yürütülebilir dosyalarda gerçekleştirilen eylemler [İşlem Merkezi'nde](auto-investigation-action-center.md)**, Geçmiş** sekmesinde görüntülenebilir.|
+|**Yarı - geçici olmayan klasörlerin düzeltilmesi için onay gerektir** <br> (aynı zamanda bir *tür yarı otomasyon*)|Bu yarı otomasyon düzeyiyle, geçici klasörlerde *olmayan* dosyalarda veya yürütülebilir dosyalarda gerekli olan düzeltme eylemleri için onay gerekir. <p> Geçici klasörler aşağıdaki örnekleri içerebilir: <ul><li>`\users\*\appdata\local\temp\*`</li><li>`\documents and settings\*\local settings\temp\*`</li><li>`\documents and settings\*\local settings\temporary\*`</li><li>`\windows\temp\*`</li><li>`\users\*\downloads\*`</li><li>`\program files\`</li><li>`\program files (x86)\*`</li><li>`\documents and settings\*\users\*`</li></ul> <p> Düzeltme eylemleri, geçici klasörlerdeki dosyalarda veya yürütülebilir dosyalarda otomatik olarak yapılabilir. <p> Geçici klasörlerde bulunmayan dosyalar veya yürütülebilir dosyalar için bekleyen eylemler [İşlem Merkezi'nde](auto-investigation-action-center.md)**, Beklemede** sekmesinde görüntülenebilir ve onaylanabilir. <p> Geçici klasörlerdeki dosyalar veya yürütülebilir dosyalar üzerinde gerçekleştirilen eylemler [İşlem Merkezi'nde](auto-investigation-action-center.md) **Geçmiş** sekmesinde görüntülenebilir ve onaylanabilir.|
+|**Otomatik yanıt yok** <br> ( *otomasyon yok* olarak da adlandırılır)|Otomasyon olmadan, otomatik araştırma kuruluşunuzun cihazlarında çalışmaz. Sonuç olarak, otomatik araştırma sonucunda hiçbir düzeltme eylemi gerçekleştirilmedi veya beklemede değil. Ancak, virüsten koruma ve yeni nesil koruma özelliklerinizin nasıl yapılandırıldığına bağlı olarak, [istenmeyebilecek uygulamalardan koruma](/windows/security/threat-protection/microsoft-defender-antivirus/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus) gibi diğer tehdit koruma özellikleri etkin olabilir. <p> *Kuruluşunuzun cihazlarının güvenlik duruşunu azalttığı için ***otomasyon* yok seçeneğinin kullanılması önerilmez**. [Otomasyon düzeyinizi tam otomasyona (veya en azından yarı otomasyona) ayarlamayı göz önünde bulundurun](/microsoft-365/security/defender-endpoint/machine-groups).|
 
 ## <a name="important-points-about-automation-levels"></a>Otomasyon düzeyleri hakkında önemli noktalar
 
-- Tam otomasyonun güvenilir, verimli ve güvenli olduğu kanıtlandı ve tüm müşteriler için önerilir. Tam otomasyon kritik güvenlik kaynaklarınızı serbest bırakarak stratejik girişimlerinize daha fazla odaklanmalarını sağlar.
+- Tam otomasyonun güvenilir, verimli ve güvenli olduğu kanıtlanmıştır ve tüm müşteriler için önerilir. Tam otomasyon, stratejik girişimlerinize daha fazla odaklanabilmeleri için kritik güvenlik kaynaklarınızı serbesttir.
 
-- Yeni kiracılar (16 Ağustos 2020 veya sonrasında oluşturulan kiracıları içerir) ile Uç Nokta için Microsoft Defender varsayılan olarak tam otomasyona ayarlanır.
+- Uç Nokta için Defender ile yeni kiracılar (16 Ağustos 2020 veya sonrasında oluşturulan kiracıları içerir) varsayılan olarak tam otomasyona ayarlanır.
 
-- Güvenlik ekibinin tanımlı cihaz grupları otomasyon düzeyine sahipse, bu ayarlar, yeni varsayılan ayarlar tarafından yuvarlanan tarafından değişmez.
+- [İş için Defender](../defender-business/compare-mdb-m365-plans.md) varsayılan olarak tam otomasyonu kullanır. İş için Defender, cihaz gruplarını İş için Defender ile aynı şekilde kullanmaz. Bu nedenle, tam otomasyon açık ve İş için Defender'daki tüm cihazlara uygulanır.
 
-- Varsayılan otomasyon ayarlarınızı saklayabilirsiniz veya bunları kuruluş ihtiyaçlarına göre değiştirebilirsiniz. Ayarlarınızı değiştirmek için otomasyon [düzeyinizi ayarlayın](/microsoft-365/security/defender-endpoint/configure-automated-investigations-remediation#set-up-device-groups).
+- Güvenlik ekibiniz bir otomasyon düzeyine sahip cihaz grupları tanımladıysa, bu ayarlar dağıtılan yeni varsayılan ayarlar tarafından değiştirilmez.
+
+- Varsayılan otomasyon ayarlarınızı koruyabilir veya kuruluş gereksinimlerinize göre değiştirebilirsiniz. Ayarlarınızı değiştirmek için [otomasyon düzeyinizi ayarlayın](/microsoft-365/security/defender-endpoint/configure-automated-investigations-remediation#set-up-device-groups).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Uç Nokta için Microsoft Defender'da otomatik araştırma ve düzeltme özelliklerini yapılandırma](configure-automated-investigations-remediation.md)
-- [İşlem Merkezi'ne ziyaret edin](/microsoft-365/security/defender-endpoint/auto-investigation-action-center#the-action-center)
+- [Uç Nokta için Defender'da otomatik araştırma ve düzeltme özelliklerini yapılandırma](configure-automated-investigations-remediation.md)
+- [İşlem Merkezi'ni ziyaret edin](/microsoft-365/security/defender-endpoint/auto-investigation-action-center#the-action-center)

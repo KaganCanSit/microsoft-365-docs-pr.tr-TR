@@ -17,12 +17,12 @@ search.appverid:
 - MET150
 recommendations: false
 description: Microsoft 365 grupların süre sonu ilkeleri hakkında bilgi edinin.
-ms.openlocfilehash: 9287d61b95d635eccbbef64d307c0aa0e3d12357
-ms.sourcegitcommit: 46e796c6b76a01516c48977335bbf5076ca74a06
+ms.openlocfilehash: 431d2ae027e92c83d645a4b27ab515d17326c1b7
+ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64738558"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "65535812"
 ---
 # <a name="microsoft-365-group-expiration-policy"></a>grup süre sonu ilkesini Microsoft 365
 
@@ -40,8 +40,6 @@ Etkin olarak kullanımda olan gruplar otomatik olarak yenilenir. Aşağıdaki ey
 - Teams - Bir ekip kanalını ziyaret edin.
 - Yammer - Yammer topluluğundaki bir gönderiyi veya Outlook etkileşimli bir e-postayı görüntüleyin.
 - Formlar - Formları görüntüleyin, oluşturun veya düzenleyin ya da forma yanıt gönderin. 
-
-Otomatik grup yenilemesini tetikleyecek tek Yammer etkinliğin, belgenin topluluk içindeki SharePoint yüklenmesi olduğunu unutmayın.
 
 > [!IMPORTANT]
 > Süre sonu ilkesini değiştirdiğinizde, hizmet her grup için sona erme tarihini yeniden hesaplar. Her zaman grubun oluşturulduğu tarihten itibaren saymaya başlar ve ardından yeni süre sonu ilkesini uygular.

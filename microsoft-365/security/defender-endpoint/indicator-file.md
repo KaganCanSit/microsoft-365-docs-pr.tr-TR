@@ -15,12 +15,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: f1d32c546fc270e044d391dd35f325afc98fe5a9
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: da9e030d929f65c7ea5bd83010d2b7f49b1d90d9
+ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65101457"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "65535602"
 ---
 # <a name="create-indicators-for-files"></a>Dosyalar için göstergeler oluşturun
 
@@ -28,12 +28,13 @@ ms.locfileid: "65101457"
 
 **Şunlar için geçerlidir:**
 
-- [Uç Nokta için Microsoft Defender Plan 1](/microsoft-365/security/defender-endpoint/defender-endpoint-plan-1)
-- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Uç Nokta için Microsoft Defender Planı 1](/microsoft-365/security/defender-endpoint/defender-endpoint-plan-1)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [İş için Microsoft Defender](../defender-business/mdb-overview.md)
 
 > [!TIP]
-> Uç Nokta için Defender'ı deneyimlemek mi istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-automationexclusionlist-abovefoldlink)
+> Uç nokta için Defender'i deneyimlemek ister misiniz? [Ücretsiz deneme için kaydolun.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-automationexclusionlist-abovefoldlink)
 
 Kötü amaçlı olabilecek dosyaları veya şüpheli kötü amaçlı yazılımları yasaklayarak kuruluşunuzda bir saldırının daha fazla yayılmasını önleyin. Kötü amaçlı olabilecek bir taşınabilir yürütülebilir dosya (PE) biliyorsanız, dosyayı engelleyebilirsiniz. Bu işlem, kuruluşunuzdaki cihazlarda okunmasını, yazılmasını veya yürütülmesini engeller.
 
@@ -60,6 +61,9 @@ Dosyalar için göstergeler oluşturmadan önce aşağıdaki önkoşulları anla
 
 Bu özellik, şüpheli kötü amaçlı yazılımların (veya kötü amaçlı olabilecek dosyaların) web'den indirilmesini önlemek için tasarlanmıştır. Şu anda .exe ve .dll dosyaları da dahil olmak üzere taşınabilir yürütülebilir (PE) dosyaları destekler. Kapsam zaman içinde uzatılır.
 
+> [!IMPORTANT]
+> Uç Nokta için Defender Plan 1 ve İş için Defender'da, bir dosyayı engellemek veya dosyaya izin vermek için bir gösterge oluşturabilirsiniz. İş için Defender'da göstergeniz ortamınıza uygulanır ve kapsamı belirli cihazlara eklenemez.
+
 ## <a name="create-an-indicator-for-files-from-the-settings-page"></a>Ayarlar sayfasından dosyalar için gösterge oluşturma
 
 1. Gezinti bölmesinde uç **nokta göstergelerini** \> **Ayarlar** \> seçin (**Kurallar'ın** altında).
@@ -71,7 +75,7 @@ Bu özellik, şüpheli kötü amaçlı yazılımların (veya kötü amaçlı ola
 4. Aşağıdaki ayrıntıları belirtin:
     - Gösterge - Varlık ayrıntılarını belirtin ve göstergenin süre sonunu tanımlayın.
     - Eylem - Gerçekleştirilecek eylemi belirtin ve bir açıklama sağlayın.
-    - Kapsam - Cihaz grubunun kapsamını tanımlayın.
+    - Kapsam - Cihaz grubunun kapsamını tanımlayın (kapsam belirleme [İş için Defender'da](../defender-business/mdb-overview.md) kullanılamaz).
 
 5. Özet sekmesinde ayrıntıları gözden geçirin ve **Kaydet'i** seçin.
 

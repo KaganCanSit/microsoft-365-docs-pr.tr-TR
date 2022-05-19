@@ -12,12 +12,12 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 description: Müşteri Anahtarı'nı ayarladıktan sonra, AKV anahtarlarını geri yükleyerek ve izinleri yöneterek ve veri şifreleme ilkeleri oluşturup atayarak anahtarı yönetmeyi öğrenin.
-ms.openlocfilehash: 0ca6aa1e2cf725359d74477b486a4763a35ba681
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: 9d7a926018a23c62d2ea21283ad6852d979cc6bb
+ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65465920"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "65535436"
 ---
 # <a name="manage-customer-key"></a>Müşteri Anahtarını Yönet
 

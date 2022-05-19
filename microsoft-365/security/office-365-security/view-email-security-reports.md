@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: dcc04b1c06e5ca2900cca9f0a66fe5b041af734e
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 476807a03954475470a976113a2faa926862c008
+ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65417182"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "65535956"
 ---
 # <a name="view-email-security-reports-in-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalında e-posta güvenlik raporlarını görüntüleme
 
@@ -355,7 +355,7 @@ Grafik aşağıdaki bilgileri gösterir:
 - **Geçirmek**
 - **Başarısız**
 - **SoftPass**
-- **Yok**
+- **Hiçbiri**
 - **Diğer**
 
 Grafikte bir günün (veri noktası) üzerine geldiğinizde, kaç sahte ileti algılandığını ve bunun nedenini görebilirsiniz.
@@ -1030,7 +1030,7 @@ Filtreleri yapılandırmayı bitirdiğinizde **Uygula**, **İptal veya** **Filtr
 
 Girişleri gruplandırmak için **Gruplandır'a** tıklayın ve açılan listeden aşağıdaki değerlerden birini seçin:
 
-- **Yok**
+- **Hiçbiri**
 - **Neden**
 - **Gönderen**
 - **Rapor eden**
@@ -1180,7 +1180,9 @@ Dışarı aktarılan her .csv dosyası 150.000 satırla sınırlıdır. Veriler 
 
 ## <a name="related-topics"></a>İlgili konular
 
-[EOP'de istenmeyen posta önleme ve kötü amaçlı yazılımdan koruma](anti-spam-and-anti-malware-protection.md)
+[EOP'de istenmeyen posta önleme koruması](anti-spam-protection.md)
+
+[EOP'de kötü amaçlı yazılımdan koruma](anti-malware-protection.md)
 
 [Microsoft 365 Defender portalında akıllı raporlar ve içgörüler](reports-and-insights-in-security-and-compliance.md)
 

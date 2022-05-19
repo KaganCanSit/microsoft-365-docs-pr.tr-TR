@@ -19,12 +19,12 @@ ms.collection:
 - m365solution-overview
 ms.custom: ''
 keywords: ''
-ms.openlocfilehash: 218ffa6ba9b2e7a4eb5fcd2f042b77b207ab8594
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: 08abc5c53c54c5a4e4100cc88adf0fb25af5c23b
+ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65468052"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "65535370"
 ---
 # <a name="manage-devices-with-intune-overview"></a>Intune Genel Bakış ile cihazları yönetme
 
@@ -40,7 +40,8 @@ Microsoft 365, cihazları yönetmeye ve korumaya yönelik çeşitli araçlar ve 
 Dağıtım işlemine genel bir bakış için bu videoyu izleyin.
 <br>
 <br>
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4F1af]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4Y4fC]
+
 
 ## <a name="why-manage-endpoints"></a>Uç noktaları neden yönetebilirsiniz?
 
@@ -117,14 +118,6 @@ Cihazları yalnızca Intune yönettiğini unutmayın. Ekleme, bir cihazın belir
 |Diğer yöntemler     |   Diğer kayıt yöntemleri, cihazın platformuna ve KCG olup olmadığına veya kuruluşunuz tarafından yönetilip yönetilmediğine bağlıdır.      | Cihaz eklemeye yönelik diğer yöntemler şunlardır:<br><li>Yapılandırma Yöneticisi<li>Diğer mobil cihaz yönetim aracı (cihaz bir tarafından yönetiliyorsa)<li>Yerel betik<li>Kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarını eklemeye yönelik VDI yapılandırma paketi<li>Grup İlkesi|
 | | |     |
 
-Cihazları yalnızca Intune yönettiğini unutmayın. Ekleme, bir cihazın belirli bir hizmet özelliğiyle bilgi paylaşma özelliğini ifade eder. Aşağıdaki tabloda, belirli bir özellik için cihazları yönetime kaydetme ve cihazları ekleme arasındaki farklar özetlenmektedir.
-
-|&nbsp;|Kayıt|Onboard|
-|---|---|---|
-|Açıklama|Kayıt, cihazları yönetmek için geçerlidir. Cihazlar Intune veya Configuration Manager ile yönetim için kaydedilir.|Ekleme, bir cihazı Microsoft 365'daki belirli bir özellik kümesiyle çalışacak şekilde yapılandırıyor. Şu anda ekleme, Uç Nokta için Microsoft Defender ve Microsoft uyumluluk özellikleri için geçerlidir. <br/><br/> Windows cihazlarda ekleme, Windows Defender'da Defender'ın çevrimiçi hizmete bağlanmasına ve cihaza uygulanan ilkeleri kabul etmesine olanak tanıyan bir ayar eklemeyi içerir.|
-|Kapsam|Bu cihaz yönetimi araçları, cihazı güvenlik gibi belirli hedeflere uyacak şekilde yapılandırmak da dahil olmak üzere tüm cihazı yönetir.|Ekleme yalnızca geçerli olan özellikleri etkiler.|
-|Önerilen yöntem|Azure Active Directory birleştirme, cihazları otomatik olarak Intune kaydeder.|Intune, uç nokta için Windows Defender cihazlar eklemek ve dolayısıyla özellikleri Microsoft Purview için tercih edilen yöntemdir. <br/><br/> Diğer yöntemler kullanılarak Microsoft Purview özelliklerine eklenen cihazların Uç Nokta için Defender'a otomatik olarak kaydedilmediğini unutmayın.|
-|Diğer yöntemler|Diğer kayıt yöntemleri, cihazın platformuna ve KCG olup olmadığına veya kuruluşunuz tarafından yönetilip yönetilmediğine bağlıdır.|Cihaz eklemeye yönelik diğer yöntemler şunlardır: <ul><li>Yapılandırma Yöneticisi</li><li>Diğer mobil cihaz yönetim aracı (cihaz bir tarafından yönetiliyorsa)</li><li>Yerel betik</li><li>Kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarını eklemeye yönelik VDI yapılandırma paketi</li><li>Grup İlkesi</li></ul>|
 
 ## <a name="learning-for-administrators"></a>Yöneticiler için Learning
 

@@ -15,12 +15,12 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: caee6f216ad5006eb31750d2c5cbd0d9e47f21ce
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 2e86aa7fc8ed304327ab2c07ec487789ad966fc7
+ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65438937"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "65535458"
 ---
 # <a name="web-content-filtering"></a>Web içeriği filtreleme
 
@@ -28,7 +28,7 @@ ms.locfileid: "65438937"
 
 **Şunlar için geçerlidir:**
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
-- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [İş için Microsoft Defender](../defender-business/mdb-overview.md)
 
@@ -177,7 +177,7 @@ Yeni ilke eklemek için şu adımları izleyin:
 4. İlke kapsamını belirtin. İlkenin nereye uygulanacağını belirtmek için cihaz gruplarını seçin. Yalnızca seçili cihaz gruplarındaki cihazların seçilen kategorilerdeki web sitelerine erişmesi engellenir.
 
    > [!IMPORTANT]
-   > İş için Defender kullanıyorsanız kapsam belirleme geçerli değildir. Bu adımı atlayın ve 5. adıma geçin.
+   > İş için Defender kullanıyorsanız, web içeriği filtreleme ilkeniz varsayılan olarak tüm kullanıcılara uygulanır. Kapsam belirleme geçerli değildir.
 
 5. Özeti gözden geçirin ve ilkeyi kaydedin. İlke yenilemesinin seçili cihazlarınıza uygulanması 2 saat kadar sürebilir.
 

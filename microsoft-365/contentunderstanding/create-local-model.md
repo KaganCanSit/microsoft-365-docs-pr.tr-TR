@@ -1,5 +1,5 @@
 ---
-title: Microsoft hesabı ile yerel bir SharePoint sitesinde model SharePoint Syntex
+title: Microsoft SharePoint Syntex ile yerel bir SharePoint sitesinde model oluşturma
 ms.author: chucked
 author: chuckedmonson
 manager: pamgreen
@@ -12,58 +12,61 @@ ms.collection:
 - enabler-strategic
 - m365initiative-syntex
 ms.localizationpriority: medium
-description: Siteyi kullanarak yerel bir site SharePoint modeli SharePoint Syntex.
-ms.openlocfilehash: f6eab2d081dda379d8eb2c88d762661d374a1db6
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: SharePoint Syntex ile yerel bir SharePoint sitesinde yerel model oluşturmayı öğrenin.
+ms.openlocfilehash: bcd3f1f086af3982cb4a3ecc5fe754cf82f09a70
+ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63704221"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "65535392"
 ---
-# <a name="create-a-model-on-a-local-sharepoint-site-with-microsoft-sharepoint-syntex"></a>Microsoft hesabı ile yerel bir SharePoint sitesinde model SharePoint Syntex
+# <a name="create-a-model-on-a-local-sharepoint-site-with-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex ile yerel bir SharePoint sitesinde model oluşturma
 
-SharePoint Syntex şimdi kendi siteniz üzerinde yerel olarak modelleri oluşturma ve eğit SharePoint sağlar. Bu modeller yalnızca oluşturuldukları sitede kullanılabilir. 
+SharePoint Syntex artık modelleri kendi SharePoint sitenizde yerel olarak oluşturma ve eğitmeye yönelik bir seçenek sunar. Bu modeller yalnızca oluşturuldukları sitede kullanılabilir. 
 
-SharePoint siteniz üzerinde belge sınıflandırması ve ayıklamayı etkinleştirerek, SharePoint Syntex belge kitaplıklarında dosyaları sınıflandırmanıza, yeni dosyalardan bilgi ayıklamanıza ve ayıklanan bilgilere dayalı etkinlikleri otomatikleştirmenize olanak sağlar.
+SharePoint sitenizde belge sınıflandırma ve ayıklamayı etkinleştirerek, SharePoint Syntex belge kitaplıklarındaki dosyaları sınıflandırmanıza, yeni dosyalardan bilgi ayıklamanıza ve ayıklanan bilgilere göre etkinlikleri otomatikleştirmenize olanak tanır.
 
-Yerel model oluşturma özelliğini etkinleştir zaman aşağıdaki listeler ve kitaplıklar sitenize eklenir:
+Yerel model oluşturmayı etkinleştirdiğinizde, sitenize aşağıdaki listeler ve kitaplıklar eklenir:
 
 - Modeller belge kitaplığı
 - Eğitim dosyaları belge kitaplığı
 - Açıklama şablonları listesi
 - Model kullanım listesi
 
-Bu özellik yalnızca modelleri anlama belge oluşturmak [ve önceden oluşturulmuş](apply-a-model.md) [modelleri oluşturmak için kullanılabilir](prebuilt-models.md). 
+Bu özellik yalnızca [belge anlama modelleri](apply-a-model.md) ve [önceden oluşturulmuş modeller](prebuilt-models.md) oluşturmak için kullanılabilir. 
 
 ## <a name="create-a-model-on-a-local-site"></a>Yerel sitede model oluşturma
 
-1. Belge kitaplığından SharePoint, çözümlemek istediğiniz dosyaları seçin ve sonra da Sınıflandır ve **ayıkla'ya tıklayın**.
+1. SharePoint belge kitaplığından çözümlemek istediğiniz dosyaları seçin ve ardından **Sınıflandır ve ayıkla'yı** seçin.
 
-    ![Sınıflandır ve SharePoint seçeneğinin vurgulu olduğu bir belge kitaplığının ekran görüntüsü.](../media/content-understanding/local-model-classify-and-extract-option.png) 
+    ![Sınıflandır ve ayıkla seçeneğinin vurgulandığı SharePoint belge kitaplığının ekran görüntüsü.](../media/content-understanding/local-model-classify-and-extract-option.png) 
 
-2. Bu özelliği ilk kez SharePoint Syntex etkinleştirisiniz. Aşağıdaki iletiyi alırsınız.
+2. Bu özelliği ilk kez kullandığınızda, sitenizde SharePoint Syntex etkinleştirirsiniz. Aşağıdaki iletiyi görürsünüz.
 
-    ![Belge sınıflandırma ve ayıklama bilgilerini etkinleştirme sayfasının ekran görüntüsü.](../media/content-understanding/local-model-first-run-activate-message.png) 
+    ![Belge sınıflandırma ve ayıklama bilgilerini etkinleştir sayfasının ekran görüntüsü.](../media/content-understanding/local-model-first-run-activate-message.png) 
 
-3. Devam etmek **için Etkinleştir'i** seçin. Aşağıdaki iletiyi alırsınız.
+    > [!NOTE]
+    > Yönetim görevlerini gerçekleştirmek ve sitenin içeriğini yönetmek için Web Sitesini Yönet iznine sahip olmanız gerekir. Bu bir site sahibi olabilir. Özellik etkinleştirildikten sonra, Listeleri Yönet iznine sahip herkes model oluşturup yönetebilir.
 
-    ![Model oluşturma seçeneğiyle birlikte Belge sınıflandırma ve ayıklama etkinleştiren iletinin ekran görüntüsü.](../media/content-understanding/local-model-activated-message.png) 
+3. Devam etmek için **Etkinleştir'i** seçin. Aşağıdaki iletiyi görürsünüz.
 
-4. Model **oluştur'a seçin**.
+    ![Model oluştur seçeneğini içeren Belge sınıflandırma ve ayıklama etkin iletisinin ekran görüntüsü.](../media/content-understanding/local-model-activated-message.png) 
 
-5. Model **oluştur panelinde modelin** adını yazın, model türünü seçin ve sonra da Oluştur'a **tıklayın**.
+4. **Model oluştur'u** seçin.
 
-    ![Model oluşturma panelinin ekran görüntüsü.](../media/content-understanding/local-model-create-a-model.png) 
+5. **Model oluştur** panelinde modelin adını yazın, model türünü seçin ve ardından **Oluştur'u** seçin.
 
-6. Belgenizi [anlama modelinizi eğitmek veya seçtiğiniz](apply-a-model.md) dosyaları [kullanarak önceden oluşturulmuş modelinizi](prebuilt-models.md) yapılandırmak için devam edin.
+    ![Model oluştur panelinin ekran görüntüsü.](../media/content-understanding/local-model-create-a-model.png) 
 
-7. Bitir bittiğinde, **Kitaplı kitaplıya ekle** paneli açılır.
+6. [Belgenizin modeli anlamasını eğitmeye](apply-a-model.md) veya seçtiğiniz dosyaları kullanarak [önceden oluşturulmuş modelinizi yapılandırmaya](prebuilt-models.md) devam edin.
 
-    ![Sitenin ve kitaplıkların uygulandığını gösteren Kitaplara ekle panelinin ekran görüntüsü.](../media/content-understanding/local-model-add-to-library-panel.png) 
+7. İşiniz bittiğinde, **Kitaplığa ekle** paneli açılır.
 
-8. Kitaplık **ekle panelinde**, sitenize ve modelin SharePoint belge kitaplığına bakabilirsiniz. Modeli farklı bir kitaplara uygulamak için Kitaplıklara **dön'e** ve kullanmak istediğiniz kitaplığı seçin. Ardından **Ekle'yi seçin**.
+    ![Sitenin ve kitaplıkların uygulandığını gösteren Kitaplığa ekle panelinin ekran görüntüsü.](../media/content-understanding/local-model-add-to-library-panel.png) 
 
-9. Model giriş sayfasında, **Modelin bu sitede** uygulandığı yer bölümünde, modelin uygulanmış olduğu kitaplıkları görebilirsiniz. Modeli sitenin diğer kitaplıklarına uygulamak için Modeli **uygula'ya seçin**. 
+8. **Kitaplığa ekle** panelinde, SharePoint sitenizin adını ve modelin uygulanacağı belge kitaplığını görürsünüz. Modeli farklı bir kitaplığa uygulamak istiyorsanız **Kitaplıklara geri dön'e** tıklayın ve kullanmak istediğiniz kitaplığı seçin. Ardından **Ekle'yi** seçin.
 
-    ![Modelin site üzerinde nerede uygulandığını gösteren model giriş sayfasının ekran görüntüsü.](../media/content-understanding/local-model-home-page.png) 
+9. Model giriş sayfasındaki **Modelin bu sitede uygulandığı yer** bölümünde, modelin uygulandığı kitaplıkları görebilirsiniz. Modeli sitedeki diğer kitaplıklara uygulamak için **Modeli uygula'yı** seçin. 
+
+    ![Modelin sitedeki uygulandığı yeri gösteren model giriş sayfasının ekran görüntüsü.](../media/content-understanding/local-model-home-page.png) 
 

@@ -13,12 +13,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Microsoft SharePoint Syntex'da ayıklayıcı oluşturmayı öğrenin.
-ms.openlocfilehash: 7d9e04b26e04a3145f5008121bfde162387a9f6b
-ms.sourcegitcommit: 23e186b46b27a6a4863f507a52a11105afae9726
+ms.openlocfilehash: 5be59cc7b99d64ceceb08bc400eeb0c44e3de1a8
+ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64882538"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "65535492"
 ---
 # <a name="create-an-extractor-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'de ayıklayıcı oluşturma
 
@@ -140,15 +140,15 @@ Etiketli dosyalarınızda yeniden **Uyuşmazlık** alırsanız, modele belge tü
 
 ## <a name="test-your-model"></a>Modelinizi test etme
 
-Etiketli örnek dosyalarınızda bir eşleşme alırsanız, artık modelinizi etiketlenmemiş kalan örnek dosyalarda test edebilirsiniz. Bu isteğe bağlıdır, ancak modeli kullanmadan önce modelin daha önce görmediği dosyalarda test ederek "uygunluk" veya hazır olma durumunu değerlendirmek için kullanışlı bir adımdır.
+Etiketli örnek dosyalarınızda bir eşleşme alırsanız, artık modelinizi etiketlenmemiş kalan örnek dosyalarda test edebilirsiniz. Bu adım isteğe bağlıdır, ancak modeli kullanmadan önce modelin daha önce görmediği dosyalarda test ederek "uygunluk" veya hazır olma durumunu değerlendirmek için kullanışlıdır.
 
-1. Model giriş sayfasında **Test** sekmesini seçin.  Bu, modeli etiketlenmemiş örnek dosyalarınızda çalıştırır.
+1. Model giriş sayfasında **Test** sekmesini seçin.  Bu işlem, modeli etiketlenmemiş örnek dosyalarınızda çalıştırır.
 
 2. **Test dosyaları** listesinde, örnek dosyalarınız modelin ihtiyacınız olan bilgileri ayıklayıp ayıklayamayacağını göstermek için görüntülenir. Sınıflandırıcınızın belgelerinizi tanımlamadaki etkinliğini saptamaya yardımcı olması için bu bilgileri kullanın.
 
     ![Dosyalarınızda test edin.](../media/content-understanding/test-filies-extractor.png)
 
-### <a name="further-refine-an-extractor"></a>Ayıklayıcıyı daha fazla daraltma
+## <a name="further-refine-an-extractor"></a>Ayıklayıcıyı daha fazla daraltma
 
 Yinelenen varlıklarınız varsa ve yalnızca bir değeri veya belirli sayıda değeri ayıklamak istiyorsanız, nasıl işleneceğini belirtmek için bir kural ayarlayabilirsiniz. Ayıklanan bilgileri daraltacak bir kural eklemek için şu adımları izleyin:
 
@@ -178,11 +178,11 @@ Yinelenen varlıklarınız varsa ve yalnızca bir değeri veya belirli sayıda d
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Sınıflandırıcı oluşturma](create-a-classifier.md)
+[Sınıflandırıcı oluştur](create-a-classifier.md)
 
 [Açıklama türleri](explanation-types-overview.md)
 
-[Ayıklayıcı oluştururken terim deposu taksonomisini kullanma](leverage-term-store-taxonomy.md)
+[Ayıklayıcı oluştururken terim deposu taksonomisini kullan](leverage-term-store-taxonomy.md)
 
 [Document Understanding'e genel bakış](document-understanding-overview.md)
 

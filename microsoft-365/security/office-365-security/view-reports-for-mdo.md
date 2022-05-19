@@ -16,19 +16,19 @@ ms.assetid: e47e838c-d99e-4c0b-b9aa-e66c4fae902f
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
-description: Yöneticiler, Microsoft 365 Defender portalında bulunan Office 365 raporları için Defender'ı bulmayı ve kullanmayı öğrenebilir.
+description: Yöneticiler, Microsoft 365 Defender portalında bulunan Office 365 için Defender raporlarını bulmayı ve kullanmayı öğrenebilir.
 ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 5ed83064d1686d1cf556e0b2dcca5766556c5fa3
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 08fd6e2fed34296b42fb3b12bec9b5b2b4cb91f8
+ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64970967"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "65535856"
 ---
-# <a name="view-defender-for-office-365-reports-in-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalında Office 365 için Defender raporlarını görüntüleme
+# <a name="view-defender-for-office-365-reports-in-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalında Office 365 için Defender raporları görüntüleme
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
@@ -36,7 +36,7 @@ ms.locfileid: "64970967"
 - [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Office 365 kuruluşlar için Microsoft Defender (örneğin, Microsoft 365 E5 abonelikler veya Office 365 Plan 1 için Microsoft Defender veya Office 365 Plan 2 eklentileri için Microsoft Defender) güvenlikle ilgili çeşitli raporlar içerir. [Gerekli izinlere](#what-permissions-are-needed-to-view-the-defender-for-office-365-reports) sahipseniz bu raporları Microsoft 365 Defender portalında görüntüleyebilir ve indirebilirsiniz.
+Office 365 için Microsoft Defender kuruluşlar (örneğin, Microsoft 365 E5 abonelikler veya Office 365 için Microsoft Defender Plan 1 veya Office 365 için Microsoft Defender Plan 2 eklentileri) güvenlikle ilgili çeşitli raporlar içerir. [Gerekli izinlere](#what-permissions-are-needed-to-view-the-defender-for-office-365-reports) sahipseniz bu raporları Microsoft 365 Defender portalında görüntüleyebilir ve indirebilirsiniz.
 
 ## <a name="view-and-download-reports"></a>Raporları görüntüleme ve indirme
 
@@ -119,11 +119,11 @@ Ana rapor sayfasında Dışarı ![Aktar simgesi.](../../media/m365-cc-sc-downloa
 
 ## <a name="threat-protection-status-report"></a>Tehdit koruması durum raporu
 
-**Tehdit koruması durum** raporu, Exchange Online Protection (EOP) ve [Office 365](exchange-online-protection-overview.md) için Microsoft Defender tarafından algılanan ve engellenen kötü amaçlı içerik ve kötü amaçlı e-posta hakkındaki bilgileri bir araya getiren tek bir görünümdür. Daha fazla bilgi için bkz [. Tehdit koruması durum raporu](view-email-security-reports.md#threat-protection-status-report).
+**Tehdit koruması durum** raporu, Exchange Online Protection (EOP) ve [Office 365 için Microsoft Defender](exchange-online-protection-overview.md) tarafından algılanan ve engellenen kötü amaçlı içerik ve kötü amaçlı e-posta hakkındaki bilgileri bir araya getiren tek bir görünümdür. Daha fazla bilgi için bkz [. Tehdit koruması durum raporu](view-email-security-reports.md#threat-protection-status-report).
 
 ## <a name="top-senders-and-recipients-report"></a>En çok gönderenler ve alıcılar raporu
 
-**En çok gönderenler ve alıcılar** raporu, Office 365 koruma özellikleri için EOP ve Defender için en çok kullanılan alıcıları gösterir. Daha fazla bilgi için bkz [. En çok gönderenler ve alıcılar raporu](view-email-security-reports.md#top-senders-and-recipients-report).
+**En çok gönderenler ve alıcılar** raporu, EOP ve Office 365 için Defender koruma özellikleri için en çok kullanılan alıcıları gösterir. Daha fazla bilgi için bkz [. En çok gönderenler ve alıcılar raporu](view-email-security-reports.md#top-senders-and-recipients-report).
 
 ## <a name="url-protection-report"></a>URL koruma raporu
 
@@ -216,7 +216,7 @@ Bu makalede açıklanan raporlara ek olarak, aşağıdaki tabloda açıklandığ
 
 |Rapor|Konu|
 |---|---|
-|**Explorer** (Office 365 Plan 2 için Microsoft Defender) veya **gerçek zamanlı algılamalar** (Office 365 Plan 1 için Microsoft Defender)|[Tehdit Gezgini (ve gerçek zamanlı algılamalar)](threat-explorer.md)|
+|**Explorer** (Office 365 için Microsoft Defender Plan 2) veya **gerçek zamanlı algılamalar** (Office 365 için Microsoft Defender Plan 1)|[Tehdit Gezgini (ve gerçek zamanlı algılamalar)](threat-explorer.md)|
 |Office 365 için Defender gerektirmeyen e-posta güvenlik raporları|[Microsoft 365 Defender portalında e-posta güvenlik raporlarını görüntüleme](view-email-security-reports.md)|
 |Exchange yönetim merkezinde (EAC) posta akışı raporları|[Yeni Exchange yönetim merkezinde posta akışı raporları](/exchange/monitoring/mail-flow-reports/mail-flow-reports)|
 
@@ -247,10 +247,10 @@ Daha fazla bilgi için bkz. [Microsoft 365 Defender portalında İzinler](permis
 
 ## <a name="what-if-the-reports-arent-showing-data"></a>Raporlarda veri gösterilmiyorsa ne olur?
 
-Office 365 raporları için Defender'unuzda veri görmüyorsanız ilkelerinizin doğru şekilde ayarlandığını bir kez daha denetleyin. Office 365 koruması için Defender'ın geçerli olması için kuruluşunuzun tanımlanmış [Kasa Bağlantıları](set-up-safe-links-policies.md) ilkeleri ve Kasa [Ekleri ilkeleri](set-up-safe-attachments-policies.md) olmalıdır. Ayrıca bkz [. İstenmeyen posta önleme ve kötü amaçlı yazılımdan koruma](anti-spam-and-anti-malware-protection.md).
+Office 365 için Defender raporlarınızda veri görmüyorsanız ilkelerinizin doğru ayarlandığını bir kez daha denetleyin. Office 365 için Defender korumasının geçerli olması için kuruluşunuzun [Kasa Bağlantıları ilkeleri](set-up-safe-links-policies.md) ve Kasa [Ekleri ilkeleri](set-up-safe-attachments-policies.md) tanımlanmış olmalıdır. Ayrıca bkz [. istenmeyen posta önleme](anti-spam-protection.md) ve [kötü amaçlı yazılımdan koruma](anti-malware-protection.md).
 
 ## <a name="related-topics"></a>İlgili konular
 
 [Microsoft 365 Defender portalında akıllı raporlar ve içgörüler](reports-and-insights-in-security-and-compliance.md)
 
-[Azure AD yerleşik rolleri](/azure/active-directory/roles/permissions-reference)
+[Yerleşik rolleri Azure AD](/azure/active-directory/roles/permissions-reference)
