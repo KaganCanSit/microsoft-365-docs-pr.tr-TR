@@ -1009,8 +1009,6 @@
           href: detailed-properties-in-the-office-365-audit-log.md
         - name: Denetimi açma veya kapatma
           href: turn-audit-log-search-on-or-off.md
-        - name: Denetim kayıtlarını şifrelemek için Müşteri Anahtarı kullanma
-          href: auditing-cmk-encryption.md
         - name: Ortak sorunları araştırmak için denetim günlüğünü kullanma
           href: auditing-troubleshooting-scenarios.md
         - name: Denetim günlüğünde paylaşım denetimini kullanma
