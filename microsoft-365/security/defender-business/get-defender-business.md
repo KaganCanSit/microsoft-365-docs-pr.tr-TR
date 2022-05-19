@@ -15,12 +15,12 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - m365-security-compliance
-ms.openlocfilehash: 6ac255fecaad4fd442116d4abb951be71d3ce6c7
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: e47fc4630e83cb79a591f1c4fd4fc7421746a15e
+ms.sourcegitcommit: 60970cf8a2cb451011c423d797dfb77925394f89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65173130"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "65587402"
 ---
 # <a name="get-microsoft-defender-for-business"></a>İş için Microsoft Defender alma
 
@@ -46,7 +46,7 @@ Deneme sürümüne kaydolmuşsanız, kabul e-postanızı aldıktan sonra [deneme
 3. [Kullanıcı ekleme ve lisans atama](mdb-add-users.md) işlemine geçin.
 
 > [!TIP]
-> [Deneme playbook'u: İş için Microsoft Defender'ı](trial-playbook-defender-business.md) gördüğünüzden emin olun.
+> Bkz [. İş için Defender deneme playbook'u](trial-playbook-defender-business.md).
 
 ## <a name="get-microsoft-365-business-premium"></a>Microsoft 365 İş Ekstra’yı edinin
 
@@ -84,8 +84,8 @@ Kabul e-postanızı aldığınızda deneme aboneliğinizi şu şekilde etkinleş
 
    | Senaryo | Yordam |
    |:---|:---|
-   | İlk kez bir Microsoft 365 aboneliği ayarlıyorsunuz. | **Kılavuzlu kuruluma git'i** seçin ve aşağıdaki adımları tamamlayın:<br/><br/>1. Office uygulamalarınızı şimdi yükleyin veya bu adımı atlamak için **Devam'ı** seçin. (Office uygulamalarınızı daha sonra yükleyebilirsiniz.)<br/><br/>2. Şirketinizin bir etki alanı varsa, şimdi ekleyebilirsiniz (bu seçenek önerilir). Alternatif olarak, şimdilik varsayılan `.onmicrosoft.com` etki alanınızı kullanmayı seçebilirsiniz.<br/><br/>3. Kullanıcı ekleyin ve lisans atayın. Listelediğiniz her kullanıcıya otomatik olarak bir lisans atanır. Bkz. [Kullanıcıları ekleme ve lisansları aynı anda atama](mdb-add-users.md). |
-   | Mevcut bir Microsoft 365 kiracısına deneme sürümü ekliıyorsunuz. | 1. Microsoft 365 yönetim merkezi ([https://admin.microsoft.com/](https://admin.microsoft.com/)) gidin ve oturum açın.<br/><br/>2. Gezinti bölmesinde **KullanıcılarEtkin** >  kullanıcılar'ı seçin. Kullanıcı listesini gözden geçirin. <br/><br/>3. Lisansları atamak için [Kullanıcılara lisans atama](../../admin/manage/assign-licenses-to-users.md) başlığı altında yer alan yönergeleri izleyin. |
+   | İlk kez bir Microsoft 365 aboneliği ayarlıyorsunuz. | **Kılavuzlu kuruluma git'i** seçin ve aşağıdaki adımları tamamlayın:<ol><li>Office uygulamalarınızı şimdi yükleyin veya bu adımı atlamak için **Devam'ı** seçin. (Office uygulamalarınızı daha sonra yükleyebilirsiniz.)</li><li>Şirketinizin bir etki alanı varsa, şimdi ekleyebilirsiniz (bu seçenek önerilir). Alternatif olarak, şimdilik varsayılan `.onmicrosoft.com` etki alanınızı kullanmayı seçebilirsiniz.</li><li>Kullanıcı ekleyin ve lisans atayın. Listelediğiniz her kullanıcıya otomatik olarak bir lisans atanır. Bkz. [Kullanıcıları ekleme ve lisansları aynı anda atama](mdb-add-users.md).</li></ol> |
+   | Mevcut bir Microsoft 365 kiracısına deneme sürümü ekliıyorsunuz. | <ol><li>Microsoft 365 yönetim merkezi ([https://admin.microsoft.com/](https://admin.microsoft.com/)) gidin ve oturum açın.</li><li>Gezinti bölmesinde **KullanıcılarEtkin** >  kullanıcılar'ı seçin. Kullanıcı listesini gözden geçirin. </li><li>Lisansları atamak için [Kullanıcılara lisans atama](../../admin/manage/assign-licenses-to-users.md) başlığı altında yer alan yönergeleri izleyin.</li></ol> |
 
 ## <a name="two-portals-for-setup"></a>Kurulum için iki portal
 
@@ -93,8 +93,8 @@ Başlamaya hazır olduğunuzda iki ana portalla çalışırsınız: Microsoft 36
 
 |Portal  |Açıklama  |
 |---------|---------|
-| Microsoft 365 yönetim merkezi ([https://admin.microsoft.com/](https://admin.microsoft.com/))      | Deneme sürümünüzü etkinleştirmek ve ilk kez oturum açmak için Microsoft 365 yönetim merkezi kullanın.<br/><br/> Ayrıca Microsoft 365 yönetim merkezi kullanarak şunları da yapacaksınız: <br/>- Kullanıcı ekleme veya kaldırma.<br/>- Kullanıcı lisansları atayın.<br/>- Ürün ve hizmetlerinizi görüntüleyin.<br/>- Microsoft 365 aboneliğiniz için kurulum görevlerini tamamlayın. <br/><br/> Daha fazla bilgi edinmek için bkz. [Microsoft 365 yönetim merkezi genel bakış](../../admin/admin-overview/admin-center-overview.md).      |
-| Microsoft 365 Defender portalı ([https://security.microsoft.com](https://security.microsoft.com))     | İş için Defender'ı ayarlamak ve yapılandırmak için Microsoft 365 Defender portalını kullanın. <br/><br/>Microsoft 365 Defender portalını kullanarak: <br/>- Cihazlarınızı ve cihaz koruma ilkelerinizi görüntüleyin.<br/>- Algılanan tehditleri görüntüleyin ve harekete geçin.<br/>- Güvenlik önerilerini görüntüleyin ve güvenlik ayarlarınızı yönetin.<br/><br/>Daha fazla bilgi için bkz. [Microsoft 365 Defender portalını kullanarak Kullanmaya başlayın](mdb-get-started.md).        |
+| Microsoft 365 yönetim merkezi ([https://admin.microsoft.com/](https://admin.microsoft.com/))      | Deneme sürümünüzü etkinleştirmek ve ilk kez oturum açmak için Microsoft 365 yönetim merkezi kullanın.<p> Ayrıca Microsoft 365 yönetim merkezi kullanarak şunları da yapacaksınız: <ul><li>Kullanıcı ekleme veya kaldırma.</li><li>Kullanıcı lisansları atayın.</li><li>Ürün ve hizmetlerinizi görüntüleyin.</li><li>Microsoft 365 aboneliğiniz için kurulum görevlerini tamamlayın.</li></ul><p>Daha fazla bilgi edinmek için bkz. [Microsoft 365 yönetim merkezi genel bakış](../../admin/admin-overview/admin-center-overview.md).      |
+| Microsoft 365 Defender portalı ([https://security.microsoft.com](https://security.microsoft.com))     | İş için Defender'ı ayarlamak ve yapılandırmak için Microsoft 365 Defender portalını kullanın.<p>Microsoft 365 Defender portalını kullanarak: <ul><li>Cihazlarınızı ve cihaz koruma ilkelerinizi görüntüleyin.</li><li>Algılanan tehditleri görüntüleyin ve harekete geçin.</li><li>Güvenlik önerilerini görüntüleyin ve güvenlik ayarlarınızı yönetin.</li></ul><p>Daha fazla bilgi için bkz. [Microsoft 365 Defender portalını kullanarak Kullanmaya başlayın](mdb-get-started.md).        |
 
 > [!TIP]
 > Microsoft 365 İş Ekstra varsa, Microsoft Intune de vardır. Cihazları yönetmek ve güvenlik ayarlarını yapılandırmak için Microsoft Endpoint Manager yönetim merkezini ([https://endpoint.microsoft.com/](https://endpoint.microsoft.com/)) kullanabilirsiniz. Intune hakkında daha fazla bilgi edinmek için bkz. [Microsoft Intune cihazlarınız için bir MDM ve MAM sağlayıcısıdır](/mem/intune/fundamentals/what-is-intune).

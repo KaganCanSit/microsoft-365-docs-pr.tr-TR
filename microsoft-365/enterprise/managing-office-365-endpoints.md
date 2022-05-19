@@ -3,6 +3,7 @@ title: Office 365 uç noktalarını yönetme
 ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
+ms.date: 05/18/2022
 audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
@@ -18,12 +19,12 @@ ms.custom:
 search.appverid: MOE150
 ms.assetid: 99cab9d4-ef59-4207-9f2b-3728eb46bf9a
 description: Office 365 uç noktalarının kurumsal kuruluşunuz ağ mimarinizle çalışması için nasıl yönetileceğini öğrenin.
-ms.openlocfilehash: 6743ab1c3241b84b0eb1dd3e9f5e67e100e18b40
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 68b778ac695c0b37b55dfe84414f72551d10ce68
+ms.sourcegitcommit: 60970cf8a2cb451011c423d797dfb77925394f89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090351"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "65587478"
 ---
 # <a name="managing-office-365-endpoints"></a>Office 365 uç noktalarını yönetme
 
@@ -47,6 +48,9 @@ Microsoft, otomatik yapılandırmayı etkinleştirmek için SD-WAN sağlayıcıl
 Office 365 ile ilişkilendirilmiş ancak IP adresi olmayan ağ isteklerini yönetmek için PAC veya WPAD dosyalarını kullanın. Ara sunucu veya çevre cihazı aracılığıyla gönderilen tipik ağ istekleri gecikme süresini artırır. SSL Break ve Inspect en büyük gecikme süresini oluştururken, ara sunucu kimlik doğrulaması ve saygınlık araması gibi diğer hizmetler düşük performansa ve kötü bir kullanıcı deneyimine neden olabilir. Ayrıca, bu çevre ağ cihazlarının tüm ağ bağlantı isteklerini işlemek için yeterli kapasiteye ihtiyacı vardır. Doğrudan Office 365 ağ istekleri için ara sunucu veya denetim cihazlarınızı atlamanızı öneririz.
   
 [PowerShell Galerisi Get-PacFile](https://www.powershellgallery.com/packages/Get-PacFile), Office 365 IP Adresi ve URL Web hizmetinden en son ağ uç noktalarını okuyan ve örnek bir PAC dosyası oluşturan bir PowerShell betiğidir. Betiği, mevcut PAC dosya yönetiminizle tümleştirileceği şekilde değiştirebilirsiniz.
+
+> [!NOTE]
+> Office 365 uç noktalarına doğrudan bağlantının güvenlik ve performans konuları hakkında daha fazla bilgi için bkz. [Ağ Bağlantısı İlkeleri'ni Office 365](microsoft-365-network-connectivity-principles.md).
 
 ![Güvenlik duvarları ve ara sunucular aracılığıyla Office 365 bağlanma.](../media/34d402f3-f502-42a0-8156-24a7c4273fa5.png)
 
@@ -198,7 +202,7 @@ Office 365 paketi ana hizmet alanlarına ayrılmıştır. Bunlar bağlantı içi
 |**Exchange** <br/> |Exchange Online ve Exchange Online Protection <br/> |
 |**SharePoint** <br/> |SharePoint Online ve OneDrive İş <br/> |
 |**Skype Kurumsal Çevrimiçi ve Microsoft Teams** <br/> |Skype Kurumsal ve Microsoft Teams <br/> |
-|**Ortak** <br/> |Office 365 Pro Plus, tarayıcıda Office, Azure AD ve diğer yaygın ağ uç noktaları <br/> |
+|**Ortak** <br/> |Office 365 Pro Plus, tarayıcıda Office, Azure AD ve diğer ortak ağ uç noktaları <br/> |
 
 Temel internet hizmetlerine ek olarak, yalnızca işlevselliği tümleştirmek için kullanılan üçüncü taraf hizmetler vardır. Bunlar tümleştirme için gerekli olsa da, Office 365 uç noktaları makalesinde isteğe bağlı olarak işaretlenir ve bu da uç nokta erişilebilir olmadığında hizmetin temel işlevselliğinin çalışmaya devam edeceği anlamına gelir. Gerekli olan tüm ağ uç noktalarının gerekli özniteliği true olarak ayarlanır. İsteğe bağlı herhangi bir ağ uç noktası gerekli özniteliği false olarak ayarlanır ve notes özniteliği, bağlantı engellenirse beklemeniz gereken eksik işlevselliği ayrıntılı olarak açıklar.
   

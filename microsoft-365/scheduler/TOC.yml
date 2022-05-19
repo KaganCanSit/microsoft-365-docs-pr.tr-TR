@@ -1,16 +1,16 @@
-- name: Program için Zamanlayıcı Microsoft 365
+- name: Microsoft 365 için Zamanlayıcı
   href: index.yml
   expanded: true
   items:
-    - name: Program için Scheduler'a hoş Microsoft 365
+    - name: Microsoft 365 için Zamanlayıcı’ya hoş geldiniz
       href: scheduler-overview.md
     - name: Güven ve gizlilik
       href: scheduler-trust-privacy.md
-    - name: Program için Zamanlayıcı'ya Microsoft 365
+    - name: Microsoft 365 için Zamanlayıcı'yı Ayarlama
       href: scheduler-setup.md
-    - name: Program için Scheduler'ın Microsoft 365
+    - name: Microsoft 365 için Zamanlayıcı'yı Kullanma
       href: scheduler-using.md
     - name: Yinelenen toplantıları zamanlama
       href: scheduler-recurring-meetings.md
-    - name: SSS'ler için Microsoft 365 SSS
+    - name: Microsoft 365 için Zamanlayıcı SSS
       href: scheduler-faqs.md

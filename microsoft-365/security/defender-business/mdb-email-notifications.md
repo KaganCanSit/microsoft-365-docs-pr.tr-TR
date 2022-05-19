@@ -13,12 +13,12 @@ ms.localizationpriority: medium
 ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection: M365-security-compliance
-ms.openlocfilehash: b6381f5bfa8ebe4f7c23a16d9a214cadb4e511e6
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: 7dc6c65221211367e080fac46506f209d17f88ff
+ms.sourcegitcommit: 60970cf8a2cb451011c423d797dfb77925394f89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65174480"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "65587456"
 ---
 # <a name="set-up-email-notifications"></a>E-posta bildirimlerini ayarlama
 
@@ -67,6 +67,9 @@ E-posta bildirimlerini ayarlarken, aşağıdaki tabloda açıklandığı gibi ik
    - **Güvenlik Açıkları** sekmesinde herhangi bir öğe görmüyorsanız, yeni bir güvenlik açığı bulunduğunda kişilere bildirilmesi için bir kural oluşturabilirsiniz. Bu görevle ilgili yardım almak için bkz. [Güvenlik açığı olayları için kurallar oluşturma](../defender-endpoint/configure-vulnerability-email-notifications.md).
 
    - Oluşturulmuş kurallarınız varsa, düzenlemek için bir kural seçin. Kuralı da silebilirsiniz. 
+
+> [!IMPORTANT]
+> İş için Defender'da e-posta bildirimleri ayarladığınızda, bildirim kurallarını belirli kullanıcılara atamanız gerekir. İş için Defender, [Uç Nokta için Defender gibi rol tabanlı erişim denetimi kullanmaz](../defender-endpoint/rbac.md). Ayrıca, e-posta bildirimleri İş için Defender'daki cihaz gruplarına uygulanamaz. 
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
