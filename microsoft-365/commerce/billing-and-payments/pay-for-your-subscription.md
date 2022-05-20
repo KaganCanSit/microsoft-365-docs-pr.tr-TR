@@ -22,18 +22,18 @@ ms.custom:
 - AdminSurgePortfolio
 - business_assist
 - AdminTemplateSet
-ms.date: 10/28/2021
-ms.openlocfilehash: fb6948c59505eaa3316dab73708658f7b31c43e7
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.date: 05/18/2022
+ms.openlocfilehash: d116fe2b9fb2b0b0b96ec44107d486edca19ff04
+ms.sourcegitcommit: 60970cf8a2cb451011c423d797dfb77925394f89
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63326307"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "65587434"
 ---
 # <a name="how-to-pay-for-your-subscription"></a>Aboneliğiniz için ödeme yapma
 
 > [!IMPORTANT]
-> 26 Ocak 2021'den itibaren artık Belçika, Fransa, İtalya, Lüksemburg, Portekiz, İspanya, Hollanda ve Amerika Birleşik Devletleri'ndeki müşteriler için yeni banka hesapları desteklenmemektedir. Bu ülkelerden birinde müşteriniz varsa, aboneliğiniz için mevcut banka hesabıyla ödeme yapmaya devam edebilirsiniz ve yeni abonelikler ekleyebilirsiniz. Ancak bunu banka hesabı iyi durumda olduğu sürece yapabilirsiniz.
+> 26 Ocak 2021'den itibaren artık Belçika, Fransa, İtalya, Lüksemburg, Portekiz, İspanya, Hollanda ve Amerika Birleşik Devletleri'ndeki müşteriler için yeni banka hesapları desteklenmemektedir. Bu ülkelerden birinde geçerli bir müşteriyseniz, aboneliğiniz için iyi durumda olan geçerli bir banka hesabıyla ödeme yapmaya devam edebilirsiniz. Ancak, banka hesabına yeni abonelikler ekleyemezsiniz.
 
 Aboneliğinizi ödemek için kredi kartı, ATM kartı veya banka hesabı kullanabilirsiniz. Bazı durumlarda çek veya elektronik fon transferi (EFT) kullanarak faturayla ödeme yapabilirsiniz. Faturalama profiliniz varsa seçenekleriniz biraz farklıdır. Daha fazla bilgi için bkz. [Faturalama profiliyle aboneliğinizi ödeme](pay-for-subscription-billing-profile.md). Hesabınızın faturalama profili olup olmadığından emin değilseniz, bkz. [Faturalama profillerini anlama](manage-billing-profiles.md).
 
@@ -44,8 +44,8 @@ Aboneliğinizi ödemek için kredi kartı, ATM kartı veya banka hesabı kullana
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-- Bu makalede açıklanan adımları yerine getirmek için Genel yönetici veya Fatura yöneticisi olmalısınız. Daha fazla bilgi için bkz. [Yönetici rolleri hakkında](../../admin/add-users/about-admin-roles.md).
-- Sonuçlandırma sırasında seçtiğiniz ödeme yöntemi, gelecekteki tüm faturalama dönemlerinde kullanacağımız ödeme yöntemidir. Bu yöntemi istediğiniz zaman değiştirebilirsiniz.
+- Bu makalede açıklanan adımları gerçekleştirmek için Genel yönetici veya Faturalandırma yöneticisi olmanız gerekir. Daha fazla bilgi için bkz. [Yönetici rolleri hakkında](../../admin/add-users/about-admin-roles.md).
+- Ödeme sırasında seçtiğiniz ödeme yöntemi, gelecekteki tüm faturalama dönemleri için kullanacağımız ödeme yöntemidir. İstediğiniz zaman değiştirebilirsiniz.
 
 ## <a name="paying-by-credit-or-debit-card-or-bank-account"></a>Kredi kartı, ATM kartı veya banka hesabıyla ödeme
 
@@ -69,7 +69,7 @@ Kredi denetimi yapılması gerekiyorsa, aboneliklerinizi satın aldığınız s�
 >
 > Dilerseniz, hesaplar arasında elektronik transferle ödeyebilirsiniz. Acente ve hesap numarası, faturanızın en altında yer alır. Fatura numaranızı Transfer tanımlaması alanına girmelisiniz.
 
-Aboneliğinizi faturayla ödüyorsanız, fatura ekstreniz görüntülenmeye hazır olduğunda bir e-posta alırsınız. Bu e-posta fatura ekstrenizin kopyasını içermez. Ancak, [kuruluşunuzun faturalarını e-posta eki olarak almayı](manage-billing-notifications.md#receive-your-organizations-invoices-as-email-attachments) seçebilirsiniz. Fatura ekstreniz, ödeme yapma seçeneklerinizle ilgili ayrıntıları ve ödemenin nereye gönderileceğini içerir. Abonelik satın alırken bir satın alma siparişi (PO) numarası girdiyseniz, bu numara fatura ekstrenizde görünür. Fatura ekstrelerine erişim hakkında daha fazla bilgi için bkz. [Fatura ekstrenizi veya faturanızı görüntüleme](view-your-bill-or-invoice.md).
+Aboneliğiniz için fatura ile ödeme yapıyorsanız, fatura ekstreniz görüntülenmeye hazır olduğunda bir e-posta alırsınız. Bu e-posta, fatura ekstrenizin bir kopyasını içermez. Ancak, [kuruluşunuzun faturalarını e-posta eki olarak almayı](manage-billing-notifications.md#receive-your-organizations-invoices-as-email-attachments) seçebilirsiniz. Fatura ekstreniz, ödeme yapma seçenekleriniz ve nereye göndereceğinizle ilgili ayrıntıları içerir. Bir abonelik satın alırken bir satın alma siparişi (PO) numarası girerseniz, numara fatura ekstrenizde görünür. Fatura özetlerine erişim hakkında bilgi için bkz. [Faturanızı veya faturanızı görüntüleyin](view-your-bill-or-invoice.md).
 
 ## <a name="what-if-i-have-an-outstanding-balance"></a>Kalan bakiyem varsa ne yapmalıyım?
 
@@ -86,7 +86,7 @@ Aboneliği öderken kullanılan ödeme yöntemini eklemediyseniz, ödeme yöntem
 
 ## <a name="where-do-i-send-my-check-or-eft-payment"></a>Çek veya EFT ile ödememi nereye göndermem gerekir?
 
-Ülkenizin veya bölgenizin ödeme yönergeleri için [faturanızı denetleyin](view-your-bill-or-invoice.md). Ne kadar ödeme yapmanız gerektiğinden emin değilseniz, faturanızı ve fatura geçmişinizi <a href="https://go.microsoft.com/fwlink/p/?linkid=2102895" target="_blank">Faturalar ve ödemeler **sayfasının** Faturalar</a> sekmesinde çevrimiçi denetleyebilirsiniz.
+Ülkeniz veya bölgeniz için ödeme yönergeleri için [faturanızı kontrol edin](view-your-bill-or-invoice.md). Ne kadar borcunuz olduğundan emin değilseniz, <a href="https://go.microsoft.com/fwlink/p/?linkid=2102895" target="_blank">Faturalar ve ödemeler</a> sayfasının **Faturalar** sekmesinde faturanızı ve fatura geçmişinizi çevrimiçi olarak kontrol edebilirsiniz.
 
 > [!NOTE]
 > - Çekle ödeme yöntemi yalnızca birkaç ülkede kullanılabilir.
