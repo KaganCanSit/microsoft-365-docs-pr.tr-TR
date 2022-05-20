@@ -19,12 +19,12 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: bda0874ef829495b162beae09fde1c4efcb03c85
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 22e5ed11c97ed00449cb62439e105bd1e6dc78e7
+ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64971571"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65599557"
 ---
 # <a name="plan-for-communication-compliance"></a>İletişim uyumluluğu planı
 
@@ -32,14 +32,16 @@ ms.locfileid: "64971571"
 
 Kuruluşunuzda [iletişim uyumluluğunu](communication-compliance.md) kullanmaya başlamadan önce, bilgi teknolojisi ve uyumluluk yönetimi ekipleriniz tarafından gözden geçirilmesi gereken önemli planlama etkinlikleri ve dikkat edilmesi gereken noktalar vardır. Aşağıdaki alanlarda dağıtımı ayrıntılı bir şekilde anlamak ve planlamak, iletişim uyumluluk özelliklerini uygulama ve kullanımınızın sorunsuz bir şekilde ilerlemesini ve çözüm için en iyi yöntemlerle uyumlu olmasını sağlamaya yardımcı olur.
 
+Daha fazla bilgi edinmek ve kuruluşunuzdaki uyumluluk ve riskli etkinlikleri ele almak için planlama sürecine genel bakış için bkz. [Insider risk yönetimi programı başlatma](https://download.microsoft.com/download/b/2/0/b208282a-2482-4986-ba07-15a9b9286df0/pwc-starting-an-insider-risk-management-program-with-pwc-and-microsoft.pdf).
+
 > [!IMPORTANT]
 > İletişim uyumluluğu şu anda coğrafi bölgelerde ve Azure hizmet bağımlılıkları tarafından desteklenen ülkelerde barındırılan kiracılarda kullanılabilir. Kuruluşunuzda iletişim uyumluluğunu desteklediğini doğrulamak için bkz. [Ülkeye/bölgeye göre Azure bağımlılığı kullanılabilirliği](/troubleshoot/azure/general/dependency-availability-by-country).
 
 ## <a name="transitioning-from-supervision-in-office-365"></a>Office 365'da Denetimden Geçiş
 
-Office 365 denetim ilkeleri kullanan kuruluşlar için, Microsoft Purview'da iletişim uyumluluk ilkelerine geçişi hemen planlamanız ve şu önemli noktaları anlamanız gerekir:
+Office 365'da denetim ilkeleri kullanan kuruluşlar için, Microsoft Purview'da iletişim uyumluluk ilkelerine geçişi hemen planlamanız ve şu önemli noktaları anlamanız gerekir:
 
-- Office 365'daki denetim çözümünün yerini Microsoft Purview'daki iletişim uyumluluk çözümü almıştır. Yeni araştırma ve düzeltme iyileştirmelerini kullanmak için iletişim uyumluluğunda mevcut denetim ilkeleriyle aynı ayarlara sahip yeni ilkeler oluşturmanızı öneririz.
+- Office 365'daki denetim çözümü, Microsoft Purview'daki iletişim uyumluluk çözümüyle tamamen değiştirilmiştir. Yeni araştırma ve düzeltme iyileştirmelerini kullanmak için iletişim uyumluluğunda mevcut denetim ilkeleriyle aynı ayarlara sahip yeni ilkeler oluşturmanızı öneririz.
 - Office 365 ilkesi eşleşmelerinde denetimde kaydedilen iletiler iletişim uyumluluğuna taşınamaz veya paylaşılamaz.
 - Geçiş işlemi sırasında her iki çözümü de yan yana kullanan kuruluşlar için, her çözümde kullanılan ilkelerin benzersiz ilke adları olmalıdır. Gruplar ve özel anahtar sözcük sözlükleri, geçiş döneminde çözümler arasında paylaşılabilir.
 
@@ -60,17 +62,17 @@ Office 365'da denetim için kullanımdan kaldırma bilgileri için ayrıntılar 
 
 ### <a name="permissions"></a>İzinler
 
-[Microsoft Purview uyumluluk portalında](https://compliance.microsoft.com/) düzenli aralıklarla uyarıları ve servis taleplerini izlemek ve gözden geçirmek için ayrılmış paydaşları seçin. Kullanıcıları ve paydaşları kuruluşunuzdaki farklı iletişim uyumluluğu rol gruplarına nasıl atayabileceğinizi anladığınızdan emin olun.
+[Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com/) düzenli aralıklarla uyarıları ve servis taleplerini izlemek ve gözden geçirmek için ayrılmış paydaşları seçin. Kullanıcıları ve paydaşları kuruluşunuzdaki farklı iletişim uyumluluğu rol gruplarına nasıl atayabileceğinizi anladığınızdan emin olun.
 
 > [!IMPORTANT]
 > Rol gruplarınızı yapılandırdıktan sonra, rol grubu izinlerinin kuruluşunuz genelinde atanan kullanıcılara uygulanması 30 dakika kadar sürebilir.
 
-İletişim uyumluluk özelliklerini yönetmek için ilk izinleri yapılandırmak için kullanılan altı rol grubu vardır. **İletişim uyumluluğunu** Microsoft Purview uyumluluk portalında menü seçeneği olarak kullanılabilir hale getirmek ve bu yapılandırma adımlarına devam etmek için aşağıdaki rol veya rol gruplarından birine atanmalısınız:
+İletişim uyumluluk özelliklerini yönetmek için ilk izinleri yapılandırmak için kullanılan altı rol grubu vardır. **İletişim uyumluluğunu** Microsoft Purview uyumluluk portalı menü seçeneği olarak kullanılabilir hale getirmek ve bu yapılandırma adımlarına devam etmek için aşağıdaki rol veya rol gruplarından birine atanmalısınız:
 
 - Genel [*Yönetici*](/azure/active-directory/roles/permissions-reference#global-administrator) rolünü Azure Active Directory
 - [*uyumluluk yöneticisi*](/azure/active-directory/roles/permissions-reference#compliance-administrator) rolünü Azure Active Directory
-- Microsoft Purview uyumluluk portalı [*Kuruluş Yönetimi*](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center) rol grubu
-- Microsoft Purview uyumluluk portalı [*Uyumluluk Yöneticisi*](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center) rol grubu
+- [*kuruluş yönetimi*](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center) rol grubunu Microsoft Purview uyumluluk portalı
+- [*uyumluluk yöneticisi*](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center) rol grubunu Microsoft Purview uyumluluk portalı
 - *İletişim Uyumluluğu* rol grubu
 - *İletişim Uyumluluğu Yöneticisi* rol grubu
 
@@ -79,7 +81,7 @@ Aşağıdaki rollerin üyeleri *, İletişim Uyumluluğu Yöneticisi* rol grubun
 - Azure Active Directory *Genel Yöneticisi*
 - *Azure Active Directory Uyumluluk Yöneticisi*
 - Microsoft Purview uyumluluk portalı *Kuruluş Yönetimi*
-- Microsoft Purview uyumluluk portalı *Uyumluluk Yöneticisi*
+- *Microsoft Purview uyumluluk portalı Uyumluluk Yöneticisi*
 
 > [!IMPORTANT]
 > İletişim *uyumluluk* yapılandırmanızın kuruluşunuzdan ayrılması durumunda iletişim uyumluluk yapılandırmanızın 'sıfır yönetici' senaryosunda yer almaması için İletişim *Uyumluluğu veya İletişim Uyumluluğu Yöneticisi* rol gruplarında her zaman en az bir kullanıcınız olduğundan emin olun (belirlediğiniz seçeneğe bağlı olarak).

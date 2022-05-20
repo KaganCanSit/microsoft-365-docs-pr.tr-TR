@@ -17,12 +17,12 @@ ms.custom: ''
 description: Yöneticiler, karantinaya alınan iletilere kullanıcıların yapabileceklerini denetlemek için karantina ilkelerini kullanmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 2f24592460daa4f476e969069d0c1b7636f6a23e
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: e591330137f2f2fd92ef05f64f5368cca533fc48
+ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65285554"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65599331"
 ---
 # <a name="quarantine-policies"></a>Karantina ilkeleri
 
@@ -53,7 +53,7 @@ Tek tek karantina ilkesi izinleri aşağıdaki önceden ayarlanmış izin grupla
 Varsayılan karantina ilkeleri, ilişkili izin grupları ve karantina bildirimlerinin etkinleştirilip etkinleştirilmediği aşağıdaki tabloda açıklanmıştır:
 
 |Varsayılan karantina ilkesi|Kullanılan izin grubu|Karantina bildirimleri etkinleştirildi mi?|
-|---|---|---|
+|---|:---:|:---:|
 |AdminOnlyAccessPolicy|Erişim yok|Hayır|
 |DefaultFullAccessPolicy|Tam erişim|Hayır|
 |NotificationEnabledPolicy<sup>\*</sup>|Tam erişim|Evet|

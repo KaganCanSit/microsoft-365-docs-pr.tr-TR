@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Duyarlılık etiketi oluşturduğunuzda, dosyalara ve e-postalara otomatik olarak bir etiket atayabilir veya kullanıcılardan önerdiğiniz etiketi seçmelerini isteyebilirsiniz.
-ms.openlocfilehash: b1a364fc6053483a05d0ea055000b863b31a94cf
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: fc641845907e157e555e70104b2fcb472ad496af
+ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65438037"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65599287"
 ---
 # <a name="apply-a-sensitivity-label-to-content-automatically"></a>İçeriğe otomatik olarak bir hassasiyet etiketi uygulama
 
@@ -67,7 +67,7 @@ Microsoft 365 içeriğine otomatik olarak duyarlılık etiketi uygulamak için i
     - Kiracınızda günde en fazla 25.000 otomatik olarak etiketlenmiş dosya.
     - Her biri ayrı ayrı belirtildiğinde en fazla 100 siteyi (SharePoint veya OneDrive) hedefleyen kiracı başına en fazla 100 otomatik etiketleme ilkesi. Tüm siteleri de belirtebilirsiniz ve bu yapılandırma en fazla 100 siteden muaf tutulur.
     - Hem simülasyon modu hem de etiketlerin uygulandığı durumlarda, değiştirme, değiştirme ve tarih için mevcut değerler otomatik etiketleme ilkelerinin bir sonucu olarak değiştirilmez.
-    - Etiket şifreleme uyguladığında[, Rights Management veren ve Rights Management sahibi](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) dosyayı son değiştiren hesaptır. Bu hesap artık Azure Active Directory içinde değilse, bu değerler ayarlanamadığından etiket uygulanmaz.
+    - Etiket şifreleme uyguladığında[, Rights Management veren ve Rights Management sahibi](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) dosyayı son değiştiren hesaptır.
 
     Exchange için otomatik etiketlemeye özgü:
     

@@ -1,7 +1,7 @@
 ---
-title: Canvas ile Microsoft Teams kullanma
-ms.author: v-cichur
-author: cichur
+title: Canvas ile Microsoft Teams toplantılarını kullanma
+ms.author: danismith
+author: DaniEASmith
 manager: serdars
 ms.reviewer: sovaish
 audience: admin
@@ -12,89 +12,89 @@ f1.keywords:
 ms.collection: M365-modern-desktop
 ms.localizationpriority: medium
 ROBOTS: NOINDEX, NOFOLLOW
-description: Tüm Microsoft Teams Canvas ile tümleştirin
-ms.openlocfilehash: 529cc27b6b63fca76d47487f26bd6deda7478640
-ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
+description: Microsoft Teams toplantıları Canvas ile tümleştirme
+ms.openlocfilehash: a81b8c7da014ba4ded9e4a2e3cfd6b38509ae2db
+ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64569589"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65599623"
 ---
-# <a name="use-microsoft-teams-meetings-with-canvas"></a>Canvas ile Microsoft Teams kullanma
+# <a name="use-microsoft-teams-meetings-with-canvas"></a>Canvas ile Microsoft Teams toplantılarını kullanma
 
-Microsoft Teams toplantıları, eğitimcilerin ve öğrencilerin Learning Yönetim Sistemi (LMS) ve diğer sistemlerde kolayca gezinmelerine yardımcı olan Learning Araçları Birlikte Çalışabilirlik (LTI) Teams. Kullanıcılar, kursuyla ilişkilendirilmiş sınıf ekiplerine doğrudan LMS'lerinin içinden erişim sağlar.
+Microsoft Teams toplantılar, eğitimcilerin ve öğrencilerin Learning Yönetim Sistemi (LMS) ile Teams arasında kolayca gezinmelerine yardımcı olan bir Learning Araçları Birlikte Çalışabilirliği (LTI) uygulamasıdır. Kullanıcılar, kendi kurslarıyla ilişkili sınıf ekiplerine doğrudan LMS'lerinin içinden erişebilir.
 
-## <a name="prerequisites-before-deployment"></a>Dağıtımdan Önce Önkoşullar
+## <a name="prerequisites-before-deployment"></a>Dağıtım Öncesi Önkoşullar
 
 > [!NOTE]
-> Geçerli toplantı Teams LTI yalnızca Canvas kullanıcılarını sınırlı bir kapsam Microsoft Azure Active Directory (AAD) ile eşitlemeyi destekler.
+> Geçerli Teams Toplantıları LTI yalnızca sınırlı kapsamda Microsoft Azure Active Directory (AAD) ile Canvas kullanıcıların eşitlenmesini destekler.
 >
-> - Kiracınız Bir Microsoft Eğitim lisansına sahip olmalı.
+> - Kiracınızın bir Microsoft Education lisansı olmalıdır.
 > - Kullanıcıları Canvas ile Microsoft arasında eşlemek için yalnızca tek bir Microsoft kiracısı kullanılabilir.
-> - Grupların çoğaltılmasından School Data Sync için Sınıf Sınıf Teams LTI'yi (SDS) kullanmadan önce SDS'yi kapatmaniz gerekir.
+> - Grupların çoğaltılmasını önlemek için Sınıf Teams LTI'yi kullanmadan önce School Data Sync (SDS) kapatmanız gerekir.
 
 ## <a name="microsoft-office-365-admin"></a>Microsoft Office 365 Yöneticisi
 
-Instructure Canvas içinde Microsoft Teams tümleştirmesi yönetmeden önce, Canvas yönetici kurulumunu tamamlamadan önce Canvas'ın **Microsoft-Teams-Sync-for-Canvas** Azure uygulamasının Microsoft Azure kiracınıza kurumunuz Microsoft Office 365 yöneticisi tarafından onaylanması önemlidir.
+Instructure Canvas içindeki Microsoft Teams tümleştirmesini yönetmeden önce, kuruluşunuzun Microsoft Office 365 yöneticisi tarafından onaylanan Canvas **Microsoft-Teams-Sync-for-Canvas** Azure uygulamasının Canvas yöneticisi kurulumunu tamamlamadan önce kiracıyı Microsoft Azure.
 
-1. Canvas'ta oturum açma.
+1. Canvas oturum açın.
 
-2. Genel **gezinti bölmesinde** Yönetici bağlantısını seçin ve sonra da hesabınız'ı seçin.
+2. Genel gezinti bölmesinde **Yönetici** bağlantısını ve ardından hesabınızı seçin.
 
-3. Yönetici gezintisinde, Önce **Ayarlar** sonra Tümleştirmeler **sekmesini** seçin.
+3. Yönetici gezintisinde **Ayarlar** bağlantısını ve ardından **Tümleştirmeler** sekmesini seçin.
 
-   ![Canvas'Teams Eşitleme Güncelleştirildi png dosyası.](https://user-images.githubusercontent.com/87142492/128552407-78cb28e9-47cf-4026-954d-12dc3553af6f.png)
+   ![Canvas Teams Eşitle Güncelleştirildi png.](https://user-images.githubusercontent.com/87142492/128552407-78cb28e9-47cf-4026-954d-12dc3553af6f.png)
 
-4. Microsoft kiracı adınızı, oturum açma özniteliğinizi, etki alanı son ekini ve AAD özniteliğinizi girin. Bu alanlar Canvas'ta bu alanları başka kullanıcılarla eşleşen kullanıcılarla Microsoft Azure Active Directory.
-   - Oturum Açma Özniteliği, eşleştirme için kullanılan Canvas kullanıcı özniteliğidir.
-   - Son ek alanı isteğe bağlıdır ve Canvas öznitelikleriyle Microsoft AAD alanları arasında tam eşlemeler olmayan bir etki alanı belirtmenize olanak verir. Örneğin, Microsoft AAD'daki UPN'nin 'ad' olduğu sırada Canvas e-postanız 'name@example.edu' ise, son ek alanına 'example.edu' girerek kullanıcıları eşebilirsiniz.
-   - Active Directory Arama Özniteliği, Microsoft tarafında Canvas özniteliklerinin eşlenilen alandır. UPN, birincil e-posta adresi veya e-posta diğer adı arasında'ı seçin.
+4. Microsoft kiracı adınızı, oturum açma özniteliğinizi, etki alanı sonekini ve AAD arama özniteliğinizi girin. Bu alanlar, Canvas içindeki kullanıcıları Microsoft Azure Active Directory'daki kullanıcılarla eşleştirmek için kullanılır.
+   - Login Özniteliği, eşleştirme için kullanılan Canvas kullanıcı özniteliğidir.
+   - Sonek alanı isteğe bağlıdır ve Canvas öznitelikleri ile Microsoft AAD alanları arasında tam eşleme olmadığında bir etki alanı belirtmenize olanak tanır. Örneğin, Canvas e-postanız 'name@example.edu' ise, Microsoft AAD'deki UPN 'ad' ise, sonek alanına 'example.edu' girerek kullanıcıları eşleştirebilirsiniz.
+   - Active Directory Arama Özniteliği, Microsoft tarafında Canvas özniteliklerinin eşleştirildiği alandır. UPN, birincil e-posta adresi veya e-posta diğer adı arasında seçim yapın.
 
-5. Güncelleştirme **ve Ayarlar'yi** seçin.
+5. İşiniz bittiğinde **Ayarlar güncelleştir'i** seçin.
 
-6. Canvas'ın **Microsoft-Teams-Sync-for-Canvas Azure uygulamasına** erişimi onaylamak için Kiracı erişimi ver **bağlantısını** seçin. Microsoft Kimlik Platformu Yönetici onayı Uç Noktasına yeniden yönlendirilecektir.
+6. **Canvas'ın Microsoft-Teams-Sync-for-Canvas Azure uygulamasına** erişimi onaylamak için **Kiracı erişimi ver** bağlantısını seçin. Microsoft Kimlik Platformu Yönetici Onayı Uç Noktası'na yönlendirilirsiniz.
 
-   ![izinlerini seçin.](media/permissions.png)
+   ![Izin.](media/permissions.png)
 
-7. Kabul **Et'i seçin**.
+7. **Kabul Et'i** seçin.
 
    > [!NOTE]
-   > Eşitleme, LMS iş ortağı tarafından yönetilen ve bir ders düzeyinde üyeliği Microsoft Graph API'lerini kullanan Teams ekibiyle eşitlemek için kullanılan bir işlevdir. Bu öncelikle bir eğitimcinin ders düzeyinde doğru olarak açık bir işlevdir. Ardından, LMS tarafında üyelerin ek ya da silinmesiyle ilgili yapılan üyelik değişikliği, LMS iş ortağı tarafından uygulanan Eşitleme kullanılarak yansıtıldı. Bu işlem bir Eğitimci için etkinleştirilmeden önce bile M365 eğitim enstitüsü yöneticisi, eğitimcilerinin aşağıda bulunan Eşitleme izni kalıcı olarak eşitlemeye erişmelerine izin verir. Bu izinler, eğitimcilerin LMS kursuyla Sınıf ekipleri arasında üyelikleri eşitlemelerine olanak sağlamak için LMS Teams verilenler.
+   > Eşitleme, LMS iş ortağı tarafından yönetilen ve Microsoft graph API'lerini kullanarak kurs düzeyinde üyeliği Teams ekibiyle eşitlemek için kullanılan bir işlevdir. Bu öncelikle eğitimcinin kurs düzeyinde doğru olarak geçiş yaptığı bir işlevdir. Daha sonra, üyelerin eklenmesi veya silinmesi için LMS tarafında yapılan tüm üyelik değişiklikleri, LMS iş ortağı tarafından uygulanan Eşitleme kullanılarak yansıtılır. Bu işlem bir Eğitimci için etkinleştirilmeden önce bile M365 eğitim enstitüsü yöneticisi, eğitimcilerinin aşağıda bulunan Eşitleme izin modalitesini kullanarak eşitlemeye erişmesine izin verir. Bu izinler, eğitimcilerin LMS kursu ile Teams Sınıf ekipleri arasında üyeliği eşitlemesini sağlamak için LMS iş ortağına verilir.
 
-8. Geçiş Microsoft Teams açıp eşitlemeyi etkinleştirme.
+8. İki durumlu düğmeyi açarak Microsoft Teams eşitlemeyi etkinleştirin.
 
    ![teams-sync.](media/teams-sync.png)
 
 ## <a name="canvas-admin"></a>Canvas Yöneticisi
 
-LTI 1.3 tümleştirmesi Microsoft Teams için ayarlama.
+Microsoft Teams LTI 1.3 Tümleştirmesini ayarlayın.
 
-Canvas Admin olarak, ortamınız içinde en iyi Microsoft Teams LTI uygulamasını eklemeniz gerekir. Uygulama için LTI İstemci Kimliği'ne not edin.
+Canvas Yöneticisi olarak ortamınıza Microsoft Teams toplantıları LTI uygulamasını eklemeniz gerekir. Uygulamanın LTI İstemci Kimliğini not edin.
 
- - Microsoft Teams- 170000000000703
+ - Microsoft Teams toplantıları - 170000000000703
 
-1. Access **Yönetici** **ayarlarıApps** > .
+1. **Erişim Yöneticisi** **ayarlarıUygulamalar** > .
 
-2. En **iyi** LTI uygulamalarını eklemek Teams + Uygulama'ya tıklayın.
+2. Teams LTI uygulamalarını eklemek için **+ Uygulama'ya** tıklayın.
 
    ![dış uygulamalar.](media/external-apps.png)
 
-3. Yapılandırma **türü için İstemci Kimliğine** Göre'yi seçin.
+3. Yapılandırma türü için **İstemci Kimliğine Göre'yi** seçin.
 
-   ![ekle'yi seçin.](media/add-app.png)
+   ![uygulama ekleyin.](media/add-app.png)
 
-4. Sağlanan İstemci Kimliğini girin ve sonra Gönder'i **seçin**.
+4. Sağlanan İstemci Kimliğini girin ve **Gönder'i** seçin.
 
-   Onay için İstemci Kimliği Microsoft Teams toplantı LTI uygulama adını fark edin.
+   Onay için İstemci Kimliği için Microsoft Teams toplantılarıN LTI uygulama adını fark edeceksiniz.
 
 5. **Yükle**’yi seçin.
 
-   En Microsoft Teams LTI uygulaması dış uygulamalar listesine eklenir.
+   Microsoft Teams toplantıları LTI uygulaması dış uygulamalar listesine eklenir.
 
-6. Canvas yönetici hesabında geliştirici tuşlarına giderek, devralınan'ı seçerek ve Toplantılarda "açık" ayarını etkinleştirerek Microsoft Teams etkinleştirin.
+6. Canvas yönetici hesabındaki geliştirici anahtarlarına giderek, devralınmış'ı seçerek ve Microsoft Teams Toplantıları için "açık" düğmesini açarak uygulamayı etkinleştirin.
 
-## <a name="enable-for-canvas-courses"></a>Canvas Kursları için Etkinleştirme
+## <a name="enable-for-canvas-courses"></a>Canvas Kursları için etkinleştirme
 
-LTI'yi bir kurs içinde kullanmak için, Canvas kursunu bir eğitmenin tümleştirmelerin eşitleni etkinleştirmesi gerekir. Her kursun, ilgili bir öğretim üyesinin oluşturulması Teams bir eğitmen tarafından etkinleştirilmesi gerekir; bu çalışma üzerinde genel Teams yoktur. İstenmeyen postaların oluşturulduğunda bu şekilde Teams dikkati önlemektedir.
+LTI'yi bir kurs içinde kullanabilmek için Canvas kurs eğitmeninin tümleştirme eşitlemesini etkinleştirmesi gerekir. İlgili Teams oluşturulması için her kursun bir eğitmen tarafından etkinleştirilmesi gerekir; Teams oluşturulması için genel bir mekanizma yoktur. Bu, istenmeyen Teams oluşturulmasını önlemek için dikkatli bir şekilde tasarlanmıştır.
 
-Her kurs için [LTI'yı etkinleştirmek ve](https://support.microsoft.com/topic/use-microsoft-teams-classes-in-your-lms-preview-ac6a1e34-32f7-45e6-b83e-094185a1e78a#ID0EBD=Instructure_Canvas) tümleştirme kurulumunu bitirmek için lütfen eğitmenlerinizi eğitimci belgelerine başvurun.
+Her kurs için LTI'yi etkinleştirme ve tümleştirme kurulumunu tamamlama konusunda eğitmen [belgelerine](https://support.microsoft.com/topic/use-microsoft-teams-classes-in-your-lms-preview-ac6a1e34-32f7-45e6-b83e-094185a1e78a#ID0EBD=Instructure_Canvas) lütfen eğitmenlerinize başvurun.

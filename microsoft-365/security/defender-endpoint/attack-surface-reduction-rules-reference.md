@@ -17,18 +17,18 @@ ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.date: 02/04/2022
-ms.openlocfilehash: 48fbef36720d295dabbf640944e64900633f1fe2
-ms.sourcegitcommit: 570c3be37b6ab1d59a4988f7de9c9fb5ca38028f
+ms.openlocfilehash: d43bcfd16a2ab2b1927ae4da0f894db114003cbe
+ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "65363070"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65599579"
 ---
 # <a name="attack-surface-reduction-rules-reference"></a>Saldırı yüzeyi azaltma kuralları başvurusu
 
 **Şunlar için geçerlidir:**
 
-- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 1](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 - Microsoft Defender Virüsten Koruma
@@ -332,6 +332,9 @@ Bağımlılıklar: MDAV, Bulut Koruması
 Bu kural, belirsiz bir betik içindeki şüpheli özellikleri algılar.
 
 Betik karartma, hem kötü amaçlı yazılım yazarlarının hem de yasal uygulamaların fikri mülkiyeti gizlemek veya betik yükleme sürelerini azaltmak için kullandığı yaygın bir tekniktir. Kötü amaçlı yazılım yazarları, kötü amaçlı kodların okunmasını zorlaştırmak için de karartma kullanır ve bu da insanlar ve güvenlik yazılımları tarafından yakından inceleme yapılmasını önler.
+
+> [!IMPORTANT]
+> Çok sayıda hatalı pozitif sonuç nedeniyle bu kural şu anda PowerShell betiklerini algılamaz; bu geçici bir çözümdür. Kural güncelleştirilecek ve yakında PowerShell betiklerini yeniden algılamaya başlayacaktır.
 
 Intune adı:`Obfuscated js/vbs/ps/macro code`
 

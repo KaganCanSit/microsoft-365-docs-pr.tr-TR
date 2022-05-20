@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 description: Erişimi ve kullanımı kısıtlayarak verilerinizi koruyan şifreleme için duyarlılık etiketlerini yapılandırın.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 14be99abd0a31a8141f5f66a205a9cd0e17391af
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: f2a9f399e447e7b483e664da2e0bf7575b9f55d8
+ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65469458"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65599243"
 ---
 # <a name="restrict-access-to-content-by-using-sensitivity-labels-to-apply-encryption"></a>Şifreleme uygulamak için hassasiyet etiketleri kullanarak içeriğe erişimi kısıtlama
 
@@ -33,7 +33,7 @@ Duyarlılık etiketi oluşturduğunuzda, etiketin uygulanacağı içeriğe eriş
 
 - Gizli bir belgeyi veya e-postayı yalnızca kuruluşunuzdaki kullanıcılar açabilir.
 - Yalnızca pazarlama departmanındaki kullanıcılar promosyon duyurusu belgesini veya e-postasını düzenleyebilir ve yazdırabilirken, kuruluşunuzdaki diğer tüm kullanıcılar bunu yalnızca okuyabilir.
-- Kullanıcılar bir e-postayı iletemez veya dahili yeniden düzenleme hakkındaki haberleri içeren bilgileri kopyalayamaz.
+- Kullanıcılar bir e-postayı iletemez veya şirket içi yeniden düzenleme hakkındaki haberleri içeren bilgileri kopyalayamaz.
 - İş ortaklarına gönderilen geçerli fiyat listesi belirtilen tarihten sonra açılamaz.
 
 Bir belge veya e-posta şifrelendiğinde içeriğe erişim kısıtlanır ve böylece:
@@ -69,14 +69,14 @@ Bu şifreleme çözümünü kullandığınızda **süper kullanıcı** özelliğ
 
 - Azure Information Protection için Exchange yapılandırma
     
-    kullanıcıların e-postalarını şifrelemek için Outlook etiket uygulayabilmesi için Exchange Azure Information Protection için yapılandırılması gerekmez. Ancak Exchange Azure Information Protection için yapılandırılana kadar, azure Rights Management korumasını Exchange ile kullanma işlevinin tamamını elde edersiniz.
+    kullanıcıların e-postalarını şifrelemek için Outlook etiket uygulayabilmesi için Exchange Azure Information Protection için yapılandırılması gerekmez. Ancak Exchange Azure Information Protection için yapılandırılana kadar Azure Rights Management korumasını Exchange ile kullanma işlevinin tamamını elde etmezsiniz.
     
-    Örneğin, kullanıcılar cep telefonlarında veya Web üzerinde Outlook ile şifrelenmiş e-postaları görüntüleyemez, şifrelenmiş e-postalar arama için dizine alınamaz ve Rights Management koruması için Exchange Online DLP'yi yapılandıramazsınız. 
+    Örneğin, kullanıcılar cep telefonlarında veya Web üzerinde Outlook ile şifrelenmiş e-postaları görüntüleyemez, şifrelenmiş e-postalar arama için dizine eklenemez ve Rights Management koruması için Exchange Online DLP'yi yapılandıramazsınız. 
     
-    Exchange bu ek senaryoları desteklediğinden emin olmak için aşağıdakilere bakın:
+    Exchange bu ek senaryoları destekleyeediğinden emin olmak için:
     
     - Exchange Online için [Exchange Online: IRM Yapılandırması](/azure/information-protection/configure-office365#exchangeonline-irm-configuration) yönergelerine bakın.
-    - Şirket içi Exchange için [RMS bağlayıcısını dağıtmanız ve Exchange sunucularınızı yapılandırmanız](/azure/information-protection/deploy-rms-connector) gerekir. 
+    - Şirket içi Exchange için [RMS bağlayıcısını dağıtmanız ve Exchange sunucularınızı yapılandırmanız](/azure/information-protection/deploy-rms-connector) gerekir.
 
 ## <a name="how-to-configure-a-label-for-encryption"></a>Şifreleme için etiket yapılandırma
 
@@ -129,7 +129,7 @@ Yeni etiket şifrelemesinin uygulandığı veya özgün şifrelemenin kaldırıl
 
 Kullanıcı bu haklardan veya rollerden birine sahip değilse etiket uygulanamaz ve bu nedenle özgün şifreleme korunur. Kullanıcı şu iletiyi görür: **Duyarlılık etiketinde bu değişikliği yapma izniniz yok. Lütfen içerik sahibine başvurun.**
 
-Örneğin, bir e-posta iletisine İletme'yi uygulayan kişi, e-postanın Rights Management sahibi olduğundan şifrelemeyi değiştirmek veya kaldırmak için iş parçacığını yeniden etiketleyebilir. Ancak süper kullanıcılar dışında, bu e-postanın alıcıları gerekli kullanım haklarına sahip olmadıkları için e-postayı yeniden etiketleyemez.
+Örneğin, e-posta iletisine İletme'yi uygulayan kişi, e-postanın Rights Management sahibi olduğundan şifrelemeyi değiştirmek veya kaldırmak için iş parçacığını yeniden etiketleyebilir. Ancak süper kullanıcılar dışında, bu e-postanın alıcıları gerekli kullanım haklarına sahip olmadıklarından e-postayı yeniden etiketleyemez.
 
 #### <a name="email-attachments-for-encrypted-email-messages"></a>Şifrelenmiş e-posta iletileri için e-posta ekleri
 
@@ -146,7 +146,7 @@ Duyarlılık etiketi oluşturmak veya düzenlemek için **Şifreleme** sayfasın
 
 Örneğin, en hassas içeriğinize uygulanacak **Son Derece Gizli** adlı bir duyarlılık etiketiniz varsa, bu içeriğe kimlerin ne tür izinler alacağına şimdi karar vermek isteyebilirsiniz.
 
-Alternatif olarak, **İş Sözleşmeleri** adlı bir duyarlılık etiketiniz varsa ve kuruluşunuzun iş akışı, kişilerinizin bu içerik üzerinde geçici olarak farklı kişilerle işbirliği yapmalarını gerektiriyorsa, kullanıcılarınızın etiketi atadığında kimlerin izin alacağına karar vermelerine izin vermek isteyebilirsiniz. Bu esneklik hem kullanıcılarınızın üretkenliğine yardımcı olur hem de yöneticilerinizin belirli senaryoları ele almak için yeni duyarlılık etiketlerini güncelleştirme veya oluşturma isteklerini azaltır.
+Alternatif olarak, **İş Sözleşmeleri** adlı bir duyarlılık etiketiniz varsa ve kuruluşunuzun iş akışı, kişilerinizin bu içerik üzerinde planlanmamış bir şekilde farklı kişilerle işbirliği yapmalarını gerektiriyorsa, kullanıcılarınızın etiketi atadığında kimlerin izin alacağına karar vermesine izin vermek isteyebilirsiniz. Bu esneklik hem kullanıcılarınızın üretkenliğine yardımcı olur hem de yöneticilerinizin belirli senaryoları ele almak için yeni duyarlılık etiketlerini güncelleştirme veya oluşturma isteklerini azaltır.
 
 İzinlerin şimdi atanıp atanmayacağını veya kullanıcıların izin atamasına izin verilip verilmeyeceğini seçme:
 
@@ -156,13 +156,22 @@ Alternatif olarak, **İş Sözleşmeleri** adlı bir duyarlılık etiketiniz var
 
 Bu etiketin uygulandığı e-postaya veya belgelere kimlerin erişebileceğini denetlemek için aşağıdaki seçenekleri kullanın. Şunları yapabilirsiniz:
 
-- **Etiketli içeriğe erişimin süresinin belirli** bir tarihte veya etiket uygulandıktan sonraki belirli bir gün sayısından sonra dolmasına izin verin. Bu süreden sonra kullanıcılar etiketli öğeyi açamayacak. Bir tarih belirtirseniz, geçerli saat diliminizdeki bu tarihte gece yarısı geçerli olur. (Bazı e-posta istemcilerinin önbelleğe alma mekanizmaları nedeniyle sona erme tarihini geçen e-postaları göstermeyebileceğini unutmayın.)
+- **Etiketli içeriğe erişimin süresinin belirli** bir tarihte veya etiket uygulandıktan sonraki belirli bir gün sayısından sonra dolmasına izin verin. Bu süreden sonra kullanıcılar etiketli öğeyi açamayacak. Bir tarih belirtirseniz, geçerli saat diliminizdeki bu tarihte gece yarısı geçerli olur. Bazı e-posta istemcileri, önbelleğe alma mekanizmaları nedeniyle süre sonunu zorunlu kılmayabilir ve son kullanma tarihlerini geçen e-postaları göstermeyebilir.
 
-- Etiket uygulandıktan sonra hiçbir zaman, her zaman veya belirli bir sayıda gün boyunca **çevrimdışı erişime izin verme**. Çevrimdışı erişimi hiçbir zaman veya birkaç günle kısıtlarsanız, bu eşiğe ulaşıldığında kullanıcıların yeniden kimlik doğrulaması yapılması ve erişimlerinin günlüğe kaydedilmesi gerekir. Daha fazla bilgi için lisansı kullanma Rights Management sonraki bölüme bakın.
+- Etiket uygulandıktan sonra hiçbir zaman, her zaman veya belirli bir sayıda gün boyunca **çevrimdışı erişime izin verme**. Sahip olduğunuz tüm güvenlik gereksinimlerini, kullanıcıların İnternet bağlantısı olmadığında şifrelenmiş içeriği açabilme özelliğiyle dengelemek için bu ayarı kullanın. Çevrimdışı erişimi hiçbir zaman veya birkaç günle kısıtlarsanız, bu eşiğe ulaşıldığında kullanıcıların yeniden kimlik doğrulaması yapılması ve erişimlerinin günlüğe kaydedilmesi gerekir. Bu işlemin nasıl çalıştığı hakkında daha fazla bilgi için Rights Management [kullanım lisansı](#rights-management-use-license-for-offline-access) hakkında aşağıdaki bölüme bakın.
 
 Şifrelenmiş içerik için erişim denetimi için Ayarlar:
 
 ![Yönetici tanımlı izinler için Ayarlar.](../media/sensitivity-encryption-settings-for-admin-defined-permissions.png)
+
+Süre sonu ve çevrimdışı erişim ayarları için Öneriler:
+
+|Ayar|Önerilen ayar|
+|-------|----------------|-------------------|
+|**İçeriğe kullanıcı erişiminin süresi doluyor**|İçeriğin belirli bir zamana bağlı gereksinimi olmadığı sürece **hiçbir zaman**.|
+|**Çevrimdışı erişime izin ver**|İçeriğin duyarlılığına bağlıdır:<br /><br />- **Yalnızca birkaç gün** =  için **Yetkisiz** kişilerle paylaşılırsa işletmeye zarar verebilecek hassas iş verileri için 7. Bu öneri esneklik ve güvenlik arasında dengeli bir uzlaşma sağlar. Örnek olarak sözleşmeler, güvenlik raporları, tahmin özetleri ve satış hesabı verileri verilebilir.<br /><br />- **Yetkisiz** kişilerle paylaşıldığında işletmeye zarar verecek çok hassas iş verileri için asla. Bu öneri, esnekliğe göre güvenliği önceliklendirir ve bir veya daha fazla kullanıcının belgeye erişimini kaldırırsanız belgeyi açamayacaklarını güvence altına alır. Çalışan ve müşteri bilgileri, parolalar, kaynak kodu ve önceden duyurulan finansal raporlar buna örnek olarak verilebilir. <br /><br />- **Erişimleri** kaldırıldıktan ve daha önce şifrelenmiş içeriği açtıktan sonra, kullanıcıların şifrelenmiş içeriği 30 güne kadar (veya kiracı için yapılandırılmış kullanım lisansı geçerlilik süresi) açmaya devam edip etmediklerinin önemli olmadığı daha az hassas içerik için her zaman.|
+
+Yalnızca izin atamak üzere yapılandırılmış etiketler artık çevrimdışı erişim için farklı değerleri destekler. Kullanıcıların izinleri otomatik olarak atamasına izin veren etiketler kiracının Rights Management lisans geçerlilik süresini kullanır. Örneğin, İletme, Yalnızca Şifreleme için yapılandırılmış etiketler ve kullanıcılardan kendi izinlerini belirtmelerini isteme. Bu ayar için varsayılan değer 30 gündür.
 
 ### <a name="rights-management-use-license-for-offline-access"></a>çevrimdışı erişim için lisans Rights Management kullanma
 
@@ -197,7 +206,7 @@ Belirli kişilere yalnızca etiketlenmiş içerikle etkileşim kurabilmeleri iç
 
 - Kimliği doğrulanmış kullanıcılar. Seçmeden önce bu ayarın [gereksinimlerini ve sınırlamalarını](#requirements-and-limitations-for-add-any-authenticated-users) anladığınızdan emin olun.
 
-- Azure AD belirli bir kullanıcı veya e-posta özellikli güvenlik grubu, dağıtım grubu veya [Microsoft 365 grubu (eski adıyla Office 365 grubu](https://techcommunity.microsoft.com/t5/microsoft-365-blog/office-365-groups-will-become-microsoft-365-groups/ba-p/1303601)). Microsoft 365 grubunun statik veya [dinamik üyeliği](/azure/active-directory/users-groups-roles/groups-create-rule) olabilir. Bu grup türü Azure AD eşitlenmediğinden ve e-posta etkin olmayan bir güvenlik grubu kullanamadığınızdan Exchange [dinamik dağıtım](/Exchange/recipients/dynamic-distribution-groups/dynamic-distribution-groups) grubunu kullanamadığınızı unutmayın.
+- Azure AD'da belirli bir kullanıcı veya e-posta özellikli güvenlik grubu, dağıtım grubu veya Microsoft 365 grubu. Microsoft 365 grubunun statik veya [dinamik üyeliği](/azure/active-directory/users-groups-roles/groups-create-rule) olabilir. Bu [grup türü Azure AD eşitlenmediğinden, Exchange dinamik dağıtım grubunu](/Exchange/recipients/dynamic-distribution-groups/dynamic-distribution-groups) kullanamazsınız. E-posta etkin olmayan bir güvenlik grubunu da kullanamazsınız.
     
     Posta kişilerini içeren grupları kuruluşunuzun dışındaki birden çok kişiye erişim vermek için kullanışlı bir yöntem olarak belirtebilirsiniz ancak şu anda bu yapılandırmayla ilgili bilinen bir sorun vardır. Daha fazla bilgi için bkz [. Gruplardaki posta kişilerinin şifrelenmiş içeriğe aralıklı erişimi vardır](/office365/troubleshoot/sensitivity-labels/mail-contacts-lose-access-encrypted-content).
 
@@ -219,7 +228,7 @@ Bu ayar, etiketin şifrelediği içeriğe kimlerin erişebileceğini kısıtlama
 
 Kimliği doğrulanmış kullanıcılar ayarı için bazı tipik senaryolar:
 
-- İçeriği kimlerin görüntülediğinden rahatsız olmazsınız, ancak içeriği kullanma biçimini kısıtlamak istersiniz. Örneğin, içeriğin düzenlenmesini, kopyalanmasını veya yazdırılmasını istemezsiniz.
+- İçeriği kimlerin görüntülediğinden rahatsız olmazsınız, ancak içeriği kullanma biçimini kısıtlamak istiyorsunuz. Örneğin, içeriğin düzenlenmesini, kopyalanmasını veya yazdırılmasını istemezsiniz.
 - İçeriğe erişenleri kısıtlamanız gerekmez, ancak içeriği kimin açtığını onaylamak istiyorsunuz.
 - İçeriğin bekleyen ve aktarım sırasında şifrelenmesi gerekir, ancak erişim denetimleri gerektirmez.
 
@@ -248,7 +257,7 @@ Rights Management verene her zaman belge veya e-posta için Tam Denetim izinleri
 
 - Şifreleme ayarları bir sona erme tarihi içerirse, Rights Management veren belgeyi veya e-postayı bu tarihten sonra da açabilir ve düzenleyebilir.
 - Rights Management veren her zaman çevrimdışı olarak belgeye veya e-postaya erişebilir.
-- Rights Management veren, iptal edilen bir belgeyi yine de açabilir.
+- Rights Management veren, iptal edilen bir belgeyi açmaya devam edebilir.
 
 Daha fazla bilgi için bkz. [Rights Management veren ve Rights Management sahibi](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
 
@@ -257,7 +266,7 @@ Daha fazla bilgi için bkz. [Rights Management veren ve Rights Management sahibi
 > [!NOTE]
 > Bu özellik şu anda yalnızca Azure Information Protection birleşik etiketleme istemcisi tarafından desteklenmektedir.
 
-Bu seçeneği yalnızca Çift Anahtar Şifrelemesi hizmetini yapılandırdıktan ve bu etiketin uygulanacağı dosyalar için bu çift anahtar şifrelemesini kullanmanız gerektiğinde belirtin. Etiket yapılandırılıp kaydedildikten sonra düzenleyemezsiniz.
+Bu seçeneği yalnızca Çift Anahtar Şifreleme hizmetini yapılandırdıktan ve bu etiketin uygulanacağı dosyalar için bu çift anahtar şifrelemesini kullanmanız gerektiğinde belirtin. Etiket yapılandırılıp kaydedildikten sonra düzenleyemezsiniz.
 
 Daha fazla bilgi, önkoşullar ve yapılandırma yönergeleri için bkz. [Çift Anahtar Şifrelemesi (DKE)](double-key-encryption.md).
 
@@ -307,7 +316,7 @@ Bu seçeneklerden herhangi biri bir e-postaya uygulandığında, e-posta şifrel
     
     Bu seçeneğin nasıl çalıştığı hakkında daha fazla bilgi için bkz. [E-postalar için İletme seçeneği](/azure/information-protection/configure-usage-rights#do-not-forward-option-for-emails).
 
-- **Yalnızca Şifrele**: Alıcılar Farklı Kaydet, Dışarı Aktar ve Tam Denetim dışında tüm kullanım haklarına sahiptir. Bu kullanım hakları birleşimi, alıcıların korumayı kaldıramayacakları dışında hiçbir kısıtlaması olmadığı anlamına gelir. Örneğin, bir alıcı e-postadan kopyalayabilir, yazdırabilir ve iletebilir.
+- **Yalnızca Şifrele**: Alıcılar Farklı Kaydet, Dışarı Aktar ve Tam Denetim dışında tüm kullanım haklarına sahiptir. Kullanım haklarının bu birleşimi, alıcıların korumayı kaldıramamaları dışında hiçbir kısıtlaması olmadığı anlamına gelir. Örneğin, bir alıcı e-postadan kopyalayabilir, yazdırabilir ve iletebilir.
     
     Bu seçeneğin nasıl çalıştığı hakkında daha fazla bilgi için bkz. [E-postalar için yalnızca şifreleme seçeneği](/azure/information-protection/configure-usage-rights#encrypt-only-option-for-emails).
 
@@ -315,17 +324,17 @@ E-postaya eklenen şifrelenmemiş Office belgeleri otomatik olarak aynı kısıt
 
 ### <a name="word-powerpoint-and-excel-permissions"></a>Word, PowerPoint ve Excel izinleri
 
-Word'de, PowerPoint ve Excel, bir kullanıcı belgeye izin atamasına olanak tanıyan bir duyarlılık etiketi uyguladığında, şifreleme uygulandığında kullanıcı ve izin seçimini belirtmesi istenir.
+Word' de, PowerPoint ve Excel, bir kullanıcı belgeye izin atamasına izin veren bir duyarlılık etiketi uyguladığında, kullanıcıdan kullanıcı seçimini ve şifreleme izinlerini belirtmesi istenir.
 
 Örneğin, [birlikte yazma etkinleştirilmediği](sensitivity-labels-coauthoring.md) sürece Azure Information Protection birleşik etiketleme istemcisiyle kullanıcılar şunları yapabilir:
 
 - Görüntüleyici (Yalnızca Görüntüleme izni atayan) veya Co-Author (Görünüm, Düzenleme, Kopyalama ve Yazdırma izinleri atayan) gibi bir izin düzeyi seçin.
 - Kullanıcıları, grupları veya kuruluşları seçin. Bu, kuruluşunuzun içindeki veya dışındaki kişileri içerebilir.
-- Seçili kullanıcıların içeriğe erişemeyeceği bir sona erme tarihi ayarlayın. Daha fazla bilgi [için, çevrimdışı erişim için lisans kullanma Rights Management](#rights-management-use-license-for-offline-access) yukarıdaki bölüme bakın.
+- Seçilen kullanıcıların içeriğe erişemeyecekleri bir süre sonu tarihi ayarlayın. Daha fazla bilgi [için, çevrimdışı erişim için lisans kullanma Rights Management](#rights-management-use-license-for-offline-access) yukarıdaki bölüme bakın.
 
 ![Kullanıcının özel izinlerle koruma seçenekleri.](../media/sensitivity-aip-custom-permissions-dialog.png)
 
-Yerleşik etiketleme ve [birlikte yazma etkinleştirildiğinde](sensitivity-labels-coauthoring.md) Azure Information Protection birleşik etiketleme istemcisi için, kullanıcılar aşağıdakileri seçmiş gibi aynı iletişim kutusunu görür:
+Yerleşik etiketleme ve [birlikte yazma etkinleştirildiğinde](sensitivity-labels-coauthoring.md) Azure Information Protection birleşik etiketleme istemcisi için, kullanıcılar aşağıdaki seçenekleri seçmiş gibi aynı iletişim kutusunu görür:
 
 - Windows: **Dosya** sekmesi > **InfoProtect** >  **DocumentRestrict** >  **AccessRestricted Access** > 
 
@@ -344,7 +353,7 @@ Aşağıdaki her örnek için Şifreleme **ayarlarını yapılandır** seçildi�
 
 Bu etiket yalnızca Outlook ve Web üzerinde Outlook görüntülenir ve Exchange Online kullanmanız gerekir. Kullanıcılara Gmail hesabı (veya kuruluşunuzun dışındaki başka bir e-posta hesabı) kullanan kişilere şifreli bir e-posta göndermeleri gerektiğinde bu etiketi seçmelerini bildirin.
 
-Kullanıcılarınız **, Gmail** e-posta adresini To kutusuna yazar.  Ardından etiketi seçer ve İletme seçeneği otomatik olarak e-postaya eklenir. Sonuç olarak, alıcılar e-postayı iletemez, yazdıramaz, kopyalayamaz veya **Farklı Kaydet** seçeneğini kullanarak e-postayı posta kutularının dışına kaydedemez.
+Kullanıcılarınız **, Gmail** e-posta adresini To kutusuna yazar.  Ardından etiketi seçer ve İletme seçeneği otomatik olarak e-postaya eklenir. Sonuç olarak alıcılar e-postayı iletemez, yazdıramaz, kopyalayamaz veya **Farklı Kaydet** seçeneğini kullanarak e-postayı posta kutularının dışına kaydedemez.
 
 1. **Şifreleme** sayfasında: **İzinleri şimdi ata veya kullanıcıların karar vermesine izin ver?** için **Kullanıcıların etiketi uygularken izin atamasına izin ver'i** seçin.
 
@@ -402,7 +411,7 @@ Eklediğiniz yeni kullanıcılar, bu etiketle zaten korunan belgeleri ve e-posta
 
 Bu yapılandırma, e-postayı veya belgeyi şifrelemek için kullanıcıları, grupları veya etki alanlarını belirtmeniz gerekmeyen bir avantaja sahiptir. İçerik yine şifrelenir ve yine de kullanım haklarını, süre sonu tarihini ve çevrimdışı erişimi belirtebilirsiniz.
 
-Bu yapılandırmayı yalnızca korumalı belgeyi veya e-postayı kimlerin açabileceğini kısıtlamanız gerekmediğinde kullanın. [Bu ayar hakkında daha fazla bilgi](#requirements-and-limitations-for-add-any-authenticated-users)
+Bu yapılandırmayı yalnızca korumalı belgeyi veya e-postayı kimlerin açabileceğini kısıtlamanız gerekmeyen durumlarda kullanın. [Bu ayar hakkında daha fazla bilgi](#requirements-and-limitations-for-add-any-authenticated-users)
 
 1. **Şifreleme** sayfasında: **İzinleri şimdi ata veya kullanıcıların karar vermesine izin ver?** **için İzinleri şimdi ata'nın** seçili olduğundan emin olun.
 

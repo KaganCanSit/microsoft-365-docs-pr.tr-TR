@@ -3,7 +3,7 @@ title: Office 365 IP Adresi ve URL Web hizmetine dahil olmayan diğer uç noktal
 ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
-ms.date: 05/18/2022
+ms.date: 05/19/2022
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
@@ -24,12 +24,12 @@ search.appverid:
 ms.assetid: ''
 description: 'Özet: Yeni uç nokta Web hizmeti belirli senaryolar için birkaç uç nokta içermez.'
 hideEdit: true
-ms.openlocfilehash: bebffa1cb03a85ffd5ab7519095f38b7ae5cf985
-ms.sourcegitcommit: 60970cf8a2cb451011c423d797dfb77925394f89
+ms.openlocfilehash: 01fbd54ed5addb8552c59e2be8de76961e613968
+ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2022
-ms.locfileid: "65587358"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65599177"
 ---
 # <a name="other-endpoints-not-included-in-the-office-365-ip-address-and-url-web-service"></a>Office 365 IP Adresi ve URL Web hizmetine dahil olmayan diğer uç noktalar
 
@@ -54,7 +54,7 @@ DNS dışında, açıklanan belirli bir senaryoya ihtiyacınız olmadığı sür
 |3|**Azure AD Bağlan (SSO seçeneği)** <p> Uzak PowerShell & WinRM|Müşteri STS ortamı (AD FS Sunucusu ve AD FS Ara Sunucusu) \| TCP bağlantı noktaları 80 & 443|Gelen sunucu trafiği|
 |4|AD FS Proxy sunucuları gibi **STS** (yalnızca federasyon müşterileri için)|Customer STS (AD FS Proxy gibi) \| Tcp 443 veya TCP 49443 bağlantı noktaları w/ClientTLS|Gelen sunucu trafiği|
 |5|**[Birleşik Microsoft Mesajlaşma/SBC tümleştirmesini Exchange Online](/exchange/voice-mail-unified-messaging/telephone-system-integration-with-um/configuration-notes-for-session-border-controllers)**|Şirket içi Oturum Sınır Denetleyicisi ile \*.um.outlook.com arasında çift yönlü|Yalnızca sunucuya giden trafik|
-|6|**Posta Kutusu Geçişi**<p>Posta kutusu geçişi şirket içi [Exchange Karma'dan Office 365'a](/exchange/exchange-deployment-assistant) başlatıldığında, Office 365 yayımlanmış Exchange Web Hizmetleri (EWS)/Posta Kutusu Çoğaltma Hizmetleri (MRS) sunucunuza bağlanır. Belirli kaynak IP aralıklarından gelen bağlantıları kısıtlamak için Exchange Online sunucuları tarafından kullanılan NAT IP adreslerine ihtiyacınız varsa, bunlar "Exchange Online" hizmet alanı altında [OFFICE 365 URL & IP aralıklarında](urls-and-ip-address-ranges.md) listelenir. <p> BELIRLI kaynak IP aralıklarından TCP 443 bağlantılarını kısıtlamadan önce MRS proxy'sinin ayrı bir FQDN ve genel IP adresine çözümlendiğinden emin olarak OWA gibi yayımlanmış EWS uç noktalarına erişimin etkilenmediğinden emin olmak için dikkatli olunmalıdır.|Müşteri şirket içi EWS/MRS Proxy <br> TCP bağlantı noktası 443|Gelen sunucu trafiği|
+|6|**Posta Kutusu Geçişi**<p>Posta kutusu geçişi şirket içi [Exchange Karma'dan Office 365'a](/exchange/exchange-deployment-assistant) başlatıldığında, Office 365 yayımlanmış Exchange Web Hizmetleri (EWS)/Posta Kutusu Çoğaltma Hizmetleri (MRS) sunucunuza bağlanır. Yalnızca belirli kaynak IP aralıklarından gelen bağlantılara izin vermeniz gerekiyorsa, Office 365 [URL & IP aralıklarında](urls-and-ip-address-ranges.md) **Exchange Online** tablosunda listelenen IP adresleri için bir izin kuralı oluşturun. <p> Yayımlanan EWS uç noktalarına (OWA gibi) bağlantının engellenmediğinden emin olmak için, bağlantıları kısıtlamadan önce MRS ara sunucusunun ayrı bir FQDN ve genel IP adresine çözümlendiğinden emin olun.|Müşteri şirket içi EWS/MRS Proxy <br> TCP bağlantı noktası 443|Gelen sunucu trafiği|
 |7|Exchange Serbest/Meşgul paylaşımı gibi **[Karma](/exchange/exchange-deployment-assistant) birlikte kullanım işlevleri**.|Müşteri şirket içi Exchange sunucusu|Gelen sunucu trafiği|
 |8|**Karma proxy kimlik [doğrulamasını Exchange](/exchange/exchange-deployment-assistant)**|Müşteri şirket içi STS|Gelen sunucu trafiği|
 |9|[karma Exchange](/exchange/exchange-deployment-assistant) yapılandırmak için Exchange **[Karma Yapılandırma Sihirbazı'nı](/exchange/hybrid-configuration-wizard)** kullanarak kullanılır <p> Not: Bu uç noktalar yalnızca karma Exchange yapılandırmak için gereklidir|80 & 443 numaralı TCP bağlantı noktalarında domains.live.com, yalnızca Exchange 2010 SP3 Karma Yapılandırma Sihirbazı için gereklidir <p> GCC Yüksek, DoD IP adresleri: 40.118.209.192/32; 168.62.190.41/32 <p> Dünya Çapında Ticari & GCC: \*.store.core.windows.net; asl.configure.office.com; tds.configure.office.com; mshybridservice.trafficmanager.net; <br> aka.ms/hybridwizard; <br> \*shcwreleaseprod.blob.core.windows.net/shcw/;|Yalnızca sunucuya giden trafik|

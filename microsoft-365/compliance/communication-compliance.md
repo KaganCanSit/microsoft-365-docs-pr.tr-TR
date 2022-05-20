@@ -1,6 +1,6 @@
 ---
 title: İletişim uyumluluğu hakkında daha fazla bilgi edinme
-description: Microsoft Purview'da iletişim uyumluluğu hakkında bilgi edinin
+description: Microsoft Purview'de iletişim uyumluluğu hakkında bilgi edinin
 keywords: Microsoft 365, Microsoft Purview, uyumluluk, iletişim uyumluluğu
 f1.keywords:
 - NOCSH
@@ -21,17 +21,17 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: bd7ab3040b261fb7c664d92b73a069cc8ba6e3b5
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 09135faa505aa2d5b95003cc7321a38a0eaddaf3
+ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64997328"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65599221"
 ---
 # <a name="learn-about-communication-compliance"></a>İletişim uyumluluğu hakkında daha fazla bilgi edinme
 
 > [!TIP]
-> *Dokuz Microsoft Purview çözümlerinin tamamının premium sürümlerini ücretsiz olarak deneyebileceğinizi biliyor muydunuz?* Sağlam Purview özelliklerinin kuruluşunuzun uyumluluk gereksinimlerini karşılamasına nasıl yardımcı olabileceğini keşfetmek için 90 günlük Purview çözümleri deneme sürümünü kullanın. Microsoft 365 E3 ve Office 365 E3 müşterileri artık [Microsoft Purview uyumluluk portalı deneme hub'ında](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef) başlayabilir. [Kaydolabilecek kişiler ve deneme koşulları](compliance-easy-trials.md) hakkında ayrıntılı bilgi edinin.
+> *Dokuz Microsoft Purview çözümün de premium sürümlerini ücretsiz olarak deneyebileceğinizi biliyor muydunuz?* Sağlam Purview özelliklerinin kuruluşunuzun uyumluluk gereksinimlerini karşılamasına nasıl yardımcı olabileceğini keşfetmek için 90 günlük Purview çözümleri deneme sürümünü kullanın. Microsoft 365 E3 ve Office 365 E3 müşterileri şimdi [Microsoft Purview uyumluluk portalı deneme hub'ında](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef) başlayabilir. [Kaydolabilecek kişiler ve deneme koşulları](compliance-easy-trials.md) hakkında ayrıntılı bilgi edinin.
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
@@ -44,6 +44,8 @@ Microsoft 365'daki iletişim uyumluluk ilkeleri, uyumluluk ve iç ve dış ileti
 - Mevzuat uygulaması ve para cezası riski
 
 Buna ek olarak, BT yöneticilerinizle uyumluluk yönetimi ekibiniz arasında bir görev ayrımı olabilir. İletişim uyumluluğu, ilkelerin yapılandırılması ile iletilerin araştırılıp gözden geçirilmesi arasındaki ayrımı destekler. Örneğin, kuruluşunuzun BT grubu iletişim uyumluluk rolü izinlerini, gruplarını ve ilkelerini ayarlamakla sorumlu olabilir ve araştırmacı ve gözden geçirenler ileti önceliklendirme, gözden geçirme ve risk azaltma eylemlerinden sorumlu olabilir.
+
+Daha fazla bilgi edinmek ve kuruluşunuzdaki uyumluluk ve riskli etkinlikleri ele almak için planlama sürecine genel bakış için bkz. [Insider risk yönetimi programı başlatma](https://download.microsoft.com/download/b/2/0/b208282a-2482-4986-ba07-15a9b9286df0/pwc-starting-an-insider-risk-management-program-with-pwc-and-microsoft.pdf).
 
 İletişim uyumluluğu için en son Ignite sunuları için aşağıdaki videolara bakın:
 
@@ -117,7 +119,7 @@ Uyarılar, ilke eşleşmeleri, eylemler ve eğilimler için yeni etkileşimli pa
 
 - **Proaktif akıllı uyarılar**: İlke eşleşmeleri için hemen dikkat gerektiren uyarılar, önem derecesine göre sıralanmış bekleyen öğeler için yeni panolar ve belirlenen gözden geçirenlere gönderilen yeni otomatik e-posta bildirimleri içerir.
 - **Etkileşimli panolar**: Yeni panolar ilke eşleşmelerini, bekleyen ve çözümlenen eylemleri ve kullanıcılara ve ilkeye göre eğilimleri görüntüler.
-- **Denetim desteği: Denetim** gözden geçirme isteklerini desteklemeye yardımcı olmak için ilke ve gözden geçirme etkinliklerinin tam günlüğü Microsoft Purview uyumluluk portalından kolayca dışarı aktarılır.
+- **Denetim desteği**: Denetim gözden geçirme isteklerini desteklemeye yardımcı olmak için ilke ve gözden geçirme etkinliklerinin tam günlüğü Microsoft Purview uyumluluk portalı kolayca dışarı aktarılır.
 
 ## <a name="integration-with-microsoft-365-services"></a>Microsoft 365 hizmetleriyle tümleştirme
 
@@ -146,7 +148,7 @@ Bu iş akışı adımında uyumluluk gereksinimlerinizi belirler ve geçerli ile
 >[!IMPORTANT]
 >Varsayılan olarak, Genel Yöneticilerin iletişim uyumluluk özelliklerine erişimi yoktur. İletişim uyumluluk özelliklerine yönelik izinleri etkinleştirmek için bkz. [İletişim uyumluluğunu kuruluşunuzda kullanılabilir hale getirme](communication-compliance-configure.md#step-1-required-enable-permissions-for-communication-compliance).
 
-Microsoft Purview uyumluluk portalında aşağıdaki ilke şablonları arasından seçim yapabilirsiniz:
+Microsoft Purview uyumluluk portalı aşağıdaki ilke şablonları arasından seçim yapabilirsiniz:
 
 - **Uygunsuz metinleri izleme**: Uygunsuz, uygunsuz veya rahatsız edici olarak kabul edilebilecek iletilerdeki metinleri otomatik olarak algılamak için yerleşik sınıflandırıcıları kullanan bir ilkeyi hızla oluşturmak için bu şablonu kullanın.
 - **Uygunsuz görüntüleri izleme**: Kuruluşunuzda uygunsuz olarak kabul edilebilecek yetişkinlere yönelik ve müstehcen görüntüler içeren içeriği otomatik olarak algılamak için yerleşik sınıflandırıcıları kullanan bir ilkeyi hızla oluşturmak için bu şablonu kullanın.
@@ -161,7 +163,7 @@ Microsoft Purview uyumluluk portalında aşağıdaki ilke şablonları arasında
 
 ### <a name="investigate"></a>Araştır
 
-Bu adımda, iletişim uyumluluk ilkelerinizle eşleşerek algılanan sorunları daha ayrıntılı bir şekilde inceleyebilirsiniz. Bu adım, Microsoft Purview uyumluluk portalında sağlanan aşağıdaki eylemleri içerir:
+Bu adımda, iletişim uyumluluk ilkelerinizle eşleşerek algılanan sorunları daha ayrıntılı bir şekilde inceleyebilirsiniz. Bu adım, Microsoft Purview uyumluluk portalı aşağıdaki eylemleri içerir:
 
 - **Uyarılar**: İleti bir ilke koşuluyla eşleştiğinde, otomatik olarak bir uyarı oluşturulur. Her uyarı için durumu, önem derecesini, algılanan saati ve bir eBulma (Premium) olayı atanıp atanmadığını ve durumunu görebilirsiniz. İletişim uyumluluğu giriş sayfasında ve **Uyarılar** sayfasında yeni uyarılar görüntülenir ve önem derecesine göre listelenir.
 - **Sorun yönetimi**: Her uyarı için, iletide algılanan sorunu düzeltmeye yardımcı olmak için araştırma eylemleri gerçekleştirebilirsiniz.
@@ -179,7 +181,7 @@ Sonraki adım, aşağıdaki seçenekleri kullanarak araştırdığınız iletiş
 - **Başka bir gözden geçirene yükseltin**: Bazen, bir sorunun ilk gözden geçireninin, olayın çözülmesine yardımcı olması için diğer gözden geçirenlerden giriş yapması gerekir. Çözüm sürecinin bir parçası olarak ileti sorunlarını kuruluşunuzun diğer alanlarındaki gözden geçirenlere kolayca iletebilirsiniz.
 - **Yanlış sınıflandırılmış olarak bildir**: Uyumluluk ilkelerinin eşleşmeleri olarak yanlış algılanan iletiler zaman zaman gözden geçirme işlemine geçecektir. Bu tür uyarıları yanlış sınıflandırılmış olarak işaretleyebilir, genel sınıflandırıcıların geliştirilmesine yardımcı olmak için yanlış sınıflandırma hakkında Microsoft'a geri bildirim gönderebilir ve sorunu otomatik olarak çözebilirsiniz.
 - **Teams (önizleme) içinde iletiyi kaldırma**: Uygunsuz iletilerin Microsoft Teams kanallarda veya kişisel ve grup sohbet iletilerinde görüntülenmesi kaldırılabilir. Kaldırılan uygunsuz iletiler, ilke ihlali için iletinin kaldırıldığını belirten bir bildirimle değiştirilir.
-- **Araştırma için yükseltme**: En ciddi durumlarda, iletişim uyumluluk bilgilerini kuruluşunuzdaki diğer gözden geçirenlerle paylaşmanız gerekebilir. İletişim uyumluluğu, uçtan uca risk çözümünde size yardımcı olmak için diğer Microsoft Purview özellikleriyle sıkı bir şekilde tümleşiktir. Araştırma için bir olayı yükseltme, verileri ve servis talebinin yönetimini Microsoft Purview eKeşif'e (Premium) aktarmanıza olanak tanır. eBulma (Premium), kuruluşunuzun iç ve dış araştırmalarına yanıt veren içeriği korumak, toplamak, gözden geçirmek, analiz etmek ve dışarı aktarmak için uçtan uca bir iş akışı sağlar. Yasal ekiplerin yasal tutma bildirimi iş akışının tamamını yönetmesine olanak tanır. eBulma (Premium) durumları hakkında daha fazla bilgi edinmek için bkz. [Microsoft Purview eKeşif'e Genel Bakış (Premium)](overview-ediscovery-20.md).
+- **Araştırma için yükseltme**: En ciddi durumlarda, iletişim uyumluluk bilgilerini kuruluşunuzdaki diğer gözden geçirenlerle paylaşmanız gerekebilir. İletişim uyumluluğu, uçtan uca risk çözümünde size yardımcı olmak için diğer Microsoft Purview özellikleriyle sıkı bir şekilde tümleşiktir. Araştırma için bir olayı ilerletmek, eBulma (Premium) Microsoft Purview servis talebi verilerini ve yönetimini aktarmanıza olanak tanır. eBulma (Premium), kuruluşunuzun iç ve dış araştırmalarına yanıt veren içeriği korumak, toplamak, gözden geçirmek, analiz etmek ve dışarı aktarmak için uçtan uca bir iş akışı sağlar. Yasal ekiplerin yasal tutma bildirimi iş akışının tamamını yönetmesine olanak tanır. eBulma (Premium) durumları hakkında daha fazla bilgi edinmek için bkz. [Microsoft Purview eKeşif'e (Premium) genel bakış](overview-ediscovery-20.md).
 
 ### <a name="monitor"></a>Monitör
 
