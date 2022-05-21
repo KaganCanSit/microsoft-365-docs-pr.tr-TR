@@ -17,22 +17,22 @@ ms.custom:
 - nextgen
 - admindeeplinkDEFENDER
 ms.technology: mde
-ms.date: 04/07/2022
+ms.date: 05/20/2022
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: 6bd334802319b897de7a8fd8fbb61a490dddcffe
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 7ac72d88975231bb76f6e097a80f372a8ffac535
+ms.sourcegitcommit: c4924bcad6648fae279076cafa505fae1194924a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65416320"
+ms.lasthandoff: 05/21/2022
+ms.locfileid: "65626975"
 ---
 # <a name="protect-security-settings-with-tamper-protection"></a>Değişiklik korumasıyla güvenlik ayarlarını koruyun
 
 **Şunlar için geçerlidir:**
 
-- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Virüsten Koruma
 
@@ -54,7 +54,6 @@ Kurcalama koruması, Windows'nin aşağıdaki sürümlerinden birini çalıştı
 > [!NOTE]
 > Windows Server 2012 R2'de kurcalama koruması, modern birleşik çözüm paketi kullanılarak eklenen cihazlar için kullanılabilir. Daha fazla bilgi için bkz. [Windows sunucularını Uç Nokta için Microsoft Defender hizmetine ekleme](/microsoft-365/security/defender-endpoint/configure-server-endpoints).
 
-
 ## <a name="overview"></a>Genel bakış
 
 Bazı siber saldırılar sırasında kötü aktörler, makinelerinizde virüsten koruma gibi güvenlik özelliklerini devre dışı bırakmaya çalışır. Kötü aktörler verilerinize daha kolay erişim elde etmek, kötü amaçlı yazılım yüklemek veya verilerinizi, kimliğinizi ve cihazlarınızı başka bir şekilde kullanmak için güvenlik özelliklerinizi devre dışı bırakmak ister. Kurcalama koruması, bu tür şeylerin oluşmasını önlemeye yardımcı olur. Kurcalama koruması ile kötü amaçlı uygulamaların aşağıdaki gibi eylemler gerçekleştirmesi engellenir:
@@ -62,7 +61,7 @@ Bazı siber saldırılar sırasında kötü aktörler, makinelerinizde virüsten
 - Virüs ve tehdit korumasını devre dışı bırakma
 - Gerçek zamanlı korumayı devre dışı bırakma
 - Davranış izlemeyi kapatma
-- Virüsten korumayı devre dışı bırakma (IOfficeAntivirus (IOAV) gibi)
+- IOfficeAntivirus (IOAV) gibi virüsten korumayı devre dışı bırakma
 - Bulut tabanlı korumayı devre dışı bırakma
 - Güvenlik bilgileri güncelleştirmelerini kaldırma
 - Algılanan tehditlerde otomatik eylemleri devre dışı bırakma
@@ -236,15 +235,11 @@ Kurcalama girişimleri genellikle daha büyük siber saldırılara işaret eder.
 
 Kurcalama girişimi algılandığında, [Microsoft 365 Defender portalında](/microsoft-365/security/defender-endpoint/portal-overview) ([https://security.microsoft.com](https://security.microsoft.com)) bir uyarı oluşturulur.
 
-:::image type="content" source="images/tamperattemptalert.png" alt-text="Microsoft 365 Defender portalı" lightbox="images/tamperattemptalert.png":::
-
 [Uç Nokta için Microsoft Defender'da uç noktada algılama ve yanıtlama](overview-endpoint-detection-response.md) ve [gelişmiş avcılık](advanced-hunting-overview.md) özelliklerini kullanarak güvenlik operasyonları ekibiniz bu tür girişimleri araştırabilir ve ele alabilir.
 
 ## <a name="review-your-security-recommendations"></a>Güvenlik önerilerinizi gözden geçirin
 
 Kurcalama koruması [, Tehdit & Güvenlik Açığı Yönetimi](next-gen-threat-and-vuln-mgt.md) özellikleriyle tümleştirilir. [Kurcalama](tvm-security-recommendation.md) korumasının açık olduğundan emin olmak güvenlik önerileridir. Örneğin, *kurcalama* sırasında arama yapabilirsiniz. Sonuçlarda, Daha fazla bilgi edinmek ve açmak için **Kurcalama Koruması'nı** aç'ı seçebilirsiniz.
-
-:::image type="content" source="images/tamperprotectsecurityrecos.png" alt-text="Microsoft Defender Güvenlik Merkezi portalında kurcalama korumasını açma" lightbox="images/tamperprotectsecurityrecos.png":::
 
 Tehdit & Güvenlik Açığı Yönetimi hakkında daha fazla bilgi edinmek için bkz. [Pano içgörüleri - Tehdit ve Güvenlik Açığı Yönetimi](tvm-dashboard-insights.md#dashboard-insights---threat-and-vulnerability-management).
 
@@ -278,13 +273,15 @@ Ev kullanıcısıysanız, bkz. [Tek bir cihazda kurcalama korumasını yönetme]
 
 ### <a name="how-does-configuring-tamper-protection-in-intune-affect-how-i-manage-microsoft-defender-antivirus-with-group-policy"></a>Intune'de kurcalama korumasını yapılandırmak, grup ilkesi ile Microsoft Defender Virüsten Koruma yönetme şeklimi nasıl etkiler?
 
-Grup ilkesi kurcalama koruması için geçerli değildir. kurcalama koruması açıkken Microsoft Defender Virüsten Koruma ayarlarında yapılan değişiklikler yoksayılır.
+Şu anda kurcalama korumasını yapılandırmak ve yönetmek için Intune kullanıyorsanız, Intune kullanmaya devam etmelisiniz. 
+
+Grup ilkesi kurcalama koruması için geçerli değildir. grup ilkesi kullanılarak Microsoft Defender Virüsten Koruma ayarlarında yapılan değişiklikler, kurcalama koruması açık olduğunda veya Intune ile kurcalama koruması yapılandırıldığında yoksayılır.
 
 ### <a name="if-we-use-microsoft-intune-to-configure-tamper-protection-does-it-apply-only-to-the-entire-organization"></a>Kurcalama korumasını yapılandırmak için Microsoft Intune kullanırsak, bu yalnızca kuruluşun tamamı için geçerli mi?
 
 Intune ile kurcalama korumasını yapılandırma esnekliğine sahipsiniz. Kuruluşunuzun tamamını hedefleyebilir veya belirli cihazları ve kullanıcı gruplarını seçebilirsiniz.
 
-### <a name="can-i-configure-tamper-protection-with-microsoft-endpoint-configuration-manager"></a>Microsoft Endpoint Configuration Manager ile Kurcalama Koruması yapılandırabilir miyim?
+### <a name="can-i-configure-tamper-protection-with-microsoft-endpoint-configuration-manager"></a>Microsoft Endpoint Configuration Manager ile kurcalama korumasını yapılandırabilir miyim?
 
 Kiracı ekleme kullanıyorsanız Microsoft Endpoint Configuration Manager kullanabilirsiniz. Aşağıdaki kaynaklara bakın:
 
@@ -294,10 +291,6 @@ Kiracı ekleme kullanıyorsanız Microsoft Endpoint Configuration Manager kullan
 ### <a name="i-have-the-windows-e3-enrollment-can-i-use-configuring-tamper-protection-in-intune"></a>Windows E3 kaydım var. Intune'de kurcalama korumasını yapılandırmayı kullanabilir miyim?
 
 Şu anda, Intune'de kurcalama korumasını yapılandırmak yalnızca [Uç Nokta için Microsoft Defender](/microsoft-365/security/defender-endpoint) sahip müşteriler tarafından kullanılabilir.
-
-### <a name="what-happens-if-i-try-to-change-microsoft-defender-for-endpoint-settings-in-intune-microsoft-endpoint-configuration-manager-and-windows-management-instrumentation-when-tamper-protection-is-enabled-on-a-device"></a>Bir cihazda Kurcalama Koruması etkinleştirildiğinde Intune, Microsoft Endpoint Configuration Manager ve Windows Yönetim Araçları'ndaki Uç Nokta için Microsoft Defender ayarlarını değiştirmeye çalışırsam ne olur?
-
-Kurcalama koruması tarafından korunan özellikleri değiştiremezsiniz; bu tür değişiklik istekleri yoksayılır.
 
 ### <a name="im-an-enterprise-customer-can-local-admins-change-tamper-protection-on-their-devices"></a>Kurumsal bir müşteriyim. Yerel yöneticiler cihazlarında kurcalama korumasını değiştirebilir mi?
 
@@ -318,7 +311,7 @@ Güvenlik operasyonları ekibiniz, aşağıdaki örnek gibi avcılık sorguları
 [Kurcalama girişimleri hakkındaki bilgileri görüntüleyin](#view-information-about-tampering-attempts).
 
 > [!TIP]
-> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> Diğer platformlar için Antivirüs ile ilgili bilgi arıyorsanız bkz:
 > - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
 > - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)

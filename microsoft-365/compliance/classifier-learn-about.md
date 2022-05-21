@@ -19,14 +19,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Eğitilebilir sınıflandırıcılar, etiketleme veya ilke uygulamasına bakılması için pozitif ve negatif örnekler vererek çeşitli içerik türlerini tanıyabilir.
-ms.openlocfilehash: 7da6c9ef6e26d25bb40cade4832abb7b73a4b095
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: a95c74894fd1ab3f9e3f9dd1f398d60afdc597d0
+ms.sourcegitcommit: c4924bcad6648fae279076cafa505fae1194924a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64759887"
+ms.lasthandoff: 05/21/2022
+ms.locfileid: "65625809"
 ---
 # <a name="learn-about-trainable-classifiers"></a>Eğitilebilir sınıflandırıcılar hakkında daha fazla bilgi edinme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 İçeriğin korunabilmesi ve doğru şekilde işlenebilmesi için sınıflandırma ve etiketleme, bilgi koruma uzmanlık alanı için başlangıç noktasıdır. Microsoft 365 içeriği sınıflandırmanın üç yolu vardır.
 
@@ -43,7 +45,7 @@ Bu sınıflandırma mekanizması kategorisi içeriği bulma ölçütü:
 - Şablondaki bir çeşitleme olduğundan [öğeyi tanıma (belge parmağıyla yazdırma)](document-fingerprinting.md).
 - Tam dizelerin varlığının [kullanılması tam veri eşleşmesi](sit-learn-about-exact-data-match-based-sits.md#learn-about-exact-data-match-based-sensitive-information-types).
 
-Daha sonra duyarlılık ve bekletme etiketleri otomatik olarak uygulanarak içeriğin [veri kaybını önleme hakkında bilgi edinme](dlp-learn-about-dlp.md) ve [bekletme etiketleri için ilkeleri otomatik olarak uygulama](apply-retention-labels-automatically.md) başlığı altında kullanılabilir hale getirilebilir.
+Daha sonra duyarlılık ve bekletme etiketleri otomatik olarak uygulanarak içeriğin [Microsoft Purview Veri Kaybı Önleme hakkında bilgi edinin](dlp-learn-about-dlp.md) ve [bekletme etiketleri için ilkeleri otomatik olarak uygulama](apply-retention-labels-automatically.md) başlığı altında kullanılabilir hale getirilebilir.
 
 ## <a name="classifiers"></a>Sınıflandırıcı
 
@@ -74,27 +76,49 @@ Microsoft 365 önceden eğitilmiş birden çok sınıflandırıcı ile birlikte 
 > [!CAUTION]
 > Çok sayıda hatalı pozitif sonuç ürettiğinden **, Rahatsız Edici Dil** önceden eğitilmiş sınıflandırıcıyı kullanım dışı bırakıyoruz. Kullanmayın ve şu anda kullanıyorsanız, iş süreçlerinizi bu işlemden çıkarmanız gerekir. Bunun yerine Önceden eğitilmiş **Tehdit**, **Küfür** ve **Taciz** sınıflandırıcılarını kullanmanızı öneririz.
 
+- **Sözleşmeler**: İfşa etmeme sözleşmeleri, iş beyanları, kredi ve kira sözleşmeleri, istihdam ve rekabet dışı sözleşmeler gibi yasal sözleşmelerle ilgili içeriği algılar. .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml dosyalarındaki içeriği algılar.
+
 - **Özgeçmişler**: bir başvuru sahibinin kişisel, eğitim, mesleki nitelikleri, iş deneyimi ve diğer kişisel tanımlayıcı bilgilerinin metinsel hesapları olan docx, .pdf, .rtf, .txt öğelerini algılar
-- **Kaynak Kodu**: GitHub üzerinde kullanılan ilk 25 bilgisayar programlama dilinde yazılmış bir dizi yönerge ve deyim içeren öğeleri algılar: ActionScript, C, C#, C++, Clojure, CoffeeScript, Go, Haskell, Java, JavaScript, Lua, MATLAB, Objective-C, Perl, PHP, Python, R, Ruby, Scala, Shell, Swift, TeX, Vim Betiği. .msg, .as, .h, .c, .cs, .cc, .cpp, .hpp, .cxx, .hh, .c++, .clj, .edn, .cljc, .cljs, .coffee, .litcoffee, .go, .hs, .lhs, .java, .jar, .js, .mjs, .lua, .m, .mm, .pl, .pm, .t, .xs, .pod, .php, .phar, .php4, .pyc, . R, .r, .rda, . RData, .rds, .rb, .scala, .sc, .sh, .swift dosyaları.
+
+- **Kaynak Kodu**: GitHub üzerinde kullanılan ilk 25 bilgisayar programlama dilinde yazılmış bir dizi yönerge ve deyim içeren öğeleri algılar: ActionScript, C, C#, C++, Clojure, CoffeeScript, Go, Haskell, Java, JavaScript, Lua, MATLAB, Objective-C, Perl, PHP, Python, R, Ruby, Scala, Shell, Swift, TeX, Vim Script. .msg, .as, .h, .c, .cs, .cc, .cpp, .hpp, .cxx, .hh, .c++, .clj, .edn, .cljc, .cljs, .coffee, .litcoffee, .go, .hs, .lhs, .java, .jar, .js, .mjs, .lua, .m, .mm, .pl, .pm, .t, .xs, .pod, .php, .phar, .php4, .pyc, . R, .r, .rda, . RData, .rds, .rb, .scala, .sc, .sh, .swift dosyaları.
+
+- **Müşteri Şikayetleri**: Müşteri şikayetleri sınıflandırıcısı, kuruluşunuzun ürünleri veya hizmetleri hakkında yapılan geri bildirimleri ve şikayetleri algılar. Bu sınıflandırıcı, Tüketici Finansal Koruma Bürosu ve Gıda ve İlaç Yönetimi gereksinimleri gibi şikayetlerin tespiti ve önceliklendirmesi ile ilgili mevzuat gereksinimlerini karşılamanıza yardımcı olabilir. .msg içindeki içeriği algılar ve .eml yalnızca iletişim uyumluluğu, .docx, .pdf, .txt, .rtf, .jpg, .jpeg, .png, .gif, .bmp, .svg dosyalarıdır.
+
+- **Ayrımcılık**: Açık ayrımcı dili algılar ve diğer topluluklarla karşılaştırıldığında Afrikalı Amerikalı/Siyah topluluklara karşı ayrımcı dile duyarlıdır.
+
+- **Finans**: Kurumsal finans, muhasebe, ekonomi, bankacılık ve yatırım kategorilerindeki içeriği algılar. .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xltm, .xlam, .xla dosyaları.
+
+- **Taciz**: Irk, etnik köken, din, ulusal köken, cinsiyet, cinsel yönelim, yaş, engellilik gibi bir veya birden çok kişiyi hedefleyen saldırgan davranışla ilgili belirli bir rahatsız edici dil metin öğesi kategorisini algılar. .msg, .docx, .pdf, .txt, .rtf, .jpeg, .jpg, .png, .gif, .bmp, .svg dosyalarındaki içeriği algılar.
+
+- **Sağlık**: Tıbbi hizmetler, tanılar, tedavi, talepler gibi tıbbi ve sağlık yönetimi açısından içeriği algılar. .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xltm, .xlam, .xla dosyaları.
+
+- **İk**: İnsan kaynaklarıyla ilgili işe alım, görüşme, işe alma, eğitim, değerlendirme, uyarı ve sonlandırma kategorilerindeki içeriği algılar. .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xltm, .xlam, .xla dosyaları.
+
+- **IP**: Ticari sırlar ve benzer gizli bilgiler gibi Fikri Mülkiyetle ilgili kategorilerdeki içeriği algılar. .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xltm, .xlam, .xla dosyaları.
+
+- **BT**: Ağ ayarları, bilgi güvenliği, donanım ve yazılım gibi Bilgi Teknolojisi ve Siber Güvenlik kategorilerindeki içeriği algılar. .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xltm, .xlam, .xla dosyaları.
+
+- **Hukuk İşleri**: Dava, yasal süreç, yasal yükümlülük, yasal terminoloji, hukuk ve mevzuat gibi hukuk işleri ile ilgili kategorilerdeki içeriği algılar. .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml dosyalarındaki içeriği algılar.
+
+- **Tedarik**: Teklif verme, alıntılama, satın alma ve mal ve hizmet tedariki için ödeme kategorilerindeki içeriği algılar. .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xlt, .xlam, .xla dosyalarındaki içeriği algılar.
+
+- **Küfür**: Çoğu kişiyi utandıran ifadeler içeren belirli bir rahatsız edici dil metin öğeleri kategorisini algılar.
+
+- **Özgeçmişler**: bir başvuru sahibinin kişisel, eğitim, mesleki nitelikleri, iş deneyimi ve diğer kişisel tanımlayıcı bilgilerinin metinsel hesapları olan docx, .pdf, .rtf, .txt öğelerini algılar
+
+- **Kaynak Kodu**: GitHub üzerinde kullanılan ilk 25 bilgisayar programlama dilinde yazılmış bir dizi yönerge ve deyim içeren öğeleri algılar: ActionScript, C, C#, C++, Clojure, CoffeeScript, Go, Haskell, Java, JavaScript, Lua, MATLAB, Objective-C, Perl, PHP, Python, R, Ruby, Scala, Shell, Swift, TeX, Vim Script.
 
 > [!NOTE]
 > Kaynak Kodu, metnin büyük kısmının kaynak kodu olduğunu algılamak için eğitilir. Düz metinle kesişen kaynak kodu metnini algılamaz.
 
-- **Sözleşmeler**: İfşa etmeme sözleşmeleri, iş beyanları, kredi ve kira sözleşmeleri, istihdam ve rekabet dışı sözleşmeler gibi yasal sözleşmelerle ilgili içeriği algılar. .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml dosyalarındaki içeriği algılar.
-- **Ayrımcılık**: Açık ayrımcı dili algılar ve diğer topluluklarla karşılaştırıldığında Afrikalı Amerikalı/Siyah topluluklara karşı ayrımcı dile duyarlıdır.
-- **Finans**: Kurumsal finans, muhasebe, ekonomi, bankacılık ve yatırım kategorilerindeki içeriği algılar. .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xltm, .xlam, .xla dosyaları.
-- **Taciz**: Irk, etnik köken, din, ulusal köken, cinsiyet, cinsel yönelim, yaş, engellilik gibi bir veya birden çok kişiyi hedefleyen saldırgan davranışla ilgili belirli bir rahatsız edici dil metin öğesi kategorisini algılar. .msg, .docx, .pdf, .txt, .rtf, .jpeg, .jpg, .png, .gif, .bmp, .svg dosyalarındaki içeriği algılar.
-- **Sağlık**: Tıbbi hizmetler, tanılar, tedavi, talepler gibi tıbbi ve sağlık yönetimi açısından içeriği algılar. .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xltm, .xlam, .xla dosyaları.
-- **İk**: İnsan kaynaklarıyla ilgili işe alım, görüşme, işe alma, eğitim, değerlendirme, uyarı ve sonlandırma kategorilerindeki içeriği algılar. .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xltm, .xlam, .xla dosyaları.
-- **IP**: Ticari sırlar ve benzer gizli bilgiler gibi Fikri Mülkiyetle ilgili kategorilerdeki içeriği algılar. .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xltm, .xlam, .xla dosyaları.
-- **BT**: Ağ ayarları, bilgi güvenliği, donanım ve yazılım gibi Bilgi Teknolojisi ve Siber Güvenlik kategorilerindeki içeriği algılar. .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xltm, .xlam, .xla dosyaları.
-- **Hukuk İşleri**: Dava, yasal süreç, yasal yükümlülük, yasal terminoloji, hukuk ve mevzuat gibi hukuk işleri ile ilgili kategorilerdeki içeriği algılar. .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml dosyalarındaki içeriği algılar.
-- **Tedarik**: Teklif verme, alıntılama, satın alma ve mal ve hizmet tedariki için ödeme kategorilerindeki içeriği algılar. .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xlt, .xlam, .xla dosyalarındaki içeriği algılar.
+- **Vergi: Vergi** planlaması, vergi formları, vergi dosyalama, vergi düzenlemeleri gibi Vergi ilişkisi içeriğini algılar. .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .pps, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xltm, .xlam, .xla dosyaları.
+
+- **Tehdit**: Şiddet uygulama veya bir kişi ya da mülke fiziksel zarar verme ya da zarar verme tehditleriyle ilgili belirli bir rahatsız edici dil metin öğesi kategorisini algılar.
 - **Küfür**: Çoğu kişiyi utandıran ifadeler içeren belirli bir rahatsız edici dil metin öğeleri kategorisini algılar. .msg, .docx, .pdf, .txt, .rtf, .jpeg, .jpg, .png, .gif, .bmp, .svg dosyalarındaki içeriği algılar.
 - **Vergi: Vergi** planlaması, vergi formları, vergi dosyalama, vergi düzenlemeleri gibi Vergi ilişkisi içeriğini algılar. .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .pps, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xltm, .xlam, .xla dosyaları.
 - **Tehdit**: Şiddet uygulama veya bir kişi ya da mülke fiziksel zarar verme ya da zarar verme tehditleriyle ilgili belirli bir rahatsız edici dil metin öğesi kategorisini algılar. .msg, .docx, .pdf, .txt, .rtf, .jpeg, .jpg, .png, .gif, .bmp, .svg dosyalarındaki içeriği algılar.
 
-Bunlar **Microsoft 365 uyumluluk merkezi** >  **Data classificationTrainable** >  **sınıflandırıcılar** görünümünde durumuyla `Ready to use`gösterilir.
+Bunlar **Microsoft Purview uyumluluk portalı** >  **Data classificationTrainable** >  **classifiers** görünümünde durumuyla `Ready to use`gösterilir.
 
 ![classifiers-pre-trained-classifiers.](../media/classifiers-ready-to-use-classifiers.png)
 
