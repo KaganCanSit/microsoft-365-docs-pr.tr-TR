@@ -14,7 +14,7 @@
           items:
             - name: Office 365 için Defender’ı deneme
               href: try-microsoft-defender-for-office-365.md
-            - name: Office 365 için Defender deneme taktik defteri
+            - name: Office 365 için Defender deneme akış planı
               href: trial-playbook-defender-for-office-365.md
         - name: Office 365 için Defender'daki yenilikler
           href: whats-new-in-defender-for-office-365.md
@@ -236,7 +236,7 @@
           href: Create-safe-sender-lists-in-office-365.md
         - name: İleti izleme
           href: message-trace-scc.md
-        - name: Kişisel verilerin sızıntılarını izleme
+        - name: Kişisel veri sızıntılarını izleme
           href: monitor-for-leaks-of-personal-data.md
     - name: Algılama
       items:
@@ -364,9 +364,9 @@
           items:
             - name: Karantina
               href: quarantine-email-messages.md
-            - name: Karantinaya alınan iletileri ve dosyaları yönetici olarak yönetme
+            - name: Yönetici karantinası
               href: manage-quarantined-messages-and-files.md
-            - name: Kullanıcı olarak karantinaya alınan iletileri bulma ve serbest bırakma
+            - name: Son kullanıcı karantinası
               href: find-and-release-quarantined-messages-as-a-user.md
             - name: Karantina ilkeleri
               href: quarantine-policies.md
