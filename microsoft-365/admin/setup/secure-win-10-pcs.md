@@ -25,12 +25,12 @@ search.appverid:
 - BCS160
 - MET150
 description: Microsoft 365 İş Ekstra ayarladıktan sonra Windows 10 bilgisayarların güvenliğini sağlamayı öğrenin.
-ms.openlocfilehash: 4800a5906fcb10f7debb5b627ffe81a1dd910d49
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: d0f2842c69127893e512822a8d91dfd37a4a0e48
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095256"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65622913"
 ---
 # <a name="secure-windows-10-computers"></a>Windows 10 bilgisayarların güvenliğini sağlama
 
@@ -70,4 +70,4 @@ Microsoft 365 business'da cihaz korumasını ayarladıktan sonra, Windows 10 bil
 
 5. **Ayarları uygula'yı** seçin.
 
-    Bu ayarlar kuruluşunuzdaki tüm kullanıcılar için geçerlidir. Farklı güvenlik grupları için farklı ilkeler ayarlamak için bkz. [Windows 10 bilgisayarlar için cihaz koruma ayarlarını ayarlama](../../business-premium/m365bp-protection-settings-for-windows-10-pcs.md).
+    Bu ayarlar kuruluşunuzdaki tüm kullanıcılar için geçerlidir. Farklı güvenlik grupları için farklı ilkeler ayarlamak için bkz. [Windows 10 bilgisayarlar için cihaz koruma ayarlarını ayarlama](../../business-premium/m365bp-protection-settings-for-windows-10-devices.md).

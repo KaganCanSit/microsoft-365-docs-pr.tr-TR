@@ -1,5 +1,5 @@
 ---
-title: OneDrive SharePoint Online'daki Multi-Geo Özellikleri
+title: OneDrive ve SharePoint Online'da Multi-Geo Özellikleri
 ms.reviewer: adwood
 ms.author: mikeplum
 author: MikePlumleyMSFT
@@ -17,48 +17,48 @@ ms.collection:
 - m365solution-spintranet
 ms.localizationpriority: medium
 ms.assetid: 094e86f2-9ff0-40ac-af31-28fcaba00c1d
-description: OneDrive Online Microsoft 365 da birden çok coğrafi özelliği olan birden çok coğrafi bölgeye genişletebilirsiniz.
-ms.openlocfilehash: 778efca6035dad05ec9bc77298b888e50f381ca1
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Microsoft 365 varlığınızı OneDrive Online'daki çok coğrafi özelliklerle birden çok coğrafi bölgeye genişletin.
+ms.openlocfilehash: e49df6054e30e9e288e893da8d914ebb567eb8e5
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63330041"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65622223"
 ---
 # <a name="multi-geo-capabilities-in-onedrive-and-sharepoint-online"></a>OneDrive ve SharePoint Online’da Multi-Geo Özellikleri
 
-OneDrive ve SharePoint Online'daki Multi-Geo özellikleri, ekip siteleri ve SharePoint konumlarında saklanan Microsoft 365 Grup posta kutuları gibi paylaşılan kaynakların denetimine olanak sağlar.
+OneDrive ve SharePoint Online'daki Multi-Geo özellikleri, SharePoint ekip siteleri ve Microsoft 365 Belirtilen coğrafi konumda bekleyen posta kutuları gibi paylaşılan kaynakların denetimini sağlar.
 
-Her kullanıcı, Grup posta kutusu SharePoint sitenin, ilgili verilerin depolandığı coğrafi konumun notlandığı Tercih Edilen Veri Konumu'nda (PDL) yer almaktadır. Kullanıcıların kişisel verileri (Exchange posta kutusu ve OneDrive) ile birlikte, Microsoft 365 Grupları veya SharePoint siteleri de veri yerleşim gereksinimlerini karşılamak için belirtilen coğrafi konumda depolanıyor olabilir. Her coğrafi [konum için farklı yöneticiler belirtebilirsiniz](add-a-sharepoint-geo-admin.md).
+Her kullanıcı, Grup posta kutusu ve SharePoint site, ilgili verilerin depolandığı coğrafi konumu gösteren Tercih Edilen Veri Konumu'na (PDL) sahiptir. Kullanıcıların kişisel verileri (posta kutusu ve OneDrive Exchange) ve oluşturdukları tüm Microsoft 365 Grupları veya SharePoint siteleri, veri yerleşimi gereksinimlerini karşılamak için belirtilen coğrafi konumda depolanabilir. [Her coğrafi konum için farklı yöneticiler belirtebilirsiniz](add-a-sharepoint-geo-admin.md).
 
-Kullanıcılar, uygulama, uygulama ve Microsoft 365 Arama dahil Office hizmet OneDrive sorunsuz bir deneyim elde ediyor. Ayrıntılar [için bkz. Çok coğrafi ortamda kullanıcı](multi-geo-user-experience.md) deneyimi.
+Kullanıcılar Office uygulamaları, OneDrive ve Arama gibi Microsoft 365 hizmetlerini kullanırken sorunsuz bir deneyim yaşar. Ayrıntılar için bkz. [Çok coğrafi ortamda kullanıcı deneyimi](multi-geo-user-experience.md) .
 
 ## <a name="onedrive"></a>OneDrive
 
-Her kullanıcının OneDrive PDL'sine uygun olarak bir uydu konuma bir yönetici [](move-onedrive-between-geo-locations.md) tarafından sağ olabilir veya bu konuma taşınabilirsiniz. Kişisel dosyalar daha sonra bu coğrafi konumda tutulur, ancak bunlar başka coğrafi konumlarda yer alan kullanıcılarla paylaşılır.
+Her kullanıcının OneDrive[, yönetici tarafından](move-onedrive-between-geo-locations.md) kullanıcının PDL'sine uygun olarak bir uydu konumuna sağlanabilir veya taşınabilir. Kişisel dosyalar daha sonra bu coğrafi konumda tutulur ancak diğer coğrafi konumlardaki kullanıcılarla paylaşılabilir.
 
-## <a name="sharepoint-sites-and-groups"></a>SharePoint Siteleri ve Grupları
+## <a name="sharepoint-sites-and-groups"></a>siteleri ve grupları SharePoint
 
-Multi-Geo özelliğinin yönetimi yönetim <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">merkezinden SharePoint kullanılabilir</a>. Ayrıntılı bilgileri ilgili blog [gönderisinde bulabilirsiniz](https://techcommunity.microsoft.com/t5/Office-365-Blog/Now-available-Multi-Geo-in-SharePoint-and-Office-365-Groups/ba-p/263302).
+Multi-Geo özelliğinin <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">yönetimine SharePoint yönetim merkezinden</a> ulaşabilirsiniz. Ayrıntılı bilgileri [ilgili blog gönderisinde](https://techcommunity.microsoft.com/t5/Office-365-Blog/Now-available-Multi-Geo-in-SharePoint-and-Office-365-Groups/ba-p/263302) bulabilirsiniz.
 
-Kullanıcı çok coğrafi SharePoint grup bağlantılı bir site oluşturduğunda, PDL'leri sitenin ve ilişkili Grup posta kutusunun oluşturularak coğrafi konumu belirlemek için kullanılır. (Kullanıcının PDL değeri ayarilmamışsa veya uydu konumu olarak yapılandırılmamış coğrafi konum olarak ayarlanmışsa, site ve posta kutusu merkezi konumda oluşturulur.)
+Bir kullanıcı çok coğrafi bir ortamda grup bağlantılı SharePoint site oluşturduğunda, sitenin ve ilişkili Grup posta kutusunun oluşturulduğu coğrafi konumu belirlemek için PDL'leri kullanılır. (Kullanıcının PDL değeri ayarlanmamışsa veya uydu konumu olarak yapılandırılmamış coğrafi konuma ayarlanmışsa, site ve posta kutusu merkezi konumda oluşturulur.)
 
-Microsoft 365, Exchange, OneDrive, SharePoint Teams dışında hiçbir hizmet Multi-Geo değildir. Ancak Microsoft 365 tarafından oluşturulan Gruplarda, oluşturanın PDL'si ve bunların Exchange Grubu posta kutusu ile yalıtılan SharePoint ilgili coğrafi grupta sağlandı. 
+Exchange, OneDrive, SharePoint ve Teams dışındaki Microsoft 365 hizmetleri Multi-Geo değildir. Ancak, bu hizmetler tarafından oluşturulan Microsoft 365 Grupları oluşturucunun PDL'siyle ve Exchange Grubu posta kutusuyla yapılandırılır, SharePoint site ilgili coğrafi bölgede sağlanır. 
 
 ## <a name="managing-the-multi-geo-environment"></a>Çok coğrafi ortamı yönetme
 
-Çok coğrafi ortamınızı ayarlama ve yönetme, yönetim merkezinden <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">SharePoint yapılır</a>. 
+Çok coğrafi ortamınızı ayarlama ve yönetme işlemi<a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">, SharePoint yönetim merkezi</a> üzerinden gerçekleştirilir. 
 
-![Yönetim merkezinde coğrafi konumlar sayfasının SharePoint görüntüsü.](../media/sharepoint-multi-geo-admin-center.png)
+![SharePoint yönetim merkezindeki coğrafi konumlar sayfasının ekran görüntüsü.](../media/sharepoint-multi-geo-admin-center.png)
 
-(Site taşıma ya da SharePoint sitesi gibi bazı OneDrive, Microsoft PowerShell gerektirir.)
+(bir SharePoint sitesini veya OneDrive sitesini taşıma gibi bazı eylemler Için Microsoft PowerShell gerekir.)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Multi-Geo in SharePoint and Microsoft 365 Groups](https://techcommunity.microsoft.com/t5/Office-365-Blog/Now-available-Multi-Geo-in-SharePoint-and-Office-365-Groups/ba-p/263302)
+[SharePoint ve Microsoft 365 Grupları'da Multi-Geo](https://techcommunity.microsoft.com/t5/Office-365-Blog/Now-available-Multi-Geo-in-SharePoint-and-Office-365-Groups/ba-p/263302)
 
-[Çok coğrafi ortamı yönetme](administering-a-multi-geo-environment.md)
+[Multi-Geo ortamı yönetme](administering-a-multi-geo-environment.md)
 
-[SharePoint coğrafi ortamlarda depolama kotalarını atama](sharepoint-multi-geo-storage-quota.md)
+[Çok coğrafi ortamlarda depolama kotalarını SharePoint](sharepoint-multi-geo-storage-quota.md)
 
-[Çok Exchange Online ortamda posta kutularını yönetme](administering-exchange-online-multi-geo.md)
+[Çok coğrafi bir ortamda Exchange Online posta kutularını yönetme](administering-exchange-online-multi-geo.md)

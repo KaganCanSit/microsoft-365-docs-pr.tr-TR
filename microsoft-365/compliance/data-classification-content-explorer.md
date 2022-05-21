@@ -19,18 +19,18 @@ search.appverid:
 - MOE150
 - MET150
 description: İçerik gezgini etiketli öğeleri yerel olarak görüntülemenizi sağlar.
-ms.openlocfilehash: 0a3b036a60d3ec24533056b38ff1e68be9875aa0
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: fdc67df9819054eedbe84ce647d77177039cd4a8
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64761383"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65623316"
 ---
 # <a name="get-started-with-content-explorer"></a>İçerik gezginini kullanmaya başlama
 
-Veri sınıflandırması içerik gezgini, genel bakış sayfasında özetlenen öğeleri yerel olarak görüntülemenizi sağlar.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-![içerik gezgini daraltılmış ekran görüntüsü.](../media/data-classification-content-explorer-1.png)
+İçerik gezgini, genel bakış sayfasında özetlenmiş öğeleri yerel olarak görüntülemenizi sağlar.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -51,7 +51,7 @@ Lisans gereksinimleri için bkz[. Information Protection: Veri Sınıflandırma 
 > Bu rol gruplarındaki üyelik, içerik gezginindeki öğelerin listesini görüntülemenize veya içerik gezginindeki öğelerin içeriğini görüntülemenize izin vermez.
 
 > [!IMPORTANT]
-> Uyumluluk Merkezi'ndeki diğer kullanıcıları yalnızca Genel yöneticiler yönetebilir veya bu kullanıcılara izin atayabilir. Diğer ayrıntılar için bkz. [Kullanıcılara Güvenlik & Uyumluluk Merkezi'ne erişim verme](../security/office-365-security/grant-access-to-the-security-and-compliance-center.md).
+> Uyumluluk portalında diğer kullanıcılara izinleri yalnızca Genel yöneticiler yönetebilir veya atayabilir. Daha fazla bilgi için bkz. [Microsoft Purview uyumluluk portalı İzinler](microsoft-365-compliance-center-permissions.md).
 > 
 ### <a name="required-permissions-to-access-items-in-content-explorer"></a>İçerik gezginindeki öğelere erişmek için gerekli izinler
 
@@ -60,7 +60,7 @@ Taranan dosyaların içeriğini okumanıza olanak sağladığından içerik gezg
 > [!IMPORTANT]
 > Bu izinler, öğelere yerel olarak atanan ve içeriğin görüntülenmesine izin veren izinlerin yerini alır. 
 
-İçerik gezginine erişim veren iki rol vardır ve <a href="https://go.microsoft.com/fwlink/p/?linkid=2173597" target="_blank">Microsoft 365 uyumluluk merkezi</a> kullanılarak verilir:
+İçerik gezginine erişim veren iki rol vardır ve <a href="https://go.microsoft.com/fwlink/p/?linkid=2173597" target="_blank">Microsoft Purview uyumluluk portalı</a> kullanılarak verilir:
 
 - **İçerik Gezgini Liste görüntüleyicisi**: Bu rol grubundaki üyelik, liste görünümünde her öğeyi ve konumunu görmenizi sağlar. Rol `data classification list viewer` , bu rol grubuna önceden atanmıştır.
 
@@ -76,14 +76,14 @@ Genel yönetici, gerekli İçerik Gezgini Liste Görüntüleyicisi'ni ve İçeri
 
 Önizlemede, erişim denetimlerinizde ince ayar yapmak için test yapabileceğiniz roller ve rol grupları vardır.
 
-Önizleme aşamasında olan Microsoft Bilgi Koruması (MIP) rollerinin listesi aşağıdadır. Bunlar hakkında daha fazla bilgi edinmek için bkz [. Güvenlik & Uyumluluk Merkezi'ndeki Roller](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center)
+Aşağıda, önizleme aşamasında olan geçerli rollerin listesi yer alır. Bunlar hakkında daha fazla bilgi edinmek için bkz [. Güvenlik & Uyumluluk Merkezi'ndeki Roller](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center)
 
 - Information Protection Yöneticisi
 - Information Protection Analisti
 - Information Protection Araştırmacısı
 - Information Protection Okuyucu
 
-Önizleme aşamasında olan MIP rol gruplarının listesi aşağıdadır. Daha fazla bilgi için bkz [. Güvenlik & Uyumluluk Merkezi'nde rol grupları](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#role-groups-in-the-security--compliance-center)
+Aşağıda, önizleme aşamasında olan geçerli rol gruplarının listesi yer alır. Daha fazla bilgi için bkz [. Güvenlik & Uyumluluk Merkezi'nde rol grupları](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#role-groups-in-the-security--compliance-center)
 
 - Information Protection
 - Information Protection Yöneticileri
@@ -111,14 +111,14 @@ Genel yönetici, gerekli İçerik Gezgini Liste Görüntüleyicisi'ni ve İçeri
 
 ### <a name="how-to-use-content-explorer"></a>İçerik gezginini kullanma
 
-1. **Microsoft 365 uyumluluk merkezi**  >  **Data** **classificationContent** >  gezginini açın.
+1. **Microsoft Purview uyumluluk portalı**  >  **Data** **classificationContent** >  gezginini açın.
 2. Etiketin adını veya hassas bilgi türünü biliyorsanız, bunu filtre kutusuna yazabilirsiniz.
 3. Alternatif olarak, etiket türünü genişletip listeden etiketi seçerek öğeye göz atabilirsiniz.
 4. **Tüm konumlar'ın** altında bir konum seçin ve öğedeki klasör yapısının detayına gidin.
 5. Öğeyi içerik gezgininde yerel olarak açmak için çift tıklayın.
 
 ### <a name="export"></a>Dışarı aktarma
-Dışarı **aktarma** denetimi **, Tüm konumlar** bölmesinde gösterilenlerin listesini içeren bir .csv dosyası oluşturur.
+Dışarı **aktarma** denetimi, bölmenin odağının listesini içeren bir .csv dosyası oluşturur.
 
 ![veri sınıflandırması dışarı aktarma denetimi.](../media/data_classification_export_control.png)
 
@@ -126,9 +126,9 @@ Dışarı **aktarma** denetimi **, Tüm konumlar** bölmesinde gösterilenlerin 
 > [!NOTE]
 > İçerik gezgininde sayıların güncelleştirilmiş olması *yedi güne* kadar sürebilir.
 
-### <a name="search"></a>Arama
+### <a name="filter"></a>Filtrele
 
-Exchange veya Teams klasörü ya da SharePoint ya da OneDrive sitesi gibi bir konumda detaya gittiğiniz zaman **arama** aracı görüntülenir.
+Exchange veya Teams klasörü ya da SharePoint ya da OneDrive sitesi gibi bir konumda detaya gittiğiniz zaman **Filtre** aracı görüntülenir.
 
 ![içerik gezgini arama aracı.](../media/data_classification_search_tool.png)
 
@@ -154,4 +154,4 @@ Arama yapabileceğiniz yer:
 - [Duyarlılık etiketleri hakkında bilgi edinin](sensitivity-labels.md)
 - [Bekletme ilkeleri ve bekletme etiketleri hakkında bilgi edinin](retention.md)
 - [Hassas bilgi türü varlığı definitions.md](sensitive-information-type-entity-definitions.md)
-- [Veri kaybı önleme hakkında daha fazla bilgi edinme](dlp-learn-about-dlp.md)
+- [Microsoft Purview Veri Kaybı Önleme hakkında bilgi edinin](dlp-learn-about-dlp.md)

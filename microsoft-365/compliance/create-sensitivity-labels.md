@@ -17,13 +17,13 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MOE150
 - MET150
-description: 'Tüm Microsoft Purview Information Protection çözümleri için bir gereksinim: Kuruluşunuzun verilerini sınıflandırmak ve korumak için duyarlılık etiketleri oluşturun, yapılandırın ve yayımlayın.'
-ms.openlocfilehash: e35d6e317abc3fb32bb11a6bdf937f303212fc23
-ms.sourcegitcommit: 4cd8be7c22d29100478dce225dce3bcdce52644d
+description: 'Tüm Microsoft Purview Bilgi Koruması çözümleri için bir gereksinim: Kuruluşunuzun verilerini sınıflandırmak ve korumak için duyarlılık etiketleri oluşturun, yapılandırın ve yayımlayın.'
+ms.openlocfilehash: 99b2b50ed00f470443956ff30ebb4940bbe1024d
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65302364"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65622374"
 ---
 # <a name="create-and-configure-sensitivity-labels-and-their-policies"></a>Duyarlılık etiketleri ve ilkeleri oluşturma ve yapılandırma
 
@@ -31,7 +31,7 @@ ms.locfileid: "65302364"
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Tüm Microsoft Purview Information Protection çözümleri [duyarlılık etiketleri](sensitivity-labels.md) kullanılarak uygulanır. Bu etiketleri oluşturmak ve yayımlamak için <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalına</a> gidin.
+Tüm Microsoft Purview Bilgi Koruması çözümleri [duyarlılık etiketleri](sensitivity-labels.md) kullanılarak uygulanır. Bu etiketleri oluşturmak ve yayımlamak için <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalı</a> gidin.
 
 İlk olarak, uygulamalar ve diğer hizmetler için kullanılabilir hale getirmek istediğiniz duyarlılık etiketlerini oluşturun ve yapılandırın. Örneğin, kullanıcıların Office uygulamalardan görmesini ve uygulamasını istediğiniz etiketler.
 
@@ -43,9 +43,7 @@ Kuruluşunuzun genel yöneticisi duyarlılık etiketlerinin tüm yönlerini olu�
 
 ## <a name="create-and-configure-sensitivity-labels"></a>Duyarlılık etiketleri oluşturma ve yapılandırma
 
-1. [Microsoft Purview uyumluluk portalından](https://compliance.microsoft.com/) **ÇözümlerFormasyon** >  **koruması'nı** seçin
-    
-    Bu seçeneği hemen görmüyorsanız önce **Tümünü göster'i** seçin.
+1. [Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com/) **ÇözümlerFormasyon** >  **korumasıBeller'i** >  seçin
 
 2. **Etiketler** sayfasında **+ Etiket oluştur'u** seçerek yeni duyarlılık etiketi yapılandırmasını başlatın: 
     
@@ -128,11 +126,9 @@ Set-Label -Identity $Label -LocaleSettings (ConvertTo-Json $DisplayNameLocaleSet
 
 ## <a name="publish-sensitivity-labels-by-creating-a-label-policy"></a>Etiket ilkesi oluşturarak duyarlılık etiketlerini yayımlama
 
-1. [Microsoft Purview uyumluluk portalından](https://compliance.microsoft.com/) **ÇözümlerFormasyon** >  **koruması'nı** seçin
-    
-    Bu seçeneği hemen görmüyorsanız önce **Tümünü göster'i** seçin.
+1. [Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com/) **ÇözümlerFormasyon** >  **korumasıBel** >  **ilkeleri'ni** seçin
 
-2. İlke oluştur yapılandırmasını başlatmak için **Etiket ilkeleri** sekmesini ve ardından **Etiketi yayımla'yı** seçin:
+2. **Etiket ilkeleri sayfasında Etiketi** **yayımla'yı** seçerek **İlke oluşturma** yapılandırmasını başlatın:
     
     ![Etiketleri yayımlama.](../media/publish-sensitivity-labels-full.png)
     

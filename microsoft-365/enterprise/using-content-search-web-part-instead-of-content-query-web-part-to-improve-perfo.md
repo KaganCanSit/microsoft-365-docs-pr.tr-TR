@@ -21,12 +21,12 @@ search.appverid:
 - SPO160
 ms.assetid: e8ce6b72-745b-464a-85c7-cbf6eb53391b
 description: İçerik Sorgusu Web Bölümü'nü SharePoint Server 2013 ve SharePoint Online'daki İçerik Arama Web Bölümü ile değiştirerek performansı artırmayı öğrenin.
-ms.openlocfilehash: 77c2c6e48beb05b6d371734f0eeeb48881339156
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 45b43b3071ca39c67283ac70ab92b20e2fc7e21a
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098174"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65621993"
 ---
 # <a name="using-content-search-web-part-instead-of-content-query-web-part-to-improve-performance-in-sharepoint-online"></a>SharePoint Online'da performansı geliştirmek için İçerik Sorgusu Web Bölümü yerine İçerik Arama Web Bölümü kullanma
 
@@ -34,11 +34,11 @@ Bu makalede, İçerik Sorgusu Web Bölümü'nü SharePoint Server 2013 ve ShareP
   
 SharePoint Server 2013 ve SharePoint Online'ın en güçlü yeni özelliklerinden biri İçerik Arama Web Bölümü'dür (CSWP). Bu Web Bölümü, kullanıcıya gösterilen sonuçları hızla almak için arama dizinini kullanır. Kullanıcılarınız için performansı geliştirmek için sayfalarınızdaki İçerik Sorgusu Web Bölümü (CQWP) yerine İçerik Arama Web Bölümü'nü kullanın.
   
-İçerik Sorgusu Web Bölümü üzerinde İçerik Arama Web Bölümü kullanmak, SharePoint Online'da neredeyse her zaman önemli ölçüde daha iyi sayfa yükleme performansına neden olur. Doğru sorguyu almak için biraz ek yapılandırma vardır, ancak ödüller iyileştirilmiş performans ve daha mutlu kullanıcılardır.
+İçerik Sorgusu Web Bölümü üzerinde İçerik Arama Web Bölümü kullanmak, SharePoint Online'da neredeyse her zaman daha iyi sayfa yükleme performansına neden olur. Doğru sorguyu almak için biraz ek yapılandırma vardır, ancak ödüller iyileştirilmiş performans ve daha mutlu kullanıcılardır.
   
 ## <a name="comparing-the-performance-gain-you-get-from-using-content-search-web-part-instead-of-content-query-web-part"></a>İçerik Sorgusu Web Bölümü yerine İçerik Arama Web Bölümü'nü kullanarak elde ettiğiniz performans kazancını karşılaştırma
 
-Aşağıdaki örneklerde, İçerik Sorgusu Web Bölümü yerine İçerik Arama Web Bölümü kullandığınızda alabileceğiniz göreli performans kazançları gösterilir. Karmaşık bir site yapısı ve çok geniş içerik sorguları ile etkileri daha belirgindir.
+Aşağıdaki örneklerde, İçerik Sorgusu Web Bölümü yerine İçerik Arama Web Bölümü kullandığınızda alabileceğiniz göreli performans kazançları gösterilir. Karmaşık bir site yapısı ve geniş içerik sorguları ile etkileri daha belirgindir.
   
 Bu örnek site aşağıdaki özelliklere sahiptir:
   
@@ -64,7 +64,7 @@ Internet Explorer'da, yanıt üst bilgisinin ayrıntılarına bakmak için F12 g
   
 ## <a name="adding-a-content-search-web-part-in-sharepoint-online"></a>SharePoint Online'da İçerik Arama Web Bölümü Ekleme
 
-İçerik Arama Web Bölümü eklemek, normal İçerik Sorgusu Web Bölümüne çok benzer. SharePoint'da *İçerik Arama Web Bölümü* Yapılandırma bölümündeki "[İçerik Arama Web Bölümü](https://support.office.com/article/Configure-a-Content-Search-Web-Part-in-SharePoint-0dc16de1-dbe4-462b-babb-bf8338c36c9a) Ekleme" bölümüne bakın.
+İçerik Arama Web Bölümü eklemek, normal İçerik Sorgusu Web Bölümüne benzer. SharePoint'da *İçerik Arama Web Bölümü* Yapılandırma bölümündeki "[İçerik Arama Web Bölümü](https://support.office.com/article/Configure-a-Content-Search-Web-Part-in-SharePoint-0dc16de1-dbe4-462b-babb-bf8338c36c9a) Ekleme" bölümüne bakın.
   
 ## <a name="creating-the-right-search-query-for-your-content-search-web-part"></a>İçerik Arama Web Bölümünüz için doğru arama sorgusunu oluşturma
 

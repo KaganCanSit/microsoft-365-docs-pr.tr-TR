@@ -22,20 +22,22 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 description: Bir kullanıcıya DLP ilkesiyle çakişen içerikle çalıştığını bildirmek için veri kaybı önleme (DLP) ilkesine ilke ipucu eklemeyi öğrenin.
-ms.openlocfilehash: cab4332324ec8d83b201823c98b952995e12962d
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: ce6665227b62ea5937229696fa65b69e7cfb894a
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64760503"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65623213"
 ---
 # <a name="send-email-notifications-and-show-policy-tips-for-dlp-policies"></a>DLP ilkeleri için e-posta bildirimleri gönderme ve ilke ipuçlarını gösterme
 
-Office 365 hassas bilgileri tanımlamak, izlemek ve korumak için bir veri kaybı önleme (DLP) ilkesi kullanabilirsiniz. Kuruluşunuzda bu hassas bilgilerle çalışan kişilerin DLP ilkelerinizle uyumlu kalmasını istiyorsunuz, ancak işlerini yapmalarını gereksiz yere engellemek istemiyorsunuz. Burada e-posta bildirimleri ve ilke ipuçları yardımcı olabilir.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Office 365 genelinde hassas bilgileri tanımlamak, izlemek ve korumak için Microsoft Purview veri kaybı önleme (DLP) ilkesi kullanabilirsiniz. Kuruluşunuzda bu hassas bilgilerle çalışan kişilerin DLP ilkelerinizle uyumlu kalmasını istiyorsunuz, ancak işlerini yapmalarını gereksiz yere engellemek istemiyorsunuz. Burada e-posta bildirimleri ve ilke ipuçları yardımcı olabilir.
 
 ![İleti çubuğu, Excel 2016 ilke ipucunu gösterir](../media/7002ff54-1656-4a6c-993f-37427d6508c8.png)
 
-Uyumluluk Merkezi'nde, bir DLP ilkesi oluşturduğunuzda, kullanıcı bildirimlerini şu şekilde yapılandırabilirsiniz:
+DLP ilkesi oluşturduğunuzda, kullanıcı bildirimlerini şu şekilde yapılandırabilirsiniz:
 
 - Seçtiğiniz kişilere sorunu açıklayan bir e-posta bildirimi gönderin.
 
@@ -53,13 +55,13 @@ DLP ilkesi oluşturduğunuzda **Kullanıcı bildirimlerini** etkinleştirebilirs
 
 1. [https://(](https://compliance.microsoft.com/permissionshttps://()https://compliance.microsoft.com/permissions) öğesine gidin.
 
-2. İş veya okul hesabınızı kullanarak oturum açın. Artık Güvenlik &amp; Uyumluluk Merkezi'ndesiniz.
+2. İş veya okul hesabınızı kullanarak oturum açın.
 
-3. Güvenlik &amp; Uyumluluk Merkezi'nde \> sol gezinti \> **Veri kaybı önleme** \> **İlkesi** \> **+ İlke oluştur'u seçin**.
+3. sol \> gezinti Microsoft Purview uyumluluk portalı \> **Veri kaybı önleme** \> **İlkesi** \> **+ İlke oluştur'a tıklayın**.
 
     ![İlke düğmesi oluşturun.](../media/b1e48a08-92e2-47ca-abdc-4341694ddc7c.png)
 
-4. **İleri'ye** ihtiyacınız \> olan hassas bilgi türlerini koruyan DLP ilkesi şablonunu seçin.
+4. **İleri'yi** korumak istediğiniz \> hassas bilgi türlerini koruyan DLP ilke şablonunu seçin.
 
     Boş bir şablonla başlamak için **Özel Özel** \> **ilke** \> **İleri'yi** seçin.
 
@@ -135,7 +137,7 @@ DLP ilkesindeki her kural için, ilke ipuçlarını şu şekilde yapılandırabi
 
 - Kişinin DLP ilkesini geçersiz kmasına izin verin. İsteğe bağlı olarak şunları yapabilirsiniz:
 
-  - kişinin ilkeyi geçersiz kılması için bir iş gerekçesi girmesini zorunlu kıl. Bu bilgiler günlüğe kaydedilir ve Güvenlik &amp; Uyumluluk Merkezi'nin **Raporlar** bölümündeki DLP raporlarında görüntüleyebilirsiniz.
+  - kişinin ilkeyi geçersiz kılması için bir iş gerekçesi girmesini zorunlu kıl. Bu bilgiler günlüğe kaydedilir ve portalın **Raporlar** bölümündeki DLP raporlarında görüntüleyebilirsiniz.
 
   - Kişinin hatalı pozitif rapor vermesine ve DLP ilkesini geçersiz kmasına izin verin. Bu bilgiler raporlama için de günlüğe kaydedilir, böylece kurallarınızda ince ayar yapmak için hatalı pozitif sonuçları kullanabilirsiniz.
 
@@ -229,7 +231,7 @@ Web üzerinde Outlook ve Outlook 2013 ve sonraki sürümlerde yeni bir e-posta o
 
 ![İlke ipucu iletişim kutusunda ilke ipucunu geçersiz kılabilirsiniz.](../media/f97e836c-04bd-44b4-aec6-ed9526ea31f8.png)
 
-Bir e-postaya hassas bilgiler eklediğinizde, hassas bilgilerin eklenmesiyle ilke ipucunun görünmesi arasında gecikme olabileceğini unutmayın. E-postalar Office İleti Şifrelemesi (OME) ile şifrelendiğinde ve bunları algılamak için kullanılan ilkede şifreleme koşulu algıla ilke ipuçları görüntülenmez.
+Bir e-postaya hassas bilgiler eklediğinizde, hassas bilgilerin eklenmesiyle ilke ipucunun görünmesi arasında gecikme olabileceğini unutmayın. E-postalar Microsoft Purview İleti Şifrelemesi ile şifrelendiğinde ve bunları algılamak için kullanılan ilke tarafından kullanıldığında şifreleme koşulu algıla ilke ipuçları görünmez.
 
 ### <a name="outlook-2013-and-later-supports-showing-policy-tips-for-only-some-conditions"></a>Outlook 2013 ve üzeri, yalnızca bazı koşullar için ilke ipuçlarının gösterilmesini destekler
 
@@ -240,13 +242,13 @@ Bir e-postaya hassas bilgiler eklediğinizde, hassas bilgilerin eklenmesiyle ilk
 
 Özel durumlar koşul olarak kabul edilir ve bu koşulların tümü, içerikle eşleşecekleri ve içerik üzerinde koruyucu eylemler uygulayacakları Outlook çalışır. Ancak kullanıcılara ilke ipuçlarının gösterilmesi henüz desteklenmiyor. Ayrıca Outlook, dinamik dağıtım grubuna uygulanan bir DLP ilkesi için ilke ipuçlarının gösterilmesini desteklemez.
 
-### <a name="policy-tips-in-the-exchange-admin-center-vs-the-security-amp-compliance-center"></a>Exchange yönetim merkezinde ve Güvenlik &amp; Uyumluluk Merkezi'nde ilke ipuçları
+### <a name="policy-tips-in-the-exchange-admin-center-vs-the-microsoft-purview-compliance-portal"></a>Exchange yönetim merkezinde ve Microsoft Purview Uyumluluk portalında ilke ipuçları
 
-İlke ipuçları<a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">, Exchange yönetim merkezinde</a> oluşturulan DLP ilkeleri ve posta akışı kurallarıyla veya Güvenlik &amp; Uyumluluk Merkezi'nde oluşturulan DLP ilkeleriyle çalışabilir, ancak ikisini birden çalışmaz. Bunun nedeni, bu ilkelerin farklı konumlarda depolanmasıdır, ancak ilke ipuçları yalnızca tek bir konumdan çizim yapabilir.
+İlke ipuçları<a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">, Exchange yönetim merkezinde</a> oluşturulan DLP ilkeleri ve posta akışı kurallarıyla veya uyumluluk portalında oluşturulan DLP ilkeleriyle çalışabilir, ancak ikisini birden çalışmaz. Bunun nedeni, bu ilkelerin farklı konumlarda depolanmasıdır, ancak ilke ipuçları yalnızca tek bir konumdan çizim yapabilir.
 
-Exchange yönetim merkezinde ilke ipuçlarını yapılandırdıysanız, Güvenlik &amp; Uyumluluk Merkezi'nde yapılandırdığınız ilke ipuçları, Exchange yönetim merkezindeki ipuçlarını kapatana kadar Web üzerinde Outlook ve Outlook 2013 ve sonraki sürümlerde kullanıcılara gösterilmez. Bu, geçerli Exchange posta akışı kurallarınızın (taşıma kuralları olarak da bilinir) Güvenlik &amp; Uyumluluk Merkezi'ne geçiş yapmayı seçene kadar çalışmaya devam etmesini sağlar.
+Exchange yönetim merkezinde ilke ipuçlarını yapılandırdıysanız, uyumluluk portalında yapılandırdığınız ilke ipuçları, Exchange yönetim merkezindeki ipuçlarını kapatana kadar Web üzerinde Outlook ve Outlook 2013 ve sonraki sürümlerde kullanıcılara gösterilmez. Bu, geçerli Exchange posta akışı kurallarınızın (taşıma kuralları olarak da bilinir) uyumluluk portalına geçiş yapmayı seçene kadar çalışmaya devam etmesini sağlar.
 
-İlke ipuçları yalnızca tek bir konumdan çizim yapabilirken, hem Güvenlik &amp; Uyumluluk Merkezi'nde hem de Exchange yönetim merkezinde DLP ilkelerini kullanıyor olsanız bile e-posta bildirimlerinin her zaman gönderildiğini unutmayın.
+İlke ipuçları yalnızca tek bir konumdan çizim yapabilirken, hem uyumluluk portalında hem de Exchange yönetim merkezinde DLP ilkelerini kullanıyor olsanız bile e-posta bildirimlerinin her zaman gönderildiğini unutmayın.
 
 ### <a name="default-text-for-policy-tips-in-email"></a>E-postada ilke ipuçları için varsayılan metin
 

@@ -14,18 +14,18 @@ ms.custom: nextgen
 ms.reviewer: ''
 manager: dansimp
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 034a12d1f1354ac63778d142d1bc09848e2f9911
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 864d67aeaa84713b1b2126b017fadacd0e43dc7a
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65419912"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65623010"
 ---
 # <a name="configure-and-validate-exclusions-based-on-file-extension-and-folder-location"></a>Dosya uzantısına ve klasör konumuna göre dışlamaları yapılandırma ve doğrulama
 
 **Şunlar için geçerlidir:**
 
-- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Virüsten Koruma
 
@@ -38,7 +38,7 @@ ms.locfileid: "65419912"
 - [İşlemler tarafından açılan dosyalar için dışlamalar](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
 
 > [!IMPORTANT]
-> Microsoft Defender Virüsten Koruma dışlamalar uç noktada algılama ve yanıtlama [(EDR)](/microsoft-365/security/defender-endpoint/overview-endpoint-detection-response) ve [saldırı yüzeyini azaltma gibi diğer Uç Nokta için Microsoft Defender özellikleri için geçerli değildir (ASR) kuralları](/microsoft-365/security/defender-endpoint/attack-surface-reduction) ve [denetimli klasör erişimi](/microsoft-365/security/defender-endpoint/controlled-folders). Bu makalede açıklanan yöntemleri kullanarak dışladığınız dosyalar yine de EDR uyarıları ve diğer algılamaları tetikleyebilir.
+> Microsoft Defender Virüsten Koruma dışlamalar[, saldırı yüzeyi azaltma (ASR) kuralları](/microsoft-365/security/defender-endpoint/attack-surface-reduction) ve [denetimli klasör erişimi](/microsoft-365/security/defender-endpoint/controlled-folders) gibi diğer Uç Nokta için Microsoft Defender özellikleri için geçerli değildir. Bu makalede açıklanan yöntemleri kullanarak dışladığınız dosyalar yine de EDR uyarıları ve diğer algılamaları tetikleyebilir.
 > Dosyaları geniş kapsamlı bir şekilde dışlamak için bunları Uç Nokta için Microsoft Defender [özel göstergelerine](/microsoft-365/security/defender-endpoint/manage-indicators) ekleyin.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
@@ -104,7 +104,7 @@ Microsoft Endpoint Manager (geçerli dal) yapılandırma ayrıntıları için bk
 
 1. grup ilkesi yönetim bilgisayarınızda [grup ilkesi Yönetim Konsolu'nu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)) açın, yapılandırmak istediğiniz grup ilkesi Nesnesine sağ tıklayın ve **Düzenle'yi** seçin.
 
-2. **grup ilkesi Yönetim Düzenleyicisi'nde** **Bilgisayar yapılandırması'na** gidin ve **Yönetim şablonları'nı** seçin.
+2. **Grup İlkesi Yönetimi Düzenleyicisi**'nde **Bilgisayar yapılandırması**'na gidin ve **Yönetim şablonları**'nı seçin.
 
 3. **Dışlamalar Windows Defender Virüsten Koruma bileşenleri** \> **Windows** \> için ağacı genişletin.
 
@@ -379,7 +379,7 @@ $client.DownloadFile("http://www.eicar.org/download/eicar.com.txt","c:\test.txt"
 Ayrıca, dizeyi boş bir metin dosyasına kopyalayabilir ve dosya adıyla veya dışlamaya çalıştığınız klasöre kaydetmeye çalışabilirsiniz.
 
 > [!TIP]
-> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> Diğer platformlar için Antivirüs ile ilgili bilgi arıyorsanız bkz:
 > - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
 > - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)

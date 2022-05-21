@@ -20,12 +20,12 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 53a23751fd53b05b51bf1125dcca98c23f4ba73c
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 68503556a1d2f3330e47fe601a303363a3f28896
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65418258"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65623231"
 ---
 # <a name="device-discovery-overview"></a>Cihaz keşfine genel bakış
 
@@ -48,9 +48,8 @@ Bilinmeyen ve yönetilmeyen cihazlar ağınıza önemli riskler getirir. Bu, eş
 - Yönetilmeyen uç noktaları hizmete ekleyip bu uç noktaların güvenlik görünürlüğünü artırır.
 - Güvenlik açıklarını tanımlayıp değerlendirerek ve yapılandırma boşluklarını algılayarak saldırı yüzeyini azaltın.
 
-Cihaz bulma işlemine hızlı bir genel bakış için bu videoyu izleyin:
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWORdQ]
+Keşfedilen Uç Nokta için Microsoft Defender yönetilmeyen cihazları değerlendirmeye ve eklemeye hızlı bir genel bakış için bu videoyu izleyin.
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4RwQz]
 
 Bu özellik ile birlikte, mevcut Tehdit ve Güvenlik Açığı Yönetimi deneyiminin bir parçası olarak cihazları Uç Nokta için Microsoft Defender eklemeye yönelik bir güvenlik önerisi sağlanır.
 
@@ -115,13 +114,13 @@ Yönetilmeyen ve yönetilen cihazlarla ilgili SSH güvenlik açıklarını bulma
 
 ## <a name="use-advanced-hunting-on-discovered-devices"></a>Bulunan cihazlarda gelişmiş avcılık kullanma
 
-Bulunan cihazlarda görünürlük elde etmek için gelişmiş tehdit avcılığı sorgularını kullanabilirsiniz. Bulunan cihazlar hakkındaki ayrıntıları DeviceInfo tablosunda veya Bu cihazlarla ilgili ağ ile ilgili bilgileri DeviceNetworkInfo tablosunda bulabilirsiniz.
+Bulunan cihazlarda görünürlük elde etmek için gelişmiş tehdit avcılığı sorgularını kullanabilirsiniz. Bulunan cihazlar hakkındaki ayrıntıları DeviceNetworkInfo tablosundaki DeviceInfo tablosunda veya bu cihazlarla ilgili ağ ile ilgili bilgileri bulabilirsiniz.
 
 :::image type="content" source="images/f48ba1779eddee9872f167453c24e5c9.png" alt-text="Sorguların kullanılabilmesi için Gelişmiş tehdit avcılığı sayfası" lightbox="images/f48ba1779eddee9872f167453c24e5c9.png":::
 
 ### <a name="query-discovered-devices-details"></a>Bulunan cihazların ayrıntılarını sorgulama
 
-Bulunan tüm cihazların yanı sıra her cihaz için en fazla ayrıntıyı döndürmek için bu sorguyu DeviceInfo tablosunda çalıştırın:
+Bulunan tüm cihazları ve her cihaz için en güncel ayrıntıları döndürmek için bu sorguyu DeviceInfo tablosunda çalıştırın:
 
 ```query
 DeviceInfo

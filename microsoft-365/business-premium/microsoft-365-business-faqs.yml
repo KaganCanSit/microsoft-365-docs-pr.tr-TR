@@ -13,13 +13,13 @@ metadata:
   ms.localizationpriority: medium
   audience: microsoft-business
   keywords: Microsoft 365 Business Premium, Microsoft 365, SMB, FAQ, frequently asked questions, answers, business
-  ms.date: 02/25/2022
-  ms.openlocfilehash: 16459c60b90a695a1db0c52366d273ba453a31f4
-  ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+  ms.date: 05/20/2022
+  ms.openlocfilehash: 0efa61f949a295ac85ebcea7e6fbff92d2e04a15
+  ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/03/2022
-  ms.locfileid: "65175026"
+  ms.lasthandoff: 05/20/2022
+  ms.locfileid: "65622425"
 title: Microsoft 365 İş Ekstra sık sorulan sorular
 summary: ''
 sections:
@@ -81,7 +81,7 @@ sections:
       - **Windows 10 bilgisayarlar için Cihaz Yönetimi**, işletmelerin kötü amaçlı yazılımlara yönelik Microsoft Defender Virüsten Koruma koruması, otomatik güncelleştirmeler ve belirlenen süre sonunda ekranları kapatma gibi özellikleri ayarlamayı ve uygulamayı seçmesine olanak tanır. Ayrıca, kayıp veya çalıntı Windows 10 cihazlarından yönetim merkezi yoluyla iş uygulamaları ve verileri tamamen silinebilir.
 
 
-      - **iOS için Cihaz Yönetimi, Android & macOS** özellikleri, işletmelerin iOS, Android, Windows ve macOS cihazları içeren çeşitli cihaz ekosistemlerini güvenli bir şekilde yönetmelerine yardımcı olur.
+      - **iOS için Cihaz Yönetimi Android & macOS özellikleri,** işletmelerin iOS, Android, Windows ve macOS cihazları içeren çeşitli cihaz ekosistemlerini güvenli bir şekilde yönetmelerine yardımcı olur.
   - question: Microsoft 365 İş Ekstra, kuruluşumdaki bilgisayarları kötü amaçlı saldırılardan korumaya nasıl yardımcı olur?
     answer: >
       Microsoft 365 İş Ekstra ile yönetilen bilgisayarlar, hayır olan Microsoft Defender Virüsten Koruma ile korunur. Bu, tüm diğer çözümlerden daha fazla bilgisayarı virüslere, kötü amaçlı yazılımlara, casus yazılımlara ve diğer tehditlere karşı koruyan Windows 10’daki bir numaralı virüsten koruma özelliğidir. kuruluşlar Microsoft 365 İş Ekstra ile Microsoft Defender Virüsten Koruma korumanın çalıştığından ve tüm Windows 10 cihazlarında her zaman güncel olduğundan emin olabilir.
@@ -115,11 +115,11 @@ sections:
   - question: Microsoft 365 İş Ekstra dağıtımını planlarken müşteriler neleri göz önünde bulundurmalıdır?
     answer: "Başarılı bir Microsoft 365 İş Ekstra dağıtımına giden en doğrudan yol, bir Microsoft İş Ortağı ile birlikte çalışmaktır. Çok çeşitli müşteri senaryoları üzerinde kapsamlı eğitim ve deneyime sahiptir ve ortamınızı ve gereksinimlerinizi anlamak üzere en iyi şekilde donatılmıştır. \n"
   - question: Microsoft 365 İş Ekstra, Microsoft Intune’un tüm özelliklerini içeriyor mu?
-    answer: Evet, Microsoft 365 İş Ekstra aboneler iOS, Android, macOS ve diğer platformlar arası cihaz yönetimi için tam Intune özelliklerini kullanma lisansına sahiptir. üçüncü taraf uygulama yönetimi, Wi-Fi profillerinin yapılandırması ve VPN sertifikaları gibi Microsoft 365 İş Ekstra basitleştirilmiş yönetim konsolunda bulunmayan özellikler tam Intune konsolunda yönetilebilir.
+    answer: Evet, Microsoft 365 İş Ekstra aboneleri iOS, Android, macOS ve diğer platformlar arası cihaz yönetimi için tam Intune özelliklerini kullanma lisansına sahiptir. üçüncü taraf uygulama yönetimi, Wi-Fi profillerinin yapılandırması ve VPN sertifikaları gibi Microsoft 365 İş Ekstra basitleştirilmiş yönetim konsolunda bulunmayan özellikler tam Intune konsolunda yönetilebilir.
   - question: Azure Active Directory (Azure AD) Premium P1 Microsoft 365 İş Ekstra ile birlikte gelir mi?
     answer: Evet, Azure AD Premium P1 Microsoft Business Premium'a dahildir.
   - question: Microsoft 365 İş Ekstra müşterilerin Mac’leri yönetmesine olanak sağlar mı?
-    answer: Intune, iOS, Android, Windows ve macOS cihazlarını güvenli bir şekilde yönetmenize yardımcı olur.
+    answer: Intune iOS, Android, Windows ve macOS cihazları güvenli bir şekilde yönetmenize yardımcı olur.
   - question: Windows AutoPilot nedir?
     answer: >
       Windows AutoPilot, yeni Windows 10 bilgisayarların dağıtımını kolaylaştıran bir hizmettir. Bu işlem, Microsoft 365 İş Ekstra’nın merkezi yönetim denetimlerinden yararlanarak, son kullanıcı Microsoft 365 İş Ekstra’da &mdash;BT cihaza hiç dokunmadan&mdash; önce ilk kez oturum açtığında yapılabilir. Windows AutoPilot’ı Windows 10 Professional Creators Update (veya daha yenisini) çalıştıran ve fabrika ayarlarına sıfırlanmış var olan bilgisayarlar için de kullanabilirsiniz. Windows AutoPilot hakkındaki [ayrıntılara bu Haziran 2017 blog gönderisinde](https://blogs.technet.microsoft.com/windowsitpro/2017/06/29/modernizing-windows-deployment-with-windows-autopilot/) ulaşabilirsiniz.

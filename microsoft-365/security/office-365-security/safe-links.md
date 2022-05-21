@@ -28,12 +28,12 @@ ms.assetid: dd6a1fef-ec4a-4cf4-a25a-bb591c5811e3
 description: Bir kuruluşu kimlik avına ve kötü amaçlı URL kullanan diğer saldırılara karşı korumak için Office 365 için Defender Kasa Bağlantıları koruması hakkında bilgi edinin. Teams Kasa Bağlantıları keşfedin ve Kasa Bağlantıları iletilerinin grafiklerini görün.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 0aef211b91ef406926720f8c50e4af457d07eaab
-ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
+ms.openlocfilehash: 46ea33c872782845a8d9697a9abbddcef22e94fb
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2022
-ms.locfileid: "65535118"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65623476"
 ---
 # <a name="safe-links-in-microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender'da bağlantıları Kasa
 
@@ -62,6 +62,9 @@ Kasa Bağlantıları koruması aşağıdaki konumlarda kullanılabilir:
 - **Microsoft Teams**: Teams konuşmalardaki, grup sohbetlerindeki veya kanallardaki bağlantılar için Kasa Bağlantılar koruması da Kasa Bağlantılar ilkeleri tarafından denetlenmektedir.
 
   Teams Kasa Bağlantıları koruması hakkında daha fazla bilgi için, bu makalenin [devamında yer alan Microsoft Teams için bağlantılar ayarları Kasa](#safe-links-settings-for-microsoft-teams) bölümüne bakın.
+
+  > [!NOTE]
+  > Şu anda Microsoft Teams için Kasa Bağlantıları koruması Microsoft 365 GCC High veya Microsoft 365 DoD'da kullanılamaz.
 
 - **Office 365 uygulamaları**: Office 365 uygulamaları için Kasa Bağlantıları koruması desteklenen masaüstü, mobil ve web uygulamalarında kullanılabilir. Kasa Bağlantıları ilkelerinin **dışındaki** genel ayarda Office 365 uygulamalar için Kasa Bağlantıları korumasını **yapılandırabilirsiniz**. Yönergeler için bkz[. Office 365 için Microsoft Defender Kasa Bağlantıları ayarları için genel ayarları yapılandırma](configure-global-settings-for-safe-links.md).
 
@@ -163,6 +166,8 @@ Kasa Bağlantıları ilkelerinde Microsoft Teams için Kasa Bağlantıları koru
 
 > [!NOTE]
 > Teams için Kasa Bağlantıları korumasını açtığınızda veya kapattığınızda, değişikliğin etkili olması 24 saat kadar sürebilir.
+>
+> Şu anda Microsoft Teams için Kasa Bağlantıları koruması Microsoft 365 GCC High veya Microsoft 365 DoD'da kullanılamaz.
 
 e-posta iletilerindeki bağlantılara uygulanan Kasa Bağlantılar ilkelerindeki aşağıdaki ayarlar, Teams'daki bağlantılar için de geçerlidir:
 

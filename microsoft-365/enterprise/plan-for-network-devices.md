@@ -18,12 +18,12 @@ search.appverid:
 - BCS160
 ms.assetid: 073433ca-3511-4db9-b173-7a2edca57691
 description: 'Özet: Office 365 bağlanmak için kullanılan ağ kapasitesi, WAN hızlandırıcıları ve yük dengeleme cihazlarıyla ilgili dikkat edilmesi gereken noktaları açıklar.'
-ms.openlocfilehash: 58c4225d9d381dabedfa86d81ced7f5922932058
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 3b79e73f292ecf1db38a90364db3d2e475723158
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65100335"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65622821"
 ---
 # <a name="plan-for-network-devices-that-connect-to-office-365-services"></a>Office 365 hizmetlerine bağlanan ağ cihazlarını planlama
 

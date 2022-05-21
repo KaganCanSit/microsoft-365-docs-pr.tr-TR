@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 description: eBulma (Premium) analizi yaparken, e-posta yazışması bir e-posta konuşmasını ayrıştırıp her iletiyi farklı kategorilere ayırır.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: e35ffa901bb1b90b0ac5d572b6a7ee05cce31d89
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 6aa8bfdccf2f7430da1aa00ed444a9c218525ee8
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65086819"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65622139"
 ---
 # <a name="email-threading-in-ediscovery-premium"></a>eBulma'da e-posta yazışması oluşturma (Premium)
 
@@ -31,7 +31,7 @@ Bir süredir devam eden bir e-posta konuşmasını düşünün. Çoğu durumda, 
 
 ## <a name="what-does-email-threading-do"></a>E-posta yazışmaları ne işe olur?
 
-E-posta yazışması her e-posta yazışmasını ayrıştırıp ayrı ayrı iletilere oluşturur. Her e-posta yazışması, ayrı ayrı iletiler zinciridir. Microsoft Purview eKeşif (Premium), bir e-posta iletisinin benzersiz içeriğe sahip olup olmadığını veya zincirin (üst iletiler) e-posta yazışmasında son iletide tamamen yer alıp almadığını belirlemek için gözden geçirme kümesindeki tüm e-posta karmaşıklıklarını analiz eder. E-posta iletileri dört kapsayıcı değere ayrılır:
+E-posta yazışması her e-posta yazışmasını ayrıştırıp ayrı ayrı iletilere oluşturur. Her e-posta yazışması, ayrı ayrı iletiler zinciridir. Microsoft Purview eBulma (Premium), gözden geçirme kümesindeki tüm e-posta iletilerini analiz eder ve bir e-posta iletisinin benzersiz içeriği olup olmadığını veya zincirin (üst iletiler) e-posta yazışmasının son iletisinde tamamen bulunup bulunmadığını belirler. E-posta iletileri dört kapsayıcı değere ayrılır:
 
 - **Kapsayıcı**: *Kapsayıcı* e-posta, bir e-posta yazışmasında son e-posta iletisidir ve bu e-posta yazışmasının önceki tüm içeriğini içerir.
 
@@ -43,6 +43,6 @@ E-posta yazışması her e-posta yazışmasını ayrıştırıp ayrı ayrı ilet
 
 ## <a name="how-is-it-different-from-conversations-in-outlook"></a>Outlook konuşmalarından farkı nedir?
 
-Bu, bir bakışta Outlook konuşma gruplandırmalarına benzer. Ancak bazı önemli ayrımlar vardır. İki konuşmaya çatallanmış bir e-posta konuşması düşünün; örneğin, birisi konuşmadaki en son e-posta olmayan bir e-postayı yanıtladığından, konuşmadaki son iki e-postanın da benzersiz içeriği vardır.
+Bu, bir bakışta Outlook konuşma gruplandırmalarına benzer. Ancak bazı önemli ayrımlar vardır. İki konuşmaya çatallanmış bir e-posta konuşması düşünün; örneğin, birisi konuşmadaki en son e-posta olmayan bir e-postayı yanıtladı, bu nedenle konuşmadaki son iki e-postanın da benzersiz içeriği var.
 
 Outlook e-postaları tek bir konuşmada gruplandırmaya devam eder; yalnızca son e-postayı okumak, benzersiz içerik de içeren ikinciden son e-postanın bağlamının eksik olduğu anlamına gelir. E-posta yazışması her e-postayı ayrı ayrı bileşenlere ayırıp karşılaştırdığından, e-posta yazışması son iki e-postayı da kapsayıcı olarak işaretleyerek kapsayıcı olarak işaretlenmiş tüm e-postaları okuduğunuz sürece bağlamı kaçırmamanızı sağlar.

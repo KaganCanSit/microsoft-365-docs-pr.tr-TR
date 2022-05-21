@@ -12,12 +12,12 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Cisco Jabber verilerini Microsoft 365 içeri aktarmak ve arşivleme amacıyla 17a-4 Cisco Jabber DataParser bağlayıcısını ayarlamayı ve kullanmayı öğrenin.
-ms.openlocfilehash: 3e7bcd9a85293d1516da8070fa39e2545d4fbc22
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: 3cc3fc0642b40bfd16f7e8b42fa3d68a98e7bca9
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65319970"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65622170"
 ---
 # <a name="set-up-a-connector-to-archive-cisco-jabber-data"></a>Cisco Jabber verilerini arşivleme amacıyla bağlayıcı ayarlama
 

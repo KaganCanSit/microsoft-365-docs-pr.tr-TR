@@ -28,12 +28,12 @@ search.appverid:
 ROBOTS: NO INDEX, NO FOLLOW
 ms.assetid: 21e5551f-fa35-4f13-9418-f80d668b6a2b
 description: herhangi bir Windows cihazın iş veya okul hesabında oturum açtıktan sonra alacağı varsayılan cihaz ilkesinin ayarlarını yapılandırma hakkında bilgi edinin.
-ms.openlocfilehash: e912ab639e5457d3c89155da4d3621399502267f
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: a88aad90d9ca55c5a5abeb17345179c2defdbd4e
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65319914"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65621330"
 ---
 # <a name="secure-windows-devices"></a>Windows cihazlarının güvenliğini sağlama
 
@@ -45,7 +45,7 @@ Varsayılan olarak tüm ayarlar **Açık** durumdadır. Aşağıdaki ayarlar kul
 
 |Ayar  <br/> |Açıklama  <br/> |
 |:-----|:-----|
-|Windows Defender Virüsten Koruma kullanarak bilgisayarların virüslere ve diğer tehditlere karşı korunmasına yardımcı ol  <br/> |Bilgisayarları internete bağlı olmanın getirdiği tehlikelerden korumak için Windows Defender Virüsten Koruma programının açık olması gerekir.  <br/> |
+|Microsoft Defender Virüsten Koruma kullanarak bilgisayarları virüslerden ve diğer tehditlerden korumaya yardımcı olun  <br/> |Bilgisayarları İnternet'e bağlı olmanın tehlikelerinden korumak için Microsoft Defender Virüsten Koruma açılmasını gerektirir.  <br/> |
 |Bilgisayarları Microsoft Edge'de web tabanlı tehditlere karşı korumaya yardımcı ol  <br/> |Edge'de, kullanıcıları kötü amaçlı sitelerden ve indirmelerden korumaya yardımcı olan ayarları açar.  <br/> |
 |BitLocker ile PC'lerdeki dosyaların ve klasörlerin yetkisiz erişime karşı korunmasına yardımcı ol  <br/> |BitLocker, bilgisayar sabit sürücülerini şifreleyerek verileri korur ve bir bilgisayar kaybolur veya çalınırsa verilerin açığa çıkarmasını önler. Daha fazla bilgi için bkz. [BitLocker SSS](/windows/security/information-protection/bitlocker/bitlocker-frequently-asked-questions).  <br/> |
 |Cihaz şu kadar süre boşta kaldığında ekranı kapat  <br/> |Kullanıcı cihaz başında olmadığında şirket verilerinin korunmasını sağlar. Kullanıcı bir kafe gibi herkese açık bir konumda çalışıyorken kısa süreliğine uzaklaşabilir veya başka bir şeyle ilgilenebilir ve bu sırada diğer kişiler cihazdaki bilgilere bakabilir. Bu ayar sayesinde, ekran kapanmadan önce kullanıcının ne kadar süre boşta olabileceğini denetleyebilirsiniz.  <br/> |

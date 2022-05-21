@@ -1,5 +1,5 @@
 ---
-title: Microsoft Uyumluluk Yöneticisi'nde geliştirme eylemleriyle çalışma
+title: Microsoft Purview Uyumluluk Yöneticisi'nde iyileştirme eylemleriyle çalışma
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -16,205 +16,238 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Microsoft Uyumluluk Yöneticisi'nde geliştirme eylemleriyle çalışarak denetimleri uygulama ve test etmeyi öğrenin. Çalışma atayın, belgeleri depo edin ve raporları dışarı aktarın.
-ms.openlocfilehash: 33b1de7dfc116cc1403d0e3619dfbec2f0853be3
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Microsoft Purview Uyumluluk Yöneticisi'nde iyileştirme eylemleriyle çalışarak denetimleri uygulamayı ve test etmeyi öğrenin. İş, depolama belgeleri ve dışarı aktarma raporları atayın.
+ms.openlocfilehash: 9dca4f3a742b82a2cf119ceb40b04241d1b5177f
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63319469"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65621780"
 ---
-# <a name="working-with-improvement-actions-in-compliance-manager"></a>Uyumluluk Yöneticisi'nde geliştirme eylemleriyle çalışma
+# <a name="working-with-improvement-actions-in-compliance-manager"></a>Uyumluluk Yöneticisi'nde iyileştirme eylemleriyle çalışma
 
-**Bu makalede:** Bu makalede, geliştirme eylemleriyle **uyumluluk iş akışınızı** yönetme işlemleri açıklanmıştır. Uygulama ve test **için geliştirme eylemleri** atamayı, güncelleştirmeleri **yönetmeyi ve** raporları dışarı aktarmayı **öğrenin**.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-## <a name="manage-compliance-workflows-with-improvement-actions"></a>Geliştirme eylemleriyle uyumluluk iş akışlarını yönetme
+**Bu makalede:** Bu makalede **, geliştirme eylemleriyle uyumluluk iş akışınızı yönetme** adımları açıklanmaktadır. Uygulama ve test için **iyileştirme eylemleri atamayı** , **güncelleştirmeleri yönetmeyi** ve **raporları** dışarı aktarmayı öğrenin.
 
-Uyumluluk etkinliklerinizi merkezi olarak geliştirme eylemleri gerçekleştirin. Her geliştirme eylemi, veri koruma düzenlemelerine ve standartlara uyum içinde çalışmanıza yardımcı olacak ayrıntılı uygulama kılavuzu sağlar. Eylemler, uygulama ve test çalışması gerçekleştirmek için kuruluşta kullanıcılara atanabilir. Ayrıca belgeleri, notları depolar ve eylem içindeki durum güncelleştirmelerini de kayda alabilirsiniz.
+## <a name="manage-compliance-workflows-with-improvement-actions"></a>İyileştirme eylemleriyle uyumluluk iş akışlarını yönetme
 
-Geliştirme eylemlerinizin hepsi geliştirme eylemleri sayfasında listelenir. Geliştirme eylemlerinizi görüntüleme [hakkında daha fazla bilgi öğrenin](compliance-manager-setup.md#improvement-actions-page).
+geliştirme eylemleri, uyumluluk etkinliklerinizi merkezileştirir. Her iyileştirme eylemi, veri koruma düzenlemeleri ve standartlarıyla uyumlu olmanıza yardımcı olmak için ayrıntılı uygulama yönergeleri sağlar. Uygulama ve test çalışmalarını gerçekleştirmek için kuruluşunuzdaki kullanıcılara eylemler atanabilir. Eylem içinde belge, not ve kayıt durumu güncelleştirmelerini de depolayabilirsiniz.
 
-## <a name="improvement-actions-details-page"></a>Geliştirme eylemleri ayrıntıları sayfası
+Tüm iyileştirme eylemleriniz, iyileştirme eylemleri sayfasında listelenir. [geliştirme eylemlerinizi görüntüleme](compliance-manager-setup.md#improvement-actions-page) hakkında daha fazla bilgi edinin.
 
-Her geliştirme eyleminin geçerli durumunu, ilgili standartları ve mevzuat gereksinimlerini ve önerilen uygulama kılavuzlarını gösteren bir ayrıntılar sayfası vardır. [Teknik eylemler](compliance-score-calculation.md#technical-and-non-technical-actions) , sizi **uygulama için** uygun çözüme alan Şimdi başlat bağlantısını içerir. Geliştirme eyleminin ayrıntılar sayfasına doğrudan uygulama ve test belgeleri ebilirsiniz.
+## <a name="improvement-actions-details-page"></a>İyileştirme eylemleri ayrıntıları sayfası
 
-Geliştirme eyleminin ayrıntılar sayfasını görüntülemek için:
+Her geliştirme eyleminin geçerli durumunu, ilgili standartları ve mevzuat gereksinimlerini ve önerilen uygulama kılavuzunu gösteren bir ayrıntılar sayfası vardır. [Teknik eylemler](compliance-score-calculation.md#technical-and-non-technical-actions) , sizi uygulama için uygun çözüme götüren bir **Şimdi başlat** bağlantısı içerir. Uygulama ve test belgelerini doğrudan geliştirme eyleminin ayrıntılar sayfasına ekleyebilirsiniz.
 
-1. Geliştirme eylemleri sayfanıza gidin.
-2. Hedeflenen geliştirme işleminizin ayrıntılarını sayfasını açan satırı seçin.
+İyileştirme eyleminin ayrıntılar sayfasını görüntülemek için:
 
-Ekranın sağ üst köşesindeki yukarı veya aşağı oku seçerek, listede sonraki veya önceki geliştirme eylemlerini kolayca görebilirsiniz. Geliştirme eylemleri sayfasında listenizi filtreledıysanız, yukarı veya aşağı hareket etmek, bu filtrelenmiş listede sizi bir sonraki öğeye kadar ilerlemenizi sağlar.
+1. geliştirme eylemleri sayfanıza gidin.
+2. Hedeflenen geliştirme eyleminizin satırını seçerek ayrıntılar sayfasını açın.
+
+Ekranın sağ üst köşesindeki yukarı veya aşağı oku seçerek listedeki sonraki veya önceki geliştirme eylemini kolayca görüntüleyebilirsiniz. İyileştirme eylemleri sayfasında listenizi filtrelediyseniz, yukarı veya aşağı hareket etmek sizi filtrelenen listede bir sonraki öğeye götürür.
 
 > [!TIP]
-> Farklı geliştirme eylemleri türleri [hakkında daha fazla bilgi edinmek ve bu noktaların uyumluluk puanınıza](compliance-score-calculation.md#action-types-and-points) nasıl puan verilip faktörlü olduğunu öğrenin.
+> Farklı [geliştirme eylemleri türleri ve puanların nasıl ödüllendirilip](compliance-score-calculation.md#action-types-and-points) uyumluluk puanınıza hesaba katılmış olduğu hakkında daha fazla bilgi edinin.
 
-## <a name="assign-improvement-actions"></a>Geliştirme eylemleri atama
+## <a name="assign-improvement-actions"></a>İyileştirme eylemleri atama
 
-Geliştirme eylemi üzerinde uygulama çalışmasına başlamak için, bu işlemi kendiniz yapar veya başka bir kullanıcıya atabilirsiniz. Atanan kişi:
+Bir geliştirme eylemi üzerinde uygulama çalışmasını başlatmak için, işi kendiniz yapabilir veya başka bir kullanıcıya atayabilirsiniz. Atanan kişi şu olabilir:
 
 - İş ilkesi sahibi
-- Bir IT uygulayıcısı
+- BT uygulayıcısı
 - Görevi gerçekleştirme sorumluluğu olan başka bir çalışan
 
-Uygun yetkiliyi tanım verdiktan sonra, bu atamanın çalışması için yeterli Uyumluluk [Yöneticisi rolüne](compliance-manager-setup.md#set-user-permissions-and-assign-roles) sahip olduğundan emin olun. Ardından geliştirme eylemlerini atamak için aşağıdaki adımları izleyin:
+Uygun atananı tanımladıktan sonra, işi gerçekleştirmek için yeterli [bir Uyumluluk Yöneticisi rolüne](compliance-manager-setup.md#set-user-permissions-and-assign-roles) sahip olduğundan emin olun. Ardından iyileştirme eylemini atamak için aşağıdaki adımları izleyin:
 
-1. Geliştirme eylemleri ayrıntıları sayfasında, ekranın sol **tarafından Eylem** ata'ya tıklayın.
+1. İyileştirme eylemleri ayrıntıları sayfasında ekranın sol tarafındaki **Eylem ata'yı** seçin.
 
-2. **Kullanıcıya ata bölmesi**, Önerilen kişiler **kullanıcı** listesini gösterir. Listeden bir kullanıcı seçebilirsiniz veya atamak istediğiniz kişinin e-posta adresini yazın.
+2. **Kullanıcıya ata** açılır penceresi, **Önerilen kişiler** kullanıcı listesini gösterir. Listeden kullanıcıyı seçebilir veya atamak istediğiniz kişinin e-posta adresini yazabilirsiniz.
 
-3. **Ata'ya seçin**. Atanan kullanıcı, geliştirme eyleminin ona atandığıyla ilgili bir e-posta alır ve geliştirme eyleminin doğrudan bağlantısını alır.
+3. **Ata'yı** seçin. Atanan kullanıcı, iyileştirme eyleminin kendisine atandığını açıklayan bir e-posta alır ve iyileştirme eylemine doğrudan bağlantı sağlar.
 
 > [!NOTE]
-> ABD Kamu Community (GCC) Yüksek ve Savunma Bölümü (DoD) müşterileri geliştirme eylemleri atandığı zaman e-posta alamaz.
+> ABD Kamu Community (GCC) Yüksek ve Savunma Bakanlığı (DoD) müşterileri, iyileştirme eylemleri atandığında e-posta almaz.
 
-Ardından atanan kullanıcı önerilen eylemleri gerçekleştirabilir.
+Atanan kullanıcı daha sonra önerilen eylemleri gerçekleştirebilir.
 
 #### <a name="assign-multiple-improvement-actions-to-a-single-user"></a>Tek bir kullanıcıya birden çok geliştirme eylemi atama
 
-Aşağıdaki adımları kullanarak bir kullanıcıya birden çok geliştirme eylemi atabilirsiniz:
+Aşağıdaki adımları izleyerek bir kullanıcıya birden çok geliştirme eylemi atayabilirsiniz:
 
-1. Geliştirme eylemleri sayfanıza gidin.
-2. Geliştirme eyleminin adının sol tarafından bir alan seçin. Bu eylemi seçtiğinizi belirten yuvarlak bir onay simgesi görünür. Atamak istediğiniz tüm eylemleri kontrol edin.
-3. Geliştirme **eylemleri tablosunda,** Kullanıcıya ata bağlantısını seçin.
-4. Bir açılır pencere görüntülenir. Ata **alanında** , eylemleri atamak istediğiniz kişinin adını yazmaya başlayın. Önerilen kişiler listesinden de seçim seçebilirsiniz.
-5. Ata alanını ata **ata'nın** adıyla doldurmak için Ata'ya **seçin**.
-6. Yeni atanan kişi, atadığınız eylemler için listelenmiş olarak Geliştirme eylemleri sayfanız gösterilir.
+1. İyileştirme eylemleri sayfanıza gidin.
+2. İyileştirme eyleminin adının solundaki alanı seçin. Bu eylemi seçtiğinizi gösteren bir yuvarlak onay simgesi görüntülenir. Atamak istediğiniz tüm eylemleri denetleyin.
+3. İyileştirme eylemleri tablosunun üst kısmındaki **Kullanıcıya ata** bağlantısını seçin.
+4. Bir açılır pencere görüntülenir. **Ata** alanında, eylemleri atamak istediğiniz kişinin adını yazmaya başlayın. Önerilen kişiler listesinden de seçim yapabilirsiniz.
+5. **Ata** alanını atananın adıyla doldurduktan sonra **Ata'yı** seçin.
+6. Ardından, yeni atadığınız eylemler için yeni atananın listelendiği İyileştirme eylemleri sayfanızı görürsünüz.
 
 ## <a name="change-implementation-details"></a>Uygulama ayrıntılarını değiştirme
 
-Her geliştirme eylemi için uygulama durumunu ve tarihini kaydedebilirsiniz ve şirket içinde başvuruya yönelik notlar ekleyebilirsiniz. Bu alanlar, yalnızca atanan kişi tarafından değil, düzenleme izinlerine sahip olan herhangi bir kullanıcı tarafından düzenlenebilir.
+Her geliştirme eylemi için uygulama durumunu ve tarihini kaydedebilir ve iç başvuru için notlar ekleyebilirsiniz. Bu alanlar yalnızca atanan kişi tarafından değil, düzenleme izinleri olan herhangi bir kullanıcı tarafından düzenlenebilir.
 
-Geliştirme eyleminin durumunu düzenlemek için, ayrıntılar **sayfasında Uygulama ayrıntılarını düzenle'yi** seçin. Kullanılabilir alanlar ve durum seçenekleri aşağıdadır:
+İyileştirme eyleminin durumunu düzenlemek için ayrıntılar sayfasında **Uygulama ayrıntılarını düzenle'yi** seçin. Kullanılabilir alanlar ve durum seçenekleri aşağıdadır:
 
 - **Uygulama durumu**
   - **Uygulanmadı**: eylem henüz uygulanmadı
-  - **Uygulanan**: uygulanan eylem
-  - **Alternatif uygulama**: Diğer üçüncü taraf araçlarını kullandıysanız veya Microsoft önerilerine dahil olmayan başka eylemler yaptıysanız bu seçeneği belirleyin
-  - **Planlı**: uygulama için eylem planlandı
-  - **Kapsam dışında**: eylem, organizasyonuyla ilgili değil ve puanınıza katkıda bulun
-- **Uygulama tarihi**: Uygulama durumu "uygulama" veya "alternatif uygulama" olduğunda seçmek için kullanılabilir
-- **Uygulama notları**: Uygulamanıza yönelik notlar için metin alanı.
+  - **Kısmen uygulandı**: Otomatik olarak test edilen eylemler için eylem kısmen uygulanır (ne geçer ne de başarısız olur) ve kısmi puan alır
+  - **Uygulandı**: eylem uygulandı
+  - **Alternatif uygulama**: Diğer üçüncü taraf araçları kullandıysanız veya Microsoft önerilerine dahil olmayan başka eylemler gerçekleştirdiyseniz bu seçeneği belirleyin
+  - **Planlı**: Eylem uygulama için planlandı
+  - **Kapsam dışı**: eylem kuruluşunuzla ilgili değildir ve puanınıza katkıda bulunmaz
+- **Uygulama tarihi**: Uygulama durumunun "uygulandığı" veya "alternatif uygulama" olduğunu seçmek için kullanılabilir
+- **Uygulama notları**: uygulamanızla ilgili notlar için metin alanı.
 
-Not alanlarında karakter sınırı yoktur. Geliştirme eylemleri ayrıntıları sayfasından notlarınızı kolayca görüntüley ve düzenley için, notları kısa tutmanız önerilir.
+Not alanlarında karakter sınırı yoktur. İyileştirme eylemleri ayrıntıları sayfasında kolayca görüntüleyebilmeniz ve düzenleyebilmeniz için notları kısa tutmanızı öneririz.
 
-Gruplar arasında ortak eylemler eşitlenir. Aynı grupta yer alan iki farklı değerlendirme sizin yönetilen geliştirme eylemlerini paylaştığında, bir eylemin uygulama ayrıntılarında veya durumunda yapılan tüm güncelleştirmeler, gruptaki diğer tüm değerlendirmelerde aynı eylemle otomatik olarak eşitlenir. Bu eşitleme, tek bir geliştirme eylemi uygulamana ve birden fazla düzenlemeye ilişkin çeşitli gereksinimleri karşılamaya olanak sağlar.
+Ortak eylemler gruplar arasında eşitlenir. Aynı gruptaki iki farklı değerlendirme, sizin tarafınızdan yönetilen iyileştirme eylemlerini paylaştığında, bir eylemin uygulama ayrıntılarında veya durumunda yaptığınız tüm güncelleştirmeler, gruptaki diğer tüm değerlendirmelerde otomatik olarak aynı eylemle eşitlenir. Bu eşitleme, tek bir iyileştirme eylemi uygulamanıza ve birden çok düzenlemede çeşitli gereksinimleri karşılamanıza olanak tanır.
 
 ## <a name="change-test-status"></a>Test durumunu değiştirme
 
-Test **bölümünde** , geliştirme eyleminizin test durumunu, test tarihini ve varsa notları görüntüebilirsiniz. Bu alanların içeriği, Düzenleme izinleri olan herhangi **bir kullanıcı tarafından Test** ayrıntılarını düzenle altında değiştirilebilir.
+**Test** bölümünde geliştirme eyleminizin test durumunu, test tarihini ve notları görüntüleyebilirsiniz. Düzenleme izinlerine sahip bir kullanıcı **, Test** sekmesinde içeriği düzenlemek için **Test ayrıntılarını düzenle'yi** seçebilir.
 
-Kullanılabilir alanlar şunlardır:
+#### <a name="testing-status-fields"></a>Test durumu alanları
 
-- **Test durumu**: Uygulama durumu "uygulama" veya "alternatif uygulama" olduğunda seçmek için kullanılabilir. Seçenekler şunlardır:
-  - **Değerlendir edilmedi**: eylem sınanmamıştır
-  - **Kabul** edildi: uygulama, bir değerlendiren tarafından doğrulandı
-  - **Düşük risk başarısız**: test başarısız oldu, düşük risk
-  - **Orta risk başarısız**: test başarısız, orta risk
-  - **Yüksek risk başarısız**: test başarısız oldu, yüksek risk
-  - **Kapsam dışında**: eylem değerlendirme kapsamı dışındadır ve puanınıza katkı sağlamaz
-- **Test tarihi**: Tarihi seçmek için takvim açılır menüsünde geçiş yapmak
-- **Notları test etme** **ve Ek notlar**: dahili başvuru için notlar için metin alanları
+**Test durumu**
+ 
+İyileştirme eyleminin uygulama durumu "uygulandı" veya "alternatif uygulama" olduğunda test durumunu düzenleyebilirsiniz.
 
-### <a name="update-testing-source"></a>Test kaynağını güncelleştirme
+[El ile test edilen eylemler için test](#manual-testing-source) durumları:
+  - **Hiçbiri**: Eylem üzerinde hiçbir çalışma başlatılmadı
+  - **Değerlendirilmedi**: eylem test edilmedi
+  - **Geçti**: Uygulama bir değerlendirici tarafından doğrulandı
+  - **Başarısız düşük risk**: test başarısız, düşük riskli
+  - **Başarısız orta risk**: test başarısız, orta riskli
+  - **Başarısız yüksek risk**: test başarısız oldu, yüksek risk
+  - **Kapsam dışı**: Eylem değerlendirmenin kapsamı dışındadır ve puanınıza katkıda bulunmaz
+  - **Devam ediyor**: Test devam ediyor
+  - **Düzeltildi**: tbd
 
-Uyumluluk Yöneticisi size geliştirme eylemlerini test etmek için seçenekler sağlar. Her **geliştirme eyleminin** Genel Bakış bölümünde, Kaynak Test  Alanında eylemin nasıl test etmek istediğinize ilişkin tercihleri seçen bir açılan menü vardır **: El** **ile, Otomatik** ve **Üst**. Aşağıda, her test yöntemiyle ilgili ayrıntıları öğrenin.
-
-#### <a name="manual-testing-source"></a>El ile test kaynağı
-El ile test etmek için ayarlanmış geliştirme eylemleri, el ile test ve uygulama eylemleridir. Gerekli uygulama ve test durumu durumlarını ayarlayın ve Belgeler sekmesine tüm kanıt dosyalarını **yükleyin** . Bazı eylemlerde, geliştirme eylemlerini test etmek için kullanılabilen tek yöntem bu yöntemdir.
-
-#### <a name="automatic-testing-source"></a>Otomatik test kaynağı
-Bir uygulama eylemi Uyumluluk Yöneticisi tarafından otomatik olarak test edilecek şekilde uygunsa, kaynak test **etmek için otomatik** seçeneğini oradanız. Uyumluluk Yöneticisi, Microsoft Güvenli Puanı'nın da izler olduğu tamamlayıcı eylemlerin yanı sıra, Microsoft 365 ortamınıza ayarladınız diğer uyumluluk çözümlerinden gelen sinyalleri algılar. Test **sekmesindeki** Test mantığı alanı, eylemin uyumluluk puanınızı geçmesi ve bu puandan puan kazan olması için başka bir çözümde ne tür bir ilke veya yapılandırma gerektir olduğunu gösterir.
-
-Sinyaller bir geliştirme eyleminin başarıyla uygulandığını gösteriyorsa, bu eylem için uygun puanları otomatik olarak alırsınız ve bu da ilgili denetimlerin ve değerlendirmelerin puanlarını dengeler. Sürekli değerlendirmenin uyumluluk [puanınızı nasıl etkileyeceğini öğrenin](compliance-score-calculation.md#how-compliance-manager-continuously-assesses-controls).
-
- Tüm uygun geliştirme eylemleri için otomatik sınama varsayılan olarak açıktır. Bu ayarları yalnızca belirli geliştirme eylemlerini otomatik olarak test etmek için ayarlayabilir veya tüm eylemler için otomatik sınamayı kapatabilirsiniz. Otomatik testin nasıl çalıştığını ve ayarlarınızı otomatik test ayarlama konusundan [daha fazla bilgi edinebilirsiniz](compliance-manager-setup.md#manage-automated-testing-settings).
-
-#### <a name="parent-testing-source"></a>Üst sınama kaynağı
-
-Geliştirme **eyleminin** test kaynağı olarak Üst'i seçerseniz, eyleminizin bağlanacak başka bir eylemi seçersiniz. Etkin olan eyleminiz, "ebeveyn" olarak atamanız eyleme "çocuğunuz" olur. Geliştirme eylemi için bir üst bilgi alt öğesi atamayı, bu eylemin üst eylemin uygulama ve test ayrıntılarını yapısı olur. Üst eylemin durumu her değişiklikte, çocuğun durumu bu değişiklikleri devralır. Alt eylem, Belgeler sekmesinde bulunan ve üst eyleme  ait olan tüm kanıtı kabul eder. Bu eylem, alt eylemin Belgeler'inde daha önce var olan verileri geçersiz **kıldı**.
+[Otomatik olarak test edilen eylemler](#automatic-testing-source), **İyileştirme eylemleri** sayfasındaki **Test durumu** sütununda aşağıdaki durumlardan birini de gösterebilir:
+   - **Algılanacak:** test durumunu gösteren sinyaller bekleniyor
+  - **Algılanamadı**: test durumu algılanamadı; otomatik olarak yeniden denetlenecek
+  - **Kısmen test edildi**: eylem kısmen test edildi;  ne geçer ne de başarısız olur
 
 > [!NOTE]
-> Üst öğenin test kaynağı **olması** , eylemin Uyumluluk Yöneticisi tarafından otomatik olarak test edilmiş olduğu anlamına gelmez. Örneğin, üst eylemin test kaynağı el ile **olursa, alt** eylem kuruluş tarafından el ile yapılan bir test ve uygulama olan üst eylemin durumunu alır.
+> Otomatik olarak test edilen iyileştirme eylemleri için test durumu ve test notları el ile düzenlenemez. Uyumluluk Yöneticisi bu alanları sizin için güncelleştirir.
 
-Üst test kaynağını ayarlamak için aşağıdaki adımları izleyin:
+**Test tarihi**
 
-- Geliştirme işlemi ayrıntıları sayfasında Genel Bakış **bölümünü** bulun.
-- Kaynak Test **Başlığı altında** , açılan **menüden** Üst'i seçin.
-- Üst öğe **ata'ya seçin**.
-- Üst **geliştirme eylemi ata** uç burada, listede üst olarak atamak istediğiniz geliştirme eylemlerini bulun veya üst yakın olan arama çubuğuna eylemin adını girin. Amaçlanan eyleminizi tanımsanız, üzerine gelin ve eylem adının sol tarafından görüntülenen onay kutusunu seçin, sonra da Kaydet'i **seçin**.
+Test tarihini seçmek için takvim açılır penceresinde geçiş yapın.
 
-Eyleminizin ayrıntılar sayfasına dönersiniz. Genel **Bakış bölümündeki** Test **Kaynağı'nın** altında üst eylem olarak belirledik yeni eylem Üst eylem **altında listelenir**.
+**Test notları** ve **Ek notlar**
+
+Bu serbest metin alanlarına kendi iç başvurunuzun notlarını girin.
+
+**Test geçmişi**
+
+Test geçmişi, iyileştirme eylemi için tüm test durumu değişikliklerinin indirilmiş bir raporunu sağlar.
+
+#### <a name="exporting-testing-history"></a>Test geçmişini dışarı aktarma
+İyileştirme eylemi için test durumundaki tüm değişikliklerin geçmişini gösteren bir raporu dışarı aktarabilirsiniz. Bu raporlar özellikle [otomatik olarak test edilen eylemlerdeki](#automatic-testing-source) ilerleme durumunu izlemek için yararlıdır, çünkü bu tür eylemler kiracınızın verilerine göre düzenli olarak veya sık sık güncelleştirilir.
+
+İyileştirme eyleminin ayrıntılar sayfasında **Test** sekmesini seçin. **Test geçmişi'nin** altında **Test geçmişini dışarı aktar** düğmesini seçin. Rapor bir Excel dosyası olarak indirilir.
+
+## <a name="update-testing-source"></a>Test kaynağını güncelleştirme
+
+Uyumluluk Yöneticisi, iyileştirme eylemlerini test etme seçenekleri sağlar. Her geliştirme eyleminin **Genel Bakış** bölümünde, **Test Kaynağı** alanında eylemin nasıl test edilmesi gerektiğini seçebileceğiniz bir açılan menü vardır: **El ile**, **Otomatik** ve **Üst**. Her test yöntemiyle ilgili ayrıntıları aşağıda bulabilirsiniz.
+
+#### <a name="manual-testing-source"></a>El ile test kaynağı
+El ile test için ayarlanan iyileştirme eylemleri, el ile test ettiğiniz ve uyguladığınız eylemlerdir. Gerekli uygulama ve test durumu durumlarını ayarlar ve tüm kanıt dosyalarını **Belgeler** sekmesine yüklersiniz. Bazı eylemlerde, iyileştirme eylemlerini test etme için tek kullanılabilir yöntem budur.
+
+#### <a name="automatic-testing-source"></a>Otomatik test kaynağı
+Bir uygulama eylemi Uyumluluk Yöneticisi tarafından otomatik olarak test edilmeye uygunsa, test kaynağı için **Otomatik** seçeneğini görürsünüz. Uyumluluk Yöneticisi, Microsoft 365 ortamınızda ayarladığınız diğer uyumluluk çözümlerinden gelen sinyallerin yanı sıra Microsoft Güvenli Puan'ın da izlediği tüm tamamlayıcı eylemleri algılar. Test sekmesindeki **Test mantığı** alanı, eylemin uyumluluk puanınıza doğru puan geçirmesi ve puan kazanması için başka bir çözümde ne tür bir ilke veya yapılandırma gerektiğini gösterir.
+
+Sinyaller bir iyileştirme eyleminin başarıyla uygulandığını gösterdiğinde, ilgili denetim ve değerlendirmelerin puanlarını dikkate alacak şekilde bu eylem için uygun puanları otomatik olarak alırsınız. [Sürekli değerlendirmenin uyumluluk puanınızı nasıl etkilediği](compliance-score-calculation.md#how-compliance-manager-continuously-assesses-controls) hakkında daha fazla bilgi edinin.
+
+ Tüm uygun iyileştirme eylemleri için otomatik test varsayılan olarak açıktır. Bu ayarları yalnızca belirli iyileştirme eylemlerini otomatik olarak test etmek için ayarlayabilir veya tüm eylemler için otomatik testi kapatabilirsiniz. Otomatik testin nasıl çalıştığı ve ayarlarınızın nasıl ayarlanacağı hakkında daha fazla bilgi için [bkz. Otomatik testi ayarlama](compliance-manager-setup.md#manage-automated-testing-settings).
+
+#### <a name="parent-testing-source"></a>Üst test kaynağı
+
+İyileştirme eylemi için test kaynağı olarak **Üst öğesini** seçtiğinizde, eyleminizin bağlanacağı başka bir eylem seçersiniz. Etkin eyleminiz, "üst" olarak belirlediğiniz eylemin "alt öğesi" olur. İyileştirme eylemi için bir üst öğe belirlediğinizde, bu eylem üst eylemin uygulama ve test ayrıntılarına göre değişir. Üst eylemin durumu her değiştiğinde, çocuğun durumu bu değişiklikleri devralır. Alt eylem, **belgeler sekmesindeki** üst eyleme ait tüm kanıtları da kabul eder ve bu da alt eylemin **Belgelerinde** daha önce var olan tüm verileri geçersiz kılabilir.
+
+> [!NOTE]
+> **Ebeveyn'in** test kaynağına sahip olmak, eylemin Uyumluluk Yöneticisi tarafından otomatik olarak test olduğu anlamına gelmez. Örneğin, üst eylemin test kaynağı **el ile** ise, alt eylem üst eylemin durumunu (kuruluş tarafından el ile test ve uygulama) gerçekleştirir.
+
+Bir üst test kaynağı ayarlamak için aşağıdaki adımları izleyin:
+
+- İyileştirme eylemi ayrıntıları sayfasında **Genel Bakış** bölümünü bulun.
+- **Test Kaynağı** üst bilgisinin altında, açılan menüden **Üst** öğesini seçin.
+- **Üst öğe ata'yı** seçin.
+- **Üst geliştirme eylemi ata** açılır bölmesinde, listeden üst öğe olarak atamak istediğiniz iyileştirme eylemini bulun veya üstteki arama çubuğuna eylemin adını girin. Hedeflenen eyleminizi belirlediğinizde, üzerine geldiğinizde eylem adının solunda görünen onay kutusunu seçin ve ardından **Kaydet'i** seçin.
+
+Eyleminizin ayrıntılar sayfasına geri dönersiniz. **Genel Bakış** bölümündeki **Test Kaynağı'nın** altında, üst eylem olarak belirttiğiniz yeni **eylem Üst eylem** altında listelenir.
 
 ## <a name="review-standards-and-regulations"></a>Standartları ve düzenlemeleri gözden geçirme
 
-Standartlar **ve düzenlemeler bölümü** , geliştirme eyleminize ilişkin, arama edilebilir ve filtrelenebilir bir standartlar ve düzenlemeler listesi sağlar. Bunlar ilgili denetim, denetim **kimliği**, **denetim ailesi ve** **ilgili düzenleme** ile bunları **22/2/2003'lerde** karşılarına çıkana kadar onları görüntüde bulundurabilirsiniz.
+**Standartlar ve düzenlemeler** bölümü, iyileştirme eyleminizle ilişkili standartların ve düzenlemelerin aranabilir ve filtrelenebilir bir listesini sağlar. Bunlar ilgili **denetim**, **denetim kimliği, denetim** **ailesi** ve ilgili **düzenleme** tarafından görüntülenebilir.
 
-## <a name="perform-work-and-store-documentation"></a>İş ve depolama belgelerini gerçekleştirme
+## <a name="perform-work-and-store-documentation"></a>İş ve mağaza belgeleri gerçekleştirme
 
-Uygulama ve test etme ile ilgili dosyaları ve notları doğrudan Belgeler bölümüne **yükleyebilirsiniz** . Bu ortam, uyumluluk standartlarını ve düzenlemelerini karşılamaya yardımcı olacak denetimlerin memnuniyetini göstermenıza yardımcı olan güvenli ve merkezi bir depodur. Salt okunur erişimi olan tüm kullanıcılar bu bölümdeki içeriği okuyabilir. Dosyaları yalnızca düzenleme hakları olan kullanıcılar karşıya yükleyebilir ve indirebilir.
+Uygulama ve test çalışmalarıyla ilgili dosyaları ve **notları doğrudan Belgeler** bölümüne yükleyebilirsiniz. Bu ortam, uyumluluk standartlarını ve düzenlemelerini karşılamak için denetimlerin memnuniyetini göstermenize yardımcı olan güvenli, merkezi bir depodur. Salt okunur erişimi olan tüm kullanıcılar bu bölümdeki içeriği okuyabilir. Yalnızca düzenleme haklarına sahip kullanıcılar dosyaları karşıya yükleyebilir ve indirebilir.
 
 #### <a name="uploaded-documents"></a>Karşıya yüklenen belgeler
 
-- Uygun **dosyaları karşıya yüklemek** için Belgeleri yönet'i seçin.
-- Belgeleri yönet açılır bölmesi açıldığında Belge **ekle'yi** seçin ve sonra da sisteminiz içinde dosyanızı seçin. Kabul edilen dosya türleri:
+- İlgili dosyaları karşıya yüklemek için **Belgeleri yönet'i** seçin.
+- Belgeleri yönetme açılır penceresi açıldığında **Belge ekle'yi** ve ardından sisteminizden dosyanızı seçin. Kabul edilen dosya türleri:
   - Belgeler (.doc, .xls, .ppt, .txt, .pdf)
-  - Resimler (.jpg, .png)
+  - Görüntüler (.jpg, .png)
   - Video (.mkv)
   - Sıkıştırılmış dosyalar (.zip, .rar)
-- Dosyanız bölmede çözümlenirken Kapat'ı **seçin;** bu işlem dosya ekini otomatik olarak kaydeder. Ardından, Karşıya yüklenen belgeler'in altında listelenen **dosyayı görüyorsunuz**.
-- Belgeyi indirmek veya silmek için, belge **listesinin altındaki** Belgeleri yönet'i seçin. Uçarak çıkış bölmesinde belge satırına seçerek vurgulayın ve ardından İndir veya **Sil'i** **seçin**.
+- Dosyanız bölmede çözümlenince, dosya ekini otomatik olarak kaydeden **Kapat'ı** seçin. Ardından karşıya **yüklenen belgelerin** altında listelenen dosyayı görürsünüz.
+- Belgeyi indirmek veya silmek için, belge listesinin altından **Belgeleri yönet'i** seçin. Açılır bölmede belge satırını seçerek vurgulayın ve ardından **İndir** veya **Sil'i** seçin.
 
-## <a name="assign-improvement-action-to-assessor-for-completion"></a>Tamamlanma için değerlendirene geliştirme işlemi atama
+## <a name="assign-improvement-action-to-assessor-for-completion"></a>Tamamlama için değerlendiriciye geliştirme eylemi atama
 
-Çalışma tamamlandıktan, testi yürütdikten ve kanıtı karşıya yükledikten sonra, bir sonraki adım geliştirme eylemını doğrulama için bir değerlendirene atamaktır. Değerlendiren, çalışmaları doğrular, belgeleri inceler ve uygun test durumunu seçer.
+Çalışmayı tamamladıktan, test gerçekleştirdikten ve kanıt yükledikten sonra, bir sonraki adım geliştirme eylemini doğrulama için bir değerlendiriciye atamaktır. Değerlendirici, çalışmayı doğrular ve belgeleri inceler ve uygun test durumunu seçer.
 
-**Test durumu "Geçti" olarak ayarlanırsa**, eylem tamamlanır ve elde edilen puanlar, elde edilen en yüksek puanları gösterir. Bundan sonra puanlar, genel uyumluluk puanınıza sayılır.
+**Test durumu "Başarılı" olarak ayarlanırsa**: eylem tamamlanır ve elde edilen puanlar elde edilen en yüksek puanı gösterir. Puanlar daha sonra genel uyumluluk puanınıza göre sayılır.
 
-**Test durumu "Başarısız" olarak ayarlanırsa**, eylem gereksinimleri karşılamıyorsa ve değerlendiren kişi, ek çalışma için uygun kullanıcıya geri atamaktadır.
+**Test durumu "Başarısız" olarak ayarlanırsa**: eylem gereksinimleri karşılamaz ve değerlendirici bunu ek çalışma için uygun kullanıcıya geri atayabilir.
 
-## <a name="accepting-updates-to-improvement-actions"></a>Geliştirme eylemleri için güncelleştirmeleri kabul etme
+## <a name="accepting-updates-to-improvement-actions"></a>İyileştirme eylemlerine yönelik güncelleştirmeleri kabul etme
 
-Geliştirme işlemi için bir güncelleştirme mevcut olduğunda, adının yanında bir bildirim alırsınız. Güncelleştirmeyi kabul etmek veya daha sonra ertelemek için bu işlemi erteleyebilirsiniz.
+İyileştirme eylemi için kullanılabilecek bir güncelleştirme olduğunda, adının yanında bir bildirim görürsünüz. Güncelleştirmeyi kabul edebilir veya daha sonra erteleyebilirsiniz.
 
-#### <a name="what-causes-an-update"></a>Güncelleştirmeye neden olan nedir?
+#### <a name="what-causes-an-update"></a>Güncelleştirmeye neden olan nedenler
 
-Puanlama, otomasyon veya kapsam ile ilgili değişiklikler olduğunda güncelleştirme gerçekleşir. Değişiklikler, mevzuat değişikliklerine dayalı iyileştirme eylemleri için yeni kılavuzlar veya ürün değişiklikleri nedeniyle olabilir. Yalnızca kuruluşlarınız tarafından yönetilen geliştirme eylemleri güncelleştirme bildirimleri alır.
+Puanlama, otomasyon veya kapsamla ilgili değişiklikler olduğunda bir güncelleştirme gerçekleşir. Değişiklikler, mevzuat değişikliklerine dayalı iyileştirme eylemlerine yönelik yeni yönergeler içerebilir veya bunun nedeni ürün değişiklikleri olabilir. Yalnızca kuruluşunuz tarafından yönetilen iyileştirme eylemleri güncelleştirme bildirimleri alır.
 
-#### <a name="where-youll-see-assessment-update-notifications"></a>Değerlendirme güncelleştirme bildirimlerini göreceğiniz yer
+#### <a name="where-youll-see-assessment-update-notifications"></a>Değerlendirme güncelleştirme bildirimlerini nerede görürsünüz?
 
-Geliştirme eylemi güncelleştirildiğinde geliştirme eylemleri sayfasında ve ilgili değerlendirmelerin ayrıntılar  sayfasında geliştirme adının yanında Bekleyen güncelleştirme etiketini görebilirsiniz.
+Bir iyileştirme eylemi güncelleştirildiğinde, iyileştirme eylemleri sayfasında ve ilgili değerlendirmelerinin ayrıntılar sayfasında adının yanında **Bekleyen güncelleştirme** etiketi görürsünüz.
 
-Geliştirme eyleminin ayrıntılar sayfasına gidin ve değişikliklerle ilgili ayrıntıları gözden geçirmek, güncelleştirmeyi kabul etmek veya ertelemek için üst başlıkta yer alan Güncelleştirmeyi gözden geçir düğmesini seçin.
+İyileştirme eyleminin ayrıntılar sayfasına gidin ve üst başlıktaki **güncelleştirmeyi gözden geçir** düğmesini seçerek değişikliklerle ilgili ayrıntıları gözden geçirin ve güncelleştirmeyi kabul edin veya erteleyin.
 
-#### <a name="review-update-to-accept-or-defer"></a>Kabul etmek veya ertelemek için güncelleştirmeyi gözden geçirme
+#### <a name="review-update-to-accept-or-defer"></a>Kabul etmek veya ertelemek için güncelleştirmeyi gözden geçirin
 
-Geliştirme eylemi **ayrıntıları sayfasından** Güncelleştirmeyi gözden geçir'i seçdikten sonra, ekrannizin sağ tarafında bir açılır bölme görüntülenir. Uç nokta bölmesi, güncelleştirmeyle ilgili olarak, puanı ve kapsamı etkileyen değerlendirmeler ve değişiklikler gibi önemli ayrıntıları sağlar.
+İyileştirme eylemi ayrıntıları sayfasında **güncelleştirmeyi gözden geçir'i** seçtikten sonra, ekranınızın sağ tarafında bir açılır pencere bölmesi görüntülenir. Açılır pencere bölmesinde, etkilenen değerlendirmeler ve puan ile kapsamdaki değişiklikler gibi güncelleştirmeyle ilgili önemli ayrıntılar sağlanır.
 
-Geliştirme **eyleminin tüm** değişikliklerini kabul etmek için Güncelleştirmeyi kabul et'i seçin. **Kabul edilen değişiklikler kalıcıdır**.
+İyileştirme eylemindeki tüm değişiklikleri kabul etmek için **Güncelleştirmeyi kabul et'i** seçin. **Kabul edilen değişiklikler kalıcıdır**.
 
 > [!NOTE]
-> Bir eyleme yönelik güncelleştirmeyi kabul etmek, bu eylemin diğer tüm sürümlerine veya örneklerinin güncelleştirmelerini de kabul edersiniz. Güncelleştirmeler, teknik işlemler için kiracı genelinde yalıtır ve teknik olmayan eylemler için grup genelinde yalıtır.
+> Bir eylem güncelleştirmesini kabul ettiğinizde, bu eylemin diğer sürümlerine veya örneklerine yönelik güncelleştirmeleri de kabul edebilirsiniz. Güncelleştirmeler, teknik eylemler için kiracı genelinde yayılır ve teknik olmayan eylemler için grup genelinde yayılır.
 
-**İptal'i** seçmeniz, geliştirme eylemine uygulanmaz. Ancak siz güncelleştirmeyi kabul edene kadar **Bekleyen güncelleştirme** bildirimini görmeye devam edersiniz.
+**İptal'i** seçerseniz, güncelleştirme iyileştirme eylemine uygulanmaz. Ancak, güncelleştirmeyi kabul edene kadar **Bekleyen güncelleştirme** bildirimini görmeye devam edersiniz.
 
-**Neden güncelleştirmeleri kabul etmenizi öneririz?**
+**Güncelleştirmeleri kabul etmenizi neden öneririz?**
 
-Güncelleştirmeleri kabul etmek, çözümleri kullanma konusunda en güncel kılavuza sahip olmasını sağlar ve sertifikanın gereksinimlerini karşılamanıza yardımcı olacak uygun geliştirme eylemleri gerçekleştirebilir.
+Güncelleştirmeleri kabul etmek, elinizdeki sertifikasyon gereksinimlerini karşılamanıza yardımcı olmak için çözümleri kullanma ve uygun iyileştirme eylemleri gerçekleştirme konusunda en güncel rehberliğe sahip olduğunuzdan emin olmanıza yardımcı olur.
 
-**Güncelleştirmeyi ertelemek istemeniz nedeni**
+**Bir güncelleştirmeyi neden ertelemek isteyebilirsiniz?**
 
-Geliştirme eylemini içeren bir değerlendirmeyi tamamlamanın ortasındaysanız, güncelleştirmeyi kabul edene kadar üzerinde çalışmanız bittiğinden emin olmak iyi olabilir. Gözden geçirme güncelleştirmesi çıkış bölmesinde İptal'i **seçerek** güncelleştirmeyi daha sonra ertelemeniz gerekir.
+İyileştirme eylemini içeren bir değerlendirmeyi tamamlamanın ortasındaysanız, güncelleştirmeyi kabul etmeden önce üzerinde çalışmayı tamamladığınızdan emin olmak isteyebilirsiniz. Gözden geçirme güncelleştirmesi açılır bölmesinde **İptal'i** seçerek güncelleştirmeyi daha sonra erteleyebilirsiniz.
 
-#### <a name="accept-all-updates-at-once"></a>Tüm güncelleştirmeleri bir kerede kabul etme
+#### <a name="accept-all-updates-at-once"></a>Tüm güncelleştirmeleri aynı anda kabul etme
 
-Birden çok güncelleştirmeniz varsa ve bunların hepsini bir defada kabul etmek için iyileştirme eylemleri tablonizin en üstünde Tüm güncelleştirmeleri kabul et bağlantısını seçin. Güncelleştirilecek eylem sayısını listeen bir çıkış bölmesi görüntülenir. Tüm **güncelleştirmeleri uygulamak için** Güncelleştirmeleri kabul et düğmesini seçin.
+Birden çok güncelleştirmeniz varsa ve hepsini tek seferde kabul etmek istiyorsanız, geliştirme eylemleri tablonuzun üst kısmındaki **Tüm güncelleştirmeleri kabul et** bağlantısını seçin. Güncelleştirilecek eylem sayısını listeleyen bir açılır pencere bölmesi görüntülenir. Tüm **güncelleştirmeleri uygulamak için Güncelleştirmeleri kabul et** düğmesini seçin.
 
-Geliştirme eylemleri sayfanıza geri dönüp sayfanın üst kısmında güncelleştirmelerin tamamlanması için sayfayı yenilemenizi isteyen bir ileti görebilirsiniz.
+İyileştirme eylemleri sayfanıza döndüğünüzde, sayfanın üst kısmında güncelleştirmelerin tamamlanması için sayfayı yenilemenizi isteyen bir ileti görebilirsiniz.
 
-## <a name="set-up-alerts-for-improvement-action-changes"></a>Geliştirme eylemi değişiklikleri için uyarıları ayarlama
+## <a name="set-up-alerts-for-improvement-action-changes"></a>geliştirme eylemi değişiklikleri için uyarıları ayarlama
 
-Uygulama veya test durumunda yapılan değişiklik ya da puanda artış veya düşüş gibi iyileştirme eylemlerinin oluştuğu durumlarda sizi hemen bilgilendirecek uyarılar kurabilirsiniz. Bu tür değişikliklerle ilgili hızlı bildirimler almak, olası uyumluluk risklerini takip etmeye yardımcı olabilir. Uyarıları [ayarlamayı öğrenmek için Uyumluluk Yöneticisi uyarılarını](compliance-manager-alert-policies.md) ve uyarı ilkelerini ziyaret edin.
+Uygulama veya test durumunda değişiklik ya da puan artışı veya düşüş gibi iyileştirme eylemlerinde belirli değişiklikler gerçekleştiğinde sizi hemen bilgilendirecek uyarılar ayarlayabilirsiniz. Bu tür değişikliklerle ilgili hızlı bildirimler almak, olası uyumluluk risklerini takip etme konusunda size yardımcı olabilir. Uyarıları ayarlamayı öğrenmek için [Uyumluluk Yöneticisi uyarıları ve uyarı ilkeleri](compliance-manager-alert-policies.md) sayfasını ziyaret edin.
 
 ## <a name="export-a-report"></a>Raporu dışarı aktarma
 
-Ekranın **sol** üst köşesindeki Dışarı Aktar'ı seçerek tüm iyileştirme eylemlerinizi ve iyileştirme eylemleri sayfasında gösterilen filtre kategorilerini içeren bir Excel çalışma sayfasını indirin.
+Tüm iyileştirme eylemlerinizi ve iyileştirme eylemleri sayfasında gösterilen filtre kategorilerini içeren bir Excel çalışma sayfası indirmek için ekranınızın sol üst köşesindeki **Dışarı Aktar'ı** seçin.

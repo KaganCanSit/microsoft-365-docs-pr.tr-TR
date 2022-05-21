@@ -1,5 +1,5 @@
 ---
-title: SharePoint iletişim sitesi oluşturma
+title: Microsoft 365 İş Ekstra için Teams'da SharePoint iletişim sitesi oluşturma
 f1.keywords:
 - NOCSH
 ms.author: samanro
@@ -23,15 +23,15 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Microsoft 365 ile kampanyanız veya işletmeniz için neden ve nasıl SharePoint iletişim sitesi oluşturacağınızı öğrenin ve yanlış dosya paylaşımı nedeniyle ekibi siber saldırılara ve kötü amaçlı yazılımlara ve diğer tehditlere karşı koruyun.
-ms.openlocfilehash: 72794c9aac0f1409675af0e3fa40c8cd1881f73a
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+description: Microsoft 365 İş Ekstra ile kampanyanız veya işletmeniz için neden ve nasıl SharePoint iletişim sitesi oluşturacağınızı öğrenin ve yanlış dosya paylaşımı nedeniyle ekibi siber saldırılara ve kötü amaçlı yazılımlara ve diğer tehditlere karşı koruyun.
+ms.openlocfilehash: 4c8fa8a197a7fb6014833dc9701aa7f354c2e5a0
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65319538"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65623417"
 ---
-# <a name="create-a-communications-site-in-sharepoint"></a>SharePoint'de iletişim sitesi oluşturma
+# <a name="create-a-communications-site"></a>İletişim sitesi oluşturma
 
 Öncelikleri iletmenin, strateji belgelerini paylaşmanın ve yaklaşan etkinlikleri vurgulamanın harika bir yolu, SharePoint bir iletişim sitesi kullanmaktır ve bu görevin amacı da budur. İletişim siteleri, tüm işletmeniz veya kampanyanız &mdash; genelinde öğeleri geniş bir şekilde paylaşmaya yöneliktir. Bu, şirket içi strateji siteniz ve taktiksel odanızdır. 
 

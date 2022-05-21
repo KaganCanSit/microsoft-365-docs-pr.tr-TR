@@ -22,12 +22,12 @@ f1.keywords:
 ms.assetid: 6b4ded77-ac8d-42ed-8606-c014fd947560
 description: Bu makalede, Microsoft 365 kiracınıza ayrıcalıklı erişimi koruma hakkında bilgi sağlanır.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 34e4665067640ec625501b15c12c1c2e80d5ffb4
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: b9719908fcbe8aa453ac07788ee7771a39242d4e
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095608"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65622569"
 ---
 # <a name="step-2-protect-your-microsoft-365-privileged-accounts"></a>Adım 2. Microsoft 365 ayrıcalıklı hesaplarınızı koruma
 
@@ -39,7 +39,7 @@ Bilgi toplama ve kimlik avı saldırıları da dahil olmak üzere bir Microsoft 
     
 - Verilerinize ve kimliklerinize ve bunları koruma sorumluluğuna, şirket içi kaynaklarınızın güvenliğine ve denetlediğiniz bulut bileşenlerinin güvenliğine sahip olursunuz.
     
-Microsoft, kuruluşunuzu korumaya yardımcı olacak özellikler sağlar, ancak yalnızca bunları kullandığınızda etkilidir. Bunları kullanmazsanız, saldırılara karşı savunmasız olabilirsiniz. Ayrıcalıklı hesaplarınızı korumak için Microsoft, aşağıdakilere ilişkin ayrıntılı yönergelerle size yardımcı olmak için buradadır:
+Microsoft, kuruluşunuzu korumaya yardımcı olacak özellikler sağlar, ancak yalnızca bunları kullandığınızda etkilidir. Bunları kullanmazsanız saldırılara karşı savunmasız olabilirsiniz. Ayrıcalıklı hesaplarınızı korumak için Microsoft, aşağıdakilere ilişkin ayrıntılı yönergelerle size yardımcı olmak için buradadır:
   
 1. Ayrılmış, ayrıcalıklı, bulut tabanlı hesaplar oluşturun ve bunları yalnızca gerektiğinde kullanın.
     
@@ -49,16 +49,16 @@ Microsoft, kuruluşunuzu korumaya yardımcı olacak özellikler sağlar, ancak y
 
 ## <a name="1-create-dedicated-privileged-cloud-based-user-accounts-and-use-them-only-when-necessary"></a>1. Ayrılmış, ayrıcalıklı, bulut tabanlı kullanıcı hesapları oluşturun ve bunları yalnızca gerektiğinde kullanın
 
-Yönetici rolleri atanmış günlük kullanıcı hesaplarını kullanmak yerine, Azure AD'de yönetici rollerine sahip ayrılmış kullanıcı hesapları oluşturun. 
+Yönetici rolleri atanmış günlük kullanıcı hesaplarını kullanmak yerine, Azure AD yönetici rollerine sahip ayrılmış kullanıcı hesapları oluşturun. 
 
 Şu andan itibaren, yalnızca yönetici ayrıcalıkları gerektiren görevler için ayrılmış ayrıcalıklı hesaplarla oturum açarsınız. Diğer tüm Microsoft 365 yönetimi, kullanıcı hesaplarına başka yönetim rolleri atanarak yapılmalıdır.
   
 > [!NOTE]
 > Bunun için günlük kullanıcı hesabınız olarak oturumu kapatmak ve ayrılmış bir yönetici hesabıyla oturum açmak için ek adımlar gerekir. Ancak bunun yalnızca yönetici işlemleri için zaman zaman yapılması gerekir. Bir yönetici hesabı ihlalinden sonra Microsoft 365 aboneliğinizi kurtarmanın çok daha fazla adım gerektirdiğini düşünün.
 
-Azure AD'nin yanlışlıkla kilitlenmesini önlemek için [acil durum erişim hesapları](/azure/active-directory/roles/security-emergency-access) da oluşturmanız gerekir.
+Ayrıca, yanlışlıkla Azure AD kilitlenmesini önlemek için [acil durum erişim hesapları](/azure/active-directory/roles/security-emergency-access) oluşturmanız gerekir.
 
-Yönetici rollerinin isteğe bağlı ve tam zamanında atanması için Azure AD Privileged Identity Management (PIM) ile ayrıcalıklı hesaplarınızı daha da koruyabilirsiniz. 
+Yönetici rollerinin isteğe bağlı, tam zamanında atanması için ayrıcalıklı hesaplarınızı Azure AD Privileged Identity Management (PIM) ile daha da koruyabilirsiniz. 
  
 ## <a name="2-configure-multi-factor-authentication-for-your-dedicated-microsoft-365-privileged-accounts"></a>2. Ayrılmış Microsoft 365 ayrıcalıklı hesaplarınız için çok faktörlü kimlik doğrulamasını yapılandırma
 
@@ -76,11 +76,11 @@ Yönetici rollerinin isteğe bağlı ve tam zamanında atanması için Azure AD 
 >Ulusal Standartlar ve Teknoloji Enstitüsü (NIST) standartlarına uyması gereken kuruluşlar için, telefon görüşmesi veya kısa mesaj tabanlı ek doğrulama yöntemlerinin kullanımı kısıtlanır. Ayrıntılar için [buraya](https://pages.nist.gov/800-63-FAQ/#q-b01) tıklayın.
 >
 
-Yalnızca bulutta depolanan kullanıcı hesaplarını kullanan küçük bir işletmeyseniz (yalnızca bulut kimlik modeli), [MFA'yı](/office365/admin/security-and-compliance/set-up-multi-factor-authentication) her ayrılmış ayrıcalıklı hesap için akıllı telefona gönderilen bir telefon araması veya kısa mesaj doğrulama kodu kullanarak MFA'yı yapılandıracak şekilde ayarlayın.
+Yalnızca bulutta depolanan kullanıcı hesaplarını (yalnızca bulut kimlik modeli) kullanan küçük bir işletmeyseniz [, MFA'yı](/office365/admin/security-and-compliance/set-up-multi-factor-authentication) her ayrılmış ayrıcalıklı hesap için akıllı telefona gönderilen bir telefon araması veya kısa mesaj doğrulama kodu kullanarak MFA'yı yapılandıracak şekilde ayarlayın.
     
-Microsoft 365 karma kimlik modeli kullanan daha büyük bir kuruluşsanız daha fazla doğrulama seçeneğiniz vardır. Daha güçlü bir ikincil kimlik doğrulama yöntemi için güvenlik altyapısı zaten mevcutsa [, MFA'yı ayarlayın](../admin/security-and-compliance/set-up-multi-factor-authentication.md) ve her ayrılmış ayrıcalıklı hesabı uygun doğrulama yöntemi için yapılandırın.
+Microsoft 365 hibrit kimlik modeli kullanan daha büyük bir kuruluşsanız daha fazla doğrulama seçeneğiniz vardır. Daha güçlü bir ikincil kimlik doğrulama yöntemi için güvenlik altyapısı zaten mevcutsa [, MFA'yı ayarlayın](../admin/security-and-compliance/set-up-multi-factor-authentication.md) ve her ayrılmış ayrıcalıklı hesabı uygun doğrulama yöntemi için yapılandırın.
   
-İstenen daha güçlü doğrulama yöntemi için güvenlik altyapısı yerinde değilse ve Microsoft 365 MFA için çalışmıyorsa, özel ayrıcalıklı hesapları MFA ile Microsoft Authenticator uygulamasını, telefon aramasını veya geçici güvenlik önlemi olarak ayrıcalıklı hesaplarınız için akıllı telefona gönderilen kısa mesaj doğrulama kodunu kullanarak yapılandırmanızı kesinlikle öneririz. MFA tarafından sağlanan ek koruma olmadan ayrılmış ayrıcalıklı hesaplarınızı bırakmayın.
+İstenen daha güçlü doğrulama yöntemi için güvenlik altyapısı yerinde değilse ve Microsoft 365 MFA için çalışmıyorsa, Microsoft Authenticator uygulamasını, telefon aramasını veya ayrıcalıklı hesaplarınız için akıllı telefona gönderilen kısa mesaj doğrulama kodunu geçici güvenlik önlemi olarak kullanarak MFA ile ayrılmış ayrıcalıklı hesaplar yapılandırmanızı kesinlikle öneririz. MFA tarafından sağlanan ek koruma olmadan ayrılmış ayrıcalıklı hesaplarınızı bırakmayın.
   
 Daha fazla bilgi için bkz. [Microsoft 365 için MFA](../admin/security-and-compliance/multi-factor-authentication-microsoft-365.md).
   
@@ -101,9 +101,9 @@ Yüksek ayrıcalıklı görevlerin yürütülmesinin mümkün olduğunca güvenl
   
 PAW'ı ayarlama yönergeleri için bkz [https://aka.ms/cyberpaw](/security/compass/privileged-access-devices). .
 
-Azure AD kiracınız ve yönetici hesaplarınız için Azure PIM'i etkinleştirmek [için PIM'i yapılandırma adımlarına](/azure/active-directory/active-directory-privileged-identity-management-configure) bakın.
+Azure AD kiracı ve yönetici hesaplarınız için Azure PIM'i etkinleştirmek [için PIM'i yapılandırma adımlarına](/azure/active-directory/active-directory-privileged-identity-management-configure) bakın.
 
-Siber saldırganlara karşı ayrıcalıklı erişimi güvenli hale getirmek için kapsamlı bir yol haritası geliştirmek için bkz. [Azure AD'de hibrit ve bulut dağıtımları için ayrıcalıklı erişimin güvenliğini sağlama](/azure/active-directory/admin-roles-best-practices).
+Siber saldırganlara karşı ayrıcalıklı erişimin güvenliğini sağlamaya yönelik kapsamlı bir yol haritası geliştirmek için bkz. [Azure AD'de hibrit ve bulut dağıtımları için ayrıcalıklı erişimin güvenliğini sağlama](/azure/active-directory/admin-roles-best-practices).
 
 ### <a name="azure-ad-privileged-identity-management"></a>Azure AD Privileged Identity Management
 
@@ -125,7 +125,7 @@ Daha fazla bilgi için bkz.:
 
 Kiracınızdaki görev tabanlı etkinlikler için tam zamanında erişim belirten ilkeler yapılandırılarak ayrıcalıklı erişim yönetimi etkinleştirilir. Kuruluşunuzun hassas verilere veya kritik yapılandırma ayarlarına erişimi olan mevcut ayrıcalıklı yönetici hesaplarını kullanabilecek ihlallere karşı korunmasına yardımcı olabilir. Örneğin, kiracınızdaki kuruluş posta kutusu ayarlarına erişmek ve değiştirmek için açık onay gerektiren ayrıcalıklı bir erişim yönetimi ilkesi yapılandırabilirsiniz.
 
-Bu adımda, kiracınızda ayrıcalıklı erişim yönetimini etkinleştirecek ve kuruluşunuzdaki verilere ve yapılandırma ayarlarına görev tabanlı erişim için ek güvenlik sağlayan ayrıcalıklı erişim ilkelerini yapılandıracaksınız. Kuruluşunuzda ayrıcalıklı erişimi kullanmaya başlamak için üç temel adım vardır:
+Bu adımda, kiracınızda ayrıcalıklı erişim yönetimini etkinleştirecek ve kuruluşunuz için verilere ve yapılandırma ayarlarına görev tabanlı erişim için ek güvenlik sağlayan ayrıcalıklı erişim ilkeleri yapılandıracaksınız. Kuruluşunuzda ayrıcalıklı erişimi kullanmaya başlamak için üç temel adım vardır:
 
 - Onaylayan grubu oluşturma
 - Ayrıcalıklı erişimi etkinleştirme
@@ -139,7 +139,7 @@ Daha fazla bilgi için bkz [. Ayrıcalıklı erişim yönetimi](/office365/secur
 
 ### <a name="security-information-and-event-management-siem-software-for-microsoft-365-logging"></a>Microsoft 365 günlüğe kaydetmeye yönelik güvenlik bilgileri ve olay yönetimi (SIEM) yazılımı
 
-Bir sunucuda çalıştırılan SIEM yazılımı, uygulamalar ve ağ donanımı tarafından oluşturulan güvenlik uyarılarının ve olaylarının gerçek zamanlı analizini gerçekleştirir. SIEM sunucunuzun analiz ve raporlama işlevlerine Microsoft 365 güvenlik uyarıları ve olayları eklemesine izin vermek için Azure AD'yi SEIM ile tümleştirin. Bkz[. Azure Günlük Tümleştirmesi giriş](/azure/security/security-azure-log-integration-overview).
+Bir sunucuda çalıştırılan SIEM yazılımı, uygulamalar ve ağ donanımı tarafından oluşturulan güvenlik uyarılarının ve olaylarının gerçek zamanlı analizini gerçekleştirir. SIEM sunucunuzun analiz ve raporlama işlevlerine Microsoft 365 güvenlik uyarıları ve olayları eklemesine izin vermek için Azure AD SEIM'inizle tümleştirin. Bkz[. Azure Günlük Tümleştirmesi giriş](/azure/security/security-azure-log-integration-overview).
 
 ## <a name="next-step"></a>Sonraki adım
 

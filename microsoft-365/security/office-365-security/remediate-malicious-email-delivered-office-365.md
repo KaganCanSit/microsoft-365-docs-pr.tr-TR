@@ -14,12 +14,12 @@ search.appverid: MET150
 description: Tehdit düzeltme
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 98b425c39cd12aea55714e9ade192e2e770b26cd
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: d584ce10f4e119ec4fe8aa2991c6cac0edd5377c
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64714856"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65621887"
 ---
 # <a name="remediate-malicious-email-delivered-in-office-365"></a>Office 365'te teslim edilen kötü amaçlı e-postaları düzeltme
 
@@ -55,7 +55,7 @@ Explorer aracılığıyla e-postalar seçildikten sonra, doğrudan işlem yapara
 
 - Doğrudan onay: *Gelen kutusuna taşıma*, *gereksiz öğeye taşıma*, *silinmiş öğelere taşıma*, *geçici silme* veya *sabit silme* gibi eylemler uygun izinlere sahip güvenlik personeli tarafından seçildiğinde ve düzeltmedeki sonraki adımlar izlendiğinde, düzeltme işlemi seçilen eylemi yürütmeye başlar.
 > [!NOTE]
->Düzeltme başlatılırken paralel olarak bir uyarı ve araştırma oluşturur. Uyarı, uyarı kuyruğunda güvenlik personelinin varlığı düzeltme eylemini gerçekleştirmesini öneren "Yönetici tarafından gönderilen yönetim eylemi" adıyla gösterilir. Eylemi gerçekleştiren kişinin adı, destekleyici araştırma bağlantısı, zaman vb. gibi ayrıntılar sunar. Varlıklarda düzeltme gibi sert bir eylemin her gerçekleştirildiğini bilmek gerçekten iyi çalışır. Tüm bu eylemler **Eylemler & Gönderimler** **İşlem** **merkeziHistory** \>  ->  sekmesi (genel önizleme) altında yer alabilir.
+> Düzeltme başlatılırken paralel olarak bir uyarı ve araştırma oluşturur. Uyarı, uyarı kuyruğunda güvenlik personelinin varlığı düzeltme eylemini gerçekleştirmesini öneren "Yönetici tarafından gönderilen yönetim eylemi" adıyla gösterilir. Eylemi gerçekleştiren kişinin adı, destekleyici araştırma bağlantısı, zaman vb. gibi ayrıntılar sunar. Varlıklarda düzeltme gibi sert bir eylemin her gerçekleştirildiğini bilmek gerçekten iyi çalışır. Tüm bu eylemler **Eylemler & Gönderimler** **İşlem** **merkeziHistory** \>  ->  sekmesinde (genel önizleme) izlenebilir.
 
 - İki adımlı onay: "Düzeltmeye ekle" eylemi, uygun izinlere sahip olmayan veya eylemi yürütmek için beklemesi gereken yöneticiler tarafından yapılabilir. Bu durumda, hedeflenen e-postalar bir düzeltme kapsayıcısına eklenir. Düzeltme yürütülmeden önce onay gerekir.
 

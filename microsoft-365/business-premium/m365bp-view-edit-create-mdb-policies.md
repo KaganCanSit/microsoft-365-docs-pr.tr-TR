@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 05/10/2022
+ms.date: 05/20/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: 7cbb9c71e56242d15506c2c1e46f1120021928fa
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 5a01c2f045ea797aa61f3028f2a0a4ef4e260fe6
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65415980"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65623194"
 ---
 # <a name="view-and-edit-device-protection-policies"></a>Cihaz koruma ilkelerini görüntüleme ve düzenleme
 
@@ -30,7 +30,7 @@ Microsoft 365 İş Ekstra'da, yönetilen cihazlar için güvenlik ayarları Micr
 **Bu kılavuzda aşağıdakilerin nasıl yapılacağını açıklar**:
 
 - Varsayılan ilkelerinize genel bakış elde edin
-- Defender güvenlik merkezi, Yönetim merkezi ve InTune'da cihaz ilkeleriyle çalışın.
+- Defender güvenlik merkezi, Yönetim merkezi ve Intune cihaz ilkeleriyle çalışın.
 
 ## <a name="about-the-default-device-protection-policies"></a>Varsayılan cihaz koruma ilkeleri hakkında
 
@@ -40,7 +40,7 @@ Microsoft 365 İş Ekstra, kuruluşunuzun cihazlarını korumak için iki ana il
 
 - Kuruluşunuzun cihazlarına hangi ağ trafiğinin akışına izin verileceğini belirleyen **güvenlik duvarı ilkeleri**.
 
-Bu ilkeler, Microsoft 365 İş Ekstra aboneliğinize dahil edilen İş için Microsoft Defender bir parçasıdır. Microsoft Defender güvenlik merkezinde ilkelerle çalışmanın yanı sıra Yönetim merkezi ve InTune'da ilkelerle çalışma hakkında bilgi sağlanır.
+Bu ilkeler, Microsoft 365 İş Ekstra aboneliğinize dahil edilen İş için Microsoft Defender bir parçasıdır. Microsoft Defender güvenlik merkezinde ilkelerle çalışmanın yanı sıra Yönetim merkezi ve Intune ilkelerle çalışma hakkında bilgi sağlanır.
 
 ## <a name="working-with-device-polices-in-the-microsoft-defender-security-center"></a>Microsoft Defender güvenlik merkezinde cihaz ilkeleriyle çalışma
 
@@ -157,13 +157,13 @@ Yönetim merkezinde ilkelerle çalışmak için:
   
    ![Cihazları yönet sayfası.](../media/devicesmanage.png)
 
-## <a name="working-with-device-policies-in-intune"></a>InTune'da cihaz ilkeleriyle çalışma
+## <a name="working-with-device-policies-in-intune"></a>Intune'da cihaz ilkeleriyle çalışma
 
-InTune'da Microsoft Endpoint Manager yönetim merkezinde Uç nokta güvenliği aracılığıyla yapılan cihaz ilkelerini oluşturmak ve yönetmek için aşağıdaki bilgileri kullanın.
+Intune'da Microsoft Endpoint Manager yönetim merkezindeki Uç nokta güvenliği aracılığıyla yapılan cihaz ilkelerini oluşturmak ve yönetmek için aşağıdaki bilgileri kullanın.
 
 ### <a name="create-duplicate-and-edit-policies"></a>İlke oluşturma, yineleme ve düzenleme
 
-InTune'da ilke oluşturmak için
+Intune'de ilke oluşturmak için
 
 1. Microsoft Endpoint Manager yönetim merkezinde oturum açın.
 
@@ -201,7 +201,7 @@ InTune'da ilke oluşturmak için
 
 1. Gözden Geçir + oluştur sayfasında, işiniz bittiğinde, **Oluştur**'u seçin. Oluşturduğunuz profil için ilke türünü seçtiğinizde yeni profil listede görüntülenir.
 
-InTune'da bir ilkeyi yinelemek için:
+Intune bir ilkeyi yinelemek için:
 
 1. Microsoft Endpoint Manager yönetim merkezinde oturum açın.
 
@@ -235,7 +235,7 @@ Uç nokta güvenlik ilkeleri de dahil olmak üzere diğer ilke türleri varsayı
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Microsoft InTune'da uç nokta güvenliğini yönetme](/mem/intune/protect/endpoint-security)
+[Microsoft Intune'da uç nokta güvenliğini yönetme](/mem/Intune/protect/endpoint-security)
 
 [İş planları için Microsoft 365 güvenliğini sağlamaya yönelik en iyi yöntemler](../admin/security-and-compliance/secure-your-business-data.md)
 

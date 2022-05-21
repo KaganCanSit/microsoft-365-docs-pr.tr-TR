@@ -19,12 +19,12 @@ search.appverid:
 - MET150
 ms.assetid: 211c5c90-9719-4d73-9ad9-1925bb80f5f6
 description: İşletmeler için Microsoft 365 Genel Veri Koruma Yönetmeliği (GDPR) sürecinde size nasıl yardımcı olabileceğini öğrenin.
-ms.openlocfilehash: 28f39b8aaf715c9f95f89fe30ae0cfc077327eda
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: f616ed65879427c377333981841006b2b50b3515
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65469524"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65621267"
 ---
 # <a name="gdpr-simplified-a-guide-for-your-small-business"></a>GDPR basitleştirilmiş: Küçük işletmeniz için bir kılavuz
 
@@ -32,7 +32,7 @@ ms.locfileid: "65469524"
   
 Genel Veri Koruma Yönetmeliği (GDPR), bir kuruluşun kişisel verileri nasıl işlemesi gerektiğini zorunlu kıldığını belirten bir Avrupa Birliği (AB) yönetmeliğidir. İşletmeniz Avrupa Birliği vatandaşlarına satış, hizmet sağlama veya istihdam etme durumunda [GDPR](https://ec.europa.eu/info/law/law-topic/data-protection/reform/what-does-general-data-protection-regulation-gdpr-govern_en) sizi etkileyecektir. 
 
-Küçük bir işletme yöneticisi olarak muhtemelen kendinize "nasıl başlarım" diye soruyorsunuzdur. İşletmeniz kişisel verileri temel bir iş etkinliği olarak işlemediyse veya GDPR sizin için tamamen yeniyse bu durum özellikle geçerli olabilir.
+Küçük bir işletme yöneticisi olarak muhtemelen kendinize "nasıl başlarım" diye soruyorsunuzdur. Bu durum özellikle işletmeniz kişisel verileri temel bir iş etkinliği olarak işlemediyse veya GDPR sizin için tamamen yeniyse geçerli olabilir.
 
 GDPR'nin ne olduğunu, neden ortaya çıktığını ve iş için Microsoft 365 kuruluşunuzun GDPR'ye uyum sağlamasına nasıl yardımcı olabileceğini anlamanıza yardımcı olan bu makaleyi gözden geçirerek başlayabilirsiniz.
 
@@ -59,7 +59,7 @@ GDPR'de sık sık başvuruda bulunılan bazı terimler görürsünüz. Bu teriml
   
  **İzin**
   
-GDPR şunları belirtiyor: "Kişisel verilerin işlenmesi insanlığa hizmet etmek için tasarlanmalıdır." GDPR, kişisel verileri işlerken onayı kullanarak bu hedefe ulaşmayı umuyor. Bu, müşterilerinize şirketinizden e-posta iletileri almak isteyip istemediklerini sormanın basit bir eylemi olabilir. Ayrıca, verileri pazarlama için kullanmak istediğinizde web sitenizde artık geri çevirme onay kutuları olmadığı anlamına gelir. "Net bir onay eylemi" kullanarak açık onay almanız gerekir. Ayrıca, onay alındığında veya iptal edildiğinde kayıtları da tutmanız gerekir.
+GDPR şunları belirtiyor: "Kişisel verilerin işlenmesi insanlığa hizmet etmek için tasarlanmalıdır." GDPR, kişisel verileri işlerken onayı kullanarak bu hedefe ulaşmayı umuyor. Bu, müşterilerinize şirketinizden e-posta iletileri almak isteyip istemediklerini sormanın basit bir eylemi olabilir. Ayrıca, verileri pazarlama için kullanmak istediğinizde web sitenizde artık geri çevirme onay kutuları olmadığı anlamına gelir. "Net bir onay eylemi" kullanarak açık onay almanız gerekir. Ayrıca, onay alındığında veya iptal edildiğinde de kayıt tutmanız gerekir.
   
  **Veri sahibi hakları**
   
@@ -101,6 +101,7 @@ Küçük bir işletme olarak, izlemeniz gereken ilk adımlardan biri, işletmeni
 Başka bir örnek olarak, özel teklifler hakkında bildirim göndermek için tek tek müşterilerin listelerini yönetebilirsiniz.
 
 #### <a name="microsoft-365-features-that-can-help"></a>Yardımcı olabilecek Microsoft 365 özellikleri
+
 [Microsoft Purview Bilgi Koruması](/microsoft-365/compliance/information-protection) şirketinizdeki hassas bilgileri keşfetmenize, sınıflandırmanıza ve korumanıza yardımcı olabilir. Kişisel veriler içeren belge türlerini tanımlamanıza ve etiketlemenize yardımcı olması için eğitilebilir sınıflandırıcıları kullanabilirsiniz. 
 
 ### <a name="step-2-inform-your-customers-employees-and-other-individuals-when-you-need-to-collect-their-personal-data"></a>2. Adım: Kişisel verilerini toplamanız gerektiğinde müşterilerinizi, çalışanlarınızı ve diğer bireyleri bilgilendirin
@@ -165,7 +166,7 @@ Kişisel verilerin işlenmesini başka bir şirkete alt sözleşmeyle işliyorsa
 
 ### <a name="step-7-assign-someone-to-oversee-personal-data-protection"></a>7. Adım: Kişisel veri korumasını denetlemek için birini atama
  
-Kişisel verileri daha iyi korumak için kuruluşların <b>bir Veri Koruma Yetkilisi (DPO)</b> ataması gerekebilir. Ancak, kişisel verilerin işlenmesi işinizin temel bir parçası değilse veya küçük bir işletmeyseniz veri koruma yetkilisi atamanız gerekmeyebilir. Örneğin, işletmeniz yalnızca ev teslimi için müşterilerinizle ilgili verileri topluyorsa, DPO atamanız gerekmez. DPO'yu kullanmanız gerekse bile, bu görevler diğer görevlerine ek olarak mevcut bir çalışana atanabilir. Ya da gerektiğinde bu görev için bir dış danışman işe almayı da tercih edebilirsiniz.
+Kişisel verileri daha iyi korumak için kuruluşların <b>bir Veri Koruma Yetkilisi (DPO)</b> ataması gerekebilir. Ancak, kişisel verilerin işlenmesi işinizin temel bir parçası değilse veya küçük bir işletmeyseniz Veri Koruma Yetkilisi atamanız gerekmeyebilir. Örneğin, işletmeniz yalnızca ev teslimi için müşterilerinizle ilgili verileri topluyorsa, DPO atamanız gerekmez. DPO'yu kullanmanız gerekse bile, bu görevler diğer görevlerine ek olarak mevcut bir çalışana atanabilir. Ya da gerektiğinde bu görev için bir dış danışman işe almayı seçebilirsiniz.
 
 Normalde [Veri Koruma Etki Değerlendirmesi](https://gdpr.eu/article-35-impact-assessment/) gerçekleştirmeniz gerekmez. Bu, kişisel veriler için daha fazla risk oluşturan işletmeler için ayrılmıştır (örneğin, video izleme gibi genel olarak erişilebilen bir alanın büyük ölçekli bir izlemesini yapıyorlarsa).
 
@@ -233,7 +234,7 @@ Büyük muadilleri gibi küçük bir işletmenin de güvenlikten ödün vermeden
   
 - **Keşfetmek:** GDPR uyumluluğu için önemli bir adım, sahip olduğunuz verileri bilmektir. 
     
-- **Yönetmek:** Verilere erişimi denetlemek ve kullanımını yönetmek GDPR'nin ayrılmaz bir parçasıdır. İş için Microsoft 365, cihazlara uygulamak istediğiniz ilkelere göre iş verilerini korur. Cihaz yönetimi, çalışanların uzaktan çalıştığı bir çağda çok önemlidir. İş için Microsoft 365, verilerin tüm cihazlarda korunmasını sağlayan cihaz yönetimi özelliklerini içerir. Örneğin, işletmenizdeki tüm Windows 10 cihazların Windows Defender aracılığıyla korunacağını belirtebilirsiniz. 
+- **Yönetmek:** Verilere erişimi denetlemek ve kullanımını yönetmek GDPR'nin ayrılmaz bir parçasıdır. İş için Microsoft 365, cihazlara uygulamak istediğiniz ilkelere göre iş verilerini korur. Cihaz yönetimi, çalışanların uzaktan çalıştığı bir çağda çok önemlidir. İş için Microsoft 365, verilerin tüm cihazlarda korunduğundan emin olan cihaz yönetimi özelliklerini içerir. Örneğin, işletmenizdeki tüm Windows 10 cihazların Windows Defender aracılığıyla korunacağını belirtebilirsiniz. 
     
 - **Koruma:** İş için Microsoft 365 güvenlik için tasarlanmıştır. Cihaz yönetimi ve veri koruma denetimleri, verilerin güvenliğini sağlamaya yardımcı olmak için uzak cihazlar da dahil olmak üzere iş ağınızda çalışır. İş için Microsoft 365, Office uygulamalarında gizlilik ayarları ve belgelerin şifrelenmesini gibi denetimler sunar. İş için Microsoft 365 ile doğru koruma düzeyine sahip olduğunuzdan emin olmak için GDPR uyumluluk izlemesi gerçekleştirebilirsiniz. 
     

@@ -1,5 +1,5 @@
 ---
-title: Belirli bir Microsoft 365 veri konumuyla Veri Grubu oluşturma
+title: Belirli bir tercih edilen veri konumuna sahip bir Microsoft 365 Grubu oluşturma
 ms.reviewer: adwood
 ms.author: mikeplum
 author: MikePlumleyMSFT
@@ -11,37 +11,37 @@ f1.keywords:
 - NOCSH
 ms.collection: Strat_SP_gtc
 ms.localizationpriority: medium
-description: Çok coğrafi bir ortamda Microsoft 365 tercih edilen veri konumuyla kaynak grubu oluşturma hakkında bilgi öğrenin.
+description: Çok coğrafi bir ortamda tercih edilen belirli bir veri konumuna sahip bir Microsoft 365 grubu oluşturmayı öğrenin.
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkSPO
-ms.openlocfilehash: 7de00ad0d94cda0a47f4981d78ebc07cedab6ada
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 162f499a783c23ec45ec75610833c61978beaafb
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63318809"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65623365"
 ---
-# <a name="create-a-microsoft-365-group-with-a-specific-preferred-data-location"></a>Belirli bir Microsoft 365 veri konumuyla Veri Grubu oluşturma
+# <a name="create-a-microsoft-365-group-with-a-specific-preferred-data-location"></a>Belirli bir tercih edilen veri konumuna sahip bir Microsoft 365 Grubu oluşturma
 
-Çok coğrafi bir ortamdaki kullanıcılar Microsoft 365 Grubu oluşturduklarında, grup tercih edilen veri konumu (PDL) otomatik olarak kullanıcınınkiyle ayarlanır. Genel, SharePoint grupları Exchange Yöneticiler kendi oluşturdukları herhangi bir bölgede grup oluşturabilir. 
+Çok coğrafi bir ortamdaki kullanıcılar bir Microsoft 365 Grubu oluşturduğunda, grubun tercih ettiği veri konumu (PDL) otomatik olarak kullanıcınınkine ayarlanır. Genel, SharePoint ve Exchange Yöneticiler seçtikleri herhangi bir bölgede grup oluşturabilir. 
 
-Belirli bir PDL'ye sahip bir grup oluşturmanız gerekirse, bunu <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">yapmak için SharePoint</a> yönetim merkezinden veya Microsoft PowerShell cmdlet'inden Exchange Online New-UnifiedGroup kullanabilirsiniz. Bunu yapmak için, hem grup posta kutusu SharePoint grupla ilişkilendirilmiş olan posta kutusu, belirtilen PDL içinde sağlandı.
+Belirli bir PDL'ye sahip bir grup oluşturmanız gerekiyorsa, bunu <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">SharePoint yönetim merkezinden veya Exchange Online New-UnifiedGroup</a> Microsoft PowerShell cmdlet'inden kullanarak yapabilirsiniz. Bunu yaptığınızda, hem grup posta kutusu hem de grupla ilişkilendirilmiş SharePoint site belirtilen PDL'de sağlanır.
 
-Belirttiğiniz PDL Microsoft 365 BIR Grup Oluşturmak için, <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">grup sitesini oluşturmak istediğiniz coğrafi konumda SharePoint</a> yönetim merkezine gidin.
+Belirttiğiniz PDL ile bir Microsoft 365 Grubu oluşturmak için, grup sitesini oluşturmak istediğiniz coğrafi <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">konumdaki SharePoint yönetim merkezine</a> gidin.
 
 Örneğin:
 
-Avustralya konumunuz içinde bir grup sitesi oluşturmak için https://ContosoAUS-admin.sharepoint.com/_layouts/15/online/AdminHome.aspx#/siteManagement
+Avustralya konumunuzda bir grup sitesi oluşturmak istiyorsanız https://ContosoAUS-admin.sharepoint.com/_layouts/15/online/AdminHome.aspx#/siteManagement
 
-1. **+ Oluştur'a seçin**.
+1. **+ Oluştur'u** seçin.
 2. Grup sitesi oluşturmak için işlemi izleyin.
 
-Grup siteniz, site oluşturma isteğini başlattığınız SharePoint ilgili yönetim merkezine karşılık gelen coğrafi konumda sağlanarak. 
+Grup siteniz, site oluşturma isteğini başlattığınız SharePoint yönetim merkezine karşılık gelen coğrafi konumda sağlanır. 
 
-Exchange PowerShell'i kullanma 
+Exchange PowerShell kullanma 
 
-Bağlan PowerShell Exchange Online e tıklayın ve coğrafi konum koduyla *-MailBoxRegion* parametresini geçecek şekilde seçin.
+PowerShell'i Exchange Online Bağlan ve coğrafi konum koduyla *-MailBoxRegion* parametresini geçirin.
 
 Örneğin: 
 
@@ -49,9 +49,10 @@ Bağlan PowerShell Exchange Online e tıklayın ve coğrafi konum koduyla *-Mail
 New-UnifiedGroup -DisplayName MultiGeoEUR -Alias "MultiGeoEUR" -AccessType Public -MailboxRegion EUR 
 ```
 
-![Söz dizimi New-UnifiedGroup PowerShell cmdlet'inin ekran görüntüsü.](../media/multi-geo-new-group-with-pdl-powershell.png)
+![Söz dizimi içeren New-UnifiedGroup PowerShell cmdlet'inin ekran görüntüsü.](../media/multi-geo-new-group-with-pdl-powershell.png)
 
-Grup SharePoint sağlamanın isteğe bağlı olduğunu unutmayın. Site, ilk kez bir grup sahibi veya üye bu siteye erişmeye ilk kez girişimde bulunacaktır.
+> [!Note]
+> SharePoint grup sitesi sağlama isteğe bağlıdır. Site, bir grup sahibi veya üyesi ilk kez erişmeye çalıştığında sağlanacaktır.
 
 ## <a name="geo-location-codes"></a>Coğrafi konum kodları
 
@@ -59,6 +60,6 @@ Grup SharePoint sağlamanın isteğe bağlı olduğunu unutmayın. Site, ilk kez
 
 ## <a name="related-topics"></a>İlgili konular
 
-[Bağlan'Exchange Online PowerShell'e](/powershell/exchange/connect-to-exchange-online-powershell)
+[PowerShell'i Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell)
 
-[GRAPH API'sini kullanarak belirli bir tercih edilen veri Graph oluşturma](/graph/api/group-post-groups)
+[Graph API kullanarak belirli bir tercih edilen veri konumuna sahip gruplar oluşturma](/graph/api/group-post-groups)

@@ -30,12 +30,12 @@ search.appverid:
 - GEA150
 ms.assetid: 7a5d073b-7fae-4aa5-8f96-9ecd041aba9c
 description: İş için Microsoft 365 aboneliğiniz olduğunda kullanıcıların parolalarını sıfırlamak için Microsoft 365 yönetici hesabınızla oturum açın.
-ms.openlocfilehash: 0ce656355b83077809c7082a1bf0d34e8a5439cd
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 4c2c4bc1409a49b0f0bb26217fd349348331e95b
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65436273"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65620959"
 ---
 # <a name="reset-passwords-in-microsoft-365-for-business"></a>İş için Microsoft 365 parolaları sıfırlama
 
@@ -49,7 +49,7 @@ Bu makalede, iş için Microsoft 365 aboneliğiniz olduğunda kendiniz ve kullan
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Bu makale, bir işletme, okul veya kar amacı gütmeyen kuruluş için parola süre sonu ilkesi belirleyen kişilere yöneliktir. Bu adımları tamamlamak için Microsoft 365 yönetici hesabınızla oturum açmanız gerekir. [Yönetici hesabı nedir?] (Microsoft 365 yönetim merkezi Genel Bakış](.. /admin-overview/admin-center-overview.md).
+Bu makale, bir işletme, okul veya kar amacı gütmeyen kuruluş için parola süre sonu ilkesi belirleyen kişilere yöneliktir. Bu adımları tamamlamak için Microsoft 365 yönetici hesabınızla oturum açmanız gerekir. [Microsoft 365 yönetim merkezi genel bakış](../admin-overview/admin-center-overview.md).
 
 Bu adımları gerçekleştirmek için [genel yönetici veya parola yöneticisi](about-admin-roles.md) olmanız gerekir.
 

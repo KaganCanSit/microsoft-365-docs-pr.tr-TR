@@ -16,12 +16,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 9c195f5656db1b7bc971087665a83df32bace7c6
-ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
+ms.openlocfilehash: 7e9e074e4aeaadf041a70baed1d741ea95a9f792
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65188226"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65622612"
 ---
 # <a name="manage-microsoft-defender-for-endpoint-configuration-settings-on-devices-with-microsoft-endpoint-manager"></a>Uç Nokta için Microsoft Defender yapılandırma ayarlarını farklı bir Microsoft Endpoint Manager cihazı ile yönetin
 
@@ -35,7 +35,7 @@ ms.locfileid: "65188226"
 
 
 
-> Uç Nokta için Defender'ı deneyimlemek mi istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-configureendpointsscript-abovefoldlink)
+> Uç nokta için Defender'i deneyimlemek ister misiniz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-configureendpointsscript-abovefoldlink)
 
 
 Uç Nokta için Microsoft Defender için Güvenlik Yönetimi, Microsoft Endpoint Manager tarafından yönetilmeyen cihazlar için Microsoft Intune veya doğrudan Endpoint Manager'dan Microsoft Defender güvenlik yapılandırmalarını almak için Microsoft Endpoint Configuration Manager.
@@ -43,7 +43,8 @@ Uç Nokta için Microsoft Defender için Güvenlik Yönetimi, Microsoft Endpoint
 
 Önkoşullar, desteklenen platformlar ve daha fazlası dahil olmak üzere Güvenlik Yapılandırma Yönetimi hakkında daha fazla bilgi için bkz. [Microsoft Endpoint Manager olan cihazlarda Uç Nokta için Microsoft Defender yönetme](/mem/intune/protect/mde-security-integration).
 
-
+Uç Nokta için Microsoft Defender için güvenlik yapılandırmasını yönetmek üzere Microsoft Endpoint Manager kullanmayı öğrenmek için bu videoyu izleyin.
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4qLVq]
 
 [!INCLUDE [Prerequisites](../../includes/security-config-mgt-prerequisites.md)]
 

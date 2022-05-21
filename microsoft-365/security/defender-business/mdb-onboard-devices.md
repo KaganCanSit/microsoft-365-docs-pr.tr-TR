@@ -16,12 +16,12 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: ebe8f623842716ab53b4eae64d24ef85b9598099
-ms.sourcegitcommit: 99494a5530ad64802f341573ad42796134190296
+ms.openlocfilehash: 8f716f692687276e5c1c4482429ab016f9574f2f
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65396167"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65621313"
 ---
 # <a name="onboard-devices-to-microsoft-defender-for-business"></a>Cihazları İş için Microsoft Defender ekleme
 
@@ -182,7 +182,7 @@ Yerel betiği macOS bir cihazda çalıştırdığınızda, Azure Active Director
 
 9. Microsoft'tan bir sürücünün yüklenmesine izin vermeniz istenir ("Sistem Uzantısı Engellendi" veya "Yükleme beklemede" veya her ikisi de. Sürücünün yüklenmesine izin verilmelidir. Yüklemeye izin vermek için **Güvenlik Tercihlerini Aç'ı** veya **Sistem Tercihlerini** >  **AçGüvenlik & Gizlilik'i** ve ardından **İzin Ver'i** seçin.
 
-10. Ekleme paketini çalıştırmak için Bash'te aşağıdaki Python komutunu kullanın: `/usr/bin/python MicrosoftDefenderATPOnboardingMacOs.py`
+10. Ekleme paketini çalıştırmak için Bash'te aşağıdaki Python komutunu kullanın: `/usr/bin/python MicrosoftDefenderATPOnboardingMacOs.sh`
 
 11. Bir cihaz Intune kaydedildikten sonra bir cihaz grubuna ekleyebilirsiniz. [İş için Microsoft Defender'da cihaz grupları hakkında daha fazla bilgi edinin](mdb-create-edit-device-groups.md).
 

@@ -19,12 +19,12 @@ ms.custom: ''
 description: Yöneticiler, Office 365 için Microsoft Defender Kasa Bağlantılar ilkelerini ve genel Kasa Bağlantıları ayarlarını görüntülemeyi, oluşturmayı, değiştirmeyi ve silmeyi öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 867d055c44ba0d0ae0b7b763bc556a06f16e5cd8
-ms.sourcegitcommit: a7e1d155939e862337271fbe38bf26f62bd49bdd
+ms.openlocfilehash: 1d60be56f8dad960ca3f15484276324421c00426
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/14/2022
-ms.locfileid: "64847112"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65623026"
 ---
 # <a name="set-up-safe-links-policies-in-microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender'da Kasa Bağlantıları ilkelerini ayarlama
 
@@ -47,7 +47,7 @@ Bu makaledeki yordamları kullanarak belirli kullanıcılara, gruplara veya etki
 >
 > Kasa Bağlantıları ilkelerinin **dışında** Kasa Bağlantıları koruması için genel ayarları yapılandırabilirsiniz. Yönergeler için bkz[. Office 365 için Microsoft Defender Kasa Bağlantıları için genel ayarları yapılandırma](configure-global-settings-for-safe-links.md).
 >
-> Yöneticiler, Kasa Bağlantıları için farklı yapılandırma ayarlarını dikkate almalıdır. Kullanılabilir seçeneklerden biri, Kasa Bağlantıları'na kullanıcı tarafından tanımlanabilir bilgiler eklemektir. Bu özellik, güvenlik işlemleri (SecOps) ekiplerinin olası kullanıcı güvenliğinin aşılmasını araştırmasına, düzeltici eylem gerçekleştirmesine ve yüksek maliyetli ihlalleri sınırlamasına olanak tanır.
+> Yöneticiler, Kasa Bağlantıları için farklı yapılandırma ayarlarını dikkate almalıdır. Kullanılabilir seçeneklerden biri, Kasa Bağlantıları'na kullanıcı tarafından tanımlanabilir bilgiler eklemektir. Bu özellik, güvenlik operasyonları (SecOps) ekiplerinin olası kullanıcı güvenliğinin aşılmasını araştırmasına, düzeltici eylem gerçekleştirmesine ve yüksek maliyetli ihlalleri sınırlamasına olanak tanır.
 
 Kasa Bağlantıları ilkelerini Microsoft 365 Defender portalında veya PowerShell'de (Exchange Online PowerShell'de Exchange Online posta kutuları olan uygun Microsoft 365 kuruluşlar için PowerShell' de yapılandırabilirsiniz; tek başına EOP PowerShell posta kutularını Exchange Online, ancak Office 365 için Microsoft Defender eklenti abonelikleriyle).
 
@@ -125,6 +125,10 @@ Microsoft 365 Defender portalında özel bir Kasa Bağlantıları ilkesi oluştu
        - **İletiyi teslim etmeden önce URL taramasının tamamlanmasını bekleyin: İletiyi teslim** etmeden önce gerçek zamanlı URL taramasının tamamlanmasını beklemek için bu seçeneği belirleyin.
      - **Kuruluş içinde gönderilen e-posta iletilerine Kasa Bağlantıları uygula**: İç gönderenler ve iç alıcılar arasındaki iletilere Kasa Bağlantıları ilkesini uygulamak için bu seçeneği belirleyin.
    - **Microsoft Teams içinde bilinmeyen veya kötü amaçlı olabilecek URL'ler için eylemi seçin: Teams** bağlantıları için Kasa Bağlantılar korumasını etkinleştirmek için **Açık'ı** seçin. Bu ayarın etkili olması 24 saat kadar sürebilir.
+
+     > [!NOTE]
+     > Şu anda Microsoft Teams için Kasa Bağlantıları koruması Microsoft 365 GCC High veya Microsoft 365 DoD'da kullanılamaz.
+
    - **Kullanıcı tıklamalarını izleme**: Kullanıcının e-posta iletilerindeki URL'leri izlemesini sağlamak için bu seçeneği seçili bırakın.
    - **Kullanıcıların özgün URL'ye tıklamasına izin ver**: Kullanıcıların [uyarı sayfalarında](safe-links.md#warning-pages-from-safe-links) özgün URL'ye tıklamasını engellemek için bu seçeneği temizleyin.
    - **Aşağıdaki URL'leri yeniden yazmayın**: aksi takdirde Kasa Bağlantıları tarafından engellenecek belirtilen URL'lere erişime izin verir.

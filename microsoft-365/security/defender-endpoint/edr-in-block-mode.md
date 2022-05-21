@@ -1,7 +1,7 @@
 ---
 title: Blok modunda uç nokta algılama ve yanıt
 description: Blok modunda uç noktada algılama ve yanıtlama hakkında bilgi edinin
-keywords: blok modunda Pertahanan Microsoft untuk Titik Akhir, mde, EDR, pasif mod engelleme
+keywords: blok modunda Uç Nokta için Microsoft Defender, mde, EDR, pasif mod engelleme
 ms.pagetype: security
 author: denisebmsft
 ms.author: deniseb
@@ -18,12 +18,12 @@ ms.custom:
 ms.date: 04/04/2022
 ms.collection: m365-security-compliance
 ms.technology: mde
-ms.openlocfilehash: 5a9441a41db2dfbe53bfb280152c038e9dbc383e
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: c8b3016517393b473bcae664a6044098e04ebf6d
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64789854"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65623588"
 ---
 # <a name="endpoint-detection-and-response-edr-in-block-mode"></a>Blok modunda uç nokta algılama ve yanıt (EDR)
 
@@ -35,7 +35,7 @@ ms.locfileid: "64789854"
 **Platform**
 - Windows
 
-> Uç Nokta için Defender'ı deneyimlemek mi istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
+> Uç nokta için Defender'i deneyimlemek ister misiniz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
 
 ## <a name="what-is-edr-in-block-mode"></a>Blok modunda EDR nedir?
 
@@ -55,11 +55,14 @@ Blok modundaki EDR [tehdit & güvenlik açığı yönetimi](next-gen-threat-and-
 :::image type="content" source="images/edrblockmode-TVMrecommendation.png" alt-text="Blok modunda EDR açma önerisi" lightbox="images/edrblockmode-TVMrecommendation.png":::
 
 > [!TIP]
-> En iyi korumayı elde etmek için **[Pertahanan Microsoft untuk Titik Akhir taban çizgilerini dağıttığınıza](configure-machines-security-baseline.md)** emin olun.
+> En iyi korumayı elde etmek için **[Uç Nokta için Microsoft Defender taban çizgilerini dağıttığınıza](configure-machines-security-baseline.md)** emin olun.
+
+Blok modunda uç noktada algılama ve yanıtlama (EDR) açmanın, davranış engellemeyi etkinleştirmenin ve ihlal öncesinden ihlal sonrası aşamalara kadar her aşamada engellemeyi neden ve nasıl açacağınızı öğrenmek için bu videoyu izleyin. 
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4HjW2]
 
 ## <a name="what-happens-when-something-is-detected"></a>Bir şey algılandığında ne olur?
 
-Blok modunda EDR açık olduğunda ve kötü amaçlı bir yapıt algılandığında, bu yapıtı engeller ve düzelt Pertahanan Microsoft untuk Titik Akhir. Güvenlik operasyonları ekibiniz algılama durumunu [İşlem merkezinde](respond-machine-alerts.md#check-activity-details-in-action-center) **Engellendi** veya **Engellendi** olarak görür ve tamamlanmış eylemler olarak listelenir.
+Blok modunda EDR açık olduğunda ve kötü amaçlı bir yapıt algılandığında, bu yapıtı engeller ve düzelter Uç Nokta için Microsoft Defender. Güvenlik operasyonları ekibiniz algılama durumunu [İşlem merkezinde](respond-machine-alerts.md#check-activity-details-in-action-center) **Engellendi** veya **Engellendi** olarak görür ve tamamlanmış eylemler olarak listelenir.
 
 Aşağıdaki görüntüde, blok modunda EDR aracılığıyla algılanan ve engellenen istenmeyen yazılımların bir örneği gösterilmektedir:
 
@@ -97,7 +100,7 @@ Aşağıdaki tabloda blok modundaki EDR gereksinimleri listeleniyor:
 |---|---|
 |İzinler|[Azure Active Directory'da](/azure/active-directory/fundamentals/active-directory-users-assign-role-azure-portal) Genel Yönetici veya Güvenlik Yöneticisi rolü atanmış olmalıdır. Daha fazla bilgi için bkz. [Temel izinler](basic-permissions.md).|
 |İşletim sistemi|Cihazların aşağıdaki Windows sürümlerinden birini çalıştırıyor olması gerekir: <br/>- Windows 11 <br/>- Windows 10 (tüm sürümler)<br/>- Windows Server 2022 <br/>- Windows Server 2019<br/>- Windows Sunucusu, sürüm 1803 veya üzeri<br/>- R2 Windows Server 2016 ve Windows Server 2012 ([yeni birleşik istemci çözümüyle](configure-server-endpoints.md#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution))<sup>[[1](#fn1)]</sup>  |
-|Uç Nokta için Microsoft Defender|Cihazların Uç Nokta için Defender'a eklenmelidir. Aşağıdaki makalelere bakın: <br/>- [Pertahanan Microsoft untuk Titik Akhir için en düşük gereksinimler](minimum-requirements.md)<br/>- [Cihazları ekleme ve Pertahanan Microsoft untuk Titik Akhir özelliklerini yapılandırma](onboard-configure.md)<br/>- [Uç Nokta için Defender hizmetine Windows sunucuları ekleme](configure-server-endpoints.md)<br/>- [Modern birleşik çözümde yeni Windows Server 2012 R2 ve 2016 işlevselliği (Önizleme)](configure-server-endpoints.md#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution) |
+|Uç Nokta için Microsoft Defender|Cihazların Uç Nokta için Defender'a eklenmelidir. Aşağıdaki makalelere bakın: <br/>- [Uç Nokta için Microsoft Defender için en düşük gereksinimler](minimum-requirements.md)<br/>- [Cihazları ekleme ve Uç Nokta için Microsoft Defender özelliklerini yapılandırma](onboard-configure.md)<br/>- [Uç Nokta için Defender hizmetine Windows sunucuları ekleme](configure-server-endpoints.md)<br/>- [Modern birleşik çözümde yeni Windows Server 2012 R2 ve 2016 işlevselliği (Önizleme)](configure-server-endpoints.md#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution) |
 |Microsoft Defender Virüsten Koruma|Cihazların Microsoft Defender Virüsten Koruma yüklü olması ve etkin modda veya pasif modda çalıştırılması gerekir. [Microsoft Defender Virüsten Koruma etkin veya pasif modda olduğunu onaylayın](#how-do-i-confirm-microsoft-defender-antivirus-is-in-active-or-passive-mode).|
 |Bulut tabanlı koruma|Microsoft Defender Virüsten Koruma[, bulut tabanlı koruma etkinleştirilecek](enable-cloud-protection-microsoft-defender-antivirus.md) şekilde yapılandırılmalıdır.|
 |Microsoft Defender Virüsten Koruma platformu|Cihazların güncel olması gerekir. Onaylamak için PowerShell kullanarak [Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus) cmdlet'ini yönetici olarak çalıştırın. **AMProductVersion** satırında **4.18.2001.10** veya üzerini görmeniz gerekir. <p> Daha fazla bilgi için [Microsoft Defender Virüsten Koruma güncelleştirmelerine bakın ve temelleri uygulayın](manage-updates-baselines-microsoft-defender-antivirus.md).|
@@ -106,7 +109,7 @@ Aşağıdaki tabloda blok modundaki EDR gereksinimleri listeleniyor:
 (<a id="fn1">1</a>) Bkz. [EDR Windows Server 2016 ve Windows Server 2012 R2'de blok modunda destekleniyor mu?](#is-edr-in-block-mode-supported-on-windows-server-2016-and-windows-server-2012-r2)
 
 > [!IMPORTANT]
-> En iyi koruma değerini elde etmek için virüsten koruma çözümünüzün düzenli güncelleştirmeleri ve temel özellikleri alacak şekilde yapılandırıldığından ve [dışlamalarınızın yapılandırıldığından](configure-exclusions-microsoft-defender-antivirus.md) emin olun. blok modunda EDR, Microsoft Defender Virüsten Koruma için tanımlanan dışlamaları dikkate alır ancak Pertahanan Microsoft untuk Titik Akhir için tanımlanan [göstergelere](manage-indicators.md) dikkat etmemektedir.
+> En iyi koruma değerini elde etmek için virüsten koruma çözümünüzün düzenli güncelleştirmeleri ve temel özellikleri alacak şekilde yapılandırıldığından ve [dışlamalarınızın yapılandırıldığından](configure-exclusions-microsoft-defender-antivirus.md) emin olun. blok modunda EDR, Microsoft Defender Virüsten Koruma için tanımlanan dışlamalara saygı gösterir, ancak Uç Nokta için Microsoft Defender için tanımlanan [göstergelere](manage-indicators.md) dikkat etmemektedir.
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
 
@@ -137,7 +140,7 @@ Cihazdaki özelliği açmak için bulut koruması gerekir. Bulut koruması [, U�
 Windows 10, Windows 11, Windows Server, sürüm 1803 veya üzeri, Windows Server 2019 veya Windows Server 2022 çalıştıran uç noktalar için, Microsoft Defender Virüsten Koruma etkin moddayken cihazda birincil virüsten koruma olarak kullanılır . Pasif modda çalışırken, Microsoft Defender Virüsten Koruma birincil virüsten koruma ürünü değildir. Bu durumda tehditler gerçek zamanlı olarak Microsoft Defender Virüsten Koruma tarafından düzeltilmemektedir.
 
 > [!NOTE]
-> Microsoft Defender Virüsten Koruma yalnızca cihaz Pertahanan Microsoft untuk Titik Akhir eklendiğinde pasif modda çalıştırılabilir.
+> Microsoft Defender Virüsten Koruma yalnızca cihaz Uç Nokta için Microsoft Defender eklendiğinde pasif modda çalıştırılabilir.
 
 Daha fazla bilgi için bkz. [uyumluluk Microsoft Defender Virüsten Koruma](microsoft-defender-antivirus-compatibility.md).
 

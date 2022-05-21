@@ -2,7 +2,7 @@
 title: E-posta güvenlik raporlarını görüntüleme
 f1.keywords:
 - NOCSH
-ms.author: chrisdadrop
+ms.author: chrisda
 author: chrisda
 manager: dansimp
 ms.date: ''
@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 8b4b520675c5c8a89324791e560e8176db1cb9b2
-ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
+ms.openlocfilehash: 6e57b797ab0b5d5eee90315ae9c3459fcba0a02c
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/20/2022
-ms.locfileid: "65599353"
+ms.locfileid: "65621680"
 ---
 # <a name="view-email-security-reports-in-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalında e-posta güvenlik raporlarını görüntüleme
 
@@ -53,16 +53,16 @@ Microsoft 365 Defender portalında değiştirilen, taşınan veya kullanım dı�
 
 |Kullanım dışı bırakılan rapor ve cmdlet'ler|Yeni rapor ve cmdlet'ler|İleti Merkezi Kimliği|Tarih|
 |---|---|:---:|:---:|
-|**URL izleme** <p> Get-URLTrace|[URL koruma raporu](view-reports-for-mdo.md#url-protection-report) <p> [Get-SafeLinksAggregateReport](/powershell/module/exchange/get-safelinksaggregatereport) <br> [Get-SafeLinksDetailReport](/powershell/module/exchange/get-safelinksdetailreport)|MC239999|Haziran 2021|
-|**Gönderilen ve alınan e-posta raporu** <p> Get-MailTrafficReport <br> Get-MailDetailReport|[Tehdit koruması durum raporu](#threat-protection-status-report) <br> [Posta akışı durum raporu](#mailflow-status-report) <p> [Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport) <br> [Get-MailFlowStatusReport](/powershell/module/exchange/get-mailflowstatusreport)|MC236025|Haziran 2021|
-|**Raporu iletme** <p> cmdlet yok|[EAC'de otomatik iletilen iletiler raporu](/exchange/monitoring/mail-flow-reports/mfr-auto-forwarded-messages-report) <p> cmdlet yok|MC250533|Haziran 2021|
-|**Kasa Ekler dosya türleri raporu** <p> Get-AdvancedThreatProtectionTrafficReport <br> Get-MailDetailMalwareReport|[Tehdit koruması durum raporu: Verileri E-posta \> Kötü Amaçlı Yazılımlarına göre görüntüleme](#view-data-by-email--malware-and-chart-breakdown-by-detection-technology) <p> [Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|MC250532|Haziran 2021|
-|**Kasa Ekler ileti bırakma raporu** <p> Get-AdvancedThreatProtectionTrafficReport <br> Get-MailDetailMalwareReport|[Tehdit koruması durum raporu: Verileri E-posta \> Kötü Amaçlı Yazılımlarına göre görüntüleme](#view-data-by-email--malware-and-chart-breakdown-by-detection-technology) <p> [Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|MC250531|Haziran 2021|
-|**E-posta raporunda kötü amaçlı yazılım algılandı** <p> Get-MailTrafficReport <br> Get-MailDetailMalwareReport|[Tehdit koruması durum raporu: Verileri E-posta \> Kötü Amaçlı Yazılımlarına göre görüntüleme](#view-data-by-email--malware-and-chart-breakdown-by-detection-technology) <p> [Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|MC250530|Haziran 2021|
-|**İstenmeyen posta algılama raporu** <p> Get-MailTrafficReport <br> Get-MailDetailSpamReport|[Tehdit koruma durum raporu: E-posta İstenmeyen Posta \> ile verileri görüntüleme](#view-data-by-email--spam-and-chart-breakdown-by-detection-technology) <p> [Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|MC250529|Ekim 2021|
-|Get-AdvancedThreatProtectionDocumentReport <p> Get-AdvancedThreatProtectionDocumentDetail|[Get-ContentMalwareMdoAggregateReport](/powershell/module/exchange/get-contentmalwaremdoaggregatereport) <p> [Get-ContentMalwareMdoDetailReport](/powershell/module/exchange/get-contentmalwaremdodetailreport)|MC343433|Mayıs 2022|
-|**aktarım kuralı raporunu Exchange** <p> [Get-MailTrafficPolicyReport](/powershell/module/exchange/get-mailtrafficpolicyreport) <br> [Get-MailDetailTransportRuleReport](/powershell/module/exchange/get-maildetailtransportrulereport)|[EAC'de aktarım kuralı raporunu Exchange](/exchange/monitoring/mail-flow-reports/mfr-exchange-transport-rule-report) <p> [Get-MailTrafficPolicyReport](/powershell/module/exchange/get-mailtrafficpolicyreport) <br> [Get-MailDetailTransportRuleReport](/powershell/module/exchange/get-maildetailtransportrulereport)|MC316157|Nisan 2022|
-|Get-MailTrafficTopReport|[Tehdit koruması durum raporu: Verileri E-posta \> Kötü Amaçlı Yazılımlarına göre görüntüleme](#view-data-by-email--malware-and-chart-breakdown-by-detection-technology) <p> [Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport) <p> **Not**: Get-MailTrafficTopReport'taki şifreleme raporlama özelliklerinin yerini alamaz.|MC315742|Nisan 2022|
+|**URL izleme** <br/><br/> Get-URLTrace|[URL koruma raporu](view-reports-for-mdo.md#url-protection-report) <br/><br/> [Get-SafeLinksAggregateReport](/powershell/module/exchange/get-safelinksaggregatereport) <br> [Get-SafeLinksDetailReport](/powershell/module/exchange/get-safelinksdetailreport)|MC239999|Haziran 2021|
+|**Gönderilen ve alınan e-posta raporu** <br/><br/> Get-MailTrafficReport <br> Get-MailDetailReport|[Tehdit koruması durum raporu](#threat-protection-status-report) <br> [Posta akışı durum raporu](#mailflow-status-report) <br/><br/> [Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport) <br> [Get-MailFlowStatusReport](/powershell/module/exchange/get-mailflowstatusreport)|MC236025|Haziran 2021|
+|**Raporu iletme** <br/><br/> cmdlet yok|[EAC'de otomatik iletilen iletiler raporu](/exchange/monitoring/mail-flow-reports/mfr-auto-forwarded-messages-report) <br/><br/> cmdlet yok|MC250533|Haziran 2021|
+|**Kasa Ekler dosya türleri raporu** <br/><br/> Get-AdvancedThreatProtectionTrafficReport <br> Get-MailDetailMalwareReport|[Tehdit koruması durum raporu: Verileri E-posta \> Kötü Amaçlı Yazılımlarına göre görüntüleme](#view-data-by-email--malware-and-chart-breakdown-by-detection-technology) <br/><br/> [Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|MC250532|Haziran 2021|
+|**Kasa Ekler ileti bırakma raporu** <br/><br/> Get-AdvancedThreatProtectionTrafficReport <br> Get-MailDetailMalwareReport|[Tehdit koruması durum raporu: Verileri E-posta \> Kötü Amaçlı Yazılımlarına göre görüntüleme](#view-data-by-email--malware-and-chart-breakdown-by-detection-technology) <br/><br/> [Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|MC250531|Haziran 2021|
+|**E-posta raporunda kötü amaçlı yazılım algılandı** <br/><br/> Get-MailTrafficReport <br> Get-MailDetailMalwareReport|[Tehdit koruması durum raporu: Verileri E-posta \> Kötü Amaçlı Yazılımlarına göre görüntüleme](#view-data-by-email--malware-and-chart-breakdown-by-detection-technology) <br/><br/> [Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|MC250530|Haziran 2021|
+|**İstenmeyen posta algılama raporu** <br/><br/> Get-MailTrafficReport <br> Get-MailDetailSpamReport|[Tehdit koruma durum raporu: E-posta İstenmeyen Posta \> ile verileri görüntüleme](#view-data-by-email--spam-and-chart-breakdown-by-detection-technology) <br/><br/> [Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|MC250529|Ekim 2021|
+|Get-AdvancedThreatProtectionDocumentReport <br/><br/> Get-AdvancedThreatProtectionDocumentDetail|[Get-ContentMalwareMdoAggregateReport](/powershell/module/exchange/get-contentmalwaremdoaggregatereport) <br/><br/> [Get-ContentMalwareMdoDetailReport](/powershell/module/exchange/get-contentmalwaremdodetailreport)|MC343433|Mayıs 2022|
+|**aktarım kuralı raporunu Exchange** <br/><br/> [Get-MailTrafficPolicyReport](/powershell/module/exchange/get-mailtrafficpolicyreport) <br> [Get-MailDetailTransportRuleReport](/powershell/module/exchange/get-maildetailtransportrulereport)|[EAC'de aktarım kuralı raporunu Exchange](/exchange/monitoring/mail-flow-reports/mfr-exchange-transport-rule-report) <br/><br/> [Get-MailTrafficPolicyReport](/powershell/module/exchange/get-mailtrafficpolicyreport) <br> [Get-MailDetailTransportRuleReport](/powershell/module/exchange/get-maildetailtransportrulereport)|MC316157|Nisan 2022|
+|Get-MailTrafficTopReport|[En çok gönderenler ve alıcı raporu](view-email-security-reports.md#top-senders-and-recipients-report) <br/><br/> [Get-MailTrafficSummaryReport](/powershell/module/exchange/get-mailtrafficsummaryreport) <br/><br/> **Not**: Get-MailTrafficTopReport'taki şifreleme raporlama özelliklerinin yerini alamaz.|MC315742|Nisan 2022|
 
 ## <a name="compromised-users-report"></a>Güvenliği aşılmış kullanıcılar raporu
 
@@ -130,7 +130,7 @@ Aşağıdaki bilgiler grafiğin altındaki ayrıntılar tablosunda gösterilmiş
 - **Konu**
 - **Gönderen adresi**
 - **Alıcı adresi**
-- **Önem**
+- **Önem derecesi**
 - **Yön**
 
 **Filtre'ye** tıklayıp görüntülenen açılır öğede aşağıdaki değerlerden birini veya daha fazlasını seçerek hem grafiği hem de ayrıntılar tablosunu filtreleyebilirsiniz:
@@ -161,7 +161,7 @@ Aşağıdaki bilgiler grafiğin altındaki ayrıntılar tablosunda gösterilmiş
 - **Konu**
 - **Gönderen adresi**
 - **Alıcı adresi**
-- **Önem**
+- **Önem derecesi**
 - **Yön**
 
 **Filtre'ye** tıklayıp görüntülenen açılır öğede aşağıdaki değerlerden birini veya daha fazlasını seçerek hem grafiği hem de ayrıntılar tablosunu filtreleyebilirsiniz:

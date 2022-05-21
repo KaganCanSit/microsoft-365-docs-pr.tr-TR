@@ -8,13 +8,13 @@ ms.topic: article
 ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 828a17db-956a-401e-bb62-d153b6dffd53
-description: Microsoft Bookings'da iş adı, adres, telefon numarası, web sitesi URL'si, logo ve iş saatleri dahil olmak üzere Hakkımızda sayfanızı oluşturmak için bu yönergeleri izleyin.
-ms.openlocfilehash: e15379a414182672bd7a0372ea5c55ffbc482b62
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+description: Microsoft Bookings'da iş adı, adres, telefon numarası, web sitesi URL'si, logosu ve iş saatleriyle Hakkımızda sayfanızı oluşturmak için bu yönergeleri izleyin.
+ms.openlocfilehash: 5b80de4d94010a7e13b58289d6f63da13384d57d
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65469613"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65622527"
 ---
 # <a name="enter-your-business-information-in-microsoft-bookings"></a>İş bilgilerinizi Microsoft Bookings girin
 
@@ -62,7 +62,7 @@ Personel toplantıları yapmak, envanteri güncelleştirmek veya diğer iş ritm
 
 Örneğin, her Perşembe saat 1'den 2:30'a kadar personel toplantılarınız var ve tüm personel üyelerinizin katılabilmesi için bu süreyi engellemek istiyorsunuz. Bunu yapmak için:
 
-1. İş bilgileri sayfasındaki İş saatleri'nin altında Perşembe günleri için bir başlangıç ve bitiş saati seçin. Bu örnekte sabah 8:00'i ayarlayacağız. saat 13:00'e kadar.
+1. İş bilgileri sayfasındaki İş saatleri'nin altında Perşembe günleri için bir başlangıç ve bitiş saati seçin. Bu örnekte, sabah 8:00'i ayarlayacağız. saat 13:00'e kadar.
 
 1. Perşembe için yeni bir satır oluşturmak için seçin **+** .
 

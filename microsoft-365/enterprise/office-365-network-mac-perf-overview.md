@@ -1,5 +1,5 @@
 ---
-title: Ağ Merkezi'nde Microsoft 365 Yönetici bağlantısı
+title: Microsoft 365 Yönetici Merkezi'nde ağ bağlantısı
 ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
@@ -15,220 +15,220 @@ ms.collection:
 - Strat_O365_Enterprise
 - m365initiative-coredeploy
 description: Microsoft 365 Yönetici Merkezi'nde ağ bağlantısına genel bakış
-ms.openlocfilehash: c2f44ba97cb3d70dbe065df4a5b631f569460bff
-ms.sourcegitcommit: 584b4757f715a3eedf748858461c568f45137438
+ms.openlocfilehash: 4d23990253b96e57df04411a2207d089c90711ca
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63494548"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65621808"
 ---
-# <a name="network-connectivity-in-the-microsoft-365-admin-center"></a>Ağ Merkezi'nde Microsoft 365 Yönetici bağlantısı
+# <a name="network-connectivity-in-the-microsoft-365-admin-center"></a>Microsoft 365 Yönetici Merkezi'nde ağ bağlantısı
 
-Yönetim Microsoft 365 Yönetici şimdi kiracınız tarafından toplanan toplanan ağ bağlantısı ölçümlerini Microsoft 365 ve kiracınız içinde yalnızca yönetim kullanıcıları tarafından  görüntülemeye hazır.
+Microsoft 365 Yönetici Merkezi artık Microsoft 365 kiracınızdan toplanan toplu ağ bağlantısı ölçümlerini içerir ve yalnızca kiracınızdaki yönetici kullanıcılar tarafından görüntülenebilir.
 
 > [!div class="mx-imgBorder"]
 > ![Ağ bağlantısı test aracı.](../media/m365-mac-perf/m365-mac-perf-admin-center.png)
 
-**Ağ değerlendirmeleri ve** **ağ içgörüleri**, Durum Bilgileri Microsoft 365 Yönetici **Merkezi'nde | Ağ bağlantısı**.
+**Ağ değerlendirmeleri** ve **ağ içgörüleri** sistem **durumu | altındaki Microsoft 365 Yönetici Merkezi'nde görüntülenir Ağ bağlantısı**.
 
 > [!div class="mx-imgBorder"]
 > ![Ağ performansı sayfası.](../media/m365-mac-perf/m365-mac-perf-page-nav.png)
 
 >[!NOTE]
->Yönetim Merkezi'nde ağ bağlantısı WW Ticari ve Almanya'daki kiracıları destekler ancak Orta, GCC Yüksek, DoD GCC Çin'de bulunan kiracıları desteklemez.
+>Yönetim Merkezi'ndeki ağ bağlantısı WW Ticari ve Almanya'daki kiracıları destekler, ancak Orta, GCC Yüksek, DoD veya Çin GCC desteklemez.
 
-Ağ performansı sayfasına ilk kez göz atsanız, genel ağ performansının haritasını, tüm kiracıyı kapsamış olan ağ değerlendirmesini, kullanıcılarının yüzdesini yerinde uzaktan çalışan kullanıcılarının yüzdesini ve daha fazla araştırma yapmak üzere geçerli sorunların listesini görmek için konumlarınızı yapılandırmanız gerekir. Genel bakış bölmesinde, belirli ağ performansı ölçümlerini ve sorunları konuma göre görmek için detaya inebilirsiniz. Daha fazla bilgi için Bkz[. Merkezi'nde ağ Microsoft 365 Yönetici genel bakış](#network-connectivity-overview-in-the-microsoft-365-admin-center).
+Ağ performansı sayfasına ilk gittiğinizde, genel ağ performansı haritasını, kiracının tamamının kapsamına alınmış bir ağ değerlendirmesinin, uzaktan çalışan kullanıcılarınızın yüzdesini ve daha fazla araştırma yapmak ve/veya araştırmak için geçerli sorunların listesini görmek için konumlarınızı yapılandırmanız gerekir. Genel bakış bölmesinden, konuma göre belirli ağ performansı ölçümlerini ve sorunlarını görüntülemek için detaya gidebilirsiniz. Daha fazla bilgi için [Microsoft 365 Yönetici Merkezi'nde ağ performansına genel bakış](#network-connectivity-overview-in-the-microsoft-365-admin-center) bölümüne bakın.
 
-Ağ bağlantısı sayfasına erişmek için, ağ bağlantısının içinde kuruluşun yöneticisi Microsoft 365. Rapor Okuyucusu yönetim rolü, bu bilgilere okuma erişimine sahip olacak. Konumları ve ağ bağlantısının diğer öğelerini yapılandırmak için, yöneticinin Hizmet Desteği Yöneticisi rolüne sahip olması gerekir.
+Ağ bağlantısı sayfasına erişmek için Microsoft 365 içindeki kuruluşun yöneticisi olmanız gerekir. Rapor Okuyucusu yönetim rolü bu bilgilere okuma erişimine sahip olacaktır. Ağ bağlantısının konumlarını ve diğer öğelerini yapılandırmak için bir yöneticinin Hizmet Desteği Yöneticisi rolüne sahip olması gerekir.
 
-## <a name="pre-requisites-for-network-connectivity-assessments-to-appear"></a>Ağ bağlantısı değerlendirmeleri için önkkullar
+## <a name="pre-requisites-for-network-connectivity-assessments-to-appear"></a>Ağ bağlantısı değerlendirmelerinin görünmesi için önkoşullar
 
-Kullanmaya başlarken, Windows Konum Hizmetleri kullanan cihazlardan otomatik olarak veri toplamak için konum kabul ayarınızı seçin, konum verilerini eklemek veya karşıya yüklemek için Konumlar listeniz'e gidin veya ofis konumlarından Microsoft 365 ağ bağlantısı testini çalıştırın. Ofis konumu bilgileri için bu üç seçenek aşağıda ayrıntılı olarak verilmiştir. Kuruluş genelinde ağ bağlantısı değerlendirilirken belirli ofis konumlarında ağ tasarım iyileştirmeleri yapılması gerekir. Her ofis konumu için ağ bağlantısı bilgileri, bu konumlar belirlenene kadar sağlanır. Ofis konumlardan ağ değerlendirmeleri almak için üç seçenek vardır:
+Başlamak için Konum Servisleri'ni Windows kullanarak cihazlardan otomatik olarak veri toplamak için konum kabul etme ayarınızı açın, konum verilerini eklemek veya karşıya yüklemek için Konumlar listenize gidin veya ofis konumlarınızdan Microsoft 365 ağ bağlantısı testini çalıştırın. Office konum bilgileri için bu üç seçenek aşağıda ayrıntılı olarak yer almaktadır. Ağ bağlantısı kuruluş genelinde değerlendirilebilir ancak belirli ofis konumları için ağ tasarımı geliştirmeleri yapılması gerekir. Bu konumlar belirlendikten sonra her ofis konumu için ağ bağlantısı bilgileri sağlanır. Ofis konumlarınızdan ağ değerlendirmeleri almak için üç seçenek vardır:
 
-### <a name="1-enable-windows-location-services"></a>1. Konum Windows'i etkinleştirme
+### <a name="1-enable-windows-location-services"></a>1. Windows Konum Hizmetlerini etkinleştirme
 
-Bu seçenek için, önkulları destekleyen her ofis konumda en az iki bilgisayar çalıştırabilirsiniz. OneDrive sürümün Windows her bilgisayara güncel ve yüklü olması gerekir. Yeni sürümler hakkında OneDrive için bkz. [OneDrive bakın](https://support.office.com/article/onedrive-release-notes-845dcf18-f921-435e-bf28-4e24b95e5fc0). Ağ ölçülerin yakın gelecekte diğer istemci Office 365 eklenebilir.
+Bu seçenek için, ön koşulları destekleyen her ofis konumunda çalışan en az iki bilgisayar olmalıdır. Windows sürüm için OneDrive güncel olmalı ve her bilgisayara yüklenmelidir. OneDrive sürümler hakkında daha fazla bilgi için [OneDrive sürüm notlarına](https://support.office.com/article/onedrive-release-notes-845dcf18-f921-435e-bf28-4e24b95e5fc0) bakın. Ağ ölçümlerinin yakında diğer Office 365 istemci uygulamalarına eklenmesi planlanıyor.
 
-Windows Makinelerde Konum Hizmeti'nin izinli olması gerekir. Bunu test etmek için **Haritalar çalıştırabilirsiniz**. Özelliği olan tek bir makinede **etkinleştirilebilir Ayarlar | Gizlilik | Uygulamaların** konumunuza _erişmesine izin ver ayarının etkinleştirildikten_ sonra konumu. Windows Konum Hizmetleri onayı, _LetAppsAccessLocation_ ayarıyla MDM veya Grup İlkesi kullanılarak bilgisayarlara dağıtılabilir.
+Windows Konum Hizmeti makinelerde onaylanmalıdır. **Haritalar** uygulamasını çalıştırıp kendinizi bularak bunu test edebilirsiniz. Ayarlar | ile tek bir makinede etkinleştirilebilir **Gizlilik |** _Uygulamaların konumunuza erişmesine izin ver_ ayarının etkinleştirildiği konum. Windows Konum Hizmetleri onayı, MDM kullanılarak bilgisayarlara dağıtılabilir veya _LetAppsAccessLocation_ ayarıyla grup ilkesi.
 
-Yönetim Merkezi'nde konum eklemenize gerek yok, çünkü bunlar şehir çözünürlüğünde otomatik olarak tanımlandıklarından, bu yöntemle konum eklemenize gerek olmaz. Aynı şehir içinde birden çok ofis konumu Konum Hizmetleri'nin kullanımı Windows gösterilmez. Konum bilgileri en yakın 300 metreye 300 metre yuvarlanarak daha hassas konum bilgilerine erişilemez.
+Şehir çözünürlüğünde otomatik olarak tanımlandıkları için Yönetim Merkezi'ne bu yöntemle konum eklemeniz gerekmez. Windows Konum Hizmetleri kullanılırken aynı şehir içindeki birden çok ofis konumu gösterilmez. Konum bilgileri, daha hassas konum bilgilerine erişilemeyecek şekilde en yakın 300 metreye 300 metre yuvarlanmış olur.
 
-Makinelerde ethernet Wi-Fi yerine ağ bağlantısı olması gerekir. Ethernet kablosu olan makinelerde doğru konum bilgileri olmayabilir.
+Makinelerin ethernet kablosu yerine Wi-Fi ağı olmalıdır. Ethernet kablosu olan makinelerin konum bilgileri doğru değildir.
 
-Bu önkullar karşı ondan 24 saat sonra ölçü örnekleri ve ofis konumları görünmeye başlayacaktır.
+Ölçüm örnekleri ve ofis konumları, bu önkoşullar karşılandıktan 24 saat sonra görünmeye başlamalıdır.
 
 ### <a name="2-add-locations-and-provide-lan-subnet-information"></a>2. Konum ekleme ve LAN alt ağı bilgilerini sağlama
 
-Bu seçenek için konum Windows ya da hizmet Wi-Fi gerekli değildir. OneDrive sürümünüz Windows güncel olmalı ve bu konumda en az bir bilgisayara yüklü olmalıdır.
+Bu seçenek için konum hizmetlerini Windows veya Wi-Fi gerekli değildir. Windows sürümü için OneDrive güncel olmalı ve konumdaki en az bir bilgisayara yüklenmiş olmalıdır.
 
-Konumlar sayfasına konumlar da eklemek veya bu **konumları bir** CSV dosyasından içeri aktarın. Eklenen konumlar office LAN alt ağ bilginizi de içermeli. Konum ekleme veya düzenleme iletişim kutusunda bir dizi LAN alt ağı ve bir dizi genel çıkış IP alt ağı belirtebilirsiniz. LAN alt ağları gereklidir ve sonuçların göster olması için, bunlardan biri alınan bir ağ değerlendirmesinde LAN alt ağ özniteliğiyle eşleşmesi gerekir. Süper ağlar destek desteklemez, bu nedenle LAN alt ağın tam olarak eşleşmesi gerekir.
+**Ayrıca konumlar sayfasına** konum eklediğinizden veya bunları csv dosyasından içeri aktardığınızdan emin olun. Eklenen konumlar office LAN alt ağ bilgilerinizi içermelidir. Konum ekleme veya düzenleme iletişim kutusunda, bir dizi LAN alt ağı ve bir dizi genel çıkış IP alt ağı belirtebilirsiniz. LAN alt ağları gereklidir ve sonuçların gösterilmesi için bunlardan birinin alınan ağ değerlendirmesinde LAN alt ağı özniteliğiyle eşleşmesi gerekir. Süper ağlar desteklenmez, bu nedenle LAN alt ağı tam olarak eşleşmelidir.
 
-LAN alt ağlarının çoğunlukla RFC1918'da tanımlandığı gibi özel IP adresi aralıkları olduğunu, örneğin genel IP adreslerinin LAN alt ağları olarak kullanımının yanlış olma olasılığı olduğunu unutmayın. İletişim kutusunda, seçimnizi yapacak son ağ değerlendirme testlerinde görülen LAN alt ağlarının önerileri görüntülenir.
+LAN alt ağları genellikle RFC1918'de tanımlandığı gibi, LAN alt ağları olarak genel IP adreslerinin kullanımının yanlış olması gibi özel IP adresi aralıklarıdır. İletişim kutusunda, seçebilmeniz için kuruluşunuz için son ağ değerlendirme testlerinde görülen LAN alt ağlarına ilişkin öneriler gösterilir.
 
-Genel çıkış IP adresleri eklersiniz, bunlar ikincil farklıtıcı olarak kullanılır ve aynı LAN alt ağı IP adresi aralıklarını kullanan birden çok site varsa bunların amacıdır. Test sonuçlarınızı göstermek için, genel çıkış IP adresi aralıklarını boş bırakarak başlamanız gerekir. Bir test sonucu dahil edilirse, hem LAN alt ağı IP adresi aralıklarından hem de genel çıkış IP adresi aralıklarından birini eşleşmesi gerekir.
+Genel çıkış IP adresleri eklerseniz, bunlar ikincil bir ayırıcı olarak kullanılır ve aynı LAN alt ağı IP adresi aralıklarını kullanan birden çok siteniz olduğunda için tasarlanmıştır. Test sonuçlarınızın göründüğünden emin olmak için genel çıkış IP adresi aralıklarını boş bırakarak işe başlamanız gerekir. Bunlar dahil edilirse, test sonucunun hem LAN alt ağı IP adresi aralıklarından hem de genel çıkış IP adresi aralıklarından biriyle eşleşmesi gerekir.
 
-Bu seçenek, bir şehir içinde tanımlanmış birden fazla ofislere sahip olmak için size olanak sağlar.
+Bu seçenek, bir şehirde birden çok ofis tanımlamanızı sağlar.
 
-İstemci makinelerinden gelen tüm test ölçüleri, girdiğiniz ofis konumu ayrıntılarıyla ilişkili LAN alt ağı bilgilerini içerir. Bu önkullar karşı ondan 24 saat sonra ölçü örnekleri ve ofis konumları görünmeye başlayacaktır.
+İstemci makinelerinden alınan tüm test ölçümleri, girdiğiniz ofis konumu ayrıntılarıyla ilişkili LAN alt ağ bilgilerini içerir. Ölçüm örnekleri ve ofis konumları, bu önkoşullar karşılandıktan 24 saat sonra görünmeye başlamalıdır.
 
-### <a name="3-manually-gather-test-reports-with-the-microsoft-365-network-connectivity-test-tool"></a>3. Test raporlarını el ile Microsoft 365 bağlantı test aracıyla toplama
+### <a name="3-manually-gather-test-reports-with-the-microsoft-365-network-connectivity-test-tool"></a>3. Microsoft 365 ağ bağlantısı test aracıyla test raporlarını el ile toplayın
 
-Bu seçenek için her konumdan bir kişiyi tanımlamamız gerekir. Yöneticiden, yönetim [Microsoft 365 olan](https://connectivity.office.com) bir Windows makinede ağ bağlantısı testini görüntülemelerini iste. Web sitesinde, sonuçları görmek istediğiniz kuruluşa Office 365 hesabıyla oturum açmaları gerekir. Ardından Test **çalıştır'a tıklamaları gerekir**. Test sırasında indirilen bir Bağlantı testi EXE'si vardır. Bunu açmaları ve yürütmeleri gerekir. Testler tamamlandıktan sonra, test sonucu Yönetim Merkezi'ne yükler.
+Bu seçenek için her konumda bir kişiyi tanımlamanız gerekir. Yönetici izinlerine sahip oldukları bir Windows makinesinde Microsoft 365 [ağ bağlantısı testine](https://connectivity.office.com) göz atmalarını isteyin. Web sitesinde, sonuçları görmek istediğiniz kuruluş için Office 365 hesaplarında oturum açmaları gerekir. Ardından **Testi çalıştır'a** tıklamaları gerekir. Test sırasında indirilmiş bir Bağlantı testi EXE'sı vardır. Bunu açıp yürütmeleri gerekir. Testler tamamlandıktan sonra test sonucu Yönetim Merkezi'ne yüklenir.
 
-Test raporları, LAN alt ağı bilgileriyle eklenmişse bir konuma bağlıdır, aksi takdirde yalnızca şehir konumda gösterilir.
+Test raporları LAN alt ağı bilgileriyle eklenmişse bir konuma bağlanır, aksi takdirde yalnızca şehir konumunda gösterilir.
 
-Ölçü örnekleri ve ofis konumları, test raporu tamamlandıktan 2-3 dakika sonra görünmeye başlayacaktır. Daha fazla bilgi için bkz[. Microsoft 365 bağlantı testi.](office-365-network-mac-perf-onboarding-tool.md)
+Ölçüm örnekleri ve ofis konumları, test raporu tamamlandıktan 2-3 dakika sonra görünmeye başlamalıdır. Daha fazla bilgi için bkz. [ağ bağlantısı test Microsoft 365](office-365-network-mac-perf-onboarding-tool.md).
 
 > [!NOTE]
-> Şu anda, AĞ bağlantısı Microsoft 365 office konumlarınızı eklerken, Microsoft 365 yönetim merkezi alt ağları için yalnızca IPv4 adresleri sebilirsiniz. Egress IP adreslerinin IPv4'ü kullanması gerekir.
+> Şu anda, ofis konumlarınızı Microsoft 365 yönetim merkezi Microsoft 365 ağ bağlantısına eklerken, LAN alt ağlarınız için yalnızca IPv4 adresleri sağlayabilirsiniz. Egress IP adresleri IPv4 kullanmalıdır.
 
-## <a name="how-do-i-use-this-information"></a>Bu bilgileri nasıl kullanabilirim?
+## <a name="how-do-i-use-this-information"></a>Bu bilgileri Nasıl yaparım? kullanıyorsunuz?
 
-**Ağ içgörüleri**, bunların ilgili performans önerileri ve ağ değerlendirmeleri ofis konumlarında ağ çevrelerini tasarlamaya yardımcı olmak için tasarlanmıştır. Her içgörü, kullanıcıların kiracınıza eriştiği her coğrafi konumda belirli bir genel ağ sorununa yönelik performans özellikleri hakkında ayrıntılar sağlar. **Her ağ içgörüsi** için performans önerileri, ağ bağlantısını geliştirmek ve ağ bağlantısıyla ilgili kullanıcı deneyimini geliştirmek için Microsoft 365 değişiklikler sunar. Ağ değerlendirmesi, ağ bağlantısının kullanıcı deneyimini nasıl etkile olduğunu gösterir ve bu da farklı kullanıcı konumu ağ bağlantılarının karşılaştırılmasına olanak sağlar.
+**Ağ içgörüleri**, ilgili performans önerileri ve ağ değerlendirmeleri, ofis konumlarınız için ağ çevreleri tasarlamaya yardımcı olmak için tasarlanmıştır. Her içgörü, kullanıcıların kiracınıza eriştiği her coğrafi konum için belirli bir ortak ağ sorununun performans özellikleri hakkında ayrıntılar sağlar. Her ağ içgörüsü için **performans önerileri**, Microsoft 365 ağ bağlantısıyla ilgili kullanıcı deneyimini geliştirmek için yapabileceğiniz belirli ağ mimarisi tasarım değişiklikleri sunar. Ağ değerlendirmesi, farklı kullanıcı konumu ağ bağlantılarının karşılaştırılması için ağ bağlantısının kullanıcı deneyimini nasıl etkilediğini gösterir.
 
-**Ağ değerlendirmeleri** , birçok ağ performansı ölçümünü toplamını, 0 - 100 arasında bir nokta değeriyle temsil edilen kurumsal ağ sistem durumunun anlık görüntüsüne tasarlanmıştır. Ağ değerlendirmeleri hem kiracının tamamını hem de kullanıcıların kiracınıza bağladığı her coğrafi konumun kapsamına girmektedir ve Microsoft 365 yöneticilerine, kuruluş ağ durumunu anında anlamanın ve herhangi bir genel ofis konumuyla ilgili ayrıntılı rapora hızla gitmeleri için kolay bir yol sağlar.
+**Ağ değerlendirmeleri** , birçok ağ performansı ölçümünün toplamını kurumsal ağ durumunuzun anlık görüntüsüne dönüştürür ve 0 ile 100 arasında bir puan değeriyle gösterilir. Ağ değerlendirmelerinin kapsamı hem kiracının tamamına hem de kullanıcıların kiracınıza bağlandığı her coğrafi konum için belirlenir ve Microsoft 365 yöneticilerine kuruluşun ağ durumunu anında kavramanın ve herhangi bir genel ofis konumu için ayrıntılı bir raporun detayına gitmenin kolay bir yolunu sunar.
 
-Birden çok ofis konumu ve trivi olmayan ağ çevre mimarisine sahip karmaşık kuruluşlar, Microsoft 365'a ilk ekleme sırasında veya kullanım büyümesiyle bulunan ağ performansı sorunlarını düzeltmek için bu bilgiden yararlanabilir. Bu genellikle E-posta hizmeti kullanan küçük işletmeler Microsoft 365 zaten basit ve doğrudan ağ bağlantısı olan kuruluşlar için gerekli değildir. 500'den fazla kullanıcısı ve birden çok ofis konumu olan kuruluşların en çok yararlanması bek gerekmektedir.
+Birden çok ofis konumuna ve önemsiz olmayan ağ çevre mimarilerine sahip karmaşık kuruluşlar, Microsoft 365 ilk katılımları sırasında veya kullanım büyümesiyle birlikte bulunan ağ performansı sorunlarını gidermek için bu bilgilerden yararlanabilir. Bu genellikle Microsoft 365 kullanan küçük işletmeler veya zaten basit ve doğrudan ağ bağlantısı olan kuruluşlar için gerekli değildir. 500'den fazla kullanıcısı ve birden çok ofis konumu olan kuruluşların en çok avantajlı olması beklenmektedir.
 
-## <a name="enterprise-network-connectivity-challenges"></a>Enterprise bağlantısının zorluklarını aşabilirsiniz
-
-> [!div class="mx-imgBorder"]
-> ![Müşteri ağına buluta.](../media/m365-mac-perf/m365-mac-perf-first-last-mile.png)
-
-Birçok kuruluşta zamanla büyüme olan ve öncelikli olarak çoğu web sitesi önceden bilinemeyen ve güvenilmeyen çalışan İnternet web sitesi erişimini barındıracak şekilde tasarlanmış ağ çevre yapılandırmaları vardır. Burada en gerekli ve gerekli odak, bu bilinmeyen web sitelerinden kötü amaçlı yazılım ve kimlik avı saldırılarından kaçınmaktır. Bu ağ yapılandırma stratejisi, güvenlik amacıyla yardımcı olmakla birlikte, kullanıcı performansının Microsoft 365 deneyiminde performans düşüşüne yol açabilir.
-
-## <a name="how-we-can-solve-these-challenges"></a>Bu güçlükleri nasıl çözebiliriz?
-
-Kuruluşlar, temel bağlantı ilkelerine uygun olarak ve Merkezi Merkezi [ağ Office 365](./microsoft-365-network-connectivity-principles.md) kullanarak genel kullanıcı deneyimini Microsoft 365 Yönetici ortamını güvenlik altına atayabilir. Çoğu durumda, bu genel ilkelere uygun olarak son kullanıcı gecikme süresi, hizmet güvenilirliği ve genel performans üzerinde önemli olumlu bir Microsoft 365.
-
-Microsoft'un bazen büyük kurumsal müşteriler için Microsoft 365 performans sorunlarını araştırması istenebilir ve bu sorunların sık sık müşterinin ağ çevre altyapısıyla ilgili kök bir nedeni vardır. Bir müşteri ağı çevre sorununa ilişkin yaygın bir kök neden bulunduğu zaman bunu tanımlayan basit test ölçülerini tanımlamak için aramamız gerekir. Belirli bir sorunu tanımlayan ölçü eşiğine sahip bir test değerlidir, çünkü herhangi bir konumda aynı ölçümü sınayıp bu kök nedenin orada olup olmadığını an ederiz ve bunu yöneticiyle bir ağ içgörü olarak paylaşabiliriz.
-
-Bazı ağ içgörüleri yalnızca daha fazla araştırma yapılması gereken bir soruna işaret ediyor. Kök nedenini düzeltmek için belirli bir düzeltme eylemi göstermek için yeterli testlerin bulunduğu ağ içgörüleri, önerilen bir **eylem olarak listelenir**. Bu öneriler, önceden belirlenen bir eşiğin dışında olan değerleri ortaya koyan canlı ölçümlere dayalı olarak, ortamınıza özgü olması nedeniyle genel en iyi uygulama önerilerden çok daha değerlidir ve önerilen değişiklikler yapıldıktan sonra gerçek iyileştirmeyi gösterir.
-
-## <a name="network-connectivity-overview-in-the-microsoft-365-admin-center"></a>Ağ Bağlantısı Merkezi'nde ağ Microsoft 365 Yönetici görünümü
-
-Microsoft'un, çeşitli masaüstü Office web istemcilerinden gelen ağ ölçüleri vardır ve bu ölçümler microsoft tarafından Microsoft 365. Bu ölçümler şimdi, Genel Merkezi'nin Ağ bağlantısı sayfasında gösterilen ağ mimarisi tasarım içgörüleri ve ağ  değerlendirmesi sağlamak Microsoft 365 Yönetici kullanılır.
-
-Varsayılan olarak, ağ ölçüleriyle ilişkili yaklaşık konum bilgileri istemci cihazlarının bulunduğu şehri ayarlar. Her konumdaki ağ değerlendirmesi renkle gösterilir ve her konumdaki göreli kullanıcı sayısı dairenin boyutuyla gösterilir.
+## <a name="enterprise-network-connectivity-challenges"></a>ağ bağlantısı sorunlarını Enterprise
 
 > [!div class="mx-imgBorder"]
-> ![Ağ içgörüleri genel bakış haritası.](../media/m365-mac-perf/m365-mac-perf-overview-map.png)
+> ![Müşteri ağından buluta.](../media/m365-mac-perf/m365-mac-perf-first-last-mile.png)
 
-Genel bakış sayfası, tüm ofis konumlarına müşteri için ağ değerlendirmesini de ağırlıklı ortalama olarak gösterir.
+Birçok kuruluşun ağ çevre yapılandırmaları vardır. Bu yapılandırmalar zamanla büyümüştür ve öncelikli olarak çoğu web sitesinin önceden bilinmediği ve güvenilmeyen çalışan İnternet web sitesi erişimini barındıracak şekilde tasarlanmıştır. Geçerli ve gerekli odak, bu bilinmeyen web sitelerinden gelen kötü amaçlı yazılım ve kimlik avı saldırılarından kaçınmaktır. Bu ağ yapılandırma stratejisi, güvenlik amacıyla yararlı olsa da Microsoft 365 kullanıcı performansının ve kullanıcı deneyiminin bozulmasına neden olabilir.
+
+## <a name="how-we-can-solve-these-challenges"></a>Bu zorlukları nasıl çözebiliriz?
+
+Kuruluşlar, [Office 365 bağlantı ilkelerini](./microsoft-365-network-connectivity-principles.md) izleyerek ve Microsoft 365 Yönetici Merkezi ağ bağlantısı özelliğini kullanarak genel kullanıcı deneyimini geliştirebilir ve ortamlarının güvenliğini sağlayabilir. Çoğu durumda, bu genel ilkelerin izlenerek son kullanıcı gecikme süresi, hizmet güvenilirliği ve Microsoft 365 genel performansı üzerinde önemli bir olumlu etkisi olacaktır.
+
+Microsoft'un bazen büyük kurumsal müşteriler için Microsoft 365 ile ilgili ağ performansı sorunlarını araştırması istenir ve bunların genellikle müşterinin ağ çevre altyapısıyla ilgili temel bir nedeni vardır. Müşteri ağ çevre sorununun yaygın bir kök nedeni bulunduğunda, basit test ölçümlerini belirlemeye çalışırız. Belirli bir sorunu tanımlayan bir ölçüm eşiğine sahip test değerlidir çünkü aynı ölçümü herhangi bir konumda test edebilir, bu kök nedenin orada bulunup bulunmadığını söyleyebilir ve bunu yöneticiyle ağ içgörüsü olarak paylaşabiliriz.
+
+Bazı ağ içgörüleri yalnızca daha fazla araştırma gerektiren bir sorunu gösterir. Kök nedeni düzeltmek için belirli bir düzeltme eylemini göstermek için yeterli teste sahip olduğumuz bir ağ içgörüsü **önerilen eylem** olarak listelenir. Önceden belirlenmiş eşiğin dışında kalan değerleri ortaya koyan canlı ölçümlere dayalı bu öneriler, ortamınıza özgü olduklarından genel en iyi deneyim önerilerinden çok daha değerlidir ve önerilen değişiklikler yapıldıktan sonra gerçek iyileştirmeyi gösterir.
+
+## <a name="network-connectivity-overview-in-the-microsoft-365-admin-center"></a>Microsoft 365 Yönetici Merkezi'nde ağ bağlantısına genel bakış
+
+Microsoft, Microsoft 365 çalışmasını destekleyen çeşitli Office masaüstü ve web istemcilerinden gelen mevcut ağ ölçümlerine sahiptir. Bu ölçümler artık ağ mimarisi tasarım içgörüleri ve Microsoft 365 Yönetici Merkezi'ndeki **Ağ bağlantısı** sayfasında gösterilen bir ağ değerlendirmesi sağlamak için kullanılıyor.
+
+Varsayılan olarak, ağ ölçümleriyle ilişkili yaklaşık konum bilgileri istemci cihazlarının bulunduğu şehri tanımlar. Her konumdaki ağ değerlendirmesi renkle gösterilir ve her konumdaki göreli kullanıcı sayısı dairenin boyutuyla temsil edilir.
+
+> [!div class="mx-imgBorder"]
+> ![Ağ içgörülerine genel bakış haritası.](../media/m365-mac-perf/m365-mac-perf-overview-map.png)
+
+Genel bakış sayfasında ayrıca müşteri için ağ değerlendirmesi tüm ofis konumlarında ağırlıklı ortalama olarak gösterilir.
 
 > [!div class="mx-imgBorder"]
 > ![Ağ değerlendirmesi.](../media/m365-mac-perf/m365-mac-perf-overview-score.png)
 
-Konumlar sekmesinde filtrelenemez, sıralanın ve düzenlenemez konumların tablo **görünümünü görüntüleyebilirsiniz** . Belirli önerilere sahip konumlar tahmini bir gecikme süresini de içerebilir. Bu, aynı şehirde bulunan tüm kuruluşlarda kuruluş kullanıcılarının orta gecikme süresini alarak ve orta gecikme süresini çıkararak hesaplanır.
+**Konumlar** sekmesinde filtrelenebilen, sıralanıp düzenlenebilen konumların tablo görünümünü görüntüleyebilirsiniz. Belirli önerilere sahip konumlar tahmini gecikme süresi iyileştirmesi de içerebilir. Bu, kuruluş kullanıcılarınızın konumundaki ortanca gecikme süresi alınarak ve aynı şehirdeki tüm kuruluşlar için ortanca gecikme süresi çıkarılarak hesaplanır.
 
 > [!div class="mx-imgBorder"]
 > ![Ağ içgörüleri konumları.](../media/m365-mac-perf/m365-mac-perf-locations.png)
 
-## <a name="remote-worker-assessment-and-user-connection-metrics"></a>Uzaktan çalışan değerlendirme ve kullanıcı bağlantısı ölçümleri
+## <a name="remote-worker-assessment-and-user-connection-metrics"></a>Uzaktan çalışan değerlendirmesi ve kullanıcı bağlantısı ölçümleri
 
-Ağ trafiği günlüklerini uzak veya site içi kullanıcılar olarak sınıflandırıyor ve genel bakış bölmesinin kullanıcı bağlantısı ölçümleri bölümünde yüzdelerini gösteriyoruz. Uzak kullanıcılarınız olduğu şehirler için, o konumun sayfasını asanız konuma özgü uzak ağ değerlendirme puanı bulursanız. Konum listesi hem ofis konumlarını hem de uzak çalışan şehirlerini içerir; bu şehir filtre ve sıralanmış olabilir. Uzaktan çalışan değerlendirme puanı sağlar ve bu puanın, çalışma puanı, Exchange ve SharePoint değerlendirme Teams.
+Ağ trafiği günlüklerini uzak veya yerinde kullanıcılar olarak sınıflandırır ve yüzdelerini genel bakış bölmesinin kullanıcı bağlantısı ölçümleri bölümünde gösteririz. Uzak kullanıcılarınız olan şehirler için, bu konumun sayfasını açtığınızda konuma özgü uzak ağ değerlendirme puanını bulursunuz. Konumlar listesinde hem ofis konumları hem de uzak çalışan şehirleri bulunur ve bunlar filtrelenebilir ve sıralanabilir. Exchange, SharePoint ve Teams puan dökümüyle uzaktan çalışan değerlendirme puanını sağlarız.
 
-Ev kullanıcısı ağı içgörüleri şehir düzeyinde bir araya toplanır ve raporlandığı gibi, en az 5 uzak çalışana sahip şehirlerle sınırlıdır. Evden çalışan çalışanları tanımlamaz.
+Ev kullanıcısı ağ içgörüleri, şehir düzeyinde toplanır ve raporlanır ve en az 5 uzak çalışanı olan şehirlerle sınırlıdır. Evden çalışan bireysel çalışanları tanımlıyoruz.
 
-Öte yandan, konumlar otomatik olarak site içinde veya uzak olarak sınıflandırılır; bununla birlikte, tüm site içi çıkış IP adreslerinizi el ile girerek %100 sınıflandırmayı silebilirsiniz. Bu yönlendirmeye gitmek için karar verirsiniz, Tüm çıkış IP adreslerinizi  ekledikten sonra Konumlar ve veri dışarı Ayarlar yerinde çıkış IP adreslerini el ile gir onay kutusunu denetlemeniz gerekir. Bu olduğunda, çıkış IP adreslerinden çıkış IP adreslerinden gelen tüm ağ trafiği günlükleri her zaman ofis olarak sınıflandırılır ve diğer tüm çıkış IP adresleri uzak olarak sınıflandırılır.
+Konumlar otomatik olarak yerinde veya uzak olarak sınıflandırılır, ancak %100 sınıflandırma sağlamak için tüm yerinde çıkış IP adreslerinizi el ile girme seçeneğiniz vardır. Bu yola gitmeye karar verirseniz, tüm çıkış IP adreslerinizi ekledikten sonra Konumlar Ayarlar açılır öğesinde **Tüm yerinde çıkış IP adreslerini el ile girin** onay kutusunu işaretlemeniz gerekir. Bu işlem tamamlandığında, yerinde olarak işaretlediğiniz çıkış IP adreslerinden gelen tüm ağ trafiği günlükleri her zaman ofis olarak sınıflandırılır ve diğer tüm çıkış IP adresleri uzak olarak sınıflandırılır.
 
-## <a name="specific-office-location-network-performance-summary-and-insights"></a>Belirli ofis konumu ağ performansı özeti ve öngörüleri
+## <a name="specific-office-location-network-performance-summary-and-insights"></a>Belirli ofis konumu ağ performansı özeti ve içgörüleri
 
-Ofis konumu seçerek, ofis konumunun ölçümlerinden belirlenen ağ çıkışlarının ayrıntılarını gösteren konuma özgü bir özet sayfası açılır.
+Bir ofis konumu seçildiğinde, o ofis konumuna ilişkin ölçümlerden tanımlanan ağ çıkışının ayrıntılarını gösteren konuma özgü bir özet sayfası açılır.
 
 > [!div class="mx-imgBorder"]
 > ![Konuma göre ağ içgörüleri ayrıntıları.](../media/m365-mac-perf/m365-mac-perf-locations-plan-overview.png)
 
-Konumda yer alan kuruluş kullanıcıları için çevre ağının haritası, şu öğelerin birkaçı veya hepsiyle birlikte gösterilir:
+Konumdaki kuruluş kullanıcılarınız için çevre ağının haritası şu öğelerin bir kısmı veya tamamıyla gösterilir:
 
-- **Office** konumu - Baktayır sayfa için ofis konumu
-- **Ağ çevresi** - Ofis bulunduğu konumdan bağlantıların kaynak IP Adresi konumu. Bu, coğrafi IP konum veritabanlarının doğruluğuna bağlıdır
-- **Exchange en iyi hizmet ön kapı** - Bu ofisteki Exchange kullanıcıların bağlanması gereken önerilen ön kapılardan biri
-- **Exchange en iyi ön kapı** - kullanıcıların Exchange bağlı olduğu, ancak önerilmez bir hizmet ön kapı
-- **SharePoint en iyi hizmet ön kapı** - Bu ofisteki SharePoint kullanıcıların bağlanması gereken önerilen ön kapılardan biri
-- **SharePoint en iyi hizmet ön** SharePoint - Kullanıcıların bağlı olduğu, ancak önerilen bir SharePoint hizmet ön kapı
-- **DNS tekrarlayıcı çözümleyici sunucusu** - Algılayan DNS yeniden doğrulayıcı çözümleyicinin coğrafi IP veritabanından gelen konum Exchange Online (varsa)
-- **Ara sunucunuz** - Algılanan proxy sunucusunun coğrafi IP veritabanındaki konum (varsa)
+- **Office konumu** - Baktığınız sayfanın ofis konumu
+- **Ağ çevresi** - Ofis konumundan bağlantıların kaynak IP Adresinin konumu. Bu, coğrafi IP konum veritabanlarının doğruluğuna bağlıdır
+- **en uygun hizmet ön kapısı Exchange** - Bu ofis konumundaki kullanıcıların bağlanması gereken önerilen Exchange hizmet ön kapılarından biri
+- **Exchange en uygun ön kapı** - Kullanıcıların bağlı olduğu ancak önerilmez Exchange hizmet ön kapısı
+- **en uygun hizmet ön kapısı SharePoint** - Bu ofis konumundaki kullanıcıların bağlanması gereken önerilen SharePoint hizmet ön kapılarından biri
+- **SharePoint alt en uygun hizmet ön kapısı** - Kullanıcıların bağlı olduğu ancak önerilmez SharePoint hizmet ön kapısı
+- **DNS özyinelemeli çözümleyici sunucusu** - Exchange Online için kullanılan algılanan DNS özyinelemeli çözümleyicisinin coğrafi IP veritabanından konum (varsa)
+- Proxy sunucunuz - Algılanan **ara sunucunun** coğrafi IP veritabanından konum (varsa)
 
-Ofis konumu özet sayfası ayrıca, konumun ağ değerlendirmesini, ağ değerlendirme geçmişini, bu konumun değerlendirmesini aynı şehirde diğer müşterilere karşılaştırmayı ve ağ performansını ve güvenilirliğini geliştirmek için taahhütlerde bulunabilirsiniz belirli içgörülerin ve önerilerin listesini gösterir.
+Ofis konumu özet sayfası ayrıca konumun ağ değerlendirmesini, ağ değerlendirme geçmişini, bu konumun değerlendirmesini aynı şehirdeki diğer müşterilerle karşılaştırmayı ve ağ performansını ve güvenilirliğini artırmak için üstleyebileceğiniz belirli içgörülerin ve önerilerin listesini gösterir.
 
-Aynı şehrin müşterileri arasındaki karşılaştırmalar, tüm müşterilerin ağ hizmet sağlayıcılarına, telekomünikasyon altyapısına ve yakındaki Microsoft ağ iletişim durumu noktalarına eşit erişime sahip olması beklentilerine dayalıdır.
+Aynı şehirdeki müşteriler arasındaki karşılaştırmalar, tüm müşterilerin ağ hizmeti sağlayıcılarına, telekomünikasyon altyapısına ve yakındaki Microsoft ağ iletişim noktalarına eşit erişime sahip olması beklentisine bağlıdır.
 
-Konum adları, yeni konum eklerken veya konum çıktısı içinde var olan bir konumu düzenlerken özelleştirilebilir. Bu size istediğiniz zaman konum adlarınızı özelleştirme esnekliği sağlar. Ayrıca, doğrudan konum açılır listesine LAN alt ağlarını eklerken, seçim oynanabilir, yumuşak eşleşmeli LAN alt ağlarının bir açılan listesini gösteririz. Belirli office çıkış IP adresleri için devre adları da eklenebilir ve düzenlenebilir.
+Konum adları, yeni bir konum eklenirken veya konum açılır öğesinde mevcut bir konum düzenlenirken özelleştirilebilir. Bu, konum adlarınızı istediğiniz zaman özelleştirme esnekliği sağlar. Ayrıca, LAN alt ağlarını doğrudan konum açılır listesine eklerken, arasından seçim yapabileceğiniz, yazılımla eşleşen LAN alt ağlarının açılan listesini gösteririz. Belirli ofis çıkış IP adresleri için bağlantı hattı adları da eklenebilir ve düzenlenebilir.
 
-Ofis konumu sayfasındaki ayrıntılar sekmesi herhangi bir içgörü, öneri ve ağ değerlendirmesiyle ortaya çıktık belirli ölçü sonuçlarını gösterir. Ağ mühendislerinin kendi ortamındaki herhangi bir kısıtlama veya özel durumdaki önerileri ve faktörü doğrulaymalarını sağlar. Ayrıca bu ofis konumlarında toplanan örnekler için tahmin edilen kullanıcı sayısını, aynı zamanda bu şehrin uzak çalışanlarını da bulabilirsiniz.
+Ofis konumu sayfasındaki ayrıntılar sekmesinde içgörüler, öneriler ve ağ değerlendirmesi için kullanılan belirli ölçüm sonuçları gösterilir. Bu, ağ mühendislerinin önerileri doğrulayıp ortamlarındaki kısıtlamaları veya özellikleri dikkate almalarını sağlayan bir özelliktir. Ayrıca bu ofis konumlarında toplanan örnekler için tahmini kullanıcı sayısını ve bu şehirdeki uzak çalışanları da bulabilirsiniz.
 
 > [!div class="mx-imgBorder"]
 > ![Konuma özgü ayrıntılar.](../media/m365-mac-perf/m365-mac-perf-locations-plan-details-all.png)
 
 ## <a name="sharing-network-assessment-data-with-microsoft"></a>Ağ değerlendirme verilerini Microsoft ile paylaşma
 
-Varsayılan olarak, kurum için ağ değerlendirmeleri ve ağ içgörüleri Microsoft çalışanları ile paylaşılır. Bu, personelinizin kişisel verilerini değil, yalnızca ofis konumlarına ilişkin yönetim merkezinde gösterilen belirli ağ değerlendirme ölçümlerini ve ağ içgörülerini içerir. Ayrıca ofis konum adları veya sokak adresleri de dahil değildir, dolayısıyla onlara tartışmak istediğiniz ofisin şehrini ve destek kimliğini söylemeniz gerekir. Bu kapalı olursa, ağ bağlantınızı tartışırken microsoft mühendisleri bu bilgilerin hiçbirini görüntüleyemz. Bu ayarın etkinleştirilmesi, yalnızca gelecekte etkinleştirdikten sonra başlayacak olan verileri paylar.
+Varsayılan olarak, kuruluşunuz ve ağ içgörüleri için ağ değerlendirmeleri Microsoft çalışanlarıyla paylaşılır. Bu, personelinizin kişisel verilerini içermez, yalnızca ofis konumlarınız için yönetim merkezinde gösterilen belirli ağ değerlendirme ölçümlerini ve ağ içgörülerini içerir. Ayrıca, ofis konum adlarınızı veya sokak adreslerinizi içermez, bu nedenle onlara tartışmak istediğiniz ofisin şehrini ve destek kimliğini söylemeniz gerekir. Bu kapatılırsa, ağ bağlantınızı tartıştığınız Microsoft mühendisleri bu bilgilerin hiçbirini görüntüleyemez. Bu ayarın etkinleştirilmesi yalnızca etkinleştirildikten sonraki günden itibaren gelecekteki verileri paylaşır.
 
-## <a name="csv-import-for-lan-subnet-office-locations"></a>LAN alt ağ ofis konumları için CSV İçeri Aktarma
+## <a name="csv-import-for-lan-subnet-office-locations"></a>LAN alt ağı ofis konumları için CSV İçeri Aktarma
 
-LAN alt ağı office kimliği için, her konumu önceden eklemeniz gerekir. Konumlar sekmesine ofis konumlarını tek tek **eklemek** yerine, bunları bir CSV dosyasından içeri aktarabilirsiniz. Arama Kalitesi Panosu veya Active Directory Siteleri ve Hizmetleri gibi, bu verileri depolanmış olan diğer yerlerden elde edebilirsiniz
+LAN alt ağ ofisi tanımlaması için her konumu önceden eklemeniz gerekir. **Konumlar** sekmesine tek tek ofis konumları eklemek yerine bunları csv dosyasından içeri aktarabilirsiniz. Bu verileri, Arama Kalitesi Panosu veya Active Directory Siteleri ve Hizmetleri gibi depoladığınız diğer yerlerden alabilirsiniz
 
-CSV dosyasında, bulunan bir şehir konumu kullanıcıda görünüyorSatır sütunu boş olarak girildi ve elle eklenmiş bir ofis konumu da 1 olarak görünüyor.
+CSV dosyasında bulunan bir şehir konumu userEntered sütununda boş, el ile eklenen bir ofis konumu ise 1 olarak gösterilir.
 
-1. Ana _Konumlar ve Microsoft 365_ penceresinde **Konumlar sekmesine** tıklayın.
+1. _Microsoft 365 ana Bağlantısı_ penceresinde **Konumlar** sekmesine tıklayın.
 
-1. Konum **listesinin** hemen üstündeki İçeri Aktar düğmesine tıklayın. Office **konumlarını içeri aktar** flyout görüntülenir.
+1. Konumlar listesinin hemen üstündeki **İçeri Aktar** düğmesine tıklayın. **Ofis konumlarını içeri aktar** açılır öğesi görüntülenir.
 
    > [!div class="mx-imgBorder"]
    > ![CSV içeri aktarma iletisi.](../media/m365-mac-perf/m365-mac-perf-import.png)
 
-1. Geçerli **konumlar listesini** CSV dosyasına dışarı aktar .csv için Geçerli ofis konumlarını indir (.csv) bağlantısına tıklayın ve bunu yerel sabit diske kaydedin. Bu size, konum ekyebilirsiniz sütun başlıklarıyla doğru biçimlendirilmiş bir CSV sağlar. Var olan dışarı aktarma konumlarını olduğu gibi  bırakın; güncelleştirilmiş CSV'leri içeri aktarsanız da bu yinelemeler yinelenmez. Var olan bir konumun adresini değiştirmek isterseniz, CSV'i içeri aktararak bu adres güncelleştirilir. Bulunan bir şehrin adresini değiştiremezsiniz.
+1. Geçerli konumlar listesini csv dosyasına aktarmak ve yerel sabit diskinize kaydetmek için Geçerli **ofis konumlarını indir (.csv)** bağlantısına tıklayın. Bu size konum ekleyebileceğiniz sütun başlıklarıyla doğru biçimlendirilmiş bir CSV sağlar. Mevcut dışarı aktarılan konumları olduğu gibi bırakabilirsiniz; güncelleştirilmiş CSV'yi içeri aktardığınızda bunlar yinelenmez. Mevcut bir konumun adresini değiştirmek isterseniz, CSV'yi içeri aktardığınızda bu konum güncelleştirilir. Bulunan bir şehrin adresini değiştiremezsiniz.
 
-1. EKLEMEK istediğiniz her konum için yeni bir satıra aşağıdaki alanları doldurarak CSV'yi açın ve konumlarınızı ekleyin. Diğer tüm alanları boş bırakın; diğer alanlara değerler yoksayılır.
+1. CSV'yi açın ve eklemek istediğiniz her konum için yeni bir satırda aşağıdaki alanları doldurarak konumlarınızı ekleyin. Diğer tüm alanları boş bırakın; diğer alanlara girdiğiniz değerler yoksayılır.
 
-   1. **userEntered** (gerekli): Eklenen yeni bir LAN Alt Ağ ofis konumu için 1 olmalı
+   1. **userEntered** (gerekli): Yeni bir LAN Alt Ağı ofis konumunun eklenmesi için 1 olmalıdır
    1. **Ad** (gerekli): Ofis konumunun adı
    1. **Adres** (gerekli): Ofisin fiziksel adresi
-   1. **Enlem** (isteğe bağlı): Bing, boşsa adresin haritalar araması ile doldurulur
-   1. **Boylam** (isteğe bağlı): Bing, boşsa adresin arama yapılan eşlemeleri ile doldurulur
-   1. **Egress IP Adresi aralıkları 1-5** (isteğe bağlı): Her aralık için devre adını girin ve ardından geçerli IPv4 CIDR adreslerinin yer alan boşlukla ayrılmış listesini girin. Bu değerler, aynı LAN alt ağı IP Adreslerinin bulunduğu birden çok ofis konumunu ayırt etmek için kullanılır. Egress IP Adresi aralıkların hepsi /24 ağ boyutu olmalıdır ve /24 girişe dahil değildir.
-   1. **LanIps** (gerekli): Bu ofis konumda, kullanımda olan LAN alt ağı aralıklarını listele. LAN alt ağ kimlikleri, ağ boyutunun /8 ile /29 arasında olduğu bir CIDR ağ boyutunun dahil olması gerekir. Birden çok LAN alt ağ aralığı virgül veya noktalı virgülle ayrılabilir.
+   1. **Enlem** (isteğe bağlı): Bing eşler boşsa adres aramasından doldurulur
+   1. **Boylam** (isteğe bağlı): Bing eşler tarafından adres aramasından (boşsa) doldurulur
+   1. **Egress IP Adresi aralığı 1-5** (isteğe bağlı): Her aralık için bağlantı hattı adını ve ardından geçerli IPv4 CIDR adreslerinin boşlukla ayrılmış listesini girin. Bu değerler, aynı LAN alt ağı IP Adreslerini kullandığınız birden çok ofis konumunu ayırt etmek için kullanılır. Egress IP Adresi aralıklarının tümü /24 ağ boyutu olmalıdır ve /24 girişe dahil değildir.
+   1. **LanIps** (gerekli): Bu ofis konumunda kullanılan LAN alt ağ aralıklarını listeleyin. LAN alt ağ kimliklerinin ağ boyutunun /8 ile /29 arasında olabileceği bir CIDR ağ boyutuna sahip olması gerekir. Birden çok LAN alt ağ aralığı virgül veya noktalı virgülle ayrılabilir.
 
-1. Ofis konumlarınızı ekp dosyayı kaydettiyken, tamamlanan alanı silmek **için** Upload  Gözat düğmesini tıklatın ve kaydedilmiş CSV dosyasını seçin.
+1. Office konumlarınızı ekleyip dosyayı kaydettiğinizde, **tamamlanmış alanın Upload** yanındaki **Gözat** düğmesine tıklayın ve kaydedilen CSV dosyasını seçin.
 
-1. Dosya otomatik olarak doğrulanır. Doğrulama hataları varsa, şu hata iletisini görüntülersiniz: _İçeri aktarma dosyasında bazı hatalar var. Hataları gözden geçirin, içeri aktarma dosyasını düzeltin ve yeniden deneyin._ Belirli alan doğrulama **hatalarını içeren bir liste** için Hata ayrıntılarını aç bağlantısına tıklayın.
+1. Dosya otomatik olarak doğrulanır. Doğrulama hataları varsa şu hata iletisini görürsünüz: _İçeri aktarma dosyasında bazı hatalar var. Hataları gözden geçirin, içeri aktarma dosyasını düzeltin ve yeniden deneyin._ Belirli alan doğrulama **hatalarının listesi için Hata ayrıntılarını aç** bağlantısına tıklayın.
 
    > [!div class="mx-imgBorder"]
    > ![CSV içeri aktarma hata iletisi.](../media/m365-mac-perf/m365-mac-perf-import-error.png)
 
-1. Dosyada hata yoksa, şu iletiyi görüntülersiniz: _Rapor hazır. Ekli x konumlar ve güncelleştirilen x konumlar bulundu._ **CSV'yi karşıya** yüklemek için İçeri Aktar düğmesine tıklayın.
+1. Dosyada hata yoksa şu iletiyi görürsünüz: _Rapor hazır. Eklenecek x konum ve güncelleştirilecek x konum bulundu._ CSV'yi karşıya yüklemek için **İçeri Aktar** düğmesine tıklayın.
 
    > [!div class="mx-imgBorder"]
-   > ![CSV içeri aktarma hazır iletisi.](../media/m365-mac-perf/m365-mac-perf-import-ready.png)
+   > ![CSV içeri aktarmaya hazır ileti.](../media/m365-mac-perf/m365-mac-perf-import-ready.png)
 
 ## <a name="faq"></a>SSS
 
-### <a name="what-is-a-microsoft-365-service-front-door"></a>Hizmet Microsoft 365 nedir?
+### <a name="what-is-a-microsoft-365-service-front-door"></a>Microsoft 365 hizmeti ön kapı nedir?
 
-Müşteri Microsoft 365 ön kapı, Microsoft'un genel ağın, istemci ve hizmetlerin ağ Office sonlandırılan bir giriş noktasıdır. E-Microsoft 365 en iyi ağ bağlantısı için, ağ bağlantının ön kapının en yakın Microsoft 365 kullanılması önerilir.
+Microsoft 365 hizmeti ön kapısı, Microsoft'un genel ağında Office istemci ve hizmetlerin ağ bağlantılarını sonlandırdığı bir giriş noktasıdır. Microsoft 365 en uygun ağ bağlantısı için ağ bağlantınızın en yakın Microsoft 365 ön kapıya sonlandırılması önerilir.
 
 >[!NOTE]
->Microsoft 365 ön kapı, Azure marketi'nden edinilen Azure Front Door Service ürünüyle doğrudan ilişkisi yoktur.
+>Microsoft 365 hizmeti front door' un Azure Market'te bulunan Azure Front Door Service ürünüyle doğrudan bir ilişkisi yoktur.
 
-### <a name="what-is-an-optimal-microsoft-365-service-front-door"></a>En iyi hizmet Microsoft 365 kapı nedir?
+### <a name="what-is-an-optimal-microsoft-365-service-front-door"></a>En uygun Microsoft 365 hizmeti ön kapı nedir?
 
-En iyi Microsoft 365 hizmet ön kapı, genel olarak şehir veya metro bölgenize ağ çıkışa en yakın olan kapıdır. Hizmet [Microsoft 365 ve](office-365-network-mac-perf-onboarding-tool.md) en iyi hizmet ön Microsoft 365 için kullanım için bağlantı test aracını kullanın. Araç, kullanım için ön kapının en uygun olduğunu belirlerse Microsoft'un genel ağına en uygun şekilde bağlanırsanız.
+En uygun Microsoft 365 hizmet ön kapısı, genellikle şehir veya metro bölgenizde ağ çıkışınıza en yakın kapıdır. Microsoft 365 [bağlantı test aracını](office-365-network-mac-perf-onboarding-tool.md) kullanarak kullanımdaki Microsoft 365 servis ön kapınızın konumunu ve en uygun hizmet ön kapısını belirleyin. Araç, kullanımdaki ön kapınızın en uygun olduğunu belirlerse, Microsoft'un küresel ağına en uygun şekilde bağlanırsınız.
 
 ### <a name="what-is-an-internet-egress-location"></a>İnternet çıkış konumu nedir?
 
-İnternet çıkış konumu, ağ trafiğinizin kurumsal ağdan çıkış bulunduğu ve İnternet'e bağlandığı konumtur. Bu ayrıca, Ağ Adresi Çevirisi (NAT) cihazınızın bulunduğu ve genellikle bir İnternet Servis Sağlayıcısına (ISS) bağlandıysanız konum olarak da tanımlanır. Konumunuzla İnternet çıkış konumunuz arasında uzun bir mesafe görüyorsanız, bu önemli bir WAN gerilemesi gösteriyor olabilir.
+İnternet çıkış konumu, ağ trafiğinizin kurumsal ağınızdan çıktığı ve İnternet'e bağlandığı konumdur. Bu, ağ adresi çevirisi (NAT) cihazınız olduğu ve genellikle İnternet Servis Sağlayıcısı (ISS) ile bağlandığınız konum olarak da tanımlanır. Konumunuz ile İnternet çıkış konumunuz arasında uzun bir mesafe görürseniz, bu önemli bir WAN geri talihini gösterebilir.
 
 ### <a name="what-license-is-needed-for-this-capability"></a>Bu özellik için hangi lisans gereklidir?
 
-Lisansa erişim sağlayan bir lisans Microsoft 365 yönetim merkezi.
+Microsoft 365 yönetim merkezi erişim sağlayan bir lisansa ihtiyacınız vardır.
 
 ## <a name="related-topics"></a>İlgili konular
 
-[Microsoft 365 içgörüleri](office-365-network-mac-perf-insights.md)
+[Ağ içgörülerini Microsoft 365](office-365-network-mac-perf-insights.md)
 
-[Microsoft 365 değerlendirmesini geri ayanız](office-365-network-mac-perf-score.md)
+[ağ değerlendirmesi Microsoft 365](office-365-network-mac-perf-score.md)
 
-[Microsoft 365 bağlantı test aracı](office-365-network-mac-perf-onboarding-tool.md)
+[Microsoft 365 bağlantı testi aracı](office-365-network-mac-perf-onboarding-tool.md)
 
-[Microsoft 365 Bağlantısı Konum Hizmetleri'ne Bağlan'a](office-365-network-mac-location-services.md)
+[ağ bağlantısı konum hizmetlerini Microsoft 365](office-365-network-mac-location-services.md)

@@ -19,12 +19,12 @@ ms.collection:
 - m365initiative-m365-defender
 - M365-security-compliance
 ms.date: ''
-ms.openlocfilehash: 24a95c8ed6d7d1cdd15b15b53434414e44b7881f
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 6bf97490d60740b47420d352f7fb537e675678ae
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65417940"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65621132"
 ---
 # <a name="protect-your-network"></a>Ağınızı koruyun
 
@@ -52,6 +52,9 @@ Ağ koruması [, Web korumasındaki](web-protection-overview.md) korumayı işle
 
 > [!NOTE]
 > demo.wd.microsoft.com'daki Uç Nokta için Defender tanıtım sitesi kullanım dışıdır ve gelecekte kaldırılacaktır.
+
+Ağ korumasının cihazlarınızın saldırı yüzeyini kimlik avı dolandırıcılığı, açıklardan yararlanma ve diğer kötü amaçlı içeriklerden nasıl azaltmaya yardımcı olduğunu öğrenmek için bu videoyu izleyin.
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4r4yZ]
 
 ## <a name="requirements-for-network-protection"></a>Ağ koruması gereksinimleri
 
@@ -191,7 +194,7 @@ Ağ koruması cihaz başına etkinleştirilir ve bu genellikle yönetim altyapı
 
 Ağ Koruması'nı **Denetim** modunda veya **Blok** modunda etkinleştirebilirsiniz. IP'leri veya URL'leri engellemeden önce Ağ Koruması'nı etkinleştirmenin etkisini değerlendirmek istiyorsanız, engellenecek veriler hakkında veri toplamak için bir süre denetim modunda etkinleştirebilirsiniz. Son kullanıcılar ağ koruması tarafından engellenecek bir adrese veya siteye bağlandığında denetim modu günlükleri.
 
-## <a name="advanced-hunting"></a>Gelişmiş Avcılık
+## <a name="advanced-hunting"></a>Gelişmiş avcılık
 
 Denetim olaylarını tanımlamak için Gelişmiş Avcılık kullanıyorsanız konsoldan 30 güne kadar geçmişe sahip olursunuz. Bkz. [Gelişmiş Avcılık](advanced-hunting-overview.md).
 

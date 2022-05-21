@@ -1,5 +1,5 @@
 ---
-title: Dosya ve video paylaşma
+title: Microsoft Teams ve Sharepoint'te dosya ve video paylaşma
 f1.keywords:
 - NOCSH
 ms.author: twerner
@@ -24,17 +24,17 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Microsoft Teams ve SharePoint ile kampanyanızın içinde dosya ve video paylaşın.
-ms.openlocfilehash: 5c371dea1c1e9d5768743072052825f0810938b9
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Microsoft Teams ve SharePoint ile kampanyanızın içinde dosya ve video paylaşın. Microsoft 365 İş ekstra, dosyaları ve videoları güvenli bir şekilde paylaşmanın harika bir yolu olan Teams içerir.
+ms.openlocfilehash: b678bf1bf44b63e80ac4b8d0ea6dfc760eb510a8
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095132"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65622362"
 ---
-# <a name="share-files-and-videos"></a>Dosya ve video paylaşma
+# <a name="share-files-and-videos-in-a-safe-environment"></a>Dosyaları ve videoları güvenli bir ortamda paylaşma
 
-Dikkat edilmesi gereken bir diğer konu da, kuruluştaki tüm üyelerin dosyaları kimlerin görüntüleyip düzenleyebileceğini ve uygun izinlerin uygulandığı güvenli bir konumda depolandığından emin olmaktır. Kullanıcılar dosyaları depolamak için Microsoft Teams kullanabilir ve ardından Microsoft Teams kullanarak veya SharePoint bağlantıları göndererek dosyaları firmanın, uygulamanın veya kampanyanın içinde veya dışında paylaşabilir. E-posta eki yerine bağlantı göndermek, dosyaları kimin görüntüleyip değiştirebileceğini bildiğiniz ve izin olmadan görüntülenemeyen veya değiştirilemeyen anlamına gelir.
+Dikkat edilmesi gereken bir diğer konu da, kuruluştaki tüm üyelerin dosyaları kimlerin görüntüleyip düzenleyebileceğini ve uygun izinlerin uygulandığı güvenli bir konumda depolandığından emin olmaktır. Microsoft 365 İş Ekstra kullanıcılar dosyaları depolamak için Microsoft Teams kullanabilir ve ardından dosyaları firma, uygulama veya kampanya içinde veya dışında paylaşabilir. Sharepoint bağlantısı da gönderebilirsiniz. E-posta eki yerine bağlantı göndermek, dosyaları kimin görüntüleyip değiştirebileceğini bildiğiniz ve izin olmadan görüntülenemeyen veya değiştirilemeyen anlamına gelir.
 
 ![Menüde Dosyalar sekmesini ve Al bağlantısını gösteren Microsoft Teams penceresinin diyagramı.](../media/m365-democracy-teams-sharefiles.png)
 

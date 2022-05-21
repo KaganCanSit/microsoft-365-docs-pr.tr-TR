@@ -1,7 +1,7 @@
 ---
-title: Cihaz ekleme ve Uç Nokta için Microsoft Defender
-description: Kontrol etmek ve Intune oranını artırmak için Uç Nokta için Microsoft Defender cihazlarla işe alımları takip edin.
-keywords: onboard, Intune yönetimi, Uç Nokta için Microsoft Defender, Microsoft Defender, Windows Defender, yapılandırma yönetimi
+title: cihazları Uç Nokta için Microsoft Defender ekleme
+description: Uç Nokta için Microsoft Defender ve ekleme oranını artırmak için Intune yönetilen cihazların ekleme işlemini izleyin.
+keywords: ekleme, Intune yönetimi, Uç Nokta için Microsoft Defender, Microsoft Defender, Windows Defender, yapılandırma yönetimi
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -14,69 +14,72 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 6caaddc208e6f73de0f49ff6d419c335848ae439
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 1e77f404b70ee770bd4d5c441362739cc7b2f13c
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64466333"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65622946"
 ---
-# <a name="get-devices-onboarded-to-microsoft-defender-for-endpoint"></a>Cihaz ekleme ve Uç Nokta için Microsoft Defender
+# <a name="get-devices-onboarded-to-microsoft-defender-for-endpoint"></a>cihazları Uç Nokta için Microsoft Defender ekleme
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Uç Nokta için Microsoft Defender Planı 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-onboardconfigure-abovefoldlink)
+> Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-onboardconfigure-abovefoldlink)
 
-Her bir cihaz ek bir algılayıcı (uç noktada algılama ve yanıtlama EDR) algılayıcısı ekler ve ağ üzerindeki ihlal etkinliklerinin görünürlüğünü artırır. Kullanıma alma, ayrıca bir cihazın zayıf bileşenlerin yanı sıra güvenlik yapılandırma sorunları için de denetlenebilir ve saldırılar sırasında kritik düzeltme eylemleri al sağlar.
+Eklenen her cihaz ek bir uç noktada algılama ve yanıtlama (EDR) sensörü ekler ve ağınızdaki ihlal etkinliğine göre görünürlüğü artırır. Ekleme ayrıca bir cihazın güvenlik açığı olan bileşenler ve güvenlik yapılandırma sorunları için denetlenebilmesini ve saldırılar sırasında kritik düzeltme eylemleri alabilmesini sağlar.
 
-Cihazların kullanıcı kullanıcılarını izlemeden ve yönetmeden önce:
+Cihazların ekleme işlemini izlemeden ve yönetmeden önce:
 
-- [Cihazlarınızı okul yönetimine Intune kaydetme](configure-machines.md#enroll-devices-to-intune-management)
-- [Gerekli izinlere sahip olduğundan emin olun](configure-machines.md#obtain-required-permissions)
+- [Cihazlarınızı Intune yönetimine kaydetme](configure-machines.md#enroll-devices-to-intune-management)
+- [Gerekli izinlere sahip olduğunuzdan emin olun](configure-machines.md#obtain-required-permissions)
 
-## <a name="discover-and-track-unprotected-devices"></a>Korumasız cihazları keşfetme ve izleme
+İstemcileri Uç Nokta için Microsoft Defender ile kolayca ekleme hakkında bilgi edinmek için bu videoyu izleyin.
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4bGqr?rel=0]
 
-Ekleme **kartı**, uç nokta için Defender for Endpoint'a yerleşik olarak bulunan Windows cihazlarının sayısını Intune yönetilen cihaz sayısıyla karşılaştırarak ekleme hızınıza ilişkin üst düzey bir Windows sunar.
+## <a name="discover-and-track-unprotected-devices"></a>Korumasız cihazları bulma ve izleme
+
+**Ekleme** kartı, Uç Nokta için Defender'a eklenen Windows cihaz sayısını Intune yönetilen Windows cihazların toplam sayısıyla karşılaştırarak ekleme oranınıza üst düzey bir genel bakış sağlar.
 
 :::image type="content" source="images/secconmgmt_onboarding_card.png" alt-text="Cihaz yapılandırma yönetimi Ekleme kartı" lightbox="images/secconmgmt_onboarding_card.png":::
 
-*Cihaz tarafından yönetilen cihazların toplam sayısıyla Intune cihazları gösteren Windows kart*
+*Eklenen cihazların toplam Intune yönetilen Windows cihaz sayısına kıyasla gösterildiği kart*
 
 > [!NOTE]
-> Kullanıcı profili Configuration Manager ekleme betiği veya diğer ekleme yöntemlerini kullandıysanız, Intune tutarsızlıklarla karşılaşabilirsiniz. Bu tutarsızlıkları çözmek için, Uç nokta ekleme Intune Defender için ilgili bir profil oluşturun ve bu profili cihazlarınıza attayın.
+> Configuration Manager, ekleme betiği veya Intune profilleri kullanmayan diğer ekleme yöntemlerini kullandıysanız veri tutarsızlıklarıyla karşılaşabilirsiniz. Bu tutarsızlıkları çözmek için Uç Nokta için Defender eklemesi için karşılık gelen bir Intune yapılandırma profili oluşturun ve bu profili cihazlarınıza atayın.
 
-## <a name="onboard-more-devices-with-intune-profiles"></a>Farklı profillere sahip daha Intune cihaz ekleme
+## <a name="onboard-more-devices-with-intune-profiles"></a>Intune profilleriyle daha fazla cihaz ekleme
 
-Uç nokta için Defender, cihaz eklemeye ve [cihaz Windows sağlar](onboard-configure.md). Öte Intune yönetilen cihazlar için, Intune'den faydalanarak cihazları seçmek ve bu cihazları hizmete etkili bir şekilde eklemek için Uç nokta algılayıcısı için Defender'ı rahatça dağıtabilirsiniz.
+Uç Nokta için Defender, [Windows cihazları eklemeye](onboard-configure.md) yönelik çeşitli kullanışlı seçenekler sağlar. Ancak Intune yönetilen cihazlarda, uç nokta için Defender algılayıcısını cihazları seçmek üzere rahatça dağıtmak ve bu cihazları etkin bir şekilde hizmete eklemek için Intune profillerinden yararlanabilirsiniz.
 
-Kullanıcı profili **oluşturmak ve bu** cihaza **profil atamak için**, Ekleme kartından Daha fazla cihaz Intune. Bu bağlantı sizi, başlangıç sayfasında cihaz uyumluluğu Intune alır ve bu da ekleme durumunuzla benzer bir genel bakış sağlar.
+**Ekleme** kartından, Intune profil oluşturmak ve atamak için **Daha fazla cihaz** ekle'yi seçin. Bağlantı sizi Intune cihaz uyumluluk sayfasına götürür ve ekleme durumunuzla ilgili benzer bir genel bakış sağlar.
 
-:::image type="content" source="images/secconmgmt_onboarding_1deviceconfprofile.png" alt-text="Cihaz Uç Nokta için Microsoft Defender yönetiminin en iyi Intune sayfası" lightbox="images/secconmgmt_onboarding_1deviceconfprofile.png":::
+:::image type="content" source="images/secconmgmt_onboarding_1deviceconfprofile.png" alt-text="Intune cihaz yönetimindeki Uç Nokta için Microsoft Defender cihaz uyumluluğu sayfası" lightbox="images/secconmgmt_onboarding_1deviceconfprofile.png":::
 
-*Uç Nokta için Microsoft Defender yönetimi hakkında daha fazla bilgi Intune uyumluluk sayfasını açın*
+*Intune cihaz yönetiminde cihaz uyumluluk sayfasını Uç Nokta için Microsoft Defender*
 
 > [!TIP]
-> Alternatif olarak, Tüm hizmetler ve Cihaz Uyumluluğu ve **Microsoft Defender ATP'den** [Microsoft Azure portalında](https://portal.azure.com/) Uç nokta ekleme uyumluluğu için Defender> Intune > Defender> sayfasına gidin.
+> Alternatif olarak, Microsoft Azure [portalındaki](https://portal.azure.com/) Uç Nokta için Defender ekleme uyumluluğu sayfasına **Microsoft Defender ATP'> Cihaz uyumluluğu > Intune > Tüm hizmetler'den** gidebilirsiniz.
 
 > [!NOTE]
-> En güncel cihaz verilerini görüntülemek için ATP algılayıcısı olmayan cihazlar **listesi'ne tıklayın**.
+> En güncel cihaz verilerini görüntülemek istiyorsanız **ATP algılayıcısı olmayan cihazlar listesi'ne** tıklayın.
 
-Cihaz uyumluluk sayfasında, uç nokta algılayıcısı için Defender'ın dağıtımı için özel olarak bir yapılandırma profili oluşturun ve bu profili almak istediğiniz cihazlara attayin. Bunu yapmak için şunları da yapabiliriz:
+Cihaz uyumluluk sayfasından, uç nokta için Defender algılayıcısının dağıtımı için özel olarak bir yapılandırma profili oluşturun ve bu profili eklemek istediğiniz cihazlara atayın. Bunu yapmak için şunları yapabilirsiniz:
 
-- **ATP algılayıcısı öğesini önceden tanımlanmış bir cihaz yapılandırma profiliyle** başlayacak şekilde yapılandırmak için Cihaz yapılandırma profili oluştur'ı seçin.
+- **ATP algılayıcısını önceden tanımlanmış bir cihaz yapılandırma profiliyle başlayacak şekilde yapılandırmak** için Cihaz yapılandırma profili oluştur'u seçin.
 - Sıfırdan cihaz yapılandırma profilini oluşturun.
 
-Daha fazla bilgi için[, Uç nokta için Defender Intune a cihaz yapılandırma profillerini ekleme hakkında bilgi edinebilirsiniz](/intune/advanced-threat-protection#onboard-devices-by-using-a-configuration-profile).
+Daha fazla bilgi [için cihazları Uç Nokta için Defender'a eklemek için Intune cihaz yapılandırma profillerini kullanma hakkında bilgi edinin](/intune/advanced-threat-protection#onboard-devices-by-using-a-configuration-profile).
 
-> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-onboardconfigure-belowfoldlink)
+> Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-onboardconfigure-belowfoldlink)
 
 ## <a name="related-topics"></a>İlgili konular
 
 - [Cihazlarınızı doğru yapılandırıldığından emin olun](configure-machines.md)
-- [Uç nokta güvenlik temeli için Defender'a uyumluluğu artırma](configure-machines-security-baseline.md)
-- [ASR kuralı dağıtımını ve algılamalarını en iyi duruma getirme](configure-machines-asr.md)
+- [Uç Nokta için Defender güvenlik temeline uyumluluğu artırma](configure-machines-security-baseline.md)
+- [ASR kuralı dağıtım ve algılamalarını iyileştirme](configure-machines-asr.md)

@@ -14,16 +14,15 @@ ms.custom: nextgen
 ms.reviewer: mkaminska, pahuijbr
 manager: dansimp
 ms.technology: mde
-ms.date: 04/19/2022
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: 3bae6326fca5cefc921cb24b1a16180da2a2f52f
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 5a38ed6fbdcebf54dcd8bc34458733b5edefb850
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65415139"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65623151"
 ---
 # <a name="microsoft-defender-antivirus-compatibility-with-other-security-products"></a>Microsoft Defender Virüsten Koruma diğer güvenlik ürünleriyle uyumluluk
 
@@ -34,8 +33,6 @@ ms.locfileid: "65415139"
 
 **Platform**
 - Windows
-
-[!include[Prerelease information](../../includes/prerelease.md)]
 
 Microsoft Defender Virüsten Koruma aşağıdaki Windows sürümlerini çalıştıran uç noktalara otomatik olarak yüklenir:
 
@@ -206,7 +203,7 @@ Bu bölümdeki tabloda, Microsoft Defender Virüsten Koruma ile görebileceğini
  |  Devre dışı <br/><br/> veya <br/><br/> Kaldırıldı  |  Devre dışı bırakıldığında veya kaldırıldığında, virüsten koruma uygulaması olarak Microsoft Defender Virüsten Koruma kullanılmaz. Dosyalar taranmıyor ve tehditler düzeltilmiyor. <br/><br/> Microsoft Defender Virüsten Koruma devre dışı bırakmak veya kaldırmak genel olarak önerilmez; mümkünse, Microsoft dışı bir kötü amaçlı yazılımdan koruma/virüsten koruma çözümü kullanıyorsanız Microsoft Defender Virüsten Koruma pasif modda tutun. <br/><br/> Microsoft Defender Virüsten Koruma otomatik olarak devre dışı bırakıldığı durumlarda, Microsoft dışı virüsten koruma/kötü amaçlı yazılımdan koruma ürününün süresi dolarsa veya virüslere, kötü amaçlı yazılımlara veya diğer tehditlere karşı gerçek zamanlı koruma sağlamayı durdurursa otomatik olarak yeniden etkinleştirilebilir. Microsoft Defender Virüsten Koruma otomatik olarak yeniden etkinleştirilmesi, uç noktalarınızda virüsten korumanın korunmasına yardımcı olur. <br/><br/> Microsoft dışı bir virüsten koruma uygulaması kullanıyorsanız tehditleri düzenli aralıklarla denetlemek için Microsoft Defender Virüsten Koruma altyapısıyla birlikte çalışan [sınırlı düzenli tarama](limited-periodic-scanning-microsoft-defender-antivirus.md) da kullanabilirsiniz.  | 
 
 > [!TIP]
-> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> Diğer platformlar için Antivirüs ile ilgili bilgi arıyorsanız bkz:
 > - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
 > - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
@@ -218,6 +215,5 @@ Bu bölümdeki tabloda, Microsoft Defender Virüsten Koruma ile görebileceğini
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Windows istemcilerinde Microsoft Defender Virüsten Koruma](microsoft-defender-antivirus-in-windows-10.md)
-- [Windows Server'da Microsoft Defender Virüsten Koruma](microsoft-defender-antivirus-on-windows-server.md)
 - [Engelleme modunda EDR ](edr-in-block-mode.md)
 - [Uç nokta veri kaybı önleme hakkında daha fazla bilgi edinme](/microsoft-365/compliance/endpoint-dlp-learn-about)

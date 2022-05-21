@@ -19,12 +19,12 @@ search.appverid:
 f1.keywords:
 - NOCSH
 description: SharePoint Çevrimiçi modern portalı ve klasik yayımlama sayfalarını önceden tanımlanmış performans ölçütleri kümesine göre çözümlemek için SharePoint için Sayfa Tanılama aracını kullanın.
-ms.openlocfilehash: b39b547754acc6f12c750192af2986e9b4e54150
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: a4d2c0f6d298578290d9f7daf850c4744e2f8dff
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095674"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65621848"
 ---
 # <a name="use-the-page-diagnostics-for-sharepoint-tool"></a>SharePoint için Sayfa Tanılama aracını kullanma
 
@@ -42,7 +42,7 @@ SharePoint için Sayfa Tanılama aracı, hem SharePoint Çevrimiçi modern porta
 
 Araç, analiz edilen her sayfa için sayfanın önceden tanımlanmış bir kural kümesine göre nasıl performans gösterdiğini gösteren bir rapor oluşturur ve test sonuçları temel değerin dışında olduğunda ayrıntılı bilgiler görüntüler. SharePoint Çevrimiçi yöneticiler ve tasarımcılar, performans sorunlarını gidermek ve yayımlamadan önce yeni sayfaların iyileştirildiğinden emin olmak için aracı kullanabilir.
 
-Sayfa Tanılama aracı, *allitems.aspx* veya *sharepoint.aspx* gibi sistem sayfalarını değil, yalnızca SharePoint site sayfalarını analiz etmek için tasarlanmıştır. Aracı bir sistem sayfasında veya site olmayan başka bir sayfada çalıştırmayı denerseniz, aracın bu tür bir sayfa için çalıştırılamayacağını bildiren bir hata iletisi alırsınız.
+Sayfa Tanılama aracı, *allitems.aspx* veya *sharepoint.aspx* gibi sistem sayfalarını değil, yalnızca SharePoint site sayfalarını analiz etmek için tasarlanmıştır. Aracı bir sistem sayfasında veya site olmayan başka bir sayfada çalıştırmayı denerseniz, aracın bu tür bir sayfa için çalıştırılamayacağına dair bir hata iletisi alırsınız.
 
 > [!div class="mx-imgBorder"]
 > ![SharePoint sayfasında çalıştırılmalıdır.](../media/page-diagnostics-for-spo/pagediag-Error-StartPage.png)
@@ -72,7 +72,7 @@ Bu bölümdeki yükleme yordamı hem Chrome hem de Microsoft Edge tarayıcılar 
 1. Aracı Gizli veya InPrivate modunda kullanmak istiyorsanız tarayıcınızın yordamını izleyin:
     1. Microsoft Edge'da **Uzantılar'a** gidin veya URL çubuğuna _edge://extensions_ yazın ve uzantı için **Ayrıntılar'ı** seçin. Uzantı ayarlarında **InPrivate'te izin ver** onay kutusunu seçin.
     1. Chrome'da **Uzantılar'a** gidin veya URL çubuğuna _chrome://extensions_ yazın ve uzantı için **Ayrıntılar'ı** seçin. Uzantı ayarlarında **Gizli'de izin ver** kaydırıcısını seçin.
-1. SharePoint Online'da gözden geçirmek istediğiniz SharePoint site sayfasına gidin. Sayfalardaki öğelerin "yüklenmesini geciktirme" izni verdik; bu nedenle, araç otomatik olarak durmaz (bu, tüm sayfa yükleme senaryolarını barındırmak için tasarım gereğidir). Koleksiyonu durdurmak için **Durdur'u** seçin. Veri toplamayı durdurmadan önce sayfa yükünün tamamlandığından emin olun; aksi takdirde yalnızca kısmi bir izleme yakalarsınız.
+1. SharePoint Online'da gözden geçirmek istediğiniz SharePoint site sayfasına gidin. Sayfalardaki öğelerin "yüklenmesini geciktirme" izni verdik; bu nedenle, araç otomatik olarak durmaz (bu, tüm sayfa yükleme senaryolarına uyum sağlamak için tasarım gereğidir). Koleksiyonu durdurmak için **Durdur'u** seçin. Veri toplamayı durdurmadan önce sayfa yükünün tamamlandığından emin olun; aksi durumda yalnızca kısmi bir izleme yakalarsınız.
 1. Uzantının araç çubuğu düğmesine tıklayın ![SharePoint logosu için Sayfa Tanılama.](../media/page-diagnostics-for-spo/pagediag-icon32.png) aracı yüklemek için size aşağıdaki uzantı açılır penceresi gösterilir:
 
     ![Sayfa Tanılama aracı Açılan menüsü.](../media/page-diagnostics-for-spo/pagediag-Landing.png)
@@ -90,7 +90,7 @@ Analiz için veri toplamaya başlamak için **Başlat'ı** seçin.
     > [!div class="mx-imgBorder"]
     > ![Sayfa tanılama ayrıntıları.](../media/page-diagnostics-for-spo/pagediag-details.PNG)
 
-   - **CorrelationID**, belirli bir sayfa için ek tanılama verileri toplamalarına olanak sağladığından, Microsoft Desteği ile çalışırken önemli bir öğedir.
+   - **CorrelationID**, belirli bir sayfa için daha fazla tanılama verisi toplamalarına olanak sağladığından Microsoft Desteği ile çalışırken önemli bir öğedir.
    - **SPRequestDuration**, SharePoint sayfayı işlemesi için geçen süredir. Yapısal gezinti, büyük görüntüler ve çok sayıda API çağrısı daha uzun sürelere katkıda bulunabilir.
    - **SPIISLatency**, SharePoint Online'ın sayfayı yüklemeye başlaması için geçen milisaniye cinsinden süredir. Bu değer, web uygulamasının yanıt vermesi için geçen süreyi içermez.
    - **Sayfa yükleme süresi** , istek saatinden yanıtın alındığı ve tarayıcıda işlendiği zamana kadar sayfa tarafından kaydedilen toplam süredir. Bu değer ağ gecikme süresi, bilgisayarın performansı ve tarayıcının sayfayı yükleme süresi gibi çeşitli faktörlerden etkilenir.
@@ -113,11 +113,11 @@ Analiz için veri toplamaya başlamak için **Başlat'ı** seçin.
 
 SharePoint için Sayfa Tanılama aracıyla SharePoint modern portal sayfasını veya klasik yayımlama sitesi sayfasını analiz ettiğinizde, sonuçlar temel değerlerle karşılaştıran önceden tanımlanmış kurallar kullanılarak analiz edilir ve **Tanılama testleri** sekmesinde görüntülenir. Bazı testlerin kuralları, modern portal ve klasik yayımlama siteleri için belirli performansa bağlı olarak farklı temel değerler kullanabilir  özellikleri ikisi arasında farklılık gösterir.
 
-**İyileştirme fırsatları** veya **Dikkat gerektiren** kategoriler bölümünde gösterilen test sonuçları, önerilen yöntemlere göre gözden geçirilmesi gereken alanları gösterir ve sonuç hakkında ek bilgi görüntülemek için seçilebilir. Her öğenin ayrıntıları, sizi doğrudan testle ilgili uygun rehberliğe götürecek _daha fazla bilgi edinin_ bağlantısı içerir. **Eylem gerekli değil** kategorisinde gösterilen test sonuçları, ilgili kuralla uyumluluğu gösterir ve seçildiğinde ek ayrıntıları görüntülemez.
+**İyileştirme fırsatları** veya **Dikkat gerektiren** kategoriler bölümünde gösterilen test sonuçları, önerilen yöntemlere göre gözden geçirilmesi gereken alanları gösterir ve sonuç hakkında ek bilgi görüntülemek için seçilebilir. Her öğenin ayrıntıları daha _fazla bilgi edinin_ bağlantısı içerir ve bu bağlantı sizi doğrudan testle ilgili uygun rehberliğe götürür. **Eylem gerekli değil** kategorisinde görüntülenen test sonuçları, ilgili kuralla uyumluluğu gösterir ve seçildiğinde ek ayrıntıları görüntülemez.
 
-Tanılama testleri sekmesindeki bilgiler sayfaları nasıl tasarlayabileceğinizi söylemez, ancak sayfa performansını etkileyebilecek faktörleri vurgular. Bazı sayfa işlevleri ve özelleştirmeleri sayfa performansı üzerinde kaçınılmaz bir etkiye sahiptir ve etkileri önemliyse olası düzeltme veya eksiklik açısından gözden geçirilmelidir.
+Tanılama testleri sekmesindeki bilgiler size sayfaların nasıl tasarlandığını söylemez, ancak sayfa performansını etkileyebilecek faktörleri vurgular. Bazı sayfa işlevleri ve özelleştirmeleri sayfa performansı üzerinde kaçınılmaz bir etkiye sahiptir ve etkileri önemliyse olası düzeltme veya eksiklik açısından gözden geçirilmelidir.
 
-Kırmızı veya sarı sonuçlar, verileri çok sık yenileyen web bölümlerini de gösterebilir. Örneğin, kurumsal haberler her saniye güncelleştirilmez, ancak özel web bölümleri genellikle genel kullanıcı deneyimini geliştirebilecek önbelleğe alma öğeleri uygulamak yerine en son haberleri her saniye getirmek için oluşturulur. Web bölümlerini sayfaya eklerken, hedeflenen amaca uygun şekilde ayarlandığından emin olmak için kullanılabilir her parametrenin değerini değerlendirerek performans etkilerini azaltmanın genellikle basit yolları olduğunu unutmayın.
+Kırmızı veya sarı sonuçlar, verileri çok sık yenileyen web bölümlerini de gösterebilir. Örneğin, şirket haberleri her saniye güncelleştirilmez, ancak özel web bölümleri genellikle genel kullanıcı deneyimini geliştirebilecek önbelleğe alma öğeleri uygulamak yerine en son haberleri her saniye getirmek için oluşturulur. Web bölümlerini sayfaya eklerken, hedeflenen amaca uygun şekilde ayarlandığından emin olmak için kullanılabilir her parametrenin değerini değerlendirerek performans etkilerini azaltmanın genellikle basit yolları olduğunu unutmayın.
 
 >[!NOTE]
 >Yayımlama özelliği etkin olmayan klasik ekip siteleri CDN'leri kullanamaz. Aracı bu sitelerde çalıştırdığınızda, CDN testinin başarısız olması beklenir ve yoksayılabilir, ancak kalan tüm testler geçerlidir. SharePoint yayımlama özelliğinin ek işlevleri sayfa yükleme sürelerini artırabilir, bu nedenle yalnızca CDN işlevselliğine izin vermek için etkinleştirilmemelidir.
@@ -146,7 +146,7 @@ Kırmızı veya sarı sonuçlar, verileri çok sık yenileyen web bölümlerini 
    > [!div class="mx-imgBorder"]
    > ![HAR'ye dışarı aktarmayı etkinleştirin.](../media/page-diagnostics-for-spo/pagediag-submithar.png)
 
-Başlangıç'a tıklamadan önce bu özellik etkinleştirilmelidir. Bu, tarayıcınızda hata ayıklama modunu etkinleştirir. Daha sonra "Ağ İzleme" sekmesi aracılığıyla erişilebilen bir HTTP Arşiv dosyası (HAR) oluşturur. "HAR'ye Aktar"a tıkladığınızda dosya bilgisayarınıza indirilir ve ardından uygun şekilde paylaşabilirsiniz. Dosya F12 Geliştirici Araçları ve Fiddler gibi çeşitli hata ayıklama araçlarında açılabilir.
+Başlangıç'a tıklamadan önce bu özellik etkinleştirilmelidir. Bu, tarayıcınızda hata ayıklama modunu etkinleştirir. Daha sonra "Ağ İzleme" sekmesi aracılığıyla erişilebilen bir HTTP Arşiv dosyası (HAR) oluşturur. "HAR'ye Aktar"a tıkladığınızda dosya bilgisayarınıza indirilir ve ardından uygun şekilde paylaşabilirsiniz. Dosya, F12 Geliştirici Araçları ve Fiddler gibi çeşitli hata ayıklama araçlarında açılabilir.
 
 > [!div class="mx-imgBorder"]
 > ![Ağ izleme.](../media/page-diagnostics-for-spo/pagediag-networktracehar.png)
@@ -156,7 +156,7 @@ Başlangıç'a tıklamadan önce bu özellik etkinleştirilmelidir. Bu, tarayıc
 
 ## <a name="engaging-with-microsoft-support"></a>Microsoft Desteği ile etkileşime geçilmesi
 
-Yalnızca doğrudan bir destek olayı üzerinde çalışırken kullanılması gereken **Microsoft Desteği düzeyinde bir özellik** dahil ettik. Bu özelliğin kullanılması, destek ekibi katılımı olmadan kullanıldığında size hiçbir fayda sağlamaz ve sayfanın önemli ölçüde daha yavaş performans göstermesini sağlayabilir. Hizmetteki günlüğe ek bilgiler eklendiğinden, araçta bu özellik kullanılırken ek bilgi yoktur.
+Yalnızca doğrudan bir destek olayı üzerinde çalışırken kullanılması gereken **Microsoft Desteği düzeyinde bir özellik** dahil ettik. Bu özelliğin kullanılması, destek ekibi katılımı olmadan kullanıldığında size hiçbir fayda sağlamaz ve sayfanın önemli ölçüde daha yavaş performans göstermesini sağlayabilir. Hizmetteki günlüğe ek bilgiler eklendiğinden araçta bu özellik kullanılırken ek bilgi yoktur.
 
 Etkinleştirdiğiniz bildirilmesi ve sayfa performansınızın etkinken performansın 2-3 kat daha yavaş olması dışında hiçbir değişiklik görünmez. Yalnızca belirli bir sayfa ve etkin oturumla ilgili olacaktır. Bu nedenle, bu, yalnızca destekle etkin bir şekilde etkileşime geçtiğinde düzenli olarak kullanılmalıdır.
 

@@ -17,12 +17,12 @@ ms.assetid: aed65bcd-0a4f-43e9-b5e5-b98cc376bdf8
 description: eBulma'daki (Premium) Karar Ver sekmesinin, servis talebi dosyalarının gözden geçirme kümesinin doğru boyutunu belirlemenize yardımcı olabilecek verileri nasıl sağladığını öğrenin.
 ROBOTS: NOINDEX, NOFOLLOW
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 12f1dde5631283a4d0e02666ecab7267ee892225
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 50acdd36a536c417485d441e14c5d155f9de2f94
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090993"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65621806"
 ---
 # <a name="decisions-based-on-relevance-results-in-ediscovery-premium"></a>eBulma (Premium) ile ilgili sonuçlara dayalı kararlar
 
@@ -52,4 +52,4 @@ Bu sekme aşağıdaki bileşenleri içerir:
 
   - **İlgi puanına göre dağılım**: Soldaki koyu gri ekrandaki dosyalar kesme puanının altındadır. Araç ipucu, toplam dosyayla ilişkili olarak, inceleme dosyasındaki ilgi puanını ve ilgili dosya yüzdesini görüntüler.
 
-Genişletilmiş **Ayrıntılar** bölmesinde daha fazla ayrıntı görüntülenir. Koleksiyon şekillerindeki dosyalar boş veya karmaşık dosyalar içermez. Aile dosyaları şekilleri, İlgi'ye yüklenmemiş ancak yine de ailenin bir parçası olarak sayılan dosyaları temsil ediyor.
+Genişletilmiş **Ayrıntılar** bölmesinde daha fazla ayrıntı görüntülenir. Koleksiyon şekillerindeki dosyalar boş veya karmaşık dosyalar içermez. Aile dosyaları şekilleri, İlgi'ye yüklenmemiş ancak hala ailenin bir parçası olarak sayılan dosyaları temsil ediyor.

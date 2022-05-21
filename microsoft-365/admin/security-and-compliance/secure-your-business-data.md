@@ -28,19 +28,19 @@ search.appverid:
 - MOE150
 ms.assetid: de2da300-dbb6-4725-bb12-b85a9d296e75
 description: İş e-postanızı ve verilerinizi fidye yazılımı, kimlik avı ve kötü amaçlı ekler gibi siber tehditlere karşı koruyun.
-ms.openlocfilehash: 18de5e6f0d859095f38972b0fae66c1312bf4099
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 994223ff7f8f3da9d4d8b75056327214dfc310b0
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65093689"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65622799"
 ---
 # <a name="best-practices-for-securing-microsoft-365-for-business"></a>İş için Microsoft 365 güvenliğini sağlamaya yönelik en iyi yöntemler
 
 Microsoft'un iş planlarından birini kullanan küçük veya orta ölçekli bir kuruluşsanız, bu makaledeki yönergeler kuruluşunuzun güvenliğini artırmanıza yardımcı olur. Seçenekleriniz arasında Microsoft 365 İş Ekstra, artık İş için Microsoft Defender ve diğer [güvenlik korumalarını](../../business-premium/get-microsoft-365-business-premium.md) içerdiğinden yol gösterir. Burada yer alan önerilen eylemler, Harvard Kennedy School [Cybersecurity Campaign Handbook'ta](https://go.microsoft.com/fwlink/p/?linkid=2015598) açıklanan hedeflere ulaşmanıza yardımcı olacaktır.
 
 > [!TIP]
-> Bu makaledeki adımlarla ilgili yardıma ihtiyacınız varsa [bir Microsoft küçük işletme uzmanıyla çalışmayı](https://go.microsoft.com/fwlink/?linkid=2186871) göz önünde bulundurun. İşletme Yardımı ile, işletmenizi büyütürken işe alımdan gündelik kullanıma kadar her aşamada siz ve çalışanlarınız günün 24 saati küçük işletme uzmanlarına erişebilirsiniz.
+> Bu makaledeki adımlarla ilgili yardıma ihtiyacınız varsa [bir Microsoft küçük işletme uzmanıyla çalışmayı](https://go.microsoft.com/fwlink/?linkid=2186871) göz önünde bulundurun. İşletme Yardımı ile, işletmenizi büyütürken katılımdan gündelik kullanıma kadar her aşamada siz ve çalışanlarınız günün 24 saati küçük işletme uzmanlarına erişebilirsiniz.
 
 ## <a name="watch-a-quick-overview-of-security"></a>Izleyin: Güvenliğe hızlı bir genel bakış
 
@@ -54,7 +54,7 @@ Hizmet planı özelliklerinden biri hakkında bilgi edinmek için aşağıdaki t
 
 |Görev|Microsoft 365 Business Standard|Microsoft 365 Business Premium|
 |---|---|---|
-[Kaybolan veya çalınan parolalara karşı koruma](#set-up-multifactor-authentication) | ![Dahil.](../../media/d238e041-6854-4a78-9141-049224df0795.png) | ![Dahil.](../../media/d238e041-6854-4a78-9141-049224df0795.png) |
+[Kaybolan veya çalınan parolalara karşı koruma](#set-up-multi-factor-authentication) | ![Dahil.](../../media/d238e041-6854-4a78-9141-049224df0795.png) | ![Dahil.](../../media/d238e041-6854-4a78-9141-049224df0795.png) |
 [Kullanıcılarınızı eğitme](#train-your-users) | ![Dahil.](../../media/d238e041-6854-4a78-9141-049224df0795.png) | ![Dahil.](../../media/d238e041-6854-4a78-9141-049224df0795.png) |
 [Ayrılmış yönetici hesaplarını kullanma](#use-dedicated-admin-accounts)|![Dahil.](../../media/d238e041-6854-4a78-9141-049224df0795.png) | ![Dahil.](../../media/d238e041-6854-4a78-9141-049224df0795.png) | 
 [Kötü amaçlı yazılımlara karşı koruma](#protect-against-malware) | ![Dahil.](../../media/d238e041-6854-4a78-9141-049224df0795.png) <br/>(e-posta için koruma) | ![Dahil.](../../media/d238e041-6854-4a78-9141-049224df0795.png) <br/>(e-posta ve cihazlar için artırılmış koruma) |
@@ -72,7 +72,7 @@ Başlamadan önce Microsoft 365 Defender <a href="https://go.microsoft.com/fwlin
 
 ![Microsoft Güvenli Puanı'nın ekran görüntüsü.](../../media/secure-score.png)
 
-## <a name="set-up-multifactor-authentication"></a>Çok faktörlü kimlik doğrulamasını ayarlama
+## <a name="set-up-multi-factor-authentication"></a>Çok faktörlü kimlik doğrulamasını ayarlama
 
 Çok faktörlü kimlik doğrulamasını (MFA) kullanarak kaybolan veya çalınan parolalara karşı koruma sağlayın. Çok faktörlü kimlik doğrulaması ayarlandığında, kişilerin Microsoft 365 oturum açmak için telefonlarında bir kod kullanmaları gerekir. Bu ek adım, korsanların parolanızı biliyorsa devralmalarını engelleyebilir. 
 
