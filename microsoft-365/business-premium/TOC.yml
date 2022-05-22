@@ -78,7 +78,7 @@
           href: m365bp-onboard-devices-mdb.md
         - name: Windows cihazlarını koruma
           items:
-            - name: Windows 10 cihazlara yönelik koruma ayarları
+            - name: Windows cihazlarına yönelik koruma ayarları
               href: m365bp-protection-settings-for-windows-10-devices.md
             - name: Windows cihazlarının güvenliğini sağlama
               href: m365bp-secure-windows-devices.md
@@ -107,9 +107,9 @@
     - name: Kullanıcıları kaldırma
       href: ../admin/add-users/remove-former-employee.md?toc=/microsoft-365/business-premium/toc.json&bc=/microsoft-365/business-premium/breadcrumb/toc.json
     - name: Verileri cihazlardan kaldırma
-      href: ../business/remove-company-data.md?toc=/microsoft-365/business-premium/toc.json&bc=/microsoft-365/business-premium/breadcrumb/toc.json
+      href: m365bp-remove-company-data.md
     - name: Cihazları fabrika ayarlarına sıfırlama
-      href: ../business/reset-devices-to-factory-settings.md?toc=/microsoft-365/business-premium/toc.json&bc=/microsoft-365/business-premium/breadcrumb/toc.json
+      href: m365bp-reset-devices-to-factory-settings.md
 - name: Başvuru
   items:
     - name: Terimler sözlüğü
@@ -128,7 +128,7 @@
           href: m365bp-create-and-edit-autopilot-devices.md
     - name: Android ve iOS için Uygulama koruma ayarları
       href: m365bp-app-protection-settings-for-android-and-ios.md
-    - name: Koruma özelliklerini InTune ayarlarına eşleme
+    - name: Koruma özelliklerini Intune ayarlarına eşleme
       href: m365bp-map-protection-features-to-intune-settings.md
     - name: Uyumluluk Yöneticisi ayarlama
       href: m365bp-set-up-compliance.md
