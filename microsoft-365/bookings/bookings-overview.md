@@ -9,19 +9,16 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 47403d64-a067-4754-9ae9-00157244c27d
 description: Web tabanlı bir rezervasyon takvimi içeren ve personelinizin takvimini iyileştirmek ve müşterilerinize randevu rezervasyonu için esneklik sağlamak için Outlook ile tümleşen Microsoft Bookings uygulamasına genel bakış.
-ms.openlocfilehash: 6cb20104e9fa51023b6a828cfd70291cd0797037
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 02ae9cc4e9b101025a424acaff3a82de7afeef59
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64822682"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637615"
 ---
 # <a name="microsoft-bookings"></a>Microsoft Kayıtları
 
-> [!NOTE]
-> Bu makale, Microsoft Bookings en son sürümüyle etkileşim kurmanıza yardımcı olur. Önceki sürümler önümüzdeki aylarda kullanımdan kaldırılacak.
-
-Microsoft Bookings randevuları zamanlamayı ve yönetmeyi çok kolaylaştırır. Bookings web tabanlı bir rezervasyon takvimi içerir ve personelinizin takvimini iyileştirmek ve müşterilerinize kendileri için en uygun zamanı ayırma esnekliği sağlamak için Outlook ile tümleşir. E-posta ve SMS kısa mesaj bildirimleri, gösterilmemesini azaltır ve müşteri memnuniyetini artırır. Kuruluşunuz, yinelenen zamanlama görevlerinde azalmayla zaman kazandırır. Yerleşik esneklik ve özelleştirme yeteneği sayesinde, Bookings kuruluşun birçok farklı bölümünün durumuna ve gereksinimlerine uyacak şekilde tasarlanabilir.
+Microsoft Bookings randevuları zamanlamayı ve yönetmeyi çok kolaylaştırır. Bookings web tabanlı bir rezervasyon takvimi içerir ve personelinizin takvimini iyileştirmek ve müşterilerinize kendileri için en uygun zamanı ayırma esnekliği sağlamak için Outlook ile tümleşir. E-posta ve SMS kısa mesaj bildirimleri gösterilmemesini azaltır ve müşteri memnuniyetini artırır. Kuruluşunuz, yinelenen zamanlama görevlerinde azalmayla zaman kazandırır. Yerleşik esneklik ve özelleştirme yeteneği sayesinde, Bookings kuruluşun birçok farklı bölümünün durumuna ve gereksinimlerine uyacak şekilde tasarlanabilir.
 
 > [!NOTE]
 > Bookings takvimi, Exchange Online bir posta kutusudur.

@@ -16,12 +16,12 @@ ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
 description: Veri kaybı önleme ilkelerinizdeki adlandırılmış varlıklardan yararlanmak için bu yordamları kullanın
-ms.openlocfilehash: 6b00c45b95436e2425aedadd57a178fcb01ab50e
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 85d3d11704ea238f6c1acff64193d8aaba8994b8
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "65001004"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637196"
 ---
 # <a name="use-named-entities-in-your-data-loss-prevention-policies"></a>Veri kaybını önleme ilkelerinizde adlandırılmış varlıkları kullanma
 
@@ -49,6 +49,7 @@ Bu konumlardaki hassas öğeleri algılamak ve korumak için adlandırılmış v
 - Sohbet ve kanal iletilerini Teams
 - Cihazlar (Windows 10 ve 11 uç nokta cihazı)
 - posta kutularını Exchange
+- Bulut Uygulamaları için Microsoft Defender
 
 Adlandırılmış varlık SID'leri ve gelişmiş ilkeler şunlar için desteklenmez:
 
@@ -83,7 +84,7 @@ DLP ilkesi oluşturmak veya düzenlemek için [DLP ilkesi oluşturma, test etme 
 |bekleyen çevrimiçi verileri SharePoint     |Destekleniyor         |
 |Bekleyen verileri Teams     |Destekleniyor         |
 |Bekleyen e-posta iletileri verileri     |Gizlilik Hizmeti Planı ile kiracılar için desteklenir         |
-<!--|Bulut Uygulamaları için Microsoft Defender     |Desteklenen         |-->
+|Bulut Uygulamaları için Microsoft Defender     |Destekleniyor         |
 
 ### <a name="autolabeling"></a>Otomatik etiketleme
 
@@ -97,7 +98,7 @@ DLP ilkesi oluşturmak veya düzenlemek için [DLP ilkesi oluşturma, test etme 
 |Exchange taşıma     |Destekleniyor |
 |Bekleyen verileri OneDrive İş     |Destekleniyor |
 |bekleyen çevrimiçi verileri SharePoint|Destekleniyor|
-|Azure Information Protection (AIP) tarayıcısı|desteklenmiyor|
+|Azure Information Protection (AIP) tarayıcısı|Desteklenmiyor|
 
 ## <a name="known-issues"></a>Bilinen sorunlar
 
@@ -122,7 +123,7 @@ Adlandırılmış varlık SIT kullanan bir ilke oluştururken veya düzenlerken 
 
 1. Simülasyon modunda test etmek istediğiniz SIT veya SIP'ler bileşimini (özel veya kopyalanmış ve düzenlenmiş) tanımlayın.
 1. Otomatik etiketleme ilkesi Exchange, SharePoint sitelerde veya OneDrive hesaplarında eşleşme bulduğunda uygulanacak bir duyarlılık etiketi belirleyin veya oluşturun.
-1. 1. adımdaki SIT'i kullanan ve DLP ilkenizde kullanılacak Koşullar ve Özel Durumlar ile duyarlılık otomatik etiketleme ilkesi oluşturma
+1. 1. adımdaki SIT'i kullanan ve DLP ilkenizde kullanılacak Koşullar ve Özel Durumlar ile bir duyarlılık otomatik etiketleme ilkesi oluşturma
 1. İlke benzetimi çalıştırma
 1. Sonuçları görüntüleme
 1. Hatalı pozitif sonuçları azaltmak için SIT veya ilke ile örnek sayısı ve güvenilirlik düzeylerini ayarlayın.

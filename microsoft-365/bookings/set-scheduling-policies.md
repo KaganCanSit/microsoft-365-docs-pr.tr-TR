@@ -9,17 +9,14 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 4b2c84ec-64d3-4027-af4c-40f69e7b37c9
 description: İşletmeniz için zamanlama ilkeleri ayarlamayı öğrenin. Zamanlama ilkeleri randevuların uzunluğunun yanı sıra kabul edilebilir müşteri adayı ve iptal sürelerini içerir.
-ms.openlocfilehash: f4b19af8bd0c9a91ea7fea3fd7b2a8feb4285dcd
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: 39d6ab31d7bfda8f2686ed232402c1b98e6a56db
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65468382"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637549"
 ---
 # <a name="set-your-microsoft-bookings-scheduling-policies"></a>Microsoft Bookings zamanlama ilkelerinizi ayarlama
-
-> [!NOTE]
-> Bu makale, Microsoft Bookings en son sürümüyle etkileşim kurmanıza yardımcı olur. Önceki sürümler önümüzdeki aylarda kullanımdan kaldırılacak.
 
 Tüm randevular aynı değildir. Bazıları yalnızca birkaç dakika, bazıları ise saat veya daha uzun sürebilir. Microsoft Bookings'de, rezervasyon sayfası işletmeniz için zamanlama ilkelerini ayarladığınız yerdir. Zamanlama ilkeleri randevuların uzunluğunu, kabul edilebilir müşteri adayı ve iptal sürelerini ve rezervasyon değişikliklerinin otomatik bildirimlerini içerir. Hizmetler sayfasındaki her hizmet için, yalnızca bu hizmet için geçerli olan ek süre ayarları ve ilkeleriyle ek özelleştirme eklenebilir.
 

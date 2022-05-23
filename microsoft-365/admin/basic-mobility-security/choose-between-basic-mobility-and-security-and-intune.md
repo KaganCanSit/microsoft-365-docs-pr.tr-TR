@@ -19,12 +19,12 @@ ms.custom:
 search.appverid:
 - MET150
 description: Temel Mobilite ve Güvenlik Microsoft 365 planlarının bir parçasıdır, Microsoft Intune ise belirli Microsoft 365 planlara dahil olan tek başına bir üründür.
-ms.openlocfilehash: 1d04beea6ece35d5d28bdd961041b30c1f8f2793
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 01d2717aa0368e3d1dc5ed17f3adfd6313880dfe
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65435777"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65636118"
 ---
 # <a name="choose-between-basic-mobility-and-security-or-intune"></a>Temel Mobilite ve Güvenlik veya Intune arasında seçim yapma
 
@@ -75,7 +75,7 @@ Microsoft Intune ve yerleşik Temel Mobilite ve Güvenlik, kuruluşunuzdaki mobi
 |WiFi profilleri |Cihazda yerel bir WiFi profili sağlayın. |Hayır|Evet|
 |VPN profilleri |Cihazda yerel bir VPN profili sağlayın. |Hayır|Evet|
 |Mobil uygulama yönetimi  |dahili iş kolu uygulamalarınızı ve uygulama mağazalarından kullanıcılara dağıtın. |Hayır|Evet|
-|Mobil uygulama koruması  |Kullanıcılarınızın bildikleri Office mobil ve iş kolu uygulamalarını kullanarak şirket bilgilerine güvenli bir şekilde erişmesini sağlarken kopyalama, kesme, yapıştırma ve farklı kaydetme gibi eylemlerin yalnızca şirket verileri için onaylanan uygulamalarla kısıtlanmasını sağlayarak verilerin güvenliğini sağlayın. Cihazlar Basic Mobility ve Security'ye kayıtlı olmasa bile çalışır. Bkz. MAM ilkelerini kullanarak uygulama verilerini koruma. |Hayır|Evet|
+|Mobil uygulama koruması  |Kullanıcılarınızın bildikleri Office mobil ve iş kolu uygulamalarını kullanarak şirket bilgilerine güvenli bir şekilde erişmesini sağlarken kopyalama, kesme, yapıştırma ve farklı kaydetme gibi eylemlerin yalnızca şirket verileri için onaylanan uygulamalarla kısıtlanmasını sağlayarak verilerin güvenliğini sağlayın. Cihazlar Temel Mobilite ve Güvenlik'e kayıtlı olmasa bile çalışır. Bkz. MAM ilkelerini kullanarak uygulama verilerini koruma. |Hayır|Evet|
 |Yönetilen tarayıcı  |Edge uygulamasını kullanarak daha güvenli web'e gözatmayı etkinleştirin. |Hayır|Evet|
 |Sıfır dokunma kayıt programı (AutoPilot) |Şirkete ait çok sayıda cihazı kaydederken kullanıcı kurulumunu basitleştirin. |Hayır|Evet|
 

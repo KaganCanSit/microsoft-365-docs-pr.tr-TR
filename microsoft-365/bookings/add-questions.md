@@ -9,17 +9,14 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: fd6b7587-5055-4bcd-83a4-13bd4929bfff
 description: Çevrimiçi olarak sizinle randevu alırken müşterilere soru sormanız gerekiyorsa, rezervasyon sayfasına özel sorular ve gerekli sorular ekleyebilirsiniz.
-ms.openlocfilehash: 9830dfaa9ac1964e74eb16321d061e096aad1bab
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: d42f883f3d58882ec5a2e8e8e2bbe7baf7ed3232
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64714625"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637703"
 ---
 # <a name="add-custom-and-required-questions-to-the-booking-page"></a>Rezervasyon sayfasına özel ve gerekli sorular ekleme
-
-> [!NOTE]
-> Bu makale, Microsoft Bookings en son sürümüyle etkileşim kurmanıza yardımcı olur. Önceki sürümler önümüzdeki aylarda kullanımdan kaldırılacak.
 
 Bookings, müşterilerinize randevu rezervasyonu yaparken sormak için sorular oluşturmanıza olanak tanır. Ayrıca hangi soruların gerekli olduğunu seçmenizi sağlar.
 

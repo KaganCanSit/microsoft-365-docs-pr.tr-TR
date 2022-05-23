@@ -9,17 +9,14 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 4a1c391e-524f-48e0-bef8-185df3a9634b
 description: Hizmet adı, açıklama, konum, süre ve fiyatlandırma gibi hizmet teklifleri bilgilerini girme yönergeleri. Hizmeti sağlamak için uygun çalışanları da etiketleyebilirsiniz.
-ms.openlocfilehash: 818d0d84e78907047df41e30f0ded62fc16c6ce4
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: 0c302e8d84274fa2df8eea27362407ded4a468e3
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65023777"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637791"
 ---
 # <a name="define-your-service-offerings-in-bookings"></a>hizmet tekliflerinizi Bookings'de tanımlama
-
-> [!NOTE]
-> Bu makale, Microsoft Bookings en son sürümüyle etkileşim kurmanıza yardımcı olur. Önceki sürümler önümüzdeki aylarda kullanımdan kaldırılacak.
 
 hizmet tekliflerinizi Microsoft Bookings tanımlarken, bir hizmet adı, açıklama, konum (şahsen toplantı yapmak mı yoksa çevrimiçi toplantı mı yapmak istediğinizi seçin), süre, müşterilere ve personele varsayılan anımsatıcılar, hizmetle ilgili iç notlar ve fiyatlandırma ayarlarsınız. Hizmeti sağlamak için uygun çalışanları da etiketleyebilirsiniz. Ardından, müşteriler iş web sitenize randevu almak için geldiğinde, tam olarak ne tür randevular olduğunu görebilir, hizmeti sağlamak istedikleri kişiyi ve hizmetlerinin maliyetini seçebilirler.
 
@@ -105,13 +102,13 @@ Ayrıca, birisi rezervasyon sayfanız aracılığıyla bir hizmet rezervasyonu y
 
    :::image type="content" source="media/bookings-additional-info.jpg" alt-text="Bookings e-postadaki ek bilgiler.":::
 
-9. **Müşteriniz için kısa mesaj bildirimlerini etkinleştirme** Seçilirse, sms mesajları müşteriye gönderilir, ancak yalnızca kabul ederse gönderilir.
+9. **Müşteriniz için kısa mesaj bildirimlerini etkinleştirme** Seçilirse, SMS iletiler müşteriye gönderilir, ancak yalnızca kabul ederlerse gönderilir.
 
    - El ile rezervasyon ve Self-Service Sayfasında kabul etme kutusu:
 
      :::image type="content" source="media/bookings-opt-In-boc.jpg" alt-text="Bookings'daki kabul etme kutusu.":::
 
-   - Kısa mesaj bildirimleri aşağıdaki gibi görünür (SMS bildirimlerinin şu anda yalnızca Kuzey Amerika'de kullanılabildiğini unutmayın):
+   - Kısa mesaj bildirimleri aşağıdaki gibi görünür (SMS bildirimlerinin şu anda yalnızca Kuzey Amerika'da kullanılabildiğini unutmayın):
 
      :::image type="content" source="media/bookings-text-notifications.jpg" alt-text="Bookings'dan kısa mesaj bildirimi.":::
 

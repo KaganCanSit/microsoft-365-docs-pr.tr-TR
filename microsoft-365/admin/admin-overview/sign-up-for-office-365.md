@@ -29,12 +29,12 @@ search.appverid:
 ROBOTS: NOINDEX
 description: Office 365 kaydolma işlemine geçmeden önce Office programlarının en son sürümleri hakkında bilmeniz gerekenleri anlayın.
 ms.date: 03/17/2021
-ms.openlocfilehash: 015f99a2f0b6f9fcd17592e399bccf044313f993
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 185931ba308ae547355cb21a2935bb6f9097c8b7
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65436129"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65636228"
 ---
 # <a name="how-to-sign-up---admin-help"></a>Kaydolma - Yönetici Yardımı
 
@@ -42,7 +42,7 @@ Ekibinizin Word, Excel, PowerPoint ve diğer Office programlarının en son sür
 
 ::: moniker range="o365-21vianet"
 
-Çin'deyseniz, 21Vianet tarafından sağlanan Office 365, Çin'deki güvenli, güvenilir ve ölçeklenebilir bulut hizmetleri gereksinimlerini karşılamak için tasarlanmıştır. Bu hizmet, Microsoft'un 21Vianet lisansına sahip olduğu teknolojiyle desteklenir. Microsoft hizmetin kendisini çalıştırmaz. 21Vianet hizmetin teslimini çalıştırır, sağlar ve yönetir. 21Vianet barındırma, yönetilen ağ hizmetleri ve bulut bilişim altyapı hizmetleri sağlayan, Çin'deki en büyük taşıyıcıdan bağımsız İnternet veri merkezi hizmetleri sağlayıcısıdır. 21Vianet, Microsoft teknolojilerini lisanslayarak verilerinizi Çin'de tutarken Microsoft hizmetleri kullanabilmenizi sağlamak için yerel Microsoft veri merkezleri çalıştırır. 21Vianet ayrıca abonelik ve faturalama hizmetlerinizin yanı sıra destek de sağlar.
+Çin'deyseniz, 21Vianet tarafından sağlanan Office 365, Çin'deki güvenli, güvenilir ve ölçeklenebilir bulut hizmetleri gereksinimlerini karşılamak için tasarlanmıştır. Bu hizmet, Microsoft'un 21Vianet lisansına sahip olduğu teknolojiyle desteklenir. Microsoft hizmetin kendisini çalıştırmaz. 21Vianet hizmetin teslimini çalıştırır, sağlar ve yönetir. 21Vianet barındırma, yönetilen ağ hizmetleri ve bulut bilişim altyapı hizmetleri sağlayan, Çin'deki en büyük taşıyıcıdan bağımsız İnternet veri merkezi hizmetleri sağlayıcısıdır. 21Vianet, Microsoft teknolojilerini lisanslayarak verilerinizi Çin'de tutarken Microsoft hizmetleri kullanabilmenizi sağlamak için yerel Microsoft veri merkezleri çalıştırır. 21Vianet ayrıca aboneliğinizi ve faturalama hizmetlerinizi ve desteği sağlar.
   
 > [!NOTE]
 > Bu hizmetler Çin yasalarına tabidir.

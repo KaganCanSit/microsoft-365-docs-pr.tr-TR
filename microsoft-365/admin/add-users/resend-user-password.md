@@ -20,12 +20,12 @@ search.appverid:
 - MOE150
 ms.assetid: 9b838071-94aa-4b8e-8d84-d17ece1ee951
 description: "Yeni parolasıyla özgün e-postayı almadıysa kullanıcının parolasını sıfırlayarak bildirim e-postasını Microsoft 365'da yeni bir kullanıcıya yeniden gönderin. "
-ms.openlocfilehash: 540b419d3f6452d6ca93e9e9424a1a28c0ecdfea
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: b6b8aab70cb48bb288485d52efd3a958c4df0888
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65436305"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65636162"
 ---
 # <a name="resend-a-microsoft-365-users-password---admin-help"></a>Microsoft 365 kullanıcı parolasını yeniden gönderme - Yönetici yardımı
 
@@ -45,7 +45,7 @@ Bu adımları gerçekleştirmek için [genel yönetici veya parola yöneticisi](
 
 3. Kullanıcı için otomatik olarak yeni bir parola oluşturmak veya onlar için bir parola oluşturmak için **Parolayı sıfırla** sayfasındaki yönergeleri izleyin ve ardından **Sıfırla'yı** seçin.  
 
-4. Kullanıcının yeni parolayı alması için ulaşabileceği bir e-posta adresi girin ve bu parolayı aldığından emin olmak için bu adresi takip edin.
+4. Yeni parolayı almak için kullanıcının ulaşabileceği bir e-posta adresi girin ve bu parolayı aldığından emin olmak için bu adresi takip edin.
 
 ## <a name="related-content"></a>İlgili içerik
 

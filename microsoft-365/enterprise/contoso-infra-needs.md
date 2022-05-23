@@ -14,12 +14,12 @@ ms.collection:
 - Strat_O365_Enterprise
 ms.custom: ''
 description: Contoso şirket içi BT altyapısının temel yapısını ve şirketin iş ihtiyaçlarının kuruluş için Microsoft 365 tarafından nasıl karşılandığını anlayın.
-ms.openlocfilehash: 5dc47898aa0499bc4b62d22d37689d872116a9e7
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 793c867d47d76a03efad707d8447e04538c8ebb8
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65101369"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637505"
 ---
 # <a name="contoso-it-infrastructure-and-business-needs"></a>Contoso BT altyapısı ve iş gereksinimleri
 

@@ -17,12 +17,12 @@ ms.custom:
 - AdminTemplateSet
 - admindeeplinkMAC
 description: Microsoft 365 yönetim merkezi, iş işlevlerine eşlenen ve belirli görevleri gerçekleştirme izinleri veren bazı Microsoft Intune rolleri yönetmenize olanak tanır.
-ms.openlocfilehash: efff2d426d40103369126c082fcb8d7be44e031c
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 61c73ea49b132dee12839112bdc08624a750989f
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65436768"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65636272"
 ---
 # <a name="intune-admin-roles-in-the-microsoft-365-admin-center"></a>Microsoft 365 yönetim merkezi yönetici rollerini Intune
 
@@ -47,11 +47,11 @@ Microsoft 365 yönetim merkezi **Roller'e** gidip herhangi bir rolü seçerek ay
 
 ## <a name="delegated-administration-for-microsoft-partners"></a>Microsoft İş ortakları için temsilci yönetim
 
-Bir Microsoft iş ortağıyla çalışıyorsanız, iş ortağınız için yönetici rolleri atayabilirsiniz. İş ortağınız da sizin şirketinizdeki ya da kendi şirketindeki kullanıcılara yönetici rolleri atayabilir. Örneğin bunu, sizin için çevrimiçi kuruluşunuzu oluşturup yönetecekse iş ortağınıza yönetici rolü atamak isteyebilirsiniz.
+Bir Microsoft iş ortağıyla çalışıyorsanız, iş ortağınız için yönetici rolleri atayabilirsiniz. İş ortağınız da sizin şirketinizdeki ya da kendi şirketindeki kullanıcılara yönetici rolleri atayabilir. Örneğin, çevrimiçi kuruluşunuzu sizin için ayarlayıp yönetiyorlarsa, bunu yapmalarını isteyebilirsiniz.
   
 Bir iş ortağı şu rolleri atayabilir: 
   
-- Genel yöneticiye eşdeğer ayrıcalıklara sahip olan ve Iş Ortağı Merkezi aracılığıyla Çok Faktörlü Kimlik Doğrulama'yı yönetme dışında tam yönetim.
+- İş Ortağı Merkezi aracılığıyla çok faktörlü kimlik doğrulamasını yönetmek dışında genel yöneticiye eşdeğer ayrıcalıklara sahip tam yönetim.
 
 - Yardım masası yöneticisiyle eşdeğer ayrıcalıklara sahip sınırlı yönetim.
 

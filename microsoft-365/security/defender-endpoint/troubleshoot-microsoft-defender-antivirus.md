@@ -15,12 +15,12 @@ ms.reviewer: ''
 manager: dansimp
 ms.technology: mde
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 52105373f0bc6bb70f6433eba4dacb4580a0f804
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 9008fe0d6a4c46d544e4d806c3a15b24c53f2f10
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65416726"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637994"
 ---
 # <a name="review-event-logs-and-error-codes-to-troubleshoot-issues-with-microsoft-defender-antivirus"></a>Microsoft Defender Virüsten Koruma ile ilgili sorunları gidermek için olay günlüklerini ve hata kodlarını inceleyin
 
@@ -2731,7 +2731,7 @@ Bu hata, güvenlik ürününüzle ilgili bir sorun olabileceğini gösterir.
 </tr><tr><td>Çözüm</td><td>
 <ol>
 <li>Tanımları güncelleştirin. İki durumdan biri:<ol>
-<li>Microsoft Defender Virüsten Koruma'daki Güncelleştir sekmesinde <b>Tanımları</b> <b>güncelleştir</b> düğmesine tıklayın. <img src="images/defender-updatedefs2.png" alt="Update definitions in Microsoft Defender Antivirus"/>Veya
+<li>Windows Güvenliği uygulamasında güvenlik bilgileri güncelleştirmelerinizi alın. <img src="images/defender-updatedefs2.png" alt="Update definitions in Microsoft Defender Antivirus"/>Veya
 </li>
 <li><a href="https://aka.ms/wdsi">Microsoft Güvenlik Zekası sitesinden</a> en son tanımları indirin.
 Not: Siteden indirilen tanım dosyasının boyutu 60 MB'ı aşabilir ve tanımları güncelleştirmek için uzun vadeli bir çözüm olarak kullanılmamalıdır.
@@ -3202,7 +3202,7 @@ Bu bir iç hatadır. Tarama tamamlanamadıktan sonra tetiklenmiş olabilir.
 </table>
 
 > [!TIP]
-> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> Diğer platformlar için Antivirüs ile ilgili bilgi arıyorsanız bkz:
 > - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
 > - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)

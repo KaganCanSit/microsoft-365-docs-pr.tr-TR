@@ -10,21 +10,16 @@ ms.custom: admindeeplinkMAC
 ms.localizationpriority: medium
 ms.assetid: 5382dc07-aaa5-45c9-8767-502333b214ce
 description: Microsoft 365'da Microsoft Bookings erişmeyi öğrenin.
-ms.openlocfilehash: e088250a24078d735b6751ff8cbcc55e2fdceaaa
-ms.sourcegitcommit: b3f5fe84a319741583954ef8ff2ec9ec6da69bcf
+ms.openlocfilehash: 98c6ae99bceada7649dc823ca88669ae0081fc10
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "65217474"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637306"
 ---
 # <a name="turn-microsoft-bookings-on-or-off"></a>Microsoft Bookings’i açma veya kapatma
 
-> [!NOTE]
-> Bu makale, Microsoft Bookings en son sürümüyle etkileşim kurmanıza yardımcı olur. Önceki sürümler önümüzdeki aylarda kullanımdan kaldırılacak.
-
-Bu makale yöneticilere yöneliktir. 
-
-Bookings, kuruluşunuzun tamamı veya belirli kullanıcılar için açılıp kapatılabilir. Kullanıcılar için Bookings açtığınızda, kullanıcılar bir Bookings sayfası oluşturabilir, takvim oluşturabilir ve diğer kişilerin onlarla zaman ayırtmasına izin verebilir.
+Bookings, kuruluşunuzun tamamı veya belirli kullanıcılar için açılıp kapatılabilir. Kullanıcılar için Bookings açtığınızda, kullanıcılar bir Bookings sayfası oluşturabilir, takvim oluşturabilir ve diğer kişilerin onlarla zaman ayırtmasına izin verebilir. Bu makale, kuruluşları için Bookings yöneten sahiplere ve yöneticilere yöneliktir.
 
 > [!NOTE]
 > Bu bölümlerde açıklanan yönetici denetimleri, 21Vianet (Çin) müşterileri tarafından sağlanan Office 365 için kullanılamaz.

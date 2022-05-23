@@ -16,12 +16,12 @@ ms.custom:
 - Ent_Office_Other
 ms.assetid: 5ebc0e21-b72d-46d8-96fa-00643b18eaec
 description: Microsoft 365 için PowerShell kullanarak Microsoft 365 kiracınıza Bağlan ve komut satırından yönetim merkezi görevlerini gerçekleştirin.
-ms.openlocfilehash: a69fa6885e254e0c15cd65833a4f8368ec239c4f
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: 24596a2781a8b2176908d6e5d3a6c5bd74b0260a
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65174818"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637439"
 ---
 # <a name="connect-to-microsoft-365-with-powershell"></a>PowerShell ile Microsoft 365’e bağlanma
 
@@ -43,6 +43,8 @@ PowerShell modülünün Microsoft 365 bağlanmak ve kullanıcı hesaplarını, g
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Başlamadan önce bilmeniz gerekenler
 
+>[!NOTE]
+> Azure Active Directory Modülü, Microsoft Graph PowerShell SDK ile değiştiriliyor. Tüm Microsoft Graph API'lerine erişmek için Microsoft Graph PowerShell SDK'sını kullanabilirsiniz. Daha fazla bilgi için bkz. [Microsoft Graph PowerShell SDK ile Kullanmaya başlayın](/powershell/microsoftgraph/get-started).
 
 **İşletim sistemi**
 
@@ -206,11 +208,6 @@ Kuruluşunuz için Microsoft 365 aboneliğinize bağlı etkin bir Azure aboneli�
 Daha fazla bilgi için bkz. [Azure Cloud Shell](/azure/cloud-shell/overview).
 
 
-## <a name="get-started-with-the-microsoft-graph-powershell-sdk"></a>Microsoft Graph PowerShell SDK ile Kullanmaya başlayın
-
-Tüm Microsoft Graph API'lerine erişmek için Microsoft Graph PowerShell SDK'sını kullanabilirsiniz.
-
-Daha fazla bilgi için bkz. [Microsoft Graph PowerShell SDK ile Kullanmaya başlayın](/powershell/microsoftgraph/get-started?view=graph-powershell-beta)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -19,12 +19,12 @@ ms.custom:
 search.appverid: MET150
 description: Yeni ayrılanlar özelliği hakkında bilgi edinin.
 ms.date: 05/12/2022
-ms.openlocfilehash: c251d653aa95fa489a2482ae0c9ef80c9851fc4b
-ms.sourcegitcommit: 4e7ff69f4d7d27c2d419f763cfcb069e3b0d0d9f
+ms.openlocfilehash: 60c2fdcd451f5926cbda84d8e5236176314bd3f5
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65403326"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65636096"
 ---
 # <a name="allotment-basics"></a>Ayrılan temel bilgiler
 
@@ -47,11 +47,11 @@ Ayrılanları kullanıcılara sağlanan herhangi bir ürünle kullanabilirsiniz:
 Aşağıdaki ürünler, ayrılanlarla kullanılamaz:
 
 - uygulamaları Microsoft Store
-- Kalıcı yazılım veya lisans söz konusu değilse doğrudan kullanıcıya atanan yazılım.
+- Kalıcı yazılım veya lisans söz konusu değilse kullanıcıya doğrudan atanan yazılım.
 - Azure kaynakları
 
 Bir ayırmayı kullanmaya başlamak için genel yönetici veya lisans yöneticisi olmanız gerekir.
 
 ## <a name="getting-started"></a>Başlarken
 
-Ayrılanlar özelliği özel önizlemede yalnızca az sayıda müşterinin kullanımına sunulmuştur. Katılmak istiyorsanız şu formu doldurun: [https://aka.ms/allotment-pilot-signup](https://aka.ms/allotment-pilot-signup).
+Allotments özelliği yalnızca birkaç müşterinin özel önizlemesinde kullanılabilir. Katılmak istiyorsanız şu formu doldurun: [https://aka.ms/allotment-pilot-signup](https://aka.ms/allotment-pilot-signup).

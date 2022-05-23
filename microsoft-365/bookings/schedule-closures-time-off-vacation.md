@@ -9,17 +9,14 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: e3c0a4ee-e3d8-4fbe-bd8f-16d1c712d1f4
 description: Çalışanların belirtilen zamanlarda rezervasyon için uygun değil olarak işaretlenmesi için, Bookings takviminden ofis kapanışlarını ve çalışan izinlerini planlayın.
-ms.openlocfilehash: 32f1d930daf44d000a1dbf03eded3f05fbb976eb
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: 52b2b8ea912cb876dd2d6e8b8efcdcc3bb90ce1f
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65468404"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637461"
 ---
 # <a name="schedule-bookings-business-closures-time-off-and-vacation-time"></a>İş kapanışları, izin ve tatil zamanlarını Bookings zamanlayın
-
-> [!NOTE]
-> Bu makale, Microsoft Bookings en son sürümüyle etkileşim kurmanıza yardımcı olur. Önceki sürümler önümüzdeki aylarda kullanımdan kaldırılacak.
 
 Bazen tatiller veya ekip etkinlikleri için işletmenizi kapatmak istersiniz ya da çalışanlarınızın hasta, tatil veya başka nedenlerle müsait olmadığında izine ihtiyacı olur. Microsoft Bookings takviminden izin zamanlayabilirsiniz ve çalışan belirtilen süre boyunca rezervasyonlar için kullanılamaz. İşletme yeniden açıldıktan veya çalışanlar işe döndükten sonra, herkes belirtilen çalışma saatlerine göre rezervasyon sayfasında listelenir.
 

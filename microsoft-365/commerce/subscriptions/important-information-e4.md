@@ -1,5 +1,5 @@
 ---
-title: E4 müşterileri Office 365 önemli bilgiler
+title: Office 365 E4 müşterileri için önemli bilgiler
 f1.keywords:
 - NOCSH
 author: cmcatee-MSFT
@@ -18,41 +18,41 @@ ms.custom:
 - customer-email
 - admindeeplinkMAC
 search.appverid: MET150
-description: Yeni E4 aboneliği olan müşterilerin planlarını yükseltme veya değiştirme Office 365 bilgiler.
+description: Office 365 E4 aboneliği olan müşteriler için planları yükseltme veya değiştirme hakkında önemli bilgiler.
 ROBOTS: NOINDEX, NOFOLLOW
 ms.date: 08/14/2020
-ms.openlocfilehash: 13ee5f028e8b1d45494e64b6405100a5404acd8c
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 8c78fb458564839d0690b7f5ccc98397cc11ddcf
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63317968"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637857"
 ---
-# <a name="important-information-for-office-365-e4-customers"></a>E4 müşterileri Office 365 önemli bilgiler
+# <a name="important-information-for-office-365-e4-customers"></a>Office 365 E4 müşterileri için önemli bilgiler
 
-en Office 365 E4 planı 2015'te kaldırıldı. Bir Microsoft 365 yöneticisi olarak, ileti <a href="https://go.microsoft.com/fwlink/p/?linkid=2070717" target="_blank">merkezinde (</a>TTM'nin bir parçası) e-posta güncelleştirmeleri alır ve ne zaman bir işlemle ilgili bilgi içeren gönderiler alırsınız (Microsoft 365 yönetim merkezi).
+Office 365 E4 planı 2015 yılında kullanımdan kaldırılmıştır. Microsoft 365 genel yöneticisi olarak, e-posta güncelleştirmelerini alır ve <a href="https://go.microsoft.com/fwlink/p/?linkid=2070717" target="_blank">ileti merkezinde</a> (Microsoft 365 yönetim merkezi bir parçası) ne zaman işlem yapmanız gerektiğiyle ilgili bilgilerin yer aldığı gönderileri görürsünüz.
 
-## <a name="compare-your-options-for-upgrading-or-changing-plans"></a>Yükseltme veya plan değiştirme seçeneklerinizi karşılaştırma
+## <a name="compare-your-options-for-upgrading-or-changing-plans"></a>Planları yükseltme veya değiştirme seçeneklerinizi karşılaştırma
 
-E4'te sahip olduğu işlevleri korumayı veya Sesli Konferans'ı kullanarak yeni özelliklerden ve işlevlerden Microsoft 365 Microsoft 365 seçebilirsiniz. Yeni bir plana taşımak için beş seçenek vardır.
+E4 ile sahip olduğunuz işlevleri korumayı veya Microsoft 365 ve Microsoft 365 Sesli Konferans yeni özelliklerden ve işlevlerden yararlanmayı seçebilirsiniz. Yeni bir plana geçmek için beş seçeneğiniz vardır.
 
-|  | 1. Seçenek: Yükseltme için Office 365 E5 | 2. Seçenek: Yükseltme için Microsoft 365 E5 | 3. Seçenek: Sesli Konferans Microsoft 365 E5'e yükseltin | 4. Seçenek: Seçeneklere Office 365 E3 | 5. Seçenek: Seçeneklere Microsoft 365 E3 |
+|  | 1. Seçenek: Office 365 E5 yükseltme | Seçenek 2: Microsoft 365 E5 yükseltme | Seçenek 3: Sesli Konferans olmadan Microsoft 365 E5 yükseltme | Seçenek 4: Office 365 E3 olarak değiştirin | Seçenek 5: Microsoft 365 E3 olarak değiştirin |
 |-|-|-|-|-|-|
-| **Geçerli E4 aboneliğinize dahil olan tüm hizmetleri ve Office 365 alın** | Evet | Evet | Evet | Hayır | Hayır |
-| **Telefon yönetilen Microsoft 365** | Evet | Evet | Hayır | Hayır | Hayır |
-| **Telefon şirket içinde ve şirket içinde yönetilen bazı numaralar Microsoft 365 (karma dağıtım)**<br/><br/>Maliyetli özel dal değişimi (PBX) telefon sistemlerine olan bağlıliğinizi azaltın ve arama, konferans, video ve paylaşım için tek bir platformla iletişim altyapınızı basitleştirin. | Evet | Evet | Hayır | Hayır | Hayır |
-| **Arama Planları ekleme seçeneği**<br/><br/>Yurtiçi Çağrı Planı veya Yurtiçi Microsoft 365 Ve Uluslararası Çağrı Planı Microsoft 365 lisans  eklersiniz. Daha fazla bilgi edinmek için bkz [. Hangi Arama Planı sizin için uygun?](/MicrosoftTeams/calling-plan-landing-page). | <sup>Evet1</sup> | Evet | Evet | Evet | Evet |
-| **Sesli Konferans**<br/><br/>Toplantı katılımcıları, toplantılara hemen Skype Kurumsal cihazdan arayarak bağlanabilirsiniz ve düzenleyiciler, aramayı yanıtarak katılımcıları toplantıya çekebilir. | <sup>Evet2</sup> | Evet | Evet | Hayır | Hayır |
+| **Geçerli Office 365 E4 aboneliğinize dahil olan tüm hizmetleri ve işlevleri alın** | Evet | Evet | Evet | Hayır | Hayır |
+| **Microsoft 365'de yönetilen Telefon sayılar** | Evet | Evet | Hayır | Hayır | Hayır |
+| **hem şirket içinde hem de Microsoft 365 (karma dağıtım) içinde yönetilen Telefon numaraları**<br/><br/>Yüksek maliyetli özel dal değişimi (PBX) telefon sistemlerine olan dayanıklılığı azaltın ve arama, konferans, video ve paylaşım için tek bir platformla iletişim altyapınızı basitleştirin. | Evet | Evet | Hayır | Hayır | Hayır |
+| **Arama Planları ekleme seçeneği**<br/><br/>Microsoft 365 Yurtiçi Arama Planı veya Microsoft 365 Yurtiçi ve Uluslararası Arama Planı için lisans ekleyebilirsiniz. Daha fazla bilgi edinmek için bkz [. Hangi Arama Planı size uygun?](/MicrosoftTeams/calling-plan-landing-page). | <sup>Evet1</sup> | Evet | Evet | Evet | Evet |
+| **Sesli Konferans**<br/><br/>Toplantı katılımcıları, neredeyse tüm cihazlardan Skype Kurumsal toplantılara arayarak bağlanabilir ve düzenleyiciler de katılımcıları içeri çekmek için arayarak arayarak bağlanabilir. | <sup>Evet2</sup> | Evet | Evet | Hayır | Hayır |
 | **İşbirliği, analiz ve güvenlik için gelişmiş araçlar** | Evet | Evet | Evet | Hayır | Hayır |
 | **Yeni etkileşimli raporlar, panolar ve veri görselleştirmeleri** | Evet | Evet | Evet | Hayır | Hayır |
 | **Yerleşik gizlilik, geçirgenlik ve geliştirilmiş kullanıcı denetimleriyle, veri güvenliğiniz ve uyumluluğunuz üzerinde daha fazla denetim** | Evet | Evet | Evet | Hayır | Evet |
 
-<sup>1</sup> Microsoft 365 Office 365'daki arama planları 11 ülke veya bölgede kullanılabilir ve bu ülkelerden veya bölgelerden herhangi birsinde fatura adresi olan kuruluşlar tarafından kullanılabilir. Daha fazla bilgi edinmek için bkz [. Kurum için telefon numaralarını yönetme](/microsoftteams/manage-phone-numbers-for-your-organization/manage-phone-numbers-for-your-organization). Microsoft 365 veya Office 365'ya yükseltmiyorsanız ya da Telefon Sistemi satın aldığınız zaman, Yurtiçi veya Yurtiçi ve Uluslararası arama planı ekleme seçeneğiniz vardır.
+<sup>1</sup> Microsoft 365 veya Office 365 arama planları 11 ülke veya bölgede kullanılabilir ve bu ülkelerden veya bölgelerden birinde fatura adresi olan kuruluşlar tarafından kullanılabilir. Daha fazla bilgi için bkz. [Kuruluşunuz için telefon numaralarını yönetme](/microsoftteams/manage-phone-numbers-for-your-organization/manage-phone-numbers-for-your-organization). Microsoft 365 veya Office 365 yükseltme yaptığınızda ya da Telefon Sistemi satın aldıysanız, Yurtiçi veya Yurtiçi ve Uluslararası arama planı ekleme seçeneğiniz vardır.
 
-<sup>2</sup> Sesli Konferans henüz tüm ülkelerde veya bölgelerde kullanılamaz. Ülkeniz veya bölgeniz için Sesli Konferans kullanılamıyorsa kullanılabilir olduğunda sizi güncelleştiriz. Bu sırada Microsoft 365 Office 365 E5 müşteriler Sesli Konferans ile E5 aboneliğine hemen yükseltilebilir veya yenileme zamanı gelene kadar bekleyebilirler. Hangi ülkelerin veya bölgelerin Sesli Konferans desteği olduğunu görmek için[](/microsoftteams/country-and-region-availability-for-audio-conferencing-and-calling-plans/country-and-region-availability-for-audio-conferencing-and-calling-plans), Sesli Konferans ve Arama Planları için ülke ve bölge kullanılabilirliği'ne bakın ve ülkenizi veya bölgenizi seçmek için açılan listeyi kullanın.
+<sup>2</sup> Sesli Konferans henüz tüm ülkelerde veya bölgelerde kullanılamamaktadır. Ülkenizde veya bölgenizde Sesli Konferans kullanılamıyorsa, kullanılabilir olduğunda sizi güncelleştireceğiz. Bu sırada, Microsoft 365 ve Office 365 E5 müşterileri Sesli Konferans ile bir E5 aboneliğine hemen yükseltebilir veya yenileme zamanı gelene kadar bekleyebilir. Hangi ülkelerin veya bölgelerin Sesli Konferans desteklediğini görmek için bkz[. Sesli Konferans ve Arama Planları için ülke ve bölge kullanılabilirliği ve](/microsoftteams/country-and-region-availability-for-audio-conferencing-and-calling-plans/country-and-region-availability-for-audio-conferencing-and-calling-plans) açılan listeyi kullanarak ülkenizi veya bölgenizi seçin.
 
 ## <a name="ready-to-upgrade"></a>Yükseltmeye hazır mısınız?
 
-Aboneliğinizi yenileme zamanı geldiğinde, bu planlardan birini yükseltebilirsiniz.
+Aboneliğinizi yenileme zamanı geldiğinde bu planlardan birine yükseltmeyi göz önünde bulundurun.
 
-Aboneliğinizi doğrudan Microsoft'tan satın aldıysanız ve şimdi yükseltmek için bkz. [Office 365 E4 aboneliğinden yükseltme](upgrade-Office-365-E4.md). E4'ü yeni bir plana yükselterken hiçbir veri kaybetmezsiniz.
+Aboneliğinizi doğrudan Microsoft'tan satın aldıysanız ve şimdi yükseltmek istiyorsanız bkz. [Office 365 E4 aboneliğinden yükseltme](upgrade-Office-365-E4.md). E4'ten yeni bir plana yükselttiğiniz zaman hiçbir veri kaybetmezsiniz.

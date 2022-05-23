@@ -9,17 +9,14 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 0968717e-b61f-4b06-987c-6c1464541782
 description: Microsoft Bookings'de çalışanların çalışma saatlerini ve uygunluk durumunu ayarlayın.
-ms.openlocfilehash: ce248e964552b8e1258dbad999f865874ef898e2
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: 19b5a186c66659777a0dbe3444c0e43c4142ff36
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65023337"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637262"
 ---
 # <a name="employee-working-hours-in-microsoft-bookings"></a>Microsoft Bookings’de çalışanların çalışma saatleri
-
-> [!NOTE]
-> Bu makale, Microsoft Bookings en son sürümüyle etkileşim kurmanıza yardımcı olur. Önceki sürümler önümüzdeki aylarda kullanımdan kaldırılacak.
 
 Çalışan çalışma saatlerini ayarlamak, müşterileriniz rezervasyon yapmaya çalıştığında uygunluk durumunun doğru bir şekilde gösterilmesini sağlar. Varsayılan olarak, çalışanlarınızın her biri için çalışma saatleri, Microsoft Bookings uygulamasında oluşturduğunuz iş saatlerine göre değişir. [İş bilgilerini girme](enter-business-information.md) bölümünün "İş saatlerinizi ayarlama" bölümüne bakın.
 

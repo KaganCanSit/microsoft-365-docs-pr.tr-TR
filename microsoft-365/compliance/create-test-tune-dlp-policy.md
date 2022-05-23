@@ -1,5 +1,5 @@
 ---
-title: DLP ilkesi oluşturma, sınama ve ayarlama
+title: Bir DLP ilkesi oluşturma, test etme ve ayarlama
 f1.keywords:
 - NOCSH
 ms.author: chrfox
@@ -18,236 +18,238 @@ search.appverid:
 ms.custom:
 - seo-marvel-mar2020
 ms.assetid: 59414438-99f5-488b-975c-5023f2254369
-description: Bu makalede, bir DLP ilkesi oluşturma, test etmeyi ve kuruluş ihtiyaçlarına göre ayarlamayı öğrenirsiniz.
-ms.openlocfilehash: cc31d067eaf2684c17a09d7b2731a5cc3500af76
-ms.sourcegitcommit: 99067d5eb1fa7b094e7cdb1f7be65acaaa235a54
+description: Bu makalede, kuruluş gereksinimlerinize göre bir DLP ilkesi oluşturmayı, test etmeyi ve ayarlamayı öğreneceksiniz.
+ms.openlocfilehash: 5508ce96e1309122e9c4c5139941eb41f6906e82
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2022
-ms.locfileid: "63010056"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637747"
 ---
-# <a name="create-test-and-tune-a-dlp-policy"></a>DLP ilkesi oluşturma, sınama ve ayarlama
+# <a name="create-test-and-tune-a-dlp-policy"></a>Bir DLP ilkesi oluşturma, test etme ve ayarlama
 
-Veri kaybını önleme (DLP), hassas bilgilerin yanlışlıkla veya yanlışlıkla paylaşımını önlemeye yardımcı olur.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-DLP, kredi kartı numarası gibi hassas bilgiler için e-posta iletilerini ve dosyaları inceler. DLP kullanarak hassas bilgileri algılanabilir ve şu tür bir işlemden geçebilirsiniz:
+Microsoft Purview Veri Kaybı Önleme (DLP), hassas bilgilerin yanlışlıkla veya yanlışlıkla paylaşılmasını önlemenize yardımcı olur.
 
-- Denetimin amacına yönelik olarak olayı günlüğe günlüğe kayıtlama
-- E-postayı gönderen veya dosyayı paylaşan son kullanıcıya uyarı görüntüleme
-- E-posta veya dosya paylaşımının yer almalarını etkin bir şekilde engelleme
+DLP, kredi kartı numarası gibi hassas bilgiler için e-posta iletilerini ve dosyaları inceler. DLP kullanarak hassas bilgileri algılayabilir ve aşağıdaki gibi eylemler gerçekleştirebilirsiniz:
+
+- Olayı denetim amacıyla günlüğe kaydetme
+- E-postayı gönderen veya dosyayı paylaşan son kullanıcıya bir uyarı görüntüleme
+- E-posta veya dosya paylaşımının gerçekleştirilmesine etkin bir şekilde engel olun
 
 ## <a name="permissions"></a>İzinler
 
-DLP ilkeleri oluşturacak uyumluluk ekibimizin üyelerinin Uyumluluk Merkezi için izinleri olmalıdır. Varsayılan olarak, kiracı yöneticiniz uyumluluk görevlilerine ve diğer kullanıcılara erişim izni vetir. Şu adımları izleyin:
+DLP ilkeleri oluşturacak uyumluluk ekibinizin üyelerinin Uyumluluk Merkezi'ne yönelik izinlere sahip olması gerekir. Varsayılan olarak, kiracı yöneticinizin erişimi uyumluluk görevlilerine ve diğer kişilere erişim verebilir. Şu adımları izleyin:
   
-1. Grup içinde bir Microsoft 365 oluşturun ve uyumluluk yetkililerini ekleyin.
+1. Microsoft 365'de bir grup oluşturun ve gruba uyumluluk görevlileri ekleyin.
     
-2. Güvenlik Uyumluluk Merkezi'nin **İzinler** sayfasında bir rol &amp; grubu oluşturun. 
+2. Güvenlik &amp; Uyumluluk Merkezi'nin **İzinler** sayfasında bir rol grubu oluşturun. 
 
-3. Rol grubunu oluştururken, rol grubuna **aşağıdaki rolü eklemek** için Rolleri Seçin bölümünü kullanın: **DLP Uyumluluk Yönetimi**.
+3. Rol grubunu oluştururken Rol **Seç** bölümünü kullanarak rol grubuna şu rolü ekleyin: **DLP Uyumluluk Yönetimi**.
     
-4. Daha önce **oluşturduğunuz** üye grubunu rol Microsoft 365 için Üye Seç bölümünü kullanın.
+4. Daha önce oluşturduğunuz Microsoft 365 grubunu rol grubuna eklemek için **Üyeleri Seç** bölümünü kullanın.
 
-DLP **ilkelerinin ve DLP** raporlarının yalnızca görüntüleme ayrıcalıklarına sahip rol grubu oluşturmak için Yalnızca Görüntüleme DLP Uyumluluk Yönetimi rolünü kullanın.
+DLP ilkeleri ve DLP raporları için yalnızca görüntüleme ayrıcalıklarına sahip rol grubu oluşturmak için **Yalnızca Görüntüleme DLP Uyumluluk Yönetimi** rolünü kullanın.
 
-Daha fazla bilgi için bkz[. Kullanıcılara Uyumluluk Merkezi'Office 365 erişme izni verme](../security/office-365-security/grant-access-to-the-security-and-compliance-center.md).
+Daha fazla bilgi için bkz. [Kullanıcılara Office 365 Uyumluluk Merkezi'ne erişim verme](../security/office-365-security/grant-access-to-the-security-and-compliance-center.md).
   
-İlkeleri uygulamak için değil de DLP ilkesi oluşturmak ve uygulamak için bu izinler gereklidir.
+Bu izinler, ilkeleri zorlamamak için bir DLP ilkesi oluşturmak ve uygulamak için gereklidir.
 
 ### <a name="roles-and-role-groups-in-preview"></a>Önizlemede Roller ve Rol Grupları
 
-Önizlemede, erişim denetimlerinize ince ayar yapmak için test etmek için deney erişiminiz olan roller ve rol grupları vardır.
+Önizlemede, erişim denetimlerinizde ince ayar yapmak için test yapabileceğiniz roller ve rol grupları vardır.
 
-İşte önizlemede olan Microsoft Bilgi Koruması (MIP) rollerinin listesi. Bu roller hakkında daha fazla bilgi edinmek [için Güvenlik ve Uyumluluk Merkezi'& bakın](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center)
+Aşağıda, önizleme aşamasında olan geçerli rollerin listesi yer alır. Bunlar hakkında daha fazla bilgi edinmek için bkz [. Güvenlik & Uyumluluk Merkezi'ndeki Roller](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center)
 
-- Bilgi Koruması Yöneticisi
-- Bilgi Koruma Analisti
-- Bilgi Koruma Koruma Koruma Koruması
-- Bilgi Koruma Okuyucusu
+- Information Protection Yöneticisi
+- Information Protection Analisti
+- Information Protection Araştırmacısı
+- Information Protection Okuyucu
 
-Önizlemede olan MIP rol gruplarının listesi burada ve ve şekildedir. Daha fazla bilgi edinmek için [Güvenlik ve Uyumluluk Merkezi'nde rol & bakın](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#role-groups-in-the-security--compliance-center).
+Aşağıda, önizleme aşamasında olan geçerli rol gruplarının listesi yer alır. Daha fazla bilgi için bkz [. Güvenlik & Uyumluluk Merkezi'nde rol grupları](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#role-groups-in-the-security--compliance-center)
 
-- Bilgi Koruması
-- Bilgi Koruması Yöneticileri
-- Bilgi Koruma Analistleri
-- Bilgi Koruma Koruma KorumaLarı
-- Bilgi Koruma Okuyucuları
+- Information Protection
+- Information Protection Yöneticileri
+- Information Protection Analistleri
+- Information Protection Araştırmacıları
+- Information Protection Okuyucular
 
 ## <a name="how-sensitive-information-is-detected-by-dlp"></a>DLP tarafından hassas bilgiler nasıl algılanır?
 
-DLP, belirli anahtar sözcüklerin eşleşen desenlere yakınlığı gibi diğer göstergelerle birlikte, normal ifade (RegEx) desen eşleştirmesine göre hassas bilgileri bulur. Örneğin, VISA kredi kartı numarası 16 basamak içerir. Ancak, bu basamaklar 1111-1111-1111-1111, 1111 1111 1111 1111 veya daha fazla 1111111111111111.
+DLP, belirli anahtar sözcüklerin eşleşen desenlere yakınlığı gibi diğer göstergelerle birlikte normal ifade (RegEx) desen eşleştirmesine göre hassas bilgileri bulur. Örneğin, visa kredi kartı numarası 16 basamaktır. Ancak bu basamaklar 1111-1111-1111-1111, 1111 1111 1111 1111 veya 1111111111111111 gibi farklı şekillerde yazılabilir.
 
-Herhangi bir 16 basamaklı dizenin kredi kartı numarası olması gerekmez, yardım masası sisteminden bir bilet numarası veya bir donanım parçasının seri numarası olabilir. Bir kredi kartı numarasıyla zararsız 16 basamaklı dize arasındaki farkı anlatmak için, numaraların çeşitli kredi kartı markalarından bilinen bir desene eş olduğunu onaylamak üzere bir hesaplama (denetimli toplam) gerçekleştirilir.
+Herhangi bir 16 basamaklı dize mutlaka bir kredi kartı numarası değildir, bir yardım masası sisteminden bir bilet numarası veya bir donanım parçasının seri numarası olabilir. Kredi kartı numarası ile zararsız bir 16 basamaklı dize arasındaki farkı söylemek için, sayıların çeşitli kredi kartı markalarından bilinen bir desenle eşleşip eşleşmediğini onaylamak için bir hesaplama (sağlama toplamı) gerçekleştirilir.
 
-DLP, kredi kartının son kullanma tarihi olabileceği yakın tarih değerleri olan "VISA" veya "AMEX" gibi anahtar sözcükler bulursa, DLP bu verileri dizenin bir kredi kartı numarası olup olmadığını karar vermek için de kullanır.
+DLP, kredi kartının son kullanma tarihi olabilecek yakın tarih değerleri olan "VISA" veya "AMEX" gibi anahtar sözcükler bulursa, DLP bu verileri dizenin kredi kartı numarası olup olmadığına karar vermesine yardımcı olmak için de kullanır.
 
-Başka bir deyişle, DLP bir e-postada şu iki metin dizeleri arasındaki farkı tanıyacak kadar akıllıdır:
+Başka bir deyişle DLP, e-postadaki bu iki metin dizesi arasındaki farkı tanıyacak kadar akıllıdır:
 
-- "Bana yeni bir dizüstü bilgisayar sipariş ettiysiniz. VISA numaramı 1111-1111-1111-1111, son kullanma tarihi 22/11/22 olarak kullanın ve tahmini teslim tarihini sahip oldu mu gönderin."
-- "Dizüstü bilgisayar seri numaram 2222-2222-2222-2222 ve 11/2010 tarihinde satın alındı. Bu arada, seyahat nedenim yeni için onaylandı?"
+- "Bana yeni bir dizüstü bilgisayar sipariş edebilir misin? 1111-1111-1111-1111, son kullanma tarihi 11/22 olan VIZE numaramı kullanın ve sahip olduğunuzda tahmini teslimat tarihini bana gönderin."
+- "Dizüstü bilgisayarımın seri numarası 2222-2222-2222-2222 ve 11/2010 tarihinde satın alındı. Bu arada, seyahat vizem onaylandı mı?"
 
-Her [bilgi türünün nasıl algılandığından](sensitive-information-type-entity-definitions.md) bunu açıklayan Hassas bilgi türü varlık tanımları'ne bakın.
+Bkz. Her bilgi türünün nasıl algılandığını açıklayan hassas bilgi türü [varlık tanımları](sensitive-information-type-entity-definitions.md) .
 
-## <a name="where-to-start-with-data-loss-prevention"></a>Veri kaybını önleme ile başlama
+## <a name="where-to-start-with-data-loss-prevention"></a>Veri kaybı önleme ile nereden başlanmalıdır?
 
-Veri sızıntılarının riskleri tamamen belirgin olmadığı durumda, DLP'i uygulamaya başlarken tam olarak nerede başlamamız gerektiğini bulmak zordur. Neyse ki DLP ilkeleri "test modunda" çalıştırarak, bunları açmadan önce bunların etkisini ve doğruluğunu ölçebilirsiniz.
+Veri sızıntısı riskleri tamamen belirgin olmadığında, DLP'yi uygulamaya tam olarak nereden başlamanız gerektiğini bulmak zordur. Neyse ki DLP ilkeleri "test modunda" çalıştırılabilir ve bunları açmadan önce bunların verimliliğini ve doğruluğunu ölçmenizi sağlar.
 
-E-posta Exchange Online DLP ilkeleri Exchange yönetim merkezinden yönetilebilir. Ancak, Güvenlik ve Uyumluluk Merkezi aracılığıyla tüm iş yükleri & için DLP ilkelerini yapılandırabilirsiniz, dolayısıyla bu makaledeki gösterimlerde bunu kullanabilirsiniz. Güvenlik ve Uyumluluk &'nde, DLP ilkelerini Veri kaybı **önlemePolicy altında** >  **bulabilirsiniz**. başlamak **için İlke oluştur'a** seçin.
+Exchange Online için DLP ilkeleri Exchange yönetim merkezi üzerinden yönetilebilir. Ancak Microsoft Purview uyumluluk portalı aracılığıyla tüm iş yükleri için DLP ilkelerini yapılandırabilirsiniz, bu nedenle bu makaledeki tanıtımlar için bunu kullanacağız. Microsoft Purview uyumluluk portalı veri **kaybı önlemeİlke** >  altında DLP ilkelerini bulacaksınız. Başlamak için **İlke oluştur'u** seçin.
 
-Microsoft 365, ilkeleri oluşturmak [için kullanabileceğiniz bir dizi DLP](what-the-dlp-policy-templates-include.md) ilkesi şablonu sağlar. Diyelim ki, Avustralyalı bir işletmesiniz. Avustralya'daki şablonları filtre seçebilir ve Finansal, Tıbbi ve Sağlık ve Gizlilik'i seçebilirsiniz.
+Microsoft 365, ilke oluşturmak için kullanabileceğiniz bir dizi [DLP ilke şablonu](what-the-dlp-policy-templates-include.md) sağlar. Diyelim ki avustralyalı bir işsiniz. Avustralya'da şablonları filtreleyebilir ve Finansal, Tıbbi ve Sağlık ile Gizlilik'i seçebilirsiniz.
 
 ![Ülke veya bölge seçme seçeneği.](../media/DLP-create-test-tune-choose-country.png)
 
-Bu gösterim için, Avustralya Vergi Dosyası Numarası (TFN) ve Sürücü Lisans Numarası bilgi türlerini içeren Avustralyalı Kişisel Bilgileri (PII) Verileri'yi seçeceğim.
+Bu tanıtım için Avustralya Vergi Dosya Numarası (TFN) ve Sürücü Lisans Numarası bilgi türlerini içeren Avustralya Kişisel Bilgileri (PII) Verileri'ni seçeceğim.
 
 ![İlke şablonu seçme seçeneği.](../media/DLP-create-test-tune-choose-policy-template.png)
 
-Yeni DLP ilkenize bir ad verme. Varsayılan ad DLP ilkesi şablonuyla eş değere sahip olur, ancak aynı şablondan birden çok ilke oluşturula bile, size ait daha açıklayıcı bir ad seçmelisiniz.
+Yeni DLP ilkenize bir ad verin. Varsayılan ad DLP ilke şablonuyla eşleşecektir, ancak aynı şablondan birden çok ilke oluşturulabileceğinden, kendi adınıza daha açıklayıcı bir ad seçmelisiniz.
 
-![İlkenizi isim seçeneği.](../media/DLP-create-test-tune-name-policy.png)
+![İlkenizi adlandırma seçeneği.](../media/DLP-create-test-tune-name-policy.png)
 
-İlkenin uygulanacak konumlarını seçin. DLP ilkeleri Exchange Online, SharePoint Online ve OneDrive İş. Bu ilkeyi tüm konumlara uygulanacak şekilde yapılandırılmış bırakılacak.
+İlkenin uygulanacağı konumları seçin. DLP ilkeleri Exchange Online, SharePoint Online ve OneDrive İş için geçerli olabilir. Bu ilkeyi tüm konumlara uygulanacak şekilde yapılandırılmış olarak bırakacağım.
 
 ![Tüm konumları seçme seçeneği.](../media/DLP-create-test-tune-choose-locations.png)
 
-İlk İlke **Ayarlar** şimdilik varsayılanları kabul edin. DLP ilkelerini özelleştirebilirsiniz, ancak varsayılanlar iyi bir başlangıçtır.
+İlk **İlke Ayarlar** adımında şimdilik varsayılanları kabul edin. DLP ilkelerini özelleştirebilirsiniz, ancak varsayılanlar başlamak için iyi bir yerdir.
 
-![Korunması gereken içerik türünü özelleştirme seçenekleri.](../media/DLP-create-test-tune-default-customization-settings.png)
+![Korunacak içerik türünü özelleştirme seçenekleri.](../media/DLP-create-test-tune-default-customization-settings.png)
 
-Sonraki'ye tık olduktan sonra** size daha fazla **özelleştirme seçeneği Ayarlar** ilke sayfası görüntülenir. Yalnızca test etmekte olduğunuz bir ilke için, burada bazı ayarlamalar yapmaya başlayabilirsiniz.
+İleri'ye tıkladıktan sonra** size daha fazla özelleştirme seçeneği içeren daha fazla **İlke Ayarlar** sayfası sunulur. Yalnızca test ettiğiniz bir ilke için bazı ayarlamalar yapmaya buradan başlayabilirsiniz.
 
-- Şimdilik ilke ipuçlarını devre dışıdim, bu, yalnızca test ediyor ve kullanıcılara henüz hiçbir şey göstermek istemiyorsanız atacak makul bir adımdır. İlke ipuçları, kullanıcılara DLP politikasını ihlal etmek hakkında uyarılar görüntüler. Örneğin, Outlook bir kullanıcı ekli olduğu dosyanın kredi kartı numaraları içerdiğine ve e-postanın reddedilmesine neden olacağını içeren bir uyarı alır. İlke ipuçlarının amacı, uyumlu olmayan davranışı olmadan önce durdurmaktır.
-- Ayrıca, örnek sayısını da 10'dan 1'e azalttırarak, bu ilkenin verilerin yalnızca toplu paylaşımını değil Avustralya PII verilerinden herhangi bir paylaşımını algılaytır.
-- Ayrıca olay raporu e-postasına başka bir alıcı ekledim.
+- İlke ipuçlarını şimdilik kapattım. Bu, yalnızca test ettiğiniz ve kullanıcılara henüz hiçbir şey göstermek istemediğinizde atabileceğiniz makul bir adımdır. İlke ipuçları, kullanıcılara bir DLP ilkesini ihlal etmek üzere olduklarına ilişkin uyarılar görüntüler. Örneğin, Outlook bir kullanıcı eklemiş olduğu dosyanın kredi kartı numaraları içerdiğini ve e-postalarının reddedilmesine neden olacağını belirten bir uyarı görür. İlke ipuçlarının amacı, uyumlu olmayan davranışı gerçekleşmeden önce durdurmaktır.
+- Ayrıca örnek sayısını 10'dan 1'e düşürerek bu ilkenin yalnızca verilerin toplu paylaşımını değil Avustralya PII verilerinin paylaşımını algılamasını da sağladım.
+- Olay raporu e-postasına başka bir alıcı da ekledim.
 
 ![Ek ilke ayarları.](../media/DLP-create-test-tune-more-policy-settings.png)
 
-Son olarak, bu ilkeyi başlangıçta test modunda çalıştıracak şekilde yapılandırdım. Test modundayken ilke ipuçlarını devre dışı bırakma seçeneği de vardır. Bu size, ilke ipuçlarının ilkede etkinleştirilmesi için esneklik sağlar, ancak sonra testniz sırasında ipuçlarının göster mi, yoksa gizleme mi olduğuna karar verir.
+Son olarak, bu ilkeyi başlangıçta test modunda çalışacak şekilde yapılandırdım. Burada, test modundayken ilke ipuçlarını devre dışı bırakma seçeneği de olduğuna dikkat edin. Bu, ilkede ilke ipuçlarının etkinleştirilmesi için esneklik sağlar, ancak ardından testiniz sırasında bunları gösterme veya gizleme konusunda karar verir.
 
-![İlkeyi test etmek için seçenek.](../media/DLP-create-test-tune-test-mode.png)
+![İlkeyi test etme seçeneği.](../media/DLP-create-test-tune-test-mode.png)
 
-İlkeyi oluşturmayı bitirmek için son gözden **geçirme ekranında** Oluştur'a tıklayın.
+İlkeyi oluşturmayı tamamlamak için son gözden geçirme ekranında **Oluştur'a** tıklayın.
 
-## <a name="test-a-dlp-policy"></a>DLP ilkesi sınama
+## <a name="test-a-dlp-policy"></a>DLP ilkesini test edin
 
-Normal kullanıcı etkinliği tarafından ilkenin tetiklenirken beklemeniz veya ilkeyi kendi tetiklersiniz. Daha önce size DLP [eşleşmelerini tetikleme](sensitive-information-type-entity-definitions.md) hakkında bilgi sağlayan Hassas bilgi türü varlık tanımlarına bağlanmıştım.
+İlkenin normal kullanıcı etkinliği tarafından tetiklenip tetiklenmesini bekleyebilir veya kendiniz tetiklemeyi deneyebilirsiniz. Daha önce DLP eşleşmelerini tetikleme hakkında bilgi sağlayan [Hassas bilgi türü varlık tanımlarına](sensitive-information-type-entity-definitions.md) bağlandım.
 
-Örnek olarak, bu makale için oluşturduğum DLP ilkesi Avustralya vergi dosyası numaralarını (TFN) algılar. Belgeye göre, eşleşmede aşağıdaki ölçütler temel alınlanmıştır.
+Örneğin, bu makale için oluşturduğum DLP ilkesi Avustralya vergi dosya numaralarını (TFN) algılar. Belgelere göre, eşleşme aşağıdaki ölçütlere bağlıdır.
 
-![Avustralya Vergi Dosyası Numarası Belgeleri.](../media/DLP-create-test-tune-Australia-Tax-File-Number-doc.png)
+![Avustralya Vergi Dosya Numarası belgeleri.](../media/DLP-create-test-tune-Australia-Tax-File-Number-doc.png)
  
-TFN algılamayı tercihen bir şekilde göstermek için, "Vergi dosyası numarası" sözcüklerinin yer aldığı bir e-posta ve yakın yakınlıkta dokuz basamaklı bir dize hiçbir sorun olmadan tekneyle binecek. DLP ilkesine tetik uygulamanın nedeni, dokuz basamaklı dizenin, yalnızca zararsız bir sayı dizesi değil, geçerli bir TFN olduğunu belirten denetimler numarasını geçmesidir.
+TFN algılamasını oldukça künt bir şekilde göstermek için, "Vergi dosya numarası" sözcükleri ve yakın mesafede dokuz basamaklı bir dize içeren bir e-posta sorunsuz bir şekilde ilerler. DLP ilkesini tetiklememe nedeni, dokuz basamaklı dizenin yalnızca zararsız bir sayı dizesi değil, geçerli bir TFN olduğunu belirten sağlama toplamını geçirmesi gerektiğidir.
 
-![Denetim toplamlarını geçemediklerinden Avustralya vergi dosyası numarası.](../media/DLP-create-test-tune-email-test1.png)
+![Sağlama toplamını geçmeyen Avustralya vergi dosyası numarası.](../media/DLP-create-test-tune-email-test1.png)
 
-Buna göre, "Vergi dosyası numarası" sözcüklerini içeren bir e-posta ve denetim toplamtan geçen geçerli bir TFN ilkeyi tetikler. Buradaki kayıt için, kullanmakta olduğumun TFN'si geçerli ama orijinal olmayan bir TFN'ler üreten bir web sitesinden alındı. Bir DLP ilkesi test etme sırasında en yaygın hatalardan biri geçersiz sahte bir numara kullanmak ve denetim toplamlarını geçememek olduğundan (dolayısıyla ilkeyi tetiklemeyeceği için) bu tür siteler yararlı olur.
+Buna karşılık, "Vergi dosya numarası" sözcüklerini ve sağlama toplamını geçen geçerli bir TFN'yi içeren bir e-posta ilkeyi tetikler. Buradaki kayıt için, kullandığım TFN geçerli, ancak orijinal olmayan TFN'ler oluşturan bir web sitesinden alındı. Bir DLP ilkesini test ederken en yaygın hatalardan biri geçerli olmayan ve sağlama toplamını geçmeyecek sahte bir numara kullanmak olduğundan (ve bu nedenle ilkeyi tetiklemeyeceğinden) bu tür siteler yararlıdır.
 
-![Denetim toplamlarını geçen Avustralya vergi dosyası numarası.](../media/DLP-create-test-tune-email-test2.png)
+![Sağlama toplamını geçen Avustralya vergi dosyası numarası.](../media/DLP-create-test-tune-email-test2.png)
 
-Olay raporu e-postası, algılanan hassas bilgilerin türünü, kaç örneğin algılandığından ve algılamanın güven düzeyini içerir.
+Olay raporu e-postası algılanan hassas bilgilerin türünü, kaç örneğin algılandığını ve algılamanın güvenilirlik düzeyini içerir.
 
-![Algılanan vergi dosyası numarasını gösteren olay raporu.](../media/DLP-create-test-tune-email-incident-report.png)
+![Vergi dosyası numarasını gösteren olay raporu algılandı.](../media/DLP-create-test-tune-email-incident-report.png)
 
-DLP ilkenizi test modunda bırakır ve olay raporu e-postalarını analiz ederseniz, DLP politikasının doğruluğu ve zorunlu tutularak ne kadar etkili olacağını almaya başlayabilirsiniz. Olay raporlarına ek olarak, kiracınız genelinde ilke eşleşmelerinin toplanmış bir görünümünü görmek için [DLP](view-the-dlp-reports.md) raporlarını da kullanabilirsiniz.
+DLP ilkenizi test modunda bırakır ve olay raporu e-postalarını analiz ederseniz, DLP ilkesinin doğruluğu ve uygulandığında ne kadar etkili olacağı konusunda bir his edinmeye başlayabilirsiniz. Olay raporlarına ek olarak, kiracınız genelinde ilke eşleşmelerinin toplu bir görünümünü görmek için [DLP raporlarını kullanabilirsiniz](view-the-dlp-reports.md) .
 
-## <a name="tune-a-dlp-policy"></a>DLP ilkesi ayarlama
+## <a name="tune-a-dlp-policy"></a>DLP ilkesini ayarlama
 
-İlke isabetlerini çözümlerken, ilkelerin nasıl davranacağını görmek için bazı ayarlamalar yapmak iyi olabilir. Basit bir örnek olarak, e-postada bir TFN'nin sorun olmadığını düşünebilirsiniz (yine de olduğunu düşünüyoruz ama bunu gösterim amaçlı olarak düşünebilirsiniz), ancak iki veya daha fazla örnek sorun olabilir. Birden çok örnek, İk veritabanından bir dış taraflara (örneğin, dış muhasebe hizmeti) CSV dışarı aktarma e-postası gönderen bir çalışan gibi riskli bir senaryo olabilir. Kesinlikle algılamayı ve engellemeyi tercih edersiniz.
+İlke isabetlerinizi analiz ettikçe, ilkelerin davranışında bazı ayarlamalar yapmak isteyebilirsiniz. Basit bir örnek olarak, bir e-postadaki bir TFN'nin sorun olmadığını belirleyebilirsiniz (yine de sorun olduğunu düşünüyorum, ancak tanıtım amacıyla bunu kullanalım), ancak iki veya daha fazla örnek bir sorundur. Birden çok örnek, bir çalışanın İk veritabanından dış tarafa (örneğin dış muhasebe hizmeti) CSV dışarı aktarmasını e-postayla göndermesi gibi riskli bir senaryo olabilir. Kesinlikle algılamayı ve engellemeyi tercih edeceğiniz bir şey.
 
-Uyumluluk Merkezi'nde davranışı düzenlemek için var olan bir ilkeyi düzenleyebilirsiniz.
+Davranışı ayarlamak için Uyumluluk Merkezi'nde mevcut bir ilkeyi düzenleyebilirsiniz.
 
 ![İlkeyi düzenleme seçeneği.](../media/DLP-create-test-tune-edit-policy.png)
  
-Konum ayarlarını, ilkenin yalnızca belirli iş yüklerine ya da belirli sitelere ve hesaplara uygulanması için ayarlayabilirsiniz.
+Konum ayarlarını, ilkenin yalnızca belirli iş yüklerine veya belirli sitelere ve hesaplara uygulanması için ayarlayabilirsiniz.
 
 ![Belirli konumları seçme seçenekleri.](../media/DLP-create-test-tune-edit-locations.png)
 
-Ayrıca, ilke ayarlarını değiştirebilir ve kuralları ihtiyaçlarınıza daha uygun olacak şekilde düzenleyebilirsiniz.
+Ayrıca ilke ayarlarını yapabilir ve kuralları gereksinimlerinize daha uygun olacak şekilde düzenleyebilirsiniz.
 
 ![Kuralı düzenleme seçeneği.](../media/DLP-create-test-tune-edit-rule.png)
 
-DLP ilkesi içinde bir kuralı düzenlerken şunları değiştirebilirsiniz:
+DLP ilkesi içindeki bir kuralı düzenlerken şunları değiştirebilirsiniz:
 
-- Kuralı tetikleyen hassas verilerin türü ve örnekleri de dahil olmak üzere koşullar.
-- İçeriğin erişimini kısıtlama gibi 2007'ye kadar olan eylemler.
+- Kuralı tetikleyecek hassas veri örneklerinin türü ve sayısı da dahil olmak üzere koşullar.
+- İçeriğe erişimi kısıtlama gibi gerçekleştirilen eylemler.
 - Kullanıcıya e-posta istemcisinde veya web tarayıcısında görüntülenen ilke ipuçları olan kullanıcı bildirimleri.
-- Kullanıcı geçersiz kılmalar, kullanıcıların yine de e-postalarıyla veya dosya paylaşımıyla devam edip e-postayla devam edip e-posta
+- Kullanıcı geçersiz kılmaları, kullanıcıların yine de e-posta veya dosya paylaşımına devam etmeyi seçip seçemeyeceğini belirler.
 - Yöneticilere bildirmek için olay raporları.
 
 ![Kuralın bölümlerini düzenleme seçenekleri.](../media/DLP-create-test-tune-editing-options.png)
 
-Bu gösterim için, ilkeye kullanıcı bildirimleri ekledim (yeterli kullanıcı farkındalığı eğitimi olmadan bunu yaparken dikkatli olun) ve kullanıcıların ilkeyi işletme gerekçelendirmesi ile veya yanlış pozitif olarak ekleriyle geçersiz kilmesine izin verdim. Ayrıca, e-posta ve ilke ipucu metnini özelleştirebileceğiniz gibi, kurum ilkeleri hakkında ek bilgiler eklemek veya kullanıcılardan sorularınız varsa de destekle iletişim kurmalarını istenebilirsiniz.
+Bu tanıtım için ilkeye kullanıcı bildirimleri ekledim (bunu yeterli kullanıcı farkındalığı eğitimi olmadan yapmaya dikkat edin) ve kullanıcıların ilkeyi bir iş gerekçesiyle veya yanlış pozitif olarak işaretleyerek geçersiz kılmalarına izin verdim. Ayrıca, kuruluşunuzun ilkeleri hakkında ek bilgiler eklemek istiyorsanız e-posta ve ilke ipucu metnini özelleştirebilir veya kullanıcılardan soruları varsa desteğe başvurmalarını isteyebilirsiniz.
 
 ![Kullanıcı bildirimleri ve geçersiz kılma seçenekleri.](../media/DLP-create-test-tune-user-notifications.png)
 
-İlke, yüksek ve düşük hacimleri işlemeye için iki kural içerir, bu nedenle her ikisini de istediğiniz eylemlerle düzenlemeye emin olun. Bu, davaları özelliklerine bağlı olarak farklı bir şekilde değerlendiren bir fırsattır. Örneğin, düşük hacim ihlalleri için geçersiz kılmalara izin verse de yüksek hacim ihlalleri için geçersiz kılmalara izin vermezsiniz.
+İlke, yüksek hacimli ve düşük hacimli işlemleri işlemek için iki kural içerir, bu nedenle her ikisini de istediğiniz eylemlerle düzenlemeyi unutmayın. Bu, vakaları özelliklerine bağlı olarak farklı bir şekilde tedavi etmek için bir fırsattır. Örneğin, düşük birim ihlalleri için geçersiz kılmalara izin verebilir, ancak yüksek birim ihlalleri için geçersiz kılmalara izin vermeyebilirsiniz.
 
 ![Yüksek hacim için bir kural ve düşük hacim için bir kural.](../media/DLP-create-test-tune-two-rules.png)
 
-Ayrıca, aslında ilke ihlali olan içeriği engellemek veya kısıtlamak için kural üzerinde bir eylem yapılandırmak da gerekir.
+Ayrıca, ilkeyi ihlal eden içeriğe erişimi gerçekten engellemek veya kısıtlamak istiyorsanız, bunu yapmak için kural üzerinde bir eylem yapılandırmanız gerekir.
 
-![içeriğe erişimi kısıtlama seçeneği.](../media/DLP-create-test-tune-restrict-access-action.png)
+![İçeriğe erişimi kısıtlama seçeneği.](../media/DLP-create-test-tune-restrict-access-action.png)
 
-Bu değişiklikleri ilke ayarlarına kaydeddikten sonra, aynı zamanda ilkenin ana ayarlar sayfasına dönüp ilke test modundayken kullanıcılara ilke ipuçlarını gösterme seçeneğini etkinleştirmem gerekir. Bu, DLP ilkelerini son kullanıcılarınıza tanıtmanın ve verimliliklerini etkileyen hatalı pozitif sonuçlardan çok fazla risk almadan kullanıcı farkındalığı eğitimi yapmanın etkili bir yoludur.
+İlke ayarlarına bu değişiklikleri kaydettikten sonra, ilkenin ana ayarlar sayfasına geri dönüp ilke test modundayken kullanıcılara ilke ipuçlarını gösterme seçeneğini etkinleştirmem gerekiyor. Bu, son kullanıcılarınıza DLP ilkeleri sunmanın ve üretkenliğini etkileyen çok fazla hatalı pozitif riski olmadan kullanıcı farkındalığı eğitimi gerçekleştirmenin etkili bir yoludur.
 
-![Test modunda ilke ipuçlarını gösterme seçeneği.](../media/DLP-create-test-tune-show-policy-tips.png)
+![İlke ipuçlarını test modunda gösterme seçeneği.](../media/DLP-create-test-tune-show-policy-tips.png)
 
-Sunucu tarafında (veya tercih ederseniz bulut tarafında), çeşitli işlem aralıkları nedeniyle bu değişiklik hemen etkili olamayabilirsiniz. Bir kullanıcıya yeni ilke ipuçları görüntüecek bir DLP ilkesi değişikliği yapıyorsanız, kullanıcı değişiklikleri hemen Outlook istemcisinde görebilir ve bu değişiklik 24 saatte bir ilke değişikliklerini denetler. Işleri test etmek üzere hızlandırmak için, bu kayıt defteri düzeltmesini kullanarak PolicyNudges anahtarından son indirme zaman [damgasını temiz devre dışı indirebilirsiniz](https://support.microsoft.com/en-au/help/2823261/changes-to-a-data-loss-prevention-policy-don-t-take-effect-in-outlook?__hstc=18650278.46377037dc0a82baa8a30f0ef07a7b2f.1538687978676.1538693509953.1540315763430.3&__hssc=18650278.1.1540315763430&__hsfp=3446956451). Outlook sonra yeniden başlatacak ve e-posta iletisi oluşturmaya başlanacak en son ilke bilgilerini indirir.
+Sunucu tarafında (veya isterseniz bulut tarafında), çeşitli işlem aralıkları nedeniyle değişiklik hemen geçerli olmayabilir. Kullanıcıya yeni ilke ipuçlarını gösterecek bir DLP ilkesi değişikliği yapıyorsanız, kullanıcı Outlook istemcisinde değişikliklerin hemen geçerli olduğunu göremeyebilir ve bu da ilke değişikliklerini 24 saatte bir denetler. Test için işleri hızlandırmak istiyorsanız, [policyNudges anahtarından son indirme zaman damgasını temizlemek](https://support.microsoft.com/en-au/help/2823261/changes-to-a-data-loss-prevention-policy-don-t-take-effect-in-outlook?__hstc=18650278.46377037dc0a82baa8a30f0ef07a7b2f.1538687978676.1538693509953.1540315763430.3&__hssc=18650278.1.1540315763430&__hsfp=3446956451) için bu kayıt defteri düzeltmesini kullanabilirsiniz. Outlook, en son ilke bilgilerini bir sonraki yeniden başlatışınızda indirir ve e-posta iletisi oluşturma işlemine başlarsınız.
 
-İlke ipuçlarını etkinleştirdiysek, kullanıcı ipuçlarında bu ipuçlarını Outlook ve oluştuğunda hatalı pozitif sonuçlar bildirebilirsiniz.
+İlke ipuçlarını etkinleştirdiyseniz, kullanıcı ipuçlarını Outlook görmeye başlar ve ortaya çıktığında size hatalı pozitif sonuçları bildirebilir.
 
-![Hatalı pozitif sonuç bildirme seçeneğinin yer olduğu ilke ipucu.](../media/DLP-create-test-tune-policy-tip-in-outlook.png)
+![Hatalı pozitif raporlama seçeneğine sahip ilke ipucu.](../media/DLP-create-test-tune-policy-tip-in-outlook.png)
 
-## <a name="investigate-false-positives"></a>Hatalı pozitif pozitifleri araştırma
+## <a name="investigate-false-positives"></a>Hatalı pozitif sonuçları araştırma
 
-DLP ilkesi şablonları hemen her durumda mükemmel değildir. Ortamınıza hatalı pozitif sonuçlar geliyor olabilir. İşte bu nedenle, DLP dağıtımına kolay bir şekilde gidip, yeterli test yapmak ve ilkelerinizi ayarlamak zaman almak çok önemlidir.
+DLP ilke şablonları hemen kullanıma hazır değildir. Büyük olasılıkla ortamınızda bazı hatalı pozitif sonuçların oluştuğunu fark edersiniz. Bu nedenle, ilkelerinizi yeterince test etmek ve ayarlamak için zaman ayırarak DLP dağıtımına geçişinizi kolaylaştırmak çok önemlidir.
 
-Burada, hatalı pozitif sonuç örneği ve bir örneği ve bir örnek veser. Bu e-posta zararsızdır. Kullanıcı, birine cep telefonu numarasını ve e-posta imzasını da sağlıyor.
+Burada hatalı pozitif bir örnek verilmiştir. Bu e-posta zararsızdır. Kullanıcı, cep telefonu numarasını bir kişiye sağlıyor ve e-posta imzasını dahil ediyor.
 
-![Hatalı pozitif bilgilerin gösteren e-posta.](../media/DLP-create-test-tune-false-positive-email.png)
+![Hatalı pozitif bilgileri gösteren e-posta.](../media/DLP-create-test-tune-false-positive-email.png)
  
-Ancak kullanıcı, e-postada özellikle Avustralyalı sürücünün lisans numarası olmak üzere hassas bilgiler olduğu konusunda bir ilke ipucu görür.
+Ancak kullanıcı, e-postanın hassas bilgiler (özellikle avustralyalı bir sürücü lisans numarası) içerdiği konusunda uyarı veren bir ilke ipucu görür.
 
-![İlke ipucunda hatalı pozitifi bildirme seçeneği.](../media/DLP-create-test-tune-policy-tip-closeup.png)
+![İlke ipucunda hatalı pozitif raporlama seçeneği.](../media/DLP-create-test-tune-policy-tip-closeup.png)
 
-Kullanıcı hatalı pozitif pozitifi bildirebilirsiniz ve yönetici bunun neden ortaya çıktıine bakarak bakabilirsiniz. Olay raporu e-postası içinde, e-posta hatalı pozitif olarak işaretlenir.
+Kullanıcı hatalı pozitif durumu bildirebilir ve yönetici bunun neden oluştuğuna bakabilir. Olay raporu e-postasında, e-posta hatalı pozitif olarak işaretlenir.
 
-![Hatalı pozitif sonuç gösteren olay raporu.](../media/DLP-create-test-tune-false-positive-incident-report.png)
+![Hatalı pozitif gösteren olay raporu.](../media/DLP-create-test-tune-false-positive-incident-report.png)
 
-Bu sürücünün lisans durumu, incelemeniz için iyi bir örnektir. Bu hatalı pozitif değerin ortaya çıkma nedeni, "Avustralya Sürücü Lisansı" türünün 300 karakterlik "Sydney nsw" anahtar sözcüklerine yakınlığı içinde 9 basamaklı herhangi bir dize (10 basamaklı bir dizenin parçası olan bir dize bile) tarafından tetiklenir (büyük/küçük harfe duyarlı değildir). Bu durum, kullanıcının Sidney'de olması nedeniyle telefon numarası ve e-posta imzası tarafından tetiklenir.
+Bu sürücü belgesi olayı, ayrıntılı bir şekilde incelenmek için iyi bir örnektir. Bu hatalı pozitif sonucun ortaya çıkma nedeni, "Avustralya Sürücü Lisansı" türünün "Sydney nsw" anahtar sözcüklerine (büyük/küçük harfe duyarlı değil) 300 karakterlik bir yakınlık içinde herhangi bir 9 basamaklı dize (10 basamaklı dizenin parçası olan bir dizenin parçası bile) tarafından tetiklenecek olmasıdır. Bu nedenle, telefon numarası ve e-posta imzası tarafından tetiklenen, çünkü kullanıcı Sidney'dedir.
 
 
-Seçeneklerden biri, Avustralyalı sürücünün lisans bilgi türünü ilkeden kaldırmaktır. DLP ilke şablonunun bir parçası olduğu için buradadır, ancak bu şablonu kullanmak zorunda değilim. Yalnızca Vergi Dosyası Numaraları ile ilgileniyorsanız ve sürücü lisansları ilginizi çekmiyorsa, bunu kaldırabilirsiniz. Örneğin, ilkede bunu düşük hacimli kuraldan kaldırabilir, ancak bunu yüksek hacimli kuralda bırakarak birden çok sürücü lisansının listelerinin yine algılandığından emin olabilir.
+Bir seçenek, avustralyalı sürücü lisans bilgi türünü ilkeden kaldırmaktır. DLP ilke şablonunun bir parçası olduğu için buradadır, ancak bunu kullanmak zorunda değiliz. Sürücü lisanslarıyla değil de yalnızca Vergi Dosya Numaralarıyla ilgileniyorsanız, yalnızca kaldırabilirsiniz. Örneğin, ilkedeki düşük birim kuralından kaldırabilirsiniz, ancak birden çok sürücü lisansı listesinin hala algılandığından yüksek hacimli kuralda bırakabilirsiniz.
  
-Bir diğer seçenek de örnek sayısını artırmak, böylelikle yalnızca birden çok örnek olduğunda düşük sürücü lisansları algılanır.
+Başka bir seçenek de örnek sayısını artırmaktır; böylece düşük hacimli sürücü lisansları yalnızca birden çok örnek olduğunda algılanır.
 
 ![Örnek sayısını düzenleme seçeneği.](../media/DLP-create-test-tune-edit-instance-count.png)
 
-Örnek sayısını değiştirmenin yanı sıra, eşleşmenin doğruluğunu (veya güven düzeyini) de ayarlayabilirsiniz. Hassas bilgi türünüz birden çok desene sahipse, kuralınız yalnızca belirli desenlere uygun olacak şekilde, kuralda eşleşmenin doğruluğunu ayarlayabilirsiniz. Örneğin, hatalı pozitif sonuçları azaltmaya yardımcı olması için kuralınıza, yalnızca en yüksek güven düzeyine sahip desenle eşleşmesi için, kurala uygun olan eşleşme doğruluğunu ayarlayın. Güven düzeyleri hakkında daha fazla bilgi için bkz [. Kurallarınızı ayarlamak için güven düzeyini kullanma](data-loss-prevention-policies.md#match-accuracy).
+Örnek sayısını değiştirmeye ek olarak, eşleşme doğruluğunu (veya güvenilirlik düzeyini) de ayarlayabilirsiniz. Hassas bilgi türünüzün birden çok deseni varsa kuralınızdaki eşleşme doğruluğunu ayarlayarak kuralınızın yalnızca belirli desenlerle eşleşmesini sağlayabilirsiniz. Örneğin, hatalı pozitif sonuçları azaltmaya yardımcı olmak için kuralınızın eşleşme doğruluğunu yalnızca en yüksek güvenilirlik düzeyine sahip desenle eşleşecek şekilde ayarlayabilirsiniz. Güvenilirlik düzeyleri hakkında daha fazla bilgi için bkz. [Kurallarınızı ayarlamak için güvenilirlik düzeyini kullanma](data-loss-prevention-policies.md#match-accuracy).
 
-Son olarak, biraz daha ileri düzeye gitmek için hassas bilgi türlerinden herhangi birini özelleştirebilirsiniz. Örneğin, yukarıda tetiklenen hatalı pozitif sonuç ortadan kaldırmak için Avustralya sürücüsünün lisans numarasına ilişkin anahtar sözcükler [](sensitive-information-type-entity-definitions.md#australia-drivers-license-number)listesinden "Sydney NSW"yi kaldırabilirsiniz. XML ve PowerShell kullanarak bunu yapmayı öğrenmek için bkz. [Yerleşik duyarlı bilgi türünü özelleştirme](customize-a-built-in-sensitive-information-type.md).
+Son olarak, biraz daha gelişmiş hale getirmek istiyorsanız, herhangi bir hassas bilgi türünü özelleştirebilirsiniz; örneğin, yukarıda tetiklenen hatalı pozitif sonucu ortadan kaldırmak için [Avustralya sürücü numarasının](sensitive-information-type-entity-definitions.md#australia-drivers-license-number) anahtar sözcükleri listesinden "Sidney NSW" öğesini kaldırabilirsiniz. XML ve PowerShell kullanarak bunun nasıl yapılacağını öğrenmek için bkz. [Yerleşik hassas bilgi türünü özelleştirme](customize-a-built-in-sensitive-information-type.md).
 
-## <a name="turn-on-a-dlp-policy"></a>DLP ilkesi açma
+## <a name="turn-on-a-dlp-policy"></a>DLP ilkesini açma
 
-DLP ilkenizin hassas bilgi türlerini doğru ve etkili bir şekilde algılasın ve son kullanıcılarının geçerli olan ilkelerle başa çıkmaya hazır olmasını sağlamaktan memnun olursanız, ilkeyi etkinleştirebilirsiniz.
+DLP ilkenizin hassas bilgi türlerini doğru ve etkili bir şekilde algıladığından ve son kullanıcılarınızın ilkelerle ilgilenmeye hazır olduğundan memnun olduğunuzda, ilkeyi etkinleştirebilirsiniz.
 
 ![İlkeyi açma seçeneği.](../media/DLP-create-test-tune-turn-on-policy.png)
  
-İlkenin ne zaman yürürlüğe gireceklerini bekliyorsanız, Güvenlik Bağlan Uyumluluk Merkezi [PowerShell'e &](/powershell/exchange/connect-to-scc-powershell) DistributionStatus'u görmek için [Get-DlpCompliancePolicy cmdlet'ini](/powershell/module/exchange/get-dlpcompliancepolicy) çalıştırın.
+İlkenin ne zaman geçerli olacağını görmek için bekliyorsanız[, Security & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell) ve DistributionStatus'u görmek için [Get-DlpCompliancePolicy cmdlet'ini](/powershell/module/exchange/get-dlpcompliancepolicy) çalıştırın.
 
  ```powershell
  Get-DlpCompliancePolicy "Testing -Australia PII" -DistributionDetail | Select distributionstatus
  ```
-DLP ilkesine başladıktan sonra, beklenen ilke eylemlerinin gerçekleştir olduğundan emin olmak için kendi bazı son testlerinizi çalıştırabilirsiniz. Kredi kartı verileri gibi şeyleri test etmeye çalışıyorsanız, çevrimiçi olarak örnek kredi kartı veya diğer kişisel bilgilerin nasıl oluşturuleceği ve kimlik denetimlerini geçecek ve ilkelerinizi tetikleyecek bilgilerle birlikte web siteleri vardır.
+DLP ilkesini açtıktan sonra, beklenen ilke eylemlerinin gerçekleştiğinden emin olmak için kendi son testlerinizi çalıştırmanız gerekir. Kredi kartı verileri gibi şeyleri test etmeye çalışıyorsanız, sağlama toplamlarını geçirecek ve ilkelerinizi tetikleyecek örnek kredi kartı veya diğer kişisel bilgilerin nasıl oluşturulacağıyla ilgili bilgilerin bulunduğu çevrimiçi web siteleri vardır.
 
-Kullanıcı geçersiz kılmalarına izin verecek ilkeler, bu seçeneği ilke ipucu kapsamında kullanıcıya sunacak.
+Kullanıcı geçersiz kılmalarına izin veren ilkeler, ilke ipucunun bir parçası olarak bu seçeneği kullanıcıya sunar.
 
-![Kullanıcının geçersiz kılmaya izin veren ilke ipucu.](../media/DLP-create-test-tune-override-option.png)
+![Kullanıcının geçersiz kılınmasına izin veren ilke ipucu.](../media/DLP-create-test-tune-override-option.png)
 
-İçeriği kısıtlayan ilkeler, uyarıyı ilke ipucu kapsamında kullanıcıya sunacak ve kullanıcının e-posta göndermesini önler.
+İçeriği kısıtlayan ilkeler, ilke ipucunun bir parçası olarak kullanıcıya uyarı sunar ve e-posta göndermesini engeller.
 
-![İçeriğin kısıtlanmış olduğu ilke ipucu.](../media/DLP-create-test-tune-restrict-warning.png)
+![İçeriğin kısıtlandığına dair ilke ipucu.](../media/DLP-create-test-tune-restrict-warning.png)
 
 ## <a name="summary"></a>Özet
 
-Veri kaybı önleme ilkeleri, tüm türlerde olan kuruluşlar için kullanışlıdır. İlke ipuçları, son kullanıcı geçersiz kılmalar ve olay raporları gibi üzerinde denetimiz olması nedeniyle, bazı DLP ilkelerini test etmek düşük riskli bir uygulamadır. Bazı DLP ilkelerini, zaten kuruluşta ne tür ihlaller olduğunu görmek için sessiz bir şekilde sınayabilirsiniz ve ardından düşük pozitif oranların olduğu ilkeler hazırlar, kullanıcılarınızı izin verilenler ve izin verilmiyor konusunda eğitin ve sonra DLP ilkelerinizi kuruluşa yazın.
+Veri kaybı önleme ilkeleri, her türdeki kuruluşlar için yararlıdır. bazı DLP ilkelerini test etmek, ilke ipuçları, son kullanıcı geçersiz kılmaları ve olay raporları gibi şeyler üzerinde sahip olduğunuz denetim nedeniyle düşük riskli bir alıştırmadır. Kuruluşunuzda zaten ne tür ihlaller oluştuğunu görmek için bazı DLP ilkelerini sessizce test edebilir ve ardından düşük hatalı pozitif oranlarla ilkeler oluşturabilir, kullanıcılarınıza izin verilen ve izin verilmeyenler konusunda eğitebilir ve ardından DLP ilkelerinizi kuruluşa dağıtabilirsiniz.

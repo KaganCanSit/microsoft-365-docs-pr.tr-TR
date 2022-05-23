@@ -8,17 +8,14 @@ ms.topic: article
 ms.service: bookings
 ms.localizationpriority: medium
 description: Bu sayfayı, personel listenizi oluşturmak ve ad, telefon numarası ve e-posta adresi gibi personel üyesi ayrıntılarını yönetmek için kullanın.
-ms.openlocfilehash: b6ceee7c4464daf050f6e6626628c9cb3d94960f
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: d5e35ae301acc785803b0c5374b4bc50bbf499e0
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65285466"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637240"
 ---
 # <a name="add-staff-to-bookings"></a>Bookings’e personel ekleme
-
-> [!NOTE]
-> Bu makale, Microsoft Bookings en son sürümüyle etkileşim kurmanıza yardımcı olur. Önceki sürümler önümüzdeki aylarda kullanımdan kaldırılacak.
 
 Bookings'deki Personel sayfası, personel listenizi oluşturduğunuz ve ad, telefon numarası ve e-posta adresi gibi personel üyesi ayrıntılarını yönettiğiniz yerdir. Ayrıca buradan her personel için çalışma saatleri ayarlayabilirsiniz.
 

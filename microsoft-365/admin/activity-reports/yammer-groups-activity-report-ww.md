@@ -20,12 +20,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Kuruluşunuzda oluşturulan ve kullanılan Yammer gruplarının sayısı ve etkinlikleri hakkında daha fazla bilgi edinmek için Yammer grupları etkinlik raporunu alın.
-ms.openlocfilehash: 27e2057bb743c7d25d3ebb848151f7a32e3de52a
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: 810899c47fed09325341c0b78dd5958dc63a5713
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65467152"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65636206"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---yammer-groups-activity-report"></a>Yönetim merkezinde raporları Microsoft 365 - Yammer grupları etkinlik raporu
 
@@ -42,7 +42,7 @@ Gruplar etkinlik sekmesini seçerek Yammer raporundaki **grup** etkinliklerini g
 
 Rapora sütun eklemek veya rapordan sütun kaldırmak için Sütunları **seç'i** seçin.  <br/> ![Yammer grupları etkinlik raporu - sütunları seçin.](../../media/54744932-34fe-48c3-9779-1d10c3f05be1.png)
 
-Dışarı **Aktar bağlantısını** seçerek rapor verilerini bir Excel .csv dosyasına da aktarabilirsiniz. Bu işlem tüm kullanıcıların verilerini dışarı aktarır ve daha fazla çözümleme yapmak için basit sıralama ve filtreleme işlemlerini kullanmanıza olanak tanır. 2000'den az kullanıcınız varsa, raporun kendi içindeki tabloda sıralama ve filtreleme yapabilirsiniz. 2000'den çok kullanıcınız varsa, filtrelemek ve sıralamak için verileri dışarı aktarmanız gerekir. 
+Dışarı **Aktar bağlantısını** seçerek rapor verilerini bir Excel .csv dosyasına da aktarabilirsiniz. Bu işlem tüm kullanıcıların verilerini dışarı aktarır ve daha fazla çözümleme yapmak için basit sıralama ve filtreleme işlemlerini kullanmanıza olanak tanır. 2000'den az kullanıcınız varsa, raporun kendi içindeki tabloda sıralama ve filtreleme yapabilirsiniz. 2000'den fazla kullanıcınız varsa, filtrelemek ve sıralamak için verileri dışarı aktarmanız gerekir. 
 
 **Yammer grupları aktivite** raporu son 7 gün, 30 gün, 90 gün veya 180 günlük eğilimler için görüntülenebilir. Ancak raporda belirli bir gün seçerseniz, tablo geçerli tarihten itibaren (raporun oluşturulduğu tarihten değil) 28 güne kadar olan verileri gösterir.
   

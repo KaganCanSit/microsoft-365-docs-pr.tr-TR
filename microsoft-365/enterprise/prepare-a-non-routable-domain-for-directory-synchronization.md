@@ -22,16 +22,16 @@ search.appverid:
 - BCS160
 ms.assetid: e7968303-c234-46c4-b8b0-b5c93c6d57a7
 description: Microsoft 365 kiracınızla eşitlemeden önce şirket içi kullanıcı hesaplarınızla ilişkilendirilmiş yönlendirilebilir olmayan bir etki alanınız varsa ne yapmanız gerekir öğrenin.
-ms.openlocfilehash: 7c0fd93f327305477908fba0cfb495fa73205ebe
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 9d720b42b345e85031a4fa34b9c1353f868765f1
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65096380"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637901"
 ---
 # <a name="prepare-a-non-routable-domain-for-directory-synchronization"></a>Dizin eşitlemesi için yönlendirilebilir olmayan bir etki alanını hazırlama
 
-Şirket içi dizininizi Microsoft 365 ile eşitlerken, Azure Active Directory(Azure AD) içinde doğrulanmış bir etki alanınızın olması gerekir. Yalnızca şirket içi Active Directory Etki Alanı Hizmetleri (AD DS) etki alanıyla ilişkilendirilmiş Kullanıcı Asıl Adları (UPN) eşitlenir. Ancak, ".local" (örneğin: billa@contoso.local) gibi yönlendirilebilir olmayan bir etki alanı içeren tüm UPN'ler bir .onmicrosoft.com etki alanıyla eşitlenir (örnek: billa@contoso.onmicrosoft.com). 
+Şirket içi dizininizi Microsoft 365 ile eşitlerken, Azure Active Directory (Azure AD) içinde doğrulanmış bir etki alanına sahip olmanız gerekir. Yalnızca şirket içi Active Directory Etki Alanı Hizmetleri (AD DS) etki alanıyla ilişkilendirilmiş Kullanıcı Asıl Adları (UPN) eşitlenir. Ancak, ".local" (örneğin: billa@contoso.local) gibi yönlendirilebilir olmayan bir etki alanı içeren tüm UPN'ler bir .onmicrosoft.com etki alanıyla eşitlenir (örnek: billa@contoso.onmicrosoft.com). 
 
 ŞU anda AD DS'deki kullanıcı hesaplarınız için ".local" etki alanı kullanıyorsanız, Microsoft 365 etki alanınızla düzgün eşitlemek için bunları billa@contoso.com gibi doğrulanmış bir etki alanı kullanacak şekilde değiştirmeniz önerilir.
   
@@ -39,7 +39,7 @@ ms.locfileid: "65096380"
 
 AD DS'nizi Microsoft 365 kiracınızın Azure AD kiracısına eşitlemek için Azure AD Bağlan kullanırsınız. Daha fazla bilgi için bkz. [Şirket içi kimliklerinizi Azure AD ile tümleştirme](/azure/architecture/reference-architectures/identity/azure-ad).
   
-Azure AD Bağlan, kullanıcıların şirket içinde kullandıkları kimlik bilgileriyle oturum açabilmesi için kullanıcılarınızın UPN'sini ve parolasını eşitler. Ancak Azure AD Bağlan kullanıcıları yalnızca Microsoft 365 tarafından doğrulanan etki alanlarıyla eşitler. Bu, Microsoft 365 kimlikleri Azure AD tarafından yönetildiğinden etki alanının Azure AD tarafından da doğrulandığını gösterir. Başka bir deyişle, etki alanının geçerli bir İnternet etki alanı (.com, .org, .net, .us gibi) olması gerekir. İç AD DS'niz yalnızca yönlendirilemeyen bir etki alanı kullanıyorsa (örneğin, ".local"), Microsoft 365 kiracınız için sahip olduğunuz doğrulanmış etki alanıyla eşleşmesi mümkün değildir. Bu sorunu, şirket içi AD DS'nizdeki birincil etki alanınızı değiştirerek veya bir veya daha fazla UPN soneki ekleyerek düzeltebilirsiniz.
+Azure AD Bağlan, kullanıcıların şirket içinde kullandıkları kimlik bilgileriyle oturum açabilmesi için kullanıcılarınızın UPN'sini ve parolasını eşitler. Ancak, Azure AD Bağlan kullanıcıları yalnızca Microsoft 365 tarafından doğrulanan etki alanlarıyla eşitler. Bu, Microsoft 365 kimlikleri Azure AD tarafından yönetildiğinden etki alanının Azure AD tarafından da doğrulandığını gösterir. Başka bir deyişle, etki alanının geçerli bir İnternet etki alanı (.com, .org, .net, .us gibi) olması gerekir. İç AD DS'niz yalnızca yönlendirilemeyen bir etki alanı kullanıyorsa (örneğin, ".local"), Microsoft 365 kiracınız için sahip olduğunuz doğrulanmış etki alanıyla eşleşmesi mümkün değildir. Bu sorunu, şirket içi AD DS'nizdeki birincil etki alanınızı değiştirerek veya bir veya daha fazla UPN soneki ekleyerek düzeltebilirsiniz.
   
 ### <a name="change-your-primary-domain"></a>Birincil etki alanınızı değiştirme
 
@@ -51,7 +51,7 @@ Birincil etki alanınızı Microsoft 365'de doğruladığınız bir etki alanıy
   
 UPN'leri doğrulanmış etki alanını kullanacak şekilde güncelleştirdikten sonra, şirket içi AD DS'nizi Microsoft 365 ile eşitlemeye hazır olursunuz.
   
-#### <a name="step-1-add-the-new-upn-suffix"></a>1. Adım: Yeni UPN sonekini ekleme**
+#### <a name="step-1-add-the-new-upn-suffix"></a>1. Adım: Yeni UPN sonekini ekleme
   
 1. AD DS etki alanı denetleyicisinin Sunucu Yöneticisi **Araçlar** \> **Active Directory Etki Alanları ve Güvenleri'ni** seçin.
     

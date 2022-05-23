@@ -28,12 +28,12 @@ search.appverid:
 - MOE150
 ms.assetid: de2da300-dbb6-4725-bb12-b85a9d296e75
 description: İş e-postanızı ve verilerinizi fidye yazılımı, kimlik avı ve kötü amaçlı ekler gibi siber tehditlere karşı koruyun.
-ms.openlocfilehash: 994223ff7f8f3da9d4d8b75056327214dfc310b0
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: 47e9d935cdf6b44d9ba45cd57d8eb3efeabdf0a3
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65622799"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637681"
 ---
 # <a name="best-practices-for-securing-microsoft-365-for-business"></a>İş için Microsoft 365 güvenliğini sağlamaya yönelik en iyi yöntemler
 
@@ -253,7 +253,7 @@ En önemli kullanıcılarınız ve özel etki alanınız için bir ilke oluştur
 
 4. Aşağıdaki grafikte önerilen ilkenizin adını, açıklamasını ve ayarlarını belirtin. Daha fazla bilgi için bkz. [Office 365 için Microsoft Defender seçeneklerinde kimlik avı önleme ilkesi hakkında bilgi edinin](../../security/office-365-security/set-up-anti-phishing-policies.md).
 
-5. Ayarlarınızı gözden geçirdikten sonra **, Bu ilkeyi oluştur'u** veya **Uygun şekilde Kaydet'i** seçin.
+5. Ayarlarınızı gözden geçirdikten sonra **, Uygun şekilde Bu ilkeyi oluştur** veya **Kaydet'i** seçin.
 
 |Ayar veya seçenek|Önerilen ayar|
 |---|---|
@@ -285,7 +285,7 @@ Kişiler belgeler, sunular, elektronik tablolar ve daha fazlası gibi ekleri dü
 
 4. Aşağıdaki tabloda yer alan ayarları uygulayın.
 
-5. Ayarlarınızı gözden geçirdikten sonra **, Bu ilkeyi oluştur'u** veya **Uygun şekilde Kaydet'i** seçin.
+5. Ayarlarınızı gözden geçirdikten sonra **, Uygun şekilde Bu ilkeyi oluştur** veya **Kaydet'i** seçin.
 
 |Ayar veya seçenek|Önerilen ayar|
 |---|---|

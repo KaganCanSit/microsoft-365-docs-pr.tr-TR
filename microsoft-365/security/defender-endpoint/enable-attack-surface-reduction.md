@@ -19,12 +19,12 @@ ms.collection:
 - M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.date: 1/18/2022
-ms.openlocfilehash: 03cdc163c1f560462fa12f18d4e6101665d766de
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: 2b88e6413bb8ef520c3049f63cca60703a509be3
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64788160"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637923"
 ---
 # <a name="enable-attack-surface-reduction-rules"></a>Saldırı yüzeyi azaltma kurallarını etkinleştirme
 
@@ -38,7 +38,7 @@ ms.locfileid: "64788160"
 - Windows
 
 > [!TIP]
-> Uç Nokta için Defender'ı deneyimlemek mi istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
+> Uç nokta için Defender'i deneyimlemek ister misiniz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
 
 [Saldırı yüzeyi azaltma kuralları](attack-surface-reduction.md) (ASR kuralları), kötü amaçlı yazılımların cihazları ve ağları tehlikeye atmak için sıklıkla kötüye kullanılan eylemleri önlemeye yardımcı olur.
 
@@ -58,7 +58,7 @@ aşağıdaki Windows sürümlerinden herhangi birini çalıştıran cihazlar iç
 
 Saldırı yüzeyi azaltma kurallarının özellik kümesinin tamamını kullanmak için şunları yapmanız gerekir:
 
-- birincil AV olarak Windows Defenderin virustentorjunta (gerçek zamanlı koruma açık)
+- birincil AV olarak Windows Defender Virüsten Koruma (gerçek zamanlı koruma açık)
 - [Üzerinde Bulut Teslim Koruması](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus) (bazı kurallar bunu gerektirir)
 - E5 veya E3 Lisansını Windows 10 Enterprise
 
@@ -71,10 +71,7 @@ Her ASR kuralı dört ayardan birini içerir:
 - **Denetim**: Etkinleştirildiğinde ASR kuralının kuruluşunuzu nasıl etkileyeceğini değerlendirme
 - **Uyar**: ASR kuralını etkinleştirin ancak son kullanıcının bloğu atlamasına izin verin
 
-> [!IMPORTANT]
-> Şu anda, Microsoft Endpoint Manager'de (MEM) ASR kurallarını yapılandırırken uyarı modu üç ASR kuralı için desteklenmemektedir. Daha fazla bilgi edinmek için bkz. [Uyarı modunun desteklenmediği durumlar](attack-surface-reduction.md#cases-where-warn-mode-is-not-supported).
-
-Pertahanan Microsoft untuk Titik Akhir 'de (Uç Nokta için Defender) sağlanan gelişmiş izleme ve raporlama özelliklerinden yararlanmak için ASR kurallarını [Windows](microsoft-defender-endpoint.md) E5 lisansıyla (veya benzer lisanslama SKU'su) kullanmanızı öneririz. Ancak, gelişmiş izleme ve raporlama özellikleri içermeyen Windows Professional veya Windows E3 gibi başka bir lisansınız varsa, ASR kuralları tetiklendiğinde her uç noktada oluşturulan olayların üzerine kendi izleme ve raporlama araçlarınızı geliştirebilirsiniz (örneğin, Olay İletme).
+Uç Nokta için Microsoft Defender 'de (Uç Nokta için Defender) sağlanan gelişmiş izleme ve raporlama özelliklerinden yararlanmak için ASR kurallarını [Windows](microsoft-defender-endpoint.md) E5 lisansıyla (veya benzer lisanslama SKU'su) kullanmanızı öneririz. Ancak, gelişmiş izleme ve raporlama özellikleri içermeyen Windows Professional veya Windows E3 gibi başka bir lisansınız varsa, ASR kuralları tetiklendiğinde her uç noktada oluşturulan olayların üzerine kendi izleme ve raporlama araçlarınızı geliştirebilirsiniz (örneğin, Olay İletme).
 
 > [!TIP]
 > Windows lisanslama hakkında daha fazla bilgi edinmek için bkz[. lisanslama Windows 10](https://www.microsoft.com/licensing/product-licensing/windows10?activetab=windows10-pivot:primaryr5) ve [Windows 10 için Toplu Lisanslama kılavuzunu](https://download.microsoft.com/download/2/D/1/2D14FE17-66C2-4D4C-AF73-E122930B60F6/Windows-10-Volume-Licensing-Guide.pdf) edinin.
@@ -191,7 +188,7 @@ ASR kurallarını etkinleştirmeye yönelik aşağıdaki yordamlar, dosya ve kla
    - **Açıklama** alanına kısa bir açıklama yazın.
    - **OMA-URI'de**, eklediğiniz kural için belirli OMA-URI bağlantısını yazın veya yapıştırın. Bu örnek kuralda kullanılacak OMA-URI için bu makaledeki MDM bölümüne bakın. Saldırı yüzeyi azaltma kuralı [GUID'leri](attack-surface-reduction-rules-reference.md#per-rule-descriptions) için bkz. Saldırı yüzeyi azaltma kuralları.
    - **Veri türü'nde** **Dize'yi** seçin.
-   - **Değer'de** GUID değerini, \= işareti ve State değerini boşluksuz (_GUID=StateValue_) yazın veya yapıştırın. Nerede:
+   - **Değer'de** GUID değerini, \= işareti ve State değerini boşluksuz (_GUID=StateValue_) yazın veya yapıştırın. Konum:
 
      - 0 : Devre dışı bırak (ASR kuralını devre dışı bırak)
      - 1 : Engelle (ASR kuralını etkinleştirme)
@@ -271,9 +268,9 @@ Dışlama eklemek için [./Vendor/MSFT/Policy/Config/Defender/AttackSurfaceReduc
 
 ### <a name="microsoft-endpoint-configuration-manager"></a>Microsoft Uç Noktası Yapılandırma Yöneticisi
 
-1. Microsoft Endpoint Configuration Manager'da **Varlıklar ve Uyumluluk** \> **Endpoint Protection** \> **Windows Defender Exploit Guard'a** gidin.
+1. Microsoft Endpoint Configuration Manager'da **Varlıklar ve Uyumluluk** \> **Uç Nokta Koruması** \> **Windows Defender Açıklardan Yararlanma Koruması**'na gidin.
 
-2. **Giriş** \> **Oluşturma Exploit Guard İlkesi'ni** seçin.
+2. **Giriş** \> **Açıklardan Yararlanma Koruması İlkesi Oluştur**'u seçin.
 
 3. Bir ad ve açıklama girin, **Saldırı Yüzeyi Azaltma'yı** seçin ve **İleri'yi** seçin.
 
@@ -281,7 +278,7 @@ Dışlama eklemek için [./Vendor/MSFT/Policy/Config/Defender/AttackSurfaceReduc
 
 5. İlkeyi oluşturmak için ayarları gözden geçirin ve **İleri'yi** seçin.
 
-6. İlke oluşturulduktan sonra **Kapat'ı** seçin.
+6. İlke oluşturulduktan sonra **Kapat**'ı seçin.
 
 ### <a name="group-policy"></a>Grup İlkesi
 

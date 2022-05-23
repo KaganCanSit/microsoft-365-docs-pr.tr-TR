@@ -14,12 +14,12 @@ ms.collection:
 - Adm_TOC
 ms.custom: AdminSurgePortfolio
 description: Temel Hareketlilik ve Güvenlik sorunlarını izlemek için bu adımları deneyin
-ms.openlocfilehash: c8c4fe674ff3a803659223a004e304a5779a83d7
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 1b1b7d67eb07c67c320554c1d64701983da30e15
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64780747"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65636074"
 ---
 # <a name="troubleshoot-basic-mobility-and-security"></a>Temel Mobilite ve Güvenlik Sorunlarını Giderme
 
@@ -35,11 +35,11 @@ Başlamak için aşağıdakileri denetleyin:
 
 - Cihazda farklı bir WIFI'ye veya hücresel ağa geçin.
 
-- Android veya iOS cihazları için Intune Şirket Portalı uygulamasını kaldırıp cihaza yeniden yükleyin. 
+- Android veya iOS cihazlar için Intune Şirket Portalı uygulamasını kaldırıp cihaza yeniden yükleyin. 
 
-## <a name="ios-phone-or-tablet"></a>iOS telefon veya tablet
+## <a name="ios-phone-or-tablet"></a>telefon veya tablet iOS
 
-- Bir APNs sertifikası ayarladığınızdan emin olun. Daha fazla bilgi için bkz. [iOS cihazları için APNs Sertifikası oluşturma](create-an-apns-certificate-for-ios-devices.md).
+- Bir APNs sertifikası ayarladığınızdan emin olun. Daha fazla bilgi için bkz. [iOS cihazlar için APNs Sertifikası oluşturma](create-an-apns-certificate-for-ios-devices.md).
 
 - **Ayarlar** >  **GeneralProfile** >  **(veya Cihaz Yönetimi)** içinde, bir Yönetim Profili'nin zaten yüklü olmadığından emin olun. Varsa kaldırın.
 
@@ -63,9 +63,9 @@ Başlamak için aşağıdakileri denetleyin:
     
 - Azure Active Directory Premium yoksa, kullanıcının Bağlan seçmek yerine **yalnızca Cihaz Yönetimi kaydol'ı** seçtiğinden emin olun.
 
-## <a name="android-phone-or-tablet"></a>Android telefon veya tablet
+## <a name="android-phone-or-tablet"></a>telefon veya tableti Android
 
-- Cihazın Android çalıştırdığından emin olun.
+- Cihazın Android çalıştığından emin olun.
 
 - Chrome'un güncel olduğundan ve varsayılan tarayıcı olarak ayarlandığından emin olun.
 

@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 kullanıcıları için genel kiracı performansını iyileştirme
+title: Çin kullanıcıları için Microsoft 365 genel kiracı performansı iyileştirmesi
 ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
@@ -15,124 +15,124 @@ ms.collection:
 search.appverid: MET150
 f1.keywords:
 - NOCSH
-description: Bu makalede, çin'deki genel kullanıcı ve kiracılar için ağ performansını iyileştirmeye Microsoft 365 kılavuzlar yer almaktadır.
-ms.openlocfilehash: 6c99245d523048d30124fc8f8b0c01d7c2004327
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Bu makalede, genel Microsoft 365 kiracılarının Çin kullanıcıları için ağ performansını iyileştirmeye yönelik yönergeler sağlanmaktadır.
+ms.openlocfilehash: f7e4e69277a252fd1af52559d3bc4360fd3cfd51
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63326937"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637879"
 ---
-# <a name="microsoft-365-global-tenant-performance-optimization-for-china-users"></a>Microsoft 365 kullanıcıları için genel kiracı performansını iyileştirme
+# <a name="microsoft-365-global-tenant-performance-optimization-for-china-users"></a>Çin kullanıcıları için Microsoft 365 genel kiracı performansı iyileştirmesi
 
 > [!IMPORTANT]
-> Bu kılavuz, Çin'de bulunan kurumsal **Microsoft 365** kullanıcıların genel bir kiracıya bağlı olduğu **kullanım Microsoft 365 yöneliktir**. Bu **kılavuz,** 21Vianet tarafından Office 365 kiracılar için geçerli değildir.
+> Bu kılavuz, **Çin'de bulunan kurumsal Microsoft 365 kullanıcılarının genel bir Microsoft 365** **kiracısına** bağlandığı kullanım senaryolarına özgüdür. Bu kılavuz, 21Vianet tarafından sağlanan Office 365 kiracılar için geçerli **değildir**.
 
 >[!NOTE]
->Bu makale, uzak kullanıcılar için iyileştirmeyi Microsoft 365 makale kümelerinin bir bölümüdir.
+>Bu makale, uzak kullanıcılar için Microsoft 365 iyileştirmeyi ele alan bir makale kümesinin parçasıdır.
 
->- Uzak kullanıcılar için Microsoft 365 bağlantısını en iyi duruma getirmek için VPN bölünmüş şifreleme kullanma hakkında genel bir bakış için bkz[.](microsoft-365-vpn-split-tunnel.md) Genel Bakış: Vpn bölünmüş Microsoft 365.
->- VPN bölünmüş bölmeyi uygulama hakkında ayrıntılı kılavuz için bkz. [VPN bölünmüş bölmeyi uygulama Microsoft 365](microsoft-365-vpn-implement-split-tunnel.md).
->- VPN bölünmüş bölme senaryolarının ayrıntılı listesi için bkz. Daha fazla bilgi için bkz. Genel [VPN bölünmüş Microsoft 365](microsoft-365-vpn-common-scenarios.md).
->- VPN bölünmüş trafiğinde Teams trafiğinin güvenliğini sağlama kılavuzu için bkz. VPN bölünmüş trafiği için Teams trafiğinin güvenliğini [sağlama](microsoft-365-vpn-securing-teams.md).
->- VPN ortamlarında Stream ve canlı etkinlikleri yapılandırma hakkında bilgi için bkz. VPN ortamlarında akış ve canlı etkinlikler [için dikkat edilmesi gereken noktalar](microsoft-365-vpn-stream-and-live-events.md).
+>- Uzak kullanıcılar için Microsoft 365 bağlantısını iyileştirmek üzere VPN bölünmüş tünel kullanmaya genel bakış için bkz[. Genel Bakış: Microsoft 365 için VPN bölünmüş tünel oluşturma](microsoft-365-vpn-split-tunnel.md).
+>- VPN bölünmüş tüneli uygulama hakkında ayrıntılı yönergeler için bkz. [Microsoft 365 için VPN bölünmüş tüneli uygulama](microsoft-365-vpn-implement-split-tunnel.md).
+>- VPN bölünmüş tünel senaryolarının ayrıntılı listesi için bkz. [Microsoft 365 için yaygın VPN bölünmüş tünel senaryoları](microsoft-365-vpn-common-scenarios.md).
+>- VPN bölünmüş tünel ortamlarında Teams medya trafiğinin güvenliğini sağlama yönergeleri için bkz. [VPN bölünmüş tüneli için Teams medya trafiğinin güvenliğini sağlama](microsoft-365-vpn-securing-teams.md).
+>- VPN ortamlarında Stream ve canlı etkinlikleri yapılandırma hakkında bilgi için bkz. [VPN ortamlarında Akış ve canlı etkinlikler için dikkat edilmesi gereken özel noktalar](microsoft-365-vpn-stream-and-live-events.md).
 
-Global kurumsal kiracıları olan Microsoft 365 Çin'de kurumsal varlığı olan kuruluşlar için, Microsoft 365 tabanlı kullanıcılar için istemci performansı, Çin Telco'nun İnternet mimarisine özgü faktörler tarafından karmaşık olabilir.
+Küresel Microsoft 365 kiracısı olan ve Çin'de şirket varlığına sahip kuruluşlar için, Çin merkezli kullanıcılar için Microsoft 365 istemci performansı Çin Telco'nun İnternet mimarisine özgü faktörlerle karmaşık olabilir.
 
-Çin ISS'ler, yüksek sınır ötesi ağ tıkanıklığı düzeyine açık çevre cihazlardan geçen genel genel İnternet bağlantılarını düzenlemeye sahiptir. Bu tıkanıklık, Çin'e giden ve dışarı giden tüm İnternet trafiği için paket kaybı ve gecikme süresi oluşturur.
+Çin ISS'leri, yüksek sınır ötesi ağ tıkanıklığı düzeyine eğilimli çevre cihazlarından geçen küresel genel İnternet'e yönelik offshore bağlantıları düzenlemektedir. Bu tıkanıklık, Çin'e giren ve giden tüm İnternet trafiği için paket kaybı ve gecikme süresi oluşturur.
 
-![Microsoft 365 - göz korkutucu değil.](../media/O365-networking/China-O365-unoptimized.png)
+![trafiği Microsoft 365 - iyileştirilmemiş.](../media/O365-networking/China-O365-unoptimized.png)
 
-Paket kaybı ve gecikme süresi, ağ hizmetlerinin performansına, özellikle de büyük veri değişimleri gerektiren (büyük dosya aktarımları gibi) veya yakın gerçek zamanlı performans (ses ve video uygulamaları) gerektiren hizmetlere zararlıdır.
+Paket kaybı ve gecikme süresi ağ hizmetlerinin performansına, özellikle de büyük veri alışverişleri gerektiren (büyük dosya aktarımları gibi) veya gerçek zamanlıya yakın performans gerektiren hizmetlere (ses ve video uygulamaları) zarar verir.
 
-Bu konunun amacı, Çin'de çapraz sınır ağ tıkanıklığı üzerindeki etkiyi azaltmaya yönelik en iyi Microsoft 365 sağlamaktır. Bu konu, Çin taşıyıcıları içindeki karmaşık yönlendirme nedeniyle yüksek paket gecikme süresi sorunları gibi sık karşılaşılan son mesafe performans sorunlarına çözüm aramaz.
+Bu konunun amacı, Çin sınır ötesi ağ tıkanıklığının Microsoft 365 hizmetleri üzerindeki etkisini azaltmak için en iyi yöntemleri sağlamaktır. Bu konu, Çin taşıyıcıları içindeki karmaşık yönlendirme nedeniyle yüksek paket gecikme süresi sorunları gibi diğer yaygın son kilometre performans sorunlarını ele almaz.
 
-## <a name="corporate-network-best-practices"></a>Kurumsal ağ için en iyi yöntemler
+## <a name="corporate-network-best-practices"></a>Kurumsal ağ en iyi yöntemleri
 
-Çin'de küresel Microsoft 365 kiracıları ve kullanıcıları olan birçok kuruluş, Çin'deki ofis konumları ile dünyanın her yanında yer alan okul konumları arasında şirket ağı trafiği taşıyan özel ağlar uygulamaya başladı. Bu kuruluşlar, çapraz ağ tıkanıklıklarından kaçınmak ve Çin'deki ağ hizmet Microsoft 365 en iyi duruma getirmek için bu ağ altyapısından faydalanebilir.
+Çin'de küresel Microsoft 365 kiracıları ve kullanıcıları olan birçok kuruluş, Çin ofis konumları ile dünyanın dört bir yanındaki offshore konumları arasında kurumsal ağ trafiği taşıyan özel ağlar uygulamış. Bu kuruluşlar sınır ötesi ağ tıkanıklığını önlemek ve Çin'deki Microsoft 365 hizmet performansını iyileştirmek için bu ağ altyapısından yararlanabilir.
 
 > [!IMPORTANT]
-> Tüm özel WAN uygulamaları gibi, ağ yapılandırmanın uyumlu olduğundan emin olmak için ülkeniz ve/veya bölgeniz için her zaman mevzuat gereksinimlerine bakabilirsiniz.
+> Tüm özel WAN uygulamalarında olduğu gibi, ağ yapılandırmanızın uyumlu olduğundan emin olmak için ülkeniz ve/veya bölgeniz için her zaman yasal gereksinimlere başvurmanız gerekir.
 
-İlk adım olarak, karşılaştırma ağı kılavuzumızı takip etmek, karşılaştırma ağı için ağ planlaması [ve](./network-planning-and-performance.md) performans ayarı konusunda yol gösterici Microsoft 365. Birinci hedef, mümkünse Çin'de İnternet'Microsoft 365 gelen genel posta hizmetlerine erişimi önlemektir.
+İlk adım olarak, [Microsoft 365 için ağ planlama ve performans ayarlama](./network-planning-and-performance.md) konusunda kıyaslama ağı kılavuzumuzu izlemeniz çok önemlidir. Birincil hedef, mümkünse Çin'de İnternet'ten küresel Microsoft 365 hizmetlerine erişmekten kaçınmak olmalıdır.
 
-- Çin ofis ağları ve çin dışındaki genel İnternet Microsoft 365 ağ trafiğini taşımak için mevcut özel ağdan faydalanabilirsiniz. Çin'in dışındaki neredeyse tüm konumlar net bir avantaj sağlayacaktır. Ağ yöneticileri, Microsoft genel ağıyla düşük gecikme süresi bağlantılı olan alanlarda çıkışarak daha [da iyi hale gelir](/azure/networking/microsoft-global-network). Hong Kong, Singapur, Japonya ve Güney Kore örnek olarak verilmiştir.
-- Kullanıcıların şirket ağına VPN bağlantısı üzerinden erişmek üzere kullanıcı cihazlarını yapılandırarak, Microsoft 365 ağın özel bağlantısının aktar olmasına izin verir. VPN istemcilerinin bölünmüş bölmeyi kullanmak üzere yapılandırılmamış olduğundan veya kullanıcı cihazlarının bölünmüş trafiğin bölünmüş olaylarını yok saymak üzere yapılandırıldığından Microsoft 365 olun. GERÇEK ZAMANLı medya trafiği için VPN bağlantısını Teams hakkında ek bilgi için bu [bölüme bakın](#optimizing-microsoft-teams-meetings-network-performance-for-users-in-china).
-- Tüm trafiği özel Microsoft 365 bağlantınıza yönlendiracak şekilde anızı yapılandırabilirsiniz. Özel bağlantınız üzerindeki trafik hacmini en aza indirmeniz gerekirse, uç noktaları yalnızca En İyi Duruma Getirme kategorisinde yönlendirmeyi ve isteklerin İnternet'i aktarmasına  İzin Ver  ve Varsayılan uç noktalarına izin vermeyi seçebilirsiniz. Bu, iyileştirilmiş trafiği yüksek gecikme süresi ve paket kaybına karşı en duyarlı kritik hizmetlerle sınırlandırarak performansı iyiler ve bant genişliği tüketimini en aza indirecektir.
-- Mümkünse, canlı medya akışı trafiği için TCP yerine UDP kullanın; örneğin, Teams. UDP, TCP'ye göre daha iyi canlı medya akışı performansı sunar.
+- Çin ofis ağları ile Çin dışında genel İnternet'e çıkış yapılan offshore konumlar arasında Microsoft 365 ağ trafiği taşımak için mevcut özel ağınızdan yararlanın. Çin dışındaki neredeyse tüm konumlar net bir fayda sağlayacaktır. Ağ yöneticileri [, Microsoft genel ağıyla](/azure/networking/microsoft-global-network) düşük gecikme süreli bağlantı olan alanlarda çıkış yaparak daha da iyileştirebilir. Hong Kong, Singapur, Japonya ve Güney Kore örnek olarak verilebilir.
+- Microsoft 365 trafiğin şirket ağının özel offshore bağlantısını geçirmesine izin vermek için kullanıcı cihazlarını bir VPN bağlantısı üzerinden şirket ağına erişecek şekilde yapılandırın. VPN istemcilerinin bölünmüş tünel kullanacak şekilde yapılandırılmadığından veya kullanıcı cihazlarının Microsoft 365 trafik için bölünmüş tüneli yoksayacak şekilde yapılandırıldığından emin olun. Teams ve gerçek zamanlı medya trafiği için VPN bağlantısını iyileştirme hakkında ek bilgi için [bu bölüme](#optimizing-microsoft-teams-meetings-network-performance-for-users-in-china) bakın.
+- Ağınızı, tüm Microsoft 365 trafiğini özel denizaşırı bağlantınız üzerinden yönlendirecek şekilde yapılandırın. Özel bağlantınızdaki trafik hacmini en aza indirmeniz gerekiyorsa, yalnızca **İyileştir** kategorisindeki uç noktaları yönlendirmeyi ve **İzin Ver** ve **Varsayılan** uç noktalara yönelik isteklerin İnternet'i aktarmasına izin vermeyi seçebilirsiniz. Bu, iyileştirilmiş trafiği yüksek gecikme süresi ve paket kaybına en duyarlı kritik hizmetlerle sınırlayarak performansı artırır ve bant genişliği tüketimini en aza indirir.
+- Mümkünse, Teams gibi canlı medya akış trafiği için TCP yerine UDP kullanın. UDP, TCP'den daha iyi canlı medya akışı performansı sunar.
 
-Trafiği seçmeli olarak yönlendirme hakkında bilgi Microsoft 365 için bkz[. Office 365 yönetme](managing-office-365-endpoints.md). Tüm dünya çapında 2013 URL'leri Office 365 IP adreslerinin listesi için bkz. Office 365 [VE IP adresi aralıkları](urls-and-ip-address-ranges.md).
+Microsoft 365 trafiği seçmeli olarak yönlendirme hakkında bilgi için bkz. [Office 365 uç noktalarını yönetme](managing-office-365-endpoints.md). Dünya çapındaki tüm Office 365 URL'lerinin ve IP adreslerinin listesi için bkz. [OFFICE 365 URL'ler ve IP adresi aralıkları](urls-and-ip-address-ranges.md).
 
-![Microsoft 365 - iyileştirilmiş.](../media/O365-networking/China-O365-optimized.png)
+![trafik Microsoft 365 - iyileştirildi.](../media/O365-networking/China-O365-optimized.png)
 
 ## <a name="user-best-practices"></a>Kullanıcı için en iyi yöntemler
 
-Çin'de ev, kafe mağazaları, oteller ve ofisler gibi uzak konumlardan küresel Microsoft 365 kiracılarına bağlanan ve kurumsal ağlara bağlantısı olmayan kullanıcılar, cihazları ve Microsoft 365 arasındaki trafiğin Çin'in tıkanık çapraz ağ bağlantı hatlarını aktarması nedeniyle düşük ağ performansıyla yaşanıyor.
+Çin'deki ev, kafe, otel ve şube ofisleri gibi uzak konumlardan kurumsal ağlara bağlantısı olmayan küresel Microsoft 365 kiracılarına bağlanan kullanıcılar, cihazları ve Microsoft 365 arasındaki trafiğin Çin'in yoğun sınır ötesi ağ devrelerini aktarması gerektiğinden düşük ağ performansıyla karşılaşabilir.
 
-Şirket ağına sınır ötesi özel ağlar ve/veya VPN erişimi bir seçenek yoksa, Çin tabanlı kullanıcılarınızı bu en iyi yöntemleri izlemeleri için eğitimle kullanıcı başına performans sorunlarının azaltılmasına devam eder.
+Sınır ötesi özel ağlar ve/veya şirket ağına VPN erişimi bir seçenek değilse, Çin merkezli kullanıcılarınızı bu en iyi yöntemleri izlemeleri için eğiterek kullanıcı başına performans sorunları yine de giderilebilir.
 
-- Önbelleğe almayı Office zengin veri istemcilerini kullanın (örneğin, Outlook, Teams, OneDrive, vb.) ve web tabanlı istemcilerden kaçının. Office önbelleğe alma ve çevrimdışı erişim özellikleri ağ tıkanıklığı ve gecikme süresinin etkisini önemli ölçüde azaltır.
-- Kullanıcı Microsoft 365 Sesli Konferans özelliğiyle yapılandırılmışsa, Teams kullanıcılar ortak anahtarlı telefon ağı (PSTN) üzerinden toplantılara katılabilir. Daha fazla bilgi için bkz. [Office 365](/microsoftteams/audio-conferencing-in-office-365).
-- Kullanıcılar ağ performansı sorunlarıyla yaşanıyorsa, sorun giderme için KENDI IT departmanlarına bildirmeleri ve Microsoft 365 hizmetleriyle ilgili sorun olması Microsoft 365 Microsoft desteğine yükseltmeleri gerekir. Tüm sorunlar kenarlıklar arası ağ performansından kaynaklanmaz.
+- Önbelleğe almayı destekleyen (ör. Outlook, Teams, OneDrive vb.) zengin Office istemcilerini kullanın ve web tabanlı istemcilerden kaçının. Office istemci önbelleğe alma ve çevrimdışı erişim özellikleri, ağ tıkanıklığı ve gecikme süresinin etkisini önemli ölçüde azaltabilir.
+- Microsoft 365 kiracınız _Sesli Konferans_ özelliğiyle yapılandırılmışsa, Teams kullanıcılar ortak anahtarlı telefon ağı (PSTN) aracılığıyla toplantılara katılabilir. Daha fazla bilgi için bkz. [Office 365 Sesli Konferans](/microsoftteams/audio-conferencing-in-office-365).
+- Kullanıcılar ağ performansı sorunlarıyla karşılaşırsa sorun giderme için BT departmanlarına bildirmeli ve Microsoft 365 hizmetleriyle ilgili sorun olduğundan şüpheleniliyorsa Microsoft desteğine yükseltmelidir. Tüm sorunlar sınır ötesi ağ performansı nedeniyle kaynaklanmaz.
 
-## <a name="optimizing-microsoft-teams-meetings-network-performance-for-users-in-china"></a>Çin'Microsoft Teams kullanıcılar için toplantı ağ performansını iyileştirme
+## <a name="optimizing-microsoft-teams-meetings-network-performance-for-users-in-china"></a>Çin'deki kullanıcılar için Microsoft Teams toplantı ağ performansını iyileştirme
 
-Genel posta kiracıları olan Microsoft 365 Çin'de iletişim durumu olan kuruluşlar için, Microsoft 365 tabanlı kullanıcılar için istemci performansının karmaşık olması, Çin İnternet mimarisine özgü faktörler tarafından karmaşık olabilir. Birçok şirket ve okul bu kılavuza uygun sonuçlar bildirdi. Ancak bu kapsam, VPN bağlantısı olan ofis konumları veya ev/mobil uç noktaları gibi, IT ağı kurulumunun denetimi altındaki kullanıcı ağı konumlarıyla sınırlıdır. Microsoft Teams aramalar ve toplantılar genellikle ev ofisleri, mobil konumlar, yolda ve kafe gibi dış konumlardan kullanılır. Aramalar ve toplantılar gerçek zamanlı medya trafiğine dayanması nedeniyle, bu Teams deneyimleri özellikle ağ tıkanıklığı konusunda hassastır.
+Küresel Microsoft 365 kiracısı olan ve Çin'de bulunan kuruluşlar için, Çin tabanlı kullanıcılar için Microsoft 365 istemci performansı Çin İnternet mimarisine özgü faktörlerle karmaşık olabilir. Birçok şirket ve okul bu kılavuzu izleyerek iyi sonuçlar bildirdi. Ancak kapsam, BT ağ kurulumunun denetimi altında olan kullanıcı ağ konumlarıyla sınırlıdır; örneğin, ofis konumları veya VPN bağlantısı olan ev/mobil uç noktalar. Microsoft Teams aramalar ve toplantılar genellikle ev ofisleri, mobil konumlar, yol ve kafe gibi dış konumlardan kullanılır. Aramalar ve toplantılar gerçek zamanlı medya trafiğine dayandığından, bu Teams deneyimleri ağ tıkanıklığı konusunda özellikle hassastır.
 
-Sonuç olarak, Microsoft Çin'deki yerel ve genel İnternet bağlantıları ile Microsoft 365 küresel bulut üzerinde yer alan Teams ve Skype hizmetleri arasında daha kaliteli, tercihen bir ağ yolu kullanarak Teams ve Skype Kurumsal Online gerçek zamanlı medya trafiği taşımak için telekomünikasyon sağlayıcılarıyla ortak çalışmalar yürütmektedir. Bu özellik, paket kaybına ve kullanıcı deneyimini etkileyen diğer önemli ölçümlere göre on kattan fazla geliştirme elde etti.
+Sonuç olarak Microsoft, Çin'deki iç ve genel İnternet bağlantıları ile Microsoft 365 küresel buluttaki Teams ve Skype hizmetleri arasında daha yüksek kaliteli, tercihli bir ağ yolu kullanarak Teams ve Skype Kurumsal Çevrimiçi gerçek zamanlı medya trafiğini taşımak için telekomünikasyon sağlayıcılarıyla işbirliği yaptı. Bu özellik, paket kaybında on kat daha fazla iyileştirmeye ve kullanıcınızın deneyimini etkileyen diğer önemli ölçümlere neden olmuştur.
 
 >[!IMPORTANT]
->Şu anda bu iyileştirmeler büyük yayın veya "kasaba salonu" stili toplantılar gibi Microsoft Live Events toplantılarına katılmayı ele Teams ya da Microsoft Stream'i kullanmaz. Canlı Etkinlikler toplantısını görüntülemek için Çin'deki kullanıcıların özel bir ağ veya SDWAN/VPN çözümü kullanmaları gerekir. Bununla birlikte, ağ geliştirmeleri Canlı Etkinlik toplantılarını yapan veya üreten kullanıcılara fayda sağlar, çünkü bu deneyim yapımcı veya sunucu için normal bir Teams toplantısı gibi davranır.
+>Şu anda bu iyileştirmeler, Teams veya Microsoft Stream kullanarak büyük yayın veya "belediye binası" tarzı toplantılar gibi Microsoft Live Events toplantılarına katılmayı ele almaz. Bu deneyim, yapımcı veya sunucu için düzenli bir Teams toplantısı olarak davrandığından, ağ geliştirmeleri canlı etkinlikler toplantısı sunan veya üreten kullanıcılara fayda sağlar.
 
-### <a name="organization-network-best-practices-for-teams-meetings"></a>Toplantılara yönelik kuruluş ağı Teams yöntemleri
+### <a name="organization-network-best-practices-for-teams-meetings"></a>Teams toplantıları için kuruluş ağı en iyi yöntemleri
 
-Önceki kılavuzda, sınır ötesi ağ tıkanıklığından kaçınmak için özel bir ağ uzantısını göz önünde bulundurursa, bu ağ geliştirmelerini nasıl kullanılay? göz önünde bulundurabilirsiniz. Kuruluş office ağları için iki genel seçenek vardır:
+Sınır ötesi ağ tıkanıklığını önlemek için özel bir ağ uzantısını göz önünde bulundurmak için önceki kılavuzda bu ağ geliştirmelerinden nasıl yararlanabileceğinizi göz önünde bulundurmanız gerekir. Kuruluş ofisi ağları için iki genel seçenek vardır:
 
-1. Yeni bir şey yapma. Kenarlıklar arası tıkanıklığı önlemek için, özel ağ atlama çevresinde önceki yönergeleri takip etmeye devam edin. Teams gerçek zamanlı medya trafiği, daha önce olduğu gibi bu kurulumdan yararlanacak.
-2. Bölünmüş/karma desen uygulama.
-   - Toplantılar ve gerçek zamanlı medya trafiğini arama dışında, iyileştirme Teams tüm trafik için önceki kılavuzu kullanın.
-   - Toplantı Teams ve gerçek zamanlı medya trafiğini ortak İnternet üzerinden yönlendirin. Gerçek zamanlı medya ağ trafiğini belirlemeyle ilgili bilgiler için aşağıdaki bilgilere bakın.
+1. Yeni bir şey yapma. Sınır ötesi tıkanıklığı önlemek için özel ağ atlama ile ilgili önceki yönergeleri izlemeye devam edin. Teams gerçek zamanlı medya trafiği, daha önce olduğu gibi bu kurulumdan yararlanacaktır.
+2. Bölünmüş/karma desen uygulayın.
+   - Teams toplantıları ve gerçek zamanlı medya trafiğini çağırma dışında iyileştirme için bayrak eklenmiş tüm trafik için önceki kılavuzu kullanın.
+   - Toplantı Teams yönlendirin ve genel İnternet üzerinden gerçek zamanlı medya trafiğini çağırın. Gerçek zamanlı medya ağ trafiğini tanımlamayla ilgili ayrıntılar için aşağıdaki bilgilere bakın.
 
-Yüksek Teams kullanan genel İnternet üzerinden gerçek zamanlı medya ses ve görüntü trafiği göndermek, önemli ölçüde maliyet tasarrufu sağlar çünkü bu trafik özel bir ağ üzerinden ücret ödeme yerine ücretsizdir. Kullanıcılar SDWAN veya VPN istemcileri de kullanıyorsa, benzer ek avantajlar olabilir. Bazı kuruluşlar, genel uygulama olarak daha fazla veri çapraz İnternet bağlantısına sahip olmayı da tercih ediyor olabilir.
+Yüksek kaliteli bağlantıyı kullanan Teams gerçek zamanlı medya ses ve video trafiğinin genel İnternet üzerinden gönderilmesi, bu trafiğin özel bir ağ üzerinden gönderilmesinin ücretsiz ve ücretli olması nedeniyle önemli ölçüde maliyet tasarrufuna neden olabilir. Kullanıcılar da SDWAN veya VPN istemcileri kullanıyorsa benzer ek avantajlar olabilir. Bazı kuruluşlar, genel bir uygulama olarak verilerinin daha fazla genel İnternet bağlantısından geçişini tercih edebilir.
 
-Aynı seçenekler SDWAN veya VPN yapılandırmaları için de uygulanabilir. Örneğin, bir kullanıcı şirket ağına giden trafiği Microsoft 365 için SDWAN veya VPN kullanıyor ve sonra da sınır ötesi tıkanıklığı önlemek için bu ağın özel uzantısından yararlanarak kullanıyor. Kullanıcının SDWAN veya VPN'i artık VPN yönlendirmesi dışında Teams gerçek zamanlı trafik çağrılarını dışarıda bırakacak şekilde yalıtabilirsiniz. Bu VPN yapılandırması bölünmüş kazıma olarak adlandırılır. Daha [fazla bilgi için bkz. Office 365](/microsoft-365/enterprise/microsoft-365-vpn-implement-split-tunnel) VPN bölünmüş bölme.
+Aynı seçenekler SDWAN veya VPN yapılandırmaları için de geçerli olabilir. Örneğin, bir kullanıcı Microsoft 365 trafiği kurumsal ağa yönlendirmek için SDWAN veya VPN kullanıyor ve ardından sınır ötesi tıkanıklığı önlemek için bu ağın özel uzantısından yararlanılıyor. Kullanıcının SDWAN'ı veya VPN'i artık Teams toplantıyı dışlamak ve gerçek zamanlı trafiği VPN yönlendirmesinden çağırmak üzere yapılandırılabilir. Bu VPN yapılandırmasına bölünmüş tünel adı verilmektedir. Daha fazla bilgi için bkz. [vpn split tunneling for Office 365](/microsoft-365/enterprise/microsoft-365-vpn-implement-split-tunnel).
 
-Ayrıca, gerçek zamanlı trafik de dahil olmak üzere tüm dünya trafiği Microsoft 365 SDWAN veya VPN Microsoft Teams kullanabilirsiniz. Microsoft'un SDWAN veya VPN çözümlerinin kullanımıyla ilgili hiçbir önerisi yoktur.
+Gerçek zamanlı Microsoft Teams trafik de dahil olmak üzere tüm Microsoft 365 trafik için SDWAN'ınızı veya VPN'inizi kullanmaya devam edebilirsiniz. Microsoft'un SDWAN veya VPN çözümleri kullanımıyla ilgili bir önerisi yoktur.
 
-### <a name="home-mobile-and-user-network-best-practices-for-teams-meetings"></a>Toplantılarınız için ev, mobil ve kullanıcı ağı için Teams yöntemleri
+### <a name="home-mobile-and-user-network-best-practices-for-teams-meetings"></a>Teams toplantılar için ev, mobil ve kullanıcı ağı için en iyi yöntemler
 
-Çin'deki kullanıcılar, Çin'deki genel İnternet hizmetine sabit hat veya mobil bağlantı üzerinden bağlanarak bu geliştirmelerden faydalanabilirsiniz. Teams gerçek zamanlı medya ses ve video trafiğinin genel İnternet'te gerçek zamanlı olarak
+Çin'deki kullanıcılar bu iyileştirmelerden yalnızca Çin'deki genel internet hizmetine sabit hat veya mobil bağlantıyla bağlanarak yararlanabilir. Teams genel İnternet'te gerçek zamanlı medya ses ve video trafiği, gelişmiş bağlantı ve kaliteden doğrudan yararlanır.
 
-Bununla birlikte, diğer Microsoft 365 hizmetlerinden ve Teams veya dosyalar gibi diğer trafiğin verileri bu geliştirmelerden doğrudan yararlanamaz. Kuruluş ağının dışındaki kullanıcılar da bu trafikte ağ performansı düşük olabilir. Bu makalede de ele alınarak, VPN veya SDWAN kullanarak bu etkiyi azaltmak için kullanabilirsiniz. Ayrıca, kullanıcılarının ağ sorunlarını azaltmak için uygulama içinde önbelleğe almayı destekleyen web istemcileri üzerinden zengin masaüstü istemcileri kullanmalarını da sebilirsiniz.
+Ancak, diğer Microsoft 365 hizmetlerinden ve sohbet veya dosyalar gibi Teams diğer trafikten gelen veriler bu geliştirmelerden doğrudan yararlanmaz. Kuruluş ağı dışındaki kullanıcılar bu trafik için düşük ağ performansıyla karşılaşmaya devam edebilir. Bu makalede açıklandığı gibi, VPN veya SDWAN kullanarak bu etkileri azaltabilirsiniz. Kullanıcılarınızın ağ sorunlarını azaltmak için uygulama içi önbelleğe almayı destekleyen web istemcileri üzerinden zengin masaüstü istemcileri kullanmasını da sağlayabilirsiniz.
 
-### <a name="identifying-teams-real-time-media-network-traffic"></a>Gerçek Teams medya ağ trafiğini tanımlama
+### <a name="identifying-teams-real-time-media-network-traffic"></a>Gerçek zamanlı Teams medya ağ trafiğini tanımlama
 
-Ağ cihazı veya VPN/SDWAN kurulumu yapılandırmak için yalnızca gerçek zamanlı medya Teams video trafiğini hariç tutabilirsiniz. Trafik ayrıntıları, kimlik 11 için URL'ler ve [IP adresi Office 365 resmi listesinde bulunabilir](urls-and-ip-address-ranges.md#skype-for-business-online-and-microsoft-teams). Diğer tüm ağ yapılandırmaları olduğu gibi kal olmalıdır.
+Ağ cihazı veya VPN/SDWAN kurulumu yapılandırmak için yalnızca Teams gerçek zamanlı medya ses ve video trafiğini dışlamanız gerekir. 11. kimlik için trafik ayrıntıları, [resmi Office 365 URL'leri ve IP adresi aralıkları](urls-and-ip-address-ranges.md#skype-for-business-online-and-microsoft-teams) listesinde bulunabilir. Diğer tüm ağ yapılandırmaları olduğu gibi kalmalıdır.
 
-Microsoft mümkün olan en geniş ağ mimarisi Microsoft 365 özellikleri genelinde kullanıcı deneyimini ve istemcilerin performansını geliştirmek için sürekli olarak çalışıyor. Konuşma başlatmak [Office 365 katılmak, Community kaynak bulmak Office 365](https://techcommunity.microsoft.com/t5/office-365-networking/bd-p/Office365Networking) özellik istekleri ve öneriler göndermek için Ağ Ağı Teknik Ekibi iletişim sitesini ziyaret edin
+Microsoft, Microsoft 365 kullanıcı deneyimini ve istemcilerin performansını mümkün olan en geniş ağ mimarisi ve özellikleri yelpazesinde geliştirmek için sürekli çalışmaktadır. Office 365 [Networking Tech Community ziyaret ederek](https://techcommunity.microsoft.com/t5/office-365-networking/bd-p/Office365Networking) bir konuşmayı başlatın veya katılın, kaynakları bulun ve özellik istekleri ve önerileri gönderin
 
 ## <a name="related-articles"></a>İlgili makaleler
 
-[Genel bakış: VPN bölme bölme Microsoft 365](microsoft-365-vpn-split-tunnel.md)
+[Genel bakış: Microsoft 365 için VPN bölünmüş tüneli](microsoft-365-vpn-split-tunnel.md)
 
-[VPN bölmeli bölme Microsoft 365](microsoft-365-vpn-implement-split-tunnel.md)
+[Microsoft 365 için VPN bölünmüş tüneli uygulama](microsoft-365-vpn-implement-split-tunnel.md)
 
-[Kullanıcılar için yaygın VPN bölme bölme Microsoft 365](microsoft-365-vpn-common-scenarios.md)
+[Microsoft 365 için yaygın VPN bölünmüş tünel senaryoları](microsoft-365-vpn-common-scenarios.md)
 
-[VPN bölünmüş Teams için medya trafiğinin güvenliğini sağlama](microsoft-365-vpn-securing-teams.md)
+[VPN bölünmüş tüneli için Teams medya trafiğinin güvenliğini sağlama](microsoft-365-vpn-securing-teams.md)
 
-[VPN ortamlarında Stream ve canlı etkinlikler için dikkat edilmesi gereken noktalar](microsoft-365-vpn-stream-and-live-events.md)
+[VPN ortamlarında Akış ve canlı etkinlikler için özel dikkat edilmesi gerekenler](microsoft-365-vpn-stream-and-live-events.md)
 
-[Microsoft 365 Ağ Bağlantısı İlkeleri](microsoft-365-network-connectivity-principles.md)
+[ağ bağlantısı ilkelerini Microsoft 365](microsoft-365-network-connectivity-principles.md)
 
-[Ağ Microsoft 365 değerlendirme](assessing-network-connectivity.md)
+[Microsoft 365 ağ bağlantısını değerlendirme](assessing-network-connectivity.md)
 
-[Microsoft 365 ve performans ayarını yapılandırma](network-planning-and-performance.md)
+[ağ ve performans ayarlamayı Microsoft 365](network-planning-and-performance.md)
 
-[Günümüzün benzersiz uzaktan çalışma senaryolarında güvenlik uzmanlarının ve BT'nin modern güvenlik denetimlerini elde etmenin alternatif yolları (Microsoft Güvenlik Ekibi blogu)](https://www.microsoft.com/security/blog/2020/03/26/alternative-security-professionals-it-achieve-modern-security-controls-todays-unique-remote-work-scenarios/)
+[Günümüzün benzersiz uzaktan çalışma senaryolarında modern güvenlik denetimleri elde etmek için güvenlik uzmanları ve BT için alternatif yollar (Microsoft Güvenlik Ekibi blogu)](https://www.microsoft.com/security/blog/2020/03/26/alternative-security-professionals-it-achieve-modern-security-controls-todays-unique-remote-work-scenarios/)
 
-[Microsoft'ta VPN performansını geliştirme: otomatik Windows 10 izin vermek için VPN profillerini kullanma](https://www.microsoft.com/itshowcase/enhancing-remote-access-in-windows-10-with-an-automatic-vpn-profile)
+[Microsoft'ta VPN performansını geliştirme: otomatik bağlantılara izin vermek için Windows 10 VPN profillerini kullanma](https://www.microsoft.com/itshowcase/enhancing-remote-access-in-windows-10-with-an-automatic-vpn-profile)
 
-[VPN ile çalışma: Microsoft uzaktan iş gücüne nasıl bağlı tutarak](https://www.microsoft.com/itshowcase/blog/running-on-vpn-how-microsoft-is-keeping-its-remote-workforce-connected/?elevate-lv)
+[VPN üzerinde çalıştırma: Microsoft uzak iş gücünü nasıl bağlı tutuyor?](https://www.microsoft.com/itshowcase/blog/running-on-vpn-how-microsoft-is-keeping-its-remote-workforce-connected/?elevate-lv)
 
-[Microsoft genel ağı](/azure/networking/microsoft-global-network)
+[Microsoft küresel ağı](/azure/networking/microsoft-global-network)

@@ -1,5 +1,5 @@
 ---
-title: Multifactor authentication for Microsoft 365
+title: Microsoft 365 için çok faktörlü kimlik doğrulaması
 f1.keywords:
 - NOCSH
 ms.author: kwekua
@@ -24,159 +24,159 @@ search.appverid:
 - MOE150
 ms.assetid: 043807b2-21db-4d5c-b430-c8a6dee0e6ba
 ROBOTS: NOINDEX, NOFOLLOW
-description: Çok faktörlü kimlik doğrulaması (MFA), güçlü olması gereken bir parola ve ek bir doğrulama yöntemi kullanır.
-ms.openlocfilehash: 460de9426dfb249da17d5df79becaca725ee36ed
-ms.sourcegitcommit: b1066b2a798568afdea9c09401d52fa38fe93546
+description: Çok faktörlü kimlik doğrulaması (MFA) hem güçlü olması gereken bir parola hem de ek bir doğrulama yöntemi kullanır.
+ms.openlocfilehash: e7d32776edb0f8fa6eaa4019f394870a6346e1d2
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/13/2021
-ms.locfileid: "63018783"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637659"
 ---
-# <a name="multifactor-authentication-for-microsoft-365"></a>Multifactor authentication for Microsoft 365
+# <a name="multifactor-authentication-for-microsoft-365"></a>Microsoft 365 için çok faktörlü kimlik doğrulaması
 
-Parolalar, bilgisayarda veya çevrimiçi hizmette oturum açma kimlik doğrulamanın en yaygın yöntemidir, ancak aynı zamanda en korumasız durumdadır. Kişiler kolay parolalar seçebilir ve farklı bilgisayarlar ve hizmetlere birden çok oturum açmada aynı parolaları kullanabilirler.
+Parolalar, bir bilgisayarda veya çevrimiçi hizmette oturum açma kimliğini doğrulamanın en yaygın yöntemidir, ancak aynı zamanda en savunmasız olanlardır. Kişiler kolay parolalar seçebilir ve farklı bilgisayarlara ve hizmetlere birden çok oturum açma için aynı parolaları kullanabilir.
 
-Oturum açmalarda ek güvenlik düzeyi sağlamak için, hem güçlü olması gereken bir parola hem de şu temel alınan ek doğrulama yöntemini kullanan Çok Faktörlü Kimlik Doğrulaması (MFA) kullan gerekir:
+Oturum açma işlemleri için ek bir güvenlik düzeyi sağlamak için, hem güçlü olması gereken parolayı hem de aşağıdakileri temel alan ek bir doğrulama yöntemini kullanan çok faktörlü kimlik doğrulamasını (MFA) kullanmanız gerekir:
 
-- Sahip olduğunuz ve kolayca çoğaltılmış bir akıllı telefon gibi bir şey.
-- Benzersiz ve fiziksel olarak sahip olduğunuz parmak izi, yüz tanıma veya diğer biyometrik öznitelik gibi bir şey.
+- Akıllı telefon gibi kolayca çoğaltılması kolay olmayan bir şey.
+- Parmak izleriniz, yüzünüz veya diğer biyometrik öznitelikleriniz gibi benzersiz ve biyolojik olarak sahip olduğunuz bir şey.
 
-Kullanıcının parolası doğrulandıktan sonra, ek doğrulama yöntemi yer almaz. MFA ile, güçlü bir kullanıcı parolası ihlal edilmiş olsa bile, saldırganın oturum açma işlemini tamamlamak için akıllı telefonunuz veya parmak iziniz olmaz.
+Ek doğrulama yöntemi, kullanıcının parolası doğrulanana kadar kullanılmaz. MFA ile güçlü bir kullanıcı parolası tehlikeye girse bile, saldırganın oturum açma işlemini tamamlamak için akıllı telefonunuz veya parmak iziniz yoktur.
 
-## <a name="mfa-support-in-microsoft-365"></a>Microsoft 365'de MFA Microsoft 365
+## <a name="mfa-support-in-microsoft-365"></a>Microsoft 365'de MFA desteği
 
-Varsayılan olarak, hem Microsoft 365 hem Office 365 hesapları için MFA'ya destek olur:
+Varsayılan olarak, hem Microsoft 365 hem de Office 365 aşağıdakileri kullanan kullanıcı hesapları için MFA'yı destekler:
 
-- Telefona gönderilen ve kullanıcının doğrulama kodunu yazması gereken bir kısa mesaj.
+- Kullanıcının doğrulama kodu yazmasını gerektiren bir telefona gönderilen kısa mesaj.
 - Bir telefon görüşmesi.
-- Akıllı Microsoft Authenticator uygulaması.
+- Microsoft Authenticator akıllı telefon uygulaması.
 
-Her iki durumda da, MFA oturum açma işlemi, ek doğrulama için "sahip olduğunuz ve kolayca çoğaltılmış değil" yöntemini kullanıyor. Birden çok şekilde MFA'yi kendi iş ve iş Microsoft 365 Office 365:
+Her iki durumda da MFA oturum açma işlemi ek doğrulama için "sizinle birlikte kolayca çoğaltılamaz bir şey" yöntemini kullanır. Microsoft 365 ve Office 365 için MFA'yı etkinleştirmenin birden çok yolu vardır:
 
-- Güvenlik varsayılanları ile
+- Güvenlik varsayılanlarıyla
 - Koşullu Erişim ilkeleriyle
-- Tek tek her kullanıcı hesabı için (önerilmez)
+- Her kullanıcı hesabı için (önerilmez)
 
-Bu yollar plan planınıza Microsoft 365 vardır.
+Bu yollar Microsoft 365 planınıza bağlıdır.
 
 |Plan|Öneri|Müşteri türü|
 |---|---|---|
-|Tüm Microsoft 365 planları|Tüm kullanıcı hesapları için MFA gerektiren güvenlik varsayılanlarını kullanın. <p> Tek tek kullanıcı hesapları için de kullanıcı başına MFA yapılandırabilirsiniz, ancak bu önerilmez.|Küçük işletme|
-|Microsoft 365 Business Premium <p> Microsoft 365 E3 <p> Azure Active Directory (Azure AD) Premium P1 lisansları|Grup üyeliği, uygulamalar veya diğer ölçütlere dayalı olarak kullanıcı hesapları için MFA gerektiren Koşullu Erişim ilkelerini kullanın.|Küçük işletmeden kuruluşa|
-|Microsoft 365 E5 <p> Azure AD Premium P2 lisansları|Oturum açma riski ölçütlerine göre MFA gerektirmek için Azure AD Identity Protection'i kullanın.|Enterprise|
+|Tüm Microsoft 365 planları|Tüm kullanıcı hesapları için MFA gerektiren güvenlik varsayılanlarını kullanın. <p> Kullanıcı başına MFA'yı tek tek kullanıcı hesaplarında da yapılandırabilirsiniz, ancak bu önerilmez.|Küçük işletme|
+|Microsoft 365 Business Premium <p> Microsoft 365 E3 <p> P1 lisanslarını Azure Active Directory (Azure AD) Premium|Grup üyeliğine, uygulamalara veya diğer ölçütlere göre kullanıcı hesapları için MFA gerektirmek için Koşullu Erişim ilkelerini kullanın.|Küçük işletmeden kuruluşa|
+|Microsoft 365 E5 <p> lisansları Azure AD Premium P2|Oturum açma risk ölçütlerine göre MFA gerektirmek için Azure AD Kimlik Koruması kullanın.|Enterprise|
 ||||
 
 ### <a name="security-defaults"></a>Güvenlik varsayılanları
 
-Güvenlik varsayılanları, 21 Ekim 2019'dan Microsoft 365 sonra Office 365 veya deneme abonelikleri için yeni bir özelliktir. Bu aboneliklerin güvenlik varsayılanları açıktır ve bu da:
+Güvenlik varsayılanları, 21 Ekim 2019'da oluşturulan Microsoft 365 ve Office 365 ücretli veya deneme abonelikleri için yeni bir özelliktir. Bu aboneliklerin güvenlik varsayılanları açıktır ve bunlar:
 
-- Tüm kullanıcılarının Microsoft Authenticator uygulamasıyla MFA'Microsoft Authenticator gerektirir.
+- Tüm kullanıcılarınızın Microsoft Authenticator uygulamasıyla MFA kullanmasını gerektirir.
 - Eski kimlik doğrulamasını engeller.
 
-Kullanıcıların, güvenlik varsayılanları etkinleştirildikten sonra ilk kez oturum açmalarından başlanacak olan Microsoft Authenticator uygulamasıyla MFA'ya kaydolmaları için 14 günü vardır. 14 gün sonra, MFA kaydı tamamlanana kadar kullanıcı oturum açmaz.
+Kullanıcıların, güvenlik varsayılanları etkinleştirildikten sonra ilk kez oturum açtıktan sonra başlayan akıllı telefonlarından Microsoft Authenticator uygulamasına MFA'ya kaydolmaları için 14 günü vardır. 14 gün geçtikten sonra, MFA kaydı tamamlanana kadar kullanıcı oturum açamaz.
 
-Güvenlik varsayılanları, tüm kuruluşların, kullanıcı oturum açma için varsayılan olarak etkinleştiren temel güvenlik düzeyine sahip olmasını sağlar. Koşullu Erişim ilkeleriyle MFA'nın tercihi olarak güvenlik varsayılanlarını devre dışı  devre dışı  olabilirsiniz.
+Güvenlik varsayılanları, tüm kuruluşların kullanıcı oturum açma için varsayılan olarak etkin olan temel bir güvenlik düzeyine sahip olmasını sağlar. Koşullu Erişim ilkeleriyle MFA'nın lehine güvenlik varsayılanlarını devre dışı bırakabilirsiniz.
 
-Azure portalda, Azure AD için Özellikler bölmesinde **güvenlik** varsayılanlarını etkinleştirir veya devre dışı bırakabilirsiniz.
+Azure portal Azure AD için **Özellikler** bölmesinden güvenlik varsayılanlarını etkinleştirir veya devre dışı bırakırsınız.
 
 ![Dizin özellikleri sayfasının resmi.](../../media/multi-factor-authentication-microsoft-365/security-defaults-mfa.png)
 
-Herhangi bir plan için güvenlik varsayılanlarını Microsoft 365 kullanabilirsiniz.
+Güvenlik varsayılanlarını herhangi bir Microsoft 365 planıyla kullanabilirsiniz.
 
-Daha fazla bilgi için bu güvenlik [varsayılanlarına genel bakış bilgilerine bakın](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults).
+Daha fazla bilgi için güvenlik [varsayılanlarına genel bakış konusuna](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults) bakın.
 
 ### <a name="conditional-access-policies"></a>Koşullu Erişim ilkeleri
 
-Koşullu Erişim ilkeleri, oturum açmaların değerlendirilmesini ve izin verilen koşulları belirten bir dizi kuraldır. Örneğin, şöyle bir Koşullu Erişim ilkesi oluşturabilirsiniz:
+Koşullu Erişim ilkeleri, oturum açmaların değerlendirildiği ve izin verilen koşulları belirten bir dizi kuraldır. Örneğin, şunları belirten bir Koşullu Erişim ilkesi oluşturabilirsiniz:
 
-- Kullanıcı hesabı adı Exchange, kullanıcı, parola, güvenlik, SharePoint veya genel yönetici rollerine atanan kullanıcılar için bir grubun üyesiyse, erişime izin vermeden önce MFA'ya gerek vardır.
+- Kullanıcı hesabı adı Exchange, kullanıcı, parola, güvenlik, SharePoint veya genel yönetici rollerine atanmış kullanıcılar için bir grubun üyesiyse, erişime izin vermeden önce MFA gerektirir.
 
-Bu ilke, bu yönetici rollerine atanan veya atanmamış durumdayken MFA için tek tek kullanıcı hesaplarını yapılandırmaya çalışma yerine, grup üyeliğini temel alarak MFA gerektirmenizi sağlar.
+Bu ilke, bu yönetici rollerinden atanan veya atanmayan tek tek kullanıcı hesaplarını MFA için yapılandırmaya çalışmak yerine grup üyeliğine göre MFA'yı zorunlu kılmasını sağlar.
 
-Belirli uygulamalar için MFA gerektirme veya oturum açmanın dizüstü bilgisayarınız gibi uyumlu bir cihazdan yapılması gibi daha gelişmiş özellikler için Koşullu Erişim ilkelerini de Windows 10.
+Koşullu Erişim ilkelerini, belirli uygulamalar için MFA gerektirme veya oturum açma işleminin Windows 10 çalıştıran dizüstü bilgisayarınız gibi uyumlu bir cihazdan yapılması gibi daha gelişmiş özellikler için de kullanabilirsiniz.
 
-Azure portalda Azure AD **için Güvenlik** bölmesinden Koşullu Erişim ilkelerini yapılandırabilirsiniz.
+Koşullu Erişim ilkelerini, Azure portal Azure AD için **Güvenlik** bölmesinden yapılandırabilirsiniz.
 
-![Koşullu Erişim için menü seçeneğinin resmi.](../../media/multi-factor-authentication-microsoft-365/conditional-access-mfa.png)
+![Koşullu Erişim menü seçeneğinin resmi.](../../media/multi-factor-authentication-microsoft-365/conditional-access-mfa.png)
 
 Koşullu Erişim ilkelerini aşağıdakilerle kullanabilirsiniz:
 
 - Microsoft 365 Business Premium
 - Microsoft 365 E3 ve E5
-- Azure AD Premium P1 ve Azure AD Premium P2 lisansları
+- lisansları Azure AD Premium P1 ve Azure AD Premium P2
 
-Koşullu Erişim ilkeleri olan Microsoft 365 İş Ekstra işletmeler için, aşağıdaki adımları kullanarak Koşullu Erişim ilkelerini kolayca kullanabilirsiniz:
+Microsoft 365 İş Ekstra sahip küçük işletmeler için aşağıdaki adımlarla Koşullu Erişim ilkelerini kolayca kullanabilirsiniz:
 
 1. MFA gerektiren kullanıcı hesaplarını içeren bir grup oluşturun.
-2. Genel yöneticiler **için MFA gerektir politikasını** etkinleştirin.
+2. **Genel yöneticiler için MFA gerektir** ilkesini etkinleştirin.
 3. Şu ayarlarla grup tabanlı bir Koşullu Erişim ilkesi oluşturun:
-    - Ödevler > grupların adı: Yukarıdaki 1. Adımda yer alan grubu adı.
-    - Ödevler > uygulamaları veya eylemleri: Tüm bulut uygulamaları.
-    - Çok faktörlü > için > Izni ver> için erişim denetimleri.
+    - Atamalar > Kullanıcılar ve gruplar: Yukarıdaki 1. Adımdaki grubunuzun adı.
+    - Bulut uygulamaları veya eylemleri > atamalar: Tüm bulut uygulamaları.
+    - Erişim denetimleri > Erişim izni verme > Erişim izni verme > Çok faktörlü kimlik doğrulaması gerektir.
 4. İlkeyi etkinleştirin.
 5. Yukarıdaki 1. Adımda oluşturulan gruba bir kullanıcı hesabı ekleyin ve test edin.
-6. Başka kullanıcı hesapları için MFA gerektirmek için, onları 1. Adımda oluşturulan gruba ekleyin.
+6. Ek kullanıcı hesapları için MFA gerektirmek için bunları 1. Adım'da oluşturulan gruba ekleyin.
 
-Bu Koşullu Erişim ilkesi, MFA gereksinimini kullanıcılarınıza kendi hızınıza göre uygulamanıza olanak sağlar.
+Bu Koşullu Erişim ilkesi, MFA gereksinimini kullanıcılarınıza kendi hızınızda dağıtmanıza olanak tanır.
 
-Kuruluşlar, aşağıdaki [ilkeleri yapılandırmak için Ortak](/azure/active-directory/conditional-access/concept-conditional-access-policy-common) Koşullu Erişim ilkelerini kullanmalıdır:
+Kuruluşlar, aşağıdaki ilkeleri yapılandırmak için [Ortak Koşullu Erişim ilkelerini](/azure/active-directory/conditional-access/concept-conditional-access-policy-common) kullanmalıdır:
 
-- [Yöneticiler için MFA gerektirme](/azure/active-directory/conditional-access/howto-conditional-access-policy-admin-mfa)
-- [Tüm kullanıcılar için MFA gerektirme](/azure/active-directory/conditional-access/howto-conditional-access-policy-all-users-mfa)
-- [Eski kimlik doğrulamayı engelle](/azure/active-directory/conditional-access/howto-conditional-access-policy-block-legacy)
+- [Yöneticiler için MFA gerektir](/azure/active-directory/conditional-access/howto-conditional-access-policy-admin-mfa)
+- [Tüm kullanıcılar için MFA gerektir](/azure/active-directory/conditional-access/howto-conditional-access-policy-all-users-mfa)
+- [Eski kimlik doğrulamasını engelle](/azure/active-directory/conditional-access/howto-conditional-access-policy-block-legacy)
 
-Daha fazla bilgi için Koşullu [Erişim'e genel bakış bilgilerine bakın](/azure/active-directory/conditional-access/overview).
+Daha fazla bilgi için bkz. [Koşullu Erişim'e genel bakış](/azure/active-directory/conditional-access/overview).
 
-### <a name="azure-ad-identity-protection"></a>Azure AD Identity Protection
+### <a name="azure-ad-identity-protection"></a>Azure AD Kimlik Koruması
 
-Azure AD Kimlik Koruması ile, oturum açma riski orta veya yüksek olduğunda [MFA gerektirecek ek bir Koşullu Erişim ilkesi oluşturabilirsiniz](../../security/office-365-security/identity-access-policies.md#require-mfa-based-on-sign-in-risk).
+Azure AD Kimlik Koruması ile, [oturum açma riski orta veya yüksek olduğunda MFA gerektirmek](../../security/office-365-security/identity-access-policies.md#require-mfa-based-on-sign-in-risk) için ek bir Koşullu Erişim ilkesi oluşturabilirsiniz.
 
 Azure AD Kimlik Koruması ve risk tabanlı Koşullu Erişim ilkelerini aşağıdakilerle kullanabilirsiniz:
 
 - Microsoft 365 E5
-- Azure AD Premium P2 lisansları
+- lisansları Azure AD Premium P2
 
-Daha fazla bilgi için bkz. [Azure AD Identity Protection'a genel bakış](/azure/active-directory/identity-protection/overview-identity-protection).
+Daha fazla bilgi için Azure AD [Kimlik Koruması'nın bu genel bakışına](/azure/active-directory/identity-protection/overview-identity-protection) bakın.
 
-### <a name="legacy-per-user-mfa-not-recommended"></a>Kullanıcı başına eski MFA (önerilmez)
+### <a name="legacy-per-user-mfa-not-recommended"></a>Eski kullanıcı başına MFA (önerilmez)
 
-Kullanıcı hesabı oturum açmaları için MFA gerektirmeye yönelik güvenlik varsayılanları veya Koşullu Erişim ilkeleri kullansanız iyi olur. Bununla birlikte, bu hesaplardan herhangi biri kullanılamazsa, Microsoft herhangi bir boyut aboneliği için, yönetici rollerine sahip olan kullanıcı hesapları (özellikle de genel yönetici rolü) için MFA'nın kullanılması önerilir.
+Kullanıcı hesabı oturum açma işlemlerinizde MFA gerektirmek için güvenlik varsayılanlarını veya Koşullu Erişim ilkelerini kullanıyor olmanız gerekir. Bununla birlikte, bunlardan biri kullanılamıyorsa, Microsoft herhangi bir boyut aboneliği için yönetici rolüne sahip kullanıcı hesapları (özellikle genel yönetici rolü) için MFA'yı kesinlikle önerir.
 
-Etki alanı bölmesinin Etkin kullanıcılar bölmesinden tek tek <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">**kullanıcı hesapları için**</a> MFA'Microsoft 365 yönetim merkezi.
+Microsoft 365 yönetim merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">**Etkin kullanıcılar**</a> bölmesinden tek tek kullanıcı hesapları için MFA'yı etkinleştirirsiniz.
 
-![Etkin kullanıcılar sayfasındaki Multi factor authentication seçeneğinin resmi.](../../media/multi-factor-authentication-microsoft-365/per-user-mfa.png)
+![Etkin kullanıcılar sayfasındaki Çok faktörlü kimlik doğrulama seçeneğinin resmi.](../../media/multi-factor-authentication-microsoft-365/per-user-mfa.png)
 
-Etkinleştirildikten sonra, kullanıcı bir sonraki oturum a oturumda MFA'ya kaydolması ve ek doğrulama yöntemini seçmesi ve sınaması istenir.
+Etkinleştirildikten sonra, kullanıcı bir sonraki oturum açtığında MFA'ya kaydolması ve ek doğrulama yöntemini seçip test etmeleri istenir.
 
 ### <a name="using-these-methods-together"></a>Bu yöntemleri birlikte kullanma
 
-Bu tabloda, güvenlik varsayılanları, Koşullu Erişim ilkeleri ve kullanıcı başına hesap ayarlarıyla MFA'nın etkinleştirilmesi sonuçları gösterir.
+Bu tabloda güvenlik varsayılanları, Koşullu Erişim ilkeleri ve kullanıcı başına hesap ayarlarıyla MFA'yı etkinleştirmenin sonuçları gösterilir.
 
 |*Öğe*|Etkin|Devre dışı|İkincil kimlik doğrulama yöntemi|
 |---|---|---|---|
-|**Güvenlik varsayılanları**|Koşullu Erişim ilkeleri kullanama|Koşullu Erişim ilkelerini kullanabilir|Microsoft Authenticator uygulaması|
-|**Koşullu Erişim ilkeleri**|Etkinse, güvenlik varsayılanlarını etkinleştiresiniz|Tüm devre dışı bırakılmışsa güvenlik varsayılanlarını etkinleştir|MFA kaydı sırasında kullanıcı tarafından belirtilmiş|
-|**Kullanıcı başına eski MFA (önerilmez)**|Her oturum açmada MFA gerektiren güvenlik varsayılanlarını ve Koşullu Erişim ilkelerini geçersiz kılar|Güvenlik varsayılanlarını ve Koşullu Erişim ilkelerini geçersiz kılma|MFA kaydı sırasında kullanıcı tarafından belirtilmiş|
+|**Güvenlik varsayılanları**|Koşullu Erişim ilkeleri kullanılamaz|Koşullu Erişim ilkelerini kullanabilir|Microsoft Authenticator uygulaması|
+|**Koşullu Erişim ilkeleri**|Etkinse, güvenlik varsayılanlarını etkinleştiremezsiniz|Tümü devre dışı bırakılırsa, güvenlik varsayılanlarını etkinleştirebilirsiniz|MFA kaydı sırasında kullanıcı tarafından belirtilen|
+|**Eski kullanıcı başına MFA (önerilmez)**|Her oturum açmada MFA gerektiren güvenlik varsayılanlarını ve Koşullu Erişim ilkelerini geçersiz kılar|Güvenlik varsayılanları ve Koşullu Erişim ilkeleri tarafından geçersiz kılınıyor|MFA kaydı sırasında kullanıcı tarafından belirtilen|
 ||||
 
-Güvenlik varsayılanları etkinse, tüm yeni kullanıcılardan MFA kaydı ve bir sonraki oturum açmalarında Microsoft Authenticator uygulamasının kullanımı istenir.
+Güvenlik varsayılanları etkinse, tüm yeni kullanıcılardan bir sonraki oturum açmalarında MFA kaydı ve Microsoft Authenticator uygulamasının kullanımı istenir.
 
-## <a name="ways-to-manage-mfa-settings"></a>MFA ayarlarını yönetme yolları
+## <a name="ways-to-manage-mfa-settings"></a>MFA ayarlarını yönetmenin yolları
 
 MFA ayarlarını yönetmenin iki yolu vardır.
 
-Azure portalında şunları kullanabilirsiniz:
+Azure portal şunları yapabilirsiniz:
 
 - Güvenlik varsayılanlarını etkinleştirme ve devre dışı bırakma
 - Koşullu Erişim ilkelerini yapılandırma
 
-Aşağıdaki Microsoft 365 yönetim merkezi, kullanıcı ve hizmet MFA ayarlarını tek tek <a href="https://go.microsoft.com/fwlink/p/?linkid=2169174" target="_blank">yapılandırabilirsiniz</a>.
+Microsoft 365 yönetim merkezi kullanıcı ve hizmet başına <a href="https://go.microsoft.com/fwlink/p/?linkid=2169174" target="_blank">MFA ayarlarını</a> yapılandırabilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-[MFA'ya iş Microsoft 365](set-up-multi-factor-authentication.md)
+[Microsoft 365 için MFA'yı ayarlama](set-up-multi-factor-authentication.md)
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Çok faktörlü kimlik doğrulamasını](set-up-multi-factor-authentication.md) açma (video)\
+[Çok faktörlü kimlik doğrulamasını açma](set-up-multi-factor-authentication.md) (video)\
 [Telefonunuz için çok faktörlü kimlik doğrulamasını açma](https://support.microsoft.com/office/ace1d096-61e5-449b-a875-58eb3d74de14) (video)

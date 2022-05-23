@@ -25,12 +25,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Eski bir çalışanın tüm kullanıcı verilerini kaydedip erişdikten sonra, Microsoft 365 yönetim merkezi eski çalışanın hesabını silebilirsiniz.
-ms.openlocfilehash: d6e53dd8d14add9383e3eff9d3c1d90a5087ec45
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 5a1929ef1a5ff26ee0e84993f0a7cabb5ebc4617
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65436283"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65636184"
 ---
 # <a name="step-7---delete-a-former-employees-user-account"></a>7. Adım - Eski çalışanın kullanıcı hesabını silme
 
@@ -43,7 +43,7 @@ Eski çalışanın tüm kullanıcı verilerini kaydedip eriştikten sonra eski �
 2. Silmek istediğiniz çalışanın adını seçin.
 3. Kullanıcının adının altında **Kullanıcıyı sil'i** seçin. Bu kullanıcı için istediğiniz seçenekleri belirleyin ve ardından **Kullanıcıyı sil'i** seçin. Bu kullanıcının e-postasına ve OneDrive başka bir kullanıcıya zaten erişim verdiyseniz, bunu burada tekrar yapmanız gerekmez.
 
-Bir kullanıcıyı sildiğinizde, hesabı yaklaşık 30 gün süreyle devre dışı bırakılır. Hesap kalıcı olarak silinmeden önce hesabı geri yüklemek için bu kadar süreniz vardır.
+Bir kullanıcıyı sildiğinizde, hesabı yaklaşık 30 gün süreyle devre dışı bırakılır. Hesabı kalıcı olarak silinmeden önce geri yüklemek için o zamana kadar süreniz vardır.
 
 ## <a name="watch-delete-a-former-employees-user-account"></a>İzleme: Eski bir çalışanın kullanıcı hesabını silme
 
@@ -70,8 +70,8 @@ Burada, bir çalışanın e-postadan (Exchange) nasıl çıkarılacağı ile ilg
 |Ne yapabilirsiniz?|Nasıl yapmalısınız?|
 |:-----|:-----|
 |Oturumu sonlandırma (Web üzerinde Outlook, Outlook, Exchange Active Sync gibi) ve yeni bir oturum açmaya zorlama|Parolayı sıfırlayın|
-|Oturumu sonlandırma ve sonraki oturumlara erişimi engelleme (tüm protokoller için)|Hesabı devre dışı bırakın. Örneğin, (Exchange yönetim merkezinde veya PowerShell kullanarak): <p>  `Set-Mailbox user@contoso.com -AccountDisabled:$true`|
-|Belirli bir protokolün (ActiveSync gibi) oturumunu sonlandırma|Protokolü devre dışı bırakın. Örneğin, (Exchange yönetim merkezinde veya PowerShell kullanarak): <p>  `Set-CASMailbox user@contoso.com -ActiveSyncEnabled:$false`|
+|Oturumu sonlandırma ve sonraki oturumlara erişimi engelleme (tüm protokoller için)|Hesabı devre dışı bırakın. Örneğin, Exchange yönetim merkezinde veya PowerShell kullanarak: <p>  `Set-Mailbox user@contoso.com -AccountDisabled:$true`|
+|Belirli bir protokolün (ActiveSync gibi) oturumunu sonlandırma|Protokolü devre dışı bırakın. Örneğin, Exchange yönetim merkezinde veya PowerShell kullanarak: <p>  `Set-CASMailbox user@contoso.com -ActiveSyncEnabled:$false`|
 |
 
 Yukarıdaki işlemler üç yerde yapılabilir:

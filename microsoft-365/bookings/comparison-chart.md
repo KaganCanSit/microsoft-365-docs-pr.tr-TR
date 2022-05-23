@@ -9,17 +9,14 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: d586eb28-b752-4c46-bf92-00a0c5ad781d
 description: Bookings web uygulaması ile Bookings Teams uygulaması arasındaki özellik farklarını gösteren bir karşılaştırma grafiği.
-ms.openlocfilehash: 190278e662ff596d681aa8d0160de3c706089593
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: 8ceaddf1d7cd8124ab8e4d1e0cd2f19c5779cb1b
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65023755"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637284"
 ---
 # <a name="comparison-chart-bookings-web-app-vs-bookings-teams-app"></a>Karşılaştırma grafiği: Bookings web uygulaması ile Bookings Teams uygulaması karşılaştırması
-
-> [!NOTE]
-> Bu makale, Microsoft Bookings en son sürümüyle etkileşim kurmanıza yardımcı olur. Önceki sürümler önümüzdeki aylarda kullanımdan kaldırılacak.
 
 Teams'daki Bookings uygulaması, zamanlayıcıların ana görevlerini işlemesine ve bazı ayarları değiştirmesine olanak tanır. Ancak Bookings web, Teams uygulamasında henüz kullanılamayan gelişmiş özellikler ve ayarlar içerir.
 

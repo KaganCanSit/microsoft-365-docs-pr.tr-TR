@@ -9,17 +9,14 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 03a9acc9-f29c-456b-9fb2-0f49474b2708
 description: Bookings etkinliğinizin 4 aylık görünümünü nasıl görebileceğinizi öğrenin
-ms.openlocfilehash: 8f6ddcdc7320013698b1ba9f0ad2f5b1cd1e2e22
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: c39515852d0a45adfb3faeb5efaf510ee2c27236
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65023733"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637218"
 ---
 # <a name="reporting-info-for-bookings"></a>Bookings için raporlama bilgileri
-
-> [!NOTE]
-> Bu makale, Microsoft Bookings en son sürümüyle etkileşim kurmanıza yardımcı olur. Önceki sürümler önümüzdeki aylarda kullanımdan kaldırılacak.
 
 Artık bir TSV dosyasında Bookings takviminizin dört aylık görünümünü görebilirsiniz. TSV dosyasında dört aylık veriler gösterilir, ancak bir yıl boyunca farklı dört aylık dönemler seçebilirsiniz.
 
@@ -61,6 +58,7 @@ Geliştirilmiş rapor artık aşağıdaki alanları içerir.
 - **Para birimi**   bir işletme için ayarlanan para birimi türü.
 - **Bilgi Katılımcıları**   Rezervasyon için e-posta bildirimlerini alacak alıcılar. Bu, rezervasyon oluşturulurken Teams uygulamasından belirtilebilir.
 - **Kaydolan Katılımcı Sayısı**   Grup rezervasyon hizmeti için kaç müşteri rezervasyonu yaptı?
-- **Metin Bildirimleri Etkin**   Müşterilerin SMS ile ilgili bildirimler alıp alamayacağı.
+- **Metin Bildirimleri Etkin**   Müşterilerin metinle ilgili SMS bildirim alıp alamayacağı.
 - **Özel Alanlar**   Tek bir rezervasyonla ilgili tüm sorular ve yanıtlar bu alanda birleştirilir.
 - **Rezervasyon Kimliği**   Bu, bir grup hizmetinin aynı rezervasyonlarını tanımlamak için yararlıdır.
+- **Verileri izleme**   Pazarlama kampanyalarınızda kullandığınız kampanya kimliklerinin ölçümlerini izleyin.
