@@ -15,14 +15,20 @@ search.appverid:
 - MOE150
 - MET150
 description: Office 365 için Microsoft Defender çözümleri deneme playbook'u.
-ms.openlocfilehash: f23c45d117735997c219278621be7f314602cd8f
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: a1adcf15bd051478e874b990a5e6b12f19d3b0c6
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65130702"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65648359"
 ---
 # <a name="trial-playbook-microsoft-defender-for-office-365"></a>Deneme playbook'u: Office 365 için Microsoft Defender
+
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
+
+**Şunlar için geçerlidir:**
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
+- [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Office 365 için Microsoft Defender deneme playbook'una hoş geldiniz. Bu playbook, Office 365 için Defender ile kuruluşunuzu nasıl koruyacağınızı öğreterek 90 günlük ücretsiz denemenizden en iyi şekilde yararlanabilirsiniz. Microsoft önerilerini kullanarak Office 365 için Defender koruma ilkeleri tanımlamanıza, kuruluşunuza yönelik tehditleri analiz etmeye ve saldırılara yanıt vermenize nasıl yardımcı olabileceğini öğreneceksiniz.
 

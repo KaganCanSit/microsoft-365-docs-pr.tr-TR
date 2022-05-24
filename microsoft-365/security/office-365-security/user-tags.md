@@ -17,14 +17,20 @@ ms.custom: ''
 description: Yöneticiler, Office 365 için Microsoft Defender Plan 2'de kullanıcı etiketleri olan belirli kullanıcı gruplarını tanımlamayı öğrenebilir. Etiket filtreleme, etiketlenen kullanıcıları hızlı bir şekilde tanımlamak için Office 365 için Microsoft Defender uyarılarda, raporlarda ve araştırmalarda kullanılabilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: e7b9584b41ded7edd28fb1501ee4e5c3a1febd74
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: 3d4f5b82e09c9a58e891fa6fcba009ac490c0cb1
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65286416"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65647479"
 ---
 # <a name="user-tags-in-microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender kullanıcı etiketleri
+
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
+
+**Şunlar için geçerlidir:**
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
+- [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Kullanıcı etiketleri, [Office 365 için Microsoft Defender'deki](defender-for-office-365.md) belirli kullanıcı gruplarının tanımlayıcılarıdır. İki tür kullanıcı etiketi vardır:
 

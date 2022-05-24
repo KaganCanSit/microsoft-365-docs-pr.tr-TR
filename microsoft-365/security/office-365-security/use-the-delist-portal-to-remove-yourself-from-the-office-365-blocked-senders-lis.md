@@ -20,16 +20,14 @@ ms.custom:
 description: Bu makalede, listeden çıkarma portalını kullanarak kendinizi engellenen Microsoft 365 gönderenler listesinden kaldırmayı öğreneceksiniz. Bu, 5.7.511 Erişim reddedildi hatalarıyla ilgili en iyi yanıttır.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 43637f8eb72d078223236f78b45034218e34bcbc
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 83822faaf1c667524dd88fc1bba400c10fa30ac3
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64971142"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65647743"
 ---
 # <a name="use-the-delist-portal-to-remove-yourself-from-the-blocked-senders-list-and-address-57511-access-denied-errors"></a>Engellenen gönderenler listesinden ve adres 5.7.511 Erişim reddedildi hatalarından kendinizi kaldırmak için listeden çıkarma portalını kullanın
-
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)

@@ -15,12 +15,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: reference
 ms.technology: mde
-ms.openlocfilehash: 385b139390192d172b3bbbcbefd5efc2b793d4ab
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: c58c447a4aed08af48576b461a638c1cd43aca83
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65173498"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65649253"
 ---
 # <a name="whats-new-in-microsoft-defender-for-endpoint-on-linux"></a>Linux'ta Uç Nokta için Microsoft Defender'deki yenilikler
 
@@ -28,6 +28,15 @@ ms.locfileid: "65173498"
 
 **Şunlar için geçerlidir:**
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+
+## <a name="1016880-30122042168800"></a>101.68.80 (30.122042.16880.0)
+
+- RHEL 6'da çalışırken çekirdek sürümü `2.6.32-754.47.1.el6.x86_64` desteği eklendi
+- RHEL 6'da ürün artık Bölünemez Enterprise Çekirdeği (UEK) çalıştıran cihazlara yüklenebilir
+- İşlem adının bazen çalışırken yanlış görüntülenmesine neden olan bir sorun düzeltildi `unknown``mdatp diagnostic real-time-protection-statistics`
+- Ürünün bazen karantina klasörünün içindeki dosyaları yanlış algıladığı bir hata düzeltildi
+- Komut satırı aracının `mdatp` geçici bağlantı olarak bağlandığında çalışmaması `/opt` sorunu düzeltildi
+- Performans iyileştirmeleri & hata düzeltmeleri
 
 ## <a name="1016577-30122032165770"></a>101.65.77 (30.122032.16577.0)
 

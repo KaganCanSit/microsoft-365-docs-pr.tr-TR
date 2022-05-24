@@ -17,17 +17,16 @@ ms.collection:
 description: Exchange Online Protection'da (EOP) varsayılan olarak güvenli ayarı hakkında daha fazla bilgi edinin
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 09395775cc5ecbd420dc7197664401c01c24d6c3
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: ab5fa5e9c769d68589b722e8fdc9976fa616e6ac
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64664226"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65648139"
 ---
 # <a name="secure-by-default-in-office-365"></a>Office 365'de varsayılan olarak güvenlidir
 
-[!INCLUDE [Prerelease information](../includes/prerelease.md)]
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)

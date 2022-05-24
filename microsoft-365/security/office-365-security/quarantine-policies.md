@@ -17,14 +17,20 @@ ms.custom: ''
 description: Yöneticiler, karantinaya alınan iletilere kullanıcıların yapabileceklerini denetlemek için karantina ilkelerini kullanmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: e591330137f2f2fd92ef05f64f5368cca533fc48
-ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
+ms.openlocfilehash: ef3fc69cf07f4b643e12bab96a73b68627e07203
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65599331"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65648249"
 ---
 # <a name="quarantine-policies"></a>Karantina ilkeleri
+
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
+
+**Şunlar için geçerlidir:**
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
+- [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Exchange Online Protection(EOP) ve Office 365 için Microsoft Defender'de karantina ilkeleri (eski _adıyla karantina etiketleri_) yöneticilerin, iletilerin neden karantinaya alındığına bağlı olarak kullanıcıların karantinaya alınan iletileri ne yapabileceklerini denetlemesine olanak tanır.
 

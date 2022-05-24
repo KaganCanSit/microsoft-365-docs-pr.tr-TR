@@ -19,16 +19,14 @@ ms.custom:
 description: Konuk gönderen olarak, Microsoft 365'da kullanıcılara e-posta teslim etme özelliğini nasıl artırabileceğinizi öğrenin. Ayrıca gereksiz e-postaları & kimlik avı girişimlerini konuk olarak bildirmeyi de öğrenin.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: c6d0f594da174236ce03ab0fd9b2af045f57f9f0
-ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
+ms.openlocfilehash: 94bd79493a56bd288d21be255915b046b2bb0178
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2022
-ms.locfileid: "65535912"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65649197"
 ---
 # <a name="sending-mail-to-microsoft-365"></a>Microsoft 365'a posta gönderme
-
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 Bu makaleler, dış gönderenlerin saygınlıklarını artırmalarına ve Microsoft 365'da kullanıcılara e-posta teslim etme becerilerini artırmalarına yardımcı olur. Ayrıca, kendiniz Microsoft 365 bir kullanıcı olmasanız bile gereksiz e-postaları ve kimlik avı girişimlerini nasıl bildirebileceğiniz hakkında bazı bilgiler sağlar.
 

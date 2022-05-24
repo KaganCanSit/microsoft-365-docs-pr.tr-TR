@@ -22,12 +22,12 @@ ms.custom:
 - AdminSurgePortfolio
 - admindeeplinkMAC
 description: Microsoft 365 yönetim merkezi - Bu ay eklenen özellikler hakkında bilgi edinin.
-ms.openlocfilehash: 42c2d1dcf6b778504f1d4786c6fbcc2ce38f9724
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 4c730a72252d24145d7555f2684244a2a6531dd2
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65099581"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65649175"
 ---
 # <a name="whats-new-in-the-microsoft-365-admin-center"></a>Microsoft 365 yönetim merkezi'deki yenilikler
 
@@ -45,11 +45,39 @@ Diğer Microsoft bulut hizmetleriyle ilgili yeni şeyleri öğrenmek isterseniz:
 - [Azure Active Directory'deki yenilikler](/azure/active-directory/fundamentals/whats-new)
 - [Exchange yönetim merkezindeki yenilikler](/Exchange/whats-new)
 - [Microsoft Intune'deki yenilikler](/mem/intune/fundamentals/whats-new)
-- [Microsoft Purview uyumluluk portalındaki yenilikler](/Office365/SecurityCompliance/whats-new)
+- [Microsoft Purview uyumluluk portalı'deki yenilikler](/Office365/SecurityCompliance/whats-new)
 - [Microsoft 365 Defender'daki yenilikler](../security/mtp/whats-new.md)
 - [SharePoint yönetim merkezindeki yenilikler](/sharepoint/what-s-new-in-admin-center)
 - [güncelleştirmeleri Office](/OfficeUpdates/)
 - [Windows yayın durumunu denetleme](/windows/deployment/update/check-release-health)
+
+## <a name="may-2022"></a>Mayıs 2022
+
+<!-- ### Role based access controls (RBAC)
+
+There are new Azure AD built-in roles in the Microsoft 365 admin center. Give admins only the access they need to manage Virtual Visits.
+
+There are also 4 new roles in the Microsoft 365 admin center centered around management of custom security attributes. These roles are available for everyone to use in the Role assignments node under Roles.
+
+For more information about Azure AD built-in roles, see [Azure AD built-in roles](/azure/active-directory/roles/permissions-reference).
+
+**Virtual Visits Administrator**   Manage and share Virtual Visits information and metrics from admin centers or the Virtual Visits app.
+
+**Attribute Assignment Administrator**   Assign custom security attribute keys and values to supported Azure AD objects.
+
+**Attribute Assignment Reader**   Reads custom security attribute keys and values for supported Azure AD objects.
+
+**Attribute Definition Administrator**   Define and manage the definition of custom security attributes.
+
+**Attribute Definition Reader**   Reads the definition of custom security attributes. -->
+
+### <a name="quick-assist"></a>Hızlı Yardım
+
+Uygulamanın performansını ve güvenliğini artırmak için Hızlı Yardım Windows Mağazası'na taşıdık. Windows Hızlı Yardım uygulaması, sizin ve son kullanıcılarınızın uzak bağlantı üzerinden bilgisayar yardımı almanıza veya sağlamanıza olanak tanır.
+
+Yeni Hızlı Yardım Store uygulamasıyla geçiş kodu oluşturma sürelerinde önemli bir iyileştirme ve uygulama hatalarında azalma görmeniz gerekir.
+
+Daha fazla bilgi için bkz. [Uzak bağlantı üzerinden bilgisayar sorunlarını çözme](https://support.microsoft.com/windows/solve-pc-problems-over-a-remote-connection-b077e31a-16f4-2529-1a47-21f6a9040bf3) ve [Yükleme Hızlı Yardım](https://support.microsoft.com/windows/install-quick-assist-c17479b7-a49d-4d12-938c-dbfb97c88bca)
 
 ## <a name="april-2022"></a>Nisan 2022
 
@@ -194,62 +222,3 @@ Arama işlevine birkaç yeni kategori ekledik.
 - Artık genel arama aracılığıyla basitleştirilmiş kurulum deneyimlerini bulabilirsiniz. Bu, sizin ve ekibinizin yeni özellikleri kullanmaya hızlı bir şekilde başlamanıza yardımcı olabilir. Örneğin, **parolayı süresi hiç dolmak üzere ayarlama** için arama.
 
 Yönetim merkezinde arama hakkında daha fazla bilgi edinmek için Microsoft 365 yönetim merkezi arama [bölümüne](manage/search-in-the-mac.md) bakın.
-
-## <a name="may-2021"></a>Mayıs 2021
-
-### <a name="admin-mobile-app"></a>Yönetici mobil uygulaması
-
-### <a name="keep-track-of-support-ticket-updates-using-the-admin-mobile-app"></a>Yönetici mobil uygulamasını kullanarak destek bileti güncelleştirmelerini izleme
-
-Kiracınızda oluşturulan tüm hizmet istekleri için artık bilet durumunu izleyebilir, bilet ayrıntılarını görüntüleyebilir ve ekleri & notlar ekleyerek ek bilgiler sağlayabilir/talep edebilirsiniz.
-
-:::image type="content" source="../media/Keep-track-support-ticket-updates2.PNG" alt-text="Ekran görüntüsü: Destek bileti güncelleştirmelerini izleme":::
-
-### <a name="stay-on-top-of-all-the-major-updates-to-the-app-and-your-microsoft-365-subscription"></a>Uygulama ve Microsoft 365 aboneliğinizdeki tüm önemli güncelleştirmelerden haberdar olun
-
-- İleti Merkezi anında iletme bildirimleri (artık varsayılan olarak etkindir) aracılığıyla Microsoft 365 aboneliğinizde yapılan tüm önemli güncelleştirmelerden haberdar olun.
-
-- **Yenilikler** bölümünü kullanarak uygulamada bulunan en son özellikleri izleyin. **Ayarlar** >  **Yeni yenilikler'e gidin.**
-
-:::image type="content" source="../media/Stay-on-top-of-updates.PNG" alt-text="Ekran görüntüsü: Önemli güncelleştirmeleri ve özellikleri izleme":::
-
-## <a name="april-2021"></a>Nisan 2021
-
-### <a name="admin-mobile-app"></a>Yönetici mobil uygulaması
-
-### <a name="manage-licenses-and-bills-from-the-admin-mobile-app"></a>Yönetici mobil uygulamasından lisansları ve faturaları yönetme
-
-- Artık abonelikleriniz için tüm kullanılabilir ve atanmış lisansları görüntüleyebilirsiniz. Ayrıca kullanıcılara lisans atayabilir veya atamasını kaldırabilir ve lisans ekleyebilir veya kaldırabilirsiniz.
-- Artık uygulamada ayrıntılı faturaları görüntüleyebilirsiniz.
-- Bu güncelleştirmeler hem [Android](https://go.microsoft.com/fwlink/p/?linkid=2159786) hem de [iOS](https://go.microsoft.com/fwlink/p/?linkid=2159787) cihazlarda kullanılabilir.
-
-:::image type="content" source="../media/assign-license-mobile-app2.png" alt-text="Ekran görüntüsü: Yönetici mobil uygulaması lisans atama sayfası":::
-:::image type="content" source="../media/license-screen-mobile-app2.png" alt-text="Ekran görüntüsü: Kullanıcılar ve lisansları ile yönetici mobil uygulaması ekranı":::
-:::image type="content" source="../media/invoice-summary-mobile-app.png" alt-text="Ekran görüntüsü: Yönetici mobil uygulaması fatura özeti sayfası":::
-
-### <a name="updated-message-center-feed-in-the-admin-mobile-app"></a>Yönetici mobil uygulamasında İleti merkezi akışı güncelleştirildi
-
-- Artık İleti merkezi akışında daha esnek bir okuma deneyimine sahipsiniz. Artık iletileri hizmete veya etiketlere göre filtreleyebilir ve iletileri sık kullanılan olarak işaretleyebilirsiniz. İletileri okundu, okunmadı veya arşivlendi olarak işaretlemeye yönelik toplu eylemler de eklenmiştir.
-- Bu güncelleştirmeler hem [Android](https://go.microsoft.com/fwlink/p/?linkid=2159786) hem de [iOS](https://go.microsoft.com/fwlink/p/?linkid=2159787) cihazlarda kullanılabilir.
-
-:::image type="content" source="../media/mc-feed-mobile-app.png" alt-text="Ekran görüntüsü: Yönetici mobil uygulaması İleti merkezi akış sayfası":::
-
-## <a name="ignite-2021-march"></a>Ignite 2021 (Mart)
-
-Microsoft Ignite'a hoş geldiniz. Oturumlarımızdan bazılarına katılabildiğinizi umuyoruz: [Microsoft Ignite 2021](https://myignite.microsoft.com/sessions). Ignite'da konuştuğumuz şeylerden birkaçı burada.
-> [!NOTE]
-> Tüm özellikler hemen herkesin kullanımına sunulmayacak. Yeni özellikleri görmüyorsanız [Hedefli Sürüm'e katılın](manage/release-options-in-office-365.md).
-
-### <a name="message-center"></a>İleti merkezi
-
-İlgili iletileri keşfetmenize yardımcı olmak için İleti merkezini yeniledik ve daha esnek bir okuma deneyimi ekledik. İletinin hangi Hizmete uygulandığını taramanıza ve iletileri **Hizmete** ve diğer meta verilere göre filtrelemenize yardımcı olmak için yeni bir Hizmet sütunu ekledik. İzlemek üzere işaretlemek üzere bir iletiyi sık kullanılanlara ekleyebilir, ileti listesinde hangi sütunların görüneceğini seçebilir ve geri ve sonraki düğmeleri içeren iletiler arasında gezinebilirsiniz. ayrıca İleti merkezi gönderileri hakkında geri bildirimde bulunmayı kolaylaştırmak için süreci geliştirdik.
-
-:::image type="content" source="../media/message-center.png" alt-text="Ekran görüntüsü: Gelen kutusu ve iletileri gösteren ileti merkezi giriş sayfası":::
-
-Yeni özellikler hakkında daha fazla bilgi edinmek için [İleti merkezi'ne](manage/message-center.md) göz atın.
-
-### <a name="whats-new-features"></a>Yenilikler
-
-Office uygulamalarında kullanıcılar için "Yenilikler" özelliklerini görüntüleme yönteminizde geliştirmeler yaptık. Artık zengin içeriği kullanıcılarınızın görebileceği Yenilikler bölmesinde görebilirsiniz. Ayrıca, kullanıcılarınıza özellik hakkında bilgi vermeden önce bu özellik hakkında daha fazla bilgi edinebilirsiniz. Daha fazla bilgi için Yenilikler bölümünde [hangi Office özelliklerinin görüneceğini yönetme](manage/show-hide-new-features.md) bölümüne göz atın.
-
-:::image type="content" source="../media/power-bi-whats-new2.png" alt-text="Ekran görüntüsü: uygulamalara Power BI iyileştirmelerini gösteren yeni sayfayı Office":::

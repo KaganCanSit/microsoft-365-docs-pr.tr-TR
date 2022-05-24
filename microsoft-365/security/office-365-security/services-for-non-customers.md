@@ -17,16 +17,14 @@ ms.collection:
 description: Microsoft, e-posta kullanımında kullanıcı güvenini korumaya yardımcı olmak için kullanıcılarımızın korunmasına yardımcı olmak için çeşitli ilkeler ve teknolojiler getirmiştir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 80eff003ec75eba68d1b194fe83d216fa2d013c0
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: ff526dc317935651d28843b36bb529edf4ceb006
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64974201"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65648689"
 ---
 # <a name="services-for-non-customers-sending-mail-to-microsoft-365"></a>Microsoft 365'e posta gönderen müşteri olmayanlara yönelik hizmetler
-
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 E-posta kötüye kullanımı, gereksiz e-posta ve sahte e-postalar (kimlik avı) e-posta ekosisteminin tamamının yükünü yüklenmeye devam ediyor. Microsoft, e-posta kullanımında kullanıcı güvenini korumaya yardımcı olmak için kullanıcılarımızın korunmasına yardımcı olmak için çeşitli ilkeler ve teknolojiler getirmiştir. Ancak Microsoft, geçerli e-postaların olumsuz etkilenmemesi gerektiğini anlar. Bu nedenle, gönderenlerin gönderme itibarını proaktif olarak yöneterek Microsoft 365 kullanıcılara e-posta teslim etme becerilerini geliştirmelerine yardımcı olacak bir hizmet paketi oluşturduk.
 

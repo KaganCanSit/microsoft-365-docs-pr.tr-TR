@@ -1,5 +1,5 @@
 ---
-title: Office 365 için Microsoft Defender'da adım adım tehdit koruması Office 365 için Microsoft Defender
+title: Office 365 için Microsoft Defender'da adım adım tehdit koruma yığını
 f1.keywords:
 - NOCSH
 ms.author: tracyp
@@ -10,134 +10,140 @@ ms.reviewer: gigarrub
 audience: ITPro
 ms.topic: conceptual
 ms.localizationpriority: medium
-description: Gelen bir iletinin yolunu, ileti alanı içinde tehdit filtreleme yığını Office 365 için Microsoft Defender.
+description: Office 365 için Microsoft Defender'daki tehdit filtreleme yığını aracılığıyla gelen iletinin yolunu izleyin.
 ms.technology: mdo
 ms.prod: m365-security
 ms.collection: M365-security-compliance
-ms.openlocfilehash: e7be5c66e0ca3841a8bc4fd76555feaeafb1bd17
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 4548beaf8d3071006114a65fd95c16b06e8a875d
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64469041"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65648183"
 ---
-# <a name="step-by-step-threat-protection-in-microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender'da adım adım tehdit Office 365 için Microsoft Defender
+# <a name="step-by-step-threat-protection-in-microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender'da adım adım tehdit koruması
 
-Genel Office 365 için Microsoft Defender veya filtre yığını, bu makaledeki gibi 4 aşamaya ya da 4 aşamaya tek tek süz olabilir. Genel olarak, gelen posta teslimden önce tüm bu aşamalardan geçer, ancak asıl yol e-postası bir kuruluşun sistem Office 365 için Defender alır.
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
+
+**Şunlar için geçerlidir:**
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
+- [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
+
+Office 365 için Microsoft Defender koruma veya filtreleme yığını, bu makalede olduğu gibi 4 aşamaya ayrılabilir. Genel olarak, gelen posta teslimden önce tüm bu aşamalardan geçer, ancak e-postanın aldığı gerçek yol kuruluşun Office 365 için Defender yapılandırmasına tabidir.
 
 > [!TIP]
-> Korumanın 4 aşamasını da bir bütün olarak görüntülemek için  bu makalenin sonuna kadar Office 365 için Defender devam edin!
+> Office 365 için Defender korumanın 4 aşamasının tümünün *birleşik* grafiği için bu makalenin sonuna kadar bizi takip edin!
 
-## <a name="phase-1---edge-protection"></a>Aşama 1 - Kenar Koruması
+## <a name="phase-1---edge-protection"></a>1. Aşama - Edge Koruması
 
-Ne yazık ki, bir zamanlar kritik olan *Edge blokları* , artık yenilecek kötü bir temel için görece daha basittir. Burada zaman içinde daha az trafik engellenir, ancak yığının önemli bir parçası olarak kalır.  
+Ne yazık ki, bir zamanlar *kritik* olan Edge blokları artık kötü aktörlerin üstesinden gelmek için nispeten basittir. Zaman içinde burada daha az trafik engellenir ancak yığının önemli bir parçası olmaya devam eder.  
 
-Kenar blokları otomatik olarak tasarlanmıştır. Hatalı pozitif sonuçlar olması durumunda gönderenlere bu durum bildirilecek ve sorunu nasıl ele amayacakları anlatıldı. Sınırlı saygınlığı olan güvenilir iş ortaklarından gelen bağlayıcılar teslim edilebilirlik sağlar veya yeni uç noktalar eklemeye devam etmek için geçici geçersiz kılmalar kullanılabilir.
+Kenar blokları otomatik olacak şekilde tasarlanmıştır. Hatalı pozitif olması durumunda, gönderenlere bildirim gönderilir ve sorunlarının nasıl giderileceği bildirilir. Saygınlığı sınırlı olan güvenilir iş ortaklarının bağlayıcıları, yeni uç noktalar eklerken teslim edilebilirlik sağlayabilir veya geçici geçersiz kılmalar uygulanabilir.
 
-:::image type="content" source="../../media/mdo-filtering-stack/mdo-filter-stack-phase1.png" alt-text="Çalışma alanında Aşama 1 Office 365 için Defender" lightbox="../../media/mdo-filtering-stack/mdo-filter-stack-phase1.png":::
+:::image type="content" source="../../media/mdo-filtering-stack/mdo-filter-stack-phase1.png" alt-text="Office 365 için Defender'de 1. Aşama filtrelemesi" lightbox="../../media/mdo-filtering-stack/mdo-filter-stack-phase1.png":::
 
-1. **Ağ azaltma,** belirli bir Office 365 altyapısı tarafından göndereb üzere ileti sayısını sınırlayın, bu altyapıyı ve müşterileri Hizmet Engelleme (DOS) saldırılarından korur.
+1. **Ağ azaltma**, belirli bir altyapı kümesi tarafından gönderilebilen ileti sayısını sınırlayarak Office 365 altyapıyı ve müşterileri Hizmet Reddi (DOS) saldırılarına karşı korur.
 
-2. **IP itibarı ve azaltma,** IP adreslerinin bilinen hatalı bağlantılarından gelen iletilerin engellenmiş olduğunu sağlar. Belirli bir IP kısa bir süre içinde çok sayıda ileti gönderirse, bu kısıtlar.
+2. **IP saygınlığı ve azaltma** , bilinen hatalı bağlantı IP adreslerinden ileti gönderilmesini engeller. Belirli bir IP kısa bir süre içinde çok sayıda ileti gönderirse, bunlar kısıtlanır.
 
-3. **Etki alanı itibarı** , bilinen kötü bir etki alanındaki tüm iletileri engellemektedir.
+3. **Etki alanı saygınlığı** bilinen bir kötü etki alanından gönderilen iletileri engeller.
 
-4. **Dizin tabanlı kenar filtreleme blokları** SMTP aracılığıyla kuruluşun dizin bilgilerini toplamaya çalışır.
+4. **Dizin tabanlı kenar filtreleme** , SMTP aracılığıyla kuruluşun dizin bilgilerini toplama girişimlerini engeller.
 
-5. **Geri yaslama algılaması** , kuruluşun geçersiz teslim edilemedi raporları (NDR) aracılığıyla saldırıya neden olmasını önler.
+5. **Backscatter algılama** , bir kuruluşun geçersiz teslim edilmeyen raporlar (NDR) aracılığıyla saldırıya uğramasını önler.
 
-6. **Bağlayıcılar için iyileştirilmiş filtreleme**, trafik başka bir cihazdan geçse bile kimlik doğrulama bilgilerini daha önce Office 365. Bu, karmaşık veya karma yönlendirme senaryolarında bile, heuristic kümeleme, kimlik sahtesi önleme ve kimlik avı önleme makine öğrenme modelleri de içinde olmak üzere filtreleme yığınının doğruluğunu geliştirmektedir.
+6. **Bağlayıcılar için gelişmiş filtreleme**, trafik Office 365 ulaşmadan önce başka bir cihazdan geçtiğinde bile kimlik doğrulama bilgilerini korur. Bu, karmaşık veya karma yönlendirme senaryolarında bile buluşsal kümeleme, kimlik sahtekarlığı önleme ve kimlik avı önleme makine öğrenmesi modelleri dahil olmak üzere filtreleme yığını doğruluğunu geliştirir.
 
-## <a name="phase-2---sender-intelligence"></a>Aşama 2 - Gönderen Zekası
+## <a name="phase-2---sender-intelligence"></a>2. Aşama - Gönderen Bilgileri
 
-Gönderen zekası özellikleri istenmeyen postaları, toplu iletileri, kimliğe bürünme ve yetkisiz kimlik sahtesi iletilerini yakalamak için kritik öneme sahiptir ve ayrıca kimlik avı algılamaya faktör sağlar. Bu özelliklerin çoğu tek tek yapılandırılabilir.
+Gönderen bilgilerindeki özellikler istenmeyen posta, toplu, kimliğe bürünme ve yetkisiz kimlik sahtekarlığı iletilerini yakalamak için kritik öneme sahiptir ve kimlik avı algılamayı da dikkate alır. Bu özelliklerin çoğu tek tek yapılandırılabilir.
 
-:::image type="content" source="../../media/mdo-filtering-stack/mdo-filter-stack-phase2.png" alt-text="E-postada filtrelemenin 2. Office 365 için Defender, Gönderen zekası" lightbox="../../media/mdo-filtering-stack/mdo-filter-stack-phase2.png":::
+:::image type="content" source="../../media/mdo-filtering-stack/mdo-filter-stack-phase2.png" alt-text="Office 365 için Defender'da filtrelemenin 2. aşaması Gönderen zekası" lightbox="../../media/mdo-filtering-stack/mdo-filter-stack-phase2.png":::
 
-1. **Hesap ödünle tutarlı** olan anormal davranışlara sahip olduğunda hesap güvenliği algılama tetikleyicileri ve uyarıları yükseltildi. Bazı durumlarda, kullanıcı hesabı engellenir ve kuruluşun güvenlik işlemleri ekibi tarafından sorun çözülene kadar başka e-posta iletileri göndermesi engellenir.
+1. **Hesap güvenliğinin aşılmasına yönelik algılama** tetikleyicileri ve uyarılar, bir hesabın anormal davranışı olduğunda ve gizliliğin tehlikeye girerek tutarlı olması durumunda tetiklenir. Bazı durumlarda, kullanıcı hesabı engellenir ve sorun kuruluşun güvenlik operasyonları ekibi tarafından çözülene kadar başka e-posta iletileri göndermesi engellenir.
 
-2. **E-posta** Kimlik Doğrulaması, gönderenlerin yetkili ve güvenilir posta gönderenlerden emin olması amacıyla, müşterinin Bulutta ayarlanmış yöntemlerini ve yöntemlerini içerir. Bu yöntemler kimlik doğrulamalarına karşı karşı koyar.
-    - **SPF** , IP adreslerinin ve kuruluşun adına posta göndermesine izin verilen sunucuların liste bulunduğu DNS TXT kayıtlarına bağlı olarak postaları reddedebilirsiniz.
-    - **DKIM** , gönderenin kimliğini doğru sağlayan şifreli bir imza sağlar.
-    - **DMARC** , yöneticilerin etki alanında SPF ve DKIM'yi gerekli olarak işaretlemesine olanak sağlar ve bu iki teknolojinin sonuçları arasında hizalamayı zorunlu bırakır.
-    - **ARC** müşteri yapılandırılmaz, ancak posta listelerinde iletmeyle çalışırken bir kimlik doğrulama zinciri kaydederken DMARC'yi temeller.
+2. **E-posta Kimlik Doğrulaması** , hem müşterinin yapılandırmış olduğu yöntemleri hem de gönderenlerin yetkili, gerçek posta gönderenler olduğundan emin olmak için Bulutta ayarlanan yöntemleri içerir. Bu yöntemler sahtekarlık için direnmektedir.
+    - **SPF** , KURULUŞ adına posta göndermesine izin verilen IP adreslerini ve sunucuları listeleyen DNS TXT kayıtlarına göre postaları reddedebilir.
+    - **DKIM** , gönderenin kimliğini doğrulayan şifreli bir imza sağlar.
+    - **DMARC** , yöneticilerin etki alanında SPF ve DKIM'i gerekli olarak işaretlemesine olanak tanır ve bu iki teknolojinin sonuçları arasında hizalamayı zorlar.
+    - **ARC** müşteri tarafından yapılandırılmaz, ancak kimlik doğrulama zincirini kaydederken posta listelerinde iletme ile çalışmak için DMARC'yi derler.
 
-3. **Sahte adresli** ifade, kurumsal veya bilinen dış etki alanlarını taklit eden kötü niyetli gönderenlerden "sahte adres" (başka bir ifadeyle başka bir hesap adına posta gönderenler veya posta listesi için iletme) izin verilenleri filtreleyebilirsiniz. Yasal olarak 'adına' postayı, istenmeyen posta ve kimlik avı iletilerini teslim etmek için kimlik sahtesi yapan gönderenlerden ayırıyor.
+3. **Kimlik sahtekarlık zekası** , kuruluş veya bilinen dış etki alanlarını taklit eden kötü amaçlı gönderenlerden 'kimlik sahtekarlığına' izin verilenleri (başka bir hesap adına posta gönderenler veya posta listesi için iletilenler) filtrelenebilir. Yasal "adına" postaları istenmeyen posta ve kimlik avı iletileri göndermek için sahtekarlık yapan gönderenlerden ayırır.
 
-    **Kuruluş içi kullanıcı hesabı, kuruluş** içindeki bir etki alanında yapılanma girişimleri tespit eder ve engeller.
+    **Kuruluş içi kimlik sahtekarı zekası** , kuruluş içindeki bir etki alanından gelen kimlik sahtekarlık girişimlerini algılar ve engeller.
 
-4. **Etki alanı arası bilgi hesabı, kuruluş** dışındaki bir etki alanında yapılan kullanıcı hesabı girişimlerini algılar ve engeller.
+4. **Etki alanları arası kimlik sahtekarı zekası** , kuruluş dışındaki bir etki alanından gelen kimlik sahtekarlık girişimlerini algılar ve engeller.
 
-5. **Toplu filtreleme,** yöneticilerin iletinin bir toplu gönderenden gönderip gönderilme olmadığını gösteren bir toplu güven düzeyi (BCL) yapılandırmasını sağlar. Yöneticiler istenmeyen posta olarak hangi toplu posta düzeyine karar vermek için Posta Önleme ilkesinde Toplu Kaydırıcı'yı kullanabilirler.
+5. **Toplu filtreleme, yöneticilerin** iletinin toplu gönderenden gönderilip gönderilmediğini belirten bir toplu güvenilirlik düzeyi (BCL) yapılandırmasına olanak tanır. Yöneticiler, istenmeyen posta olarak davranacak toplu posta düzeyine karar vermek için Antispam ilkesindeki Toplu Kaydırıcıyı kullanabilir.
 
-6. **Posta kutusu zekası** , standart kullanıcı e-posta davranışlarından öğrenir. Gönderenin yalnızca, kullanıcının çoğunlukla iletişimde olduğu ama aslında kötü amaçlı bir kişi olduğunu algılayan bir kullanıcının iletişim grafiğinden yararlanan bir grafiktir. Bu yöntem kimliğe bürünme algılar.
+6. **Posta kutusu zekası** standart kullanıcı e-posta davranışlarından öğrenir. Bir gönderenin yalnızca kullanıcının genellikle iletişim kuracağı, ancak aslında kötü amaçlı olduğu bir kişi olduğunu algılamak için kullanıcının iletişim grafiğinden yararlanıyor. Bu yöntem kimliğe bürünme algılar.
 
-7. **Posta kutusu zekası kimliğe** bürünme, her kullanıcının tek tek gönderen haritasına dayalı olarak geliştirilmiş kimliğe bürünme sonuçlarını etkinleştiren veya devre dışı bırakarak. Etkinleştirildiğinde, bu özellik kimliğe bürünme özelliğini tanımlamanıza yardımcı olur.
+7. **Posta kutusu zekası kimliğe bürünme** özelliği, her kullanıcının tek tek gönderen eşlemesini temel alarak gelişmiş kimliğe bürünme sonuçlarını etkinleştirir veya devre dışı bırakır. Bu özellik etkinleştirildiğinde kimliğe bürünme tanımlamaya yardımcı olur.
 
-8. **Kullanıcı kimliğe bürünme** , yöneticinin kimliğine bürünülme olasılığı yüksek değerli hedeflerden bir liste oluşturmasını sağlar. Gönderenin yalnızca korumalı yüksek değerli hesabın adıyla ve adresiyle aynı görünen bir posta geldiğinde, posta işaretlenir veya etiketlenir. (Örneğin, *trα cye@contoso.com* *tracye@contoso.com).*
+8. **Kullanıcı kimliğe bürünme** , bir yöneticinin kimliğine bürünülmesi muhtemel yüksek değerli hedeflerin listesini oluşturmasına olanak tanır. Gönderenin yalnızca korumalı yüksek değerli hesapla aynı ada ve adrese sahip olduğu bir posta gelirse, posta işaretlenir veya etiketlenir. (Örneğin, *tracye@contoso.com* için *trα cye@contoso.com*).
 
-9. **Etki alanı kimliğe** bürünme, alıcının etki alanına benzeyen ve bir iç etki alanı gibi etmeye çalışan etki alanlarını algılar. Örneğin, bu kimliğe *bürünme tracye@liw α re.com* *kimliğine tracye@litware.com*.
+9. **Etki alanı kimliğe bürünme** , alıcının etki alanına benzeyen ve bir iç etki alanı gibi görünmeye çalışan etki alanlarını algılar. Örneğin, bu kimliğe bürünme tracye@litware.com *için* *tracye@liw α re.com*.
 
-## <a name="phase-3---content-filtering"></a>Aşama 3 - İçerik Filtreleme
+## <a name="phase-3---content-filtering"></a>3. Aşama - İçerik Filtreleme
 
-Bu aşamada, filtreleme yığını postanın köprüleri ve ekleri de içinde olmak üzere belirli içeriğini işlemeye başlar.
+Bu aşamada filtreleme yığını, köprüleri ve ekleri de dahil olmak üzere postanın belirli içeriğini işlemeye başlar.
 
-:::image type="content" source="../../media/mdo-filtering-stack/mdo-filter-stack-phase3.png" alt-text="MDO'da Aşama 3 filtrelemesi İçerik Filtrelemedir" lightbox="../../media/mdo-filtering-stack/mdo-filter-stack-phase3.png":::
+:::image type="content" source="../../media/mdo-filtering-stack/mdo-filter-stack-phase3.png" alt-text="MDO'da 3. Aşama filtrelemesi İçerik Filtreleme'dir" lightbox="../../media/mdo-filtering-stack/mdo-filter-stack-phase3.png":::
 
-1. **Aktarım kuralları** (posta akış kuralları veya aynı Exchange aktarım kuralları olarak da bilinir), bir ileti için eşit geniş bir koşullar karşı geldiğinde yöneticinin çok çeşitli eylemler gerçekleştiremelerine olanak sağlar. Etkin posta akış kurallarına /aktarım kurallarına göre, tüm kuruluşlarınız tarafından akan iletiler değerlendirilir.
+1. **Aktarım kuralları** (posta akışı kuralları veya Exchange aktarım kuralları olarak da bilinir), bir yöneticinin bir ileti için eşit derecede geniş bir koşul aralığı karşılandığında çok çeşitli eylemler gerçekleştirmesine olanak tanır. Kuruluşunuzda akan tüm iletiler, etkin posta akışı kuralları/aktarım kurallarıyla değerlendirilir.
 
-2. **Microsoft Defender Virüsten Koruma** iki üçüncü *taraf Virüsten* Koruma altyapısı, eklerde bilinen tüm kötü amaçlı yazılımları algılamak için kullanılır.
+2. **eklerdeki** bilinen tüm kötü amaçlı yazılımları algılamak için Microsoft Defender Virüsten Koruma ve iki *üçüncü taraf Virüsten Koruma altyapısı* kullanılır.
 
-3. Virüsten koruma (AV) altyapıları da tüm ekleri doğru olarak yazarak, Tür engellemenin yönetici tarafından  belirtilen tüm tür eklerini engelleyiğine kadar kullanılır.
+3. Virüsten koruma (AV) altyapıları tüm ekleri doğru yazmak için de kullanılır, böylece **Tür engelleme** , yöneticinin belirttiği türlerdeki tüm ekleri engelleyebilir.
 
-4. E OFFICE 365 IÇIN MICROSOFT DEFENDER kötü amaçlı bir ek algılayana kadar, dosyanın karma değeri ve etkin içeriği karma değeri, Exchange Online Protection ( EOP) itibarına eklenir. **Eklerin itibarını** engellemesi, MSAV bulut çağrıları aracılığıyla tüm Office 365 ve uç noktalarda bu dosyayı engelleecektir.
+4. Office 365 için Microsoft Defender kötü amaçlı bir ek algılandığında, dosyanın karması ve etkin içeriğinin karması Exchange Online Protection (EOP) itibarına eklenir. **Ek itibarını engelleme**, MSAV bulut çağrıları aracılığıyla tüm Office 365 ve uç noktalarda bu dosyayı engeller.
 
-5. **Heuristic kümeleme** , teslim davranışlarına dayalı olarak dosyanın şüpheli olduğunu belirler. Şüpheli bir ek bulunursa, kampanyanın tamamı duraklatılır ve dosya korumalı olarak bulunur. Dosya kötü amaçlı olarak bulunursa, kampanyanın tamamı engellenir.
+5. **Buluşsal kümeleme** , teslim buluşsal yöntemlerine göre bir dosyanın şüpheli olduğunu belirleyebilir. Şüpheli bir ek bulunduğunda kampanyanın tamamı duraklatılır ve dosya korumalı olur. Dosyanın kötü amaçlı olduğu tespit edilirse kampanyanın tamamı engellenir.
 
-6. **Makine öğrenme modelleri** kimlik avı girişimlerini algılamak için iletinin üst bilgi, gövde içeriği ve URL'leri üzerinde çalışır.
+6. **Makine öğrenmesi modelleri** , kimlik avı girişimlerini algılamak için iletinin üst bilgisine, gövde içeriğine ve URL'lerine göre hareket eder.
 
-7. Microsoft, BILINEN kötü amaçlı URL'lere sahip her iletiyi engellemek için, URL korumalı alandan gelen bir itibarın yanı sıra URL itibarını engelleyen üçüncü taraf akışlarından gelen **URL** itibarını da kullanır.
+7. Microsoft, bilinen bir kötü amaçlı URL'ye sahip tüm iletileri engellemek için URL korumalı alanının yanı sıra **URL saygınlığının yanı sıra URL itibarını engelleyen** üçüncü taraf akışlarından gelen URL itibarını belirler.
 
-8. **İçerik tamamları,** makine öğrenme modelleri kullanarak ileti gövdesi içindeki yapı ve sözcük sıklığına dayalı olarak şüpheli iletileri algılanabilir.
+8. **İçerik buluşsal yöntemleri** , makine öğrenmesi modellerini kullanarak iletinin gövdesindeki yapıya ve sözcük sıklığına göre şüpheli iletileri algılayabilir.
 
-9. **Kasa, önceden** olmayan tehditleri tespit etmek Office 365 için Defender dinamik çözümleme kullanarak, ekler tüm ekleri müşteri için korur.
+9. **Kasa Ekler**, daha önce hiç görülmemiş tehditleri algılamak için dinamik analiz kullanarak Office 365 için Defender müşteriler için her eki korumalı alanlara ekler.
 
-10. **Bağlantılı içerik detonasyonu** , e-postada bir dosyaya bağlanan her URL'yi ek olarak, teslim sırasında dosyayı zaman uyumsuz olarak korumalı alan olarak kabul edin.
+10. **Bağlantılı içerik patlama** , e-postadaki bir dosyaya bağlanan her URL'yi ek olarak ele alır ve teslim sırasında dosyayı zaman uyumsuz olarak korumalı alana alır.
 
-11. **Akışta kimlik avı** önleme teknolojisi şüpheli bir ileti veya URL bulduğunda URL Detonation gerçekleşir. URL detonation sandboxes the URL'ler in the message time time.
+11. **Url Detonation** upstream anti-phishing teknolojisi şüpheli bir ileti veya URL bulduğunda oluşur. URL patlama, teslim sırasında iletideki URL'leri korumalı alanlara ekler.
 
-## <a name="phase-4---post-delivery-protection"></a>Aşama 4 - Teslim Sonrası Koruması
+## <a name="phase-4---post-delivery-protection"></a>4. Aşama - Teslim Sonrası Koruma
 
-Son aşama, posta veya dosya teslimi sonrasında, çeşitli posta kutuları ve posta kutuları gibi istemcilerde görünen dosya ve bağlantılarda olan posta üzerinde Microsoft Teams.
+Son aşama, posta veya dosya tesliminin ardından, çeşitli posta kutularında ve dosyalarda ve Microsoft Teams gibi istemcilerde görünen bağlantılarda bulunan postalar üzerinde hareket ederek gerçekleşir.
 
-:::image type="content" source="../../media/mdo-filtering-stack/mdo-filter-stack-phase4.png" alt-text="Çalışma alanında Aşama 4 filtrelemesi Office 365 için Defender teslim sonrası korumasıdır" lightbox="../../media/mdo-filtering-stack/mdo-filter-stack-phase4.png":::
+:::image type="content" source="../../media/mdo-filtering-stack/mdo-filter-stack-phase4.png" alt-text="Office 365 için Defender'da 4. Aşama filtrelemesi teslim sonrası korumadır" lightbox="../../media/mdo-filtering-stack/mdo-filter-stack-phase4.png":::
 
-1. **Kasa Bağlantılar** Office 365 için Defender tıklama süresi korumasıdır. Her iletide yer alan her URL, Microsoft posta bağlantıları sunucularına işaret Kasa kaydırılmış. URL'ye tıklendiğinde, kullanıcı hedef siteye yönlendirmeden önce en son itibarına göre denetlenir. URL, itibarını güncelleştirmek için zaman uyumsuz korumalı alandır.
+1. **Kasa Bağlantıları**, Office 365 için Defender tıklama zamanı korumasıdır. Her iletideki her URL, Microsoft Kasa Bağlantıları sunucularına işaret etmek için sarmalanır. Bir URL'ye tıklandığında, kullanıcı hedef siteye yeniden yönlendirilmeden önce en son saygınlığa karşı denetlenebilir. URL, itibarını güncelleştirmek için zaman uyumsuz olarak korumalıdır.
 
-2. **Kimlik avı için sıfır saatlik otomatik temizleme (ZAP),** önceden bu posta kutularına teslim edilen kötü amaçlı kimlik avı iletilerini geriye dönük olarak algılar ve Exchange Online olur.
+2. **Kimlik avı için sıfır saatlik otomatik temizleme (ZAP),** zaten Exchange Online posta kutularına teslim edilmiş kötü amaçlı kimlik avı iletilerini geriye dönük olarak algılar ve etkisiz hale getirmektedir.
 
-3. **Kötü amaçlı yazılım için ZAP**, önceden bu posta kutularına teslim edilen kötü amaçlı kötü amaçlı yazılım iletilerini geriye dönük olarak algılar Exchange Online eder.
+3. **Kötü amaçlı yazılım için ZAP**, daha önce Exchange Online posta kutularına teslim edilmiş kötü amaçlı yazılım iletilerini geçmişe dönük olarak algılar ve nötrleştirir.
 
-4. **spam için ZAP**, önceden bu posta kutularına teslim edilen kötü amaçlı istenmeyen posta iletilerini geriye dönük olarak algılar Exchange Online devre dışı bırakılır.
+4. **İstenmeyen postalar için ZAP**, önceden Exchange Online posta kutularına teslim edilmiş olan kötü amaçlı istenmeyen posta iletilerini geriye dönük olarak algılar ve etkisiz hale getirmektedir.
 
-5. **Kampanya Görünümleri** yöneticilerin, herhangi bir ekibin otomasyon olmadan gerçekleştirebileceklerine göre bir saldırının büyük resmini, daha hızlı ve daha tamamen görmelerini sağlar. Microsoft, kampanyaları tanımlamaya yardımcı olmak için tüm hizmet genelinde çok miktarda kimlik avı önleme, istenmeyen posta önleme ve kötü amaçlı yazılımdan koruma verilerinden faydalanarak yöneticilerin, indirilebilir bir kampanyada da bulunan hedefler, etkiler ve akışlar dahil olmak üzere bunları baştan sona incelemelerine olanak sağlar.
+5. **Kampanya Görünümleri** , yöneticilerin herhangi bir ekibin otomasyon olmadan görebileceğinden daha hızlı ve tamamen bir saldırının büyük resmini görmesine olanak sağlar. Microsoft, kampanyaların tanımlanmasına yardımcı olmak için hizmetin tamamında çok miktarda kimlik avı, istenmeyen posta önleme ve kötü amaçlı yazılımdan koruma verilerinden yararlanır ve ardından yöneticilerin bunları baştan sona araştırmasına olanak tanır( hedefler, etkiler ve akışlar da dahil olmak üzere) indirilebilir kampanya yazma işlemlerinde de kullanılabilir.
 
-6. **İletiYi Bildir eklentileri** , kişilerin hatalı pozitif sonuçları (iyi e-posta, yanlışlıkla kötü olarak işaretlenen *) veya* hatalı negatifleri (iyi olarak işaretlenmiş kötü e-posta *)* Microsoft'a daha fazla çözümleme yapmak için kolayca bildirmelerini sağlar.
+6. **Rapor İletisi eklentileri** , daha fazla analiz için kişilerin hatalı pozitifleri (iyi e-posta, yanlışlıkla *kötü* olarak işaretlenmiş) veya hatalı negatifleri ( *iyi* olarak işaretlenmiş hatalı e-postalar) kolayca Microsoft'a bildirmesini sağlar.
 
-7. **Kasa Office** istemcileri için bağlantılar aynı Kasa Word, PowerPoint ve Office istemcilerinin içinde yerel olarak tıklama süresi koruması Excel.
+7. **Office istemcileri için Kasa Bağlantıları**, Word, PowerPoint ve Excel gibi Office istemcilerin içinde yerel olarak aynı Kasa Bağlantılar tıklama zamanı koruması sunar.
 
-8. **OneDrive, SharePoint ve Teams** için Koruma, OneDrive, SharePoint ve Microsoft Teams'de yerel olarak kötü amaçlı dosyalara karşı aynı Kasa Ekleri koruması sunar.
+8. **OneDrive, SharePoint ve Teams için** koruma, OneDrive, SharePoint ve Microsoft Teams içinde, yerel olarak kötü amaçlı dosyalara karşı aynı Kasa Ekler koruması sunar.
 
-9. Teslim sonrası bir dosyayı gösteren bir URL seçildiğinde, bağlantılı içerik **detonasyonu** dosyanın korumalı alanı tamamlandıktan ve URL'nin güvenli olduğu bulunana kadar bir uyarı sayfası görüntüler.
+9. Teslim sonrasında dosyaya işaret eden bir URL seçildiğinde, dosyanın korumalı alanı tamamlanana ve URL'nin güvenli olduğu bulunana kadar **bağlantılı içerik patlama** bir uyarı sayfası görüntüler.
 
-## <a name="the-filtering-stack-diagram"></a>Filtre yığını diyagramı
+## <a name="the-filtering-stack-diagram"></a>Filtreleme yığını diyagramı
 
-Diyagramı oluşturmanın tüm kısımlarında olduğu gibi son diyagram da ürün büyüdükçe ve gelişiyor. Güncelleştirmelerden sonra **sormanız gerekirse** , bu sayfaya yer işareti ekleyin ve altta bulunan geri bildirim seçeneğini kullanın. Kayıtlarınız için bu, tüm aşamaları sırayla yığınla gösterir:
+Son diyagram (diyagramı oluşturan diyagramın tüm bölümlerinde olduğu gibi) *ürün büyüdükçe ve geliştikçe değiştirilebilir*. Bu sayfaya yer işareti ekleyin ve güncelleştirmelerin ardından sormanız gerekirse en altta bulabileceğiniz **geri bildirim** seçeneğini kullanın. Kayıtlarınız için bu, tüm aşamaların sırasıyla yer alan yığındır:
 
-:::image type="content" source="../../media/mdo-filtering-stack/mdo-filter-stack-phase5.png" alt-text="1'den 4'e Office 365 için Defender sırayla filtrelemenin tüm aşamaları" lightbox="../../media/mdo-filtering-stack/mdo-filter-stack-phase5.png":::
+:::image type="content" source="../../media/mdo-filtering-stack/mdo-filter-stack-phase5.png" alt-text="1 ile 4 Office 365 için Defender sıralı filtrelemenin tüm aşamaları" lightbox="../../media/mdo-filtering-stack/mdo-filter-stack-phase5.png":::
 
 ## <a name="more-information"></a>Daha fazla bilgi
 
-şu anda ***Office 365 için Microsoft Defender'i ayarlamamız gerekiyor** mu? Organizasyonlarınızı korumaya _now adım adım bu adım bu yığını [kullanın](protect-against-threats.md) (_now*).
+***şu anda** _ Office 365 için Microsoft Defender ayarlamanız gerekiyor mu? Kuruluşunuzu korumaya başlamak için bu _now* yığınını [bu adım adım](protect-against-threats.md) kullanarak kullanın.
 
-*Bu içerik için MSFTTracyP'den ve Giulian Garruba'ya belge yazma ekibinden özel teşekkürler.*
+*MSFTTracyP ve belge yazma ekibinden Giulian Garruba'ya bu içerik için özel teşekkür ederiz*.

@@ -19,12 +19,12 @@ search.appverid:
 - MET150
 description: Microsoft 365 kuruluşunuzdaki kullanıcıların ve yöneticilerin etkinliklerini denetlemeyi öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: d7c6ba3e63e50370579f6db89a919ec8a2dafd8f
-ms.sourcegitcommit: f645e0e9db74b25663cd9ddec7e3824d6ffc57f7
+ms.openlocfilehash: 5e4dab263a85730f893adadab0d3fa5709d17861
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65444255"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65649397"
 ---
 # <a name="auditing-solutions-in-microsoft-purview"></a>Microsoft Purview'de çözümleri denetleme
 
@@ -100,14 +100,14 @@ Aşağıdaki bölümlerde Denetim (Standart) ve Denetim (Premium) için lisansla
 
 ### <a name="audit-standard"></a>Denetim (Standart)
 
-- Microsoft Purview Business Basic aboneliği
-- İş için Uygulamalar aboneliğini Microsoft Purview
-- E3 aboneliğini Microsoft Purview Enterprise
-- Microsoft Purview İş Premium
-- Microsoft Purview Education A3 aboneliği
-- Microsoft Purview Kamu G3 aboneliği
-- Microsoft Purview Government G1 aboneliği
-- Ön Hat F1 veya F3 aboneliğini veya F5 Güvenlik eklentisini Microsoft Purview
+- Microsoft Business Basic aboneliği
+- İş için Microsoft 365 Uygulamaları aboneliği
+- E3 aboneliğini Microsoft 365 Kurumsal
+- Microsoft 365 Business Premium
+- A3 aboneliğini Microsoft 365 Eğitim
+- kamu G3 aboneliğini Microsoft 365
+- kamu G1 aboneliğini Microsoft 365
+- Ön Hat F1 veya F3 aboneliğini veya F5 Güvenlik eklentisini Microsoft 365
 - E3 aboneliğini Office 365 Kurumsal
 - E1 aboneliğini Office 365 Kurumsal
 - A1 aboneliğini Office 365 Eğitim
@@ -158,7 +158,7 @@ Kuruluşunuzun Denetimi (Premium) destekleyen bir aboneliği varsa, Denetim (Pre
   
    - Denetim (Premium) uygulama/hizmet planının bu kullanıcılar için etkinleştirilmesi gerekir.
   
-   - Kritik olayların denetimini etkinleştirme ve ardından söz konusu kullanıcılar için Denetim (Premium)uygulama/hizmet planını açma.
+   - Kritik olayların denetimini etkinleştirme ve ardından bu kullanıcılar için Denetim (Premium) uygulama/hizmet planını açma.
 
 2. Kullanıcılar Exchange Online ve SharePoint Online'da arama yaparken Denetim (Premium) olaylarının günlüğe kaydedilmesini etkinleştirin.
 

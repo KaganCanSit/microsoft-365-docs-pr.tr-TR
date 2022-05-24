@@ -1,5 +1,5 @@
 ---
-title: Paylaşılan posta kutularından karantinaya alınan iletileri görüntüleme ve serbest bırakma
+title: Paylaşılan posta kutularından karantinaya alınan iletileri görüntüleme ve bırakma
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -14,46 +14,53 @@ ms.assetid: ''
 ms.collection:
 - M365-security-compliance
 ROBOTS: NOINDEX
-description: Kullanıcılar, izinleri olan paylaşılan posta kutularına gönderilen karantinaya alınmış iletileri görüntülemeyi ve bu iletiler üzerinde eylem yapmayı öğrenebilir.
+description: Kullanıcılar, izinlerine sahip oldukları paylaşılan posta kutularına gönderilen karantinaya alınmış iletileri görüntülemeyi ve üzerinde işlem yapmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 3f136f373fa63be7dab6cfbd63e44b33b4eca2ff
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: 2613d3b8be200db3a9107355a27b0dd79ce537d3
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63450542"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65647342"
 ---
-# <a name="view-and-release-quarantined-messages-from-shared-mailboxes"></a>Paylaşılan posta kutularından karantinaya alınan iletileri görüntüleme ve serbest bırakma
+# <a name="view-and-release-quarantined-messages-from-shared-mailboxes"></a>Paylaşılan posta kutularından karantinaya alınan iletileri görüntüleme ve bırakma
 
-Kullanıcılar, [EOP'de](find-and-release-quarantined-messages-as-a-user.md) kullanıcı olarak karantinaya alınmış iletileri bulma ve bırakma konusunda açıklandığı gibi, alıcılardan biri olduğu karantinaya alınmış iletileri yönetebilir. Peki **, kullanıcının Tam** Erişim ve Farklı Gönder veya Adına Gönder izinlerine sahip olduğu paylaşılan posta kutularında, kullanıcı e-posta kutusunda paylaşılan [posta](/exchange/collaboration-exo/shared-mailboxes) kutularında Exchange Online?
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-Daha önce, kullanıcıların paylaşılan posta kutusuna gönderilen karantinaya alınmış iletileri yönetebilme özelliği, yöneticilerin paylaşılan posta kutusunda otomatik kırpmayı etkin bırakabilmeleri gerekir (yönetici kullanıcı başka bir posta kutusuna erişim izni verdiği zaman varsayılan olarak etkindir). Bununla birlikte, kullanıcının erişim izni olan posta kutularının boyutuna ve sayısına bağlı olarak, Outlook kullanıcının erişim izni olan tüm posta kutularını açmaya çalıştığında  performansta bir performans az olabilir. Bu nedenle, birçok yönetici paylaşılan posta [kutuları için otomatik kırpmayı kaldırmayı seçer](/outlook/troubleshoot/profiles-and-accounts/remove-automapping-for-shared-mailbox).
+**Şunlar için geçerlidir:**
+- [Exchange Online Protection](exchange-online-protection-overview.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
+- [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Artık kullanıcıların paylaşılan posta kutularına gönderilen karantinaya alınmış iletileri yönetmesi için otomatik kırpma gerekmiyor. Yalnızca işe yarar. Paylaşılan posta kutusuna gönderilmiş olan karantinaya alınmış iletilere erişmek için iki farklı yöntem vardır:
+Kullanıcılar karantinaya alınan iletileri, [EOP'de kullanıcı olarak karantinaya alınan iletileri bulma ve bırakma](find-and-release-quarantined-messages-as-a-user.md) başlığında açıklandığı gibi alıcılardan biri oldukları durumlarda yönetebilir. Peki kullanıcının Exchange Online **paylaşılan posta kutuları** bölümünde açıklandığı gibi posta kutusuna Tam Erişim ve Farklı Gönder veya Adına Gönder izinlerine sahip olduğu [paylaşılan posta kutularına](/exchange/collaboration-exo/shared-mailboxes) ne olacak?
 
-- Yönetici karantina bildirimlerine (eski [](quarantine-policies.md) adıyla son kullanıcı istenmeyen posta bildirimleri) izin verecek şekilde karantina ilkelerini yapılandırmışsa, paylaşılan posta kutusunda karantina bildirimlerine erişimi olan tüm kullanıcılar, Microsoft 365 Defender portalında karantinaya gitmek için bildirimde  Gözden Geçir düğmesine tıklar. Bu yöntemin yalnızca kullanıcıların paylaşılan posta kutusuna gönderilen karantinaya alınmış iletileri yönetmeye izin verir. Kullanıcılar bu bağlamda kendi karantina iletilerini yönete değildir.
-- Kullanıcı, alıcı [portalında karantinaya Microsoft 365 Defender ve](find-and-release-quarantined-messages-as-a-user.md) sonuçları Alıcı  adresine **(paylaşılan** posta kutusunun e-posta adresi) göre filtrelemek için Filtre'ye tıklayın. Ana Karantina **sayfasında** Alıcı sütununu **tıklatın ve paylaşılan** posta kutusuna gönderilmiş iletilere göre sıralayın.
+Daha önce, kullanıcıların paylaşılan posta kutusuna gönderilen karantinaya alınmış iletileri yönetebilmesi için yöneticilerin paylaşılan posta kutusu için otomatik eşlemeyi etkin bırakması gerekiyordu (yönetici kullanıcıya başka bir posta kutusuna erişim verdiğinde varsayılan olarak etkindir). Ancak, kullanıcının erişimi olan posta kutularının boyutuna ve sayısına bağlı olarak, Outlook'lar kullanıcının erişimi olan _tüm_ posta kutularını açmaya çalıştığında performans olumsuz olabilir. Bu nedenle, birçok yönetici [paylaşılan posta kutuları için otomatik eşlemeyi kaldırmayı](/outlook/troubleshoot/profiles-and-accounts/remove-automapping-for-shared-mailbox) seçer.
 
-## <a name="things-to-keep-in-mind"></a>Gözlerde tutma gerekenler
+Artık kullanıcıların paylaşılan posta kutularına gönderilen karantinaya alınan iletileri yönetmesi için otomatik eşleme gerekli değildir. Sadece işe yarıyor. Paylaşılan posta kutusuna gönderilen karantinaya alınmış iletilere erişmek için iki farklı yöntem vardır:
 
-- _Karantina ilkeleri_ , iletinin neden karantinaya alındığına (desteklenen özellikler için) bağlı olarak, kullanıcıların karantinaya alınmış iletilerde neler yapmalarına izin verilmiyor veya verilmeyecekleri tanımlar. Varsayılan karantina ilkeleri, alıcıların iletileri görüntülemesine ve üzerinde eylemde olmasına olanak sağlayan geçmiş özelliklerini zorunlu kullanır. Yöneticiler, kullanıcılar için daha az kısıtlayıcı veya daha kısıtlayıcı özellikler tanımlayan özel karantina ilkeleri oluşturabilir ve uygulayabilir. Daha fazla bilgi için bkz. [Karantina ilkeleri](quarantine-policies.md).
+- Yönetici karantina bildirimlerine (eski adıyla son kullanıcı istenmeyen posta bildirimleri) izin vermek için [karantina ilkelerini](quarantine-policies.md) yapılandırdıysa, paylaşılan posta kutusunda karantina bildirimlerine erişimi olan tüm kullanıcılar Microsoft 365 Defender portalında karantinaya gitmek için bildirimdeki **Gözden Geçir** düğmesine tıklayabilir. Bu yöntemin kullanıcıların yalnızca paylaşılan posta kutusuna gönderilen karantinaya alınmış iletileri yönetmesine izin verdiğine dikkat edin. Kullanıcılar bu bağlamda kendi karantina iletilerini yönetemez.
+- Kullanıcı [Microsoft 365 Defender portalında karantinaya alabilir](find-and-release-quarantined-messages-as-a-user.md) ve sonuçları **Alıcı adresine** (paylaşılan posta kutusunun e-posta adresi) göre filtrelemek için **Filtre'ye** tıklayabilir. Ana **Karantina** sayfasında, paylaşılan posta kutusuna gönderilen iletilere göre sıralamak için **Alıcı** sütununa tıklayabilirsiniz.
 
-- Karantinaya alınan ileti üzerinde ilk kullanıcı, paylaşılan posta kutusunu kullanan herkes için iletinin ne olduğuna karar verir. Örneğin, paylaşılan posta kutusuna 10 kullanıcı erişmişse ve kullanıcı karantina iletisine karar veriyorsa, ileti 10 kullanıcının hepsi için silinir. Benzer şekilde, kullanıcı iletiyi serbest bırakma kararı alırsa, paylaşılan posta kutusunda serbesttir ve paylaşılan posta kutusunun diğer tüm kullanıcıları tarafından erişilebilir.
+## <a name="things-to-keep-in-mind"></a>Akılda tutulması gerekenler
 
-- Şu anda, **paylaşılan posta** kutusuna gönderilen karantinaya **alınmış** iletiler için Göndereni engelle düğmesi Ayrıntılar uç kutusunda kullanılamaz.
+- _Karantina ilkeleri_ , kullanıcıların karantinaya alınan iletilere ne yapmalarına veya yapmalarına izin verilip verilmeyeceğini, iletinin neden karantinaya alındığına (desteklenen özellikler için) göre tanımlar. Varsayılan karantina ilkeleri, alıcıların iletileri görüntülemesine ve üzerinde işlem yapmalarına olanak sağlayan geçmiş özellikleri zorunlu kıldığını gösterir. Yöneticiler, kullanıcılar için daha az kısıtlayıcı veya daha kısıtlayıcı özellikler tanımlayan özel karantina ilkeleri oluşturabilir ve uygulayabilir. Daha fazla bilgi için bkz [. Karantina ilkeleri](quarantine-policies.md).
 
-- Paylaşılan posta kutuları için karantina işlemleriyle ilgili olarak, paylaşılan bir posta kutusuna erişim vermek üzere iç içe güvenlik gruplarını kullanırsanız, iç içe grupların iki düzeyden fazlasını önerilmez. Örneğin, A Grubu B Grubunun bir üyesidir ve C Grubunun üyesidir. Paylaşılan posta kutusuna izinler atamak için, kullanıcıları A Grubu'nda eklemein ve ardından C Grubu'nda paylaşılan posta kutusuna atamayın.  
+- Karantinaya alınan ileti üzerinde işlem yapan ilk kullanıcı, paylaşılan posta kutusunu kullanan herkes için iletinin kaderine karar verir. Örneğin, paylaşılan posta kutusuna 10 kullanıcı erişirse ve bir kullanıcı karantina iletisini silmeye karar verirse, ileti 10 kullanıcının tümü için silinir. Benzer şekilde, kullanıcı iletiyi yayınlamaya karar verirse, paylaşılan posta kutusuna gönderilir ve paylaşılan posta kutusunun diğer tüm kullanıcıları tarafından erişilebilir.
 
-- [Exchange Online PowerShell'de](/powershell/exchange/connect-to-exchange-online-powershell) paylaşılan posta kutusu için karantinaya alınmış iletileri yönetmek için, son kullanıcının iletileri tanımlamak üzere _RecipientAddress_ parametresi değerinin paylaşılan posta kutusu [e-posta adresiyle Get-QuarantineMessage](/powershell/module/exchange/get-quarantinemessage) cmdlet'ini kullanması gerekir. Örneğin:
+- Şu anda Paylaşılan posta kutusuna gönderilen karantinaya alınan iletiler için **Ayrıntılar** açılır penceresinde **Göndereni engelle** düğmesi kullanılamaz.
+
+- Paylaşılan posta kutuları için karantina işlemleriyle ilgili olarak, paylaşılan bir posta kutusuna erişim vermek için iç içe güvenlik grupları kullanıyorsanız, iki düzeyden fazla iç içe grup kullanmanızı öneririz. Örneğin, Grup A, C Grubunun üyesi olan B Grubunun bir üyesidir. Paylaşılan posta kutusuna izin atamak için kullanıcıyı A Grubu'na eklemeyin ve ardından paylaşılan posta kutusuna C Grubu atayın.  
+
+- [Exchange Online PowerShell'de](/powershell/exchange/connect-to-exchange-online-powershell) paylaşılan posta kutusu için karantinaya alınan iletileri yönetmek için, son kullanıcının iletileri tanımlamak üzere _RecipientAddress_ parametresinin değeri için paylaşılan posta kutusu [e-posta adresiyle Get-QuarantineMessage](/powershell/module/exchange/get-quarantinemessage) cmdlet'ini kullanması gerekir. Örneğin:
 
   ```powershell
   Get-QuarantineMessage -RecipientAddress officeparty@contoso.com
   ```
 
-  Daha sonra, son kullanıcı görüntülemek veya üzerinde işlem yapmak için listeden karantinaya alınmış iletiyi seçer.
+  Ardından, son kullanıcı görüntülemek veya üzerinde işlem yapmak için listeden karantinaya alınmış bir ileti seçebilir.
 
-  Bu örnekte, paylaşılan posta kutusuna gönderilmiş olan karantinaya alınmış tüm iletiler görüntülenir ve sonra da listenin ilk iletisi karantinadan çıkarılır (listenin ilk iletisi 0, ikinci ileti 1 olur, vb.).
+  Bu örnek, paylaşılan posta kutusuna gönderilen karantinaya alınmış tüm iletileri gösterir ve ardından listedeki ilk iletiyi karantinadan serbest bırakır (listedeki ilk ileti 0, ikinci ileti 1 vb.).
 
   ```powershell
   $SharedMessages = Get-QuarantineMessage -RecipientAddress officeparty@contoso.com | select -ExpandProperty Identity

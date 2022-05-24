@@ -16,16 +16,14 @@ ms.collection:
 description: Microsoft 365 yöneticileri fidye yazılımı saldırısından kurtarmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 8e5e942bb39097fffa955d5bb9c3b8a72212d0cc
-ms.sourcegitcommit: 1ef176c79a0e6dbb51834fe30807409d4e94847c
+ms.openlocfilehash: 328457e37ea6ae351abb2c5d5f0089246145b32c
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2021
-ms.locfileid: "64730856"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65648667"
 ---
 # <a name="recover-from-a-ransomware-attack-in-microsoft-365"></a>Microsoft 365'de fidye yazılımı saldırısından kurtarma
-
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)

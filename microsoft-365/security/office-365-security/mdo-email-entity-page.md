@@ -17,14 +17,20 @@ ms.collection:
 - m365initiative-defender-office365
 ms.custom: ''
 description: Office 365 için Microsoft Defender E5, P1 ve P2 müşterileri artık e-posta varlık sayfasıyla her e-postanın 360 derecelik görünümünü alabilir.
-ms.openlocfilehash: c2dfd4016f756073407e7d1c22034031c60a901f
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 79863916cab3b859a0b24de9dc5eb9b4f324a3f9
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65131096"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65648777"
 ---
 # <a name="the-email-entity-page"></a>E-posta varlığı sayfası
+
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
+
+**Şunlar için geçerlidir:**
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
+- [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 **Bu makalede:**
 - [E-posta varlığı sayfasına ulaşma](#reach-the-email-entity-page)

@@ -19,16 +19,18 @@ ms.collection:
 recommendations: false
 description: DLP ilkesi bileşeni ve yapılandırma başvurusu
 ms.custom: seo-marvel-apr2021
-ms.openlocfilehash: 169fb93f7343fd038af9e7b8ae789dabc871c6aa
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: 1ad00a36f48849ca110a598f92c5536ef7b21843
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64714009"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65648614"
 ---
 # <a name="data-loss-prevention-policy-reference"></a>Veri Kaybı Önleme ilkesi başvurusu
 
-Veri kaybı önleme (DLP) ilkelerinin yapılandırılması gereken birçok bileşen vardır. Etkili bir ilke oluşturmak için, her bileşenin amacını ve yapılandırmasının ilkenin davranışını nasıl değiştirdiğini anlamanız gerekir. Bu makale, DLP ilkesinin ayrıntılı anatomisini sağlar.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Microsoft Purview Veri Kaybı Önleme (DLP) ilkelerinin yapılandırılması gereken birçok bileşen vardır. Etkili bir ilke oluşturmak için, her bileşenin amacını ve yapılandırmasının ilkenin davranışını nasıl değiştirdiğini anlamanız gerekir. Bu makale, DLP ilkesinin ayrıntılı anatomisini sağlar.
 
 ## <a name="policy-templates"></a>İlke şablonları 
 
@@ -108,8 +110,8 @@ DLP ilkesi, birden çok konumda hassas bilgiler içeren öğeleri bulabilir ve k
 |hesapları OneDrive İş| hesap veya dağıtım grubu |bekleyen veriler </br> kullanımdaki veriler|Hayır|
 |Sohbet ve kanal iletilerini Teams     | hesap veya dağıtım grubu |hareket halindeki veriler </br> kullanımdaki veriler |  Hayır       |
 |Bulut Uygulamaları için Microsoft Defender   | bulut uygulaması örneği       |bekleyen veriler         | - [Microsoft dışı bulut uygulamaları için veri kaybı önleme ilkelerini kullanma](dlp-use-policies-non-microsoft-cloud-apps.md#use-data-loss-prevention-policies-for-non-microsoft-cloud-apps)        |
-|Aygıtları  |kullanıcı veya grup         |bekleyen veriler </br>  kullanımdaki veriler </br>  hareket halindeki veriler         |- [uç nokta veri kaybı önleme Microsoft 365 hakkında bilgi edinin](endpoint-dlp-learn-about.md#learn-about-microsoft-365-endpoint-data-loss-prevention) </br>- [Uç nokta veri kaybı önleme ile Kullanmaya başlayın](endpoint-dlp-getting-started.md#get-started-with-endpoint-data-loss-prevention) </br>- [Information Protection için cihaz ara sunucusu ve internet bağlantısı ayarlarını yapılandırma](device-onboarding-configure-proxy.md#configure-device-proxy-and-internet-connection-settings-for-information-protection) |
-|Şirket içi depolar (dosya paylaşımları ve SharePoint)    |Depo         | bekleyen veriler         | - [şirket içi tarayıcı Microsoft 365 veri kaybı önleme hakkında bilgi edinin](dlp-on-premises-scanner-learn.md#learn-about-the-microsoft-365-data-loss-prevention-on-premises-scanner) </br> - [Şirket içi tarayıcıda veri kaybı önleme ile Kullanmaya başlayın](dlp-on-premises-scanner-get-started.md#get-started-with-the-data-loss-prevention-on-premises-scanner)         |
+|Aygıtları  |kullanıcı veya grup         |bekleyen veriler </br>  kullanımdaki veriler </br>  hareket halindeki veriler         |- [Uç nokta veri kaybını önleme hakkında bilgi edinin](endpoint-dlp-learn-about.md) </br>- [Uç nokta veri kaybı önleme ile Kullanmaya başlayın](endpoint-dlp-getting-started.md) </br>- [Information Protection için cihaz ara sunucusu ve internet bağlantısı ayarlarını yapılandırma](device-onboarding-configure-proxy.md#configure-device-proxy-and-internet-connection-settings-for-information-protection) |
+|Şirket içi depolar (dosya paylaşımları ve SharePoint)    |Depo         | bekleyen veriler         | - [Şirket içi veri kaybı önleme tarayıcısı hakkında bilgi edinin](dlp-on-premises-scanner-learn.md) </br> - [Şirket içi tarayıcıda veri kaybı önleme ile Kullanmaya başlayın](dlp-on-premises-scanner-get-started.md#get-started-with-the-data-loss-prevention-on-premises-scanner)         |
 |PowerBI| Çalışma alanları | kullanımdaki veriler | Hayır|
 
 Exchange belirli dağıtım gruplarını dahil etmeyi seçerseniz, DLP ilkesinin kapsamı yalnızca bu grubun üyeleriyle tamamlanır. Benzer şekilde bir dağıtım grubunu dışlamak, bu dağıtım grubunun tüm üyelerini ilke değerlendirmesinin dışında tutar. İlkenin kapsamını dağıtım listelerinin, dinamik dağıtım gruplarının ve güvenlik gruplarının üyelerine göre belirleyebilirsiniz. DLP ilkesi bu tür 50'den fazla ekleme ve dışlama içeremez.
@@ -539,7 +541,7 @@ Kullanıcı bildirimleri ve ilke ipuçları yapılandırma seçenekleri, seçti�
 
 Çeşitli Microsoft uygulamaları için kullanıcı bildirimlerini etkinleştirebilir/devre dışı bırakabilirsiniz, bkz. [Veri Kaybı Önleme ilkesi ipuçları başvurusu](dlp-policy-tips-reference.md#data-loss-prevention-policy-tips-reference)
 
-- İlke ipucuyla **Office 365 hizmetindeki kullanıcılara bildirme** özelliğini etkinleştirebilir/devre dışı bırakabilirsiniz.
+- İlke ipucuyla bildirimleri etkinleştirebilir/devre dışı bırakabilirsiniz.
     - veya içeriğini gönderen, paylaşan veya son değiştiren kullanıcıya e-posta bildirimleri gönderme
     - belirli kişilere bildirme
 
@@ -646,7 +648,7 @@ https://docs.microsoft.com/en-us/microsoft-365/compliance/dlp-configure-view-ale
 
 Bir kural eşleştirildiğinde, uyumluluk yöneticinize (veya seçtiğiniz kişilere) olayın ayrıntılarını içeren bir olay raporu gönderebilirsiniz. Rapor, eşleşen öğe, kuralla eşleşen gerçek içerik ve içeriği son değiştiren kişinin adı hakkında bilgi içerir. E-posta iletileri için rapor, DLP ilkesiyle eşleşen özgün iletiyi ek olarak da içerir.
 
-DLP, olay bilgilerini Microsoft 365 [Insider Risk yönetimi](insider-risk-management.md#learn-about-insider-risk-management-in-microsoft-365) gibi diğer Microsoft 365 bilgi koruma hizmetlerine iletir. Olay bilgilerini insider risk yönetimine almak için **Olay raporları** önem düzeyini **Yüksek** olarak ayarlamanız gerekir.
+DLP, olay bilgilerini [insider risk yönetimi](insider-risk-management.md) gibi diğer Microsoft Purview bilgi koruma hizmetlerine iletir. Olay bilgilerini insider risk yönetimine almak için **Olay raporları** önem düzeyini **Yüksek** olarak ayarlamanız gerekir.
 
 <!--![Page for configuring incident reports](../media/31c6da0e-981c-415e-91bf-d94ca391a893.png)-->
 

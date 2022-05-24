@@ -1,5 +1,5 @@
 ---
-title: Saldırı benzetimi eğitimi dağıtımıyla ilgili dikkat edilmesi gereken noktalar ve SSS
+title: Saldırı simülasyonu eğitimi dağıtımıyla ilgili dikkat edilmesi gerekenler ve SSS
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -15,171 +15,176 @@ ms.assetid: ''
 ms.collection: m365-security-compliance
 ms.custom:
 - seo-marvel-apr2020
-description: Yöneticiler, Plan 2 kuruluşlarında veya Plan 2 kuruluşlarında saldırı benzetimi ve eğitimiyle ilgili dağıtımla Microsoft 365 E5 ve sık sorulan Office 365 için Microsoft Defender hakkında bilgi edinebilirsiniz.
+description: Yöneticiler, Microsoft 365 E5 Office 365 için Microsoft Defender veya Plan 2 kuruluşlarında saldırı simülasyonu ve eğitimiyle ilgili dağıtım konuları ve sık sorulan sorular hakkında bilgi edinebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 57b4d684e52fd51a2ece279cc7322389a953a17c
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 4145dcd073ec97c43ac64eecdbd25c48612a9b83
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64467807"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65649031"
 ---
-# <a name="attack-simulation-training-deployment-considerations-and-faq"></a>Saldırı benzetimi eğitimi dağıtımıyla ilgili dikkat edilmesi gereken noktalar ve SSS
+# <a name="attack-simulation-training-deployment-considerations-and-faq"></a>Saldırı simülasyonu eğitimi dağıtımıyla ilgili dikkat edilmesi gerekenler ve SSS
 
-Saldırı benzetimi eğitimi, Microsoft 365 E5 veya Office 365 için Microsoft Defender Plan 2 kuruluşlarının gerçek dünya tarafından desteklenen kimlik avı benzetimleri oluşturulmasına ve yönetimine olanak sağlayarak sosyal mühendislik riskini ölçmelerine ve yönetmelerine olanak sağlar. Hyper-targeted training, delivered in partnership withNova security, helps improve knowledge and change employee behavior.
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-Saldırı benzetimi eğitimine başlama hakkında daha fazla bilgi için saldırı [benzetim Kullanmaya başlayın'i kullanma hakkında daha fazla bilgi için bkz](attack-simulation-training-get-started.md).
+**Uygulandığı öğe**
+- [Office 365 için Microsoft Defender plan 2](defender-for-office-365.md)
 
-Benzetim oluşturma ve zamanlama deneyiminin tamamı serbest akışlı ve kusursuz olacak şekilde tasarlasa da, kurumsal ölçekte benzetimler yapmak çoğunlukla planlamayı gerektirir. Bu makale müşterilerimizin kendi ortamlarında benzetimler çalıştırması sayesinde karşılaştığımız belirli güçlüklere yardımcı olur.
+Saldırı simülasyonu eğitimi, Microsoft 365 E5 veya Office 365 için Microsoft Defender Plan 2 kuruluşlarının gerçek dünya, silah dışı kimlik avı yükleri tarafından desteklenen kimlik avı simülasyonlarının oluşturulmasına ve yönetilmesine izin vererek sosyal mühendislik riskini ölçmesine ve yönetmesine olanak tanır. Terranova güvenliğiyle ortaklaşa sunulan hiper hedefli eğitim, bilginin geliştirilmesine ve çalışan davranışının değiştirilmesine yardımcı olur.
+
+Saldırı simülasyonu eğitimine başlama hakkında daha fazla bilgi için bkz. [Saldırı simülasyonu eğitimini kullanma Kullanmaya başlayın](attack-simulation-training-get-started.md).
+
+Simülasyon oluşturma ve zamanlama deneyiminin tamamı serbest akışlı ve sorunsuz olacak şekilde tasarlanmış olsa da, simülasyonların kurumsal ölçekte çalıştırılması genellikle planlama gerektirir. Bu makale, müşterilerimiz simülasyonları kendi ortamlarında çalıştırırken gördüğümüz belirli zorlukların giderilmesine yardımcı olur.
 
 ## <a name="issues-with-end-user-experiences"></a>Son kullanıcı deneyimleriyle ilgili sorunlar
 
-### <a name="phishing-simulation-urls-blocked-by-google-safe-browsing"></a>Google Kasa Gözatma tarafından engellenen kimlik avı benzetimi URL'leri
+### <a name="phishing-simulation-urls-blocked-by-google-safe-browsing"></a>Google Kasa Gözatma tarafından engellenen kimlik avı simülasyonu URL'leri
 
-URL'nin saygınlığı hizmeti, Saldırı benzetimi eğitimi tarafından kullanılan URL'lerin bir veya daha fazlasını güvenli olmayan olarak tanımlayabilir. Google Kasa Google Chrome'da gezinme, sanal kimlik avı URL'lerinden bazılarını Algısal **bir site devam iletisiyle** engeller. Benzetim URL'lerimize her zaman izin vermek için birçok URL itibari satıcıyla çalışırken, her zaman tam kapsamımız yok.
+URL saygınlığı hizmeti, Saldırı simülasyonu eğitimi tarafından güvenli olmayan url'ler olarak kullanılan bir veya daha fazla URL'yi tanımlayabilir. Google Chrome'da Google Kasa Gözatma, **yanıltıcı bir site ileri** iletisiyle sanal kimlik avı URL'lerinden bazılarını engeller. Simülasyon URL'lerimize her zaman izin vermek için birçok URL saygınlığı satıcısıyla çalışsak da, her zaman tam kapsamlı bir kapsamımız yoktur.
 
-:::image type="content" source="../../media/attack-sim-training-faq-chrome-deceptive-site-message.png" alt-text="Google Chrome'da algısal siteyi ön uyarı" lightbox="../../media/attack-sim-training-faq-chrome-deceptive-site-message.png":::
+:::image type="content" source="../../media/attack-sim-training-faq-chrome-deceptive-site-message.png" alt-text="Google Chrome'da yanıltıcı site ileri uyarısı" lightbox="../../media/attack-sim-training-faq-chrome-deceptive-site-message.png":::
 
-Bu sorunun verileri etkilemeyeceğini Microsoft Edge.
+Bu sorunun Microsoft Edge etkilemediğini unutmayın.
 
-Planlama aşamasının bir parçası olarak, kimlik avı kampanyasında URL'yi kullanmadan önce, desteklenen web tarayıcılarında URL'nin kullanılabilirliğini denetlemeye bakın. URL'ler Google Kasa Gözatma tarafından engellenmişse[,](https://support.google.com/chrome/a/answer/7532419) URL'lere erişim izni vermek için Google'ın bu yönergeleri izleyin.
+Planlama aşamasının bir parçası olarak, URL'yi bir kimlik avı kampanyasında kullanmadan önce desteklenen web tarayıcılarınızda URL'nin kullanılabilirliğini denetlemeyi unutmayın. URL'ler Google Kasa Gözatma tarafından engelleniyorsa, URL'lere erişime izin vermek için Google'ın [bu yönergelerini izleyin](https://support.google.com/chrome/a/answer/7532419).
 
-Saldırı [Kullanmaya başlayın eğitimi tarafından kullanılan URL'lerin](attack-simulation-training-get-started.md) listesi için Saldırı benzetimi eğitimi'ne bakın.
+Şu anda Saldırı simülasyonu eğitimi tarafından kullanılan URL'lerin listesi için Saldırı [simülasyonu eğitimini kullanarak Kullanmaya başlayın](attack-simulation-training-get-started.md) bakın.
 
-### <a name="phishing-simulation-and-admin-urls-blocked-by-network-proxy-solutions-and-filter-drivers"></a>Ağ ara sunucu çözümleri ve filtre sürücüleri tarafından engellenen kimlik avı benzetimi ve yönetici URL'leri
+### <a name="phishing-simulation-and-admin-urls-blocked-by-network-proxy-solutions-and-filter-drivers"></a>Ağ ara sunucusu çözümleri ve filtre sürücüleri tarafından engellenen kimlik avı simülasyonu ve yönetici URL'leri
 
-Hem kimlik avı benzetimi URL'leri hem de yönetici URL'leri ara güvenlik cihazlarınız veya filtreleriniz tarafından engellenmiş veya atmış olabilir. Örneğin:
+Hem kimlik avı simülasyonu URL'leri hem de yönetici URL'leri, ara güvenlik cihazlarınız veya filtreleriniz tarafından engellenebilir veya bırakılabilir. Örneğin:
 
-- Güvenlik duvarları
+- Güvenlik duvar -ları
 - Web Uygulaması Güvenlik Duvarı (WAF) çözümleri
 - Üçüncü taraf filtre sürücüleri (örneğin, çekirdek modu filtreleri)
 
-Bu katmanda birkaç müşteri engellenmiş olarak görülen bir durumla karşıtlık yaşanır. Sorunlarla karşılaşırsanız, güvenlik cihazlarınız veya filtreleriniz tarafından taramayı atlamak için aşağıdaki URL'leri gerekli şekilde yapılandırmayı düşünebilirsiniz:
+Bu katmanda birkaç müşterinin engellendiğini gördük ancak bu gerçekleşir. Sorunlarla karşılaşırsanız, güvenlik cihazlarınız veya filtreleriniz tarafından taramayı atlamak için aşağıdaki URL'leri gerektiği gibi yapılandırmayı göz önünde bulundurun:
 
-- Saldırı benzetimi eğitimi kullanılarak kimlik avı URL'leri [Kullanmaya başlayın sanal kimlik avı URL'leri](attack-simulation-training-get-started.md).
+- [Saldırı simülasyonu eğitimi kullanılarak Kullanmaya başlayın'da](attack-simulation-training-get-started.md) açıklandığı gibi sanal kimlik avı URL'leri.
 - <https://security.microsoft.com/attacksimulator>
 - <https://security.microsoft.com/attacksimulationreport>
 - <https://security.microsoft.com/trainingassignments>
 
-### <a name="simulation-messages-not-delivered-to-all-targeted-users"></a>Benzetim iletileri tüm hedeflenen kullanıcılara teslim edilmedi
+### <a name="simulation-messages-not-delivered-to-all-targeted-users"></a>Simülasyon iletileri tüm hedeflenen kullanıcılara teslim edilmedi
 
-Benzetim e-posta iletilerini gerçekten alan kullanıcı sayısının, benzetim tarafından hedef alan kullanıcı sayısından daha az olasıdır. Hedef doğrulama kapsamında aşağıdaki kullanıcı türleri hariç tutulacak:
+Simülasyon e-posta iletilerini gerçekten alan kullanıcı sayısının simülasyon tarafından hedeflenen kullanıcı sayısından az olması mümkündür. Aşağıdaki kullanıcı türleri, hedef doğrulama kapsamında dışlanır:
 
 - Geçersiz alıcı e-posta adresleri.
 - Konuk kullanıcılar.
-- Artık iş yerlerinde (Azure AD) Azure Active Directory kullanıcılar.
+- artık Azure Active Directory (Azure AD) etkin olmayan kullanıcılar.
 
-Benzetimlere yalnızca geçerli, posta kutusu geçerli olan konuk olmayan kullanıcılar dahildir. Kullanıcıları hedeflemek için dağıtım gruplarını veya posta etkin güvenlik gruplarını kullanıyorsanız, dağıtım grubu üyelerini görüntülemek ve doğrulamak için [Exchange Online PowerShell'de](/powershell/exchange/connect-to-exchange-online-powershell) [Get-DistributionGroupMember](/powershell/module/exchange/get-distributiongroupmember) cmdlet'ini kullanabilirsiniz.
+Simülasyonlara yalnızca geçerli, geçerli posta kutusu olan konuk olmayan kullanıcılar dahil edilecek. Kullanıcıları hedeflemek için dağıtım grupları veya posta etkin güvenlik grupları kullanıyorsanız, dağıtım grubu üyelerini görüntülemek ve doğrulamak için [Exchange Online PowerShell'de](/powershell/exchange/connect-to-exchange-online-powershell) [Get-DistributionGroupMember](/powershell/module/exchange/get-distributiongroupmember) cmdlet'ini kullanabilirsiniz.
 
-## <a name="issues-with-attack-simulation-training-reporting"></a>Saldırı benzetimi eğitimi raporlama ile ilgili sorunlar
+## <a name="issues-with-attack-simulation-training-reporting"></a>Saldırı simülasyonu eğitim raporlamasıyla ilgili sorunlar
 
-### <a name="attack-simulation-training-reports-do-not-contain-any-activity-details"></a>Saldırı benzetimi eğitim raporları herhangi bir etkinlik ayrıntısı içermemektedir
+### <a name="attack-simulation-training-reports-do-not-contain-any-activity-details"></a>Saldırı simülasyonu eğitim raporları herhangi bir etkinlik ayrıntısı içermiyor
 
-Saldırı benzetimi eğitimi, çalışanlarınızı tehdit hazırlığı ilerleme durumu hakkında bilgi sahibi tutmak için zengin ve eyleme değiştirilebilir öngörüler ile birlikte gelir. Saldırı benzetimi eğitim raporları verilerle doldurulmazsa, denetim günlüğü aramalarının kuruluşta açık olduğunu doğrulayın (varsayılan olarak açıktır).
+Saldırı simülasyonu eğitimi, çalışanlarınızın tehdit hazırlığı ilerleme durumu hakkında sizi bilgilendiren zengin ve eyleme dönüştürülebilir içgörülerle birlikte gelir. Saldırı simülasyonu eğitim raporları verilerle doldurulmazsa, kuruluşunuzda denetim günlüğü aramanın açık olduğunu doğrulayın (varsayılan olarak açıktır).
 
-Denetim günlüğü araması, Saldırı benzetimi eğitimi tarafından gereklidir; böylece etkinlikler yakalanıp kaydedilebilir ve geri okunabilir. Saldırı benzetimi eğitimi için denetim günlüğü aramalarını kapatmanın sonuçları aşağıdaki şekildedir:
+Olayların yakalanabilmesi, kaydedilebilmesi ve okunabilmesi için Saldırı benzetimi eğitimi için denetim günlüğü araması gereklidir. Denetim günlüğü aramasını kapatmak, Saldırı simülasyonu eğitimi için aşağıdaki sonuçlara neden olur:
 
 - Raporlama verileri tüm raporlarda kullanılamaz. Raporlar boş görünür.
-- Eğitim atamaları engellendi çünkü veriler kullanılamıyor.
+- Veriler kullanılamadığından eğitim atamaları engellenir.
 
-Denetim günlüğü aramalarını açmak için bkz [. Denetim günlüğü aramalarını açma veya kapatma](../../compliance/turn-audit-log-search-on-or-off.md).
-
-> [!NOTE]
-> Boş etkinlik ayrıntıları, kullanıcılara hiçbir E5 lisansı atanma tarafından da neden olabilir. Raporlama olaylarının yakalanır ve kaydedilirken emin olmak için etkin kullanıcıya en az bir E5 lisansının atanması gerekir.
-
-### <a name="simulation-reports-are-not-updated-immediately"></a>Benzetim raporları hemen güncelleştirilmez
-
-Bir kampanya başlattıktan sonra ayrıntılı benzetim raporları hemen güncelleştirilmez. Endişelenmeyin; beklenen bir davranıştır.
-
-Her benzetim kampanyasının bir yaşam döngüsü vardır. Benzetim ilk oluşturulduğunda, benzetim **Zamanlanmış durumdadır** . Benzetim başladığında Sürüyor **durumuna geçiş** olur. Tamamlandığında, benzetim Tamamlanan durumuna **geçişler** olur.
-
-Benzetim Zamanlanmış **durumdayken** benzetim raporları çoğunlukla boş olacaktır. Bu aşama sırasında benzetim altyapısı hedef kullanıcı e-posta adreslerini çözümliyor, dağıtım gruplarını genişletiyor ve konuk kullanıcıları listeden kaldırıyor.
-
-:::image type="content" source="../../media/attack-sim-training-faq-scheduled-state.png" alt-text="Zamanlanan durumdaki benzetimi gösteren benzetim ayrıntıları" lightbox="../../media/attack-sim-training-faq-scheduled-state.png":::
-
-Benzetim Sürüyor **aşamasına girdikçe** , raporlamaya bilgi girmeye başlayarak bilgi olduğunu fark edin:
-
-:::image type="content" source="../../media/attack-sim-training-faq-in-progress-state.png" alt-text="Devam eden durumdaki benzetimi gösteren benzetim ayrıntıları" lightbox="../../media/attack-sim-training-faq-in-progress-state.png":::
-
-Benzetim raporlarının, geçiş devam ediyor durumuna geçiş sonrasında güncelleştirilsi 30 **dakika kadar** sürebilir. Benzetim Tamamlanan durumuna ulaşana kadar rapor verileri **derlemeye devam** eder. Raporlama güncelleştirmeleri aşağıdaki aralıklarla gerçekleşir:
-
-- İlk 60 dakikada bir, her 10 dakikada bir.
-- 60 dakikada bir, 2 gün sonrası her 15 dakikada bir.
-- 2 günde bir ile 7 gün arasında her 30 dakikada bir.
-- 7 günde bir, 60 dakikada bir.
-
-Genel Bakış sayfasındaki **pencere** öğeleri, kurum un benzetim tabanlı güvenlik durumunun zaman içinde hızlı bir anlık görüntüsünü sağlar. Bu widget'lar zaman içinde genel güvenlik nedenlerinizi ve yolculuğunuz yansıtması nedeniyle, her benzetim kampanyası tamamlandıktan sonra güncelleştirilir.
+Denetim günlüğü aramasını açmak için bkz [. Denetim günlüğü aramasını açma veya kapatma](../../compliance/turn-audit-log-search-on-or-off.md).
 
 > [!NOTE]
-> Çeşitli raporlama **sayfalarındaki** verileri ayıklamak için Dışarı Aktar seçeneğini kullanabilirsiniz.
+> Boş etkinlik ayrıntıları, kullanıcılara E5 lisansı atanmadığından da kaynaklanabilir. Raporlama olaylarının yakalanıp kaydedildiğinden emin olmak için etkin bir kullanıcıya en az bir E5 lisansı atandığını doğrulayın.
 
-### <a name="messages-reported-as-phishing-by-users-arent-appearing-in-simulation-reports"></a>Kullanıcılar tarafından kimlik avı olarak bildirilen iletiler benzetim raporlarında görünmüyor
+### <a name="simulation-reports-are-not-updated-immediately"></a>Simülasyon raporları hemen güncelleştirilmez
 
-Saldırı eğitimi ile ilgili benzetim raporları, kullanıcı etkinliğiyle ilgili ayrıntılar sağlar. Örneğin:
+Ayrıntılı simülasyon raporları, bir kampanya başlattıktan hemen sonra güncelleştirilmez. Endişelenmeyin; bu davranış beklenir.
 
-- İletinin bağlantısına tık kullanan kullanıcılar.
+Her simülasyon kampanyasının bir yaşam döngüsü vardır. İlk oluşturulduğunda simülasyon **Zamanlanmış** durumunda olur. Simülasyon başlatıldığında Devam ediyor durumuna geçiş **yapılır** . Tamamlandığında, simülasyon **Tamamlandı** durumuna geçiş yapılır.
+
+Bir simülasyon **Zamanlanmış** durumundayken, simülasyon raporları çoğunlukla boş olur. Bu aşamada simülasyon altyapısı hedef kullanıcı e-posta adreslerini çözümleme, dağıtım gruplarını genişletme, konuk kullanıcıları listeden kaldırma gibi işlemleri tamamlar:
+
+:::image type="content" source="../../media/attack-sim-training-faq-scheduled-state.png" alt-text="Simülasyonu Zamanlanmış durumda gösteren simülasyon ayrıntıları" lightbox="../../media/attack-sim-training-faq-scheduled-state.png":::
+
+Simülasyon **Devam Ediyor** aşamasına girdikten sonra, bilgilerin raporlamaya girmeye başladığını fark edeceksiniz:
+
+:::image type="content" source="../../media/attack-sim-training-faq-in-progress-state.png" alt-text="Simülasyonu Sürüyor durumunda gösteren simülasyon ayrıntıları" lightbox="../../media/attack-sim-training-faq-in-progress-state.png":::
+
+Devam **ediyor** durumuna geçiş sonrasında tek tek simülasyon raporlarının güncelleştirilmiş olması 30 dakika kadar sürebilir. Simülasyon **Tamamlandı** durumuna ulaşana kadar rapor verileri dermeye devam eder. Raporlama güncelleştirmeleri aşağıdaki aralıklarla gerçekleşir:
+
+- İlk 60 dakika boyunca her 10 dakikada bir.
+- 2 güne kadar 60 dakika sonra 15 dakikada bir.
+- 2 günden 7 güne kadar 30 dakikada bir.
+- 7 günden sonra 60 dakikada bir.
+
+**Genel Bakış** sayfasındaki pencere öğeleri, kuruluşunuzun simülasyon tabanlı güvenlik duruşunun zaman içinde hızlı bir anlık görüntüsünü sağlar. Bu pencere öğeleri genel güvenlik duruşunuzu ve zaman içindeki yolculuğunuzu yansıttığı için her simülasyon kampanyası tamamlandıktan sonra güncelleştirilir.
+
+> [!NOTE]
+> Verileri ayıklamak için çeşitli raporlama sayfalarında **Dışarı Aktar** seçeneğini kullanabilirsiniz.
+
+### <a name="messages-reported-as-phishing-by-users-arent-appearing-in-simulation-reports"></a>Kullanıcılar tarafından kimlik avı olarak bildirilen iletiler simülasyon raporlarında görünmüyor
+
+Saldırı simülatörü eğitimindeki simülasyon raporları, kullanıcı etkinliğiyle ilgili ayrıntıları sağlar. Örneğin:
+
+- İletideki bağlantıya tıklayan kullanıcılar.
 - Kimlik bilgilerini veren kullanıcılar.
-- İletiyi kimlik avı olarak bildirilen kullanıcılar.
+- İletiyi kimlik avı olarak bildiren kullanıcılar.
 
-Kullanıcıların kimlik avı olarak bildirilen iletiler Saldırı benzetimi eğitim benzetimi raporlarında yakalanzsa, bildirilen iletilerin Microsoft'a teslimsini engelleyen bir Exchange posta akışı kuralı (aktarım kuralı olarak da bilinir) olabilir. Posta akışı kuralları, aşağıdaki e-posta adreslerine teslimi engellemez:
+Kullanıcıların kimlik avı olarak bildirdiği iletiler Saldırı simülasyonu eğitim simülasyonu raporlarında yakalanmazsa, bildirilen iletilerin Microsoft'a teslimini engelleyen bir Exchange posta akışı kuralı (aktarım kuralı olarak da bilinir) olabilir. Posta akışı kurallarının aşağıdaki e-posta adreslerine teslimi engellemediğini doğrulayın:
 
 - junk@office365.microsoft.com
 - abuse@messaging.microsoft.com
 - phish@office365.microsoft.com
-- not\_ junk@office365.microsoft.com
+- değil\_ junk@office365.microsoft.com
 
 ## <a name="other-frequently-asked-questions"></a>Sık sorulan diğer sorular
 
-### <a name="q-what-is-the-recommended-method-to-target-users-for-simulation-campaigns"></a>S: Benzetim kampanyaları için kullanıcıları hedeflemek için önerilen yöntem nedir?
+### <a name="q-what-is-the-recommended-method-to-target-users-for-simulation-campaigns"></a>S: Simülasyon kampanyaları için kullanıcıları hedeflemek için önerilen yöntem nedir?
 
-A: Hedef kullanıcılar için çeşitli seçenekler vardır:
+Y: Hedef kullanıcılar için çeşitli seçenekler mevcuttur:
 
-- Tüm kullanıcıları dahil etmek (şu anda 40.000'den az kullanıcısı olan kuruluşlar tarafından kullanılabilir).
+- Tüm kullanıcıları dahil edin (şu anda 40.000'den az kullanıcısı olan kuruluşlar tarafından kullanılabilir).
 - Belirli kullanıcıları seçin.
-- Kullanıcıları bir CSV dosyasından (satır başına bir e-posta adresi) seçin.
-- Azure AD grup tabanlı hedefleme.
+- Csv dosyasından kullanıcıları seçin (satır başına bir e-posta adresi).
+- Grup tabanlı hedeflemeyi Azure AD.
 
-Hedefli kullanıcıların Azure AD grupları tarafından tanım bulunduğu kampanyaların genel olarak yönetiminin daha kolay olduğunu bulduk.
+Hedeflenen kullanıcıların Azure AD grupları tarafından tanımlandığı kampanyaların genel olarak daha kolay yönetildiğini tespit ettik.
 
-### <a name="q-are-there-any-limits-in-targeting-users-while-importing-from-a-csv-or-adding-users"></a>S: CSV'den içeri aktarma veya kullanıcı ekleme sırasında kullanıcıları hedeflemede herhangi bir sınırlama var mı?
+### <a name="q-are-there-any-limits-in-targeting-users-while-importing-from-a-csv-or-adding-users"></a>S: CSV'den içeri aktarma veya kullanıcı ekleme sırasında kullanıcıları hedefleme konusunda herhangi bir sınır var mı?
 
-A: ALıCıLARı BIR CSV dosyasından içeri aktarma veya benzetime tek tek alıcıları ekleme sınırı 40.000'tir.
+Y: Alıcıları CSV dosyasından içeri aktarma veya simülasyona tek tek alıcı ekleme sınırı 40.000'dir.
 
-Alıcı ayrı bir kullanıcı veya grup olabilir. Bir grup yüzlerce veya binlerce alıcı içerebilir, dolayısıyla tek tek kullanıcıların sayısına gerçek bir sınır yerleştiril değildir.
+Alıcı tek bir kullanıcı veya grup olabilir. Bir grup yüzlerce veya binlerce alıcı içerebilir, bu nedenle tek tek kullanıcı sayısına gerçek bir sınır uygulanmaz.
 
-Büyük bir CSV dosyasının yönetilmesi veya birçok alıcıyı tek tek eklemek zahmetli olabilir. Azure AD gruplarının kullanımı benzetimin genel yönetimini basitleştirir.
+Büyük bir CSV dosyasını yönetmek veya çok sayıda alıcı eklemek zahmetli olabilir. Azure AD gruplarının kullanılması simülasyonun genel yönetimini basitleştirir.
 
-### <a name="q-does-microsoft-provide-payloads-in-other-languages"></a>S: Microsoft diğer dillerde yüklemeler sağlar mı?
+### <a name="q-does-microsoft-provide-payloads-in-other-languages"></a>S: Microsoft başka dillerde yük sağlar mı?
 
-A: Şu anda 10'dan fazla dilde kullanılabilen 40'dan fazla yerelleştirilmiş yük bulunmaktadır: Çince (Basitleştirilmiş), Çince (Geleneksel), İngilizce, Fransızca, Almanca, İtalyanca, Japonca, Korece, Portekizce, Rusça, İspanyolca ve Felemenkçe. Mevcut yüklerin başka dillere doğrudan veya makine çevirisinin yanlışlıklar ve ilgi derecesini azaltacaklarını fark ettik.
+Y: Şu anda 10'dan fazla dilde 40'dan fazla yerelleştirilmiş yük mevcuttur: Çince (Basitleştirilmiş), Çince (Geleneksel), İngilizce, Fransızca, Almanca, İtalyanca, Japonca, Korece, Portekizce, Rusça, İspanyolca ve Felemenkçe. Mevcut yüklerin diğer dillere doğrudan veya makine çevirilerinin yanlışlığa ve ilginin azalmasına yol açacağını fark ettik.
 
-Buna göre, özel yük yazma deneyimini kullanarak kendi yüklemenizi istediğiniz dilde oluşturabilirsiniz. Ayrıca belirli bir coğrafyada kullanıcıları hedeflemek için kullanılan mevcut yüklemeleri toplamanız da kesinlikle önerilir. Başka bir deyişle, saldırganların içeriği sizin için yerelleştirmesine izin verme.
+Bunun yanı sıra, özel yük yazma deneyimini kullanarak istediğiniz dilde kendi yükünüzü oluşturabilirsiniz. Ayrıca belirli bir coğrafyadaki kullanıcıları hedeflemek için kullanılan mevcut yükleri toplamanızı kesinlikle öneririz. Başka bir deyişle, saldırganların içeriği sizin için yerelleştirmesine izin verin.
 
-### <a name="q-how-can-i-switch-to-other-languages-for-my-admin-portal-and-training-experience"></a>S: Yönetici portalım ve eğitim deneyimim için diğer dillere nasıl geçebilirsiniz?
+### <a name="q-how-can-i-switch-to-other-languages-for-my-admin-portal-and-training-experience"></a>S: Yönetici portalım ve eğitim deneyimim için diğer dillere nasıl geçiş yapabilirim?
 
-A: Microsoft 365 veya Office 365, dil yapılandırması her kullanıcı hesabı için özel ve merkezidir. Dil ayarınızı değiştirme yönergeleri için bkz. Microsoft 365 [Kurumsal'da görüntü dilinizi ve saat diliminizi değiştirme](https://support.microsoft.com/office/6f238bff-5252-441e-b32b-655d5d85d15b).
+Y: Microsoft 365 veya Office 365 dil yapılandırması her kullanıcı hesabı için özel ve merkezidir. Dil ayarınızı değiştirme yönergeleri için bkz. [İş için Microsoft 365'da görüntüleme dilinizi ve saat diliminizi değiştirme](https://support.microsoft.com/office/6f238bff-5252-441e-b32b-655d5d85d15b).
 
-Yapılandırma değişikliğinin tüm hizmetlerde eşitlenmesi 30 dakika kadar sürebilir.
+Yapılandırma değişikliğinin tüm hizmetler arasında eşitlenmesi 30 dakika kadar sürebilir.
 
-### <a name="q-can-i-trigger-a-test-simulation-to-understand-what-it-looks-like-prior-to-launching-a-full-fledged-campaign"></a>S: Tam teşekküllü bir kampanya başlatmadan önce nasıl göründüğünü anlamak için bir test benzetimini tetikler miyim?
+### <a name="q-can-i-trigger-a-test-simulation-to-understand-what-it-looks-like-prior-to-launching-a-full-fledged-campaign"></a>S: Tam kapsamlı bir kampanya başlatmadan önce nasıl göründüğünü anlamak için bir test simülasyonu tetikleyebilir miyim?
 
-A: Evet, bunu! Yeni bir benzetim **oluşturmak** için sihirbazın en son Benzetimini Gözden Geçir sayfasında Test gönderme **seçeneği vardır**. Bu seçenek, o anda oturum açmış olan kullanıcıya örnek bir kimlik avı benzetimi iletisi gönderir. Gelen Kutunuzda kimlik avı iletisi doğrulandıktan sonra benzetimi gönderebilirsiniz.
+Y: Evet yapabilirsiniz! Yeni bir simülasyon oluşturmak için sihirbazın en son **Simülasyonu Gözden Geçir** sayfasında **Test gönder** seçeneği vardır. Bu seçenek, şu anda oturum açmış olan kullanıcıya örnek bir kimlik avı benzetimi iletisi gönderir. Gelen Kutunuzda kimlik avı iletisini doğruladıktan sonra simülasyonu gönderebilirsiniz.
 
-:::image type="content" source="../../media/attack-sim-training-simulations-review-simulation.png" alt-text="Benzetimi gözden geçir sayfasındaki Test gönder düğmesi" lightbox="../../media/attack-sim-training-simulations-review-simulation.png":::
+:::image type="content" source="../../media/attack-sim-training-simulations-review-simulation.png" alt-text="Simülasyonu gözden geçir sayfasındaki Test gönder düğmesi" lightbox="../../media/attack-sim-training-simulations-review-simulation.png":::
 
-### <a name="q-can-i-target-users-that-belong-to-a-different-tenant-as-part-of-the-same-simulation-campaign"></a>S: Aynı benzetim kampanyasının bir parçası olarak farklı bir kiracıya ait kullanıcıları hedef adede miyim?
+### <a name="q-can-i-target-users-that-belong-to-a-different-tenant-as-part-of-the-same-simulation-campaign"></a>S: Aynı simülasyon kampanyasının bir parçası olarak farklı bir kiracıya ait kullanıcıları hedefleyebilir miyim?
 
-C: Hayır. Şu anda, kiracılar arası benzetimler destekleneme almaktadır. Hedef kullanıcılarının hepsinin aynı kiracıda olduğunu doğrulayın. Kiracılar arası kullanıcılar veya konuk kullanıcılar benzetim kampanyasından çıkarılacaktır.
+C: Hayır. Şu anda kiracılar arası simülasyonlar desteklenmemektedir. Hedeflenen tüm kullanıcılarınızın aynı kiracıda olduğunu doğrulayın. Tüm kiracılar arası kullanıcılar veya konuk kullanıcılar simülasyon kampanyasının dışında tutulur.
 
-### <a name="q-how-does-region-aware-delivery-work"></a>S: Bölge bilgisi olan teslim nasıl çalışır?
+### <a name="q-how-does-region-aware-delivery-work"></a>S: Bölge tanımalı teslim nasıl çalışır?
 
-A: Bölgeyi kullanan teslim, iletiyi ne zaman teslim edeceklerini belirlemek için hedefli kullanıcının posta kutusunun TimeZone özniteliğini ve 'önceden değil' mantığını kullanır. Örneğin, aşağıdaki senaryoyu düşünün:
+Y: Bölge algılamalı teslim, iletinin ne zaman teslim edileceğini belirlemek için hedeflenen kullanıcının posta kutusunun TimeZone özniteliğini ve 'önce değil' mantığını kullanır. Örneğin, aşağıdaki senaryoyu göz önünde bulundurun:
 
-- Pasifik saat diliminde (UTC-8) saat 07:00'de, yönetici bir kampanya oluşturur ve aynı gün saat 9:00'da başlayacak bir kampanya zamanlar.
-- UserA Doğu saat dilimindedir (UTC-5).
-- UserB ayrıca Pasifik saat diliminde de yer almaktadır.
+- Pasifik saat diliminde (UTC-8) saat 07:00'de bir yönetici bir kampanya oluşturur ve aynı gün saat 09:00'da başlayacak şekilde zamanlar.
+- UserA, Doğu saat diliminde (UTC-5) yer alır.
+- UserB aynı zamanda Pasifik saat dilimindedir.
 
-Aynı gün saat 9:00'da benzetim mesajı UserB'ye gönderilir. Bölgeyi fark edilen teslimle birlikte, ileti aynı gün UserA'ya gönderilmez, çünkü Pasifik saati 09:00 Doğu saati 12:00'dır. Bunun yerine ileti, ertesi gün Doğu Avrupa saatiyle 09:00'da UserA'ya gönderilir.
+Aynı gün saat 09:00'da simülasyon iletisi UserB'ye gönderilir. Bölgeye duyarlı teslimde, 09:00 Pasifik saati Doğu saatiyle 23:00 olduğundan ileti aynı gün UserA'ya gönderilmez. Bunun yerine, ileti bir sonraki gün Doğu saatiyle 09:00'da UserA'ya gönderilir.
 
-Bölgeyi biliyorsanız teslim etkinleştirilen bir kampanyanın ilk çalıştırması sırasında benzetim mesajının yalnızca belirli bir saat diliminde kullanıcılara gönderilmiş gibi görünebilir. Ancak, zaman geçtiğinde ve kapsamda daha fazla kullanıcı ortaya çıktıklarında hedeflenen kullanıcılar artar.
+Bu nedenle, bölgeye duyarlı teslimin etkinleştirildiği bir kampanyanın ilk çalıştırmasında simülasyon iletisinin yalnızca belirli bir saat dilimindeki kullanıcılara gönderildiği görünebilir. Ancak, zaman geçtikçe ve daha fazla kullanıcı kapsama girdikçe, hedeflenen kullanıcılar artar.

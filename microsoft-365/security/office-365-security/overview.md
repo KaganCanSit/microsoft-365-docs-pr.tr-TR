@@ -16,14 +16,16 @@ ms.collection:
 description: Office 365'te güvenlik, EOP’den Office 365 için Defender Plan 1 ve 2’ye, Standart ve Katı güvenlik yapılandırmaları ve daha fazlası. Neye sahip olduğunuzu ve özelliklerinizi nasıl güvence altına alacağınızı anlayın.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: a9f480575c712488a17dc7e9e91320edc11d0e50
-ms.sourcegitcommit: 5eff41a350a01e18d9cdd572c9d8ff99d6c9563a
+ms.openlocfilehash: 62a8d298c9b3e47acb9ba9af5782624646487677
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64835919"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65647787"
 ---
 # <a name="microsoft-defender-for-office-365-security-overview"></a>Office 365 için Microsoft Defender güvenliğine genel bakış
+
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)

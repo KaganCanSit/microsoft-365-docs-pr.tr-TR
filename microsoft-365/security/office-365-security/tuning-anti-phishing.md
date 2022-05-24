@@ -1,5 +1,5 @@
 ---
-title: Kimlik avı korumasını ayarlama
+title: Kimlik avından korumayı ayarlama
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -13,83 +13,81 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
 - MET150
-description: Yöneticiler, kimlik avı iletilerinin neden ve nasıl ilerler yaptığını Microsoft 365, gelecekte daha fazla kimlik avı iletisine neden olan iletileri önlemek için neleri yapacaklarını öğrenebilir.
+description: Yöneticiler, Microsoft 365'da kimlik avı iletisinin neden ve nasıl geçtiğini ve gelecekte daha fazla kimlik avı iletisini önlemek için yapılması gerekenleri belirlemeyi öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 299488a7ed8a891d870efb3ace618178c36552f1
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 7c39d3f4b3ee6fb98cadcd5518a81710402c1cb3
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988608"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65647765"
 ---
-# <a name="tune-anti-phishing-protection"></a>Kimlik avı korumasını ayarlama
+# <a name="tune-anti-phishing-protection"></a>Kimlik avından korumayı ayarlama
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
-
-**Geçerli olduğu yer:**
+**Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Bu Microsoft 365 varsayılan olarak etkinleştirilen çeşitli kimlik avı önleme özellikleriyle birlikte gelir, ancak bazı kimlik avı iletileri posta kutularınıza yine de etkinleştirilmiş olabilir. Bu konu başlığında, kimlik avı iletisiyle ilgili bir iletinin neden iletide yer yaptığını keşfetmek için neler yapabilirsiniz ve Microsoft 365 yanlışlıkla işleri kötüye hale göndermeden, Microsoft 365 koruma ayarlarını değiştirmek için neler _yapabilirsiniz_.
+Microsoft 365, varsayılan olarak etkinleştirilen çeşitli kimlik avı önleme özellikleriyle birlikte gelse de, bazı kimlik avı iletilerinin posta kutularınıza ulaşmış olması mümkündür. Bu konu başlığı altında, bir kimlik avı iletisinin neden geçtiğini keşfetmek için yapabilecekleriniz ve Microsoft 365 kuruluşunuzdaki kimlik avı önleme ayarlarını _yanlışlıkla kötü hale getirmeden_ ayarlamak için yapabilecekleriniz açıklanmaktadır.
 
-## <a name="first-things-first-deal-with-any-compromised-accounts-and-make-sure-you-block-any-more-phishing-messages-from-getting-through"></a>Her şey ilk olarak, güvenliği tehlikeye atılmış hesaplarla ilgilenin ve daha fazla kimlik avı iletilerinin engellemeye devam
+## <a name="first-things-first-deal-with-any-compromised-accounts-and-make-sure-you-block-any-more-phishing-messages-from-getting-through"></a>Öncelikle güvenliği aşılmış hesaplarla ilgilenin ve diğer kimlik avı iletilerinin üzerinden geçmelerini engellediğinizden emin olun
 
-Kimlik avı iletisi sonucunda alıcının hesabı tehlikeye atılmışsa, Kimlik avı iletisinde güvenliği tehlikeye atılmış bir e-posta hesabını [Microsoft 365](responding-to-a-compromised-email-account.md).
+Kimlik avı iletisi nedeniyle bir alıcının hesabının gizliliği tehlikeye girdiyse, [Microsoft 365'da güvenliği aşılmış bir e-posta hesabını yanıtlama'daki](responding-to-a-compromised-email-account.md) adımları izleyin.
 
-Aboneliğiniz Microsoft Defender for Office 365'ı da dahil ediyorsa, [kimlik avı Office 365](office-365-ti.md) diğer kullanıcıları belirlemek için Tehdit Zekası'Office 365 kullanabilirsiniz. Kimlik avı iletilerini engellemek için ek seçenekleriniz vardır:
+Aboneliğinizde Office 365 için Microsoft Defender varsa, kimlik avı iletisini de alan diğer kullanıcıları belirlemek için [Office 365 Tehdit Bilgileri'ni](office-365-ti.md) kullanabilirsiniz. Kimlik avı iletilerini engellemek için ek seçenekleriniz vardır:
 
-- [Kasa için Microsoft Defender'daki Office 365](set-up-safe-links-policies.md)
+- [Office 365 için Microsoft Defender'da bağlantıları Kasa](set-up-safe-links-policies.md)
 
-- [Kasa için Microsoft Defender'daki Ekleri Office 365](set-up-safe-attachments-policies.md)
+- [Office 365 için Microsoft Defender'da Ekleri Kasa](set-up-safe-attachments-policies.md)
 
-- [Kimlik avı için Microsoft Defender'da kimlik avı Office 365](configure-mdo-anti-phishing-policies.md). Gelişmiş kimlik avı eşiklerini standarttan Agresif, Daha saldırgan veya En saldırgan ilkeye geçici  olarak **artıry defterine getirebilirsiniz**.
+- [Office 365 için Microsoft Defender kimlik avı önleme ilkeleri](configure-mdo-anti-phishing-policies.md). İlkedeki **Gelişmiş kimlik avı eşiklerini** **Standart,** **Daha agresif** veya **En agresif** olarak geçici olarak artırabileceğinizi unutmayın.
 
-Yeni uygulama için bu Office 365 Defender'ın açık olduğunu doğrulayın.
+Bu Office 365 için Defender özelliklerinin açık olduğunu doğrulayın.
 
-## <a name="report-the-phishing-message-to-microsoft"></a>Kimlik avı iletisi Microsoft'a bildirme
+## <a name="report-the-phishing-message-to-microsoft"></a>Kimlik avı iletisini Microsoft'a bildirme
 
-Kimlik avı iletilerini raporlamak, aynı anda tüm müşterileri korumak için kullanılan filtreleri ayarlama Microsoft 365. Yönergeler için bkz. [İletileri ve dosyaları Microsoft'a bildirme](report-junk-email-messages-to-microsoft.md).
+Kimlik avı iletilerini raporlamak, Microsoft 365'daki tüm müşterileri korumak için kullanılan filtrelerin ayarlanmasında yararlıdır. Yönergeler için bkz. [İletileri ve dosyaları Microsoft'a bildirme](report-junk-email-messages-to-microsoft.md).
 
-## <a name="inspect-the-message-headers"></a>İleti üst bilgilerini denetleme
+## <a name="inspect-the-message-headers"></a>İleti üst bilgilerini inceleme
 
-Daha fazla kimlik avı iletisine neden olan sorunlardan korunmak için, kimlik avı iletisi için bir şeyler olup olmadığını görmek üzere kimlik avı iletisi üst bilgilerini inceebilirsiniz. Başka bir deyişle, ileti üst bilgilerini incelemeniz, kimlik avı iletilerine izin veren kuruluşta yer alan tüm ayarları tanımlamanıza yardımcı olabilir.
+Daha fazla kimlik avı iletisinin gelmesini önlemek için kendiniz yapabileceğiniz bir şey olup olmadığını görmek için kimlik avı iletisinin üst bilgilerini inceleyebilirsiniz. Başka bir deyişle, iletilerin üst bilgilerini incelemek, kuruluşunuzda kimlik avı iletilerine izin vermekle sorumlu olan tüm ayarları belirlemenize yardımcı olabilir.
 
-Özellikle, İleti üst bilgisinde İstenmeyen Posta Filtreleme Kararının (SFV) istenmeyen posta veya kimlik avı için atlanan filtrelemeyle ilgili göstergeler için **X-Forefront-Antispam-Report** üst bilgi alanını denetlemeniz gerekir. Filtrelemeyi atlayıp `SCL:-1`atlamayı tercih edilen iletilerin bir girdisi olur; başka bir ifadeyle, hizmet tarafından belirlenen istenmeyen posta veya kimlik avı kararlarını geçersiz kılınarak bu iletiye izin verilir. İleti üstbilgilerini ve kullanılabilir tüm istenmeyen posta önleme ve kimlik avı önleme ileti üst bilgilerini içeren tam liste hakkında daha fazla bilgi için bkz. Microsoft 365'de İstenmeyen posta önleme [ileti üst bilgileri](anti-spam-message-headers.md).
+Özellikle, İstenmeyen Posta Filtreleme Kararı (SFV) değerinde istenmeyen posta veya kimlik avı için atlanan filtrelemenin göstergeleri için ileti üst bilgilerindeki **X-Forefront-Antispam-Report** üst bilgi alanını denetlemeniz gerekir. Filtrelemeyi atlayan iletilerin girdisi `SCL:-1`olur. Bu, ayarlarınızdan birinin hizmet tarafından belirlenen istenmeyen posta veya kimlik avı kararlarını geçersiz kılarak bu iletiye izin verdiği anlamına gelir. İleti üst bilgilerini alma hakkında daha fazla bilgi ve tüm kullanılabilir istenmeyen posta önleme ve kimlik avı önleme ileti üst bilgilerinin tam listesi için bkz. [Microsoft 365'da istenmeyen posta önleme ileti üst bilgileri](anti-spam-message-headers.md).
 
-## <a name="best-practices-to-stay-protected"></a>Korunmak için en iyi yöntemler
+## <a name="best-practices-to-stay-protected"></a>Korunmaya yönelik en iyi yöntemler
 
-- Aylık olarak, güvenli puanı [çalıştırarak](../defender/microsoft-secure-score.md) kuruluş güvenlik ayarlarını değerlendirin.
+- Kuruluşunuzun güvenlik ayarlarını değerlendirmek için aylık olarak [Güvenli Puan'ı](../defender/microsoft-secure-score.md) çalıştırın.
 
-- Yanlışlıkla karantinaya alınan veya izin verilen iletiler için, bu iletileri Tehdit Gezgini'nde ve gerçek zamanlı algılamalarda [aramanızı öneririz](threat-explorer.md). Gönderene, alıcıya veya ileti kimliğine göre aramaabilirsiniz. İletiyi bu gönderdikten sonra, konuya tıklayarak ayrıntılara gidin. Karantinaya alınmış bir ileti için, "algılama teknolojisi"nin ne olduğunu bakın; böylece geçersiz kılmak için uygun yöntemi kullanabilirsiniz. İzin verilen bir ileti için, iletiye izin verilen ilkeyi görmek için bakın.
+- Yanlışlıkla karantinaya alınan iletiler veya izin verilen iletiler için [Tehdit Gezgini'nde ve gerçek zamanlı algılamalarda](threat-explorer.md) bu iletileri aramanızı öneririz. Gönderene, alıcıya veya ileti kimliğine göre arama yapabilirsiniz. İletiyi buldukktan sonra, konuya tıklayarak ayrıntılara gidin. Karantinaya alınmış bir ileti için, geçersiz kılmak için uygun yöntemi kullanabilmeniz için "algılama teknolojisinin" ne olduğuna bakın. İzin verilen bir ileti için, iletiye hangi ilkenin izin verdiğini görün.
 
-- Sahte adresli gönderenlerden gelen e-postalar (iletinin Gönderen adresi iletinin kaynağıyla eşleşmez) Office 365 için Defender'da kimlik avı olarak sınıflandırılır. Bazen de kimliği doğru olan bir iletidir ve bazen kullanıcılar kimliği doğruya alınmış belirli bir gönderenden gelen iletilerin karantinaya alınmasını istemez. Kullanıcılar üzerindeki etkiyi en aza indirmek için, bilgi oturum açma bilgileri içgörüsini [, Kiracı](learn-about-spoof-intelligence.md) İzin Ver [/](tenant-allow-block-list.md)Engelleme Listesi'nin **Spoof** sekmesi ve Oturum Açma algılamaları raporunu düzenli [aralıklarla gözden geçirebilirsiniz](view-email-security-reports.md#spoof-detections-report). İzin verilen ve kimlik sahtesi yapılmış gönderenleri gözden geçirerek gerekli geçersiz kılmaları bir kez yaptıktan sonra, kimlik avı ilkeleri içinde kimlik avı önleme ilkeleri içinde şüpheli iletileri kullanıcının Gereksiz [E-posta](set-up-anti-phishing-policies.md#spoof-settings) klasörüne teslim etmek yerine karantinaya alma için yapılandırma konusunda güvenebilirsiniz.
+- Sahte gönderenlerden gelen e-postalar (iletinin Kimden adresi iletinin kaynağıyla eşleşmiyor) Office 365 için Defender kimlik avı olarak sınıflandırılır. Bazen sahtekarlık zararsızdır ve bazen kullanıcılar sahte gönderenin belirli iletilerinin karantinaya alınmasına izin vermez. Kullanıcılar üzerindeki etkiyi en aza indirmek için kimlik [sahtekarı zekası içgörülerini](learn-about-spoof-intelligence.md), [Kiracı İzin Ver/Engelle Listesi'ndeki](tenant-allow-block-list.md) **Kimlik Sahtekarı** sekmesini ve [Kimlik Sahtekarı algılamaları raporunu düzenli aralıklarla](view-email-security-reports.md#spoof-detections-report) gözden geçirin. İzin verilen ve engellenen kimlik sahtekarlığı gönderenleri gözden geçirdikten ve gerekli geçersiz kılmaları yaptıktan sonra, kimlik [avı önleme ilkelerinde kimlik sahtekarlığı zekasını](set-up-anti-phishing-policies.md#spoof-settings) şüpheli iletileri kullanıcının Gereksiz E-posta klasörüne teslim etmek yerine **Karantinaya** almak üzere yapılandırabileceğinizden emin olabilirsiniz.
 
-- Sizin için Microsoft Defender'da Kimliğe Bürünme (etki alanı veya kullanıcı) için yukarıdaki adımı Office 365. Kimliğe Bürünme raporu Threat **Management** \> **Dashboard Analizler** \> **.**
+- Office 365 için Microsoft Defender'de Kimliğe Bürünme (etki alanı veya kullanıcı) için yukarıdaki adımı yineleyebilirsiniz. Kimliğe Bürünme raporu **Tehdit Yönetimi** \> **Panosu** \> **Analizler** altında bulunur.
 
-- Tehdit Koruması Durumu raporunu [düzenli aralıklarla gözden geçirebilirsiniz](view-reports-for-mdo.md#threat-protection-status-report).
+- [Tehdit Koruması Durumu raporunu](view-reports-for-mdo.md#threat-protection-status-report) düzenli aralıklarla gözden geçirin.
 
-- Bazı müşteriler İstenmeyen posta önleme ilkelerinde Gönderene izin ver veya Etki alanına izin ver listesine kendi etki alanlarını koyarak kimlik avı iletilerine yanlışlıkla izin verir. Bu yapılandırma bazı yasal iletilere izin verse de, normalde istenmeyen posta ve/veya kimlik avı filtreleri tarafından engellenmiş kötü amaçlı iletilere de izin verecek. Etki alanına izin yerine, temel sorunu düzeltmeniz gerekir.
+- Bazı müşteriler istenmeyen posta önleme ilkelerinde kendi etki alanlarını Gönderene izin ver veya Etki alanına izin ver listesine koyarak kimlik avı iletilerine yanlışlıkla izin verir. Bu yapılandırma bazı meşru iletilere izin verecek olsa da, normalde istenmeyen posta ve/veya kimlik avı filtreleri tarafından engellenecek kötü amaçlı iletilere de izin verir. Etki alanına izin vermek yerine, temel alınan sorunu düzeltmeniz gerekir.
 
-  Microsoft 365 (yanlış pozitif sonuçlar) tarafından engellenen ve etki alanınıza gönderenleri içeren geçerli iletilerle başa çıkarmanın en iyi yolu, tüm e-posta etki alanlarınız için DNS'deki SPF, DKIM ve DMARC kayıtlarını tam ve  tamamen yapılandırmaktır:
+  Etki alanınızdaki gönderenleri içeren Microsoft 365 (hatalı pozitifler) tarafından engellenen meşru iletilerle başa çıkmanın en iyi yolu _, tüm_ e-posta etki alanlarınız için DNS'deki SPF, DKIM ve DMARC kayıtlarını tamamen ve tamamen yapılandırmaktır:
 
-  - SPF kaydınızı, etki _alanınız_ içinde yer alan gönderenler için tüm e-posta kaynaklarını tanım doğrula (üçüncü taraf hizmetleri unutmayın!).
+  - SPF kaydınızın etki alanınızdaki gönderenler için _tüm_ e-posta kaynaklarını tanımladığını doğrulayın (üçüncü taraf hizmetlerini unutmayın!).
 
-  - Yetkisiz gönderenlerin, bunu yapacak şekilde yapılandırılmış e-posta sistemleri tarafından reddedilirken emin olmak için başarısız olun (\-hepsi). Kimlik [bilgisi bilgi](learn-about-spoof-intelligence.md) içgörülerini kullanarak etki alanlarınızı kullanan gönderenleri tanımlayabilir ve böylelikle SPF kaydınıza yetkili üçüncü taraf gönderenleri dahil edinebilirsiniz.
+  - Yetkisiz gönderenlerin bunu yapacak şekilde yapılandırılmış e-posta sistemleri tarafından reddedildiğinden emin olmak için sabit başarısız\- (tümü) kullanın. SPF kaydınıza yetkili üçüncü taraf gönderenleri dahil edebilmeniz için, etki alanınızı kullanan gönderenleri tanımlamaya yardımcı olması için kimlik sahtekarlık [bilgileri içgörülerini](learn-about-spoof-intelligence.md) kullanabilirsiniz.
 
   Yapılandırma yönergeleri için bkz:
 
-  - [SPF'yi, sanallık engellemeye yardımcı olacak şekilde ayarlama](set-up-spf-in-office-365-to-help-prevent-spoofing.md)
+  - [Kimlik sahtekarlığını önlemeye yardımcı olmak için SPF'yi ayarlama](set-up-spf-in-office-365-to-help-prevent-spoofing.md)
 
-  - [Özel etki alanınıza gönderilen giden e-postayı doğrulamak için DKIM kullanma](use-dkim-to-validate-outbound-email.md)
+  - [Özel etki alanınıza gönderilen giden e-postayı doğrulamak için DKIM'yi kullanma](use-dkim-to-validate-outbound-email.md)
 
   - [E-postayı doğrulamak için DMARC kullanma](use-dmarc-to-validate-email.md)
 
-- Mümkün olduğunda, etki alanınız için e-postayı doğrudan e-posta adresinize Microsoft 365. Başka bir deyişle, Microsoft 365 etki alanının MX kaydını söz Microsoft 365. Exchange Online Protection (EOP), bulut kullanıcılarınız için posta doğrudan posta hizmetine teslim edilirken en iyi korumayı Microsoft 365. EOP'nin önünde üçüncü taraf bir e-posta sistemi kullanıyorsanız, Bağlayıcılar için Gelişmiş Filtreleme'i kullanın. Yönergeler için bkz. [Exchange Online'ta Bağlayıcılar için İyileştirilmiş Filtreleme](/Exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors).
+- Mümkün olduğunda, etki alanınız için doğrudan Microsoft 365 e-posta göndermenizi öneririz. Başka bir deyişle, Microsoft 365 etki alanınızın MX kaydını Microsoft 365 işaret edin. Exchange Online Protection (EOP), postaları doğrudan Microsoft 365 teslim edildiğinde bulut kullanıcılarınız için en iyi korumayı sağlayabilir. EOP'nin önünde bir üçüncü taraf e-posta hijyen sistemi kullanmanız gerekiyorsa Bağlayıcılar için Gelişmiş Filtreleme'yi kullanın. Yönergeler için bkz. [Exchange Online'da Bağlayıcılar için Gelişmiş Filtreleme](/Exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors).
 
-- Kullanıcıların iletileri [Microsoft'a bildirmesi](enable-the-report-message-add-in.md) için Rapor İletisi [](enable-the-report-phish-add-in.md) eklentiini veya Kimlik Avını Bildir eklentilerini kullanmaları gerekir. Bu eklenti sistemimizi eğitebilirsiniz. Yöneticiler, Yönetici Gönderimi [yeteneklerine de sahip](admin-submission.md) olması gerekir.
+- Kullanıcılar, iletileri [Microsoft'a bildirmek için Rapor İletisi eklentisini](enable-the-report-message-add-in.md) veya [Rapor Kimlik Avı eklentisini](enable-the-report-phish-add-in.md) kullanmalıdır ve bu da sistemimizi eğitebilir. Yöneticiler ayrıca [Yönetici Gönderimi](admin-submission.md) özelliklerinden de yararlanmalıdır.
 
-- Multi factor authentication (MFA), güvenliği ihlal edilmiş hesapları önlemek için iyi bir yol sağlar. Tüm kullanıcılarınız için MFA'nın etkinleştirilmesini kesinlikle göz önünde bulundurabilirsiniz. Aşamalı bir yaklaşım için, MFA'yi herkes için etkinleştirmeden önce en hassas kullanıcılarınız (yöneticiler, yöneticiler vb.) için MFA'yi etkinleştirerek çalışmaya başlayabilirsiniz. Yönergeler için bkz [. Çok faktörlü kimlik doğrulamasını ayarlama](../../admin/security-and-compliance/set-up-multi-factor-authentication.md).
+- Çok faktörlü kimlik doğrulaması (MFA), güvenliği aşılmış hesapları önlemenin iyi bir yoludur. Tüm kullanıcılarınız için MFA'yi etkinleştirmeyi kesinlikle göz önünde bulundurmalısınız. Aşamalı bir yaklaşım için, herkes için MFA'yı etkinleştirmeden önce en hassas kullanıcılarınız (yöneticiler, yöneticiler vb.) için MFA'yı etkinleştirerek başlayın. Yönergeler için bkz. [Çok faktörlü kimlik doğrulamasını ayarlama](../../admin/security-and-compliance/set-up-multi-factor-authentication.md).
 
-- Dış alıcılara iletme kuralları genellikle saldırganlar tarafından verileri ayıklamak için kullanılır. Dış **alıcılara iletme kurallarını bulmak ve hatta** engellemek için [Microsoft Güvenli Puanı'nın](../defender/microsoft-secure-score.md) Posta kutusu iletme kurallarını gözden geçir bilgilerini kullanın. Daha fazla bilgi için bkz [. Güvenli Puanla İstemci Dış Yönlendirme Kurallarını Azaltma](/archive/blogs/office365security/mitigating-client-external-forwarding-rules-with-secure-score).
+- Dış alıcılara iletme kuralları genellikle saldırganlar tarafından verileri ayıklamak için kullanılır. Kuralların dış alıcılara iletilmesini bulmak ve hatta engellemek için [Microsoft Güvenli Puanı'nda](../defender/microsoft-secure-score.md) **Posta kutusu iletme kurallarını gözden geçirme** bilgilerini kullanın. Daha fazla bilgi için bkz. [Güvenli Puan ile İstemci Dış İletme Kurallarını Azaltma](/archive/blogs/office365security/mitigating-client-external-forwarding-rules-with-secure-score).

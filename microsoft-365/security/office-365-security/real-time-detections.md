@@ -1,5 +1,5 @@
 ---
-title: Tehdit Gezgini ve Gerçek zamanlı algılamalar Office 365 için Microsoft Defender'da temel Office 365
+title: tehdit gezgini ve gerçek zamanlı algılamalar temelleri Office 365 için Microsoft Defender
 f1.keywords:
 - NOCSH
 ms.author: dansimp
@@ -12,22 +12,24 @@ ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
-description: Tehditleri verimli bir şekilde araştırmak ve yanıtlamak için Gezgin'i veya Gerçek zamanlı algılamaları kullanın.
+description: Tehditleri verimli bir şekilde araştırmak ve yanıtlamak için Gezgin veya Gerçek zamanlı algılamaları kullanın.
 ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 3b889649de7b56d6a1b5300ff323850a4e555b57
-ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
+ms.openlocfilehash: e7f3109048f3a4931d25029df3db9a3c217d6354
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "63775378"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65647435"
 ---
-# <a name="explorer-and-real-time-detections"></a>Explorer ve Gerçek zamanlı algılamalar
+# <a name="explorer-and-real-time-detections"></a>Gezgin ve Gerçek zamanlı algılamalar
 
-**Geçerli olduğu yer:**
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
+
+**Uygulandığı öğe**
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Bu makalede:
@@ -37,143 +39,143 @@ Bu makalede:
 - [Gerekli lisanslar ve izinler](#required-licenses-and-permissions)
 
 > [!NOTE]
-> Bu, **Gezgin'de (Tehdit** Gezgini olarak da bilinir), **e-posta** güvenliği ve Explorer ile Gerçek zamanlı algılamalar (araçlar arasındaki farklar ve bunları çalıştırmak için gereken izinler gibi) içeren **3** makalelik bir serinin bir bölümü. Bu dizide yer alan diğer iki makale de [Explorer'da](threat-hunting-in-threat-explorer.md) tehdit avı ve Explorer ile [E-posta güvenliğidir](email-security-in-microsoft-defender.md).
+> Bu, **Gezgin (Tehdit Gezgini olarak da bilinir)**, **e-posta güvenliği** ve **Gezgin ile Gerçek zamanlı algılama temelleri** (araçlar arasındaki farklar ve bunları çalıştırmak için gereken izinler gibi) hakkındaki **3 makalelik serinin** bir parçasıdır. Bu serideki diğer iki makale [Gezgin'de tehdit avcılığı ve Explorer](threat-hunting-in-threat-explorer.md) [ile E-posta güvenliğidir](email-security-in-microsoft-defender.md).
 
-Bu makalede, Gezgin ile gerçek zamanlı algılamalar raporlaması, Explorer ile güncelleştirilmiş deneyim ve eski ve yeni deneyimler arasında geçiş yapmak için gereklen lisanslar ile izinler arasında geçiş farkları açıklanmıştır.
+Bu makalede, Explorer ile gerçek zamanlı algılama raporlaması arasındaki fark, Explorer ile güncelleştirilmiş deneyim ve eski ve yeni deneyimler arasında geçiş yapabileceğiniz gerçek zamanlı algılamalar ile gerekli lisanslar ve izinler açıklanmaktadır.
 
-[Microsoft Defender for Office 365](defender-for-office-365.md) varsa ve izinlere sahipsiniz, tehditleri tespit etmek ve [](#required-licenses-and-permissions)düzeltmek için **Explorer'ı** (Tehdit Gezgini olarak da **bilinir) veya** Gerçek  zamanlı algılamaları kullanabilirsiniz.
+[Kuruluşunuzda Office 365 için Microsoft Defender](defender-for-office-365.md) varsa ve [izinlere](#required-licenses-and-permissions) sahipseniz, tehditleri algılamak ve düzeltmek için **Gezgin'i** (**Tehdit Gezgini** olarak da bilinir) veya **Gerçek zamanlı algılamaları** kullanabilirsiniz.
 
-aşağıdaki Microsoft 365 Defender portalında E-posta <https://security.microsoft.com>adresi & **gidin ve Gezgin'i** veya Gerçek  _zamanlı_ **algılamalar'ı seçin**. Doğrudan sayfaya gitmek için veya kullanın <https://security.microsoft.com/threatexplorer> <https://security.microsoft.com/realtimereports>.
+konumundaki Microsoft 365 Defender portalında<https://security.microsoft.com>**, E-posta & işbirliği'ne** gidin ve **Gezgin** _veya_ **Gerçek zamanlı algılamalar'ı** seçin. Doğrudan sayfaya gitmek için veya <https://security.microsoft.com/realtimereports>kullanın<https://security.microsoft.com/threatexplorer>.
 
-Bu araçlarla şunlarıabilirsiniz:
+Bu araçlarla şunları yapabilirsiniz:
 
-- Güvenlik özellikleri tarafından algılanan kötü amaçlı Microsoft 365 bakın.
-- Kimlik avı URL'sini görüntüden karar veri'ye tıklayın.
-- Gezgin'de bir görünümden otomatik bir araştırma ve yanıt işlemi başlatın.
-- Kötü amaçlı e-postaları ve daha fazlasını araştırabilirsiniz.
+- Bkz. Microsoft 365 güvenlik özellikleri tarafından algılanan kötü amaçlı yazılım.
+- Kimlik avı URL'sini görüntüleyin ve karar verilerine tıklayın.
+- Explorer'daki bir görünümden otomatik araştırma ve yanıt işlemi başlatın.
+- Kötü amaçlı e-postaları ve daha fazlasını araştırın.
 
 Daha fazla bilgi için bkz. [Explorer ile e-posta güvenliği](email-security-in-microsoft-defender.md).
 
 ## <a name="differences-between-explorer-and-real-time-detections"></a>Gezgin ile Gerçek zamanlı algılamalar arasındaki farklar
 
-- *Gerçek zamanlı algılamalar,* plan 1 için Defender'da bulunan Office 365 aracıdır. *Threat Explorer*, Plan 2'ye yönelik Defender'da bulunan bir tehdit Office 365 aracıdır.
-- Gerçek zamanlı algılamalar raporu, algılamaları gerçek zamanlı olarak görüntülemeye olanak sağlar. Threat Explorer bunu da yapar, ancak belirli bir saldırı için saldırı kampanyaları vurgulama gibi ek ayrıntılar sağlar ve güvenlik işlemleri ekiplerine tehditleri düzeltme (Otomatik Araştırma ve Yanıt soruşturmasını tetikleme dahil) olanağı [sağlar](automated-investigation-response-office.md).
-- Threat *Explorer'da* Tüm e-posta görünümü kullanılabilir, ancak Gerçek zamanlı algılamalar raporuna dahil değildir.
-- Zengin filtreleme özellikleri ve düzeltme eylemleri Threat Explorer'da yer almaktadır. Daha fazla bilgi için bkz. [Çevrimiçi Hizmet Office 365 için Microsoft Defender: Yeni planlar için Defender'da Office 365 kullanılabilirliği](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#feature-availability-across-advanced-threat-protection-atp-plans).
+- *Gerçek zamanlı algılamalar*, Office 365 için Defender Plan 1'de kullanılabilen bir raporlama aracıdır. *Tehdit Gezgini*, Office 365 için Defender Plan 2'de kullanılabilen bir tehdit avcılığı ve düzeltme aracıdır.
+- Gerçek zamanlı algılamalar raporu, algılamaları gerçek zamanlı olarak görüntülemenizi sağlar. Tehdit Gezgini bunu da yapar, ancak belirli bir saldırı için saldırı kampanyalarını vurgulama gibi ek ayrıntılar sağlar ve güvenlik operasyonları ekiplerine tehditleri düzeltme olanağı sağlar ( [Otomatik Araştırma ve Yanıt araştırmasını](automated-investigation-response-office.md) tetikleme dahil).
+- *Tüm e-posta* görünümü Tehdit Gezgini'nde kullanılabilir ancak Gerçek zamanlı algılamalar raporuna dahil değildir.
+- Tehdit Gezgini'ne zengin filtreleme özellikleri ve düzeltme eylemleri dahildir. Daha fazla bilgi için bkz. [Office 365 için Microsoft Defender Hizmet Açıklaması: Office 365 için Defender planlarda özellik kullanılabilirliği](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#feature-availability-across-advanced-threat-protection-atp-plans).
 
 ## <a name="updated-experience-for-explorer-and-real-time-detections"></a>Gezgin ve Gerçek zamanlı algılamalar için güncelleştirilmiş deneyim
 
-Tehdit Gezgini ve Gerçek zamanlı algılamalar deneyimi, modern erişilebilirlik standartlarına uygun hale getirmek ve iş akışını iyileştirmek için güncelleştirilir. Kısa bir süre için, eski deneyimle yeni deneyim arasında geçişabileceksiniz.  
+Tehdit Gezgini ve Gerçek zamanlı algılama deneyimi, modern erişilebilirlik standartlarıyla uyumlu olacak ve iş akışını iyileştirecek şekilde güncelleştirilir. Kısa bir süre için eski deneyimle yeni deneyim arasında geçiş yapabileceksiniz.  
 
 > [!NOTE]
-> Bu toplama yalnızca kendi hesabınıza etkiler ve kiracınız içindeki diğer herkesi etkilemez. 
+> Geçiş yalnızca hesabınızı etkiler ve kiracınızdaki diğer kişileri etkilemez. 
 
 Tehdit Gezgini ve Gerçek zamanlı algılamalar aşağıdaki görünümlere ayrılır:
 
-- *Tüm e-posta*: Office 365 için Defender tarafından analiz edilir ve hem iyi hem de kötü amaçlı e-postaları içerir. Bu özellik yalnızca Threat Explorer'da mevcuttur ve Gerçek zamanlı algılamalarda kullanılamaz. Varsayılan olarak, 30 gün'e kadar genişletilen iki günlük verileri gösterecek şekilde ayarlanmıştır. Tehdit Gezgini için de varsayılan görünüm bu olur.  
+- *Tüm e-postalar*: Office 365 için Defender tarafından analiz edilen tüm e-postaları gösterir ve hem iyi hem de kötü amaçlı e-postalar içerir. Bu özellik yalnızca Tehdit Gezgini'nde bulunur ve Gerçek zamanlı algılamalarda kullanılamaz. Varsayılan olarak, 30 güne kadar genişletilebilen iki günlük verileri gösterecek şekilde ayarlanır. Bu, Tehdit Gezgini için de varsayılan görünümdür.  
 
-- *Kötü amaçlı yazılım* görünümü: Kötü amaçlı yazılım tehdidinin tanım olduğu e-postaları gösterir. Bu, Gerçek zamanlı algılamalar için varsayılan görünümdir ve iki günlük verileri gösterir (30 gün'e genişletilir).  
+- *Kötü amaçlı yazılım görünümü: Kötü* amaçlı yazılım tehdidinin tanımlandığı e-postaları gösterir. Bu, Gerçek zamanlı algılamalar için varsayılan görünümdür ve iki günlük verileri gösterir (30 güne genişletilebilir).  
 
-- *Kimlik avı görünümü*: Kimlik avı tehdidinin tanım olduğu e-postaları gösterir.
+- *Kimlik avı görünümü*: Kimlik avı tehdidinin tanımlandığı e-postaları gösterir.
 
-- *İçerik kötü amaçlı yazılım* görünümü: Paylaşılan dosyalarda kimlik ya da yazılım OneDrive SharePoint kötü amaçlı algılamaları Teams. 
+- *İçerik kötü amaçlı yazılım görünümü*: OneDrive, SharePoint veya Teams aracılığıyla paylaşılan dosyalarda tanımlanan kötü amaçlı algılamaları gösterir. 
 
-Bu deneyimler içindeki yaygın bileşenler şu şekildedir:
+Bu deneyimlerdeki yaygın bileşenler şunlardır:
 
 - Filtreler
 
     - E-posta veya dosya özniteliklerine göre verileri görüntülemek için çeşitli filtreleri kullanabilirsiniz.  
 
-    - Varsayılan olarak, zaman filtresi kayıtlara uygulanır ve iki gün süreyle uygulanır.  
+    - Varsayılan olarak, zaman filtresi kayıtlara uygulanır ve iki gün boyunca uygulanır.  
 
-    - Birden çok filtre uyguluyorsanız, bunlar 'VE' modunda uygulanır ve gelişmiş filtreyi 'VEYA' moduna değiştirmek için kullanabilirsiniz.  
+    - Birden çok filtre uyguluyorsanız, bunlar 'AND' modunda uygulanır ve gelişmiş filtreyi kullanarak 'OR' moduna değiştirebilirsiniz.  
 
-    - Aynı filtre için birden çok değer eklemek üzere virgül kullanabilirsiniz.  
+    - Aynı filtre için birden çok değer eklemek için virgül kullanabilirsiniz.  
 
     > [!div class="mx-imgBorder"]
     > ![Gezgin filtreleri](../../media/explorer-new-experience-filters.png)
 
 - Grafikler
 
-    - Grafikler, filtrelere dayalı olarak verilerin görsel, toplu bir görünümünü sağlar. Verileri farklı boyutlara göre görüntülemek için farklı filtreler kullanabilirsiniz.  
+    - Grafikler, filtrelere göre verilerin görsel ve toplu bir görünümünü sağlar. Verileri farklı boyutlara göre görüntülemek için farklı filtreler kullanabilirsiniz.  
 
     > [!NOTE]
-    > Liste görünümünde bir girdi görüyorsanız bile, grafik görünümünde hiç sonuç görenemebilirsiniz. Filtre herhangi bir veri üretmezse bu durum ortaya olur. Örneğin, kötü amaçlı yazılım ailenizi filtrele uyguladıysanız ama temel alınan veride hiç kötü amaçlı e-posta yoksa, bu senaryo için kullanılabilir veri olmadığını iletisiyle de alabilirsiniz.  
+    > Liste görünümünde bir girdi görüyor olsanız bile grafik görünümünde hiçbir sonuç göremeyebilirsiniz. Filtre herhangi bir veri üretmezse bu durum ortaya çıkar. Örneğin, kötü amaçlı yazılım filtre ailesini uyguladıysanız ancak temel alınan verilerin kötü amaçlı e-postaları yoksa, bu senaryo için kullanılabilir veri yok iletisini görebilirsiniz.  
 
     > [!div class="mx-imgBorder"]
     > ![Gezgin grafik görünümü](../../media/explorer-new-experience-export-chart-data.png)
 
-- Sonuçlar kılavuzu  
+- Sonuç kılavuzu  
 
-    - Sonuçlar kılavuzu, uygulanan filtrelere göre e-posta sonuçlarını gösterir.  
+    - Sonuçlar kılavuzu, uyguladığınız filtrelere göre e-posta sonuçlarını gösterir.  
 
-    - Kiracıdaki yapılandırma kümesine bağlı olarak veriler UTC veya yerel saat diliminde gösterilir ve ilk sütunda saat dilimi bilgileri yer eder.  
+    - Kiracınızdaki yapılandırma kümesine bağlı olarak veriler UTC veya yerel saat diliminde gösterilir ve ilk sütunda saat dilimi bilgileri bulunur.  
 
-    - Liste görünümünden, Yeni pencerede aç simgesine tıklayarak tek tek **e-posta varlık sayfasına ulaşabilirsiniz** . 
+    - **Yeni pencerede aç** simgesine tıklayarak liste görünümünden tek tek e-posta varlığı sayfasına gidebilirsiniz. 
 
-    - Görünümlerinizi iyileştirmek için sütunları ekp veya kaldırmak için de özelleştirebilirsiniz.
+    - Ayrıca, görünümünüzü iyileştirmek için sütun eklemek veya kaldırmak için sütunlarınızı özelleştirebilirsiniz.
 
     > [!Note]
-    > Sonuç kümenizi en üst düzeye *çıkarmak için Grafik* Görünümü *ile Liste Görünümü* arasında geçişabilirsiniz.  
+    > Sonuç kümenizi en üst düzeye çıkarmak için *Grafik Görünümü* ile *Liste Görünümü* arasında geçiş yapabilirsiniz.  
 
     > [!div class="mx-imgBorder"]
     > ![Gezgin kılavuz görünümü](../../media/explorer-new-experience-list-chart-view.png)
 
-- Ayrıntılı uçarak çıkış  
+- Ayrıntılı açılır öğe  
 
-    - E-posta özet paneline (Konu sütunundaki girdiler), alıcı veya IP uç hakkında bilgi almak için köprülere tıkleyebilirsiniz.  
+    - E-posta özet paneline (Konu sütunundaki girdiler), alıcıya veya IP açılır menüsüne ulaşmak için köprülere tıklayabilirsiniz.  
 
-    - E-posta özeti paneli, eski e-posta uç şimdi çıkış yerini alır ve e-posta varlık paneline erişim yolu da sağlar.  
+    - E-posta özeti paneli, eski e-posta açılır öğesinin yerini alır ve ayrıca e-posta varlık paneline erişmek için bir yol sağlar.  
 
-    - IP, alıcı ve URL gibi tek tek varlık açılır tüm bilgileri aynı bilgileri yansıtabilir, ancak gereksinime bağlı olarak farklı bölümleri genişletme ve daraltma özelliğiyle, sekme tabanlı görünümde sunabilirsiniz.  
+    - IP, alıcı ve URL gibi tek tek varlık açılırları aynı bilgileri yansıtır, ancak tek bir sekme tabanlı görünümde sunulur ve gereksinime göre farklı bölümleri genişletme ve daraltma özelliği sunulur.  
 
-    - URL'ler gibi dışarı aktarmalar için, bu URL'yi içeren e-posta/tıklamaların tamamını görüntülemek için Tüm E-postayı Görüntüle veya Tüm Tıklamaları Görüntüle'yi tıklatmanın yanı sıra sonuç kümesini de dışarı aktarabilirsiniz.   
+    - URL'ler gibi açılır listelerde **Tüm E-postaları Görüntüle'ye** veya **Tüm Tıklamaları Görüntüle'ye** tıklayarak bu URL'yi içeren e-postaların/tıklamaların tamamını görüntüleyebilir ve sonuç kümesini dışarı aktarabilirsiniz.  
 
-- Eylemler
+- Eylem
 
-    - Tehdit Gezgini'nde, e-postayı silme gibi *düzeltme eylemlerini tetiklebilirsiniz*. Düzeltme, düzeltme sınırları ve düzeltmeyi izleme hakkında daha fazla bilgi için bkz. Kötü amaçlı [e-postaları düzeltme](remediate-malicious-email-delivered-office-365.md).  
+    - Tehdit Gezgini'nden *E-posta silme* gibi düzeltme eylemlerini tetikleyebilirsiniz. Düzeltme, düzeltme sınırları ve düzeltmeyi izleme hakkında daha fazla bilgi için bkz. [Kötü amaçlı e-postayı düzeltme](remediate-malicious-email-delivered-office-365.md).  
 
 - Dışarı aktarma
 
-    - Grafik ayrıntılarını dışarı **aktar için Grafik verilerini dışarı** aktar'ı tıklatın. Benzer şekilde, e-posta **ayrıntılarını dışarı aktar için E-posta** listesini dışarı aktar'a tıklayın.
+    - Grafik ayrıntılarını dışarı aktarmak için **Grafik verilerini** dışarı aktar'a tıklayabilirsiniz. Benzer şekilde, e-posta ayrıntılarını dışarı aktarmak için **E-posta listesini** dışarı aktar'a tıklayın.
 
-    - E-posta listesi için en çok 200.000 kaydı dışarı aktarabilirsiniz. Bununla birlikte, sistem performansının daha iyi olması ve indirme süresinin azalması için çeşitli e-posta filtrelerini kullansanız gerekir.
+    - E-posta listesi için en fazla 200.000 kayıt dışarı aktarabilirsiniz. Ancak, daha iyi sistem performansı ve daha düşük indirme süresi için çeşitli e-posta filtreleri kullanmanız gerekir.
 
     > [!div class="mx-imgBorder"]
     > ![Grafik verilerini dışarı aktarma](../../media/explorer-new-experience-export-chart-data.png)
 
-Bu özelliklere ek olarak, İlk URL'ler, En çok tıklamalar *, En* çok hedefli kullanıcılar ve E-posta kaynağı *gibi* güncelleştirilmiş deneyimleri *de edinebilirsiniz*. *En çok url'ler*, En çok  tıklar ve En çok hedefli kullanıcılar, Gezgin'de uygulamış olunan filtreye göre daha fazla filtre uygulanabilir.  
+Bu özelliklere ek olarak *, Üst URL'ler*, *En çok tıklamalar*, *En çok hedeflenen kullanıcılar* ve *E-posta kaynağı* gibi güncelleştirilmiş deneyimler de elde edersiniz. *En çok kullanılan URL'ler*, *En çok tıklanan tıklamalar* ve *En çok hedeflenen kullanıcılar* , Gezgin'de uyguladığınız filtreye göre daha fazla filtrelenebilir. 
 
 ## <a name="required-licenses-and-permissions"></a>Gerekli lisanslar ve izinler
 
-Explorer veya [Gerçek zamanlı algılamaları Office 365](defender-for-office-365.md) için Microsoft Defender'a sahip olmak gerekir:
+Gezgin veya Gerçek zamanlı algılamalardan birini kullanmak için [Office 365 için Microsoft Defender](defender-for-office-365.md) sahip olmanız gerekir:
 
-- Explorer, plan 2 için Defender'Office 365 dahil edilir.
-- Gerçek zamanlı algılamalar raporu, Plan 1'den Office 365 Defender'a dahildir.
+- Explorer yalnızca Office 365 için Defender Plan 2'ye dahildir.
+- Gerçek zamanlı algılamalar raporu Office 365 için Defender Plan 1'e dahildir.
 
-Güvenlik İşlemleri ekipleri, Güvenlik İşlemleri ekiplerinin Office 365 için Defender ile korunması gereken tüm kullanıcılar için lisans ataması ve Gezgin'in ve Gerçek zamanlı algılamaların lisanslı kullanıcılar için algılama verilerini göstereceklerini biliyor olması gerekir.
+Güvenlik operasyonları ekiplerinin, Office 365 için Defender tarafından korunması gereken tüm kullanıcılara lisans ataması ve Gezgin ve Gerçek zamanlı algılamaların lisanslı kullanıcılar için algılama verilerini gösterdiğinin farkında olması gerekir.
 
-Gezgin'i veya Gerçek *zamanlı algılamaları* görüntülemek ve kullanmak için aşağıdaki izinlere ihtiyacınız vardır:
+Gezgin *veya* Gerçek zamanlı algılamaları görüntülemek ve kullanmak için aşağıdaki izinlere ihtiyacınız vardır:
 
-- Office 365 için Defender'da:
+- Office 365 için Defender içinde:
   - Kuruluş Yönetimi
-  - Güvenlik Yöneticisi (bu, Azure Active Directory merkezinden atanabilir)<https://aad.portal.azure.com>
-  - Güvenlik Okuyucu
+  - Güvenlik Yöneticisi (bu, Azure Active Directory yönetim merkezinde (<https://aad.portal.azure.com>) atanabilir
+  - Güvenlik Okuyucusu
 - Exchange Online:
   - Kuruluş Yönetimi
-  - View-Only Yönetimi
-  - View-Only'i seçin
+  - View-Only Kuruluş Yönetimi
+  - alıcıları View-Only
   - Uyumluluk Yönetimi
 
 Roller ve izinler hakkında daha fazla bilgi edinmek için aşağıdaki makalelere bakın:
 
-- [Microsoft 365 Defender portalında izinler](permissions-microsoft-365-security-center.md)
-- [Web'de Exchange Online](/e/exchange/permissions-exo/permissions-exo)
+- [Microsoft 365 Defender portalındaki izinler](permissions-microsoft-365-security-center.md)
+- [Exchange Online'de izinler](/e/exchange/permissions-exo/permissions-exo)
 
 ## <a name="more-information"></a>Daha fazla bilgi
 
-- [Threat Explorer e-posta varlık sayfasında e-posta ayrıntılarını toplar](mdo-email-entity-page.md)
-- [Teslim edilen kötü amaçlı e-postaları bulma ve araştırma](investigate-malicious-email-that-was-delivered.md)
-- [SharePoint Online, OneDrive ve Microsoft Teams'de algılanan kötü amaçlı dosyaları Microsoft Teams](mdo-for-spo-odb-and-teams.md)
+- [Tehdit Gezgini, e-posta varlığı sayfasında e-posta ayrıntılarını toplar](mdo-email-entity-page.md)
+- [Teslim edilen kötü amaçlı e-postayı bulma ve araştırma](investigate-malicious-email-that-was-delivered.md)
+- [SharePoint Online, OneDrive ve Microsoft Teams'da algılanan kötü amaçlı dosyaları görüntüleme](mdo-for-spo-odb-and-teams.md)
 - [Tehdit koruması durum raporu](view-email-security-reports.md#threat-protection-status-report)
-- [Microsoft Tehdit Koruması'da otomatik araştırma ve yanıt](automated-investigation-response-office.md)
+- [Microsoft Tehdit Koruması'nda otomatik araştırma ve yanıt](automated-investigation-response-office.md)

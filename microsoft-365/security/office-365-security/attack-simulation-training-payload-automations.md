@@ -1,5 +1,5 @@
 ---
-title: Saldırı benzetimi eğitimi için Yük otomasyonları
+title: Saldırı simülasyonu eğitimi için yük otomasyonları
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -10,75 +10,77 @@ ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
-description: Yöneticiler, Plan 2'de Saldırı benzetimi eğitimi için otomatik benzetimleri toplamak ve başlatmak için yük otomasyonlarını (yük toplama) Office 365 için Microsoft Defender öğrenebilir.
+description: Yöneticiler, Office 365 için Microsoft Defender Plan 2'de Saldırı simülasyonu eğitimi için otomatik simülasyonları toplamak ve başlatmak için yük otomasyonlarını (yük toplama) kullanmayı öğrenebilir.
 ms.technology: mdo
-ms.openlocfilehash: aa223ab1abda110e32a9b9dc55e9dc76a1983321
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 5b008dc25ee3b705f212b1fac1bf3779f1de8bda
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64468445"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65647523"
 ---
-# <a name="payload-automations-for-attack-simulation-training"></a>Saldırı benzetimi eğitimi için Yük otomasyonları
+# <a name="payload-automations-for-attack-simulation-training"></a>Saldırı simülasyonu eğitimi için yük otomasyonları
 
-**Plan** [2 Office 365 için Microsoft Defender için geçerlidir](defender-for-office-365.md)
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-Microsoft 365 E5 veya Office 365 için Microsoft Defender Plan 2'de Saldırı benzetim eğitimi'de, yük otomasyonları (yük toplama olarak da _bilinir) kuruluş_ kullanıcılar tarafından bildirilen gerçek dünyaya yönelik kimlik avı iletilerinden bilgi toplar. Bu iletilerin sayısı büyük olasılıkla organizasyonda az olsa da, kimlik avı saldırılarında (örneğin, alıcılar, sosyal mühendislik tekniği, gönderen bilgileri, vb.) bakacak koşulları belirtebilirsiniz. Saldırı benzetimi eğitimi ardından, saldırıda kullanılan mesaj ve yükü hedefli kullanıcılara zararsız benzetimler yapmak için otomatik olarak taklit eder.
+[Office 365 için Microsoft Defender plan 2](defender-for-office-365.md) **için geçerlidir**
+
+Microsoft 365 E5 veya Office 365 için Microsoft Defender Plan 2'de saldırı simülasyonu eğitimi bölümünde, yük otomasyonları (_yük toplama_ olarak da bilinir) kuruluşunuzdaki kullanıcılar tarafından bildirilen gerçek dünya kimlik avı iletilerinden bilgi toplar. Kuruluşunuzda bu iletilerin sayısı büyük olasılıkla düşük olsa da, kimlik avı saldırılarında aranacak koşulları belirtebilirsiniz (örneğin, alıcılar, sosyal mühendislik tekniği, gönderen bilgileri vb.). Saldırı simülasyonu eğitimi, hedeflenen kullanıcılara zararsız simülasyonları otomatik olarak başlatmak için saldırıda kullanılan iletileri ve yükleri taklit eder.
 
 Yük otomasyonu oluşturmak için aşağıdaki adımları uygulayın:
 
-1. Aşağıdaki Microsoft 365 Defender portalında E-posta <https://security.microsoft.com/>ve işbirliği **&** \> **Saldırı benzetimi eğitimi** \> **Payload otomasyonları sekmesine** gidin.
+1. konumundaki Microsoft 365 Defender portalında<https://security.microsoft.com/>**, E-posta & işbirliği** \> **Saldırı benzetimi eğitimi** \> **Yük otomasyonları** sekmesine gidin.
 
-   Doğrudan **Payload otomasyonları sekmesine gitmek** için kullanın <https://security.microsoft.com/attacksimulator?viewid=payloadautomation>.
+   Doğrudan **Yük otomasyonları** sekmesine gitmek için kullanın <https://security.microsoft.com/attacksimulator?viewid=payloadautomation>.
 
-2. Yük **otomasyonları sekmesinde Otomasyon** simgesi oluştur'a ![tıklayın.](../../media/m365-cc-sc-create-icon.png) **Otomasyon oluşturun**.
+2. **Yük otomasyonları** sekmesinde Otomasyon oluştur simgesi'ni seçin![.](../../media/m365-cc-sc-create-icon.png) **Otomasyon oluşturma**.
 
-   :::image type="content" source="../../media/attack-sim-training-sim-automations-create.png" alt-text="Yazılım portalının Saldırı benzetimi eğitimi'nin Payload otomasyon sekmesindeki Benzetim Microsoft 365 Defender düğmesi" lightbox="../../media/attack-sim-training-sim-automations-create.png":::
+   :::image type="content" source="../../media/attack-sim-training-sim-automations-create.png" alt-text="Microsoft 365 Defender portalındaki Saldırı simülasyonu eğitimi'ndeki Yük otomasyonları sekmesindeki Simülasyon oluştur düğmesi" lightbox="../../media/attack-sim-training-sim-automations-create.png":::
 
-3. Oluşturma sihirbazı açılır. Bu makalenin kalan kalanında, sayfaları ve bunların içerdiği ayarlar açıklanmıştır.
+3. Oluşturma sihirbazı açılır. Bu makalenin geri kalanında sayfalar ve içerdikleri ayarlar açıklanmaktadır.
 
 > [!NOTE]
-> Oluşturma sihirbazı sırasında herhangi bir noktada, ilerlemenizi kaydetmek ve  yük otomasyonunu daha sonra yapılandırmaya devam etmek için Kaydet ve kapat'a tıklayabilir. Yük otomasyonları sekmesinden yük otomasyonunu seçerek ve sonra da Otomasyon simgesini düzenle'ye tıklayarak, kalan yerden  ![devamabilirsiniz.](../../media/m365-cc-sc-edit-icon.png) **Otomasyonu düzenleyin**.
+> Oluşturma sihirbazı sırasında herhangi bir noktada Kaydet **ve kapat'a** tıklayarak ilerlemenizi kaydedebilir ve yük otomasyonunu daha sonra yapılandırmaya devam edebilirsiniz. **Yük otomasyonları** sekmesinde yük otomasyonunu seçip Otomasyonu düzenle simgesine tıklayarak ![kaldığınız yerden devam edebilirsiniz.](../../media/m365-cc-sc-edit-icon.png) **Otomasyonu düzenleyin**.
 
 ## <a name="automation-name"></a>Otomasyon adı
 
-Otomasyon **adı sayfasında** aşağıdaki ayarları yapılandırabilirsiniz:
+**Otomasyon adı** sayfasında aşağıdaki ayarları yapılandırın:
 
 - **Ad**: Yük otomasyonu için benzersiz, açıklayıcı bir ad girin.
-- **Açıklama**: Yük otomasyonu için isteğe bağlı olarak ayrıntılı bir açıklama girin.
+- **Açıklama**: Yük otomasyonu için isteğe bağlı ayrıntılı bir açıklama girin.
 
-Bitirdikten sonra, Sonraki'ne **tıklayın**.
+İşiniz bittiğinde **İleri'ye** tıklayın.
 
 ## <a name="run-conditions"></a>Çalıştırma koşulları
 
-Çalıştırma **koşulları sayfasında** , otomasyonun ne zaman çalıştırıı belirleyen gerçek kimlik avı saldırısının koşullarını seçin.
+**Çalıştırma koşulları** sayfasında, otomasyonun ne zaman çalıştırılacağını belirleyen gerçek kimlik avı saldırısının koşullarını seçin.
 
-Her koşulu yalnızca bir kez kullanabilirsiniz. Birden çok koşullar, AND mantığı ( ve )\<Condition1\> kullanır \<Condition2\>.
+Her koşulu yalnızca bir kez kullanabilirsiniz. Birden çok koşul AND mantığını (\<Condition1\> ve \<Condition2\>) kullanır.
 
-![Koşul ekle simgesi.](../../media/m365-cc-sc-create-icon.png) **Koşul ekle'yi** seçin.
+![Koşul ekle simgesi.](../../media/m365-cc-sc-create-icon.png) **Koşul ekleyin**.
 
-- **Hayır. kampanyada hedeflenen kullanıcıların sayısı**: Aşağıdaki ayarları yapılandırma:
-  - **Eşittir**, **Küçükten küçük**, **Büyük**, Küçük **veya eşit** veya Büyük **ya da büyük ya da eşit**.
+- **No. kampanyada hedeflenen kullanıcıların** sayısı: Aşağıdaki ayarları yapılandırın:
+  - **Eşittir**, **Küçüktür**, **Büyüktür**, **Küçüktür veya eşittir** veya **Büyüktür veya eşittir**.
   - **Değer girin**: Kimlik avı kampanyası tarafından hedeflenen kullanıcı sayısı.
-- **Belirli bir kimlik avı tekniğine sahip** kampanyalar: Kullanılabilir değerlerden birini seçin:
-  - **Kimlik bilgileri toplama**
+- **Belirli bir kimlik avı tekniğine sahip kampanyalar**: Kullanılabilir değerlerden birini seçin:
+  - **Kimlik bilgisi toplama**
   - **Kötü amaçlı yazılım eki**
-  - **Ekin içinde bağlantı**
+  - **Ekteki bağlantı**
   - **Kötü amaçlı yazılım bağlantısı**
   - **Sürücüye göre URL**
-- **Belirli bir gönderen etki** alanı: Gönderenin e-posta etki alanı değerini girin (örneğin, Contoso.com).
-- **Belirli bir gönderen adı**: Gönderen adı değerini girin.
-- **Belirli bir gönderen e-posta** adresi: Gönderenin e-posta adresini girin.
-- **Belirli kullanıcı ve grup alıcıları**: Kullanıcının veya grubun adını veya e-posta adresini yazmaya başlayın. Görüntülendiğinde seçin.
+- **Belirli gönderen etki alanı**: Bir gönderen e-posta etki alanı değeri girin (örneğin, contoso.com).
+- **Belirli bir gönderen adı**: Bir gönderen adı değeri girin.
+- **Belirli bir gönderen e-postası**: Gönderen e-posta adresini girin.
+- **Belirli kullanıcı ve grup alıcıları**: Kullanıcının veya grubun adını veya e-posta adresini yazmaya başlayın. Göründüğünde seçin.
 
 Bir koşulu ekledikten sonra kaldırmak için ![Kaldır simgesi.](../../media/m365-cc-sc-delete-icon.png).
 
-Bitirdikten sonra, Sonraki'ne **tıklayın**.
+İşiniz bittiğinde **İleri'ye** tıklayın.
 
 ## <a name="review-automation"></a>Otomasyonu gözden geçirme
 
-Otomasyonu **gözden geçir** sayfasında, yük otomasyonu ile ilgili ayrıntıları gözden geçirebilirsiniz.
+**Otomasyonu gözden geçir** sayfasında yük otomasyonunuzun ayrıntılarını gözden geçirebilirsiniz.
 
-Bölümün içindeki **ayarları değiştirmek** için her bölümde Düzenle'yi seçebilirsiniz. Geri'ye **tıklar** veya sihirbazda belirli bir sayfayı seçersiniz.
+Bölümün içindeki ayarları değiştirmek için her bölümde **Düzenle'yi** seçebilirsiniz. Ya da **Geri'ye** tıklayabilir veya sihirbazdaki belirli bir sayfayı seçebilirsiniz.
 
-Bitirdikten sonra Gönder'e **tıklayın**.
+İşiniz bittiğinde **Gönder'e** tıklayın.

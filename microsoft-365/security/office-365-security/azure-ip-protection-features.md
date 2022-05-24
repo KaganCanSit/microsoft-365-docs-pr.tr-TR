@@ -19,22 +19,20 @@ ms.custom:
 description: Bu makalede, Azure Information Protection koruma özelliklerinde kullanıma sunulan değişiklikler açıklanmaktadır
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: dbfc21b879745567c9273c79356ff60e498d95ff
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 38dd1accf4641d6dfe3f66574b1072e2500cb914
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65130834"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65647831"
 ---
 # <a name="protection-features-in-azure-information-protection-rolling-out-to-existing-tenants"></a>Azure Information Protection mevcut kiracılara sunulan koruma özellikleri
-
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Uygulandığı öğe**
 - [Office 365 için Microsoft Defender plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Bilgilerinizi korumanın ilk adımına yardımcı olmak için, Temmuz 2018'den itibaren tüm Azure Information Protection uygun kiracılar azure Information Protection koruma özellikleri varsayılan olarak açıktır. Azure Information Protection koruma özellikleri daha önce Office 365 Rights Management veya Azure RMS olarak biliniyordu. Kuruluşunuzun Office bir E3 hizmet planı veya daha yüksek bir hizmet planı varsa artık bu özellikleri kullanıma sunduğumuzda Azure Information Protection aracılığıyla bilgileri korumaya başlarsınız.
+Bilgilerinizi korumanın ilk adımına yardımcı olmak için, Temmuz 2018'den itibaren tüm Azure Information Protection uygun kiracılar azure Information Protection koruma özellikleri varsayılan olarak açıktır. Azure Information Protection koruma özellikleri daha önce Office 365'da Rights Management veya Azure RMS olarak biliniyordu. Kuruluşunuzun Office bir E3 hizmet planı veya daha yüksek bir hizmet planı varsa artık bu özellikleri kullanıma sunduğumuzda Azure Information Protection aracılığıyla bilgileri korumaya başlarsınız.
 
 ## <a name="changes-beginning-july-1-2018"></a>1 Temmuz 2018'de başlayan değişiklikler
 
@@ -69,7 +67,7 @@ Hayır. Bu desteklenen bir dağıtım senaryosu değildir. Ek geri çevirme adı
 
 ## <a name="how-do-i-know-if-im-using-ad-rms"></a>AD RMS kullanıp kullanmadığım Nasıl yaparım??
 
-AD [RMS'yi dağıtıp dağıtmadığınızdan denetlemek için Active Directory Rights Management Services (AD RMS) varsa Ortamı Azure Rights Management için hazırlama](/azure/information-protection/deploy-use/prepare-environment-adrms) başlığı altındaki bu yönergeleri kullanın:
+ACTIVE DIRECTORY RIGHTS MANAGEMENT SERVICES [(AD RMS) varsa ortamı Azure Rights Management için hazırlama](/azure/information-protection/deploy-use/prepare-environment-adrms) başlığı altındaki yönergeleri kullanarak AD RMS dağıtıp dağıtmadığınıza bakın:
 
 1. İsteğe bağlı olsa da, çoğu AD RMS dağıtımı, etki alanı bilgisayarlarının AD RMS kümesini bulabilmesi için hizmet bağlantı noktasını (SCP) Active Directory'de yayımlar.
 

@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365'de otomatik bir araştırmanın sonuçlarını Microsoft 365
+title: otomatik araştırmanın sonuçlarını Microsoft 365
 keywords: AIR, autoIR, Uç Nokta için Microsoft Defender, otomatik, araştırma, düzeltme, eylemler
 f1.keywords:
 - NOCSH
@@ -15,84 +15,85 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
-description: Çalışma değerlendirmesinde otomatik bir soruşturma Microsoft 365 sonra, sonuçları ve önemli bulguları görüntüabilirsiniz.
+description: Microsoft 365'da otomatik bir araştırma sırasında ve sonrasında sonuçları ve önemli bulguları görüntüleyebilirsiniz.
 ms.date: 01/29/2021
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: bf9fe34a88444d9d8ec6dccf4b22a507e55dfb00
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: b99573f73d5b53b6ea0e8d0cd1e44b539fa47db9
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63680808"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65649087"
 ---
-# <a name="details-and-results-of-an-automated-investigation-in-microsoft-365"></a>Bir ekipte otomatik bir soruşturmanın ayrıntıları ve Microsoft 365
+# <a name="details-and-results-of-an-automated-investigation-in-microsoft-365"></a>Microsoft 365'da otomatik araştırmanın ayrıntıları ve sonuçları
 
-**Geçerli olduğu yer:**
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
+
+**Uygulandığı öğe**
 - [Office 365 için Microsoft Defender plan 2](defender-for-office-365.md)
-- [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Office 365 [için](office-365-air.md) [Microsoft Defender'da](defender-for-office-365.md) otomatik soruşturma Office 365, bu soruşturmayla ilgili ayrıntılar otomatik soruşturma işlemi sırasında ve sonrasında kullanılabilir. Gerekli izinlere sahipsiniz, bu ayrıntıları portalda Microsoft 365 Defender. Araştırma ayrıntıları size güncel durumu ve bekleyen eylemleri onaylama olanağı sağlar.
+[Office 365 için Microsoft Defender'de otomatik bir araştırma](office-365-air.md) gerçekleştiğinde, otomatik araştırma işlemi sırasında ve sonrasında bu araştırmayla ilgili ayrıntılar sağlanır.[](defender-for-office-365.md) Gerekli izinlere sahipseniz bu ayrıntıları Microsoft 365 Defender portalında görüntüleyebilirsiniz. Araştırma ayrıntıları size güncel durumu ve bekleyen eylemleri onaylama olanağı sağlar.
 
 > [!TIP]
-> Microsoft 365 Defender portalında yeni, birleşik soruşturma Microsoft 365 Defender göz atın. Daha fazla bilgi edinmek için bkz [. (Yenİ!) Birleşik araştırma sayfası](../defender/m365d-autoir-results.md#new-unified-investigation-page).
+> Microsoft 365 Defender portalındaki yeni, birleşik araştırma sayfasına göz atın. Daha fazla bilgi edinmek için bkz. [(YENİ!) Birleşik araştırma sayfası](../defender/m365d-autoir-results.md#new-unified-investigation-page).
 
-## <a name="investigation-status"></a>İnceleme durumu
+## <a name="investigation-status"></a>Araştırma durumu
 
-Araştırma durumu, çözümlemenin ve eylemlerin ilerleme durumunu gösterir. Araştırma çalıştırıldığı için durum, tehditlerin bulunıp buluna olmadığını ve eylemlerin onaylanıp onaylanmayacaklarını belirtecek şekilde değişir.
+Araştırma durumu, analizin ve eylemlerin ilerleme durumunu gösterir. Araştırma çalıştırılırken durum, tehditlerin bulunup bulunmadığını ve eylemlerin onaylanıp onaylanmadığını gösterecek şekilde değişir.
 
 |Durum|Açıklama|
 |---|---|
-|**Başlıyor**|Araştırma tetiklenir ve çalışmaya başlamayı bekler.|
-|**Çalışıyor**|İnceleme süreci başlamış ve devam etmektedir. Bu durum bekleyen eylemler [onaylanırsa da](air-review-approve-pending-completed-actions.md#approve-or-reject-pending-actions) ortaya çıkar.|
-|**Tehdit Bulunamadı**|Araştırma tamamlandı ve herhangi bir tehdit (kullanıcı hesabı, e-posta iletisi, URL veya dosya) tanımlandı. <p> **İpucu**: Kaçırdığınız bir şey (hatalı negatif bir durum gibi) varsa, [Threat Explorer'ı kullanarak eyleme geçebilirsiniz](threat-explorer.md).|
-|**Tehdit Bulundu**|Otomatik araştırma sorunları buldu, ancak bu sorunları çözmeye yönelik belirli bir düzeltme eylemi yok. <p> Tehdit **Bulundu durumu** , herhangi bir tür kullanıcı etkinliği tanımlandı ancak temizleme eylemleri kullanılamaz durumda olabilir. Örnek olarak aşağıdaki kullanıcı etkinliklerinden herhangi biri yer almaktadır: <ul><li>Veri [kaybı önleme](../../compliance/dlp-learn-about-dlp.md) olayı</li><li>E-posta gönderme anormalliği</li><li>Kötü amaçlı yazılım gönderildi</li><li>Gönderilen kimlik avı</li></ul> <p> Araştırmada düzeltmek için kötü amaçlı URL, dosya veya e-posta iletileri bulunamadı ve düzeltme amaçlı hiçbir posta kutusu etkinliği (iletme kuralları veya temsilci seçme gibi) bulunamıyor. <p> **İpucu**: Bir şeyin kaçırıldığına şüpheleniyorsanız (hatalı negatif bir durum gibi), Tehdit Gezgini'ni kullanarak araştırma ve [işlem](threat-explorer.md)|
-|**Sistem tarafından Sonlandırıldı**|Araştırma durduruldu. Bir araştırma birkaç nedenle durabiliyor: <ul><li>Araştırmanın bekleyen eylemlerinin süresi doldu. Bir hafta için onay bekliyor sonra bekleyen eylemler zaman akışı</li><li>Çok fazla eylem var. Örneğin, kötü amaçlı URL'leri tıklatan çok fazla kullanıcı varsa, araştırmanın tüm çözümleyicileri çalıştırma becerisini aşarak araştırmanın durdurulmasını</li></ul> <p> **İpucu**: Eylemler gerçekleştirmeden önce bir soruşturma durdurulsa tehdit bulmak ve adresleri bulmak [için Threat Explorer'ı](threat-explorer.md) kullanmayı deneyin.|
-|**Bekleyen Eylem**|Araştırma kötü amaçlı e-posta, kötü amaçlı URL veya riskli posta kutusu ayarı gibi bir tehdit ve onay bekliyor olan tehdide yönelik bir [düzeltme eylemi buldu](air-review-approve-pending-completed-actions.md). <p> İlgili **eyleme** yönelik herhangi bir tehdit bulunursa Bekleyen Eylem durumu tetiklenir. Ancak, bir araştırma çalıştırıldığı sürece bekleyen eylemler listesi artabilir. Diğer öğelerin hala tamamlanmayı beklemede olup olduğunu görmek için araştırma ayrıntılarını görüntüleme.|
-|**Düzeltildi**|Araştırma tamamlandı ve tüm düzeltme eylemleri onaylandı (tamamen düzeltildi olarak not edildi). <p> **NOT**: Onaylanan düzeltme eylemlerinin, eylemlerin gerçekleştirlsini engelleyen hatalar olabilir. Düzeltme eylemlerinin başarıyla tamamlandıktan bağımsız olarak, soruşturma durumu değişmez. Araştırma ayrıntılarını görüntüleme.|
-|**Kısmen Düzeltildi**|İnceleme sonucunda düzeltme eylemleri ve bazıları onaylandı ve tamamlandı. Diğer eylemler hala [beklemede.](air-review-approve-pending-completed-actions.md)|
-|**Başarısız**|En az bir araştırma çözümleyicisi düzgün tamamlanamaya neden olan bir sorun ile gitti. <p> **NOT** Düzeltme eylemleri onaylandıktan sonra bir soruşturma başarısız olursa, düzeltme eylemleri yine de başarılı olabilir. Araştırma ayrıntılarını görüntüleme.|
-|**Azaltma tarafından Sıraya Alınanlar**|Bir araştırma kuyruğa alındı. Diğer soruşturmalar tamamlandıktan sonra kuyruğa alınan soruşturmalar başlar. Azaltma, düşük hizmet performansını önlemeye yardımcı olur.  <p> **İpucu**: Bekleyen eylemler, kaç yeni araştırmanın çalıştırıla birlikte çalıştırılana kadar sınırlandırabilirsiniz. Bekleyen eylemleri [onaylayın (veya reddedin](air-review-approve-pending-completed-actions.md#approve-or-reject-pending-actions)).|
-|**Azaltma ile Sonlandırıldı**|Araştırma fazla uzun süre kuyrukta tutulsa, durur. <p> **İpucu**: Threat [Explorer'dan bir araştırma başlatabilirsiniz](automated-investigation-response-office.md#example-a-security-administrator-triggers-an-investigation-from-threat-explorer).|
+|**Başlıyor**|Araştırma tetiklendi ve çalışmaya başlamayı bekliyor.|
+|**Çalışan**|Araştırma süreci başlamıştır ve devam etmektedir. Bu durum [, bekleyen eylemler](air-review-approve-pending-completed-actions.md#approve-or-reject-pending-actions) onaylandığında da oluşur.|
+|**Tehdit Bulunamadı**|Araştırma tamamlandı ve hiçbir tehdit (kullanıcı hesabı, e-posta iletisi, URL veya dosya) belirlendi. <p> **İpucu**: Bir şeyin eksik olduğundan şüpheleniyorsanız (hatalı negatif gibi), [Tehdit Gezgini'ne](threat-explorer.md) kullanarak işlem yapabilirsiniz.|
+|**Bulunan Tehditler**|Otomatik araştırma sorunları buldu, ancak bu sorunları çözmek için belirli bir düzeltme eylemi yok. <p> **Tehdit bulundu** durumu, bir tür kullanıcı etkinliği tanımlandığında ancak kullanılabilir temizleme eylemi olmadığında oluşabilir. Örnek olarak aşağıdaki kullanıcı etkinliklerinden herhangi biri verilebilir: <ul><li>[Veri kaybı önleme](../../compliance/dlp-learn-about-dlp.md) olayı</li><li>Anomali gönderen bir e-posta</li><li>Gönderilen kötü amaçlı yazılım</li><li>Gönderilen kimlik avı</li></ul> <p> Araştırmada düzeltilmesi gereken kötü amaçlı URL' ler, dosyalar veya e-posta iletileri bulunamadı ve iletme kurallarını veya temsilci seçmeyi kapatma gibi düzeltilmesi gereken bir posta kutusu etkinliği bulunamadı. <p> **İpucu**: Bir şeyin kaçırıldığından şüpheleniyorsanız (hatalı negatif gibi), [Tehdit Gezgini'ne](threat-explorer.md) kullanarak araştırma yapabilir ve işlem yapabilirsiniz|
+|**Sistem Tarafından Sonlandırıldı**|Soruşturma durduruldu. Araştırma birkaç nedenden dolayı durdurulabilir: <ul><li>Araştırmanın bekleyen eylemlerinin süresi doldu. Bir hafta boyunca onay beklendikten sonra bekleyen eylemler zaman aşımına uğradı</li><li>Çok fazla eylem var. Örneğin, kötü amaçlı URL'lere tıklayan çok fazla kullanıcı varsa, araştırmanın tüm çözümleyicileri çalıştırma becerisini aşabilir, böylece araştırma durdurulabilir</li></ul> <p> **İpucu**: Bir araştırma eylemler gerçekleştirilmeden önce durursa tehditleri bulmak ve ele almak için [Tehdit Gezgini'ne](threat-explorer.md) kullanmayı deneyin.|
+|**Bekleyen Eylem**|Araştırmada kötü amaçlı e-posta, kötü amaçlı URL veya riskli posta kutusu ayarı gibi bir tehdit ve bu tehdidi düzeltmeye yönelik bir eylem [onay bekliyor](air-review-approve-pending-completed-actions.md). <p> Karşılık gelen eylem içeren herhangi bir tehdit bulunduğunda **Bekleyen Eylem** durumu tetikleniyor. Ancak, bir araştırma çalıştırıldığında bekleyen eylemlerin listesi artabilir. Diğer öğelerin hala tamamlanmasının beklenip beklenmediğini görmek için araştırma ayrıntılarını görüntüleyin.|
+|**Düzeltilmiş**|Araştırma tamamlandı ve tüm düzeltme eylemleri onaylandı (tamamen düzeltildiği kaydedildi). <p> **NOT**: Onaylanan düzeltme eylemleri, eylemlerin gerçekleştirilmesini engelleyen hatalara neden olabilir. Düzeltme eylemlerinin başarıyla tamamlanıp tamamlanmadığına bakılmaksızın, araştırma durumu değişmez. Araştırma ayrıntılarını görüntüleyin.|
+|**Kısmen Düzeltilmiş**|Araştırma, düzeltme eylemleriyle sonuçlandı ve bazıları onaylandı ve tamamlandı. Diğer eylemler hala [beklemede](air-review-approve-pending-completed-actions.md).|
+|**Başarısız**|En az bir araştırma çözümleyicisi düzgün tamamlanamadı bir sorunla karşılaştı. <p> **NOT** Düzeltme eylemleri onaylandıktan sonra bir araştırma başarısız olursa, düzeltme eylemleri yine de başarılı olmuş olabilir. Araştırma ayrıntılarını görüntüleyin.|
+|**Azaltma Tarafından Kuyruğa Alındı**|Bir soruşturma kuyrukta tutuluyor. Diğer araştırmalar tamamlandığında kuyruğa alınmış araştırma başlar. Azaltma, düşük hizmet performansını önlemeye yardımcı olur.  <p> **İpucu**: Bekleyen eylemler kaç yeni araştırmanın çalışabileceğini sınırlayabilir. [Bekleyen eylemleri onaylamayı (veya reddetmeyi)](air-review-approve-pending-completed-actions.md#approve-or-reject-pending-actions) unutmayın.|
+|**Azaltma Ile Sonlandırıldı**|Bir araştırma kuyrukta çok uzun süre tutulursa durdurulur. <p> **İpucu**: [Tehdit Gezgini'nden bir araştırma başlatabilirsiniz](automated-investigation-response-office.md#example-a-security-administrator-triggers-an-investigation-from-threat-explorer).|
 
 ## <a name="view-details-of-an-investigation"></a>Araştırmanın ayrıntılarını görüntüleme
 
-1. Erişim portalına Microsoft 365 Defender (<https://security.microsoft.com> ) ve oturum açın.
-2. Gezinti bölmesinde İşlem **merkezi'ni seçin**.
-3. Beklemede **veya Geçmiş** **sekmelerinde** bir eylem seçin. Açılır bölmesi açılır.
-4. Açılır bölmede Araştırma sayfasını **aç'ı seçin**. 
+1. Microsoft 365 Defender portalına (<https://security.microsoft.com>) gidin ve oturum açın.
+2. Gezinti bölmesinde **İşlem merkezi'ni** seçin.
+3. **Beklemede** veya **Geçmiş** sekmelerinde bir eylem seçin. Açılır pencere bölmesi açılır.
+4. Açılır bölmede **Araştırma sayfasını aç'ı** seçin. 
 5. Araştırma hakkında daha fazla bilgi edinmek için çeşitli sekmeleri kullanın.
 
-## <a name="view-details-about-an-alert-related-to-an-investigation"></a>Bir soruşturmayla ilgili uyarının ayrıntılarını görüntüleme
+## <a name="view-details-about-an-alert-related-to-an-investigation"></a>Araştırmayla ilgili uyarıyla ilgili ayrıntıları görüntüleme
 
-Belirli türde uyarılar, ekip içinde otomatik soruşturmayı Microsoft 365. Daha fazla bilgi edinmek için [bkz. Otomatik soruşturmaları tetikleyen uyarı ilkeleri](office-365-air.md#which-alert-policies-trigger-automated-investigations).
+Bazı uyarı türleri, Microsoft 365 otomatik araştırmayı tetikler. Daha fazla bilgi edinmek için bkz. [Otomatik araştırma tetikleyen uyarı ilkeleri](office-365-air.md#which-alert-policies-trigger-automated-investigations).
 
-1. Erişim portalına Microsoft 365 Defender (<https://security.microsoft.com> ) ve oturum açın.
-2. Gezinti bölmesinde İşlem **merkezi'ni seçin**.
-3. Beklemede **veya Geçmiş** **sekmelerinde** bir eylem seçin. Açılır bölmesi açılır.
-4. Açılır bölmede Araştırma sayfasını **aç'ı seçin**.
-5. Bu **araştırmayla** ilişkili tüm uyarıların listesini görüntülemek için Uyarılar sekmesini seçin.
-6. Açılır bölmesini açmak için listeden bir öğe seçin. Orada, uyarı hakkında daha fazla bilgi görüntüebilirsiniz.
+1. Microsoft 365 Defender portalına (<https://security.microsoft.com>) gidin ve oturum açın.
+2. Gezinti bölmesinde **İşlem merkezi'ni** seçin.
+3. **Beklemede** veya **Geçmiş** sekmelerinde bir eylem seçin. Açılır pencere bölmesi açılır.
+4. Açılır bölmede **Araştırma sayfasını aç'ı** seçin.
+5. Bu araştırmayla ilişkili tüm uyarıların listesini görüntülemek için **Uyarılar** sekmesini seçin.
+6. Açılan bölmeyi açmak için listeden bir öğe seçin. Burada uyarı hakkında daha fazla bilgi görüntüleyebilirsiniz.
 
-## <a name="keep-the-following-points-in-mind"></a>Aşağıdaki noktaları unutmayın
+## <a name="keep-the-following-points-in-mind"></a>Aşağıdaki noktaları göz önünde bulundurun
 
-- E-posta sayıları araştırmanın zamanında hesaplanır ve araştırma açılırken (temel alınan bir sorguya bağlı olarak) bazı sayımlar yeniden hesaplanır.
+- E-posta sayıları araştırma sırasında hesaplanır ve araştırma açılır öğelerini açtığınızda (temel alınan sorguya göre) bazı sayılar yeniden hesaplanır.
 
-- E-posta sekmesindeki e-posta kümeleri için gösterilen  e-posta sayıları ve küme oluşturmada gösterilen e-posta miktarı değeri, araştırma zamanında hesaplanır ve değişmez.
+- E-posta sekmesindeki e-posta kümeleri için gösterilen **e-posta** sayısı ve küme açılır öğesinde gösterilen e-posta miktarı değeri araştırma sırasında hesaplanır ve değişmez.
 
-- E-posta kümesi açılır iletisinde E-posta sekmesinin altında gösterilen e-posta sayısı ve Gezgin'de gösterilen e-posta iletilerinin sayısı, incelemenin ilk çözümlemesinde alınan e-posta iletilerini yansıttır.
+- E-posta kümesi açılır öğesinin **E-posta** sekmesinin en altında gösterilen e-posta sayısı ve Gezgin'de gösterilen e-posta iletilerinin sayısı, araştırmanın ilk analizinden sonra alınan e-posta iletilerini yansıtır.
 
-  Dolayısıyla, özgün miktarı 10 e-posta iletilerini gösteren bir e-posta kümesi, inceleme çözümleme aşamasıyla yönetici incelemeyi inceleme aşaması arasında geldiğinde toplam 15 e-posta listesi gösteriyor. Benzer biçimde, Office 365 için Microsoft Defender'daki veriler denemeler için yedi gün sonra ve ücretli lisanslar için 30 gün sonra sona erer, bu nedenle eski soruşturmalar da Explorer sorgularının gösterdiğinden daha yüksek sayı göstermeye başlayabilir.
+  Bu nedenle, özgün 10 e-posta iletisi miktarını gösteren bir e-posta kümesi, araştırma analizi aşaması arasında beş e-posta iletisi daha geldiğinde ve yönetici araştırmayı gözden geçirirken toplam 15 e-posta listesi gösterir. Benzer şekilde, Office 365 için Microsoft Defender Plan 2'deki verilerin süresi denemeler için yedi gün sonra ve ücretli lisanslar için 30 gün sonra dolduğundan, eski araştırmalarda Gezgin sorgularının gösterdiğinden daha yüksek sayımlar gösterilmeye başlanabilir.
 
-  Hem geçmiş sayısını hem de geçerli sayımların farklı görünümlerde göstermesi, e-postanın araştırma zamanında etkisini ve düzeltme çalıştırıldığı zamana kadar geçerli etkiyi göstermek için  yapılır.
+  Hem geçmiş hem de geçerli sayıların farklı görünümlerde gösterilmesi, araştırma sırasındaki e-posta etkisini ve düzeltme çalıştırana kadar geçerli etkiyi göstermek için yapılır.
 
-- E-posta bağlamında, incelemenin bir parçası olarak anormal bir tehdit yüzeyi görebilirler. Ses düzeyi anormalliği, önceki zaman çerçeveleri ile karşılaştırıldığında araştırma olay süresi çevresinde benzer e-posta iletisinde bir depo olduğunu gösterir. E-posta trafiğinde bazı özelliklerle birlikte depo (örneğin, konu ve gönderen etki alanı, gövde benzerlikleri ve gönderen IP'leri), e-posta kampanyalarının veya saldırılarının başlangıcı normaldir. Bununla birlikte, toplu, istenmeyen posta ve yasal e-posta kampanyaları bu özellikleri yaygın olarak paylaşır.
+- E-posta bağlamında, araştırmanın bir parçası olarak bir birim anomali tehdit yüzeyi görebilirsiniz. Birim anomalisi, önceki zaman çerçevelerine kıyasla araştırma olayı süresi boyunca benzer e-posta iletilerinde ani artış olduğunu gösterir. E-posta trafiğinde belirli özelliklerle (örneğin, konu ve gönderen etki alanı, gövde benzerliği ve gönderen IP'si) ani bir artış, e-posta kampanyalarının veya saldırılarının başlangıcının tipik bir örneğidir. Ancak toplu, istenmeyen posta ve meşru e-posta kampanyaları genellikle bu özellikleri paylaşır.
 
-- Toplu iş hacmi olası bir tehdittir ve buna göre kötü amaçlı yazılım veya kimlik avı tehditlerine karşı karşı daha az ciddi olabilir ve bu durum virüsten koruma motorları, detonasyonu veya kötü amaçlı itibarı kullanılarak tanımlanan tehditlere karşı daha az açık olabilir.
+- Birim anomalileri olası bir tehdidi temsil eder ve buna göre virüsten koruma motorları, patlama veya kötü amaçlı itibar kullanılarak tanımlanan kötü amaçlı yazılım veya kimlik avı tehditlerine kıyasla daha az ciddi olabilir.
 
-- Her eylemi onaylamanız zorunda değildir. Önerilen eylemi kabul etmiyorsanız veya organizasyonunız belirli eylem türlerini seç etmiyorsa, eylemleri reddetmeyi veya yok sayarak hiçbir işlem yapmaya devam  etme'yi seçebilirsiniz.
+- Her eylemi onaylamanız gerekmez. Önerilen eylemi kabul etmiyorsanız veya kuruluşunuz belirli eylem türlerini seçmiyorsa, **Eylemleri reddet'i** seçebilir veya yalnızca bunları yoksayabilir ve hiçbir işlem gerçekleştiremezsiniz.
 
-- Tüm eylemlerin onaylanması ve/veya reddedilen kısmın onaylanması, soruşturmanın tamamen kapanmasını sağlar (durum düzeltilir), bazı eylemler eksik kalırken, soruşturma durumunda kısmen düzeltilen durum değişir.
+- Tüm eylemlerin onaylanması ve/veya reddedilmesi, araştırmanın tamamen kapanmasına (durum düzeltilir) olanak tanırken, bazı eylemlerin tamamlanmamış olması, araştırma durumunun kısmen düzeltilmiş duruma dönüşmesine neden olur.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

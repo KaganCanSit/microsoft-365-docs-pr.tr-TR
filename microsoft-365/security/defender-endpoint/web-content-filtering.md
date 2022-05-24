@@ -15,16 +15,14 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 2e86aa7fc8ed304327ab2c07ec487789ad966fc7
-ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
+ms.openlocfilehash: 29a221e60484431722be4e7104efb5b37a0408bc
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2022
-ms.locfileid: "65535458"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65648579"
 ---
 # <a name="web-content-filtering"></a>Web içeriği filtreleme
-
-[!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Şunlar için geçerlidir:**
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
@@ -56,7 +54,7 @@ Bu özelliği denemeden önce aşağıdaki tabloda açıklanan gereksinimleri ka
 
 | Gereksinim | Açıklama |
 |:---|:---|
-| Abonelik | Aboneliğiniz aşağıdakilerden birini içermelidir:<br/>- [Windows 10/11 Enterprise E5](/windows/deployment/deploy-enterprise-licenses)<br/>- [Microsoft 365 E5](https://www.microsoft.com/microsoft-365/enterprise/e5?activetab=pivot%3aoverviewtab)<br/>- Microsoft 365 E5 Güvenlik<br/>- [Microsoft 365 E3](https://www.microsoft.com/microsoft-365/enterprise/e3?activetab=pivot%3aoverviewtab)<br/>- [Uç Nokta için Microsoft Defender Plan 1 veya Plan 2](../defender/eval-defender-endpoint-overview.md)<br/>- [İş için Microsoft Defender](../defender-business/mdb-overview.md) |
+| Abonelik | Aboneliğiniz aşağıdakilerden birini içermelidir:<br/>- [Windows 10/11 Enterprise E5](/windows/deployment/deploy-enterprise-licenses)<br/>- [Microsoft 365 E5](https://www.microsoft.com/microsoft-365/enterprise/e5?activetab=pivot%3aoverviewtab)<br/>- Microsoft 365 E5 Güvenlik<br/>- [Microsoft 365 E3](https://www.microsoft.com/microsoft-365/enterprise/e3?activetab=pivot%3aoverviewtab)<br/>- [Uç Nokta için Microsoft Defender Plan 1 veya Plan 2](../defender/eval-defender-endpoint-overview.md)<br/>- [İş için Microsoft Defender](../defender-business/mdb-overview.md)<br/>- [Microsoft 365 İş Ekstra](https://www.microsoft.com/microsoft-365/business/microsoft-365-business-premium)|
 | Portal erişimi | <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalına</a> erişiminiz olmalıdır. |
 | İşletim sistemi | Kuruluşunuzun cihazları [en son virüsten koruma/kötü amaçlı yazılımdan koruma güncelleştirmeleriyle](manage-updates-baselines-microsoft-defender-antivirus.md) aşağıdaki işletim sistemlerinden birini çalıştırıyor olmalıdır: <br/>- Windows 11<br/>- Windows 10 Yıldönümü Güncelleştirmesi (sürüm 1607) veya üzeri |
 | İlgili koruma | [Windows Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) ve [ağ koruması](network-protection.md) kuruluşunuzun cihazlarında etkinleştirilmelidir. |
@@ -177,7 +175,7 @@ Yeni ilke eklemek için şu adımları izleyin:
 4. İlke kapsamını belirtin. İlkenin nereye uygulanacağını belirtmek için cihaz gruplarını seçin. Yalnızca seçili cihaz gruplarındaki cihazların seçilen kategorilerdeki web sitelerine erişmesi engellenir.
 
    > [!IMPORTANT]
-   > İş için Defender kullanıyorsanız, web içeriği filtreleme ilkeniz varsayılan olarak tüm kullanıcılara uygulanır. Kapsam belirleme geçerli değildir.
+   > Microsoft 365 İş Ekstra veya İş için Defender kullanıyorsanız, web içeriği filtreleme ilkeniz varsayılan olarak tüm kullanıcılara uygulanır. Kapsam belirleme geçerli değildir.
 
 5. Özeti gözden geçirin ve ilkeyi kaydedin. İlke yenilemesinin seçili cihazlarınıza uygulanması 2 saat kadar sürebilir.
 
@@ -188,7 +186,7 @@ Yeni ilke eklemek için şu adımları izleyin:
 
 ## <a name="end-user-experience"></a>Son kullanıcı deneyimi
 
-Üçüncü taraf tarafından desteklenen tarayıcılar için engelleme deneyimi Ağ Koruması tarafından sağlanır. Bu, kullanıcıya engellenen bir bağlantıyı bildiren sistem düzeyinde bir ileti sağlar. Daha kullanıcı dostu ve tarayıcı içi bir deneyim için Microsoft Edge kullanmayı göz önünde bulundurun.
+Üçüncü taraf desteklenen tarayıcılar için engelleme deneyimi, kullanıcıya engellenen bağlantıyı bildiren sistem düzeyinde bir ileti sağlayan ağ koruması tarafından sağlanır. Daha kullanıcı dostu ve tarayıcı içi bir deneyim için Microsoft Edge kullanmayı göz önünde bulundurun.
 
 ### <a name="allow-specific-websites"></a>Belirli web sitelerine izin ver
 
@@ -204,7 +202,7 @@ Yeni ilke eklemek için şu adımları izleyin:
 
 ### <a name="dispute-categories"></a>İhtilaf kategorileri
 
-Yanlış kategorilere ayrılmış bir etki alanıyla karşılaşırsanız, kategoriye doğrudan portaldan itiraz edebilirsiniz.
+Yanlış kategorilere ayrılmış bir etki alanıyla karşılaşırsanız, kategoriye doğrudan Microsoft 365 Defender portalından itiraz edebilirsiniz.
 
 Bir etki alanının kategorisine itiraz etmek için **Raporlar** \> **Web koruması** \> **Web İçeriği Filtreleme Ayrıntıları** \> **Etki Alanları'na** gidin. Web İçeriği Filtreleme raporlarının etki alanları sekmesinde, etki alanlarının her birinin yanında bir üç nokta görürsünüz. Bu üç noktanın üzerine gelin ve **İtiraz Kategorisi'ne** tıklayın.
 
@@ -252,9 +250,11 @@ Zaman aralığı seçmek için sayfanın sol üst kısmındaki zaman aralığı 
 
 Yalnızca cihazınızın işletim sistemi yapılandırması Sunucu (**cmd** \> **Systeminfo** \> **İşletim Sistemi Yapılandırması**) ise Microsoft Edge desteklenir. Ağ Koruması yalnızca Desteklenen üçüncü taraf tarayıcılarda trafiğin güvenliğini sağlamakla sorumlu olan Sunucu cihazlarında İnceleme modunda desteklenir.
 
-Azure Sanal Masaüstü çok oturumlu konaklarında yalnızca Microsoft Edge desteklenir ve Ağ Koruması Windows 10 desteklenmez.
+Azure Sanal Masaüstü çoklu oturum konaklarında yalnızca Microsoft Edge desteklenir ve ağ koruması Windows 10 desteklenmez.
 
-Ağ Koruması şu anda SSL incelemesini desteklememektedir ve bu da normalde engellenecek bazı sitelerin Web İçerik Filtrelemesi tarafından izin vermesine neden olabilir. TLS el sıkışması gerçekleştikten ve belirli yeniden yönlendirmelerin ayrıştırılamamasından sonra şifrelenmiş trafiğin görünür olmaması nedeniyle sitelere izin verilir.  Bu, bazı web tabanlı posta oturum açma sayfalarından posta kutusu sayfasına yeniden yönlendirmeleri içerir. Kabul edilen bir geçici çözüm olarak, hiçbir kullanıcının siteye erişemediğinden emin olmak için oturum açma sayfası için özel bir blok göstergesi oluşturabilirsiniz. Bunun aynı web sitesiyle ilişkili diğer hizmetlere erişimini engelleyebileceğini unutmayın. 
+Ağ koruması şu anda SSL incelemesini desteklememektedir ve bu da bazı sitelerin normalde engellenecek web içeriği filtrelemesine izin vermesine neden olabilir. TLS el sıkışması gerçekleştikten ve belirli yeniden yönlendirmelerin ayrıştırılamamasından sonra şifrelenmiş trafiğin görünür olmaması nedeniyle sitelere izin verilir.  Bu, bazı web tabanlı posta oturum açma sayfalarından posta kutusu sayfasına yeniden yönlendirmeleri içerir. Kabul edilen bir geçici çözüm olarak, hiçbir kullanıcının siteye erişemediğinden emin olmak için oturum açma sayfası için özel bir blok göstergesi oluşturabilirsiniz. Bunun aynı web sitesiyle ilişkili diğer hizmetlere erişimini engelleyebileceğini unutmayın. 
+
+Microsoft 365 İş Ekstra veya İş için Microsoft Defender kullanıyorsanız, ortamınız için bir web içeriği filtreleme ilkesi tanımlayabilirsiniz. Bu ilke varsayılan olarak tüm kullanıcılara uygulanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

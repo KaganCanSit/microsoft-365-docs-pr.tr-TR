@@ -14,16 +14,16 @@ description: Yöneticiler, Güvenlik & Uyumluluk Merkezi'ndeki Posta akışı pa
 ms.custom: seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: eef35eedd5a7f182160b9a6a8b27a59cf9cdd9c0
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 5850612fbd0de89e5eafe101f55d368b0f4b0c8f
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65129188"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65648733"
 ---
 # <a name="mail-flow-insights-in-the-security--compliance-center"></a>Güvenlik ve Uyumluluk Merkezi'ndeki posta akışı içgörüleri
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -37,27 +37,16 @@ Yöneticiler eğilimleri, içgörüleri keşfetmek ve kuruluşlarındaki posta a
 Kullanılabilir içgörüler şunlardır:
 
 - [Otomatik iletilen iletiler içgörüsü](mfi-auto-forwarded-messages-report.md)
-
 - [Olası posta döngüsü içgörülerini düzeltme1](mfi-mail-loop-insight.md)<sup></sup>
-
 - [Yavaş posta akışı kuralları içgörülerini düzeltme1](mfi-slow-mail-flow-rules-insight.md)<sup></sup>
-
 - [Posta akışı haritası](mfi-mail-flow-map-report.md)
-
 - [İletilen yeni etki alanları e-posta içgörüleri2](mfi-new-domains-being-forwarded-email.md)<sup></sup>
-
 - [E-posta içgörülerini ileten yeni kullanıcılar2](mfi-new-users-forwarding-email.md)<sup></sup>
-
 - [Kabul edilmeyen etki alanı raporu](mfi-non-accepted-domain-report.md)
-
 - [Teslim edilemedi raporu](mfi-non-delivery-report.md)
-
 - [Giden ve gelen posta akışı içgörüsü](mfi-outbound-and-inbound-mail-flow.md)
-
 - [Kuyrukların içgörüsü](mfi-queue-alerts-and-queues.md)
-
 - [SMTP Kimlik Doğrulaması istemcileri içgörüleri ve raporu](mfi-smtp-auth-clients-report.md)
-
 - [En iyi etki alanı posta akışı durumu içgörüsü](mfi-domain-mail-flow-status-insight.md)
 
 <sup>1</sup> Bu içgörü, Posta akışı panosunun **Sizin için önerilen** alanında yalnızca sorun algılandıktan sonra görünür. Aksi takdirde göremezsiniz.
@@ -80,7 +69,5 @@ Posta akışı panosu aşağıdaki rol gruplarının üyeleri tarafından kullan
 İzinler hakkında daha fazla bilgi için bkz [. Güvenlik & Uyumluluk Merkezi'nde İzinler](permissions-in-the-security-and-compliance-center.md) ve [Kullanıcılara Güvenlik & Uyumluluk Merkezi'ne erişim verme](grant-access-to-the-security-and-compliance-center.md).
 
 ## <a name="where-to-find-the-mail-flow-dashboard"></a>Posta akışı panosu nerede bulunur?
-
-adresinde Güvenlik & Uyumluluk Merkezi'ni açın, **Posta akışı'nı**<https://protection.office.com> genişletin ve ardından **Pano'yu** seçin.
 
 Doğrudan Posta akışı panosuna gitmek için dosyasını açın <https://protection.office.com/mailflow/dashboard>.

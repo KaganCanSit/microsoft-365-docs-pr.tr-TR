@@ -15,12 +15,12 @@ manager: dansimp
 ms.technology: mde
 ms.collection: m365-security-compliance
 ms.custom: admindeeplinkDEFENDER
-ms.openlocfilehash: 41fa5aece6f8c18ef16dbf624f90a1ead25b45f5
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: 33eff726609db3d7f2d07f4a5bcf4955536c086c
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65174940"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65647293"
 ---
 # <a name="host-firewall-reporting-in-microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender’da güvenlik duvarı raporlama oturumu düzenleyin
 
@@ -36,13 +36,45 @@ Genel yönetici veya güvenlik yöneticisiyseniz artık güvenlik duvarı raporl
 
 - Windows 10 veya Windows 11 ya da Windows Server 2019 veya Windows Server 2022 çalıştırıyor olmanız gerekir.
 - Cihazları Uç Nokta için Microsoft Defender hizmetine eklemek için [buraya](onboard-configure.md) bakın.
-- <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalın</a> verileri almaya başlaması için Gelişmiş Güvenlik özellikli Windows Defender Güvenlik Duvarı için **Denetim Olaylarını** etkinleştirmeniz gerekir:
+- <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalın</a> verileri almaya başlaması için Gelişmiş Güvenlik ile Windows Defender Güvenlik Duvarı için **Denetim Olaylarını** etkinleştirmeniz gerekir:
   - [Denetim Filtreleme Platformu Paket Bırakma](/windows/security/threat-protection/auditing/audit-filtering-platform-packet-drop)
   - [Filtre Platformu Bağlantısını Denetle](/windows/security/threat-protection/auditing/audit-filtering-platform-connection)
 - grup ilkesi Nesne Düzenleyicisi, Yerel Güvenlik İlkesi veya auditpol.exe komutlarını kullanarak bu olayları etkinleştirin. Daha fazla bilgi için [buraya](/windows/win32/fwp/auditing-and-logging) bakın.
   - İki PowerShell komutu şunlardır:
     - **auditpol /set /subcategory:"Platform Paket Bırakmasını Filtreleme" /failure:enable**
     - **auditpol /set /subcategory:"Platform Bağlantısını Filtreleme" /failure:enable**
+```powershell
+param (
+    [switch]$remediate
+)
+try {
+
+    $categories = "Filtering Platform Packet Drop,Filtering Platform Connection"
+    $current = auditpol /get /subcategory:"$($categories)" /r | ConvertFrom-Csv    
+    if ($current."Inclusion Setting" -ne "failure") {
+        if ($remediate.IsPresent) {
+            Write-Host "Remediating. No Auditing Enabled. $($current | ForEach-Object {$_.Subcategory + ":" + $_.'Inclusion Setting' + ";"})"
+            $output = auditpol /set /subcategory:"$($categories)" /failure:enable
+            if($output -eq "The command was successfully executed.") {
+                Write-Host "$($output)"
+                exit 0
+            }
+            else {
+                Write-Host "$($output)"
+                exit 1
+            }
+        }
+        else {
+            Write-Host "Remediation Needed. $($current | ForEach-Object {$_.Subcategory + ":" + $_.'Inclusion Setting' + ";"})."
+            exit 1
+        }
+    }
+
+}
+catch {
+    throw $_
+} 
+```
 
 ## <a name="the-process"></a>İşlem
 
