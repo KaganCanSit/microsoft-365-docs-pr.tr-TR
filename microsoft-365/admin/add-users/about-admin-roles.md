@@ -26,12 +26,12 @@ search.appverid:
 - MOE150
 ms.assetid: da585eea-f576-4f55-a1e0-87090b6aaa9d
 description: Belirli işletme işlevlerine eşlenen ve yönetim merkezinde belirli görevleri yerine getirmek için izinler veren Hizmet yöneticisi gibi yönetici rolleri hakkında daha fazla bilgi edinin.
-ms.openlocfilehash: e56399e5e3e83146df9d1bdad09cf7a6c216c8de
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: bef4328146c62d19257ca50d33004ce7d1185fe1
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65467130"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65636250"
 ---
 # <a name="about-admin-roles-in-the-microsoft-365-admin-center"></a>Microsoft 365 yönetim merkezinde, yönetici rolleri
 
@@ -67,9 +67,9 @@ Yöneticilerin hassas verilere ve dosyalara erişimi olduğundan, kuruluşunuzun
 | :------------------- | :------------------- |
 | 2 ila 4 arasında genel yönetici belirleyin  | Bir genel yönetici parolasını yalnızca başka bir genel yönetici sıfırlayabileceği için, hesap kilitlenmesi durumunda kuruluşunuzda en az 2 genel yönetici bulundurmanızı öneririz. Ancak genel yönetici, kuruluşunuzun ayarlarına ve verilerin çoğuna neredeyse sınırsız erişime sahiptir, bu nedenle 4 ' ten fazla genel yönetici bulundurmamanızı öneririz, çünkü bu bir güvenlik tehdidi olur. |
 | *En az izin verilen* rolü atama    | *En az izin verilen* rolün atanması, yöneticilere yalnızca işin yapılmasını sağlamak için gereken erişimi verme anlamına gelir. Örneğin, bir kişinin çalışan parolalarını sıfırlamasını istiyorsanız, sınırsız genel yönetici rolünü atamamalısınız, parola Yöneticisi veya Yardım Masası Yöneticisi gibi sınırlı bir yönetim rolü atamalısınız. Bu, verilerinizin güvenliğini korumaya yardımcı olur.                 |
-| Yöneticiler için çok faktörlü kimlik doğrulaması gerektirme                  |    Kullanıcılarınızın tüm kullanıcılarınız için ÇFKD gerektirmek iyi bir fikirdir olsa da, yöneticilerin kesinlikle giriş yapmak için ÇFKD kullanması gerekmelidir. ÇFKD, kullanıcıların söyledikleri kişi olduklarını doğrulayacak ikinci bir doğrulama yöntemi girmesini sağlar. Yöneticiler çok sayıda müşteri ve çalışan verilerine erişebilir ve ÇFKD gerektirirseniz, yöneticinin parolasının tehlikeye düşmesi durumunda bile parola, ikinci doğrulama yöntemi olmadan işlevsiz olur.  <br><br>ÇFKD'yi açtığınızda, kullanıcının bir dahaki sefer oturum açtığında hesap kurtarma için alternatif bir e-posta adresi ve telefon numarası sağlaması gerekecektir.  <br> [Çok faktörlü kimlik doğrulamasını ayarlama](../security-and-compliance/set-up-multi-factor-authentication.md)          |
+| Yöneticiler için çok faktörlü kimlik doğrulaması gerektirme                  |    Kullanıcılarınızın tüm kullanıcılarınız için ÇFKD gerektirmek iyi bir fikirdir olsa da, yöneticilerin kesinlikle giriş yapmak için ÇFKD kullanması gerekmelidir. ÇFKD, kullanıcıların söyledikleri kişi olduklarını doğrulamak için ikinci bir tanımlama yöntemi girmesini sağlar. Yöneticiler, müşteri ve çalışan verilerinin çoğuna erişebilir ve ÇFKD gerektirirseniz, yöneticinin şifresi ele geçirilse bile, şifre ikinci kimlik formu olmadan işe yaramaz.  <br><br>ÇFKD'yi açtığınızda, kullanıcının bir dahaki sefer oturum açtığında hesap kurtarma için alternatif bir e-posta adresi ve telefon numarası sağlaması gerekecektir.  <br> [Çok faktörlü kimlik doğrulamasını ayarlama](../security-and-compliance/set-up-multi-factor-authentication.md)          |
 
-Yönetim merkezinde bir veya daha fazla sayfa düzenleme izniniz olmadığını söyleyen bir ileti alırsanız, bunun nedeni o izne sahip olmayan bir rol atamanız olabilir.
+Yönetim merkezinde bir ayarı veya sayfayı düzenleme izniniz olmadığını söyleyen bir ileti alırsanız, bunun nedeni bu izne sahip olmayan bir role atanmış olmanızdır.
 
 ## <a name="commonly-used-microsoft-365-admin-center-roles"></a>Yaygın olarak kullanılan Microsoft 365 yönetim merkezi rolleri
 
@@ -98,11 +98,11 @@ Muhtemelen kuruluşunuzda yalnızca aşağıdaki rolleri atamanız gerekecek. Va
 
 ## <a name="delegated-administration-for-microsoft-partners"></a>Microsoft İş ortakları için temsilci yönetim
 
-Bir Microsoft iş ortağıyla çalışıyorsanız, onlara yönetici rolleri atayabilirsiniz. Onlar da şirketinizdeki kullanıcılara veya şirketlerine yönetici rolleri atayabilir. Örneğin, sizin için çevrimiçi organizasyonunuzu ayarlayıp yönetiyorlarsa, bunu yapmalarını isteyebilirsiniz.
+Bir Microsoft iş ortağıyla çalışıyorsanız, onlara yönetici rolleri atayabilirsiniz. Onlar da şirketinizdeki kullanıcılara veya şirketlerine yönetici rolleri atayabilir. Örneğin, çevrimiçi organizasyonunuzu sizin için ayarlayıp yönetiyorlarsa, bunu yapmalarını isteyebilirsiniz.
   
 Bir iş ortağı şu rolleri atayabilir: 
   
-- İş Ortağı Merkezi aracılığıyla çok faktörlü kimlik doğrulamasını yönetme dışında, genel bir yöneticiye eşdeğer **Yönetici Temsilcisi** Ayrıcalıkları.
+- İş Ortağı Merkezi aracılığıyla çok faktörlü kimlik doğrulamasını yönetmek dışında, genel bir yöneticiye eşdeğer **Yönetici Temsilcisi** Ayrıcalıkları.
 
 - Bir yardım masası yöneticisine eşdeğer **Yardım Masası Temsilcisi** Ayrıcalıkları.
 
