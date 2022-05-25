@@ -18,12 +18,12 @@ ms.custom:
 description: Microsoft 365 bulut hizmetleriniz ve uygulamalarınızla Güvenlik Bilgileri ve Olay Yönetimi (SIEM) sunucusu tümleştirmesine genel bakış elde edin
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 978319cca91322c7eb737d89cbfc167574f14093
-ms.sourcegitcommit: 1ef176c79a0e6dbb51834fe30807409d4e94847c
+ms.openlocfilehash: ffb457a378539691627eff3ad24b24ef782705c1
+ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2021
-ms.locfileid: "64731427"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65670212"
 ---
 # <a name="security-information-and-event-management-siem-server-integration-with-microsoft-365-services-and-applications"></a>Microsoft 365 hizmetleri ve uygulamalarıyla Güvenlik Bilgileri ve Olay Yönetimi (SIEM) sunucusu tümleştirmesi
 
@@ -32,7 +32,7 @@ ms.locfileid: "64731427"
 - [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 ## <a name="summary"></a>Özet
 
@@ -69,6 +69,22 @@ SIEM sunucu tümleştirmesini yapılandırmadan önce denetim günlüğünün a�
 
 - SharePoint Online, OneDrive İş ve Azure Active Directory için bkz. [Denetimi açma veya kapatma](../../compliance/turn-audit-log-search-on-or-off.md).
 - Exchange Online için bkz. [Posta kutusu denetimini yönetme](../../compliance/enable-mailbox-auditing.md).
+
+## <a name="integration-steps-if-your-siem-is-microsoft-sentinel"></a>SIEM'iniz Microsoft Sentinel ise tümleştirme adımları
+
+Geçerli planınızın Microsoft Sentinel tümleştirmesine izin verdiğinden (örneğin, Office 365 için Microsoft Defender Plan 2 veya üzeri bir planınız olduğundan) ve Office 365 için Microsoft Defender veya Microsoft 365 Defender hesabınızın bir *Güvenlik Yöneticisi*. Son olarak, *Microsoft Sentinel'de Yazma izinlerine sahip olduğunuzdan* emin olun.
+
+1. Microsoft Sentinel'e gidin.
+1. Ekranın sol tarafındaki gezinti bölmesinde **Yapılandırma** > **Verileri bağlayıcıları**.
+1. Microsoft 365 Defender **arayın** ve **Microsoft 365 Defender (önizleme) bağlayıcısını** seçin.
+1. Ekranınızın sağ tarafında **Bağlayıcı Sayfasını Aç'ı** seçin.
+1. **Yapılandırma** > altında **Bağlan olayları & uyarıları** seçin
+    1. Seçili olan ürünler için tüm Microsoft olay oluşturma kurallarını kapatın.
+1. Sayfayı  kaydırarak sayfanın **Bağlan olayları bölümünde Office 365 için Microsoft Defender**.
+
+Son adımı tamamlarken yararlı ve uygulanabilir bulduğunuz *diğer tüm Microsoft Defender ürünlerinden* tablo seçebileceğinizi unutmayın (aşağıda).
+
+7. **EmailEvents**, **EmailUrlInfo**, **EmailAttachmentInfo** ve **EmailPostDeliveryEvents** > ve **Değişiklikleri Uygula'yı** seçin.
 
 ## <a name="more-resources"></a>Diğer kaynaklar
 

@@ -16,12 +16,12 @@ metadata:
   ms.collection:
   - SMB
   - M365-security-compliance
-  ms.openlocfilehash: 67205e2c326c34bdcaac7e36042797c9f261b547
-  ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+  ms.openlocfilehash: 8f9b3abe8b2e4eb6182496635f01b71c001f7b7d
+  ms.sourcegitcommit: 612ce4d15d8a2fdbf7795393b50af477d81b6139
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/17/2022
-  ms.locfileid: "65437513"
+  ms.lasthandoff: 05/24/2022
+  ms.locfileid: "65663678"
 title: İş için Microsoft Defender - Sık sorulan sorular ve yanıtlar
 summary: >
   İş için Defender hakkında sorularınıza yanıt almak için bu makaleyi kullanın.
@@ -54,7 +54,7 @@ sections:
     answer: >
       İş için Defender şu anda güçlü özel raporlamayı destekleyen bir dizi API ve bir Power BI bağlayıcısı içerir. HTML olarak biçimlendirilmiş yönetici özetleri oluşturmak ve bu özetleri e-postayla göndermek için bir PowerShell betiği zamanlayabilirsiniz. Bkz. [API başvuru bilgileri](/microsoft-365/security/defender-endpoint/exposed-apis-create-app-partners).
   - question: Ben bir Microsoft iş ortağıyım. Bir denetim masasından birden çok kiracıyı yönetebilecek miyim yoksa her kiracıda ayrı ayrı oturum açmam gerekecek mi?
-    answer: "İş için Defender, tek bir konsolda ([https://lighthouse.microsoft.com](https://lighthouse.microsoft.com)) çok kiracılı destek için Microsoft 365 Lighthouse'de etkinleştirilir. \n \nŞu anda çok kiracılı bir olay kuyruğu, dikkat gerektiren olayların kiracılar arası görünümünü sağlar; ancak yapılandırma ve ekleme, iş ortağı kimlik bilgileriniz kullanılarak müşterinin kiracısında gerçekleştirilir. \n\nÖzellikler hala kullanıma sunulmaya devam ediyor ve daha fazla tümleştirme senaryosu planlanıyor.\n\nDaha fazla bilgi için bkz. [Microsoft 365 Lighthouse genel bakış](/microsoft-365/lighthouse/m365-lighthouse-overview).\n"
+    answer: "İş için Defender, tek bir konsolda ([https://lighthouse.microsoft.com](https://lighthouse.microsoft.com)) çok kiracılı destek için Microsoft 365 Lighthouse'de etkinleştirilir. \n\nDaha fazla bilgi için bkz. [Microsoft 365 Lighthouse genel bakış](/microsoft-365/lighthouse/m365-lighthouse-overview).\n"
   - question: İş için Defender'da saldırı yüzeyi azaltma kurallarını ve özelliklerini yapılandırmak Nasıl yaparım??
     answer: >
       Microsoft 365 Defender portalında ([https://security.microsoft.com](https://security.microsoft.com)) İş için Defender aracılığıyla saldırı yüzeyi azaltma kuralları ve özellikleri için basitleştirilmiş yapılandırma henüz desteklenmemektedir. Microsoft Intune varsa, saldırı yüzeyi azaltma ilkelerinizi yapılandırmak için Microsoft Endpoint Manager yönetim merkezini kullanabilirsiniz. bkz[. Intune'da uç nokta güvenliği için saldırı yüzeyi azaltma ilkesi](/mem/intune/protect/endpoint-security-asr-policy).

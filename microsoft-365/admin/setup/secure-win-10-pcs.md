@@ -25,18 +25,18 @@ search.appverid:
 - BCS160
 - MET150
 description: Microsoft 365 İş Ekstra ayarladıktan sonra Windows 10 bilgisayarların güvenliğini sağlamayı öğrenin.
-ms.openlocfilehash: d0f2842c69127893e512822a8d91dfd37a4a0e48
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: 872fce9124f6a27dd884ed9d740baa9d195d8f95
+ms.sourcegitcommit: 612ce4d15d8a2fdbf7795393b50af477d81b6139
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65622913"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65663458"
 ---
 # <a name="secure-windows-10-computers"></a>Windows 10 bilgisayarların güvenliğini sağlama
 
 Bu makale Microsoft 365 İş Ekstra için geçerlidir.
 
-Microsoft 365 İş Ekstra [ayarladıktan](business-set-up.md) sonra, kuruluşunuzdaki Windows 10 bilgisayarları hırsızlıktan ve virüs ve kötü amaçlı yazılım gibi kötü amaçlı tehditlerden korumanın zamanı geldi.
+Microsoft 365 İş Ekstra [ayarladıktan](/microsoft-365/business-premium/m365bp-setup) sonra, kuruluşunuzdaki Windows 10 bilgisayarları hırsızlıktan ve virüs ve kötü amaçlı yazılım gibi kötü amaçlı tehditlerden korumanın zamanı geldi.
 
 ## <a name="watch-secure-your-windows-10-pcs"></a>Izleyin: Windows 10 bilgisayarlarınızın güvenliğini sağlama
 

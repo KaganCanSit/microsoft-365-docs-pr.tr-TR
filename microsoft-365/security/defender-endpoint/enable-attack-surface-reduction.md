@@ -19,12 +19,12 @@ ms.collection:
 - M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.date: 1/18/2022
-ms.openlocfilehash: 2b88e6413bb8ef520c3049f63cca60703a509be3
-ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
+ms.openlocfilehash: 04eee4c44e0cf2b712ecab84b18837d7b3705cef
+ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2022
-ms.locfileid: "65637923"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65669814"
 ---
 # <a name="enable-attack-surface-reduction-rules"></a>Saldırı yüzeyi azaltma kurallarını etkinleştirme
 
@@ -48,13 +48,15 @@ Windows sürümlerde saldırı yüzeyi azaltma özellikleri
 
 aşağıdaki Windows sürümlerinden herhangi birini çalıştıran cihazlar için saldırı yüzeyi azaltma kuralları ayarlayabilirsiniz:
 
+- [Windows 11 Pro](/windows/whats-new/windows-11-overview)
+- [Windows 11 Enterprise](https://www.microsoft.com/microsoft-365/windows/windows-11-enterprise)
 - Windows 10 Pro, [sürüm 1709](/windows/whats-new/whats-new-windows-10-version-1709) veya üzeri
 - Windows 10 Enterprise, [sürüm 1709](/windows/whats-new/whats-new-windows-10-version-1709) veya üzeri
 - Windows Sunucusu, [sürüm 1803 (Altı Aylık Kanal)](/windows-server/get-started/whats-new-in-windows-server-1803) veya üzeri
-- [Windows Server 2019](/windows-server/get-started-19/whats-new-19)
-- [Windows Server 2016](/windows-server/get-started/whats-new-in-windows-server-2016)
 - [Windows Server 2012 R2](/windows/win32/srvnodes/what-s-new-for-windows-server-2012-r2)
-- Windows Server 2022
+- [Windows Server 2016](/windows-server/get-started/whats-new-in-windows-server-2016)
+- [Windows Server 2019](/windows-server/get-started-19/whats-new-19)
+- [Windows Server 2022](/windows-server/get-started/whats-new-in-windows-server-2022)
 
 Saldırı yüzeyi azaltma kurallarının özellik kümesinin tamamını kullanmak için şunları yapmanız gerekir:
 
@@ -107,8 +109,8 @@ ASR kuralları ortam değişkenlerini ve joker karakterleri destekler. Joker kar
 2. MEM tarafından yönetilen cihazlar için saldırı yüzeyi azaltma kuralları artık her cihaz için bir ilke üst kümesi oluşturmak üzere farklı ilkelerden ayarların birleştirilmesine yönelik davranışı destekliyor. Yalnızca çakışma olmayan ayarlar birleştirilirken, çakışan ayarlar kuralların üst kümesine eklenmez. Daha önce, iki ilkede tek bir ayar için çakışmalar varsa, her iki ilke de çakışıyor olarak işaretlenir ve her iki profilden hiçbir ayar dağıtılmazdı. Saldırı yüzeyi azaltma kuralı birleştirme davranışı aşağıdaki gibidir:
    - Aşağıdaki profillerden gelen saldırı yüzeyi azaltma kuralları, kuralların geçerli olduğu her cihaz için değerlendirilir:
      - Cihazlar > Yapılandırma ilkesi > Uç nokta koruma profili > **Microsoft Defender Exploit Guard** >  [Ayrı yüzey azaltma](/mem/intune/protect/endpoint-protection-windows-10#attack-surface-reduction-rules).
-     - Uç nokta güvenliği > **Saldırı yüzeyi azaltma ilkesi** >  [Yüzey azaltma kurallarını ekleme](/mem/intune/protect/endpoint-security-asr-policy#devices-managed-by-intune).
-     - Uç nokta güvenliği > **Microsoft Defender ATP** [BaselineAttack Surface Azaltma Kuralları> güvenlik temelleri](/mem/intune/protect/security-baseline-settings-defender-atp#attack-surface-reduction-rules) > .
+     - Uç nokta güvenliği > **Saldırı yüzeyi azaltma ilkesi** > [Saldırı yüzeyi azaltma kuralları](/mem/intune/protect/endpoint-security-asr-policy#devices-managed-by-intune).
+     - Uç nokta güvenliği > **Microsoft Defender ATP Temel**[Saldırı Yüzeyi Azaltma Kuralları > Güvenlik temelleri](/mem/intune/protect/security-baseline-settings-defender-atp#attack-surface-reduction-rules) > .
    - Çakışması olmayan Ayarlar cihaz için bir ilke üst kümesine eklenir.
    - İki veya daha fazla ilke çakışan ayarlara sahip olduğunda, çakışan ayarlar birleştirilmiş ilkeye eklenmezken, çakışmayan ayarlar bir cihaz için geçerli olan üst küme ilkesine eklenir.
    - Yalnızca çakışan ayarlar için yapılandırmalar geri tutulur.

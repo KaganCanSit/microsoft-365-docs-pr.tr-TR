@@ -18,12 +18,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 787da143bdbbc2d21610ba14d0fe7c955e4e976d
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 1faff638c9b33b933277dc74248c2d7daa43331c
+ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64823410"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65669682"
 ---
 # <a name="configure-device-proxy-and-internet-connectivity-settings"></a>Cihaz ara sunucusu ve İnternet bağlantısı ayarlarını yapılandırma
 
@@ -33,7 +33,7 @@ ms.locfileid: "64823410"
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Defender'ı deneyimlemek mi istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-configureendpointsscript-abovefoldlink)
+> Uç nokta için Defender'i deneyimlemek ister misiniz? [Ücretsiz deneme için kaydolun.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-configureendpointsscript-abovefoldlink)
 
 Uç Nokta için Defender algılayıcısı, algılayıcı verilerini raporlamak ve Uç Nokta için Defender hizmetiyle iletişim kurmak için Microsoft Windows HTTP (WinHTTP) gerektirir. Ekli Uç Nokta için Defender algılayıcısı LocalSystem hesabını kullanarak sistem bağlamında çalışır. Algılayıcı, Uç Nokta için Defender bulut hizmetiyle iletişimi etkinleştirmek için Microsoft Windows HTTP Hizmetleri'ni (WinHTTP) kullanır.
 
@@ -152,7 +152,7 @@ Sistem genelinde statik ara sunucuyu yapılandırmak için netsh kullanın.
 
 2. Aşağıdaki komutu girin ve **Enter tuşuna** basın:
 
-   ```PowerShell
+   ```command prompt
    netsh winhttp set proxy <proxy>:<port>
    ```
 
@@ -160,7 +160,7 @@ Sistem genelinde statik ara sunucuyu yapılandırmak için netsh kullanın.
 
 Winhttp proxy'yi sıfırlamak için aşağıdaki komutu girin ve **Enter tuşuna** basın:
 
-```PowerShell
+```command prompt
 netsh winhttp reset proxy
 ```
 
@@ -249,13 +249,13 @@ Proxy yapılandırmasının başarıyla tamamlandığını doğrulayın. WinHTTP
 
 4. Aşağıdaki komutu girin ve **Enter tuşuna** basın:
 
-    ```PowerShell
+    ```command prompt
     HardDrivePath\MDEClientAnalyzer.cmd
     ```
 
     *HardDrivePath'i* MDEClientAnalyzer aracının indirildiği yolla değiştirin. Örneğin:
 
-    ```PowerShell
+    ```command prompt
     C:\Work\tools\MDEClientAnalyzer\MDEClientAnalyzer.cmd
     ```
 

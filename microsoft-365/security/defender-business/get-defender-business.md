@@ -15,12 +15,12 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - m365-security-compliance
-ms.openlocfilehash: e47fc4630e83cb79a591f1c4fd4fc7421746a15e
-ms.sourcegitcommit: 60970cf8a2cb451011c423d797dfb77925394f89
+ms.openlocfilehash: b5fb9fabad337570744dbd94b76c39d446431cf6
+ms.sourcegitcommit: 612ce4d15d8a2fdbf7795393b50af477d81b6139
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2022
-ms.locfileid: "65587402"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65663502"
 ---
 # <a name="get-microsoft-defender-for-business"></a>İş için Microsoft Defender alma
 
@@ -50,7 +50,7 @@ Deneme sürümüne kaydolmuşsanız, kabul e-postanızı aldıktan sonra [deneme
 
 ## <a name="get-microsoft-365-business-premium"></a>Microsoft 365 İş Ekstra’yı edinin
 
-*1 Mart 2022'de, İş için Defender Microsoft 365 İş Ekstra kapsamında kullanıma sunulacaktır*. 
+*1 Mart 2022 itibarıyla, İş için Defender Microsoft 365 İş Ekstra dahil edilir*. 
 
 1. [Microsoft 365 İş Ekstra ürün sayfasını ziyaret edin](https://www.microsoft.com/microsoft-365/business/microsoft-365-business-premium?activetab=pivot%3aoverviewtab).
 
@@ -85,7 +85,7 @@ Kabul e-postanızı aldığınızda deneme aboneliğinizi şu şekilde etkinleş
    | Senaryo | Yordam |
    |:---|:---|
    | İlk kez bir Microsoft 365 aboneliği ayarlıyorsunuz. | **Kılavuzlu kuruluma git'i** seçin ve aşağıdaki adımları tamamlayın:<ol><li>Office uygulamalarınızı şimdi yükleyin veya bu adımı atlamak için **Devam'ı** seçin. (Office uygulamalarınızı daha sonra yükleyebilirsiniz.)</li><li>Şirketinizin bir etki alanı varsa, şimdi ekleyebilirsiniz (bu seçenek önerilir). Alternatif olarak, şimdilik varsayılan `.onmicrosoft.com` etki alanınızı kullanmayı seçebilirsiniz.</li><li>Kullanıcı ekleyin ve lisans atayın. Listelediğiniz her kullanıcıya otomatik olarak bir lisans atanır. Bkz. [Kullanıcıları ekleme ve lisansları aynı anda atama](mdb-add-users.md).</li></ol> |
-   | Mevcut bir Microsoft 365 kiracısına deneme sürümü ekliıyorsunuz. | <ol><li>Microsoft 365 yönetim merkezi ([https://admin.microsoft.com/](https://admin.microsoft.com/)) gidin ve oturum açın.</li><li>Gezinti bölmesinde **KullanıcılarEtkin** >  kullanıcılar'ı seçin. Kullanıcı listesini gözden geçirin. </li><li>Lisansları atamak için [Kullanıcılara lisans atama](../../admin/manage/assign-licenses-to-users.md) başlığı altında yer alan yönergeleri izleyin.</li></ol> |
+   | Mevcut bir Microsoft 365 kiracısına deneme sürümü ekliıyorsunuz. | <ol><li>Microsoft 365 yönetim merkezi ([https://admin.microsoft.com/](https://admin.microsoft.com/)) gidin ve oturum açın.</li><li>Gezinti bölmesinde **Kullanıcılar** > **Etkin kullanıcılar'ı** seçin. Kullanıcı listesini gözden geçirin. </li><li>Lisansları atamak için [Kullanıcılara lisans atama](../../admin/manage/assign-licenses-to-users.md) başlığı altında yer alan yönergeleri izleyin.</li></ol> |
 
 ## <a name="two-portals-for-setup"></a>Kurulum için iki portal
 

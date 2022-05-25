@@ -23,12 +23,12 @@ ms.custom:
 - admindeeplinkCOMPLIANCE
 - admindeeplinkEXCHANGE
 description: Kuruluşunuzun ileti saklama, eKeşif ve saklama gereksinimlerini desteklemek için arşiv posta kutularını etkinleştirmeyi veya devre dışı bırakmayı öğrenin.
-ms.openlocfilehash: fac57f8b352edc62db344ec600d3063e960f5a6f
-ms.sourcegitcommit: 54bc063818779e351ca24f04ba571f762d85751d
+ms.openlocfilehash: ba5fdf252fe379798b1126d59affb12bb3725306
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65393330"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65647247"
 ---
 # <a name="enable-archive-mailboxes-in-the-microsoft-purview-compliance-portal"></a>Microsoft Purview uyumluluk portalındaki arşiv posta kutularını etkinleştirme
 
@@ -55,11 +55,10 @@ Microsoft Purview uyumluluk portalında **Arşiv** sayfasını görmüyorsanız,
    > [!NOTE]
    > **Arşiv** sayfası en fazla 500 kullanıcı gösterir. İstediğiniz kullanıcının adını hemen göremiyorsanız arama kutusunu kullanın.
 
-3. Posta kutuları listesinde, arşiv posta kutusunu etkinleştirmek istediğiniz kullanıcıyı seçin ve ardından **Arşivi Etkinleştir** seçeneğini seçin:
-
+3. Posta kutuları listesinde, arşiv posta kutusunu etkinleştirmek istediğiniz kullanıcıyı seçin ve ardından **Arşivi etkinleştir** seçeneğini seçin:
+    
    ![Seçili bir kullanıcı için arşiv seçeneğini etkinleştirin.](../media/enable-archive-option.png)
-
-
+    
    Arşiv posta kutusunu etkinleştirirseniz, kullanıcının posta kutusundaki posta kutusuna atanan arşivleme ilkesinden daha eski olan öğelerin yeni arşiv posta kutusuna taşınacağını söyleyen bir uyarı görüntülenir. Exchange Online posta kutularına atanan bekletme ilkesinin bir parçası olan varsayılan arşiv ilkesi, öğeleri, öğenin posta kutusuna teslim edildiği veya kullanıcı tarafından oluşturulduğu tarihten iki yıl sonra arşiv posta kutusuna taşır. Daha fazla bilgi için bkz. [Arşiv posta kutuları hakkında bilgi](archive-mailboxes.md).
 
 5. Onaylamak için **Etkinleştir**’i seçin.
@@ -68,7 +67,7 @@ Microsoft Purview uyumluluk portalında **Arşiv** sayfasını görmüyorsanız,
 
 ## <a name="disable-an-archive-mailbox"></a>Arşiv posta kutusunu devre dışı bırakma
 
-Arşiv posta kutusunu etkinleştirmenize benzer şekilde, bir kullanıcının arşiv posta kutusunu devre dışı bırakmak için Microsoft Purview uyumluluk portalı **Arşiv** sayfasını kullanabilirsiniz. Bu kez, kullanıcıyı seçtikten sonra **Arşivi devre dışı bırak** seçeneğini seçin.
+Arşiv posta kutusunu etkinleştirmenize benzer şekilde, bir kullanıcının arşiv posta kutusunu devre dışı bırakmak için Microsoft Purview uyumluluk portalı **Arşiv** sayfasını kullanabilirsiniz. Bu kez, kullanıcıyı seçtikten sonra **Arşivi devre dışı bırak** seçeneğini belirleyin.
 
 Bir arşiv posta kutusunu devre dışı bıraktıktan sonra, devre dışı bırakmadan sonraki 30 gün içinde onu kullanıcının birincil posta kutusuna yeniden bağlayabilirsiniz. Bu durumda, arşiv posta kutusunun özgün içeriği geri yüklenir. 30 gün sonra, özgün arşiv posta kutusunun içeriği kalıcı olarak silinir ve kurtarılamaz. Bu nedenle, arşivi devre dışı bıraktıktan 30 gün sonra yeniden etkinleştirirseniz yeni bir arşiv posta kutusu oluşturulur.
 

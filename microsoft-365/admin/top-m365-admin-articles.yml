@@ -1,59 +1,57 @@
 ### YamlMime:Landing
 title: Bu ay en çok görüntülenen 20 yönetici yardımı makalesi
-summary: Son güncelleştirme 23/3/2022. Hangi yardım makalelerini yöneticiler tarafından en popüler olan merak ediyor musunuz? Aylık olarak güncelleştirilen en çok görüntülenen 20 yardım makalesi koleksiyonuna göz atabilirsiniz.
+summary: Son güncelleştirme 24.05.2022. Yöneticiler arasında en çok hangi yardım makalelerinin popüler olduğunu merak ediyor musunuz? Aylık olarak güncelleştirilen, en çok görüntülenen 20 yardım makalesinin bu koleksiyonuna göz atın.
 metadata:
   title: Bu ay en çok görüntülenen 20 yönetici yardımı makalesi
-  description: Aylık güncelleştirilen, yöneticiler tarafından en popüler olan 20 yardım makalesi koleksiyonuna göz at.
+  description: Yöneticiler arasında en popüler olan ve aylık olarak güncelleştirilen en popüler 20 yardım makalesinin bu koleksiyonuna göz atın.
   ms.service: O365-administration
   ms.topic: landing-page
   author: SKjerland
   ms.author: sharik
-  ms.date: 03/22/2022
+  ms.date: 05/24/2022
   ms.localizationpriority: high
   ms.custom: AdminSurgePortfolio
   ms.collection: Adm_TOC
-  ms.openlocfilehash: 115617fb4291e65b828bb8308afab1765fcab3b6
-  ms.sourcegitcommit: f941967b8bc2c24401795e41fd155365a0dbc645
+  ms.openlocfilehash: d27424db329d3d5b42dfea2ab6b98a0340f75b6f
+  ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 03/23/2022
-  ms.locfileid: "63761532"
+  ms.lasthandoff: 05/25/2022
+  ms.locfileid: "65670090"
 landingContent:
-- title: Veri ve hizmetleri yönetme
+- title: Verileri ve hizmetleri yönetme
   linkLists:
   - linkListType: overview
     links:
     - text: Yönetici rolleri hakkında
       url: add-users/about-admin-roles.md
-    - text: Microsoft 365 raporları
+    - text: Kullanım raporlarını Microsoft 365
       url: activity-reports/activity-reports.md
-  - linkListType: video
-    links:
-    - text: Yardım veya destek al
+    - text: İş için Microsoft 365 desteği alma
       url: get-help-support.md
 - title: Etki alanları
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Etki alanınıza bağlanmak için DNS kayıtları ekleme
+    - text: Etki alanınızı bağlamak için DNS kayıtları ekleme
       url: get-help-with-domains/create-dns-records-at-any-dns-hosting-provider.md
-    - text: Postanıza etki Microsoft 365
+    - text: Microsoft 365 etki alanı ekleme
       url: setup/add-domain.md
 - title: Güvenlik
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Çok faktörlü kimlik doğrulamasını ayarlama
+    - text: Microsoft 365 için çok faktörlü kimlik doğrulamasını ayarlama
       url: security-and-compliance/set-up-multi-factor-authentication.md
 - title: Faturalar ve abonelikler
   linkLists:
   - linkListType: overview
     links:
-    - text: Kayıt numaraları ve incelemenin altındaki bildirimler hakkında
+    - text: Kayıt numaraları ve gözden geçirme bildirimleri hakkında
       url: ../commerce/about-registration-numbers.md
   - linkListType: how-to-guide
     links:
-    - text: Aboneliğinizi iptal etme
+    - text: İş aboneliğinizi iptal etme
       url: ../commerce/subscriptions/cancel-your-subscription.md
     - text: Aboneliğinizi ödeme
       url: ../commerce/billing-and-payments/pay-for-your-subscription.md
@@ -69,11 +67,11 @@ landingContent:
       url: email/about-shared-mailboxes.md
   - linkListType: how-to-guide
     links:
-    - text: E-posta iletmeyi Microsoft 365
+    - text: Microsoft 365'de e-posta iletmeyi yapılandırma
       url: email/configure-email-forwarding.md
     - text: Paylaşılan posta kutusu oluşturma
       url: email/create-a-shared-mailbox.md
-    - text: Başka bir kullanıcıya posta kutusu izinleri verme
+    - text: Başka bir Microsoft 365 kullanıcıya posta kutusu izinleri verme
       url: add-users/give-mailbox-permissions-to-another-user.md
     - text: Kullanıcı adı ve e-posta adresi değiştirme
       url: add-users/change-a-user-name-and-email-address.md
@@ -81,17 +79,11 @@ landingContent:
       url: email/convert-user-mailbox-to-shared-mailbox.md
 - title: Kullanıcılar, gruplar ve parolalar
   linkLists:
-  - linkListType: overview
-    links:
-    - text: Grupları karşılaştırma
-      url: create-groups/compare-groups.md
   - linkListType: how-to-guide
     links:
-    - text: Kullanıcıları ekleme ve lisansları aynı anda atama
+    - text: Aynı anda kullanıcı ekleme ve lisans atama
       url: add-users/add-users.md
-    - text: Kullanıcılara lisans atama
+    - text: Kullanıcılara Microsoft 365 lisansları atama
       url: manage/assign-licenses-to-users.md
-    - text: Kuruluşunuzun parola süre sonu ilkesini belirleyin
-      url: manage/set-password-expiration-policy.md
-    - text: Kullanıcıların QR koduyla mobil Outlook oturum açmasına izin ver
+    - text: Kullanıcıların QR koduyla Outlook mobil uygulamalarda oturum açmasına izin verme
       url: manage/use-qr-code-download-outlook.md

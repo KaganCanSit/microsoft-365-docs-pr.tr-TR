@@ -18,12 +18,12 @@ ms.collection:
 - M365-security-compliance
 description: Uyumluluk merkezine yeni çözümler eklemek, mevcut özellikleri geri bildiriminize göre güncelleştirmek veya yeni ve güncelleştirilmiş belgeler kullanıma sunarken Microsoft 365 sürekli değişen uyumluluk ortamını takip etme konusunda size yardımcı olur. Bu ay neler yaptığımıza bakın.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 4af9cb3073e4fa150a2683c2dd2f125336ef01b8
-ms.sourcegitcommit: 570c3be37b6ab1d59a4988f7de9c9fb5ca38028f
+ms.openlocfilehash: 20a8a96146b7f65ef3f8ccec4f099b91d74822a0
+ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "65363158"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65670112"
 ---
 # <a name="whats-new-in-microsoft-purview"></a>Microsoft Purview'daki yenilikler
 
@@ -139,7 +139,7 @@ Günümüzün merkezi olmayan, veri açısından zengin çalışma alanının zo
 | Microsoft 365'da Ayrıcalıklı Erişim Yönetimi | Microsoft Purview Privileged Access Management | Privileged Access Management, kuruluşunuzun ihlallere karşı korunmasına yardımcı olur ve hassas verilere veya kritik yapılandırma ayarlarına erişimi sınırlayarak uyumluluk en iyi yöntemlerini karşılamaya yardımcı olur. Daha fazla bilgi için bkz. [Privileged Access Management Microsoft Purview](privileged-access-management-solution-overview.md). |
 | Microsoft veri bağlayıcıları | veri bağlayıcılarını Microsoft Purview | Microsoft 365, yöneticilerin Microsoft dışı üçüncü taraf verileri sosyal medya platformlarından, anlık ileti platformlarından ve belge işbirliği platformlarından Microsoft 365 kuruluşunuzdaki posta kutularına aktarmak ve arşivlemek için veri bağlayıcılarını kullanmasına olanak tanır. Daha fazla bilgi için bkz. [Microsoft Purview veri bağlayıcıları](compliance-extensibility.md). |
 | Microsoft 365 Gelişmiş eKeşif <br><br> Microsoft 365 Core eKeşif | Microsoft Purview eKeşif (Premium) <br><br> Microsoft Purview eKeşif (Standart) | Elektronik bulma veya eBulma, yasal davalarda kanıt olarak kullanılabilecek elektronik bilgileri tanımlama ve teslim etme işlemidir. Daha fazla bilgi için bkz. [Microsoft Purview eBulma (Premium)](overview-ediscovery-20.md) ve [Microsoft Purview eBulma (Standart)](get-started-core-ediscovery.md). |
-| Microsoft 365 uyumluluk merkezi | Microsoft Purview uyumluluk portalı | Microsoft 365 E5 Uyumluluk paketindeki çözümlere ve çözüm kataloğuna erişmek için yönetici portalı. Daha fazla bilgi için bkz. [Microsoft Purview uyumluluk portalı](microsoft-365-compliance-center.md). |
+| Microsoft 365 uyumluluk merkezi | Microsoft Purview uyumluluk portalı | Microsoft 365 E5 Uyumluluk paketindeki çözümlere ve çözüm kataloğuna erişmek için portalı Yönetici. Daha fazla bilgi için bkz. [Microsoft Purview uyumluluk portalı](microsoft-365-compliance-center.md). |
 
 ## <a name="march-2022"></a>Mart 2022
 
@@ -151,7 +151,7 @@ Günümüzün merkezi olmayan, veri açısından zengin çalışma alanının zo
 
 - [Uyumluluk Yöneticisi ile Kullanmaya başlayın](compliance-manager-setup.md) [geliştirme eylemleriyle çalışma](compliance-manager-improvement-actions.md) - otomatik olarak izlenebilen ve test edilebilen daha fazla iyileştirme eylemi hakkında bilgi eklendi ("sürekli uyumluluk değerlendirmesi"); bu, bir eylemin test durumunu başka bir eyleminkine aktarmaya yönelik yeni yetenekleri içerir.
 
-### <a name="data-classification"></a>Veri Sınıflandırma
+### <a name="data-classification"></a>Veri sınıflandırması
 
 - [İçerik Gezgini ile Başlarken](data-classification-content-explorer.md) - hizmet açıklamalarına işaret eden lisanslama bölümü eklenmiş Teams kılavuz.
 
@@ -168,15 +168,15 @@ Günümüzün merkezi olmayan, veri açısından zengin çalışma alanının zo
 - Sınırlı uygulama gruplarının genel önizlemesi için yeni [olan uç nokta veri kaybı önleme ayarlarını yapılandırın](dlp-configure-endpoint-settings.md).
 - [Veri kaybı önleme ilkesi başvurusu](dlp-policy-reference.md) - kısıtlı uygulama gruplarının genel önizlemesi için güncelleştirildi.
 - [Power BI için veri kaybı önleme ile Kullanmaya başlayın](dlp-powerbi-get-started.md) - genel önizleme için yeni.
+- 
+### <a name="information-protection"></a>Bilgi koruması
 
+- [Çift bayt karakter kümesi sürüm notları desteği](mip-dbcs-relnotes.md) - macOS için rehberlik eklendi.
+- 
 ### <a name="insider-risk-management"></a>İçeriden risk yönetimi
 
 - [insider risk yönetimiyle Kullanmaya başlayın](insider-risk-management-configure.md) - Önerilen eylemler kılavuzu için yeni görevler eklendi.
 - [insider risk yönetimi ayarlarıyla Kullanmaya başlayın](insider-risk-management-settings.md) - bildirim ve e-posta uyarıları özellikleri için yeni güncelleştirmeler, analiz bildirimleri için yeni güncelleştirmeler.
-
-### <a name="microsoft-information-protection"></a>Microsoft Bilgi Koruması
-
-- [Çift bayt karakter kümesi sürüm notları desteği](mip-dbcs-relnotes.md) - macOS için rehberlik eklendi.
 
 ### <a name="microsoft-priva"></a>Microsoft Priva
 

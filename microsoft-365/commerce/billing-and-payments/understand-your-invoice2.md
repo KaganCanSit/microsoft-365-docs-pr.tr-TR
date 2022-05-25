@@ -1,5 +1,5 @@
 ---
-title: İş için faturanızı veya faturanızı Microsoft 365 kadar anlama
+title: İş için Microsoft 365 faturanızı veya faturanızı anlama
 f1.keywords:
 - NOCSH
 author: cmcatee-MSFT
@@ -20,93 +20,91 @@ ms.custom:
 - AdminSurgePortfolio
 - AdminTemplateSet
 search.appverid: MET150
-description: İş faturası veya faturanızı nasıl faturanıza, faturanıza, faturanıza Microsoft 365 ücretleri, fatura bilgilerini yorumlamayı öğrenin.
-ms.date: 03/04/2022
-ms.openlocfilehash: e8a27dbdab3f49412f78d0ef7dcb533266d5f4f4
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: İş faturası veya faturası için Microsoft 365 ücretleri, faturalamayı ve ödeme bilgilerini yorumlamayı öğrenin.
+ms.date: 05/24/2022
+ms.openlocfilehash: 594ad923c186410ad17085425fc0702d1a245ef9
+ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63322412"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65670256"
 ---
-# <a name="understand-your-bill-or-invoice-for-microsoft-365-for-business"></a>İş için faturanızı veya faturanızı Microsoft 365 kadar anlama
+# <a name="understand-your-bill-or-invoice-for-microsoft-365-for-business"></a>İş için Microsoft 365 faturanızı veya faturanızı anlama
 
-Faturanız veya faturanız, aboneliğiniz için ücretler özetini sağlar ve ödeme yapmaya yönelik yönergeler içerir.
+Faturanız veya faturanız, aboneliğiniz için ücretlerin özetini sağlar ve ödeme yapma yönergelerini içerir.
 
 > [!NOTE]
-> Abonelikler yerine veya bunlara ek olarak başka abonelikler Microsoft 365 bkz. [Faturanızı veya faturanızı anlama](understand-your-invoice.md).
+> Microsoft 365 yerine veya ek olarak başka abonelikleriniz varsa bkz. [Faturanızı veya faturanızı anlama](understand-your-invoice.md).
 
-## <a name="how-often-and-when-am-i-billed"></a>Ne sıklıkta ve ne zaman faturalandırıldım?
+## <a name="how-often-and-when-am-i-billed"></a>Ne sıklıkta ve ne zaman faturalandırılırım?
 
-Aboneliğinizi satın alma sıklığınıza bağlı olarak aylık veya yıllık olarak fatura alırsınız. Yıllık faturalandırmayı seçtiysanız, aboneliğiniz için etkinlik yeni bir ücret ya da kredi eklediği sürece yılda yalnızca bir fatura alırsınız.
+Aboneliğinizi satın alırken seçtiğiniz faturalama sıklığına bağlı olarak aylık, üç aylık, altı aylık veya yıllık olarak bir fatura alırsınız. Son fatura tarihinden bu yana geçen süre *Faturalama Dönemi* olarak adlandırılır ve faturanın birinci sayfasındadır. Bu süre, geçerli fatura için ücretlerin tahakkuk ettiği tarih aralığını temsil eder. Aboneliğinizde bu tarih aralığının dışında lisans ekleme veya kaldırma gibi bir değişiklik yaptıysanız, ilişkili ücretler sonraki faturalama dönemine ait faturada görünür.
 
-Son fatura tarihine bu yana geçen süre Faturalandırma Dönemi olarak *adlandırılan* ve faturanın ilk sayfasında yer alan süredir. Bu zaman, geçerli fatura için ücretlerin tahakkuk ettiği tarih aralığını temsil eder. Aboneliğinizi bu tarih aralığı dışında, lisans eklemek veya kaldırmak gibi bir değişiklik yaptısanız, ilişkili ücretler sonraki fatura dönemi faturada görünür.
+Faturanın ikinci sayfasından başlayarak, ücretleri *Hizmet Dönemlerine* göre gruplandırılmış olarak görürsünüz. Hizmet dönemi, hizmeti kullanmak için ücretlendirildiğiniz tarih aralığıdır.
 
-Faturanın iki. sayfasından başlayarak, ücretleri Hizmet Dönemlerine göre *gruplanmış olarak görebilirsiniz*. Hizmet dönemi, hizmeti kullanmak için ücret ödemeniz gereken tarih aralığıdır.
+Her faturalama döneminin sonunda, yeni faturanızın Microsoft 365 yönetim merkezi görüntülenmeye veya indirilmeye hazır olduğunu belirten bir e-posta alırsınız. Birden fazla siparişiniz varsa, her sipariş için bir fatura alırsınız. [Faturanızı veya faturanızı bulmayı ve görüntülemeyi](view-your-bill-or-invoice.md) öğrenin.
 
-Her faturalama döneminin sonunda, yeni faturanın faturanızı görüntülemeye veya indirmeye hazır olduğunu söyleyen bir e-posta Microsoft 365 yönetim merkezi. Birden fazla siparişiniz varsa her sipariş için fatura alırsınız. Faturanızı veya [faturanızı bulma ve görüntülemeyi öğrenin](view-your-bill-or-invoice.md).
+## <a name="why-is-my-total-due-different-from-last-month"></a>Toplam sürem neden geçen aydan farklı?
 
-## <a name="why-is-my-total-due-different-from-last-month"></a>Sürem neden geçen aydan farklı?
+Aboneliğiniz için faturalanan tutar, satın alınan lisans sayısı ve gerekli vergiler veya ücretler ile çarpılan lisans fiyatını yansıtır.
 
-Aboneliğiniz için faturalandırılır tutar, satın alınan lisans sayısıyla çarpılan lisans fiyatını ve gereken vergileri veya ücretleri yansıtılır.
+Faturalanan tutar beklenenden farklıysa, bunun birkaç nedeni olabilir:
 
-Faturalandırma tutarı beklenenden farklı olursa, bunun birkaç nedeni olabilir:
-
-- Aboneliğinize lisans eklediniz veya lisansı kaldırdınız. Dönem ortasında değiştirilen lisanslar bir sonraki faturaya yansır. Bu değişikliğin hesabını yapmak için önceki hizmet dönemine göre bir kredi ve yeniden faturalaabilirsiniz. Bunun faturanıza nasıl göründüğünün ayrıntıları için aşağıdaki 2. [sayfa'ya](#page-two) bakın.
-- Abonelik iptal edildi. İptalden sonra, bekleyen bakiye eksi kon konan bir fatura alırsınız.
+- Aboneliğinize lisans eklediniz veya aboneliğinizden lisansları kaldırdınız. Dönem ortasında değiştirilen lisanslar bir sonraki faturaya yansıtılır. Bu değişikliği hesaba eklemek için önceki hizmet dönemine ait bir kredi ve rebill görebilirsiniz. Bunun faturanızda nasıl göründüğü hakkında ayrıntılı bilgi için aşağıdaki [sayfa ikiye](#page-two) bakın.
+- Abonelik iptal edildi. İptalden sonra kalan bakiye ve krediler hariç bir fatura alırsınız.
 - Aboneliğiniz yeni dönem için yenilendi ve lisans ücreti değişti.
 
-## <a name="overview-of-the-invoice-pdf"></a>Fatura ödeme birimine genel .PDF
+## <a name="overview-of-the-invoice-pdf"></a>Fatura .PDF genel bakış
 
-Faturanız, .PDF sayfa içeren bir faturadır. [İlk sayfa](#page-one) fatura özetidir ve varsa fatura, sipariş, son tutar ve ödeme yönergeleri hakkında genel bilgiler içerir.
+Faturanız en az iki sayfa içeren bir .PDF. [Birinci sayfa](#page-one) faturalama özetidir ve fatura, sipariş, vadesi gelen tutar ve varsa ödeme yönergeleri hakkında genel bilgileri içerir.
 
-:::image type="content" source="../../media/understand-your-invoice2/invoice-page-1.png" alt-text="Siparişiniz hakkında üst .PDF gösteren fatura sayfasından ilk sayfa.":::
+:::image type="content" source="../../media/understand-your-invoice2/invoice-page-1.png" alt-text="Siparişinizle ilgili üst düzey bilgileri gösteren fatura .PDF birinci sayfa.":::
 
-[İkinci sayfada](#page-two) , hizmet dönemi boyunca her abonelik için faturalandırma etkinliği ile ilgili ayrıntılar yer eder.
+[İkinci sayfa](#page-two) , hizmet dönemi boyunca her abonelik için faturalama etkinliğiyle ilgili ayrıntıları içerir.
 
-:::image type="content" source="../../media/understand-your-invoice2/invoice-page-2.png" alt-text="Her abonelik için faturalandırma .PDF gösteren fatura sayfasının iki. sayfası.":::
+:::image type="content" source="../../media/understand-your-invoice2/invoice-page-2.png" alt-text="Her abonelik için faturalama etkinliğini gösteren fatura .PDF ikinci sayfa.":::
 
-## <a name="header"></a>Üst bilgi
+## <a name="header"></a>Üstbilgi
 
-Üst bilgi, her fatura sayfasının en üstünde yer alır ve hizmet aylarını ve Microsoft'un faturayı oluşturduğu tarih olan Fatura Tarihi'ne yer sağlar. Fatura, faturalandırma döneminizin sona erdikten bir gün sonra oluşturulur. Örneğin, faturalandırma döneminiz 15 Ocak -14 Şubat ise fatura tarihiniz 15 Şubat olur.
+Üst bilgi, her fatura sayfasının en üstünde görünür ve hizmet ayını ve Microsoft'un faturayı oluşturduğu tarih olan **Fatura Tarihi'ni** içerir. Fatura, faturalama döneminizin sona ermesinin ertesi günü oluşturulur. Örneğin, faturalama döneminiz 15 Ocak-14 Şubat ise fatura tarihiniz 15 Şubat'tır.
 
-Üst bilgide, **faturanıza atanan** benzersiz numara olan bir Fatura Numarası da yer alır. Elektronik Fon Transferi (EFT) veya çekle ödeme yaptıysanız ödemenize fatura numarasını da dahil edin.
+Üst bilgi, **faturanıza** atanan benzersiz numara olan Fatura Numarası'nı da içerir. Elektronik Fon Transferi (EFT) veya çek ile ödeme yaparsanız, fatura numarasını ödemenize ekleyin.
 
-Son olarak, üst **bilgide faturanın** ödemesi için Son Tarih yer alır ve ödeme tarihi olan toplam tutar görünür. Aboneliğinizin ödemesini kredi kartıyla veya banka hesabıyla yaptısanız, fatura tarihini bir gün sonra kartınızdan veya hesabınızdan tahsil tutarız.
+Son olarak, üst bilgi faturanın ödemesi için **Son Tarih'i** içerir ve ödenmesi gereken toplam tutarı gösterir. Aboneliğiniz için kredi kartı veya banka hesabıyla ödeme yaparsanız, fatura tarihinden bir gün sonra kartınızdan veya hesabınızdan ücret alınır.
 
-## <a name="footer"></a>Alt Bilgi
+## <a name="footer"></a>Altbilgi
 
-Alt bilgi, her fatura sayfasının altında görüntülenir ve Microsoft iş merkezi adresini içerir. Ülkenize veya bölgenize bağlı olarak, fatura veya teknik desteğe çağrı yapmak üzere telefon numarası, çevrimiçi kendi kendine yardım makalelerinin bağlantısı, ülke veya bölgeniz için Microsoft'un adresi ve vergi kimliği gibi başka bilgiler de içerebilir.
+Alt bilgi, her fatura sayfasının en altında görünür ve Microsoft iş merkezi adresini içerir. Ülkenize veya bölgenize bağlı olarak faturalama veya teknik destek için aranacak telefon numarası, çevrimiçi kendi kendine yardım makalelerinin bağlantısı ve ülkenizdeki veya bölgenizdeki Microsoft'un adres ve vergi kimliği gibi diğer bilgileri içerebilir.
 
 ## <a name="page-one"></a>Sayfa bir
 
-Faturanıza ilişkin ilk sayfada kuruma ilişkin adres bilgileri, siparişiniz hakkında üst düzey bilgiler, fatura toplamlarının özeti ve faturanızı ödeme yönergeleri yer almaktadır.
+Faturanızın birinci sayfasında kuruluşunuza ait adres bilgileri, siparişinizle ilgili üst düzey ayrıntılar, fatura toplamlarının özeti ve faturanızı ödeme yönergeleri yer alır.
 
-:::image type="content" source="../../media/understand-your-invoice2/invoice-page1-details.png" alt-text="Faturanın ilk sayfasındaki ana bölüm.":::
+:::image type="content" source="../../media/understand-your-invoice2/invoice-page1-details.png" alt-text="Faturanın birinci sayfasındaki ana bölüm.":::
 
 ### <a name="addresses"></a>Adresler
 
-İlk sayfanın en üstünde üç adres görünür. **Satılacak Adres**, aboneliği satın alan kuruluşun adı ve adresidir. Fatura **Adresi,** faturalandırma bölüm defterinizin adresidir. **Hizmet Kullanım Adresi** , hizmetin kullanılan adresidir. Bu adresler genellikle aynıdır. Boyutuna ve yapılandırmasına bağlı olarak, bu adresler farklı olabilir.
+İlk sayfanın en üstünde üç adres görünür. **Alıcı** adresi, aboneliği satın alan kuruluşun adı ve adresidir. **Fatura** Adresi, faturalama departmanınızın adresidir. **Hizmet Kullanım Adresi** , hizmetin kullanıldığı adrestir. Genellikle bu adresler aynıdır. Kuruluşunuzun boyutuna ve yapılandırmasına bağlı olarak, bu adresler farklı olabilir.
 
-Satış **Adresi'ne güncelleştirmek için** bkz [. Kuruluş adresinizi ve teknik iletişim bilgilerini değiştirme ve daha fazlası](../../admin/manage/change-address-contact-and-more.md)**. Fatura Adresi veya Hizmet Kullanım Adresinizi** **güncelleştirmek için bkz**[. Fatura adreslerinizi değiştirme](change-your-billing-addresses.md).
+**Alıcı** adresini güncelleştirmek için bkz. [Kuruluşunuzun adresini, teknik kişisini ve daha fazlasını değiştirme](../../admin/manage/change-address-contact-and-more.md)**. Fatura Adresi** veya **Hizmet Kullanım Adresinizi** güncelleştirmek için bkz. [Fatura adreslerinizi değiştirme](change-your-billing-addresses.md).
 
 #### <a name="order-details"></a>Sipariş Ayrıntıları
 
-Faturanıza bağlı sayfada Ürün, **aboneliğinizi tanımlamak** için kullanırız genel terim olan "Çevrimiçi Hizmetler"tir. İki sayfada siparişiniz için tek tek ürünler listelemektedir.
+Faturanızın birinci sayfasında **Ürün** , aboneliğinizi açıklamak için kullandığımız genel terim olan "Çevrimiçi Hizmetler"dir. İkinci sayfada siparişinizdeki tek tek ürünler listelenir.
 
-**Müşteri SATıN ALMA** SIPARIŞI Numarası, belirttiğiniz satın alma siparişi (PO) numarasıdır. Mevcut bir faturaya SAS numarası ekleyemezsiniz. PO numarasını güncellersiniz, bu numara gelecekteki faturalara dahil edilir. SATıN ALMA SIPARIŞI numarasını değiştirmek için bkz [. Satın alma siparişi numaranızı değiştirme](#change-your-purchase-order-number).
+**Müşteri Po Numarası** , belirttiğiniz satınalma siparişi (PO) numarasıdır. Mevcut bir faturaya SAS numarası ekleyemezsiniz. Po numarasını güncelleştirirseniz, gelecekteki faturalara eklenir. Po numarasını değiştirmek için bkz. [Satın alma siparişi numaranızı değiştirme](#change-your-purchase-order-number).
 
-**Sipariş Numarası** , siparişinizi tanımlayan genel benzersiz tanımlayıcıdır (GUID). Her yeni abonelik satın almak için yeni bir sipariş numarasına sahip yeni bir sipariş oluşturulur. Her faturalandırma dönemi için bir fatura alırsınız.
+**Sipariş Numarası** , siparişinizi tanımlayan genel benzersiz tanımlayıcıdır (GUID). Her yeni abonelik satın almanızda, yeni sipariş numarasına sahip yeni bir sipariş oluşturulur. Her faturalama döneminde her sipariş için bir fatura alırsınız.
 
-**Faturalandırma Dönemi** , son fatura tarihten bu yana geçen dönemdir.
+**Faturalama Dönemi** , son fatura tarihinden bu yana geçen dönemdir.
 
-**Ödeme Koşulları** , ödemenin bitiş tarihi olan fatura tarihten itibaren olan gün sayısıdır. Standart ödeme vadesi 30 gündür.
+**Ödeme Koşulları** , fatura tarihinden itibaren ödemenin son tarihi olan gün sayısıdır. Standart ödeme süresi 30 gündür.
 
-**Son Tarih** , fatura ödemelerinin bitiş tarihidir. Aboneliğiniz kredi kartı veya banka hesabıyla ödeniyorsa, Fatura Tarihi'nin bir gün sonra kartınız veya hesabınız üzerinden ücret tahsil olur.
+**Son Tarih** , fatura ödemesinin son tarihidir. Aboneliğiniz kredi kartı veya banka hesabıyla ödeniyorsa, Fatura Tarihinden bir gün sonra kartınızdan veya hesabınızdan ücret tahsil edilir.
 
-### <a name="billing-summary"></a>Fatura Özeti
+### <a name="billing-summary"></a>Faturalama Özeti
 
-Faturanıza göre ilk sayfada, fatura faturalandırma dönemi için aşağıdaki öğelerin toplamları görüntülenir. İki sayfa, her kategoriyle ilgili ayrıntıları içerir.
+Faturanızın birinci sayfasında, fatura faturalama dönemi için aşağıdaki öğelerin toplamları gösterilir. İkinci sayfa her kategorinin ayrıntılarını içerir.
 
 - Ücretler
 - İndirimler
@@ -116,39 +114,39 @@ Faturanıza göre ilk sayfada, fatura faturalandırma dönemi için aşağıdaki
 
 ### <a name="payment-instructions"></a>Ödeme Yönergeleri
 
-Kredi kartıyla ödeme yapacaksanız, "Lütfen ÖDEMEYİN. Seçtiğiniz ödeme yöntemiyle ödeme yapılacak olan tutardan ücret tahsil edilecektir." Faturayla ödeme yaptıysanız bu bölümde EFT veya çek ile ödeme yönergeleri yer almaktadır.
+Kredi kartıyla ödeme yapıyorsanız "Lütfen ÖDEME YAPMAYIN. Seçtiğiniz ödeme yöntemiyle ödenmesi gereken tutar sizden tahsil edilecektir." Faturayla ödeme yapıyorsanız, bu bölümde EFT veya çek ile ödeme yönergeleri yer alır.
 
 ### <a name="electronic-fund-transfer-eft-and-check"></a>Elektronik Fon Transferi (EFT) ve çek
 
-Abonelik ödeme yönteminiz olarak "fatura" seçtiysanız, ilk sayfada elektronik ödemeler  (havale, ACH, SEPA, vb.) için Microsoft banka hesabı bilgilerini gösteren Elektronik Fon Transferi bölümü yer alır. Genellikle, bir ödeme gönderirken bankanıza bir başvuru alanı gönderirken tamamlamanız gerekir. Bu alanda, fatura numarasına başvurarak bunu yapmaya emin olun.
+Abonelik ödeme yönteminiz olarak "faturayı" seçtiyseniz, birinci sayfada elektronik ödemeler için Microsoft banka hesabı bilgilerini (havale, ACH, SEPA vb.) gösteren **Elektronik Fon Transferi** bölümü yer alır. Genellikle, ödeme gönderdiğinizde bankanızın tamamladığınız bir referans alanı vardır. Bu alandaki fatura numarasına başvurduğunuzdan emin olun.
 
-Ödemelerinizi ülkeniz veya bölgeniz için çekle kabul ederiz. Ayrıca, ödemenin adını ve posta adresini içeren Çek bölümünü de görüyoruz. Denetimde fatura numaranıza bakarak kontrol edin.
+Ülkeniz veya bölgeniz için çekle yapılan ödemeleri kabul ettiğimizde, ödeme adını ve posta adresini içeren bir **Çek** bölümü de görürsünüz. Çekte fatura numaranıza başvurduğundan emin olun.
 
 ### <a name="support"></a>Destek
 
-Bazı ülke veya bölgelerde faturada, faturada faturayı geçmiş faturaları görüntüleme yönergelerini içeren bir Destek Microsoft 365 yönetim merkezi. Ayrıca, kendi kendine yardım makalelerinin ve bazı ülke ve bölgelerin destek telefon numarasının bağlantısını da içerir.
+Bazı ülkelerde veya bölgelerde, faturanın Microsoft 365 yönetim merkezi geçmiş faturaları görüntüleme yönergelerini içeren bir **Destek** bölümü vardır. Ayrıca kendi kendine yardım makalelerinin bağlantısını ve bazı ülke ve bölgeler için destek telefon numarasını içerir.
 
-## <a name="page-two"></a>İki. sayfa
+## <a name="page-two"></a>sayfa iki
 
-Aboneliğinizin ürün adı, iki. sayfanın en üstündedir. Bunun altında, ücretlerin nasıl hesaplanmış olduğunu açıklayan formül yer almaktadır. Siparişinize birden fazla ürün varsa, her ürün ve ilişkili ücretler için ayrı bir bölüm görüyorsanız.
+Aboneliğinizin ürün adı ikinci sayfanın en üstündedir. Bunun altında ücretlerin nasıl hesaplandığını açıklayan formül yer alır. Siparişinizde birden fazla ürün varsa, her ürün ve ilişkili ücretler için ayrı bir bölüm görürsünüz.
 
 ### <a name="new-charges"></a>Yeni ücretler
 
-:::image type="content" source="../../media/understand-your-invoice2/invoice-new-charges.png" alt-text="Faturanın iki. sayfasındaki Yeni ücretler bölümü.":::
+:::image type="content" source="../../media/understand-your-invoice2/invoice-new-charges.png" alt-text="Faturanın ikinci sayfasındaki Yeni ücretler bölümü.":::
 
-Yeni **ücretler bölümü** , ücretler, indirimler, krediler ve vergilerin ekli olduğu hizmet dönemini gösterir. Hizmet dönemi boyunca dahil edilen lisans sayısını, lisans başına fiyatı ve hizmet dönemindeki gün sayısını gösterir.
+**Yeni ücretler** bölümünde ücretlerin, indirimlerin, kredilerin ve vergilerin eklendiği hizmet dönemi gösterilir. Hizmet dönemine dahil edilen lisans sayısını, lisans başına fiyatı ve hizmet dönemindeki gün sayısını gösterir.
 
 ### <a name="previous-charges"></a>Önceki ücretler
 
-:::image type="content" source="../../media/understand-your-invoice2/invoice-previous-charges.png" alt-text="Faturanın iki. sayfasında yer alan Önceki ücretler bölümü.":::
+:::image type="content" source="../../media/understand-your-invoice2/invoice-previous-charges.png" alt-text="Faturanın ikinci sayfasındaki Önceki ücretler bölümü.":::
 
-Önceki **ücretler bölümünde** , önceki fatura için ödenen ücretler için bir kredi gösterir. Önceki faturalandırma dönemi boyunca değişiklik yaptıysanız, faturanız Önceki ücretler **bölümünü** de içerir. Örneğin, lisansları dönem ortasında eklediysiniz veya kaldırdınız, Önceki ücretler  bölümünde söz dizim o hizmet dönemine yönelik lisans sayısıyla birlikte lisans başına aylık fiyat, hizmet dönemindeki gün sayısı, ücretler ve geçerli diğer tutarlar da yer almaktadır.
+**Önceki ücretler** bölümünde, önceki fatura için ödediğiniz ücretlerin kredisi gösterilir. Önceki faturalama döneminde bir değişiklik yaptıysanız, faturanız **Önceki ücretler** bölümünü içerir. Örneğin, lisansları dönem ortasında eklediyseniz veya kaldırdıysanız, **Önceki ücretler** bölümünde söz konusu hizmet dönemine ait lisans sayısı, lisans başına aylık fiyat, hizmet dönemindeki gün sayısı, ücretler ve geçerli olan diğer tutarlarla birlikte gösterilir.
 
-### <a name="charges-during-this-billing-period"></a>Bu faturalandırma dönemindeki ücretler
+### <a name="charges-during-this-billing-period"></a>Bu faturalama dönemindeki ücretler
 
-:::image type="content" source="../../media/understand-your-invoice2/invoice-charges-this-period.png" alt-text="Faturanızı iki. sayfada yer alan Bu faturalandırma dönemi boyunca ücretler bölümü.":::
+:::image type="content" source="../../media/understand-your-invoice2/invoice-charges-this-period.png" alt-text="Faturanızın ikinci sayfasındaki Bu faturalama dönemindeki ücretler bölümü.":::
 
-Bu **faturalandırma dönemi boyunca yapılan ücretler** bölümünde, bu faturalandırma dönemi boyunca aboneliğiniz için yapılan değişiklikler yer almaktadır. Önceki faturalama dönemi içinde değişiklik yaptısanız, faturanız bu faturalandırma **dönemi boyunca yapılan değişiklikler bölümünü de içerir** . Örneğin, lisansları dönem ortasında eklediysiniz veya kaldırdınız, Bu faturalandırma  dönemi boyunca yapılan ücretler bölümünde abonelikte yapılan değişiklikler ve bunların ne zaman olduğu listelenmiştir. Bu değişiklikler nedeniyle size gereken ücretler veya geri ödemeler, faturalandırma döneminde etkilenen gün sayısına göre hesaplandı.
+**Bu faturalama dönemindeki ücretler bölümünde, bu faturalama döneminde** yapılan abonelik değişiklikleri gösterilir. Önceki faturalama döneminde bir değişiklik yaptıysanız, faturanız **bu faturalama dönemindeki değişiklikler** bölümünü de içerir. Örneğin, lisansları dönem ortasında eklediyseniz veya kaldırdıysanız **, bu faturalama dönemindeki ücretler** bölümünde abonelikte yapılan değişiklikler ve ne zaman oluştuğu listelenir. Bu değişiklikler nedeniyle size borçlu olduğunuz ücretler veya para iadeleri, faturalama döneminde etkilenen gün sayısı için eşit olarak eşit olarak dağıtılır.
 
 ## <a name="change-your-purchase-order-number"></a>Satın alma siparişi numaranızı değiştirme
 
@@ -157,27 +155,27 @@ Faturayla ödeme yapıyorsanız aboneliğinize ait satın alma siparişi (SAS) n
 > [!NOTE]
 > Mevcut bir faturaya SAS numarası ekleyemezsiniz. SAS numarası sonraki tüm faturalarda görünür.
 
-1. Yönetim merkezinde <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">BillingYour</a>  >  products sayfasına gidin.
-2. Ürünler **sekmesinde** , değiştirmek istediğiniz aboneliği seçin.
-3. Abonelik ayrıntıları sayfasında, Abonelik ve ödeme **ayarları bölümünde Faturayı** **düzenle'yi seçin**.
-4. Faturayla ödeme ayrıntılarını **düzenle bölmesinin en altında** PO numarasını girin ve Ardından Kaydet'i **seçin**.
+1. Yönetim merkezinde **Faturalama** > <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">Ürünleriniz</a> sayfasına gidin.
+2. **Ürünler** sekmesinde, değiştirmek istediğiniz aboneliği seçin.
+3. Abonelik ayrıntıları sayfasındaki **Abonelik ve ödeme ayarları** bölümünde **Faturayı düzenle'yi** seçin.
+4. **Faturayla ödeme ayrıntılarını düzenle** bölmesinin en altında, PO numaranızı girin ve **Kaydet'i** seçin.
 
-## <a name="run-the-unknown-charge-diagnostic"></a>Bilinmeyen Ücret Tanılama'yı çalıştırma
+## <a name="run-the-unknown-charge-diagnostic"></a>Bilinmeyen Ücret Tanılamasını Çalıştırma
 
-Genel Microsoft 365 yöneticisi olarak, microsoft'tan gelen banka veya kredi kartı hesaplarında görünen beklenmedik ücretleri araştıracak şekilde Microsoft 365 yönetim merkezi içinde çalışan bir tanılama aracı kullanabilirsiniz.
+Microsoft 365 Genel yöneticisi olarak, bankanızda veya kredi kartı ekstrenizde görünen beklenmeyen Microsoft ücretlerini araştırmak için Microsoft 365 yönetim merkezi içinde çalışan bir tanılama aracı kullanabilirsiniz.
 
 > [!NOTE]
-> Bilinmeyen Ücret Tanılama aracı yalnızca Microsoft.com, Eğitim ve Kar amacı gütmeyen Microsoft 365 Kurumsal satın almış olan müşteriler tarafından kullanılabilir.
+> Bilinmeyen Ücret Tanılaması yalnızca Microsoft 365 Kurumsal, Eğitim ve Kar Amacı Gütmeyen Kuruluş dahil olmak üzere ürünlerini ve hizmetlerini Microsoft.com satın alan müşteriler tarafından kullanılabilir.
 
-Testlere **göre tanılama** aracını açmak için aşağıdaki Testleri Çalıştır bağlantısını Microsoft 365 yönetim merkezi.
+Tanılama aracını Microsoft 365 yönetim merkezi açmak için aşağıdaki **Testleri Çalıştır** bağlantısını seçin.
 
 >[!div class="nextstepaction"]
->[Çalıştırma Testleri: Bilinmeyen Ücret](https://aka.ms/PillarUnknownCharge)
+>[Testleri Çalıştırma: Bilinmeyen Ücret](https://aka.ms/PillarUnknownCharge)
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Faturanızı veya faturanızı görüntüleme](view-your-bill-or-invoice.md) (makale)\
-[İş aboneliğiniz için Microsoft 365 ödeme (](pay-for-your-subscription.md)makale)\
+[Fatura ekstrenizi veya faturanızı görüntüleme](view-your-bill-or-invoice.md) (makale)\
+[İş için Microsoft 365 aboneliğiniz için ödeme (](pay-for-your-subscription.md)makale)\
 [Ödeme yöntemlerini yönetme](manage-payment-methods.md) (makale)\
-[Meksika'daki Microsoft 365 için fatura bilgileri](mexico-billing-info.md) (makale) \
-[Minecraft: Education Edition seçenekleri hakkında bilgi](/education/windows/school-get-minecraft) (makale)
+[Meksika'daki Microsoft 365 için faturalama bilgileri](mexico-billing-info.md) (makale) \
+[Minecraft: Education Edition ödeme seçenekleri](/education/windows/school-get-minecraft) (makale)

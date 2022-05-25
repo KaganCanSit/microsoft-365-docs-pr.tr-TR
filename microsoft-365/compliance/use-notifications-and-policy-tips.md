@@ -22,12 +22,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 description: Bir kullanıcıya DLP ilkesiyle çakişen içerikle çalıştığını bildirmek için veri kaybı önleme (DLP) ilkesine ilke ipucu eklemeyi öğrenin.
-ms.openlocfilehash: ce6665227b62ea5937229696fa65b69e7cfb894a
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: af3dd2181c5bd8865f02755ba4d17f1feb0514d2
+ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65623213"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65669550"
 ---
 # <a name="send-email-notifications-and-show-policy-tips-for-dlp-policies"></a>DLP ilkeleri için e-posta bildirimleri gönderme ve ilke ipuçlarını gösterme
 
@@ -97,7 +97,10 @@ DLP ilkesindeki her kural için şunları yapabilirsiniz:
 - HTML veya belirteçleri kullanarak bildirime dahil edilen metni özelleştirin. Daha fazla bilgi için aşağıdaki bölüme bakın.
 
 > [!NOTE]
-> E-posta bildirimleri yalnızca tek tek alıcılara gönderilebilir; gruplara veya dağıtım listelerine gönderilebilir. Yalnızca yeni içerik bir e-posta bildirimi tetikler. Mevcut içeriğin düzenlenmesi ilke ipuçlarını tetikler, ancak e-posta bildirimini tetiklemez.
+>
+> - E-posta bildirimleri gruplara veya dağıtım listelerine değil yalnızca tek tek alıcılara gönderilebilir.
+> - Yalnızca yeni içerik bir e-posta bildirimi tetikler. Mevcut içeriğin düzenlenmesi ilke ipuçlarını tetikler, ancak e-posta bildirimlerini tetiklemez.
+> - Dış gönderenler bildirim almaz. Bildirimler yalnızca iç kullanıcılara gider.
 
 ![E-posta bildirim seçenekleri.](../media/4e7b9500-2a78-44e6-9067-09f4bfd50301.png)
 

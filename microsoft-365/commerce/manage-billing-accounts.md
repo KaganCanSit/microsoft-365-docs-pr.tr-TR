@@ -20,13 +20,13 @@ ms.custom:
 - admindeeplinkMAC
 search.appverid: MET150
 description: Ödeme hesapları ve hesap ayarlarını, faturaları, ödeme yöntemlerini ve satın almaları yönetmek için nasıl kullanıldıkları hakkında bilgi edinin.
-ms.date: 03/17/2021
-ms.openlocfilehash: 45f9e9d9a174094badaae8087803fbdb3eec3f3b
-ms.sourcegitcommit: dd7e5b67ff4ae4e7f74490e437c1795933c74cc7
+ms.date: 05/24/2022
+ms.openlocfilehash: 0c1dd2048cbe38ecca162f361f3f0bdbc6c3861f
+ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64731405"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65670068"
 ---
 # <a name="understand-billing-accounts"></a>Ödeme hesaplarını anlama
 
@@ -76,7 +76,8 @@ Roller ve izinler aracılığıyla <a href="https://go.microsoft.com/fwlink/p/?l
 - **Ödeme hesabı okuyucusu** &mdash; Hesapları görüntüleyebilir.
 
 > [!Note]
-> Ödeme hesabı rolleri yalnızca ödeme hesapları için geçerlidir ve diğer Microsoft 365 yönetim merkezi senaryoları için geçerli değildir.
+> - Ödeme hesabı rolleri yalnızca ödeme hesapları için geçerlidir ve diğer Microsoft 365 yönetim merkezi senaryoları için geçerli değildir.
+> - Microsoft 365 kaydolma içinde oluşturulan ödeme hesapları için yeni Genel, Faturalama ve Genel Okuyucu Yöneticilerine otomatik olarak farklı erişim düzeyleri verilir. Bu erişimi **Faturalama** > **Hesapları** sayfasından, bu kullanıcıları sayfanın alt kısmındaki rol ataması bölümünden açıkça kaldırarak yönetebilirsiniz.
 
 ## <a name="related-content"></a>İlgili içerik
 

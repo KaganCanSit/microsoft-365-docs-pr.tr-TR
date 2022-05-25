@@ -15,12 +15,12 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: 6dcc0ad7d03031ed0cc41aadeba901eff666943b
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: d7681be9f1103fbf21b7f3f89b74fc6d9d32f809
+ms.sourcegitcommit: 612ce4d15d8a2fdbf7795393b50af477d81b6139
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65174213"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65663656"
 ---
 # <a name="microsoft-365-lighthouse-and-microsoft-defender-for-business"></a>Microsoft 365 Lighthouse ve İş için Microsoft Defender
 
@@ -31,9 +31,6 @@ Microsoft Bulut Çözümü Sağlayıcısı (CSP) iseniz ve [Microsoft 365 Lighth
 :::image type="content" source="media/lighthouse-incidents.png" alt-text="Microsoft 365 Lighthouse'da olaylar listesinin ekran görüntüsü":::
 
 Olay listesine erişmek için Microsoft 365 Lighthouse giriş sayfasında **Güvenlik olayları** kartını bulun ve **ardından Tüm olayları görüntüle'yi** seçin.
-
-> [!IMPORTANT]
-> Özellikler hala kullanıma sunulmaya devam ediyor. Bu özelliklere henüz sahip değilseniz, yakında sahip olmanız gerekir.
 
 ## <a name="learn-more-about-microsoft-365-lighthouse"></a>Microsoft 365 Lighthouse hakkında daha fazla bilgi edinin
 

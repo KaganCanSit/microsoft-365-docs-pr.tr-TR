@@ -16,12 +16,12 @@ ms.collection:
 - SMB
 - m365-initiative-defender-business
 - m365-security-compliance
-ms.openlocfilehash: 971617311ce8d2443f90a1792339d4f0927ade3e
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: d7ee7588d9c73a6146b770cfcf135a8eeb44f72f
+ms.sourcegitcommit: 612ce4d15d8a2fdbf7795393b50af477d81b6139
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65174721"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65663436"
 ---
 # <a name="compare-security-features-in-microsoft-365-plans-for-small-and-medium-sized-businesses"></a>Küçük ve orta ölçekli işletmeler için Microsoft 365 planlarındaki güvenlik özelliklerini karşılaştırma
 
@@ -77,7 +77,7 @@ Microsoft, küçük ve orta ölçekli işletmeler için çeşitli planlar da dah
 |[Platformlar arası destek](../defender-endpoint/minimum-requirements.md) <br/>(Windows, macOS, iOS ve Android işletim sistemi)|Evet <sup>[[6](#fn6)]</sup>|Evet|Evet|
 |[Microsoft Tehdit Uzmanları](../defender-endpoint/microsoft-threat-experts.md)|Hayır|Hayır|Evet|
 |İş Ortağı API'leri|Evet|Evet|Evet|
-|[Microsoft 365 Lighthouse tümleştirmesi](../../lighthouse/m365-lighthouse-overview.md) <br/>(Müşteri kiracıları genelinde güvenlik olaylarını görüntülemek için)|Evet|Hayır|Hayır|
+|[Microsoft 365 Lighthouse tümleştirmesi](../../lighthouse/m365-lighthouse-overview.md) <br/>(Müşteri kiracıları genelinde güvenlik olaylarını görüntülemek için)|Evet |Evet <sup>[[7](#fn7)]</sup>|Evet <sup>[[7](#fn7)]</sup>|
 
 (<a id="fn1">1</a>) Microsoft 365 Defender portalında () veya Microsoft Endpoint Manager yönetim merkezinde ([https://security.microsoft.com](https://security.microsoft.com)[https://endpoint.microsoft.com](https://endpoint.microsoft.com)) yönetilen Microsoft Intune cihazları ekleyin ve yönetin.
 
@@ -94,6 +94,8 @@ Microsoft, küçük ve orta ölçekli işletmeler için çeşitli planlar da dah
 (<a id="fn5">5</a>) İş için Defender'da tehdit analizi, küçük ve orta ölçekli işletmeler için iyileştirilmiştir.
 
 (<a id="fn6">6</a>) Bkz[. cihazları İş için Microsoft Defender ekleme](mdb-onboard-devices.md).
+
+(<a id="fn7">7</a>) Uç Nokta için Defender'ı kullanarak kiracılar arasında olayları görüntüleme özelliği yeni!
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

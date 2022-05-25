@@ -17,12 +17,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 825605f932b3732ba27af7ec95160f34959356b0
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: a5c6cd7b4fde3545f77cdece31f3693f74ca4444
+ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65648337"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65669330"
 ---
 # <a name="microsoft-defender-for-endpoint-on-linux"></a>Linux'ta Uç Nokta için Microsoft Defender
 
@@ -229,3 +229,9 @@ Belirli uygulamaların yüksek G/Ç iş yükleri, Uç Nokta için Microsoft Defe
 ## <a name="resources"></a>Kaynaklar
 
 - Günlüğe kaydetme, kaldırma veya diğer konular hakkında daha fazla bilgi için bkz [. Kaynaklar](linux-resources.md).
+  
+## <a name="related-articles"></a>İlgili makaleler
+  
+-  [uç noktalarınızı Bulut için Defender tümleşik EDR çözümüyle koruyun: Uç Nokta için Microsoft Defender](/azure/defender-for-cloud/integration-defender-for-endpoint)
+-  [Azure dışı makinelerinizi Bulut için Microsoft Defender Bağlan](/azure/defender-for-cloud/quickstart-onboard-machines)
+

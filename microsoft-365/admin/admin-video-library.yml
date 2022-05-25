@@ -9,14 +9,14 @@ metadata:
   ms.topic: landing-page
   author: efrene
   ms.author: efrene
-  ms.date: 03/31/2022
+  ms.date: 05/23/2022
   ms.localizationpriority: high
-  ms.openlocfilehash: 036a15099420afbc356b1ae795e0f60cf5a81a7d
-  ms.sourcegitcommit: 5b321693214e3859f5af8f1774d2a5ff685ab3b7
+  ms.openlocfilehash: 181254d39d245608bae690f2fdb78f7a6a5c0fa0
+  ms.sourcegitcommit: 612ce4d15d8a2fdbf7795393b50af477d81b6139
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 04/21/2022
-  ms.locfileid: "65014946"
+  ms.lasthandoff: 05/24/2022
+  ms.locfileid: "65663392"
 landingContent:
 - title: Kullanmaya başlayın
   linkLists:
@@ -35,7 +35,7 @@ landingContent:
     - text: Aboneliğe kaydolma
       url: admin-overview/sign-up-for-office-365.md
     - text: Hizmeti ayarlama
-      url: setup/business-set-up.md
+      url: /microsoft-365/business-premium/m365bp-setup
     - text: Güvenli Windows 10 bilgisayarları
       url: setup/secure-win-10-pcs.md
 - title: Cihaz kurulumu
@@ -120,7 +120,7 @@ landingContent:
     links:
     - text: Windows 10 Pro cihazlarının güvenliğini sağlama
       url: /microsoft-365/business-premium/m365bp-secure-windows-devices.md
-    - text: iOS'ta güvenli Office uygulamaları
+    - text: iOS'da güvenli Office uygulamaları
       url: /business-premium/m365bp-app-protection-settings-for-android-and-ios.md
 - title: Güvenlik & uyumluluğu
   linkLists:

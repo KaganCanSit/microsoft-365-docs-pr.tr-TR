@@ -21,12 +21,12 @@ search.appverid:
 - MED150
 ms.assetid: 18be3b98-34ae-47be-9337-ab6c3fb372ac
 description: Bu makalede, Office 365'da dizin eşitlemenizin durumunu nasıl denetleyeceğinizi öğrenin.
-ms.openlocfilehash: 8f21985f8db3539e8dd1a839cc6cb499a425feeb
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 28376a63ab035490bdfeafb294eed9d993db54d9
+ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095564"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65669660"
 ---
 # <a name="view-directory-synchronization-status-in-microsoft-365"></a>dizin eşitleme durumunu Microsoft 365
 
@@ -35,7 +35,7 @@ ms.locfileid: "65095564"
 ## <a name="view-directory-synchronization-status"></a>Dizin eşitleme durumunu görüntüleme
 
 - [Microsoft 365 yönetim merkezi](https://admin.microsoft.com) oturum açın ve giriş sayfasında **DirSync Durumu'nu** seçin.
-- Alternatif olarak, **Kullanıcılar** \> **Etkin kullanıcılar'a** gidebilir ve **Etkin kullanıcılar** sayfasında **Diğer** \> **Dizin eşitlemesi'ni** seçebilirsiniz. **Dizin Eşitleme** bölmesinde **DirSync yönetimine git'i** seçin.
+- Alternatif olarak, **Kullanıcılar** \> **Etkin kullanıcılar'a** gidebilir ve **Etkin kullanıcılar** sayfasında **Elipse** \> **Directory eşitlemesini** seçebilirsiniz. **Dizin Eşitleme** bölmesinde **DirSync yönetimine git'i** seçin.
 
 ## <a name="information-on-the-manage-directory-synchronization-page"></a>Dizin eşitlemesini yönet sayfasındaki bilgiler
 
@@ -51,20 +51,20 @@ Dizin eşitlemenizle ilgili bir sorun varsa, hatalar bu sayfada da listelenir. K
 |**En son dizin eşitleme** | Dizin eşitlemenin son çalıştırışı. Son eşitleme üç günden uzun bir süre önceyse bir uyarı ve sorun giderme aracının bağlantısını görüntüler. |
 |**Parola eşitleme etkin** | Doğru veya Yanlış. Şirket içi ile Microsoft 365 kiracınız arasında parola karması eşitlemesi yapıp yapmadığınızı belirtir. |
 |**Son Parola Eşitleme** | Parola karması eşitlemenin son çalıştırışı. Son eşitleme üç günden uzun bir süre önceyse bir uyarı ve sorun giderme aracının bağlantısını görüntüler. |
-|**Dizin eşitleme istemcisi sürümü** | Azure AD Bağlan'nin yeni bir sürümü yayımlandıysa indirme bağlantısı içerir. |
+|**Dizin eşitleme istemcisi sürümü** | yeni bir Azure AD Bağlan sürümü yayımlandıysa bir indirme bağlantısı içerir. |
 |**Dizin eşitleme hizmeti hesabı** | Microsoft 365 dizin eşitleme hizmeti hesabınızın adını görüntüler. |
 |||
 
 ## <a name="monitor-synchronization-health"></a>Eşitleme durumunu izleme
 
-Bu bölümde, kimlik altyapınızı ve Azure AD Bağlan tarafından sağlanan eşitleme hizmetlerini izlemek için şirket içi AD DS etki alanı denetleyicilerinizin her birine bir Azure AD Bağlan Health aracısı yükleyeceksiniz. İzleme bilgileri, uyarıları, performans izlemeyi, kullanım analizini ve diğer bilgileri görüntüleyebileceğiniz bir Azure AD Bağlan Health portalında sağlanır.
+Bu bölümde, kimlik altyapınızı ve Azure AD Bağlan tarafından sağlanan eşitleme hizmetlerini izlemek için şirket içi AD DS etki alanı denetleyicilerinizin her birine bir Azure AD Bağlan Durumu aracısı yükleyeceksiniz. İzleme bilgileri, uyarıları, performans izlemeyi, kullanım analizini ve diğer bilgileri görüntüleyebileceğiniz bir Azure AD Bağlan Sistem Durumu portalında kullanılabilir hale getirilmiştir.
 
-Azure AD Bağlan Health'in nasıl kullanılacağına ilişkin temel tasarım kararı, Azure AD Bağlan nasıl kullandığınıza bağlıdır:
+Azure AD Bağlan Sistem Durumu'nun nasıl kullanılacağına ilişkin temel tasarım kararı, Azure AD Bağlan nasıl kullandığınıza bağlıdır:
 
-- **Yönetilen kimlik doğrulama** seçeneğini kullanıyorsanız Azure AD Bağlan Health'i anlamak ve yapılandırmak için Azure [AD Bağlan Health'i eşitleme ile kullanma](/azure/active-directory/connect-health/active-directory-aadconnect-health-sync) ile başlayın.
-- Active Directory Federasyon Hizmetleri (AD FS) (AD FS) ile **federasyon kimlik doğrulaması** kullanarak hesapların ve grupların yalnızca adlarını eşitlerseniz, [Azure AD Bağlan Health'i anlamak ve yapılandırmak için AD FS ile Azure AD Bağlan Health kullanma ile](/azure/active-directory/connect-health/active-directory-aadconnect-health-adfs) başlayın.
+- **Yönetilen kimlik doğrulama** seçeneğini kullanıyorsanız, Azure AD Bağlan Sistem Durumunu anlamak ve yapılandırmak için [Eşitleme ile Azure AD Bağlan Sistem Durumunu kullanma](/azure/active-directory/connect-health/active-directory-aadconnect-health-sync) ile başlayın.
+- Active Directory Federasyon Hizmetleri (AD FS) (AD FS) ile **federasyon kimlik doğrulaması** kullanarak yalnızca hesapların ve grupların adlarını eşitlerseniz, Azure AD Bağlan anlamak ve yapılandırmak için [AD FS ile Azure AD Bağlan Sistem Durumunu kullanma ile](/azure/active-directory/connect-health/active-directory-aadconnect-health-adfs) başlayın  Sağlık.
 
 Tamamlandığında şunları yapacaksınız:
 
-- Şirket içi kimlik sağlayıcısı sunucularınıza yüklenen Azure AD Bağlan Health aracısı.
-- Microsoft 365 aboneliğiniz için Azure AD kiracısıyla şirket içi altyapınızın ve eşitleme etkinliklerinizin geçerli durumunu görüntüleyen Azure AD Bağlan Health portalı.
+- Şirket içi kimlik sağlayıcısı sunucularınızda yüklü Azure AD Bağlan Durumu aracısı.
+- Microsoft 365 aboneliğinizin Azure AD kiracısıyla şirket içi altyapınızın ve eşitleme etkinliklerinizin geçerli durumunu görüntüleyen Azure AD Bağlan Sistem Durumu portalı.

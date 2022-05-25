@@ -18,12 +18,12 @@ ms.collection:
 - m365solution-zerotrust
 - m365solution-overview
 - M365-security-compliance
-ms.openlocfilehash: 2f8fe053d0ffb6d453029ab3f7fee17846661b6d
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: 4056310eb8e0d22a9758dfa2a572a473c83a0775
+ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65469283"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65669748"
 ---
 # <a name="microsoft-365-zero-trust-deployment-plan"></a>Microsoft 365 Sıfır Güven dağıtım planı
 
@@ -33,7 +33,7 @@ Bu makaleyi bu posterle birlikte kullanın.
 
 | Öğe | Açıklama |
 |:-----|:-----|
-|[![Microsoft 365 Sıfır Güven dağıtım planının çizimi.](../media/solutions-architecture-center/m365-zero-trust-deployment-plan-thumb.png) ](https://download.microsoft.com/download/f/d/b/fdb6ab0c-34bb-4cb8-84e6-5de8f13298da/m365-zero-trust-deployment-plan.pdf) <br/> [PDF](https://download.microsoft.com/download/f/d/b/fdb6ab0c-34bb-4cb8-84e6-5de8f13298da/m365-zero-trust-deployment-plan.pdf) \| [Visio](https://download.microsoft.com/download/f/d/b/fdb6ab0c-34bb-4cb8-84e6-5de8f13298da/m365-zero-trust-deployment-plan.vsdx) <br/> Mart 2022'de güncelleştirildi | **İlgili çözüm kılavuzları** <br/> <ul><li>[kimlik altyapınızı Microsoft 365 için dağıtma](/microsoft-365/enterprise/deploy-identity-solution-overview)</li><li>[Önerilen kimlik ve cihaz erişim yapılandırmaları](../security/office-365-security/microsoft-365-policies-configurations.md)</li><li>[cihazları Intune ile yönetme](../solutions/manage-devices-with-intune-overview.md)</li><li>[Microsoft 365 Defender'ı değerlendirme ve pilot](../security/defender/eval-overview.md)</li><li>[Microsoft Bilgi Koruması çözümü dağıtma](../compliance/information-protection-solution.md)</li><li>[Microsoft 365 ile veri gizliliği düzenlemeleri için bilgi koruma dağıtma](../solutions/information-protection-deploy.md)</li></ul>
+|[![Microsoft 365 Sıfır Güven dağıtım planının çizimi.](../media/solutions-architecture-center/m365-zero-trust-deployment-plan-thumb.png) ](https://download.microsoft.com/download/f/d/b/fdb6ab0c-34bb-4cb8-84e6-5de8f13298da/m365-zero-trust-deployment-plan.pdf) <br/> [PDF](https://download.microsoft.com/download/f/d/b/fdb6ab0c-34bb-4cb8-84e6-5de8f13298da/m365-zero-trust-deployment-plan.pdf) \| [Visio](https://download.microsoft.com/download/f/d/b/fdb6ab0c-34bb-4cb8-84e6-5de8f13298da/m365-zero-trust-deployment-plan.vsdx) <br/> Mart 2022'de güncelleştirildi | **İlgili çözüm kılavuzları** <br/> <ul><li>[kimlik altyapınızı Microsoft 365 için dağıtma](/microsoft-365/enterprise/deploy-identity-solution-overview)</li><li>[Önerilen kimlik ve cihaz erişim yapılandırmaları](../security/office-365-security/microsoft-365-policies-configurations.md)</li><li>[cihazları Intune ile yönetme](../solutions/manage-devices-with-intune-overview.md)</li><li>[Microsoft 365 Defender'ı değerlendirme ve pilot](../security/defender/eval-overview.md)</li><li>[Microsoft Purview ile bilgi koruma çözümü dağıtma](../compliance/information-protection-solution.md)</li><li>[Microsoft 365 ile veri gizliliği düzenlemeleri için bilgi koruma dağıtma](../solutions/information-protection-deploy.md)</li></ul>
 
 ## <a name="zero-trust-security-architecture"></a>Sıfır Güven güvenlik mimarisi
 

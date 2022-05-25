@@ -15,12 +15,12 @@ ms.collection:
 search.appverid:
 - MET150
 description: Microsoft Purview veri kaybı önleme ilkelerini ve araçlarını kullanarak hassas bilgilerinizi korumayı öğrenin ve DLP yaşam döngüsünde bir tura katılın.
-ms.openlocfilehash: aa32eba1111f4a119652ba88b59062581bb6cc4b
-ms.sourcegitcommit: b16520d8bfe04b29274f7a129d90ef116bb77f69
+ms.openlocfilehash: 1d05eb2ae7b7071a79448596832eb6594ab680ef
+ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "65231802"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65669704"
 ---
 # <a name="learn-about-data-loss-prevention"></a>Veri kaybı önleme hakkında daha fazla bilgi edinme
 
@@ -28,7 +28,7 @@ ms.locfileid: "65231802"
 
 Kuruluşların denetimi altında finansal veriler, özel veriler, kredi kartı numaraları, sağlık kayıtları veya sosyal güvenlik numaraları gibi hassas bilgiler bulunur. Bu hassas verilerin korunmasına ve riskin azaltılmasına yardımcı olmak için, kullanıcılarının bunları sahip olmaması gereken kişilerle uygunsuz bir şekilde paylaşmasını önlemek için bir yönteme ihtiyaçları vardır. Bu uygulamaya veri kaybı önleme (DLP) adı verilir.
 
-Microsoft Purview'da, DLP ilkelerini tanımlayıp uygulayarak veri kaybı önleme uygularsınız. DLP ilkesiyle hassas öğeleri tanımlayabilir, izleyebilir ve otomatik olarak koruyabilirsiniz:
+Microsoft Purview'da, DLP ilkelerini tanımlayıp uygulayarak veri kaybı önlemeyi uygularsınız. DLP ilkesiyle hassas öğeleri tanımlayabilir, izleyebilir ve otomatik olarak koruyabilirsiniz:
 
 - Teams, Exchange, SharePoint ve OneDrive gibi hizmetleri Microsoft 365
 - Word, Excel ve PowerPoint gibi uygulamaları Office
@@ -40,7 +40,7 @@ DLP, hassas öğeleri yalnızca basit bir metin taramasıyla değil, derin içer
 
 ## <a name="dlp-is-part-of-the-larger-microsoft-purview-offering"></a>DLP, daha büyük Microsoft Purview teklifinin bir parçasıdır
 
-DLP, hassas öğelerinizi yaşadıkları veya seyahat ettikleri her yerde korumaya yardımcı olmak için kullanacağınız Microsoft Purview araçlarından yalnızca biridir. Microsoft Purview araçları kümesindeki diğer araçları, bunların nasıl birbiriyle ilişkilendirildiklerini ve birlikte nasıl daha iyi çalıştıklarını anlamanız gerekir.  Bilgi koruma işlemi hakkında daha fazla bilgi edinmek için [bkz. Microsoft Purview araçları](protect-information.md) .
+DLP, hassas öğelerinizi yaşadıkları veya seyahat ettikleri her yerde korumaya yardımcı olmak için kullanacağınız Microsoft Purview araçlardan yalnızca biridir. Microsoft Purview araçları kümesindeki diğer araçları, birbirleriyle nasıl ilişki kurduklarını ve birlikte daha iyi çalıştıklarını anlamanız gerekir.  Bilgi koruma işlemi hakkında daha fazla bilgi edinmek için [araçlara Microsoft Purview](protect-information.md).
 
 ## <a name="protective-actions-of-dlp-policies"></a>DLP ilkelerinin koruyucu eylemleri
 
@@ -122,6 +122,9 @@ Test modundayken ilkenin sonuçlarını izleyin ve denetim hedeflerinize uygun o
 - yeni kısıtlanmış uygulamalar ekleme
 - yeni kısıtlanmış siteler ekleme
 
+> [!NOTE]
+> _Daha fazla kuralı işlemeyi durdurma_ özelliği, açık olsa bile test modunda çalışmaz.
+
 #### <a name="enable-the-control-and-tune-your-policies"></a>Denetimi etkinleştirme ve ilkelerinizi ayarlama
 
 İlke tüm hedeflerinizi karşıladıktan sonra açın. İlke uygulamasının sonuçlarını izlemeye devam edin ve gerektiğinde ayarlayın. 
@@ -183,7 +186,7 @@ Uyumluluk Merkezi'nde bir DLP ilkesi oluşturduktan sonra, bu ilke merkezi bir i
 
 ## <a name="viewing-policy-application-results"></a>İlke uygulaması sonuçlarını görüntüleme
 
-DLP, Microsoft Purview'da izleme, ilke eşleşmeleri ve eylemleri ile kullanıcı etkinliklerine kadar çok miktarda bilgi bildirir. İlkelerinizi ayarlamak ve hassas öğeler üzerinde gerçekleştirilen eylemleri önceliklendirmek için bu bilgileri kullanmanız ve üzerinde işlem yapmanız gerekir. Telemetri önce [Microsoft Purview uyumluluk portalı Denetim Günlükleri'ne](search-the-audit-log-in-security-and-compliance.md#search-the-audit-log-in-the-compliance-portal) gider, işlenir ve farklı raporlama araçlarına gider. Her raporlama aracının farklı bir amacı vardır.
+DLP, izleme, ilke eşleşmeleri ve eylemleri ile kullanıcı etkinliklerinden Microsoft Purview çok miktarda bilgi bildirir. İlkelerinizi ayarlamak ve hassas öğeler üzerinde gerçekleştirilen eylemleri önceliklendirmek için bu bilgileri kullanmanız ve üzerinde işlem yapmanız gerekir. Telemetri önce [Microsoft Purview uyumluluk portalı Denetim Günlüklerine](search-the-audit-log-in-security-and-compliance.md#search-the-audit-log-in-the-compliance-portal) gider, işlenir ve farklı raporlama araçlarına gider. Her raporlama aracının farklı bir amacı vardır.
 
 ### <a name="dlp-alerts-dashboard"></a>DLP Uyarıları Panosu
 
@@ -221,7 +224,7 @@ Microsoft Purview DLP hakkında daha fazla bilgi edinmek için bkz:
 - [Microsoft Uyumluluk Uzantısı hakkında daha fazla bilgi edinme](dlp-chrome-learn-about.md)
 - [Veri kaybı önleme Uyarılar panosu hakkında daha fazla bilgi edinme](dlp-alerts-dashboard-learn.md)
 
-Veri gizliliği düzenlemelerine uymak için veri kaybı önlemeyi kullanmayı öğrenmek için bkz. [Microsoft Purview (aka.ms/m365dataprivacy) ile veri gizliliği düzenlemeleri için bilgi koruması dağıtma](../solutions/information-protection-deploy.md)  .
+Veri gizliliği düzenlemelerine uymak için veri kaybı önlemeyi kullanmayı öğrenmek için bkz. [Microsoft Purview (aka.ms/m365dataprivacy) ile veri gizliliği düzenlemeleri için bilgi koruması dağıtma](../solutions/information-protection-deploy.md).
 
 ## <a name="licensing-and-subscriptions"></a>Lisanslama ve Abonelikler
 

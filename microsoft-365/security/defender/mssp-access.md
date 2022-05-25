@@ -1,7 +1,7 @@
 ---
 title: Yönetilen güvenlik hizmeti sağlayıcısı (MSSP) erişimi sağlama
-description: Web portalında yapılan Microsoft Defender Güvenlik Merkezi hakkında Microsoft 365 Defender öğrenin
-keywords: Microsoft 365 Defender portalı, Office 365 için Microsoft Defender, Uç Nokta için Microsoft Defender, MDO, MDE, tek cam bölmesi, yakınsaan portal, güvenlik portalı, defender güvenlik portalı ile çalışmaya başlama
+description: Microsoft Defender Güvenlik Merkezi Microsoft 365 Defender portalındaki değişiklikler hakkında bilgi edinin
+keywords: Microsoft 365 Defender portalı, Office 365 için Microsoft Defender, Uç Nokta için Microsoft Defender, MDO, MDE, tek bölmeli cam, yakınsanmış portal, güvenlik portalı, defender güvenlik portalı ile çalışmaya başlama
 ms.prod: microsoft-365-enterprise
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
@@ -17,12 +17,12 @@ search.appverid:
 - MET150
 ms.collection:
 - M365-security-compliance
-ms.openlocfilehash: f0148a8bfe18c7636e95ceae7b268cc70b2e58ed
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 3b3f438555be507d046f99838596a6672714e0ad
+ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64500426"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65670234"
 ---
 # <a name="provide-managed-security-service-provider-mssp-access"></a>Yönetilen güvenlik hizmeti sağlayıcısı (MSSP) erişimi sağlama 
 
@@ -30,104 +30,104 @@ ms.locfileid: "64500426"
 
 [!INCLUDE [Prerelease](../includes/prerelease.md)]
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 
 - [Microsoft 365 Defender](microsoft-365-defender.md)
 - [Uç Nokta için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
-Çok kiracılı bir temsilcili erişim çözümü uygulamak için aşağıdaki adımları izleyin:
+Çok kiracılı bir temsilci erişim çözümü uygulamak için aşağıdaki adımları izleyin:
 
-1. Microsoft 365 Defender portalı [üzerinden](/windows/security/threat-protection/microsoft-defender-atp/rbac) Uç Nokta için Defender için rol tabanlı erişim denetimi etkinleştirin ve Azure Active Directory (Azure AD) gruplarıyla bağlanın.
+1. Microsoft 365 Defender portalı aracılığıyla Uç Nokta için Defender için [rol tabanlı erişim denetimini](/microsoft-365/security/defender-endpoint/rbac) etkinleştirin ve Azure Active Directory (Azure AD) gruplarına bağlanın.
 
-2. Erişim [isteği ve hazırlama](/azure/active-directory/governance/identity-governance-overview) için Yönetim Erişim Paketlerini yapılandırabilirsiniz.
+2. Erişim isteklerini ve sağlamayı etkinleştirmek için Azure AD Kimlik İdaresi içindeki [dış kullanıcılar için yetkilendirme yönetimini](/azure/active-directory/governance/entitlement-management-external-users) yapılandırın.
 
-3. Microsoft Myaccess'te erişim isteklerini ve [denetimlerini yönetin](/azure/active-directory/governance/entitlement-management-request-approve).
+3. [Microsoft Myaccess'te](/azure/active-directory/governance/entitlement-management-request-approve) erişim isteklerini ve denetimlerini yönetin.
 
-## <a name="enable-role-based-access-controls-in-microsoft-defender-for-endpoint-in-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalında yer alan Uç Nokta için Microsoft Defender tabanlı erişim denetimlerini etkinleştirme
+## <a name="enable-role-based-access-controls-in-microsoft-defender-for-endpoint-in-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalında Uç Nokta için Microsoft Defender rol tabanlı erişim denetimlerini etkinleştirme
 
-1. **Müşteri Hizmetleri'ne MSSP kaynakları için erişim grupları AAD grupları: Gruplar**
+1. **Müşteri AAD'sinde MSSP kaynakları için erişim grupları oluşturma: Gruplar**
 
-    Bu gruplar, Microsoft 365 Defender portalında Uç nokta için Defender'da Microsoft 365 Defender bağlantısındadır. Bunu yapmak için, müşteri AD kiracıda üç grup oluşturun. Örnek yaklaşımımızda, aşağıdaki grupları oluşturduk:
+    Bu gruplar, Microsoft 365 Defender portalında Uç Nokta için Defender'da oluşturduğunuz Rollere bağlanır. Bunu yapmak için müşteri AD kiracısında üç grup oluşturun. Örnek yaklaşımımızda aşağıdaki grupları oluştururuz:
 
     - Katman 1 Analisti
     - Katman 2 Analisti
-    - MSSP Analisti Onaylayanlar  
+    - MSSP Analist Onaylayanları  
 
-2. Portal rol ve gruplarında, Uç Nokta için Customer Defender'da uygun erişim düzeyleri Microsoft 365 Defender Için Uç nokta rolleri için Defender oluşturun.
+2. Microsoft 365 Defender portalı rollerinde ve gruplarında Uç Nokta için Customer Defender'da uygun erişim düzeyleri için Uç Nokta için Defender rolleri oluşturun.
 
-    RBAC'yi müşteri Microsoft 365 Defender portalında etkinleştirmek için, Genel Yönetici veya Güvenlik Yöneticisi hakları olan bir kullanıcı **hesabıyla & grupların İzinler >** Uç Noktaları rollerine > Rollerine erişin.
+    Müşteri Microsoft 365 Defender portalında RBAC'yi etkinleştirmek için, Genel Yönetici veya Güvenlik Yöneticisi haklarına sahip bir kullanıcı hesabıyla > **Rolleri & Gruplar > Uç Noktalar rollerine** erişin.
 
     :::image type="content" source="../../media/mssp-access.png" alt-text="Microsoft 365 Defender portalında MSSP erişiminin ayrıntıları" lightbox="../../media/mssp-access.png":::
 
-    Ardından, MSSP SOC Katman  ihtiyaçlarını karşılamak için RBAC rolleri oluşturun. Bu rolleri "Atanan kullanıcı grupları" aracılığıyla oluşturulan kullanıcı gruplarına bağlama.
+    Ardından MSSP SOC Katmanı gereksinimlerini karşılamak için RBAC rolleri oluşturun. Bu rolleri "Atanan kullanıcı grupları" aracılığıyla oluşturulan kullanıcı gruplarına bağlayın.
 
     İki olası rol:
 
     - **Katman 1 Analistleri** <br>
-      Canlı yanıt dışında tüm eylemleri gerçekleştirin ve güvenlik ayarlarını yönetin.
+      Canlı yanıt dışındaki tüm eylemleri gerçekleştirin ve güvenlik ayarlarını yönetin.
 
     - **Katman 2 Analistleri** <br>
-      Canlı yanıt ekleme ile Katman 1 [özellikleri](/windows/security/threat-protection/microsoft-defender-atp/live-response)
+      [Canlı yanıta](/microsoft-365/security/defender-endpoint/live-response) ek olarak Katman 1 özellikleri.
 
-    Daha fazla bilgi için bkz [. Rol tabanlı erişim denetimi kullanma](/windows/security/threat-protection/microsoft-defender-atp/rbac).
+    Daha fazla bilgi için bkz. [Rol tabanlı erişim denetimini kullanarak portal erişimini yönetme](/microsoft-365/security/defender-endpoint/rbac).
 
-## <a name="configure-governance-access-packages"></a>Yönetim Erişimi Paketlerini Yapılandırma
+## <a name="configure-governance-access-packages"></a>İdare Erişim Paketlerini Yapılandırma
 
-1. **MÜŞTERI Hizmetleri'ne MSSP'yi Bağlı Kuruluş AAD: Kimlik Yönetimi**
+1. **Müşteri AAD'sinde BAĞLı Kuruluş olarak MSSP Ekleme: Kimlik İdaresi**
 
-    MSSP'yi bağlantılı kuruluş olarak eklemek, MSSP'nin istekte olmasına ve sağlanan erişimlere sahip olmasına olanak sağlar. 
+    MSSP'nin bağlı bir kuruluş olarak eklenmesi, MSSP'nin istekte bulunmasını ve erişim sağlamasını sağlar. 
 
-    Bunu yapmak için, müşteri AD kiracısinde Kimlik Yönetimi: Bağlı kuruluş'a erişin. Kiracı Kimliği veya Etki Alanı aracılığıyla yeni bir kuruluş ekleyin ve MSSP Analisti kiracınızı arama. MSSP Analistleriniz için ayrı bir AD kiracısı oluşturmanızı öneririz.
+    Bunu yapmak için, müşteri AD kiracısında Kimlik İdaresi: Bağlı kuruluş'a erişin. Yeni bir kuruluş ekleyin ve Kiracı Kimliği veya Etki Alanı aracılığıyla MSSP Analisti kiracınızı arayın. MSSP Analistleriniz için ayrı bir AD kiracısı oluşturmanızı öneririz.
 
-2. **Müşteri Hizmetleri'nin içinde kaynak AAD oluşturma: Kimlik Yönetimi**
+2. **Müşteri AAD'sinde kaynak kataloğu oluşturma: Kimlik İdaresi**
 
-    Kaynak katalogları, müşteri AD kiracısı içinde oluşturulmuş mantıksal bir erişim paketleri koleksiyonudur.
+    Kaynak katalogları, müşteri AD kiracısında oluşturulan mantıksal bir erişim paketleri koleksiyonutur.
 
-    Bunu yapmak için, müşteri AD kiracısinde Kimlik Yönetimi: Kataloglar'a erişin ve Yeni Katalog **ekleyin**. Örneğimizde, biz buna **MSSP Erişimi 1222 02/2013 2013 2013'te izin ve daha sonra MSSP Erişimleri**
+    Bunu yapmak için, müşteri AD kiracısında Kimlik İdaresi: Kataloglar'a erişin ve **Yeni Katalog** ekleyin. Örneğimizde **buna MSSP Erişimleri** adını diyoruz.
 
-    :::image type="content" source="../../media/goverance-catalog.png" alt-text="Web portalında yeni Microsoft 365 Defender kataloğu" lightbox="../../media/goverance-catalog.png":::
+    :::image type="content" source="../../media/goverance-catalog.png" alt-text="Microsoft 365 Defender portalında yeni bir katalog" lightbox="../../media/goverance-catalog.png":::
 
 
-    Daha fazla bilgi için bkz [. Kaynak kataloğu oluşturma](/azure/active-directory/governance/entitlement-management-catalog-create).
+    Daha fazla bilgi için bkz. [Kaynak kataloğu oluşturma](/azure/active-directory/governance/entitlement-management-catalog-create).
 
-3. **MSSP kaynakları için erişim paketleri oluşturma Müşteri AAD: Kimlik Yönetimi**
+3. **MSSP kaynakları için erişim paketleri oluşturma Customer AAD: Identity Governance**
 
-    Erişim paketleri, onay üzerine istekte bulunduracak olan hakların ve erişimin koleksiyonudur. 
+    Erişim paketleri, istekte bulunana onay üzerine verilecek hakların ve erişimlerin toplanmasıdır. 
 
-    Bunu yapmak için, müşteri AD kiracısinde Kimlik Yönetimi: Access Paketleri ve Yeni Erişim Paketi **ekleyin**. MSSP onaylayanlar ve her analist katmanı için bir erişim paketi oluşturun. Örneğin, aşağıdaki Katman 1 Analisti yapılandırması aşağıdaki gibi bir erişim paketi oluşturur:
+    Bunu yapmak için müşteri AD kiracısında Kimlik İdaresi: Erişim Paketleri'ne erişin ve **Yeni Erişim Paketi** ekleyin. MSSP onaylayanları ve her analist katmanı için bir erişim paketi oluşturun. Örneğin, aşağıdaki Katman 1 Analist yapılandırması şu şekilde bir erişim paketi oluşturur:
 
-    - YENI istekleri yetkilendirmek için AD grubunun **MSSP Analisti** Onaylayanlar üyesi gerekir
-    - SOC analistleri erişim uzantısını talep  edildiklerine yönelik yıllık erişim incelemelerine sahip
-    - YALNıZCA MSSP SOC Kiracısı'nın kullanıcıları tarafından istenenler
-    - Access'in otomatik kullanım süresi 365 gün sonra dolacak
+    - YENI istekleri yetkilendirmek için **AD grubu MSSP Analist Onaylayanlarının** bir üyesini gerektirir
+    - SOC analistlerinin erişim uzantısı isteyebileceği yıllık erişim gözden geçirmeleri vardır
+    - Yalnızca MSSP SOC Kiracısı'ndaki kullanıcılar tarafından istenebilir
+    - Erişimin otomatik süresi 365 gün sonra doluyor
 
-    :::image type="content" source="../../media/new-access-package.png" alt-text="Portalda yeni bir erişim paketinin Microsoft 365 Defender." lightbox="../../media/new-access-package.png":::
+    :::image type="content" source="../../media/new-access-package.png" alt-text="Microsoft 365 Defender portalında yeni erişim paketinin ayrıntıları" lightbox="../../media/new-access-package.png":::
 
-    Daha fazla bilgi için bkz [. Yeni erişim paketi oluşturma](/azure/active-directory/governance/entitlement-management-access-package-create).
+    Daha fazla bilgi için bkz. [Yeni erişim paketi oluşturma](/azure/active-directory/governance/entitlement-management-access-package-create).
 
-4. **Müşteri Yönetimi'den MSSP kaynaklarına erişim isteği AAD: Kimlik Yönetimi**
+4. **Müşteri AAD'den MSSP kaynaklarına erişim isteği bağlantısı sağlama: Kimlik İdaresi**
 
-    Erişimim portalı bağlantısı MSSP SOC analistleri tarafından, oluşturulan erişim paketleri üzerinden erişim isteğide kullanılmaktadır. Bağlantı dayanıklıdır, başka bir ifadeyle aynı bağlantı zaman içinde yeni analistler için kullanılabilir. Analist isteği, MSSP Analisti Onaylayanlar tarafından onay **almak için sıraya girdi**.
+    Erişimim portalı bağlantısı, MSSP SOC analistleri tarafından oluşturulan erişim paketleri aracılığıyla erişim istemek için kullanılır. Bağlantı dayanıklıdır, yani aynı bağlantı zaman içinde yeni analistler için kullanılabilir. Analist isteği **, MSSP Analist Onaylayanları** tarafından onay için bir kuyruğa girer.
 
-    :::image type="content" source="../../media/access-properties.png" alt-text="Microsoft 365 Defender portalında erişim özellikleri" lightbox="../../media/access-properties.png":::
+    :::image type="content" source="../../media/access-properties.png" alt-text="Microsoft 365 Defender portalındaki erişim özellikleri" lightbox="../../media/access-properties.png":::
 
-    Bağlantı, her erişim paketinin genel bakış sayfasında yer almaktadır.
+    Bağlantı, her erişim paketinin genel bakış sayfasında bulunur.
 
 ## <a name="manage-access"></a>Erişimi yönetin
 
-1. Müşteri ve/veya MSSP myaccess'te erişim isteklerini gözden geçirip yetkilendiin.
+1. Müşteri ve/veya MSSP myaccess'te erişim isteklerini gözden geçirin ve yetkilendirin.
 
-    Erişim istekleri, MSSP Analisti Onaylayanlar grubunun üyeleri tarafından Müşteri Erişimim'de yönetilir.
+    Erişim istekleri, MSSP Analist Onaylayanları grubunun üyeleri tarafından Erişimim müşterisinde yönetilir.
 
-    Bunu yapmak için müşterinin erişimine erişmek için şunları kullanın: `https://myaccess.microsoft.com/@<Customer Domain>`.
+    Bunu yapmak için aşağıdakini kullanarak müşterinin myaccess'ine erişin: `https://myaccess.microsoft.com/@<Customer Domain>`.
 
     Örnek: `https://myaccess.microsoft.com/@M365x440XXX.onmicrosoft.com#/`
 
-2. Kullanıcı arabiriminin En **Son Onaylar istekleri** onaylar veya reddedin.
+2. Kullanıcı arabiriminin **Onaylar** bölümünde istekleri onaylayın veya reddedin.
 
-     Bu noktada, analist erişimi sağlandı ve her analist müşterinin müşteri portalına Microsoft 365 Defender:
+     Bu noktada analist erişimi sağlanmıştır ve her analistin müşterinin Microsoft 365 Defender portalına erişebilmesi gerekir:
 
-    `https://security.microsoft.com/?tid=<CustomerTenantId>` atanmış olan izinler ve rollerle ilgili bilgi içerir.
+    `https://security.microsoft.com/?tid=<CustomerTenantId>` atanmış izinler ve rollerle birlikte.
 
 > [!IMPORTANT]
-> Şu anda portalda Uç Nokta için Microsoft Defender posta Microsoft 365 Defender temsilci erişimi, tarayıcı penceresi başına tek bir kiracıya erişime izin verir.
+> Microsoft 365 Defender portalındaki Uç Nokta için Microsoft Defender temsilci erişimi şu anda tarayıcı penceresi başına tek bir kiracıya erişime izin verir.

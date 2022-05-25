@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 8bfa08a92a011d32cdc30e2f68052715b4075fdf
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: a70602f9b482196ee949a8f9922f2979b04b3ff4
+ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64665524"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65669308"
 ---
 # <a name="take-response-actions-on-a-file"></a>Dosyada yanıt eylemleri gerçekleştirin
 
@@ -28,12 +28,12 @@ ms.locfileid: "64665524"
 
 **Şunlar için geçerlidir:**
 
-- [Uç Nokta için Microsoft Defender Plan 1](/microsoft-365/security/defender-endpoint/defender-endpoint-plan-1)
+- [Uç Nokta için Microsoft Defender Planı 1](/microsoft-365/security/defender-endpoint/defender-endpoint-plan-1)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 [!include[Prerelease information](../../includes/prerelease.md)]
 
-> Uç Nokta için Defender'ı deneyimlemek mi istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-responddile-abovefoldlink)
+> Uç nokta için Defender'i deneyimlemek ister misiniz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-responddile-abovefoldlink)
 
 Algılanan saldırılara hızlı bir şekilde yanıt vermek için dosyaları durdurup kilitleyin veya bir dosyayı engelleyin. Dosyalar üzerinde işlem yaptıktan sonra İşlem merkezinde etkinlik ayrıntılarını de kontrol edebilirsiniz.
 
@@ -151,7 +151,7 @@ Varsayılan olarak, karantinadaki dosyaları indirebilmeniz gerekir.
 
 ### <a name="download-quarantined-files"></a>Karantinaya alınan dosyaları indirme
 
-Microsoft Defender Virüsten Koruma veya güvenlik ekibiniz tarafından karantinaya alınan dosyalar[, örnek gönderim yapılandırmalarınıza](enable-cloud-protection-microsoft-defender-antivirus.md) göre uyumlu bir şekilde kaydedilir. Güvenlik ekibiniz dosyaları doğrudan dosyanın ayrıntı sayfasından "Dosyayı indir" düğmesi aracılığıyla indirebilir. **Bu önizleme özelliği varsayılan olarak 'Açık'tır**.
+Microsoft Defender Virüsten Koruma veya güvenlik ekibiniz tarafından karantinaya alınan dosyalar[, örnek gönderim yapılandırmalarınıza](enable-cloud-protection-microsoft-defender-antivirus.md) göre uyumlu bir şekilde kaydedilir. Güvenlik ekibiniz dosyaları doğrudan dosyanın ayrıntı sayfasından "Dosyayı indir" düğmesi aracılığıyla indirebilir. **Bu özellik varsayılan olarak 'Açık'tır**.
 
 Konum, kuruluşunuzun coğrafi ayarlarına (AB, Birleşik Krallık veya ABD) bağlıdır. Karantinaya alınan bir dosya kuruluş başına yalnızca bir kez toplanır. Hizmet Güveni Portalı'ndan https://aka.ms/STPMicrosoft'un veri koruması hakkında daha fazla bilgi edinin.
 

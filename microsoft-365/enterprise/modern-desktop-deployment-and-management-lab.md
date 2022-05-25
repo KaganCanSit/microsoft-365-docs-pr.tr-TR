@@ -16,12 +16,12 @@ ms.collection:
 - Strat_O365_Enterprise
 ms.custom: ''
 description: Windows ve Office Dağıtım Laboratuvar Seti'ne nereden erişeceğiniz hakkında bilgi edinin.
-ms.openlocfilehash: e90a52a23c6c79a3293d381c0503480abc90c2d7
-ms.sourcegitcommit: 37111bc0c5a6cc4690f7144a019bbff11d44858f
+ms.openlocfilehash: 2324501927b39d860b8f2b06e36a85585fa8d4be
+ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65463175"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65669221"
 ---
 # <a name="windows-and-office-365-deployment-lab-kit"></a>Windows ve Office 365 dağıtım laboratuvarı seti
 
@@ -97,9 +97,15 @@ Ayrıntılı laboratuvar kılavuzları, birden çok dağıtım ve yönetim senar
 - Bitlocker
 - Microsoft Defender Virüsten Koruma
 - İş İçin Windows Hello
+- Windows Defender Credential Guard       
+- Microsoft Defender Application Guard     
+- Windows Defender Exploit Guard             
+- Uygulama Denetimini Windows Defender   
+- Uç Nokta için Microsoft Defender 
+
 
 > [!NOTE]
-> Lütfen bu içeriği indirmek için geniş bant İnternet bağlantısı kullanın ve otomatik sağlama için yaklaşık 30 dakika bekleyin. Laboratuvar ortamı için en az 16 GB kullanılabilir bellek ve 150 GB boş disk alanı gerekir. En iyi performans için 32 GB kullanılabilir bellek ve 300 GB boş alan önerilir. Windows 10 laboratuvarının süresi 11 Ağustos 2022'de sona eriyor. Windows 11 laboratuvarının süresi 7 Ağustos 2022'de sona eriyor. Yeni sürümler sona ermeden önce yayımlanacaktır.
+> Lütfen bu içeriği indirmek için geniş bant İnternet bağlantısı kullanın ve otomatik sağlama için yaklaşık 30 dakika bekleyin. Laboratuvar ortamı için en az 16 GB kullanılabilir bellek ve 150 GB boş disk alanı gerekir. En iyi performans için 32 GB kullanılabilir bellek ve 300 GB boş alan önerilir. Bu laboratuvarlardaki değerlendirme yazılımının süresi etkinleştirmeden 90-120 gün sonra dolar. Laboratuvarların yeni sürümleri Ağustos 2022'de yayımlanacaktır. 
 
 ## <a name="additional-guidance"></a>Ek yönergeler
 

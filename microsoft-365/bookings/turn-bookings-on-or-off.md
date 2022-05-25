@@ -10,12 +10,12 @@ ms.custom: admindeeplinkMAC
 ms.localizationpriority: medium
 ms.assetid: 5382dc07-aaa5-45c9-8767-502333b214ce
 description: Microsoft 365'da Microsoft Bookings erişmeyi öğrenin.
-ms.openlocfilehash: 98c6ae99bceada7649dc823ca88669ae0081fc10
-ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
+ms.openlocfilehash: ecd0e970d1e672a7c40bb1876f84d4e55a7dbff0
+ms.sourcegitcommit: 612ce4d15d8a2fdbf7795393b50af477d81b6139
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2022
-ms.locfileid: "65637306"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65663546"
 ---
 # <a name="turn-microsoft-bookings-on-or-off"></a>Microsoft Bookings’i açma veya kapatma
 
@@ -87,7 +87,7 @@ Tek tek kullanıcılar için Bookings devre dışı bırakabilirsiniz.
 
 ## <a name="allow-only-selected-users-to-create-bookings-calendars"></a>Yalnızca seçili kullanıcıların Bookings takvim oluşturmasına izin ver
 
-İlke kısıtlamalarını kullanarak lisanslı kullanıcıların Bookings takvimleri oluşturmasını kısıtlayabilirsiniz. önce Bookings tüm kuruluşunuz için etkinleştirmeniz gerekir. Kuruluşunuzdaki tüm kullanıcılar Bookings lisanslara sahip olur, ancak yalnızca ilkeye dahil olanlar Bookings takvimler oluşturabilir ve oluşturdukları takvimlere kimlerin erişebileceği üzerinde tam denetime sahip olabilir.
+İlke kısıtlamalarını kullanarak lisanslı kullanıcıların Bookings takvimleri oluşturmasını kısıtlayabilirsiniz. Kuruluşunuzdaki tüm kullanıcılar Bookings lisanslara sahip olur, ancak yalnızca ilkeye dahil olanlar Bookings takvimler oluşturabilir ve oluşturdukları takvimlere kimlerin erişebileceği üzerinde tam denetime sahip olabilir.
 
 Bu ilkeye dahil olan kullanıcılar yeni Bookings takvimler oluşturabilir ve mevcut Bookings takvimlerine herhangi bir kapasitede (yönetici rolü dahil) personel olarak eklenebilir. Bu ilkeye dahil olmayan kullanıcılar yeni Bookings takvimleri oluşturamaz ve bunu denerlerse bir hata iletisi alırlar.
 

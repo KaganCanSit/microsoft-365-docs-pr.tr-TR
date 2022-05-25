@@ -1,7 +1,7 @@
 ---
-title: Linux'ta Uç Nokta için Microsoft Defender ile istenmeyen olabilecek uygulamaları algılama ve engelleme
-description: Linux'ta Uç Nokta için Microsoft Defender'ı kullanarak olası İstenmeyen Uygulamaları (PUA) algıla ve engelle.
-keywords: microsoft, defender, Endpoint için Microsoft Defender, linux, pua, pus
+title: Linux'ta Uç Nokta için Microsoft Defender ile istenmeyebilecek uygulamaları algılama ve engelleme
+description: Linux'ta Uç Nokta için Microsoft Defender kullanarak İstenmeyebilecek Uygulamaları (PUA) algılayın ve engelleyin.
+keywords: microsoft, defender, Uç Nokta için Microsoft Defender, linux, pua, pus
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,52 +15,52 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 03c6f64e7272706262ef622a173e58260468e01b
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 004a9d7af09e8a2abb656c29db558d797173edcd
+ms.sourcegitcommit: 612ce4d15d8a2fdbf7795393b50af477d81b6139
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "62997529"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65663612"
 ---
-# <a name="detect-and-block-potentially-unwanted-applications-with-microsoft-defender-for-endpoint-on-linux"></a>Linux'ta Uç Nokta için Microsoft Defender ile istenmeyen olabilecek uygulamaları algılama ve engelleme
+# <a name="detect-and-block-potentially-unwanted-applications-with-microsoft-defender-for-endpoint-on-linux"></a>Linux'ta Uç Nokta için Microsoft Defender ile istenmeyebilecek uygulamaları algılama ve engelleme
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
+> Uç nokta için Defender'i deneyimlemek ister misiniz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
-Linux'ta Uç Nokta için Defender'daki istenmeyen uygulama (PUA) koruma özelliği ağ bağlantı noktalarında PUA dosyalarını algılanabilir ve engelleyebilir.
+Linux üzerinde Uç Nokta için Defender'daki istenmeyebilecek uygulama (PUA) koruma özelliği, ağınızdaki uç noktalarda PUA dosyalarını algılayabilir ve engelleyebilir.
 
-Bu uygulamalar virüs, kötü amaçlı yazılım veya diğer tehdit türleri olarak kabul alınmaz, ancak performanslarını veya kullanımını olumsuz etkileyen uç noktalar üzerinde eylemler gerçekleştirebilir. PUA, kötü bir üne sahip olduğu kabul edilen uygulamalara da başvurur.
+Bu uygulamalar virüs, kötü amaçlı yazılım veya diğer tehdit türleri olarak kabul edilmez, ancak uç noktalarda performanslarını veya kullanımlarını olumsuz yönde etkileyen eylemler gerçekleştirebilir. PUA ayrıca kötü bir üne sahip olduğu düşünülen uygulamalara da başvurabilir.
 
-Bu uygulamalar, ağlarının kötü amaçlı yazılımdan bulaşma riskini artırabilir, kötü amaçlı yazılım bulaşmalarının belirlenmesini daha zorlaştırabilir ve uygulamaları temizlerken IT kaynaklarını israf edebilir.
+Bu uygulamalar ağınıza kötü amaçlı yazılım bulaşma riskini artırabilir, kötü amaçlı yazılım bulaşmalarının tanımlanmasının zor olmasına neden olabilir ve uygulamaları temizlerken BT kaynaklarını boşa harcayabilir.
 
 ## <a name="how-it-works"></a>Nasıl çalışır?
 
-Linux'ta Uç Nokta için Defender PUA dosyalarını algılanabilir ve bildirebilirsiniz. Engelleme modunda yapılandırıldığında, PUA dosyaları karantinaya taşınır.
+Linux'ta Uç Nokta için Defender PUA dosyalarını algılayabilir ve raporlayabilir. Engelleme modunda yapılandırıldığında PUA dosyaları karantinaya taşınır.
 
-Bir uç noktada PUA algılandığında Linux'ta Uç Nokta için Defender tehdit geçmişinde bulaşmanın kaydını tutar. Geçmiş, portalda Microsoft 365 Defender komut satırı aracı aracılığıyla `mdatp` görselleştirilmiş olabilir. Tehdit adı "Uygulama" sözcüğü içerir.
+Bir uç noktada PUA algılandığında, Linux'ta Uç Nokta için Defender tehdit geçmişinde bulaşmanın kaydını tutar. Geçmiş, Microsoft 365 Defender portalından veya komut satırı aracı aracılığıyla `mdatp` görselleştirilebilir. Tehdit adı "Uygulama" sözcüğünü içerir.
 
 ## <a name="configure-pua-protection"></a>PUA korumasını yapılandırma
 
-Linux'ta Uç Nokta için Defender'daki PUA koruması aşağıdaki yöntemlerden birini yapılandırabilirsiniz:
+Linux'ta Uç Nokta için Defender'da PUA koruması aşağıdaki yollardan biriyle yapılandırılabilir:
 
-- **Kapalı**: PUA koruması devre dışı bırakılır.
-- **Denetim**: PUA dosyaları ürün günlüklerine bildiriliyor, ancak Microsoft 365 Defender. Bulaşma kaydı tehdit geçmişinde depolandığı gibi ürünle ilgili hiçbir işlem de alınmaz.
-- **Engelle**: PUA dosyaları ürün günlüklerine ve dosya dosyaları Microsoft 365 Defender. Bulaşma kaydı tehdit geçmişinde depolanır ve ürün tarafından işlem alınır.
+- **Kapalı**: PUA koruması devre dışı bırakıldı.
+- **Denetim**: PUA dosyaları ürün günlüklerinde bildirilir ancak Microsoft 365 Defender raporlanmaz. Tehdit geçmişinde enfeksiyon kaydı depolanmaz ve ürün tarafından hiçbir işlem yapılmaz.
+- **Engelle**: PUA dosyaları ürün günlüklerinde ve Microsoft 365 Defender bildirilir. Enfeksiyonun bir kaydı tehdit geçmişinde depolanır ve ürün tarafından eylem yapılır.
 
 > [!WARNING]
-> Varsayılan olarak, PUA koruması **Denetim modunda yapılandırılır** .
+> Varsayılan olarak, PUA koruması **Denetim** modunda yapılandırılır.
 
-PUA dosyalarının komut satırı veya yönetim konsolundan nasıl işleniyor olduğunu yapılandırabilirsiniz.
+PUA dosyalarının işlenme şeklini komut satırından veya yönetim konsolundan yapılandırabilirsiniz.
 
 ### <a name="use-the-command-line-tool-to-configure-pua-protection"></a>PUA korumasını yapılandırmak için komut satırı aracını kullanın:
 
-Terminal'de PUA korumasını yapılandırmak için aşağıdaki komutu yürütün:
+Terminal'de aşağıdaki komutu yürüterek PUA korumasını yapılandırın:
 
 ```bash
 mdatp threat policy set --type potentially_unwanted_application --action [off|audit|block]
@@ -68,7 +68,7 @@ mdatp threat policy set --type potentially_unwanted_application --action [off|au
 
 ### <a name="use-the-management-console-to-configure-pua-protection"></a>PUA korumasını yapılandırmak için yönetim konsolunu kullanın:
 
-Kurumunuzun içinde, diğer ürün ayarlarının yapılandırılma örneğine benzer şekilde, Şirket konsolundan PUA korumasını Yapılandırabilirsiniz . Daha fazla bilgi için [Linux'ta Uç nokta için](linux-preferences.md#threat-type-settings) Defender tercihlerini ayarlama makalesinde Tehdit [türü ayarları bölümüne](linux-preferences.md) bakın.
+Kuruluşunuzda PUA korumasını Puppet veya Ansible gibi bir yönetim konsolundan, diğer ürün ayarlarının nasıl yapılandırıldığına benzer şekilde yapılandırabilirsiniz. Daha fazla bilgi [için, Linux'ta Uç Nokta için Defender tercihlerini ayarlama](linux-preferences.md) makalesinin [Tehdit türü ayarları](linux-preferences.md#threat-type-settings) bölümüne bakın.
 
 ## <a name="related-articles"></a>İlgili makaleler
 
