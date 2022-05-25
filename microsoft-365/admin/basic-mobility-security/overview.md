@@ -19,16 +19,16 @@ ms.custom:
 search.appverid:
 - MET150
 description: Temel Hareketlilik ve Güvenlik’i ayarlayıp kullanarak Microsoft 365 kuruluşunuza bağlı mobil cihazları yönetin ve güvenliklerini sağlayın.
-ms.openlocfilehash: ca2f5f18dc67517fd9af3bf4f1d1a05e17010c35
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 168fd1f0ef08cf1a9bd5d7c90c53781016b232e6
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65435711"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65636140"
 ---
 # <a name="overview-of-basic-mobility-and-security-for-microsoft-365"></a>Microsoft 365 için Temel Hareketlilik ve Güvenlik'e genel bakış
 
-Temel Hareketlilik ve Güvenlik’i kullanarak, Microsoft 365 kuruluşunuza bağlı olduklarında mobil cihazları yönetebilir ve güvenliğini sağlayabilirsiniz. İş e-postasına, takvime, kişilere ve belgelere erişmek için kullanılan akıllı telefonlar ve tabletler gibi mobil cihazlar, çalışanların işlerini her zaman, her yerden yapmalarını sağlamada büyük rol oynar. Bu nedenle, insanlar cihazları kullandığında kuruluşunuzun bilgilerini korumaya yardımcı olmanız çok önemlidir. Cihaz güvenlik ilkelerini ve erişim kurallarını belirlemek ve kaybolmaları veya çalınmaları durumunda mobil cihazları silmek için Temel Hareketlilik ve Güvenlik'i kullanabilirsiniz.
+Temel Hareketlilik ve Güvenlik’i kullanarak, Microsoft 365 kuruluşunuza bağlı olduklarında mobil cihazları yönetebilir ve güvenliğini sağlayabilirsiniz. İş e-posta adresine, takvime, kişilere ve belgelere erişmek için kullanılan akıllı telefonlar ve tabletler gibi mobil cihazlar, çalışanların işlerini her zaman, her yerden yapmalarını sağlamada önemli rol oynar. Bu nedenle, insanlar cihazları kullandığında kuruluşunuzun bilgilerini korumaya yardımcı olmanız çok önemlidir. Cihaz güvenlik ilkelerini ve erişim kurallarını belirlemek ve kaybolmaları veya çalınmaları durumunda mobil cihazları silmek için Temel Hareketlilik ve Güvenlik'i kullanabilirsiniz.
 
 :::image type="content" source="../../media/basic-mobility-security/bms-3-setup.png" alt-text="Temel Hareketlilik ve Güvenlik Kurulumu.":::
 
