@@ -12,12 +12,12 @@ ms.collection:
 - m365initiative-defender-office365
 description: Yöneticiler, Office 365 için Microsoft Defender Plan 2'de belirtilen koşullar karşılandığında başlatılan belirli teknikleri ve yükleri içeren otomatik simülasyonlar oluşturmayı öğrenebilir.
 ms.technology: mdo
-ms.openlocfilehash: b80d73f6efe398465eecea9967c4bd8d929a51a2
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: ded6a77e72e71a676c0cc05ffdc3be53e3fbada1
+ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65649419"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65678865"
 ---
 # <a name="simulation-automations-for-attack-simulation-training"></a>Saldırı simülasyonu eğitimi için simülasyon otomasyonları
 
@@ -29,11 +29,11 @@ Saldırı simülasyonu eğitimi hakkında başlangıç bilgileri için bkz. [Sal
 
 Simülasyon otomasyonu oluşturmak için aşağıdaki adımları uygulayın:
 
-1. konumundaki Microsoft 365 Defender portalında<https://security.microsoft.com/>**, E-posta & işbirliği** \> **Saldırı benzetimi eğitimi** \> **Simülasyon otomasyonları** sekmesine gidin.
+1. konumundaki Microsoft 365 Defender portalında<https://security.microsoft.com/>**, E-posta & işbirliği** \> **Saldırı simülasyonu eğitimi** \> **Otomasyonları** sekmesi **Simülasyon otomasyonları'na**\> gidin.
 
-   Doğrudan **Simülasyon otomasyonları** sekmesine gitmek için kullanın <https://security.microsoft.com/attacksimulator?viewid=simulationautomation>.
+   Doğrudan **Otomasyonlar** sekmesine gitmek için kullanın <https://security.microsoft.com/attacksimulator?viewid=automations>.
 
-2. **Simülasyon otomasyonları** sekmesinde Otomasyon oluştur simgesi'ni seçin![.](../../media/m365-cc-sc-create-icon.png) **Otomasyon oluşturma**.
+2. **Simülasyon otomasyonları'nda** Otomasyon oluştur simgesi'ne tıklayın![.](../../media/m365-cc-sc-create-icon.png) **Otomasyon oluşturma**.
 
    :::image type="content" source="../../media/attack-sim-training-sim-automations-create.png" alt-text="Microsoft 365 Defender portalındaki Saldırı benzetimi eğitimi'ndeki Simülasyon otomasyonları sekmesindeki Simülasyon oluştur düğmesi" lightbox="../../media/attack-sim-training-sim-automations-create.png":::
 
@@ -339,7 +339,7 @@ Bu sayfada aşağıdaki bildirimler ve yapılandırılan dilleri gösterilir:
 - **Microsoft varsayılan eğitim ataması bildirimi**
 - Daha önce oluşturduğunuz tüm özel eğitim atama bildirimleri.
 
-  Bu bildirimler, konumundaki Saldırı benzetimi eğitimi'nin <https://security.microsoft.com/attacksimulator?viewid=endUserNotification>**Son kullanıcı bildirimleri** sekmesinde de kullanılabilir. **Microsoft varsayılan eğitim ataması bildirimi** Genel **bildirimler** sekmesinde bulunur. Özel eğitim ataması bildirimleri **Kiracı bildirimleri** sekmesinde bulunur. Daha fazla bilgi için bkz [. Saldırı benzetimi eğitimi için son kullanıcı bildirimleri](attack-simulation-training-end-user-notifications.md).
+  Bu bildirimler, konumundaki Saldırı benzetimi eğitimi'nin **Simülasyon içerik kitaplığı** sekmesindeki **Son kullanıcı bildirimlerinde** <https://security.microsoft.com/attacksimulator?viewid=simulationcontentlibrary>de kullanılabilir. **Microsoft varsayılan eğitim ataması bildirimi** Genel **bildirimler** sekmesinde bulunur. Özel eğitim ataması bildirimleri **Kiracı bildirimleri** sekmesinde bulunur. Daha fazla bilgi için bkz [. Saldırı benzetimi eğitimi için son kullanıcı bildirimleri](attack-simulation-training-end-user-notifications.md).
 
 Var olan bir eğitim ataması bildirimini seçebilir veya kullanmak için yeni bir bildirim oluşturabilirsiniz:
 
@@ -374,7 +374,7 @@ Kullanmak istediğiniz bildirimi seçin ve **İleri'ye** tıklayın.
   - **Microsoft varsayılan eğitim anımsatıcı bildirimi**
   - Daha önce oluşturduğunuz tüm özel eğitim anımsatıcı bildirimleri.
 
-    Bu bildirimler, konumundaki Saldırı benzetimi eğitimi'nin <https://security.microsoft.com/attacksimulator?viewid=endUserNotification>**Son kullanıcı bildirimleri** sekmesinde de kullanılabilir. **Microsoft varsayılan eğitim anımsatıcı bildirimi** Genel **bildirimler** sekmesinde bulunur. Özel eğitim anımsatıcısı bildirimleri **Kiracı bildirimleri** sekmesinde bulunur. Daha fazla bilgi için bkz [. Saldırı benzetimi eğitimi için son kullanıcı bildirimleri](attack-simulation-training-end-user-notifications.md).
+    Bu bildirimler, konumundaki Saldırı benzetimi eğitimi'nin **Simülasyon içerik kitaplığı** sekmesindeki **Son kullanıcı bildirimlerinde** <https://security.microsoft.com/attacksimulator?viewid=simulationcontentlibrary>de kullanılabilir. **Microsoft varsayılan eğitim anımsatıcı bildirimi** Genel **bildirimler** sekmesinde bulunur. Özel eğitim anımsatıcısı bildirimleri **Kiracı bildirimleri** sekmesinde bulunur. Daha fazla bilgi için bkz [. Saldırı benzetimi eğitimi için son kullanıcı bildirimleri](attack-simulation-training-end-user-notifications.md).
 
   Var olan bir eğitim anımsatıcısı bildirimini seçebilir veya kullanmak için yeni bir bildirim oluşturabilirsiniz:
 
@@ -411,7 +411,7 @@ Kullanmak istediğiniz bildirimi seçin ve **İleri'ye** tıklayın.
   - **Microsoft varsayılan pozitif takviye bildirimi**
   - Daha önce oluşturduğunuz tüm özel pozitif takviye bildirimleri.
 
-    Bu bildirimler, konumundaki Saldırı benzetimi eğitimi'nin <https://security.microsoft.com/attacksimulator?viewid=endUserNotification>**Son kullanıcı bildirimleri** sekmesinde de kullanılabilir. **Microsoft varsayılan pozitif takviye bildirimi** Genel **bildirimler** sekmesinde bulunur. Kiracı bildirimleri sekmesinde özel pozitif takviye **bildirimleri** bulunur. Daha fazla bilgi için bkz [. Saldırı benzetimi eğitimi için son kullanıcı bildirimleri](attack-simulation-training-end-user-notifications.md).
+    Bu bildirimler, konumundaki Saldırı benzetimi eğitimi'nin **Simülasyon içerik kitaplığı** sekmesindeki **Son kullanıcı bildirimlerinde** <https://security.microsoft.com/attacksimulator?viewid=simulationcontentlibrary>de kullanılabilir. **Microsoft varsayılan pozitif takviye bildirimi** Genel **bildirimler** sekmesinde bulunur. Kiracı bildirimleri sekmesinde özel pozitif takviye **bildirimleri** bulunur. Daha fazla bilgi için bkz [. Saldırı benzetimi eğitimi için son kullanıcı bildirimleri](attack-simulation-training-end-user-notifications.md).
 
   Mevcut bir pozitif takviye bildirimi seçebilir veya kullanmak için yeni bir bildirim oluşturabilirsiniz:
 

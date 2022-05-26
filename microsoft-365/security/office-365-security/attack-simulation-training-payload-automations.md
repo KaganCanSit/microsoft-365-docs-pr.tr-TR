@@ -12,12 +12,12 @@ ms.collection:
 - m365initiative-defender-office365
 description: Yöneticiler, Office 365 için Microsoft Defender Plan 2'de Saldırı simülasyonu eğitimi için otomatik simülasyonları toplamak ve başlatmak için yük otomasyonlarını (yük toplama) kullanmayı öğrenebilir.
 ms.technology: mdo
-ms.openlocfilehash: 5b008dc25ee3b705f212b1fac1bf3779f1de8bda
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: 7fb3b0bbad5bbec8044a94da1943b0bd25eba865
+ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65647523"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65679384"
 ---
 # <a name="payload-automations-for-attack-simulation-training"></a>Saldırı simülasyonu eğitimi için yük otomasyonları
 
@@ -29,18 +29,18 @@ Microsoft 365 E5 veya Office 365 için Microsoft Defender Plan 2'de saldırı si
 
 Yük otomasyonu oluşturmak için aşağıdaki adımları uygulayın:
 
-1. konumundaki Microsoft 365 Defender portalında<https://security.microsoft.com/>**, E-posta & işbirliği** \> **Saldırı benzetimi eğitimi** \> **Yük otomasyonları** sekmesine gidin.
+1. konumundaki Microsoft 365 Defender portalında<https://security.microsoft.com/>**, E-posta & işbirliği** \> **Saldırı benzetimi eğitimi** \> **Otomasyonları** sekmesi **Yük otomasyonları'na**\> gidin.
 
-   Doğrudan **Yük otomasyonları** sekmesine gitmek için kullanın <https://security.microsoft.com/attacksimulator?viewid=payloadautomation>.
+   Doğrudan **Otomasyonlar** sekmesine gitmek için kullanın <https://security.microsoft.com/attacksimulator?viewid=automations>.
 
-2. **Yük otomasyonları** sekmesinde Otomasyon oluştur simgesi'ni seçin![.](../../media/m365-cc-sc-create-icon.png) **Otomasyon oluşturma**.
+2. **Yük otomasyonları** bölümünde Otomasyon oluştur simgesi'ne tıklayın![.](../../media/m365-cc-sc-create-icon.png) **Otomasyon oluşturma**.
 
    :::image type="content" source="../../media/attack-sim-training-sim-automations-create.png" alt-text="Microsoft 365 Defender portalındaki Saldırı simülasyonu eğitimi'ndeki Yük otomasyonları sekmesindeki Simülasyon oluştur düğmesi" lightbox="../../media/attack-sim-training-sim-automations-create.png":::
 
 3. Oluşturma sihirbazı açılır. Bu makalenin geri kalanında sayfalar ve içerdikleri ayarlar açıklanmaktadır.
 
 > [!NOTE]
-> Oluşturma sihirbazı sırasında herhangi bir noktada Kaydet **ve kapat'a** tıklayarak ilerlemenizi kaydedebilir ve yük otomasyonunu daha sonra yapılandırmaya devam edebilirsiniz. **Yük otomasyonları** sekmesinde yük otomasyonunu seçip Otomasyonu düzenle simgesine tıklayarak ![kaldığınız yerden devam edebilirsiniz.](../../media/m365-cc-sc-edit-icon.png) **Otomasyonu düzenleyin**.
+> Oluşturma sihirbazı sırasında herhangi bir noktada Kaydet **ve kapat'a** tıklayarak ilerlemenizi kaydedebilir ve yük otomasyonunu daha sonra yapılandırmaya devam edebilirsiniz. **Yük otomasyonlarında** yük otomasyonunu seçip Otomasyonu düzenle simgesine tıklayarak ![kaldığınız yerden devam edebilirsiniz.](../../media/m365-cc-sc-edit-icon.png) **Otomasyonu düzenleyin**.
 
 ## <a name="automation-name"></a>Otomasyon adı
 

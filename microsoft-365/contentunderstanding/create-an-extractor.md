@@ -13,12 +13,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Microsoft SharePoint Syntex'da ayıklayıcı oluşturmayı öğrenin.
-ms.openlocfilehash: 5be59cc7b99d64ceceb08bc400eeb0c44e3de1a8
-ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
+ms.openlocfilehash: 5bfca45442386c15fb8418e306a5631795204c5f
+ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2022
-ms.locfileid: "65535492"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65679624"
 ---
 # <a name="create-an-extractor-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'de ayıklayıcı oluşturma
 
@@ -42,12 +42,12 @@ Belgede ayıklamak istediğiniz her varlık için bir ayıklayıcı oluşturman�
 
 2. **Yeni varlık ayıklayıcısı** ekranında, **Yeni ayıklayıcı adı alanına ayıklayıcınızın adını** yazın. Örneğin, her Sözleşme Yenileme belgesinden hizmet başlangıç tarihini ayıklamak istiyorsanız Hizmet Başlangıç **Tarihi** olarak adlandırın. Daha önce oluşturulmuş bir sütunu (örneğin, yönetilen meta veri sütunu) yeniden de kullanabilirsiniz.
 
-    Varsayılan olarak, sütun türü **Tek satırlık metindir**. Sütun türünü değiştirmek istiyorsanız **Gelişmiş ayarlarSütun** >  **türü'nü** seçin ve ardından kullanmak istediğiniz türü seçin.
+    Varsayılan olarak, sütun türü **Tek satırlık metindir**. Sütun türünü değiştirmek istiyorsanız **Gelişmiş ayarlar** > **Sütun türü'nü** ve ardından kullanmak istediğiniz türü seçin.
 
     ![Sütun türü seçeneğini gösteren Yeni varlık ayıklayıcı panelinin Gelişmiş ayarlar bölümünün ekran görüntüsü.](../media/content-understanding/advanced-settings-column-type.png)
 
     > [!NOTE]
-    > **Tek satırlık metin** sütun türüne sahip ayıklayıcılar için en fazla karakter sınırı 255'tir. Sınırı aşan yazdığınız tüm karakterler kesilir.
+    > **Tek satırlık metin** sütun türüne sahip ayıklayıcılar için en fazla karakter sınırı 255'tir. Seçtiğiniz ve sınırı aşan karakterler kesilir. 255 karakterden büyük bir karakter seçmek için ayıklayıcıyı oluştururken **Birden Çok Metin Satırı** sütun türünü seçin.
 
 3. İşiniz bittiğinde **Oluştur'u** seçin.
 

@@ -13,12 +13,12 @@ ms.collection:
 ms.custom: ''
 description: Yöneticiler, Office 365 için Microsoft Defender Plan 2'de Saldırı simülasyonu eğitimi için özel yük oluşturmayı öğrenebilir.
 ms.technology: mdo
-ms.openlocfilehash: f0f91eb3936d1dc4ed6c028552b37fecb5df2ff6
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: 24655986cd8c30bec4495477a63d692fd1ebb2d2
+ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65648315"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65679340"
 ---
 # <a name="create-custom-payloads-for-attack-simulation-training-in-defender-for-office-365"></a>Office 365 için Defender'de Saldırı benzetimi eğitimi için özel yük oluşturma
 
@@ -30,7 +30,7 @@ Saldırı simülasyonu eğitiminde _yük_ , simülasyonlarda kullanıcılara sun
 
 Bu makalede, Saldırı simülasyonu eğitiminde kendi yüklerinizi nasıl oluşturacağınız açıklanmaktadır. Aşağıdaki konumlarda özel yük oluşturabilirsiniz:
 
-- **Yük sekmesi**: konumundaki Microsoft 365 Defender portalında<https://security.microsoft.com>**, e-posta & işbirliği** \> **Saldırı benzetimi eğitimi** \> **Yükleri** sekmesine gidin. Doğrudan **Yük sekmesine** gitmek için kullanın<https://security.microsoft.com/attacksimulator?viewid=payload>.
+- **Payloads**: konumundaki Microsoft 365 Defender portalında<https://security.microsoft.com>**, E-posta & işbirliği** \> **Saldırı benzetimi eğitimi** \> **Simülasyon içerik kitaplığı** sekmesi **Yükleri'ne**\> gidin. Doğrudan **Simülasyon içerik kitaplığı** sekmesine gitmek için kullanın <https://security.microsoft.com/attacksimulator?viewid=simulationcontentlibrary>.
 - Simülasyon oluşturma sırasında: Simülasyon oluşturma sihirbazının **Yük seçin** sayfasında (üçüncü sayfada) özel yükler oluşturabilirsiniz. Daha fazla bilgi için bkz. [Office 365 için Defender'de kimlik avı saldırısı benzetimi](attack-simulation-training.md) yapma.
 
 Saldırı simülasyonu eğitimi hakkında başlangıç bilgileri için bkz. [Saldırı simülasyonu eğitimini kullanarak Kullanmaya başlayın](attack-simulation-training-get-started.md).
@@ -40,7 +40,7 @@ Saldırı simülasyonu eğitimi hakkında başlangıç bilgileri için bkz. [Sal
 
 ## <a name="create-a-payload"></a>Yük oluşturma
 
-Yük oluştur simgesine tıkladıktan ![sonra.](../../media/m365-cc-sc-create-icon.png) Saldırı benzetimi eğitiminin **Yükler** sekmesinden **veya** simülasyon oluşturma sihirbazının **[Yük seçin](attack-simulation-training.md#select-a-payload)** sayfasında yük oluşturma sihirbazı başlatılır ve bu bölümde açıklanmaktadır.
+Yük oluştur simgesine tıkladıktan ![sonra.](../../media/m365-cc-sc-create-icon.png) Saldırı simülasyonu eğitiminin **Simülasyon içerik kitaplığı** sekmesindeki **Yüklerden** **bir yük oluşturun** veya simülasyon oluşturma sihirbazının **[Yük seçin](attack-simulation-training.md#select-a-payload)** sayfasında yük oluşturma sihirbazı başlatılır ve bu bölümde açıklanmaktadır.
 
 ### <a name="select-a-payload-type"></a>Yük türü seçme
 

@@ -21,12 +21,12 @@ search.appverid:
 - MET150
 ms.technology: m365d
 ms.custom: api
-ms.openlocfilehash: d01cdacc40b58eb940b2773606221b4fdbe18728
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: e485bcf400dbaf36c63e3a0ed8677c9bf7c8f23a
+ms.sourcegitcommit: 852075d8d8a4ca052f69e854396d1565ef713500
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64823200"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65692771"
 ---
 # <a name="microsoft-365-defender-advanced-hunting-api"></a>Microsoft 365 Defender Gelişmiş avcılık API'si
 
@@ -39,7 +39,7 @@ ms.locfileid: "64823200"
 > [!IMPORTANT]
 > Bazı bilgiler, ticari olarak piyasaya sürülmeden önce önemli ölçüde değiştirilebilen önceden yayımlanmış ürünle ilgilidir. Microsoft, burada sağlanan bilgilerle ilgili olarak açık veya zımni hiçbir garanti vermez.
 
-[Gelişmiş avcılık](advanced-hunting-overview.md), Microsoft 365 Defender'da son 30 günlük olay verilerini incelemek için [özel olarak oluşturulan sorguları](advanced-hunting-query-language.md) kullanan bir tehdit avcılığı aracıdır. Olağan dışı etkinlikleri incelemek, olası tehditleri algılamak ve hatta saldırılara yanıt vermek için gelişmiş tehdit avcılığı sorgularını kullanabilirsiniz. Gelişmiş tehdit avcılığı API'si, olay verilerini programlı olarak sorgulamanıza olanak tanır.
+[Gelişmiş avcılık](advanced-hunting-overview.md), Microsoft 365 Defender'da son 30 günlük olay verilerini incelemek için [özel olarak oluşturulan sorguları](advanced-hunting-query-language.md) kullanan bir tehdit avcılığı aracıdır. Olağan dışı etkinlikleri incelemek, olası tehditleri algılamak ve hatta saldırılara yanıt vermek için gelişmiş tehdit avcılığı sorgularını kullanabilirsiniz. Gelişmiş tehdit avcılığı API'si, olay verilerini program aracılığıyla sorgulamanıza olanak tanır.
 
 ## <a name="quotas-and-resource-allocation"></a>Kotalar ve kaynak ayırma
 
@@ -53,11 +53,11 @@ Aşağıdaki koşullar tüm sorgular ile ilgilidir.
 6. `429` HTTP yanıt kodu, gönderilen istek sayısına veya ayrılan çalışma süresine göre bir kotaya ulaştığınızı gösterir. Ulaştığınız sınırı anlamak için yanıt gövdesini okuyun. 
 
 > [!NOTE]
-> Yukarıda listelenen tüm kotalar (örneğin, dakika başına 15 çağrı) kiracı boyutuna göredir. Bu kotalar minimum değerdir.
+> Yukarıda listelenen tüm kotalar (örneğin, dakika başına 15 çağrı) kiracı genelindedir. Bu kotalar minimum değerdir.
 
 ## <a name="permissions"></a>İzinler
 
-Gelişmiş tehdit avcılığı API'sini çağırmak için aşağıdaki izinlerden biri gereklidir. İzinlerin nasıl seçileceği de dahil olmak üzere daha fazla bilgi edinmek için bkz. [Microsoft 365 Defender Koruması API'lerine erişme](api-access.md)
+Gelişmiş tehdit avcılığı API'sini çağırmak için aşağıdaki izinlerden biri gereklidir. İzinlerin nasıl seçileceği de dahil olmak üzere daha fazla bilgi için bkz. [Microsoft 365 Defender Koruması API'lerine erişme](api-access.md).
 
 İzin türü | Izni | İzin görünen adı
 -|-|-
@@ -89,7 +89,7 @@ Yetkilendirme | Taşıyıcı {token} **Not: gerekli**
 
 Parametre | Tür | Açıklama
 -|-|-
-Sorgu | Metin | Çalıştırılacak sorgu. **Not: gerekli**
+Sorgu | Metin | Çalıştırılacak sorgu. **(gerekli)**
 
 ## <a name="response"></a>Yanıt
 

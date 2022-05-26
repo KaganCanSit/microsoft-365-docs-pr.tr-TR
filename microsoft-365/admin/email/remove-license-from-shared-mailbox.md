@@ -23,12 +23,12 @@ search.appverid:
 - MOE150
 description: 'Paylaşılan bir posta kutusundan lisansı kaldırarak başka bir kullanıcıya atayın veya lisansı iade edin; böylece bu lisansı ödemezsiniz. '
 ms.date: 04/22/2022
-ms.openlocfilehash: 4445163281e403505612066285192b31adc44979
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 5248c7fdb807a91ab2a9a7dfd44bdb375eb7d0f0
+ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65091929"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65678930"
 ---
 # <a name="remove-a-license-from-a-shared-mailbox"></a>Paylaşılan posta kutusundan lisans kaldırma
 
@@ -41,7 +41,6 @@ Paylaşılan posta kutuları genellikle lisans gerektirmez. Paylaşılan posta k
 > - Paylaşılan posta kutusunda 50 GB'tan fazla depolama alanı kullanılıyor.
 > - Paylaşılan posta kutusu yerinde arşivleme kullanır.
 > - Paylaşılan posta kutusu, dava beklemeye alınır.
-> - Paylaşılan posta kutusuna atanmış bir Microsoft 365 Defender lisansı vardır.
 > 
 > Lisans atama hakkında adım adım yönergeler için bkz. [Kullanıcılara lisans atama](/microsoft-365/admin/manage/assign-licenses-to-users). 
 

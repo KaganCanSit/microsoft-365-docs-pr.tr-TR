@@ -1,5 +1,5 @@
 ---
-title: Microsoft Purview Uyumluluk Yöneticisi şablon listesi
+title: uyumluluk yöneticisi şablon listesini Microsoft Purview
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview Uyumluluk Yöneticisi ulusal, bölgesel ve sektör düzenlemelerine, standartlarına ve yasalarına uygun değerlendirmeler oluşturmak için şablonlar sağlar.
-ms.openlocfilehash: cc07d7aa6fc385fc1066f35c8d20bbe7e2152b93
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 1ee28bc4ef79e6565086ba087055b8e00a0fe034
+ms.sourcegitcommit: 852075d8d8a4ca052f69e854396d1565ef713500
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64971505"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65692793"
 ---
 # <a name="compliance-manager-templates-list"></a>Uyumluluk Yöneticisi şablonları listesi
 
@@ -35,7 +35,7 @@ ms.locfileid: "64971505"
 
 ## <a name="overview"></a>Genel bakış
 
-[Microsoft Purview Uyumluluk Yöneticisi](compliance-manager.md) , değerlendirme oluşturmak için kapsamlı bir şablon kümesi sağlar. Bu şablonlar, kuruluşunuzun verilerin toplanması ve kullanımını yöneten ulusal, bölgesel ve sektöre özgü gereksinimlere uymasına yardımcı olabilir.
+[Microsoft Purview Uyumluluk Yöneticisi](compliance-manager.md), değerlendirme oluşturmak için kapsamlı bir şablon kümesi sağlar. Bu şablonlar, kuruluşunuzun verilerin toplanması ve kullanımını yöneten ulusal, bölgesel ve sektöre özgü gereksinimlere uymasına yardımcı olabilir.
 
 Yeni yasalar ve düzenlemeler yürürlüğe girdikçe Şablonlar Uyumluluk Yöneticisi'ne eklenir. Uyumluluk Yöneticisi, temel alınan yasalar veya düzenlemeler değiştiğinde şablonlarını da güncelleştirir. [Güncelleştirmeleri gözden geçirme ve kabul](compliance-manager-assessments.md#accept-updates-to-assessments) etme hakkında daha fazla bilgi edinin.
 
@@ -48,7 +48,7 @@ Her şablon ([Microsoft Veri Koruma Temeli](compliance-manager-assessments.md#da
 Ayrıca Uyumluluk Yöneticisi'nde şablonları tek tek seçerek düzenlemenin açıklaması ve şablonun özellikleri de dahil olmak üzere bunlar hakkında daha fazla bilgi görüntüleyebilirsiniz. Özet için **Hakkında** bölümünü okuyun.
 
 Alan veya sektöre göre şablonları görüntülemek için aşağıdaki bölüme atlayın:
-- [Küresel](#global)
+- [Genel](#global)
 - [Sanayi](#industry)
 - [ABD Hükümeti](#us-government)
 - [ABD Eyaletleri ve Bölgeleri](#us-states-and-territories)
@@ -93,7 +93,7 @@ Aşağıda listelenen şablonlar şu anda önizleme için kullanılabilir. Bu ş
 
 Aşağıda listelenen şablonlar kuruluşunuz tarafından satın alınabilir.
 
-### <a name="global"></a>Küresel
+### <a name="global"></a>Genel
 
 - Elektronik Kayıt Yönetim Sistemleri için Yönergeler ve İşlevsel Gereksinimler (ICA Modülü 2)  
 - ISO 15489-1:2016  
@@ -376,7 +376,7 @@ Aşağıda listelenen şablonlar kuruluşunuz tarafından satın alınabilir.
 - EudraLex - Avrupa Birliği'nde Tıbbi Ürünleri yöneten Kurallar  
 - Avrupa Ağ ve Bilgi Güvenliği Ajansı (ENISA) - Bulut Bilişim Bilgi Güvencesi Çerçevesi  
 - Finlandiya - Veri Koruma Yasası  
-- Cloud Services Bilgi Güvenliğinin Değerlendirilmesi için FinCe Ölçütleri
+- Bulut Hizmetlerinin Bilgi Güvenliğini DeğerlendirmeYenileme Ölçütleri
 - Fransa - Veri Koruma Yasası  
 - Gürcistan Kişisel Verileri Koruma Yasası  
 - Almanya - Risk Yönetimi için Minimum Gereksinimler'in açıklama metni  
@@ -397,6 +397,7 @@ Aşağıda listelenen şablonlar kuruluşunuz tarafından satın alınabilir.
 - Nijerya Veri Koruma Yönetmeliği  
 - Umman - Elektronik İşlemler Yasası  
 - Katar Bulut Güvenliği İlkesi
+- Katar Ulusal Bilgi Güvencesi (NIA)
 - Romanya - Veri Koruma Yasası 190/2018  
 - Rusya - Federal Hukuk 149-FZ Bilgi, Bilgi Teknolojisi ve Bilgi Güvenliği
 - [Kişisel Veriler ile İlgili Rusya Federasyonu Federal Yasası](/compliance/regulatory/offering-russia-data-localization)  
@@ -407,11 +408,12 @@ Aşağıda listelenen şablonlar kuruluşunuz tarafından satın alınabilir.
 - Slovakya Kişisel Verilerin Korunmasına Yönelik Eylem  
 - İspanya - Ulus Güvenlik Çerçevesi  
 - İsviçre - Veri Koruma Federal Yasası (FADP)  
-- Türkiye - KVKK Kişisel Verilerin Korunması 6698  
+- Türkiye - KVKK Kişisel Verilerin Korunması 6698
 - BAE - Siber Suçlarla MücadeleYeni Kararname  
 - BAE - Elektronik İşlemler ve Ticaretle ilgili Federal Yasa
 - BAE - Sağlık Alanlarında Bilgi ve İletişim Teknolojisinin (ICT) Kullanımı hakkında 2019 Federal Kanun No 2  
-- BAE - NESA Bilgi Güvencesi Standartları  
+- BAE - NESA Bilgi Güvencesi Standartları
+- BAE Veri Gizliliği Yasası
 - BAE Mevzuat Politikası TRA - Nesnelerin İnterneti  
 - BAE'nin Telekomünikasyon Sektörünü Düzenleyen Federal Kararnamesi Yasası  
 - Uganda - Veri Koruma ve Gizlilik Yasası  

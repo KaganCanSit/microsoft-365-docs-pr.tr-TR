@@ -23,18 +23,18 @@ search.appverid:
 - MOE150
 ms.assetid: 737e8c86-be63-44d7-bf02-492fa7cd9c3f
 description: Kuruluşunuzdaki kullanıcılara ve gruplara eklenti dağıtmak için Merkezi eklentileri kullanma hakkında bilgi edinin.
-ms.openlocfilehash: ec972cd8ce837ae21384bc3b97513bd1263a7d84
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 96bbdf5d4d9e4f1697fa0b85f902d8d758d356fa
+ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65435445"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65678974"
 ---
 # <a name="manage-add-ins-in-the-microsoft-365-admin-center"></a>Microsoft 365 yönetim merkezi eklentileri yönetme
 
 Office Eklentileri, belgelerinizi kişiselleştirmenize ve web'deki bilgilere erişme yönteminizi kolaylaştırmanıza yardımcı olur. Bkz. [Office Eklentinizi kullanmaya başlama](https://support.microsoft.com/office/82e665c4-6700-4b56-a3f3-ef5441996862). 
 
-Yönetici, bir kuruluştaki kullanıcılar için eklentileri dağıttığı zaman eklentileri kapatabilir veya açabilir, düzenleyebilir, silebilir ve eklentilere erişimi yönetebilir.
+Genel yönetici veya exchange yöneticisi bir kuruluştaki kullanıcılar için eklentileri dağıttığı zaman eklentileri kapatabilir veya açabilir, düzenleyebilir, silebilir ve eklentilere erişimi yönetebilir.
 
 Yönetim merkezinden eklentileri yükleme hakkında daha fazla bilgi için bkz. [Yönetim merkezinde eklentileri dağıtma](./manage-deployment-of-add-ins.md).
   
@@ -146,7 +146,7 @@ Dağıtılmış eklenti, eklenti komutlarını desteklemiyorsa veya dağıtılm�
     
 3. Daha önce dağıtılan eklentiye (bu örnekte **Alıntılar**) çift tıklayın.
 
-    ![Office Eklentileri sayfasının Yönetici Tarafından Yönetilen sekmesi.](../../media/fd36ba81-9882-40f0-9fce-74f991aa97d5.png)
+    ![Office Eklentileri sayfasının Yönetilen sekmesini Yönetici.](../../media/fd36ba81-9882-40f0-9fce-74f991aa97d5.png)
   
 ### <a name="in-outlook"></a>Outlook'ta
 

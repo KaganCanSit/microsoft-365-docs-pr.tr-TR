@@ -1,7 +1,7 @@
 ---
 title: Uç Nokta için Microsoft Defender değerlendirme laboratuvarı
-description: Daha fazla Uç Nokta için Microsoft Defender öğrenin, saldırı benzetimleri çalıştırın ve tehditleri nasıl önlemektedir, algılar ve düzelter.
-keywords: Uç Nokta için Microsoft Defender, değerlendirme, laboratuvar, benzetim, windows 10, windows server 2019, değerlendirme laboratuvarı
+description: Uç Nokta için Microsoft Defender özellikleri hakkında bilgi edinin, saldırı benzetimi çalıştırın ve tehditleri nasıl önlediğine, algılayıp düzelttiğine bakın.
+keywords: Uç Nokta için Microsoft Defender değerlendirme, değerlendirme, laboratuvar, simülasyon, windows 10, windows server 2019, değerlendirme laboratuvarı
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
@@ -16,286 +16,308 @@ ms.collection:
 - m365solution-evalutatemtp
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 2b4c1cd9c37921fbb54633c0fc1bf2e42d308081
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 3d13c3b126f4aae75ff775ac3170049dfc9c0a2e
+ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64472891"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65679450"
 ---
 # <a name="microsoft-defender-for-endpoint-evaluation-lab"></a>Uç Nokta için Microsoft Defender değerlendirme laboratuvarı
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-enablesiem-abovefoldlink)
+> Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-enablesiem-abovefoldlink)
 
-Kapsamlı bir güvenlik ürünü değerlendirmesini yapmak,  end-end saldırı benzetimi yapamadan önce karmaşık bir ortam ve cihaz yapılandırması gerektiren karmaşık bir işlem olabilir. Karmaşıklık düzeyine eklemek, benzetim etkinliklerinin, uyarıların ve sonuçların değerlendirme sırasında yansıtıldıklarını izlemenin en zorluğudur.
+Kapsamlı bir güvenlik ürünü değerlendirmesi yapmak, uçtan uca saldırı simülasyonu yapılabilmesi için önce hantal ortam ve cihaz yapılandırması gerektiren karmaşık bir süreç olabilir. Karmaşıklık düzeyine eklemek, değerlendirme sırasında simülasyon etkinliklerinin, uyarıların ve sonuçların yansıtıldığı yeri izleme zorluğudur.
 
-Uç Nokta için Microsoft Defender değerlendirme laboratuvarı, cihaz ve ortam yapılandırmasının karmaşıklıklarını ortadan kaldıracak şekilde tasarlanmıştır; böylelikle platformun özelliklerini değerlendirmeye, benzetimler çalıştırmaya ve önleme, algılama ve düzeltme özelliklerini iş üzerinde görmeye odaklanabilirsiniz.
+Uç Nokta için Microsoft Defender değerlendirme laboratuvarı, platformun özelliklerini değerlendirmeye, simülasyon çalıştırmaya ve önleme, algılama ve düzeltme özelliklerini çalışırken görmeye odaklanabilmeniz için cihaz ve ortam yapılandırmasının karmaşıklıklarını ortadan kaldıracak şekilde tasarlanmıştır.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4qLUM]
 
-Basitleştirilmiş ayarlama deneyimiyle, kendi test senaryolarınızı ve önceden yapılan benzetimleri çalıştırmaya odaklanarak, Uç Nokta için Defender'ın nasıl performans gösterirken nasıl performans gösterir.
+Basitleştirilmiş kurulum deneyimiyle, Uç Nokta için Defender'ın nasıl performans sergilediğini görmek için kendi test senaryolarınızı ve önceden hazırlanmış simülasyonları çalıştırmaya odaklanabilirsiniz.
 
-Platformun otomatik soruşturmalar, gelişmiş arama ve tehdit analizi gibi güçlü özelliklerine tam erişim sağlar, böylece Uç Nokta için Defender'ın sunduğu kapsamlı koruma yığınını test edin.
+Platformun otomatik araştırma, gelişmiş tehdit analizi ve tehdit analizi gibi güçlü özelliklerine tam erişiminiz olacak ve bu sayede Uç Nokta için Defender'ın sunduğu kapsamlı koruma yığınını test edebilirsiniz.
 
-En son işletim sistemi sürümlerinin ve doğru güvenlik bileşenlerinin yanı sıra Office 2019 Standard'ı yüklemek üzere önceden yapılandırılmış olarak gelen Windows 10, Windows 11, Windows Server 2019, Windows Server 2016 ve Linux (Ubuntu) cihazlarını ebilirsiniz.
+En son işletim sistemi sürümlerinin ve doğru güvenlik bileşenlerinin yanı sıra Office 2019 Standard'ın yüklü olması için önceden yapılandırılmış olarak gelen Windows 10, Windows 11, Windows Server 2019, Windows Server 2016 ve Linux (Ubuntu) cihazları ekleyebilirsiniz.
 
-Ayrıca tehdit tehditlerini de yükleyebilirsiniz. Portaldan çıkmanıza gerek kalmadan Uç Nokta için Defender özelliklerini test etmeye yardımcı olmak için, Uç Nokta için Defender sektör lideri tehdit platformları ile ortak bir şekilde çalışır.
+Tehdit simülatörlerini de yükleyebilirsiniz. Uç Nokta için Defender, portaldan çıkmak zorunda kalmadan Uç Nokta için Defender özelliklerini test etmeye yardımcı olmak için sektör lideri tehdit simülasyonu platformlarıyla iş ortaklığı yaptı.
 
-Tercih ettiğiniz sonuçları yükleyin, değerlendirme laboratuvarı içinde senaryoları çalıştırın ve platformun nasıl performans ortaya çıkarın. Size hiçbir ekstra ücret ödemeden kolayca kullanılabilir. Ayrıca, benzetimler kataloğuna erişip bu benzetimler kataloğundan çalıştırabilirsiniz.
+Tercih ettiğiniz simülatörü yükleyin, değerlendirme laboratuvarında senaryolar çalıştırın ve platformun nasıl performans sergilediğini anında görün. Bunların hepsi sizin için ek ücret ödemeden kolayca kullanılabilir. Ayrıca, simülasyon kataloğundan erişebileceğiniz ve çalıştırabileceğiniz çok çeşitli simülasyonlara da kolayca erişebilirsiniz.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Değerlendirme laboratuvarına erişmek için [lisans gereksinimlerini karşılamanız](minimum-requirements.md#licensing-requirements) veya test Uç Nokta için Microsoft Defender deneme erişiminiz vardır.
+Değerlendirme laboratuvarına erişmek için [lisanslama gereksinimlerini](minimum-requirements.md#licensing-requirements) karşılamanız veya Uç Nokta için Microsoft Defender deneme erişimine sahip olmanız gerekir.
 
-Şunları yapmak için **Güvenlik ayarlarını yönetme izinlerine sahip** olmak gerekir:
+**Güvenlik ayarlarını yönet** izinlerine sahip olmanız gerekir:
 
-- Laboratuvar oluşturma
+- Laboratuvarı oluşturma
 - Cihaz oluşturma
 - Parolayı sıfırlayın
-- Benzetimler oluşturma
+- Benzetimi oluşturma
 
-Rol tabanlı erişim denetimi (RBAC) etkinleştirdiyse ve en az bir makine grubu oluşturduysanız, kullanıcıların Tüm makine gruplarına erişimi olmalıdır.
+Rol tabanlı erişim denetimini (RBAC) etkinleştirdiyseniz ve en az bir makine grubu oluşturduysanız, kullanıcıların Tüm makine gruplarına erişimi olmalıdır.
 
-Daha fazla bilgi için bkz [. Rol oluşturma ve yönetme](user-roles.md).
+Daha fazla bilgi için bkz. [Rolleri oluşturma ve yönetme](user-roles.md).
 
-Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-main-abovefoldlink)
+Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-main-abovefoldlink)
 
-## <a name="get-started-with-the-lab"></a>Kullanmaya başlayın laboratuvarla birlikte gönder
+## <a name="get-started-with-the-lab"></a>Laboratuvarla Kullanmaya başlayın
 
-Menüden laboratuvara erişebilirsiniz. Gezinti menüsünde Değerlendirme ve Değerlendirme laboratuvarı **için > seçin**.
+Laboratuvara menüden erişebilirsiniz. Gezinti menüsünde **Değerlendirme ve öğreticiler > Değerlendirme laboratuvarı'nı** seçin.
 
 > [!NOTE]
 >
-> - Seçtiğiniz ortamın yapısına bağlı olarak, cihazlar etkinleştirme gününden itibaren belirtilen saat sayısı boyunca kullanılabilir.
-> - Her ortam sınırlı bir test cihazı kümesiyle hazır olur. Sağlanan cihazları kullandınız ve sildikten sonra daha fazla cihaz için istekte bulundurabilirsiniz.
-> - Ayda bir laboratuvar kaynakları talep edilebilir.
+> - Seçtiğiniz ortam yapısının türüne bağlı olarak, cihazlar etkinleştirme gününden itibaren belirtilen sayıda saat boyunca kullanılabilir.
+> - Her ortam sınırlı sayıda test cihazıyla sağlanır. Sağlanan cihazları kullanıp sildiğinizde daha fazla cihaz isteyebilirsiniz.
+> - Laboratuvar kaynakları için ayda bir istekte bulunabilirsiniz.
 
-Zaten bir laboratuvarınız var mı? Yeni tehdit tehditlerini etkinleştiren ve etkin cihazlara sahip olduğundan emin olun.
+Zaten bir laboratuvarınız var mı? Yeni tehdit simülatörlerini etkinleştirdiğinizden ve etkin cihazlara sahip olduğundan emin olun.
 
-## <a name="setup-the-evaluation-lab"></a>Değerlendirme laboratuvarının kurulumu
+## <a name="setup-the-evaluation-lab"></a>Değerlendirme laboratuvarını ayarlama
 
-1. Gezinti bölmesinde Değerlendirme ve Değerlendirme & **laboratuvar'ı** \> **ve** ardından Kurulum **laboratuvarı'nı seçin**.
+1. Gezinti bölmesinde **Değerlendirme & öğreticiler** \> **Değerlendirme laboratuvarı'nı** ve ardından **Kurulum laboratuvarı'nı** seçin.
 
    :::image type="content" source="../../media/evaluationtutormenu.png" alt-text="Değerlendirme laboratuvarı karşılama sayfası" lightbox="../../media/evaluationtutormenu.png":::
 
-2. Değerlendirme gereksinimlerinize bağlı olarak, daha uzun bir süre için daha az cihaza veya daha fazla cihaza sahip bir ortamı daha kısa bir süre için ayarlamayı seçebilirsiniz. Tercih ettiğiniz laboratuvar yapılandırmasını ve ardından Sonraki'yi **seçin**.
+2. Değerlendirme gereksinimlerinize bağlı olarak, daha uzun bir süre için daha az veya daha kısa bir süre için daha fazla cihaz içeren bir ortam ayarlamayı seçebilirsiniz. Tercih ettiğiniz laboratuvar yapılandırmasını ve ardından **İleri'yi** seçin.
 
     :::image type="content" source="images/lab-creation-page.png" alt-text="Laboratuvar yapılandırma seçenekleri" lightbox="images/lab-creation-page.png":::
 
-3. (İsteğe bağlı) Laboratuvara tehdit tehditlerini yüklemeyi seçebilirsiniz.
+3. (İsteğe bağlı) Tehdit simülatörlerini laboratuvara yüklemeyi seçebilirsiniz.
 
-    :::image type="content" source="images/install-agent.png" alt-text="Yükleme aracısı sayfası" lightbox="images/install-agent.png":::
+    :::image type="content" source="images/install-agent.png" alt-text="Simülatör aracısını yükleme sayfası" lightbox="images/install-agent.png":::
 
    > [!IMPORTANT]
-   > İlk olarak hüküm ve bilgi paylaşım açıklamalarını kabul etmek ve buna izin sağlamak gerekir.
+   > Öncelikle hüküm ve bilgi paylaşım bildirimlerini kabul etmeniz ve onay vermeniz gerekir.
 
-4. Kullanmak istediğiniz tehdit benzetimi temsilcisini seçin ve ayrıntılarınızı girin. Ayrıca, tehdit tehditlerini daha sonra yüklemek de seçebilirsiniz. Laboratuvar kurulumu sırasında tehdit benzetimi aracılarını yüklemeyi seçerseniz, bunları seçtiğiniz cihazlara rahatça yüklemenin avantajından yararlanabilirsiniz.
+4. Kullanmak istediğiniz tehdit simülasyonu aracısını seçin ve ayrıntılarınızı girin. Tehdit simülatörlerini daha sonra yüklemeyi de seçebilirsiniz. Laboratuvar kurulumu sırasında tehdit simülasyon aracılarını yüklemeyi seçerseniz, eklediğiniz cihazlara kolayca yükleme avantajından yararlanabilirsiniz.
 
    :::image type="content" source="images/lab-setup-summary.png" alt-text="Özet sayfası" lightbox="images/lab-setup-summary.png":::
 
-5. Özeti gözden geçirerek Kurulum **laboratuvarı'nı seçin**.
+5. Özeti gözden geçirin ve **Kurulum laboratuvarı'nı** seçin.
 
-Laboratuvar kurulumu işlemi tamamlandıktan sonra cihazlar ekleyebilir ve benzetimler çalıştırabilirsiniz.
+Laboratuvar kurulum işlemi tamamlandıktan sonra cihaz ekleyebilir ve benzetimi çalıştırabilirsiniz.
 
-## <a name="add-devices"></a>Cihaz ekle
+## <a name="add-devices"></a>Cihaz ekleme
 
-Ortamınıza bir cihaz eklerken, Uç Nokta için Defender bağlantı ayrıntılarına sahip iyi yapılandırılmış bir cihaz ayarlar. Windows 10, Windows 11, Windows Server 2019, Windows Server 2016 ve Linux (Ubuntu) abilirsiniz.
+Ortamınıza bir cihaz eklediğinizde, Uç Nokta için Defender bağlantı ayrıntılarıyla iyi yapılandırılmış bir cihaz ayarlar. Windows 10, Windows 11, Windows Server 2019, Windows Server 2016 ve Linux (Ubuntu) ekleyebilirsiniz.
 
-Cihaz, işletim sistemi ve Office 2019 Standard'ın yanı sıra Java, Python ve SysIntenals gibi diğer uygulamaların en güncel sürümüyle yapılandırılır.
+Cihaz, java, Python ve SysIntenals gibi diğer uygulamaların yanı sıra işletim sisteminin ve Office 2019 Standard'ın en güncel sürümüyle yapılandırılır.
 
-Laboratuvar kurulumu sırasında tehdit tehditlerini eklemeyi seçtiysiniz, tüm cihazlara tehdit aracısı, eklemiş olduğunuz cihazlara yüklenir.
+Laboratuvar kurulumu sırasında bir tehdit simülatörü eklemeyi seçerseniz, eklediğiniz cihazlarda tüm cihazlarda tehdit simülatörü aracısı yüklü olur.
 
-Cihaz, sizin tarafınıza hiçbir çaba gerek Windows önerilen güvenlik bileşenlerinin açık ve denetim modunda olduğu kiracınıza otomatik olarak eklenir.
+Cihaz, önerilen Windows güvenlik bileşenleri açık ve denetim modunda olacak şekilde kiracınıza otomatik olarak eklenir ve sizin tarafınızda hiçbir çaba olmaz.
 
 Aşağıdaki güvenlik bileşenleri test cihazlarında önceden yapılandırılmıştır:
 
 - [Saldırı yüzeyini azaltma](attack-surface-reduction.md)
 - [İlk görüşte engelle](configure-block-at-first-sight-microsoft-defender-antivirus.md)
 - [Denetimli klasör erişimi](controlled-folders.md)
-- [Exploit protection](enable-exploit-protection.md)
+- [Exploit Protection](enable-exploit-protection.md)
 - [Ağ koruması](network-protection.md)
-- [İstenmeyen olabilecek uygulama algılama](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md)
-- [Bulut teslimi koruma](cloud-protection-microsoft-defender-antivirus.md)
+- [İstenmeyebilecek uygulama algılama](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md)
+- [Bulut tabanlı koruma](cloud-protection-microsoft-defender-antivirus.md)
 - [Microsoft Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview)
 
 > [!NOTE]
-> Microsoft Defender Virüsten Koruma açık olur (denetim modunda değil). Bu Microsoft Defender Virüsten Koruma benzetiminizi çalıştırmanızı engellerse, benzetim yoluyla cihazda gerçek zamanlı korumayı Windows Güvenliği. Daha fazla bilgi için bkz [. Her zaman açık korumayı yapılandırma](configure-real-time-protection-microsoft-defender-antivirus.md).
+> Microsoft Defender Virüsten Koruma açık (denetim modunda değil). Microsoft Defender Virüsten Koruma simülasyonunuzu çalıştırmanızı engelliyorsa, Windows Güvenliği aracılığıyla cihazda gerçek zamanlı korumayı kapatabilirsiniz. Daha fazla bilgi için bkz. [Her zaman açık korumayı yapılandırma](configure-real-time-protection-microsoft-defender-antivirus.md).
 
-Otomatik araştırma ayarları kiracı ayarlarına bağımlıdır. Varsayılan olarak yarı otomatik olarak yapılandırıldı. Daha fazla bilgi için bkz [. Otomatik soruşturmalara genel bakış](automated-investigations.md).
+Otomatik araştırma ayarları kiracı ayarlarına bağımlı olacaktır. Varsayılan olarak yarı otomatik olacak şekilde yapılandırılır. Daha fazla bilgi için bkz. [Otomatik araştırmalara genel bakış](automated-investigations.md).
 
 > [!NOTE]
-> Test cihazlarıyla bağlantı RDP kullanılarak yapılır. Güvenlik duvarı ayarlarınızın RDP bağlantılarına izin olduğundan emin olun.
+> Test cihazlarına bağlantı RDP kullanılarak yapılır. Güvenlik duvarı ayarlarınızın RDP bağlantılarına izin verin.
 
-1. Panodan Cihaz **ekle'yi seçin**.
+1. Panodan **Cihaz ekle'yi** seçin.
 
-2. Eklemek istediğiniz cihaz türünü seçin. Windows 10, Windows 11 Server 2019, Windows, Windows Server 2016 ve Linux (Ubuntu) ile 3.5.
+2. Eklenecek cihaz türünü seçin. Windows 10, Windows 11, Windows Server 2019, Windows Server 2016 ve Linux (Ubuntu) eklemeyi seçebilirsiniz.
 
    :::image type="content" source="../../media/add-machine-optionsnew.png" alt-text="Cihaz seçenekleriyle laboratuvar kurulumu" lightbox="../../media/add-machine-optionsnew.png":::
 
    > [!NOTE]
-   > Cihaz oluşturma işlemiyle ilgili bir sorun olursa bu size bildirilecek ve yeni bir istek göndermeniz gerekir. Cihaz oluşturma başarısız olursa, izin verilen genel kotada sayılmaz.
+   > Cihaz oluşturma işleminde bir sorun olursa size bildirilir ve yeni bir istek göndermeniz gerekir. Cihaz oluşturma işlemi başarısız olursa, izin verilen genel kotaya göre sayılmaz.
 
-3. Bağlantı ayrıntıları görüntülenir. Cihazın **parolasını** kaydetmek için Kopyala'ya tıklayın.
+3. Bağlantı ayrıntıları görüntülenir. Cihazın parolasını kaydetmek için **Kopyala'yı** seçin.
 
    > [!NOTE]
-   > Parola yalnızca bir kez görüntülenir. Daha sonra kullanmak üzere kaydetmeyi deneyin.
+   > Parola yalnızca bir kez görüntülenir. Daha sonra kullanmak üzere kaydettiğinizden emin olun.
 
     :::image type="content" source="../../media/add-machine-eval-lab-new.png" alt-text="Bağlantı ayrıntılarıyla eklenen cihaz" lightbox="../../media/add-machine-eval-lab-new.png":::
 
-4. Cihaz ayarlama başlar. Bu yaklaşık 30 dakika kadar sürebilir.
+4. Cihaz kurulumu başlar. Bu işlem yaklaşık 30 dakika sürebilir.
 
-5. Cihazlar sekmesini seçerek test cihazlarının durumunu, risk ve pozlama düzeylerini ve kurulumların **durumunu** görebilirsiniz.
+5. **Cihazlar** sekmesini seçerek test cihazlarının durumunu, risk ve maruz kalma düzeylerini ve simülatör yüklemelerinin durumunu görün.
 
    :::image type="content" source="images/machines-tab.png" alt-text="Cihazlar sekmesi" lightbox="images/machines-tab.png":::
     
 
    > [!TIP]
-   > SütunDaki **Bilgi durumu** sütununda bilgi simgesinin üzerine gelerek bir aracının yükleme durumunu öğrenebilirsiniz.
+   > **Simülatör durumu** sütununda, aracının yükleme durumunu öğrenmek için bilgi simgesinin üzerine gelebilirsiniz.
 
 
-## <a name="request-for-more-devices"></a>Daha fazla cihaz için istekte olun
+## <a name="add-a-domain-controller-preview"></a>Etki alanı denetleyicisi ekleme (Önizleme)
 
-Mevcut tüm cihazlar kullanılıyor ve silindiğinde daha fazla cihaz için istekte bulundurabilirsiniz. Ayda bir laboratuvar kaynakları talep edilebilir.
+> [!IMPORTANT]
+> Bazı bilgiler, ticari olarak piyasaya sürülmeden önce önemli ölçüde değiştirilebilen önceden yayımlanmış ürünle ilgilidir. Microsoft, burada sağlanan bilgilerle ilgili olarak açık veya zımni hiçbir garanti vermez.
 
-1. Değerlendirme laboratuvarı panosundan Daha fazla cihaz **için istekte bulun'ı seçin**.
+Birden çok cihazda yanal hareket ve çok aşamalı saldırılar gibi karmaşık senaryoları çalıştırmak için bir etki alanı denetleyicisi ekleyin.
+
+
+>[!NOTE]
+>Etki alanı desteği yalnızca Microsoft 365 Defender portalında (security.microsoft.com) kullanılabilir.
+
+1. Panodan **Cihaz ekle'yi** seçin.
+
+2. **Windows Server 2019'ı** ve ardından **Etki alanı denetleyicisi olarak ayarla'yı** seçin. 
+
+3. Etki alanı denetleyiciniz sağlandığında, **Cihaz ekle'ye** tıklayarak etki alanına katılmış cihazlar oluşturabilirsiniz. Ardından Windows 10 / Windows 11'ı ve **ardından Etki alanına katıl'ı** seçin. 
+
+>[!NOTE]
+>Aynı anda yalnızca bir etki alanı denetleyicisi canlı olabilir. Etki alanı denetleyicisi cihazına bağlı canlı bir cihaz olduğu sürece canlı kalır.
+
+
+
+## <a name="request-for-more-devices"></a>Daha fazla cihaz isteme
+
+Tüm mevcut cihazlar kullanıldığında ve silindiğinde, daha fazla cihaz isteyebilirsiniz. Laboratuvar kaynakları için ayda bir istekte bulunabilirsiniz.
+
+1. Değerlendirme laboratuvarı panosundan **Daha fazla cihaz iste'yi** seçin.
 
    :::image type="content" source="images/request-more-devices.png" alt-text="Daha fazla cihaz isteği seçeneği" lightbox="images/request-more-devices.png":::
 
 2. Yapılandırmanızı seçin.
 3. İsteği gönderin.
 
-İstek başarıyla gönderildikten sonra yeşil bir onay başlığı ve son gönderimin tarihini alacaksınız.
+İstek başarıyla gönderildiğinde yeşil bir onay başlığı ve son gönderim tarihini görürsünüz.
 
-İsteğinizin durumunu, birkaç **saat içinde** onaylanabilecek Kullanıcı Eylemleri sekmesinde bulabilirsiniz.
+İsteğinizin durumunu, birkaç saat içinde onaylanacak olan **Kullanıcı Eylemleri** sekmesinde bulabilirsiniz.
 
-Onaylandıktan sonra, istenen cihazlar laboratuvara eklenecek ve daha fazla cihaz oluşturabilirsiniz.
+Onaylandığında, istenen cihazlar laboratuvar kurulumunuza eklenir ve daha fazla cihaz oluşturabilirsiniz.
 
 > [!TIP]
-> Laboratuvardan daha iyi şekilde emin olmak için benzetimler kitaplığımıza göz atabilirsiniz.
+> Laboratuvarınızdan daha fazla yararlanmak için simülasyon kitaplığımızı gözden geçirin.
 
-## <a name="simulate-attack-scenarios"></a>Saldırı senaryolarını benzetin
+## <a name="simulate-attack-scenarios"></a>Saldırı senaryolarının benzetimini yapmak
 
-Bağlantı üzerinden kendi saldırı benzetimlerinizi çalıştırmak için test cihazlarını kullanın.
+Kendi saldırı simülasyonlarınızı çalıştırmak için test cihazlarını kullanarak bunlara bağlanın.
 
-Saldırı senaryolarını benzetmek için şunları kullanılabilir:
+Saldırı senaryolarının benzetimini şu şekilde yapabilirsiniz:
 
-- ["Do It Yourself" saldırı senaryoları](https://security.microsoft.com/tutorials/all)
-- Tehdit tehdit
+- ["Kendiniz Yapın" saldırı senaryoları](https://security.microsoft.com/tutorials/all)
+- Tehdit simülatörleri
 
-Yeni ortaya çıkan tehditlerle [ilgili raporları görüntülemek](advanced-hunting-overview.md) için [Gelişmiş arama'ya](threat-analytics.md) , verileri sorgulamak ve Tehdit Analizi'ne de sahip olmak için kullanabilirsiniz.
+Ayrıca, yeni ortaya çıkan tehditlerle ilgili raporları görüntülemek üzere verileri ve [Tehdit analizini](threat-analytics.md) sorgulamak için [Gelişmiş avcılık](advanced-hunting-overview.md) özelliğini de kullanabilirsiniz.
 
-### <a name="do-it-yourself-attack-scenarios"></a>Do-it-yourself saldırı senaryoları
+### <a name="do-it-yourself-attack-scenarios"></a>Kendi kendine saldırı senaryoları
 
-Önceden yapılmış bir benzetim arıyorsanız " [Do It Yourself" saldırı senaryolarımızı kullanabilirsiniz](https://security.microsoft.com/tutorials/all). Bu betikler güvenli, belgelenmiş ve kullanımı kolaydır. Bu senaryolar, Uç Nokta için Defender özelliklerini yansıtacak ve araştırma deneyimi boyunca size yol sunar.
+Önceden hazırlanmış bir simülasyon arıyorsanız ["Kendiniz Yapın" saldırı senaryolarımızı](https://security.microsoft.com/tutorials/all) kullanabilirsiniz. Bu betikler güvenlidir, belgelenir ve kullanımı kolaydır. Bu senaryolar Uç Nokta için Defender özelliklerini yansıtır ve araştırma deneyiminde size yol gösterir.
 
 > [!NOTE]
-> Test cihazlarıyla bağlantı RDP kullanılarak yapılır. Güvenlik duvarı ayarlarınızın RDP bağlantılarına izin olduğundan emin olun.
+> Test cihazlarına bağlantı RDP kullanılarak yapılır. Güvenlik duvarı ayarlarınızın RDP bağlantılarına izin verin.
 
-1. Bağlan seçin ve saldırı benzetimini çalıştırarak cihazınıza **Bağlan**.
+1. cihazınıza Bağlan ve **Bağlan'ı** seçerek bir saldırı simülasyonu çalıştırın.
 
-    :::image type="content" source="images/test-machine-table.png" alt-text="Test Bağlan için Mobil Cihaz düğmesi" lightbox="images/test-machine-table.png":::
+    :::image type="content" source="images/test-machine-table.png" alt-text="Test cihazları için Bağlan düğmesi" lightbox="images/test-machine-table.png":::
 
 
    :::image type="content" source="images/remote-connection.png" alt-text="Uzak masaüstü bağlantısı ekranı" lightbox="images/remote-connection.png":::
 
-    **Linux cihazları** için: Yerel bir SSH istemcisi ve sağlanan komutu kullan gerekir. 
+    **Linux cihazları** için: Yerel bir SSH istemcisi ve sağlanan komutu kullanmanız gerekir. 
 
 
     > [!NOTE]
-    > İlk kurulum sırasında kayıtlı parolanın kopyası yoksa, menüden Parolayı sıfırla'yı seçerek **parolayı** sıfırlayabilirsiniz:
+    > İlk kurulum sırasında parolanın bir kopyası kaydedilmediyse, menüden **Parolayı sıfırla'yı seçerek parolayı** sıfırlayabilirsiniz:
     >
     > :::image type="content" source="images/reset-password-test-machine.png" alt-text="Parolayı sıfırla seçeneği" lightbox="images/reset-password-test-machine.png":::
     >
-    > Cihaz, durumunu "Parola sıfırlamayı yürütünecek" olarak değiştirir ve birkaç dakika içinde yeni parolanız da size sunulacaktır.
+    > Cihaz durumunu "Parola sıfırlama yürütülüyor" olarak değiştirir, ardından size birkaç dakika içinde yeni parolanız sunulur.
 
 3. Cihaz oluşturma adımı sırasında görüntülenen parolayı girin.
 
-   :::image type="content" source="images/enter-password.png" alt-text="Kimlik bilgilerini girmek için ekranınız" lightbox="images/enter-password.png":::
+   :::image type="content" source="images/enter-password.png" alt-text="Kimlik bilgilerini girdiğiniz ekran" lightbox="images/enter-password.png":::
 
-4. Cihazda Do-it-yourself saldırı benzetimlerini çalıştırın.
+4. Cihazda Kendin yap saldırı simülasyonlarını çalıştırın.
 
-### <a name="threat-simulator-scenarios"></a>Tehdit senaryoları
+### <a name="threat-simulator-scenarios"></a>Tehdit simülatörü senaryoları
 
-Laboratuvar kurulumu sırasında desteklenen tehdit tehditlerinin herhangi birini yüklemenize izin verirse, yerleşik benzetimleri değerlendirme laboratuvar cihazları üzerinde çalıştırabilirsiniz.
+Laboratuvar kurulumu sırasında desteklenen tehdit simülatörlerinden herhangi birini yüklemeyi seçtiyseniz, yerleşik simülasyonları değerlendirme laboratuvarı cihazlarında çalıştırabilirsiniz.
 
-Üçüncü taraf platformları kullanarak tehdit benzetimleri yapmak, laboratuvar ortamıyla sınırlı Uç Nokta için Microsoft Defender özellikleri değerlendirmenin iyi bir yoludur.
+Üçüncü taraf platformlarını kullanarak tehdit simülasyonları çalıştırmak, laboratuvar ortamının sınırları içinde Uç Nokta için Microsoft Defender özellikleri değerlendirmek için iyi bir yoldur.
 
 > [!NOTE]
 >
-> Benzetimler çalıştırmadan önce aşağıdaki gereksinimlerin karşı olduğundan emin olun:
+> Simülasyonları çalıştırabilmeniz için önce aşağıdaki gereksinimlerin karşılandığından emin olun:
 >
-> - Cihazlar değerlendirme laboratuvarına eklenmiştir
-> - Tehdit laboratuvara yüklenmeleri gerekiyor
+> - Cihazların değerlendirme laboratuvarına eklenmesi gerekir
+> - Tehdit simülatörleri değerlendirme laboratuvarına yüklenmelidir
 
-1. Portaldan Benzetim **oluştur'a seçin**.
+1. Portaldan **Simülasyon oluştur'u** seçin.
 
-2. Bir tehdit tehditi seçin.
+2. Bir tehdit simülatörü seçin.
 
-   :::image type="content" source="images/select-simulator.png" alt-text="Tehdit seçimi" lightbox="images/select-simulator.png":::
+   :::image type="content" source="images/select-simulator.png" alt-text="Tehdit simülatörü seçimi" lightbox="images/select-simulator.png":::
 
-3. Kullanılabilir benzetimlere göz atmak için bir benzetim seçin veya benzetim galerisine bakın.
+3. Bir simülasyon seçin veya kullanılabilir simülasyonlara göz atmak için simülasyon galerisine bakın.
 
-    Benzetim galerisine şu ifadelerden edinebilirsiniz:
-    - Benzetimler genel bakış **kutucuğunun veya**
-    - Gezinti bölmesinden Değerlendirme ve öğreticiler **Benzetim** \> uygulama ve öğreticilerde **gezinerek** & benzetimler **kataloğu'na tıklayın**.
+    Simülasyon galerisine buradan ulaşabilirsiniz:
+    - **Simülasyonlara genel bakış** kutucuğundaki ana değerlendirme panosu veya
+    - Gezinti bölmesinden **Değerlendirme ve öğretici simülasyonu** \> **& öğreticiler'e** giderek **Simülasyonlar kataloğu'nu** seçin.
 
-4. Benzetimi üzerinde çalıştırmak istediğiniz cihazları seçin.
+4. Simülasyonu çalıştırmak istediğiniz cihazları seçin.
 
-5. Benzetim **oluştur'ı seçin**.
+5. **Simülasyon oluştur'u** seçin.
 
-6. Benzetimler sekmesini seçerek bir benzetimin **ilerlemesini** görüntüleyin. Benzetim durumunu, etkin uyarıları ve diğer ayrıntıları görüntüleme.
+6. **Simülasyonlar** sekmesini seçerek simülasyonun ilerleme durumunu görüntüleyin. Simülasyon durumunu, etkin uyarıları ve diğer ayrıntıları görüntüleyin.
 
-   :::image type="content" source="images/simulations-tab.png" alt-text="Benzetimler sekmesi" lightbox="images/simulations-tab.png":::
+   :::image type="content" source="images/simulations-tab.png" alt-text="Simülasyonlar sekmesi" lightbox="images/simulations-tab.png":::
 
-Benzetimlerinizi çalıştırdikten sonra, laboratuvar ilerleme çubuğunda ilerlemenizi ve otomatik bir Uç Nokta için Microsoft Defender düzeltmeyi tetikleyen laboratuvar ilerleme **çubuğunu incelemenizi teşvikiyoruz**. Bu özellikle toplanan ve analiz edilen kanıtlara göz atabilirsiniz.
+Simülasyonlarınızı çalıştırdıktan sonra laboratuvar ilerleme çubuğunu incelemenizi ve **otomatik araştırmayı ve düzeltmeyi tetikleyen Uç Nokta için Microsoft Defender** keşfetmenizi öneririz. Özellik tarafından toplanan ve analiz edilen kanıtlara göz atın.
 
-Zengin sorgu dili ve ham telemetri kullanarak gelişmiş arama yoluyla saldırı kanıtı için avına devam edin ve Tehdit çözümlemelerinde belgelenmiş dünya çapında tehditlere göz atabilirsiniz.
+Zengin sorgu dilini ve ham telemetriyi kullanarak gelişmiş avcılık yoluyla saldırı kanıtı arayın ve Tehdit analizinde belgelenen dünya çapındaki bazı tehditlere göz atın.
 
-## <a name="simulation-gallery"></a>Benzetim galerisi
+## <a name="simulation-gallery"></a>Simülasyon galerisi
 
-Uç Nokta için Microsoft Defender portalda platformun özelliklerini test etmek için size kullanışlı erişim vermek üzere çeşitli tehdit benzetim platformları ile ortak çalışmalar yaptı.
+Uç Nokta için Microsoft Defender, platformun özelliklerini doğrudan portaldan test etmek için size kolay erişim sağlamak için çeşitli tehdit simülasyonu platformlarıyla işbirliği yaptı.
 
-Menüden Benzetimler ve öğreticiler  **Benzetimler kataloğu'ne** \> gidip kullanılabilir **tüm benzetimleri**  izleyin.
+Menüden **Simülasyonlar ve öğreticiler Simülasyonlar** kataloğu'na giderek tüm kullanılabilir **simülasyonları** \> görüntüleyin.
 
-Desteklenen üçüncü taraf tehdit benzetimi aracılarının listesi listelenir ve katalogda ayrıntılı açıklamaların yanı sıra belirli benzetim türleri sağlanır.
+Desteklenen üçüncü taraf tehdit simülasyonu aracılarının listesi listelenir ve katalogda ayrıntılı açıklamalarla birlikte belirli simülasyon türleri sağlanır.
 
-Herhangi bir benzetimi katalogdan kolayca çalıştırabilirsiniz.
+Kullanılabilir simülasyonları doğrudan katalogdan kolayca çalıştırabilirsiniz.
 
-:::image type="content" source="images/simulations-catalog.png" alt-text="Benzetimler kataloğu" lightbox="images/simulations-catalog.png":::
+:::image type="content" source="images/simulations-catalog.png" alt-text="Simülasyon kataloğu" lightbox="images/simulations-catalog.png":::
 
-Her benzetim, saldırı senaryosuyla ilgili ayrıntılı bir açıklamaya ve kullanılan MITRE saldırı teknikleri ve çalıştırdınız Gelişmiş av sorgularına örnek başvurular gibi başvurularla birlikte gelir.
+Her simülasyonda saldırı senaryosunun ayrıntılı bir açıklaması ve kullanılan MITRE saldırı teknikleri ve çalıştırdığınız örnek Gelişmiş tehdit avcılığı sorguları gibi başvurular bulunur.
 
 **Örnekler:**
 
-:::image type="content" source="images/simulation-details-aiq.png" alt-text="Kalıcılık yöntemleri için benzetim açıklaması ayrıntılar bölmesi örneği" lightbox="images/simulation-details-aiq.png":::
+:::image type="content" source="images/simulation-details-aiq.png" alt-text="Kalıcılık yöntemleri için simülasyon açıklaması ayrıntıları bölmesi örneği" lightbox="images/simulation-details-aiq.png":::
 
-:::image type="content" source="images/simulation-details-sb.png" alt-text="APT29 için benzetim açıklaması ayrıntıları" lightbox="images/simulation-details-sb.png":::
+:::image type="content" source="images/simulation-details-sb.png" alt-text="APT29 için simülasyon açıklaması ayrıntıları" lightbox="images/simulation-details-sb.png":::
 
 ## <a name="evaluation-report"></a>Değerlendirme raporu
 
-Laboratuvar raporları, cihazlar üzerinde yapılan benzetimlerin sonuçlarını özetler.
+Laboratuvar raporları, cihazlarda gerçekleştirilen simülasyonların sonuçlarını özetler.
 
 :::image type="content" source="images/eval-report.png" alt-text="Değerlendirme raporu" lightbox="images/eval-report.png":::
 
-Bir bakışta şunları hızla görebilirsiniz:
+Bir bakışta şunları hızlıca görebilirsiniz:
 
 - Tetiklenen olaylar
 - Oluşturulan uyarılar
-- Pozlama düzeyinde değerlendirmeler
-- Tehdit kategorileri gözlendi
+- Maruz kalma düzeyine ilişkin değerlendirmeler
+- Gözlenen tehdit kategorileri
 - Algılama kaynakları
-- Otomatik soruşturmalar
+- Otomatik araştırma
 
 ## <a name="provide-feedback"></a>Geri bildirim gönderin
 
-Geri bildiriminiz, ortamınızı gelişmiş saldırılardan koruma konusunda daha iyi bir yer alsak da bize yardımcı olur. Ürün özellikleri ve değerlendirme sonuçlarından deneyimlerinizi ve yeteneğinizi paylaşın.
+Geri bildiriminiz, ortamınızı gelişmiş saldırılara karşı koruma konusunda daha iyi olmamıza yardımcı olur. Ürün özelliklerinden ve değerlendirme sonuçlarından deneyiminizi ve gösterimlerinizi paylaşın.
 
-Geri bildirim sağla'ya seçerek görüşlerinizi **bize bildirin**.
+**Geri bildirim sağla'yı** seçerek düşüncelerinizi bize bildirin.
 
 :::image type="content" source="images/send-us-feedback-eval-lab.png" alt-text="Geri bildirim sayfası" lightbox="images/send-us-feedback-eval-lab.png":::

@@ -17,12 +17,12 @@ metadata:
   - M365-Lighthouse
   search.appverid: MET150
   description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için Microsoft 365 Lighthouse hakkında sık sorulan soruların (SSS) yanıtlarını alın.
-  ms.openlocfilehash: 2421b344698902fa421ba97195bd00efde4e72f7
-  ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+  ms.openlocfilehash: 8afa3364c7b646110dcd4d6cf2b8786c1840eb76
+  ms.sourcegitcommit: 852075d8d8a4ca052f69e854396d1565ef713500
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/03/2022
-  ms.locfileid: "65173052"
+  ms.lasthandoff: 05/26/2022
+  ms.locfileid: "65692815"
 title: Microsoft 365 Lighthouse sık sorulan sorular (SSS)
 summary: >
   Bu makale, Microsoft 365 Lighthouse hakkında sık sorulan soruların (SSS) yanıtlarını içerir.
@@ -40,7 +40,7 @@ sections:
       Microsoft 365 Lighthouse, Azure hizmetleri yerine Microsoft 365 hizmetlerine odaklanır. Azure Lighthouse, Azure portal yerleşik olarak bulunur ve BT iş ortaklarının Azure için birden çok kiracıyı yönetmesine olanak tanırken, Microsoft 365 Lighthouse MSP'lerin birden çok Microsoft 365 müşteri kiracısını yönetmesine yardımcı olan tek başına bir portaldır. Microsoft 365 Lighthouse hakkında daha fazla bilgi için bkz. [Microsoft 365 Lighthouse genel bakış](m365-lighthouse-overview.md). Azure Lighthouse hakkında daha fazla bilgi için bkz. [Azure Lighthouse nedir?](/azure/lighthouse/overview)
   - question: Microsoft 365 Lighthouse maliyeti ne kadardır?
     answer: >
-      Microsoft 365 İş Ekstra, Microsoft 365 E3 veya Windows 365 Business hizmetleri ve bağlı cihazları yönetmek için Lighthouse kullanımıyla ilgili ek maliyet yoktur. Lighthouse, küçük ve orta ölçekli işletmelere hizmet veren ve müşterileri ile Bulut Çözümü Sağlayıcısı (CSP) ilişkisi olan MSP'ler tarafından kullanılabilir. Dolaylı sağlayıcıların şu anda Lighthouse tarafından desteklenmediğini unutmayın. Daha fazla bilgi için bkz[. Microsoft 365 Lighthouse gereksinimleri](m365-lighthouse-requirements.md).
+      Lighthouse'un birden çok Microsoft 365 müşteri kiracısını yönetmek için kullanılmasıyla ilgili ek maliyet yoktur. Lighthouse, küçük ve orta ölçekli işletmelere hizmet veren ve müşterileri ile Bulut Çözümü Sağlayıcısı (CSP) ilişkisi olan MSP'ler tarafından kullanılabilir. Dolaylı sağlayıcıların şu anda Lighthouse tarafından desteklenmediğini unutmayın. Daha fazla bilgi için bkz[. Microsoft 365 Lighthouse gereksinimleri](m365-lighthouse-requirements.md).
   - question: Microsoft 365 Lighthouse kullanma gereksinimleri nelerdir?
     answer: >
       Geçerli gereksinimlerin listesi için bkz[. Microsoft 365 Lighthouse gereksinimleri](m365-lighthouse-requirements.md).
@@ -57,7 +57,7 @@ sections:
     answer: >
       Müşteri kiracı verilerinin Lighthouse içinde yüklenmesi 48 saate kadar sürebilir. Ekleme işlemini tamamladığınızdan bu yana 48 saatten fazla zaman geçtiyse lütfen yardım için Destek ekibimize ulaşın. Ekleme işlemini tamamladığınızda onlara bildirmeniz ve ilgili ekran görüntülerini ve günlükleri sağlamanız gerekir. Daha fazla bilgi için bkz. [Microsoft 365 Lighthouse için yardım ve destek alma](m365-lighthouse-get-help-and-support.md).
   - question: Neden bazı müşteri kiracıları için veri görüyorum ama diğerleri için göremiyorum?
-    answer: "Müşteri kiracı verilerinin Lighthouse'da gösterilmesi için MSP'lerin müşteri kiracısını yönetmek için temsilci erişimi oluşturması gerekir. Müşterileri Lighthouse'a eklemek için Temsilci Yönetici Ayrıcalıkları (DAP) gerekir. Daha güvenli temsilci erişimi sağlamak için müşterilerinizle Ayrıntılı Yönetici Ayrıcalıkları (GDAP) oluşturmanızı öneririz. [Lighthouse'un](m365-lighthouse-overview-of-permissions.md) kullanılması için temsilci ve iş ortağı kiracı rollerinin önerildiği ek ayrıntılar için bkz. Microsoft 365 Lighthouse izinlere genel bakış. DAP ve GDAP birlikte bulunurken, her iki modelin de bulunduğu müşteriler için GDAP öncelikli olacaktır. Yakında yalnızca GDAP (ve DAP olmayan) müşteriler Lighthouse'a eklenecek. Temsilci erişimi hakkında daha fazla bilgi için bkz. [İş Ortağı Merkezi'nde müşteriyle kurumsal bayi ilişkisi isteme](/partner-center/request-a-relationship-with-a-customer). Kiracılar ayrıca en az bir Microsoft 365 İş Ekstra, Microsoft 365 E3, Windows 365 Business veya İş için Microsoft Defender lisansına ve kiracılarında en fazla 1000 lisanslı kullanıcıya sahip olmalıdır. Daha fazla bilgi için bkz[. Microsoft 365 Lighthouse gereksinimleri](m365-lighthouse-requirements.md) ve [Microsoft 365 Lighthouse'deki Kiracılar sayfasına genel bakış](m365-lighthouse-tenants-page-overview.md).  \n"
+    answer: "Müşteri kiracı verilerinin Lighthouse'da gösterilmesi için MSP'lerin müşteri kiracısını yönetmek için temsilci erişimi oluşturması gerekir. Müşterileri Lighthouse'a eklemek için temsilci Yönetici Ayrıcalıkları (DAP) gerekir. Daha güvenli temsilci erişimi sağlamak için müşterilerinizle Ayrıntılı Temsilcili Yönetici Ayrıcalıkları (GDAP) oluşturmanızı öneririz. [Lighthouse'un](m365-lighthouse-overview-of-permissions.md) kullanılması için temsilci ve iş ortağı kiracı rollerinin önerildiği ek ayrıntılar için bkz. Microsoft 365 Lighthouse izinlere genel bakış. DAP ve GDAP birlikte bulunurken, her iki modelin de bulunduğu müşteriler için GDAP öncelikli olacaktır. Yakında yalnızca GDAP (ve DAP olmayan) müşteriler Lighthouse'a eklenecek. Temsilci erişimi hakkında daha fazla bilgi için bkz. [İş Ortağı Merkezi'nde müşteriyle kurumsal bayi ilişkisi isteme](/partner-center/request-a-relationship-with-a-customer). Kiracılar ayrıca en az bir Microsoft 365 İş Ekstra, Microsoft 365 E3, Microsoft 365 E5, Windows 365 Business veya İş için Microsoft Defender olmalıdır  ve kiracılarında en fazla 1000 lisanslı kullanıcı. Daha fazla bilgi için bkz[. Microsoft 365 Lighthouse gereksinimleri](m365-lighthouse-requirements.md) ve [Microsoft 365 Lighthouse'deki Kiracılar sayfasına genel bakış](m365-lighthouse-tenants-page-overview.md).  \n"
   - question: Microsoft 365 Lighthouse'da belirli kiracıları görmek istemezsem ne olur?
     answer: >
       Lighthouse'da belirli kiracıları ve bunların verilerini görmek istemiyorsanız, bu kiracıları devre dışı bırakabilirsiniz. Kiracıyı devre dışı bırakmak için şu adımları izleyin:
@@ -72,9 +72,9 @@ sections:
           > Bir kiracıyı devre dışı bırakdıktan sonra, devre dışı bırakma işlemi tamamlanana kadar kiracı üzerinde işlem yapamazsınız. Devre dışı bırakmanın tamamlanması 48 saat kadar sürebilir.
 
       Kiracılar hakkında daha fazla bilgi edinmek için bkz. [Microsoft 365 Lighthouse kiracılar sayfasına genel bakış](m365-lighthouse-tenants-page-overview.md).
-  - question: Müşteri kiracılarımın Microsoft 365 İş Ekstra, Microsoft 365 E3 veya Windows 365 Business dışında başka abonelikleri varsa Microsoft 365 Lighthouse çalışacak mı?
+  - question: Müşteri kiracılarımın Microsoft 365 İş Ekstra, Microsoft 365 E3, Microsoft 365 E5 Windows 365 Business dışında başka abonelikleri varsa Microsoft 365 Lighthouse çalışır veya İş için Microsoft Defender?
     answer: >
-      Lighthouse, en az bir Microsoft 365 İş Ekstra, Microsoft 365 E3, Windows 365 Business veya İş için Microsoft Defender lisansı olan müşteri kiracılarını yönetmenize yardımcı olur. Lighthouse özellikleri, kullanıcıya atanan lisanslara göre değişiklik gösterir. Örneğin, bir kullanıcının Intune içeren bir lisansı eksikse, o kullanıcının cihazları, cihaz uyumluluk durumu ve tehdit durumu kullanılamaz ve bir kullanıcının P1 Azure AD içeren bir lisansı eksikse, kullanıcının parolası ve oturum açma yönetimi kullanılamaz. Daha fazla bilgi için bkz[. Microsoft 365 Lighthouse gereksinimleri](m365-lighthouse-requirements.md).
+      Lighthouse, en az bir Microsoft 365 İş Ekstra, Microsoft 365 E3, Microsoft 365 E5, Windows 365 Business veya İş için Microsoft Defender lisansı. Lighthouse özellikleri, kullanıcıya atanan lisanslara göre değişiklik gösterir. Örneğin, bir kullanıcının Intune içeren bir lisansı eksikse, o kullanıcının cihazları, cihaz uyumluluk durumu ve tehdit durumu kullanılamaz ve bir kullanıcının P1 Azure AD içeren bir lisansı eksikse, kullanıcının parolası ve oturum açma yönetimi kullanılamaz. Daha fazla bilgi için bkz[. Microsoft 365 Lighthouse gereksinimleri](m365-lighthouse-requirements.md).
   - question: Nasıl yaparım? Microsoft 365 Lighthouse'da müşteri Bulut bilgisayarlarını yönetmeye uygun mu?
     answer: >
       Lighthouse'un kullanım gereksinimlerini karşılıyorsanız, Lighthouse'da müşteri Bulut Bilgisayarlarını yönetmeye uygunsunuz demektir. Geçerli gereksinimlerin listesi için bkz[. Microsoft 365 Lighthouse gereksinimleri](m365-lighthouse-requirements.md).

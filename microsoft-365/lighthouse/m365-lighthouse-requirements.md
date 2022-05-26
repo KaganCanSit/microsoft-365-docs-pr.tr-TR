@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Yönetilen Hizmet Sağlayıcıları (MSP' ler) için Microsoft 365 Lighthouse kullanmak için gereksinimlerin listesini alın.
-ms.openlocfilehash: ca5a736c6b14b77f433b07480eba718b4f0e55c2
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: 79084edf573f90ee4d977528c45fdfbfcedff36f
+ms.sourcegitcommit: 852075d8d8a4ca052f69e854396d1565ef713500
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65174019"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65692727"
 ---
 # <a name="requirements-for-microsoft-365-lighthouse"></a>Microsoft 365 Lighthouse için gereksinimler
 
@@ -32,10 +32,10 @@ MSP'lerin Lighthouse kullanmak için Bulut Çözümü Sağlayıcısı (CSP) prog
 Ayrıca, her MSP müşteri kiracısının aşağıdaki gereksinimleri karşılayarak Lighthouse'a uygun olması gerekir:
 
 - Müşteri kiracısını yönetebilmek için Yönetilen Hizmet Sağlayıcısı (MSP) için temsilci erişimi ayarlanmış olmalıdır*
-- En az bir Microsoft 365 İş Ekstra, Microsoft 365 E3, Windows 365 Business veya İş için Microsoft Defender lisansı olmalıdır
+- En az bir Microsoft 365 İş Ekstra, Microsoft 365 E3, Microsoft 365 E5, Windows 365 Business veya İş için Microsoft Defender lisansı olmalıdır
 - En fazla 1000 lisanslı kullanıcı olmalıdır
 
-*Müşterileri Lighthouse'a eklemek için Temsilci Yönetici Ayrıcalıkları (DAP) gerekir. Daha güvenli temsilci erişimi sağlamak için müşterilerinizle Ayrıntılı Yönetici Ayrıcalıkları (GDAP) oluşturmanızı da öneririz. DAP ve GDAP birlikte bulunurken, her iki modelin de bulunduğu müşteriler için GDAP öncelikli olacaktır. Yakında yalnızca GDAP (ve DAP olmayan) müşteriler Lighthouse'a eklenecek.
+*Müşterileri Lighthouse'a eklemek için temsilci Yönetici Ayrıcalıkları (DAP) gerekir. Daha güvenli temsilci erişimi sağlamak için müşterilerinizle Ayrıntılı Temsilcili Yönetici Ayrıcalıkları (GDAP) oluşturmanızı da öneririz. DAP ve GDAP birlikte bulunurken, her iki modelin de bulunduğu müşteriler için GDAP öncelikli olacaktır. Yakında yalnızca GDAP (ve DAP olmayan) müşteriler Lighthouse'a eklenecek.
 
 ## <a name="requirements-for-enabling-device-management"></a>Cihaz yönetimini etkinleştirme gereksinimleri
 
@@ -46,7 +46,7 @@ Cihaz yönetimi sayfalarında müşteri kiracı cihazlarını görüntülemek i�
 
 ## <a name="requirements-for-enabling-user-management"></a>Kullanıcı yönetimini etkinleştirme gereksinimleri
 
-Müşteri verilerinin Riskli kullanıcılar, Çok Faktörlü kimlik doğrulaması ve Parola sıfırlama dahil olmak üzere kullanıcı yönetimi sayfalarındaki raporlarda gösterilmesi için, müşteri kiracılarının Azure Active Directory Premium P1 veya üzeri için lisansları olmalıdır. Azure AD Premium P1 Microsoft 365 İş Ekstra ve Microsoft 365 E3 dahildir.
+Müşteri verilerinin Riskli kullanıcılar, Çok Faktörlü kimlik doğrulaması ve Parola sıfırlama dahil olmak üzere kullanıcı yönetimi sayfalarındaki raporlarda gösterilmesi için, müşteri kiracılarının Azure Active Directory Premium P1 veya üzeri için lisansları olmalıdır. Azure AD Premium P1 Microsoft 365 İş Ekstra ve Microsoft 365 E3 dahildir. Azure AD Premium P2 Microsoft 365 E5 dahildir.
 
 ## <a name="requirements-for-enabling-threat-management"></a>Tehdit yönetimini etkinleştirme gereksinimleri
 

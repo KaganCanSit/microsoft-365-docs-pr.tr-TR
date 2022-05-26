@@ -28,19 +28,19 @@ search.appverid:
 - MOE150
 ms.assetid: de2da300-dbb6-4725-bb12-b85a9d296e75
 description: İş e-postanızı ve verilerinizi fidye yazılımı, kimlik avı ve kötü amaçlı ekler gibi siber tehditlere karşı koruyun.
-ms.openlocfilehash: 47e9d935cdf6b44d9ba45cd57d8eb3efeabdf0a3
-ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
+ms.openlocfilehash: ca159d8d2adda033b1786355c1505cb4d66b625a
+ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2022
-ms.locfileid: "65637681"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65679658"
 ---
 # <a name="best-practices-for-securing-microsoft-365-for-business"></a>İş için Microsoft 365 güvenliğini sağlamaya yönelik en iyi yöntemler
 
 Microsoft'un iş planlarından birini kullanan küçük veya orta ölçekli bir kuruluşsanız, bu makaledeki yönergeler kuruluşunuzun güvenliğini artırmanıza yardımcı olur. Seçenekleriniz arasında Microsoft 365 İş Ekstra, artık İş için Microsoft Defender ve diğer [güvenlik korumalarını](../../business-premium/get-microsoft-365-business-premium.md) içerdiğinden yol gösterir. Burada yer alan önerilen eylemler, Harvard Kennedy School [Cybersecurity Campaign Handbook'ta](https://go.microsoft.com/fwlink/p/?linkid=2015598) açıklanan hedeflere ulaşmanıza yardımcı olacaktır.
 
 > [!TIP]
-> Bu makaledeki adımlarla ilgili yardıma ihtiyacınız varsa [bir Microsoft küçük işletme uzmanıyla çalışmayı](https://go.microsoft.com/fwlink/?linkid=2186871) göz önünde bulundurun. İşletme Yardımı ile, işletmenizi büyütürken katılımdan gündelik kullanıma kadar her aşamada siz ve çalışanlarınız günün 24 saati küçük işletme uzmanlarına erişebilirsiniz.
+> Bu makaledeki adımlarla ilgili yardıma ihtiyacınız varsa [bir Microsoft küçük işletme uzmanıyla çalışmayı](https://go.microsoft.com/fwlink/?linkid=2186871) göz önünde bulundurun. İşletme Yardımı ile, işletmenizi büyütürken işe alımdan gündelik kullanıma kadar her aşamada siz ve çalışanlarınız günün 24 saati küçük işletme uzmanlarına erişebilirsiniz.
 
 ## <a name="watch-a-quick-overview-of-security"></a>Izleyin: Güvenliğe hızlı bir genel bakış
 
@@ -89,7 +89,7 @@ Azure portal Azure Active Directory (Azure AD) için **Özellikler** bölmesinde
 
 1. Genel yönetici kimlik bilgileriyle [Microsoft 365 yönetim merkezi](https://admin.microsoft.com) oturum açın.
 
-2. Sol gezinti bölmesinde **Tümünü Göster'i** seçin ve **Yönetim merkezleri'nin** altında **Azure Active Directory'ı** seçin.
+2. Sol gezinti bölmesinde **Tümünü Göster'i** seçin ve **Yönetici merkezlerinin** altında **Azure Active Directory'ı** seçin.
 
 3. **Azure Active Directory yönetim merkezinde** **Azure Active Directory** >  **Özellikler'i** seçin.
 
@@ -352,5 +352,5 @@ Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:
 ## <a name="related-content"></a>İlgili içerik
 
 [Microsoft 365 için çok faktörlü kimlik doğrulaması](multi-factor-authentication-microsoft-365.md) (makale)\
-[Öncelik hesaplarını yönetme ve izleme](../setup/priority-accounts.md) (makale)\
+[Öncelik hesaplarını yönetme ve izleme](/microsoft-365/security/office-365-security/configure-review-priority-account) (makale)\
 [Yönetim merkezinde Microsoft 365 Raporları](../activity-reports/activity-reports.md) (video)

@@ -16,12 +16,12 @@ ms.collection: M365-security-compliance
 description: Donanım tabanlı yalıtımda en son bilgileri edinin. Açıklardan yararlanmalar veya kötü amaçlı bağlantılar gibi mevcut ve yeni ortaya çıkan saldırıların çalışanların üretkenliğini ve kurumsal güvenliğini kesintiye uğratmasını önleyin.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 98d23a814ac2af8d9dedc4f163923e67c9ca7dc2
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 17743c3aecc50724309ab17c9bcaf2ab10d8ab9b
+ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64973255"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65678996"
 ---
 # <a name="application-guard-for-office-for-admins"></a>Yöneticiler için Office için Application Guard
 
@@ -48,10 +48,14 @@ Office güncelleştirme kanalları hakkında daha fazla bilgi edinmek için bkz.
 
 ### <a name="licensing-requirements"></a>Lisans gereksinimleri
 
-* Microsoft 365 E5 veya Microsoft 365 E5 Güvenlik
+* Microsoft 365 E5 Güvenlik
+* Fakülteler için Microsoft 365 A5
+* Öğrenciler için Microsoft 365 A5
 
 > [!NOTE]
 > Paylaşılan bilgisayar etkinleştirme veya cihaz tabanlı lisanslama ile Kurumlar için Microsoft 365 Uygulamaları Office için Application Guard'a erişimi yoktur.
+>
+> Kasa Belgeler lisans planları, Office için Application Guard'a erişim sağlar. Daha fazla bilgi için bkz[. Microsoft 365 E5/A5'te belgeler Kasa](/microsoft-365/security/office-365-security/safe-docs).
 
 ## <a name="deploy-application-guard-for-office"></a>Office için Application Guard'ı dağıtma
 
@@ -69,7 +73,7 @@ Office güncelleştirme kanalları hakkında daha fazla bilgi edinmek için bkz.
    Enable-WindowsOptionalFeature -online -FeatureName Windows-Defender-ApplicationGuard
    ```
 
-3. **Bilgisayar YapılandırmasıYönerici\\ Şablonlar\\ Windows Bileşenleri\\ Microsoft Defender Application Guard'nde** bir grup ilkesi olan **Yönetilen Modda** Microsoft Defender Application Guard arayın. Seçenekler'in altındaki değeri **2** veya **3** olarak ayarlayıp Tamam veya **Uygula'yı** seçerek bu ilkeyi  açın.
+3. **Bilgisayar Yapılandırması\\Yönetim Şablonları\\ Windows Bileşenleri\\ Microsoft Defender Application Guard'nde** bir grup ilkesi olan **Yönetilen Modda** Microsoft Defender Application Guard arayın. Seçenekler'in altındaki değeri **2** veya **3** olarak ayarlayıp Tamam veya **Uygula'yı** seçerek bu ilkeyi  açın.
 
    :::image type="content" source="../../media/ag04-deploy.png" alt-text="Ag'yi Yönetilen Modda açma seçeneği" lightbox="../../media/ag04-deploy.png":::
 
@@ -193,7 +197,7 @@ Office için Application Guard, yalıtılmış ortamda gerçekleşen kötü ama�
 
 Uç Nokta için Microsoft Defender, kurumsal ağların gelişmiş tehditleri önlemesine, algılamasına, araştırmasına ve yanıtlamasına yardımcı olmak için tasarlanmış bir güvenlik platformudur. Bu platform hakkında daha fazla ayrıntı için bkz. [Uç Nokta için Microsoft Defender](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp). Cihazları bu platforma ekleme hakkında daha fazla bilgi için bkz. [Cihazları Uç Nokta için Microsoft Defender hizmetine ekleme](/windows/security/threat-protection/microsoft-defender-atp/onboard-configure).
 
-Ayrıca Office 365 için Microsoft Defender'ı Uç Nokta için Defender ile çalışacak şekilde yapılandırabilirsiniz. Daha fazla bilgi için bkz. [Office 365 için Defender'ı Uç Nokta için Microsoft Defender ile tümleştirme](integrate-office-365-ti-with-mde.md).
+Ayrıca Office 365 için Microsoft Defender Uç Nokta için Defender ile çalışacak şekilde yapılandırabilirsiniz. Daha fazla bilgi için bkz. [Office 365 için Defender Uç Nokta için Microsoft Defender ile tümleştirme](integrate-office-365-ti-with-mde.md).
 
 ## <a name="limitations-and-considerations"></a>Sınırlamalar ve dikkat edilmesi gerekenler
 
@@ -210,7 +214,7 @@ Ayrıca Office 365 için Microsoft Defender'ı Uç Nokta için Defender ile çal
 
 * Ağ paylaşımlarındaki güvenilmeyen dosyalar veya farklı bir kuruluştan OneDrive, OneDrive İş veya SharePoint Online'dan paylaşılan dosyalar Application Guard'da salt okunur olarak açılır. Kullanıcılar kapsayıcıda çalışmaya devam etmek için bu tür dosyaların yerel bir kopyasını kaydedebilir veya doğrudan özgün dosyayla çalışmak için korumayı kaldırabilir.
 
-* Bilgi Hakları Yönetimi (IRM) tarafından korunan dosyalar varsayılan olarak engellenir. Kullanıcılar bu tür dosyaları Korumalı Görünüm'de açmak isterse, yöneticinin kuruluş için desteklenmeyen dosya türleri için ilke ayarlarını yapılandırması gerekir.
+* Information Rights Management (IRM) tarafından korunan dosyalar varsayılan olarak engellenir. Kullanıcılar bu tür dosyaları Korumalı Görünüm'de açmak isterse, yöneticinin kuruluş için desteklenmeyen dosya türleri için ilke ayarlarını yapılandırması gerekir.
 
 * Office için Application Guard'da uygulamaları Office özelleştirmeleri, kullanıcı oturumu kapatıp yeniden oturum açtığında veya cihaz yeniden başlatıldıktan sonra kalıcı olmaz.
 
@@ -237,7 +241,7 @@ Bu buluşsal durum karşılandığında, Office Windows oturum açtıktan sonra 
 
 * Web bağlantılarının (`http` veya `https`) seçilmesi tarayıcıyı açmaz.
 * Kopyalama-yapıştırma koruma ilkesi için varsayılan ayar yalnızca metne pano erişimini etkinleştirmektir.
-* Desteklenmeyen dosya türleri koruma ilkesi için varsayılan ayar, şifrelenmiş veya Bilgi Hakları Yönetimi (IRM) ayarlanmış güvenilmeyen desteklenmeyen dosya türlerinin açılmasını engellemektir. Bu, Microsoft Purview Information Protection duyarlılık etiketleri kullanılarak şifrelenen dosyaları içerir.
+* Desteklenmeyen dosya türleri koruma ilkesi için varsayılan ayar, şifrelenmiş veya Bilgi Rights Management (IRM) ayarlanmış güvenilmeyen desteklenmeyen dosya türlerinin açılmasını engellemektir. Bu, Microsoft Purview Bilgi Koruması duyarlılık etiketleri kullanılarak şifrelenen dosyaları içerir.
 * CSV ve HTML dosyaları şu anda desteklenmiyor.
 * Office için Application Guard şu anda NTFS sıkıştırılmış birimleriyle çalışmıyor. "ERROR_VIRTUAL_DISK_LIMITATION" hatası görüyorsanız lütfen birimin sıkıştırmasını kaldırmayı deneyin.
 * .NET güncelleştirmeleri, dosyaların Application Guard'da açılmamasına neden olabilir. Geçici bir çözüm olarak, kullanıcılar bu hatayla karşılaşınca cihazlarını yeniden başlatabilir. Sorun hakkında daha fazla bilgi için bkz[. Windows Defender Application Guard veya Windows Korumalı Alanı açmaya çalışırken hata iletisi alma](https://support.microsoft.com/help/4575917/receiving-an-error-message-when-attempting-to-open-windows-defender-ap).

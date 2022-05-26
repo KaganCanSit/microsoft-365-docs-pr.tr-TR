@@ -22,12 +22,12 @@ ms.custom:
 - AdminSurgePortfolio
 - admindeeplinkMAC
 description: Microsoft 365 yönetim merkezi - Bu ay eklenen özellikler hakkında bilgi edinin.
-ms.openlocfilehash: 4c730a72252d24145d7555f2684244a2a6531dd2
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: 198832f09f6b219579f128b7104ecf3ae2fa3446
+ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65649175"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65679362"
 ---
 # <a name="whats-new-in-the-microsoft-365-admin-center"></a>Microsoft 365 yönetim merkezi'deki yenilikler
 
@@ -38,7 +38,7 @@ ms.locfileid: "65649175"
 
 ::: moniker-end
 
-[Microsoft 365 yönetim merkezi](Microsoft 365 yönetim merkezi Genel Bakış](admin-overview/admin-center-overview.md) öğesine sürekli yeni özellikler ekliyoruz, öğrendiğimiz sorunları düzeltiyoruz ve geri bildiriminize göre değişiklikler yapıyoruz. Bugün kullanabileceğiniz seçenekleri görmek için aşağıya göz atın. Bazı özellikler müşterilerimiz için farklı hızlarda kullanıma sunulur. Henüz bir özellik görmüyorsanız, [kendinizi hedeflenen sürüme eklemeyi deneyin](manage/release-options-in-office-365.md).
+[Microsoft 365 yönetim merkezi](Microsoft 365 yönetim merkezi Genel Bakış](admin-overview/admin-center-overview.md) öğesine sürekli yeni özellikler ekliyoruz, öğrendiğimiz sorunları düzeltiyoruz ve geri bildiriminize göre değişiklikler yapıyoruz. Bazı özellikler müşterilerimiz için farklı hızlarda kullanıma sunulur. Henüz bir özellik görmüyorsanız, [kendinizi hedeflenen sürüme eklemeyi deneyin](manage/release-options-in-office-365.md).
 
 Diğer Microsoft bulut hizmetleriyle ilgili yeni şeyleri öğrenmek isterseniz:
 
@@ -53,23 +53,23 @@ Diğer Microsoft bulut hizmetleriyle ilgili yeni şeyleri öğrenmek isterseniz:
 
 ## <a name="may-2022"></a>Mayıs 2022
 
-<!-- ### Role based access controls (RBAC)
+### <a name="role-based-access-controls-rbac"></a>Rol tabanlı erişim denetimleri (RBAC)
 
-There are new Azure AD built-in roles in the Microsoft 365 admin center. Give admins only the access they need to manage Virtual Visits.
+özel güvenlik özniteliklerinin yönetimi için Microsoft 365 yönetim merkezi dört yeni rol vardır. Bu roller, **roller** altındaki Microsoft 365 yönetim merkezi herkes tarafından kullanılabilir.
 
-There are also 4 new roles in the Microsoft 365 admin center centered around management of custom security attributes. These roles are available for everyone to use in the Role assignments node under Roles.
+- **Öznitelik Atama Yöneticisi**   Desteklenen Azure AD nesnelerine özel güvenlik öznitelik anahtarları ve değerleri atayın.
 
-For more information about Azure AD built-in roles, see [Azure AD built-in roles](/azure/active-directory/roles/permissions-reference).
+- **Öznitelik Atama Okuyucusu**   Desteklenen Azure AD nesneleri için özel güvenlik özniteliği anahtarlarını ve değerlerini okur.
 
-**Virtual Visits Administrator**   Manage and share Virtual Visits information and metrics from admin centers or the Virtual Visits app.
+- **Öznitelik Tanımı Yöneticisi**   Özel güvenlik özniteliklerinin tanımını tanımlayın ve yönetin.
 
-**Attribute Assignment Administrator**   Assign custom security attribute keys and values to supported Azure AD objects.
+- **Öznitelik Tanımı Okuyucusu**   Özel güvenlik özniteliklerinin tanımını okur.
 
-**Attribute Assignment Reader**   Reads custom security attribute keys and values for supported Azure AD objects.
+Ayrıca, yöneticilere yalnızca Sanal Ziyaretleri yönetmek için ihtiyaç duydukları erişimi vermenizi sağlayan yeni bir rol vardır.
 
-**Attribute Definition Administrator**   Define and manage the definition of custom security attributes.
+- **Sanal ZiyaretLer Yöneticisi**   Yönetim merkezlerinden veya Sanal Ziyaretler uygulamasından Sanal Ziyaretler bilgilerini ve ölçümlerini yönetin ve paylaşın.
 
-**Attribute Definition Reader**   Reads the definition of custom security attributes. -->
+Bu roller hakkında daha fazla bilgi için bkz. [yerleşik roller Azure AD](/azure/active-directory/roles/permissions-reference).
 
 ### <a name="quick-assist"></a>Hızlı Yardım
 
@@ -85,7 +85,7 @@ Daha fazla bilgi için bkz. [Uzak bağlantı üzerinden bilgisayar sorunlarını
 
 NPS anket içgörüleri, Microsoft 365 yönetim merkezi yapay zeka temelli bir panodur.
 
-Yönetim merkezinde **HealthProduct** >  feedbackNPS  > **anket içgörüleri'ne** gidin.
+Yönetim merkezinde **Sistem Sağlığı** > **Ürünü geri bildirimi** > **NPS anket içgörüleri'ne** gidin.
 
 Bu özellik, sizin gibi yöneticilerin kullanıcılarınızın yanıt verdiği Microsoft NPS anketlerinden türetilen eyleme dönüştürülebilir içgörüler elde etmenize yardımcı olur. [Kuruluşunuz için Microsoft ürünü NPS geri bildirimi ve içgörüleri](manage/manage-feedback-product-insights.md) makalesinde daha fazla bilgi edinin.
 
@@ -152,7 +152,7 @@ Microsoft 365 Lighthouse kullanmaya başlamak için bkz. [Microsoft 365 Lighthou
 
 Artık Microsoft 365 yönetim merkezi kullanıcılarınızın NPS anket verilerini ve içgörülerini görüntüleyebilirsiniz. Bu yeni özellik ile son kullanıcılarınızdan gelen NPS anket yanıtlarından eyleme dönüştürülebilir içgörüler elde edebilir ve tüm sorunları ve endişeleri gidererek daha yüksek son kullanıcı zevki elde edebilirsiniz.
 
-Yönetim merkezinde **HealthProduct** >  feedbackNPS  > **anket içgörüleri'ne** gidin.
+Yönetim merkezinde **Sistem Sağlığı** > **Ürünü geri bildirimi** > **NPS anket içgörüleri'ne** gidin.
 
 :::image type="content" source="../media/feedback-whatsnew.png" alt-text="Ekran görüntüsü: Microsoft 365 yönetim merkezi Geri Bildirim sayfasını gösterme":::
 
@@ -181,7 +181,7 @@ NPS anket içgörü panosunu kullanarak size daha iyi bir deneyim sunmak için:
 
 ### <a name="microsoft-365-admin-center-video-training"></a>Microsoft 365 yönetim merkezi video eğitimi
 
-Microsoft 365 yönetim merkezi video eğitimimizi güncelleştirdik. İşletmeniz için Microsoft 365 ayarlamayı ve yönetmeyi öğrenmek için [Yönetici eğitim video kitaplığı](admin-video-library.yml) sayfasına gidin.
+Microsoft 365 yönetim merkezi video eğitimimizi güncelleştirdik. İşletmeniz için Microsoft 365 ayarlamayı ve yönetmeyi öğrenmek için Yönetici [eğitim video kitaplığı](admin-video-library.yml) sayfasına gidin.
 
 :::image type="content" source="../media/admin-library-vid-training.png" alt-text="Ekran görüntüsü: Yönetim merkezi video eğitim kitaplığını gösterme":::
 
@@ -209,7 +209,7 @@ Ayrıca, biletleriniz hakkında daha fazla içgörü sağlamak için **Hizmet İ
 
 :::image type="content" source="../media/SuppInsight-date-sev.PNG" alt-text="Ekran görüntüsü: Önem derecesine ve tarihe göre destek bileti sıralamasını gösteren tablo.":::
 
-<a href="https://go.microsoft.com/fwlink/p/?linkid=2166757" target="_blank">Microsoft 365 yönetim merkezi'da</a> bu güncelleştirmeleri gözden geçirin. Sol gezinti bölmesinde **SupportView** >  **Hizmeti istekleri'ne** gidin.
+<a href="https://go.microsoft.com/fwlink/p/?linkid=2166757" target="_blank">Microsoft 365 yönetim merkezi'da</a> bu güncelleştirmeleri gözden geçirin. Sol gezinti bölmesinde **Destek** > **Görünümü Hizmeti istekleri'ne** gidin.
 
 ## <a name="june-2021"></a>Haziran 2021
 
