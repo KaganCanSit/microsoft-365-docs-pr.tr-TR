@@ -17,12 +17,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: a5c6cd7b4fde3545f77cdece31f3693f74ca4444
-ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
+ms.openlocfilehash: e5f60e37765e562f0c1508778182f1f506773bff
+ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/25/2022
-ms.locfileid: "65669330"
+ms.locfileid: "65679252"
 ---
 # <a name="microsoft-defender-for-endpoint-on-linux"></a>Linux'ta Uç Nokta için Microsoft Defender
 
@@ -83,9 +83,9 @@ Herhangi bir yükleme hatasıyla karşılaşırsanız [Bkz. Linux'ta Uç Nokta i
 
 - Desteklenen Linux sunucu dağıtımları ve x64 (AMD64/EM64T) ve x86_64 sürümleri:
 
-  - Red Hat Enterprise Linux 6.7 veya üzeri
-  - Red Hat Enterprise Linux 7.2 veya üzeri
-  - Red Hat Enterprise Linux 8.x
+  - Red Hat Enterprise Linux 6.7 veya üzeri (Önizleme)
+  - Red Hat Enterprise Linux 7.2 veya üzeri 
+  - Red Hat Enterprise Linux 8.x 
   - CentOS 6.7 veya üzeri 
   - CentOS 7.2 veya üzeri
   - Ubuntu 16.04 LTS veya üzeri LTS
@@ -98,6 +98,9 @@ Herhangi bir yükleme hatasıyla karşılaşırsanız [Bkz. Linux'ta Uç Nokta i
 
     > [!NOTE]
     > Açıkça listelenmeyen dağıtımlar ve sürümler desteklenmez (resmi olarak desteklenen dağıtımlardan türetilmiş olsalar bile).
+
+
+
 
 - Desteklenen çekirdek sürümlerinin listesi
   - En düşük çekirdek sürümü 3.10.0-327 (Red Hat Enterprise Linux 6 ve CentOS 6 dışında yukarıda belirtilen tüm desteklenen Linux dağıtımları için)

@@ -24,13 +24,13 @@ ms.custom:
 - admindeeplinkSPO
 search.appverid: MET150
 description: Microsoft 365 aboneliğinize dosya depolama alanı ekleyin. Ek dosya depolama alanıyla, SharePoint daha fazla içerik depolayabilirsiniz.
-ms.date: 04/02/2021
-ms.openlocfilehash: da66bac2bde52f5bcd899b73e5927008b40227dc
-ms.sourcegitcommit: 6fefc15dd78139316597083b702286097d45d4dd
+ms.date: 05/24/2022
+ms.openlocfilehash: a4a86966ccee1632f60b687696b9062ca3446778
+ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64737471"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65678887"
 ---
 # <a name="add-more-sharepoint-storage-to-your-subscription"></a>Aboneliğinize daha fazla SharePoint depolama alanı ekleyin
 
@@ -41,7 +41,7 @@ SharePoint sitelerinizde depolama alanınız tükenirse, planınız uygunsa abon
 > OneDrive depolama hakkında bilgi için bkz. [OneDrive kullanıcılar için varsayılan depolama alanını ayarlama](/onedrive/set-default-storage-space).
 
 > [!TIP]
-> Bu konuda verilen adımlarla ilgili yardıma ihtiyacınız varsa, [bir Microsoft küçük işletme uzmanıyla çalışmayı](https://go.microsoft.com/fwlink/?linkid=2186871) göz önünde bulundurun. İşletme Yardımı ile, işletmenizi büyütürken katılımdan gündelik kullanıma kadar her aşamada siz ve çalışanlarınız günün 24 saati küçük işletme uzmanlarına erişebilirsiniz.
+> Bu konuda verilen adımlarla ilgili yardıma ihtiyacınız varsa[bir Microsoft küçük işletme uzmanıyla çalışmayı](https://go.microsoft.com/fwlink/?linkid=2186871) göz önünde bulundurun. İşletme Yardımı ile, işletmenizi büyütürken katılımdan gündelik kullanıma kadar her aşamada siz ve çalışanlarınız günün 24 saati küçük işletme uzmanlarına erişebilirsiniz.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
@@ -52,8 +52,6 @@ Bu makaledeki görevleri yerine getirmek için Genel veya SharePoint yöneticisi
 1. SharePoint yönetim merkezinde <a href="https://go.microsoft.com/fwlink/?linkid=2185220" target="_blank">**Etkin siteler'e**</a> gidin ve kuruluşunuz için [yönetici izinlerine](/sharepoint/sharepoint-admin-role) sahip bir hesapla oturum açın.
 
 2. Sayfanın sağ üst kısmında tüm sitelerde kullanılan depolama alanı miktarına ve aboneliğinizin toplam depolama alanına bakın. Kuruluşunuz Office 365'de Multi-Geo'yı yapılandırdıysa, çubukta tüm coğrafi konumlarda kullanılan depolama alanı miktarı da gösterilir.
-
-   ![Etkin siteler sayfasındaki Depolama çubuğu.](/sharepoint/sharepointonline/media/active-sites-storage-bar)
 
    > [!NOTE]
    > Kullanılan depolama alanı son 24-48 saat içinde yapılan değişiklikleri içermez.
@@ -72,7 +70,7 @@ Aboneliğiniz için henüz ek depolama alanı satın almadıysanız bunu yapabil
 4. Gerekirse temel aboneliği seçin ve eklemek istediğiniz gigabayt depolama alanı sayısını girin.
 5. **Şimdi kullanıma alma'ya** tıklayın.
 6. **Bu nasıl görünüyor?** sayfasında, seçtiğiniz gigabayt depolama alanı sayısını doğrulayın, fiyatlandırma bilgilerini gözden geçirin ve **İleri'yi** seçin.
-7. **Siparişi tamamla** sayfasında toplamı doğrulayın. Herhangi bir değişiklik yapmanız gerekiyorsa **Siparişi düzenle'yi** seçin. Sipariş için kredi denetimi gerekiyorsa onay kutusunu seçin. İşiniz bittiğinde **Sipariş** \> ver **Yönetici Giriş Sayfasına Git'i** seçin.
+7. **Siparişi tamamla** sayfasında toplamı doğrulayın. Herhangi bir değişiklik yapmanız gerekiyorsa **Siparişi düzenle'yi** seçin. Sipariş için kredi denetimi gerekiyorsa onay kutusunu seçin. İşiniz bittiğinde **Siparişi** \> ver **Giriş Yönetici git'i** seçin.
 
 ## <a name="increase-or-decrease-your-extra-storage"></a>Ek depolama alanınızı artırma veya azaltma
 
@@ -92,7 +90,7 @@ Office 365 Ek Dosya Depolama Alanı aşağıdaki aboneliklere sağlanır:
 - Office 365 Kurumsal E1
 - Office 365 Kurumsal E2
 - Office 365 Kurumsal E3
-- Office 365 Kurumsal E4
+<!-- Office 365 Enterprise E4 -->
 - Office 365 Kurumsal E5
 - Office 365 A3 (fakülte)
 - Office 365 A5 (fakülte)
@@ -112,4 +110,4 @@ Office 365 Ek Dosya Depolama Alanı aşağıdaki aboneliklere sağlanır:
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Site depolama sınırlarını yönetme](/sharepoint/manage-site-collection-storage-limits) (makale)\
+[Site depolama sınırlarını yönetme](/sharepoint/manage-site-collection-storage-limits) (makale)

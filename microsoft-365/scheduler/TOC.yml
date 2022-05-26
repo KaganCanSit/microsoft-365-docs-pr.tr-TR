@@ -12,5 +12,7 @@
       href: scheduler-using.md
     - name: Yinelenen toplantıları zamanlama
       href: scheduler-recurring-meetings.md
+    - name: Microsoft 365 için Zamanlayıcı Tercihleri
+      href: scheduler-preferences.md
     - name: Microsoft 365 için Zamanlayıcı SSS
       href: scheduler-faqs.md

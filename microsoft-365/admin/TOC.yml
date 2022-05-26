@@ -14,13 +14,7 @@
         - name: İş için Microsoft 365 kurulumunuzu planlama
           href: setup/plan-your-setup.md
         - name: Microsoft 365 İş Ekstra'ya kaydolma
-          items:
-            - name: Kaydolma
-              href: ../business/sign-up.md
-            - name: Kurulum sihirbazı ile Microsoft 365 İş Ekstra'yı ayarlama
-              href: ../business/set-up.md
-            - name: Microsoft 365 İş Ekstra (video)
-              href: admin-overview/what-is-microsoft-365.md
+          href: ../business-premium/index.md
         - name: Microsoft 365 İş Standart'a kaydolma
           items:
             - name: Microsoft 365 İş Standart'a kaydolma
@@ -352,8 +346,6 @@
           href: manage/idle-session-timeout-web-apps.md
         - name: Office 2013 için Modern Kimlik Doğrulamasını Etkinleştirme
           href: security-and-compliance/enable-modern-authentication.md
-        - name: Veri koruması için önkoşullar
-          href: /microsoft-365/business-premium/m365bp-pre-requisites-for-data-protection
         - name: Microsoft Defender Virüsten Koruma tarafından algılanan tehditler
           href: /microsoft-365/business-premium/m365bp-review-threats-take-action
         - name: Uyumluluk özelliklerini ayarlama
@@ -366,29 +358,7 @@
       items:
         - name: Cihaz ve uygulama veri koruma yöntemleri
           href: devices/choose-device-security.md
-        - name: Microsoft Intune belgeleri
-          href: /mem/intune/
-        - name: İlkeleri ve cihazları görüntüleme ve düzenleme
-          href: /microsoft-365/business-premium/m365bp-view-policies-and-devices
-        - name: Şirket verilerini kaldırma
-          href: /microsoft-365/business-premium/m365bp-remove-company-data
-        - name: Cihazları fabrika ayarlarına sıfırlama
-          href: devices/reset-devices-to-factory-settings.md
-        - name: Koruma özelliklerini Intune ayarlarına eşleme
-          href: /microsoft-365/business-premium/m365bp-map-protection-features-to-intune-settings
-        - name: Cihaz durumları
-          href: devices/device-states.md
-        - name: Windows 10 bilgisayarlar için uygulama koruma ayarları
-          href: devices/protection-settings-for-windows-10-devices.md
         - name: Android veya iOS'ta ayarları doğrulama
-        - name: Autopilot
-          items:
-            - name: AutoPilot profillerini oluşturma ve düzenleme
-              href: /microsoft-365/business-premium/m365bp-create-and-edit-autopilot-profiles
-            - name: AutoPilot cihazlarını oluşturma ve düzenleme
-              href: devices/create-and-edit-autopilot-devices.md
-        - name: Kurumsal belgeler için Microsoft 365
-          href: ../enterprise/index.yml
         - name: Temel Hareketlilik ve Güvenlik
           items:
             - name: Temel Hareketlilik ve Güvenlik'e Genel Bakış
