@@ -1,8 +1,8 @@
 ---
 title: Microsoft 365 Defender’ı kullanmaya başlayın
 ms.reviewer: ''
-description: Hızlı bir şekilde çalışmaya başlama için hangi adımları Microsoft 365 Defender
-keywords: microsoft 365 Defender'ı başlat, aç, başlat, dağıt
+description: Microsoft 365 Defender kullanmaya başlamak için hangi adımları uygulamanız gerektiğini öğrenin
+keywords: kullanmaya başlama, microsoft 365 defender, açma, ekleme, dağıtma
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.prod: m365-security
@@ -20,44 +20,48 @@ ms.collection:
 ms.custom: intro-get-started
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 4429226eaebc254676fac5589a2a25ca51acdeb6
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: d4b17e0b8a57c5f3778eff15d8961713c642409e
+ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64499935"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65739981"
 ---
 # <a name="get-started-with-microsoft-365-defender"></a>Microsoft 365 Defender’ı kullanmaya başlayın
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 - Microsoft 365 Defender
 
-Microsoft 365 Defender, kurum genelinde güvenliği izleyiş ve yöneten birleşik bir deneyimdir. Kimlikler, uç noktalar, veriler, uygulamalar, e-posta ve işbirliği araçları genelinde tümleşik uyarılar sayesinde tehditlere yönelik incelemeler ve yanıt verme artık merkezi bir konumda ortaya çıkar. 
+Microsoft 365 Defender, kuruluşunuz genelinde güvenliği izleyip yönetebileceğiniz birleşik bir deneyimdir. Kimlikler, uç noktalar, veriler, uygulamalar, e-posta ve işbirliği araçları arasındaki tümleşik uyarılar sayesinde tehditleri araştırma ve yanıtlama artık merkezi bir konumda gerçekleşir. 
 
-İster Microsoft güvenlik ürünleri paketini yeni ister tek tek iş akışlarını biliyor olun, bu konu başlığı sizi güvenlik ürünleriyle çalışmaya başlamak için gereken basit adımlarda Microsoft 365 Defender.
+Microsoft 365 Defender'ın Microsoft 365 genelinde tehditleri önlemeye, algılamaya, araştırmaya ve düzeltmeye nasıl yardımcı olduğunu öğrenmek için bu kısa videoyu izleyin.  
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4FTDg]
 
-:::image type="content" source="../../media/mtp/get-started-m365d.png" alt-text="Portala başlama adımları Microsoft 365 Defender." lightbox="../../media/mtp/get-started-m365d.png":::
+Microsoft güvenlik ürünleri paketinde yeniyseniz veya tek tek iş akışlarını biliyor olun, bu konu Microsoft 365 Defender kullanmaya başlamak için uygulamanız gereken basit adımlarda size yol gösterir.
 
-Genel olarak, işe başlamak için aşağıdaki adımları takip etmek gerekir:
+:::image type="content" source="../../media/mtp/get-started-m365d.png" alt-text="Microsoft 365 Defender portalını kullanmaya başlama adımları" lightbox="../../media/mtp/get-started-m365d.png":::
 
-- **[1. Adım: E-Microsoft 365 Defender](m365d-enable.md)** <br>
-    Portala erişmek için öncelikle doğru lisansın yerine sahip olduğundan ve roller atanarak hizmeti açabilirsiniz. 
+Genel olarak, başlamak için aşağıdaki adımları uygulamanız gerekir:
 
-    Daha sonra bazı basit ayarlardan geçerek hizmetin açık olduğunu onaylayın.
+- **[1. Adım: Microsoft 365 Defender açma](m365d-enable.md)** <br>
+    Portala erişebilmeniz için öncelikle doğru lisansa sahip olduğunuzdan ve rollerin atandığından emin olarak hizmeti açmanız gerekir. 
+
+    Ardından bazı basit ayarları gözden geçirecek ve hizmetin açık olduğunu onaylayabilirsiniz.
 
 - **[2. Adım: Desteklenen hizmetleri dağıtma](deploy-supported-services.md)** <br>
-    İlk adımları tamamladıktan sonra, destek hizmetleriyle birlikte gelen desteklenen hizmetleri dağıtmalı ve Microsoft 365 Defender. Hizmetlerin dağıtımı, ağ genelindeki varlıklardan gelen sinyallerde görünürlüğünizi etkili bir şekilde artırır.
+    İlk adımları tamamladıktan sonra, Microsoft 365 Defender ile birlikte gelen desteklenen hizmetleri dağıtmanız gerekir. Hizmetleri dağıtmak, ağınızdaki varlıklardan gelen sinyallerde görünürlüğünüzü etkili bir şekilde artırır.
 
 
 ## <a name="key-capabilities"></a>Önemli özellikler
-Hizmet Microsoft 365 Defender açma ve dağıtma, aşağıdaki önemli özelliklere erişmeniz için size erişim sağlar:
+
+Microsoft 365 Defender açma ve hizmetleri dağıtma, aşağıdaki temel özelliklere erişmenizi sağlar:
 
 
-| Özellik | Açıklama |
+| Yeteneği | Açıklama |
 | ------ | ------ |
-| Uç Nokta için Microsoft Defender | Güçlü davranış algılayıcıları, bulut analizi ve tehdit zekası etrafında yerleşik uç nokta koruma paketi |
-|Office 365 için Microsoft Defender | E-posta ve diğer işbirliği araçları da dahil Office 365 mobil cihazlarında uygulamalarınız ve verileriniz için gelişmiş koruma |
-| Kimlik için Microsoft Defender | Birbiriyle bağlantılı Active Directory sinyallerini kullanarak gelişmiş tehditlere, güvenliği tehlikeye kimliklere ve kötü amaçlı insider'lara karşı savunma |
-| Bulut Uygulamaları için Microsoft Defender | Microsoft ve üçüncü taraf bulut hizmetleriniz genelinde siber tehditleri belirleme ve bu tehditlere karşı mücadelede çalışma |
+| Uç Nokta için Microsoft Defender | Güçlü davranış algılayıcıları, bulut analizi ve tehdit zekası ile oluşturulmuş uç nokta koruma paketi |
+|Office 365 için Microsoft Defender | E-posta ve diğer işbirliği araçları dahil olmak üzere Office 365 uygulamalarınız ve verileriniz için gelişmiş koruma |
+| Kimlik için Microsoft Defender | İlişkili Active Directory sinyallerini kullanarak gelişmiş tehditlere, güvenliği aşılmış kimliklere ve kötü amaçlı insider'lara karşı savunma |
+| Bulut Uygulamaları için Microsoft Defender | Microsoft ve üçüncü taraf bulut hizmetlerinizde siber tehditleri belirleme ve mücadele |

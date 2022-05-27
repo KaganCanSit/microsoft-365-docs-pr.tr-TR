@@ -21,12 +21,12 @@ search.appverid:
 - MET150
 ms.assetid: 74d327e5-755f-4135-b9a5-7b79578c1bf9
 description: Görüntülerin ve temel olmayan JavaScript'in yüklenmesini geciktirmek için JavaScript kullanarak SharePoint Çevrimiçi sayfaların yükleme süresini nasıl azaltacağınızı öğrenin.
-ms.openlocfilehash: af75b3ede1136894bea0a7f4c00cc9498d194fe3
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 8252e169e36dc6976a7be0b4815915ee72283eff
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65101303"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65754742"
 ---
 # <a name="delay-loading-images-and-javascript-in-sharepoint-online"></a>SharePoint Online'da görüntülerin ve JavaScript'in yüklenmesini geciktirme
 
@@ -115,7 +115,7 @@ Aşağıdaki ekran görüntüsünde, görüntüye kaydırıldıktan sonra indiri
   
 ![Sayfaya yüklenen birkaç görüntüyü gösteren ekran görüntüsü.](../media/95eb2b14-f6a1-4eac-a5cb-96097e49514c.png)
   
-JavaScript kullanarak görüntü yüklemesini geciktirme, performansı artırmada etkili bir teknik olabilir; Ancak, teknik genel bir web sitesine uygulanırsa, arama motorları görüntüleri düzenli olarak biçimlendirilmiş bir görüntüde gezindikleri gibi gezinemez. Görüntüdeki meta veriler sayfa yüklenene kadar orada olmadığından bu durum arama motorlarının derecelendirmelerini etkileyebilir. Arama motoru gezginleri yalnızca HTML'yi okur ve bu nedenle resimleri sayfada içerik olarak görmez. Görüntüler, arama sonuçlarında sayfaları sıralamak için kullanılan faktörlerden biridir. Bunun geçici bir yolu, resimleriniz için giriş metni kullanmaktır.
+JavaScript kullanarak görüntü yüklemesini geciktirme, performansı artırmada etkili bir teknik olabilir; Ancak, teknik genel bir web sitesine uygulanırsa, arama motorları görüntüleri düzenli olarak biçimlendirilmiş bir görüntüde gezindikleri gibi gezinemez. Resimdeki meta veriler sayfa yüklenene kadar orada olmadığından bu durum arama motorlarının derecelendirmelerini etkileyebilir. Arama motoru gezginleri yalnızca HTML'yi okur ve bu nedenle resimleri sayfada içerik olarak görmez. Görüntüler, arama sonuçlarında sayfaları sıralamak için kullanılan faktörlerden biridir. Bunun geçici bir yolu, resimleriniz için giriş metni kullanmaktır.
   
 ## <a name="github-code-sample-injecting-javascript-to-improve-performance"></a>GitHub kod örneği: Performansı artırmak için JavaScript ekleme
 

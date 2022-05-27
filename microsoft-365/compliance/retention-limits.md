@@ -18,12 +18,12 @@ search.appverid:
 - MET150
 hideEdit: true
 description: Bekletme ilkeleri ve bekletme etiketi ilkeleri için ilke başına en fazla ilke ve öğe sayısını anlama
-ms.openlocfilehash: bb94043f68d46f98f005853cde03da048495e10f
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: a0246fef2ae72dd2b0b176f82bb42559d405eaa5
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65285368"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65754046"
 ---
 # <a name="limits-for-retention-policies-and-retention-label-policies"></a>Bekletme ilkeleri ve bekletme etiketi ilkeleri için sınırlar
 
@@ -98,7 +98,7 @@ Aşağıdaki örnekler statik kapsamlara yöneliktir ve bir bekletme ilkesinin y
 
 Exchange örnek:
 
-- **Gereksinim**: 40.000'den fazla kullanıcı posta kutusu olan bir kuruluşta, kullanıcıların çoğu e-postalarını 7 yıl boyunca saklamalı, ancak tanımlanan kullanıcıların bir alt kümesinin (425) e-postaları yalnızca 5 yıl boyunca tutulmalıdır.
+- **Gereksinim**: 40.000'den fazla kullanıcı posta kutusu olan bir kuruluşta, kullanıcıların çoğu e-postalarını yedi yıl boyunca saklamalı, ancak tanımlanan kullanıcıların bir alt kümesinin (425) e-postaları yalnızca beş yıl boyunca tutulmalıdır.
 
 - **Çözüm**: 7 yıllık saklama süresine sahip Exchange e-posta için bir bekletme ilkesi oluşturun ve kullanıcıların alt kümesini hariç tutun. Ardından, Exchange e-posta için bekletme süresi 5 yıl olan ikinci bir bekletme ilkesi oluşturun ve kullanıcıların alt kümesini ekleyin.
 
@@ -108,7 +108,7 @@ Exchange örnek:
 
 SharePoint örnek:
 
-- **Gereksinim**: Bir kuruluşun birkaç bin SharePoint sitesi vardır, ancak yalnızca 2.000 site 10 yıllık bir saklama süresi gerektirir ve 8.000 site 4 yıllık saklama süresi gerektirir.
+- **Gereksinim**: Bir kuruluşun birkaç bin SharePoint sitesi vardır, ancak yalnızca 2.000 site 10 yıllık bir saklama süresi gerektirir ve 8.000 site dört yıl bekletme süresi gerektirir.
 
 - **Çözüm**: 100 belirli site içeren 10 yıllık saklama süresine sahip SharePoint için 20 bekletme ilkesi oluşturun ve 100 belirli site içeren 4 yıllık saklama süresiyle SharePoint için 80 bekletme ilkesi oluşturun.
 

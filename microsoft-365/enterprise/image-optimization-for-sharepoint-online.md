@@ -19,16 +19,16 @@ search.appverid:
 - MET150
 ms.assetid: c7edb02a-fdab-4f91-9a20-cba01dad28ef
 description: SharePoint Online klasik yayımlama sitelerinizde görüntü performansını artırmak için işlemeleri ve sprite'leri kullanmayı öğrenin.
-ms.openlocfilehash: d309d2c0d725988ec9958d96ae812b760e8a16e4
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 39d0e4c26339ecf70c922636f82dcef82dd4b13e
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095718"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65754432"
 ---
 # <a name="image-optimization-for-sharepoint-online-classic-publishing-sites"></a>SharePoint Çevrimiçi klasik yayımlama siteleri için görüntü iyileştirme
 
-Bir web sayfasının yükleme hızı, görüntüler, HTML, JavaScript ve CSS dahil olmak üzere sayfayı işlemek için gereken tüm bileşenlerin birleşik boyutuna bağlıdır. Resimler sitenizi daha çekici hale getirmek için harika bir yoldur, ancak boyutları performansı etkileyebilir. Resimlerinizi sıkıştırma ve yeniden boyutlandırma ile iyileştirerek ve sprite kullanarak çok büyük görüntülerin etkilerini kaydırabilirsiniz. SharePoint görüntü işlemelerini kullanarak tek bir büyük görüntüyü karşıya yükleyebilir ve görüntünün bölümlerini görüntüleyerek yeniden yüklenmek yerine yeniden kullanılmasını sağlayabilirsiniz.
+Bir web sayfasının yükleme hızı, görüntüler, HTML, JavaScript ve CSS dahil olmak üzere sayfayı işlemek için gereken tüm bileşenlerin birleşik boyutuna bağlıdır. Resimler sitenizi daha çekici hale getirmek için harika bir yoldur, ancak boyutları performansı etkileyebilir. Resimlerinizi sıkıştırma ve yeniden boyutlandırma ile iyileştirerek ve sprite kullanarak büyük görüntülerin etkilerini kaydırabilirsiniz. SharePoint görüntü işlemelerini kullanarak tek bir büyük görüntüyü karşıya yükleyebilir ve görüntünün bölümlerini görüntüleyerek yeniden yüklenmek yerine yeniden kullanılmasını sağlayabilirsiniz.
 
 >[!NOTE]
 >Bu konu, modern portal siteleri için değil SharePoint Çevrimiçi klasik yayımlama siteleri için geçerlidir. SharePoint Çevrimiçi modern portal sitelerinde görüntü iyileştirme hakkında bilgi için bkz. [SharePoint Çevrimiçi modern portal sayfalarında görüntüleri iyileştirme](modern-image-optimization.md).
@@ -44,13 +44,13 @@ Burada ele alınanlar:
 - Görüntü iyileştirme
 - görüntü işlemelerini SharePoint
    
-Bu, performansı artırabilir çünkü birkaç resim yerine yalnızca bir görüntü indirirsiniz ve ardından bu görüntüyü önbelleğe alır ve yeniden kullanabilirsiniz. Görüntü önbelleğe alınmasa bile, birden çok görüntü yerine tek bir görüntüye sahip olmak, bu yöntem sunucuya yapılan toplam HTTP isteği sayısını azaltır ve bu da sayfa yükleme sürelerini azaltır. Bu gerçekten bir görüntü paketleme biçimidir. Bu, yukarıda sağlanan SharePoint örnekte gösterildiği gibi görüntüler, örneğin simgeler gibi çok sık değişmiyorsa çok yararlı bir tekniktir. Bunu Microsoft Visual Studio kolayca başarmak için üçüncü taraf, açık kaynaklı, topluluk tabanlı bir proje olan [Web Essentials'ı](https://vswebessentials.com/) nasıl kullanacağınızı öğrenin. Daha fazla bilgi için bkz[. SharePoint Online'da küçültme ve paketleme](./minification-and-bundling-in-sharepoint-online.md).
+Bu, performansı artırabilir çünkü birkaç resim yerine yalnızca bir görüntü indirirsiniz ve ardından bu görüntüyü önbelleğe alır ve yeniden kullanabilirsiniz. Görüntü önbelleğe alınmasa bile, birden çok görüntü yerine tek bir görüntüye sahip olmak, bu yöntem sunucuya yapılan toplam HTTP isteği sayısını azaltır ve bu da sayfa yükleme sürelerini azaltır. Bu gerçekten bir görüntü paketleme biçimidir. Bu, yukarıda sağlanan SharePoint örnekte gösterildiği gibi resimler, örneğin simgeler gibi sık sık değişmiyorsa kullanışlı bir tekniktir. Bunu Microsoft Visual Studio kolayca başarmak için üçüncü taraf, açık kaynak, topluluk tabanlı bir proje olan [Web Essentials'ın](https://vswebessentials.com/) nasıl kullanılacağını görebilirsiniz. Daha fazla bilgi için bkz[. SharePoint Online'da küçültme ve paketleme](./minification-and-bundling-in-sharepoint-online.md).
   
 ## <a name="using-image-compression-and-optimization-to-speed-up-page-loading"></a>Sayfa yüklemeyi hızlandırmak için görüntü sıkıştırma ve iyileştirme kullanma
 
-Görüntü sıkıştırma ve iyileştirme, sitenizde kullandığınız görüntülerin dosya boyutunu küçültmektir. Genellikle, görüntünün boyutunu küçültmek için en iyi teknik, görüntüyü sitede görüntülenecek en büyük boyuta yeniden boyutlandırmaktır. Görüntü görüntülendiğinden daha büyük bir görüntüye sahip olmanın bir anlamı yoktur. Resim düzenleyicisi kullanarak resimlerin doğru boyutlarda olduğundan emin olmak, sayfanızın boyutunu küçültmenin hızlı ve kolay bir yoludur.
+Görüntü sıkıştırma ve iyileştirme, sitenizde kullandığınız görüntülerin dosya boyutunu küçültmektir. Genellikle, görüntünün boyutunu küçültmek için en iyi teknik, görüntüyü sitede görüntülenecek en büyük boyuta yeniden boyutlandırmaktır. Görüntü görüntülenmeyecek kadar büyük bir görüntüye sahip olmanın bir anlamı yoktur. Resim düzenleyicisi kullanarak resimlerin doğru boyutlarda olduğundan emin olmak, sayfanızın boyutunu küçültmenin hızlı ve kolay bir yoludur.
   
-Görüntüler doğru boyuta ulaştığında, bir sonraki adım bu görüntülerin sıkıştırmasını iyileştirmektir. Sıkıştırma ve iyileştirme için kullanılabilecek Fotoğraf Galerisi ve üçüncü taraf araçları da dahil olmak üzere çeşitli araçlar vardır. Sıkıştırmanın anahtarı, son kullanıcılar için ayırt edilebilir kaliteyi kaybetmeden dosya boyutunu mümkün olduğunca azaltmaktır. Sıkıştırılmış dosyalarınızı yüksek tanımlı bir ekranda test edin ve iyi görünmelerini sağlayın.
+Görüntüler doğru boyuta ulaştığında, bir sonraki adım bu görüntülerin sıkıştırmasını iyileştirmektir. Sıkıştırma ve iyileştirme için kullanılabilecek Fotoğraf Galerisi ve üçüncü taraf araçları da dahil olmak üzere çeşitli araçlar vardır. Sıkıştırmanın anahtarı, son kullanıcılar için ayırt edilebilir kaliteyi kaybetmeden dosya boyutunu mümkün olduğunca azaltmaktır. Sıkıştırılmış dosyalarınızın iyi görünmeye devam etmesini sağlamak için sıkıştırılmış dosyalarınızı yüksek tanımlı bir ekranda test ettiğinizden emin olun.
   
 ## <a name="speed-up-page-downloads-by-using-sharepoint-image-renditions"></a>SharePoint görüntü işlemelerini kullanarak sayfa indirmelerini hızlandırma
 

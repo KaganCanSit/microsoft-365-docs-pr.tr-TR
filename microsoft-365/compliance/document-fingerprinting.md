@@ -1,5 +1,5 @@
 ---
-title: Belge Parmak İzi Tanıma
+title: Belge Parmak İzi Oluşturma Hakkında
 f1.keywords:
 - NOCSH
 ms.author: chrfox
@@ -11,71 +11,73 @@ search.appverid: MET150
 ms.service: exchange-online
 ms.collection: M365-security-compliance
 ms.localizationpriority: medium
-description: Kurumuz bilgi çalışanları, normal bir gün boyunca birçok hassas bilgiyle başa çıkabilir. Belge Parmak İzi Tanıma, tüm kuruluşta kullanılan standart formları tanımarak bu bilgileri korumanızı kolaylaştırır. Bu konu başlığı altında, Belge Parmak İzi Tanıma'nın ardındaki kavramlar ve PowerShell kullanarak belgeyi oluşturma hakkında bilgiler açıklanmıştır.
-ms.openlocfilehash: cd75fe8ec8f4c727f86689cd3a46f331e71afdad
-ms.sourcegitcommit: 99067d5eb1fa7b094e7cdb1f7be65acaaa235a54
+description: Kuruluşunuzdaki bilgi çalışanları, tipik bir gün boyunca birçok türde hassas bilgiyi işler. Belge Parmak İzi Özelliği, kuruluşunuz genelinde kullanılan standart formları tanımlayarak bu bilgileri korumanızı kolaylaştırır. Bu konu başlığında, Belge Parmak İzi Oluşturma'nın arkasındaki kavramlar ve PowerShell kullanılarak nasıl oluşturulacağı açıklanmaktadır.
+ms.openlocfilehash: 744b96f693676cf94357034a4404f63f0fbd2c45
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2022
-ms.locfileid: "63010045"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65754488"
 ---
-# <a name="document-fingerprinting"></a>Belge Parmak İzi Tanıma
+# <a name="document-fingerprinting"></a>Belge Parmak İzi
 
-Kurumuz bilgi çalışanları, normal bir gün boyunca birçok hassas bilgiyle başa çıkabilir. Güvenlik Uyumluluk Merkezi'nde &amp; , Belge Parmak İzi Tanıma, kuruluş genelinde kullanılan standart formları tanımarak bu bilgileri korumanızı kolaylaştırır. Bu konu başlığı altında, Belge Parmak İzi Tanıma'nın ardındaki kavramlar ve PowerShell kullanarak belgeyi oluşturma hakkında bilgiler açıklanmıştır.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-## <a name="basic-scenario-for-document-fingerprinting"></a>Belge Parmak İzi Tanıma için temel senaryo
+Kuruluşunuzdaki bilgi çalışanları, tipik bir gün boyunca birçok türde hassas bilgiyi işler. Microsoft Purview uyumluluk portalı belge parmak izi oluşturma, kuruluşunuz genelinde kullanılan standart formları tanımlayarak bu bilgileri korumanızı kolaylaştırır. Bu konu başlığında, Belge Parmak İzi Oluşturma'nın arkasındaki kavramlar ve PowerShell kullanılarak nasıl oluşturulacağı açıklanmaktadır.
 
-Belge Parmak İzi Önleme, standart bir formu DLP ilkelerinizin kurallarında kullanabileceğiniz hassas bir bilgi türüne dönüştüren bir Veri Kaybı Önleme (DLP) özelliğidir. Örneğin, boş bir patent şablonunu temel alan bir belge parmak izi oluşturabilir ve sonra hassas içeriği doldurulmuş tüm giden patent şablonlarını algılayan ve engelleyen bir DLP ilkesi oluşturabilirsiniz. İsteğe bağlı olarak, gönderenlere [](use-notifications-and-policy-tips.md) hassas bilgiler gönderdiğini bildirmek için ilke ipuçları kurarak gönderenin de alıcıların patentleri almak için uygun olduğunu doğrulaması gerekir. Bu işlem, kurumda kullanılan tüm metin tabanlı formlarla çalışır. Karşıya yük yalnızca aşağıdaki diğer formlara örnek olarak verilmiştir:
+## <a name="basic-scenario-for-document-fingerprinting"></a>Belge Parmak İzi Oluşturma için temel senaryo
+
+Belge Parmak İzi Oluşturma, standart bir formu, DLP ilkelerinizin kurallarında kullanabileceğiniz hassas bir bilgi türüne dönüştüren bir Microsoft Purview Veri Kaybı Önleme (DLP) özelliğidir. Örneğin, boş bir patent şablonunu temel alan bir belge parmak izi oluşturabilir ve ardından hassas içerik doldurulmuş tüm giden patent şablonlarını algılayan ve engelleyen bir DLP ilkesi oluşturabilirsiniz. İsteğe bağlı olarak, gönderenlere hassas bilgiler gönderebileceklerini bildirmek için [ilke ipuçları](use-notifications-and-policy-tips.md) ayarlayabilirsiniz ve gönderenin, alıcıların patentleri almaya uygun olduğunu doğrulaması gerekir. Bu işlem, kuruluşunuzda kullanılan metin tabanlı formlarla çalışır. Karşıya yükleyebileceğiniz ek form örnekleri şunlardır:
 
 - Kamu formları
 - Sağlık Sigortası Taşınabilirlik ve Sorumluluk Yasası (HIPAA) uyumluluk formları
-- İnsan Kaynakları departmanları için çalışan bilgi formları
-- Özel olarak sizin için oluşturulan özel formlar
+- İnsan Kaynakları departmanları için çalışan bilgileri formları
+- Kuruluşunuz için özel olarak oluşturulan özel formlar
 
-İdeal olan, kuruluşta hassas bilgileri iletmek için belirli formları kullanmak için önceden kurulmuş bir iş uygulaması vardır. Belgenin parmak izi ayarına dönüştürülecek boş bir form karşıya yükledikten ve buna karşılık gelen bir ilke ayardikten sonra, DLP giden postada bu parmak iziyle uyan tüm belgeleri algılar.
+İdeal olan, kuruluşunuzun hassas bilgileri iletmek için belirli formları kullanma konusunda yerleşik bir iş uygulaması zaten vardır. Belge parmak izine dönüştürülecek boş bir formu karşıya yükledikten ve ilgili ilkeyi ayarladıktan sonra, DLP giden postada bu parmak iziyle eşleşen tüm belgeleri algılar.
 
-## <a name="how-document-fingerprinting-works"></a>Belge Parmak İzi Tanıma nasıl çalışır?
+## <a name="how-document-fingerprinting-works"></a>Belge Parmak İzi Oluşturma nasıl çalışır?
 
-Büyük olasılıkla belgelerin gerçek parmak izi olmadığını önceden tahmin ettiniz, ancak bu ad özelliği açıklamaya yardımcı olur. Bir kişinin parmak izi benzersiz desenlere sahip olduğu gibi, belgelerin de benzersiz sözcük desenleri vardır. Bir dosyayı karşıya yüklerken, DLP belgeye benzersiz sözcük deseni tanımlar, bu düzeni temel alan bir belge parmak izi oluşturur ve aynı deseni içeren giden belgeleri algılamak için bu belge parmak izi kullanır. İşte bu nedenle form veya şablon karşıya yüklenmek, en etkili belge parmak izi türünü oluşturur. Form dolduran herkes aynı özgün sözcük dizisini kullanır ve kendi sözcüklerini belgeye ekler. Giden belge parola korumalı değilse ve özgün forma gelen metnin hepsini içerdiği sürece, DLP belgenin belgenin parmak iziyle eş olup olmadığını belirler.
+Muhtemelen belgelerin gerçek parmak izine sahip olmadığını tahmin etmişsinizdir, ancak adı özelliği açıklamaya yardımcı olur. Bir kişinin parmak izlerinin benzersiz desenleri olduğu gibi, belgeler de benzersiz sözcük desenlerine sahiptir. Bir dosyayı karşıya yüklediğinizde, DLP belgedeki benzersiz sözcük desenini tanımlar, bu deseni temel alan bir belge parmak izi oluşturur ve aynı deseni içeren giden belgeleri algılamak için bu belge parmak izini kullanır. Bu nedenle bir form veya şablon karşıya yüklendiğinde en etkili belge parmak izi türü oluşturulur. Formu dolduran herkes aynı özgün sözcük kümesini kullanır ve sonra kendi sözcüklerini belgeye ekler. Giden belge parola korumalı olmadığı ve özgün formdaki tüm metni içerdiği sürece, DLP belgenin belge parmak iziyle eşleşip eşleşmediğini belirleyebilir.
 
 > [!IMPORTANT]
-> Şimdilik DLP, belge parmak izi tanımayı yalnızca çevrimiçi olarak algılama Exchange kullanabilir.
+> Şimdilik DLP, belge parmak izini yalnızca Exchange çevrimiçi ortamda algılama yöntemi olarak kullanabilir.
 
-Aşağıdaki örnekte, patent şablonunu temel alan bir belgeyi parmak izi oluşturursanız ne olur, ancak herhangi bir formu belge parmak izi oluşturmak için temel olarak kullanabilirsiniz.
+Aşağıdaki örnekte, patent şablonunu temel alan bir belge parmak izi oluşturursanız ne olacağı gösterilmektedir, ancak belge parmak izi oluşturmak için herhangi bir formu temel olarak kullanabilirsiniz.
 
-### <a name="example-of-a-patent-document-matching-a-document-fingerprint-of-a-patent-template"></a>Patent şablonunun parmak iziyle eşleşen bir patent belgesi örneği
+### <a name="example-of-a-patent-document-matching-a-document-fingerprint-of-a-patent-template"></a>Patent şablonunun belge parmak iziyle eşleşen bir patent belgesi örneği
 
-![Belge parmak izi diyagramı.](../media/Document-Fingerprinting-diagram.png)
+![Belge parmak izi oluşturma diyagramı.](../media/Document-Fingerprinting-diagram.png)
 
-Patent şablonu, bu alanların her biri için "Patent başlığı", "Stoklar" ve "Açıklama" alanlarının boş alanlarını ve bu alanların her biri için bir desen içerir. Özgün patent şablonunu karşıya yüklerken, bu şablon desteklenen dosya türlerinden biri ve düz metin biçimindedir. DLP, bu sözcük desenini belge parmak izi haline dönüştürür. Bu, özgün metni temsil eden benzersiz bir karma değeri içeren küçük bir Unicode XML dosyasıdır ve parmak izi Active Directory'de veri sınıflandırması olarak kaydedilir. (Güvenlik önlemi olarak, özgün belgenin kendisi hizmette depolanmış değildir; yalnızca karma değeri depolanır ve özgün belge karma değerinden yeniden saklanabilir.) Bundan sonra patent parmak izi, bir DLP ilkesiyle ilişkilendirmek için hassas bir bilgi türüne olur. Parmak iziyle bir DLP ilkesi ilişkilendirildikten sonra, DLP patent parmak iziyle eşleşmesi ve bu belgelerle anlaşmalar içeren tüm giden e-postaları kuruluş ilkesine göre algılar.
+Patent şablonu, "Patent başlığı", "Envanterler" ve bu alanların her biri için "Açıklama" ve açıklamalar (yani desen) boş alanları içerir. Özgün patent şablonunu karşıya yüklediğinizde, desteklenen dosya türlerinden birinde ve düz metin olarak bulunur. DLP, bu sözcük desenini belge parmak izine dönüştürür. Bu, özgün metni temsil eden benzersiz bir karma değeri içeren küçük bir Unicode XML dosyasıdır ve parmak izi Active Directory'de veri sınıflandırması olarak kaydedilir. (Güvenlik önlemi olarak, özgün belgenin kendisi hizmette depolanmaz; yalnızca karma değer depolanır ve özgün belge karma değerinden yeniden oluşturulamaz.) Patent parmak izi daha sonra bir DLP ilkesiyle ilişkilendirebileceğiniz hassas bir bilgi türüne dönüşür. Parmak izini bir DLP ilkesiyle ilişkilendirdikten sonra DLP, patent parmak iziyle eşleşen belgeler içeren giden e-postaları algılar ve kuruluşunuzun ilkesine göre bunlarla ilgilenir.
 
-Örneğin, normal çalışanların patent içeren giden iletileri göndermesini engelleyen bir DLP ilkesi ayarlamak istiyor olabilirsiniz. DLP, patentleri tespit etmek ve bu e-postaları engellemek için patent parmak izi kullanır. Alternatif olarak, hukuk departmanınıza patentleri başka kuruluşlara gönderesin diye bir iş ihtiyacı vardır. Belirli departmanların hassas bilgiler göndermesine izin vermek için, DLP ilkenizin bu departmanları özel durumlar oluşturabilir veya iş gerekçeleriyle ilke ipucunun geçersiz kılınmalarına izin veebilirsiniz.
+Örneğin, normal çalışanların patent içeren giden iletiler göndermesini engelleyen bir DLP ilkesi ayarlamak isteyebilirsiniz. DLP, patentleri algılamak ve bu e-postaları engellemek için patent parmak izini kullanır. Alternatif olarak, hukuk departmanınızın diğer kuruluşlara patent gönderebilmesini sağlamak isteyebilirsiniz çünkü bunu yapmak için bir iş gereksinimi vardır. DLP ilkenizde bu departmanlar için özel durumlar oluşturarak belirli departmanların hassas bilgileri göndermesine izin verebilir veya bir ilke ipucunu iş gerekçesiyle geçersiz kılabilir.
 
 ### <a name="supported-file-types"></a>Desteklenen dosya türleri
 
-Belge Parmak İzi, posta akış kurallarında desteklenen aynı dosya türlerini (aktarım kuralları olarak da bilinir) destekler. Desteklenen dosya türlerinin listesi için bkz. Posta akışı [kuralı içerik incelemesi için desteklenen dosya türleri](/exchange/security-and-compliance/mail-flow-rules/inspect-message-attachments#supported-file-types-for-mail-flow-rule-content-inspection). Dosya türleriyle ilgili hızlı bir not: Ne posta akış kuralları ne de Belge Parmak İzi Tanıma .dotx dosya türünü desteklemez ve bu da Word'de şablon dosyası olduğundan kafa karıştırıcı olabilir. Bu belgede ve diğer Belge Parmak İzi Uygulama konularında "şablon" sözcüğüünü gördüğünüzde, şablon dosya türü olarak değil standart bir form olarak kurduğunız bir belgeye başvurur.
+Belge Parmak İzi Oluşturma, posta akışı kurallarında (taşıma kuralları olarak da bilinir) desteklenen dosya türlerini destekler. Desteklenen dosya türlerinin listesi için bkz. [Posta akışı kuralı içerik incelemesi için desteklenen dosya türleri](/exchange/security-and-compliance/mail-flow-rules/inspect-message-attachments#supported-file-types-for-mail-flow-rule-content-inspection). Dosya türleri hakkında hızlı bir not: Ne posta akışı kuralları ne de Belge Parmak İzi Özelliği .dotx dosya türünü destekler. Bu, Word'de bir şablon dosyası olduğu için kafa karıştırıcı olabilir. Bu ve diğer Belge Parmak İzi Oluşturma konularında "şablon" sözcüğünü gördüğünüzde, şablon dosya türünü değil standart form olarak oluşturduğunuz bir belgeyi ifade eder.
 
-#### <a name="limitations-of-document-fingerprinting"></a>Belge parmak izi sınırlaması
+#### <a name="limitations-of-document-fingerprinting"></a>Belge parmak izi oluşturma sınırlamaları
 
-Belge Parmak İzi Tanıma, aşağıdaki durumlarda hassas bilgileri algılamaz:
+Belge Parmak İzi Oluşturma, aşağıdaki durumlarda hassas bilgileri algılamaz:
 
 - Parola korumalı dosyalar
-- Yalnızca resim içeren dosyalar
-- Belge parmak izi oluşturmak için kullanılan özgün formda bulunan metnin hepsini içermeden belgeler
-- 10 MB'den büyük dosyalar
+- Yalnızca görüntü içeren dosyalar
+- Belge parmak izini oluşturmak için kullanılan özgün formdaki metnin tümünü içermeyen belgeler
+- 10 MB'tan büyük dosyalar
 
-## <a name="use-powershell-to-create-a-classification-rule-package-based-on-document-fingerprinting"></a>Belge parmak izi tanımayı temel alan bir sınıflandırma kuralı paketi oluşturmak için PowerShell kullanma
+## <a name="use-powershell-to-create-a-classification-rule-package-based-on-document-fingerprinting"></a>Belge parmak izine dayalı bir sınıflandırma kuralı paketi oluşturmak için PowerShell kullanma
 
-Şu anda yalnızca Güvenlik ve Uyumluluk Merkezi [PowerShell'de & parmak izi oluşturabilirsiniz](/powershell/exchange/connect-to-scc-powershell).
+Şu anda, yalnızca [Güvenlik & Uyumluluk Merkezi PowerShell'de](/powershell/exchange/connect-to-scc-powershell) belge parmak izi oluşturabilirsiniz.
 
-DLP, hassas içeriği algılamak için sınıflandırma kuralı paketlerini kullanır. Belgenin parmak izine dayalı bir sınıflandırma kuralı paketi oluşturmak için **New-DlpFingerprint** ve **New-DlpSensitiveInformationType** cmdlet'lerini kullanın. **New-DlpFingerprint** sonuçları veri sınıflandırma kuralının dışında depolanmamış olduğundan, aynı PowerShell oturumunda her zaman **New-DlpSensitiveInformationType** veya **Set-DlpSensitiveInformationType** komutlarını çalıştırın. Aşağıdaki örnek, C:\Belgelerim\Contoso Çalışan Kişisi adlı dosyayı temel alan yeni bir belge parmak izi Template.docx. Yeni parmak izi bir değişken olarak depolar ve bunu aynı PowerShell oturumunda **New-DlpSensitiveInformationType** cmdlet'iyle kullanabilirsiniz.
+DLP, hassas içeriği algılamak için sınıflandırma kuralı paketlerini kullanır. Belge parmak izini temel alan bir sınıflandırma kuralı paketi oluşturmak için **New-DlpFingerprint** ve **New-DlpSensitiveInformationType** cmdlet'lerini kullanın. **New-DlpFingerprint** sonuçları veri sınıflandırma kuralının dışında depolanmadığından, aynı PowerShell oturumunda her zaman **New-DlpFingerprint** ve **New-DlpSensitiveInformationType** veya **Set-DlpSensitiveInformationType** çalıştırırsınız. Aşağıdaki örnek, C:\Belgelerim\Contoso Employee Template.docx dosyasını temel alan yeni bir belge parmak izi oluşturur. Aynı PowerShell oturumunda **New-DlpSensitiveInformationType** cmdlet'iyle kullanabilmek için yeni parmak izini bir değişken olarak depolarsınız.
 
 ```powershell
 $Employee_Template = ([System.IO.File]::ReadAllBytes('C:\My Documents\Contoso Employee Template.docx'))
 $Employee_Fingerprint = New-DlpFingerprint -FileData $Employee_Template -Description "Contoso Employee Template"
 ```
 
-Şimdi de C:\Belgelerim\Contoso Müşteri Bilgileri adlı dosyanın parmak izi kullanan "Contoso Çalışanı Gizli" adlı yeni bir veri sınıflandırma kuralı Form.docx.
+Şimdi C:\Belgelerim\Contoso Müşteri Bilgileri Form.docx dosyasının belge parmak izini kullanan "Contoso Çalışanı Gizli" adlı yeni bir veri sınıflandırma kuralı oluşturalım.
 
 ```powershell
 $Customer_Form = ([System.IO.File]::ReadAllBytes('C:\My Documents\Contoso Customer Information Form.docx'))
@@ -83,21 +85,21 @@ $Customer_Fingerprint = New-DlpFingerprint -FileData $Customer_Form -Description
 New-DlpSensitiveInformationType -Name "Contoso Customer Confidential" -Fingerprints $Customer_Fingerprint -Description "Message contains Contoso customer information."
 ```
 
-Artık **tüm DLP veri sınıflandırması kural paketlerini bulmak için Get-DlpSensitiveInformationType** cmdlet'ini kullanabilirsiniz ve bu örnekte "Contoso Müşteri için Gizli" veri sınıflandırma kuralı paketleri listesinin bir parçası olarak yer alır.
+Artık tüm DLP veri sınıflandırma kuralı paketlerini bulmak için **Get-DlpSensitiveInformationType** cmdlet'ini kullanabilirsiniz ve bu örnekte "Contoso Müşteri Gizli" veri sınıflandırma kuralı paketleri listesinin bir parçasıdır.
 
-Son olarak, Güvenlik Uyumluluk Merkezi'nde DLP ilkesine "Contoso Müşteri için Gizli" veri sınıflandırma kuralı &amp; paketini ekleyin. Bu örnekte, var olan "ConfidentialPolicy" adlı bir DLP ilkesine bir kural ekler.
+Son olarak, "Contoso Müşteri Gizli" veri sınıflandırma kuralı paketini Microsoft Purview uyumluluk portalı bir DLP ilkesine ekleyin. Bu örnek, var olan "ConfidentialPolicy" adlı bir DLP ilkesine kural ekler.
 
 ```powershell
 New-DlpComplianceRule -Name "ContosoConfidentialRule" -Policy "ConfidentialPolicy" -ContentContainsSensitiveInformation @{Name="Contoso Customer Confidential"} -BlockAccess $True
 ```
 
-Ayrıca, aşağıdaki örnekte gösterildiği gibi, veri sınıflandırma kuralı paketini Exchange Online kurallarda da kullanabilirsiniz. Bu komutu çalıştırmak için, önce [PowerShell'Bağlan Exchange Online gerekir](/powershell/exchange/connect-to-exchange-online-powershell). Ayrıca, kural paketinin Güvenlik Uyumluluk Merkezi'nde Güvenlik Uyumluluk Merkezi'nde &amp; güvenlik yönetim merkezine Exchange unutmayın.
+Veri sınıflandırma kuralı paketini, aşağıdaki örnekte gösterildiği gibi Exchange Online'daki posta akışı kurallarında da kullanabilirsiniz. Bu komutu çalıştırmak için önce [PowerShell'i Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell) gerekir. Kural paketinin Microsoft Purview uyumluluk portalı Exchange yönetim merkezine eşitlenmesinin zaman aldığını da unutmayın.
 
 ```powershell
 New-TransportRule -Name "Notify :External Recipient Contoso confidential" -NotifySender NotifyOnly -Mode Enforce -SentToScope NotInOrganization -MessageContainsDataClassification @{Name=" Contoso Customer Confidential"}
 ```
 
-DLP artık, Contoso Müşterisi tarafından belge parmak izi Form.docx algılayan belgeler.
+DLP artık Contoso Müşterisi Form.docx belge parmak iziyle eşleşen belgeleri algılar.
 
 Söz dizimi ve parametre bilgileri için bkz:
 

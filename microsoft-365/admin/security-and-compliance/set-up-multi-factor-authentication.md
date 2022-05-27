@@ -28,12 +28,12 @@ search.appverid:
 ms.assetid: 8f0454b2-f51a-4d9c-bcde-2c48e41621c6
 description: Kuruluşunuz için çok faktörlü kimlik doğrulamasını ayarlamayı öğrenin.
 monikerRange: o365-worldwide
-ms.openlocfilehash: faac2f052b7c184a967f916cca433dfaef6866c7
-ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
+ms.openlocfilehash: 6879a49bf0868081fed6ad8171138ce7001783c4
+ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2022
-ms.locfileid: "65637350"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65739925"
 ---
 # <a name="set-up-multifactor-authentication-for-microsoft-365"></a>Microsoft 365 için çok faktörlü kimlik doğrulamasını ayarlama
 
@@ -43,14 +43,14 @@ ms.locfileid: "65637350"
 > Aboneliğinizi veya deneme sürümünüzü 21 Ekim 2019'da satın aldıysanız ve oturum açtığınızda MFA istenirse, aboneliğiniz için [güvenlik varsayılanları](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults) otomatik olarak etkinleştirilir.
 
 > [!TIP]
-> Bu konuda verilen adımlarla ilgili yardıma ihtiyacınız varsa[bir Microsoft küçük işletme uzmanıyla çalışmayı](https://go.microsoft.com/fwlink/?linkid=2186871) göz önünde bulundurun. İşletme Yardımı ile, işletmenizi büyütürken katılımdan gündelik kullanıma kadar her aşamada siz ve çalışanlarınız günün 24 saati küçük işletme uzmanlarına erişebilirsiniz.
+> Bu konuda verilen adımlarla ilgili yardıma ihtiyacınız varsa[bir Microsoft küçük işletme uzmanıyla çalışmayı](https://go.microsoft.com/fwlink/?linkid=2186871) göz önünde bulundurun. İşletme Yardımı ile, işletmenizi büyütürken işe alımdan gündelik kullanıma kadar her aşamada siz ve çalışanlarınız günün 24 saati küçük işletme uzmanlarına erişebilirsiniz.
 
 ## <a name="watch-turn-on-multifactor-authentication"></a>İzleyin: Çok faktörlü kimlik doğrulamasını açma
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE2MuO3?autoplay=false]
 
 1. konumundaki Microsoft 365 yönetim merkezi <a href="https://admin.microsoft.com/ " target="_blank">https://admin.microsoft.com</a>gidin.
-1. **Tümünü Göster'i** ve ardından **Azure Active Directory Yönetim Merkezi'ni** seçin.
+1. **Tümünü Göster'i** ve ardından **Azure Active Directory Yönetici Merkezi'ni** seçin.
 1. **Azure Active Directory**, **Özellikler**, **Güvenlik varsayılanlarını yönet'i** seçin.
 1. **Güvenlik varsayılanlarını etkinleştir'in** altında **Evet'i** ve ardından **Kaydet'i** seçin.
 
@@ -78,7 +78,7 @@ Aboneliğiniz yeniyse Güvenlik varsayılanları sizin için zaten otomatik olar
 Azure portal Azure Active Directory (Azure AD) için **Özellikler** bölmesinden güvenlik varsayılanlarını etkinleştirir veya devre dışı bırakırsınız.
 
 1. Genel yönetici kimlik bilgileriyle [Microsoft 365 yönetim merkezi](https://admin.microsoft.com) oturum açın.
-2. Sol gezinti bölmesinde **Tümünü Göster'i** seçin ve **Yönetim merkezleri'nin** altında **Azure Active Directory'ı** seçin.
+2. Sol gezinti bölmesinde **Tümünü Göster'i** seçin ve **Yönetici merkezlerinin** altında **Azure Active Directory'ı** seçin.
 3. **Azure Active Directory yönetim merkezinde** **Azure Active Directory** \> **Özellikler'i** seçin.
 4. Sayfanın alt kısmında **Güvenlik varsayılanlarını yönet**’i seçin.
 5. Güvenlik varsayılanlarını etkinleştirmek için **Evet'i** veya güvenlik varsayılanlarını devre dışı bırakmak için **Hayır'ı** ve ardından **Kaydet'i** seçin.
@@ -122,6 +122,8 @@ Azure AD P1 ve P2 hakkında daha fazla bilgi için bkz. [Azure Active Directory 
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Çok faktörlü kimlik doğrulamasını ayarlama](set-up-multi-factor-authentication.md) (video)
+[Çok faktörlü kimlik doğrulamasını ayarlama](set-up-multi-factor-authentication.md) (video)\
 
-[Telefonunuz için çok faktörlü kimlik doğrulamasını açma](https://support.microsoft.com/office/ace1d096-61e5-449b-a875-58eb3d74de14)
+[Telefonunuz için çok faktörlü kimlik doğrulamasını açma](https://support.microsoft.com/office/ace1d096-61e5-449b-a875-58eb3d74de14) (makale)\
+
+[Güvenlik varsayılanları ve çok faktörlü kimlik doğrulaması](/microsoft-365/business-premium/m365bp-conditional-access) (makale)

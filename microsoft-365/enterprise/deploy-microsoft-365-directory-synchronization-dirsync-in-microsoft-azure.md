@@ -19,17 +19,17 @@ ms.custom:
 - Ent_Solutions
 - seo-marvel-apr2020
 ms.assetid: b8464818-4325-4a56-b022-5af1dad2aa8b
-description: Şirket içi dizininizle Azure AD kiracısı arasındaki hesapları eşitlemek için Azure'da bir sanal makineye Azure AD Bağlan dağıtmayı öğrenin.
-ms.openlocfilehash: 077fe85307b5c64c5ece9d710a3ad171d04a21da
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Şirket içi dizininizle Azure AD kiracısı arasında hesapları eşitlemek için Azure'daki bir sanal makinede Azure AD Bağlan dağıtmayı öğrenin.
+ms.openlocfilehash: e04a3a4e681ab50b767670cfd419d29cd95556e7
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092171"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65753396"
 ---
 # <a name="deploy-microsoft-365-directory-synchronization-in-microsoft-azure"></a>Microsoft Azure'da Microsoft 365 Dizin Eşitlemesini Dağıtma
 
-Azure Active Directory (Azure AD) Bağlan (eski adıyla Dizin Eşitleme aracı, Dizin Eşitleme aracı veya DirSync.exe aracı), şirket içi Active Directory Etki Alanı Hizmetleri (AD DS) kullanıcılarınızı azure ad kiracınızla eşitlemek için etki alanına katılmış bir sunucuya yüklediğiniz bir uygulamadır aboneliği Microsoft 365. Microsoft 365, dizin hizmeti için Azure AD kullanır. Microsoft 365 aboneliğiniz bir Azure AD kiracısı içerir. Bu kiracı, Azure'daki diğer SaaS uygulamaları ve uygulamaları dahil olmak üzere kuruluşunuzun kimliklerinin diğer bulut iş yükleriyle yönetilmesi için de kullanılabilir.
+Azure Active Directory (Azure AD) Bağlan (eski adıyla Dizin Eşitleme aracı, Dizin Eşitleme aracı veya DirSync.exe aracı), şirket içi Active Directory Etki Alanı Hizmetleri (AD DS) kullanıcılarınızı eşitlemek için etki alanına katılmış bir sunucuya yüklediğiniz bir uygulamadır Microsoft 365 aboneliğinizin Azure AD kiracısı. Microsoft 365, dizin hizmeti için Azure AD kullanır. Microsoft 365 aboneliğiniz bir Azure AD kiracısı içerir. Bu kiracı, Azure'daki diğer SaaS uygulamaları ve uygulamaları dahil olmak üzere kuruluşunuzun kimliklerinin diğer bulut iş yükleriyle yönetilmesi için de kullanılabilir.
 
 Azure AD Bağlan şirket içi bir sunucuya yükleyebilirsiniz, ancak aşağıdaki nedenlerle Azure'daki bir sanal makineye de yükleyebilirsiniz:
   
@@ -44,11 +44,11 @@ Bu çözüm, şirket içi ağınızla Azure sanal ağınız arasında bağlantı
   
 ## <a name="overview-of-deploying-microsoft-365-directory-synchronization-in-azure"></a>Azure'da Microsoft 365 dizin eşitlemesini dağıtmaya genel bakış
 
-Aşağıdaki diyagramda, şirket içi AD DS ormanını bir Microsoft 365 aboneliğiyle eşitleyen Azure'daki bir sanal makinede (dizin eşitleme sunucusu) çalışan Azure AD Bağlan gösterilmektedir.
+Aşağıdaki diyagramda, şirket içi AD DS ormanını Microsoft 365 aboneliğiyle eşitleyen Azure'daki bir sanal makinede (dizin eşitleme sunucusu) çalışan Azure AD Bağlan gösterilmektedir.
   
-![Azure'da bir sanal makinedeki Azure AD Bağlan aracı, şirket içi hesapları trafik akışına sahip bir Microsoft 365 aboneliğinin Azure AD kiracısıyla eşitler.](../media/CP-DirSyncOverview.png)
+![Azure'da bir sanal makinedeki Azure AD Bağlan aracı, şirket içi hesapları trafik akışıyla bir Microsoft 365 aboneliğinin Azure AD kiracısıyla eşitler.](../media/CP-DirSyncOverview.png)
   
-Diyagramda, siteden siteye VPN veya ExpressRoute bağlantısıyla bağlanan iki ağ vardır. AD DS etki alanı denetleyicilerinin bulunduğu bir şirket içi ağ ve Azure [AD Bağlan](https://www.microsoft.com/download/details.aspx?id=47594) çalıştıran bir sanal makine olan dizin eşitleme sunucusuna sahip bir Azure sanal ağı vardır. Dizin eşitleme sunucusundan kaynaklanan iki ana trafik akışı vardır:
+Diyagramda, siteden siteye VPN veya ExpressRoute bağlantısıyla bağlanan iki ağ vardır. AD DS etki alanı denetleyicilerinin bulunduğu bir şirket içi ağ ve [Azure AD Bağlan çalıştıran bir](https://www.microsoft.com/download/details.aspx?id=47594) sanal makine olan dizin eşitleme sunucusuna sahip bir Azure sanal ağı vardır. Dizin eşitleme sunucusundan kaynaklanan iki ana trafik akışı vardır:
   
 -  Azure AD Bağlan, hesaplarda ve parolalarda yapılan değişiklikler için şirket içi ağdaki bir etki alanı denetleyicisini sorgular.
 -  Azure AD Bağlan, hesaplarda ve parolalarda yapılan değişiklikleri Microsoft 365 aboneliğinizin Azure AD örneğine gönderir. Dizin eşitleme sunucusu şirket içi ağınızın genişletilmiş bir bölümünde olduğundan, bu değişiklikler şirket içi ağın proxy sunucusu üzerinden gönderilir.
@@ -60,7 +60,7 @@ Bu çözümü dağıtırken iki önemli adım vardır:
   
 1. Bir Azure sanal ağı oluşturun ve şirket içi ağınıza siteden siteye VPN bağlantısı kurun. Daha fazla bilgi için bkz. [Şirket içi ağı Microsoft Azure sanal ağa Bağlan](connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md).
     
-2. [Azure AD Bağlan'yi](https://www.microsoft.com/download/details.aspx?id=47594) Azure'da etki alanına katılmış bir sanal makineye yükleyin ve ardından şirket içi AD DS'yi Microsoft 365 ile eşitleyin. Bu şunları içerir:
+2. [Azure'da etki](https://www.microsoft.com/download/details.aspx?id=47594) alanına katılmış bir sanal makineye Azure AD Bağlan yükleyin ve ardından şirket içi AD DS'yi Microsoft 365 ile eşitleyin. Bu şunları içerir:
     
     Azure AD Bağlan çalıştırmak için bir Azure Sanal Makinesi oluşturma.
     
@@ -68,10 +68,10 @@ Bu çözümü dağıtırken iki önemli adım vardır:
     
     Azure AD Bağlan yapılandırmak için bir Azure AD yönetici hesabının kimlik bilgileri (kullanıcı adı ve parolası) ve ad DS kurumsal yönetici hesabı gerekir. Azure AD Bağlan, şirket içi AD DS ormanını Microsoft 365 eşitlemek için hemen ve sürekli olarak çalışır.
     
-Bu çözümü üretim ortamına dağıtmadan önce, bu yapılandırmayı kavram kanıtı olarak, tanıtımlar veya denemeler için ayarlamak üzere [Simülasyon kurumsal temel yapılandırması'ndaki](simulated-ent-base-configuration-microsoft-365-enterprise.md) yönergeleri kullanabilirsiniz.
+Bu çözümü üretim ortamında dağıtmadan önce, bu yapılandırmayı kavram kanıtı olarak, tanıtımlar veya denemeler için ayarlamak üzere [Simülasyon kurumsal temel yapılandırması'ndaki](simulated-ent-base-configuration-microsoft-365-enterprise.md) yönergeleri kullanabilirsiniz.
   
 > [!IMPORTANT]
-> Azure AD Bağlan yapılandırması tamamlandığında AD DS kurumsal yönetici hesabı kimlik bilgilerini kaydetmez. 
+> Azure AD Bağlan yapılandırma tamamlandığında AD DS kurumsal yönetici hesabı kimlik bilgilerini kaydetmez. 
   
 > [!NOTE]
 > Bu çözüm, tek bir AD DS ormanının Microsoft 365 eşitlenmesini açıklar. Bu makalede ele alınan topoloji, bu çözümü uygulamanın tek bir yolunu temsil eder. Kuruluşunuzun topolojisi, benzersiz ağ gereksinimlerinize ve güvenlik konularınıza göre farklılık gösterebilir. 
@@ -91,7 +91,7 @@ Başlamadan önce bu çözüm için aşağıdaki önkoşulları gözden geçirin
     
 - Şirket içi AD DS ormanınızı Microsoft 365 ile eşitlemek için Azure AD Bağlan çalıştıran bir Azure Sanal Makinesi sağlayın.
     
-    AD DS kurumsal yönetici hesabı ve Azure AD Yönetici hesabı için kimlik bilgilerine (adlar ve parolalar) sahip olmanız gerekir.
+    AD DS kurumsal yönetici hesabının kimlik bilgilerine (adlar ve parolalar) ve Azure AD Yönetici hesabına sahip olmanız gerekir.
     
 ### <a name="solution-architecture-design-assumptions"></a>Çözüm mimarisi tasarım varsayımları
 
@@ -103,7 +103,7 @@ Aşağıdaki listede bu çözüm için yapılan tasarım seçimleri açıklanmak
     
 - Azure AD Bağlan çoklu oturum açma yerine parola karması eşitlemesi gerçekleştirir. Active Directory Federasyon Hizmetleri (AD FS) (AD FS) altyapısı dağıtmanız gerekmez. Parola karması eşitleme ve çoklu oturum açma seçenekleri hakkında daha fazla bilgi edinmek için bkz. [Azure Active Directory karma kimlik çözümünüz için doğru kimlik doğrulama yöntemini seçme](/azure/active-directory/hybrid/choose-ad-authn).
     
-Bu çözümü ortamınıza dağıtırken göz önünde bulundurmanız gereken ek tasarım seçenekleri vardır. Bunlar şunları içerir:
+Bu çözümü ortamınıza dağıtırken göz önünde bulundurmanız gereken başka tasarım seçenekleri de vardır. Bunlar şunları içerir:
   
 - Mevcut bir Azure sanal ağında mevcut DNS sunucuları varsa, dizin eşitleme sunucunuzun bunları şirket içi ağdaki DNS sunucuları yerine ad çözümlemesi için kullanmasını isteyip istemediğinizi belirleyin.
     
@@ -146,7 +146,7 @@ Ip adresiyle sanal makine için bir Adres (A) kaydı eklendiğinden emin olmak i
   
 [Sanal makineye Bağlan](/azure/virtual-machines/windows/connect-logon) yönergelerini kullanın ve Uzak Masaüstü Bağlantısı ile dizin eşitleme sunucusuna bağlanmak için oturum açın. Oturum açtıktan sonra sanal makineyi şirket içi AD DS etki alanına ekleyin.
   
-Azure AD Bağlan İnternet kaynaklarına erişim elde etmek için dizin eşitleme sunucusunu şirket içi ağın proxy sunucusunu kullanacak şekilde yapılandırmanız gerekir. Gerçekleştirilecek ek yapılandırma adımları için ağ yöneticinize başvurmanız gerekir.
+Azure AD Bağlan İnternet kaynaklarına erişim kazanmak için dizin eşitleme sunucusunu şirket içi ağın proxy sunucusunu kullanacak şekilde yapılandırmanız gerekir. Gerçekleştirilecek ek yapılandırma adımları için ağ yöneticinize başvurmanız gerekir.
   
 Bu, sonuçta elde edilen yapılandırmanızdır.
   
@@ -175,9 +175,9 @@ Bu şekilde, şirket içi Azure sanal ağında Azure AD Bağlan ile dizin eşitl
 
 Azure AD Bağlan, şirket içi AD DS'den Microsoft 365 aboneliğinize hesaplar ekler, ancak kullanıcıların Microsoft 365 oturum açıp hizmetlerini kullanabilmesi için hesapların bir konum ve lisansla yapılandırılması gerekir. Konumu eklemek ve uygun kullanıcı hesapları için lisansları etkinleştirmek için şu adımları kullanın:
   
-1. [Microsoft 365 yönetim merkezi](https://admin.microsoft.com) oturum açın ve ardından **Yönetici'ye** tıklayın.
+1. [Microsoft 365 yönetim merkezi](https://admin.microsoft.com) oturum açın ve **Yönetici'e** tıklayın.
     
-2. Sol gezinti bölmesinde <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">**KullanıcılarEtkin**</a> >  kullanıcılar'a tıklayın.
+2. Sol gezinti bölmesinde **Kullanıcılar** > <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">**Etkin kullanıcılar'a**</a> tıklayın.
 3. Kullanıcı hesapları listesinde, etkinleştirmek istediğiniz kullanıcının yanındaki onay kutusunu seçin.
     
 4. Kullanıcının sayfasında **Ürün lisansları** için **Düzenle'ye** tıklayın.
@@ -194,6 +194,6 @@ Azure AD Bağlan, şirket içi AD DS'den Microsoft 365 aboneliğinize hesaplar e
   
 [şirket içi ağı Microsoft Azure bir sanal ağa Bağlan](connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md)
 
-[Azure AD Bağlan'ı indirme](https://www.microsoft.com/download/details.aspx?id=47594)
+[İndirme Azure AD Bağlan](https://www.microsoft.com/download/details.aspx?id=47594)
   
 [Microsoft 365 için dizin eşitlemesini ayarlama](set-up-directory-synchronization.md)

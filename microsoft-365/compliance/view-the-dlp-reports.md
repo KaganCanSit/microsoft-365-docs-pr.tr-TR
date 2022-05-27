@@ -1,5 +1,5 @@
 ---
-title: Veri kaybını önleme raporlarını görüntüleme
+title: Veri kaybı önleme raporlarını görüntüleme
 f1.keywords:
 - NOCSH
 ms.author: chrfox
@@ -18,87 +18,89 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
-description: DLP ilkesi eşleşmelerinin, geçersiz Office 365 veya hatalı pozitif sonuç sayısını görüntülemek ve zamanla yukarı veya aşağı eğilim olup olmadığını görmek için DLP raporlarını Office 365'de kullanın.
-ms.openlocfilehash: cbf03a4d981d4b37bd22db8fa08c728b77318ddf
-ms.sourcegitcommit: b1066b2a798568afdea9c09401d52fa38fe93546
+description: DLP ilkesi eşleşmelerinin, geçersiz kılmalarının veya hatalı pozitiflerin sayısını görüntülemek ve zaman içinde eğilimin artıp artmadığını görmek için Office 365'daki DLP raporlarını kullanın.
+ms.openlocfilehash: 01064662e0af82ec98837c8518172bcfeffbaa96
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/13/2021
-ms.locfileid: "63018814"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65753550"
 ---
-# <a name="view-the-reports-for-data-loss-prevention"></a>Veri kaybını önleme raporlarını görüntüleme
+# <a name="view-the-reports-for-data-loss-prevention"></a>Veri kaybı önleme raporlarını görüntüleme
 
-Veri kaybı önleme (DLP) ilkelerinizi oluşturdukktan sonra, bunların istediğiniz gibi çalıştığını doğrulamak ve uyumlu kalmanıza yardımcı olmak istiyor olursunuz. Güvenlik Uyumluluk Merkezi'nde DLP raporlarıyla &amp; şunları hızla görüntüabilirsiniz:
-  
-- **DLP ilkesi eşleşmeleri** Bu rapor, zaman içinde DLP ilkesi eşleşmelerinin sayısını gösterir. Raporu tarihe, konuma, ilkeye veya eyleme göre filtreleebilirsiniz. Bu raporu kullanarak şunları kullanabilirsiniz: 
-    
-  - DLP ilkelerinizi test modunda çalıştıracak şekilde ayarlama veya geliştirme. İçerikle eşleşmeye yönelik belirli bir kuralı görüntüebilirsiniz.
-    
-  - Belirli zaman dönemleri üzerinde odaklanın ve depolar ile eğilimlerin nedenlerini an edin.
-    
-  - Kuruluş DLP ilkelerini ihlal eden iş işlemlerini keşfedin.
-    
-  - DLP ilkelerinin ticari etkisini anlamak için, içeriğe hangi eylemlerin uygulandığını görebilirsiniz.
-    
-  - Belirli bir DLP ilkesine uyumluluğu doğrulamak için, o ilkeyle ilgili eşleşmeleri gösterin.
-    
-  - En çok kullanan kullanıcıların listesini görüntüleme ve kuruluşunda olaylara katkıda bulunan kullanıcıları yineleme.
-    
-  - En önemli hassas bilgi türlerinin listesini görüntüleme.
-    
-- **DLP olayları** Bu raporda, ilke eşleşmeleri raporu gibi zaman içinde yapılan eşleşmeleri de gösterir. Bununla birlikte, ilke eşleşmeleri raporu kural düzeyinde eşleşmeleri gösterir; Örneğin, bir e-posta üç farklı kuralla eş kullandı ise, ilke raporu üç farklı satır öğelerini gösterir. Buna karşılık, olaylar raporu bir öğe düzeyinde eşleşmeleri gösterir; Örneğin, bir e-posta üç farklı kuralla eşlenirse, olay raporu bu içerik parçası için tek bir satır öğesi gösterir. 
-    
-  Rapor sayıları farklı bir araya toplanmış olduğundan, ilke raporu belirli kurallarla eşleşmeleri tanımlamak ve DLP ilkeleri içinde ince ayar yapmak için daha iyidir. Olaylar raporu, DLP ilkeleriniz için sorunlu belirli içerik parçalarını tanımlamak için daha iyidir.
-    
-- **DLP'de hatalı pozitif sonuçlar ve geçersiz kılmalar** DLP ilkeniz kullanıcıların bunu geçersiz kılacağına veya hatalı pozitif sonuç bildirse bile, bu raporda bu tür örneklerin zaman içinde sayısı yer almaktadır. Raporu tarihe, konuma veya ilkeye göre filtreleebilirsiniz. Bu raporu kullanarak şunları kullanabilirsiniz: 
-    
-  - Çok fazla sayıda hatalı pozitif sonuça neden olan ilkelere görerek DLP ilkelerinizi ayarlama veya geliştirme.
-    
-  - İlkeyi geçersiz karak bir ilke ipucu çözümleyene kadar kullanıcılar tarafından gönderilen gerekçeleri görüntüleme.
-    
-  - Çok fazla sayıda kullanıcı geçersiz kılmaya neden olarak DLP ilkelerinin geçerli iş süreçleriyle çakışması olduğunu keşfedin.
-    
-Tüm DLP raporları, en son dört aylık zaman dönemine göre verileri gösterebilir. En son verilerin raporlarda görünmesi 24 saat kadar sürebilir.
-  
-Bu raporları, Güvenlik Uyumluluk Merkezi Raporlar **Panosu'nde** \> &amp; \> **bulabilirsiniz**.
-  
-![DLP ilkesi raporla eşleri.](../media/117d20c9-d379-403f-ad68-1f5cd6c4e5cf.png)
-  
-## <a name="view-the-justification-submitted-by-a-user-for-an-override"></a>Kullanıcı tarafından geçersiz kılma için gönderilen gerekçeyi görüntüleme
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-DLP ilkeniz kullanıcıların bunu geçersiz k kullanmasını sağlarsa, ilke ipucunda kullanıcılar tarafından gönderilen metni görüntülemek için hatalı pozitif sonuç ve geçersiz kılma raporunu kullanabilirsiniz.
+Microsoft Purview veri kaybı önleme (DLP) ilkelerinizi oluşturduktan sonra, bunların istediğiniz gibi çalıştığını ve uyumlu kalmanıza yardımcı olduğunu doğrulamanız gerekir. Microsoft Purview uyumluluk portalı DLP raporlarıyla şunları hızla görüntüleyebilirsiniz:
   
-![DLP'nin hatalı pozitif ve geçersiz k olduğu ayrıntılarında gerekçelendirme alanı.](../media/e11e3126-026d-4e77-a16d-74a0686d1fa3.png)
+- **DLP ilkesi eşleşmeleri** Bu rapor, DLP ilkesi eşleşmelerinin zaman içindeki sayısını gösterir. Raporu tarihe, konuma, ilkeye veya eyleme göre filtreleyebilirsiniz. Bu raporu aşağıdakiler için kullanabilirsiniz: 
+    
+  - DLP ilkelerinizi test modunda çalıştırırken ayarlayın veya geliştirin. İçerikle eşleşen belirli kuralı görüntüleyebilirsiniz.
+    
+  - Belirli zaman aralıklarına odaklanın ve ani artışların ve eğilimlerin nedenlerini anlayın.
+    
+  - Kuruluşunuzun DLP ilkelerini ihlal eden iş süreçlerini keşfedin.
+    
+  - İçeriğe hangi eylemlerin uygulandığını görerek DLP ilkelerinin iş üzerindeki etkisini anlayın.
+    
+  - Belirli bir DLP ilkesine yönelik eşleşmeleri göstererek uyumluluğu doğrulayın.
+    
+  - En çok kullanılan kullanıcıların listesini görüntüleyin ve kuruluşunuzdaki olaylara katkıda bulunan kullanıcıları yineleyin.
+    
+  - Kuruluşunuzdaki en önemli hassas bilgi türlerinin listesini görüntüleyin.
+    
+- **DLP olayları** Bu rapor, ilkenin raporla eşleşmesi gibi zaman içindeki ilke eşleşmelerini de gösterir. Ancak, ilke eşleşmeleri raporu kural düzeyinde eşleşmeleri gösterir; örneğin, bir e-posta üç farklı kuralla eşleşirse, ilke eşleşmeleri raporu üç farklı satır öğesi gösterir. Buna karşılık, olaylar raporu eşleşmeleri öğe düzeyinde gösterir; örneğin, bir e-posta üç farklı kuralla eşleşiyorsa, olaylar raporu söz diziminin tek satırlık bir öğesini gösterir. 
+    
+  Rapor sayıları farklı toplandığından, ilke raporu eşleştirir, belirli kurallarla eşleşmeleri tanımlamak ve DLP ilkelerinin ince ayarını yapmak için daha iyidir. Olaylar raporu, DLP ilkeleriniz için sorunlu olan belirli içerik parçalarını tanımlamak için daha iyidir.
+    
+- **DLP hatalı pozitifler ve geçersiz kılmalar** DLP ilkeniz kullanıcıların bu ilkeyi geçersiz kılmasına veya hatalı pozitif rapor vermesine izin veriyorsa, bu rapor zaman içinde bu tür örneklerin sayısını gösterir. Raporu tarihe, konuma veya ilkeye göre filtreleyebilirsiniz. Bu raporu aşağıdakiler için kullanabilirsiniz: 
+    
+  - Hangi ilkelerin yüksek sayıda hatalı pozitif sonuç doğuracağını görerek DLP ilkelerinizi ayarlayın veya geliştirin.
+    
+  - İlkeyi geçersiz kılarak bir ilke ipucunu çözümlediklerinde kullanıcılar tarafından gönderilen gerekçeleri görüntüleyin.
+    
+  - DLP ilkelerinin geçerli iş süreçleriyle çakıştığı yeri bulmak için çok fazla sayıda kullanıcı geçersiz kılma işlemine neden olur.
+    
+Tüm DLP raporları en son dört aylık zaman aralığındaki verileri gösterebilir. En son verilerin raporlarda görünmesi 24 saat kadar sürebilir.
   
-## <a name="take-action-on-insights-and-recommendations"></a>Öngörüler ve öneriler üzerinde eylemde bulun
+Bu raporları Microsoft Purview uyumluluk portalı \> **Raporlar** \> **Panosu'nda** bulabilirsiniz.
+  
+![DLP ilkesi raporla eşleşir.](../media/117d20c9-d379-403f-ad68-1f5cd6c4e5cf.png)
+  
+## <a name="view-the-justification-submitted-by-a-user-for-an-override"></a>Geçersiz kılma için kullanıcı tarafından gönderilen gerekçeyi görüntüleme
 
-Raporlar içgörüler ve öneriler gösterebilir; burada kırmızı uyarı simgesine tıklar ve olası sorunlar hakkında ayrıntılı bilgi edinebilirsiniz ve olası düzeltmeler yapmak için bu simgeyi tıklatın.
+DLP ilkeniz kullanıcıların bu ilkeyi geçersiz kılmasına izin veriyorsa, ilke ipucunda kullanıcılar tarafından gönderilen metni görüntülemek için hatalı pozitif ve geçersiz kılma raporunu kullanabilirsiniz.
   
-![Ayrıntıları ve gerçekleştirilen işlemleri görmek için bir içgörüler simgesine tıklayın.](../media/51782036-7299-4960-8175-75c2b1637159.png)
+![DLP hatalı pozitif ve geçersiz kılma raporunun ayrıntılarında yaslama alanı.](../media/e11e3126-026d-4e77-a16d-74a0686d1fa3.png)
+  
+## <a name="take-action-on-insights-and-recommendations"></a>İçgörüler ve öneriler üzerinde eyleme geçme
+
+Raporlar, olası sorunlarla ilgili ayrıntıları görmek ve olası düzeltme işlemleri yapmak için kırmızı uyarı simgesine tıklayabileceğiniz içgörüler ve öneriler gösterebilir.
+  
+![Bir içgörü simgesine tıklayarak yapılması gereken ayrıntıları ve eylemleri görebilirsiniz.](../media/51782036-7299-4960-8175-75c2b1637159.png)
   
 ## <a name="permissions-for-dlp-reports"></a>DLP raporları için izinler
 
-Güvenlik ve Uyumluluk Merkezi'& DLP raporlarını görüntülemek için size şu atamalar atanabilir:
+Güvenlik & Uyumluluk Merkezi'nde DLP raporlarını görüntülemek için aşağıdakilere atanmış olmanız gerekir:
 
-- **Yönetim merkezinde** Güvenlik <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange rolü</a>. Varsayılan olarak bu rol, yönetim merkezinde Kuruluş Yönetimi ve Güvenlik Okuyucusu rol Exchange atanır.
+- <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange yönetim merkezinde</a> **Güvenlik Okuyucusu** rolü. Varsayılan olarak, bu rol Exchange yönetim merkezindeki Kuruluş Yönetimi ve Güvenlik Okuyucusu rol gruplarına atanır.
 
-- **Güvenlik ve Uyumluluk Merkezi'nde Yalnızca** Görüntülemeye & rolü. Varsayılan olarak, bu rol Güvenlik ve Uyumluluk Merkezi'nde Uyumluluk Yöneticisi, Kuruluş Yönetimi, Güvenlik Yöneticisi ve Güvenlik Okuyucusu rol & atanır.
+- Güvenlik & Uyumluluk Merkezi'nde **Yalnızca DLP Uyumluluk Yönetimi rolünü görüntüleyin**. Varsayılan olarak, bu rol Güvenlik & Uyumluluk Merkezi'ndeki Uyumluluk Yöneticisi, Kuruluş Yönetimi, Güvenlik Yöneticisi ve Güvenlik Okuyucusu rol gruplarına atanır.
 
-- **Yönetim merkezinde Yalnızca** Görüntülemeli <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Alıcılar Exchange.</a> Varsayılan olarak, bu rol Uyumluluk Yönetimi, Kuruluş Yönetimi ve View-Only Yönetim Merkezi'nde Kuruluş Yönetimi rol Exchange atanır.
+- <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange yönetim merkezinde</a> **Yalnızca Alıcıları Görüntüle** rolü. Varsayılan olarak, bu rol Exchange yönetim merkezindeki Uyumluluk Yönetimi, Kuruluş Yönetimi ve View-Only Kuruluş Yönetimi rol gruplarına atanır.
 
 ## <a name="find-the-cmdlets-for-the-dlp-reports"></a>DLP raporları için cmdlet'leri bulma
 
-Güvenlik Uyumluluk Merkezi cmdlet'lerinin çoğunu kullanmak &amp; için:
+Microsoft Purview uyumluluk portalı cmdlet'lerinin çoğunu kullanmak için şunları yapmanız gerekir:
   
-1. [Bağlan'e &amp; Uzak PowerShell kullanılarak Uyumluluk Merkezi](/powershell/exchange/connect-to-scc-powershell)
+1. [Uzak PowerShell kullanarak Microsoft Purview uyumluluk portalı Bağlan](/powershell/exchange/connect-to-scc-powershell)
     
-2. Bu Güvenlik Uyumluluk [Merkezi &amp; cmdlet'lerini kullanın](/powershell/exchange/exchange-online-powershell)
+2. Bu [Güvenlik &amp; Uyumluluk Merkezi cmdlet'lerinden](/powershell/exchange/exchange-online-powershell) herhangi birini kullanın
     
-Bununla birlikte, DLP raporlarının farklı verilerden, Office 365 genelinden veri Exchange Online. Bu nedenle, DLP raporları için cmdlet'ler Powershell'de Exchange Online Uyumluluk Merkezi Powershell'de &amp; kullanılamaz. Bu nedenle, DLP raporlarında cmdlet'leri kullanmak için şunları gerekir:
+Ancak DLP raporlarının Exchange Online dahil olmak üzere Office 365 genelinden veri çekmesi gerekir. Bu nedenle, DLP raporlarına yönelik cmdlet'ler powershell Microsoft Purview uyumluluk portalı powershell'de değil Exchange Online Powershell'de kullanılabilir. Bu nedenle, DLP raporları için cmdlet'leri kullanmak için şunları yapmanız gerekir:
   
 1. [Uzak PowerShell'i kullanarak Exchange Online'a bağlanma](/powershell/exchange/connect-to-exchange-online-powershell)
     
-2. DLP raporları için şu cmdlet'lerden herhangi birini kullanın:
+2. DLP raporları için şu cmdlet'lerden birini kullanın:
     
       - [Get-DlpDetectionsReport](/powershell/module/exchange/get-dlpdetectionsreport)
     

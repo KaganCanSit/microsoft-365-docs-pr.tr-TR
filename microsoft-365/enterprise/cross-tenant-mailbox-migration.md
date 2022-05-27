@@ -16,12 +16,12 @@ ms.custom:
 - admindeeplinkEXCHANGE
 ms.collection:
 - M365-subscription-management
-ms.openlocfilehash: 3832cd64ce66e667cced13c41bc34c28d575b373
-ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
+ms.openlocfilehash: b2d66fce2b1eeffa4500c01a07f271b5b1a96ab7
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2022
-ms.locfileid: "65637527"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65754786"
 ---
 # <a name="cross-tenant-mailbox-migration-preview"></a>Kiracılar arası posta kutusu geçişi (önizleme)
 
@@ -77,13 +77,13 @@ Aboneliğin kiracı kimliğini almak için [Microsoft 365 yönetim merkezi](http
 
    ![Uygulama Kaydı](../media/tenant-to-tenant-mailbox-move/edcdf18b9f504c47284fe4afb982c433.png)
 
-6. Sayfanın sağ üst köşesinde, uygulamanın başarıyla oluşturulduğunu belirten bir bildirim açılır penceresi görürsünüz.
+6. Sayfanın sağ üst köşesinde uygulamanın başarıyla oluşturulduğunu belirten bir bildirim açılır penceresi görürsünüz.
 
 7. Giriş'e Geri dön Azure Active Directory ve Uygulama kayıtları tıklayın.
 
 8. Sahip olunan uygulamalar altında, oluşturduğunuz uygulamayı bulun ve üzerine tıklayın.
 
-9. ^Essentials altında, daha sonra hedef kiracının URL'sini oluşturmak için ihtiyaç duyacağınız için Uygulama (istemci) kimliğini kopyalamanız gerekir.
+9. ^Essentials altında, hedef kiracı için bir URL oluşturmak için daha sonra gerek duyacağınız için Uygulama (istemci) kimliğini kopyalamanız gerekir.
 
 10. Şimdi sol gezinti çubuğunda API izinleri'ne tıklayarak uygulamanıza atanan izinleri görüntüleyin.
 
@@ -237,13 +237,13 @@ Hedef kuruluşta aşağıdaki nesnelerin ve özniteliklerin ayarlandığından e
 1. Kaynak kuruluştan taşınan herhangi bir posta kutusu için, Hedef kuruluşta bir MailUser nesnesi sağlamalısınız:
 
    - Hedef PostaKullanıcısı kaynak posta kutusundan bu özniteliklere sahip olmalı veya yeni User nesnesiyle atanmış olmalıdır:
-      - ExchangeGUID (kaynaktan hedefe doğrudan akış): Posta kutusu GUID'sinin eşleşmesi gerekir. Bu hedef nesnede yoksa taşıma işlemi devam etmeyecektir.
-      - ArchiveGUID (kaynaktan hedefe doğrudan akış): Arşiv GUID'sinin eşleşmesi gerekir. Bu hedef nesnede yoksa taşıma işlemi devam etmeyecektir. (Bu yalnızca kaynak posta kutusu Arşiv etkinse gereklidir).
-      - LegacyExchangeDN (proxyAddress, "x500:\<LegacyExchangeDN>" olarak akış): LegacyExchangeDN hedef MailUser üzerinde x500: proxyAddress olarak bulunmalıdır. Ayrıca, kaynak posta kutusundan hedef posta kullanıcısına tüm x500 adreslerini kopyalamanız gerekir. Bunlar hedef nesnede yoksa taşıma işlemleri devam etmeyecektir.
+      - ExchangeGUID (kaynaktan hedefe doğrudan akış): Posta kutusu GUID'sinin eşleşmesi gerekir. Bu hedef nesnede yoksa taşıma işlemi devam etmez.
+      - ArchiveGUID (kaynaktan hedefe doğrudan akış): Arşiv GUID'sinin eşleşmesi gerekir. Bu hedef nesnede yoksa taşıma işlemi devam etmez. (Bu yalnızca kaynak posta kutusu Arşiv etkinse gereklidir).
+      - LegacyExchangeDN (proxyAddress, "x500:\<LegacyExchangeDN>" olarak akış): LegacyExchangeDN hedef MailUser üzerinde x500: proxyAddress olarak bulunmalıdır. Ayrıca, kaynak posta kutusundan hedef posta kullanıcısına tüm x500 adreslerini kopyalamanız gerekir. Bunlar hedef nesnede yoksa taşıma işlemleri devam etmez.
       - UserPrincipalName: UPN, kullanıcının NEW kimliğine veya hedef şirketine hizalanır (örneğin, user@northwindtraders.onmicrosoft.com).
       - Birincil SMTPAddress: Birincil SMTP adresi kullanıcının YENİ şirketiyle (örneğin, user@northwind.com) hizalanır.
       - TargetAddress/ExternalEmailAddress: MailUser, kullanıcının kaynak kiracıda barındırılan geçerli posta kutusuna (örneğin user@contoso.onmicrosoft.com) başvurur. Bu değeri atarken, PrimarySMTPAddress'i atadığınızdan/atadığınızdan emin olun; aksi takdirde bu değer PrimarySMTPAddress değerini ayarlar ve bu da taşıma hatalarına neden olur.
-      - MailUser'ı hedeflemek için kaynak posta kutusundan eski smtp proxy adresleri ekleyemezsiniz. Örneğin, fabrikam.onmicrosoft.com kiracı nesnelerinde MEU'da contoso.com koruyamazsınız). Etki alanları yalnızca bir Azure AD veya Exchange Online kiracıyla ilişkilendirilir.
+      - Hedef MailUser'a kaynak posta kutusundan eski smtp proxy adresleri ekleyemezsiniz. Örneğin, fabrikam.onmicrosoft.com kiracı nesnelerinde MEU'da contoso.com koruyamazsınız). Etki alanları yalnızca bir Azure AD veya Exchange Online kiracıyla ilişkilendirilir.
 
      Örnek **hedef** MailUser nesnesi:
 

@@ -13,12 +13,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Belge anlama ve form işleme modellerinizin performansı hakkında daha fazla bilgi bulmayı öğrenin.
-ms.openlocfilehash: e9586bbbd8510611747b81424f1fbe494f212cc5
-ms.sourcegitcommit: dc415d784226c77549ba246601f34324c4f94e73
+ms.openlocfilehash: 830a56ab4dd0145f1385d628405ee4287de19595
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64916193"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65754764"
 ---
 # <a name="analyze-how-your-models-are-used-in-microsoft-sharepoint-syntex"></a>Modellerinizin Microsoft SharePoint Syntex'de nasıl kullanıldığını analiz etme
 
@@ -39,11 +39,11 @@ SharePoint Syntex içerik merkeziniz, içerik merkezinden yayımlanan modellerin
 
 ### <a name="roll-up-of-model-usage-data-in-the-default-content-center"></a>Model kullanım verilerini varsayılan içerik merkezinden alma
 
-SharePoint Syntex'da, kurulum sırasında varsayılan içerik merkezi oluşturulur. Gerektiğinde ek içerik merkezleri de oluşturulabilir. Örneğin, departmanlar modellerini oluşturmak ve yönetmek için kendi içerik merkezlerini oluşturabilir. 
+SharePoint Syntex'da, kurulum sırasında varsayılan içerik merkezi oluşturulur. Gerektiğinde daha fazla içerik merkezi de oluşturulabilir. Örneğin, departmanlar modellerini oluşturmak ve yönetmek için kendi içerik merkezlerini oluşturabilir. 
 
 Model kullanım analiziyle ilgili olarak şunları unutmayın:
 
-- Varsayılan içerik merkeziniz, ek içerik merkezlerinde oluşturulanlar da dahil olmak üzere kuruluşunuzdaki tüm içerik merkezleri ve modeller için model kullanım analizini gösterir. Bu, içerik yöneticilerine ve diğer paydaşlara şirket genelindeki içerik merkezlerini ve modellerini yönetmeleri ve denetlemeleri için merkezi bir portal sağlar.  
+- Varsayılan içerik merkeziniz, diğer içerik merkezlerinde oluşturulanlar da dahil olmak üzere kuruluşunuzdaki tüm içerik merkezleri ve modeller için model kullanım analizini gösterir. Bu, içerik yöneticilerine ve diğer paydaşlara şirket genelindeki içerik merkezlerini ve modellerini yönetmeleri ve denetlemeleri için merkezi bir portal sağlar.  
 - Diğer içerik merkezleri yalnızca kendilerinde oluşturulmuş modeller için model kullanım analizini gösterir. Bu, içerik yöneticilerine yalnızca ilgilendikleri modeller için kullanım verileriyle ilgili içgörüler sağlar.
 
 
@@ -78,10 +78,10 @@ Model kullanım listesindeki her model kullanım verilerini gösterir:
 
 
 ## <a name="see-also"></a>Ayrıca bkz.
-[Sınıflandırıcı oluşturma](create-a-classifier.md)
+[Sınıflandırıcı oluştur](create-a-classifier.md)
 
-[Ayıklayıcı oluşturma](create-an-extractor.md)
+[Ayıklayıcı oluştur](create-an-extractor.md)
 
 [Document Understanding'e genel bakış](document-understanding-overview.md)
 
-[Form işleme modeli oluşturma](create-a-form-processing-model.md)  
+[Form işleme modeli oluştur](create-a-form-processing-model.md)  

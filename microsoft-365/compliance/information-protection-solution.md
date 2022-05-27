@@ -17,13 +17,13 @@ ms.collection:
 - m365solution-overview
 - m365solution-mip
 - m365initiative-compliance
-description: Kuruluşunuz için Microsoft Purview Information Protection dağıtmak için açıklayıcı kılavuz.
-ms.openlocfilehash: d672e113e4f1bdaca155881afba6262878d0ecb3
-ms.sourcegitcommit: f723ebbc56db8013598a88b0d7f13214d9d3eb10
+description: Kuruluşunuz için Microsoft Purview Bilgi Koruması dağıtmaya yönelik açıklayıcı kılavuz.
+ms.openlocfilehash: fa826e7b9761ebcff34dd9ae6f7c2ee1b268bade
+ms.sourcegitcommit: d9842a9fcaead280bb704e92d44c1f4c201f9eb4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65294766"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65759856"
 ---
 # <a name="deploy-an-information-protection-solution-with-microsoft-purview"></a>Microsoft Purview ile bilgi koruma çözümü dağıtma
 
@@ -33,38 +33,38 @@ ms.locfileid: "65294766"
 
 Bilgi koruma stratejiniz iş gereksinimlerinize göre oluşturulur. Birçok kuruluş düzenlemelere, yasalara ve iş uygulamalarına uymalıdır. Ayrıca kuruluşların belirli projelere ait veriler gibi özel bilgileri de koruması gerekir.
 
-Microsoft Purview Information Protection (eski adıyla Microsoft Bilgi Koruması), belirli iş hedeflerinizi gerçekleştirmek için kullanabileceğiniz bir çerçeve, süreç ve özellikler sağlar. 
+Microsoft Purview Bilgi Koruması (eski adıyla Microsoft Bilgi Koruması), belirli iş hedeflerinizi gerçekleştirmek için kullanabileceğiniz bir çerçeve, süreç ve özellikler sağlar. 
 
-## <a name="microsoft-purview-information-protection-framework"></a>Microsoft Purview Information Protection çerçevesi
+## <a name="microsoft-purview-information-protection-framework"></a>Microsoft Purview Bilgi Koruması çerçevesi
 
-Microsoft Purview Information Protection kullanarak hassas bilgileri nerede yaşarsa yaşasın, nereye giderse gitsin keşfetmenize, sınıflandırmanıza, korumanıza ve yönetmenize yardımcı olun.
+Microsoft Purview Bilgi Koruması kullanarak hassas bilgileri nerede yaşarsa yaşasın, nereye giderse gitsin keşfetmenize, sınıflandırmanıza, korumanıza ve yönetmenize yardımcı olun.
 
-![Microsoft Purview Information Protection çözümüne genel bakış](../media/mip-solution-overview-extended.png)
+![Microsoft Purview Bilgi Koruması çözümüne genel bakış](../media/mip-solution-overview-extended.png)
 
 Bu özelliklerin birbirini nasıl desteklediğini ve birbirleri üzerinde nasıl derlediğini görmek için aşağıdaki Ignite oturumunu izleyin: [verilerinizi bilin, verilerinizi koruyun ve Microsoft Bilgi Koruması ile veri kaybını önleyin](https://myignite.microsoft.com/archives/IG20-OD273).
 
-Veri idaresi için bkz. [Microsoft Purview ile veri idaresi çözümü dağıtma](data-governance-solution.md).
+Veri idaresi için bkz[. Microsoft Purview ile veri idaresi çözümü dağıtma](data-governance-solution.md).
 
 ## <a name="licensing"></a>Lisanslama
 
-Microsoft Purview Information Protection özellikleri Microsoft Purview'a dahildir. Lisanslama gereksinimleri, yapılandırma seçeneklerine bağlı olarak özellikler içinde bile farklılık gösterebilir. Lisanslama gereksinimlerini ve seçeneklerini belirlemek [için güvenlik & uyumluluğuna yönelik Microsoft 365 kılavuzuna](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance) bakın.
+Microsoft Purview Bilgi Koruması özellikleri Microsoft Purview dahil edilir. Lisanslama gereksinimleri, yapılandırma seçeneklerine bağlı olarak özellikler içinde bile farklılık gösterebilir. Lisanslama gereksinimlerini ve seçeneklerini belirlemek [için güvenlik & uyumluluğuna yönelik Microsoft 365 kılavuzuna](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance) bakın.
 
 ## <a name="know-your-data"></a>Verileriniz hakkında bilgi edinme
 
-![Microsoft Purview Information Protection çözümüne genel bakış için verilerinizi öğrenme](../media/knowyourdata-mipsolution.png)
+![Microsoft Purview Bilgi Koruması çözüme genel bakış için verilerinizi öğrenme](../media/knowyourdata-mipsolution.png)
 
-Hassas verilerinizin nerede olduğunu bilmek çoğu kuruluş için en büyük zorluktır. Microsoft Purview Information Protection veri sınıflandırması, kuruluşunuzun oluşturduğu her geçen gün artan miktarda veriyi bulmanıza ve doğru sınıflandırmanıza yardımcı olur. Grafik gösterimler, bu verileri korumak ve yönetmek için ilkeler ayarlayıp izleyebilmek için bu verilere ilişkin içgörüler elde etmenize yardımcı olur.
+Hassas verilerinizin nerede olduğunu bilmek çoğu kuruluş için en büyük zorluktır. Microsoft Purview Bilgi Koruması veri sınıflandırması, kuruluşunuzun oluşturduğu her geçen gün artan miktarda veriyi keşfetmenize ve doğru bir şekilde sınıflandırmanıza yardımcı olur. Grafik gösterimler, bu verileri korumak ve yönetmek için ilkeler ayarlayıp izleyebilmek için bu verilere ilişkin içgörüler elde etmenize yardımcı olur.
 
 
 |Adım|Açıklama|Daha fazla bilgi|
 |:---|:----------|:---------------|
-|1| Korumak istediğiniz hassas bilgi kategorilerini açıklayın. <br /><br /> Kuruluşunuz için en değerli bilgi türleri ve olmayanlar hakkında zaten bir fikriniz var. Başlangıç yeriniz bu olduğundan, bu kategorileri açıklamak için paydaşlarla birlikte çalışın. | [Hassas bilgi türleri hakkında daha fazla bilgi edinme](sensitive-information-type-learn-about.md) <p> [Eğitilebilir sınıflandırıcılar hakkında daha fazla bilgi edinme](classifier-learn-about.md)|
+|1| Korumak istediğiniz hassas bilgi kategorilerini açıklayın. <br /><br /> Kuruluşunuz için en değerli olan ve olmayan bilgi türleri hakkında zaten bir fikriniz var. Başlangıç noktanız olan bu kategorileri açıklamak için paydaşlarla birlikte çalışın. | [Hassas bilgi türleri hakkında daha fazla bilgi edinme](sensitive-information-type-learn-about.md) <p> [Eğitilebilir sınıflandırıcılar hakkında daha fazla bilgi edinme](classifier-learn-about.md)|
 |2| Hassas verileri bulma ve sınıflandırma. <br /><br /> Öğelerdeki hassas veriler, varsayılan DLP ilkeleri, kullanıcılar tarafından el ile etiketleme ve hassas bilgi türleri veya makine öğrenmesi kullanılarak otomatik desen tanıma gibi birçok farklı yöntem kullanılarak bulunabilir. | [Veri sınıflandırması hakkında daha fazla bilgi edinme](data-classification-overview.md) <p> [Video: Uyumluluk merkezinde veri sınıflandırması](https://www.microsoft.com/videoplayer/embed/RE4vx8x)|
 |3| Hassas öğelerinizi görüntüleyin.  <br /><br /> Hassas öğelerin ve kullanıcıların bu öğeler üzerinde yaptığı eylemlerin daha ayrıntılı bir analizi için içerik gezginini ve etkinlik gezginini kullanın.| [İçerik gezginini kullanmaya başlama](data-classification-content-explorer.md) <p> [Etkinlik gezginini kullanmaya başlama](data-classification-activity-explorer.md)|
 
 ## <a name="protect-your-data"></a>Verilerinizi koruma
 
-![Microsoft Purview Information Protection çözümüne genel bakış için verilerinizi koruma](../media/protect-mipsolution.png)
+![Microsoft Purview Bilgi Koruması çözüme genel bakış için verilerinizi koruma](../media/protect-mipsolution.png)
 
 Hassas verilerinizi daha verimli bir şekilde korumanıza yardımcı olmak için hassas verilerinizin bulunduğu yeri bilme bilgilerini kullanın. Ancak beklemenize gerek yoktur; verilerinizi el ile, varsayılan ve otomatik etiketlemenin bir bileşimiyle hemen korumaya başlayabilirsiniz. Ardından, hangi öğelerin etiketlendiğini ve etiketlerinizin nasıl kullanıldığını onaylamak için önceki bölümde yer alan [içerik gezginini](data-classification-content-explorer.md) ve [etkinlik gezginini](data-classification-activity-explorer.md) kullanın.
 
@@ -74,7 +74,7 @@ Hassas verilerinizi daha verimli bir şekilde korumanıza yardımcı olmak için
 | 2|Microsoft 365 uygulamalar ve hizmetler için öğeleri etiketleyip koruyun. <br /><br />Duyarlılık etiketleri, SharePoint ve OneDrive siteleri ve Microsoft 365 grupları içeren Microsoft 365 Word, Excel, PowerPoint, Outlook ve kapsayıcılar için desteklenir. El ile etiketleme, otomatik etiketleme, varsayılan etiket ve zorunlu etiketleme gibi etiketleme yöntemlerinin bir bileşimini kullanın.| [Office uygulamalarında duyarlılık etiketlerini yönetme](sensitivity-labels-office-apps.md) <br /><br /> [SharePoint ve OneDrive'daki Office dosyaları için hassasiyet etiketlerini etkinleştirme](sensitivity-labels-sharepoint-onedrive-files.md) <br /><br /> [Duyarlılık etiketleriyle şifrelenmiş dosyalar için birlikte yazmayı etkinleştirme](sensitivity-labels-coauthoring.md) <br /><br /> [İçeriğe otomatik olarak bir hassasiyet etiketi uygulama](apply-sensitivity-label-automatically.md) <br /><br /> [duyarlılık etiketlerini Microsoft Teams, Microsoft 365 grupları ve SharePoint siteleri ile kullanma](sensitivity-labels-teams-groups-sites.md) <br /><br /> [SharePoint ve OneDrive'de siteler ve belgeler için varsayılan paylaşım bağlantısını ayarlamak için duyarlılık etiketlerini kullanma](sensitivity-labels-default-sharing-link.md) <br /><br /> [Microsoft SharePoint Syntex'da modele duyarlılık etiketi uygulama](/microsoft-365/contentunderstanding/apply-a-sensitivity-label-to-a-model) <br /><br /> [Power BI duyarlılık etiketleri](/power-bi/admin/service-security-sensitivity-label-overview) |
 |3|Duyarlılık etiketlerinizle [Microsoft Defender for Cloud Apps](/cloud-app-security/what-is-cloud-app-security) kullanarak buluttaki veri depolarında bulunan hassas öğeleri keşfedin, etiketleyin ve koruyun.| [Bulutta depolanan düzenlenmiş ve hassas verileri bulma, sınıflandırma, etiketleme ve koruma](/cloud-app-security/best-practices#discover-classify-label-and-protect-regulated-and-sensitive-data-stored-in-the-cloud)|
 |4|[Azure Information Protection birleşik etiketleme tarayıcısını](/azure/information-protection/deploy-aip-scanner) duyarlılık etiketlerinizle dağıtarak şirket içindeki veri depolarında bulunan hassas öğeleri keşfedin, etiketleyin ve koruyun.| [Azure Information Protection birleşik etiketleme tarayıcısını yapılandırma ve yükleme](/azure/information-protection/deploy-aip-scanner-configure-install)|
-|5|Azure Blob Depolama, Azure dosyaları, Azure Data Lake Storage 1. Nesil ve Azure Data Lake Storage 12. Nesil öğelerini bulmak ve etiketlemek için [Microsoft Purview Veri Eşlemesi'yi](/azure/purview/overview) kullanarak duyarlılık etiketlerinizi Azure'a genişletin. | [Microsoft Purview Veri Haritası'nda etiketleme](/azure/purview/create-sensitivity-label)|
+|5|Azure Blob Depolama, Azure dosyaları, Azure Data Lake Storage 1. Nesil ve Azure Data Lake Storage 12. Nesil öğelerini bulmak ve etiketlemek için Microsoft Purview [Veri Eşlemesi](/azure/purview/overview) kullanarak duyarlılık etiketlerinizi Azure'a genişletin. | [Microsoft Purview Veri Eşlemesi'nde etiketleme](/azure/purview/create-sensitivity-label)|
 
 Duyarlılık etiketlerini iş kolu uygulamalarına veya üçüncü taraf SaaS uygulamalarına genişletmek isteyen bir geliştiriciyseniz bkz. [Microsoft Bilgi Koruması (MIP) SDK kurulumu ve yapılandırması](/information-protection/develop/setup-configure-mip). 
 
@@ -86,7 +86,7 @@ Koruma özelliklerinin tam listesi için [Verilerinizi Microsoft Purview ile kor
 
 ## <a name="prevent-data-loss"></a>Veri kaybını önleme
 
-![Microsoft Purview Information Protection çözümüne genel bakış için veri kaybını önleme](../media/dlp-mipsolution.png)
+![Microsoft Purview Bilgi Koruması çözümü için veri kaybını önlemeye genel bakış](../media/dlp-mipsolution.png)
 
 Uygulamalar ve hizmetler arasında hassas verilerin uygunsuz şekilde paylaşılmasını, aktarılmasını veya kullanılmasını engellemek için Microsoft Purview Veri Kaybı Önleme (DLP) ilkelerini dağıtın. Bu ilkeler kullanıcıların hassas verileri kullanırken doğru kararları almasına ve doğru eylemleri gerçekleştirmesine yardımcı olur.
 
@@ -102,10 +102,10 @@ Uygulamalar ve hizmetler arasında hassas verilerin uygunsuz şekilde paylaşıl
 
 Danışmanlar ve yöneticiler için Learning modülleri:
 
-- [Microsoft 365'da bilgi koruma ve idareye giriş](/learn/modules/m365-compliance-information-governance)
+- [Microsoft Purview'de bilgi koruma ve veri yaşam döngüsü yönetimine giriş](/learn/modules/m365-compliance-information-governance)
 - [Verileri koruma ve idare için sınıflandırma](/learn/modules/m365-compliance-information-classify-data)
-- [Microsoft 365'da bilgileri koruma](/learn/modules/m365-compliance-information-protect-information)
-- [Microsoft 365'de veri kaybını önleme](/learn/modules/m365-compliance-information-prevent-data-loss)
+- [Microsoft Purview'de bilgileri koruma](/learn/modules/m365-compliance-information-protect-information)
+- [Microsoft Purview veri kaybını önleme](/learn/modules/m365-compliance-information-prevent-data-loss)
 
 Kullanıcılarınızı kendileri için yapılandırdığınız duyarlılık etiketlerini uygulama ve kullanma konusunda eğitmeye yardımcı olmak için [duyarlılık etiketleri için son kullanıcı belgelerine](get-started-with-sensitivity-labels.md#end-user-documentation-for-sensitivity-labels) bakın.
 

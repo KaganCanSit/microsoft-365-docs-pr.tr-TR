@@ -1,7 +1,7 @@
 ---
-title: Olayları iş yer Microsoft 365 Defender
-description: Nasıl atamayı, durumu güncelleştirmeyi,
-keywords: olay, olaylar, çözümleme, yanıt, uyarılar, ilişkili uyarılar, atama, güncelleştirme, durum, yönetme, sınıflandırma, microsoft, 365, m365
+title: Microsoft 365 Defender'de olayları yönetme
+description: Atamayı, durumu güncelleştirmeyi öğrenin,
+keywords: olay, olaylar, analiz, yanıt, uyarılar, bağıntılı uyarılar, atama, güncelleştirme, durum, yönetme, sınıflandırma, Microsoft, 365, m365
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -21,102 +21,105 @@ ms.topic: conceptual
 search.appverid:
 - MOE150
 ms.technology: m365d
-ms.openlocfilehash: 14332b2787b59e2ef192741dc97e59a7c7cb5418
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 9aa293a84f3bdca6988b1bf8437906f8b1cfbd39
+ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64499517"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65740010"
 ---
-# <a name="manage-incidents-in-microsoft-365-defender"></a>Olayları iş yer Microsoft 365 Defender
+# <a name="manage-incidents-in-microsoft-365-defender"></a>Microsoft 365 Defender'de olayları yönetme
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 - Microsoft 365 Defender
 
-Olay yönetimi, olay iş akışınıza en uygun zamanı en iyi duruma getirmek ve tehditlere daha hızlı bir şekilde müdahale etmek ve tehditlere karşı daha hızlı bir şekilde müdahale etmek için önem taşıyor.
+Olay yönetimi, olay iş akışınızda zamanı iyileştirmek ve tehditleri daha hızlı bir şekilde içerip ele almak için olayların adlandırıldığından, atandığından ve etiketlendiğinden emin olmak için kritik öneme sahiptir.
 
-Microsoft 365 Defender portalının (security.microsoft.com) hızlı başlatmada Olaylar **&** veya Olaylar'> olayları [yönetebilirsiniz](https://security.microsoft.com). İşte bir örnek.
+**Olaylar & uyarıları > Olayları** Microsoft 365 Defender portalın ([security.microsoft.com](https://security.microsoft.com)) hızlı lansmanından yönetebilirsiniz. İşte bir örnek.
 
-:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents.png" alt-text="Microsoft 365 Defender portalında Olaylar sayfası" lightbox="../../media/incidents-queue/incidents-ss-incidents.png":::
+:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents.png" alt-text="Microsoft 365 Defender portalındaki Olaylar sayfası" lightbox="../../media/incidents-queue/incidents-ss-incidents.png":::
 
-Olaylarınızı şöyle yönetebilirsiniz:
+Olaylarınızı yönetmek için kullanabileceğiniz yöntemler şunlardır:
 
 - [Olay adını düzenleme](#edit-the-incident-name)
 - [Olay etiketleri ekleme](#add-incident-tags)
-- [Olayı kullanıcı hesabına atama](#assign-an-incident)
+- [Olayı bir kullanıcı hesabına atama](#assign-an-incident)
 - [Bunları çözme](#resolve-an-incident)
-- [Sınıflandırmasını belirtme](#specify-the-classification)
+- [Sınıflandırmasını belirtin](#specify-the-classification)
 - [Açıklama ekleme](#add-comments)
 
-Olayları, Bir olayın Olay yönetme **bölmesinden** yönetebilirsiniz. İşte bir örnek.
+Olayları bir olayın **Olay yönetme** bölmesinden yönetebilirsiniz. İşte bir örnek.
 
-:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents-manage.png" alt-text="Microsoft 365 Defender portalında Olayı yönet bölmesi" lightbox="../../media/incidents-queue/incidents-ss-incidents-manage.png":::
+:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents-manage.png" alt-text="Microsoft 365 Defender portalındaki Olayı yönet bölmesi" lightbox="../../media/incidents-queue/incidents-ss-incidents-manage.png":::
 
-Bu bölmeyi, şu bölmede **yer alan Olayı** yönet bağlantısından görüntüleyebilirsiniz:
+Bu bölmeyi aşağıdaki olay **yönet** bağlantısından görüntüleyebilirsiniz:
 
-- Olay sırasındaki bir olayın Özellikler bölmesi.
-- **Bir** olayın özet sayfası.
+- Olay kuyruğundaki bir olayın Özellikler bölmesi.
+- Bir olayın **özet** sayfası.
 
-Uyarıları bir olaydan diğerine taşımak istediğiniz durumlarda, bunu da Uyarılar sekmesinden yapmaya devam edersiniz; böylece ilgili tüm  uyarıları içeren daha büyük veya daha küçük bir olay oluşturulur.
+Uyarıları bir olaydan diğerine taşımak istediğiniz durumlarda, **uyarılar sekmesinden** de bunu yapabilirsiniz, böylece tüm ilgili uyarıları içeren daha büyük veya daha küçük bir olay oluşturabilirsiniz.
 
 ## <a name="edit-the-incident-name"></a>Olay adını düzenleme
 
-Microsoft 365 Defender, etkilenen uç noktalarının sayısı, etkilenen kullanıcılar, algılama kaynakları veya kategoriler gibi uyarı özniteliklerine dayalı olarak otomatik olarak bir ad atar. Bu, olayın kapsamını hızla anlamana olanak sağlar. Örneğin: *Birden çok kaynak tarafından bildirilen birden çok uç noktada çok aşamalı olay.*
+Microsoft 365 Defender, etkilenen uç nokta sayısı, etkilenen kullanıcılar, algılama kaynakları veya kategoriler gibi uyarı özniteliklerine göre otomatik olarak bir ad atar. Bu, olayın kapsamını hızlı bir şekilde anlamanıza olanak tanır. Örneğin: *Birden çok kaynak tarafından bildirilen birden çok uç noktada çok aşamalı olay.*
 
-Olayı yönet bölmesindeki Olay adı **alanından** olay **adını düzenleyebilirsiniz** .
+Olay adını, Olayı **yönet** bölmesindeki **Olay adı** alanından düzenleyebilirsiniz.
 
 > [!NOTE]
-> Otomatik olay adlandırma özelliğinin adı devre dışı olmadan önce mevcut olan olaylar, bu olayları korur.
+> Otomatik olay adlandırma özelliği piyasaya sürülmeden önce var olan olaylar adlarını korur.
 
 ## <a name="add-incident-tags"></a>Olay etiketleri ekleme
 
-Örneğin, bir olay grubunu ortak bir özel durumla bayrak eklemek için, bir olaya özel etiketler ebilirsiniz. Belirli bir etiket içeren tüm olaylar için sonradan olay kuyruğuna filtre ebilirsiniz.
+Bir olaya, örneğin ortak bir özelliğe sahip bir olay grubuna bayrak eklemek için özel etiketler ekleyebilirsiniz. Daha sonra belirli bir etiket içeren tüm olaylar için olay kuyruğuna filtreleyebilirsiniz.
 
-Yazmaya başladığınızda, daha önce kullanılmış ve seçilmiş etiketler listesinden seçim yapmaya başlayabilirsiniz.
+Yazmaya başladığınızda, önceden kullanılan ve seçilen etiketler listesinden seçim yapmak için seçeneğiniz vardır.
 
 ## <a name="assign-an-incident"></a>Olay atama
 
-Henüz bir olay atanmamışsa, Atanacak yer **kutusunu seçerek** kullanıcı hesabını belirtebilirsiniz. Bir olayı yeniden atamak için, hesap adının yanındaki "x" öğesini ve ardından Ata kutusunu seçerek geçerli atama **hesabını** kaldırın. Bir olayın sahipliğini atamak, ilgili tüm uyarılara aynı sahipliği atar.
+Henüz bir olay atanmamışsa, **Ata** kutusunu seçip kullanıcı hesabını belirtebilirsiniz. Bir olayı yeniden atamak için hesap adının yanındaki "x" işaretini seçip **Atanan** kutusunu seçerek geçerli atama hesabını kaldırın. Bir olayın sahipliğini atamak, kendisiyle ilişkilendirilmiş tüm uyarılara aynı sahipliği atar.
 
-Olay kuyruğuna filtre ataarak size atanmış olayları listesini eldeebilirsiniz. 
+Olay kuyruğuna filtre uygulama yoluyla size atanan olayların listesini alabilirsiniz. 
 
-1. Olay sırasında Filtreler'i **seçin**.
-2. Olay atama **bölümünde, Hepsini** **seç'i ve Bana** **atanan'ı seçin**.
-3. **Uygula'ya** tıklayın ve filtreler **bölmesini** kapatın.
+1. Olay kuyruğundan **Filtreler'i** seçin.
+2. **Olay ataması** bölümünde **Tümünü seç'i** temizleyin ve **Bana atanan'ı** seçin.
+3. **Uygula'yı** seçin ve **filtreler bölmesini kapatın**.
 
-Ardından, size atanmış olay listesini hızla görmek için, sonuçta elde edilen URL'yi tarayıcınızda yer işareti olarak kaydedebilirsiniz.
+Ardından, size atanan olayların listesini hızla görmek için elde edilen URL'yi tarayıcınıza yer işareti olarak kaydedebilirsiniz.
 
 ## <a name="resolve-an-incident"></a>Bir olayı çözme
 
-Olay düzeltildise, iki durumlu **düğmeyi sağa taşımak** için Olayı çöz'e seçin. Bir olayı çözmenin, olayla ilgili tüm bağlantılı ve etkin uyarıları da çözmediğini unutmayın.
+Olay düzeltildiyse olayı **çözümle'yi** seçerek iki durumlu düğmeyi sağa taşıyın. Bir olayı çözümlemenin, olayla ilgili tüm bağlantılı ve etkin uyarıları da çözümlediğini unutmayın.
 
-Çözümlenmezse bir olay Etkin olarak **görüntülenir**.
+Çözümlenmeyen bir olay **Etkin** olarak görüntülenir.
 
 ## <a name="specify-the-classification"></a>Sınıflandırmayı belirtme
 
-Sınıflandırma **alanında** , olayın aşağıdaki gibi bir olay olup olmadığını belirtirsiniz:
+**Sınıflandırma** alanında, olayın aşağıdakilerden biri olup olmadığını belirtirsiniz:
 
-- **Ayarlanmaz** (varsayılan).
-- **Bir tehdit** türünde gerçek pozitif sonuç. Gerçek bir tehditi doğru gösteren olaylar için bu sınıflandırmayı kullanın. Tehdit türünü belirtmek, güvenlik ekibinin tehdit düzenlerini görmelerine ve organizasyonunu onlardan savunmaya yardımcı olur.
-- **Bilgilendirme, etkinlik türüyle** beklenen etkinlik. Güvenlik testleri, kırmızı ekip etkinliği ve güvenilir uygulamalarla kullanıcılardan beklenen alışılmışın dışında bir davranış için olayları sınıflandırmak üzere bu kategorideki seçenekleri kullanın.
-- **Teknik olarak** yanlış ve yanıltıcı olduğundan, sizin karartılan olay türleri için hatalı pozitif sonuçlar yoksayılabilir.
+- **Ayarlanmadı** (varsayılan).
+- Bir tehdit türüyle **gerçek pozitif**. Gerçek bir tehdidi doğru şekilde gösteren olaylar için bu sınıflandırmayı kullanın. Tehdit türünü belirtmek, güvenlik ekibinizin tehdit desenlerini görmesine ve kuruluşunuzu onlardan korumak için harekete geçilmesine yardımcı olur.
+- Bir etkinlik türüyle **bilgilendirici, beklenen** etkinlik. Güvenlik testlerine, kırmızı ekip etkinliğine ve güvenilen uygulamalardan ve kullanıcılardan beklenen olağan dışı davranışlara yönelik olayları sınıflandırmak için bu kategorideki seçenekleri kullanın.
+- Teknik olarak yanlış veya yanıltıcı olduğundan, tespit ettiğiniz olay türleri için **hatalı pozitif** değeri yoksayılabilir.
 
-Olayları sınıflama, durumunu ve türünü belirtme, zaman içinde daha iyi Microsoft 365 Defender algılama belirlemesi sağlamak için gerekli ayarlamaları yapmak için gerekli ayarlamaları yapmak için yardımcı olur.
+Olayları sınıflandırmak, durumlarını ve türlerini belirtmek, zaman içinde daha iyi algılama belirlemesi sağlamak için Microsoft 365 Defender ayarlanmasına yardımcı olur.
+
+Önceliklendirme verimliliğini artırmak için sınıflandırmayı kullanmayı öğrenmek için bu kısa videoyu izleyin.  
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4LHJq]
 
 ## <a name="add-comments"></a>Açıklama ekleme
 
-Açıklama alanı içeren bir olayda birden **çok açıklama ebilirsiniz** . Her açıklama, olayın geçmiş olaylarına eklenir. Özet sayfasındaki Açıklamalar ve geçmiş bağlantısından bir **olayın açıklamalarını ve** **geçmişini görebilirsiniz.**
+**Açıklama** alanıyla bir olaya birden çok açıklama ekleyebilirsiniz. Her açıklama, olayın geçmiş olaylarına eklenir. **Özet** sayfasındaki Açıklamalar ve geçmiş bağlantısından bir olayın açıklamalarını **ve geçmişini** görebilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Yeni olaylar için araştırmanıza [başlayabilirsiniz](investigate-incidents.md).
+Yeni olaylar için [araştırmanıza](investigate-incidents.md) başlayın.
 
-süreç içinde yaşanan olaylarda, incelemenize devam [etmek gerekir](investigate-incidents.md).
+Devam eden olaylar için [araştırmanıza](investigate-incidents.md) devam edin.
 
-Çözülen olaylarda, olay [sonrası inceleme gerçekleştirin](first-incident-post.md).
+Çözülen olaylar için [olay sonrası gözden geçirme gerçekleştirin](first-incident-post.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

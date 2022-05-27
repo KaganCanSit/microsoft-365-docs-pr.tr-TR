@@ -16,13 +16,13 @@ ms.assetid: e2fdfc8d-547e-4419-8628-2738ed4e0f46
 f1.keywords:
 - NOCSH
 ms.custom: seo-marvel-apr2020
-description: Bu makalede, kuruluş verilerinizi Microsoft 365 geçirmenize yardımcı olacak kaynaklara sahip olacaksınız.
-ms.openlocfilehash: d0cf1aa5e744dc545f5a037b63f7cc1981f0e23c
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Bu makalede, kuruluş verilerinizi Microsoft 365 geçirmenize yardımcı olacak kaynakları bulacaksınız.
+ms.openlocfilehash: 97846f3a35fdc415b172cbc5670739ca10204b70
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65096424"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65753440"
 ---
 # <a name="migrate-your-organization-data-to-microsoft-365-enterprise"></a>Kuruluş verilerinizi Microsoft 365 Kurumsal geçirme
 
@@ -30,7 +30,7 @@ ms.locfileid: "65096424"
 
 [Temel kurulum yönergelerimiz](https://support.office.com/article/Set-up-Office-365-for-business-6a3a29a0-e616-4713-99d1-15eda62d04fa), Microsoft 365 hizmetlerinizi ve uygulamalarınızı mümkün olan en kısa sürede kullanan herkese yardımcı olur. Bu, karma senaryoları ve Microsoft 365 geçiş için daha gelişmiş yöntemleri atlar. 
   
-Microsoft 365 kurulumuyla ilgili yardım almak istiyorsanız[, Microsoft 365](https://fasttrack.microsoft.com/office) dağıtmanın en kolay yolu FastTrack, oturum açabilir ve [Microsoft 365 hizmetleri için Kurulum kılavuzlarını](setup-guides-for-microsoft-365.md) da kullanabilirsiniz.
+Microsoft 365 kurulumu konusunda yardım almak istiyorsanız[, Microsoft 365](https://fasttrack.microsoft.com/office) dağıtmanın en kolay yolu FastTrack, oturum açabilir ve [Microsoft 365 hizmetleri için Kurulum kılavuzlarını](setup-guides-for-microsoft-365.md) da kullanabilirsiniz.
 
 ## <a name="migrate-email-to-microsoft-365"></a>E-postayı Microsoft 365 geçirme
 - Exchange [Dağıtım Yardımcısı'nı kullanarak Exchange](https://technet.microsoft.com/exdeploy2013) Karma ile geçiş. (Yönetici)

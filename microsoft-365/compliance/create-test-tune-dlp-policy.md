@@ -19,12 +19,12 @@ ms.custom:
 - seo-marvel-mar2020
 ms.assetid: 59414438-99f5-488b-975c-5023f2254369
 description: Bu makalede, kuruluş gereksinimlerinize göre bir DLP ilkesi oluşturmayı, test etmeyi ve ayarlamayı öğreneceksiniz.
-ms.openlocfilehash: 5508ce96e1309122e9c4c5139941eb41f6906e82
-ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
+ms.openlocfilehash: 605288d5ee2839cc2f3ec225e551f0ba3e65bfcc
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2022
-ms.locfileid: "65637747"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65754002"
 ---
 # <a name="create-test-and-tune-a-dlp-policy"></a>Bir DLP ilkesi oluşturma, test etme ve ayarlama
 
@@ -44,7 +44,7 @@ DLP ilkeleri oluşturacak uyumluluk ekibinizin üyelerinin Uyumluluk Merkezi'ne 
   
 1. Microsoft 365'de bir grup oluşturun ve gruba uyumluluk görevlileri ekleyin.
     
-2. Güvenlik &amp; Uyumluluk Merkezi'nin **İzinler** sayfasında bir rol grubu oluşturun. 
+2. Microsoft Purview uyumluluk portalı **İzinler** sayfasında bir rol grubu oluşturun. 
 
 3. Rol grubunu oluştururken Rol **Seç** bölümünü kullanarak rol grubuna şu rolü ekleyin: **DLP Uyumluluk Yönetimi**.
     
@@ -62,7 +62,7 @@ Bu izinler, ilkeleri zorlamamak için bir DLP ilkesi oluşturmak ve uygulamak i�
 
 Aşağıda, önizleme aşamasında olan geçerli rollerin listesi yer alır. Bunlar hakkında daha fazla bilgi edinmek için bkz [. Güvenlik & Uyumluluk Merkezi'ndeki Roller](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center)
 
-- Information Protection Yöneticisi
+- Information Protection Yönetici
 - Information Protection Analisti
 - Information Protection Araştırmacısı
 - Information Protection Okuyucu
@@ -94,7 +94,7 @@ Bkz. Her bilgi türünün nasıl algılandığını açıklayan hassas bilgi tü
 
 Veri sızıntısı riskleri tamamen belirgin olmadığında, DLP'yi uygulamaya tam olarak nereden başlamanız gerektiğini bulmak zordur. Neyse ki DLP ilkeleri "test modunda" çalıştırılabilir ve bunları açmadan önce bunların verimliliğini ve doğruluğunu ölçmenizi sağlar.
 
-Exchange Online için DLP ilkeleri Exchange yönetim merkezi üzerinden yönetilebilir. Ancak Microsoft Purview uyumluluk portalı aracılığıyla tüm iş yükleri için DLP ilkelerini yapılandırabilirsiniz, bu nedenle bu makaledeki tanıtımlar için bunu kullanacağız. Microsoft Purview uyumluluk portalı veri **kaybı önlemeİlke** >  altında DLP ilkelerini bulacaksınız. Başlamak için **İlke oluştur'u** seçin.
+Exchange Online için DLP ilkeleri Exchange yönetim merkezi üzerinden yönetilebilir. Ancak Microsoft Purview uyumluluk portalı aracılığıyla tüm iş yükleri için DLP ilkelerini yapılandırabilirsiniz, bu nedenle bu makaledeki tanıtımlar için bunu kullanacağız. Microsoft Purview uyumluluk portalı veri **kaybı önleme** > **ilkesi** altında DLP ilkelerini bulacaksınız. Başlamak için **İlke oluştur'u** seçin.
 
 Microsoft 365, ilke oluşturmak için kullanabileceğiniz bir dizi [DLP ilke şablonu](what-the-dlp-policy-templates-include.md) sağlar. Diyelim ki avustralyalı bir işsiniz. Avustralya'da şablonları filtreleyebilir ve Finansal, Tıbbi ve Sağlık ile Gizlilik'i seçebilirsiniz.
 

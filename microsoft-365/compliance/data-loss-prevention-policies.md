@@ -25,26 +25,28 @@ ms.custom:
 ROBOTS: NOINDEX, NOFOLLOW
 feedback_system: None
 description: veri kaybı önleme başvuru malzemesi
-ms.openlocfilehash: 0c7fe1d3ccf1b74641be1d05506f1cc53b743218
-ms.sourcegitcommit: bb493f12701f6d6ee7d5e64b541adb87470bc7bc
+ms.openlocfilehash: 55e8e5bd16b850ecce84cc87d43e7269746a7999
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "63015504"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65754830"
 ---
 # <a name="data-loss-prevention-reference"></a>Veri kaybı önleme başvurusu
 
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
 > [!IMPORTANT]
-> Bu konu, artık veri kaybı önleme (DLP) Microsoft 365 ana kaynak değildir. DLP içerik kümesi güncelleştiriliyor ve yeniden yapılandır ediliyor. Bu makalede ele alan konular yeni, güncelleştirilmiş makalelere taşınacak. DLP hakkında daha fazla bilgi için bkz. [Veri kaybını önleme hakkında bilgi.](dlp-learn-about-dlp.md)
+> Bu başvuru konusu artık Microsoft Purview Veri Kaybı Önleme (DLP) bilgileri için ana kaynak değildir. DLP içerik kümesi güncelleştiriliyor ve yeniden yapılandırılıyor. Bu makalede ele alınan konular yeni, güncelleştirilmiş makalelere taşınacaktır. DLP hakkında daha fazla bilgi için bkz. [Veri kaybını önleme hakkında bilgi edinin](dlp-learn-about-dlp.md).
 
 <!-- this topic needs to be split into smaller, more coherent ones. It is confusing as it is. -->
 <!-- move this note to a more appropriate place, no topic should start with a note -->
 > [!NOTE]
-> Tek başına bir seçenek olarak kullanılabilen ve Microsoft Teams ve Office 365 Gelişmiş Uyumluluk lisansına sahip kullanıcılar için yeni sohbet ve kanal iletilerine veri kaybı önleme özellikleri Office 365 E5 Microsoft 365 E5 Uyumluluk. Lisans gereksinimleri hakkında daha fazla bilgi edinmek için [Lisanslama Microsoft 365 Tenant-Level'ne bakın](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance).
+> Veri kaybı önleme özellikleri kısa süre önce Office 365 Gelişmiş Uyumluluk lisansına sahip kullanıcılar için sohbet ve kanal iletileri Microsoft Teams eklendi. Bu özellik tek başına bir seçenek olarak kullanılabilir ve Office 365 E5 ve Microsoft 365 E5 Uyumluluk. Lisanslama gereksinimleri hakkında daha fazla bilgi edinmek için bkz. [Microsoft 365 Tenant-Level Hizmetleri Lisanslama Kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance).
 
 
 
-<!-- MOVED TO LEARN ABOUT To comply with business standards and industry regulations, organizations must protect sensitive information and prevent its inadvertent disclosure. Sensitive information can include financial data or personally identifiable information (PII) such as credit card numbers, social security numbers, or health records. With a data loss prevention (DLP) policy in the Office 365 Security &amp; Compliance Center, you can identify, monitor, and automatically protect sensitive information across Office 365.
+<!-- MOVED TO LEARN ABOUT To comply with business standards and industry regulations, organizations must protect sensitive information and prevent its inadvertent disclosure. Sensitive information can include financial data or personally identifiable information (PII) such as credit card numbers, social security numbers, or health records. With a data loss prevention (DLP) policy in the Microsoft Purview compliance portal, you can identify, monitor, and automatically protect sensitive information across Office 365.
 
 With a DLP policy, you can:
 
@@ -69,11 +71,11 @@ With a DLP policy, you can:
     To view alerts and metadata related to your DLP policies you can use the [DLP Alerts Management Dashboard](dlp-configure-view-alerts-policies.md). You can also view policy match reports to assess how your organization is complying with a DLP policy. If a DLP policy allows users to override a policy tip and report a false positive, you can also view what users have reported
 
 -->
-## <a name="create-and-manage-dlp-policies"></a>DLP ilkelerini oluşturma ve yönetme
+## <a name="create-and-manage-dlp-policies"></a>DLP ilkeleri oluşturma ve yönetme
 
-DLP ilkelerini, Uyumluluk Merkezi'nde Veri kaybı önleme sayfasında Microsoft 365 yönetirsiniz.
+DLP ilkelerini Microsoft Purview uyumluluk portalı veri kaybı önleme sayfasında oluşturur ve yönetirsiniz.
 
-![Uyumluluk Merkezi'nde veri Office 365 önleme &amp; sayfası.](../media/943fd01c-d7aa-43a9-846d-0561321a405e.png)
+![Microsoft Purview uyumluluk portalı veri kaybı önleme sayfası](../media/943fd01c-d7aa-43a9-846d-0561321a405e.png)
 
 <!-- MOVED TO LEARN ABOUT ## What a DLP policy contains
 
@@ -302,147 +304,147 @@ Regarding policy tips, note that:
 
 -->
 
-## <a name="tuning-rules-to-make-them-easier-or-harder-to-match"></a>Kuralların eşleşmelerini kolaylaştıracak veya zorlaştıracak şekilde ayarlama
+## <a name="tuning-rules-to-make-them-easier-or-harder-to-match"></a>Eşleştirmeyi kolaylaştırmak veya zorlaştırmak için kuralları ayarlama
 
-Kişiler kendi DLP ilkelerini oluşturduklarından ve bu ilkeleri oluşturduklarından sonra, bazen şu sorunlar ile yüzleri ortaya atlar:
+İnsanlar DLP ilkelerini oluşturduktan ve açtıktan sonra bazen şu sorunlarla karşılaşırlar:
 
-- Hassas bilgilerle **çok fazla içerik** kuralla eş, başka bir deyişle çok fazla yanlış pozitif sonuç var.
+- Hassas bilgi **olmayan** çok fazla içerik kurallarla eşleşir; başka bir deyişle çok fazla hatalı pozitif sonuç.
 
-- Hassas bilgiler **kurallarla çok** az eşleşmeye neden olur. Başka bir deyişle, hassas bilgiler üzerinde koruyucu eylemler zorunlu kılınmaz.
+- Hassas bilgi **olan** çok az içerik kurallarla eşleşir. Başka bir deyişle, hassas bilgiler üzerinde koruyucu eylemler uygulanmaz.
 
-Bu sorunları ele etmek için, içeriğin kurallarla eşleşmeyi zorlaştıracak veya kolaylaştıracak şekilde örnek sayısını ve doğruluğunu ayarlayarak kurallarınızı düzeltebilirsiniz. Bir kuralda kullanılan her hassas bilgi türünün, bir örneği sayısı ve doğruluk oranı vardır.
+Bu sorunları gidermek için, içeriğin kurallarla eşleşmesini zorlaştırmak veya kolaylaştırmak için örnek sayısını ve eşleşme doğruluğunu ayarlayarak kurallarınızı ayarlayabilirsiniz. Bir kuralda kullanılan her hassas bilgi türünün hem örnek sayısı hem de eşleşme doğruluğu vardır.
 
 ### <a name="instance-count"></a>Örnek sayısı
 
-Örnek sayısı, yalnızca içeriğin kuralla eşleşmesi için belirli bir tür hassas bilgiden kaç kez yine olması gerektiğini ifade ediyor. Örneğin, benzersiz 1 ABD veya İngiltere ile 9 arasında ise, içerik aşağıdaki kuralla eşlenmiştir. pasaport numaraları tanımlanır.
+Örnek sayısı, içeriğin kuralla eşleşmesi için belirli bir hassas bilgi türünün kaç kez bulunması gerektiği anlamına gelir. Örneğin içerik, 1 ile 9 arasında benzersiz ABD veya Birleşik Krallık arasındaysa aşağıda gösterilen kuralla eşleşir. pasaport numaraları belirlenir.
 
 > [!NOTE]
-> Örnek sayısı yalnızca hassas bilgi **türleri** ve anahtar sözcükler için benzersiz eşleşmeleri içerir. Örneğin, e-postada aynı kredi kartı numarasının 10 tekrarı varsa, bu 10 tekrar, bir kredi kartı numarasının tek örneği olarak sayılır.
+> Örnek sayısı yalnızca hassas bilgi türleri ve anahtar sözcükler için **benzersiz** eşleşmeler içerir. Örneğin, bir e-posta aynı kredi kartı numarasının 10 örneğini içeriyorsa, bu 10 yineleme, kredi kartı numarasının tek bir örneği olarak sayılır.
 
-Kural ayarlamak üzere örnek sayısını kullanmak için, kılavuz açık bir şekilde anlaşılır:
+Kuralları ayarlamak için örnek sayısını kullanmak için kılavuz basittir:
 
-- Kuralın eşleşmeyi kolaylaştırmak için, dakika sayısını **azaltarak** ve/veya en yüksek **s sayımı** artırarak. Sayısal değeri **silerek de** **herhangi bir en** büyük değere ayarlayabilirsiniz.
+- Kuralın eşleşmesini kolaylaştırmak için **en az** sayıyı azaltın ve/veya **maksimum** sayıyı artırın. Ayrıca sayısal değeri silerek **maksimum** değerini **herhangi birine** ayarlayabilirsiniz.
 
-- Kuralın eşleşmeyi zorlaştırması için, **min sayısını** artırarak.
+- Kuralın eşleşmesini zorlaştırmak için **minimum** sayıyı artırın.
 
-Normalde, daha düşük örnek sayısına sahip bir kuralda (örneğin, 1-9) kullanıcı bildirimleri gönderme gibi daha az kısıtlayıcı eylemler kullanırsınız. Daha yüksek örnek sayısına (örneğin, 10-any) sahip bir kuralda, kullanıcı geçersiz kılmalarına izin vermeden içeriğe erişimi kısıtlama gibi daha kısıtlayıcı eylemler kullanırsınız.
+Genellikle, daha düşük örnek sayısı olan bir kuralda (örneğin, 1-9) kullanıcı bildirimleri gönderme gibi daha az kısıtlayıcı eylemler kullanırsınız. Ayrıca daha yüksek örnek sayısı olan bir kuralda (örneğin, 10-herhangi bir) kullanıcı geçersiz kılmalarına izin vermeden içeriğe erişimi kısıtlama gibi daha kısıtlayıcı eylemler kullanırsınız.
 
-![Kural düzenleyicisinde örnek sayıları yer almaktadır.](../media/e7ea3c12-72c5-4bb3-9590-c924c665e84d.png)
+![Kural düzenleyicisinde örnek sayıları.](../media/e7ea3c12-72c5-4bb3-9590-c924c665e84d.png)
 
 ### <a name="match-accuracy"></a>Eşleşme doğruluğu
 
-Yukarıda da açıklandığı gibi, hassas bir bilgi türü farklı kanıt türleri birleşimi kullanılarak tanımlanır ve algılanır. Yaygın olarak, hassas bir bilgi türü desen adı verilen bu tür birden çok bileşim tarafından tanımlanır. Daha az kanıt gerektiren bir düzenin daha düşük bir eşleşme doğruluğu (veya güven düzeyi) varken, daha fazla kanıt gerektiren bir düzenin daha yüksek bir eşleşme doğruluğu (veya güven düzeyi) vardır. Her hassas bilgi türü tarafından kullanılan gerçek kalıplar ve güven düzeyleri hakkında daha fazla bilgi edinmek için bkz [. Hassas bilgi türü varlık tanımları](sensitive-information-type-entity-definitions.md).
+Yukarıda açıklandığı gibi, farklı kanıt türlerinin bir bileşimi kullanılarak hassas bir bilgi türü tanımlanır ve algılanır. Genellikle, hassas bir bilgi türü desen olarak adlandırılan bu tür birden çok birleşimle tanımlanır. Daha az kanıt gerektiren bir desen daha düşük eşleşme doğruluğuna (veya güvenilirlik düzeyine), daha fazla kanıt gerektiren bir desen ise daha yüksek eşleşme doğruluğuna (veya güvenilirlik düzeyine) sahiptir. Her hassas bilgi türü tarafından kullanılan gerçek desenler ve güvenilirlik düzeyleri hakkında daha fazla bilgi edinmek için bkz [. Hassas bilgi türü varlık tanımları](sensitive-information-type-entity-definitions.md).
 
-Örneğin, Kredi Kartı Numarası adlı hassas bilgi türü iki modelle tanımlanır:
+Örneğin, Kredi Kartı Numarası adlı hassas bilgi türü iki desenle tanımlanır:
 
 - %65 güven gerektiren bir desen:
 
-  - Kredi kartı numarası biçimindeki bir numara.
+  - Kredi kartı numarası biçiminde bir sayı.
 
-  - Denetim toplamdan geçen bir sayıdır.
+  - Sağlama toplamını geçiren bir sayı.
 
-- %85 güven gerektiren bir desen:
+- %85 güvenilirlik gerektiren bir desen:
 
-  - Kredi kartı numarası biçimindeki bir numara.
+  - Kredi kartı numarası biçiminde bir sayı.
 
-  - Denetim toplamdan geçen bir sayıdır.
+  - Sağlama toplamını geçiren bir sayı.
 
   - Doğru biçimde bir anahtar sözcük veya son kullanma tarihi.
 
-Kurallarınız içinde bu güven düzeylerini (veya doğruluğu) kullanabilirsiniz. Normalde, daha düşük eşleşme doğruluğuna sahip bir kuralda kullanıcı bildirimleri gönderme gibi daha az kısıtlayıcı eylemler kullanırsınız. Ayrıca, daha yüksek eşleşme doğruluğuna sahip bir kuralda, kullanıcı geçersiz kılmalarına izin vermeden içeriğe erişimi kısıtlama gibi daha kısıtlayıcı eylemler kullanırsiniz.
+Kurallarınızda bu güvenilirlik düzeylerini (veya eşleşme doğruluğunu) kullanabilirsiniz. Genellikle, daha düşük eşleşme doğruluğuna sahip bir kuralda kullanıcı bildirimleri gönderme gibi daha az kısıtlayıcı eylemler kullanırsınız. Ayrıca daha yüksek eşleşme doğruluğuna sahip bir kuralda kullanıcı geçersiz kılmalarına izin vermeden içeriğe erişimi kısıtlama gibi daha kısıtlayıcı eylemler kullanırsınız.
 
-İçerikte kredi kartı numarası gibi belirli türde hassas bilgiler tanım olduğunda, yalnızca tek bir güven düzeyi döndürülecek olması önemlidir:
+kredi kartı numarası gibi belirli bir hassas bilgi türü içerikte tanımlandığında yalnızca tek bir güvenilirlik düzeyinin döndürüldüğünü anlamak önemlidir:
 
-- Eşleşmelerin hepsi tek bir desene göre ise, bu desenin güven düzeyi döndürülür.
+- Tüm eşleşmeler tek bir desen içinse, bu desen için güvenilirlik düzeyi döndürülür.
 
-- Birden fazla desende eşleşme varsa (yani, iki farklı güven düzeyiyle eşleşmeler vardır), tek başına tek kalıplardan herhangi birinin üzerinde bir güven düzeyi döndürülür. Bu biraz karmaşık bir bölüm. Örneğin, kredi kartı için hem %65 hem de %85 düzeni eşlediyse, bu hassas bilgi türü için döndürülen güven düzeyi %90'dan büyüktür çünkü daha fazla kanıt daha fazla güven anlamına gelir.
+- Birden fazla desen için eşleşmeler varsa (yani iki farklı güvenilirlik düzeyiyle eşleşmeler varsa), tek başına tüm desenlerden daha yüksek bir güvenilirlik düzeyi döndürülür. İşin zor kısmı da bu. Örneğin, kredi kartı için hem %65 hem de %85 desenleri eşleştirilirse, bu hassas bilgi türü için döndürülen güvenilirlik düzeyi %90'dan fazladır çünkü daha fazla kanıt daha fazla güvenilirlik anlamına gelir.
 
-Dolayısıyla, kredi kartları için biri %65'inde eşleşme doğruluğu, biri de %85'inde eşleşme doğruluğu için olmak istediğiniz iki özel kural oluşturmak için, eşleşme doğruluğuna uygun aralıklar aşağıdakine benzer olur. İlk kural yalnızca %65 deseninin eşleşmelerini alır. İkinci kural en az %85 eşleşmeyle  eşleşmeleri seçer ve başka daha düşük güveni  olan eşleşmeler de olabilir.
+Bu nedenle, kredi kartları için biri %65 eşleşme doğruluğu, biri de %85 eşleşme doğruluğu için olmak üzere birbirini dışlayan iki kural oluşturmak istiyorsanız, eşleşme doğruluğu aralıkları şöyle görünür. İlk kural yalnızca %65 deseninin eşleşmelerini alır. İkinci kural **, en az** %85 eşleşmesi olan eşleşmeleri alır ve diğer düşük güvenilirlikli eşleşmelere **sahip olabilir** .
 
 ![Eşleşme doğruluğu için farklı aralıklara sahip iki kural.](../media/21bdfe36-7a91-4347-8098-11809a92f9a4.png)
 
-Bu nedenlerle, farklı eşleşmelere sahip kurallar oluşturma konusunda yol gösterici kurallar aşağıdakitir:
+Bu nedenlerle, farklı eşleşme doğruluğuna sahip kurallar oluşturma yönergeleri şunlardır:
 
-- En düşük güven düzeyi normalde en düşük ve en yüksek değer **(aralık için** **değil** ) için aynı değeri kullanır.
+- En düşük güvenilirlik düzeyi genellikle **min** ve **max** (aralık değil) için aynı değeri kullanır.
 
-- En yüksek güven düzeyi genellikle, düşük güven düzeyinin hemen üstünde olan ve 100 olan bir aralıktır.
+- En yüksek güvenilirlik düzeyi genellikle düşük güvenilirlik düzeyinin hemen üstünden 100'e kadar olan bir aralıktır.
 
-- Güven düzeyleri arasındaki herhangi bir in-between genel olarak, düşük güven düzeyinin hemen üstünden hemen sonra, daha yüksek güven düzeyinin hemen altına doğru sıralanmıştır.
+- Aralarındaki güven düzeyleri genellikle düşük güvenilirlik düzeyinin hemen üstünden daha yüksek güvenilirlik düzeyinin hemen altına kadar değişir.
 
-## <a name="using-a-retention-label-as-a-condition-in-a-dlp-policy"></a>DLP ilkesinde bir bekletme etiketini koşul olarak kullanma
+## <a name="using-a-retention-label-as-a-condition-in-a-dlp-policy"></a>DLP ilkesinde koşul olarak bekletme etiketi kullanma
 
-Daha önce oluşturulmuş ve yayımlanmış bir [bekletme etiketini](retention.md#retention-labels) bir DLP ilkesinde koşul olarak kullanırken, dikkatmesi gereken bazı şeyler vardır:
+DLP ilkesinde koşul olarak önceden oluşturulmuş ve yayımlanmış bir [bekletme etiketi](retention.md#retention-labels) kullandığınızda, bilmeniz gereken bazı şeyler vardır:
 
-- Bekletme etiketinin, DLP ilkesinde bir koşul olarak kullanmayı denemeden önce oluşturulmuş ve yayımlanmış olması gerekir.
-- Yayımlanmış bekletme etiketlerinin eşitlemesi bir ile yedi gün arasında zaman alabiliyor. Daha fazla bilgi için bkz[](create-apply-retention-labels.md#when-retention-labels-become-available-to-apply). Bekletme ilkesinde yayımlanan bekletme etiketleri için bekletme etiketleri ne zaman kullanılabilir hale geldiğinde ve otomatik [](apply-retention-labels-automatically.md#how-long-it-takes-for-retention-labels-to-take-effect) olarak yayımlanan bekletme etiketlerinin geçerlik olması bekletme etiketlerinin ne kadar sürer?
-- **İlkede bekletme etiketi kullanmak yalnızca **'daki ve SharePoint öğeleri OneDrive***.
+- Bekletme etiketi, bir DLP ilkesinde koşul olarak kullanılmaya çalışılmadan önce oluşturulup yayımlanmalıdır.
+- Yayımlanan bekletme etiketlerinin eşitlenmesi bir ila yedi gün sürebilir. Daha fazla bilgi için bkz [. Bekletme etiketleri bir bekletme](create-apply-retention-labels.md#when-retention-labels-become-available-to-apply) ilkesinde yayımlanan bekletme etiketleri için geçerli olduğunda ve Bekletme etiketlerinin otomatik olarak yayımlanan bekletme etiketleri için [geçerli olması ne kadar sürer](apply-retention-labels-automatically.md#how-long-it-takes-for-retention-labels-to-take-effect) ?
+- İlkede bekletme etiketi kullanma **, yalnızca SharePoint ve OneDrive öğeleri için desteklenir**.
 
   ![Koşul olarak etiketler.](../media/5b1752b4-a129-4a88-b010-8dcf8a38bb09.png)
 
-  Bekletme ve disposition altında olan öğeleriniz varsa ve ayrıca onlara başka denetimler uygulamak istiyorsanız, DLP ilkesinde bir bekletme etiketi kullanmak istiyor olabileceğiniz gibi, örneğin:
+  Bekletme ve kullanımda olan öğeleriniz varsa ve bunlara başka denetimler uygulamak istiyorsanız, DLP ilkesinde bekletme etiketi kullanmak isteyebilirsiniz, örneğin:
 
-  - **2018** vergi yılı olarak adlandırılmış bir bekletme etiketi yayımladıniz. Bu etiket, SharePoint'de depolanan vergi belgelerine uygulandığında 10 yıl süreyle depolanmış ve sonra bunları atacak. Ayrıca, bu öğelerin kuruluş dışında paylaşılmalarını da istemiyorsunuz. Bunu bir DLP ilkesiyle de yapabiliriz.
+  - **2018'den** itibaren SharePoint depolanan vergi belgelerine uygulandığında bunları 10 yıl boyunca saklayan vergi yılı 2018 adlı bir bekletme etiketi yayımladınız. Ayrıca bu öğelerin kuruluşunuzun dışında paylaşılmasını da istemezsiniz. Bunu bir DLP ilkesiyle yapabilirsiniz.
 
   > [!IMPORTANT]
-  > Bir bekletme etiketini DLP ilkesinde koşul olarak belirtir ve konum olarak da Exchange ve/veya Teams belirtirseniz bu hatayı alırsınız: "E-posta ve ekip iletilerinde etiketli içeriğin korunması **desteklenmiyor. Aşağıdaki etiketi kaldırın ya da Konum olarak Exchange'Teams kapatın."** Çünkü aktarım, Exchange gönderme ve teslim sırasında etiket meta verilerini değerlendirmez.
+  > DLP ilkesinde koşul olarak bir bekletme etiketi belirtirseniz ve konum olarak da Exchange ve/veya Teams eklerseniz bu hatayı alırsınız: **"E-posta ve ekip iletilerinde etiketlenmiş içeriğin korunması desteklenmez. Aşağıdaki etiketi kaldırın veya Exchange kapatın ve konum olarak Teams."** Bunun nedeni, Exchange aktarım işleminin ileti gönderme ve teslim sırasında etiket meta verilerini değerlendirmemesidir.
 
-### <a name="using-a-sensitivity-label-as-a-condition-in-a-dlp-policy"></a>Duyarlılık etiketini DLP ilkesinde koşul olarak kullanma
+### <a name="using-a-sensitivity-label-as-a-condition-in-a-dlp-policy"></a>DLP ilkesinde koşul olarak duyarlılık etiketi kullanma
 
-[DLP ilkelerde](./dlp-sensitivity-label-as-condition.md) duyarlılık etiketini bir koşul olarak kullanma hakkında daha fazla bilgi edinmek için:
+DLP ilkelerinde duyarlılık etiketini koşul olarak kullanma hakkında [daha fazla bilgi edinin](./dlp-sensitivity-label-as-condition.md).
 
-### <a name="how-this-feature-relates-to-other-features"></a>Bu özelliğin diğer özelliklerle olan ilişkilendirmesi
+### <a name="how-this-feature-relates-to-other-features"></a>Bu özelliğin diğer özelliklerle ilişkisi
 
 Hassas bilgiler içeren içeriğe çeşitli özellikler uygulanabilir:
 
-- Bir [bekletme etiketi ve bekletme ilkesi, bu](retention.md) içerikte **bekletme** eylemlerini zorunlu bulundurabilirsiniz.
+- [Bekletme etiketi ve bekletme ilkesi](retention.md), bu içerikte **bekletme** eylemlerini zorunlu kılabilir.
 
-- DLP ilkesi, bu içerik **üzerinde** koruma eylemlerini zorunlu bulundurabilirsiniz. Bu eylemleri zorlamadan önce, etiket içeren içeriğe ek olarak bir DLP ilkesi de başka koşulların karşılandır gerektirir.
+- DLP ilkesi bu içerikte **koruma** eylemlerini zorunlu kılabilir. Bu eylemleri uygulamadan önce, bir DLP ilkesi etiket içeren içeriğe ek olarak başka koşulların da karşılanmasını gerektirebilir.
 
-![Hassas bilgilere uygulanabilecek özellikler diyagramı.](../media/dd410f97-a3a3-455c-a1e9-7ed8ae6893d6.png)
+![Hassas bilgilere uygulanabilecek özelliklerin diyagramı.](../media/dd410f97-a3a3-455c-a1e9-7ed8ae6893d6.png)
 
-DLP ilkesi, hassas bilgilere uygulanan etiket veya bekletme ilkesinden daha zengin bir algılama özelliğine sahiptir. DLP ilkesi, hassas bilgiler içeren içerik üzerinde koruyucu eylemleri zorunlu kılınır ve hassas bilgiler içerikten kaldırılırsa, içeriğin bir sonraki tarandığında bu koruyucu eylemler geri alınır. Ancak hassas bilgiler içeren içeriğe bir bekletme ilkesi veya etiket uygulanırsa, bu hassas bilgiler kaldırılmış olsa bile geri alınmayacak bir defalık bir eylemdir.
+DLP ilkesinin, hassas bilgilere uygulanan bir etiket veya saklama ilkesinden daha zengin bir algılama özelliğine sahip olduğunu unutmayın. DLP ilkesi, hassas bilgiler içeren içerik üzerinde koruyucu eylemler uygulayabilir ve hassas bilgiler içerikten kaldırılırsa, içerik bir sonraki taranışında bu koruyucu eylemler geri alınır. Ancak hassas bilgiler içeren içeriğe bekletme ilkesi veya etiket uygulanırsa, bu hassas bilgiler kaldırılsa bile geri alınmayacak tek seferlik bir eylemdir.
 
-Bir etiketi bir DLP ilkesinde koşul olarak kullanarak, bu etiketle içerik üzerinde hem bekletme hem de koruma eylemlerini zorunlu kılınabilirsiniz. İçeriğin, hassas bilgiler içeren içeriklere tam olarak benzer olduğunu düşünebilirsiniz; hem etiket hem de hassas bilgi türü içeriği sınıflandırmak için kullanılan özelliklerdir; dolayısıyla bu içerik üzerinde eylem gerçekleştirebilirsiniz.
+Bir etiketi bir DLP ilkesinde koşul olarak kullanarak, bu etikete sahip içerikte hem bekletme hem de koruma eylemlerini zorunlu kılabilirsiniz. Etiket içeren içeriği hassas bilgiler içeren içerik gibi düşünebilirsiniz. Hem etiket hem de hassas bilgi türü, içeriği sınıflandırmak için kullanılan özelliklerdir, böylece bu içerik üzerinde eylemleri zorunlu kılabilirsiniz.
 
-![Bir koşul olarak etiket kullanan DLP ilkesi diyagramı.](../media/4538fd8f-fb74-4743-bc22-a5de33adfebb.png)
+![Koşul olarak etiket kullanan DLP ilkesinin diyagramı.](../media/4538fd8f-fb74-4743-bc22-a5de33adfebb.png)
 
-## <a name="simple-settings-vs-advanced-settings"></a>Basit ayarlar ve gelişmiş ayarlar
+## <a name="simple-settings-vs-advanced-settings"></a>Basit ayarlar ve gelişmiş ayarlar karşılaştırması
 
-Bir DLP ilkesi  oluşturmak için, basit veya gelişmiş ayarlar arasında seçim yapabilirsiniz:
+DLP ilkesi oluşturduğunuzda, basit veya gelişmiş ayarlar arasında seçim yaparsınız:
 
-- **Basit ayarlar** , kuralları oluşturmak veya değiştirmek için kural düzenleyicisini kullanmadan en yaygın DLP ilkesi türünü oluşturmanızı kolaylaştırır.
+- **Basit ayarlar** , kuralları oluşturmak veya değiştirmek için kural düzenleyicisini kullanmadan en yaygın DLP ilkesi türünü oluşturmayı kolaylaştırır.
 
-- **Gelişmiş ayarlar** , DLP ilkenizin tüm ayarları üzerinde tam denetim vermek için kural düzenleyicisini kullanır.
+- **Gelişmiş ayarlar** , DLP ilkenizin her ayarı üzerinde tam denetim sağlamak için kural düzenleyicisini kullanır.
 
-Merak etmeyin, basit ayarların ve gelişmiş ayarların tamamen aynı şekilde çalışması için, yalnızca basit ayarlarla kural ve eylemlerden oluşan kuralların zorlanması nedeniyle kural düzenleyicisini görmüyoruz. Bu, DLP ilkesi oluşturmanın hızlı bir yolutur.
+Endişelenmeyin, kapakların altında, basit ayarlar ve gelişmiş ayarlar, koşullar ve eylemlerden oluşan kuralları zorunlu kılarak tam olarak aynı şekilde çalışır; yalnızca basit ayarlarla kural düzenleyicisini görmezsiniz. Bu, DLP ilkesi oluşturmanın hızlı bir yoludur.
 
 ### <a name="simple-settings"></a>Basit ayarlar
 
-En yaygın DLP senaryosu, hassas bilgiler içeren içeriğin kuruluş dışındaki kullanıcılarla paylaşılmasını korumaya yardımcı olacak bir ilke oluşturmak ve içeriğe kimlerin eriş erişeni kısıtlama, son kullanıcı veya yönetici bildirimlerini gönderme ve daha sonra araştırılacak olayı denetleme gibi otomatik bir düzeltme eyleminin yer aldığı bir ilke oluşturmaktır. Kişiler DLP'i, hassas bilgilerin istemeden açıklanmasını önlemeye yardımcı olmak için kullanır.
+Açık arayla en yaygın DLP senaryosu, hassas bilgileri içeren içeriğin kuruluşunuz dışındaki kişilerle paylaşılmasını önlemeye yardımcı olacak bir ilke oluşturmak ve içeriğe kimlerin erişebileceğini kısıtlama, son kullanıcı veya yönetici bildirimleri gönderme ve olayı daha sonra araştırmak üzere denetleme gibi otomatik bir düzeltme eylemi uygulamaktır. Kişiler, hassas bilgilerin yanlışlıkla açıklanmasını önlemeye yardımcı olmak için DLP kullanır.
 
-Bu hedefe ulaşmayı basitleştirmek için, bir DLP ilkesi 2013'e kadar **olanda Basit ayarları kullan'ı seçebilirsiniz**. Bu ayarlar, kural düzenleyicisine gitmek zorunda kalmadan en yaygın DLP İlkesini uygulamak için ihtiyacınız olan her şeyi sağlar.
+Bu hedefe ulaşmayı basitleştirmek için bir DLP ilkesi oluşturduğunuzda **Basit ayarları kullan'ı** seçebilirsiniz. Bu ayarlar, kural düzenleyicisine gitmek zorunda kalmadan en yaygın DLP ilkesini uygulamak için ihtiyacınız olan her şeyi sağlar.
 
 ![Basit ve gelişmiş ayarlar için DLP seçenekleri.](../media/33c93824-ead5-43b6-9c3e-fd1630c92a7d.png)
 
 ### <a name="advanced-settings"></a>Gelişmiş ayarlar
 
-Daha özelleştirilmiş DLP ilkeleri oluşturmanız gerekirse, Gelişmiş ayarları **kullan'ı seçebilirsiniz**.
+Daha özelleştirilmiş DLP ilkeleri oluşturmanız gerekiyorsa **Gelişmiş ayarları kullan'ı** seçebilirsiniz.
 
-Gelişmiş ayarlar, her kuralın örnek sayısı ve eşleşme doğruluğu (güven düzeyi) dahil olmak üzere tüm olası seçenekler üzerinde tam denetime sahip olduğunuz kural düzenleyicisini size sunar.
+Gelişmiş ayarlar, her kural için örnek sayısı ve eşleşme doğruluğu (güvenilirlik düzeyi) dahil olmak üzere her olası seçenek üzerinde tam denetime sahip olduğunuz kural düzenleyicisini sunar.
 
-Bir bölüme hızla atlamak için, kural düzenleyicisinin üst gezinti bölmesinde bir öğeye tıklayıp aşağıdaki bölüme gidin.
+Bir bölüme hızla atlamak için kural düzenleyicisinin üst gezinti bölmesindeki bir öğeye tıklayarak aşağıdaki bölüme gidin.
 
-![DLP kuralı düzenleyicisinin üst gezinti menüsü.](../media/c527b97f-ca53-4c79-ad19-1a63be8a8ecc.png)
+![DLP kural düzenleyicisinin üst gezinti menüsü.](../media/c527b97f-ca53-4c79-ad19-1a63be8a8ecc.png)
 
-## <a name="dlp-policy-templates"></a>DLP ilkesi şablonları
+## <a name="dlp-policy-templates"></a>DLP ilke şablonları
 
-DLP ilkesi oluşturmanın ilk adımı, hangi bilgilerin korunmasını seçmektir. Bir DLP şablonuyla başlayarak, sıfırdan yeni bir dizi kural oluşturma ve varsayılan olarak hangi tür bilgilerin dahil olması gerektiğini anlama çalışmalarını kaydetebilirsiniz. Daha sonra kuralın belirli gereksinimlerini karşılayacak şekilde ayarlamalar yapmak için bu gereksinimleri ekleyebilir veya değiştirebilirsiniz.
+DLP ilkesi oluşturmanın ilk adımı, hangi bilgilerin korunacağını seçmektir. Bir DLP şablonuyla başlayarak, sıfırdan yeni bir kural kümesi oluşturma ve varsayılan olarak hangi tür bilgilerin dahil edilmesi gerektiğini belirleme işini kaydedersiniz. Daha sonra, kuruluşunuzun özel gereksinimlerini karşılamak üzere kurala ince ayar yapmak için bu gereksinimleri ekleyebilir veya değiştirebilirsiniz.
 
-Önceden yapılandırılmış bir DLP ilkesi şablonu HIPAA verileri, PCI-DSS verileri, Gramm-Leach-Bliley Act verileri, hatta yerel ayara özgü kişisel bilgileri (P.I.) gibi belirli tür hassas bilgileri algılamanıza yardımcı olabilir. Sık kullanılan hassas bilgi türlerini kolayca bulmanı ve korumayı kolaylaştırmaya yardımcı olmak için, Microsoft 365 ilke şablonları zaten sizin için gerekli olan en yaygın hassas bilgi türlerini içerir.
+Önceden yapılandırılmış bir DLP ilke şablonu HIPAA verileri, PCI-DSS verileri, Gramm-Leach-Bliley Yasası verileri ve hatta yerel ayara özgü kişisel bilgiler (P.I.) gibi belirli hassas bilgi türlerini algılamanıza yardımcı olabilir. Yaygın hassas bilgi türlerini bulmanızı ve korumanızı kolaylaştırmak için, Microsoft 365'de bulunan ilke şablonları, kullanmaya başlamanız için gereken en yaygın hassas bilgi türlerini içerir.
 
-![ABD için şablonda odaklanan veri kaybı önleme ilkeleri için şablonların listesi. Act.](../media/791b2403-430b-4987-8643-cc20abbd8148.png)
+![ABD Vatanseverlik Yasası şablonuna odaklanan veri kaybı önleme ilkelerine yönelik şablonların listesi.](../media/791b2403-430b-4987-8643-cc20abbd8148.png)
 
-Ayrıca, kuruma ait belirli gereksinimler olabilir. Bu durumda Özel ilke seçeneğini kullanarak sıfırdan bir DLP **ilkesi oluşturabilirsiniz** . Özel ilke boştur ve önceden kuralı yoktur.
+Kuruluşunuzun kendi özel gereksinimleri de olabilir. Bu durumda **Özel ilke** seçeneğini belirleyerek sıfırdan bir DLP ilkesi oluşturabilirsiniz. Özel ilke boş ve önceden hazırlanmış kural içermiyor.
 
 <!-- ## Roll out DLP policies gradually with test mode
 
@@ -471,111 +473,111 @@ If you're creating DLP policies with a large potential impact, we recommend foll
 
 ## <a name="dlp-reports"></a>DLP raporları
 
-DLP ilkelerinizi oluşturduk ve bu ilkeleri oluşturdukktan sonra, bunların istediğiniz gibi çalıştığını doğrulamak ve uyumlu kalmanıza yardımcı olmak istemeniz gerekir. DLP raporlarıyla, zaman içinde DLP ilkesi ve kuralı eşleşmelerinin sayısını, hatalı pozitif sonuç ve geçersiz kılma sayısını hızlı şekilde görüntüabilirsiniz. Her raporda bu eşleşmeleri konuma, zaman çerçevesine göre filtresini oluşturabilir ve hatta belirli bir ilke, kural veya eyleme göre daraltabilirsiniz.
+DLP ilkelerinizi oluşturup açtıktan sonra, bunların istediğiniz gibi çalıştığını ve uyumlu kalmanıza yardımcı olduğunu doğrulamanız gerekir. DLP raporlarıyla, zaman içindeki DLP ilkesi ve kural eşleşmelerinin sayısını ve hatalı pozitif sonuçların ve geçersiz kılmaların sayısını hızla görüntüleyebilirsiniz. Her rapor için bu eşleşmeleri konuma, zaman çerçevesine göre filtreleyebilir ve hatta belirli bir ilke, kural veya eyleme göre daraltabilirsiniz.
 
-DLP raporlarıyla iş içgörüleri elde edin ve:
+DLP raporlarıyla iş içgörüleri elde edebilir ve:
 
-- Belirli zaman dönemleri üzerinde odaklanın ve depolar ile eğilimlerin nedenlerini an edin.
+- Belirli zaman aralıklarına odaklanın ve ani artışların ve eğilimlerin nedenlerini anlayın.
 
-- Kuruluş uyumluluk ilkelerini ihlal eden iş süreçleri keşfedin.
+- Kuruluşunuzun uyumluluk ilkelerini ihlal eden iş süreçlerini keşfedin.
 
-- DLP ilkelerinin ticari etkisini anlıyoruz.
+- DLP ilkelerinin iş üzerindeki etkisini anlayın.
 
-Buna ek olarak, DLP ilkelerini siz çalıştıracak şekilde ince ayar yapmak için DLP raporlarını kullanabilirsiniz.
+Ayrıca, DLP raporlarınızı çalıştırırken DLP ilkelerinize ince ayar yapmak için de kullanabilirsiniz.
 
-![Güvenlik ve Uyumluluk Merkezi'nde Raporlar Panosu.](../media/6d741252-a0ce-4429-95ba-6c857ecc9a7e.png)
+![Güvenlik ve Uyumluluk Merkezi'ndeki Raporlar Panosu.](../media/6d741252-a0ce-4429-95ba-6c857ecc9a7e.png)
 
 ## <a name="how-dlp-policies-work"></a>DLP ilkeleri nasıl çalışır?
 
-DLP, hassas bilgileri yalnızca basit bir metin taraması değil, derin içerik çözümlemesi kullanarak algılar. Bu derin içerik çözümlemesi, DLP ilkelerinize uygun içeriği algılamak için anahtar sözcük eşleşmelerini, sözlük eşleşmelerini, normal ifadeleri değerlendirmeyi, iç işlevleri ve diğer yöntemleri kullanır. Verilerinizin yalnızca küçük bir yüzdesi hassas olarak kabul edilir. DLP ilkesi, içeriğinizin geri kalanıyla çalışan verileri etkilemeden veya bu verileri etkilemeden yalnızca bu verileri tanımlayabilir, izleyebilir ve otomatik olarak koruyabilir.
+DLP, derin içerik analizi (yalnızca basit bir metin taraması değil) kullanarak hassas bilgileri algılar. Bu derin içerik analizi, DLP ilkelerinizle eşleşen içeriği algılamak için anahtar sözcük eşleşmelerini, sözlük eşleşmelerini, normal ifadelerin değerlendirilmesini, iç işlevleri ve diğer yöntemleri kullanır. Büyük olasılıkla verilerinizin yalnızca küçük bir yüzdesi hassas olarak kabul edilir. DLP ilkesi, içeriğinizin geri kalanıyla çalışan kişileri engellemeden veya etkilemeden yalnızca bu verileri tanımlayabilir, izleyebilir ve otomatik olarak koruyabilir.
 
-### <a name="policies-are-synced"></a>İlkeler eşitlenen
+### <a name="policies-are-synced"></a>İlkeler eşitlenir
 
-Güvenlik Uyumluluk Merkezi'nde bir DLP &amp; ilkesi oluşturduklarından sonra, bu ilke merkezi bir ilke deposuna depolanır ve sonra aşağıdakiler gibi çeşitli içerik kaynaklarıyla eşitlenen:
+Microsoft Purview uyumluluk portalı bir DLP ilkesi oluşturduktan sonra, bu ilke merkezi bir ilke deposunda depolanır ve ardından aşağıdakiler gibi çeşitli içerik kaynaklarıyla eşitlenir:
 
-- Exchange Online ve buradan da Web üzerinde Outlook ve Outlook.
+- Exchange Online ve oradan Web üzerinde Outlook ve Outlook.
 
-- OneDrive İş sitelerini ziyaret edin.
+- siteleri OneDrive İş.
 
-- SharePoint Online siteleri.
+- çevrimiçi siteleri SharePoint.
 
-- Office programlarını (Excel, PowerPoint Ve Word) kullanın.
+- masaüstü programlarını (Excel, PowerPoint ve Word) Office.
 
-- Microsoft Teams ve sohbet iletilerini gönderme.
+- kanalları ve sohbet iletilerini Microsoft Teams.
 
-İlke doğru konumlara eşitledikten sonra, içeriği değerlendirmeye ve eylemleri uygulamaya başlar.
+İlke doğru konumlara eşitlendikten sonra içeriği değerlendirmeye ve eylemleri zorlamaya başlar.
 <!-- what is the time delay for first deployment of a policy and what is the sync schedule? -->
 
-### <a name="policy-evaluation-in-onedrive-for-business-and-sharepoint-online-sites"></a>Çevrimiçi sitelerde OneDrive İş ilke SharePoint değerlendirme
+### <a name="policy-evaluation-in-onedrive-for-business-and-sharepoint-online-sites"></a>OneDrive İş ve SharePoint Online sitelerinde ilke değerlendirmesi
 
-tüm SharePoint Online siteleriniz ve tüm OneDrive İş, belgeler sürekli değişiyor; bunlar sürekli olarak oluşturulmuş, düzenlenmiş, paylaşılıyor, gibi. Bu da, belgelerin herhangi bir zamanda çakış, DLP ilkesiyle uyumlu hale geldiğini ifade ediyor. Örneğin, bir kişi hassas bilgiler içeren bir belgeyi ekip sitesine yükleyebilir, ancak daha sonra farklı bir kişi aynı belgeyi düzenleyebilir ve ona hassas bilgiler ekleyebilir.
+Tüm SharePoint Çevrimiçi siteleriniz ve OneDrive İş sitelerinizde belgeler sürekli değişiyor; bunlar sürekli oluşturuluyor, düzenleniyor, paylaşılıyor vb. Bu, belgelerin herhangi bir zamanda bir DLP ilkesiyle çakışabileceği veya uyumlu hale gelebileceği anlamına gelir. Örneğin, bir kişi ekip sitesine hassas bilgiler içermeyen bir belgeyi karşıya yükleyebilir, ancak daha sonra farklı bir kişi aynı belgeyi düzenleyip hassas bilgiler ekleyebilir.
 
-Bu nedenle, DLP ilkeleri, belgeleri ilke eşleşmeleri için sık sık arka planda kontrol eder. Bunu zaman uyumsuz ilke değerlendirmesi olarak düşünesiniz.
+Bu nedenle, DLP ilkeleri belgelerde ilke eşleşmelerini arka planda sık sık denetler. Bunu zaman uyumsuz ilke değerlendirmesi olarak düşünebilirsiniz.
 <!-- what is the frequency? looks like it is tied to the search crawl schedule -->
 
 #### <a name="how-it-works"></a>Nasıl çalışır?
 
-kişiler sitelerine belge ekley ettiyken veya sitelerinde değişiklik yaptıklarında, arama motoru içeriği tarar, böylece daha sonra arayabilirsiniz. Bu durum devam ederken, içerik hassas bilgileri de taranmış ve paylaşılıyor olup değildir. Bulunan tüm hassas bilgiler arama dizininde güvenli bir şekilde depolanır, böylece yalnızca uyumluluk ekibi bu bilgilere erişebilirsiniz ancak normal kullanıcılar erişemz. Açık olan her DLP ilkesi arka planda çalışır (zaman uyumsuz), bir ilkeyle eşleşen içerikleri sık sık denetleme ve yanlışlıkla sızdırılan sızıntılardan korumak için eylemleri uygulama.
+Kişiler sitelerine belge ekler veya değiştirirken, arama motoru içeriği tarar ve böylece daha sonra arama yapabilirsiniz. Bu durum yaşanırken, içerik ayrıca hassas bilgiler için taranır ve paylaşılıp paylaşılmadığını denetler. Bulunan tüm hassas bilgiler arama dizininde güvenli bir şekilde depolanır, böylece yalnızca uyumluluk ekibi erişebilir, ancak normal kullanıcılara erişemez. Açtığınız her DLP ilkesi arka planda (zaman uyumsuz olarak) çalışır, bir ilkeyle eşleşen içeriği sık sık arar ve yanlışlıkla sızıntılara karşı korumak için eylemler uygular.
 
-![DLP ilkesi içeriği zaman uyumsuz olarak nasıl değerlendirirken gösterilen diyagram.](../media/bdf73099-039a-4909-ae89-ac12c41992ba.png)
+![DLP ilkesinin içeriği zaman uyumsuz olarak nasıl değerlendireceğini gösteren diyagram.](../media/bdf73099-039a-4909-ae89-ac12c41992ba.png)
 
 <!-- conflict with a DLP policy is bad wording -->
-Son olarak, belgeler DLP ilkesiyle çakışsa da, DLP ilkesiyle uyumlu da olabilir. Örneğin, bir kişi bir belgeye kredi kartı numaraları ekliyorsa, DLP ilkesi belgenin erişimini otomatik olarak engellemeye neden olabilir. Ancak bu kişi hassas bilgileri daha sonra kaldırırsa, belgenin ilkeye göre bir sonraki değerlendirilmesinde bu eylem (bu durumda engelleme) otomatik olarak geri alınır.
+Son olarak, belgeler bir DLP ilkesiyle çakışabilir, ancak bir DLP ilkesiyle de uyumlu hale gelebilir. Örneğin, bir kişi belgeye kredi kartı numaraları eklerse, bu bir DLP ilkesinin belgeye otomatik olarak erişimi engellemesine neden olabilir. Ancak, kişi daha sonra hassas bilgileri kaldırırsa, belge ilkeye göre bir sonraki değerlendirildiğinde eylem (bu durumda engelleme) otomatik olarak geri alınır.
 
-DLP, dizine alın diğer tüm içeriği değerlendirir. Hangi dosya türlerinde varsayılan olarak gezinilenler hakkında daha fazla bilgi için bkz. SharePoint Server'da varsayılan gezinilen dosya adı uzantıları [ve ayrıştırıldı dosya türleri](/SharePoint/technical-reference/default-crawled-file-name-extensions-and-parsed-file-types).
+DLP, dizine alınabilecek tüm içeriği değerlendirir. Hangi dosya türlerinin varsayılan olarak gezindiği hakkında daha fazla bilgi için bkz. [SharePoint Server'da varsayılan gezilen dosya adı uzantıları ve ayrıştırılmış dosya türleri](/SharePoint/technical-reference/default-crawled-file-name-extensions-and-parsed-file-types).
 
 > [!NOTE]
-> DLP ilkeleri belgeleri çözümleme fırsatına sahip olmadan belgelerin paylaşılmasını önlemek için, SharePoint'de yeni dosyaların paylaşımı içeriği dizine alana kadar engellenebilir. Ayrıntılı bilgi [için Bkz. Yeni dosyaları varsayılan olarak hassas](/sharepoint/sensitive-by-default) olarak işaretleme.
+> DLP ilkeleri bunları analiz etme fırsatına sahip olmadan önce belgelerin paylaşılmasını önlemek için, içeriği dizine alınana kadar SharePoint yeni dosyaların paylaşımı engellenebilir. Ayrıntılı bilgi için bkz. [Yeni dosyaları varsayılan olarak hassas olarak işaretleme](/sharepoint/sensitive-by-default) .
 
-### <a name="policy-evaluation-in-exchange-online-outlook-and-outlook-on-the-web"></a>Çalışma, Exchange Online, Outlook ve ilke Web üzerinde Outlook
+### <a name="policy-evaluation-in-exchange-online-outlook-and-outlook-on-the-web"></a>Exchange Online, Outlook ve Web üzerinde Outlook ilke değerlendirmesi
 
-Konum olarak Exchange Online içeren bir DLP ilkesi seniz, ilke Office 365 &amp; Güvenlik Uyumluluk Merkezi'nde Exchange Online'den Exchange Online'e ve Web üzerinde Outlook Outlook.
+Konum olarak Exchange Online içeren bir DLP ilkesi oluşturduğunuzda, ilke Microsoft Purview uyumluluk portalı ile Exchange Online eşitlenir ve ardından Exchange Online Web üzerinde Outlook ve Outlook.
 
-Bu E-postada bir ileti Outlook, oluşturulan içerik DLP ilkelerine göre değerlendirildi olarak kullanıcı ilke ipuçlarını görebilir. Bir ileti gönderildikten sonra da, posta akışının normal bir parçası olarak DLP ilkelerine karşı, ayrıca Exchange posta akış kuralları (aktarım kuralları olarak da bilinir) ve <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange</a> yönetim merkezinde oluşturulmuş DLP ilkeleri değerlendirilir. DLP ilkeleri hem iletiyi hem de tüm ekleri tarar.
+Outlook'da bir ileti oluşturulurken, oluşturulan içerik DLP ilkelerine göre değerlendirildikçe kullanıcı ilke ipuçlarını görebilir. İleti gönderildikten sonra, Exchange <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">yönetim merkezinde</a> oluşturulan Exchange posta akışı kuralları (taşıma kuralları olarak da bilinir) ve DLP ilkeleriyle birlikte posta akışının normal bir parçası olarak DLP ilkelerine göre değerlendirilir. DLP ilkeleri hem iletiyi hem de ekleri tarar.
 
-### <a name="policy-evaluation-in-the-office-desktop-programs"></a>Office masaüstü programlarında ilke değerlendirme
+### <a name="policy-evaluation-in-the-office-desktop-programs"></a>Office masaüstü programlarında ilke değerlendirmesi
 
 <!-- same capability to identify sensitive information line conflates sensitive information types and such -->
-Excel, PowerPoint Word'de hassas bilgileri tanımlama ve DLP ilkelerini SharePoint Online ve OneDrive İş olarak uygulama özellikleri vardır. Bu Office programları DLP ilkelerini doğrudan merkezi ilke mağazasından eşitler ve sonra kişiler DLP ilkesinde yer alan bir siteden açılan belgelerle açıldığında DLP ilkelerine karşı içeriği sürekli olarak değerlendirir.
+Excel, PowerPoint ve Word, hassas bilgileri tanımlamak ve DLP ilkelerini SharePoint Online ve OneDrive İş olarak uygulamak için aynı özelliği içerir. Bu Office programları, DLP ilkelerini doğrudan merkezi ilke deposundan eşitler ve kullanıcılar DLP ilkesine dahil edilen bir siteden açılan belgelerle çalışırken içeriği DLP ilkelerine karşı sürekli olarak değerlendirir.
 
-Office'de DLP ilkesi değerlendirme, programların performansını veya içerik üzerinde çalışan kişilerin üretkenliğini etkilememek üzere tasarlanmıştır. Bu kişi büyük bir belge üzerinde çalışıyorsa veya kullanıcının bilgisayarı meşgulse, ilke ipucunın görünmesi birkaç saniye sürebilir.
+Office'da DLP ilkesi değerlendirmesi, programların performansını veya içerik üzerinde çalışan kişilerin üretkenliğini etkilemeyecek şekilde tasarlanmıştır. Büyük bir belge üzerinde çalışıyorsa veya kullanıcının bilgisayarı meşgulse, ilke ipucunun görünmesi birkaç saniye sürebilir.
 
-### <a name="policy-evaluation-in-microsoft-teams"></a>E-Microsoft Teams'de ilke değerlendirme
+### <a name="policy-evaluation-in-microsoft-teams"></a>Microsoft Teams'de ilke değerlendirmesi
  <!--what do you mean that it's synched to user accounts?  I thought DLP policies were applied to locations not users like sensitivity labels are  -->
 
-Konum olarak kullanıcı Microsoft Teams içeren bir DLP ilkesi oluşturabilirsiniz, ilke Office 365 Güvenlik Uyumluluk &amp; Merkezi'nde kullanıcı hesaplarıyla, Microsoft Teams ve sohbet iletileriyle eşitler. DLP ilkelerinin nasıl yapılandırılana bağlı olarak, birisi bir sohbette veya kanal mesajında hassas bilgileri Microsoft Teams, ileti engellenmiş veya iptal edilebilir. Ayrıca, hassas bilgiler içeren ve konuklarla (dış kullanıcılar) paylaşılan belgeler de bu kullanıcılar için açılmaz. Daha fazla bilgi edinmek için [bkz. Veri kaybı önleme ve Microsoft Teams](dlp-microsoft-teams.md).
+Konum olarak Microsoft Teams içeren bir DLP ilkesi oluşturduğunuzda, ilke Microsoft Purview uyumluluk portalı kullanıcı hesaplarıyla, Microsoft Teams kanallarıyla sohbet iletileriyle eşitlenir. DLP ilkelerinin nasıl yapılandırıldığına bağlı olarak, birisi Microsoft Teams sohbette veya kanal iletisinde hassas bilgileri paylaşmayı denediğinde, ileti engellenebilir veya iptal edilebilir. Ayrıca, hassas bilgiler içeren ve konuklarla (dış kullanıcılar) paylaşılan belgeler bu kullanıcılar için açılmaz. Daha fazla bilgi edinmek için bkz[. Veri kaybı önleme ve Microsoft Teams](dlp-microsoft-teams.md).
 
 ## <a name="permissions"></a>İzinler
 
-Varsayılan olarak, Genel yöneticiler, Güvenlik yöneticileri ve Uyumluluk yöneticilerinin DLP ilkesi oluşturma ve uygulama erişimi olur. DLP ilkeleri oluşturacak diğer uyumluluk ekibinin üyelerinin Güvenlik Uyumluluk Merkezi'ne izni &amp; olmalıdır. Varsayılan olarak, Kiracı yöneticiniz &amp; bu konuma erişim sahibi olur ve uyumluluk görevlilerine ve diğer kullanıcılara, Kiracı yöneticisinin tüm izinlerini vermeden Güvenlik Uyumluluk Merkezi'ne erişim izni vetir. Bunu yapmak için şunları öneririz:
+Varsayılan olarak, Genel yöneticiler, Güvenlik yöneticileri ve Uyumluluk yöneticileri DLP ilkesi oluşturma ve uygulama erişimine sahip olur. DLP ilkeleri oluşturacak uyumluluk ekibinizin diğer üyelerinin Microsoft Purview uyumluluk portalı izinlerine sahip olması gerekir. Varsayılan olarak, Kiracı yöneticiniz bu konuma erişebilir ve uyumluluk görevlilerine ve diğer kişilere kiracı yöneticisinin tüm izinlerini vermeden Microsoft Purview uyumluluk portalı erişim izni verebilir. Bunu yapmak için şunları yapmanızı öneririz:
 
-1. Grup içinde bir Microsoft 365 oluşturun ve uyumluluk yetkililerini ekleyin.
+1. Microsoft 365'de bir grup oluşturun ve gruba uyumluluk görevlileri ekleyin.
 
-2. Güvenlik Uyumluluk Merkezi'nin **İzinler** sayfasında bir rol &amp; grubu oluşturun.
+2. Microsoft Purview uyumluluk portalı **İzinler** sayfasında bir rol grubu oluşturun.
 
-3. Rol grubunu oluştururken, Rol Seçin **bölümünü kullanarak** Rol Grubuna aşağıdaki rolü ekleyin: **DLP Uyumluluk Yönetimi**.
+3. Rol grubunu oluştururken **Rol Seç** bölümünü kullanarak Rol Grubuna şu rolü ekleyin: **DLP Uyumluluk Yönetimi**.
 
-4. Daha önce **oluşturduğunuz** üye grubunu rol Microsoft 365 için Üye Seç bölümünü kullanın.
+4. Daha önce oluşturduğunuz Microsoft 365 grubunu rol grubuna eklemek için **Üyeleri Seç** bölümünü kullanın.
 
-Ayrıca, Yalnızca Görüntüleme DLP Uyumluluk Yönetimi rolüne sahip olarak, DLP ilkelerine ve DLP raporlarına yalnızca görüntüleme ayrıcalıklarına sahip bir **rol grubu oluşturabilirsiniz** .
+Ayrıca **, Yalnızca Görüntüleme DLP Uyumluluk Yönetimi** rolü vererek DLP ilkeleri ve DLP raporları için yalnızca görüntüleme ayrıcalıklarına sahip bir rol grubu da oluşturabilirsiniz.
 
-Daha fazla bilgi için bkz[. Kullanıcılara Uyumluluk Merkezi'Office 365 erişme izni verme](../security/office-365-security/grant-access-to-the-security-and-compliance-center.md).
+Daha fazla bilgi için bkz. [Kullanıcılara Office 365 Uyumluluk Merkezi'ne erişim verme](../security/office-365-security/grant-access-to-the-security-and-compliance-center.md).
 
-Bu izinler yalnızca DLP ilkesi oluşturmak ve uygulamak için gereklidir. İlke zorlama için içeriğe erişim gerekli değildir.
+Bu izinler yalnızca DLP ilkesi oluşturmak ve uygulamak için gereklidir. İlke uygulama, içeriğe erişim gerektirmez.
 
 ## <a name="find-the-dlp-cmdlets"></a>DLP cmdlet'lerini bulma
 
-Güvenlik Uyumluluk Merkezi cmdlet'lerinin çoğunu kullanmak &amp; için:
+Microsoft Purview uyumluluk portalı cmdlet'lerinin çoğunu kullanmak için şunları yapmanız gerekir:
 
-1. [Bağlan PowerShell Office 365 Uyumluluk &amp; Merkezi'ne bağlanın](/powershell/exchange/connect-to-scc-powershell).
+1. [Uzak PowerShell kullanarak Office 365 Microsoft Purview uyumluluk portalı Bağlan](/powershell/exchange/connect-to-scc-powershell).
 
-2. Bu ilke ve [uyumluluk-dlp cmdlet'lerini kullanın](/powershell/module/exchange/export-dlppolicycollection).
+2. Bu [ilke ve uyumluluk-dlp cmdlet'lerinden](/powershell/module/exchange/export-dlppolicycollection) herhangi birini kullanın.
 
-Bununla birlikte, DLP raporlarının farklı verilerden, Microsoft 365 verileri de Exchange Online. Bu nedenle, **DLP raporlarının cmdlet'leri Powershell'de &amp; Exchange Online, Güvenlik Uyumluluk Merkezi Powershell'de kullanılamaz**. Bu nedenle, DLP raporlarında cmdlet'leri kullanmak için şunları gerekir:
+Ancak DLP raporlarının Exchange Online dahil olmak üzere Microsoft 365 genelinden veri çekmesi gerekir. Bu nedenle ***, DLP raporlarına yönelik cmdlet'ler Microsoft Purview uyumluluk portalı PowerShell'de değil Exchange Online PowerShell'de kullanılabilir***. Bu nedenle, DLP raporları için cmdlet'leri kullanmak için şunları yapmanız gerekir:
 
-1. [Bağlan PowerShell Exchange Online'e bağlanın](/powershell/exchange/connect-to-exchange-online-powershell).
+1. [Uzak PowerShell kullanarak Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
 
-2. DLP raporları için şu cmdlet'lerden herhangi birini kullanın:
+2. DLP raporları için şu cmdlet'lerden birini kullanın:
 
     - [Get-DlpDetectionsReport](/powershell/module/exchange/Get-DlpDetectionsReport)
 
@@ -583,13 +585,13 @@ Bununla birlikte, DLP raporlarının farklı verilerden, Microsoft 365 verileri 
 
 ## <a name="more-information"></a>Daha fazla bilgi
 
-- [Şablondan DLP ilkesi oluşturma](create-a-dlp-policy-from-a-template.md)
+- [Bir şablondan DLP ilkesi oluşturma](create-a-dlp-policy-from-a-template.md)
 
-- [Bildirim gönderme ve DLP ilkeleriyle ilgili ilke ipuçlarını gösterme](use-notifications-and-policy-tips.md)
+- [DLP ilkeleri için bildirim gönderme ve ilke ipuçlarını gösterme](use-notifications-and-policy-tips.md)
 
-- [Belgeleri FCI veya diğer özelliklerle korumak için DLP ilkesi oluşturma](protect-documents-that-have-fci-or-other-properties.md)
+- [FCI veya diğer özellikler ile belgeleri korumak için bir DLP ilkesi oluşturma](protect-documents-that-have-fci-or-other-properties.md)
 
-- [DLP ilkesi şablonlarının şunları içermesi](what-the-dlp-policy-templates-include.md)
+- [DLP ilke şablonları neler içerir?](what-the-dlp-policy-templates-include.md)
 
 - [Hassas bilgi türü varlık tanımları](sensitive-information-type-entity-definitions.md)
 

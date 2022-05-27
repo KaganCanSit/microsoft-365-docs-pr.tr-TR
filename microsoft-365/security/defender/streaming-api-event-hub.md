@@ -1,7 +1,7 @@
 ---
-title: Azure Microsoft 365 Defender Hub'a etkinlik akışı
-description: Etkinlik Merkezi'nize Gelişmiş Microsoft 365 Defender etkinlikleri akışı için nasıl yapılandırılanı öğrenin.
-keywords: ham veri dışarı aktarma, akış API'si, API, Azure Etkinlik Merkezi, Azure depolama, depolama hesabı, Gelişmiş Koruma, ham veri paylaşımı
+title: Microsoft 365 Defender olaylarını Azure Event Hubs akışla aktar
+description: Gelişmiş Tehdit Avcılığı olaylarını Event Hubs'ınıza akışla aktaracak Microsoft 365 Defender yapılandırmayı öğrenin.
+keywords: ham veri dışarı aktarma, akış API'si, API, Azure Event Hubs, Azure depolama, depolama hesabı, Gelişmiş Tehdit Avcılığı, ham veri paylaşımı
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.prod: m365-security
@@ -17,66 +17,60 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 064ce5f796d59994b9d7ec4c3403711b1d683e56
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 9cae28cc69d67bb18058e2c81cd8235ffce79997
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64500485"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65754410"
 ---
-# <a name="configure-microsoft-365-defender-to-stream-advanced-hunting-events-to-your-azure-event-hub"></a>Gelişmiş Microsoft 365 Defender etkinliklerini Azure Etkinlik Merkezi'nize akış olarak yapılandırmak için gelişmiş av etkinliklerini yapılandırma
+# <a name="configure-microsoft-365-defender-to-stream-advanced-hunting-events-to-your-azure-event-hub"></a>Gelişmiş Tehdit Avcılığı olaylarını Azure Olay Hub'ınıza akışla aktaracak şekilde Microsoft 365 Defender yapılandırma
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 [!include[Prerelease information](../../includes/prerelease.md)]
 
-## <a name="before-you-begin"></a>Başlamadan önce
+## <a name="prerequisites"></a>Önkoşullar
 
-1. Kiracınız [içinde bir](/azure/event-hubs/) Olay hub'ı oluşturun.
+Event Hubs'a veri akışı yapmak için Microsoft 365 Defender yapılandırmadan önce aşağıdaki önkoşulların karşılandığından emin olun:
 
-2. Azure kiracınıza oturum açmak [için Abonelikler](https://ms.portal.azure.com/) 'e **>. >. Microsoft.>.Analizler**.
+1. Event Hubs oluşturma (bilgi için bkz. [Event Hubs'ı ayarlama](configure-event-hub.md#set-up-event-hubs)).
 
-3. Olay Merkezi Ad Alanı oluşturun, Olay Merkezi Ad Alanı **'** > Fiyat katmanını, aktarım hızı birimlerini ve beklenen yüke uygun Otomatik Inflate'yi ekleyin ve seçin. Daha fazla bilgi için bkz. [Etkinlik Hub'larının fiyatı](https://azure.microsoft.com/pricing/details/event-hubs/).
+2. Event Hubs Ad Alanı oluşturma (bilgi için bkz. [Event Hubs ad alanını ayarlama](configure-event-hub.md#set-up-event-hubs-namespace)).
 
-### <a name="add-contributor-permissions"></a>Katılımcı izinleri ekleme
+3. Bu varlığın Event Hubs'a veri aktarabilmesi için **Katkıda Bulunan** ayrıcalıklarına sahip olan varlığa izinler ekleyin. İzin ekleme hakkında daha fazla bilgi için bkz. [İzin ekleme](configure-event-hub.md#add-permissions)
 
-Olay Merkezi ad alanı oluşturulduktan sonra şunları açıklamanız gerekir:
-
-1. Microsoft 365 Defender'da oturum aecek Microsoft 365 Defender tanımlayın.
-
-2. Bir uygulamaya bağlanıyorsanız, Uygulama Kayıt Hizmeti Sorumluyu Okuyucu, Azure Olay Merkezi Veri Alıcısı olarak ekleyin (bu işlem Kaynak Grubu veya Abonelik düzeyinde de yapılabilir).
-
-    Access denetimi **(IAM) > rol atamaları altında ekleme >** ve doğrulamak için Olay hub'ları **ad alanına gidin**.
+> [!NOTE]
+> Akış API'si Event Hubs veya Azure Depolama Hesabı aracılığıyla tümleştirilebilir.
 
 ## <a name="enable-raw-data-streaming"></a>Ham veri akışını etkinleştirme
 
-1. Portalda <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">*Microsoft 365 Defender Yönetici</a>**_ veya** _*Güvenlik Yöneticisi** _olarak oturum_ açın.
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalında</a> ***Genel Yönetici** _ veya _*_Güvenlik Yöneticisi_** olarak oturum açın.
 
-2. Akış [API'si ayarları sayfasına gidin](https://security.microsoft.com/settings/mtp_settings/raw_data_export).
+2. [Akış API'sinin ayarlar sayfasına](https://security.microsoft.com/settings/mtp_settings/raw_data_export) gidin.
 
-3. **Ekle'ye tıklayın**.
+3. **Ekle'ye** tıklayın.
 
 4. Yeni ayarlarınız için bir ad seçin.
 
-5. **Olayları Azure Etkinlik Merkezi'ne ilet'i seçin**.
+5. **Olayları Azure Olay Hub'ına ilet'i** seçin.
 
-6. Olay verilerini tek bir Olay Merkezi'ne dışarı aktarmayı veya her olay tabloyu Olay Merkezi ad alanınıza farklı bir olay hub'ını dışarı aktarmayı seçin.
+6. Olay verilerini tek bir Olay Hub'ına aktarmak mı yoksa her olay tablosunu Event Hubs ad alanınızdaki farklı bir Event Hubs'a aktarmak mı istediğinizi seçebilirsiniz.
 
-7. Olay verilerini tek bir Olay Merkezi'ne dışarı aktarmak için, Olay Merkezi **adını ve** Olay Merkezi **kaynak kimliğinizi girin**.
+7. Olay verilerini tek bir Olay Hub'ına aktarmak için **Olay Hub'ınızın adını** ve **Olay Hub'ı kaynak kimliğinizi** girin.
 
-   Olay Merkezi kaynak **kimliğinizi almak için**, **AzureProperties** sekmesinde [Azure](https://ms.portal.azure.com/) >  Olay Merkezi ad alanı sayfanıza gidin ve > kimliği altındaki **metni kopyalayın**:
+   **Olay Hub'ı kaynak kimliğinizi** almak için [Azure](https://ms.portal.azure.com/) > **Özellikler** sekmesindeki Azure Event Hubs ad alanı sayfanıza gidin > **Kaynak Kimliği** altındaki metni kopyalayın:
 
-   :::image type="content" source="../defender-endpoint/images/event-hub-resource-id.png" alt-text="Olay Merkezi kaynak kimliği" lightbox="../defender-endpoint/images/event-hub-resource-id.png":::
+   :::image type="content" source="../defender-endpoint/images/event-hub-resource-id.png" alt-text="Olay Hub'ı kaynak kimliği" lightbox="../defender-endpoint/images/event-hub-resource-id.png":::
 
-8. Akış [API'sinde Microsoft 365 Defender](supported-event-types.md) türlerinin destek durumunu gözden geçirmek için olay akışı API'sinde desteklenen olay Microsoft 365 gidin.
+8. [Microsoft 365 Akış API'sindeki olay türlerinin destek durumunu gözden geçirmek için Olay akışı API'sinde Desteklenen Microsoft 365 Defender olay](supported-event-types.md) türleri'ne gidin.
 
-9. Akışla akışı yapmak istediğiniz olayları seçin ve Kaydet'e **tıklayın**.
+9. Akış yapmak istediğiniz olayları seçin ve **Kaydet'e** tıklayın.
 
-## <a name="the-schema-of-the-events-in-azure-event-hub"></a>Azure Olay Merkezi'nde olayların şeması
+## <a name="the-schema-of-the-events-in-azure-event-hub"></a>Azure Event Hub'daki olayların şeması
 
 ```JSON
 {
@@ -92,19 +86,19 @@ Olay Merkezi ad alanı oluşturulduktan sonra şunları açıklamanız gerekir:
 }
 ```
 
-- Azure Olay Merkezi'nde yer alan her Etkinlik Merkezi iletisi kayıt listesini içerir.
+- Azure Event Hubs içindeki her Event Hubs iletisi kayıtların listesini içerir.
 
-- Her kayıt olay adını, Microsoft 365 Defender zamanı, ait olduğu kiracıyı (yalnızca kiracıdan olay alıyabilirsiniz) ve "properties" adlı bir özelliğe JSON biçiminde **olay** içerir.
+- Her kayıt olay adını, Microsoft 365 Defender olayı aldığı zamanı, ait olduğu kiracıyı (yalnızca kiracınızdan olayları alırsınız) ve olayı "**properties**" adlı bir özellikte JSON biçiminde içerir.
 
-- Bu etkinliklerin şeması hakkında daha fazla bilgi Microsoft 365 Defender bkz. [Gelişmiş Atlamaya genel bakış](advanced-hunting-overview.md).
+- Microsoft 365 Defender olaylarının şeması hakkında daha fazla bilgi için bkz[. Gelişmiş Avcılık'a genel bakış](advanced-hunting-overview.md).
 
-- Gelişmiş Av'da, **CihazBilgileri** tablosunda, cihaz grubunu içeren **Makine** Grubu adlı bir sütun vardır. Burada her etkinlik bu sütunla da süslenmiş olarak görüntülenir.
+- Gelişmiş Avcılık'ta **DeviceInfo** tablosunda, cihazın grubunu içeren **MachineGroup** adlı bir sütun bulunur. Burada her etkinlik bu sütunla da donatılacaktır.
 
 ## <a name="data-types-mapping"></a>Veri türleri eşlemesi
 
-Olay özellikleri için veri türlerini almak için şunları yapın:
+Olay özelliklerinin veri türlerini almak için aşağıdaki adımları uygulayın:
 
-1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">2013'te Microsoft 365 Defender</a> Gelişmiş Av [sayfasına gidin](https://security.microsoft.com/hunting-package).
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender</a> oturum açın ve [Gelişmiş Avcılık sayfasına](https://security.microsoft.com/hunting-package) gidin.
 
 2. Her olay için veri türleri eşlemesini almak için aşağıdaki sorguyu çalıştırın:
 
@@ -114,15 +108,15 @@ Olay özellikleri için veri türlerini almak için şunları yapın:
    | project ColumnName, ColumnType
    ```
 
-- Cihaz Bilgileri olayı için bir örnek:
+- Cihaz Bilgileri olayına bir örnek aşağıda verilmiştir:
 
-  :::image type="content" source="../defender-endpoint/images/machine-info-datatype-example.png" alt-text="Cihaz bilgileri için örnek bir sorgu" lightbox="../defender-endpoint/images/machine-info-datatype-example.png":::
+  :::image type="content" source="../defender-endpoint/images/machine-info-datatype-example.png" alt-text="Cihaz bilgileri için örnek sorgu" lightbox="../defender-endpoint/images/machine-info-datatype-example.png":::
 
 ## <a name="related-topics"></a>İlgili konular
 
-- [Gelişmiş Ava Genel Bakış](advanced-hunting-overview.md)
-- [Microsoft 365 Defender akışı API'si](streaming-api.md)
-- [Olay Microsoft 365 Defender API'sinde desteklenen etkinlik türleri](supported-event-types.md)
-- [Azure Microsoft 365 Defender hesabınıza etkinlik akışı uygulama](streaming-api-storage.md)
-- [Azure Etkinlik Merkezi belgeleri](/azure/event-hubs/)
-- [Bağlantı sorunlarını giderme - Azure Olay Merkezi](/azure/event-hubs/troubleshooting-guide)
+- [Gelişmiş Avcılık'a Genel Bakış](advanced-hunting-overview.md)
+- [akış API'sini Microsoft 365 Defender](streaming-api.md)
+- [Olay akış API'sinde desteklenen Microsoft 365 Defender olay türleri](supported-event-types.md)
+- [Microsoft 365 Defender olaylarını Azure depolama hesabınıza akışla aktarma](streaming-api-storage.md)
+- [Azure Event Hubs belgeleri](/azure/event-hubs/)
+- [Bağlantı sorunlarını giderme - Azure Event Hubs](/azure/event-hubs/troubleshooting-guide)

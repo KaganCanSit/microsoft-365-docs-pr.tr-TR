@@ -22,12 +22,12 @@ search.appverid:
 - BCS160
 ms.assetid: 6d2534a2-c19c-4a99-be5e-33a0cee5d3bd
 description: Azure ExpressRoute'u Office 365 ile nasıl kullanacağınızı ve onunla dağıtım yaptığınız ağ uygulama projesini nasıl planlayacağınızı öğrenin.
-ms.openlocfilehash: bbb53913ede8a51d5e6d9bf6e39386cd3e8de304
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 1350bf73fdddd2141a2df1cbcec5edebeacf7ad4
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65096864"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65754300"
 ---
 # <a name="azure-expressroute-for-office-365"></a>Office 365 için Azure ExpressRoute
 
@@ -51,7 +51,7 @@ Office 365, Windows Update ve TechNet gibi tüm Microsoft uygulamalarına erişm
 
 ![Ağ bağlantısını Office 365.](../media/9d8bc622-4a38-4a3b-a0f3-68657712d460.png)
 
-Şimdi Office 365 bağlanmak için hem İnternet'i hem de ExpressRoute'u kullanan bir Office 365 müşterisini gösteren güncelleştirilmiş diyagrama bakın. Genel DNS ve Content Delivery Network düğümleri gibi bazı bağlantıların hala genel İnternet bağlantısı gerektirdiğine dikkat edin. Ayrıca müşterinin ExpressRoute bağlantılı binasında bulunmayan kullanıcılarının İnternet üzerinden bağlandığını da fark edin.
+Şimdi Office 365 bağlanmak için hem İnternet'i hem de ExpressRoute'u kullanan bir Office 365 müşterisini gösteren güncelleştirilmiş diyagrama bakın. Genel DNS ve Content Delivery Network düğümleri gibi bazı bağlantıların hala genel İnternet bağlantısı gerektirdiğine dikkat edin. Ayrıca Müşterinin ExpressRoute bağlantılı binasında yer almayan kullanıcılarının İnternet üzerinden bağlandıklarına da dikkat edin.
 
 ![ExpressRoute ile bağlantıyı Office 365.](../media/251788c4-0937-4584-9b2c-df08e11611fc.png)
 
@@ -60,14 +60,14 @@ Hala daha fazla bilgi mi istiyorsunuz? [Office 365 için Azure ExpressRoute ile 
 ## <a name="what-office-365-services-are-included"></a>Hangi Office 365 hizmetleri dahildir?
 <a name="BKMK_WhatDoIGet"> </a>
 
-Aşağıdaki tabloda ExpressRoute üzerinden desteklenen Office 365 hizmetleri listelenmektedir. Bu uygulamalar için hangi ağ isteklerinin İnternet bağlantısı gerektirdiğini anlamak için lütfen [Office 365 uç noktaları makalesini](./urls-and-ip-address-ranges.md) gözden geçirin.
+Aşağıdaki tabloda ExpressRoute üzerinden desteklenen Office 365 hizmetleri listelenmektedir. Bu uygulamalar için hangi ağ isteklerinin İnternet bağlantısı gerektirdiğini anlamak için [Office 365 uç noktaları makalesini](./urls-and-ip-address-ranges.md) gözden geçirin.
 
 | Dahil edilen uygulamalar |
 |:-----|
 |Exchange Online <sup>1</sup> <br/> Exchange Online Protection <sup>1</sup> <br/> Delve <sup>1</sup> <br/> |
-|Skype Kurumsal <sup>Online1</sup> <br/> Microsoft Teams <sup>1</sup> <br/> |
-|SharePoint <sup>Online1</sup> <br/> OneDrive İş <sup>1</sup> <br/> Project Online <sup>1</sup> <br/> |
-|Portal ve <sup>paylaşılan1</sup> <br/> Azure Active Directory (Azure AD) <sup>1</sup> <br/> Azure AD Bağlan <sup>1</sup> <br/> Office <sup>1</sup> <br/> |
+|Skype Kurumsal Online<sup>1</sup> <br/> Microsoft Teams <sup>1</sup> <br/> |
+|SharePoint Online<sup>1</sup> <br/> OneDrive İş <sup>1</sup> <br/> Project Online <sup>1</sup> <br/> |
+|Portal ve paylaşılan<sup>1</sup> <br/> Azure Active Directory (Azure AD) <sup>1</sup> <br/> Azure AD Bağlan <sup>1</sup> <br/> Office <sup>1</sup> <br/> |
 
 <sup>1</sup> Bu uygulamaların her birinin ExpressRoute üzerinden desteklenmeyen İnternet bağlantı gereksinimleri vardır. Daha fazla bilgi için [Office 365 uç noktaları makalesine](./urls-and-ip-address-ranges.md) bakın.
 
@@ -79,11 +79,11 @@ ExpressRoute'un uygulanması ağ ve uygulama sahiplerinin katılımını gerekti
 
 1. ExpressRoute'un Office 365 bağlantı planlamanızda karşıladığı ihtiyacı tam olarak anlayın. Hangi uygulamaların İnternet'i veya ExpressRoute'u kullanacağını anlayın ve Office 365 trafik için hem İnternet'i hem de ExpressRoute'u kullanma bağlamında ağ kapasitenizi, güvenliğinizi ve yüksek kullanılabilirlik gereksinimlerinizi tam olarak planlayın.
 
-2. Hem İnternet hem de ExpressRoute trafiği için çıkış ve eşleme konumlarını <sup>belirleyin1</sup>.
+2. Hem İnternet hem de ExpressRoute trafiği<sup>1</sup> için çıkış ve eşleme konumlarını belirleyin.
 
 3. İnternet ve ExpressRoute bağlantılarında gereken kapasiteyi belirleyin.
 
-4. Güvenlik ve diğer standart çevre denetimlerini uygulamak için bir planınız <sup>var1</sup>.
+4. Güvenlik ve diğer standart çevre denetimlerini uygulamak için bir plan oluşturun<sup>1</sup>.
 
 5. ExpressRoute'a abone olmak için geçerli bir Microsoft Azure hesabına sahip olun.
 
@@ -93,7 +93,7 @@ ExpressRoute'un uygulanması ağ ve uygulama sahiplerinin katılımını gerekti
 
 8. İsteğe bağlı olarak [QoS uygulayın](https://support.office.com/article/ExpressRoute-and-QoS-in-Skype-for-Business-Online-20c654da-30ee-4e4f-a764-8b7d8844431d) ve bölgesel genişletmeyi değerlendirin.
 
-<sup>1</sup> Önemli performans konuları. Buradaki kararlar, Skype Kurumsal gibi uygulamalar için kritik öneme sahip olan gecikme süresini önemli ölçüde etkileyebilir.
+<sup>1</sup> Önemli performans konuları. Buradaki kararlar gecikme süresini önemli ölçüde etkileyebilir ve bu da Skype Kurumsal gibi uygulamalar için kritik öneme sahiptir.
 
 Ek başvurular için [ExpressRoute belgelerine](/azure/expressroute/expressroute-introduction) ek olarak [yönlendirme kılavuzumuzu](https://support.office.com/article/Routing-with-ExpressRoute-for-Office-365-e1da26c6-2d39-4379-af6f-4da213218408) kullanın.
 

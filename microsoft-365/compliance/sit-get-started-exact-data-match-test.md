@@ -1,5 +1,5 @@
 ---
-title: Hassas bilgi türüyle tam olarak eşan bir veri sınaması
+title: Tam veri eşleşmesi hassas bilgi türünü test etme
 f1.keywords:
 - NOCSH
 ms.author: chrfox
@@ -17,55 +17,57 @@ search.appverid:
 - MET150
 description: hizmetleri yapılandırma
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: d0870cda205168e73d40adef7cdab333c7f0abdf
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 5b2ae7e5d6e434cd5502373b04a055c6fb2fb4a9
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63679950"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65754244"
 ---
-# <a name="test-an-exact-data-match-sensitive-information-type"></a>Hassas bilgi türüyle tam olarak eşan bir veri sınaması
+# <a name="test-an-exact-data-match-sensitive-information-type"></a>Tam veri eşleşmesi hassas bilgi türünü test etme
 
-Tam veri eşleşmeniz (EDM) hassas bilgi türünüz (SIT) oluşturulduktan ve hassas bilgiler tablonizin karşıya yükleme ve dizin oluşturmanın bitmiş olduğunu doğrulayan bir saat sonra, Uyumluluk merkezi'nin hassas bilgi türleri bölümünde yer alan test işlevini kullanarak algılamak istediğiniz bilgileri algıla olduğunu test edin.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Tam veri eşleştirme (EDM) hassas bilgi türünüz (SIT) oluşturulduktan ve hassas bilgi tablonuzun karşıya yükleme ve dizin oluşturmayı tamamlandığını doğruladıktan bir saat sonra, Uyumluluk merkezindeki hassas bilgi türleri bölümündeki test işlevini kullanarak algılamak istediğiniz bilgileri algılayıp algılamadığını test edebilirsiniz.
  
->[! NOT:] Önceden oluşturulmuş bir EDM SIT'daki değişikliklerin sistem genelinde yayılması biraz zaman alır. Algılama sorunlarını gidermek için EDM'ye duyarlı bir bilgi türünde değişiklik yapıyorsanız, etkisini doğrulamak için test işlevini kullanmadan önce bu değişikliklerin en az bir saat beklemesini bekleyin.
+>[! NOT:] Önceden oluşturulmuş bir EDM SIT'teki değişikliklerin sisteme yayılması biraz zaman alabilir. Algılama sorunlarını gidermek için EDM hassas bilgi türünde değişiklikler yapıyorsanız, etkilerini doğrulamak için test işlevini kullanmadan önce bu değişiklikleri yaptıktan sonra en az bir saat beklemeyi unutmayın.
 
 ## <a name="test-your-edm-sit-in-the-compliance-center"></a>Uyumluluk Merkezi'nde EDM SIT'inizi test edin
 
-1. Uyumluluk **merkezini** **açmaVeri** >  **sınıflandırmaSitive** >  Bilgi Türleri.
+1. **Uyumluluk merkezi** > **Veri sınıflandırması** > **Hassas Bilgi Türlerini** açın.
 
-2. Listeden EDM SIT'inizi seçin ve sonra çıkış bölmesinde **Test'i** seçin. Bu seçenek yalnızca hassas bilgi türleri altında mevcuttur.
+2. Listeden EDM SIT'inizi seçin ve ardından açılır bölmede **Test'i** seçin. Bu seçenek yalnızca hassas bilgi türleri altında bulunur.
  
-3. Upload istediğiniz verileri içeren bir öğeyi seçin. Örneğin, hassas bilgiler tablodaki satırların bir alt kümesini içeren bir öğe oluşturun. Yoksayılan sınırlayıcıları tanımlamak için şemanıza yapılandırılabilir eşleşme özelliğini kullandıysanız, öğenin bu sınırlayıcılarla birlikte ve bu sınırlayıcılar olmadan da örneklere sahip olduğundan emin olun.
+3. Algılamak istediğiniz verileri içeren bir öğeyi Upload. Örneğin, hassas bilgi tablonuzdaki satırların bir alt kümesini içeren bir öğe oluşturun. Şemanızda yoksayılan sınırlayıcıları tanımlamak için yapılandırılabilir eşleştirme özelliğini kullandıysanız, öğenin bu sınırlayıcılarla ve sınırlayıcılar olmadan örnekler içerdiğinden emin olun.
 
-4. Dosya karşıya yüklendikten ve tarandikten sonra EDM SIT'iniz ile eşleşmeleri kontrol edin.
+4. Dosya karşıya yüklenip tarandıktan sonra EDM SIT'inizle eşleşme olup olmadığını denetleyin.
 
-5. SIT'daki **Test** işlevi bir eşleşme algılarsa, kırpma olmadığını veya yanlış şekilde ayıklamayın. Örneğin, algıması gereken tam dizenin yalnızca bir alt dizesini ayıklar veya çok sözcüklü dizedeki yalnızca ilk sözcüğü alır ya da ayıklamada fazladan simgeler veya karakterler içerebilir. Normal [İfade Dili - Normal ifade dili başvurusu](/dotnet/standard/base-types/regular-expression-language-quick-reference) için Hızlı Başvuru'ya bakın. 
+5. SIT'teki **Test** işlevi bir eşleşme algılarsa, kırpmadığını veya yanlış ayıklamadığını doğrulayın. Örneğin, algılaması gereken tam dizenin yalnızca bir alt dizesini ayıklayarak ya da çok sözcüklü bir dizede yalnızca ilk sözcüğü alarak ya da ayıklamaya fazladan simgeler veya karakterler ekleyerek. [Normal ifade dili başvurusu için bkz. Normal İfade Dili - Hızlı Başvuru](/dotnet/standard/base-types/regular-expression-language-quick-reference). 
 
-5. Alternatif olarak aşağıdaki PowerShell cmdlet'ini de kullanabilirsiniz:
+5. Alternatif olarak, aşağıdaki PowerShell cmdlet'ini kullanabilirsiniz:
 
 ```powershell
 Test-DataClassification  -ClassificationNames “[Your EDM sensitive info type]” -TexttoClassify “[your own text to scan for matches]” 
 ```
 
 > [!NOTE]
- EDM'ye duyarlı bir bilgi türü  oluşturma veya düzenleme ya da EDM türünü temel alan birincil SIT'i  oluşturmanız, SIT'lerde yapılan değişikliklerden sonra değiştirilen tüm yeni içerik ve içerikte yeni tanımlarla eşleşen metinlerde gezinilene kadar bu içerikte gezinilmese de, önceden varolan içerikte değişiklik yapılana veya yeniden bölüme alınana kadar gezinilmez. 
+ EDM hassas bilgi türünü veya EDM türünün temel aldığı birincil SIT türünü oluşturduğunuzda veya düzenlediğinizde, YENI tanımlarla eşleşen metinler için SID'lerde yapılan değişikliklerden sonra değiştirilen tüm yeni içerik ve içerik gezinilir, ancak önceden var olan içerik, değiştirilene veya yeniden dizine alınana kadar gezinmez. 
 
-SharePoint sitesinde veya kitaplığında veya OneDrive'de var olan içerikte yeniden gezinmeyi zorlamak için, Site, kitaplık veya listede gezinmeyi ve yeniden temlik etme isteğinde bulunan yönergeleri [izleyin](/sharepoint/crawl-site-content).
+bir SharePoint sitesinde veya kitaplığında veya OneDrive mevcut içeriğin yeniden gezinmesini zorlamak için, [Sitenin, kitaplığın veya listenin el ile gezinmesini ve yeniden dizine alınmasını isteme](/sharepoint/crawl-site-content) başlığı altında yer alan yönergeleri izleyin.
 
-## <a name="test-your-edm-sit-in-mip-policies"></a>EDM SIT'inizi MIP ilkeleri içinde test etmek
+## <a name="test-your-edm-sit-with-information-protection-policies"></a>Bilgi koruma ilkeleriyle EDM SIT'inizi test edin
 
-İlkelerde kullanarak EDM SIT'inizin nerede olduğunu ve üretimde ne kadar doğru olduğunu görebilirsiniz:
+İlkelerde kullanarak EDM SIT'inizin nerede kullanıldığını ve üretimde ne kadar doğru olduğunu görebilirsiniz:
 
-1. Otomatik etiketleme [ilkesi oluşturun ve Benzetim](apply-sensitivity-label-automatically.md#how-to-configure-auto-labeling-policies-for-sharepoint-onedrive-and-exchange) genel bakış'ta **bu ilkeyi çalıştırın**.
+1. [Otomatik etiketleme ilkesi](apply-sensitivity-label-automatically.md#how-to-configure-auto-labeling-policies-for-sharepoint-onedrive-and-exchange) oluşturun ve **Benzetimi genel bakış** bölümünde çalıştırın.
 
-1. EDM SIT'i tetikleyen bazı içerik ve EDM SIT'i tetiklemayacak bazı içerikleri ilkenizin izlemesi gereken bir konuma ekleyin.
+1. EDM SIT'i tetikleyecek bazı içerikler ve ilkenizin izlediği bir konuma EDM SIT'i tetiklemeyecek bazı içerikler ekleyin.
 
-1. Eşleşmeleri **gözden geçirmek için** Gözden geçirilen öğeler sekmesini açın.
+1. Eşleşmeleri denetlemek **için Gözden geçirecek öğeler** sekmesini açın.
 
-1. İlkelerinizi uygun şekilde ayarlama. 
+1. İlkelerinizi uygun şekilde ayarlayın. 
 
-Test ve ayarlamanın sonuçlarından memnun olduktan sonra, EDM tabanlı özel SIT'iniz Bilgi Koruması ilkelerde kullanıma hazırdır. Örneğin:
+Test ve ayarlama sonuçlarınızdan memnun olduğunuzda, EDM tabanlı özel SIT'iniz bilgi koruma ilkelerinde kullanıma hazırdır, örneğin:
 
 - [DLP ilkeleri](create-test-tune-dlp-policy.md#create-test-and-tune-a-dlp-policy)
 - [Otomatik etiketleme ilkeleri](apply-sensitivity-label-automatically.md#how-to-configure-auto-labeling-for-office-apps)
@@ -73,17 +75,16 @@ Test ve ayarlamanın sonuçlarından memnun olduktan sonra, EDM tabanlı özel S
 
 ## <a name="troubleshooting-tips"></a>Sorun giderme ipuçları
 
-Herhangi bir eşleşme bulamazsanız, sorun giderme ipuçlarına bakın.
-
+Eşleşme bulamazsanız bazı sorun giderme ipuçlarını burada bulabilirsiniz.
 
 |Sorun  |Sorun giderme ipucu  |
 |---------|---------|
-|Eşleşme bulunamadı     |  Karma'da açıklanan komutları kullanarak hassas verilerinizin doğru karşıya yük doğrulamak ve hassas bilgi türleriyle tam olarak eşleşmesi için hassas bilgi [kaynağı tabloyu karşıya yükleyin](sit-get-started-exact-data-match-hash-upload.md#hash-and-upload-the-sensitive-information-source-table-for-exact-data-match-sensitive-information-types)|
-|Eşleşme bulunamadı   | Düzenlerin her birinde birincil öğeyi yapılandırken kullanılan SIT'i test etmek. Bu, SIT'in öğenin örnekle eşleneneyi onaylar. EDM'de hatalı tanımlanmış bir SIT'i EDM Hassas bilgi türünün sınıflandırma öğesi olarak kullanmak, EDM'de hataların en yaygın nedenidir.         |
-|EDM türü'nde birincil öğe için seçtiğiniz SIT öğesi, öğede bir eşleşme bulamaz veya beklenenden daha az eşleşme bulur    |  İçeriğin içinde yer alan ayırıcıları ve sınırlayıcıları desteklediğini kontrol edin. Şemanıza, tanımlanmış yoksayılan sınırlayıcıları dahil etmek için bu sınırlayıcıları içermeye emin olun.       |
-|Birincil öğe SIT öğesi öğede eşleşmeleri bulur ancak EDM SIT bulmaz.     | - REGEX ifadelerinizi, /s gibi bir yakalama beyaz alanı sınırlayıcısını başlatarak veya sonlandırmak için kontrol edin. Boşluk, veri tablosunda karma değerle eşleşmez. Bunun yerine, /b gibi bir sözcük sınırlayıcı kullanın. </br> - Yalnızca bir alt dizeyi değil, yakalamak istediğiniz tüm dizeyi yakalayan regEX deyimlerinizi kontrol edin. Örneğin, [a-zA-Z]@[a-zA-Z]{30}.[ e-posta adresleri için bu desen{20} a-zA-Z]{2,3} *user@contoso.com user@contoso.co.jp.*   |
-|Birincil öğeleri olan ve tanımlı ikincil öğe olmayan bir EDM SIT öğeleri algılar, ancak birincil ve ikincil öğeler gerekli olduğunda beklenenden az olduğunda algılar veya algılar.  | İkincil kanıt değerlerinin boşluk içeremez tek bir sözcük veya dizeden veya çok sözcüklü dizeleri algılayan REGEX deyimlerini kullanarak top olduğundan emin olun. Örneğin, \b[A-Z][a-z]{1,25}([ -][A-Z][a-z]{1,25}){0,4}\b, büyük harfle baş eden bir ile beş art arda sözcük dizisinin eşleşmesini sağlar. EDM duyarlı bilgi türü XML'nizin ek kanıt koşulları için bu SIT'i sınıflandırma öğesi olarak kullanın. Bkz [. El ile kural paketi oluşturma](sit-get-started-exact-data-match-create-rule-package.md#create-a-rule-package-manually)|
-|SIT sınama işlevi herhangi bir eşleşme algılamaz.   | Seçtiğiniz SIT'in ek anahtar sözcükler veya diğer doğrulamalar için gereksinimleri olup olduğunu kontrol edin. Yerleşik SITS'ler için [, her türü](sensitive-information-type-entity-definitions.md#sensitive-information-type-entity-definitions) eşleştirmek için en düşük gereksinimlerin neler olduğunu doğrulamak için bkz. Hassas bilgi türü varlık tanımları.        |
-|Test işlevselliği çalışır ama SharePoint veya OneDrive öğeleriniz DLP'de veya otomatik etiket kurallarında algılanmaz     | İçerik Gezgini'nde eşleşmeyi beklediğiniz belgelerin göster olup denetleme. Orada yoksa, yalnızca hassas bilgi türüne yapılan değişikliklerden sonra oluşturulan içeriğin eşleşme olarak göster anımsayın. Önceden var olan öğelerin gösternsi için siteleri ve kitaplıkları yeniden çalışmanız gerekir. Site[, kitaplık veya diğer sitelerde](/sharepoint/crawl-site-content) gezinme ve yeniden temlik oluşturma hakkında ayrıntılı bilgi için bkz. Site, kitaplık veya SharePoint yeniden OneDrive.        |
-|Birden çok eşleşme gerektiren DLP veya otomatik etiketleme kuralları tetikle     |Hem EDM türünüz hem de temel hassas bilgi türleri için yakınlık gereksinimlerinin karşılandıklerinden emin olun. Örneğin, birincil öğeyle desteklenen anahtar sözcükler arasındaki en uzun mesafe 300 karakterse, ancak anahtar sözcükler uzun bir tablonun yalnızca ilk satırına içeriyorsa, yakınlık gereksinimlerini karşılama olasılığı yalnızca ilk birkaç eşleşen değer satırıdır. Daha rahat yakınlık kurallarını desteklemek için SIT tanımlarınızı değiştirebilir veya ek kanıt koşulları için belgenin herhangi bir yerindeki seçeneği kullanabilirsiniz.         |
-|EDM türünün algılanması tutarsız veya tutarsızdır     |EDM türünüzdeki birincil öğe için temel olarak kullanılan hassas bilgi türünün gereksiz içerik algılayana kadar algılanamay olup olmadığını kontrol edin. Herhangi bir sözcük, herhangi bir numara veya tüm e-posta adresi gibi çok fazla ilgisiz içerikle eşleşen bir SIT kullanmak, hizmetin uygun eşleşmeleri doygunluğuna ve yoksaymalarına neden olabilir. İçerik Gezgini'nde, birincil öğeleriniz için birincil öğeleriniz için kullanılan hassas türle eşan içerik parçası sayısını kontrol edin. </br> SIT'in çok fazla içerikle eş olup olduğunu tahmin etmek için: </br> - İçerik Gezgini'nde içerik öğelerinin sayısının hassas tür oluşturulduktan sonra gün sayısına bölünmesi. </br> - Günlük eşleşme sayısı yüz binlerce veya milyondan fazla aralıkta ise birincil SIT çok geniş olabilir. Bir EDM [türü için doğru hassas bilgi](sit-learn-about-exact-data-match-based-sits.md#learn-about-exact-data-match-based-sensitive-information-types) türünü seçme konusunda öneriler ve en iyi yöntemler için bkz. Temel alınan hassas bilgi türleri hakkında tam veri eşleşmesi hakkında bilgi.         |
+|Eşleşme bulunamadı     |  Karma bölümünde açıklanan komutları kullanarak hassas verilerinizin doğru şekilde karşıya yüklendiğini onaylayın [ve hassas bilgi türleriyle tam olarak eşleşen veriler için hassas bilgi kaynağı tablosunu karşıya yükleyin](sit-get-started-exact-data-match-hash-upload.md#hash-and-upload-the-sensitive-information-source-table-for-exact-data-match-sensitive-information-types)|
+|Eşleşme bulunamadı   | Desenlerinizin her birinde birincil öğeyi yapılandırırken kullandığınız SIT'i test edin. Bu, SIT'in öğedeki örneklerle eşleşebildiğinden emin olur. EDM Hassas bilgi türünün sınıflandırma öğesi olarak yanlış tanımlanmış bir SIT kullanmak, EDM'deki algılama hatalarının en yaygın nedenidir.         |
+|EDM türündeki bir birincil öğe için seçtiğiniz SIT öğede eşleşme bulmuyor veya beklediğinizden daha az eşleşme buluyor    |  İçerikteki ayırıcıları ve sınırlayıcıları destekleyip desteklemediğini denetleyin. Şemanızda tanımlanan yoksayılan sınırlayıcıları eklediğinizden emin olun.       |
+|Sit birincil öğesi bir öğedeki eşleşmeleri bulur, ancak EDM SIT'i bulmaz.     | - /s gibi bir yakalama boşluk sınırlayıcısı başlatmak veya sonlandırmak için REGEX deyimlerinizi denetleyin. Boşluk, veri tablosundaki karma değerle eşleşmez. Bunun yerine /b gibi bir sözcük sınırlayıcısı kullanın. </br> - Yalnızca bir alt dizeyi değil, yakalamak istediğiniz tüm dizeyi yakaladıklarından emin olmak için REGEX deyimlerinizi denetleyin. Örneğin, e-posta adresleri için bu desen [a-zA-Z]{30}@[a-zA-Z]{20}.[ a-zA-Z]{2,3} *user@contoso.com* ve *user@contoso.co.jp* eşleşecektir.  |
+|Birincil öğeleri olan ve hiçbir ikincil öğe tanımlanmayan bir EDM SIT öğeleri algılar, ancak birincil ve ikincil öğeler gerektiğinde beklenenden daha az öğe algılar veya algılamaz.  | İkincil kanıt değerlerinin boşluk içermeyen veya çok sözcüklü dizeleri algılayan REGEX deyimlerini kullanan tek bir sözcük veya dizeden oluştuğundan emin olun. Örneğin, \b[A-Z][a-z]{1,25}([ -][A-Z][a-z]{1,25}){0,4}\b, büyük harf karakterle başlayan ardışık bir ile beş sözcük arasında herhangi bir diziyle eşleşir. EDM hassas bilgi türü XML'nizdeki ek kanıt koşulları için sınıflandırma öğesi olarak bu SIT'i kullanın. Bkz. [El ile kural paketi oluşturma](sit-get-started-exact-data-match-create-rule-package.md#create-a-rule-package-manually)|
+|SIT test işlevi hiçbir eşleşme algılamaz.   | Seçtiğiniz SIT'in ek anahtar sözcükler veya diğer doğrulamalar için gereksinimler içerip içermediğini denetleyin. Yerleşik SID'ler için, her türü eşleştirmek için en düşük gereksinimlerin ne olduğunu doğrulamak için [bkz. Hassas bilgi türü varlık tanımları](sensitive-information-type-entity-definitions.md#sensitive-information-type-entity-definitions) .        |
+|Test işlevi çalışır, ancak SharePoint veya OneDrive öğeleriniz DLP veya otomatik etiketleme kurallarında algılanmaz     | Eşleşmesini beklediğiniz belgelerin İçerik Gezgini'nde gösterilip gösterilmediğini denetleyin. Bunlar orada değilse, yalnızca hassas bilgi türündeki değişikliklerden sonra oluşturulan içeriğin eşleşme olarak gösterileceğini unutmayın. Önceden var olan öğelerin gösterilmesi için siteleri ve kitaplıkları yeniden taramanız gerekir. SharePoint ve OneDrive yeniden gezinme ayrıntıları için bkz. [Sitenin, kitaplığın veya listenin el ile gezinmesini ve yeniden dizine alınmasını isteme](/sharepoint/crawl-site-content).        |
+|Birden çok eşleşme gerektiren DLP veya otomatik etiketleme kuralları tetiklemez     |Hem EDM türünüz hem de temel hassas bilgi türleri için yakınlık gereksinimlerinin karşılanıp karşılanmadığını denetleyin. Örneğin, birincil öğe ile destekleyici anahtar sözcükler arasındaki uzaklık üst sınırı 300 karakterse, ancak anahtar sözcükler yalnızca uzun bir tablonun ilk satırında yer alıyorsa, yalnızca eşleşen değerlerin yalnızca ilk birkaç satırı yakınlık gereksinimlerini karşılayabilir. SIT tanımlarınızı daha rahat yakınlık kurallarını destekleyecek şekilde değiştirin veya ek kanıt koşulları için belgedeki herhangi bir yeri kullanın.         |
+|EDM türünün algılanması tutarsız veya dengesiz     |EDM türünüzün birincil öğesi için temel olarak kullandığınız hassas bilgi türünün gereksiz içeriği algılamadığını denetleyin. Herhangi bir sözcük, herhangi bir sayı veya tüm e-posta adresleri gibi çok fazla ilgisiz içerikle eşleşen bir SIT kullanmak, hizmetin ilgili eşleşmeleri doymasına ve yoksaymasına neden olabilir. İçerik gezginindeki birincil öğeleriniz için kullandığınız hassas türle eşleşen içerik parçalarının sayısını denetleyin. </br> SIT'in çok fazla içerikle eşleşip eşleşmediğini tahmin etmek için: </br> - İçerik Gezgini'ndeki içerik öğelerinin sayısını, hassas türün oluşturulmasından bu yanaki gün sayısına böler. </br> - Günlük eşleşme sayısı yüz binlerce veya milyon aralığındaysa birincil SIT'in çok geniş olması mümkündür. Öneriler ve EDM türü için doğru hassas bilgi türünü seçmeye yönelik en iyi yöntemler için bkz. [Tam veri eşleşmesi tabanlı hassas bilgi türleri hakkında bilgi edinin](sit-learn-about-exact-data-match-based-sits.md#learn-about-exact-data-match-based-sensitive-information-types) .         |

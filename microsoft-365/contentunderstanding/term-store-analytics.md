@@ -13,36 +13,36 @@ ms.collection:
 - m365initiative-viva-topics
 ms.custom: admindeeplinkSPO
 ms.localizationpriority: high
-ms.openlocfilehash: 6daffa44356136615dc002b01bd7da5c575fe1fd
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: dfb4841ac80b1018ec1839a6fa36ec36c4ba298b
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63329147"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65753980"
 ---
 # <a name="term-store-reports"></a>Terim deposu raporları
 
-Yönetim merkezinde Terim deposu <a href="https://go.microsoft.com/fwlink/?linkid=2185073" target="_blank">raporlarına</a> SharePoint. Bu özellik için lisans [SharePoint Syntex](index.md) gerekir.
+<a href="https://go.microsoft.com/fwlink/?linkid=2185073" target="_blank">Terim deposu</a> raporlarına SharePoint yönetim merkezinden erişebilirsiniz. Bu özellik [için SharePoint Syntex](index.md) lisansı gerekir.
 
-**Raporlar'ı** genişletin ve ardından İçerik **hizmetleri'ne tıklayın**.
+**Raporlar'ı** genişletin ve **İçerik hizmetleri'ne** tıklayın.
 
 Aşağıdaki raporlar kullanılabilir:
 
 ### <a name="term-store-operations"></a>Terim deposu işlemleri
 
-Terim depo 15 günlük bir dönemdeki dönem depolarında yer alan en önemli işlemleri ve bu dönemde günlük hacimlerin eğilimini ortaya çıktı. Bu özellik, terim depo uygulamanıza yönelik değişikliklerin doğasını yüksek düzeyde anlamak ve hacimli işlemlerde beklenmedik eğilimleri tanımlamak istediğiniz zaman kullanışlıdır. 
+Terim deponuzda 15 günlük bir süre içinde gerçekleştirilen en önemli işlemleri görüntüleyin ve bu dönemdeki günlük hacimlerin eğilimini görün. Bu, terim deponuzdaki değişikliklerin doğasını üst düzeyde anlamak ve işlem hacimlerindeki beklenmeyen eğilimleri belirlemek istediğinizde yararlıdır. 
 
-### <a name="term-store-composition"></a>Terim deposu oluşturma
+### <a name="term-store-composition"></a>Terim deposu bileşimi
 
-Yönetilen terimler ile kurumsal anahtar sözcükler arasındaki terim türlerinin dağılımını görüntüleme. İsterseniz birden çok anahtar sözcükleri yönetilen terimlere taşıma. Bu özellik, kullanıcılarınızı etkin bir şekilde anahtar sözcükler kullanarak kullanmakta olup değildir. Yönetilen terimlere yönelik olası adayları belirlemek için bunları gözden geçirsiniz.
+Normal yönetilen terimlerle kurumsal anahtar sözcükler arasındaki terim türlerinin dağılımını görüntüleyin. İsterseniz birden çok anahtar sözcüğü yönetilen terimlere taşıyın. Bu, kullanıcılarınızın etkin bir şekilde anahtar sözcükler kullanıp kullanmadiğini belirlemek istediğinizde kullanışlıdır. Yönetilen terimler için olası adayları belirlemek için bunları gözden geçirebilirsiniz.
 
 ### <a name="open-and-closed-term-sets"></a>Açık ve kapalı terim kümeleri
 
-Açık ve kapalı terim kümelerinin dağılımını görüntüleme. Kullanıcıların kaç terim kümesine terim eklemesine izin olduğunu anlamak için bu yararlı olur. Örneğin, hacimler beklenmedik bir şekilde büyürse, bunları kapalı konuma dönüştürebilirsiniz. 
+Açık ve kapalı terim kümelerinin dağılımını görüntüleyin. Kullanıcıların terim eklemesine izin veren terim kümelerinin sayısını anlamak istiyorsanız bu yararlı olur. İsterseniz, örneğin birimler beklenmedik bir şekilde büyüyorsa bunları kapalı olarak dönüştürebilirsiniz. 
 
-### <a name="terms-without-synonyms"></a>Eş anlamlı olmayan terimler
+### <a name="terms-without-synonyms"></a>Eş anlamlıları olmayan terimler
 
-Eş anlamlıları tanımlı değil, eklenen çalışma dillerinin her bir sözcüğün terim sayısını görüntüleme. Bu, eş anlamlıları tanımlamak istediğiniz dilleri tanımlamanıza yardımcı olur. Eş anlamlılar, son kullanıcıların içeriklerini etiketlemek için tam olarak karartlarına varmalarına ve doğru terimleri bulmalarına yardımcı olur.
+Eş anlamlıları tanımlı olmayan eklenen çalışma dillerinin her birinde yer alan terimlerin sayısını görüntüleyin. Bu, eş anlamlıları tanımlamak istediğiniz dilleri tanımlamaya yardımcı olmak için yararlıdır. Eş anlamlılar, son kullanıcıların içeriklerini etiketlemek için doğru terimleri belirtmelerine ve bulmalarına yardımcı olur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

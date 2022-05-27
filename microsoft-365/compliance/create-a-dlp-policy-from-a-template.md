@@ -20,16 +20,18 @@ ms.custom:
 - seo-marvel-mar2020
 - admindeeplinkCOMPLIANCE
 description: Bu makalede, Office 365'da yer alan şablonlardan birini kullanarak DLP ilkeleri oluşturmayı öğreneceksiniz.
-ms.openlocfilehash: 3617e1f067f4b29470feedcf7381b41a400887f9
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 952a552210b00061717c24db5de5e5a47b84d72b
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64759113"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65754686"
 ---
 # <a name="create-a-dlp-policy-from-a-template"></a>Bir şablondan DLP ilkesi oluşturma
 
-DLP ilkelerini kullanmaya başlamanın en kolay ve en yaygın yolu, Microsoft 365 Uyumluluk merkezinde yer alan şablonlardan birini kullanmaktır. Bu şablonlardan birini olduğu gibi kullanabilir veya kuruluşunuzun özel uyumluluk gereksinimlerini karşılamak için kuralları özelleştirebilirsiniz.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+DLP ilkelerini kullanmaya başlamanın en kolay ve en yaygın yolu, Microsoft Purview uyumluluk portalı dahil edilen şablonlardan birini kullanmaktır. Bu şablonlardan birini olduğu gibi kullanabilir veya kuruluşunuzun özel uyumluluk gereksinimlerini karşılamak için kuralları özelleştirebilirsiniz.
 
 Microsoft 365, çok çeşitli ortak mevzuat ve iş politikası gereksinimlerini karşılamanıza yardımcı olabilecek 40'ın üzerinde kullanıma hazır şablon içerir. Bkz. Tam liste için [ilke şablonları](dlp-policy-reference.md#policy-templates) . 
 
@@ -43,7 +45,7 @@ DLP ilkeleri oluşturacak uyumluluk ekibinizin üyelerinin Uyumluluk Merkezi'ne 
   
 1. Microsoft 365'de bir grup oluşturun ve gruba uyumluluk görevlileri ekleyin.
     
-2. Güvenlik &amp; Uyumluluk Merkezi'nin **İzinler** sayfasında bir rol grubu oluşturun. 
+2. Microsoft Purview uyumluluk portalı **İzinler** sayfasında bir rol grubu oluşturun. 
 
 3. Rol grubunu oluştururken Rol **Seç** bölümünü kullanarak rol grubuna şu rolü ekleyin: **DLP Uyumluluk Yönetimi**.
     
@@ -51,7 +53,7 @@ DLP ilkeleri oluşturacak uyumluluk ekibinizin üyelerinin Uyumluluk Merkezi'ne 
 
 DLP ilkeleri ve DLP raporları için yalnızca görüntüleme ayrıcalıklarına sahip rol grubu oluşturmak için **Yalnızca Görüntüleme DLP Uyumluluk Yönetimi** rolünü kullanın.
 
-Daha fazla bilgi için bkz. [Kullanıcılara Office 365 Uyumluluk Merkezi'ne erişim verme](../security/office-365-security/grant-access-to-the-security-and-compliance-center.md).
+Daha fazla bilgi için bkz. [Microsoft Purview uyumluluk portalı İzinler](microsoft-365-compliance-center-permissions.md#permissions-in-the-microsoft-purview-compliance-portal).
   
 Bu izinler, ilkeleri zorlamamak için bir DLP ilkesi oluşturmak ve uygulamak için gereklidir.
 
@@ -59,14 +61,14 @@ Bu izinler, ilkeleri zorlamamak için bir DLP ilkesi oluşturmak ve uygulamak i�
 
 Önizlemede, erişim denetimlerinizde ince ayar yapmak için test yapabileceğiniz roller ve rol grupları vardır.
 
-Önizleme aşamasında olan Microsoft Bilgi Koruması (MIP) rollerinin listesi aşağıdadır. Bunlar hakkında daha fazla bilgi edinmek için bkz [. Güvenlik & Uyumluluk Merkezi'ndeki Roller](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center)
+Aşağıda, önizleme aşamasında olan geçerli rollerin listesi yer alır. Bunlar hakkında daha fazla bilgi edinmek için [Microsoft Purview uyumluluk portalı İzinler bölümüne](microsoft-365-compliance-center-permissions.md#permissions-in-the-microsoft-purview-compliance-portal) bakın.
 
-- Information Protection Yöneticisi
+- Information Protection Yönetici
 - Information Protection Analisti
 - Information Protection Araştırmacısı
 - Information Protection Okuyucu
 
-Önizleme aşamasında olan MIP rol gruplarının listesi aşağıdadır. hakkında daha fazla bilgi edinmek için bkz [. Güvenlik & Uyumluluk Merkezi'ndeki Rol grupları](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#role-groups-in-the-security--compliance-center)
+Aşağıda, önizleme aşamasında olan geçerli rol gruplarının listesi yer alır. hakkında daha fazla bilgi edinmek için [bkz. Microsoft Purview uyumluluk portalı](microsoft-365-compliance-center-permissions.md#permissions-in-the-microsoft-purview-compliance-portal)
 
 - Information Protection
 - Information Protection Yöneticileri
@@ -76,9 +78,9 @@ Bu izinler, ilkeleri zorlamamak için bir DLP ilkesi oluşturmak ve uygulamak i�
 
 ### <a name="create-the-dlp-policy-from-a-template"></a>Şablondan DLP ilkesi oluşturma
 
-1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 uyumluluk merkezi</a> oturum açın.
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalı</a> oturum açın.
 
-2. Uyumluluk Merkezi'nde \> sol gezinti \> **Çözümleri** \> **Veri kaybı önleme** \> **İlkeleri** \> **+ İlke oluştur'u seçin**.
+2. Sol Microsoft Purview uyumluluk portalı \> gezinti \> **Çözümleri** \> **Veri kaybı önleme** \> **İlkeleri** \> **+ İlke oluştur'a tıklayın**.
 
     ![İlke düğmesi oluşturun.](../media/b1e48a08-92e2-47ca-abdc-4341694ddc7c.png)
           
@@ -205,7 +207,7 @@ In this example, you'll create a DLP policy that identifies U.S. PII data, which
 
 ## View the status of a DLP policy
 
-At any time, you can view the status of your DLP policies on the **Policy** page in the **Data loss prevention** section of the Security &amp; Compliance Center. Here you can find important information, such as whether a policy was successfully enabled or disabled, or whether the policy is in test mode.
+At any time, you can view the status of your DLP policies on the **Policy** page in the **Data loss prevention** section of the Microsoft Purview compliance portal. Here you can find important information, such as whether a policy was successfully enabled or disabled, or whether the policy is in test mode.
 
 Here are the different statuses and what they mean.
 

@@ -19,12 +19,12 @@ search.appverid:
 - BCS160
 ms.assetid: e4468915-15e1-4530-9361-cd18ce82e231
 description: Ön ek filtreleme, güvenlik ve uyumluluk gibi yapılandırmaya yönelik ortak alanlar da dahil olmak üzere Office 365 için ExpressRoute'u yönetmeyi öğrenin.
-ms.openlocfilehash: a601c047a7b8e19f02a728d00708689c795d5a64
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 493a7c0ca14d05a2b84763b9e9485f828574a930
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098328"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65753880"
 ---
 # <a name="managing-expressroute-for-office-365-connectivity"></a>Office 365 bağlantısı için ExpressRoute'u yönetme
 
@@ -39,7 +39,7 @@ Microsoft, müşterilerin Microsoft'tan tanıtıldığı gibi tüm BGP yolların
   
 ExpressRoute genel eşlemesi genelinde yol sahipliğinin ek doğrulamasına ihtiyacınız varsa, tanıtılan yolları [Microsoft'un genel IP aralıklarını](https://www.microsoft.com/download/details.aspx?id=53602) temsil eden tüm IPv4 ve IPv6 IP ön ekleri listesinden de kontrol edebilirsiniz. Bu aralıklar, Microsoft'a ait olmayan yolların ortamlarına sızmasından endişe duyan müşterilere ek koruma sağlayan güvenilir bir filtre aralığı kümesi sağlayarak tam Microsoft adres alanını kapsar ve seyrek olarak değişir. Bir değişiklik olması durumunda ayın 1'inde yapılır ve dosyanın her güncelleştirilişinde sayfanın **ayrıntılar** bölümündeki sürüm numarası değişir.
   
-Ön ek filtresi listeleri oluşturmak için [Office 365 URL'lerinin ve IP adresi aralıklarının](./urls-and-ip-address-ranges.md) kullanılmasını önlemenin çeşitli nedenleri vardır. Aşağıdakiler dahil:
+Ön ek filtresi listeleri oluşturmak için [Office 365 URL'lerinin ve IP adresi aralıklarının](./urls-and-ip-address-ranges.md) kullanılmasını önlemenin birçok nedeni vardır. Aşağıdakiler dahil:
   
 - Office 365 IP ön ekleri sık sık birçok değişikliğe uğrar.
 
@@ -80,13 +80,13 @@ Ek denetimler için, İnternet veya Office 365 hedefleyen ağ isteklerinin bazı
   
 Microsoft'un ağınıza bağlantı başlatmasını gerektiren birkaç isteğe bağlı senaryo vardır.
   
-- Oturum açma için parola doğrulaması sırasında ADFS.
+- Oturum açmak için parola doğrulaması sırasında ADFS.
 
 - [Karma dağıtımları Exchange Server](/exchange/exchange-hybrid).
 
 - Exchange Online kiracıdan şirket içi konağa posta.
 
-- SharePoint Online'dan şirket içi konağa SharePoint Çevrimiçi Posta gönderin.
+- SharePoint Online'dan şirket içi bir konağa gönderilen Çevrimiçi Posta'SharePoint.
 
 - [Federasyon karma arama SharePoint](/SharePoint/hybrid/display-hybrid-federated-search-results-in-sharepoint-online).
 

@@ -20,12 +20,12 @@ ms.collection:
 - m365initiative-m365-defender
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: 099ba7abe53be6269c1d01c0d39d9e5cfbe3557d
-ms.sourcegitcommit: 1ef176c79a0e6dbb51834fe30807409d4e94847c
+ms.openlocfilehash: 0ca9a951ffd561113a806341d25bc1f0661732cc
+ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2021
-ms.locfileid: "64731702"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65739959"
 ---
 # <a name="hunt-for-threats-across-devices-emails-apps-and-identities"></a>Cihazlar, e-postalar, uygulamalar ve kimlikler arasında tehditleri avlama
 
@@ -82,7 +82,10 @@ SenderFromAddress, RecipientEmailAddress, AccountDisplayName, JobTitle,
 Department, City, Country
 ```
 
+Tabloları birleştirmek için Kusto Sorgu Dili nasıl kullanabileceğinizi öğrenmek için bu [kısa videoyu](https://www.youtube.com/watch?v=8qZx7Pp5XgM) izleyin.  
+
 ### <a name="get-device-information"></a>Cihaz bilgilerini alma
+
 [Gelişmiş tehdit avcılığı şeması](advanced-hunting-schema-tables.md), çeşitli tablolarda kapsamlı cihaz bilgileri sağlar. Örneğin [, DeviceInfo tablosu](advanced-hunting-deviceinfo-table.md) düzenli olarak toplanan olay verilerini temel alan kapsamlı cihaz bilgileri sağlar. Bu sorgu, `DeviceInfo` güvenliği aşılmış olabilecek bir kullanıcının (`<account-name>`) herhangi bir cihazda oturum açıp açmadığını denetlemek için tabloyu kullanır ve ardından bu cihazlarda tetiklenen uyarıları listeler.
 
 >[!Tip]
@@ -152,7 +155,7 @@ DeviceInfo
 ```
 
 
-### <a name="example-query-for-macos-devices"></a>macOS cihazları için örnek sorgu
+### <a name="example-query-for-macos-devices"></a>macOS cihazlar için örnek sorgu
 
 Catalina'dan eski bir sürüme sahip macOS çalıştıran tüm cihazları görmek için aşağıdaki örnek sorguyu kullanın.
 
@@ -188,6 +191,7 @@ DeviceInfo
 ## <a name="hunting-scenarios"></a>Tehdit avcılığı senaryoları
 
 ### <a name="list-logon-activities-of-users-that-received-emails-that-were-not-zapped-successfully"></a>Başarıyla eşlenmemiş e-postalar alan kullanıcıların oturum açma etkinliklerini listeleme
+
 [Sıfır saatlik otomatik temizleme (ZAP),](../office-365-security/zero-hour-auto-purge.md) alındıktan sonra kötü amaçlı e-postaları giderir. ZAP başarısız olursa, kötü amaçlı kod sonunda cihazda çalışabilir ve hesapları tehlikeye atabilir. Bu sorgu, ZAP tarafından başarıyla ele alınmayan e-postaların alıcıları tarafından yapılan oturum açma etkinliğini denetler.
 
 ```kusto
@@ -205,6 +209,7 @@ LogonTime = Timestamp, AccountDisplayName, Application, Protocol, DeviceName, Lo
 ```
 
 ### <a name="get-logon-attempts-by-domain-accounts-targeted-by-credential-theft"></a>Kimlik bilgisi hırsızlığı tarafından hedeflenen etki alanı hesapları tarafından oturum açma girişimlerini alma
+
 Bu sorgu önce tablodaki `AlertInfo` tüm kimlik bilgileri erişim uyarılarını tanımlar. Ardından tabloyu birleştirir veya birleştirir `AlertEvidence` ; bu tablo hedeflenen hesapların adları için ayrıştırılır ve yalnızca etki alanına katılmış hesaplar için filtreler. Son olarak, etki alanına katılmış hedeflenen hesaplar tarafından tüm oturum açma etkinliklerini almak için tabloyu denetler `IdentityLogonEvents` .
 
 ```kusto
@@ -225,6 +230,7 @@ AlertInfo
 ```
 
 ### <a name="check-if-files-from-a-known-malicious-sender-are-on-your-devices"></a>Bilinen bir kötü amaçlı gönderenden gelen dosyaların cihazlarınızda olup olmadığını denetleyin
+
 Kötü amaçlı dosyalar`MaliciousSender@example.com` gönderen bir e-posta adresi ( ) bildiğinizi varsayarsak, bu gönderenden gelen dosyaların cihazlarınızda mevcut olup olmadığını belirlemek için bu sorguyu çalıştırabilirsiniz. Örneğin, bir kötü amaçlı yazılım dağıtım kampanyasından etkilenen cihazları tanımlamak için bu sorguyu kullanabilirsiniz.
 
 ```kusto
@@ -241,6 +247,7 @@ DeviceFileEvents
 ```
 
 ### <a name="review-logon-attempts-after-receipt-of-malicious-emails"></a>Kötü amaçlı e-posta alındıktan sonra oturum açma girişimlerini gözden geçirme
+
 Bu sorgu, bilinen kötü amaçlı e-postaları aldıktan sonra 30 dakika içinde e-posta alıcıları tarafından gerçekleştirilen en son 10 oturum açmayı bulur. E-posta alıcılarının hesaplarının gizliliğinin ihlal edilip edilmediğini denetlemek için bu sorguyu kullanabilirsiniz.
 
 ```kusto
@@ -261,6 +268,7 @@ IdentityLogonEvents
 ```
 
 ### <a name="review-powershell-activities-after-receipt-of-emails-from-known-malicious-sender"></a>Bilinen kötü amaçlı gönderenden gelen e-postalar alındıktan sonra PowerShell etkinliklerini gözden geçirin
+
 Kötü amaçlı e-postalar genellikle ek yükleri teslim etmek için PowerShell komutlarını çalıştıran belgeler ve diğer özel hazırlanmış ekleri içerir. Bilinen bir kötü amaçlı gönderenden (`MaliciousSender@example.com` ) gelen e-postaları biliyorsanız, gönderenden bir e-posta alındıktan sonra 30 dakika içinde gerçekleşen PowerShell etkinliklerini listelemek ve gözden geçirmek için bu sorguyu kullanabilirsiniz.  
 
 ```kusto
@@ -283,6 +291,7 @@ DeviceProcessEvents
 ```
 
 ## <a name="related-topics"></a>İlgili konular
+
 - [Gelişmiş avcılığa genel bakış](advanced-hunting-overview.md)
 - [Sorgu dilini öğrenin](advanced-hunting-query-language.md)
 - [Sorgu sonuçlarıyla çalışın](advanced-hunting-query-results.md)

@@ -17,54 +17,56 @@ search.appverid:
 - MET150
 ms.custom:
 - seo-marvel-apr2020
-description: Özel, hassas bir bilgi türünün, kurum 365'in  ihtiyaçlarını karşılayacak kuralları kullanmanızı sağlayacak şekilde nasıl oluşturulacaklarını öğrenin.
-ms.openlocfilehash: 8393da8e2b2607692983010783d9ae110f268f4c
-ms.sourcegitcommit: 99067d5eb1fa7b094e7cdb1f7be65acaaa235a54
+description: Kuruluşunuzun gereksinimlerini karşılayan kuralları kullanmanıza olanak sağlayacak özel bir hassas bilgi türü oluşturmayı öğrenin.
+ms.openlocfilehash: f0ebc1bb4b13f9e31ca1a8a1967fce007105cfe6
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2022
-ms.locfileid: "63010050"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65753902"
 ---
 # <a name="customize-a-built-in-sensitive-information-type"></a>Yerleşik hassas bilgi türünü özelleştirme
 
-İçerikte hassas bilgiler için bu bilgileri kural olarak adlandırılan bölümde *açıklamalısiniz*. Veri kaybı önleme (DLP), hemen kullanabileceğiniz en yaygın hassas bilgi türlerine yönelik kurallar içerir. Bu kuralları kullanmak için, bunları bir ilkeye dahil etmek gerekir. Bu yerleşik kuralları, kuruma özel ihtiyaçlarına göre ayarlamak ve bunu yapmak için özel bir hassas bilgi türü oluşturabilirsiniz. Bu konu başlığı altında, mevcut kural koleksiyonunu içeren XML dosyasını nasıl özelleştirebileceğiniz ve daha çok olası kredi kartı bilgisi yelpazesini nasıl algılayebileceğiniz açıklanmıştır.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Bu örneği alıp diğer yerleşik hassas bilgi türlerine uygulayabilirsiniz. Varsayılan hassas bilgi türlerinin ve XML tanımlarının listesi için bkz. [Hassas bilgi türü varlık tanımları](sensitive-information-type-entity-definitions.md).
+İçerikte hassas bilgiler ararken, bu bilgileri *kural* olarak adlandırılan bölümde açıklamanız gerekir. Microsoft Purview Veri Kaybı Önleme (DLP), hemen kullanabileceğiniz en yaygın hassas bilgi türleri için kurallar içerir. Bu kuralları kullanmak için bir ilkeye eklemeniz gerekir. Bu yerleşik kuralları kuruluşunuzun özel gereksinimlerini karşılayacak şekilde ayarlamak istediğinizi ve özel bir hassas bilgi türü oluşturarak bunu yapabileceğinizi fark edebilirsiniz. Bu konu başlığı altında, mevcut kural koleksiyonunu içeren XML dosyasının daha geniş bir yelpazedeki olası kredi kartı bilgilerini algılamak için nasıl özelleştirileceği gösterilmektedir.
+
+Bu örneği alıp diğer yerleşik hassas bilgi türlerine uygulayabilirsiniz. Varsayılan hassas bilgi türlerinin ve XML tanımlarının listesi için bkz [. Hassas bilgi türü varlık tanımları](sensitive-information-type-entity-definitions.md).
 
 ## <a name="export-the-xml-file-of-the-current-rules"></a>Geçerli kuralların XML dosyasını dışarı aktarma
 
-XML'yi dışarı aktarmanız için, [Uzak PowerShell aracılığıyla Güvenlik ve Uyumluluk Merkezi'ne bağlanmanız gerekir](/powershell/exchange/connect-to-scc-powershell).
+XML'yi dışarı aktarmak [için Uzak PowerShell aracılığıyla Güvenlik ve Uyumluluk Merkezi'ne bağlanmanız gerekir.](/powershell/exchange/connect-to-scc-powershell).
 
-1. PowerShell'de, kuruluş kurallarını ekranda görüntülemek için aşağıdakini yazın. Kendi kurallarınızı oluşturmadıysanız, yalnızca "Microsoft Kural Paketi" etiketli varsayılan yerleşik kuralları görüntülersiniz.
+1. PowerShell'de, kuruluşunuzun kurallarını ekranda görüntülemek için aşağıdakileri yazın. Kendi kurallarınızı oluşturmadıysanız yalnızca "Microsoft Kural Paketi" etiketli varsayılan yerleşik kuralları görürsünüz.
 
    ```powershell
    Get-DlpSensitiveInformationTypeRulePackage
    ```
 
-2. Aşağıdakini yazarak, kuruluş kurallarını bir değişkende depolar. Bir şeyin değişkende depolanması, daha sonra uzak PowerShell komutlarında çalışan bir biçimde kolayca kullanılabilir.
+2. Aşağıdakileri yazarak kuruluşunuzun kurallarını bir değişkende depolayın. Bir öğeyi bir değişkende depolamak, daha sonra uzak PowerShell komutları için çalışan bir biçimde kolayca kullanılabilir hale getirir.
 
    ```powershell
    $ruleCollections = Get-DlpSensitiveInformationTypeRulePackage
    ```
 
-3. Aşağıdakini yazarak tüm verilerle biçimlendirilmiş bir XML dosyası yapın.
+3. Aşağıdakini yazarak tüm bu verilerle biçimlendirilmiş bir XML dosyası yapın.
 
    ```powershell
    [System.IO.File]::WriteAllBytes('C:\custompath\exportedRules.xml', $ruleCollections.SerializedClassificationRuleCollection)
    ```
 
    > [!IMPORTANT]
-   > Kural paketinizin gerçekte depolandığı dosya konumunu kullanmaya emin olun. `C:\custompath\` bir yer tutucudur.
+   > Kural paketinizin gerçekten depolandığı dosya konumunu kullandığınızdan emin olun. `C:\custompath\` bir yer tutucudur.
 
 ## <a name="find-the-rule-that-you-want-to-modify-in-the-xml"></a>XML'de değiştirmek istediğiniz kuralı bulma
 
-Yukarıdaki cmdlet'ler, sağlamamız *varsayılan* kuralları içeren kural koleksiyonunun tamamını dışarı aktardı. Ardından, özel olarak değiştirmek istediğiniz Kredi Kartı Numarası kuralına bakmanız gerekir.
+Yukarıdaki cmdlet'ler, sağladığımız varsayılan kuralları içeren *kural koleksiyonunun* tamamını dışarı aktardı. Ardından, özellikle değiştirmek istediğiniz Kredi Kartı Numarası kuralını aramanız gerekir.
 
-1. Önceki bölümde dışarı aktarmış olduğunuz XML dosyasını açmak için bir metin düzenleyicisi kullanın.
+1. Önceki bölümde dışarı aktardığınız XML dosyasını açmak için bir metin düzenleyicisi kullanın.
 
-2. Sayfayı aşağı `<Rules>` kaydırarak, DLP kurallarını içeren bölümün başlangıcı olan etikete gidin. Bu XML dosyası kural koleksiyonunun tamamına ilişkin bilgileri içerdiği için, en üstte kuralları bulmak için geçmiş bilgileri kaydırmanız gereken başka bilgiler içerir.
+2. Aşağı kaydırarak `<Rules>` DLP kurallarını içeren bölümün başlangıcı olan etikete gelin. Bu XML dosyası kural koleksiyonunun tamamına ilişkin bilgileri içerdiğinden, en üstte kurallara ulaşmak için kaydırmanız gereken diğer bilgileri içerir.
 
-3. Kredi *Func_credit_card* kural tanımını bulmak için aşağıdakilere bakın. XML'de, kural adları boşluk içeremez, dolayısıyla boşluklar çoğunlukla alt çizgilerle değiştirilir ve kural adları bazen kısaltılmış olur. Buna örnek olarak, kısaltılmış SSN'nin kısaltması olan ABD Sosyal Güvenlik numarası _kuralı ve bir örnek de yer almaktadır_. Kredi Kartı Numarası kuralı XML aşağıdaki kod örneğine benzer.
+3. Kredi Kartı Numarası kural tanımını bulmak için *Func_credit_card* arayın. XML'de kural adları boşluk içeremez, bu nedenle boşluklar genellikle alt çizgilerle değiştirilir ve kural adları bazen kısaltılır. Buna örnek olarak _SSN_ olarak kısaltılan ABD Sosyal Güvenlik numarası kuralı gösteriliyor. Kredi Kartı Numarası kuralı XML'i aşağıdaki kod örneğine benzer olmalıdır.
 
    ```xml
    <Entity id="50842eb7-edc8-4019-85dd-5a5c1f2bb085"
@@ -80,13 +82,13 @@ Yukarıdaki cmdlet'ler, sağlamamız *varsayılan* kuralları içeren kural kole
        </Entity>
    ```
 
-Artık XML'de Kredi Kartı Numarası kural tanımını bula sayesinde, kuralın XML'ini gereksinimlerinizi karşılayacak şekilde özelleştirebilirsiniz. XML tanımlarını yenilemek için, bu konunun [sonundaki](#term-glossary) Terim sözlüğüne bakın.
+Artık XML'de Kredi Kartı Numarası kural tanımını konumlandırdığınıza göre, kuralın XML'sini gereksinimlerinizi karşılayacak şekilde özelleştirebilirsiniz. XML tanımlarıyla ilgili bir yenileyici için bu konunun sonundaki [Terim sözlüğüne](#term-glossary) bakın.
 
 ## <a name="modify-the-xml-and-create-a-new-sensitive-information-type"></a>XML'yi değiştirme ve yeni bir hassas bilgi türü oluşturma
 
-İlk olarak, yeni bir hassas bilgi türü oluşturmanız gerekir çünkü varsayılan kuralları doğrudan değiştiremezsiniz. Güvenlik ve Uyumluluk Merkezi PowerShell'de özel bir hassas bilgi türü oluşturma konusunda ana hatlarıyla açıklanan özel hassas bilgi [türleriyle çok & şey kullanabilirsiniz](create-a-custom-sensitive-information-type-in-scc-powershell.md). Bu örnekte, basit bir şekilde tut hem de yalnızcaroborlu kanıtı kaldıran ve Kredi Kartı Numarası kuralına anahtar sözcükler eklemiz.
+İlk olarak, varsayılan kuralları doğrudan değiştiremediğiniz için yeni bir hassas bilgi türü oluşturmanız gerekir. [Güvenlik & Uyumluluk Merkezi PowerShell'de özel hassas bilgi türü oluşturma bölümünde özetlenen özel hassas bilgi türleriyle](create-a-custom-sensitive-information-type-in-scc-powershell.md) çok çeşitli işlemler yapabilirsiniz. Bu örnekte, bunu basit tutacağız ve yalnızca doğrulayıcı kanıtı kaldıracak ve Kredi Kartı Numarası kuralına anahtar sözcükler ekleyeceğiz.
 
-Tüm XML kuralı tanımları aşağıdaki genel şablonda yerleşik olarak yer almaktadır. Şablona Kredi Kartı Numarası tanımı XML'sini kopyalayıp yapıştırmanız, bazı değerleri değiştirmeniz gerekir (". . ." yer tutucularını ve sonra da değiştirilmiş XML'yi ilkelerde değiştirilebilir yeni bir kural olarak karşıya yükleyin.
+Tüm XML kuralı tanımları aşağıdaki genel şablon üzerinde oluşturulur. Şablona Kredi Kartı Numarası tanımı XML'sini kopyalayıp yapıştırmanız, bazı değerleri değiştirmeniz gerekir (". . ." yer tutucularını seçin) ve ardından değiştirilen XML'yi ilkelerde kullanılabilecek yeni bir kural olarak karşıya yükleyin.
 
 ```xml
 <?xml version="1.0" encoding="utf-16"?>
@@ -115,7 +117,7 @@ Tüm XML kuralı tanımları aşağıdaki genel şablonda yerleşik olarak yer a
 </RulePackage>
 ```
 
-Artık, aşağıdaki XML'ye benzer bir şeye sahipsiniz. Kural paketleri ve kurallar benzersiz GUID'leri tarafından tanımlandıklarından, biri kural paketi ve bir tane de Kredi Kartı Numarası kuralının GUID'sini değiştirmek için olmak olmak zorunda. Aşağıdaki kod örneğinde yer alan varlık kimliği için GUID, yeni bir tanımla değiştirmeniz gereken yerleşik kural tanımımız için geçerli olandır. GUID oluşturmanın çeşitli yolları vardır, ancak bunu PowerShell'de **[guid]::NewGuid() yazarak kolayca yapabilirsiniz**.
+Şimdi, aşağıdaki XML'e benzer bir öğeniz var. Kural paketleri ve kuralları benzersiz GUID'leri tarafından tanımlandığından, biri kural paketi için, diğeri de Kredi Kartı Numarası kuralının GUID değerini değiştirmek için olmak üzere iki GUID oluşturmanız gerekir. Aşağıdaki kod örneğindeki varlık kimliğinin GUID değeri, yenisiyle değiştirmeniz gereken yerleşik kural tanımımızın GUID değeridir. GUID oluşturmanın çeşitli yolları vardır, ancak **bunu PowerShell'de [guid]::NewGuid()** yazarak kolayca yapabilirsiniz.
 
 ```xml
 <?xml version="1.0" encoding="utf-16"?>
@@ -155,9 +157,9 @@ Artık, aşağıdaki XML'ye benzer bir şeye sahipsiniz. Kural paketleri ve kura
 </RulePackage>
 ```
 
-## <a name="remove-the-corroborative-evidence-requirement-from-a-sensitive-information-type"></a>Hassas bir bilgi türünden, yol açıcı kanıt gereksinimini kaldırma
+## <a name="remove-the-corroborative-evidence-requirement-from-a-sensitive-information-type"></a>Hassas bilgi türünden doğrulayıcı kanıt gereksinimini kaldırma
 
-Artık Güvenlik Uyumluluk Merkezi'ne &amp; yük başka bir hassas bilgi türünüz olduğu için, bir sonraki adım kuralı daha özel hale yüklemektir. Kuralı, yalnızca denetim sayısı geçen ancak anahtar sözcükler gibi ek (parola ek) kanıt gerektirmeyen 16 basamaklı bir sayı olacak şekilde değiştirebilirsiniz. Bunu yapmak için, XML'ninroboratif kanıt olarak ihtiyacı olan kısmını kaldırmanız gerekir. Hatalı pozitif pozitif sonuç azaltmada, yol açıcı kanıt çok yararlıdır. Bu durumda, kredi kartı numarasının yanında çoğunlukla belirli anahtar sözcükler veya son kullanma tarihi vardır. Bu kanıtı kaldırırsanız, `confidenceLevel`kredi kartı numarasını (örnekte 85 olan ) indirerek ne kadar güven güvenerek bu olduğuna da karar velisiniz.
+artık Microsoft Purview uyumluluk portalı karşıya yükleyebileceğiniz yeni bir hassas bilgi türünüz olduğuna göre, sonraki adım kuralı daha belirgin hale getirmektir. Kuralı, sağlama toplamını geçiren ancak anahtar sözcükler gibi ek (destekleyici) kanıt gerektirmeyen 16 basamaklı bir sayı arayabilecek şekilde değiştirin. Bunu yapmak için, XML'in doğrulayıcı kanıt arayabilen bölümünü kaldırmanız gerekir. Doğrulayıcı kanıt, hatalı pozitif sonuçların azaltılmasında çok yararlıdır. Bu durumda genellikle kredi kartı numarasının yanında belirli anahtar sözcükler veya son kullanma tarihi vardır. Bu kanıtı kaldırırsanız, örnekte 85 olan değerini düşürerek `confidenceLevel`bir kredi kartı numarası bulduğunuzdan ne kadar emin olduğunuzu da ayarlamanız gerekir.
 
 ```xml
 <Entity id="db80b3da-0056-436e-b0ca-1f4cf7080d1f" patternsProximity="300"
@@ -167,9 +169,9 @@ Artık Güvenlik Uyumluluk Merkezi'ne &amp; yük başka bir hassas bilgi türün
     </Entity>
 ```
 
-## <a name="look-for-keywords-that-are-specific-to-your-organization"></a>Belirli bir kuruluşa özel anahtar sözcükleri arama
+## <a name="look-for-keywords-that-are-specific-to-your-organization"></a>Kuruluşunuza özgü anahtar sözcükleri arayın
 
-Kanıt gerektiren ancak farklı veya ek anahtar sözcükler almak istiyor ve belki de bu kanıtın yerini değiştirmek istiyor da olabilir. 16 basamaklı `patternsProximity` sayı çevresinde düzeltici kanıt için pencereyi genişletecek veya daraltacak şekilde ayarlayabilirsiniz. Kendi anahtar sözcüklerinizi eklemek için, bir anahtar sözcük listesi tanımlamanız ve kuralınız içinde listeye göndermeniz gerekir. Aşağıdaki XML", "şirket kartı" ve "Contoso kartı" anahtar sözcüklerini ekler; böylelikle, kredi kartı numarasında 150 karakter içinde bu tümcecikleri içeren her ileti bir kredi kartı numarası olarak tanımlanır.
+Doğrulayıcı kanıt gerektirebilir, ancak farklı veya ek anahtar sözcükler isteyebilirsiniz ve belki de bu kanıtı nerede arayabileceğinizi değiştirmek isteyebilirsiniz. 16 basamaklı sayı etrafında doğrulayıcı kanıt için penceresini genişletecek veya küçültecek şekilde ayarlayabilirsiniz `patternsProximity` . Kendi anahtar sözcüklerinizi eklemek için bir anahtar sözcük listesi tanımlamanız ve kuralınız içinde buna başvurmanız gerekir. Aşağıdaki XML, kredi kartı numarasının 150 karakteri içinde bu tümcecikleri içeren tüm iletilerin kredi kartı numarası olarak tanımlanması için "şirket kartı" ve "Contoso kartı" anahtar sözcüklerini ekler.
 
 ```xml
 <Rules>
@@ -195,32 +197,32 @@ Kanıt gerektiren ancak farklı veya ek anahtar sözcükler almak istiyor ve bel
     </Keyword>
 ```
 
-## <a name="upload-your-rule"></a>Upload kuralınızı seçin
+## <a name="upload-your-rule"></a>Kuralınızı Upload
 
-Kuralınızı karşıya yüklemek için, aşağıdaki adımları gerçekleştirin.
+Kuralınızı karşıya yüklemek için aşağıdakileri yapmanız gerekir.
 
-1. Unicode kodlamayla .xml bir dosya olarak kaydedin. Dosya farklı bir kodlamayla kaydedilirse kural çalışmayy olduğundan, bu önemlidir.
+1. Unicode kodlamalı .xml dosyası olarak kaydedin. Dosya farklı bir kodlamayla kaydedilirse kural çalışmayacağından bu önemlidir.
 
-2. [Bağlan ve Uyumluluk Merkezi'ne Uzak PowerShell aracılığıyla bağlanın.](/powershell/exchange/connect-to-scc-powershell)
+2. [Uzak PowerShell aracılığıyla Güvenlik ve Uyumluluk Merkezi'ne Bağlan.](/powershell/exchange/connect-to-scc-powershell)
 
-3. PowerShell'de, aşağıdakini yazın.
+3. PowerShell'de aşağıdakileri yazın.
 
    ```powershell
    New-DlpSensitiveInformationTypeRulePackage -FileData ([System.IO.File]::ReadAllBytes('C:\custompath\MyNewRulePack.xml'))
    ```
 
    > [!IMPORTANT]
-   > Kural paketinizin gerçekte depolandığı dosya konumunu kullanmaya emin olun. `C:\custompath\` bir yer tutucudur.
+   > Kural paketinizin gerçekten depolandığı dosya konumunu kullandığınızdan emin olun. `C:\custompath\` bir yer tutucudur.
 
-4. Onaylamak için Y yazın ve Enter tuşuna **basın**.
+4. Onaylamak için Y yazın ve **Enter tuşuna** basın.
 
-5. Aşağıdakini yazarak yeni kuralınıza ve görünen adına yükleniyor olduğunu doğrulayın:
+5. Yeni kuralınızın karşıya yüklendiğini ve görünen adını yazarak doğrulayın:
 
    ```powershell
    Get-DlpSensitiveInformationType
    ```
 
-Hassas bilgileri algılamak üzere yeni kuralı kullanmaya başlamak için, kuralı bir DLP ilkesine eklemeniz gerekir. Kuralı bir ilkeye ekleme hakkında bilgi edinmek için bkz [. Şablondan DLP ilkesi oluşturma](create-a-dlp-policy-from-a-template.md).
+Hassas bilgileri algılamak için yeni kuralı kullanmaya başlamak için kuralı bir DLP ilkesine eklemeniz gerekir. Kuralı ilkeye eklemeyi öğrenmek için bkz. [Şablondan DLP ilkesi oluşturma](create-a-dlp-policy-from-a-template.md).
 
 ## <a name="term-glossary"></a>Terim sözlüğü
 
@@ -230,20 +232,20 @@ Bunlar, bu yordam sırasında karşılaştığınız terimlerin tanımlarıdır.
 
 ****
 
-|Dönem|Tanım|
+|Terim|Tanım|
 |---|---|
-|Varlık|Varlıklar, kredi kartı numaraları gibi hassas bilgi türleri olarak çağrıllarımızdır. Her varlığın kimliği olarak benzersiz bir GUID'si vardır. GUID kopyalayıp XML'de arama yaptıysanız, XML kuralı tanımını ve bu XML kuralının tüm yerelleştirilmiş çevirilerini bulursanız. Bu tanımı, çevirinin GUID'sini bulup GUID için arayarak da bulabilirsiniz.|
-|İşlevler|Derlenmiş kodda `Func_credit_card`bir işlev olan XML dosya başvuruları. İşlevler, karmaşık kayıt defterlerini çalıştırmak ve yerleşik kurallarımız için checksums'un eşleni olduğunu doğrulamak için kullanılır.) Kodda böyle bir durum ortaya olduğundan, değişkenlerden bazıları XML dosyasında görünmez.|
-|IdMatch|Bu, desenin eşlemeye çalıştığı tanımlayıcıdır (örneğin, bir kredi kartı numarası).|
-|Anahtar sözcük listeleri|XML dosyası ayrıca başvurular `keyword_cc_verification` ve `keyword_cc_name`, ilgili varlık içinde eşleşmeleri aramamız için anahtar sözcüklerin listesidir `patternsProximity` . Bunlar şu anda XML'de görüntülenmez.|
-|Desen|Bu düzen, hassas türün ne istediğinin listesini içerir. Bu anahtar sözcükleri, kayıt defterlerini ve iç işlevleri içerir ve bunlar, denetim defterlerini doğrulama gibi görevleri yerine gösterir. Hassas bilgi türlerinin, benzersiz güven içeren birden çok düzeni olabilir. Bu, özer kanıt bulunursa yüksek güven verir ve çok az hata kanıtı bulunursa veya yoksa daha düşük bir güven verir.|
-|Desen güveni Düzey|Bu, DLP altyapısının bir eşleşme bulduğu güven düzeyidir. Desenin gereksinimleri karşısa, bu güven düzeyi desene uygun bir eşleşmeyle ilişkilendirildi. Bu, posta akış kurallarını (aktarım kuralları olarak da bilinir) kullanırken Exchange bir güven ölçüsüdür.|
-|patternsProximity|Kredi kartı numarası düzenine benzer olan bir model bulunca, `patternsProximity` bu sayına yakınlık içinde buroboratif kanıt bulabilirsiniz.|
-|recommendedConfidence|Bu kural için öneririz güven düzeyidir. Önerilen güven, varlıklar ve benliklere uygulanır. Varlıklar için, bu sayı hiçbir zaman desene `confidenceLevel` göre değerlendirilmez. Yalnızca, uygulamak istediğiniz bir güven düzeyi seçmenize yardımcı olmak için bir öneridir. Affinities için, `confidenceLevel` bir `recommendedConfidence` posta akışı kuralı eyleminin çağrılacak sayıdan daha yüksek olması gerekir. Eylemi `recommendedConfidence` çağıran posta akışı kurallarında kullanılan varsayılan güven düzeyidir. Ekleyebilirsiniz, posta akışı kuralının bunun yerine desenin güven düzeyine göre çağırmayı el ile değiştirebilirsiniz.|
+|Varlık|Varlıklar, kredi kartı numaraları gibi hassas bilgi türleri olarak adlandırdığımız öğelerdir. Her varlığın kimliği benzersiz bir GUID'si vardır. BIR GUID'yi kopyalayıp XML'de ararsanız, XML kuralı tanımını ve bu XML kuralının tüm yerelleştirilmiş çevirilerini bulursunuz. Ayrıca, çevirinin GUID'sini bulup bu GUID'yi arayarak da bu tanımı bulabilirsiniz.|
+|İşlevler|XML dosyası, derlenmiş koddaki bir işlev olan öğesine başvurur `Func_credit_card`. İşlevler karmaşık regex'leri çalıştırmak ve sağlama toplamlarının yerleşik kurallarımızla eşleşip eşleşmediğini doğrulamak için kullanılır.) Bu kodda gerçekleştiğinden, bazı değişkenler XML dosyasında görünmez.|
+|IdMatch|Bu, desenin eşleşmeye çalıştığı tanımlayıcıdır(örneğin, bir kredi kartı numarası).|
+|Anahtar sözcük listeleri|XML dosyası ayrıca, varlığın içinde `patternsProximity` eşleşmeleri `keyword_cc_verification` aradığımız anahtar sözcüklerin listesi olan ve `keyword_cc_name`öğesine başvurur. Bunlar şu anda XML'de görüntülenmez.|
+|Desen|Desen, hassas türün aradığı şeyin listesini içerir. Bu anahtar sözcükler, regexes ve sağlama toplamlarını doğrulama gibi görevleri gerçekleştiren iç işlevleri içerir. Hassas bilgi türlerinin benzersiz güvenleri olan birden çok deseni olabilir. Bu, doğrulayıcı kanıt bulunursa yüksek güven döndüren hassas bir bilgi türü oluştururken ve çok az veya hiç doğrulayıcı kanıt bulunamazsa daha düşük bir güven oluştururken yararlıdır.|
+|Desen güvenilirliğiLevel|Bu, DLP altyapısının bir eşleşme bulduğuna dair güven düzeyidir. Bu güvenilirlik düzeyi, desenin gereksinimleri karşılanırsa desenin eşleşmesiyle ilişkilendirilir. Bu, Exchange posta akışı kurallarını (taşıma kuralları olarak da bilinir) kullanırken dikkate almanız gereken güvenilirlik ölçüsüdür.|
+|patternsProximity|Kredi kartı numarası deseni gibi görünen bir şey bulduğumuzda, `patternsProximity` doğrulayıcı kanıt arayacağımız numaranın etrafındaki yakınlıktır.|
+|recommendedConfidence|Bu kural için önerdiğimiz güvenilirlik düzeyi budur. Önerilen güvenilirlik varlıklar ve benziteler için geçerlidir. Varlıklar için bu sayı hiçbir zaman desene göre `confidenceLevel` değerlendirilmez. Bu yalnızca, uygulamak istiyorsanız güvenilirlik düzeyi seçmenize yardımcı olacak bir öneridir. Benzimsizlikler için, `confidenceLevel` desenin sayısı, çağrılacak posta akışı kuralı eyleminin sayısından daha yüksek `recommendedConfidence` olmalıdır. `recommendedConfidence`, bir eylemi çağıran posta akışı kurallarında kullanılan varsayılan güvenilirlik düzeyidir. İsterseniz, desenin güvenilirlik düzeyine göre çağrılacak posta akışı kuralını el ile değiştirebilirsiniz.|
 |
 
 ## <a name="for-more-information"></a>Daha fazla bilgi için
 
 - [Hassas bilgi türü varlık tanımları](sensitive-information-type-entity-definitions.md)
 - [Özel hassas bilgi türü oluşturma](create-a-custom-sensitive-information-type.md)
-- [Veri kaybını önleme hakkında bilgi](dlp-learn-about-dlp.md)
+- [Veri kaybı önleme hakkında daha fazla bilgi edinme](dlp-learn-about-dlp.md)

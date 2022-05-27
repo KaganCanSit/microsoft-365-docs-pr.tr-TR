@@ -16,12 +16,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 706d5449-45e5-4b0c-a012-ab60501899ad
 description: Microsoft 365 müşteri verilerinizin Avrupa Birliği içinde nerede depolandığını belirleme
-ms.openlocfilehash: 2f4a6133724d868f3caeaf977517c74fe56bb4fd
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 03f67a91f25f8333a92334ef633687e2b41e80a6
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095388"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65753660"
 ---
 # <a name="data-locations-for-the-european-union"></a>Avrupa Birliği için veri konumları
 
@@ -94,7 +94,7 @@ Yalnızca nadir durumlarda Bir Microsoft mühendisinin müşteri verilerine eri�
 
 Müşteriler, yetkisiz erişim durumunda verilerinin okunabilir olmasını önlemek için müşteri tarafından yönetilen anahtarları kullanabilir. Hem sunucu tarafı hem de istemci tarafı şifrelemesi, müşteri tarafından yönetilen anahtarlara veya müşteri tarafından sağlanan anahtarlara güvenebilir. Her iki durumda da Microsoft şifreleme anahtarlarına erişemez ve verilerin şifresini çözemez. AICPA onaylı bir denetçi tarafından yılda iki kez yapılan bir SOC denetimi, güvenlik denetimlerimizin denetim kapsamındaki etkinliğini doğrular. Denetçi tarafından yayımlanan SOC 2 Tip 2 kanıtlama raporu, müşteri verilerine erişimin hangi koşullarda gerçekleşebileceğini ve nasıl gerçekleşebileceğini açıklar.
 
-microsoft, çevrimiçi hizmetler kullanırken verilerinizi depolamaya ve işlemeye ek olarak sistem durumunu izlemek ve sorun giderme gibi hizmet işlemleri gerçekleştirmek için hizmet verileri oluşturur. Gizlilik koruma önlemi olarak Microsoft, gerçek kullanıcıları tanımlamadan bir kullanıcıyı diğerinden ayırt edebilmek için bu hizmet tarafından oluşturulan verilerde takma ad tanımlayıcıları oluşturur ve bunlara dayanır. Takma ad tanımlayıcıları bir kişiyi doğrudan tanımlamaz ve takma ad tanımlayıcılarını gerçek kullanıcılarla eşlemeyi sağlayan bilgiler verilerinizin bir parçası olarak korunur.
+microsoft, çevrimiçi hizmetler kullanırken verilerinizi depolamaya ve işlemeye ek olarak sistem durumunu izlemek ve sorun giderme gibi hizmet işlemleri gerçekleştirmek için hizmet verileri oluşturur. Gizlilik koruma önlemi olarak Microsoft, gerçek kullanıcıları tanımlamadan bir kullanıcıyı diğerinden ayırt edebilmek için bu hizmet tarafından oluşturulan verilerde takma ad tanımlayıcıları oluşturur ve bunlara dayanır. Takma ad tanımlayıcıları bir kişiyi doğrudan tanımlamaz ve takma ad tanımlayıcılarının gerçek kullanıcılarla eşlenip eşlenemelerine olanak tanıyan bilgiler verilerinizin bir parçası olarak korunur.
 
 Daha fazla bilgi edinmek için bkz. [Who verilerinize erişebilir](https://www.microsoft.com/trust-center/privacy/data-access) ve hangi [terimlere ve Alt İşlemcilere ve Veri Gizliliğine](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4qVL2) erişebilir?
 

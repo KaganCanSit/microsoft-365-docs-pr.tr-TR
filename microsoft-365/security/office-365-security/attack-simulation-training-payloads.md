@@ -13,12 +13,12 @@ ms.collection:
 ms.custom: ''
 description: Yöneticiler, Office 365 için Microsoft Defender Plan 2'de Saldırı simülasyonu eğitimi için özel yük oluşturmayı öğrenebilir.
 ms.technology: mdo
-ms.openlocfilehash: 24655986cd8c30bec4495477a63d692fd1ebb2d2
-ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
+ms.openlocfilehash: 8ee202f66d2e9f4fdbf3eba1a1548abd1c3b5524
+ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65679340"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65739847"
 ---
 # <a name="create-custom-payloads-for-attack-simulation-training-in-defender-for-office-365"></a>Office 365 için Defender'de Saldırı benzetimi eğitimi için özel yük oluşturma
 
@@ -30,7 +30,7 @@ Saldırı simülasyonu eğitiminde _yük_ , simülasyonlarda kullanıcılara sun
 
 Bu makalede, Saldırı simülasyonu eğitiminde kendi yüklerinizi nasıl oluşturacağınız açıklanmaktadır. Aşağıdaki konumlarda özel yük oluşturabilirsiniz:
 
-- **Payloads**: konumundaki Microsoft 365 Defender portalında<https://security.microsoft.com>**, E-posta & işbirliği** \> **Saldırı benzetimi eğitimi** \> **Simülasyon içerik kitaplığı** sekmesi **Yükleri'ne**\> gidin. Doğrudan **Simülasyon içerik kitaplığı** sekmesine gitmek için kullanın <https://security.microsoft.com/attacksimulator?viewid=simulationcontentlibrary>.
+- **Payloads**: konumundaki Microsoft 365 Defender portalında<https://security.microsoft.com>**, E-posta & işbirliği** \> **Saldırı benzetimi eğitimi** \> **Simülasyon içerik kitaplığı** sekmesi **Yükleri'ne**\> gidin. **Doğrudan Yükleri** seçebileceğiniz **Simülasyon içerik kitaplığı** sekmesine gitmek için kullanın<https://security.microsoft.com/attacksimulator?viewid=simulationcontentlibrary>.
 - Simülasyon oluşturma sırasında: Simülasyon oluşturma sihirbazının **Yük seçin** sayfasında (üçüncü sayfada) özel yükler oluşturabilirsiniz. Daha fazla bilgi için bkz. [Office 365 için Defender'de kimlik avı saldırısı benzetimi](attack-simulation-training.md) yapma.
 
 Saldırı simülasyonu eğitimi hakkında başlangıç bilgileri için bkz. [Saldırı simülasyonu eğitimini kullanarak Kullanmaya başlayın](attack-simulation-training-get-started.md).

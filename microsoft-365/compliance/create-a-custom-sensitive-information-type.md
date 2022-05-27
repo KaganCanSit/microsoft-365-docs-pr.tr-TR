@@ -17,14 +17,16 @@ search.appverid:
 - MET150
 description: Uyumluluk Merkezi'nde özel hassas bilgi türlerini oluşturmayı, değiştirmeyi, kaldırmayı ve test etmeyi öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: ff6a66b092d433fcfde7723f252fea679c2a3050
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 0d93259cfe76419e253c450c4cd5ed7f03f3b85c
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64759843"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65753528"
 ---
 # <a name="create-custom-sensitive-information-types-in-the-compliance-center"></a>Uyumluluk merkezinde özel hassas bilgi türleri oluşturma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Önceden yapılandırılmış hassas bilgi türleri gereksinimlerinizi karşılamıyorsa, tamamen tanımladığınız kendi özel hassas bilgi türlerinizi oluşturabilir veya önceden yapılandırılmış bilgi türlerinden birini kopyalayıp değiştirebilirsiniz.
 
@@ -45,9 +47,9 @@ Yeni bir hassas bilgi türü oluşturmanın iki yolu vardır:
   - [Hassas bilgi türü işlevleri](sit-functions.md)
   - [güvenilirlik düzeyleri](sensitive-information-type-learn-about.md#more-on-confidence-levels)
 
-- Kullanıcı arabirimi aracılığıyla özel bir hassas bilgi türü oluşturmak, test etmek ve dağıtmak için Genel yönetici veya Uyumluluk yöneticisi izinlerine sahip olmanız gerekir. Bkz. Office 365'da [yönetici rolleri hakkında](/office365/admin/add-users/about-admin-roles).
+- Kuruluşunuzun Microsoft Purview Veri Kaybı Önleme (DLP) içeren Office 365 Kurumsal gibi bir aboneliği olmalıdır. bkz[. Microsoft Mesajlaşma İlke ve Uyumluluk HizmetiDescription](/office365/servicedescriptions/exchange-online-protection-service-description/messaging-policy-and-compliance-servicedesc). 
 
-- Kuruluşunuzun Veri Kaybı Önleme (DLP) içeren Office 365 Kurumsal gibi bir aboneliği olmalıdır. Bkz [. Mesajlaşma İlkesi ve Uyumluluk HizmetiDescription](/office365/servicedescriptions/exchange-online-protection-service-description/messaging-policy-and-compliance-servicedesc).
+- Kuruluşunuzun veri kaybı önleme (DLP) içeren Office 365 Kurumsal gibi bir aboneliği olmalıdır. bkz[. Microsoft Mesajlaşma İlke ve Uyumluluk HizmetiDescription](/office365/servicedescriptions/exchange-online-protection-service-description/messaging-policy-and-compliance-servicedesc).
 
 > [!IMPORTANT]
 > Microsoft Müşteri Hizmetleri & Desteği, özel sınıflandırmalar veya normal ifade desenleri oluşturmaya yardımcı olamaz. Destek mühendisleri, test amacıyla örnek normal ifade desenleri sağlama veya beklendiği gibi tetiklenmeyen mevcut normal ifade deseninde sorun gidermeye yardımcı olma gibi özellikler için sınırlı destek sağlayabilir, ancak herhangi bir özel içerik eşleştirme geliştirmesinin gereksinimlerinizi veya yükümlülüklerinizi yerine getireceği konusunda güvence sağlayamaz.
@@ -104,7 +106,7 @@ Var olan bir hassas bilgi türünü temel alan yeni bir hassas bilgi türü olu�
 
 Ayrıca PowerShell ve Tam Veri Eşleştirme özelliklerini kullanarak özel hassas bilgi türleri de oluşturabilirsiniz. Bu yöntemler hakkında daha fazla bilgi edinmek için bkz:
 
-- [Güvenlik & Uyumluluk Merkezi PowerShell'de özel hassas bilgi türü oluşturma](create-a-custom-sensitive-information-type-in-scc-powershell.md)
+- [Microsoft Purview PowerShell'de özel hassas bilgi türü oluşturma](create-a-custom-sensitive-information-type-in-scc-powershell.md)
 - [Tam veri eşleşmesine dayalı hassas bilgi türleri hakkında daha fazla bilgi edinme](sit-learn-about-exact-data-match-based-sits.md#learn-about-exact-data-match-based-sensitive-information-types)
 
 1. Uyumluluk Merkezi'nde **Veri sınıflandırması** \> **Hassas bilgi türleri'ne** gidin ve kopyalamak istediğiniz hassas bilgi türünü seçin.
@@ -170,7 +172,7 @@ SIT örneği sayısı sınırı, şu çözümlerde SID'ler kullanıldığında g
 
 - DLP ilkeleri
 - Information Protection
-- Bilgi İdaresi
+- Veri Yaşam Döngüsü Yönetimi
 - İletişim Uyumluluğu
 - Kayıt Yönetimi
 - Bulut Uygulamaları için Microsoft Defender

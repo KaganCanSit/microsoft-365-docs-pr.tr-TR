@@ -26,12 +26,12 @@ ms.custom:
 - intro-overview
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 45e63c489093c147895c467c3471f16a8bb99918
-ms.sourcegitcommit: 344a254ca268a2f65cf199d9158a47e08861ffa5
+ms.openlocfilehash: c454a21b6ad696b84e3b04e20b42fd1d1a0a8b19
+ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "65368341"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65739549"
 ---
 # <a name="microsoft-365-defender"></a>Microsoft 365 Defender
 
@@ -128,6 +128,9 @@ Office 365 Güvenlik & Uyumluluk merkezinden veya Microsoft 365 Defender portal�
 
 > [!NOTE]
 > Microsoft 365 Defender portalı mevcut rol tabanlı erişimi kullanır ve zorlar ve her güvenlik modelini birleşik portala taşır. Yakınsanmış her iş yükünün kendi rol tabanlı erişimi vardır. Ürünlerdeki roller otomatik olarak Microsoft 365 Defender portalına yakınsanır. Ancak Microsoft Defender for Cloud Apps kendi rollerini ve izinlerini işlemeye devam eder.
+
+Microsoft 365 Defender'daki yeni birleşik portal hakkında bilgi edinmek için bu kısa videoyu izleyin.  
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWBKau]
 
 ### <a name="what-to-expect"></a>Bekleyebileceğiniz şeyler
 

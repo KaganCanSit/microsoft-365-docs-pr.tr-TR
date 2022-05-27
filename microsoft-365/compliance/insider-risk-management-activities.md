@@ -1,7 +1,7 @@
 ---
 title: Insider risk yönetimi etkinliklerini araştırma
-description: Microsoft 365'de insider risk yönetimi etkinliklerini araştırma hakkında bilgi edinin
-keywords: Microsoft 365, insider riski, risk yönetimi, uyumluluk
+description: Microsoft Purview'de insider risk yönetimi etkinliklerini araştırma hakkında bilgi edinin
+keywords: Microsoft 365, Microsoft Purview, iç risk, risk yönetimi, uyumluluk
 ms.localizationpriority: medium
 ms.service: O365-seccomp
 ms.topic: article
@@ -13,14 +13,16 @@ manager: laurawi
 audience: itpro
 ms.collection: m365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: b53b67433bea08e20b082f555c26d41edce55daa
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: a808e2d52692c44364e542cb8cd9e7a2b0c57cac
+ms.sourcegitcommit: d9842a9fcaead280bb704e92d44c1f4c201f9eb4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64783347"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65759878"
 ---
 # <a name="investigate-insider-risk-management-activities"></a>Insider risk yönetimi etkinliklerini araştırma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Riskli kullanıcı etkinliklerini araştırmak, kuruluşunuz için insider risklerini en aza indirmenin önemli bir ilk adımıdır. Bu riskler, şirket içi risk yönetimi ilkelerinden uyarı oluşturan etkinlikler veya ilkeler tarafından algılanan ancak kullanıcılar için hemen bir iç risk yönetimi uyarısı oluşturmayan etkinlikler olabilir. **Kullanıcı etkinlik raporlarını (önizleme)** veya **Uyarı panosunu** kullanarak bu tür etkinlikleri araştırabilirsiniz.
 
@@ -105,7 +107,7 @@ Analistlerin ve araştırmacıların aynı anda birden çok uyarıyı hemen kapa
 
 Insider risk uyarısını kapatmak için aşağıdaki adımları tamamlayın:
 
-1. [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com) **Insider risk yönetimi'ne** gidin ve **Uyarılar** sekmesini seçin.
+1. [Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com) **Insider risk yönetimi'ne** gidin ve **Uyarılar** sekmesini seçin.
 2. **Uyarılar panosunda**, kapatmak istediğiniz *Gözden geçirme gerekiyor* durumuna sahip uyarıyı (veya uyarıları) seçin.
 3. Uyarılar komut çubuğunda Uyarıları **kapat'ı** seçin.
 4. **Uyarıları kapat** ayrıntıları bölmesinde, seçili uyarılarla ilişkili kullanıcı ve ilke ayrıntılarını gözden geçirebilirsiniz.
@@ -115,7 +117,7 @@ Insider risk uyarısını kapatmak için aşağıdaki adımları tamamlayın:
 
 Insider risk uyarısını önceliklendirmek için aşağıdaki adımları tamamlayın:
 
-1. [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com) **Insider risk yönetimi'ne** gidin ve **Uyarılar** sekmesini seçin.
+1. [Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com) **Insider risk yönetimi'ne** gidin ve **Uyarılar** sekmesini seçin.
 2. **Uyarılar panosunda** önceliklendirmek istediğiniz uyarıyı seçin.
 3. **Uyarı ayrıntıları** sayfasında uyarı hakkındaki bilgileri gözden geçirebilirsiniz. Uyarıyı onaylayabilir ve yeni bir servis talebi oluşturabilir, uyarıyı onaylayabilir ve mevcut bir servis talebine ekleyebilir veya uyarıyı kapatabilirsiniz. Bu sayfa ayrıca uyarının geçerli durumunu ve Uyarı riski önem düzeyinin Yüksek, Orta veya Düşük olarak listelendiğini de içerir. Uyarı önceliklendirilmezse önem düzeyi zaman içinde artabilir veya azalabilir.
 
@@ -168,7 +170,7 @@ Bu sekme Etkinlik gezginini açar. Daha fazla bilgi için bu makaledeki Etkinlik
     - **Risk kategorisi**: Etkinlikleri aşağıdaki risk kategorilerine göre filtreleyin: *Risk puanı 15 > olan etkinlikler (sıralı olmadığı sürece)* ve *Sıralı etkinlikler*.
     - **Etkinlik Türü**: Etkinlikleri şu türlere göre filtreleyin: *Erişim*, *Silme*, *Toplama*, *Sızdırma*, *Sızma*, *Gizleme* ve *Güvenlik*.
     - **Sıralama ölçütü**: Zaman çizelgesi etkinliklerini *gerçekleşen Tarihe* veya *Risk puanına* göre listeleyin.
-4. **Risk sırası (önizleme):** Riskli etkinliklerin kronolojik sırası, risk araştırmasının önemli bir yönüdür ve bu ilgili etkinliklerin tanımlanması, kuruluşunuz için genel riski değerlendirmenin önemli bir parçasıdır. İlgili uyarı etkinlikleri, bu etkinliklerin daha büyük bir risk alanıyla ilişkilendirildiğini vurgulamak için bağlantı çizgileri ile görüntülenir. Etkinliklerin bu görünümü, araştırmacıların yalıtılmış veya tek seferlik olaylar olarak görülebilecek risk etkinlikleri için kelimenin tam anlamıyla "noktaları birbirine bağlamalarına" yardımcı olabilir. İlişkili tüm risk etkinliklerinin ayrıntılarını görüntülemek için dizideki herhangi bir baloncuğu seçin. Ayrıntılar şunlardır:
+4. **Risk sırası**: Riskli etkinliklerin kronolojik sırası, risk araştırmasının önemli bir yönüdür ve bu ilgili etkinliklerin tanımlanması, kuruluşunuz için genel riski değerlendirmenin önemli bir parçasıdır. İlgili uyarı etkinlikleri, bu etkinliklerin daha büyük bir risk alanıyla ilişkilendirildiğini vurgulamak için bağlantı çizgileri ile görüntülenir. Etkinliklerin bu görünümü, araştırmacıların yalıtılmış veya tek seferlik olaylar olarak görülebilecek risk etkinlikleri için kelimenin tam anlamıyla "noktaları birbirine bağlamalarına" yardımcı olabilir. İlişkili tüm risk etkinliklerinin ayrıntılarını görüntülemek için dizideki herhangi bir baloncuğu seçin. Ayrıntılar şunlardır:
 
     - **Sıranın adı** .
     - Sıranın **Tarih** veya **Tarih aralığı**.
@@ -207,7 +209,7 @@ Aşağıdaki alanlara yönelik etkinlikleri ve içgörüleri görüntülemek ve 
 
 **Etkinlik gezginini** kullanmak için aşağıdaki adımları tamamlayın:
 
-1. [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com) **Insider risk yönetimi'ne** gidin ve **Uyarılar** sekmesini seçin.
+1. [Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com) **Insider risk yönetimi'ne** gidin ve **Uyarılar** sekmesini seçin.
 2. **Uyarılar panosunda** önceliklendirmek istediğiniz uyarıyı seçin.
 3. **Uyarılar ayrıntı bölmesinde** **Genişletilmiş görünümü aç'ı** seçin.
 4. Seçili uyarının sayfasında **Etkinlik gezgini** sekmesini seçin.
@@ -225,9 +227,9 @@ Etkinlik zaman çizelgesinden bir etkinliğin olaylarını seçerken, gezginde g
 
 Uyarı gözden geçirilip önceliklendirildikçe, risk etkinliğini daha fazla araştırmak için yeni bir olay oluşturabilirsiniz. Uyarı için servis talebi oluşturmak için şu adımları izleyin:
 
-1. [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com) **Insider risk yönetimi'ne** gidin ve **Uyarılar** sekmesini seçin.
+1. [Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com) **Insider risk yönetimi'ne** gidin ve **Uyarılar** sekmesini seçin.
 2. **Uyarılar panosunda**, onaylamak istediğiniz uyarıyı seçin ve yeni bir servis talebi oluşturun.
-3. **Uyarılar ayrıntıları bölmesinde****, Büyük****/küçük harf oluşturmak & Eylemlerİleri** >  onayla'yı seçin.
+3. **Uyarılar ayrıntıları bölmesinde** **Eylemler** > **Uyarıları onayla & olay oluştur'u** seçin.
 4. **Uyarıyı onayla ve içeriden risk olayı oluştur** iletişim kutusunda servis talebi için bir ad girin, katkıda bulunan olarak eklenecek kullanıcıları seçin ve uygun şekilde açıklamalar ekleyin. Açıklamalar servis talebine servis talebi notu olarak otomatik olarak eklenir.
 5. Yeni bir **servis talebi oluşturmak için Büyük/küçük harf oluştur'u** seçin veya servis talebi oluşturmadan iletişim kutusunu kapatmak için **İptal'i** seçin.
 
@@ -274,4 +276,4 @@ Modern çalışma alanı kullanıcıları genellikle zamanlarında çok çeşitl
 
 - **Analist ve araştırmacı çalışmalarını öncelikle en yüksek risk uyarılarına odakla**. İlkelerinize bağlı olarak, risk azaltma çabalarınızı farklı derecelerde etkileyebilecek etkinlikleri yakalayıyor ve uyarılar oluşturuyor olabilirsiniz. Uyarıları önem derecesine göre [filtreleyin](insider-risk-management-activities.md#filter-alerts-on-the-alert-dashboard) ve *Yüksek önem derecesi* uyarılarının önceliklerini belirleyin.
 - **Kullanıcıları analist ve araştırmacı olarak atayın**. Doğru kullanıcıya uygun roller atanmak, insider risk uyarısı gözden geçirme sürecinin önemli bir parçasıdır. *Insider Risk Yönetimi Analistleri ve Insider Risk Yönetimi Araştırmacıları* rol gruplarına uygun kullanıcıları *atadığınızdan* emin olun.  
-- **En yüksek risk etkinliklerini keşfetmeye yardımcı olmak için otomatik insider risk özelliklerini kullanın**. Insider risk yönetimi [dizisi algılama](insider-risk-management-policies.md#sequence-detection-preview) ve [kümülatif sızdırma algılama](insider-risk-management-policies.md#cumulative-exfiltration-detection-preview) özellikleri, kuruluşunuzdaki riskleri bulmanın daha zor olduğunu hızla keşfetmenize yardımcı olabilir. [Risk puanı artırıcılarınızı](insider-risk-management-settings.md#indicators), [dosya türü dışlamalarınızı](insider-risk-management-settings.md#file-type-exclusions), [etki alanlarınızı](insider-risk-management-settings.md#domains) ve ilkeleriniz için minimum [gösterge eşiği ayarlarını](insider-risk-management-settings.md#indicator-level-settings-preview) ince ayarlamayı göz önünde bulundurun.
+- **En yüksek risk etkinliklerini keşfetmeye yardımcı olmak için otomatik insider risk özelliklerini kullanın**. Insider risk yönetimi [dizisi algılama](insider-risk-management-policies.md#sequence-detection) ve [kümülatif sızdırma algılama](insider-risk-management-policies.md#cumulative-exfiltration-detection-preview) özellikleri, kuruluşunuzdaki riskleri bulmanın daha zor olduğunu hızla keşfetmenize yardımcı olabilir. [Risk puanı artırıcılarınızı](insider-risk-management-settings.md#indicators), [dosya türü dışlamalarınızı](insider-risk-management-settings.md#file-type-exclusions), [etki alanlarınızı](insider-risk-management-settings.md#domains) ve ilkeleriniz için minimum [gösterge eşiği ayarlarını](insider-risk-management-settings.md#indicator-level-settings-preview) ince ayarlamayı göz önünde bulundurun.

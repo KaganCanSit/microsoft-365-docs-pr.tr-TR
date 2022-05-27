@@ -1,5 +1,5 @@
 ---
-title: Yüksek ve DoD hizmet Office 365 GCC ek ağ güvenlik gereksinimleri
+title: Office 365 GCC High ve DoD için ek ağ güvenlik gereksinimleri
 ms.author: dzazzo
 author: dzazzo
 manager: dzazzo
@@ -18,53 +18,53 @@ search.appverid:
 - OGD150
 - MOE150
 ms.assetid: ''
-description: "Özet: Office 365 GCC DoD ve DoD'nin ek ağ güvenlik gereksinimleri vardır"
+description: 'Özet: Office 365 GCC Yüksek ve DoD ek ağ güvenlik gereksinimlerine sahiptir'
 hideEdit: true
-ms.openlocfilehash: c4fbfc52085b634329130c2785ce683109b8febe
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 86d3eb3fb4db42eda2be0c2c66fc754fbfd35f1e
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985691"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65754278"
 ---
-# <a name="additional-network-security-requirements-for-office-365-gcc-high-and-dod"></a>Yüksek ve DOD hizmet Office 365 GCC ek ağ güvenlik gereksinimleri
+# <a name="additional-network-security-requirements-for-office-365-gcc-high-and-dod"></a>Office 365 GCC High ve DOD için ek ağ güvenliği gereksinimleri
 
 *Bu makale Office 365 GCC High, Office 365 DOD, Microsoft 365 GCC High ve Microsoft 365 DOD için geçerlidir.*
 
-Office 365 GCC Yüksek ve DOD, ABD Kamu'nın ve tedarikçileriyle yüklenicilerinin  ihtiyaçlarını karşılamak için güvenli bulut ortamlarıdır.  Bu bulut ortamlarının, hizmetlerin erişime izin verdiği dış uç noktalarla ilgili ek ağ kısıtlamaları vardır.
+Office 365 GCC High ve DOD, Birleşik Devletler Kamu'nun ve tedarikçilerinin ve yüklenicilerinin ihtiyaçlarını karşılamak için güvenli bulut ortamlarıdır.  Bu bulut ortamları, hizmetlerin erişmesine izin verilen dış uç noktalar üzerinde ek ağ kısıtlamalarına sahiptir.
 
-GCC Şirket dışında kimlikler veya karma birlikte kullanım planlarına sahip olan yüksek ve DOD müşterileri, Microsoft'un şirket içi dağıtımlar için gelen ve/veya giden erişime izin vermesini gerektirir.  Bu etkinliklere örnek olarak şunlar yer almaktadır:
+GCC Federasyon kimliklerini veya karma bir arada bulunmayı planlayan Yüksek ve DOD müşterileri, Microsoft'un mevcut şirket içi dağıtımlarınıza gelen ve/veya giden erişime izin vermesini gerektirebilir.  Bu etkinliklere örnek olarak şunlar verilebilir:
 
-* Federasyon kimliklerinin kullanımı (Active Directory Federasyon Hizmetleri veya desteklenen benzer STS ile)
-* Şirket içi dağıtım veya şirket içi dağıtımla Exchange Server Skype Kurumsal birlikte kullanılabilirlik
-* Var olan kullanıcı içeriğini şirket içi bir sistemden geçirme
+* Federasyon kimliklerinin kullanımı (Active Directory Federasyon Hizmetleri (AD FS) veya desteklenen benzer STS ile)
+* Şirket içi Exchange Server veya Skype Kurumsal dağıtımıyla karma birlikte bulunma
+* Mevcut kullanıcı içeriğini şirket içi sistemden geçirme
 
-Hizmetin şirket içi uç noktalarınız ile iletişim kurmasına izin ver olmak için, ağ  değişiklikleri için Office 365-posta göndermeniz gerekir.
+Hizmetin şirket içi uç noktalarınızla iletişim kurmasına izin vermek için, ağ değişiklikleri için Office 365 mühendisliğine bir e-posta göndermeniz **gerekir**.
 
 > [!WARNING]
-> Tüm istekler üç **haftalık** SLA'lara sahiptir ve gerekli güvenlik ve uyumluluk denetimleri ile dağıtım potansiyelleri nedeniyle hızlandır işlemi tamamamaz.  Bu, ilk ekleme ağ isteklerini ve hizmete geçiş sonrasında yapılan tüm değişiklikleri içerir.  Ağ ekiplerinin bu zaman çizelgesinin farkında olduğundan ve planlama döngülerine dahil olduğundan emin olun.
+> Tüm isteklerin **üç haftalık** bir SLA'sı vardır ve gerekli güvenlik ve uyumluluk denetimleri ile dağıtım işlem hatları nedeniyle hızlandırılamaz.  Bu, ilk ekleme ağ isteklerinin yanı sıra hizmete geçiş yaptıktan sonra yapılan değişiklikleri içerir.  Ağ ekiplerinizin bu zaman çizelgesinin farkında olduğundan ve planlama döngülerine dahil olduğundan emin olun.
 
-Aşağıdaki bilgilerin yer Office 365 Kamu Allow-List [E-posta](mailto:o365gwlt@microsoft.com) gönderin:
+[Office 365 Kamu Allow-List İsteklerine](mailto:o365gwlt@microsoft.com) aşağıdaki bilgileri içeren bir e-posta gönderin:
 
-* **Son**: [Office 365 Kamu Allow-List'i kabul etmek](mailto:o365gwlt@microsoft.com)
-* **İlk**: Kiracı yöneticisi: E-posta gönderme, **kiracı bir** Genel Yönetici kişisi ile eşleşmeli
-* **E-posta** Office 365 GCC: Yüksek Ağ İsteği - contoso.onmicrosoft.us (kiracı adınızla değiştirme)
+* **Son**: [İstekleri Office 365 Kamu Allow-List](mailto:o365gwlt@microsoft.com)
+* **Kimden**: Kiracı yöneticisi - e-posta gönderme işleminin kiracınızdaki Genel Yönetici kişisi ile eşleşmesi **gerekir**
+* **E-posta konusu**: Office 365 GCC Yüksek Ağ İsteği - contoso.onmicrosoft.us (kiracınızın adıyla değiştirin)
 
-İletinizin gövdesi aşağıdaki verileri içermeli:
+İletinizin gövdesi aşağıdaki verileri içermelidir:
 
 * Microsoft Online Services kiracı adınız (örneğin, contoso.onmicrosoft.com, fabrikam.onmicrosoft.us)
-* Microsoft'un ağ değişiklikleri ve/veya geçersiz alt ağlarla ilgili devam edecek iletişimler için iletişim kuracakları e-posta dağıtım listesi
-* Şirket içi dağıtımlarınız ile Microsoft Teams bir karma birlikte kullanmayı planla işaretle
-* Federasyon kimlik sisteminin dışarıdan erişilebilir URL'si (örneğin, sts.contoso.com) ve IP adresi aralığı (örneğin,. 10.1.1.0/28)
-* CIDR notasyonunda Şirket İçi PKI Sertifika İptal Listesi URL'si ve IP adresi aralığı
-* CIDR bildiriminde şirket içi dağıtım Exchange Server için dışarıdan erişilebilir URL ve IP adresi aralığı
-* CIDR bildiriminde şirket içi dağıtım Skype Kurumsal dış erişilebilir URL ve IP adresi aralığı
+* Microsoft'un ağ değişiklikleriyle ilgili devam eden iletişimler için iletişim kuracağı ve/veya geçersiz alt ağlar için takip edeceği bir e-posta dağıtım listesi
+* Şirket içi dağıtımlarınızla karma birlikte Microsoft Teams kullanmayı planlayıp planlamayabileceğinizi belirtin
+* Federasyon kimlik sistemi dışarıdan erişilebilir URL (örneğin, sts.contoso.com) ve CIDR gösterimindeki IP adresi aralığı (örneğin, . 10.1.1.0/28)
+* CIDR gösteriminde Şirket İçi PKI Sertifika İptal Listesi URL'si ve IP adresi aralığı
+* CIDR gösteriminde şirket içi Exchange Server dağıtımı için dışarıdan erişilebilir URL ve IP adresi aralığı
+* CIDR gösteriminde Skype Kurumsal şirket içi dağıtım için dışarıdan erişilebilir URL ve IP adresi aralığı
 
-Güvenlik ve uyumluluk nedenleriyle, isteğiniz ile ilgili aşağıdaki kısıtlamaları unutmayın:
+Güvenlik ve uyumluluk nedenleriyle, isteğinizle ilgili aşağıdaki kısıtlamaları göz önünde bulundurun:
 
 * Kiracı başına dört alt ağ sınırlaması vardır
-* Alt ağların CIDR Notasyonu'na bağlı olması gerekir (örneğin, 10.1.1.0/28)
-* Alt ağ aralıkları ağdan büyük /24
-* Ticari **bulut** hizmetlerinin (ticari bulut hizmetleri, Google G-Suite, Amazon Web Hizmetleri Office 365 vb.) erişimine izin verme isteklerine yer ve vermiyoruz.
+* Alt ağlar CIDR Gösteriminde olmalıdır (örneğin, 10.1.1.0/28)
+* Alt ağ aralıkları /24'den büyük olamaz
+* Ticari bulut hizmetlerine (ticari Office 365, Google G-Suite, Amazon Web Services vb.) erişime izin verme isteklerini **karşılayamıyoruz**
 
-İsteğiniz Microsoft tarafından alınarak onaylandıktan sonra, uygulama için üç haftalık bir SLA vardır ve bu sürenin tamamlanamaz.  İsteğinizi aldıkktan sonra bir ilk bildirim ve tamamlandıktan sonra son bir bildirim alırsınız.
+İsteğiniz Microsoft tarafından alındıktan ve onaylandıktan sonra, uygulama için üç haftalık bir SLA vardır ve hızlandırılamaz.  İsteğinizi aldığımızda bir ilk bildirim ve tamamlandıktan sonra son bir bildirim alırsınız.

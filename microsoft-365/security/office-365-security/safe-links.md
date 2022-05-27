@@ -28,16 +28,16 @@ ms.assetid: dd6a1fef-ec4a-4cf4-a25a-bb591c5811e3
 description: Bir kuruluşu kimlik avına ve kötü amaçlı URL kullanan diğer saldırılara karşı korumak için Office 365 için Defender Kasa Bağlantıları koruması hakkında bilgi edinin. Teams Kasa Bağlantıları keşfedin ve Kasa Bağlantıları iletilerinin grafiklerini görün.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 46ea33c872782845a8d9697a9abbddcef22e94fb
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: 4b518095404f22631533cbf7eff744a62a9c7bd1
+ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65623476"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65739903"
 ---
 # <a name="safe-links-in-microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender'da bağlantıları Kasa
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Uygulandığı öğe**
 - [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
@@ -47,6 +47,9 @@ ms.locfileid: "65623476"
 > Bu makale, [Office 365 için Microsoft Defender](defender-for-office-365.md) sahip iş müşterilerine yöneliktir. Outlook.com, Microsoft 365 Aile veya Microsoft 365 Bireysel kullanıyorsanız ve Outlook Safelink'ler hakkında bilgi arıyorsanız bkz. [Gelişmiş Outlook.com güvenliği](https://support.microsoft.com/office/882d2243-eab9-4545-a58a-b36fee4a46e2).
 
 Kasa Bağlantılar[, Office 365 için Defender'de](defender-for-office-365.md) posta akışında gelen e-posta iletilerinin URL taramasını ve yeniden yazılmasını ve e-posta iletilerinde ve diğer konumlardaki URL'lerin ve bağlantıların tıklama zamanında doğrulanmasını sağlayan bir özelliktir. Kasa Bağlantılar taraması, Exchange Online Protection (EOP) içindeki gelen e-posta iletilerinde normal [istenmeyen posta](anti-spam-protection.md) ve [kötü amaçlı yazılımdan koruma](anti-malware-protection.md) iletilerine ek olarak gerçekleşir. Kasa Bağlantıları tarama, kuruluşunuzun kimlik avı ve diğer saldırılarda kullanılan kötü amaçlı bağlantılardan korunmasına yardımcı olabilir.
+
+Office 365 için Microsoft Defender'da Kasa Bağlantıları ile kötü amaçlı bağlantılara karşı koruma hakkında bu kısa videoyu izleyin.  
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWGzjb]
 
 Kasa Bağlantıları koruması aşağıdaki konumlarda kullanılabilir:
 

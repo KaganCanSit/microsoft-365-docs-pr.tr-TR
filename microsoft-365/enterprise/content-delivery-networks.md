@@ -20,18 +20,18 @@ search.appverid:
 - BCS160
 ms.assetid: 0140f704-6614-49bb-aa6c-89b75dcd7f1f
 description: Office 365 performansı geliştirmek için Content Delivery Networks'i (CDN) nasıl kullandığı hakkında bilgi edinmek için bu bilgileri kullanın.
-ms.openlocfilehash: b2809a524088b3cb53e415d3d83d1f8a02b27dc1
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: a2ed395ba400e09b87777c381e140a38e32d9210
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092745"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65754808"
 ---
 # <a name="content-delivery-networks-cdns"></a>İçerik Teslim Ağları (CDN'ler)
 
 *Bu makale hem Microsoft 365 Kurumsal hem de Office 365 Kurumsal için geçerlidir.*
 
-CDN'ler son kullanıcılar için Office 365 hızlı ve güvenilir tutmaya yardımcı olur. Office 365 gibi bulut hizmetleri, indirmeleri hızlandırmak ve algılanan son kullanıcı gecikme süresini azaltmak için statik varlıkları tarayıcılara daha yakın bir şekilde önbelleğe almak için CDN'leri kullanır. Bu konudaki bilgiler Content Delivery Networks (CDN) ve bunların Office 365 tarafından nasıl kullanıldığı hakkında bilgi edinmenize yardımcı olacaktır.
+CDN'ler son kullanıcılar için Office 365 hızlı ve güvenilir tutmaya yardımcı olur. Office 365 gibi bulut hizmetleri, indirmeleri hızlandırmak ve algılanan son kullanıcı gecikme süresini azaltmak için statik varlıkları tarayıcılara daha yakın bir şekilde önbelleğe almak için CDN'leri kullanır. Bu konudaki bilgiler, content delivery networks (CDN) ve bunların Office 365 tarafından nasıl kullanıldığı hakkında bilgi edinmenize yardımcı olacaktır.
 
 ## <a name="what-exactly-is-a-cdn"></a>CDN tam olarak nedir?
 
@@ -91,7 +91,7 @@ Azure CDN PowerShell modülü hakkında bilgi için bkz. [PowerShell ile Azure C
 
 ### <a name="microsoft-ajax-cdn"></a>Microsoft Ajax CDN
 
-**Microsoft'un Ajax CDN**, jQuery (ve diğer tüm kitaplıkları), ASP.NET Ajax, Bootstrap, Knockout.js ve diğerleri gibi birçok popüler geliştirme kitaplığı sunan salt okunur bir CDN.
+**Microsoft'un Ajax CDN**, jQuery (ve diğer tüm kitaplıkları) ASP.NET Ajax, Bootstrap, Knockout.js ve diğerleri gibi birçok popüler geliştirme kitaplığı sunan salt okunur bir CDN.
   
 Bu betikleri projenize eklemek için, bu genel kullanıma açık kitaplıklara yapılan başvuruları projenize eklemek yerine CDN adresine yapılan başvurularla değiştirmeniz yeterlidir. Örneğin, jQuery'ye bağlanmak için aşağıdaki kodu kullanın:
 
@@ -113,7 +113,7 @@ Office 365 kiracınız için hangi CDN yapılandırdığınızdan bağımsız ol
 
     b. Veriler zaten _özel_ bir kaynakta önbelleğe alınmışsa, CDN hizmeti Office 365 kullanıcı hesabınızın kaynak üzerindeki izinlerini denetler. İzinleriniz varsa, SharePoint Online dinamik olarak CDN ve iki erişim belirtecindeki varlığın yolundan oluşan özel bir URL oluşturur ve istemcinize özel URL'yi döndürür. Ardından istemciniz, özel URL'yi kullanarak verileri doğrudan en yakın CDN konumdan istemcinize indirir.
 
-3. Veriler CDN önbelleğe alınmazsa, CDN düğümü verileri Office 365'dan talep eder ve istemciniz verileri indirdikten sonra belirli bir süre boyunca verileri önbelleğe alır.
+3. Veriler CDN önbelleğe alınmamışsa, CDN düğümü verileri Office 365'dan talep eder ve istemciniz verileri indirdikten sonra verileri zaman için önbelleğe alır.
 
 CDN, kullanıcının tarayıcısına en yakın veri merkezini görür ve yeniden yönlendirmeyi kullanarak istenen verileri oradan indirir. CDN yeniden yönlendirme hızlıdır ve kullanıcılara çok fazla indirme süresi kazandırabilir.
 
@@ -151,7 +151,7 @@ Bu ekran görüntüsü, SharePoint Online sitesinin kendisinde ana sayfa galeris
 
 ## <a name="is-my-data-safe"></a>Verilerim güvenli mi?
 
-İşinizi yürüten verileri korumak için büyük özen gösteririz. Office 365 CDN depolanan veriler hem aktarımda hem de bekleme durumunda şifrelenir ve Office 365 SharePoint CDN veri erişimi Office 365 kullanıcı izinleri ve belirteç yetkilendirmesi ile güvenli hale getirilir. Office 365 SharePoint CDN veri isteklerinin Office 365 kiracınızdan yönlendirilmesi (yeniden yönlendirilmesi) gerekir, aksi takdirde yetkilendirme belirteci oluşturulmaz.
+İşinizi yürüten verileri korumak için büyük özen gösteririz. Office 365 CDN depolanan veriler hem aktarımda hem de bekleme durumunda şifrelenir ve Office 365 SharePoint CDN veri erişimi Office 365 kullanıcı izinleri ve belirteç yetkilendirmesi ile güvenli hale getirilir. Office 365 SharePoint CDN veri isteklerinin Office 365 kiracınızdan yönlendirilmesi (yeniden yönlendirilmesi) gerekir, aksi durumda yetkilendirme belirteci oluşturulmaz.
 
 Verilerinizin güvenli kalmasını sağlamak için, kullanıcı içeriğini veya diğer hassas verileri hiçbir zaman genel CDN depolamamanızı öneririz. Genel CDN verilere erişim anonim olduğundan, genel CDN'ler yalnızca web betik dosyaları, simgeler, resimler ve diğer hassas olmayan varlıklar gibi genel içeriği barındırmak için kullanılmalıdır.
 
@@ -166,7 +166,7 @@ Office 365 CDN sağlayıcılarının gizlilik ve veri koruması hakkında ayrın
 
 ## <a name="how-can-i-secure-my-network-with-all-these-3rd-party-services"></a>Tüm bu üçüncü taraf hizmetleriyle ağımın güvenliğini nasıl sağlayabilirim?
 
-Kapsamlı bir iş ortağı hizmetleri kümesinden yararlanarak Office 365 kullanılabilirlik gereksinimlerini ölçeklendirebilir ve karşılayabilir ve Office 365 kullanırken kullanıcı deneyimini geliştirebilir. Office 365 3. taraf hizmetleri, crl.microsoft.com veya sa.symcb.com gibi sertifika iptal listelerini ve r3.res.outlook.com gibi CDN'leri içerir. Office 365 tarafından oluşturulan her CDN FQDN, Office 365 için özel bir FQDN'dir. Office 365 isteği üzerine bir FQDN'ye gönderilirseniz, CDN sağlayıcısının FQDN'yi ve bu konumdaki temel içeriği denetleyeceğinden emin olabilirsiniz.
+Kapsamlı bir iş ortağı hizmetleri kümesi kullanmak, Office 365 kullanılabilirlik gereksinimlerini ölçeklendirmesine ve karşılamasına ve Office 365 kullanırken kullanıcı deneyimini geliştirmesine olanak tanır. Office 365 3. taraf hizmetleri, crl.microsoft.com veya sa.symcb.com gibi sertifika iptal listelerini ve r3.res.outlook.com gibi CDN'leri içerir. Office 365 tarafından oluşturulan her CDN FQDN, Office 365 için özel bir FQDN'dir. Office 365 isteği üzerine bir FQDN'ye gönderilirseniz, CDN sağlayıcısının FQDN'yi ve bu konumdaki temel içeriği denetleyeceğinden emin olabilirsiniz.
   
 Bir Microsoft veya Office 365 veri merkezini hedefleyen istekleri üçüncü tarafa yönelik isteklerden ayırmak isteyen müşteriler için [Office 365 uç noktalarını yönetme](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a) yönergelerini yazdık.
 
@@ -184,11 +184,11 @@ Office 365 CDN bir parçası olmasa da, CDN depolama alanınıza erişim anahtar
 
 ## <a name="im-using-azure-expressroute-for-office-365-does-that-change-things"></a>Office 365 için Azure ExpressRoute kullanıyorum, bu bir şeyleri değiştiriyor mu?
 
-[Office 365 için Azure ExpressRoute](azure-expressroute.md), genel İnternet'ten ayrılmış Office 365 altyapısına ayrılmış bir bağlantı sağlar. Bu, istemcilerin ExpressRoute tarafından desteklenen hizmetler listesine açıkça dahil edilmeyen CDN'lere ve diğer Microsoft altyapısına bağlanmak için ExpressRoute olmayan bağlantılar üzerinden bağlanmaları gerekeceği anlamına gelir. CDN'leri hedefleyen istekler gibi belirli trafiği yönlendirme hakkında daha fazla bilgi için [ağ trafiği yönetimini Office 365](routing-with-expressroute.md) konusuna bakın.
+[Office 365 için Azure ExpressRoute](azure-expressroute.md), genel İnternet'ten ayrılmış Office 365 altyapısına ayrılmış bir bağlantı sağlar. Bu, istemcilerin ExpressRoute tarafından desteklenen hizmetler listesine açıkça dahil olmayan CDN'lere ve diğer Microsoft altyapısına bağlanmak için ExpressRoute olmayan bağlantılar üzerinden bağlanmaları gerekeceği anlamına gelir. CDN'leri hedefleyen istekler gibi belirli trafiği yönlendirme hakkında daha fazla bilgi için bkz. [ağ trafiği yönetimi Office 365](routing-with-expressroute.md).
 
 ## <a name="can-i-use-cdns-with-sharepoint-server-on-premises"></a>CDN'leri şirket içi SharePoint Sunucusu ile kullanabilir miyim?
 
-CDN'lerin kullanılması yalnızca SharePoint Çevrimiçi bağlamında anlamlıdır ve SharePoint Server ile bundan kaçınılmalıdır. Bunun nedeni, sunucunun şirket içinde veya coğrafi olarak yakın olması durumunda coğrafi konumla ilgili tüm avantajların geçerli olmamasıdır. Ayrıca, barındırıldığı sunuculara bir ağ bağlantısı varsa, site İnternet bağlantısı olmadan kullanılabilir ve bu nedenle CDN dosyalarını alamaz. Aksi takdirde, siteniz için ihtiyacınız olan kitaplık ve dosyalar için kullanılabilir ve kararlı bir CDN kullanmanız gerekir.
+CDN'lerin kullanılması yalnızca SharePoint Çevrimiçi bağlamında anlamlıdır ve SharePoint Server ile bundan kaçınılmalıdır. Bunun nedeni, sunucunun şirket içinde veya coğrafi olarak yakın olması durumunda coğrafi konumla ilgili tüm avantajların geçerli olmadığıdır. Ayrıca, barındırıldığı sunucularla bir ağ bağlantısı varsa, site İnternet bağlantısı olmadan kullanılabilir ve bu nedenle CDN dosyalarını alamaz. Aksi takdirde, siteniz için ihtiyacınız olan kitaplık ve dosyalar için kullanılabilir ve kararlı bir CDN kullanmanız gerekir.
   
 İşte geri dönmek için kullanabileceğiniz kısa bir bağlantı: [https://aka.ms/o365cdns]()
   

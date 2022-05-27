@@ -17,12 +17,12 @@ ms.custom: admindeeplinkMAC
 f1.keywords:
 - NOCSH
 description: Microsoft 365 hizmet sistem durumu
-ms.openlocfilehash: 0b3ede9b35dbf4e0356be8d1479e75561f66fdb2
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 0f7c7d0d14cdecbfb122d03fdcb4c93fcddbced2
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65100401"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65753374"
 ---
 # <a name="microsoft-365-network-health-status"></a>Ağ durumunu Microsoft 365
 
@@ -32,7 +32,7 @@ Bu bilgiler, Microsoft 365 dahil olmak üzere tüm hizmet olarak yazılım tekli
 
 _Bu sayfada yapılan güncelleştirmelerde gecikmeler olabilir. Daha otomatik bir çözüm oluştururken el ile güncelleştiriyoruz._
 
-Microsoft'un küresel ağında veya müşterilerimizle Microsoft'un ağı arasında İnternet bağlantısıyla ilgili önemli sorunlar algıladığımızda, bu bilgileri buraya göndereceğiz. Burada çok daha ayrıntılı ve hedeflenen bilgiler sağladığımız için müşterilerin kiracılarındaki önemli ağ sorunlarının etkisini anlamak için Microsoft 365 yönetim merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=842900" target="_blank">Hizmet Durumu panosunu</a> kullanmaya devam etmelerini öneririz.
+Microsoft'un küresel ağında veya müşterilerimizle Microsoft ağı arasındaki İnternet bağlantısında önemli sorunlar algıladığımızda, bu bilgileri buraya göndereceğiz. Burada çok daha ayrıntılı ve hedeflenen bilgiler sağladığımız için müşterilerin kiracılarındaki önemli ağ sorunlarının etkisini anlamak için Microsoft 365 yönetim merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=842900" target="_blank">Hizmet Durumu panosunu</a> kullanmaya devam etmelerini öneririz.
 
 ## <a name="current-network-issues"></a>Geçerli ağ sorunları
 

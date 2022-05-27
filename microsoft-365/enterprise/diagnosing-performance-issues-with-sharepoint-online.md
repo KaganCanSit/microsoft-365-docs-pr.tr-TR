@@ -19,12 +19,12 @@ search.appverid:
 - MET150
 ms.assetid: 3c364f9e-b9f6-4da4-a792-c8e8c8cd2e86
 description: Bu makalede, Internet Explorer geliştirici araçlarını kullanarak SharePoint Online sitenizdeki yaygın sorunları nasıl tanılayabileceğiniz gösterilmektedir.
-ms.openlocfilehash: 274c819df7ffcb7cc18191bdd1c7fa0d4fa40290
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 041619991fdbdcb3e953fe2a06fd63dff0e9201f
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65096534"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65753814"
 ---
 # <a name="diagnosing-performance-issues-with-sharepoint-online"></a>SharePoint Online ile ilgili performans sorunlarını tanılama
 
@@ -83,7 +83,7 @@ Sitenizin performansının zayıf noktalarını belirlemenin en iyi yolu, ShareP
 ## <a name="viewing-sharepoint-response-header-information"></a>SharePoint yanıt üst bilgisi bilgilerini görüntüleme
 <a name="F12ToolInfo"> </a>
 
-SharePoint Online'da, her dosyanın yanıt üst bilgisinde tarayıcıya geri gönderilen bilgilere erişebilirsiniz. Performans sorunlarını tanılamak için en yararlı değer **SPRequestDuration** değeridir ve bu değer, isteğin sunucuda işlenmesi için geçen süreyi görüntüler. Bu, isteğin çok ağır ve kaynak açısından yoğun olup olmadığını belirlemeye yardımcı olabilir. Bu, sunucunun sayfaya hizmet vermek için ne kadar iş yaptığına dair sahip olduğunuz en iyi içgörüdür.
+SharePoint Online'da, her dosyanın yanıt üst bilgisinde tarayıcıya geri gönderilen bilgilere erişebilirsiniz. Performans sorunlarını tanılamak için en yararlı değer **SPRequestDuration** değeridir ve bu değer, isteğin sunucuda işlenmesi için geçen süreyi görüntüler. Bu, isteğin yoğun ve kaynak yoğunluklu olup olmadığını belirlemeye yardımcı olabilir. Bu, sunucunun sayfaya hizmet vermek için ne kadar iş yaptığına dair sahip olduğunuz en iyi içgörüdür.
 
 ### <a name="to-view-sharepoint-response-header-information"></a>SharePoint yanıt üst bilgisi bilgilerini görüntülemek için
   
@@ -102,8 +102,8 @@ SharePoint Online'da, her dosyanın yanıt üst bilgisinde tarayıcıya geri gö
 ## <a name="whats-causing-performance-issues-in-sharepoint-online"></a>SharePoint Online'da performans sorunlarına neden olan nedir?
 <a name="F12ToolInfo"> </a>
 
-[SharePoint Online için Gezinti seçenekleri](navigation-options-for-sharepoint-online.md) makalesi, karmaşık yapısal gezintinin sayfanın sunucuda işlenmesinin uzun sürmesine neden olduğunu belirlemek için SPRequestDuration değerinin kullanılmasına ilişkin bir örnek gösterir. Temel site için bir değer alarak (özelleştirme olmadan), belirli bir dosyanın yüklenmesinin uzun zaman alıp almadığını belirlemek mümkündür. [SharePoint Online için Gezinti seçeneklerinde](navigation-options-for-sharepoint-online.md) kullanılan örnek ana .aspx dosyasıdır. Bu dosya, sayfa yükünüz için çalışan ASP.NET kodunun çoğunu içerir. Kullandığınız site şablonuna bağlı olarak, giriş sayfasını özelleştirdiğinizde bu start.aspx, home.aspx, default.aspx veya başka bir ad olabilir. Bu sayı taban çizgisi sitenizden çok daha yüksekse, sayfanızda performans sorunlarına neden olan karmaşık bir şey olduğunun iyi bir göstergesidir.
+[SharePoint Online için Gezinti seçenekleri](navigation-options-for-sharepoint-online.md) makalesi, karmaşık yapısal gezintinin sayfanın sunucuda işlenmesinin uzun sürmesine neden olduğunu belirlemek için SPRequestDuration değerinin kullanılmasına ilişkin bir örnek gösterir. Temel site için bir değer alarak (özelleştirme olmadan), belirli bir dosyanın yüklenmesinin uzun zaman alıp almadığını belirlemek mümkündür. [SharePoint Online için Gezinti seçeneklerinde](navigation-options-for-sharepoint-online.md) kullanılan örnek ana .aspx dosyasıdır. Bu dosya, sayfa yükünüz için çalışan ASP.NET kodunun çoğunu içerir. Kullandığınız site şablonuna bağlı olarak, giriş sayfasını özelleştirdiğinizde bu start.aspx, home.aspx, default.aspx veya başka bir ad olabilir. Bu sayı temel sitenizden çok daha yüksekse, sayfanızda performans sorunlarına neden olan karmaşık bir şey olduğunu iyi bir göstergedir.
   
-Sitenize özgü bir sorun olduğunu belirledikten sonra performansın düşük olmasını neyin sağladığını anlamanın önerilen yolu, sayfa özelleştirmeleri gibi olası tüm nedenleri ortadan kaldırmak ve ardından bunları tek tek siteye geri eklemektir. Sayfanın iyi performans göstermesini sağlayan yeterli özelleştirmeyi kaldırdıktan sonra, belirli özelleştirmeleri tek tek geri ekleyebilirsiniz.
+Sitenize özgü bir sorun olduğunu belirledikten sonra, kötü performansa neyin neden olduğunu anlamanın önerilen yolu, sayfa özelleştirmeleri gibi olası tüm nedenleri ortadan kaldırmak ve ardından bunları siteye tek tek yeniden eklemektir. Sayfanın iyi performans göstermesini sağlayan yeterli özelleştirmeyi kaldırdıktan sonra, belirli özelleştirmeleri tek tek geri ekleyebilirsiniz.
   
-Örneğin, çok karmaşık bir gezintiniz varsa, alt siteleri göstermemek için gezintiyi değiştirmeyi deneyin, ardından bunun bir fark yaratıp oluşturmadığını görmek için geliştirici araçlarını denetleyin. Ya da büyük miktarda içerik dağıtımınız varsa bunları sayfanızdan kaldırmayı deneyin ve bunun işleri geliştirip geliştirmediğini görün. Olası tüm nedenleri ortadan kaldırır ve bunları birer birer yeniden eklerseniz, en büyük sorunun hangi özellikler olduğunu kolayca belirleyebilir ve ardından bir çözüme doğru çalışabilirsiniz.
+Örneğin, karmaşık bir gezintiniz varsa, alt siteleri göstermemek için gezintiyi değiştirmeyi deneyin, ardından bunun bir fark yaratıp oluşturmadığını görmek için geliştirici araçlarını denetleyin. Ya da büyük miktarda içerik dağıtımınız varsa bunları sayfanızdan kaldırmayı deneyin ve bunun işleri geliştirip geliştirmediğini görün. Olası tüm nedenleri ortadan kaldırır ve bunları birer birer yeniden eklerseniz, en büyük sorunun hangi özellikler olduğunu kolayca belirleyebilir ve ardından bir çözüme doğru çalışabilirsiniz.

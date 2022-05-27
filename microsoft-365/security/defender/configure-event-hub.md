@@ -1,6 +1,6 @@
 ---
-title: Olay Hub'ınızı yapılandırma
-description: Olay Hub'ınızı yapılandırmayı öğrenin
+title: Event Hubs'ınızı yapılandırma
+description: Event Hubs'ınızı yapılandırmayı öğrenin
 keywords: olay hub'ı, yapılandırma, içgörüler
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
@@ -19,23 +19,23 @@ ms.collection: m365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 MS.technology: mde
-ms.openlocfilehash: 40211d37b8b036f93b826a383d9d0aa87f44fc68
-ms.sourcegitcommit: 292de1a7e5ecc2e9e6187126aebba6d3b9416dff
+ms.openlocfilehash: 569f51eda2f2ee61286c661548fe73e793928294
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2022
-ms.locfileid: "65243084"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65754852"
 ---
-# <a name="configure-your-event-hub"></a>Olay Hub'ınızı yapılandırma
+# <a name="configure-your-event-hubs"></a>Event Hubs'ınızı yapılandırma
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Şunlar için geçerlidir:**
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-Olay Hub'ınızı, olayları Microsoft 365 Defender alabilmesi için yapılandırmayı öğrenin.
+Event Hubs'ınızı, olayları Microsoft 365 Defender alabilmesi için yapılandırmayı öğrenin.
 
-## <a name="set-up-the-required-resource-provider-in-the-event-hub-subscription"></a>Event Hub aboneliğinde gerekli Kaynak Sağlayıcısını ayarlama
+## <a name="set-up-the-required-resource-provider-in-the-event-hubs-subscription"></a>Event Hubs aboneliğinde gerekli Kaynak Sağlayıcısını ayarlama
 
 1. [Azure portalda](https://portal.azure.com) oturum açın.
 1. **Abonelikler** > **{Olay hub'larının }** > **Kaynak sağlayıcılarına** dağıtılacağı aboneliği seçin.
@@ -45,7 +45,8 @@ Olay Hub'ınızı, olayları Microsoft 365 Defender alabilmesi için yapılandı
 
 ## <a name="set-up-azure-active-directory-app-registration"></a>Azure Active Directory Uygulama Kaydını Ayarlama
 
-> ! [NOT] Yönetici rolüne sahip olmanız veya yönetici olmayanların uygulamaları kaydetmesine izin vermek için Azure Active Directory (AAD) ayarlanmalıdır. Hizmet sorumlusuna bir rol atamak için Sahip veya Kullanıcı Erişimi Yöneticisi rolüne de sahip olmanız gerekir. Daha fazla bilgi için bkz. [Portalda hizmet sorumlusu & Azure AD uygulaması oluşturma - Microsoft Docs Microsoft kimlik platformu\|](/azure/active-directory/develop/howto-create-service-principal-portal).
+> [!NOTE]
+> Yönetici rolüne sahip olmanız veya Yönetici olmayanların uygulamaları kaydetmesine izin vermek için Azure Active Directory (AAD) ayarlanmalıdır. Hizmet sorumlusuna bir rol atamak için Sahip veya Kullanıcı Erişimi Yöneticisi rolüne de sahip olmanız gerekir. Daha fazla bilgi için bkz. [Portalda hizmet sorumlusu & Azure AD uygulaması oluşturma - Microsoft Docs Microsoft kimlik platformu\|](/azure/active-directory/develop/howto-create-service-principal-portal).
 
 1. **Azure Active Directory Uygulama kayıtları Yeni kayıt'ta**  \>  \> yeni bir kayıt oluşturun (doğal olarak bir hizmet sorumlusu oluşturur).
 
@@ -59,44 +60,51 @@ Olay Hub'ınızı, olayları Microsoft 365 Defender alabilmesi için yapılandı
 1. **Sertifikalar & gizli diziler** **Yeni istemci gizli** dizisi'ne tıklayarak gizli dizi \> oluşturun:
 
     :::image type="content" source="../../media/d2ef88d3d2310d2c60c294b569cdf02e.png" alt-text="Microsoft Azure portalındaki İstemci gizli dizisi bölümü" lightbox="../../media/d2ef88d3d2310d2c60c294b569cdf02e.png":::
-    
+
+Bu istemci gizli anahtarı değeri, Microsoft Graph API'leri tarafından kayıtlı olan bu uygulamanın kimliğini doğrulamak için kullanılır.
 
 > [!WARNING]
 > **İstemci gizli dizisine yeniden erişemeyeceksiniz, bu nedenle gizli diziyi kaydettiğinizden emin olun**.
 
-## <a name="set-up-event-hub-namespace"></a>Olay Hub'ı ad alanını ayarlama
+## <a name="set-up-event-hubs-namespace"></a>Event Hubs ad alanını ayarlama
 
-1. Olay Hub'ı Ad Alanı Oluşturma:
+1. Event Hubs Ad Alanı Oluşturma:
 
-    **Olay Hub'ı \> Ekle'ye** gidin ve beklediğiniz yüke uygun fiyatlandırma katmanını, aktarım hızı birimlerini ve Otomatik Şişirme'yi (standart fiyatlandırma ve özellikler altında gerektirir) seçin. Daha fazla bilgi için bkz[. Fiyatlandırma - Olay Hub'ı \| Microsoft Azure](https://azure.microsoft.com/pricing/details/event-hubs/)
+    **Olay Hub'ı \> Ekle'ye** gidin ve beklediğiniz yüke uygun fiyatlandırma katmanını, aktarım hızı birimlerini ve Otomatik Şişirme'yi (standart fiyatlandırma ve özellikler altında gerektirir) seçin. Daha fazla bilgi için bkz[. Fiyatlandırma - Event Hubs \| Microsoft Azure](https://azure.microsoft.com/pricing/details/event-hubs/).
 
     > [!NOTE]
     > Mevcut bir olay hub'ını kullanabilirsiniz, ancak aktarım hızı ve ölçeklendirme ad alanı düzeyinde ayarlanır, bu nedenle bir olay hub'ını kendi ad alanına yerleştirmeniz önerilir.
 
    :::image type="content" source="../../media/ebc4ca37c342ad1da75c4aee4018e51a.png" alt-text="Microsoft Azure portalındaki event hubs bölümü" lightbox="../../media/ebc4ca37c342ad1da75c4aee4018e51a.png":::
 
-1. Ayrıca bu Olay Hub'ı Ad Alanının Kaynak Kimliğine de ihtiyacınız olacaktır. Azure Olay Hub'ı ad alanı sayfanızın Özellikler bölümüne \> gidin. Kaynak Kimliği altındaki metni kopyalayın ve aşağıdaki Microsoft 365 Yapılandırması bölümünde kullanmak üzere kaydedin.
+1. Ayrıca bu Event Hubs Ad Alanının Kaynak Kimliğine de ihtiyacınız olacaktır. Azure Event Hubs ad alanı sayfanıza \> gidin Özellikler. Kaynak Kimliği altındaki metni kopyalayın ve aşağıdaki Microsoft 365 Yapılandırması bölümünde kullanmak üzere kaydedin.
 
     :::image type="content" source="../../media/759498162a4e93cbf17c4130d704d164.png" alt-text="Microsoft Azure portalındaki event hubs özellikleri bölümü" lightbox="../../media/759498162a4e93cbf17c4130d704d164.png":::
 
+### <a name="add-permissions"></a>İzin ekleme
 
-1. Olay Hub'ı Ad Alanı oluşturulduktan sonra Uygulama Kayıt Hizmeti Sorumlusunu Okuyucu, Azure Event Hubs Veri Alıcısı ve katkıda bulunan olarak Microsoft 365 Defender oturum açacak kullanıcıyı eklemeniz gerekir (bunu Kaynak Grubu veya Abonelik düzeyinde de yapabilirsiniz).
+Event Hubs veri yönetimine katılan varlıklara aşağıdaki rollere izin eklemeniz gerekir:
 
-    Bu adımı **Olay Hub'ı Ad Alanı** \> **Access Control (IAM)** \> **Rol atamaları** altında **Ekleme** ve doğrulama bölümünde yaparsınız:
+- **Katkıda Bulunan**: Bu rolle ilgili izinler, Microsoft 365 Defender portalında oturum açan varlığa eklenir.
+- **Okuyucu** ve **Azure Olay Hub'ı veri Alıcısı**: Bu rollerle ilgili izinler, **hizmet sorumlusu** rolüne atanmış olan ve Azure Active Directory uygulamasında oturum açan varlığa atanır.
 
-    :::image type="content" source="../../media/9c9c29137b90d5858920202d87680d16.png" alt-text="Microsoft Azure portalında uygulama kaydı hizmet sorumlusu bölümü" lightbox="../../media/9c9c29137b90d5858920202d87680d16.png":::
+Bu rollerin eklendiğinden emin olmak için aşağıdaki adımı gerçekleştirin:
 
-## <a name="set-up-event-hub"></a>Olay Hub'ı ayarlama
+**Rol atamaları** altında **Olay Hub'ı Ad Alanı** \> **Access Control (IAM)** \> **Ekle** ve doğrula'ya gidin.
+
+:::image type="content" source="../../media/9c9c29137b90d5858920202d87680d16.png" alt-text="Microsoft Azure portalında uygulama kaydı hizmet sorumlusu bölümü" lightbox="../../media/9c9c29137b90d5858920202d87680d16.png":::
+
+## <a name="set-up-event-hubs"></a>Event Hubs'ı ayarlama
 
 **Seçenek 1:**
 
-Ad Alanınızda bir Olay Hub'ı oluşturabilirsiniz ve dışarı aktarmak için seçtiğiniz **tüm** Olay Türleri (Tablolar **) bu olay** hub'ına yazılır.
+Ad Alanınızda bir Event Hubs oluşturabilirsiniz ve dışarı aktarmak için seçtiğiniz **tüm** Olay Türleri (Tablolar) bu **olay** hub'ına yazılır.
 
 **Seçenek 2:**
 
-Tüm Olay Türlerini (Tabloları) tek bir Olay Hub'ına aktarmak yerine, her tabloyu Olay Hub'ı Ad Alanınızın içindeki farklı Olay Hub'ına (Olay Türü başına bir Olay Hub'ı) dışarı aktarabilirsiniz.
+Tüm Olay Türlerini (Tabloları) tek bir Olay Hub'ına aktarmak yerine, her tabloyu Event Hubs Ad Alanınızın içindeki farklı Event Hub'lara (Olay Türü başına bir Olay Hub'ı) dışarı aktarabilirsiniz.
 
-Bu seçenekte Microsoft 365 Defender sizin için Olay Hub'ı oluşturur.
+Bu seçenekte Microsoft 365 Defender sizin için Event Hubs oluşturur.
 
 > [!NOTE]
 > Olay Hub'ı Kümesinin parçası **olmayan** bir Olay Hub'ı Ad Alanı kullanıyorsanız, Olay Hub'ı Ad Alanı başına 10 Olay Hub'ı sınırlaması nedeniyle tanımladığınız her Dışarı Aktarma Ayarlar dışarı aktarmak için en fazla 10 Olay Türü (Tablo) seçebilirsiniz.
@@ -107,26 +115,25 @@ Bu seçenekte Microsoft 365 Defender sizin için Olay Hub'ı oluşturur.
 
 Bu seçeneği belirlerseniz, [E-posta tablolarını göndermek için Microsoft 365 Defender yapılandırma](#configure-microsoft-365-defender-to-send-email-tables) bölümüne atlayabilirsiniz.
 
-Olay Hub'ı + Olay Hub'ı seçerek Ad Alanınızda **Olay** \> **Hub'ı** oluşturun.
+**Olay Hub'ı + Olay Hub'ı** seçerek Ad Alanınızda **Event Hubs**\> oluşturun.
 
 Bölüm Sayısı paralellik aracılığıyla daha fazla aktarım hızı sağlar, bu nedenle beklediğiniz yüke göre bu sayıyı artırmanız önerilir. Varsayılan İleti Saklama ve Yakalama değerleri 1 ve Kapalı önerilir.
 
 :::image type="content" source="../../media/1db04b8ec02a6298d7cc70419ac6e6a9.png" alt-text="Microsoft Azure portalında olay hub'ları oluşturma bölümü" lightbox="../../media/1db04b8ec02a6298d7cc70419ac6e6a9.png":::
- 
 
-Bu Olay Hub'ı (ad alanı değil) için Gönder, Talepleri Dinle ile Paylaşılan Erişim İlkesi yapılandırmanız gerekir. **Olay Hub'ı** \> **Paylaşılan erişim ilkeleri** \> **+ Ekle'ye** tıklayın ve bir İlke adı verin (başka bir yerde kullanılmaz) ve Gönder ve **Dinle'yi** işaretleyin.
+Bu Event Hub'lar için (ad alanı için değil), Gönder, Talepleri Dinle ile Paylaşılan Erişim İlkesi yapılandırmanız gerekir. **Olay Hub'ı** \> **Paylaşılan erişim ilkeleri** \> **+ Ekle'ye** tıklayın ve bir İlke adı verin (başka bir yerde kullanılmaz) ve Gönder ve **Dinle'yi** işaretleyin.
 
 :::image type="content" source="../../media/1867d13f46dc6a0f4cdae6cf00df24db.png" alt-text="Microsoft Azure portalındaki Paylaşılan erişim ilkeleri sayfası" lightbox="../../media/1867d13f46dc6a0f4cdae6cf00df24db.png":::
 
 ## <a name="configure-microsoft-365-defender-to-send-email-tables"></a>E-posta tablolarını göndermek için Microsoft 365 Defender yapılandırma
 
-### <a name="set-up-microsoft-365-defender-send-email-tables-to-splunk-via-event-hub"></a>Event Hub aracılığıyla Splunk'a E-posta tabloları göndermek Microsoft 365 Defender ayarlama
+### <a name="set-up-microsoft-365-defender-send-email-tables-to-splunk-via-event-hubs"></a>Event Hubs aracılığıyla Splunk'a E-posta tabloları gönderme Microsoft 365 Defender ayarlama
 
 1. Aşağıdaki tüm rol gereksinimlerini karşılayan bir hesapla <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender</a> oturum açın:
 
-    - Dışarı aktaracağınız Olay Hub'ı için Olay *Hub'ı Ad Alanı* Kaynak düzeyinde veya daha üst düzeyde katkıda bulunan rolü. Bu izin olmadan, ayarları kaydetmeye çalıştığınızda dışarı aktarma hatası alırsınız.
+    - Dışarı aktaracağın Event Hubs için Event Hubs *Ad Alanı* Kaynağı düzeyinde veya daha yüksek bir düzeyde katkıda bulunan rolü. Bu izin olmadan, ayarları kaydetmeye çalıştığınızda dışarı aktarma hatası alırsınız.
 
-    - Microsoft 365 Defender ve Azure'a bağlı kiracıda Genel Yönetici veya Güvenlik Yöneticisi Rolü.
+    - Microsoft 365 Defender ve Azure'a bağlı kiracıda Genel Yönetici veya Güvenlik Yönetici Rolü.
 
       :::image type="content" source="../../media/55d5b1c21dd58692fb12a6c1c35bd4fa.png" alt-text="Microsoft 365 Defender portalının Ayarlar sayfası" lightbox="../../media/55d5b1c21dd58692fb12a6c1c35bd4fa.png":::
 
@@ -138,21 +145,21 @@ Bu Olay Hub'ı (ad alanı değil) için Gönder, Talepleri Dinle ile Paylaşıla
 
     **Olayları olay hub'ına iletme**: Bu onay kutusunu seçin.
 
-    **Event-Hub Kaynak Kimliği**: Bu değer, Olay Hub'ını ayarlarken kaydettiğiniz Olay Hub'ı Ad Alanı Kaynak Kimliğidir.
+    **Event-Hub Kaynak Kimliği**: Bu değer, Event Hubs'ı ayarlarken kaydettiğiniz Event Hubs Ad Alanı Kaynak Kimliğidir.
 
-    **Event-Hub adı**: Olay Hub'ı Ad Alanınızın içinde bir Olay Hub'ı oluşturduysanız, yukarıda kaydettiğiniz Olay Hub'ı adını yapıştırın.
+    **Event-Hub adı**: Event Hubs Ad Alanınızın içinde bir Event Hubs oluşturduysanız, yukarıda kaydettiğiniz Event Hubs adını yapıştırın.
 
-    Microsoft 365 Defender sizin için Olay Türleri (Tablolar) başına Olay Hub'ı oluşturmasına izin vermeyi seçerseniz, bu alanı boş bırakın.
+    Microsoft 365 Defender sizin için Olay Türleri (Tablolar) başına Olay Hub'ları oluşturmasına izin vermeyi seçerseniz, bu alanı boş bırakın.
 
-    **Olay Türleri**: Olay Hub'ına iletmek istediğiniz Gelişmiş Tehdit Avcılığı tablolarını seçin ve ardından özel uygulamanıza iletin. Uyarı tabloları Microsoft 365 Defender, Cihazlar tabloları Uç Nokta için Microsoft Defender (EDR) ve E-posta tabloları da Office 365 için Microsoft Defender. E-posta Olayları tüm E-posta İşlemlerini kaydeder. URL (Kasa Bağlantıları), Ek (Kasa Ekler) ve Teslim Sonrası Olayları (ZAP) da kaydedilir ve NetworkMessageId alanındaki E-posta Olaylarına eklenebilir.
+    **Olay Türleri**: Event Hubs'a iletmek istediğiniz Gelişmiş Avcılık tablolarını seçin ve ardından özel uygulamanıza iletin. Uyarı tabloları Microsoft 365 Defender, Cihazlar tabloları Uç Nokta için Microsoft Defender (EDR) ve E-posta tabloları da Office 365 için Microsoft Defender. E-posta Olayları tüm E-posta İşlemlerini kaydeder. URL (Kasa Bağlantıları), Ek (Kasa Ekler) ve Teslim Sonrası Olayları (ZAP) da kaydedilir ve NetworkMessageId alanındaki E-posta Olaylarına eklenebilir.
 
     :::image type="content" source="../../media/3b2ad64b6ef0f88cf0175f8d57ef8b97.png" alt-text="Microsoft Azure portalındaki Akış API'sinin ayarları sayfası" lightbox="../../media/3b2ad64b6ef0f88cf0175f8d57ef8b97.png":::
 
 1. **Gönder'e** tıkladığından emin olun.
 
-### <a name="verify-that-the-events-are-being-exported-to-the-event-hub"></a>Olayların Olay Hub'ına aktarıldığını doğrulayın
+### <a name="verify-that-the-events-are-being-exported-to-the-event-hubs"></a>Olayların Event Hubs'a aktarıldığını doğrulayın
 
-Basit bir Gelişmiş Tehdit Avcılığı sorgusu çalıştırarak olayların Olay Hub'ına gönderildiğini doğrulayabilirsiniz. **Tehdit Avcılığı** \> **Gelişmiş Tehdit Avcılığı** \> **Sorgusu'na** tıklayın ve aşağıdaki sorguyu girin:
+Temel bir Gelişmiş Tehdit Avcılığı sorgusu çalıştırarak olayların Event Hubs'a gönderildiğini doğrulayabilirsiniz. **Tehdit Avcılığı** \> **Gelişmiş Tehdit Avcılığı** \> **Sorgusu'na** tıklayın ve aşağıdaki sorguyu girin:
 
 ```console
 EmailEvents
@@ -163,11 +170,11 @@ EmailEvents
 |count
 ```
 
-Bu, son bir saatte diğer tüm tablolarda kaç e-posta alındığını gösterir. Ayrıca olay hub'larına aktarılabilir olaylar görüp görmediğinizi de gösterir. Bu sayı 0 gösteriyorsa Olay Hub'ına giden hiçbir veri görmezsiniz.
+Bu sorgu, son bir saatte diğer tüm tablolarda kaç e-posta alındığını gösterir. Ayrıca olay hub'larına aktarılabilir olaylar görüp görmediğinizi de gösterir. Bu sayı 0 gösteriyorsa Event Hubs'a giden hiçbir veri görmezsiniz.
 
 :::image type="content" source="../../media/c305e57dc6f72fa9eb035943f244738e.png" alt-text="Microsoft Azure portalındaki gelişmiş avcılık sayfası" lightbox="../../media/c305e57dc6f72fa9eb035943f244738e.png":::
 
-Dışarı aktarabileceğiniz veriler olduğunu doğruladıktan sonra, iletilerin geldiğini doğrulamak için Olay Hub'ı sayfasını görüntüleyebilirsiniz. Bu işlem bir saate kadar sürebilir.
+Dışarı aktarabileceğiniz veriler olduğunu doğruladıktan sonra, iletilerin geldiğini doğrulamak için Event Hubs sayfasını görüntüleyebilirsiniz. Bu işlem bir saate kadar sürebilir.
 
 1. Azure'da **Olay** Hub'ı'na \> gidin **Ad Alanı** \> **Olay Hub'ına** tıklayın **Olay Hub'ına**\> tıklayın.
 1. **Genel Bakış'ın** altında aşağı kaydırın ve İletiler grafiğinde Gelen İletiler'i görmeniz gerekir. Herhangi bir sonuç görmüyorsanız, özel uygulamanızın alacağı hiçbir ileti olmayacaktır.

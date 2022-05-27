@@ -96,6 +96,8 @@
       href: m365bp-security-incident-management.md
     - name: Güvenlik önerilerini gözden geçirme
       href: ../security/defender-business/mdb-view-tvm-dashboard.md?toc=/microsoft-365/business-premium/toc.json&bc=/microsoft-365/business-premium/breadcrumb/toc.json
+    - name: Cihazlarda algılanan tehditleri gözden geçirme
+      href: m365bp-review-threats-take-action.md
     - name: Cihazlarda düzeltme eylemlerini gözden geçirme
       href: m365bp-review-remediation-actions-devices.md
     - name: Risk Altında Bir e-posta hesabına yanıt verme

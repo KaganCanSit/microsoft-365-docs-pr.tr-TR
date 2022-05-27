@@ -13,12 +13,12 @@ ms.collection:
 ms.custom: ''
 description: Yöneticiler, Office 365 için Microsoft Defender Plan 2'deki Saldırı benzetimi eğitimini kullanarak kimlik avı saldırılarının simülasyonunu yapmayı ve kullanıcılarını kimlik avı önleme konusunda eğitmeyi öğrenebilir.
 ms.technology: mdo
-ms.openlocfilehash: 647ea6188e1bd7867e823bbfbb6341255e82960d
-ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
+ms.openlocfilehash: 08d86488f9575aad995752ca331b3cbbb31d07fe
+ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65679472"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65739659"
 ---
 # <a name="simulate-a-phishing-attack-with-attack-simulation-training-in-defender-for-office-365"></a>Office 365 için Defender'de Saldırı simülasyonu eğitimi ile kimlik avı saldırısı simülasyonu
 
@@ -319,7 +319,7 @@ Microsoft tarafından seçilmiş giriş sayfaları 12 dilde kullanılabilir: Çi
       - **Kampanya sona erdikten sonra teslim**
       - **Kampanya sırasında teslim**
     - **Eylemler**: Görünüm simgesine ![tıklarsanız.](../../media/m365-cc-sc-view-icon.png) **Görünüm** simgesi, **Gözden geçir bildirimi** sayfası aşağıdaki bilgilerle birlikte görüntülenir:
-      - **Önizleme** sekmesi: Bildirim iletisini görüntüleyin.
+      - **Önizleme** sekmesi: Kullanıcıların göreceği şekilde bildirim iletisini görüntüleyin.
         - İletiyi farklı dillerde görüntülemek için **Dil seçin** kutusunu kullanın.
         - Birden çok yük içeren simülasyonlar için bildirim iletisini seçmek için **Önizlemeye yük seçin** kutusunu kullanın.
       - **Ayrıntılar** sekmesi: Bildirimle ilgili ayrıntıları görüntüleyin:

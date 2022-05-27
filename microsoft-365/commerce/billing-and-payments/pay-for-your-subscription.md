@@ -22,13 +22,13 @@ ms.custom:
 - AdminSurgePortfolio
 - business_assist
 - AdminTemplateSet
-ms.date: 05/18/2022
-ms.openlocfilehash: d116fe2b9fb2b0b0b96ec44107d486edca19ff04
-ms.sourcegitcommit: 60970cf8a2cb451011c423d797dfb77925394f89
+ms.date: 05/26/2022
+ms.openlocfilehash: 05edb03d34644d1f09acaad22bbcff01b3654ac3
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2022
-ms.locfileid: "65587434"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65753858"
 ---
 # <a name="how-to-pay-for-your-subscription"></a>Aboneliğiniz için ödeme yapma
 
@@ -46,6 +46,16 @@ Aboneliğinizi ödemek için kredi kartı, ATM kartı veya banka hesabı kullana
 
 - Bu makalede açıklanan adımları gerçekleştirmek için Genel yönetici veya Faturalandırma yöneticisi olmanız gerekir. Daha fazla bilgi için bkz. [Yönetici rolleri hakkında](../../admin/add-users/about-admin-roles.md).
 - Ödeme sırasında seçtiğiniz ödeme yöntemi, gelecekteki tüm faturalama dönemleri için kullanacağımız ödeme yöntemidir. İstediğiniz zaman değiştirebilirsiniz.
+
+## <a name="new-regulations-from-the-reserve-bank-of-india"></a>Hindistan Rezerv Bankası'ndan yeni düzenlemeler
+
+1 Ekim 2021 itibarıyla Hindistan'daki otomatik ödemeler, özellikle 5.000 INR'yi aşan işlemler olmak üzere bazı kredi kartı işlemlerini engelleyebilir. Bu düzenleme nedeniyle, Microsoft 365 yönetim merkezinde el ile ödeme yapmanız gerekebilir. Bu düzenlemeler, kullanımınız için ücretlendirildiğiniz toplam tutarı etkilemez.
+
+[Yinelenen ödemeler için Hindistan Rezerv Bankası yönetmeliği hakkında daha fazla bilgi edinin](https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11668&Mode=0).
+
+1 Temmuz 2022'de Microsoft ve diğer çevrimiçi satıcılar artık kredi kartı bilgilerini depolamayacaktır. Microsoft, bu düzenlemeye uymak için tüm depolanan kart bilgilerini Microsoft 365 yönetim merkezinden kaldıracaktır. Hizmet kesintisini önlemek için bir ödeme yöntemi eklemeniz ve tüm abonelikler ve faturalama profilleri için tek seferlik ödeme yapmanız gerekir.
+
+[Kart depolama için Hindistan Rezerv Bankası yönetmeliği hakkında bilgi edinin](https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12211).
 
 ## <a name="paying-by-credit-or-debit-card-or-bank-account"></a>Kredi kartı, ATM kartı veya banka hesabıyla ödeme
 

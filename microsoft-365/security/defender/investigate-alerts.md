@@ -21,12 +21,12 @@ ms.topic: conceptual
 search.appverid:
 - MOE150
 ms.technology: m365d
-ms.openlocfilehash: fd043ae1ebabcb8162ed96b973c9392bae5fd2a1
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 40e0285f185d112fa508d871e0ccd70c2a09120e
+ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64944447"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65739427"
 ---
 # <a name="investigate-alerts-in-microsoft-365-defender"></a>Microsoft 365 Defender'da uyarıları araştırma
 
@@ -37,7 +37,7 @@ ms.locfileid: "64944447"
 - Microsoft 365 Defender
 
 >[!Note]
->Bu makalede Microsoft 365 Defender'deki güvenlik uyarıları açıklanmaktadır. Ancak, kullanıcılar Microsoft 365 belirli etkinlikler gerçekleştirdiğinde kendinize veya diğer yöneticilere e-posta bildirimleri göndermek için etkinlik uyarılarını kullanabilirsiniz. Daha fazla bilgi için bkz. [Etkinlik uyarıları oluşturma - Microsoft Purview | Microsoft Docs](../../compliance/create-activity-alerts.md).
+>Bu makalede Microsoft 365 Defender'deki güvenlik uyarıları açıklanmaktadır. Ancak, kullanıcılar Microsoft 365 belirli etkinlikler gerçekleştirdiğinde kendinize veya diğer yöneticilere e-posta bildirimleri göndermek için etkinlik uyarılarını kullanabilirsiniz. Daha fazla bilgi için bkz[. Etkinlik uyarıları oluşturma - Microsoft Purview | Microsoft Docs](../../compliance/create-activity-alerts.md).
 
 Uyarılar tüm olayların temelini oluşturur ve ortamınızda kötü amaçlı veya şüpheli olayların oluştuğuna işaret eder. Uyarılar genellikle daha geniş kapsamlı bir saldırının parçasıdır ve bir olay hakkında ipuçları sağlar.
 
@@ -57,7 +57,7 @@ Varsayılan uyarılar kuyruğundan **Filtre'yi** seçerek bir **Filtre** bölmes
 
 Uyarıları şu ölçütlere göre filtreleyebilirsiniz:
 
-- Önem
+- Önem derecesi
 - Durum
 - Hizmet kaynakları
 - Varlıklar (etkilenen varlıklar)
@@ -67,7 +67,7 @@ Uyarıları şu ölçütlere göre filtreleyebilirsiniz:
 
 Office 365 için Microsoft Defender uyarılarına erişmek için aşağıdaki rollerden birine sahip olmanız gerekir:
 
-- Azure Active Directory (Azure AD) genel rolleri için:
+- Azure Active Directory (Azure AD) genel roller için:
 
    - Genel yönetici
 
@@ -206,9 +206,8 @@ Otomasyonu oluşturmak için, Power Automate Microsoft Defender for Cloud Apps b
 
 ### <a name="create-an-automated-flow"></a>Otomatik akış oluşturma
 
-Ayrıntılı adım adım işlem için [buradaki](https://www.microsoft.com/en-us/videoplayer/embed/RWFIRn) videoya bakın.
-
-Bu videoda power automate'in Bulut için Defender Uygulamalarına nasıl bağlandığı da açıklanır.
+Otomasyonun sorunsuz bir iş akışı oluşturmak için verimli bir şekilde nasıl çalıştığını ve Power Automate Bulut için Defender Uygulamalarına nasıl bağlanacağını öğrenmek için bu kısa videoyu izleyin. 
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWFIRn]
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

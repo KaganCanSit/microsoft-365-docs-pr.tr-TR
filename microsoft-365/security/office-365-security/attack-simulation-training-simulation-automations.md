@@ -12,12 +12,12 @@ ms.collection:
 - m365initiative-defender-office365
 description: Yöneticiler, Office 365 için Microsoft Defender Plan 2'de belirtilen koşullar karşılandığında başlatılan belirli teknikleri ve yükleri içeren otomatik simülasyonlar oluşturmayı öğrenebilir.
 ms.technology: mdo
-ms.openlocfilehash: ded6a77e72e71a676c0cc05ffdc3be53e3fbada1
-ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
+ms.openlocfilehash: 32730dfa36b0140bda246137b4cf6706b3472da7
+ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65678865"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65739681"
 ---
 # <a name="simulation-automations-for-attack-simulation-training"></a>Saldırı simülasyonu eğitimi için simülasyon otomasyonları
 
@@ -31,7 +31,7 @@ Simülasyon otomasyonu oluşturmak için aşağıdaki adımları uygulayın:
 
 1. konumundaki Microsoft 365 Defender portalında<https://security.microsoft.com/>**, E-posta & işbirliği** \> **Saldırı simülasyonu eğitimi** \> **Otomasyonları** sekmesi **Simülasyon otomasyonları'na**\> gidin.
 
-   Doğrudan **Otomasyonlar** sekmesine gitmek için kullanın <https://security.microsoft.com/attacksimulator?viewid=automations>.
+   Doğrudan **Benzetim otomasyonları'nı** seçebileceğiniz **Otomasyonlar** sekmesine gitmek için kullanın <https://security.microsoft.com/attacksimulator?viewid=automations>.
 
 2. **Simülasyon otomasyonları'nda** Otomasyon oluştur simgesi'ne tıklayın![.](../../media/m365-cc-sc-create-icon.png) **Otomasyon oluşturma**.
 
@@ -311,7 +311,7 @@ Gösterilen bir eğitimi kullanmak istemiyorsanız Sil simgesine tıklayın ![.]
       - **Kampanya sona erdikten sonra teslim**
       - **Kampanya sırasında teslim**
     - **Eylemler**: Görünüm simgesine ![tıklarsanız.](../../media/m365-cc-sc-view-icon.png) **Görünüm** simgesi, **Gözden geçir bildirimi** sayfası aşağıdaki bilgilerle birlikte görüntülenir:
-      - **Önizleme** sekmesi: Bildirim iletisini görüntüleyin.
+      - **Önizleme** sekmesi: Kullanıcıların göreceği şekilde bildirim iletisini görüntüleyin.
         - İletiyi farklı dillerde görüntülemek için **Dil seçin** kutusunu kullanın.
         - Birden çok yük içeren simülasyonlar için bildirim iletisini seçmek için **Önizlemeye yük seçin** kutusunu kullanın.
       - **Ayrıntılar** sekmesi: Bildirimle ilgili ayrıntıları görüntüleyin:

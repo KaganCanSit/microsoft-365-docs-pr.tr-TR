@@ -19,16 +19,18 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
 description: Office 365 Güvenlik & Uyumluluk Merkezi'nde anahtar sözcük sözlüğü oluşturmanın temel adımlarını öğrenin.
-ms.openlocfilehash: 64e431b5d2ef01e85eff55f39f4436786f45664b
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: ceb410d09d9869d87681128f2c6e7b45cd8363cb
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64758607"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65753682"
 ---
 # <a name="create-a-keyword-dictionary"></a>Anahtar sözcük sözlüğü oluşturma
 
-Veri kaybı önleme (DLP), hassas öğelerinizi tanımlayabilir, izleyebilir ve koruyabilir. Hassas öğelerin tanımlanması bazen özellikle genel içeriği (sağlık hizmetleriyle ilgili iletişim gibi) veya uygunsuz veya açık dili tanımlarken anahtar sözcüklerin aranması gerekir. Hassas bilgi türlerinde anahtar sözcük listeleri oluşturabilirsiniz ancak anahtar sözcük listelerinin boyutu sınırlıdır ve bunları oluşturmak veya düzenlemek için XML'nin değiştirilmesi gerekir. Anahtar sözcük sözlükleri, sözlükte 1 MB'a kadar terimleri (sıkıştırma sonrası) destekleyen ve herhangi bir dili destekleyen anahtar sözcüklerin daha basit bir şekilde yönetilmesini ve çok daha büyük bir ölçekte yönetilmesini sağlar. Sıkıştırmadan sonra kiracı sınırı da 1 MB'tır. 1 MB sıkıştırma sonrası sınırı, kiracı genelinde birleştirilen tüm sözlüklerin 1 milyona yakın karaktere sahip olabileceği anlamına gelir.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Microsoft Purview Veri Kaybı Önleme (DLP), hassas öğelerinizi tanımlayabilir, izleyebilir ve koruyabilir. Hassas öğelerin tanımlanması bazen özellikle genel içeriği (sağlık hizmetleriyle ilgili iletişim gibi) veya uygunsuz veya açık dili tanımlarken anahtar sözcüklerin aranması gerekir. Hassas bilgi türlerinde anahtar sözcük listeleri oluşturabilirsiniz ancak anahtar sözcük listelerinin boyutu sınırlıdır ve bunları oluşturmak veya düzenlemek için XML'nin değiştirilmesi gerekir. Anahtar sözcük sözlükleri, sözlükte 1 MB'a kadar terimleri (sıkıştırma sonrası) destekleyen ve herhangi bir dili destekleyen anahtar sözcüklerin daha basit bir şekilde yönetilmesini ve çok daha büyük bir ölçekte yönetilmesini sağlar. Sıkıştırmadan sonra kiracı sınırı da 1 MB'tır. 1 MB sıkıştırma sonrası sınırı, kiracı genelinde birleştirilen tüm sözlüklerin 1 milyona yakın karaktere sahip olabileceği anlamına gelir.
 
 ## <a name="keyword-dictionary-limits"></a>Anahtar sözcük sözlüğü sınırları
 
@@ -74,7 +76,7 @@ Remove-Item $rawFile
 
 Sözlüğünüzün anahtar sözcükleri, en yaygın olarak hizmette veya PowerShell cmdlet'i tarafından içeri aktarılan bir dosyadan (.csv veya .txt listesi gibi), doğrudan PowerShell cmdlet'ine girdiğiniz bir listeden veya mevcut bir sözlükten gelen çeşitli kaynaklardan gelebilir. Anahtar sözcük sözlüğü oluşturduğunuzda aynı temel adımları izlersiniz:
 
-1. *<a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 uyumluluk merkezi</a> kullanın veya **Güvenlik &amp; Uyumluluk Merkezi PowerShell'e bağlanın**.
+1. *<a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalı</a> kullanın veya **Microsoft Purview uyumluluk portalı PowerShell'e bağlanın**.
 
 2. **Anahtar sözcüklerinizi hedeflenen kaynağınızdan tanımlayın veya yükleyin**. Sihirbaz ve cmdlet,özel anahtar sözcük sözlüğü oluşturmak için virgülle ayrılmış bir anahtar sözcük listesi kabul eder, bu nedenle bu adım anahtar sözcüklerinizin nereden geldiğine bağlı olarak biraz farklılık gösterir. Yüklendikten sonra, içeri aktarılmadan önce kodlanır ve bir bayt dizisine dönüştürülür.
 
@@ -84,7 +86,7 @@ Sözlüğünüzün anahtar sözcükleri, en yaygın olarak hizmette veya PowerSh
 
 Özel bir sözlük için anahtar sözcükler oluşturmak ve içeri aktarmak için aşağıdaki adımları kullanın:
 
-1. Microsoft 365 uyumluluk merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Bağlan</a>.
+1. Microsoft Purview uyumluluk portalı <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Bağlan</a>.
 
 2. **Sınıflandırmalar > Hassas bilgi türleri'ne** gidin.
 

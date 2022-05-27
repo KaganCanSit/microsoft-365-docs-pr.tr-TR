@@ -1,5 +1,5 @@
 ---
-title: Microsoft SharePoint Syntex deneme sürümü çalıştırın
+title: Microsoft SharePoint Syntex deneme sürümünü çalıştırma
 ms.author: chucked
 author: chuckedmonson
 manager: pamgreen
@@ -16,100 +16,100 @@ ms.custom:
 - admindeeplinkMAC
 search.appverid: ''
 ms.localizationpriority: medium
-description: Kuruluş içinde yer alan diğer kuruluşlar için deneme sürümü programını planlamayı, SharePoint Syntex çalıştırmayı öğrenin.
-ms.openlocfilehash: fc4221b0022aca8a0564c78e64d94028f6483104
-ms.sourcegitcommit: bcbcbd4ddc72ad2fed629619d23fac5827d072bf
+description: Kuruluşunuzda SharePoint Syntex için bir deneme pilot programı planlamayı, kaydolmayı ve çalıştırmayı öğrenin.
+ms.openlocfilehash: ccbf1208d5c655171825b5a96f3a78b25ea3bbf2
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2022
-ms.locfileid: "64507109"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65754454"
 ---
-# <a name="run-a-trial-of-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex deneme sürümü çalıştırın
+# <a name="run-a-trial-of-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex deneme sürümünü çalıştırma
 
-Bu makalede, bir deneme pilot programını, kurum içinde nasıl dağıtacaklarını SharePoint Syntex ve çalıştırabilirsiniz. Deneme sürümü için en iyi yöntemleri de önermektedir.
+Bu makalede, kuruluşunuzda SharePoint Syntex dağıtmak için bir deneme pilot programı ayarlama ve çalıştırma açıklanmaktadır. Ayrıca deneme için en iyi yöntemleri de önerir.
 
-## <a name="sign-up-for-a-trial"></a>Deneme için kaydolma
+## <a name="sign-up-for-a-trial"></a>Deneme sürümüne kaydolma
 
-Deneme sürümü SharePoint Syntex 30 gün boyunca 300 kullanıcıya erişim verir.
+SharePoint Syntex deneme sürümü 30 gün boyunca 300 kullanıcıya erişim sağlar.
 
 > [!NOTE]
-> 1 milyon AI Builder kredisine otomatik olarak ekleme sağlamak için denemeye 300'e kadar kullanıcı dahildir. Başarılı bir deneme için 300 kullanıcı eklemek zorunda değilsiniz.
+> 1 milyon AI Builder kredisinin otomatik olarak eklenmesini sağlamak için deneme sürümüne en fazla 300 kullanıcı dahil edilir. Deneme sürümünün başarılı olması için 300 kullanıcı eklemeniz gerekmez.
 
-Deneme sürümünü aşağıdaki kaynaklardan birini kullanabilirsiniz:
+Deneme sürümünü aşağıdaki kaynaklardan birinden alabilirsiniz:
 
-- Ürün [SharePoint Syntex sayfası](https://www.microsoft.com/microsoft-365/enterprise/sharepoint-syntex?activetab=pivot:overviewtab)
+- [SharePoint Syntex ürün sayfası](https://www.microsoft.com/microsoft-365/enterprise/sharepoint-syntex?activetab=pivot:overviewtab)
 
 - [Microsoft 365 yönetim merkezi](https://admin.microsoft.com)
     1. [Microsoft 365 yönetici merkezi](https://admin.microsoft.com)'nde oturum açın.
-    2. **BillingPurchase** >  <a href="https://go.microsoft.com/fwlink/p/?linkid=868433" target="_blank">**Services'a gidin**</a>.
-    3. Eklentiler bölümüne **kadar aşağı kaydırın** .
-    4. Ayrıntılar SharePoint Syntex **seçin.**
-    5. Ücretsiz **denemeyi başlat'ı seçin**.
-    6. Denemeyi onaylamak için kalan sihirbazın adımlarını izleyin.
+    2. **Faturalama** > <a href="https://go.microsoft.com/fwlink/p/?linkid=868433" target="_blank">**Satın Alma Hizmetleri'ne**</a> gidin.
+    3. Aşağı kaydırarak **Eklentiler** bölümüne gelin.
+    4. SharePoint Syntex kutucuğunda **Ayrıntılar'ı** seçin.
+    5. **Ücretsiz denemeyi başlat'ı** seçin.
+    6. Deneme sürümünü onaylamak için kalan sihirbaz adımlarını izleyin.
 
-Denemeyi etkinleştirmek için Microsoft 365 genel yönetici veya faturalama yöneticisi olun.
+Deneme sürümünü etkinleştirmek için Microsoft 365 genel yöneticisi veya faturalama yöneticisi olmanız gerekir.
 
-### <a name="who-should-be-involved-in-a-trial"></a>Who deneme sürümüne dahil olması gerekir
+### <a name="who-should-be-involved-in-a-trial"></a>Who bir denemede yer almalıdır
 
 |Rol|Etkinlik|
 |---|---|
-|Microsoft 365 yönetici veya faturalama yöneticisi|Denemeyi etkinleştirme ve lisansları atama|
-|Microsoft 365 yönetici veya SharePoint yönetici|İçerik SharePoint Syntex merkezleri yapılandırma|
-|Kurumsal kullanıcılar|Model bina ve testi|
+|Genel yöneticiyi veya faturalama yöneticisini Microsoft 365|Deneme sürümünü etkinleştirme ve lisans atama|
+|Genel yöneticiyi veya SharePoint yöneticiyi Microsoft 365|SharePoint Syntex yapılandırma ve içerik merkezleri oluşturma|
+|İş kullanıcıları|Model oluşturma ve test etme|
 
-### <a name="before-you-activate-a-trial"></a>Denemeyi etkinleştirmeden önce
+### <a name="before-you-activate-a-trial"></a>Deneme sürümünü etkinleştirmeden önce
 
-Denemeyi başarıyla planlamak SharePoint Syntex aşağıdaki faktörleri göz önünde bulundurarak göz önünde bulundurarak:
+SharePoint Syntex deneme sürümünü başarıyla planlamak için aşağıdaki faktörleri göz önünde bulundurun:
 
-- En anlamlı test"gerçek dünya" senaryoları ve verileri üzerinde tamamlanır.
-- Kiracı başına tek bir SharePoint Syntex denemeyi yalnızca bir kez etkinleştirin.
+- En anlamlı test , "gerçek dünya" senaryolarında ve verilerinde tamamlanır.
+- SharePoint Syntex deneme sürümünü kiracı başına yalnızca bir kez etkinleştirebilirsiniz.
 
-Etkinleştirme adımlarını ve yönetim denetimlerini takip etmek için bir test veya tanıtım kiracısı "kuru çalışma" olarak kullanılabilir. Ama büyük olasılıkla en iyisi üretim kiracısı üzerinde model yapıyı değerlendirmektir.
+Bir test veya tanıtım kiracısı, etkinleştirme adımlarını ve yönetim denetimlerini gözden geçirmek için "kuru çalıştırma" olarak kullanılabilir. Ancak büyük olasılıkla bir üretim kiracısı üzerinde model oluşturmayı değerlendirmek en iyisidir.
 
-Üretim kiracısı üzerinde bir denemenin değerini en üst düzeye çıkarmak için planlama ve iş etkileşimi çok önemlidir. Bir veya daha fazla iş alanı kullanarak, sizin için önemli olabilecek üç ile altı kullanımlık vakaları belirleme SharePoint Syntex. Şu kullanım örnekleri gerekir:
+Üretim kiracısının deneme sürümünün değerini en üst düzeye çıkarmak için planlama ve iş etkileşimi gereklidir. SharePoint Syntex tarafından ele alınabilecek üç veya altı kullanım örneğini belirlemek için bir veya daha fazla iş alanıyla etkileşime geçmeniz gerekir. Bu kullanım örnekleri şunları yapmalıdır:
 
-- Form işleme veya belge anlama modeli ile çözülebilir senaryoları ekleyin.
-- Ayıklanan meta verilerin amacını açıkça anlama; örneğin, biçimlendirmeyi veya otomasyonu görüntülemek için Biçimlendirme Power Automate. Diğer SharePoint Syntex belgeleri sınıflandırmaya ve meta verileri ayıklamaya odaklansa da, bu meta verilerin neler katıyor olduğu nicelik değeridir.
-- Tanımlanmış bir veri kümesine bağlı olmak; örneğin, belirli site SharePoint kitaplıkları kullanabilirsiniz. Genel amaçlı modellerin tüm kuruluş SharePoint Syntex uygulananın yaygın bir yanlış yanılgıdır. Daha doğru bir görünüm, hedeflenen konumlarda belirli iş sorunlarını çözmek için modellerin yerleşik olmasıdır.
+- Form işleme veya belge anlama modeli tarafından çözülebilecek senaryolar ekleyin.
+- Ayıklanan meta verilerin amacını net bir şekilde anlayın; örneğin, Power Automate kullanarak biçimlendirmeyi veya otomasyonu görüntüleyin. SharePoint Syntex belgeleri sınıflandırmaya ve meta verileri ayıklamaya odaklanmış olsa da, bu meta verilerin sağladığı miktar değeridir.
+- Tanımlı bir veri kümesini temel alın; örneğin, belirli SharePoint siteleri veya kitaplıkları. SharePoint Syntex yaygın bir yanılgı, genel amaçlı modellerin tüm kuruluş içeriğine uygulanabilmesidir. Daha doğru bir görünüm, modellerin hedeflenen konumlardaki belirli iş sorunlarını çözmeye yardımcı olmak için oluşturulduğudur.
 
-Bu kullanım durumlarının hepsi uygun SharePoint Syntex. Kaliteli bir deneme amacı, denemenin tüm senaryolara SharePoint Syntex olduğunu kanıtlamak değildir. Bunun yerine, deneme sürümü ürünün değerini daha iyi anlamanıza yardımcı olacaktır.
+Bu kullanım örneklerinin tümü SharePoint Syntex için uygun olmayabilir. Kaliteli denemenin amacı, SharePoint Syntex tüm senaryolara uygun olacağını kanıtlamak değildir. Bunun yerine, deneme sürümü ürünün değerini daha iyi anlamanıza yardımcı olmalıdır.
 
-Planlı kullanım olaylarından her biri için, ilgili içerik veya işlemde konuyla ilgili uzmanlara sahip kullanıcıları tanımlayabilirsiniz. Yeni model SharePoint Syntex, BT uzmanları veya geliştirici kaynakları yerine içerikte yer alan etki alanı uzmanlarına odaklanıyor.
+Planlanan kullanım örneklerinin her biri için, ilgili içerik veya süreçte konu uzmanı olan kullanıcıları belirleyin. SharePoint Syntex modellerin oluşturulması, BT uzmanlarına veya geliştirici kaynaklarına değil içerikteki etki alanı uzmanlarına odaklanır.
 
-## <a name="activate-a-trial"></a>Denemeyi etkinleştirme
+## <a name="activate-a-trial"></a>Deneme sürümünü etkinleştirme
 
-Denemeyi başlatarak şunları gerekir:
+Deneme sürümünü başlattığınızda şunları yapmanız gerekir:
 
-- İlgili kullanıcılara lisans atama.
-- Ek [kurulum SharePoint Syntex](set-up-content-understanding.md).
-  - Başka içerik merkezleri [de oluşturabilirsiniz](create-a-content-center.md).
+- İlgili kullanıcılara lisans atayın.
+- [ek SharePoint Syntex kurulumu gerçekleştirin](set-up-content-understanding.md).
+  - Daha [fazla içerik merkezi oluşturmak](create-a-content-center.md) isteyebilirsiniz.
 
-Deneme sürümü etkinleştirildikten sonra modeller ve süreç dosyaları oluşturabilirsiniz. Model [oluşturma kılavuzuna bakın](create-a-content-center.md).
+Deneme sürümü etkinleştirildikten sonra modeller oluşturabilir ve dosyaları işleyebilirsiniz. [Model oluşturma yönergelerine](create-a-content-center.md) bakın.
 
-## <a name="during-a-trial"></a>Deneme süresi boyunca
+## <a name="during-a-trial"></a>Deneme sırasında
 
-Deneme dönemleri sınırlıdır, bu nedenle ilk başta belirli modellerin tanımlı kullanım durumlarında belgeleri sınıflandırıp SharePoint Syntex meta verileri ayıklayıp ayıklay aşağıdakilere odaklanması en iyisidir. Deneme süresi sona erdikten sonra, meta verilerin nasıl kullanılabilir olacağını değerlendirin.
+Deneme süreleri sınırlıdır, bu nedenle başlangıçta SharePoint Syntex modellerin belgeleri sınıflandırıp sınıflandıramayacağına ve tanımlı kullanım örnekleri için meta verileri ayıklayıp ayıklayamayacağına odaklanmak en iyisidir. Deneme süresi sona erdikten sonra meta verilerin nasıl yararlanabileceğini değerlendirebilirsiniz.
 
 ## <a name="after-a-trial"></a>Denemeden sonra
 
-Denemenin sonucuna bağlı olarak, yeni sürümün üretim kullanımına devam edip SharePoint Syntex.
+Denemenin sonucuna bağlı olarak, SharePoint Syntex üretim kullanımına devam edip etmeyeceğinize karar vekleyebilirsiniz.
 
-### <a name="proceed-to-production-use"></a>Üretim kullanımına devam edin
+### <a name="proceed-to-production-use"></a>Üretim kullanımına geçin
 
-Hizmet sürekliliğini sağlamak için, gerekli sayıda lisans satın almalı ve bu lisansları kullanıcılara atalınız. Deneme süresi sonunda tam lisansı olan deneme kullanıcıları, lisansları tam olarak SharePoint Syntex.
+Hizmetin sürekliliğini sağlamak için gerekli lisans sayısını satın almanız ve bu [lisansları](syntex-licensing.md) kullanıcılara atamanız gerekir. Deneme süresinin sonunda tam lisansı olmayan deneme kullanıcıları SharePoint Syntex tam olarak kullanamaz.
 
-Form işleme için tahmini kullanımınızı tahmin etmek ve beklenen AI Builder kredilerini planlamanız gerekiyor olabilir. Yardım için bkz [. Size en uygun AI Builder kapasitesini tahmin edin](https://powerapps.microsoft.com/ai-builder-calculator/).
+Beklenen sayıda AI Builder kredisi için öngörülen form işleme ve plan kullanımınızı tahmin etmek zorunda olabilirsiniz. Yardım için bkz. [Size uygun AI Builder kapasitesini tahmin](https://powerapps.microsoft.com/ai-builder-calculator/) etme.
 
-### <a name="dont-proceed-to-production-use"></a>Üretim kullanımına devam etme
+### <a name="dont-proceed-to-production-use"></a>Üretim kullanımına devam etmeyin
 
-Denemeden sonra lisans satın alasanız:
+Deneme sürümünden sonra lisans satın almıyorsanız:
 
-- Yeni modeller oluşturmanız mümkün olmayacaktır.
+- Yeni modeller oluşturamazsınız.
 - Modelleri çalıştıran kitaplıklar artık dosyaları otomatik olarak sınıflandırmaz veya modelleri ayıklamaz.
-- Önceden sınıflandırılmış dosyalar veya ayıklanan meta veriler etkilenmez.
-- İçerik merkezleri ve belge anlama modelleri otomatik olarak silinmez. Gelecekte lisans satın alma kararı aldıysanız bunlar kullanım için kullanılabilir olacaktır.
-- Forms-processing models will be stored in the Dataverse (previously named Common Data Service [CDS]) instance of the default Power Platform environment. Bunlar, gelecekteki lisanslamada SharePoint Syntex veya Power Platform'daki AI Builder özellikleriyle kullanılabilir.
+- Daha önce sınıflandırılmış dosyalar veya ayıklanan meta veriler etkilenmez.
+- İçerik merkezleri ve belge anlama modelleri otomatik olarak silinmez. Gelecekte lisans satın alma kararı alırsanız bunlar kullanılabilir durumda kalır.
+- Form işleme modelleri, varsayılan Power Platform ortamının Dataverse (eski adı Common Data Service (CDS)) örneğinde depolanır. Bunlar, SharePoint Syntex için gelecekteki lisanslama ile veya Power Platform'daki AI Builder özellikleriyle kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Microsoft SharePoint Syntex benimseme: Kullanmaya başlayın](adoption-getstarted.md)
+[SharePoint Syntex benimsenmesini Kullanmaya başlayın](adoption-getstarted.md)

@@ -25,12 +25,12 @@ search.appverid:
 ms.assetid: 043807b2-21db-4d5c-b430-c8a6dee0e6ba
 ROBOTS: NOINDEX, NOFOLLOW
 description: Çok faktörlü kimlik doğrulaması (MFA) hem güçlü olması gereken bir parola hem de ek bir doğrulama yöntemi kullanır.
-ms.openlocfilehash: e7d32776edb0f8fa6eaa4019f394870a6346e1d2
-ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
+ms.openlocfilehash: f939b187fc81381dae4959fdf14280bc839dadb0
+ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2022
-ms.locfileid: "65637659"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65739881"
 ---
 # <a name="multifactor-authentication-for-microsoft-365"></a>Microsoft 365 için çok faktörlü kimlik doğrulaması
 
@@ -62,7 +62,7 @@ Bu yollar Microsoft 365 planınıza bağlıdır.
 |Plan|Öneri|Müşteri türü|
 |---|---|---|
 |Tüm Microsoft 365 planları|Tüm kullanıcı hesapları için MFA gerektiren güvenlik varsayılanlarını kullanın. <p> Kullanıcı başına MFA'yı tek tek kullanıcı hesaplarında da yapılandırabilirsiniz, ancak bu önerilmez.|Küçük işletme|
-|Microsoft 365 Business Premium <p> Microsoft 365 E3 <p> P1 lisanslarını Azure Active Directory (Azure AD) Premium|Grup üyeliğine, uygulamalara veya diğer ölçütlere göre kullanıcı hesapları için MFA gerektirmek için Koşullu Erişim ilkelerini kullanın.|Küçük işletmeden kuruluşa|
+|Microsoft 365 Business Premium <p> Microsoft 365 E3 <p> P1 lisanslarını Azure Active Directory (Azure AD) Premium|Grup üyeliğine, uygulamalara veya diğer ölçütlere göre kullanıcı hesapları için MFA gerektirmek için [güvenlik varsayılanlarını veya Koşullu Erişim ilkelerini](/microsoft-365/business-premium/m365bp-conditional-access) kullanın.|Küçük işletmeden kuruluşa|
 |Microsoft 365 E5 <p> lisansları Azure AD Premium P2|Oturum açma risk ölçütlerine göre MFA gerektirmek için Azure AD Kimlik Koruması kullanın.|Enterprise|
 ||||
 

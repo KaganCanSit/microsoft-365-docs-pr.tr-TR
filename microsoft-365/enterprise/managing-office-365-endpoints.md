@@ -19,16 +19,16 @@ ms.custom:
 search.appverid: MOE150
 ms.assetid: 99cab9d4-ef59-4207-9f2b-3728eb46bf9a
 description: Office 365 uç noktalarının kurumsal kuruluşunuz ağ mimarinizle çalışması için nasıl yönetileceğini öğrenin.
-ms.openlocfilehash: 68b778ac695c0b37b55dfe84414f72551d10ce68
-ms.sourcegitcommit: 60970cf8a2cb451011c423d797dfb77925394f89
+ms.openlocfilehash: c32b44365a8c926e398e4441b6b50905ea77147d
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2022
-ms.locfileid: "65587478"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65753836"
 ---
 # <a name="managing-office-365-endpoints"></a>Office 365 uç noktalarını yönetme
 
-Birden çok ofis konumu ve bağlantı WAN'ı olan çoğu kuruluş, Office 365 ağ bağlantısı için yapılandırmaya ihtiyaç duyar. Tüm güvenilen Office 365 ağ isteklerini doğrudan güvenlik duvarınız üzerinden göndererek ve tüm ek paket düzeyinde incelemeyi veya işlemeyi atlayarak ağınızı iyileştirebilirsiniz. Bu, gecikme süresini ve çevre kapasitesi gereksinimlerinizi azaltır. Office 365 ağ trafiğini belirlemek, kullanıcılarınız için en iyi performansı sağlamanın ilk adımıdır. Daha fazla bilgi için bkz. [Ağ Bağlantı İlkeleri Office 365](microsoft-365-network-connectivity-principles.md).
+Birden çok ofis konumu ve bağlantı WAN'ı olan çoğu kuruluş, Office 365 ağ bağlantısı için yapılandırmaya ihtiyaç duyar. Tüm güvenilir Office 365 ağ isteklerini doğrudan güvenlik duvarınız üzerinden göndererek ve tüm ek paket düzeyi incelemesini veya işlemesini atlayarak ağınızı iyileştirebilirsiniz. Bu, gecikme süresini ve çevre kapasitesi gereksinimlerinizi azaltır. Office 365 ağ trafiğini belirlemek, kullanıcılarınız için en iyi performansı sağlamanın ilk adımıdır. Daha fazla bilgi için bkz. [Ağ Bağlantı İlkeleri Office 365](microsoft-365-network-connectivity-principles.md).
 
 Microsoft, Office 365 [IP Adresi ve URL Web Hizmeti kullanarak Office 365](microsoft-365-ip-web-service.md) ağ uç noktalarına ve bu uç noktalarda devam eden değişikliklere erişmenizi önerir.
 
@@ -92,14 +92,14 @@ Get-PacFile -Type 2 -Instance Worldwide -TenantName Contoso -ClientRequestId b10
 
 ## <a name="proxy-server-bypass-processing-of-office-365-network-traffic"></a>Office 365 ağ trafiğinin proxy sunucusu atlama işlemi
 
-PAC dosyalarının doğrudan giden trafik için kullanılmadığı durumlarda, proxy sunucunuzu yapılandırarak ağ çevrenizdeki işlemeyi atlamak istersiniz. Bazı ara sunucu satıcıları[, Office 365 Ağ İş Ortağı Programı](microsoft-365-networking-partner-program.md) açıklandığı gibi bunun otomatik yapılandırmasını etkinleştirdi.
+PAC dosyalarının doğrudan giden trafik için kullanılmadığı durumlarda, ara sunucunuzu yapılandırarak ağ çevrenizdeki işlemeyi atlamak istersiniz. Bazı ara sunucu satıcıları[, Office 365 Ağ İş Ortağı Programı](microsoft-365-networking-partner-program.md) açıklandığı gibi bunun otomatik yapılandırmasını etkinleştirdi.
 
 Bunu el ile yapıyorsanız, Office 365 IP Adresi ve URL Web Hizmeti'nden İyileştirme ve İzin Ver uç nokta kategorisi verilerini almanız ve proxy sunucunuzu bunlar için işlemeyi atlayacak şekilde yapılandırmanız gerekir. İyileştirme ve İzin Ver kategori uç noktaları için SSL Kesme ve İnceleme ve Ara Sunucu Kimlik Doğrulamasından kaçınmak önemlidir.
   
 <a name="bkmk_changes"> </a>
 ## <a name="change-management-for-office-365-ip-addresses-and-urls"></a>Office 365 IP adresleri ve URL'ler için değişiklik yönetimi
 
-Ağ çevreniz için uygun yapılandırmayı seçmeye ek olarak, Office 365 uç noktaları için bir değişiklik yönetimi süreci benimsemeniz de önemlidir. Bu uç noktalar düzenli olarak değişir ve değişiklikleri yönetmezseniz, yeni bir IP adresi veya URL eklendikten sonra kullanıcılar engellenmiş veya düşük performansla sonuçlanabilir.
+Ağ çevreniz için uygun yapılandırmayı seçmeye ek olarak, Office 365 uç noktaları için bir değişiklik yönetimi süreci benimsemeniz de kritik önem taşır. Bu uç noktalar düzenli olarak değişir ve değişiklikleri yönetmezseniz, yeni bir IP adresi veya URL eklendikten sonra kullanıcılar engellenmiş veya düşük performansla sonuçlanabilir.
 
 Office 365 IP adreslerinde ve URL'lerde yapılan değişiklikler genellikle her ayın son gününe yakın yayımlanır. Bazen işletimsel, destek veya güvenlik gereksinimleri nedeniyle bu zamanlamanın dışında bir değişiklik yayımlanır.
 
@@ -107,7 +107,7 @@ BIR IP adresi veya URL eklendiği için işlem yapmanızı gerektiren bir deği�
 
 ### <a name="change-notification-using-the-web-service"></a>Web Hizmeti'ni kullanarak bildirimi değiştirme
 
-Değişiklik bildirimi almak için Office 365 IP Adresi ve URL Web Hizmeti'ni kullanabilirsiniz. Office 365 bağlanmak için kullandığınız uç noktaların sürümünü denetlemek için **/version** web yöntemini saatte bir çağırmanızı öneririz. Bu sürüm kullanımdaki sürümle karşılaştırıldığında değişirse, **/endpoints** web yönteminden en son uç nokta verilerini almanız ve isteğe bağlı olarak **/changes** web yönteminden farkları almanız gerekir. Bulduğunuz sürümde herhangi bir değişiklik yapılmadıysa **/endpoints** veya **/changes** web yöntemlerini çağırmak gerekli değildir.
+Değişiklik bildirimi almak için Office 365 IP Adresi ve URL Web Hizmeti'ni kullanabilirsiniz. Office 365 bağlanmak için kullandığınız uç noktaların sürümünü denetlemek için **/version** web yöntemini saatte bir çağırmanızı öneririz. Bu sürüm kullanımdaki sürümle karşılaştırıldığında değişirse, **/endpoints** web yönteminden en son uç nokta verilerini almanız ve isteğe bağlı olarak **/changes** web yönteminden farkları almanız gerekir. Bulduğunuz sürümde herhangi bir değişiklik yapılmadıysa **/endpoints** veya **/changes** web yöntemlerini çağırmak gerekmez.
 
 Daha fazla bilgi için bkz. [OFFICE 365 IP Adresi ve URL Web Hizmeti](microsoft-365-ip-web-service.md).
 
@@ -211,9 +211,10 @@ Office 365 kullanmaya çalışıyorsanız ve üçüncü taraf hizmetlere erişil
 <a name="bkmk_consumer"> </a>
 ### <a name="how-do-i-block-access-to-microsofts-consumer-services"></a>Microsoft'un tüketici hizmetlerine erişimi Nasıl yaparım? engelleyemiyor musunuz?
 
-Kiracı kısıtlamaları özelliği artık OneDrive, Hotmail ve Xbox.com gibi tüm Microsoft tüketici uygulamalarının (MSA uygulamaları) kullanımını engellemeyi destekliyor. Bu, login.live.com uç noktası için ayrı bir üst bilgi kullanır. Diğer ayrıntılar için bkz. [SaaS bulut uygulamalarına erişimi yönetmek için kiracı kısıtlamalarını kullanma](/azure/active-directory/manage-apps/tenant-restrictions#blocking-consumer-applications).
+Kiracı kısıtlamaları özelliği artık OneDrive, Hotmail ve Xbox.com gibi tüm Microsoft tüketici uygulamalarının (MSA uygulamaları) kullanımını engellemeyi destekliyor. Bu, login.live.com uç noktası için ayrı bir üst bilgi kullanır. Daha fazla bilgi için bkz. [SaaS bulut uygulamalarına erişimi yönetmek için kiracı kısıtlamalarını kullanma](/azure/active-directory/manage-apps/tenant-restrictions#blocking-consumer-applications).
 
 <a name="bkmk_IPOnlyFirewall"> </a>
+
 ### <a name="my-firewall-requires-ip-addresses-and-cannot-process-urls-how-do-i-configure-it-for-office-365"></a>Güvenlik duvarım IP Adresleri gerektiriyor ve URL'leri işleyemiyor. Nasıl yaparım? Office 365 için yapılandırılır?
 
 Office 365 tüm gerekli ağ uç noktalarının IP adreslerini sağlamaz. Bazıları yalnızca URL'ler olarak sağlanır ve varsayılan olarak kategorilere ayrılır. Varsayılan kategoride yer alan ve gerekli olan URL'lere ara sunucu üzerinden izin verilmelidir. Proxy sunucunuz yoksa, kullanıcıların bir web tarayıcısının adres çubuğuna yazdığı URL'ler için web isteklerini nasıl yapılandırdığınıza bakın; kullanıcı da bir IP adresi sağlamaz. IP adresleri sağlamayan Office 365 varsayılan kategori URL'leri de aynı şekilde yapılandırılmalıdır.

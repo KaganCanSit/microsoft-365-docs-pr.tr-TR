@@ -17,12 +17,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: e5f60e37765e562f0c1508778182f1f506773bff
-ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
+ms.openlocfilehash: 9207e0ad186f6a5dc5219e1a24c6ccdd8ee23fcd
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65679252"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65754112"
 ---
 # <a name="microsoft-defender-for-endpoint-on-linux"></a>Linux'ta Uç Nokta için Microsoft Defender
 
@@ -79,14 +79,21 @@ Herhangi bir yükleme hatasıyla karşılaşırsanız [Bkz. Linux'ta Uç Nokta i
 > [!NOTE]
 > Uç Nokta için Microsoft Defender varsayılan yükleme yolu dışında başka bir konuma yüklenmesi desteklenmez. 
 
+> [!NOTE]
+> Linux'ta Uç Nokta için Microsoft Defender rastgele UID ve GID ile bir "mdatp" kullanıcısı oluşturur. UID ve GID'yi denetlemek istiyorsanız, yüklemeden önce "/usr/sbin/nologin" kabuk seçeneğini kullanarak bir "mdatp" kullanıcısı oluşturun.
+> Örneğin: `mdatp:x:UID:GID::/home/mdatp:/usr/sbin/nologin`.
+
 ### <a name="system-requirements"></a>Sistem gereksinimleri
+
+> [!NOTE]
+> Red Hat Enterprise Linux ve CentOS 6.7+ ile 6.10+ arası destek önizleme aşamasındadır.
 
 - Desteklenen Linux sunucu dağıtımları ve x64 (AMD64/EM64T) ve x86_64 sürümleri:
 
   - Red Hat Enterprise Linux 6.7 veya üzeri (Önizleme)
-  - Red Hat Enterprise Linux 7.2 veya üzeri 
-  - Red Hat Enterprise Linux 8.x 
-  - CentOS 6.7 veya üzeri 
+  - Red Hat Enterprise Linux 7.2 veya üzeri
+  - Red Hat Enterprise Linux 8.x
+  - CentOS 6.7 veya üzeri (Önizleme)
   - CentOS 7.2 veya üzeri
   - Ubuntu 16.04 LTS veya üzeri LTS
   - Debian 9 veya üzeri
@@ -103,13 +110,16 @@ Herhangi bir yükleme hatasıyla karşılaşırsanız [Bkz. Linux'ta Uç Nokta i
 
 
 - Desteklenen çekirdek sürümlerinin listesi
-  - En düşük çekirdek sürümü 3.10.0-327 (Red Hat Enterprise Linux 6 ve CentOS 6 dışında yukarıda belirtilen tüm desteklenen Linux dağıtımları için)
+  > [!NOTE]
+  > RHEL/CentOS üzerinde Uç Nokta için Microsoft Defender - 6.7 ile 6.10 arası çekirdek tabanlı bir çözümdür. Daha yeni bir çekirdek sürümüne güncelleştirmeden önce çekirdeğin desteklendiğini doğrulamanız gerekir. Desteklenen çekirdekler listesi için aşağıdaki listeye bakın.
+  > Diğer tüm desteklenen dağıtımlar ve sürümler için Uç Nokta için Microsoft Defender uygulama, çekirdek-sürüm-belirsizdir. Çekirdek sürümünün 3.10.0-327 veya üzerinde olması en düşük gereksinimle.
+
   - Çekirdek `fanotify` seçeneği etkinleştirilmelidir
   - Red Hat Enterprise Linux 6 ve CentOS 6:
     - 6.7 için: 2.6.32-573.*
     - 6.8 için: 2.6.32-642.*
     - 6.9 için: 2.6.32-696.* (2.6.32-696.el6.x86_64 hariç)
-    - 6.10 için: 2.6.32-754.43.1 2.6.32.754.2.1.el6.x86_64:
+    - 6.10 için: 2.6.32-754.47.1 2.6.32.754.2.1.el6.x86_64:
     
        - 2.6.32-754.10.1.el6.x86_64
        - 2.6.32-754.11.1.el6.x86_64
