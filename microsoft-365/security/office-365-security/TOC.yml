@@ -156,16 +156,18 @@
           items:
             - name: E-posta kimlik doğrulaması
               href: email-validation-and-authentication.md
+            - name: Kimlik sahtekarlığını önlemeye yardımcı olmak için SPF'yi ayarlama
+              href: set-up-spf-in-office-365-to-help-prevent-spoofing.md
+            - name: 'Microsoft 365, kimlik sahtekarlığını önlemek için SPF''yi nasıl kullanır?'
+              href: how-office-365-uses-spf-to-prevent-spoofing.md
             - name: Giden e-postayı doğrulamak için DKIM kullanma
               href: use-dkim-to-validate-outbound-email.md
             - name: DKIM imzalı iletileri doğrulama desteği
               href: support-for-validation-of-dkim-signed-messages.md
             - name: E-postayı doğrulamak için DMARC kullanma
               href: use-dmarc-to-validate-email.md
-            - name: Kimlik sahtekarlığını önlemeye yardımcı olmak için SPF'yi ayarlama
-              href: set-up-spf-in-office-365-to-help-prevent-spoofing.md
-            - name: 'Microsoft 365, kimlik sahtekarlığını önlemek için SPF''yi nasıl kullanır?'
-              href: how-office-365-uses-spf-to-prevent-spoofing.md
+            - name: Gönderen ve alıcı arasındaki güvenilen cihazlar ve hizmetler için Güvenilen ARC gönderenlerini kullan
+              href: use-arc-exceptions-to-mark-trusted-arc-senders.md
         - name: EOP'de posta akışı
           href: mail-flow-in-eop.md
         - name: Kullanıcı gönderim ilkeleri
@@ -394,6 +396,8 @@
           href: quarantine-faq.yml
     - name: Başvuru
       items:
+        - name: Office 365 için Defender veri saklama
+          href: mdo-data-retention.md
         - name: Güvenlik yol haritası
           href: security-roadmap.md
         - name: EOP için yardım ve destek
