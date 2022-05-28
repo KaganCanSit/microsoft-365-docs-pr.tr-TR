@@ -13,12 +13,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Microsoft SharePoint Syntex'da modern bir şablon kullanarak belgeleri ve diğer içerikleri otomatik olarak oluşturmayı öğrenin.
-ms.openlocfilehash: 83ef526504073ae739a82c599663a3d284aaf51c
-ms.sourcegitcommit: 5eff41a350a01e18d9cdd572c9d8ff99d6c9563a
+ms.openlocfilehash: 2ec87a1255e7bd53e03e05c53d9cfbb8e6c77be1
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64836335"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65772500"
 ---
 # <a name="create-documents-using-content-assembly-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'da içerik derlemesini kullanarak belge oluşturma
 
@@ -33,7 +33,7 @@ sözleşmeler, iş beyanları, hizmet sözleşmeleri, onay mektupları, satış 
 
 Modern bir şablon oluşturmak için bu adımları izleyin.
 
-1. Sharepoint belge kitaplığından **Yeni Modern** >  **şablon oluştur'u** seçin.
+1. SharePoint belge kitaplığından Yeni **Modern şablon oluştur'u** >  seçin.
 
    ![Modern şablon oluştur seçeneğinin vurgulandığı belge kitaplığının ekran görüntüsü.](../media/content-understanding/content-assembly-create-template-1.png)
 
@@ -132,15 +132,15 @@ Modern bir şablon oluşturmak için bu adımları izleyin.
 
 Gerekli olduğunu düşündüğünüz kadar yer tutucu oluşturabilirsiniz. İşiniz bittiğinde, şablonu taslak olarak kaydetmeyi veya şablonu yayımlamayı seçebilirsiniz.
 
-   - **Taslağı kaydet** – Şablonu taslak olarak kaydeder ve daha sonra erişebilirsiniz. Belge kitaplığından **Yeni** >  **Düzenle menüsünü** seçerek Kaydedilmiş taslakları **Modern şablonlar** bölümünden görüntüleyebilir, düzenleyebilir veya yayımlayabilirsiniz.
+   - **Taslağı kaydet** – Şablonu taslak olarak kaydeder ve daha sonra erişebilirsiniz. Belge kitaplığından **Yeni** > **Düzenle menüsünü** seçerek **Modern şablonlar** bölümünden kaydedilmiş taslakları görüntüleyebilir, düzenleyebilir veya yayımlayabilirsiniz.
  
-   - **Yayımla** – Belge oluşturmak için kuruluştaki diğer kullanıcılar tarafından kullanılacak şablonu yayımlar. Belge kitaplığından **Yeni** >  **Düzenle menüsünü** seçerek **, Yayımlanan şablonları Modern şablonlar** bölümünden görüntüleyebilir, düzenleyebilir veya yayımdan kaldırabilirsiniz. 
+   - **Yayımla** – Belge oluşturmak için kuruluştaki diğer kullanıcılar tarafından kullanılacak şablonu yayımlar. Belge kitaplığından **Yeni** > **Düzenle menüsünü** seçerek **, Yayımlanan şablonları Modern şablonlar** bölümünden görüntüleyebilir, düzenleyebilir veya yayımdan kaldırabilirsiniz. 
 
 ## <a name="edit-a-modern-template"></a>Modern şablonu düzenleme
 
 Mevcut bir şablonu düzenlemeniz veya şablonu silmeniz veya yayımlamanız gerekiyorsa bu adımları izleyin.
 
-1. Sharepoint belge kitaplığından **Yeni** >  **Düzenle Menüsünü Düzenle'yi** seçin.
+1. SharePoint belge kitaplığından **Yeni** > **Düzenle Yeni menüsünü** seçin.
 
    ![Yeni Düzenle menü seçeneğinin vurgulandığı belge kitaplığının ekran görüntüsü.](../media/content-understanding/content-assembly-edit-template-1.png)
 
@@ -162,7 +162,7 @@ Mevcut bir şablonu düzenlemeniz veya şablonu silmeniz veya yayımlamanız ger
 
 *Sıfırdan* başlamak zorunda kalmadan benzer belgeleri hızla oluşturmak için yayımlanmış bir modern şablon kullanabilirsiniz. Yayımlanmış bir şablon kullanarak belge oluşturmak için şu adımları izleyin:
 
-1. Sharepoint belge kitaplığından **Yeni'yi** seçin ve ardından kullanmak istediğiniz modern şablonu seçin.
+1. SharePoint belge kitaplığından **Yeni'yi** ve ardından kullanmak istediğiniz modern şablonu seçin.
 
    ![Yeni menüsündeki modern şablon seçeneklerini gösteren belge kitaplığının ekran görüntüsü.](../media/content-understanding/content-assembly-create-document-1.png)
 

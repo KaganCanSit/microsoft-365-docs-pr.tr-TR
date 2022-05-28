@@ -17,12 +17,12 @@ ms.custom:
 search.appverid: ''
 ms.localizationpriority: medium
 description: Kuruluşunuzun SharePoint Syntex nasıl yararlanabileceğini görmek için benimseme değerlendirme aracını kullanmayı öğrenin.
-ms.openlocfilehash: 30c3426962a88d582af9d5cadac43ee0eb85bb50
-ms.sourcegitcommit: 54bc063818779e351ca24f04ba571f762d85751d
+ms.openlocfilehash: dbe9ebe47526f15216e4366bf98f086d86bed5e4
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65393713"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65772718"
 ---
 # <a name="discover-opportunities-in-sharepoint-syntex-by-using-the-microsoft-365-assessment-tool"></a>Microsoft 365 Değerlendirme aracını kullanarak SharePoint Syntex fırsatlarını keşfedin
 
@@ -44,7 +44,7 @@ Değerlendirme raporu aşağıdaki bilgileri içerir:
 
 - **Özel içerik türlerine sahip kitaplıklar** – Dosyaları otomatik olarak kategorilere ayırmak için SharePoint Syntex modellerin kullanılabildiği özel içerik türlerini kullanarak kitaplıkları tanımlayın. 
 
-- **İçerik türü kullanımı** – Sharepoint Syntex modellerini hedeflemek için içerik türü kullanımı desenlerini belirleyin. Bu modellerde en yüksek avantaj elde edilir. 
+- **İçerik türü kullanımı – en** yüksek avantaja sahip olacakları SharePoint Syntex modelleri hedeflemek için içerik türü kullanımı desenlerini belirleyin. 
 
 - **Bekletme etiketlerine sahip kitaplıklar – Bekletme** etiketlerinin kullanıldığı kitaplıkları belirleyin; burada tutarlılığı otomatikleştirmek ve geliştirmek için SharePoint Syntex kullanılabilir. 
 

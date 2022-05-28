@@ -20,12 +20,12 @@ f1.keywords:
 - NOCSH
 description: SharePoint 2010 ve SharePoint Server 2010'dan yükseltecek bilgileri ve kaynakları bulun. Her iki destek de 13 Nisan 2021'de sona erer.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: be25dd1260c378146d292e6487329065a3020ac8
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 4ed6cf873442d4fd48cdbf9562e6067fd238384e
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65077393"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65772762"
 ---
 # <a name="upgrading-from-sharepoint-2010"></a>SharePoint 2010'dan yükseltme
 
@@ -112,7 +112,7 @@ SharePoint Server 2013 veya SharePoint Server 2016'ya yükseltip verileri ShareP
 |SharePoint Online avantajı|SharePoint Online dezavantajı|
 |---|---|
 |Microsoft, SPO donanımlarını ve tüm donanım yönetimini sağlar.|Kullanılabilir özellikler şirket içi SharePoint Sunucusu ile SPO arasında farklılık gösterebilir.|
-|Aboneliğinizin Sharepoint yöneticisi veya genel yöneticisisiniz ve SPO sitelerine yönetici atayabilirsiniz.|şirket içi SharePoint Sunucusu'ndaki bir grup yöneticisinin kullanabileceği bazı eylemler, Microsoft 365'daki SharePoint Yöneticisi rolünde yoktur (veya gerekli değildir). Ancak SharePoint Yönetimi, Site Koleksiyonu Yönetimi ve Site Sahipliği kuruluşunuzda yereldir.|
+|Aboneliğinizin SharePoint yöneticisi veya genel yöneticisisiniz ve SPO sitelerine yönetici atayabilirsiniz.|şirket içi SharePoint Sunucusu'ndaki bir grup yöneticisinin kullanabileceği bazı eylemler, Microsoft 365'daki SharePoint Yöneticisi rolünde yoktur (veya gerekli değildir). Ancak SharePoint Yönetimi, Site Koleksiyonu Yönetimi ve Site Sahipliği kuruluşunuzda yereldir.|
 |Microsoft, SharePoint Online'ın çalıştığı SQL sunucuları da dahil olmak üzere temel donanım ve yazılımlara düzeltme ekleri, düzeltmeler ve güncelleştirmeler uygular.|Hizmette temel alınan dosya sistemine erişim olmadığından özelleştirme sınırlıdır.|
 |Microsoft [, hizmet düzeyi sözleşmeleri yayımlar](/office365/servicedescriptions/office-365-platform-service-description/service-level-agreement) ve hizmet düzeyi olaylarını çözmek için hızlı bir şekilde taşınır.|Yedekleme ve geri yükleme ile diğer kurtarma seçenekleri SharePoint Online'da hizmet tarafından otomatik hale getirilir. Kullanılmıyorsa yedeklemelerin üzerine yazılır.|
 |Güvenlik testi ve sunucu performansı ayarlama, Microsoft tarafından hizmette sürekli olarak gerçekleştirilir.|Kullanıcı arabiriminde ve diğer SharePoint özelliklerinde yapılan değişiklikler hizmet tarafından yüklenir ve açık veya kapalı olması gerekebilir.|

@@ -18,12 +18,12 @@ ms.assetid: f5caf497-5e8d-4b7a-bfff-d02942f38150
 ms.custom:
 - seo-marvel-apr2020
 description: Artık etkin olmayan Microsoft 365 posta kutusunun içeriğini korumanız gerekmediğinde, etkin olmayan posta kutusunu kalıcı olarak silebilirsiniz.
-ms.openlocfilehash: b1a828b2248be7eed583141e13a3badef948b32e
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 640a118a2fc277b05edc181e19008836027dc468
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65438468"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65772390"
 ---
 # <a name="delete-an-inactive-mailbox"></a>Etkin olmayan posta kutusunu silme
 
@@ -50,7 +50,7 @@ Etkin olmayan posta kutusundan ayrı tutmalar kaldırıldıktan sonra ne olacağ
 
 Daha önce belirtildiği gibi, etkin olmayan bir posta kutusuna Bir Dava Tutma, In-Place Saklama veya saklama ilkesi yerleştirilebilir. İlk adım, etkin olmayan bir posta kutusunda tutmaları belirlemektir.
   
-[PowerShell'i Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell) ve ardından kuruluşunuzdaki tüm etkin olmayan posta kutularının saklama bilgilerini görüntülemek için aşağıdaki komutu çalıştırın.
+[PowerShell'i Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell)ve ardından kuruluşunuzdaki tüm etkin olmayan posta kutularının saklama bilgilerini görüntülemek için aşağıdaki komutu çalıştırın.
   
 ```powershell
 Get-Mailbox -InactiveMailboxOnly | FL DisplayName,Name,IsInactiveMailbox,LitigationHoldEnabled,InPlaceHolds
@@ -94,7 +94,7 @@ Set-Mailbox -InactiveMailbox -Identity <identity of inactive mailbox> -Litigatio
   
 ### <a name="remove-an-inactive-mailbox-from-a-retention-policy"></a>Bekletme ilkesinden etkin olmayan posta kutusunu kaldırma
 
-Etkin olmayan posta kutusunu Microsoft 365 bekletme ilkesinden kaldırma yordamı, etkin olmayan posta kutusuna atanan bekletme ilkesinin kuruluş genelinde mi yoksa açık mı olduğuna bağlıdır. etkin olmayan posta kutusuna atanan bekletme ilkesi türüne göre.
+Etkin olmayan posta kutusunu Microsoft 365 bekletme ilkesinden kaldırma yordamı, etkin olmayan posta kutusuna atanan bekletme ilkesinin kuruluş genelinde mi yoksa açık mı olduğuna bağlıdır:
 
 - Kuruluştaki tüm posta kutularına atanan kuruluş genelinde saklama ilkeleri. Kuruluş genelinde saklama ilkeleri hakkında bilgi almak için Exchange Online PowerShell'de **Get-OrganizationConfig** cmdlet'ini kullanın.
 

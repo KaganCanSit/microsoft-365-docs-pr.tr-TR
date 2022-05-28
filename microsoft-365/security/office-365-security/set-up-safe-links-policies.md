@@ -19,16 +19,16 @@ ms.custom: ''
 description: Yöneticiler, Office 365 için Microsoft Defender Kasa Bağlantılar ilkelerini ve genel Kasa Bağlantıları ayarlarını görüntülemeyi, oluşturmayı, değiştirmeyi ve silmeyi öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 1d60be56f8dad960ca3f15484276324421c00426
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: 969e3f3bb3b139a21cd2d84b4a0bd698a74b5107
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65623026"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65772456"
 ---
 # <a name="set-up-safe-links-policies-in-microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender'da Kasa Bağlantıları ilkelerini ayarlama
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Uygulandığı öğe**
 - [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
@@ -304,6 +304,20 @@ Bu örnek, aşağıdaki koşullara sahip Contoso All adlı güvenli bağlantıla
 New-SafeLinksRule -Name "Contoso All" -SafeLinksPolicy "Contoso All" -RecipientDomainIs contoso.com
 ```
 
+Bu örnek, önceki örneğe benzer bir güvenli bağlantılar kuralı oluşturur, ancak bu örnekte kural kuruluştaki tüm kabul edilen etki alanlarındaki alıcılar için geçerlidir.
+
+```powershell
+New-SafeLinksRule -Name "Contoso All" -SafeLinksPolicy "Contoso All" -RecipientDomainIs (Get-AcceptedDomain).Name
+```
+
+Bu örnek, önceki örneklere benzer bir güvenli bağlantılar kuralı oluşturur, ancak bu örnekte kural, .csv dosyasında belirtilen etki alanlarındaki alıcılar için geçerlidir.
+
+```powershell
+$Data = Import-Csv -Path "C:\Data\SafeLinksDomains.csv"
+$SLDomains = $Data.Domains
+New-SafeLinksRule -Name "Contoso All" -SafeLinksPolicy "Contoso All" -RecipientDomainIs $SLDomains
+```
+
 Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [New-SafeLinksRule](/powershell/module/exchange/new-safelinksrule).
 
 ### <a name="use-powershell-to-view-safe-links-policies"></a>Güvenli bağlantı ilkelerini görüntülemek için PowerShell kullanma
@@ -389,6 +403,20 @@ Güvenli bağlantılar kuralını değiştirmek için şu söz dizimlerini kulla
 
 ```PowerShell
 Set-SafeLinksRule -Identity "<RuleName>" <Settings>
+```
+
+Bu örnek, kuruluştaki kabul edilen tüm etki alanlarını Contoso All adlı güvenli bağlantılar kuralına koşul olarak ekler.
+
+```powershell
+Set-SafeLinksRule -Identity "Contoso All" -RecipientDomainIs (Get-AcceptedDomain).Name
+```
+
+Bu örnek, belirtilen .csv etki alanlarını Contoso All adlı güvenli bağlantılar kuralına koşul olarak ekler.
+
+```powershell
+$Data = Import-Csv -Path "C:\Data\SafeLinksDomains.csv"
+$SLDomains = $Data.Domains
+Set-SafeLinksRule -Identity "Contoso All" -RecipientDomainIs $SLDomains
 ```
 
 Ayrıntılı söz dizimi ve parametre bilgileri için bkz [. Set-SafeLinksRule](/powershell/module/exchange/set-safelinksrule).

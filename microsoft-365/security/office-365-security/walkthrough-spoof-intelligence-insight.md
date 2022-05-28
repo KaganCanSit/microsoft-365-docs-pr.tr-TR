@@ -21,12 +21,12 @@ ms.custom:
 ms.technology: mdo
 ms.prod: m365-security
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: f827046dc9a103e73eb6fb79ba161e523e2b2690
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: 66253ed6deab0f41cac3a4ff732201e20d100e98
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65649363"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65772007"
 ---
 # <a name="manage-spoofed-senders-using-the-spoof-intelligence-policy-and-spoof-intelligence-insight-in-eop"></a>EOP'de sahte zeka ilkesini ve sahte zeka içgörülerini kullanarak sahte gönderenleri yönetme
 
@@ -98,7 +98,7 @@ Kimlik sahtekarlığına izin verilen ve engellenen gönderenleri yapılandırma
    ```
 
 2. Aşağıdaki değerleri eklemek veya değiştirmek için CSV dosyasını düzenleyin:
-   - **Gönderen** (kaynak sunucunun PTR kaydındaki etki alanı veya IP/24 adresi)
+   - **Gönderen** (kaynak sunucunun PTR kaydındaki etki alanı, IP/24 adresi veya doğrulanmış DKIM etki alanı)
    - **SpoofedUser**: Aşağıdaki değerlerden biri:
      - İç kullanıcının e-posta adresi.
      - Dış kullanıcının e-posta etki alanı.

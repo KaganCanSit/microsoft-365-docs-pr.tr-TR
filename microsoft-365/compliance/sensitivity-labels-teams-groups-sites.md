@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: SharePoint, Microsoft Teams sitelerdeki ve Microsoft 365 gruplarındaki içeriği korumak için duyarlılık etiketlerini kullanın.
-ms.openlocfilehash: 56b6d53d56c8f9fb16e900271b8d6a4c152f6440
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 125be09f9d3d9a519e1985a37c0880e3f2465245
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65438015"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65772693"
 ---
 # <a name="use-sensitivity-labels-to-protect-content-in-microsoft-teams-microsoft-365-groups-and-sharepoint-sites"></a>Microsoft Teams, Microsoft 365 grupları ve SharePoint sitelerindeki içeriği korumak için duyarlılık etiketlerini kullanma
 
@@ -189,7 +189,7 @@ Daha fazla bilgi ve yönergeler için bkz. [SharePoint ve OneDrive'da siteler ve
 > [!NOTE]
 > Bu etiket ayarı şu anda önizleme aşamasındadır.
 
-Duyarlılık etiketinin bir SharePoint sitesine uygulanması için yapılandırabileceğiniz bir diğer PowerShell gelişmiş ayarı da **MembersCanShare** ayarıdır. Bu ayar, SharePoint yönetim merkezinden ayarlayabileceğiniz eşdeğer yapılandırmadır > **Site izinleriSite** >  **PaylaşımıYeni** >  **üyelerin paylaşım** **izinlerini** paylaşma  >  şeklini değiştirme. 
+Duyarlılık etiketinin bir SharePoint sitesine uygulanması için yapılandırabileceğiniz bir diğer PowerShell gelişmiş ayarı da **MembersCanShare** ayarıdır. Bu ayar, SharePoint yönetim merkezinden ayarlayabileceğiniz eşdeğer yapılandırmadır > **Site izinleri** > **Site Paylaşımı Üyelerin** > **Paylaşım izinlerini** **paylaşma** >  şeklini değiştirme. 
 
 Üç seçenek, **MembersCanShare** PowerShell gelişmiş ayarı için eşdeğer değerlerle listelenir:
 
@@ -361,7 +361,7 @@ Duyarlılık etiketlerini destekleyen yönetim merkezlerini kullandığınızda,
 
 Aşağıdaki uygulamalar ve hizmetler, siteler ve grup ayarları için yapılandırılan duyarlılık etiketlerini destekler:
 
-- Yönetim merkezleri:
+- Yönetici merkezleri:
 
   - SharePoint yönetim merkezi
   - Teams yönetim merkezi
@@ -379,7 +379,7 @@ Aşağıdaki uygulamalar ve hizmetler, siteler ve grup ayarları için yapıland
 
 Aşağıdaki uygulamalar ve hizmetler şu anda siteler ve grup ayarları için yapılandırılmış duyarlılık etiketlerini desteklemez:
 
-- Yönetim merkezleri:
+- Yönetici merkezleri:
 
   - Exchange yönetim merkezi
 
@@ -389,6 +389,7 @@ Aşağıdaki uygulamalar ve hizmetler şu anda siteler ve grup ayarları için y
   - Yammer
   - Project
   - Power BI
+  - Uygulamalarım portalı
 
 ## <a name="classic-azure-ad-group-classification"></a>Klasik Azure AD grup sınıflandırması
 

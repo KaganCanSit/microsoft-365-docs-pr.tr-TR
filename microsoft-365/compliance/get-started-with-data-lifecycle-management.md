@@ -19,12 +19,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Kuruluşunuzun verilerini yönetmeye başlamaya hazırsınız, ancak nereden başlayacağınızdan emin değil misiniz? Başlamak için bazı açıklayıcı yönergeleri okuyun.
-ms.openlocfilehash: 0d9545a04b94b75ee1b9429d7db75b39e90b06ef
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: 95ce0286d5ec45b5dabcbd2447bd52821f547caf
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65286869"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65772740"
 ---
 # <a name="get-started-with-data-lifecycle-management"></a>Veri yaşam döngüsü yönetimini kullanmaya başlama
 
@@ -43,7 +43,7 @@ Tutmanız gereken içeriği koruyarak ve tutmadığınız içeriği silerek kuru
     
     Gerekirse, [özel durumlarınız için bekletme etiketleri oluşturun ve uygulayın](create-retention-labels-information-governance.md).
 
-3. Kullanıcılara ek posta kutusu depolama alanı sağlamak için posta **kutusu arşivlemeyi etkinleştirme**: [Microsoft Purview uyumluluk portalında arşiv posta kutularını etkinleştirme](enable-archive-mailboxes.md)
+3. Kullanıcılara ek posta kutusu depolama alanı sağlamak için posta kutusu **arşivlemeyi etkinleştirme**: [Microsoft Purview uyumluluk portalı](enable-archive-mailboxes.md)
     
     Arşiv posta kutularını desteklemek için gerekirse:
     
@@ -59,7 +59,7 @@ Tutmanız gereken içeriği koruyarak ve tutmadığınız içeriği silerek kuru
 
 Bir dizi farklı abonelik, veri yaşam döngüsü yönetimi özelliklerini destekler.
 
-Kullanıcılarınızın Microsoft Purview özelliklerinden yararlanması için lisanslama seçeneklerini görmek [için güvenlik & uyumluluğu için Microsoft 365 lisanslama kılavuzuna](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance) bakın. Bu sayfada listelenen özellikler için özellik düzeyi lisanslama gereksinimleri için [Microsoft Purview Veri Yaşam Döngüsü Yönetimi](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-data-lifecycle-management) bölümüne ve ilgili [PDF indirme](https://go.microsoft.com/fwlink/?linkid=2139145) bölümüne bakın.
+Kullanıcılarınızın Microsoft Purview özelliklerden yararlanması için lisanslama seçeneklerini görmek [için güvenlik & uyumluluğu için Microsoft 365 lisanslama kılavuzuna](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance) bakın. Bu sayfada listelenen özellikler için özellik düzeyi lisanslama gereksinimleri için [Microsoft Purview Veri Yaşam Döngüsü Yönetimi](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-data-lifecycle-management) bölümüne ve ilgili [PDF indirme](https://go.microsoft.com/fwlink/?linkid=2139145) bölümüne bakın.
 
 ## <a name="permissions"></a>İzinler
 
@@ -69,11 +69,11 @@ Arşivleme, etkin olmayan posta kutuları ve içeri aktarma için posta kutular�
 
 ### <a name="permissions-for-retention-policies-and-retention-labels"></a>Bekletme ilkeleri ve bekletme etiketleri için izinler
 
-Bekletme ilkeleri ve bekletme etiketleri oluşturacak ve yönetecek uyumluluk ekibinizin üyelerinin <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalında</a> izinlere sahip olması gerekir. Varsayılan olarak, kiracı yöneticisinin (genel yönetici) bu konuma erişimi vardır ve uyumluluk görevlilerine ve diğer kişilere kiracı yöneticisinin tüm izinlerini vermeden erişim verebilir. Bu sınırlı yönetim için izinler vermek için, kullanıcıları **Uyumluluk Yöneticisi** yönetici rol grubuna eklemenizi öneririz.
+Bekletme ilkeleri ve bekletme etiketleri oluşturacak ve yönetecek uyumluluk ekibinizin üyelerinin <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalı</a> izinlerine sahip olması gerekir. Varsayılan olarak, kiracı yöneticisinin (genel yönetici) bu konuma erişimi vardır ve uyumluluk görevlilerine ve diğer kişilere kiracı yöneticisinin tüm izinlerini vermeden erişim verebilir. Bu sınırlı yönetim için izinler vermek için, kullanıcıları **Uyumluluk Yöneticisi** yönetici rol grubuna eklemenizi öneririz.
 
 Alternatif olarak, bu varsayılan rolü kullanmak için yeni bir rol grubu oluşturabilir ve **Bekletme Yönetimi** rolünü bu gruba ekleyebilirsiniz. Salt okunur bir rol için **Yalnızca Görüntüleme Bekletme Yönetimi'ni** kullanın. 
 
-Varsayılan rollere kullanıcı ekleme veya kendi rol gruplarınızı oluşturma yönergeleri için bkz. [Microsoft Purview uyumluluk portalında İzinler](microsoft-365-compliance-center-permissions.md).
+Varsayılan rollere kullanıcı ekleme veya kendi rol gruplarınızı oluşturma yönergeleri için bkz. [Microsoft Purview uyumluluk portalı izinler](microsoft-365-compliance-center-permissions.md).
 
 Bu izinler yalnızca bekletme ilkeleri ve bekletme etiketleri oluşturmak, yapılandırmak ve uygulamak için gereklidir. Bu ilkeleri ve etiketleri yapılandıran kişinin içeriğe erişmesi gerekmez.
 
@@ -84,7 +84,7 @@ Bu izinler yalnızca bekletme ilkeleri ve bekletme etiketleri oluşturmak, yapı
 |Yapmak istiyorum...|Belge|
 |----------------|---------------|
 |Microsoft 365 hizmetleri için verileri verimli bir şekilde saklama veya silme: <br />- Exchange  <br />- SharePoint  <br />- OneDrive  <br />- Microsoft 365 Grupları <br />- Teams <br />- Yammer <br />- Skype Kurumsal |[Bekletme ilkeleri oluşturma ve yapılandırma](create-retention-policies.md)|
-|Kullanıcılara ek posta kutusu depolama alanı sağlama |[Microsoft Purview uyumluluk portalında arşiv posta kutularını etkinleştirme](enable-archive-mailboxes.md)|
+|Kullanıcılara ek posta kutusu depolama alanı sağlama |[Microsoft Purview uyumluluk portalındaki arşiv posta kutularını etkinleştirme](enable-archive-mailboxes.md)|
 |Çalışanlar kuruluştan ayrıldıktan sonra posta kutusu verilerini saklama |[Etkin olmayan posta kutuları oluşturma ve yönetme](create-and-manage-inactive-mailboxes.md)|
 |PST dosyalarından posta kutusu verilerini Upload |[PST dosyalarını içe aktarmak için ağ yüklemesini kullanma](use-network-upload-to-import-pst-files.md)|
 
@@ -95,7 +95,7 @@ Tek tek öğelerin veri yönetimini gerektiren bir senaryonuz varsa, [kayıt yö
 
 Microsoft 365 saklamayı desteklemek için son kullanıcı belgeleri hakkında bilgi için aşağıdaki bölüme bakın.
 
-Posta kutusu yönetimini destekleyen veri yaşam döngüsü yönetimi özellikleri (arşivleme, etkin olmayan posta kutuları ve içeri aktarma) genellikle son kullanıcı belgeleri gerektirmez.
+Etkin olmayan posta kutuları ve PST dosyalarının içeri aktarılması için veri yaşam döngüsü yönetimi özellikleri son kullanıcı belgeleri gerektirmez çünkü bunlar yalnızca yönetici işlemleridir. Bu özelliği etkinleştirdikten sonra kullanıcıların Outlook arşiv posta kutularını anlamasına ve bunlarla etkileşim kurmasına yardımcı olmak için bkz. [Çevrimiçi arşiv posta kutularıyla e-posta depolama alanını yönetme](https://prod.support.services.microsoft.com/en-us/office/manage-email-storage-with-online-archive-mailboxes-1cae7d17-7813-4fe8-8ca2-9a5494e9a721).
 
 ### <a name="end-user-documentation-for-retention-and-deletion"></a>Saklama ve silme için son kullanıcı belgeleri
 

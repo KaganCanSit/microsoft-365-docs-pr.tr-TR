@@ -20,16 +20,16 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 6e57b797ab0b5d5eee90315ae9c3459fcba0a02c
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: 614cdd62e5884eff0f91b1c0d1f9946a1c8ce891
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65621680"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65772314"
 ---
 # <a name="view-email-security-reports-in-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalında e-posta güvenlik raporlarını görüntüleme
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -367,7 +367,7 @@ Grafikte bir günün (veri noktası) üzerine geldiğinizde, kaç sahte ileti al
   - **Geçirmek**
   - **Başarısız**
   - **SoftPass**
-  - **Yok**
+  - **Hiçbiri**
   - **Diğer**
 - **Kimlik sahtekarı türü**: **İç** ve **Dış**
 
@@ -392,7 +392,7 @@ Bileşik kimlik doğrulama sonuç kodları hakkında daha fazla bilgi için bkz[
 
 ## <a name="submissions-report"></a>Gönderimler raporu
 
-**Gönderimler** raporu, yöneticilerin analiz için Microsoft'a bildirdiği öğeler hakkındaki bilgileri gösterir. Daha fazla bilgi için bkz. [Şüpheli istenmeyen postaları, kimlik avı, URL'leri ve dosyaları Microsoft'a göndermek için Yönetici Gönderimi'ni kullanma](admin-submission.md).
+**Gönderimler** raporu, yöneticilerin analiz için Microsoft'a bildirdiği öğeler hakkındaki bilgileri gösterir. Daha fazla bilgi için bkz. [Microsoft'a şüpheli istenmeyen posta, kimlik avı, URL'ler ve dosyalar göndermek için Yönetici Gönderimini kullanma](admin-submission.md).
 
 Raporu adresinden Microsoft 365 Defender portalında <https://security.microsoft.com>görüntülemek için **Raporlar** \> **E-posta & işbirliği** \> **E-posta & işbirliği raporları'na** gidin. **E-posta & işbirliği raporları** sayfasında **Gönderimler'i** bulun ve **Ayrıntıları görüntüle'ye** tıklayın. Doğrudan rapora gitmek için dosyasını açın <https://security.microsoft.com/adminSubmissionReport>. [Microsoft 365 Defender portalında yönetici gönderimlerine](admin-submission.md) gitmek **için Gönderimlere Git'e** tıklayın. Yöneticiler raporu son 30 gün boyunca görüntüleyebilir.
 
@@ -619,7 +619,7 @@ Verileri **E-posta \> Kötü Amaçlı Yazılımlarına Göre Görüntüle** ve *
 - **Dosya patlama itibarı**<sup>\*</sup>: Office 365 için Defender patlamalar tarafından oluşturulan tüm kötü amaçlı dosya itibarı.
 - **Dosya saygınlığı**
 - **Kötü amaçlı yazılımdan koruma altyapısı**<sup>\*</sup>: Kötü amaçlı yazılımdan koruma altyapılarından algılama.
-- **Kötü amaçlı yazılımdan koruma ilkesi dosya türü bloğu**: Bunlar, iletide tanımlanan kötü amaçlı dosya türü nedeniyle filtrelenen e-posta iletileridir.
+- **Kötü amaçlı yazılımdan koruma ilkesi dosya türü bloğu**: İletide tanımlanan dosya türü nedeniyle otomatik olarak filtrelenen e-posta iletileri (ortak ek filtreleme).
 - **URL kötü amaçlı itibarı**<sup>\*</sup>
 - **URL patlama**<sup>\*</sup>
 - **URL'nin patlatılmasıyla ilgili saygınlık**<sup>\*</sup>
@@ -660,7 +660,7 @@ Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler bulunur:
 
 Filtreleri yapılandırmayı bitirdiğinizde **Uygula**, **İptal veya** **Filtreleri temizle'ye** tıklayın.
 
-**Koruma durumu** sayfasında Zamanlama ![oluştur simgesi.](../../media/m365-cc-sc-create-icon.png) **[Zamanlama oluştur](#schedule-report)**, ![Rapor iste simgesi.](../../media/m365-cc-sc-download-icon.png) **[İstek raporu](#request-report)** ve ![Dışarı Aktar simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı aktarma](#export-report)** düğmeleri kullanılabilir.
+**Tehdit koruması durumu** sayfasında Zamanlama ![oluştur simgesi.](../../media/m365-cc-sc-create-icon.png) **[Zamanlama oluştur](#schedule-report)**, ![Rapor iste simgesi.](../../media/m365-cc-sc-download-icon.png) **[İstek raporu](#request-report)** ve ![Dışarı Aktar simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı aktarma](#export-report)** düğmeleri kullanılabilir.
 
 ### <a name="chart-breakdown-by-policy-type"></a>İlke türüne göre grafik dökümü
 
@@ -1030,7 +1030,7 @@ Filtreleri yapılandırmayı bitirdiğinizde **Uygula**, **İptal veya** **Filtr
 
 Girişleri gruplandırmak için **Gruplandır'a** tıklayın ve açılan listeden aşağıdaki değerlerden birini seçin:
 
-- **Hiçbiri**
+- **Yok**
 - **Neden**
 - **Gönderen**
 - **Rapor eden**

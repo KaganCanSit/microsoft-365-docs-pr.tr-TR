@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: İstediğinizi korumak ve istemediğinizden kurtulmak için bekletme ilkesinde veya bekletme etiketi ilkesinde yapılandırabileceğiniz ayarları anlayın.
-ms.openlocfilehash: ec7743c2e72016c606decb1346bdd558e40ae412
-ms.sourcegitcommit: 4cd8be7c22d29100478dce225dce3bcdce52644d
+ms.openlocfilehash: d4bb28255a809737b44324fdcccfc456c6a73dfb
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65302144"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65772653"
 ---
 # <a name="common-settings-for-retention-policies-and-retention-label-policies"></a>Bekletme ilkeleri ve bekletme etiketi ilkeleri için yaygın ayarlar
 
@@ -85,7 +85,7 @@ Uyarlamalı kapsamınızı yapılandırmadan önce, oluşturulacak kapsam türü
 
 Özellikle SharePoint siteler için[, özel site özelliklerini](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/using-custom-sharepoint-site-properties-to-apply-microsoft-365/ba-p/3133970) kullanmayı planlıyorsanız ek SharePoint yapılandırması gerekebilir.
 
-1. [Microsoft Purview uyumluluk portalında](https://compliance.microsoft.com/) aşağıdaki konumlardan birine gidin:
+1. [Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com/) aşağıdaki konumlardan birine gidin:
     
     - Kayıt yönetimi çözümünü kullanıyorsanız:
         - **Çözümleri** >  **Kayıt yönetimi** >  **Uyarlamalı kapsamlar** sekmesi > + **Kapsam oluştur**
@@ -445,9 +445,9 @@ Bu birleştirilmiş ayarlarla, kullanıcılar üç yıl sonra öğeyi kendi uygu
 
 Bekletme süresinin sonunda yeniden etiketleme seçeneği, bir bekletme etiketi oluşturduğunuzda iki yapılandırma yoluna sahiptir:
 
-- başlangıçta birincil etikete sahip içeriği saklamanız gerekiyorsa (en tipik): **Etiket ayarlarını tanımla** sayfasında **Öğeleri süresiz olarak veya belirli bir süre boyunca koru'ya** tıklayın ve bekletme süresini belirtin. Ardından **Bekletme süresinden sonra ne olacağını seçin** sayfasında **Etiketi** >  değiştir Etiket **seçin'i** seçin.
+- başlangıçta birincil etikete sahip içeriği saklamanız gerekiyorsa (en tipik): **Etiket ayarlarını tanımla** sayfasında **Öğeleri süresiz olarak veya belirli bir süre boyunca koru'ya** tıklayın ve bekletme süresini belirtin. Ardından **Bekletme süresinden sonra ne olacağını seçin** sayfasında **Etiketi** >  değiştir **Değiştirme Etiketi değiştir'i** seçin.
 
-- İlk olarak birincil etikete sahip içeriği saklamanız gerekmiyorsa: **Etiket ayarlarını tanımla** sayfasında Belirli **bir süreden sonra eylemleri zorunlu tut'u** seçin, bekletme süresini belirtin ve etiketi **değiştir Etiketi değiştir'i** >  **seçin.**
+- başlangıçta birincil etikete sahip içeriği saklamanız gerekmiyorsa: **Etiket ayarlarını tanımla** sayfasında **Belirli bir süre sonra eylemleri zorunlu tut'u** seçin, bekletme süresini belirtin ve ardından **Etiketi** >  değiştir **Yeni etiket seçin'i** seçin.
 
 Her iki durumda da, değiştirme etiketinin zaten oluşturulması gerekir, ancak mevcut bir etiket ilkesine dahil edilmesi gerekmez.
 
@@ -491,7 +491,7 @@ Bekletme ilkesi oluşturulduktan ve kaydedildikten sonra bazı ayarlar değişti
 
 Bir bekletme ilkesini düzenlerseniz ve öğeler zaten bekletme ilkenizdeki özgün ayarlara tabiyse, güncelleştirilmiş ayarlarınız yeni tanımlanan öğelere ek olarak bu öğelere otomatik olarak uygulanır.
 
-Genellikle bu güncelleştirme oldukça hızlıdır ancak birkaç gün sürebilir. Microsoft 365 konumlarınız arasında ilke çoğaltması tamamlandığında, Microsoft Purview uyumluluk portalında bekletme ilkesinin durumunu Açık **(Beklemede)** yerine **Açık (Başarılı)** olarak değiştirirsiniz.
+Genellikle bu güncelleştirme oldukça hızlıdır ancak birkaç gün sürebilir. Microsoft 365 konumlarınızda ilke çoğaltması tamamlandığında, bekletme ilkesinin durumunu Açık **(Beklemede) yerine Açık (****Başarılı**) olarak Microsoft Purview uyumluluk portalı görürsünüz.
 
 ## <a name="locking-the-policy-to-prevent-changes"></a>Değişiklikleri önlemek için ilkeyi kilitleme
 

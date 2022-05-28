@@ -1,5 +1,5 @@
 ---
-title: Microsoft Teams ve Sharepoint'te dosya ve video paylaşma
+title: dosyaları ve videoları Microsoft Teams ve SharePoint'da paylaşma
 f1.keywords:
 - NOCSH
 ms.author: twerner
@@ -25,16 +25,16 @@ search.appverid:
 - MET150
 - MOE150
 description: Microsoft Teams ve SharePoint ile kampanyanızın içinde dosya ve video paylaşın. Microsoft 365 İş ekstra, dosyaları ve videoları güvenli bir şekilde paylaşmanın harika bir yolu olan Teams içerir.
-ms.openlocfilehash: b678bf1bf44b63e80ac4b8d0ea6dfc760eb510a8
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: 354722f92b34081c318c818d94e9ca5c95074aa7
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65622362"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65772368"
 ---
 # <a name="share-files-and-videos-in-a-safe-environment"></a>Dosyaları ve videoları güvenli bir ortamda paylaşma
 
-Dikkat edilmesi gereken bir diğer konu da, kuruluştaki tüm üyelerin dosyaları kimlerin görüntüleyip düzenleyebileceğini ve uygun izinlerin uygulandığı güvenli bir konumda depolandığından emin olmaktır. Microsoft 365 İş Ekstra kullanıcılar dosyaları depolamak için Microsoft Teams kullanabilir ve ardından dosyaları firma, uygulama veya kampanya içinde veya dışında paylaşabilir. Sharepoint bağlantısı da gönderebilirsiniz. E-posta eki yerine bağlantı göndermek, dosyaları kimin görüntüleyip değiştirebileceğini bildiğiniz ve izin olmadan görüntülenemeyen veya değiştirilemeyen anlamına gelir.
+Dikkat edilmesi gereken bir diğer konu da, kuruluştaki tüm üyelerin dosyaları kimlerin görüntüleyip düzenleyebileceğini ve uygun izinlerin uygulandığı güvenli bir konumda depolandığından emin olmaktır. Microsoft 365 İş Ekstra kullanıcılar dosyaları depolamak için Microsoft Teams kullanabilir ve ardından dosyaları firma, uygulama veya kampanya içinde veya dışında paylaşabilir. Ayrıca bir SharePoint bağlantısı da gönderebilirsiniz. E-posta eki yerine bağlantı göndermek, dosyaları kimin görüntüleyip değiştirebileceğini bildiğiniz ve izin olmadan görüntülenemeyen veya değiştirilemeyen anlamına gelir.
 
 ![Menüde Dosyalar sekmesini ve Al bağlantısını gösteren Microsoft Teams penceresinin diyagramı.](../media/m365-democracy-teams-sharefiles.png)
 

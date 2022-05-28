@@ -17,16 +17,16 @@ ms.custom: ''
 description: Yöneticiler, Güvenlik portalındaki Kiracı İzin Ver/Engelle Listesi'nde izin ve blokları yönetmeyi öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 58b1fadc85b993701d49b1c33750fc7db2527264
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: e1832f641c5efc582bee7837dcf8e5b67a9256f6
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65468118"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65772101"
 ---
 # <a name="manage-the-tenant-allowblock-list"></a>Kiracı İzin Verilenler/Engellenenler Listesini Yönetme
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -133,7 +133,7 @@ Tüm izin verme ve blokları yönetmek için bkz. [Kiracı İzin Ver/Engelle Lis
      - **Son güncelleştirme**
      - **Kaldırılacak yer**
      - **Notlar**
-   - **Dosyaları**
+   - **Dosyalar**
      - **Değer**: Dosya karması.
      - **Eylem**: **İzin Ver** veya **Engelle** değeri.
      - **Değiştiren**
@@ -167,7 +167,7 @@ Tüm izin verme ve blokları yönetmek için bkz. [Kiracı İzin Ver/Engelle Lis
      - **Hiçbir zaman süresi dolmaz**
      - **Son güncelleştirme tarihi**
      - **Kaldırılacak yer**
-   - **Dosyaları**
+   - **Dosyalar**
      - **Eylem**
      - **Hiçbir zaman süresi dolmaz**
      - **Son güncelleştirme**
@@ -448,7 +448,7 @@ Aşağıdaki girdiler geçersiz:
 
 - **Orta joker karakterler**:
 
-  - conto\* so.com
+  - conto\*so.com
   - conto~so.com
 
 - **Çift joker karakter**
@@ -468,6 +468,7 @@ Kiracı İzin Ver/Engelle Listesindeki kimlik sahtekarı bir gönderen için etk
 - **Altyapı gönderiliyor**: Bu değer, sahte kullanıcıdan gelen iletilerin kaynağını gösterir. Geçerli değerler şunlardır:
   - Kaynak e-posta sunucusunun IP adresinin (örneğin, fabrikam.com) ters DNS aramasında (PTR kaydı) bulunan etki alanı.
   - Kaynak IP adresinin PTR kaydı yoksa, gönderen altyapı /24 olarak \<source IP\>tanımlanır (örneğin, 192.168.100.100/24).
+  - Doğrulanmış bir DKIM etki alanı.
 
 Sahte gönderenleri tanımlamak için geçerli etki alanı çiftlerinin bazı örnekleri aşağıda verilmiştir:
 

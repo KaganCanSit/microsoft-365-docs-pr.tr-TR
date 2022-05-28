@@ -17,12 +17,12 @@ ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.date: 02/04/2022
-ms.openlocfilehash: d43bcfd16a2ab2b1927ae4da0f894db114003cbe
-ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
+ms.openlocfilehash: d719c83c8a6cc27ff682c17928c694184e3e94d6
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65599579"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65772522"
 ---
 # <a name="attack-surface-reduction-rules-reference"></a>Saldırı yüzeyi azaltma kuralları başvurusu
 
@@ -56,9 +56,9 @@ Aşağıdaki tabloda, şu anda genel kullanıma sunulan kurallar için desteklen
 >
 > Aksi belirtilmedikçe, en düşük Windows&nbsp; 10 derlemesi sürüm 1709 (RS3, derleme 16299) veya üzeridir; en düşük Windows&nbsp; Server derlemesi sürüm 1809 veya üzeridir.
 >
-> Windows&nbsp; Server2012R2&nbsp;&nbsp; ve Windows&nbsp; Server2016'daki&nbsp; saldırı yüzeyi azaltma kuralları, modern birleşik çözüm paketi kullanılarak eklenen cihazlar için kullanılabilir. Daha fazla bilgi için bkz. [Windows Server 2012 R2 ve 2016 Önizlemesi için modern birleşik çözümde yeni işlevler](/microsoft-365/security/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview).
+> Windows&nbsp; Server&nbsp;2012&nbsp;R2 ve Windows&nbsp; Server&nbsp;2016'daki saldırı yüzeyi azaltma kuralları, modern birleşik çözüm paketi kullanılarak eklenen cihazlar için kullanılabilir. Daha fazla bilgi için bkz. [Windows Server 2012 R2 ve 2016 Önizlemesi için modern birleşik çözümde yeni işlevler](/microsoft-365/security/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview).
 
-| Kural adı| &nbsp;Windows 11 <br>ve<br> &nbsp;Windows 10 | &nbsp;Windows Server <br> 2022 <br>ve<br>  &nbsp;Windows Server <br> 2019 | Windows Server | &nbsp;Windows Server <br> 2016 <sup>[[1, 2](#fn1)]<sup></sup> | &nbsp;Windows Server <br> 2012R2&nbsp;<sup> [[1, 2](#fn1)]<sup></sup> |
+| Kural adı| &nbsp;Windows 11 <br>ve<br> &nbsp;Windows 10 | &nbsp;Windows Server <br> 2022 <br>ve<br>  &nbsp;Windows Server <br> 2019 | Windows Server | &nbsp;Windows Server <br> 2016 <sup>[[1, 2](#fn1)]<sup></sup> | &nbsp;Windows Server <br> 2012&nbsp;R2 <sup>[[1, 2](#fn1)]<sup></sup> |
 |:---|:---:|:---:|:---:|:---:|:---:|
 | [Güvenlik açığı bulunan imzalı sürücülerin kötüye kullanılması engellendi](#block-abuse-of-exploited-vulnerable-signed-drivers) | E | E | E <br> sürüm 1803 (Altı Aylık Kanal) veya üzeri | E | E |
 | [Adobe Reader'ın alt işlemler oluşturmalarını engelleme](#block-adobe-reader-from-creating-child-processes) | E <br> sürüm 1809 veya üzeri <sup>[[3](#fn1)]<sup></sup> | E | E | E | E |
@@ -79,7 +79,7 @@ Aşağıdaki tabloda, şu anda genel kullanıma sunulan kurallar için desteklen
 
 (<a id="fn1">1</a>) Windows Server 2012 ve 2016 için modern birleşik çözümü ifade eder. Daha fazla bilgi için bkz. [Uç Nokta için Defender hizmetine Windows Sunucuları ekleme](configure-server-endpoints.md).
 
-(<a id="fn1">2</a>) Windows&nbsp; Server 2016 ve Windows&nbsp; Server 2012R2&nbsp; için gereken en düşük Microsoft Endpoint Configuration Manager sürümü 2111 sürümüdür.
+(<a id="fn1">2</a>) Windows&nbsp; Server 2016 ve Windows&nbsp; Server 2012&nbsp;R2 için gereken en düşük Microsoft Endpoint Configuration Manager sürümü 2111 sürümüdür.
 
 (<a id="fn1">3</a>) Sürüm ve derleme numarası yalnızca Windows&nbsp; 10 için geçerlidir.
 
@@ -131,16 +131,16 @@ Blok modundaki tüm kurallar için bildirim bildirimleri oluşturulur. Diğer mo
 |[Windows yerel güvenlik yetkilisi alt sisteminden (lsass.exe) kimlik bilgilerinin çalınmalarını engelleme](#block-credential-stealing-from-the-windows-local-security-authority-subsystem) |   | N | E |
 |[E-posta istemcisinden ve web postasından yürütülebilir içeriği engelleme](#block-executable-content-from-email-client-and-webmail) |   | E <br> Yüksek bulut blok düzeyinde cihaz gerektirir | E <br> Yüksek bulut blok düzeyinde cihaz gerektirir |
 |[Bir yaygınlık, yaş veya güvenilir liste ölçütüne uymadığı sürece yürütülebilir dosyaların çalışmasını engelleyin](#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion) |   | N | E |
-|[Karartılmış olabilecek betiklerin yürütülmesini engelleme](#block-execution-of-potentially-obfuscated-scripts) |  AuditBlock&nbsp;\|&nbsp; | Y \| Y <br> Yüksek bulut blok düzeyinde cihaz gerektirir  | N \| Y <br> Yüksek bulut blok düzeyinde cihaz gerektirir |
+|[Karartılmış olabilecek betiklerin yürütülmesini engelleme](#block-execution-of-potentially-obfuscated-scripts) |  Denetim&nbsp;\|&nbsp;Bloğu | Y \| Y <br> Yüksek bulut blok düzeyinde cihaz gerektirir  | N \| Y <br> Yüksek bulut blok düzeyinde cihaz gerektirir |
 |[JavaScript veya VBScript'in indirilen yürütülebilir içeriği başlatmasını engelleme](#block-javascript-or-vbscript-from-launching-downloaded-executable-content) | Engelle | E <br> Yüksek bulut blok düzeyinde cihaz gerektirir  | E <br> Yüksek bulut blok düzeyinde cihaz gerektirir |
 |[Office uygulamalarının yürütülebilir içerik oluşturmalarını engelleme](#block-office-applications-from-creating-executable-content) |   | N | E |
 |[Office uygulamalarının diğer işlemlere kod eklemesini engelleme](#block-office-applications-from-injecting-code-into-other-processes)  |   | N | E |
 |[Office iletişim uygulamasının alt işlemler oluşturmalarını engelleme](#block-office-communication-application-from-creating-child-processes) |  |  N | E |
-|[WMI olay aboneliği aracılığıyla kalıcılığı engelleme](#block-persistence-through-wmi-event-subscription) |  AuditBlock&nbsp;\|&nbsp; | Y \| Y <br> Yüksek bulut blok düzeyinde cihaz gerektirir  | N \| Y <br> Yüksek bulut blok düzeyinde cihaz gerektirir |
+|[WMI olay aboneliği aracılığıyla kalıcılığı engelleme](#block-persistence-through-wmi-event-subscription) |  Denetim&nbsp;\|&nbsp;Bloğu | Y \| Y <br> Yüksek bulut blok düzeyinde cihaz gerektirir  | N \| Y <br> Yüksek bulut blok düzeyinde cihaz gerektirir |
 |[PSExec ve WMI komutlarından kaynaklanan işlem oluşturma işlemlerini engelleme](#block-process-creations-originating-from-psexec-and-wmi-commands) |   | N | E |
-|[USB'den çalıştırılan güvenilmeyen ve imzalanmamış işlemleri engelleme](#block-untrusted-and-unsigned-processes-that-run-from-usb) | AuditBlock&nbsp;\|&nbsp; | Y \| Y <br> Yüksek bulut blok düzeyinde cihaz gerektirir  | N \| Y <br> Yüksek bulut blok düzeyinde cihaz gerektirir |
+|[USB'den çalıştırılan güvenilmeyen ve imzalanmamış işlemleri engelleme](#block-untrusted-and-unsigned-processes-that-run-from-usb) | Denetim&nbsp;\|&nbsp;Bloğu | Y \| Y <br> Yüksek bulut blok düzeyinde cihaz gerektirir  | N \| Y <br> Yüksek bulut blok düzeyinde cihaz gerektirir |
 |[Office makrolardan Win32 API çağrılarını engelleme](#block-win32-api-calls-from-office-macros) |   | N | E |
-|[Fidye yazılımına karşı gelişmiş koruma kullanma](#use-advanced-protection-against-ransomware) | AuditBlock&nbsp;\|&nbsp; | Y \| Y <br> Yüksek bulut blok düzeyinde cihaz gerektirir  | N \| Y <br> Yüksek bulut blok düzeyinde cihaz gerektirir |
+|[Fidye yazılımına karşı gelişmiş koruma kullanma](#use-advanced-protection-against-ransomware) | Denetim&nbsp;\|&nbsp;Bloğu | Y \| Y <br> Yüksek bulut blok düzeyinde cihaz gerektirir  | N \| Y <br> Yüksek bulut blok düzeyinde cihaz gerektirir |
   
 ## <a name="asr-rules-and-guids-matrix"></a>ASR kuralları ve GUID matrisi
 
@@ -330,6 +330,9 @@ Bağımlılıklar: MDAV, Bulut Koruması
 ### <a name="block-execution-of-potentially-obfuscated-scripts"></a>Karartılmış olabilecek betiklerin yürütülmesini engelleme
 
 Bu kural, belirsiz bir betik içindeki şüpheli özellikleri algılar.
+  
+> [!IMPORTANT]
+> PowerShell betikleri, geçmişte karşılaşılan büyük ölçekli FP sorunları nedeniyle geçici olarak "Belirsiz olabilecek betiklerin yürütülmesini engelle" kuralının dışında bırakılmıştır.
 
 Betik karartma, hem kötü amaçlı yazılım yazarlarının hem de yasal uygulamaların fikri mülkiyeti gizlemek veya betik yükleme sürelerini azaltmak için kullandığı yaygın bir tekniktir. Kötü amaçlı yazılım yazarları, kötü amaçlı kodların okunmasını zorlaştırmak için de karartma kullanır ve bu da insanlar ve güvenlik yazılımları tarafından yakından inceleme yapılmasını önler.
 

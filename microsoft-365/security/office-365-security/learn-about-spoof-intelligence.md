@@ -20,16 +20,16 @@ ms.custom:
 description: Yöneticiler, Exchange Online Protection (EOP) içindeki kimlik sahtekarlığına ilişkin zeka içgörüleri hakkında bilgi edinebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: c147396ff47f924d7dd4b2ebd3a0cac106de94b2
-ms.sourcegitcommit: 58ec09f1fd66af9717dc2743585d06d358ec7360
+ms.openlocfilehash: fc09bb008586b26649e31f409fa3be8114c6d2b6
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2022
-ms.locfileid: "65144739"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65772116"
 ---
 # <a name="spoof-intelligence-insight-in-eop"></a>EOP'de sahte zeka içgörüleri
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -115,6 +115,7 @@ Kimlik sahtekarı zekası algılamalarıyla ilgili bilgileri görüntülemek iç
 - **Altyapı gönderme**: _Altyapı_ olarak da bilinir. Gönderen altyapı aşağıdaki değerlerden biri olacaktır:
   - Kaynak e-posta sunucusunun IP adresinin ters DNS aramasında (PTR kaydı) bulunan etki alanı.
   - Kaynak IP adresinin PTR kaydı yoksa, gönderen altyapı /24 olarak \<source IP\>tanımlanır (örneğin, 192.168.100.100/24).
+  - Doğrulanmış bir DKIM etki alanı.
 - **İleti sayısı**: Son 7 gün içinde sahte etki alanı _ile_ kuruluşunuza gönderilen altyapının birleşiminden gelen iletilerin sayısı.
 - **Son görülen**: Sahte etki alanını içeren gönderen altyapıdan iletinin alındığı son tarih.
 - **Kimlik sahtekarı türü**: Aşağıdaki değerlerden biri:
@@ -147,7 +148,7 @@ Listeden bir girdi seçtiğinizde, aşağıdaki bilgileri ve özellikleri içere
 
 ### <a name="about-allowed-spoofed-senders"></a>İzin verilen sahte gönderenler hakkında
 
-Sahte zeka içgörülerinde izin verilen sahte bir gönderen veya sahtekarlık için el ile **İzin Ver** olarak değiştirdiğiniz engellenmiş sahte gönderen, yalnızca kimlik sahtekarı etki alanı *ile* gönderen altyapının birleşiminden gelen iletilere izin verir. Herhangi bir kaynaktan kimlik sahtekarı etki alanından gelen e-postaya izin vermez veya herhangi bir etki alanı için gönderen altyapıdan gelen e-postaya izin vermez.
+Sahte zeka içgörülerinde izin verilen sahte bir gönderen veya sahtekarlık için el ile **İzin Ver** olarak değiştirdiğiniz engellenmiş sahte gönderen, yalnızca kimlik sahtekarı etki alanı _ile_ gönderen altyapının birleşiminden gelen iletilere izin verir. Herhangi bir kaynaktan kimlik sahtekarı etki alanından gelen e-postaya izin vermez veya herhangi bir etki alanı için gönderen altyapıdan gelen e-postaya izin vermez.
 
 Örneğin, aşağıdaki sahte gönderenin kimlik sahtekarlığına izin verilir:
 

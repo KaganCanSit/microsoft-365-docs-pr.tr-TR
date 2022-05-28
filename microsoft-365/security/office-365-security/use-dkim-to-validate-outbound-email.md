@@ -1,5 +1,5 @@
 ---
-title: DkIM'i özel etki alanınız içinde e-posta için kullanma
+title: Özel etki alanınızda e-posta için DKIM kullanma
 f1.keywords:
 - NOCSH
 ms.author: tracyp
@@ -17,91 +17,91 @@ ms.collection:
 - m365initiative-defender-office365
 ms.custom:
 - seo-marvel-apr2020
-description: Özel etki alanınız üzerinden gönderilen iletilerin hedef e-posta sistemleri tarafından güveni sağ Microsoft 365 etki alanıyla birlikte DomainKeys Identified Mail (DKIM) kullanmayı öğrenin.
+description: Özel etki alanınızdan gönderilen iletilerin hedef e-posta sistemleri tarafından güvenilir olduğundan emin olmak için DomainKeys Identified Mail'i (DKIM) Microsoft 365 kullanmayı öğrenin.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: fd236ff616ab585909b210c9c1b9a8f12b2e9fe2
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 87f565d5058edff9ebde5af6e2cf84ca3e8262b4
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64472275"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65772160"
 ---
 # <a name="use-dkim-to-validate-outbound-email-sent-from-your-custom-domain"></a>Özel etki alanınıza gönderilen giden e-postayı doğrulamak için DKIM'yi kullanma
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-**Geçerli olduğu yer:**
+**Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
 - [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
- Bu makalede, hedef e-posta sistemlerinin özel etki alanınız üzerinden giden iletilere güven güveni sağlamak için, etki alanıyla birlikte DomainKeys Identified Mail (DKIM Microsoft 365) kullanma adımları listelemektedir.
+ Bu makalede, hedef e-posta sistemlerinin özel etki alanınızdan giden gönderilen iletilere güvendiğinden emin olmak için Microsoft 365 ile DomainKeys Identified Mail (DKIM) kullanma adımları listeleniyor.
 
 Bu makalede:
 
-- [Kötü amaçlı birpoofing önlemek için DKIM tek başına SPF'den daha iyi nasıl çalışır?](#how-dkim-works-better-than-spf-alone-to-prevent-malicious-spoofing)
-- [Portalda DKIM oluşturma, etkinleştirme ve devre dışı Microsoft 365 Defender adımları](#steps-to-create-enable-and-disable-dkim-from-microsoft-365-defender-portal)
-- [1024 bit anahtarlarınızı 2048 bit DKIM şifreleme tuşlarına el ile yükseltme adımları](#steps-to-manually-upgrade-your-1024-bit-keys-to-2048-bit-dkim-encryption-keys)
+- [Kötü amaçlı kimlik sahtekarlıklarını önlemek için DKIM yalnızca SPF'den daha iyi nasıl çalışır?](#how-dkim-works-better-than-spf-alone-to-prevent-malicious-spoofing)
+- [Microsoft 365 Defender portalından DKIM oluşturma, etkinleştirme ve devre dışı bırakma adımları](#steps-to-create-enable-and-disable-dkim-from-microsoft-365-defender-portal)
+- [1024 bit anahtarlarınızı 2048 bit DKIM şifreleme anahtarlarına el ile yükseltme adımları](#steps-to-manually-upgrade-your-1024-bit-keys-to-2048-bit-dkim-encryption-keys)
 - [DKIM'i el ile ayarlama adımları](#steps-to-manually-set-up-dkim)
-- [Birden fazla özel etki alanı için DKIM'yi yapılandırma adımları](#to-configure-dkim-for-more-than-one-custom-domain)
-- [Özel bir etki alanı için DKIM imzalama ilkesi devre dışı bırakma](#disabling-the-dkim-signing-policy-for-a-custom-domain)
+- [DKIM'i birden fazla özel etki alanı için yapılandırma adımları](#to-configure-dkim-for-more-than-one-custom-domain)
+- [Özel etki alanı için DKIM imzalama ilkesini devre dışı bırakma](#disabling-the-dkim-signing-policy-for-a-custom-domain)
 - [DKIM ve Microsoft 365 için varsayılan davranış](#default-behavior-for-dkim-and-microsoft-365)
-- [DkIM'i, üçüncü taraf bir hizmetin özel etki alanınız adına e-posta gönderebi veya e-posta gönder yetkisine sahip olacak şekilde ayarlama](#set-up-dkim-so-that-a-third-party-service-can-send-or-spoof-email-on-behalf-of-your-custom-domain)
-- [Sonraki adımlar: DkIM for Microsoft 365](#next-steps-after-you-set-up-dkim-for-microsoft-365)
+- [DKIM'i, üçüncü taraf bir hizmetin özel etki alanınız adına e-posta gönderebilmesi veya yanıltabilmesi için ayarlayın](#set-up-dkim-so-that-a-third-party-service-can-send-or-spoof-email-on-behalf-of-your-custom-domain)
+- [Sonraki adımlar: Microsoft 365 için DKIM'i ayarladıktan sonra](#next-steps-after-you-set-up-dkim-for-microsoft-365)
 
 > [!NOTE]
-> Microsoft 365 'otomatik olarak' alan adları için DKIM'onmicrosoft.com ayarlar. Bu, DKIM'i ilk etki alanı adlar için ayarlamak için bir şey (örneğin, DkIM) bir şey litware.onmicrosoft.com. Etki alanları hakkında daha fazla bilgi için bkz. Etki Alanları [SSS](../../admin/setup/domains-faq.yml#why-do-i-have-an--onmicrosoft-com--domain).
+> Microsoft 365, ilk 'onmicrosoft.com' etki alanları için DKIM'i otomatik olarak ayarlar. Bu, herhangi bir ilk etki alanı adı (örneğin, litware.onmicrosoft.com) için DKIM ayarlamak için hiçbir şey yapmanız gerekmeyecek anlamına gelir. Etki alanları hakkında daha fazla bilgi için bkz [. Etki Alanları SSS](../../admin/setup/domains-faq.yml#why-do-i-have-an--onmicrosoft-com--domain).
 
-DKIM, kimlik doğrulama yöntemlerinin (SPF, DKIM ve DMARC) bir diğer yöntemdir ve saldırganların etki alanınız üzerinden geliyor gibi gelen iletiler göndermesini önlemeye yardımcı olur.
+DKIM, saldırganların etki alanınızdan gelmiş gibi görünen iletiler göndermesini önlemeye yardımcı olan Kimlik Doğrulama yöntemlerinin (SPF, DKIM ve DMARC) üçlülerinden biridir.
 
-DKIM, ileti üst bilgisinde giden e-posta iletilerine dijital imza eklemenize olanak sağlar. DKIM'yi yapılandırarak, etki alanınızı şifreleme kimlik doğrulaması kullanarak bir e-posta iletisiyle ilişkilendirmek veya imzalamak üzere yetkilendirin. Etki alanınıza e-posta alan e-posta sistemleri, gelen e-postanın meşru olup olmadığını doğrulamaya yardımcı olmak için bu dijital imzayı kullanabilir.
+DKIM, ileti üst bilgisindeki giden e-posta iletilerine dijital imza eklemenize olanak tanır. DKIM'yi yapılandırırken, etki alanınızı şifreleme kimlik doğrulaması kullanarak bir e-posta iletisiyle ilişkilendirme veya imzalama yetkisi alırsınız. Etki alanınızdan e-posta alan e-posta sistemleri, gelen e-postanın meşru olup olmadığını doğrulamaya yardımcı olmak için bu dijital imzayı kullanabilir.
 
-Temel olarak, özel anahtar etki alanının giden e-postasndaki üst bilgiyi şifreler. Ortak anahtar etki alanının DNS kayıtlarında yayımlanır ve alıcı sunucular bu anahtarı kullanarak imzanın kodunu çözebilirsiniz. DKIM doğrulama, alıcı sunucuların e-postanın gerçekten etki alanınıza geldiğini doğrulamasına ve etki alanınıza kimlik doğrulaması eden birinin değil, gerçekten *etki alanınıza geldiğini doğrulamasına* yardımcı olur.
+Temel olarak, özel anahtar bir etki alanının giden e-postasında üst bilgiyi şifreler. Ortak anahtar etki alanının DNS kayıtlarında yayımlanır ve alıcı sunucular imzanın kodunu çözmek için bu anahtarı kullanabilir. DKIM doğrulaması, alıcı sunucuların postanın gerçekten etki alanınızdan geldiğini onaylamalarına yardımcı olur ve etki alanınızı *sahtekarlık eden* biri değil.
 
 > [!TIP]
->DkIM hakkında özel etki alanınız için de hiçbir şey yapmaya seçebilirsiniz. Özel etki alanınız için DKIM'yi ayarlamazsanız, Microsoft 365 özel ve ortak anahtar çifti oluşturur, DKIM imzalamasını etkinleştirir ve özel Microsoft 365 alanınız için varsayılan ilkeyi yapılandırr.
+>Özel etki alanınız için DKIM hakkında hiçbir şey yapmamayı da seçebilirsiniz. Özel etki alanınız için DKIM'yi ayarlamazsanız Microsoft 365 özel ve ortak anahtar çifti oluşturur, DKIM imzalamayı etkinleştirir ve özel etki alanınız için varsayılan Microsoft 365 ilkesini yapılandırır.
 
- Microsoft-365'in yerleşik DKIM yapılandırması çoğu müşteri için yeterli kapsamdadır. Bununla birlikte, aşağıdaki durumlarda özel etki alanınız için DKIM'yi el ile yapılandırmanız gerekir:
+ Microsoft-365'in yerleşik DKIM yapılandırması çoğu müşteri için yeterli kapsama alanıdır. Ancak, aşağıdaki durumlarda özel etki alanınız için DKIM'i el ile yapılandırmanız gerekir:
 
-- Microsoft 365'da birden fazla özel etki Microsoft 365
-- DMARC'ı da kuracaksiniz (**önerilir**)
-- Özel anahtarınızı kontrol etmek istiyor
-- CNAME kayıtlarınızı özelleştirmek istiyorum
-- Örneğin üçüncü taraf bir toplu postacı kullanıyorsanız, üçüncü taraf bir etki alanından kaynaklanan e-posta için DKIM anahtarlarını ayarlamak istiyor olun.
+- Microsoft 365'de birden fazla özel etki alanınız var
+- DMARC'yi de ayarlayacaksınız (**önerilir**)
+- Özel anahtarınız üzerinde denetime sahip olmak istiyorsunuz
+- CNAME kayıtlarınızı özelleştirmek istiyorsunuz
+- Örneğin, üçüncü taraf toplu postacı kullanıyorsanız, üçüncü taraf etki alanı dışından gelen e-postalar için DKIM anahtarları ayarlamak istiyorsunuz.
 
-## <a name="how-dkim-works-better-than-spf-alone-to-prevent-malicious-spoofing"></a>Kötü amaçlı birpoofing önlemek için DKIM tek başına SPF'den daha iyi nasıl çalışır?
+## <a name="how-dkim-works-better-than-spf-alone-to-prevent-malicious-spoofing"></a>Kötü amaçlı kimlik sahtekarlıklarını önlemek için DKIM yalnızca SPF'den daha iyi nasıl çalışır?
 <a name="HowDKIMWorks"> </a>
 
-SPF ileti zarfına bilgi ekler, ancak DKIM *ileti* üst bilgisinde imzayı şifreler. bir iletiyi ileterek, bu iletinin zarfın bir bölümü iletme sunucusu tarafından silinerek çıkarabilirsiniz. Dijital imza e-posta iletisinin bir parçası olduğundan ve e-posta üst bilgisinde olduğu için DKIM, aşağıdaki örnekte gösterildiği gibi bir ileti ilet olsa bile çalışır.
+SPF bir ileti zarfa bilgi ekler, ancak DKIM ileti üst bilgisindeki bir imzayı *şifreler* . bir iletiyi ilettiğiniz zaman, iletinin zarfının bazı kısımları iletilen sunucu tarafından kaldırılabilir. Dijital imza, e-posta üst bilgisinin bir parçası olduğu için e-posta iletisinde kaldığından, aşağıdaki örnekte gösterildiği gibi iletilse bile DKIM çalışır.
 
-![SPF denetimi başarısız olduğunda DKIM kimlik doğrulamasını geçen bir ileti gösteren diyagram.](../../media/28f93b4c-97e7-4309-acc4-fd0d2e0e3377.jpg)
+![SPF denetiminin başarısız olduğu DKIM kimlik doğrulamasını geçiren iletilen bir iletiyi gösteren diyagram.](../../media/28f93b4c-97e7-4309-acc4-fd0d2e0e3377.jpg)
 
-Bu örnekte, etki alanınız için yalnızca bir SPF TXT kaydı yayımladıysanız, alıcının posta sunucusu e-postanızı istenmeyen posta olarak işaretlemış ve hatalı bir pozitif sonuç oluşturmış olabilir. **Bu senaryoda DKIM eklemesi hatalı pozitif istenmeyen *posta raporlamasını* azaltır.** DKIM, yalnızca IP adreslerini değil, ortak anahtar şifrelemesini temel kullandığından, DKIM SPF'ye göre çok daha güçlü bir kimlik doğrulama biçimi olarak kabul edilir. Dağıtımda hem SPF hem de DKIM'nin yanı sıra DMARC'yi de öneririz.
+Bu örnekte, etki alanınız için yalnızca bir SPF TXT kaydı yayımladıysanız, alıcının posta sunucusu e-postanızı istenmeyen posta olarak işaretlemiş ve hatalı bir pozitif sonuç oluşturmuş olabilir. **Bu senaryoda DKIM eklenmesi *hatalı pozitif* istenmeyen posta raporlamasını azaltır.** DKIM yalnızca IP adreslerinin değil kimlik doğrulamasının ortak anahtar şifrelemesine bağlı olduğundan, DKIM SPF'den çok daha güçlü bir kimlik doğrulama biçimi olarak kabul edilir. Dağıtımınızda hem SPF hem de DKIM'nin yanı sıra DMARC kullanmanızı öneririz.
 
 > [!TIP]
-> DKIM, ileti üst bilgilerine şifreli bir imza eklemek için özel anahtar kullanır. İmzalayan etki alanı veya giden etki alanı, üst bilgide **d=** alanının değeri olarak eklenir. Etki alanını veya alıcının etki alanını doğrulamak, ardından **d=** alanını kullanarak DNS'den ortak anahtarı görüntüler ve iletiyi doğrular. İleti doğrulandığında DKIM denetimi geçer.
+> DKIM, ileti üst bilgilerine şifreli imza eklemek için özel bir anahtar kullanır. İmzalama etki alanı veya giden etki alanı, üst bilgideki **d=** alanının değeri olarak eklenir. Doğrulayan etki alanı veya alıcının etki alanı, DNS'den ortak anahtarı aramak ve iletinin kimliğini doğrulamak için **d=** alanını kullanır. İleti doğrulanırsa, DKIM denetimi geçer.
 
-## <a name="steps-to-create-enable-and-disable-dkim-from-microsoft-365-defender-portal"></a>Portalda DKIM oluşturma, etkinleştirme ve devre dışı Microsoft 365 Defender adımları
+## <a name="steps-to-create-enable-and-disable-dkim-from-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalından DKIM oluşturma, etkinleştirme ve devre dışı bırakma adımları
 
-Kiracının tüm kabul edilen etki alanları, DKIM Microsoft 365 Defender kiracı portalında gösterilir. Bunu görmüyorsanız, etki alanları sayfasından kabul edilen etki [alanınızı ekleyin](/microsoft-365/admin/setup/add-domain#add-a-domain).
-DkIM'yi yapılandırmak için etki alanınız eklendiktan sonra aşağıdaki adımları izleyin.
+Kiracınızın kabul edilen tüm etki alanları DKIM sayfasının altındaki Microsoft 365 Defender portalında gösterilir. Bunu görmüyorsanız, [etki alanları sayfasından](/microsoft-365/admin/setup/add-domain#add-a-domain) kabul edilen etki alanınızı ekleyin.
+Etki alanınız eklendikten sonra, DKIM'i yapılandırmak için aşağıda gösterildiği gibi adımları izleyin.
 
-1. Adım: DKIM sayfasında DKIM'yi yapılandırmak istediğiniz etki alanına tıklayın ( veyahttps://security.microsoft.com/dkimv2 https://protection.office.com/dkimv2).
+1. Adım: DKIM sayfasında (https://security.microsoft.com/dkimv2 veya https://protection.office.com/dkimv2)) DKIM'i yapılandırmak istediğiniz etki alanına tıklayın.
 
-:::image type="content" source="../../media/126996261-2d331ec1-fc83-4a9d-a014-bd7e1854eb07.png" alt-text="Seçilen etki alanıyla birlikte Microsoft 365 Defender portalında DKIM sayfası" lightbox="../../media/126996261-2d331ec1-fc83-4a9d-a014-bd7e1854eb07.png":::
+:::image type="content" source="../../media/126996261-2d331ec1-fc83-4a9d-a014-bd7e1854eb07.png" alt-text="Microsoft 365 Defender portalında etki alanının seçili olduğu DKIM sayfası" lightbox="../../media/126996261-2d331ec1-fc83-4a9d-a014-bd7e1854eb07.png":::
 
-2. Adım: Iki durumlu düğmeyi Etkinleştir'e **kaydırın**. CNAME kayıtlarını eklemenizi belirten bir açılır pencere görüntülenir.
+2. Adım: İki durumlu düğmeyi **Etkinleştir'e** kaydırın. CNAME kayıtlarını eklemeniz gerektiğini belirten bir açılır pencere görürsünüz.
 
-:::image type="content" source="../../media/127001645-4ccf89e6-6310-4a91-85d6-aaedbfd501d3.png" alt-text="DKIM tuşları oluştur düğmesiyle Etki alanı ayrıntıları geçici adı" lightbox="../../media/127001645-4ccf89e6-6310-4a91-85d6-aaedbfd501d3.png":::
+:::image type="content" source="../../media/127001645-4ccf89e6-6310-4a91-85d6-aaedbfd501d3.png" alt-text="DKIM anahtarları oluştur düğmesiyle Etki alanı ayrıntıları açılır öğesi" lightbox="../../media/127001645-4ccf89e6-6310-4a91-85d6-aaedbfd501d3.png":::
 
-3. Adım: Açılan pencerede gösterilen CNAMES'i kopyalama
+3. Adım: Açılan pencerede gösterilen CNAMES'yi kopyalayın
 
-:::image type="content" source="../../media/127001787-3cce2c29-e0e4-4712-af53-c51dcba33c46.png" alt-text="Kopyalayacak iki CNAME kaydı içeren CNAM'leri Yayımla açılır penceresi" lightbox="../../media/127001787-3cce2c29-e0e4-4712-af53-c51dcba33c46.png":::
+:::image type="content" source="../../media/127001787-3cce2c29-e0e4-4712-af53-c51dcba33c46.png" alt-text="Kopyalanacak iki CNAME kaydını içeren CNAMEs Yayımla açılır penceresi" lightbox="../../media/127001787-3cce2c29-e0e4-4712-af53-c51dcba33c46.png":::
 
 4. Adım: Kopyalanan CNAME kayıtlarını DNS hizmet sağlayıcınızda yayımlayın.
 
-DNS sağlayıcınızın web sitesinde, etkinleştirmek istediğiniz DKIM için CNAME kayıtlarını ekleyin. Alanların her biri için aşağıdaki değerlere ayarlanmış olduğundan emin olun:
+DNS sağlayıcınızın web sitesinde, etkinleştirmek istediğiniz DKIM için CNAME kayıtları ekleyin. Her birinde alanların aşağıdaki değerlere ayarlandığından emin olun:
 
 ```text
 Record Type: CNAME (Alias)
@@ -110,56 +110,56 @@ Points to address: Copy the value from DKIM page.
 TTL: 3600 (or your provider default)
 ```
 
-5. Adım: DKIM'yi etkinleştirmek için DKIM sayfasına geri dönme.
+5. Adım: DKIM'i etkinleştirmek için DKIM sayfasına dönün.
 
-:::image type="content" source="../../media/126995186-9b3fdefa-a3a9-4f5a-9304-1099a2ce7cef.png" alt-text="DKIM'yi etkinleştirmek için iki durumlu düğme" lightbox="../../media/126995186-9b3fdefa-a3a9-4f5a-9304-1099a2ce7cef.png":::
+:::image type="content" source="../../media/126995186-9b3fdefa-a3a9-4f5a-9304-1099a2ce7cef.png" alt-text="DKIM'yi etkinleştirme iki durumlu düğmesi" lightbox="../../media/126995186-9b3fdefa-a3a9-4f5a-9304-1099a2ce7cef.png":::
 
-CNAME kaydı yok hatası görüyorsanız, bunun nedeni şu olabilir:
+CNAME kaydı yok hatası görürseniz, bunun nedeni şu olabilir:
 
-1. DNS sunucusuyla eşitleme, sorun devam ederse birkaç saniyeyle saat arasında sürebilir ve sorun tekrarlayın
-2. Ek boşluk veya sekme gibi kopyalama yapıştırma hatalarını denetleyin.
+1. Dns sunucusuyla eşitleme( sorun devam ederse birkaç saniye ile saat arasında sürebilir) adımları tekrarlayın
+2. Ek alan veya sekmeler gibi kopyalama yapıştırma hatalarını denetleyin.
 
-DKIM'yi devre dışı bırakmak isterseniz, devre dışı bırakma moduna geri dönebilirsiniz
+DKIM'i devre dışı bırakmak istiyorsanız yeniden devre dışı bırakma moduna geçin
 
-## <a name="steps-to-manually-upgrade-your-1024-bit-keys-to-2048-bit-dkim-encryption-keys"></a>1024 bit anahtarlarınızı 2048 bit DKIM şifreleme tuşlarına el ile yükseltme adımları
+## <a name="steps-to-manually-upgrade-your-1024-bit-keys-to-2048-bit-dkim-encryption-keys"></a>1024 bit anahtarlarınızı 2048 bit DKIM şifreleme anahtarlarına el ile yükseltme adımları
 <a name="1024to2048DKIM"> </a>
 
 > [!NOTE]
-> Microsoft 365 etki alanları için *DKIM'onmicrosoft.com* ayarlar. BAŞLANGıÇTAki etki alanı adlardan (litware gibi) DKIM'i kullanmak için hiçbir adım gerekmez.*onmicrosoft.com*). Etki alanları hakkında daha fazla bilgi için bkz. Etki Alanları [SSS](../../admin/setup/domains-faq.yml#why-do-i-have-an--onmicrosoft-com--domain).
+> Microsoft 365 *onmicrosoft.com* etki alanları için DKIM'i otomatik olarak ayarlar. Herhangi bir ilk etki alanı adı için (litware gibi) DKIM kullanmak için hiçbir adıma gerek yoktur.*onmicrosoft.com*). Etki alanları hakkında daha fazla bilgi için bkz [. Etki Alanları SSS](../../admin/setup/domains-faq.yml#why-do-i-have-an--onmicrosoft-com--domain).
 
-DKIM tuşları hem 1024 hem de 2048 bit olarak desteklensin, bu yol tarifleri size Exchange Online PowerShell'de 1024 bit anahtarınızı [2048'e nasıl yükselteceklerini açıklar](/powershell/exchange/connect-to-exchange-online-powershell). Aşağıdaki adımlar iki kullanım sorunu için, lütfen yapılandırmanıza en uygun olanı seçin.
+DKIM anahtarları için hem 1024 hem de 2048 bitlik değerler desteklendiği için, bu yönergeler [powershell'de](/powershell/exchange/connect-to-exchange-online-powershell) 1024 bit anahtarınızı 2048'e yükseltmeyi Exchange Online. Aşağıdaki adımlar iki kullanım örneğine yöneliktir. Lütfen yapılandırmanıza en uygun olanı seçin.
 
-- DKIM **yapılandırıldığında, bitliğini** döndürmek için aşağıdaki komutu çalıştırabilirsiniz:
+- **DKIM zaten yapılandırılmışsa**, aşağıdaki komutu çalıştırarak bitlik değerini döndürürsiniz:
 
   ```powershell
   Rotate-DkimSigningConfig -KeySize 2048 -Identity <DkimSigningConfigIdParameter>
   ```
 
-  **veya**
+  **Veya**
 
-- **DKIM'nin yeni uygulanması** için aşağıdaki komutu çalıştırın:
+- **DKIM'in yeni bir uygulaması** için aşağıdaki komutu çalıştırın:
 
   ```powershell
   New-DkimSigningConfig -DomainName <Domain for which config is to be created> -KeySize 2048 -Enabled $true
   ```
 
-Aşağıdaki komutu çalıştırarak Exchange Online *doğrulamak için* PowerShell ile bağlantıda kalın:
+Aşağıdaki komutu çalıştırarak yapılandırmayı *doğrulamak* için Exchange Online PowerShell'e bağlı kalın:
 
 ```powershell
 Get-DkimSigningConfig -Identity <Domain for which the configuration was set> | Format-List
 ```
 
 > [!TIP]
-> Bu yeni 2048 bit anahtar RotateOnDate üzerinde etkili olur ve arada 1024 bit tuşu olan e-postalar gönderir. Dört gün sonra, 2048 bit tuşuyla yeniden test etmek için (yani, döndürme ikinci seçiciye bir kez) sınr.
+> Bu yeni 2048 bit anahtar RotateOnDate üzerinde etkili olur ve arada 1024 bit anahtarla e-postalar gönderir. Dört gün sonra, 2048 bit anahtarla (yani, döndürme ikinci seçiciye etkili olduktan sonra) yeniden test edebilirsiniz.
 
-İkinci seçiciye döndürmek için, dört gün sonra 2048 bitlik olduğunu onaylamak için, yukarıda listelenen uygun cmdlet'i kullanarak ikinci seçici anahtarını el ile döndürün.
+Dört gün sonra ikinci seçiciye döndürmek ve 2048 bitlik kullanımda olduğunu onaylamak istiyorsanız, yukarıda listelenen uygun cmdlet'i kullanarak ikinci seçici anahtarını el ile döndürün.
 
-Ayrıntılı söz dizimi ve parametre bilgileri için şu makalelere [bakın: Rotate-DkimSigningConfig](/powershell/module/exchange/rotate-dkimsigningconfig), [New-DkimSigningConfig](/powershell/module/exchange/new-dkimsigningconfig) ve [Get-DkimSigningConfig](/powershell/module/exchange/get-dkimsigningconfig).
+Ayrıntılı söz dizimi ve parametre bilgileri için şu makalelere bakın: [Rotate-DkimSigningConfig](/powershell/module/exchange/rotate-dkimsigningconfig), [New-DkimSigningConfig](/powershell/module/exchange/new-dkimsigningconfig) ve [Get-DkimSigningConfig](/powershell/module/exchange/get-dkimsigningconfig).
 
 ## <a name="steps-to-manually-set-up-dkim"></a>DKIM'i el ile ayarlama adımları
 <a name="SetUpDKIMO365"> </a>
 
-DKIM'yi yapılandırmak için şu adımları tamamlayabilirsiniz:
+DKIM'i yapılandırmak için şu adımları tamamlayacağız:
 
 - [DNS'de özel etki alanınız için iki CNAME kaydı yayımlama](use-dkim-to-validate-outbound-email.md#Publish2CNAME)
 - [Özel etki alanınız için DKIM imzalamayı etkinleştirme](use-dkim-to-validate-outbound-email.md#EnableDKIMinO365)
@@ -167,24 +167,24 @@ DKIM'yi yapılandırmak için şu adımları tamamlayabilirsiniz:
 ### <a name="publish-two-cname-records-for-your-custom-domain-in-dns"></a>DNS'de özel etki alanınız için iki CNAME kaydı yayımlama
 <a name="Publish2CNAME"> </a>
 
-DNS'de DKIM imzasını eklemek istediğiniz her etki alanı için iki CNAME kaydı yayımlamanız gerekir.
+DNS'de DKIM imzası eklemek istediğiniz her etki alanı için iki CNAME kaydı yayımlamanız gerekir.
 
 > [!NOTE]
-> Makalenin tamamını okumadıysanız, bu zaman tasarrufu sağlayan PowerShell bağlantı bilgilerini atlemiş Bağlan [PowerShell'Exchange Online olabilir](/powershell/exchange/connect-to-exchange-online-powershell).
+> Makalenin tamamını okumadıysanız bu zaman kazandıran PowerShell bağlantı bilgilerini kaçırmış olabilirsiniz: [PowerShell'i Exchange Online için Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
 
-Seçici kayıtlarını oluşturmak için Exchange Online PowerShell'de şu komutları çalıştırın:
+Seçici kayıtlarını oluşturmak için Exchange Online PowerShell'de aşağıdaki komutları çalıştırın:
 
 ```powershell
 New-DkimSigningConfig -DomainName <domain> -Enabled $false
 Get-DkimSigningConfig -Identity <domain> | Format-List Selector1CNAME, Selector2CNAME
 ```
 
-Microsoft 365'de ilk etki alanına ek olarak özel etki alanları da sağdıysanız, her ek etki alanı için iki CNAME kaydı yayımlamanız gerekir. Dolayısıyla, iki etki alanınız varsa, iki CNAME kaydı daha yayımlamanız gerekir.
+Microsoft 365'da ilk etki alanına ek olarak özel etki alanları sağladıysanız, her ek etki alanı için iki CNAME kaydı yayımlamanız gerekir. Bu nedenle, iki etki alanınız varsa, iki ek CNAME kaydı yayımlamanız gerekir ve bu şekilde devam eder.
 
 CNAME kayıtları için aşağıdaki biçimi kullanın.
 
 > [!IMPORTANT]
-> GCC High müşterilerinden biriysanız, _customDomainIdentifier değerini farklı hesaplarız_! _CustomDomainIdentifier_ değerini hesaplamak üzere ilk  Etki Alanınız için MX kaydına bakmanız yerine, bunu doğrudan özelleştirilmiş etki alanı üzerinden hesaplarız. Örneğin, özelleştirilmiş etki alanınız "contoso.com" ise _, customDomainIdentifier_ "contoso-com" olur, tüm dönemler kısa çizgiyle değiştirilir. Dolayısıyla, başlangıçtaki Etki Alanı'nın _hangi_ MX kaydına bakılmaksızın, CNAME kayıtlarında kullanmak üzere _özelDomainIdentifier_ değerini hesaplamak için her zaman yukarıdaki yöntemi kullanırsınız.
+> GCC High müşterilerimizden biriyseniz _customDomainIdentifier'ı_ farklı hesaplayacağız! _customDomainIdentifier_ değerini hesaplamak için _initialDomain'inizin_ MX kaydını aramak yerine doğrudan özelleştirilmiş etki alanından hesaplıyoruz. Örneğin, özelleştirilmiş etki alanınız "contoso.com" ise _customDomainIdentifier'ınız_ "contoso-com" olur, tüm noktalarda tire kullanılır. Bu nedenle, _initialDomain'inizin_ hangi MX kaydını gösterdiğinden bağımsız olarak, CNAME kayıtlarınızda kullanılacak _customDomainIdentifier_ değerini hesaplamak için her zaman yukarıdaki yöntemi kullanırsınız.
 
 ```console
 Host name:            selector1._domainkey
@@ -196,16 +196,16 @@ Points to address or value:    selector2-<customDomainIdentifier>._domainkey.<in
 TTL:                3600
 ```
 
-Burada:
+Konum:
 
-- Daha Microsoft 365 için, seçiciler her zaman "seçici1" veya "seçici2" olur.
-- _customDomainIdentifier_ , özel etki alanınız için özel etki alanınız için özelleştirilmiş MX kaydında görüntülenen _customDomainIdentifier_ ile mail.protection.outlook.com. Örneğin, etki alanı kimliği için aşağıdaki MX kaydında contoso.com _DomainIdentifier_ contoso-com'dur:
+- Microsoft 365 için seçiciler her zaman "seçici1" veya "seçici2" olur.
+- _customDomainIdentifier_ , mail.protection.outlook.com önce görüntülenen özel etki alanınız için özelleştirilmiş MX kaydındaki _customDomainIdentifier_ ile aynıdır. Örneğin, etki alanı contoso.com için aşağıdaki MX kaydında _customDomainIdentifier_ contoso-com şeklindedir:
 
-  > contoso.com.  MX 5'TE 3600 contoso-com.mail.protection.outlook.com
+  > contoso.com.  3600 IN MX 5 contoso-com.mail.protection.outlook.com
 
-- _initialDomain_, etki alanına kayıt olurken kullanılan Microsoft 365. İlk etki alanları her zaman en onmicrosoft.com. İlk etki alanınızı belirleme hakkında bilgi için bkz. Etki Alanları [SSS](../../admin/setup/domains-faq.yml#why-do-i-have-an--onmicrosoft-com--domain).
+- _initialDomain_, Microsoft 365 kaydolduğunda kullandığınız etki alanıdır. İlk etki alanları her zaman onmicrosoft.com biter. İlk etki alanınızı belirleme hakkında bilgi için bkz [. Etki Alanları SSS](../../admin/setup/domains-faq.yml#why-do-i-have-an--onmicrosoft-com--domain).
 
-Örneğin, cohovineyardandwinery.onmicrosoft.com'in ilk etki alanı ve cohovineyard.com ile cohowinery.com olmak üzere iki özel etki alanınız varsa, ek her etki alanı için toplam dört CNAME kaydı için iki CNAME kaydı ayarlamanız gerekir.
+Örneğin, cohovineyardandwinery.onmicrosoft.com ilk etki alanınız ve cohovineyard.com ve cohowinery.com iki özel etki alanınız varsa, her ek etki alanı için toplam dört CNAME kaydı için iki CNAME kaydı ayarlamanız gerekir.
 
 ```console
 Host name:            selector1._domainkey
@@ -226,34 +226,34 @@ TTL:                3600
 ```
 
 > [!NOTE]
-> İkinci kaydı oluşturmak önemlidir, ancak oluşturma sırasında bu kayıtlardan yalnızca biri kullanılabilir. Öz olarak, ikinci seçici henüz oluşturulmamış bir adresi işaret edeyor olabilir. Tuş döndürme deneyiminiz sorunsuz olduğundan ikinci CNAME kaydını oluşturmanızı öneririz.
+> İkinci kaydı oluşturmak önemlidir, ancak oluşturma sırasında seçicilerden yalnızca biri kullanılabilir. Temelde, ikinci seçici henüz oluşturulmamış bir adrese işaret edebilir. Anahtar döndürme işleminiz sorunsuz olacağı için ikinci CNAME kaydını yine de oluşturmanızı öneririz.
 
 ### <a name="steps-to-enable-dkim-signing-for-your-custom-domain"></a>Özel etki alanınız için DKIM imzalamayı etkinleştirme adımları
 <a name="EnableDKIMinO365"> </a>
 
-DNS'de CNAME kayıtlarını yayımladıktan sonra, KAYıTlarda DKIM imzalamayı etkinleştirmeye Microsoft 365. Bunu yapmak için Microsoft 365 yönetim merkezi PowerShell'i de kullanabilirsiniz.
+CNAME kayıtlarını DNS'de yayımladıktan sonra, Microsoft 365 aracılığıyla DKIM imzalamayı etkinleştirmeye hazır olursunuz. Bunu Microsoft 365 yönetim merkezi aracılığıyla veya PowerShell kullanarak yapabilirsiniz.
 
-#### <a name="to-enable-dkim-signing-for-your-custom-domain-in-the-microsoft-365-defender-portal"></a>Yeni portalda özel etki alanınız için DKIM Microsoft 365 Defender etkinleştirmek için
+#### <a name="to-enable-dkim-signing-for-your-custom-domain-in-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalında özel etki alanınız için DKIM imzalamayı etkinleştirmek için
 
-1. aşağıdaki Microsoft 365 Defender portalında<https://security.microsoft.com>, Kurallar bölümünde, **E-posta &** \> İşbirliği **& Kurallar** \>  \> tehdit ilkeleri **DKIM'ye** gidin. Doğrudan DKIM sayfasına gitmek için, kullanın <https://security.microsoft.com/dkimv2>.
+1. konumundaki Microsoft 365 Defender portalında<https://security.microsoft.com>, **Kurallar** bölümündeki **E-posta & İşbirliği** \> **İlkeleri & Kurallar** \> **Tehdit ilkeleri** \> **DKIM'e** gidin. Doğrudan DKIM sayfasına gitmek için kullanın <https://security.microsoft.com/dkimv2>.
 
-2. **DKIM sayfasında**, adına tıklayarak etki alanını seçin.
+2. **DKIM** sayfasında, ada tıklayarak etki alanını seçin.
 
-3. Görüntülenen ayrıntılar açılır iletisinde, **DKIM** imzaları ile bu etki alanı için iletileri imzala ayarını **Etkin olarak değiştir** (![Açık olarak değiştir.](../../media/scc-toggle-on.png))
+3. Görüntülenen ayrıntılar açılır penceresinde **DKIM imzalarıyla bu etki alanı için iletileri imzala** ayarını **Etkin** (![Açık) olarak değiştirin.](../../media/scc-toggle-on.png)
 
-   Bitirdikten sonra **DKIM tuşlarını döndür'e tıklayın**.
+   İşiniz bittiğinde **DKIM tuşlarını döndür'e** tıklayın.
 
-4. Her özel etki alanı için bu adımı yineler.
+4. Her özel etki alanı için bu adımı yineleyin.
 
-5. DKIM'yi ilk kez yapılandırıyorsanız ve 'Bu etki alanı için hiçbir DKIM anahtarı kaydedilemiyor' hatasını görüyorsanız, bir sonraki adımda anlatımlı olarak DKIM imzalamayı etkinleştirmek için DKIM Windows PowerShell'ı kullanabilirsiniz.
+5. DKIM'i ilk kez yapılandırıyorsanız ve 'Bu etki alanı için DKIM anahtarı kaydedilmedi' hatasını görüyorsanız, sonraki adımda açıklandığı gibi DKIM imzalamayı etkinleştirmek için Windows PowerShell kullanmanız gerekir.
 
-#### <a name="to-enable-dkim-signing-for-your-custom-domain-by-using-powershell"></a>PowerShell kullanarak özel etki alanınız için DKIM imzalamasını etkinleştirmek için
+#### <a name="to-enable-dkim-signing-for-your-custom-domain-by-using-powershell"></a>PowerShell kullanarak özel etki alanınız için DKIM imzalamayı etkinleştirmek için
 
 > [!IMPORTANT]
-> :::image type="content" source="../../media/dkim.png" alt-text="Bu etki alanı hatası için hiçbir DKIM anahtarı kaydedilemiyor" lightbox="../../media/dkim.png":::
-> DKIM'i ilk kez yapılandırıyorsanız ve anahtarı görmek için aşağıdaki 2. adımda (örneğin, `Set-DkimSigningConfig -Identity contoso.com -Enabled $true`) 'Bu etki alanı için kayıtlı DKIM anahtarı yok' hatasını görüyorsanız.
+> :::image type="content" source="../../media/dkim.png" alt-text="Bu etki alanı için kaydedilmiş DKIM anahtarı yok hatası" lightbox="../../media/dkim.png":::
+> DKIM'i ilk kez yapılandırıyorsanız ve 'Bu etki alanı için DKIM anahtarı kaydedilmedi' hatasını görüyorsanız, anahtarı görmek için aşağıdaki 2. adımda (örneğin, `Set-DkimSigningConfig -Identity contoso.com -Enabled $true`) komutu tamamlayın.
 
-1. [Bağlan PowerShell Exchange Online e geri tarak.](/powershell/exchange/connect-to-exchange-online-powershell)
+1. [PowerShell'i Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
 
 2. Aşağıdaki sözdizimini kullanın:
 
@@ -261,23 +261,23 @@ DNS'de CNAME kayıtlarını yayımladıktan sonra, KAYıTlarda DKIM imzalamayı 
    Set-DkimSigningConfig -Identity <Domain> -Enabled $true
    ```
 
-   \<Domain\> DKIM imzalamasını etkinleştirmek istediğiniz özel etki alanının adıdır.
+   \<Domain\> , DKIM imzalamasını etkinleştirmek istediğiniz özel etki alanının adıdır.
 
-   Bu örnekte, etki alanı için DKIM imzalama özelliği contoso.com:
+   Bu örnek, etki alanı contoso.com için DKIM imzalamasını etkinleştirir:
 
    ```powershell
    Set-DkimSigningConfig -Identity contoso.com -Enabled $true
    ```
 
-#### <a name="to-confirm-dkim-signing-is-configured-properly-for-microsoft-365"></a>DKIM imzalamanın ekip için düzgün yapılandırıldığından emin Microsoft 365
+#### <a name="to-confirm-dkim-signing-is-configured-properly-for-microsoft-365"></a>DKIM imzalamanın Microsoft 365 için düzgün yapılandırıldığını onaylamak için
 
-DKIM'yi düzgün şekilde yapılandırmış olduğunu onaylamak için bu adımları izlemeden önce birkaç dakika bekleyin. Bu işlem DKIM bilgileri için etki alanıyla ilgili bilgilerin ağa yayılmasına olanak sağlar.
+DKIM'i doğru yapılandırdığınızdan emin olmak için bu adımları izlemeden önce birkaç dakika bekleyin. Bu, etki alanı hakkındaki DKIM bilgilerinin ağa yayılmasına izin verir.
 
-- DKIM destekli etki alanınız içindeki bir hesaptan, Microsoft 365 outlook.com veya hesap gibi başka bir e-posta hesabına Hotmail.com.
-- Test aol.com bir hesap kullanmayın. SPF denetimi geçtikten sonra AOL DKIM denetimi atlar. Bu, testini geçersiz kılınacak.
-- İletiyi açın ve üst bilgiye bakın. İletinin üst bilgilerini görüntüleme yönergeleri, ileti istemcinize bağlı olarak değişir. E-postada ileti üst bilgilerini görüntüleme Outlook için bkz[. E-postada internet iletisi üstbilgilerini Outlook](https://support.microsoft.com/office/cd039382-dc6e-4264-ac74-c048563d212c).
+- Microsoft 365 DKIM özellikli etki alanınızdaki bir hesaptan outlook.com veya Hotmail.com gibi başka bir e-posta hesabına ileti gönderin.
+- Test amacıyla aol.com hesabı kullanmayın. AOL, SPF denetiminin geçip geçmediğini DKIM denetimini atlayabilir. Bu, testinizi geçersiz hale getirecektir.
+- İletiyi açın ve üst bilgisine bakın. İletinin üst bilgisini görüntüleme yönergeleri, mesajlaşma istemcinize bağlı olarak değişir. Outlook'da ileti üst bilgilerini görüntüleme yönergeleri için bkz. [Outlook'de internet iletisi üst bilgilerini görüntüleme](https://support.microsoft.com/office/cd039382-dc6e-4264-ac74-c048563d212c).
 
-  DKIM imzalı ileti, CNAME girdilerini yayımlarken tanımlandığı ana bilgisayar adını ve etki alanını içerir. İleti aşağıdakine benzer şekilde olur:
+  DKIM imzalı ileti, CNAME girdilerini yayımladığınızda tanımladığınız ana bilgisayar adını ve etki alanını içerir. İleti şu örneğe benzer olacaktır:
 
   ```console
     From: Example User <example@contoso.com>
@@ -288,23 +288,23 @@ DKIM'yi düzgün şekilde yapılandırmış olduğunu onaylamak için bu adımla
         b=<signed field>;
   ```
 
-- Üst bilgi Authentication-Results bakın. Her alıcı hizmeti gelen postayı damgak için biraz farklı bir biçim kullanır ama sonuçta **DKIM=pass** veya **DKIM=OK gibi bir şey olmalıdır**.
+- Authentication-Results üst bilgisini arayın. Her alıcı hizmet, gelen postayı damgalamak için biraz farklı bir biçim kullansa da, sonuç **DKIM=pass** veya **DKIM=Ok** gibi bir değer içermelidir.
 
-## <a name="to-configure-dkim-for-more-than-one-custom-domain"></a>DKIM'yi birden fazla özel etki alanında yapılandırmak için
+## <a name="to-configure-dkim-for-more-than-one-custom-domain"></a>DKIM'i birden fazla özel etki alanı için yapılandırmak için
 <a name="DKIMMultiDomain"> </a>
 
-Gelecekte bir noktada başka bir özel etki alanı eklemeye karar verdiysiniz ve yeni etki alanı için DKIM'yi etkinleştirmek istediğiniz her etki alanı için bu makaledeki adımları tamamlamanız gerekir. Özellikle [DKIM'i el ile ayarlamak için ne yapmak gerekir? konusunda yer alan tüm adımları tamamlayın](use-dkim-to-validate-outbound-email.md#SetUpDKIMO365).
+Gelecekte başka bir özel etki alanı eklemeye karar verirseniz ve yeni etki alanı için DKIM'yi etkinleştirmek istiyorsanız, her etki alanı için bu makaledeki adımları tamamlamanız gerekir. Özellikle, [DKIM'i el ile ayarlamak için yapmanız gerekenler'deki](use-dkim-to-validate-outbound-email.md#SetUpDKIMO365) tüm adımları tamamlayın.
 
-## <a name="disabling-the-dkim-signing-policy-for-a-custom-domain"></a>Özel bir etki alanı için DKIM imzalama ilkesi devre dışı bırakma
+## <a name="disabling-the-dkim-signing-policy-for-a-custom-domain"></a>Özel etki alanı için DKIM imzalama ilkesini devre dışı bırakma
 <a name="DisableDKIMSigningPolicy"> </a>
 
-İmzalama ilkesini devre dışı bırakmak DKIM'yi tamamen devre dışı bırakmaz. Bir süre sonra, Microsoft 365 varsayılan ilke hala etkin durumda ise, etki alanınız için varsayılan ilke otomatik olarak uygulanır. DKIM'yi tamamen devre dışı bırakmak isterseniz, hem özel hem de varsayılan etki alanlarında DKIM'yi devre dışı bırakmanız gerekir. Daha fazla bilgi için bkz. [DKIM ve MICROSOFT 365](use-dkim-to-validate-outbound-email.md#DefaultDKIMbehavior).
+İmzalama ilkesinin devre dışı bırakılması DKIM'ı tamamen devre dışı bırakmaz. Bir süre sonra, varsayılan ilke hala etkin durumdaysa Microsoft 365 etki alanınız için varsayılan ilkeyi otomatik olarak uygular. DKIM'i tamamen devre dışı bırakmak istiyorsanız, DKIM'i hem özel hem de varsayılan etki alanlarında devre dışı bırakmanız gerekir. Daha fazla bilgi için bkz. [DKIM ve Microsoft 365 için varsayılan davranış](use-dkim-to-validate-outbound-email.md#DefaultDKIMbehavior).
 
-### <a name="to-disable-the-dkim-signing-policy-by-using-windows-powershell"></a>DKIM imzalama ilkesini devre dışı bırakmak için, Windows PowerShell
+### <a name="to-disable-the-dkim-signing-policy-by-using-windows-powershell"></a>Windows PowerShell kullanarak DKIM imzalama ilkesini devre dışı bırakmak için
 
-1. [Bağlan PowerShell Exchange Online e geri tarak.](/powershell/exchange/connect-to-exchange-online-powershell)
+1. [PowerShell'i Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
 
-2. DKIM imzalamayı devre dışı bırakmak istediğiniz her etki alanı için aşağıdaki komutlardan birini çalıştırın.
+2. DKIM imzalamasını devre dışı bırakmak istediğiniz her etki alanı için aşağıdaki komutlardan birini çalıştırın.
 
    ```powershell
    $p = Get-DkimSigningConfig -Identity <Domain>
@@ -333,11 +333,11 @@ Gelecekte bir noktada başka bir özel etki alanı eklemeye karar verdiysiniz ve
 ## <a name="default-behavior-for-dkim-and-microsoft-365"></a>DKIM ve Microsoft 365 için varsayılan davranış
 <a name="DefaultDKIMbehavior"> </a>
 
-DKIM'yi etkinleştirmezsiniz, Microsoft 365 Microsoft Çevrimiçi E-posta Yönlendirme Adresi (MOERA)/ilk etki alanınız ve veri merkezimizde dahili olarak depolalarımızın ilişkili özel anahtarı için otomatik olarak bir 2048 bit DKIM ortak anahtarı oluşturur. Varsayılan olarak, Microsoft 365 ilkesi olan etki alanları için varsayılan imzalama yapılandırması kullanılır. Başka bir ifadeyle, DKIM'yi kendiniz ayarlayamayacaksanız, Microsoft 365 alanınız için DKIM'yi etkinleştirmek üzere oluşturduğu varsayılan ilkeyi ve anahtarları kullanır.
+DKIM'yi etkinleştirmezseniz Microsoft 365 Microsoft Çevrimiçi E-posta Yönlendirme Adresiniz (MOERA)/ilk etki alanınız ve veri merkezimizde dahili olarak depoladığımız ilişkili özel anahtar için otomatik olarak 2048 bit DKIM ortak anahtarı oluşturur. varsayılan olarak, Microsoft 365 ilkeye sahip olmayan etki alanları için varsayılan imzalama yapılandırmasını kullanır. Başka bir deyişle, DKIM'i kendiniz ayarlamazsanız, Microsoft 365 etki alanınız için DKIM'yi etkinleştirmek için varsayılan ilkesini ve oluşturduğu anahtarları kullanır.
 
-Ayrıca, etkinleştirdikten sonra özel etki alanınız üzerinde DKIM imzalamayı devre dışı bıraksanız bile, bir süre Microsoft 365, özel etki alanınız için MOERA/ilk etki alanı ilkesi otomatik olarak uygulanır.
+Ayrıca, DKIM'i etkinleştirdikten sonra özel etki alanınızda oturum açmayı devre dışı bırakırsanız, belirli bir süre sonra Microsoft 365 özel etki alanınız için MOERA/ilk etki alanı ilkesini otomatik olarak uygular.
 
-Aşağıdaki örnekte, etki alanının yöneticisi tarafından değil, fabrikam.com için DKIM'Microsoft 365 etkinleştirilmiştir. Bu, gerekli CNAM'lerin DNS'de yer alamay olduğu anlamına gelir. Bu etki alanındaki e-posta için DKIM imzaları şuna benzer:
+Aşağıdaki örnekte, fabrikam.com için DKIM'in etki alanının yöneticisi tarafından değil Microsoft 365 tarafından etkinleştirildiğini varsayalım. Bu, gerekli CNAM'lerin DNS'de mevcut olmadığı anlamına gelir. Bu etki alanından gelen e-postalar için DKIM imzaları şuna benzer olacaktır:
 
 ```console
 From: Second Example <second.example@fabrikam.com>
@@ -348,14 +348,14 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
     b=<signed field>;
 ```
 
-Bu örnekte, ana bilgisayar adı ve etki alanı, etki alanı yöneticisi tarafından DKIM-signing for fabrikam.com etkinleştirilmişse CNAME'nin işaret edecek değerleri içerir. Daha sonra, bir ekipten gönderilen Microsoft 365 tek tek DKIM imzalanmış olur. DKIM'yi kendiniz etkinleştirirsiniz, etki alanı Ilk: adreste yer alan etki alanıyla aynı olur (bu durumda fabrikam.com. Hizalanmazsanız, hizalanmaz ve bunun yerine kuruma uygun olan ilk etki alanını kullanır. İlk etki alanınızı belirleme hakkında bilgi için bkz. Etki Alanları [SSS](../../admin/setup/domains-faq.yml#why-do-i-have-an--onmicrosoft-com--domain).
+Bu örnekte ana bilgisayar adı ve etki alanı, fabrikam.com için DKIM imzalaması etki alanı yöneticisi tarafından etkinleştirildiyse CNAME'nin işaret edeceği değerleri içerir. Sonunda, Microsoft 365 gönderilen her ileti DKIM imzalı olur. DKIM'i kendiniz etkinleştirirseniz, etki alanı Kimden: adresindeki etki alanıyla aynı olur ve bu durumda fabrikam.com. Bunu yapmazsanız uyumlu olmaz ve bunun yerine kuruluşunuzun ilk etki alanını kullanır. İlk etki alanınızı belirleme hakkında bilgi için bkz [. Etki Alanları SSS](../../admin/setup/domains-faq.yml#why-do-i-have-an--onmicrosoft-com--domain).
 
-## <a name="set-up-dkim-so-that-a-third-party-service-can-send-or-spoof-email-on-behalf-of-your-custom-domain"></a>DkIM'i, üçüncü taraf bir hizmetin özel etki alanınız adına e-posta gönderebi veya e-posta gönder yetkisine sahip olacak şekilde ayarlama
+## <a name="set-up-dkim-so-that-a-third-party-service-can-send-or-spoof-email-on-behalf-of-your-custom-domain"></a>DKIM'i, üçüncü taraf bir hizmetin özel etki alanınız adına e-posta gönderebilmesi veya yanıltabilmesi için ayarlayın
 <a name="SetUp3rdPartyspoof"> </a>
 
-Bazı toplu e-posta servis sağlayıcıları veya hizmet olarak yazılım sağlayıcıları, hizmetlerinden kaynaklanan e-posta için DKIM anahtarları ayarlamanızı sağlar. Bu, gerekli DNS kayıtlarını ayarlamak için kendinizle üçüncü taraf arasında koordinasyon gerektirir. Bazı üçüncü taraf sunucuların, farklı seçicileri olan kendi CNAME kayıtları olabilir. İki kuruluş tam olarak aynı şeyi yapmaz. Bunun yerine, işlem tamamen kuruluşa bağlıdır.
+Bazı toplu e-posta hizmet sağlayıcıları veya hizmet olarak yazılım sağlayıcıları, hizmetlerinden kaynaklanan e-postalar için DKIM anahtarlarını ayarlamanıza olanak sağlar. Bu, gerekli DNS kayıtlarını ayarlamak için kendinizle üçüncü taraf arasında koordinasyon gerektirir. Bazı üçüncü taraf sunucuların farklı seçicilere sahip kendi CNAME kayıtları olabilir. Hiçbir kuruluş bunu tam olarak aynı şekilde yapmaz. Bunun yerine, süreç tamamen kuruluşa bağlıdır.
 
-Şu şekilde yapılandırılmış bir DKIM ve dkIM contoso.com bulkemailprovider.com ileti şöyle olabilir:
+contoso.com ve bulkemailprovider.com için düzgün yapılandırılmış bir DKIM'yi gösteren örnek ileti şöyle görünebilir:
 
 ```console
 Return-Path: <communication@bulkemailprovider.com>
@@ -368,11 +368,11 @@ Bu örnekte, bu sonucu elde etmek için:
 
 1. Toplu E-posta Sağlayıcısı Contoso'ya genel bir DKIM anahtarı verdi.
 
-2. Contoso, DKIM anahtarını DNS kaydında yayımlar.
+2. Contoso, DNS kaydında DKIM anahtarını yayımladı.
 
-3. E-posta gönderirken, Toplu E-posta Sağlayıcısı anahtarı ilgili özel anahtarla imzalar. Bunu yaparak Toplu E-posta Sağlayıcısı DKIM imzasını ileti üst bilgisinde ekli olarak gösterir.
+3. E-posta gönderirken Toplu E-posta Sağlayıcısı anahtarı ilgili özel anahtarla imzalar. Bunu yaptığınızda Toplu E-posta Sağlayıcısı DKIM imzasını ileti üst bilgisine eklemiş olur.
 
-4. E-posta sistemleri alıcı, iletinin From: (5322.From) DKIM-Signature d=\<domain\> değerinin etki alanı için kimlik doğru kullanarak DKIM denetimi gerçekleştirin. Bu örnekte, değerler eşler:
+4. Alıcı e-posta sistemleri, iletinin Kimden: (5322.Kimden) adresindeki etki alanında DKIM-Signature d=\<domain\> değerini doğrulayarak bir DKIM denetimi gerçekleştirir. Bu örnekte değerler şu şekildedir:
 
    > sender@**contoso.com**
 
@@ -380,24 +380,24 @@ Bu örnekte, bu sonucu elde etmek için:
 
 ## <a name="identify-domains-that-do-not-send-email"></a>E-posta göndermeyen etki alanlarını belirleme
 
-Kuruluşların, bir etki alanının DKIM kaydında bu etki `v=DKIM1; p=` alanları için belirterek e-posta gönderemezseniz bunu açıkça belirtmesi gerekir. Bu, e-posta sunucularını alıcıya etki alanı için geçerli bir ortak anahtar olmadığını ve bu etki alanında yer aldığını iddia eden tüm e-postaların reddedilmesi önerir. Bunu, her etki alanı ve alt etki alanı için joker karakterli DKIM kullanarak yapabilirsiniz.
+Bir etki alanı, bu etki alanları için DKIM kaydında belirterek `v=DKIM1; p=` e-posta göndermezse kuruluşlar açıkça belirtmelidir. Bu, e-posta sunucularının etki alanı için geçerli ortak anahtar olmadığını ve bu etki alanından olduğunu iddia eden tüm e-postaların reddedilmesi gerektiğini önerir. Bunu her etki alanı ve alt etki alanı için joker karakter DKIM kullanarak yapmalısınız.
 
-Örneğin, DKIM kaydı şöyle olabilir:
+Örneğin, DKIM kaydı şöyle görünür:
 
 ```console
 *._domainkey.SubDomainThatShouldntSendMail.contoso.com. TXT "v=DKIM1; p="
 ```
 
-## <a name="next-steps-after-you-set-up-dkim-for-microsoft-365"></a>Sonraki adımlar: DkIM for Microsoft 365
+## <a name="next-steps-after-you-set-up-dkim-for-microsoft-365"></a>Sonraki adımlar: Microsoft 365 için DKIM'i ayarladıktan sonra
 <a name="DKIMNextSteps"> </a>
 
-**DKIM, spopoing önlemeye yardımcı olmak için tasarlanmış olsa da, DKIM SPF ve DMARC ile daha iyi çalışır.**
+**DKIM kimlik sahtekarlığı önlemeye yardımcı olmak için tasarlanmış olsa da, DKIM SPF ve DMARC ile daha iyi çalışır.**
 
-DKIM'yi bir kez ayardan sonra, SPF'yi daha önce ayarlamadıysanız bunu yapsanız iyi olur. SPF'ye hızlı bir giriş yapmak ve SPF'yi hızla yapılandırmak için bkz Kimlik Microsoft 365 için [**SPF'yi**](set-up-spf-in-office-365-to-help-prevent-spoofing.md) ayarlama. Microsoft 365'un SPF'yi nasıl kullandığı hakkında daha ayrıntılı bilgi için veya sorun gidermek ya da karma dağıtımlar gibi standart olmayan dağıtımlarda, Microsoft 365, spoing'yi engellemek için [Sender Policy Framework'i (SPF)](how-office-365-uses-spf-to-prevent-spoofing.md) nasıl kullanır? ile başlayabilirsiniz.
+DKIM'i ayarladıktan sonra SPF'yi henüz ayarlamadıysanız bunu yapmanız gerekir. SPF'ye hızlı bir giriş yapmak ve hızla yapılandırılmasını sağlamak için, kimlik [**sahtekarlıklarını önlemeye yardımcı olmak için bkz. Microsoft 365'de SPF'yi ayarlama**](set-up-spf-in-office-365-to-help-prevent-spoofing.md). Microsoft 365 SPF'yi nasıl kullandığını daha ayrıntılı bir şekilde anlamak veya karma dağıtımlar gibi sorun giderme veya standart olmayan dağıtımlar için Microsoft 365 [sahtekarlık önlemek için Sender Policy Framework'ün (SPF) nasıl kullanıldığı](how-office-365-uses-spf-to-prevent-spoofing.md) ile başlayın.
 
-Ardından, bkz. [**E-postayı doğrulamak için DMARC kullanma**](use-dmarc-to-validate-email.md). [İstenmeyen posta önleme iletisi üst bilgileri](anti-spam-message-headers.md), DKIM denetimlerinden Microsoft 365 kullanılan söz dizimi ve üst bilgi alanlarını içerir.
+Ardından bkz. [**E-postayı doğrulamak için DMARC kullanma**](use-dmarc-to-validate-email.md). [İstenmeyen postadan koruma iletisi üst bilgileri](anti-spam-message-headers.md), DKIM denetimleri için Microsoft 365 tarafından kullanılan söz dizimi ve üst bilgi alanlarını içerir.
 
-**Bu test DKIM** imzalama yapılandırmasının doğru yapılandırıldığından ve doğru DNS girdilerinin yayımlanmış olduğunu doğrular.
+**Bu test** , DKIM imzalama yapılandırmasının doğru yapılandırıldığını ve uygun DNS girişlerinin yayımlandığını doğrular.
 
 > [!NOTE]
 > Bu özellik, bir Microsoft 365 yönetici hesabı gerektirir. Bu özellik, Microsoft 365 Government, 21Vianet tarafından yürütülen Microsoft 365 veya Microsoft 365 Almanya'da kullanılamaz.
@@ -408,7 +408,8 @@ Ardından, bkz. [**E-postayı doğrulamak için DMARC kullanma**](use-dmarc-to-v
 
 ## <a name="more-information"></a>Daha fazla bilgi
 
-PowerShell aracılığıyla tuş döndürme: [Rotate-DkimSigningConfig](/powershell/module/exchange/rotate-dkimsigningconfig)
+PowerShell aracılığıyla anahtar döndürme: [Rotate-DkimSigningConfig](/powershell/module/exchange/rotate-dkimsigningconfig)
 
 [E-postayı doğrulamak için DMARC kullanma](/microsoft-365/security/office-365-security/use-dmarc-to-validate-email?view=o365-worldwide&preserve-view=true)
 
+[Güvenilir ARC Gönderenleri'ni geçerli posta akışları için kullanma](/microsoft-365/security/office-365-security/use-arc-exceptions-to-mark-trusted-arc-senders?view=o365-21vianet&branch=tracyp_emailauth)

@@ -19,12 +19,12 @@ ms.custom:
 description: Bir Etki Alanı Adı Hizmeti (DNS) kaydını, Office 365'daki özel etki alanınızla Sender Policy Framework (SPF) kullanacak şekilde nasıl güncelleştireceğinizi öğrenin.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: d29175c471e076b1f69e1edb6da3c005d3857f8f
-ms.sourcegitcommit: c4924bcad6648fae279076cafa505fae1194924a
+ms.openlocfilehash: 33e4a6d3644f7a3aab8992130b2b92e09dd665af
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2022
-ms.locfileid: "65626051"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65772412"
 ---
 # <a name="set-up-spf-to-help-prevent-spoofing"></a>Kimlik sahtekarlığını önlemeye yardımcı olmak için SPF'yi ayarlama
 
@@ -152,5 +152,7 @@ Gelişmiş örnekler için desteklenen SPF söz dizimi, kimlik sahtekarlığı, 
 [**DMARC**](use-dmarc-to-validate-email.md) e-posta kimlik doğrulamasının amacı, SPF ve DKIM bilgilerinin Kimden adresiyle eşleştiğinden emin olmaktır.
 
  Gelişmiş örnekler ve desteklenen SPF söz dizimi hakkında daha ayrıntılı bir tartışma için bkz. [Office 365 kimlik sahtekarlığı ve kimlik avının önlenmesi için SPF nasıl çalışır](how-office-365-uses-spf-to-prevent-spoofing.md#HowSPFWorks)?
+
+[Güvenilir ARC Gönderenleri'ni geçerli posta akışları için kullanma](/microsoft-365/security/office-365-security/use-arc-exceptions-to-mark-trusted-arc-senders?view=o365-21vianet&branch=tracyp_emailauth)
 
 *Bu belgelerle ilgili geri bildiriminiz varsa 'Geri Bildirim' bölümünden 'Bu sayfa' öğesini seçin.*

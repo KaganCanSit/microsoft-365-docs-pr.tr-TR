@@ -19,16 +19,16 @@ ms.localizationpriority: high
 description: Yöneticiler, kimlik sahtekarlığı, kimlik avı ve istenmeyen postaları önlemeye yardımcı olmak için EOP'nin e-posta kimlik doğrulamasını (SPF, DKIM ve DMARC) nasıl kullandığını öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 5368be5bbecde45d341a737a283a7461a2302dc4
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 2b0a1f1bec76a8dd22bc04502ea7ca09f2c7af66
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64973387"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65772784"
 ---
 # <a name="email-authentication-in-eop"></a>EOP'de e-posta kimlik doğrulaması
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -166,7 +166,11 @@ spf geri dönüş ilkesini `?all`kullanmaya başladıktan sonra iletileriniz iç
 
 Ayrıca, gönderenlerin kuruluşunuza kimliği doğrulanmamış iletiler iletmesine izin vermek için kimlik sahtekarlık [bilgileri içgörülerini](learn-about-spoof-intelligence.md) ve [Kiracı İzin Ver/Engelle Listesi'ni](tenant-allow-block-list.md) de kullanabilirsiniz.
 
-Dış etki alanları için kimlik sahtekarlığı yapılan kullanıcı Kimden adresindeki etki alanıdır, gönderen altyapı ise kaynak IP adresi (/24 CIDR aralıklarına ayrılmıştır) veya ters DNS (PTR) kaydının kuruluş etki alanıdır.
+Dış etki alanları için kimlik sahtekarlığına sahip kullanıcı Kimden adresindeki etki alanıdır, gönderen altyapı ise aşağıdaki değerlerden biridir:
+
+- Kaynak IP adresi (/24 CIDR aralığına ayrılmıştır)
+- Ters DNS (PTR) kaydının kuruluş etki alanı.
+- Doğrulanmış bir DKIM etki alanı.
 
 ### <a name="create-an-allow-entry-for-the-senderrecipient-pair"></a>Gönderen/alıcı çifti için izin verme girdisi oluşturma
 
@@ -204,7 +208,7 @@ Platformunuzdan gelen e-postaların kimliğini doğrulasanız bile Microsoft'a t
 
 ## <a name="related-links"></a>İlgili bağlantılar
 
-Hizmet sağlayıcılarının en iyi yöntemleri hakkında daha fazla bilgi için bkz. [Hizmet Sağlayıcıları için M3AAWG Mobil Mesajlaşma En İyi Yöntemleri](https://www.m3aawg.org/sites/default/files/m3aawg-mobile-messaging-best-practices-service-providers-2015-08_0.pdf).
+Hizmet sağlayıcılarının en iyi yöntemleri hakkında daha fazla bilgi için bkz. [M3AAWG Mobile Microsoft Mesajlaşma Hizmet Sağlayıcıları için En İyi Yöntemler](https://www.m3aawg.org/sites/default/files/m3aawg-mobile-messaging-best-practices-service-providers-2015-08_0.pdf).
 
 Office 365 SPF'yi nasıl kullandığını ve DKIM doğrulamasını nasıl desteklediğini öğrenin:
 

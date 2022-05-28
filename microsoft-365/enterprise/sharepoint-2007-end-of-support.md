@@ -37,12 +37,12 @@ search.appverid:
 - OSU160
 ms.assetid: ba124775-d5c0-4d68-b88d-8458ad4c3717
 description: SharePoint Server 2007 desteği Ekim 2017'de sona erdi. Bu makalede yükseltme, geçiş ve destek seçenekleriniz hakkında bilgi edinin.
-ms.openlocfilehash: 260949f73fbb4530436484e70ca39d4e2f99bbcf
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 7f98e3652e2836a0c4193efbe33147fd09ced01e
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098240"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65771963"
 ---
 # <a name="sharepoint-server-2007-end-of-support-roadmap"></a>SharePoint Server 2007 destek sonu yol haritası
 
@@ -119,7 +119,7 @@ doğrudan SharePoint 2007'den SharePoint Online'a geçiş yapamazsınız. ShareP
 |**Çevrimiçi profesyonel**|**Çevrimiçi con**|
 |:-----|:-----|
 |Microsoft, SPO donanımlarını ve tüm donanım yönetimini sağlar.  <br/> |Kullanılabilir özellikler şirket içi SharePoint Sunucusu ile SPO arasında farklılık gösterebilir.  <br/> |
-|Aboneliğinizin Sharepoint yöneticisi veya genel yöneticisisiniz ve SPO sitelerine yönetici atayabilirsiniz.  <br/> |şirket içi SharePoint Sunucusu'ndaki bir grup yöneticisinin kullanabileceği bazı eylemler yoktur veya Microsoft 365'daki SharePoint Yöneticisi rolüne dahil olmayabilir.  <br/> |
+|Aboneliğinizin SharePoint yöneticisi veya genel yöneticisisiniz ve SPO sitelerine yönetici atayabilirsiniz.  <br/> |şirket içi SharePoint Sunucusu'ndaki bir grup yöneticisinin kullanabileceği bazı eylemler yoktur veya Microsoft 365'daki SharePoint Yöneticisi rolüne dahil olmayabilir.  <br/> |
 |Microsoft, temel alınan donanım ve yazılımlara yamalar, düzeltmeler ve güncelleştirmeler uygular. <br/> |Hizmette temel alınan dosya sistemine erişim olmadığından özelleştirme sınırlıdır.  <br/> |
 |Microsoft [, Hizmet düzeyi sözleşmeleri yayımlar](/office365/servicedescriptions/office-365-platform-service-description/service-level-agreement) ve hizmet düzeyi olaylarını çözmek için hızlı bir şekilde taşınır. <br/> |Yedekleme ve geri yükleme ile diğer kurtarma seçenekleri SharePoint Online'da hizmet tarafından otomatik hale getirilir. Kullanılmıyorsa yedeklemelerin üzerine yazılır. <br/> |
 |Güvenlik testi ve sunucu performansı ayarlama, Microsoft tarafından hizmette sürekli olarak gerçekleştirilir. <br/> |Kullanıcı arabiriminde ve diğer SharePoint özelliklerinde yapılan değişiklikler hizmet tarafından yüklenir ve açık veya kapalı olması gerekebilir. <br/> |
