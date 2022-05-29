@@ -23,12 +23,12 @@ ms.custom:
 - admindeeplinkCOMPLIANCE
 - admindeeplinkEXCHANGE
 description: Kuruluşunuzun ileti saklama, eKeşif ve saklama gereksinimlerini desteklemek için arşiv posta kutularını etkinleştirmeyi veya devre dışı bırakmayı öğrenin.
-ms.openlocfilehash: ba5fdf252fe379798b1126d59affb12bb3725306
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: f95da36b48389bba2bd640825071dbff5c6ddb3d
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65647247"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65772434"
 ---
 # <a name="enable-archive-mailboxes-in-the-microsoft-purview-compliance-portal"></a>Microsoft Purview uyumluluk portalındaki arşiv posta kutularını etkinleştirme
 
@@ -124,6 +124,10 @@ Microsoft 365 yönetim merkezinde bir açılır sayfa açılır. Denetlemek iste
 
 > [!NOTE]
 > Arşiv posta kutusu tanılama denetimini kullanmak için bir Microsoft 365 genel yöneticisi olmanız gerekir. Ayrıca, bu özellik Microsoft 365 Kamu bulutlarında, 21Vianet tarafından yürütülen Microsoft 365'te veya Microsoft 365 Almanya'da kullanılamaz.
+
+## <a name="instructions-for-end-users"></a>Son kullanıcılar için yönergeler
+
+Kullanıcılara arşiv posta kutularının nasıl çalıştığını ve Windows, macOS ve web üzerinde Outlook'ta bunlarla nasıl etkileşim kurabileceklerini açıklayın. En etkili belgeler, kuruluşunuz için özelleştirilir. Ancak temel yönergeler için bkz. [Çevrimiçi arşiv posta kutuları ile e-posta depolama alanını yönetme](https://prod.support.services.microsoft.com/en-us/office/manage-email-storage-with-online-archive-mailboxes-1cae7d17-7813-4fe8-8ca2-9a5494e9a721).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
