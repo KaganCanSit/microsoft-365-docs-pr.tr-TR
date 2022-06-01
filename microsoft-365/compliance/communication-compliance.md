@@ -21,12 +21,12 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 09135faa505aa2d5b95003cc7321a38a0eaddaf3
-ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
+ms.openlocfilehash: 36d3ca7d820d31843df535eddd6c253d0c1f951e
+ms.sourcegitcommit: aff1732dfa21e9283b173d8e5ca5bcbeeaaa26d8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65599221"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "65810954"
 ---
 # <a name="learn-about-communication-compliance"></a>İletişim uyumluluğu hakkında daha fazla bilgi edinme
 
@@ -57,6 +57,8 @@ Daha fazla bilgi edinmek ve kuruluşunuzdaki uyumluluk ve riskli etkinlikleri el
 İletişim uyumluluğuna hızlı bir genel bakış için [Microsoft Mechanics kanalındaki](https://www.youtube.com/user/OfficeGarageSeries) [İş yeri tacizini algılama ve İletişim Uyumluluğu ile yanıt verme](https://youtu.be/z33ji7a7Zho) videosuna bakın.
 
 [TD Securities'in](https://customers.microsoft.com/story/1391545301764211731-td-securities-banking-capital-markets-compliance) yasal yükümlülüklerini yerine getirmek ve güvenlik ve kararlılık gereksinimlerini karşılamak için iletişim uyumluluğunu nasıl kullandığına göz atın.
+
+Kuruluşunuzdaki kullanıcıların veri risklerini en aza indirmeye yardımcı olmak için insider risk yönetimi ve iletişim uyumluluğunun birlikte nasıl çalıştığına ilişkin [Microsoft Mechanics videosunu](https://www.youtube.com/watch?v=Ynkfu8OF0wQ) inceleyin.
 
 En son iletişim uyumluluk güncelleştirmelerini takip etmek için Kuruluşunuz için [iletişim uyumluluğundaki](https://compliance.microsoft.com/) **yenilikler'i** seçin.
 

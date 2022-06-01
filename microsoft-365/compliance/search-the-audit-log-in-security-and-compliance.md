@@ -21,12 +21,12 @@ description: Kuruluşunuzdaki kullanıcı ve yönetici etkinliğini görüntüle
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
-ms.openlocfilehash: 70bb6383b67392da1766d3ca8d1ef0806d105bb1
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: 9d556facba3fa1a9c1dbafbfe2b2cb519f1b362d
+ms.sourcegitcommit: aff1732dfa21e9283b173d8e5ca5bcbeeaaa26d8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65465986"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "65810976"
 ---
 # <a name="search-the-audit-log-in-the-compliance-portal"></a>Uyumluluk portalında denetim günlüğünde arama yapma
 
@@ -232,7 +232,7 @@ Denetim günlüğü aramasının sonuçlarını yerel bilgisayarınızdaki virg�
 
 1. Bir denetim günlüğü araması çalıştırın ve istediğiniz sonuçları elde edene kadar arama ölçütlerini düzeltin.
 
-2. Arama sonuçları sayfasında **Dışarı Aktar** >  **Tüm sonuçları indir'e** tıklayın.
+2. Arama sonuçları sayfasında Dışarı **Aktar** > **Tüm sonuçları indir'e** tıklayın.
 
    Denetim günlüğünden arama ölçütlerine uyan tüm girdiler CSV dosyasına aktarılır. Denetim günlüğündeki ham veriler bir CSV dosyasına kaydedilir. Denetim günlüğü girdisindeki ek bilgiler CSV'de **AuditData** adlı bir sütuna eklenir.
 
@@ -473,7 +473,7 @@ Hayır. Olay, tarayıcı ön getirme işleminin sonucu olarak günlüğe kaydedi
 
 Hem FilePreviewed hem de FileAccessed olayları, kullanıcının çağrısının dosyanın okunmasını (veya dosyanın küçük resim işlemesinin okunmasını) gösterdiğini gösterir. Bu olaylar önizleme ve erişim amacına uygun olarak tasarlanırken, olay ayrımı kullanıcının amacının garantisi değildir.
 
-#### <a name="the-appsharepoint-user-in-audit-records"></a>Denetim kayıtlarındaki appsharepoint\@ kullanıcısı
+#### <a name="the-appsharepoint-user-in-audit-records"></a>Denetim kayıtlarındaki uygulama\@sharepoint kullanıcısı
 
 Bazı dosya etkinliklerinin (ve diğer SharePoint ilgili etkinliklerin) denetim kayıtlarında, etkinliği gerçekleştiren kullanıcının (User ve UserId alanlarında tanımlanan) app@sharepoint olduğunu fark edebilirsiniz. Bu, etkinliği gerçekleştiren "kullanıcının" bir uygulama olduğunu gösterir. Bu durumda uygulamaya kullanıcı, yönetici veya hizmet adına kuruluş genelinde eylemler (SharePoint site veya OneDrive hesabı arama gibi) gerçekleştirmek için SharePoint izinleri verilmiştir. Bir uygulamaya izin verme işlemi, *Yalnızca Uygulama erişimi SharePoint* olarak adlandırılır. Bu, bir eylem gerçekleştirmek için SharePoint sunulan kimlik doğrulamasının kullanıcı yerine bir uygulama tarafından yapıldığını gösterir. bu nedenle app@sharepoint kullanıcı belirli denetim kayıtlarında tanımlanır. Daha fazla bilgi için bkz. [Yalnızca Uygulama SharePoint kullanarak erişim izni verme](/sharepoint/dev/solution-guidance/security-apponly-azureacs).
 
@@ -491,7 +491,7 @@ Bu ve diğer senaryolarda, belirtilen kullanıcı olarak app@sharepoint birden �
 
 ### <a name="folder-activities"></a>Klasör etkinlikleri
 
-Aşağıdaki tabloda, SharePoint Online ve OneDrive İş klasör etkinlikleri açıklanmaktadır. Daha önce açıklandığı gibi, bazı SharePoint etkinliklerinin denetim kayıtları, app@sharepoint kullanıcının eylemi başlatan kullanıcı veya yönetici adına etkinlik gerçekleştirdiğini gösterir. Daha fazla bilgi için bkz [. Denetim kayıtlarındaki appsharepoint\@ kullanıcısı](#the-appsharepoint-user-in-audit-records).
+Aşağıdaki tabloda, SharePoint Online ve OneDrive İş klasör etkinlikleri açıklanmaktadır. Daha önce açıklandığı gibi, bazı SharePoint etkinliklerinin denetim kayıtları, app@sharepoint kullanıcının eylemi başlatan kullanıcı veya yönetici adına etkinlik gerçekleştirdiğini gösterir. Daha fazla bilgi için bkz [. Denetim kayıtlarındaki uygulama\@sharepoint kullanıcısı](#the-appsharepoint-user-in-audit-records).
 
 |Kolay ad|Işlem|Açıklama|
 |:-----|:-----|:-----|
@@ -507,7 +507,7 @@ Aşağıdaki tabloda, SharePoint Online ve OneDrive İş klasör etkinlikleri a�
 
 ### <a name="sharepoint-list-activities"></a>Liste etkinliklerini SharePoint
 
-Aşağıdaki tabloda, kullanıcıların SharePoint Online'daki liste ve liste öğeleriyle ne zaman etkileşime geçtiğiyle ilgili etkinlikler açıklanmaktadır. Daha önce açıklandığı gibi, bazı SharePoint etkinliklerinin denetim kayıtları, app@sharepoint kullanıcının eylemi başlatan kullanıcı veya yönetici adına etkinlik gerçekleştirdiğini gösterir. Daha fazla bilgi için bkz [. Denetim kayıtlarındaki appsharepoint\@ kullanıcısı](#the-appsharepoint-user-in-audit-records).
+Aşağıdaki tabloda, kullanıcıların SharePoint Online'daki liste ve liste öğeleriyle ne zaman etkileşime geçtiğiyle ilgili etkinlikler açıklanmaktadır. Daha önce açıklandığı gibi, bazı SharePoint etkinliklerinin denetim kayıtları, app@sharepoint kullanıcının eylemi başlatan kullanıcı veya yönetici adına etkinlik gerçekleştirdiğini gösterir. Daha fazla bilgi için bkz [. Denetim kayıtlarındaki uygulama\@sharepoint kullanıcısı](#the-appsharepoint-user-in-audit-records).
 
 |Kolay ad|Işlem|Açıklama|
 |:-----|:-----|:-----|
@@ -582,7 +582,7 @@ Aşağıdaki tabloda, SharePoint Online ve OneDrive İş dosya eşitleme etkinli
 
 ### <a name="site-permissions-activities"></a>Site izinleri etkinlikleri
 
-Aşağıdaki tabloda, SharePoint izin atama ve sitelere erişim vermek (ve iptal etmek) için grupları kullanma ile ilgili olaylar listeleniyor. Daha önce açıklandığı gibi, bazı SharePoint etkinliklerinin denetim kayıtları, app@sharepoint kullanıcının eylemi başlatan kullanıcı veya yönetici adına etkinlik gerçekleştirdiğini gösterir. Daha fazla bilgi için bkz [. Denetim kayıtlarındaki appsharepoint\@ kullanıcısı](#the-appsharepoint-user-in-audit-records).
+Aşağıdaki tabloda, SharePoint izin atama ve sitelere erişim vermek (ve iptal etmek) için grupları kullanma ile ilgili olaylar listeleniyor. Daha önce açıklandığı gibi, bazı SharePoint etkinliklerinin denetim kayıtları, app@sharepoint kullanıcının eylemi başlatan kullanıcı veya yönetici adına etkinlik gerçekleştirdiğini gösterir. Daha fazla bilgi için bkz [. Denetim kayıtlarındaki uygulama\@sharepoint kullanıcısı](#the-appsharepoint-user-in-audit-records).
 
 |Kolay ad|Işlem|Açıklama|
 |:-----|:-----|:-----|
@@ -605,7 +605,7 @@ Aşağıdaki tabloda, SharePoint izin atama ve sitelere erişim vermek (ve iptal
 
 ### <a name="site-administration-activities"></a>Site yönetimi etkinlikleri
 
-Aşağıdaki tabloda, SharePoint Online'da site yönetimi görevlerinden kaynaklanan olaylar listelendir. Daha önce açıklandığı gibi, bazı SharePoint etkinliklerinin denetim kayıtları, app@sharepoint kullanıcının eylemi başlatan kullanıcı veya yönetici adına etkinlik gerçekleştirdiğini gösterir. Daha fazla bilgi için bkz [. Denetim kayıtlarındaki appsharepoint\@ kullanıcısı](#the-appsharepoint-user-in-audit-records).
+Aşağıdaki tabloda, SharePoint Online'da site yönetimi görevlerinden kaynaklanan olaylar listelendir. Daha önce açıklandığı gibi, bazı SharePoint etkinliklerinin denetim kayıtları, app@sharepoint kullanıcının eylemi başlatan kullanıcı veya yönetici adına etkinlik gerçekleştirdiğini gösterir. Daha fazla bilgi için bkz [. Denetim kayıtlarındaki uygulama\@sharepoint kullanıcısı](#the-appsharepoint-user-in-audit-records).
 
 |Kolay ad|Işlem|Açıklama|
 |:-----|:-----|:-----|
@@ -805,9 +805,9 @@ Workplace Analytics, grupların kuruluşunuz genelinde nasıl işbirliği yaptı
 |Silinen sonuç|DeletedResult|Analist bir sorgu sonucunu sildi.|
 |İndirilen rapor|İndirilen Rapor|Analist bir sorgu sonuç dosyası indirdi.|
 |Yürütülen sorgu|ExecutedQuery|Analist bir sorgu çalıştırmıştı.|
-|Güncelleştirilmiş veri erişimi ayarı|UpdatedDataAccessSetting|Yönetici, veri erişim ayarlarını güncelleştirdi.|
-|Güncelleştirilmiş gizlilik ayarı|UpdatedPrivacySetting|Yönetici, gizlilik ayarlarını güncelleştirdi; örneğin, en düşük grup boyutu.|
-|Karşıya yüklenen kuruluş verileri|UploadedOrgData|Yönetici kurumsal veri dosyasını karşıya yükledi.|
+|Güncelleştirilmiş veri erişimi ayarı|UpdatedDataAccessSetting|Yönetici güncelleştirilmiş veri erişim ayarları.|
+|Güncelleştirilmiş gizlilik ayarı|UpdatedPrivacySetting|Yönetici güncelleştirilmiş gizlilik ayarları; örneğin, en düşük grup boyutu.|
+|Karşıya yüklenen kuruluş verileri|UploadedOrgData|Yönetici kurumsal veri dosyası.|
 |Oturum açan kullanıcı<sup>*</sup>| UserLoggedIn |Microsoft 365 kullanıcı hesabında oturum açan bir kullanıcı.|
 |Kullanıcı oturumu kapattı<sup>*</sup>| UserLoggedOff |Bir kullanıcı, Microsoft 365 kullanıcı hesabında oturumu kapatmış.
 |Araştırıldı|ViewedExplore|Analist görselleştirmeleri bir veya daha fazla Araştır sayfası sekmesinde görüntüledi.|
@@ -930,7 +930,7 @@ Bir Forms etkinliği bir ortak yazar veya anonim yanıtlayıcı tarafından ger�
 |Görüntülenen yanıt|ViewResponse|Form sahibi belirli bir yanıtı görüntüler. <br><br>Property ResponseId:string ve Property ResponderId:string hangi sonucun görüntülendiğini gösterir. <br><br>Anonim yanıtlayıcı için ResponderId özelliği null olur.|
 |Özet bağlantısı oluşturuldu|GetSummaryLink|Form sahibi, sonuçları paylaşmak için özet sonuçlar bağlantısı oluşturur.|
 |Silinen özet bağlantısı|DeleteSummaryLink|Form sahibi özet sonuçları bağlantısını siler.|
-|Form kimlik avı durumu güncelleştirildi|UpdatePhishingStatus|Bu olay, iç güvenlik durumunun ayrıntılı değeri değiştirildiğinde, bunun son güvenlik durumunu değiştirip değiştirmediğine bakılmaksızın günlüğe kaydedilir (örneğin, form artık Kapalı veya Açık durumdadır). Bu, son güvenlik durumu değişikliği olmadan yinelenen olaylar görebileceğiniz anlamına gelir. Bu olayın olası durum değerleri şunlardır:<br/>- Aşağı Al <br/>- Yönetici tarafından Indir <br/>- Yönetici Engeli Kaldırıldı <br/>- Otomatik Engellendi <br/>- Otomatik Engeli Kaldırıldı <br/>- Müşteri Tarafından Bildirilen <br/>- Bildirilen Müşteriyi Sıfırla|
+|Form kimlik avı durumu güncelleştirildi|UpdatePhishingStatus|Bu olay, iç güvenlik durumunun ayrıntılı değeri değiştirildiğinde, bunun son güvenlik durumunu değiştirip değiştirmediğine bakılmaksızın günlüğe kaydedilir (örneğin, form artık Kapalı veya Açık durumdadır). Bu, son güvenlik durumu değişikliği olmadan yinelenen olaylar görebileceğiniz anlamına gelir. Bu olayın olası durum değerleri şunlardır:<br/>- Aşağı Al <br/>- Yönetici <br/>- Yönetici Engeli Kaldırıldı <br/>- Otomatik Engellendi <br/>- Otomatik Engeli Kaldırıldı <br/>- Müşteri Tarafından Bildirilen <br/>- Bildirilen Müşteriyi Sıfırla|
 |Kullanıcı kimlik avı durumu güncelleştirildi|UpdateUserPhishingStatus|Bu olay, kullanıcı güvenlik durumu değeri her değiştirildiğinde günlüğe kaydedilir. Denetim kaydındaki kullanıcı durumunun değeri, Kullanıcı Microsoft Online güvenlik ekibi tarafından indirilmiş bir kimlik avı formu oluşturduğunda **Kimlik Avı Olarak Onaylandı şeklindedir** . Yönetici kullanıcının engellemesini kaldırırsa, kullanıcının durumunun değeri **Normal Kullanıcı Olarak Sıfırla olarak** ayarlanır.|
 |Gönderilmiş Formlar Pro daveti|ProInvitation|Kullanıcı bir Pro deneme sürümünü etkinleştirmek için tıklar.|
 |Güncelleştirilmiş form ayarı<sup>*</sup> |UpdateFormSetting|Form sahibi bir veya birden çok form ayarlarını güncelleştirir. <br><br>FormSettingName:string özelliği, güncelleştirilmiş hassas ayarların adını gösterir. NewFormSettings:string özelliği, güncelleştirilmiş ayarların adını ve yeni değerini gösterir. thankYouMessageContainsLink:boolean özelliği, güncelleştirilmiş teşekkür iletisinin bir URL bağlantısı içerdiğini gösterir.|
@@ -1024,8 +1024,8 @@ Aşağıdaki tabloda, myAnalytics'teki Microsoft 365 denetim günlüğüne kayde
 
 |**Kolay ad**|**Işlem**|**Açıklama**|
 |:-----|:-----|:-----|
-|Kuruluş MyAnalytics ayarları güncelleştirildi|UpdatedOrganizationMyAnalyticsSettings|Yönetici, MyAnalytics için kuruluş düzeyi ayarlarını güncelleştirir. |
-|Kullanıcı MyAnalytics ayarları güncelleştirildi|UpdatedUserMyAnalyticsSettings|Yönetici, MyAnalytics için kullanıcı ayarlarını güncelleştirir.|
+|Kuruluş MyAnalytics ayarları güncelleştirildi|UpdatedOrganizationMyAnalyticsSettings|Yönetici MyAnalytics için kuruluş düzeyi ayarlarını güncelleştirir. |
+|Kullanıcı MyAnalytics ayarları güncelleştirildi|UpdatedUserMyAnalyticsSettings|Yönetici MyAnalytics için kullanıcı ayarlarını güncelleştirir.|
 
 ### <a name="information-barriers-activities"></a>Bilgi engelleri etkinlikleri
 
@@ -1064,7 +1064,7 @@ Aşağıdaki tabloda, Microsoft 365 denetim günlüğüne kaydedilen kullanım r
 
 |**Kolay ad**|**Işlem**|**Açıklama**|
 |:-----|:-----|:-----|
-|Kullanım raporu gizlilik ayarları güncelleştirildi|UpdateUsageReportsPrivacySetting|Yönetici kullanım raporları için gizlilik ayarlarını güncelleştirdi. |
+|Kullanım raporu gizlilik ayarları güncelleştirildi|UpdateUsageReportsPrivacySetting|Yönetici kullanım raporları için güncelleştirilmiş gizlilik ayarları. |
 
 ### <a name="exchange-admin-audit-log"></a>yönetici denetim günlüğünü Exchange
 
@@ -1130,7 +1130,13 @@ Evet. Office 365 Yönetim Etkinliği API'si, denetim günlüklerini program arac
 
 **Güvenlik ve uyumluluk portalını veya Office 365 Yönetim Etkinliği API'sini kullanmak dışında denetim günlüklerini almanın başka yolları var mı?**
 
-Hayır. Denetim hizmetinden veri almanın tek iki yolu bunlardır.
+Evet, aşağıdaki yöntemleri kullanarak denetim günlüklerini alabilirsiniz:
+
+- [Office 365 Yönetim Etkinliği API'si](/office/office-365-management-api/office-365-management-activity-api-reference).
+
+- Microsoft Purview uyumluluk portalı [denetim günlüğü arama aracı](search-the-audit-log-in-security-and-compliance.md).
+
+- Exchange Online PowerShell'de [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog) cmdlet'i.
 
 **Denetim günlüklerini yakalamak istediğim her hizmette denetimi tek tek etkinleştirmem gerekiyor mu?**
 

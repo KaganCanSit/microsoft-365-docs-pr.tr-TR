@@ -1,5 +1,5 @@
 ---
-title: MRS hizmet uyarıları
+title: MRS hizmeti uyarıları
 ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
@@ -15,44 +15,44 @@ ms.collection:
 - Strat_O365_Enterprise
 f1.keywords:
 - NOCSH
-description: Kurumdaki posta kutusu geçiş isteklerinde gecikmeleri izlemek için posta kutusu geçiş hizmeti uyarılarını kullanın.
-ms.openlocfilehash: 6b4b618bae602c7c06b2d6371e39cc865d0a3407
-ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
+description: Kuruluşunuzdaki posta kutusu geçiş isteklerindeki gecikmeleri izlemek için posta kutusu geçiş hizmeti önerilerini kullanın.
+ms.openlocfilehash: fe6f60b75fb7d27781d442faf82ff981ac54808a
+ms.sourcegitcommit: aff1732dfa21e9283b173d8e5ca5bcbeeaaa26d8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64567994"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "65810747"
 ---
-# <a name="service-alerts-for-mrs-source-delays-in-exchange-online-monitoring"></a>Sistem izlemesinde MRS kaynak gecikmeleri için Exchange Online uyarıları
+# <a name="service-advisories-for-mrs-source-delays-in-exchange-online-monitoring"></a>Exchange Online izlemedeki MRS kaynak gecikmeleri için hizmet önerileri
 
-Posta Kutusu Çoğaltma Hizmeti (MRS) kaynak gecikme hizmeti uyarıları, kiracı tarafında (geçiş kaynağı) yer alan ve kiracı tarafındaki (geçiş kaynağı) posta kutusu geçişlerini geciktiren depolama kısıtlamaları veya yüksek işlemcili kullanım sorunları hakkında sizi Microsoft 365 sağlar. Bu hizmet uyarıları, bu sorunları çözmenize yardımcı olacak Microsoft kaynaklarının bağlantılarını da içerir.
+Posta Kutusu Çoğaltma Hizmeti (MRS) kaynak gecikme hizmeti önerileri, kiracı tarafında (geçiş kaynağı) Microsoft 365 kuruluşunuzda posta kutusu geçişlerini geciktirebilecek depolama sınırlamaları veya yüksek işlemci kullanımı sorunları hakkında sizi bilgilendirmektedir. Bu hizmet önerileri, bu sorunları çözmenize yardımcı olmak için Microsoft kaynaklarına bağlantılar da içerir.
 
-Bu hizmet uyarıları aşağıdaki Microsoft 365 yönetim merkezi. Bu hizmet uyarılarını görüntülemek için Durum'a  > <a href="https://go.microsoft.com/fwlink/p/?linkid=842900" target="_blank">**Hizmet durumu**</a> >  **Exchange Online** ardından Etkin sorunlar **sekmesine** tıklayın.
+Bu hizmet önerileri Microsoft 365 yönetim merkezi görüntülenir. Bu hizmet önerilerini görüntülemek için **Sistem Durumu** >  <a href="https://go.microsoft.com/fwlink/p/?linkid=842900" target="_blank">**Hizmet durumu Exchange Online'na**</a> >  gidin ve **Etkin sorunlar** sekmesine tıklayın.
 
-## <a name="what-do-these-service-alerts-indicate"></a>Bu hizmet uyarıları neleri gösteriyor?
+## <a name="what-do-these-service-advisories-indicate"></a>Bu hizmet önerileri neleri gösteriyor?
 
-Bu hizmet uyarısı, kurumdaki posta kutusu geçişleri için olası gecikmeler konusunda sizi bilgilir. Bu, ormanlar arası geçişleri, ekleme geçişlerini ve işe kapatma geçişlerini içerir. Hizmet uyarısı, kurumdaki geçerli geçişler hakkında bilgi içeren bir tablo içerir. Geçiş gecikmeleri hakkında bilgi edinen bir tablo örneği aşağıda verilmektedir.
+Bu hizmet önerisi, kuruluşunuzdaki posta kutusu geçişlerinde olası gecikmeler konusunda sizi bilgilendirmektedir. Buna ormanlar arası geçişler, ekleme geçişleri ve çıkarma geçişleri dahildir. Hizmet önerisi, kuruluşunuzdaki geçerli geçişler hakkında bilgi içeren bir tablo içerir. Geçiş gecikmeleri hakkında bilgi içeren bir tablo örneği aşağıda verilmiştir.
 
-| BatchName | ExchangeGuid | RequestGuid | DelayReason |QueuedHours | DelayInHours | SourceServer | RemoteDatabaseName |
+| BatchGuid | ExchangeGuid | RequestGuid | DelayReason |QueuedHours | DelayInHours | Sourceserver | RemoteDatabaseName |
 |:---------|:---------|:---------|:---------|:---------|:---------|:---------|:---------|
-|MRS Geçişi|246c21f7-ca3c-4bba-ab5d-23456558c52a|3d7fab16-7d8e-4c81-a849-e0795054292a|DiskLatency|35.2|27.3|RD1GBL01EXCH003|GBL01EDAG001-db002|
-|MRS Kiracı İzleme|21e9a608-78c3-44ef-a4dd-d5e7222aae82|9974aeb4-2aa4-4a2c-aeb6-d94d78cc25c9|DiskLatency|0.4|0.9|RD1GBL01EXCH010|GBL01EDAG010-db003|
+|12345678-1234-1234-1234-1234567891011|246c21f7-ca3c-4bba-ab5d-23456558c52a|3d7fab16-7d8e-4c81-a849-e0795054292a|DiskLatency|35.2|27.3|RD1GBL01EXCH003|GBL01EDAG001-db002|
+|87654321-4321-4321-4321-1101987654321|21e9a608-78c3-44ef-a4dd-d5e7222aae82|9974aeb4-2aa4-4a2c-aeb6-d94d78cc25c9|DiskLatency|0.4|0.9|RD1GBL01EXCH010|GBL01EDAG010-db003|
 
-Aşağıdaki listede, önceki örnekteki her sütun açık başlığının bir örneği yer almaktadır.
+Aşağıdaki listede, önceki örnekteki her sütun açıklanmaktadır.
 
-- **BatchName**: Geçiş işinin benzersiz adı.
+- **BatchGuid**: Geçiş işi için benzersiz GUID.
 
-- **ExchangeGuid**: Geçirilirken kullanıcı posta kutusunun genel benzersiz tanımlayıcısı (GUID).
+- **ExchangeGuid**: Geçirilmekte olan kullanıcı posta kutusunun genel benzersiz tanımlayıcısı (GUID).
 
-- **İstekYinesi**: Geçiş isteğinin GUID'si.
+- **RequestGuid**: Geçiş isteğinin GUID'i.
 
 - **DelayReason**: Gecikmeli geçişin nedeni.
 
-- **Sırada Bekleme** Süresi: Geçişin sıraya alınan ve bekleyen süresi.
+- **QueueHours**: Geçişin kuyruğa alınıp bekleme süresi.
 
-- **DelayInHours**: Geçişin geciktirme süresi.
+- **DelayInHours**: Geçişin gecikme süresi.
 
-- **Kaynak Sunucusu**: Geçişin kaynaklandığı şirket içi sunucudur.
+- **SourceServer**: Geçişin kaynaklandığı şirket içi sunucu.
 
 - **RemoteDatabaseName**: Geçişin kaynaklandığı veritabanı adı.
 
@@ -60,12 +60,12 @@ Aşağıdaki listede, önceki örnekteki her sütun açık başlığının bir �
 
 MRS ve posta kutusu geçişleri hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 
-- [Posta kutusu posta kutusu Exchange](/exchange/recipients/mailbox-moves)
+- [posta kutusu Exchange](/exchange/recipients/mailbox-moves)
 
-- [Microsoft 365 performansını Office 365 en iyi yöntemleri uygulama ve yükseltme](/exchange/mailbox-migration/office-365-migration-best-practices)
+- [Geçiş performansını ve en iyi yöntemlerini Microsoft 365 ve Office 365](/exchange/mailbox-migration/office-365-migration-best-practices)
 
-- [Posta kutusu geçiş performansı çözümlemesi](https://techcommunity.microsoft.com/t5/exchange-team-blog/mailbox-migration-performance-analysis/ba-p/587134)
+- [Posta kutusu geçişi performans analizi](https://techcommunity.microsoft.com/t5/exchange-team-blog/mailbox-migration-performance-analysis/ba-p/587134)
 
 - [Yavaş geçiş sorunlarını giderme](https://techcommunity.microsoft.com/t5/exchange-team-blog/troubleshooting-slow-migrations/ba-p/1795706)
 
-- [Birden çok e-posta hesabını başka bir hesaba Microsoft 365](/exchange/mailbox-migration/mailbox-migration)
+- [Birden çok e-posta hesabını Microsoft 365 geçirmenin yolları](/exchange/mailbox-migration/mailbox-migration)

@@ -13,12 +13,12 @@ manager: laurawi
 audience: itpro
 ms.collection: m365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: ad69d525ac8cf105761286c59e8bce54d446ae8f
-ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
+ms.openlocfilehash: 043ee6cac3a7aa7408d949b4455fd90f7f6a66d0
+ms.sourcegitcommit: aff1732dfa21e9283b173d8e5ca5bcbeeaaa26d8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65599601"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "65810932"
 ---
 # <a name="plan-for-insider-risk-management"></a>İçeriden risk yönetimi planı
 
@@ -33,6 +33,8 @@ Insider risk yönetimi iş akışının kuruluşunuzun kuruluşunuzun değerleri
 <br>
 
 >[!VIDEO https://www.microsoft.com/videoplayer/embed/RE4OUXB]
+
+Kuruluşunuzdaki kullanıcıların veri risklerini en aza indirmeye yardımcı olmak için insider risk yönetimi ve iletişim uyumluluğunun birlikte nasıl çalıştığına ilişkin [Microsoft Mechanics videosunu](https://www.youtube.com/watch?v=Ynkfu8OF0wQ) inceleyin.
 
 ## <a name="work-with-stakeholders-in-your-organization"></a>Kuruluşunuzdaki paydaşlarla çalışma
 
@@ -57,7 +59,7 @@ Insider risk yönetimi ilkelerini ve uyarılarını nasıl yönetmek istediğini
 
 Insider risk yönetimiyle çalışırken bu rol grubu seçenekleri ve çözüm eylemleri arasından seçim yapacaksınız:
 
-|**Eylem**|**Insider Risk Management**|**Insider Risk Management Yöneticisi**|**İçeriden Risk Yönetimi Analistleri**|**İçeriden Risk Yönetimi Araştırmacıları**|**Insider Risk Management Denetçileri**|
+|**Eylem**|**Insider Risk Management**|**Insider Risk Management Yönetici**|**İçeriden Risk Yönetimi Analistleri**|**İçeriden Risk Yönetimi Araştırmacıları**|**Insider Risk Management Denetçileri**|
 |:----------|:--------------------------|:--------------------------------|:-----------------------------------|:----------------------------------------|:-----------------------------------|
 | İlkeleri ve ayarları yapılandırma | Evet | Evet | Hayır | Hayır | Hayır |
 | Analiz içgörülerine erişme | Evet | Evet | Evet | Hayır | Hayır |
@@ -68,7 +70,7 @@ Insider risk yönetimiyle çalışırken bu rol grubu seçenekleri ve çözüm e
 | Denetim günlüklerini görüntüleme & dışarı aktarma | Evet | Hayır | Hayır | Hayır | Evet |
 
 >[!IMPORTANT]
->*Insider Risk Management* veya *Insider Risk Management Yönetici* rol gruplarında (seçtiğiniz seçeneğe bağlı olarak) her zaman en az bir kullanıcınız olduğundan emin olun. Böylece, kuruluşunuzdan belirli kullanıcılar ayrıldığında insider risk yönetimi yapılandırmanız 'sıfır yönetici' senaryosuna girmez.
+>*Insider Risk Management* veya *Insider Risk Management Yönetici* rol gruplarında her zaman en az bir kullanıcınız olduğundan emin olun (seçtiğiniz seçeneğe bağlı olarak), kuruluşunuzdan ayrılan belirli kullanıcılar için insider risk yönetimi yapılandırmanızın 'sıfır yönetici' senaryosuna girmemesini sağlayın.
 
 Aşağıdaki rollerin üyeleri kullanıcıları insider risk yönetimi rol gruplarına atayabilir ve *Insider Risk Management Yönetici* rol grubuna dahil olan çözüm izinlerine sahip olabilir:
 

@@ -15,12 +15,12 @@ ms.collection:
 - m365-security-compliance
 - m365solution-insiderrisk
 - m365initiative-compliance
-ms.openlocfilehash: 86a56ec16f81eaa6b61a452829e65251b673cb78
-ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
+ms.openlocfilehash: 9b2897a242f7dbbf9af9c9f3b639c0b91623fa25
+ms.sourcegitcommit: aff1732dfa21e9283b173d8e5ca5bcbeeaaa26d8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65599265"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "65810626"
 ---
 # <a name="learn-about-insider-risk-management"></a>İçeriden risk yönetimi hakkında daha fazla bilgi edinme
 
@@ -43,6 +43,8 @@ Insider risk yönetiminin kuruluşunuzun kuruluşunuzun değerlerini, kültürü
 
 **Insider risk yönetimi iş akışı**:
 >[!VIDEO https://www.microsoft.com/videoplayer/embed/RE4OUXB]
+
+Kuruluşunuzdaki kullanıcıların veri risklerini en aza indirmeye yardımcı olmak için insider risk yönetimi ve iletişim uyumluluğunun birlikte nasıl çalıştığına ilişkin [Microsoft Mechanics videosunu](https://www.youtube.com/watch?v=Ynkfu8OF0wQ) inceleyin.
 
 > [!IMPORTANT]
 > Insider risk yönetimi şu anda coğrafi bölgelerde barındırılan kiracılarda ve Azure hizmet bağımlılıkları tarafından desteklenen ülkelerde kullanılabilir. Kuruluşunuzda insider risk yönetiminin desteklendiğini doğrulamak için bkz. [Ülkeye/bölgeye göre Azure bağımlılığı kullanılabilirliği](/troubleshoot/azure/general/dependency-availability-by-country).
@@ -110,7 +112,7 @@ Insider risk yönetimine hızlı bir şekilde başlamak için aşağıdaki ilke 
 Uyarılar, ilke koşullarıyla eşleşen risk göstergeleri tarafından otomatik olarak oluşturulur ve [Uyarılar panosunda](insider-risk-management-activities.md#alert-dashboard) görüntülenir. Bu pano, gözden geçirmesi, zaman içinde uyarıları açması ve kuruluşunuz için uyarı istatistiklerine ihtiyaç duyan tüm uyarıların hızlı bir görünümünü sağlar. Tüm ilke uyarıları, mevcut uyarıların ve eylem gerektiren yeni uyarıların durumunu hızla belirlemenize yardımcı olmak için aşağıdaki bilgilerle birlikte görüntülenir:
 
 - Durum
-- Önem
+- Önem derecesi
 - Algılanan süre
 - Durumda
 - Servis talebi durumu
