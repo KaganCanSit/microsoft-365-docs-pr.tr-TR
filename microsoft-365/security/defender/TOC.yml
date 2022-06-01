@@ -332,6 +332,12 @@
           items:
             - name: Genel Bakış
               href: defenderexpertsforhuntingprev.md
+        - name: Fidye yazılımı taktik defterleri
+          items:
+            - name: Microsoft 365 Defender ile insan tarafından işletilen fidye yazılımı saldırılarını algılama
+              href: playbook-detecting-ransomware-m365-defender.md
+            - name: Fidye yazılımı saldırılarına yanıt verme
+              href: playbook-responding-ransomware-m365-defender.md
     - name: Güvenlik işlemleri kılavuzu
       items:
         - name: Genel bakış
