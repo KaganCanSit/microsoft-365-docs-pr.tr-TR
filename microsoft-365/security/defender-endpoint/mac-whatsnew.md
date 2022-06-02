@@ -15,12 +15,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: reference
 ms.technology: mde
-ms.openlocfilehash: ec545bb38456b778b627c41994a1eb18ae665a86
-ms.sourcegitcommit: 2d870e06e87b10d9e8ec7a7a8381353bc3bc59c7
+ms.openlocfilehash: 82479a7ec1a0bfbd471fd15febc5c6077890d494
+ms.sourcegitcommit: 7ab324551afac4fd82abc015247371ebfe6ccac2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65349754"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65842335"
 ---
 # <a name="whats-new-in-microsoft-defender-for-endpoint-on-mac"></a>Mac'te Uç Nokta için Microsoft Defender'deki yenilikler
 
@@ -31,6 +31,12 @@ ms.locfileid: "65349754"
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+
+## <a name="1017018-20122042170180"></a>101.70.18 (20.122042.17018.0)
+
+- Yükleme paketinin bazen ürün güncelleştirmeleri sırasında süresiz olarak asılı kaldığı bir hata düzeltildi
+- Ürünün bazen karantina klasörünün içindeki dosyaları yanlış algıladığı bir hata düzeltildi
+- Performans iyileştirmeleri & diğer hata düzeltmeleri
 
 ## <a name="1016654-20122041166540"></a>101.66.54 (20.122041.16654.0)
 

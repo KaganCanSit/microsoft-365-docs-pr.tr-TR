@@ -1,5 +1,5 @@
 ---
-title: Exchange Online yönetici rolü hakkında
+title: Exchange Yöneticisi rolü hakkında
 f1.keywords:
 - NOCSH
 ms.author: efrene
@@ -21,21 +21,22 @@ search.appverid:
 - MOE150
 - GEA150
 ms.assetid: 097ae285-c4af-4319-9770-e2559d66e4c8
-description: Exchange Online yöneticileri kuruluşunuzun e-posta ve posta kutularını yönetir ve örneğin kullanıcının posta kutusunda silinen öğeleri kurtarır.
-ms.openlocfilehash: 048a435a515c4f88eb688a2cfaf13006e859741c
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+description: Exchange yöneticileri kuruluşunuzun e-posta ve posta kutularını yönetir ve örneğin kullanıcının posta kutusunda silinen öğeleri kurtarır.
+ms.openlocfilehash: 375e2d6a1bf08ab310da28233deaf5dbbbae9be7
+ms.sourcegitcommit: 7ab324551afac4fd82abc015247371ebfe6ccac2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65467108"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65842267"
 ---
-# <a name="about-the-exchange-online-admin-role"></a>Exchange Online yönetici rolü hakkında
+# <a name="about-the-exchange-administrator-role"></a>Exchange Yöneticisi rolü hakkında
 
-Microsoft 365 yönetmenize yardımcı olmak için, Exchange <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">yönetim merkezinden</a> kuruluşunuzun e-posta ve posta kutularını yönetmek için kullanıcılara [izinler atayabilirsiniz](assign-admin-roles.md). Bunu, bunları Exchange yönetici rolüne atayarak yaparsınız.
+Microsoft 365 yönetmenize yardımcı olmak için, Exchange <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">yönetim merkezinden</a> kuruluşunuzun e-posta ve posta kutularını yönetmek için kullanıcılara [izinler atayabilirsiniz](assign-admin-roles.md). Bunu, bunları Exchange Yöneticisi rolüne atayarak yaparsınız.
   
- **İpucu**: Birini Exchange yönetici rolüne atadığınızda, bu kişiyi Hizmet yöneticisi rolüne de atayın. Bu şekilde, Exchange Online hizmetinin durumu ve değişiklik ve yayın bildirimleri gibi önemli bilgileri Microsoft 365 yönetim merkezi görebilirler.
+> [!TIP]
+> Birini Exchange Yöneticisi rolüne atadığınızda, bu kişiyi Hizmet Desteği Yöneticisi rolüne atamanızı öneririz. Bu şekilde, Exchange Online hizmetinin durumu ve değişiklik ve yayın bildirimleri gibi önemli bilgileri Microsoft 365 yönetim merkezi görebilirler.
 
-Kullanıcıların Exchange yönetici rolüne atandığında gerçekleştirebilecekleri temel görevlerden bazıları şunlardır:
+Kullanıcıların Exchange Yöneticisi rolüne atandığında gerçekleştirebileceği bazı önemli görevler şunlardır:
   
 - [Recover deleted items in a user mailbox - Admin Help](/Exchange/recipients-in-exchange-online/manage-user-mailboxes/recover-deleted-messages)
 

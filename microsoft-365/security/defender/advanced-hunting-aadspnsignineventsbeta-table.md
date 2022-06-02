@@ -1,7 +1,6 @@
 ---
-title: Gelişmiş av şemasında AADSpnSignInEventsBeta tablosu
-description: Kullanıcın hizmet sorumlusu ve Azure Active Directory oturum açma olayları tablosuyla ilişkili bilgiler hakkında bilgi edinebilirsiniz.
-keywords: gelişmiş av, tehdit avı, siber tehdit avı, Microsoft 365 Defender, microsoft 365, m365, arama, sorgu, telemetri, şema başvurusu, kusto, tablo, sütun, veri türü, açıklama, UyarıBilgileri, uyarı, varlıklar, kanıt, dosya, IP adresi, cihaz, makine, kullanıcı, hesap, kimlik, AAD
+title: Gelişmiş tehdit avcılığı şemasında AADSpnSignInEventsBeta tablosu
+description: Azure Active Directory hizmet sorumlusu ve yönetilen kimlik oturum açma olayları tablosuyla ilişkili bilgiler hakkında bilgi edinin.
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.prod: m365-security
@@ -18,26 +17,26 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: 77cf2d7b74dfc4ccea88661642579f5244e14089
-ms.sourcegitcommit: dd6514ae173f1c821d4ec25298145df6cb232e2e
+ms.openlocfilehash: b1b9d6405abdddea42652cfd4c532df91eeb6b30
+ms.sourcegitcommit: 7ab324551afac4fd82abc015247371ebfe6ccac2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "63016321"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65842224"
 ---
 # <a name="aadspnsignineventsbeta"></a>AADSpnSignInEventsBeta
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 - Microsoft 365 Defender
 
 > [!IMPORTANT]
-> Tablo `AADSpnSignInEventsBeta` şu anda beta sürümündedir ve Azure Active Directory (AAD) oturum açma etkinliklerini takip etmek için kısa vadeli olarak sunulmaktadır. Müşterilerin bu tablo için Azure Active Directory Premium P2 toplamak ve görüntülemek için bir lisansa sahip ihtiyaçları vardır. Microsoft sonunda tüm oturum açma şema bilgilerini tabloya `IdentityLogonEvents` taşıtır.
+> Tablo `AADSpnSignInEventsBeta` şu anda beta sürümündedir ve Azure Active Directory (AAD) oturum açma olaylarında avlanmanıza olanak sağlamak için kısa süreli olarak sunulmaktadır. Müşterilerin bu tabloya yönelik etkinlikleri toplamak ve görüntülemek için Azure Active Directory Premium P2 lisansına sahip olması gerekir. Microsoft sonunda tüm oturum açma şeması bilgilerini tabloya `IdentityLogonEvents` taşıyacaktır.
 
-Gelişmiş `AADSpnSignInEventsBeta` arama şemasında yer alan tablo, hizmet sorumlusu Azure Active Directory ve yönetilen kimlik oturum açma bilgileri içerir. Oturum açma etkinlik raporları - önizlemede, farklı oturum [açma Azure Active Directory hakkında daha fazla bilgi edinsiniz](/azure/active-directory/reports-monitoring/concept-all-sign-ins).
+`AADSpnSignInEventsBeta` Gelişmiş tehdit avcılığı şemasındaki tablo, Azure Active Directory hizmet sorumlusu ve yönetilen kimlik oturum açma işlemleri hakkında bilgi içerir. Azure Active Directory [oturum açma etkinlik raporlarında (önizleme](/azure/active-directory/reports-monitoring/concept-all-sign-ins)) farklı oturum açma türleri hakkında daha fazla bilgi edinebilirsiniz.
 
-Tablodan bilgi dönüşen sorgular oluşturmak için bu başvuruyu kullanın.
+Tablodan bilgi döndüren sorgular oluşturmak için bu başvuruyu kullanın.
 
-Gelişmiş av şemasında yer alan diğer tablolar hakkında bilgi için bkz. [gelişmiş av başvurusu](/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting-reference).
+Gelişmiş tehdit avcılığı şemasındaki diğer tablolar hakkında bilgi için gelişmiş [avcılık başvurusuna](/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting-reference) bakın.
 
 <br>
 
@@ -45,30 +44,30 @@ Gelişmiş av şemasında yer alan diğer tablolar hakkında bilgi için bkz. [g
 
 |Sütun adı|Veri türü|Açıklama|
 |---|---|---|
-|`Timestamp`|`datetime`|Kaydın oluşturulma tarihi ve saati|
+|`Timestamp`|`datetime`|Kaydın oluşturulduğu tarih ve saat|
 |`Application`|`string`|Kaydedilen eylemi gerçekleştiren uygulama|
-|`ApplicationId`|`string`|Uygulamanın benzersiz tanımlayıcısı|
-|`IsManagedIdentity`|`boolean`|Oturum açmanın yönetilen kimlikle başlat olup olmadığını gösterir|
-|`ErrorCode`|`int`|Oturum açma hatası oluşursa, hata kodunu içerir. Belirli bir hata kodunun açıklamasını bulmak için, ziyaret edin <https://aka.ms/AADsigninsErrorCodes>.|
-|`CorrelationId`|`string`|Oturum açma olayı için benzersiz tanımlayıcı|
-|`ServicePrincipalName`|`string`|Oturum açma başlatan hizmet sorumlusun adı|
-|`ServicePrincipalId`|`string`|Oturum açma başlatan hizmet sorumlusuna özel tanımlayıcı|
+|`ApplicationId`|`string`|Uygulama için benzersiz tanımlayıcı|
+|`IsManagedIdentity`|`boolean`|Oturum açma işleminin yönetilen kimlik tarafından başlatılıp başlatılmadığını gösterir|
+|`ErrorCode`|`int`|Oturum açma hatası oluşursa hata kodunu içerir. Belirli bir hata kodunun açıklamasını bulmak için adresini ziyaret edin <https://aka.ms/AADsigninsErrorCodes>.|
+|`CorrelationId`|`string`|Oturum açma olayının benzersiz tanımlayıcısı|
+|`ServicePrincipalName`|`string`|Oturum açmayı başlatan hizmet sorumlusunun adı|
+|`ServicePrincipalId`|`string`|Oturum açmayı başlatan hizmet sorumlusunun benzersiz tanımlayıcısı|
 |`ResourceDisplayName`|`string`|Erişilen kaynağın görünen adı|
 |`ResourceId`|`string`|Erişilen kaynağın benzersiz tanımlayıcısı|
-|`ResourceTenantId`|`string`|Erişilen kaynağın kiracı benzersiz tanımlayıcısı|
+|`ResourceTenantId`|`string`|Erişilen kaynağın kiracısının benzersiz tanımlayıcısı|
 |`IPAddress`|`string`|Uç noktaya atanan ve ilgili ağ iletişimleri sırasında kullanılan IP adresi|
-|`Country`|`string`|İstemci IP adresinin coğrafi olarak bulunduğu ülkeyi gösteren iki harfli kod|
-|`State`|`string`|Varsa, oturum açmanın nerede olduğunu haber vere|
-|`City`|`string`|Hesap kullanıcıs 2007'nin bulunduğu şehir|
+|`Country`|`string`|İstemci IP adresinin coğrafi olarak konumlandırıldığı ülkeyi gösteren iki harfli kod|
+|`State`|`string`|Varsa oturum açma işleminin gerçekleştiği durum|
+|`City`|`string`|Hesap kullanıcısının bulunduğu şehir|
 |`Latitude`|`string`|Oturum açma konumunun kuzeyden güneye koordinatları|
 |`Longitude`|`string`|Oturum açma konumunun doğudan batıya koordinatları|
 |`RequestId`|`string`|İsteğin benzersiz tanımlayıcısı|
-|`ReportId`|`string`|Olay için benzersiz tanımlayıcı|
+|`ReportId`|`string`|Olayın benzersiz tanımlayıcısı|
 ||||
 
 ## <a name="related-articles"></a>İlgili makaleler
 
 - [AADSignInEventsBeta](./advanced-hunting-aadsignineventsbeta-table.md)
-- [Gelişmiş ava genel bakış](/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting-overview)
-- [Sorgu dilini öğrenme](/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting-query-language)
-- [Şemayı anlama](/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting-schema-reference)
+- [Gelişmiş avcılığa genel bakış](/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting-overview)
+- [Sorgu dilini öğrenin](/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting-query-language)
+- [Şemayı anlayın](/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting-schema-reference)
