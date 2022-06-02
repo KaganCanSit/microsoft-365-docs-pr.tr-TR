@@ -23,12 +23,12 @@ search.appverid:
 - BCS160
 - MET150
 description: Microsoft 365 oturum açın. İşletmenizi, uygulamanızı veya kampanyanızı e-postaya, verilere ve iletişime yönelik siber güvenlik tehditlerinden koruyun.
-ms.openlocfilehash: 4203abe638c15978ac4acd753fdeb6a83ba5920d
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: c0decc886b30ba63d67e7927c0655e1980a47a57
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65099861"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65839590"
 ---
 # <a name="sign-in-to-microsoft-365-business-premium"></a>Microsoft 365 İş Ekstra oturum açma
 
@@ -40,7 +40,7 @@ Kampanyalar için Microsoft 365 kaydolduysanız (veya Microsoft 365 İş Ekstra)
 
 2. Tarayıcıda konumundaki Microsoft 365 yönetim merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=837890" target="_blank">https://admin.microsoft.com</a>gidin.
 
-3. Kullanıcı adınızı ve parolanızı yazın. **Oturum Aç**'ı seçin.
+3. Kullanıcı adınızı ve parolanızı yazıp **Oturum aç'ı** seçin.
 
 4. Sayfanın sağ üst kısmında **Denetimde Önizleme'yi** bulun. [Kampanyanız için Korumayı artırma](m365-campaigns-security-overview.md) başlığında açıklanan tüm denetimleri kullanabilmek için **Önizleme açık'ı** seçin.
 
@@ -48,7 +48,7 @@ Kampanyalar için Microsoft 365 kaydolduysanız (veya Microsoft 365 İş Ekstra)
 
 Kampanyalar için Microsoft 365 (veya Microsoft 365 İş Ekstra) aboneliğinize eklenen kullanıcılar şu adımları izleyerek oturum açabilir:
 
-1. <a href="https://office.com" target="_blank">https://Office.com</a> adımına gidin.
+1. <a href="https://office.com" target="_blank">https://office.com</a> adımına gidin.
 
 2. Hesabın kullanıcı adını ve parolasını kullanarak oturum açın. Kullanıcılar, kullanıcı olarak eklendiklerinde almış olmaları gereken e-postada bu bilgilere sahip olur. E-postayı bulamıyorsa bkz. [E-posta daveti paylaştım ama kullanıcı e-postayı almadı](../admin/simplified-signup/admin-invite-business-standard.md#i-shared-an-email-invite-but-the-user-didnt-receive-the-email).
 

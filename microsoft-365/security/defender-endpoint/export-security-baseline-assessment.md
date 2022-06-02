@@ -15,12 +15,12 @@ ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
 ms.custom: api
-ms.openlocfilehash: 93a818789efee763a296d6a6c7cc501b1a7ffb37
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 5fd673f37dd35a83a714c0f3dd1c6ac3b0a049ca
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65418422"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65840080"
 ---
 # <a name="export-security-baselines-assessment-per-device"></a>Cihaz başına güvenlik temelleri değerlendirmesini dışarı aktarma
 
@@ -29,7 +29,7 @@ ms.locfileid: "65418422"
 **Şunlar için geçerlidir:**
 
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Microsoft Defender Güvenlik Açığı Yönetimi - Güncelleştirme](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender Güvenlik Açığı Yönetimi](../defender-vulnerability-management/index.yml)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Microsoft Defender Güvenlik Açığı Yönetimi mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.- Güncelleştirme](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)

@@ -1,7 +1,7 @@
 ---
 title: Yüklü yazılımı al
-description: Verilen cihaz kimliğiyle ilgili yüklü bir yazılım koleksiyonunu verir.
-keywords: api'ler, grafik api'leri, desteklenen api'ler, get, list, file, information, software inventory, cihaz başına yüklü yazılım, tehdit & güvenlik açığı yönetimi api'si, Uç nokta için Microsoft Defender tvm api
+description: Belirli bir cihaz kimliğiyle ilgili yüklü yazılım koleksiyonunu alır.
+keywords: apis, graph api, desteklenen API'ler, get, list, file, information, software inventory, installed software per device, threat & güvenlik açığı yönetimi API, Uç Nokta için Microsoft Defender tvm api
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,22 +15,23 @@ ms.collection: M365-security-compliance
 ms.topic: article
 MS.technology: mde
 ms.custom: api
-ms.openlocfilehash: a853a346b26d66708f81a1b8479cb7066c29745a
-ms.sourcegitcommit: c11d4a2b9cb891ba22e16a96cb9d6389f6482459
+ms.openlocfilehash: 97aa4a668306c4790dcd42c046ba4bf3a04bcf51
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "62997114"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65840419"
 ---
 # <a name="get-installed-software"></a>Yüklü yazılımı al
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender Güvenlik Açığı Yönetimi](../defender-vulnerability-management/index.yml)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
@@ -38,16 +39,16 @@ ms.locfileid: "62997114"
 
 [!include[Prerelease information](../../includes/prerelease.md)]
 
-Verilen cihaz kimliğiyle ilgili yüklü bir yazılım koleksiyonunu verir.
+Belirli bir cihaz kimliğiyle ilgili yüklü yazılım koleksiyonunu alır.
 
 ## <a name="permissions"></a>İzinler
 
-Bu API'yi çağrı yapmak için aşağıdaki izinlerden biri gerekir. İzinleri seçme de dahil olmak üzere daha fazla bilgi edinmek için bkz. Uç Nokta API'leri için [Microsoft Defender'ı kullanma](apis-intro.md)
+Bu API'yi çağırmak için aşağıdaki izinlerden biri gereklidir. İzinlerin nasıl seçileceği de dahil olmak üzere daha fazla bilgi edinmek için bkz[. Uç Nokta için Microsoft Defender API'leri kullanma](apis-intro.md)
 
-İzin türü|İzin|İzin görünen adı
+İzin türü|Izni|İzin görünen adı
 :---|:---|:---
-Uygulama |Software.Read.All|'Tehdit ve Güvenlik Açığı Yönetimi Yazılımı bilgilerini okuma'
-Temsilcili (iş veya okul hesabı)|Software.Read|'Tehdit ve Güvenlik Açığı Yönetimi Yazılımı bilgilerini okuma'
+Uygulama |Software.Read.All|'Tehdit ve Güvenlik Açığı Yönetim Yazılımı bilgilerini okuyun'
+Temsilci (iş veya okul hesabı)|Software.Read|'Tehdit ve Güvenlik Açığı Yönetim Yazılımı bilgilerini okuyun'
 
 ## <a name="http-request"></a>HTTP isteği
 
@@ -55,7 +56,7 @@ Temsilcili (iş veya okul hesabı)|Software.Read|'Tehdit ve Güvenlik Açığı 
 GET /api/machines/{machineId}/software
 ```
 
-## <a name="request-headers"></a>Üstbilgi isteği
+## <a name="request-headers"></a>İstek üst bilgileri
 
 Name|Tür|Açıklama
 :---|:---|:---
@@ -67,13 +68,13 @@ Boş
 
 ## <a name="response"></a>Yanıt
 
-Başarılı olursa, bu yöntem gövdesinde yüklü yazılım bilgileriyle birlikte 200 Tamam döndürür.
+Başarılı olursa, bu yöntem gövdede yüklü yazılım bilgileriyle 200 Tamam döndürür.
 
 ## <a name="example"></a>Örnek
 
 ### <a name="request-example"></a>İstek örneği
 
-burada isteğin bir örneği ve sağlanmaktadır.
+burada isteğin bir örneği verilmiştir.
 
 ```http
 GET https://api.securitycenter.microsoft.com/api/machines/ac233fa6208e1579620bf44207c4006ed7cc4501/software
@@ -81,7 +82,7 @@ GET https://api.securitycenter.microsoft.com/api/machines/ac233fa6208e1579620bf4
 
 ### <a name="response-example"></a>Yanıt örneği
 
-Yanıtın bir örneği:
+Yanıtın bir örneği aşağıda verilmiştir.
 
 ```json
 {

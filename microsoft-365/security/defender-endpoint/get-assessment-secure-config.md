@@ -1,7 +1,7 @@
 ---
-title: Cihaz başına güvenli yapılandırma değerlendirmesini dışarı aktarma
+title: Cihaz başına güvenli yapılandırma değerlendirmelerini dışarı aktarma
 description: DeviceId, ConfigurationId'nin her benzersiz bileşimi için bir girdi döndürür.
-keywords: api, api'ler, dışarı aktarma değerlendirmesi, cihaz değerlendirme başına güvenlik açığı değerlendirmesi raporu, cihaz güvenlik açığı değerlendirmesi raporu, cihaz güvenlik açığı raporu, güvenli yapılandırma değerlendirmesi, güvenli yapılandırma raporu, yazılım açıkları değerlendirmesi, yazılım güvenlik açığı raporu, makineye göre güvenlik açığı raporu,
+keywords: api, API'ler, dışarı aktarma değerlendirmesi, cihaz başına değerlendirme, güvenlik açığı değerlendirme raporu, cihaz güvenlik açığı değerlendirmesi, cihaz güvenlik açığı raporu, güvenli yapılandırma değerlendirmesi, güvenli yapılandırma raporu, yazılım güvenlik açıkları değerlendirmesi, yazılım güvenlik açığı raporu, makineye göre güvenlik açığı raporu,
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,61 +15,62 @@ ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
 ms.custom: api
-ms.openlocfilehash: 2fc9870871641bb7239a6dcdcdf9f54334726384
-ms.sourcegitcommit: dd6514ae173f1c821d4ec25298145df6cb232e2e
+ms.openlocfilehash: 6d706dc8552490b7705cc23fca4751f810211d47
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "63014059"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65839316"
 ---
-# <a name="export-secure-configuration-assessment-per-device"></a>Cihaz başına güvenli yapılandırma değerlendirmesini dışarı aktarma
+# <a name="export-secure-configuration-assessment-per-device"></a>Cihaz başına güvenli yapılandırma değerlendirmelerini dışarı aktarma
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender Güvenlik Açığı Yönetimi](../defender-vulnerability-management/index.yml)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-Cihaz başına tüm yapılandırmaları ve bunların durumunu verir.
+Tüm yapılandırmaları ve bunların durumunu cihaz başına temel alarak döndürür.
 
-Farklı türde veriler almak için farklı API çağrıları vardır. Veri miktarı büyük olduğundan, alınanın iki yolu vardır:
+Farklı veri türlerini almak için farklı API çağrıları vardır. Veri miktarı büyük olabileceğinden, alınabilmesinin iki yolu vardır:
 
-- [Güvenli yapılandırma değerlendirme **JSON yanıtını dışarı**](#1-export-secure-configuration-assessment-json-response) aktarma: API, Json yanıtları olarak tüm verileri kuruluşa çeker. Bu yöntem, _100 K'den az cihaza sahip küçük kuruluşlar için en iyisidir_. Yanıt sayfalandı, dolayısıyla sonraki sonuçları getirmek için \@yanıttan odata.nextLink alanını kullanabilirsiniz.
+- [Güvenli yapılandırma değerlendirmesi **JSON yanıtını** dışarı aktarma](#1-export-secure-configuration-assessment-json-response): API, kuruluşunuzdaki tüm verileri Json yanıtları olarak çeker. Bu yöntem, _100 K'den az cihazı olan küçük kuruluşlar_ için en iyisidir. Yanıt sayfalandırılır, böylece yanıttan \@odata.nextLink alanını kullanarak sonraki sonuçları getirebilirsiniz.
 
-- [Dosyalar aracılığıyla güvenli yapılandırma **değerlendirmesini dışarı aktarma**](#2-export-secure-configuration-assessment-via-files): Bu API çözümü, daha fazla miktarda verinin daha hızlı ve güvenilir bir şekilde çekmesini sağlar. Bu nedenle, 100 K'den fazla cihazı olan büyük kuruluşlar için önerilir. Bu API, kuruluşta yer alan tüm verileri dosya indir olarak çeker. Yanıt, Azure Veri Hizmetleri'nden tüm verileri indirmek için URL'leri Depolama. Bu API, Azure'dan tüm verilerinizi aşağıdaki gibi Depolama sağlar:
+- [**Dosyalar aracılığıyla** güvenli yapılandırma değerlendirmesini dışarı aktarma](#2-export-secure-configuration-assessment-via-files): Bu API çözümü, daha büyük miktarlardaki verilerin daha hızlı ve daha güvenilir bir şekilde çekilmesini sağlar. Bu nedenle, 100 K'den fazla cihazı olan büyük kuruluşlar için önerilir. Bu API, kuruluşunuzdaki tüm verileri indirme dosyaları olarak çeker. Yanıt, Azure Depolama'dan tüm verileri indirmek için URL'ler içerir. Bu API, Azure Depolama'dan tüm verilerinizi aşağıdaki gibi indirmenizi sağlar:
 
-  - Tüm kuruluş verilerinizle birlikte indirme URL'lerinin listesini almak için API'yi arayın.
+  - Tüm kuruluş verilerinizi içeren indirme URL'lerinin listesini almak için API'yi çağırın.
 
-  - İndirme URL'lerini kullanarak tüm dosyaları indirin ve verileri like gibi işin.
+  - İndirme URL'lerini kullanarak tüm dosyaları indirin ve verileri istediğiniz gibi işleyin.
 
-Toplanan veriler ( _JSON yanıtı_ kullanılarak veya dosyalar _yoluyla), geçerli_ durumunun geçerli anlık görüntüsü olur ve tarihi veriler içermez. Tarihi verileri toplamak için, müşterilerin verileri kendi veri depolamalarına kaydetmeleri gerekir.
+Toplanan veriler ( _JSON yanıtı_ veya _dosyalar aracılığıyla_) geçerli durum anlık görüntüsüdür ve geçmiş verileri içermez. Geçmiş verileri toplamak için müşterilerin verileri kendi veri depolamalarına kaydetmeleri gerekir.
 
 > [!NOTE]
-> Aksi belirtilmedikçe, listelenen tüm dışarı aktarma değerlendirme yöntemleri tam dışarı **** aktarma ve **_cihaza göre_** (cihaz başına da **_adlandırılır) gösterilir_**.
+> Aksi belirtilmedikçe, listelenen tüm dışarı aktarma değerlendirme yöntemleri **_tam dışarı aktarma_** ve **_cihaza göredir_** ( **_cihaz başına_** olarak da adlandırılır).
 
-## <a name="1-export-secure-configuration-assessment-json-response"></a>1. Güvenli yapılandırma değerlendirmesini (JSON yanıtı) dışarı aktarma
+## <a name="1-export-secure-configuration-assessment-json-response"></a>1. Güvenli yapılandırma değerlendirmeyi dışarı aktarma (JSON yanıtı)
 
 ### <a name="11-api-method-description"></a>1.1 API yöntemi açıklaması
 
-Bu API yanıtı, belirtilen cihazlarınız için Güvenli Yapılandırma Değerlendirmesi'ne sahiptir ve DeviceId, ConfigurationId'nin her benzersiz bileşimine bir giriş döndürür.
+Bu API yanıtı, kullanıma sunulan cihazlarınızda Güvenli Yapılandırma Değerlendirmesi'ni içerir ve DeviceId, ConfigurationId'nin her benzersiz bileşimi için bir giriş döndürür.
 
-#### <a name="111-limitations"></a>1.1.1 Sınırlamalar
+#### <a name="111-limitations"></a>1.1.1 Sınırlamaları
 
-- En büyük sayfa boyutu 200.000'tir.
+- En büyük sayfa boyutu 200.000'dir.
 
-- Bu API için fiyat sınırlamaları dakikada 30 çağrı ve saatte 1000 çağrıdır.
+- Bu API için hız sınırlamaları dakikada 30 çağrı ve saatte 1000 çağrıdır.
 
 ### <a name="12-permissions"></a>1.2 İzinler
 
-Bu API'yi çağrı yapmak için aşağıdaki izinlerden biri gerekir. İzinleri seçme de dahil olmak üzere daha fazla bilgi edinmek için bkz [. Uç nokta API'leri için Microsoft Defender'ı](apis-intro.md) kullanma.
+Bu API'yi çağırmak için aşağıdaki izinlerden biri gereklidir. İzinlerin nasıl seçileceği de dahil olmak üzere daha fazla bilgi edinmek için ayrıntılar için bkz. [Uç Nokta için Microsoft Defender API'lerini kullanma](apis-intro.md).
 
-İzin türü|İzin|İzin görünen adı
+İzin türü|Izni|İzin görünen adı
 ---|---|---
-Uygulama|Güvenlik Açığı.Read.All|\'Tehdit ve Güvenlik Açığı Yönetimi güvenlik açığı bilgilerini okuma\'
-Temsilcili (iş veya okul hesabı)|Güvenlik Açığı.Okuma|\'Tehdit ve Güvenlik Açığı Yönetimi güvenlik açığı bilgilerini okuma\'
+Uygulama|Vulnerability.Read.All|\'Tehdit ve Güvenlik Açığı Yönetimi güvenlik açığı bilgilerini okuyun\'
+Temsilci (iş veya okul hesabı)|Vulnerability.Read|\'Tehdit ve Güvenlik Açığı Yönetimi güvenlik açığı bilgilerini okuyun\'
 
 ### <a name="13-url"></a>1.3 URL
 
@@ -79,15 +80,15 @@ GET /api/machines/SecureConfigurationsAssessmentByMachine
 
 ### <a name="14-parameters"></a>1.4 Parametreler
 
-- pageSize \(default = 50.000\): Yanıtta sonuç sayısı.
-- \$top: Sonuç olarak sonuç sayısı \(odata.nextLink \@olarak dönmez ve bu nedenle tüm verileri çekmez\).
+- pageSize \(default = 50.000\): Yanıt olarak sonuç sayısı.
+- \$top: Döndürülecek \(sonuç sayısı odata.nextLink döndürmez \@ve bu nedenle tüm verileri\) çekmez.
 
-### <a name="15-properties"></a>1.5 Özellikler
+### <a name="15-properties"></a>1.5 Özellikleri
 
 > [!NOTE]
 >
-> - Aşağıdaki tabloda tanımlanan özellikler, özellik kimliğine göre alfabetik olarak listelenir. Bu API'yi çalıştıracaksanız, sonuçta elde edilen çıktının bu tabloda listelenen sırada döndürülecek olması gerekmez.
-> - Yanıtta bazı ek sütunlar döndürülebilirsiniz. Bu sütunlar geçicidir ve kaldırılabilir, lütfen yalnızca belgelenmiş sütunları kullanın.
+> - Aşağıdaki tabloda tanımlanan özellikler, özellik kimliğine göre alfabetik olarak listelenir. Bu API'yi çalıştırırken, sonuçta elde edilen çıktının bu tabloda listelenen sırayla döndürülmesi gerekmez.
+> - Yanıtta bazı ek sütunlar döndürülebilir. Bu sütunlar geçicidir ve kaldırılabilir, lütfen yalnızca belgelenmiş sütunları kullanın.
 
 <br>
 
@@ -95,20 +96,20 @@ GET /api/machines/SecureConfigurationsAssessmentByMachine
 
 Özellik (Kimlik)|Veri türü|Açıklama|Döndürülen değer örneği
 ---|---|---|---
-ConfigurationCategory|dize|Yapılandırmanın ait olduğu kategori veya gruplama: Uygulama, işletim sistemi, Ağ, Hesaplar, Güvenlik denetimleri|Güvenlik denetimleri
-ConfigurationId|dize|Belirli bir yapılandırma için benzersiz tanımlayıcı|scid-10000
-ConfigurationImpact|dize|Yapılandırmanın etkisini genel yapılandırma puanına göre derecelendirildi (1-10)|9
-ConfigurationName|dize|Yapılandırmanın görünen adı|Cihazları Uç Nokta için Microsoft Defender'a ekleme
-ConfigurationSubcategory|dize|Yapılandırmanın ait olduğu alt kategori veya alt grup. Bu özellik, birçok durumda belirli özellikleri veya özellikleri açıklar.|Cihazları Ekleme
-DeviceId|dize|Hizmette cihaz için benzersiz tanımlayıcı.|9eaf3a8b5962e0e6b1af9ec756664a9b823df2d1
-DeviceName|dize|Cihazın tam etki alanı adı (FQDN).|johnlaptop.europe.contoso.com
-IsApplicable|bool|Yapılandırmanın veya ilkenin uygun olup olmadığını gösterir|true
-IsCompliant|bool|Yapılandırmanın veya ilkenin düzgün yapılandırıldığından emin olun|false
-IsExpectedUserImpact|bool|Yapılandırmanın uygulanması kullanıcı üzerinde etki olup olmadığını gösterir|true
-OSPlatform|dize|Cihazda çalışan işletim sisteminin platformu. Bu, Windows 10 11 gibi aynı aile içindeki çeşitlemeler de dahil olmak Windows 10 Windows gösterir. Ayrıntılar için TVm'de desteklenen işletim sistemleri ve platformlar'a bakın.|Windows10 ve Windows 11
-RbacGroupName|dize|Rol tabanlı erişim denetimi (RBAC) grubu. Bu cihaz hiçbir RBAC grubuna atanmamışsa, değer "Atanmamış" olur. Kuruluş hiçbir RBAC grubu içermese bile, değer "Yok" olur.|Sunucular
-RecommendationReference|dize|Bu yazılımla ilgili öneri kimliğine başvuru.|sca-_-scid-20000
-Zaman damgası|dize|Yapılandırmanın cihazda en son ne zaman görüldü?|2020-11-03 10:13:34.8476880
+ConfigurationCategory|Dize|Yapılandırmanın ait olduğu kategori veya gruplandırma: Uygulama, İşletim Sistemi, Ağ, Hesaplar, Güvenlik denetimleri|Güvenlik denetimleri
+ConfigurationId|Dize|Belirli bir yapılandırma için benzersiz tanımlayıcı|scid-10000
+ConfigurationImpact|Dize|Yapılandırmanın genel yapılandırma puanına etkisi derecelendirilmiştir (1-10)|9
+Configurationname|Dize|Yapılandırmanın görünen adı|Cihazları Uç Nokta için Microsoft Defender ekleme
+ConfigurationSubcategory|Dize|Yapılandırmanın ait olduğu alt kategori veya alt gruplama. Çoğu durumda bu, belirli özellikleri veya özellikleri açıklar.|Cihazları Ekleme
+Deviceıd|Dize|Hizmetteki cihaz için benzersiz tanımlayıcı.|9eaf3a8b5962e0e6b1af9ec756664a9b823df2d1
+DeviceName|Dize|Cihazın tam etki alanı adı (FQDN).|johnlaptop.europe.contoso.com
+IsApplicable|Bool|Yapılandırmanın veya ilkenin geçerli olup olmadığını gösterir|True
+IsCompliant|Bool|Yapılandırmanın veya ilkenin düzgün yapılandırılıp yapılandırılmadığını gösterir|False
+IsExpectedUserImpact|Bool|Yapılandırmanın uygulanıp uygulanmayacağının kullanıcı tarafından etkilenip etkilenmeyeceğini gösterir|True
+OSPlatform|Dize|Cihazda çalışan işletim sisteminin platformu. Bu, aynı ailedeki Windows 10 ve Windows 11 gibi varyasyonlar da dahil olmak üzere belirli işletim sistemlerini gösterir. Ayrıntılar için bkz. tvm tarafından desteklenen işletim sistemleri ve platformlar.|Windows10 ve Windows 11
+RbacGroupName|Dize|Rol tabanlı erişim denetimi (RBAC) grubu. Bu cihaz herhangi bir RBAC grubuna atanmamışsa, değer "Atanmamış" olur. Kuruluş herhangi bir RBAC grubu içermiyorsa, değer "Yok" olur.|Sunucular
+RecommendationReference|Dize|Bu yazılımla ilgili öneri kimliğine başvuru.|sca-_-scid-20000
+Zaman damgası|Dize|Yapılandırmanın cihazda son görüldüğü zaman|2020-11-03 10:13:34.8476880
 |
 
 ### <a name="16-examples"></a>1.6 Örnekler
@@ -215,24 +216,24 @@ GET https://api.securitycenter.microsoft.com/api/machines/SecureConfigurationsAs
 }
 ```
 
-## <a name="2-export-secure-configuration-assessment-via-files"></a>2. Güvenli yapılandırma değerlendirmesini dışarı aktarma (dosyalar yoluyla)
+## <a name="2-export-secure-configuration-assessment-via-files"></a>2. Güvenli yapılandırma değerlendirmelerini dışarı aktarma (dosyalar aracılığıyla)
 
 ### <a name="21-api-method-description"></a>2.1 API yöntemi açıklaması
 
-Bu API yanıtı, belirtilen cihazlarınız için Güvenli Yapılandırma Değerlendirmesi'ne sahiptir ve DeviceId, ConfigurationId'nin her benzersiz bileşimine bir giriş döndürür.
+Bu API yanıtı, kullanıma sunulan cihazlarınızda Güvenli Yapılandırma Değerlendirmesi'ni içerir ve DeviceId, ConfigurationId'nin her benzersiz bileşimi için bir giriş döndürür.
 
-#### <a name="212-limitations"></a>2.1.2 Sınırlamalar
+#### <a name="212-limitations"></a>2.1.2 Sınırlamaları
 
-Bu API için fiyat sınırlamaları, dakikada 5 çağrı ve saatte 20 çağrıdır.
+Bu API için hız sınırlamaları dakikada 5 çağrı ve saatte 20 çağrıdır.
 
 ### <a name="22-permissions"></a>2.2 İzinler
 
-Bu API'yi çağrı yapmak için aşağıdaki izinlerden biri gerekir. İzinleri seçme de dahil olmak üzere daha fazla bilgi edinmek için bkz [. Uç nokta API'leri için Microsoft Defender'ı kullanma.](apis-intro.md)
+Bu API'yi çağırmak için aşağıdaki izinlerden biri gereklidir. İzinlerin nasıl seçileceği de dahil olmak üzere daha fazla bilgi edinmek [için ayrıntılar için bkz. Uç Nokta için Microsoft Defender API'lerini kullanma.](apis-intro.md)
 
-İzin türü|İzin|İzin görünen adı
+İzin türü|Izni|İzin görünen adı
 ---|---|---
-Uygulama|Güvenlik Açığı.Read.All|\'"Tehdit ve Güvenlik Açığı Yönetimi" güvenlik açığı bilgilerini okuma\'
-Temsilcili (iş veya okul hesabı)|Güvenlik Açığı.Okuma|\'"Tehdit ve Güvenlik Açığı Yönetimi" güvenlik açığı bilgilerini okuma\'
+Uygulama|Vulnerability.Read.All|\'"Tehdit ve Güvenlik Açığı Yönetimi" güvenlik açığı bilgilerini okuyun\'
+Temsilci (iş veya okul hesabı)|Vulnerability.Read|\'"Tehdit ve Güvenlik Açığı Yönetimi" güvenlik açığı bilgilerini okuyun\'
 
 ### <a name="23-url"></a>2.3 URL
 
@@ -240,17 +241,17 @@ Temsilcili (iş veya okul hesabı)|Güvenlik Açığı.Okuma|\'"Tehdit ve Güven
 GET /api/machines/SecureConfigurationsAssessmentExport
 ```
 
-### <a name="parameters"></a>Parametreler
+### <a name="parameters"></a>Parametre
 
-- sasValidSatır: İndirme URL'lerinin geçerli olduğu saat sayısı (En fazla 24 saat).
+- sasValidHours: İndirme URL'lerinin geçerli olacağı saat sayısı (En fazla 24 saat).
 
-### <a name="25-properties"></a>2.5 Özellikler
+### <a name="25-properties"></a>2.5 Özellikleri
 
 > [!NOTE]
 >
-> - Dosyalar çok satırlı Json & sıkıştırılmış sıkıştırılmış dosya biçimindedir.
-> - İndirme URL'leri yalnızca 3 saat geçerlidir; aksi takdirde parametreyi kullanabilirsiniz.
-> - Verilerinizin en yüksek indirme hızı için, verilerinizin bulunduğu Azure bölgesinden indirmeye emin olun.
+> - Dosyalar çok satırlı Json biçiminde gzip sıkıştırılmış &.
+> - İndirme URL'leri yalnızca 3 saat geçerlidir; aksi takdirde parametresini kullanabilirsiniz.
+> - Verilerinizin en yüksek indirme hızı için, verilerinizin bulunduğu Azure bölgesinden indirme yaptığınızdan emin olabilirsiniz.
 
 <br>
 
@@ -258,8 +259,8 @@ GET /api/machines/SecureConfigurationsAssessmentExport
 
 Özellik (Kimlik)|Veri türü|Açıklama|Döndürülen değer örneği
 ---|---|---|---
-Dosyaları dışarı aktarma|arraystring\[\]|Kuruluşun geçerli anlık görüntüsünü tutan dosyalar için indirme URL'lerinin listesi|["Https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...1", "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...2"]
-GeneratedTime|dize|Dışarı aktarmanın oluşturulma zamanı.|2021-05-20T08:00:00Z
+Dosyaları dışarı aktarma|dizi\[dizesi\]|Kuruluşun geçerli anlık görüntüsünü tutan dosyalar için indirme URL'lerinin listesi|["Https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...1", "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...2"]
+GeneratedTime|Dize|Dışarı aktarmanın oluşturulduğu zaman.|2021-05-20T08:00:00Z
 |
 
 ### <a name="26-examples"></a>2.6 Örnekler
@@ -287,10 +288,10 @@ GET https://api.securitycenter.microsoft.com/api/machines/SecureConfigurationsAs
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Cihaz başına değerlendirme yöntemlerini ve özelliklerini dışarı aktarma](get-assessment-methods-properties.md)
-- [Cihaz başına yazılım envanteri değerlendirmesini dışarı aktarma](get-assessment-software-inventory.md)
-- [Cihaz başına yazılım açıkları değerlendirmesini dışarı aktarma](get-assessment-software-vulnerabilities.md)
+- [Cihaz başına yazılım envanteri değerlendirmeyi dışarı aktarma](get-assessment-software-inventory.md)
+- [Cihaz başına yazılım güvenlik açıkları değerlendirmesi dışarı aktarma](get-assessment-software-vulnerabilities.md)
 
-Diğer ilgili
+Diğer ilgililer
 
 - [Risk tabanlı tehdit & güvenlik açığı yönetimi](next-gen-threat-and-vuln-mgt.md)
-- [Organizasyon güvenlik açıkları](tvm-weaknesses.md)
+- [Kuruluşunuzdaki güvenlik açıkları](tvm-weaknesses.md)

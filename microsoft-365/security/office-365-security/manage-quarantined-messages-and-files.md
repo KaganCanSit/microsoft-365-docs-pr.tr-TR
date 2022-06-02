@@ -19,16 +19,16 @@ ms.custom:
 description: Yöneticiler, Exchange Online Protection(EOP) içindeki tüm kullanıcılar için karantinaya alınan iletileri görüntülemeyi ve yönetmeyi öğrenebilir. Office 365 için Microsoft Defender sahip kuruluşlardaki yöneticiler, karantinaya alınan dosyaları SharePoint Online, OneDrive İş ve Microsoft Teams de yönetebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: df123916f5f15a8651ba8ad8dcbae95598afbfa8
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 3bd239231cc49684f8b07fb73f33265c9463bad4
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65418072"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65839809"
 ---
 # <a name="manage-quarantined-messages-and-files-as-an-admin-in-eop"></a>Karantinaya alınan iletileri ve dosyaları EOP'de yönetici olarak yönetme
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -195,7 +195,7 @@ Listeden karantinaya alınmış bir iletiyi seçtikten sonra, ayrıntılar açı
 
   - İletiyi aynı alıcıya birden çok kez yayımlayamazsınız.
   - Olası alıcılar listesinde yalnızca iletiyi almayan alıcılar görüntülenir.
-  - **Algılamayı geliştirmek için iletiyi Microsoft'a gönder (hatalı pozitif)** ve **Bu seçenekler gibi iletilere izin ver'i** yalnızca **Güvenlik Yöneticileri** rol grubunun üyeleri görebilir ve kullanabilir. 
+  - **Algılamayı geliştirmek için iletiyi Microsoft'a gönder (hatalı pozitif)** ve **Bu seçenekler gibi iletilere izin ver'i** yalnızca **Güvenlik Yöneticileri** rol grubunun üyeleri görebilir ve kullanabilir.
 
 - ![E-posta paylaş simgesi.](../../media/m365-cc-sc-share-email-icon.png) **E-posta paylaşma**: Görüntülenen açılır öğeye iletinin bir kopyasını almak için bir veya daha fazla alıcı ekleyin. İşiniz bittiğinde **Paylaş'a** tıklayın.
 

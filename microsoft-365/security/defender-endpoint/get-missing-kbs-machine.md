@@ -1,7 +1,7 @@
 ---
-title: Cihaz kimliğine göre eksik KB'leri al
-description: Cihaz kimliğine göre eksik güvenlik güncelleştirmelerini alınır
-keywords: api'ler, grafik api'si, desteklenen api'ler, get, list, file, information, device id, threat & güvenlik açığı yönetimi api, Endpoint tvm api için Microsoft Defender
+title: Cihaz kimliğine göre eksik KB'leri alma
+description: Cihaz kimliğine göre eksik güvenlik güncelleştirmelerini alır
+keywords: apis, graph api, desteklenen API'ler, get, list, file, information, device id, threat & güvenlik açığı yönetimi api, Uç Nokta için Microsoft Defender tvm api
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,27 +15,29 @@ ms.collection: M365-security-compliance
 ms.topic: article
 MS.technology: mde
 ms.custom: api
-ms.openlocfilehash: 639e8ea84bd2d7e919ceedaa7eae785da75734ed
-ms.sourcegitcommit: 348f3998a029a876a9dcc031f808e9e350804f22
+ms.openlocfilehash: 4a570851263b6a52193353e2c229e2df47b677e3
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "62996483"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65840331"
 ---
-# <a name="get-missing-kbs-by-device-id"></a>Cihaz kimliğine göre eksik KB'leri al
+# <a name="get-missing-kbs-by-device-id"></a>Cihaz kimliğine göre eksik KB'leri alma
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:** 
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+**Şunlar için geçerlidir:**
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender Güvenlik Açığı Yönetimi](../defender-vulnerability-management/index.yml)
+
+> Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
 [!include[Improve request performance](../../includes/improve-request-performance.md)]
 
-Cihaz kimliğine göre eksik KB'leri (güvenlik güncelleştirmeleri) verir
+Cihaz kimliğine göre eksik KB'leri (güvenlik güncelleştirmeleri) alır
 
 ## <a name="http-request"></a>HTTP isteği
 
@@ -44,11 +46,11 @@ GET /api/machines/{machineId}/getmissingkbs
 ```
 ## <a name="permissions"></a>İzinler
 
-Bu API'yi çağrı yapmak için aşağıdaki izin gereklidir. İzinleri seçme de dahil olmak üzere daha fazla bilgi edinmek için bkz. Uç Nokta API'leri için [Microsoft Defender'ı kullanma](apis-intro.md).
+Bu API'yi çağırmak için aşağıdaki izin gereklidir. İzinlerin nasıl seçileceği de dahil olmak üzere daha fazla bilgi için bkz. [Uç Nokta için Microsoft Defender API'leri kullanma](apis-intro.md).
 
-İzin türü | İzin | İzin görünen adı
+İzin türü | Izni | İzin görünen adı
 :---|:---|:---
-Uygulama | Software.Read.All | 'Tehdit ve Güvenlik Açığı Yönetimi Yazılımı bilgilerini okuma'
+Uygulama | Software.Read.All | 'Tehdit ve Güvenlik Açığı Yönetim Yazılımı bilgilerini okuyun'
 
 ## <a name="request-header"></a>İstek üst bilgisi
 
@@ -62,13 +64,13 @@ Boş
 
 ## <a name="response"></a>Yanıt
 
-Başarılı olursa, bu yöntem 200 Tamam döndürür ve belirtilen cihazın gövdesinde kb verileri eksik olur.
+Başarılı olursa, bu yöntem 200 Tamam döndürür ve belirtilen cihazda gövdede kb verileri eksiktir.
 
 ## <a name="example"></a>Örnek
 
-### <a name="request"></a>İstek
+### <a name="request"></a>Istek
 
-burada isteğin bir örneği ve sağlanmaktadır.
+burada isteğin bir örneği verilmiştir.
 
 ```http
 GET https://api.securitycenter.microsoft.com/api/machines/2339ad14a01bd0299afb93dfa2550136057bff96/getmissingkbs 
@@ -76,7 +78,7 @@ GET https://api.securitycenter.microsoft.com/api/machines/2339ad14a01bd0299afb93
 
 ### <a name="response"></a>Yanıt
 
-Yanıtın bir örneği:
+Yanıtın bir örneği aşağıda verilmiştir.
 
 
 ```json

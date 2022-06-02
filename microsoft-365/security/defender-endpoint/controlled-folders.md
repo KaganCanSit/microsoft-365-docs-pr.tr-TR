@@ -17,12 +17,12 @@ ms.technology: mde
 ms.topic: how-to
 ms.collection: m365-security-compliance
 ms.date: ''
-ms.openlocfilehash: 84304d120f5822d91adc99c86e2c22c0cfb6790c
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: 02017a614544cfb10eb43d375212fc7e37124ad3
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64789942"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65840397"
 ---
 # <a name="protect-important-folders-with-controlled-folder-access"></a>Denetimli klasör erişimiyle önemli klasörleri koruma
 
@@ -38,7 +38,7 @@ ms.locfileid: "64789942"
 - Windows
 
 
-> Uç Nokta için Defender'ı deneyimlemek mi istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
+> Uç nokta için Defender'i deneyimlemek ister misiniz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
 
 ## <a name="what-is-controlled-folder-access"></a>Denetimli klasör erişimi nedir?
 
@@ -47,7 +47,7 @@ Denetimli klasör erişimi değerli verilerinizi fidye yazılımı gibi kötü a
 > [!NOTE]
 > Betik altyapılarına güvenilmez ve denetimli korumalı klasörlere erişmelerine izin veremezsiniz. Örneğin, [sertifika ve dosya göstergeleriyle](/microsoft-365/security/defender-endpoint/indicator-certificates) izin verseniz bile PowerShell'e denetimli klasör erişimi tarafından güvenilmez.
 
-Denetimli klasör erişimi, her zamanki [uyarı araştırma senaryolarının](investigate-alerts.md) bir parçası olarak denetimli klasör erişimi olayları ve blokları hakkında ayrıntılı raporlama sağlayan [Pertahanan Microsoft untuk Titik Akhir](microsoft-defender-endpoint.md) ile en iyi şekilde çalışır.
+Denetimli klasör erişimi, her zamanki [uyarı araştırma senaryolarının](investigate-alerts.md) bir parçası olarak denetimli klasör erişimi olayları ve blokları hakkında ayrıntılı raporlama sağlayan [Uç Nokta için Microsoft Defender](microsoft-defender-endpoint.md) ile en iyi şekilde çalışır.
 
 > [!TIP]
 > Denetimli klasör erişim blokları [Uyarılar kuyruğunda](alerts-queue.md) uyarı oluşturmaz. Ancak, [gelişmiş tehdit avcılığı](advanced-hunting-overview.md) kullanırken veya [özel algılama kurallarıyla](custom-detection-rules.md) denetimli klasör erişim blokları hakkındaki bilgileri [cihaz zaman çizelgesi görünümünde](investigate-machines.md) görüntüleyebilirsiniz.
@@ -77,6 +77,8 @@ Denetimli klasör erişimi aşağıdaki Windows sürümlerinde desteklenir:
 
 - [Windows 10, sürüm 1709](/windows/whats-new/whats-new-windows-10-version-1709) ve üzeri
 - Windows 11
+- Windows 2012 R2
+- Windows 2016
 - [Windows Server 2019](/windows-server/get-started-19/whats-new-19)
 - Windows Server 2022
 
@@ -109,9 +111,9 @@ Denetimli klasör erişimi Microsoft Defender Virüsten Koruma [gerçek zamanlı
 
 ## <a name="review-controlled-folder-access-events-in-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalında denetimli klasör erişimi olaylarını gözden geçirme
 
-Uç Nokta için Defender, Microsoft 365 Defender portalında [uyarı araştırma senaryolarının](investigate-alerts.md) bir parçası olarak olaylara ve bloklara ayrıntılı raporlama sağlar; bkz. [Microsoft 365 Defender'de Pertahanan Microsoft untuk Titik Akhir](../defender/microsoft-365-security-center-mde.md).
+Uç Nokta için Defender, Microsoft 365 Defender portalındaki [uyarı araştırma senaryolarının](investigate-alerts.md) bir parçası olarak olaylara ve bloklara ayrıntılı raporlama sağlar; bkz. [Microsoft 365 Defender'da Uç Nokta için Microsoft Defender](../defender/microsoft-365-security-center-mde.md).
 
-[Gelişmiş tehdit avcılığı](advanced-hunting-overview.md) kullanarak Pertahanan Microsoft untuk Titik Akhir verileri sorgulayabilirsiniz. [Denetim modunu](audit-windows-defender.md) kullanıyorsanız, denetimli klasör erişim ayarlarının etkinleştirildiyse ortamınızı nasıl etkileyeceğini görmek için [gelişmiş avcılığı](advanced-hunting-overview.md) kullanabilirsiniz.
+[Gelişmiş tehdit avcılığı](advanced-hunting-overview.md) kullanarak Uç Nokta için Microsoft Defender verileri sorgulayabilirsiniz. [Denetim modunu](audit-windows-defender.md) kullanıyorsanız, denetimli klasör erişim ayarlarının etkinleştirildiyse ortamınızı nasıl etkileyeceğini görmek için [gelişmiş avcılığı](advanced-hunting-overview.md) kullanabilirsiniz.
 
 Örnek sorgu:
 

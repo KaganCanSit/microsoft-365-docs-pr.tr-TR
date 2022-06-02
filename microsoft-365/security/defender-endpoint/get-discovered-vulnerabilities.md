@@ -1,7 +1,7 @@
 ---
-title: Bulunan güvenlik açıklarını elde eder
-description: Verilen bir cihaz kimliğiyle ilgili bulunan güvenlik açıkları koleksiyonunu verir.
-keywords: api'ler, grafik api'leri, desteklenen api'ler, get, list, file, information, discovered vulnerabilities, threat & güvenlik açığı yönetimi api, Endpoint tvm api için Microsoft Defender
+title: Keşfedilen güvenlik açıklarını al
+description: Belirli bir cihaz kimliğiyle ilgili bulunan güvenlik açıkları koleksiyonunu alır.
+keywords: apis, graph api, desteklenen API'ler, get, list, file, information, discovered vulnerabilities, threat & güvenlik açığı yönetimi api, Uç Nokta için Microsoft Defender tvm api
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,41 +15,43 @@ ms.collection: M365-security-compliance
 ms.topic: article
 MS.technology: mde
 ms.custom: api
-ms.openlocfilehash: 282c9b33efbb261e4d8cb0180cda0f3bc7e03584
-ms.sourcegitcommit: 348f3998a029a876a9dcc031f808e9e350804f22
+ms.openlocfilehash: 6b3271637b1b275fe26d07975d0592bf1e7ae672
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "62996559"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65840485"
 ---
-# <a name="get-discovered-vulnerabilities"></a>Bulunan güvenlik açıklarını elde eder
+# <a name="get-discovered-vulnerabilities"></a>Keşfedilen güvenlik açıklarını al
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+**Şunlar için geçerlidir:**
+
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender Güvenlik Açığı Yönetimi](../defender-vulnerability-management/index.yml)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
 [!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 ## <a name="api-description"></a>API açıklaması
-Verilen bir cihaz kimliğiyle ilgili bulunan güvenlik açıkları koleksiyonunu verir.
+Belirli bir cihaz kimliğiyle ilgili bulunan güvenlik açıkları koleksiyonunu alır.
 
 ## <a name="limitations"></a>Sınırlamalar
-1. Bu API için fiyat sınırlamaları, dakikada 50 çağrı ve saatte 1500 çağrıdır.
+1. Bu API için hız sınırlamaları dakikada 50 çağrı ve saatte 1500 çağrıdır.
 
 ## <a name="permissions"></a>İzinler
 
-Bu API'yi çağrı yapmak için aşağıdaki izinlerden biri gerekir. İzinleri seçme de dahil olmak üzere daha fazla bilgi edinmek için bkz. Uç Nokta API'leri için [Microsoft Defender'ı kullanma](apis-intro.md)
+Bu API'yi çağırmak için aşağıdaki izinlerden biri gereklidir. İzinlerin nasıl seçileceği de dahil olmak üzere daha fazla bilgi edinmek için bkz[. Uç Nokta için Microsoft Defender API'leri kullanma](apis-intro.md)
 
-İzin türü | İzin | İzin görünen adı
+İzin türü | Izni | İzin görünen adı
 :---|:---|:---
-Uygulama |Güvenlik Açığı.Read.All | 'Tehdit ve Güvenlik Açığı Yönetimi güvenlik açığı bilgileri'
-Temsilcili (iş veya okul hesabı) | Güvenlik Açığı.Okuma | 'Tehdit ve Güvenlik Açığı Yönetimi güvenlik açığı bilgileri'
+Uygulama |Vulnerability.Read.All | 'Tehdit ve Güvenlik Açığı Yönetimi güvenlik açığı bilgilerini okuyun'
+Temsilci (iş veya okul hesabı) | Vulnerability.Read | 'Tehdit ve Güvenlik Açığı Yönetimi güvenlik açığı bilgilerini okuyun'
 
 ## <a name="http-request"></a>HTTP isteği
 
@@ -57,7 +59,7 @@ Temsilcili (iş veya okul hesabı) | Güvenlik Açığı.Okuma | 'Tehdit ve Güv
 GET /api/machines/{machineId}/vulnerabilities
 ```
 
-## <a name="request-headers"></a>Üstbilgi isteği
+## <a name="request-headers"></a>İstek üst bilgileri
 
 Name|Tür|Açıklama
 :---|:---|:---
@@ -69,13 +71,13 @@ Boş
 
 ## <a name="response"></a>Yanıt
 
-Başarılı olursa, bu yöntem gövdede bulunan güvenlik açığı bilgisinde 200 tamam döndürür.
+Başarılı olursa, bu yöntem vücutta bulunan güvenlik açığı bilgileriyle 200 Tamam döndürür.
 
 ## <a name="example"></a>Örnek
 
-### <a name="request"></a>İstek
+### <a name="request"></a>Istek
 
-burada isteğin bir örneği ve sağlanmaktadır.
+burada isteğin bir örneği verilmiştir.
 
 ```http
 GET https://api.securitycenter.microsoft.com/api/machines/ac233fa6208e1579620bf44207c4006ed7cc4501/vulnerabilities
@@ -83,7 +85,7 @@ GET https://api.securitycenter.microsoft.com/api/machines/ac233fa6208e1579620bf4
 
 ### <a name="response"></a>Yanıt
 
-Yanıtın bir örneği:
+Yanıtın bir örneği aşağıda verilmiştir.
 
 ```json
 {
@@ -111,4 +113,4 @@ Yanıtın bir örneği:
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Risk Tabanlı Tehdit & Güvenlik Açığı Yönetimi](/microsoft-365/security/defender-endpoint/next-gen-threat-and-vuln-mgt)
-- [Organizasyon güvenlik açıkları](/microsoft-365/security/defender-endpoint/tvm-weaknesses)
+- [Kuruluşunuzdaki güvenlik açıkları](/microsoft-365/security/defender-endpoint/tvm-weaknesses)

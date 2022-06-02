@@ -20,16 +20,16 @@ ms.custom:
 description: Yöneticiler, Microsoft 365 E5 veya Plan 2 kuruluşlarında sanal kimlik avı ve parola saldırıları çalıştırmak için Saldırı simülasyonu eğitimini kullanmayı öğrenebilir Office 365 için Microsoft Defender.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 255d0f40cd360f2b4b3e5084f84989bdbe643319
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 79c8db9a088484a56e559ab4c3e33d68ebf33380
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65415628"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65840155"
 ---
 # <a name="get-started-using-attack-simulation-training-in-defender-for-office-365"></a>Office 365 için Defender'da Saldırı simülasyonu eğitimini kullanarak Kullanmaya başlayın
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 [Office 365 için Microsoft Defender plan 2](defender-for-office-365.md) **için geçerlidir**
 
@@ -121,7 +121,7 @@ Yeni simülasyon oluşturma ve gönderme hakkında adım adım yönergeler için
 
 ### <a name="create-a-payload"></a>Yük oluşturma
 
-Simülasyonda kullanmak üzere yük oluşturma hakkında adım adım yönergeler için bkz [. Saldırı benzetimi eğitimi için özel yük oluşturma](attack-simulation-training-payloads.md).
+Simülasyonda kullanmak üzere yük oluşturma hakkında adım adım yönergeler için bkz [. Saldırı benzetimi eğitimi için özel yük oluşturma](attack-simulation-training-payloads.md#create-payloads).
 
 ### <a name="gaining-insights"></a>İçgörü elde etme
 

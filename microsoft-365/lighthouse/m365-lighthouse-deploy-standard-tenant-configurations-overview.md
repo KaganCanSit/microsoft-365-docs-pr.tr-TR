@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için standart kiracı yapılandırmalarını dağıtmak için temelleri kullanma hakkında bilgi edinin.
-ms.openlocfilehash: 11b8c5ad9adafa4cd6afb6bb4cd19861118e447c
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: 7cdae46105ad225a284bf0ffa8860ad36ffb8691
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65647699"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65839853"
 ---
 # <a name="overview-of-using-microsoft-365-lighthouse-baselines-to-deploy-standard-tenant-configurations"></a>Standart kiracı yapılandırmalarını dağıtmak için Microsoft 365 Lighthouse temellerini kullanmaya genel bakış 
 
@@ -31,7 +31,7 @@ Varsayılan temeli ve dağıtım adımlarını Lighthouse'un içinden görüntü
 
 ## <a name="lighthouse-baseline"></a>Deniz feneri temeli
 
-Lighthouse temel yapılandırmaları, tüm yönetilen kiracıların güvenli ve uyumlu olduğundan emin olmak için tasarlanmıştır. Tüm **kiracılar** için geçerli olan varsayılan temeli görüntülemek için sol gezinti bölmesinden Temeller'i seçin.  Varsayılan taban çizgisine dahil edilen dağıtım adımlarını görüntülemek için **Temeli görüntüle'yi** seçerek varsayılan temel sayfasını açın. Dağıtım ayrıntılarını ve kullanıcı etkisini görüntülemek için dağıtım adımlarından herhangi birini seçin.
+Lighthouse temel yapılandırmaları, tüm yönetilen kiracıların güvenli ve uyumlu olduğundan emin olmak için tasarlanmıştır. Tüm **kiracılar** için geçerli olan varsayılan temeli görüntülemek için sol gezinti bölmesinden Temeller'i seçin.  Varsayılan taban çizgisine dahil edilen dağıtım adımlarını görüntülemek için **Temeli görüntüle'yi** seçerek **Varsayılan temel** sayfasını açın. Dağıtım ayrıntılarını ve kullanıcı etkisini görüntülemek için dağıtım adımlarından herhangi birini seçin.
 
 :::image type="content" source="../media/m365-lighthouse-deploy-baselines/default-baseline-page.png" alt-text="Varsayılan temel sayfasının ekran görüntüsü.":::
 
@@ -43,7 +43,7 @@ Lighthouse temel yapılandırmaları, tüm yönetilen kiracıların güvenli ve 
 | Son kullanıcılar için MFA gerektir | Tüm kullanıcılar için çok faktörlü kimlik doğrulaması gerektiren bir Koşullu Erişim ilkesi.  Tüm bulut uygulamaları için gereklidir. Bu temel hakkında daha fazla bilgi için bkz [. Koşullu Erişim: Tüm kullanıcılar için MFA gerektirme](/azure/active-directory/conditional-access/howto-conditional-access-policy-all-users-mfa). |
 | Eski kimlik doğrulamasını engelle | Eski istemci kimlik doğrulamasını engelleyen bir Koşullu Erişim ilkesi. Bu temel hakkında daha fazla bilgi için bkz[. Koşullu Erişim ile Azure AD için eski kimlik doğrulamasını engelleme](/azure/active-directory/conditional-access/block-legacy-authentication).|
 | Cihaz kaydını ayarlama | Kiracı cihazlarınızın Microsoft Endpoint Manager kaydolmasına izin vermek için cihaz kaydı. Bu, Azure Active Directory ve Microsoft Endpoint Manager arasında Otomatik Kayıt ayarlanarak yapılır. Bu temel hakkında daha fazla bilgi için bkz. [Windows cihazlar için kaydı ayarlama](/mem/intune/enrollment/windows-enroll). |
-| kurulum Exchange Online Protection ve Office 365 için Microsoft Defender | Önerilen istenmeyen posta önleme, kötü amaçlı yazılımdan koruma, kimlik avı önleme, güvenli bağlantılar ve güvenli ek ilkelerini kiracılarınıza Exchange Online posta kutularına uygulama ilkesi. |
+| Exchange Online Protection ve Office 365 için Microsoft Defender ayarlama | Önerilen istenmeyen posta önleme, kötü amaçlı yazılımdan koruma, kimlik avı önleme, güvenli bağlantılar ve güvenli ek ilkelerini kiracılarınıza Exchange Online posta kutularına uygulama ilkesi. |
 | Windows 10 ve üzeri için Microsoft Defender Virüsten Koruma yapılandırma | Önceden yapılandırılmış Microsoft Defender Virüsten Koruma ayarlarına sahip Windows cihazlar için bir cihaz yapılandırma profili. Bu temel hakkında daha fazla bilgi için bkz[. Intune'da Uç Nokta için Microsoft Defender yapılandırma](/mem/intune/protect/advanced-threat-protection-configure).|
 | Windows 10 ve üzeri için Microsoft Defender Güvenlik Duvarı yapılandırma | İstenmeyen ve yetkisiz ağ trafiğini engelleyerek cihazların güvenliğini sağlamaya yardımcı olan bir güvenlik duvarı ilkesi. Bu temel hakkında daha fazla bilgi için bkz. [Windows Defender Güvenlik Duvarı yapılandırmaya yönelik en iyi yöntemler](/windows/security/threat-protection/windows-firewall/best-practices-configuring).  |
 | Windows 10 ve üzeri için cihaz uyumluluk ilkesi yapılandırma | Temel uyumluluk gereksinimlerini karşılamak için önceden yapılandırılmış ayarlara sahip bir Windows cihaz ilkesi. Bu temel hakkında daha fazla bilgi için bkz[. Koşullu Erişim: Uyumlu veya karma Azure AD birleştirilmiş cihaz gerektirme](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device). |

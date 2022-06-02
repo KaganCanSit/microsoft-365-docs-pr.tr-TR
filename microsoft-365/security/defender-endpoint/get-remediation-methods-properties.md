@@ -1,7 +1,7 @@
 ---
 title: Düzeltme etkinliği yöntemleri ve özellikleri
-description: API yanıtı kiracı & güvenlik açığı yönetimi düzeltme etkinlikleri için tehdit oluşturur. Tüm düzeltme etkinliklerini, yalnızca bir düzeltme etkinliğini veya seçili bir düzeltme görevi için açık cihazları hakkında bilgi isteğinde bulundurabilirsiniz.
-keywords: api'ler, düzeltme, düzeltme API'si, almak, düzeltme görevleri, düzeltme yöntemleri, düzeltme özellikleri,
+description: API yanıtı, kiracınızda oluşturulan tehdit & güvenlik açığı yönetimi düzeltme etkinliklerini içerir. Seçilen bir düzeltme görevi için tüm düzeltme etkinliklerini, yalnızca bir düzeltme etkinliğini veya kullanıma sunulan cihazlarla ilgili bilgileri isteyebilirsiniz.
+keywords: api'ler, düzeltme, düzeltme api'leri, alma, düzeltme görevleri, düzeltme yöntemleri, düzeltme özellikleri,
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,23 +15,24 @@ ms.collection: M365-security-compliance
 ms.topic: article
 MS.technology: mde
 ms.custom: api
-ms.openlocfilehash: 124a44f6a04e4e4e77d80ac91ed4da169e2a4aae
-ms.sourcegitcommit: dd6514ae173f1c821d4ec25298145df6cb232e2e
+ms.openlocfilehash: 14f57d6590d580e0145abc2da788f184c88a721e
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "63014047"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65840265"
 ---
 # <a name="remediation-activity-methods-and-properties"></a>Düzeltme etkinliği yöntemleri ve özellikleri
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender Güvenlik Açığı Yönetimi](../defender-vulnerability-management/index.yml)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 [!Include[Prerelease information](../../includes/prerelease.md)]
 
@@ -39,59 +40,59 @@ ms.locfileid: "63014047"
 
 [!Include[Improve request performance](../../includes/improve-request-performance.md)]
 
-API yanıtı, [& güvenlik açığı yönetimi](next-gen-threat-and-vuln-mgt.md) için oluşturulmuş tehdit düzeltme etkinliklerini içerir.
+API yanıtı, kiracınızda oluşturulan [Tehdit & güvenlik açığı yönetimi](next-gen-threat-and-vuln-mgt.md) düzeltme etkinliklerini içerir.
 
 ## <a name="methods"></a>Yöntemler
 
 Yöntem|Veri türü|Açıklama
 :---|:---|:---
-[Tüm düzeltme etkinliklerini listele](get-remediation-all-activities.md)|Araştırma koleksiyonu|Tüm düzeltme etkinlikleri hakkında bilgi verir.
-[Bir düzeltme etkinliğinin açık cihazları listesi](get-remediation-exposed-devices-activities.md)|İnceleme varlığı|Belirtilen düzeltme etkinliği için belirtilen cihazlar hakkında bilgi verir.
-[Kimlikle bir düzeltme etkinliği elde](get-remediation-one-activity.md)|İnceleme varlığı|Belirtilen düzeltme etkinliğiyle ilgili bilgileri verir.
+[Tüm düzeltme etkinliklerini listele](get-remediation-all-activities.md)|Araştırma koleksiyonu|Tüm düzeltme etkinlikleri hakkındaki bilgileri döndürür.
+[Bir düzeltme etkinliğine maruz kalmış cihazları listele](get-remediation-exposed-devices-activities.md)|Araştırma varlığı|Belirtilen düzeltme etkinliği için kullanıma sunulan cihazlar hakkında bilgi döndürür.
+[Kimlikle bir düzeltme etkinliği al](get-remediation-one-activity.md)|Araştırma varlığı|Belirtilen düzeltme etkinliğine ilişkin bilgileri döndürür.
 
-Düzeltme etkinlikleri hakkında [daha fazla bilgi öğrenin](tvm-remediation.md).
+[Düzeltme etkinlikleri](tvm-remediation.md) hakkında daha fazla bilgi edinin.
 
 ## <a name="properties"></a>Özellikler
 
 Özellik Kimliği|Veri türü|Açıklama
 :---|:---|:---
 Kategori|Dize|Düzeltme etkinliğinin kategorisi (Yazılım/Güvenlik yapılandırması)
-completerEmail|Dize|Düzeltme etkinliği başka biri tarafından el ile tamamlandıktan sonra, bu sütunda o kişinin e-postası yer alır
-completerId|Dize|Düzeltme etkinliği başka biri tarafından el ile tamamlandıktan sonra, bu sütunda o kişinin nesne kimliği yer açılar
-tamamlanmaMethod|Dize|Bir düzeltme etkinliği "otomatik olarak" (tüm cihazlara yama varsa) veya "tamamlandı olarak işaretle" seçeneğini seçen bir kişi tarafından "el ile" tamamılabilir.
-createdOn|DateTime|Bu düzeltme etkinliğinin oluşturulma zamanı
+completerEmail|Dize|Düzeltme etkinliği bir kişi tarafından el ile tamamlandıysa, bu sütun kendi e-postasını içerir
+completerId|Dize|Düzeltme etkinliği birisi tarafından el ile tamamlandıysa, bu sütun nesne kimliğini içerir
+completionMethod|Dize|Bir düzeltme etkinliği "otomatik olarak" (tüm cihazlara düzeltme eki uygulandıysa) veya "tamamlandı olarak işaretle" seçeneğini seçen bir kişi tarafından "el ile" tamamlanabilir.
+createdOn|Datetime|Bu düzeltme etkinliğinin oluşturulduğu saat
 Açıklama|Dize|Bu düzeltme etkinliğinin açıklaması
-dueOn|DateTime|Bu düzeltme etkinliği için oluşturanın ayarlanacak son tarih
-fixedDevices||Düzeltilmiştir cihaz sayısı
+dueOn|Datetime|Bu düzeltme etkinliği için oluşturanın ayarlandığı son tarih
+fixedDevices||Düzeltilmiş cihaz sayısı
 Kimlik|Dize|Bu düzeltme etkinliğinin kimliği
-adKimlik|Dize|İlgili ürün adı
-Öncelik|Dize|Bu düzeltme etkinliği için oluşturana öncelik (Yüksek\Orta\Düşük)
-ürünkimlik|Dize|İlgili ürün kimliği
-productivityImpactRemediationType|Dize|Yalnızca kullanıcıları etkilemeyen cihazlar için birkaç yapılandırma değişikliği talep edilebilir. Bu değer, "tüm ışıklı cihazlar" veya "yalnızca kullanıcı etkisi olan cihazlar" arasındaki seçimi gösterir.
+nameId|Dize|İlgili ürün adı
+Öncelik|Dize|Bu düzeltme etkinliği için oluşturucu kümesinin önceliği (Yüksek\Orta\Düşük)
+Productıd|Dize|İlgili ürün kimliği
+productivityImpactRemediationType|Dize|Yalnızca kullanıcıları etkilemeyen cihazlar için birkaç yapılandırma değişikliği istenebilir. Bu değer, "kullanıma sunulan tüm cihazlar" veya "yalnızca kullanıcı etkisi olmayan cihazlar" arasındaki seçimi gösterir.
 rbacGroupNames|Dize|İlgili cihaz grubu adları
-recommendedProgram|Dize|Yükseltme için önerilen program
-önerilenVendor|Dize|Yükseltme için önerilen satıcı
+önerilenProgram|Dize|Yükseltme için önerilen program
+önerilenVendor|Dize|Yükseltmesi önerilen satıcı
 recommendedVersion|Dize|Güncelleştirme/yükseltme için önerilen sürüm
 relatedComponent|Dize|Bu düzeltme etkinliğinin ilgili bileşeni (güvenlik önerisi için ilgili bileşene benzer)
 requesterEmail|Dize|Oluşturucu e-posta adresi
-requesterId|Dize|Oluşturan nesne kimliği
-istekte bulunduran Notlar|Dize|Bu düzeltme etkinliği için oluşturan kişi tarafından eklenen notlar (ücretsiz metin)
-Scid|Dize|İlgili güvenlik önerisinin SCID'si
+requesterId|Dize|Oluşturucu nesne kimliği
+requesterNotes|Dize|Oluşturucunun bu düzeltme etkinliği için eklediği notlar (serbest metin)
+Scid|Dize|İlgili güvenlik önerisinin SCID'sini
 Durum|Dize|Düzeltme etkinliği durumu (Etkin/Tamamlandı)
-statusLastModifiedOn|DateTime|Durum alanı güncelleştirilen tarih
-targetDevices|Long|Bu düzeltmenin uygulan uygulana uygun olduğu, açık cihaz sayısı
+statusLastModifiedOn|Datetime|Durum alanının güncelleştirilildiği tarih
+targetDevices|Uzun|Bu düzeltmenin uygulanabilecek kullanıma sunulan cihaz sayısı
 Başlık|Dize|Bu düzeltme etkinliğinin başlığı
 Tür|Dize|Düzeltme türü
-vendorId|Dize|İlgili satıcı adı
+Vendorıd|Dize|İlgili satıcı adı
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kimlikle bir düzeltme etkinliği elde](get-remediation-one-activity.md)
+- [Kimlikle bir düzeltme etkinliği al](get-remediation-one-activity.md)
 
 - [Tüm düzeltme etkinliklerini listele](get-remediation-all-activities.md)
 
-- [Bir düzeltme etkinliğinin açık cihazları listesi](get-remediation-exposed-devices-activities.md)
+- [Bir düzeltme etkinliğine maruz kalmış cihazları listele](get-remediation-exposed-devices-activities.md)
 
 - [Risk tabanlı tehdit & güvenlik açığı yönetimi](next-gen-threat-and-vuln-mgt.md)
 
-- [Organizasyon güvenlik açıkları](tvm-weaknesses.md)
+- [Kuruluşunuzdaki güvenlik açıkları](tvm-weaknesses.md)

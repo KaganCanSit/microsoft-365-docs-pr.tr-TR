@@ -1,5 +1,5 @@
 ---
-title: Microsoft Purview Uyumluluk Yöneticisi uyarıları ve uyarı ilkeleri
+title: uyumluluk yöneticisi uyarılarını ve uyarı ilkelerini Microsoft Purview
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -17,21 +17,21 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MOE150
 - MET150
-description: Microsoft Purview Uyumluluk Yöneticisi'nde uyumluluk puanınızı etkileyebilecek etkinlikler için uyarılar oluşturmayı öğrenin.
-ms.openlocfilehash: 32ab22f47d35d64fa72dcc4898f5fff06d20c13c
-ms.sourcegitcommit: b16520d8bfe04b29274f7a129d90ef116bb77f69
+description: uyumluluk puanınızı etkileyebilecek Microsoft Purview Uyumluluk Yöneticisi'nde etkinlikler için uyarılar oluşturmayı öğrenin.
+ms.openlocfilehash: c69e56c693a2994a93b1faccfe6f69fa317d8390
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "65231747"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65839459"
 ---
-# <a name="microsoft-purview-compliance-manager-alerts-and-alert-policies"></a>Microsoft Purview Uyumluluk Yöneticisi uyarıları ve uyarı ilkeleri
+# <a name="microsoft-purview-compliance-manager-alerts-and-alert-policies"></a>uyumluluk yöneticisi uyarılarını ve uyarı ilkelerini Microsoft Purview
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 **Bu makalede:** Uyumluluk Yöneticisi'nde belirli etkinlikler için **uyarı ayarlamayı** , uyarıları yönetmeyi ve uyarı koşullarını tanımlamak için **uyarı ilkeleri oluşturmayı** öğrenin.
 
-## <a name="overview"></a>Genel bakış
+## <a name="overview"></a>Genel Bakış
 Uyumluluk Manger, uyumluluk hedeflerinizi takip edebilmeniz için değişiklikler gerçekleşir gerçekleşmez sizi uyarabilir. Örneğin, kiracınızdaki bir yapılandırma değişikliği nedeniyle bir iyileştirme eyleminin puan değeri arttığında veya azaldığında ya da bir kullanıcıya uygulama veya test çalışması yapması için bir iyileştirme eylemi atandığında sizi bilgilendirecek uyarılar ayarlayabilirsiniz. Uyarı oluşturabileceğiniz [olay türlerini](#create-an-alert-policy) görüntüleyin.
 
 Uyarı oluşturmak için, önce bir uyarıyı tetikleyen koşulları ve bildirimlerin sıklığını ana hatlarıyla belirlemek için bir uyarı ilkesi ayarlarsınız. İlke koşullarınızla bir eşleşme algıladığımızda ayrıntıları içeren bir e-posta bildirimi alırsınız; böylece araştırmanız veya başka işlemler yapmanız gerekip gerekmediğini belirleyebilirsiniz.
@@ -67,19 +67,19 @@ Uyarılarla çalışmaya başlamak için bkz. [Uyarıları görüntüleme ve yö
 
 Aşağıdaki tabloda, hangi kullanıcıların rol türlerine göre uyarılar ve uyarı ilkeleri oluşturup düzenleyebileceği özetlenmiştir. Uyumluluk Yöneticisi rolüne ek olarak, kullanıcıların aşağıdaki gibi bir Azure AD rolüne de ihtiyacı vardır:
 
-- Uyarıları ve uyarı ilkelerini görüntülemek için Azure AD Güvenlik **okuyucusu** rolü
-- Uyarı ilkelerini oluşturmak veya güncelleştirmek için Azure AD'deki **Güvenlik yöneticisi** rolü
+- Uyarıları ve uyarı ilkelerini görüntülemek için: Azure AD'da **Güvenlik okuyucusu** rolü
+- Uyarı ilkeleri oluşturmak veya güncelleştirmek için: **Azure AD'de Uyumluluk yöneticisi, Uyumluluk veri yöneticisi**, **Güvenlik yöneticisi** veya **Güvenlik işleci** rolü 
  
-[Microsoft Purview uyumluluk portalında Azure rolleri](microsoft-365-compliance-center-permissions.md#azure-roles-in-the-compliance-portal) hakkında daha fazla bilgi edinin.
+[Microsoft Purview uyumluluk portalı Azure rolleri](microsoft-365-compliance-center-permissions.md#azure-roles-in-the-compliance-portal) hakkında daha fazla bilgi edinin.
 
 
 | Rol | İlkeler oluşturabilir ve düzenleyebilir | Uyarıları düzenleyebilir | 
 | :------------- | :-------------: | :------------: |
 | **Uyumluluk Yöneticisi Yönetimi**| Evet  | Evet | 
 | **Uyumluluk Yöneticisi Değerlendiricisi**| Evet | Evet | 
-| **Uyumluluk Yöneticisi Katkısı**| Evet | Evet | 
-| **Genel Yönetici**| Evet | Evet  | 
+| **Uyumluluk Yöneticisi Katkıda Bulunanı**| Evet | Evet | 
 | **Uyumluluk Yöneticisi Okuyucusu**| Hayır | Hayır | 
+| **Genel yönetici**| Evet | Evet | 
 
 [Kullanıcı izinlerini ayarlamayı ve Uyumluluk Yöneticisi için roller atamayı](compliance-manager-setup.md#set-user-permissions-and-assign-roles) öğrenin.
 
@@ -105,7 +105,7 @@ Varsayılan ilkenin ayarları şunlardır:
 
 - Bu uyarıların önem düzeyi **orta** düzeydedir.
 
-- Kuruluşunuzun Genel Yöneticisi, uyarı bildirimlerinin varsayılan alıcısıdır.
+- Kuruluşunuz için Genel Yönetici, uyarı bildirimlerinin varsayılan alıcısıdır.
 
 - Aşağıdaki adımları izleyerek daha fazla uyarı alıcısı ekleyebilirsiniz:
     - **Uyarı ilkeleri** sayfasında **, Uyumluluk Yöneticisi varsayılan uyarı ilkesini** bulun.
@@ -190,7 +190,7 @@ Uyarı yalnızca etkin bir ilkeden oluşturulabilir. Bir uyarı oluşturulduktan
 **Uyarılar** sayfanızdaki tablonun üstündeki **Filtre** komutunu seçerek uyarı görünümünüzü filtreleyebilirsiniz. **Filtre** açılır listesinden şu filtre seçenekleri arasından seçim yapın:
 
 - Olay türü
-- Önem
+- Önem derecesi
 - Durum
 - Atanan kullanıcı
 - Algılama tarihi

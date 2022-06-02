@@ -13,12 +13,12 @@ ms.collection:
 ms.custom: ''
 description: Yöneticiler, Office 365 için Microsoft Defender Plan 2'deki Saldırı benzetimi eğitimini kullanarak kimlik avı saldırılarının simülasyonunu yapmayı ve kullanıcılarını kimlik avı önleme konusunda eğitmeyi öğrenebilir.
 ms.technology: mdo
-ms.openlocfilehash: 08d86488f9575aad995752ca331b3cbbb31d07fe
-ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
+ms.openlocfilehash: 8f6ef692885277368c7ca1c194116a4455f52b31
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/26/2022
-ms.locfileid: "65739659"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65839765"
 ---
 # <a name="simulate-a-phishing-attack-with-attack-simulation-training-in-defender-for-office-365"></a>Office 365 için Defender'de Saldırı simülasyonu eğitimi ile kimlik avı saldırısı simülasyonu
 
@@ -123,7 +123,7 @@ Listeden bir yük seçerseniz, yükle ilgili ayrıntılar açılır pencerede g�
 
 Listeden ada tıklayarak bir yük seçerseniz, Test ![yükü gönder simgesi.](../../media/m365-cc-sc-create-icon.png) Ana sayfada yük e-postasının bir kopyasını inceleme için kendinize (şu anda oturum açmış olan kullanıcı) gönderebileceğiniz **bir test** düğmesi görüntülenir.
 
-Kendi yükünüzü oluşturmak için Yük oluştur simgesine tıklayın ![.](../../media/m365-cc-sc-create-icon.png) **Yük oluşturma**. Daha fazla bilgi için bkz [. Saldırı benzetimi eğitimi için özel yük oluşturma](attack-simulation-training-payloads.md).
+Kendi yükünüzü oluşturmak için Yük oluştur simgesine tıklayın ![.](../../media/m365-cc-sc-create-icon.png) **Yük oluşturma**. Daha fazla bilgi için bkz [. Saldırı benzetimi eğitimi için özel yük oluşturma](attack-simulation-training-payloads.md#create-payloads).
 
 İşiniz bittiğinde **İleri'ye** tıklayın.
 
@@ -186,7 +186,7 @@ Kendi yükünüzü oluşturmak için Yük oluştur simgesine tıklayın ![.](../
 
 - **Eğitim içeriği tercihini seçin**: Aşağıdaki seçeneklerden birini belirleyin:
   - **Microsoft eğitim deneyimi**: Bu, yapılandırmak için aşağıdaki ilişkili seçenekleri içeren varsayılan değerdir:
-    - Aşağıdaki seçeneklerden birini belirleyin:
+    - Aşağıdaki seçeneklerden birini seçin:
       - **Benim için eğitim ata**: Bu varsayılan ve önerilen değerdir. Kullanıcının önceki simülasyon ve eğitim sonuçlarına göre eğitim atarız ve sihirbazın sonraki adımlarında seçimleri gözden geçirebilirsiniz.
       - **Eğitim kurslarını ve modülleri kendim seçin**: Bu değeri seçerseniz, sihirbazın bir sonraki adımında önerilen içeriğin yanı sıra tüm kullanılabilir kursları ve modülleri görmeye devam edebilirsiniz.
     - **Son tarih**: Aşağıdaki değerlerden birini seçin:

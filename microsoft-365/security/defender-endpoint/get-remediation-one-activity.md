@@ -1,7 +1,7 @@
 ---
-title: Kimlikle bir düzeltme etkinliği elde
-description: Belirtilen düzeltme etkinliğiyle ilgili bilgileri verir.
-keywords: api'ler, düzeltme, düzeltme API'si, almak, düzeltme görevleri, kimlik düzeltme,
+title: Kimlikle bir düzeltme etkinliği al
+description: Belirtilen düzeltme etkinliğine ilişkin bilgileri döndürür.
+keywords: api'ler, düzeltme, düzeltme api'si, alma, düzeltme görevleri, kimlikle düzeltme,
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,23 +15,24 @@ ms.collection: M365-security-compliance
 ms.topic: article
 MS.technology: mde
 ms.custom: api
-ms.openlocfilehash: 6ea413621ad9d2e3b99fc5abdafd843705e7dc87
-ms.sourcegitcommit: dd6514ae173f1c821d4ec25298145df6cb232e2e
+ms.openlocfilehash: cac976b7c189a44ff206b64bb9fe0f1a5d8c5d4a
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "63016314"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65839019"
 ---
-# <a name="get-one-remediation-activity-by-id"></a>Kimlikle bir düzeltme etkinliği elde
+# <a name="get-one-remediation-activity-by-id"></a>Kimlikle bir düzeltme etkinliği al
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender Güvenlik Açığı Yönetimi](../defender-vulnerability-management/index.yml)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 [!Include[Prerelease information](../../includes/prerelease.md)]
 
@@ -41,55 +42,55 @@ ms.locfileid: "63016314"
 
 ## <a name="api-description"></a>API açıklaması
 
-Belirtilen düzeltme etkinliğiyle ilgili bilgileri verir. Tüm düzeltme etkinliğini [al" ile aynı sütunları sunar](get-remediation-all-activities.md), ancak yalnızca belirtilen _düzeltme etkinliği için sonuç döndürür_.
+Belirtilen düzeltme etkinliğine ilişkin bilgileri döndürür. [Tüm düzeltme etkinliğini al](get-remediation-all-activities.md)" ile aynı sütunları sunar, ancak _yalnızca belirtilen düzeltme etkinliği için_ sonuçları döndürür.
 
-[Düzeltme etkinlikleri hakkında daha fazla bilgi öğrenin](tvm-remediation.md).
+[Düzeltme etkinlikleri hakkında daha fazla bilgi edinin](tvm-remediation.md).
 
-## <a name="list-a-specified-remediation-activity-for-id"></a>(ID) için belirtilen bir düzeltme etkinliğini listele
+## <a name="list-a-specified-remediation-activity-for-id"></a>(Id) için belirtilen düzeltme etkinliğini listeleme
 
 **URL:** GET: /api/remediationTasks/\{id\}
 
 ## <a name="permissions"></a>İzinler
 
-Bu API'yi çağrı yapmak için aşağıdaki izinlerden biri gerekir. İzinleri seçme de dahil olmak üzere daha fazla bilgi edinmek için bkz [. Uç nokta API'leri için Microsoft Defender'ı kullanma.](apis-intro.md)
+Bu API'yi çağırmak için aşağıdaki izinlerden biri gereklidir. İzinlerin nasıl seçileceği de dahil olmak üzere daha fazla bilgi edinmek [için ayrıntılar için bkz. Uç Nokta için Microsoft Defender API'lerini kullanma.](apis-intro.md)
 
-İzin türü|İzin|İzin görünen adı
+İzin türü|Izni|İzin görünen adı
 :---|:---|:---
-Uygulama|RemediationTasks.Read.All|\'Tehdit ve Güvenlik Açığı Yönetimi güvenlik açığı bilgilerini okuma\'
-Temsilcili (iş veya okul hesabı)|RemediationTask.Read.Read|\'Tehdit ve Güvenlik Açığı Yönetimi güvenlik açığı bilgilerini okuma\'
+Uygulama|RemediationTasks.Read.All|\'Tehdit ve Güvenlik Açığı Yönetimi güvenlik açığı bilgilerini okuyun\'
+Temsilci (iş veya okul hesabı)|RemediationTask.Read.Read|\'Tehdit ve Güvenlik Açığı Yönetimi güvenlik açığı bilgilerini okuyun\'
 
 ## <a name="properties"></a>Özellikler
 
 Özellik (Kimlik)|Veri türü|Açıklama|Döndürülen değer örneği
 :---|:---|:---|:---
 Kategori|Dize|Düzeltme etkinliğinin kategorisi (Yazılım/Güvenlik yapılandırması)|Yazılım
-completerEmail|Dize|Düzeltme etkinliği başka biri tarafından el ile tamamlandıktan sonra, bu sütunda o kişinin e-postası yer alır|Null
-completerId|Dize|Düzeltme etkinliği başka biri tarafından el ile tamamlandıktan sonra, bu sütunda o kişinin nesne kimliği yer açılar|Null
-tamamlanmaMethod|Dize|Düzeltme etkinliği, "tamamlandı olarak işaretle" seçeneğini seçen bir kişi tarafından "otomatik olarak" (tüm cihazlara yama varsa) veya "el ile" tamamılabilir|Otomatik
-createdOn|DateTime|Bu düzeltme etkinliğinin oluşturulma zamanı|2021-01-12T18:54:11.5499478Z
-Açıklama|Dize|Bu düzeltme etkinliğinin açıklaması|Cihazlarınızı etkileyen bilinen güvenlik açıklarını azaltmak için Microsoft Silverlight'ı sonraki bir sürüme güncelleştirin.
-dueOn|DateTime|Bu düzeltme etkinliği için oluşturanın ayarlanacak son tarih|2021-01-13T00:00:00Z
-fixedDevices||Düzeltilmiştir cihaz sayısı|2
+completerEmail|Dize|Düzeltme etkinliği bir kişi tarafından el ile tamamlandıysa, bu sütun kendi e-postasını içerir|Null
+completerId|Dize|Düzeltme etkinliği birisi tarafından el ile tamamlandıysa, bu sütun nesne kimliğini içerir|Null
+completionMethod|Dize|Bir düzeltme etkinliği "otomatik olarak" (tüm cihazlara düzeltme eki uygulandıysa) veya "tamamlandı olarak işaretle" seçeneğini seçen bir kişi tarafından "el ile" tamamlanabilir|Otomatik
+createdOn|Datetime|Bu düzeltme etkinliğinin oluşturulduğu saat|2021-01-12T18:54:11.5499478Z
+Açıklama|Dize|Bu düzeltme etkinliğinin açıklaması|Cihazlarınızı etkileyen bilinen güvenlik açıklarını azaltmak için Microsoft Silverlight'ı daha sonraki bir sürüme güncelleştirin.
+dueOn|Datetime|Bu düzeltme etkinliği için oluşturanın ayarlandığı son tarih|2021-01-13T00:00:00Z
+fixedDevices||Düzeltilmiş cihaz sayısı|2
 Kimlik|Dize|Bu düzeltme etkinliğinin kimliği|097d9735-5479-4899-b1b7-77398899df92
-adKimlik|Dize|İlgili ürün adı|Microsoft Silverlight
-Öncelik|Dize|Bu düzeltme etkinliği için oluşturana öncelik (Yüksek\Orta\Düşük)|Yüksek
-ürünkimlik|Dize|İlgili ürün kimliği|microsoft-_-silverlight
-productivityImpactRemediationType|Dize|Yalnızca kullanıcıları etkilemeyen cihazlar için birkaç yapılandırma değişikliği talep edilebilir. Bu değer, "tüm ışıklı cihazlar" veya "yalnızca kullanıcı etkisi olan cihazlar" arasındaki seçimi gösterir.|AllAssets
-rbacGroupNames|Dize|İlgili cihaz grubu adları|[ "Windows Servers", "Windows 11", "Windows 10" ]
-recommendedProgram|Dize|Yükseltme için önerilen program|Null
-önerilenVendor|Dize|Yükseltme için önerilen satıcı|Null
+nameId|Dize|İlgili ürün adı|Microsoft Silverlight
+Öncelik|Dize|Bu düzeltme etkinliği için oluşturucu kümesinin önceliği (Yüksek\Orta\Düşük)|Yüksek
+Productıd|Dize|İlgili ürün kimliği|microsoft-_-silverlight
+productivityImpactRemediationType|Dize|Yalnızca kullanıcıları etkilemeyen cihazlar için birkaç yapılandırma değişikliği istenebilir. Bu değer, "kullanıma sunulan tüm cihazlar" veya "yalnızca kullanıcı etkisi olmayan cihazlar" arasındaki seçimi gösterir.|AllExposedAssets
+rbacGroupNames|Dize|İlgili cihaz grubu adları|[ "Windows Sunucuları", "Windows 11", "Windows 10" ]
+önerilenProgram|Dize|Yükseltme için önerilen program|Null
+önerilenVendor|Dize|Yükseltmesi önerilen satıcı|Null
 recommendedVersion|Dize|Güncelleştirme/yükseltme için önerilen sürüm|Null
 relatedComponent|Dize|Bu düzeltme etkinliğinin ilgili bileşeni (güvenlik önerisi için ilgili bileşene benzer)|Microsoft Silverlight
 requesterEmail|Dize|Oluşturucu e-posta adresi|globaladmin@UserName.contoso.com
-requesterId|Dize|Oluşturan nesne kimliği|r647211f-2e16-43f2-a480-16ar3a2a796r
-istekte bulunduran Notlar|Dize|Bu düzeltme etkinliği için oluşturan kişi tarafından eklenen notlar (ücretsiz metin)|Null
-Scid|Dize|İlgili güvenlik önerisinin SCID'si|Null
+requesterId|Dize|Oluşturucu nesne kimliği|r647211f-2e16-43f2-a480-16ar3a2a796r
+requesterNotes|Dize|Oluşturucunun bu düzeltme etkinliği için eklediği notlar (serbest metin)|Null
+Scid|Dize|İlgili güvenlik önerisinin SCID'sini|Null
 Durum|Dize|Düzeltme etkinliği durumu (Etkin/Tamamlandı)|Etkin
-statusLastModifiedOn|DateTime|Durum alanı güncelleştirilen tarih|2021-01-12T18:54:11.5499487Z
-targetDevices|Long|Bu düzeltmenin uygulan uygulana uygun olduğu, açık cihaz sayısı|43
+statusLastModifiedOn|Datetime|Durum alanının güncelleştirilildiği tarih|2021-01-12T18:54:11.5499487Z
+targetDevices|Uzun|Bu düzeltmenin uygulanabilecek kullanıma sunulan cihaz sayısı|43
 Başlık|Dize|Bu düzeltme etkinliğinin başlığı|Microsoft Silverlight
 Tür|Dize|Düzeltme türü|Güncelleştirme
-vendorId|Dize|İlgili satıcı adı|Microsoft
+Vendorıd|Dize|İlgili satıcı adı|Microsoft
 
 ## <a name="example"></a>Örnek
 
@@ -142,6 +143,6 @@ GET https://api-luna.securitycenter.windows.com/api/remediationtasks/03942ef5-ae
 
 - [Düzeltme yöntemleri ve özellikleri](get-remediation-methods-properties.md)
 - [Tüm düzeltme etkinliklerini listele](get-remediation-all-activities.md)
-- [Bir düzeltme etkinliğinin açık cihazları listesi](get-remediation-exposed-devices-activities.md)
+- [Bir düzeltme etkinliğine maruz kalmış cihazları listele](get-remediation-exposed-devices-activities.md)
 - [Risk tabanlı tehdit & güvenlik açığı yönetimi](next-gen-threat-and-vuln-mgt.md)
-- [Organizasyon güvenlik açıkları](tvm-weaknesses.md)
+- [Kuruluşunuzdaki güvenlik açıkları](tvm-weaknesses.md)

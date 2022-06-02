@@ -1,7 +1,7 @@
 ---
-title: Cihaz başına yazılım açıkları değerlendirmesini dışarı aktarma
-description: API yanıtı her cihaza göre çalışır ve açık cihazlarınıza yüklenmiş korumasız yazılımlar ve bu yazılım ürünlerine yönelik bilinen güvenlik açıkları içerir. Bu tablo işletim sistemi bilgilerini, CD'leri ve güvenlik açığı önem düzeyi bilgilerini de içerir.
-keywords: api, api'ler, dışarı aktarma değerlendirmesi, cihaz değerlendirme başına güvenlik açığı değerlendirmesi raporu, cihaz güvenlik açığı değerlendirmesi raporu, cihaz güvenlik açığı raporu, güvenli yapılandırma değerlendirmesi, güvenli yapılandırma raporu, yazılım açıkları değerlendirmesi, yazılım güvenlik açığı raporu, makineye göre güvenlik açığı raporu,
+title: Cihaz başına yazılım güvenlik açıkları değerlendirmesi dışarı aktarma
+description: API yanıtı cihaza göredir ve kullanıma sunulan cihazlarınızda yüklü güvenlik açığı bulunan yazılımları ve bu yazılım ürünlerinde bilinen güvenlik açıklarını içerir. Bu tabloda işletim sistemi bilgileri, CVE kimlikleri ve güvenlik açığı önem derecesi bilgileri de yer alır.
+keywords: api, API'ler, dışarı aktarma değerlendirmesi, cihaz başına değerlendirme, güvenlik açığı değerlendirme raporu, cihaz güvenlik açığı değerlendirmesi, cihaz güvenlik açığı raporu, güvenli yapılandırma değerlendirmesi, güvenli yapılandırma raporu, yazılım güvenlik açıkları değerlendirmesi, yazılım güvenlik açığı raporu, makineye göre güvenlik açığı raporu,
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,65 +15,66 @@ ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
 ms.custom: api
-ms.openlocfilehash: 5d10b96e1d5abfe1c9e9a87b9800dafba081c961
-ms.sourcegitcommit: dd6514ae173f1c821d4ec25298145df6cb232e2e
+ms.openlocfilehash: 86d2b0b09748a83c9b73430c4c6e371ca2e37f31
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "63014037"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65839003"
 ---
-# <a name="export-software-vulnerabilities-assessment-per-device"></a>Cihaz başına yazılım açıkları değerlendirmesini dışarı aktarma
+# <a name="export-software-vulnerabilities-assessment-per-device"></a>Cihaz başına yazılım güvenlik açıkları değerlendirmesi dışarı aktarma
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender Güvenlik Açığı Yönetimi](../defender-vulnerability-management/index.yml)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-Tüm cihazlara yönelik tüm bilinen yazılım güvenlik açıklarını ve ayrıntılarını, cihaz başına döndürür.
+Bilinen tüm yazılım güvenlik açıklarını ve bunların tüm cihazlara ilişkin ayrıntılarını cihaz başına temel alarak döndürür.
 
-Farklı API çağrıları farklı türde veriler elde edin. Veri miktarı büyük olduğundan, alınanın iki yolu vardır:
+Farklı API çağrıları farklı veri türleri alır. Veri miktarı büyük olabileceğinden, alınabilmesinin iki yolu vardır:
 
-1. [Yazılım açıkları değerlendirme **JSON yanıtı dışarı aktarma**](#1-export-software-vulnerabilities-assessment-json-response)  API, Json yanıtları olarak tüm verileri kuruluş içinde çeker. Bu yöntem, _100 K'den az cihaza sahip küçük kuruluşlar için en iyisidir_. Yanıt sayfalandı, dolayısıyla sonraki sonuçları getirmek için \@yanıttan odata.nextLink alanını kullanabilirsiniz.
+1. [Yazılım güvenlik açıklarını dışarı aktarma değerlendirmesi **JSON yanıtı**](#1-export-software-vulnerabilities-assessment-json-response)  API, kuruluşunuzdaki tüm verileri Json yanıtları olarak çeker. Bu yöntem, _100 K'den az cihazı olan küçük kuruluşlar_ için en iyisidir. Yanıt sayfalandırılır, böylece yanıttan \@odata.nextLink alanını kullanarak sonraki sonuçları getirebilirsiniz.
 
-2. [Dosyalar aracılığıyla yazılım açıkları **değerlendirmesini dışarı aktarma**](#2-export-software-vulnerabilities-assessment-via-files) Bu API çözümü, daha büyük miktarlarda verinin daha hızlı ve daha güvenilir bir şekilde çekmesini sağlar. Via-files, 100 K'den fazla cihazı olan büyük kuruluşlar için önerilir. Bu API, kuruluşta yer alan tüm verileri dosya indir olarak çeker. Yanıt, Azure Veri Hizmetleri'nden tüm verileri indirmek için URL'leri Depolama. Bu API, Azure'dan tüm verilerinizi aşağıdaki gibi Depolama sağlar:
-   - Tüm kuruluş verilerinizle birlikte indirme URL'lerinin listesini almak için API'yi arayın.
-   - İndirme URL'lerini kullanarak tüm dosyaları indirin ve verileri like gibi işin.
+2. [**Dosyalar aracılığıyla** yazılım güvenlik açıkları değerlendirmelerini dışarı aktarma](#2-export-software-vulnerabilities-assessment-via-files) Bu API çözümü, daha fazla miktarda veriyi daha hızlı ve daha güvenilir bir şekilde çekmenizi sağlar. 100 K'den fazla cihazı olan büyük kuruluşlar için via-files önerilir. Bu API, kuruluşunuzdaki tüm verileri indirme dosyaları olarak çeker. Yanıt, Azure Depolama'dan tüm verileri indirmek için URL'ler içerir. Bu API, Azure Depolama'dan tüm verilerinizi aşağıdaki gibi indirmenizi sağlar:
+   - Tüm kuruluş verilerinizi içeren indirme URL'lerinin listesini almak için API'yi çağırın.
+   - İndirme URL'lerini kullanarak tüm dosyaları indirin ve verileri istediğiniz gibi işleyin.
 
-3. [Delta dışarı aktarma yazılım güvenlik açıkları değerlendirme **JSON yanıtı**](#3-delta-export-software-vulnerabilities-assessment-json-response)  Her benzersiz bileşimi için bir girdiyle birlikte bir tablo döndürür: DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion,DorId ve EventTimestamp.
-API, Json yanıtları olarak organizasyon verilerinize veri çeker. Yanıt sayfalandı, dolayısıyla sonraki sonuçları getirmek için yanıttan @odata.nextLink alanını kullanabilirsiniz.
+3. [Delta dışarı aktarma yazılımı güvenlik açıkları değerlendirmesi **JSON yanıtı**](#3-delta-export-software-vulnerabilities-assessment-json-response)  DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion, CveId ve EventTimestamp'ın her benzersiz bileşimi için bir giriş içeren bir tablo döndürür.
+API, kuruluşunuzdaki verileri Json yanıtları olarak çeker. Yanıt sayfalandırılır, böylece yanıttan @odata.nextLink alanını kullanarak sonraki sonuçları getirebilirsiniz.
 
-   Tüm "yazılım güvenlik açıkları değerlendirmesi (JSON yanıtı)" tüm bu "yazılım açıkları değerlendirmesi", cihaza göre kuruma göre yazılım güvenlik açıkları değerlendirmesinin tüm anlık görüntüsünü elde etmek için kullanılır. Bununla birlikte, değişiklik dışarı aktarma API'si çağrısı yalnızca seçili tarih ile geçerli tarih (değişiklik"API çağrısı) arasında olan değişiklikleri getirmek için kullanılır. Her zaman büyük miktarda veriyle tam dışarı aktarma yapmak yerine, yalnızca yeni, sabit ve güncelleştirilmiş güvenlik açıkları hakkında belirli bilgiler edinebilirsiniz. Delta dışarı aktarma JSON yanıt API çağrısı, "kaç güvenlik açıkı düzeltildi?" gibi farklı KP'leri hesaplamak için de kullanılabilir. veya "Kuruluşuma kaç yeni güvenlik açık eklendi?" gibi yeni güvenlik açıkları eklendi
+   Tam "yazılım güvenlik açıkları değerlendirmesi (JSON yanıtı)" kuruluşunuzun yazılım güvenlik açıkları değerlendirmesinin tüm anlık görüntüsünü cihaza göre almak için kullanılır. Ancak, delta dışarı aktarma API çağrısı yalnızca seçili tarih ile geçerli tarih ("delta" API çağrısı) arasında gerçekleşen değişiklikleri getirmek için kullanılır. Her seferinde büyük miktarda veriyle tam dışarı aktarma işlemi almak yerine yalnızca yeni, sabit ve güncelleştirilmiş güvenlik açıklarıyla ilgili belirli bilgileri alırsınız. Delta dışarı aktarma JSON yanıt API'si çağrısı, "kaç güvenlik açığı düzeltildi?" gibi farklı KPI'leri hesaplamak için de kullanılabilir. veya "Kuruluşuma kaç yeni güvenlik açığı eklendi?"
 
-   Yazılım güvenlik açıkları için Delta dışarı aktarma JSON yanıt API çağrısı yalnızca hedefli tarih aralığı için veri döndür olduğundan, tam dışarı aktarma olarak _kabul edilir_.
+   Yazılım güvenlik açıkları için Delta dışarı aktarma JSON yanıt API çağrısı yalnızca hedeflenen bir tarih aralığına ait verileri döndürdüğünden, _tam dışarı aktarma_ olarak kabul edilmez.
 
-Toplanan veriler ( _Json yanıtı kullanılarak_ veya dosyalar _yoluyla_), geçerli durumunun geçerli anlık görüntüsü olur. Tarihi veriler içermez. Tarihi verileri toplamak için, müşterilerin verileri kendi veri depolamalarına kaydetmeleri gerekir.
+Toplanan veriler ( _Json yanıtı_ veya _dosyalar aracılığıyla_) geçerli durum anlık görüntüsüdür. Geçmiş verileri içermez. Geçmiş verileri toplamak için müşterilerin verileri kendi veri depolamalarına kaydetmesi gerekir.
 
 > [!NOTE]
-> Aksi belirtilmedikçe, listelenen tüm dışarı aktarma değerlendirme yöntemleri tam dışarı **** aktarma ve **_cihaza göre_** (cihaz başına da **_adlandırılır) gösterilir_**.
+> Aksi belirtilmedikçe, listelenen tüm dışarı aktarma değerlendirme yöntemleri **_tam dışarı aktarma_** ve **_cihaza göredir_** ( **_cihaz başına_** olarak da adlandırılır).
 
-## <a name="1-export-software-vulnerabilities-assessment-json-response"></a>1. Yazılım açıkları değerlendirmesini dışarı aktarma (JSON yanıtı)
+## <a name="1-export-software-vulnerabilities-assessment-json-response"></a>1. Yazılım güvenlik açıklarını dışarı aktarma değerlendirmesi (JSON yanıtı)
 
 ### <a name="11-api-method-description"></a>1.1 API yöntemi açıklaması
 
-Bu API yanıtı cihaz başına tüm yüklü yazılım verilerini içerir. DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion, ASPID benzersiz her bileşimi için bir giriş ile bir tablo döndürür.
+Bu API yanıtı, cihaz başına yüklü yazılımların tüm verilerini içerir. DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion, CVEID'nin her benzersiz bileşimi için bir giriş içeren bir tablo döndürür.
 
-#### <a name="111-limitations"></a>1.1.1 Sınırlamalar
+#### <a name="111-limitations"></a>1.1.1 Sınırlamaları
 
-- En büyük sayfa boyutu 200.000'tir.
-- Bu API için fiyat sınırlamaları dakikada 30 çağrı ve saatte 1000 çağrıdır.
+- En büyük sayfa boyutu 200.000'dir.
+- Bu API için hız sınırlamaları dakikada 30 çağrı ve saatte 1000 çağrıdır.
 
 ### <a name="12-permissions"></a>1.2 İzinler
 
-Bu API'yi çağrı yapmak için aşağıdaki izinlerden biri gerekir. İzinleri seçme de dahil olmak üzere daha fazla bilgi edinmek için bkz [. Uç nokta API'leri için Microsoft Defender'ı kullanma.](apis-intro.md)
+Bu API'yi çağırmak için aşağıdaki izinlerden biri gereklidir. İzinlerin nasıl seçileceği de dahil olmak üzere daha fazla bilgi edinmek [için ayrıntılar için bkz. Uç Nokta için Microsoft Defender API'lerini kullanma.](apis-intro.md)
 
-İzin türü|İzin|İzin görünen adı
+İzin türü|Izni|İzin görünen adı
 ---|---|---
-Uygulama|Güvenlik Açığı.Read.All|\'Tehdit ve Güvenlik Açığı Yönetimi güvenlik açığı bilgilerini okuma\'
-Temsilcili (iş veya okul hesabı)|Güvenlik Açığı.Okuma|\'Tehdit ve Güvenlik Açığı Yönetimi güvenlik açığı bilgilerini okuma\'
+Uygulama|Vulnerability.Read.All|\'Tehdit ve Güvenlik Açığı Yönetimi güvenlik açığı bilgilerini okuyun\'
+Temsilci (iş veya okul hesabı)|Vulnerability.Read|\'Tehdit ve Güvenlik Açığı Yönetimi güvenlik açığı bilgilerini okuyun\'
 
 ### <a name="13-url"></a>1.3 URL
 
@@ -83,16 +84,16 @@ GET /api/machines/SoftwareVulnerabilitiesByMachine
 
 ### <a name="14-parameters"></a>1.4 Parametreler
 
-- pageSize (varsayılan = 50.000): Yanıtta sonuç sayısı.
-- $top: Sonuç sayısı (sonuç @odata.nextLink ile sonuç vermez ve bu nedenle tüm verileri çekmez).
+- pageSize (varsayılan = 50.000): Yanıt olarak sonuç sayısı.
+- $top: Döndürülecek sonuç sayısı (@odata.nextLink döndürmez ve bu nedenle tüm verileri çekmez).
 
-### <a name="15-properties"></a>1.5 Özellikler
+### <a name="15-properties"></a>1.5 Özellikleri
 
 > [!NOTE]
 >
-> - Her kayıt yaklaşık 1 KB veridir. Sizin için doğru pageSize parametresini seçerken bunu dikkate alasınız.
-> - Yanıtta bazı ek sütunlar döndürülebilirsiniz. Bu sütunlar geçicidir ve kaldırılabilir, lütfen yalnızca belgelenmiş sütunları kullanın.
-> - Aşağıdaki tabloda tanımlanan özellikler, özellik kimliğine göre alfabetik olarak listelenir. Bu API'yi çalıştıracaksanız, sonuçta elde edilen çıktının bu tabloda listelenen sırada döndürülecek olması gerekmez.
+> - Her kayıt yaklaşık 1 KB veridir. Sizin için doğru pageSize parametresini seçerken bunu dikkate almanız gerekir.
+> - Yanıtta bazı ek sütunlar döndürülebilir. Bu sütunlar geçicidir ve kaldırılabilir, lütfen yalnızca belgelenmiş sütunları kullanın.
+> - Aşağıdaki tabloda tanımlanan özellikler, özellik kimliğine göre alfabetik olarak listelenir. Bu API'yi çalıştırırken, sonuçta elde edilen çıktının bu tabloda listelenen sırayla döndürülmesi gerekmez.
 
 <br>
 
@@ -100,25 +101,25 @@ GET /api/machines/SoftwareVulnerabilitiesByMachine
 
 Özellik (Kimlik)|Veri türü|Açıklama|Döndürülen değer örneği
 :---|:---|:---|:---
-YerkarakDiyaKimlik|Dize|Ortak Güvenlik Açıkları ve SALDıRıLAR (ALI) sistemi kapsamındaki güvenlik açığına atanan benzersiz tanımlayıcı.|CHATE-2020-15992
-CvssScore|Dize|DEMİ'nin CVSS puanı.|6.2
-DeviceId|Dize|Hizmette cihaz için benzersiz tanımlayıcı.|9eaf3a8b5962e0e6b1af9ec756664a9b823df2d1
+CveId|Dize|Ortak Güvenlik Açıkları ve Etkilenmeler (CVE) sistemi altında güvenlik açığına atanan benzersiz tanımlayıcı.|CVE-2020-15992
+CvssScore|Dize|CVE'nin CVSS puanı.|6.2
+Deviceıd|Dize|Hizmetteki cihaz için benzersiz tanımlayıcı.|9eaf3a8b5962e0e6b1af9ec756664a9b823df2d1
 DeviceName|Dize|Cihazın tam etki alanı adı (FQDN).|johnlaptop.europe.contoso.com
-DiskPath'ler|Arraystring\[\]|Ürünün cihaza yük olduğuna dair disk kanıtı.|[ "C:\Program Files (x86)\Microsoft\Silverlight\Application\silverlight.exe" ]
-ExploitabilityLevel|Dize|Bu güvenlik açığının açıkları açıklığı düzeyi (NoExploit, ExploitIsPublic, ExploitIsVerified, ExploitIsInKit)|ExploitIsInKit
-FirstSeenTimestamp|Dize|Bu ürünün 1. TIR'ı cihazda ilk kez görüldü.|2020-11-03 10:13:34.8476880
+DiskPath'ler|Dizi\[dizesi\]|Ürünün cihaza yüklendiğini gösteren disk kanıtı.|[ "C:\Program Files (x86)\Microsoft\Silverlight\Application\silverlight.exe" ]
+ExploitabilityLevel|Dize|Bu güvenlik açığının kötüye kullanılabilirlik düzeyi (NoExploit, ExploitIsPublic, ExploitIsVerified, ExploitIsInKit)|ExploitIsInKit
+FirstSeenTimestamp|Dize|Bu ürünün CVE'i cihazda ilk kez görüldü.|2020-11-03 10:13:34.8476880
 Kimlik|Dize|Kayıt için benzersiz tanımlayıcı.|123ABG55_573AG&mnp!
-LastSeenTimestamp|Dize|EN son YALNıZ BIRAYI cihaz üzerinde görüldü.|2020-11-03 10:13:34.8476880
-OSPlatform|Dize|Cihazda çalışan işletim sisteminin platformu. Bu özellik, Windows 10 11 gibi, aynı aile içindeki çeşitlemelere sahip belirli işletim Windows 10 Windows gösterir. Ayrıntılar için TVm'de desteklenen işletim sistemleri ve platformlar'a bakın.|Windows10 ve Windows 11
-RbacGroupName|Dize|Rol tabanlı erişim denetimi (RBAC) grubu. Bu cihaz hiçbir RBAC grubuna atanmamışsa, değer "Atanmamış" olur. Kuruluş hiçbir RBAC grubu içermese bile, değer "Yok" olur.|Sunucular
-RecommendationReference|Dize|Bu yazılımla ilgili öneri kimliğine başvuru.|va-_-microsoft--_ silverlight
-RecommendedSecurityUpdate (isteğe bağlı)|Dize|Yazılım satıcısı tarafından güvenlik açığı için sağlanan güvenlik güncelleştirmelerinin adı veya açıklaması.|Nisan 2020 Güvenlik Güncelleştirmeleri
-RecommendedSecurityUpdateId (isteğe bağlı)|Dize|İlgili kılavuz veya bilgi bankası (KB) makalelerine yönelik geçerli güvenlik güncelleştirmelerinin veya tanımlayıcının tanımlayıcısı|4550961
-RegistryPaths|Arraystring\[\]|Ürünün cihaza yük olduğuna dair kayıt defteri kanıtı.|[ "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\MicrosoftSilverlight" ]
+LastSeenTimestamp|Dize|CVE'nin cihazda son görüldüğü zaman.|2020-11-03 10:13:34.8476880
+OSPlatform|Dize|Cihazda çalışan işletim sisteminin platformu. Bu özellik, Windows 10 ve Windows 11 gibi aynı aile içinde varyasyonları olan belirli işletim sistemlerini gösterir. Ayrıntılar için bkz. tvm tarafından desteklenen işletim sistemleri ve platformlar.|Windows10 ve Windows 11
+RbacGroupName|Dize|Rol tabanlı erişim denetimi (RBAC) grubu. Bu cihaz herhangi bir RBAC grubuna atanmazsa, değer "Atanmamış" olur. Kuruluş herhangi bir RBAC grubu içermiyorsa, değer "Yok" olur.|Sunucular
+RecommendationReference|Dize|Bu yazılımla ilgili öneri kimliğine başvuru.|_va-microsoft-silverlight_
+RecommendedSecurityUpdate (isteğe bağlı)|Dize|Güvenlik açığını gidermek için yazılım satıcısı tarafından sağlanan güvenlik güncelleştirmesinin adı veya açıklaması.|Nisan 2020 Güvenlik Güncelleştirmeleri
+RecommendedSecurityUpdateId (isteğe bağlı)|Dize|İlgili kılavuz veya bilgi bankası (KB) makaleleri için geçerli güvenlik güncelleştirmelerinin veya tanımlayıcısının tanımlayıcısı|4550961
+RegistryPaths|Dizi\[dizesi\]|Ürünün cihaza yüklendiğine dair kayıt defteri kanıtı.|[ "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\MicrosoftSilverlight" ]
 SoftwareName|Dize|Yazılım ürününün adı.|Chrome
 SoftwareVendor|Dize|Yazılım satıcısının adı.|Google
 SoftwareVersion|Dize|Yazılım ürününün sürüm numarası.|81.0.4044.138
-VulnerabilitySeverityLevel|Dize|CVSS puanı ve tehdit ortamını etkileyen dinamik etmenlere dayalı olarak güvenlik açığına atanan önem düzeyi.|Orta
+VulnerabilitySeverityLevel|Dize|CVSS puanına ve tehdit ortamının etkilediği dinamik faktörlere bağlı olarak güvenlik açığına atanan önem düzeyi.|Orta
 |
 
 ### <a name="16-examples"></a>1.6 Örnekler
@@ -261,24 +262,24 @@ GET https://api.securitycenter.microsoft.com/api/machines/SoftwareVulnerabilitie
 }
 ```
 
-## <a name="2-export-software-vulnerabilities-assessment-via-files"></a>2. Yazılım açıkları değerlendirmesini dışarı aktarma (dosyalar aracılığıyla)
+## <a name="2-export-software-vulnerabilities-assessment-via-files"></a>2. Yazılım güvenlik açıklarını değerlendirmeyi dışarı aktarma (dosyalar aracılığıyla)
 
 ### <a name="21-api-method-description"></a>2.1 API yöntemi açıklaması
 
-Bu API yanıtı cihaz başına tüm yüklü yazılım verilerini içerir. DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion, ASPID benzersiz her bileşimi için bir giriş ile bir tablo döndürür.
+Bu API yanıtı, cihaz başına yüklü yazılımların tüm verilerini içerir. DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion, CVEID'nin her benzersiz bileşimi için bir giriş içeren bir tablo döndürür.
 
-#### <a name="212-limitations"></a>2.1.2 Sınırlamalar
+#### <a name="212-limitations"></a>2.1.2 Sınırlamaları
 
-Bu API için fiyat sınırlamaları, dakikada 5 çağrı ve saatte 20 çağrıdır.
+Bu API için hız sınırlamaları dakikada 5 çağrı ve saatte 20 çağrıdır.
 
 ### <a name="22-permissions"></a>2.2 İzinler
 
-Bu API'yi çağrı yapmak için aşağıdaki izinlerden biri gerekir. İzinleri seçme de dahil olmak üzere daha fazla bilgi edinmek için bkz [. Uç nokta API'leri için Microsoft Defender'ı kullanma](apis-intro.md).
+Bu API'yi çağırmak için aşağıdaki izinlerden biri gereklidir. İzinlerin nasıl seçileceği de dahil olmak üzere daha fazla bilgi edinmek [için ayrıntılar için bkz. Uç Nokta için Microsoft Defender API'lerini kullanma](apis-intro.md).
 
-İzin türü|İzin|İzin görünen adı
+İzin türü|Izni|İzin görünen adı
 ---|---|---
-Uygulama|Güvenlik Açığı.Read.All|\'Tehdit ve Güvenlik Açığı Yönetimi güvenlik açığı bilgilerini okuma\'
-Temsilcili (iş veya okul hesabı)|Güvenlik Açığı.Okuma|\'Tehdit ve Güvenlik Açığı Yönetimi güvenlik açığı bilgilerini okuma\'
+Uygulama|Vulnerability.Read.All|\'Tehdit ve Güvenlik Açığı Yönetimi güvenlik açığı bilgilerini okuyun\'
+Temsilci (iş veya okul hesabı)|Vulnerability.Read|\'Tehdit ve Güvenlik Açığı Yönetimi güvenlik açığı bilgilerini okuyun\'
 
 ### <a name="23-url"></a>2.3 URL
 
@@ -288,18 +289,18 @@ GET /api/machines/SoftwareVulnerabilitiesExport
 
 ### <a name="24-parameters"></a>2.4 Parametreler
 
-- sasValidSatır: İndirme URL'lerinin geçerli olduğu saat sayısı (En fazla 24 saat).
+- sasValidHours: İndirme URL'lerinin geçerli olacağı saat sayısı (En fazla 24 saat).
 
-### <a name="25-properties"></a>2.5 Özellikler
+### <a name="25-properties"></a>2.5 Özellikleri
 
 > [!NOTE]
 >
-> - Dosyalar çok satırlı Json & sıkıştırılmış sıkıştırılmış dosya biçimindedir.
-> - İndirme URL'leri yalnızca 3 saat geçerlidir; aksi takdirde parametreyi kullanabilirsiniz.
-> - Verilerinizin en yüksek indirme hızı için, verilerinizin bulunduğu Azure bölgesinden indirmeye emin olun.
+> - Dosyalar çok satırlı Json biçiminde gzip sıkıştırılmış &.
+> - İndirme URL'leri yalnızca 3 saat geçerlidir; aksi takdirde parametresini kullanabilirsiniz.
+> - Verilerinizin en yüksek indirme hızı için, verilerinizin bulunduğu Azure bölgesinden indirme yaptığınızdan emin olabilirsiniz.
 >
-> - Her kayıt yaklaşık 1 KB veridir. Sizin için doğru pageSize parametresini seçerken bunu dikkate alasınız.
-> - Yanıtta bazı ek sütunlar döndürülebilirsiniz. Bu sütunlar geçicidir ve kaldırılabilir, lütfen yalnızca belgelenmiş sütunları kullanın.
+> - Her kayıt yaklaşık 1 KB veridir. Sizin için doğru pageSize parametresini seçerken bunu dikkate almanız gerekir.
+> - Yanıtta bazı ek sütunlar döndürülebilir. Bu sütunlar geçicidir ve kaldırılabilir, lütfen yalnızca belgelenmiş sütunları kullanın.
 
 <br>
 
@@ -307,8 +308,8 @@ GET /api/machines/SoftwareVulnerabilitiesExport
 
 Özellik (Kimlik)|Veri türü|Açıklama|Döndürülen değer örneği
 :---|:---|:---|:---
-Dosyaları dışarı aktarma|arraystring\[\]|Kuruluşun geçerli anlık görüntüsünü tutan dosyalar için indirme URL'lerinin listesi.|["https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...1", "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...2"]
-GeneratedTime|Dize|Dışarı aktarmanın oluşturulma zamanı.|2021-05-20T08:00:00Z
+Dosyaları dışarı aktarma|dizi\[dizesi\]|Kuruluşun geçerli anlık görüntüsünü içeren dosyalar için indirme URL'lerinin listesi.|["https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...1", "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...2"]
+GeneratedTime|Dize|Dışarı aktarmanın oluşturulduğu zaman.|2021-05-20T08:00:00Z
 |
 
 ### <a name="26-examples"></a>2.6 Örnekler
@@ -333,29 +334,29 @@ GET https://api-us.securitycenter.contoso.com/api/machines/SoftwareVulnerabiliti
 }
 ```
 
-## <a name="3-delta-export-software-vulnerabilities-assessment-json-response"></a>3. Delta dışarı aktarma yazılım açıkları değerlendirmesi (JSON yanıtı)
+## <a name="3-delta-export-software-vulnerabilities-assessment-json-response"></a>3. Delta dışarı aktarma yazılımı güvenlik açıkları değerlendirmesi (JSON yanıtı)
 
 ### <a name="31-api-method-description"></a>3.1 API yöntemi açıklaması
 
-DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion,ArdId gibi her benzersiz bileşimi için bir giriş olan bir tablo döndürür. API, Json yanıtları olarak organizasyon verilerinize veri çeker. Yanıt sayfalandı, dolayısıyla sonraki sonuçları getirmek için yanıttan @odata.nextLink alanını kullanabilirsiniz. Tam yazılım açıkları değerlendirmesinin (JSON yanıtı) (cihazınızın yazılım güvenlik açıkları değerlendirmesinin tüm anlık görüntüsünü elde etmek için kullanılır) değişiklikli dışarı aktarma JSON yanıt API çağrısı, yalnızca seçili tarihle geçerli tarih (değişiklik" API çağrısı) arasında olan değişiklikleri getirmek için kullanılır. Her zaman büyük miktarda veriyle tam dışarı aktarma yapmak yerine, yalnızca yeni, sabit ve güncelleştirilmiş güvenlik açıkları hakkında belirli bilgiler edinebilirsiniz. Delta dışarı aktarma JSON yanıt API çağrısı, "kaç güvenlik açıkı düzeltildi?" gibi farklı KP'leri hesaplamak için de kullanılabilir. veya "Kuruluşuma kaç yeni güvenlik açık eklendi?" gibi yeni güvenlik açıkları eklendi
+DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion, CveId'nin her benzersiz bileşimi için bir giriş içeren bir tablo döndürür. API, kuruluşunuzdaki verileri Json yanıtları olarak çeker. Yanıt sayfalandırılır, böylece yanıttan @odata.nextLink alanını kullanarak sonraki sonuçları getirebilirsiniz. Tam yazılım güvenlik açıkları değerlendirmesinin (JSON yanıtı) (cihazınıza göre kuruluşunuzun yazılım güvenlik açıkları değerlendirmesinin tüm anlık görüntüsünü almak için kullanılır) aksine, delta dışarı aktarma JSON yanıt API çağrısı yalnızca seçili tarih ile geçerli tarih (delta" API çağrısı) arasında gerçekleşen değişiklikleri getirmek için kullanılır. Her seferinde büyük miktarda veriyle tam dışarı aktarma işlemi almak yerine yalnızca yeni, sabit ve güncelleştirilmiş güvenlik açıklarıyla ilgili belirli bilgileri alırsınız. Delta dışarı aktarma JSON yanıt API'si çağrısı, "kaç güvenlik açığı düzeltildi?" gibi farklı KPI'leri hesaplamak için de kullanılabilir. veya "Kuruluşuma kaç yeni güvenlik açığı eklendi?"
 
 > [!NOTE]
-> Cihaz API çağrısına göre en az haftada bir kez tam dışarı aktarma yazılım açıkları değerlendirmesini ve bu ek dışarı aktarma yazılım açıkları için cihaz (değişiklikli) API çağrısına göre haftanın tüm diğer günlerini kullanmanız kesinlikle önerilir. Diğer JSON yanıt API'leri gibi "delta dışarı aktarma" tam dışarı aktarma değildir. Değişiklik dışarı aktarma, yalnızca seçilen tarih ile geçerli tarih (değişiklik" API çağrısı) arasında olan değişiklikleri içerir.
+> Cihaz API çağrısı tarafından yapılan tam dışarı aktarma yazılımı güvenlik açıkları değerlendirmesini haftada en az bir kez kullanmanız kesinlikle önerilir ve bu ek dışarı aktarma yazılımı güvenlik açıkları cihaza göre değişir (delta) API çağrısı haftanın diğer günlerinde de yapılır. Diğer Değerlendirmeler JSON yanıt API'lerinden farklı olarak , "delta dışarı aktarma" tam dışarı aktarma değildir. Delta dışarı aktarma işlemi yalnızca seçili tarih ile geçerli tarih ("delta" API çağrısı) arasında gerçekleşen değişiklikleri içerir.
 
-#### <a name="311-limitations"></a>3.1.1 Sınırlamalar
+#### <a name="311-limitations"></a>3.1.1 Sınırlamaları
 
-- En büyük sayfa boyutu 200.000'tir.
-- Bu yanaTime parametresi en çok 14 gündür.
-- Bu API için fiyat sınırlamaları dakikada 30 çağrı ve saatte 1000 çağrıdır.
+- En büyük sayfa boyutu 200.000'dir.
+- sinceTime parametresi en fazla 14 güne sahiptir.
+- Bu API için hız sınırlamaları dakikada 30 çağrı ve saatte 1000 çağrıdır.
 
 ### <a name="32-permissions"></a>3.2 İzinler
 
-Bu API'yi çağrı yapmak için aşağıdaki izinlerden biri gerekir. İzinleri seçme de dahil olmak üzere daha fazla bilgi edinmek için bkz [. Uç nokta API'leri için Microsoft Defender'ı kullanma.](apis-intro.md)
+Bu API'yi çağırmak için aşağıdaki izinlerden biri gereklidir. İzinlerin nasıl seçileceği de dahil olmak üzere daha fazla bilgi edinmek [için ayrıntılar için bkz. Uç Nokta için Microsoft Defender API'lerini kullanma.](apis-intro.md)
 
-İzin türü|İzin|İzin görünen adı
+İzin türü|Izni|İzin görünen adı
 ---|---|---
-Uygulama|Güvenlik Açığı.Read.All|'Tehdit ve Güvenlik Açığı Yönetimi güvenlik açığı bilgileri'
-Temsilcili (iş veya okul hesabı)|Güvenlik Açığı.Okuma|'Tehdit ve Güvenlik Açığı Yönetimi güvenlik açığı bilgileri'
+Uygulama|Vulnerability.Read.All|'Tehdit ve Güvenlik Açığı Yönetimi güvenlik açığı bilgilerini okuyun'
+Temsilci (iş veya okul hesabı)|Vulnerability.Read|'Tehdit ve Güvenlik Açığı Yönetimi güvenlik açığı bilgilerini okuyun'
 
 ### <a name="33-url"></a>3.3 URL
 
@@ -366,17 +367,17 @@ GET /api/machines/SoftwareVulnerabilityChangesByMachine
 ### <a name="34-parameters"></a>3.4 Parametreler
 
 - sinceTime (gerekli): Seçilen saat ile bugün arasındaki veriler.
-- pageSize (varsayılan = 50.000): yanıtta sonuç sayısı.
-- $top: sonuç sayısı (sonuç @odata.nextLink ile sonuç vermez ve bu nedenle tüm verileri çekmez).
+- pageSize (varsayılan = 50.000): yanıt olarak sonuç sayısı.
+- $top: döndürülecek sonuç sayısı (@odata.nextLink döndürmez ve bu nedenle tüm verileri çekmez).
 
-### <a name="35-properties"></a>3.5 Özellikler
+### <a name="35-properties"></a>3.5 Özellikleri
 
-Döndürülen her kayıt, cihaz API'si tarafından yapılan tam dışarı aktarma yazılım açıkları değerlendirmesinde yer alan tüm verilerin yanı sıra iki alan daha içerir:  _**EventTimestamp**_ ve _**Durum**_.
+Döndürülen her kayıt, cihaz API'sine göre tam dışarı aktarma yazılımı güvenlik açıkları değerlendirmesinin tüm verilerinin yanı sıra iki alan daha içerir:  _**EventTimestamp**_ ve _**Status**_.
 
 > [!NOTE]
 >
-> - Yanıtta bazı ek sütunlar döndürülebilirsiniz. Bu sütunlar geçicidir ve kaldırılabilir; dolayısıyla lütfen yalnızca belgelenmiş sütunları kullanın.
-> - Aşağıdaki tabloda tanımlanan özellikler, özellik kimliğine göre alfabetik olarak listelenir. Bu API'yi çalıştıracaksanız, sonuçta elde edilen çıktının bu tabloda listelenen sırada döndürülecek olması gerekmez.
+> - Yanıtta bazı ek sütunlar döndürülebilir. Bu sütunlar geçicidir ve kaldırılabilir, bu nedenle lütfen yalnızca belgelenmiş sütunları kullanın.
+> - Aşağıdaki tabloda tanımlanan özellikler, özellik kimliğine göre alfabetik olarak listelenir. Bu API'yi çalıştırırken, sonuçta elde edilen çıktının bu tabloda listelenen sırayla döndürülmesi gerekmez.
 
 <br>
 
@@ -384,38 +385,38 @@ Döndürülen her kayıt, cihaz API'si tarafından yapılan tam dışarı aktarm
 
 Özellik (Kimlik)|Veri türü|Açıklama|Döndürülen değer örneği
 :---|:---|:---|:---
-YerkarakDiyaKimlik |Dize|Ortak Güvenlik Açıkları ve SALDıRıLAR (ALI) sistemi kapsamındaki güvenlik açığına atanan benzersiz tanımlayıcı.|CHATE-2020-15992  
-CvssScore|Dize|DEMİ'nin CVSS puanı.|6.2  
-DeviceId|Dize|Hizmette cihaz için benzersiz tanımlayıcı.|9eaf3a8b5962e0e6b1af9ec756664a9b823df2d1  
+CveId |Dize|Ortak Güvenlik Açıkları ve Etkilenmeler (CVE) sistemi altında güvenlik açığına atanan benzersiz tanımlayıcı.|CVE-2020-15992  
+CvssScore|Dize|CVE'nin CVSS puanı.|6.2  
+Deviceıd|Dize|Hizmetteki cihaz için benzersiz tanımlayıcı.|9eaf3a8b5962e0e6b1af9ec756664a9b823df2d1  
 DeviceName|Dize|Cihazın tam etki alanı adı (FQDN).|johnlaptop.europe.contoso.com  
-DiskPath'ler|Dizi[dize]|Ürünün cihaza yük olduğuna dair disk kanıtı.|["C:\Program Files (x86)\Microsoft\Silverlight\Application\silverlight.exe"]  
-EventTimestamp|Dize|Bu delta olayı bulunduğu zaman.|2021-01-11T11:06:08.291Z
-ExploitabilityLevel|Dize|Bu güvenlik açığının açıkları açıklığı düzeyi (NoExploit, ExploitIsPublic, ExploitIsVerified, ExploitIsInKit)|ExploitIsInKit  
-FirstSeenTimestamp|Dize|Bu ürünün 1. TIR'ı cihazda ilk kez görüldü.|2020-11-03 10:13:34.8476880  
+DiskPath'ler|Dizi[dize]|Ürünün cihaza yüklendiğini gösteren disk kanıtı.|["C:\Program Files (x86)\Microsoft\Silverlight\Application\silverlight.exe"]  
+EventTimestamp|Dize|Bu delta olayının bulunduğu saat.|2021-01-11T11:06:08.291Z
+ExploitabilityLevel|Dize|Bu güvenlik açığının kötüye kullanılabilirlik düzeyi (NoExploit, ExploitIsPublic, ExploitIsVerified, ExploitIsInKit)|ExploitIsInKit  
+FirstSeenTimestamp|Dize|Bu ürünün CVE'i cihazda ilk kez görüldü.|2020-11-03 10:13:34.8476880  
 Kimlik|Dize|Kayıt için benzersiz tanımlayıcı.|123ABG55_573AG&mnp!  
-LastSeenTimestamp|Dize|EN son YALNıZ BIRAYI cihaz üzerinde görüldü.|2020-11-03 10:13:34.8476880  
-OSPlatform|Dize|Cihazda çalışan işletim sisteminin platformu; Windows 10 ve Windows 11 gibi, aynı aile içindeki çeşitlemelere sahip belirli Windows. Ayrıntılar için TVm'de desteklenen işletim sistemleri ve platformlar'a bakın.|Windows10 ve Windows 11 
-RbacGroupName|Dize|Rol tabanlı erişim denetimi (RBAC) grubu. Bu cihaz hiçbir RBAC grubuna atanmamışsa, değer "Atanmamış" olur. Kuruluş hiçbir RBAC grubu içermese bile, değer "Yok" olur.|Sunucular  
-RecommendationReference|dize|Bu yazılımla ilgili öneri kimliğine başvuru.|va--microsoft--silverlight  
-RecommendedSecurityUpdate |Dize|Yazılım satıcısı tarafından güvenlik açığı için sağlanan güvenlik güncelleştirmelerinin adı veya açıklaması.|Nisan 2020 Güvenlik Güncelleştirmeleri  
-RecommendedSecurityUpdateId |Dize|İlgili kılavuz veya bilgi bankası (KB) makalelerine yönelik geçerli güvenlik güncelleştirmelerinin veya tanımlayıcının tanımlayıcısı|4550961  
-RegistryPaths |Dizi[dize]|Ürünün cihaza yük olduğuna dair kayıt defteri kanıtı.|[ "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Google Chrome" ]  
+LastSeenTimestamp|Dize|CVE'nin cihazda son görüldüğü zaman.|2020-11-03 10:13:34.8476880  
+OSPlatform|Dize|Cihazda çalışan işletim sisteminin platformu; Windows 10 ve Windows 11 gibi aynı aile içindeki varyasyonlara sahip belirli işletim sistemleri. Ayrıntılar için bkz. tvm tarafından desteklenen işletim sistemleri ve platformlar.|Windows10 ve Windows 11 
+RbacGroupName|Dize|Rol tabanlı erişim denetimi (RBAC) grubu. Bu cihaz herhangi bir RBAC grubuna atanmazsa, değer "Atanmamış" olur. Kuruluş herhangi bir RBAC grubu içermiyorsa, değer "Yok" olur.|Sunucular  
+RecommendationReference|Dize|Bu yazılımla ilgili öneri kimliğine başvuru.|va--microsoft--silverlight  
+RecommendedSecurityUpdate |Dize|Güvenlik açığını gidermek için yazılım satıcısı tarafından sağlanan güvenlik güncelleştirmesinin adı veya açıklaması.|Nisan 2020 Güvenlik Güncelleştirmeleri  
+RecommendedSecurityUpdateId |Dize|İlgili kılavuz veya bilgi bankası (KB) makaleleri için geçerli güvenlik güncelleştirmelerinin veya tanımlayıcısının tanımlayıcısı|4550961  
+RegistryPaths |Dizi[dize]|Ürünün cihaza yüklendiğine dair kayıt defteri kanıtı.|[ "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Google Chrome" ]  
 SoftwareName|Dize|Yazılım ürününün adı.|Chrome  
 SoftwareVendor|Dize|Yazılım satıcısının adı.|Google  
 SoftwareVersion|Dize|Yazılım ürününün sürüm numarası.|81.0.4044.138  
-Durum|Dize|**Yeni** (bir cihazda yeni bir güvenlik açığı **için) (** 1) Düzeltildi (bu güvenlik açığı artık cihazda mevcut yoksa, bu durum düzeltilmiştir). (2) **Güncel** (bir cihaz'da bir güvenlik açığı değişmişse). Olası değişiklikler şunları içerir: CVSS puanı, exploitability level, önem düzeyi, DiskPaths, RegistryPaths, RecommendedSecurityUpdate). |Düzeltildi
-VulnerabilitySeverityLevel|Dize|Güvenlik açığına atanan önem düzeyi. Bu, CVSS puanına ve tehdit sahnesini etkileyen dinamik etmenlere dayalıdır.|Orta
+Durum|Dize|**Yeni** (bir cihazda sunulan yeni bir güvenlik açığı için) (1) **Düzeltildi** (bu güvenlik açığı cihazda artık yoksa, bu da düzeltildiği anlamına gelir). (2) **Güncelleştirildi** (cihazdaki bir güvenlik açığı değiştiyse. Olası değişiklikler şunlardır: CVSS puanı, kötüye kullanılabilirlik düzeyi, önem düzeyi, DiskPaths, RegistryPaths, RecommendedSecurityUpdate). |Sabit
+VulnerabilitySeverityLevel|Dize|Güvenlik açığına atanan önem düzeyi. CVSS puanına ve tehdit ortamının etkilediği dinamik faktörlere dayanır.|Orta
 |
 
-#### <a name="clarifications"></a>Netleştirmeler
+#### <a name="clarifications"></a>Açıklamalar
 
-- Yazılım 1.0 sürümünden sürüm 2.0'a güncelleştirilmişse ve her iki sürüm de YERİPİ-A'ya açıksa, iki ayrı olay alırsınız:
-   1. Düzeltildi: 1.0 sürümündeKI YERİNASLA-A düzeltildi.
-   1. Yeni: 2.0 sürümüyle birlikte TIR-A eklendi.
+- Yazılım sürüm 1.0'dan sürüm 2.0'a güncelleştirildiyse ve her iki sürüm de CVE-A'da kullanıma sunulduysa, iki ayrı olay alırsınız:
+   1. Düzeltildi: Sürüm 1.0'da CVE-A düzeltildi.
+   1. Yeni: Sürüm 2.0'da CVE-A eklendi.
 
-- Belirli bir güvenlik açığı (örneğin, AİSYET) ilk olarak 1.0 sürümüne sahip yazılımda belirli bir zamanda (örneğin, 10 Ocak) görülürse ve birkaç gün sonra yazılım aynı ZAMAN-A sürümüne de açık olan 2.0 sürümüne güncelleştirilmişse, bu iki ayrı olay alırsınız:
-   1. Düzeltildi: DEFA-X, FirstSeenTimestamp 10 Ocak sürüm 1,0.
-   1. Yeni: CHA-X, FirstSeenTimestamp 10 Ocak sürüm 2.0.
+- Belirli bir güvenlik açığı (örneğin CVE-A) sürüm 1.0'a sahip yazılımlarda ilk kez belirli bir zamanda (örneğin, 10 Ocak) görüldüyse ve birkaç gün sonra bu yazılım aynı CVE-A'ya da kullanıma sunulan sürüm 2.0'a güncelleştirildiyse, şu iki ayrı olayı alırsınız:
+   1. Düzeltildi: CVE-X, FirstSeenTimestamp Ocak 10, sürüm 1,0.
+   1. Yeni: CVE-X, FirstSeenTimestamp Ocak 10, sürüm 2.0.
 
 ### <a name="36-examples"></a>3.6 Örnekler
 
@@ -580,10 +581,10 @@ GET https://api.securitycenter.microsoft.com/api/machines/SoftwareVulnerabilityC
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Cihaz başına değerlendirme yöntemlerini ve özelliklerini dışarı aktarma](get-assessment-methods-properties.md)
-- [Cihaz başına güvenli yapılandırma değerlendirmesini dışarı aktarma](get-assessment-secure-config.md)
-- [Cihaz başına yazılım envanteri değerlendirmesini dışarı aktarma](get-assessment-software-inventory.md)
+- [Cihaz başına güvenli yapılandırma değerlendirmelerini dışarı aktarma](get-assessment-secure-config.md)
+- [Cihaz başına yazılım envanteri değerlendirmeyi dışarı aktarma](get-assessment-software-inventory.md)
 
-Diğer ilgili
+Diğer ilgililer
 
 - [Risk tabanlı tehdit & güvenlik açığı yönetimi](next-gen-threat-and-vuln-mgt.md)
-- [Organizasyon güvenlik açıkları](tvm-weaknesses.md)
+- [Kuruluşunuzdaki güvenlik açıkları](tvm-weaknesses.md)

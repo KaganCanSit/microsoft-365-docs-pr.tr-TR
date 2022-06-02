@@ -1,7 +1,7 @@
 ---
 title: Güvenlik önerileri al
-description: Verilen bir cihaz kimliğiyle ilgili güvenlik önerileri koleksiyonunu verir.
-keywords: api'ler, grafik api'si, desteklenen api'ler, get, list, file, information, security recommendation per device, threat & güvenlik açığı yönetimi api, Endpoint tvm api için Microsoft Defender
+description: Belirli bir cihaz kimliğiyle ilgili güvenlik önerileri koleksiyonunu alır.
+keywords: apis, graph api, desteklenen API'ler, get, list, file, information, security recommendation per device, threat & güvenlik açığı yönetimi API, Uç Nokta için Microsoft Defender tvm api
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,21 +15,23 @@ ms.collection: M365-security-compliance
 ms.topic: article
 MS.technology: mde
 ms.custom: api
-ms.openlocfilehash: 6441610fb9c1ebdee823badce2bd2c5439142cf3
-ms.sourcegitcommit: 348f3998a029a876a9dcc031f808e9e350804f22
+ms.openlocfilehash: ebe07abd4e7f87e7abfe4d4a8ccd131e20dc4958
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "62996484"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65839722"
 ---
 # <a name="get-security-recommendations"></a>Güvenlik önerileri al
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:** 
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:** 
 
-> Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender Güvenlik Açığı Yönetimi](../defender-vulnerability-management/index.yml)
+
+> Uç nokta için Defender'i deneyimlemek ister misiniz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
@@ -37,16 +39,16 @@ ms.locfileid: "62996484"
 
 [!include[Prerelease information](../../includes/prerelease.md)]
 
-Verilen bir cihaz kimliğiyle ilgili güvenlik önerileri koleksiyonunu verir.
+Belirli bir cihaz kimliğiyle ilgili güvenlik önerileri koleksiyonunu alır.
 
 ## <a name="permissions"></a>İzinler
 
-Bu API'yi çağrı yapmak için aşağıdaki izinlerden biri gerekir. İzinleri seçme de dahil olmak üzere daha fazla bilgi edinmek için bkz. Uç Nokta API'leri için [Microsoft Defender'ı kullanma](apis-intro.md)
+Bu API'yi çağırmak için aşağıdaki izinlerden biri gereklidir. İzinlerin nasıl seçileceği de dahil olmak üzere daha fazla bilgi edinmek için bkz[. Uç Nokta için Microsoft Defender API'leri kullanma](apis-intro.md)
 
-İzin türü|İzin|İzin görünen adı
+İzin türü|Izni|İzin görünen adı
 :---|:---|:---
-Uygulama|SecurityRecommendation.Read.All|'Tehdit ve Güvenlik Açığı Yönetimi güvenlik öneri bilgileri'
-Temsilcili (iş veya okul hesabı)|SecurityRecommendation.Read|'Tehdit ve Güvenlik Açığı Yönetimi güvenlik öneri bilgileri'
+Uygulama|SecurityRecommendation.Read.All|'Tehdit ve Güvenlik Açığı Yönetimi güvenlik öneri bilgilerini okuyun'
+Temsilci (iş veya okul hesabı)|SecurityRecommendation.Read|'Tehdit ve Güvenlik Açığı Yönetimi güvenlik öneri bilgilerini okuyun'
 
 ## <a name="http-request"></a>HTTP isteği
 
@@ -54,7 +56,7 @@ Temsilcili (iş veya okul hesabı)|SecurityRecommendation.Read|'Tehdit ve Güven
 GET /api/machines/{machineId}/recommendations
 ```
 
-## <a name="request-headers"></a>Üstbilgi isteği
+## <a name="request-headers"></a>İstek üst bilgileri
 
 Name|Tür|Açıklama
 :---|:---|:---
@@ -66,13 +68,13 @@ Boş
 
 ## <a name="response"></a>Yanıt
 
-Başarılı olursa, bu yöntem gövdede güvenlik önerileriyle birlikte 200 Tamam döndürür.
+Başarılı olursa, bu yöntem gövdedeki güvenlik önerileriyle birlikte 200 Tamam döndürür.
 
 ## <a name="example"></a>Örnek
 
 ### <a name="request-example"></a>İstek örneği
 
-burada isteğin bir örneği ve sağlanmaktadır.
+burada isteğin bir örneği verilmiştir.
 
 ```http
 GET https://api.securitycenter.microsoft.com/api/machines/ac233fa6208e1579620bf44207c4006ed7cc4501/recommendations
@@ -80,7 +82,7 @@ GET https://api.securitycenter.microsoft.com/api/machines/ac233fa6208e1579620bf4
 
 ### <a name="response-example"></a>Yanıt örneği
 
-Yanıtın bir örneği:
+Yanıtın bir örneği aşağıda verilmiştir.
 
 ```json
 {

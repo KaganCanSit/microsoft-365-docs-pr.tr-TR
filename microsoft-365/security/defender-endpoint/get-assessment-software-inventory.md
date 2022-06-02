@@ -1,7 +1,7 @@
 ---
-title: Cihaz başına yazılım envanteri değerlendirmesini dışarı aktarma
-description: Her benzersiz DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion bileşimi için bir giriş olan bir tablo döndürür.
-keywords: api, api'ler, dışarı aktarma değerlendirmesi, cihaz değerlendirme başına güvenlik açığı değerlendirmesi raporu, cihaz güvenlik açığı değerlendirmesi raporu, cihaz güvenlik açığı raporu, güvenli yapılandırma değerlendirmesi, güvenli yapılandırma raporu, yazılım açıkları değerlendirmesi, yazılım güvenlik açığı raporu, makineye göre güvenlik açığı raporu,
+title: Cihaz başına yazılım envanteri değerlendirmeyi dışarı aktarma
+description: DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion'ın her benzersiz bileşimi için bir giriş içeren bir tablo döndürür.
+keywords: api, API'ler, dışarı aktarma değerlendirmesi, cihaz başına değerlendirme, güvenlik açığı değerlendirme raporu, cihaz güvenlik açığı değerlendirmesi, cihaz güvenlik açığı raporu, güvenli yapılandırma değerlendirmesi, güvenli yapılandırma raporu, yazılım güvenlik açıkları değerlendirmesi, yazılım güvenlik açığı raporu, makineye göre güvenlik açığı raporu,
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,57 +15,58 @@ ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
 ms.custom: api
-ms.openlocfilehash: 4c3464a3aec242bd098503ac5bca997943ac2a4a
-ms.sourcegitcommit: dd6514ae173f1c821d4ec25298145df6cb232e2e
+ms.openlocfilehash: 296b977452802d8e1ed8949cf6a8871cac171f3a
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "63014048"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65840004"
 ---
-# <a name="export-software-inventory-assessment-per-device"></a>Cihaz başına yazılım envanteri değerlendirmesini dışarı aktarma
+# <a name="export-software-inventory-assessment-per-device"></a>Cihaz başına yazılım envanteri değerlendirmeyi dışarı aktarma
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender Güvenlik Açığı Yönetimi](../defender-vulnerability-management/index.yml)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 
-Farklı API çağrıları farklı türde veriler elde edin. Veri miktarı büyük olduğundan, alınanın iki yolu vardır:
+Farklı API çağrıları farklı veri türleri alır. Veri miktarı büyük olabileceğinden, alınabilmesinin iki yolu vardır:
 
-- [Yazılım envanteri değerlendirme **JSON yanıtı dışarı aktarma**](#1-export-software-inventory-assessment-json-response) API, Json yanıtları olarak tüm verileri kuruluş içinde çeker. Bu yöntem, _100 K'den az cihaza sahip küçük kuruluşlar için en iyisidir_. Yanıt sayfalandı, dolayısıyla sonraki sonuçları getirmek için \@yanıttan odata.nextLink alanını kullanabilirsiniz.
+- [Yazılım envanteri değerlendirmesi **JSON yanıtlarını** dışarı aktarma](#1-export-software-inventory-assessment-json-response) API, kuruluşunuzdaki tüm verileri Json yanıtları olarak çeker. Bu yöntem, _100 K'den az cihazı olan küçük kuruluşlar_ için en iyisidir. Yanıt sayfalandırılır, böylece yanıttan \@odata.nextLink alanını kullanarak sonraki sonuçları getirebilirsiniz.
 
-- [Dosyalar aracılığıyla yazılım envanteri **değerlendirmesini dışarı aktarma**](#2-export-software-inventory-assessment-via-files)  Bu API çözümü, daha büyük miktarlarda verinin daha hızlı ve daha güvenilir bir şekilde çekmesini sağlar. Bu nedenle, 100 K'den fazla cihazı olan büyük kuruluşlar için önerilir. Bu API, kuruluşta yer alan tüm verileri dosya indir olarak çeker. Yanıt, Azure Veri Hizmetleri'nden tüm verileri indirmek için URL'leri Depolama. Bu API, Azure'dan tüm verilerinizi aşağıdaki gibi Depolama sağlar:
-  - Tüm kuruluş verilerinizle birlikte indirme URL'lerinin listesini almak için API'yi arayın.
-  - İndirme URL'lerini kullanarak tüm dosyaları indirin ve verileri like gibi işin.
+- [**Dosyalar aracılığıyla** yazılım envanteri değerlendirmeyi dışarı aktarma](#2-export-software-inventory-assessment-via-files)  Bu API çözümü, daha fazla miktarda veriyi daha hızlı ve daha güvenilir bir şekilde çekmenizi sağlar. Bu nedenle, 100 K'den fazla cihazı olan büyük kuruluşlar için önerilir. Bu API, kuruluşunuzdaki tüm verileri indirme dosyaları olarak çeker. Yanıt, Azure Depolama'dan tüm verileri indirmek için URL'ler içerir. Bu API, Azure Depolama'dan tüm verilerinizi aşağıdaki gibi indirmenizi sağlar:
+  - Tüm kuruluş verilerinizi içeren indirme URL'lerinin listesini almak için API'yi çağırın.
+  - İndirme URL'lerini kullanarak tüm dosyaları indirin ve verileri istediğiniz gibi işleyin.
 
-Toplanan veriler ( _Json yanıtı kullanılarak_ veya dosyalar _yoluyla_), geçerli durumunun geçerli anlık görüntüsü olur. Tarihi veriler içermez. Tarihi verileri toplamak için, müşterilerin verileri kendi veri depolamalarına kaydetmeleri gerekir.
+Toplanan veriler ( _Json yanıtı_ veya _dosyalar aracılığıyla_) geçerli durum anlık görüntüsüdür. Geçmiş verileri içermez. Geçmiş verileri toplamak için müşterilerin verileri kendi veri depolamalarına kaydetmesi gerekir.
 
 > [!NOTE]
-> Aksi belirtilmedikçe, listelenen tüm dışarı aktarma değerlendirme yöntemleri tam dışarı **** aktarma ve **_cihaza göre_** (cihaz başına da **_adlandırılır) gösterilir_**.
+> Aksi belirtilmedikçe, listelenen tüm dışarı aktarma değerlendirme yöntemleri **_tam dışarı aktarma_** ve **_cihaza göredir_** ( **_cihaz başına_** olarak da adlandırılır).
 
-## <a name="1-export-software-inventory-assessment-json-response"></a>1. Yazılım stok değerlendirmesini dışarı aktarma (JSON yanıtı)
+## <a name="1-export-software-inventory-assessment-json-response"></a>1. Yazılım envanteri değerlendirmeyi dışarı aktarma (JSON yanıtı)
 
 ### <a name="11-api-method-description"></a>1.1 API yöntemi açıklaması
 
-Bu API yanıtı cihaz başına tüm yüklü yazılım verilerini içerir. Her benzersiz DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion bileşimi için bir giriş olan bir tablo döndürür.
+Bu API yanıtı, cihaz başına yüklü yazılımların tüm verilerini içerir. DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion'ın her benzersiz bileşimi için bir giriş içeren bir tablo döndürür.
 
 #### <a name="limitations"></a>Sınırlamalar
 
-- En büyük sayfa boyutu 200.000'tir.
-- Bu API için fiyat sınırlamaları dakikada 30 çağrı ve saatte 1000 çağrıdır.
+- En büyük sayfa boyutu 200.000'dir.
+- Bu API için hız sınırlamaları dakikada 30 çağrı ve saatte 1000 çağrıdır.
 
 ### <a name="12-permissions"></a>1.2 İzinler
 
-Bu API'yi çağrı yapmak için aşağıdaki izinlerden biri gerekir. İzinleri seçme de dahil olmak üzere daha fazla bilgi edinmek için bkz [. Uç nokta API'leri için Microsoft Defender'ı kullanma.](apis-intro.md)
+Bu API'yi çağırmak için aşağıdaki izinlerden biri gereklidir. İzinlerin nasıl seçileceği de dahil olmak üzere daha fazla bilgi edinmek [için ayrıntılar için bkz. Uç Nokta için Microsoft Defender API'lerini kullanma.](apis-intro.md)
 
-İzin türü|İzin|İzin görünen adı
+İzin türü|Izni|İzin görünen adı
 ---|---|---
-Uygulama|Software.Read.All|\'Tehdit ve Güvenlik Açığı Yönetimi güvenlik açığı bilgilerini okuma\'
-Temsilcili (iş veya okul hesabı)|Software.Read|\'Tehdit ve Güvenlik Açığı Yönetimi güvenlik açığı bilgilerini okuma\'
+Uygulama|Software.Read.All|\'Tehdit ve Güvenlik Açığı Yönetimi güvenlik açığı bilgilerini okuyun\'
+Temsilci (iş veya okul hesabı)|Software.Read|\'Tehdit ve Güvenlik Açığı Yönetimi güvenlik açığı bilgilerini okuyun\'
 
 ### <a name="13-url"></a>1.3 URL
 
@@ -75,16 +76,16 @@ GET /api/machines/SoftwareInventoryByMachine
 
 ### <a name="14-parameters"></a>1.4 Parametreler
 
-- pageSize (varsayılan = 50.000): Yanıtta sonuç sayısı.
-- $top: Sonuç sayısı (sonuç olarak @odata.nextLink ile sonuç vermez ve dolayısıyla tüm verileri çekmez)
+- pageSize (varsayılan = 50.000): Yanıt olarak sonuç sayısı.
+- $top: Döndürülecek sonuç sayısı (@odata.nextLink döndürmez ve bu nedenle tüm verileri çekmez)
 
-### <a name="15-properties"></a>1.5 Özellikler
+### <a name="15-properties"></a>1.5 Özellikleri
 
 > [!NOTE]
 >
-> - Her kayıt yaklaşık 0,5 KB veridir. Sizin için doğru pageSize parametresini seçerken bunu dikkate alasınız.
-> - Aşağıdaki tabloda tanımlanan özellikler, özellik kimliğine göre alfabetik olarak listelenir. Bu API'yi çalıştıracaksanız, sonuçta elde edilen çıktının bu tabloda listelenen sırada döndürülecek olması gerekmez.
-> - Yanıtta bazı ek sütunlar döndürülebilirsiniz. Bu sütunlar geçicidir ve kaldırılabilir, lütfen yalnızca belgelenmiş sütunları kullanın.
+> - Her kayıt yaklaşık 0,5 KB veridir. Sizin için doğru pageSize parametresini seçerken bunu dikkate almanız gerekir.
+> - Aşağıdaki tabloda tanımlanan özellikler, özellik kimliğine göre alfabetik olarak listelenir. Bu API'yi çalıştırırken, sonuçta elde edilen çıktının bu tabloda listelenen sırayla döndürülmesi gerekmez.
+> - Yanıtta bazı ek sütunlar döndürülebilir. Bu sütunlar geçicidir ve kaldırılabilir, lütfen yalnızca belgelenmiş sütunları kullanın.
 
 <br>
 
@@ -92,20 +93,20 @@ GET /api/machines/SoftwareInventoryByMachine
 
 Özellik (Kimlik)|Veri türü|Açıklama|Döndürülen değer örneği
 :---|:---|:---|:---
-DeviceId|dize|Hizmette cihaz için benzersiz tanımlayıcı.|9eaf3a8b5962e0e6b1af9ec756664a9b823df2d1
-DeviceName|dize|Cihazın tam etki alanı adı (FQDN).|johnlaptop.europe.contoso.com
-DiskPath'ler|Dizi[dize]|Ürünün cihaza yük olduğuna dair disk kanıtı.|[ "C:\\ Program Dosyaları (x86)\\MicrosoftSilverlightApplication\\\\\\silverlight.exe" ]
-EndOfSupportDate|dize|Bu yazılım için desteğin destek tarihi vardır veya sona erer.|2020-12-30
-EndOfSupportStatus|dize|Destek durumu sonu. Şu olası değerleri içerebilir: Yok, EOS Sürümü, Yaklaşan EOS Sürümü, EOS Yazılımı, Yaklaşan EOS Yazılımı.|Yaklaşan EOS
-Kimlik|dize|Kayıt için benzersiz tanımlayıcı.|123ABG55_573AG&mnp!
-NumberOfWeaknesses|int|Bu cihaz üzerinde bu yazılıma olan zayıf sayı|3
-OSPlatform|dize|Cihazda çalışan işletim sisteminin platformu. Bunlar, Windows 10 11 gibi, aynı aile içindeki çeşitlemelere sahip Windows 10 Windows sistemleridir. Ayrıntılar için TVm'de desteklenen işletim sistemleri ve platformlar'a bakın.|Windows10 ve Windows 11
-RbacGroupName|dize|Rol tabanlı erişim denetimi (RBAC) grubu. Bu cihaz hiçbir RBAC grubuna atanmamışsa, değer "Atanmamış" olur. Kuruluş hiçbir RBAC grubu içermese bile, değer "Yok" olur.|Sunucular
-RegistryPaths|Dizi[dize]|Ürünün cihaza yük olduğuna dair kayıt defteri kanıtı.|[ "HKEY_LOCAL_MACHINE\\ SOFTWAREWOW6432NodeMicrosoft Windows CurrentVersionUninstallMicrosoft\\\\ Silverlight" ]\\\\\\\\
-SoftwareFirstSeenTimestamp|dize|Bu yazılım ilk kez cihazda görüldü.|2019-04-07 02:06:47
-SoftwareName|dize|Yazılım ürününün adı.|Silverlight
-SoftwareVendor|dize|Yazılım satıcısının adı.|microsoft
-SoftwareVersion|dize|Yazılım ürününün sürüm numarası.|81.0.4044.138
+Deviceıd|Dize|Hizmetteki cihaz için benzersiz tanımlayıcı.|9eaf3a8b5962e0e6b1af9ec756664a9b823df2d1
+DeviceName|Dize|Cihazın tam etki alanı adı (FQDN).|johnlaptop.europe.contoso.com
+DiskPath'ler|Dizi[dize]|Ürünün cihaza yüklendiğini gösteren disk kanıtı.|[ "C:\\ Program Files (x86)\\Microsoft\\Silverlight\\Application\\silverlight.exe" ]
+EndOfSupportDate|Dize|Bu yazılım için desteğin sona ereceği veya sona ereceği tarih.|2020-12-30
+EndOfSupportStatus|Dize|Destek sonu durumu. Şu olası değerleri içerebilir: Yok, EOS Sürümü, Yaklaşan EOS Sürümü, EOS Yazılımı, Yaklaşan EOS Yazılımı.|Yaklaşan EOS
+Kimlik|Dize|Kayıt için benzersiz tanımlayıcı.|123ABG55_573AG&mnp!
+NumberOfWeaknesses|Int|Bu cihazdaki bu yazılımdaki zayıflıkların sayısı|3
+OSPlatform|Dize|Cihazda çalışan işletim sisteminin platformu. Bunlar, Windows 10 ve Windows 11 gibi aynı aile içinde varyasyonları olan belirli işletim sistemleridir. Ayrıntılar için bkz. tvm tarafından desteklenen işletim sistemleri ve platformlar.|Windows10 ve Windows 11
+RbacGroupName|Dize|Rol tabanlı erişim denetimi (RBAC) grubu. Bu cihaz herhangi bir RBAC grubuna atanmamışsa, değer "Atanmamış" olur. Kuruluş herhangi bir RBAC grubu içermiyorsa, değer "Yok" olur.|Sunucular
+RegistryPaths|Dizi[dize]|Ürünün cihaza yüklendiğine dair kayıt defteri kanıtı.|[ "HKEY_LOCAL_MACHINE\\ SOFTWARE\\WOW6432Node\\Microsoft\\ Windows\\ CurrentVersion\\Uninstall\\Microsoft Silverlight" ]
+SoftwareFirstSeenTimestamp|Dize|Bu yazılım cihazda ilk kez görüldü.|2019-04-07 02:06:47
+SoftwareName|Dize|Yazılım ürününün adı.|Silverlight
+SoftwareVendor|Dize|Yazılım satıcısının adı.|Microsoft
+SoftwareVersion|Dize|Yazılım ürününün sürüm numarası.|81.0.4044.138
 |
 
 ### <a name="16-examples"></a>1.6 Örnekler
@@ -210,24 +211,24 @@ GET https://api.securitycenter.microsoft.com/api/machines/SoftwareInventoryByMac
 }
 ```
 
-## <a name="2-export-software-inventory-assessment-via-files"></a>2. Yazılım envanteri değerlendirmesini dışarı aktarma (dosyalar yoluyla)
+## <a name="2-export-software-inventory-assessment-via-files"></a>2. Yazılım envanteri değerlendirmeyi dışarı aktarma (dosyalar aracılığıyla)
 
 ### <a name="21-api-method-description"></a>2.1 API yöntemi açıklaması
 
-Bu API yanıtı cihaz başına tüm yüklü yazılım verilerini içerir. Her benzersiz DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion bileşimi için bir giriş olan bir tablo döndürür.
+Bu API yanıtı, cihaz başına yüklü yazılımların tüm verilerini içerir. DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion'ın her benzersiz bileşimi için bir giriş içeren bir tablo döndürür.
 
-#### <a name="211-limitations"></a>2.1.1 Sınırlamalar
+#### <a name="211-limitations"></a>2.1.1 Sınırlamaları
 
-Bu API için fiyat sınırlamaları, dakikada 5 çağrı ve saatte 20 çağrıdır.
+Bu API için hız sınırlamaları dakikada 5 çağrı ve saatte 20 çağrıdır.
 
 ### <a name="22-permissions"></a>2.2 İzinler
 
-Bu API'yi çağrı yapmak için aşağıdaki izinlerden biri gerekir. İzinleri seçme de dahil olmak üzere daha fazla bilgi edinmek için bkz [. Uç nokta API'leri için Microsoft Defender'ı kullanma.](apis-intro.md)
+Bu API'yi çağırmak için aşağıdaki izinlerden biri gereklidir. İzinlerin nasıl seçileceği de dahil olmak üzere daha fazla bilgi edinmek [için ayrıntılar için bkz. Uç Nokta için Microsoft Defender API'lerini kullanma.](apis-intro.md)
 
-İzin türü|İzin|İzin görünen adı
+İzin türü|Izni|İzin görünen adı
 ---|---|---
-Uygulama|Software.Read.All|\'Tehdit ve Güvenlik Açığı Yönetimi güvenlik açığı bilgilerini okuma\'
-Temsilcili (iş veya okul hesabı)|Software.Read|\'Tehdit ve Güvenlik Açığı Yönetimi güvenlik açığı bilgilerini okuma\'
+Uygulama|Software.Read.All|\'Tehdit ve Güvenlik Açığı Yönetimi güvenlik açığı bilgilerini okuyun\'
+Temsilci (iş veya okul hesabı)|Software.Read|\'Tehdit ve Güvenlik Açığı Yönetimi güvenlik açığı bilgilerini okuyun\'
 
 ### <a name="23-url"></a>2.3 URL
 
@@ -235,17 +236,17 @@ Temsilcili (iş veya okul hesabı)|Software.Read|\'Tehdit ve Güvenlik Açığı
 GET /api/machines/SoftwareInventoryExport
 ```
 
-### <a name="parameters"></a>Parametreler
+### <a name="parameters"></a>Parametre
 
-- sasValidSatır: İndirme URL'lerinin geçerli olduğu saat sayısı (En fazla 24 saat)
+- sasValidHours: İndirme URL'lerinin geçerli olacağı saat sayısı (En fazla 24 saat)
 
-### <a name="25-properties"></a>2.5 Özellikler
+### <a name="25-properties"></a>2.5 Özellikleri
 
 > [!NOTE]
 >
-> - Dosyalar çok satırlı JSON & sıkıştırılmış dosya sıkıştırmalı biçimdedir.
-> - İndirme URL'leri yalnızca 3 saat geçerlidir. Aksi takdirde parametreyi kullanabilirsiniz.
-> - Verilerinizin en yüksek indirme hızı için, verilerinizin bulunduğu Azure bölgesinden indirmeye emin olun.
+> - Dosyalar çok satırlı JSON biçiminde gzip sıkıştırılmış &.
+> - İndirme URL'leri yalnızca 3 saat geçerlidir. Aksi takdirde parametresini kullanabilirsiniz.
+> - Verilerinizin en yüksek indirme hızı için, verilerinizin bulunduğu Azure bölgesinden indirme yaptığınızdan emin olabilirsiniz.
 
 <br>
 
@@ -253,8 +254,8 @@ GET /api/machines/SoftwareInventoryExport
 
 Özellik (Kimlik)|Veri türü|Açıklama|Döndürülen değer örneği
 :---|:---|:---|:---
-Dosyaları dışarı aktarma|arraystring\[\]|Kuruluşun geçerli anlık görüntüsünü tutan dosyalar için indirme URL'lerinin listesi|"[Https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...1", "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...2"]
-GeneratedTime|dize|Dışarı aktarmanın oluşturulma zamanı.|2021-05-20T08:00:00Z
+Dosyaları dışarı aktarma|dizi\[dizesi\]|Kuruluşun geçerli anlık görüntüsünü tutan dosyalar için indirme URL'lerinin listesi|"[Https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...1", "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...2"]
+GeneratedTime|Dize|Dışarı aktarmanın oluşturulduğu zaman.|2021-05-20T08:00:00Z
 |
 
 ### <a name="26-examples"></a>2.6 Örnekler
@@ -282,10 +283,10 @@ GET https://api.securitycenter.microsoft.com/api/machines/SoftwareInventoryExpor
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Cihaz başına değerlendirme yöntemlerini ve özelliklerini dışarı aktarma](get-assessment-methods-properties.md)
-- [Cihaz başına güvenli yapılandırma değerlendirmesini dışarı aktarma](get-assessment-secure-config.md)
-- [Cihaz başına yazılım açıkları değerlendirmesini dışarı aktarma](get-assessment-software-vulnerabilities.md)
+- [Cihaz başına güvenli yapılandırma değerlendirmelerini dışarı aktarma](get-assessment-secure-config.md)
+- [Cihaz başına yazılım güvenlik açıkları değerlendirmesi dışarı aktarma](get-assessment-software-vulnerabilities.md)
 
-Diğer ilgili
+Diğer ilgililer
 
 - [Risk tabanlı tehdit & güvenlik açığı yönetimi](next-gen-threat-and-vuln-mgt.md)
-- [Organizasyon güvenlik açıkları](tvm-weaknesses.md)
+- [Kuruluşunuzdaki güvenlik açıkları](tvm-weaknesses.md)

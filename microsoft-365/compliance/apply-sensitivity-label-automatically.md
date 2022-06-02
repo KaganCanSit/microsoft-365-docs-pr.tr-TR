@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Duyarlılık etiketi oluşturduğunuzda, dosyalara ve e-postalara otomatik olarak bir etiket atayabilir veya kullanıcılardan önerdiğiniz etiketi seçmelerini isteyebilirsiniz.
-ms.openlocfilehash: fc641845907e157e555e70104b2fcb472ad496af
-ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
+ms.openlocfilehash: 9998f71d275d28f10fc950b978cc13ce7fd3c335
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65599287"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65840441"
 ---
 # <a name="apply-a-sensitivity-label-to-content-automatically"></a>İçeriğe otomatik olarak bir hassasiyet etiketi uygulama
 
@@ -268,7 +268,7 @@ Otomatik etiketleme ilkelerini yapılandırmadan önce önkoşulların farkında
   - Office uygulamalar etiket ayarında otomatik etiketlemenin açık veya kapalı olması önemli değildir çünkü bu etiket ayarı, girişte açıklandığı gibi otomatik etiketleme ilkelerini tamamlar.
   - Otomatik etiketleme için kullanmak istediğiniz etiketler görsel işaretler (üst bilgiler, alt bilgiler, filigranlar) kullanacak şekilde yapılandırılmışsa, bunların belgelere uygulanmadığını unutmayın.
   - Etiketler [şifreleme](encryption-sensitivity-labels.md) uyguluyorsa:
-    - Otomatik etiketleme ilkesi SharePoint veya OneDrive konumları içerdiğinde, etiketin **İzinleri şimdi ata** ayarı için yapılandırılması gerekir.
+    - Otomatik etiketleme ilkesi SharePoint veya OneDrive için konumlar içerdiğinde, etiketin **Şimdi izin ata** ayarı için yapılandırılması ve **İçeriğe kullanıcı erişiminin süresinin dolması** **Asla** olarak ayarlanmalıdır.
     - Otomatik etiketleme ilkesi yalnızca Exchange için olduğunda, etiket **şimdi izinleri ata** veya **Kullanıcıların izin atamasına izin ver** (İletme veya Encrypt-Only seçenekleri için) için yapılandırılabilir.
 
 ### <a name="learn-about-simulation-mode"></a>Simülasyon modu hakkında bilgi edinin
@@ -377,7 +377,7 @@ Son olarak, simülasyon modunu kullanarak otomatik etiketleme ilkenizi çalışt
 
 11. **Özet** sayfası için: Otomatik etiketleme ilkenizin yapılandırmasını gözden geçirin, gerekli değişiklikleri yapın ve yapılandırmayı tamamlayın.
 
-**Şimdi Information** **protectionAuto** >  etiketleme sayfasında, otomatik etiketleme ilkenizi simülasyon modunda çalıştırmayı seçip seçmediğinize bağlı olarak **Simülasyon** veya **Kapalı** bölümünde görürsünüz. Yapılandırmanın ve durumun ayrıntılarını görmek için ilkenizi seçin (örneğin, **İlke benzetimi hala çalışıyor**). Simülasyon modundaki ilkeler için, hangi e-postaların veya belgelerin belirttiğiniz kurallarla eşleşdiğini görmek için **Eşleşen öğeler** sekmesini seçin.
+**Bilgi koruması** > **Otomatik etiketleme** sayfasında, otomatik etiketleme ilkenizi simülasyon modunda çalıştırmayı seçip seçmediğinize bağlı olarak **Simülasyon** veya **Kapalı** bölümünde görürsünüz. Yapılandırmanın ve durumun ayrıntılarını görmek için ilkenizi seçin (örneğin, **İlke benzetimi hala çalışıyor**). Simülasyon modundaki ilkeler için, hangi e-postaların veya belgelerin belirttiğiniz kurallarla eşleşdiğini görmek için **Eşleşen öğeler** sekmesini seçin.
 
 İlkenizi doğrudan bu arabirimden değiştirebilirsiniz:
 

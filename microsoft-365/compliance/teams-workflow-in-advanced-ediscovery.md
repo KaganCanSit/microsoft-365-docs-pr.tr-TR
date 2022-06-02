@@ -14,12 +14,12 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: eBulma'da (Premium) Microsoft Teams içeriği korumayı, toplamayı, gözden geçirmeyi ve dışarı aktarmayı öğrenin.
-ms.openlocfilehash: 46fe8491533f6d2fa6954eab76758213eaa7d30d
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 754be254c4301fae9fdfff5edee3593e1333eb6c
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65414876"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65839705"
 ---
 # <a name="ediscovery-premium-workflow-for-content-in-microsoft-teams"></a>Microsoft Teams içeriği için eBulma (Premium) iş akışı
 
@@ -27,11 +27,13 @@ ms.locfileid: "65414876"
 
 Bu makalede, Microsoft Teams içeriğini korumak, toplamak, gözden geçirmek ve dışarı aktarmak için Microsoft Purview eKeşif (Premium) kullanımına yönelik kapsamlı yordamlar, yönergeler ve en iyi yöntemler sunulmaktadır. Bu makalenin amacı, eBulma iş akışınızı Teams içerik için iyileştirmenize yardımcı olmaktır.
 
-eBulma (Premium) kullanarak toplayabileceğiniz ve işleyebileceğiniz beş Teams içerik kategorisi vardır:
+eBulma (Premium) kullanarak toplayabileceğiniz ve işleyebileceğiniz altı Teams içeriği kategorisi vardır:
 
 - **Teams 1:1 sohbetleri**. İki kişi arasındaki Teams konuşmada paylaşılan sohbet iletileri, gönderiler ve ekler.  Teams 1:1 sohbetleri *konuşma olarak da* adlandırılır.
 
 - **Grup sohbetlerini Teams**. Üç veya daha fazla kişi arasındaki Teams konuşmada paylaşılan sohbet iletileri, gönderiler ve ekler. *1:N* sohbetleri veya *grup konuşmaları* olarak da adlandırılır.
+
+- **Teams tepkiler**. Teams konuşmadaki sohbet iletilerine, gönderilere ve eklere uygulanan tepkiler.
 
 - **Teams kanalları**. Standart bir Teams kanalında paylaşılan sohbet iletileri, gönderiler, yanıtlar ve ekler.
 
@@ -47,6 +49,7 @@ eBulma'da (Premium) Teams içeriği yönetmenin önkoşullarından biri, eBulma'
 |---|---|---|
 |Teams 1:1 sohbetleri|1:1 sohbetlerindeki iletiler, tüm sohbet katılımcılarının Exchange Online posta kutusunda depolanır.|1:1 sohbetinde paylaşılan dosyalar, dosyayı paylaşan kişinin OneDrive İş hesabında depolanır.|
 |Grup sohbetlerini Teams|Grup sohbetlerindeki iletiler, tüm sohbet katılımcılarının Exchange Online posta kutusunda depolanır.|Grup sohbetlerinde paylaşılan dosyalar, dosyayı paylaşan kişinin OneDrive İş hesabında depolanır.|
+|Teams reaksiyonları|Grup sohbetlerindeki iletiler, tüm sohbet katılımcılarının Exchange Online posta kutusunda depolanır.|Grup sohbetlerinde paylaşılan dosyalar, dosyayı paylaşan kişinin OneDrive İş hesabında depolanır.|
 |kanalları Teams|Tüm kanal iletileri ve gönderileri, ekiple ilişkilendirilmiş Exchange Online posta kutusunda depolanır.|Kanalda paylaşılan dosyalar, ekiple ilişkilendirilmiş SharePoint Online sitesinde depolanır.|
 |Özel kanallar|Özel kanalda gönderilen iletiler, özel kanalın tüm üyelerinin Exchange Online posta kutularında depolanır.|Özel kanalda paylaşılan dosyalar, özel kanalla ilişkilendirilmiş ayrılmış bir SharePoint Online sitesinde depolanır.|
 |Paylaşılan kanallar|Paylaşılan kanalda gönderilen iletiler, paylaşılan kanalla ilişkilendirilmiş bir sistem posta kutusunda depolanır. <sup>1</sup>|Paylaşılan kanalda paylaşılan dosyalar, paylaşılan kanalla ilişkilendirilmiş ayrılmış bir SharePoint Çevrimiçi sitesinde depolanır.|
@@ -88,7 +91,7 @@ Bir olaya koruyucu eklemek ve koruyucu veri kaynaklarını korumak için:
 
 1. Önceki bölümde oluşturduğunuz eBulma (Premium) olayına gidin ve **Veri kaynakları'na** tıklayın.
 
-2. **Veri kaynakları** sayfasında **Veri kaynağı** >  **ekleYeni koruyucu ekle'ye** tıklayın.
+2. **Veri kaynakları** sayfasında **Veri kaynağı** > **ekleYeni koruyucu ekle'ye** tıklayın.
 
 3. **Yeni koruyucu** sihirbazında, kullanıcı adının veya diğer adının ilk bölümünü yazarak bir veya daha fazla kullanıcıyı servis talebine koruyucu olarak ekleyin. Doğru kişiyi buldukta adını seçerek listeye ekleyin.  
 
@@ -137,7 +140,7 @@ Teams içerik koleksiyonu oluşturmak için:
 
 1. Önceki bölümde koruyucuları eklediğiniz eBulma (Premium) olayına gidin ve **Koleksiyonlar'a** tıklayın.
 
-2. **Koleksiyonlar** sayfasında Yeni **koleksiyonStandard koleksiyonu'nu** >  seçin.
+2. **Koleksiyonlar** sayfasında **Yeni koleksiyon****Standart koleksiyon'ı** >  seçin.
 
 3. Koleksiyon için bir ad (gerekli) ve açıklama (isteğe bağlı) yazın.
 

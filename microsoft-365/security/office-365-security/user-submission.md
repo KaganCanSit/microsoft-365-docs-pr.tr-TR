@@ -18,16 +18,16 @@ ms.custom: ''
 description: Yöneticiler, kullanıcılar tarafından bildirilen istenmeyen posta ve kimlik avı e-postalarını toplamak için posta kutusunu yapılandırmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 8b73144b678140cd30917b4fd687663ff0a455a3
-ms.sourcegitcommit: 58ec09f1fd66af9717dc2743585d06d358ec7360
+ms.openlocfilehash: f09054a4ee57ce7105a7b2daffc65be5b91dc8f6
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2022
-ms.locfileid: "65144805"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65839678"
 ---
 # <a name="user-reported-message-settings"></a>Kullanıcı tarafından bildirilen ileti ayarları
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -40,7 +40,7 @@ Exchange Online posta kutuları olan Microsoft 365 kuruluşlarda, kullanıcılar
 - [Rapor Kimlik Avı eklentisi](enable-the-report-phish-add-in.md)
 - [Üçüncü taraf raporlama araçları](#third-party-reporting-tools)
 
-Kullanıcı tarafından bildirilen iletileri doğrudan Microsoft yerine özel bir posta kutusuna teslim etmek, yöneticilerinizin Yönetici [gönderimini](admin-submission.md) kullanarak iletileri seçerek ve el ile Microsoft'a bildirmesine olanak tanır. Bu ayarlar daha önce Kullanıcı gönderimleri ilkesi olarak biliniyordu.
+Kullanıcı tarafından bildirilen iletileri doğrudan Microsoft yerine özel bir posta kutusuna teslim etmek, yöneticilerinizin [Yönetici gönderimi](admin-submission.md) kullanarak iletileri seçerek ve el ile Microsoft'a bildirmesine olanak tanır. Bu ayarlar daha önce Kullanıcı gönderimleri ilkesi olarak biliniyordu.
 
   > [!NOTE]
   > [raporlama Web üzerinde Outlook devre dışı bırakıldıysa](report-junk-email-and-phishing-scams-in-outlook-on-the-web-eop.md#disable-or-enable-junk-email-reporting-in-outlook-on-the-web), burada kullanıcı tarafından bildirilen iletilerin etkinleştirilmesi bu ayarı geçersiz kılar ve kullanıcıların iletileri Web üzerinde Outlook yeniden raporlamasına olanak tanır.
@@ -49,17 +49,15 @@ Kullanıcı tarafından bildirilen iletileri doğrudan Microsoft yerine özel bi
 
 Kullanıcı tarafından bildirilen iletilerin özel posta kutunuza gitmesi için gerekli önkoşulları yapılandırmak için aşağıdaki makaleleri kullanın:
 
-- İstenmeyen posta güvenilirlik düzeyini ayarlamak için bir exchange posta akışı kuralı oluşturarak özel posta kutusunda istenmeyen posta filtrelemeyi atlayın. Bkz. [İletinin SCL'sini SCL'yi İstenmeyen posta filtrelemesini atla olarak ayarlayan bir posta akışı kuralı oluşturmak için EAC'yi kullanma](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl#use-the-eac-to-create-a-mail-flow-rule-that-sets-the-scl-of-a-message).
+- [Gelişmiş teslim ilkesinde özel posta kutusunu SecOps posta kutusu olarak tanımlama](configure-advanced-delivery.md#use-the-microsoft-365-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy)
 
-- [Kötü amaçlı yazılım için](configure-your-spam-filter-policies.md#use-the-microsoft-365-defender-portal-to-create-anti-spam-policies) sıfır saatlik otomatik temizlemenin (ZAP) kapalı olduğu özel posta kutusunu içeren bir kötü amaçlı yazılımdan koruma ilkesi oluşturun (**Koruma ayarları** bölümünde \> Kötü **amaçlı yazılım için sıfır saatlik otomatik temizlemeyi etkinleştirme** seçili değildir).
-
-- İstenmeyen posta için ZAP ve kimlik avı için ZAP'ın kapalı olduğu özel posta kutusunu içeren [bir istenmeyen posta önleme ilkesi oluşturun](configure-your-spam-filter-policies.md#use-the-microsoft-365-defender-portal-to-create-anti-spam-policies) (**Sıfır saatlik otomatik temizleme** bölümü \> **Sıfır saatlik otomatik temizlemeyi etkinleştirildi (ZAP)** seçilmez).
+- [Kötü amaçlı yazılım](configure-your-spam-filter-policies.md#use-the-microsoft-365-defender-portal-to-create-anti-spam-policies) için sıfır saatlik otomatik temizlemenin (ZAP) kapalı olduğu özel posta kutusu için kötü amaçlı yazılımdan koruma ilkesi oluşturun (**Koruma ayarları** bölümünde \> **Kötü amaçlı yazılım için sıfır saatlik otomatik temizlemeyi etkinleştirme** seçili değildir).
 
 Office 365 için Microsoft Defender varsa, gelişmiş filtrelememizin iletileri bildiren kullanıcıları etkilememesi için aşağıdaki ayarları da yapılandırmanız gerekir:
 
-- Kasa Bağlantıları taramasının kapalı olduğu özel posta kutusunu içeren [bir Kasa Bağlantıları ilkesi oluşturun](set-up-safe-links-policies.md) (**İletilerde bilinmeyen kötü amaçlı olabilecek URL'ler için eylemi seçin** **kapalı**\>).
+- Kasa Bağlantılar taramasının kapalı olduğu özel posta kutusu için [bir Kasa Bağlantıları ilkesi oluşturun](set-up-safe-links-policies.md) (**İletilerde bilinmeyen kötü amaçlı olabilecek URL'ler için eylemi seçin** kapalı \> **).**
 
-- Kasa Ekler taramasının kapalı olduğu özel posta kutusunu içeren [bir Kasa Ekler ilkesi oluşturun](set-up-safe-attachments-policies.md) (**Ekler bilinmeyen kötü amaçlı yazılım yanıtı** bölümü \> **Kapalı** Kasa).
+- Kasa Ekler taramasının kapalı olduğu özel posta kutusu için [bir Kasa Ekler ilkesi oluşturun](set-up-safe-attachments-policies.md) (**Ekler bilinmeyen kötü amaçlı yazılım yanıtı** bölümü \> **Kapalı** Kasa).
 
 Posta kutunuzu tüm geçerli önkoşulları karşıladığını doğruladıktan sonra, kullanıcı gönderimleri posta kutusunu yapılandırmak için bu makaledeki yordamları kullanabilirsiniz.
 

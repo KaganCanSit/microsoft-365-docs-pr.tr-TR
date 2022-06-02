@@ -16,12 +16,12 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 description: Microsoft 365'da eBulma (Premium) çözümü için geçerli olan durum sınırları, dizin oluşturma sınırları ve arama sınırları hakkında bilgi edinin.
-ms.openlocfilehash: 5b83cd578b8975dd0185fb2902357c2f0c201043
-ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
+ms.openlocfilehash: 0c288b1d30fa668446421db547e2595f3385cbb7
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2022
-ms.locfileid: "65772708"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65839349"
 ---
 # <a name="limits-in-ediscovery-premium"></a>eBulma sınırları (Premium)
 
@@ -35,8 +35,8 @@ Aşağıdaki tabloda, eBulma (Premium) içindeki servis taleplerinin ve gözden 
 
 |Sınırın açıklaması|Sınırı|
 |---|---|
-|Bir servis talebine eklenebilen toplam belge sayısı (bir servis talebindeki tüm inceleme kümeleri için).|3 milyon|
-|Yük kümesi başına toplam dosya boyutu. Bu, Office 365 olmayanların bir gözden geçirme kümesine yüklenmesini içerir.|300 GB|
+|Bir servis talebine eklenebilen toplam belge sayısı (bir servis talebindeki tüm inceleme kümeleri için).|En fazla 40 milyon (Yeni servis talebi biçimi)|
+|Yük kümesi başına toplam dosya boyutu. Bu, Office 365 olmayanların bir gözden geçirme kümesine yüklenmesini içerir.|En fazla 1 TB (Yeni durum biçimi)|
 |Kuruluştaki tüm gözden geçirme kümelerine günlük yüklenen toplam veri miktarı.<br/>|2TB|
 |Olay başına en fazla yük kümesi sayısı.|200|
 |Servis talebi başına en fazla gözden geçirme kümesi sayısı.|20|

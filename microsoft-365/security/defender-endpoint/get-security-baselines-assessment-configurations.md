@@ -15,12 +15,12 @@ ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
 ms.custom: api
-ms.openlocfilehash: 4a9b75698227c86c58255bad4e3336157c179c4a
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: cef91fd3aabb8d857abe8386933c986d62953c42
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65419054"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65839343"
 ---
 # <a name="list-security-baselines-assessment-configurations"></a>Güvenlik temelleri değerlendirme yapılandırmalarını listeleyin
 
@@ -29,7 +29,7 @@ ms.locfileid: "65419054"
 **Şunlar için geçerlidir:**
 
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Microsoft Defender Güvenlik Açığı Yönetimi - Güncelleştirme](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender Güvenlik Açığı Yönetimi](../defender-vulnerability-management/index.yml)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Microsoft Defender Güvenlik Açığı Yönetimi mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.- Güncelleştirme](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
@@ -66,7 +66,7 @@ Başarılı olursa, bu yöntem gövdedeki temel yapılandırmaların listesiyle 
 
 |Özellik | Tür | Açıklama |
 |:---|:---|:---|
-|Kimliği | Dize | Temel karşılaştırmadaki belirli yapılandırma için benzersiz tanımlayıcı.
+|Kimlik | Dize | Temel karşılaştırmadaki belirli yapılandırma için benzersiz tanımlayıcı.
 |Adı | Dize | Yapılandırma adı karşılaştırmada görünür.
 |Açıklama | Dize | Karşılaştırmada göründüğü gibi yapılandırma açıklaması.
 |Kategori | Dize | Karşılaştırmada göründüğü gibi yapılandırma kategorisi.
