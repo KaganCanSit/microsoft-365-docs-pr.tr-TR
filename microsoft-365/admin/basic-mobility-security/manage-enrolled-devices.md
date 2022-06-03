@@ -19,12 +19,12 @@ ms.custom:
 search.appverid:
 - MET150
 description: Microsoft 365 oturum açın ve kullanıcılarınızın mobil cihazlarının güvenliğini sağlamak ve yönetmek için yerleşik mobil cihaz yönetimini kullanmak için Basic Mobility ve Security'yi ayarlayın.
-ms.openlocfilehash: c24d36b1151b22fee228d1a85368bf26a381e4d2
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: b84c97302743177f0a69978ebf358c0fbd1045a8
+ms.sourcegitcommit: 1fa0b15f86470c49dddf0d6de59d553a38ae259b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65435733"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65863576"
 ---
 # <a name="manage-devices-enrolled-in-mobile-device-management-in-microsoft-365"></a>Microsoft 365'da Mobil Cihaz Yönetimi kayıtlı cihazları yönetme
 
@@ -36,13 +36,9 @@ Bunu ayarladıktan sonra, kuruluşunuzdaki kişilerin cihazlarını hizmete kayd
 
 Cihaz yönetimi paneline ulaşmak için şu adımları izleyin:
 
-1. [Microsoft 365 yönetim merkezi](../../admin/admin-overview/admin-center-overview.md) gidin.
+1. Microsoft 365 yönetim merkezi oturum açın ve [Mobil Cihaz Yönetimi sayfasına](https://portal.office.com/adminportal/home?#/MifoDevices) gidin.
 
-2. Arama alanına Mobile Cihaz Yönetimi yazın ve sonuç listesinden **Mobil Cihaz Yönetimi'ı** seçin.
-
-    :::image type="content" source="../../media/basic-mobility-security/bms-6-mobile-device-management-option.png" alt-text="Mobil cihaz yönetimi seçeneği.":::
-
-3. **Başlayalım'ı** seçin.
+1. **Başlayalım'ı** seçin.
 
 ## <a name="manage-mobile-devices"></a>Mobil cihazları yönetme
 
@@ -52,9 +48,9 @@ Temel Mobilite ve Güvenlik'i ayarladıktan sonra, kuruluşunuzdaki mobil cihazl
 |---|---|
 |Cihazı silme|Cihaz Yönetimi panelinde *cihaz adını*, ardından tüm bilgileri silmek için **Tam silme'yi** veya yalnızca cihazdaki kuruluş bilgilerini silmek için **Seçmeli silme'yi** seçin. Daha fazla bilgi için bkz [. Basic Mobility and Security'de mobil cihazı temizleme](wipe-mobile-device.md).|
 |Desteklenmeyen cihazların Exchange ActiveSync kullanarak Exchange e-postaya erişmesini engelleme|Cihaz Yönetimi panelinde **Engelle'yi** seçin.|
-|Parola gereksinimleri ve güvenlik ayarları gibi cihaz ilkelerini ayarlama|Cihaz Yönetimi panelinde **Cihaz güvenlik** **ilkeleriEkle** >  + öğesini seçin. Daha fazla bilgi için bkz. [Basic Mobility ve Security'de cihaz güvenlik ilkeleri oluşturma](create-device-security-policies.md).|
+|Parola gereksinimleri ve güvenlik ayarları gibi cihaz ilkelerini ayarlama|Cihaz Yönetimi panelinde **Cihaz güvenlik ilkeleri** > **Ekle +** öğesini seçin. Daha fazla bilgi için bkz. [Basic Mobility ve Security'de cihaz güvenlik ilkeleri oluşturma](create-device-security-policies.md).|
 |Engellenen cihazların listesini görüntüleme|Cihaz Yönetimi panelinde, **Görünüm seçin** altında **Engellendi'yi** seçin.|
-|Bir kullanıcı veya kullanıcı grubu için uyumsuz veya desteklenmeyen cihazın engellemesini kaldırma|Cihazların engellemesini kaldırmak için aşağıdakilerden birini seçin:<br/>- kullanıcıyı veya kullanıcıları ilkenin uygulandığı güvenlik grubundan kaldırın. Microsoft 365 yönetim merkezi > <a href="https://go.microsoft.com/fwlink/p/?linkid=2052855" target="_blank">**Grupları'na**</a> gidin ve grup adını seçin. **Üyeleri ve yöneticileri düzenle'yi** seçin.<br/>- Kullanıcıların üyesi olduğu güvenlik grubunu cihaz ilkesinden kaldırın. Güvenlik & Uyumluluk Merkezi > **Güvenlik ilkeleriYeni** **güvenlik ilkeleri'ne** >  gidin. Cihaz ilkesi adını ve ardından **EditDeployment'ı** >  seçin.<br/>- Bir cihaz ilkesi için tüm uyumsuz cihazların engellemesini kaldırın. Güvenlik & Uyumluluk Merkezi > **Güvenlik ilkeleriYeni** **güvenlik ilkeleri'ne** >  gidin. Cihaz ilkesi adını ve ardından **EditAccess gereksinimleri'ni** >  seçin. **Erişime izin ver ve ihlal bildir'i** seçin.<br/>- Bir kullanıcı veya kullanıcı grubu için uyumsuz veya desteklenmeyen bir cihazın engelini kaldırmak için Güvenlik & Uyumluluk Merkezi > **Güvenlik** **ilkeleriCihaz** >  yönetimiCihaz  > **erişim ayarlarını yönet'e** gidin. Microsoft 365 erişiminin engellenmesinin dışında tutmak istediğiniz üyeleri içeren bir güvenlik grubu ekleyin. Daha fazla bilgi için bkz. [Microsoft 365 yönetim merkezi güvenlik grubu oluşturma, düzenleme veya silme](../../admin/email/create-edit-or-delete-a-security-group.md).|
+|Bir kullanıcı veya kullanıcı grubu için uyumsuz veya desteklenmeyen cihazın engellemesini kaldırma|Cihazların engellemesini kaldırmak için aşağıdakilerden birini seçin:<br/>- kullanıcıyı veya kullanıcıları ilkenin uygulandığı güvenlik grubundan kaldırın. Microsoft 365 yönetim merkezi > <a href="https://go.microsoft.com/fwlink/p/?linkid=2052855" target="_blank">**Grupları'na**</a> gidin ve grup adını seçin. **Üyeleri ve yöneticileri düzenle'yi** seçin.<br/>- Kullanıcıların üyesi olduğu güvenlik grubunu cihaz ilkesinden kaldırın. Güvenlik & Uyumluluk Merkezi > **Güvenlik ilkeleri****Cihaz güvenlik ilkeleri'ne** >  gidin. Cihaz ilkesi adını ve ardından **Dağıtımı** **Düzenle'yi** >  seçin.<br/>- Bir cihaz ilkesi için tüm uyumsuz cihazların engellemesini kaldırın. Güvenlik & Uyumluluk Merkezi > **Güvenlik ilkeleri****Cihaz güvenlik ilkeleri'ne** >  gidin. Cihaz ilkesi adını ve ardından **Erişim gereksinimlerini** **düzenle'yi** >  seçin. **Erişime izin ver ve ihlal bildir'i** seçin.<br/>- Bir kullanıcı veya kullanıcı grubu için uyumsuz veya desteklenmeyen bir cihazın engelini kaldırmak için Güvenlik & Uyumluluk Merkezi > **Güvenlik ilkeleri** > **Cihaz yönetimi** > **Cihaz erişim ayarlarını yönetme'ye** gidin. Microsoft 365 erişiminin engellenmesinin dışında tutmak istediğiniz üyeleri içeren bir güvenlik grubu ekleyin. Daha fazla bilgi için bkz. [Microsoft 365 yönetim merkezi güvenlik grubu oluşturma, düzenleme veya silme](../../admin/email/create-edit-or-delete-a-security-group.md).|
 |Cihazları artık Basic Mobility ve Security tarafından yönetilemeyecek şekilde kullanıcıları kaldırma|Kullanıcıyı kaldırmak için, Temel Mobilite ve Güvenlik için cihaz yönetimi ilkeleri olan güvenlik grubunu düzenleyin. Daha fazla bilgi için bkz. [Microsoft 365 yönetim merkezi güvenlik grubu oluşturma, düzenleme veya silme](../../admin/email/create-edit-or-delete-a-security-group.md).<br/>Basic Mobility ve Security'yi tüm Microsoft 365 kullanıcılarınızdan kaldırmak için bkz. [Temel Mobilite ve Güvenlik'i kapatma](turn-off.md).|
 
 Canlı (v14)

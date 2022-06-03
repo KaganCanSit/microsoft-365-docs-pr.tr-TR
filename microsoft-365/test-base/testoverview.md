@@ -1,5 +1,5 @@
 ---
-title: Uygulamanızı Test Tabanı'nda test edin
+title: Uygulamanızı Test Base üzerinde test edin
 description: Uygulamanızı test etme
 search.appverid: MET150
 author: Tinacyt
@@ -14,26 +14,34 @@ ms.collection: TestBase-M365
 ms.custom: ''
 ms.reviewer: Tinacyt
 f1.keywords: NOCSH
-ms.openlocfilehash: 3c0b5d19c2b96698a2d24d4f165780fe0f9ccfd1
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 2f0ccded84f7b1c46ff2aeea38eae8f0baadc6ff
+ms.sourcegitcommit: 1fa0b15f86470c49dddf0d6de59d553a38ae259b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64937132"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65863589"
 ---
-# <a name="test-your-application-on-test-base"></a>Uygulamanızı Test Tabanı'nda test edin
+# <a name="test-your-application-on-test-base"></a>Uygulamanızı Test Base üzerinde test edin
 
-Bu, yeni bir paket oluşturup çeşitli uygulama türleriyle Test Tabanı'nda test etmek için kapsamlı bir kılavuzdur. Lütfen kendi uygulamanızın belirli belgelerine bakın:
+Bu bölümde, **Test Temeli'nde** karşıya yüklemek ve test etmek için farklı uygulama türlerine sahip paketler oluşturmayı öğreneceksiniz. Uygulama türleri aşağıdaki değerlerden oluşur:
 
-## <a name="test-binaries-package-on-test-base"></a>Test Tabanında Test İkiliLeri paketi
+   > [!div class="mx-imgBorder"]
+   > ![Paket yayımlama istemleri](Media/testoverview01.png)
 
-[İkili dosyalar](testapplication.md) dosyasıyla (.exe veya .msi) test temeli paketi oluşturmak için bkz. Test İkilileri paketi.
+   - **İkili Dosyaları Test Et**
 
-## <a name="test-your-intune-app-on-test-base"></a>Intune uygulamanızı Test Tabanı'nda test edin
+      Karşıya yükleme [ve test için bir İkili](testapplication.md) uygulama dosyası (.exe, .msi) içeren bir paket hazırlamak için bkz. Test Tabanında İkili Dosyalar Oluşturma ve Test Etme.
 
-Intunewin [uygulamasıyla Test](testintuneapplication.md) Temeli paketi oluşturmak için bkz. Intune uygulamanızı test etme.
+   - **Intunewin uygulaması**
 
-## <a name="upload-your-test-base-package-zip"></a>Test Temeli paketinizi (Zip) Upload
+      Karşıya yükleme ve test için Intune uygulama dosyası (.intunewin) içeren bir paket hazırlamak için bkz. [Test Tabanında Intune uygulamanızı](testintuneapplication.md) test etme.
 
-Daha fazla bilgi edinmek için bkz. Zaten bir Test Temeli paketiniz varsa [Zip karşıya yükleme](uploadApplication.md) .
+   - **Önceden oluşturulmuş Zip paketi**
+
+      .zip biçimde çevrimdışı bir yerleşik paketiniz varsa bkz. [Önceden oluşturulmuş zip paketini karşıya yükleme](uploadApplication.md) .
+
+   - **Mevcut paketi kopyalama**
+
+      Daha önce yayımlanmış [paketinizi](clonepackage.md) çoğaltarak yeni bir paket oluşturmak için bkz. Mevcut paketi kopyalama.
+
 

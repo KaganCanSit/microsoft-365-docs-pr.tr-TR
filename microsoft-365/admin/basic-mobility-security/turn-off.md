@@ -14,12 +14,12 @@ ms.collection:
 - Adm_TOC
 ms.custom: AdminSurgePortfolio
 description: Temel Mobilite ve Güvenlik'i kapatmak için grupları veya ilkeleri kaldırın.
-ms.openlocfilehash: c3c82c040e688977a68e06639e87c8f733bc8c38
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 59a54b9969bf16c7523a6862c6f0960bb1527e8a
+ms.sourcegitcommit: 1fa0b15f86470c49dddf0d6de59d553a38ae259b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64780775"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65863042"
 ---
 # <a name="turn-off-basic-mobility-and-security"></a>Temel Hareketlilik ve Güvenlik'i kapatma
 
@@ -36,7 +36,7 @@ Bu seçenekler, kuruluşunuzdaki cihazlar için Temel Mobilite ve Güvenlik zorl
 
 ## <a name="remove-user-security-groups-from-basic-mobility-and-security-device-policies"></a>Temel Mobilite ve Güvenlik cihaz ilkelerinden kullanıcı güvenlik gruplarını kaldırma
 
-1. Tarayıcınıza şunu yazın: [https://protection.office.com/devicev2](https://protection.office.com/devicev2).
+1. Tarayıcınıza şunu yazın: [https://compliance.microsoft.com/basicmobilityandsecurity](https://compliance.microsoft.com/basicmobilityandsecurity).
 
 2. Bir cihaz ilkesi seçin ve **İlkeyi düzenle'yi** seçin.
 
@@ -48,7 +48,7 @@ Bu seçenekler, kuruluşunuzdaki cihazlar için Temel Mobilite ve Güvenlik zorl
 
 ## <a name="remove-basic-mobility-and-security-device-policies"></a>Temel Mobilite ve Güvenlik cihaz ilkelerini kaldırma
 
-1. Tarayıcınıza şunu yazın: [https://protection.office.com/devicev2](https://protection.office.com/devicev2).
+1. Tarayıcınıza şunu yazın: [https://compliance.microsoft.com/basicmobilityandsecurity](https://compliance.microsoft.com/basicmobilityandsecurity).
 
 2. Bir cihaz ilkesi seçin ve ardından **İlkeyi sil'i** seçin.
 

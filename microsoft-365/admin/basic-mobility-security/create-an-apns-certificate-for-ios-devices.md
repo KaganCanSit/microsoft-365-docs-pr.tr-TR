@@ -14,12 +14,12 @@ ms.collection:
 - Adm_TOC
 ms.custom: AdminSurgePortfolio
 description: Basic Mobility ve Security'de iPad ve iPhone gibi iOS cihazları yönetmek için bir APNs sertifikası oluşturarak başlayın.
-ms.openlocfilehash: 8bcbcdeac9f1cadd945c3f7c44e9192d57db7c82
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 10d2e8412cfecf3627c7520123592b371bf01fdb
+ms.sourcegitcommit: 1fa0b15f86470c49dddf0d6de59d553a38ae259b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65435799"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65863532"
 ---
 # <a name="create-an-apns-certificate-for-ios-devices"></a>iOS cihazları için APN sertifikası oluşturma
 
@@ -27,15 +27,13 @@ Basic Mobility ve Security'de iPad ve iPhone gibi iOS cihazları yönetmek için
 
 1. Genel yönetici hesabınızla Microsoft 365 oturum açın.
 
-2. Tarayıcınızda yazın <https://protection.office.com/>.
+1. [Microsoft 365 yönetim merkezi](https://portal.office.com/adminportal/home?#/MifoDevices) gidin ve **iOS için APNs Sertifikası'nı** seçin.
 
-3. **Veri kaybı önleme** \> **Cihaz yönetimi'ni** ve **iOS cihazlar için APNs Sertifikası'nı** seçin.
+1. Apple Anında İletme Bildirimi Sertifikası Ayarlar sayfasında **İleri'yi** seçin.
 
-4. Apple Anında İletme Bildirimi Sertifikası Ayarlar sayfasında **İleri'yi** seçin.
+1. CSR dosyanızı indirin'i seçin ve sertifika imzalama isteğini bilgisayarınızda anımsayacağınız bir yere kaydedin. **İleri**'yi seçin.
 
-5. CSR dosyanızı indirin'i seçin ve sertifika imzalama isteğini bilgisayarınızda anımsayacağınız bir yere kaydedin. **İleri**'yi seçin.
-
-6. APNs sertifikası oluştur sayfasında:
+1. APNs sertifikası oluştur sayfasında:
 
     1. Apple Anında İletme Sertifikaları Portalı'nı açmak için Apple APNS Portalı'nı seçin.
 
@@ -53,10 +51,10 @@ Basic Mobility ve Security'de iPad ve iPhone gibi iOS cihazları yönetmek için
        > [!TIP]
        > Sertifikayı indirirken sorun yaşıyorsanız tarayıcınızı yenileyin.
 
-7. Microsoft 365 Geri dön ve **Upload APNS sertifika** sayfasına ulaşmak için **İleri'yi** seçin.
+1. Microsoft 365 Geri dön ve **Upload APNS sertifika** sayfasına ulaşmak için **İleri'yi** seçin.
 
-8. Apple Anında İletme Sertifikaları Portalı'ndan indirdiğiniz APN sertifikasına göz atın.
+1. Apple Anında İletme Sertifikaları Portalı'ndan indirdiğiniz APN sertifikasına göz atın.
 
-9. **Bitir'i** seçin.
+1. **Bitir'i** seçin.
 
 Kurulumu tamamlamak için Güvenlik & Uyumluluk Merkezi \> **Güvenlik ilkeleri** \> **Cihaz yönetimi** \> **Ayarları yönet'e** geri dönün.

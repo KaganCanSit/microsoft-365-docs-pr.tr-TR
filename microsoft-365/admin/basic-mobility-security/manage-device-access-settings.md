@@ -18,12 +18,12 @@ ms.custom:
 search.appverid:
 - MET150
 description: Basic Mobility ve Security ile yönetemezseniz, Microsoft 365 e-postaya Exchange ActiveSync uygulama erişimini engellemeniz gerekir.
-ms.openlocfilehash: 450d694e83b5044efb25adb918f38a124181481f
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 01b89bc50fb348072873d68f52b75d721830aeb5
+ms.sourcegitcommit: 1fa0b15f86470c49dddf0d6de59d553a38ae259b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65435843"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65863138"
 ---
 # <a name="manage-device-access-settings-in-basic-mobility-and-security"></a>Temel Mobilite ve Güvenlik'te cihaz erişim ayarlarını yönetme
 
@@ -40,9 +40,9 @@ Temel Mobilite ve Güvenlik kullanıyorsanız, Basic Mobility ve Security ile y�
 
 3. **Veri kaybı önleme** \> **Cihaz yönetimi** \> **Cihaz ilkeleri'ne** gidin ve **Kuruluş genelinde cihaz erişim ayarlarını yönet'i** seçin.
 
-4. **Engelle'yi** seçin.
+4. **Erişim'i** seçin.
 
-    :::image type="content" source="../../media/basic-mobility-security/bms-5-block-access.png" alt-text="Temel Mobilite ve Güvenlik erişimi engelle onay kutusu.":::
+    :::image type="content" source="../../media/basic-mobility-security/basic-mobility-access.png" alt-text="Temel Mobilite ve Güvenlik erişimi engelle onay kutusu.":::
 
 5. **Kaydet**'i seçin.
 

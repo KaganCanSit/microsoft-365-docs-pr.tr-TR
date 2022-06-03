@@ -25,12 +25,12 @@ search.appverid:
 - BCS160
 - MET150
 description: Microsoft 365 İş Ekstra'de koruma düzeyini artırma konusunda yardım alın
-ms.openlocfilehash: 2bd00329f160c187325fc696114f0fac4e503656
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: a442dcd399a1886f5f63bd17dc897d1547a0f579
+ms.sourcegitcommit: 1fa0b15f86470c49dddf0d6de59d553a38ae259b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65319143"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65863618"
 ---
 # <a name="increase-threat-protection-for-microsoft-365-business-premium"></a>Microsoft 365 İş Ekstra için tehdit korumasını artırma
 
@@ -166,7 +166,7 @@ Aşağıdaki görüntüde, Microsoft 365 İş Ekstra dahil edilen bazı varsayı
 
 ### <a name="view-your-alert-policies"></a>Uyarı ilkelerinizi görüntüleme
 
-1. adresinden Microsoft 365 Uyumluluk merkezine [https://compliance.microsoft.com](https://compliance.microsoft.com) gidin ve oturum açın.
+1. konumundaki Microsoft Purview uyumluluk portalı [https://compliance.microsoft.com](https://compliance.microsoft.com) gidin ve oturum açın.
 
 2. Gezinti bölmesinde **İlkeler'i** ve ardından **Uyarı ilkeleri'ni** seçin.
 
@@ -179,12 +179,12 @@ Aşağıdaki görüntüde, Microsoft 365 İş Ekstra dahil edilen bazı varsayı
 
 ### <a name="how-to-view-alerts"></a>Uyarıları görüntüleme
 
-Belirli bir uyarıya bağlı olarak, uyarılarınızı Microsoft 365 Defender portalında veya Microsoft 365 Uyumluluk merkezinde görüntüleyebilirsiniz.
+Belirli bir uyarıya bağlı olarak, uyarılarınızı Microsoft 365 Defender portalında veya Microsoft Purview uyumluluk portalı görüntüleyebilirsiniz.
 
 | Uyarı türü  | Yapılması gerekenler  |
 |---------|---------|
-| Kullanıcı kötü amaçlı bir bağlantıya tıkladığında, bir e-postanın kötü amaçlı yazılım veya kimlik avı olarak bildirilmesi veya bir cihazın kötü amaçlı yazılım içerdiği algılanması gibi güvenlik uyarısı     | <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalına</a> gidin ve **E-posta & işbirliği** bölümünde **İlkeler & kurallarAlert** >  **ilkesi'ni** seçin. Alternatif olarak doğrudan adresine <https://security.microsoft.com/alertpolicies>gidebilirsiniz. |
-| Kullanıcının hassas veya gizli bilgileri paylaşması (veri kaybı önleme uyarısı) veya olağan dışı bir dış dosya paylaşımı hacmi (bilgi idaresi uyarısı) olması gibi uyumluluk uyarısı    | <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 uyumluluk merkezi</a> gidin ve **İlkelerAlertAlert** >  >  **ilkeleri'ni** seçin.  |
+| Kullanıcı kötü amaçlı bir bağlantıya tıkladığında, bir e-postanın kötü amaçlı yazılım veya kimlik avı olarak bildirilmesi veya bir cihazın kötü amaçlı yazılım içerdiği algılanması gibi güvenlik uyarısı     | <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalına</a> gidin ve **E-posta & işbirliği** bölümünde **İlkeler & kuralları** > **Uyarı ilkesi'ni** seçin. Alternatif olarak doğrudan adresine <https://security.microsoft.com/alertpolicies>gidebilirsiniz. |
+| Kullanıcının hassas veya gizli bilgileri paylaşması (veri kaybı önleme uyarısı) veya olağan dışı bir dış dosya paylaşımı hacmi (bilgi idaresi uyarısı) olması gibi uyumluluk uyarısı    | <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalı</a> gidin ve **İlkeler** > **Uyarı Uyarı** > **ilkeleri'ni** seçin.  |
 
 Daha fazla bilgi için bkz. [Uyarıları görüntüleme](../compliance/alert-policies.md#view-alerts).
 

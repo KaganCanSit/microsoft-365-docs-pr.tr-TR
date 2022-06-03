@@ -19,12 +19,12 @@ ms.custom:
 search.appverid:
 - MET150
 description: Bir cihazı uzaktan silme gibi eylemler gerçekleştirerek kullanıcılarınızın mobil cihazlarının güvenliğini sağlamak ve yönetmek için Basic Mobility ve Security'yi ayarlayın.
-ms.openlocfilehash: b26906c0f374f5dc103fe26e4619663195da6ebd
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 04480e59177dc9b51bc50e413715e0ad82c7f461
+ms.sourcegitcommit: 1fa0b15f86470c49dddf0d6de59d553a38ae259b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64780841"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65863183"
 ---
 # <a name="set-up-basic-mobility-and-security"></a>Temel Hareketlilik ve Güvenlik'i ayarlama
 
@@ -52,17 +52,15 @@ Microsoft 365 ile ilişkilendirilmiş özel bir etki alanınız yoksa veya Windo
 
 Kayıtları ayarlamayla ilgili yardıma mı ihtiyacınız var? Etki alanı kayıt şirketinizi bulun ve [etki alanınıza bağlanmak için DNS kayıtları ekleme](/office365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider) bölümünde sağlanan listede DNS kaydı oluşturmak için adım adım yardıma gitmek için kayıt şirketi adını seçin. Azure AD Premium [olmadan kaydı basitleştirme Windows](/mem/intune/enrollment/windows-enroll#simplify-windows-enrollment-without-azure-ad-premium) bölümünde açıklanan CNAME kayıtlarını oluşturmak için bu yönergeleri kullanın.
 
-İki CNAME kaydını ekledikten sonra Güvenlik & Uyumluluk Merkezi'ne dönün ve sonraki adımı tamamlamak için **Veri kaybı önlemeCihaz** >  **yönetimi'ne** gidin.
+İki CNAME kaydını ekledikten sonra Güvenlik & Uyumluluk Merkezi'ne dönün ve sonraki adımı tamamlamak için **Veri kaybı önleme** > **Cihaz yönetimi'ne** gidin.
 
-### <a name="step-2-required-configure-an-apns-certificate-for-ios-devices"></a>2. Adım: (Gerekli) iOS cihazları için APNs Sertifikası yapılandırma
+### <a name="step-2-required-configure-an-apns-certificate-for-ios-devices"></a>2. Adım: (Gerekli) iOS cihazlar için APNs Sertifikası yapılandırma
 
-iPad ve iPhone gibi iOS cihazlarını yönetmek için bir APNs sertifikası oluşturmanız gerekir.
+iPad ve iPhone gibi iOS cihazları yönetmek için bir APNs sertifikası oluşturmanız gerekir.
 
 1. Genel yönetici hesabınızla Microsoft 365 oturum açın.
 
-2. Tarayıcınıza şunu yazın: [https://protection.office.com](https://protection.office.com/).
-
-3. **Veri kaybı** **önlemeCihaz** >  yönetimi'ni ve **ardından iOS cihazları için APNs Sertifikası'nı** seçin.
+2. [Microsoft 365 yönetim merkezi](https://portal.office.com/adminportal/home?#/MifoDevices) gidin ve **iOS için APNs Sertifikası'nı** seçin.
 
 4. Apple Anında İletme Bildirimi Sertifikası Ayarlar sayfasında **İleri'yi** seçin.
 
@@ -95,7 +93,7 @@ MFA, ikinci bir kimlik doğrulama biçimi gerektirerek mobil cihaz kaydı için 
 
 Azure AD portalında MFA'yı açmayı öğrenmek için bkz. [Çok faktörlü kimlik doğrulamasını ayarlama](../security-and-compliance/set-up-multi-factor-authentication.md).
 
-MFA'yı ayarladıktan sonra Güvenlik & Uyumluluk Merkezi'ne dönün ve sonraki adımı tamamlamak için **Veri kaybı** **önlemeCihaz** >  yönetimiCihaz  > **ilkeleri'ne** gidin.
+MFA'yı ayarladıktan sonra Güvenlik & Uyumluluk Merkezi'ne dönün ve sonraki adımı tamamlamak için **Veri kaybı önleme** > **Cihaz yönetimi** > **Cihaz ilkeleri'ne** gidin.
 
 ### <a name="step-4-recommended-manage-device-security-policies"></a>4. Adım: (Önerilen) Cihaz güvenlik ilkelerini yönetme
 
@@ -107,7 +105,7 @@ Sonraki adım, Microsoft 365 kuruluş verilerinizi korumaya yardımcı olmak iç
 
 3. **Cihaz ilkeleri'ne** gidin.
 
-   :::image type="content" source="../../media/basic-mobility-security/bms-4-policy.png" alt-text="Temel Güvenlik ve Hareketlilik ilkesi ayarları.":::
+   :::image type="content" source="../../media/basic-mobility-security/basic-mobility-microsoft-purview.png" alt-text="Temel Güvenlik ve Hareketlilik ilkesi ayarları.":::
 
 4. [Temel Mobilite ve Güvenlik'te cihaz güvenlik ilkeleri oluşturma](create-device-security-policies.md) bölümündeki adımları izleyerek kuruluşunuza uygun cihaz güvenlik ilkeleri oluşturun ve dağıtın.
 
@@ -126,7 +124,7 @@ Bir mobil cihaz yönetimi ilkesi oluşturup dağıttıktan sonra, kuruluşunuzda
 > [!IMPORTANT]
 > Kullanıcının tercih ettiği dil kayıt işlemi tarafından desteklenmiyorsa, kullanıcılar mobil cihazlarında kayıt bildirimi ve adımları başka bir dilde alabilir. Microsoft 365'de desteklenen tüm diller şu anda mobil cihazlarda kayıt işlemi için desteklenmemektedir.
 
-Android veya iOS cihazları olan kullanıcıların kayıt işleminin bir parçası olarak Şirket Portalı uygulamasını yüklemeleri gerekir.
+Android veya iOS cihazları olan kullanıcıların kayıt işleminin bir parçası olarak Şirket Portalı uygulamasını yüklemesi gerekir.
 
 ## <a name="related-content"></a>İlgili içerik
 

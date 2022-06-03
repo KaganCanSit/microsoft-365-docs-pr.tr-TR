@@ -20,12 +20,12 @@ metadata:
   search.appverid:
   - MET150
   description: Temel Mobilite ve Güvenlik hakkında sık sorulan sorular.
-  ms.openlocfilehash: 68e7143dba70859aa69845f8e1e8e0a5c65ea44f
-  ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+  ms.openlocfilehash: c404ff1c80952ec3db600e96ceef5cce97c182cd
+  ms.sourcegitcommit: 1fa0b15f86470c49dddf0d6de59d553a38ae259b
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 04/19/2022
-  ms.locfileid: "64934213"
+  ms.lasthandoff: 06/03/2022
+  ms.locfileid: "65863020"
 title: Temel Mobilite ve Güvenlik hakkında sık sorulan sorular (SSS)
 summary: Bu makale, Microsoft 365'da mobil cihazları yönetmenize ve güvenli bir şekilde korumanıza yardımcı olan Basic Mobility ve Security hakkında sık sorulan soruları içerir. Sorunuzun yanıtını bulamazsanız sayfaya bir yorum yazarak farkında olmamızı sağlayın ki biz de sorunuzu bu makaleye eklemeyi değerlendirebilelim.
 sections:
@@ -40,14 +40,14 @@ sections:
       2.  Cihaz yönetimi > Veri kaybını önleme bölümüne gidin.
   - question: >
       Basic Mobility ve Security'de cihaz yönetimini kullanmaya nasıl başlayabilirim?
-    answer: "Basic Mobility ve Security'yi kullanmaya başlamanın dört adımı vardır: \n\n1. [Office 365 Güvenlik & Uyumluluğu'na](https://protection.office.com/) giderek Temel Mobilite ve Güvenlik'i etkinleştirin.\n\n2. Cihaz yönetimi > Cihaz ilkeleri > Veri kaybı önleme bölümüne gidin.\n    \n3. Cihaz yönetimi ilkeleri oluşturun ve bunları güvenlik gruplarında ayarlanmış kullanıcı gruplarına uygulayın. İlkeleri küçük bir test grubuna dağıtarak başlamanızı öneririz. Daha fazla bilgi için bkz. [Basic Mobility ve Security'de cihaz güvenlik ilkeleri oluşturma](create-device-security-policies.md).\n\n4. Kendilerine ilke uygulanmış kullanıcılardan, Microsoft 365 verilere erişmeye çalıştıklarında cihazlarını kaydetmeleri istenir. Daha fazla bilgi için bkz. [Mobil cihazınızı Temel Hareketlilik ve Güvenlik kullanarak kaydettirin](enroll-your-mobile-device.md).\n\nDiğer ayrıntılar için bkz. [Basic Mobility ve Security'yi ayarlama](set-up.md).\n"
+    answer: "Basic Mobility ve Security'yi kullanmaya başlamanın dört adımı vardır: \n\n1. [Office 365 Güvenlik & Uyumluluğu'na](https://protection.office.com/) giderek Temel Mobilite ve Güvenlik'i etkinleştirin.\n\n2. [Temel Mobilite ve Güvenlik (Önizleme)](https://compliance.microsoft.com/basicmobilityandsecurity) bölümüne gidin.\n    \n3. Cihaz yönetimi ilkeleri oluşturun ve bunları güvenlik gruplarında ayarlanmış kullanıcı gruplarına uygulayın. İlkeleri küçük bir test grubuna dağıtarak başlamanızı öneririz. Daha fazla bilgi için bkz. [Basic Mobility ve Security'de cihaz güvenlik ilkeleri oluşturma](create-device-security-policies.md).\n\n4. Kendilerine ilke uygulanmış kullanıcılardan, Microsoft 365 verilere erişmeye çalıştıklarında cihazlarını kaydetmeleri istenir. Daha fazla bilgi için bkz. [Mobil cihazınızı Temel Hareketlilik ve Güvenlik kullanarak kaydettirin](enroll-your-mobile-device.md).\n\nDiğer ayrıntılar için bkz. [Basic Mobility ve Security'yi ayarlama](set-up.md).\n"
   - question: >
       Basic Mobility ve Security'yi ayarlamaya çalışıyorum ama takılı kalmış gibi görünüyor. Microsoft 365 Hizmet Durumu bir süredir "sağlama" gösteriyor. Ne yapabilirim?
     answer: >
       Hizmetin sizin için hazır olması biraz zaman alabilir. Sağlama tamamlandığında Temel Mobilite ve Güvenlik sayfasını görürsünüz. 24 saat beklediyseniz ve durum hala sağlanma aşamasındaysa lütfen Destek birimine başvurun. Sorunun ne olduğunu bulmamıza yardımcı olacağız.
   - question: >
       Cihaz kaydı başarısız olursa ne yapabilirim?
-    answer: "Bir cihazı kaydederken sorun yaşıyorsanız önce aşağıdakileri denetleyin:\n\n- Cihazın Intune gibi başka bir mobil cihaz yönetimi sağlayıcısına kayıtlı olmadığından emin olun.\n\n- Cihazın doğru tarih ve saate ayarlandığından emin olun.\n\n- Cihazda farklı bir WIFI'ye veya hücresel ağa geçin.\n\n- Android veya iOS cihazları için Intune Şirket Portalı uygulamasını kaldırıp cihaza yeniden yükleyin.\n    \nKayıt hala çalışmıyorsa bkz. [Temel Mobilite ve Güvenlik Sorunlarını Giderme](troubleshoot.md).\n"
+    answer: "Bir cihazı kaydederken sorun yaşıyorsanız önce aşağıdakileri denetleyin:\n\n- Cihazın Intune gibi başka bir mobil cihaz yönetimi sağlayıcısına kayıtlı olmadığından emin olun.\n\n- Cihazın doğru tarih ve saate ayarlandığından emin olun.\n\n- Cihazda farklı bir WIFI'ye veya hücresel ağa geçin.\n\n- Android veya iOS cihazlar için Intune Şirket Portalı uygulamasını kaldırıp cihaza yeniden yükleyin.\n    \nKayıt hala çalışmıyorsa bkz. [Temel Mobilite ve Güvenlik Sorunlarını Giderme](troubleshoot.md).\n"
   - question: >
       Intune ile Temel Mobilite ve Güvenlik arasındaki fark nedir?
     answer: >
@@ -55,7 +55,7 @@ sections:
   - question: >
       İlkeler Temel Mobilite ve Güvenlik için nasıl çalışır? Nasıl yaparım? ayarladın? Devre dışı bırakılasın mı?
     answer: >
-      Temel Mobilite ve Güvenlik için ilk kurulumu tamamladıktan sonra, ilkeler oluşturur ve bunları Güvenlik & Uyumluluk Merkezi'ndeki kullanıcı gruplarına uygularsınız. İlkeler, cihazın Microsoft 365 verilere erişmek için kullanılabilmesi için ilke kullanıcılarının cihazlarını Basic Mobility ve Security'ye kaydetmesini gerektirir. Ayarladığınız ilkeler, mobil cihazlar için parolaların ne sıklıkta sıfırlanması gerektiği veya veri şifrelemesi gerekip gerekmediği gibi ayarları belirler. Daha fazla bilgi için bkz. [Basic Mobility and Security ve](create-device-security-policies.md) [Microsoft Purview uyumluluk portalında](../../compliance/microsoft-365-compliance-center.md) cihaz güvenlik ilkeleri oluşturma.
+      Temel Mobilite ve Güvenlik için ilk kurulumu tamamladıktan sonra, ilkeler oluşturur ve bunları Güvenlik & Uyumluluk Merkezi'ndeki kullanıcı gruplarına uygularsınız. İlkeler, cihazın Microsoft 365 verilere erişmek için kullanılabilmesi için ilke kullanıcılarının cihazlarını Basic Mobility ve Security'ye kaydetmesini gerektirir. Ayarladığınız ilkeler, mobil cihazlar için parolaların ne sıklıkta sıfırlanması gerektiği veya veri şifrelemesi gerekip gerekmediği gibi ayarları belirler. Daha fazla bilgi için bkz. [Temel Mobilite ve Güvenlik ve Microsoft Purview uyumluluk portalı cihaz güvenlik ilkeleri oluşturma](create-device-security-policies.md).[](../../compliance/microsoft-365-compliance-center.md)
 
 
       Cihaz ilkeleri oluşturma ve dağıtmaya yönelik adım adım yönergeler için bkz. [Temel Mobilite ve Güvenlik'te cihaz güvenlik ilkeleri oluşturma](create-device-security-policies.md).

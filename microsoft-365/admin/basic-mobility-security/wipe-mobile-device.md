@@ -19,12 +19,12 @@ ms.custom:
 search.appverid:
 - MET150
 description: Kayıtlı cihazlardan bilgileri kaldırmak için yerleşik Basic Mobility ve Security'yi kullanın.
-ms.openlocfilehash: 959e785958dd6d447713507ee9c48763b814db78
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 5ecdfc691d85b86d882cf05dd5328d41dcdfa767
+ms.sourcegitcommit: 1fa0b15f86470c49dddf0d6de59d553a38ae259b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65129100"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65863064"
 ---
 # <a name="wipe-a-mobile-device-in-basic-mobility-and-security"></a>Basic Mobility ve Security'de mobil cihazı silme
 
@@ -46,25 +46,21 @@ Mobil cihazlar hassas kuruluş bilgilerini depolayabilir ve kuruluşunuzun Micro
 
 ## <a name="wipe-a-mobile-device"></a>Mobil cihazı silme
 
-1. [Microsoft 365 yönetim merkezi](../../admin/admin-overview/admin-center-overview.md) gidin.
+1. Microsoft 365 yönetim merkezi oturum açın ve [Mobil Cihaz Yönetimi sayfasına](https://portal.office.com/adminportal/home?#/MifoDevices) gidin.
 
-2. Arama alanına Mobile Cihaz Yönetimi yazın ve sonuç listesinden **Mobil Cihaz Yönetimi'ı** seçin.
+1. **Cihazları yönet'i** seçin.
 
-    :::image type="content" source="../../media/basic-mobility-security/bms-6-mobile-device-management-option.png" alt-text="Temel Hareketlilik ve Gizlilik mobil cihaz yönetimi seçeneği.":::
+1. Silmek istediğiniz cihazı seçin.
 
-3. **Cihazları yönet'i** seçin.
+1. **Yönet'i** seçin.
 
-4. Silmek istediğiniz cihazı seçin.
-
-5. **Yönet'i** seçin.
-
-6. Yapmak istediğiniz uzaktan silme türünü seçin.
+1. Yapmak istediğiniz uzaktan silme türünü seçin.
 
     - Tam silme işlemi yapmak ve cihazı fabrika ayarlarına geri yüklemek için **Fabrika ayarlarına sıfırla'yı** seçin.
     - Seçmeli silme işlemi yapmak ve yalnızca Microsoft 365 kuruluş bilgilerini silmek için **Şirket verilerini kaldır'ı** seçin.
     - Cihazı kuruluşunuzdan kaldırmak için **Cihazı kaldır'ı** seçin.
 
-7. Onaylamak için **Evet**'i seçin.
+1. Onaylamak için **Evet**'i seçin.
 
 ## <a name="how-do-i-know-it-worked"></a>Nasıl yaparım? çalıştığını biliyor musun?
 
