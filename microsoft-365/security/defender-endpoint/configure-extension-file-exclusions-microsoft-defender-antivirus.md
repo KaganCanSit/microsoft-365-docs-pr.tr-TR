@@ -14,12 +14,12 @@ ms.custom: nextgen
 ms.reviewer: ''
 manager: dansimp
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 864d67aeaa84713b1b2126b017fadacd0e43dc7a
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: 7b1614738b17d7f3cf78a6bfabb84f85196d42ff
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65623010"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65873258"
 ---
 # <a name="configure-and-validate-exclusions-based-on-file-extension-and-folder-location"></a>Dosya uzantısına ve klasör konumuna göre dışlamaları yapılandırma ve doğrulama
 
@@ -109,6 +109,7 @@ Microsoft Endpoint Manager (geçerli dal) yapılandırma ayrıntıları için bk
 3. **Dışlamalar Windows Defender Virüsten Koruma bileşenleri** \> **Windows** \> için ağacı genişletin.
 
 4. Düzenlemek için **Yol Dışlamaları** ayarını açın ve dışlamalarınızı ekleyin.
+
     1. Seçeneği **Etkin** olarak ayarlayın.
     2. **Seçenekler** bölümünde **Göster'i** seçin.
     3. **Her klasörü Değer adı** sütununun altında kendi satırında belirtin.
@@ -118,6 +119,7 @@ Microsoft Endpoint Manager (geçerli dal) yapılandırma ayrıntıları için bk
 5. **Tamam**'ı seçin.
 
 6. Düzenleme için **Uzantı Dışlamaları** ayarını açın ve dışlamalarınızı ekleyin.
+
     1. Seçeneği **Etkin** olarak ayarlayın.
     2. **Seçenekler** bölümünde **Göster'i** seçin.
     3. Her dosya uzantısını **Değer adı** sütununun altına kendi satırına girin.
@@ -192,7 +194,6 @@ Dosya adı veya klasör yolu dışlama listesindeki öğeleri tanımlarken joker
 
 > [!IMPORTANT]
 > Bu joker karakterler için önemli sınırlamalar ve kullanım senaryoları vardır:
->
 > - Ortam değişkeni kullanımı, makine değişkenleriyle ve NT AUTHORITY\SYSTEM hesabı olarak çalışan işlemler için geçerlidir.
 > - Giriş başına en fazla altı joker karakter kullanabilirsiniz.
 > - Sürücü harfi yerine joker karakter kullanamazsınız.
@@ -200,8 +201,6 @@ Dosya adı veya klasör yolu dışlama listesindeki öğeleri tanımlarken joker
 > - Şu anda, Microsoft Endpoint Configuration Manager joker karakterleri (veya `?`gibi`*`) desteklemez.
     
 Aşağıdaki tabloda joker karakterlerin nasıl kullanılabildiği açıklanır ve bazı örnekler sağlanır.
-
-<br/><br/>
 
 |Joker|Örnekler|
 |---|---|
@@ -211,9 +210,7 @@ Aşağıdaki tabloda joker karakterlerin nasıl kullanılabildiği açıklanır 
 
 > [!IMPORTANT]
 > Bir dosya dışlama bağımsız değişkenini klasör dışlama bağımsız değişkeniyle karıştırırsanız, kurallar eşleşen klasörde dosya bağımsız değişkeni eşleşmesinde durur ve hiçbir alt klasörde dosya eşleşmelerini aramaz.
->
 > Örneğin, klasörlerde `c:\data\final\marked` "tarih" ile başlayan tüm dosyaları ve `c:\data\review\marked` kural bağımsız değişkenini `c:\data\*\marked\date*`kullanarak dışlayabilirsiniz.
->
 > Ancak bu bağımsız değişken, veya `c:\data\review\marked`altındaki `c:\data\final\marked` alt klasörlerdeki hiçbir dosyayla eşleşmez.
 
 <a id="review"></a>
@@ -289,7 +286,7 @@ Aşağıdaki tabloda sistem hesabı ortam değişkenleri listelenip açıklanmak
 
 Aşağıdaki yöntemlerden birini kullanarak dışlama listesindeki öğeleri alabilirsiniz:
 
-- [Intune](/intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune)
+- [Intune](/mem/intune/fundamentals/deployment-guide-intune-setup)
 - [Microsoft Uç Noktası Yapılandırma Yöneticisi](/configmgr/protect/deploy-use/endpoint-antimalware-policies)
 - [MpCmdRun](command-line-arguments-microsoft-defender-antivirus.md)
 - [PowerShell](/powershell/module/defender)
@@ -297,7 +294,6 @@ Aşağıdaki yöntemlerden birini kullanarak dışlama listesindeki öğeleri al
 
 > [!IMPORTANT]
 > grup ilkesi ile yapılan dışlama listesi değişiklikleri [Windows Güvenliği uygulamasındaki](microsoft-defender-security-center-antivirus.md) listelerde **gösterilir**.
->
 > Windows Güvenliği uygulamasında yapılan değişiklikler grup ilkesi listelerinde **gösterilmez**.
 
 PowerShell kullanıyorsanız, listeyi iki yolla alabilirsiniz:

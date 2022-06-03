@@ -17,12 +17,12 @@ ms.custom: ''
 description: Yöneticiler, Office 365 için Microsoft Defender Plan 2'de kullanıcı etiketleri olan belirli kullanıcı gruplarını tanımlamayı öğrenebilir. Etiket filtreleme, etiketlenen kullanıcıları hızlı bir şekilde tanımlamak için Office 365 için Microsoft Defender uyarılarda, raporlarda ve araştırmalarda kullanılabilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 3d4f5b82e09c9a58e891fa6fcba009ac490c0cb1
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: 24509489259a368fb35773603e3708a265f8ed76
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65647479"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65873280"
 ---
 # <a name="user-tags-in-microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender kullanıcı etiketleri
 
@@ -81,7 +81,7 @@ Kullanıcı etiketlerinin yüksek etkili kullanıcı hesaplarını korumaya yard
 
 - Ayrıca Microsoft 365 yönetim merkezi öncelik hesaplarını yönetebilir ve izleyebilirsiniz. Yönergeler için bkz. [Öncelik hesaplarını yönetme ve izleme](../../admin/setup/priority-accounts.md).
 
-- _Ayrıcalıklı hesapların (yönetici hesaplarının_) güvenliğini sağlama hakkında bilgi için [bu konuya](/azure/architecture/framework/security/critical-impact-accounts) bakın.
+- _Ayrıcalıklı hesapların (yönetici hesaplarının_) güvenliğini sağlama hakkında bilgi için [bu konuya](/security/compass/critical-impact-accounts) bakın.
 
 ## <a name="use-the-microsoft-365-defender-portal-to-create-user-tags"></a>Kullanıcı etiketleri oluşturmak için Microsoft 365 Defender portalını kullanma
 

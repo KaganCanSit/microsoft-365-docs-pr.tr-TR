@@ -10,17 +10,17 @@ ms.topic: article
 author: denisebmsft
 ms.author: deniseb
 ms.custom: nextgen
-ms.date: 01/27/2022
+ms.date: 06/02/2022
 ms.reviewer: ''
 manager: dansimp
 ms.technology: mde
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 9008fe0d6a4c46d544e4d806c3a15b24c53f2f10
-ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
+ms.openlocfilehash: 1a82f1fb6759bd3cfeaa5bc24154e7e030d08355
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2022
-ms.locfileid: "65637994"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65872412"
 ---
 # <a name="review-event-logs-and-error-codes-to-troubleshoot-issues-with-microsoft-defender-antivirus"></a>Microsoft Defender Virüsten Koruma ile ilgili sorunları gidermek için olay günlüklerini ve hata kodlarını inceleyin
 
@@ -44,7 +44,6 @@ Tablo listesi:
 
 > [!TIP]
 > Aşağıdaki özelliklerin çalıştığını onaylamak için [demo.wd.microsoft.com](https://demo.wd.microsoft.com?ocid=cx-wddocs-testground) Uç Nokta için Microsoft Defender tanıtım web sitesini de ziyaret edebilirsiniz:
->
 > - Bulut tabanlı koruma
 > - Hızlı öğrenme (ilk bakışta engelle dahil)
 > - İstenmeyebilecek uygulama engelleme
@@ -109,7 +108,7 @@ Açıklama:
 </ul>
 </dt>
 <dt>Tarama Kaynakları: &lt; Taranan kaynaklar (dosyalar/dizinler/BHO gibi).&gt;</dt> 
-<dt>Kullanıcı: &lt; Etki alanılt&gt;\&; Kullanıcı&gt;</dt>
+<dt>Kullanıcı: &lt; Etki alanı&gt;\&lt; Kullanıcı&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -150,8 +149,8 @@ Açıklama:
 <li>Müşteri taraması</li>
 </ul>
 </dt>
-<dt>Kullanıcı: &lt; Etki alanılt&gt;\&; UserScan&gt;</dt> 
-<dt>Saati: &lt;Taramanın süresi.&gt;</dt>
+<dt>Kullanıcı: &lt; Etki alanı&gt;\&lt; Kullanıcı&gt;</dt>
+<dt>Tarama Süresi: &lt;Taramanın süresi.&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -192,8 +191,8 @@ Açıklama:
 <li>Müşteri taraması</li>
 </ul>
 </dt>
-<dt>Kullanıcı: &lt; Etki alanılt&gt;&amp;; UserScan&gt;</dt> 
-<dt>Saati: &lt;Taramanın süresi.&gt;</dt>
+<dt>Kullanıcı: &lt; Etki alanı&gt;&amp;lt; Kullanıcı&gt;</dt>
+<dt>Tarama Süresi: &lt;Taramanın süresi.&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -234,7 +233,7 @@ Açıklama:
 <li>Müşteri taraması</li>
 </ul>
 </dt>
-<dt>Kullanıcı: &lt;Etki alanılt&gt;\&; Kullanıcı&gt;</dt>
+<dt>Kullanıcı: &lt;Etki alanı&gt;\&lt; Kullanıcı&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -275,7 +274,7 @@ Açıklama:
 <li>Müşteri taraması</li>
 </ul>
 </dt>
-<dt>Kullanıcı: &lt;Etki alanılt&gt;\&; Kullanıcı&gt;</dt>
+<dt>Kullanıcı: &lt;Etki alanı&gt;\&lt; Kullanıcı&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -316,8 +315,8 @@ Açıklama:
 <li>Müşteri taraması</li>
 </ul>
 </dt>
-<dt>Kullanıcı: &lt; Etki alanılt&gt;\&; UserError&gt;</dt> 
-<dt>Kodu: &lt;Tehdit durumuyla ilişkili hata kodu&gt; Sonuç kodu. Standart HRESULT değerleri.</dt> 
+<dt>Kullanıcı: &lt; Etki alanı&gt;\&lt; Kullanıcı&gt;</dt>
+<dt>Hata Kodu: &lt;Tehdit durumuyla ilişkili hata kodu&gt; Sonuç kodu. Standart HRESULT değerleri.</dt> 
 <dt>Hata Açıklaması: &lt; Hata açıklaması&gt; Hatanın açıklaması. </dt>
 </dl>
 </td>
@@ -332,7 +331,7 @@ Bu olayla ilgili sorunları gidermek için:
 <ol>
 <li>Taramayı yeniden çalıştırın.</li>
 <li>Aynı şekilde başarısız olursa<a href="https://go.microsoft.com/fwlink/?LinkId=215163">, Microsoft Desteği sitesine</a> gidin, hata kodunu aramak için <b>Arama</b> kutusuna hata numarasını girin.</li>
-<li><a href="https://go.microsoft.com/fwlink/?LinkId=215491">Microsoft Teknik Destek</a> ile iletişime geçin.
+<li><a href="/microsoft-365/admin/get-help-support">Microsoft Teknik Destek</a> ile iletişime geçin.
 </li>
 </ol>
 </td>
@@ -362,9 +361,9 @@ Açıklama:
 <td >
 Daha fazla bilgi için aşağıdakilere bakın:
 <dl>
-<dt>Adı: &lt; Tehdit nameID&gt;</dt>
-<dt>: &lt;Threat IDSeverity&gt;</dt>
-<dt>: &lt;Önem Derecesi&gt;, örneğin:<ul>
+<dt>Adı: &lt; Tehdit adı&gt;</dt>
+<dt>kimliği: &lt;Tehdit Kimliği&gt;</dt>
+<dt>Önem Derecesi: &lt;Önem Derecesi&gt;, örneğin:<ul>
 <li>Düşük</li>
 <li>Orta</li>
 <li>Yüksek</li>
@@ -372,8 +371,8 @@ Daha fazla bilgi için aşağıdakilere bakın:
 </ul>
 </dt>
 <dt>Kategori: &lt; Kategori açıklaması&gt;, örneğin herhangi bir tehdit veya kötü amaçlı yazılım türü.</dt> 
-<dt>Yolu: &lt; Dosya yoluDetection&gt;</dt>
-<dt> Kaynağı: &lt;Algılama kaynağı&gt;, örneğin:<ul>
+<dt>Yolu: &lt; Dosya yolu&gt;</dt>
+<dt>Algılama Kaynağı: &lt;Algılama kaynağı&gt;, örneğin:<ul>
 <li>Unknown</li>
 <li>Yerel bilgisayar</li>
 <li>Ağ paylaşımı</li>
@@ -399,12 +398,12 @@ Daha fazla bilgi için aşağıdakilere bakın:
 <li>Erken Başlatma Kötü Amaçlı Yazılımdan Koruma (ELAM). Bu, önyükleme dizisi tarafından algılanan kötü amaçlı yazılımları içerir</li>
 <li>Uzaktan kanıtlama</li>
 </ul>Kötü amaçlı yazılımdan koruma tarama arabirimi (AMSI). Birincil olarak betikleri korumak için kullanılır (PowerShell, VBS), ancak üçüncü taraflarca da çağrılabilir.
-UACStatus</dt>
-<dt>: &lt;StatusUser&gt;</dt>
-<dt>: &lt;Domainlt&gt;\&; UserProcess&gt;</dt> 
-<dt>Adı: &lt;PIDSignature&gt; Sürümündeki İşlem</dt>
-<dt>: &lt;Tanım sürümüİndirim&gt;</dt> 
-<dt>Sürümü: &lt;Antimalware Engine sürümü&gt;</dt>
+UAC</dt>
+<dt>Durumu: &lt;Durum&gt;</dt>
+<dt>Kullanıcısı: &lt;Domain&gt;\&lt; Kullanıcı&gt;</dt>
+<dt>İşlemi Adı: &lt;PID&gt;İmza Sürümündeki İşlem</dt>
+<dt>: &lt;Tanım sürümü&gt;</dt>
+<dt>Altyapısı Sürümü: &lt;Antimalware Engine sürümü&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -433,10 +432,10 @@ Açıklama:
 <td >
 Microsoft Defender Virüsten Koruma bu makineyi kötü amaçlı yazılımlardan veya istenmeyebilecek diğer yazılımlardan korumak için eyleme geçti. Daha fazla bilgi için aşağıdakilere bakın:
 <dl>
-<dt>Kullanıcı: &lt; Etki alanılt&gt;\&; UserName&gt;</dt>
-<dt>: &lt;Threat nameID&gt;</dt>
-<dt>: &lt;Threat IDSeverity&gt;</dt>
-<dt>: &lt;Önem Derecesi&gt;, örneğin:<ul>
+<dt>Kullanıcı: &lt; Etki alanı&gt;\&lt; Kullanıcı&gt;</dt>
+<dt>Adı: &lt;Tehdit adı&gt;</dt>
+<dt>kimliği: &lt;Tehdit Kimliği&gt;</dt>
+<dt>Önem Derecesi: &lt;Önem Derecesi&gt;, örneğin:<ul>
 <li>Düşük</li>
 <li>Orta</li>
 <li>Yüksek</li>
@@ -454,9 +453,9 @@ Microsoft Defender Virüsten Koruma bu makineyi kötü amaçlı yazılımlardan 
 <li>Engelle: Kaynağın yürütülmesi engellendi</li>
 </ul>
 </dt>
-<dt>Durum: &lt; StatusSignature&gt;</dt> 
-<dt>Sürümü: &lt;Tanım sürümüİngiliz&gt;</dt> 
-<dt>Sürümü: &lt;Antimalware Engine sürümü&gt;</dt>
+<dt>Durum: &lt; Durum&gt;</dt>
+<dt>İmzası Sürümü: &lt;Tanım sürümü&gt;</dt>
+<dt>Altyapısı Sürümü: &lt;Antimalware Engine sürümü&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -485,10 +484,10 @@ Açıklama:
 <td >
 Microsoft Defender Virüsten Koruma kötü amaçlı yazılım veya diğer istenmeyebilecek yazılımlar üzerinde işlem yaparken bir hatayla karşılaştı. Daha fazla bilgi için aşağıdakilere bakın:
 <dl>
-<dt>Kullanıcı: &lt; Etki alanılt&gt;\&; UserName&gt;</dt>
-<dt>: &lt;Threat nameID&gt;</dt>
-<dt>: &lt;Threat IDSeverity&gt;</dt>
-<dt>: &lt;Önem Derecesi&gt;, örneğin:<ul>
+<dt>Kullanıcı: &lt; Etki alanı&gt;\&lt; Kullanıcı&gt;</dt>
+<dt>Adı: &lt;Tehdit adı&gt;</dt>
+<dt>kimliği: &lt;Tehdit Kimliği&gt;</dt>
+<dt>Önem Derecesi: &lt;Önem Derecesi&gt;, örneğin:<ul>
 <li>Düşük</li>
 <li>Orta</li>
 <li>Yüksek</li>
@@ -496,8 +495,8 @@ Microsoft Defender Virüsten Koruma kötü amaçlı yazılım veya diğer istenm
 </ul>
 </dt>
 <dt>Kategori: &lt; Kategori açıklaması&gt;, örneğin herhangi bir tehdit veya kötü amaçlı yazılım türü.</dt> 
-<dt>Yolu: &lt; Dosya yoluAction&gt;</dt>
-<dt>: &lt;Eylem&gt;, örneğin:<ul>
+<dt>Yolu: &lt; Dosya yolu&gt;</dt>
+<dt>Eylemi: &lt;Eylem&gt;, örneğin:<ul>
 <li>Temiz: Kaynak temizlendi</li>
 <li>Karantina: Kaynak karantinaya alındı</li>
 <li>Kaldır: Kaynak silindi</li>
@@ -509,9 +508,9 @@ Microsoft Defender Virüsten Koruma kötü amaçlı yazılım veya diğer istenm
 </dt>
 <dt>Hata Kodu: &lt; Tehdit durumuyla ilişkili hata kodu&gt; Sonuç kodu. Standart HRESULT değerleri. </dt>
 <dt>Hata Açıklaması: &lt;Hata açıklaması&gt; Hatanın açıklaması. </dt> 
-<dt>Durum: &lt; StatusSignature&gt;</dt> 
-<dt>Version: &lt;Definition versionEngine&gt;</dt> 
-<dt>Version: &lt;Antimalware Engine version&gt;</dt>
+<dt>Durum: &lt; Durum&gt;</dt>
+<dt>İmzası Sürümü: &lt;Tanım sürümü&gt;</dt>
+<dt>Altyapısı Sürümü: &lt;Antimalware Engine sürümü&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -540,9 +539,9 @@ Açıklama:
 <td >
 Microsoft Defender Virüsten Koruma bir öğeyi karantinadan geri yükledi. Daha fazla bilgi için aşağıdakilere bakın:
 <dl>
-<dt>Adı: &lt; Tehdit nameID&gt;</dt>
-<dt>: &lt;Threat IDSeverity&gt;</dt>
-<dt>: &lt;Önem Derecesi&gt;, örneğin:<ul>
+<dt>Adı: &lt; Tehdit adı&gt;</dt>
+<dt>kimliği: &lt;Tehdit Kimliği&gt;</dt>
+<dt>Önem Derecesi: &lt;Önem Derecesi&gt;, örneğin:<ul>
 <li>Düşük</li>
 <li>Orta</li>
 <li>Yüksek</li>
@@ -550,10 +549,10 @@ Microsoft Defender Virüsten Koruma bir öğeyi karantinadan geri yükledi. Daha
 </ul>
 </dt>
 <dt>Kategori: &lt; Kategori açıklaması&gt;, örneğin herhangi bir tehdit veya kötü amaçlı yazılım türü.</dt> 
-<dt>Yolu: &lt; Dosya yoluKullanıcı&gt;</dt>
-<dt>: &lt;Etki alanılt&gt;\&; UserSignature&gt;</dt> 
-<dt>Sürümü: &lt;Tanım sürümüİngiliz&gt;</dt> 
-<dt>Sürümü: &lt;Antimalware Engine sürümü&gt;</dt>
+<dt>Yolu: &lt; Dosya yolu&gt;</dt>
+<dt>Kullanıcı: &lt;Etki alanı&gt;\&lt; Kullanıcı&gt;</dt>
+<dt>İmzası Sürümü: &lt;Tanım sürümü&gt;</dt>
+<dt>Altyapısı Sürümü: &lt;Antimalware Engine sürümü&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -582,9 +581,9 @@ Açıklama:
 <td >
 Microsoft Defender Virüsten Koruma, bir öğeyi karantinadan geri yüklemeye çalışırken bir hatayla karşılaştı. Daha fazla bilgi için aşağıdakilere bakın:
 <dl>
-<dt>Adı: &lt; Tehdit nameID&gt;</dt>
-<dt>: &lt;Threat IDSeverity&gt;</dt>
-<dt>: &lt;Önem Derecesi&gt;, örneğin:<ul>
+<dt>Adı: &lt; Tehdit adı&gt;</dt>
+<dt>kimliği: &lt;Tehdit Kimliği&gt;</dt>
+<dt>Önem Derecesi: &lt;Önem Derecesi&gt;, örneğin:<ul>
 <li>Düşük</li>
 <li>Orta</li>
 <li>Yüksek</li>
@@ -592,12 +591,12 @@ Microsoft Defender Virüsten Koruma, bir öğeyi karantinadan geri yüklemeye ç
 </ul>
 </dt>
 <dt>Kategori: &lt; Kategori açıklaması&gt;, örneğin herhangi bir tehdit veya kötü amaçlı yazılım türü.</dt> 
-<dt>Yolu: &lt; Dosya yoluKullanıcı&gt;</dt>
-<dt>: &lt;Etki alanılt&gt;\&; UserError&gt;</dt> 
-<dt>Kodu: &lt;Tehdit durumuyla ilişkili hata kodu&gt; Sonuç kodu. Standart HRESULT değerleri. </dt>
+<dt>Yolu: &lt; Dosya yolu&gt;</dt>
+<dt>Kullanıcı: &lt;Etki alanı&gt;\&lt; Kullanıcı&gt;</dt>
+<dt>Hata Kodu: &lt;Tehdit durumuyla ilişkili hata kodu&gt; Sonuç kodu. Standart HRESULT değerleri. </dt>
 <dt>Hata Açıklaması: &lt;Hata açıklaması&gt; Hatanın açıklaması. </dt> 
-<dt>İmza Sürümü: &lt; Tanım sürümüİngiliz&gt;</dt> 
-<dt>Sürümü: &lt;Antimalware Engine sürümü&gt;</dt>
+<dt>İmza Sürümü: &lt; Tanım sürümü&gt;</dt>
+<dt>Altyapısı Sürümü: &lt;Antimalware Engine sürümü&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -626,9 +625,9 @@ Açıklama:
 <td >
 Microsoft Defender Virüsten Koruma bir öğeyi karantinadan sildi.<br/>Daha fazla bilgi için aşağıdakilere bakın:
 <dl>
-<dt>Adı: &lt; Tehdit nameID&gt;</dt>
-<dt>: &lt;Threat IDSeverity&gt;</dt>
-<dt>: &lt;Önem Derecesi&gt;, örneğin:<ul>
+<dt>Adı: &lt; Tehdit adı&gt;</dt>
+<dt>kimliği: &lt;Tehdit Kimliği&gt;</dt>
+<dt>Önem Derecesi: &lt;Önem Derecesi&gt;, örneğin:<ul>
 <li>Düşük</li>
 <li>Orta</li>
 <li>Yüksek</li>
@@ -636,10 +635,10 @@ Microsoft Defender Virüsten Koruma bir öğeyi karantinadan sildi.<br/>Daha faz
 </ul>
 </dt>
 <dt>Kategori: &lt; Kategori açıklaması&gt;, örneğin herhangi bir tehdit veya kötü amaçlı yazılım türü.</dt> 
-<dt>Yolu: &lt; Dosya yoluKullanıcı&gt;</dt>
-<dt>: &lt;Etki alanılt&gt;\&; UserSignature&gt;</dt> 
-<dt>Sürümü: &lt;Tanım sürümüİngiliz&gt;</dt> 
-<dt>Sürümü: &lt;Antimalware Engine sürümü&gt;</dt>
+<dt>Yolu: &lt; Dosya yolu&gt;</dt>
+<dt>Kullanıcı: &lt;Etki alanı&gt;\&lt; Kullanıcı&gt;</dt>
+<dt>İmzası Sürümü: &lt;Tanım sürümü&gt;</dt>
+<dt>Altyapısı Sürümü: &lt;Antimalware Engine sürümü&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -669,9 +668,9 @@ Açıklama:
 Microsoft Defender Virüsten Koruma bir öğeyi karantinadan silmeye çalışırken hatayla karşılaştı.
 Daha fazla bilgi için aşağıdakilere bakın:
 <dl>
-<dt>Adı: &lt; Tehdit nameID&gt;</dt>
-<dt>: &lt;Threat IDSeverity&gt;</dt>
-<dt>: &lt;Önem Derecesi&gt;, örneğin:<ul>
+<dt>Adı: &lt; Tehdit adı&gt;</dt>
+<dt>kimliği: &lt;Tehdit Kimliği&gt;</dt>
+<dt>Önem Derecesi: &lt;Önem Derecesi&gt;, örneğin:<ul>
 <li>Düşük</li>
 <li>Orta</li>
 <li>Yüksek</li>
@@ -679,12 +678,12 @@ Daha fazla bilgi için aşağıdakilere bakın:
 </ul>
 </dt>
 <dt>Kategori: &lt; Kategori açıklaması&gt;, örneğin herhangi bir tehdit veya kötü amaçlı yazılım türü.</dt> 
-<dt>Yolu: &lt; Dosya yoluKullanıcı&gt;</dt>
-<dt>: &lt;Etki alanılt&gt;\&; UserError&gt;</dt> 
-<dt>Kodu: &lt;Tehdit durumuyla ilişkili hata kodu&gt; Sonuç kodu. Standart HRESULT değerleri. </dt>
+<dt>Yolu: &lt; Dosya yolu&gt;</dt>
+<dt>Kullanıcı: &lt;Etki alanı&gt;\&lt; Kullanıcı&gt;</dt>
+<dt>Hata Kodu: &lt;Tehdit durumuyla ilişkili hata kodu&gt; Sonuç kodu. Standart HRESULT değerleri. </dt>
 <dt>Hata Açıklaması: &lt;Hata açıklaması&gt; Hatanın açıklaması. </dt> 
-<dt>İmza Sürümü: &lt; Tanım sürümüİngiliz&gt;</dt> 
-<dt>Sürümü: &lt;Antimalware Engine sürümü&gt;</dt>
+<dt>İmza Sürümü: &lt; Tanım sürümü&gt;</dt>
+<dt>Altyapısı Sürümü: &lt;Antimalware Engine sürümü&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -714,7 +713,7 @@ Açıklama:
 Microsoft Defender Virüsten Koruma, kötü amaçlı yazılım geçmişini ve istenmeyebilecek diğer yazılımları kaldırmıştır.
 <dl>
 <dt>Saat: Olayın gerçekleştiği zaman, örneğin geçmişin temizlenme zamanı. Bu parametre tehdit olaylarında kullanılmaz, böylece düzeltme süresi veya bulaşma süresiyle ilgili bir karışıklık olmaz. Bunlar için, bunları özellikle Eylem Zamanı veya Algılama Zamanı olarak adlandırıyoruz.</dt> 
-<dt>Kullanıcı: &lt; Etki alanılt&gt;\&; Kullanıcı&gt;</dt>
+<dt>Kullanıcı: &lt; Etki alanı&gt;\&lt; Kullanıcı&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -744,8 +743,8 @@ Açıklama:
 Microsoft Defender Virüsten Koruma, kötü amaçlı yazılım geçmişini ve istenmeyebilecek diğer yazılımları kaldırmaya çalışırken bir hatayla karşılaştı.
 <dl>
 <dt>Saat: Olayın gerçekleştiği zaman, örneğin geçmişin temizlenme zamanı. Bu parametre tehdit olaylarında kullanılmaz, böylece düzeltme süresi veya bulaşma süresiyle ilgili bir karışıklık olmaz. Bunlar için, bunları özellikle Eylem Zamanı veya Algılama Zamanı olarak adlandırıyoruz.</dt> 
-<dt>Kullanıcı: &lt; Etki alanılt&gt;\&; UserError&gt;</dt> 
-<dt>Kodu: &lt;Tehdit durumuyla ilişkili hata kodu&gt; Sonuç kodu. Standart HRESULT değerleri. </dt>
+<dt>Kullanıcı: &lt; Etki alanı&gt;\&lt; Kullanıcı&gt;</dt>
+<dt>Hata Kodu: &lt;Tehdit durumuyla ilişkili hata kodu&gt; Sonuç kodu. Standart HRESULT değerleri. </dt>
 <dt>Hata Açıklaması: &lt;Hata açıklaması&gt; Hatanın açıklaması. </dt>
 </dl>
 </td>
@@ -775,9 +774,9 @@ Açıklama:
 <td >
 Microsoft Defender Virüsten Koruma şüpheli bir davranış algılamıştır.<br/>Daha fazla bilgi için aşağıdakilere bakın:
 <dl>
-<dt>Adı: &lt; Tehdit nameID&gt;</dt>
-<dt>: &lt;Threat IDSeverity&gt;</dt>
-<dt>: &lt;Önem Derecesi&gt;, örneğin:<ul>
+<dt>Adı: &lt; Tehdit adı&gt;</dt>
+<dt>kimliği: &lt;Tehdit Kimliği&gt;</dt>
+<dt>Önem Derecesi: &lt;Önem Derecesi&gt;, örneğin:<ul>
 <li>Düşük</li>
 <li>Orta</li>
 <li>Yüksek</li>
@@ -785,8 +784,8 @@ Microsoft Defender Virüsten Koruma şüpheli bir davranış algılamıştır.<b
 </ul>
 </dt>
 <dt>Kategori: &lt; Kategori açıklaması&gt;, örneğin herhangi bir tehdit veya kötü amaçlı yazılım türü.</dt> 
-<dt>Yolu: &lt; Dosya yoluDetection&gt;</dt>
-<dt> Kaynağı: &lt;Algılama kaynağı&gt;, örneğin:
+<dt>Yolu: &lt; Dosya yolu&gt;</dt>
+<dt>Algılama Kaynağı: &lt;Algılama kaynağı&gt;, örneğin:
 <ul>
 <li>Unknown</li>
 <li>Yerel bilgisayar</li>
@@ -813,15 +812,15 @@ Microsoft Defender Virüsten Koruma şüpheli bir davranış algılamıştır.<b
 <li>Erken Başlatma Kötü Amaçlı Yazılımdan Koruma (ELAM). Bu, önyükleme dizisi tarafından algılanan kötü amaçlı yazılımları içerir</li>
 <li>Uzaktan kanıtlama</li>
 </ul>Kötü amaçlı yazılımdan koruma tarama arabirimi (AMSI). Birincil olarak betikleri korumak için kullanılır (PowerShell, VBS), ancak üçüncü taraflarca da çağrılabilir.
-UACStatus</dt>
-<dt>: &lt;StatusUser&gt;</dt>
-<dt>: &lt;Domainlt&gt;\&; UserProcess&gt;</dt> 
-<dt>Adı: &lt;PIDSignature&gt;</dt> 
-<dt>Id: Sabit listesi eşleşen önem derecesi</dt> içindeki işlem. 
-<dt>İmza Sürümü: &lt; Tanım versionEngine&gt;</dt> 
-<dt>Version: &lt;Antimalware Engine versionFidelity&gt;</dt> 
-<dt>Label:</dt>
-<dt>Target File Name: &lt;Dosyanın dosya adı&gt;.</dt>
+UAC</dt>
+<dt>Durumu: &lt;Durum&gt;</dt>
+<dt>Kullanıcısı: &lt;Domain&gt;\&lt; Kullanıcı&gt;</dt>
+<dt>İşlemi Adı: &lt;PID&gt;</dt>
+<dt>İmza Kimliği: Numaralandırma eşleştirme önem derecesi</dt> içindeki işlem. 
+<dt>İmza Sürümü: &lt; Tanım sürümü&gt;</dt>
+<dt>Altyapısı Sürümü: &lt;Antimalware Engine sürüm&gt;</dt>
+<dt>Aslına Uygunluk Etiketi:</dt>
+<dt>Hedef Dosya Adı: &lt;Dosyanın dosya adı&gt;.</dt>
 </dl>
 </td>
 </tr>
@@ -850,9 +849,9 @@ Açıklama:
 <td >
 Microsoft Defender Virüsten Koruma kötü amaçlı yazılım veya diğer istenmeyebilecek yazılımlar algıladı.<br/>Daha fazla bilgi için aşağıdakilere bakın:
 <dl>
-<dt>Adı: &lt; Tehdit nameID&gt;</dt>
-<dt>: &lt;Threat IDSeverity&gt;</dt>
-<dt>: &lt;Önem Derecesi&gt;, örneğin:<ul>
+<dt>Adı: &lt; Tehdit adı&gt;</dt>
+<dt>kimliği: &lt;Tehdit Kimliği&gt;</dt>
+<dt>Önem Derecesi: &lt;Önem Derecesi&gt;, örneğin:<ul>
 <li>Düşük</li>
 <li>Orta</li>
 <li>Yüksek</li>
@@ -860,8 +859,8 @@ Microsoft Defender Virüsten Koruma kötü amaçlı yazılım veya diğer istenm
 </ul>
 </dt>
 <dt>Kategori: &lt; Kategori açıklaması&gt;, örneğin herhangi bir tehdit veya kötü amaçlı yazılım türü.</dt> 
-<dt>Yolu: &lt; Dosya yoluDetection&gt;</dt>
-<dt> Kaynağı: &lt;Algılama kaynağı&gt;, örneğin:
+<dt>Yolu: &lt; Dosya yolu&gt;</dt>
+<dt>Algılama Kaynağı: &lt;Algılama kaynağı&gt;, örneğin:
 <ul>
 <li>Unknown</li>
 <li>Yerel bilgisayar</li>
@@ -888,11 +887,11 @@ Microsoft Defender Virüsten Koruma kötü amaçlı yazılım veya diğer istenm
 <li>Erken Başlatma Kötü Amaçlı Yazılımdan Koruma (ELAM). Bu, önyükleme dizisi tarafından algılanan kötü amaçlı yazılımları içerir</li>
 <li>Uzaktan kanıtlama</li>
 </ul>Kötü amaçlı yazılımdan koruma tarama arabirimi (AMSI). Birincil olarak betikleri korumak için kullanılır (PowerShell, VBS), ancak üçüncü taraflarca da çağrılabilir.
-UACUser</dt>
-<dt>: &lt;Domainlt&gt;\&; UserProcess&gt;</dt> 
-<dt>Name: &lt;PROCESS in the PIDSignature&gt;</dt> 
-<dt>Version: &lt;Definition versionEngine&gt;</dt> 
-<dt>Version: &lt;Antimalware Engine version&gt;</dt>
+UAC</dt>
+<dt>Kullanıcısı: &lt;Domain&gt;\&lt; Kullanıcı&gt;</dt>
+<dt>İşlemi Adı: &lt;PID&gt;İmza Sürümündeki İşlem</dt>
+<dt>: &lt;Tanım sürümü&gt;</dt>
+<dt>Altyapısı Sürümü: &lt;Antimalware Engine sürümü&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -929,9 +928,9 @@ Açıklama:
 <td >
 Microsoft Defender Virüsten Koruma bu makineyi kötü amaçlı yazılımlardan veya istenmeyebilecek diğer yazılımlardan korumak için eyleme geçti.<br/>Daha fazla bilgi için aşağıdakilere bakın:
 <dl>
-<dt>Adı: &lt; Tehdit nameID&gt;</dt>
-<dt>: &lt;Threat IDSeverity&gt;</dt>
-<dt>: &lt;Önem Derecesi&gt;, örneğin:<ul>
+<dt>Adı: &lt; Tehdit adı&gt;</dt>
+<dt>kimliği: &lt;Tehdit Kimliği&gt;</dt>
+<dt>Önem Derecesi: &lt;Önem Derecesi&gt;, örneğin:<ul>
 <li>Düşük</li>
 <li>Orta</li>
 <li>Yüksek</li>
@@ -939,8 +938,8 @@ Microsoft Defender Virüsten Koruma bu makineyi kötü amaçlı yazılımlardan 
 </ul>
 </dt>
 <dt>Kategori: &lt; Kategori açıklaması&gt;, örneğin herhangi bir tehdit veya kötü amaçlı yazılım türü.</dt> 
-<dt>Yolu: &lt; Dosya yoluDetection&gt;</dt>
-<dt> Kaynağı: &lt;Algılama kaynağı&gt;, örneğin:
+<dt>Yolu: &lt; Dosya yolu&gt;</dt>
+<dt>Algılama Kaynağı: &lt;Algılama kaynağı&gt;, örneğin:
 <ul>
 <li>Unknown</li>
 <li>Yerel bilgisayar</li>
@@ -967,10 +966,10 @@ Microsoft Defender Virüsten Koruma bu makineyi kötü amaçlı yazılımlardan 
 <li>Erken Başlatma Kötü Amaçlı Yazılımdan Koruma (ELAM). Bu, önyükleme dizisi tarafından algılanan kötü amaçlı yazılımları içerir</li>
 <li>Uzaktan kanıtlama</li>
 </ul>Kötü amaçlı yazılımdan koruma tarama arabirimi (AMSI). Birincil olarak betikleri korumak için kullanılır (PowerShell, VBS), ancak üçüncü taraflarca da çağrılabilir.
-UACUser</dt>
-<dt>: &lt;Domainlt&gt;\&; UserProcess&gt;</dt> 
-<dt>Adı: &lt;PIDAction&gt;</dt>
-<dt>: &lt;Action&gt; içindeki işlem, örneğin:<ul>
+UAC</dt>
+<dt>Kullanıcısı: &lt;Domain&gt;\&lt; Kullanıcı&gt;</dt>
+<dt>İşlemi Adı: &lt;PID&gt;</dt>
+<dt>Eylemindeki İşlem: &lt;Eylem&gt;, örneğin:<ul>
 <li>Temiz: Kaynak temizlendi</li>
 <li>Karantina: Kaynak karantinaya alındı</li>
 <li>Kaldır: Kaynak silindi</li>
@@ -980,11 +979,11 @@ UACUser</dt>
 <li>Engelle: Kaynağın yürütülmesi engellendi</li>
 </ul>
 </dt>
-<dt>Eylem Durumu: &lt; Ek actionsError&gt;</dt> 
-<dt>Code: &lt;Hata kodu&gt; Tehdit durumuyla ilişkili sonuç kodu açıklaması. Standart HRESULT değerleri.</dt> 
+<dt>Eylem Durumu: &lt; Ek eylemlerin&gt;açıklaması</dt>
+<dt>Hata Kodu: &lt;Hata kodu&gt; Tehdit durumuyla ilişkili sonuç kodu. Standart HRESULT değerleri.</dt> 
 <dt>Hata Açıklaması: &lt; Hata açıklaması&gt; Hatanın açıklaması. </dt> 
-<dt>İmza Sürümü: &lt; Tanım sürümüİndirim&gt;</dt> 
-<dt>Sürümü: &lt;Antimalware Engine sürüm&gt;</dt> NOT: Microsoft Defender Virüsten Koruma, Microsoft Security Essentials, Kötü Amaçlı Yazılımları Temizleme Aracı veya System Center Endpoint Protection  bir kötü amaçlı yazılım algılar, kötü amaçlı yazılımın değiştirmiş olabileceği aşağıdaki sistem ayarlarını ve hizmetlerini geri yükler:<ul>
+<dt>İmza Sürümü: &lt; Tanım sürümü&gt;</dt>
+<dt>Altyapısı Sürümü: &lt;Antimalware Engine sürüm&gt;</dt> NOT: Her Microsoft Defender Virüsten Koruma, Microsoft Security Essentials, Kötü Amaçlı Yazılımları Temizleme Aracı veya System Center Endpoint Protection  bir kötü amaçlı yazılım algılar, kötü amaçlı yazılımın değiştirmiş olabileceği aşağıdaki sistem ayarlarını ve hizmetlerini geri yükler:<ul>
 <li>Varsayılan Internet Explorer veya Microsoft Edge ayarı</li>
 <li>Kullanıcı Access Control ayarları</li>
 <li>Chrome ayarları</li>
@@ -1051,9 +1050,9 @@ Açıklama:
 <td >
 Microsoft Defender Virüsten Koruma kötü amaçlı yazılım veya istenmeyebilecek diğer yazılımlar üzerinde işlem yaparken kritik olmayan bir hatayla karşılaştı.<br/>Daha fazla bilgi için aşağıdakilere bakın:
 <dl>
-<dt>Adı: &lt; Tehdit nameID&gt;</dt>
-<dt>: &lt;Threat IDSeverity&gt;</dt>
-<dt>: &lt;Önem Derecesi&gt;, örneğin:<ul>
+<dt>Adı: &lt; Tehdit adı&gt;</dt>
+<dt>kimliği: &lt;Tehdit Kimliği&gt;</dt>
+<dt>Önem Derecesi: &lt;Önem Derecesi&gt;, örneğin:<ul>
 <li>Düşük</li>
 <li>Orta</li>
 <li>Yüksek</li>
@@ -1061,8 +1060,8 @@ Microsoft Defender Virüsten Koruma kötü amaçlı yazılım veya istenmeyebile
 </ul>
 </dt>
 <dt>Kategori: &lt; Kategori açıklaması&gt;, örneğin herhangi bir tehdit veya kötü amaçlı yazılım türü.</dt> 
-<dt>Yolu: &lt; Dosya yoluDetection&gt;</dt>
-<dt> Kaynağı: &lt;Algılama kaynağı&gt;, örneğin:
+<dt>Yolu: &lt; Dosya yolu&gt;</dt>
+<dt>Algılama Kaynağı: &lt;Algılama kaynağı&gt;, örneğin:
 <ul>
 <li>Unknown</li>
 <li>Yerel bilgisayar</li>
@@ -1089,10 +1088,10 @@ Microsoft Defender Virüsten Koruma kötü amaçlı yazılım veya istenmeyebile
 <li>Erken Başlatma Kötü Amaçlı Yazılımdan Koruma (ELAM). Bu, önyükleme dizisi tarafından algılanan kötü amaçlı yazılımları içerir</li>
 <li>Uzaktan kanıtlama</li>
 </ul>Kötü amaçlı yazılımdan koruma tarama arabirimi (AMSI). Birincil olarak betikleri korumak için kullanılır (PowerShell, VBS), ancak üçüncü taraflarca da çağrılabilir.
-UACUser</dt>
-<dt>: &lt;Domainlt&gt;\&; UserProcess&gt;</dt> 
-<dt>Adı: &lt;PIDAction&gt;</dt>
-<dt>: &lt;Action&gt; içindeki işlem, örneğin:<ul>
+UAC</dt>
+<dt>Kullanıcısı: &lt;Domain&gt;\&lt; Kullanıcı&gt;</dt>
+<dt>İşlemi Adı: &lt;PID&gt;</dt>
+<dt>Eylemindeki İşlem: &lt;Eylem&gt;, örneğin:<ul>
 <li>Temiz: Kaynak temizlendi</li>
 <li>Karantina: Kaynak karantinaya alındı</li>
 <li>Kaldır: Kaynak silindi</li>
@@ -1102,11 +1101,11 @@ UACUser</dt>
 <li>Engelle: Kaynağın yürütülmesi engellendi</li>
 </ul>
 </dt>
-<dt>Eylem Durumu: &lt; Ek actionsError&gt;</dt> 
-<dt>Code: &lt;Hata kodu&gt; Tehdit durumuyla ilişkili sonuç kodu açıklaması. Standart HRESULT değerleri.</dt> 
+<dt>Eylem Durumu: &lt; Ek eylemlerin&gt;açıklaması</dt>
+<dt>Hata Kodu: &lt;Hata kodu&gt; Tehdit durumuyla ilişkili sonuç kodu. Standart HRESULT değerleri.</dt> 
 <dt>Hata Açıklaması: &lt; Hata açıklaması&gt; Hatanın açıklaması. </dt> 
-<dt>İmza Sürümü: &lt; Tanım sürümüİndirim&gt;</dt> 
-<dt>Sürümü: &lt;Antimalware Engine sürümü&gt;</dt>
+<dt>İmza Sürümü: &lt; Tanım sürümü&gt;</dt>
+<dt>Altyapısı Sürümü: &lt;Antimalware Engine sürümü&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -1143,9 +1142,9 @@ Açıklama:
 <td >
 Microsoft Defender Virüsten Koruma, kötü amaçlı yazılım veya istenmeyebilecek diğer yazılımlar üzerinde işlem yaparken kritik bir hatayla karşılaştı.<br/>Daha fazla bilgi için aşağıdakilere bakın:
 <dl>
-<dt>Adı: &lt; Tehdit nameID&gt;</dt>
-<dt>: &lt;Threat IDSeverity&gt;</dt>
-<dt>: &lt;Önem Derecesi&gt;, örneğin:<ul>
+<dt>Adı: &lt; Tehdit adı&gt;</dt>
+<dt>kimliği: &lt;Tehdit Kimliği&gt;</dt>
+<dt>Önem Derecesi: &lt;Önem Derecesi&gt;, örneğin:<ul>
 <li>Düşük</li>
 <li>Orta</li>
 <li>Yüksek</li>
@@ -1153,8 +1152,8 @@ Microsoft Defender Virüsten Koruma, kötü amaçlı yazılım veya istenmeyebil
 </ul>
 </dt>
 <dt>Kategori: &lt; Kategori açıklaması&gt;, örneğin herhangi bir tehdit veya kötü amaçlı yazılım türü.</dt> 
-<dt>Yolu: &lt; Dosya yoluDetection&gt;</dt>
-<dt> Kaynağı: &lt;Algılama kaynağı&gt;, örneğin:
+<dt>Yolu: &lt; Dosya yolu&gt;</dt>
+<dt>Algılama Kaynağı: &lt;Algılama kaynağı&gt;, örneğin:
 <ul>
 <li>Unknown</li>
 <li>Yerel bilgisayar</li>
@@ -1181,10 +1180,10 @@ Microsoft Defender Virüsten Koruma, kötü amaçlı yazılım veya istenmeyebil
 <li>Erken Başlatma Kötü Amaçlı Yazılımdan Koruma (ELAM). Bu, önyükleme dizisi tarafından algılanan kötü amaçlı yazılımları içerir</li>
 <li>Uzaktan kanıtlama</li>
 </ul>Kötü amaçlı yazılımdan koruma tarama arabirimi (AMSI). Birincil olarak betikleri korumak için kullanılır (PowerShell, VBS), ancak üçüncü taraflarca da çağrılabilir.
-UACUser</dt>
-<dt>: &lt;Domainlt&gt;\&; UserProcess&gt;</dt> 
-<dt>Adı: &lt;PIDAction&gt;</dt>
-<dt>: &lt;Action&gt; içindeki işlem, örneğin:<ul>
+UAC</dt>
+<dt>Kullanıcısı: &lt;Domain&gt;\&lt; Kullanıcı&gt;</dt>
+<dt>İşlemi Adı: &lt;PID&gt;</dt>
+<dt>Eylemindeki İşlem: &lt;Eylem&gt;, örneğin:<ul>
 <li>Temiz: Kaynak temizlendi</li>
 <li>Karantina: Kaynak karantinaya alındı</li>
 <li>Kaldır: Kaynak silindi</li>
@@ -1194,11 +1193,11 @@ UACUser</dt>
 <li>Engelle: Kaynağın yürütülmesi engellendi</li>
 </ul>
 </dt>
-<dt>Eylem Durumu: &lt; Ek actionsError&gt;</dt> 
-<dt>Code: &lt;Hata kodu&gt; Tehdit durumuyla ilişkili sonuç kodu açıklaması. Standart HRESULT değerleri.</dt> 
+<dt>Eylem Durumu: &lt; Ek eylemlerin&gt;açıklaması</dt>
+<dt>Hata Kodu: &lt;Hata kodu&gt; Tehdit durumuyla ilişkili sonuç kodu. Standart HRESULT değerleri.</dt> 
 <dt>Hata Açıklaması: &lt; Hata açıklaması&gt; Hatanın açıklaması. </dt> 
-<dt>İmza Sürümü: &lt; Tanım sürümüİndirim&gt;</dt> 
-<dt>Sürümü: &lt;Antimalware Engine sürümü&gt;</dt>
+<dt>İmza Sürümü: &lt; Tanım sürümü&gt;</dt>
+<dt>Altyapısı Sürümü: &lt;Antimalware Engine sürümü&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -1250,7 +1249,7 @@ Kullanıcının gerekli kaynaklara erişme izni olduğunu doğrulayın.
 Bu olay devam ederse:<ol>
 <li>Taramayı yeniden çalıştırın.</li>
 <li>Aynı şekilde başarısız olursa<a href="https://go.microsoft.com/fwlink/?LinkId=215163">, Microsoft Desteği sitesine</a> gidin, hata kodunu aramak için <b>Arama</b> kutusuna hata numarasını girin.</li>
-<li><a href="https://go.microsoft.com/fwlink/?LinkId=215491">Microsoft Teknik Destek</a> ile iletişime geçin.
+<li><a href="/microsoft-365/admin/get-help-support">Microsoft Teknik Destek</a> ile iletişime geçin.
 </li>
 </ol>
 </td>
@@ -1280,9 +1279,9 @@ Açıklama:
 <td >
 Microsoft Defender Virüsten Koruma istemcisi çalışır durumda.
 <dl>
-<dt>Geçerli Platform Sürümü: &lt; Geçerli platform sürümüCihaz&gt;</dt> 
-<dt>Kaynak Yolu: &lt;PathHashes&gt;</dt>
-<dt>: &lt;Karmalar&gt;</dt>
+<dt>Geçerli Platform Sürümü: &lt; Geçerli platform sürümü&gt;</dt>
+<dt>Tehdit Kaynağı Yolu: &lt;Yol&gt;</dt>
+<dt>Karmaları: &lt;Karmalar&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -1319,23 +1318,23 @@ Açıklama:
 Denetimli Klasör Erişimi, güvenilmeyen bir işlemin disk kesimlerini değiştirme olasılığını engelledi.
 <br/> Olay kaydı hakkında daha fazla bilgi için aşağıdakilere bakın:
 <dl>
-<dt>Eventıd: &lt; EventID&gt;, örneğin: 1127Version</dt>
-<dt>: &lt;Sürüm&gt;, örneğin:</dt> 
-<dt>0Level: &lt;Level&gt;, örneğin: win:</dt>
-<dt>WarningTimeCreated: &lt;SystemTime&gt;, olayın oluşturulduğu</dt> 
-<dt>zamanEventRecordID: EventRecordID, &lt;event logExecution ProcessID&gt;</dt>
-<dt>: Execution ProcessID&gt;, eventChannel oluşturan işlem: &lt;</dt>
-<dt>&lt;Olay kanalı&gt;, örneğin: Microsoft- Windows-Windows Defender/</dt>
-<dt>OperationalComputer: &lt;Bilgisayar adıGüvenlik&gt;</dt> 
-<dt>UserID: &lt;Güvenlik UserIDÜrün&gt;</dt> 
-<dt>Adı: &lt;Ürün Adı&gt;, örneğin: Microsoft Defender Virüsten Koruma</dt> 
+<dt>Eventıd: &lt; EventID&gt;, örneğin: 1127</dt>
+<dt>Sürüm: &lt;Sürüm&gt;, örneğin: 0</dt>
+<dt>Düzey: &lt;Düzey&gt;, örneğin: win:Warning</dt>
+<dt>TimeCreated: &lt;SystemTime&gt;, olayın oluşturulduğu zaman</dt>
+<dt>EventRecordID: &lt;EventRecordID&gt;, olay günlüğündeki olayın dizin numarası</dt>
+<dt>Execution ProcessID: &lt;Execution ProcessID&gt;, olay kanalını oluşturan işlem</dt>
+<dt>: &lt;Olay kanalı&gt;, örneğin: Microsoft- Windows-Windows Defender/İşletimsel</dt>
+<dt>Bilgisayar: &lt;Bilgisayar adı&gt;</dt>
+<dt>Güvenlik Kullanıcı Kimliği: &lt;Güvenlik Kullanıcı Kimliği&gt;</dt>
+<dt>Ürün Adı: &lt;Ürün Adı&gt;, örneğin: Microsoft Defender Virüsten Koruma</dt> 
 <dt>Ürün Sürümü: &lt;Ürün Sürümü&gt;</dt>
-<dt> Algılama Süresi: &lt;Algılama Süresi&gt;, CFA'nın güvenilmeyen bir işlemi engellediği</dt> 
-<dt>zamanKullanıcı: &lt;Domainlt&gt;\&; UserPath&gt;</dt>
-<dt>: &lt;Cihaz adı&gt;, güvenilmeyen bir işlemin modifikasyonu için eriştiği cihazın veya diskin</dt> 
-<dt>adıİşlem Adı: &lt;İşlem yolu&gt;, CFA'nın değişiklik için cihaza veya diske erişmesini engellediği işlem yolu</dt> 
-<dt>adıGüvenlik Bilgileri Sürümü: &lt;Güvenlik zekası sürümüİngiltere&gt;</dt> 
-<dt>Sürümü: &lt;Antimalware Engine sürümü&gt;</dt>
+<dt> Algılama Süresi: &lt;Algılama Zamanı&gt;, CFA'nın güvenilmeyen bir işlemi engellediği zaman</dt>
+<dt>Kullanıcı: &lt;Domain&gt;\&lt; Kullanıcı&gt;</dt>
+<dt>Yolu: &lt;Cihaz adı&gt;, güvenilmeyen bir işlemin değişiklik için eriştiği cihazın veya diskin adı</dt>
+<dt>İşlem Adı: &lt;İşlem yolu&gt;, CFA'nın değişiklik için cihaza veya diske erişmesini engellediği işlem yolu adı</dt>
+<dt>Güvenlik Bilgileri Sürümü: &lt;Güvenlik zekası sürümü&gt;</dt>
+<dt>Altyapısı Sürümü: &lt;Antimalware Engine sürümü&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -1372,9 +1371,9 @@ Açıklama:
 <td >
 Microsoft Defender Virüsten Koruma istemcisi çalışır durumda.
 <dl>
-<dt>Platform Sürümü: &lt; Geçerli platform sürümüSignature&gt;</dt> 
-<dt>Sürümü: &lt;Tanım sürümüİndirim&gt;</dt> 
-<dt>Sürümü: &lt;Antimalware Engine sürümü&gt;</dt>
+<dt>Platform Sürümü: &lt; Geçerli platform sürümü&gt;</dt>
+<dt>İmza Sürümü: &lt;Tanım sürümü&gt;</dt>
+<dt>Altyapısı Sürümü: &lt;Antimalware Engine sürümü&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -1412,28 +1411,28 @@ Açıklama:
 <td >
 Virüsten koruma istemcisi sistem durumu raporu.
 <dl>
-<dt>Platform Sürümü: &lt; Geçerli platform sürümüİndir&gt;</dt> sürüm
-<dt>: &lt;Antimalware Engine sürümNetwork&gt;</dt> 
-<dt>Realtime Inspection altyapısı sürümü: &lt;Ağ Realtime Inspection altyapısı sürümüAntivirus&gt;</dt> 
-<dt>imza sürümü: &lt;Virüsten koruma imzası sürümüAntispyware&gt;</dt> 
-<dt>imza sürümü: &lt;Casus yazılımdan koruma imzası sürümüNetwork&gt;</dt> 
-<dt>Realtime Inspection imza sürümü: &lt; Ağ Gerçek Zamanlı İnceleme imzası sürümüRTP&gt;</dt> 
-<dt>durumu: &lt;Gerçek zamanlı koruma durumu&gt; (Etkin veya Devre Dışı)</dt>
+<dt>Platform Sürümü: &lt; Geçerli platform sürümü&gt;</dt>
+<dt>Altyapı Sürümü: &lt;Antimalware Engine sürümü&gt;</dt>
+<dt>Ağ Gerçek Zamanlı İnceleme altyapısı sürümü: &lt;Ağ Gerçek Zamanlı İnceleme altyapısı sürümü&gt;</dt>
+<dt>Virüsten koruma imza sürümü: &lt;Virüsten koruma imzası sürümü&gt;</dt>
+<dt>Casus yazılımdan koruma imzası sürümü: &lt;Casus yazılımdan koruma imzası sürümü&gt;</dt>
+<dt>Ağ Gerçek Zamanlı İnceleme imza sürümü: &lt; Ağ Gerçek Zamanlı İnceleme imzası sürümü&gt;</dt>
+<dt>RTP durumu: &lt;Gerçek zamanlı koruma durumu&gt; (Etkin veya Devre Dışı)</dt>
 <dt>OA durumu: &lt;Erişim durumunda&gt; (Etkin veya Devre Dışı)</dt>
-<dt>IOAV durumu: &lt;IE İndirmeleri ve Outlook Hızlı Ekler durumu (Etkin veya Devre Dışı)BM durumu&gt;</dt>
-<dt>: &lt;Davranış İzleme durumu&gt; (Etkin veya Devre Dışı)</dt>
+<dt>IOAV durumu: &lt;IE İndirmeleri ve Outlook Hızlı Ekler durumu&gt; (Etkin veya Devre Dışı)</dt>
+<dt>BM durumu: &lt;Davranış İzleme durumu&gt; (Etkin veya Devre Dışı)</dt>
 <dt>Virüsten koruma imza yaşı: &lt;Virüsten koruma imza yaşı&gt;  (gün olarak)</dt> 
 <dt>Casus yazılımdan koruma imzası yaşı: &lt; Casus yazılımdan koruma imza yaşı&gt; (gün)</dt>
 <dt>Son hızlı tarama yaşı: &lt;Son hızlı tarama yaşı&gt; (gün)</dt>
 <dt>Son tam tarama yaşı: &lt;Son tam tarama yaşı&gt; (gün olarak)Virüsten koruma</dt> 
-<dt>imzası oluşturma zamanı: ?&lt; Virüsten koruma imzası oluşturma zamanıAntispyware&gt;</dt> 
-<dt>imza oluşturma zamanı: ?&lt; Casus yazılımdan koruma imzası oluşturma zamanıLast&gt;</dt> 
-<dt>hızlı tarama başlangıç zamanı: ?&lt; Son hızlı tarama başlangıç zamanıHizli&gt;</dt> 
-<dt>tarama bitiş saati: ?&lt; Son hızlı tarama bitiş zamanıSon&gt;</dt> 
-<dt>hızlı tarama kaynağı: &lt;Son hızlı tarama kaynağı&gt; (0 = tarama çalışmadı, 1 = kullanıcı tarafından başlatıldı, 2 = sistem başlatıldı)</dt>
-<dt>Son tam tarama başlangıç zamanı: ?&lt; Son tam tarama başlangıç zamanıYeni&gt;</dt> 
-<dt>tarama bitiş saati: ?&lt; Son tam tarama bitiş zamanıSon&gt;</dt> 
-<dt>tam tarama kaynağı: &lt;Son tam tarama kaynağı&gt; (0 = tarama çalışmadı, 1 = kullanıcı tarafından başlatıldı, 2 = sistem başlatıldı)</dt>
+<dt>imzası oluşturma zamanı: ?&lt; Virüsten koruma imzası oluşturma zamanı&gt;</dt>
+<dt>Casus yazılımdan koruma imzası oluşturma zamanı: ?&lt; Casus yazılımdan koruma imzası oluşturma zamanı&gt;</dt>
+<dt>Son hızlı tarama başlangıç zamanı: ?&lt; Son hızlı tarama başlangıç zamanı&gt;</dt>
+<dt>Son hızlı tarama bitiş saati: ?&lt; Son hızlı tarama bitiş zamanı&gt;</dt>
+<dt>Son hızlı tarama kaynağı: &lt;Son hızlı tarama kaynağı&gt; (0 = tarama çalışmadı, 1 = kullanıcı tarafından başlatıldı, 2 = sistem başlatıldı)</dt>
+<dt>Son tam tarama başlangıç zamanı: ?&lt; Son tam tarama başlangıç zamanı&gt;</dt>
+<dt>Son tam tarama bitiş saati: ?&lt; Son tam tarama bitiş zamanı&gt;</dt>
+<dt>Son tam tarama kaynağı: &lt;Son tam tarama kaynağı&gt; (0 = tarama çalışmadı, 1 = kullanıcı tarafından başlatıldı, 2 = sistem başlatıldı)</dt>
 <dt>Ürün durumu: İç sorun giderme için
 </dl>
 </td>
@@ -1464,9 +1463,9 @@ Açıklama:
 <td >
 Virüsten koruma imzası sürümü güncelleştirildi.
 <dl>
-<dt>Geçerli İmza Sürümü: &lt; Geçerli imza sürümüÖnceki&gt;</dt> 
-<dt>İmza Sürümü: &lt;Önceki imza sürümü&gt;</dt>
-<dt> İmza Türü: &lt;İmza türü&gt;, örneğin: <ul>
+<dt>Geçerli İmza Sürümü: &lt; Geçerli imza sürümü&gt;</dt>
+<dt>Önceki İmza Sürümü: &lt;Önceki imza sürümü&gt;</dt>
+<dt>İmza Türü: &lt;İmza türü&gt;, örneğin: <ul>
 <li>Antivirus</li>
 <li>Antispyware</li>
 <li>Antimalware</li>
@@ -1474,9 +1473,9 @@ Virüsten koruma imzası sürümü güncelleştirildi.
 </ul>
 </dt>
 <dt>Güncelleştirme Türü: &lt; Güncelleştirme türü&gt;( Tam veya Delta).</dt> 
-<dt>Kullanıcı: &lt; Etki alanılt&gt;\&; UserCurrent&gt;</dt> 
-<dt>Altyapısı Sürümü: &lt;Geçerli altyapı sürümüÖnceki&gt;</dt> 
-<dt>Altyapı Sürümü: &lt;Önceki altyapı sürümü&gt;</dt>
+<dt>Kullanıcı: &lt; Etki alanı&gt;\&lt; Kullanıcı&gt;</dt>
+<dt>Geçerli Altyapısı Sürümü: &lt;Geçerli altyapı sürümü&gt;</dt>
+<dt>Önceki Altyapı Sürümü: &lt;Önceki altyapı sürümü&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -1513,9 +1512,9 @@ Açıklama:
 <td >
 Microsoft Defender Virüsten Koruma imzaları güncelleştirmeye çalışırken bir hatayla karşılaştı.
 <dl>
-<dt>Yeni güvenlik bilgileri sürümü: &lt; Yeni sürüm numarasıÖnceki&gt;</dt> 
-<dt>güvenlik bilgileri sürümü: &lt;Önceki sürümGüncelleştirme&gt;</dt>
-<dt> Kaynağı: &lt;Güncelleştirme kaynağı&gt;, örneğin:
+<dt>Yeni güvenlik bilgileri sürümü: &lt; Yeni sürüm numarası&gt;</dt>
+<dt>Önceki güvenlik bilgileri sürümü: &lt;Önceki sürüm&gt;</dt>
+<dt>Güncelleştirme Kaynağı: &lt;Güncelleştirme kaynağı&gt;, örneğin:
 <ul>
 <li>Güvenlik bilgileri güncelleştirme klasörü</li>
 <li>İç güvenlik bilgileri güncelleştirme sunucusu</li>
@@ -1540,10 +1539,10 @@ Microsoft Defender Virüsten Koruma imzaları güncelleştirmeye çalışırken 
 </ul>
 </dt>
 <dt>Güncelleştirme Türü: &lt; Güncelleştirme türü&gt;( Tam veya Delta).</dt> 
-<dt>Kullanıcı: &lt; Etki alanılt&gt;\&; UserCurrent&gt;</dt> 
-<dt>Engine Version: &lt;Current engine versionPrevious&gt;</dt> 
-<dt>Engine Version: &lt;Previous engine versionError&gt;</dt> 
-<dt>Code: &lt;Error code&gt; Result code with threat status. Standart HRESULT değerleri.</dt> 
+<dt>Kullanıcı: &lt; Etki alanı&gt;\&lt; Kullanıcı&gt;</dt>
+<dt>Geçerli Altyapı Sürümü: &lt;Geçerli altyapı sürümü&gt;</dt>
+<dt>Önceki Altyapı Sürümü: &lt;Önceki altyapı sürümü&gt;</dt>
+<dt>Hata Kodu: &lt;Tehdit durumuyla ilişkili hata kodu&gt; Sonuç kodu. Standart HRESULT değerleri.</dt> 
 <dt>Hata Açıklaması: &lt; Hata açıklaması&gt; Hatanın açıklaması. </dt>
 </dl>
 </td>
@@ -1558,7 +1557,7 @@ Bu olayla ilgili sorunları gidermek için:
 <ol>
 <li><a href="manage-updates-baselines-microsoft-defender-antivirus.md" data-raw-source="[Update definitions](manage-updates-baselines-microsoft-defender-antivirus.md)">Tanımları güncelleştirin</a> ve yeniden taramayı doğrudan uç noktada zorlar.</li>
 <li>Bu hata hakkında daha fazla bilgi için %Windir%\WindowsUpdate.log dosyasındaki girdileri gözden geçirin.</li>
-<li><a href="https://go.microsoft.com/fwlink/?LinkId=215491">Microsoft Teknik Destek</a> ile iletişime geçin.
+<li><a href="/microsoft-365/admin/get-help-support">Microsoft Teknik Destek</a> ile iletişime geçin.
 </li>
 </ol>
 </td>
@@ -1588,10 +1587,10 @@ Açıklama:
 <td >
 Microsoft Defender Virüsten Koruma altyapısı sürümü güncelleştirildi.
 <dl>
-<dt>Geçerli Altyapı Sürümü: &lt; Geçerli altyapı sürümüÖnceki&gt;</dt> 
-<dt>Altyapı Sürümü: &lt;Önceki altyapı sürümüEngine&gt;</dt> 
-<dt>Türü: &lt;Motor türü&gt;, kötü amaçlı yazılımdan koruma altyapısı veya Ağ İnceleme Sistemi altyapısı.</dt> 
-<dt>Kullanıcı: &lt; Etki alanılt&gt;\&; Kullanıcı&gt;</dt>
+<dt>Geçerli Altyapı Sürümü: &lt; Geçerli altyapı sürümü&gt;</dt>
+<dt>Önceki Altyapı Sürümü: &lt;Önceki altyapı sürümü&gt;</dt>
+<dt>Altyapı Türü: &lt;Kötü amaçlı yazılımdan koruma altyapısı veya Ağ İnceleme Sistemi altyapısı olan altyapı türü&gt;.</dt> 
+<dt>Kullanıcı: &lt; Etki alanı&gt;\&lt; Kullanıcı&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -1629,10 +1628,10 @@ Açıklama:
 Microsoft Defender Virüsten Koruma, altyapıyı güncelleştirmeye çalışırken bir hatayla karşılaştı.
 <dl>
 <dt>Yeni Altyapı Sürümü:</dt>
-<dt>Önceki Altyapı Sürümü: &lt;Önceki altyapı sürümüİngiliz&gt;</dt> 
-<dt>Türü: &lt;Motor türü&gt;, kötü amaçlı yazılımdan koruma altyapısı veya Ağ İnceleme Sistemi altyapısı.</dt> 
-<dt>Kullanıcı: &lt; Etki alanılt&gt;\&; UserError&gt;</dt> 
-<dt>Kodu: &lt;Tehdit durumuyla ilişkili hata kodu&gt; Sonuç kodu. Standart HRESULT değerleri.</dt> 
+<dt>Önceki Altyapı Sürümü: &lt;Önceki altyapı sürümü&gt;</dt>
+<dt>Altyapı Türü: &lt;Kötü amaçlı yazılımdan koruma altyapısı veya Ağ İnceleme Sistemi altyapısı olan altyapı türü&gt;.</dt> 
+<dt>Kullanıcı: &lt; Etki alanı&gt;\&lt; Kullanıcı&gt;</dt>
+<dt>Hata Kodu: &lt;Tehdit durumuyla ilişkili hata kodu&gt; Sonuç kodu. Standart HRESULT değerleri.</dt> 
 <dt>Hata Açıklaması: &lt; Hata açıklaması&gt; Hatanın açıklaması. </dt>
 </dl>
 </td>
@@ -1646,7 +1645,7 @@ Microsoft Defender Virüsten Koruma istemci güncelleştirmesi başarısız oldu
 Bu olayla ilgili sorunları gidermek için:
 <ol>
 <li><a href="manage-updates-baselines-microsoft-defender-antivirus.md" data-raw-source="[Update definitions](manage-updates-baselines-microsoft-defender-antivirus.md)">Tanımları güncelleştirin</a> ve yeniden taramayı doğrudan uç noktada zorlar.</li>
-<li><a href="https://go.microsoft.com/fwlink/?LinkId=215491">Microsoft Teknik Destek</a> ile iletişime geçin.
+<li><a href="/microsoft-365/admin/get-help-support">Microsoft Teknik Destek</a> ile iletişime geçin.
 </li>
 </ol>
 </td>
@@ -1679,8 +1678,8 @@ Microsoft Defender Virüsten Koruma imzaları yüklemeye çalışırken bir hata
 <dt>İmza denendi:</dt>
 <dt>Hata Kodu: &lt;Hata kodu&gt; Tehdit durumuyla ilişkili sonuç kodu. Standart HRESULT değerleri.</dt> 
 <dt>Hata Açıklaması: &lt; Hata açıklaması&gt; Hatanın açıklaması. </dt> 
-<dt>İmza Sürümü: &lt; Tanım sürümüİngiliz&gt;</dt> 
-<dt>Sürümü: &lt;Kötü amaçlı yazılımdan koruma altyapısı sürümü&gt;</dt>
+<dt>İmza Sürümü: &lt; Tanım sürümü&gt;</dt>
+<dt>Altyapısı Sürümü: &lt;Kötü amaçlı yazılımdan koruma altyapısı sürümü&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -1696,7 +1695,7 @@ Bu olayla ilgili sorunları gidermek için:
 <li><a href="https://aka.ms/wdsi">Microsoft Güvenlik Zekası sitesinden</a> en son tanımları indirin.
 Not: Siteden indirilen tanım dosyasının boyutu 60 MB'ı aşabilir ve tanımları güncelleştirmek için uzun vadeli bir çözüm olarak kullanılmamalıdır.
 </li>
-<li><a href="https://go.microsoft.com/fwlink/?LinkId=215491">Microsoft Teknik Destek</a> ile iletişime geçin.
+<li><a href="/microsoft-365/admin/get-help-support">Microsoft Teknik Destek</a> ile iletişime geçin.
 </li>
 </ol>
 </td>
@@ -1755,8 +1754,8 @@ Açıklama:
 <td >
 Microsoft Defender Virüsten Koruma platformu güncelleştirmeye çalışırken bir hatayla karşılaştı.
 <dl>
-<dt>Geçerli Platform Sürümü: &lt; Geçerli platform versionError&gt;</dt> 
-<dt>Kodu: &lt;Hata kodu&gt; Tehdit durumuyla ilişkili sonuç kodu. Standart HRESULT değerleri.</dt> 
+<dt>Geçerli Platform Sürümü: &lt; Geçerli platform sürümü&gt;</dt>
+<dt>Hata Kodu: &lt;Tehdit durumuyla ilişkili hata kodu&gt; Sonuç kodu. Standart HRESULT değerleri.</dt> 
 <dt>Hata Açıklaması: &lt; Hata açıklaması&gt; Hatanın açıklaması. </dt>
 </dl>
 </td>
@@ -1816,15 +1815,15 @@ Açıklama:
 Microsoft Defender Virüsten Koruma makinenizin korunmasına yardımcı olmak üzere ek imzaları almak için <i>Dinamik İmza Hizmeti'nin</i> kullanılması.
 <dl>
 <dt>Geçerli İmza Sürümü: &lt; Geçerli imza sürümü&gt;</dt>
-<dt> İmza Türü: &lt;İmza türü&gt;, örneğin: <ul>
+<dt>İmza Türü: &lt;İmza türü&gt;, örneğin: <ul>
 <li>Antivirus</li>
 <li>Antispyware</li>
 <li>Antimalware</li>
 <li>Ağ İnceleme Sistemi</li>
 </ul>
 </dt>
-<dt>Geçerli Altyapı Sürümü: &lt; Geçerli altyapı sürümüDynamic&gt;</dt>
-<dt> Signature Type: &lt;Dinamik imza türü&gt;, örneğin:
+<dt>Geçerli Altyapı Sürümü: &lt; Geçerli altyapı sürümü&gt;</dt>
+<dt>Dinamik İmza Türü: &lt;Dinamik imza türü&gt;, örneğin:
 <ul>
 <li>Sürüm</li>
 <li>Zaman damgası</li>
@@ -1832,10 +1831,10 @@ Microsoft Defender Virüsten Koruma makinenizin korunmasına yardımcı olmak ü
 <li>Süre</li>
 </ul>
 </dt>
-<dt>Kalıcılık Yolu: &lt; PathDynamic&gt;</dt> 
-<dt>signature Version: &lt;Version numberDynamic&gt;</dt> 
-<dt>Signature Compilation Timestamp: &lt;TimestampPersistence&gt;</dt>
-<dt> Limit Type: &lt;Persistence limit type&gt;, örneğin:
+<dt>Kalıcılık Yolu: &lt; Yol&gt;</dt>
+<dt>Dinamik İmza Sürümü: &lt;Sürüm numarası&gt;</dt>
+<dt>Dinamik İmza Derleme Zaman Damgası: &lt;Zaman Damgası&gt;</dt>
+<dt>Kalıcılık Sınırı Türü: &lt;Kalıcılık sınırı türü&gt;, örneğin:
 <ul>
 <li>VDM sürümü</li>
 <li>Zaman damgası</li>
@@ -1872,15 +1871,15 @@ Açıklama:
 Microsoft Defender Virüsten Koruma eski imzaları atmak için <i>Dinamik İmza Hizmeti</i> kullandı.
 <dl>
 <dt>Geçerli İmza Sürümü: &lt; Geçerli imza sürümü&gt;</dt>
-<dt> İmza Türü: &lt;İmza türü&gt;, örneğin: <ul>
+<dt>İmza Türü: &lt;İmza türü&gt;, örneğin: <ul>
 <li>Antivirus</li>
 <li>Antispyware</li>
 <li>Antimalware</li>
 <li>Ağ İnceleme Sistemi</li>
 </ul>
 </dt>
-<dt>Geçerli Altyapı Sürümü: &lt; Geçerli altyapı sürümüDynamic&gt;</dt>
-<dt> Signature Type: &lt;Dinamik imza türü&gt;, örneğin:
+<dt>Geçerli Altyapı Sürümü: &lt; Geçerli altyapı sürümü&gt;</dt>
+<dt>Dinamik İmza Türü: &lt;Dinamik imza türü&gt;, örneğin:
 <ul>
 <li>Sürüm</li>
 <li>Zaman damgası</li>
@@ -1888,11 +1887,11 @@ Microsoft Defender Virüsten Koruma eski imzaları atmak için <i>Dinamik İmza 
 <li>Süre</li>
 </ul>
 </dt>
-<dt>Kalıcılık Yolu: &lt; PathDynamic&gt;</dt> 
-<dt>Signature Version: &lt;Sürüm numarasıDynamic&gt;</dt> 
-<dt>Signature Compilation Timestamp: &lt;TimestampRemoval&gt;</dt> 
-<dt>Reason:</dt>
-<dt>Persistence Limit Type: &lt;Persistence limit type&gt;, örneğin:
+<dt>Kalıcılık Yolu: &lt; Yol&gt;</dt>
+<dt>Dinamik İmza Sürümü: &lt;Sürüm numarası&gt;</dt>
+<dt>Dinamik İmza Derleme Zaman Damgası: &lt;Zaman Damgası&gt;</dt>
+<dt>Kaldırma Nedeni:</dt>
+<dt>Kalıcılık Sınırı Türü: &lt;Kalıcılık sınırı türü&gt;, örneğin:
 <ul>
 <li>VDM sürümü</li>
 <li>Zaman damgası</li>
@@ -1937,15 +1936,15 @@ Açıklama:
 Microsoft Defender Virüsten Koruma<i>, Dinamik İmza Hizmeti'ni</i> kullanmaya çalışırken bir hatayla karşılaştı.
 <dl>
 <dt>Geçerli İmza Sürümü: &lt; Geçerli imza sürümü&gt;</dt>
-<dt> İmza Türü: &lt;İmza türü&gt;, örneğin: <ul>
+<dt>İmza Türü: &lt;İmza türü&gt;, örneğin: <ul>
 <li>Antivirus</li>
 <li>Antispyware</li>
 <li>Antimalware</li>
 <li>Ağ İnceleme Sistemi</li>
 </ul>
 </dt>
-<dt>Geçerli Altyapı Sürümü: &lt; Geçerli altyapı sürümüHata&gt;</dt> 
-<dt>Kodu: &lt;Hata kodu&gt; Tehdit durumuyla ilişkili sonuç kodu. Standart HRESULT değerleri.</dt> 
+<dt>Geçerli Altyapı Sürümü: &lt; Geçerli altyapı sürümü&gt;</dt>
+<dt>Hata Kodu: &lt;Hata kodu&gt; Tehdit durumuyla ilişkili sonuç kodu. Standart HRESULT değerleri.</dt> 
 <dt>Hata Açıklaması: &lt; Hata açıklaması&gt; Hatanın açıklaması. </dt>
 <dt> Dinamik İmza Türü: &lt;Dinamik imza türü&gt;, örneğin:
 <ul>
@@ -1955,10 +1954,10 @@ Microsoft Defender Virüsten Koruma<i>, Dinamik İmza Hizmeti'ni</i> kullanmaya 
 <li>Süre</li>
 </ul>
 </dt>
-<dt>Kalıcılık Yolu: &lt; PathDynamic&gt;</dt> 
-<dt>signature Version: &lt;Version numberDynamic&gt;</dt> 
-<dt>Signature Compilation Timestamp: &lt;TimestampPersistence&gt;</dt>
-<dt> Limit Type: &lt;Persistence limit type&gt;, örneğin:
+<dt>Kalıcılık Yolu: &lt; Yol&gt;</dt>
+<dt>Dinamik İmza Sürümü: &lt;Sürüm numarası&gt;</dt>
+<dt>Dinamik İmza Derleme Zaman Damgası: &lt;Zaman Damgası&gt;</dt>
+<dt>Kalıcılık Sınırı Türü: &lt;Kalıcılık sınırı türü&gt;, örneğin:
 <ul>
 <li>VDM sürümü</li>
 <li>Zaman damgası</li>
@@ -2032,8 +2031,8 @@ Açıklama:
 Microsoft Defender Virüsten Koruma temiz bir dosya indirdi.
 <dl>
 <dt>Dosyaadı: &lt; Dosyanın dosya adı&gt;.</dt> 
-<dt>Geçerli İmza Sürümü: &lt; Geçerli imza sürümüGeçerli&gt;</dt> 
-<dt>Altyapı Sürümü: &lt;Geçerli altyapı sürümü&gt;</dt>
+<dt>Geçerli İmza Sürümü: &lt; Geçerli imza sürümü&gt;</dt>
+<dt>Geçerli Altyapı Sürümü: &lt;Geçerli altyapı sürümü&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -2063,9 +2062,9 @@ Açıklama:
 Microsoft Defender Virüsten Koruma temiz bir dosyayı indirmeye çalışırken bir hatayla karşılaştı.
 <dl>
 <dt>Dosyaadı: &lt; Dosyanın dosya adı&gt;.</dt> 
-<dt>Geçerli İmza Sürümü: &lt; Geçerli imza sürümüGeçerli&gt;</dt> 
-<dt>Altyapı Sürümü: &lt;Geçerli altyapı sürümüError&gt;</dt> 
-<dt>Kodu: &lt;Tehdit durumuyla ilişkili hata kodu&gt; Sonuç kodu. Standart HRESULT değerleri.</dt> 
+<dt>Geçerli İmza Sürümü: &lt; Geçerli imza sürümü&gt;</dt>
+<dt>Geçerli Altyapı Sürümü: &lt;Geçerli altyapı sürümü&gt;</dt>
+<dt>Hata Kodu: &lt;Hata kodu&gt; Tehdit durumuyla ilişkili sonuç kodu. Standart HRESULT değerleri.</dt> 
 <dt>Hata Açıklaması: &lt; Hata açıklaması&gt; Hatanın açıklaması. </dt>
 </dl>
 </td>
@@ -2304,7 +2303,7 @@ Microsoft Defender Virüsten Koruma Gerçek Zamanlı Koruma bir özelliği yenid
 Kullanıcı eylemi:
 </td>
 <td >
-Gerçek zamanlı koruma özelliği yeniden başlatıldı. Bu olay yeniden gerçekleşirse <a href="https://go.microsoft.com/fwlink/?LinkId=215491">Microsoft Teknik Destek'e</a> başvurun.
+Gerçek zamanlı koruma özelliği yeniden başlatıldı. Bu olay yeniden gerçekleşirse <a href="/microsoft-365/admin/get-help-support">Microsoft Teknik Destek'e</a> başvurun.
 </td>
 </tr>
 <tr>
@@ -2451,9 +2450,9 @@ Açıklama:
 <td >
 Microsoft Defender Virüsten Koruma altyapısı beklenmeyen bir hata nedeniyle sonlandırıldı.
 <dl>
-<dt>Hata Türü: &lt; Hata türü&gt;, örneğin: Kilitlenme veya</dt> 
-<dt>HangException Kodu: &lt;Hata koduResource&gt;</dt>
-<dt>: &lt;Kaynak&gt;</dt>
+<dt>Hata Türü: &lt; Hata türü&gt;, örneğin: Kilitlenme veya Askıda Kalma</dt>
+<dt>Özel Durum Kodu: &lt;Hata kodu&gt;</dt>
+<dt>Kaynak: &lt;Kaynak&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -2469,7 +2468,7 @@ Bu olayla ilgili sorunları gidermek için:<ol>
 </li>
 </ul>
 </li>
-<li>Aynı şekilde başarısız olursa, <a href="https://go.microsoft.com/fwlink/?LinkId=215163">Microsoft Desteği Sitesine</a> erişip <b>Arama</b> kutusuna hata numarasını girerek hata kodunu arayın ve <a href="https://go.microsoft.com/fwlink/?LinkId=215491">Microsoft Teknik Destek'e</a> başvurun.</li>
+<li>Aynı şekilde başarısız olursa, <a href="https://go.microsoft.com/fwlink/?LinkId=215163">Microsoft Desteği Sitesine</a> erişip <b>Arama</b> kutusuna hata numarasını girerek hata kodunu arayın ve <a href="/microsoft-365/admin/get-help-support">Microsoft Teknik Destek'e</a> başvurun.</li>
 </ol>
 </td>
 </tr>
@@ -2483,7 +2482,7 @@ Bu olayla ilgili sorunları gidermek için:
 <ol>
 <li>Taramayı yeniden çalıştırın.</li>
 <li>Aynı şekilde başarısız olursa<a href="https://go.microsoft.com/fwlink/?LinkId=215163">, Microsoft Desteği sitesine</a> gidin, hata kodunu aramak için <b>Arama</b> kutusuna hata numarasını girin.</li>
-<li><a href="https://go.microsoft.com/fwlink/?LinkId=215491">Microsoft Teknik Destek</a> ile iletişime geçin.
+<li><a href="/microsoft-365/admin/get-help-support">Microsoft Teknik Destek</a> ile iletişime geçin.
 </li>
 </ol>
 </td>

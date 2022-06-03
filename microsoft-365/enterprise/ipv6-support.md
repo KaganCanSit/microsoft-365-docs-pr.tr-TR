@@ -3,7 +3,7 @@ title: Microsoft 365 hizmetlerinde IPv6 desteği
 ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
-ms.date: 12/03/2021
+ms.date: 06/02/2022
 audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
@@ -18,82 +18,49 @@ search.appverid:
 - BCS160
 ms.assetid: c08786fb-298e-437c-8222-dab7625fc815
 description: 'Özet: Microsoft 365 bileşenlerinde ve Microsoft 365 kamu tekliflerinde IPv6 desteğini açıklar.'
-ms.openlocfilehash: 6cd53b71c6e15346d4940c539eea4aff0e5a613e
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 2619567e8dac6f4b87cba0108bcf105011c4a87c
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65096490"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65872752"
 ---
 # <a name="ipv6-support-in-microsoft-365-services"></a>Microsoft 365 hizmetlerinde IPv6 desteği
 
-Microsoft 365 hem IPv6 hem de IPv4'i destekler; ancak tüm Microsoft 365 özellikleri IPv6 ile tam olarak etkinleştirilmez. Bu, Microsoft 365 bağlanmak için hem IPv4 hem de IPv6 kullanmanız gerektiği anlamına gelir. Giden trafiğinizi Microsoft 365 filtrelediyseniz, Microsoft 365 tarafından desteklenen IPv6 adreslerinin tam listesi [URL'ler ve IP adresi aralıkları Microsoft 365](urls-and-ip-address-ranges.md) makalesinde bulunabilir. Ağınız yapılandırıldıktan ve uygun IPv6 adreslerine izin verildikten sonra, [Microsoft 365 IPv6 test planını](https://go.microsoft.com/fwlink/?LinkId=293447) Microsoft İndirme Merkezi'nden indirebilirsiniz.
+Kurumsal ağlar, hizmet sağlayıcıları ve cihazlar arasında IPv6'nın giderek daha fazla benimsenmesi ve desteklenmesiyle birlikte, birçok müşteri kullanıcılarının IPv6 istemcilerinden ve IPv6 ağlarından Microsoft 365 hizmetlerine erişmeye devam edip edemediğini merak ediyor. Microsoft 365 hizmetleri hem IPv6 çift yığından hem de yalnızca IPv6 cihazlarından başarıyla kullanılabilir. Aslında, tüketicilerden IPv6'nın daha iyi benimsenmesini sağlayan büyük kuruluşlara kadar artan sayıda müşterimiz var. Çoğu müşteri için, IPv4 dijital manzaralarından tamamen kaybolmaz, bu nedenle IPv6 gerektirmeyi veya Microsoft 365 özellikleri veya hizmetlerinde IPv4 önceliklerini kaldırmayı planlamıyoruz.
 
-> [!NOTE]
-> Müşterilerin Microsoft 365 SaaS hizmetlerini herhangi bir konumdan ve herhangi bir cihazdan deneyimlemelerini sağlamak Microsoft için bir önceliktir. Bu, müşterilerin yalnızca IPv6 etkin ve IPv6 istemcilerinden ve bilgi sistemlerinden Microsoft 365 bağlanmasına ve kullanmasına olanak sağlamayı içerir. Ayrıca kamu müşterilerinin ağlarında IPv6 taahhütlerini yerine getirmesini sağlarken Microsoft 365 üretkenlik senaryolarını kesintisiz kullanmaya devam etmelerini de içerir.  
-> Bu makalede, bugün doğrudan IPv6 bağlantısına izin veren Microsoft 365 SaaS hizmetlerinin listesi sağlanır. Doğrudan IPv6 bağlantısına izin veren hizmetlerin kapsamının genişlemeye devam etmesi beklenir. doğrudan IPv6 desteği için açıkça belirtilmeyen Microsoft 365 hizmetleri, Azure Active Directory (AAD) Kimlik Doğrulama hizmetlerini dahil etmek için, yalnızca IPv6 istemcilerinden ve ortamlarından dns64/NAT64'e bağlanılmasının gerekli olduğu kabul edilmelidir.  Bu, şu anda mevcut NIST USGv6 belgelerinde belirtilen amaca uygundur: [NIST Özel Yayını 500-267A Düzeltme 1 NAT64](https://nvlpubs.nist.gov/nistpubs/specialpublications/NIST.SP.500-267Ar1.pdf) /DNS64'teki Geçiş Mekanizması Yetenek Gereksinimleri, kullanıma uygun teknolojilerdir.
-> - GEÇIŞ mekanizması NAT64 [RFC6146](https://datatracker.ietf.org/doc/html/rfc6146) Durum bilgisi olan NAT64 için NAT64 desteği: IPv6 İstemcilerinden IPv4 Sunucularına Ağ Adresi ve Protokol Çevirisi
-> - DNS64 geçiş mekanizması DNS64 desteği. [RFC6147](https://datatracker.ietf.org/doc/html/rfc6147) DNS64: IPv6 İstemcilerinden IPv4 Sunucusuna Ağ Adresi Çevirisi için DNS Uzantıları
+Microsoft 365 temel önceliklerimizden biri, herhangi bir konumdan, herhangi bir cihazdan İnternet üzerinden sorunsuz müşteri ve kullanıcı deneyimleri sağlamaktır. Buna, çift yığın yapılandırmasında IPv6 kullanan müşteri cihazlarından Microsoft 365 erişimi ve yalnızca IPv6 istemci dağıtımlarına geçiş dahildir. Çoğu durumda, Microsoft 365 [ağ bağlantı ilkeleri](microsoft-365-network-connectivity-principles.md), Microsoft 365 [URL'leri ve IP adresi aralıkları ve](urls-and-ip-address-ranges.md) Microsoft 365 [ağ planlama en iyi yöntemlerinde](network-and-migration-planning.md#best-practices-for-network-planning-and-improving-migration-performance-for-office-365) açıklandığı gibi Microsoft 365 bağlanmaya yönelik standart bir İnternet tabanlı modeli izlediğinizde , IPv6 geçişleri kullanıcı deneyiminiz için kesintiye neden olmaz.
 
-  
-## <a name="ipv6-support-in-microsoft-365-subscription-service"></a>Microsoft 365 abonelik hizmetinde IPv6 desteği
+Birçok Microsoft 365 hizmeti bugün yerel IPv6 desteği sağlar ve doğrudan IPv6 çift yığınından ve yalnızca IPv6 istemcilerinden erişilebilir. Microsoft 365 ayrıca müşteriler ve ağ çözümü sağlayıcıları tarafından IPv4 İnternet kaynaklarına bağlanmak için yaygın olarak kullanılan geleneksel IPv6 ile IPv4 çeviri teknolojilerine (temel 64 proxy'ler veya DNS64/NAT64 gibi) erişim sağlar.
 
-### <a name="exchange-online-and-ipv6"></a>Exchange Online ve IPv6
+Tüm SaaS hizmetlerinde ve İnternet'te olduğu gibi yerel olarak IPv6'nın da etkinleştirildiği Microsoft 365 arabirimleri, özellikleri ve API'leri kapsamı sürekli olarak ve doğrudan müşteri eylemi veya denetimi olmadan genişler. Ağlarınızda Microsoft 365 ve İnternet'e erişmesi gereken IPv6 veya yalnızca IPv6 hizmetleri çalıştırıyorsanız, ağ yeniden yapılandırmaları olmadan Microsoft 365 uçtan uca IPv6 bağlantısını sağlamak için DNS64/NAT64 gibi dinamik IPv6/IPv4 geçiş mekanizmaları eklemeniz önerilir.
 
-Exchange Online bağlanmak için kullandığınız program IPv6'yı destekliyorsa, hem kablolu hem de kablosuz ağlarda varsayılan olarak IPv6 kullanır. Exchange Online iletişimini denetlemek istiyorsanız, [Microsoft 365 URL'leri ve IP adresi aralıklarındaki IP adresi aralıklarını](urls-and-ip-address-ranges.md) kullanın.
-  
-### <a name="sharepoint-online-and-ipv6"></a>SharePoint Online ve IPv6
+Microsoft 365 hizmetlerin çoğu son kullanıcılar ve BT yöneticileri için tamamen şeffaf bir şekilde IPv6 özellikleriyle etkinleştirilmiştir veya etkinleştirilecektir. Bazı Microsoft 365 senaryoları (anonim gelen e-posta gibi) IPv6 ile birlikte kullanılmak üzere özel gereksinimlere ve dikkat edilmesi gereken noktalara sahiptir. Senaryoya özgü IPv6 gereksinimleri ve dikkat edilmesi gerekenler hakkında daha fazla bilgi için lütfen Microsoft hesabı ekibinize veya Microsoft desteğine başvurun.
 
- **Microsoft 365 Kamu G1/G3/G4/K1** SharePoint Online'a bağlanmak için kullandığınız program IPv6'yı destekliyorsa, varsayılan olarak IPv6'yı kullanmayı dener.
-  
- **Genel çok kiracılı bulut** Microsoft, isteğiniz üzerine SharePoint Çevrimiçi IPv6'ya olanak tanır. Kuruluşunuzun DNS altyapısı için CIDR ile belirtilen IP adreslerini sağlamanız gerekir. Kiracınızda IPv6'nın etkinleştirilmesi için bu DNS altyapısının diğer kuruluşlar tarafından paylaşılabildiğini unutmayın. IPv6 etkinleştirildikten sonra, SharePoint Online'a bağlanmak için kullandığınız program IPv6'yı destekliyorsa, varsayılan olarak IPv6 kullanır.
-  
-SharePoint Online'a bağlanmak için kullandığınız program IPv6'yı destekliyorsa, hem kablolu hem de kablosuz ağlarda varsayılan olarak IPv6 kullanır. SharePoint Online ile iletişimleri denetlemek istiyorsanız, [Microsoft 365 URL'leri ve IP adresi aralıklarındaki IP adresi aralıklarını](urls-and-ip-address-ranges.md) kullanın.
-  
- 
-  
-### <a name="skype-for-business-and-ipv6"></a>Skype Kurumsal ve IPv6
-
-IPv6'nın Skype Kurumsal'da desteklenmediğini ve artık etkinleştirilemediğini unutmayın.
-
-### <a name="microsoft-teams-sip-gateway-and-ipv6"></a>Microsoft Teams, SIP Ağ Geçidi ve IPV6
-
-Microsoft Teams Doğrudan Yönlendirme ve SIP Ağ Geçidi yalnızca IPv4'i destekler. Microsoft Teams hizmeti ve istemcisi hem IPv4 hem de IPv6'yi destekler. Microsoft Teams iletişimini denetlemek istiyorsanız, [Microsoft 365 URL'leri ve IP adresi aralıklarındaki IP adresi aralıklarını](urls-and-ip-address-ranges.md) kullanın.
-  
-### <a name="exchange-online-protection-and-ipv6"></a>Exchange Online Protection ve IPv6
-
-Exchange Online Protection (EOP), aktarım Aktarım Katmanı Güvenlik Protokolü üzerinden gerçekleşirse IPv6'yi destekler. EOP aralığı için [Microsoft 365 URL'leri ve IP adresi aralıklarını](urls-and-ip-address-ranges.md) kullanın.
-  
-### <a name="ipv6-support-for-microsoft-365-government-offerings"></a>Microsoft 365 kamu teklifleri için IPv6 desteği
-
-kamu tekliflerine yönelik Microsoft 365 IPv6 desteği, Yönetim ve Bütçe (OMB) Office İdari Departmanlar ve Ajanslar için Enformasyon Başkanları muhtırasının yanı sıra Federal Hükümet İnternet Protokolü Sürüm 6 (IPv6) muhtırasını benimsemektedir. [Kamu için Microsoft Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=325414), ABD kamu verilerini ayrılmış bir topluluk bulutunda depolayan çok kiracılı bir hizmettir. Diğer Microsoft 365 tekliflerinde olduğu gibi, Exchange Online, Skype Kurumsal, SharePoint Online ve Kurumlar için Microsoft 365 Uygulamaları gibi üretkenlik ve işbirliği hizmetleri sağlar. 
-
-Microsoft Microsoft 365 kamu teklifleri yalnızca 2013 ve üzeri için geçerlidir. Microsoft 365 kamu teklifleri hakkında daha fazla bilgi için bkz. [Kamu için Microsoft 365 Duyuru: ABD Government Community Cloud](https://go.microsoft.com/fwlink/p/?LinkId=325414). Uluslararası Silah Trafiği Düzenlemeleri (ITAR), [Birleşik Devletler Mühimmat Listesi'ndeki (USML)](https://go.microsoft.com/fwlink/p/?LinkId=325415) savunmayla ilgili makalelerin ve hizmetlerin ihracatını ve ithalatını kontrol eden bir dizi ABD kamu düzenlemesidir. 
-
-Kurumlar için Microsoft Microsoft 365, Federal Bilgi Güvenliği Yönetimi (FISMA) sertifikası ve ITAR'a tabi ticari varlıklar gerektiren ABD federal kurumları için güvenlik, gizlilik ve mevzuat uyumluluğu gereksinimlerini destekleyen Microsoft üretkenlik çözümleri için ayrılmış barındırma hizmetleri sağlar.
-  
-## <a name="things-to-consider-when-using-ipv6-and-microsoft-365"></a>IPv6 ve Microsoft 365 kullanırken dikkat edilmesi gerekenler
-
-IPv6'yi devre dışı bırakmamanızı öneririz. Daha fazla bilgi için bu [kılavuz makalesine](https://support.microsoft.com/help/929852/guidance-for-configuring-ipv6-in-windows-for-advanced-users) bakın. Ağınızda hangi IP sürümlerinin kullanıldığını belirlemek için aşağıdakileri göz önünde bulundurun:
-  
-- Komut isteminde **IPConfig** komutunun görüntüsü "IPv6 Adresi" veya "Geçici IPv6 Adresi" adlı satırlar içeriyorsa, ortamınızda IPv6 vardır.
-
-- Tüm IPv6 adresleri "fe80" ile başlıyorsa ve "Bağlantı-Yerel IPv6 Adresi" adlı satırlara karşılık geliyorsa, ortamınızda IPv6 yoktur.
-
-Bu noktalar ağınız için geçerli olabilir:
-  
-- Genel abonelik hizmeti, IPv6 üzerinden kredi kartıyla satın alma işlemini desteklemez. Devletler Kurumsal Anlaşma (EA) lisansına sahip olduğundan bu durum Government Community Cloud (GCC) için geçerli değildir.
-
-- IPv6 bazı Rights Management Services (RMS) senaryolarını desteklemez.
-
-- IPv6, BlackBerry® Enterprise Sunucusu'nu (BES) desteklemez çünkü BlackBerry IPv6'yi desteklemez.
-
-- Microsoft 365 ile Active Directory Federasyon Hizmetleri (AD FS) (AD FS) kullanıyorsanız, AD FS ağ uç noktanızı IPv6 kullanarak Microsoft 365 için tanıtma desteklenmez. Exchange Online kullanırken AD FS DNS girdisine AAAA kayıtlarını eklememelisiniz. 
-
-İşte geri dönmek için kullanabileceğiniz kısa bir bağlantı: [https://aka.ms/o365ip6]()
+İşte geri dönmek için kullanabileceğiniz kısa bir bağlantı: [https://aka.ms/o365ip6](https://aka.ms/o365ip6)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[IPv6 Learning Yol Haritası](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/gg250710(v%3dws.10))
-  
-[IPv6 Hayatta Kalma Kılavuzu](https://social.technet.microsoft.com/wiki/contents/articles/1728.ipv6-survival-guide.aspx)
+[Microsoft 365 Ağ Bağlantısına Genel Bakış](microsoft-365-networking-overview.md)
+
+[Office 365 uç noktalarını yönetme](managing-office-365-endpoints.md)
+
+[Office 365 URL'leri ve IP adresi aralıkları](urls-and-ip-address-ranges.md)
+
+[Office 365 IP Adresi ve URL Web hizmeti](microsoft-365-ip-web-service.md)
+
+[Microsoft 365 ağ bağlantısını değerlendirme](assessing-network-connectivity.md)
+
+[Microsoft 365 için ağ planlama ve performans ayarlama](network-planning-and-performance.md)
+
+[Temelleri ve performans geçmişini kullanarak performans ayarlamayı Office 365](performance-tuning-using-baselines-and-history.md)
+
+[Office 365 için performans sorunlarını giderme planı](performance-troubleshooting-plan.md)
+
+[İçerik Teslim Ağları](content-delivery-networks.md)
+
+[Microsoft 365 bağlantı testi](https://aka.ms/netonboard)
+
+[Microsoft hızlı ve güvenilir küresel ağını nasıl oluşturur?](https://azure.microsoft.com/blog/how-microsoft-builds-its-fast-and-reliable-global-network/)
+
+[Office 365 Ağ blogu](https://techcommunity.microsoft.com/t5/Office-365-Networking/bd-p/Office365Networking)

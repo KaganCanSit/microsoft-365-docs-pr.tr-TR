@@ -1,6 +1,6 @@
 ---
-title: Grup İlkesi Nesnelerini Kullanarak Uç Nokta için Microsoft Defender'ı Yönetme
-description: Grup İlkesi Nesneleriyle Uç Nokta için Microsoft Defender'ı yönetmeyi öğrenin
+title: grup ilkesi Nesneleri kullanarak Uç Nokta için Microsoft Defender yönetme
+description: grup ilkesi Nesneleri ile Uç Nokta için Microsoft Defender yönetmeyi öğrenin
 keywords: geçiş sonrası, yönetme, işlemler, bakım, kullanım, PowerShell, Uç Nokta için Microsoft Defender, edr
 ms.prod: m365-security
 ms.technology: mde
@@ -16,59 +16,56 @@ ms.collection:
 - M365-security-compliance
 - m365solution-scenario
 ms.topic: article
-ms.date: 11/29/2021
 ms.reviewer: chventou
-ms.openlocfilehash: 2155c72d7008bf3669a1908b3fd866877eb36a7c
-ms.sourcegitcommit: 4c207a9bdbb6c8ba372ae37907ccefca031a49f8
+ms.openlocfilehash: 6a5df2cee1230050267f926297c1b00e47fb0ec3
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "63016714"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65874083"
 ---
-# <a name="manage-microsoft-defender-for-endpoint-with-group-policy-objects"></a>Grup İlkesi Nesneleriyle Uç Nokta için Microsoft Defender'ı Yönetme
+# <a name="manage-microsoft-defender-for-endpoint-with-group-policy-objects"></a>grup ilkesi Nesneleri ile Uç Nokta için Microsoft Defender yönetme
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Uç Nokta için Microsoft Defender Planı 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 > [!NOTE]
-> [Microsoft Endpoint Manager'i](/mem) kullanarak, kuruluşta cihazlar için tehdit koruması özelliklerini (uç nokta olarak da adlandırılır) yönetmenizi öneririz. Endpoint Manager[, Microsoft Intune](/mem/intune/fundamentals/what-is-intune) [ve Microsoft Endpoint Configuration Manager](/mem/configmgr/core/understand/introduction). **[Daha fazla bilgi Endpoint Manager](/mem/endpoint-manager-overview)**.
+> Kuruluşunuzun cihazlar için tehdit koruması özelliklerini yönetmek için [Microsoft Endpoint Manager](/mem) kullanmanızı öneririz (uç noktalar olarak da adlandırılır). Endpoint Manager [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) ve [Microsoft Endpoint Configuration Manager](/mem/configmgr/core/understand/introduction) içerir. **[Endpoint Manager hakkında daha fazla bilgi edinin](/mem/endpoint-manager-overview)**.
 
-Uç Nokta için Microsoft Defender'da bazı ayarları yönetmek Azure Active Directory Alanı Hizmetleri'nden Grup İlkesi Nesneleri'ne yönetebilirsiniz.
+Uç Nokta için Microsoft Defender'da bazı ayarları yönetmek için Azure Active Directory Etki Alanı Hizmetleri'nde grup ilkesi Nesneleri kullanabilirsiniz.
 
-## <a name="configure-microsoft-defender-for-endpoint-with-group-policy-objects"></a>Grup İlkesi Nesneleriyle Uç Nokta için Microsoft Defender'ı Yapılandırma
+## <a name="configure-microsoft-defender-for-endpoint-with-group-policy-objects"></a>grup ilkesi Nesneleriyle Uç Nokta için Microsoft Defender Yapılandırma
 
 > [!NOTE]
-> [Windows Server 2012 R2 ve 2016](/microsoft-365/security/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview) için yeni, birleşik Uç nokta çözümü olan Birleşik Microsoft Defender'ı kullanıyorsanız, uç nokta için doğru Microsoft Defender ilke seçeneklerine erişmek için lütfen merkezi mağazanıza en son ADMX dosyalarını kullanırkenn emin olun. Genel Web [Site'de](/troubleshoot/windows-client/group-policy/create-and-manage-central-store) Grup İlkesi Yönetim Şablonları için Merkezi Mağaza oluşturma ve yönetme Windows ve **Windows 10.** 
+> [Windows Server 2012 R2 ve 2016 için yeni, birleşik Uç Nokta için Microsoft Defender çözümünü](/microsoft-365/security/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview) kullanıyorsanız, doğru Uç Nokta için Microsoft Defender ilkesi seçeneklerine erişmek için lütfen merkezi mağazanızdaki en son ADMX dosyalarını kullandığınızdan emin olun . Lütfen [Windows'da yönetim şablonları grup ilkesi için Merkezi Mağaza oluşturma ve yönetme](/troubleshoot/windows-client/group-policy/create-and-manage-central-store) makalesine başvurun ve **Windows 10 ile kullanmak üzere** en son dosyaları indirin. 
 
-Aşağıdaki tabloda, Grup İlkesi Nesneleriyle Uç Nokta için Microsoft Defender'ı yapılandırmak üzere gerçekleştirebilirsiniz çeşitli görevler listele.
-
-<br/><br/>
+Aşağıdaki tabloda, grup ilkesi Nesneleri ile Uç Nokta için Microsoft Defender yapılandırmak için gerçekleştirebileceğiniz çeşitli görevler listelenir.
 
 |Görev|Daha fazla bilgi edinmek için kaynaklar|
 |---|---|
-|**Kullanıcı ve bilgisayar nesnelerinin ayarlarını yönetme** <br/><br/> *Yerleşik Grup İlkesi Nesnelerini özelleştirin veya kuruluş gereksinimlerinize uygun olarak özel Grup İlkesi Nesneleri ve kuruluş birimleri oluşturun.*|[Bir Etki Alanı Hizmetleri tarafından yönetilen Azure Active Directory içinde Grup İlkesi yönetme](/azure/active-directory-domain-services/manage-group-policy)|
-|**E-Microsoft Defender Virüsten Koruma** <br/><br/> *Virüsten koruma & ilke ayarları, dışlamalar, düzeltme ve kuruluş cihazlarında zamanlanmış taramalar (uç noktalar olarak da adlandırılır) dahil olmak üzere bu özellikleri yapılandırabilirsiniz.*|[Grup İlkesi ayarlarını kullanarak grup ayarlarını yapılandırma ve Microsoft Defender Virüsten Koruma](/windows/security/threat-protection/microsoft-defender-antivirus/use-group-policy-microsoft-defender-antivirus) <br/><br/> [Buluta teslim edilen korumayı etkinleştirmek için Grup İlkesi kullanma](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus#use-group-policy-to-enable-cloud-delivered-protection)|
-|**Saldırı yüzeyini azaltma kurallarını yönetin** <br/><br/> *Saldırı alanı azaltma kurallarınızı, dosyaların ve klasörlerin & kullanıcıların cihazlarında görünen bildirim uyarılarında özel metin ekleyerek özelleştirin.*|[Grup İlkesi Nesneleri ile saldırı yüzeyini azaltma kurallarını özelleştirin](/microsoft-365/security/defender-endpoint/customize-attack-surface-reduction#use-group-policy-to-exclude-files-and-folders)|
-|**Exploit protection ayarlarını yönetme** <br/><br/> *Exploit Protection ayarlarınızı özelleştirilebilir, bir yapılandırma dosyasını içeri aktarabilirsiniz ve sonra bu yapılandırma dosyasını dağıtmak için Grup İlkesi kullanabilirsiniz.*|[Exploit protection ayarlarını özelleştirme](/microsoft-365/security/defender-endpoint/customize-exploit-protection) <br/><br/> [Exploit Protection yapılandırmalarını içeri aktarma, dışarı aktarma ve dağıtma](/microsoft-365/security/defender-endpoint/import-export-exploit-protection-emet-xml) <br/><br/> [Yapılandırmayı dağıtmak için Grup İlkesi kullanma](/microsoft-365/security/defender-endpoint/import-export-exploit-protection-emet-xml#use-group-policy-to-distribute-the-configuration)|
-|**Çalışanların İnternet'de** kötü amaçlı içerik kullanan uygulamaları kullanmalarını önlemeye yardımcı olmak için Ağ Korumasını Etkinleştir <br/><br/> *Bir test [ortamında, hangi](/microsoft-365/security/defender-endpoint/evaluate-network-protection) uygulamaların gitmeden önce engellenmiş olacağını görmek için önce ağ koruması için denetim modunu kullanmanız önerilir.*|[Grup İlkesini kullanarak ağ korumasını açma](/microsoft-365/security/defender-endpoint/enable-network-protection#group-policy)|
-|**Fidye yazılımlarına karşı korunmak için** denetimli klasör erişimini yapılandırma <br/><br/> *[Denetimli klasör](/microsoft-365/security/defender-endpoint/controlled-folders) erişimi, yazılım önleme yazılımı koruması olarak da adlandırılır.*|[Grup İlkesi kullanarak denetimli klasör erişimini etkinleştirme](/microsoft-365/security/defender-endpoint/enable-controlled-folders#group-policy)|
-|**Web Microsoft Defender SmartScreen** ve internet'e yönelik kötü amaçlı sitelere ve dosyalara karşı korumak üzere yapılandırma.|[Grup Microsoft Defender SmartScreen kullanarak Grup İlkesi ve mobil cihaz yönetimi (MDM) ayarlarını yapılandırma](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-available-settings#group-policy-settings)|
-|**Şifrelemeyi ve BitLocker'ı** yapılandırarak kuruluş kuruluşlarının çalışan cihazlarında yer alan bilgileri Windows|[BitLocker Grup İlkesi ayarları](/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings)|
-|**Kimlik bilgileri hırsızlığı saldırılarına karşı korumak için Microsoft Defender Credential Guard'ı** yapılandırma|[Grup Windows Defender kullanarak Kimlik Bilgileri Koruması'na sahip güvenliği etkinleştirme](/windows/security/identity-protection/credential-guard/credential-guard-manage#enable-windows-defender-credential-guard-by-using-group-policy)|
+|**Kullanıcı ve bilgisayar nesneleri için ayarları yönetme** <br/><br/> *Yerleşik grup ilkesi Nesnelerini özelleştirin veya özel grup ilkesi Nesneleri ve kuruluş birimlerini kuruluş gereksinimlerinize uyacak şekilde oluşturun.*|[Azure Active Directory Etki Alanı Hizmetleri tarafından yönetilen etki alanında grup ilkesi yönetme](/azure/active-directory-domain-services/manage-group-policy)|
+|**Microsoft Defender Virüsten Koruma yapılandırma** <br/><br/> *Kuruluşunuzun cihazlarında (uç noktalar olarak da adlandırılır) ilke ayarları, dışlamalar, düzeltme ve zamanlanmış taramalar gibi virüsten koruma özelliklerini & özellikleri yapılandırın.*|[Microsoft Defender Virüsten Koruma yapılandırmak ve yönetmek için grup ilkesi ayarlarını kullanma](/windows/security/threat-protection/microsoft-defender-antivirus/use-group-policy-microsoft-defender-antivirus) <br/><br/> [Bulut tabanlı korumayı etkinleştirmek için grup ilkesi kullanma](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus#use-group-policy-to-enable-cloud-delivered-protection)|
+|**Kuruluşunuzun saldırı yüzeyi azaltma kurallarını yönetme** <br/><br/> *Dosyaları & klasörleri hariç tutarak veya kullanıcıların cihazlarında görünen bildirim uyarılarına özel metin ekleyerek saldırı yüzeyi azaltma kurallarınızı özelleştirin.*|[grup ilkesi Nesneleri ile saldırı yüzeyi azaltma kurallarını özelleştirme](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-deployment-implement)|
+|**Güvenlik açığından yararlanma koruması ayarlarını yönetme** <br/><br/> *Yararlanma koruması ayarlarınızı özelleştirebilir, bir yapılandırma dosyasını içeri aktarabilir ve ardından grup ilkesi kullanarak bu yapılandırma dosyasını dağıtabilirsiniz.*|[Yararlanma koruması ayarlarını özelleştirme](/microsoft-365/security/defender-endpoint/customize-exploit-protection) <br/><br/> [Exploit Protection yapılandırmalarını içeri aktarma, dışarı aktarma ve dağıtma](/microsoft-365/security/defender-endpoint/import-export-exploit-protection-emet-xml) <br/><br/> [Yapılandırmayı dağıtmak için grup ilkesi kullanma](/microsoft-365/security/defender-endpoint/import-export-exploit-protection-emet-xml#use-group-policy-to-distribute-the-configuration)|
+|Çalışanların İnternet'te kötü amaçlı içerik kullanan uygulamaları kullanmasını önlemeye yardımcı olmak için **Ağ Koruması'nı etkinleştirin** <br/><br/> *Dağıtımdan önce hangi uygulamaların engellendiğini görmek için bir test ortamında ağ koruması için ilk olarak [denetim modunu](/microsoft-365/security/defender-endpoint/evaluate-network-protection) kullanmanızı öneririz.*|[grup ilkesi kullanarak ağ korumasını açma](/microsoft-365/security/defender-endpoint/enable-network-protection#group-policy)|
+|Fidye yazılımlarına karşı korunmak için **denetimli klasör erişimini yapılandırma** <br/><br/> *[Denetimli klasör erişimi](/microsoft-365/security/defender-endpoint/controlled-folders) , antiransomware koruması olarak da adlandırılır.*|[grup ilkesi kullanarak denetimli klasör erişimini etkinleştirme](/microsoft-365/security/defender-endpoint/enable-controlled-folders#group-policy)|
+|İnternet'te kötü amaçlı sitelere ve dosyalara karşı koruma sağlamak için **Microsoft Defender SmartScreen yapılandırın**.|[grup ilkesi kullanarak Microsoft Defender SmartScreen grup ilkesi ve mobil cihaz yönetimi (MDM) ayarlarını yapılandırma](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-available-settings#group-policy-settings)|
+|Kuruluşunuzun Windows çalıştıran cihazlarındaki bilgileri korumak için **şifrelemeyi ve BitLocker'ı yapılandırma**|[BitLocker grup ilkesi ayarları](/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings)|
+|Kimlik bilgisi hırsızlığı saldırılarına karşı korunmak için **Microsoft Defender Credential Guard'ı yapılandırma**|[grup ilkesi kullanarak Windows Defender Credential Guard etkinleştirme](/windows/security/identity-protection/credential-guard/credential-guard-manage#enable-windows-defender-credential-guard-by-using-group-policy)|
 
 ## <a name="configure-your-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalınızı yapılandırma
 
-Daha önce bunu yapmadısanız, Microsoft 365 Defender portalınızı uyarıları görüntülemek, tehdit koruması özelliklerini yapılandırmak ve genel güvenlik sonrası hakkında ayrıntılı bilgileri görüntülemek üzere yapılandırabilirsiniz. Bkz[. Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-defender). Ayrıca, son kullanıcıların portalda hangi özellikleri göreceğini Microsoft 365 Defender.
+Henüz yapmadıysanız, Microsoft 365 Defender portalınızı uyarıları görüntülemek, tehdit koruması özelliklerini yapılandırmak ve kuruluşunuzun genel güvenlik duruşu hakkında ayrıntılı bilgileri görüntülemek için yapılandırın. [bkz. Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-defender). Ayrıca son kullanıcıların Microsoft 365 Defender portalında görüp göremeyeceğini ve hangi özellikleri görebileceğini de yapılandırabilirsiniz.
 
-- [Genel bakış Microsoft 365 Defender](/microsoft-365/security/defender-endpoint/use)
+- [Microsoft 365 Defender genel bakış](/microsoft-365/security/defender-endpoint/use)
 - [Uç nokta koruması: Microsoft 365 Defender](/mem/intune/protect/endpoint-protection-windows-10#microsoft-defender-security-center)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Nasıl olduğunu genel Tehdit ve Güvenlik Açığı Yönetimi](/microsoft-365/security/defender-endpoint/next-gen-threat-and-vuln-mgt)
-- [Microsoft 365 Defender portal güvenlik işlemleri panosuna ziyaret edin](/microsoft-365/security/defender-endpoint/security-operations-dashboard)
-- [Intune ile Uç Nokta için Microsoft Defender'ı yönetme](manage-mde-post-migration-intune.md)
+- [Tehdit ve Güvenlik Açığı Yönetimi genel bakışını edinin](/microsoft-365/security/defender-endpoint/next-gen-threat-and-vuln-mgt)
+- [Microsoft 365 Defender portalı güvenlik işlemleri panosunu ziyaret edin](/microsoft-365/security/defender-endpoint/security-operations-dashboard)
+- [Intune ile Uç Nokta için Microsoft Defender yönetme](manage-mde-post-migration-intune.md)

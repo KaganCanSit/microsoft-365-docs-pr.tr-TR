@@ -19,12 +19,12 @@ ms.custom:
 search.appverid:
 - MET150
 description: Temel Hareketlilik ve Güvenlik’i ayarlayıp kullanarak Microsoft 365 kuruluşunuza bağlı mobil cihazları yönetin ve güvenliklerini sağlayın.
-ms.openlocfilehash: 168fd1f0ef08cf1a9bd5d7c90c53781016b232e6
-ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
+ms.openlocfilehash: 9a9b3d433408d4ce5225f1a74351d01150744132
+ms.sourcegitcommit: 1fa0b15f86470c49dddf0d6de59d553a38ae259b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2022
-ms.locfileid: "65636140"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65863216"
 ---
 # <a name="overview-of-basic-mobility-and-security-for-microsoft-365"></a>Microsoft 365 için Temel Hareketlilik ve Güvenlik'e genel bakış
 
@@ -50,7 +50,7 @@ Adımların özeti şöyledir:
 
 **3. Adım:** Cihaz ilkeleri oluşturun ve bunları kullanıcı gruplarına uygulayın. Bunu yaptığınızda, kullanıcılarınız cihazlarına kayıt iletisi alır ve kayıtlarını tamamladıklarında cihazları, onlar için ayarladığınız ilkeler tarafından kısıtlanır. Daha fazla bilgi için bkz. [Mobil cihazınızı Temel Hareketlilik ve Güvenlik kullanarak kaydettirin](enroll-your-mobile-device.md). 
 
-:::image type="content" source="../../media/basic-mobility-security/bms-4-policy.png" alt-text="Temel Güvenlik ve Hareketlilik ilkesi ayarları.":::
+:::image type="content" source="../../media/basic-mobility-security/basic-mobility-microsoft-purview.png" alt-text="Temel Güvenlik ve Hareketlilik ilkesi ayarları.":::
 
 ## <a name="device-management-tasks"></a>Cihaz yönetimi görevleri
 

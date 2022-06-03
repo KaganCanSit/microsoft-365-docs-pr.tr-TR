@@ -16,16 +16,16 @@ ms.collection:
 description: Yöneticiler, güvenlik portalındaki Kiracı İzin Ver/Engelle Listesi'nde izin vermeleri yapılandırmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: f1dffb7fd6b13fc1999e51666717dc464e694d0c
-ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
+ms.openlocfilehash: 64b5576015f279efec4c469e18a0ace652b90918
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65188141"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65873412"
 ---
 # <a name="add-allows-in-the-tenant-allowblock-list"></a>Kiracı İzin Verilenler/Engellenenler Listesine izinler ekleme
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -138,7 +138,7 @@ Microsoft 365 Defender **Gönderiler** sayfasında Dosyalara İzin Ver.
 
 ## <a name="add-spoofed-sender-allow-entries-using-powershell"></a>PowerShell kullanarak sahte gönderen izin girdileri ekleme
 
-[Exchange Online PowerShell'de](/exchange/connect-to-exchange-online-powershell) Kiracı İzin Ver/Engelle Listesi'ne sahte gönderen girdileri eklemek için aşağıdaki söz dizimini kullanın:
+[Exchange Online PowerShell'de](/powershell/exchange/exchange-online-powershell) Kiracı İzin Ver/Engelle Listesi'ne sahte gönderen girdileri eklemek için aşağıdaki söz dizimini kullanın:
 
 ```powershell
 New-TenantAllowBlockListSpoofItems -SpoofedUser <Domain | EmailAddress | *> -SendingInfrastructure <Domain | IPAddress/24> -SpoofType <External | Internal> -Action <Allow | Block>

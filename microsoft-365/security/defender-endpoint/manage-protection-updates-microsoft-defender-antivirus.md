@@ -15,12 +15,12 @@ manager: dansimp
 ms.custom: nextgen
 ms.technology: mde
 ms.collection: m365-security-compliance
-ms.openlocfilehash: 9af3694f530660ead6f10008e1642990a20cc0a6
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: b01a9315e143a3fb49cedef84e1f7b9e505441d5
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65416628"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65873346"
 ---
 # <a name="manage-the-sources-for-microsoft-defender-antivirus-protection-updates"></a>Microsoft Defender Virüsten Koruma güncelleştirmeleri için kaynakları yönetin
 
@@ -29,7 +29,7 @@ ms.locfileid: "65416628"
 
 **Şunlar için geçerlidir:**
 
-- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Virüsten Koruma
 
@@ -68,7 +68,7 @@ Bir uç noktanın güncelleştirmeleri nereden edineceğini belirtebileceğiniz 
 - [Windows Sunucu Güncelleştirme Hizmeti](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus) <sup>[[1](#fn1)]<sup></sup>  
 - [Microsoft Uç Noktası Yapılandırma Yöneticisi](/configmgr/core/servers/manage/updates)
 - [Ağ dosya paylaşımı](#unc-share)
-- [Microsoft Defender Virüsten Koruma ve diğer Microsoft kötü amaçlı yazılımdan](https://www.microsoft.com/wdsi/defenderupdates) <sup>koruma için güvenlik bilgileri güncelleştirmeleri [[2](#fn1)]<sup></sup>
+- [Microsoft Defender Virüsten Koruma ve diğer Microsoft kötü amaçlı yazılımdan](/microsoft-365/security/defender-endpoint/manage-protection-update-schedule-microsoft-defender-antivirus) <sup>koruma için güvenlik bilgileri güncelleştirmeleri [[2](#fn1)]<sup></sup>
 
 (<a id="fn1">1</a>) İç Tanım Güncelleştirme Sunucusu'nu Intune - Microsoft Defender Virüsten Koruma tanım güncelleştirmelerini almak için SCCM/SUP kullanıyorsanız ve istemci cihazlarda engellenen cihazlarda Windows Update erişmeniz gerekiyorsa, ortak yönetime geçiş yapabilir ve uç nokta koruma iş yükünü Intune boşaltabilirsiniz. Intune'de yapılandırılan kötü amaçlı yazılımdan koruma ilkesinde, güncelleştirme kaynağı olarak şirket içi WSUS kullanacak şekilde yapılandırılabilir 'iç tanım güncelleştirme sunucusu' seçeneği vardır. Bu, resmi WU sunucusundan gelen hangi güncelleştirmelerin kuruluş için onaylanıp onaylanmayacaklarını denetlemenize ve ayrıca ağ trafiğinin resmi Windows UPdates ağına proxy ve kaydedilmesine yardımcı olur.
 
@@ -83,12 +83,10 @@ Güvenlik bilgileri güncelleştirmeleri de günde birden çok kez teslim edilir
 
 > [!IMPORTANT]
 > [Microsoft Güvenlik bilgileri sayfası](https://www.microsoft.com/security/portal/definitions/adl.aspx) güncelleştirmelerini Windows Sunucu Güncelleştirme Hizmeti veya Microsoft Update'ten sonra bir geri dönüş kaynağı olarak ayarladıysanız, güncelleştirmeler yalnızca geçerli güncelleştirme güncel değil olarak kabul edildiğinde güvenlik bilgileri güncelleştirmelerinden ve platform güncelleştirmelerinden indirilir. (Varsayılan olarak, Windows Server Update Service veya Microsoft Update hizmetlerinden güncelleştirmeleri uygulayamamanın art arda yedi günüdür).
-> Ancak [korumanın güncel olmayan olarak raporlanacağı gün sayısını ayarlayabilirsiniz](/windows/threat-protection/microsoft-defender-antivirus/manage-outdated-endpoints-microsoft-defender-antivirus#set-the-number-of-days-before-protection-is-reported-as-out-of-date).<p>
+> Ancak [korumanın güncel olmayan olarak raporlanacağı gün sayısını ayarlayabilirsiniz](/microsoft-365/security/defender-endpoint/manage-outdated-endpoints-microsoft-defender-antivirus).<p>
 > 21 Ekim 2019 Pazartesi gününden itibaren güvenlik bilgileri güncelleştirmeleri ve platform güncelleştirmeleri sha-2 özel olarak imzalanacaktır. En son güvenlik bilgileri güncelleştirmelerini ve platform güncelleştirmelerini almak için cihazların SHA-2'yi destekleyecek şekilde güncelleştirilmesi gerekir. Daha fazla bilgi edinmek için bkz[. Windows ve WSUS için 2019 SHA-2 Kod İmzalama Desteği gereksinimi](https://support.microsoft.com/help/4472027/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus).
 
 Her kaynağın, aşağıdaki tabloda açıklandığı gibi güncelleştirmeleri yayımlama sıklıklarına ek olarak ağınızın nasıl yapılandırıldığına bağlı tipik senaryoları vardır:
-
-<br/><br/>
 
 |Konum|Örnek senaryo|
 |---|---|
@@ -287,7 +285,7 @@ Zamanlanmış bir görev kullanarak MMPC sitesinden güvenlik zekası ve platfor
     > Yola x64 (veya x86) klasörünü eklemeyin. mpcmdrun.exe işlemi otomatik olarak ekler.
 
 > [!TIP]
-> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> Diğer platformlar için Antivirüs ile ilgili bilgi arıyorsanız bkz:
 > - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
 > - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)

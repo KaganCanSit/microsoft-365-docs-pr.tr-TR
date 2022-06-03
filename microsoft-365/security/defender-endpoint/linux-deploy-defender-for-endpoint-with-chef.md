@@ -1,7 +1,7 @@
 ---
-title: Linux ile Linux'ta Uç Nokta için Defender'ı Dağıtma
-description: Linux with Linux'ta Endpoint için Defender'ı dağıtmayı öğrenin
-keywords: microsoft, defender, atp, linux, taramalar, virüsten koruma, uç nokta için microsoft defender (linux)
+title: Chef ile Linux'ta Uç Nokta için Defender'ı Dağıtma
+description: Chef ile Linux'ta Uç Nokta için Defender'ı dağıtmayı öğrenin
+keywords: microsoft, defender, atp, linux, scans, virüsten koruma, uç nokta için microsoft defender (linux)
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -14,46 +14,46 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 799fc4d163b120b4197b6cd044efe4740e4a3cc7
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 8f610821b6c0bef7694d6ce8acd256f59f761f06
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63034246"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65872950"
 ---
-# <a name="deploy-defender-for-endpoint-on-linux-with-chef"></a>Linux'ta Linux'ta Linux'ta Endpoint için Deploy Defender
+# <a name="deploy-defender-for-endpoint-on-linux-with-chef"></a>Uç Nokta için Defender’ı Chef ile Linux üzerinde dağıtın
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
-Başlamadan önce: Henüz yüklenmemişse sıkıştırmayı açın.
+Başlamadan önce: Henüz yüklü değilse sıkıştırmayı açın.
 
-Components bileşenleri zaten yüklenir ve Linux'un yönetilen Linux sunucularında Uç Nokta için Defender'a dağıtmak üzere kullanılacak yemek kitabını depolamak için bir Mağaza havuzu (kendi \<reponame\>deposunu) içerir.
+Chef bileşenleri zaten yüklüdür ve Chef tarafından yönetilen Linux sunucularında Uç Nokta için Defender'a dağıtmak için kullanılacak yemek kitabını depolamak için bir Chef deposu (chef oluşturma deposu \<reponame\>) vardır.
 
-Var olan depoda, deponun içinde bulunan yemek kitapları klasörünün içinde aşağıdaki komutu çalıştırarak yeni bir yemek kitabı oluşturabilirsiniz:
+Chef deponuzdaki cookbooks klasörünün içinden aşağıdaki komutu çalıştırarak mevcut deponuzda yeni bir yemek kitabı oluşturabilirsiniz:
 
 ```bash
 chef generate cookbook mdatp
 ```
 
-Bu komut, mdatp adlı yeni yemek kitabı için yeni bir klasör yapısı oluşturur. MDE dağıtımını eklemek için kullanmak istediğiniz bir yemek kitabı varsa, var olan bir yemek kitabını da kullanabilirsiniz.
-Yemek kitabı oluşturulduktan sonra, yemek kitabı klasörünün içinde yeni oluşturulan bir dosyalar klasörü oluşturun:
+Bu komut, yeni yemek kitabı için mdatp adlı yeni bir klasör yapısı oluşturur. MDE dağıtımını eklemek için kullanmak istediğiniz bir yemek kitabınız varsa mevcut bir yemek kitabını da kullanabilirsiniz.
+Yemek kitabı oluşturulduktan sonra, yeni oluşturulan yemek kitabı klasörünün içinde bir dosyalar klasörü oluşturun:
 
 ```bash
 mkdir mdatp/files
 ```
 
-Microsoft 365 Defender portalında indirilebilen Linux Server Onboarding zip dosyasını bu yeni dosyalar klasörüne aktarın.
+Microsoft 365 Defender portalından indirilebilen Linux Server Ekleme zip dosyasını bu yeni dosyalar klasörüne aktarın.
 
-İş Istasyonu'na gidip mdatp/recipes klasörüne gidin. Yemek kitabı oluşturulduğunda bu klasör oluşturulur. Default.rb dosyasının sonuna aşağıdaki yönergeleri eklemek için tercih ettiğiniz metin düzenleyicisini (vi veya nano gibi) kullanın:
+Chef workstation'da mdatp/recipes klasörüne gidin. Bu klasör, yemek kitabı oluşturulduğunda oluşturulur. Default.rb dosyasının sonuna aşağıdaki yönergeleri eklemek için tercih ettiğiniz metin düzenleyiciyi (vi veya nano gibi) kullanın:
 
-- include_recipe::onboard_mdatp'
-- include_recipe::install_mdatp'
+- '::onboard_mdatp' include_recipe
+- '::install_mdatp' include_recipe
 
 Ardından default.rb dosyasını kaydedin ve kapatın.
 
-Ardından yemek tarifleri klasöründeki install_mdatp.rb adlı yeni bir yemek tarifi dosyası oluşturun ve dosyaya bu metni ekleyin:
+Ardından, recipes klasöründe install_mdatp.rb adlı yeni bir tarif dosyası oluşturun ve bu metni dosyaya ekleyin:
 
 ```powershell
 #Add Microsoft Defender
@@ -90,8 +90,8 @@ when 'rhel'
 end
 ```
 
-Sürüm numarasını, dağıtımını yapmak istediğiniz sürümle ve dağıtmak istediğiniz kanalla eşlanacak şekilde dağıtmanız ve yeniden dağıtmanız gerekir.
-Ardından, mdatp/recipies klasöründe onboard_mdatp.rb dosyası oluşturmanız gerekir. Bu dosyaya aşağıdaki metni ekleyin:
+Sürüm numarasını, dağıtımını ve depo adını dağıtacağınız sürümle ve dağıtmak istediğiniz kanalla eşleşecek şekilde değiştirmeniz gerekir.
+Ardından, mdatp/recipies klasöründe bir onboard_mdatp.rb dosyası oluşturmanız gerekir. Bu dosyaya aşağıdaki metni ekleyin:
 
 ```powershell
 #Create MDATP Directory
@@ -115,10 +115,10 @@ bash 'Extract Onbaording Json MDATP' do
 end
 ```
 
-Yol adını ekleme dosyasının bulunduğu konuma güncelleştirin.
-Bunu İş istasyonu üzerinde dağıtın diye test etmek için yalnızca şunu çalıştırın ``sudo chef-client -z -o mdatp``: .
-Dağıtımınız sonrasında Linux'ta Uç Nokta için Microsoft Defender tercihlerini ayarla'ya göre yapılandırma dosyası oluşturmayı ve [sunuculara dağıtmayı düşünebilirsiniz](/linux-preferences.md).
-Yapılandırma dosyanızı oluşturduktan ve test ettikten sonra, bunu yemek kitabı/mdatp/files klasörüne yerleştirebilirsiniz; burada ekleme paketini de yerleştirebilirsiniz. Ardından mdatp/recipies klasöründe bir settings_mdatp.rb dosyası oluşturabilir ve şu metni ebilirsiniz:
+Yol adını ekleme dosyasının konumuna güncelleştirdiğinden emin olun.
+Chef iş istasyonunda dağıtmayı test etmek için komutunu çalıştırmanız ``sudo chef-client -z -o mdatp``gerekir.
+Dağıtımınızdan sonra[, Linux'ta Uç Nokta için Microsoft Defender için tercihleri ayarlama temelinde sunuculara](/microsoft-365/security/defender-endpoint/linux-preferences) bir yapılandırma dosyası oluşturmayı ve dağıtmayı göz önünde bulundurmanız gerekir.
+Yapılandırma dosyanızı oluşturup test ettikten sonra, ekleme paketini de yerleştirdiğiniz cookbook/mdatp/files klasörüne yerleştirebilirsiniz. Ardından mdatp/recipies klasöründe bir settings_mdatp.rb dosyası oluşturabilir ve şu metni ekleyebilirsiniz:
 
 ```powershell
 #Copy the configuration file
@@ -131,10 +131,10 @@ cookbook_file '/etc/opt/microsoft/mdatp/managed/mdatp_managed.json' do
 end
 ```
 
-Bu adımı yemek tarifinin bir parçası olarak eklemek için yemek tarifi klasöründeki default.rb include_recipe': settings_mdatp'i ekleyin.
-Ayrıca, crontab'ı kullanarak otomatik güncelleştirmeleri zamanlamayı da kullanabilirsiniz. Uç Nokta [(Linux) için Microsoft Defender'a bir güncelleştirme zamanlama](linux-update-MDE-Linux.md).
+Bu adımı tarifin bir parçası olarak eklemek için, tarif klasöründeki default.rb dosyanıza ':: settings_mdatp' include_recipe eklemeniz gerekir.
+Otomatik güncelleştirmeleri zamanlamak için crontab'ı da kullanabilirsiniz [Uç Nokta için Microsoft Defender (Linux) güncelleştirmesini zamanlayın](linux-update-MDE-Linux.md).
 
-MDATP yemek kitabını kaldırma:
+MDATP yemek kitabını kaldırın:
 
 ```powershell
 #Uninstall the Defender package

@@ -1,7 +1,7 @@
 ---
 title: Canlı yanıt komut örnekleri
-description: Uç Nokta için Microsoft Defender'da temel veya gelişmiş canlı yanıt komutlarını çalıştırmayı öğrenin ve bunların nasıl kullanıldıklarına yönelik örneklere bakın.
-keywords: example, command, cli, remote, shell, connection, live, response, real-time, command, script, remediate, hunt, export, log, drop, download, file
+description: Uç Nokta için Microsoft Defender için temel veya gelişmiş canlı yanıt komutlarını çalıştırmayı öğrenin ve bunların nasıl kullanıldığına ilişkin örneklere bakın.
+keywords: örnek, command, cli, remote, shell, connection, live, response, real-time, command, script, remediate, hunt, export, log, drop, download, file
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -14,27 +14,27 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 325146ba7ed40e27c50eaca490c70d3988b1198f
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 77a1bd5c9234b7a38266be55825726e683557eb4
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63312681"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65872397"
 ---
 # <a name="live-response-command-examples"></a>Canlı yanıt komut örnekleri
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
+> Uç nokta için Defender'i deneyimlemek ister misiniz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
-Canlı yanıtta kullanılan yaygın komutlar hakkında bilgi edinmek ve bunların normalde nasıl kullanıldıklarına örneklere bakın.
+Canlı yanıtta kullanılan yaygın komutlar hakkında bilgi edinin ve bunların normalde nasıl kullanıldığına ilişkin örneklere bakın.
 
-Sahip olduğunuz role bağlı olarak, temel veya gelişmiş canlı yanıt komutlarını çalıştırabilirsiniz. Temel ve gelişmiş komutlar hakkında daha fazla bilgi için bkz [. Canlı yanıt kullanan cihazlarda varlıkları araştırma](live-response.md).
+Sahip olduğunuz role bağlı olarak, temel veya gelişmiş canlı yanıt komutlarını çalıştırabilirsiniz. Temel ve gelişmiş komutlar hakkında daha fazla bilgi için bkz [. Canlı yanıt kullanarak cihazlarda varlıkları araştırma](live-response.md).
 
 ## `analyze`
 
@@ -110,16 +110,16 @@ getfile c:\Users\user\Desktop\work.txt -auto
 
 > [!NOTE]
 >
-> Aşağıdaki dosya türleri, *Canlı* Yanıt'ın içinde yer alan bu komut kullanılarak indir kullanılamaz:
+> Aşağıdaki dosya türleri Canlı Yanıt içinden bu komut kullanılarak *indirilemez* :
 >
-> - [Nokta dosyalarını yenidenpar](/windows/desktop/fileio/reparse-points/)
-> - [Dosyaları seyrek olarak dosyala](/windows/desktop/fileio/sparse-files/)
+> - [Nokta dosyalarını yeniden ayrıştırma](/windows-hardware/drivers/ifs/reparse-points)
+> - [Seyrek dosyalar](/windows-server/administration/windows-commands/fsutil-sparse)
 > - Boş dosyalar
-> - Sanal dosyalar veya yerel olarak tam olarak mevcut olmadığınız dosyalar
+> - Sanal dosyalar veya yerel olarak tam olarak mevcut olmayan dosyalar
 >
-> Bu dosya *türleri* [PowerShell tarafından desteklenen bir dosyadır](/powershell/scripting/overview).
+> Bu *dosya türleri* [PowerShell](/powershell/scripting/overview) tarafından desteklenir.
 >
-> Bu komutu Live Response'ın içinde kullanmada sorun yaşarsanız, alternatif olarak PowerShell'i kullanın.
+> Canlı Yanıt'ın içinden bu komutu kullanırken sorun yaşıyorsanız alternatif olarak PowerShell'i kullanın.
 
 ## `library`
 
@@ -221,8 +221,8 @@ run get-process-by-name.ps1 -parameters "-processName Registry"
 
 > [!NOTE]
 >
-> **'Çalıştır**' veya '**getfile**' gibi uzun süre çalışan komutlar için, komutun sonundaki '**&**' simgesini kullanarak bu eylemi arka planda gerçekleştirebilirsiniz.
-> Böylece, 'fg' temel komutu kullanılarak yapılması gereken makine üzerinde çalışmaya ve arka plan **komutuna** [dönebilirsiniz](live-response.md#basic-commands).
+> '**run**' veya '**getfile**' gibi uzun süre çalışan komutlar için, arka planda bu eylemi gerçekleştirmek için komutun sonundaki '**&**' simgesini kullanmak isteyebilirsiniz.
+> Bu, '**fg**' temel komutunu kullanmayı bitirdiğinizde makineyi araştırmaya devam edip arka plan [komutuna](live-response.md#basic-commands) dönmenizi sağlar.
 
 ## `scheduledtask`
 

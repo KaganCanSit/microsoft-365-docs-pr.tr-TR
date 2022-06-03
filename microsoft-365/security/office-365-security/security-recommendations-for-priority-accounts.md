@@ -21,12 +21,12 @@ ms.custom: ''
 description: Yöneticiler, güvenlik ayarlarını yükseltmeyi ve Microsoft 365 kuruluşlarında öncelikli hesaplar için raporları, uyarıları ve araştırmaları kullanmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 50d51bf2861d1ef1b9e4d9694fc9469fc5ec7406
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: 99e4726af1226e044715d33e92a176c9292b49ab
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65648645"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65873390"
 ---
 # <a name="security-recommendations-for-priority-accounts-in-microsoft-365"></a>Microsoft 365'te öncelikli hesaplar için güvenlik önerileri
 
@@ -53,7 +53,7 @@ Microsoft 365 ve Office 365 için Microsoft Defender, öncelik hesaplarınız i�
 |[Kullanıcıları eğitme](#train-users)|![Dahil.](../../media/d238e041-6854-4a78-9141-049224df0795.png)|![Dahil](../../media/d238e041-6854-4a78-9141-049224df0795.png)|![Dahil](../../media/d238e041-6854-4a78-9141-049224df0795.png)|
 
 > [!NOTE]
-> _Ayrıcalıklı hesapların (yönetici hesaplarının_) güvenliğini sağlama hakkında bilgi için [bu konuya](/azure/architecture/framework/security/critical-impact-accounts) bakın.
+> _Ayrıcalıklı hesapların (yönetici hesaplarının_) güvenliğini sağlama hakkında bilgi için [bu konuya](/security/compass/critical-impact-accounts) bakın.
 
 ## <a name="increase-sign-in-security-for-priority-accounts"></a>Öncelik hesapları için oturum açma güvenliğini artırma
 

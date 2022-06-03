@@ -18,16 +18,16 @@ description: Office 365'de Outlook kurallarını ve özel form ekleme saldırıl
 ms.custom: seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 10cbb57018cb0e7c30282ca2c89b6a8dab812e24
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 268e50059ad1b128e583a5be383788b545fa6190
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65131118"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65874106"
 ---
 # <a name="detect-and-remediate-outlook-rules-and-custom-forms-injections-attacks"></a>Outlook Kurallarını ve Özel Form Ekleme Saldırılarını Algılama ve Düzeltme
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Özet** Office 365'da Outlook kurallarını ve özel Forms ekleme saldırılarını tanıyıp düzeltmeyi öğrenin.
 
@@ -205,7 +205,7 @@ Kullanıcı hesaplarınızı ve özellikle de yönetici hesaplarınızı koruman
 
   - **Olağan dışı kimliğe bürünülen etkinlik (kullanıcı tarafından)**: Bu ilke ortamınızın profilini oluşturur ve kullanıcılar öğrenilen temele göre tek bir oturumda birden çok kimliğine bürünülen etkinlik gerçekleştirdiğinde uyarı tetikler ve bu da ihlal girişimine işaret edebilir.
 
-- Hesap güvenlik yapılandırmalarını ve davranışlarını yönetmek için [Office 365 Güvenli Puan](https://securescore.office.com/) gibi bir araç kullanın.
+- Hesap güvenlik yapılandırmalarını ve davranışlarını yönetmek için [Office 365 Güvenli Puan](/microsoft-365/security/defender/microsoft-secure-score) gibi bir araç kullanın.
 
 ### <a name="second-keep-your-outlook-clients-current"></a>İkinci: Outlook istemcilerinizi güncel tutun
 

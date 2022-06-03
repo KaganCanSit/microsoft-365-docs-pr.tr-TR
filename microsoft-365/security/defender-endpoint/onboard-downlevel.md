@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 0cd1e0aa999200814639f24401bf019774ca1d43
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 8ca88340ae90889c0e45c5905863373d930949b2
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64825222"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65872972"
 ---
 # <a name="onboard-previous-versions-of-windows"></a>Windows'un önceki sürümlerini ekleyin
 
@@ -37,7 +37,7 @@ ms.locfileid: "64825222"
 - Windows 8.1 Enterprise
 - Windows Server 2008 R2 SP1
 
-> Uç Nokta için Defender'ı deneyimlemek mi istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-downlevel-abovefoldlink)
+> Uç nokta için Defender'i deneyimlemek ister misiniz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-downlevel-abovefoldlink)
 
 Uç Nokta için Defender desteği alt düzey işletim sistemlerini içerecek şekilde genişleterek desteklenen Windows sürümlerinde gelişmiş saldırı algılama ve araştırma özellikleri sağlar.
 
@@ -49,7 +49,7 @@ Uç Nokta için Defender'a alt düzey Windows istemci uç noktalarını eklemek 
 Windows Server 2008 R2 SP1 için [Bulut için Microsoft Defender ekleme](#onboard-windows-servers-through-microsoft-defender-for-cloud) seçeneğiniz vardır.
 
 > [!NOTE]
-> Microsoft Monitoring Agent aracılığıyla bir Windows sunucusu eklemek için düğüm başına Uç Nokta için Defender tek başına sunucu lisansı gereklidir (Seçenek 1). Alternatif olarak, Bulut için Microsoft Defender aracılığıyla bir Windows sunucusu eklemek için düğüm başına sunucular için Microsoft Defender lisansı gerekir (Seçenek 2), bkz. [Bulut için Microsoft Defender'de kullanılabilen desteklenen özellikler](/azure/security-center/security-center-services).
+> Microsoft Monitoring Agent aracılığıyla bir Windows sunucusu eklemek için düğüm başına Uç Nokta için Defender tek başına sunucu lisansı gereklidir (Seçenek 1). Alternatif olarak, Bulut için Microsoft Defender aracılığıyla bir Windows sunucusu eklemek için düğüm başına sunucular için Microsoft Defender lisansı gerekir (Seçenek 2), bkz. [Bulut için Microsoft Defender'de kullanılabilen desteklenen özellikler](/azure/defender-for-cloud/supported-machines-endpoint-solutions-clouds-servers).
 
 > [!TIP]
 > Cihazı ekledikten sonra, hizmete düzgün şekilde eklendiğini doğrulamak için bir algılama testi çalıştırmayı seçebilirsiniz. Daha fazla bilgi için bkz. [Yeni eklenen Uç Nokta için Defender uç noktasında algılama testi çalıştırma](run-detection-test.md).
@@ -132,7 +132,7 @@ Tamamlandıktan sonra, bir saat içinde portalda eklenen Windows sunucuları gö
 
 ## <a name="onboard-windows-servers-through-microsoft-defender-for-cloud"></a>Bulut için Microsoft Defender aracılığıyla Windows sunucuları ekleme
 
-1. Microsoft 365 Defender gezinti bölmesinde **Ayarlar** >  **Cihaz** **yönetimiOnboarding'i** >  seçin.
+1. Microsoft 365 Defender gezinti bölmesinde **Ayarlar** >  **Cihaz yönetimi** > **Ekleme'yi** seçin.
 
 2. İşletim sistemi olarak **Windows Server 2008 R2 SP1'i** seçin.
 
@@ -200,7 +200,7 @@ Sunucunun Uç Nokta hizmeti için Defender'a rapor ettiğini doğrulamak için [
     Windows Server 2008 R2 x64 güncelleştirmelerini indirme
     
     .NET Framework 3.5.1 (KB315418)<br>
-    [Windows Server 2008 R2 x64 için](https://download.microsoft.com/download/6/8/0/680ee424-358c-4fdf-a0de-b45dee07b711/windows6.1-kb3154518-x64.msu)
+    [Windows Server 2008 R2 x64 için](/iis/install/installing-iis-7/install-windows-server-2008-and-windows-server-2008-r2)
     
     >[!NOTE]
     > Bu makalede x64 tabanlı sunucular kullandığınız varsayılır (MMA Aracısı .exe x64 Yeni SHA-2 uyumlu sürümü).

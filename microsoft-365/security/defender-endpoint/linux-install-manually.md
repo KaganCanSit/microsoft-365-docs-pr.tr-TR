@@ -16,12 +16,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: b467d87f16900375ca2db2f8478bf001780c9059
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: a9d16cb82354bcb44e817de3207cb49de66dbf91
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65130351"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65873060"
 ---
 # <a name="deploy-microsoft-defender-for-endpoint-on-linux-manually"></a>Linux'ta Uç Nokta için Microsoft Defender el ile dağıtma
 
@@ -32,7 +32,7 @@ ms.locfileid: "65130351"
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Defender'ı deneyimlemek mi istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
+> Uç nokta için Defender'i deneyimlemek ister misiniz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
 
 Bu makalede Linux'ta Uç Nokta için Microsoft Defender el ile nasıl dağıtılacağı açıklanmaktadır. Başarılı bir dağıtım için aşağıdaki görevlerin tümünün tamamlanması gerekir:
@@ -84,8 +84,8 @@ Yeni özellikleri önizlemek ve erken geri bildirim sağlamak için kuruluşunuz
     |Dağıtım & sürümü|Paket|
     |---|---|
     |RHEL/Centos/Oracle 8.0-8.5 için|<https://packages.microsoft.com/config/rhel/8/[channel].repo>|
-    |RHEL/Centos/Oracle 7.2-7.9 & Amazon Linux 2 için |<https://packages.microsoft.com/config/rhel/7/[channel].repo>|
-    |RHEL/Centos 6.7-6.10 için|<https://packages.microsoft.com/config/rhel/6/[channel].repo>|
+    |RHEL/Centos/Oracle 7.2-7.9 & Amazon Linux 2 için |</azure/cognitive-services/speech-service/how-to-configure-rhel-centos-7>|
+    <!--|RHEL/Centos 6.7-6.10 için|<https://packages.microsoft.com/config/rhel/6/[channel].repo>|-->
     |Fedora için 33|<https://packages.microsoft.com/config/fedora/33/prod.repo>|
     |Fedora için 34|<https://packages.microsoft.com/config/fedora/34/prod.repo>|
 
@@ -323,12 +323,12 @@ Ekleme paketini Microsoft 365 Defender portalından indirin.
 
     ```Output
     Archive:  WindowsDefenderATPOnboardingPackage.zip
-    inflating: MicrosoftDefenderATPOnboardingLinuxServer.sh
+    inflating: MicrosoftDefenderATPOnboardingLinuxServer.py
     ```
 
 ## <a name="client-configuration"></a>İstemci yapılandırması
 
-1. MicrosoftDefenderATPOnboardingLinuxServer.sh hedef cihaza kopyalayın.
+1. MicrosoftDefenderATPOnboardingLinuxServer.py hedef cihaza kopyalayın.
 
     > [!NOTE]
     > Başlangıçta istemci cihazı bir kuruluşla ilişkilendirilmemiştir ve *orgId* özniteliği boş olur.
@@ -337,10 +337,21 @@ Ekleme paketini Microsoft 365 Defender portalından indirin.
     mdatp health --field org_id
     ```
 
-2. MicrosoftDefenderATPOnboardingLinuxServer.sh çalıştırın.
+2. MicrosoftDefenderATPOnboardingLinuxServer.py çalıştırın.
+
+    > [!NOTE]
+    > Bu komutu çalıştırmak için, disto ve sürüme bağlı olarak cihaza sahip `python`  olmanız veya `python3` yüklemeniz gerekir. Gerekirse bkz. [Linux'ta Python Yükleme için Adım Adım Yönergeler](https://opensource.com/article/20/4/install-python-linux).
+    
+    RHEL 8.x veya Ubuntu 20.04 veya üzerini çalıştırıyorsanız kullanmanız `python3`gerekir.
 
     ```bash
-    sudo bash MicrosoftDefenderATPOnboardingLinuxServer.sh
+    sudo python3 MicrosoftDefenderATPOnboardingLinuxServer.py
+    ```
+
+    Diğer dağıtımlar ve sürümler için kullanmanız `python`gerekir.
+    
+    ```bash
+    sudo python MicrosoftDefenderATPOnboardingLinuxServer.py
     ```
     
 3. Cihazın artık kuruluşunuzla ilişkilendirildiğini ve geçerli bir kuruluş tanımlayıcısı bildirdiğini doğrulayın:

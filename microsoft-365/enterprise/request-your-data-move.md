@@ -1,9 +1,9 @@
 ---
 title: Veri taşıma isteğinde bulunma
-ms.author: andyber
-author: andybergen
+ms.author: kvice
+author: kelleyvice-msft
 manager: scotv
-ms.date: 12/10/2019
+ms.date: 06/02/2022
 audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -15,12 +15,12 @@ f1.keywords:
 - NOCSH
 description: Mevcut Office 365 müşterileri, ülkelerinin Microsoft 365 hizmet verilerini yeni coğrafi bölgelerine taşımaları için son tarihten önce bir istek göndermelidir.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 023262910f55da0e1145cc02f339debf4dffdcd5
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 492e7680524728a136d5aa5530285e50b47f2935
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65096314"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65874162"
 ---
 # <a name="how-to-request-your-data-move"></a>Veri taşıma isteğinde bulunma
 
@@ -75,7 +75,7 @@ Ocak 2020 itibarıyla, uygun Office 365 ülkelerdeki müşteriler Microsoft Team
 
 [Temel verileri yeni Office 365 veri merkezi coğrafi bölgelerine taşıma](moving-data-to-new-datacenter-geos.md)
 
-[Veri taşıma genel SSS](data-move-faq.yml)
+[Veri taşıma genel SSS](data-move-faq.md)
 
 [Microsoft Dynamics CRM Online için yeni veri merkezi coğrafi bölgeleri](/power-platform/admin/new-datacenter-regions)
   

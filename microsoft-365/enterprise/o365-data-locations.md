@@ -1,8 +1,9 @@
 ---
 title: Veri konumlarını Microsoft 365
-ms.author: deanw
-author: dmwmsft
+ms.author: kvice
+author: kelleyvice-msft
 manager: scotv
+ms.date: 06/02/2022
 audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -17,110 +18,142 @@ ms.custom:
 - admindeeplinkMAC
 ms.assetid: 706d5449-45e5-4b0c-a012-ab60501899ad
 description: Microsoft 365 müşteri verilerinizin dünya çapında nerede depolandığını belirleme
-ms.openlocfilehash: 19741da49baf6890fbc0a7570190df1676990e9e
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 07d137c6eda243a1ffa33b486d7cdbea5b37f9d9
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090805"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65874084"
 ---
 # <a name="where-your-microsoft-365-customer-data-is-stored"></a>Microsoft 365 müşteri verilerinizin depolandığı yer
 
 Aşağıdaki tablolarda, Microsoft'un tüm küresel bulut konumlarındaki Microsoft 365 hizmetleri için bekleyen müşteri verilerinin nerede depolandığı gösterilmektedir. Her hizmet için müşteri verilerinin nerede depolandığını öğrenmek için fatura adresi ülkenizin konumunu genişletin.
 
-İşletmeniz Avrupa Birliği'nde bulunuyorsa daha fazla bilgi için bkz. [Avrupa Birliği için veri konumları](EU-data-storage-locations.md) . 
+İşletmeniz Avrupa Birliği'nde bulunuyorsa daha fazla bilgi için bkz. [Avrupa Birliği için veri konumları](EU-data-storage-locations.md) .
 
-Müşteriler, Microsoft 365 yönetim merkezi kiracınıza özgü veri konumu bilgilerini **Ayarlar** >  **Org** <a href="https://go.microsoft.com/fwlink/p/?linkid=2067339" target="_blank">**ayarlarıGelişme**</a> >  profili **sekmesiVeri** >  konumu bölümünde görüntülemelidir. [Yeni bir Coğrafi Bölgeye geçme isteğinde bulunduysanız](request-your-data-move.md), geçiş sırasında bazı veriler geçici olarak önceki Coğrafi Bölgenizde depolansa bile Microsoft 365 yönetim merkezi veri konumu bilgileri yalnızca yeni Coğrafi Bölgenizi gösterebilir. 
+Müşteriler, Microsoft 365 yönetim merkezi kiracınıza özgü veri konumu bilgilerini **Ayarlar** >  **Org ayarları** > <a href="https://go.microsoft.com/fwlink/p/?linkid=2067339" target="_blank">**Kuruluş profili** sekmesi</a> > **Veri konumu'nda** görüntülemelidir. [Yeni bir Coğrafi Bölgeye geçme isteğinde bulunduysanız](request-your-data-move.md), geçiş sırasında bazı veriler geçici olarak önceki Coğrafi Bölgenizde depolansa bile Microsoft 365 yönetim merkezi veri konumu bilgileri yalnızca yeni Coğrafi Bölgenizi gösterebilir.
 
 Yeni Microsoft 365 kiracıları, bu kiracının ilk aboneliğiyle ilişkili işlemin ülkesine göre varsayılan olarak Coğrafi olarak ayarlanır.
 
 Bekleyen müşteri verilerinin depolama konumuna ilişkin sözleşmeye bağlı taahhütler hakkında bilgi edinmek için [Microsoft Ürün ve Hizmetleri Veri Koruma Eki'nde (DPA)](https://www.microsoft.com/licensing/docs/view/Microsoft-Products-and-Services-Data-Protection-Addendum-DPA) bilgi bulabilirsiniz.
 
-Azure Active Directory veri konumları için AAD [Veri Eşlemesi](https://go.microsoft.com/fwlink/p/?linkid=2092972) sayfasını ziyaret edin.
+Azure Active Directory veri konumları için lütfen [AAD Veri Haritası](https://go.microsoft.com/fwlink/p/?linkid=2092972) sayfasını ziyaret edin.
 
 Müşterinin fatura adresi Avrupa dışındaysa ve Müşterinin Office 365 Eğitim bir aboneliği varsa, OST'nin "Çekirdek Çevrimiçi Hizmetler için Bekleyen Müşteri Verilerinin Konumu" bölümüne bakılmaksızın, Microsoft Müşterinin Office 365 kiracısını avrupa veya Kuzey Amerika içinde herhangi bir yerde sunabilir, Müşteri Verilerini'ne aktarabilir ve bekleyen müşteri verilerini depolar.  Müşterinin faturalama adresi Avrupa'daysa ve Müşterinin Office 365 Eğitim bir aboneliği varsa, OST'nin "Çekirdek Çevrimiçi Hizmetler için Bekleyen Müşteri Verilerinin Konumu" bölümüne bakılmaksızın, Microsoft Müşterinin Office 365 kiracısını avrupa birliği içinde herhangi bir yerde sunabilir, Müşteri Verilerini bu kiracıya aktarabilir ve bekleyen müşteri verilerini depolar.
-
-
-
 
 ## <a name="faq"></a>SSS
 
 ### <a name="how-does-microsoft-define-data"></a>Microsoft verileri nasıl tanımlar?
+<details><summary>Genişletmek için tıklayın</summary>
 
 Microsoft Güven Merkezi'nden [farklı veri türleri için tanımlarımızı](https://go.microsoft.com/fwlink/p/?linkid=864390) gözden geçirin. [Gizlilik & Güvenlik Koşulları'nda](https://www.microsoft.com/licensing/terms/product/PrivacyandSecurityTerms/all) Microsoft, müşteri verileriyle/verilerinizle ilgili sözleşmeye dayalı taahhütlerde bulunur. Temel müşteri verilerini [, Gizlilik & Güvenlik Koşullarına](https://www.microsoft.com/licensing/terms/product/PrivacyandSecurityTerms/all) göre yalnızca bölgenizde bekleyen olarak depolanacak şekilde taahhüt edilen müşteri verileri olarak adlandırıyoruz.
 
+</details>
+
 ### <a name="where-are-the-exact-addresses-of-the-data-centers"></a>Veri merkezlerinin tam adresleri nerede?
+
+<details><summary>Genişletmek için tıklayın</summary>
 
 Microsoft, veri merkezlerinin tam adreslerini açıklamaz. Veri merkezi tesislerimizin güvenliğini sağlamaya yardımcı olmak için bu ilkeyi oluşturduk.  Ancak, şehir konumlarını listeleyeceğiz. Daha fazla bilgi edinmek için lütfen [Veri Merkezi Konumları'na](o365-data-locations.md#data-center-locations) bakın.
 
+</details>
+
 ### <a name="does-the-location-of-your-customer-data-have-a-direct-impact-on-your-end-users-experience"></a>Müşteri verilerinizin konumunun son kullanıcılarınızın deneyimi üzerinde doğrudan bir etkisi var mı?
+<details><summary>Genişletmek için tıklayın</summary>
 
 Microsoft 365 performansı, kullanıcının veri merkezi konumlarına olan uzaklığıyla orantılı değildir. Microsoft'un küresel bulut ağına, küresel bulut altyapısına ve Microsoft 365 hizmetleri mimarisine yaptığı yatırımlar, kullanıcılara müşteri verilerinin bekleyen konumda depolandığı konumdan bağımsız olarak tekil ve tutarlı bir deneyim sağlamaya yardımcı olur. Kullanıcılarınız performans sorunlarıyla karşılaşıyorsa, bunları ayrıntılı olarak gidermeniz gerekir. Microsoft, Office [Desteği web sitesinde](./network-planning-and-performance.md) son kullanıcı performansını planlamak ve iyileştirmek için Microsoft 365 müşterilerine yönelik yönergeler yayımladı.
 
+</details>
+
 ### <a name="how-does-microsoft-help-me-comply-with-my-national-regional-and-industry-specific-regulations"></a>Microsoft ulusal, bölgesel ve sektöre özgü düzenlemelerime uymama nasıl yardımcı olur?
+<details><summary>Genişletmek için tıklayın</summary>
 
 Kişilerin verilerinin toplanması ve kullanılmasını yöneten ulusal, bölgesel ve sektöre özgü gereksinimlere uymanıza yardımcı olmak için Microsoft 365 tüm küresel bulut üretkenlik sağlayıcılarının en kapsamlı uyumluluk tekliflerini sunar. Microsoft Güven Merkezi'ndeki [Microsoft Purview](https://go.microsoft.com/fwlink/p/?linkid=862317) bölümünde [uyumluluk tekliflerimizi](/compliance/regulatory/offering-home) ve diğer ayrıntıları gözden geçirin. Ayrıca, bazı Microsoft 365 planları verilerinizi yönetmenize, yasal ve yasal gereksinimlere uymanıza ve verileriniz üzerinde gerçekleştirilen eylemleri izlemenize yardımcı olacak daha fazla uyumluluk çözümü sunar.
 
+</details>
+
 ### <a name="who-can-access-your-data-and-according-to-what-rules"></a>verilerinize ve hangi kurallara göre Who erişebilirsiniz?
+<details><summary>Genişletmek için tıklayın</summary>
 
  Microsoft, müşteri verilerinizin yetkisiz kişiler tarafından uygunsuz erişime veya kullanıma karşı korunmasına yardımcı olmak için güçlü önlemler uygular. Bu, Microsoft personeli ve alt yüklenicilerinin erişimini kısıtlamayı ve kamu tarafından müşteri verilerine yönelik istekleri yanıtlamaya yönelik gereksinimleri dikkatle tanımlamayı içerir. Ancak, istediğiniz zaman ve herhangi bir nedenle kendi müşteri verilerinize erişebilirsiniz. [Diğer ayrıntılar Microsoft Güven Merkezi'nden](https://go.microsoft.com/fwlink/p/?linkid=864392) edinilebilir.
 
+</details>
+
 ### <a name="does-microsoft-access-your-data"></a>Microsoft verilerinize erişıyor mu?
+<details><summary>Genişletmek için tıklayın</summary>
 
 Microsoft, Microsoft 365 işlemlerinin çoğunu otomatikleştirirken kendi müşteri verilerine erişimini kasıtlı olarak sınırlar. Bu, Microsoft 365 büyük ölçekte yönetmemize ve müşteri verilerine yönelik iç tehdit risklerini ele almamıza yardımcı olur. Varsayılan olarak, Microsoft mühendislerinin yönetim ayrıcalıkları yoktur ve Microsoft 365'daki müşteri verilerine erişimi yoktur. Bir Microsoft mühendisinin müşteri verilerine sınırlı bir süre için sınırlı ve günlüğe kaydedilmiş erişimi olabilir, ancak yalnızca normal hizmet işlemleri için gerekli olduğunda ve yalnızca Microsoft'taki üst düzey bir yönetim üyesi tarafından onaylandığında (ve müşteri tarafından Müşteri Kasası özelliği için lisanslanan müşteriler için).
 
+</details>
+
 ### <a name="how-does-microsoft-secure-your-data"></a>Microsoft verilerinizin güvenliğini nasıl sağlar?
+<details><summary>Genişletmek için tıklayın</summary>
 
 Microsoft, bilgilerinizin güvende kalmasına yardımcı olmak için Microsoft 365 yerleşik olarak sağlam ilkelere, denetimlere ve sistemlere sahiptir. Daha fazla bilgi edinmek için Microsoft Güven Merkezi'nin [Microsoft 365 güvenlik bölümünü](https://go.microsoft.com/fwlink/p/?linkid=864393) gözden geçirin.
 
+</details>
+
 ### <a name="does-microsoft-365-encrypt-your-data"></a>verilerinizi Microsoft 365 şifreler mi?
+<details><summary>Genişletmek için tıklayın</summary>
 
 Microsoft 365 bekleyen ve aktarılan müşteri verilerini şifreleyen hizmet tarafı teknolojileri kullanır. bekleyen müşteri verileri için Microsoft 365 birim düzeyinde ve dosya düzeyinde şifreleme kullanır. Aktarımdaki müşteri verileri için Microsoft 365, veri merkezleri ile istemciler ve sunucular arasındaki iletişim için Aktarım Katmanı Güvenliği (TLS) ve İnternet Protokolü Güvenliği (IPsec) gibi birden çok şifreleme teknolojisi kullanır. Microsoft 365 müşteri tarafından yönetilen şifreleme özelliklerini de içerir.
 
+</details>
+
 ### <a name="where-can-i-find-data-residency-information-for-microsoft-azure"></a>Microsoft Azure için veri yerleşimi bilgilerini nerede bulabilirim?
+<details><summary>Genişletmek için tıklayın</summary>
 
 Microsoft Azure veri yerleşimi bilgilerini bulmak için lütfen [Bölgeye göre kullanılabilir ürünler](https://go.microsoft.com/fwlink/p/?linkid=2093451) sayfasını gözden geçirin.
 
-### <a name="what-are-multi-geo-capabilities-in-microsoft-365"></a>Microsoft 365'daki Multi-Geo Özellikleri nelerdir?
+</details>
 
-[Multi-Geo](https://go.microsoft.com/fwlink/p/?linkid=872033), müşterilere bekleyen temel müşteri verilerini Microsoft 365 buluttaki kullanılabilir konumlarımıza ayırma olanağı sağlar.   
+### <a name="what-are-multi-geo-capabilities-in-microsoft-365"></a>Microsoft 365'daki Multi-Geo Özellikleri nelerdir?
+<details><summary>Genişletmek için tıklayın</summary>
+
+[Multi-Geo](https://go.microsoft.com/fwlink/p/?linkid=872033), müşterilere bekleyen temel müşteri verilerini Microsoft 365 buluttaki kullanılabilir konumlarımıza ayırma olanağı sağlar.
+
+</details>  
 
 ### <a name="what-services-support-multi-geo"></a>Multi-Geo hangi hizmetleri destekler?
+<details><summary>Genişletmek için tıklayın</summary>
 
 [Multi-Geo](https://go.microsoft.com/fwlink/p/?linkid=872033) Exchange Online, OneDrive İş, SharePoint Online ve Teams için kullanılabilir.
 
+</details>
+
 ### <a name="why-do-i-see-my-microsoft-365-service-requests-for-my-data-at-rest-connecting-to-servers-in-countries-outside-of-my-region"></a>Bekleyen verilerim için Microsoft 365 hizmet isteklerimi neden bölgemin dışındaki ülkelerdeki sunuculara bağlanırken görüyorum?
+<details><summary>Genişletmek için tıklayın</summary>
 
 Bazen müşteri isteği, verilerinizin bekleyen konumda depolandığı konumdan farklı bir bölgedeki sunucular tarafından işlenebilir. Ağ yönlendirme kararlarının istek işleme için farklı bir sunucu seçmesi ancak bu durumlarda verileriniz bekleyen konumda yeni bir konuma taşınmaması durumunda bu durum oluşabilir.
 
-### <a name="what-are-the-exceptions-for-intune-data-locations"></a>Intune veri konumları için özel durumlar nelerdir?
+</details>
 
-Microsoft, Intune müşteri verilerini belirtilen Coğrafi Bölge dışında depolamaz. şu durumlar dışında:
+### <a name="what-are-the-exceptions-for-intune-data-locations"></a>Intune veri konumları için özel durumlar nelerdir?
+<details><summary>Genişletmek için tıklayın</summary>
+
+Microsoft, aşağıdaki durumlar dışında Intune müşteri verilerini belirtilen coğrafi konumun dışında depolamaz:
 
 - Microsoft'un müşteri desteği sağlaması, hizmetle ilgili sorunları gidermesi veya yasal gereksinimlere uyması gerekir.
 - Müşteri, aşağıdakilerin kullanımı da dahil olmak üzere müşteri verilerinin böyle bir şekilde depolanmasını etkinleştirmek için bir hesap yapılandırıyor:
-
   - Genel önbelleğe alma hizmeti sağlayan ve müşteri verilerini dünyanın dört bir yanındaki uç konumlarda depolayan Content Delivery Network (CDN) gibi genel olarak çalışacak şekilde tasarlanmış özellikler.
-
-  - dizin verilerini genel olarak depolayan Azure Active Directory (Azure AD). Bu, Birleşik Devletler (Azure AD verilerinin yalnızca Birleşik Devletler depolandığı) veya Avrupa'daki (Azure AD verilerinin Avrupa'da veya Birleşik Devletler depolandığı) Azure AD dağıtımları için geçerli değildir.
-   
+  - dizin verilerini genel olarak depolayan Azure Active Directory (Azure AD). Bu, Birleşik Devletler (Azure AD verilerinin yalnızca Birleşik Devletler depolandığı) veya Avrupa'daki (Azure AD verilerin Avrupa'da veya Birleşik Devletler depolandığı) Azure AD dağıtımları için geçerli değildir.
   - Müşteri verilerini genellikle Birleşik Devletler depolayan ancak genel olarak depolayan önizleme, beta veya diğer yayın öncesi hizmetler.
 
-Ne olursa olsun, Microsoft müşterilerin veya son kullanıcılarının müşteri verilerine erişebileceği Coğrafi verileri denetlemez veya sınırlamaz. Benzer şekilde, diğer hizmetlerdeki müşteri verileri daha sonra Intune tümleştirildiğinde, kaynak müşteri verileri diğer hizmetin kendi Coğrafi taahhütlerine (varsa) bağlı olarak depolanmaya devam eder; yalnızca Intune tümleştirilmiş müşteri verilerinin kopyası Intune için belirtilen Coğrafi Bölgede depolanır.  
+Ne olursa olsun, Microsoft müşterilerin veya son kullanıcılarının müşteri verilerine erişebileceği Coğrafi verileri denetlemez veya sınırlamaz. Benzer şekilde, diğer hizmetlerdeki müşteri verileri daha sonra Intune tümleştirildiğinde, kaynak müşteri verileri diğer hizmetin kendi Coğrafi taahhütlerine (varsa) bağlı olarak depolanmaya devam eder; yalnızca Intune tümleştirilmiş müşteri verilerinin kopyası Intune için belirtilen Coğrafi Bölgede depolanır.
+
+</details>
 
 ### <a name="what-are-the-considerations-for-microsoft-viva-data-locations"></a>Microsoft Viva veri konumları için dikkat edilmesi gerekenler nelerdir?
+<details><summary>Genişletmek için tıklayın</summary>
 
 - Viva Bağlantılar
-
-  - Pano, Kaynaklar ve masaüstü uygulamasının verileri SharePoint Online'da depolanır. 
-  
-  - Akış, SharePoint Online (Haberler), Stream (SharePoint Online'da bekleyenler) ve Yammer (Yammer'da bekleyenler bölümünde depolanır) içerik içerir.  
-  
+  - Pano, Kaynaklar ve masaüstü uygulamasının verileri SharePoint Online'da depolanır.
+  - Akış, SharePoint Online (Haberler), Stream (SharePoint Online'da bekleyenler) ve Yammer (Yammer'da bekleyenler bölümünde depolanır) içerik içerir.
 - Viva Analizler
-
   - Kişisel uygulamasının veri yerleşimi, kullanıcının posta kutusu konumunu temel alır.
-  
   - Yönetici/Öncü ve Gelişmiş için veri bölgesi, tek tek kullanıcılara değil kiracının birincil bölgesine göre belirlenir.
+
+</details>
 
 ## <a name="data-center-locations"></a>Veri Merkezi Konumları
 
@@ -128,7 +161,7 @@ Aşağıdaki tabloda çeşitli hizmetler için veri konumu tanımlenmektedir. Hi
 
 ### <a name="data-center-geographies"></a>Veri Merkezi Coğrafyaları
 
-Aşağıdaki küresel coğrafyalar bekleyen verileri depolayabilir. Müşteri verilerinin depolanabileceği konumlar değişebilir. 
+Aşağıdaki küresel coğrafyalar bekleyen verileri depolayabilir. Müşteri verilerinin depolanabileceği konumlar değişebilir.
 
 | Küresel Coğrafyalar | Müşteri verilerinin depolanabileceği konumlar |
 | --- | --- |
@@ -720,7 +753,6 @@ Yeni Microsoft 365 kiracıları, bu kiracının ilk aboneliğiyle ilişkili fatu
 | Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
-
 
 ## <a name="belarus"></a>Belarusça
 <details><summary>Genişletmek için tıklayın</summary><p>
@@ -1590,7 +1622,6 @@ Yeni Microsoft 365 kiracıları, bu kiracının ilk aboneliğiyle ilişkili fatu
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
-
 ## <a name="congo-brazzaville"></a>Kongo (Brazzaville)
 <details><summary>Genişletmek için tıklayın</summary><p>
 
@@ -1619,7 +1650,6 @@ Yeni Microsoft 365 kiracıları, bu kiracının ilk aboneliğiyle ilişkili fatu
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
-
 ## <a name="congo-kinshasa"></a>Kongo, (Kinshasa)
 <details><summary>Genişletmek için tıklayın</summary><p>
 
@@ -1647,7 +1677,6 @@ Yeni Microsoft 365 kiracıları, bu kiracının ilk aboneliğiyle ilişkili fatu
 | Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
-
 
 ## <a name="cook-islands"></a>Cook Adaları
 <details><summary>Genişletmek için tıklayın</summary><p>
@@ -2601,7 +2630,6 @@ Yeni Microsoft 365 kiracıları, bu kiracının ilk aboneliğiyle ilişkili fatu
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
-
 ## <a name="greenland"></a>Grönland
 <details><summary>Genişletmek için tıklayın</summary><p>
 
@@ -3077,7 +3105,6 @@ Yeni Microsoft 365 kiracıları, bu kiracının ilk aboneliğiyle ilişkili fatu
 | Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
-
 
 ## <a name="india"></a>Hindistan
 <details><summary>Genişletmek için tıklayın</summary><p>
@@ -3667,7 +3694,6 @@ Yeni Microsoft 365 kiracıları, bu kiracının ilk aboneliğiyle ilişkili fatu
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
-
 ## <a name="lesotho"></a>Lesotho
 <details><summary>Genişletmek için tıklayın</summary><p>
 
@@ -3695,7 +3721,6 @@ Yeni Microsoft 365 kiracıları, bu kiracının ilk aboneliğiyle ilişkili fatu
 | Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
-
 
 ## <a name="liberia"></a>Liberya
 <details><summary>Genişletmek için tıklayın</summary><p>
@@ -3752,7 +3777,6 @@ Yeni Microsoft 365 kiracıları, bu kiracının ilk aboneliğiyle ilişkili fatu
 | Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
-
 
 ## <a name="liechtenstein"></a>Liechtenstein
 <details><summary>Genişletmek için tıklayın</summary><p>
@@ -4454,7 +4478,6 @@ Yeni Microsoft 365 kiracıları, bu kiracının ilk aboneliğiyle ilişkili fatu
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
-
 ## <a name="nepal"></a>Nepal
 <details><summary>Genişletmek için tıklayın</summary><p>
 
@@ -4482,7 +4505,6 @@ Yeni Microsoft 365 kiracıları, bu kiracının ilk aboneliğiyle ilişkili fatu
 | Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
-
 
 ## <a name="netherlands"></a>Hollanda
 <details><summary>Genişletmek için tıklayın</summary><p>
@@ -4539,7 +4561,6 @@ Yeni Microsoft 365 kiracıları, bu kiracının ilk aboneliğiyle ilişkili fatu
 | Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
-
 
 ## <a name="new-caledonia"></a>Yeni Kaledonya
 <details><summary>Genişletmek için tıklayın</summary><p>
@@ -5273,7 +5294,6 @@ Yeni Microsoft 365 kiracıları, bu kiracının ilk aboneliğiyle ilişkili fatu
 ## <a name="russian-federation"></a>Rusya Federasyonu
 <details><summary>Genişletmek için tıklayın</summary><p>
 
-
 | Hizmet | Konum |
 | --- | --- |
 | Exchange Online | Küresel Coğrafya 1 – EMEA |
@@ -5302,7 +5322,6 @@ Yeni Microsoft 365 kiracıları, bu kiracının ilk aboneliğiyle ilişkili fatu
 ## <a name="rwanda"></a>Ruanda
 <details><summary>Genişletmek için tıklayın</summary><p>
 
-
 | Hizmet | Konum |
 | --- | --- |
 | Exchange Online | Küresel Coğrafya 1 – EMEA |
@@ -5330,7 +5349,6 @@ Yeni Microsoft 365 kiracıları, bu kiracının ilk aboneliğiyle ilişkili fatu
 
 ## <a name="saint-helena"></a>Saint Helena
 <details><summary>Genişletmek için tıklayın</summary><p>
-
 
 | Hizmet | Konum |
 | --- | --- |
@@ -5891,7 +5909,6 @@ Yeni Microsoft 365 kiracıları, bu kiracının ilk aboneliğiyle ilişkili fatu
 
 ## <a name="somalia"></a>Somali
 <details><summary>Genişletmek için tıklayın</summary><p>
-
 
 | Hizmet | Konum |
 | --- | --- |
@@ -6868,7 +6885,6 @@ Yeni Microsoft 365 kiracıları, bu kiracının ilk aboneliğiyle ilişkili fatu
 | Viva Analizler - Yalnızca 3. taraf İk verileriyle Yönetici/Lider | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
-
 
 ## <a name="vietnam"></a>Vietnam
 <details><summary>Genişletmek için tıklayın</summary><p>

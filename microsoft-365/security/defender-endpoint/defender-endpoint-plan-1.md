@@ -7,7 +7,6 @@ ms.author: deniseb
 manager: dansimp
 audience: ITPro
 ms.topic: overview
-ms.date: 01/19/2022
 ms.prod: m365-security
 ms.technology: mdep1
 ms.localizationpriority: medium
@@ -17,18 +16,18 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
 ms.custom: intro-overview
-ms.openlocfilehash: 774d54aee080fbe3d6f5576fb29c85d887717b70
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: ace1eae6ab668a34e4ceff676b9edf01196521dd
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64663522"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65872730"
 ---
 # <a name="overview-of-microsoft-defender-for-endpoint-plan-1"></a>Uç Nokta için Microsoft Defender Plan 1'e genel bakış
 
 **Uygulandığı öğe**
 
-- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 Uç Nokta için Microsoft Defender, sizinki gibi kuruluşların gelişmiş tehditleri önlemesine, algılamasına, araştırmasına ve yanıtlamasına yardımcı olmak için tasarlanmış bir kurumsal uç nokta güvenlik platformudur. Uç Nokta için Defender'ın iki planda kullanıma sunulduğunu duyurmaktan mutluluk duyuyoruz: 
 
@@ -149,7 +148,7 @@ Ağ güvenlik duvarı koruması ile, hangi ağ trafiğinin kuruluşunuzun cihazl
 - Hassas verileri ve fikri mülkiyeti koruma
 - Güvenlik yatırımınızı genişletme
 
-Daha fazla bilgi edinmek için bkz[. Gelişmiş güvenlikle Windows Defender Güvenlik Duvarı](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security).
+Daha fazla bilgi edinmek için bkz. [gelişmiş güvenlikle Windows Defender Güvenlik Duvarı](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security).
 
 ### <a name="application-control"></a>Uygulama denetimi
 
@@ -193,7 +192,10 @@ Daha fazla bilgi için bkz [. Uç Nokta için Defender API'leri](management-apis
 - Windows 7 (ESU gereklidir)
 - Windows 8.1
 - Windows 10, sürüm 1709 veya üzeri
-- macOS: 11.5 (Big Sur), 10.15.7 (Catalina) veya 10.14.6 (Mojave)
+- Windows 10 Enterprise
+- Windows 10 Enterprise LTSC 2016 (veya üzeri)](/windows/whats-new/ltsc/)
+- Windows 10 Enterprise IoT
+- macOS (en son üç sürüm desteklenir)
 - iOS
 - Android işletim sistemi
 

@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: troubleshooting
 ms.technology: mde
-ms.openlocfilehash: 958c58fab875ce86b0a3290450e2cf17c4b75a44
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: 4f309c98b7278dbeb062deacf49553b7e73f58da
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65320507"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65873798"
 ---
 # <a name="troubleshoot-onboarding-issues-related-to-security-management-for-microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender için Güvenlik Yönetimi ile ilgili ekleme sorunlarını giderme
 
@@ -50,7 +50,7 @@ Cihazları Azure Active Directory başarıyla kaydetmek için aşağıdakilerden
 
 - Bilgisayarlar etki alanı denetleyicisiyle kimlik doğrulaması yapabilir
 - Bilgisayarlar, kuruluşunuzun ağı içinden aşağıdaki Microsoft kaynaklarına erişebilir:
-  - https://enterpriseregistration.windows.net
+  - /windows/iot/iot-enterprise/commercialization/licensing
   - https://login.microsoftonline.com
   - https://device.login.microsoftonline.com
 - Azure AD bağlantısı, bilgisayar nesnelerini eşitlemek için yapılandırılır. Varsayılan olarak, bilgisayar OU'ları Azure AD bağlanma eşitleme kapsamındadır. Bilgisayar nesneleri belirli kuruluş birimlerine (OU) aitse, OU'ları Azure AD Bağlan eşitlenecek şekilde yapılandırın. Azure AD Bağlan kullanarak bilgisayar nesnelerini eşitleme hakkında daha fazla bilgi edinmek için bkz[. Kuruluş birimi tabanlı filtreleme](/azure/active-directory/hybrid/how-to-connect-sync-configure-filtering#organizational-unitbased-filtering).
@@ -121,7 +121,7 @@ Aşağıdaki tabloda, hatayı gidermek için nelerin denenmesi/iade edilmesi ger
 |Hata Kodu|Kayıt Durumu|Yönetici Eylemleri|
 |---|---|---|
 |`5-7`, `9`, `11-12`, `26-33`|Genel hata|Cihaz başarıyla Uç Nokta için Microsoft Defender eklendi. Ancak, güvenlik yapılandırması yönetim akışında bir hata oluştu. Bunun nedeni cihazın [Uç Nokta için Microsoft Defender yönetim kanalı önkoşullarını](security-config-management.md) karşılamaması olabilir. [İstemci Çözümleyicisi'nin](https://aka.ms/BetaMDEAnalyzer) cihazda çalıştırılması sorunun kök nedenini belirlemeye yardımcı olabilir. Bu işe yaramazsa lütfen desteğe başvurun.|
-| `8`, `44` | Microsoft Endpoint Manager Yapılandırması sorunu | Cihaz başarıyla Uç Nokta için Microsoft Defender eklendi. Ancak Microsoft Endpoint Manager yönetim merkezi aracılığıyla Uç Nokta için Microsoft Defender Güvenlik Yapılandırmasına izin verecek şekilde yapılandırılmamıştır. [Microsoft Endpoint Manager kiracısının yapılandırıldığından ve özelliğin açık olduğundan](/mem/intune/protect/mde-security-integration#configure-your-tenant-to-support-microsoft-defender-for-endpoint-security-configuration-management) emin olun.|
+| `8`, `44` | Microsoft Endpoint Manager Yapılandırması sorunu | Cihaz başarıyla Uç Nokta için Microsoft Defender eklendi. Ancak Microsoft Endpoint Manager Uç Nokta için Microsoft Defender Güvenlik Yapılandırmasına izin vermek için Yönetici Merkezi aracılığıyla yapılandırılmamıştır. [Microsoft Endpoint Manager kiracısının yapılandırıldığından ve özelliğin açık olduğundan](/mem/intune/protect/mde-security-integration#configure-your-tenant-to-support-microsoft-defender-for-endpoint-security-configuration-management) emin olun.|
 |`13-14`,`20`,`24`,`25`|Bağlantı sorunu|Cihaz başarıyla Uç Nokta için Microsoft Defender eklendi. Ancak, güvenlik yapılandırması yönetim akışında bir bağlantı sorunundan kaynaklanabilecek bir hata oluştu. [Azure Active Directory ve Microsoft Endpoint Manager uç noktalarının](security-config-management.md#connectivity-requirements) güvenlik duvarınızda açıldığını doğrulayın.|
 |`10`,`42`|Genel Karma birleştirme hatası|Cihaz başarıyla Uç Nokta için Microsoft Defender eklendi. Ancak, güvenlik yapılandırma yönetimi akışında bir hata oluştu ve işletim sistemi karma birleştirme gerçekleştiremedi. İşletim sistemi düzeyinde karma birleştirme hatalarını gidermek için [karma Azure Active Directory katılmış cihazlarda](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current) sorun giderme'yi kullanın.|
 |`15`|Kiracı uyuşmazlığı|Cihaz başarıyla Uç Nokta için Microsoft Defender eklendi. Ancak, Uç Nokta için Microsoft Defender kiracı kimliğiniz Azure Active Directory kiracı kimliğiniz ile eşleşmediğinden güvenlik yapılandırma yönetimi akışında bir hata oluştu. Uç Nokta için Defender kiracınızdaki Azure Active Directory kiracı kimliğinin, etki alanınızın SCP girişindeki kiracı kimliğiyle eşleştiğinden emin olun. Daha fazla ayrıntı için Uç Nokta için Microsoft Defender [için Güvenlik Yönetimi ile ilgili ekleme sorunlarını giderin](troubleshoot-security-config-mgt.md).|

@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: e5bf4e09224961d9a6cb0f0dc076b672fd20aabc
-ms.sourcegitcommit: 344a254ca268a2f65cf199d9158a47e08861ffa5
+ms.openlocfilehash: 78cb81b1a0da9f0d1965dab7c209067a4e8d02e6
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "65368187"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65874184"
 ---
 # <a name="device-inventory"></a>Cihaz envanteri
 
@@ -28,12 +28,12 @@ ms.locfileid: "65368187"
 
 **Şunlar için geçerlidir:**
 
-- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender Güvenlik Açığı Yönetimi](../defender-vulnerability-management/index.yml)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Defender'ı deneyimlemek mi istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-machinesview-abovefoldlink)
+> Uç nokta için Defender'i deneyimlemek ister misiniz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-machinesview-abovefoldlink)
 
 **Cihaz envanteri**, ağınızdaki uyarıların oluşturulduğu cihazların listesini gösterir. Kuyruk varsayılan olarak son 30 gün içinde görülen cihazları görüntüler.
 
@@ -70,7 +70,7 @@ Uç Nokta için Microsoft Defender ekleme işlemi sırasında, MDE'ye eklenen ci
 
 ## <a name="navigate-to-the-device-inventory-page"></a>Cihaz envanteri sayfasına gidin
 
-[Microsoft 365 Defender portalındaki](/defender/microsoft-365-security-center-mde) **Uç Noktalar** gezinti **menüsünden Cihaz envanteri'ni** seçerek cihaz envanteri sayfasına erişin.
+[Microsoft 365 Defender portalındaki](/microsoft-365/security/defender-business/mdb-get-started) **Uç Noktalar** gezinti **menüsünden Cihaz envanteri'ni** seçerek cihaz envanteri sayfasına erişin.
 
 ## <a name="device-inventory-overview"></a>Cihaz envanteri genel bakış
 
@@ -110,7 +110,7 @@ Her sekmenin en üstündeki sayılar geçerli görünüme göre güncelleştiril
 
 ## <a name="use-filters-to-customize-the-device-inventory-views"></a>Cihaz envanter görünümlerini özelleştirmek için filtreleri kullanma
 
-Filtre | Açıklama
+Filtrele | Açıklama
 :---|:---
 **Risk düzeyi** </br> | Risk düzeyi, cihazdaki etkin uyarıların türleri ve önem derecesi de dahil olmak üzere faktörlerin bir bileşimine göre cihazın genel risk değerlendirmesini yansıtır. Etkin uyarıları çözümleme, düzeltme etkinliklerini onaylama ve sonraki uyarıların gizlenmesi risk düzeyini düşürebilir.
 **Maruz kalma düzeyi** </br> | Maruz kalma düzeyi, bekleyen güvenlik önerilerinin kümülatif etkisine bağlı olarak cihazın geçerli maruziyetini yansıtır. Olası düzeyler düşük, orta ve yüksektir. Düşük maruz kalma, cihazlarınızın yararlanmaya karşı daha az savunmasız olduğu anlamına gelir. </br> </br> Maruz kalma düzeyinde "Kullanılabilir veri yok" ifadesi varsa, bunun olmasının birkaç nedeni vardır:</br>- Cihaz 30 günden uzun süre raporlamayı durdurdu. Bu durumda etkin değil olarak kabul edilir ve açığa çıkarma hesap edilmez.</br>- Cihaz işletim sistemi desteklenmiyor - [Uç Nokta için Microsoft Defender için en düşük gereksinimlere](/microsoft-365/security/defender-endpoint/minimum-requirements) bakın.</br>- Eski aracılı cihaz (olası değildir).

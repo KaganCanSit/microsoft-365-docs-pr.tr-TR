@@ -18,12 +18,12 @@ ms.technology: mde
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: d2ad08c91d8c28163eccf239f9a7266b15a44927
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: ef9793a1bcbf09f6b7a1640d9213522cdb741891
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65418346"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65872280"
 ---
 # <a name="manage-microsoft-defender-antivirus-updates-and-apply-baselines"></a>Microsoft Defender Virüsten Koruma güncelleştirmelerini yönetme ve temelleri uygulama
 
@@ -31,7 +31,7 @@ ms.locfileid: "65418346"
 > Mart 2022 Microsoft Defender altyapı güncelleştirmesini (**1.1.19100.5**) uygulayan müşteriler yüksek kaynak kullanımıyla (CPU ve/veya bellek) karşılaşmış olabilir. Microsoft, önceki sürümde sunulan hataları gideren bir güncelleştirme (**1.1.19200.5**) yayımladı. Müşterilerin Virüsten Koruma Altyapısı'nın bu yeni altyapı derlemesine (**1.1.19200.5**) güncelleştirmeleri önerilir. Performans sorunlarının tamamen düzeltildiğinden emin olmak için, güncelleştirme uygulandıktan sonra makinelerin yeniden başlatılması önerilir. [Bkz. Aylık platform ve altyapı sürümleri](#monthly-platform-and-engine-versions) (bu makalede).
 
 **Şunlar için geçerlidir:**
-- [Uç Nokta için Microsoft Defender Planları 1 ve 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1 ve 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Virüsten Koruma
 
 **Platform**
@@ -297,7 +297,7 @@ Bilinen sorun yok
 
 ### <a name="whats-new"></a>Yenilikler
 - Windows Taşınabilir Cihazlar için cihaz denetimi desteği eklendi
-- İstenmeyebilecek uygulamalar (PUA) koruması tüketiciler için varsayılan olarak açıktır (Bkz. [İstenmeyebilecek uygulamalar varsayılan olarak engellenir](https://support.microsoft.com/windows/potentially-unwanted-apps-will-be-blocked-by-default-b9f53cb9-7f1e-40bb-8c6b-a17e0ab6289e))
+- İstenmeyebilecek uygulamalar (PUA) koruması tüketiciler için varsayılan olarak açıktır (Bkz[. İstenmeyebilecek uygulamaları Microsoft Defender Virüsten Koruma ile engelleme](/microsoft-365/security/defender-endpoint/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus).)
 - grup ilkesi Nesne tarafından yönetilen sistemler için zamanlanmış taramalar, kullanıcı tarafından yapılandırılan tarama süresine uygun olacaktır
 - Davranış izleme altyapısında iyileştirmeler
 
@@ -459,7 +459,7 @@ Bilinen sorun yok
 
 ### <a name="whats-new"></a>Yenilikler
 
-- Karantinadaki dosyaları geri yüklemek için yönetici izinleri gereklidir
+- Karantinadaki dosyaları geri yüklemek için Yönetici izinleri gereklidir
 - XML biçimlendirilmiş olaylar artık destekleniyor
 - Dışlama birleştirmelerini yoksaymak için CSP desteği
 - Yeni yönetim arabirimleri:
@@ -1032,7 +1032,7 @@ Daha fazla bilgi için bkz. [Windows işletim sistemi yükleme görüntüleri i�
 | [EDR Algılayıcısı için Uç Nokta için Microsoft Defender güncelleştirme](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac) | 2021'de yayımlanan yeni Uç Nokta için Microsoft Defender birleşik çözüm paketinde bulunan EDR algılayıcısını (MsSense.exe) güncelleştirebilirsiniz.   |
 
 > [!TIP]
-> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> Diğer platformlar için Antivirüs ile ilgili bilgi arıyorsanız bkz:
 > - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
 > - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)

@@ -1,9 +1,9 @@
 ---
 title: Temel verileri yeni Microsoft 365 veri merkezi coğrafi bölgelerine taşıma
-ms.author: andyber
-author: andybergen
+ms.author: kvice
+author: kelleyvice-msft
 manager: scotv
-ms.date: 11/16/2021
+ms.date: 06/02/2022
 audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -15,18 +15,19 @@ f1.keywords:
 - NOCSH
 description: Yeni Office 365 veri merkezi coğrafi alanları ve çekirdek verilerinizin yeni bir coğrafi bölgeye taşınmasını istemek için veri yerleşimi seçeneğini kullanmayı öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: be42954aaa0de3f1c5af851915070e7f27c4e850
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: c70d59edba9cd35710b315adc8f93d6139fd2595
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65101149"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65873588"
 ---
 # <a name="moving-core-data-to-new-microsoft-365-datacenter-geos"></a>Temel verileri yeni Microsoft 365 veri merkezi coğrafi bölgelerine taşıma
 
-Microsoft 365 hizmetleri için yeni veri merkezi coğrafi alanları açmaya devam ediyoruz. Bu yeni veri merkezi coğrafi alanları, devam eden müşteri talebimizi ve kullanım büyümemizi desteklemek için kapasite ve işlem kaynakları ekler. Ayrıca yeni veri merkezi coğrafi bölgeleri, temel müşteri verileri için coğrafi veri yerleşimi sunar. 
+Microsoft 365 hizmetleri için yeni veri merkezi coğrafi alanları açmaya devam ediyoruz. Bu yeni veri merkezi coğrafi alanları, devam eden müşteri talebimizi ve kullanım büyümemizi desteklemek için kapasite ve işlem kaynakları ekler. Ayrıca yeni veri merkezi coğrafi bölgeleri, temel müşteri verileri için coğrafi veri yerleşimi sunar.
 
-Temel müşteri verileri, aşağıdakiler de dahil olmak üzere müşteri verilerinin bir alt kümesini ifade eden bir terimdir: 
+Temel müşteri verileri, aşağıdakiler de dahil olmak üzere müşteri verilerinin bir alt kümesini ifade eden bir terimdir:
+
 - posta kutusu içeriğini (e-posta gövdesi, takvim girdileri ve e-posta eklerinin içeriği) Exchange Online
 - çevrimiçi site içeriğini ve bu sitede depolanan dosyaları SharePoint
 - OneDrive İş karşıya yüklenen dosyalar
@@ -53,25 +54,25 @@ Temel müşteri verileri, aşağıdakiler de dahil olmak üzere müşteri verile
 
 1 Ekim 2020 itibarıyla kiracıya dahil Office 365 Eğitim aboneliği olan müşteriler geçiş için uygun değildir.
 
-Tüm veri merkezi coğrafi bölgelerinin, veri merkezlerinin ve bekleyen müşteri verilerinin konumunun tam listesi [, etkileşimli veri merkezi haritalarının](https://office.com/datamaps) bir parçası olarak kullanılabilir. 
+Tüm veri merkezi coğrafi bölgelerinin, veri merkezlerinin ve bekleyen müşteri verilerinin konumunun tam listesi [, etkileşimli veri merkezi haritalarının](https://office.com/datamaps) bir parçası olarak kullanılabilir.
   
 ## <a name="data-residency-option"></a>Veri yerleşimi seçeneği
 
 Yukarıdaki tabloda listelenen veri merkezi coğrafi bölgelerinin kapsamına giren Microsoft 365 müşterileri uygun hale getirmek için bir veri yerleşimi seçeneği sunuyoruz. Bu seçenekle, veri yerleşimi gereksinimleri olan uygun müşteriler, bekleyen kuruluşlarının temel müşteri verilerinin yeni veri merkezi coğrafi bölgelerine geçirilmesini isteyebilir.  Microsoft, kayıt penceresi sırasında geçiş isteyen tüm uygun müşterilere taahhüt edilen bir son tarih sunar.  Veri merkezi [coğrafi bölgenizin](request-your-data-move.md) açık kayıt penceresi ve programa kaydolma adımları hakkında daha fazla bilgi için Verilerinizi taşıma isteğinde bulunma sayfasını gözden geçirin.  Veri taşıma işleminin tamamlanması, istek süresinin sona ermesi 24 aya kadar sürebilir.
 
 Yeni veri merkezi coğrafi konumuyla benzersiz özellikler, özellikler veya uyumluluk sertifikaları sunmayız.
-    
-Genel olarak çalıştırılan ve otomatikleştirilmiş bir ortamda veri taşıma gerçekleştirmemiz gereken karmaşıklık, hassasiyet ve ölçek, kiracınız veya başka bir tek kiracı için bir veri taşıma işleminin tamamlanması beklendiğinde paylaşmamızı engeller. Müşteriler, veri taşıma işlemi tamamlandığında katılımcı hizmet başına İleti Merkezi'nde bir onay alır. 
-    
-Veri taşıma, son kullanıcılar üzerinde en az etkiye sahip bir arka uç hizmeti işlemidir. Etkilenebilen özellikler [, Verilerinizi taşıma sırasında ve sonrasında](during-and-after-your-data-move.md) sayfasında listelenir. Kullanılabilirlik için [Microsoft Online Services Hizmet Düzeyi Sözleşmesi'ne (SLA)](https://go.microsoft.com/fwlink/p/?LinkId=523897) bağlıyız, dolayısıyla taşıma sırasında müşterilerin hazırlaması veya izlemesi gereken hiçbir şey yoktur. Gerekirse herhangi bir hizmet bakımı bildirimi yapılır. 
+
+Genel olarak çalıştırılan ve otomatikleştirilmiş bir ortamda veri taşıma gerçekleştirmemiz gereken karmaşıklık, hassasiyet ve ölçek, kiracınız veya başka bir tek kiracı için bir veri taşıma işleminin tamamlanması beklendiğinde paylaşmamızı engeller. Müşteriler, veri taşıma işlemi tamamlandığında katılımcı hizmet başına İleti Merkezi'nde bir onay alır.
+
+Veri taşıma, son kullanıcılar üzerinde en az etkiye sahip bir arka uç hizmeti işlemidir. Etkilenebilen özellikler [, Verilerinizi taşıma sırasında ve sonrasında](during-and-after-your-data-move.md) sayfasında listelenir. Kullanılabilirlik için [Microsoft Online Services Hizmet Düzeyi Sözleşmesi'ne (SLA)](https://go.microsoft.com/fwlink/p/?LinkId=523897) bağlıyız, dolayısıyla taşıma sırasında müşterilerin hazırlaması veya izlemesi gereken hiçbir şey yoktur. Gerekirse herhangi bir hizmet bakımı bildirimi yapılır.
 
 Yeni veri merkezine taşınan veriler müşteriye ek ücret ödemeden tamamlanır.
-    
-## <a name="related-topics"></a>İlgili konular 
- 
+
+## <a name="related-topics"></a>İlgili konular
+
 [Veri taşıma isteğinde bulunma](request-your-data-move.md)
-    
-[Veri taşıma genel SSS](data-move-faq.yml)
+
+[Veri taşıma genel SSS](data-move-faq.md)
   
 [Microsoft Dynamics CRM Online için yeni veri merkezi coğrafi bölgeleri](/power-platform/admin/new-datacenter-regions)
   

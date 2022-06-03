@@ -16,12 +16,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 369c6a198035418a5c16e2a72d84c8dcfc88be2f
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 3452f36068facc92885047184f7e00828f569cbc
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64666448"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65873016"
 ---
 # <a name="troubleshoot-performance-issues-for-microsoft-defender-for-endpoint-on-linux"></a>Linux'ta Uç Nokta için Microsoft Defender performans sorunlarını giderme
 
@@ -32,7 +32,7 @@ ms.locfileid: "64666448"
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Defender'ı deneyimlemek mi istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
+> Uç nokta için Defender'i deneyimlemek ister misiniz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
 Bu belgede, mevcut kaynak yetersizliklerini ve sistemi bu tür durumlara dönüştüren işlemleri anlamak ve azaltmak için kullanılabilir tanılama araçlarını kullanarak Linux'ta Uç Nokta için Defender ile ilgili performans sorunlarının nasıl daraltılacağına ilişkin yönergeler sağlanır. Performans sorunları, sistemdeki kaynak kullanımı profiline bağlı olarak bir veya daha fazla donanım alt sistemindeki performans sorunlarına neden olur. Bazen uygulamalar disk G/Ç kaynaklarına duyarlıdır ve daha fazla CPU kapasitesine ihtiyaç duyar ve bazen bazı yapılandırmalar sürdürülebilir değildir ve çok fazla yeni işlem tetikleyebilir ve çok fazla dosya tanımlayıcısı açabilir.
 
@@ -190,7 +190,7 @@ Uç Nokta için Microsoft Defender İstemci Çözümleyicisi (MDECA), Linux'ta [
    ![Komut satırı örneğinin resmi.](images/4ca188f6c457e335abe3c9ad3eddda26.png)
 
 > [!NOTE]
-> - Çözümleyicinin sonuç çıktısını oluşturması için 'lxml' gerekir. Yüklü değilse çözümleyici aşağıdaki Python paketleri için resmi depodan getirmeye çalışır: <https://files.pythonhosted.org/packages/\*/lxml\*.whl>
+> - Çözümleyicinin sonuç çıktısını oluşturması için 'lxml' gerekir. Yüklü değilse çözümleyici aşağıdaki Python paketleri için resmi depodan getirmeye çalışır: <https://pypi.org/search/?q=lxml>
 > 
 > - Ayrıca aracın şu anda Python sürüm 3 veya üzerinin yüklü olması gerekir.
 >
@@ -243,9 +243,9 @@ Uç Nokta için Microsoft Defender İstemci Çözümleyicisi (MDECA), Linux'ta [
 
   Açıklama: ÇÖZÜMleyici tarafından HTML raporu oluştururken kullanılan ek XML dosyası.
 
-- Auditd_info.txt
+- Audited_info.txt
 
-  Açıklama: [Linux](/windows/security/threat-protection/microsoft-defender-atp/linux-support-events) işletim sistemi için denetlenen hizmet ve ilgili bileşenlerle ilgili ayrıntılar
+  Açıklama: [Linux](/microsoft-365/security/defender-endpoint/linux-resources) işletim sistemi için denetlenen hizmet ve ilgili bileşenlerle ilgili ayrıntılar
 
 - perf_benchmark.tar.gz
 

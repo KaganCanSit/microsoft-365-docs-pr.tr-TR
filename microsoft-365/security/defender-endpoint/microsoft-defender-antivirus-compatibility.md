@@ -17,12 +17,12 @@ ms.technology: mde
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: 5a38ed6fbdcebf54dcd8bc34458733b5edefb850
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: 2000d10918c7e351c7e4bedfe8281b6a011cca9d
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65623151"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65872434"
 ---
 # <a name="microsoft-defender-antivirus-compatibility-with-other-security-products"></a>Microsoft Defender Virüsten Koruma diğer güvenlik ürünleriyle uyumluluk
 
@@ -49,7 +49,7 @@ Bu makalede, Uç Nokta için Defender ile ve Uç Nokta için Defender olmadan Mi
 > [!IMPORTANT]
 > - Microsoft Defender Virüsten Koruma Windows 10 ve 11, Windows Server 2022, Windows Server 2019, Windows Server, sürüm 1803 veya üzeri ve Windows Server 2016 çalıştıran cihazlarda kullanılabilir. 
 > - Microsoft Defender Virüsten Koruma, [modern, birleşik çözüm](/microsoft-365/security/defender-endpoint/configure-server-endpoints) kullanılarak eklendiğinde Windows Server 2012 R2'de de kullanılabilir.
-> - Windows 8.1'da, kuruluş düzeyinde uç nokta virüsten koruma [System Center Endpoint Protection](/previous-versions/system-center/system-center-2012-R2/hh508760(v=technet.10) olarak sunulur ve bu koruma Microsoft Endpoint Configuration Manager.
+> - Windows 8.1'da, Microsoft Endpoint Configuration Manager aracılığıyla yönetilen [System Center Endpoint Protection](/previous-versions/system-center/system-center-2012-R2/hh508760(v=technet.10)) olarak kurumsal düzeyde uç nokta virüsten koruma sunulur.
 > - Windows Defender kurumsal düzeyde yönetim sağlamasa da [Windows Defender Windows 8.1 üzerindeki tüketici cihazları](/previous-versions/windows/it-pro/windows-8.1-and-8/dn344918(v=ws.11)#BKMK_WindowsDefender) için de sunulur.
 
 ## <a name="antivirus-protection-without-defender-for-endpoint"></a>Uç Nokta için Defender olmadan virüsten koruma
@@ -65,8 +65,8 @@ Aşağıdaki tabloda neler bekleyebileceğiniz özetlenmiştir:
 |:---|:---|:---|
 |Windows 10 <br/> Windows 11|Microsoft Defender Virüsten Koruma|Etkin mod|
 |Windows 10 <br/> Windows 11|Microsoft dışı bir virüsten koruma/kötü amaçlı yazılımdan koruma çözümü|Devre dışı modu (otomatik olarak gerçekleşir)|
-|Windows Server 2022 <br/> Windows Server 2019<br/> Windows Server, sürüm 1803 veya üzeri <br/> Windows Server 2016 |Microsoft Defender Virüsten Koruma|Etkin mod|
-|Windows Server 2022<br/>Windows Server 2019<br/>Windows Server, sürüm 1803 veya üzeri <br/> Windows Server 2016  |Microsoft dışı bir virüsten koruma/kötü amaçlı yazılımdan koruma çözümü|Devre dışı (el ile ayarlama) <sup>[[1](#fn1)]</sup>|
+|Windows Server 2022 <br/> Windows Server 2019<br/> Windows Server, sürüm 1803 veya üzeri <br/> Windows Server 2016 <br/> Windows Server 2012 R2 |Microsoft Defender Virüsten Koruma|Etkin mod|
+|Windows Server 2022<br/>Windows Server 2019<br/>Windows Server, sürüm 1803 veya üzeri <br/> Windows Server 2016 |Microsoft dışı bir virüsten koruma/kötü amaçlı yazılımdan koruma çözümü|Devre dışı (el ile ayarlama) <sup>[[1](#fn1)]</sup>|
 
 (<a id="fn1">1</a>) Windows Server'da, Microsoft dışı bir virüsten koruma ürünü çalıştırıyorsanız, çakışmayı önlemek için Microsoft Defender Virüsten Koruma kaldırabilirsiniz. Cihaz Uç Nokta için Microsoft Defender ekliyse pasif modda Microsoft Defender Virüsten Koruma kullanabilirsiniz (aşağıya bakın).
 
