@@ -19,12 +19,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Kuruluşunuzun verilerini yönetmeye başlamaya hazırsınız, ancak nereden başlayacağınızdan emin değil misiniz? Başlamak için bazı açıklayıcı yönergeleri okuyun.
-ms.openlocfilehash: 95ce0286d5ec45b5dabcbd2447bd52821f547caf
-ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
+ms.openlocfilehash: 6fe80e32096fc4394ba15786ef378f4b7997af2b
+ms.sourcegitcommit: 5fe7f2954a89406245416fc1a218cf4bf19abb85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2022
-ms.locfileid: "65772740"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65864470"
 ---
 # <a name="get-started-with-data-lifecycle-management"></a>Veri yaşam döngüsü yönetimini kullanmaya başlama
 
@@ -95,7 +95,7 @@ Tek tek öğelerin veri yönetimini gerektiren bir senaryonuz varsa, [kayıt yö
 
 Microsoft 365 saklamayı desteklemek için son kullanıcı belgeleri hakkında bilgi için aşağıdaki bölüme bakın.
 
-Etkin olmayan posta kutuları ve PST dosyalarının içeri aktarılması için veri yaşam döngüsü yönetimi özellikleri son kullanıcı belgeleri gerektirmez çünkü bunlar yalnızca yönetici işlemleridir. Bu özelliği etkinleştirdikten sonra kullanıcıların Outlook arşiv posta kutularını anlamasına ve bunlarla etkileşim kurmasına yardımcı olmak için bkz. [Çevrimiçi arşiv posta kutularıyla e-posta depolama alanını yönetme](https://prod.support.services.microsoft.com/en-us/office/manage-email-storage-with-online-archive-mailboxes-1cae7d17-7813-4fe8-8ca2-9a5494e9a721).
+Etkin olmayan posta kutuları ve PST dosyalarının içeri aktarılması için veri yaşam döngüsü yönetimi özellikleri son kullanıcı belgeleri gerektirmez çünkü bunlar yalnızca yönetici işlemleridir. Bu özelliği etkinleştirdikten sonra kullanıcıların Outlook arşiv posta kutularını anlamasına ve bunlarla etkileşim kurmasına yardımcı olmak için bkz. [Çevrimiçi arşiv posta kutularıyla e-posta depolama alanını yönetme](https://support.microsoft.com/office/manage-email-storage-with-online-archive-mailboxes-1cae7d17-7813-4fe8-8ca2-9a5494e9a721).
 
 ### <a name="end-user-documentation-for-retention-and-deletion"></a>Saklama ve silme için son kullanıcı belgeleri
 

@@ -22,12 +22,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 description: Bir kullanıcıya DLP ilkesiyle çakişen içerikle çalıştığını bildirmek için veri kaybı önleme (DLP) ilkesine ilke ipucu eklemeyi öğrenin.
-ms.openlocfilehash: af3dd2181c5bd8865f02755ba4d17f1feb0514d2
-ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
+ms.openlocfilehash: 13387890ca1096115c5c933627ae674aaad15581
+ms.sourcegitcommit: 1fa0b15f86470c49dddf0d6de59d553a38ae259b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65669550"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65863640"
 ---
 # <a name="send-email-notifications-and-show-policy-tips-for-dlp-policies"></a>DLP ilkeleri için e-posta bildirimleri gönderme ve ilke ipuçlarını gösterme
 
@@ -53,7 +53,7 @@ DLP ilkesi oluşturduğunuzda, kullanıcı bildirimlerini şu şekilde yapıland
 
 DLP ilkesi oluşturduğunuzda **Kullanıcı bildirimlerini** etkinleştirebilirsiniz. Kullanıcı bildirimleri etkinleştirildiğinde Microsoft 365 hem e-posta bildirimlerini hem de ilke ipuçlarını gönderir. Bildirim e-postalarının kime gönderileceğini, e-posta metnini ve ilke ipucu metnini özelleştirebilirsiniz.
 
-1. [https://(](https://compliance.microsoft.com/permissionshttps://()https://compliance.microsoft.com/permissions) öğesine gidin.
+1. [Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com/permissions) gidin.
 
 2. İş veya okul hesabınızı kullanarak oturum açın.
 
@@ -243,7 +243,10 @@ Bir e-postaya hassas bilgiler eklediğinizde, hassas bilgilerin eklenmesiyle ilk
 - İçerik içeriği
 - İçerik paylaşılıyor
 
-Özel durumlar koşul olarak kabul edilir ve bu koşulların tümü, içerikle eşleşecekleri ve içerik üzerinde koruyucu eylemler uygulayacakları Outlook çalışır. Ancak kullanıcılara ilke ipuçlarının gösterilmesi henüz desteklenmiyor. Ayrıca Outlook, dinamik dağıtım grubuna uygulanan bir DLP ilkesi için ilke ipuçlarının gösterilmesini desteklemez.
+Özel durumlar koşul olarak kabul edilir ve bu koşulların tümü, içerikle eşleşecekleri ve içerik üzerinde koruyucu eylemler uygulayacakları Outlook çalışır. Ancak kullanıcılara ilke ipuçlarının gösterilmesi henüz desteklenmiyor. 
+
+> [!NOTE]
+> Outlook, dinamik dağıtım grubuna veya e-posta etkin olmayan güvenlik gruplarına uygulanan DLP poli'leri için ilke ipuçlarının gösterilmesini desteklemez. 
 
 ### <a name="policy-tips-in-the-exchange-admin-center-vs-the-microsoft-purview-compliance-portal"></a>Exchange yönetim merkezinde ve Microsoft Purview Uyumluluk portalında ilke ipuçları
 

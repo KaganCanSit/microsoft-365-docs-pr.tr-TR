@@ -19,12 +19,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Eğitilebilir sınıflandırıcılar, etiketleme veya ilke uygulamasına bakılması için pozitif ve negatif örnekler vererek çeşitli içerik türlerini tanıyabilir.
-ms.openlocfilehash: a95c74894fd1ab3f9e3f9dd1f398d60afdc597d0
-ms.sourcegitcommit: c4924bcad6648fae279076cafa505fae1194924a
+ms.openlocfilehash: f99e9e66f1dae9459f28ba59ca9f197d78ab8bad
+ms.sourcegitcommit: 5fe7f2954a89406245416fc1a218cf4bf19abb85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2022
-ms.locfileid: "65625809"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65864550"
 ---
 # <a name="learn-about-trainable-classifiers"></a>Eğitilebilir sınıflandırıcılar hakkında daha fazla bilgi edinme
 
@@ -73,9 +73,6 @@ Duyarlılık etiketleri sınıflandırıcıları koşul olarak kullanabilir. Bkz
 
 Microsoft 365 önceden eğitilmiş birden çok sınıflandırıcı ile birlikte gelir:
 
-> [!CAUTION]
-> Çok sayıda hatalı pozitif sonuç ürettiğinden **, Rahatsız Edici Dil** önceden eğitilmiş sınıflandırıcıyı kullanım dışı bırakıyoruz. Kullanmayın ve şu anda kullanıyorsanız, iş süreçlerinizi bu işlemden çıkarmanız gerekir. Bunun yerine Önceden eğitilmiş **Tehdit**, **Küfür** ve **Taciz** sınıflandırıcılarını kullanmanızı öneririz.
-
 - **Sözleşmeler**: İfşa etmeme sözleşmeleri, iş beyanları, kredi ve kira sözleşmeleri, istihdam ve rekabet dışı sözleşmeler gibi yasal sözleşmelerle ilgili içeriği algılar. .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml dosyalarındaki içeriği algılar.
 
 - **Özgeçmişler**: bir başvuru sahibinin kişisel, eğitim, mesleki nitelikleri, iş deneyimi ve diğer kişisel tanımlayıcı bilgilerinin metinsel hesapları olan docx, .pdf, .rtf, .txt öğelerini algılar
@@ -108,8 +105,8 @@ Microsoft 365 önceden eğitilmiş birden çok sınıflandırıcı ile birlikte 
 
 - **Kaynak Kodu**: GitHub üzerinde kullanılan ilk 25 bilgisayar programlama dilinde yazılmış bir dizi yönerge ve deyim içeren öğeleri algılar: ActionScript, C, C#, C++, Clojure, CoffeeScript, Go, Haskell, Java, JavaScript, Lua, MATLAB, Objective-C, Perl, PHP, Python, R, Ruby, Scala, Shell, Swift, TeX, Vim Script.
 
-> [!NOTE]
-> Kaynak Kodu, metnin büyük kısmının kaynak kodu olduğunu algılamak için eğitilir. Düz metinle kesişen kaynak kodu metnini algılamaz.
+    > [!NOTE]
+    > Kaynak Kodu, metnin büyük kısmının kaynak kodu olduğunu algılamak için eğitilir. Düz metinle kesişen kaynak kodu metnini algılamaz.
 
 - **Vergi: Vergi** planlaması, vergi formları, vergi dosyalama, vergi düzenlemeleri gibi Vergi ilişkisi içeriğini algılar. .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .pps, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xltm, .xlam, .xla dosyaları.
 
@@ -118,7 +115,7 @@ Microsoft 365 önceden eğitilmiş birden çok sınıflandırıcı ile birlikte 
 - **Vergi: Vergi** planlaması, vergi formları, vergi dosyalama, vergi düzenlemeleri gibi Vergi ilişkisi içeriğini algılar. .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .pps, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xltm, .xlam, .xla dosyaları.
 - **Tehdit**: Şiddet uygulama veya bir kişi ya da mülke fiziksel zarar verme ya da zarar verme tehditleriyle ilgili belirli bir rahatsız edici dil metin öğesi kategorisini algılar. .msg, .docx, .pdf, .txt, .rtf, .jpeg, .jpg, .png, .gif, .bmp, .svg dosyalarındaki içeriği algılar.
 
-Bunlar **Microsoft Purview uyumluluk portalı** >  **Data classificationTrainable** >  **classifiers** görünümünde durumuyla `Ready to use`gösterilir.
+Bunlar **Microsoft Purview uyumluluk portalı** >  **Veri sınıflandırması** > **Eğitilebilir sınıflandırıcılar** görünümünde durumuyla `Ready to use`gösterilir.
 
 ![classifiers-pre-trained-classifiers.](../media/classifiers-ready-to-use-classifiers.png)
 
@@ -127,11 +124,15 @@ Bunlar **Microsoft Purview uyumluluk portalı** >  **Data classificationTrainabl
 
 Önceden eğitilmiş sınıflandırıcılar şu dillerdeki içeriği tarar:
 
+- Arapça
 - Çince (Basitleştirilmiş)
+- Çince (Geleneksel)
+- Dutch
 - English
 - French
 - German
 - Italian
+- Korean
 - Japanese
 - Portekizce
 - Spanish

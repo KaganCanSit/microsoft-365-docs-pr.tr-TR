@@ -16,12 +16,12 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 description: Microsoft 365'da eBulma (Premium) çözümü için geçerli olan durum sınırları, dizin oluşturma sınırları ve arama sınırları hakkında bilgi edinin.
-ms.openlocfilehash: 0c288b1d30fa668446421db547e2595f3385cbb7
-ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
+ms.openlocfilehash: 3b52b36ebdaca429b37cf5784281d22d4dd4be74
+ms.sourcegitcommit: 5fe7f2954a89406245416fc1a218cf4bf19abb85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65839349"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65864485"
 ---
 # <a name="limits-in-ediscovery-premium"></a>eBulma sınırları (Premium)
 
@@ -33,17 +33,17 @@ Bu makalede, Microsoft 365'daki Microsoft Purview eBulma (Premium) çözümünde
 
 Aşağıdaki tabloda, eBulma (Premium) içindeki servis taleplerinin ve gözden geçirme kümelerinin sınırları listeleniyor.
 
-|Sınırın açıklaması|Sınırı|
-|---|---|
-|Bir servis talebine eklenebilen toplam belge sayısı (bir servis talebindeki tüm inceleme kümeleri için).|En fazla 40 milyon (Yeni servis talebi biçimi)|
-|Yük kümesi başına toplam dosya boyutu. Bu, Office 365 olmayanların bir gözden geçirme kümesine yüklenmesini içerir.|En fazla 1 TB (Yeni durum biçimi)|
-|Kuruluştaki tüm gözden geçirme kümelerine günlük yüklenen toplam veri miktarı.<br/>|2TB|
-|Olay başına en fazla yük kümesi sayısı.|200|
-|Servis talebi başına en fazla gözden geçirme kümesi sayısı.|20|
-|Servis talebi başına en fazla etiket grubu sayısı.|1,000|
-|Servis talebi başına en fazla benzersiz etiket sayısı.|1.000<sup>1</sup>|
-|Bir gözden geçirme kümesine içerik eklemek için kuruluşunuzdaki en fazla eşzamanlı iş. Bu işler **Gözden geçirme kümesine veri ekleme** olarak adlandırılır ve bir durumda **İşler** sekmesinde görüntülenir.|10<sup>2</sup>|
-|Kullanıcı başına bir gözden geçirme kümesine içerik eklemek için en fazla eşzamanlı iş. Bu işler **Gözden geçirme kümesine veri ekleme** olarak adlandırılır ve bir durumda **İşler** sekmesinde görüntülenir.|3|
+|Sınırın açıklaması|Klasik Büyük/Küçük Harf Sınırı|Yeni Servis Talebi Sınırı|
+|---|---|---|
+|Bir servis talebine eklenebilen toplam belge sayısı (bir servis talebindeki tüm inceleme kümeleri için).|3 milyon|40 milyon|
+|Yük kümesi başına toplam dosya boyutu. Bu, Office 365 olmayanların bir gözden geçirme kümesine yüklenmesini içerir.|300 GB|1TB|
+|Kuruluştaki tüm gözden geçirme kümelerine günlük yüklenen toplam veri miktarı.<br/>|2TB|2TB|
+|Olay başına en fazla yük kümesi sayısı.|200|200|
+|Servis talebi başına en fazla gözden geçirme kümesi sayısı.|20|20|
+|Servis talebi başına en fazla etiket grubu sayısı.|1,000|1,000|
+|Servis talebi başına en fazla benzersiz etiket sayısı.|1.000<sup>1</sup>|1.000<sup>1</sup>|
+|Bir gözden geçirme kümesine içerik eklemek için kuruluşunuzdaki en fazla eşzamanlı iş. Bu işler **Gözden geçirme kümesine veri ekleme** olarak adlandırılır ve bir durumda **İşler** sekmesinde görüntülenir.|10<sup>2</sup>|10<sup>2</sup>|
+|Kullanıcı başına bir gözden geçirme kümesine içerik eklemek için en fazla eşzamanlı iş. Bu işler **Gözden geçirme kümesine veri ekleme** olarak adlandırılır ve bir durumda **İşler** sekmesinde görüntülenir.|3|3|
 
 ## <a name="hold-limits"></a>Ayrı tutma sınırları
 

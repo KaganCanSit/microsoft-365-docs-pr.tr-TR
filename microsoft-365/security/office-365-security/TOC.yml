@@ -204,7 +204,7 @@
               href: attack-simulation-training-get-started.md
             - name: Saldırı simülasyonu eğitimi ile kimlik avı saldırısı simüle etme
               href: attack-simulation-training.md
-            - name: Saldırı simülasyonu eğitimi için özel yükler oluşturma
+            - name: Saldırı simülasyonu eğitimi için yükler
               href: attack-simulation-training-payloads.md
             - name: Saldırı simülasyonu eğitiminde simülasyon otomasyonları
               href: attack-simulation-training-simulation-automations.md

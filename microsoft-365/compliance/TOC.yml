@@ -561,7 +561,7 @@
               href: view-the-dlp-reports.md
             - name: Sitelerde depolanan hassas verileri bulmak için sorgu oluşturma
               href: form-a-query-to-find-sensitive-data-stored-on-sites.md
-            - name: 'DLP, Güvenlik ve Uyumluluk Merkezi ile Exchange yönetim merkezi arasında nasıl çalışır?'
+            - name: 'DLP, Microsoft Purview uyumluluk portalı ve Exchange yönetim merkezi arasında nasıl çalışır?'
               href: how-dlp-works-between-admin-centers.md
             - name: DLP ilkeleri için uyarıları yapılandırma ve görüntüleme (önizleme)
               href: dlp-configure-view-alerts-policies.md

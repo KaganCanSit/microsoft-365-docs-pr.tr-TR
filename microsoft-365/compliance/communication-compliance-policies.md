@@ -19,12 +19,12 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 8418683577ffe3bf63fe7fe3bf4aff2ef55007f5
-ms.sourcegitcommit: c33af120921d3c4fb5c362dac3e74f0ab3d1e58d
+ms.openlocfilehash: 44b177d0215acaa2e637aacda22db3eb16ee7168
+ms.sourcegitcommit: 5fe7f2954a89406245416fc1a218cf4bf19abb85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2022
-ms.locfileid: "65249641"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65864528"
 ---
 # <a name="communication-compliance-policies"></a>İletişim uyumluluk ilkeleri
 
@@ -35,7 +35,7 @@ ms.locfileid: "65249641"
 > [!IMPORTANT]
 > İletişim uyumluluk ilkeleri oluşturmak ve yönetmek için PowerShell'in kullanılması desteklenmez. Bu ilkeleri oluşturmak ve yönetmek için [, iletişim uyumluluk çözümünde](https://compliance.microsoft.com/supervisoryreview) ilke yönetimi denetimlerini kullanmanız gerekir.
 
-Microsoft Purview uyumluluk portalında Microsoft 365 kuruluşlar için iletişim uyumluluk ilkeleri oluşturursunuz. İletişim uyumluluk ilkeleri, kuruluşunuzda hangi iletişimlerin ve kullanıcıların gözden geçirileceğini tanımlar, iletişimlerin hangi özel koşulları karşılaması gerektiğini tanımlar ve kimin inceleme yapacağını belirtir. *İletişim Uyumluluğu Yöneticisi* rolüne atanan kullanıcılar ilkeleri ayarlayabilir ve bu role atanmış olan herkes Microsoft Purview uyumluluk portalında **İletişim uyumluluğu** sayfasına ve genel ayarlara erişebilir. Gerekirse, bir ilkedeki değişikliklerin geçmişini gözden geçirmeyi bekleyen uyarıların, yükseltilmiş öğelerin ve çözümlenen öğelerin durumunu da içeren bir .csv (virgülle ayrılmış değerler) dosyasına aktarabilirsiniz. İlkeler yeniden adlandırılamaz ve artık gerekli olmadığında silinebilir.
+Microsoft Purview uyumluluk portalı Microsoft 365 kuruluşlar için iletişim uyumluluk ilkeleri oluşturursunuz. İletişim uyumluluk ilkeleri, kuruluşunuzda hangi iletişimlerin ve kullanıcıların gözden geçirileceğini tanımlar, iletişimlerin hangi özel koşulları karşılaması gerektiğini tanımlar ve kimin inceleme yapacağını belirtir. *İletişim Uyumluluğu Yönetici* rolüne atanan kullanıcılar ilkeleri ayarlayabilir ve bu role atanmış olan herkes Microsoft Purview uyumluluk portalı **İletişim uyumluluğu** sayfasına ve genel ayarlara erişebilir. Gerekirse, bir ilkedeki değişikliklerin geçmişini gözden geçirmeyi bekleyen uyarıların, yükseltilmiş öğelerin ve çözümlenen öğelerin durumunu da içeren bir .csv (virgülle ayrılmış değerler) dosyasına aktarabilirsiniz. İlkeler yeniden adlandırılamaz ve artık gerekli olmadığında silinebilir.
 
 ## <a name="policy-templates"></a>İlke şablonları
 
@@ -53,7 +53,7 @@ Microsoft Purview uyumluluk portalında Microsoft 365 kuruluşlar için iletişi
 
 ## <a name="pause-a-policy-preview"></a>İlkeyi duraklatma (önizleme)
 
-İletişim uyumluluk ilkesi oluşturduktan sonra, gerekirse ilke geçici olarak duraklatılabilir. İlkeyi duraklatma, ilke eşleşmelerini test etmek veya sorun gidermek ya da ilke koşullarını iyileştirmek için kullanılabilir. Bu durumlarda bir ilkeyi silmek yerine, bir ilkenin duraklatılması, devam eden araştırma ve incelemeler için mevcut ilke uyarılarını ve iletilerini de korur. İlkenin duraklatılması, ilkenin duraklatıldığı süre boyunca ilkede tanımlanan tüm kullanıcı iletisi koşulları için inceleme ve uyarı oluşturmayı engeller. Bir ilkeyi duraklatmak veya yeniden başlatmak için kullanıcıların *İletişim Uyumluluğu Yöneticisi* rol grubunun üyesi olması gerekir.
+İletişim uyumluluk ilkesi oluşturduktan sonra, gerekirse ilke geçici olarak duraklatılabilir. İlkeyi duraklatma, ilke eşleşmelerini test etmek veya sorun gidermek ya da ilke koşullarını iyileştirmek için kullanılabilir. Bu durumlarda bir ilkeyi silmek yerine, bir ilkenin duraklatılması, devam eden araştırma ve incelemeler için mevcut ilke uyarılarını ve iletilerini de korur. İlkenin duraklatılması, ilkenin duraklatıldığı süre boyunca ilkede tanımlanan tüm kullanıcı iletisi koşulları için inceleme ve uyarı oluşturmayı engeller. Bir ilkeyi duraklatmak veya yeniden başlatmak için kullanıcıların *İletişim Uyumluluğu Yönetici* rol grubunun üyesi olması gerekir.
 
 İlkeyi duraklatmak için **İlke** sayfasına gidin, bir ilke seçin ve ardından eylemler araç **çubuğundan İlkeyi duraklat'ı** seçin. **İlkeyi duraklat** bölmesinde Duraklat'ı seçerek ilkeyi duraklatmak istediğinizi **onaylayın**. Bazı durumlarda, bir ilkenin duraklatılması 24 saat kadar sürebilir. İlke duraklatıldıktan sonra, ilkeyle eşleşen iletiler için uyarılar oluşturulmaz. Ancak, ilke duraklatmadan önce oluşturulan uyarılarla ilişkili iletiler araştırma, gözden geçirme ve düzeltme için kullanılabilir durumda kalır.
 
@@ -76,7 +76,7 @@ mevcut iletişim uyumluluk ilkelerine sahip kuruluşlar için, mevcut bir ilkede
 - **Farklı kullanıcı grupları için uygunsuz iletileri algılama ve gözden geçirme**: Bazı kuruluşlar aynı yapılandırmaya sahip birden çok ilke oluşturmayı tercih edebilir, ancak her ilke için farklı kapsam içi kullanıcılar ve farklı gözden geçirenler içerebilir.
 - **Küçük değişikliklerle benzer ilkeler**: Karmaşık yapılandırmaları veya koşulları olan ilkeler için, benzer bir ilkeden yeni ilke oluşturmak zaman kazandırabilir.
 
-Bir ilkeyi kopyalamak için kullanıcıların *İletişim Uyumluluğu* veya *İletişim Uyumluluğu Yöneticisi* rol gruplarının üyesi olması gerekir. Mevcut bir ilkeden yeni bir ilke oluşturulduktan sonra, yeni ilke yapılandırmasıyla eşleşen iletilerin görüntülenmesi 24 saat kadar sürebilir.
+Bir ilkeyi kopyalamak için kullanıcıların *İletişim Uyumluluğu* veya *İletişim Uyumluluğu Yönetici* rol gruplarının üyesi olması gerekir. Mevcut bir ilkeden yeni bir ilke oluşturulduktan sonra, yeni ilke yapılandırmasıyla eşleşen iletilerin görüntülenmesi 24 saat kadar sürebilir.
 
 İlkeyi kopyalamak ve yeni bir ilke oluşturmak için aşağıdaki adımları tamamlayın:
 
@@ -106,20 +106,20 @@ Teams sohbetlerden gelen kullanıcı tarafından bildirilen iletiler, Kullanıc�
 
 Yöneticiler, kuruluşunuza uygun şekilde bu ilkeye hemen özel gözden geçirenler atamalıdır. Bu, Uyumluluk Yetkiliniz, Risk Sorumlunuz veya İnsan Kaynakları departmanınızın üyeleri gibi gözden geçirenleri içerebilir. Gözden geçirenleri kullanıcı tarafından bildirilen iletiler olarak gönderilen sohbet iletileri için özelleştirmek için aşağıdaki adımları tamamlayın:
 
-1. Microsoft 365 kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak [Microsoft Purview uyumluluk portalında](https://compliance.microsoft.com/) oturum açın.
+1. [Microsoft 365](https://compliance.microsoft.com/) kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak Microsoft Purview uyumluluk portalı oturum açın.
 2. Uyumluluk portalında **İletişim uyumluluğu'na** gidin.
 3. **İlke** sekmesinde *Kullanıcı tarafından bildirilen iletiler* ilkesini ve **düzenle'yi** seçin.
 4. **Kullanıcı tarafından bildirilen iletileri izleme** bölmesinde, ilke için gözden geçirenleri atayın. Gözden geçirenlerin Exchange Online üzerinde barındırılan posta kutuları olmalıdır. Gözden geçirenler bir ilkeye eklendiğinde, ilkeye atamayı bildiren ve gözden geçirme işlemiyle ilgili bilgilerin bağlantılarını sağlayan bir e-posta iletisini otomatik olarak alır.
 5. **Kaydet**'i seçin.
 
-*Sorun bildir* seçeneği varsayılan olarak etkindir ve [Teams Yönetim Merkezi'ndeki Teams](/microsoftteams/manage-teams-in-modern-portal) mesajlaşma ilkeleri aracılığıyla denetlenebilir. Özel ilke oluşturup atamadığınız sürece kuruluşunuzdaki kullanıcılar genel ilkeyi otomatik olarak alır. Genel ilkedeki ayarları düzenleyin veya Sorun bildir seçeneğini açmak veya kapatmak için *bir* veya daha fazla özel ilke oluşturup atayın. Daha fazla bilgi için bkz. [Teams'de mesajlaşma ilkelerini yönetme](/microsoftteams/messaging-policies-in-teams).  
+*Sorun bildir* seçeneği varsayılan olarak etkindir ve [Teams Yönetici Merkezi'ndeki](/microsoftteams/manage-teams-in-modern-portal) Teams mesajlaşma ilkeleri aracılığıyla denetlenebilir. Özel ilke oluşturup atamadığınız sürece kuruluşunuzdaki kullanıcılar genel ilkeyi otomatik olarak alır. Genel ilkedeki ayarları düzenleyin veya Sorun bildir seçeneğini açmak veya kapatmak için *bir* veya daha fazla özel ilke oluşturup atayın. Daha fazla bilgi için bkz. [Teams'de mesajlaşma ilkelerini yönetme](/microsoftteams/messaging-policies-in-teams).  
 
 >[!IMPORTANT]
->Teams Yönetim Merkezi'nde **Son kullanıcı raporlama** seçeneğini açmak veya kapatmak için PowerShell kullanıyorsanız, [Microsoft Teams cmdlet'leri modülü sürüm 4.2.0](/MicrosoftTeams/teams-powershell-release-notes) veya üzerini kullanmanız gerekir.
+>Teams Yönetici Merkezi'nde **Son kullanıcı raporlama** seçeneğini açmak veya kapatmak için PowerShell kullanıyorsanız [, Microsoft Teams cmdlet'leri modülü sürüm 4.2.0](/MicrosoftTeams/teams-powershell-release-notes) veya üzerini kullanmanız gerekir.
 
 ## <a name="storage-limit-notification-preview"></a>Depolama sınırı bildirimi (önizleme)
 
-Her iletişim uyumluluk ilkesinin depolama sınırı boyutu 100 GB veya 1 milyon iletidir (hangisi önce ulaşılırsa). İlke bu sınırlara yaklaştıkça, bildirim e-postaları *İletişim Uyumluluğu* veya *İletişim Uyumluluğu Yöneticisi* rol gruplarına atanan kullanıcılara otomatik olarak gönderilir. Depolama boyutu veya ileti sayısı sınırın yüzde 80, 90 ve yüzde 95'ine ulaştığında bildirim iletileri gönderilir. İlke sınırına ulaşıldığında, ilke otomatik olarak devre dışı bırakılır ve ilke uyarılar için iletileri işlemeyi durdurur.
+Her iletişim uyumluluk ilkesinin depolama sınırı boyutu 100 GB veya 1 milyon iletidir (hangisi önce ulaşılırsa). İlke bu sınırlara yaklaştıkça, bildirim e-postaları *İletişim Uyumluluğu* veya *İletişim Uyumluluğu Yönetici* rol gruplarına atanan kullanıcılara otomatik olarak gönderilir. Depolama boyutu veya ileti sayısı sınırın yüzde 80, 90 ve yüzde 95'ine ulaştığında bildirim iletileri gönderilir. İlke sınırına ulaşıldığında, ilke otomatik olarak devre dışı bırakılır ve ilke uyarılar için iletileri işlemeyi durdurur.
 
 >[!IMPORTANT]
 >Depolama ve ileti sınırlarına ulaşılması nedeniyle bir ilke devre dışı bırakılırsa, devre dışı bırakılan ilkenin nasıl yönetileceğini değerlendirmeyi unutmayın. İlkeyi silerseniz tüm iletiler, ilişkili ekler ve ileti uyarıları kalıcı olarak silinir. Gelecekte kullanmak üzere bu öğelerin bakımını yapmanız gerekiyorsa devre dışı bırakılan ilkeyi silmeyin.
@@ -146,7 +146,7 @@ Varsayılan olarak **Direction koşulu** görüntülenir ve kaldırılamaz. İlk
 
 ### <a name="sensitive-information-types"></a>Hassas bilgi türleri
 
-hassas bilgi türlerini iletişim uyumluluk ilkenizin bir parçası olarak dahil edebilirsiniz. Hassas bilgi türleri kredi kartı numaralarını, banka hesap numaralarını, pasaport numaralarını ve daha fazlasını tanımlamaya ve korumaya yardımcı olabilecek önceden tanımlanmış veya özel veri türleridir. [Microsoft Purview Veri Kaybı Önleme hakkında bilgi edinme'nin](dlp-learn-about-dlp.md) bir parçası olarak, hassas bilgi yapılandırması hassas olabilecek içeriği tanımlamaya ve işaretlemeye yardımcı olmak için desenleri, karakter yakınlığı, güvenilirlik düzeylerini ve hatta özel veri türlerini kullanabilir. Varsayılan hassas bilgi türleri şunlardır:
+hassas bilgi türlerini iletişim uyumluluk ilkenizin bir parçası olarak dahil edebilirsiniz. Hassas bilgi türleri kredi kartı numaralarını, banka hesap numaralarını, pasaport numaralarını ve daha fazlasını tanımlamaya ve korumaya yardımcı olabilecek önceden tanımlanmış veya özel veri türleridir. [Microsoft Purview Veri Kaybı Önleme hakkında bilgi edinin'in](dlp-learn-about-dlp.md) bir parçası olarak, hassas bilgi yapılandırması hassas olabilecek içeriği tanımlamaya ve işaretlemeye yardımcı olmak için desenleri, karakter yakınlığı, güvenilirlik düzeylerini ve hatta özel veri türlerini kullanabilir. Varsayılan hassas bilgi türleri şunlardır:
 
 - Finansal
 - Tıbbi ve sağlık
@@ -164,7 +164,7 @@ Kuruluşunuza veya sektörünüze özgü anahtar sözcüklerin basit yönetimini
 
 ### <a name="classifiers"></a>Sınıflandırıcı
 
-Yerleşik eğitilebilir ve genel sınıflandırıcılar, farklı uyumluluk sorunları için kuruluşunuzdaki tüm iletişim kanallarında gönderilen veya alınan iletileri tarar. Sınıflandırıcılar, tehdit önleme ilkelerini ihlal etme olasılığı olan iletilerdeki dili tanımlamak için yapay zeka ve anahtar sözcüklerin bir bileşimini kullanır. Yerleşik sınıflandırıcılar şu anda çeşitli dillerde ileti anahtar sözcüğü tanımlamayı desteklemektedir:
+[Yerleşik eğitilebilir ve genel sınıflandırıcılar](/microsoft-365/compliance/classifier-learn-about) , farklı uyumluluk sorunları için kuruluşunuzdaki tüm iletişim kanallarında gönderilen veya alınan iletileri tarar. Sınıflandırıcılar, tehdit önleme ilkelerini ihlal etme olasılığı olan iletilerdeki dili tanımlamak için yapay zeka ve anahtar sözcüklerin bir bileşimini kullanır. Yerleşik sınıflandırıcılar şu anda çeşitli dillerde ileti anahtar sözcüğü tanımlamayı desteklemektedir:
 
 - Arapça
 - Çince (Basitleştirilmiş)
@@ -182,11 +182,12 @@ Yerleşik eğitilebilir ve genel sınıflandırıcılar, farklı uyumluluk sorun
 İletişim uyumluluğu yerleşik eğitilebilir ve genel sınıflandırıcılar, aşağıdaki dil ve içerik türleri için terimler, resimler ve yaklaşımlar için iletişimleri tarar:
 
 - **Yetişkinlere yönelik görüntüler**: Doğası gereği cinsel içerikli görüntüler için taramalar.
+- **Müşteri Şikayetleri**: Kuruluşunuzun ürünleri veya hizmetleri hakkında yapılan geri bildirimleri ve şikayetleri tarar.
 - **Ayrımcılık**: Açık ayrımcı dili tarar ve diğer topluluklarla karşılaştırıldığında Afrikalı Amerikalı/Siyah topluluklara karşı ayrımcı dile karşı özellikle hassastır.
 - **Gory görüntüleri**: Şiddet ve vahşeti gösteren görüntüler için taramalar.
+- **Taciz**: ırk, renk, din, ulusal köken ile ilgili insanları hedefleyen saldırgan davranış taramaları.
 - **Küfür**: Çoğu insanı utandıran küfür içeren ifadeler tarar.
 - **Müstehcen görüntüler**: Doğası gereği cinsel açıdan öneride bulunan ancak Yetişkinlere yönelik olarak kabul edilen görüntülerden daha az açık içerik içeren görüntüler için taramalar.
-- **Hedeflenen taciz**: Irk, renk, din, ulusal kökenle ilgili insanları hedef alan saldırgan davranış taramaları.
 - **Tehdit**: Bir kişiye veya mülke yönelik şiddet veya fiziksel zarar verme tehditlerini tarar.
 
 *Adult*, *Racy* ve *Gory* görüntü sınıflandırıcıları dosyaları .jpeg, .png, .gif ve .bmp biçimlerinde tarar. Görüntü dosyalarının boyutu 4 megabayttan (MB) küçük olmalı ve görüntünün değerlendirmeye uygun olması için görüntülerin boyutları 50x50 pikselden büyük ve 50 kilobayttan (KB) büyük olmalıdır. Görüntü tanımlama, Exchange Online e-posta iletileri ve Microsoft Teams kanalları ve sohbetler için desteklenir.
@@ -195,8 +196,6 @@ Yerleşik eğitilebilir ve genel sınıflandırıcılar, bu alanlardaki terimler
 
 > [!NOTE]
 > Sınıflandırıcıları kullanan ilkeler, altı veya daha büyük sözcük sayısına sahip iletileri inceler ve değerlendirir. Altıdan az sözcük içeren iletiler sınıflandırıcılar kullanılarak ilkelerde değerlendirilmez. Uygunsuz içerik içeren daha kısa iletileri tanımlamak ve üzerinde işlem yapmak için, bu içerik türünü izleyen iletişim uyumluluk ilkelerine özel bir anahtar sözcük sözlüğü eklemenizi öneririz.
-
-Eğitilebilir sınıflandırıcılar hakkında bilgi için bkz. [Eğitilebilir sınıflandırıcıları kullanmaya başlama](classifier-get-started-with.md).
 
 ### <a name="optical-character-recognition-ocr"></a>Optik karakter tanıma (OCR)
 
@@ -279,15 +278,15 @@ Bir ilkeyi yapılandırdıktan sonra, ilgili uyarı ilkesi otomatik olarak oluş
 > [!NOTE]
 > Etkinlikler için uyarı ilkesi eşik tetikleyici ayarları, iletişim uyumluluk ilkeleri için en az 3 veya daha yüksek bir değeri destekler.
 
-Microsoft Purview uyumluluk portalındaki **Uyarı ilkeleri** sayfasında, uyarı ilkelerindeki etkinlik sayısı, etkinlikler dönemi ve belirli kullanıcılar için tetikleyiciler için varsayılan ayarları değiştirebilirsiniz.
+Microsoft Purview uyumluluk portalı uyarı **ilkeleri** sayfasındaki uyarı ilkelerindeki etkinlik sayısı, etkinlikler dönemi ve belirli kullanıcılar için tetikleyiciler için varsayılan ayarları değiştirebilirsiniz.
 
 ### <a name="change-the-severity-level-for-an-alert-policy"></a>Uyarı ilkesinin önem düzeyini değiştirme
 
 Belirli bir iletişim uyumluluk ilkesi için uyarı ilkesinde atanan önem düzeyini değiştirmek istiyorsanız aşağıdaki adımları tamamlayın:
 
-1. Microsoft 365 kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak [Microsoft Purview uyumluluk portalında](https://compliance.microsoft.com) oturum açın.
+1. [Microsoft 365](https://compliance.microsoft.com) kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak Microsoft Purview uyumluluk portalı oturum açın.
 
-2. Microsoft Purview uyumluluk portalında **İlkeler'e** gidin.
+2. Microsoft Purview uyumluluk portalı **İlkeler'e** gidin.
 
 3. **uyarılar ilkeleri** sayfasını açmak için **İlkeler** sayfasında **Office 365 uyarıyı** seçin.
 

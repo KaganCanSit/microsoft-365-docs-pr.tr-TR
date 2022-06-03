@@ -154,12 +154,10 @@
             - name: Exchange Online izleme
               href: microsoft-365-exchange-monitoring.md
               items:
-                - name: Posta kutusu kullanımı için hizmet uyarıları
+                - name: Posta kutusu kullanımı için hizmet tavsiyeleri
                   href: microsoft-365-mailbox-utilization-service-alerts.md
-                - name: MRS kaynak gecikmeleri için hizmet uyarıları
+                - name: MRS kaynak gecikmeleri için hizmet tavsiyeleri
                   href: microsoft-365-mrs-source-delays-service-alerts.md
-                - name: Dış alıcılar için kuyruğa alınan iletiler için hizmet uyarıları
-                  href: microsoft-365-external-recipient-service-alerts.md
             - name: Microsoft 365 Uygulamaları izleme
               href: microsoft-365-apps-monitoring.md
             - name: Microsoft 365 Teams izleme

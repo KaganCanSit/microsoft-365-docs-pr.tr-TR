@@ -19,12 +19,12 @@ search.appverid:
 - MET150
 description: Microsoft 365 kuruluşunuzdaki kullanıcıların ve yöneticilerin etkinliklerini denetlemeyi öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 5e4dab263a85730f893adadab0d3fa5709d17861
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: 8ceaea2b888c144fb5c6bc34d9d7788ab595b56b
+ms.sourcegitcommit: 5fe7f2954a89406245416fc1a218cf4bf19abb85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65649397"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65864594"
 ---
 # <a name="auditing-solutions-in-microsoft-purview"></a>Microsoft Purview'de çözümleri denetleme
 
@@ -101,6 +101,7 @@ Aşağıdaki bölümlerde Denetim (Standart) ve Denetim (Premium) için lisansla
 ### <a name="audit-standard"></a>Denetim (Standart)
 
 - Microsoft Business Basic aboneliği
+- Microsoft Business Standard aboneliği
 - İş için Microsoft 365 Uygulamaları aboneliği
 - E3 aboneliğini Microsoft 365 Kurumsal
 - Microsoft 365 Business Premium

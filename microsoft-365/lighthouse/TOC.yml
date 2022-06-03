@@ -1,5 +1,7 @@
 - name: Microsoft 365 Lighthouse
   items:
+    - name: Microsoft 365 Lighthouse'daki yenilikler
+      href: m365-lighthouse-whats-new.md
     - name: Microsoft 365 Lighthouse'a genel bakış
       href: m365-lighthouse-overview.md
     - name: Microsoft 365 Lighthouse için gereksinimler

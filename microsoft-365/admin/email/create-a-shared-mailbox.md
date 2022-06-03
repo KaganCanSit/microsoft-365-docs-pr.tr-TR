@@ -26,12 +26,12 @@ search.appverid:
 - MOE150
 ms.assetid: 871a246d-3acd-4bba-948e-5de8be0544c9
 description: İşletmenizdeki birden çok kullanıcının tek bir adrese gönderilen e-postayı okuma ve yanıtlama sorumluluğunu paylaşmasını sağlamak için paylaşılan bir posta kutusu oluşturun.
-ms.openlocfilehash: 38e7e1c1371c83fd5b55105bbd91485e2b6c26a3
-ms.sourcegitcommit: dc415d784226c77549ba246601f34324c4f94e73
+ms.openlocfilehash: 444be08a2083bf184d61ee206dfaa8ab53657b0b
+ms.sourcegitcommit: 5fe7f2954a89406245416fc1a218cf4bf19abb85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64915961"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65864572"
 ---
 # <a name="create-a-shared-mailbox"></a>Paylaşılan posta kutusu oluşturma 
 
@@ -47,7 +47,7 @@ Paylaşılan posta kutuları paylaşılan takvim içerir. Küçük işletmelerin
 Paylaşılan posta kutusu oluşturmadan önce daha fazla bilgi için [Paylaşılan posta kutuları hakkında'yı](about-shared-mailboxes.md) okuduğunuzdan emin olun.
 
 > [!TIP]
-> Bu konuda verilen adımlarla ilgili yardıma ihtiyacınız varsa, [bir Microsoft küçük işletme uzmanıyla çalışmayı](https://go.microsoft.com/fwlink/?linkid=2186871) göz önünde bulundurun. İşletme Yardımı ile, işletmenizi büyütürken katılımdan gündelik kullanıma kadar her aşamada siz ve çalışanlarınız günün 24 saati küçük işletme uzmanlarına erişebilirsiniz.
+> Bu konuda verilen adımlarla ilgili yardıma ihtiyacınız varsa[bir Microsoft küçük işletme uzmanıyla çalışmayı](https://go.microsoft.com/fwlink/?linkid=2186871) göz önünde bulundurun. İşletme Yardımı ile, işletmenizi büyütürken katılımdan gündelik kullanıma kadar her aşamada siz ve çalışanlarınız günün 24 saati küçük işletme uzmanlarına erişebilirsiniz.
 
 ## <a name="create-a-shared-mailbox-and-add-members"></a>Paylaşılan posta kutusu oluşturma ve üye ekleme
   
@@ -93,6 +93,9 @@ Paylaşılan posta kutusuyla aşağıdaki izinleri kullanabilirsiniz:
 
 - **Adına Gönder**: Adına Gönder izni, kullanıcının paylaşılan posta kutusu adına e-posta göndermesine olanak tanır. Örneğin, John paylaşılan posta kutusu Resepsiyon Binası 32'de oturum açar ve bir e-posta gönderirse, posta "Resepsiyon Binası 32 adına John" tarafından gönderilmiş gibi görünür. EAC'yi, Adına Gönder izinleri vermek için kullanamazsınız; _GrantSendonBehalf_ parametresiyle **Set-Mailbox** cmdlet'ini kullanmanız gerekir.
 
+> [!NOTE]
+> Posta kutusunda *HiddenFromAddressListsEnabled* parametresi **True** olarak ayarlandığından, Farklı **Gönder** ve **Adına Gönder** izinleri Outlook masaüstü istemcisinde çalışmaz, çünkü posta kutusunun Genel Adres Listesi aracılığıyla Outlook görünür olmasını gerektirir.
+
 ### <a name="use-the-eac-to-edit-shared-mailbox-delegation"></a>Paylaşılan posta kutusu temsilcilerini EAC üzerinden düzenleme
 
 1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange yönetim merkezinde</a> **Alıcılar** \> **Posta Kutuları'na** gidin. Paylaşılan posta kutusunu ve ardından **Düzenle** ![Düzenle simgesi..](../../media/ITPro-EAC-EditIcon.png). öğesini seçin.
@@ -133,7 +136,7 @@ Peki bir yönetici paylaşılan posta kutusu kullanıcı hesabının parolasın�
 
 4. **Bu kullanıcı engellensin mi?** bölmesinde **Kullanıcının oturum açmasını engelle'yi** ve ardından **Değişiklikleri kaydet'i** seçin.
 
-Azure AD PowerShell kullanan hesaplarda (aynı anda birçok hesap dahil) oturum açmayı engelleme yönergeleri için bkz. [Office 365 PowerShell ile kullanıcı hesaplarını engelleme](../../enterprise/block-user-accounts-with-microsoft-365-powershell.md).
+Azure AD PowerShell kullanarak hesaplarda oturum açmayı engelleme yönergeleri için bkz. [PowerShell ile Office 365 kullanıcı hesaplarını engelleme](../../enterprise/block-user-accounts-with-microsoft-365-powershell.md).
 
 ## <a name="add-the-shared-mailbox-to-outlook"></a>Paylaşılan posta kutusunu Outlook'a ekleme
 
@@ -156,7 +159,7 @@ Outlook paylaşılan posta kutuları hakkında daha fazla bilgi edinmek için bk
 ## <a name="use-a-shared-mailbox-on-a-mobile-device-phone-or-tablet"></a>Mobil cihazda (telefon veya tablet) paylaşılan posta kutusu kullanma
 
 Paylaşılan posta kutusuna mobil cihazda iki şekilde erişebilirsiniz:
-- Paylaşılan posta kutusunu <a href="https://apps.apple.com/us/app/microsoft-outlook/id951937596" target="_blank">iOS uygulaması için Outlook</a> veya <a href="https://play.google.com/store/apps/details?id=com.microsoft.office.outlook&hl=en_US" target="_blank">Android için Outlook mobil uygulamasına</a> ekleyin. 
+- Paylaşılan posta kutusunu <a href="https://apps.apple.com/us/app/microsoft-outlook/id951937596" target="_blank">iOS uygulaması için Outlook veya Android</a> <a href="https://play.google.com/store/apps/details?id=com.microsoft.office.outlook&hl=en_US" target="_blank">mobil uygulaması için Outlook</a> ekleyin. 
     
     Yönergeler için bkz. <a href="https://support.microsoft.com/office/f866242c-81b2-472e-8776-6c49c5473c9f" target="_blank">Outlook mobil cihazlara paylaşılan posta kutusu ekleme</a>.
 
@@ -165,7 +168,7 @@ Paylaşılan posta kutusuna mobil cihazda iki şekilde erişebilirsiniz:
     Yönergeler için bkz. <a href="https://support.microsoft.com/office/98b5a90d-4e38-415d-a030-f09a4cd28207" target="_blank">Web üzerinde Outlook paylaşılan posta kutusu ekleme</a>.
     
 > [!NOTE]
-> Paylaşılan posta kutusu yalnızca iOS uygulaması için Outlook veya Android için Outlook mobil uygulamasına eklenebilir
+> Paylaşılan posta kutusu yalnızca iOS uygulaması için Outlook veya Android mobil uygulaması için Outlook eklenebilir
 
 ## <a name="use-the-shared-calendar"></a>Paylaşılan takvimi kullanma
 
