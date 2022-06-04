@@ -709,4 +709,5 @@
 ## [Kimlik için Microsoft Defender](/defender-for-identity/)
 ## [Bulut Uygulamaları için Defender](/cloud-app-security/)
 ## [İş için Defender](../defender-business/index.yml)
+## [Defender Güvenlik Açığı Yönetimi](../defender-vulnerability-management/index.yml) 
 
