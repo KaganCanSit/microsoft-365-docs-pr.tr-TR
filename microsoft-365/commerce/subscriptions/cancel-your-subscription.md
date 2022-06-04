@@ -20,13 +20,13 @@ ms.custom:
 - admindeeplinkMAC
 search.appverid: MET150
 description: Microsoft 365 yönetim merkezinde Dynamics 365, Intune, Power Platform ve İş için Microsoft 365 deneme veya ücretli aboneliklerinizi nasıl iptal edebileceğinizi öğrenin.
-ms.date: 04/29/2022
-ms.openlocfilehash: 4f01946c00a7497f23d086422ffa90718df78a9f
-ms.sourcegitcommit: e0f890f46ae0bde03cc9e1ce178a7c1b8fbe12db
+ms.date: 06/02/2022
+ms.openlocfilehash: ea2a3bf0e77d11733e19b27f19bef378f691fd73
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2022
-ms.locfileid: "65145200"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65873676"
 ---
 # <a name="cancel-your-business-subscription"></a>İş aboneliğinizi iptal etme
 
@@ -56,6 +56,9 @@ Aboneliğinizi iptal etmek ve eşit dağıtılmış bir kredi veya para iadesi a
 Aboneliğinizin başlangıcından veya yenilenmesinden sonraki yedi gün içinde iptal etmeniz gerekiyorsa, bu makalenin devamındaki [Aboneliğinizi iptal etme adımları](#steps-to-cancel-your-subscription) bölümüne gidin.
 
 Yedi günden daha uzun bir süre geçtiyse [yinelenen faturalandırmayı kapatın](renew-your-subscription.md). Bu, aboneliğinizin süresinin sonunda yenilenmesini önler.  Bu işlem aboneliğinizin kalan bölümünde ürünlerinize ve hizmetlerinize erişimi sürdürmenize olanak tanır. Yıllık aboneliğiniz varsa ve aylık ödeme yapıyorsanız, abonelik döneminizin geri kalanı için her ay ücretlendirilirsiniz.
+
+> [!NOTE]
+> Gelecekteki ücretleri durdurmak için ücretsiz denemenizi istediğiniz zaman iptal edin. 1 aylık ücretsiz denemenizden sonra, ilgili abonelik ücreti tahsil edilir.
 
 ### <a name="if-you-dont-have-a-billing-profile"></a>Faturalama profiliniz yoksa
 

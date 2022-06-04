@@ -20,6 +20,8 @@
           href: uploadApplication.md
     - name: Paket Oluşturun
       href: buildpackage.md
+    - name: Mevcut bir paketi kopyalayın
+      href: clonepackage.md
     - name: Paket kılavuzu
       href: contentguideline.md
     - name: Uygulama/Test kuralları
