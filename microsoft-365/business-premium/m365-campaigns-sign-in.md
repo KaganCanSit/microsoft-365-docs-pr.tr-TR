@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 oturum açın
+title: Microsoft 365'te oturum açın
 f1.keywords:
 - NOCSH
 ms.author: v-kcirillo
@@ -22,27 +22,27 @@ ms.custom:
 search.appverid:
 - BCS160
 - MET150
-description: Microsoft 365 oturum açın. İşletmenizi, uygulamanızı veya kampanyanızı e-postaya, verilere ve iletişime yönelik siber güvenlik tehditlerinden koruyun.
-ms.openlocfilehash: c0decc886b30ba63d67e7927c0655e1980a47a57
-ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
+description: Microsoft 365'te oturum açın. İşletmenizi, uygulamanızı veya kampanyanızı e-postaya, verilere ve iletişime yönelik siber güvenlik tehditlerinden koruyun.
+ms.openlocfilehash: d478b37c38b9184e1ec60844025b3fe356fb43dd
+ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65839590"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65893339"
 ---
-# <a name="sign-in-to-microsoft-365-business-premium"></a>Microsoft 365 İş Ekstra oturum açma
+# <a name="sign-in-to-microsoft-365-business-for-campaigns"></a>Kampanyalar için Microsoft 365 İş'te oturum açma
 
-## <a name="for-business-or-campaign-admins"></a>İş veya kampanya yöneticileri için
+Kampanyalar için Microsoft 365'e (veya Microsoft 365 İş Ekstra'ya) kaydolduysanız, Microsoft 365 yöneticisi (Genel Yönetici olarak da adlandırılır) olarak belirlenirsiniz. Bu, oturum açmanızı ve sistemi başlatmanızı sağlar. 
 
-Kampanyalar için Microsoft 365 kaydolduysanız (veya Microsoft 365 İş Ekstra), Microsoft 365 yöneticisisiniz (Genel Yönetici olarak da adlandırılır). Oturum açma şu şekilde yapılır:
+Oturum açma şu şekilde yapılır:
 
-1. [Kampanyalar için Microsoft 365 kaydolduğunda](m365-campaigns-sign-up.md) kullandığınız e-posta adresine gönderdiğimiz kullanıcı adını ve parolayı bulun.
+1. [Kampanyalar için Microsoft 365'e kaydolduğunda](m365-campaigns-sign-up.md) kullandığınız e-posta adresine gönderdiğimiz kullanıcı adını ve parolayı bulun.
 
-2. Tarayıcıda konumundaki Microsoft 365 yönetim merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=837890" target="_blank">https://admin.microsoft.com</a>gidin.
+2. Tarayıcıda adresinden Microsoft 365 yönetim merkezine <a href="https://go.microsoft.com/fwlink/p/?linkid=837890" target="_blank">https://admin.microsoft.com</a>gidin.
 
 3. Kullanıcı adınızı ve parolanızı yazıp **Oturum aç'ı** seçin.
 
-4. Sayfanın sağ üst kısmında **Denetimde Önizleme'yi** bulun. [Kampanyanız için Korumayı artırma](m365-campaigns-security-overview.md) başlığında açıklanan tüm denetimleri kullanabilmek için **Önizleme açık'ı** seçin.
+4. Sayfanın sağ üst kısmında **Denetimde Önizleme'yi** bulun. [Kampanyanız için Korumayı artırma](m365bp-security-overview.md) başlığında açıklanan tüm denetimleri kullanabilmek için **Önizleme açık'ı** seçin.
 
 ## <a name="for-staff"></a>Personel için
 
@@ -50,15 +50,15 @@ Kampanyalar için Microsoft 365 (veya Microsoft 365 İş Ekstra) aboneliğinize 
 
 1. <a href="https://office.com" target="_blank">https://office.com</a> adımına gidin.
 
-2. Hesabın kullanıcı adını ve parolasını kullanarak oturum açın. Kullanıcılar, kullanıcı olarak eklendiklerinde almış olmaları gereken e-postada bu bilgilere sahip olur. E-postayı bulamıyorsa bkz. [E-posta daveti paylaştım ama kullanıcı e-postayı almadı](../admin/simplified-signup/admin-invite-business-standard.md#i-shared-an-email-invite-but-the-user-didnt-receive-the-email).
+2. Hesabın kullanıcı adını ve parolasını kullanarak oturum açın. Kullanıcılar, kullanıcı olarak eklendiklerinde aldıkları e-postada bu bilgilere sahip olur. E-postayı bulamıyorsa bkz. [Kullanıcı davet e-postası almadı](../admin/simplified-signup/admin-invite-business-standard.md#i-shared-an-email-invite-but-the-user-didnt-receive-the-email).
 
 > [!TIP]
-> [Personelinize Çalışan hızlı kurulum kılavuzunun](../admin/setup/employee-quick-setup.md) bağlantısını verin. Kılavuz, oturum açma, Office uygulamaları alma ve dosyaları kaydetme, kopyalama ve paylaşma işlemlerinde onlara yol gösterir.
+> Personelinize oturum açma, Office uygulamalarını alma ve dosyaları kaydetme, kopyalama ve paylaşma konusunda yardım almak için [Çalışan hızlı kurulum kılavuzunun](../admin/setup/employee-quick-setup.md) bağlantısını sağlayın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 1. [Gizlilik ve onay bildirimiyle oturum açma sayfanızı özelleştirme](m365-customize-sign-in.md)
 
-2. [Temel kurulum için kılavuzlu işlemi kullanma](m365bp-setup.md#use-the-guided-process-for-basic-setup)
+2. [Temel kurulum için kılavuzlu işlemi kullanma](m365bp-setup.md)
 
 3. [Güvenlik özelliklerinizi ayarlayın](m365bp-security-overview.md).

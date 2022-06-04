@@ -24,26 +24,26 @@ ms.custom:
 search.appverid:
 - BCS160
 - MET150
-description: Microsoft 365 İş Ekstra'de koruma düzeyini artırma konusunda yardım alın
-ms.openlocfilehash: a442dcd399a1886f5f63bd17dc897d1547a0f579
-ms.sourcegitcommit: 1fa0b15f86470c49dddf0d6de59d553a38ae259b
+description: Microsoft 365 İş Ekstra'da koruma düzeyini artırma konusunda yardım alın
+ms.openlocfilehash: dfbde871e31bd4c8e47fb9365ad4da7a9a1f6226
+ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "65863618"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65893195"
 ---
 # <a name="increase-threat-protection-for-microsoft-365-business-premium"></a>Microsoft 365 İş Ekstra için tehdit korumasını artırma
 
-Bu hedefte, Microsoft 365 İş Ekstra ile tehdit korumanızı artırırsınız. İşletmenizi kimlik avına, kötü amaçlı yazılımlara ve diğer tehditlere karşı korumak çok önemlidir. Bu amaç aşağıdakiler hakkında bilgi içerir:
+Bu hedefte, Microsoft 365 İş Ekstra ile tehdit korumanızı artıracaksınız. İşletmenizi kimlik avına, kötü amaçlı yazılımlara ve diğer tehditlere karşı korumak çok önemlidir. Bu amaç aşağıdakiler hakkında bilgi içerir:
 
-- Kurulum ve yapılandırmada çok zaman kazandırabilen [önceden ayarlanmış güvenlik ilkeleri](#review-and-apply-preset-security-policies)
+- Kurulum ve yapılandırmada çok zaman kazandırabilen [önceden ayarlanmış güvenlik ilkeleri](#review-and-apply-preset-security-policies).
 - İş gereksinimlerinize uygun olarak tanımlayabileceğiniz [özel güvenlik ilkeleri](#create-custom-security-policies)
-- [SharePoint ve OneDrive dosya ve klasörler için paylaşım ayarlarınızı ayarlama](#set-sharing-settings-for-sharepoint-and-onedrive-files-and-folders)
-- Belirli dosyaları ve bunların nasıl kullanıldığını izleyen [uyarı ilkeleri](#review-your-alert-policies). 
+- [SharePoint ve OneDrive dosya ve klasörleri için paylaşım ayarlarınızı ayarlama](#set-sharing-settings-for-sharepoint-and-onedrive-files-and-folders).
+- Belirli dosyaları ve bunların nasıl kullanıldığını izleyen [uyarı ilkeleri](#review-your-alert-policies).
 
 ## <a name="review-and-apply-preset-security-policies"></a>Önceden ayarlanmış güvenlik ilkelerini gözden geçirme ve uygulama
 
-Aboneliğiniz istenmeyen posta önleme, kötü amaçlı yazılımdan koruma ve kimlik avı koruması için önerilen ayarları kullanan [önceden ayarlanmış güvenlik ilkeleri](../security/office-365-security/preset-security-policies.md) içerir. Varsayılan olarak yerleşik koruma etkindir; ancak, daha fazla güvenlik için standart veya katı koruma uygulamayı göz önünde bulundurun. 
+Aboneliğiniz istenmeyen posta önleme, kötü amaçlı yazılımdan koruma ve kimlik avı koruması için önerilen ayarları kullanan [önceden ayarlanmış güvenlik ilkeleri](../security/office-365-security/preset-security-policies.md) içerir. Varsayılan olarak yerleşik koruma etkindir; ancak, daha fazla güvenlik için standart veya katı koruma uygulamayı göz önünde bulundurun.
 
 :::image type="content" source="media/m365bp-presetsecuritypolicies.png" alt-text="Önceden ayarlanmış güvenlik ilkelerinin ekran görüntüsü.":::
 
@@ -55,14 +55,14 @@ Aboneliğiniz istenmeyen posta önleme, kötü amaçlı yazılımdan koruma ve k
 Önceden ayarlanmış güvenlik ilkeleri, e-posta ve işbirliği içeriğiniz için koruma sağlar. Bu ilkeler şunlardan oluşur:
 
 - Koruma düzeyini belirleyen *profiller*
-- *İlkeler* (istenmeyen posta önleme, kötü amaçlı yazılımdan koruma, kimlik avı önleme, kimlik sahtekarlığı ayarları, kimliğe bürünme, Kasa Ekler ve Kasa Bağlantıları gibi)
+- *İlkeler* (istenmeyen posta önleme, kötü amaçlı yazılımdan koruma, kimlik avı önleme, kimlik sahtekarlığı ayarları, kimliğe bürünme, Güvenli Ekler ve Güvenli Bağlantılar gibi)
 - *İlke ayarları* (ilkeleri ve özel durumları alacak gruplar, kullanıcılar veya etki alanları gibi)
 
 Aşağıdaki tabloda koruma düzeyleri ve önceden ayarlanmış ilke türleri özetlenmiştir.
 
 | Koruma düzeyi | Açıklama |
 |:---|:---|
-| **Standart koruma** <br/>(*çoğu işletme için önerilir*) | Standart koruma, çoğu kullanıcı için uygun bir temel profil kullanır. Standart koruma, istenmeyen posta önleme, kötü amaçlı yazılımdan koruma, kimlik avı önleme, kimlik sahtekarlığı ayarları, kimliğe bürünme ayarları, Kasa Bağlantıları ve Kasa Ekler ilkelerini içerir.  |
+| **Standart koruma** <br/>(*çoğu işletme için önerilir*) | Standart koruma, çoğu kullanıcı için uygun bir temel profil kullanır. Standart koruma, istenmeyen posta önleme, kötü amaçlı yazılımdan koruma, kimlik avı önleme, kimlik sahtekarlığı ayarları, kimliğe bürünme ayarları, Güvenli Bağlantılar ve Güvenli Ekler ilkelerini içerir.  |
 | **Katı koruma**  | Katı koruma, standart koruma ile aynı türde ilkeler içerir, ancak daha sıkı ayarlar içerir. İşletmenizin ek güvenlik gereksinimlerini veya düzenlemelerini karşılaması gerekiyorsa, en azından öncelikli kullanıcılarınıza veya yüksek değerli hedeflerinize katı koruma uygulamayı göz önünde bulundurun. |
 | **Yerleşik koruma** | E-postadaki kötü amaçlı bağlantılara ve eklere karşı koruma sağlar. Yerleşik koruma etkindir ve varsayılan olarak tüm kullanıcılara uygulanır.  |
 
@@ -85,16 +85,16 @@ Katı koruma diğer tüm ilkeleri geçersiz kılar ve yerleşik koruma diğer il
 
 Önceden ayarlanmış güvenlik ilkeleri hakkında daha fazla bilgi edinmek için bkz [. Önceden ayarlanmış güvenlik ilkeleri nelerden yapılır](../security/office-365-security/preset-security-policies.md#what-preset-security-policies-are-made-of)?
 
-### <a name="how-do-i-assign-preset-security-policies-to-users"></a>Kullanıcılara önceden ayarlanmış güvenlik ilkeleri atamak Nasıl yaparım??
+### <a name="how-do-i-assign-preset-security-policies-to-users"></a>Kullanıcılara önceden ayarlanmış güvenlik ilkelerini nasıl atayabilirim?
 
 > [!IMPORTANT]
-> Başlamadan önce, Exchange Online 'de (aboneliğinize dahil olan) aşağıdaki rollerden birine sahip olduğunuzdan emin olun:
+> Başlamadan önce, Exchange Online'da (aboneliğinize dahil olan) aşağıdaki rollerden birine sahip olduğunuzdan emin olun:
 > 
 > - Genel Yönetici
 > - Kuruluş Yönetimi
 > - Güvenlik Yöneticisi
 > 
-> Daha fazla bilgi için bkz. [Exchange Online İzinler](/exchange/permissions-exo/permissions-exo) ve [Yönetici rolleri hakkında](../admin/add-users/about-admin-roles.md).
+> Daha fazla bilgi için bkz. [Exchange Online'da İzinler](/exchange/permissions-exo/permissions-exo) ve [Yönetici rolleri hakkında](../admin/add-users/about-admin-roles.md).
 
 Önceden ayarlanmış güvenlik ilkeleri atamak için şu adımları izleyin:
 
@@ -117,7 +117,7 @@ Katı koruma diğer tüm ilkeleri geçersiz kılar ve yerleşik koruma diğer il
 
    İşiniz bittiğinde **İleri'yi** seçin.
 
-4. **İlkelerin geçerli olduğu iç alıcıları** (alıcı koşulları) tanımlamak için Office 365 için Defender korumalar sayfaya uygulanır. Önceki adımda yaptığınız gibi kullanıcıları, grupları ve etki alanlarını belirtin.
+4. İlkelerin geçerli olduğu iç alıcıları (alıcı koşulları) tanımlamak **için Office 365 için Defender korumaları için geçerlidir** sayfasında. Önceki adımda yaptığınız gibi kullanıcıları, grupları ve etki alanlarını belirtin.
 
    İşiniz bittiğinde **İleri'ye** tıklayın.
 
@@ -126,7 +126,7 @@ Katı koruma diğer tüm ilkeleri geçersiz kılar ve yerleşik koruma diğer il
 > [!TIP]
 > Önceden ayarlanmış güvenlik ilkeleri atama hakkında daha fazla bilgi edinmek için aşağıdaki makalelere bakın:
 > - [Kullanıcılara önceden ayarlanmış güvenlik ilkeleri atama](../security/office-365-security/preset-security-policies.md#assign-preset-security-policies-to-users)
-> - [E-posta ve işbirliği içeriği için önerilen ayarlar](../security/office-365-security/recommended-settings-for-eop-and-office365.md) (Microsoft 365 İş Ekstra Exchange Online Protection ve Office 365 için Microsoft Defender Plan 1'i içerir)
+> - [E-posta ve işbirliği içeriği için önerilen ayarlar](../security/office-365-security/recommended-settings-for-eop-and-office365.md) (Microsoft 365 İş Ekstra, Exchange Online Protection ve Office 365 için Microsoft Defender Plan 1'i içerir)
 
 ## <a name="create-custom-security-policies"></a>Özel güvenlik ilkeleri oluşturma
 
@@ -137,9 +137,9 @@ Kendi özel ilkelerinizi oluşturmaya başlamak için [tehditlere karşı koruma
 - [Kötü amaçlı yazılımdan koruma](../security/office-365-security/protect-against-threats.md#part-1---anti-malware-protection-in-eop)
 - [Gelişmiş antiphishing koruması](../security/office-365-security/protect-against-threats.md#part-2---anti-phishing-protection-in-eop-and-defender-for-office-365)
 - [Antispam koruması](../security/office-365-security/protect-against-threats.md#part-3---anti-spam-protection-in-eop)
-- [Kasa Bağlantıları ve Kasa Ekleri](../security/office-365-security/protect-against-threats.md#part-4---protection-from-malicious-urls-and-files-safe-links-and-safe-attachments-in-defender-for-office-365)
+- [Güvenli Bağlantılar ve Güvenli Ekler](../security/office-365-security/protect-against-threats.md#part-4---protection-from-malicious-urls-and-files-safe-links-and-safe-attachments-in-defender-for-office-365)
 
-## <a name="set-sharing-settings-for-sharepoint-and-onedrive-files-and-folders"></a>SharePoint ve OneDrive dosya ve klasörler için paylaşım ayarlarını belirleme
+## <a name="set-sharing-settings-for-sharepoint-and-onedrive-files-and-folders"></a>SharePoint ve OneDrive dosya ve klasörleri için paylaşım ayarlarını belirleme
 
 Varsayılan olarak, paylaşım düzeyleri hem SharePoint hem de OneDrive için en uygun düzeye ayarlanır. İşletmenizi daha iyi korumak için varsayılan ayarları değiştirmenizi öneririz.
 
@@ -158,15 +158,15 @@ Varsayılan olarak, paylaşım düzeyleri hem SharePoint hem de OneDrive için e
 
 ## <a name="review-your-alert-policies"></a>Uyarı ilkelerinizi gözden geçirme
 
-Uyarı ilkeleri, işletmenizdeki kullanıcı ve yönetici etkinliklerini, olası kötü amaçlı yazılım tehditlerini ve veri kaybı olaylarını izlemek için kullanışlıdır. Aboneliğiniz bir dizi varsayılan ilke içerir, ancak özel ilkeler de oluşturabilirsiniz. Örneğin, kimsenin harici olarak paylaşmasını istemediğiniz önemli bir dosyayı SharePoint depolarsanız, birisi paylaşırsa sizi uyaran bir bildirim oluşturabilirsiniz.
+Uyarı ilkeleri, işletmenizdeki kullanıcı ve yönetici etkinliklerini, olası kötü amaçlı yazılım tehditlerini ve veri kaybı olaylarını izlemek için kullanışlıdır. Aboneliğiniz bir dizi varsayılan ilke içerir, ancak özel ilkeler de oluşturabilirsiniz. Örneğin, SharePoint'te kimsenin harici olarak paylaşmasını istemediğiniz önemli bir dosyayı depolarsanız, birisi paylaşırsa sizi uyaran bir bildirim oluşturabilirsiniz.
 
-Aşağıdaki görüntüde, Microsoft 365 İş Ekstra dahil edilen bazı varsayılan ilkeler gösterilmektedir.
+Aşağıdaki görüntüde, Microsoft 365 İş Ekstra'ya dahil edilen bazı varsayılan ilkeler gösterilmektedir.
 
-![Microsoft 365 ile birlikte gelen varsayılan uyarı ilkeleri.](../media/alertpolicies.png)
+![Microsoft 365'te bulunan varsayılan uyarı ilkeleri.](../media/alertpolicies.png)
 
 ### <a name="view-your-alert-policies"></a>Uyarı ilkelerinizi görüntüleme
 
-1. konumundaki Microsoft Purview uyumluluk portalı [https://compliance.microsoft.com](https://compliance.microsoft.com) gidin ve oturum açın.
+1. adresinden Microsoft Purview uyumluluk portalına [https://compliance.microsoft.com](https://compliance.microsoft.com) gidin ve oturum açın.
 
 2. Gezinti bölmesinde **İlkeler'i** ve ardından **Uyarı ilkeleri'ni** seçin.
 
@@ -179,12 +179,12 @@ Aşağıdaki görüntüde, Microsoft 365 İş Ekstra dahil edilen bazı varsayı
 
 ### <a name="how-to-view-alerts"></a>Uyarıları görüntüleme
 
-Belirli bir uyarıya bağlı olarak, uyarılarınızı Microsoft 365 Defender portalında veya Microsoft Purview uyumluluk portalı görüntüleyebilirsiniz.
+Uyarıya bağlı olarak, uyarılarınızı Microsoft 365 Defender portalında veya Microsoft Purview uyumluluk portalında görüntüleyebilirsiniz.
 
 | Uyarı türü  | Yapılması gerekenler  |
 |---------|---------|
-| Kullanıcı kötü amaçlı bir bağlantıya tıkladığında, bir e-postanın kötü amaçlı yazılım veya kimlik avı olarak bildirilmesi veya bir cihazın kötü amaçlı yazılım içerdiği algılanması gibi güvenlik uyarısı     | <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalına</a> gidin ve **E-posta & işbirliği** bölümünde **İlkeler & kuralları** > **Uyarı ilkesi'ni** seçin. Alternatif olarak doğrudan adresine <https://security.microsoft.com/alertpolicies>gidebilirsiniz. |
-| Kullanıcının hassas veya gizli bilgileri paylaşması (veri kaybı önleme uyarısı) veya olağan dışı bir dış dosya paylaşımı hacmi (bilgi idaresi uyarısı) olması gibi uyumluluk uyarısı    | <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalı</a> gidin ve **İlkeler** > **Uyarı Uyarı** > **ilkeleri'ni** seçin.  |
+| Kullanıcı kötü amaçlı bir bağlantıya tıkladığında, bir e-postanın kötü amaçlı yazılım veya kimlik avı olarak bildirilmesi veya bir cihazın kötü amaçlı yazılım içerdiği algılanması gibi güvenlik uyarısı     | <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalına</a> gidin ve **E-posta & işbirliği** bölümünde **İlkeler & kurallar** > **Uyarı ilkesi'ni** seçin. Alternatif olarak doğrudan adresine <https://security.microsoft.com/alertpolicies>gidebilirsiniz. |
+| Kullanıcının hassas veya gizli bilgileri paylaşması (veri kaybı önleme uyarısı) veya olağan dışı bir dış dosya paylaşımı hacmi (bilgi idaresi uyarısı) olması gibi uyumluluk uyarısı    | <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalına</a> gidin ve **İlkeler** > **Uyarı Uyarı** > **ilkeleri'ni** seçin.  |
 
 Daha fazla bilgi için bkz. [Uyarıları görüntüleme](../compliance/alert-policies.md#view-alerts).
 
@@ -192,9 +192,9 @@ Daha fazla bilgi için bkz. [Uyarıları görüntüleme](../compliance/alert-pol
 
 Kuruluşunuzdaki kişilerin takvimlerini paylaşmasını engelleyebilirsiniz. Paylaşabilecekleri ayrıntı düzeyini de yönetebilirsiniz. Örneğin, paylaşımı yalnızca serbest/meşgul zamanları ile kısıtlayabilirsiniz.
 
-1. [Microsoft 365 yönetim merkezi Kuruluş ayarları'na](https://go.microsoft.com/fwlink/p/?linkid=2053743) gidin ve oturum açın.
+1. [Microsoft 365 yönetim merkezinde Kuruluş ayarları'na](https://go.microsoft.com/fwlink/p/?linkid=2053743) gidin ve oturum açın.
 
-2. **Takvim'i** seçin ve kuruluşunuzdaki kişilerin takvimlerini Office 365 veya Exchange sahip kişiler dışındaki kişilerle mi yoksa herkesle mi paylaşabileceğini seçin.
+2. **Takvim'i** seçin ve kuruluşunuzdaki kişilerin takvimlerini Office 365 veya Exchange dışındaki kişilerle mi yoksa herkesle mi paylaşabileceğini seçin.
 
    **Dış paylaşım** seçeneğini temizlemenizi öneririz.
 
@@ -210,8 +210,8 @@ Kuruluşunuzdaki kişilerin takvimlerini paylaşmasını engelleyebilirsiniz. Pa
 
    ![Herkesle takvim serbest/meşgul paylaşımının ekran görüntüsü.](../media/sharefreebusy.png)
 
-Kullanıcılarınızın takvimlerini paylaşmasına izin veriliyorsa, Web üzerinde Outlook'dan nasıl paylaşacaklarına [ilişkin bu yönergelere](https://support.office.com/article/7ecef8ae-139c-40d9-bae2-a23977ee58d5) bakın.
+Kullanıcılarınızın takvimlerini paylaşmasına izin veriliyorsa, web üzerinde Outlook'tan paylaşma [yönergelerine](https://support.office.com/article/7ecef8ae-139c-40d9-bae2-a23977ee58d5) bakın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Şimdi [**KCG cihazlarını ayarlama görevine başlayalım**](m365bp-devices-overview.md).
+Şimdi [**yönetilmeyen KCG cihazlarını ayarlayalım**](m365bp-devices-overview.md).

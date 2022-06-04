@@ -1,5 +1,5 @@
 ---
-title: Kampanyalar için Microsoft 365 kaydolma
+title: Kampanyalar için Microsoft 365'e kaydolma
 f1.keywords:
 - NOCSH
 ms.author: v-kcirillo
@@ -23,21 +23,21 @@ search.appverid:
 - BCS160
 - MET150
 ms.assetid: 5abfef7b-5957-484a-b06b-a7c55e013e44
-description: Kampanyalar için Microsoft 365 için adım adım kaydolma. Kampanyanızı e-posta, veri ve iletişim için siber güvenlik tehditlerinden koruyun.
-ms.openlocfilehash: 08ef22374e69590a3535366463770815c2a2b0ee
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Kampanyalar için Microsoft 365'e adım adım kaydolma. Kampanyanızı e-posta, veri ve iletişim için siber güvenlik tehditlerinden koruyun.
+ms.openlocfilehash: b39d01bc6aa1cf138d230e95493d5f9eeb3cc51b
+ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65096270"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65893317"
 ---
-# <a name="sign-up-for-microsoft-365-for-campaigns"></a>Kampanyalar için Microsoft 365 kaydolma 
+# <a name="sign-up-for-microsoft-365-for-campaigns"></a>Kampanyalar için Microsoft 365'e kaydolma 
 
-Kampanyalar için Microsoft 365 kaydınızı şu şekilde tamamlayabilirsiniz.
+Kampanyalar için Microsoft 365'e kaydolma işleminizi şu şekilde tamamlayabilirsiniz.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-- Kampanyalar için Microsoft 365 Alma'daki adımları tamamlayarak [Kampanyalar için Microsoft 365](get-microsoft-365-campaigns.md) davetinizi alın.
+- Kampanyalar için Microsoft 365'i edinin makalesindeki adımları tamamlayarak [Kampanyalar için Microsoft 365'e](get-microsoft-365-campaigns.md) davetinizi alın.
 - Microsoft'tan e-posta davetinizi açın. Davetin kuruluşunuz için benzersiz bir kaydolma bağlantısı vardır. Kampanyalara özel fiyatlandırma almak için buna ihtiyacınız vardır.
 - Kartvizitinizi ve telefonunuzu hazır bulundurun.
 
@@ -46,10 +46,10 @@ Kampanyalar için Microsoft 365 kaydınızı şu şekilde tamamlayabilirsiniz.
 
 ## <a name="steps-to-sign-up"></a>Kaydolma adımları
 
-1. Kampanyalar için Microsoft 365 e-posta davetinizde **, KURULUŞUNUZU KAYDET'i** seçin. Bu sizi Microsoft 365 kaydolma sayfasına götürür.
+1. Kampanyalar için Microsoft 365 e-posta davetinizde **, KURULUŞUNUZU KAYDET'i** seçin. Bu sizi Microsoft 365 kayıt sayfasına götürür.
 
     > [!NOTE]
-    > Zaten bir iş için Microsoft 365 aboneliğiniz varsa ve kampanyalar için Microsoft 365 bu aboneliğe eklemek istiyorsanız, [mevcut aboneliğe Kampanyalar için Microsoft 365 ekleme bölümüne](#steps-to-add-microsoft-365-for-campaigns-to-an-existing-subscription) gidin.
+    > Zaten bir İş için Microsoft 365 aboneliğiniz varsa ve kampanyalar için Microsoft 365 teklifini buna eklemek istiyorsanız, [Mevcut bir aboneliğe Kampanyalar için Microsoft 365'i ekleme bölümüne](#steps-to-add-microsoft-365-for-campaigns-to-an-existing-subscription) gidin.
 
 2. **Microsoft 365 İş sayfasında** iş ayrıntılarınızı girin. **İş e-posta adresi** için geçerli bir e-posta adresi kullanın. Bu adrese yalnızca kurulum işlemi sırasında sizinle iletişimde kalmak için ihtiyacımız vardır. **İleri**'yi seçin.
 
@@ -59,7 +59,7 @@ Kampanyalar için Microsoft 365 kaydınızı şu şekilde tamamlayabilirsiniz.
 
     2. **Şirketiniz'de**, çalıştığınız kampanyanın adını yazın. Örneğin, `ContosoCampaign`. Zaten bir etki alanınız varsa bu adı burada kullanın. 
  
-    3. **Etki alanı seçin** bölümünde şimdilik **.onmicrosoft.com'ı** seçin. Sizi daha sonra bir etki alanıyla ayarlayabilir veya zaten sahip olduğunuz bir etki alanına bağlı Microsoft 365 almanıza yardımcı olabilir.
+    3. **Etki alanı seçin** bölümünde şimdilik **.onmicrosoft.com'ı** seçin. Sizi daha sonra bir etki alanıyla ayarlayabilir veya Microsoft 365'i zaten sahip olduğunuz bir etki alanına bağlamanıza yardımcı olabilir.
 
     > [!IMPORTANT]
     > Etki alanınız `.onmicrosoft.com` için girdiğiniz ad tüm SharePoint ve OneDrive URL'leriniz için kullanılır ve bunu değiştiremeyebilirsiniz. Adı marka perspektifinden değerlendirdiğinizden ve doğru yazdığınızdan emin olun.
@@ -85,7 +85,7 @@ Kampanyalar için Microsoft 365 kaydınızı şu şekilde tamamlayabilirsiniz.
 
     2. Yalnızca şimdilik kendinizi ayarlamak istiyorsanız **İleri'yi** seçin. 
 
-    3. İsteğe bağlı: **Kullanıcı** alanındaki sayıyı değiştirerek şimdi bazı ek lisanslar ekleyin. [Birlikte çalıştığınız personele istediğiniz zaman Microsoft 365 lisansı atanabilir](../admin/add-users/add-users.md?toc=%2fmicrosoft-365%2fcampaigns%2ftoc.json).
+    3. İsteğe bağlı: **Kullanıcı** alanındaki sayıyı değiştirerek şimdi bazı ek lisanslar ekleyin. [Birlikte çalıştığınız personele istediğiniz zaman Microsoft 365'e lisans atanabilir](../admin/add-users/add-users.md?toc=%2fmicrosoft-365%2fcampaigns%2ftoc.json) .
 
 7. **Nasıl ödeme yapmak istiyorsunuz? sayfası**: **Yeni kredi kartı'yı** seçin, kartvizit bilgilerinizi girin ve **Sipariş ver'i** seçin. İsterseniz bir banka hesabı da kullanabilirsiniz.
 
@@ -95,14 +95,14 @@ Kaydolma adımlarınız tamamlandı!
 
 Sonraki adımlara devam etmek istiyorsanız **Kurulumu Başlat'ı** seçin veya adımları tamamlamak için daha sonra geri dönün. Hazır olduğunuzda, kullanıcı adınızı ve parolanızı bulmak için e-postanızı (2. adımdan) kontrol edin ve bir dahaki sefere oturum açabilirsiniz. Bunlar, yöneticiniz veya genel yönetici kimlik bilgileriniz olarak adlandırılır.
 
-## <a name="steps-to-add-microsoft-365-for-campaigns-to-an-existing-subscription"></a>Mevcut aboneliğe Kampanyalar için Microsoft 365 ekleme adımları
+## <a name="steps-to-add-microsoft-365-for-campaigns-to-an-existing-subscription"></a>Kampanyalar için Microsoft 365'i mevcut aboneliğe ekleme adımları
 
-İş için Microsoft 365 aboneliğiniz varsa ve var olan aboneliğiniz varsa (örneğin, Microsoft 365 İş Standart) kampanyalar için Microsoft 365 teklifini kullanarak lisans ekleyebilirsiniz.
+İş için Microsoft 365 aboneliğiniz varsa ve var olan microsoft 365 İş Standardı gibi bir aboneliğiniz varsa, kampanyalar için Microsoft 365 teklifini kullanarak lisans ekleyebilirsiniz.
 
 > [!IMPORTANT]
 > Kampanyalar için Microsoft 365 teklifini mevcut bir Microsoft 365 hesabına ekleyemezsiniz.
 
-1. Kampanyalar için Microsoft 365 e-posta davetinizde **, KURULUŞUNUZU KAYDET'i** seçin. Bu sizi Microsoft 365 kaydolma sayfasına götürür.
+1. Kampanyalar için Microsoft 365 e-posta davetinizde **, KURULUŞUNUZU KAYDET'i** seçin. Bu sizi Microsoft 365 kayıt sayfasına götürür.
 
 2. **Hoş Geldiniz, sizi tanıyalım** sayfasında **Bunu var olan bir aboneliğe eklemek ister misiniz? öğesini seçin. Oturum açın**.
     
@@ -118,6 +118,6 @@ Bu adımları tamamladıktan sonra [yeni lisansları](../admin/manage/assign-lic
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-1. [Kampanyalar için Microsoft 365 oturum açın](m365-campaigns-sign-in.md).
+1. [Kampanyalar için Microsoft 365'te oturum açın](m365-campaigns-sign-in.md).
 
-2. [Temel kurulum için kılavuzlu işleme bakın](m365bp-setup.md#use-the-guided-process-for-basic-setup).
+2. [Temel kurulum için kılavuzlu işleme bakın](m365bp-setup.md#guided-setup-process).

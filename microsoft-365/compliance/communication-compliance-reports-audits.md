@@ -19,12 +19,12 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: e7e26451e2cf4786f73b16f74bedd46ca764f6ed
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: 998f074529089f5c0309f6799900a628915d3959
+ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65173745"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65893404"
 ---
 # <a name="use-communication-compliance-reports-and-audits"></a>İletişim uyumluluk raporlarını ve denetimlerini kullanma
 
@@ -65,7 +65,7 @@ Tüm ayrıntılı raporların rapor ayrıntılarını içeren bir .csv dosyası 
     - Kullanıcı bildirimde bulunu
     - Büyük/küçük harf oluşturuldu
 
-- **Konum başına öğe ve eylemler**: Microsoft 365 konuma göre eşleşen öğeleri ve düzeltme eylemlerini gözden geçirin ve dışarı aktarın. İş yükü platformlarının nasıl ilişkili olduğu hakkında bilgi içerir:
+- **Konum başına öğe ve eylemler**: Microsoft 365 konumuna göre eşleşen öğeleri ve düzeltme eylemlerini gözden geçirin ve dışarı aktarın. İş yükü platformlarının nasıl ilişkili olduğu hakkında bilgi içerir:
 
     - Eşleştirilen öğeler
     - Yükseltilen öğeler
@@ -92,9 +92,9 @@ Tüm ayrıntılı raporların rapor ayrıntılarını içeren bir .csv dosyası 
 - **Konum başına hassas bilgi türü** (önizleme): Hassas bilgi türlerinin ve iletişim uyumluluk ilkelerindeki ilişkili kaynakların algılanması hakkındaki bilgileri gözden geçirin ve dışarı aktarın. Kuruluşunuzda yapılandırılan kaynaklarda hassas bilgi türü örneklerinin toplamını ve belirli dökümünü içerir. Her üçüncü taraf kaynağın değerleri .csv dosyasındaki ayrı sütunlarda görüntülenir. Örnekler şunlardır:
 
     - **E-posta**: Exchange e-posta iletilerinde hassas bilgi türleri algılandı.
-    - **Teams**: Microsoft Teams kanallarda ve sohbet iletilerinde hassas bilgi türleri algılandı.
-    - **Skype Kurumsal**: İş iletişimleri için Skype hassas bilgi türleri algılandı.
-    - **Yammer**: Yammer gelen kutularında, gönderilerde, sohbetlerde ve yanıtlarda hassas bilgi türleri algılandı.
+    - **Teams**: Microsoft Teams kanallarında ve sohbet iletilerinde hassas bilgi türleri algılandı.
+    - **Skype Kurumsal: Skype** Kurumsal iletişimlerinde hassas bilgi türleri algılandı.
+    - **Yammer**: Yammer gelen kutularında, gönderilerinde, sohbetlerde ve yanıtlarda hassas bilgi türleri algılandı.
     - **Üçüncü taraf kaynaklar**: Kuruluşunuzda yapılandırılan üçüncü taraf bağlayıcılarla ilişkili etkinlikler için hassas bilgi türleri algılandı. Rapordaki belirli bir hassas bilgi türünün üçüncü taraf kaynaklarının dökümünü görüntülemek için farenizi Üçüncü taraf kaynak sütunundaki hassas bilgi türünün değerinin üzerine getirin.
     - **Diğer**: İç sistem işleme için kullanılan hassas bilgi türleri. Rapor için bu kaynağın seçilmesi veya seçiminin kaldırılması hiçbir değeri etkilemez.
 
@@ -188,7 +188,7 @@ Search-UnifiedAuditLog -StartDate $startDate -EndDate $endDate -Operations Super
 
 bir ilkenin denetim posta kutusunun boyutunu denetlemek için aşağıdaki adımları tamamlayın:
 
-1. Modern kimlik doğrulaması kullanarak Exchange Online PowerShell'e bağlanmak için Exchange Online PowerShell V2 modülündeki [Bağlan-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline) cmdlet'ini kullanın.
+1. Modern kimlik doğrulaması kullanarak Exchange Online PowerShell'e bağlanmak için Exchange Online PowerShell V2 modülündeki [Connect-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline) cmdlet'ini kullanın.
 2. PowerShell'de aşağıdaki komutu çalıştırın:
 
     ```PowerShell

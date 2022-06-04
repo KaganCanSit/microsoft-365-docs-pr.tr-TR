@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 İş Ekstra'de düzeltme eylemlerini gözden geçirme
+title: Microsoft 365 İş Ekstra'da düzeltme eylemlerini gözden geçirme
 description: İşlem merkezinde otomatik olarak alınan veya onay bekleyen düzeltmelerin nasıl görüntülendiğini görün
 search.appverid: MET150
 author: denisebmsft
@@ -17,16 +17,16 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: df99f73275e0aa83216bd1de101638dee628f0f2
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 1e5d4e278bc70fdf63c951598bf12f88816a43d0
+ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65091907"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65893239"
 ---
-# <a name="review-remediation-actions-in-microsoft-365-business-premium"></a>Microsoft 365 İş Ekstra'de düzeltme eylemlerini gözden geçirme
+# <a name="review-remediation-actions-in-microsoft-365-business-premium"></a>Microsoft 365 İş Ekstra'da düzeltme eylemlerini gözden geçirme
 
-Tamam, bir güvenlik ihlali keşfettiniz ama ne yapacaksınız? Doğasına bağlı. 
+Tamam, bir güvenlik ihlali keşfettiniz ama ne yapacaksınız? Doğasına bağlı.
 
 Karantinaya dosya gönderme, işlemin çalışmasını durdurma veya zamanlanmış bir görevi tamamen kaldırma gibi düzeltme eylemlerine örnek olarak verilebilir. Tüm düzeltme eylemleri, konumunda [https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)bulunan İşlem merkezinde izlenir.
 

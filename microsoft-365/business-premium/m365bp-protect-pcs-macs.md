@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 İş Ekstra'da yönetilmeyen Windows bilgisayarları ve Mac'leri koruma
+title: Microsoft 365 İş Ekstra'da yönetilmeyen Windows bilgisayarlarını ve Mac'leri koruma
 f1.keywords:
 - NOCSH
 ms.author: deniseb
@@ -23,39 +23,41 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: yönetilmeyen veya kendi cihazını getir (KCG) Microsoft 365 İş Ekstra ile siber saldırılara karşı koruyun. Windows bilgisayarlar ve Mac'ler için siber güvenliği ayarlama.
-ms.openlocfilehash: 2c2c94e79e7f694e75ab6aeb6ed38005dbd1f2f4
-ms.sourcegitcommit: 54bc063818779e351ca24f04ba571f762d85751d
+description: Microsoft 365 İş Ekstra ile yönetilmeyen veya kendi cihazlarını getir (KCG) saldırılarına karşı koruyun. Windows bilgisayarlar ve Mac'ler için siber güvenliği ayarlama.
+ms.openlocfilehash: 10d8edd8a3e8106fc448fa3850590de9f6cda8df
+ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65393252"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65892592"
 ---
-# <a name="protect-unmanaged-windows-pcs-and-macs-in-microsoft-365-business-premium"></a>Microsoft 365 İş Ekstra'da yönetilmeyen Windows bilgisayarları ve Mac'leri koruma
+# <a name="protect-unmanaged-windows-pcs-and-macs-in-microsoft-365-business-premium"></a>Microsoft 365 İş Ekstra'da yönetilmeyen Windows bilgisayarlarını ve Mac'leri koruma
 
-Bu amaç, Microsoft Intune kayıtlı olmayan yönetilmeyen Windows 10 bilgisayarlar ve Mac'ler için koruma oluşturmaya odaklanmıştır. Büyük olasılıkla küçük işletmeniz veya kampanyanızda kendi cihazlarını (BYOD) getiren personel olabilir ve bu cihazlar yönetilmiyor olabilir. KCG'ler kişisel telefonları, tabletleri ve bilgisayarları içerir. 
+Bu amaç, Microsoft Intune'a kayıtlı olmayan yönetilmeyen Windows 10 bilgisayarlar ve Mac'ler için koruma oluşturmaya odaklanmıştır. Büyük olasılıkla küçük işletmeniz veya kampanyanızda kendi cihazlarını (KCG) getiren personel olabilir ve bu cihazlar yönetilmiyor olabilir. KCG kişisel telefonları, tabletleri ve bilgisayarları içerir.
 
 >[!NOTE]
->KCG kullanıcılarının bu cihazları kaydetmek ve şirket kaynaklarına erişim almak için Şirket Portalı uygulamasını yüklemesi ve çalıştırması gerekir.
+>KCG kullanıcılarının bu cihazları kaydetmek ve şirket kaynaklarına erişim elde etmek için Şirket Portalı uygulamasını yüklemesi ve çalıştırması gerekir.
 
 Ön cephe kullanıcılarınızın tüm KCG cihazlarında en düşük güvenlik özelliklerinin yapılandırılması için bu yönergeleri izlemeniz kritik önem taşır.
 
 ## <a name="windows-10"></a>[Windows 10](#tab/Windows10)
 
 **Cihaz şifrelemeyi açma**<p>
-Cihaz şifrelemesi çok çeşitli Windows cihazlarda kullanılabilir ve verilerinizi şifreleyerek korunmasına yardımcı olur. Cihaz şifrelemeyi açarsanız, cihazınıza ve verilerinize yalnızca yetkili kişiler erişebilir. Yönergeler için bkz. [Cihaz şifrelemesini açma](https://support.microsoft.com/help/4028713/windows-10-turn-on-device-encryption) .
+Cihaz şifrelemesi çok çeşitli Windows cihazlarında kullanılabilir ve verilerinizi şifreleyerek korunmasına yardımcı olur. Cihaz şifrelemeyi açarsanız, cihazınıza ve verilerinize yalnızca yetkili kişiler erişebilir. Yönergeler için bkz. [Cihaz şifrelemesini açma](https://support.microsoft.com/help/4028713/windows-10-turn-on-device-encryption) .
 
- Cihazınızda cihaz şifrelemesi kullanılamıyorsa bunun yerine standart [BitLocker şifrelemeyi](https://support.microsoft.com/help/4028713/windows-10-turn-on-device-encryption) açabilirsiniz. (BitLocker Windows 10 Home sürümünde kullanılamaz.) 
+ Cihazınızda cihaz şifrelemesi kullanılamıyorsa bunun yerine standart [BitLocker şifrelemeyi](https://support.microsoft.com/help/4028713/windows-10-turn-on-device-encryption) açabilirsiniz. (BitLocker, Windows 10 Home sürümünde kullanılamaz.) 
 
 **Cihazınızı Windows Güvenliği ile koruma**<p>
-Windows 10 varsa, Windows Güvenliği ile en son virüsten korumasını alırsınız. Windows 10 ilk kez başlattığınızda, Windows Güvenliği açık olur ve kötü amaçlı yazılım, virüs ve güvenlik tehditlerini tarayarak bilgisayarınızın korunmasına etkin bir şekilde yardımcı olur. Windows Güvenliği, bilgisayarınızda indirdiğiniz veya çalıştırdığınız her şeyi taramak için gerçek zamanlı koruma kullanır.
+Windows 10'larınız varsa, Windows Güvenliği ile en son virüsten korumayı alırsınız. Windows 10'ı ilk kez başlattığınızda, Windows Güvenliği açılır ve kötü amaçlı yazılımlar, virüsler ve güvenlik tehditlerini tarayarak bilgisayarınızın korunmasına etkin bir şekilde yardımcı olur. Windows Güvenliği, bilgisayarınızda indirdiğiniz veya çalıştırdığınız her şeyi taramak için gerçek zamanlı koruma kullanır.
 
 Windows Update, bilgisayarınızın güvende kalmasına ve tehditlere karşı korunmasına yardımcı olmak için Windows Güvenliği güncelleştirmelerini otomatik olarak indirir.
 
-Windows'ın önceki bir sürümüne sahipseniz ve Microsoft Security Essentials kullanıyorsanız, Windows Güvenliği geçmek iyi bir fikirdir. Daha fazla bilgi için bkz. [Windows Güvenliği ile cihazımın korunmasına yardımcı olun](https://support.microsoft.com/help/17464/windows-10-help-protect-my-device-with-windows-security).
+Windows'un önceki bir sürümüne sahipseniz ve Microsoft Security Essentials kullanıyorsanız, Windows Güvenliği'ne geçmek iyi bir fikirdir. Daha fazla bilgi için bkz. [Windows Güvenliği ile cihazımın korunmasına yardımcı olun](https://support.microsoft.com/help/17464/windows-10-help-protect-my-device-with-windows-security).
 
 **Windows Güvenlik Duvarı'nı açma**<p>
-Başka bir güvenlik duvarı açık olsa bile Windows Güvenlik Duvarı'nı her zaman çalıştırmanız gerekir. Windows Güvenlik Duvarı'nı kapatmak, cihazınızı (ve varsa ağınızı) yetkisiz erişime karşı daha savunmasız hale getirir. Yönergeler için bkz[. güvenlik duvarını Windows açma veya kapatma](https://support.microsoft.com/help/4028544/windows-10-turn-windows-defender-firewall-on-or-off).
+Başka bir güvenlik duvarı açık olsa bile her zaman Windows Güvenlik Duvarı'nı çalıştırmanız gerekir. Windows Güvenlik Duvarı'nı kapatmak, cihazınızı (ve varsa ağınızı) yetkisiz erişime karşı daha savunmasız hale getirir. Yönergeler için bkz [. Windows Güvenlik Duvarı'nı açma veya kapatma](https://support.microsoft.com/help/4028544/windows-10-turn-windows-defender-firewall-on-or-off) .
+
+## <a name="next-mission"></a>Sonraki görev
 
 Tamam, görev tamamlandı! Şimdi [e-posta sisteminin](m365bp-protect-email-overview.md) kimlik avına ve diğer saldırılara karşı güvenliğini sağlamaya çalışalım.
 
@@ -75,4 +77,3 @@ Mac'inizi İnternet'e veya ağa bağlı olduğunuzda diğer bilgisayarlar taraf�
 ## <a name="next-mission"></a>Sonraki görev
 
 Tamam, görev tamamlandı! Şimdi [e-posta sisteminin](m365bp-protect-email-overview.md) kimlik avına ve diğer saldırılara karşı güvenliğini sağlamaya çalışalım.
-

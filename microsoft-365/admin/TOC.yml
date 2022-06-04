@@ -50,7 +50,7 @@
         - name: Office uygulamalarını yükleme
           href: setup/install-applications.md
         - name: Windows cihazlarını ayarlama
-          href: setup/set-up-windows-devices.md
+          href: /microsoft-365/business-premium/m365bp-set-up-windows-devices.md
         - name: Mobil cihazları ayarlama
           href: setup/set-up-mobile-devices.md
         - name: İş için Microsoft 365 e-postası için Outlook'u ayarlama (video)

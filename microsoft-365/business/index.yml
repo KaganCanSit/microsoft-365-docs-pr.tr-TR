@@ -14,12 +14,12 @@ metadata:
   author: denisebmsft
   ms.author: deniseb
   ms.date: 05/12/2022
-  ms.openlocfilehash: d6fe8affc4195e46c9205754f1716517eaa9dc1c
-  ms.sourcegitcommit: 54bc063818779e351ca24f04ba571f762d85751d
+  ms.openlocfilehash: f2a74c3acb08dba0e4964b75b25a4da2a4439eb9
+  ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
   ms.translationtype: HT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/13/2022
-  ms.locfileid: "65393406"
+  ms.lasthandoff: 06/04/2022
+  ms.locfileid: "65893115"
 productDirectory:
   title: Microsoft 365 İş Ekstra ile üretkenlik ve güvenlik
   items:
@@ -63,7 +63,7 @@ conceptualContent:
     - url: ../business-premium/get-microsoft-365-business-premium.md
       itemType: how-to-guide
       text: Microsoft 365 İş Ekstra’yı edinin
-    - url: ../business-premium/m365bp-setup.md#use-the-guided-process-for-basic-setup
+    - url: ../business-premium/get-microsoft-365-business-premium.md
       itemType: how-to-guide
       text: 1. Temel kurulum işlemini tamamlama
     - url: ../business-premium/m365bp-security-overview.md
@@ -143,7 +143,7 @@ conceptualContent:
     - url: ../business-premium/m365bp-increase-protection.md
       itemType: how-to-guide
       text: Kimlik avı, kötü amaçlı yazılım ve diğer tehditlere karşı koruma
-    - url: ../business-premium/avoid-phishing-and-attacks.md
+    - url: ../business-premium/m365bp-avoid-phishing-and-attacks.md
       itemType: how-to-guide
       text: E-posta içeriğinde nelere dikkat etmeniz gerektiğini bilme
     - url: ../business-premium/send-encrypted-email.md
