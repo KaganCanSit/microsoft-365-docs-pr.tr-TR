@@ -394,6 +394,30 @@
           href: anti-spoofing-protection-faq.yml
         - name: Karantinaya alma SSS
           href: quarantine-faq.yml
+    - name: Adım adım açıklamalı kılavuzlar
+      items:
+        - name: (Yanlış Negatifler) Office 365 için Microsoft Defender kullanılarak alıcılara teslim edilen kötü amaçlı e-postalar nasıl işlenir?
+          href: step-by-step-guides/how-to-handle-false-negatives-in-microsoft-defender-for-office-365.md
+        - name: (Yanlış Pozitifler) Office 365 için Microsoft Defender'ı kullanarak meşru e-postaların teslim edilmesinin engellenmesiyle nasıl başa çıkılır?
+          href: step-by-step-guides/how-to-handle-false-positives-in-microsoft-defender-for-office-365.md
+        - name: Karantina izinleri ve ilkeleri nasıl yapılandırılır?
+          href: step-by-step-guides/how-to-configure-quarantine-permissions-with-quarantine-policies.md
+        - name: Önceden ayarlanmış güvenlik ilkeleriyle her zaman optimum güvenlik kontrollerine sahip olmanızı sağlayarak
+          href: step-by-step-guides/ensuring-you-always-have-the-optimal-security-controls-with-preset-security-policies.md
+        - name: Ekibiniz için saldırı simülasyonları nasıl çalıştırılır?
+          href: step-by-step-guides/how-to-run-attack-simulations-for-your-team.md
+        - name: Saldırı simülasyon eğitiminde otomatik saldırılar ve eğitim nasıl kurulur?
+          href: step-by-step-guides/how-to-setup-attack-simulation-training-for-automated-attacks-and-training.md
+        - name: Yapılandırma çözümleyicisi ile güvenlik ilkelerini iyileştirin ve düzeltin
+          href: step-by-step-guides/optimize-and-correct-security-policies-with-configuration-analyzer.md
+        - name: C-suite'inizi öncelikli hesap korumasıyla koruyun
+          href: step-by-step-guides/protect-your-c-suite-with-priority-account-protection.md
+        - name: Microsoft 365 Defender'da Tehdit Gezgini’ni kullanarak e-postaları arayın ve tehditleri düzeltin
+          href: step-by-step-guides/search-for-emails-and-remediate-threats.md
+        - name: Office 365 için Microsoft Defender'ı Microsoft Sentinel'e bağlayın
+          href: step-by-step-guides/connect-microsoft-defender-for-office-365-to-microsoft-sentinel.md
+        - name: Otomatik İncelemeler ve Yanıt (AIR) nasıl önceliklendirilir ve yönetilir?
+          href: step-by-step-guides/how-to-prioritize-and-manage-automated-investigations-and-response-air.md
     - name: Başvuru
       items:
         - name: Office 365 için Defender veri saklama
