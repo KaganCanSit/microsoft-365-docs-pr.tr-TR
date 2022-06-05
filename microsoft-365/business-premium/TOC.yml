@@ -4,6 +4,8 @@
       href: index.md
     - name: Microsoft 365 işletmenize nasıl yardımcı olur?
       href: m365bp-secure-users.md
+    - name: Microsoft 365 İş Ekstra deneme akış planı
+      href: m365bp-trial-playbook-microsoft-business-premium.md
     - name: Microsoft 365 İş Ekstra’yı edinin
       href: get-microsoft-365-business-premium.md
     - name: Kampanyalar için Microsoft 365'i edinme
@@ -16,14 +18,8 @@
           href: m365bp-setup-overview.md
         - name: Microsoft 365 İş Ekstra'yı ayarlama
           href: m365bp-setup.md
-        - name: Kampanyalar için Microsoft 365’i ayarlama
-          items:
-            - name: Kaydolma
-              href: m365-campaigns-sign-up.md
-            - name: Oturum açın
-              href: m365-campaigns-sign-in.md
-            - name: Oturum açma sayfasını özelleştirme
-              href: m365-customize-sign-in.md
+        - name: Kampanyalar için Microsoft 365 İş'i ayarlama
+          href: m365-campaigns-setup.md
     - name: Güvenlik korumasını yükseltme
       items:
         - name: Genel bakış
@@ -51,7 +47,7 @@
         - name: Genel bakış
           href: m365bp-protect-email-overview.md
         - name: Kimlik avına ve diğer saldırılara karşı koruma
-          href: avoid-phishing-and-attacks.md
+          href: m365bp-avoid-phishing-and-attacks.md
         - name: Şifreli e-posta gönderme
           href: send-encrypted-email.md
     - name: Güvenli bir şekilde işbirliği yapma ve paylaşma
@@ -78,14 +74,16 @@
           href: m365bp-onboard-devices-mdb.md
         - name: Windows cihazlarını koruma
           items:
-            - name: Windows cihazlarına yönelik koruma ayarları
-              href: m365bp-protection-settings-for-windows-10-devices.md
             - name: Windows cihazlarının güvenliğini sağlama
               href: m365bp-secure-windows-devices.md
             - name: Windows cihazları yönetme
               href: m365bp-manage-windows-devices.md
             - name: Office istemci dağıtımı hazırlığı
               href: m365bp-prepare-for-office-client-deployment.md
+            - name: Windows cihazları için uygulama koruma ayarları oluşturma
+              href: m365bp-protection-settings-for-windows-10-devices.md
+            - name: Windows cihazlarında uygulama ayarlarını doğrulama
+              href: m365bp-validate-settings-on-windows-10-pcs.md
         - name: Cihaz ilkelerini gözden geçirme ve düzenleme
           href: m365bp-view-edit-create-mdb-policies.md
         - name: Cihaz gruplarını yönetme
@@ -130,6 +128,8 @@
           href: m365bp-create-and-edit-autopilot-devices.md
     - name: Android ve iOS için Uygulama koruma ayarları
       href: m365bp-app-protection-settings-for-android-and-ios.md
+    - name: Android ve iOS'ta uygulama ayarlarını doğrulama
+      href: m365bp-validate-settings-on-android-or-ios.md
     - name: Koruma özelliklerini Intune ayarlarına eşleme
       href: m365bp-map-protection-features-to-intune-settings.md
     - name: Uyumluluk Yöneticisi ayarlama
