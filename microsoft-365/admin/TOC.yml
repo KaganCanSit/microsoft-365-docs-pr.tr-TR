@@ -348,10 +348,6 @@
           href: security-and-compliance/enable-modern-authentication.md
         - name: Microsoft Defender Virüsten Koruma tarafından algılanan tehditler
           href: /microsoft-365/business-premium/m365bp-review-threats-take-action
-        - name: Uyumluluk özelliklerini ayarlama
-          href: /microsoft-365/business-premium/m365bp-set-up-compliance.md
-        - name: Güvenlik puanı
-          href: /microsoft-365/security/defender/microsoft-secure-score
         - name: GDPR uyumluluğu kılavuzu
           href: security-and-compliance/gdpr-compliance.md
     - name: Cihazları ve uygulama verilerini yönetme

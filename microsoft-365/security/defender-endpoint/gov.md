@@ -1,7 +1,7 @@
 ---
 title: Kamu görevlisi müşterilere yönelik Uç Nokta için Microsoft Defender
-description: US Government müşterilerinin gereksinimlerine ve özelliklerine yönelik Uç Nokta için Microsoft Defender hakkında bilgi edinin
-keywords: government, gcc, high, requirements, capabilities, defender, Uç Nokta için Microsoft Defender, endpoint, dod
+description: US Government müşterileri için Uç Nokta için Microsoft Defender gereksinimleri ve kullanılabilir özellikleri hakkında bilgi edinin
+keywords: government, gcc, high, requirements, capabilities, defender, Microsoft Defender for Endpoint, endpoint, dod
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.prod: m365-security
@@ -16,12 +16,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: ce42709349e5d7464e1809df248c8055bdfaab30
-ms.sourcegitcommit: aff1732dfa21e9283b173d8e5ca5bcbeeaaa26d8
+ms.openlocfilehash: 84b91b56a8f34f0fa726684dab513d9356904ff4
+ms.sourcegitcommit: 8a0de6240facfe26ee391a14076b7fe534ee6598
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65810998"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "65922963"
 ---
 # <a name="microsoft-defender-for-endpoint-for-us-government-customers"></a>Kamu görevlisi müşterilere yönelik Uç Nokta için Microsoft Defender
 
@@ -29,16 +29,16 @@ ms.locfileid: "65810998"
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-Azure US Government ortamında yerleşik olarak bulunan US Government müşterileri için Uç Nokta için Microsoft Defender, Azure Ticari'de Uç Nokta için Defender ile aynı temel teknolojileri kullanır.
+Azure US Government ortamında yerleşik olarak bulunan US Government müşterileri için Uç Nokta için Microsoft Defender, Azure Ticari'deki Uç Nokta için Defender ile aynı temel teknolojileri kullanır.
 
-Bu teklif GCC, GCC High ve DoD müşterileri tarafından kullanılabilir ve ticari sürümle aynı önleme, algılama, araştırma ve düzeltmeyi temel alır. Ancak, bu teklif için özelliklerin kullanılabilirliği ile ilgili bazı farklılıklar vardır.
+Bu teklif GCC, GCC High ve DoD müşterilerine sunulur ve ticari sürümle aynı önleme, algılama, araştırma ve düzeltmeyi temel alır. Ancak, bu teklif için özelliklerin kullanılabilirliği ile ilgili bazı farklılıklar vardır.
 
 > [!NOTE]
-> Ticari uç nokta için Defender kullanan bir GCC müşterisiyseniz lütfen genel belge sayfalarına bakın.
+> Ticari ortamda Uç Nokta için Defender kullanan bir GCC müşterisiyseniz lütfen genel belge sayfalarına bakın.
 
 ## <a name="licensing-requirements"></a>Lisans gereksinimleri
 
-US Government müşterileri için Uç Nokta için Microsoft Defender aşağıdaki Microsoft toplu lisanslama tekliflerinden birini gerektirir:
+US Government müşterileri için Uç Nokta için Microsoft Defender, aşağıdaki Microsoft toplu lisanslama tekliflerinden birini gerektirir:
 
 ### <a name="desktop-licensing"></a>Masaüstü lisanslama
 
@@ -46,12 +46,12 @@ US Government müşterileri için Uç Nokta için Microsoft Defender aşağıdak
 
 ****
 
-|GCC|yüksek GCC|Dod|
+|GCC|GCC Yüksek|Dod|
 |---|---|---|
 |Microsoft 365 GCC G5|GCC High için Microsoft 365 E5|DOD için Microsoft 365 G5|
 |Microsoft 365 G5 Güvenlik GCC|GCC High için Microsoft 365 G5 Güvenliği|DOD için Microsoft 365 G5 Güvenliği|
 |Uç Nokta için Microsoft Defender - GCC|GCC High için Uç Nokta için Microsoft Defender|DOD için Uç Nokta için Microsoft Defender|
-|E5 GCC Windows 10 Enterprise|GCC High için Windows 10 Enterprise E5|DOD için E5 Windows 10 Enterprise|
+|Windows 10 Enterprise E5 GCC|GCC High için Windows 10 Enterprise E5|DOD için Windows 10 Enterprise E5|
 |
 
 ### <a name="server-licensing"></a>Sunucu lisanslama
@@ -60,15 +60,15 @@ US Government müşterileri için Uç Nokta için Microsoft Defender aşağıdak
 
 ****
 
-|GCC|yüksek GCC|Dod|
+|GCC|GCC Yüksek|Dod|
 |---|---|---|
-|Uç Nokta için Microsoft Defender Server GCC|GCC High için Uç Nokta için Microsoft Defender Sunucusu|DOD için Uç Nokta için Microsoft Defender Sunucusu|
+|Endpoint Server GCC için Microsoft Defender|GCC High için Endpoint Server için Microsoft Defender|DOD için Endpoint Server için Microsoft Defender|
 |Sunucular için Microsoft Defender|Sunucular için Microsoft Defender - Kamu|Sunucular için Microsoft Defender - Kamu|
 |
 
 ## <a name="portal-urls"></a>Portal URL'leri
 
-US Government müşterileri için Uç Nokta için Microsoft Defender portalı URL'leri şunlardır:
+US Government müşterileri için Uç Nokta için Microsoft Defender portalı URL'leri aşağıdadır:
 
 <br />
 
@@ -77,11 +77,11 @@ US Government müşterileri için Uç Nokta için Microsoft Defender portalı UR
 |Müşteri türü|Portal URL'si|
 |---|---|
 |GCC|<https://security.microsoft.com>|
-|yüksek GCC|<https://security.microsoft.us>|
+|GCC Yüksek|<https://security.microsoft.us>|
 |Dod|<https://security.apps.mil>|
 |
 > [!NOTE]
-> GCC bir müşteriyseniz ve Uç Nokta için Microsoft Defender ticariden GCC geçiş sürecinde Uç Nokta için Microsoft Defender ticari verilerinize erişmek için kullanınhttps://transition.security.microsoft.com.
+> GCC müşterisiyseniz ve Uç Nokta ticari için Microsoft Defender'dan GCC'ye geçiş sürecinde Uç Nokta için Microsoft Defender ticari verilerinize erişmek için kullanın https://transition.security.microsoft.com .
 
 ## <a name="endpoint-versions"></a>Uç nokta sürümleri
 
@@ -93,20 +93,20 @@ Aşağıdaki işletim sistemi sürümleri desteklenir:
 
 ****
 
-İşletim sistemi sürümü|GCC|yüksek GCC|Dod
+İşletim sistemi sürümü|GCC|GCC Yüksek|Dod
 :---|:---:|:---:|:---:
 Windows 11|![Evet.](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)
 Windows 10, sürüm 21H1 ve üzeri|![Evet.](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)
-Windows 10, sürüm 20H2 ([KB4586853](https://support.microsoft.com/help/4586853) <sup>1</sup> ile)|![Evet.](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)
-Windows 10, sürüm 2004 ([KB4586853](https://support.microsoft.com/help/4586853) <sup>1</sup> ile)|![Evet.](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)
+Windows 10, sürüm 20H2 ( [KB4586853](https://support.microsoft.com/help/4586853) <sup>1</sup> ile)|![Evet.](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)
+Windows 10, sürüm 2004 ( [KB4586853](https://support.microsoft.com/help/4586853) <sup>1</sup> ile)|![Evet.](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)
 Windows 10, sürüm 1909 ([KB4586819 1](https://support.microsoft.com/help/4586819) <sup></sup>ile)|![Evet.](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)
 Windows 10, sürüm 1903 ([KB4586819 1](https://support.microsoft.com/help/4586819) <sup></sup>ile)|![Evet.](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)
-Windows 10, sürüm 1809 ([KB4586839](https://support.microsoft.com/help/4586839) <sup>1</sup> ile)|![Evet.](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)
-Windows 10, sürüm 1803 ([KB4598245](https://support.microsoft.com/help/4598245) <sup>1</sup> ile)|![Evet.](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)
+Windows 10, sürüm 1809 ( [KB4586839](https://support.microsoft.com/help/4586839) <sup>1</sup> ile)|![Evet.](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)
+Windows 10, sürüm 1803 ( [KB4598245](https://support.microsoft.com/help/4598245) <sup>1</sup> ile)|![Evet.](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)
 Windows 10, sürüm 1709|![Hayır.](images/svg/check-no.svg) <br /> Not: Desteklenmez|![Evet](images/svg/check-yes.svg)[, KB4499147](https://support.microsoft.com/help/4499147) <sup>1</sup> ile <br /> Not: [Kullanım dışı,](/lifecycle/announcements/revised-end-of-service-windows-10-1709) lütfen yükseltin|![Hayır](images/svg/check-no.svg) <br /> Not: Desteklenmez
 Windows 10, sürüm 1703 ve öncesi|![Hayır.](images/svg/check-no.svg) <br /> Not: Desteklenmez|![Hayır](images/svg/check-no.svg) <br /> Not: Desteklenmez|![Hayır](images/svg/check-no.svg) <br /> Not: Desteklenmez
 Windows Server 2022|![Evet.](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)
-Windows Server 2019 ([KB4586839](https://support.microsoft.com/help/4586839) <sup>1</sup> ile)|![Evet.](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)
+Windows Server 2019 ( [KB4586839](https://support.microsoft.com/help/4586839) <sup>1</sup> ile)|![Evet.](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)
 Windows Server 2016 (Modern) <sup>2</sup>|![Evet.](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)
 Windows Server 2012 R2 (Modern) <sup>2</sup>|![Evet.](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)
 Windows Server 2016 (Eski) <sup>3</sup>|![Evet.](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)
@@ -118,8 +118,8 @@ Windows 7 SP1 Enterprise (Eski) <sup>3</sup>|![Evet.](images/svg/check-yes.svg)|
 Windows 7 SP1 Pro (Eski) <sup>3</sup>|![Evet.](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)
 Linux|![Evet.](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)
 macOS|![Evet.](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)
-Android|![Evet.](images/svg/check-yes.svg) <br /> Genel önizleme|![Evet](images/svg/check-yes.svg) <br /> Genel önizleme|![Evet](images/svg/check-yes.svg) <br /> Genel önizleme
-iOS|![Evet.](images/svg/check-yes.svg) <br /> Genel önizleme|![Evet](images/svg/check-yes.svg) <br /> Genel önizleme|![Evet](images/svg/check-yes.svg) <br /> Genel önizleme
+Android|![Evet.](images/svg/check-yes.svg) <br /> |![Evet](images/svg/check-yes.svg) <br /> |![Evet](images/svg/check-yes.svg) <br /> 
+iOS|![Evet.](images/svg/check-yes.svg) <br /> |![Evet](images/svg/check-yes.svg) <br /> |![Evet](images/svg/check-yes.svg) <br /> 
 |
 
 > [!NOTE]
@@ -127,7 +127,7 @@ iOS|![Evet.](images/svg/check-yes.svg) <br /> Genel önizleme|![Evet](images/svg
 >
 > <sup>2</sup> [Windows 2016 ve 2012 R2 için birleşik modern çözüm](configure-server-endpoints.md#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution) hakkında bilgi edinin. Sunucularınızı daha önce MMA kullanarak yüklediyseniz, yeni çözüme geçiş yapmak için [Sunucu geçişi](server-migration.md) bölümünde sağlanan yönergeleri izleyin.
 >
-> <sup>3</sup> [Microsoft Monitoring Agent](onboard-downlevel.md#install-and-configure-microsoft-monitoring-agent-mma) kullanırken [kurulum sihirbazını](/azure/log-analytics/log-analytics-windows-agents#install-agent-using-setup-wizard) kullanıyorsanız veya [komut satırı](/azure/log-analytics/log-analytics-windows-agents#install-agent-using-command-line) veya [betik](/azure/log-analytics/log-analytics-windows-agents#install-agent-using-dsc-in-azure-automation) kullanıyorsanız "Azure Bulutu" altında "Azure ABD Kamu" seçeneğini belirlemeniz gerekir. "OPINSIGHTS_WORKSPACE_AZURE_CLOUD_TYPE" parametresini 1 olarak ayarlayın. <br /> Desteklenen en düşük MMA sürümü 10.20.18029 'dir (Mart 2020).
+> <sup>3</sup> [Microsoft Monitoring Agent'ı](onboard-downlevel.md#install-and-configure-microsoft-monitoring-agent-mma) kullanırken [kurulum sihirbazını](/azure/log-analytics/log-analytics-windows-agents#install-agent-using-setup-wizard) kullanıyorsanız veya [komut satırı](/azure/log-analytics/log-analytics-windows-agents#install-agent-using-command-line) veya [betik](/azure/log-analytics/log-analytics-windows-agents#install-agent-using-dsc-in-azure-automation) kullanıyorsanız "Azure Bulutu" altında "Azure ABD Kamu" seçeneğini belirlemeniz gerekir. "OPINSIGHTS_WORKSPACE_AZURE_CLOUD_TYPE" parametresini 1 olarak ayarlayın. <br /> Desteklenen en düşük MMA sürümü 10.20.18029 'dir (Mart 2020).
 
 ### <a name="os-versions-when-using-microsoft-defender-for-servers"></a>Sunucular için Microsoft Defender kullanırken işletim sistemi sürümleri
 
@@ -137,7 +137,7 @@ iOS|![Evet.](images/svg/check-yes.svg) <br /> Genel önizleme|![Evet](images/svg
 
 ****
 
-İşletim sistemi sürümü|GCC|yüksek GCC|Dod
+İşletim sistemi sürümü|GCC|GCC Yüksek|Dod
 :---|:---:|:---:|:---:
 Windows Server 2022|![Evet.](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)
 Windows Server 2019|![Evet.](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)
@@ -172,7 +172,7 @@ Daha fazla bilgi için bkz. [Cihaz ara sunucusu ve İnternet bağlantı ayarlar�
 
 ****
 
-|Uç nokta türü|GCC|GCC Yüksek & DoD|
+|Uç nokta türü|GCC|GCC High & DoD|
 |---|---|---|
 |Oturum açma|`https://login.microsoftonline.com`|`https://login.microsoftonline.us`|
 |Uç Nokta için Defender API'si|`https://api-gcc.securitycenter.microsoft.us`|`https://api-gov.securitycenter.microsoft.us`|
@@ -189,7 +189,7 @@ Bilinen boşluklar şunlardır:
 
 ****
 
-|Özellik adı|GCC|yüksek GCC|Dod|
+|Özellik adı|GCC|GCC Yüksek|Dod|
 |---|:---:|:---:|:---:|
 |Ağ değerlendirmeleri|![Hayır](images/svg/check-no.svg) Geliştirme aşamasında|![Hayır](images/svg/check-no.svg) Geliştirme aşamasında|![Hayır](images/svg/check-no.svg) Geliştirme aşamasında|
 |Ağ bulma|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|
@@ -198,20 +198,20 @@ Bilinen boşluklar şunlardır:
 |Microsoft Güvenlik Puanı|![Evet](images/svg/check-yes.svg) <sup>1</sup>|![Hayır](images/svg/check-no.svg) Desteklenmiyor|![Hayır](images/svg/check-no.svg) Desteklenmiyor|  
 
 > [!NOTE]
-> <sup>1</sup> Microsoft Güvenli Puanı GCC müşteriler için kullanılabilir olsa da, kullanılamayabilecek bazı güvenlik önerileri vardır.
+> <sup>1</sup> GCC müşterileri için Microsoft Güvenli Puanı kullanılabilir olsa da, kullanılamayabilecek bazı güvenlik önerileri vardır.
 
 
-[Mobile Threat Defense (Android & iOS'da Uç Nokta için Microsoft Defender)](mtd.md) için özellikler ve bilinen boşluklar şunlardır:
+[Mobile Threat Defense (Android & iOS'ta Uç Nokta için Microsoft Defender) için](mtd.md) özellikler ve bilinen boşluklar şunlardır:
 
 <br />
 
 ****
 
-|Özellik adı|GCC|yüksek GCC|Dod|
+|Özellik adı|GCC|GCC Yüksek|Dod|
 |---|:---:|:---:|:---:|
 |Web Koruması (Kimlik Avı önleme ve özel göstergeler)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|
-|Kötü Amaçlı Yazılımdan Koruma (Yalnızca Android)|![Hayır](images/svg/check-no.svg) Geliştirme aşamasında|![Hayır](images/svg/check-no.svg) Geliştirme aşamasında|![Hayır](images/svg/check-no.svg) Geliştirme aşamasında|
-|Jailbreak Algılama (Yalnızca iOS)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|
+|Kötü Amaçlı YazılımDan Koruma (Yalnızca Android)|![Hayır](images/svg/check-no.svg) Geliştirme aşamasında|![Hayır](images/svg/check-no.svg) Geliştirme aşamasında|![Hayır](images/svg/check-no.svg) Geliştirme aşamasında|
+|Jailbreak Algılama (iOS-Only)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|
 |Koşullu Erişim/Koşullu Başlatma|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|
 |MAM desteği|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|
 |Gizlilik Denetimleri|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|

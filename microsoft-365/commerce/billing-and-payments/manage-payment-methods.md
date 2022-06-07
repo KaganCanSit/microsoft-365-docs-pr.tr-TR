@@ -23,18 +23,18 @@ ms.custom:
 - business_assist
 search.appverid: MET150
 description: Microsoft 365 yönetim merkezinde mevcut bir ödeme yöntemini kullanarak ya da yeni bir ödeme yöntemi ekleyerek Microsoft’tan iş ürünleri veya hizmetleri satın alın.
-ms.date: 04/02/2021
-ms.openlocfilehash: 1b36a11c2bdb34880f8f02b84788062dfb88c4b1
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.date: 06/01/2022
+ms.openlocfilehash: a6f15318e1539ef1f6c2656197c222e068f04f87
+ms.sourcegitcommit: 8a0de6240facfe26ee391a14076b7fe534ee6598
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63319763"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "65923007"
 ---
 # <a name="manage-payment-methods"></a>Ödeme yöntemlerini yönetme
 
 > [!IMPORTANT]
-> Yeni banka hesapları 26 Ocak 2021'den itibaren Belçika, Fransa, İtalya, Lüksemburg, Portekiz, İspanya, Hollanda ve Amerika Birleşik Devletleri'ndeki müşteriler için desteklenmemektedir. Bu ülkelerden birinde mevcut bir müşteriniz varsa, aboneliğiniz için mevcut bir banka hesabıyla ödeme yapmaya devam edebilirsiniz ve yeni abonelikler ekleyebilirsiniz. Ancak bunu banka hesabı iyi durumda olduğu sürece yapabilirsiniz.
+> 26 Ocak 2021'den itibaren artık Belçika, Fransa, İtalya, Lüksemburg, Portekiz, İspanya, Hollanda ve Amerika Birleşik Devletleri'ndeki müşteriler için yeni banka hesapları desteklenmemektedir. Bu ülkelerden birinde geçerli bir müşteriyseniz, aboneliğiniz için iyi durumda olan geçerli bir banka hesabıyla ödeme yapmaya devam edebilirsiniz. Ancak, banka hesabına yeni abonelikler ekleyemezsiniz.
 
 Microsoft'tan iş ürünleri veya hizmetleri satın alırken mevcut bir ödeme yöntemini kullanabilir veya yeni bir tane ekleyebilirsiniz. Satın aldığınız şeyler için ödeme yapmak üzere kredi kartı, banka kartı ya da banka hesabı kullanabilirsiniz.
 
@@ -58,7 +58,7 @@ Microsoft 365 İş aboneliğinizin ödeme yöntemini kolaylıkla güncelleyebili
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Bu makaledeki görevleri yerine getirmek için Genel yönetici veya Fatura yöneticisi olmalısınız. Daha fazla bilgi için bkz. [Yönetici rolleri hakkında](../../admin/add-users/about-admin-roles.md)
+Bu makaledeki görevleri yerine getirmek için Genel yönetici veya Fatura yöneticisi olmalısınız. Daha fazla bilgi için bkz. [Yönetici rolleri hakkında](../../admin/add-users/about-admin-roles.md).
 
 ## <a name="add-a-payment-method"></a>Ödeme yöntemi ekleme
 

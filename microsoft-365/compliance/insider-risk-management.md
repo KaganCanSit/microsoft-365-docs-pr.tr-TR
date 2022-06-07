@@ -1,7 +1,7 @@
 ---
 title: İçeriden risk yönetimi hakkında daha fazla bilgi edinme
-description: Microsoft Purview'de insider risk yönetimiyle kuruluşunuzda riski en aza indirmeye nasıl yardımcı olunacağınızı öğrenin.
-keywords: Microsoft 365, Microsoft Purview, iç risk, risk yönetimi, uyumluluk
+description: Microsoft Purview'da insider risk yönetimi ile kuruluşunuzda riski en aza indirmeye nasıl yardımcı olduğunuzu öğrenin.
+keywords: Microsoft 365, Microsoft Purview, insider riski, risk yönetimi, uyumluluk
 ms.localizationpriority: medium
 ms.service: O365-seccomp
 ms.topic: article
@@ -15,21 +15,21 @@ ms.collection:
 - m365-security-compliance
 - m365solution-insiderrisk
 - m365initiative-compliance
-ms.openlocfilehash: 9b2897a242f7dbbf9af9c9f3b639c0b91623fa25
-ms.sourcegitcommit: aff1732dfa21e9283b173d8e5ca5bcbeeaaa26d8
+ms.openlocfilehash: 3a2d678f8e653d65007369c2db5ddd8c72a71c66
+ms.sourcegitcommit: 8a0de6240facfe26ee391a14076b7fe534ee6598
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65810626"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "65923291"
 ---
 # <a name="learn-about-insider-risk-management"></a>İçeriden risk yönetimi hakkında daha fazla bilgi edinme
 
 > [!TIP]
-> *Dokuz Microsoft Purview çözümün de premium sürümlerini ücretsiz olarak deneyebileceğinizi biliyor muydunuz?* Sağlam Purview özelliklerinin kuruluşunuzun uyumluluk gereksinimlerini karşılamasına nasıl yardımcı olabileceğini keşfetmek için 90 günlük Purview çözümleri deneme sürümünü kullanın. Microsoft 365 E3 ve Office 365 E3 müşterileri şimdi [Microsoft Purview uyumluluk portalı deneme hub'ında](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef) başlayabilir. [Kaydolabilecek kişiler ve deneme koşulları](compliance-easy-trials.md) hakkında ayrıntılı bilgi edinin.
+> *Dokuz Microsoft Purview çözümlerinin tamamının premium sürümlerini ücretsiz olarak deneyebileceğinizi biliyor muydunuz?* Sağlam Purview özelliklerinin kuruluşunuzun uyumluluk gereksinimlerini karşılamasına nasıl yardımcı olabileceğini keşfetmek için 90 günlük Purview çözümleri deneme sürümünü kullanın. Microsoft 365 E3 ve Office 365 E3 müşterileri artık [Microsoft Purview uyumluluk portalı deneme hub'ında](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef) başlayabilir. [Kaydolabilecek kişiler ve deneme koşulları](compliance-easy-trials.md) hakkında ayrıntılı bilgi edinin.
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Microsoft Purview İçeriden Risk Yönetimi, kuruluşunuzdaki kötü amaçlı ve yanlışlıkla etkinlikleri algılamanıza, araştırmanıza ve eyleme geçirmenize olanak tanıyarak iç riskleri en aza indirmenize yardımcı olan bir uyumluluk çözümüdür. Insider risk ilkeleri, kuruluşunuzda tanımlanması ve algılanması gereken risk türlerini tanımlamanıza olanak sağlar; örneğin, servis talepleri üzerinde işlem yapmak ve gerekirse servis taleplerini Microsoft eBulma'ya (Premium) iletmenizi sağlar. Kuruluşunuzdaki risk analistleri, kullanıcıların kuruluşunuzun uyumluluk standartlarıyla uyumlu olduğundan emin olmak için hızlı bir şekilde uygun eylemler gerçekleştirebilir.
+Microsoft Purview Insider Risk Management, kuruluşunuzdaki kötü amaçlı ve yanlışlıkla kullanılabilecek etkinlikleri algılamanıza, araştırmanıza ve eyleme geçirmenize olanak tanıyarak iç riskleri en aza indirmenize yardımcı olan bir uyumluluk çözümüdür. Insider risk ilkeleri, kuruluşunuzda tanımlanması ve algılanması gereken risk türlerini tanımlamanıza olanak sağlar. Örneğin, olaylar üzerinde işlem yapmak ve gerekirse servis taleplerini Microsoft eKeşif'e (Premium) yükseltmek de buna dahildir. Kuruluşunuzdaki risk analistleri, kullanıcıların kuruluşunuzun uyumluluk standartlarıyla uyumlu olduğundan emin olmak için hızlı bir şekilde uygun eylemler gerçekleştirebilir.
 
 Daha fazla bilgi edinmek ve kuruluşunuzdaki riskli etkinlikleri ele almak için planlama sürecine genel bakış için bkz. [Insider risk yönetimi programı başlatma](https://download.microsoft.com/download/b/2/0/b208282a-2482-4986-ba07-15a9b9286df0/pwc-starting-an-insider-risk-management-program-with-pwc-and-microsoft.pdf).
 
@@ -62,7 +62,7 @@ Kuruluşunuzda riski yönetmek ve en aza indirmek, modern çalışma alanında b
 
 Modern çalışma alanında bulunan kullanıcılar, geniş bir platform ve hizmet yelpazesinde veri oluşturma, yönetme ve paylaşma erişimine sahiptir. Çoğu durumda kuruluşlar, kullanıcı gizlilik standartlarını karşılarken kuruluş genelindeki riskleri belirlemek ve azaltmak için sınırlı kaynaklara ve araçlara sahiptir.
 
-Insider risk yönetimi, risk etkinliğini hızla tanımlamanıza, önceliklendirmenize ve harekete geçirmenize yardımcı olmak için hizmetin ve üçüncü taraf göstergelerin tamamını kullanır. insider risk yönetimi, Microsoft 365 ve Microsoft Graph günlüklerini kullanarak risk göstergelerini tanımlamak için belirli ilkeler tanımlamanızı sağlar. Bu ilkeler riskli etkinlikleri belirlemenize ve bu riskleri azaltmak için harekete geçirmenize olanak sağlar.
+Insider risk yönetimi, risk etkinliğini hızla tanımlamanıza, önceliklendirmenize ve harekete geçirmenize yardımcı olmak için hizmetin ve üçüncü taraf göstergelerin tamamını kullanır. Insider risk yönetimi, Microsoft 365 ve Microsoft Graph günlüklerini kullanarak risk göstergelerini tanımlamak için belirli ilkeler tanımlamanızı sağlar. Bu ilkeler riskli etkinlikleri belirlemenize ve bu riskleri azaltmak için harekete geçirmenize olanak sağlar.
 
 Insider risk yönetimi aşağıdaki ilkeler etrafında ortalanır:
 
@@ -77,7 +77,7 @@ Insider risk analizi, herhangi bir iç risk ilkesi yapılandırmadan kuruluşunu
 
 Insider risk analizi hakkında daha fazla bilgi edinmek için bkz. [Insider risk yönetimi ayarları: Analiz](insider-risk-management-settings.md#analytics).
 
-## <a name="get-started-with-recommended-actions-preview"></a>Önerilen eylemlerle Kullanmaya başlayın (önizleme)
+## <a name="get-started-with-recommended-actions-preview"></a>Önerilen eylemleri kullanmaya başlama (önizleme)
 
 İster içeriden risk yönetimini ilk kez ayarlarken ister yeni ilkeler oluşturmaya başlarken [, yeni önerilen eylemler](insider-risk-management-configure.md#recommended-actions-preview) deneyimi, iç risk yönetimi özelliklerinden en iyi şekilde yararlanmak için size yardımcı olabilir. Önerilen eylemler arasında izinleri ayarlama, ilke göstergelerini seçme, ilke oluşturma ve daha fazlası yer alır.
 
@@ -149,8 +149,8 @@ Olaylar araştırıldıktan sonra, gözden geçirenler olayı çözmek için hı
 
 Daha ciddi durumlarda, insider risk yönetimi olay bilgilerini kuruluşunuzdaki diğer gözden geçirenler veya hizmetlerle paylaşmanız gerekebilir. Insider risk yönetimi, uçtan uca risk çözümünde size yardımcı olmak için diğer Microsoft Purview çözümleriyle sıkı bir şekilde tümleşiktir.
 
-- **eBulma (Premium)**: Araştırma için bir olayı yükseltme, eBulma(Premium) Microsoft Purview servis talebi verilerini ve yönetimini aktarmanıza olanak tanır. eBulma (Premium), kuruluşunuzun iç ve dış araştırmalarına yanıt veren içeriği korumak, toplamak, gözden geçirmek, analiz etmek ve dışarı aktarmak için uçtan uca bir iş akışı sağlar. Yasal ekiplerin yasal tutma bildirimi iş akışının tamamını yönetmesine olanak tanır. eBulma (Premium) durumları hakkında daha fazla bilgi edinmek için bkz. [Microsoft Purview eKeşif'e (Premium) genel bakış](overview-ediscovery-20.md).
-- **Office 365 Yönetimi API'leri tümleştirmesi (önizleme)**: Insider risk yönetimi, uyarı bilgilerinin Office 365 Yönetimi API'leri aracılığıyla güvenlik bilgilerine ve olay yönetimi (SIEM) hizmetlerine dışarı aktarmayı destekler. Platformdaki uyarı bilgilerine en uygun erişime sahip olmak, kuruluşunuzun risk süreçlerine en uygun olanı size risk etkinlikleri üzerinde işlem yapma konusunda daha fazla esneklik sağlar. Office 365 Yönetim API'leriyle uyarı bilgilerini dışarı aktarma hakkında daha fazla bilgi edinmek için bkz. [Uyarıları dışarı aktarma](insider-risk-management-settings.md#export-alerts).
+- **eBulma (Premium)**: Araştırma için bir olayı yükseltme, verileri ve servis talebinin yönetimini Microsoft Purview eKeşif'e (Premium) aktarmanıza olanak tanır. eBulma (Premium), kuruluşunuzun iç ve dış araştırmalarına yanıt veren içeriği korumak, toplamak, gözden geçirmek, analiz etmek ve dışarı aktarmak için uçtan uca bir iş akışı sağlar. Yasal ekiplerin yasal tutma bildirimi iş akışının tamamını yönetmesine olanak tanır. eBulma (Premium) durumları hakkında daha fazla bilgi edinmek için bkz. [Microsoft Purview eKeşif'e (Premium) Genel Bakış](overview-ediscovery-20.md).
+- **Office 365 Yönetim API'leri tümleştirmesi (önizleme):** Insider risk yönetimi, uyarı bilgilerini Office 365 Yönetim API'leri aracılığıyla güvenlik bilgilerine ve olay yönetimi (SIEM) hizmetlerine aktarmayı destekler. Platformdaki uyarı bilgilerine en uygun erişime sahip olmak, kuruluşunuzun risk süreçlerine en uygun olanı size risk etkinlikleri üzerinde işlem yapma konusunda daha fazla esneklik sağlar. Office 365 Yönetim API'leriyle uyarı bilgilerini dışarı aktarma hakkında daha fazla bilgi edinmek için bkz. [Uyarıları dışarı aktarma](insider-risk-management-settings.md#export-alerts).
 
 > [!NOTE]
 > ServiceNow bağlayıcısının önizlemesi sırasında geri bildiriminiz ve desteğiniz için teşekkür ederiz. ServiceNow bağlayıcısının önizlemesini sonlandırmaya ve 30 Kasım 2020'de insider risk yönetimi desteğini sona erdirmeye karar verdik. Müşterilere insider risk yönetiminde ServiceNow tümleştirmesi sağlamak için alternatif yöntemleri etkin bir şekilde değerlendiriyoruz.
@@ -161,7 +161,7 @@ Insider risk yönetimi, çeşitli yaygın senaryolarda kuruluşunuzdaki iç risk
 
 ### <a name="data-theft-by-departing-users"></a>Ayrılan kullanıcılar tarafından veri hırsızlığı
 
-Kullanıcılar bir kuruluşta kendi istekleriyle veya sonlandırma sonucunda ayrıldığında genellikle şirket, müşteri ve kullanıcı verilerinin risk altında olduğu konusunda meşru endişeler vardır. Kullanıcılar, proje verilerinin mülkiyete ait olmadığını kabul edebilir veya kişisel kazanç sağlamak ve şirket ilkesi ile yasal standartları ihlal etmek amacıyla şirket verilerini almak isteyebilirler. [Kullanıcılar ilke şablonundan ayrılarak Veri hırsızlığını](insider-risk-management-policies.md#policy-templates) kullanan Insider risk yönetimi ilkeleri, genellikle bu tür bir hırsızlıkla ilişkili etkinlikleri otomatik olarak algılar. Bu ilkeyle, uygun araştırma eylemlerini gerçekleştirebilmeniz için kullanıcılardan ayrılarak veri hırsızlığıyla ilişkili şüpheli etkinlikler için otomatik olarak uyarılar alırsınız. Bu ilke şablonu için kuruluşunuz için [bir Microsoft 365 İk bağlayıcısı](import-hr-data.md) yapılandırmanız gerekir.
+Kullanıcılar kuruluşta kendi istekleriyle veya sonlandırmanın bir sonucu olarak ayrıldığında genellikle şirket, müşteri ve kullanıcı verilerinin risk altında olduğu konusunda meşru endişeler vardır. Kullanıcılar, proje verilerinin mülkiyete ait olmadığını kabul edebilir veya kişisel kazanç sağlamak ve şirket ilkesi ile yasal standartları ihlal etmek amacıyla şirket verilerini almak isteyebilirler. [Kullanıcılar ilke şablonundan ayrılarak Veri hırsızlığını](insider-risk-management-policies.md#policy-templates) kullanan Insider risk yönetimi ilkeleri, genellikle bu tür bir hırsızlıkla ilişkili etkinlikleri otomatik olarak algılar. Bu ilkeyle, uygun araştırma eylemlerini gerçekleştirebilmeniz için kullanıcılardan ayrılarak veri hırsızlığıyla ilişkili şüpheli etkinlikler için otomatik olarak uyarılar alırsınız. Bu ilke şablonu için kuruluşunuz için [bir Microsoft 365 HR bağlayıcısı](import-hr-data.md) yapılandırmanız gerekir.
 
 ### <a name="intentional-or-unintentional-leak-of-sensitive-or-confidential-information"></a>Hassas veya gizli bilgilerin kasıtlı veya kasıtsız olarak sızması
 
@@ -173,7 +173,7 @@ Kullanıcılar bir kuruluşta kendi istekleriyle veya sonlandırma sonucunda ayr
 
 ## <a name="intentional-or-unintentional-security-policy-violations-preview"></a>Kasıtlı veya kasıtsız güvenlik ilkesi ihlalleri (önizleme)
 
-Kullanıcılar genellikle cihazlarını modern çalışma alanında yönetirken büyük ölçüde denetime sahiptir. Bu denetim, görevlerinin performansında gereken uygulamaları yükleme veya kaldırma izinlerini veya cihaz güvenlik özelliklerini geçici olarak devre dışı bırakma özelliğini içerebilir. Bu etkinliğin yanlışlıkla, yanlışlıkla veya kötü amaçlı olması fark etmeksizin, bu davranış kuruluşunuz için risk oluşturabilir ve en aza indirmek için tanımlamak ve harekete geçmek önemlidir. Aşağıdaki insider risk management güvenlik ilkesi ihlal şablonları, bu riskli güvenlik etkinliklerini tanımlamaya yardımcı olmak için güvenlik riski göstergelerini puanlar ve güvenlikle ilgili etkinliklere yönelik içgörüler sağlamak için Uç Nokta için Microsoft Defender uyarılarını kullanır:
+Kullanıcılar genellikle cihazlarını modern çalışma alanında yönetirken büyük ölçüde denetime sahiptir. Bu denetim, görevlerinin performansında gereken uygulamaları yükleme veya kaldırma izinlerini veya cihaz güvenlik özelliklerini geçici olarak devre dışı bırakma özelliğini içerebilir. Bu etkinliğin yanlışlıkla, yanlışlıkla veya kötü amaçlı olması fark etmeksizin, bu davranış kuruluşunuz için risk oluşturabilir ve en aza indirmek için tanımlamak ve harekete geçmek önemlidir. Aşağıdaki insider risk yönetimi güvenlik ilkesi ihlal şablonları, bu riskli güvenlik etkinliklerini tanımlamaya yardımcı olmak için güvenlik riski göstergelerini puanlar ve güvenlikle ilgili etkinliklere yönelik içgörüler sağlamak üzere Uç Nokta için Microsoft Defender uyarılarını kullanır:
 
 - [Genel güvenlik ilkesi ihlalleri (önizleme)](insider-risk-management-policies.md#general-security-policy-violations-preview)
 - [Ayrılan kullanıcılar tarafından güvenlik ilkesi ihlalleri (önizleme)](insider-risk-management-policies.md#security-policy-violations-by-departing-users-preview)
@@ -189,13 +189,13 @@ Kuruluşunuzdaki kullanıcılar konumlarına, hassas bilgilere erişim düzeyler
 
 ## <a name="healthcare-preview"></a>Healthcare (önizleme)
 
-Sağlık sektöründeki kuruluşlar için yapılan son çalışmalar, insider ile ilgili veri ihlallerinin çok yüksek oranda olduğunu tespit etti. Hasta verilerinin ve sağlık kaydı bilgilerinin kötüye kullanımını algılamak, hasta gizliliğini korumanın ve Sağlık Sigortası Taşınabilirlik ve Sorumluluk Yasası (HIPAA) ve Ekonomik ve Klinik Sağlık için Sağlık Bilgi Teknolojisi (HITECH) Yasası gibi uyumluluk düzenlemelerine uymanın kritik bir bileşenidir. Hasta verilerinin kötüye kullanılması, ayrıcalıklı hasta kayıtlarına erişmekten kötü amaçlı olarak aile veya komşulardan gelen hastaların kayıtlarına erişmeye kadar değişebilir. Aşağıdaki insider risk yönetimi ilkesi şablonları, bu tür riskli etkinliklerin kimliğini belirlemeye yardımcı olmak için Microsoft 365 İk bağlayıcısını ve sağlık hizmetlerine özgü bir veri bağlayıcısını kullanarak elektronik ısı kaydı (EHR) sistemlerinizde oluşabilecek davranışlarla ilgili risk göstergelerini puanlamaya başlar:
+Sağlık sektöründeki kuruluşlar için yapılan son çalışmalar, insider ile ilgili veri ihlallerinin çok yüksek oranda olduğunu tespit etti. Hasta verilerinin ve sağlık kaydı bilgilerinin kötüye kullanımını algılamak, hasta gizliliğini korumanın ve Sağlık Sigortası Taşınabilirlik ve Sorumluluk Yasası (HIPAA) ve Ekonomik ve Klinik Sağlık için Sağlık Bilgi Teknolojisi (HITECH) Yasası gibi uyumluluk düzenlemelerine uymanın kritik bir bileşenidir. Hasta verilerinin kötüye kullanılması, ayrıcalıklı hasta kayıtlarına erişmekten kötü amaçlı olarak aile veya komşulardan gelen hastaların kayıtlarına erişmeye kadar değişebilir. Aşağıdaki insider risk yönetimi ilkesi şablonları, bu tür riskli etkinliklerin kimliğini belirlemeye yardımcı olmak için Microsoft 365 HR bağlayıcısını ve sağlık hizmetlerine özgü bir veri bağlayıcısını kullanarak elektronik ısı kaydı (EHR) sistemlerinizde oluşabilecek davranışlarla ilgili risk göstergelerini puanlamaya başlar:
 
 - [Genel hasta verilerini kötüye kullanma (önizleme)](insider-risk-management-policies.md#general-patient-data-misuse-preview)
 
 ## <a name="actions-and-behaviors-by-disgruntled-users-preview"></a>Dağıtılmamış kullanıcıların eylemleri ve davranışları (önizleme)
 
-Çalışma stresi olayları, kullanıcı davranışını insider riskleriyle ilgili çeşitli şekillerde etkileyebilir. Bu stresörler kötü bir performans incelemesi, konum indirgeme veya performans gözden geçirme planına yerleştirilen kullanıcı olabilir. Kullanıcıların çoğu bu olaylara kötü amaçlı olarak yanıt vermese de, bu eylemlerin stresi bazı kullanıcıların normal koşullarda normalde dikkate almayabilecekleri eylemler gerçekleştirmesine neden olabilir. Aşağıdaki insider risk yönetimi ilkesi şablonları, bu tür riskli etkinliklerin kimliğini belirlemeye yardımcı olmak için Microsoft 365 İk bağlayıcısını kullanır ve istihdam stresi olayları yakınında oluşabilecek davranışlarla ilgili risk göstergelerini puanlama işlemine başlar:
+Çalışma stresi olayları, kullanıcı davranışını insider riskleriyle ilgili çeşitli şekillerde etkileyebilir. Bu stresörler kötü bir performans incelemesi, konum indirgeme veya performans gözden geçirme planına yerleştirilen kullanıcı olabilir. Kullanıcıların çoğu bu olaylara kötü amaçlı olarak yanıt vermese de, bu eylemlerin stresi bazı kullanıcıların normal koşullarda normalde dikkate almayabilecekleri şekilde davranmalarına neden olabilir. Aşağıdaki insider risk yönetimi ilkesi şablonları, bu tür riskli etkinlikleri tanımlamaya yardımcı olmak için Microsoft 365 HR bağlayıcısını kullanır ve istihdam stresi olayları yakınlarında oluşabilecek davranışlarla ilgili risk göstergelerini puanlama işlemini başlatır:
 
 - [Bozuk kullanıcılar tarafından veri sızıntıları (önizleme)](insider-risk-management-policies.md#data-leaks-by-disgruntled-users-preview)
 - [Dağıtılmamış kullanıcıların güvenlik ilkesi ihlalleri (önizleme)](insider-risk-management-policies.md#security-policy-violations-by-disgruntled-users-preview)
@@ -203,5 +203,5 @@ Sağlık sektöründeki kuruluşlar için yapılan son çalışmalar, insider il
 ## <a name="ready-to-get-started"></a>Başlamaya hazır mısınız?
 
 - [Kuruluşunuzda insider risk yönetimi](insider-risk-management-plan.md) ilkelerini etkinleştirmeye hazırlanmak için bkz. Insider risk yönetimi planlama.
-- Insider risk ilkeleri için genel ayarları yapılandırmak için bkz. [insider risk yönetimi ayarlarıyla Kullanmaya başlayın](insider-risk-management-settings.md).
-- Önkoşulları yapılandırmak, ilke oluşturmak ve uyarıları almaya başlamak için [bkz. insider risk yönetimiyle Kullanmaya başlayın](insider-risk-management-configure.md).
+- Insider risk ilkeleri için genel ayarları yapılandırmak için bkz. [Insider risk yönetimi ayarlarını kullanmaya başlama](insider-risk-management-settings.md) .
+- Önkoşulları yapılandırmak, ilke oluşturmak ve uyarıları almaya başlamak için bkz. [Insider risk yönetimini](insider-risk-management-configure.md) kullanmaya başlama.

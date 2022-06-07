@@ -16,108 +16,109 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 37cdbb02-a24a-4093-8bdb-2a7f0b3a19ee
-description: Posta kutularına ek arşiv depolama sağlayan otomatik genişleyen arşivleme Exchange Online öğrenin.
-ms.openlocfilehash: b55c0504f04f896377c1e1b0a4dccdacdb8bbc37
-ms.sourcegitcommit: f941967b8bc2c24401795e41fd155365a0dbc645
+description: Exchange Online posta kutuları için ek arşiv depolama alanı sağlayan arşivlemeyi otomatik olarak genişletme hakkında bilgi edinin.
+ms.openlocfilehash: fc3e40e72ad287e7d7e696557422420cccbd4ee1
+ms.sourcegitcommit: 8a0de6240facfe26ee391a14076b7fe534ee6598
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63761554"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "65922449"
 ---
 # <a name="learn-about-auto-expanding-archiving"></a>Otomatik genişleyen arşivleme hakkında daha fazla bilgi edinme
 
-Daha Office 365 posta kutuları, kullanıcılara ek posta kutusu depolama alanı sağlar. Kullanıcının arşiv posta kutusu etkinleştirildikten sonra, 100 GB'a kadar ek depolama alanı kullanılabilir. Geçmişte, 100 GB depolama alanı kotasına ulaşıldı ancak kuruluşlar bir arşiv posta kutusu için ek depolama alanı isteğinde bulundu. Artık durum böyle değildir.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Bu arşivleme özelliği (Microsoft 365 genişletme olarak da *adlandırılan) arşiv* posta kutularında 1,5 TB'a kadar ek depolama alanı sağlar. Arşiv posta kutusunda depolama kotasına ulaşılırsa, Microsoft 365 posta kutusu 1,5 TB'a ulaşana kadar arşiv boyutunu otomatik olarak artırır (ve artımlı olarak).
+Office 365'te arşiv posta kutuları kullanıcılara ek posta kutusu depolama alanı sağlar. Kullanıcının arşiv posta kutusu etkinleştirildikten sonra 100 GB'a kadar ek depolama alanı kullanılabilir. Geçmişte 100 GB depolama kotasına ulaşıldığında kuruluşların arşiv posta kutusu için ek depolama alanı istemek için Microsoft'a başvurması gerekiyordu. Artık öyle değil.
 
-Otomatik genişleyen arşivlemeyi açmayla ilgili adım adım yönergeler için bkz. [Otomatik genişleyen arşivlemeyi etkinleştirme](enable-autoexpanding-archiving.md).
+Microsoft 365'teki arşivleme özelliği ( *otomatik genişletme arşivleme* olarak adlandırılır), arşiv posta kutularında 1,5 TB'a kadar ek depolama alanı sağlar. Arşiv posta kutusunda depolama kotası sınırına ulaşıldığında, Arşiv posta kutusu 1,5 TB'a ulaşana kadar Microsoft 365 otomatik olarak (ve artımlı olarak) arşivin boyutunu artırır.
+
+Otomatik genişletme arşivlemeyi açmayla ilgili adım adım yönergeler için bkz. [Otomatik genişletme arşivlemeyi etkinleştirme](enable-autoexpanding-archiving.md).
 
 > [!NOTE]
-> Otomatik genişleyen arşivleme, paylaşılan posta kutularını da destekler. Paylaşılan bir posta kutusunun arşivini etkinleştirmek için bir Exchange Online Plan 2 lisansı veya Exchange Online lisansı olan bir Exchange Online Arşivleme Lisansı gereklidir.
+> Otomatik genişletme arşivleme, paylaşılan posta kutularını da destekler. Paylaşılan posta kutusu için arşivi etkinleştirmek için, Exchange Online Plan 2 lisansı veya Exchange Online Arşivleme lisansına sahip bir Exchange Online Plan 1 lisansı gerekir.
 
-## <a name="how-auto-expanding-archiving-works"></a>Otomatik genişleyen arşivleme nasıl çalışır?
+## <a name="how-auto-expanding-archiving-works"></a>Otomatik genişletme arşivleme nasıl çalışır?
 
-Daha önce de açıklanması gibi, kullanıcının arşiv posta kutusu etkinleştirildiğinde ek posta kutusu depolama alanı oluşturulur. Otomatik genişleyen arşivleme etkinleştirildiğinde, arşiv Microsoft 365 kutusunun boyutunu düzenli aralıklarla denetler. Bir arşiv posta kutusu depolama sınırına yaklaşsa, arşiv Microsoft 365 otomatik olarak ek depolama alanı oluşturur. Kullanıcının bu ek depolama alanı biterse, Microsoft 365 arşive daha fazla depolama alanı ekler. Kullanıcının arşivi 1,5 TB boyuta ulaşana kadar bu işlem devam eder. Bu işlem otomatik olarak yapılır ve bu da yöneticilerin ek arşiv depolaması talep etmek veya otomatik genişleyen arşivlemeyi yönetmek zorunda olmadığınız anlamına gelir.
+Daha önce açıklandığı gibi, kullanıcının arşiv posta kutusu etkinleştirildiğinde ek posta kutusu depolama alanı oluşturulur. Otomatik genişletme arşivleme etkinleştirildiğinde, Microsoft 365 arşiv posta kutusunun boyutunu düzenli aralıklarla denetler. Bir arşiv posta kutusu depolama sınırına yaklaştığında, Microsoft 365 arşiv için otomatik olarak ek depolama alanı oluşturur. Kullanıcının bu ek depolama alanı biterse, Microsoft 365 kullanıcının arşivine daha fazla depolama alanı ekler. Bu işlem, kullanıcının arşivi 1,5 TB boyuta ulaşana kadar devam eder. Bu işlem otomatik olarak gerçekleşir; bu da yöneticilerin ek arşiv depolama alanı istemesi veya otomatik genişletme arşivlemeyi yönetmesi gerekmeyecek anlamına gelir.
 
-Burada, bu işleme hızlı bir genel bakış ve hızla göz atacağız.
+bu işlemle ilgili hızlı bir genel bakış aşağıda verilmiştir.
 
-![Otomatik genişleyen arşivleme sürecine genel bakış.](../media/74355385-d990-44fe-8a87-6c3639d1f63f.png)
+![Otomatik genişletme arşivleme işlemine genel bakış.](../media/74355385-d990-44fe-8a87-6c3639d1f63f.png)
 
-1. Arşivleme, kullanıcı posta kutusu veya paylaşılan posta kutusu için etkinleştirilir. 100 GB depolama alanı olan bir arşiv posta kutusu oluşturulur ve arşiv posta kutusunun uyarı kotası 90 GB olarak ayarlanır.
+1. Arşivleme, kullanıcı posta kutusu veya paylaşılan posta kutusu için etkinleştirilir. 100 GB depolama alanı olan bir arşiv posta kutusu oluşturulur ve arşiv posta kutusu için uyarı kotası 90 GB olarak ayarlanır.
 
-2. Yönetici, posta kutusu için otomatik genişleyen arşivlemeyi sağlar. Arşiv posta kutusu (Kurtarılabilir Öğeler klasörü de içinde olmak üzere) 90 GB'a ulaştığında otomatik genişleyen bir arşive dönüştürülür ve Microsoft 365 1,5 TB boyuta ulaşana kadar arşive depolama alanı ekler. Ek depolama alanı sağlanması 30 gün kadar zaman alır.
-
-   > [!NOTE]
-   > Posta kutusu bekletme ilkesine yerleştirilirse veya bir bekletme ilkesine atanmışsa, otomatik genişleyen arşivleme etkinleştirildiğinde arşiv posta kutusunun depolama kotası 110 GB'a artırıldı. Benzer şekilde, arşiv uyarısı kotası da 100 GB'a artırıldı.
+2. Yönetici, posta kutusu için arşivlemenin otomatik olarak genişletilmesine olanak tanır. Posta kutusuna bir saklama veya saklama ilkesi uygulanmışsa, arşiv posta kutusunun depolama kotası 110 GB'a, arşiv uyarı kotası ise 100 GB'a yükseltilir.
+    
+    Ardından arşiv posta kutusu (Kurtarılabilir Öğeler klasörü dahil) depolama kotasına ulaştığında, arşiv posta kutusu otomatik olarak genişletilen bir arşive dönüştürülür. Maksimum 1,5 TB boyuta ulaşana kadar ek depolama alanı eklenir. Ek depolama alanının sağlanması 30 güne kadar sürebilir.
 
 3. Microsoft 365 gerektiğinde otomatik olarak daha fazla depolama alanı ekler.
 
 > [!IMPORTANT]
-> Otomatik genişleyen arşivleme, günde 1 GB'i aşmaan büyüme hızına sahip tek tek kullanıcılar (veya paylaşılan posta kutuları) için yalnızca kullanılan posta kutuları için destekler. Kullanıcının arşiv posta kutusu yalnızca o kullanıcıya yöneliktir. Bir arşiv posta kutusuna ileti kopyalamak için günlük kayıt, aktarım kuralları veya otomatik iletme kuralları kullanımına izin verilmez. Microsoft, kullanıcının arşiv posta kutusunun diğer kullanıcıların arşiv verilerini depolamak için kullandığı veya uygun olmayan kullanım durumlarında kullandığı durumlarda ek arşivlemeyi reddetme hakkını rezerve ediyor.
+> Otomatik genişletme arşivleme yalnızca tek tek kullanıcılar (veya paylaşılan posta kutuları) için kullanılan ve günlük 1 GB'ı aşmayan büyüme hızına sahip posta kutuları için desteklenir. Kullanıcının arşiv posta kutusu yalnızca o kullanıcıya yöneliktir. İletileri arşiv posta kutusuna kopyalamak için günlüğe kaydetme, taşıma kuralları veya otomatik iletme kurallarının kullanılmasına izin verilmez. Microsoft, kullanıcının arşiv posta kutusunun diğer kullanıcıların arşiv verilerini depolamak için kullanıldığı durumlarda veya uygunsuz kullanım durumunda ek arşivlemeyi reddetme hakkını saklıdır.
 
-## <a name="what-gets-moved-to-the-additional-archive-storage-space"></a>Ek arşiv depolama alanına neler taşınır?
+## <a name="what-gets-moved-to-the-additional-archive-storage-space"></a>Ek arşiv depolama alanına ne taşınır?
 
-Otomatik genişleyen arşiv depolama alanını verimli bir şekilde kullanmak için, klasörler taşınabilirsiniz. Microsoft 365, arşive ek depolama alanı ek olduğunda hangi klasörlerin taşın posta ile taşındığını belirler. Bazen bir klasör taşındığında, bir veya birden çok alt klasör otomatik olarak oluşturulur ve taşıma işlemini kolaylaştırmak için özgün klasördeki öğeler bu klasörlere dağıtılır. Dosya listesinde klasör listesinin arşiv bölümü görüntülenirken Outlook alt klasörler özgün klasörün altında görüntülenir. Bu alt klasörleri adlandırmak Microsoft 365 **\<folder name\>adlandırma kuralı şu şekildedir _yyyy (aaaa, yyyy h_mm)**, burada:
+Otomatik olarak genişleten arşiv depolama alanını verimli bir şekilde kullanmak için klasörler taşınabilir. Microsoft 365, arşive ek depolama alanı eklendiğinde hangi klasörlerin taşındığını belirler. Bazen bir klasör taşındığında, bir veya daha fazla alt klasör otomatik olarak oluşturulur ve taşıma işlemini kolaylaştırmak için özgün klasördeki öğeler bu klasörlere dağıtılır. Outlook'ta klasör listesinin arşiv bölümünü görüntülerken, bu alt klasörler özgün klasörün altında görüntülenir. Microsoft 365'in bu alt klasörleri adlandırmak **\<folder name\>için kullandığı adlandırma kuralı _yyyy (Mmm dd, yy h_mm üzerinde oluşturulur)**; burada:
 
-- **yyyy** , klasördeki iletilerin alın aldığı yıldır.
+- **yyyy** , klasördeki iletilerin alındığı yıldır.
 
-- **aaa aaa, yyyy h_m**, alt klasörün Office 365 tarafından UTC biçiminde, kullanıcının saat dilimine ve Outlook'te bölgesel ayarlarına göre oluşturulmuş tarih ve saattir.
+- **mmm dd, yyyy h_m** , kullanıcının Outlook'taki saat dilimi ve bölgesel ayarlarına bağlı olarak alt klasörün Office 365 tarafından UTC biçiminde oluşturulduğu tarih ve saattir.
 
-Aşağıdaki ekran görüntüleri, iletilerin otomatik olarak genişletilmiş arşive taşınmadan önce ve kaldırıldıktan sonra klasör listesini gösterir.
+Aşağıdaki ekran görüntülerinde, iletiler otomatik genişletilmiş arşive taşınmadan önce ve sonra bir klasör listesi gösterilir.
 
- **Ek depolama alanı eklenmeden önce**
+ **Ek depolama eklenmeden önce**
 
-![Arşiv hazırlamadan önce arşiv posta kutusunun klasör listesi.](../media/5d6d6420-e562-4912-aaab-1c111762b3f6.png)
+![Arşivi otomatik olarak genişletmeden önce arşiv posta kutusunun klasör listesi sağlanır.](../media/5d6d6420-e562-4912-aaab-1c111762b3f6.png)
 
- **Ek depolama alanı eklendikten sonra**
+ **Ek depolama eklendikten sonra**
 
-![Arşiv otomatik genişledikten sonra arşiv posta kutusunun klasör listesi.](../media/c03c5f51-23fa-4fc2-b887-7e7e5cce30da.png)
+![Arşiv otomatik genişletildikten sonra arşiv posta kutusunun klasör listesi sağlanır.](../media/c03c5f51-23fa-4fc2-b887-7e7e5cce30da.png)
 
 > [!NOTE]
-> Daha önce açıklandığı gibi, Microsoft 365 arşive dağıtan içeriği arşive dağıtmaya yardımcı olmak için öğeleri alt klasörlere taşır (ve bunları yukarıda açıklanan adlandırma kuralını kullanarak adlandırarak adlandırabilirsiniz). Ancak, öğeleri alt klasörlere taşıma durumu her zaman böyle değildir. Bazen bir klasörün tamamı arşivlenen bir arşive taşınabiliyor. Bu durumda, klasörün özgün adı korunur.  Bu klasör, arşiv arşivinde Outlook arşive taşındığında görünür değildir.
+> Daha önce açıklandığı gibi Microsoft 365, içeriği yardımcı bir arşive dağıtmaya yardımcı olmak için öğeleri alt klasörlere taşır (ve yukarıda açıklanan adlandırma kuralını kullanarak adlandırın). Ancak öğeleri alt klasörlere taşımak her zaman geçerli olmayabilir. Bazen bir klasörün tamamı yardımcı bir arşive taşınabilir. Bu durumda, klasör özgün adını korur.  Outlook'taki klasör listesinde klasörün yardımcı bir arşive taşındığı görülmeyecektir.
 
-## <a name="outlook-requirements-for-accessing-items-in-an-auto-expanded-archive"></a>Outlook genişletilmiş bir arşivdeki öğelere erişmek için bazı önemli gereksinimler
+## <a name="outlook-requirements-for-accessing-items-in-an-auto-expanded-archive"></a>Otomatik genişletilmiş arşivdeki öğelere erişmek için Outlook gereksinimleri
 
-Otomatik genişletilmiş bir arşivde depolanan iletilere erişmek için, kullanıcıların aşağıdaki müşterilerden birini Outlook gerekir:
+Otomatik genişletilmiş arşivde depolanan iletilere erişmek için kullanıcıların aşağıdaki Outlook istemcilerinden birini kullanması gerekir:
 
-- Outlook (daha önce Kurumlar için Microsoft 365 Uygulamaları olarak adlandırılmış olan) bir parçası Office 365 ProPlus
+- Kurumsal için Microsoft 365 Uygulamaları'nın bir parçası olarak Outlook (daha önce Office 365 ProPlus olarak adlandırılıyor)
 
-- Outlook (daha önce İş için Microsoft 365 Uygulamaları Office 365 İş olarak adlandırılmış)
+- İş için Microsoft 365 Uygulamaları'nın bir parçası olarak Outlook (daha önce Office 365 İş olarak adlandırılıyor)
 
-- Outlook 2016 için Outlook 2019'Windows
+- Windows için Outlook 2016 veya Outlook 2019
 
 - Web üzerinde Outlook
 
-- mac Outlook 2016 2019 Outlook veya Outlook 2019
+- Mac için Outlook 2016 veya Outlook 2019
 
-Otomatik genişletilmiş bir arşivde depolanan iletilere Outlook veya Web üzerinde Outlook kullanırken göz önünde bulundurabilirsiniz.
+Otomatik genişletilmiş bir arşivde depolanan iletilere erişmek için Web üzerinde Outlook veya Outlook kullanırken göz önünde bulundurmanız gereken bazı noktalar şunlardır.
 
-- Arşiv posta kutunuzda, otomatik genişletilmiş depolama alanına taşınanlar da dahil olmak üzere herhangi bir klasöre erişebilirsiniz.
+- Arşiv posta kutunuzda, otomatik olarak genişletilmiş depolama alanına taşınanlar da dahil olmak üzere herhangi bir klasöre erişebilirsiniz.
 
-- Bir arşiv posta kutusunda en az bir otomatik genişletilmiş depolama alanı varsa, arşiv posta kutusundan veya arşiv arşivinden klasör silemezsiniz. Başka bir deyişle, otomatik genişletilmiş depolama alanı sağlandıktan sonra arşivdeki hiçbir klasörü silemezsiniz.
+- Arşiv posta kutusunun en az bir otomatik genişletilmiş depolama alanı varsa, bir klasörü arşiv posta kutusundan veya yardımcı arşivden silemezsiniz. Başka bir deyişle, otomatik genişletilmiş bir depolama alanı sağlandıktan sonra arşivdeki hiçbir klasörü silemezsiniz.
 
-- Otomatik olarak genişletilmiş depolama alanında öğeleri silebilirsiniz. Bununla birlikte, posta kutusunda otomatik genişleyen arşivleme etkinleştirildikten sonra bir öğeyi kurtarmak için Silinmiş Öğeleri Kurtar özelliğini kullanaabilirsiniz.
+- Otomatik olarak genişletilmiş depolama alanındaki öğeleri silebilirsiniz. Ancak, bir posta kutusu için otomatik genişletme arşivleme etkinleştirildikten sonra bir öğeyi kurtarmak için Silinmiş Öğeleri Kurtar özelliğini kullanamazsınız.
 
-- Otomatik genişletilmiş arşivleme için arama web'Outlook (OWA) kullanılabilir. Çevrimiçi Arşiv'e benzer şekilde, ek depolama alanına taşınmış öğeleri arayabilirsiniz. OWA'da arama kapsamı olarak arşiv seçildiğinde, tüm arşivlerde (otomatik genişletilmiş arşivler de içinde) ve buna karşılık gelen alt klasörlerde arama yapılacaktır. Yalnızca bulut arşiv örneğinde (birincil posta kutusu hala şirket içinde) otomatik genişletilmiş arşiv özelliği için aramanın desteklene olmadığını unutmayın.
+- Otomatik genişletilmiş arşivleme araması web için Outlook'ta (OWA) kullanılabilir. Çevrimiçi Arşiv'e benzer şekilde, ek bir depolama alanına taşınan öğeleri de arayabilirsiniz. OWA'da arama kapsamı olarak arşiv seçildiğinde, tüm arşivler (otomatik genişletilmiş arşivler dahil) ve bunlara karşılık gelen alt klasörler aranacaktır. Yalnızca bulutta arşiv durumunda (birincil posta kutusu hala şirket içinde) otomatik genişletilmiş arşiv özelliği için aramanın desteklenmediğini unutmayın.
 
-- Otomatik olarak genişletilmiş arşiv araması Aylık Outlook Kanalında Outlook için Windows'de Enterprise sunulmaktadır. Bu güncelleştirmeyle Geçerli Posta Kutusu kapsamı kullanılabilir, böylelikle otomatik olarak genişletilmiş arşivde aramanızı sağlar. Yalnızca bulut arşiv örneğinde (birincil posta kutusu hala şirket içinde) otomatik genişletilmiş arşiv özelliği için aramanın desteklene olmadığını unutmayın. Bu özellik ve diğer destek Microsoft Arama daha fazla bilgi için bkz. Outlook Windows hangi [Exchange Online kullanır Microsoft Arama](https://techcommunity.microsoft.com/t5/outlook-global-customer-service/how-outlook-for-windows-connected-to-exchange-online-utilizes/ba-p/1715045). 
+- Otomatik genişletilmiş arşiv araması, Windows için Outlook'ta Aylık Kurumsal Kanal'da kullanılabilir. Bu güncelleştirme ile Geçerli Posta Kutusu kapsamı kullanılabilir, böylece otomatik genişletilmiş arşivde arama yapmanızı sağlar. Yalnızca bulutta arşiv durumunda (birincil posta kutusu hala şirket içinde) otomatik genişletilmiş arşiv özelliği için aramanın desteklenmediğini unutmayın. Bu ve diğer Microsoft Search destek özellikleri hakkında daha fazla bilgi için bkz. [Exchange Online'a bağlı Windows için Outlook'un Microsoft Search'ün nasıl kullanıldığı](https://techcommunity.microsoft.com/t5/outlook-global-customer-service/how-outlook-for-windows-connected-to-exchange-online-utilizes/ba-p/1715045). 
 
-- Otomatik genişletilmiş bir arşiv Outlook öğe sayıları (Outlook ve Web üzerinde Outlook' içinde) ve Okundu/Okunmadı sayıları doğru olmayabilir.
+- Otomatik genişletilmiş arşivdeki Outlook'taki öğe sayıları ve Okundu/Okunmadı sayıları (Outlook'ta ve Web üzerinde Outlook'ta) doğru olmayabilir.
 
-## <a name="auto-expanding-archiving-and-other-compliance-features"></a>Otomatik genişleyen arşivleme ve diğer uyumluluk özellikleri
+## <a name="auto-expanding-archiving-and-other-compliance-features"></a>Arşivleme ve diğer uyumluluk özelliklerini otomatik genişletme
 
-Bu bölümde, otomatik genişleyen arşivleme ile diğer uyumluluk ve veri idaresi özellikleri arasındaki işlevler açık bir şekilde açık almaktadır.
+Bu bölümde, otomatik olarak genişleten arşivleme ile diğer uyumluluk ve veri idaresi özellikleri arasındaki işlevler açıklanmaktadır.
 
-- **eBulma:** İçerik Arama veya eBulma Hizmeti gibi bir eBulma aracı In-Place, otomatik genişletilmiş bir arşivde ek depolama alanlarında da arama yapılacaktır.
+- **Ediscovery:** İçerik Arama veya In-Place eBulma gibi bir eBulma aracı kullandığınızda, otomatik genişletilmiş arşivdeki ek depolama alanları da aranıyor.
 
-- **Bekletme:** Güvenlik ve uyumluluk merkezinde Exchange Online'te Mahkeme Nedeniyle Tutma veya eBulma olay bekletme ve bekletme ilkeleri gibi araçları kullanarak posta kutusunu bekletmeye devam etmek için, otomatik genişletilmiş bir arşivde yer alan içerik de saklama durumunda olur.
+- **Saklama:** Microsoft Purview uyumluluk portalında Exchange Online'da Dava Tutma veya eBulma servis talebi saklama ve saklama ilkeleri gibi araçları kullanarak bir posta kutusunu beklemeye aldığınızda, otomatik olarak genişletilmiş arşivde bulunan içerik de beklemeye alınır.
 
-- **Mesajlaşma kayıtları yönetimi (MRM):** Posta kutusu öğelerinin kullanımdan Exchange Online için MRM silme ilkelerini kullanırsanız, otomatik genişletilmiş arşivde yer alan süresi dolmuş öğeler de silinir.
+- **Mesajlaşma kayıtları yönetimi (MRM):** Süresi dolan posta kutusu öğelerini kalıcı olarak silmek için Exchange Online'da MRM silme ilkelerini kullanırsanız, otomatik genişletilmiş arşivde bulunan süresi dolmuş öğeler de silinir.
 
-- **İçeri aktarma hizmeti:** PST dosyalarını kullanıcının Office 365 arşive içeri aktarma işlemi için İçeri Aktarma Hizmeti'ne kullanabilirsiniz. PST dosyalarından kullanıcının arşiv posta kutusuna 100 GB'a kadar veri aktarabilirsiniz.
+- **İçeri aktarma hizmeti:** PST dosyalarını kullanıcının otomatik olarak genişletilmiş arşivine aktarmak için Office 365 İçeri Aktarma hizmetini kullanabilirsiniz. PST dosyalarından kullanıcının arşiv posta kutusuna en fazla 100 GB veri aktarabilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Otomatik genişleyen arşivleme hakkında daha teknik ayrıntılar için bkz. Microsoft 365 [Genişletme Arşivleri Hakkında SSS](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-auto-expanding-archives-faq/ba-p/607784).
+Arşivlemenin otomatik olarak genişletilmesi hakkında daha fazla teknik ayrıntı için bkz. [Microsoft 365: Arşivleri Otomatik Genişletme SSS](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-auto-expanding-archives-faq/ba-p/607784).
 
-Otomatik genişleyen arşivlemeyi etkinleştirmeye hazırsanız, bkz. [Otomatik genişleyen arşivlemeyi etkinleştirme](enable-autoexpanding-archiving.md).
+Otomatik genişletme arşivlemeyi etkinleştirmeye hazırsanız bkz. [Otomatik genişletme arşivlemeyi etkinleştirme](enable-autoexpanding-archiving.md).

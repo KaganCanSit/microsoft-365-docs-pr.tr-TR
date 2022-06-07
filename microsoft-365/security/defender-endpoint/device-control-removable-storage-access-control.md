@@ -1,5 +1,5 @@
 ---
-title: Uç Nokta için Microsoft Defender Cihaz Denetimi Çıkarılabilir Depolama Access Control, çıkarılabilir depolama medyası
+title: Uç Nokta için Microsoft Defender Cihaz Denetimi Çıkarılabilir Depolama Erişim Denetimi, çıkarılabilir depolama medyası
 description: Uç Nokta için Microsoft Defender hakkında kılavuz
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -14,23 +14,23 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.technology: mde
-ms.date: 05/09/2022
-ms.openlocfilehash: a472a2183d642ca8c3231e6ca5129fdf79cad8fd
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.date: 06/06/2022
+ms.openlocfilehash: 68beef5a01206ef08a87f74d53767fdd74d37a14
+ms.sourcegitcommit: 8a0de6240facfe26ee391a14076b7fe534ee6598
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65317636"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "65923510"
 ---
-# <a name="microsoft-defender-for-endpoint-device-control-removable-storage-access-control"></a>Uç Nokta için Microsoft Defender Cihaz Denetimi Çıkarılabilir Depolama Access Control
+# <a name="microsoft-defender-for-endpoint-device-control-removable-storage-access-control"></a>Uç Nokta için Microsoft Defender Cihaz Denetimi Çıkarılabilir Depolama Erişim Denetimi
 
 **Şunlar için geçerlidir:**
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 > [!NOTE]
-> Bu ürünün grup ilkesi yönetimi ve Intune OMA-URI/Özel İlke yönetimi artık genel kullanıma sunuldu (4.18.2106): [Teknik Community blogu: Çıkarılabilir depolama alanınızı ve yazıcınızı Uç Nokta için Microsoft Defender ile koruma](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/protect-your-removable-storage-and-printers-with-microsoft/ba-p/2324806).
+> Bu ürünün Grup İlkesi yönetimi ve Intune OMA-URI/Özel İlke yönetimi genel kullanıma sunuldu (4.18.2106): [Bkz. Teknoloji Topluluğu blogu: Uç Nokta için Microsoft Defender ile çıkarılabilir depolama alanınızı ve yazıcınızı koruma](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/protect-your-removable-storage-and-printers-with-microsoft/ba-p/2324806).
 
-Uç Nokta için Microsoft Defender Cihaz Denetimi Çıkarılabilir Depolama Access Control aşağıdaki görevi gerçekleştirmenizi sağlar:
+Uç Nokta için Microsoft Defender Cihaz Denetimi Çıkarılabilir Depolama Erişim Denetimi, aşağıdaki görevi gerçekleştirmenizi sağlar:
 
 - dışlama ile veya hariç tutmadan çıkarılabilir depolama birimine okuma, yazma veya yürütme erişimine izin verme veya erişimi engelleme
 
@@ -43,28 +43,28 @@ Uç Nokta için Microsoft Defender Cihaz Denetimi Çıkarılabilir Depolama Acce
 |Kullanıcı Tabanlı Destek|Evet|
 |Makine Tabanlı Destek|Evet|
 
-|Yeteneği|Açıklama|Intune aracılığıyla dağıtma|grup ilkesi aracılığıyla dağıtma|
+|Yeteneği|Açıklama|Intune aracılığıyla dağıtma|Grup İlkesi aracılığıyla dağıtma|
 |---|---|---|---|
-|Çıkarılabilir Medya Grubu Oluşturma|Yeniden kullanılabilir çıkarılabilir medya grubu oluşturmanıza olanak tanır|[OMA-URI aracılığıyla ilke dağıtma](#deploying-policy-via-oma-uri) bölümündeki 1. adım | grup ilkesi [aracılığıyla ilke dağıtma](#deploying-policy-via-group-policy) bölümündeki 1. adım|
-|İlke Oluşturma|Her çıkarılabilir medya grubunu zorunlu kılmak için ilke oluşturmanıza olanak tanır|[OMA-URI aracılığıyla ilke dağıtma](#deploying-policy-via-oma-uri) bölümündeki 2. adım | grup ilkesi [aracılığıyla ilke dağıtma](#deploying-policy-via-group-policy) bölümündeki 2. ve 3. adımlar |
-|Varsayılan Zorlama|İlke yoksa çıkarılabilir medyaya varsayılan erişimi (Reddet veya İzin Ver) ayarlamanıza izin verir|[OMA-URI aracılığıyla ilke dağıtma](#deploying-policy-via-oma-uri) bölümündeki 3. adım | grup ilkesi [aracılığıyla ilke dağıtma](#deploying-policy-via-group-policy) bölümünde 4. adım |
-|Çıkarılabilir Depolama Access Control Etkinleştirme veya Devre Dışı Bırakma|Devre dışı bırak'ı ayarlarsanız, bu makinede Çıkarılabilir Depolama Access Control ilkesini devre dışı bırakır| [OMA-URI aracılığıyla ilke dağıtma](#deploying-policy-via-oma-uri) bölümünde 4. adım | grup ilkesi [aracılığıyla ilke dağıtma](#deploying-policy-via-group-policy) bölümündeki 5. adım |
-|Dosya bilgilerini yakalama|Yazma erişimi gerçekleştiğinde dosya bilgilerini yakalamak için ilke oluşturmanıza olanak tanır| [OMA-URI aracılığıyla ilke dağıtma](#deploying-policy-via-oma-uri) bölümündeki 2. ve 5. adımlar | grup ilkesi [aracılığıyla ilke dağıtma](#deploying-policy-via-group-policy) bölümünde 2. ve 6. adım |
+|Çıkarılabilir Medya Grubu Oluşturma|Yeniden kullanılabilir çıkarılabilir medya grubu oluşturmanıza olanak tanır|[OMA-URI aracılığıyla ilke dağıtma](#deploying-policy-via-oma-uri) bölümündeki 1. adım | [Grup İlkesi aracılığıyla ilke dağıtma](#deploying-policy-via-group-policy) bölümündeki 1. adım|
+|İlke Oluşturma|Her çıkarılabilir medya grubunu zorunlu kılmak için ilke oluşturmanıza olanak tanır|[OMA-URI aracılığıyla ilke dağıtma](#deploying-policy-via-oma-uri) bölümündeki 2. adım | [Grup İlkesi aracılığıyla ilke dağıtma](#deploying-policy-via-group-policy) bölümündeki 2. ve 3. adımlar |
+|Varsayılan Zorlama|İlke yoksa çıkarılabilir medyaya varsayılan erişimi (Reddet veya İzin Ver) ayarlamanıza izin verir|[OMA-URI aracılığıyla ilke dağıtma](#deploying-policy-via-oma-uri) bölümündeki 3. adım | [Grup İlkesi aracılığıyla ilke dağıtma](#deploying-policy-via-group-policy) bölümünde 4. adım |
+|Çıkarılabilir Depolama Birimi Erişim Denetimini Etkinleştirme veya Devre Dışı Bırakma|Devre Dışı Bırak'ı ayarlarsanız, bu makinede Çıkarılabilir Depolama Birimi Erişim Denetimi ilkesini devre dışı bırakır| [OMA-URI aracılığıyla ilke dağıtma](#deploying-policy-via-oma-uri) bölümünde 4. adım | [Grup İlkesi aracılığıyla ilke dağıtma](#deploying-policy-via-group-policy) bölümündeki 5. adım |
+|Dosya bilgilerini yakalama|Yazma erişimi gerçekleştiğinde dosya bilgilerini yakalamak için ilke oluşturmanıza olanak tanır| [OMA-URI aracılığıyla ilke dağıtma](#deploying-policy-via-oma-uri) bölümündeki 2. ve 5. adımlar | Grup [İlkesi aracılığıyla ilke dağıtma](#deploying-policy-via-group-policy) bölümünde 2. ve 6. adım |
 
 ## <a name="prepare-your-endpoints"></a>Uç noktalarınızı hazırlama
 
-Kötü amaçlı yazılımdan koruma istemcisi sürümü **4.18.2103.3 veya** üzeri olan Windows 10 ve Windows 11 cihazlarda Çıkarılabilir Depolama Access Control dağıtın.
+Kötü amaçlı yazılımdan koruma istemcisi sürümü **4.18.2103.3 veya üzeri olan Windows 10 ve Windows 11** cihazlarında Çıkarılabilir Depolama Birimi Erişim Denetimi'ni dağıtın.
 
 - **4.18.2104 veya üzeri**: SerialNumberId, VID_PID, dosya yolu tabanlı GPO desteği, ComputerSid ekleme
 
 - **4.18.2105 veya üzeri**: HardwareId/DeviceId/InstancePathId/FriendlyNameId/SerialNumberId için joker karakter desteği ekleme, belirli makinedeki belirli bir kullanıcının birleşimi, kaldırılabilir SSD (SanDisk Extreme SSD)/USB Bağlı SCSI (UAS) desteği
 
-- **4.18.2107 veya üzeri**: Windows Taşınabilir Cihaz (WPD) desteği ekleyin (tabletler gibi mobil cihazlar için); [AccountName'i gelişmiş avlanmaya](device-control-removable-storage-access-control.md#view-device-control-removable-storage-access-control-data-in-microsoft-defender-for-endpoint) ekleyin
+- **4.18.2107 veya üzeri**: Windows Taşınabilir Cihaz (WPD) desteği ekleme (tabletler gibi mobil cihazlar için); AccountName'i [gelişmiş avlanmaya](device-control-removable-storage-access-control.md#view-device-control-removable-storage-access-control-data-in-microsoft-defender-for-endpoint) ekleme
 
 :::image type="content" source="images/powershell.png" alt-text="PowerShell arabirimi" lightbox="images/powershell.png":::
 
 > [!NOTE]
-> Windows Güvenliği durumundan bağımsız olarak Çıkarılabilir Depolama Access Control çalıştırabildiğiniz için Windows Güvenliği bileşenlerin hiçbirinin etkin olmaması gerekir.
+> Windows Güvenliği durumundan bağımsız olarak Çıkarılabilir Depolama Birimi Erişim Denetimi'ni çalıştırabildiğiniz için Windows Güvenliği bileşenlerinin hiçbirinin etkin olmaması gerekir.
 
 ## <a name="policy-properties"></a>İlke özellikleri
 
@@ -73,7 +73,7 @@ Kötü amaçlı yazılımdan koruma istemcisi sürümü **4.18.2103.3 veya** üz
 > [!NOTE]
 > XML açıklama gösterimini `<!-- COMMENT -->` kullanan açıklamalar Kural ve Grup XML dosyalarında kullanılabilir, ancak XML dosyasının ilk satırının değil ilk XML etiketinin içinde olmalıdır.
 
-### <a name="removable-storage-group"></a>Çıkarılabilir Depolama Grubu
+### <a name="removable-storage-group"></a>Çıkarılabilir Depolama Birimi Grubu
 
 |Özellik Adı|Açıklama|Seçenekler|
 |---|---|---|
@@ -81,7 +81,7 @@ Kötü amaçlı yazılımdan koruma istemcisi sürümü **4.18.2103.3 veya** üz
 |**DescriptorIdList**|Grupta ele almak için kullanmak istediğiniz cihaz özelliklerini listeleyin. Her cihaz özelliği için daha fazla ayrıntı için bkz [. Cihaz Özellikleri](device-control-removable-storage-protection.md) . Tüm özellikler büyük/küçük harfe duyarlıdır. |**PrimaryId**: `RemovableMediaDevices`, `CdRomDevices`, `WpdDevices`<p>**BusId**: Örneğin, USB, SCSI<p>**Deviceıd**<p>**HardwareId**<p>**InstancePathId**: InstancePathId, sistemdeki cihazı benzersiz olarak tanımlayan bir dizedir; örneğin, `USBSTOR\DISK&VEN_GENERIC&PROD_FLASH_DISK&REV_8.07\8735B611&0`. Sonundaki sayı (örneğin &0) kullanılabilir yuvayı temsil eder ve cihazdan cihaza değişebilir. En iyi sonuçları elde için sonunda joker karakter kullanın. Örneğin, `USBSTOR\DISK&VEN_GENERIC&PROD_FLASH_DISK&REV_8.07\8735B611*`.<p>**FriendlyNameId**<p>**SerialNumberId**<p>**VİD**<p>**PID**<p>**VID_PID**<p>`0751_55E0`: bu tam VID/PID çifti eşleştir<p>`_55E0`: HERHANGI bir medyayı PID=55E0 ile eşleştirme <p>`0751_`: VID=0751 ile herhangi bir medyayı eşleştirme|
 |**Matchtype**|içinde `DescriptorIDList`kullanılan birden çok cihaz özelliği olduğunda, MatchType ilişkiyi tanımlar.|**MatchAll**: altındaki `DescriptorIdList` tüm öznitelikler **And** ilişkisi olur; örneğin, yönetici bağlı her USB için ve `InstancePathID`eklerse `DeviceID` sistem USB'nin her iki değeri de karşılayıp karşılamadığını denetler. <p> **MatchAny**: DescriptorIdList altındaki öznitelikler **Or** ilişkisi olacaktır; örneğin, yönetici bağlı her USB için ve `InstancePathID`koyarsa`DeviceID`, USB'de aynı **DeviceID** veya **InstanceID** değeri olduğu sürece sistem uygulamayı yapar. |
 
-### <a name="access-control-policy"></a>Access Control İlkesi
+### <a name="access-control-policy"></a>Erişim Denetimi İlkesi
 
 | Özellik Adı | Açıklama | Seçenekler |
 |---|---|---|
@@ -95,15 +95,15 @@ Kötü amaçlı yazılımdan koruma istemcisi sürümü **4.18.2103.3 veya** üz
 | **Seçenekler** | Bildirimin görüntülenip görüntülenmeyeceğini tanımlar |**İzin Ver Türü seçildiğinde**: <p>0: hiçbir şey<p>4: Bu Giriş için **AuditAllowed** ve **AuditDenied'i** devre dışı bırakın. **Allow** gerçekleşse ve AuditAllowed ayarı yapılandırılmış olsa bile sistem olay göndermez. <p>8: Dosya bilgilerini yakalayın ve Yazma erişimi için kanıt olarak dosyanın bir kopyasını alın. <p>16: Yazma erişimi için dosya bilgilerini yakalayın. <p>**Tür Reddetme seçildiğinde**: <p>0: hiçbir şey<p>4: Bu Giriş için **AuditDenied'i** devre dışı bırakın. **Engelle** gerçekleşse ve AuditDenied ayarı yapılandırılmış olsa bile sistem bildirim göstermez. <p>****AuditAllowed** Türü seçildiğinde**: <p>0: hiçbir şey <p>1: hiçbir şey <p>2: olay gönderme<p> ****AuditDenied** Türü seçildiğinde**: <p>0: hiçbir şey <p>1: bildirimi göster <p>2: olay gönderme<p>3: bildirim gösterme ve olay gönderme |
 |Accessmask|Erişimi tanımlar. | **Disk düzeyinde erişim**: <p>1: Okuma <p>2: Yazma <p>4: Yürütme <p>**Dosya sistemi düzeyinde erişim**: <p>8: Dosya sistemi Okuma <p>16: Dosya sistemi Yazma <p>32: Dosya sistemi yürütme <p><p>İkili VEYA işlemi gerçekleştirerek birden çok erişiminiz olabilir; örneğin Okuma ve Yazma ve Yürütme için AccessMask değeri 7 olur; Okuma ve Yazma için AccessMask 3 olacaktır.|
 
-## <a name="common-removable-storage-access-control-scenarios"></a>Yaygın Çıkarılabilir Depolama Access Control senaryoları
+## <a name="common-removable-storage-access-control-scenarios"></a>Yaygın Çıkarılabilir Depolama Birimi Erişim Denetimi senaryoları
 
-Çıkarılabilir Depolama Access Control Uç Nokta için Microsoft Defender hakkında bilgi sahibi olmanıza yardımcı olmak için izlemeniz gereken bazı yaygın senaryoları bir araya topladık.
+Uç Nokta için Microsoft Defender Çıkarılabilir Depolama Erişim Denetimi hakkında bilgi sahibi olmanıza yardımcı olmak için izlemeniz gereken bazı yaygın senaryoları bir araya topladık.
 
 ### <a name="scenario-1-prevent-write-and-execute-access-to-all-but-allow-specific-approved-usbs"></a>Senaryo 1: Belirli onaylı USB'lere izin vermek dışında tümüne Yazma ve Yürütme erişimini engelleme
 
 1. Grup oluşturma
 
-    1. Grup 1: Herhangi bir çıkarılabilir depolama birimi ve CD/DVD. Çıkarılabilir depolama birimi ve CD/DVD örneği: Grup **9b28fae8-72f7-4267-a1a5-685f747a7146** [örnekteki Tüm Çıkarılabilir Depolama ve CD-DVD Group.xml](https://github.com/microsoft/mdatp-devicecontrol/tree/main/Removable%20Storage%20Access%20Control%20Samples) dosyası.
+    1. Grup 1: Herhangi bir çıkarılabilir depolama birimi ve CD/DVD. Çıkarılabilir depolama birimine ve CD/DVD'ye örnek olarak: Grup **9b28fae8-72f7-4267-a1a5-685f747a7146** tüm [Çıkarılabilir Depolama Birimleri ve CD-DVD Group.xml](https://github.com/microsoft/mdatp-devicecontrol/tree/main/Removable%20Storage%20Access%20Control%20Samples) dosyası.
 
     2. Grup 2: Cihaz özelliklerine göre onaylı USB'ler. Bu kullanım örneğine örnek: Örnek [Onaylı USB'ler Group.xml](https://github.com/microsoft/mdatp-devicecontrol/tree/main/Removable%20Storage%20Access%20Control%20Samples) dosyasında Örnek Kimliği - Grup **65fa649a-a111-4912-9294-fb6337a25038**.
 
@@ -120,7 +120,7 @@ Kötü amaçlı yazılımdan koruma istemcisi sürümü **4.18.2103.3 veya** üz
 
 1. Grup oluşturma
 
-    1. Grup 1: Herhangi bir çıkarılabilir depolama birimi ve CD/DVD. Bu kullanım örneğine örnek olarak: Grup **9b28fae8-72f7-4267-a1a5-685f747a7146** [örnekteki Tüm Çıkarılabilir Depolama ve CD-DVD Group.xml](https://github.com/microsoft/mdatp-devicecontrol/tree/main/Removable%20Storage%20Access%20Control%20Samples) dosyası.
+    1. Grup 1: Herhangi bir çıkarılabilir depolama birimi ve CD/DVD. Bu kullanım örneğine örnek olarak: Grup **9b28fae8-72f7-4267-a1a5-685f747a7146** [örnekteki Herhangi bir Çıkarılabilir Depolama Birimi ve CD-DVD Group.xml](https://github.com/microsoft/mdatp-devicecontrol/tree/main/Removable%20Storage%20Access%20Control%20Samples) dosyası.
 
     2. Grup 2: Örnek [Onaylanmamış USB'ler Group.xml](https://github.com/microsoft/mdatp-devicecontrol/tree/main/Removable%20Storage%20Access%20Control%20Samples) dosyasındaki Cihaz özelliklerine göre onaylanmamış USB'ler, örneğin Satıcı Kimliği / Ürün Kimliği, Kolay Ad – Grup **65fa649a-a111-4912-9294-fb6337a25038**.
 
@@ -133,15 +133,15 @@ Kötü amaçlı yazılımdan koruma istemcisi sürümü **4.18.2103.3 veya** üz
 
     2. İlke 2: Yazma ve Yürütme erişimini denetleme. Bu kullanım örneğine örnek olarak: Örnek [Senaryo 2 Denetim Yazma ve others.xmldosyasına erişimi yürütme](https://github.com/microsoft/mdatp-devicecontrol/tree/main/Removable%20Storage%20Access%20Control%20Samples) bölümünde PolicyRule **b58ab853-9a6f-405c-a194-740e69422b48**.
 
-## <a name="deploying-and-managing-policy-via-group-policy"></a>grup ilkesi aracılığıyla ilke dağıtma ve yönetme
+## <a name="deploying-and-managing-policy-via-group-policy"></a>Grup İlkesi aracılığıyla ilke dağıtma ve yönetme
 
-Çıkarılabilir Depolama Access Control özelliği, ilkeyi grup ilkesi aracılığıyla kullanıcıya veya cihaza ya da her ikisine de uygulamanızı sağlar.
+Çıkarılabilir Depolama Birimi Erişim Denetimi özelliği, ilkeyi Grup İlkesi aracılığıyla kullanıcıya veya cihaza ya da her ikisine de uygulamanıza olanak tanır.
 
 ### <a name="licensing"></a>Lisanslama
 
-Çıkarılabilir Depolama Access Control kullanmaya başlamadan önce [Microsoft 365 aboneliğinizi](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=2) onaylamanız gerekir. Çıkarılabilir Depolama Access Control erişmek ve kullanmak için Microsoft 365 E3 veya Microsoft 365 E5 sahip olmanız gerekir.
+Çıkarılabilir Depolama Birimi Erişim Denetimi'ni kullanmaya başlamadan önce [Microsoft 365 aboneliğinizi](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=2) onaylamanız gerekir. Çıkarılabilir Depolama Birimi Erişim Denetimi'ne erişmek ve bunları kullanmak için Microsoft 365 E3 veya Microsoft 365 E5'e sahip olmanız gerekir.
 
-### <a name="deploying-policy-via-group-policy"></a>grup ilkesi aracılığıyla ilke dağıtma
+### <a name="deploying-policy-via-group-policy"></a>Grup İlkesi aracılığıyla ilke dağıtma
 
 1. İçindeki `<Groups>` `</Groups>` tüm grupları tek bir xml dosyasında birleştirin.
 
@@ -159,9 +159,9 @@ Kötü amaçlı yazılımdan koruma istemcisi sürümü **4.18.2103.3 veya** üz
 
     :::image type="content" source="images/usage-sid-property.png" alt-text="SID özellik özniteliğinin kullanımını gösteren kod" lightbox="images/usage-sid-property.png":::
 
-3. Hem kural hem de grup XML dosyalarını ağ paylaşımı klasörüne kaydedin ve ağ paylaşımı klasör yolunu grup ilkesi ayarına yerleştirin: **Bilgisayar Yapılandırması** \> **Yönetim Şablonları** \> **Windows Bileşenler** \> **Microsoft Defender Virüsten Koruma** \> **Cihaz Denetimi**: **'Cihaz denetim ilkesi gruplarını tanımla'** ve **'Cihaz denetimi ilkesi kurallarını tanımla'**.
+3. Hem kural hem de grup XML dosyalarını ağ paylaşımı klasörüne kaydedin ve ağ paylaşımı klasör yolunu Grup İlkesi ayarına yerleştirin: **Bilgisayar Yapılandırması** \> **Yönetim Şablonları** \> **Windows Bileşenleri** \> **Microsoft Defender Virüsten Koruma** \> **Cihaz Denetimi**: **'Cihaz denetim ilkesi gruplarını tanımlama'** ve **'Cihaz denetimi ilkesi kurallarını tanımla'**.
 
-   İlke yapılandırması UX'sini grup ilkesi bulamazsanız Ham'ı seçip  Farklı **kaydet'i** seçerek [WindowsDefender.adml](https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/WindowsDefender.adml) ve [WindowsDefender.admx](https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/WindowsDefender.admx) dosyalarını indirebilirsiniz.
+   İlke yapılandırması UX'sini Grup İlkesi'nde bulamazsanız, **Ham'ı** ve ardından **Farklı kaydet'i** seçerek [WindowsDefender.adml](https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/WindowsDefender.adml) ve [WindowsDefender.admx](https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/WindowsDefender.admx) dosyalarını indirebilirsiniz.
 
    - İlkeye sahip olmak için hedef makinenin ağ paylaşımına erişebilmesi gerekir. Ancak, ilke okunduktan sonra, makine yeniden başlatıldıktan sonra bile ağ paylaşımı bağlantısı gerekmez.
 
@@ -174,11 +174,11 @@ Kötü amaçlı yazılımdan koruma istemcisi sürümü **4.18.2103.3 veya** üz
 
     :::image type="content" source="images/148609579-a7df650b-7792-4085-b552-500b28a35885.png" alt-text="Varsayılan İzin Ver veya Varsayılan PowerShell kodunu reddet":::
 
-5. Çıkarılabilir Depolama Access Control Etkinleştir veya Devre Dışı Bırak: Bu değeri Çıkarılabilir Depolama Access Control geçici olarak devre dışı bırakacak şekilde ayarlayabilirsiniz.
+5. Çıkarılabilir Depolama Birimi Erişim Denetimini Etkinleştirme veya Devre Dışı Bırakma: Bu değeri, Çıkarılabilir Depolama Birimi Erişim Denetimi'ni geçici olarak devre dışı bırakacak şekilde ayarlayabilirsiniz.
 
     :::image type="content" source="images/148608318-5cda043d-b996-4146-9642-14fccabcb017.png" alt-text="Cihaz Denetimi ayarları":::
 
-   - Bu ayarı dağıttığınızda **Etkin** veya **Devre Dışı** ifadesini görürsünüz. Devre dışı, bu makinenin Çıkarılabilir Depolama Access Control ilkesinin çalışmadığı anlamına gelir.
+   - Bu ayarı dağıttığınızda **Etkin** veya **Devre Dışı** ifadesini görürsünüz. Devre dışı, bu makinenin Çıkarılabilir Depolama Birimi Erişim Denetimi ilkesinin çalışmadığı anlamına gelir.
 
     :::image type="content" source="images/148609685-4c05f002-5cbe-4aab-9245-83e730c5449e.png" alt-text="PowerShell kodunda etkin veya Devre dışı cihaz denetimi":::
 
@@ -186,15 +186,15 @@ Kötü amaçlı yazılımdan koruma istemcisi sürümü **4.18.2103.3 veya** üz
 
     Bunu doğru AccessMask ve Option ile birlikte dağıtın. Yukarıdaki 2. adıma bakın.
 
-    :::image type="content" source="../../media/define-device-control-policy-rules.png" alt-text="grup ilkesi - Dosya kanıtı için locaiton ayarlama":::
+    :::image type="content" source="../../media/define-device-control-policy-rules.png" alt-text="Grup İlkesi - Dosya kanıtı için locaiton ayarlama":::
 
 ## <a name="deploying-and-managing-policy-via-intune-oma-uri"></a>Intune OMA-URI aracılığıyla ilke dağıtma ve yönetme
 
-Çıkarılabilir Depolama Access Control özelliği, kullanıcıya veya cihaza ya da her ikisine de OMA-URI aracılığıyla ilke uygulamanızı sağlar.
+Çıkarılabilir Depolama Birimi Erişim Denetimi özelliği, kullanıcıya veya cihaza ya da her ikisine de OMA-URI aracılığıyla ilke uygulamanızı sağlar.
 
 ### <a name="licensing-requirements"></a>Lisans gereksinimleri
 
-Çıkarılabilir Depolama Access Control kullanmaya başlamadan önce [Microsoft 365 aboneliğinizi](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=2) onaylamanız gerekir. Çıkarılabilir Depolama Access Control erişmek ve kullanmak için Microsoft 365 E3 veya Microsoft 365 E5 sahip olmanız gerekir.
+Çıkarılabilir Depolama Birimi Erişim Denetimi'ni kullanmaya başlamadan önce [Microsoft 365 aboneliğinizi](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=2) onaylamanız gerekir. Çıkarılabilir Depolama Birimi Erişim Denetimi'ne erişmek ve bunları kullanmak için Microsoft 365 E3 veya Microsoft 365 E5'e sahip olmanız gerekir.
 
 ### <a name="permission"></a>Izni
 
@@ -208,7 +208,7 @@ Intune'da ilke dağıtımı için hesabın cihaz yapılandırma profillerini olu
 
 ### <a name="deploying-policy-via-oma-uri"></a>OMA-URI aracılığıyla ilke dağıtma
 
-Microsoft Endpoint Manager yönetim merkezi (<https://endpoint.microsoft.com/>) \> **Cihaz** \> **Yapılandırma profilleri** \> **Profil** \> **platformu oluşturma: Windows 10 ve üzeri & Profili: Özel**
+Microsoft Endpoint Manager yönetim merkezi (<https://endpoint.microsoft.com/>) \> **Cihazlar** \> **Yapılandırma profilleri** \> **Profil** \> **Platformu oluşturma: Windows 10 ve üzeri & Profili: Özel**
 
 1. Her Grup için bir OMA-URI kuralı oluşturun:
 
@@ -252,7 +252,7 @@ Microsoft Endpoint Manager yönetim merkezi (<https://endpoint.microsoft.com/>) 
 
     :::image type="content" source="images/148609590-c67cfab8-8e2c-49f8-be2b-96444e9dfc2c.png" alt-text="Varsayılan Zorlama PowerShell koduna izin ver":::
 
-4. Çıkarılabilir Depolama Access Control Etkinleştir veya Devre Dışı Bırak: Bu değeri Çıkarılabilir Depolama Access Control geçici olarak devre dışı bırakacak şekilde ayarlayabilirsiniz.
+4. Çıkarılabilir Depolama Birimi Erişim Denetimini Etkinleştirme veya Devre Dışı Bırakma: Bu değeri, Çıkarılabilir Depolama Birimi Erişim Denetimi'ni geçici olarak devre dışı bırakacak şekilde ayarlayabilirsiniz.
 
    - OMA-URI: `./Vendor/MSFT/Defender/Configuration/DeviceControlEnabled`
 
@@ -261,9 +261,9 @@ Microsoft Endpoint Manager yönetim merkezi (<https://endpoint.microsoft.com/>) 
 
    - Bu ayarı dağıttığınızda **Etkin** veya **Devre Dışı** ifadesini görürsünüz
 
-    **Devre dışı,** bu makinenin Çalıştırılan Çıkarılabilir Depolama Access Control ilkesi olmadığı anlamına gelir
+    **Devre dışı,** bu makinenin Çalıştırılan Çıkarılabilir Depolama Birimi Erişim Denetimi ilkesi olmadığı anlamına gelir
 
-    :::image type="content" source="images/148609770-3e555883-f26f-45ab-9181-3fb1ff7a38ac.png" alt-text="PowerShell kodunda kaldırılabilir Depolama Access Control":::
+    :::image type="content" source="images/148609770-3e555883-f26f-45ab-9181-3fb1ff7a38ac.png" alt-text="PowerShell kodunda Kaldırılabilir Depolama Erişim Denetimi":::
 
 5. Dosyanın bir kopyasının konumunu ayarlayın: Yazma erişimi gerçekleştiğinde dosyanın bir kopyasına sahip olmak istiyorsanız, sistemin kopyayı kaydedebileceği konumu ayarlamanız gerekir.
 
@@ -277,13 +277,13 @@ Microsoft Endpoint Manager yönetim merkezi (<https://endpoint.microsoft.com/>) 
 
 ## <a name="deploying-and-managing-policy-by-using-intune-user-interface"></a>Intune kullanıcı arabirimini kullanarak ilkeyi dağıtma ve yönetme
 
-(*Çok yakında!*) Bu özellik Microsoft Endpoint Manager yönetim merkezinde (<https://endpoint.microsoft.com/>) kullanılabilir. **Endpoint SecurityAttack** >  **Surface ReductionCreate** >  **policy (İlke Oluştur) seçeneğine** gidin. **Profil: Cihaz Denetimi** ile **Platform: Windows 10 ve üzerini** seçin.
+(*Çok yakında!*) Bu özellik Microsoft Endpoint Manager yönetim merkezinde (<https://endpoint.microsoft.com/> ) kullanılabilir. **Endpoint Security** > **Attack Surface Azaltma** > **Oluşturma İlkesi'ne** gidin. **Profil: Cihaz Denetimi** ile **Platform: Windows 10 ve üzeri'ni** seçin.
 
-## <a name="view-device-control-removable-storage-access-control-data-in-microsoft-defender-for-endpoint"></a>Cihaz Denetimi Çıkarılabilir Depolama Access Control verilerini Uç Nokta için Microsoft Defender'da görüntüleme
+## <a name="view-device-control-removable-storage-access-control-data-in-microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender'da Cihaz Denetimi Çıkarılabilir Depolama Erişim Denetimi verilerini görüntüleme
 
-[Microsoft 365 Defender portalı](https://security.microsoft.com/advanced-hunting), Cihaz Denetimi Çıkarılabilir Depolama Access Control tarafından tetiklenen olayları gösterir. Microsoft 365 güvenliğine erişmek için aşağıdaki aboneliğe sahip olmanız gerekir:
+[Microsoft 365 Defender portalı](https://security.microsoft.com/advanced-hunting), Cihaz Denetimi Çıkarılabilir Depolama Erişim Denetimi tarafından tetiklenen olayları gösterir. Microsoft 365 güvenliğine erişmek için aşağıdaki aboneliğe sahip olmanız gerekir:
 
-- E5 raporlama için Microsoft 365
+- E5 için Microsoft 365 raporlama
 
 ```kusto
 //RemovableStoragePolicyTriggered: event triggered by Disk level enforcement
@@ -331,13 +331,15 @@ DeviceEvents
 
 ### <a name="how-to-generate-guid-for-group-idpolicyrule-identry-id"></a>Grup Kimliği/PolicyRule Kimliği/Giriş Kimliği için GUID nasıl oluşturulur?
 
-GUID'yi çevrimiçi açık kaynak veya PowerShell aracılığıyla oluşturabilirsiniz - [PowerShell aracılığıyla GUID oluşturma](/powershell/module/microsoft.powershell.utility/new-guid)
+Çevrimiçi açık kaynak aracılığıyla veya PowerShell aracılığıyla GUID oluşturabilirsiniz - [PowerShell aracılığıyla GUID oluşturma](/powershell/module/microsoft.powershell.utility/new-guid)
 
 ![Görüntü](https://user-images.githubusercontent.com/81826151/159046476-26ea0a21-8087-4f01-b8ae-5aa73b392d8f.png)
 
-### <a name="what-is-the-removable-storage-media-limitation-for-the-maximum-number-of-usbs"></a>Maksimum USB sayısı için çıkarılabilir depolama medyası sınırlaması nedir?
+### <a name="what-are-the-removable-storage-media-and-policy-limitations"></a>Çıkarılabilir depolama ortamı ve ilke sınırlamaları nelerdir?
 
-Boyutu 7 MB'a kadar olan 100.000 medya içeren bir USB grubu doğrulandı. İlke hem Intune hem de GPO'da performans sorunları olmadan çalışır.
+Microsoft Endpoint Manager yönetim merkezinden (Intune) veya Microsoft Graph API'si aracılığıyla arka uç çağrısı OMA-URI (OKUNACAK GET veya UPDATE için PATCH) aracılığıyla yapılır ve bu nedenle sınırlama, Microsoft'taki XML dosyaları için resmi olarak 350.000 karakter olan OMA-URI özel yapılandırma profiliyle aynıdır. 
+    
+Örneğin, kullanıcı SID'sinde belirli kullanıcıları "İzin Ver"/"Denetime izin verildi" olarak iki giriş bloğuna ve sonunda "Reddet" tümüne iki giriş bloğuna ihtiyacınız varsa, 2.276 kullanıcıyı yönetebilirsiniz. 
 
 ### <a name="why-does-the-policy-not-work"></a>İlke neden çalışmıyor?
 
@@ -345,13 +347,13 @@ Boyutu 7 MB'a kadar olan 100.000 medya içeren bir USB grubu doğrulandı. İlke
 
 2. Bir diğer neden de XML dosyasının doğru biçimlendirilmemiş olması, örneğin XML dosyasındaki "&" karakteri için doğru markdown biçimlendirmesinin kullanılmaması veya metin düzenleyicisinin dosyaların başına bayt sırası işareti (BOM) 0xEF 0xBB 0xBF eklemesi ve bu da XML ayrıştırma işleminin çalışmaması olabilir. Basit bir çözüm, [örnek dosyayı](https://github.com/microsoft/mdatp-devicecontrol/tree/main/Removable%20Storage%20Access%20Control%20Samples) indirmek ( **Raw'ı** ve sonra **Farklı kaydet'i** seçin) ve ardından güncelleştirmektir.
 
-3. İlkeyi grup ilkesi aracılığıyla dağıtıyor ve yönetiyorsanız, lütfen tüm PolicyRule'u PolicyRules adlı bir üst düğümdeki tek bir XML dosyasında ve tüm Grup'u Gruplar adlı bir üst düğümde tek bir XML dosyasında birleştirdiğinizden emin olun; Intune aracılığıyla yönetiyorsanız, bir PolicyRule tek XML dosyası, aynı şey, bir Grup bir XML dosyası tutun.
+3. İlkeyi Grup İlkesi aracılığıyla dağıtıyor ve yönetiyorsanız, lütfen tüm PolicyRule'u PolicyRules adlı bir üst düğümde ve tüm Grup'u Gruplar adlı bir üst düğümde tek bir XML dosyasında birleştirdiğinizden emin olun; Intune aracılığıyla yönetiyorsanız, bir PolicyRule bir XML dosyası, aynı şey, bir Grup bir XML dosyası tutun.
 
-Hala çalışmıyorsa, yöneticiyle cmd çalıştırarak bizimle iletişime geçip destek kabini paylaşmak isteyebilirsiniz: "%programfiles%\Windows Defender\MpCmdRun.exe" -GetFiles
+Hala çalışmıyorsa, bizimle iletişime geçmek ve yöneticiyle cmd çalıştırarak destek kabini paylaşmak isteyebilirsiniz: "%programfiles%\Windows Defender\MpCmdRun.exe" -GetFiles
 
-### <a name="there-is-no-configuration-ux-for-define-device-control-policy-groups-and-define-device-control-policy-rules-on-my-group-policy"></a>grup ilkesi 'Cihaz denetim ilkesi gruplarını tanımla' ve 'Cihaz denetim ilkesi kurallarını tanımla' için yapılandırma UX'si yok
+### <a name="there-is-no-configuration-ux-for-define-device-control-policy-groups-and-define-device-control-policy-rules-on-my-group-policy"></a>Grup İlkesimde 'Cihaz denetim ilkesi gruplarını tanımla' ve 'Cihaz denetim ilkesi kurallarını tanımla' için yapılandırma UX'si yok
 
-grup ilkesi yapılandırma UX'sini geri aktarmayız, ancak [WindowsDefender.adml ve WindowsDefender.admx](https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/WindowsDefender.adml) dosyalarında 'Raw' ve 'Farklı Kaydet' öğesine tıklayarak ilgili adml ve [admx](https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/WindowsDefender.admx) dosyalarını almaya devam edebilirsiniz.
+Grup İlkesi yapılandırma UX'sini geri aktarmayız, ancak [WindowsDefender.adml ve WindowsDefender.admx](https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/WindowsDefender.adml) dosyalarında 'Raw' ve 'Farklı Kaydet' öğesine tıklayarak ilgili adml ve [admx](https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/WindowsDefender.admx) dosyalarını almaya devam edebilirsiniz.
 
 ### <a name="how-can-i-know-whether-the-latest-policy-has-been-deployed-to-the-target-machine"></a>En son ilkenin hedef makineye dağıtılıp dağıtılmadığını nasıl bilebilirim?
 

@@ -15,16 +15,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Yasal düzenleme gereksinimlerini karşılamanıza ve dolandırıcı yöneticilere karşı korumanıza yardımcı olması için saklama ilkeleri ve bekletme etiketi ilkeleriyle Koruma Kilidi'ni kullanın.
-ms.openlocfilehash: cf72f0b2eed6328244bf78c9e365447c9f38edeb
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: 6ee7937bad487fcac8d1ee15483becfb276d9579
+ms.sourcegitcommit: 8a0de6240facfe26ee391a14076b7fe534ee6598
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65286022"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "65922229"
 ---
 # <a name="use-preservation-lock-to-restrict-changes-to-retention-policies-and-retention-label-policies"></a>Saklama ilkeleri ve bekletme etiketi ilkelerindeki değişiklikleri kısıtlamak için Koruma Kilidi'ni kullanma
 
->*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+>*[Güvenlik & uyumluluğu için Microsoft 365 lisanslama kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
@@ -50,18 +50,15 @@ Bekletme etiketi ilkesi kilitlendiğinde:
 > [!IMPORTANT]
 > Bekletme ilkesini veya bekletme etiketi ilkesini kilitlemeden önce, etkiyi anlamanız ve kuruluşunuz için gerekli olup olmadığını onaylamanız kritik önem taşır. Örneğin, mevzuat gereksinimlerini karşılamak için gerekli olabilir. Koruma kilidi uygulandıktan sonra yöneticiler bu ilkeleri devre dışı bırakamaz veya silemez.
 
-Bir [bekletme ilkesi](create-retention-policies.md) veya [yayımladığınız](create-apply-retention-labels.md) veya [otomatik olarak uyguladığınız](apply-retention-labels-automatically.md) bir bekletme etiketi ilkesi oluşturduktan sonra Koruma Kilidi'ni yapılandırın.
-
-> [!NOTE]
-> Bir etiket ilkesini kilitlemek, bir yöneticinin kilitli ilkeye dahil edilen etiketteki saklama süresini azaltmasını engellemez. Bu gereksinim, diğer kısıtlamalarla birlikte, öğeleri [mevzuat kaydı](records-management.md#records) olarak işaretlemek için bir etiket yapılandırdığınızda karşılanabilir.
+Bir [bekletme ilkesi](create-retention-policies.md) veya [yayımladığınız](create-apply-retention-labels.md) ve yalnızca [öğeleri düzenleyici kayıt olarak işaretleyen](records-management.md#records) etiketler içeren bir bekletme etiketi ilkesi oluşturduktan sonra Koruma Kilidi'ni yapılandırın.
 
 ## <a name="how-to-lock-a-retention-policy-or-retention-label-policy"></a>Bekletme ilkesini veya bekletme etiketi ilkesini kilitleme
 
 Koruma Kilidi kullanmanız gerekiyorsa PowerShell'i kullanmanız gerekir. Yöneticiler bu kilit uygulandıktan sonra bekletme için bir ilkeyi devre dışı bırakamadığından veya silemediğinden, yanlışlıkla yapılandırmaya karşı koruma sağlamak için bu özelliği etkinleştirmek kullanıcı arabiriminde kullanılamaz.
 
-Saklamaya yönelik ve herhangi bir yapılandırmaya sahip tüm ilkeler Koruma Kilidi'ne sahiptir.
+Herhangi bir yapılandırmaya sahip tüm bekletme ilkeleri Koruma Kilidi'ne sahiptir. Saklama etiketi ilkesine Koruma Kilidi uygulamak için yalnızca öğeleri düzenleyici kayıt olarak işaretleyen etiketler içermelidir.
 
-1. [Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
+1. [Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanın](/powershell/exchange/connect-to-scc-powershell).
 
 2. [Get-RetentionCompliancePolicy](/powershell/module/exchange/get-retentioncompliancepolicy) komutunu çalıştırarak kilitlemek istediğiniz ilkenin adını bulun. Örneğin:
     
