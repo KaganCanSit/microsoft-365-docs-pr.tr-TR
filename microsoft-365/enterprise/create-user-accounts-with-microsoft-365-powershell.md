@@ -1,5 +1,5 @@
 ---
-title: PowerShell ile Microsoft 365 kullanıcı hesabı oluşturma
+title: PowerShell ile Microsoft 365 kullanıcı hesapları oluşturma
 ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
@@ -18,15 +18,15 @@ ms.custom:
 - O365ITProTrain
 - seo-marvel-apr2020
 ms.assetid: 6770c5fa-b886-4512-8c67-ffd53226589e
-description: Bireysel veya birden çok Microsoft 365 kullanıcı hesabı oluşturmak için PowerShell'i kullanma.
-ms.openlocfilehash: 2b0ef749dc0a0d38d84d1086dee50ce416d93e9b
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: PowerShell'i kullanarak bireysel veya birden çok Microsoft 365 kullanıcı hesabı oluşturma.
+ms.openlocfilehash: 9f96c5a96e014055622deb34c37cb8523f0041f8
+ms.sourcegitcommit: a5e75d7f7651313818bd2de292d5c38b290d8975
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65101061"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "65930251"
 ---
-# <a name="create-microsoft-365-user-accounts-with-powershell"></a>PowerShell ile Microsoft 365 kullanıcı hesabı oluşturma
+# <a name="create-microsoft-365-user-accounts-with-powershell"></a>PowerShell ile Microsoft 365 kullanıcı hesapları oluşturma
 
 *Bu makale hem Microsoft 365 Kurumsal hem de Office 365 Kurumsal için geçerlidir.*
 
@@ -37,15 +37,15 @@ PowerShell'de kullanıcı hesapları oluşturduğunuzda, belirli hesap özellikl
 |**Özellik adı**|**Gerekli mi?**|**Açıklama**|
 |:-----|:-----|:-----|
 |**Displayname** <br/> |Evet  <br/> |Bu, Microsoft 365 hizmetlerinde kullanılan görünen addır. Örneğin, *Caleb Sills*. <br/> |
-|**Userprincipalname** <br/> |Evet  <br/> |Bu, Microsoft 365 hizmetlerinde oturum açmak için kullanılan hesap adıdır. Örneğin, *Calebs\@ contoso.onmicrosoft.com*.  <br/> |
+|**Userprincipalname** <br/> |Evet  <br/> |Bu, Microsoft 365 hizmetlerinde oturum açmak için kullanılan hesap adıdır. Örneğin *, CalebS\@contoso.onmicrosoft.com*.  <br/> |
 |**Ad** <br/> |Hayır  <br/> ||
 |**Soyadı** <br/> |Hayır  <br/> ||
-|**LicenseAssignment** <br/> |Hayır  <br/> |Bu, kullanıcı hesabına kullanılabilir bir lisansın atandığı lisans planıdır (lisans planı veya SKU olarak da bilinir). Lisans, hesaba sağlanan Microsoft 365 hizmetlerini tanımlar. Hesabı oluştururken kullanıcıya lisans atamanız gerekmez, ancak hesabın Microsoft 365 hizmetlerine erişmek için bir lisansı olmalıdır. Kullanıcı hesabını oluşturduktan sonra lisans vermek için 30 gününüz vardır. |
+|**LicenseAssignment** <br/> |Hayır  <br/> |Bu, kullanıcı hesabına kullanılabilir bir lisansın atandığı lisans [planıdır (lisans planı veya SKU](/azure/active-directory/enterprise-users/licensing-service-plan-reference) olarak da bilinir). Lisans, hesaba sağlanan Microsoft 365 hizmetlerini tanımlar. Hesabı oluştururken kullanıcıya lisans atamanız gerekmez, ancak hesabın Microsoft 365 hizmetlerine erişmek için bir lisansı olmalıdır. Kullanıcı hesabını oluşturduktan sonra lisans vermek için 30 gününüz vardır. |
 |**Password** <br/> |Hayır  <br/> | Parola belirtmezseniz kullanıcı hesabına rastgele bir parola atanır ve parola komutun sonuçlarında görünür. Parola belirtirseniz, şu türlerde 8 ile 16 ASCII metin karakteri olmalıdır: küçük harfler, büyük harfler, sayılar ve simgeler.<br/> |
-|**UsageLocation** <br/> |Hayır  <br/> |Bu geçerli bir ISO 3166-1 alfa-2 ülke kodudur. Örneğin, Birleşik Devletler için *ABD* ve Fransa için *FR*. Bazı Microsoft 365 hizmetleri belirli ülkelerde kullanılamadığından bu değeri sağlamak önemlidir. Hesapta bu değer yapılandırılmadığı sürece kullanıcı hesabına lisans atayamazsınız. Daha fazla bilgi için bkz. [Lisans kısıtlamaları hakkında](https://go.microsoft.com/fwlink/p/?LinkId=691730).<br/> |
+|**UsageLocation** <br/> |Hayır  <br/> |Bu geçerli bir ISO 3166-1 alfa-2 ülke kodudur. Örneğin, *ABD için ABD* ve Fransa için *FR* . Bazı Microsoft 365 hizmetleri belirli ülkelerde kullanılamadığından bu değeri sağlamak önemlidir. Hesapta bu değer yapılandırılmadığı sürece kullanıcı hesabına lisans atayamazsınız. Daha fazla bilgi için bkz. [Lisans kısıtlamaları hakkında](https://go.microsoft.com/fwlink/p/?LinkId=691730).<br/> |
 
 >[!Note]
->Microsoft 365 yönetim merkezi kullanarak [kullanıcı hesapları oluşturmayı öğrenin](../admin/add-users/add-users.md).
+>Microsoft 365 yönetim [merkezini kullanarak kullanıcı hesapları oluşturmayı öğrenin](../admin/add-users/add-users.md).
 > 
 > Ek kaynakların listesi için bkz. [Kullanıcıları ve grupları yönetme](/admin).
 >   
@@ -83,10 +83,10 @@ New-MsolUser -DisplayName <display name> -FirstName <first name> -LastName <last
 ```
 
 >[!Note]
->PowerShell Core, Windows PowerShell modülü için Microsoft Azure Active Directory Modülünü ve adında *Msol* bulunan cmdlet'leri desteklemez. Bu cmdlet'leri Windows PowerShell çalıştırın.
+>PowerShell Core, Windows PowerShell modülü ve adında *Msol* bulunan cmdlet'ler için Microsoft Azure Active Directory Modülünü desteklemez. Bu cmdlet'leri Windows PowerShell'den çalıştırın.
 >
 
-Kullanılabilir lisans planı adlarını listelemek için şu komutu kullanın:
+Kullanılabilir [lisans planı adlarını](/azure/active-directory/enterprise-users/licensing-service-plan-reference) listelemek için şu komutu kullanın:
 
 ````powershell
 Get-MsolAccountSku
@@ -110,7 +110,7 @@ New-MsolUser -DisplayName "Caleb Sills" -FirstName Caleb -LastName Sills -UserPr
      ```
 
    >[!NOTE]
-   >CSV dosyasının ilk satırındaki sütun adları ve sıraları rastgeledir. Ancak, dosyanın geri kalanındaki verilerin sırasının sütun adlarının sırasıyla eşleştiğinden emin olun. Ayrıca, Microsoft 365 için PowerShell komutundaki parametre değerlerinin sütun adlarını kullanın.
+   >CSV dosyasının ilk satırındaki sütun adları ve sıraları rastgeledir. Ancak, dosyanın geri kalanındaki verilerin sırasının sütun adlarının sırasıyla eşleştiğinden emin olun. Ayrıca Microsoft 365 için PowerShell komutundaki parametre değerlerinin sütun adlarını kullanın.
     
 2. Aşağıdaki sözdizimini kullanın:
     
@@ -124,7 +124,7 @@ New-MsolUser -DisplayName "Caleb Sills" -FirstName Caleb -LastName Sills -UserPr
     Import-Csv -Path "C:\My Documents\NewAccounts.csv" | foreach {New-MsolUser -DisplayName $_.DisplayName -FirstName $_.FirstName -LastName $_.LastName -UserPrincipalName $_.UserPrincipalName -UsageLocation $_.UsageLocation -LicenseAssignment $_.AccountSkuId} | Export-Csv -Path "C:\My Documents\NewAccountResults.csv"
     ```
 
-3. Sonuçları görmek için çıkış dosyasını gözden geçirin. Parola belirtmediğimiz için, Microsoft 365 oluşturulan rastgele parolalar çıkış dosyasında görünür.
+3. Sonuçları görmek için çıkış dosyasını gözden geçirin. Parola belirtmediğimiz için Microsoft 365'in oluşturduğu rastgele parolalar çıkış dosyasında görünür.
     
 ## <a name="see-also"></a>Ayrıca bkz.
 

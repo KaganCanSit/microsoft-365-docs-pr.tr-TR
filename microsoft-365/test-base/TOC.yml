@@ -7,7 +7,7 @@
 - name: Hızlı Başlangıçlar
   items:
     - name: Test Base Hesabı Oluşturun
-      href: createAccount.md
+      href: createaccount.md
     - name: Uygulamanızı Test Base üzerinde test edin
       items:
         - name: Genel bakış
@@ -16,14 +16,16 @@
           href: testapplication.md
         - name: Intune uygulamanızı Test Base üzerinde test edin
           href: testintuneapplication.md
-        - name: Test Base paketinizi (Zip) yükleyin
-          href: uploadApplication.md
+        - name: Önceden oluşturulmuş zip paketini karşıya yükleme
+          href: uploadapplication.md
     - name: Paket Oluşturun
       href: buildpackage.md
     - name: Mevcut bir paketi kopyalayın
       href: clonepackage.md
     - name: Paket kılavuzu
       href: contentguideline.md
+    - name: Kullanım maliyetinizi anlama
+      href: usagecost.md
     - name: Uygulama/Test kuralları
       href: rules.md
 - name: Nasıl Yapılır Kılavuzları

@@ -25,7 +25,7 @@
           href: empower-people-to-work-remotely-security-compliance.md
         - name: Adım 4. Uç nokta yönetimini dağıtın
           href: empower-people-to-work-remotely-manage-endpoints.md
-        - name: Adım 5. Verimlilik uygulamalarını ve hizmetlerini dağıtın
+        - name: Adım 5. Üretkenlik uygulamalarını ve hizmetlerini dağıtın
           href: empower-people-to-work-remotely-teams-productivity-apps.md
         - name: 6. Adım. Çalışanlarınızı eğitin
           href: empower-people-to-work-remotely-train-monitor-usage.md
@@ -111,7 +111,7 @@
           href: ransomware-protection-microsoft-365.md
         - name: Adım 1. Güvenlik temel hatlarını yapılandırın
           href: ransomware-protection-microsoft-365-security-baselines.md
-        - name: Adım 2. Saldırı algılama ve yanıtı dağıtın
+        - name: Adım 2. Saldırı algılama ve yanıt dağıtın
           href: ransomware-protection-microsoft-365-attack-detection-response.md
         - name: Adım 3. Kimlikleri koruyun
           href: ransomware-protection-microsoft-365-identities.md
@@ -314,12 +314,8 @@
           href: ../compliance/ediscovery.md
         - name: Microsoft Purview eKeşif (Premium)
           href: ../compliance/overview-ediscovery-20.md
-        - name: Mevzuat uyumluluğu eylem planları
+        - name: Mevzuat uyumluluğu SSS'leri ve eylem planları
           items:
-            - name: ISO - Önerilen eylem planı
-              href: /compliance/regulatory/iso-action-plan?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-            - name: NIST - Önerilen eylem planı
-              href: /compliance/regulatory/nist-action-plan?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
             - name: CCPA - Sık sorulan sorular
               href: /compliance/regulatory/ccpa-faq?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
             - name: GDPR - Önerilen eylem planı
