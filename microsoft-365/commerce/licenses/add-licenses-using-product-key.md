@@ -20,13 +20,13 @@ ms.custom:
 search.appverid: MET150
 description: Ürün anahtarıyla aboneliğinize lisans eklemeyi veya aboneliğinizi genişletmeyi öğrenin.
 ROBOTS: NOINDEX
-ms.date: 04/07/2021
-ms.openlocfilehash: df2c4d65f80aedb79e08f6efcab2873256e88d2f
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.date: 06/06/2022
+ms.openlocfilehash: ff7656975b5d93d03706f26de0691a91db1858eb
+ms.sourcegitcommit: 23fd850272f39c4202e2320e56d11fb6707b3e2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64715307"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "65925126"
 ---
 # <a name="add-licenses-to-or-extend-a-subscription-paid-for-using-a-product-key"></a>Ürün anahtarı kullanmak için ödenen aboneliğe lisans ekleme veya aboneliği genişletme
 
