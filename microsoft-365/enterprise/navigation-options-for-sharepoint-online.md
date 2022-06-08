@@ -21,12 +21,12 @@ search.appverid:
 - MET150
 ms.assetid: adb92b80-b342-4ecb-99a1-da2a2b4782eb
 description: Bu makalede, SharePoint Online'da SharePoint Yayımlama'nın etkinleştirildiği gezinti seçenekleri siteleri açıklanmaktadır.
-ms.openlocfilehash: 67bf1c854d97cf254d1484151987a87853e1ae9d
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: c95666a0fdb78fa584d9ca32ce19f10e4db89753
+ms.sourcegitcommit: 61bdfa84f2d6ce0b61ba5df39dcde58df6b3b59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65101193"
+ms.lasthandoff: 06/08/2022
+ms.locfileid: "65940942"
 ---
 # <a name="navigation-options-for-sharepoint-online"></a>SharePoint Online için gezinti seçenekleri
 
@@ -37,7 +37,7 @@ Bu makalede, SharePoint Online'da SharePoint Yayımlama'nın etkinleştirildiği
 
 ## <a name="overview-of-navigation-options"></a>Gezinti seçeneklerine genel bakış
 
-Gezinti sağlayıcısı yapılandırması tüm sitenin performansını önemli ölçüde etkileyebilir ve SharePoint sitenin gereksinimleri için etkili bir şekilde ölçeklendirilen bir gezinti sağlayıcısı ve yapılandırma seçmek için dikkatli bir şekilde dikkat edilmelidir. kullanıma uygun iki gezinti sağlayıcısının yanı sıra özel gezinti uygulamaları da vardır.
+Gezinti sağlayıcısı yapılandırması tüm sitenin performansını önemli ölçüde etkileyebilir ve SharePoint sitesinin gereksinimleri için etkili bir şekilde ölçeklendirilen bir gezinti sağlayıcısı ve yapılandırma seçmek için dikkatli bir şekilde dikkat edilmelidir. kullanıma uygun iki gezinti sağlayıcısının yanı sıra özel gezinti uygulamaları da vardır.
 
 İlk seçenek [**olan Yapısal gezinti**](#using-structural-navigation-in-sharepoint-online), **siteniz için yapısal gezinti önbelleğini açarsanız** klasik SharePoint siteleri için SharePoint Online'da önerilen gezinti seçeneğidir. Bu gezinti sağlayıcısı, geçerli sitenin altındaki gezinti öğelerini ve isteğe bağlı olarak geçerli siteyi ve eşdüzey öğelerini görüntüler. Güvenlik kırpması ve site yapısı numaralandırması gibi ek özellikler sağlar. Önbelleğe alma devre dışı bırakılırsa, bu durum performansı ve ölçeklenebilirliği olumsuz etkiler ve azaltmaya tabi olabilir.
 
@@ -45,7 +45,7 @@ Gezinti sağlayıcısı yapılandırması tüm sitenin performansını önemli �
 
 Kullanıma sunulan gezinti sağlayıcılarına ek olarak, birçok müşteri alternatif özel gezinti uygulamalarını başarıyla uyguladı. Bu makaledeki [Arama temelli istemci tarafı betiği oluşturma](#using-search-driven-client-side-scripting) bölümüne bakın.
   
-## <a name="pros-and-cons-of-sharepoint-online-navigation-options"></a>SharePoint Çevrimiçi gezinti seçeneklerinin Avantajları ve Dezavantajları
+## <a name="pros-and-cons-of-sharepoint-online-navigation-options"></a>SharePoint Online gezinti seçeneklerinin avantajları ve dezavantajları
 
 Aşağıdaki tabloda her seçeneğin artıları ve eksileri özetlemektedir.
 
@@ -57,15 +57,15 @@ Aşağıdaki tabloda her seçeneğin artıları ve eksileri özetlemektedir.
 Siteniz için en uygun seçenek, site gereksinimlerinize ve teknik yeteneğinize bağlıdır. İçerik değiştirildiğinde otomatik olarak güncelleştirilen, yapılandırması kolay bir gezinti sağlayıcısı istiyorsanız, [önbelleğe alma etkin](https://support.office.com/article/structural-navigation-and-performance-f163053f-8eca-4b9c-b973-36b395093b43) yapısal gezinti iyi bir seçenektir.
 
 >[!NOTE]
->Genel site yapısını düz ve hiyerarşik olmayan bir yapıya basitleştirerek modern SharePoint sitelerle aynı ilkeyi uygulamak, performansı artırır ve modern SharePoint sitelerine geçişi basitleştirir. Bunun anlamı, yüzlerce site (alt web) içeren tek bir site koleksiyonuna sahip olmak yerine, çok az alt siteye (alt web) sahip birçok site koleksiyonuna sahip olmak daha iyi bir yaklaşımdır.
+>Genel site yapısını daha düz, hiyerarşik olmayan bir yapıya basitleştirerek modern SharePoint siteleriyle aynı ilkeyi uygulamak, performansı artırır ve modern SharePoint sitelerine geçişi basitleştirir. Bunun anlamı, yüzlerce site (alt web) içeren tek bir site koleksiyonuna sahip olmak yerine, çok az alt siteye (alt web) sahip birçok site koleksiyonuna sahip olmak daha iyi bir yaklaşımdır.
 
 ## <a name="analyzing-navigation-performance-in-sharepoint-online"></a>SharePoint Online'da gezinti performansını analiz etme
 
-[SharePoint için Sayfa Tanılama aracı](./page-diagnostics-for-spo.md), hem SharePoint Çevrimiçi modern portalı hem de klasik yayımlama sitesi sayfalarını analiz eden Microsoft Edge ve Chrome tarayıcıları için bir tarayıcı uzantısıdır. Bu araç yalnızca SharePoint Online için çalışır ve SharePoint sistem sayfasında kullanılamaz.
+[SharePoint için Sayfa Tanılama aracı, Hem SharePoint](./page-diagnostics-for-spo.md) Online modern portalını hem de klasik yayımlama sitesi sayfalarını analiz eden Microsoft Edge ve Chrome tarayıcıları için bir tarayıcı uzantısıdır. Bu araç yalnızca SharePoint Online için çalışır ve SharePoint sistem sayfasında kullanılamaz.
 
-Araç, analiz edilen her sayfa için sayfanın önceden tanımlanmış bir kural kümesine göre nasıl performans gösterdiğini gösteren bir rapor oluşturur ve test sonuçları temel değerin dışında olduğunda ayrıntılı bilgiler görüntüler. SharePoint Çevrimiçi yöneticiler ve tasarımcılar, yayımlama öncesinde yeni sayfaların iyileştirildiğinden emin olmak için performans sorunlarını gidermek için aracı kullanabilir.
+Araç, analiz edilen her sayfa için sayfanın önceden tanımlanmış bir kural kümesine göre nasıl performans gösterdiğini gösteren bir rapor oluşturur ve test sonuçları temel değerin dışında olduğunda ayrıntılı bilgiler görüntüler. SharePoint Online yöneticileri ve tasarımcıları, yayımlamadan önce yeni sayfaların iyileştirildiğinden emin olmak amacıyla performans sorunlarını gidermek için aracı kullanabilir.
 
-**SPRequestDuration** özellikle SharePoint sayfayı işleme süresidir. Ağır gezinti (gezintideki sayfalar dahil), karmaşık site hiyerarşileri ve diğer yapılandırma ve topoloji seçeneklerinin tümü daha uzun sürelere önemli ölçüde katkıda bulunabilir.
+**ÖZELLIKLE SPRequestDuration** , SharePoint'in sayfayı işlemesi için geçen süredir. Ağır gezinti (gezintideki sayfalar dahil), karmaşık site hiyerarşileri ve diğer yapılandırma ve topoloji seçeneklerinin tümü daha uzun sürelere önemli ölçüde katkıda bulunabilir.
 
 ## <a name="using-structural-navigation-in-sharepoint-online"></a>SharePoint Online'da yapısal gezintiyi kullanma
 
@@ -73,15 +73,15 @@ Bu, varsayılan olarak kullanılan kullanıma hazır gezintidir ve en basit çö
 
 ### <a name="how-to-implement-structural-navigation-caching"></a>Yapısal gezinti önbelleğini uygulama
 
-**Site Ayarlar** >  **Look ve** **FeelNavigation** >  altında, genel gezinti veya geçerli gezinti için yapısal gezintinin seçili olup olmadığını doğrulayabilirsiniz. **Sayfaları göster'in** seçilmesi performansı olumsuz etkiler.
+**Site Ayarları** > **Genel Görünüm** > **Gezintisi'nin** altında, genel gezinti veya geçerli gezinti için yapısal gezintinin seçili olup olmadığını doğrulayabilirsiniz. **Sayfaları göster'in** seçilmesi performansı olumsuz etkiler.
 
 ![Alt Siteleri Göster'in seçili olduğu yapısal gezinti.](../media/SPONavOptionsStructuredShowSubsites.png)
 
-Önbelleğe Alma, site koleksiyonu düzeyinde ve site düzeyinde etkinleştirilebilir veya devre dışı bırakılabilir ve her ikisi için de varsayılan olarak etkinleştirilir. Site koleksiyonu düzeyinde etkinleştirmek için **, Site Ayarlar** >  **Site Koleksiyonu YönetimiSite** >  **Koleksiyonu Gezintisi'nin** altında **Önbelleğe almayı etkinleştir** kutusunu işaretleyin.
+Önbelleğe alma, site koleksiyonu düzeyinde ve site düzeyinde etkinleştirilebilir veya devre dışı bırakılabilir ve her ikisi için de varsayılan olarak etkinleştirilir. Site koleksiyonu düzeyinde etkinleştirmek için **, Site Ayarları** > **Site Koleksiyonu Yönetimi** > **Site Koleksiyonu Gezintisi'nin** altında **Önbelleğe almayı etkinleştir** kutusunu işaretleyin.
 
-![Site düzeyinde önbelleğe almayı etkinleştirin.](../media/structural-nav/structural-nav-caching-site-coll.png)
+![Site koleksiyonu düzeyinde önbelleğe almayı etkinleştirin.](../media/structural-nav/structural-nav-caching-site-coll.png)
 
-Site düzeyinde etkinleştirmek için **Site Ayarlar** >  **Navigation** altında **Önbelleğe almayı etkinleştir** kutusunu işaretleyin.
+Site düzeyinde etkinleştirmek için **, Site Ayarları** > **Gezintisi'nin** altında **Önbelleğe almayı etkinleştir** kutusunu işaretleyin.
 
 ![Site düzeyinde önbelleğe almayı etkinleştirin.](../media/structural-nav/structural-nav-caching-site.png)
 
@@ -117,7 +117,7 @@ Bu gezinti sağlayıcılarının birkaç önemli avantajı vardır:
 
 Veri sağlayıcısına örnek olarak, gezinti düğümlerini listeleme ve güvenlik kırpma işlemlerini verimli bir şekilde işleme esnekliği sağlayan **Arama temelli gezinti** kullanmaktır.
 
-**Özel gezinti sağlayıcıları** oluşturmak için başka popüler seçenekler de vardır. Özel gezinti sağlayıcısı oluşturma konusunda daha fazla rehberlik [için lütfen SharePoint Çevrimiçi portallar](/sharepoint/dev/solution-guidance/portal-navigation) için gezinti çözümlerini gözden geçirin.
+**Özel gezinti sağlayıcıları** oluşturmak için başka popüler seçenekler de vardır. Özel gezinti sağlayıcısı oluşturma konusunda daha fazla rehberlik [için lütfen SharePoint Online portalları](/sharepoint/dev/solution-guidance/portal-navigation) için gezinti çözümlerini gözden geçirin.
 
 Aramayı kullanarak, sürekli gezinmeyi kullanarak arka planda oluşturulan dizinleri kullanabilirsiniz. Arama sonuçları arama dizininden çekilir ve sonuçlar güvenlikle kırpılır. Bu genellikle güvenlik kırpması gerektiğinde kullanıma kullanıma yönelik gezinti sağlayıcılarından daha hızlıdır. Özellikle karmaşık bir site yapınız varsa yapısal gezinti araması kullanmak sayfa yükleme süresini önemli ölçüde hızlandıracaktır. Bunun yönetilen gezintiye göre temel avantajı, güvenlik kırpmasından yararlanmanızdır.
 
@@ -125,7 +125,7 @@ Bu yaklaşım, özel bir ana sayfa oluşturmayı ve kullanıma açık gezinti ko
 
 ### <a name="example-replace-the-out-of-the-box-navigation-code-in-a-master-page"></a>Örnek: Bir ana sayfadaki kullanıma özel gezinti kodunu değiştirme
 
-1. Site Ayarlar sayfasına gidin.
+1. Site Ayarları sayfasına gidin.
 2. **Ana Sayfalar'a** tıklayarak ana sayfa galerisini açın.
 3. Buradan kitaplıkta gezinebilir ve dosyasını `seattle.master`indirebilirsiniz.
 4. Bir metin düzenleyicisi kullanarak kodu düzenleyin ve aşağıdaki ekran görüntüsünde kod bloğunu silin.<br/>![Gösterilen kod bloğunu silin.](../media/SPONavOptionsDeleteCodeBlock.png)<br/>
@@ -221,7 +221,7 @@ Karmaşık gezinti örneğimizde, yerel önbelleğe alma olmadan yapılan yeni b
 ### <a name="about-the-javascript-file"></a>JavaScript dosyası hakkında...
 
 >[!NOTE]
->Özel JavaScript kullanıyorsanız, genel CDN etkinleştirildiğinden ve dosyanın CDN bir konumda olduğundan emin olun.
+>Özel JavaScript kullanıyorsanız, genel CDN'nin etkinleştirildiğinden ve dosyanın bir CDN konumunda olduğundan emin olun.
 
 JavaScript dosyasının tamamı aşağıdaki gibidir:
 
@@ -476,7 +476,7 @@ Nesneler daha sonra bir sonuç dizisine konur. Bu dizi, Knockout kullanılarak J
 
 - jQuery - https://jquery.com/
 - KnockoutJS - https://knockoutjs.com/
-- Linq.js - https://linqjs.codeplex.com/veya github.com/neuecc/linq.js
+- Linq.js - `https://linqjs.codeplex.com/`veya github.com/neuecc/linq.js
 
 LinqJS'nin geçerli sürümü yukarıdaki kodda kullanılan ByHierarchy yöntemini içermez ve gezinti kodunu bozar. Bunu düzeltmek için, satırından `Flatten: function ()`önce Linq.js dosyasına aşağıdaki yöntemi ekleyin.
 

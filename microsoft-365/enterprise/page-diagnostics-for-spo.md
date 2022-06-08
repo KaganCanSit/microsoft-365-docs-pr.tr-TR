@@ -18,17 +18,17 @@ search.appverid:
 - BSA160
 f1.keywords:
 - NOCSH
-description: SharePoint Çevrimiçi modern portalı ve klasik yayımlama sayfalarını önceden tanımlanmış performans ölçütleri kümesine göre çözümlemek için SharePoint için Sayfa Tanılama aracını kullanın.
-ms.openlocfilehash: a4d2c0f6d298578290d9f7daf850c4744e2f8dff
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+description: SharePoint Online modern portalını ve klasik yayımlama sayfalarını önceden tanımlanmış bir performans ölçütleri kümesine göre çözümlemek için SharePoint için Sayfa Tanılama aracını kullanın.
+ms.openlocfilehash: b89534fe45daf34082b7ee3b735a7ba67851f9f4
+ms.sourcegitcommit: 61bdfa84f2d6ce0b61ba5df39dcde58df6b3b59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65621848"
+ms.lasthandoff: 06/08/2022
+ms.locfileid: "65941118"
 ---
 # <a name="use-the-page-diagnostics-for-sharepoint-tool"></a>SharePoint için Sayfa Tanılama aracını kullanma
 
-Bu makalede, SharePoint Çevrimiçi modern ve klasik site sayfalarını önceden tanımlanmış bir performans ölçütleri kümesine göre analiz etmek **üzere SharePoint için Sayfa Tanılama aracının** nasıl kullanılacağı açıklanmaktadır.
+Bu makalede, SharePoint Online modern ve klasik site sayfalarını önceden tanımlanmış bir performans ölçütleri kümesine göre çözümlemek için SharePoint **için Sayfa Tanılama aracının** nasıl kullanılacağı açıklanmaktadır.
 
 SharePoint için Sayfa Tanılama aracı aşağıdakiler için yüklenebilir:
 
@@ -38,30 +38,30 @@ SharePoint için Sayfa Tanılama aracı aşağıdakiler için yüklenebilir:
 >[!TIP]
 >Sürüm **2.0.0** ve üzeri, klasik site sayfalarına ek olarak modern sayfalar için destek içerir. Aracın hangi sürümünü kullandığınızdan emin değilseniz, sürümünüzü doğrulamak için **Hakkında** bağlantısını veya üç noktayı (...) seçebilirsiniz. Aracı kullanırken **her zaman en son sürüme güncelleştirin**.
 
-SharePoint için Sayfa Tanılama aracı, hem SharePoint Çevrimiçi modern portalı hem de klasik yayımlama sitesi sayfalarını analiz eden yeni Microsoft Edge (https://www.microsoft.com/edge) ve Chrome tarayıcıları) için bir tarayıcı uzantısıdır. Bu araç yalnızca SharePoint Online için çalışır ve SharePoint sistem sayfasında kullanılamaz.
+SharePoint için Sayfa Tanılama aracı, hem SharePoint Online modern portalını hem de klasik yayımlama sitesi sayfalarını analiz eden yeni Microsoft Edge (https://www.microsoft.com/edge) ve Chrome tarayıcıları için bir tarayıcı uzantısıdır. Bu araç yalnızca SharePoint Online için çalışır ve SharePoint sistem sayfasında kullanılamaz.
 
-Araç, analiz edilen her sayfa için sayfanın önceden tanımlanmış bir kural kümesine göre nasıl performans gösterdiğini gösteren bir rapor oluşturur ve test sonuçları temel değerin dışında olduğunda ayrıntılı bilgiler görüntüler. SharePoint Çevrimiçi yöneticiler ve tasarımcılar, performans sorunlarını gidermek ve yayımlamadan önce yeni sayfaların iyileştirildiğinden emin olmak için aracı kullanabilir.
+Araç, analiz edilen her sayfa için sayfanın önceden tanımlanmış bir kural kümesine göre nasıl performans gösterdiğini gösteren bir rapor oluşturur ve test sonuçları temel değerin dışında olduğunda ayrıntılı bilgiler görüntüler. SharePoint Online yöneticileri ve tasarımcıları, performans sorunlarını gidermek ve yayımlamadan önce yeni sayfaların iyileştirildiğinden emin olmak için aracı kullanabilir.
 
 Sayfa Tanılama aracı, *allitems.aspx* veya *sharepoint.aspx* gibi sistem sayfalarını değil, yalnızca SharePoint site sayfalarını analiz etmek için tasarlanmıştır. Aracı bir sistem sayfasında veya site olmayan başka bir sayfada çalıştırmayı denerseniz, aracın bu tür bir sayfa için çalıştırılamayacağına dair bir hata iletisi alırsınız.
 
 > [!div class="mx-imgBorder"]
 > ![SharePoint sayfasında çalıştırılmalıdır.](../media/page-diagnostics-for-spo/pagediag-Error-StartPage.png)
 
-Kitaplıkları veya sistem sayfalarını değerlendirmede değer olmadığından bu araçta bir hata değildir. Aracı kullanmak için lütfen SharePoint site sayfasına gidin. Bu hata bir SharePoint sayfasında oluşursa, SharePoint meta etiketlerinin kaldırılmadığından emin olmak için lütfen ana sayfayı denetleyin.
+Kitaplıkları veya sistem sayfalarını değerlendirmede değer olmadığından bu araçta bir hata değildir. Aracı kullanmak için lütfen sharepoint sitesi sayfasına gidin. Bu hata bir SharePoint sayfasında oluşursa, SharePoint meta etiketlerinin kaldırılmadığından emin olmak için lütfen ana sayfayı denetleyin.
 
-Araç hakkında geri bildirim sağlamak için aracın sağ üst köşesindeki üç noktayı ve ardından [Geri bildirimde bulun'ı](https://go.microsoft.com/fwlink/?linkid=874109) seçin.
+Araç hakkında geri bildirim sağlamak için aracın sağ üst köşesindeki üç noktayı ve ardından **Geri bildirimde bulun'ı** seçin.
 
 > [!div class="mx-imgBorder"]
 > ![Geri bildirimde bulunmak.](../media/page-diagnostics-for-spo/pagediag-feedback.png)
   
 ## <a name="install-the-page-diagnostics-for-sharepoint-tool"></a>SharePoint için Sayfa Tanılama aracını yükleme
 
-Bu bölümdeki yükleme yordamı hem Chrome hem de Microsoft Edge tarayıcılar için çalışır.
+Bu bölümdeki yükleme yordamı hem Chrome hem de Microsoft Edge tarayıcıları için çalışır.
 
 > [!IMPORTANT]
 > Microsoft, SharePoint için Sayfa Tanılama aracı tarafından analiz edilen verileri veya sayfa içeriğini okumaz ve hiçbir kişisel bilgi, web sitesi veya indirme bilgisi yakalamayız. Araç tarafından Microsoft'ta günlüğe kaydedilen tek tanımlanabilir bilgiler kiracı adı, başarısız olan kural sayısı ve aracın çalıştırıldığı tarih ve saattir. Bu bilgiler Microsoft tarafından modern portalı daha iyi anlamak ve site kullanım eğilimlerini ve yaygın performans sorunlarını yayımlamak için kullanılır.
 
-1. Microsoft Edge ([Edge uzantısı)](https://microsoftedge.microsoft.com/addons/detail/ocemkolpnamjcacndljdfmhlpcaoipji) veya **Chrome** ([Chrome uzantısı](https://chrome.google.com/webstore/detail/inahogkhlkbkjkkaleonemeijihmfagi)) için **SharePoint** için Sayfa Tanılama aracını yükleyin. Lütfen mağazanın açıklama sayfasında sağlanan Kullanıcı Gizlilik İlkesi'ni gözden geçirin. Aracı tarayıcınıza eklerken aşağıdaki izin bildirimini görürsünüz.
+1. **Microsoft Edge** [(Edge uzantısı)](https://microsoftedge.microsoft.com/addons/detail/ocemkolpnamjcacndljdfmhlpcaoipji) veya **Chrome** ([Chrome uzantısı](https://chrome.google.com/webstore/detail/inahogkhlkbkjkkaleonemeijihmfagi)) için SharePoint için Sayfa Tanılama aracını yükleyin. Lütfen mağazanın açıklama sayfasında sağlanan Kullanıcı Gizlilik İlkesi'ni gözden geçirin. Aracı tarayıcınıza eklerken aşağıdaki izin bildirimini görürsünüz.
 
     > [!div class="mx-imgBorder"]
     > ![Uzantı izinleri.](../media/page-diagnostics-for-spo/pagediag-add-to-edge.png)
@@ -70,9 +70,9 @@ Bu bölümdeki yükleme yordamı hem Chrome hem de Microsoft Edge tarayıcılar 
 
     _İndirmelerinizi yönetin_ izni, aracın **JSON'a aktar** işlevinin kullanımını kapsar. Sonuçlar URL'ler içerdiğinden ve PII (Kişisel Bilgiler) olarak sınıflandırılaabildiği için JSON dosyasını kuruluşunuzun dışında paylaşmadan önce lütfen şirketinizin kendi gizlilik yönergelerini izleyin.
 1. Aracı Gizli veya InPrivate modunda kullanmak istiyorsanız tarayıcınızın yordamını izleyin:
-    1. Microsoft Edge'da **Uzantılar'a** gidin veya URL çubuğuna _edge://extensions_ yazın ve uzantı için **Ayrıntılar'ı** seçin. Uzantı ayarlarında **InPrivate'te izin ver** onay kutusunu seçin.
+    1. Microsoft Edge'de **Uzantılar'a** gidin veya URL çubuğuna _edge://extensions_ yazın ve uzantı için **Ayrıntılar'ı** seçin. Uzantı ayarlarında **InPrivate'te izin ver** onay kutusunu seçin.
     1. Chrome'da **Uzantılar'a** gidin veya URL çubuğuna _chrome://extensions_ yazın ve uzantı için **Ayrıntılar'ı** seçin. Uzantı ayarlarında **Gizli'de izin ver** kaydırıcısını seçin.
-1. SharePoint Online'da gözden geçirmek istediğiniz SharePoint site sayfasına gidin. Sayfalardaki öğelerin "yüklenmesini geciktirme" izni verdik; bu nedenle, araç otomatik olarak durmaz (bu, tüm sayfa yükleme senaryolarına uyum sağlamak için tasarım gereğidir). Koleksiyonu durdurmak için **Durdur'u** seçin. Veri toplamayı durdurmadan önce sayfa yükünün tamamlandığından emin olun; aksi durumda yalnızca kısmi bir izleme yakalarsınız.
+1. SharePoint Online'da gözden geçirmek istediğiniz SharePoint sitesi sayfasına gidin. Sayfalardaki öğelerin "yüklenmesini geciktirme" izni verdik; bu nedenle, araç otomatik olarak durmaz (bu, tüm sayfa yükleme senaryolarına uyum sağlamak için tasarım gereğidir). Koleksiyonu durdurmak için **Durdur'u** seçin. Veri toplamayı durdurmadan önce sayfa yükünün tamamlandığından emin olun; aksi durumda yalnızca kısmi bir izleme yakalarsınız.
 1. Uzantının araç çubuğu düğmesine tıklayın ![SharePoint logosu için Sayfa Tanılama.](../media/page-diagnostics-for-spo/pagediag-icon32.png) aracı yüklemek için size aşağıdaki uzantı açılır penceresi gösterilir:
 
     ![Sayfa Tanılama aracı Açılan menüsü.](../media/page-diagnostics-for-spo/pagediag-Landing.png)
@@ -83,16 +83,16 @@ Analiz için veri toplamaya başlamak için **Başlat'ı** seçin.
 
 1. Aşağıdaki bağlantıları bulmak için aracın sağ üst köşesindeki üç noktaya (...) tıklayın:
    1. **Ek kaynaklar** bağlantısı, bu makalenin bağlantısı da dahil olmak üzere araçla ilgili genel yönergeler ve ayrıntılar sağlar.
-   1. **Geri bildirimde bulun** bağlantısı _, SharePoint Siteleri ve İşbirliği User Voice_ sitesine bir bağlantı sağlar.
+   1. **Geri bildirimde bulun** bağlantısı _, SharePoint Siteleri ve İşbirliği Kullanıcı Sesi_ sitesine bir bağlantı sağlar.
    1. **Hakkında** bağlantısı, aracın şu anda yüklü olan sürümünü ve aracın üçüncü taraf bildiriminin doğrudan bağlantısını içerir.  
 1. **Bağıntı Kimliği, SPRequestDuration, SPIISLatency**, **Sayfa yükleme süresi** ve **URL** ayrıntıları bilgilendiricidir ve birkaç amaç için kullanılabilir.
 
     > [!div class="mx-imgBorder"]
     > ![Sayfa tanılama ayrıntıları.](../media/page-diagnostics-for-spo/pagediag-details.PNG)
 
-   - **CorrelationID**, belirli bir sayfa için daha fazla tanılama verisi toplamalarına olanak sağladığından Microsoft Desteği ile çalışırken önemli bir öğedir.
-   - **SPRequestDuration**, SharePoint sayfayı işlemesi için geçen süredir. Yapısal gezinti, büyük görüntüler ve çok sayıda API çağrısı daha uzun sürelere katkıda bulunabilir.
-   - **SPIISLatency**, SharePoint Online'ın sayfayı yüklemeye başlaması için geçen milisaniye cinsinden süredir. Bu değer, web uygulamasının yanıt vermesi için geçen süreyi içermez.
+   - **CorrelationID** , belirli bir sayfa için daha fazla tanılama verisi toplamalarına olanak tanıdığından, Microsoft Desteği ile çalışırken önemli bir öğedir.
+   - **SPRequestDuration** , SharePoint'in sayfayı işlemesi için geçen süredir. Yapısal gezinti, büyük görüntüler ve çok sayıda API çağrısı daha uzun sürelere katkıda bulunabilir.
+   - **SPIISLatency** , SharePoint Online'ın sayfayı yüklemeye başlaması için geçen milisaniye cinsinden süredir. Bu değer, web uygulamasının yanıt vermesi için geçen süreyi içermez.
    - **Sayfa yükleme süresi** , istek saatinden yanıtın alındığı ve tarayıcıda işlendiği zamana kadar sayfa tarafından kaydedilen toplam süredir. Bu değer ağ gecikme süresi, bilgisayarın performansı ve tarayıcının sayfayı yükleme süresi gibi çeşitli faktörlerden etkilenir.
    - **Sayfa URL'si** (Tekdüzen Kaynak Bulucu), geçerli sayfanın web adresidir.
 
@@ -111,7 +111,7 @@ Analiz için veri toplamaya başlamak için **Başlat'ı** seçin.
 
 ## <a name="how-to-use-the-diagnostic-tests-tab"></a>Tanılama testleri sekmesini kullanma
 
-SharePoint için Sayfa Tanılama aracıyla SharePoint modern portal sayfasını veya klasik yayımlama sitesi sayfasını analiz ettiğinizde, sonuçlar temel değerlerle karşılaştıran önceden tanımlanmış kurallar kullanılarak analiz edilir ve **Tanılama testleri** sekmesinde görüntülenir. Bazı testlerin kuralları, modern portal ve klasik yayımlama siteleri için belirli performansa bağlı olarak farklı temel değerler kullanabilir  özellikleri ikisi arasında farklılık gösterir.
+SharePoint için Sayfa Tanılama aracıyla bir SharePoint modern portal sayfasını veya klasik yayımlama sitesi sayfasını analiz ettiğinizde, sonuçlar temel değerlerle karşılaştıran önceden tanımlanmış kurallar kullanılarak analiz edilir ve **Tanılama testleri** sekmesinde görüntülenir. Belirli testlerin kuralları, belirli performans özelliklerinin ikisi arasındaki farka bağlı olarak modern portal ve klasik yayımlama siteleri için farklı temel değerler kullanabilir.
 
 **İyileştirme fırsatları** veya **Dikkat gerektiren** kategoriler bölümünde gösterilen test sonuçları, önerilen yöntemlere göre gözden geçirilmesi gereken alanları gösterir ve sonuç hakkında ek bilgi görüntülemek için seçilebilir. Her öğenin ayrıntıları daha _fazla bilgi edinin_ bağlantısı içerir ve bu bağlantı sizi doğrudan testle ilgili uygun rehberliğe götürür. **Eylem gerekli değil** kategorisinde görüntülenen test sonuçları, ilgili kuralla uyumluluğu gösterir ve seçildiğinde ek ayrıntıları görüntülemez.
 
@@ -120,14 +120,14 @@ Tanılama testleri sekmesindeki bilgiler size sayfaların nasıl tasarlandığı
 Kırmızı veya sarı sonuçlar, verileri çok sık yenileyen web bölümlerini de gösterebilir. Örneğin, şirket haberleri her saniye güncelleştirilmez, ancak özel web bölümleri genellikle genel kullanıcı deneyimini geliştirebilecek önbelleğe alma öğeleri uygulamak yerine en son haberleri her saniye getirmek için oluşturulur. Web bölümlerini sayfaya eklerken, hedeflenen amaca uygun şekilde ayarlandığından emin olmak için kullanılabilir her parametrenin değerini değerlendirerek performans etkilerini azaltmanın genellikle basit yolları olduğunu unutmayın.
 
 >[!NOTE]
->Yayımlama özelliği etkin olmayan klasik ekip siteleri CDN'leri kullanamaz. Aracı bu sitelerde çalıştırdığınızda, CDN testinin başarısız olması beklenir ve yoksayılabilir, ancak kalan tüm testler geçerlidir. SharePoint yayımlama özelliğinin ek işlevleri sayfa yükleme sürelerini artırabilir, bu nedenle yalnızca CDN işlevselliğine izin vermek için etkinleştirilmemelidir.
+>Yayımlama özelliği etkin olmayan klasik ekip siteleri CDN'leri kullanamaz. Aracı bu sitelerde çalıştırdığınızda CDN testinin başarısız olması beklenir ve yoksayılabilir, ancak kalan tüm testler geçerlidir. SharePoint yayımlama özelliğinin ek işlevleri sayfa yükleme sürelerini artırabilir, bu nedenle yalnızca CDN işlevselliğine izin vermek için etkinleştirilmemelidir.
 
 >[!IMPORTANT]
 >Test kuralları düzenli olarak eklenir ve güncelleştirilir, bu nedenle geçerli kurallar ve test sonuçlarına dahil edilen belirli bilgiler için lütfen aracın en son sürümüne bakın. Uzantılarınızı yöneterek sürümü doğrulayabilirsiniz ve uzantı bir güncelleştirmenin kullanılabilir olup olmadığını önerir.
 
 ## <a name="how-to-use-the-network-trace-tab-and-how-to-export-a-har-file"></a>Ağ İzleme sekmesini kullanma ve HAR dosyasını dışarı aktarma
 
-**Ağ İzleme** sekmesi, hem sayfayı derleme istekleri hem de SharePoint alınan yanıtlar hakkında ayrıntılı bilgi sağlar.
+**Ağ İzleme** sekmesi, hem sayfayı oluşturmaya yönelik istekler hem de SharePoint'ten alınan yanıtlar hakkında ayrıntılı bilgi sağlar.
 
 1. **Kırmızı olarak işaretlenmiş öğe yükleme sürelerini arayın**. Her istek ve yanıt, aşağıdaki gecikme süresi ölçümlerini kullanarak genel sayfa performansı üzerindeki etkisini göstermek için renk kodludur:
     - Yeşil: \< 500ms
@@ -146,7 +146,7 @@ Kırmızı veya sarı sonuçlar, verileri çok sık yenileyen web bölümlerini 
    > [!div class="mx-imgBorder"]
    > ![HAR'ye dışarı aktarmayı etkinleştirin.](../media/page-diagnostics-for-spo/pagediag-submithar.png)
 
-Başlangıç'a tıklamadan önce bu özellik etkinleştirilmelidir. Bu, tarayıcınızda hata ayıklama modunu etkinleştirir. Daha sonra "Ağ İzleme" sekmesi aracılığıyla erişilebilen bir HTTP Arşiv dosyası (HAR) oluşturur. "HAR'ye Aktar"a tıkladığınızda dosya bilgisayarınıza indirilir ve ardından uygun şekilde paylaşabilirsiniz. Dosya, F12 Geliştirici Araçları ve Fiddler gibi çeşitli hata ayıklama araçlarında açılabilir.
+Başlangıç'a tıklamadan önce bu özellik etkinleştirilmelidir. Bu, tarayıcınızda hata ayıklama modunu etkinleştirir. Daha sonra "Ağ İzleme" sekmesi aracılığıyla erişilebilen bir HTTP Arşiv dosyası (HAR) oluşturur. "HAR'ye Aktar"a tıkladığınızda dosya bilgisayarınıza indirilir ve ardından uygun şekilde paylaşabilirsiniz. Dosya F12 Geliştirici Araçları ve Fiddler gibi çeşitli hata ayıklama araçlarında açılabilir.
 
 > [!div class="mx-imgBorder"]
 > ![Ağ izleme.](../media/page-diagnostics-for-spo/pagediag-networktracehar.png)
@@ -156,11 +156,11 @@ Başlangıç'a tıklamadan önce bu özellik etkinleştirilmelidir. Bu, tarayıc
 
 ## <a name="engaging-with-microsoft-support"></a>Microsoft Desteği ile etkileşime geçilmesi
 
-Yalnızca doğrudan bir destek olayı üzerinde çalışırken kullanılması gereken **Microsoft Desteği düzeyinde bir özellik** dahil ettik. Bu özelliğin kullanılması, destek ekibi katılımı olmadan kullanıldığında size hiçbir fayda sağlamaz ve sayfanın önemli ölçüde daha yavaş performans göstermesini sağlayabilir. Hizmetteki günlüğe ek bilgiler eklendiğinden araçta bu özellik kullanılırken ek bilgi yoktur.
+Yalnızca doğrudan bir destek olayı üzerinde çalışırken kullanılması gereken bir **Microsoft Destek düzeyi özelliği** ekledik. Bu özelliğin kullanılması, destek ekibi katılımı olmadan kullanıldığında size hiçbir fayda sağlamaz ve sayfanın önemli ölçüde daha yavaş performans göstermesini sağlayabilir. Hizmetteki günlüğe ek bilgiler eklendiğinden araçta bu özellik kullanılırken ek bilgi yoktur.
 
 Etkinleştirdiğiniz bildirilmesi ve sayfa performansınızın etkinken performansın 2-3 kat daha yavaş olması dışında hiçbir değişiklik görünmez. Yalnızca belirli bir sayfa ve etkin oturumla ilgili olacaktır. Bu nedenle, bu, yalnızca destekle etkin bir şekilde etkileşime geçtiğinde düzenli olarak kullanılmalıdır.
 
-### <a name="to-enable-the-microsoft-support-level-feature"></a>Microsoft Desteği düzeyi özelliğini etkinleştirmek için
+### <a name="to-enable-the-microsoft-support-level-feature"></a>Microsoft Destek düzeyi özelliğini etkinleştirmek için
 
 1. SharePoint için Sayfa Tanılama aracını açın.
 2. Klavyenizde **ALT-Shift-L tuşlarına** basın. Bu, **Destek günlüğünü etkinleştir** onay kutusunu görüntüler.
@@ -173,7 +173,7 @@ Etkinleştirdiğiniz bildirilmesi ve sayfa performansınızın etkinken performa
 
 ## <a name="related-topics"></a>İlgili konular
 
-[çevrimiçi SharePoint performansını ayarlama](tune-sharepoint-online-performance.md)
+[SharePoint Online performansını ayarlama](tune-sharepoint-online-performance.md)
 
 [Office 365 performansını ayarlama](tune-microsoft-365-performance.md)
 
@@ -181,4 +181,4 @@ Etkinleştirdiğiniz bildirilmesi ve sayfa performansınızın etkinken performa
 
 [İçerik teslim ağları](content-delivery-networks.md)
 
-[SharePoint Online ile Office 365 Content Delivery Network (CDN) kullanma](use-microsoft-365-cdn-with-spo.md)
+[SharePoint Online ile Office 365 İçerik Teslim Ağı'nı (CDN) kullanma](use-microsoft-365-cdn-with-spo.md)

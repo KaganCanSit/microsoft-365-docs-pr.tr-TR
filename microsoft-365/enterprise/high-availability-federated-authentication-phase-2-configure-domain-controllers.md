@@ -14,21 +14,21 @@ f1.keywords:
 ms.custom: Ent_Solutions
 ms.assetid: 6b0eff4c-2c5e-4581-8393-a36f7b36a72f
 description: "Özet: Microsoft Azure'da Microsoft 365 için yüksek kullanılabilirlik federasyon kimlik doğrulamanız için etki alanı denetleyicilerini ve dizin eşitleme sunucusunu yapılandırın."
-ms.openlocfilehash: a3b5963100072f55c108f29d4437a2ae997ad96d
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 765ccb0aaf2611947f505b53b5689009dadd5148
+ms.sourcegitcommit: 61bdfa84f2d6ce0b61ba5df39dcde58df6b3b59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098372"
+ms.lasthandoff: 06/08/2022
+ms.locfileid: "65940700"
 ---
 # <a name="high-availability-federated-authentication-phase-2-configure-domain-controllers"></a>Yüksek kullanılabilirlik federasyon kimlik doğrulaması 2. Aşama: Etki alanı denetleyicilerini yapılandırma
 
 Azure altyapı hizmetlerinde Microsoft 365 federasyon kimlik doğrulaması için yüksek kullanılabilirlik dağıtmanın bu aşamasında, Azure sanal ağında iki etki alanı denetleyicisini ve dizin eşitleme sunucusunu yapılandıracaksınız. Daha sonra kimlik doğrulaması için istemci web istekleri, bu kimlik doğrulama trafiğini siteden siteye VPN bağlantısı üzerinden şirket içi ağınıza göndermek yerine Azure sanal ağında doğrulanabilir.
   
 > [!NOTE]
-> Active Directory Federasyon Hizmetleri (AD FS) (AD FS), Active Directory Domain Services (AD DS) etki alanı denetleyicilerinin yerine Azure Active Directory (Azure AD) kullanamaz. 
+> Active Directory Federasyon Hizmetleri (AD FS), Active Directory Etki Alanı Hizmetleri (AD DS) etki alanı denetleyicilerinin yerine Azure Active Directory (Azure AD) kullanamaz. 
   
-[3. Aşama: AD FS sunucularını yapılandırma](high-availability-federated-authentication-phase-3-configure-ad-fs-servers.md) aşamasına geçmeden önce bu aşamayı tamamlamanız gerekir. Tüm aşamalar için bkz. [Azure'da Microsoft 365 için yüksek kullanılabilirlik federasyon kimlik doğrulamasını dağıtma](deploy-high-availability-federated-authentication-for-microsoft-365-in-azure.md).
+[3. Aşama: AD FS sunucularını yapılandırma](high-availability-federated-authentication-phase-3-configure-ad-fs-servers.md) aşamasına geçmeden önce bu aşamayı tamamlamanız gerekir. Tüm aşamalar için bkz. [Azure'da Microsoft 365 için yüksek kullanılabilirlik federasyon kimlik doğrulamasını dağıtma](deploy-high-availability-federated-authentication-for-microsoft-365-in-azure.md) .
   
 ## <a name="create-the-domain-controller-virtual-machines-in-azure"></a>Azure'da etki alanı denetleyicisi sanal makinelerini oluşturma
 
@@ -46,7 +46,7 @@ Azure altyapı hizmetlerinde Microsoft 365 federasyon kimlik doğrulaması için
    
  **Tablo M - Azure'da Microsoft 365 için yüksek kullanılabilirlik federasyon kimlik doğrulaması için sanal makineler**
   
-Sanal makine boyutlarının tam listesi için bkz. [Sanal makineler için boyutlar](/azure/virtual-machines/virtual-machines-windows-sizes).
+Sanal makine boyutlarının tam listesi için bkz. [Sanal makineler için boyutlar](/azure/virtual-machines/sizes).
   
 Aşağıdaki Azure PowerShell komut bloğu, iki etki alanı denetleyicisi için sanal makineleri oluşturur. Karakterleri kaldırarak değişkenlerin \< and > değerlerini belirtin. Bu Azure PowerShell komut bloğunun aşağıdaki tablolardaki değerleri kullandığını unutmayın:
   
@@ -65,7 +65,7 @@ Aşağıdaki Azure PowerShell komut bloğu, iki etki alanı denetleyicisi için 
 [1. Aşama: Azure'ı yapılandırma](high-availability-federated-authentication-phase-1-configure-azure.md) bölümünde R, V, S, I ve A tablolarını tanımlamış olduğunuzu hatırlayın.
   
 > [!NOTE]
-> Aşağıdaki komut kümeleri Azure PowerShell en son sürümünü kullanır. Bkz. [Azure PowerShell ile Kullanmaya başlayın](/powershell/azure/get-started-azureps). 
+> Aşağıdaki komut kümeleri Azure PowerShell'in en son sürümünü kullanır. Bkz. [Azure PowerShell'i kullanmaya başlama](/powershell/azure/get-started-azureps). 
   
 Tüm doğru değerleri sağladığınızda, elde edilen bloğu Azure PowerShell isteminde veya yerel bilgisayarınızdaki PowerShell Tümleşik Betik Ortamı'nda (ISE) çalıştırın.
   
@@ -144,7 +144,7 @@ New-AzVM -ResourceGroupName $rgName -Location $locName -VM $vm
 ```
 
 > [!NOTE]
-> Bu sanal makineler bir intranet uygulamasına ait olduğundan, bunlara bir genel IP adresi veya DNS etki alanı adı etiketi atanıp İnternet'e sunulmaz. Ancak bu, bunlara Azure portal bağlanamayacağınız anlamına da gelir. sanal makinenin özelliklerini görüntülediğinizde **Bağlan** seçeneği kullanılamaz. Özel IP adresini veya intranet DNS adını kullanarak sanal makineye bağlanmak için Uzak Masaüstü Bağlantısı aksesuarını veya başka bir Uzak Masaüstü aracını kullanın.
+> Bu sanal makineler bir intranet uygulamasına ait olduğundan, bunlara bir genel IP adresi veya DNS etki alanı adı etiketi atanıp İnternet'e sunulmaz. Ancak bu, azure portalından bunlara bağlanamayacağınız anlamına da gelir. Sanal makinenin özelliklerini görüntülediğinizde **Bağlan** seçeneği kullanılamaz. Özel IP adresini veya intranet DNS adını kullanarak sanal makineye bağlanmak için Uzak Masaüstü Bağlantısı aksesuarını veya başka bir Uzak Masaüstü aracını kullanın.
   
 ## <a name="configure-the-first-domain-controller"></a>İlk etki alanı denetleyicisini yapılandırma
 
@@ -175,7 +175,7 @@ Bir etki alanı yönetici hesabının kimlik bilgilerini sağlamanız istenir. B
 
 seçtiğiniz uzak masaüstü istemcisini kullanın ve ikinci etki alanı denetleyicisi sanal makinesine bir uzak masaüstü bağlantısı oluşturun. İntranet DNS'sini veya bilgisayar adını ve yerel yönetici hesabının kimlik bilgilerini kullanın.
   
-Ardından, ikinci etki alanı denetleyicisi sanal makinesindeki bir Windows PowerShell komut isteminden bu komutla **ikinci etki alanı denetleyicisine ek veri** diski eklemeniz gerekir:
+Ardından, ikinci etki alanı denetleyicisi sanal makinesindeki bir Windows PowerShell komut isteminden bu komutla **ikinci etki alanı denetleyicisine** ek veri diski eklemeniz gerekir:
   
 ```powershell
 Get-Disk | Where PartitionStyle -eq "RAW" | Initialize-Disk -PartitionStyle MBR -PassThru | New-Partition -AssignDriveLetter -UseMaximumSize | Format-Volume -FileSystem NTFS -NewFileSystemLabel "WSAD Data"
@@ -193,7 +193,7 @@ Install-ADDSDomainController -InstallDns -DomainName $domname  -DatabasePath "F:
 
 Bir etki alanı yönetici hesabının kimlik bilgilerini sağlamanız istenir. Bilgisayar yeniden başlatılır.
   
-Ardından, Azure'ın sanal makinelere DNS sunucuları olarak kullanmak üzere iki yeni etki alanı denetleyicisinin IP adreslerini ataması için sanal ağınızın DNS sunucularını güncelleştirmeniz gerekir. Değişkenleri doldurun ve yerel bilgisayarınızdaki bir Windows PowerShell komut isteminden şu komutları çalıştırın:
+Ardından, Azure'ın sanal makinelere DNS sunucuları olarak kullanmak üzere iki yeni etki alanı denetleyicisinin IP adreslerini ataması için sanal ağınızın DNS sunucularını güncelleştirmeniz gerekir. Değişkenleri doldurun ve ardından yerel bilgisayarınızdaki bir Windows PowerShell komut isteminden şu komutları çalıştırın:
   
 ```powershell
 $rgName="<Table R - Item 4 - Resource group name column>"
@@ -219,7 +219,7 @@ Restart-AzVM -ResourceGroupName $adrgName -Name $secondDCName
 
 İki etki alanı denetleyicisini, şirket içi DNS sunucularıyla DNS sunucuları olarak yapılandırılmamaları için yeniden başlatacağımıza dikkat edin. Her ikisi de DNS sunucuları olduğundan, etki alanı denetleyicilerine yükseltildiklerinde şirket içi DNS sunucularıyla DNS ileticileri olarak otomatik olarak yapılandırıldılar.
   
-Ardından, Azure sanal ağındaki sunucuların yerel etki alanı denetleyicilerini kullandığından emin olmak için bir Active Directory çoğaltma sitesi oluşturmamız gerekir. Bir etki alanı yöneticisi hesabıyla etki alanı denetleyicisine Bağlan ve yönetici düzeyinde bir Windows PowerShell isteminden aşağıdaki komutları çalıştırın:
+Ardından, Azure sanal ağındaki sunucuların yerel etki alanı denetleyicilerini kullandığından emin olmak için bir Active Directory çoğaltma sitesi oluşturmamız gerekir. Bir etki alanı yöneticisi hesabıyla etki alanı denetleyicisine bağlanın ve yönetici düzeyinde bir Windows PowerShell isteminden aşağıdaki komutları çalıştırın:
   
 ```powershell
 $vnet="<Table V - Item 1 - Value column>"
@@ -245,7 +245,7 @@ Yer tutucu bilgisayar adlarıyla bu aşamanın başarıyla tamamlanmasından kay
   
 **2. Aşama: Azure'da yüksek kullanılabilirlik federasyon kimlik doğrulama altyapınız için etki alanı denetleyicileri ve dizin eşitleme sunucusu**
 
-![Azure'da etki alanı denetleyicileriyle federasyon kimlik doğrulama altyapısı Microsoft 365 yüksek kullanılabilirlik aşaması 2. aşama.](../media/b0c1013b-3fb4-499e-93c1-bf310d8f4c32.png)
+![Azure'da etki alanı denetleyicileriyle yüksek kullanılabilirlik Microsoft 365 federasyon kimlik doğrulama altyapısının 2. aşaması.](../media/b0c1013b-3fb4-499e-93c1-bf310d8f4c32.png)
   
 ## <a name="next-step"></a>Sonraki adım
 

@@ -1,5 +1,5 @@
 ---
-title: VPN bölmeli bölme Microsoft 365
+title: Microsoft 365 için VPN bölünmüş tüneli uygulama
 ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
@@ -16,67 +16,67 @@ ms.collection:
 - remotework
 f1.keywords:
 - NOCSH
-description: VPN bölme bölmeleri uygulama Microsoft 365
-ms.openlocfilehash: ee8c0929682370d581c9d1b5c738d682d3f91a01
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Microsoft 365 için VPN bölünmüş tüneli uygulama
+ms.openlocfilehash: 6b578b9b1801921644c6982c15c160bce5fbb4dd
+ms.sourcegitcommit: 61bdfa84f2d6ce0b61ba5df39dcde58df6b3b59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63320445"
+ms.lasthandoff: 06/08/2022
+ms.locfileid: "65941096"
 ---
-# <a name="implementing-vpn-split-tunneling-for-microsoft-365"></a>VPN bölmeli bölme Microsoft 365
+# <a name="implementing-vpn-split-tunneling-for-microsoft-365"></a>Microsoft 365 için VPN bölünmüş tüneli uygulama
 
 >[!NOTE]
->Bu makale, uzak kullanıcılar için iyileştirmeyi Microsoft 365 makale kümelerinin bir bölümüdir.
+>Bu makale, uzak kullanıcılar için Microsoft 365 iyileştirmesini ele alan bir makale kümesinin parçasıdır.
 
->- Uzak kullanıcılar için Microsoft 365 bağlantısını en iyi duruma getirmek için VPN bölünmüş şifreleme kullanma hakkında genel bir bakış için bkz[.](microsoft-365-vpn-split-tunnel.md) Genel Bakış: Vpn bölünmüş Microsoft 365.
->- VPN bölünmüş bölme senaryolarının ayrıntılı listesi için bkz. Daha fazla bilgi için bkz. Genel [VPN bölünmüş Microsoft 365](microsoft-365-vpn-common-scenarios.md).
->- VPN bölünmüş trafiğinde Teams trafiğinin güvenliğini sağlama kılavuzu için bkz. VPN bölünmüş trafiği için Teams trafiğinin güvenliğini [sağlama](microsoft-365-vpn-securing-teams.md).
->- VPN ortamlarında Stream ve canlı etkinlikleri yapılandırma hakkında bilgi için bkz. VPN ortamlarında akış ve canlı etkinlikler [için dikkat edilmesi gereken noktalar](microsoft-365-vpn-stream-and-live-events.md).
->- Çin'deki kullanıcılar için Microsoft 365 kiracı performansını iyileştirme hakkında bilgi için bkz. [Microsoft 365 için performans iyileştirme.](microsoft-365-networking-china.md)
+>- Uzak kullanıcılar için Microsoft 365 bağlantısını iyileştirmek üzere VPN bölünmüş tünel kullanmaya genel bakış için bkz [. Genel Bakış: Microsoft 365 için VPN bölünmüş tünel oluşturma](microsoft-365-vpn-split-tunnel.md).
+>- VPN bölünmüş tünel senaryolarının ayrıntılı listesi için bkz. [Microsoft 365 için yaygın VPN bölünmüş tünel senaryoları](microsoft-365-vpn-common-scenarios.md).
+>- VPN bölünmüş tünel ortamlarında Teams medya trafiğinin güvenliğini sağlama yönergeleri için bkz. [VPN bölünmüş tüneli için Teams medya trafiğinin güvenliğini sağlama](microsoft-365-vpn-securing-teams.md).
+>- VPN ortamlarında Stream ve canlı etkinlikleri yapılandırma hakkında bilgi için bkz. [VPN ortamlarında Akış ve canlı etkinlikler için dikkat edilmesi gereken özel noktalar](microsoft-365-vpn-stream-and-live-events.md).
+>- Çin'deki kullanıcılar için Microsoft 365 dünya çapında kiracı performansını iyileştirme hakkında bilgi için bkz. [Çin kullanıcıları için Microsoft 365 performans iyileştirmesi](microsoft-365-networking-china.md).
 
-Uzak çalışanın bağlantısını en iyi duruma getirme konusunda Microsoft'un önerilen stratejisi, hızlı şekilde risk azaltmaya ve birkaç basit adımla yüksek performans sağlamaya odaklanmaktadır. Bu adımlar, performans sorunu olan VPN sunucularını atlayan birkaç tanımlı uç nokta için eski VPN yaklaşımını ayarlar. Şirket ağının çıkışta tüm trafiğin güvenliğini sağlama ihtiyacını ortadan kaldırmak için eşdeğer ve hatta üstün bir güvenlik modeli farklı katmanlara uygulanabilir. Çoğu durumda, bu durum etkili bir şekilde saatler içinde elde edilebilir ve gereksinimler talep ve zaman izin verdiyse diğer iş yükleri için ölçeklendirilebilir.
+Microsoft'un uzak çalışanın bağlantısını iyileştirmeye yönelik önerilen stratejisi, sorunları hızla azaltmaya ve birkaç basit adımla yüksek performans sağlamaya odaklanmıştır. Bu adımlar, performans sorunu olan VPN sunucularını atlayan birkaç tanımlı uç nokta için eski VPN yaklaşımını ayarlar. Şirket ağının çıkışında tüm trafiğin güvenliğini sağlama gereksinimini ortadan kaldırmak için farklı katmanlarda eşdeğer ve hatta üstün bir güvenlik modeli uygulanabilir. Çoğu durumda, bu işlem birkaç saat içinde etkili bir şekilde gerçekleştirilebilir ve gereksinimlere ve zamana göre diğer iş yüklerine ölçeklenebilir.
 
-## <a name="implement-vpn-split-tunneling"></a>VPN bölünmüş bilgisayar bölmeleri uygulama
+## <a name="implement-vpn-split-tunneling"></a>VPN bölünmüş tüneli uygulama
 
-Bu makalede, VPN istemci mimarinizi BIR VPN zorlamalı basamaktan birkaç güvenilen özel durumla _VPN_ zorlamalı basamaklara geçirmek için gereken basit adımları, Microsoft 365 için Ortak [VPN](microsoft-365-vpn-common-scenarios.md) bölme bölme senaryolarında VPN bölünmüş basamaklama modeli [#2](microsoft-365-vpn-common-scenarios.md#2-vpn-forced-tunnel-with-a-small-number-of-trusted-exceptions) bulabilirsiniz.
+Bu makalede, MICROSOFT [365 için yaygın VPN bölünmüş tünel senaryolarında](microsoft-365-vpn-common-scenarios.md) VPN [bölünmüş tünel modeli #2](microsoft-365-vpn-common-scenarios.md#2-vpn-forced-tunnel-with-a-small-number-of-trusted-exceptions) adlı _birkaç güvenilir özel durumla VPN istemci mimarinizi VPN zorlamalı tünelden VPN zorlamalı tünele_ geçirmek için gereken basit adımları bulacaksınız.
 
-Aşağıdaki diyagramda önerilen VPN bölünmüş erişim çözümü nasıl çalışır gösterilmiştir:
+Aşağıdaki diyagramda önerilen VPN bölünmüş tünel çözümünün nasıl çalıştığı gösterilmektedir:
 
-![Bölünmüş VPN çözümü ayrıntısı.](../media/vpn-split-tunneling/vpn-split-tunnel-example.png)
+![Bölünmüş tünel VPN çözümü ayrıntısı.](../media/vpn-split-tunneling/vpn-split-tunnel-example.png)
 
-### <a name="1-identify-the-endpoints-to-optimize"></a>1. İyileştirilen uç noktaları belirleme
+### <a name="1-identify-the-endpoints-to-optimize"></a>1. İyileştirecek uç noktaları belirleme
 
-Aşağıdaki Microsoft 365 [URL'ler ve IP](urls-and-ip-address-ranges.md) adresi aralıkları makalesinde, Microsoft en iyi duruma getirmek için ihtiyacınız olan önemli uç noktaları açıkça tanımlar ve bunları En İyi Duruma Getirme olarak kategorilere **ayırabilir**. Şu anda en iyi duruma getirilmiş yalnızca dört URL ve 20 IP alt ağı vardır. Bu küçük uç nokta grubu, Microsoft 365 medyası için olanlar gibi gecikmeye duyarlı uç noktalar da dahil olmak üzere Microsoft 365 hizmetine gelen trafik hacminin yaklaşık %70 - %80 Teams hesaplarıdır. Temel olarak bu, özel bir şekilde ilgilenmemiz gereken trafiktir; aynı zamanda geleneksel ağ yollarına ve VPN altyapısına inanılmaz bir baskı bırakılacak trafiktir.
+[Microsoft 365 URL'leri ve IP adresi aralıkları](urls-and-ip-address-ranges.md) makalesinde Microsoft, iyileştirmeniz gereken anahtar uç noktaları net bir şekilde tanımlar ve **en iyi duruma getir** olarak kategorilere ayırır. Şu anda yalnızca dört URL ve 20 IP alt ağı iyileştirilmelidir. Bu küçük uç nokta grubu, Teams medyası gibi gecikme süresine duyarlı uç noktalar da dahil olmak üzere Microsoft 365 hizmetine gelen trafik hacminin yaklaşık %70-%80'ini oluşturur. Temelde bu, özel olarak ilgilenmemiz gereken trafiktir ve aynı zamanda geleneksel ağ yolları ve VPN altyapısı üzerinde inanılmaz bir baskıya neden olacak trafiktir.
 
 Bu kategorideki URL'ler aşağıdaki özelliklere sahiptir:
 
-- Microsoft'un sahip olduğu ve yönetilen uç noktaları Microsoft altyapısında barındırılan mı
-- IP'ler sağlanıyor mu?
-- Düşük değişiklik oranına sahip olması ve sayı olarak az kalması beklenir (şu anda 20 IP alt ağı)
-- Bant genişliği ve/veya gecikmeye duyarlıdır
-- Ağ üzerinde satır içi yerine hizmette gerekli güvenlik öğelerini sağlanıyor olabilir
-- Hizmet hizmetine gelen trafik hacminin yaklaşık %70-80'i Microsoft 365 hesaba Microsoft 365
+- Microsoft'un sahip olduğu ve yönetilen uç noktaları, Microsoft altyapısında barındırılıyor mu?
+- IP'ler sağlandı mı?
+- Düşük değişiklik oranı ve sayı olarak küçük kalması beklenir (şu anda 20 IP alt ağı)
+- Bant genişliği ve/veya gecikme süresine duyarlıdır
+- Ağdaki satır içi öğeler yerine hizmette gerekli güvenlik öğelerinin sağlanmasına sahip olabilir
+- Microsoft 365 hizmetine yönelik trafik hacminin yaklaşık %70-80'ini oluşturur
 
-Uç noktaların nasıl Microsoft 365 kategorilere ayrılmış ve yönetilleri hakkında daha fazla bilgi için bkz. [Microsoft 365 yönetme](managing-office-365-endpoints.md).
+Microsoft 365 uç noktaları ve bunların nasıl kategorilere ayrılması ve yönetildiği hakkında daha fazla bilgi için bkz. [Microsoft 365 uç noktalarını yönetme](managing-office-365-endpoints.md).
 
-#### <a name="optimize-urls"></a>URL'leri en iyi duruma getirme
+#### <a name="optimize-urls"></a>URL'leri iyileştirme
 
-Geçerli İyileştir URL'leri aşağıdaki tabloda bulunabilir. Çoğu durumda, uç noktaların proxy yerine doğrudan gönderilmek üzere yapılandırıldığında tarayıcı [PAC](managing-office-365-endpoints.md#use-a-pac-file-for-direct-routing-of-vital-office-365-traffic) dosyasında yalnızca URL uç noktalarını kullanasınız.
+Geçerli İyileştirme URL'leri aşağıdaki tabloda bulunabilir. Çoğu durumda, url uç noktalarını ara sunucu yerine yalnızca uç noktaların doğrudan gönderilecek şekilde yapılandırıldığı bir [tarayıcı PAC dosyasında](managing-office-365-endpoints.md#use-a-pac-file-for-direct-routing-of-vital-office-365-traffic) kullanmanız gerekir.
 
-| URL'leri en iyi duruma getirme | Bağlantı Noktası/Protokol | Amaç |
+| URL'leri iyileştirme | Bağlantı Noktası/Protokol | Amaç |
 | --- | --- | --- |
-| <https://outlook.office365.com> | TCP 443 | Bu, Outlook sunucusuna bağlanmak için kullandığı ve yüksek bant genişliği Exchange Online ve bağlantı sayısı olan birincil URL'lerdendir. Hızlı arama, diğer posta kutusu takvimleri, serbest /meşgul araması, kuralları ve uyarıları yönetme, çevrimiçi arşivi Exchange, giden kutusu ayrılan e-postalar gibi çevrimiçi özellikler için düşük ağ gecikme süresi gerekir. |
-| <https://outlook.office.com> | TCP 443 | Bu URL, Outlook sunucuya bağlanmak için Exchange Online Çevrimiçi Web Erişimi'ne Exchange Online ve ağ gecikme süresine duyarlıdır. özellikle SharePoint Online ile büyük dosya yükleme ve indirme için bağlantı gereklidir. |
-| \<tenant\>https://.sharepoint.com | TCP 443 | Bu, SharePoint Online'ın birincil URL'si ve yüksek bant genişliği kullanımına sahiptir. |
-| \<tenant\>https://-my.sharepoint.com | TCP 443 | Bu, E-posta eşitlemesi OneDrive İş birincil URL'dir ve yüksek bant genişliği kullanımına ve OneDrive İş sayısına sahiptir. |
-| Teams IP'leri ekleyin (URL yok) | UDP 3478, 3479, 3480 ve 3481 | Geçiş Bulma ayırma ve gerçek zamanlı trafik. Bunlar, Medya trafiği (Skype Kurumsal Microsoft Teams, toplantılar vb.) için kullanılan uç noktalardır. Uç noktaların çoğu, Microsoft Teams istemci bir çağrı kurduğunda (ve hizmet için listelenen gerekli IP'ler içinde yer alır) olduğunda sağlanır. En iyi medya kalitesi için UDP protokolünün kullanımı gereklidir.   |
+| <https://outlook.office365.com> | TCP 443 | Bu, Outlook'un Exchange Online sunucusuna bağlanmak için kullandığı birincil URL'lerden biridir ve yüksek hacimli bant genişliği kullanımına ve bağlantı sayısına sahiptir. Anlık arama, diğer posta kutusu takvimleri, serbest/meşgul arama, kuralları ve uyarıları yönetme, Exchange çevrimiçi arşivi, giden kutusundan ayrılan e-postalar gibi çevrimiçi özellikler için düşük ağ gecikme süresi gereklidir. |
+| <https://outlook.office.com> | TCP 443 | Bu URL, Outlook Online Web Access'in Exchange Online sunucusuna bağlanması için kullanılır ve ağ gecikme süresine duyarlıdır. SharePoint Online ile büyük dosya yükleme ve indirme için özellikle bağlantı gereklidir. |
+| \<tenant\>https://.sharepoint.com | TCP 443 | Bu, SharePoint Online için birincil URL'dir ve yüksek bant genişliği kullanımına sahiptir. |
+| \<tenant\>https://-my.sharepoint.com | TCP 443 | Bu, OneDrive İş için birincil URL'dir ve oneDrive İş Eşitleme aracından yüksek bant genişliği kullanımına ve büyük olasılıkla yüksek bağlantı sayımına sahiptir. |
+| Teams Medya IP'leri (URL yok) | UDP 3478, 3479, 3480 ve 3481 | Geçiş Bulma ayırma ve gerçek zamanlı trafik. Bunlar Skype Kurumsal ve Microsoft Teams Medya trafiği (aramalar, toplantılar vb.) için kullanılan uç noktalardır. Çoğu uç nokta, Microsoft Teams istemcisi bir çağrı oluşturduğunda sağlanır (ve hizmet için listelenen gerekli IP'lerin içinde bulunur). En iyi medya kalitesi için UDP protokolünün kullanılması gerekir.   |
 
-Yukarıdaki örneklerde, **kiracı** sizin kiracı adınızla değiştir Microsoft 365 gerekir. Örneğin, **contoso.onmicrosoft.com'i** _contoso.sharepoint.com_ _ve contoso-my.sharepoint.com_.
+Yukarıdaki örneklerde **kiracı** , Microsoft 365 kiracı adınız ile değiştirilmelidir. Örneğin **, contoso.onmicrosoft.com** _contoso.sharepoint.com_ ve _contoso-my.sharepoint.com_ kullanır.
 
-#### <a name="optimize-ip-address-ranges"></a>IP adresi aralıklarını en iyi duruma getirme
+#### <a name="optimize-ip-address-ranges"></a>IP adresi aralıklarını iyileştirme
 
-Bu uç noktaların karşılık gelen IP adresi aralıklarını yazma zamanında aşağıdaki gibidir. Bu örnekteki  gibi bir betik, [Microsoft 365 IP ve URL web](microsoft-365-ip-web-service.md) hizmeti veya [URL/IP](urls-and-ip-address-ranges.md) sayfası gibi bir komut dosyası kullanarak yapılandırmayı uygularken güncelleştirmeleri denetlemeniz ve bunu düzenli olarak yapmak üzere bir ilke koymanız kesinlikle önerilir.[](https://github.com/microsoft/Office365NetworkTools/tree/master/Scripts/Display%20URL-IPs-Ports%20per%20Category)
+Bu uç noktaların karşılık gelen IP adresi aralıkları yazılırken aşağıdaki gibidir. Yapılandırmayı uygularken güncelleştirmeleri denetlemek için bu örnek, [Microsoft 365 IP ve URL web hizmeti](microsoft-365-ip-web-service.md) veya [URL/IP sayfası](urls-and-ip-address-ranges.md) [gibi bir betik](https://github.com/microsoft/Office365NetworkTools/tree/master/Scripts/Display%20URL-IPs-Ports%20per%20Category) kullanmanız ve bunu düzenli olarak yapmak için bir ilke koymanız **kesinlikle** tavsiye edilir.
 
 ```markdown
 104.146.128.0/17
@@ -102,11 +102,11 @@ Bu uç noktaların karşılık gelen IP adresi aralıklarını yazma zamanında 
 
 ### <a name="2-optimize-access-to-these-endpoints-via-the-vpn"></a>2. VPN aracılığıyla bu uç noktalara erişimi en iyi duruma getirme
 
-Artık bu kritik uç noktaları belirlediklerine göre, vpn hedeflerinden yönlendirmemiz ve doğrudan hizmete bağlanmak için kullanıcının yerel İnternet bağlantısını kullanmasına izin vermemiz gerekiyor. Bu özelliğin nasıl yerine uygulanıyor olduğu, kullanılan VPN ürünü ve makine platformuna bağlı olarak değişir, ancak çoğu VPN çözümü bu mantığın uygulamaya yönelik bazı basit ilke yapılandırmasına olanak sağlar. Bilgi VPN platformuna özgü bölünmüş galeri kılavuzları için bkz. [Yaygın VPN platformları için HOWTO kılavuzları](#howto-guides-for-common-vpn-platforms).
+Bu kritik uç noktaları belirlediğimize göre, bunları VPN tünelinden uzaklaştırmamız ve doğrudan hizmete bağlanmak için kullanıcının yerel İnternet bağlantısını kullanmalarına izin vermemiz gerekir. Bunun nasıl gerçekleştirildiği, kullanılan VPN ürününe ve makine platformuna bağlı olarak değişir, ancak çoğu VPN çözümü ilkenin bu mantığı uygulaması için bazı basit yapılandırmalara izin verir. VPN platformuna özgü bölünmüş tünel kılavuzu hakkında bilgi için bkz. [Yaygın VPN platformları için HOWTO kılavuzları](#howto-guides-for-common-vpn-platforms).
 
-Çözümü el ile test etmek isterseniz, aşağıdaki PowerShell örneğini çalıştırarak çözümü yönlendirme tablosu düzeyinde taklit edebilirsiniz. Bu örnek, yönlendirme tablosuna Medya IP Teams her biri için bir yol ekler. Medya Teams öncesi ve sonrası için test etmek ve belirtilen uç noktaların yönlendirmeleri arasındaki farkı gözlemlemek için kullanabilirsiniz.
+Çözümü el ile test etmek isterseniz, aşağıdaki PowerShell örneğini yürüterek çözüme yol tablosu düzeyinde öykünebilirsiniz. Bu örnek, yönlendirme tablosuna Teams Media IP alt ağlarının her biri için bir yol ekler. Teams medya performansını önce ve sonra test edebilir ve belirtilen uç noktaların yollarındaki farkı gözlemleyebilirsiniz.
 
-#### <a name="example-add-teams-media-ip-subnets-into-the-route-table"></a>Örnek: Teams tablosuna Medya IP alt ağları ekleme
+#### <a name="example-add-teams-media-ip-subnets-into-the-route-table"></a>Örnek: Yönlendirme tablosuna Teams Media IP alt ağları ekleme
 
 ```powershell
 $intIndex = "" # index of the interface connected to the internet
@@ -116,15 +116,15 @@ $destPrefix = "52.120.0.0/14", "52.112.0.0/14", "13.107.64.0/18" # Teams Media e
 foreach ($prefix in $destPrefix) {New-NetRoute -DestinationPrefix $prefix -InterfaceIndex $intIndex -NextHop $gateway}
 ```
 
-Yukarıdaki betikte, _$intIndex_ İnternet'e bağlı arabirimin dizinidir (PowerShell'de **get-netadapter** çalıştırarak bulma; _ifIndex'in_ değerini arama) ve _$gateway_ , o arabirimin varsayılan ağ geçididir (bir komut isteminde **ipconfig** çalıştırarak bulma veya **(Get-NetIPConfiguration | Foreach IPv4DefaultGateway). NextHop** in PowerShell).
+Yukarıdaki betikte _$intIndex_ , İnternet'e bağlı arabirimin dizinidir (PowerShell'de **get-netadapter** çalıştırarak bul; _ifIndex_ değerini arayın) ve _$gateway_ bu arabirimin varsayılan ağ geçididir (komut isteminde **ipconfig** çalıştırarak bul veya **(Get-NetIPConfiguration | Foreach IPv4DefaultGateway).** PowerShell'de NextHop).
 
-Yolları eklediktan sonra, komut isteminde veya PowerShell'de yönlendirme yazdırmayı çalıştırarak yönlendirme  tablosu için doğru olduğunu onaylayın. Çıkış, arabirim dizinini (bu örnekte _22_ ) ve bu arabirimin ağ geçidini (bu örnekte _192.168.1.1_ ) gösteren, sizin ekleytİk yolları içerir:
+Yolları ekledikten sonra, komut isteminde veya PowerShell'de **route print** komutunu çalıştırarak yol tablosunun doğru olduğunu onaylayabilirsiniz. Çıkış, eklediğiniz yolları içermeli ve arabirim dizinini (bu örnekte _22_ ) ve bu arabirimin ağ geçidini (bu örnekte _192.168.1.1_ ) göstermelidir:
 
 ![Yazdırma çıkışını yönlendirme.](../media/vpn-split-tunneling/vpn-route-print.png)
 
-en iyi duruma getirme kategorisinde  tüm geçerli IP adresi aralıkları için yönlendirmeler eklemek için, aşağıdaki betik çeşitlesini kullanarak geçerli IP alt ağlarını en iyi duruma getirmek ve bunları yönlendirme tablosuna eklemek üzere [Microsoft 365 IP ve URL web](microsoft-365-ip-web-service.md) hizmetini sorgularsınız.
+İyileştir _kategorisindeki tüm_ geçerli IP adresi aralıklarına yol eklemek için, geçerli IP alt ağlarını iyileştir [kümesinin Microsoft 365 IP ve URL web hizmetini](microsoft-365-ip-web-service.md) sorgulamak ve bunları yol tablosuna eklemek için aşağıdaki betik varyasyonunu kullanabilirsiniz.
 
-#### <a name="example-add-all-optimize-subnets-into-the-route-table"></a>Örnek: Tüm İyileştir alt ağlarını yönlendirme tablosuna ekleme
+#### <a name="example-add-all-optimize-subnets-into-the-route-table"></a>Örnek: Yol tablosuna tüm Optimize alt ağlarını ekleme
 
 ```powershell
 $intIndex = "" # index of the interface connected to the internet
@@ -137,7 +137,7 @@ $destPrefix = $ep | where {$_.category -eq "Optimize"} | Select-Object -ExpandPr
 foreach ($prefix in $destPrefix) {New-NetRoute -DestinationPrefix $prefix -InterfaceIndex $intIndex -NextHop $gateway}
 ```
 
-Yanlışlıkla yanlış parametrelerle yönlendirmeler eklediyseniz veya yalnızca değişikliklerinizi geri dönmek isterseniz, az önce ekley istediğiniz yolları aşağıdaki komutla kaldırabilirsiniz:
+Yanlışlıkla yanlış parametrelere sahip yollar eklediyseniz veya yalnızca değişikliklerinizi geri döndürmek istiyorsanız, aşağıdaki komutla yeni eklediğiniz yolları kaldırabilirsiniz:
 
 ```powershell
 foreach ($prefix in $destPrefix) {Remove-NetRoute -DestinationPrefix $prefix -InterfaceIndex $intIndex -NextHop $gateway}
@@ -156,42 +156,42 @@ foreach ($prefix in $destPrefix) {New-NetRoute -DestinationPrefix $prefix -Inter
 ```
 -->
 
-VPN istemcisi, En İyi DURUMA GETIRME IP'lerine giden trafiğin bu şekilde yönlendirneceği şekilde yapılandırıldı. Böylece trafik, kullanıcınıza mümkün olduğunca yakın Microsoft 365 hizmetleri ve bağlantı uç noktaları sağlayan [Azure Ön](https://azure.microsoft.com/blog/azure-front-door-service-is-now-generally-available/) Kapı gibi Microsoft 365 Hizmet Ön Kapı gibi yerel Microsoft kaynaklarını kullanmalarını sağlar. Bu, kullanıcıların dünyanın neresinde olursa olsunlar kullanıcılara yüksek performans düzeyleri sunmamıza olanak sağlar ve kullanıcılarının doğrudan çıkışını birkaç milisaniye içinde olan [Microsoft'un](https://azure.microsoft.com/blog/how-microsoft-builds-its-fast-and-reliable-global-network/) dünya sınıfı global ağına tam avantaj sağlar.
+VPN istemcisi, **Optimize** IP'lerine giden trafiğin bu şekilde yönlendirilmesi için yapılandırılmalıdır. Bu, trafiğin Microsoft 365 hizmetlerini ve bağlantı uç noktalarını kullanıcılarınıza mümkün olduğunca yakın bir şekilde sunan [Azure Front Door gibi](https://azure.microsoft.com/blog/azure-front-door-service-is-now-generally-available/) Microsoft 365 Service Front Door gibi yerel Microsoft kaynaklarını kullanmasına olanak tanır. Bu, kullanıcılara dünyanın her yerine yüksek performans düzeyleri sunmamıza olanak tanır ve microsoft'un kullanıcılarınızın doğrudan çıkışına birkaç milisaniye içinde olan [dünya standartlarında küresel ağından](https://azure.microsoft.com/blog/how-microsoft-builds-its-fast-and-reliable-global-network/) tam olarak yararlanır.
 
 ## <a name="howto-guides-for-common-vpn-platforms"></a>Yaygın VPN platformları için HOWTO kılavuzları
 
-Bu bölümde, bu  boşluğun en yaygın ortaklarından gelen trafiğin Microsoft 365 bölmek için ayrıntılı kılavuzların bağlantıları yer almaktadır. Kullanılabilir hale geldiyken başka kılavuzlar da eklemiz.
+Bu bölümde, bu alanda en yaygın iş ortaklarından gelen Microsoft 365 trafiği için bölünmüş tünel uygulamayla ilgili ayrıntılı kılavuzların bağlantıları sağlanır. Kullanılabilir hale geldikçe ek kılavuzlar ekleyeceğiz.
 
-- **Windows 10 VPN istemcisi**: [Yerel VPN Microsoft 365 çalışanlara](/windows/security/identity-protection/vpn/vpn-office-365-optimization) yönelik trafiği en iyi Windows 10 getirme
-- **Cisco Anyconnect**: [Anyconnect Bölünmüş Bağlantı'Tunnel Office365 için en iyi duruma getirme](https://www.cisco.com/c/en/us/support/docs/security/anyconnect-secure-mobility-client/215343-optimize-anyconnect-split-tunnel-for-off.html)
-- **Palo Alto GlobalProtect**: [VPN Bölünmüş Microsoft 365 ile Trafiği En Tunnel Rotası'nın Dışında Tut](https://live.paloaltonetworks.com/t5/Prisma-Access-Articles/GlobalProtect-Optimizing-Office-365-Traffic/ta-p/319669)
-- **F5 Networks BIG-IP APM**: [BIG-IP APM kullanırken](https://devcentral.f5.com/s/articles/SSL-VPN-Split-Tunneling-and-Office-365) MICROSOFT 365 VPN'ler aracılığıyla Uzak Erişim'de trafiği en iyi duruma getirme
-- **Citrix Ağ Geçidi**: [Office365 için Citrix Gateway VPN bölünmüş geçidini en iyi duruma getirme](https://docs.citrix.com/citrix-gateway/13/optimizing-citrix-gateway-vpn-split-tunnel-for-office365.html)
-- **Pulse Güvenli**: [VPN Titreşimi: Bölünmüş titreşimi yapılandırarak tüm Microsoft 365 yapılandırma](https://kb.pulsesecure.net/articles/Pulse_Secure_Article/KB44417)
-- **Kontrol Noktası VPN**:[Diğer SaaS Uygulamaları için Tunnel Bölünmüş Microsoft 365 yapılandırma](https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit_doGoviewsolutiondetails=&solutionid=sk167000)
+- **Windows 10 VPN istemcisi**: [Yerel Windows 10 VPN istemcisi ile uzak çalışanlar için Microsoft 365 trafiğini iyileştirme](/windows/security/identity-protection/vpn/vpn-office-365-optimization)
+- **Cisco Anyconnect**: [Office365 için Anyconnect Split Tunnel'ı en iyi duruma getirme](https://www.cisco.com/c/en/us/support/docs/security/anyconnect-secure-mobility-client/215343-optimize-anyconnect-split-tunnel-for-off.html)
+- **Palo Alto GlobalProtect**: [VPN Split Tunnel Exclude Access Route aracılığıyla Microsoft 365 Trafiğini İyileştirme](https://live.paloaltonetworks.com/t5/Prisma-Access-Articles/GlobalProtect-Optimizing-Office-365-Traffic/ta-p/319669)
+- **F5 Networks BIG-IP APM**: [BIG-IP APM kullanırken VPN'ler aracılığıyla Uzaktan Erişimde Microsoft 365 trafiğini iyileştirme](https://devcentral.f5.com/s/articles/SSL-VPN-Split-Tunneling-and-Office-365)
+- **Citrix Gateway**: [Office365 için Citrix Gateway VPN bölünmüş tüneli iyileştirme](https://docs.citrix.com/en-us/citrix-gateway/current-release/optimizing-citrix-gateway-vpn-split-tunnel-for-office365.html)
+- **Pulse Secure**: [VPN Tunneling: Microsoft 365 uygulamalarını dışlamak için bölünmüş tünel yapılandırma](https://kb.pulsesecure.net/articles/Pulse_Secure_Article/KB44417)
+- **Check Point VPN**: [Microsoft 365 ve diğer SaaS Uygulamaları için Bölünmüş Tünel'i yapılandırma](https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit_doGoviewsolutiondetails=&solutionid=sk167000)
 
 ## <a name="related-articles"></a>İlgili makaleler
 
-[Genel bakış: VPN bölme bölme Microsoft 365](microsoft-365-vpn-split-tunnel.md)
+[Genel bakış: Microsoft 365 için VPN bölünmüş tüneli](microsoft-365-vpn-split-tunnel.md)
 
-[Kullanıcılar için yaygın VPN bölme bölme Microsoft 365](microsoft-365-vpn-common-scenarios.md)
+[Microsoft 365 için yaygın VPN bölünmüş tünel senaryoları](microsoft-365-vpn-common-scenarios.md)
 
-[VPN bölünmüş Teams için medya trafiğinin güvenliğini sağlama](microsoft-365-vpn-securing-teams.md)
+[VPN bölünmüş tüneli için Teams medya trafiğinin güvenliğini sağlama](microsoft-365-vpn-securing-teams.md)
 
-[VPN ortamlarında Stream ve canlı etkinlikler için dikkat edilmesi gereken noktalar](microsoft-365-vpn-stream-and-live-events.md)
+[VPN ortamlarında Akış ve canlı etkinlikler için özel dikkat edilmesi gerekenler](microsoft-365-vpn-stream-and-live-events.md)
 
-[Microsoft 365 kullanıcıları için performans iyileştirmeyi iyileştirme](microsoft-365-networking-china.md)
+[Çin kullanıcıları için Microsoft 365 performans iyileştirmesi](microsoft-365-networking-china.md)
 
-[Microsoft 365 Ağ Bağlantısı İlkeleri](microsoft-365-network-connectivity-principles.md)
+[Microsoft 365 Ağ Bağlantı İlkeleri](microsoft-365-network-connectivity-principles.md)
 
-[Ağ Microsoft 365 değerlendirme](assessing-network-connectivity.md)
+[Microsoft 365 ağ bağlantısını değerlendirme](assessing-network-connectivity.md)
 
-[Microsoft 365 ve performans ayarını yapılandırma](network-planning-and-performance.md)
+[Microsoft 365 ağ ve performans ayarlama](network-planning-and-performance.md)
 
-[Günümüzün benzersiz uzaktan çalışma senaryolarında güvenlik uzmanlarının ve BT'nin modern güvenlik denetimlerini elde etmenin alternatif yolları (Microsoft Güvenlik Ekibi blogu)](https://www.microsoft.com/security/blog/2020/03/26/alternative-security-professionals-it-achieve-modern-security-controls-todays-unique-remote-work-scenarios/)
+[Günümüzün benzersiz uzaktan çalışma senaryolarında modern güvenlik denetimleri elde etmek için güvenlik uzmanları ve BT için alternatif yollar (Microsoft Güvenlik Ekibi blogu)](https://www.microsoft.com/security/blog/2020/03/26/alternative-security-professionals-it-achieve-modern-security-controls-todays-unique-remote-work-scenarios/)
 
-[Microsoft'ta VPN performansını geliştirme: otomatik Windows 10 izin vermek için VPN profillerini kullanma](https://www.microsoft.com/itshowcase/enhancing-remote-access-in-windows-10-with-an-automatic-vpn-profile)
+[Microsoft'ta VPN performansını geliştirme: Otomatik bağlantılara izin vermek için Windows 10 VPN profillerini kullanma](https://www.microsoft.com/itshowcase/enhancing-remote-access-in-windows-10-with-an-automatic-vpn-profile)
 
-[VPN ile çalışma: Microsoft uzaktan iş gücüne nasıl bağlı tutarak](https://www.microsoft.com/itshowcase/blog/running-on-vpn-how-microsoft-is-keeping-its-remote-workforce-connected/?elevate-lv)
+[VPN üzerinde çalıştırma: Microsoft uzak iş gücünü nasıl bağlı tutuyor?](https://www.microsoft.com/itshowcase/blog/running-on-vpn-how-microsoft-is-keeping-its-remote-workforce-connected/?elevate-lv)
 
-[Microsoft genel ağı](/azure/networking/microsoft-global-network)
+[Microsoft küresel ağı](/azure/networking/microsoft-global-network)

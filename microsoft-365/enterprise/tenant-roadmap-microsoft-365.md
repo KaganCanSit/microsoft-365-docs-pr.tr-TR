@@ -14,24 +14,24 @@ ms.collection:
 - m365initiative-coredeploy
 ms.custom: it-pro
 description: Microsoft 365 için kiracılarınızı ayarlamaya yönelik yol haritası.
-ms.openlocfilehash: 85695c38f724f215192d7659963c35f25b006dc5
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 5eed55d45e4b34962b08d236f8659cfd2cf209c1
+ms.sourcegitcommit: 61bdfa84f2d6ce0b61ba5df39dcde58df6b3b59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092061"
+ms.lasthandoff: 06/08/2022
+ms.locfileid: "65940414"
 ---
 # <a name="tenant-roadmap-for-microsoft-365"></a>Microsoft 365 için kiracı yol haritası
 
 Microsoft 365 kiracınız, kuruluşunuza atanan hizmet kümesidir. Genellikle, bu kiracı bir veya daha fazla genel DNS etki alanı adınızla ilişkilendirilir ve farklı abonelikler ve kullanıcı hesaplarına atadığınız lisanslar için merkezi ve yalıtılmış bir kapsayıcı görevi görür. Daha fazla bilgi için bkz. [Microsoft'un bulut teklifleri için abonelikler, lisanslar, hesaplar ve kiracılar](subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings.md).
 
-Microsoft 365 kiracı oluşturduğunuzda, kiracıyı belirli bir coğrafi konuma atarsınız. Ayrıca birden çok coğrafi konuma sahip bir kiracınız olabilir ve kiracınızı bir konumdan diğerine taşıyabilirsiniz.
+Bir Microsoft 365 kiracısı oluşturduğunuzda, kiracıyı belirli bir coğrafi konuma atarsınız. Ayrıca birden çok coğrafi konuma sahip bir kiracınız olabilir ve kiracınızı bir konumdan diğerine taşıyabilirsiniz.
 
 Kiracınızı kullanıcı, gruplar, lisanslar ve bulut uygulamalarına hazırlamak için kiracı yapılandırmanızı dikkatle planlamak ve yürütmek kritik önem taşır.
 
 ## <a name="set-up-your-microsoft-365-tenant"></a>Microsoft 365 kiracınızı ayarlama
 
-Ağınızın hem şirket içi hem de uzak çalışanlar için Microsoft 365 erişim için iyileştirildiğinden emin olduktan sonra, sonraki büyük görevleriniz Microsoft 365 kiracınızı DNS etki alanı adları, ortak hizmetler ve güvenli kullanıcı oturum açmasını destekleyen kimlik altyapısı için planlayıp yapılandırıyor.
+Ağınızın hem şirket içi hem de uzak çalışanlar için Microsoft 365'e erişim için iyileştirildiğinden emin olduktan sonra, sonraki büyük görevleriniz MICROSOFT 365 kiracınızı DNS etki alanı adları, ortak hizmetler ve güvenli kullanıcı oturum açmayı destekleyen bu kimlik altyapısı için planlayıp yapılandırmaktır.
 
 ### <a name="plan"></a>Plan
 
@@ -43,30 +43,30 @@ Kiracı uygulamanızı planlamak için:
 - [İstemci uygulaması desteğini planlama](microsoft-365-client-support-certificate-based-authentication.md)
 - [Karma modern kimlik doğrulamasının nasıl kullanılacağını belirleme](hybrid-modern-auth-overview.md)
 - [Office 2007 ve Office 2010 yükseltmelerini planlama](plan-upgrade-previous-versions-office.md)
-- [Kiracı yalıtımını anlama](/compliance/assurance/microsoft-365-isolation-controls)
+- [Kiracı yalıtımını anlama](/microsoft-365-isolation-in-microsoft-365?view=o365-worldwide&preserve-view=true)
 
 ### <a name="deploy"></a>Dağıtım
 
 Kiracınızı dağıtmak için: 
 
 - Kuruluşunuz için [DNS etki alanlarını](../admin/setup/add-domain.md) ekleyin.
-- [Microsoft 365 yönetim merkezi kurulum kılavuzlarını](setup-guides-for-microsoft-365.md) kullanın.
+- [Microsoft 365 yönetim merkezindeki kurulum kılavuzlarını](setup-guides-for-microsoft-365.md) kullanın.
 - [Kimlik altyapınızı](deploy-identity-solution-overview.md) oluşturun.
 
 ### <a name="move-a-tenants-geographic-locations"></a>Kiracının coğrafi konumlarını taşıma
 
 Microsoft, Microsoft 365 hizmetleri için yeni veri merkezi coğrafi konumları (coğrafi konumlar) açmaya devam ediyor. Bu yeni veri merkezi coğrafi alanları, müşteri talebini ve kullanım artışlarını desteklemek için kapasite ve işlem kaynakları ekler. Ayrıca yeni veri merkezi coğrafi bölgeleri, temel müşteri verileri için coğrafi veri yerleşimi sunar.
 
-Daha fazla bilgi için bkz[. Çekirdek verileri yeni Microsoft 365 veri merkezi coğrafi bölgelerine taşıma](moving-data-to-new-datacenter-geos.md).
+Daha fazla bilgi için bkz [. Temel verileri yeni Microsoft 365 veri merkezi coğrafi bölgelerine taşıma](moving-data-to-new-datacenter-geos.md).
 
 
-## <a name="deploy-microsoft-365-multi-geo"></a>Multi-Geo Microsoft 365 dağıtma
+## <a name="deploy-microsoft-365-multi-geo"></a>Microsoft 365 Multi-Geo'yi dağıtma
 
-Microsoft 365 Multi-Geo ile kuruluşunuz, Microsoft 365 varlığını mevcut kiracınızdaki birden çok coğrafi bölgeye ve/veya ülkeye genişletebilir.
+Microsoft 365 Multi-Geo ile kuruluşunuz Microsoft 365 iletişim durumunu mevcut kiracınızdaki birden çok coğrafi bölgeye ve/veya ülkeye genişletebilir.
 
-Daha fazla bilgi için bkz[. Multi-Geo Microsoft 365](microsoft-365-multi-geo.md).
+Daha fazla bilgi için bkz. [Microsoft 365 Multi-Geo](microsoft-365-multi-geo.md).
 
-## <a name="manage-multiple-microsoft-365-tenants"></a>Birden çok Microsoft 365 kiracıyı yönetme 
+## <a name="manage-multiple-microsoft-365-tenants"></a>Birden çok Microsoft 365 kiracısı yönetme 
 
 Oganizasyonunuz için tek bir kiracınız olması ideal olsa da, birden çok kiracısı olan birçok kuruluş arasında yer alabilirsiniz. Nedenler arasında birleşmeler ve devralmalar olabilir, yönetim yalıtımı isteyebilirsiniz veya merkezi olmayan bir BT'niz olabilir.
 

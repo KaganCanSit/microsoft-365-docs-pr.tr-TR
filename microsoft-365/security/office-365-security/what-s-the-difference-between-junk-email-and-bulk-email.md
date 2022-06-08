@@ -1,5 +1,5 @@
 ---
-title: Gereksiz e-posta ile toplu e-posta arasındaki fark nedir&apos;?
+title: Önemsiz e-posta ile toplu e-posta arasındaki fark nedir?
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -16,15 +16,15 @@ ms.collection:
 - M365-security-compliance
 ms.custom:
 - seo-marvel-apr2020
-description: Yöneticiler, Exchange Online Protection (EOP) içindeki gereksiz e-posta (istenmeyen posta) ile toplu e-posta (gri posta) arasındaki farklar hakkında bilgi edinebilir.
+description: Yöneticiler, Exchange Online Protection'da (EOP) gereksiz e-posta (istenmeyen posta) ile toplu e-posta (gri posta) arasındaki farklar hakkında bilgi edinebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 5f948b45c5f4b26f3fba74f3883511218daa0ef0
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: dd876b522a0d565b84e8bb9043e277cd3bc34495
+ms.sourcegitcommit: 61bdfa84f2d6ce0b61ba5df39dcde58df6b3b59d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65647853"
+ms.lasthandoff: 06/08/2022
+ms.locfileid: "65940458"
 ---
 # <a name="whats-the-difference-between-junk-email-and-bulk-email-in-eop"></a>EOP'de gereksiz e-posta ile toplu e-posta arasındaki fark nedir?
 
@@ -33,7 +33,7 @@ ms.locfileid: "65647853"
 - [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Exchange Online posta kutusu olmayan Exchange Online veya tek başına Exchange Online Protection (EOP) kuruluşlarında posta kutuları olan Microsoft 365 kuruluşlarda müşteriler bazen şunu sorar: "Gereksiz e-posta ile toplu e-posta arasındaki fark nedir?" Bu konu, farkı açıklar ve EOP'de kullanılabilen denetimleri açıklar.
+Exchange Online'da posta kutuları olan Microsoft 365 kuruluşlarında veya Exchange Online posta kutuları olmayan tek başına Exchange Online Protection (EOP) kuruluşlarında müşteriler bazen şunu sorar: "Gereksiz e-posta ile toplu e-posta arasındaki fark nedir?" Bu konu, farkı açıklar ve EOP'de kullanılabilen denetimleri açıklar.
 
 - **Gereksiz e-posta** istenmeyen ve evrensel olarak istenmeyen iletiler olan istenmeyen postadır (doğru tanımlandığında). Varsayılan olarak, EOP kaynak e-posta sunucusunun itibarına bağlı olarak istenmeyen postaları reddeder. Bir ileti kaynak IP incelemesini geçerse istenmeyen posta filtrelemeye gönderilir. İleti istenmeyen posta filtresiyle istenmeyen posta olarak sınıflandırılırsa, ileti (varsayılan olarak) hedeflenen alıcılara teslim edilir ve Gereksiz E-posta klasörüne taşınır.
 
