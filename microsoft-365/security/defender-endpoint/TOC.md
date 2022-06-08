@@ -406,6 +406,7 @@
 ###### [Antivirüs taraması başlat](respond-machine-alerts.md#run-microsoft-defender-antivirus-scan-on-devices)
 ###### [Uygulama yürütmeyi kısıtlayın](respond-machine-alerts.md#restrict-app-execution)
 ###### [Cihazları ağdan ayırın](respond-machine-alerts.md#isolate-devices-from-the-network)
+###### [Ağdaki cihazları içerin](respond-machine-alerts.md#contain-devices-from-the-network)
 ###### [Tehdit uzmanına danışın](respond-machine-alerts.md#consult-a-threat-expert)
 ###### [İşlem merkezinde etkinlik ayrıntılarını denetleyin](respond-machine-alerts.md#check-activity-details-in-action-center)
 
