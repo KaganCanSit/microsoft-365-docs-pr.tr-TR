@@ -17,17 +17,17 @@ ms.custom:
 - AdminSurgePortfolio
 search.appverid:
 - MET150
-description: Kuruluşunuzdaki Basic Mobility ve Security cihazları hakkında ayrıntılı bilgi almak için Windows PowerShell kullanın.
-ms.openlocfilehash: 4cac15e8377370e4bd2f8b359a39aaf830f13d10
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+description: Kuruluşunuzdaki Temel Mobilite ve Güvenlik cihazlarıyla ilgili ayrıntıları almak için Azure AD PowerShell'i kullanın.
+ms.openlocfilehash: 816d397f29d6e1726448d92e641856f2a5a31a73
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64781083"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66007206"
 ---
 # <a name="get-details-about-basic-mobility-and-security-managed-devices"></a>Temel Mobilite ve Güvenlik ile yönetilen cihazlar hakkında ayrıntılı bilgi edinin
 
-Bu makalede, kuruluşunuzdaki Temel Mobilite ve Güvenlik için ayarladığınız cihazlar hakkında ayrıntılı bilgi almak için Windows PowerShell nasıl kullanacağınız gösterilmektedir.
+Bu makalede, kuruluşunuzdaki Temel Mobilite ve Güvenlik için ayarladığınız cihazlar hakkında ayrıntılı bilgi almak için powershell Azure AD nasıl kullanacağınız gösterilmektedir.
 
 Aşağıda, kullanabileceğiniz cihaz ayrıntılarının dökümü yer alır.
 

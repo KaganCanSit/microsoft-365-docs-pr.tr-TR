@@ -17,17 +17,14 @@ ms.custom:
 search.appverid: ''
 ms.localizationpriority: medium
 description: Kuruluşunuzun SharePoint Syntex nasıl yararlanabileceğini görmek için benimseme değerlendirme aracını kullanmayı öğrenin.
-ms.openlocfilehash: dbe9ebe47526f15216e4366bf98f086d86bed5e4
-ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
+ms.openlocfilehash: 8b4ffc6358487ec6cb66830fd56541bfc0b3df4f
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2022
-ms.locfileid: "65772718"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66015736"
 ---
 # <a name="discover-opportunities-in-sharepoint-syntex-by-using-the-microsoft-365-assessment-tool"></a>Microsoft 365 Değerlendirme aracını kullanarak SharePoint Syntex fırsatlarını keşfedin
-
-> [!IMPORTANT]
-> Microsoft 365 Değerlendirme aracı ve diğer tüm PnP bileşenleri, bunlar için destek sağlayan etkin bir topluluk tarafından desteklenen açık kaynak araçlardır. Resmi Microsoft destek kanallarından açık kaynak araç desteği için SLA yoktur. 
 
 > [!NOTE]
 > Microsoft 365 Değerlendirme aracı yalnızca SharePoint Online'da çalıştırılabilir. 

@@ -20,13 +20,13 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: bir işletme, okul veya kar amacı gütmeyen kuruluş için parola ilkesini yöneten bir yöneticiyseniz, Windows PowerShell kullanarak güçlü parola gereksinimleri ayarlayabilirsiniz.
-ms.openlocfilehash: 20bea953207a85b589bf1ae821f988a3cfe8e22c
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+description: bir işletme, okul veya kar amacı gütmeyen kuruluş için parola ilkesini yöneten bir yöneticiyseniz, PowerShell'Azure AD kullanarak güçlü parola gereksinimleri ayarlayabilirsiniz.
+ms.openlocfilehash: e98c9a3f7b31cbb53d4c853487f4908a6dec72d5
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65436195"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66010266"
 ---
 # <a name="turn-off-strong-password-requirements-for-users"></a>Kullanıcılar için güçlü parola gereksinimlerini kapatma
 

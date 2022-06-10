@@ -17,12 +17,12 @@ search.appverid:
 - MET150
 description: Tam veri eşleşmesine dayalı hassas bilgi türleri için tam veri eşleşmesi şeması oluşturma
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 9eb4e69aa833e8a355115115e1c965e57d65716c
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 080bdff37893bcf0d41414c066b51727d2650f7a
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65435291"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66017174"
 ---
 # <a name="create-the-schema-for-exact-data-match-based-sensitive-information-types"></a>Tam veri eşleşmesine dayalı hassas bilgi türleri için tam veri eşleşmesi şeması oluşturma
 
@@ -50,7 +50,7 @@ Aynı hassas veri tablosunu kullanan birden çok hassas bilgi türünde tek bir 
 
 ## <a name="use-the-exact-data-match-schema-and-sensitive-information-type-pattern-wizard"></a>Tam veri eşleme şemasını ve hassas bilgi türü deseni sihirbazını kullanma
 
-1. Kiracınızın Microsoft Purview uyumluluk portalı **Veri** **sınıflandırmasıExact** >  data **matchesEDM** >  şemaları'na gidin.
+1. Kiracınızın Microsoft Purview uyumluluk portalında **Veri sınıflandırması** > **Tam veriler****EDM şemalarıyla eşleşir** >  bölümüne gidin.
 
 2. Şema sihirbazı yapılandırması açılır öğesini açmak için **EDM şeması oluştur'u** seçin.
 
@@ -80,7 +80,7 @@ Aynı hassas veri tablosunu kullanan birden çok hassas bilgi türünde tek bir 
 
 EDM şemasını EDM şema sihirbazında oluşturduysanız, EDM şema dosyasını XML biçiminde dışarı aktarmanız gerekir. Karma'da buna ihtiyacınız olacak [ve hassas bilgi türleri aşamasıyla tam olarak eşleşen veriler için hassas bilgi kaynağı tablosunu karşıya yükleyeceksiniz](sit-get-started-exact-data-match-hash-upload.md#hash-and-upload-the-sensitive-information-source-table-for-exact-data-match-sensitive-information-types) .
 
-1. [Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
+1. [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
 
 2. EDM şema dosyasını dışarı aktarmak için şu söz dizimini kullanın:
 
@@ -175,7 +175,7 @@ Bayrak `ignoredDelimiters` aşağıdakileri desteklemez:
 
    EDM şema dosyasını XML biçiminde oluşturduktan sonra bulut hizmetine yüklemeniz gerekir.
 
-2. [Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
+2. [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
 
 3. Veritabanı şemasını karşıya yüklemek için aşağıdaki komutu çalıştırın:
 

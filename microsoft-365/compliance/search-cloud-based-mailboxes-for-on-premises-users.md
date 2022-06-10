@@ -18,12 +18,12 @@ search.appverid:
 ms.assetid: 3f7dde1a-a8ea-4366-86da-8ee6777f357c
 description: Yöneticiler, Exchange karma dağıtımdaki şirket içi kullanıcılar için Teams sohbet verilerini aramak ve dışarı aktarmak için Microsoft 365'deki eBulma araçlarını kullanabilir.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: e532dc629df1ddc2e3ceaa94a639723dae483714
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 4af64bd77d820b67314bc37e574afdff3966d21b
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65077822"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66014354"
 ---
 # <a name="search-for-teams-chat-data-for-on-premises-users"></a>Şirket içi kullanıcılar için Teams sohbet verilerini arama
 
@@ -46,7 +46,7 @@ Kuruluşunuzun Exchange karma dağıtımı varsa (veya kuruluşunuz şirket içi
   
 ## <a name="how-it-works"></a>Nasıl çalışır?
 
-Microsoft Teams etkin bir kullanıcının şirket içi posta kutusu varsa ve kullanıcı hesabı/kimliği bulutla eşitlenmişse, Microsoft şirket içi kullanıcının 1xN Teams sohbet verilerini ilişkilendirmek için bulut tabanlı depolama alanı oluşturur. Şirket içi kullanıcılar için sohbet verileri Teams arama için dizine eklenir. Bu, şirket içi kullanıcılar için Teams sohbet verilerini aramak, önizlemek ve dışarı aktarmak için İçerik aramasını (ve Microsoft Purview eKeşif (Standart) ve Microsoft Purview eKeşif (Premium) servis talepleri ile ilişkili aramaları) kullanmanıza olanak tanır. Şirket içi kullanıcılar için Teams sohbet verilerini aramak için Güvenlik & Uyumluluk Merkezi PowerShell'deki ComplianceSearch cmdlet'lerini de kullanabilirsiniz **\***.
+Microsoft Teams etkin bir kullanıcının şirket içi posta kutusu varsa ve kullanıcı hesabı/kimliği bulutla eşitlenmişse, Microsoft şirket içi kullanıcının 1xN Teams sohbet verilerini ilişkilendirmek için bulut tabanlı depolama alanı oluşturur. Şirket içi kullanıcılar için sohbet verileri Teams arama için dizine eklenir. Bu, şirket içi kullanıcılar için Teams sohbet verilerini aramak, önizlemek ve dışarı aktarmak için İçerik aramasını (ve Microsoft Purview eKeşif (Standart) ve Microsoft Purview eKeşif (Premium) servis talepleri ile ilişkili aramaları) kullanmanıza olanak tanır. Şirket içi kullanıcılar için Teams sohbet verilerini aramak için Güvenlik & Uyumluluk PowerShell'deki ComplianceSearch cmdlet'lerini de kullanabilirsiniz **\***.
   
 Aşağıdaki grafikte, şirket içi kullanıcılar için Teams sohbet verilerinin arama, önizleme ve dışarı aktarma için nasıl kullanılabilir olduğu iş akışı gösterilmektedir.
   
@@ -86,9 +86,9 @@ Bu özelliğe ek olarak, bulut tabanlı SharePoint sitesinde Teams içeriği ara
 
 ## <a name="using-powershell-to-search-for-teams-chat-data-for-on-premises-users"></a>Şirket içi kullanıcılar için Teams sohbet verilerini aramak için PowerShell kullanma
 
-Şirket içi kullanıcılar için Teams sohbet verilerini aramak için Güvenlik & Uyumluluk Merkezi PowerShell'deki **New-ComplianceSearch** cmdlet'lerini kullanabilirsiniz. Daha önce açıklandığı gibi, şirket içi kullanıcılar için Teams sohbet verilerini aramak için PowerShell'i kullanmak üzere bir destek isteği göndermeniz gerekmez.
+Şirket içi kullanıcılar için Teams sohbet verilerini aramak için Güvenlik & Uyumluluk PowerShell'deki **New-ComplianceSearch** cmdlet'lerini kullanabilirsiniz. Daha önce açıklandığı gibi, şirket içi kullanıcılar için Teams sohbet verilerini aramak için PowerShell'i kullanmak üzere bir destek isteği göndermeniz gerekmez.
   
-1. [Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
+1. [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
 
 2. Şirket içi kullanıcılar için Teams sohbet verilerini arayan bir içerik araması oluşturmak için aşağıdaki PowerShell komutunu çalıştırın.
 

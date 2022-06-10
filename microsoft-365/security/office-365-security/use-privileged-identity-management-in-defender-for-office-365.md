@@ -20,12 +20,12 @@ ms.custom:
 description: Azure PIM'i tümleştirerek kullanıcılara Office 365 için Microsoft Defender'da yükseltilmiş ayrıcalık görevleri gerçekleştirmeleri için tam zamanında ve sınırlı erişim vermek ve verilerinize yönelik riski azaltmayı öğrenin.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 6e043a671b2416ba1c856c74a53206b06c180f13
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 32bc21130d98687f95af2ce6664c0759a716f362
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65130680"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66010244"
 ---
 <!--A-->
 # <a name="privileged-identity-management-pim-and-why-to-use-it-with-microsoft-defender-for-office-365"></a>Privileged Identity Management (PIM) ve neden Office 365 için Microsoft Defender
@@ -50,7 +50,7 @@ Bu örnekte güvenlik ekibimizin bir üyesi olan ve Office 365 içinde sıfır e
 2. Rol **listesinden Güvenlik Okuyucusu'na** tıklayın ve **ardından Ayarlar** >  **Düzenle'ye tıklayın**
 3. **Azure MFA** **gerektirmek için 'Etkinleştirme maksimum süresi (saat)**' değerini normal bir çalışma gününe ve 'Etkinleştirme açık' olarak ayarlayın.
 4. Bu Alex'in günlük işlemler için normal ayrıcalık düzeyi olduğundan Etkinleştirme için **gerekçe gerektir'in** > **Güncelleştirme** seçeneğini kaldıracağız.
-5. Doğru üyeyi aramak için **ödev** >  **ekleVeya üye seçilmemiş** > adı seçin veya yazın.
+5. **Ödev** >  Ekle **Üye seçilmedi'yi** seçin > doğru üyeyi aramak için adı seçin veya yazın.
 6. PIM ayrıcalıkları için eklemeniz gereken üyeyi seçmek için **Seç** düğmesine tıklayın > Atama Ekle sayfasında değişiklik > **İleri'ye** tıklayın (hem atama türü *Uygun* hem de *Süre Kalıcı Olarak Uygun* varsayılanlar) ve **Ata'ya tıklayın**.
 
 Kullanıcınızın adı (burada 'Alex'), sonraki sayfada Uygun atamalar altında görünür; bu, daha önce yapılandırılan ayarlarla rolde PIM yapabilecekleri anlamına gelir.
@@ -75,18 +75,18 @@ Microsoft 365 Defender portalında, istediğimiz izinleri içeren özel bir rol 
 
 ### <a name="create-the-security-group-in-azure-ad-for-elevated-permissions"></a>Yükseltilmiş izinler için Azure AD'de güvenlik grubunu oluşturma
 
-1. [Azure AD Yönetim Merkezi'ne](https://aad.portal.azure.com/) geri gidin ve **Azure AD** >  **GroupsYeni** >  **Grup'a** gidin.
+1. [Azure AD Yönetim Merkezi'ne](https://aad.portal.azure.com/) geri gidin ve **Azure AD** >  **Groups** > **Yeni Grubu'na** gidin.
 2. Azure AD grubunuzu amacını yansıtacak şekilde adlandır, şu anda **sahip veya üye gerekmez**.
 3. **Azure AD rolleri gruba** **Evet** olarak atayabilirsiniz.
 4. Hiçbir rol, üye veya sahip eklemeyin, grubu oluşturun.
-5. Yeni oluşturduğunuz gruba Geri dön ve **Privileged Access** **Ayrıcalıklı Erişim'i** >  Seç'i seçin.
-6. Grubun içinde **Uygun atamalarEkle'yi** >  seçin > Üye rolü olarak Arama & Temizleme'ye ihtiyacı olan kullanıcıyı **ekleyin.**
+5. Yeni oluşturduğunuz gruba Geri dön ve **Ayrıcalıklı Erişim Ayrıcalıklı Erişimi** > **Etkinleştir'i** seçin.
+6. Grubun içinde **Uygun atamalar** > **Atama ekle'yi** seçin > Arama & Temizleme'ye ihtiyacı olan kullanıcıyı **Üye** rolü olarak ekleyin.
 7. Grubun Ayrıcalıklı Erişim **bölmesindeki Ayarlar** yapılandırın. **Üye** rolünün ayarlarını **düzenle'yi** seçin.
 8. Etkinleştirme süresini kuruluşunuza uyacak şekilde değiştirin. Bu örnekte **Güncelleştir'i** seçmeden önce *Azure MFA*, *gerekçe* ve *bilet bilgileri* gerekir.
 
 ### <a name="nest-the-newly-created-security-group-into-the-role-group"></a>Yeni oluşturulan güvenlik grubunu rol grubuna iç içe yerleştirme
 
-1. [Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell) ve aşağıdaki komutu çalıştırın:
+1. [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell) ve aşağıdaki komutu çalıştırın:
 
    ```powershell
    Add-RoleGroupMember "<<Role Group Name>>" -Member "<<Azure Security Group>>"`

@@ -17,12 +17,12 @@ ms.custom: ''
 description: Yöneticiler, desteklenen belirli senaryolarda (üçüncü taraf kimlik avı simülasyonları ve güvenlik işlemleri (SecOps) posta kutularına teslim edilen iletiler) filtrelenmemesi gereken iletileri belirlemek için Exchange Online Protection (EOP) içinde gelişmiş teslim ilkesini kullanmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: d9a959e70408af80567d1daed140e0642870b975
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: d9176f73c94df6413e3b79053318f5547788d773
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65647809"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66011596"
 ---
 # <a name="configure-the-delivery-of-third-party-phishing-simulations-to-users-and-unfiltered-messages-to-secops-mailboxes"></a>Üçüncü taraf kimlik avı simülasyonlarının kullanıcılara ve filtrelenmemiş iletilerin SecOps posta kutularına teslimini yapılandırma
 
@@ -66,7 +66,7 @@ Gelişmiş teslim ilkesi tarafından tanımlanan iletiler güvenlik tehditleri o
 
 - Microsoft 365 Defender portalını adresinde <https://security.microsoft.com>açarsınız. Doğrudan **Gelişmiş teslim** sayfasına gitmek için dosyasını açın <https://security.microsoft.com/advanceddelivery>.
 
-- Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanmak için bkz. [Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
+- Güvenlik & Uyumluluk PowerShell'e bağlanmak için bkz. [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
 
 - Bu makaledeki yordamları gerçekleştirmeden önce size izinler atanmalıdır:
   - Gelişmiş teslim ilkesinde yapılandırılmış ayarları oluşturmak, değiştirmek veya kaldırmak için, **Microsoft 365 Defender portalında** **Güvenlik Yöneticisi** rol grubunun üyesi ve **Exchange Online** **Kuruluş Yönetimi** rol grubunun üyesi olmanız gerekir.
@@ -146,9 +146,9 @@ Gelişmiş teslim ilkesinin size yardımcı olabileceği iki senaryoya ek olarak
 
 - **Gözden geçirilmekte olan hatalı pozitifler**: Microsoft tarafından [yönetici gönderimleri](admin-submission.md) aracılığıyla analiz edilmeye devam eden belirli iletilere geçici olarak izin vererek hatalı olarak Microsoft'a kötü olarak işaretlenen bilinen iyi iletileri (hatalı pozitifler) bildirmek isteyebilirsiniz. Tüm geçersiz kılmalarda olduğu gibi, bu izinlerin de geçici olması **_kesinlikle önerilir_** .
 
-## <a name="security--compliance-center-powershell-procedures-for-secops-mailboxes-in-the-advanced-delivery-policy"></a>Gelişmiş teslim ilkesinde SecOps posta kutuları için Güvenlik & Uyumluluk Merkezi PowerShell yordamları
+## <a name="security--compliance-powershell-procedures-for-secops-mailboxes-in-the-advanced-delivery-policy"></a>Gelişmiş teslim ilkesinde SecOps posta kutuları için güvenlik & Uyumluluk PowerShell yordamları
 
-Güvenlik & Uyumluluk Merkezi PowerShell'de, gelişmiş teslim ilkesindeki SecOps posta kutularının temel öğeleri şunlardır:
+Güvenlik & Uyumluluğu PowerShell'de, gelişmiş teslim ilkesindeki SecOps posta kutularının temel öğeleri şunlardır:
 
 - **SecOps geçersiz kılma ilkesi**: **-SecOpsOverridePolicy cmdlet'leri tarafından\*** denetlendi.
 - **SecOps geçersiz kılma kuralı**: **-SecOpsOverrideRule cmdlet'leri tarafından\*** denetlendi.
@@ -279,9 +279,9 @@ Remove-SecOpsOverrideRule -Identity SecOpsOverrideRule6fed4b63-3563-495d-a481-b2
 
 Ayrıntılı söz dizimi ve parametre bilgileri için bkz [. Remove-SecOpsOverrideRule](/powershell/module/exchange/remove-secopsoverriderule).
 
-## <a name="security--compliance-center-powershell-procedures-for-third-party-phishing-simulations-in-the-advanced-delivery-policy"></a>Gelişmiş teslim ilkesinde üçüncü taraf kimlik avı simülasyonları için Güvenlik & Uyumluluk Merkezi PowerShell yordamları
+## <a name="security--compliance-powershell-procedures-for-third-party-phishing-simulations-in-the-advanced-delivery-policy"></a>Gelişmiş teslim ilkesinde üçüncü taraf kimlik avı simülasyonları için Güvenlik & Uyumluluğu PowerShell yordamları
 
-Güvenlik & Uyumluluk Merkezi PowerShell'de, gelişmiş teslim ilkesindeki üçüncü taraf kimlik avı simülasyonlarının temel öğeleri şunlardır:
+Güvenlik & Uyumluluğu PowerShell'de, gelişmiş teslim ilkesindeki üçüncü taraf kimlik avı simülasyonlarının temel öğeleri şunlardır:
 
 - **Kimlik avı simülasyonu geçersiz kılma ilkesi**: **-PhishSimOverridePolicy cmdlet'leri tarafından\*** denetleniyor.
 - **Kimlik avı benzetimi geçersiz kılma kuralı**: **-PhishSimOverrideRule cmdlet'leri tarafından\*** denetleniyor.

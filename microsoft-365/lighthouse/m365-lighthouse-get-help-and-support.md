@@ -1,9 +1,10 @@
 ---
-title: Destek almak için yardım ve Microsoft 365 Lighthouse
+title: Microsoft 365 Lighthouse için yardım ve destek alma
 f1.keywords: CSH
 ms.author: sharik
 author: SKjerland
 manager: scotv
+ms-reviewer: crimora
 audience: Admin
 ms.topic: article
 ms.prod: microsoft-365-lighthouse
@@ -15,70 +16,70 @@ ms.custom:
 - AdminSurgePortfolio
 - M365-Lighthouse
 search.appverid: MET150
-description: Yönetilen Servis Sağlayıcıları (MSP) Microsoft 365 Lighthouse, yardım ve destek almak için öğrenin.
-ms.openlocfilehash: 24420874314c67b621a53f8eb06e22a49137d380
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için yardım ve destek almayı öğrenin.
+ms.openlocfilehash: 5bf61e9563a87ac44219c1c4644153ce98755cb5
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63314371"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66017818"
 ---
-# <a name="get-help-and-support-for-microsoft-365-lighthouse"></a>Destek almak için yardım ve Microsoft 365 Lighthouse 
+# <a name="get-help-and-support-for-microsoft-365-lighthouse"></a>Microsoft 365 Lighthouse için yardım ve destek alma 
 
-Yardım gerekirse, çeşitli seçenekler kullanılabilir. İlk olarak, bilinen bir sorun olup olduğunu kontrol edin:
+Yardıma ihtiyacınız varsa çeşitli seçenekler mevcuttur. İlk olarak bilinen sorunlar olup olmadığını denetleyin:
 
-- Müşteri kiracı hizmetlerinin geçerli durumunu gözden geçirme:
+- Müşteri kiracı hizmetlerinin geçerli durumunu gözden geçirin:
 
-    1. Deniz Feneri'nin sol gezinti bölmesinde Hizmet **durumu'ni seçin**. 
-    2. Mevcut ve geçmiş sorunlar hakkında ayrıntılı bilgileri görüntüye tıklayın.
+    1. Lighthouse'un sol gezinti bölmesinde **Hizmet durumu'ı** seçin. 
+    2. Geçerli ve geçmiş sorunlar hakkında ayrıntılı bilgileri görüntüleyin.
 
-- Deniz Feneri kiracı hizmetlerinin geçerli durumunu gözden geçirme:
+- Lighthouse kiracı hizmetlerinin geçerli durumunu gözden geçirin:
 
-    1. Microsoft 365 yönetim merkezi gidin<a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">https://admin.microsoft.com</a>.
-    2. Sol gezinti bölmesinde **HealthService** **health öğesini** >  seçin.
-    3. Hizmet listesinde, en son **Microsoft 365 bulun** ve pakette tüm hizmetleri gösterecek şekilde genişletin.
-    4. E **Microsoft 365 Lighthouse** bulun ve durumu kontrol edin.
+    1. konumundaki Microsoft 365 yönetim merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">https://admin.microsoft.com</a>gidin.
+    2. Sol gezinti bölmesinde **Sistem Durumu** >  **Hizmet durumu'nı** seçin.
+    3. Hizmetler listesinde **, Microsoft 365 paketini** bulun ve paketteki tüm hizmetleri gösterecek şekilde genişletin.
+    4. **Microsoft 365 Lighthouse** bulun ve durumunu denetleyin.
 
-- Sorunun, Bu sorunlar ile ilgili bilinen [sorunlar altında listelenmiş olup Microsoft 365 Lighthouse](/office365/troubleshoot/microsoft-365-lighthouse/lighthouse-known-issues).
+- Sorunun [Microsoft 365 Lighthouse ile ilgili bilinen sorunlar](/office365/troubleshoot/microsoft-365-lighthouse/lighthouse-known-issues) bölümünde listelenip listelenmediğini görün.
 
-Bu kaynaklarda listelenmiyor bir sorunla yaşıyorsanız, kendi kendine yardım seçeneklerini görüntülemek veya hizmet isteği oluşturmak için bu makaledeki yönergeleri izleyin.
+Bu kaynakların hiçbirinde listelenmeyen bir sorunla karşılaşıyorsanız, kendi kendine yardım seçeneklerini görüntülemek veya bir hizmet isteği oluşturmak için bu makaledeki yönergeleri izleyin.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-- Hizmet istekleri oluşturmak ve yönetmek için, şu özellik kümesiyle size en az Azure Active Directory (Azure AD) rolü atanmış olması gerekir: **microsoft.office365.supportTickets/allEntities/allTasks**. Azure AD rollerinin listesi için bkz. [Azure AD yerleşik rolleri](/azure/active-directory/roles/permissions-reference). Rolleri atama hakkında bilgi için bkz. [Kullanıcılara Azure AD rolleri atama](/azure/active-directory/roles/manage-roles-portal).
+- Hizmet istekleri oluşturmak ve yönetmek için, size şu özellik kümesiyle atanmış en az bir Azure Active Directory (Azure AD) rolünüz olmalıdır: **microsoft.office365.supportTickets/allEntities/allTasks**. Azure AD rollerin listesi için bkz. [yerleşik rolleri Azure AD](/azure/active-directory/roles/permissions-reference). Rolleri atama hakkında bilgi için bkz. [Kullanıcılara Azure AD rolleri atama](/azure/active-directory/roles/manage-roles-portal).
 
-- Hizmet isteği oluşturmanız gerekirse tanılama günlükleri, kiracı kimliği ve kullanıcı kimlikleri (etkilenen kullanıcılar varsa) gibi sorunla ilgili mümkün olan en fazla ayrıntıyı toplayın.
+- Bir hizmet isteği oluşturmanız gerekiyorsa tanılama günlükleri, kiracı kimliği ve kullanıcı kimlikleri (belirli kullanıcılar etkileniyorsa) gibi sorununuzla ilgili mümkün olduğunca çok ayrıntı toplayın.
 
-## <a name="access-help-and-support"></a>Access yardım ve destek
+## <a name="access-help-and-support"></a>Yardım ve desteğe erişme
 
-1.  Deniz Feneri'nde **?** simgesini seçin ve ardından aşağıdakilerden birini yapın:
+1.  Lighthouse'da **?** simgesini seçerek **Yardım** bölmesini açın ve aşağıdakilerden birini yapın:
     
-    -  Sorunun yaşandığı portalın sayfasındaysanız Tanılamayı **göster'i seçin**.
+    -  Sorunun oluştuğu portalın sayfasındaysanız **Tanılamayı göster'i** seçin.
 
-        Bu, Destek aracılarının sorun gidermenize yardımcı olmak için bilgileri olan bir JSON dosyası oluşturmanızı sağlar. Hizmet isteğinize eklemek için dosyayı kaydedin.
+        Bu, Destek aracılarının sorununuzu gidermesine yardımcı olacak bilgiler içeren bir JSON dosyası oluşturur. Hizmet isteğinize ekleyebilmek için dosyayı kaydedin.
 
         > [!NOTE]
-        > JSON dosyası, kişisel olarak tanınmayı sağlayacak bilgileri içerir.
+        > JSON dosyası kişisel bilgileri içerir.
 
-    -  Sorun, portalın geçerli sayfasında yalıtılmış değilse, bir sonraki adıma geçin.
+    -  Sorununuz portalın geçerli sayfasına yalıtılmış değilse sonraki adıma geçin.
 
-2.  Yardım **bölmesinde** Yardım **+ destek düğmesini** seçin. Bu, **Nasıl yardımcı olabiliriz? bölmesini** açar.
+2.  **Yardım** bölmesinde **Yardım + destek** düğmesini seçin. Bu, **Nasıl yardımcı olabilir?** bölmesini açar.
 
     > [!NOTE]
-    > Nasıl **yardımcı olabiliriz?** bölmesi açılmazsa, iş ortağı kiracınıza Genel Yönetici izinleri olan biriyle ulaşmanız ve bu kişiden yardım istemeniz gerekir.
+    > **Nasıl yardım edebiliriz?** bölmesi açılmazsa, iş ortağı kiracınızda Genel Yönetici izinlerine sahip olan birine ulaşmanız ve yardım istemeniz gerekir.
 
-3.  Nasıl yardımcı **olabiliriz? bölmesinde** , sorunuzla ilgili bir açıklama girin ve enter tuşuna **basın**. Arama sonuçlarının ilgili yardım *makalelerini Microsoft 365 Lighthouse* için açıklamanıza tam ürün adını ve adını dahil edin.
+3.  **Nasıl yardımcı olacağız?** bölmesinde sorununuzun açıklamasını girin ve **Enter tuşuna** basın. Arama sonuçlarının ilgili yardım makalelerini içerdiğinden emin olmak için açıklamanıza tam ürün adı *Microsoft 365 Lighthouse* eklemenizi öneririz.
 
-4.  Sorununuzu çözmenize yardımcı olup olmazken önerilen makaleler listesini kontrol edin.
+4.  Önerilen makalelerden herhangi birinin sorununuzu çözmenize yardımcı olup olmadığını görmek için önerilen makalelerin listesine göz atın.
 
-    Soruna ilişkin bir açıklama girer ve yardım makalelerinin listesini geri getire dönerse, açıklamanızı yeniden ifade edin ve başka bir arama deneyin.
+    Sorununuzun açıklamasını girerseniz ve yardım makalelerinin listesini döndürmezseniz, açıklamanızı yeniden ifade edin ve başka bir arama deneyin.
 
-5.  Önerilen makaleler soruna yardımcı olmazsa Dele İlgili **Kişi'yi seçin**.
+5.  Önerilen makaleler yardımcı olmazsa **Desteğe Başvurun'a tıklayın**.
 
-6.  Bilgileri forma doldurun, varsa adım1'de kayıtlı olan JSON&nbsp; dosyasını ve ekran görüntülerini iliştirin ve sonra Bana **ulaşın'u seçin**. Beklenen bekleme süresi bölmede gösterilir.
+6.  Formdaki bilgileri doldurun, varsa 1. adımda&nbsp;kaydettiğiniz ekran görüntülerini ve JSON dosyasını ekleyin ve ardından **Benimle iletişime geçin'i** seçin. Beklenen bekleme süresi bölmede belirtilir.
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Dosyanın bilinen Microsoft 365 Lighthouse](m365-lighthouse-known-issues.md) sorunları (makale)\
+[Microsoft 365 Lighthouse ile ilgili bilinen sorunlar](m365-lighthouse-known-issues.md) (makale)\
 [Microsoft 365 Lighthouse SSS](m365-lighthouse-faq.yml) (makale)\
-[E-postada sorunları ve hata iletilerini sorun giderme Microsoft 365 Lighthouse](m365-lighthouse-troubleshoot.md) (makale)
+[Microsoft 365 Lighthouse sorunları ve hata iletilerini sorun giderme ve çözme](m365-lighthouse-troubleshoot.md) (makale)

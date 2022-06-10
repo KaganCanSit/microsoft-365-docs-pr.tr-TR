@@ -16,12 +16,12 @@ ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
 description: Bu makale hassas bilgi türlerine ve hassas öğeleri tanımlamak için sosyal güvenlik, kredi kartı veya banka hesabı numaraları gibi hassas bilgileri nasıl algıladıklarına genel bakış sağlar
-ms.openlocfilehash: 0e154e0ee578b9a182cb7cd5b43cafba466f9bcd
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: d814bd413fc95a02bc35ab05a804c544d9b84b1e
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64971361"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66014244"
 ---
 # <a name="learn-about-sensitive-information-types"></a>Hassas bilgi türleri hakkında daha fazla bilgi edinme
 
@@ -171,7 +171,7 @@ Uyumluluk Merkezi'nde özel hassas bilgi türleri oluşturmak için çeşitli se
 
 - **EDM kullanma** - Tam Veri Eşleştirme (EDM) tabanlı sınıflandırmayı kullanarak özel hassas bilgi türleri ayarlayabilirsiniz. Bu yöntem, düzenli aralıklarla yenileyebileceğiniz güvenli bir veritabanı kullanarak dinamik hassas bilgi türü oluşturmanıza olanak tanır. Bkz. [Tam veri eşleştirme tabanlı hassas bilgi türleri hakkında bilgi edinin](sit-learn-about-exact-data-match-based-sits.md#learn-about-exact-data-match-based-sensitive-information-types).
 
-- **PowerShell kullanma - PowerShell** kullanarak özel hassas bilgi türleri ayarlayabilirsiniz. Bu yöntem kullanıcı arabirimini kullanmaktan daha karmaşık olsa da, daha fazla yapılandırma seçeneğiniz vardır. Bkz. [Güvenlik & Uyumluluk Merkezi PowerShell'de özel hassas bilgi türü oluşturma](create-a-custom-sensitive-information-type-in-scc-powershell.md).
+- **PowerShell kullanma - PowerShell** kullanarak özel hassas bilgi türleri ayarlayabilirsiniz. Bu yöntem kullanıcı arabirimini kullanmaktan daha karmaşık olsa da, daha fazla yapılandırma seçeneğiniz vardır. Bkz. [Güvenlik & Uyumluluğu PowerShell'de özel hassas bilgi türü oluşturma](create-a-custom-sensitive-information-type-in-scc-powershell.md).
 
 > [!NOTE]
 > Geliştirilmiş güvenilirlik düzeyleri Microsoft Purview veri kaybı önleme hizmetleri, bilgi koruma, İletişim Uyumluluğu, veri yaşam döngüsü yönetimi ve kayıt yönetimi içinde anında kullanılabilir.

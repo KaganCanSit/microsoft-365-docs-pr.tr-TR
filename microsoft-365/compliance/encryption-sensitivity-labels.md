@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 description: Erişimi ve kullanımı kısıtlayarak verilerinizi koruyan şifreleme için duyarlılık etiketlerini yapılandırın.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: f2a9f399e447e7b483e664da2e0bf7575b9f55d8
-ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
+ms.openlocfilehash: 0b1db15a9ac896bdcc871177ece532aa01d4bc38
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65599243"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66014332"
 ---
 # <a name="restrict-access-to-content-by-using-sensitivity-labels-to-apply-encryption"></a>Şifreleme uygulamak için hassasiyet etiketleri kullanarak içeriğe erişimi kısıtlama
 
@@ -47,7 +47,7 @@ Son olarak, bir yönetici olarak, şifreleme uygulamak için bir duyarlılık et
 - **İzinleri şimdi atayın**, böylece hangi kullanıcıların bu etikete sahip içerik için hangi izinleri tam olarak aldığını belirleyebilirsiniz.
 - Etiketi içeriğe uygulayan **kullanıcıların izin atamasına izin verin**. Bu şekilde, kuruluşunuzdaki kişilere işbirliği yapmak ve işlerini yapmak için ihtiyaç duyabilecekleri esneklik sağlayabilirsiniz.
 
-Şifreleme ayarları, Microsoft Purview uyumluluk portalı [bir duyarlılık etiketi oluşturduğunuzda](create-sensitivity-labels.md) kullanılabilir.
+Şifreleme ayarları, Microsoft Purview uyumluluk portalında [duyarlılık etiketi oluşturduğunuzda](create-sensitivity-labels.md) kullanılabilir.
 
 ## <a name="understand-how-the-encryption-works"></a>Şifrelemenin nasıl çalıştığını anlama
 
@@ -336,9 +336,9 @@ Word' de, PowerPoint ve Excel, bir kullanıcı belgeye izin atamasına izin vere
 
 Yerleşik etiketleme ve [birlikte yazma etkinleştirildiğinde](sensitivity-labels-coauthoring.md) Azure Information Protection birleşik etiketleme istemcisi için, kullanıcılar aşağıdaki seçenekleri seçmiş gibi aynı iletişim kutusunu görür:
 
-- Windows: **Dosya** sekmesi > **InfoProtect** >  **DocumentRestrict** >  **AccessRestricted Access** > 
+- Windows: **Dosya** sekmesi > **Bilgileri** > **Koru Belgeyi** >  Koru **Kısıtlı Erişimi** >  Kısıtla
 
-- macOS: **ProtectionPermissionsRestricted** >  >  **Access** > **Gözden Geçir** sekmesi
+- macOS: **Gözden Geçir** sekmesi > **Koruma** > **İzinleri** > **Kısıtlı Erişim**
 
 > [!TIP]
 > Kullanıcılar [birlikte yazma etkinleştirilmeden](sensitivity-labels-coauthoring.md) önce Azure Information Protection birleşik etiketleme istemcisiyle özel izinler yapılandırma konusunda bilgi sahibiyse, izin düzeylerinin bireysel kullanım haklarıyla eşlemesini gözden geçirmeyi yararlı bulabilirsiniz: [İzin düzeylerine dahil edilen haklar](/azure/information-protection/configure-usage-rights#rights-included-in-permissions-levels).
@@ -446,11 +446,13 @@ En hassas belgelerinizi ve e-postalarınızı şifrelemek, bu verilere yalnızca
 - Yetkili kullanıcılar şifrelenmiş belgeleri Office uygulamalarında açtıklarında, uygulamalarının üst kısmındaki sarı ileti çubuğunda etiket adını ve açıklamasını görürler. Şifreleme izinleri kuruluşunuzun dışındaki kişilere yayıldığında, belge açıldığında bu ileti çubuğunda görünür olacak etiket adlarını ve açıklamalarını dikkatle gözden geçirin.
 
 - Birden çok kullanıcının şifrelenmiş bir dosyayı aynı anda düzenlemesi için hepsinin Web için Office kullanıyor olması veya [duyarlılık etiketleriyle şifrelenmiş dosyalar için birlikte yazmayı etkinleştirmiş](sensitivity-labels-coauthoring.md) olmanız ve tüm kullanıcıların [bu özelliği destekleyen Office uygulamaları](sensitivity-labels-coauthoring.md#prerequisites) olması gerekir. Böyle bir durum söz konusu değilse ve dosya zaten açıksa:
-
+    
   - Office uygulamalarında (Windows, Mac, Android ve iOS), kullanıcılar dosyayı kullanıma alan kişinin adını içeren Bir **Kullanımda Dosya** iletisi görür. Daha sonra salt okunur bir kopya görüntüleyebilir veya dosyanın bir kopyasını kaydedip düzenleyebilir ve dosya kullanılabilir olduğunda bildirim alabilirler.
   - Web için Office'da kullanıcılar belgeyi diğer kişilerle düzenleyemediklerine ilişkin bir hata iletisi görür. Daha sonra **Okuma Görünümünde Aç'ı** seçebilirler.
 
-- iOS ve Android için Office uygulamalarında [Otomatik Kaydet](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) işlevi şifrelenmiş dosyalar için devre dışı bırakılır. [Duyarlılık etiketleriyle şifrelenmiş dosyalar için birlikte yazmayı etkinleştirmediyseniz](sensitivity-labels-coauthoring.md), Windows ve Mac'te şifrelenmiş dosyalar için de bu işlev devre dışı bırakılır. Kullanıcılar, Otomatik Kaydetme'nin açılabilmesi için dosyanın kaldırılması gereken kısıtlı izinlere sahip olduğunu belirten bir ileti görür.
+- [Duyarlılık etiketleriyle şifrelenmiş dosyalar için birlikte yazmayı etkinleştirmediyseniz](sensitivity-labels-coauthoring.md), Office uygulamalarındaki [Otomatik Kaydet](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) işlevi şifrelenmiş dosyalar için devre dışı bırakılır. Kullanıcılar, Otomatik Kaydetme'nin açılabilmesi için dosyanın kaldırılması gereken kısıtlı izinlere sahip olduğunu belirten bir ileti görür.
+
+- Windows için Office, kullanıcılar İnternet'e bağlı olmadığında şifreleme uygulayan etiketleri destekler. Ancak diğer platformlarda (macOS, iOS, Android) kullanıcıların bu etiketleri Office uygulamalara uygulamak için çevrimiçi olmaları gerekir. Bu etiketlerin Dosya Gezgini ve PowerShell'de uygulanabilmesi için Azure Information Protection birleşik etiketleme istemcisinin de çevrimiçi olması gerekir. Şifrelenmiş içeriği açmak için kullanıcıların çevrimiçi olması gerekmez. Çevrimdışı erişim hakkında daha fazla bilgi [için çevrimdışı erişim için lisans kullanma Rights Management ](#rights-management-use-license-for-offline-access) bölümüne bakın.
 
 - Şifrelenmiş dosyaların Office uygulamalarında (Windows, Mac, Android ve iOS) açılması daha uzun sürebilir.
 

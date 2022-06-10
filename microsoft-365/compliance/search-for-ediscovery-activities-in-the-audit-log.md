@@ -15,20 +15,20 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 67cc7f42-a53d-4751-b929-6005c80798f7
-description: Kullanıcılara eBulma izinleri atanan kullanıcılar Microsoft Purview uyumluluk portalı İçerik arama, eBulma (Standart) ve eBulma (Premium) görevlerini gerçekleştirdiğinde günlüğe kaydedilen olayları öğrenin.
+description: Kullanıcılara eBulma izinleri atanan kullanıcılar Microsoft Purview uyumluluk portalında İçerik arama, eBulma (Standart) ve eBulma (Premium) görevlerini gerçekleştirdiğinde hangi olayların günlüğe kaydedileceklerini öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 0b94c53d497b5e300cdb0a08dbb5f02daec28c19
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: 1e22371999044d5cb70282356045446b46f833fa
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65317526"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66015506"
 ---
 # <a name="search-for-ediscovery-activities-in-the-audit-log"></a>Denetim günlüğünde eKeşif etkinliklerini ara
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Microsoft Purview uyumluluk portalı veya karşılık gelen PowerShell cmdlet'leri çalıştırılarak gerçekleştirilen İçerik Arama ve eBulma ile ilgili etkinlikler (Microsoft Purview eBulma (Standart) ve Microsoft Purview eBulma (Premium)) için denetim günlüğüne kaydedilir. Yöneticiler veya eBulma yöneticileri (veya eBulma izinleri atanmış herhangi bir kullanıcı) uyumluluk portalında aşağıdaki İçerik Arama ve eBulma (Standart) görevlerini gerçekleştirdiğinde olaylar günlüğe kaydedilir:
+Microsoft Purview uyumluluk portalında veya ilgili PowerShell cmdlet'leri çalıştırılarak gerçekleştirilen İçerik Arama ve eBulma ile ilgili etkinlikler (Microsoft Purview eKeşif (Standart) ve Microsoft Purview eKeşif (Premium)) için denetim günlüğüne kaydedilir. Yöneticiler veya eBulma yöneticileri (veya eBulma izinleri atanmış herhangi bir kullanıcı) uyumluluk portalında aşağıdaki İçerik Arama ve eBulma (Standart) görevlerini gerçekleştirdiğinde olaylar günlüğe kaydedilir:
   
 - eBulma (Standart) ve eBulma (Premium) servis taleplerini oluşturma ve yönetme
 
@@ -153,7 +153,7 @@ Aşağıdaki tabloda, denetim günlüğüne kaydedilen eBulma (Premium) etkinlik
 
 ## <a name="ediscovery-cmdlet-activities"></a>eBulma cmdlet etkinlikleri
 
-Aşağıdaki tabloda, bir yönetici veya kullanıcı uyumluluk merkezini kullanarak veya Güvenlik & Uyumluluk Merkezi PowerShell'de ilgili cmdlet'i çalıştırarak eBulma ile ilgili bir etkinlik gerçekleştirdiğinde günlüğe kaydedilen cmdlet denetim günlüğü kayıtları listelenir. Denetim günlüğü kaydındaki ayrıntılı bilgiler, bu tabloda listelenen cmdlet etkinlikleri ve önceki bölümde açıklanan eBulma etkinlikleri için farklıdır.
+Aşağıdaki tabloda, bir yönetici veya kullanıcı uyumluluk merkezini kullanarak veya Güvenlik & Uyumluluğu PowerShell'de ilgili cmdlet'i çalıştırarak eBulma ile ilgili bir etkinlik gerçekleştirdiğinde günlüğe kaydedilen cmdlet denetim günlüğü kayıtları listelenir. Denetim günlüğü kaydındaki ayrıntılı bilgiler, bu tabloda listelenen cmdlet etkinlikleri ve önceki bölümde açıklanan eBulma etkinlikleri için farklıdır.
   
 Daha önce belirtildiği gibi, eBulma cmdlet etkinliklerinin denetim günlüğü arama sonuçlarında görünmesi 24 saat kadar sürebilir.
   
@@ -211,7 +211,7 @@ Aşağıdaki tabloda, arama sonuçlarında listelenen bir eBulma etkinliği içi
 |ExchangeLocations  <br/> |İçerik aramasında yer alan veya eBulma servis talebine askıya eklenen Exchange Online posta kutuları.  <br/> |
 |Dışlamalar  <br/> |eBulma durumunda içerik aramasından veya ayrı tutmadan hariç tutulan posta kutusu veya site konumları.  <br/> |
 |ExtendedProperties  <br/> |bir içerik aramasından, içerik arama eyleminden ek özellikler veya eBulma durumunda tutun; örneğin, nesne GUID'si ve etkinlik gerçekleştirilirken kullanılan ilgili cmdlet ve cmdlet parametreleri.  <br/> |
-|Kimliği  <br/> |Rapor girdisinin kimliği. Kimlik, denetim günlüğü girdisini benzersiz olarak tanımlar.  <br/> |
+|Kimlik  <br/> |Rapor girdisinin kimliği. Kimlik, denetim günlüğü girdisini benzersiz olarak tanımlar.  <br/> |
 |NonPIIParameters  <br/> |Operation özelliğinde tanımlanan cmdlet ile kullanılan parametrelerin (herhangi bir değer olmadan) listesi. Bu özellikte listelenen parametreler, Parameters özelliğinde listelenen parametrelerle aynıdır.  <br/> |
 |Objectıd  <br/> |Operation özelliğinde listelenen etkinlik tarafından oluşturulan, erişilen, değiştirilen veya silinen nesnenin GUID'i veya adı (örneğin, İçerik araması veya eBulma (Standart) olayı). Bu nesne, denetim günlüğü arama sonuçlarındaki Öğe sütununda da tanımlanır.  <br/> |
 |Nesnetürü  <br/> |Kullanıcının oluşturduğu, sildiği veya değiştirdiği eBulma nesnesinin türü; örneğin, bir içerik arama eylemi (önizleme, dışarı aktarma veya temizleme), eBulma olayı veya içerik araması.  <br/> |

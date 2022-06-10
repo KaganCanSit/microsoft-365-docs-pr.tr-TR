@@ -17,12 +17,12 @@ ms.collection:
 - M365-security-compliance
 description: Özel markalı bir şablon aracılığıyla e-postalarda son kullanma tarihi ayarlayarak e-posta güvenliğinizi genişletmek için Microsoft Purview Gelişmiş İleti Şifrelemesi'ni kullanın.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: e8689820adc3158ae2a36a4d52ebad0959097b49
-ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
+ms.openlocfilehash: 78855ae8906367293b69406ba74246619b5af465
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65188404"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66015572"
 ---
 # <a name="set-an-expiration-date-for-email-encrypted-by-microsoft-purview-advanced-message-encryption"></a>Microsoft Purview Gelişmiş İleti Şifreleme tarafından şifrelenen e-posta için bir son geçerlilik tarihi belirleme
 
@@ -32,7 +32,7 @@ Microsoft Purview Gelişmiş İleti Şifrelemesi [Microsoft 365 Kurumsal E5, Off
 
 Kuruluşunuzun Microsoft Purview Gelişmiş İleti Şifrelemesi içermeyen bir aboneliği varsa, Microsoft 365 E3, Microsoft 365 E3 (Kar Amacı Gütmeyen Personel Fiyatlandırması) için Microsoft 365 E5 Uyumluluk SKU eklentisiyle veya Microsoft 365 E3, Microsoft 365 E3 (Kar Amacı Gütmeyen Personel Fiyatlandırması) veya SKU'ları Office 365 için SKU eklentisini Office 365 Gelişmiş Uyumluluk.
 
-Kullanıcılarınızın şifrelenmiş e-postalara erişmek için OME Portalını kullanan dış alıcılara gönderdiği e-postalarda ileti süre sonunu kullanabilirsiniz. Windows PowerShell'de son kullanma tarihini belirten özel markalı bir şablon kullanarak kuruluşunuz tarafından gönderilen şifrelenmiş e-postaları görüntülemek ve yanıtlamak için alıcıları OME portalını kullanmaya zorlarsınız.
+Kullanıcılarınızın şifrelenmiş e-postalara erişmek için OME Portalını kullanan dış alıcılara gönderdiği e-postalarda ileti süre sonunu kullanabilirsiniz. PowerShell'de son kullanma tarihini belirten özel markalı bir şablon kullanarak kuruluşunuz tarafından gönderilen şifrelenmiş e-postaları görüntülemek ve yanıtlamak için alıcıları OME portalını kullanmaya zorlarsınız.
 
 Office 365 genel yöneticisi olarak, kuruluşunuzun e-posta iletilerinin görünümünü özelleştirmek için şirket markanızı uyguladığınızda, bu e-posta iletileri için bir süre sonu da belirtebilirsiniz. Microsoft Purview Gelişmiş İleti Şifrelemesi ile, kuruluşunuzdan kaynaklanan şifrelenmiş e-postalar için birden çok şablon oluşturabilirsiniz. Şablon kullanarak, alıcıların kullanıcılarınız tarafından gönderilen postalara ne kadar süreyle erişebileceğini denetleyebilirsiniz.
 
@@ -52,7 +52,7 @@ Microsoft Purview Gelişmiş İleti Şifrelemesi ile özel markalama uyguladığ
     New-OMEConfiguration -Identity "Expire in 7 days" -ExternalMailExpiryInDays 7
     ```
 
-Nerede:
+Konum:
 
 - `Identity` özel şablonun adıdır.
 

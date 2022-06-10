@@ -17,30 +17,30 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 ms.assetid: c28de4a5-1e8e-4491-9421-af066cde7cdd
-description: PowerShell kullanarak Microsoft 365'e İnternet Posta Erişim Protokolü (IMAP) geçişi gerçekleştirmeyi öğrenin.
-ms.openlocfilehash: cc5a68e3a570151044663366b686998b7d3be08e
-ms.sourcegitcommit: a5e75d7f7651313818bd2de292d5c38b290d8975
+description: PowerShell kullanarak Microsoft 365 İnternet Posta Erişim Protokolü (IMAP) geçişi gerçekleştirmeyi öğrenin.
+ms.openlocfilehash: 7f0fd2ded375729d1e738215fec3558fbc93257b
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65930185"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66012670"
 ---
 # <a name="use-powershell-to-perform-an-imap-migration-to-microsoft-365"></a>Microsoft 365'e IMAP geçişi gerçekleştirmek için PowerShell'i kullanma
 
 *Bu makale hem Microsoft 365 Kurumsal hem de Office 365 Kurumsal için geçerlidir.*
 
-Microsoft 365'i dağıtma işleminin bir parçası olarak, kullanıcı posta kutularının içeriğini bir İnternet Posta Erişim Protokolü (IMAP) e-posta hizmetinden Microsoft 365'e geçirmeyi seçebilirsiniz. Bu makalede, Exchange Online PowerShell kullanarak e-posta IMAP geçişi için görevlerde size yol gösterilir.
+Microsoft 365 dağıtma işleminin bir parçası olarak, kullanıcı posta kutularının içeriğini bir İnternet Posta Erişim Protokolü (IMAP) e-posta hizmetinden Microsoft 365'a geçirmeyi seçebilirsiniz. Bu makalede, Exchange Online PowerShell kullanarak e-posta IMAP geçişiyle ilgili görevlerde size yol gösterilir.
 
 > [!NOTE]
 > IMAP geçişi gerçekleştirmek için <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange yönetim merkezini</a> de kullanabilirsiniz. Bkz [. IMAP posta kutularınızı geçirme](/Exchange/mailbox-migration/migrating-imap-mailboxes/migrating-imap-mailboxes).
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Başlamadan önce bilmeniz gerekenler
 
-Bu görevi tamamlamak için tahmini süre: Geçiş toplu işlemini oluşturmak için 2-5 dakika. Geçiş toplu işlemi başlatıldıktan sonra, geçiş süresi toplu işlemdeki posta kutularının sayısına, her posta kutusunun boyutuna ve kullanılabilir ağ kapasitenize göre değişir. Posta kutularının Microsoft 365'e geçirilmesinin ne kadar sürdüğünü etkileyen diğer faktörler hakkında bilgi için bkz [. Geçiş Performansı](/Exchange/mailbox-migration/office-365-migration-best-practices).
+Bu görevi tamamlamak için tahmini süre: Geçiş toplu işlemini oluşturmak için 2-5 dakika. Geçiş toplu işlemi başlatıldıktan sonra, geçiş süresi toplu işlemdeki posta kutularının sayısına, her posta kutusunun boyutuna ve kullanılabilir ağ kapasitenize göre değişir. Posta kutularının Microsoft 365 geçirilmesinin ne kadar sürdüğünü etkileyen diğer faktörler hakkında bilgi için bkz[. Geçiş Performansı](/Exchange/mailbox-migration/office-365-migration-best-practices).
 
 Bu yordamı veya yordamları gerçekleştirebilmeniz için, önce izinlerin atanması gerekir. Hangi izinlere ihtiyacınız olduğunu görmek için [, Alıcılar İzinleri](/exchange/recipients-permissions-exchange-2013-help) konusunun bir tablosundaki "Geçiş" girdisine bakın.
 
-Exchange Online PowerShell cmdlet'lerini kullanmak için oturum açmanız ve cmdlet'leri yerel Windows PowerShell oturumunuza aktarmanız gerekir. Yönergeler için bkz. [Uzak PowerShell kullanarak Exchange Online'a bağlanma](/powershell/exchange/connect-to-exchange-online-powershell) .
+Exchange Online PowerShell cmdlet'lerini kullanmak için oturum açmanız ve cmdlet'leri yerel Windows PowerShell oturumunuza aktarmanız gerekir. Yönergeler için bkz. [PowerShell Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
 
 Geçiş komutlarının tam listesi için bkz [. Taşıma ve geçiş cmdlet'leri](/powershell/exchange/).
 
@@ -57,17 +57,17 @@ IMAP geçişleri için aşağıdaki kısıtlamalar geçerlidir:
 ### <a name="step-1-prepare-for-an-imap-migration"></a>1. Adım: IMAP geçişi için hazırlanma
 <a name="BK_Step1"> </a>
 
-- **IMAP kuruluşunuz için bir etki alanınız varsa, bunu Microsoft 365 kuruluşunuzun kabul edilen etki alanı olarak ekleyin.** Microsoft 365 posta kutularınız için zaten sahip olduğunuz etki alanını kullanmak istiyorsanız, önce bunu Microsoft 365'e kabul edilen bir etki alanı olarak eklemeniz gerekir. Ekledikten sonra Kullanıcılarınızı Microsoft 365'te oluşturabilirsiniz. Daha fazla bilgi için bkz.[Etki alanınızı doğrulama](../admin/setup/add-domain.md).
+- **IMAP kuruluşunuz için bir etki alanınız varsa, bunu Microsoft 365 kuruluşunuzun kabul edilen etki alanı olarak ekleyin.** Microsoft 365 posta kutularınız için zaten sahip olduğunuz etki alanını kullanmak istiyorsanız, önce Microsoft 365 kabul edilen etki alanı olarak eklemeniz gerekir. Ekledikten sonra kullanıcılarınızı Microsoft 365'de oluşturabilirsiniz. Daha fazla bilgi için bkz.[Etki alanınızı doğrulama](../admin/setup/add-domain.md).
 
-- **Posta kutusuna sahip olması için her kullanıcıyı Microsoft 365'e ekleyin.** Yönergeler için bkz.[İş için Microsoft 365'e kullanıcı ekleme](../admin/add-users/add-users.md).
+- **Posta kutusuna sahip olması için her kullanıcıyı Microsoft 365 ekleyin.** Yönergeler için bkz.[İş için Microsoft 365 kullanıcı ekleme](../admin/add-users/add-users.md).
 
 - **IMAP sunucusunun FQDN'sini alın**. Bir IMAP geçiş uç noktası oluşturduğunuzda posta kutusu verilerini geçireceğiniz IMAP sunucusunun tam etki alanı adını (FQDN) (tam bilgisayar adı olarak da adlandırılır) sağlamanız gerekir. Internet üzerinden IMAP sunucusuyla iletişim kurmak için FQDN'yi kullanıp kullanamadığınızı doğrulamak için bir IMAP istemcisi veya PING komutu kullanın.
 
-- **Güvenlik duvarını IMAP bağlantılarına izin verecek şekilde yapılandırın**. Geçiş sırasında Microsoft veri merkezinden kaynaklanan ağ trafiğinin IMAP sunucusunu barındıran kuruluşa girmesine izin verebilmek için IMAP sunucusunu barındıran kuruluşun güvenlik duvarında bağlantı noktalarını açmanız gerekebilir. Microsoft veri merkezleri tarafından kullanılan IP adreslerinin listesi için bkz. [Exchange Online URL'leri ve IP Adresi Aralıkları](./urls-and-ip-address-ranges.md).
+- **Güvenlik duvarını IMAP bağlantılarına izin verecek şekilde yapılandırın**. Geçiş sırasında Microsoft veri merkezinden kaynaklanan ağ trafiğinin IMAP sunucusunu barındıran kuruluşa girmesine izin verebilmek için IMAP sunucusunu barındıran kuruluşun güvenlik duvarında bağlantı noktalarını açmanız gerekebilir. Microsoft veri merkezleri tarafından kullanılan IP adreslerinin listesi için bkz. [EXCHANGE ONLINE URL'ler ve IP Adresi Aralıkları](./urls-and-ip-address-ranges.md).
 
 - **IMAP kuruluşunuzdaki posta kutularına erişmek için yönetici hesabı izinlerini atayın**. CSV dosyasında yönetici kimlik bilgileri kullanırsanız, kullandığınız hesabın kurum içi posta kutularına erişmek için gerekli izinlere sahip olması gerekir. Kullanıcı posta kutularına erişmek için gereken izinler, belirli bir IMAP sunucusu tarafından belirlenir.
 
-- **Exchange Online PowerShell cmdlet'lerini kullanmak için** oturum açmanız ve cmdlet'leri yerel Windows PowerShell oturumunuza aktarmanız gerekir. Yönergeler için bkz. [Uzak PowerShell kullanarak Exchange Online'a bağlanma](/powershell/exchange/connect-to-exchange-online-powershell) .
+- **Exchange Online PowerShell cmdlet'lerini kullanmak için** oturum açmanız ve cmdlet'leri yerel Windows PowerShell oturumunuza aktarmanız gerekir. Yönergeler için bkz. [PowerShell Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
 
     Geçiş komutlarının tam listesi için bkz [. Taşıma ve geçiş cmdlet'leri](/powershell/exchange/).
 
@@ -85,7 +85,7 @@ Posta kutularını bir IMAP geçiş toplu işlemiyle geçirmek istediğiniz kull
 
 Her kullanıcı için gerekli öznitelikler şunlardır:
 
-- **EmailAddress** , kullanıcının Microsoft 365 posta kutusunun kullanıcı kimliğini belirtir.
+- **EmailAddress**, kullanıcının Microsoft 365 posta kutusunun kullanıcı kimliğini belirtir.
 
 - **UserName** , IMAP sunucusundaki posta kutusuna erişmek için kullanılacak hesabın oturum açma adını belirtir.
 
@@ -137,7 +137,7 @@ paulc@contoso.edu,#paul.cannon@contoso-students.edu#mailadmin#,P@ssw0rd
 
  **Courier IMAP:**
 
-Courier IMAP gibi bazı kaynak e-posta sistemleri, posta kutularını Microsoft 365'e geçirmek için posta kutusu yöneticisi kimlik bilgilerinin kullanılmasını desteklemez. Bunun yerine, kaynak e-posta sisteminizi sanal paylaşılan klasörleri kullanacak şekilde ayarlayabilirsiniz. Sanal paylaşılan klasörleri kullanarak, kaynak e-posta sistemindeki kullanıcı posta kutularına erişmek için posta kutusu yöneticisi kimlik bilgilerini kullanabilirsiniz. Courier IMAP için sanal paylaşılan klasörleri yapılandırma hakkında daha fazla bilgi için bkz. [Paylaşılan Klasörler](https://go.microsoft.com/fwlink/p/?LinkId=398870).
+Courier IMAP gibi bazı kaynak e-posta sistemleri, posta kutularını Microsoft 365 geçirmek için posta kutusu yöneticisi kimlik bilgilerinin kullanılmasını desteklemez. Bunun yerine, kaynak e-posta sisteminizi sanal paylaşılan klasörleri kullanacak şekilde ayarlayabilirsiniz. Sanal paylaşılan klasörleri kullanarak, kaynak e-posta sistemindeki kullanıcı posta kutularına erişmek için posta kutusu yöneticisi kimlik bilgilerini kullanabilirsiniz. Courier IMAP için sanal paylaşılan klasörleri yapılandırma hakkında daha fazla bilgi için bkz. [Paylaşılan Klasörler](https://go.microsoft.com/fwlink/p/?LinkId=398870).
 
 Kaynak e-posta sisteminizde sanal paylaşılan klasörleri ayarladıktan sonra posta kutularını geçirmek için, geçiş dosyasına isteğe bağlı **UserRoot** özniteliğini eklemeniz gerekir. Bu öznitelik, kaynak e-posta sisteminde her kullanıcının posta kutusunun sanal paylaşılan klasör yapısındaki konumunu belirtir. Örneğin, Terry'nin posta kutusunun yolu /users/terry.adams şeklindedir.
 
@@ -152,7 +152,7 @@ paulc@contoso.edu,mailadmin,P@ssw0rd,/users/paul.cannon
 
 ### <a name="step-3-create-an-imap-migration-endpoint"></a>3. Adım: IMAP geçiş uç noktası oluşturma
 
-E-postayı başarıyla geçirmek için Microsoft 365'in kaynak e-posta sistemine bağlanması ve bu sistemle iletişim kurması gerekir. Bunu yapmak için Microsoft 365 bir geçiş uç noktası kullanır. Geçiş uç noktası, artımlı eşitleme sırasında eşzamanlı olarak eşitlenecek posta kutularının sayısını ve her 24 saatte bir gerçekleşen posta kutularının sayısını da tanımlar. IMAP geçişi için bir geçiş bitiş noktası oluşturmak için önce [Exchange Online'a bağlanın](/powershell/exchange/connect-to-exchange-online-powershell).
+E-postayı başarıyla geçirmek için Microsoft 365 kaynak e-posta sistemine bağlanması ve bu sistemle iletişim kurması gerekir. Bunu yapmak için Microsoft 365 bir geçiş uç noktası kullanır. Geçiş uç noktası, artımlı eşitleme sırasında eşzamanlı olarak eşitlenecek posta kutularının sayısını ve her 24 saatte bir gerçekleşen posta kutularının sayısını da tanımlar. IMAP geçişi için bir geçiş bitiş noktası oluşturmak için önce [Exchange Online bağlanın](/powershell/exchange/connect-to-exchange-online-powershell).
 
 Geçiş komutlarının tam listesi için bkz [. Taşıma ve geçiş cmdlet'leri](/powershell/exchange/).
 
@@ -204,9 +204,9 @@ Aşağıdaki komutu çalıştırarak toplu işleminin başlatıldığını da do
 Get-MigrationBatch -Identity IMAPBatch1 | Format-List Status
 ```
 
-### <a name="step-5-route-your-email-to-microsoft-365"></a>5. Adım: E-postanızı Microsoft 365'e yönlendirme
+### <a name="step-5-route-your-email-to-microsoft-365"></a>5. Adım: E-postanızı Microsoft 365 yönlendirme
 
-E-posta sistemleri, e-postaların teslim edileceği yeri belirlemek için MX kaydı olarak adlandırılan bir DNS kaydını kullanır. E-posta geçiş işlemi sırasında, MX kaydınız kaynak e-posta sisteminize işaret ediyor olur. Microsoft 365'e e-posta geçişi tamamlandıktan sonra MX kaydınızı Microsoft 365'e işaret etme zamanı geldi. Bu, e-postanın Microsoft 365 posta kutularınıza teslim edilmiş olmasına yardımcı olur. MX kaydını taşıyarak, hazır olduğunuzda eski e-posta sisteminizi de kapatabilirsiniz.
+E-posta sistemleri, e-postaların teslim edileceği yeri belirlemek için MX kaydı olarak adlandırılan bir DNS kaydını kullanır. E-posta geçiş işlemi sırasında, MX kaydınız kaynak e-posta sisteminize işaret ediyor olur. Microsoft 365'a e-posta geçişi tamamlandıktan sonra MX kaydınızı Microsoft 365 işaret etme zamanı geldi. Bu, e-postanın Microsoft 365 posta kutularınıza teslim edilmiş olmasına yardımcı olur. MX kaydını taşıyarak, hazır olduğunuzda eski e-posta sisteminizi de kapatabilirsiniz.
 
 Birçok DNS sağlayıcısı için, MX kaydınızı değiştirmeye yönelik belirli yönergeler sağlanmıştır. DNS sağlayıcınız bunların arasında değilse veya genel yönergeler hakkında fikir edinmek istiyorsanız, [genel MX kaydı yönergeleri](https://go.microsoft.com/fwlink/?LinkId=397449) de sağlanmıştır.
 
@@ -214,11 +214,11 @@ Müşterilerinizin ve iş ortaklarınızın e-posta sistemlerinin değişen MX k
 
 ### <a name="step-6-delete-imap-migration-batch"></a>6. Adım: IMAP geçiş toplu işlemini silme
 
-MX kaydını değiştirdikten ve tüm e-postaların Microsoft 365 posta kutularına yönlendirildiğini doğruladıktan sonra, kullanıcılara postalarının Microsoft 365'e gideceğini bildirin. Bundan sonra, IMAP geçiş toplu işlemini silebilirsiniz. Geçiş toplu işlemini silmeden önce aşağıdakileri doğrulayın.
+MX kaydını değiştirdikten ve tüm e-postaların Microsoft 365 posta kutularına yönlendirildiğini doğruladıktan sonra, kullanıcılara postalarının Microsoft 365 bildirin. Bundan sonra, IMAP geçiş toplu işlemini silebilirsiniz. Geçiş toplu işlemini silmeden önce aşağıdakileri doğrulayın.
 
-- Tüm kullanıcılar Microsoft 365 posta kutularını kullanıyor. Toplu işlem silindikten sonra, şirket içi Exchange Server'da posta kutularına gönderilen postalar ilgili Microsoft 365 posta kutularına kopyalanır.
+- Tüm kullanıcılar Microsoft 365 posta kutularını kullanıyor. Toplu iş silindikten sonra, şirket içi Exchange Server posta kutularına gönderilen postalar ilgili Microsoft 365 posta kutularına kopyalanır.
 
-- Microsoft 365 posta kutuları, posta doğrudan gönderilmeye başladıktan sonra en az bir kez eşitlendi. Bunu yapmak için, geçiş toplu işleminin Son Eşitlenen Zaman kutusundaki değerin, postanın doğrudan Microsoft 365 posta kutularına yönlendirilmeye başladığı zamandan daha yeni olduğundan emin olun.
+- Microsoft 365 posta kutuları, posta doğrudan gönderilmeye başladıktan sonra en az bir kez eşitlendi. Bunu yapmak için, geçiş toplu işleminin Son Eşitlenen Saat kutusundaki değerin, postanın doğrudan Microsoft 365 posta kutularına yönlendirilmeye başlamasından daha yeni olduğundan emin olun.
 
 Exchange Online PowerShell'den "IMAPBatch1" geçiş toplu işlemini silmek için aşağıdaki komutu çalıştırın:
 

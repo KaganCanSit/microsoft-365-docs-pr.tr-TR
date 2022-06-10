@@ -17,12 +17,12 @@ search.appverid:
 - MET150
 ms.assetid: 78fe3147-1979-4c41-83bb-aeccf244368d
 description: Microsoft Purview uyumluluk portalında İçerik arama ve eBulma (Standart) özellikleri için geçerli olan sınırlar hakkında bilgi edinin.
-ms.openlocfilehash: 030e4dd16e2b24504632947a336b244a945813ff
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: f20c33781b8dd9f92091e1b0c459137a4edd33ed
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65091731"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66014882"
 ---
 # <a name="limits-for-ediscovery-search"></a>eBulma arama sınırları
 
@@ -45,7 +45,7 @@ Aşağıdaki tabloda, uyumluluk portalında içerik arama aracı kullanılırken
 |Tek bir aramada aranabilecek en fazla posta kutusu veya site sayısı|Sınır <sup>1</sup> yok|
 |Kuruluşunuzda aynı anda çalışabilecek en fazla arama sayısı.|30|
 |Aynı anda çalıştırılabilen kuruluş genelindeki arama sayısı üst sınırı.|3|
-|Tek bir kullanıcının aynı anda başlatabileceği en fazla arama sayısı. Bu sınır, büyük olasılıkla kullanıcı Güvenlik & Uyumluluk Merkezi PowerShell'de **Get-ComplianceSearch \|Start-ComplianceSearch** komutunu kullanarak birden çok arama başlatmaya çalıştığında isabet alır.|10|
+|Tek bir kullanıcının aynı anda başlatabileceği en fazla arama sayısı. Bu sınır, büyük olasılıkla kullanıcı Güvenlik & Uyumluluk PowerShell'de **Get-ComplianceSearch \|Start-ComplianceSearch** komutunu kullanarak birden çok arama başlatmaya çalıştığında isabet alır.|10|
 |İçerik Arama sonuçlarının önizlemesini görüntülerken önizleme sayfasında görüntülenen kullanıcı posta kutusu başına en fazla öğe sayısı.|100|
 |Arama sonuçlarının önizlemesini görüntülerken önizleme sayfasında görüntülenebilen tüm kullanıcı posta kutularında bulunan en fazla öğe sayısı. En yeni öğeler görüntülenir.|1.000 <sup>2</sup>|
 |Arama sonuçları için önizlenebilen en fazla kullanıcı posta kutusu sayısı. Arama sorgusuyla eşleşen içerik içeren 1000'den fazla posta kutusu varsa, yalnızca en fazla arama sonucuna sahip ilk 1000 posta kutusu önizleme için kullanılabilir.|1,000|

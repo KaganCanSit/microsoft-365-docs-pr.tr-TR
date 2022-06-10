@@ -15,12 +15,12 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkEXCHANGE
 ROBOTS: NOINDEX, NOFOLLOW
 description: ''
-ms.openlocfilehash: 416baed923884d9cbabbd6ee7607a48b0a19ab62
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 3b80db06faea9c76c7df671468b94fc11f0c63df
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092387"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66010098"
 ---
 # <a name="migrate-legacy-ediscovery-searches-and-holds-to-the-compliance-portal"></a>Eski eBulma aramalarını ve tutmalarını uyumluluk portalına geçirme
 
@@ -35,31 +35,32 @@ Müşterilerin yeni ve geliştirilmiş işlevlerden yararlanmasına yardımcı o
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
+- Exchange Online V2 modülünü yüklemeniz gerekir. Yönergeler için bkz. [EXO V2 modülünü yükleme ve koruma](/powershell/exchange/exchange-online-powershell-v2#install-and-maintain-the-exo-v2-module).
+
 - Bu makalede açıklanan PowerShell komutlarını çalıştırmak için uyumluluk portalında eBulma Yöneticisi rol grubunun üyesi olmanız gerekir. Ayrıca<a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">, Exchange yönetim merkezinde</a> Bulma Yönetimi rol grubunun da üyesi olmanız gerekir.
 
 - Bu makalede, eBulma ayrı tutma oluşturma hakkında yönergeler sağlanır. Saklama ilkesi, zaman uyumsuz bir işlem aracılığıyla posta kutularına uygulanır. eBulma ayrı tutması oluştururken hem CaseHoldPolicy hem de CaseHoldRule oluşturmanız gerekir, aksi takdirde ayrı tutma oluşturulmaz ve içerik konumları ayrı tutmaya alınmaz.
 
-## <a name="step-1-connect-to-exchange-online-powershell-and-security--compliance-center-powershell"></a>1. Adım: PowerShell ve Güvenlik & Uyumluluk Merkezi PowerShell'i Exchange Online Bağlan
+## <a name="step-1-connect-to-exchange-online-powershell-and-security--compliance-powershell"></a>1. Adım: PowerShell ve Güvenlik & Uyumluluğu PowerShell'i Exchange Online için Bağlan
 
-İlk adım Exchange Online PowerShell ve Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanmaktır. Aşağıdaki betiği kopyalayabilir, powershell penceresine yapıştırabilir ve çalıştırabilirsiniz. Bağlanmak istediğiniz kuruluş için kimlik bilgileri istenir. 
+İlk adım, aynı PowerShell penceresinde Exchange Online PowerShell ve Güvenlik & Uyumluluğu PowerShell'e bağlanmaktır. Aşağıdaki komutları kopyalayabilir, bir PowerShell penceresine yapıştırabilir ve ardından çalıştırabilirsiniz. Sizden kimlik bilgileri istenir.
 
 ```powershell
-$UserCredential = Get-Credential
-$sccSession = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.compliance.protection.outlook.com/powershell-liveid -Credential $UserCredential -Authentication Basic -AllowRedirection
-Import-PSSession $sccSession -DisableNameChecking
-$exoSession = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.outlook.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
-Import-PSSession $exoSession -AllowClobber -DisableNameChecking
+Connect-IPPSSession
+Connect-ExchangeOnline -UseRPSSession
 ```
 
-Bu PowerShell oturumunda aşağıdaki adımlarda yer alan komutları çalıştırmanız gerekir.
+Ayrıntılı yönergeler için bkz. [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell) ve [PowerShell'i Exchange Online için Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
 
 ## <a name="step-2-get-a-list-of-in-place-ediscovery-searches-by-using-get-mailboxsearch"></a>2. Adım: Get-MailboxSearch kullanarak In-Place eBulma aramalarının listesini alma
 
-Kimlik doğrulaması yaptıktan sonra **Get-MailboxSearch** cmdlet'ini çalıştırarak In-Place eBulma aramalarının listesini alabilirsiniz. Aşağıdaki komutu kopyalayıp PowerShell'e yapıştırın ve ardından çalıştırın. Aramaların listesi, adları ve In-Place Tutma durumlarıyla birlikte listelenir.
+Bağlandıktan sonra **Get-MailboxSearch** cmdlet'ini çalıştırarak In-Place eBulma aramalarının listesini alabilirsiniz. Aşağıdaki komutu kopyalayıp PowerShell penceresine yapıştırın ve ardından çalıştırın.
 
 ```powershell
 Get-MailboxSearch
 ```
+
+Aramaların listesi, adları ve In-Place Tutma durumlarıyla birlikte listelenir.
 
 Cmdlet çıkışı aşağıdakine benzer olacaktır:
 
@@ -74,7 +75,7 @@ $search = Get-MailboxSearch -Identity "Search 1"
 ```
 
 ```powershell
-$search | FL
+$search | Format-List
 ```
 
 Bu iki komutun çıkışı aşağıdakine benzer olacaktır:
@@ -82,7 +83,7 @@ Bu iki komutun çıkışı aşağıdakine benzer olacaktır:
 ![Tek bir arama için Get-MailboxSearch kullanmanın PowerShell çıktısı örneği.](../media/MigrateLegacyeDiscovery2.png)
 
 > [!NOTE]
-> Bu örnekteki In-Place Tutma süresi belirsizdir (*ItemHoldPeriod: Sınırsız*). Bu, eBulma ve yasal araştırma senaryoları için tipiktir. Saklama süresi belirsiz değerden farklıysa, bunun nedeni büyük olasılıkla bekletme senaryosundaki içeriği korumak için kullanılmakta olmasıdır. Bekletme senaryoları için Güvenlik & Uyumluluk Merkezi PowerShell'deki eBulma cmdlet'lerini kullanmak yerine, içeriği korumak için [New-RetentionCompliancePolicy](/powershell/module/exchange/new-retentioncompliancepolicy) ve [New-RetentionComplianceRule](/powershell/module/exchange/new-retentioncompliancerule) kullanmanızı öneririz. Bu cmdlet'leri kullanmanın sonucu **New-CaseHoldPolicy** ve **New-CaseHoldRule** kullanımına benzer, ancak saklama süresi sona erdikten sonra içeriği silme gibi bir saklama süresi ve bekletme eylemi belirtebilirsiniz. Ayrıca, bekletme cmdlet'lerini kullanmak için bekletme saklamayı bir eBulma olayıyla ilişkilendirmeniz gerekmez.
+> Bu örnekteki In-Place Tutma süresi belirsizdir (*ItemHoldPeriod: Sınırsız*). Bu, eBulma ve yasal araştırma senaryoları için tipiktir. Saklama süresi belirsiz değerden farklıysa, bunun nedeni büyük olasılıkla bekletme senaryosundaki içeriği korumak için kullanılmakta olmasıdır. Bekletme senaryoları için Güvenlik & Uyumluluğu PowerShell'deki eBulma cmdlet'lerini kullanmak yerine, içeriği korumak için [New-RetentionCompliancePolicy](/powershell/module/exchange/new-retentioncompliancepolicy) ve [New-RetentionComplianceRule](/powershell/module/exchange/new-retentioncompliancerule) kullanmanızı öneririz. Bu cmdlet'leri kullanmanın sonucu **New-CaseHoldPolicy** ve **New-CaseHoldRule** kullanımına benzer, ancak saklama süresi sona erdikten sonra içeriği silme gibi bir saklama süresi ve bekletme eylemi belirtebilirsiniz. Ayrıca, bekletme cmdlet'lerini kullanmak için bekletme saklamayı bir eBulma olayıyla ilişkilendirmeniz gerekmez.
 
 ## <a name="step-4-create-a-case-in-the-microsoft-purview-compliance-portal"></a>4. Adım: Microsoft Purview uyumluluk portalında servis talebi oluşturma
 
@@ -91,6 +92,7 @@ eBulma ayrı tutması oluşturmak için ayrı tutma ile ilişkilendirilecek bir 
 ```powershell
 $case = New-ComplianceCase -Name "[Case name of your choice]"
 ```
+
 ![New-ComplianceCase komutunu çalıştırma örneği.](../media/MigrateLegacyeDiscovery3.png)
 
 ## <a name="step-5-create-the-ediscovery-hold"></a>5. Adım: eBulma ayrı tutmasını oluşturma
@@ -152,23 +154,23 @@ bir In-Place eBulma aramasını geçirirseniz ancak bir eBulma olayıyla ilişki
 ## <a name="more-information"></a>Daha fazla bilgi
 
 - Exchange <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">yönetim merkezinde</a> In-Place eBulma & Tutmaları hakkında daha fazla bilgi için bkz:
-  
-  - [Yerinde eBulma](/exchange/security-and-compliance/in-place-ediscovery/in-place-ediscovery)
+
+  - [Yerinde eKeşif](/exchange/security-and-compliance/in-place-ediscovery/in-place-ediscovery)
 
   - [Yerinde Saklama ve Dava Tutma](/exchange/security-and-compliance/in-place-and-litigation-holds)
 
 - Makalede kullanılan PowerShell cmdlet'leri hakkında daha fazla bilgi için bkz:
 
   - [Get-MailboxSearch](/powershell/module/exchange/get-mailboxsearch)
-  
+
   - [New-ComplianceCase](/powershell/module/exchange/new-compliancecase)
 
   - [New-CaseHoldPolicy](/powershell/module/exchange/new-caseholdpolicy)
-  
+
   - [New-CaseHoldRule](/powershell/module/exchange/new-caseholdrule)
 
   - [Get-CaseHoldPolicy](/powershell/module/exchange/get-caseholdpolicy)
-  
+
   - [New-ComplianceSearch](/powershell/module/exchange/new-compliancesearch)
 
   - [Start-ComplianceSearch](/powershell/module/exchange/start-compliancesearch)

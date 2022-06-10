@@ -19,12 +19,12 @@ ms.custom:
 search.appverid:
 - MET150
 description: Temel Mobilite ve Güvenlik, e-posta ve belgeler Microsoft 365 kuruluşa erişimi denetleen ilkelerle mobil cihazların güvenliğini sağlamanıza ve yönetmenize yardımcı olur.
-ms.openlocfilehash: e63f052e0beebe93f9faa27b54725dbac2a9443f
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 55c2a197959e55e2a74f8691b7181f8ee91b0ea9
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65435865"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66010178"
 ---
 # <a name="capabilities-of-basic-mobility-and-security"></a>Temel Hareketlilik ve Güvenlik Özellikleri
 
@@ -63,7 +63,7 @@ Aşağıdaki tabloda yer alan farklı mobil cihaz türleri için desteklenen uyg
 > [!NOTE]
 >
 > - iOS 10.0 ve üzeri sürümler için destek, iPhone ve iPad cihazları içerir.
-> - BlackBerry işletim sistemi cihazlarının yönetimi Basic Security ve Mobility tarafından desteklenmez. BlackBerry işletim sistemi cihazlarını yönetmek için BlackBerry'den BlackBerry Business Cloud Services'ı (BBCS) kullanın. Android işletim sistemi çalıştıran Blackberry cihazları standart Android cihazlar olarak desteklenir
+> - BlackBerry işletim sistemi cihazlarının yönetimi Basic Security ve Mobility tarafından desteklenmez. BlackBerry işletim sistemi cihazlarını yönetmek için BlackBerry'den BlackBerry Business Cloud Services (BBCS) kullanın. Android işletim sistemi çalıştıran Blackberry cihazları standart Android cihazlar olarak desteklenir
 > - Kullanıcılardan kaydolmaları istenmez ve mobil tarayıcıyı kullanarak Microsoft 365 SharePoint sitelere, Office Online'daki belgelere veya Outlook Web App'daki e-postalara erişim sağlamaları durumunda ilke ihlali nedeniyle engellenmez veya bildirilmez.
 
 Aşağıdaki diyagramda, yeni cihazı olan bir kullanıcı Temel Mobilite ve Güvenlik ile erişim denetimini destekleyen bir uygulamada oturum açtığında ne olacağı gösterilmektedir. Kullanıcının cihazını kaydedene kadar uygulamadaki Microsoft 365 kaynaklarına erişmesi engellenir.
@@ -110,7 +110,7 @@ Aşağıdaki bölümlerde, Microsoft 365 kuruluş kaynaklarınıza bağlanan mob
 
 |Ayar adı|iOS|Android|Samsung Knox|
 |---|---|---|---|
-|Cihazlarda veri şifrelemesi <sup>iste1</sup>|Hayır|Evet|Evet|
+|Cihazlarda veri şifrelemesi gerektir<sup>1</sup>|Hayır|Evet|Evet|
 
 <sup>1</sup> Samsung Knox ile depolama kartlarında şifreleme de gerektirebilirsiniz.
 
@@ -163,7 +163,7 @@ Aşağıdaki seçenek, el ile oluşturulmuş bir e-posta profili kullanan kullan
 
 ## <a name="additional-settings"></a>Ek ayarlar
 
-Güvenlik & Uyumluluk Merkezi PowerShell cmdlet'lerini kullanarak aşağıdaki ek ilke ayarlarını yapabilirsiniz. Daha fazla bilgi için bkz [. Güvenlik & Uyumluluk Merkezi PowerShell](/powershell/exchange/scc-powershell).
+Güvenlik & Uyumluluğu PowerShell cmdlet'lerini kullanarak aşağıdaki ek ilke ayarlarını yapabilirsiniz. Daha fazla bilgi için bkz [. Güvenlik & Uyumluluk PowerShell](/powershell/exchange/scc-powershell).
 
 |Ayar adı|iOS|Android|
 |---|---|---|
@@ -230,7 +230,7 @@ PowerShell cmdlet'lerini kullanarak bu ek ilke ayarlarını yapabilirsiniz:
 
 ## <a name="remotely-wipe-a-mobile-device"></a>Mobil cihazı uzaktan silme
 
-Bir cihaz kaybolur veya çalınırsa, hassas kuruluş verilerini kaldırabilir ve Microsoft Purview uyumluluk portalı **Veri kaybı önlemeCihaz** >  yönetiminden temizleme yaparak **Microsoft 365** >  kuruluş kaynaklarınıza erişimi **engellemeye** yardımcı olabilirsiniz. Bir cihazdan tüm bilgileri silip fabrika ayarlarına geri yüklemek için yalnızca kuruluş verilerini kaldırmak için seçmeli silme veya tam silme işlemi yapabilirsiniz.
+Bir cihaz kaybolur veya çalınırsa, **Microsoft Purview uyumluluk portalı** > **Veri kaybı önleme** > **Cihaz yönetimi'nden** temizleme yaparak hassas kuruluş verilerini kaldırabilir ve Microsoft 365 kuruluş kaynaklarınıza erişimi engellemeye yardımcı olabilirsiniz. Bir cihazdan tüm bilgileri silip fabrika ayarlarına geri yüklemek için yalnızca kuruluş verilerini kaldırmak için seçmeli silme veya tam silme işlemi yapabilirsiniz.
 
 Daha fazla bilgi için bkz [. Basic Mobility and Security'de mobil cihazı temizleme](wipe-mobile-device.md).
 

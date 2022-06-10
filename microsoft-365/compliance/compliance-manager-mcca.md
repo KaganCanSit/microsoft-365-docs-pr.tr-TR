@@ -1,5 +1,5 @@
 ---
-title: Uyumluluk Yöneticisi için Microsoft Uyumluluk Yapılandırması Çözümleyicisi
+title: Uyumluluk Yöneticisi için Microsoft Uyumluluk Yapılandırma Çözümleyicisi
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -16,42 +16,44 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Microsoft Uyumluluk Yöneticisi ile hızla kullanmaya devam etmek için Microsoft Uyumluluk Yapılandırma Çözümleyicisi'ni nasıl kullanabileceğinizi anlama.
-ms.openlocfilehash: a679f0483431313672ac0dfa1101eb9909b6c060
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+description: Microsoft Purview Uyumluluk Yöneticisi ile hızla çalışmaya başlamak için Microsoft Uyumluluk Yapılandırma Çözümleyicisi'ni kullanmayı öğrenin.
+ms.openlocfilehash: a973412c2d40993b47343273675cee3922b57cdf
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63525161"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66012824"
 ---
-# <a name="microsoft-compliance-configuration-analyzer-for-compliance-manager-preview"></a>Uyumluluk Yöneticisi için Microsoft Uyumluluk Yapılandırması Çözümleyicisi (önizleme)
+# <a name="microsoft-compliance-configuration-analyzer-for-compliance-manager-preview"></a>Uyumluluk Yöneticisi için Microsoft Uyumluluk Yapılandırma Çözümleyicisi (önizleme)
 
-**Bu makalede:** Microsoft Uyumluluk Yönetimi'ne hızlı bir şekilde başlamak için Microsoft Uyumluluk Yapılandırma Çözümleyicisi aracını nasıl yükley yapılandırmayı ve çalıştırmayı öğrenin.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-## <a name="microsoft-compliance-configuration-analyzer-mcca-preview-overview"></a>Microsoft Uyumluluk Yapılandırması Çözümleyicisi (MCCA) (önizleme) genel bakış
+**Bu makalede:** Microsoft Uyumluluk Yöneticisi'ni hızlı bir şekilde kullanmaya başlamak için Microsoft Uyumluluk Yapılandırma Çözümleyicisi aracını yüklemeyi ve çalıştırmayı öğrenin.
 
-Microsoft Uyumluluk Yapılandırması Çözümleyicisi (MCCA), Microsoft Uyumluluk Yöneticisi'ni çalışmaya başlamanıza yardımcı olan bir [önizleme aracıdır](compliance-manager.md). MCCA, kuruluşun geçerli yapılandırmalarını getiren ve bunları önerilen en iyi yöntemlerle doğrulayan powershell Microsoft 365 yardımcı programdır. Bu en iyi uygulamalar, veri koruma ve veri idaresi için önemli düzenlemeleri ve standartları içeren bir denetim kümesine dayalıdır.
+## <a name="microsoft-compliance-configuration-analyzer-mcca-preview-overview"></a>Microsoft Uyumluluk Yapılandırma Çözümleyicisi'ne (MCCA) (önizleme) genel bakış
 
-MCCA, Uyumluluk Yöneticisi'nde geçerli uyumluluk ortamınız için hangi geliştirme Microsoft 365 yardımcı olabilir. MCCA tarafından tanımlanan her eylem size Uyumluluk Yöneticisi'nin doğrudan bağlantıları ve düzeltme işlemi yapmaya başlamak için geçerli çözümün bağlantılarıyla uygulama hakkında öneriler sunar.
+Microsoft Uyumluluk Yapılandırma Çözümleyicisi (MCCA), [Microsoft Purview Uyumluluk Yöneticisi'ni](compliance-manager.md) kullanmaya başlamanıza yardımcı olabilecek bir önizleme aracıdır. MCCA, kuruluşunuzun geçerli yapılandırmalarını getiren ve bunları önerilen Microsoft 365 en iyi yöntemlerle doğrulayan PowerShell tabanlı bir yardımcı programdır. Bu en iyi yöntemler, veri koruma ve veri idaresi için temel düzenlemeleri ve standartları içeren bir dizi denetimi temel alır.
 
-MCCA'yı anlamanız için ek bir kaynak, [2013'e okuma yönergelerini GitHub](https://github.com/OfficeDev/MCCA#overview). Bu sayfada önkoşullar hakkında ayrıntılı bilgiler ve yükleme yönergelerinin tamamını bulabilirsiniz. Bu sayfaya erişmek için GitHub hesabınız yok.
+MCCA, Uyumluluk Yöneticisi'ndeki hangi iyileştirme eylemlerinin geçerli Microsoft 365 ortamınıza uygulandığını hızla görmenize yardımcı olabilir. MCCA tarafından tanımlanan her eylem, Uyumluluk Yöneticisi'ne doğrudan bağlantılar ve düzeltici eylem gerçekleştirmeye başlamak için geçerli çözümle birlikte size uygulama önerileri sunar.
 
-**Kullanılabilirlik** durumu: MCCA, Office 365 ve Microsoft 365 lisansına ve US Government Community (GCC) Moderate, GCC High ve Department of Defense (DoD) müşterileri olan tüm kuruluşlar tarafından kullanılabilir.
+MCCA'nın anlaşılması için ek bir kaynak, [GitHub'de BENIOKU yönergelerini](https://github.com/OfficeDev/MCCA#overview) ziyaret etmenizdir. Bu sayfa önkoşullar hakkında ayrıntılı bilgi sağlar ve tam yükleme yönergeleri sağlar. Bu sayfaya erişmek için bir GitHub hesabına ihtiyacınız yoktur.
 
-## <a name="install-mcca-and-run-a-report"></a>MCCA yükleme ve rapor çalıştırma
+**Kullanılabilirlik**: MCCA, Office 365 ve Microsoft 365 lisansları olan tüm kuruluşlar ve ABD Kamu Community (GCC) Orta, GCC Yüksek ve Savunma Bakanlığı (DoD) müşterileri tarafından kullanılabilir.
 
-MCCA aracını yüklemek için, Windows PowerShell. Aracı indirip yüklekten sonra, raporları çalıştırmak için bu adımları yinelemeniz gerekli değildir. MCCA'yı her açtığınızda oturum açma bilgilerinizi sorar ve yeni, güncelleştirilmiş bir rapor üretir.
+## <a name="install-mcca-and-run-a-report"></a>MCCA'yi yükleme ve rapor çalıştırma
 
-### <a name="step-1-install-windows-powershell"></a>1. Adım: Yükleme Windows PowerShell
+Windows PowerShell kullanarak MCCA aracını yükleyebilirsiniz. Aracı indirip yükledikten sonra, raporları çalıştırmak için bu adımları yinelemeniz gerekmez. MCCA'yı her açtığınızda sizden oturum açma kimlik bilgilerinizi ister ve yeni, güncelleştirilmiş bir rapor oluşturur.
 
-Başlamak için, PowerShell galerisinde Exchange Online bir PowerShell modülü (v2.0.3 veya daha yüksek) gerekir. [Yükleme yönergelerini al'a bakın](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/2.0.3).
+### <a name="step-1-install-the-exchange-online-powershell-v2-module"></a>1. Adım: Exchange Online PowerShell V2 modülünü yükleme
 
-### <a name="step-2-install-mcca"></a>2. Adım: MCCA'yı yükleme
+Başlamak için PowerShell galerisinde bulunan Exchange Online PowerShell modülüne (v2.0.3 veya üzeri) ihtiyacınız olacaktır. Yükleme yönergeleri için bkz. [EXO V2 modülünü yükleme ve koruma](/powershell/exchange/exchange-online-powershell-v2#install-and-maintain-the-exo-v2-module).
 
-MCCA yüklemek için, PowerShell'i yönetici modunda kullanarak başlatın. Aşağıdaki adımları izleyin:
+### <a name="step-2-install-mcca"></a>2. Adım: MCCA'yi yükleme
 
-1. Başlat **Windows seçin.**
-1. **PowerShell yazın**, Seçenekler'e sağ **Windows PowerShell** yönetici olarak **çalıştır'ı seçin**.
+MCCA'yı yüklemek için powershell'i yönetici modunda kullanarak başlayın. Aşağıdaki adımları izleyin:
+
+1. **Windows Başlangıç** düğmesini seçin.
+1. **PowerShell** yazın, **Windows PowerShell** sağ tıklayın ve Yönetici **olarak çalıştır'ı** seçin.
 1. Komut istemine şunu yazın:
 
     ```powershell
@@ -60,48 +62,49 @@ MCCA yüklemek için, PowerShell'i yönetici modunda kullanarak başlatın. Aşa
 
 ### <a name="step-3-run-a-report"></a>3. Adım: Rapor çalıştırma
 
-MCCA'yı yükledikten sonra, MCCA'yı çalıştırarak bir rapor oluşturabilirsiniz. Raporu çalıştırmak için:
+MCCA'yı yükledikten sonra, MCCA'yı çalıştırabilir ve bir rapor oluşturabilirsiniz. Bir raporu çalıştırmak için:
 
 1. PowerShell'i açma
-2. Cmdlet'i çalıştırın:
+2. Cmdlet'ini çalıştırın:
 
     ```powershell
     Get-MCCAReport
     ```
 
-    GCC High müşterisiysiniz, raporu çalıştırmak için ek bir giriş parametresi sağlamanız gerekir:
+    GCC Yüksek müşterisiyseniz, raporu çalıştırmak için ek bir giriş parametresi sağlamanız gerekir:
 
     ```powershell
     Get-MCCAReport -ExchangeEnvironmentName O365USGovGCCHigh
     ```
 
-3. MCCA çalıştırlandıktan sonra, bir ilk sürüm denetimi yapar ve kimlik bilgilerini sorar. Kullanıcı adı istemini girin adım adım hesap e-Microsoft 365 oturum açın (rapor [oluşturmak için uygun rolleri görüntüleme](#role-based-reporting)). Ardından, parola istemine parolanızı girin.
+3. MCCA çalıştırıldıktan sonra ilk sürüm denetimi yapar ve kimlik bilgilerini ister. Kullanıcı adını girin isteminde, Microsoft 365 hesabı e-posta adresinizle oturum açın ([rapor oluşturmaya uygun rolleri görüntüleyin](#role-based-reporting)). Ardından parola istemine parolanızı girin.
 
-Daha sonra raporunuz oluşturmak yaklaşık 2-5 dakika sürer. Bittiğinde, bir tarayıcı penceresi açılır ve HTML raporlarınızı görüntüler. Aracı her çalıştırsanız, kimlik bilgilerinizi sorar ve yeni bir rapor oluşturulur. Bu rapor, C dizininde yerel olarak depolanır: \ Kullanıcılar \ *kullanıcıadı* \ AppData \ Local \ Microsoft \ MCCA.
+Ardından raporunuzun oluşturulması yaklaşık 2-5 dakika sürer. İşlem tamamlandığında bir tarayıcı penceresi açılır ve HTML raporunuzu görüntüler. Aracı her çalıştırdığınızda kimlik bilgilerinizi ister ve yeni bir rapor oluşturur. Bu rapor C: \ Users \ *username* \ AppData \ Local \ Microsoft \ MCCA dizininde yerel olarak depolanır.
 
 Daha önce oluşturulan raporlara bu dizinden erişebilirsiniz.
 
-## <a name="understanding-your-report"></a>Raporlarınızı anlama
+## <a name="understanding-your-report"></a>Raporunuzu anlama
 
-Raporunuz, oluşturulma tarihi ve saatine göre verileri yansıtıyor. En üst bölümde ne zaman oluşturulladığı, kuruluş adınız ve kiracı kimliğiniz ile ilgili ayrıntılar yer almaktadır.
+Raporunuz, oluşturulduğu tarih ve saate göre verileri yansıtır. En üstteki bölümde ne zaman oluşturulduğu, kuruluşunuzun adı ve kiracı kimliği hakkında ayrıntılı bilgi sağlanır.
 
-#### <a name="geolocation-based-reporting"></a>Coğrafi konum tabanlı raporlama
+### <a name="geolocation-based-reporting"></a>Coğrafi konum tabanlı raporlama
 
-Not **bölümünde** , rapor alarak kiracının coğrafi konumu temel alarak özelleştirildiniz. Öneriler listelenen liste ülkenize veya bölgenize özeldir.
+**Not** bölümünde raporunuzun kiracınızın coğrafi konumuna göre özelleştirildiğini gösterir. Araçta listelenen Öneriler ülkenize veya bölgenize özgü olacaktır.
 
-Coğrafi konum seçiminiz, o coğrafi konumla ilgili hassas bilgi türlerini (SITS) değerlendirmek ve ülkenize veya bölgenize uygun bir rapor oluşturmak için kullanılır. Kiracınıza sahip olduğunuz verilere dayalı olarak coğrafi konumlar'ı seçin.
+Coğrafi konum seçiminiz, bu coğrafi konumla ilgili hassas bilgi türlerini (SCT) değerlendirmek ve ülkenize veya bölgenize uygun bir rapor oluşturmak için kullanılır. Kiracınızdaki verilere göre coğrafi konumları seçin.
 
-Rapor un konum bilgilerini değiştirmek için coğrafi konum (-Geo) giriş parametresi sağlaymanız gerekir. Kiracınız için geçerli olan bir veya birden çok coğrafi konum seçebilirsiniz.
+Raporunuzun konum bilgilerini değiştirmek için bir coğrafi konum (-Geo) giriş parametresi sağlamanız gerekir. Kiracınız için geçerli olan bir veya birden çok coğrafi konumu seçebilirsiniz.
 
 Raporu belirli bir konuma göre çalıştırmak için şu yönergeleri izleyin:
 
 1. PowerShell'i açma
-2. Belirli bir bölgeyi belirtmek için, aşağıdaki tabloda ülke veya bölgeye karşılık gelen numaraları kullanarak bir cmdlet çalıştırabilirsiniz. Birden çok numara girmek için bunları virgülle birbirinden ayırarak girin. Örneğin, aşağıdaki cmdlet, Asia-Pacific ve Japonya için özelleştirilmiş bir rapor çalıştıracak:
+2. Belirli bir bölgeyi belirtmek için, aşağıdaki tablodan ülkeye veya bölgeye karşılık gelen sayıları kullanarak bir cmdlet çalıştıracaksınız. Birden çok sayıyı virgülle ayırarak girin. Örneğin, aşağıdaki cmdlet Asia-Pacific ve Japonya için özelleştirilmiş bir rapor çalıştırır:
 
     ```powershell
     Get-MCCAReport -Geo @(1,7)
     ```
-  | Giriş |  Ülke veya Bölge | 
+
+  | Giriş |  Ülke veya Bölge |
   | :------------- | :------------: |
   | 1 | Asia-Pacific |
   | 2 | Avustralya |
@@ -118,55 +121,55 @@ Raporu belirli bir konuma göre çalıştırmak için şu yönergeleri izleyin:
   | 13 | Birleşik Arap Emirlikleri |
   | 14 | Birleşik Krallık |
 
+  > [!NOTE]
+  > Rapor her zaman SWIFT kodu, kredi kartı numarası gibi MCCA tarafından desteklenen uluslararası hassas bilgi türlerini içerecektir.
 
- > [!NOTE]
-> Rapor her zaman SWIFT kodu, kredi kartı numarası gibi MCCA tarafından desteklenen uluslararası hassas bilgi türlerini içerir.
+### <a name="role-based-reporting"></a>Rol tabanlı raporlama
 
-#### <a name="role-based-reporting"></a>Rol tabanlı raporlama
+Raporunuz da rolünüz temelinde özelleştirilir.
 
-Raporunuz da rolünüz temel alarak özelleştirilebilir.
-
-Aşağıdaki tabloda, hangi rollerin raporun hangi bölümlerine erişimi olduğu gösterilmiştir. Organizasyondaki diğer roller (aşağıdaki tabloda listelenmiyor) aracı çalıştıramayabilecek veya aracı çalıştırarak son rapordaki bilgilere sınırlı erişime sahip olabilir.
+Aşağıdaki tabloda, hangi rollerin raporun hangi bölümlerine erişimi olduğu gösterilmektedir. Kuruluşunuzdaki diğer roller (aşağıdaki tabloda listelenmeyen) aracı çalıştıramayabilir veya aracı çalıştırabilir ve son rapordaki bilgilere sınırlı erişime sahip olabilir.
 
 ![MCCA - roller.](../media/compliance-manager-mcca-roles.png "MCCA rolleri")
 
-Özel Durumlar:
-1. Kullanıcılar "IP için IRM kullan" bölümünden farklı olarak IP Exchange Online oluşturamaz.
-2. Kullanıcılar, "IP için IRM kullan" bölümünden farklı olarak IP Exchange Online elde edeb.'
-3. Kullanıcılar, "O365'te İletişim Uyumluluğunu Etkinleştir" bölümünden farklı olarak IP için rapor oluşturabilecektir.
-4. Kullanıcılar "Sitelerde Denetimi Etkinleştir" bölümünden IP için rapor Office 365 oluşturamaz.
-5. Kullanıcılar, "YeniDek'te Denetimi Etkinleştir" bölümü dışında IP için Office 365 oluşturabilecektir.
+Özel durum:
 
-#### <a name="solutions-summary-section"></a>Çözüm Özeti bölümü
+1. Kullanıcılar , "Exchange Online için IRM kullanma" bölümünden farklı olarak IP için rapor oluşturamaz.
+2. Kullanıcılar , "Exchange Online için IRM kullanma" bölümünden farklı olarak IP için rapor oluşturabilir.
+3. Kullanıcılar , "O365'te İletişim Uyumluluğunu Etkinleştirme" bölümünden farklı olarak IP için rapor oluşturabilir.
+4. Kullanıcılar , "Office 365'da Denetimi Etkinleştir" bölümünden farklı olarak IP için rapor oluşturamaz.
+5. Kullanıcılar , "Office 365'da Denetimi Etkinleştirme" bölümünden farklı olarak IP için rapor oluşturabilir.
 
-Raporun **Çözüm Özeti** bölümünde, uyumluluk sonrası sonrası için Uyumluluk Yöneticisi'nde kuruma yönelik olarak gerçekleştirilen geliştirme eylemlerine genel bir bakış yer almaktadır.
+### <a name="solutions-summary-section"></a>Çözüm Özeti bölümü
 
-![MCCA - Çözüm özeti.](../media/compliance-manager-mcca-solutions.png "MCCA Çözüm Özeti ekranı")
+Raporun **Çözüm Özeti** bölümünde, uyumluluk duruşunuzu geliştirmeye yardımcı olmak için kuruluşunuzun Uyumluluk Yöneticisi'nde gerçekleştirebileceği iyileştirme eylemlerine genel bir bakış sunulur.
 
-MCCA, geçerli yapılandırmalarınızı Uyumluluk Yöneticisi'nde önerilen geliştirme eylemlerine göre değerlendirir. MCCA aracı tarafından dikkat gerekiyor olarak tanımlanan tüm geliştirme eylemi bu bölümde listelenmiştir.
+![MCCA - çözüm özeti.](../media/compliance-manager-mcca-solutions.png "MCCA Çözümleri Özet ekranı")
 
-Her Microsoft çözümünün yanında, Uyumluluk Yöneticisi'nde yapılan geliştirme eylemlerine karşılık gelen öğe sayısını belirten renk kodlu kutular vardır. Eylemler üç durum durumuna göre birleşiktir:
+MCCA, geçerli yapılandırmalarınızı Uyumluluk Yöneticisi'nde önerilen iyileştirme eylemlerine göre değerlendirir. MCCA aracı tarafından dikkat edilmesi gerektiği belirlenen tüm iyileştirme eylemleri bu bölümde listelenecektir.
 
-- **Tamam**: Önerilen koşulları karşılayacak ve şu anda dikkat gerektir gereken eylemler
-- **Geliştirme**: Dikkat gereken eylemler
-- **Öneri**: dikkat gerektir yapmayan, ancak en iyi yöntemleri öneren eylemler
- 
-Geliştirmeleri ve önerileri görüntülemek için bir kutu seçin.
+Her Microsoft çözümünün yanında, Compliance Manager'daki iyileştirme eylemlerine karşılık gelen öğe sayısını gösteren renk kodlu kutular bulunur. Eylemler üç durum durumuna ayrılır:
 
-**Geliştirme durumu olan öğeler**
+- **Tamam**: Şu anda önerilen koşulları karşılayan ve dikkate gerek duymadan kullanılabilecek eylemler
+- **İyileştirme**: dikkat gerektiren eylemler
+- **Öneri**: dikkate gerek duymayan, ancak en iyi yöntemleri önerdiğimiz eylemler
 
-Geliştirme eyleminin sağ tarafından **Geliştirme** etiketi'nin yanındaki açılan etiketi seçin. Geçerli ayarlarınız ve önerilen geliştirme eylemleri hakkında hızlı bir özet ve ayrıntılara bakabilirsiniz. Bu özet, Uyumluluk Yöneticisi'ne, Uyumluluk Yöneticisi'ne ve ilgili belgelere Microsoft 365 uyumluluk merkezi bağlantıları içerir.
+İyileştirmeleri ve önerileri görüntülemek için bir kutu seçin.
 
-Uyumluluk Yöneticisi bağlantısına tıklamak, sizi o çözümde henüz uygulamamış olmadığınız tüm geliştirme eylemlerinin filtrelenmiş görünümüne alır. Buradan, uyumluluk puanınızı artırmak için kaç puanlık bir puanlık elde edin bütüncül [olduğunu ve](compliance-score-calculation.md) uygulanabilecek düzenlemeleri ve sertifikaları görebilirler.
+#### <a name="items-with-the-improvement-status"></a>İyileştirme durumuna sahip öğeler
 
-DLP'de, size önerilenlere  dayalı önceden oluşturulmuş bir PowerShell betiği veren bir Düzeltme Betiği düğmesi vardır. Kopyalayıp doğrudan PowerShell konsolunuzun içine yapıştırabilirsiniz. Test modunda bir DLP ilkesi oluşturacak
+İyileştirme eyleminin sağındaki **İyileştirme** etiketinin yanındaki açılan listeyi seçin. Geçerli ayarlarınız ve önerilen iyileştirme eylemleri hakkında hızlı bir özet ve ayrıntılar görürsünüz. Özet, Uyumluluk Yöneticisi'ne doğrudan bağlantılar, Microsoft Purview uyumluluk portalındaki geçerli çözüm ve ilgili belgeleri içerir.
 
-**Öneri durumu olan öğeler**
+Uyumluluk Yöneticisi bağlantısına tıkladığınızda, bu çözüm içinde henüz uygulamadığınız tüm iyileştirme eylemlerinin filtrelenmiş bir görünümüne yönlendirilirsiniz. Buradan [, uyumluluk puanınızı](compliance-score-calculation.md) artırmak için ulaşabileceğiniz puan sayısını, bunların geçerli olduğu değerlendirmeleri ve geçerli düzenlemeleri ve sertifikaları görebilirsiniz.
 
-Geliştirme eyleminin sağ yanındaki **Öneri** etiketinin yanındaki açılanı seçin. Geliştirme eylemiyle ilgili olarak, Microsoft 365 durum ortamının özetini ve önerilen en iyi yöntemleri buradasınız.
+DLP için, önerilenlere göre önceden oluşturulmuş bir PowerShell betiği sağlayan bir **Düzeltme Betiği** düğmesi vardır. Doğrudan PowerShell konsolunuza kopyalayıp yapıştırabilirsiniz. Test modunda bir DLP ilkesi oluşturur
+
+#### <a name="items-with-recommendation-status"></a>Öneri durumundaki öğeler
+
+İyileştirme eyleminin sağındaki **Öneri** etiketinin yanındaki açılan listeyi seçin. İyileştirme eylemiyle ilgili olarak kuruluşunuzun geçerli Microsoft 365 ortamının bir özetini ve önerilen en iyi yöntemleri görürsünüz.
 
 ## <a name="resources"></a>Kaynaklar
 
-MCCA'yı yükleme, ayarlama ve kullanma hakkında daha ayrıntılı bilgi için, GitHub ile ilgili [BENI GITHUB](https://github.com/OfficeDev/MCCA#overview) bakın.
+MCCA'yı yükleme, ayarlama ve kullanma hakkında daha ayrıntılı bilgi için [GitHub (GitHub hesabı gerekmez) hakkındaki BENİOKU yönergelerine](https://github.com/OfficeDev/MCCA#overview) bakın.
 
-PowerShell belgeleri Windows PowerShell hakkında daha fazla [bilgi için, başlangıç olarak PowerShell'i kullanın](/powershell/scripting/how-to-use-docs). Ayrıca bkz[. Windows PowerShell](/powershell/scripting/windows-powershell/starting-windows-powershell).
+Windows PowerShell hakkında daha fazla bilgi [için Bkz. PowerShell belgelerini kullanma](/powershell/scripting/how-to-use-docs). Ayrıca bkz[. Başlangıç Windows PowerShell](/powershell/scripting/windows-powershell/starting-windows-powershell).

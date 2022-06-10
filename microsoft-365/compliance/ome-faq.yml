@@ -1,6 +1,6 @@
 ### YamlMime:FAQ
 metadata:
-  title: İleti Şifreleme SSS
+  title: İleti şifreleme SSS
   f1.keywords:
   - NOCSH
   ms.author: krowley
@@ -14,98 +14,101 @@ metadata:
   search.appverid:
   - MET150
   ms.assetid: 0432dce9-d9b6-4e73-8a13-4a932eb0081e
-  description: Yeni ileti koruma yeteneklerinin nasıl çalışıla ilgili bir sorunun mu var? Burada yanıta göz asın.
+  description: Microsoft Purview İleti Şifrelemesi'nin nasıl çalıştığı hakkında bir sorunuz mu var? Burada bir yanıt olup olmadığını kontrol edin.
   ms.custom: seo-marvel-apr2020
-  ms.openlocfilehash: 4506c54fde73b7d7c8f4e50ff8edbfca0ef44717
-  ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
+  ms.openlocfilehash: 92311ec82b7c9e5507cba5b0bd1feb457f9f729f
+  ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 04/04/2022
-  ms.locfileid: "64634987"
-title: İleti Şifreleme SSS
+  ms.lasthandoff: 06/10/2022
+  ms.locfileid: "66013078"
+title: İleti Şifreleme hakkında SSS
 summary: >
-  Yeni ileti koruma yeteneklerinin nasıl çalışıla ilgili bir sorunun mu var? Burada yanıta göz asın. Ayrıca, Azure Information Protection'de veri koruma hizmeti Azure Hak Yönetimi ile ilgili soruların yanıtları için [Azure Information Protection'de](/information-protection/get-started/faqs-rms) veri koruması hakkında sık sorulan sorular'a Information Protection.
+  [!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+
+  Yeni ileti koruma özelliklerinin nasıl çalıştığı hakkında bir sorunuz mu var? Burada bir yanıt olup olmadığını kontrol edin. Ayrıca Azure [Information Protection'da veri koruma hizmeti, Azure Rights Management](/information-protection/get-started/faqs-rms) hakkındaki soruların yanıtları için Azure Information Protection'da veri koruma hakkında sık sorulan sorulara göz atın.
 sections:
 - name: Yok sayıldı
   questions:
-  - question: İleti Şifreleme Office 365 (OME) nedir?
-    answer: OME, e-posta şifreleme ve hak yönetimi özelliklerini birleştirir. Hak yönetimi özellikleri Azure destek Information Protection.
+  - question: Microsoft Purview İleti Şifrelemesi (OME) nedir?
+    answer: Microsoft Purview İleti Şifrelemesi, e-posta şifreleme ve hak yönetimi özelliklerini birleştirir. Hak yönetimi özellikleri Azure Information Protection tarafından desteklenir.
   - question: >
-      Who OME kullanabilir mi?
-    answer: "OME'nin yeni özelliklerini aşağıdaki koşullarda kullanabilirsiniz:\n  \n- 2013'te ome veya IRM'i hiç Exchange Online Office 365.\n\n- OME ve IRM'i ayarladıysanız, Azure Information Protection'den Azure Hak Yönetimi hizmetini kullanıyorsanız bu adımları Information Protection.\n\n- etki alanı hizmetini Active Exchange Online Yönetimi hizmeti (AD RMS) ile kullanıyorsanız, bu yeni özellikleri hemen etkinleştiresiniz. Bunun yerine, ilk olarak [AD RMS'yi Azure Information Protection geçirmeniz](/information-protection/plan-design/migrate-from-ad-rms-to-azure-rms) gerekir. Geçişi tamamladikten sonra OME'nin başarılı bir şekilde ayarlanmış olduğunu anlayan.\n\n  Azure Information Protection'a değil de, şirket içi AD RMS'yi Exchange Online ile kullanmaya devam edersiniz, bu yeni özellikleri kullanamazsanız.\n"
+      Microsoft Purview İleti Şifrelemesi'ni Who kullanabilirsiniz?
+    answer: "Microsoft Purview İleti Şifrelemesi'ni aşağıdaki koşullarda kullanabilirsiniz:\n  \n- Office 365'da Exchange Online için Office 365 İleti Şifrelemesi (OME) veya IRM ayarlamadıysanız.\n\n- OME ve IRM'yi ayarladıysanız, Azure Information Protection Azure Rights Management hizmetini kullanıyorsanız bu adımları kullanabilirsiniz.\n\n- Exchange Online Active Directory Rights Management hizmetiyle (AD RMS) kullanıyorsanız, bu yeni özellikleri hemen etkinleştiremezsiniz. Bunun yerine, önce [AD RMS'yi Azure Information Protection'a geçirmeniz](/information-protection/plan-design/migrate-from-ad-rms-to-azure-rms) gerekir. Geçişi tamamladığınızda, Microsoft Purview İleti Şifrelemesi'ni başarıyla ayarlayabilirsiniz.\n\n  Azure Information Protection'e geçiş yapmak yerine şirket içi AD RMS'yi Exchange Online ile kullanmaya devam etmeyi seçerseniz, Microsoft Purview İleti Şifrelemesi'ni kullanamazsınız.\n"
   - question: >
-      Yeni OME özelliklerini kullanmak için hangi aboneliklere ihtiyacım var?
+      Microsoft Purview İleti Şifrelemesi'ni kullanmak için hangi aboneliklere ihtiyacım var?
     answer: >
-      Yeni OME özelliklerini kullanmak için aşağıdaki planlardan biri gerekir:
+      Microsoft Purview İleti Şifrelemesi'ni kullanmak için aşağıdaki planlardan birine ihtiyacınız vardır:
 
 
-      - Office 365 İleti Şifrelemesi, Office 365 Kurumsal E3 ve E5, Microsoft 365 Kurumsal E5, Microsoft 365 İş Ekstra, Office 365 A1, A3 ve A5'in bir parçası olarak sunulur ve Office 365 Kamu G3 G5'i. Azure Destek Hizmetleri tarafından desteklenen yeni koruma özelliklerini almak için ek lisanslara Information Protection.
+      - Microsoft Purview İleti Şifrelemesi Office 365 Kurumsal E3 ve E5, E3 ve E5, Microsoft 365 İş Ekstra, Office 365 A1, A3 ve A5 Microsoft 365 Kurumsal ve Office 365 Kamu G3 ve G5. Azure Information Protection tarafından desteklenen yeni koruma özelliklerini almak için ek lisanslara ihtiyacınız yoktur.
 
 
-      - Ayrıca, yeni Office 365 İleti Şifrelemesi özelliklerini almak için aşağıdaki planlara Azure Information Protection Plan 1'i de ebilirsiniz: Exchange Online Plan 1, Exchange Online Plan 2, Office 365 F1, Microsoft 365 İş Temel, Microsoft 365 İş Standart E1'i Office 365 Kurumsal.
+      - Microsoft Purview İleti Şifrelemesi'ni almak için Azure Information Protection Plan 1'i şu planlara da ekleyebilirsiniz: Exchange Online Plan 1, Exchange Online Plan 2, Office 365 F1 Microsoft 365 İş Temel , Microsoft 365 İş Standart veya E1 Office 365 Kurumsal.
 
 
-      - İleti Şifreleme özelliğinden yararlanan Office 365, bu özellik kapsamında lisans sahibi olması gerekir.
+      - Microsoft Purview İleti Şifrelemesi'nden yararlanan her kullanıcının özelliğin kapsamına alınması için lisanslanması gerekir.
 
 
-      - Tam liste için, İleti [Şifrelemesi'Exchange Online hizmet](/office365/servicedescriptions/exchange-online-service-description/exchange-online-service-description) Office 365 bakın.
+      - Tam liste için Bkz. Microsoft Purview İleti Şifrelemesi için [Exchange Online hizmet açıklamaları](/office365/servicedescriptions/exchange-online-service-description/exchange-online-service-description).
   - question: >
-      Azure Exchange Online'da kendi anahtarınızı (BYOK) getirerek Başka bir Information Protection?
-    answer: "Evet! Microsoft, OME'u ayarlamadan önce BYOK'u ayarlama adımlarını tamamlamanız önerilir.\n  \nBYOK hakkında daha fazla bilgi için bkz. [Azure kiracı anahtarınızı planlama Information Protection uygulama](/information-protection/plan-design/plan-implement-tenant-key).\n  \n"
+      azure Information Protection kendi anahtarını getir (BYOK) ile Exchange Online kullanabilir miyim?
+    answer: "Evet! Microsoft, Microsoft Purview İleti Şifrelemesi'ni ayarlamadan önce KAG'yi ayarlama adımlarını tamamlamanızı önerir.\n  \nKAG hakkında daha fazla bilgi için bkz. [Azure Information Protection kiracı anahtarınızı planlama ve uygulama](/information-protection/plan-design/plan-implement-tenant-key).\n  \n"
   - question: >
-      Azure Hesabı ile OME ve BYOK Information Protection Microsoft'un mahkeme istekleri gibi üçüncü taraf veri isteklerine yaklaşımını değiştirir mi?
-    answer: "Hayır. OME ve Azure Information Protection'tan BYOK olarak adlandırılan kendi şifreleme anahtarlarınızı sağlama ve denetleme seçeneği, yasa uygulama mahkemelerine yanıt vermek üzere tasarlanmadı. Azure Information Protection için BYOK ile OME, uyumluluk odaklı kuruluşlar için tasarlanmıştır. Microsoft, müşteri verileri için üçüncü taraf isteklerini çok ciddiye alır. Bulut hizmeti sağlayıcısı olarak, her zaman verilerinizin gizliliğinin korunmasını desteklemektedir. Bir mahkeme celdi almamız durumunda, her zaman bilgi almak için üçüncü tarafları doğrudan size yönlendirmeye çalışmamız gerekir. (Brad Smith'in blog'ını okuyun: [Müşteri verilerini kamu hizmetinden koruma](https://blogs.microsoft.com/blog/2013/12/04/protecting-customer-data-from-government-snooping/)). Düzenli aralıklarla, bize gelen isteğin ayrıntılı bilgilerini yayımlarız. Üçüncü taraf veri istekleriyle ilgili daha fazla bilgi için bkz. [](https://www.microsoft.com/trustcenter/privacy/govt-requests-for-data) Microsoft Güven Merkezi'nde müşteri verilerine erişmek için kamu ve yasa uygulama isteklerinin yanıtlarını verme. Ayrıca Bkz. Çevrimiçi Hizmetler Şartlarında [(OST) \"Müşteri Verilerini Açıklama\"](https://www.microsoft.com/Licensing/product-licensing/products.aspx).\n  \n"
+      Azure ile Microsoft Purview İleti Şifrelemesi ve BYOK Information Protection, Microsoft'un arayarak bağlanma gibi üçüncü taraf veri isteklerine yaklaşımını değiştiriyor mu?
+    answer: "Hayır. Microsoft Purview İleti Şifrelemesi ve KAG olarak adlandırılan kendi şifreleme anahtarlarınızı Azure Information Protection sağlama ve denetleme seçeneği, kolluk kuvvetlerinin sıfatına yanıt verecek şekilde tasarlanmamıştır. Azure Information Protection için KAG ile OME, uyumluluk odaklı kuruluşlar için tasarlanmıştır. Microsoft, müşteri verilerine yönelik üçüncü taraf isteklerini ciddiye alır. Bulut hizmeti sağlayıcısı olarak her zaman verilerinizin gizliliğini savunuruz. Bir celp aldığımızda, bilgileri almak için her zaman üçüncü tarafı doğrudan size yönlendirmeye çalışırız. (Brad Smith'in blogu okuyun: [Müşteri verilerini kamu gözetiminden koruma](https://blogs.microsoft.com/blog/2013/12/04/protecting-customer-data-from-government-snooping/)). Aldığımız isteğin ayrıntılı bilgilerini düzenli aralıklarla yayımlarız. Üçüncü taraf veri istekleriyle ilgili daha fazla bilgi için bkz. Microsoft Güven [Merkezi'nden müşteri verilerine erişmek için kamu ve kolluk kuvvetlerinin isteklerine yanıt verme](https://www.microsoft.com/trustcenter/privacy/govt-requests-for-data) . Ayrıca, [Çevrimiçi Hizmet Koşulları'ndaki (OST)](https://www.microsoft.com/Licensing/product-licensing/products.aspx) \"Müşteri Verilerinin Açığa Çıkması\" bölümüne bakın.\n  \n"
   - question: >
-      Bu özellik eski ileti şifreleme (OME) Office 365 Hakları Yönetimi (IRM) özellikleriyle nasıl ilişkili?
-    answer: "İleti Şifrelemesi'Office 365 yeni özellikler, var olan IRM ve eski OME çözümlerinin gelişimsel bir özelliğidir. Aşağıdaki tabloda daha fazla ayrıntı yer alır.\n  \n**Eski OME, IRM ve yeni OME özelliklerini karşılaştırma**\n\n| Özellik | OME'nin önceki sürümleri | IRM | Yeni OME özellikleri |\n|:-----|:-----|:-----|:-----|\n|**Şifreli e-posta gönderme**|Yalnızca posta Exchange kuralları aracılığıyla|Son kullanıcı Outlook, Windows, Mac için Outlook veya Web üzerinde Outlook aracılığıyla veya posta akış kuralları Exchange aracılığıyla başlatılmıştır|Son kullanıcı Outlook, Windows, Mac için Outlook veya Web üzerinde Outlook'dan başlatılmış; posta akış kuralları aracılığıyla|\n|**Hak yönetimi**|-|Do Not Forward option and custom templates|Do Not Forward option, encrypt-only option, default and custom templates|\n|**Desteklenen alıcı türü**|Yalnızca dış alıcılar|Yalnızca iç alıcılar|İç ve dış alıcılar|\n|**Alıcı deneyimi**|Dış alıcılar, tarayıcıda indirdikten ve açtıklarına veya mobil uygulamaları indiren bir HTML iletisi aldıklarını ifade etti.|İç alıcılar yalnızca şirket içi, Outlook, Windows veya başka Mac için Outlook şifreli e-Web üzerinde Outlook.|İç ve dış alıcılar aynı kuruluşta veya herhangi bir kuruluşta olup olmadığına bakılmaksızın, Outlook' da Windows, Mac için Outlook, Web üzerinde Outlook, Android için Outlook ve iOS için Outlook'te veya bir web portalı üzerinden e-posta alırlar  OME portalı için ayrı bir indirme işlemi yoktur.|\n|**Kendi Anahtarınızı Getirin desteği**|Yok|Yok| BYOK destekli|\n"
+      Bu özellik, eski Office 365 İleti Şifrelemesi (OME) ve Bilgi Rights Management (IRM) özellikleriyle nasıl ilgilidir?
+    answer: "Microsoft Purview İleti Şifrelemesi, mevcut IRM ve eski OME çözümlerinin bir evrimidir. Aşağıdaki tabloda daha fazla ayrıntı sağlanır.\n  \n**Eski OME, IRM ve Microsoft Purview İleti Şifrelemesi karşılaştırması**\n\n| Yeteneği | OME'nin önceki sürümleri | IRM | Microsoft Purview İleti Şifrelemesi |\n|:-----|:-----|:-----|:-----|\n|**Şifrelenmiş e-posta gönderme**|Yalnızca Exchange posta akışı kuralları aracılığıyla|Windows, Mac için Outlook veya Web üzerinde Outlook için Outlook veya Exchange posta akışı kuralları aracılığıyla başlatılan son kullanıcı|Windows, Mac için Outlook veya Web üzerinde Outlook için Outlook veya posta akışı kuralları aracılığıyla başlatılan son kullanıcı|\n|**Hak yönetimi**|-|İletme seçeneği ve özel şablonlar|İletme seçeneği, yalnızca şifrele seçeneği, varsayılan ve özel şablonlar|\n|**Desteklenen alıcı türü**|Yalnızca dış alıcılar|Yalnızca iç alıcılar|İç ve dış alıcılar|\n|**Alıcı deneyimi**|Dış alıcılar, tarayıcıda indirdikleri ve açtıkları veya mobil uygulamayı indirdikleri bir HTML iletisi aldı.|İç alıcılar yalnızca Windows, Mac için Outlook ve Web üzerinde Outlook için Outlook şifrelenmiş e-posta aldı.|İç ve dış alıcılar Windows, Mac için Outlook, Web üzerinde Outlook, Android için Outlook ve iOS için Outlook için Outlook e-posta alır veya bir web portalı aracılığıyla, aynı kuruluşta veya herhangi bir kuruluşta olup olmadıklarına bakılmaksızın. OME portalı ayrı bir indirme gerektirmez.|\n|**Kendi Anahtarını Getir desteği**|Yok|Yok| BYOK desteklenir|\n"
   - question: >
-      Nasıl yaparım? OME özelliklerini nasıl etkinleştiririm?
-    answer: "Bkz[. İleti Şifrelemesi Office 365 yeni özellikleri ayarlama](set-up-new-message-encryption-capabilities.md).\n  \n"
+      Kuruluşum için Microsoft Purview İleti Şifrelemesini etkinleştirme Nasıl yaparım??
+    answer: "Bkz. [Microsoft Purview İleti Şifrelemesini Ayarlama](set-up-new-message-encryption-capabilities.md).\n  \n"
   - question: >
-      OME'nin önceki sürümü kullanımdan silinecek mi?
+      OME'nin önceki sürümü kullanımdan kaldırılacak mı?
     answer: >
-      OME'nin önceki sürümünü kullanmaya devamabilirsiniz, bu sürüm şu anda kullanımdan kullanım dışı değildir. Bununla birlikte, kuruluşları yeni ve geliştirilmiş OME çözümünü kullanmaya kesinlikle teşvik etmektir. OME'nin daha önce dağıtmış olmadığınız bir sürüm için OME'nin önceki sürümü için yeni bir dağıtım ayarlanmaz.
+      OME'nin önceki sürümünü kullanmaya devam edebilirsiniz, şu anda kullanım dışı bırakılmaz. Ancak kuruluşların yeni ve geliştirilmiş ileti şifreleme çözümünü kullanmasını kesinlikle öneririz. OME'yi henüz dağıtmadıysanız, OME'nin önceki sürümünün yeni dağıtımını ayarlayamazsınız.
   - question: >
-      Kuruluşum Active Directory Rights Management'i kullanıyor, bu işlevi kullanabilir miyim?
-    answer: "Hayır. etki alanı hizmetini Active Exchange Online Yönetimi hizmeti (AD RMS) ile kullanıyorsanız, bu yeni özellikleri hemen etkinleştiresiniz. Bunun yerine, ilk olarak [AD RMS'yi Azure Information Protection geçirmeniz](/information-protection/plan-design/migrate-from-ad-rms-to-azure-rms) gerekir.\n  \n"
+      Kuruluşum Active Directory Rights Management kullanıyor, bu işlevselliği kullanabilir miyim?
+    answer: "Hayır. Exchange Online Active Directory Rights Management hizmetiyle (AD RMS) kullanıyorsanız, bu yeni özellikleri hemen etkinleştiremezsiniz. Bunun yerine, önce [AD RMS'yi Azure Information Protection'a geçirmeniz](/information-protection/plan-design/migrate-from-ad-rms-to-azure-rms) gerekir.\n  \n"
   - question: >
-      Kuruluşumda çok Exchange dağıtımı var. Bu özelliği kullanabilir miyim?
-    answer: "Şirket içi kullanıcılar, posta akış kurallarını kullanarak şifrelenmiş Exchange Online gönderebilir. Bunu yapmak için, e-postayı diğer adresler aracılığıyla yönlendirmeniz Exchange Online. Daha fazla bilgi için bkz. [Bölüm 2: Postayı e-posta sunucunuzdan iş akışına Microsoft 365](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/set-up-connectors-to-route-mail#part-2-configure-mail-to-flow-from-your-email-server-to-office-365).\n  \n"
+      Kuruluşumun Exchange Karma dağıtımı var. Bu özelliği kullanabilir miyim?
+    answer: "Şirket içi kullanıcılar, Exchange Online posta akışı kurallarını kullanarak şifreli posta gönderebilir. Bunu yapmak için e-postayı Exchange Online üzerinden yönlendirmeniz gerekir. Daha fazla bilgi için bkz. [Bölüm 2: Postayı e-posta sunucunuzdan Microsoft 365 akacak şekilde yapılandırma](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/set-up-connectors-to-route-mail#part-2-configure-mail-to-flow-from-your-email-server-to-office-365).\n  \n"
   - question: >
-      OME şifreli bir ileti oluşturmak için hangi e-posta istemcisini kullanmam gerekiyor? Korumalı iletileri göndermek için hangi uygulamalar desteklemektedir?
-    answer: "Outlook 2016, Outlook Mac için Windows 2013'te ve başka bir Web üzerinde Outlook. Şifreli iletileri gönderme hakkında daha fazla bilgi için bkz. PC için Posta'da şifrelenmiş iletileri [gönderme, Outlook yanıtlama](https://support.microsoft.com/office/send-view-and-reply-to-encrypted-messages-in-outlook-for-pc-eaa43495-9bbb-4fca-922a-df90dee51980?ui=en-us&rs=en-us&ad=us).\n  \n"
+      Şifrelenmiş ileti oluşturmak için hangi e-posta istemcisini kullanmam gerekiyor? Korumalı ileti göndermek için hangi uygulamalar desteklenir?
+    answer: "Windows ve Mac için Outlook 2013 Outlook 2016 ve Web üzerinde Outlook korumalı iletiler oluşturabilirsiniz. Şifrelenmiş iletiler gönderme hakkında daha fazla bilgi için bkz. [Bilgisayar için Outlook şifrelenmiş iletileri gönderme, görüntüleme ve yanıtlama](https://support.microsoft.com/office/send-view-and-reply-to-encrypted-messages-in-outlook-for-pc-eaa43495-9bbb-4fca-922a-df90dee51980?ui=en-us&rs=en-us&ad=us).\n  \n"
   - question: >
-      Korunan e-postaları okumak ve yanıtlamak için hangi e-posta istemcileri desteklemektedir?
+      Korumalı e-postaları okumak ve yanıtlamak için hangi e-posta istemcileri desteklenir?
     answer: >
-      Microsoft 365 kullanıcılar mobil (Android Outlook iOS) Windows mac (2013 ve 2016), Web üzerinde Outlook ve Outlook için Outlook'den okuyabilir ve yanıt okuyabilir. Ayrıca, kuruluş izin verdiyse iOS yerel posta istemcisini de kullanabilirsiniz. E-posta kullanıcısı Microsoft 365, web tarayıcınızdan şifrelenmiş iletileri web'de okuyabilir ve yanıtlayabilirsiniz.
+      Microsoft 365 kullanıcılar Windows ve Mac (2013 ve 2016), Web üzerinde Outlook ve Outlook mobil (Android ve iOS) için Outlook okuyabilir ve yanıt verebilir. Kuruluşunuz izin veriyorsa iOS yerel posta istemcisini de kullanabilirsiniz. Microsoft 365 bir kullanıcı değilseniz, web tarayıcınız aracılığıyla web'de şifrelenmiş iletileri okuyabilir ve yanıtlayabilirsiniz.
   - question: >
-      Hangi e-posta istemcileri yalnızca şifreli korunan e-postaları destekler?
+      Hangi e-posta istemcileri yalnızca şifreleme korumalı e-postaları destekler?
     answer: >
-      Microsoft 365 kullanıcılar pc için Outlook 2019 ve Microsoft 365'i kullanarak yalnızca encrypt-only ilkesiyle korunan postalar oluşturabilir.  Bu, yeni yalnızca şifreleme ilkesi uygulanmış olan iletilerin doğrudan Web üzerinde Outlook'da, iOS ve Android için Outlook'de, şimdi de PC ve Outlook için 2019 ve Microsoft 365'de okunabilir.
+      Microsoft 365 kullanıcılar bilgisayar sürümleri 2019 ve Microsoft 365 için Outlook kullanarak yalnızca şifreleme ilkesiyle korunan postalar oluşturabilir.  Bu, yeni yalnızca şifrele ilkesinin uygulandığı iletilerin doğrudan Web üzerinde Outlook, iOS ve Android için Outlook'de okunabileceği ve artık PC sürümleri 2019 ve Microsoft 365 için Outlook anlamına gelir.
   - question: >
-      OME ile gönderebilirsiniz iletiler için boyut sınırı var mı?
+      OME ile gönderebileceğiniz iletiler için boyut sınırı var mı?
     answer: >
-      Evet. OME ile eklerle birlikte gönderebilirsiniz maksimum ileti boyutu 25 MB'dir. Daha fazla bilgi için bkz. [İleti sınırları](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#message-limits-1).
+      Evet. Ekleri de dahil olmak üzere Microsoft Purview İleti Şifrelemesi ile gönderebileceğiniz ileti boyutu üst sınırı 25 MB'tır. Daha fazla bilgi için bkz. [İleti sınırları](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#message-limits-1).
   - question: >
-      OME portalı ne tür iletileri destekler?
+      OME portalı hangi tür iletileri destekler?
     answer: >
       OME portalı yalnızca postayı destekler. Portal, takvim veya sesli mesaj gibi diğer ileti türlerini desteklemez.
   - question: >
-      Korumalı e-postalarda ek olarak hangi dosya türleri destek gerekiyor? Ekler, korumalı e-postalarla ilişkilendirilmiş koruma ilkelerini devralıyor mu?
-    answer: "Korumalı bir postaya herhangi bir dosya türü  iliştirebilirsiniz. Tek bir özel durumla, koruma ilkeleri yalnızca Azure Information Protection istemcisi tarafından desteklenen Dosya [türlerinde belirtilen dosya biçimlerinde uygulanır](/information-protection/rms-client/client-admin-guide-file-types). OME, aşağıdaki Office programlarının 97-2003 sürümlerini desteklemez: Word (.doc), Excel (.xls) ve PowerPoint (.ppt).\n\nWord, Excel veya PowerPoint dosyası gibi bir dosya biçimi destekleniyorsa, ek alıcı tarafından indirildikten sonra bile dosya her zaman korunur. Örneğin, bir ekin \" iletme\" ile korunmaktadır. Özgün alıcı dosyayı indirir, yeni bir alıcıya bir ileti oluşturur ve dosyayı iliştirer. Yeni alıcı dosyayı aldığında, alıcı korumalı dosyayı açamıyor.\n  \n"
+      Korumalı e-postalarda ek olarak hangi dosya türleri desteklenir? Ekler, korumalı e-postalarla ilişkili koruma ilkelerini devralır mı?
+    answer: "Korumalı bir postaya herhangi bir dosya türü ekleyebilirsiniz. Bir istisna dışında, koruma ilkeleri yalnızca [Azure Information Protection istemcisi tarafından desteklenen Dosya türlerinde belirtilen dosya biçimlerine](/information-protection/rms-client/client-admin-guide-file-types) uygulanır. Microsoft Purview İleti Şifrelemesi, aşağıdaki Office programlarının 97-2003 sürümlerini desteklemez: Word (.doc), Excel (.xls) ve PowerPoint (.ppt).\n\nWord, Excel veya PowerPoint dosyası gibi bir dosya biçimi destekleniyorsa, ek alıcı tarafından indirildikten sonra bile dosya her zaman korunur. Örneğin, bir ekin İletme ile korunduğunu söyleyebilirsiniz. Özgün alıcı dosyayı indirir, yeni bir alıcıya ileti oluşturur ve dosyayı ekler. Yeni alıcı dosyayı aldığında, alıcı korumalı dosyayı açamaz.\n  \n"
   - question: >
-      PDF dosya ekleri destekli mi?
+      PDF dosya ekleri destekleniyor mu?
     answer: >
-      Kısaca yanıt evet! Etkinleştirildiyse, PDF şifrelemesi güvenli iletişim veya güvenli işbirliği sayesinde hassas PDF belgelerini korumana olanak sağlar. E-posta gönderirken, Office 365 hizmeti PDF dosya eklerini şifreler. Dosya Outlook PDF dosya eklerini şifrelemez.
+      Kısa cevap evet! Etkinleştirilirse, PDF şifrelemesi güvenli iletişim veya güvenli işbirliği aracılığıyla hassas PDF belgelerini korumanıza olanak tanır. E-posta gönderdiğinizde, Office 365 hizmeti PDF dosya eklerini şifreler. Outlook istemcisi PDF dosya eklerini şifrelemez.
 
 
-      Diğer Web üzerinde Outlook, iOS Outlook ve Android için Outlook'lar için, gönderirken herhangi bir adıma gerek kalmadan PDF'leri şifrelebilirsiniz. Bu istemciler, yerel olarak PDF şifrelemeyi destekler.
+      Web üzerinde Outlook, iOS için Outlook ve Android için Outlook için, gönderdiğiniz PDF'leri daha fazla adım olmadan şifreleyebilirsiniz. Bu istemciler PDF şifrelemeyi yerel olarak destekler.
 
 
-      Outlook masaüstü, PDF dosya eklerinin şifrelerini yerel olarak desteklemez. Bunun yerine, önce PDF eklere şifreleme Exchange posta akışı kurallarını veya DLP'yi ayarlamanız gerekir. Outlook Desktop'tan PDF eki içeren bir posta gönderirken, istemci eki içeren iletiyi önce hizmete gönderir. Hizmet dosyayı aldığında, hizmet bu dosyada veri kaybı önleme (DLP) ilkesi veya posta akış kuralı OME koruması Exchange Online. Ardından, Exchange Online korumalı PDF dosya eki olan bir ileti gönderir.
+      Outlook masaüstü PDF dosya eklerinin yerel olarak şifrelenmesini desteklemez. Bunun yerine, önce PDF eklerine şifreleme uygulamak için Exchange posta akışı kurallarını veya DLP'yi ayarlamanız gerekir. Outlook Desktop'tan PDF eki içeren posta gönderdiğinizde, istemci eki içeren iletiyi önce hizmete gönderir. Hizmet dosyayı aldığında, hizmet Exchange Online veri kaybı önleme (DLP) ilkesinin veya posta akışı kuralının Microsoft Purview İleti Şifrelemesi korumasını uygular. Ardından, Exchange Online korumalı PDF dosyası eki içeren iletiyi gönderir.
 
 
-      PDF ekleri şifrelemeyi etkinleştirmek için, [PowerShell'de Exchange Online çalıştırın](/powershell/exchange/connect-to-exchange-online-powershell):
+      PDF ekleri için şifrelemeyi etkinleştirmek için [PowerShell Exchange Online](/powershell/exchange/connect-to-exchange-online-powershell) de aşağıdaki komutu çalıştırın:
 
 
       ```powershell
@@ -115,68 +118,68 @@ sections:
       ```
 
 
-      PDF şifrelemesi, güvenli iletişim veya güvenli işbirliği sayesinde hassas PDF belgelerini korumaya olanak sağlar. Tüm iş Outlook, iletiler ve korunmayan PDF ekleri, aynı dosyada veri kaybı önleme (DLP) ilkesi veya posta akışı kuralının OME korumasını Exchange Online. Ayrıca, bir Web üzerinde Outlook kullanıcı korumasız bir PDF belgesi ekler ve iletiye koruma uygularsa, ileti iletinin korumasını devralabilir. Kullanıcılar yalnızca korumalı PDF'leri destekleyen uygulamalarda şifrelenmiş ekleri açabilir (örneğin, OME Portalı ve Azure Information Protection Görüntüleyicisi).
+      PDF şifrelemesi, güvenli iletişim veya güvenli işbirliği aracılığıyla hassas PDF belgelerini korumanıza olanak tanır. Tüm Outlook istemcileri, iletiler ve korumasız PDF ekleri, Exchange Online'da veri kaybı önleme (DLP) ilkesinin veya posta akışı kuralının Microsoft Purview İleti Şifrelemesi korumasını devralır. Ayrıca, Web üzerinde Outlook bir kullanıcı korumasız bir PDF belgesi eklerse ve iletiye koruma uygularsa, ileti iletinin korumasını devralır. Kullanıcılar şifrelenmiş ekleri yalnızca korumalı PDF'leri destekleyen uygulamalarda açabilir (örneğin, OME Portalı ve Azure Information Protection Görüntüleyicisi).
 
 
       > [!IMPORTANT]
 
-      > Outlook masaüstü istemcisi PDF şifrelemesini desteklemez.
+      > Outlook masaüstü istemcisi PDF şifrelemeyi desteklemez.
   - question: >
-      Çevrimiçi SharePoint veya OneDrive İş destekli mi?
+      SharePoint Online veya OneDrive İş ekleri destekleniyor mu?
     answer: >
-      Henüz değil. SharePoint Online veya OneDrive İş ekleri desteklenmez ve son kullanıcılar postayı şifreler ancak bulut eklerini şifrelemez.
+      Henüz değil. SharePoint Çevrimiçi veya OneDrive İş ekleri desteklenmez ve son kullanıcılar bir postayı şifreleyebilir ancak bulut eklerini şifreleyemez.
   - question: >
-      Hangi e-posta istemcileri korumalı e-postalarda şifreli eklerin önizlemesini destekler?
-    answer: "Ekler korumalı bir postayla korunsa da, Outlook doğrudan belge önizlemesi için tha özelliği sağlar. Outlook belgeleri (docx, xlsx, pptx, doc, xls, ppt) Office önizlemesini destekler. Web üzerinde Outlook belgeleri (docx, xlsx, pptx) ve PDF Office önizlemesini destekler.  \n"
+      Hangi e-posta istemcileri korumalı e-postalardaki şifrelenmiş eklerin önizlemesini destekler?
+    answer: "Ekler korumalı bir postayla korunduğunda, Outlook istemcileri belgeyi doğrudan önizleme olanağı sağlar. Outlook Office belgelerin (docx, xlsx, pptx, doc, xls, ppt) önizlemesini destekler. Web üzerinde Outlook Office belgelerin (docx, xlsx, pptx) ve PDF önizlemesini destekler.  \n"
   - question: >
-      Hangi e-posta istemcileri korumalı e-postaların iptali destekler?
+      Hangi e-posta istemcileri korumalı e-postaların iptalini destekler?
     answer: >
-      Web üzerinde Outlook postanın iptali destekler.  Ayrıntılar [için bkz. Şifrelenmiş iletileri iptal](revoke-ome-encrypted-mail.md#how-to-revoke-an-encrypted-message-that-you-sent) etme.
+      Web üzerinde Outlook korumalı postanın iptalini destekler.  Ayrıntılar [için bkz. Gönderdiğiniz şifrelenmiş iletiyi iptal](revoke-ome-encrypted-mail.md#how-to-revoke-an-encrypted-message-that-you-sent) etme.
   - question: >
-      OME portalı korumalı e-postalarda şifreli eklerin önizlemesini destekler mi?
-    answer: "OME portalı, şifreli postaya eklenen şifrelenmiş ek kopyalarının önizlemesini destekler. Destek dosyası türleri Word, Excel, PowerPoint ve PDF dosyalarını içerir.  \n"
+      OME portalı korumalı e-postalardaki şifrelenmiş eklerin önizlemesini destekliyor mu?
+    answer: "OME portalı, şifrelenmiş postaya eklenen tüm şifrelenmiş ek kopyalarının önizlemesini destekler. Destek dosyası türleri Word, Excel, Powerpoint ve PDF dosyalarını içerir.  \n"
   - question: >
-      İlkeleri ayararak iletileri otomatik olarak şifreler miyim?
-    answer: "Evet. belirli koşullara göre iletiyi Exchange Online için E-posta'da posta akış kurallarını kullanın. Örneğin, alıcı kimliğine, alıcı etki alanına veya iletinin gövdesinde veya konusunda yer alan içeriğe dayalı ilkeler oluşturabilirsiniz. Daha [fazla bilgi için bkz. E-posta iletilerini şifrelemek için posta Office 365](define-mail-flow-rules-to-encrypt-email.md).\n  \n"
+      İlkeleri ayarlayarak iletileri otomatik olarak şifreleyebilir miyim?
+    answer: "Evet. belirli koşullara göre iletiyi otomatik olarak şifrelemek için Exchange Online'da posta akışı kurallarını kullanın. Örneğin, alıcı kimliğini, alıcı etki alanını veya iletinin gövdesindeki veya konusunu temel alan ilkeler oluşturabilirsiniz. Bkz. [Office 365 e-posta iletilerini şifrelemek için posta akışı kurallarını tanımlama](define-mail-flow-rules-to-encrypt-email.md).\n  \n"
   - question: >
-      Gelen ve giden postada şifrelemeyi otomatik olarak kaldırabilir miyim?
+      Gelen ve giden postalardaki şifrelemeyi otomatik olarak kaldırabilir miyim?
     answer: >
-      Yöneticiler, giden posta için şifrelemeyi kaldırmak üzere bir posta akışı kuralı kurabilirsiniz. Yalnızca, kuruluştan gelen postalar için şifrelemeyi kaldırmak üzere kural kurabilirsiniz.
+      Yöneticiler, giden postaların şifrelemesini kaldırmak için bir posta akışı kuralı ayarlayabilir. Yalnızca kuruluşunuzdan gelen gelen postaların şifrelemesini kaldırmak için bir kural ayarlayabilirsiniz.
   - question: >
-      Veri Kaybı Önleme (DLP) ilkeler ayarerek iletileri otomatik olarak şifreler Microsoft 365 uyumluluk merkezi miyim?
+      Microsoft Purview uyumluluk portalı aracılığıyla Veri Kaybı Önleme'de (DLP) ilkeler ayarlayarak iletileri otomatik olarak şifreleyebilir miyim?
     answer: >
-      Evet! Posta akış kurallarını, Exchange Online içinde DLP kullanarak Microsoft 365 uyumluluk merkezi.
+      Evet! posta akışı kurallarını Exchange Online veya Microsoft Purview uyumluluk portalında DLP kullanarak ayarlayabilirsiniz.
   - question: >
-      Şifrelenmiş iletileri şirketimin markasıyla özelleştirilebilir miyim?
-    answer: "Evet! E-posta iletilerini ve OME portalını özelleştirme hakkında bilgi için bkz. Şifreli iletilerinize kurum markanızı ekleme. Bkz [. Şifreli iletilerinize kuruluş markasını ekleme](add-your-organization-brand-to-encrypted-messages.md).\n  \n"
+      Şirket markamla şifrelenmiş iletileri özelleştirebilir miyim?
+    answer: "Evet! E-posta iletilerini ve OME portalını özelleştirme hakkında bilgi için bkz. Şifrelenmiş iletilerinize kuruluşunuzun markasını ekleme. Bkz. [Şifrelenmiş iletilerinize kuruluşunuzun markasını ekleme](add-your-organization-brand-to-encrypted-messages.md).\n  \n"
   - question: >
-      Şifreli e-postalar için herhangi bir raporlama özelliği veya içgörü var mı?
-    answer: "Güvenlik ve Uyumluluk Merkezi'nde bir Şifreleme raporu vardır. Güvenlik [ve Uyumluluk Merkezi'nde e-posta & görüntüleme.](../security/office-365-security/view-email-security-reports.md)\n  \n"
+      Şifrelenmiş e-postalar için herhangi bir raporlama özelliği veya içgörü var mı?
+    answer: "Güvenlik ve Uyumluluk Merkezi'nde bir Şifreleme raporu vardır. Bkz. [Güvenlik & Uyumluluk Merkezi'nde e-posta güvenlik raporlarını görüntüleme](../security/office-365-security/view-email-security-reports.md).\n  \n"
   - question: >
-      eBulma gibi uyumluluk özellikleriyle ileti şifreleme kullanabilir miyim?
+      İleti şifrelemeyi eBulma gibi uyumluluk özellikleriyle kullanabilir miyim?
     answer: >
-      Evet, OME tarafından korunan iletilerin çoğu keşfedilebilir. Posta akış kuralı aracılığıyla özel markalama uygulanmış başka bir Microsoft 365 kuruluşundan size gelen OME korumalı posta, eBulma hizmetiniz tarafından keşfedilemez. Başka bir deyişle, postaya kullanıcının posta kutusu üzerinden erişilemiyorsa, ancak bunun yerine yalnızca OME portalı bağlantısı aracılığıyla ortaya çıkarıldısa, postada arama kullanılamaz. Ayrıntılar [için şifreli öğeleri destekleyen eBulma etkinliklerine](/microsoft-365/compliance/ediscovery-decryption#ediscovery-activities-that-support-encrypted-items) bakın.
+      Evet, Microsoft Purview İleti Şifrelemesi tarafından korunan iletilerin çoğu bulunabilir. Posta akışı kuralı aracılığıyla özel markalama uygulanmış başka bir Microsoft 365 kuruluşundan aldığınız Microsoft Purview İleti Şifrelemesi korumalı posta, eBulma hizmetiniz tarafından keşfedilemez. Başka bir deyişle, postaya kullanıcının posta kutusu üzerinden erişilemiyorsa, bunun yerine yalnızca OME portalına bir bağlantı üzerinden gösterildiyse, posta aranamaz. Ayrıntılar için [bkz. şifrelenmiş öğeleri destekleyen eBulma etkinlikleri](/microsoft-365/compliance/ediscovery-decryption#ediscovery-activities-that-support-encrypted-items) .
   - question: >
       E-postadan şifrelemeyi kaldırabilir miyim?
     answer: >
-      Yöneticiler şifrelemeyi kaldırmak için bir posta akışı kuralı kurabilirsiniz. Başka bir kuruluş tarafından uygulanan postadan posta akışı kuralı kullanarak şifrelemeyi kaldırayazsiniz.
+      Yöneticiler şifrelemeyi kaldırmak için bir posta akışı kuralı ayarlayabilir. Başka bir kuruluş tarafından uygulanan postadan posta akışı kuralı kullanarak şifrelemeyi kaldıramazsınız.
   - question: >
-      Paylaşılan posta kutusu olarak gönderebilir ve e-postaları şifreler miyim?
+      Paylaşılan posta kutusu olarak gönderebilir ve e-postaları şifreleyebilir miyim?
     answer: >
-      Birisi bir şifreleme posta akışı kuralıyla eşleşen bir e-posta iletisi gönderdiğinda, ileti gönderilmeden önce şifrelenir.
+      Birisi şifreleme posta akışı kuralıyla eşleşen bir e-posta iletisi gönderdiğinde, ileti gönderilmeden önce şifrelenir.
   - question: >
-      Paylaşılan posta kutusuna gönderilen şifreli iletileri açabilir miyim?
+      Paylaşılan posta kutusuna gönderilen şifrelenmiş iletileri açabilir miyim?
     answer: >
-      Evet! Desteklenen bir posta kutusu istemcisinde oturum açtığınızda, paylaşılan posta kutusu için şifrelenmiş iletileri Outlook açabilirsiniz.
+      Evet! Desteklenen bir Outlook istemcisinde oturum açtığınızda paylaşılan posta kutusu için şifrelenmiş iletileri açabilirsiniz.
 
 
-      - Kullanıcılar korumalı postaları, paylaşılan posta kutusunun bir dağıtım grubunun parçası olarak korumalı posta aldığı bir paylaşılan posta kutusunda açabilir.
+      - Kullanıcılar, paylaşılan posta kutusunun bir dağıtım grubunun parçası olarak korumalı posta aldığı paylaşılan posta kutusunda korumalı postaları açabilir.
 
 
-      - Kullanıcılar Android için Outlook, Windows Mac için Outlook, Outlook, iOS için Outlook ve diğer cihazlarda Outlook'i kullanıyorsa e-postadan koruma devralan ekleri Web üzerinde Outlook.
+      - Kullanıcılar Windows, Mac için Outlook, Android için Outlook, iOS için Outlook ve Web üzerinde Outlook için Outlook kullandıklarında e-postadan korumayı devralan ekleri görüntüleyebilir.
 
 
-      Aşağıdaki tabloda, paylaşılan posta kutuları için desteklenen istemciler listelemektedir.
+      Aşağıdaki tabloda paylaşılan posta kutuları için desteklenen istemciler listelenmektedir.
 
 
       | Ortam | Posta okuma | E-posta eklerini görüntüleme |
@@ -185,52 +188,52 @@ sections:
 
       | Web üzerinde Outlook | Evet | Evet                |
 
-      | Outlook için Windows| Evet | Evet                |
+      | Windows için Outlook| Evet | Evet                |
 
       | Mac için Outlook    | Evet | Evet                |
 
-      | Android için Outlook'i| Evet | Evet                |
+      | Android için Outlook| Evet | Evet                |
 
-      | iOS Outlook için yeni bir ifade    | Evet | Evet                 |
+      | iOS için Outlook    | Evet | Evet                 |
 
 
       > [!NOTE]
 
-      > Android ve iOS, Office mobil uygulamada değil, şifrelenmiş ekleri görüntülemek için Outlook kullanır.
+      > Android ve iOS doğrudan Outlook mobil cihazlarda değil şifrelenmiş ekleri görüntülemek için Office mobil uygulamasını kullanır.
 
 
       Şu anda bilinen iki sınırlama vardır:
 
 
-      - Mobil cihazlarda e-posta ile gelen e-postalara gelen ekleri mobil Outlook açabilirsiniz.
+      - Outlook mobil kullanarak mobil cihazlarda aldığınız e-postaların eklerini alamazsınız.
 
 
-      - Outlook Win32'de, e-posta özelliği etkin bir güvenlik grubu aracılığıyla paylaşılan posta kutusuna atanan kullanıcılar için, kullanıcı web tarayıcısı kullanarak şifrelenmiş postayı görüntülemek için bir bildirim postası görebilir.  Şifreli postayı doğrudan Outlook Win32'de görüntülemek için, Outlook ve Azure Information Protection birleşik etiketleme istemcileri, kullanıcının tam erişim izinleri ve otomatik kırpmanın etkin olduğu paylaşılan posta kutusuna doğrudan atanmalarını gerektirir. Otomatik kırpma, varsayılan olarak varsayılan olarak Exchange Online.
+      - Outlook Win32'de, e-posta özellikli bir güvenlik grubu aracılığıyla paylaşılan posta kutusuna atanan kullanıcılar için, kullanıcı şifrelenmiş postayı web tarayıcısı kullanarak görüntülemek için bir bildirim postası görür.  Şifrelenmiş postaları doğrudan Outlook Win32'de görüntülemek için Outlook ve Azure Information Protection birleşik etiketleme istemcileri, kullanıcının tam erişim izinleri ve otomatik eşleme etkin olarak doğrudan paylaşılan posta kutusuna atanması gerekir. Otomatik eşleme, Exchange Online için varsayılan olarak etkindir.
 
 
       **Paylaşılan posta kutusuna kullanıcı atamak için**
 
 
-      1. [Bağlan PowerShell.aspx Exchange Online kadar da](/powershell/exchange/connect-to-exchange-online-powershell?v=exchg.150) kullanabilirsiniz).
+      1. [Exchange Online PowerShell.aspx) Bağlan](/powershell/exchange/connect-to-exchange-online-powershell?v=exchg.150).
 
 
-      2. Otomatik Add-MailboxPermission parametresiyle bir cmdlet'i çalıştırın. Bu örnekte, Ayla'ya destek posta kutusu üzerinde tam erişim izinleri ve verir.
+      2. otomatik eşleme parametresiyle Add-MailboxPermission cmdlet'ini çalıştırın. Bu örnek, Ayla'ya bir destek posta kutusu için tam erişim izinleri verir.
 
          ```powershell
          Add-MailboxPermission -Identity support@contoso.onmicrosoft.com -User ayla@contoso.com -AccessRights FullAccess -AutoMapping $true
          ```
   - question: >
-      Şifreli iletileri a açmada temsilci erişimi desteklenir mi? Temsilci başka bir kullanıcının posta kutusuna tam erişimi olsa bile mi?
+      Şifrelenmiş iletilerin açılmasıyla temsilci erişimi destekleniyor mu? Temsilcinin başka bir kullanıcının posta kutusuna tam erişimi olsa bile mi?
     answer: >
-      iOS için e-postalarda ve Android için Web üzerinde Outlook, Mac için Outlook, Outlook'de şifrelenmiş postanın temsilci Outlook de desteklenir.  Outlook için Windows erişimi desteklemez.
+      Şifrelenmiş postalara temsilci erişimi, iOS için Web üzerinde Outlook, Mac için Outlook, Outlook ve Android için Outlook desteklenir.  Windows için Outlook temsilci erişimini desteklemez.
   - question: >
-      OME portalında postaya ne kadar süreyle erişebilirsiniz?
+      OME portalında postaya ne kadar süreyle erişebilirim?
     answer: >
-      Gönderenin kuruluşu etkin olduğu ve postanın süresinin dolması için yapılandırılmamışsa, postayı almak için OME portalında oturum açabilirsiniz.
+      Gönderenin kuruluşu etkin olduğu ve postanın süresi dolacak şekilde yapılandırılmadığı sürece postayı almak için OME portalında oturum açabilirsiniz.
   - question: >
-      İsteğim sonrasında tek seferlik geçiş kodunu alam olursa ne yapabilirim?
+      İstedikten sonra tek seferlik geçiş kodunu alamazsam ne yapmalıyım?
     answer: >-
-      İlk olarak, e-posta istemcinizin gereksiz veya istenmeyen posta klasörünü kontrol edin. DkIM ve DMARC ayarları, bu e-postaların istenmeyen posta olarak filtrelenmiş olarak bitimini neden olabilir.
+      İlk olarak, e-posta istemcinizdeki gereksiz veya istenmeyen posta klasörünü denetleyin. Kuruluşunuzun DKIM ve DMARC ayarları bu e-postaların istenmeyen posta olarak filtrelenmesine neden olabilir.
 
 
-      Ardından, Güvenlik ve Uyumluluk Merkezi'nde karantinayı & alın. Çoğu zaman, tek seferlik geçiş kodunu içeren iletiler, özellikle de kuruma ilk alınanlar karantinaya alınır.
+      Ardından, Güvenlik & Uyumluluk Merkezi'nde karantinayı denetleyin. Genellikle, tek seferlik bir geçiş kodu içeren iletiler, özellikle kuruluşunuzun ilk aldığı iletiler karantinaya alınıyor.

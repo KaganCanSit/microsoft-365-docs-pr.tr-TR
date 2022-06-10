@@ -1,5 +1,5 @@
 ---
-title: Tam veri eşleştirme duyarlı bilgi kaynak tablo dosyanızı yenileyin
+title: Hassas bilgi kaynağı tablo dosyasıyla tam olarak eşleşen verilerinizi yenileyin
 f1.keywords:
 - NOCSH
 ms.author: chrfox
@@ -17,14 +17,16 @@ search.appverid:
 - MET150
 description: Hassas bilgi kaynağı tablo dosyanızı yenileyin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: fe72fac43d3cc9a568d8aa1c5d985d34f8477a4d
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: a846f22b866b4b8adf75c44e55fde4b9d56b8ac4
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64760855"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66008855"
 ---
 # <a name="refresh-your-exact-data-match-sensitive-information-source-table-file"></a>Hassas bilgi kaynağı tablo dosyasıyla tam olarak eşleşen verilerinizi yenileyin 
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Hassas bilgi veritabanınızı her 24 saat içinde en fazla 5 kez yenileyebilirsiniz. Hassas bilgi kaynağı tablonuzu yeniden oluşturmanız ve karşıya yüklemeniz gerekir.
 
@@ -39,15 +41,15 @@ Hassas bilgi veritabanınızı her 24 saat içinde en fazla 5 kez yenileyebilirs
 
    |Yöntem|Yapılması gerekenler|
    |---|---|
-   |Windows PowerShell|Bu makaledeki [ScheduledTasks](/powershell/module/scheduledtasks/) belgelerine ve [örnek PowerShell betiğine](#example-powershell-script-for-task-scheduler) bakın|
+   |PowerShell|Bu makaledeki [ScheduledTasks](/powershell/module/scheduledtasks/) belgelerine ve [örnek PowerShell betiğine](#example-powershell-script-for-task-scheduler) bakın|
    |Görev Zamanlayıcı API'si|[Görev Zamanlayıcı](/windows/desktop/TaskSchd/using-the-task-scheduler) belgelerine bakın|
    |kullanıcı arabirimini Windows|Windows **, Başlat'a** tıklayın ve Görev Zamanlayıcı yazın. Ardından, sonuç listesinde **Görev Zamanlayıcı'ya** sağ tıklayın ve **Yönetici olarak çalıştır'ı** seçin.|
 
-### <a name="example-powershell-script-for-task-scheduler"></a>Görev Zamanlayıcı için örnek PowerShell betiği 
+## <a name="example-powershell-script-for-task-scheduler"></a>Görev Zamanlayıcı için örnek PowerShell betiği
 
 Bu bölüm, verileri karmalama ve karma verileri karşıya yükleme görevlerinizi zamanlamak için kullanabileceğiniz örnek bir PowerShell betiği içerir:
 
-#### <a name="schedule-hashing-and-upload-in-a-combined-step"></a>Karma oluşturma ve birleştirilmiş adımda karşıya yükleme zamanlama
+### <a name="schedule-hashing-and-upload-in-a-combined-step"></a>Karma oluşturma ve birleştirilmiş adımda karşıya yükleme zamanlama
 
 ```powershell
 param(\[string\]$dataStoreName,\[string\]$fileLocation)
@@ -82,7 +84,7 @@ $taskName = 'EDMUpload\_' + $dataStoreName
 Register-ScheduledTask -TaskName $taskName -InputObject $scheduledTask -User $user -Password $password
 ```
 
-#### <a name="schedule-hashing-and-upload-as-separate-steps"></a>Karmayı zamanlama ve ayrı adımlar olarak karşıya yükleme
+### <a name="schedule-hashing-and-upload-as-separate-steps"></a>Karmayı zamanlama ve ayrı adımlar olarak karşıya yükleme
 
 ```powershell
 param(\[string\]$dataStoreName,\[string\]$fileLocation)

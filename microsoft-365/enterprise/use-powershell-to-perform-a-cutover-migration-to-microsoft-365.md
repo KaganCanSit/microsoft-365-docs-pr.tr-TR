@@ -17,12 +17,12 @@ ms.custom:
 - admindeeplinkEXCHANGE
 ms.assetid: b468cb4b-a35c-43d3-85bf-65446998af40
 description: Microsoft 365 tam geçiş gerçekleştirerek PowerShell'i kullanarak kaynak e-posta sistemindeki içerikleri aynı anda taşımayı öğrenin.
-ms.openlocfilehash: ede2dfc25897012c5cb7e5469abea49e6db4292e
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: d63b7250cd1c4c34d169521943c3973104b15837
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65078701"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66008407"
 ---
 # <a name="use-powershell-to-perform-a-cutover-migration-to-microsoft-365"></a>Microsoft 365'e geçiş geçişi gerçekleştirmek için PowerShell'i kullanma
 
@@ -41,7 +41,7 @@ Bu görevi tamamlamak için tahmini süre: Geçiş toplu işlemini oluşturmak i
 
 Bu yordamı veya yordamları gerçekleştirebilmeniz için, önce izinlerin atanması gerekir. Hangi izinlere ihtiyacınız olduğunu görmek için [, Alıcılar İzinleri](/exchange/recipients-permissions-exchange-2013-help) konusunun bir tablosundaki "Geçiş" girdisine bakın.
 
-Exchange Online PowerShell cmdlet'lerini kullanmak için oturum açmanız ve cmdlet'leri yerel Windows PowerShell oturumunuza aktarmanız gerekir. Yönergeler için bkz. [Uzak PowerShell kullanarak Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
+Exchange Online PowerShell cmdlet'lerini kullanmak için oturum açmanız ve cmdlet'leri yerel Windows PowerShell oturumunuza aktarmanız gerekir. Yönergeler için bkz. [PowerShell Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
 
 Geçiş komutlarının tam listesi için bkz [. Taşıma ve geçiş cmdlet'leri](/powershell/exchange/).
 
@@ -95,7 +95,7 @@ Geçiş komutlarının tam listesi için bkz [. Taşıma ve geçiş cmdlet'leri]
 
   - Geçiş yöneticisine, kullanıcı posta kutularını depolayan şirket içi posta kutusu veritabanında **Farklı Al** izni atanmalıdır.
 
-- **Birleşik Mesajlaşmayı devre dışı bırakın.** Geçirmekte olduğunuz şirket içi posta kutuları Birleşik Mesajlaşma (UM) için etkinleştirildiyse, bunları geçirmeden önce posta kutularında UM'yi devre dışı bırakmanız gerekir. Geçiş tamamlandıktan sonra posta kutularında UM'yi etkinleştirebilirsiniz.
+- **Birleşik Microsoft Mesajlaşma devre dışı bırakın.** Geçirmekte olduğunuz şirket içi posta kutuları Birleşik Microsoft Mesajlaşma (UM) için etkinleştirildiyse, bunları geçirmeden önce posta kutularında UM'yi devre dışı bırakmanız gerekir. Geçiş tamamlandıktan sonra posta kutularında UM'yi etkinleştirebilirsiniz.
 
 - **Güvenlik Grupları ve Temsilciler** E-posta geçiş hizmeti, şirket içi Active Directory grupların güvenlik grubu olup olmadığını algılayamaz, bu nedenle geçirilen grupları Microsoft 365 güvenlik grupları olarak sağlayamaz. Microsoft 365 kiracınızda güvenlik gruplarının olmasını istiyorsanız, tam geçişe başlamadan önce Microsoft 365 kiracınızda boş bir posta özellikli güvenlik grubu sağlamalısınız. Buna ek olarak, bu geçiş yöntemi yalnızca posta kutularını, posta kullanıcılarını, posta kişilerini ve posta özelliği etkin grupları taşır. Microsoft 365'a geçirilmeyen kullanıcı gibi başka bir Active Directory nesnesi, geçirilmekte olan bir nesneye yönetici veya temsilci olarak atanırsa, geçirmeden önce nesneden kaldırılmalıdır.
 

@@ -4,6 +4,7 @@ f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
 manager: scotv
+ms-reviewer: crimora
 audience: Admin
 ms.topic: troubleshooting
 ms.prod: microsoft-365-lighthouse
@@ -16,12 +17,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için hata iletilerini ve sorunlarını giderme konusunda yardım alın.
-ms.openlocfilehash: dd0867611eb0a77b0e45cb5471fb5789dccf0a4d
-ms.sourcegitcommit: 852075d8d8a4ca052f69e854396d1565ef713500
+ms.openlocfilehash: 6508e3aca49bb2047d2f04a60c469d7b0888f765
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/26/2022
-ms.locfileid: "65692684"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66011914"
 ---
 # <a name="troubleshoot-error-messages-and-problems-in-microsoft-365-lighthouse"></a>Microsoft 365 Lighthouse hata iletilerini ve sorunlarını giderme
 
@@ -59,12 +60,12 @@ Bu makalede, Microsoft 365 Lighthouse kullanırken karşılaşabileceğiniz hata
 
 **Çözünürlük:** Aşağıdaki tabloda eylem gerektiren farklı kiracı durumları ve bunların nasıl çözümlendiği açıklanmaktadır.
 
-*Müşterileri Lighthouse'a eklemek için temsilci Yönetici Ayrıcalıkları (DAP) gerekir. Daha güvenli temsilci erişimi sağlamak için müşterilerinizle Ayrıntılı Temsilcili Yönetici Ayrıcalıkları (GDAP) oluşturmanızı da öneririz. DAP ve GDAP birlikte bulunurken, her iki modelin de bulunduğu müşteriler için GDAP öncelikli olacaktır. Yakında yalnızca GDAP (ve DAP olmayan) müşteriler Lighthouse'a eklenecek.
+Müşterileri Lighthouse'a eklemek için Ayrıntılı Yönetici Ayrıcalıkları (GDAP) ve dolaylı bayi ilişkisi ya da Temsilci Yönetici Ayrıcalıkları (DAP) ilişkisi gerekir. MÜŞTERI kiracısında DAP ve GDAP birlikte varsa, GDAP özellikli güvenlik gruplarındaki MSP teknisyenleri için GDAP izinleri önceliklidir. Yakında yalnızca GDAP ilişkilerine (dolaylı kurumsal bayi ilişkileri olmadan) sahip müşteriler Lighthouse'a eklenecek.<br><br>
 
 | Durum | Açıklama | Çözüm |
 |--|--|--|
 | Etkin olmayan | Kiracı, MSP'nin isteği üzerine kapatıldı ve artık Lighthouse'da yönetilmedi. | Kiracıyı yeniden etkinleştirmeniz gerekir. **Kiracılar** sayfasında, yeniden etkinleştirmek istediğiniz kiracının yanındaki üç noktayı (daha fazla eylem) seçin ve ardından **Kiracıyı etkinleştir'i** seçin. İlk müşteri verilerinin Lighthouse'da görünmesi 24-48 saat sürebilir. |
-| Uygun değil - DAP veya GDAP ayarlanmadı | Lighthouse'un gerektirdiği kiracıyla ayarlanmış DAP veya GDAP yönetici ayrıcalıklarınız yoktur. | Microsoft İş Ortağı Merkezi'nde DAP veya GDAP yönetici ayrıcalıklarını ayarlayın. |
+| Uygun değil - DAP veya GDAP ayarlanmadı | Lighthouse'un gerektirdiği kiracıyla ayarlanmış DAP veya GDAP ve dolaylı kurumsal bayi yöneticisi ayrıcalıklarınız yoktur. | Microsoft İş Ortağı Merkezi'nde DAP veya GDAP ve dolaylı bayi yöneticisi ayrıcalıklarını ayarlayın. |
 | Uygun değil - Gerekli lisans eksik | Kiracıda gerekli bir lisans eksik. En az bir Microsoft 365 İş Ekstra, Microsoft 365 E3, Microsoft 365 E5 veya İş için Microsoft Defender lisansı gerekir. | Kiracının en az bir Microsoft 365 İş Ekstra, Microsoft 365 E3, Microsoft 365 E5, Windows 365 Business veya İş için Microsoft Defender lisansı olduğundan emin olun Atanan. |
 | Uygun değil - Kullanıcı sayısı aşıldı | Kiracı, Lighthouse tarafından izin verilen en fazla 1000 lisanslı kullanıcıya sahiptir. | Kiracının 1000'den fazla lisanslı kullanıcısı olmadığını doğrulayın. |
 | Uygun değil - Coğrafi denetim başarısız oldu | Siz ve müşteriniz Lighthouse'un gerektirdiği aynı coğrafi bölgede ikamet etmezsiniz. | Müşterinin coğrafi bölgenizde bulunduğunu doğrulayın. Aksi takdirde, Lighthouse'da kiracıyı yönetemezsiniz. |
@@ -80,7 +81,7 @@ Müşteri kiracınızın ekleme ölçütlerini karşıladığını ve hala Light
 
 **Çözünürlük:** İş ortağı kiracınızdan uygun izinlere sahip bir yöneticinin sizi Azure AD'de doğru GDAP güvenlik grubuna atadığından ve size İş Ortağı Merkezi'nde doğru rolü atadığından emin olun. Ayrıca Lighthouse'daki bazı eylemlerin Genel yönetici olmanız gerektiğini unutmayın. GDAP rolleri ve her rolün yapabilecekleri hakkında daha fazla bilgi edinmek için bkz. [Microsoft 365 Lighthouse'de izinlere genel bakış](m365-lighthouse-overview-of-permissions.md). Tüm Azure AD yerleşik rollerin ve GDAP izinlerinin ayrıntılı açıklaması için bkz. [yerleşik roller Azure AD](/azure/active-directory/roles/permissions-reference).
 
-DAP ilişkileri olan müşteriler için iş ortağı yöneticisinin sizi İş Ortağı Merkezi'ndeki Yönetici aracısı veya Yardım masası aracısı rolüne ataması gerekir. Tüm İş Ortağı Merkezi rollerinin ve izinlerinin ayrıntılı açıklaması için bkz. [Kullanıcılara rol ve izin atama](/partner-center/permissions-overview).
+DAP ilişkileri olan müşteriler için, iş ortağı yöneticisinin sizi İş Ortağı Merkezi'ndeki Yönetici aracısı veya Yardım masası aracısı rolüne ataması gerekir. Tüm İş Ortağı Merkezi rollerinin ve izinlerinin ayrıntılı açıklaması için bkz. [Kullanıcılara rol ve izin atama](/partner-center/permissions-overview).
 
 ### <a name="i-dont-see-complete-data-in-certain-areas-of-lighthouse-or-i-cant-perform-certain-tasks-or-i-cant-access-certain-tenants"></a>Lighthouse'un belirli alanlarında tam veri görmüyorum veya belirli görevleri gerçekleştiremiyorum veya belirli kiracılara erişemiyorum
 

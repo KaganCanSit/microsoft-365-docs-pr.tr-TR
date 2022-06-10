@@ -14,20 +14,18 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 description: Posta sunucuları arasındaki e-posta iletişiminin güvenliğini sağlamak için SMTP DNS Tabanlı Adlandırılmış Varlıkların Kimlik Doğrulamasının (DANE) nasıl çalıştığını öğrenin.
-ms.openlocfilehash: fa982671aebb7c857c1c55af027d10437091e0dd
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 200dde9c62fb9825ce36eea7416304727bd6b598
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65131030"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66015780"
 ---
 # <a name="how-smtp-dns-based-authentication-of-named-entities-dane-works"></a>Adlandırılmış Varlıkların SMTP DNS Tabanlı Kimlik Doğrulaması (DANE) nasıl çalışır?
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-SMTP protokolü, iletileri posta sunucuları arasında aktarmak için kullanılan ana protokoldür ve varsayılan olarak güvenli değildir. İletilerin SMTP üzerinden şifrelenmiş iletimini desteklemek için Aktarım Katmanı Güvenliği (TLS) protokolü yıllar önce kullanıma sunulmuştur. Bu, bir gereksinim olarak değil, genellikle fırsatçı olarak kullanılır ve çok fazla e-posta trafiğinin net metin halinde bırakılması, kötü aktörlerin müdahalesine karşı savunmasız olmasıdır. Ayrıca SMTP, kimlik sahtekarlığına ve OrtaDaki Adam (MITM) saldırılarına duyarlı olan genel DNS altyapısı aracılığıyla hedef sunucuların IP adreslerini belirler. Bu, e-posta gönderme ve alma güvenliğini artırmak için birçok yeni standardın oluşturulmasına neden olmuştur. Bunlardan biri, Adlandırılmış Varlıkların DNS Tabanlı Kimlik Doğrulamasıdır (DANE).
-  
-SMTP [RFC 7672](https://tools.ietf.org/html/rfc7672) için DANE, etki alanının DNS kaydı kümesinde Aktarım Katmanı Güvenliği Kimlik Doğrulaması (TLSA) kaydının varlığını kullanarak bir etki alanına işaret eder ve posta sunucuları DANE'yi destekler. TLSA kaydı yoksa, posta akışı için DNS çözümlemesi, herhangi bir DANE denetimi denenmeden her zamanki gibi çalışır. TLSA kaydı TLS desteğine güvenli bir şekilde sinyal gönderir ve etki alanı için DANE ilkesini yayımlar. Bu nedenle, posta sunucularını göndermek, SMTP DANE kullanarak meşru alıcı posta sunucularının kimliğini başarıyla doğrulayabilir. Bu, eski sürüme düşürme ve MITM saldırılarına karşı dayanıklı olmasını sağlar. DANE' nin DNSSEC üzerinde doğrudan bağımlılıkları vardır. Bu, ortak anahtar şifrelemesi kullanarak DNS aramaları için kayıtları dijital olarak imzalayarak çalışır. DNSSEC denetimleri, istemciler için DNS sorguları oluşturan DNS sunucuları olan özyinelemeli DNS çözümleyicilerinde gerçekleşir. DNSSEC, DNS kayıtlarının değiştirilmemesini ve orijinal olmasını sağlar.  
+SMTP protokolü, iletileri posta sunucuları arasında aktarmak için kullanılan ana protokoldür ve varsayılan olarak güvenli değildir. İletilerin SMTP üzerinden şifrelenmiş iletimini desteklemek için Aktarım Katmanı Güvenliği (TLS) protokolü yıllar önce kullanıma sunulmuştur. Bu, bir gereksinim olarak değil, genellikle fırsatçı olarak kullanılır ve çok fazla e-posta trafiğinin net metin halinde bırakılması, kötü aktörlerin müdahalesine karşı savunmasız olmasıdır. Ayrıca SMTP, kimlik sahtekarlığına ve OrtaDaki Adam (MITM) saldırılarına duyarlı olan genel DNS altyapısı aracılığıyla hedef sunucuların IP adreslerini belirler. Bu, e-posta gönderme ve alma güvenliğini artırmak için birçok yeni standardın oluşturulmasına neden olmuştur. Bunlardan biri, Adlandırılmış Varlıkların DNS Tabanlı Kimlik Doğrulamasıdır (DANE). 
 
 SMTP [RFC 7672](https://tools.ietf.org/html/rfc7672) için DANE, etki alanının DNS kaydı kümesinde Aktarım Katmanı Güvenliği Kimlik Doğrulaması (TLSA) kaydının varlığını kullanarak bir etki alanına işaret eder ve posta sunucuları DANE'yi destekler. TLSA kaydı yoksa, posta akışı için DNS çözümlemesi, herhangi bir DANE denetimi denenmeden her zamanki gibi çalışır. TLSA kaydı TLS desteğine güvenli bir şekilde sinyal gönderir ve etki alanı için DANE ilkesini yayımlar. Bu nedenle, posta sunucularını göndermek, SMTP DANE kullanarak meşru alıcı posta sunucularının kimliğini başarıyla doğrulayabilir. Bu, eski sürüme düşürme ve MITM saldırılarına karşı dayanıklı olmasını sağlar. DANE' nin DNSSEC üzerinde doğrudan bağımlılıkları vardır. Bu, ortak anahtar şifrelemesi kullanarak DNS aramaları için kayıtları dijital olarak imzalayarak çalışır. DNSSEC denetimleri, istemciler için DNS sorguları oluşturan DNS sunucuları olan özyinelemeli DNS çözümleyicilerinde gerçekleşir. DNSSEC, DNS kayıtlarının değiştirilmemesini ve orijinal olmasını sağlar.
 
@@ -51,8 +49,8 @@ TLSA kayıt türüne özgü dört yapılandırılabilir alan vardır:
 
 |Değer|Kısaltma|Açıklama|
 |---|---|---|
-|01<sup></sup>|PKIX-TA|Kullanılan sertifika, X.509 güven zincirinden güven bağlayıcısı Genel CA'dır.|
-|11<sup></sup>|PKIX-EE|Sertifika işaretlendi hedef sunucudur; DNSSEC denetimleri orijinalliğini doğrulamalıdır.|
+|0<sup>1</sup>|PKIX-TA|Kullanılan sertifika, X.509 güven zincirinden güven bağlayıcısı Genel CA'dır.|
+|1<sup>1</sup>|PKIX-EE|Sertifika işaretlendi hedef sunucudur; DNSSEC denetimleri orijinalliğini doğrulamalıdır.|
 |2|DANE-TA|Sunucunun X.509 ağacından gelen ve güven zincirindeki bir güven bağlantısı tarafından doğrulanması gereken özel anahtarını kullanın. TLSA kaydı, etki alanı için TLS sertifikalarını doğrulamak için kullanılacak güven bağlayıcısını belirtir.|
 |3|DANE-EE|Yalnızca hedef sunucunun sertifikasıyla eşleşir.|
 

@@ -19,12 +19,12 @@ ms.localizationpriority: high
 description: Yöneticiler, kimlik sahtekarlığı, kimlik avı ve istenmeyen postaları önlemeye yardımcı olmak için EOP'nin e-posta kimlik doğrulamasını (SPF, DKIM ve DMARC) nasıl kullandığını öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 2b0a1f1bec76a8dd22bc04502ea7ca09f2c7af66
-ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
+ms.openlocfilehash: 0dca070cb6d6d1b2cb26acb3604e331f27824877
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2022
-ms.locfileid: "65772784"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66008877"
 ---
 # <a name="email-authentication-in-eop"></a>EOP'de e-posta kimlik doğrulaması
 
@@ -170,7 +170,6 @@ Dış etki alanları için kimlik sahtekarlığına sahip kullanıcı Kimden adr
 
 - Kaynak IP adresi (/24 CIDR aralığına ayrılmıştır)
 - Ters DNS (PTR) kaydının kuruluş etki alanı.
-- Doğrulanmış bir DKIM etki alanı.
 
 ### <a name="create-an-allow-entry-for-the-senderrecipient-pair"></a>Gönderen/alıcı çifti için izin verme girdisi oluşturma
 

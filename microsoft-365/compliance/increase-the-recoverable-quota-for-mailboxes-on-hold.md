@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 ms.assetid: a8bdcbdd-9298-462f-b889-df26037a990c
 description: arşiv posta kutusunu etkinleştirin ve Microsoft 365 bir posta kutusunun Kurtarılabilir Öğeler klasörünün boyutunu artırmak için otomatik genişletme arşivlemeyi açın.
-ms.openlocfilehash: a05851f1019405a495a7b909bf4a8d096227163d
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: bbeb72c6a055be42e06c450afccb35965d149dce
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65100819"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66015026"
 ---
 # <a name="increase-the-recoverable-items-quota-for-mailboxes-on-hold"></a>Beklemedeki posta kutuları için Kurtarılabilir Öğeler kotasını artırma
 
@@ -64,7 +64,7 @@ Bu konunun geri kalanında, beklemedeki posta kutuları için özel bir Exchange
 
 İlk adım, Kurtarılabilir Öğeler klasörü için özel bir bekletme etiketi (bekletme ilkesi etiketi veya RPT olarak adlandırılır) oluşturmaktır. Daha önce açıklandığı gibi, bu RPT öğeleri kullanıcının birincil posta kutusunda bulunan Kurtarılabilir Öğeler klasöründen kullanıcının arşiv posta kutusunda Kurtarılabilir Öğeler klasörüne taşır. Kurtarılabilir Öğeler klasörü için bir RPT oluşturmak için PowerShell'i kullanmanız gerekir. Exchange yönetim merkezini (EAC) kullanamazsınız.
 
-1. [Uzak PowerShell'i kullanarak Exchange Online'a bağlanma](/powershell/exchange/connect-to-exchange-online-powershell)
+1. [PowerShell'i Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell)
 
 2. Kurtarılabilir Öğeler klasörü için yeni bir RPT oluşturmak için aşağıdaki komutu çalıştırın:
 
@@ -137,7 +137,7 @@ Son adım, 2. Adımda oluşturduğunuz yeni bekletme ilkesini kuruluşunuzdaki b
 
 ### <a name="use-the-eac-to-apply-the-new-retention-policy"></a>Yeni bekletme ilkesini uygulamak için EAC'yi kullanma
 
-1. **Alıcılar** >  **Posta Kutuları'na** gidin.
+1. Alıcılar **Posta** **Kutuları'na** >  gidin.
 
 2. Liste görünümünde, bekletme ilkesini uygulamak istediğiniz posta kutusunu seçin ve **düzenle simgesine** tıklayın ![.](../media/ebd260e4-3556-4fb0-b0bb-cc489773042c.gif).
 
@@ -147,7 +147,7 @@ Son adım, 2. Adımda oluşturduğunuz yeni bekletme ilkesini kuruluşunuzdaki b
 
 Bekletme ilkesini birden çok posta kutusuna uygulamak için EAC'yi de kullanabilirsiniz.
 
-1. **Alıcılar** >  **Posta Kutuları'na** gidin.
+1. Alıcılar **Posta** **Kutuları'na** >  gidin.
 
 2. Liste görünümünde, birden çok posta kutusu seçmek için Shift veya Ctrl tuşlarını kullanın.
 

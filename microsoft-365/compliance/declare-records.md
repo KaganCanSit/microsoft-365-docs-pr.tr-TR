@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Bekletme etiketlerini kullanarak kayıtları bildirin.
-ms.openlocfilehash: 75445d1cd61bd86dd41d6325efc6e71fac20ddc0
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: 0e8453bee843131a5781318f7adde8d19bb04d92
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65286066"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66016822"
 ---
 # <a name="declare-records-by-using-retention-labels"></a>Saklama etiketleri kullanarak kayıtları beyan etme
 
@@ -43,7 +43,7 @@ Daha sonra bu etiketleri bir bekletme etiketi ilkesinde yayımlayarak kullanıc�
 
 Varsayılan olarak, içeriği düzenleyici kayıt olarak işaretlemek için bekletme etiketi seçeneği bekletme etiketi sihirbazında görüntülenmez. Bu seçeneği görüntülemek için önce bir PowerShell komutu çalıştırmanız gerekir:
 
-1. [Office 365 Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
+1. [Office 365 Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
 
 2. Aşağıdaki cmdlet'i çalıştırın:
 
@@ -75,7 +75,7 @@ Tam yönergeler için:
 
 SharePoint ve OneDrive öğeleri kayıt olarak bildirmek için bekletme etiketlerini kullanacaksanız, dosyalar 0 bayttan büyük olduğunda kullanıcıların [kilitli kaydın](record-versioning.md) özelliklerini düzenlemesine olanak tanıyan varsayılan kiracı ayarını değiştirmeniz gerekip gerekmediğini göz önünde bulundurun.
 
-Bu varsayılanı değiştirmek için [Microsoft Purview uyumluluk portalıKayıt](https://compliance.microsoft.com/) >  **yönetimiKayıt yönetimi** >  **ayarlarıKayıt** >  **etiketleriKayıt** >  **özelliklerinin düzenlenmesine izin** ver'e gidin ve **ardından Kullanıcıların kayıt özelliklerini düzenlemesine izin ver** ayarını kapatın.
+Bu varsayılanı değiştirmek için [Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com/) > **Kayıtlar yönetimi Kayıt yönetimi** > **ayarları** > **Bekletme etiketleri** > **Kayıt özelliklerinin düzenlenmesine izin ver'e** gidin ve **ardından Kullanıcıların kayıt özelliklerini düzenlemesine izin ver** ayarını kapatın.
 
 ## <a name="applying-the-configured-retention-label-to-content"></a>Yapılandırılan bekletme etiketini içeriğe uygulama
 

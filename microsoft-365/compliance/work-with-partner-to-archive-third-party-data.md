@@ -17,12 +17,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 description: Salesforce Chatter, Yahoo Messenger veya Yammer gibi veri kaynaklarından üçüncü taraf verileri içeri aktarmak için özel bağlayıcı ayarlamayı öğrenin.
-ms.openlocfilehash: f0de03fb68b78779b6d1ed057a8b462c5c2a901b
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 02c0d8a61668a0d3dd3e663c1cb4915be15d9a08
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097568"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66015528"
 ---
 # <a name="work-with-a-partner-to-archive-third-party-data"></a>Üçüncü taraf verilerini arşivlemek için bir iş ortağıyla çalışma
 
@@ -403,7 +403,6 @@ Aşağıdaki bölümlerde, Microsoft 365'da üçüncü taraf verilerini arşivle
 
 - YouTube
 
-
 ### <a name="verba"></a>Verba
 
 [Verba](https://www.verba.com) aşağıdaki üçüncü taraf veri kaynaklarını destekler:
@@ -476,7 +475,7 @@ Aşağıdaki bölümlerde, Microsoft 365'da üçüncü taraf verilerini arşivle
 
 Verileri Microsoft 365 aktarmak için üçüncü taraf veri posta kutusu oluşturma ve yapılandırma adımları aşağıdadır. Daha önce açıklandığı gibi, iş ortağı bağlayıcısı öğenin kullanıcı kimliğini bir kullanıcı hesabıyla eşleyemiyorsa öğeler bu posta kutusuna aktarılır.
 
- **Bu görevleri Microsoft 365 yönetim merkezi**
+### <a name="complete-these-tasks-in-the-microsoft-365-admin-center"></a>Bu görevleri Microsoft 365 yönetim merkezi
 
 1. Bir kullanıcı hesabı oluşturun ve Exchange Online Plan 2 lisansı atayın; bkz. [Microsoft 365 kullanıcı ekleme](../admin/add-users/add-users.md). Posta kutusunu Dava Tutma'ya yerleştirmek veya depolama kotası 1,5 TB'a kadar olan bir arşiv posta kutusunu etkinleştirmek için Plan 2 lisansı gerekir.
 
@@ -485,9 +484,9 @@ Verileri Microsoft 365 aktarmak için üçüncü taraf veri posta kutusu oluştu
     > [!TIP]
     > Bu kullanıcı hesabının kimlik bilgilerini not edin. Bunları 4. Adımda açıklandığı gibi iş ortağınıza sağlamanız gerekir.
 
- **Bu görevleri Exchange yönetim merkezinde tamamlayın**
+### <a name="complete-these-tasks-in-the-exchange-admin-center"></a>Bu görevleri Exchange yönetim merkezinde tamamlayın
 
-1. Üçüncü taraf veri posta kutusunu kuruluşunuzdaki adres defterinden ve diğer adres listelerinden gizleyin; bkz. [Kullanıcı posta kutularını yönetme](/exchange/recipients-in-exchange-online/manage-user-mailboxes/manage-user-mailboxes). Alternatif olarak, aşağıdaki PowerShell komutunu çalıştırabilirsiniz:
+1. Üçüncü taraf veri posta kutusunu kuruluşunuzdaki adres defterinden ve diğer adres listelerinden gizleyin; bkz. [Kullanıcı posta kutularını yönetme](/exchange/recipients-in-exchange-online/manage-user-mailboxes/manage-user-mailboxes). Alternatif olarak, aşağıdaki [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) komutunu çalıştırabilirsiniz:
 
     ```powershell
     Set-Mailbox -Identity <identity of third-party data mailbox> -HiddenFromAddressListsEnabled $true
@@ -509,7 +508,7 @@ Verileri Microsoft 365 aktarmak için üçüncü taraf veri posta kutusu oluştu
 
 ## <a name="step-3-configure-user-mailboxes-for-third-party-data"></a>3. Adım: Üçüncü taraf veriler için kullanıcı posta kutularını yapılandırma
 
-Sonraki adım, kullanıcı posta kutularını üçüncü taraf verileri destekleyecek şekilde yapılandırmaktır. <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange yönetim merkezini</a> veya ilgili Windows PowerShell cmdlet'lerini kullanarak bu görevleri tamamlayın.
+Sonraki adım, kullanıcı posta kutularını üçüncü taraf verileri destekleyecek şekilde yapılandırmaktır. <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange yönetim merkezini</a> veya ilgili cmdlet'leri kullanarak bu görevleri tamamlayın.
 
 1. Her kullanıcı için arşiv posta kutusunu etkinleştirin; Bkz [. Arşiv posta kutularını etkinleştirme](enable-archive-mailboxes.md) ve [Arşivlemeyi otomatik genişletmeyi etkinleştirme](enable-autoexpanding-archiving.md).
 
@@ -562,17 +561,17 @@ Kuruluşunuz Azure Active Directory bir üçüncü taraf veri bağlayıcısını
 
 ## <a name="more-information"></a>Daha fazla bilgi
 
-- Daha önce açıklandığı gibi, üçüncü taraf veri kaynaklarından gelen öğeler Exchange posta kutularına e-posta iletisi olarak aktarılır. İş ortağı bağlayıcısı, Microsoft 365 API'sinin gerektirdiği bir şemayı kullanarak öğeyi içeri aktarır. Aşağıdaki tabloda, e-posta iletisi olarak bir Exchange posta kutusuna aktarıldıktan sonra üçüncü taraf veri kaynağındaki bir öğenin ileti özellikleri açıklanmaktadır. Tablo ayrıca ileti özelliğinin zorunlu olup olmadığını gösterir. Zorunlu özellikler doldurulmalıdır. Bir öğede zorunlu bir özellik eksikse öğe Microsoft 365'a aktarılamaz. İçeri aktarma işlemi, bir öğenin neden içeri aktarılamadığı ve hangi özelliğin eksik olduğunu açıklayan bir hata iletisi döndürür.<br/><br/>
+- Daha önce açıklandığı gibi, üçüncü taraf veri kaynaklarından gelen öğeler Exchange posta kutularına e-posta iletisi olarak aktarılır. İş ortağı bağlayıcısı, Microsoft 365 API'sinin gerektirdiği bir şemayı kullanarak öğeyi içeri aktarır. Aşağıdaki tabloda, e-posta iletisi olarak bir Exchange posta kutusuna aktarıldıktan sonra üçüncü taraf veri kaynağındaki bir öğenin ileti özellikleri açıklanmaktadır. Tablo ayrıca ileti özelliğinin zorunlu olup olmadığını gösterir. Zorunlu özellikler doldurulmalıdır. Bir öğede zorunlu bir özellik eksikse öğe Microsoft 365'a aktarılamaz. İçeri aktarma işlemi, bir öğenin neden içeri aktarılamadığı ve hangi özelliğin eksik olduğunu açıklayan bir hata iletisi döndürür.
 
-    |**İleti özelliği**|**Zorunlu?**|**Açıklama**|**Örnek değer**|
-    |:-----|:-----|:-----|:-----|
-    |**KAYNAK** <br/> |Evet  <br/> |Öğeyi ilk olarak üçüncü taraf veri kaynağında oluşturan veya gönderen kullanıcı. İş ortağı bağlayıcısı, kaynak öğedeki kullanıcı kimliğini (örneğin Twitter tanıtıcısı) tüm katılımcılar için bir kullanıcı hesabıyla (KIMDEN ve TO alanlarındaki kullanıcılar) eşlemeyi dener. İletinin bir kopyası her katılımcının posta kutusuna aktarılır. Öğedeki katılımcıların hiçbiri bir kullanıcı hesabıyla eşlenemezse, öğe Microsoft 365 üçüncü taraf arşivleme posta kutusuna aktarılır.  <br/> <br/> Öğenin göndereni olarak tanımlanan katılımcının, öğenin içeri aktarıldığı kuruluşta etkin bir posta kutusu olmalıdır. Gönderenin etkin bir posta kutusu yoksa aşağıdaki hata döndürülür:<br/><br/>  `One or more messages in the Request failed to be delivered to either From or Sender email address. You will need to resend your entire Request. Error: The request failed. The remote server returned an error: (401) Unauthorized.`  | `bob@contoso.com` <br/> |
-    |**HEDEF** <br/> |Evet  <br/> |Veri kaynağındaki bir öğe için uygunsa bir öğe alan kullanıcı.  <br/> | `bob@contoso.com` <br/> |
-    |**KONU** <br/> |Hayır  <br/> |Kaynak öğedeki konu.  <br/> | `"Mega deals with Contoso coming your way! #ContosoHolidayDeals"` <br/> |
-    |**TARİH** <br/> |Evet  <br/> |Öğenin ilk oluşturulduğu veya müşteri veri kaynağında deftere nakledildiği tarih. Örneğin, twitter iletisinin tweetlendiği tarih.  <br/> | `01 NOV 2015` <br/> |
-    |**VÜCUT** <br/> |Hayır  <br/> |İletinin veya gönderinin içeriği. Bazı veri kaynakları için bu özelliğin içeriği **SUBJECT** özelliğinin içeriğiyle aynı olabilir. İçeri aktarma işlemi sırasında, iş ortağı bağlayıcısı içerik kaynağından mümkün olduğunca tam uygunluk sağlamaya çalışır. Kaynak öğenin gövdesindeki olası dosyalar, grafikler veya diğer içerikler bu özelliğe dahil edilir. Aksi takdirde, kaynak öğedeki içerik **ATTACHMENT** özelliğine eklenir. Bu özelliğin içeriği, iş ortağı bağlayıcısı ve kaynak platformun özelliğine bağlıdır.  <br/> | `Author: bob@contoso.com` <br/>  `Date: 10 DEC 2014` <br/>  `Tweet: "Mega deals with Contoso coming your way! #ContosoHolidayDeals"` <br/>  `Date: 01 NOV 2015` <br/> |
-    |**EKİ** <br/> |Hayır  <br/> |Veri kaynağındaki bir öğenin (Twitter'daki bir tweet veya anlık ileti konuşması gibi) ekli bir dosyası varsa veya görüntüler eklerse, iş ortağı bağlantısı önce **BODY** özelliğine ekleri eklemeyi dener. Bu mümkün değilse** EK ** özelliğine eklenir. Diğer ek örnekleri arasında Facebook'taki Beğeniler, içerik kaynağından meta veriler ve bir ileti veya gönderiye verilen yanıtlar yer alır.  <br/> | `image.gif` <br/> |
-    |**MESSAGECLASS** <br/> |Evet  <br/> | Bu, iş ortağı bağlayıcısı tarafından oluşturulan ve doldurulan çok değerli bir özelliktir. Bu özelliğin biçimi şeklindedir  `IPM.NOTE.Source.Event`. (Bu özellik ile  `IPM.NOTE`başlamalıdır. Bu biçim, ileti sınıfına  `IPM.NOTE.X` benzer.) Bu özellik aşağıdaki bilgileri içerir:  <br/><br/>`Source`: Üçüncü taraf veri kaynağını gösterir; örneğin, Twitter, Facebook veya BlackBerry.  <br/> <br/>  `Event`: Öğeleri üreten üçüncü taraf veri kaynağında gerçekleştirilen etkinliğin türünü gösterir; örneğin, Twitter'da bir tweet veya Facebook'ta bir gönderi. Olaylar veri kaynağına özeldir.  <br/> <br/>  Bu özelliğin bir amacı, belirli öğeleri bir öğenin kaynaklandığı veri kaynağına veya olay türüne göre filtrelemektir. Örneğin, eBulma aramasında belirli bir kullanıcı tarafından gönderilen tüm tweet'leri bulmak için bir arama sorgusu oluşturabilirsiniz.  <br/> | `IPM.NOTE.Twitter.Tweet` <br/> |
+  |İleti özelliği|Zorunlu?|Açıklama|Örnek değer|
+  |---|---|---|---|
+  |**KAYNAK**|Evet|Öğeyi ilk olarak üçüncü taraf veri kaynağında oluşturan veya gönderen kullanıcı. İş ortağı bağlayıcısı, kaynak öğedeki kullanıcı kimliğini (örneğin Twitter tanıtıcısı) tüm katılımcılar için bir kullanıcı hesabıyla (KIMDEN ve TO alanlarındaki kullanıcılar) eşlemeyi dener. İletinin bir kopyası her katılımcının posta kutusuna aktarılır. Öğedeki katılımcıların hiçbiri bir kullanıcı hesabıyla eşlenemezse, öğe Microsoft 365 üçüncü taraf arşivleme posta kutusuna aktarılır.  <br/> <br/> Öğenin göndereni olarak tanımlanan katılımcının, öğenin içeri aktarıldığı kuruluşta etkin bir posta kutusu olmalıdır. Gönderenin etkin bir posta kutusu yoksa aşağıdaki hata döndürülür:<br/><br/>  `One or more messages in the Request failed to be delivered to either From or Sender email address. You will need to resend your entire Request. Error: The request failed. The remote server returned an error: (401) Unauthorized.`|`bob@contoso.com`|
+  |**HEDEF**|Evet|Veri kaynağındaki bir öğe için uygunsa bir öğe alan kullanıcı.|`bob@contoso.com`|
+  |**KONU**|Hayır|Kaynak öğedeki konu.|`"Mega deals with Contoso coming your way! #ContosoHolidayDeals"`|
+  |**TARİH**|Evet|Öğenin ilk oluşturulduğu veya müşteri veri kaynağında deftere nakledildiği tarih. Örneğin, twitter iletisinin tweetlendiği tarih.|`01 NOV 2015`|
+  |**VÜCUT**|Hayır|İletinin veya gönderinin içeriği. Bazı veri kaynakları için bu özelliğin içeriği **SUBJECT** özelliğinin içeriğiyle aynı olabilir. İçeri aktarma işlemi sırasında, iş ortağı bağlayıcısı içerik kaynağından mümkün olduğunca tam uygunluk sağlamaya çalışır. Kaynak öğenin gövdesindeki olası dosyalar, grafikler veya diğer içerikler bu özelliğe dahil edilir. Aksi takdirde, kaynak öğedeki içerik **ATTACHMENT** özelliğine eklenir. Bu özelliğin içeriği, iş ortağı bağlayıcısı ve kaynak platformun özelliğine bağlıdır.|`Author: bob@contoso.com` <br/>  `Date: 10 DEC 2014` <br/>  `Tweet: "Mega deals with Contoso coming your way! #ContosoHolidayDeals"` <br/>  `Date: 01 NOV 2015`|
+  |**EKİ**|Hayır|Veri kaynağındaki bir öğenin (Twitter'daki bir tweet veya anlık ileti konuşması gibi) ekli bir dosyası varsa veya görüntüler eklerse, iş ortağı bağlantısı önce **BODY** özelliğine ekleri eklemeyi dener. Bu mümkün değilse** EK ** özelliğine eklenir. Diğer ek örnekleri arasında Facebook'taki Beğeniler, içerik kaynağından meta veriler ve bir ileti veya gönderiye verilen yanıtlar yer alır.|`image.gif`|
+  |**MESSAGECLASS**|Evet|Bu, iş ortağı bağlayıcısı tarafından oluşturulan ve doldurulan çok değerli bir özelliktir. Bu özelliğin biçimi şeklindedir  `IPM.NOTE.Source.Event`. (Bu özellik ile  `IPM.NOTE`başlamalıdır. Bu biçim, ileti sınıfına  `IPM.NOTE.X` benzer.) Bu özellik aşağıdaki bilgileri içerir:  <br/><br/>`Source`: Üçüncü taraf veri kaynağını gösterir; örneğin, Twitter, Facebook veya BlackBerry.  <br/> <br/>  `Event`: Öğeleri üreten üçüncü taraf veri kaynağında gerçekleştirilen etkinliğin türünü gösterir; örneğin, Twitter'da bir tweet veya Facebook'ta bir gönderi. Olaylar veri kaynağına özeldir.  <br/> <br/>  Bu özelliğin bir amacı, belirli öğeleri bir öğenin kaynaklandığı veri kaynağına veya olay türüne göre filtrelemektir. Örneğin, eBulma aramasında belirli bir kullanıcı tarafından gönderilen tüm tweet'leri bulmak için bir arama sorgusu oluşturabilirsiniz.|`IPM.NOTE.Twitter.Tweet`|
 
 - öğeler Microsoft 365'daki posta kutularına başarıyla aktarıldığında, HTTP yanıtının bir parçası olarak çağırana benzersiz bir tanımlayıcı döndürülür. adlı  `x-IngestionCorrelationID`bu tanımlayıcı, öğelerin uçtan uca izlenmesi için iş ortakları tarafından sonraki sorun giderme amacıyla kullanılabilir. İş ortaklarının bu bilgileri yakalaması ve sonunda uygun şekilde günlüğe kaydetmesi önerilir. Bu tanımlayıcıyı gösteren bir HTTP yanıtı örneği aşağıda verilmişti:
 

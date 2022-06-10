@@ -18,18 +18,18 @@ ms.assetid: 4e8ff113-6361-41e2-915a-6338a7e2a1ed
 ms.custom:
 - seo-marvel-apr2020
 description: Kuruluşunuzdaki Exchange, SharePoint ve OneDrive İş kısmen dizine alınmış öğeleri (dizine alınmamış öğeler olarak da adlandırılır) yönetmeyi öğrenin.
-ms.openlocfilehash: aa9071cfb99219bea6c5c0d640c9e6e4255e316d
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 373072ff1b1a893a8de970ccb6eacbdcd14b48d3
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65419978"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66014960"
 ---
 # <a name="investigating-partially-indexed-items-in-ediscovery"></a>eBulma'da kısmen dizine alınan öğeleri araştırma
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Microsoft Purview uyumluluk portalı çalıştırdığınız bir eBulma araması, bir arama çalıştırdığınızda tahmini arama sonuçlarında otomatik olarak kısmen dizine alınan öğeler içerir. Kısmen dizine alınan öğeler, SharePoint ve OneDrive İş sitelerindeki posta kutusu öğeleri ve belgeleri Exchange ve herhangi bir nedenle arama için tamamen dizine eklenmedi. Çoğu e-posta iletisi ve site belgesi, [e-posta iletileri için Dizin oluşturma sınırları](limits-for-content-search.md#indexing-limits-for-email-messages) içinde olduğundan başarıyla dizinlenir. Ancak, bazı öğeler bu dizin oluşturma sınırlarını aşabilir ve kısmen dizine alınabilir. eBulma araması çalıştırdığınızda öğelerin arama için dizine alınamamalarının ve kısmen dizine alınan öğeler olarak döndürüllerinin diğer nedenleri şunlardır:
+Microsoft Purview uyumluluk portalından çalıştırdığınız bir eBulma araması, bir arama çalıştırdığınızda tahmini arama sonuçlarında otomatik olarak kısmen dizine alınmış öğeler içerir. Kısmen dizine alınan öğeler, SharePoint ve OneDrive İş sitelerindeki posta kutusu öğeleri ve belgeleri Exchange ve herhangi bir nedenle arama için tamamen dizine eklenmedi. Çoğu e-posta iletisi ve site belgesi, [e-posta iletileri için Dizin oluşturma sınırları](limits-for-content-search.md#indexing-limits-for-email-messages) içinde olduğundan başarıyla dizinlenir. Ancak, bazı öğeler bu dizin oluşturma sınırlarını aşabilir ve kısmen dizine alınabilir. eBulma araması çalıştırdığınızda öğelerin arama için dizine alınamamalarının ve kısmen dizine alınan öğeler olarak döndürüllerinin diğer nedenleri şunlardır:
   
 - E-posta iletilerinin ekli bir dosyası vardır ve bu dosya açılamaz; Bu, kısmen dizine alınan e-posta öğelerinin en yaygın nedenidir.
 
@@ -125,7 +125,7 @@ Aşağıdaki adımlar, tüm Exchange posta kutularındaki tüm öğeleri arayan 
 
    ```powershell
      write-host "**************************************************"
-     write-host "     Security & Compliance Center PowerShell      " -foregroundColor yellow -backgroundcolor darkgreen
+     write-host "     Security & Compliance PowerShell      " -foregroundColor yellow -backgroundcolor darkgreen
      write-host "   eDiscovery Partially Indexed Item Statistics   " -foregroundColor yellow -backgroundcolor darkgreen
      write-host "**************************************************"
      " " 
@@ -166,9 +166,9 @@ Aşağıdaki adımlar, tüm Exchange posta kutularındaki tüm öğeleri arayan 
      }
    ```
 
-2. [Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/exchange-online-powershell).
+2. [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/exchange-online-powershell).
 
-3. Güvenlik & Uyumluluk Merkezi PowerShell'de, 1. adımda betiği kaydettiğiniz klasöre gidin ve betiği çalıştırın; örneğin:
+3. Güvenlik & Uyumluluğu PowerShell'de, 1. adımda betiği kaydettiğiniz klasöre gidin ve betiği çalıştırın; örneğin:
 
    ```powershell
    .\PartiallyIndexedItems.ps1

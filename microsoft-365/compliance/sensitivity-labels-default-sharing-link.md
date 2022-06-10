@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: SharePoint ve OneDrive site ve belgeler için varsayılan paylaşım bağlantı türünü yapılandırmak için duyarlılık etiketlerini kullanın.
-ms.openlocfilehash: 132a526cc591f34722e4c0e8d4982859790558da
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: 0c72d35399a0185bbd8cf58b5eac58241a695b72
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65286900"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66012328"
 ---
 # <a name="use-sensitivity-labels-to-configure-the-default-sharing-link-type-for-sites-and-documents-in-sharepoint-and-onedrive"></a>SharePoint ve OneDrive'da siteler ve belgeler için varsayılan paylaşım bağlantı türünü yapılandırmak için duyarlılık etiketlerini kullanma
 
@@ -58,14 +58,14 @@ Siteler için varsayılan paylaşım bağlantı türünü uygulamak için kapsay
 
 SharePoint ve OneDrive belgeler için varsayılan paylaşım bağlantı türünü uygulamak için bu hizmetler için duyarlılık etiketlerinin etkinleştirilmesi gerekir. Bu özellik kiracınız için henüz etkinleştirilmediyse bkz. [SharePoint ve OneDrive için duyarlılık etiketlerini etkinleştirme (kabul)](sensitivity-labels-sharepoint-onedrive-files.md#how-to-enable-sensitivity-labels-for-sharepoint-and-onedrive-opt-in) .
 
-PowerShell oturumunda, varsayılan paylaşım bağlantı türü [ayarlarını yapılandırmak için Office 365 Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanmanız](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell) gerekir.
+PowerShell oturumunda, varsayılan paylaşım bağlantı türü [ayarlarını yapılandırmak için Office 365 Güvenlik & Uyumluluğu PowerShell'e bağlanmanız](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell) gerekir.
 
 > [!NOTE]
 > Gerekli olmasa da, önce [Microsoft Purview uyumluluk portalında duyarlılık etiketleri oluşturup yapılandırmak ve](create-sensitivity-labels.md) ardından bu etiketleri varsayılan paylaşım bağlantı türünü yapılandıran ayarlarla değiştirmek en kolay seçenektir.
 
 ## <a name="how-to-configure-settings-for-the-default-sharing-link-type"></a>Varsayılan paylaşım bağlantı türü için ayarları yapılandırma
 
-Varsayılan paylaşım bağlantı türünün yapılandırma ayarları [, Güvenlik & Uyumluluk Merkezi](/powershell/exchange/scc-powershell) PowerShell'in [Set-Label](/powershell/module/exchange/set-label) ve [New-Label](/powershell/module/exchange/new-labelpolicy) cmdlet'leri ile PowerShell *AdvancedSettings* parametresini kullanır:
+Varsayılan paylaşım bağlantı türünün yapılandırma ayarları [, Güvenlik & Uyumluluğu](/powershell/exchange/scc-powershell) PowerShell'in [Set-Label](/powershell/module/exchange/set-label) ve [New-Label](/powershell/module/exchange/new-labelpolicy) cmdlet'leri ile PowerShell *AdvancedSettings* parametresini kullanır:
 
 - **DefaultSharingScope**: Kullanılabilir değerler şunlardır:
     - **SpecificPeople**: Site için varsayılan paylaşım bağlantısını "Belirli kişiler" bağlantısına ayarlar

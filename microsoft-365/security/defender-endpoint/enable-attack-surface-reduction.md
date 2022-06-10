@@ -19,12 +19,12 @@ ms.collection:
 - M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.date: 1/18/2022
-ms.openlocfilehash: 04eee4c44e0cf2b712ecab84b18837d7b3705cef
-ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
+ms.openlocfilehash: 31af082f66836ecfbe6a7cd804fd3b7bba2ed4bd
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65669814"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66012394"
 ---
 # <a name="enable-attack-surface-reduction-rules"></a>Saldırı yüzeyi azaltma kurallarını etkinleştirme
 
@@ -142,7 +142,7 @@ ASR kurallarını etkinleştirmeye yönelik aşağıdaki yordamlar, dosya ve kla
 
 4. Üç yapılandırma bölmesinde **Tamam'ı** seçin. Ardından yeni bir uç nokta koruma dosyası oluşturuyorsanız **Oluştur'u** veya mevcut bir dosyayı düzenliyorsanız **Kaydet'i** seçin.
 
-#### <a name="endpoint-security-policy"></a>Uç nokta güvenlik ilkesi**
+#### <a name="endpoint-security-policy"></a>Uç nokta güvenlik ilkesi
 
 1. **Endpoint Security** \> **Attack yüzey azaltma'ya** tıklayın. Var olan bir ASR kuralını seçin veya yeni bir kural oluşturun. Yeni bir profil oluşturmak için **İlke Oluştur'u** seçin ve bu profille ilgili bilgileri girin. **Profil türü için** **Saldırı yüzeyi azaltma kuralları'yı** seçin. Mevcut bir profili seçtiyseniz **Özellikler'i** ve ardından **Ayarlar'ı** seçin.
 

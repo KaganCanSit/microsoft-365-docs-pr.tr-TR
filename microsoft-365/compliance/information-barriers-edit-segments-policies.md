@@ -13,12 +13,12 @@ ms.collection:
 ms.localizationpriority: ''
 f1.keywords:
 - NOCSH
-ms.openlocfilehash: a4962ba35ef2a66067acdf2676dbe34e63de99c5
-ms.sourcegitcommit: 99494a5530ad64802f341573ad42796134190296
+ms.openlocfilehash: eaaa98233a839f41c008052ab91c5c0f45f8eb13
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65396240"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66014195"
 ---
 # <a name="manage-information-barriers-policies"></a>Bilgi engeli ilkelerini yönetme
 
@@ -42,7 +42,7 @@ ms.locfileid: "65396240"
 | [Sorun giderme bilgileri engelleri](/office365/troubleshoot/information-barriers/information-barriers-troubleshooting) | Bilgi engelleriyle ilgili beklenmeyen sorunlarla karşılaştığınızda bu makaleye bakın. |
 
 >[!IMPORTANT]
->Bu makalede açıklanan görevleri gerçekleştirmek için size aşağıdakilerden biri gibi uygun bir rol atanmalıdır:<br>- Microsoft 365 Kurumsal Genel Yöneticisi<br>- Genel Yönetici<br>- Uyumluluk Yöneticisi<br>- IB Uyumluluk Yönetimi (bu yeni bir roldür!)<br><br>Bilgi engellerine yönelik önkoşullar hakkında daha fazla bilgi edinmek için bkz[. Önkoşullar (bilgi engeli ilkeleri için).](information-barriers-policies.md#step-1-make-sure-prerequisites-are-met)<br><br> [Güvenlik & Uyumluluk Merkezi PowerShell'e bağlandığınızdan](/powershell/exchange/connect-to-scc-powershell) emin olun.
+>Bu makalede açıklanan görevleri gerçekleştirmek için size aşağıdakilerden biri gibi uygun bir rol atanmalıdır:<br>- Microsoft 365 Kurumsal Genel Yöneticisi<br>- Genel Yönetici<br>- Uyumluluk Yöneticisi<br>- IB Uyumluluk Yönetimi (bu yeni bir roldür!)<br><br>Bilgi engellerine yönelik önkoşullar hakkında daha fazla bilgi edinmek için bkz[. Önkoşullar (bilgi engeli ilkeleri için).](information-barriers-policies.md#step-1-make-sure-prerequisites-are-met)<br><br> [Güvenlik & Uyumluluğu PowerShell'e bağlandığınızdan](/powershell/exchange/connect-to-scc-powershell) emin olun.
 
 ## <a name="edit-user-account-attributes"></a>Kullanıcı hesabı özniteliklerini düzenleme
 

@@ -19,12 +19,12 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 description: Microsoft Purview uyumluluk portalından bağımsız olarak komut satırından bekletme etiketleri oluşturmak ve yayımlamak için PowerShell'i kullanmayı öğrenin.
-ms.openlocfilehash: 7d650c87aad92cdb65ed9a40c98c8fc3c94e01fb
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: f2a01024f6c2a05eb5d584112f9a828ac2c3058c
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65287166"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66011770"
 ---
 # <a name="create-and-publish-retention-labels-by-using-powershell"></a>PowerShell kullanarak bekletme etiketleri oluşturma ve yayımlama
 
@@ -739,11 +739,11 @@ if ($ResultCSV)
 
 ## <a name="step-4-run-the-powershell-script"></a>4. Adım: PowerShell betiğini çalıştırma
 
-İlk olarak[, Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
+İlk olarak[, Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
 
 Ardından bekletme etiketlerini oluşturan ve yayımlayan betiği çalıştırın:
   
-1. Güvenlik & Uyumluluk Merkezi PowerShell oturumunuzda yolu, ardından betiğin karakterlerini `.\` ve dosya adını girin ve ardından enter tuşuna basarak betiği çalıştırın. Örneğin:
+1. Güvenlik & Uyumluluğu PowerShell oturumunuzda yolu girin, ardından betiğin karakterlerini `.\` ve dosya adını girin ve ardından betiği çalıştırmak için ENTER tuşuna basın. Örneğin:
     
     ```powershell
     <path>.\CreateRetentionSchedule.ps1

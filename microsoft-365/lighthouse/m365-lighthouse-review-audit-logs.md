@@ -4,6 +4,7 @@ f1.keywords: CSH
 ms.author: sharik
 author: SKjerland
 manager: scotv
+ms-reviewer: vivkuma
 audience: Admin
 ms.topic: article
 ms.prod: microsoft-365-lighthouse
@@ -16,12 +17,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için denetim günlüklerini gözden geçirmeyi öğrenin.
-ms.openlocfilehash: 59e45f33b1c6708b4743605bda6ac4c93499bf59
-ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
+ms.openlocfilehash: a357d6d4383fb967b09d1ce3dc1be68d7fd2ca4f
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65188778"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66017520"
 ---
 # <a name="review-audit-logs-in-microsoft-365-lighthouse"></a>Microsoft 365 Lighthouse'de denetim günlüklerini gözden geçirme
 
@@ -60,14 +61,14 @@ Aşağıdaki tabloda Lighthouse denetim günlüklerinde yakalanan etkinlikler li
 | Etkinlik adı | Lighthouse'da alan | Eylem başlatıldı | Hizmet etkilendi |
 |--|--|--|--|
 | **uygulama** veya **dağıtma** | Kiracı | Dağıtım planı uygulama | Azure AD, Microsoft Endpoint Manager (MEM) |
-| **assignTag** | Kiracı | Müşteriden etiket uygulama | Deniz feneri |
-| **changeDeploymentStatus** veya **assign** | Kiracı | Dağıtım planı için eylem planı durumunu güncelleştirme | Deniz feneri |
+| **assignTag** | Kiracı | Müşteriden etiket uygulama | Lighthouse |
+| **changeDeploymentStatus** veya **assign** | Kiracı | Dağıtım planı için eylem planı durumunu güncelleştirme | Lighthouse |
 | **managedTenantOperations** | Kiracı | Dağıtım planıyla ilgili bilgileri görüntüleme | Azure AD |
-| **offboardTenant** | Kiracı | Müşteriyi devre dışı bırakma | Deniz feneri |
-| **resetTenantOnboardingStatus** | Kiracı | Müşteriyi yeniden etkinleştirme | Deniz feneri |
-| **tenantTags** | Kiracı | Etiket oluşturma veya silme | Deniz feneri |
-| **tenantCustomizedInformation** | Kiracı | Müşteri web sitesi veya iletişim bilgilerini oluşturma, güncelleştirme veya silme | Deniz feneri |
-| **unassignTag** | Kiracı | Müşteriden etiket kaldırma | Deniz feneri |
+| **offboardTenant** | Kiracı | Müşteriyi devre dışı bırakma | Lighthouse |
+| **resetTenantOnboardingStatus** | Kiracı | Müşteriyi yeniden etkinleştirme | Lighthouse |
+| **tenantTags** | Kiracı | Etiket oluşturma veya silme | Lighthouse |
+| **tenantCustomizedInformation** | Kiracı | Müşteri web sitesi veya iletişim bilgilerini oluşturma, güncelleştirme veya silme | Lighthouse |
+| **unassignTag** | Kiracı | Müşteriden etiket kaldırma | Lighthouse |
 | **Doğrulamak** | Kiracı | Dağıtım planını test edin | Azure AD |
 | **blockUserSignin** | Kullanıcılar | Oturum açmayı engelle | Azure AD |
 | **confirmUsersCompromised** | Kullanıcılar | Bir kullanıcının gizliliğinin tehlikeye girdiğini onaylama | Azure AD |

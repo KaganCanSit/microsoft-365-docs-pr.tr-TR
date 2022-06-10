@@ -11,12 +11,12 @@ ms.topic: article
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 description: Exchange posta kutularında e-postayı, SharePoint sitelerdeki ve OneDrive konumlarındaki belgeleri ve Skype Kurumsal'deki anlık ileti konuşmalarını hızla bulmak için Microsoft Purview uyumluluk portalındaki İçerik arama eBulma aracını kullanın.
-ms.openlocfilehash: 30398f91a0ab7807ea3438e6bfdde3606e918a4d
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: cf5c6b61e9b4cc041d9f8e315321c63c78415a63
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092259"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66009441"
 ---
 # <a name="search-for-content-using-the-content-search-tool"></a>İçerik arama aracını kullanarak içerik arama
 
@@ -70,7 +70,7 @@ Bir aramayı çalıştırdıktan ve gerektiği gibi daraltdıktan sonra, sonraki
 
 ## <a name="use-scripts-for-advanced-scenarios"></a>Gelişmiş senaryolar için betikleri kullanma
 
-Bazen daha gelişmiş, karmaşık ve yinelenen içerik arama görevleri gerçekleştirmeniz gerekir. Bu gibi durumlarda, Güvenlik & Uyumluluk Merkezi PowerShell'de komutları kullanmak daha kolay ve daha hızlıdır. Bunu kolaylaştırmaya yardımcı olmak için, içerik aramayla ilgili karmaşık görevleri tamamlamanıza yardımcı olacak bir dizi Güvenlik & Uyumluluk Merkezi PowerShell betikleri oluşturduk.
+Bazen daha gelişmiş, karmaşık ve yinelenen içerik arama görevleri gerçekleştirmeniz gerekir. Bu gibi durumlarda, Güvenlik & Uyumluluk PowerShell'de komutları kullanmak daha kolay ve daha hızlıdır. Bunu kolaylaştırmaya yardımcı olmak için, içerik aramayla ilgili karmaşık görevleri tamamlamanıza yardımcı olmak için bir dizi Güvenlik & Uyumluluk PowerShell betikleri oluşturduk.
 
 - Bir servis talebine yanıt veren öğelerin söz konusu klasörde bulunduğundan emin olduğunuzda [belirli posta kutusu ve site klasörlerinde](use-content-search-for-targeted-collections.md) (*hedeflenen* koleksiyon olarak adlandırılır) arama yapın
 

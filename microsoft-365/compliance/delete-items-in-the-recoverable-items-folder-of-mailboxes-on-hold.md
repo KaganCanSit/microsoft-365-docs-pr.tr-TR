@@ -20,12 +20,12 @@ description: Yöneticilerin, kullanıcının Exchange Online posta kutusu için 
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
-ms.openlocfilehash: 808bc02eb711ff72ec8bd329b1367145d2d991a9
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: c30dc8b334061f2a911f847ed2567f046254a1f5
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65091753"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66016382"
 ---
 # <a name="delete-items-in-the-recoverable-items-folder-of-cloud-based-mailboxes-on-hold"></a>Beklemedeki bulut tabanlı posta kutularının Kurtarılabilir Öğeler klasöründeki öğeleri silme
 
@@ -208,23 +208,23 @@ In-Place Ayrı Tutma'yı belirledikten sonra, posta kutusunu ayrı tutmadan kald
   
 ### <a name="retention-policies-applied-to-specific-mailboxes"></a>Belirli posta kutularına uygulanan bekletme ilkeleri
   
-Posta kutusuna uygulanan bekletme ilkesini belirlemek için [Güvenlik & Uyumluluk Merkezi PowerShell'de](/powershell/exchange/connect-to-scc-powershell) aşağıdaki komutu çalıştırın. Bu komut, posta kutusuna uygulanan Teams konuşma bekletme ilkelerini de döndürür. 1. Adımda tanımladığınız bekletme ilkesi için GUID'yi (veya `skp` ön eki dahil `mbx` değil) kullanın.
+Posta kutusuna uygulanan bekletme ilkesini belirlemek için [Güvenlik & Uyumluluk PowerShell'de](/powershell/exchange/connect-to-scc-powershell) aşağıdaki komutu çalıştırın. Bu komut, posta kutusuna uygulanan Teams konuşma bekletme ilkelerini de döndürür. 1. Adımda tanımladığınız bekletme ilkesi için GUID'yi (veya `skp` ön eki dahil `mbx` değil) kullanın.
 
 ```powershell
 Get-RetentionCompliancePolicy <retention policy GUID without prefix> | FL Name
 ```
 
-Bekletme ilkesini tanımladıktan sonra uyumluluk portalında **Veri yaşam döngüsü** **yönetimiYenileştirme** >  sayfasına gidin, önceki adımda tanımladığınız bekletme ilkesini düzenleyin ve posta kutusunu bekletme ilkesine dahil edilen alıcılar listesinden kaldırın.
+Bekletme ilkesini tanımladıktan sonra uyumluluk portalında **Veri yaşam döngüsü yönetimi** > **Bekletme** sayfasına gidin, önceki adımda tanımladığınız bekletme ilkesini düzenleyin ve posta kutusunu bekletme ilkesine dahil edilen alıcılar listesinden kaldırın.
   
 ### <a name="organization-wide-retention-policies"></a>Kuruluş genelinde saklama ilkeleri
   
-Kuruluş genelinde, Exchange genelinde ve Teams genelinde saklama ilkeleri kuruluştaki her posta kutusuna uygulanır. Bunlar kuruluş düzeyinde (posta kutusu düzeyinde değil) uygulanır ve 1. Adımda **Get-OrganizationConfig** cmdlet'ini çalıştırdığınızda döndürülür. Kuruluş genelinde saklama ilkelerini tanımlamak için [Güvenlik & Uyumluluk Merkezi PowerShell'de](/powershell/exchange/exchange-online-powershell) aşağıdaki komutu çalıştırın. 1. Adımda tanımladığınız kuruluş genelinde saklama ilkeleri için GUID'yi (ön ek dahil  `mbx` değil) kullanın.
+Kuruluş genelinde, Exchange genelinde ve Teams genelinde saklama ilkeleri kuruluştaki her posta kutusuna uygulanır. Bunlar kuruluş düzeyinde (posta kutusu düzeyinde değil) uygulanır ve 1. Adımda **Get-OrganizationConfig** cmdlet'ini çalıştırdığınızda döndürülür. Kuruluş genelinde saklama ilkelerini tanımlamak için [Güvenlik & Uyumluluk PowerShell'de](/powershell/exchange/exchange-online-powershell) aşağıdaki komutu çalıştırın. 1. Adımda tanımladığınız kuruluş genelinde saklama ilkeleri için GUID'yi (ön ek dahil  `mbx` değil) kullanın.
 
 ```powershell
 Get-RetentionCompliancePolicy <retention policy GUID without prefix> | FL Name
 ```
 
-Kuruluş genelinde saklama ilkelerini tanımladıktan sonra, uyumluluk portalında **Veri yaşam döngüsü** **yönetimiYenileştirme** >  sayfasına gidin, önceki adımda tanımladığınız kuruluş genelindeki her saklama ilkesini düzenleyin ve posta kutusunu dışlanan alıcılar listesine ekleyin. Bunu yaptığınızda kullanıcının posta kutusu bekletme ilkesinden kaldırılır.
+Kuruluş genelinde saklama ilkelerini tanımladıktan sonra uyumluluk portalında **Veri yaşam döngüsü yönetimi** > **Bekletme** sayfasına gidin, önceki adımda tanımladığınız kuruluş genelindeki her saklama ilkesini düzenleyin ve posta kutusunu dışlanan alıcılar listesine ekleyin. Bunu yaptığınızda kullanıcının posta kutusu bekletme ilkesinden kaldırılır.
 
 > [!IMPORTANT]
 > Bir posta kutusunu kuruluş genelinde saklama ilkesinden dışladıktan sonra, bu değişikliğin eşitlenmesi ve posta kutusunun ilkeden kaldırılması 24 saat kadar sürebilir.
@@ -249,7 +249,7 @@ Etiketler hakkında daha fazla bilgi için bkz. [Bekletme ilkeleri ve bekletme e
 
 ### <a name="ediscovery-holds"></a>eBulma tutmaları
   
-Posta kutusuna uygulanan bir eBulma olayıyla (*eBulma tutmaları* olarak adlandırılır) ilişkili ayrı tutmayı belirlemek için [Güvenlik & Uyumluluk Merkezi PowerShell'de](/powershell/exchange/connect-to-scc-powershell) aşağıdaki komutları çalıştırın. 1. Adımda tanımladığınız eBulma ayrılığı için GUID'yi (ön ek dahil  `UniH` değil) kullanın. İkinci komut, ayrı tutmanın ilişkili olduğu eBulma olayının adını görüntüler; üçüncü komut, ayrı tutmanın adını görüntüler.
+Posta kutusuna uygulanan bir eBulma olayıyla (*eBulma tutmaları* olarak adlandırılır) ilişkili ayrı tutmayı belirlemek için [Güvenlik & Uyumluluk PowerShell'de](/powershell/exchange/connect-to-scc-powershell) aşağıdaki komutları çalıştırın. 1. Adımda tanımladığınız eBulma ayrılığı için GUID'yi (ön ek dahil  `UniH` değil) kullanın. İkinci komut, ayrı tutmanın ilişkili olduğu eBulma olayının adını görüntüler; üçüncü komut, ayrı tutmanın adını görüntüler.
   
 ```powershell
 $CaseHold = Get-CaseHoldPolicy <hold GUID without prefix>
@@ -285,7 +285,7 @@ Set-Mailbox <username> -RemoveDelayReleaseHoldApplied
 
 ## <a name="step-5-delete-items-in-the-recoverable-items-folder"></a>5. Adım: Kurtarılabilir Öğeler klasöründeki öğeleri silme
 
-Artık Güvenlik & Uyumluluk Merkezi PowerShell'deki [New-ComplianceSearch](/powershell/module/exchange/new-compliancesearch) ve [New-ComplianceSearchAction](/powershell/module/exchange/new-compliancesearchaction) cmdlet'lerini kullanarak Kurtarılabilir Öğeler klasöründeki öğeleri silmeye hazırsınız.
+Artık, Güvenlik & Uyumluluk PowerShell'de [Yeni UyumlulukSearch](/powershell/module/exchange/new-compliancesearch) ve [New-ComplianceSearchAction](/powershell/module/exchange/new-compliancesearchaction) cmdlet'lerini kullanarak Kurtarılabilir Öğeler klasöründeki öğeleri silmeye hazırsınız.
 
 Kurtarılabilir Öğeler klasöründe bulunan öğeleri aramak için *, hedeflenen bir koleksiyon* gerçekleştirmenizi öneririz. Bu, aramanızın kapsamını yalnızca Kurtarılabilir Öğeler klasöründe bulunan öğelerle sınırlandırdığınız anlamına gelir. Bunu yapmak [için hedeflenen koleksiyonlar için İçerik Arama'yı kullanma](use-content-search-for-targeted-collections.md) makalesindeki betiği çalıştırabilirsiniz. Bu betik, hedef Kurtarılabilir Öğeler klasöründeki tüm alt klasörler için klasör kimliği özelliğinin değerini döndürür. Ardından, bu klasörde bulunan öğeleri döndürmek için bir arama sorgusunda klasör kimliğini kullanırsınız.
 
@@ -303,7 +303,7 @@ Bir kullanıcının Kurtarılabilir Öğeler klasöründeki öğeleri arama ve s
 
    - **SubstrateHolds**: Teams ve diğer bulut tabanlı uygulamalardan bir saklama ilkesi veya başka bir saklama türü tarafından korunan sabit silinmiş öğeleri içerir. Bu alt klasör son kullanıcılar tarafından görülemez.
 
-3. **New-ComplianceSearch** cmdlet'ini kullanın (Güvenlik & Uyumluluk Merkezi PowerShell'de) veya uyumluluk merkezindeki İçerik arama aracını kullanarak hedef kullanıcının Kurtarılabilir Öğeler klasöründeki öğeleri döndüren bir içerik araması oluşturun. Aramak istediğiniz tüm alt klasörler için arama sorgusuna FolderId değerini ekleyerek bunu yapabilirsiniz. Örneğin, aşağıdaki sorgu Silmeler ve eBulmaHolds alt klasörlerindeki tüm iletileri döndürür:
+3. **New-ComplianceSearch** cmdlet'ini (Güvenlik & Uyumluluk PowerShell'de) kullanın veya uyumluluk merkezindeki İçerik arama aracını kullanarak hedef kullanıcının Kurtarılabilir Öğeler klasöründeki öğeleri döndüren bir içerik araması oluşturun. Aramak istediğiniz tüm alt klasörler için arama sorgusuna FolderId değerini ekleyerek bunu yapabilirsiniz. Örneğin, aşağıdaki sorgu Silmeler ve eBulmaHolds alt klasörlerindeki tüm iletileri döndürür:
 
    ```text
    folderid:<folder ID of Deletions subfolder> OR folderid:<folder ID of DiscoveryHolds subfolder>
@@ -314,7 +314,7 @@ Bir kullanıcının Kurtarılabilir Öğeler klasöründeki öğeleri arama ve s
    > [!NOTE]
    > Kurtarılabilir Öğeler klasöründe arama yapmak için **New-ComplianceSearch** cmdlet'ini kullanıyorsanız aramayı çalıştırmak için **Start-ComplianceSearch** cmdlet'ini kullandığınızdan emin olun.
 
-4. İçerik araması oluşturduktan ve silmek istediğiniz öğeleri döndürdüğünü doğruladıktan sonra, önceki adımda oluşturduğunuz içerik araması tarafından döndürülen öğeleri kalıcı olarak silmek için komutunu (Güvenlik & Uyumluluk Merkezi PowerShell'de) kullanın `New-ComplianceSearchAction -Purge -PurgeType HardDelete` . Örneğin, aşağıdaki komuta benzer bir komut çalıştırabilirsiniz:
+4. İçerik araması oluşturduktan ve silmek istediğiniz öğeleri döndürdüğünü doğruladıktan sonra, önceki adımda oluşturduğunuz içerik araması tarafından döndürülen öğeleri kalıcı olarak silmek için komutunu kullanın `New-ComplianceSearchAction -Purge -PurgeType HardDelete` (Güvenlik & Uyumluluk PowerShell'de). Örneğin, aşağıdaki komuta benzer bir komut çalıştırabilirsiniz:
 
    ```powershell
    New-ComplianceSearchAction -SearchName "RecoverableItems" -Purge -PurgeType HardDelete
@@ -399,15 +399,15 @@ Exchange Online PowerShell'de aşağıdaki adımları (belirtilen sırada) gerç
 
     **Belirli posta kutularına uygulanan bekletme ilkeleri**
 
-    Posta kutusunu bekletme ilkesine geri eklemek için uyumluluk portalını kullanın. Uyumluluk merkezindeki **Veri yaşam döngüsü** **yönetimiYenileştirme** >  sayfasına gidin, bekletme ilkesini düzenleyin ve posta kutusunu bekletme ilkesinin uygulandığı alıcılar listesine yeniden ekleyin.
+    Posta kutusunu bekletme ilkesine geri eklemek için uyumluluk portalını kullanın. Uyumluluk merkezinde **Veri yaşam döngüsü yönetimi** > **Bekletme** sayfasına gidin, bekletme ilkesini düzenleyin ve posta kutusunu bekletme ilkesinin uygulandığı alıcılar listesine geri ekleyin.
 
     **Kuruluş genelinde saklama ilkeleri**
 
-    Kuruluş genelinde veya Exchange genelinde saklama ilkesini ilkenin dışında tutarak kaldırdıysanız, posta kutusunu dışlanan kullanıcılar listesinden kaldırmak için uyumluluk portalını kullanın. Uyumluluk merkezindeki **Veri yaşam döngüsü** **yönetimiYenileştirme** >  sayfasına gidin, kuruluş genelinde bekletme ilkesini düzenleyin ve posta kutusunu dışlanan alıcılar listesinden kaldırın. Bunu yaptığınızda, bekletme ilkesi kullanıcının posta kutusuna yeniden gerçekleştirilir.
+    Kuruluş genelinde veya Exchange genelinde saklama ilkesini ilkenin dışında tutarak kaldırdıysanız, posta kutusunu dışlanan kullanıcılar listesinden kaldırmak için uyumluluk portalını kullanın. Uyumluluk merkezindeki **Veri yaşam döngüsü yönetimi** > **Bekletme** sayfasına gidin, kuruluş genelinde bekletme ilkesini düzenleyin ve posta kutusunu dışlanan alıcılar listesinden kaldırın. Bunu yaptığınızda, bekletme ilkesi kullanıcının posta kutusuna yeniden gerçekleştirilir.
 
     **eBulma büyük/küçük harf tutmaları**
 
-    Posta kutusunu eBulma olayıyla ilişkili ayrı tutmaya geri eklemek için uyumluluk portalını kullanın. **eBulma** >  **Çekirdeği** sayfasına gidin, servis talebini açın ve posta kutusunu ayrı tutmaya geri ekleyin. 
+    Posta kutusunu eBulma olayıyla ilişkili ayrı tutmaya geri eklemek için uyumluluk portalını kullanın. **eBulma** > **Çekirdeği** sayfasına gidin, servis talebini açın ve posta kutusunu ayrı tutmaya geri ekleyin. 
 
 5. Yönetilen Klasör Yardımcısı'nın posta kutusunu yeniden işlemesine izin vermek için aşağıdaki komutu çalıştırın. Daha önce belirtildiği gibi, Yönetilen Klasör Yardımcısı'nı yeniden etkinleştirmeden önce bir saklama veya saklama ilkesini yeniden uygulamadan (ve yerinde olduğunu doğruladıktan) sonra 24 saat beklemenizi öneririz.
 
@@ -435,6 +435,6 @@ Daha önce açıklandığı gibi, Kurtarılabilir Öğeler klasöründeki öğel
 |:-----|:-----|:-----|
 |Dava Tutma  <br/> | `True` <br/> |*LitigationHoldEnabled* özelliği olarak `True`ayarlanır.  <br/> |
 |In-Place Tutma  <br/> | `c0ba3ce811b6432a8751430937152491` <br/> |*InPlaceHolds* özelliği, posta kutusuna yerleştirilen In-Place Tutmanın GUID'sini içerir. GUID bir ön ek ile başlamadığından bunun bir In-Place Ayrı Tutma olduğunu anlayabilirsiniz.  <br/> Exchange Online PowerShell'de komutunu kullanarak `Get-MailboxSearch -InPlaceHoldIdentity <hold GUID> | FL` posta kutusunda In-Place Tutma hakkında bilgi alabilirsiniz.  <br/> |
-| Uyumluluk portalında belirli posta kutularına uygulanan bekletme ilkeleri  <br/> | `mbxcdbbb86ce60342489bff371876e7f224` <br/> veya  <br/>  `skp127d7cf1076947929bf136b7a2a8c36f` <br/> |**Get-Mailbox** *cmdlet'ini çalıştırdığınızda, InPlaceHolds* özelliği posta kutusuna uygulanan bekletme ilkelerinin GUID'lerini de içerir. GUID ön ekiyle  `mbx` başladığından bekletme ilkelerini tanımlayabilirsiniz. Bekletme ilkesinin GUID'i ön ek ile `skp` başlıyorsa, bekletme ilkesinin Skype Kurumsal konuşmalara uygulandığını gösterir.  <br/> Posta kutusuna uygulanan bekletme ilkesinin kimliğini doğrulamak için Güvenlik & Uyumluluk Merkezi PowerShell'de aşağıdaki komutu çalıştırın: <br/> <br/>`Get-RetentionCompliancePolicy <retention policy GUID without prefix> | FL Name`<br/><br/>Bu komutu çalıştırdığınızda veya `skp` ön ekini `mbx` kaldırdığınızdan emin olun.  <br/> |
-|Uyumluluk portalında kuruluş genelinde saklama ilkeleri  <br/> |Değer yok  <br/> veya  <br/>  `-mbxe9b52bf7ab3b46a286308ecb29624696` (posta kutusunun kuruluş genelindeki bir ilkenin dışında tutulduğunu gösterir)  <br/> |**Get-Mailbox** cmdlet'ini çalıştırdığınızda *InPlaceHolds* özelliği boş olsa bile, posta kutusuna bir veya daha fazla kuruluş genelinde bekletme ilkesi uygulanmış olabilir.  <br/> Bunu doğrulamak için, Exchange Online PowerShell'de komutunu çalıştırarak `Get-OrganizationConfig | FL InPlaceHolds` kuruluş genelinde saklama ilkeleri için GUID'lerin listesini alabilirsiniz. Exchange posta kutularına uygulanan kuruluş genelinde bekletme ilkelerinin `mbx` GUID'i ön ekiyle başlar; örneğin, `mbxa3056bb15562480fadb46ce523ff7b02`.  <br/> Posta kutusuna uygulanan kuruluş genelinde saklama ilkesinin kimliğini doğrulamak için Güvenlik & Uyumluluk Merkezi PowerShell'de aşağıdaki komutu çalıştırın: <br/><br/> `Get-RetentionCompliancePolicy <retention policy GUID without prefix> | FL Name`<br/><br/>Bir posta kutusu kuruluş genelinde saklama ilkesinin dışında bırakılırsa, **Get-Mailbox** cmdlet'ini çalıştırdığınızda, bekletme ilkesinin GUID'i kullanıcının posta kutusunun *InPlaceHolds* özelliğinde görüntülenir; ön ek `-mbx`ile tanımlanır; örneğin,`-mbxe9b52bf7ab3b46a286308ecb29624696` <br/> |
-|Uyumluluk portalında eBulma servis talebi saklama  <br/> | `UniH7d895d48-7e23-4a8d-8346-533c3beac15d` <br/> |*InPlaceHolds* özelliği, uyumluluk portalında posta kutusuna yerleştirilebilen eBulma olayıyla ilişkili tüm ayrı tutmaların GUID'sini de içerir. GUID ön ekiyle  `UniH` başladığından bunun bir eBulma servis talebi saklama işlemi olduğunu anlayabilirsiniz.  <br/> `Get-CaseHoldPolicy` Güvenlik & Uyumluluk Merkezi PowerShell'deki cmdlet'ini kullanarak posta kutusunda tutma işleminin ilişkili olduğu eBulma olayı hakkında bilgi alabilirsiniz. Örneğin, posta kutusunda bulunan servis talebi saklamanın adını görüntülemek için komutunu  `Get-CaseHoldPolicy <hold GUID without prefix> | FL Name` çalıştırabilirsiniz. Bu komutu çalıştırdığınızda ön eki kaldırdığınızdan  `UniH` emin olun.  <br/><br/> Posta kutusu üzerindeki ayrı tutmanın ilişkili olduğu eBulma olayını kimliklendirmek için aşağıdaki komutları çalıştırın:<br/><br/>`$CaseHold = Get-CaseHoldPolicy <hold GUID without prefix>`<br/><br/>`Get-ComplianceCase $CaseHold.CaseId | FL Name`
+| Uyumluluk portalında belirli posta kutularına uygulanan bekletme ilkeleri  <br/> | `mbxcdbbb86ce60342489bff371876e7f224` <br/> veya  <br/>  `skp127d7cf1076947929bf136b7a2a8c36f` <br/> |**Get-Mailbox** *cmdlet'ini çalıştırdığınızda, InPlaceHolds* özelliği posta kutusuna uygulanan bekletme ilkelerinin GUID'lerini de içerir. GUID ön ekiyle  `mbx` başladığından bekletme ilkelerini tanımlayabilirsiniz. Bekletme ilkesinin GUID'i ön ek ile `skp` başlıyorsa, bekletme ilkesinin Skype Kurumsal konuşmalara uygulandığını gösterir.  <br/> Posta kutusuna uygulanan bekletme ilkesinin kimliğini doğrulamak için Güvenlik & Uyumluluğu PowerShell'de aşağıdaki komutu çalıştırın: <br/> <br/>`Get-RetentionCompliancePolicy <retention policy GUID without prefix> | FL Name`<br/><br/>Bu komutu çalıştırdığınızda veya `skp` ön ekini `mbx` kaldırdığınızdan emin olun.  <br/> |
+|Uyumluluk portalında kuruluş genelinde saklama ilkeleri  <br/> |Değer yok  <br/> veya  <br/>  `-mbxe9b52bf7ab3b46a286308ecb29624696` (posta kutusunun kuruluş genelindeki bir ilkenin dışında tutulduğunu gösterir)  <br/> |**Get-Mailbox** cmdlet'ini çalıştırdığınızda *InPlaceHolds* özelliği boş olsa bile, posta kutusuna bir veya daha fazla kuruluş genelinde bekletme ilkesi uygulanmış olabilir.  <br/> Bunu doğrulamak için, Exchange Online PowerShell'de komutunu çalıştırarak `Get-OrganizationConfig | FL InPlaceHolds` kuruluş genelinde saklama ilkeleri için GUID'lerin listesini alabilirsiniz. Exchange posta kutularına uygulanan kuruluş genelinde bekletme ilkelerinin `mbx` GUID'i ön ekiyle başlar; örneğin, `mbxa3056bb15562480fadb46ce523ff7b02`.  <br/> Posta kutusuna uygulanan kuruluş genelinde saklama ilkesinin kimliğini doğrulamak için Güvenlik & Uyumluluğu PowerShell'de aşağıdaki komutu çalıştırın: <br/><br/> `Get-RetentionCompliancePolicy <retention policy GUID without prefix> | FL Name`<br/><br/>Bir posta kutusu kuruluş genelinde saklama ilkesinin dışında bırakılırsa, **Get-Mailbox** cmdlet'ini çalıştırdığınızda, bekletme ilkesinin GUID'i kullanıcının posta kutusunun *InPlaceHolds* özelliğinde görüntülenir; ön ek `-mbx`ile tanımlanır; örneğin,`-mbxe9b52bf7ab3b46a286308ecb29624696` <br/> |
+|Uyumluluk portalında eBulma servis talebi saklama  <br/> | `UniH7d895d48-7e23-4a8d-8346-533c3beac15d` <br/> |*InPlaceHolds* özelliği, uyumluluk portalında posta kutusuna yerleştirilebilen eBulma olayıyla ilişkili tüm ayrı tutmaların GUID'sini de içerir. GUID ön ekiyle  `UniH` başladığından bunun bir eBulma servis talebi saklama işlemi olduğunu anlayabilirsiniz.  <br/> Posta kutusunda tutmanın  `Get-CaseHoldPolicy` ilişkili olduğu eBulma olayı hakkında bilgi almak için Güvenlik & Uyumluluk PowerShell'deki cmdlet'ini kullanabilirsiniz. Örneğin, posta kutusunda bulunan servis talebi saklamanın adını görüntülemek için komutunu  `Get-CaseHoldPolicy <hold GUID without prefix> | FL Name` çalıştırabilirsiniz. Bu komutu çalıştırdığınızda ön eki kaldırdığınızdan  `UniH` emin olun.  <br/><br/> Posta kutusu üzerindeki ayrı tutmanın ilişkili olduğu eBulma olayını kimliklendirmek için aşağıdaki komutları çalıştırın:<br/><br/>`$CaseHold = Get-CaseHoldPolicy <hold GUID without prefix>`<br/><br/>`Get-ComplianceCase $CaseHold.CaseId | FL Name`

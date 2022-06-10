@@ -17,13 +17,13 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MOE150
 - MET150
-description: 'Tüm Microsoft Purview Bilgi Koruması çözümleri için bir gereksinim: Kuruluşunuzun verilerini sınıflandırmak ve korumak için duyarlılık etiketleri oluşturun, yapılandırın ve yayımlayın.'
-ms.openlocfilehash: 99b2b50ed00f470443956ff30ebb4940bbe1024d
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+description: 'Tüm Microsoft Purview Information Protection çözümleri için bir gereksinim: Kuruluşunuzun verilerini sınıflandırmak ve korumak için duyarlılık etiketleri oluşturun, yapılandırın ve yayımlayın.'
+ms.openlocfilehash: 8b25fa9864bcbef92f509f7251a15bf24cc3da2d
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65622374"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66017042"
 ---
 # <a name="create-and-configure-sensitivity-labels-and-their-policies"></a>Duyarlılık etiketleri ve ilkeleri oluşturma ve yapılandırma
 
@@ -31,7 +31,7 @@ ms.locfileid: "65622374"
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Tüm Microsoft Purview Bilgi Koruması çözümleri [duyarlılık etiketleri](sensitivity-labels.md) kullanılarak uygulanır. Bu etiketleri oluşturmak ve yayımlamak için <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalı</a> gidin.
+Tüm Microsoft Purview Information Protection çözümleri [duyarlılık etiketleri](sensitivity-labels.md) kullanılarak uygulanır. Bu etiketleri oluşturmak ve yayımlamak için <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalına</a> gidin.
 
 İlk olarak, uygulamalar ve diğer hizmetler için kullanılabilir hale getirmek istediğiniz duyarlılık etiketlerini oluşturun ve yapılandırın. Örneğin, kullanıcıların Office uygulamalardan görmesini ve uygulamasını istediğiniz etiketler.
 
@@ -43,7 +43,7 @@ Kuruluşunuzun genel yöneticisi duyarlılık etiketlerinin tüm yönlerini olu�
 
 ## <a name="create-and-configure-sensitivity-labels"></a>Duyarlılık etiketleri oluşturma ve yapılandırma
 
-1. [Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com/) **ÇözümlerFormasyon** >  **korumasıBeller'i** >  seçin
+1. [Microsoft Purview uyumluluk portalından](https://compliance.microsoft.com/) **Çözüm** > **Bilgileri koruma** > **Etiketleri'ni** seçin
 
 2. **Etiketler** sayfasında **+ Etiket oluştur'u** seçerek yeni duyarlılık etiketi yapılandırmasını başlatın: 
     
@@ -86,9 +86,9 @@ Etiketlerinizi yayımlayana kadar, uygulamalarda veya hizmetlerde bu etiketleri 
 > [!IMPORTANT]
 > Bu **Etiketler** sekmesinde, yeni bir etiket ilkesi oluşturmanız gerekmediği sürece **Etiketleri yayımla** sekmesini (veya etiketi düzenlerken etiketi **yayımla** düğmesini) seçmeyin. Birden çok etiket ilkesine yalnızca kullanıcıların farklı etiketlere veya farklı ilke ayarlarına ihtiyacı varsa ihtiyacınız vardır. Mümkün olduğunca az etiket ilkesine sahip olmayı hedefleyin; kuruluş için yalnızca bir etiket ilkesi olması yaygın değildir.
 
-### <a name="additional-label-settings-with-security--compliance-center-powershell"></a>Güvenlik & Uyumluluk Merkezi PowerShell ile ek etiket ayarları
+### <a name="additional-label-settings-with-security--compliance-powershell"></a>Güvenlik & Uyumluluğu PowerShell ile ek etiket ayarları
 
-Ek etiket ayarları[, Güvenlik & Uyumluluk Merkezi PowerShell'den](/powershell/exchange/scc-powershell) [Etiket Ayarla](/powershell/module/exchange/set-label) cmdlet'iyle kullanılabilir.
+[Güvenlik & Uyumluluk PowerShell'inden](/powershell/exchange/scc-powershell) [Etiket Ayarla](/powershell/module/exchange/set-label) cmdlet'i ile ek etiket ayarları sağlanır.
 
 Örneğin:
 
@@ -104,7 +104,7 @@ Bu yapılandırmanın sonucunda, bu görüntüleme dillerini kullanan Office uyg
 
 Desteklemeniz gereken diller için Office [dil tanımlayıcılarını](/deployoffice/office2016/language-identifiers-and-optionstate-id-values-in-office-2016#language-identifiers) (dil etiketleri olarak da bilinir) kullanın ve etiket adı ve araç ipucu için kendi çevirinizi belirtin.
 
-PowerShell'de komutları çalıştırmadan önce [Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanmanız](/powershell/exchange/connect-to-scc-powershell) gerekir.
+PowerShell'de komutları çalıştırmadan önce [Güvenlik & Uyumluluk PowerShell'e bağlanmanız](/powershell/exchange/connect-to-scc-powershell) gerekir.
 
 ```powershell
 $Languages = @("fr-fr","it-it","de-de")
@@ -126,7 +126,7 @@ Set-Label -Identity $Label -LocaleSettings (ConvertTo-Json $DisplayNameLocaleSet
 
 ## <a name="publish-sensitivity-labels-by-creating-a-label-policy"></a>Etiket ilkesi oluşturarak duyarlılık etiketlerini yayımlama
 
-1. [Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com/) **ÇözümlerFormasyon** >  **korumasıBel** >  **ilkeleri'ni** seçin
+1. [Microsoft Purview uyumluluk portalından](https://compliance.microsoft.com/) **Çözüm** > **Bilgileri koruma** > **Etiket ilkeleri'ni** seçin
 
 2. **Etiket ilkeleri sayfasında Etiketi** **yayımla'yı** seçerek **İlke oluşturma** yapılandırmasını başlatın:
     
@@ -162,9 +162,9 @@ Var olan bir etiket ilkesini düzenlemek için, ilkeyi seçin ve ardından **İl
 
 Bu düğme, hangi etiketlerin dahil olduğunu ve etiket ayarlarını düzenlemenizi sağlayan **İlke oluştur** yapılandırmasını başlatır. Yapılandırmayı tamamladığınızda, tüm değişiklikler otomatik olarak seçili kullanıcılara ve hizmetlere çoğaltılır.
 
-### <a name="additional-label-policy-settings-with-security--compliance-center-powershell"></a>Güvenlik & Uyumluluk Merkezi PowerShell ile ek etiket ilkesi ayarları
+### <a name="additional-label-policy-settings-with-security--compliance-powershell"></a>Güvenlik & Uyumluluğu PowerShell ile ek etiket ilkesi ayarları
 
-[Güvenlik & Uyumluluk Merkezi PowerShell'den](/powershell/exchange/scc-powershell) [Set-LabelPolicy](/powershell/module/exchange/set-labelpolicy) cmdlet'i ile ek etiket ilkesi ayarları sağlanır.
+[Güvenlik & Uyumluluğu PowerShell'in](/powershell/exchange/scc-powershell) [Set-LabelPolicy](/powershell/module/exchange/set-labelpolicy) cmdlet'i ile ek etiket ilkesi ayarları sağlanır.
 
 Azure Information Protection birleşik etiketleme istemcisi, diğer etiketleme çözümlerinden geçiş ve e-postaların gönderilmesini uyaran, gerekçelendiren veya engelleyen Outlook açılır iletileri içeren birçok [gelişmiş ayarı](/azure/information-protection/rms-client/clientv2-admin-guide-customizations) destekler. Tam liste için bu istemcinin yönetici kılavuzundaki [Etiket ilkeleri için kullanılabilir gelişmiş ayarlar](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#available-advanced-settings-for-label-policies) bölümüne bakın.
 
@@ -176,7 +176,7 @@ Ancak, etiket ve etiket ilkesi değişikliklerinin çok daha hızlı veya 24 saa
 
 ## <a name="use-powershell-for-sensitivity-labels-and-their-policies"></a>Duyarlılık etiketleri ve ilkeleri için PowerShell kullanma
 
-Artık etiketleme yönetim merkezinizde gördüğünüz tüm ayarları oluşturmak ve yapılandırmak için [Güvenlik & Uyumluluk Merkezi PowerShell'i](/powershell/exchange/scc-powershell) kullanabilirsiniz. Bu, etiketleme yönetim merkezlerinde bulunmayan ayarlar için PowerShell'i kullanmaya ek olarak artık duyarlılık etiketlerinin ve duyarlılık etiketi ilkelerinin oluşturulması ve bakımı için tam betik yazabileceğiniz anlamına gelir. 
+Artık etiketleme yönetim merkezinizde gördüğünüz tüm ayarları oluşturmak ve yapılandırmak için [Güvenlik & Uyumluluk PowerShell'i](/powershell/exchange/scc-powershell) kullanabilirsiniz. Bu, etiketleme yönetim merkezlerinde bulunmayan ayarlar için PowerShell'i kullanmaya ek olarak artık duyarlılık etiketlerinin ve duyarlılık etiketi ilkelerinin oluşturulması ve bakımı için tam betik yazabileceğiniz anlamına gelir. 
 
 Desteklenen parametreler ve değerler için aşağıdaki belgelere bakın:
 

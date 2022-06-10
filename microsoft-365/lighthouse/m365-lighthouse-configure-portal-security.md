@@ -4,6 +4,7 @@ f1.keywords: CSH
 ms.author: sharik
 author: SKjerland
 manager: scotv
+ms-reviewer: vivkuma
 audience: Admin
 ms.topic: article
 ms.prod: microsoft-365-lighthouse
@@ -16,12 +17,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için portal güvenliğini yapılandırmayı öğrenin.
-ms.openlocfilehash: 60e0d2f1ba61e5def3979358f338da0846914543
-ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
+ms.openlocfilehash: 5033787f314036f345a00b7f9632851317ed05f0
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65188690"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66013584"
 ---
 # <a name="configure-microsoft-365-lighthouse-portal-security"></a>Microsoft 365 Lighthouse portal güvenliğini yapılandırma
 

@@ -1,5 +1,5 @@
 ---
-title: PowerShell kullanarak özel duyarlı bilgi türünü kaldırma
+title: PowerShell kullanarak özel hassas bilgi türünü kaldırma
 f1.keywords:
 - NOCSH
 ms.author: chrfox
@@ -14,60 +14,62 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: PowerShell kullanarak özel duyarlı bilgi türünü kaldırmayı öğrenin
-ms.openlocfilehash: 852f9987b072f05dcf4f322f600bed23bcce7ef2
-ms.sourcegitcommit: bb493f12701f6d6ee7d5e64b541adb87470bc7bc
+description: PowerShell kullanarak özel hassas bilgi türünü kaldırmayı öğrenin
+ms.openlocfilehash: e935c9340c353561e71e25fdadfec5509da041e5
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "63015498"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66014750"
 ---
-# <a name="remove-a-custom-sensitive-information-type-using-powershell"></a>PowerShell kullanarak özel duyarlı bilgi türünü kaldırma
+# <a name="remove-a-custom-sensitive-information-type-using-powershell"></a>PowerShell kullanarak özel hassas bilgi türünü kaldırma
 
-Uyumluluk merkezi PowerShell'de, özel hassas bilgi türlerini kaldırmak için iki yöntem vardır:
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-- **Tek tek özel duyarlı bilgi türlerini kaldırma**: PowerShell kullanarak özel duyarlı [bilgi türünü değiştirme konusunda belgelenmiş yöntemi kullanın](sit-modify-a-custom-sensitive-information-type-in-powershell.md#modify-a-custom-sensitive-information-type-using-powershell). Özel duyarlı bilgi türü içeren özel kural paketini dışarı aktarın, hassas bilgi türünü XML dosyasından kaldırın ve güncelleştirilmiş XML dosyasını var olan özel kural paketine geri aktarın.
+Güvenlik & Uyumluluğu PowerShell'de, özel hassas bilgi türlerini kaldırmak için iki yöntem vardır:
 
-- **Özel bir kural paketini ve içerdiği tüm özel hassas bilgi türlerini kaldırın**: Bu yöntem bu bölümde belgelenmiştir.
+- **Tek tek özel hassas bilgi türlerini kaldırma**: [PowerShell kullanarak özel hassas bilgi türünü değiştirme](sit-modify-a-custom-sensitive-information-type-in-powershell.md#modify-a-custom-sensitive-information-type-using-powershell) bölümünde belgelenen yöntemi kullanın. Özel hassas bilgi türünü içeren özel kural paketini dışarı aktarır, hassas bilgi türünü XML dosyasından kaldırır ve güncelleştirilmiş XML dosyasını mevcut özel kural paketine geri aktarırsınız.
+
+- **Özel kural paketini ve içerdiği tüm özel hassas bilgi türlerini kaldırın**: Bu yöntem bu bölümde belgelenmiştir.
 
 > [!NOTE]
-> Özel hassas bilgi türünü kaldırmadan önce, hiçbir DLP ilkelerinin veya posta akış kurallarının (aktarım kuralları olarak da Exchange) hassas bilgi türüne hala başvuramadan emin olun.
+> Özel bir hassas bilgi türünü kaldırmadan önce, DLP ilkelerinin veya Exchange posta akışı kurallarının (aktarım kuralları olarak da bilinir) hassas bilgi türüne başvurmadığını doğrulayın.
 
-1. [Bağlan merkezi PowerShell'e](/powershell/exchange/exchange-online-powershell)
+1. [Güvenlik & Uyumluluğu PowerShell](/powershell/exchange/exchange-online-powershell)
 
-2. Özel bir kural paketini kaldırmak için [Remove-DlpSensitiveInformationTypeRulePackage](/powershell/module/exchange/remove-dlpsensitiveinformationtyperulepackage) cmdlet'ini kullanın:
+2. Özel kural paketini kaldırmak için [Remove-DlpSensitiveInformationTypeRulePackage](/powershell/module/exchange/remove-dlpsensitiveinformationtyperulepackage) cmdlet'ini kullanın:
 
    ```powershell
    Remove-DlpSensitiveInformationTypeRulePackage -Identity "RulePackageIdentity"
    ```
 
-   Kural paketini tanımlamak için Ad değerini (herhangi bir dil `RulePack id` için) veya (GUID) değerini kullanabilirsiniz.
+   Kural paketini tanımlamak için Ad değerini (herhangi bir dil için) veya `RulePack id` (GUID) değerini kullanabilirsiniz.
 
-   Bu örnekte, "Çalışan Kimliği Özel Kural Paketi" adlı kural paketi kaldırabilirsiniz.
+   Bu örnek, "Çalışan Kimliği Özel Kural Paketi" adlı kural paketini kaldırır.
 
    ```powershell
    Remove-DlpSensitiveInformationTypeRulePackage -Identity "Employee ID Custom Rule Pack"
    ```
 
-   Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [Remove-DlpSensitiveInformationTypeRulePackage](/powershell/module/exchange/remove-dlpsensitiveinformationtyperulepackage).
+   Ayrıntılı söz dizimi ve parametre bilgileri için bkz [. Remove-DlpSensitiveInformationTypeRulePackage](/powershell/module/exchange/remove-dlpsensitiveinformationtyperulepackage).
 
-3. Özel hassas bir bilgi türünü başarıyla kaldırıldığınızı doğrulamak için, aşağıdaki adımlardan herhangi birini yapın:
+3. Özel bir hassas bilgi türünü başarıyla kaldırdığınızdan emin olmak için aşağıdaki adımlardan herhangi birini yapın:
 
-   - [Get-DlpSensitiveInformationTypeRulePackage](/powershell/module/exchange/get-dlpsensitiveinformationtyperulepackage) cmdlet'ini çalıştırın ve kural paketinin artık liste olmadığını doğrulayın:
+   - [Get-DlpSensitiveInformationTypeRulePackage](/powershell/module/exchange/get-dlpsensitiveinformationtyperulepackage) cmdlet'ini çalıştırın ve kural paketinin artık listelenmediğinden emin olun:
 
      ```powershell
      Get-DlpSensitiveInformationTypeRulePackage
      ```
 
-   - Kaldırılan kural paketinde hassas bilgi türlerinin artık liste olmadığını doğrulamak için [Get-DlpSensitiveInformationType](/powershell/module/exchange/get-dlpsensitiveinformationtype) cmdlet'ini çalıştırın:
+   - Kaldırılan kural paketindeki hassas bilgi türlerinin artık listelenmediğinden emin olmak için [Get-DlpSensitiveInformationType](/powershell/module/exchange/get-dlpsensitiveinformationtype) cmdlet'ini çalıştırın:
 
      ```powershell
      Get-DlpSensitiveInformationType
      ```
 
-     Özel hassas bilgi türlerinde, Publisher değeri Microsoft Corporation'dan farklı bir değer olur.
+     Özel hassas bilgi türleri için Publisher özellik değeri Microsoft Corporation dışında bir değer olacaktır.
 
-   - Hassas \<Name\> bilgi türünün Ad değeriyle (örneğin, Çalışan Kimliği) değiştirin ve hassas bilgi türünün artık liste olmadığını doğrulamak için [Get-DlpSensitiveInformationType](/powershell/module/exchange/get-dlpsensitiveinformationtype) cmdlet'ini çalıştırın:
+   - değerini hassas bilgi türünün (örneğin, Çalışan Kimliği) Ad değeriyle değiştirin \<Name\> ve hassas bilgi türünün artık listelenmediğinden emin olmak için [Get-DlpSensitiveInformationType](/powershell/module/exchange/get-dlpsensitiveinformationtype) cmdlet'ini çalıştırın:
 
      ```powershell
      Get-DlpSensitiveInformationType -Identity "<Name>"
@@ -75,7 +77,7 @@ Uyumluluk merkezi PowerShell'de, özel hassas bilgi türlerini kaldırmak için 
 
 ## <a name="more-information"></a>Daha fazla bilgi
 
-- [Veri kaybını önleme hakkında bilgi](dlp-learn-about-dlp.md)
+- [Microsoft Purview Veri Kaybı Önleme hakkında bilgi edinin](dlp-learn-about-dlp.md)
 
 - [Hassas bilgi türü varlık tanımları](sensitive-information-type-entity-definitions.md)
 
