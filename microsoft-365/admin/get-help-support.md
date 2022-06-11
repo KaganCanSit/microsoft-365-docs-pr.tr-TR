@@ -22,12 +22,12 @@ search.appverid:
 - MET150
 - MOE150
 description: İş için Microsoft 365 aboneliğiniz için çevrimiçi veya telefon desteği almayı öğrenin. Destek almak için bir iş aboneliği yöneticisi olmanız gerekir.
-ms.openlocfilehash: b0caf57ddc71f028cf913f29fa983ed1d7bcffc2
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: 3d1b69fef8bd262aada4910c82199203f4cff9ee
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65465898"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66011792"
 ---
 # <a name="get-support-for-microsoft-365-for-business"></a>İş için Microsoft 365 desteği alma
 
@@ -59,8 +59,12 @@ Servis isteğinizi çevrimiçi başlatarak zaman kazanın. Bir çözüm bulmanı
 
 ## <a name="phone-support"></a>Telefon desteği
 
-Faturalama desteği Pazartesi - Cuma günleri 9:00 - 17:00 arasında (Avustralya’da 09.00 - 18.00 arası), İngilizce sağlanır.
-Teknik destek İngilizce ve 7 gün 24 saat sağlanır.
+Ülkenizin veya bölgenizin numarasını bulmak için aşağıdaki açılır menüyü kullanın.
+
+[!INCLUDE [country-region-support-dropdown-list](../admin/includes/country-region-support-dropdown-list.md)]
+
+Faturalandırma desteği ve Teknik destek saatleri (ve diller), açılır menüden seçilen her ülkenin kendi sayfasında listelenir.
+
 Yöneticiyseniz desteği ararken hesap ayrıntılarınızı hazır bulundurun.
 
 > [!NOTE]
@@ -73,10 +77,6 @@ Yöneticiyseniz desteği ararken hesap ayrıntılarınızı hazır bulundurun.
 - **Kanada'da, 1 800 865 9408 numaralı telefonu arayın.**
 
 - **Birleşik Krallık'ta, 0800 032 6417 numaralı telefonu arayın.**
-
-Destek telefon numaranız yukarıda listelenmiyorsa aşağıdaki açılan menüyü kullanarak ülkenize veya bölgenize ait numarayı bulun.
-
-[!INCLUDE [country-region-support-dropdown-list](../admin/includes/country-region-support-dropdown-list.md)]
 
 ## <a name="small-business-support-with-business-assist"></a>İşletme Yardımı ile küçük işletme desteği
 
@@ -135,7 +135,7 @@ Fatura ve abonelik yönetimi konularına ilişkin bazı örnekler şunlardır:
 | Önem düzeyi | İşlemler ve destek açıklaması | Örnekler |
 |----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Önem A (Kritik) | Bir ya da daha fazla hizmete erişilemiyor veya bu hizmetler kullanılamıyor. Üretim, operasyon veya dağıtım son tarihleri ciddi bir şekilde etkilenmiş veya üretim ya da karlılık üzerinde ciddi bir etki bekleniyor. Birden fazla kullanıcı veya hizmet etkilenmiş. | <ul><li>Posta gönderme veya almaya ilişkin yaygın sorunlar.</li><li>SharePoint sitesi devre dışı.</li><li>Tüm kullanıcılar anlık iletiler gönderemez, Skype Kurumsal Toplantılarına katılamaz veya bu toplantıları planlayamaz ya da Skype Kurumsal aramaları yapamaz.</li></ul> |
-| Önem B (Yüksek) | Hizmet, engelli kullanıcılara özel tasarlanmıştır. Bu durumun işletmeye etkisi orta düzeydedir ve çalışma saatleri içerisinde ele alınabilir. Tek bir kullanıcı, müşteri veya hizmet kısmen etkilenmektedir. | <ul><li>Outlook’taki Gönder düğmesi çalışmıyor.</li><li>EAC'den (Exchange yönetim merkezi) ayar yapılamaz, ancak Windows PowerShell'de ayar yapılabilir.</li></ul> |
+| Önem B (Yüksek) | Hizmet, engelli kullanıcılara özel tasarlanmıştır. Bu durumun işletmeye etkisi orta düzeydedir ve çalışma saatleri içerisinde ele alınabilir. Tek bir kullanıcı, müşteri veya hizmet kısmen etkilenmektedir. | <ul><li>Outlook’taki Gönder düğmesi çalışmıyor.</li><li>EAC'den (Exchange yönetim merkezi) ayar yapılamaz, ancak Exchange Online PowerShell'de ayar yapmak mümkündür.</li></ul> |
 | Önem C (Kritik olmayan) | Durumun işletmeye etkisi düşük düzeydedir. Bu önemli bir sorundur, ancak mevcut hizmet veya üretkenliğin müşteri üzerindeki etkisi dikkate değer bir düzeyde değildir. Tek bir kullanıcı kısmı kesinti yaşıyor, ancak kabul edilebilir bir geçici çözüm var. | <ul><li>Süresi dolmayan kullanıcı parolası ayarlama.</li> <li>Kullanıcı, Exchange Online’daki kişi bilgilerini silemiyor.</li></ul> |
 
 ## <a name="technical-support-initial-response-times"></a>Teknik destek ilk yanıt süreleri

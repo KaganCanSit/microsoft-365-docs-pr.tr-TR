@@ -396,6 +396,8 @@
           href: quarantine-faq.yml
     - name: Adım adım açıklamalı kılavuzlar
       items:
+        - name: Office 365 için Microsoft Defender adım adım kılavuzlar ve bunların nasıl kullanılacağı
+          href: step-by-step-guides/step-by-step-guide-overview.md
         - name: (Yanlış Negatifler) Office 365 için Microsoft Defender kullanılarak alıcılara teslim edilen kötü amaçlı e-postalar ile nasıl başa çıkılır?
           href: step-by-step-guides/how-to-handle-false-negatives-in-microsoft-defender-for-office-365.md
         - name: (Yanlış Pozitifler) Office 365 için Microsoft Defender kullanarak meşru e-postaların tesliminin engellenmesiyle nasıl başa çıkılır?
